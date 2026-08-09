@@ -18,9 +18,8 @@ final class lk extends fu implements fq {
     }
 
     public final int a(int param0) {
-        int discarded$0 = 0;
         if (param0 != 6530) {
-            discarded$0 = this.a(60);
+            this.a(60);
             return this.field_f;
         }
         return this.field_f;

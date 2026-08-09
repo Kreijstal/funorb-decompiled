@@ -13,12 +13,11 @@ final class kg extends ma {
     static vn field_l;
 
     final static String c(byte param0) {
-        String discarded$0 = null;
         if (wd.field_Lb == ra.field_e) {
             return eo.field_Rb;
         }
         if (param0 <= 44) {
-            discarded$0 = kg.c((byte) 49);
+            kg.c((byte) 49);
             return qg.field_a;
         }
         return qg.field_a;
@@ -35,8 +34,8 @@ final class kg extends ma {
 
     final static void a(int param0, byte param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {

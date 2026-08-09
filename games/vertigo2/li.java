@@ -31,10 +31,10 @@ class li {
     }
 
     final static ve a(int param0, int param1) {
-        ve[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        ve[] var5 = null;
+        ve[] var2;
+        int var3;
+        int var4;
+        ve[] var5;
         L0: {
           var4 = Vertigo2.field_L ? 1 : 0;
           if (param1 < -21) {
@@ -72,8 +72,15 @@ class li {
     }
 
     final static int a(int param0, boolean param1, CharSequence param2, boolean param3) {
-        RuntimeException var4 = null;
+        int stackIn_42_0 = 0;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        RuntimeException stackIn_46_0 = null;
+        StringBuilder stackIn_46_1 = null;
+        String stackIn_46_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -81,24 +88,6 @@ class li {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_42_0 = 0;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        String stackIn_46_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_41_0 = 0;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
         var11 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -125,8 +114,7 @@ class li {
                   L3: while (true) {
                     if (var7 <= var8) {
                       if (var5 != 0) {
-                        stackOut_41_0 = var6;
-                        stackIn_42_0 = stackOut_41_0;
+                        stackIn_42_0 = var6;
                         break L0;
                       } else {
                         throw new NumberFormatException();
@@ -228,27 +216,19 @@ class li {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var4 = decompiledCaughtException;
-            stackOut_43_0 = (RuntimeException) (var4);
-            stackOut_43_1 = new StringBuilder().append("li.RB(").append(param0).append(',').append(param1).append(',');
-            stackIn_45_0 = stackOut_43_0;
-            stackIn_45_1 = stackOut_43_1;
-            stackIn_44_0 = stackOut_43_0;
-            stackIn_44_1 = stackOut_43_1;
+            stackIn_45_0 = (RuntimeException) (var4);
+
+            stackIn_45_1 = new StringBuilder().append("li.RB(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "null";
-              stackIn_46_0 = stackOut_45_0;
-              stackIn_46_1 = stackOut_45_1;
-              stackIn_46_2 = stackOut_45_2;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "null";
               break L11;
             } else {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "{...}";
-              stackIn_46_0 = stackOut_44_0;
-              stackIn_46_1 = stackOut_44_1;
-              stackIn_46_2 = stackOut_44_2;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "{...}";
               break L11;
             }
           }

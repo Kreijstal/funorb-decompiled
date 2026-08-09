@@ -47,26 +47,25 @@ final class gg implements Runnable {
     }
 
     final rb a(byte param0) {
-        boolean discarded$2 = false;
         if ((this.field_c ^ -1) == -4) {
           return this.field_b;
         } else {
           if (param0 > 30) {
             return null;
           } else {
-            discarded$2 = this.c((byte) 115);
+            this.c((byte) 115);
             return null;
           }
         }
     }
 
     final synchronized boolean c(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         if (-3 < (this.field_c ^ -1)) {
           L0: {
             if (-1 == (this.field_c ^ -1)) {

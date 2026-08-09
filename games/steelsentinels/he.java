@@ -39,8 +39,6 @@ abstract class he {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -48,36 +46,22 @@ abstract class he {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (param0 == -1766) {
               L1: {
                 if (-2 != (param1.g(param0 + 1815, 1) ^ -1)) {
-                  stackOut_5_0 = 0;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = 0;
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L1;
                 }
               }
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -86,27 +70,19 @@ abstract class he {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2);
-            stackOut_7_1 = new StringBuilder().append("he.K(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2);
+
+            stackIn_9_1 = new StringBuilder().append("he.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -120,34 +96,28 @@ abstract class he {
     }
 
     final static boolean a(byte param0, int param1, int param2) {
-        StringBuilder discarded$7 = null;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
-        StringBuilder discarded$10 = null;
-        StringBuilder discarded$11 = null;
-        StringBuilder discarded$12 = null;
-        StringBuilder discarded$13 = null;
-        int var3 = 0;
-        String var4_ref_String = null;
-        int var4 = 0;
-        int var5 = 0;
-        String var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        String var12 = null;
-        String var13 = null;
-        String var14 = null;
-        String var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
-        String var20 = null;
-        Object var21 = null;
-        Object var22 = null;
-        CharSequence var23 = null;
+        StringBuilder discarded$0 = null;
+        int var3;
+        String var4_ref_String;
+        int var4;
+        int var5;
+        String var7;
+        String var8;
+        int var9;
+        int var10;
+        int var11;
+        String var12;
+        String var13;
+        String var14;
+        String var15;
+        String var16;
+        String var17;
+        String var18;
+        String var19;
+        String var20;
+        Object var21;
+        Object var22;
+        CharSequence var23;
         L0: {
           var21 = null;
           var22 = null;
@@ -256,7 +226,7 @@ abstract class he {
               if (var3 != 0) {
                 if (tf.field_g.length() < 80) {
                   L6: {
-                    discarded$7 = tf.field_g.append((char) var4);
+                    discarded$0 = tf.field_g.append((char) var4);
                     var5 = 485;
                     var17 = g.field_l;
                     var7 = var17;
@@ -292,7 +262,7 @@ abstract class he {
                             var20 = var7 + var19 + ": ";
                             var5 = var5 - pl.field_X.c(var20);
                             if (var5 < pl.field_X.c(tf.field_g.toString())) {
-                              discarded$8 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+                              dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
                               return true;
                             } else {
                               return true;
@@ -303,7 +273,7 @@ abstract class he {
                               var20 = var7 + var19 + ": ";
                               var5 = var5 - pl.field_X.c(var20);
                               if (var5 < pl.field_X.c(tf.field_g.toString())) {
-                                discarded$9 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+                                dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
                                 return true;
                               } else {
                                 return true;
@@ -313,7 +283,7 @@ abstract class he {
                               var20 = var7 + var19 + ": ";
                               var5 = var5 - pl.field_X.c(var20);
                               if (var5 < pl.field_X.c(tf.field_g.toString())) {
-                                discarded$10 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+                                dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
                                 return true;
                               } else {
                                 return true;
@@ -324,7 +294,7 @@ abstract class he {
                           var20 = var7 + var19 + ": ";
                           var5 = var5 - pl.field_X.c(var20);
                           if (var5 < pl.field_X.c(tf.field_g.toString())) {
-                            discarded$11 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+                            dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
                             return true;
                           } else {
                             return true;
@@ -351,7 +321,7 @@ abstract class he {
                     }
                   }
                   if (var5 < pl.field_X.c(tf.field_g.toString())) {
-                    discarded$12 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+                    dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
                     return true;
                   } else {
                     return true;
@@ -370,7 +340,7 @@ abstract class he {
               if (0 >= tf.field_g.length()) {
                 return true;
               } else {
-                discarded$13 = dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
+                dm.a(' ', 200, tf.field_g, -1 + tf.field_g.length());
                 return true;
               }
             } else {
@@ -406,35 +376,15 @@ abstract class he {
         int stackIn_43_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_52_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
         if (param0 == 1) {
           if (param2 % 2 == 0) {
             if ((param0 ^ -1) == -6) {
               L0: {
                 if (param2 != 2) {
-                  stackOut_42_0 = 0;
-                  stackIn_43_0 = stackOut_42_0;
+                  stackIn_43_0 = 0;
                   break L0;
                 } else {
-                  stackOut_41_0 = 1;
-                  stackIn_43_0 = stackOut_41_0;
+                  stackIn_43_0 = 1;
                   break L0;
                 }
               }
@@ -444,12 +394,10 @@ abstract class he {
                 L1: {
                   field_h = (String) null;
                   if (-3 < (param2 ^ -1)) {
-                    stackOut_51_0 = 0;
-                    stackIn_52_0 = stackOut_51_0;
+                    stackIn_52_0 = 0;
                     break L1;
                   } else {
-                    stackOut_50_0 = 1;
-                    stackIn_52_0 = stackOut_50_0;
+                    stackIn_52_0 = 1;
                     break L1;
                   }
                 }
@@ -457,12 +405,10 @@ abstract class he {
               } else {
                 L2: {
                   if (-3 < (param2 ^ -1)) {
-                    stackOut_47_0 = 0;
-                    stackIn_48_0 = stackOut_47_0;
+                    stackIn_48_0 = 0;
                     break L2;
                   } else {
-                    stackOut_46_0 = 1;
-                    stackIn_48_0 = stackOut_46_0;
+                    stackIn_48_0 = 1;
                     break L2;
                   }
                 }
@@ -478,12 +424,10 @@ abstract class he {
               if ((param0 ^ -1) == -6) {
                 L3: {
                   if (param2 != 2) {
-                    stackOut_24_0 = 0;
-                    stackIn_25_0 = stackOut_24_0;
+                    stackIn_25_0 = 0;
                     break L3;
                   } else {
-                    stackOut_23_0 = 1;
-                    stackIn_25_0 = stackOut_23_0;
+                    stackIn_25_0 = 1;
                     break L3;
                   }
                 }
@@ -492,12 +436,10 @@ abstract class he {
                 if (!param1) {
                   L4: {
                     if (-3 < (param2 ^ -1)) {
-                      stackOut_33_0 = 0;
-                      stackIn_34_0 = stackOut_33_0;
+                      stackIn_34_0 = 0;
                       break L4;
                     } else {
-                      stackOut_32_0 = 1;
-                      stackIn_34_0 = stackOut_32_0;
+                      stackIn_34_0 = 1;
                       break L4;
                     }
                   }
@@ -506,12 +448,10 @@ abstract class he {
                   L5: {
                     field_h = (String) null;
                     if (-3 < (param2 ^ -1)) {
-                      stackOut_29_0 = 0;
-                      stackIn_30_0 = stackOut_29_0;
+                      stackIn_30_0 = 0;
                       break L5;
                     } else {
-                      stackOut_28_0 = 1;
-                      stackIn_30_0 = stackOut_28_0;
+                      stackIn_30_0 = 1;
                       break L5;
                     }
                   }
@@ -525,12 +465,10 @@ abstract class he {
             if ((param0 ^ -1) == -6) {
               L6: {
                 if (param2 != 2) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L6;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L6;
                 }
               }
@@ -540,12 +478,10 @@ abstract class he {
                 L7: {
                   field_h = (String) null;
                   if (-3 < (param2 ^ -1)) {
-                    stackOut_15_0 = 0;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = 0;
                     break L7;
                   } else {
-                    stackOut_14_0 = 1;
-                    stackIn_16_0 = stackOut_14_0;
+                    stackIn_16_0 = 1;
                     break L7;
                   }
                 }
@@ -553,12 +489,10 @@ abstract class he {
               } else {
                 L8: {
                   if (-3 < (param2 ^ -1)) {
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = 0;
                     break L8;
                   } else {
-                    stackOut_10_0 = 1;
-                    stackIn_12_0 = stackOut_10_0;
+                    stackIn_12_0 = 1;
                     break L8;
                   }
                 }

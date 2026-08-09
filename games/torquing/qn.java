@@ -38,30 +38,20 @@ final class qn extends am {
     }
 
     private final void b(boolean param0) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        Random var10 = null;
-        Random var11 = null;
-        int[] stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
         int[] stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int[] stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         int stackIn_15_2 = 0;
-        int[] stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int[] stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        int stackOut_14_2 = 0;
-        int[] stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        Random var10;
+        Random var11;
         L0: {
           var9 = Torquing.field_u;
           var10 = new Random((long)this.field_w);
@@ -119,27 +109,19 @@ final class qn extends am {
                   }
                 }
                 L5: {
-                  stackOut_12_0 = this.field_H[var5];
-                  stackOut_12_1 = var6;
-                  stackIn_14_0 = stackOut_12_0;
-                  stackIn_14_1 = stackOut_12_1;
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
+                  stackIn_14_0 = this.field_H[var5];
+
+                  stackIn_14_1 = var6;
+
                   if ((this.field_x ^ -1) < -1) {
-                    stackOut_14_0 = (int[]) ((Object) stackIn_14_0);
-                    stackOut_14_1 = stackIn_14_1;
-                    stackOut_14_2 = -va.a(this.field_x, (byte) 121, var10) + 4096;
-                    stackIn_15_0 = stackOut_14_0;
-                    stackIn_15_1 = stackOut_14_1;
-                    stackIn_15_2 = stackOut_14_2;
+                    stackIn_15_0 = (int[]) ((Object) stackIn_14_0);
+                    stackIn_15_1 = stackIn_14_1;
+                    stackIn_15_2 = -va.a(this.field_x, (byte) 121, var10) + 4096;
                     break L5;
                   } else {
-                    stackOut_13_0 = (int[]) ((Object) stackIn_13_0);
-                    stackOut_13_1 = stackIn_13_1;
-                    stackOut_13_2 = 4096;
-                    stackIn_15_0 = stackOut_13_0;
-                    stackIn_15_1 = stackOut_13_1;
-                    stackIn_15_2 = stackOut_13_2;
+                    stackIn_15_0 = (int[]) ((Object) stackIn_14_0);
+                    stackIn_15_1 = stackIn_14_1;
+                    stackIn_15_2 = 4096;
                     break L5;
                   }
                 }
@@ -153,19 +135,15 @@ final class qn extends am {
     }
 
     final void a(byte param0) {
-        String discarded$0 = null;
         this.b(false);
         if (param0 < 123) {
-            discarded$0 = qn.a(true, -8, false, false);
+            qn.a(true, -8, false, false);
         }
     }
 
     final void a(fj param0, int param1, int param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -173,14 +151,7 @@ final class qn extends am {
         String stackIn_26_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        RuntimeException var4 = null;
         var5 = Torquing.field_u;
         try {
           L0: {
@@ -240,27 +211,19 @@ final class qn extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var4);
-            stackOut_23_1 = new StringBuilder().append("qn.H(");
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var4);
+
+            stackIn_25_1 = new StringBuilder().append("qn.H(");
+
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L2;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L2;
             }
           }
@@ -293,29 +256,25 @@ final class qn extends am {
     }
 
     final int[] a(byte param0, int param1) {
-        int[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int[] var18 = null;
-        int[] var19 = null;
         int stackIn_15_0 = 0;
         int stackIn_24_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
+        int[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int[] var18;
+        int[] var19;
         L0: {
           var17 = Torquing.field_u;
           var19 = this.field_l.a(param1, 25657);
@@ -352,12 +311,10 @@ final class qn extends am {
                       L6: {
                         var11 = -1 + var7;
                         if (-1 != (var7 & 1 ^ -1)) {
-                          stackOut_14_0 = 0;
-                          stackIn_15_0 = stackOut_14_0;
+                          stackIn_15_0 = 0;
                           break L6;
                         } else {
-                          stackOut_13_0 = 1;
-                          stackIn_15_0 = stackOut_13_0;
+                          stackIn_15_0 = 1;
                           break L6;
                         }
                       }
@@ -376,12 +333,10 @@ final class qn extends am {
                               } else {
                                 L9: {
                                   if (var12 != 0) {
-                                    stackOut_23_0 = this.field_u;
-                                    stackIn_24_0 = stackOut_23_0;
+                                    stackIn_24_0 = this.field_u;
                                     break L9;
                                   } else {
-                                    stackOut_22_0 = -this.field_u;
-                                    stackIn_24_0 = stackOut_22_0;
+                                    stackIn_24_0 = -this.field_u;
                                     break L9;
                                   }
                                 }
@@ -397,7 +352,7 @@ final class qn extends am {
                                             if (this.field_s <= var6) {
                                               break L13;
                                             } else {
-                                              if (this.field_z[var11][var6] <= var8) {
+                                              if ((this.field_z[var11][var6] ^ -1) >= (var8 ^ -1)) {
                                                 var6++;
                                                 continue L12;
                                               } else {

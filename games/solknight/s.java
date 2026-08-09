@@ -48,7 +48,6 @@ final class s extends gf {
     }
 
     final static void n(int param0) {
-        String discarded$6 = null;
         L0: {
           if (null != kj.field_P) {
             kj.field_P.a();
@@ -65,7 +64,7 @@ final class s extends gf {
             return;
           }
         } else {
-          discarded$6 = s.o(-8);
+          s.o(-8);
           if (null == ql.field_r) {
             return;
           } else {

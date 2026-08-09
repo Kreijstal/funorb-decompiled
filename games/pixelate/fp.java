@@ -27,14 +27,13 @@ final class fp {
     }
 
     final static int a(boolean param0, int param1, int param2) {
-        int discarded$1 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var3 = param2 >> 329408528;
         if (!param0) {
-          discarded$1 = fp.a(false, 87, -10);
+          fp.a(false, 87, -10);
           var4 = param2 & 65535;
           var5 = param1 >> 2100110576;
           var6 = 65535 & param1;

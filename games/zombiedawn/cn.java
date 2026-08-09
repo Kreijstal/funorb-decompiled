@@ -22,8 +22,8 @@ final class cn {
     }
 
     final static void a(boolean param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = ZombieDawn.field_J;
         if ((be.field_j ^ -1) >= -1) {
           if (po.w(13296)) {

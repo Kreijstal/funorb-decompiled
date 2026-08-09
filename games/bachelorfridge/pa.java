@@ -3,45 +3,26 @@
  */
 final class pa extends kv {
     final void e(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_t;
-          param1 = param1 + this.field_u;
-          var3 = param0 + param1 * dg.field_i;
-          var4 = 0;
-          var5 = this.field_p;
-          var6 = this.field_q;
-          var7 = dg.field_i - var6;
-          var8 = 0;
-          if (param1 >= dg.field_j) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_t;
+        param1 = param1 + this.field_u;
+        int var3 = param0 + param1 * dg.field_i;
+        int var4 = 0;
+        int var5 = this.field_p;
+        int var6 = this.field_q;
+        int var7 = dg.field_i - var6;
+        int var8 = 0;
+        if (param1 < dg.field_j) {
             var9 = dg.field_j - param1;
             var5 = var5 - var9;
             param1 = dg.field_j;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * dg.field_i;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= dg.field_k) {
-            break L1;
-          } else {
+        if (param1 + var5 > dg.field_k) {
             var5 = var5 - (param1 + var5 - dg.field_k);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= dg.field_f) {
-            break L2;
-          } else {
+        if (param0 < dg.field_f) {
             var9 = dg.field_f - param0;
             var6 = var6 - var9;
             param0 = dg.field_f;
@@ -49,114 +30,88 @@ final class pa extends kv {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= dg.field_h) {
-            break L3;
-          } else {
+        if (param0 + var6 > dg.field_h) {
             var9 = param0 + var6 - dg.field_h;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
             pa.c(dg.field_e, this.field_v, 0, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final void d(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int[] var22 = null;
-        int[] var23 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int[] var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int[] var22;
+        int[] var23;
         L0: {
           var3 = this.field_q >> 2;
           var4 = this.field_p >> 2;
           param0 = param0 + this.field_t / 4;
           param1 = param1 + this.field_u / 4;
           if (param0 >= dg.field_f) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = dg.field_f - param0 << 2;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = dg.field_f - param0 << 2;
             break L0;
           }
         }
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= dg.field_h) {
-            stackOut_5_0 = this.field_q - 4;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = this.field_q - 4;
             break L1;
           } else {
-            stackOut_4_0 = (dg.field_h - param0 << 2) - 4;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = (dg.field_h - param0 << 2) - 4;
             break L1;
           }
         }
         L2: {
           var6 = stackIn_6_0;
           if (param1 >= dg.field_j) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = dg.field_j - param1 << 2;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = dg.field_j - param1 << 2;
             break L2;
           }
         }
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= dg.field_k) {
-            stackOut_11_0 = this.field_p - 4;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = this.field_p - 4;
             break L3;
           } else {
-            stackOut_10_0 = (dg.field_k - param1 << 2) - 4;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = (dg.field_k - param1 << 2) - 4;
             break L3;
           }
         }
@@ -241,148 +196,86 @@ final class pa extends kv {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int var14 = 0;
         int var15 = 0;
+        int var14 = 0;
         int var16 = 0;
-        if (param2 <= 0) {
-          return;
-        } else {
-          if (param3 > 0) {
-            L0: {
-              var6 = this.field_q;
-              var7 = this.field_p;
-              var8 = 0;
-              var9 = 0;
-              var10 = this.field_n;
-              var11 = this.field_o;
-              var12 = (var10 << 16) / param2;
-              var13 = (var11 << 16) / param3;
-              if (this.field_t <= 0) {
-                break L0;
-              } else {
+        if (param2 > 0) {
+            if (param3 <= 0) {
+                return;
+            }
+            var6 = this.field_q;
+            var7 = this.field_p;
+            var8 = 0;
+            var9 = 0;
+            var10 = this.field_n;
+            var11 = this.field_o;
+            var12 = (var10 << 16) / param2;
+            var13 = (var11 << 16) / param3;
+            if (this.field_t > 0) {
                 var14 = ((this.field_t << 16) + var12 - 1) / var12;
                 param0 = param0 + var14;
                 var8 = var8 + (var14 * var12 - (this.field_t << 16));
-                break L0;
-              }
             }
-            L1: {
-              if (this.field_u <= 0) {
-                break L1;
-              } else {
+            if (this.field_u > 0) {
                 var14 = ((this.field_u << 16) + var13 - 1) / var13;
                 param1 = param1 + var14;
                 var9 = var9 + (var14 * var13 - (this.field_u << 16));
-                break L1;
-              }
             }
-            L2: {
-              if (var6 >= var10) {
-                break L2;
-              } else {
+            if (var6 < var10) {
                 param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
-                break L2;
-              }
             }
-            L3: {
-              if (var7 >= var11) {
-                break L3;
-              } else {
+            if (var7 < var11) {
                 param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
-                break L3;
-              }
             }
-            L4: {
-              var14 = param0 + param1 * dg.field_i;
-              var15 = dg.field_i - param2;
-              if (param1 + param3 <= dg.field_k) {
-                break L4;
-              } else {
+            var14 = param0 + param1 * dg.field_i;
+            var15 = dg.field_i - param2;
+            if (param1 + param3 > dg.field_k) {
                 param3 = param3 - (param1 + param3 - dg.field_k);
-                break L4;
-              }
             }
-            L5: {
-              if (param1 >= dg.field_j) {
-                break L5;
-              } else {
+            if (param1 < dg.field_j) {
                 var16 = dg.field_j - param1;
                 param3 = param3 - var16;
                 var14 = var14 + var16 * dg.field_i;
                 var9 = var9 + var13 * var16;
-                break L5;
-              }
             }
-            L6: {
-              if (param0 + param2 <= dg.field_h) {
-                break L6;
-              } else {
+            if (param0 + param2 > dg.field_h) {
                 var16 = param0 + param2 - dg.field_h;
                 param2 = param2 - var16;
                 var15 = var15 + var16;
-                break L6;
-              }
             }
-            L7: {
-              if (param0 >= dg.field_f) {
-                break L7;
-              } else {
+            if (param0 < dg.field_f) {
                 var16 = dg.field_f - param0;
                 param2 = param2 - var16;
                 var14 = var14 + var16;
                 var8 = var8 + var12 * var16;
                 var15 = var15 + var16;
-                break L7;
-              }
             }
             pa.c(dg.field_e, this.field_v, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final void e(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_t;
-          param1 = param1 + this.field_u;
-          var4 = param0 + param1 * dg.field_i;
-          var5 = 0;
-          var6 = this.field_p;
-          var7 = this.field_q;
-          var8 = dg.field_i - var7;
-          var9 = 0;
-          if (param1 >= dg.field_j) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_t;
+        param1 = param1 + this.field_u;
+        int var4 = param0 + param1 * dg.field_i;
+        int var5 = 0;
+        int var6 = this.field_p;
+        int var7 = this.field_q;
+        int var8 = dg.field_i - var7;
+        int var9 = 0;
+        if (param1 < dg.field_j) {
             var10 = dg.field_j - param1;
             var6 = var6 - var10;
             param1 = dg.field_j;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * dg.field_i;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= dg.field_k) {
-            break L1;
-          } else {
+        if (param1 + var6 > dg.field_k) {
             var6 = var6 - (param1 + var6 - dg.field_k);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= dg.field_f) {
-            break L2;
-          } else {
+        if (param0 < dg.field_f) {
             var10 = dg.field_f - param0;
             var7 = var7 - var10;
             param0 = dg.field_f;
@@ -390,72 +283,43 @@ final class pa extends kv {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= dg.field_h) {
-            break L3;
-          } else {
+        if (param0 + var7 > dg.field_h) {
             var10 = param0 + var7 - dg.field_h;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
             pa.d(dg.field_e, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_t;
-          param1 = param1 + this.field_u;
-          var4 = param0 + param1 * dg.field_i;
-          var5 = 0;
-          var6 = this.field_p;
-          var7 = this.field_q;
-          var8 = dg.field_i - var7;
-          var9 = 0;
-          if (param1 >= dg.field_j) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_t;
+        param1 = param1 + this.field_u;
+        int var4 = param0 + param1 * dg.field_i;
+        int var5 = 0;
+        int var6 = this.field_p;
+        int var7 = this.field_q;
+        int var8 = dg.field_i - var7;
+        int var9 = 0;
+        if (param1 < dg.field_j) {
             var10 = dg.field_j - param1;
             var6 = var6 - var10;
             param1 = dg.field_j;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * dg.field_i;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= dg.field_k) {
-            break L1;
-          } else {
+        if (param1 + var6 > dg.field_k) {
             var6 = var6 - (param1 + var6 - dg.field_k);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= dg.field_f) {
-            break L2;
-          } else {
+        if (param0 < dg.field_f) {
             var10 = dg.field_f - param0;
             var7 = var7 - var10;
             param0 = dg.field_f;
@@ -463,41 +327,31 @@ final class pa extends kv {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= dg.field_h) {
-            break L3;
-          } else {
+        if (param0 + var7 > dg.field_h) {
             var10 = param0 + var7 - dg.field_h;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
             pa.f(dg.field_e, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var9 = -param5;
         var10 = -param6;
         L0: while (true) {
@@ -512,9 +366,9 @@ final class pa extends kv {
                 var10++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -523,9 +377,9 @@ final class pa extends kv {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+                  param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -536,22 +390,22 @@ final class pa extends kv {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
         var10 = param9 >> 16 & 255;
         var11 = param9 >> 8 & 255;
         var12 = param9 & 255;
@@ -571,9 +425,9 @@ final class pa extends kv {
                 var15++;
                 continue L0;
               } else {
-                incrementValue$2 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                param2 = param1[incrementValue$2];
+                param2 = param1[incrementValue$0];
                 var17 = param2 >>> 24;
                 if (var17 == 0) {
                   param4++;
@@ -606,9 +460,9 @@ final class pa extends kv {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  incrementValue$3 = param4;
+                  incrementValue$1 = param4;
                   param4++;
-                  param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
+                  param0[incrementValue$1] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
                   continue L1;
                 }
@@ -619,45 +473,26 @@ final class pa extends kv {
     }
 
     final void d(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_t;
-          param1 = param1 + this.field_u;
-          var4 = param0 + param1 * dg.field_i;
-          var5 = 0;
-          var6 = this.field_p;
-          var7 = this.field_q;
-          var8 = dg.field_i - var7;
-          var9 = 0;
-          if (param1 >= dg.field_j) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_t;
+        param1 = param1 + this.field_u;
+        int var4 = param0 + param1 * dg.field_i;
+        int var5 = 0;
+        int var6 = this.field_p;
+        int var7 = this.field_q;
+        int var8 = dg.field_i - var7;
+        int var9 = 0;
+        if (param1 < dg.field_j) {
             var10 = dg.field_j - param1;
             var6 = var6 - var10;
             param1 = dg.field_j;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * dg.field_i;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= dg.field_k) {
-            break L1;
-          } else {
+        if (param1 + var6 > dg.field_k) {
             var6 = var6 - (param1 + var6 - dg.field_k);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= dg.field_f) {
-            break L2;
-          } else {
+        if (param0 < dg.field_f) {
             var10 = dg.field_f - param0;
             var7 = var7 - var10;
             param0 = dg.field_f;
@@ -665,36 +500,26 @@ final class pa extends kv {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= dg.field_h) {
-            break L3;
-          } else {
+        if (param0 + var7 > dg.field_h) {
             var10 = param0 + var7 - dg.field_h;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
             pa.b(0, 0, 0, dg.field_e, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var14;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -708,9 +533,9 @@ final class pa extends kv {
                 param8++;
                 continue L0;
               } else {
-                incrementValue$66 = param5;
+                incrementValue$11 = param5;
                 param5++;
-                param0 = param4[incrementValue$66];
+                param0 = param4[incrementValue$11];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -723,9 +548,9 @@ final class pa extends kv {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  incrementValue$67 = param7;
+                  incrementValue$12 = param7;
                   param7++;
-                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -744,105 +569,62 @@ final class pa extends kv {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
         int var14 = 0;
+        int var13 = 0;
         int var15 = 0;
-        if (param2 <= 0) {
-          return;
-        } else {
-          if (param3 > 0) {
-            L0: {
-              var5 = this.field_q;
-              var6 = this.field_p;
-              var7 = 0;
-              var8 = 0;
-              var9 = this.field_n;
-              var10 = this.field_o;
-              var11 = (var9 << 16) / param2;
-              var12 = (var10 << 16) / param3;
-              if (this.field_t <= 0) {
-                break L0;
-              } else {
+        if (param2 > 0) {
+            if (param3 <= 0) {
+                return;
+            }
+            var5 = this.field_q;
+            var6 = this.field_p;
+            var7 = 0;
+            var8 = 0;
+            var9 = this.field_n;
+            var10 = this.field_o;
+            var11 = (var9 << 16) / param2;
+            var12 = (var10 << 16) / param3;
+            if (this.field_t > 0) {
                 var13 = ((this.field_t << 16) + var11 - 1) / var11;
                 param0 = param0 + var13;
                 var7 = var7 + (var13 * var11 - (this.field_t << 16));
-                break L0;
-              }
             }
-            L1: {
-              if (this.field_u <= 0) {
-                break L1;
-              } else {
+            if (this.field_u > 0) {
                 var13 = ((this.field_u << 16) + var12 - 1) / var12;
                 param1 = param1 + var13;
                 var8 = var8 + (var13 * var12 - (this.field_u << 16));
-                break L1;
-              }
             }
-            L2: {
-              if (var5 >= var9) {
-                break L2;
-              } else {
+            if (var5 < var9) {
                 param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
-                break L2;
-              }
             }
-            L3: {
-              if (var6 >= var10) {
-                break L3;
-              } else {
+            if (var6 < var10) {
                 param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
-                break L3;
-              }
             }
-            L4: {
-              var13 = param0 + param1 * dg.field_i;
-              var14 = dg.field_i - param2;
-              if (param1 + param3 <= dg.field_k) {
-                break L4;
-              } else {
+            var13 = param0 + param1 * dg.field_i;
+            var14 = dg.field_i - param2;
+            if (param1 + param3 > dg.field_k) {
                 param3 = param3 - (param1 + param3 - dg.field_k);
-                break L4;
-              }
             }
-            L5: {
-              if (param1 >= dg.field_j) {
-                break L5;
-              } else {
+            if (param1 < dg.field_j) {
                 var15 = dg.field_j - param1;
                 param3 = param3 - var15;
                 var13 = var13 + var15 * dg.field_i;
                 var8 = var8 + var12 * var15;
-                break L5;
-              }
             }
-            L6: {
-              if (param0 + param2 <= dg.field_h) {
-                break L6;
-              } else {
+            if (param0 + param2 > dg.field_h) {
                 var15 = param0 + param2 - dg.field_h;
                 param2 = param2 - var15;
                 var14 = var14 + var15;
-                break L6;
-              }
             }
-            L7: {
-              if (param0 >= dg.field_f) {
-                break L7;
-              } else {
+            if (param0 < dg.field_f) {
                 var15 = dg.field_f - param0;
                 param2 = param2 - var15;
                 var13 = var13 + var15;
                 var7 = var7 + var11 * var15;
                 var14 = var14 + var15;
-                break L7;
-              }
             }
             pa.c(dg.field_e, this.field_v, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
             return;
-          } else {
-            return;
-          }
         }
     }
 
@@ -851,45 +633,26 @@ final class pa extends kv {
     }
 
     final void b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_t;
-          param1 = param1 + (this.field_o - this.field_p - this.field_u);
-          var3 = param0 + (param1 + this.field_p - 1) * dg.field_i;
-          var4 = 0;
-          var5 = this.field_p;
-          var6 = this.field_q;
-          var7 = -dg.field_i - var6;
-          var8 = 0;
-          if (param1 >= dg.field_j) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_t;
+        param1 = param1 + (this.field_o - this.field_p - this.field_u);
+        int var3 = param0 + (param1 + this.field_p - 1) * dg.field_i;
+        int var4 = 0;
+        int var5 = this.field_p;
+        int var6 = this.field_q;
+        int var7 = -dg.field_i - var6;
+        int var8 = 0;
+        if (param1 < dg.field_j) {
             var5 = var5 - (dg.field_j - param1);
             param1 = dg.field_j;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= dg.field_k) {
-            break L1;
-          } else {
+        if (param1 + var5 > dg.field_k) {
             var9 = param1 + var5 - dg.field_k;
             var5 = var5 - var9;
             var3 = var3 - var9 * dg.field_i;
             var4 = var4 + var9 * var6;
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= dg.field_f) {
-            break L2;
-          } else {
+        if (param0 < dg.field_f) {
             var9 = dg.field_f - param0;
             var6 = var6 - var9;
             param0 = dg.field_f;
@@ -897,72 +660,43 @@ final class pa extends kv {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= dg.field_h) {
-            break L3;
-          } else {
+        if (param0 + var6 > dg.field_h) {
             var9 = param0 + var6 - dg.field_h;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
             pa.c(dg.field_e, this.field_v, 0, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final void c(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_t;
-          param1 = param1 + this.field_u;
-          var3 = param0 + param1 * dg.field_i;
-          var4 = 0;
-          var5 = this.field_p;
-          var6 = this.field_q;
-          var7 = dg.field_i - var6;
-          var8 = 0;
-          if (param1 >= dg.field_j) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_t;
+        param1 = param1 + this.field_u;
+        int var3 = param0 + param1 * dg.field_i;
+        int var4 = 0;
+        int var5 = this.field_p;
+        int var6 = this.field_q;
+        int var7 = dg.field_i - var6;
+        int var8 = 0;
+        if (param1 < dg.field_j) {
             var9 = dg.field_j - param1;
             var5 = var5 - var9;
             param1 = dg.field_j;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * dg.field_i;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= dg.field_k) {
-            break L1;
-          } else {
+        if (param1 + var5 > dg.field_k) {
             var5 = var5 - (param1 + var5 - dg.field_k);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= dg.field_f) {
-            break L2;
-          } else {
+        if (param0 < dg.field_f) {
             var9 = dg.field_f - param0;
             var6 = var6 - var9;
             param0 = dg.field_f;
@@ -970,75 +704,65 @@ final class pa extends kv {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= dg.field_h) {
-            break L3;
-          } else {
+        if (param0 + var6 > dg.field_h) {
             var9 = param0 + var6 - dg.field_h;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
             pa.c(dg.field_e, this.field_v, 0, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        double var7 = 0.0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        double var24 = 0.0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        double var7;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        double var24;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var41;
         if (param5 != 0) {
           L0: {
             param0 = param0 - (this.field_t << 4);
@@ -1263,9 +987,9 @@ final class pa extends kv {
                                 var39 = dg.field_e[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                incrementValue$9 = var34;
+                                incrementValue$0 = var34;
                                 var34++;
-                                dg.field_e[incrementValue$9] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                dg.field_e[incrementValue$0] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
                                 var36 = var36 + var26;
                                 var37++;
@@ -1339,9 +1063,9 @@ final class pa extends kv {
                                 var39 = dg.field_e[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                incrementValue$10 = var34;
+                                incrementValue$1 = var34;
                                 var34++;
-                                dg.field_e[incrementValue$10] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                dg.field_e[incrementValue$1] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
                                 var36 = var36 + var26;
                                 var37++;
@@ -1392,9 +1116,9 @@ final class pa extends kv {
                                     var39 = dg.field_e[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    incrementValue$11 = var34;
+                                    incrementValue$2 = var34;
                                     var34++;
-                                    dg.field_e[incrementValue$11] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                    dg.field_e[incrementValue$2] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
                                     var37++;
                                     continue L31;
@@ -1481,9 +1205,9 @@ final class pa extends kv {
                                 var39 = dg.field_e[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                incrementValue$12 = var34;
+                                incrementValue$3 = var34;
                                 var34++;
-                                dg.field_e[incrementValue$12] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                dg.field_e[incrementValue$3] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
                                 var36 = var36 + var26;
                                 var37++;
@@ -1558,9 +1282,9 @@ final class pa extends kv {
                                 var39 = dg.field_e[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                incrementValue$13 = var34;
+                                incrementValue$4 = var34;
                                 var34++;
-                                dg.field_e[incrementValue$13] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                dg.field_e[incrementValue$4] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
                                 var36 = var36 + var26;
                                 var37++;
@@ -1612,9 +1336,9 @@ final class pa extends kv {
                                     var39 = dg.field_e[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    incrementValue$14 = var34;
+                                    incrementValue$5 = var34;
                                     var34++;
-                                    dg.field_e[incrementValue$14] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                    dg.field_e[incrementValue$5] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
                                     var37++;
                                     continue L48;
@@ -1678,9 +1402,9 @@ final class pa extends kv {
                                     var39 = dg.field_e[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    incrementValue$15 = var34;
+                                    incrementValue$6 = var34;
                                     var34++;
-                                    dg.field_e[incrementValue$15] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                    dg.field_e[incrementValue$6] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
                                     var37++;
                                     continue L53;
@@ -1741,9 +1465,9 @@ final class pa extends kv {
                                     var39 = dg.field_e[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    incrementValue$16 = var34;
+                                    incrementValue$7 = var34;
                                     var34++;
-                                    dg.field_e[incrementValue$16] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                    dg.field_e[incrementValue$7] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
                                     var37++;
                                     continue L58;
@@ -1786,9 +1510,9 @@ final class pa extends kv {
                                       var39 = dg.field_e[var34];
                                       var40 = var38 >>> 24;
                                       var41 = 256 - var40;
-                                      incrementValue$17 = var34;
+                                      incrementValue$8 = var34;
                                       var34++;
-                                      dg.field_e[incrementValue$17] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                      dg.field_e[incrementValue$8] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                       var37++;
                                       continue L61;
                                     }
@@ -1859,14 +1583,14 @@ final class pa extends kv {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         var12 = param11 & 16711935;
         var13 = param11 >> 8 & 255;
         param6 = -param8;
@@ -1882,9 +1606,9 @@ final class pa extends kv {
                 param6++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 var14 = param2 >>> 24;
                 param2 = param2 & 16777215;
                 if (var14 == 0) {
@@ -1905,9 +1629,9 @@ final class pa extends kv {
                   }
                   var16 = 256 - var14;
                   var17 = param0[param4];
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
+                  param0[incrementValue$12] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
                   param5++;
                   continue L1;
                 }
@@ -1975,100 +1699,74 @@ final class pa extends kv {
     }
 
     final void f(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int[] stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
         int[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         int[] stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_21_2 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int[] stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int[] stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        int stackOut_20_2 = 0;
-        int[] stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_19_2 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
         L0: {
           var3 = this.field_q >> 1;
           var4 = this.field_p >> 1;
           param0 = param0 + this.field_t / 2;
           param1 = param1 + this.field_u / 2;
           if (param0 >= dg.field_f) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = dg.field_f - param0 << 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = dg.field_f - param0 << 1;
             break L0;
           }
         }
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= dg.field_h) {
-            stackOut_5_0 = this.field_q - 2;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = this.field_q - 2;
             break L1;
           } else {
-            stackOut_4_0 = (dg.field_h - param0 << 1) - 2;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = (dg.field_h - param0 << 1) - 2;
             break L1;
           }
         }
         L2: {
           var6 = stackIn_6_0;
           if (param1 >= dg.field_j) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = dg.field_j - param1 << 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = dg.field_j - param1 << 1;
             break L2;
           }
         }
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= dg.field_k) {
-            stackOut_11_0 = this.field_p - 2;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = this.field_p - 2;
             break L3;
           } else {
-            stackOut_10_0 = (dg.field_k - param1 << 1) - 2;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = (dg.field_k - param1 << 1) - 2;
             break L3;
           }
         }
@@ -2114,27 +1812,19 @@ final class pa extends kv {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = this.field_v;
-                      stackOut_18_1 = var10 + (var19 & 1);
-                      stackIn_20_0 = stackOut_18_0;
-                      stackIn_20_1 = stackOut_18_1;
-                      stackIn_19_0 = stackOut_18_0;
-                      stackIn_19_1 = stackOut_18_1;
+                      stackIn_20_0 = this.field_v;
+
+                      stackIn_20_1 = var10 + (var19 & 1);
+
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
-                        stackOut_20_1 = stackIn_20_1;
-                        stackOut_20_2 = 0;
-                        stackIn_21_0 = stackOut_20_0;
-                        stackIn_21_1 = stackOut_20_1;
-                        stackIn_21_2 = stackOut_20_2;
+                        stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
+                        stackIn_21_1 = stackIn_20_1;
+                        stackIn_21_2 = 0;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
-                        stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = this.field_q;
-                        stackIn_21_0 = stackOut_19_0;
-                        stackIn_21_1 = stackOut_19_1;
-                        stackIn_21_2 = stackOut_19_2;
+                        stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
+                        stackIn_21_1 = stackIn_20_1;
+                        stackIn_21_2 = this.field_q;
                         break L7;
                       }
                     }
@@ -2155,93 +1845,63 @@ final class pa extends kv {
     }
 
     final void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        if (param2 != 256) {
-          L0: {
-            param0 = param0 + this.field_t;
-            param1 = param1 + this.field_u;
-            var4 = param0 + param1 * dg.field_i;
-            var5 = 0;
-            var6 = this.field_p;
-            var7 = this.field_q;
-            var8 = dg.field_i - var7;
-            var9 = 0;
-            if (param1 >= dg.field_j) {
-              break L0;
-            } else {
-              var10 = dg.field_j - param1;
-              var6 = var6 - var10;
-              param1 = dg.field_j;
-              var5 = var5 + var10 * var7;
-              var4 = var4 + var10 * dg.field_i;
-              break L0;
-            }
-          }
-          L1: {
-            if (param1 + var6 <= dg.field_k) {
-              break L1;
-            } else {
-              var6 = var6 - (param1 + var6 - dg.field_k);
-              break L1;
-            }
-          }
-          L2: {
-            if (param0 >= dg.field_f) {
-              break L2;
-            } else {
-              var10 = dg.field_f - param0;
-              var7 = var7 - var10;
-              param0 = dg.field_f;
-              var5 = var5 + var10;
-              var4 = var4 + var10;
-              var9 = var9 + var10;
-              var8 = var8 + var10;
-              break L2;
-            }
-          }
-          L3: {
-            if (param0 + var7 <= dg.field_h) {
-              break L3;
-            } else {
-              var10 = param0 + var7 - dg.field_h;
-              var7 = var7 - var10;
-              var9 = var9 + var10;
-              var8 = var8 + var10;
-              break L3;
-            }
-          }
-          if (var7 <= 0) {
+        if (param2 == 256) {
+            this.e(param0, param1);
             return;
-          } else {
-            if (var6 > 0) {
-              pa.e(dg.field_e, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
-              return;
-            } else {
-              return;
+        }
+        param0 = param0 + this.field_t;
+        param1 = param1 + this.field_u;
+        int var4 = param0 + param1 * dg.field_i;
+        int var5 = 0;
+        int var6 = this.field_p;
+        int var7 = this.field_q;
+        int var8 = dg.field_i - var7;
+        int var9 = 0;
+        if (param1 < dg.field_j) {
+            var10 = dg.field_j - param1;
+            var6 = var6 - var10;
+            param1 = dg.field_j;
+            var5 = var5 + var10 * var7;
+            var4 = var4 + var10 * dg.field_i;
+        }
+        if (param1 + var6 > dg.field_k) {
+            var6 = var6 - (param1 + var6 - dg.field_k);
+        }
+        if (param0 < dg.field_f) {
+            var10 = dg.field_f - param0;
+            var7 = var7 - var10;
+            param0 = dg.field_f;
+            var5 = var5 + var10;
+            var4 = var4 + var10;
+            var9 = var9 + var10;
+            var8 = var8 + var10;
+        }
+        if (param0 + var7 > dg.field_h) {
+            var10 = param0 + var7 - dg.field_h;
+            var7 = var7 - var10;
+            var9 = var9 + var10;
+            var8 = var8 + var10;
+        }
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
             }
-          }
-        } else {
-          this.e(param0, param1);
-          return;
+            pa.e(dg.field_e, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+            return;
         }
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var10 = -param6;
         L0: while (true) {
           if (var10 >= 0) {
@@ -2255,9 +1915,9 @@ final class pa extends kv {
                 var10++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -2269,9 +1929,9 @@ final class pa extends kv {
                   var15 = (param2 & 16711935) * param9 & -16711936;
                   var16 = (param2 & 65280) * param9 & 16711680;
                   param2 = (var15 | var16) >>> 8;
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var13 & 16711935) * var14 & -16711936) + ((param2 & 65280) * var12 + (var13 & 65280) * var14 & 16711680) >>> 8;
+                  param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var13 & 16711935) * var14 & -16711936) + ((param2 & 65280) * var12 + (var13 & 65280) * var14 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -2282,45 +1942,26 @@ final class pa extends kv {
     }
 
     final void f(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_t;
-          param1 = param1 + this.field_u;
-          var4 = param0 + param1 * dg.field_i;
-          var5 = 0;
-          var6 = this.field_p;
-          var7 = this.field_q;
-          var8 = dg.field_i - var7;
-          var9 = 0;
-          if (param1 >= dg.field_j) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_t;
+        param1 = param1 + this.field_u;
+        int var4 = param0 + param1 * dg.field_i;
+        int var5 = 0;
+        int var6 = this.field_p;
+        int var7 = this.field_q;
+        int var8 = dg.field_i - var7;
+        int var9 = 0;
+        if (param1 < dg.field_j) {
             var10 = dg.field_j - param1;
             var6 = var6 - var10;
             param1 = dg.field_j;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * dg.field_i;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= dg.field_k) {
-            break L1;
-          } else {
+        if (param1 + var6 > dg.field_k) {
             var6 = var6 - (param1 + var6 - dg.field_k);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= dg.field_f) {
-            break L2;
-          } else {
+        if (param0 < dg.field_f) {
             var10 = dg.field_f - param0;
             var7 = var7 - var10;
             param0 = dg.field_f;
@@ -2328,29 +1969,19 @@ final class pa extends kv {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= dg.field_h) {
-            break L3;
-          } else {
+        if (param0 + var7 > dg.field_h) {
             var10 = param0 + var7 - dg.field_h;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
             pa.d(dg.field_e, this.field_v, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
             return;
-          } else {
-            return;
-          }
         }
     }
 

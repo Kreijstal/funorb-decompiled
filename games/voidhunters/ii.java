@@ -18,9 +18,8 @@ final class ii implements d {
     }
 
     public final int a(int param0) {
-        opa discarded$0 = null;
         if (param0 != 11316) {
-            discarded$0 = this.a(51, 52);
+            this.a(51, 52);
         }
         return this.field_i;
     }
@@ -40,10 +39,9 @@ final class ii implements d {
     }
 
     private final lra b(int param0, int param1) {
-        boolean discarded$0 = false;
         fh var3 = this.field_f.a((long)param1, 77);
         if (param0 != -2) {
-            discarded$0 = this.a(-32, (byte) 119);
+            this.a(-32, (byte) 119);
         }
         if (var3 != null) {
             return (lra) ((Object) var3);
@@ -58,10 +56,8 @@ final class ii implements d {
     }
 
     public final boolean a(int param0, byte param1) {
-        lra var3 = null;
+        lra var3;
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         var3 = this.b(-2, param0);
         if (param1 <= -30) {
           L0: {
@@ -72,14 +68,12 @@ final class ii implements d {
                 if (!var3.a(0, this.field_e, (d) (this))) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0 != 0;
@@ -105,127 +99,45 @@ final class ii implements d {
     }
 
     ii(asb param0, asb param1, asb param2) {
-        RuntimeException var4 = null;
-        int var5 = 0;
-        ds var7 = null;
-        opa stackIn_10_0 = null;
         opa stackIn_11_0 = null;
         opa stackIn_12_0 = null;
         int stackIn_12_1 = 0;
-        opa stackIn_18_0 = null;
         opa stackIn_19_0 = null;
         opa stackIn_20_0 = null;
         int stackIn_20_1 = 0;
-        opa stackIn_26_0 = null;
         opa stackIn_27_0 = null;
         opa stackIn_28_0 = null;
         int stackIn_28_1 = 0;
-        opa stackIn_69_0 = null;
         opa stackIn_70_0 = null;
         opa stackIn_71_0 = null;
         int stackIn_71_1 = 0;
-        opa stackIn_77_0 = null;
         opa stackIn_78_0 = null;
         opa stackIn_79_0 = null;
         int stackIn_79_1 = 0;
-        opa stackIn_90_0 = null;
         opa stackIn_91_0 = null;
         opa stackIn_92_0 = null;
         int stackIn_92_1 = 0;
-        opa stackIn_98_0 = null;
         opa stackIn_99_0 = null;
         opa stackIn_100_0 = null;
         int stackIn_100_1 = 0;
-        opa stackIn_106_0 = null;
         opa stackIn_107_0 = null;
         opa stackIn_108_0 = null;
         int stackIn_108_1 = 0;
-        RuntimeException stackIn_127_0 = null;
-        StringBuilder stackIn_127_1 = null;
         RuntimeException stackIn_128_0 = null;
         StringBuilder stackIn_128_1 = null;
         RuntimeException stackIn_129_0 = null;
         StringBuilder stackIn_129_1 = null;
         String stackIn_129_2 = null;
-        RuntimeException stackIn_130_0 = null;
-        StringBuilder stackIn_130_1 = null;
-        RuntimeException stackIn_131_0 = null;
         StringBuilder stackIn_131_1 = null;
-        RuntimeException stackIn_132_0 = null;
         StringBuilder stackIn_132_1 = null;
         String stackIn_132_2 = null;
-        RuntimeException stackIn_133_0 = null;
-        StringBuilder stackIn_133_1 = null;
-        RuntimeException stackIn_134_0 = null;
         StringBuilder stackIn_134_1 = null;
-        RuntimeException stackIn_135_0 = null;
         StringBuilder stackIn_135_1 = null;
         String stackIn_135_2 = null;
         RuntimeException decompiledCaughtException = null;
-        opa stackOut_105_0 = null;
-        opa stackOut_107_0 = null;
-        int stackOut_107_1 = 0;
-        opa stackOut_106_0 = null;
-        int stackOut_106_1 = 0;
-        opa stackOut_97_0 = null;
-        opa stackOut_99_0 = null;
-        int stackOut_99_1 = 0;
-        opa stackOut_98_0 = null;
-        int stackOut_98_1 = 0;
-        opa stackOut_89_0 = null;
-        opa stackOut_91_0 = null;
-        int stackOut_91_1 = 0;
-        opa stackOut_90_0 = null;
-        int stackOut_90_1 = 0;
-        opa stackOut_76_0 = null;
-        opa stackOut_78_0 = null;
-        int stackOut_78_1 = 0;
-        opa stackOut_77_0 = null;
-        int stackOut_77_1 = 0;
-        opa stackOut_68_0 = null;
-        opa stackOut_70_0 = null;
-        int stackOut_70_1 = 0;
-        opa stackOut_69_0 = null;
-        int stackOut_69_1 = 0;
-        opa stackOut_25_0 = null;
-        opa stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        opa stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
-        opa stackOut_17_0 = null;
-        opa stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        opa stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        opa stackOut_9_0 = null;
-        opa stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        opa stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        RuntimeException stackOut_126_0 = null;
-        StringBuilder stackOut_126_1 = null;
-        RuntimeException stackOut_128_0 = null;
-        StringBuilder stackOut_128_1 = null;
-        String stackOut_128_2 = null;
-        RuntimeException stackOut_127_0 = null;
-        StringBuilder stackOut_127_1 = null;
-        String stackOut_127_2 = null;
-        RuntimeException stackOut_129_0 = null;
-        StringBuilder stackOut_129_1 = null;
-        RuntimeException stackOut_131_0 = null;
-        StringBuilder stackOut_131_1 = null;
-        String stackOut_131_2 = null;
-        RuntimeException stackOut_130_0 = null;
-        StringBuilder stackOut_130_1 = null;
-        String stackOut_130_2 = null;
-        RuntimeException stackOut_132_0 = null;
-        StringBuilder stackOut_132_1 = null;
-        RuntimeException stackOut_134_0 = null;
-        StringBuilder stackOut_134_1 = null;
-        String stackOut_134_2 = null;
-        RuntimeException stackOut_133_0 = null;
-        StringBuilder stackOut_133_1 = null;
-        String stackOut_133_2 = null;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        ds var7 = null;
         this.field_f = new ehb(256);
         try {
           L0: {
@@ -340,20 +252,15 @@ final class ii implements d {
                                                                                     break L24;
                                                                                   } else {
                                                                                     L25: {
-                                                                                      stackOut_105_0 = this.field_b[var5];
-                                                                                      stackIn_107_0 = stackOut_105_0;
-                                                                                      stackIn_106_0 = stackOut_105_0;
+                                                                                      stackIn_107_0 = this.field_b[var5];
+
                                                                                       if (1 != var7.e((byte) -115)) {
-                                                                                        stackOut_107_0 = (opa) ((Object) stackIn_107_0);
-                                                                                        stackOut_107_1 = 0;
-                                                                                        stackIn_108_0 = stackOut_107_0;
-                                                                                        stackIn_108_1 = stackOut_107_1;
+                                                                                        stackIn_108_0 = (opa) ((Object) stackIn_107_0);
+                                                                                        stackIn_108_1 = 0;
                                                                                         break L25;
                                                                                       } else {
-                                                                                        stackOut_106_0 = (opa) ((Object) stackIn_106_0);
-                                                                                        stackOut_106_1 = 1;
-                                                                                        stackIn_108_0 = stackOut_106_0;
-                                                                                        stackIn_108_1 = stackOut_106_1;
+                                                                                        stackIn_108_0 = (opa) ((Object) stackIn_107_0);
+                                                                                        stackIn_108_1 = 1;
                                                                                         break L25;
                                                                                       }
                                                                                     }
@@ -371,20 +278,15 @@ final class ii implements d {
                                                                                 break L26;
                                                                               } else {
                                                                                 L27: {
-                                                                                  stackOut_97_0 = this.field_b[var5];
-                                                                                  stackIn_99_0 = stackOut_97_0;
-                                                                                  stackIn_98_0 = stackOut_97_0;
+                                                                                  stackIn_99_0 = this.field_b[var5];
+
                                                                                   if ((var7.e((byte) -121) ^ -1) != -2) {
-                                                                                    stackOut_99_0 = (opa) ((Object) stackIn_99_0);
-                                                                                    stackOut_99_1 = 0;
-                                                                                    stackIn_100_0 = stackOut_99_0;
-                                                                                    stackIn_100_1 = stackOut_99_1;
+                                                                                    stackIn_100_0 = (opa) ((Object) stackIn_99_0);
+                                                                                    stackIn_100_1 = 0;
                                                                                     break L27;
                                                                                   } else {
-                                                                                    stackOut_98_0 = (opa) ((Object) stackIn_98_0);
-                                                                                    stackOut_98_1 = 1;
-                                                                                    stackIn_100_0 = stackOut_98_0;
-                                                                                    stackIn_100_1 = stackOut_98_1;
+                                                                                    stackIn_100_0 = (opa) ((Object) stackIn_99_0);
+                                                                                    stackIn_100_1 = 1;
                                                                                     break L27;
                                                                                   }
                                                                                 }
@@ -402,20 +304,15 @@ final class ii implements d {
                                                                             break L28;
                                                                           } else {
                                                                             L29: {
-                                                                              stackOut_89_0 = this.field_b[var5];
-                                                                              stackIn_91_0 = stackOut_89_0;
-                                                                              stackIn_90_0 = stackOut_89_0;
+                                                                              stackIn_91_0 = this.field_b[var5];
+
                                                                               if ((var7.e((byte) -95) ^ -1) != -2) {
-                                                                                stackOut_91_0 = (opa) ((Object) stackIn_91_0);
-                                                                                stackOut_91_1 = 0;
-                                                                                stackIn_92_0 = stackOut_91_0;
-                                                                                stackIn_92_1 = stackOut_91_1;
+                                                                                stackIn_92_0 = (opa) ((Object) stackIn_91_0);
+                                                                                stackIn_92_1 = 0;
                                                                                 break L29;
                                                                               } else {
-                                                                                stackOut_90_0 = (opa) ((Object) stackIn_90_0);
-                                                                                stackOut_90_1 = 1;
-                                                                                stackIn_92_0 = stackOut_90_0;
-                                                                                stackIn_92_1 = stackOut_90_1;
+                                                                                stackIn_92_0 = (opa) ((Object) stackIn_91_0);
+                                                                                stackIn_92_1 = 1;
                                                                                 break L29;
                                                                               }
                                                                             }
@@ -446,20 +343,15 @@ final class ii implements d {
                                                                     break L31;
                                                                   } else {
                                                                     L32: {
-                                                                      stackOut_76_0 = this.field_b[var5];
-                                                                      stackIn_78_0 = stackOut_76_0;
-                                                                      stackIn_77_0 = stackOut_76_0;
+                                                                      stackIn_78_0 = this.field_b[var5];
+
                                                                       if ((var7.e((byte) -87) ^ -1) != -2) {
-                                                                        stackOut_78_0 = (opa) ((Object) stackIn_78_0);
-                                                                        stackOut_78_1 = 0;
-                                                                        stackIn_79_0 = stackOut_78_0;
-                                                                        stackIn_79_1 = stackOut_78_1;
+                                                                        stackIn_79_0 = (opa) ((Object) stackIn_78_0);
+                                                                        stackIn_79_1 = 0;
                                                                         break L32;
                                                                       } else {
-                                                                        stackOut_77_0 = (opa) ((Object) stackIn_77_0);
-                                                                        stackOut_77_1 = 1;
-                                                                        stackIn_79_0 = stackOut_77_0;
-                                                                        stackIn_79_1 = stackOut_77_1;
+                                                                        stackIn_79_0 = (opa) ((Object) stackIn_78_0);
+                                                                        stackIn_79_1 = 1;
                                                                         break L32;
                                                                       }
                                                                     }
@@ -477,20 +369,15 @@ final class ii implements d {
                                                                 break L33;
                                                               } else {
                                                                 L34: {
-                                                                  stackOut_68_0 = this.field_b[var5];
-                                                                  stackIn_70_0 = stackOut_68_0;
-                                                                  stackIn_69_0 = stackOut_68_0;
+                                                                  stackIn_70_0 = this.field_b[var5];
+
                                                                   if ((var7.e((byte) -122) ^ -1) != -2) {
-                                                                    stackOut_70_0 = (opa) ((Object) stackIn_70_0);
-                                                                    stackOut_70_1 = 0;
-                                                                    stackIn_71_0 = stackOut_70_0;
-                                                                    stackIn_71_1 = stackOut_70_1;
+                                                                    stackIn_71_0 = (opa) ((Object) stackIn_70_0);
+                                                                    stackIn_71_1 = 0;
                                                                     break L34;
                                                                   } else {
-                                                                    stackOut_69_0 = (opa) ((Object) stackIn_69_0);
-                                                                    stackOut_69_1 = 1;
-                                                                    stackIn_71_0 = stackOut_69_0;
-                                                                    stackIn_71_1 = stackOut_69_1;
+                                                                    stackIn_71_0 = (opa) ((Object) stackIn_70_0);
+                                                                    stackIn_71_1 = 1;
                                                                     break L34;
                                                                   }
                                                                 }
@@ -599,20 +486,15 @@ final class ii implements d {
                                 break L42;
                               } else {
                                 L43: {
-                                  stackOut_25_0 = this.field_b[var5];
-                                  stackIn_27_0 = stackOut_25_0;
-                                  stackIn_26_0 = stackOut_25_0;
+                                  stackIn_27_0 = this.field_b[var5];
+
                                   if (1 != var7.e((byte) -87)) {
-                                    stackOut_27_0 = (opa) ((Object) stackIn_27_0);
-                                    stackOut_27_1 = 0;
-                                    stackIn_28_0 = stackOut_27_0;
-                                    stackIn_28_1 = stackOut_27_1;
+                                    stackIn_28_0 = (opa) ((Object) stackIn_27_0);
+                                    stackIn_28_1 = 0;
                                     break L43;
                                   } else {
-                                    stackOut_26_0 = (opa) ((Object) stackIn_26_0);
-                                    stackOut_26_1 = 1;
-                                    stackIn_28_0 = stackOut_26_0;
-                                    stackIn_28_1 = stackOut_26_1;
+                                    stackIn_28_0 = (opa) ((Object) stackIn_27_0);
+                                    stackIn_28_1 = 1;
                                     break L43;
                                   }
                                 }
@@ -630,20 +512,15 @@ final class ii implements d {
                             break L44;
                           } else {
                             L45: {
-                              stackOut_17_0 = this.field_b[var5];
-                              stackIn_19_0 = stackOut_17_0;
-                              stackIn_18_0 = stackOut_17_0;
+                              stackIn_19_0 = this.field_b[var5];
+
                               if (-2 != (var7.e((byte) -123) ^ -1)) {
-                                stackOut_19_0 = (opa) ((Object) stackIn_19_0);
-                                stackOut_19_1 = 0;
-                                stackIn_20_0 = stackOut_19_0;
-                                stackIn_20_1 = stackOut_19_1;
+                                stackIn_20_0 = (opa) ((Object) stackIn_19_0);
+                                stackIn_20_1 = 0;
                                 break L45;
                               } else {
-                                stackOut_18_0 = (opa) ((Object) stackIn_18_0);
-                                stackOut_18_1 = 1;
-                                stackIn_20_0 = stackOut_18_0;
-                                stackIn_20_1 = stackOut_18_1;
+                                stackIn_20_0 = (opa) ((Object) stackIn_19_0);
+                                stackIn_20_1 = 1;
                                 break L45;
                               }
                             }
@@ -661,20 +538,15 @@ final class ii implements d {
                         break L46;
                       } else {
                         L47: {
-                          stackOut_9_0 = this.field_b[var5];
-                          stackIn_11_0 = stackOut_9_0;
-                          stackIn_10_0 = stackOut_9_0;
+                          stackIn_11_0 = this.field_b[var5];
+
                           if (0 != var7.e((byte) -119)) {
-                            stackOut_11_0 = (opa) ((Object) stackIn_11_0);
-                            stackOut_11_1 = 0;
-                            stackIn_12_0 = stackOut_11_0;
-                            stackIn_12_1 = stackOut_11_1;
+                            stackIn_12_0 = (opa) ((Object) stackIn_11_0);
+                            stackIn_12_1 = 0;
                             break L47;
                           } else {
-                            stackOut_10_0 = (opa) ((Object) stackIn_10_0);
-                            stackOut_10_1 = 1;
-                            stackIn_12_0 = stackOut_10_0;
-                            stackIn_12_1 = stackOut_10_1;
+                            stackIn_12_0 = (opa) ((Object) stackIn_11_0);
+                            stackIn_12_1 = 1;
                             break L47;
                           }
                         }
@@ -704,81 +576,57 @@ final class ii implements d {
           decompiledCaughtException = decompiledCaughtParameter0;
           L49: {
             var4 = decompiledCaughtException;
-            stackOut_126_0 = (RuntimeException) (var4);
-            stackOut_126_1 = new StringBuilder().append("ii.<init>(");
-            stackIn_128_0 = stackOut_126_0;
-            stackIn_128_1 = stackOut_126_1;
-            stackIn_127_0 = stackOut_126_0;
-            stackIn_127_1 = stackOut_126_1;
+            stackIn_128_0 = (RuntimeException) (var4);
+
+            stackIn_128_1 = new StringBuilder().append("ii.<init>(");
+
             if (param0 == null) {
-              stackOut_128_0 = (RuntimeException) ((Object) stackIn_128_0);
-              stackOut_128_1 = (StringBuilder) ((Object) stackIn_128_1);
-              stackOut_128_2 = "null";
-              stackIn_129_0 = stackOut_128_0;
-              stackIn_129_1 = stackOut_128_1;
-              stackIn_129_2 = stackOut_128_2;
+              stackIn_129_0 = (RuntimeException) ((Object) stackIn_128_0);
+              stackIn_129_1 = (StringBuilder) ((Object) stackIn_128_1);
+              stackIn_129_2 = "null";
               break L49;
             } else {
-              stackOut_127_0 = (RuntimeException) ((Object) stackIn_127_0);
-              stackOut_127_1 = (StringBuilder) ((Object) stackIn_127_1);
-              stackOut_127_2 = "{...}";
-              stackIn_129_0 = stackOut_127_0;
-              stackIn_129_1 = stackOut_127_1;
-              stackIn_129_2 = stackOut_127_2;
+              stackIn_129_0 = (RuntimeException) ((Object) stackIn_128_0);
+              stackIn_129_1 = (StringBuilder) ((Object) stackIn_128_1);
+              stackIn_129_2 = "{...}";
               break L49;
             }
           }
           L50: {
-            stackOut_129_0 = (RuntimeException) ((Object) stackIn_129_0);
-            stackOut_129_1 = ((StringBuilder) (Object) stackIn_129_1).append(stackIn_129_2).append(',');
-            stackIn_131_0 = stackOut_129_0;
-            stackIn_131_1 = stackOut_129_1;
-            stackIn_130_0 = stackOut_129_0;
-            stackIn_130_1 = stackOut_129_1;
+
+
+            stackIn_131_1 = ((StringBuilder) (Object) stackIn_129_1).append(stackIn_129_2).append(',');
+
             if (param1 == null) {
-              stackOut_131_0 = (RuntimeException) ((Object) stackIn_131_0);
-              stackOut_131_1 = (StringBuilder) ((Object) stackIn_131_1);
-              stackOut_131_2 = "null";
-              stackIn_132_0 = stackOut_131_0;
-              stackIn_132_1 = stackOut_131_1;
-              stackIn_132_2 = stackOut_131_2;
+              stackIn_129_0 = (RuntimeException) ((Object) stackIn_129_0);
+              stackIn_132_1 = (StringBuilder) ((Object) stackIn_131_1);
+              stackIn_132_2 = "null";
               break L50;
             } else {
-              stackOut_130_0 = (RuntimeException) ((Object) stackIn_130_0);
-              stackOut_130_1 = (StringBuilder) ((Object) stackIn_130_1);
-              stackOut_130_2 = "{...}";
-              stackIn_132_0 = stackOut_130_0;
-              stackIn_132_1 = stackOut_130_1;
-              stackIn_132_2 = stackOut_130_2;
+              stackIn_129_0 = (RuntimeException) ((Object) stackIn_129_0);
+              stackIn_132_1 = (StringBuilder) ((Object) stackIn_131_1);
+              stackIn_132_2 = "{...}";
               break L50;
             }
           }
           L51: {
-            stackOut_132_0 = (RuntimeException) ((Object) stackIn_132_0);
-            stackOut_132_1 = ((StringBuilder) (Object) stackIn_132_1).append(stackIn_132_2).append(',');
-            stackIn_134_0 = stackOut_132_0;
-            stackIn_134_1 = stackOut_132_1;
-            stackIn_133_0 = stackOut_132_0;
-            stackIn_133_1 = stackOut_132_1;
+
+
+            stackIn_134_1 = ((StringBuilder) (Object) stackIn_132_1).append(stackIn_132_2).append(',');
+
             if (param2 == null) {
-              stackOut_134_0 = (RuntimeException) ((Object) stackIn_134_0);
-              stackOut_134_1 = (StringBuilder) ((Object) stackIn_134_1);
-              stackOut_134_2 = "null";
-              stackIn_135_0 = stackOut_134_0;
-              stackIn_135_1 = stackOut_134_1;
-              stackIn_135_2 = stackOut_134_2;
+              stackIn_129_0 = (RuntimeException) ((Object) stackIn_129_0);
+              stackIn_135_1 = (StringBuilder) ((Object) stackIn_134_1);
+              stackIn_135_2 = "null";
               break L51;
             } else {
-              stackOut_133_0 = (RuntimeException) ((Object) stackIn_133_0);
-              stackOut_133_1 = (StringBuilder) ((Object) stackIn_133_1);
-              stackOut_133_2 = "{...}";
-              stackIn_135_0 = stackOut_133_0;
-              stackIn_135_1 = stackOut_133_1;
-              stackIn_135_2 = stackOut_133_2;
+              stackIn_129_0 = (RuntimeException) ((Object) stackIn_129_0);
+              stackIn_135_1 = (StringBuilder) ((Object) stackIn_134_1);
+              stackIn_135_2 = "{...}";
               break L51;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_135_0), stackIn_135_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_129_0), stackIn_135_2 + ')');
         }
     }
 

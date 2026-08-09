@@ -52,14 +52,14 @@ final class nva extends dqa implements oo {
     }
 
     private final void e(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         L0: {
           if (!this.h(0)) {
             break L0;
@@ -128,7 +128,6 @@ final class nva extends dqa implements oo {
     }
 
     private final void d(int param0) {
-        boolean discarded$0 = false;
         int var2 = this.field_w.e(4);
         int var3 = var2;
         int var4 = 0;
@@ -148,7 +147,7 @@ final class nva extends dqa implements oo {
         this.e(param0 ^ 20500);
         if (param0 != 20589) {
             shb var5 = (shb) null;
-            discarded$0 = this.a(76, 36, (shb) null, '3');
+            this.a(76, 36, (shb) null, '3');
         }
     }
 
@@ -182,9 +181,6 @@ final class nva extends dqa implements oo {
     }
 
     public final void a(int param0, int param1, int param2, htb param3, int param4) {
-        RuntimeException var6 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -192,14 +188,7 @@ final class nva extends dqa implements oo {
         String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var6 = null;
         try {
           L0: {
             if (param0 == 11) {
@@ -223,27 +212,19 @@ final class nva extends dqa implements oo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var6);
-            stackOut_6_1 = new StringBuilder().append("nva.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var6);
+
+            stackIn_8_1 = new StringBuilder().append("nva.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -265,17 +246,14 @@ final class nva extends dqa implements oo {
     }
 
     final boolean e(byte param0) {
-        boolean discarded$2 = false;
-        shb var3 = null;
+        shb var3;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == -120) {
             break L0;
           } else {
             var3 = (shb) null;
-            discarded$2 = this.a(27, 77, (shb) null, 'ￔ');
+            this.a(27, 77, (shb) null, 'ￔ');
             break L0;
           }
         }
@@ -285,16 +263,14 @@ final class nva extends dqa implements oo {
               break L2;
             } else {
               if (!super.e((byte) -120)) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 1;
           break L1;
         }
         return stackIn_7_0 != 0;
@@ -315,26 +291,14 @@ final class nva extends dqa implements oo {
     }
 
     final boolean a(int param0, shb param1) {
-        boolean discarded$2 = false;
         RuntimeException var3 = null;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -342,7 +306,7 @@ final class nva extends dqa implements oo {
               if (param0 == 0) {
                 break L1;
               } else {
-                discarded$2 = this.a(-101, -112, (shb) null, '￭');
+                this.a(-101, -112, (shb) null, '￭');
                 break L1;
               }
             }
@@ -360,35 +324,26 @@ final class nva extends dqa implements oo {
                 }
               }
             }
-            stackOut_5_0 = 1;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("nva.A(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("nva.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -410,12 +365,8 @@ final class nva extends dqa implements oo {
         if (!this.field_e) {
             return null;
         }
-        if (this.h(0)) {
-            if (this.field_G.field_e) {
-                if ((this.field_w.field_D ^ -1) != 0) {
-                    return this.field_w.field_L[this.field_w.field_D].toString();
-                }
-            }
+        if (this.h(0) && this.field_G.field_e && (this.field_w.field_D ^ -1) != 0) {
+            return this.field_w.field_L[this.field_w.field_D].toString();
         }
         if (!(null == this.field_w.g((byte) 96))) {
             return this.field_w.g((byte) 96).toString();
@@ -430,23 +381,12 @@ final class nva extends dqa implements oo {
     final boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -457,35 +397,26 @@ final class nva extends dqa implements oo {
                 break L1;
               }
             }
-            stackOut_2_0 = super.a(param0, param1, param2, param3, param4, param5, (byte) -93);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = super.a(param0, param1, param2, param3, param4, param5, (byte) -93);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var8 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var8);
-            stackOut_4_1 = new StringBuilder().append("nva.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var8);
+
+            stackIn_6_1 = new StringBuilder().append("nva.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -495,11 +426,6 @@ final class nva extends dqa implements oo {
     }
 
     final boolean a(int param0, int param1, shb param2, char param3) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6_int = 0;
-        String var6 = null;
-        int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_23_0 = 0;
@@ -509,8 +435,6 @@ final class nva extends dqa implements oo {
         int stackIn_56_0 = 0;
         int stackIn_59_0 = 0;
         boolean stackIn_61_0 = false;
-        RuntimeException stackIn_63_0 = null;
-        StringBuilder stackIn_63_1 = null;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
         RuntimeException stackIn_65_0 = null;
@@ -518,23 +442,11 @@ final class nva extends dqa implements oo {
         String stackIn_65_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_44_0 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_22_0 = 0;
-        boolean stackOut_60_0 = false;
-        int stackOut_58_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_62_0 = null;
-        StringBuilder stackOut_62_1 = null;
-        RuntimeException stackOut_64_0 = null;
-        StringBuilder stackOut_64_1 = null;
-        String stackOut_64_2 = null;
-        RuntimeException stackOut_63_0 = null;
-        StringBuilder stackOut_63_1 = null;
-        String stackOut_63_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6_int = 0;
+        String var6 = null;
+        int var7 = 0;
         var7 = VoidHunters.field_G;
         try {
           L0: {
@@ -567,8 +479,7 @@ final class nva extends dqa implements oo {
                                       break L4;
                                     }
                                   }
-                                  stackOut_44_0 = 1;
-                                  stackIn_45_0 = stackOut_44_0;
+                                  stackIn_45_0 = 1;
                                   decompiledRegionSelector0 = 4;
                                   break L0;
                                 } else {
@@ -576,8 +487,7 @@ final class nva extends dqa implements oo {
                                     var6_int = this.field_E.length();
                                     if ((var6_int ^ -1) < -1) {
                                       this.field_E = this.field_E.substring(0, -1 + var6_int);
-                                      stackOut_50_0 = 1;
-                                      stackIn_51_0 = stackOut_50_0;
+                                      stackIn_51_0 = 1;
                                       decompiledRegionSelector0 = 5;
                                       break L0;
                                     } else {
@@ -590,8 +500,7 @@ final class nva extends dqa implements oo {
                                       if (param3 < 128) {
                                         var6 = this.field_E + param3;
                                         this.a((byte) 40, var6);
-                                        stackOut_55_0 = 1;
-                                        stackIn_56_0 = stackOut_55_0;
+                                        stackIn_56_0 = 1;
                                         decompiledRegionSelector0 = 6;
                                         break L0;
                                       } else {
@@ -640,8 +549,7 @@ final class nva extends dqa implements oo {
                             }
                           }
                           this.e(120);
-                          stackOut_37_0 = 1;
-                          stackIn_38_0 = stackOut_37_0;
+                          stackIn_38_0 = 1;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         }
@@ -681,33 +589,28 @@ final class nva extends dqa implements oo {
                       }
                     }
                     this.e(115);
-                    stackOut_22_0 = 1;
-                    stackIn_23_0 = stackOut_22_0;
+                    stackIn_23_0 = 1;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 }
                 if (80 != param1) {
-                  stackOut_60_0 = super.a(-15834, param1, param2, param3);
-                  stackIn_61_0 = stackOut_60_0;
+                  stackIn_61_0 = super.a(-15834, param1, param2, param3);
                   decompiledRegionSelector0 = 8;
                   break L0;
                 } else {
                   this.g(5647);
-                  stackOut_58_0 = 0;
-                  stackIn_59_0 = stackOut_58_0;
+                  stackIn_59_0 = 0;
                   decompiledRegionSelector0 = 7;
                   break L0;
                 }
               } else {
-                stackOut_5_0 = 1;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -716,27 +619,19 @@ final class nva extends dqa implements oo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
             var5 = decompiledCaughtException;
-            stackOut_62_0 = (RuntimeException) (var5);
-            stackOut_62_1 = new StringBuilder().append("nva.N(").append(param0).append(',').append(param1).append(',');
-            stackIn_64_0 = stackOut_62_0;
-            stackIn_64_1 = stackOut_62_1;
-            stackIn_63_0 = stackOut_62_0;
-            stackIn_63_1 = stackOut_62_1;
+            stackIn_64_0 = (RuntimeException) (var5);
+
+            stackIn_64_1 = new StringBuilder().append("nva.N(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-              stackOut_64_2 = "null";
-              stackIn_65_0 = stackOut_64_0;
-              stackIn_65_1 = stackOut_64_1;
-              stackIn_65_2 = stackOut_64_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "null";
               break L13;
             } else {
-              stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
-              stackOut_63_1 = (StringBuilder) ((Object) stackIn_63_1);
-              stackOut_63_2 = "{...}";
-              stackIn_65_0 = stackOut_63_0;
-              stackIn_65_1 = stackOut_63_1;
-              stackIn_65_2 = stackOut_63_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "{...}";
               break L13;
             }
           }
@@ -785,8 +680,6 @@ final class nva extends dqa implements oo {
         int var6 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -794,16 +687,6 @@ final class nva extends dqa implements oo {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
@@ -812,15 +695,13 @@ final class nva extends dqa implements oo {
             var4 = 0;
             L1: while (true) {
               if (this.field_w.field_L.length <= var4) {
-                stackOut_8_0 = -1;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 var5 = this.field_w.field_L[var4].toString().toLowerCase();
                 if (var5.startsWith(param0)) {
-                  stackOut_5_0 = var4;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = var4;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -834,27 +715,19 @@ final class nva extends dqa implements oo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3);
-            stackOut_10_1 = new StringBuilder().append("nva.C(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3);
+
+            stackIn_12_1 = new StringBuilder().append("nva.C(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L2;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L2;
             }
           }
@@ -897,11 +770,10 @@ final class nva extends dqa implements oo {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
-        String discarded$0 = null;
         fda.field_o = param2;
         mb.field_j = param0;
         if (!param1) {
-            discarded$0 = nva.a('W', true, -7);
+            nva.a('W', true, -7);
         }
         eqa.field_o = param3;
     }

@@ -16,7 +16,6 @@ final class mq {
     }
 
     final static int[] a(int param0, byte param1, int param2) {
-        int[] discarded$0 = null;
         int var3 = je.a(param0, (byte) -104);
         int var4 = oh.b(param0, param1 ^ 96);
         int var5 = je.a(param2, (byte) -104);
@@ -25,15 +24,17 @@ final class mq {
         int var8 = (int)((long)var3 * (long)var6 >> -26069872);
         int var9 = (int)((long)var4 * (long)var5 >> 1293876176);
         if (param1 != 80) {
-            discarded$0 = mq.a(54, (byte) -60, 103);
+            mq.a(54, (byte) -60, 103);
         }
         int var10 = (int)((long)var6 * (long)var4 >> 702001744);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -44,8 +45,6 @@ final class mq {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {

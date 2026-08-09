@@ -39,19 +39,17 @@ final class gk {
     int[] field_i;
 
     public static void a(boolean param0) {
-        int discarded$0 = 0;
         field_G = null;
         field_e = null;
         if (!param0) {
-            discarded$0 = gk.a(-115, true, 120);
+            gk.a(-115, true, 120);
         }
     }
 
     final static int a(int param0, boolean param1, int param2) {
-        int discarded$2 = 0;
-        int var3 = 0;
+        int var3;
         if (!param1) {
-          discarded$2 = gk.a(-119, true, -99);
+          gk.a(-119, true, -99);
           var3 = param0 - 1 & param2 >> 1223197663;
           return (param2 + (param2 >>> -2079428609)) % param0 + var3;
         } else {

@@ -53,7 +53,7 @@ final class wg implements Iterable {
     }
 
     final ms a(boolean param0) {
-        ms var2 = null;
+        ms var2;
         var2 = this.field_f.field_s;
         if (this.field_f != var2) {
           if (param0) {
@@ -158,14 +158,13 @@ final class wg implements Iterable {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_d = null;
         field_e = null;
         field_b = null;
         field_a = null;
         field_c = null;
         if (param0 != 19345) {
-            discarded$0 = wg.a('`', -95);
+            wg.a('`', -95);
         }
     }
 

@@ -23,9 +23,9 @@ final class vf extends i {
     }
 
     final static char a(byte param0, char param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = Kickabout.field_G;
         var2 = -19 / ((param0 - -30) / 34);
         var3 = param1;
@@ -275,7 +275,6 @@ final class vf extends i {
     }
 
     final void a(int param0, int param1) {
-        char discarded$2 = 0;
         L0: {
           super.a(84, param1);
           if (-1 == (param1 ^ -1)) {
@@ -286,7 +285,7 @@ final class vf extends i {
           }
         }
         if (param0 <= 60) {
-          discarded$2 = vf.a((byte) -101, 'V');
+          vf.a((byte) -101, 'V');
           return;
         } else {
           return;

@@ -30,8 +30,6 @@ final class ch {
         sa stackIn_6_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -39,44 +37,28 @@ final class ch {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        sa stackOut_5_0 = null;
-        byte[] stackOut_10_0 = null;
-        byte[] stackOut_8_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             if (param2 != null) {
               if (param2.length > param0) {
                 var3 = new sa();
                 ((i) ((Object) var3)).a(param2, (byte) -122);
-                stackOut_5_0 = (sa) (var3);
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (sa) (var3);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (param1) {
-                  stackOut_10_0 = cl.a(0, param2);
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = cl.a(0, param2);
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_8_0 = (byte[]) (param2);
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = (byte[]) (param2);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               }
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -85,27 +67,19 @@ final class ch {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var3_ref);
-            stackOut_12_1 = new StringBuilder().append("ch.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var3_ref);
+
+            stackIn_14_1 = new StringBuilder().append("ch.B(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L1;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L1;
             }
           }
@@ -127,7 +101,7 @@ final class ch {
     }
 
     final static String a(boolean param0, boolean param1, boolean param2, int param3) {
-        int var4 = 0;
+        int var4;
         L0: {
           var4 = param3;
           if (param1) {

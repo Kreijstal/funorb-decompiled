@@ -8,9 +8,8 @@ abstract class um extends oh {
     }
 
     final int a(byte param0, boolean param1) {
-        int discarded$0 = 0;
         if (param0 >= -53) {
-            discarded$0 = this.a((byte) -63, true);
+            this.a((byte) -63, true);
             return 16;
         }
         return 16;

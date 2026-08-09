@@ -14,10 +14,9 @@ final class lm {
     static f[] field_d;
 
     final static void a(byte param0) {
-        Object var1 = null;
         int var2 = 0;
-        Throwable var3 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         var1 = tm.field_b;
         synchronized (var1) {
           L0: {

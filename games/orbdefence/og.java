@@ -30,7 +30,7 @@ final class og {
     }
 
     final int b(byte param0) {
-        int var2 = 0;
+        int var2;
         if (!this.field_l) {
           if (-3 != (this.field_d ^ -1)) {
             var2 = -57 / ((53 - param0) / 43);

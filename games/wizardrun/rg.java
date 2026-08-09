@@ -17,15 +17,26 @@ abstract class rg extends tj {
     void j(int param0) {
         if (param0 != -8144) {
             rg.i(49);
-            return;
         }
     }
 
     final static void a(Throwable param0, String param1, int param2) {
         try {
-            int discarded$1 = 0;
-            Exception var3 = null;
-            String var3_ref = null;
+            vh stackIn_16_0;
+            java.net.URL stackIn_16_1;
+            java.net.URL stackIn_16_2;
+            java.net.URL stackIn_16_3;
+            StringBuilder stackIn_16_4;
+            vh stackIn_17_0;
+            java.net.URL stackIn_17_1;
+            java.net.URL stackIn_17_2;
+            java.net.URL stackIn_17_3;
+            StringBuilder stackIn_17_4;
+            String stackIn_17_5;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            String var3 = null;
+            Exception var3_ref = null;
             jh var4 = null;
             DataInputStream var5 = null;
             int var6 = 0;
@@ -33,48 +44,13 @@ abstract class rg extends tj {
             String var8 = null;
             String var9 = null;
             String var10 = null;
-            vh stackIn_15_0 = null;
-            java.net.URL stackIn_15_1 = null;
-            java.net.URL stackIn_15_2 = null;
-            java.net.URL stackIn_15_3 = null;
-            StringBuilder stackIn_15_4 = null;
-            vh stackIn_16_0 = null;
-            java.net.URL stackIn_16_1 = null;
-            java.net.URL stackIn_16_2 = null;
-            java.net.URL stackIn_16_3 = null;
-            StringBuilder stackIn_16_4 = null;
-            vh stackIn_17_0 = null;
-            java.net.URL stackIn_17_1 = null;
-            java.net.URL stackIn_17_2 = null;
-            java.net.URL stackIn_17_3 = null;
-            StringBuilder stackIn_17_4 = null;
-            String stackIn_17_5 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            vh stackOut_14_0 = null;
-            java.net.URL stackOut_14_1 = null;
-            java.net.URL stackOut_14_2 = null;
-            java.net.URL stackOut_14_3 = null;
-            StringBuilder stackOut_14_4 = null;
-            vh stackOut_16_0 = null;
-            java.net.URL stackOut_16_1 = null;
-            java.net.URL stackOut_16_2 = null;
-            java.net.URL stackOut_16_3 = null;
-            StringBuilder stackOut_16_4 = null;
-            String stackOut_16_5 = null;
-            vh stackOut_15_0 = null;
-            java.net.URL stackOut_15_1 = null;
-            java.net.URL stackOut_15_2 = null;
-            java.net.URL stackOut_15_3 = null;
-            StringBuilder stackOut_15_4 = null;
-            String stackOut_15_5 = null;
             var6 = wizardrun.field_H;
             try {
               L0: {
                 L1: {
-                  var3_ref = "";
+                  var3 = "";
                   if (param0 != null) {
-                    var3_ref = mj.a(param0, (byte) -91);
+                    var3 = mj.a(param0, (byte) -91);
                     break L1;
                   } else {
                     break L1;
@@ -86,19 +62,19 @@ abstract class rg extends tj {
                       if (param0 == null) {
                         break L3;
                       } else {
-                        var3_ref = var3_ref + " | ";
+                        var3 = var3 + " | ";
                         break L3;
                       }
                     }
-                    var3_ref = var3_ref + param1;
+                    var3 = var3 + param1;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
                 L4: {
-                  ve.a(118, var3_ref);
-                  var7 = md.a(":", var3_ref, param2 + 29396, "%3a");
+                  ve.a(118, var3);
+                  var7 = md.a(":", var3, param2 + 29396, "%3a");
                   var8 = md.a("@", var7, 28834, "%40");
                   var9 = md.a("&", var8, 28834, "%26");
                   var10 = md.a("#", var9, param2 + 29396, "%23");
@@ -114,48 +90,31 @@ abstract class rg extends tj {
                   break L0;
                 } else {
                   L5: {
-                    stackOut_14_0 = qf.field_m;
-                    stackOut_14_1 = null;
-                    stackOut_14_2 = null;
-                    stackOut_14_3 = ej.field_a.getCodeBase();
-                    stackOut_14_4 = new StringBuilder().append("clienterror.ws?c=").append(fi.field_A).append("&u=");
-                    stackIn_16_0 = stackOut_14_0;
-                    stackIn_16_1 = stackOut_14_1;
-                    stackIn_16_2 = stackOut_14_2;
-                    stackIn_16_3 = stackOut_14_3;
-                    stackIn_16_4 = stackOut_14_4;
-                    stackIn_15_0 = stackOut_14_0;
-                    stackIn_15_1 = stackOut_14_1;
-                    stackIn_15_2 = stackOut_14_2;
-                    stackIn_15_3 = stackOut_14_3;
-                    stackIn_15_4 = stackOut_14_4;
+                    stackIn_16_0 = qf.field_m;
+
+                    stackIn_16_1 = null;
+
+                    stackIn_16_2 = null;
+
+                    stackIn_16_3 = ej.field_a.getCodeBase();
+
+                    stackIn_16_4 = new StringBuilder().append("clienterror.ws?c=").append(fi.field_A).append("&u=");
+
                     if (null != gf.field_Y) {
-                      stackOut_16_0 = (vh) ((Object) stackIn_16_0);
-                      stackOut_16_1 = null;
-                      stackOut_16_2 = null;
-                      stackOut_16_3 = (java.net.URL) ((Object) stackIn_16_3);
-                      stackOut_16_4 = (StringBuilder) ((Object) stackIn_16_4);
-                      stackOut_16_5 = gf.field_Y;
-                      stackIn_17_0 = stackOut_16_0;
-                      stackIn_17_1 = stackOut_16_1;
-                      stackIn_17_2 = stackOut_16_2;
-                      stackIn_17_3 = stackOut_16_3;
-                      stackIn_17_4 = stackOut_16_4;
-                      stackIn_17_5 = stackOut_16_5;
+                      stackIn_17_0 = (vh) ((Object) stackIn_16_0);
+                      stackIn_17_1 = null;
+                      stackIn_17_2 = null;
+                      stackIn_17_3 = (java.net.URL) ((Object) stackIn_16_3);
+                      stackIn_17_4 = (StringBuilder) ((Object) stackIn_16_4);
+                      stackIn_17_5 = gf.field_Y;
                       break L5;
                     } else {
-                      stackOut_15_0 = (vh) ((Object) stackIn_15_0);
-                      stackOut_15_1 = null;
-                      stackOut_15_2 = null;
-                      stackOut_15_3 = (java.net.URL) ((Object) stackIn_15_3);
-                      stackOut_15_4 = (StringBuilder) ((Object) stackIn_15_4);
-                      stackOut_15_5 = "" + h.field_m;
-                      stackIn_17_0 = stackOut_15_0;
-                      stackIn_17_1 = stackOut_15_1;
-                      stackIn_17_2 = stackOut_15_2;
-                      stackIn_17_3 = stackOut_15_3;
-                      stackIn_17_4 = stackOut_15_4;
-                      stackIn_17_5 = stackOut_15_5;
+                      stackIn_17_0 = (vh) ((Object) stackIn_16_0);
+                      stackIn_17_1 = null;
+                      stackIn_17_2 = null;
+                      stackIn_17_3 = (java.net.URL) ((Object) stackIn_16_3);
+                      stackIn_17_4 = (StringBuilder) ((Object) stackIn_16_4);
+                      stackIn_17_5 = "" + h.field_m;
                       break L5;
                     }
                   }
@@ -167,7 +126,7 @@ abstract class rg extends tj {
                           break L7;
                         } else {
                           var5 = (DataInputStream) (var4.field_e);
-                          discarded$1 = var5.read();
+                          var5.read();
                           var5.close();
                           break L7;
                         }
@@ -184,7 +143,7 @@ abstract class rg extends tj {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L8: {
-                var3 = (Exception) (Object) decompiledCaughtException;
+                var3_ref = (Exception) (Object) decompiledCaughtException;
                 decompiledRegionSelector0 = 1;
                 break L8;
               }
@@ -227,24 +186,23 @@ abstract class rg extends tj {
         if (param0 != -6) {
             String var2 = (String) null;
             rg.a((Throwable) null, (String) null, -82);
-            return;
         }
     }
 
     void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = wizardrun.field_H;
         ed.e(param0 + 6, param2 - -35, this.field_r - 12, this.field_n - 40, 2105376, 0);
         var5 = 211;
@@ -261,42 +219,33 @@ abstract class rg extends tj {
             var8 = param2 + 35;
             L1: while (true) {
               if (var4 <= var7) {
-                hg.field_d.e(-90 + (this.field_r + param0), param2 + 10);
-                nf.a(5 + param0, param2 + 35, -10 + this.field_r, (byte) -106, ok.field_a);
-                nf.a(param0, param2 - (-this.field_n - -22), this.field_r, (byte) -114, ia.field_i);
-                var5 = 169;
-                var6 = 127;
-                var4 = this.field_n - 79;
-                var7 = 0;
-                var8 = param2 + 57;
-                if (param1 == -1) {
-                  L2: while (true) {
-                    if (var7 >= var4) {
-                      return;
-                    } else {
-                      var9 = var7 * (var6 - var5) / var4 + var5;
-                      var9 = var9 | (var9 << -813635792 | var9 << -1380555832);
-                      ed.f(param0, var8, 6, var9);
-                      ed.f(-6 + (param0 - -this.field_r), var8, 6, var9);
-                      var7++;
-                      var8++;
-                      continue L2;
-                    }
+                L2: {
+                  hg.field_d.e(-90 + (this.field_r + param0), param2 + 10);
+                  nf.a(5 + param0, param2 + 35, -10 + this.field_r, (byte) -106, ok.field_a);
+                  nf.a(param0, param2 - (-this.field_n - -22), this.field_r, (byte) -114, ia.field_i);
+                  var5 = 169;
+                  var6 = 127;
+                  var4 = this.field_n - 79;
+                  var7 = 0;
+                  var8 = param2 + 57;
+                  if (param1 == -1) {
+                    break L2;
+                  } else {
+                    rg.i(61);
+                    break L2;
                   }
-                } else {
-                  rg.i(61);
-                  L3: while (true) {
-                    if (var7 >= var4) {
-                      return;
-                    } else {
-                      var9 = var7 * (var6 - var5) / var4 + var5;
-                      var9 = var9 | (var9 << -813635792 | var9 << -1380555832);
-                      ed.f(param0, var8, 6, var9);
-                      ed.f(-6 + (param0 - -this.field_r), var8, 6, var9);
-                      var7++;
-                      var8++;
-                      continue L3;
-                    }
+                }
+                L3: while (true) {
+                  if (var7 >= var4) {
+                    return;
+                  } else {
+                    var9 = var7 * (var6 - var5) / var4 + var5;
+                    var9 = var9 | (var9 << -813635792 | var9 << -1380555832);
+                    ed.f(param0, var8, 6, var9);
+                    ed.f(-6 + (param0 - -this.field_r), var8, 6, var9);
+                    var7++;
+                    var8++;
+                    continue L3;
                   }
                 }
               } else {
@@ -310,7 +259,7 @@ abstract class rg extends tj {
               }
             }
           } else {
-            if (var8 >= ed.field_i) {
+            if ((var8 ^ -1) <= (ed.field_i ^ -1)) {
               if (ed.field_b > var8) {
                 L4: {
                   var9 = var7 * (var6 + -var5) / var4 + var5;
@@ -401,59 +350,38 @@ abstract class rg extends tj {
     boolean a(int param0) {
         this.g((byte) -3);
         if (param0 != 16) {
-          rg.i(-88);
-          return super.a(param0 + 0);
-        } else {
-          return super.a(param0 + 0);
+            rg.i(-88);
         }
+        return super.a(param0 + 0);
     }
 
     boolean g(int param0) {
-        int fieldTemp$1 = 0;
         int var2 = 0;
         int var3 = 0;
-        int var4 = 0;
+        int fieldTemp$0 = 0;
         int var5 = 0;
-        String var6 = null;
-        if (this.field_O <= 0) {
-          if (param0 != 1) {
-            var6 = (String) null;
-            rg.a((Throwable) null, (String) null, 94);
-            return super.g(1);
-          } else {
-            return super.g(1);
-          }
-        } else {
-          var2 = this.field_N;
-          var3 = this.field_M;
-          fieldTemp$1 = this.field_T + 1;
-          this.field_T = this.field_T + 1;
-          if (this.field_O <= fieldTemp$1) {
-            this.field_O = 0;
-            this.j(-8144);
-            this.a(6154, var3, var2);
-            if (param0 == 1) {
-              return super.g(1);
+        int var4 = 0;
+        if (this.field_O > 0) {
+            var2 = this.field_N;
+            var3 = this.field_M;
+            fieldTemp$0 = this.field_T + 1;
+            this.field_T = this.field_T + 1;
+            if (this.field_O > fieldTemp$0) {
+                var4 = this.field_T * (-this.field_T + 2 * this.field_O);
+                var5 = this.field_O * this.field_O;
+                var2 = var4 * (this.field_N - this.field_L) / var5 + this.field_L;
+                var3 = this.field_Q + var4 * (this.field_M - this.field_Q) / var5;
             } else {
-              var6 = (String) null;
-              rg.a((Throwable) null, (String) null, 94);
-              return super.g(1);
+                this.field_O = 0;
+                this.j(-8144);
             }
-          } else {
-            var4 = this.field_T * (-this.field_T + 2 * this.field_O);
-            var5 = this.field_O * this.field_O;
-            var2 = var4 * (this.field_N - this.field_L) / var5 + this.field_L;
-            var3 = this.field_Q + var4 * (this.field_M - this.field_Q) / var5;
             this.a(6154, var3, var2);
-            if (param0 == 1) {
-              return super.g(1);
-            } else {
-              var6 = (String) null;
-              rg.a((Throwable) null, (String) null, 94);
-              return super.g(1);
-            }
-          }
         }
+        if (param0 != 1) {
+            String var6 = (String) null;
+            rg.a((Throwable) null, (String) null, 94);
+        }
+        return super.g(1);
     }
 
     final void b(int param0, int param1, int param2, int param3) {

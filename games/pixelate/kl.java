@@ -33,9 +33,9 @@ final class kl implements Iterable {
     }
 
     final fa a(int param0, long param1) {
-        fa var4 = null;
-        fa var5 = null;
-        int var6 = 0;
+        fa var4;
+        fa var5;
+        int var6;
         var6 = Pixelate.field_H ? 1 : 0;
         var4 = this.field_e[(int)((long)(this.field_a - param0) & param1)];
         this.field_b = var4.field_a;
@@ -104,12 +104,12 @@ final class kl implements Iterable {
     }
 
     final static void a(byte param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         if (7500 <= jd.field_r) {
           L0: {
-            fieldTemp$2 = ko.field_hb + 1;
+            fieldTemp$1 = ko.field_hb + 1;
             ko.field_hb = ko.field_hb + 1;
-            if (fieldTemp$2 == jm.field_g.length) {
+            if (fieldTemp$1 == jm.field_g.length) {
               ko.field_hb = 0;
               break L0;
             } else {

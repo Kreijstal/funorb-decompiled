@@ -9,12 +9,11 @@ final class jk {
 
     final static void a(int param0, boolean param1) {
         try {
-            Object discarded$1 = null;
-            Throwable var2 = null;
             Throwable decompiledCaughtException = null;
+            Throwable var2 = null;
             try {
               L0: {
-                discarded$1 = kf.a((byte) 53, "resizing", ii.b(param1), new Object[]{new Integer(param0)});
+                kf.a((byte) 53, "resizing", ii.b(param1), new Object[]{new Integer(param0)});
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -32,12 +31,12 @@ final class jk {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var7 = Confined.field_J ? 1 : 0;
         var2 = -5 / ((-36 - param1) / 52);
         var3 = 0;
@@ -791,12 +790,12 @@ final class jk {
     }
 
     final static nf b(int param0) {
-        int var1 = 0;
-        byte[] var2 = null;
-        int[] var3 = null;
-        int var4_int = 0;
-        nf var4 = null;
-        int var5 = 0;
+        int var1;
+        byte[] var2;
+        int[] var3;
+        int var4_int;
+        nf var4;
+        int var5;
         var5 = Confined.field_J ? 1 : 0;
         var1 = sd.field_f[0] * rg.field_I[0];
         var2 = rj.field_f[0];

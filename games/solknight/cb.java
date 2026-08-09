@@ -59,7 +59,7 @@ final class cb extends IOException {
     }
 
     final static void b(byte param0) {
-        int var1 = 0;
+        int var1;
         L0: {
           if (wc.field_a >= 224) {
             break L0;

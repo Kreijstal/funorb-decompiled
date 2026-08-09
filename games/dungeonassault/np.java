@@ -17,9 +17,9 @@ class np extends rj {
     static int field_K;
 
     void a(int param0, int param1, byte param2) {
-        int var4 = 0;
-        rj var5 = null;
-        int var6 = 0;
+        int var4;
+        rj var5;
+        int var6;
         var6 = DungeonAssault.field_K;
         if (!this.field_N) {
           return;
@@ -94,17 +94,16 @@ class np extends rj {
     }
 
     final static void d(byte param0) {
-        String discarded$0 = null;
         String var2 = (String) null;
         gg.a((byte) -92, (String) null, he.field_m);
         if (param0 < 45) {
-            discarded$0 = np.b(25, 106);
+            np.b(25, 106);
         }
     }
 
     void b(byte param0) {
-        int var3 = 0;
-        rj var4 = null;
+        int var3;
+        rj var4;
         var3 = DungeonAssault.field_K;
         if (null != this.field_J) {
           var4 = (rj) ((Object) this.field_J.e(param0 ^ -24182));
@@ -172,8 +171,8 @@ class np extends rj {
     }
 
     void e(int param0, int param1, int param2) {
-        int var5 = 0;
-        rj var6 = null;
+        int var5;
+        rj var6;
         var5 = DungeonAssault.field_K;
         if (param1 == 0) {
           if (0 != param0) {
@@ -249,130 +248,101 @@ class np extends rj {
     }
 
     void a(boolean param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        Object var6_ref = null;
-        rj var6_ref_rj = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_34_0 = 0;
-        int stackIn_47_0 = 0;
-        int stackIn_51_0 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        var6_ref = null;
+        int stackIn_14_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_27_0 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_29_1 = 0;
+        int stackIn_41_0 = 0;
+        int stackIn_44_0 = 0;
+        int stackIn_50_0 = 0;
+        int stackIn_53_0 = 0;
+        int var4;
+        int var5;
+        Object var6;
+        rj var6_ref;
+        int var6_int;
+        int var7;
+        int var8;
+        var6 = null;
         var8 = DungeonAssault.field_K;
         var4 = param1 + -this.field_q;
         var5 = param2 + -this.field_x;
         if (!param0) {
           if (this.field_J != null) {
-            var6_ref_rj = (rj) ((Object) this.field_J.e(-24172));
+            var6_ref = (rj) ((Object) this.field_J.e(-24172));
             L0: while (true) {
-              if (var6_ref_rj == null) {
-                if (0 != (this.field_v & 1)) {
-                  L1: {
-                    var6 = -var4;
-                    if ((2 & this.field_v) == 0) {
-                      stackOut_50_0 = 0;
-                      stackIn_51_0 = stackOut_50_0;
-                      break L1;
-                    } else {
-                      stackOut_49_0 = -var5;
-                      stackIn_51_0 = stackOut_49_0;
-                      break L1;
-                    }
+              if (var6_ref != null) {
+                L1: {
+                  if ((var6_ref.field_v & 4 ^ -1) == -1) {
+                    break L1;
+                  } else {
+                    var6_ref.e(0, var4, 111);
+                    break L1;
                   }
-                  var7 = stackIn_51_0;
-                  this.e(var7, var6, 115);
-                  this.field_q = param1;
-                  this.field_x = param2;
-                  return;
-                } else {
-                  L2: {
-                    var6 = 0;
-                    if ((2 & this.field_v) == 0) {
-                      stackOut_46_0 = 0;
-                      stackIn_47_0 = stackOut_46_0;
-                      break L2;
-                    } else {
-                      stackOut_45_0 = -var5;
-                      stackIn_47_0 = stackOut_45_0;
-                      break L2;
-                    }
-                  }
-                  var7 = stackIn_47_0;
-                  this.e(var7, var6, 115);
-                  this.field_q = param1;
-                  this.field_x = param2;
-                  return;
                 }
+                L2: {
+                  if (-1 == (8 & var6_ref.field_v ^ -1)) {
+                    break L2;
+                  } else {
+                    var6_ref.e(var5, 0, 92);
+                    break L2;
+                  }
+                }
+                var6_ref = (rj) ((Object) this.field_J.a(4));
+                continue L0;
               } else {
                 L3: {
-                  if ((var6_ref_rj.field_v & 4) == 0) {
+                  if (0 != (this.field_v & 1)) {
+                    stackIn_50_0 = -var4;
                     break L3;
                   } else {
-                    var6_ref_rj.e(0, var4, 111);
+                    stackIn_50_0 = 0;
                     break L3;
                   }
                 }
                 L4: {
-                  if (-1 == (8 & var6_ref_rj.field_v ^ -1)) {
+                  var6_int = stackIn_50_0;
+                  if ((2 & this.field_v) == 0) {
+                    stackIn_53_0 = 0;
                     break L4;
                   } else {
-                    var6_ref_rj.e(var5, 0, 92);
+                    stackIn_53_0 = -var5;
                     break L4;
                   }
                 }
-                var6_ref_rj = (rj) ((Object) this.field_J.a(4));
-                continue L0;
+                var7 = stackIn_53_0;
+                this.e(var7, var6_int, 115);
+                this.field_q = param1;
+                this.field_x = param2;
+                return;
               }
             }
           } else {
             L5: {
               if (0 != (this.field_v & 1)) {
-                stackOut_30_0 = -var4;
-                stackIn_31_0 = stackOut_30_0;
+                stackIn_41_0 = -var4;
                 break L5;
               } else {
-                stackOut_29_0 = 0;
-                stackIn_31_0 = stackOut_29_0;
+                stackIn_41_0 = 0;
                 break L5;
               }
             }
             L6: {
-              var6 = stackIn_31_0;
+              var6_int = stackIn_41_0;
               if ((2 & this.field_v) == 0) {
-                stackOut_33_0 = 0;
-                stackIn_34_0 = stackOut_33_0;
+                stackIn_44_0 = 0;
                 break L6;
               } else {
-                stackOut_32_0 = -var5;
-                stackIn_34_0 = stackOut_32_0;
+                stackIn_44_0 = -var5;
                 break L6;
               }
             }
-            var7 = stackIn_34_0;
-            this.e(var7, var6, 115);
+            var7 = stackIn_44_0;
+            this.e(var7, var6_int, 115);
             this.field_q = param1;
             this.field_x = param2;
             return;
@@ -380,93 +350,80 @@ class np extends rj {
         } else {
           field_A = (nh) null;
           if (this.field_J != null) {
-            var6_ref_rj = (rj) ((Object) this.field_J.e(-24172));
+            var6_ref = (rj) ((Object) this.field_J.e(-24172));
             L7: while (true) {
-              if (var6_ref_rj == null) {
-                if (0 == (this.field_v & 1)) {
-                  L8: {
-                    var6 = 0;
-                    if ((2 & this.field_v) == 0) {
-                      stackOut_24_0 = 0;
-                      stackIn_25_0 = stackOut_24_0;
-                      break L8;
-                    } else {
-                      stackOut_23_0 = -var5;
-                      stackIn_25_0 = stackOut_23_0;
-                      break L8;
-                    }
-                  }
-                  var7 = stackIn_25_0;
-                  this.e(var7, var6, 115);
-                  this.field_q = param1;
-                  this.field_x = param2;
-                  return;
-                } else {
-                  L9: {
-                    var6 = -var4;
-                    if ((2 & this.field_v) == 0) {
-                      stackOut_20_0 = 0;
-                      stackIn_21_0 = stackOut_20_0;
-                      break L9;
-                    } else {
-                      stackOut_19_0 = -var5;
-                      stackIn_21_0 = stackOut_19_0;
-                      break L9;
-                    }
-                  }
-                  var7 = stackIn_21_0;
-                  this.e(var7, var6, 115);
-                  this.field_q = param1;
-                  this.field_x = param2;
-                  return;
-                }
-              } else {
-                L10: {
-                  if ((var6_ref_rj.field_v & 4) == 0) {
-                    break L10;
+              if (var6_ref != null) {
+                stackIn_29_0 = var6_ref.field_v & 4 ^ -1;
+
+                stackIn_29_1 = -1;
+
+                L8: {
+                  if (stackIn_29_0 == stackIn_29_1) {
+                    break L8;
                   } else {
-                    var6_ref_rj.e(0, var4, 111);
-                    break L10;
+                    var6_ref.e(0, var4, 111);
+                    break L8;
                   }
                 }
-                L11: {
-                  if (-1 == (8 & var6_ref_rj.field_v ^ -1)) {
-                    break L11;
+                L9: {
+                  if (-1 == (8 & var6_ref.field_v ^ -1)) {
+                    break L9;
                   } else {
-                    var6_ref_rj.e(var5, 0, 92);
-                    break L11;
+                    var6_ref.e(var5, 0, 92);
+                    break L9;
                   }
                 }
-                var6_ref_rj = (rj) ((Object) this.field_J.a(4));
+                var6_ref = (rj) ((Object) this.field_J.a(4));
                 continue L7;
+              } else {
+                L12: {
+                  if (0 != (this.field_v & 1)) {
+                    stackIn_14_0 = -var4;
+                    break L12;
+                  } else {
+                    stackIn_14_0 = 0;
+                    break L12;
+                  }
+                }
+                L13: {
+                  var6_int = stackIn_14_0;
+                  if ((2 & this.field_v) == 0) {
+                    stackIn_17_0 = 0;
+                    break L13;
+                  } else {
+                    stackIn_17_0 = -var5;
+                    break L13;
+                  }
+                }
+                var7 = stackIn_17_0;
+                this.e(var7, var6_int, 115);
+                this.field_q = param1;
+                this.field_x = param2;
+                return;
               }
             }
           } else {
-            L12: {
+            L14: {
               if (0 != (this.field_v & 1)) {
-                stackOut_4_0 = -var4;
-                stackIn_5_0 = stackOut_4_0;
-                break L12;
+                stackIn_5_0 = -var4;
+                break L14;
               } else {
-                stackOut_3_0 = 0;
-                stackIn_5_0 = stackOut_3_0;
-                break L12;
+                stackIn_5_0 = 0;
+                break L14;
               }
             }
-            L13: {
-              var6 = stackIn_5_0;
+            L15: {
+              var6_int = stackIn_5_0;
               if ((2 & this.field_v) == 0) {
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
-                break L13;
+                stackIn_8_0 = 0;
+                break L15;
               } else {
-                stackOut_6_0 = -var5;
-                stackIn_8_0 = stackOut_6_0;
-                break L13;
+                stackIn_8_0 = -var5;
+                break L15;
               }
             }
             var7 = stackIn_8_0;
-            this.e(var7, var6, 115);
+            this.e(var7, var6_int, 115);
             this.field_q = param1;
             this.field_x = param2;
             return;
@@ -475,10 +432,8 @@ class np extends rj {
     }
 
     void b(int param0, int param1, int param2) {
-        rj discarded$2 = null;
-        rj discarded$3 = null;
-        int var5 = 0;
-        rj var6 = null;
+        int var5;
+        rj var6;
         var5 = DungeonAssault.field_K;
         if (this.field_N) {
           if (this.field_L != null) {
@@ -502,7 +457,7 @@ class np extends rj {
                 return;
               }
             } else {
-              discarded$2 = this.a(-49, 0, 87);
+              this.a(-49, 0, 87);
               if (null != this.field_J) {
                 var6 = (rj) ((Object) this.field_J.e(-24172));
                 L1: while (true) {
@@ -525,7 +480,7 @@ class np extends rj {
             gf.a(this.field_L);
             gf.a(this.field_t - -param0, param2 + this.field_i, param0 + (this.field_q + this.field_t), this.field_i + this.field_x + param2);
             if (param1 != 8187) {
-              discarded$3 = this.a(-49, 0, 87);
+              this.a(-49, 0, 87);
               if (null != this.field_J) {
                 var6 = (rj) ((Object) this.field_J.e(-24172));
                 L2: while (true) {
@@ -567,12 +522,12 @@ class np extends rj {
     }
 
     rj a(int param0, int param1, int param2) {
-        rj dupTemp$14 = null;
-        rj dupTemp$15 = null;
-        rj var5 = null;
-        int var6 = 0;
-        java.applet.Applet var7 = null;
-        rj var8 = null;
+        rj dupTemp$1 = null;
+        rj dupTemp$2 = null;
+        rj var5;
+        int var6;
+        java.applet.Applet var7;
+        rj var8;
         var6 = DungeonAssault.field_K;
         if (this.a((byte) 117, param1, param2)) {
           if (param0 < -10) {
@@ -580,9 +535,9 @@ class np extends rj {
               var8 = (rj) ((Object) this.field_J.e(-24172));
               L0: while (true) {
                 if (var8 != null) {
-                  dupTemp$14 = var8.a(-31, param1, param2);
-                  var5 = dupTemp$14;
-                  if (dupTemp$14 != null) {
+                  dupTemp$1 = var8.a(-31, param1, param2);
+                  var5 = dupTemp$1;
+                  if (dupTemp$1 != null) {
                     return var5;
                   } else {
                     var8 = (rj) ((Object) this.field_J.a(4));
@@ -602,9 +557,9 @@ class np extends rj {
               var8 = (rj) ((Object) this.field_J.e(-24172));
               L1: while (true) {
                 if (var8 != null) {
-                  dupTemp$15 = var8.a(-31, param1, param2);
-                  var5 = dupTemp$15;
-                  if (dupTemp$15 != null) {
+                  dupTemp$2 = var8.a(-31, param1, param2);
+                  var5 = dupTemp$2;
+                  if (dupTemp$2 != null) {
                     return var5;
                   } else {
                     var8 = (rj) ((Object) this.field_J.a(4));

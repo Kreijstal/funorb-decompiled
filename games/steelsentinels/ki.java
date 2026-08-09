@@ -13,20 +13,20 @@ final class ki extends ac {
     static String field_ob;
 
     final static int[] b(int param0, byte param1) {
-        int incrementValue$1 = 0;
-        int[] var2 = null;
-        int[] var3 = null;
-        int var4 = 0;
-        int var5_int = 0;
-        int[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int[] var8 = null;
-        int var9 = 0;
-        int[] var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
+        int incrementValue$0 = 0;
+        int[] var2;
+        int[] var3;
+        int var4;
+        int var5_int;
+        int var7;
+        int[] var8;
+        int[] var10;
+        int[] var11;
+        int[] var12;
+        int[] var13;
+        int[] var5;
+        int var6;
+        int var9;
         var7 = SteelSentinels.field_G;
         var12 = nl.a(param0, (byte) 125);
         var10 = var12;
@@ -59,9 +59,9 @@ final class ki extends ac {
                     return var5;
                   } else {
                     if (-1 != var13[var9]) {
-                      incrementValue$1 = var4;
+                      incrementValue$0 = var4;
                       var4++;
-                      var5[incrementValue$1] = var13[var9];
+                      var5[incrementValue$0] = var13[var9];
                       var9++;
                       continue L2;
                     } else {
@@ -113,9 +113,8 @@ final class ki extends ac {
     }
 
     final static long l(int param0) {
-        int[] discarded$0 = null;
         if (param0 != 150) {
-            discarded$0 = ki.b(-91, (byte) -45);
+            ki.b(-91, (byte) -45);
         }
         return -oe.field_b + mm.a(115);
     }
@@ -183,12 +182,11 @@ final class ki extends ac {
     }
 
     final void a(int param0, int param1, boolean param2) {
-        int discarded$0 = 0;
         super.a(param0, param1, param2);
         gf.field_d.a(this.field_qb, param0 + (this.field_x >> -1550069311), 103 + param1, 16777215, -1);
         if (!(null == this.field_jb)) {
             pb.g(20 + param0, -7 + param1 - -120, 260, 8421504);
-            discarded$0 = gf.field_d.a(this.field_jb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, gf.field_d.field_G);
+            gf.field_d.a(this.field_jb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, gf.field_d.field_G);
         }
     }
 

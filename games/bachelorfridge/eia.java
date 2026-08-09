@@ -57,8 +57,11 @@ final class eia {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7) {
-        RuntimeException var8 = null;
+        int stackIn_10_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -100,11 +103,6 @@ final class eia {
         int[] var57 = null;
         int[] var58 = null;
         int[] var59 = null;
-        int stackIn_10_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         var47 = BachelorFridge.field_y;
         try {
           L0: {
@@ -166,12 +164,10 @@ final class eia {
                 } else {
                   L3: {
                     if (var12 < var9) {
-                      stackOut_9_0 = 0;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_0 = 0;
                       break L3;
                     } else {
-                      stackOut_8_0 = 1;
-                      stackIn_10_0 = stackOut_8_0;
+                      stackIn_10_0 = 1;
                       break L3;
                     }
                   }
@@ -336,45 +332,28 @@ final class eia {
     }
 
     final int[][] a(int param0, int param1) {
-        fw var3 = null;
-        fw var4 = null;
-        int var5 = 0;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        Object stackIn_16_0 = null;
         Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         int stackIn_18_1 = 0;
-        Object stackOut_15_0 = null;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
+        fw var3;
+        fw var4;
+        int var5;
         var5 = BachelorFridge.field_y;
         if (param1 == -858) {
           if (this.field_h == this.field_i) {
             L0: {
-              stackOut_15_0 = this;
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_16_0 = stackOut_15_0;
+              stackIn_17_0 = this;
+
               if (this.field_e[param0] != null) {
-                stackOut_17_0 = this;
-                stackOut_17_1 = 0;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
+                stackIn_18_0 = this;
+                stackIn_18_1 = 0;
                 break L0;
               } else {
-                stackOut_16_0 = this;
-                stackOut_16_1 = 1;
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_18_1 = stackOut_16_1;
+                stackIn_18_0 = this;
+                stackIn_18_1 = 1;
                 break L0;
               }
             }
@@ -413,20 +392,15 @@ final class eia {
               return this.field_c[var3.field_g];
             } else {
               L3: {
-                stackOut_4_0 = this;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_6_0 = this;
+
                 if (this.field_j == param0) {
-                  stackOut_6_0 = this;
-                  stackOut_6_1 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_7_0 = this;
+                  stackIn_7_1 = 0;
                   break L3;
                 } else {
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
+                  stackIn_7_0 = this;
+                  stackIn_7_1 = 1;
                   break L3;
                 }
               }

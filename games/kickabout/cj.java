@@ -14,7 +14,7 @@ abstract class cj extends wj implements cw {
     abstract int m(int param0);
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6) {
-        String var7 = null;
+        String var7;
         L0: {
           if (-3 != (ov.field_b ^ -1)) {
             var7 = vo.field_db;
@@ -53,12 +53,11 @@ abstract class cj extends wj implements cw {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_H = null;
         field_F = null;
         field_E = null;
         if (param0 > -88) {
-            discarded$0 = cj.k(94);
+            cj.k(94);
             field_D = null;
             return;
         }
@@ -66,9 +65,8 @@ abstract class cj extends wj implements cw {
     }
 
     final static int k(int param0) {
-        int discarded$0 = 0;
         if (param0 != 256) {
-            discarded$0 = cj.k(38);
+            cj.k(38);
             return 256;
         }
         return 256;

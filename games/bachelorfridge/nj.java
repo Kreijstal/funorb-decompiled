@@ -9,9 +9,9 @@ final class nj extends kj {
     private int field_g;
 
     final boolean b(int param0) {
-        int fieldTemp$2 = this.field_g + 1;
+        int fieldTemp$1 = this.field_g + 1;
         this.field_g = this.field_g + 1;
-        if ((fieldTemp$2 ^ -1) <= -65) {
+        if ((fieldTemp$1 ^ -1) <= -65) {
           return true;
         } else {
           if (param0 < 21) {

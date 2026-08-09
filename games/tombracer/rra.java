@@ -263,94 +263,40 @@ abstract class rra {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        if (param4 == 0) {
-          if (param3 != param5) {
-            L0: {
-              if (pka.field_b > param0 + -param5) {
-                break L0;
-              } else {
-                if (param0 - -param5 > ss.field_c) {
-                  break L0;
-                } else {
-                  if (-param3 + param2 < gca.field_d) {
-                    break L0;
-                  } else {
-                    if (hc.field_h < param3 + param2) {
-                      hl.a(param6, param1, param2, param0, true, param5, param7, param3);
-                      if (TombRacer.field_G) {
-                        ota.a(param7, param3, param5, param6, param0, -1923382751, param1, param2);
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      ota.a(param7, param3, param5, param6, param0, -1923382751, param1, param2);
-                      return;
-                    }
-                  }
-                }
-              }
-            }
-            hl.a(param6, param1, param2, param0, true, param5, param7, param3);
-            if (TombRacer.field_G) {
-              ota.a(param7, param3, param5, param6, param0, -1923382751, param1, param2);
-              return;
-            } else {
-              return;
-            }
+        L0: {
+          if (param4 == 0) {
+            break L0;
           } else {
-            nf.a(param5, param2, param6, param0, param7, param1, -91);
-            return;
+            rra.a(false);
+            break L0;
           }
-        } else {
-          rra.a(false);
-          if (param3 != param5) {
-            if (pka.field_b <= param0 + -param5) {
-              if (param0 - -param5 <= ss.field_c) {
-                if (-param3 + param2 < gca.field_d) {
+        }
+        if (param3 != param5) {
+          if (pka.field_b <= param0 + -param5) {
+            if (param0 - -param5 <= ss.field_c) {
+              if (-param3 + param2 >= gca.field_d) {
+                if (hc.field_h < param3 + param2) {
                   hl.a(param6, param1, param2, param0, true, param5, param7, param3);
-                  if (TombRacer.field_G) {
-                    ota.a(param7, param3, param5, param6, param0, -1923382751, param1, param2);
-                    return;
-                  } else {
-                    return;
-                  }
+                  return;
                 } else {
-                  if (hc.field_h < param3 + param2) {
-                    hl.a(param6, param1, param2, param0, true, param5, param7, param3);
-                    if (!TombRacer.field_G) {
-                      return;
-                    } else {
-                      ota.a(param7, param3, param5, param6, param0, -1923382751, param1, param2);
-                      return;
-                    }
-                  } else {
-                    ota.a(param7, param3, param5, param6, param0, -1923382751, param1, param2);
-                    return;
-                  }
+                  ota.a(param7, param3, param5, param6, param0, -1923382751, param1, param2);
+                  return;
                 }
               } else {
                 hl.a(param6, param1, param2, param0, true, param5, param7, param3);
-                if (TombRacer.field_G) {
-                  ota.a(param7, param3, param5, param6, param0, -1923382751, param1, param2);
-                  return;
-                } else {
-                  return;
-                }
+                return;
               }
             } else {
               hl.a(param6, param1, param2, param0, true, param5, param7, param3);
-              if (TombRacer.field_G) {
-                ota.a(param7, param3, param5, param6, param0, -1923382751, param1, param2);
-                return;
-              } else {
-                return;
-              }
+              return;
             }
           } else {
-            nf.a(param5, param2, param6, param0, param7, param1, -91);
+            hl.a(param6, param1, param2, param0, true, param5, param7, param3);
             return;
           }
+        } else {
+          nf.a(param5, param2, param6, param0, param7, param1, -91);
+          return;
         }
     }
 

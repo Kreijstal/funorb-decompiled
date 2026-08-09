@@ -35,19 +35,12 @@ final class md implements hc {
     }
 
     final static boolean d(int param0) {
-        boolean discarded$1 = false;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int stackIn_11_0 = 0;
+        int var1;
+        int var3;
         int stackIn_12_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_13_1 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_12_0 = 0;
-        boolean stackOut_12_1 = false;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
+        int var2;
         L0: {
           var3 = Kickabout.field_G;
           var1 = 0;
@@ -78,20 +71,15 @@ final class md implements hc {
           } else {
             if (!ng.a(param0 ^ 27302)) {
               L2: {
-                stackOut_10_0 = 100;
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_12_0 = 100;
+
                 if (e.field_m == null) {
-                  stackOut_12_0 = stackIn_12_0;
-                  stackOut_12_1 = vb.field_k;
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1 ? 1 : 0;
+                  stackIn_13_0 = stackIn_12_0;
+                  stackIn_13_1 = vb.field_k ? 1 : 0;
                   break L2;
                 } else {
-                  stackOut_11_0 = stackIn_11_0;
-                  stackOut_11_1 = 1;
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
+                  stackIn_13_0 = stackIn_12_0;
+                  stackIn_13_1 = 1;
                   break L2;
                 }
               }
@@ -121,7 +109,7 @@ final class md implements hc {
           if (param0 == -27302) {
             break L4;
           } else {
-            discarded$1 = md.d(14);
+            md.d(14);
             break L4;
           }
         }
@@ -136,22 +124,12 @@ final class md implements hc {
         }
         this.field_e[3] = Character.toUpperCase(param2);
         var4 = -1;
-        if (this.field_e[0] == 90) {
-            if (this.field_e[1] == 69) {
-                if (this.field_e[2] == 80) {
-                    if (this.field_e[3] == 72) {
-                        var4 = 0;
-                    }
-                }
-            }
+        if (this.field_e[0] == 90 && this.field_e[1] == 69 && this.field_e[2] == 80 && this.field_e[3] == 72) {
+            var4 = 0;
         }
-        if (this.field_e[0] == 73) {
-            if (this.field_e[1] == 65) {
-                if (73 == this.field_e[2]) {
-                    if (!(78 != this.field_e[3])) {
-                        var4 = 1;
-                    }
-                }
+        if (this.field_e[0] == 73 && this.field_e[1] == 65 && 73 == this.field_e[2]) {
+            if (!(78 != this.field_e[3])) {
+                var4 = 1;
             }
         }
         if (-1 != var4) {
@@ -170,24 +148,18 @@ final class md implements hc {
     }
 
     public final void a(int param0) {
-        float var2 = 0.0f;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        float var6 = 0.0f;
-        float var7 = 0.0f;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
         int stackIn_6_0 = 0;
         float stackIn_13_0 = 0.0f;
         float stackIn_16_0 = 0.0f;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        float stackOut_12_0 = 0.0f;
-        float stackOut_11_0 = 0.0f;
-        float stackOut_15_0 = 0.0f;
-        float stackOut_14_0 = 0.0f;
+        float var2;
+        int var3;
+        int var4;
+        int var5;
+        float var6;
+        float var7;
+        int var8;
+        int var9;
+        int var10;
         var10 = Kickabout.field_G;
         if (this.field_f == 0) {
           return;
@@ -195,12 +167,10 @@ final class md implements hc {
           L0: {
             var2 = 1.0f + (float)this.field_f * 9.0f / 200.0f;
             if (0 == this.field_c) {
-              stackOut_5_0 = 7000;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 7000;
               break L0;
             } else {
-              stackOut_4_0 = 9000;
-              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_0 = 9000;
               break L0;
             }
           }
@@ -222,12 +192,10 @@ final class md implements hc {
               }
               L3: {
                 if (var5 != 0) {
-                  stackOut_12_0 = 0.30000001192092896f;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = 0.30000001192092896f;
                   break L3;
                 } else {
-                  stackOut_11_0 = 0.8999999761581421f;
-                  stackIn_13_0 = stackOut_11_0;
+                  stackIn_13_0 = 0.8999999761581421f;
                   break L3;
                 }
               }
@@ -235,12 +203,10 @@ final class md implements hc {
                 var6 = stackIn_13_0 * (float)this.field_f;
                 var7 = 1.2000000476837158f * (float)this.field_f;
                 if (-2 <= (var4 ^ -1)) {
-                  stackOut_15_0 = -var6;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_0 = -var6;
                   break L4;
                 } else {
-                  stackOut_14_0 = var6;
-                  stackIn_16_0 = stackOut_14_0;
+                  stackIn_16_0 = var6;
                   break L4;
                 }
               }
@@ -275,9 +241,8 @@ final class md implements hc {
     }
 
     public final boolean a(byte param0) {
-        boolean discarded$0 = false;
         if (param0 <= 63) {
-            discarded$0 = this.a(121, -18, '�');
+            this.a(121, -18, '�');
             return false;
         }
         return false;

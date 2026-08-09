@@ -19,9 +19,8 @@ final class toa extends vg {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         if (param0 != 3402) {
-            discarded$0 = toa.a(false);
+            toa.a(false);
             field_f = null;
             return;
         }

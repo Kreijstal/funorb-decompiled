@@ -22,7 +22,7 @@ final class qf extends lp implements en {
     }
 
     final boolean h(int param0) {
-        oh var2 = null;
+        oh var2;
         if (param0 == 0) {
           if (this.field_N) {
             if (!this.field_Db) {
@@ -87,14 +87,6 @@ final class qf extends lp implements en {
     }
 
     private final void a(int param0, oh param1, boolean param2) {
-        d discarded$2 = null;
-        d discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        ec var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
@@ -102,25 +94,21 @@ final class qf extends lp implements en {
         String stackIn_32_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        ec var5 = null;
+        int var6 = 0;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
             L1: {
               this.field_Db = true;
               if (param1.field_c) {
-                var4_ref = lh.field_r;
+                var4 = lh.field_r;
                 break L1;
               } else {
                 if (null != param1.field_e) {
-                  var4_ref = ng.field_f;
+                  var4 = ng.field_f;
                   if (null != this.field_Eb) {
                     this.field_Eb.a((byte) 124);
                     break L1;
@@ -128,7 +116,7 @@ final class qf extends lp implements en {
                     break L1;
                   }
                 } else {
-                  var4_ref = param1.field_g;
+                  var4 = param1.field_g;
                   if (param1.field_d != 248) {
                     break L1;
                   } else {
@@ -141,17 +129,17 @@ final class qf extends lp implements en {
                       }
                     }
                     this.field_Fb = true;
-                    var4_ref = no.field_q;
+                    var4 = no.field_q;
                     break L1;
                   }
                 }
               }
             }
             L3: {
-              var5 = new ec((lp) (this), wm.field_a, var4_ref);
+              var5 = new ec((lp) (this), wm.field_a, var4);
               if (param1.field_c) {
                 if (!param1.field_a) {
-                  discarded$2 = var5.a((byte) 126, ri.field_L, (uh) (this));
+                  var5.a((byte) 126, ri.field_L, (uh) (this));
                   break L3;
                 } else {
                   this.b((byte) 118, new ig((qf) (this)));
@@ -161,7 +149,7 @@ final class qf extends lp implements en {
               } else {
                 L4: {
                   if (this.field_Fb) {
-                    discarded$3 = var5.a((byte) -37, ri.field_L, (uh) (this));
+                    var5.a((byte) -37, ri.field_L, (uh) (this));
                     break L4;
                   } else {
                     if (param1.field_d != 5) {
@@ -199,28 +187,20 @@ final class qf extends lp implements en {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var4 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) (var4);
-            stackOut_29_1 = new StringBuilder().append("qf.L(").append(param0).append(',');
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_31_0 = (RuntimeException) (var4_ref);
+
+            stackIn_31_1 = new StringBuilder().append("qf.L(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L5;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L5;
             }
           }

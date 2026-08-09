@@ -27,22 +27,11 @@ final class vja extends ib {
             }
           } else {
             fsa.a(param0 + 9, param1);
-            if (!TombRacer.field_G) {
-              if (param0 != 0) {
-                field_b = (String) null;
-                return;
-              } else {
-                return;
-              }
+            if (param0 == 0) {
+              return;
             } else {
-              fsa.a(9, param1 + -1L);
-              fsa.a(9, 1L);
-              if (param0 == 0) {
-                return;
-              } else {
-                field_b = (String) null;
-                return;
-              }
+              field_b = (String) null;
+              return;
             }
           }
         }
@@ -106,9 +95,8 @@ final class vja extends ib {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int discarded$1 = 0;
-        kh var5 = null;
-        fsa var6 = null;
+        kh var5;
+        fsa var6;
         if (!this.field_c.J(96)) {
           if (this.field_c.h(18407)) {
             return;
@@ -117,7 +105,7 @@ final class vja extends ib {
             var5.i(8);
             this.field_c.a(var5, 97);
             if (param3 != 4) {
-              discarded$1 = this.a(false);
+              this.a(false);
               var5.k(-1826190686);
               var6 = this.field_c.a(param3 + -14406, this.field_a, true);
               var6.m(1, param1);

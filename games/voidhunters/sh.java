@@ -5,9 +5,8 @@ final class sh {
     static byte[][] field_a;
 
     final static void a(int param0, int param1, int param2) {
-        String discarded$2 = null;
-        faa var3 = null;
-        String var4 = null;
+        faa var3;
+        String var4;
         var3 = dpa.field_p;
         var3.h(24335, param2);
         var3.c(0, 3);
@@ -15,7 +14,7 @@ final class sh {
         var3.a(param0, true);
         if (param1 != -1) {
           var4 = (String) null;
-          discarded$2 = sh.a((String) null, (String) null, (String) null, -75);
+          sh.a((String) null, (String) null, (String) null, -75);
           return;
         } else {
           return;
@@ -23,8 +22,8 @@ final class sh {
     }
 
     final static String a(String param0, String param1, String param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = VoidHunters.field_G;
         if (param3 == 0) {
           var4 = param2.indexOf(param1);
@@ -53,12 +52,12 @@ final class sh {
     }
 
     final static void a(int param0) {
-        int fieldTemp$4 = 0;
+        int fieldTemp$2 = 0;
         pd var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var2 = VoidHunters.field_G;
         try {
           L0: {
@@ -78,9 +77,9 @@ final class sh {
                   break L0;
                 } else {
                   L3: {
-                    fieldTemp$4 = var1.field_d;
+                    fieldTemp$2 = var1.field_d;
                     var1.field_d = var1.field_d - 1;
-                    if (fieldTemp$4 != 0) {
+                    if (fieldTemp$2 != 0) {
                       break L3;
                     } else {
                       var1.b(param0 ^ -24158);

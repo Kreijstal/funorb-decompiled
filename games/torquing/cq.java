@@ -12,26 +12,16 @@ final class cq extends am {
     private int field_t;
 
     final void a(fj param0, int param1, int param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         var6 = Torquing.field_u;
         try {
           L0: {
@@ -81,27 +71,19 @@ final class cq extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var4);
-            stackOut_17_1 = new StringBuilder().append("cq.H(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var4);
+
+            stackIn_19_1 = new StringBuilder().append("cq.H(");
+
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L3;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L3;
             }
           }
@@ -120,25 +102,15 @@ final class cq extends am {
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
             java.net.URL var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
             java.applet.Applet var3 = null;
-            RuntimeException stackIn_6_0 = null;
-            StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             String stackIn_8_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_5_0 = null;
-            StringBuilder stackOut_5_1 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            String stackOut_6_2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             try {
               L0: {
                 try {
@@ -170,27 +142,19 @@ final class cq extends am {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_5_0 = (RuntimeException) (var2_ref2);
-                stackOut_5_1 = new StringBuilder().append("cq.C(").append(param0).append(',');
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
+                stackIn_7_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_7_1 = new StringBuilder().append("cq.C(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "null";
-                  stackIn_8_0 = stackOut_7_0;
-                  stackIn_8_1 = stackOut_7_1;
-                  stackIn_8_2 = stackOut_7_2;
+                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+                  stackIn_8_2 = "null";
                   break L4;
                 } else {
-                  stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-                  stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-                  stackOut_6_2 = "{...}";
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_8_1 = stackOut_6_1;
-                  stackIn_8_2 = stackOut_6_2;
+                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+                  stackIn_8_2 = "{...}";
                   break L4;
                 }
               }
@@ -204,29 +168,29 @@ final class cq extends am {
     }
 
     final int[][] a(int param0, int param1) {
-        int[][] var3 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int[][] var17 = null;
-        int[][] var19 = null;
-        int[] var21 = null;
-        int[] var24 = null;
-        int[] var25 = null;
-        int[][] var27 = null;
-        int[] var29 = null;
-        int[] var32 = null;
-        int[] var33 = null;
-        int[][] var38 = null;
-        int[] var39 = null;
-        int[] var40 = null;
-        int[] var41 = null;
+        int[][] var3;
+        int[] var8;
+        int[] var9;
+        int[] var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int[][] var17;
+        int[][] var19;
+        int[] var21;
+        int[] var24;
+        int[] var25;
+        int[][] var27;
+        int[] var29;
+        int[] var32;
+        int[] var33;
+        int[][] var38;
+        int[] var39;
+        int[] var40;
+        int[] var41;
         L0: {
           var16 = Torquing.field_u;
           if (param0 == -29116) {
@@ -342,8 +306,6 @@ final class cq extends am {
         int stackIn_8_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_2_0 = 0;
         var4 = Torquing.field_u;
         try {
           L0: {
@@ -351,8 +313,7 @@ final class cq extends am {
               var3_int = 0;
               L1: while (true) {
                 if (param1 <= 0) {
-                  stackOut_7_0 = var3_int;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = var3_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -363,8 +324,7 @@ final class cq extends am {
                 }
               }
             } else {
-              stackOut_2_0 = -88;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = -88;
               decompiledRegionSelector0 = 0;
               break L0;
             }

@@ -3,11 +3,10 @@
  */
 final class va {
     final static void a(int param0) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        RuntimeException var1 = null;
-        kv var1_ref = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        kv var1 = null;
+        RuntimeException var1_ref = null;
         int var2_int = 0;
         Object var2 = null;
         int var3 = 0;
@@ -16,8 +15,6 @@ final class va {
         kv var6 = null;
         kv var7 = null;
         kv var8 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var4 = BachelorFridge.field_y;
         try {
           L0: {
@@ -26,7 +23,7 @@ final class va {
             if (null != oja.field_f) {
               L1: {
                 var6 = oja.field_f[ih.field_l];
-                var1_ref = var6;
+                var1 = var6;
                 if (param0 >= 124) {
                   break L1;
                 } else {
@@ -42,7 +39,7 @@ final class va {
                   if (null == g.field_f) {
                     break L2;
                   } else {
-                    discarded$3 = g.field_f.a(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                    g.field_f.a(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                     break L2;
                   }
                 }
@@ -77,7 +74,7 @@ final class va {
                       decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
-                      discarded$4 = g.field_f.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                      g.field_f.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                       return;
                     }
                   } else {
@@ -116,7 +113,7 @@ final class va {
             } else {
               L7: {
                 if (null != g.field_f) {
-                  discarded$5 = g.field_f.a(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                  g.field_f.a(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                   break L7;
                 } else {
                   break L7;
@@ -128,8 +125,8 @@ final class va {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "va.A(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw pe.a((Throwable) ((Object) var1_ref), "va.A(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

@@ -31,7 +31,7 @@ final class ag extends hm implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int a(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = this.field_f;
         if (param0 != 60) {
           this.field_f = 41;

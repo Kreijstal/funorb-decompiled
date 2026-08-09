@@ -34,7 +34,6 @@ final class gb {
     }
 
     final static ba a(java.applet.Applet param0, int param1) {
-        ba discarded$2 = null;
         String var2 = null;
         RuntimeException var2_ref = null;
         ba[] var3 = null;
@@ -45,8 +44,6 @@ final class gb {
         ba stackIn_3_0 = null;
         ba stackIn_11_0 = null;
         ba stackIn_14_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -54,17 +51,6 @@ final class gb {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ba stackOut_13_0 = null;
-        ba stackOut_10_0 = null;
-        ba stackOut_2_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         var6 = DungeonAssault.field_K;
         try {
           L0: {
@@ -75,7 +61,7 @@ final class gb {
                   break L1;
                 } else {
                   var7 = (java.applet.Applet) null;
-                  discarded$2 = gb.a((java.applet.Applet) null, 18);
+                  gb.a((java.applet.Applet) null, 18);
                   break L1;
                 }
               }
@@ -83,15 +69,13 @@ final class gb {
               var4 = 0;
               L2: while (true) {
                 if (var4 >= var3.length) {
-                  stackOut_13_0 = rl.field_j;
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_0 = rl.field_j;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   var5 = var3[var4];
                   if (var5.a(var2, 20886)) {
-                    stackOut_10_0 = (ba) (var5);
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = (ba) (var5);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -101,8 +85,7 @@ final class gb {
                 }
               }
             } else {
-              stackOut_2_0 = rl.field_j;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = rl.field_j;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -111,27 +94,19 @@ final class gb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var2_ref);
-            stackOut_15_1 = new StringBuilder().append("gb.A(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var2_ref);
+
+            stackIn_17_1 = new StringBuilder().append("gb.A(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L3;
             }
           }

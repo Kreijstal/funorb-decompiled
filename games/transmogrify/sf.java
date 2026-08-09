@@ -9,8 +9,6 @@ final class sf extends ik implements df {
 
     public final void a(lj param0, int param1, int param2, int param3, int param4) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -18,14 +16,6 @@ final class sf extends ik implements df {
         String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             if (!this.field_nb) {
@@ -51,27 +41,19 @@ final class sf extends ik implements df {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (runtimeException);
-            stackOut_6_1 = new StringBuilder().append("sf.MA(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
+
+            stackIn_8_1 = new StringBuilder().append("sf.MA(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -85,14 +67,6 @@ final class sf extends ik implements df {
     }
 
     private final void a(int param0, boolean param1, uj param2) {
-        lj discarded$2 = null;
-        lj discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        ee var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         RuntimeException stackIn_39_0 = null;
@@ -100,14 +74,10 @@ final class sf extends ik implements df {
         String stackIn_39_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        ee var5 = null;
+        int var6 = 0;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -129,7 +99,7 @@ final class sf extends ik implements df {
                     if (param2.field_j == null) {
                       break L4;
                     } else {
-                      var4_ref = gb.field_e;
+                      var4 = gb.field_e;
                       if (this.field_mb == null) {
                         break L2;
                       } else {
@@ -142,7 +112,7 @@ final class sf extends ik implements df {
                       }
                     }
                   }
-                  var4_ref = param2.field_b;
+                  var4 = param2.field_b;
                   if (param2.field_g == 248) {
                     L5: {
                       if (!param1) {
@@ -153,7 +123,7 @@ final class sf extends ik implements df {
                       }
                     }
                     this.field_nb = true;
-                    var4_ref = wd.field_l;
+                    var4 = wd.field_l;
                     if (var6 == 0) {
                       break L2;
                     } else {
@@ -164,12 +134,12 @@ final class sf extends ik implements df {
                   }
                 }
               }
-              var4_ref = oa.field_i;
+              var4 = oa.field_i;
               break L2;
             }
             L6: {
               L7: {
-                var5 = new ee((ik) (this), rh.field_q, var4_ref);
+                var5 = new ee((ik) (this), rh.field_q, var4);
                 if (param2.field_f) {
                   break L7;
                 } else {
@@ -178,7 +148,7 @@ final class sf extends ik implements df {
                       if (!this.field_nb) {
                         break L9;
                       } else {
-                        discarded$2 = var5.a((ma) (this), 8283, qe.field_I);
+                        var5.a((ma) (this), 8283, qe.field_I);
                         if (var6 == 0) {
                           break L8;
                         } else {
@@ -231,7 +201,7 @@ final class sf extends ik implements df {
                 decompiledRegionSelector0 = 0;
                 break L0;
               } else {
-                discarded$3 = var5.a((ma) (this), 8283, qe.field_I);
+                var5.a((ma) (this), 8283, qe.field_I);
                 break L6;
               }
             }
@@ -242,28 +212,20 @@ final class sf extends ik implements df {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L12: {
-            var4 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) (var4);
-            stackOut_36_1 = new StringBuilder().append("sf.HA(").append(param0).append(',').append(param1).append(',');
-            stackIn_38_0 = stackOut_36_0;
-            stackIn_38_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_38_0 = (RuntimeException) (var4_ref);
+
+            stackIn_38_1 = new StringBuilder().append("sf.HA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "null";
               break L12;
             } else {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "{...}";
-              stackIn_39_0 = stackOut_37_0;
-              stackIn_39_1 = stackOut_37_1;
-              stackIn_39_2 = stackOut_37_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "{...}";
               break L12;
             }
           }
@@ -280,13 +242,8 @@ final class sf extends ik implements df {
         RuntimeException runtimeException = null;
         od var1 = null;
         int var2 = 0;
-        boolean stackIn_7_0 = false;
-        boolean stackIn_15_0 = false;
         boolean stackIn_21_0 = false;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_6_0 = false;
-        boolean stackOut_14_0 = false;
-        boolean stackOut_20_0 = false;
         var2 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -314,14 +271,13 @@ final class sf extends ik implements df {
                         if (var1 == null) {
                           break L6;
                         } else {
-                          stackOut_6_0 = var1.field_i.b(8);
-                          stackIn_21_0 = stackOut_6_0;
-                          stackIn_7_0 = stackOut_6_0;
+                          stackIn_21_0 = var1.field_i.b(8);
+
                           if (var2 != 0) {
                             break L3;
                           } else {
                             L7: {
-                              if (stackIn_7_0) {
+                              if (stackIn_21_0) {
                                 break L7;
                               } else {
                                 var1.c(5);
@@ -343,14 +299,13 @@ final class sf extends ik implements df {
                           if (var1 == null) {
                             break L4;
                           } else {
-                            stackOut_14_0 = var1.field_i.b(8);
-                            stackIn_21_0 = stackOut_14_0;
-                            stackIn_15_0 = stackOut_14_0;
+                            stackIn_21_0 = var1.field_i.b(8);
+
                             if (var2 != 0) {
                               break L3;
                             } else {
                               L9: {
-                                if (!stackIn_15_0) {
+                                if (!stackIn_21_0) {
                                   var1.c(5);
                                   break L9;
                                 } else {
@@ -375,8 +330,7 @@ final class sf extends ik implements df {
                 if (null == jk.field_D) {
                   break L2;
                 } else {
-                  stackOut_20_0 = jk.field_D.a((byte) -54);
-                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_0 = jk.field_D.a((byte) -54);
                   break L3;
                 }
               }
@@ -402,8 +356,8 @@ final class sf extends ik implements df {
     }
 
     final boolean m(int param0) {
-        uj var2 = null;
-        lj var3 = null;
+        uj var2;
+        lj var3;
         if (this.field_A) {
           if (!this.field_lb) {
             var2 = oj.a((byte) 32);

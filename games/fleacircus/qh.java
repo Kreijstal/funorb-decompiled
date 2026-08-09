@@ -50,7 +50,7 @@ final class qh extends dl {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         if (param1 == 0) {
           return 0;
         } else {
@@ -165,7 +165,6 @@ final class qh extends dl {
     }
 
     final static boolean j(int param0) {
-        int discarded$6 = 0;
         if (param0 == 32391) {
           if (null != sg.field_h) {
             if (fh.field_b != rh.field_k) {
@@ -177,7 +176,7 @@ final class qh extends dl {
             return false;
           }
         } else {
-          discarded$6 = qh.a(1, 113);
+          qh.a(1, 113);
           if (null != sg.field_h) {
             if (fh.field_b != rh.field_k) {
               return false;

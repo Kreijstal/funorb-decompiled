@@ -11,10 +11,10 @@ final class pq {
     static String field_b;
 
     final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = Vertigo2.field_L ? 1 : 0;
           var3 = -1 + (this.field_d.length >> -1595717119);
@@ -53,7 +53,6 @@ final class pq {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int[] param13, boolean param14, int param15, int param16) {
-        RuntimeException var17 = null;
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -70,18 +69,9 @@ final class pq {
         int var30 = 0;
         int var31 = 0;
         int var32 = 0;
-        int var33 = 0;
         int var34 = 0;
         int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
         int var42 = 0;
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
         RuntimeException stackIn_75_0 = null;
         StringBuilder stackIn_75_1 = null;
         RuntimeException stackIn_76_0 = null;
@@ -90,14 +80,14 @@ final class pq {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_73_0 = null;
-        StringBuilder stackOut_73_1 = null;
-        RuntimeException stackOut_75_0 = null;
-        StringBuilder stackOut_75_1 = null;
-        String stackOut_75_2 = null;
-        RuntimeException stackOut_74_0 = null;
-        StringBuilder stackOut_74_1 = null;
-        String stackOut_74_2 = null;
+        RuntimeException var17 = null;
+        int var33 = 0;
+        int var36 = 0;
+        int var37 = 0;
+        int var38 = 0;
+        int var39 = 0;
+        int var40 = 0;
+        int var41 = 0;
         var42 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -216,7 +206,7 @@ final class pq {
                             } else {
                               L9: {
                                 var37 = var17_int >> 1458374608;
-                                if (oo.field_q <= var37) {
+                                if ((oo.field_q ^ -1) >= (var37 ^ -1)) {
                                   break L9;
                                 } else {
                                   var38 = (var18 >> 877371504) - (var17_int >> -1337012496);
@@ -491,27 +481,19 @@ final class pq {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var17 = decompiledCaughtException;
-            stackOut_73_0 = (RuntimeException) (var17);
-            stackOut_73_1 = new StringBuilder().append("pq.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',');
-            stackIn_75_0 = stackOut_73_0;
-            stackIn_75_1 = stackOut_73_1;
-            stackIn_74_0 = stackOut_73_0;
-            stackIn_74_1 = stackOut_73_1;
+            stackIn_75_0 = (RuntimeException) (var17);
+
+            stackIn_75_1 = new StringBuilder().append("pq.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',');
+
             if (param13 == null) {
-              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
-              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
-              stackOut_75_2 = "null";
-              stackIn_76_0 = stackOut_75_0;
-              stackIn_76_1 = stackOut_75_1;
-              stackIn_76_2 = stackOut_75_2;
+              stackIn_76_0 = (RuntimeException) ((Object) stackIn_75_0);
+              stackIn_76_1 = (StringBuilder) ((Object) stackIn_75_1);
+              stackIn_76_2 = "null";
               break L18;
             } else {
-              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
-              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
-              stackOut_74_2 = "{...}";
-              stackIn_76_0 = stackOut_74_0;
-              stackIn_76_1 = stackOut_74_1;
-              stackIn_76_2 = stackOut_74_2;
+              stackIn_76_0 = (RuntimeException) ((Object) stackIn_75_0);
+              stackIn_76_1 = (StringBuilder) ((Object) stackIn_75_1);
+              stackIn_76_2 = "{...}";
               break L18;
             }
           }
@@ -546,25 +528,15 @@ final class pq {
 
     pq(int[] param0) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             var2_int = 1;
@@ -609,27 +581,19 @@ final class pq {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2);
-            stackOut_14_1 = new StringBuilder().append("pq.<init>(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2);
+
+            stackIn_16_1 = new StringBuilder().append("pq.<init>(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L5;
             }
           }
@@ -647,10 +611,9 @@ final class pq {
     }
 
     final static void a(byte param0) {
-        boolean discarded$0 = false;
         pe.field_r = false;
         if (param0 <= 92) {
-            discarded$0 = pq.b(-21);
+            pq.b(-21);
         }
         hj.field_b = id.field_f.h(-11) == 0 ? true : false;
     }

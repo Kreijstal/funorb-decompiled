@@ -30,7 +30,6 @@ final class re {
         int var5 = 0;
         int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
         var5 = Terraphoenix.field_V;
         try {
           L0: {
@@ -38,8 +37,7 @@ final class re {
             L1: while (true) {
               if (param2 <= 0) {
                 var4 = -20 / ((-11 - param1) / 61);
-                stackOut_4_0 = var3_int;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = var3_int;
                 break L0;
               } else {
                 var3_int = 1 & param0 | var3_int << -863504319;
@@ -66,10 +64,12 @@ final class re {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, boolean param4, int param5, int param6) {
-        boolean discarded$2 = false;
-        int incrementValue$3 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_25_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -77,11 +77,6 @@ final class re {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_25_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
         var14 = Terraphoenix.field_V;
         try {
           L0: {
@@ -103,7 +98,7 @@ final class re {
                         if (param1 < -19) {
                           break L2;
                         } else {
-                          discarded$2 = re.a(-91, '\n');
+                          re.a(-91, '\n');
                           break L2;
                         }
                       }
@@ -120,12 +115,10 @@ final class re {
                           L4: {
                             var12 = pf.field_b[var11];
                             if (param4) {
-                              stackOut_24_0 = a.field_c[var12];
-                              stackIn_25_0 = stackOut_24_0;
+                              stackIn_25_0 = a.field_c[var12];
                               break L4;
                             } else {
-                              stackOut_23_0 = al.field_bb[var12];
-                              stackIn_25_0 = stackOut_23_0;
+                              stackIn_25_0 = al.field_bb[var12];
                               break L4;
                             }
                           }
@@ -141,9 +134,9 @@ final class re {
                                   break L6;
                                 }
                               }
-                              incrementValue$3 = var8;
+                              incrementValue$0 = var8;
                               var8++;
-                              pf.field_b[incrementValue$3] = var12;
+                              pf.field_b[incrementValue$0] = var12;
                               break L5;
                             } else {
                               if (var10 < var13) {
@@ -230,10 +223,6 @@ final class re {
         int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_10_0 = 0;
         var5 = Terraphoenix.field_V;
         try {
           L0: {
@@ -242,8 +231,7 @@ final class re {
                 break L1;
               } else {
                 if (128 > param1) {
-                  stackOut_7_0 = 1;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -277,8 +265,7 @@ final class re {
                         var3++;
                         continue L4;
                       } else {
-                        stackOut_17_0 = 1;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = 1;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
@@ -288,13 +275,11 @@ final class re {
                   break L3;
                 }
               }
-              stackOut_20_0 = 0;
-              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_0 = 0;
               decompiledRegionSelector0 = 3;
               break L0;
             } else {
-              stackOut_10_0 = 1;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = 1;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -320,7 +305,7 @@ final class re {
     }
 
     re(int param0) {
-        int var2 = 0;
+        int var2;
         L0: {
           this.field_b = new int[3];
           this.field_g = new int[5];

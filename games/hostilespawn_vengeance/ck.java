@@ -42,65 +42,74 @@ final class ck {
 
     public static void a(int param0) {
         field_C = null;
-        field_y = null;
+        if (param0 != -665) {
+            return;
+        }
+        field_y = (bd[][]) null;
         field_o = null;
         field_u = null;
     }
 
     final static boolean a(int param0, int param1) {
-        int var2 = -41 % ((param0 - 36) / 54);
-        if (0 > param1) {
+        int var2;
+        int var3;
+        var2 = -41 % ((param0 - 36) / 54);
+        if (0 <= param1) {
+          if (param1 < ln.field_a.field_o.length) {
+            var3 = ln.field_a.field_o[param1];
+            if (var3 >= 0) {
+              if (512 != var3) {
+                if ((var3 ^ -1) != -665) {
+                  if (-697 != (var3 ^ -1)) {
+                    if ((var3 ^ -1) != -680) {
+                      if (var3 == 681) {
+                        return false;
+                      } else {
+                        return true;
+                      }
+                    } else {
+                      return false;
+                    }
+                  } else {
+                    return false;
+                  }
+                } else {
+                  return false;
+                }
+              } else {
+                return false;
+              }
+            } else {
+              return false;
+            }
+          } else {
             return false;
+          }
+        } else {
+          return false;
         }
-        if (param1 >= ln.field_a.field_o.length) {
-            return false;
-        }
-        int var3 = ln.field_a.field_o[param1];
-        if (var3 < 0) {
-            return false;
-        }
-        if (512 == var3) {
-            return false;
-        }
-        if (var3 == 664) {
-            return false;
-        }
-        if (var3 == 696) {
-            return false;
-        }
-        if (var3 == 679) {
-            return false;
-        }
-        if (var3 == 681) {
-            return false;
-        }
-        return true;
     }
 
     ck() {
-        ((ck) this).field_I = new int[257];
-        ((ck) this).field_z = new byte[256];
-        ((ck) this).field_t = new byte[18002];
-        ((ck) this).field_f = new byte[4096];
-        ((ck) this).field_x = 0;
-        ((ck) this).field_D = new byte[6][258];
-        ((ck) this).field_j = new int[6];
-        ((ck) this).field_k = new int[256];
-        ((ck) this).field_M = new byte[18002];
-        ((ck) this).field_b = new boolean[16];
-        ((ck) this).field_K = new int[16];
-        ((ck) this).field_i = new int[6][258];
-        ((ck) this).field_B = 0;
-        ((ck) this).field_p = new int[6][258];
-        ((ck) this).field_h = new boolean[256];
-        ((ck) this).field_m = new int[6][258];
+        this.field_I = new int[257];
+        this.field_z = new byte[256];
+        this.field_t = new byte[18002];
+        this.field_f = new byte[4096];
+        this.field_x = 0;
+        this.field_D = new byte[6][258];
+        this.field_j = new int[6];
+        this.field_k = new int[256];
+        this.field_M = new byte[18002];
+        this.field_b = new boolean[16];
+        this.field_K = new int[16];
+        this.field_i = new int[6][258];
+        this.field_B = 0;
+        this.field_p = new int[6][258];
+        this.field_h = new boolean[256];
+        this.field_m = new int[6][258];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Connection lost. <%0>";
     }
 }

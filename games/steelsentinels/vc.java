@@ -52,8 +52,8 @@ final class vc {
     }
 
     final static int a(byte param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var2 = SteelSentinels.field_G;
         var1 = di.field_g;
         if (var1 != 0) {

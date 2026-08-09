@@ -17,9 +17,8 @@ final class nj {
     static ri field_d;
 
     public static void a(byte param0) {
-        ka discarded$0 = null;
         if (param0 != 78) {
-            discarded$0 = nj.a(false, (byte) -38);
+            nj.a(false, (byte) -38);
             field_d = null;
             field_a = null;
             return;
@@ -29,6 +28,10 @@ final class nj {
     }
 
     final static ka a(boolean param0, byte param1) {
+        int stackIn_5_0 = 0;
+        int stackIn_13_0 = 0;
+        int[] stackIn_30_0 = null;
+        Throwable decompiledCaughtException = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -36,16 +39,6 @@ final class nj {
         int var7 = 0;
         ga var8 = null;
         tl var9 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_13_0 = 0;
-        int[] stackIn_30_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int[] stackOut_29_0 = null;
-        Object stackOut_28_0 = null;
         L0: {
           var7 = ZombieDawnMulti.field_E ? 1 : 0;
           var8 = s.field_e;
@@ -60,12 +53,10 @@ final class nj {
         L1: {
           wc.field_N = var3 & 127;
           if (-1 == (var3 & 128 ^ -1)) {
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 0;
             break L1;
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             break L1;
           }
         }
@@ -91,12 +82,10 @@ final class nj {
         }
         L3: {
           if (var8.g(31365) != 1) {
-            stackOut_12_0 = 0;
-            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_0 = 0;
             break L3;
           } else {
-            stackOut_11_0 = 1;
-            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_0 = 1;
             break L3;
           }
         }
@@ -152,12 +141,10 @@ final class nj {
                 var9 = bd.field_c.a(var5, -11452);
                 pg.field_b = var9.e(-18572);
                 if (!ch.field_h.equals(ta.field_lb)) {
-                  stackOut_29_0 = var9.field_r;
-                  stackIn_30_0 = stackOut_29_0;
+                  stackIn_30_0 = var9.field_r;
                   break L8;
                 } else {
-                  stackOut_28_0 = null;
-                  stackIn_30_0 = (int[]) ((Object) stackOut_28_0);
+                  stackIn_30_0 = null;
                   break L8;
                 }
               }

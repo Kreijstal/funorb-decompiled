@@ -52,7 +52,7 @@ final class du extends rb {
         int fieldTemp$13 = 0;
         int fieldTemp$14 = 0;
         int fieldTemp$15 = 0;
-        int var3 = 0;
+        int var3;
         if (param0 != -90) {
           du.k(67);
           var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
@@ -107,7 +107,7 @@ final class du extends rb {
         int fieldTemp$11 = 0;
         int fieldTemp$12 = 0;
         int fieldTemp$13 = 0;
-        int var3 = 0;
+        int var3;
         var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
         int fieldTemp$7 = this.field_g;
         this.field_g = this.field_g + 1;

@@ -19,8 +19,6 @@ final class uj {
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -28,17 +26,6 @@ final class uj {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             if (-1 <= (param1 ^ -1)) {
@@ -50,8 +37,7 @@ final class uj {
                   L1: while (true) {
                     var4 = param0.c((byte) -46);
                     if (var4 < var3_int) {
-                      stackOut_11_0 = dh.a(var4, true, param1);
-                      stackIn_12_0 = stackOut_11_0;
+                      stackIn_12_0 = dh.a(var4, true, param1);
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -59,14 +45,12 @@ final class uj {
                     }
                   }
                 } else {
-                  stackOut_7_0 = -99;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = -99;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
               } else {
-                stackOut_4_0 = (int)((long)param1 * ((long)param0.c((byte) -46) & 4294967295L) >> 1264703648);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (int)((long)param1 * ((long)param0.c((byte) -46) & 4294967295L) >> 1264703648);
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -76,27 +60,19 @@ final class uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3);
-            stackOut_13_1 = new StringBuilder().append("uj.D(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3);
+
+            stackIn_15_1 = new StringBuilder().append("uj.D(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L2;
             }
           }
@@ -126,9 +102,8 @@ final class uj {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        int discarded$2 = 0;
-        ab var3 = null;
-        jd var4 = null;
+        ab var3;
+        jd var4;
         var3 = he.field_e;
         var3.b((byte) -32, param2);
         var3.f(3, (byte) -54);
@@ -138,7 +113,7 @@ final class uj {
           return;
         } else {
           var4 = (jd) null;
-          discarded$2 = uj.a((jd) null, 16, (byte) 39);
+          uj.a((jd) null, 16, (byte) 39);
           return;
         }
     }
@@ -146,20 +121,14 @@ final class uj {
     final static boolean a(int param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -2147483648) {
           L0: {
             field_f = (qb) null;
             if (param1 != (param1 & -param1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -167,12 +136,10 @@ final class uj {
         } else {
           L1: {
             if (param1 != (param1 & -param1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

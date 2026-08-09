@@ -11,25 +11,25 @@ final class rn {
     private int field_c;
 
     final void a(float[] param0, int param1, boolean param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        vg var14 = null;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int[] var19 = null;
-        int[] var22 = null;
-        float[] var27 = null;
-        float[] var28 = null;
+        int var4;
+        int var5;
+        int var6;
+        int[] var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        vg var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int[] var19;
+        int[] var22;
+        float[] var27;
+        float[] var28;
         var4 = 0;
         L0: while (true) {
           if (var4 >= param1) {

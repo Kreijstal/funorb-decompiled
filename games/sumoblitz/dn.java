@@ -14,7 +14,6 @@ final class dn {
     }
 
     final static String b(int param0) {
-        String discarded$1 = null;
         if ((mp.field_a ^ -1) > -3) {
           return pi.field_b;
         } else {
@@ -40,7 +39,7 @@ final class dn {
                     return ce.field_l;
                   }
                 } else {
-                  discarded$1 = dn.b(-125);
+                  dn.b(-125);
                   if (eb.field_f.b((byte) 127)) {
                     if (!eb.field_f.a("commonui", 100)) {
                       return ow.field_a + " - " + eb.field_f.a("commonui", (byte) 33) + "%";

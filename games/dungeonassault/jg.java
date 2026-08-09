@@ -11,23 +11,12 @@ final class jg {
     final static String a(int param0, CharSequence param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -38,35 +27,26 @@ final class jg {
                 break L1;
               }
             }
-            stackOut_2_0 = ug.a(false, -44, param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = ug.a(false, -44, param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("jg.C(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("jg.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -78,20 +58,14 @@ final class jg {
     final static int a(int param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         param1 = param1 & param0;
         if (param1 < 4096) {
           L0: {
             if (param1 >= 2048) {
-              stackOut_7_0 = -jb.field_Tb[param1 - 2048];
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = -jb.field_Tb[param1 - 2048];
               break L0;
             } else {
-              stackOut_6_0 = jb.field_Tb[2048 - param1];
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = jb.field_Tb[2048 - param1];
               break L0;
             }
           }
@@ -99,12 +73,10 @@ final class jg {
         } else {
           L1: {
             if ((param1 ^ -1) > -6145) {
-              stackOut_3_0 = -jb.field_Tb[-param1 + 6144];
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = -jb.field_Tb[-param1 + 6144];
               break L1;
             } else {
-              stackOut_2_0 = jb.field_Tb[param1 - 6144];
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = jb.field_Tb[param1 - 6144];
               break L1;
             }
           }
@@ -146,14 +118,13 @@ final class jg {
     }
 
     public static void a(byte param0) {
-        String discarded$2 = null;
-        CharSequence var2 = null;
+        CharSequence var2;
         field_b = null;
         field_d = null;
         field_c = null;
         if (param0 >= -61) {
           var2 = (CharSequence) null;
-          discarded$2 = jg.a(48, (CharSequence) null);
+          jg.a(48, (CharSequence) null);
           field_e = null;
           field_a = null;
           return;

@@ -19,8 +19,8 @@ final class la {
     static ja field_j;
 
     private final void b(int param0, byte param1) {
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         if (param1 <= 21) {
           field_l = (ri[]) null;
           var4 = new int[this.a(param0, (byte) 104)];
@@ -42,43 +42,99 @@ final class la {
         int var4 = 0;
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
-        byte stackOut_8_0 = 0;
-        boolean stackOut_2_0 = false;
-        var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        var3 = this.field_o.length;
-        L0: while (true) {
-          L1: {
-            if (param0 < var3) {
-              stackOut_8_0 = param1;
-              stackIn_9_0 = stackOut_8_0;
-              break L1;
-            } else {
-              stackOut_2_0 = this.field_i;
-              stackIn_9_0 = stackOut_2_0 ? 1 : 0;
-              stackIn_3_0 = stackOut_2_0;
-              if (var4 != 0) {
-                break L1;
-              } else {
-                if (stackIn_3_0) {
-                  if (var3 != 0) {
-                    var3 = var3 * this.field_f;
-                    continue L0;
-                  } else {
-                    var3 = 1;
-                    continue L0;
-                  }
-                } else {
-                  var3 = var3 + this.field_f;
-                  continue L0;
+        boolean stackOut_2_0;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = ZombieDawnMulti.field_E ? 1 : 0;
+                    var3 = this.field_o.length;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
+                case 1: {
+                    if (param0 < var3) {
+                        statePc = 8;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
+                }
+                case 2: {
+                    stackOut_2_0 = this.field_i;
+                    stackIn_9_0 = stackOut_2_0 ? 1 : 0;
+                    stackIn_3_0 = stackOut_2_0;
+                    if (var4 != 0) {
+                        statePc = 9;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (stackIn_3_0) {
+                        statePc = 5;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    var3 = var3 + this.field_f;
+                    if (var4 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    if (var3 != 0) {
+                        statePc = 7;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    var3 = 1;
+                    if (var4 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 7;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    var3 = var3 * this.field_f;
+                    if (var4 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 8;
+                    }
+                    continue stateLoop;
+                }
+                case 8: {
+                    stackIn_9_0 = param1;
+                    statePc = 9;
+                    continue stateLoop;
+                }
+                case 9: {
+                    if (stackIn_9_0 <= 101) {
+                        statePc = 11;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    return var3;
+                }
+                case 11: {
+                    return -50;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-          if (stackIn_9_0 <= 101) {
-            return -50;
-          } else {
-            return var3;
-          }
         }
     }
 
@@ -163,7 +219,7 @@ final class la {
     }
 
     final void a(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         if (0 <= param1) {
           if (this.field_a >= param1) {
             if (this.field_a != param1) {

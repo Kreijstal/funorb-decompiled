@@ -14,8 +14,8 @@ abstract class km extends gf {
     static int field_i;
 
     void b(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = BrickABrac.field_J ? 1 : 0;
           if (-1 <= (im.field_e ^ -1)) {
@@ -75,10 +75,8 @@ abstract class km extends gf {
     }
 
     private final void c(boolean param0, int param1) {
-        if (this.field_h.field_j != -1) {
-            if (param1 != this.field_h.field_j) {
-                j.a(ta.field_e[0], -106, lh.g((byte) -44) / 4);
-            }
+        if (this.field_h.field_j != -1 && param1 != this.field_h.field_j) {
+            j.a(ta.field_e[0], -106, lh.g((byte) -44) / 4);
         }
         if (!param0) {
             this.field_j = -36;
@@ -86,18 +84,16 @@ abstract class km extends gf {
     }
 
     final void e(int param0) {
-        int dupTemp$7 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        q var4_ref_q = null;
-        int var4 = 0;
-        String var5 = null;
-        int var6 = 0;
-        String var7 = null;
-        q var8 = null;
+        int dupTemp$2 = 0;
+        int var2;
+        int var3;
+        q var4_ref_q;
+        String var5;
+        int var6;
+        String var7;
         String stackIn_5_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_3_0 = null;
+        int var4;
+        q var8;
         var6 = BrickABrac.field_J ? 1 : 0;
         var2 = 0;
         var3 = 0;
@@ -122,20 +118,18 @@ abstract class km extends gf {
             L2: {
               var4_ref_q = this.field_m[var3];
               if ((var4_ref_q.field_f ^ -1) == -9) {
-                stackOut_4_0 = this.e((byte) 108);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = this.e((byte) 108);
                 break L2;
               } else {
-                stackOut_3_0 = ag.field_D[var4_ref_q.field_f];
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = ag.field_D[var4_ref_q.field_f];
                 break L2;
               }
             }
             var7 = stackIn_5_0;
             var5 = var7;
-            dupTemp$7 = nn.field_g.c(var7) + 30;
-            var4_ref_q.field_j = dupTemp$7;
-            var2 = var2 + dupTemp$7;
+            dupTemp$2 = nn.field_g.c(var7) + 30;
+            var4_ref_q.field_j = dupTemp$2;
+            var2 = var2 + dupTemp$2;
             if (-1 > (var3 ^ -1)) {
               var2 += 10;
               var3++;
@@ -211,14 +205,13 @@ abstract class km extends gf {
     }
 
     void a(boolean param0, boolean param1, int param2) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        q[] var4_ref_q__ = null;
-        int var4 = 0;
-        int var5 = 0;
-        q var6 = null;
-        int var7 = 0;
-        q[] var8 = null;
+        int fieldTemp$2 = 0;
+        q[] var4_ref_q__;
+        int var4;
+        int var5;
+        q var6;
+        int var7;
+        q[] var8;
         var7 = BrickABrac.field_J ? 1 : 0;
         si.field_k.e(1);
         var8 = this.field_m;
@@ -238,43 +231,46 @@ abstract class km extends gf {
               var4 = this.field_h.field_j;
               dm.field_b = sa.a(de.field_x * 20, -4097);
               if (!param1) {
-                this.c(true, var4);
-                if (lp.field_rb != this) {
-                  break L2;
-                } else {
-                  if (-1 <= (im.field_e ^ -1)) {
-                    break L2;
-                  } else {
-                    fieldTemp$4 = im.field_e - 1;
-                    im.field_e = im.field_e - 1;
-                    if (fieldTemp$4 != 0) {
-                      break L2;
-                    } else {
-                      hc.field_h = 1;
-                      c.field_g = 250;
-                      break L2;
-                    }
-                  }
-                }
+                break L2;
               } else {
-                this.c(true, var4);
-                if (lp.field_rb != this) {
+                if (vh.field_L) {
                   break L2;
                 } else {
-                  if (-1 <= (im.field_e ^ -1)) {
+                  if (ed.field_d) {
                     break L2;
                   } else {
-                    fieldTemp$5 = im.field_e - 1;
-                    im.field_e = im.field_e - 1;
-                    if (fieldTemp$5 != 0) {
+                    this.field_h.a(this.a(po.field_a, (byte) -106, pq.field_k), 27479, this.a(qo.field_O, (byte) -80, tb.field_fb));
+                    if (this.a(true, (byte) -117)) {
+                      wp.a(8, ta.field_e[0]);
                       break L2;
                     } else {
-                      hc.field_h = 1;
-                      c.field_g = 250;
                       break L2;
                     }
                   }
                 }
+              }
+            }
+            L3: {
+              this.c(true, var4);
+              if (lp.field_rb != this) {
+                break L3;
+              } else {
+                L4: {
+                  if (-1 <= (im.field_e ^ -1)) {
+                    break L4;
+                  } else {
+                    fieldTemp$2 = im.field_e - 1;
+                    im.field_e = im.field_e - 1;
+                    if (fieldTemp$2 != 0) {
+                      break L4;
+                    } else {
+                      hc.field_h = 1;
+                      c.field_g = 250;
+                      break L3;
+                    }
+                  }
+                }
+                break L3;
               }
             }
             return;
@@ -288,23 +284,13 @@ abstract class km extends gf {
     }
 
     final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        q stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
+        int var2;
+        int var3;
         q stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         q stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_7_2 = 0;
-        q stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        q stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
-        q stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
         var3 = BrickABrac.field_J ? 1 : 0;
         var2 = param0;
         L0: while (true) {
@@ -313,27 +299,19 @@ abstract class km extends gf {
           } else {
             if (this.a((byte) 99, var2)) {
               L1: {
-                stackOut_4_0 = this.field_m[var2];
-                stackOut_4_1 = 4;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_6_1 = stackOut_4_1;
-                stackIn_5_0 = stackOut_4_0;
-                stackIn_5_1 = stackOut_4_1;
+                stackIn_6_0 = this.field_m[var2];
+
+                stackIn_6_1 = 4;
+
                 if (this.field_h.field_j != var2) {
-                  stackOut_6_0 = (q) ((Object) stackIn_6_0);
-                  stackOut_6_1 = stackIn_6_1;
-                  stackOut_6_2 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
-                  stackIn_7_2 = stackOut_6_2;
+                  stackIn_7_0 = (q) ((Object) stackIn_6_0);
+                  stackIn_7_1 = stackIn_6_1;
+                  stackIn_7_2 = 0;
                   break L1;
                 } else {
-                  stackOut_5_0 = (q) ((Object) stackIn_5_0);
-                  stackOut_5_1 = stackIn_5_1;
-                  stackOut_5_2 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
-                  stackIn_7_2 = stackOut_5_2;
+                  stackIn_7_0 = (q) ((Object) stackIn_6_0);
+                  stackIn_7_1 = stackIn_6_1;
+                  stackIn_7_2 = 1;
                   break L1;
                 }
               }
@@ -350,10 +328,8 @@ abstract class km extends gf {
 
     private final boolean a(boolean param0, byte param1) {
         int var3 = 5 % ((param1 - 69) / 51);
-        if (this.field_m.length != 0) {
-            if (0 <= this.field_h.field_j) {
-                return this.a(this.field_h.field_j, param0, (byte) 123);
-            }
+        if (this.field_m.length != 0 && 0 <= this.field_h.field_j) {
+            return this.a(this.field_h.field_j, param0, (byte) 123);
         }
         return false;
     }
@@ -362,8 +338,6 @@ abstract class km extends gf {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -371,14 +345,6 @@ abstract class km extends gf {
         String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             var2 = param0.getParameter("username");
@@ -407,27 +373,19 @@ abstract class km extends gf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2_ref);
-            stackOut_6_1 = new StringBuilder().append("km.HA(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2_ref);
+
+            stackIn_8_1 = new StringBuilder().append("km.HA(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -452,17 +410,6 @@ abstract class km extends gf {
     }
 
     boolean a(int param0, boolean param1, byte param2) {
-        int var4 = 0;
-        q var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        String var12 = null;
-        boolean stackIn_46_0 = false;
-        int stackIn_46_1 = 0;
         boolean stackIn_47_0 = false;
         int stackIn_47_1 = 0;
         boolean stackIn_48_0 = false;
@@ -470,18 +417,15 @@ abstract class km extends gf {
         int stackIn_48_2 = 0;
         int stackIn_143_0 = 0;
         int stackIn_165_0 = 0;
-        int stackOut_142_0 = 0;
-        int stackOut_141_0 = 0;
-        int stackOut_164_0 = 0;
-        int stackOut_163_0 = 0;
-        boolean stackOut_45_0 = false;
-        int stackOut_45_1 = 0;
-        boolean stackOut_47_0 = false;
-        int stackOut_47_1 = 0;
-        int stackOut_47_2 = 0;
-        boolean stackOut_46_0 = false;
-        int stackOut_46_1 = 0;
-        int stackOut_46_2 = 0;
+        int var4;
+        q var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        String var12;
         var11 = BrickABrac.field_J ? 1 : 0;
         if (param2 == 123) {
           L0: {
@@ -692,12 +636,10 @@ abstract class km extends gf {
                                                             if (!ib.a(pl.field_b, -1)) {
                                                               L9: {
                                                                 if (null != fj.field_Ub) {
-                                                                  stackOut_142_0 = 5;
-                                                                  stackIn_143_0 = stackOut_142_0;
+                                                                  stackIn_143_0 = 5;
                                                                   break L9;
                                                                 } else {
-                                                                  stackOut_141_0 = 0;
-                                                                  stackIn_143_0 = stackOut_141_0;
+                                                                  stackIn_143_0 = 0;
                                                                   break L9;
                                                                 }
                                                               }
@@ -751,12 +693,10 @@ abstract class km extends gf {
                                                                     } else {
                                                                       L10: {
                                                                         if (be.field_a) {
-                                                                          stackOut_164_0 = 0;
-                                                                          stackIn_165_0 = stackOut_164_0;
+                                                                          stackIn_165_0 = 0;
                                                                           break L10;
                                                                         } else {
-                                                                          stackOut_163_0 = 1;
-                                                                          stackIn_165_0 = stackOut_163_0;
+                                                                          stackIn_165_0 = 1;
                                                                           break L10;
                                                                         }
                                                                       }
@@ -950,27 +890,19 @@ abstract class km extends gf {
                 break L0;
               } else {
                 L17: {
-                  stackOut_45_0 = param1;
-                  stackOut_45_1 = param2 + -44;
-                  stackIn_47_0 = stackOut_45_0;
-                  stackIn_47_1 = stackOut_45_1;
-                  stackIn_46_0 = stackOut_45_0;
-                  stackIn_46_1 = stackOut_45_1;
+                  stackIn_47_0 = param1;
+
+                  stackIn_47_1 = param2 + -44;
+
                   if (pg.c(72)) {
-                    stackOut_47_0 = stackIn_47_0;
-                    stackOut_47_1 = stackIn_47_1;
-                    stackOut_47_2 = 13;
-                    stackIn_48_0 = stackOut_47_0;
-                    stackIn_48_1 = stackOut_47_1;
-                    stackIn_48_2 = stackOut_47_2;
+                    stackIn_48_0 = stackIn_47_0;
+                    stackIn_48_1 = stackIn_47_1;
+                    stackIn_48_2 = 13;
                     break L17;
                   } else {
-                    stackOut_46_0 = stackIn_46_0;
-                    stackOut_46_1 = stackIn_46_1;
-                    stackOut_46_2 = 16;
-                    stackIn_48_0 = stackOut_46_0;
-                    stackIn_48_1 = stackOut_46_1;
-                    stackIn_48_2 = stackOut_46_2;
+                    stackIn_48_0 = stackIn_47_0;
+                    stackIn_48_1 = stackIn_47_1;
+                    stackIn_48_2 = 16;
                     break L17;
                   }
                 }
@@ -987,44 +919,22 @@ abstract class km extends gf {
 
     final static void a(ak param0, j param1, int param2, int param3, boolean param4, int param5, int param6) {
         int var7_int = 0;
-        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException var7 = null;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -1076,56 +986,40 @@ abstract class km extends gf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var7 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var7);
-            stackOut_15_1 = new StringBuilder().append("km.EA(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var7);
+
+            stackIn_17_1 = new StringBuilder().append("km.EA(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+
+
+            stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
+
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L4;
             }
           }
-          throw qb.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_18_0), stackIn_21_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -1146,12 +1040,11 @@ abstract class km extends gf {
     }
 
     void b(boolean param0) {
-        String discarded$0 = null;
         int var2 = 0;
         q var3 = null;
         int var4 = BrickABrac.field_J ? 1 : 0;
         if (!param0) {
-            discarded$0 = this.e((byte) -7);
+            this.e((byte) -7);
         }
         for (var2 = 0; var2 < this.field_m.length; var2++) {
             var3 = this.field_m[var2];
@@ -1170,69 +1063,17 @@ abstract class km extends gf {
     }
 
     final static void a(int param0, int param1, long param2, String param3, int param4) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
-            L1: {
-              ep.field_k = param0;
-              bo.field_l = true;
-              wd.field_z = param4;
-              gn.field_E = param2;
-              ba.field_z = param3;
-              if (param1 == 29295) {
-                break L1;
-              } else {
+            ep.field_k = param0;
+            bo.field_l = true;
+            wd.field_z = param4;
+            gn.field_E = param2;
+            ba.field_z = param3;
+            if (param1 != 29295) {
                 km.b(48);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("km.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param3 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
-            }
-          }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param4 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) ((Object) runtimeException), "km.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -1247,17 +1088,15 @@ abstract class km extends gf {
     }
 
     void a(boolean param0, int param1, int param2) {
-        boolean discarded$0 = false;
         if (param2 <= 96) {
-            discarded$0 = this.a('F', -76, -96);
+            this.a('F', -76, -96);
         }
         this.field_h.a(this.a(po.field_a, (byte) -106, pq.field_k), param1, param0, (byte) -127);
     }
 
     void d(byte param0) {
-        int discarded$0 = 0;
         if (param0 != 79) {
-            discarded$0 = this.b(-57, -105);
+            this.b(-57, -105);
         }
     }
 
@@ -1280,9 +1119,9 @@ abstract class km extends gf {
     }
 
     private final int a(int param0, byte param1, int param2) {
-        int var4 = 0;
-        q var5 = null;
-        int var6 = 0;
+        int var4;
+        q var5;
+        int var6;
         L0: {
           var6 = BrickABrac.field_J ? 1 : 0;
           var4 = 0;

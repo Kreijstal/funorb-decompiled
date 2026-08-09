@@ -103,12 +103,12 @@ final class lf implements Runnable {
     }
 
     final synchronized boolean a(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         L0: {
           if (param0 >= 47) {
             break L0;
@@ -260,9 +260,8 @@ final class lf implements Runnable {
     }
 
     final sb a(int param0) {
-        sb discarded$9 = null;
         if (param0 != 0) {
-            discarded$9 = this.a(23);
+            this.a(23);
             if (!(-4 != (this.field_c ^ -1))) {
                 return this.field_g;
             }

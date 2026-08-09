@@ -6,7 +6,7 @@ final class a implements e {
     long field_nativeid;
 
     final void a() {
-        Thread discarded$0 = Thread.currentThread();
+        Thread.currentThread();
         this.b();
     }
 

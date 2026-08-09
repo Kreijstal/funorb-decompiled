@@ -13,11 +13,7 @@ final class ki extends vj {
     private rc field_X;
 
     final static void i(int param0) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        RuntimeException var1 = null;
-        ci var1_ref = null;
+        ci var1 = null;
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -38,9 +34,6 @@ final class ki extends vj {
         int[] var28 = null;
         int[] var29 = null;
         int[] var30 = null;
-        int stackIn_50_0 = 0;
-        int stackIn_50_1 = 0;
-        int stackIn_50_2 = 0;
         int stackIn_51_0 = 0;
         int stackIn_51_1 = 0;
         int stackIn_51_2 = 0;
@@ -48,15 +41,11 @@ final class ki extends vj {
         int stackIn_52_1 = 0;
         int stackIn_52_2 = 0;
         int stackIn_52_3 = 0;
-        int stackIn_55_0 = 0;
-        int stackIn_55_1 = 0;
         int stackIn_56_0 = 0;
         int stackIn_56_1 = 0;
         int stackIn_57_0 = 0;
         int stackIn_57_1 = 0;
         int stackIn_57_2 = 0;
-        int stackIn_64_0 = 0;
-        int stackIn_64_1 = 0;
         int stackIn_65_0 = 0;
         int stackIn_65_1 = 0;
         int stackIn_66_0 = 0;
@@ -65,33 +54,7 @@ final class ki extends vj {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_49_0 = 0;
-        int stackOut_49_1 = 0;
-        int stackOut_49_2 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_51_1 = 0;
-        int stackOut_51_2 = 0;
-        int stackOut_51_3 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_50_1 = 0;
-        int stackOut_50_2 = 0;
-        int stackOut_50_3 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_54_1 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_56_1 = 0;
-        int stackOut_56_2 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_55_1 = 0;
-        int stackOut_55_2 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_63_1 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_65_1 = 0;
-        int stackOut_65_2 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_64_1 = 0;
-        int stackOut_64_2 = 0;
+        RuntimeException var1_ref = null;
         var10 = Terraphoenix.field_V;
         try {
           L0: {
@@ -168,7 +131,7 @@ final class ki extends vj {
                               break L2;
                             } else {
                               wg.field_l[var7].a();
-                              discarded$3 = ja.field_m.a(vi.field_j[var7], 3, 3, -6 + wg.field_l[var7].field_r, wg.field_l[var7].field_t - 6, me.field_k, -1, 1, 1, ja.field_m.field_s + ja.field_m.field_p);
+                              ja.field_m.a(vi.field_j[var7], 3, 3, -6 + wg.field_l[var7].field_r, wg.field_l[var7].field_t - 6, me.field_k, -1, 1, 1, ja.field_m.field_s + ja.field_m.field_p);
                               wa.a(wg.field_l[var7], 0, wg.field_l[var7].field_t, 69, 1, 0, 3, wg.field_l[var7].field_r);
                               var7++;
                               continue L3;
@@ -264,7 +227,7 @@ final class ki extends vj {
                     p.field_e.f();
                     var9 = new ci(p.field_e.field_q, p.field_e.field_u);
                     var9.a();
-                    discarded$4 = fa.field_i.a(var14, lm.field_b, ee.field_h, nl.field_a, fg.field_a, 16777215, -1, 1, 1, fa.field_i.field_p + fa.field_i.field_s);
+                    fa.field_i.a(var14, lm.field_b, ee.field_h, nl.field_a, fg.field_a, 16777215, -1, 1, 1, fa.field_i.field_p + fa.field_i.field_s);
                     wa.a(var9, 0, var9.field_u, -86, 1, 0, 3, var9.field_q);
                     p.field_e.a();
                     var9.b(0, 0);
@@ -296,7 +259,7 @@ final class ki extends vj {
                     var5_ref_String = ij.a(new String[]{jh.field_p}, param0 + -28419, ia.field_p);
                     jh.field_p = null;
                     var16.a();
-                    discarded$5 = ja.field_m.a(var5_ref_String, 3, 3, -6 + var16.field_r, -6 + var16.field_t, 16777215, -1, 0, 1, ja.field_m.field_s - -ja.field_m.field_p);
+                    ja.field_m.a(var5_ref_String, 3, 3, -6 + var16.field_r, -6 + var16.field_t, 16777215, -1, 0, 1, ja.field_m.field_s - -ja.field_m.field_p);
                     wa.a(var16, 0, var16.field_t, -101, 1, 0, 3, var16.field_r);
                     fa.field_d.a();
                     var16.b(199 - fa.field_d.field_p, 83 - fa.field_d.field_v);
@@ -370,44 +333,33 @@ final class ki extends vj {
                   } else {
                     L15: {
                       lm.field_e.b(231, 390);
-                      var1_ref = sb.field_p;
+                      var1 = sb.field_p;
                       if (0 == si.field_ob.field_h) {
-                        var1_ref = kb.field_s;
+                        var1 = kb.field_s;
                         break L15;
                       } else {
                         break L15;
                       }
                     }
                     L16: {
-                      var1_ref.b(0, 0);
-                      stackOut_49_0 = 40;
-                      stackOut_49_1 = 2;
-                      stackOut_49_2 = el.field_e;
-                      stackIn_51_0 = stackOut_49_0;
-                      stackIn_51_1 = stackOut_49_1;
-                      stackIn_51_2 = stackOut_49_2;
-                      stackIn_50_0 = stackOut_49_0;
-                      stackIn_50_1 = stackOut_49_1;
-                      stackIn_50_2 = stackOut_49_2;
+                      var1.b(0, 0);
+                      stackIn_51_0 = 40;
+
+                      stackIn_51_1 = 2;
+
+                      stackIn_51_2 = el.field_e;
+
                       if (si.field_ob.field_h != 0) {
-                        stackOut_51_0 = stackIn_51_0;
-                        stackOut_51_1 = stackIn_51_1;
-                        stackOut_51_2 = stackIn_51_2;
-                        stackOut_51_3 = 3;
-                        stackIn_52_0 = stackOut_51_0;
-                        stackIn_52_1 = stackOut_51_1;
-                        stackIn_52_2 = stackOut_51_2;
-                        stackIn_52_3 = stackOut_51_3;
+                        stackIn_52_0 = stackIn_51_0;
+                        stackIn_52_1 = stackIn_51_1;
+                        stackIn_52_2 = stackIn_51_2;
+                        stackIn_52_3 = 3;
                         break L16;
                       } else {
-                        stackOut_50_0 = stackIn_50_0;
-                        stackOut_50_1 = stackIn_50_1;
-                        stackOut_50_2 = stackIn_50_2;
-                        stackOut_50_3 = 4;
-                        stackIn_52_0 = stackOut_50_0;
-                        stackIn_52_1 = stackOut_50_1;
-                        stackIn_52_2 = stackOut_50_2;
-                        stackIn_52_3 = stackOut_50_3;
+                        stackIn_52_0 = stackIn_51_0;
+                        stackIn_52_1 = stackIn_51_1;
+                        stackIn_52_2 = stackIn_51_2;
+                        stackIn_52_3 = 4;
                         break L16;
                       }
                     }
@@ -420,35 +372,27 @@ final class ki extends vj {
                         lm.field_e.d(232, 389, var2);
                         lm.field_e.d(232, 391, var2);
                         lm.field_e.d(230, 391, var2);
-                        var1_ref.d(1, 1, var2);
-                        var1_ref.d(-1, 1, var2);
-                        var1_ref.d(1, -1, var2);
-                        var1_ref.d(-1, -1, var2);
+                        var1.d(1, 1, var2);
+                        var1.d(-1, 1, var2);
+                        var1.d(1, -1, var2);
+                        var1.d(-1, -1, var2);
                         break L17;
                       }
                     }
                     L18: {
-                      stackOut_54_0 = sl.field_d;
-                      stackOut_54_1 = -106;
-                      stackIn_56_0 = stackOut_54_0;
-                      stackIn_56_1 = stackOut_54_1;
-                      stackIn_55_0 = stackOut_54_0;
-                      stackIn_55_1 = stackOut_54_1;
+                      stackIn_56_0 = sl.field_d;
+
+                      stackIn_56_1 = -106;
+
                       if (si.field_ob.field_h != 0) {
-                        stackOut_56_0 = stackIn_56_0;
-                        stackOut_56_1 = stackIn_56_1;
-                        stackOut_56_2 = 0;
-                        stackIn_57_0 = stackOut_56_0;
-                        stackIn_57_1 = stackOut_56_1;
-                        stackIn_57_2 = stackOut_56_2;
+                        stackIn_57_0 = stackIn_56_0;
+                        stackIn_57_1 = stackIn_56_1;
+                        stackIn_57_2 = 0;
                         break L18;
                       } else {
-                        stackOut_55_0 = stackIn_55_0;
-                        stackOut_55_1 = stackIn_55_1;
-                        stackOut_55_2 = 1;
-                        stackIn_57_0 = stackOut_55_0;
-                        stackIn_57_1 = stackOut_55_1;
-                        stackIn_57_2 = stackOut_55_2;
+                        stackIn_57_0 = stackIn_56_0;
+                        stackIn_57_1 = stackIn_56_1;
+                        stackIn_57_2 = 1;
                         break L18;
                       }
                     }
@@ -475,27 +419,19 @@ final class ki extends vj {
                       }
                     }
                     L21: {
-                      stackOut_63_0 = gf.field_C;
-                      stackOut_63_1 = -80;
-                      stackIn_65_0 = stackOut_63_0;
-                      stackIn_65_1 = stackOut_63_1;
-                      stackIn_64_0 = stackOut_63_0;
-                      stackIn_64_1 = stackOut_63_1;
+                      stackIn_65_0 = gf.field_C;
+
+                      stackIn_65_1 = -80;
+
                       if ((si.field_ob.field_h ^ -1) != -2) {
-                        stackOut_65_0 = stackIn_65_0;
-                        stackOut_65_1 = stackIn_65_1;
-                        stackOut_65_2 = 0;
-                        stackIn_66_0 = stackOut_65_0;
-                        stackIn_66_1 = stackOut_65_1;
-                        stackIn_66_2 = stackOut_65_2;
+                        stackIn_66_0 = stackIn_65_0;
+                        stackIn_66_1 = stackIn_65_1;
+                        stackIn_66_2 = 0;
                         break L21;
                       } else {
-                        stackOut_64_0 = stackIn_64_0;
-                        stackOut_64_1 = stackIn_64_1;
-                        stackOut_64_2 = 1;
-                        stackIn_66_0 = stackOut_64_0;
-                        stackIn_66_1 = stackOut_64_1;
-                        stackIn_66_2 = stackOut_64_2;
+                        stackIn_66_0 = stackIn_65_0;
+                        stackIn_66_1 = stackIn_65_1;
+                        stackIn_66_2 = 1;
                         break L21;
                       }
                     }
@@ -567,8 +503,8 @@ final class ki extends vj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw qk.a((Throwable) ((Object) var1), "ki.A(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw qk.a((Throwable) ((Object) var1_ref), "ki.A(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -591,28 +527,16 @@ final class ki extends vj {
     final boolean a(byte param0, gl param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             if (param0 >= 2) {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               break L0;
             } else {
               field_Y = (String) null;
@@ -623,27 +547,19 @@ final class ki extends vj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("ki.F(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("ki.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }
@@ -662,22 +578,12 @@ final class ki extends vj {
 
     final void a(gl param0, int param1, int param2, int param3) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -696,27 +602,19 @@ final class ki extends vj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("ki.B(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("ki.B(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -725,17 +623,17 @@ final class ki extends vj {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        String var5 = null;
-        im var6 = null;
-        w var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        ci var14 = null;
-        ci var15 = null;
-        ci var16 = null;
+        String var5;
+        im var6;
+        w var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        ci var14;
+        ci var15;
+        ci var16;
         L0: {
           L1: {
             var13 = Terraphoenix.field_V;

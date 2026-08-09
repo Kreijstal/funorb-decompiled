@@ -19,53 +19,31 @@ final class oc {
     }
 
     final static void a(byte param0, int param1, int param2, byte[] param3, int param4, int param5, int param6, int param7, int param8, byte[] param9) {
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        RuntimeException var10 = null;
-        int var10_int = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        byte[] var14 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        int var10_int = 0;
+        RuntimeException var10 = null;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        byte[] var14 = null;
         var13 = Torquing.field_u;
         try {
           L0: {
@@ -97,13 +75,13 @@ final class oc {
                         continue L2;
                       } else {
                         L5: {
-                          incrementValue$10 = param8;
+                          incrementValue$0 = param8;
                           param8++;
-                          param0 = param9[incrementValue$10];
+                          param0 = param9[incrementValue$0];
                           if (param0 != 0) {
-                            incrementValue$11 = param2;
+                            incrementValue$1 = param2;
                             param2++;
-                            param3[incrementValue$11] = (byte)param0;
+                            param3[incrementValue$1] = (byte)param0;
                             break L5;
                           } else {
                             param2++;
@@ -116,55 +94,55 @@ final class oc {
                     }
                   } else {
                     L6: {
-                      incrementValue$12 = param8;
+                      incrementValue$2 = param8;
                       param8++;
-                      param0 = param9[incrementValue$12];
+                      param0 = param9[incrementValue$2];
                       if (param0 == 0) {
                         param2++;
                         break L6;
                       } else {
-                        incrementValue$13 = param2;
+                        incrementValue$3 = param2;
                         param2++;
-                        param3[incrementValue$13] = (byte)param0;
+                        param3[incrementValue$3] = (byte)param0;
                         break L6;
                       }
                     }
                     L7: {
-                      incrementValue$14 = param8;
+                      incrementValue$4 = param8;
                       param8++;
-                      param0 = param9[incrementValue$14];
+                      param0 = param9[incrementValue$4];
                       if (0 == param0) {
                         param2++;
                         break L7;
                       } else {
-                        incrementValue$15 = param2;
+                        incrementValue$5 = param2;
                         param2++;
-                        param3[incrementValue$15] = (byte)param0;
+                        param3[incrementValue$5] = (byte)param0;
                         break L7;
                       }
                     }
                     L8: {
-                      incrementValue$16 = param8;
+                      incrementValue$6 = param8;
                       param8++;
-                      param0 = param9[incrementValue$16];
+                      param0 = param9[incrementValue$6];
                       if (param0 == 0) {
                         param2++;
                         break L8;
                       } else {
-                        incrementValue$17 = param2;
+                        incrementValue$7 = param2;
                         param2++;
-                        param3[incrementValue$17] = (byte)param0;
+                        param3[incrementValue$7] = (byte)param0;
                         break L8;
                       }
                     }
                     L9: {
-                      incrementValue$18 = param8;
+                      incrementValue$8 = param8;
                       param8++;
-                      param0 = param9[incrementValue$18];
+                      param0 = param9[incrementValue$8];
                       if (param0 != 0) {
-                        incrementValue$19 = param2;
+                        incrementValue$9 = param2;
                         param2++;
-                        param3[incrementValue$19] = (byte)param0;
+                        param3[incrementValue$9] = (byte)param0;
                         break L9;
                       } else {
                         param2++;
@@ -182,56 +160,40 @@ final class oc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var10 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var10);
-            stackOut_27_1 = new StringBuilder().append("oc.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackIn_29_0 = (RuntimeException) (var10);
+
+            stackIn_29_1 = new StringBuilder().append("oc.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L10;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L10;
             }
           }
           L11: {
-            stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+
+
+            stackIn_32_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
+
             if (param9 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L11;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L11;
             }
           }
-          throw rb.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_30_0), stackIn_33_2 + ')');
         }
     }
 

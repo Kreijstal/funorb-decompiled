@@ -48,10 +48,10 @@ final class sd extends oh {
     }
 
     final iq a(int param0) {
-        vp var2 = null;
-        nm var3 = null;
-        int var4 = 0;
-        iq var5 = null;
+        vp var2;
+        nm var3;
+        int var4;
+        iq var5;
         L0: {
           var4 = Vertigo2.field_L ? 1 : 0;
           var2 = new vp(this.field_J);
@@ -101,7 +101,6 @@ final class sd extends oh {
 
     final void b(iq param0, int param1) {
         nm var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param0 instanceof nm)) {
                 throw new IllegalArgumentException();
@@ -112,21 +111,20 @@ final class sd extends oh {
             if (param1 != 0) {
                 sd.f((byte) 122);
             }
-            discarded$0 = var3.a((byte) 116, (iq) (this));
+            var3.a((byte) 116, (iq) (this));
         } catch (RuntimeException runtimeException) {
             throw wn.a((Throwable) ((Object) runtimeException), "sd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
-        iq discarded$0 = null;
         int var7 = Vertigo2.field_L ? 1 : 0;
         if (!(null == this.field_B)) {
             this.field_B.a(true, param2, true, (iq) (this), param3);
         }
         vp var5 = new vp(this.field_J);
         if (param0) {
-            discarded$0 = this.a(45);
+            this.a(45);
         }
         iq var6 = (iq) ((Object) var5.b(4));
         while (var6 != null) {
@@ -149,9 +147,9 @@ final class sd extends oh {
     }
 
     final nm k(int param0) {
-        vp var2 = null;
-        nm var3 = null;
-        int var4 = 0;
+        vp var2;
+        nm var3;
+        int var4;
         L0: {
           var4 = Vertigo2.field_L ? 1 : 0;
           if (param0 == 0) {

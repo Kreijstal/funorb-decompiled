@@ -23,19 +23,16 @@ final class gf implements Iterator {
     }
 
     final static boolean a(boolean param0) {
-        int discarded$4 = 0;
         Object var1 = null;
         Throwable var2 = null;
         int stackIn_6_0 = 0;
         int stackIn_8_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           if (!param0) {
             break L0;
           } else {
-            discarded$4 = gf.b(16, 44, -77);
+            gf.b(16, 44, -77);
             break L0;
           }
         }
@@ -43,15 +40,13 @@ final class gf implements Iterator {
         synchronized (var1) {
           L1: {
             if (ah.field_l == rq.field_B) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               return stackIn_6_0 != 0;
             } else {
               de.field_f = wm.field_j[rq.field_B];
               ji.field_r = af.field_F[rq.field_B];
               rq.field_B = 127 & rq.field_B + 1;
-              stackOut_7_0 = 1;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 1;
               break L1;
             }
           }
@@ -60,17 +55,17 @@ final class gf implements Iterator {
     }
 
     public final boolean hasNext() {
-        int fieldTemp$2 = 0;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        int var2;
         var2 = Vertigo2.field_L ? 1 : 0;
         if (this.field_a.field_f[this.field_b - 1] != this.field_i) {
           return true;
         } else {
           L0: while (true) {
             if (this.field_b < this.field_a.field_c) {
-              fieldTemp$2 = this.field_b;
+              fieldTemp$1 = this.field_b;
               this.field_b = this.field_b + 1;
-              if (this.field_a.field_f[fieldTemp$2].field_c != this.field_a.field_f[-1 + this.field_b]) {
+              if (this.field_a.field_f[fieldTemp$1].field_c != this.field_a.field_f[-1 + this.field_b]) {
                 this.field_i = this.field_a.field_f[this.field_b + -1].field_c;
                 return true;
               } else {
@@ -100,7 +95,6 @@ final class gf implements Iterator {
     }
 
     final static boolean a(byte param0) {
-        boolean discarded$5 = false;
         if (param0 <= -41) {
           if (qb.field_d != null) {
             if (null == qb.field_d.k(0)) {
@@ -112,7 +106,7 @@ final class gf implements Iterator {
             return false;
           }
         } else {
-          discarded$5 = gf.a(false);
+          gf.a(false);
           if (qb.field_d != null) {
             if (null == qb.field_d.k(0)) {
               return false;
@@ -142,9 +136,9 @@ final class gf implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        li var1 = null;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        li var1;
+        int var2;
         var2 = Vertigo2.field_L ? 1 : 0;
         if (this.field_i != this.field_a.field_f[-1 + this.field_b]) {
           var1 = this.field_i;
@@ -154,9 +148,9 @@ final class gf implements Iterator {
         } else {
           L0: while (true) {
             if (this.field_a.field_c > this.field_b) {
-              fieldTemp$2 = this.field_b;
+              fieldTemp$1 = this.field_b;
               this.field_b = this.field_b + 1;
-              var1 = this.field_a.field_f[fieldTemp$2].field_c;
+              var1 = this.field_a.field_f[fieldTemp$1].field_c;
               if (var1 != this.field_a.field_f[-1 + this.field_b]) {
                 this.field_c = var1;
                 this.field_i = var1.field_c;
@@ -172,54 +166,44 @@ final class gf implements Iterator {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        boolean discarded$11 = false;
-        StringBuilder discarded$12 = null;
-        StringBuilder discarded$13 = null;
-        StringBuilder discarded$14 = null;
-        StringBuilder discarded$15 = null;
-        StringBuilder discarded$16 = null;
-        StringBuilder discarded$17 = null;
-        StringBuilder discarded$18 = null;
-        StringBuilder discarded$19 = null;
-        StringBuilder discarded$20 = null;
-        StringBuilder discarded$21 = null;
-        int var3 = 0;
-        int var4 = 0;
-        String var4_ref_String = null;
-        int var5 = 0;
-        String var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        String var12 = null;
-        String var13 = null;
-        String var14 = null;
-        String var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
-        String var28 = null;
-        String var29 = null;
-        String var30 = null;
-        String var31 = null;
-        String var32 = null;
-        String var33 = null;
-        String var34 = null;
-        String var35 = null;
-        String var36 = null;
-        String var37 = null;
-        String var38 = null;
-        Object var39 = null;
-        CharSequence var40 = null;
+        StringBuilder discarded$0 = null;
+        int var3;
+        int var4;
+        String var4_ref_String;
+        int var5;
+        String var7;
+        String var8;
+        int var9;
+        int var10;
+        int var11;
+        String var12;
+        String var13;
+        String var14;
+        String var15;
+        String var16;
+        String var17;
+        String var18;
+        String var19;
+        String var28;
+        String var29;
+        String var30;
+        String var31;
+        String var32;
+        String var33;
+        String var34;
+        String var35;
+        String var36;
+        String var37;
+        String var38;
+        Object var39;
+        CharSequence var40;
         L0: {
           var39 = null;
           var11 = Vertigo2.field_L ? 1 : 0;
           if (param2 > 28) {
             break L0;
           } else {
-            discarded$11 = gf.a((byte) -67);
+            gf.a((byte) -67);
             break L0;
           }
         }
@@ -267,7 +251,7 @@ final class gf implements Iterator {
               if (var3 != 0) {
                 if (fb.field_D.length() < 80) {
                   L4: {
-                    discarded$12 = fb.field_D.append((char) var4);
+                    discarded$0 = fb.field_D.append((char) var4);
                     var5 = 485;
                     var17 = qe.field_V;
                     var16 = jk.a(15709, var17);
@@ -291,7 +275,7 @@ final class gf implements Iterator {
                                       var30 = var29 + var19 + ": ";
                                       var5 = var5 - cg.field_f.c(var30);
                                       if (cg.field_f.c(fb.field_D.toString()) > var5) {
-                                        discarded$13 = w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+                                        w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
                                         break L6;
                                       } else {
                                         break L6;
@@ -304,7 +288,7 @@ final class gf implements Iterator {
                                       var33 = var7 + var19 + ": ";
                                       var5 = var5 - cg.field_f.c(var33);
                                       if (cg.field_f.c(fb.field_D.toString()) > var5) {
-                                        discarded$14 = w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+                                        w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
                                         break L7;
                                       } else {
                                         break L7;
@@ -318,7 +302,7 @@ final class gf implements Iterator {
                                     var32 = var31 + var19 + ": ";
                                     var5 = var5 - cg.field_f.c(var32);
                                     if (cg.field_f.c(fb.field_D.toString()) > var5) {
-                                      discarded$15 = w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+                                      w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
                                       break L8;
                                     } else {
                                       break L8;
@@ -331,7 +315,7 @@ final class gf implements Iterator {
                                   var33 = var7 + var19 + ": ";
                                   var5 = var5 - cg.field_f.c(var33);
                                   if (cg.field_f.c(fb.field_D.toString()) > var5) {
-                                    discarded$16 = w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+                                    w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
                                     break L9;
                                   } else {
                                     break L9;
@@ -356,7 +340,7 @@ final class gf implements Iterator {
                                   var35 = var34 + var19 + ": ";
                                   var5 = var5 - cg.field_f.c(var35);
                                   if (cg.field_f.c(fb.field_D.toString()) > var5) {
-                                    discarded$17 = w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+                                    w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
                                     break L11;
                                   } else {
                                     break L11;
@@ -370,7 +354,7 @@ final class gf implements Iterator {
                                 var37 = var36 + var19 + ": ";
                                 var5 = var5 - cg.field_f.c(var37);
                                 if (cg.field_f.c(fb.field_D.toString()) > var5) {
-                                  discarded$18 = w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+                                  w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
                                   break L12;
                                 } else {
                                   break L12;
@@ -388,7 +372,7 @@ final class gf implements Iterator {
                           var28 = var7 + var19 + ": ";
                           var5 = var5 - cg.field_f.c(var28);
                           if (cg.field_f.c(fb.field_D.toString()) > var5) {
-                            discarded$19 = w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+                            w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
                             break L13;
                           } else {
                             break L13;
@@ -414,7 +398,7 @@ final class gf implements Iterator {
                   if (cg.field_f.c(fb.field_D.toString()) <= var5) {
                     return true;
                   } else {
-                    discarded$20 = w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
+                    w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
                     return true;
                   }
                 } else {
@@ -431,7 +415,7 @@ final class gf implements Iterator {
               if (0 >= fb.field_D.length()) {
                 return true;
               } else {
-                discarded$21 = w.a(true, ' ', fb.field_D.length() + -1, fb.field_D);
+                w.a(true, ' ', fb.field_D.length() + -1, fb.field_D);
                 return true;
               }
             } else {

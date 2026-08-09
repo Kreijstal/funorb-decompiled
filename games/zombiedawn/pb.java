@@ -71,9 +71,9 @@ final class pb extends le {
 
     final static void a(long param0, byte param1) {
         try {
-            InterruptedException var3 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            InterruptedException var3 = null;
             try {
               L0: {
                 if (param1 > 28) {
@@ -106,9 +106,8 @@ final class pb extends le {
     }
 
     final static void d(byte param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         if (param0 <= -70) {
           var1 = ng.field_b;
           synchronized (var1) {
@@ -140,7 +139,6 @@ final class pb extends le {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -149,6 +147,7 @@ final class pb extends le {
         int var10 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         var10 = ZombieDawn.field_J;
         try {
           L0: {
@@ -205,11 +204,13 @@ final class pb extends le {
     }
 
     final static void c(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        lo var4_ref_lo = null;
         int var4 = 0;
+        lo var4_ref_lo = null;
         wg var5 = null;
         int var5_int = 0;
         int[] var6 = null;
@@ -218,8 +219,6 @@ final class pb extends le {
         am var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = ZombieDawn.field_J;
         try {
           L0: {
@@ -329,10 +328,7 @@ final class pb extends le {
 
     final void a(byte param0, wk param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -340,14 +336,7 @@ final class pb extends le {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             if ((this.field_r ^ -1) < -1) {
@@ -378,27 +367,19 @@ final class pb extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3);
-            stackOut_9_1 = new StringBuilder().append("pb.M(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("pb.M(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -417,8 +398,6 @@ final class pb extends le {
 
     final boolean a(int param0, int param1, int param2) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param2 > 87) {
             break L0;
@@ -435,14 +414,12 @@ final class pb extends le {
               if (-31 >= (Math.abs(param0 + -this.field_m) ^ -1)) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
@@ -454,8 +431,6 @@ final class pb extends le {
         int var4 = 0;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -463,16 +438,6 @@ final class pb extends le {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_11_0 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             L1: {
@@ -485,8 +450,7 @@ final class pb extends le {
             }
             if (param1 > 0) {
               if (ul.a(param1, (byte) 77)) {
-                stackOut_6_0 = (int)((long)param1 * ((long)param0.nextInt() & 4294967295L) >> 1465910432);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (int)((long)param1 * ((long)param0.nextInt() & 4294967295L) >> 1465910432);
                 decompiledRegionSelector0 = 0;
                 break L0;
               } else {
@@ -494,8 +458,7 @@ final class pb extends le {
                 L2: while (true) {
                   var4 = param0.nextInt();
                   if (var4 < var3_int) {
-                    stackOut_11_0 = nd.a(31336, var4, param1);
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = nd.a(31336, var4, param1);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -511,27 +474,19 @@ final class pb extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3);
-            stackOut_13_1 = new StringBuilder().append("pb.J(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3);
+
+            stackIn_15_1 = new StringBuilder().append("pb.J(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }

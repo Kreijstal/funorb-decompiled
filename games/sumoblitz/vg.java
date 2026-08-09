@@ -17,42 +17,27 @@ final class vg implements mh {
     private int field_h;
 
     public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        wr var11 = null;
         pk stackIn_3_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        pk stackOut_1_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        wr var11 = null;
         try {
           L0: {
             L1: {
               if (!(param0 instanceof wr)) {
-                stackOut_2_0 = null;
-                stackIn_3_0 = (pk) ((Object) stackOut_2_0);
+                stackIn_3_0 = null;
                 break L1;
               } else {
-                stackOut_1_0 = (pk) (param0);
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = (pk) (param0);
                 break L1;
               }
             }
@@ -93,7 +78,7 @@ final class vg implements mh {
                 break L5;
               } else {
                 var10 = this.field_c - (-this.field_h - this.field_l);
-                discarded$1 = this.field_m.a(param0.field_m, param4 - (-param0.field_r - var10), this.field_i + param0.field_v + param1, -var10 + -this.field_l + param0.field_q, -(this.field_l << 2086782145) + param0.field_p, this.field_a, this.field_f, this.field_d, this.field_b, 0);
+                this.field_m.a(param0.field_m, param4 - (-param0.field_r - var10), this.field_i + param0.field_v + param1, -var10 + -this.field_l + param0.field_q, -(this.field_l << 2086782145) + param0.field_p, this.field_a, this.field_f, this.field_d, this.field_b, 0);
                 break L5;
               }
             }
@@ -103,27 +88,19 @@ final class vg implements mh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var6);
-            stackOut_13_1 = new StringBuilder().append("vg.A(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var6);
+
+            stackIn_15_1 = new StringBuilder().append("vg.A(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L6;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L6;
             }
           }

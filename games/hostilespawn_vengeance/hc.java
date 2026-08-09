@@ -7,25 +7,25 @@ final class hc {
 
     private final void a(int param0, java.awt.Frame param1) {
         L0: {
-          ((hc) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
+          this.field_a.setFullScreenWindow((java.awt.Window) ((Object) param1));
           if (param0 > 94) {
             break L0;
           } else {
-            ((hc) this).field_a = null;
+            this.field_a = (java.awt.GraphicsDevice) null;
             break L0;
           }
         }
     }
 
     public hc() throws Exception {
-        java.awt.GraphicsEnvironment var1 = null;
-        java.awt.GraphicsDevice[] var2 = null;
-        java.awt.GraphicsDevice[] var3 = null;
-        int var4 = 0;
-        java.awt.GraphicsDevice var5 = null;
+        java.awt.GraphicsEnvironment var1;
+        java.awt.GraphicsDevice[] var2;
+        java.awt.GraphicsDevice[] var3;
+        int var4;
+        java.awt.GraphicsDevice var5;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        ((hc) this).field_a = var1.getDefaultScreenDevice();
-        if (((hc) this).field_a.isFullScreenSupported()) {
+        this.field_a = var1.getDefaultScreenDevice();
+        if (this.field_a.isFullScreenSupported()) {
           return;
         } else {
           var2 = var1.getScreenDevices();
@@ -38,7 +38,7 @@ final class hc {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
-                  ((hc) this).field_a = var5;
+                  this.field_a = var5;
                   return;
                 } else {
                   var4++;
@@ -55,33 +55,33 @@ final class hc {
 
     public final int[] listmodes() {
         int var3 = 0;
-        java.awt.DisplayMode[] var4 = ((hc) this).field_a.getDisplayModes();
+        java.awt.DisplayMode[] var4 = this.field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 2];
+        int[] var2 = new int[var4.length << -1728453310];
         for (var3 = 0; var4.length > var3; var3++) {
-            var2[var3 << 2] = var4[var3].getWidth();
-            var2[1 + (var3 << 2)] = var4[var3].getHeight();
-            var2[(var3 << 2) + 2] = var4[var3].getBitDepth();
-            var2[3 + (var3 << 2)] = var4[var3].getRefreshRate();
+            var2[var3 << 191678274] = var4[var3].getWidth();
+            var2[1 + (var3 << -458200190)] = var4[var3].getHeight();
+            var2[(var3 << -1227143838) + 2] = var4[var3].getBitDepth();
+            var2[3 + (var3 << -877490494)] = var4[var3].getRefreshRate();
         }
         return var2;
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        java.awt.DisplayMode[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        ((hc) this).field_b = ((hc) this).field_a.getDisplayMode();
-        if (((hc) this).field_b != null) {
+        int var6;
+        java.awt.DisplayMode[] var7;
+        int var8;
+        int var9;
+        int var10;
+        this.field_b = this.field_a.getDisplayMode();
+        if (this.field_b != null) {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
             this.a(120, param0);
             if (param4 == 0) {
-              var6 = ((hc) this).field_b.getRefreshRate();
-              var7 = ((hc) this).field_a.getDisplayModes();
+              var6 = this.field_b.getRefreshRate();
+              var7 = this.field_a.getDisplayModes();
               var8 = 0;
               var9 = 0;
               L1: while (true) {
@@ -131,7 +131,7 @@ final class hc {
               break L0;
             }
           }
-          ((hc) this).field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          this.field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
           return;
         } else {
           throw new NullPointerException();
@@ -139,12 +139,12 @@ final class hc {
     }
 
     public final void exit() {
-        if (!(null == ((hc) this).field_b)) {
-            ((hc) this).field_a.setDisplayMode(((hc) this).field_b);
-            if (!(((hc) this).field_a.getDisplayMode().equals(((hc) this).field_b))) {
+        if (!(null == this.field_b)) {
+            this.field_a.setDisplayMode(this.field_b);
+            if (!(this.field_a.getDisplayMode().equals(this.field_b))) {
                 throw new RuntimeException("");
             }
-            ((hc) this).field_b = null;
+            this.field_b = null;
         }
         this.a(96, (java.awt.Frame) null);
     }

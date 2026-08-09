@@ -8,7 +8,7 @@ final class ag {
     static String field_d;
 
     final static long a(long param0, int param1) {
-        long var3 = 0L;
+        long var3;
         param0 = param0 << 483950688 | param0 >>> 1982572960;
         var3 = -281470681808896L;
         param0 = (param0 & var3) >>> -2112313968 | (param0 & (var3 ^ -1L)) << -1676535280;

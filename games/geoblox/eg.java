@@ -28,9 +28,15 @@ final class eg extends hf {
     }
 
     final static int a(CharSequence param0, byte param1, int param2, boolean param3) {
-        int discarded$1 = 0;
-        RuntimeException var4 = null;
+        int stackIn_41_0 = 0;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -38,24 +44,6 @@ final class eg extends hf {
         int var9 = 0;
         int var10 = 0;
         CharSequence var11 = null;
-        int stackIn_41_0 = 0;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        String stackIn_45_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_40_0 = 0;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
         try {
           L0: {
             L1: {
@@ -74,7 +62,7 @@ final class eg extends hf {
                       break L2;
                     } else {
                       var11 = (CharSequence) null;
-                      discarded$1 = eg.a((CharSequence) null, (byte) 58, 6, false);
+                      eg.a((CharSequence) null, (byte) 58, 6, false);
                       break L2;
                     }
                   }
@@ -82,8 +70,7 @@ final class eg extends hf {
                   L3: while (true) {
                     if (var7 <= var8) {
                       if (var5 != 0) {
-                        stackOut_40_0 = var6;
-                        stackIn_41_0 = stackOut_40_0;
+                        stackIn_41_0 = var6;
                         break L0;
                       } else {
                         throw new NumberFormatException();
@@ -184,27 +171,19 @@ final class eg extends hf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var4 = decompiledCaughtException;
-            stackOut_42_0 = (RuntimeException) (var4);
-            stackOut_42_1 = new StringBuilder().append("eg.B(");
-            stackIn_44_0 = stackOut_42_0;
-            stackIn_44_1 = stackOut_42_1;
-            stackIn_43_0 = stackOut_42_0;
-            stackIn_43_1 = stackOut_42_1;
+            stackIn_44_0 = (RuntimeException) (var4);
+
+            stackIn_44_1 = new StringBuilder().append("eg.B(");
+
             if (param0 == null) {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "null";
-              stackIn_45_0 = stackOut_44_0;
-              stackIn_45_1 = stackOut_44_1;
-              stackIn_45_2 = stackOut_44_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "null";
               break L11;
             } else {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "{...}";
-              stackIn_45_0 = stackOut_43_0;
-              stackIn_45_1 = stackOut_43_1;
-              stackIn_45_2 = stackOut_43_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "{...}";
               break L11;
             }
           }

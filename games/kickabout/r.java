@@ -95,13 +95,12 @@ final class r {
     }
 
     public static void a(int param0) {
-        int discarded$2 = 0;
         field_b = null;
         field_d = null;
         field_a = null;
         field_c = null;
         if (param0 >= -17) {
-          discarded$2 = r.a(-21, -111);
+          r.a(-21, -111);
           field_e = null;
           return;
         } else {
@@ -111,10 +110,7 @@ final class r {
     }
 
     final boolean a(byte param0) {
-        boolean discarded$6 = false;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 < -26) {
           if (this != gr.field_c) {
             if (this != bm.field_H) {
@@ -130,19 +126,17 @@ final class r {
             return true;
           }
         } else {
-          discarded$6 = this.a((byte) -81);
+          this.a((byte) -81);
           if (this != gr.field_c) {
             if (this == bm.field_H) {
               return true;
             } else {
               L0: {
                 if (jn.field_rb != this) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }

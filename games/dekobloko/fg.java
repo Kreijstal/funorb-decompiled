@@ -7,19 +7,15 @@ final class fg implements com.ms.directX.IEnumModesCallback {
     private static int field_c;
 
     final void a(int param0, boolean param1, int param2, int param3, int param4, java.awt.Frame param5) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        com.ms.awt.WComponentPeer var7 = null;
-        int var8 = 0;
+        com.ms.awt.WComponentPeer var7;
+        int var8;
         param5.setVisible(true);
         var7 = (com.ms.awt.WComponentPeer) null;
         if (param1) {
           field_c = -20;
           var8 = var7.getHwnd();
-          discarded$4 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$5 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param5), 17);
           this.field_b.setDisplayMode(param2, param3, param0, param4, 0);
           param5.setBounds(0, 0, param2, param3);
@@ -28,8 +24,8 @@ final class fg implements com.ms.directX.IEnumModesCallback {
           return;
         } else {
           var8 = var7.getHwnd();
-          discarded$6 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$7 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param5), 17);
           this.field_b.setDisplayMode(param2, param3, param0, param4, 0);
           param5.setBounds(0, 0, param2, param3);
@@ -40,7 +36,7 @@ final class fg implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(java.awt.Frame param0, byte param1) {
-        java.awt.Frame var4 = null;
+        java.awt.Frame var4;
         this.field_b.restoreDisplayMode();
         if (param1 < 121) {
           var4 = (java.awt.Frame) null;

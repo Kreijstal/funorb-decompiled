@@ -7,8 +7,7 @@ final class va implements Iterable {
     he field_a;
 
     final he a(boolean param0) {
-        Iterator discarded$6 = null;
-        he var2 = null;
+        he var2;
         var2 = this.field_a.field_h;
         if (!param0) {
           if (var2 == this.field_a) {
@@ -18,7 +17,7 @@ final class va implements Iterable {
             return var2;
           }
         } else {
-          discarded$6 = this.iterator();
+          this.iterator();
           if (var2 == this.field_a) {
             return null;
           } else {

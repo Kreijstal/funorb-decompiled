@@ -26,8 +26,7 @@ final class mn extends li {
     }
 
     final static void b(boolean param0, int param1) {
-        char discarded$1 = 0;
-        int var3 = 0;
+        int var3;
         L0: {
           L1: {
             var3 = Vertigo2.field_L ? 1 : 0;
@@ -148,17 +147,18 @@ final class mn extends li {
           if (param1 <= -113) {
             break L6;
           } else {
-            discarded$1 = mn.a((byte) 97, -80);
+            mn.a((byte) 97, -80);
             break L6;
           }
         }
     }
 
     final static void a(boolean param0) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        RuntimeException var1 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        RuntimeException decompiledCaughtException = null;
         float var1_float = 0.0f;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -174,8 +174,8 @@ final class mn extends li {
         double var21_double = 0.0;
         int var21 = 0;
         int var22 = 0;
-        int var23 = 0;
         double var23_double = 0.0;
+        int var23 = 0;
         int var24 = 0;
         double var25 = 0.0;
         double var27 = 0.0;
@@ -183,7 +183,6 @@ final class mn extends li {
         int var31 = 0;
         int[] var32 = null;
         int[] var33 = null;
-        RuntimeException decompiledCaughtException = null;
         var31 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -335,9 +334,9 @@ final class mn extends li {
                                 break L12;
                               }
                             }
-                            incrementValue$2 = var6;
+                            incrementValue$0 = var6;
                             var6++;
-                            var33[incrementValue$2] = var24;
+                            var33[incrementValue$0] = var24;
                             var12++;
                             continue L5;
                           }
@@ -475,9 +474,9 @@ final class mn extends li {
                             break L21;
                           }
                         }
-                        incrementValue$3 = var6;
+                        incrementValue$1 = var6;
                         var6++;
-                        var32[incrementValue$3] = var24;
+                        var32[incrementValue$1] = var24;
                         var12++;
                         continue L14;
                       }
@@ -511,14 +510,12 @@ final class mn extends li {
         if (var3 == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var3, 16));
         }
-        if ((var3 ^ -1) <= -129) {
-            if (-161 < (var3 ^ -1)) {
-                var4 = fa.field_o[var3 + -128];
-                if (!(var4 != 0)) {
-                    var4 = 63;
-                }
-                var3 = var4;
+        if ((var3 ^ -1) <= -129 && -161 < (var3 ^ -1)) {
+            var4 = fa.field_o[var3 + -128];
+            if (!(var4 != 0)) {
+                var4 = 63;
             }
+            var3 = var4;
         }
         return (char)var3;
     }

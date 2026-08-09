@@ -32,11 +32,11 @@ final class ja extends rc {
     int field_N;
 
     final void g(int param0) {
-        float var2 = 0.0f;
-        float var3 = 0.0f;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        float var2;
+        float var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = Geoblox.field_C;
         var2 = this.field_o - 320.0f;
         var3 = this.field_v - 240.0f;
@@ -93,16 +93,16 @@ final class ja extends rc {
     }
 
     final void n(int param0) {
-        float var2 = 0.0f;
-        float var3 = 0.0f;
-        float var4 = 0.0f;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        float var2;
+        float var3;
+        float var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         L0: {
           L1: {
             var11 = Geoblox.field_C;
@@ -190,16 +190,16 @@ final class ja extends rc {
     }
 
     final void f(int param0) {
-        int incrementValue$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int[] var14 = null;
+        int incrementValue$0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var9;
+        int var10;
+        int[] var14;
         L0: {
           var10 = Geoblox.field_C;
           var2 = (int)this.field_o - ((vf.field_L.field_s >> -659585983) - -4);
@@ -244,9 +244,9 @@ final class ja extends rc {
           var7 = -var4 + bk.field_a.field_r;
           var14 = bk.field_a.field_v;
           L4: while (true) {
-            incrementValue$1 = var5;
+            incrementValue$0 = var5;
             var5--;
-            if (-1 <= (incrementValue$1 ^ -1)) {
+            if (-1 <= (incrementValue$0 ^ -1)) {
               return;
             } else {
               var9 = -var4;
@@ -255,7 +255,7 @@ final class ja extends rc {
                   var6 = var6 + var7;
                   continue L4;
                 } else {
-                  if (var14[var6] == this.field_H - -1) {
+                  if ((var14[var6] ^ -1) == (this.field_H - -1 ^ -1)) {
                     var14[var6] = 0;
                     var6++;
                     var9++;
@@ -275,45 +275,28 @@ final class ja extends rc {
     }
 
     final void a(float param0, int param1) {
-        float var3 = 0.0f;
-        float var4 = 0.0f;
         double var5 = 0.0;
-        L0: {
-          if (param1 <= -79) {
-            break L0;
-          } else {
+        if (param1 > -79) {
             this.a(0.2609390318393707f, 75);
-            break L0;
-          }
         }
-        L1: {
-          var3 = this.field_o - 320.0f;
-          var4 = this.field_v - 240.0f;
-          this.field_o = (float)((double)var3 * Math.cos((double)param0) - Math.sin((double)param0) * (double)var4) + 320.0f;
-          this.field_v = (float)(Math.sin((double)param0) * (double)var3 + (double)var4 * Math.cos((double)param0)) + 240.0f;
-          this.field_F = 240.0f - this.field_v;
-          this.field_w = 320.0f - this.field_o;
-          if (this.field_w * this.field_w + this.field_F * this.field_F <= og.field_r * og.field_r) {
-            break L1;
-          } else {
+        float var3 = this.field_o - 320.0f;
+        float var4 = this.field_v - 240.0f;
+        this.field_o = (float)((double)var3 * Math.cos((double)param0) - Math.sin((double)param0) * (double)var4) + 320.0f;
+        this.field_v = (float)(Math.sin((double)param0) * (double)var3 + (double)var4 * Math.cos((double)param0)) + 240.0f;
+        this.field_F = 240.0f - this.field_v;
+        this.field_w = 320.0f - this.field_o;
+        if (this.field_w * this.field_w + this.field_F * this.field_F > og.field_r * og.field_r) {
             var5 = (double)og.field_r / Math.sqrt((double)(this.field_w * this.field_w + this.field_F * this.field_F));
             this.field_w = (float)((double)this.field_w * var5);
             this.field_F = (float)((double)this.field_F * var5);
-            break L1;
-          }
         }
-        L2: {
-          if ((this.field_z ^ -1) != -3) {
+        if (!((this.field_z ^ -1) == -3)) {
             this.field_u = this.field_u - param0;
-            break L2;
-          } else {
-            break L2;
-          }
         }
     }
 
     private final void g(byte param0) {
-        int var3 = 0;
+        int var3;
         L0: {
           var3 = Geoblox.field_C;
           if (param0 >= 83) {
@@ -412,15 +395,15 @@ final class ja extends rc {
     }
 
     final void b(boolean param0) {
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        int fieldTemp$11 = 0;
-        int fieldTemp$12 = 0;
-        int fieldTemp$13 = 0;
-        float var2 = 0.0f;
-        int var3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        float var2;
+        int var3;
         L0: {
           var3 = Geoblox.field_C;
           this.field_I = this.field_I + 1;
@@ -439,9 +422,9 @@ final class ja extends rc {
                 if (this.field_I % 24 != 0) {
                   break L1;
                 } else {
-                  fieldTemp$7 = this.field_G;
+                  fieldTemp$0 = this.field_G;
                   this.field_G = this.field_G + 1;
-                  this.field_J = ka.field_m[c.field_ab][this.field_M][fieldTemp$7];
+                  this.field_J = ka.field_m[c.field_ab][this.field_M][fieldTemp$0];
                   this.field_G = this.field_G % 4;
                   break L1;
                 }
@@ -450,9 +433,9 @@ final class ja extends rc {
                   break L1;
                 } else {
                   if (this.field_I % 24 == 0) {
-                    fieldTemp$8 = this.field_G;
+                    fieldTemp$1 = this.field_G;
                     this.field_G = this.field_G + 1;
-                    this.field_J = ej.field_a[fieldTemp$8];
+                    this.field_J = ej.field_a[fieldTemp$1];
                     this.field_G = this.field_G % 4;
                     break L1;
                   } else {
@@ -474,9 +457,9 @@ final class ja extends rc {
             }
           } else {
             if (this.field_I % 20 == 0) {
-              fieldTemp$9 = this.field_G;
+              fieldTemp$2 = this.field_G;
               this.field_G = this.field_G + 1;
-              this.field_J = mi.field_B[fieldTemp$9];
+              this.field_J = mi.field_B[fieldTemp$2];
               this.field_G = this.field_G % 4;
               break L1;
             } else {
@@ -497,9 +480,9 @@ final class ja extends rc {
                       break L2;
                     } else {
                       if (4 > this.field_G) {
-                        fieldTemp$10 = this.field_G;
+                        fieldTemp$3 = this.field_G;
                         this.field_G = this.field_G + 1;
-                        this.field_J = vj.field_a[fieldTemp$10];
+                        this.field_J = vj.field_a[fieldTemp$3];
                         break L2;
                       } else {
                         break L2;
@@ -515,9 +498,9 @@ final class ja extends rc {
                   break L2;
                 } else {
                   if ((this.field_I & 15) == 0) {
-                    fieldTemp$11 = this.field_G;
+                    fieldTemp$4 = this.field_G;
                     this.field_G = this.field_G + 1;
-                    this.field_J = hb.field_d[fieldTemp$11];
+                    this.field_J = hb.field_d[fieldTemp$4];
                     if (-5 == (this.field_G ^ -1)) {
                       this.field_G = 0;
                       break L2;
@@ -531,9 +514,9 @@ final class ja extends rc {
               }
             } else {
               if (this.field_I % 20 == 0) {
-                fieldTemp$12 = this.field_G;
+                fieldTemp$5 = this.field_G;
                 this.field_G = this.field_G + 1;
-                this.field_J = hg.field_b[fieldTemp$12];
+                this.field_J = hg.field_b[fieldTemp$5];
                 this.field_G = this.field_G % 4;
                 break L2;
               } else {
@@ -545,9 +528,9 @@ final class ja extends rc {
               if ((15 & this.field_I) != 0) {
                 break L2;
               } else {
-                fieldTemp$13 = this.field_G;
+                fieldTemp$6 = this.field_G;
                 this.field_G = this.field_G + 1;
-                this.field_J = fc.field_g[fieldTemp$13];
+                this.field_J = fc.field_g[fieldTemp$6];
                 if ((this.field_G ^ -1) != -5) {
                   break L2;
                 } else {
@@ -567,22 +550,12 @@ final class ja extends rc {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
         var4 = Geoblox.field_C;
         try {
           L0: {
@@ -645,27 +618,19 @@ final class ja extends rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var3);
-            stackOut_21_1 = new StringBuilder().append("ja.HA(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var3);
+
+            stackIn_23_1 = new StringBuilder().append("ja.HA(");
+
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L7;
             }
           }
@@ -674,20 +639,20 @@ final class ja extends rc {
     }
 
     final void j(int param0) {
-        int incrementValue$1 = 0;
-        float var2 = 0.0f;
-        float var3 = 0.0f;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int[] var18 = null;
+        int incrementValue$0 = 0;
+        float var2;
+        float var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var13;
+        int var14;
+        int[] var18;
         L0: {
           var14 = Geoblox.field_C;
           var2 = -320.0f + this.field_o;
@@ -743,9 +708,9 @@ final class ja extends rc {
         var11 = -var8 + wd.field_b.field_r;
         var18 = wd.field_b.field_v;
         L5: while (true) {
-          incrementValue$1 = var9;
+          incrementValue$0 = var9;
           var9--;
-          if (0 >= incrementValue$1) {
+          if (0 >= incrementValue$0) {
             return;
           } else {
             var13 = -var8;
@@ -754,7 +719,7 @@ final class ja extends rc {
                 var10 = var10 + var11;
                 continue L5;
               } else {
-                if (this.field_H - -1 == var18[var10]) {
+                if ((this.field_H - -1 ^ -1) == (var18[var10] ^ -1)) {
                   var18[var10] = 0;
                   var10++;
                   var13++;
@@ -807,22 +772,12 @@ final class ja extends rc {
     final static void a(boolean param0, kl param1) {
         RuntimeException runtimeException = null;
         kl var3 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -842,27 +797,19 @@ final class ja extends rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("ja.FA(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("ja.FA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

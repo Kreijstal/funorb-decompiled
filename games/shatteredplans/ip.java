@@ -18,26 +18,19 @@ final class ip implements Iterator {
     }
 
     public final Object next() {
-        df var1 = this.field_e;
+        Object var1 = this.field_e;
         if (this.field_a.field_a != var1) {
-            this.field_e = var1.field_h;
+            this.field_e = ((df) (var1)).field_h;
         } else {
             this.field_e = null;
             var1 = null;
         }
-        this.field_c = var1;
+        this.field_c = (df) (var1);
         return var1;
     }
 
     final static hc[] a(int param0, sl param1) {
-        int discarded$30 = 0;
-        int discarded$31 = 0;
-        int discarded$32 = 0;
-        int discarded$33 = 0;
-        int discarded$34 = 0;
-        int discarded$35 = 0;
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         hc[] var4 = null;
         int var5 = 0;
@@ -45,23 +38,13 @@ final class ip implements Iterator {
         int var6 = 0;
         int var7 = 0;
         hc[] stackIn_14_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hc[] stackOut_13_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException var2 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -80,8 +63,7 @@ final class ip implements Iterator {
               var5 = 0;
               L2: while (true) {
                 if (var3 <= var5) {
-                  stackOut_13_0 = (hc[]) (var4);
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_0 = (hc[]) (var4);
                   break L0;
                 } else {
                   L3: {
@@ -91,13 +73,13 @@ final class ip implements Iterator {
                       break L3;
                     } else {
                       var6_ref_hc = new hc();
-                      discarded$30 = param1.b((byte) 122, 24);
-                      discarded$31 = param1.b((byte) 80, 24);
+                      param1.b((byte) 122, 24);
+                      param1.b((byte) 80, 24);
                       var6_ref_hc.field_a = param1.b((byte) 87, 24);
-                      discarded$32 = param1.b((byte) 100, 9);
-                      discarded$33 = param1.b((byte) 122, 12);
-                      discarded$34 = param1.b((byte) 106, 12);
-                      discarded$35 = param1.b((byte) 122, 12);
+                      param1.b((byte) 100, 9);
+                      param1.b((byte) 122, 12);
+                      param1.b((byte) 106, 12);
+                      param1.b((byte) 122, 12);
                       var4[var5] = var6_ref_hc;
                       break L3;
                     }
@@ -114,27 +96,19 @@ final class ip implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var2);
-            stackOut_15_1 = new StringBuilder().append("ip.A(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var2);
+
+            stackIn_17_1 = new StringBuilder().append("ip.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L4;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L4;
             }
           }
@@ -151,11 +125,10 @@ final class ip implements Iterator {
     }
 
     public static void a(int param0) {
-        hc[] discarded$2 = null;
-        sl var2 = null;
+        sl var2;
         if (param0 <= 123) {
           var2 = (sl) null;
-          discarded$2 = ip.a(-22, (sl) null);
+          ip.a(-22, (sl) null);
           field_d = null;
           field_h = null;
           field_g = null;

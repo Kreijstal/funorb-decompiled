@@ -23,11 +23,10 @@ final class sh {
     }
 
     public static void c(int param0) {
-        c discarded$2 = null;
-        byte[] var2 = null;
+        byte[] var2;
         if (param0 > -96) {
           var2 = (byte[]) null;
-          discarded$2 = sh.a(113, (byte[]) null);
+          sh.a(113, (byte[]) null);
           field_a = null;
           field_c = null;
           field_b = null;
@@ -50,7 +49,7 @@ final class sh {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1;
         L0: {
           var1 = 121 / ((param0 - 40) / 53);
           if (jh.field_e != null) {
@@ -71,13 +70,10 @@ final class sh {
     }
 
     final static c a(int param0, byte[] param1) {
-        um discarded$2 = null;
         c var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_4_0 = null;
         c stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -85,36 +81,24 @@ final class sh {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        c stackOut_5_0 = null;
-        Object stackOut_3_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
               if (param0 == -1) {
                 break L1;
               } else {
-                discarded$2 = sh.a(-117, -92, false, -84, false);
+                sh.a(-117, -92, false, -84, false);
                 break L1;
               }
             }
             if (param1 != null) {
               var2 = new c(param1, be.field_a, a.field_c, wm.field_b, b.field_c, vk.field_d);
               ch.k(4210752);
-              stackOut_5_0 = (c) (var2);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = (c) (var2);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_3_0 = null;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -123,27 +107,19 @@ final class sh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2_ref);
-            stackOut_7_1 = new StringBuilder().append("sh.E(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2_ref);
+
+            stackIn_9_1 = new StringBuilder().append("sh.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -159,19 +135,13 @@ final class sh {
     final static boolean a(int param0, int param1) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
         if (-1 < (param1 ^ -1)) {
           L0: {
             if (-1 != ((1 + param1) % 4 ^ -1)) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               break L0;
             } else {
-              stackOut_3_0 = 1;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = 1;
               break L0;
             }
           }
@@ -180,12 +150,10 @@ final class sh {
           if (1582 > param1) {
             L1: {
               if (0 != param1 % 4) {
-                stackOut_10_0 = 0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = 0;
                 break L1;
               } else {
-                stackOut_9_0 = 1;
-                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_0 = 1;
                 break L1;
               }
             }
@@ -214,9 +182,6 @@ final class sh {
 
     final static int b(int param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            p var2 = null;
             int stackIn_14_0 = 0;
             int stackIn_23_0 = 0;
             int stackIn_26_0 = 0;
@@ -224,11 +189,9 @@ final class sh {
             int stackIn_34_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_13_0 = 0;
-            int stackOut_25_0 = 0;
-            int stackOut_22_0 = 0;
-            int stackOut_33_0 = 0;
-            int stackOut_31_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            p var2 = null;
             if (4 <= qh.field_c.field_g) {
               if (0 != (qh.field_c.field_c ^ -1)) {
                 if (-2 == qh.field_c.field_c) {
@@ -256,8 +219,7 @@ final class sh {
                       break L2;
                     } else {
                       if (dm.field_b.field_f == 2) {
-                        stackOut_13_0 = ic.a(125, -1);
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = ic.a(125, -1);
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
@@ -295,8 +257,7 @@ final class sh {
                           vm.field_k = vm.field_k + 1;
                           break L4;
                         } else {
-                          stackOut_25_0 = ic.a(118, var1_int);
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = ic.a(118, var1_int);
                           decompiledRegionSelector0 = 2;
                           break L0;
                         }
@@ -304,8 +265,7 @@ final class sh {
                         if (ud.a(2) <= ve.field_Pb) {
                           break L4;
                         } else {
-                          stackOut_22_0 = ic.a(-92, -2);
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_23_0 = ic.a(-92, -2);
                           decompiledRegionSelector0 = 1;
                           break L0;
                         }
@@ -321,8 +281,7 @@ final class sh {
                     }
                   }
                   if ((vm.field_k ^ -1) != -5) {
-                    stackOut_33_0 = -1;
-                    stackIn_34_0 = stackOut_33_0;
+                    stackIn_34_0 = -1;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
@@ -330,8 +289,7 @@ final class sh {
                     jj.field_a = null;
                     dm.field_b = null;
                     vm.field_k = 0;
-                    stackOut_31_0 = 0;
-                    stackIn_32_0 = stackOut_31_0;
+                    stackIn_32_0 = 0;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }

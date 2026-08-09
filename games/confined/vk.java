@@ -41,10 +41,10 @@ final class vk {
     int[] field_K;
 
     private final void a(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        bi var4 = null;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var5;
+        bi var4;
         var5 = Confined.field_J ? 1 : 0;
         if (null == this.field_h) {
           return;
@@ -108,13 +108,6 @@ final class vk {
     }
 
     final static String a(boolean param0, CharSequence param1, byte param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_11_0 = null;
@@ -122,8 +115,6 @@ final class vk {
         String stackIn_21_0 = null;
         String stackIn_31_0 = null;
         String stackIn_36_0 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
@@ -131,21 +122,13 @@ final class vk {
         String stackIn_40_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_35_0 = null;
-        String stackOut_30_0 = null;
-        String stackOut_20_0 = null;
-        String stackOut_15_0 = null;
-        String stackOut_10_0 = null;
-        String stackOut_5_0 = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        String var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var8 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -175,8 +158,7 @@ final class vk {
                                   L4: while (true) {
                                     if (param1.length() <= var6) {
                                       if (0 < var5) {
-                                        stackOut_35_0 = f.field_c;
-                                        stackIn_36_0 = stackOut_35_0;
+                                        stackIn_36_0 = f.field_c;
                                         decompiledRegionSelector0 = 6;
                                         break L0;
                                       } else {
@@ -198,8 +180,7 @@ final class vk {
                                           break L6;
                                         } else {
                                           if (!param0) {
-                                            stackOut_30_0 = hk.field_b;
-                                            stackIn_31_0 = stackOut_30_0;
+                                            stackIn_31_0 = hk.field_b;
                                             decompiledRegionSelector0 = 5;
                                             break L0;
                                           } else {
@@ -216,8 +197,7 @@ final class vk {
                                 }
                               }
                             }
-                            stackOut_20_0 = f.field_c;
-                            stackIn_21_0 = stackOut_20_0;
+                            stackIn_21_0 = f.field_c;
                             decompiledRegionSelector0 = 4;
                             break L0;
                           } else {
@@ -225,26 +205,22 @@ final class vk {
                           }
                         }
                       }
-                      stackOut_15_0 = ef.field_wb;
-                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_16_0 = ef.field_wb;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }
                   }
                 }
-                stackOut_10_0 = ef.field_wb;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = ef.field_wb;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_5_0 = (String) null;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (String) null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = ef.field_wb;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = ef.field_wb;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -253,27 +229,19 @@ final class vk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) (var3);
-            stackOut_37_1 = new StringBuilder().append("vk.C(").append(param0).append(',');
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            stackIn_39_0 = (RuntimeException) (var3);
+
+            stackIn_39_1 = new StringBuilder().append("vk.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "null";
               break L7;
             } else {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "{...}";
               break L7;
             }
           }
@@ -307,64 +275,30 @@ final class vk {
     }
 
     vk(kg param0, m param1) {
-        int discarded$11 = 0;
-        int[] array$12 = null;
-        int[] array$13 = null;
-        int[] array$14 = null;
-        int[] array$15 = null;
-        int dupTemp$16 = 0;
-        int dupTemp$17 = 0;
-        int dupTemp$18 = 0;
-        int dupTemp$19 = 0;
-        int dupTemp$20 = 0;
-        int dupTemp$21 = 0;
-        RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
+        int dupTemp$0 = 0;
+        byte[] var16 = null;
+        int var7 = 0;
+        int dupTemp$1 = 0;
+        int var9 = 0;
+        int[] array$2 = null;
+        int var10 = 0;
+        int dupTemp$3 = 0;
+        int[] array$4 = null;
+        int dupTemp$5 = 0;
+        int[] array$6 = null;
+        int dupTemp$7 = 0;
+        int[] array$8 = null;
+        int dupTemp$9 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
-        byte[] var16 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        String stackIn_39_2 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        String stackIn_42_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
         try {
-          L0: {
             this.field_h = param1;
             this.field_B = param0.c(32) + 1;
-            discarded$11 = param0.c(32);
+            param0.c(32);
             this.field_t = param0.c(32) - -1;
             this.field_y = 1 + param0.c(32);
             this.field_G = param0.c(32) + 1;
@@ -374,251 +308,127 @@ final class vk {
             this.field_i = param0.c(32);
             this.field_E = new int[this.field_B];
             var4 = 0;
-            var5 = 0;
-            L1: while (true) {
-              if (this.field_B <= var5) {
-                this.field_l = new byte[256][];
-                this.field_p = new int[256];
-                lj.a(this.field_p, 0, 256, 64);
-                var5 = 0;
-                L2: while (true) {
-                  if (-257 >= (var5 ^ -1)) {
-                    var5 = 0;
-                    L3: while (true) {
-                      if (this.field_y <= var5) {
-                        this.field_g = new int[this.field_G];
-                        this.field_b = new int[this.field_G][];
-                        this.field_z = new int[this.field_G];
-                        this.field_n = new int[this.field_G];
-                        this.field_a = new int[this.field_G][];
-                        this.field_w = new int[this.field_G];
-                        this.field_r = new int[this.field_G];
-                        this.field_f = new int[this.field_G][];
-                        this.field_A = new int[this.field_G][96];
-                        this.field_o = new int[this.field_G][];
-                        this.field_H = new int[this.field_G];
-                        this.field_d = new int[this.field_G];
-                        this.field_J = new int[this.field_G];
-                        this.field_k = new int[this.field_G];
-                        var5 = param0.a((byte) 25);
-                        this.field_m = new int[var5];
-                        this.field_C = new int[var5];
-                        this.field_c = new int[var5];
-                        this.field_j = new int[var5];
-                        this.field_u = new int[var5];
-                        this.field_e = new bi[var5];
-                        this.field_F = new int[var5];
-                        this.field_s = new int[var5];
-                        this.field_v = new int[var5];
-                        this.field_I = new int[var5];
-                        this.field_K = new int[var5];
-                        var5 = 0;
-                        var6 = 0;
-                        L4: while (true) {
-                          if (var6 >= this.field_G) {
-                            this.a(false);
-                            break L0;
-                          } else {
-                            L5: {
-                              var7 = param0.c(32);
-                              if (-1 <= (var7 ^ -1)) {
-                                break L5;
-                              } else {
-                                var4 = 0;
-                                var8 = 0;
-                                L6: while (true) {
-                                  if (var8 >= 96) {
-                                    this.field_H[var6] = param0.c(32);
-                                    var8 = param0.c(32);
-                                    this.field_g[var6] = param0.c(32);
-                                    this.field_n[var6] = param0.c(32);
-                                    this.field_z[var6] = this.field_n[var6] + param0.c(32);
-                                    this.field_k[var6] = param0.c(32);
-                                    var9 = param0.c(32);
-                                    this.field_r[var6] = param0.c(32);
-                                    this.field_J[var6] = param0.c(32);
-                                    this.field_d[var6] = this.field_J[var6] - -param0.c(32);
-                                    array$12 = new int[var8];
-                                    this.field_f[var6] = array$12;
-                                    var4 = 0;
-                                    var10 = 0;
-                                    var11 = 0;
-                                    L7: while (true) {
-                                      if (var8 <= var11) {
-                                        array$13 = new int[var8];
-                                        this.field_b[var6] = array$13;
-                                        var4 = 0;
-                                        var11 = 0;
-                                        L8: while (true) {
-                                          if (var8 <= var11) {
-                                            array$14 = new int[var9];
-                                            this.field_o[var6] = array$14;
-                                            var10 = 0;
-                                            var4 = 0;
-                                            var11 = 0;
-                                            L9: while (true) {
-                                              if (var9 <= var11) {
-                                                var4 = 0;
-                                                array$15 = new int[var9];
-                                                this.field_a[var6] = array$15;
-                                                var11 = 0;
-                                                L10: while (true) {
-                                                  if (var11 >= var9) {
-                                                    this.field_w[var6] = param0.a((byte) 25);
-                                                    var11 = 0;
-                                                    L11: while (true) {
-                                                      if (var11 >= var7) {
-                                                        break L5;
-                                                      } else {
-                                                        this.field_s[var5] = param0.f(-109);
-                                                        this.field_j[var5] = param0.f(-95);
-                                                        this.field_u[var5] = this.field_j[var5] + param0.f(-54);
-                                                        this.field_I[var5] = param0.c(32);
-                                                        this.field_c[var5] = param0.b(true);
-                                                        this.field_C[var5] = param0.c(32);
-                                                        this.field_F[var5] = param0.c(32);
-                                                        this.field_K[var5] = -1 + param0.b(true);
-                                                        this.field_m[var5] = param0.a((byte) 25);
-                                                        this.field_v[var5] = param0.a((byte) 25);
-                                                        var5++;
-                                                        var11++;
-                                                        continue L11;
-                                                      }
-                                                    }
-                                                  } else {
-                                                    dupTemp$16 = var4 + param0.c(32);
-                                                    var4 = dupTemp$16;
-                                                    this.field_a[var6][var11] = va.a(dupTemp$16, 255);
-                                                    var11++;
-                                                    continue L10;
-                                                  }
-                                                }
-                                              } else {
-                                                dupTemp$17 = var10 + param0.b(1647);
-                                                var10 = dupTemp$17;
-                                                var4 = var4 + dupTemp$17;
-                                                this.field_o[var6][var11] = var4 + dupTemp$17;
-                                                var11++;
-                                                continue L9;
-                                              }
-                                            }
-                                          } else {
-                                            dupTemp$18 = var4 + param0.c(32);
-                                            var4 = dupTemp$18;
-                                            this.field_b[var6][var11] = va.a(dupTemp$18, 255);
-                                            var11++;
-                                            continue L8;
-                                          }
-                                        }
-                                      } else {
-                                        dupTemp$19 = var10 + param0.b(1647);
-                                        var10 = dupTemp$19;
-                                        var4 = var4 + dupTemp$19;
-                                        this.field_f[var6][var11] = var4 + dupTemp$19;
-                                        var11++;
-                                        continue L7;
-                                      }
-                                    }
-                                  } else {
-                                    dupTemp$20 = var4 + param0.c(32);
-                                    var4 = dupTemp$20;
-                                    this.field_A[var6][var8] = va.a(255, dupTemp$20) + var5;
-                                    var8++;
-                                    continue L6;
-                                  }
-                                }
-                              }
-                            }
-                            var6++;
-                            continue L4;
-                          }
-                        }
-                      } else {
-                        L12: {
-                          this.field_p[var5] = 1 + param0.c(32);
-                          var6 = param0.a((byte) 25);
-                          var16 = new byte[var6];
-                          if ((var6 ^ -1) >= -1) {
-                            break L12;
-                          } else {
-                            param0.a(0, (byte) 64, var6, var16);
-                            this.field_l[var5] = var16;
-                            break L12;
-                          }
-                        }
-                        var5++;
-                        continue L3;
-                      }
-                    }
-                  } else {
-                    this.field_l[var5] = sa.field_V;
-                    var5++;
-                    continue L2;
-                  }
+            for (var5 = 0; this.field_B > var5; var5++) {
+                dupTemp$0 = var4 + param0.c(32);
+                var4 = dupTemp$0;
+                this.field_E[var5] = va.a(255, dupTemp$0);
+            }
+            this.field_l = new byte[256][];
+            this.field_p = new int[256];
+            lj.a(this.field_p, 0, 256, 64);
+            for (var5 = 0; -257 < (var5 ^ -1); var5++) {
+                this.field_l[var5] = sa.field_V;
+            }
+            for (var5 = 0; this.field_y > var5; var5++) {
+                this.field_p[var5] = 1 + param0.c(32);
+                var6 = param0.a((byte) 25);
+                var16 = new byte[var6];
+                if ((var6 ^ -1) < -1) {
+                    param0.a(0, (byte) 64, var6, var16);
+                    this.field_l[var5] = var16;
                 }
-              } else {
-                dupTemp$21 = var4 + param0.c(32);
-                var4 = dupTemp$21;
-                this.field_E[var5] = va.a(255, dupTemp$21);
-                var5++;
-                continue L1;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L13: {
-            var3 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) (var3);
-            stackOut_36_1 = new StringBuilder().append("vk.<init>(");
-            stackIn_38_0 = stackOut_36_0;
-            stackIn_38_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
-            if (param0 == null) {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
-              break L13;
-            } else {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "{...}";
-              stackIn_39_0 = stackOut_37_0;
-              stackIn_39_1 = stackOut_37_1;
-              stackIn_39_2 = stackOut_37_2;
-              break L13;
+            this.field_g = new int[this.field_G];
+            this.field_b = new int[this.field_G][];
+            this.field_z = new int[this.field_G];
+            this.field_n = new int[this.field_G];
+            this.field_a = new int[this.field_G][];
+            this.field_w = new int[this.field_G];
+            this.field_r = new int[this.field_G];
+            this.field_f = new int[this.field_G][];
+            this.field_A = new int[this.field_G][96];
+            this.field_o = new int[this.field_G][];
+            this.field_H = new int[this.field_G];
+            this.field_d = new int[this.field_G];
+            this.field_J = new int[this.field_G];
+            this.field_k = new int[this.field_G];
+            var5 = param0.a((byte) 25);
+            this.field_m = new int[var5];
+            this.field_C = new int[var5];
+            this.field_c = new int[var5];
+            this.field_j = new int[var5];
+            this.field_u = new int[var5];
+            this.field_e = new bi[var5];
+            this.field_F = new int[var5];
+            this.field_s = new int[var5];
+            this.field_v = new int[var5];
+            this.field_I = new int[var5];
+            this.field_K = new int[var5];
+            var5 = 0;
+            for (var6 = 0; var6 < this.field_G; var6++) {
+                var7 = param0.c(32);
+                if (-1 > (var7 ^ -1)) {
+                    var4 = 0;
+                    for (var8 = 0; var8 < 96; var8++) {
+                        dupTemp$1 = var4 + param0.c(32);
+                        var4 = dupTemp$1;
+                        this.field_A[var6][var8] = va.a(255, dupTemp$1) + var5;
+                    }
+                    this.field_H[var6] = param0.c(32);
+                    var8 = param0.c(32);
+                    this.field_g[var6] = param0.c(32);
+                    this.field_n[var6] = param0.c(32);
+                    this.field_z[var6] = this.field_n[var6] + param0.c(32);
+                    this.field_k[var6] = param0.c(32);
+                    var9 = param0.c(32);
+                    this.field_r[var6] = param0.c(32);
+                    this.field_J[var6] = param0.c(32);
+                    this.field_d[var6] = this.field_J[var6] - -param0.c(32);
+                    array$2 = new int[var8];
+                    this.field_f[var6] = array$2;
+                    var4 = 0;
+                    var10 = 0;
+                    for (var11 = 0; var8 > var11; var11++) {
+                        dupTemp$3 = var10 + param0.b(1647);
+                        var10 = dupTemp$3;
+                        var4 = var4 + dupTemp$3;
+                        this.field_f[var6][var11] = var4 + dupTemp$3;
+                    }
+                    array$4 = new int[var8];
+                    this.field_b[var6] = array$4;
+                    var4 = 0;
+                    for (var11 = 0; var8 > var11; var11++) {
+                        dupTemp$5 = var4 + param0.c(32);
+                        var4 = dupTemp$5;
+                        this.field_b[var6][var11] = va.a(dupTemp$5, 255);
+                    }
+                    array$6 = new int[var9];
+                    this.field_o[var6] = array$6;
+                    var10 = 0;
+                    var4 = 0;
+                    for (var11 = 0; var9 > var11; var11++) {
+                        dupTemp$7 = var10 + param0.b(1647);
+                        var10 = dupTemp$7;
+                        var4 = var4 + dupTemp$7;
+                        this.field_o[var6][var11] = var4 + dupTemp$7;
+                    }
+                    var4 = 0;
+                    array$8 = new int[var9];
+                    this.field_a[var6] = array$8;
+                    for (var11 = 0; var11 < var9; var11++) {
+                        dupTemp$9 = var4 + param0.c(32);
+                        var4 = dupTemp$9;
+                        this.field_a[var6][var11] = va.a(dupTemp$9, 255);
+                    }
+                    this.field_w[var6] = param0.a((byte) 25);
+                    for (var11 = 0; var11 < var7; var11++) {
+                        this.field_s[var5] = param0.f(-109);
+                        this.field_j[var5] = param0.f(-95);
+                        this.field_u[var5] = this.field_j[var5] + param0.f(-54);
+                        this.field_I[var5] = param0.c(32);
+                        this.field_c[var5] = param0.b(true);
+                        this.field_C[var5] = param0.c(32);
+                        this.field_F[var5] = param0.c(32);
+                        this.field_K[var5] = -1 + param0.b(true);
+                        this.field_m[var5] = param0.a((byte) 25);
+                        this.field_v[var5] = param0.a((byte) 25);
+                        var5++;
+                    }
+                }
             }
-          }
-          L14: {
-            stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-            stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',');
-            stackIn_41_0 = stackOut_39_0;
-            stackIn_41_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
-            if (param1 == null) {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
-              break L14;
-            } else {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "{...}";
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_42_1 = stackOut_40_1;
-              stackIn_42_2 = stackOut_40_2;
-              break L14;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_42_0), stackIn_42_2 + ')');
+            this.a(false);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

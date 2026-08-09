@@ -42,6 +42,8 @@ abstract class em extends al {
     }
 
     final static void d(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -55,8 +57,6 @@ abstract class em extends al {
         ld var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -109,7 +109,7 @@ abstract class em extends al {
                         break L5;
                       } else {
                         L6: {
-                          if (var3 != var5_ref_il.field_r) {
+                          if ((var3 ^ -1) != (var5_ref_il.field_r ^ -1)) {
                             break L6;
                           } else {
                             if (var4_int == var5_ref_il.field_p) {

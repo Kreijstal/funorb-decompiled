@@ -115,14 +115,14 @@ final class ef implements Iterator {
     }
 
     public final Object next() {
-        rc var1 = this.field_d;
+        Object var1 = this.field_d;
         if (var1 != this.field_a.field_c) {
-            this.field_d = var1.field_k;
+            this.field_d = ((rc) (var1)).field_k;
         } else {
             var1 = null;
             this.field_d = null;
         }
-        this.field_b = var1;
+        this.field_b = (rc) (var1);
         return var1;
     }
 

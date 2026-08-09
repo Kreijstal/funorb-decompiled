@@ -47,45 +47,45 @@ public final class Stream {
     }
 
     public final void a(float param0) {
-        int fieldTemp$16 = 0;
-        int fieldTemp$17 = 0;
-        int fieldTemp$18 = 0;
-        int fieldTemp$19 = 0;
-        int fieldTemp$20 = 0;
-        int fieldTemp$21 = 0;
-        int fieldTemp$22 = 0;
-        int fieldTemp$23 = 0;
-        int var2 = 0;
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
+        int fieldTemp$15 = 0;
+        int var2;
         if (this.c.length <= this.a - -3) {
           this.a();
           var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
-          fieldTemp$16 = this.a;
+          fieldTemp$8 = this.a;
           this.a = this.a + 1;
-          this.c[fieldTemp$16] = (byte)var2;
-          fieldTemp$17 = this.a;
+          this.c[fieldTemp$8] = (byte)var2;
+          fieldTemp$9 = this.a;
           this.a = this.a + 1;
-          this.c[fieldTemp$17] = (byte)(var2 >> -1697071448);
-          fieldTemp$18 = this.a;
+          this.c[fieldTemp$9] = (byte)(var2 >> -1697071448);
+          fieldTemp$10 = this.a;
           this.a = this.a + 1;
-          this.c[fieldTemp$18] = (byte)(var2 >> -959246672);
-          fieldTemp$19 = this.a;
+          this.c[fieldTemp$10] = (byte)(var2 >> -959246672);
+          fieldTemp$11 = this.a;
           this.a = this.a + 1;
-          this.c[fieldTemp$19] = (byte)(var2 >> -1248572904);
+          this.c[fieldTemp$11] = (byte)(var2 >> -1248572904);
           return;
         } else {
           var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
-          fieldTemp$20 = this.a;
+          fieldTemp$12 = this.a;
           this.a = this.a + 1;
-          this.c[fieldTemp$20] = (byte)var2;
-          fieldTemp$21 = this.a;
+          this.c[fieldTemp$12] = (byte)var2;
+          fieldTemp$13 = this.a;
           this.a = this.a + 1;
-          this.c[fieldTemp$21] = (byte)(var2 >> -1697071448);
-          fieldTemp$22 = this.a;
+          this.c[fieldTemp$13] = (byte)(var2 >> -1697071448);
+          fieldTemp$14 = this.a;
           this.a = this.a + 1;
-          this.c[fieldTemp$22] = (byte)(var2 >> -959246672);
-          fieldTemp$23 = this.a;
+          this.c[fieldTemp$14] = (byte)(var2 >> -959246672);
+          fieldTemp$15 = this.a;
           this.a = this.a + 1;
-          this.c[fieldTemp$23] = (byte)(var2 >> -1248572904);
+          this.c[fieldTemp$15] = (byte)(var2 >> -1248572904);
           return;
         }
     }

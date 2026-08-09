@@ -47,9 +47,8 @@ class ah extends gg {
     }
 
     final static boolean a(int param0) {
-        boolean discarded$0 = false;
         if (param0 != -1) {
-            discarded$0 = ah.d(12);
+            ah.d(12);
             return cg.field_a;
         }
         return cg.field_a;

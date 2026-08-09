@@ -27,7 +27,7 @@ final class sd {
     }
 
     final static void a(int param0) {
-        java.awt.Component var2 = null;
+        java.awt.Component var2;
         hc.field_Q = false;
         lh.field_s = -1;
         if (param0 > 120) {

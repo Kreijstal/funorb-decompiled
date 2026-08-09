@@ -3,17 +3,17 @@
  */
 final class nba extends ao {
     final static kv[] a(boolean param0, int param1, int param2, boolean param3, int param4, int param5) {
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        kv var9 = null;
-        Object var10 = null;
-        Object var11 = null;
-        int[] var12 = null;
-        kv var13 = null;
-        kv var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
+        int[] var6;
+        int var7;
+        int var8;
+        kv var9;
+        Object var10;
+        Object var11;
+        int[] var12;
+        kv var13;
+        kv var14;
+        int[] var15;
+        int[] var16;
         var16 = dg.field_e;
         var15 = var16;
         var12 = var15;
@@ -64,16 +64,15 @@ final class nba extends ao {
     }
 
     final static boolean b(byte param0) {
-        gca discarded$0 = null;
         if (param0 >= -98) {
-            discarded$0 = nba.a(-97, false);
+            nba.a(-97, false);
             return nla.field_f;
         }
         return nla.field_f;
     }
 
     final static gca a(int param0, boolean param1) {
-        int var2 = 0;
+        int var2;
         if (!param1) {
           var2 = param0;
           if (-33 != (var2 ^ -1)) {

@@ -36,8 +36,6 @@ final class fb {
 
     final int a(int param0, byte param1) {
         int stackIn_18_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_17_0 = 0;
         if (param1 <= -43) {
           if (!this.field_b) {
             if (this.field_h <= 55) {
@@ -51,14 +49,12 @@ final class fb {
                     if ((-this.field_m + param0 ^ -1) <= -41) {
                       break L1;
                     } else {
-                      stackOut_16_0 = this.field_n;
-                      stackIn_18_0 = stackOut_16_0;
+                      stackIn_18_0 = this.field_n;
                       break L0;
                     }
                   }
                 }
-                stackOut_17_0 = -1;
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_0 = -1;
                 break L0;
               }
               return stackIn_18_0;
@@ -106,10 +102,10 @@ final class fb {
     }
 
     private final int a(byte param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        float var7 = 0.0f;
+        int var4;
+        int var5;
+        int var6;
+        float var7;
         var4 = Math.abs(20 + (this.field_m - param2));
         if (param0 < 81) {
           return 73;
@@ -159,19 +155,15 @@ final class fb {
     }
 
     final int a(byte param0) {
-        int discarded$0 = 0;
         if (param0 < 37) {
-            discarded$0 = this.a((byte) -62);
+            this.a((byte) -62);
             return this.field_n;
         }
         return this.field_n;
     }
 
     final boolean a(int param0, int param1, byte param2) {
-        int discarded$7 = 0;
         int stackIn_18_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_17_0 = 0;
         if (param2 < -32) {
           if (55 > 480 + -param0) {
             if (this.field_b) {
@@ -185,14 +177,12 @@ final class fb {
                     if (param1 >= this.field_m - -40) {
                       break L1;
                     } else {
-                      stackOut_16_0 = 1;
-                      stackIn_18_0 = stackOut_16_0;
+                      stackIn_18_0 = 1;
                       break L0;
                     }
                   }
                 }
-                stackOut_17_0 = 0;
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_0 = 0;
                 break L0;
               }
               return stackIn_18_0 != 0;
@@ -201,7 +191,7 @@ final class fb {
             return false;
           }
         } else {
-          discarded$7 = this.a(83, (byte) -68);
+          this.a(83, (byte) -68);
           if (55 > 480 + -param0) {
             if (!this.field_b) {
               if (param1 > this.field_m) {
@@ -223,14 +213,14 @@ final class fb {
     }
 
     final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var13 = null;
-        int[] var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        int[] var17 = null;
+        int var2;
+        int var3;
+        int var4;
+        int[] var13;
+        int[] var14;
+        int[] var15;
+        int[] var16;
+        int[] var17;
         var2 = 76 / ((param0 - 82) / 33);
         if (this.field_h > 0) {
           if (this.field_l == 0) {
@@ -422,21 +412,17 @@ final class fb {
     }
 
     final void a(int param0, int param1, int param2) {
-        int fieldTemp$1 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int fieldTemp$0 = 0;
         int stackIn_37_0 = 0;
         int stackIn_121_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_120_0 = 0;
-        int stackOut_119_0 = 0;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = ZombieDawnMulti.field_E ? 1 : 0;
-          fieldTemp$1 = this.field_i + 1;
+          fieldTemp$0 = this.field_i + 1;
           this.field_i = this.field_i + 1;
-          if (fieldTemp$1 == 50) {
+          if (fieldTemp$0 == 50) {
             this.field_i = 0;
             break L0;
           } else {
@@ -511,12 +497,10 @@ final class fb {
                 L6: {
                   var4 = 425;
                   if (var4 > param1) {
-                    stackOut_36_0 = 0;
-                    stackIn_37_0 = stackOut_36_0;
+                    stackIn_37_0 = 0;
                     break L6;
                   } else {
-                    stackOut_35_0 = this.a((byte) 118, param1, param0);
-                    stackIn_37_0 = stackOut_35_0;
+                    stackIn_37_0 = this.a((byte) 118, param1, param0);
                     break L6;
                   }
                 }
@@ -801,12 +785,10 @@ final class fb {
             L30: {
               var4 = 425;
               if (var4 > param1) {
-                stackOut_120_0 = 0;
-                stackIn_121_0 = stackOut_120_0;
+                stackIn_121_0 = 0;
                 break L30;
               } else {
-                stackOut_119_0 = this.a((byte) 118, param1, param0);
-                stackIn_121_0 = stackOut_119_0;
+                stackIn_121_0 = this.a((byte) 118, param1, param0);
                 break L30;
               }
             }

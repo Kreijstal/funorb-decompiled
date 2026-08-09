@@ -38,9 +38,9 @@ final class wm extends o {
 
     static {
         $cfr$clinit: {
-            long var0 = 0L;
-            int var2 = 0;
-            int var3 = 0;
+            long var0;
+            int var2;
+            int var3;
             field_h = 4;
             field_l = new long[256];
             var2 = 0;

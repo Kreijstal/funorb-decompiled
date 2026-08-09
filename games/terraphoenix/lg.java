@@ -24,7 +24,7 @@ final class lg {
     }
 
     lg(int param0) {
-        int var2 = 0;
+        int var2;
         this.field_b = "";
         this.field_l = false;
         this.field_f = 0;

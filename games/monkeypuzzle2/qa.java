@@ -31,7 +31,7 @@ final class qa implements Runnable {
     }
 
     public static void a(byte param0) {
-        gg var2 = null;
+        gg var2;
         field_d = null;
         if (param0 <= 20) {
           var2 = (gg) null;
@@ -64,13 +64,13 @@ final class qa implements Runnable {
     }
 
     final synchronized boolean c(int param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         int var2 = 0;
         IOException var3 = null;
         OutputStream var4 = null;
         java.net.Socket var5 = null;
         CharSequence var6 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         if (this.field_k < 2) {
           L0: {
             if (-1 == (this.field_k ^ -1)) {
@@ -261,15 +261,13 @@ final class qa implements Runnable {
     public final void run() {
         try {
             int var1_int = 0;
-            Exception var1 = null;
-            Object var1_ref = null;
-            Throwable var2 = null;
-            Object var2_ref = null;
-            Throwable var3 = null;
             int var4 = 0;
             int var5 = 0;
             int var6 = 0;
             Throwable decompiledCaughtException = null;
+            Object var1 = null;
+            Exception var1_ref = null;
+            Object var2 = null;
             var4 = MonkeyPuzzle2.field_F ? 1 : 0;
             try {
               L0: while (true) {
@@ -317,8 +315,8 @@ final class qa implements Runnable {
                   }
                   throw qa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_e.field_g.length + " " + this.field_f));
                 }
-                var1_ref = this;
-                synchronized (var1_ref) {
+                var1 = this;
+                synchronized (var1) {
                   L5: {
                     this.finalize();
                     this.field_k = 3;
@@ -329,9 +327,9 @@ final class qa implements Runnable {
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var2_ref = this;
-              synchronized (var2_ref) {
+              var1_ref = (Exception) (Object) decompiledCaughtException;
+              var2 = this;
+              synchronized (var2) {
                 L6: {
                   this.finalize();
                   this.field_k = this.field_k + 1;

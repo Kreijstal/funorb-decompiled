@@ -14,9 +14,10 @@ final class b extends le {
     static String field_i;
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
+        RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var4 = 0;
         int var6 = 0;
         bg var6_ref_bg = null;
@@ -28,7 +29,6 @@ final class b extends le {
         bg var13 = null;
         byte[] var14 = null;
         byte[] var17 = null;
-        RuntimeException decompiledCaughtException = null;
         var7 = ZombieDawn.field_J;
         try {
           L0: {

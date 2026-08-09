@@ -14,8 +14,15 @@ final class qh extends vd {
     static boolean field_v;
 
     final static bi a(bi param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        bi stackIn_30_0 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -24,24 +31,6 @@ final class qh extends vd {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        bi stackIn_30_0 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_34_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        bi stackOut_29_0 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -113,8 +102,7 @@ final class qh extends vd {
                   if (0 <= var12) {
                     param0.field_x = var7;
                     param0.field_t = var6_int;
-                    stackOut_29_0 = (bi) (param0);
-                    stackIn_30_0 = stackOut_29_0;
+                    stackIn_30_0 = (bi) (param0);
                     break L0;
                   } else {
                     var13 = -param2;
@@ -145,27 +133,19 @@ final class qh extends vd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var6 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var6);
-            stackOut_31_1 = new StringBuilder().append("qh.O(");
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackIn_33_0 = (RuntimeException) (var6);
+
+            stackIn_33_1 = new StringBuilder().append("qh.O(");
+
             if (param0 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L9;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L9;
             }
           }
@@ -175,141 +155,86 @@ final class qh extends vd {
     }
 
     final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var10 = 0;
+        int var9 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        vd var12 = null;
-        var11 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = 51 / ((67 - param0) / 47);
-        if (!this.field_s) {
-          return;
-        } else {
-          L0: {
-            var3 = 2052949;
-            var4 = 1125164;
-            var5 = 3974311;
-            if (!this.field_A) {
-              break L0;
-            } else {
-              L1: {
-                var6 = cl.field_n % 64;
-                if (-25 <= (var6 ^ -1)) {
-                  break L1;
-                } else {
-                  if (-41 > (var6 ^ -1)) {
-                    break L1;
-                  } else {
-                    var6 = 24;
-                    break L1;
-                  }
-                }
-              }
-              L2: {
-                if (40 >= var6) {
-                  break L2;
-                } else {
-                  var6 = 64 - var6;
-                  break L2;
-                }
-              }
-              var6 = var6 * 10;
-              var3 = ui.a(2052949, 12993090, -108, var6);
-              var4 = ui.a(var4, 12993090, -122, var6);
-              var5 = ui.a(var5, 12993090, -128, var6);
-              break L0;
+        int var11 = ShatteredPlansClient.field_F ? 1 : 0;
+        int var2 = 51 / ((67 - param0) / 47);
+        if (!(this.field_s)) {
+            return;
+        }
+        int var3 = 2052949;
+        int var4 = 1125164;
+        int var5 = 3974311;
+        if (this.field_A) {
+            var6 = cl.field_n % 64;
+            if (-25 > (var6 ^ -1) && -41 <= (var6 ^ -1)) {
+                var6 = 24;
             }
-          }
-          gf.a(this.field_k, this.field_t, this.field_m, this.field_i, 10, 0, 200);
-          am.a(-10 + this.field_m, var5, -79, 15, this.field_k, this.field_t);
-          gf.f(10 + this.field_k, this.field_t, this.field_m + -20, var3);
-          gf.f(10 + this.field_k, this.field_i + this.field_t, -20 + this.field_m, 0);
-          gf.d(this.field_k, this.field_t, this.field_k - -10, this.field_t + 10);
-          gf.b(this.field_k + 10, this.field_t - -10, 10, var3);
-          gf.d(-10 + (this.field_k - -this.field_m), this.field_t, this.field_m + this.field_k, 10 + this.field_t);
-          gf.b(-1 + this.field_m + (this.field_k - 10), this.field_t - -10, 10, var3);
-          gf.d(this.field_k, -10 + this.field_t + this.field_i, this.field_k + 10, this.field_t + this.field_i);
-          gf.b(10 + this.field_k, -1 + (-10 + (this.field_t - -this.field_i)), 10, 0);
-          gf.d(this.field_m + this.field_k + -10, this.field_t + this.field_i - 10, this.field_m + this.field_k, this.field_t + this.field_i);
-          gf.b(this.field_k - -this.field_m - 11, this.field_i + (this.field_t - 10 + -1), 10, 0);
-          gf.a();
-          var6 = 0;
-          L3: while (true) {
-            if (var6 >= this.field_i + -20) {
-              gf.a(3 + this.field_k, 15 + this.field_t, this.field_m - 6, -3 + (this.field_i - 15), 10, 0);
-              gf.f(3 + (10 + this.field_k), 15 + this.field_t, -20 + this.field_m + -6, var3);
-              gf.f(10 + (this.field_k + 3), -3 + this.field_t - (-this.field_i - -1), -6 + (this.field_m - 20), var4);
-              gf.d(this.field_k + 3, this.field_t + 15, 3 + (this.field_k + 10), this.field_t + 25);
-              gf.b(13 + this.field_k, 25 + this.field_t, 10, var3);
-              gf.d(-3 + this.field_m + (this.field_k - 10), 15 + this.field_t, -3 + this.field_k + this.field_m, this.field_t - -15 - -10);
-              gf.b(this.field_m + (this.field_k - 14), this.field_t - -25, 10, var3);
-              gf.d(3 + this.field_k, this.field_i + this.field_t - 13, this.field_k - -10 + 3, -3 + (this.field_t + this.field_i));
-              gf.b(3 + this.field_k - -10, -4 + (-10 + this.field_t - -this.field_i), 10, var4);
-              gf.d(this.field_m + this.field_k - 13, -13 + (this.field_i + this.field_t), -3 + this.field_m + this.field_k, this.field_t - (-this.field_i + 3));
-              gf.b(-10 + this.field_m + (this.field_k - 4), -3 + this.field_t + this.field_i - 10 - 1, 10, var4);
-              gf.a();
-              var6 = 0;
-              L4: while (true) {
-                if (2 * (-38 + this.field_i) / 3 <= var6) {
-                  var6 = (this.field_i * 2 - 76) / 3;
-                  var7 = 0;
-                  L5: while (true) {
-                    if (-var6 + this.field_i + -38 <= var7) {
-                      jl.field_W.c(4 + this.field_k, this.field_t - -3, 256);
-                      var7 = jl.field_W.field_z + 1 + (this.field_k - -3);
-                      var8 = -mr.field_g.field_z + -3 + (this.field_m + this.field_k);
-                      mr.field_g.c(var8, 3 + this.field_t, 64);
-                      var10 = var7;
-                      L6: while (true) {
-                        if (var10 >= var8) {
-                          rs.field_Cb.c(this.field_y, this.field_k + this.field_m / 2, this.field_t + 12, 16777215, -1);
-                          var12 = (vd) ((Object) this.field_l.f(3725));
-                          L7: while (true) {
-                            if (var12 == null) {
-                              return;
-                            } else {
-                              var12.a(-14);
-                              var12 = (vd) ((Object) this.field_l.b(-124));
-                              continue L7;
-                            }
-                          }
-                        } else {
-                          var9 = 64 + 192 * (-var10 + var8) / (var8 + -var7);
-                          me.field_h.c(var10, this.field_t - -3, var9);
-                          var10++;
-                          continue L6;
-                        }
-                      }
-                    } else {
-                      var8 = ui.a(0, var4, -117, 256 * var7 / (-38 + this.field_i + -var6));
-                      gf.a(this.field_k - -3, var6 + var7 + (15 + this.field_t - -10), var8);
-                      gf.a(-1 + (this.field_k - -this.field_m + -3), 25 + this.field_t - (-var7 - var6), var8);
-                      var7++;
-                      continue L5;
-                    }
-                  }
-                } else {
-                  var7 = ui.a(var3, 0, -82, 256 * var6 / ((-76 + 2 * this.field_i) / 3));
-                  gf.a(this.field_k + 3, this.field_t + 25 + var6, var7);
-                  gf.a(-1 + this.field_k - (-this.field_m - -3), var6 + (this.field_t + 15 + 10), var7);
-                  var6++;
-                  continue L4;
-                }
-              }
-            } else {
-              var7 = ui.a(var3, 0, -109, var6 * 256 / (-20 + this.field_i));
-              gf.a(this.field_k, var6 + this.field_t + 10, var7);
-              gf.a(this.field_m + (this.field_k + -1), this.field_t + 10 - -var6, var7);
-              var6++;
-              continue L3;
+            if (40 < var6) {
+                var6 = 64 - var6;
             }
-          }
+            var6 = var6 * 10;
+            var3 = ui.a(2052949, 12993090, -108, var6);
+            var4 = ui.a(var4, 12993090, -122, var6);
+            var5 = ui.a(var5, 12993090, -128, var6);
+        }
+        gf.a(this.field_k, this.field_t, this.field_m, this.field_i, 10, 0, 200);
+        am.a(-10 + this.field_m, var5, -79, 15, this.field_k, this.field_t);
+        gf.f(10 + this.field_k, this.field_t, this.field_m + -20, var3);
+        gf.f(10 + this.field_k, this.field_i + this.field_t, -20 + this.field_m, 0);
+        gf.d(this.field_k, this.field_t, this.field_k - -10, this.field_t + 10);
+        gf.b(this.field_k + 10, this.field_t - -10, 10, var3);
+        gf.d(-10 + (this.field_k - -this.field_m), this.field_t, this.field_m + this.field_k, 10 + this.field_t);
+        gf.b(-1 + this.field_m + (this.field_k - 10), this.field_t - -10, 10, var3);
+        gf.d(this.field_k, -10 + this.field_t + this.field_i, this.field_k + 10, this.field_t + this.field_i);
+        gf.b(10 + this.field_k, -1 + (-10 + (this.field_t - -this.field_i)), 10, 0);
+        gf.d(this.field_m + this.field_k + -10, this.field_t + this.field_i - 10, this.field_m + this.field_k, this.field_t + this.field_i);
+        gf.b(this.field_k - -this.field_m - 11, this.field_i + (this.field_t - 10 + -1), 10, 0);
+        gf.a();
+        for (var6 = 0; var6 < this.field_i + -20; var6++) {
+            var7 = ui.a(var3, 0, -109, var6 * 256 / (-20 + this.field_i));
+            gf.a(this.field_k, var6 + this.field_t + 10, var7);
+            gf.a(this.field_m + (this.field_k + -1), this.field_t + 10 - -var6, var7);
+        }
+        gf.a(3 + this.field_k, 15 + this.field_t, this.field_m - 6, -3 + (this.field_i - 15), 10, 0);
+        gf.f(3 + (10 + this.field_k), 15 + this.field_t, -20 + this.field_m + -6, var3);
+        gf.f(10 + (this.field_k + 3), -3 + this.field_t - (-this.field_i - -1), -6 + (this.field_m - 20), var4);
+        gf.d(this.field_k + 3, this.field_t + 15, 3 + (this.field_k + 10), this.field_t + 25);
+        gf.b(13 + this.field_k, 25 + this.field_t, 10, var3);
+        gf.d(-3 + this.field_m + (this.field_k - 10), 15 + this.field_t, -3 + this.field_k + this.field_m, this.field_t - -15 - -10);
+        gf.b(this.field_m + (this.field_k - 14), this.field_t - -25, 10, var3);
+        gf.d(3 + this.field_k, this.field_i + this.field_t - 13, this.field_k - -10 + 3, -3 + (this.field_t + this.field_i));
+        gf.b(3 + this.field_k - -10, -4 + (-10 + this.field_t - -this.field_i), 10, var4);
+        gf.d(this.field_m + this.field_k - 13, -13 + (this.field_i + this.field_t), -3 + this.field_m + this.field_k, this.field_t - (-this.field_i + 3));
+        gf.b(-10 + this.field_m + (this.field_k - 4), -3 + this.field_t + this.field_i - 10 - 1, 10, var4);
+        gf.a();
+        for (var6 = 0; 2 * (-38 + this.field_i) / 3 > var6; var6++) {
+            var7 = ui.a(var3, 0, -82, 256 * var6 / ((-76 + 2 * this.field_i) / 3));
+            gf.a(this.field_k + 3, this.field_t + 25 + var6, var7);
+            gf.a(-1 + this.field_k - (-this.field_m - -3), var6 + (this.field_t + 15 + 10), var7);
+        }
+        var6 = (this.field_i * 2 - 76) / 3;
+        for (var7 = 0; -var6 + this.field_i + -38 > var7; var7++) {
+            var8 = ui.a(0, var4, -117, 256 * var7 / (-38 + this.field_i + -var6));
+            gf.a(this.field_k - -3, var6 + var7 + (15 + this.field_t - -10), var8);
+            gf.a(-1 + (this.field_k - -this.field_m + -3), 25 + this.field_t - (-var7 - var6), var8);
+        }
+        jl.field_W.c(4 + this.field_k, this.field_t - -3, 256);
+        var7 = jl.field_W.field_z + 1 + (this.field_k - -3);
+        var8 = -mr.field_g.field_z + -3 + (this.field_m + this.field_k);
+        mr.field_g.c(var8, 3 + this.field_t, 64);
+        for (var10 = var7; var10 < var8; var10++) {
+            var9 = 64 + 192 * (-var10 + var8) / (var8 + -var7);
+            me.field_h.c(var10, this.field_t - -3, var9);
+        }
+        rs.field_Cb.c(this.field_y, this.field_k + this.field_m / 2, this.field_t + 12, 16777215, -1);
+        vd var12 = (vd) ((Object) this.field_l.f(3725));
+        while (var12 != null) {
+            var12.a(-14);
+            var12 = (vd) ((Object) this.field_l.b(-124));
         }
     }
 

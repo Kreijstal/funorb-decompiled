@@ -10,9 +10,8 @@ final class bo extends li {
     int field_s;
 
     private final int a(byte param0, int param1) {
-        boolean discarded$0 = false;
         if (param0 != 117) {
-            discarded$0 = this.a((byte) -58);
+            this.a((byte) -58);
         }
         return param1;
     }
@@ -26,15 +25,13 @@ final class bo extends li {
     }
 
     final boolean a(byte param0) {
-        int discarded$2 = 0;
+        int discarded$1 = 0;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == 76) {
             break L0;
           } else {
-            discarded$2 = this.a((byte) -101, 83);
+            discarded$1 = this.a((byte) -101, 83);
             break L0;
           }
         }
@@ -44,16 +41,14 @@ final class bo extends li {
               break L2;
             } else {
               if (!this.field_n) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 1;
           break L1;
         }
         return stackIn_7_0 != 0;
@@ -70,25 +65,16 @@ final class bo extends li {
     }
 
     public static void a(int param0) {
-        byte[] discarded$0 = null;
         field_p = null;
         if (param0 <= 65) {
             CharSequence var2 = (CharSequence) null;
-            discarded$0 = bo.a((CharSequence) null, 23);
+            bo.a((CharSequence) null, 23);
         }
     }
 
     final static byte[] a(CharSequence param0, int param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        byte[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         byte[] stackIn_3_0 = null;
         byte[] stackIn_70_0 = null;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         RuntimeException stackIn_74_0 = null;
@@ -96,16 +82,12 @@ final class bo extends li {
         String stackIn_74_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_69_0 = null;
-        byte[] stackOut_2_0 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        RuntimeException stackOut_73_0 = null;
-        StringBuilder stackOut_73_1 = null;
-        String stackOut_73_2 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        byte[] var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -115,8 +97,7 @@ final class bo extends li {
               var4 = 0;
               L1: while (true) {
                 if (var4 >= var2_int) {
-                  stackOut_69_0 = (byte[]) (var3);
-                  stackIn_70_0 = stackOut_69_0;
+                  stackIn_70_0 = (byte[]) (var3);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -291,8 +272,7 @@ final class bo extends li {
                 }
               }
             } else {
-              stackOut_2_0 = (byte[]) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (byte[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -301,27 +281,19 @@ final class bo extends li {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_71_0 = (RuntimeException) (var2);
-            stackOut_71_1 = new StringBuilder().append("bo.C(");
-            stackIn_73_0 = stackOut_71_0;
-            stackIn_73_1 = stackOut_71_1;
-            stackIn_72_0 = stackOut_71_0;
-            stackIn_72_1 = stackOut_71_1;
+            stackIn_73_0 = (RuntimeException) (var2);
+
+            stackIn_73_1 = new StringBuilder().append("bo.C(");
+
             if (param0 == null) {
-              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
-              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
-              stackOut_73_2 = "null";
-              stackIn_74_0 = stackOut_73_0;
-              stackIn_74_1 = stackOut_73_1;
-              stackIn_74_2 = stackOut_73_2;
+              stackIn_74_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
+              stackIn_74_2 = "null";
               break L6;
             } else {
-              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
-              stackOut_72_2 = "{...}";
-              stackIn_74_0 = stackOut_72_0;
-              stackIn_74_1 = stackOut_72_1;
-              stackIn_74_2 = stackOut_72_2;
+              stackIn_74_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
+              stackIn_74_2 = "{...}";
               break L6;
             }
           }

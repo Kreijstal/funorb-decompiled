@@ -21,12 +21,11 @@ final class ta {
     }
 
     public static void a(int param0) {
-        int discarded$2 = 0;
         field_b = null;
         field_h = null;
         field_g = null;
         if (param0 != 7) {
-          discarded$2 = ta.a(120, -46);
+          ta.a(120, -46);
           field_f = null;
           field_d = null;
           return;

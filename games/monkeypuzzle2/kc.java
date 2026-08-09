@@ -50,21 +50,17 @@ abstract class kc {
     }
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
-        Object var1_ref = null;
         int var2 = 0;
-        Throwable var3 = null;
         int var4 = 0;
-        int stackIn_7_0 = 0;
         int stackIn_19_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_18_0 = 0;
+        Object var1 = null;
+        RuntimeException var1_ref = null;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
-            var1_ref = wj.field_k;
-            synchronized (var1_ref) {
+            var1 = wj.field_k;
+            synchronized (var1) {
               L1: {
                 L2: {
                   o.field_b = bh.field_e;
@@ -89,15 +85,14 @@ abstract class kc {
                             } else {
                               var2 = ia.field_g[sl.field_j];
                               sl.field_j = 127 & sl.field_j + 1;
-                              stackOut_6_0 = -1;
-                              stackIn_19_0 = stackOut_6_0;
-                              stackIn_7_0 = stackOut_6_0;
+                              stackIn_19_0 = -1;
+
                               if (var4 != 0) {
                                 break L4;
                               } else {
                                 L8: {
                                   L9: {
-                                    if (stackIn_7_0 < (var2 ^ -1)) {
+                                    if (stackIn_19_0 < (var2 ^ -1)) {
                                       break L9;
                                     } else {
                                       dl.field_c[var2] = true;
@@ -144,8 +139,7 @@ abstract class kc {
                         break L5;
                       }
                     }
-                    stackOut_18_0 = jk.field_w;
-                    stackIn_19_0 = stackOut_18_0;
+                    stackIn_19_0 = jk.field_w;
                     break L4;
                   }
                   bh.field_e = stackIn_19_0;
@@ -158,8 +152,8 @@ abstract class kc {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (RuntimeException) (Object) decompiledCaughtException;
-          throw la.a((Throwable) ((Object) var1), "kc.I(" + param0 + ')');
+          var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+          throw la.a((Throwable) ((Object) var1_ref), "kc.I(" + param0 + ')');
         }
     }
 

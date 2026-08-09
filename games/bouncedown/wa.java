@@ -21,7 +21,7 @@ final class wa {
     }
 
     final static void a(boolean param0) {
-        n var1 = null;
+        n var1;
         if (!param0) {
           return;
         } else {

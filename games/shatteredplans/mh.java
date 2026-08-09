@@ -17,19 +17,15 @@ final class mh {
 
     final static int b(byte param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            ob var2 = null;
             int stackIn_14_0 = 0;
             int stackIn_26_0 = 0;
             int stackIn_31_0 = 0;
             int stackIn_35_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_13_0 = 0;
-            int stackOut_30_0 = 0;
-            int stackOut_25_0 = 0;
-            int stackOut_34_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            ob var2 = null;
             L0: {
               if (param0 >= 15) {
                 break L0;
@@ -62,8 +58,7 @@ final class mh {
                           break L3;
                         }
                       } else {
-                        stackOut_13_0 = is.a((byte) -94, -1);
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = is.a((byte) -94, -1);
                         decompiledRegionSelector0 = 0;
                         break L1;
                       }
@@ -88,8 +83,7 @@ final class mh {
                     if (-4 == (gb.field_i ^ -1)) {
                       if ((js.field_a.a(-1) ^ -1) >= -1) {
                         if (am.field_Cb < pr.a(14274)) {
-                          stackOut_30_0 = is.a((byte) -94, -2);
-                          stackIn_31_0 = stackOut_30_0;
+                          stackIn_31_0 = is.a((byte) -94, -2);
                           decompiledRegionSelector0 = 2;
                           break L1;
                         } else {
@@ -98,8 +92,7 @@ final class mh {
                       } else {
                         var1_int = js.field_a.a((byte) 127);
                         if (0 != var1_int) {
-                          stackOut_25_0 = is.a((byte) -94, var1_int);
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = is.a((byte) -94, var1_int);
                           decompiledRegionSelector0 = 1;
                           break L1;
                         } else {
@@ -116,8 +109,7 @@ final class mh {
                     js.field_a = null;
                     gb.field_i = 0;
                     oj.field_Gb = null;
-                    stackOut_34_0 = 0;
-                    stackIn_35_0 = stackOut_34_0;
+                    stackIn_35_0 = 0;
                     decompiledRegionSelector0 = 3;
                     break L1;
                   } else {
@@ -175,168 +167,139 @@ final class mh {
 
     private final void a(byte param0) {
         int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        var11 = ShatteredPlansClient.field_F ? 1 : 0;
-        var3 = -1640531527;
-        var10 = -1640531527;
-        if (param0 == 75) {
-          var8 = -1640531527;
-          var4 = -1640531527;
-          var6 = -1640531527;
-          var5 = -1640531527;
-          var9 = -1640531527;
-          var7 = -1640531527;
-          var2 = 0;
-          L0: while (true) {
-            if (-5 >= (var2 ^ -1)) {
-              var2 = 0;
-              L1: while (true) {
-                if (var2 >= 256) {
-                  var2 = 0;
-                  L2: while (true) {
-                    if (-257 >= (var2 ^ -1)) {
-                      this.c(5);
-                      this.field_c = 256;
-                      return;
-                    } else {
-                      var10 = var10 + this.field_e[var2 - -7];
-                      var5 = var5 + this.field_e[var2 - -2];
-                      var4 = var4 + this.field_e[1 + var2];
-                      var6 = var6 + this.field_e[3 + var2];
-                      var3 = var3 + this.field_e[var2];
-                      var9 = var9 + this.field_e[6 + var2];
-                      var7 = var7 + this.field_e[4 + var2];
-                      var8 = var8 + this.field_e[5 + var2];
-                      var3 = var3 ^ var4 << -1005742325;
-                      var6 = var6 + var3;
-                      var4 = var4 + var5;
-                      var4 = var4 ^ var5 >>> -1574942590;
-                      var5 = var5 + var6;
-                      var7 = var7 + var4;
-                      var5 = var5 ^ var6 << -939840792;
-                      var6 = var6 + var7;
-                      var8 = var8 + var5;
-                      var6 = var6 ^ var7 >>> 1691535344;
-                      var7 = var7 + var8;
-                      var9 = var9 + var6;
-                      var7 = var7 ^ var8 << -641031158;
-                      var8 = var8 + var9;
-                      var10 = var10 + var7;
-                      var8 = var8 ^ var9 >>> 1674225316;
-                      var9 = var9 + var10;
-                      var3 = var3 + var8;
-                      var9 = var9 ^ var10 << -393516504;
-                      var4 = var4 + var9;
-                      var10 = var10 + var3;
-                      var10 = var10 ^ var3 >>> 1740441577;
-                      var3 = var3 + var4;
-                      var5 = var5 + var10;
-                      this.field_e[var2] = var3;
-                      this.field_e[var2 - -1] = var4;
-                      this.field_e[var2 + 2] = var5;
-                      this.field_e[3 + var2] = var6;
-                      this.field_e[4 + var2] = var7;
-                      this.field_e[var2 + 5] = var8;
-                      this.field_e[var2 - -6] = var9;
-                      this.field_e[var2 + 7] = var10;
-                      var2 += 8;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  var7 = var7 + this.field_j[var2 + 4];
-                  var8 = var8 + this.field_j[5 + var2];
-                  var3 = var3 + this.field_j[var2];
-                  var9 = var9 + this.field_j[var2 - -6];
-                  var6 = var6 + this.field_j[3 + var2];
-                  var5 = var5 + this.field_j[2 + var2];
-                  var4 = var4 + this.field_j[var2 + 1];
-                  var10 = var10 + this.field_j[var2 + 7];
-                  var3 = var3 ^ var4 << 1299845355;
-                  var6 = var6 + var3;
-                  var4 = var4 + var5;
-                  var4 = var4 ^ var5 >>> -716392734;
-                  var5 = var5 + var6;
-                  var7 = var7 + var4;
-                  var5 = var5 ^ var6 << 391666152;
-                  var8 = var8 + var5;
-                  var6 = var6 + var7;
-                  var6 = var6 ^ var7 >>> -567810416;
-                  var7 = var7 + var8;
-                  var9 = var9 + var6;
-                  var7 = var7 ^ var8 << -1397054774;
-                  var10 = var10 + var7;
-                  var8 = var8 + var9;
-                  var8 = var8 ^ var9 >>> -1411713244;
-                  var9 = var9 + var10;
-                  var3 = var3 + var8;
-                  var9 = var9 ^ var10 << -1802806456;
-                  var4 = var4 + var9;
-                  var10 = var10 + var3;
-                  var10 = var10 ^ var3 >>> -1535716119;
-                  var5 = var5 + var10;
-                  var3 = var3 + var4;
-                  this.field_e[var2] = var3;
-                  this.field_e[var2 - -1] = var4;
-                  this.field_e[var2 - -2] = var5;
-                  this.field_e[var2 + 3] = var6;
-                  this.field_e[4 + var2] = var7;
-                  this.field_e[5 + var2] = var8;
-                  this.field_e[6 + var2] = var9;
-                  this.field_e[var2 - -7] = var10;
-                  var2 += 8;
-                  continue L1;
-                }
-              }
-            } else {
-              var3 = var3 ^ var4 << 486842635;
-              var4 = var4 + var5;
-              var6 = var6 + var3;
-              var4 = var4 ^ var5 >>> 993649250;
-              var5 = var5 + var6;
-              var7 = var7 + var4;
-              var5 = var5 ^ var6 << -688935480;
-              var8 = var8 + var5;
-              var6 = var6 + var7;
-              var6 = var6 ^ var7 >>> -2013356368;
-              var9 = var9 + var6;
-              var7 = var7 + var8;
-              var7 = var7 ^ var8 << 1838205610;
-              var10 = var10 + var7;
-              var8 = var8 + var9;
-              var8 = var8 ^ var9 >>> 1664112548;
-              var3 = var3 + var8;
-              var9 = var9 + var10;
-              var9 = var9 ^ var10 << 107978856;
-              var4 = var4 + var9;
-              var10 = var10 + var3;
-              var10 = var10 ^ var3 >>> -675638359;
-              var5 = var5 + var10;
-              var3 = var3 + var4;
-              var2++;
-              continue L0;
-            }
-          }
-        } else {
-          return;
+        int var11 = ShatteredPlansClient.field_F ? 1 : 0;
+        int var3 = -1640531527;
+        int var10 = -1640531527;
+        if (param0 != 75) {
+            return;
         }
+        int var8 = -1640531527;
+        int var4 = -1640531527;
+        int var6 = -1640531527;
+        int var5 = -1640531527;
+        int var9 = -1640531527;
+        int var7 = -1640531527;
+        for (var2 = 0; -5 < (var2 ^ -1); var2++) {
+            var3 = var3 ^ var4 << 486842635;
+            var4 = var4 + var5;
+            var6 = var6 + var3;
+            var4 = var4 ^ var5 >>> 993649250;
+            var5 = var5 + var6;
+            var7 = var7 + var4;
+            var5 = var5 ^ var6 << -688935480;
+            var8 = var8 + var5;
+            var6 = var6 + var7;
+            var6 = var6 ^ var7 >>> -2013356368;
+            var9 = var9 + var6;
+            var7 = var7 + var8;
+            var7 = var7 ^ var8 << 1838205610;
+            var10 = var10 + var7;
+            var8 = var8 + var9;
+            var8 = var8 ^ var9 >>> 1664112548;
+            var3 = var3 + var8;
+            var9 = var9 + var10;
+            var9 = var9 ^ var10 << 107978856;
+            var4 = var4 + var9;
+            var10 = var10 + var3;
+            var10 = var10 ^ var3 >>> -675638359;
+            var5 = var5 + var10;
+            var3 = var3 + var4;
+        }
+        for (var2 = 0; var2 < 256; var2 += 8) {
+            var7 = var7 + this.field_j[var2 + 4];
+            var8 = var8 + this.field_j[5 + var2];
+            var3 = var3 + this.field_j[var2];
+            var9 = var9 + this.field_j[var2 - -6];
+            var6 = var6 + this.field_j[3 + var2];
+            var5 = var5 + this.field_j[2 + var2];
+            var4 = var4 + this.field_j[var2 + 1];
+            var10 = var10 + this.field_j[var2 + 7];
+            var3 = var3 ^ var4 << 1299845355;
+            var6 = var6 + var3;
+            var4 = var4 + var5;
+            var4 = var4 ^ var5 >>> -716392734;
+            var5 = var5 + var6;
+            var7 = var7 + var4;
+            var5 = var5 ^ var6 << 391666152;
+            var8 = var8 + var5;
+            var6 = var6 + var7;
+            var6 = var6 ^ var7 >>> -567810416;
+            var7 = var7 + var8;
+            var9 = var9 + var6;
+            var7 = var7 ^ var8 << -1397054774;
+            var10 = var10 + var7;
+            var8 = var8 + var9;
+            var8 = var8 ^ var9 >>> -1411713244;
+            var9 = var9 + var10;
+            var3 = var3 + var8;
+            var9 = var9 ^ var10 << -1802806456;
+            var4 = var4 + var9;
+            var10 = var10 + var3;
+            var10 = var10 ^ var3 >>> -1535716119;
+            var5 = var5 + var10;
+            var3 = var3 + var4;
+            this.field_e[var2] = var3;
+            this.field_e[var2 - -1] = var4;
+            this.field_e[var2 - -2] = var5;
+            this.field_e[var2 + 3] = var6;
+            this.field_e[4 + var2] = var7;
+            this.field_e[5 + var2] = var8;
+            this.field_e[6 + var2] = var9;
+            this.field_e[var2 - -7] = var10;
+        }
+        for (var2 = 0; -257 < (var2 ^ -1); var2 += 8) {
+            var10 = var10 + this.field_e[var2 - -7];
+            var5 = var5 + this.field_e[var2 - -2];
+            var4 = var4 + this.field_e[1 + var2];
+            var6 = var6 + this.field_e[3 + var2];
+            var3 = var3 + this.field_e[var2];
+            var9 = var9 + this.field_e[6 + var2];
+            var7 = var7 + this.field_e[4 + var2];
+            var8 = var8 + this.field_e[5 + var2];
+            var3 = var3 ^ var4 << -1005742325;
+            var6 = var6 + var3;
+            var4 = var4 + var5;
+            var4 = var4 ^ var5 >>> -1574942590;
+            var5 = var5 + var6;
+            var7 = var7 + var4;
+            var5 = var5 ^ var6 << -939840792;
+            var6 = var6 + var7;
+            var8 = var8 + var5;
+            var6 = var6 ^ var7 >>> 1691535344;
+            var7 = var7 + var8;
+            var9 = var9 + var6;
+            var7 = var7 ^ var8 << -641031158;
+            var8 = var8 + var9;
+            var10 = var10 + var7;
+            var8 = var8 ^ var9 >>> 1674225316;
+            var9 = var9 + var10;
+            var3 = var3 + var8;
+            var9 = var9 ^ var10 << -393516504;
+            var4 = var4 + var9;
+            var10 = var10 + var3;
+            var10 = var10 ^ var3 >>> 1740441577;
+            var3 = var3 + var4;
+            var5 = var5 + var10;
+            this.field_e[var2] = var3;
+            this.field_e[var2 - -1] = var4;
+            this.field_e[var2 + 2] = var5;
+            this.field_e[3 + var2] = var6;
+            this.field_e[4 + var2] = var7;
+            this.field_e[var2 + 5] = var8;
+            this.field_e[var2 - -6] = var9;
+            this.field_e[var2 + 7] = var10;
+        }
+        this.c(5);
+        this.field_c = 256;
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -408,26 +371,25 @@ final class mh {
     }
 
     final static void b(int param0) {
-        int discarded$0 = 0;
         p.field_A = new int[600];
         sd.field_p = 0;
         if (param0 != 1674225316) {
-            discarded$0 = mh.b((byte) -95);
+            mh.b((byte) -95);
         }
         np.field_f = new int[600];
     }
 
     private final void c(int param0) {
-        int dupTemp$4 = 0;
-        int dupTemp$5 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int dupTemp$1 = 0;
+        int dupTemp$2 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        int fieldTemp$3 = this.field_f + 1;
+        int fieldTemp$0 = this.field_f + 1;
         this.field_f = this.field_f + 1;
-        this.field_i = this.field_i + fieldTemp$3;
+        this.field_i = this.field_i + fieldTemp$0;
         var2 = 0;
         L0: while (true) {
           if (var2 >= 256) {
@@ -443,7 +405,7 @@ final class mh {
           } else {
             L2: {
               var3 = this.field_e[var2];
-              if ((2 & var2) == 0) {
+              if ((2 & var2 ^ -1) == -1) {
                 if (0 == (1 & var2)) {
                   this.field_g = this.field_g ^ this.field_g << 436448973;
                   break L2;
@@ -462,12 +424,12 @@ final class mh {
               }
             }
             this.field_g = this.field_g + this.field_e[255 & var2 + 128];
-            dupTemp$4 = this.field_g + (this.field_e[we.a(var3 >> 479211330, 255)] - -this.field_i);
-            var4 = dupTemp$4;
-            this.field_e[var2] = dupTemp$4;
-            dupTemp$5 = var3 + this.field_e[we.a(255, var4 >> 1986793192 >> -30664990)];
-            this.field_i = dupTemp$5;
-            this.field_j[var2] = dupTemp$5;
+            dupTemp$1 = this.field_g + (this.field_e[we.a(var3 >> 479211330, 255)] - -this.field_i);
+            var4 = dupTemp$1;
+            this.field_e[var2] = dupTemp$1;
+            dupTemp$2 = var3 + this.field_e[we.a(255, var4 >> 1986793192 >> -30664990)];
+            this.field_i = dupTemp$2;
+            this.field_j[var2] = dupTemp$2;
             var2++;
             continue L0;
           }

@@ -13,10 +13,10 @@ final class pt {
     }
 
     final static String a(byte param0, int param1, char param2) {
-        char[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        char[] var6 = null;
+        char[] var3;
+        int var4;
+        int var5;
+        char[] var6;
         var5 = AceOfSkies.field_G ? 1 : 0;
         var6 = new char[param1];
         var3 = var6;

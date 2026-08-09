@@ -30,11 +30,10 @@ final class md {
     }
 
     public static void a(boolean param0) {
-        boolean discarded$2 = false;
         field_a = null;
         field_d = null;
         if (!param0) {
-          discarded$2 = md.a((byte) -8);
+          md.a((byte) -8);
           field_e = null;
           field_c = null;
           return;

@@ -33,15 +33,13 @@ final class ka {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
-            int var3 = 0;
-            long var4 = 0L;
-            long var6 = 0L;
             int stackIn_7_0 = 0;
-            int stackOut_6_0 = 0;
-            int stackOut_5_0 = 0;
+            int var0;
+            int var1;
+            int var2;
+            int var3;
+            long var4;
+            long var6;
             field_a = new int[98304];
             var0 = 92682;
             L0: while (true) {
@@ -65,12 +63,10 @@ final class ka {
                 }
                 L2: {
                   if ((var2 ^ -1) <= -1) {
-                    stackOut_6_0 = var2;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = var2;
                     break L2;
                   } else {
-                    stackOut_5_0 = 0;
-                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_0 = 0;
                     break L2;
                   }
                 }

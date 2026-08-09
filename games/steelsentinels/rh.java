@@ -14,8 +14,8 @@ final class rh extends ck {
     static gh field_w;
 
     final static void a(int param0, boolean param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         if (vb.field_e) {
           if (param3 == 635) {
             L0: {

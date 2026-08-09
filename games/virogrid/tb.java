@@ -12,22 +12,22 @@ final class tb extends l {
     private int[] field_g;
 
     final boolean a(float param0, int param1, eh param2) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        rm var6 = null;
-        byte[] var7 = null;
-        int[] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int[] var14 = null;
-        byte[] var15 = null;
-        int[] var16 = null;
-        byte[] var17 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var4;
+        int var5;
+        rm var6;
+        byte[] var7;
+        int[] var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int[] var14;
+        byte[] var15;
+        int[] var16;
+        byte[] var17;
         var4 = 0;
         L0: while (true) {
           if (var4 >= this.field_j.length) {
@@ -111,9 +111,9 @@ final class tb extends l {
                                       var12++;
                                       continue L8;
                                     } else {
-                                      incrementValue$2 = var11;
+                                      incrementValue$0 = var11;
                                       var11++;
-                                      this.field_l[incrementValue$2] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
+                                      this.field_l[incrementValue$0] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
                                       var13++;
                                       continue L9;
                                     }
@@ -143,9 +143,9 @@ final class tb extends l {
                                       var12++;
                                       continue L11;
                                     } else {
-                                      incrementValue$3 = var11;
+                                      incrementValue$1 = var11;
                                       var11++;
-                                      this.field_l[incrementValue$3] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
+                                      this.field_l[incrementValue$1] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
                                       var13++;
                                       continue L12;
                                     }
@@ -213,35 +213,22 @@ final class tb extends l {
     }
 
     tb(jc param0) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
+        int var2;
+        int var3;
         L0: {
           this.field_i = param0.c((byte) 93);
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (param0.g(11132) != 1) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -294,8 +281,8 @@ final class tb extends l {
                   var3 = 0;
                   L7: while (true) {
                     if (var3 >= var2) {
-                      discarded$2 = param0.g(11132);
-                      discarded$3 = param0.g(11132);
+                      param0.g(11132);
+                      param0.g(11132);
                       this.field_l = null;
                       return;
                     } else {

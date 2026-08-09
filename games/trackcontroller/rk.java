@@ -38,10 +38,9 @@ final class rk extends wd {
     }
 
     final static void r(int param0) {
-        ra dupTemp$6 = null;
-        ra dupTemp$7 = null;
-        ra dupTemp$8 = null;
-        RuntimeException var1 = null;
+        ra dupTemp$3 = null;
+        ra dupTemp$4 = null;
+        ra dupTemp$5 = null;
         ra[] var2 = null;
         int var3 = 0;
         ra var4 = null;
@@ -50,21 +49,22 @@ final class rk extends wd {
         ea var7 = null;
         ea var8 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var5 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
             var6 = new ea(-1, "*gn0810a10110b101101908101101101b011090ho0p80980e80110160710a10110920890202q0r607607d01101101a0d10980620220202208990090090090008d0190h50i2022020270p280000000010002809202g0970620202804680000000010002g06q06207908602027059800000000100022086g02g070510f0280l680000000010002704101301902j020270598000000001000D10k9g02g020220202804680000000010008104v09701602202022079800000000100028062028019022020q40928000000001000270140560860gf020220769009009009000280150490710620202701101101101o01106g097067011092020280110110a101r01a01607i08101106h0f07d0110110c101101d0110110r101101d06000000000000000000000000000000000000000000000000mainMenu 0/0");
-            dupTemp$6 = new ra(var6, 21, 48);
-            he.field_f[1] = dupTemp$6;
-            he.field_f[0] = dupTemp$6;
+            dupTemp$3 = new ra(var6, 21, 48);
+            he.field_f[1] = dupTemp$3;
+            he.field_f[0] = dupTemp$3;
             var7 = new ea(-1, vl.field_E);
-            dupTemp$7 = new ra(var7, 16, 48);
-            he.field_f[param0] = dupTemp$7;
-            he.field_f[12] = dupTemp$7;
+            dupTemp$4 = new ra(var7, 16, 48);
+            he.field_f[param0] = dupTemp$4;
+            he.field_f[12] = dupTemp$4;
             var8 = new ea(-1, "*gn08o01o01101101101101o01101101a011090qt0oe80000000000000200000080g0b90202q03p80000000000000200000080h0me020qs0rf80000000000000200000080207l0p02g0b6800000000000002000000807016020220h98000000000000020000008080980f0gl0nf80000000000000200000080207e020gk0mf80000000000000200000080208f020he0228000000000000020000008070670e0220228000000000000020000008080980p02g0c68000000000000020000008070tu060q501O8000000000000020000008080sv0907r01101101101101101r01101101r06706000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000pauseMenu 0/0");
-            dupTemp$8 = new ra(var8, 21, 48);
-            he.field_f[11] = dupTemp$8;
-            he.field_f[10] = dupTemp$8;
+            dupTemp$5 = new ra(var8, 21, 48);
+            he.field_f[11] = dupTemp$5;
+            he.field_f[10] = dupTemp$5;
             var2 = he.field_f;
             var3 = 0;
             L1: while (true) {
@@ -93,19 +93,11 @@ final class rk extends wd {
     }
 
     final static boolean a(int param0, byte param1, int param2, boolean param3) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_21_0 = 0;
         int stackIn_50_0 = 0;
         int stackIn_59_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
+        int var4;
+        int var5;
         if (param3) {
           if (g.field_u[param2] > g.field_u[param0]) {
             return true;
@@ -124,12 +116,10 @@ final class rk extends wd {
                       } else {
                         L0: {
                           if (param2 <= param0) {
-                            stackOut_58_0 = 0;
-                            stackIn_59_0 = stackOut_58_0;
+                            stackIn_59_0 = 0;
                             break L0;
                           } else {
-                            stackOut_57_0 = 1;
-                            stackIn_59_0 = stackOut_57_0;
+                            stackIn_59_0 = 1;
                             break L0;
                           }
                         }
@@ -139,7 +129,7 @@ final class rk extends wd {
                       return true;
                     }
                   } else {
-                    discarded$2 = rk.s(-40);
+                    rk.s(-40);
                     var4 = qi.field_b[param0] + (ii.field_q[param0] + qf.field_a[param0]);
                     var5 = qi.field_b[param2] + (qf.field_a[param2] + ii.field_q[param2]);
                     if (var4 >= var5) {
@@ -148,12 +138,10 @@ final class rk extends wd {
                       } else {
                         L1: {
                           if (param2 <= param0) {
-                            stackOut_49_0 = 0;
-                            stackIn_50_0 = stackOut_49_0;
+                            stackIn_50_0 = 0;
                             break L1;
                           } else {
-                            stackOut_48_0 = 1;
-                            stackIn_50_0 = stackOut_48_0;
+                            stackIn_50_0 = 1;
                             break L1;
                           }
                         }
@@ -181,7 +169,7 @@ final class rk extends wd {
               } else {
                 if (g.field_u[param2] >= g.field_u[param0]) {
                   if (param1 <= 60) {
-                    discarded$3 = rk.s(-40);
+                    rk.s(-40);
                     var4 = qi.field_b[param0] + (ii.field_q[param0] + qf.field_a[param0]);
                     var5 = qi.field_b[param2] + (qf.field_a[param2] + ii.field_q[param2]);
                     if (var4 >= var5) {
@@ -206,12 +194,10 @@ final class rk extends wd {
                       } else {
                         L2: {
                           if (param2 <= param0) {
-                            stackOut_20_0 = 0;
-                            stackIn_21_0 = stackOut_20_0;
+                            stackIn_21_0 = 0;
                             break L2;
                           } else {
-                            stackOut_19_0 = 1;
-                            stackIn_21_0 = stackOut_19_0;
+                            stackIn_21_0 = 1;
                             break L2;
                           }
                         }
@@ -262,26 +248,24 @@ final class rk extends wd {
     }
 
     final void b(int param0, int param1, int param2) {
-        int discarded$0 = 0;
         super.b(param0, param1, param2);
         p.field_a.b(this.field_cb, (this.field_x >> 751656065) + param0, 103 + param2, 16777215, -1);
         if (!(null == this.field_db)) {
             ll.a(param0 + 20, 120 + (param2 + -7), 260, 8421504);
-            discarded$0 = p.field_a.a(this.field_db, 20 + param0, 120 + (param2 - -8), 260, 100, 16777215, -1, 1, 0, p.field_a.field_G);
+            p.field_a.a(this.field_db, 20 + param0, 120 + (param2 - -8), 260, 100, 16777215, -1, 1, 0, p.field_a.field_G);
         }
     }
 
     final static int s(int param0) {
-        RuntimeException var1 = null;
+        int stackIn_27_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_27_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_26_0 = 0;
         var7 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -352,8 +336,7 @@ final class rk extends wd {
                     }
                   }
                 }
-                stackOut_26_0 = var3;
-                stackIn_27_0 = stackOut_26_0;
+                stackIn_27_0 = var3;
                 break L0;
               } else {
                 L6: {

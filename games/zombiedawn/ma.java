@@ -18,10 +18,9 @@ final class ma extends le {
     static String field_i;
 
     final static String a(boolean param0, int param1, boolean param2, boolean param3) {
-        String discarded$0 = null;
         int var4 = 0;
         if (param1 < 81) {
-            discarded$0 = ma.a(false, 21, true, true);
+            ma.a(false, 21, true, true);
         }
         if (param0) {
             var4 += 4;
@@ -43,69 +42,24 @@ final class ma extends le {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ka stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
         ka stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         ka stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_14_2 = 0;
         int stackIn_23_0 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        ka stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        ka stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        ka stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
         var10 = ZombieDawn.field_J;
         try {
           L0: {
@@ -115,8 +69,7 @@ final class ma extends le {
             var8 = 0;
             L1: while (true) {
               if (-129 >= (var8 ^ -1)) {
-                stackOut_22_0 = var5_int;
-                stackIn_23_0 = stackOut_22_0;
+                stackIn_23_0 = var5_int;
                 break L0;
               } else {
                 L2: {
@@ -143,27 +96,19 @@ final class ma extends le {
                             break L5;
                           } else {
                             L6: {
-                              stackOut_11_0 = (ka) (param2);
-                              stackOut_11_1 = var9 >> 1106370594;
-                              stackIn_13_0 = stackOut_11_0;
-                              stackIn_13_1 = stackOut_11_1;
-                              stackIn_12_0 = stackOut_11_0;
-                              stackIn_12_1 = stackOut_11_1;
+                              stackIn_13_0 = (ka) (param2);
+
+                              stackIn_13_1 = var9 >> 1106370594;
+
                               if (param0) {
-                                stackOut_13_0 = (ka) ((Object) stackIn_13_0);
-                                stackOut_13_1 = stackIn_13_1;
-                                stackOut_13_2 = 0;
-                                stackIn_14_0 = stackOut_13_0;
-                                stackIn_14_1 = stackOut_13_1;
-                                stackIn_14_2 = stackOut_13_2;
+                                stackIn_14_0 = (ka) ((Object) stackIn_13_0);
+                                stackIn_14_1 = stackIn_13_1;
+                                stackIn_14_2 = 0;
                                 break L6;
                               } else {
-                                stackOut_12_0 = (ka) ((Object) stackIn_12_0);
-                                stackOut_12_1 = stackIn_12_1;
-                                stackOut_12_2 = 1;
-                                stackIn_14_0 = stackOut_12_0;
-                                stackIn_14_1 = stackOut_12_1;
-                                stackIn_14_2 = stackOut_12_2;
+                                stackIn_14_0 = (ka) ((Object) stackIn_13_0);
+                                stackIn_14_1 = stackIn_13_1;
+                                stackIn_14_2 = 1;
                                 break L6;
                               }
                             }
@@ -201,139 +146,80 @@ final class ma extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var5 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var5);
-            stackOut_24_1 = new StringBuilder().append("ma.D(").append(param0).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var5);
+
+            stackIn_26_1 = new StringBuilder().append("ma.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L7;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+
+
+            stackIn_29_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
+
             if (param2 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L8;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',');
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+
+
+            stackIn_32_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',');
+
             if (param3 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L9;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L9;
             }
           }
-          throw sh.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_27_0), stackIn_33_2 + ')');
         }
         return stackIn_23_0 != 0;
     }
 
     final static void a(oe param0, int param1, String param2, rb param3, boolean param4) {
-        int discarded$1 = 0;
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
         var9 = ZombieDawn.field_J;
         try {
           L0: {
@@ -343,7 +229,7 @@ final class ma extends le {
               if (!param4) {
                 break L1;
               } else {
-                discarded$1 = ma.d((byte) 75);
+                ma.d((byte) 75);
                 break L1;
               }
             }
@@ -393,81 +279,57 @@ final class ma extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var5);
-            stackOut_18_1 = new StringBuilder().append("ma.B(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var5);
+
+            stackIn_20_1 = new StringBuilder().append("ma.B(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L6;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param1).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+
+
+            stackIn_23_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+
+
+            stackIn_26_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
+
             if (param3 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L8;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L8;
             }
           }
-          throw sh.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param4 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_21_0), stackIn_27_2 + ',' + param4 + ')');
         }
     }
 
@@ -479,15 +341,24 @@ final class ma extends le {
     }
 
     ma(byte[] param0) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        nf dupTemp$17 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        nf dupTemp$8 = null;
+        byte[] stackIn_39_0 = null;
+        byte[] stackIn_42_0 = null;
+        RuntimeException stackIn_205_0 = null;
+        StringBuilder stackIn_205_1 = null;
+        RuntimeException stackIn_206_0 = null;
+        StringBuilder stackIn_206_1 = null;
+        String stackIn_206_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         byte[] var4 = null;
@@ -504,10 +375,10 @@ final class ma extends le {
         nf[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
-        nf var15 = null;
-        byte[] var15_array = null;
-        int var16_int = 0;
+        byte[] var15 = null;
+        nf var15_ref = null;
         byte[] var16 = null;
+        int var16_int = 0;
         int var17 = 0;
         byte[] var18 = null;
         int var19 = 0;
@@ -520,7 +391,8 @@ final class ma extends le {
         Object var25 = null;
         int var26 = 0;
         int var27 = 0;
-        int var28 = 0;
+        int var28_int = 0;
+        nf var28 = null;
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
@@ -551,29 +423,6 @@ final class ma extends le {
         byte[] var57 = null;
         byte[] var58 = null;
         byte[] var59 = null;
-        byte[] stackIn_39_0 = null;
-        byte[] stackIn_42_0 = null;
-        RuntimeException stackIn_204_0 = null;
-        StringBuilder stackIn_204_1 = null;
-        RuntimeException stackIn_205_0 = null;
-        StringBuilder stackIn_205_1 = null;
-        RuntimeException stackIn_206_0 = null;
-        StringBuilder stackIn_206_1 = null;
-        String stackIn_206_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_38_0 = null;
-        Object stackOut_37_0 = null;
-        byte[] stackOut_41_0 = null;
-        Object stackOut_40_0 = null;
-        RuntimeException stackOut_203_0 = null;
-        StringBuilder stackOut_203_1 = null;
-        RuntimeException stackOut_205_0 = null;
-        StringBuilder stackOut_205_1 = null;
-        String stackOut_205_2 = null;
-        RuntimeException stackOut_204_0 = null;
-        StringBuilder stackOut_204_1 = null;
-        String stackOut_204_2 = null;
         try {
           L0: {
             this.field_o = new gi[128];
@@ -648,9 +497,9 @@ final class ma extends le {
                                                 var13_int = var15_int;
                                                 break L9;
                                               } else {
-                                                incrementValue$9 = var12;
+                                                incrementValue$0 = var12;
                                                 var12++;
-                                                var13_int = incrementValue$9;
+                                                var13_int = incrementValue$0;
                                                 break L9;
                                               }
                                             }
@@ -671,27 +520,23 @@ final class ma extends le {
                                         L12: {
                                           var14 = var38.d((byte) -117);
                                           if (0 < var14) {
-                                            stackOut_38_0 = new byte[2 * var14];
-                                            stackIn_39_0 = stackOut_38_0;
+                                            stackIn_39_0 = new byte[2 * var14];
                                             break L12;
                                           } else {
-                                            stackOut_37_0 = null;
-                                            stackIn_39_0 = (byte[]) ((Object) stackOut_37_0);
+                                            stackIn_39_0 = null;
                                             break L12;
                                           }
                                         }
                                         L13: {
                                           var58 = stackIn_39_0;
                                           var46 = var58;
-                                          var15_array = var46;
+                                          var15 = var46;
                                           var14 = var38.d((byte) -124);
                                           if (-1 > (var14 ^ -1)) {
-                                            stackOut_41_0 = new byte[2 * var14];
-                                            stackIn_42_0 = stackOut_41_0;
+                                            stackIn_42_0 = new byte[2 * var14];
                                             break L13;
                                           } else {
-                                            stackOut_40_0 = null;
-                                            stackIn_42_0 = (byte[]) ((Object) stackOut_40_0);
+                                            stackIn_42_0 = null;
                                             break L13;
                                           }
                                         }
@@ -752,7 +597,7 @@ final class ma extends le {
                                                                             L23: while (true) {
                                                                               if (var27 >= var12) {
                                                                                 L24: {
-                                                                                  if (var15_array == null) {
+                                                                                  if (null == var15) {
                                                                                     break L24;
                                                                                   } else {
                                                                                     var27 = 1;
@@ -760,7 +605,7 @@ final class ma extends le {
                                                                                       if (var27 >= var58.length) {
                                                                                         break L24;
                                                                                       } else {
-                                                                                        var15_array[var27] = var38.e((byte) 116);
+                                                                                        var15[var27] = var38.e((byte) 116);
                                                                                         var27 += 2;
                                                                                         continue L25;
                                                                                       }
@@ -790,16 +635,16 @@ final class ma extends le {
                                                                                     L29: while (true) {
                                                                                       if (var12 <= var27) {
                                                                                         L30: {
-                                                                                          if (var15_array == null) {
+                                                                                          if (var15 == null) {
                                                                                             break L30;
                                                                                           } else {
                                                                                             var19 = var38.d((byte) -115);
-                                                                                            var15_array[0] = (byte)var19;
+                                                                                            var15[0] = (byte)var19;
                                                                                             var27 = 2;
                                                                                             L31: while (true) {
                                                                                               if (var58.length <= var27) {
                                                                                                 var27 = var58[0];
-                                                                                                var28 = var58[1];
+                                                                                                var28_int = var58[1];
                                                                                                 var29 = 0;
                                                                                                 L32: while (true) {
                                                                                                   if (var29 >= var27) {
@@ -809,29 +654,29 @@ final class ma extends le {
                                                                                                         var30 = var27;
                                                                                                         L34: while (true) {
                                                                                                           if ((var30 ^ -1) <= -129) {
-                                                                                                            var15_array = null;
+                                                                                                            var15 = null;
                                                                                                             break L30;
                                                                                                           } else {
-                                                                                                            this.field_m[var30] = (byte)(var28 * this.field_m[var30] + 32 >> -1338554714);
+                                                                                                            this.field_m[var30] = (byte)(var28_int * this.field_m[var30] + 32 >> -1338554714);
                                                                                                             var30++;
                                                                                                             continue L34;
                                                                                                           }
                                                                                                         }
                                                                                                       } else {
                                                                                                         var30 = var58[var29];
-                                                                                                        var31 = var15_array[var29 - -1];
-                                                                                                        var32 = (var30 + -var27) / 2 + var28 * (-var27 + var30);
+                                                                                                        var31 = var15[var29 - -1];
+                                                                                                        var32 = (var30 + -var27) / 2 + var28_int * (-var27 + var30);
                                                                                                         var33 = var27;
                                                                                                         L35: while (true) {
                                                                                                           if (var33 >= var30) {
-                                                                                                            var28 = var31;
+                                                                                                            var28_int = var31;
                                                                                                             var27 = var30;
                                                                                                             var29 += 2;
                                                                                                             continue L33;
                                                                                                           } else {
                                                                                                             var34 = rm.a(-var27 + var30, var32, false);
                                                                                                             this.field_m[var33] = (byte)(var34 * this.field_m[var33] - -32 >> -1590497562);
-                                                                                                            var32 = var32 + (var31 + -var28);
+                                                                                                            var32 = var32 + (var31 + -var28_int);
                                                                                                             var33++;
                                                                                                             continue L35;
                                                                                                           }
@@ -839,14 +684,14 @@ final class ma extends le {
                                                                                                       }
                                                                                                     }
                                                                                                   } else {
-                                                                                                    this.field_m[var29] = (byte)(32 + var28 * this.field_m[var29] >> -1868340218);
+                                                                                                    this.field_m[var29] = (byte)(32 + var28_int * this.field_m[var29] >> -1868340218);
                                                                                                     var29++;
                                                                                                     continue L32;
                                                                                                   }
                                                                                                 }
                                                                                               } else {
                                                                                                 var19 = var38.d((byte) -122) + (1 + var19);
-                                                                                                var15_array[var27] = (byte)var19;
+                                                                                                var15[var27] = (byte)var19;
                                                                                                 var27 += 2;
                                                                                                 continue L31;
                                                                                               }
@@ -863,7 +708,7 @@ final class ma extends le {
                                                                                             L37: while (true) {
                                                                                               if (var59.length <= var27) {
                                                                                                 var27 = var59[0];
-                                                                                                var28 = var59[1] << -1563631135;
+                                                                                                var28_int = var59[1] << -1563631135;
                                                                                                 var29 = 0;
                                                                                                 L38: while (true) {
                                                                                                   if (var29 >= var27) {
@@ -877,7 +722,7 @@ final class ma extends le {
                                                                                                             break L36;
                                                                                                           } else {
                                                                                                             L41: {
-                                                                                                              var31 = var28 + (255 & this.field_h[var30]);
+                                                                                                              var31 = var28_int + (255 & this.field_h[var30]);
                                                                                                               if (var31 >= 0) {
                                                                                                                 break L41;
                                                                                                               } else {
@@ -901,13 +746,13 @@ final class ma extends le {
                                                                                                       } else {
                                                                                                         var30 = var59[var29];
                                                                                                         var31 = var16[var29 + 1] << 480242657;
-                                                                                                        var32 = (-var27 + var30) / 2 + (var30 + -var27) * var28;
+                                                                                                        var32 = (-var27 + var30) / 2 + (var30 + -var27) * var28_int;
                                                                                                         var37 = var27;
                                                                                                         var33 = var37;
                                                                                                         L43: while (true) {
                                                                                                           if (var30 <= var37) {
                                                                                                             var29 += 2;
-                                                                                                            var28 = var31;
+                                                                                                            var28_int = var31;
                                                                                                             var27 = var30;
                                                                                                             continue L39;
                                                                                                           } else {
@@ -930,7 +775,7 @@ final class ma extends le {
                                                                                                               }
                                                                                                             }
                                                                                                             this.field_h[var37] = (byte)var35;
-                                                                                                            var32 = var32 + (-var28 + var31);
+                                                                                                            var32 = var32 + (-var28_int + var31);
                                                                                                             var37++;
                                                                                                             continue L43;
                                                                                                           }
@@ -939,7 +784,7 @@ final class ma extends le {
                                                                                                     }
                                                                                                   } else {
                                                                                                     L46: {
-                                                                                                      var30 = (255 & this.field_h[var29]) + var28;
+                                                                                                      var30 = (255 & this.field_h[var29]) + var28_int;
                                                                                                       if ((var30 ^ -1) <= -1) {
                                                                                                         break L46;
                                                                                                       } else {
@@ -1022,26 +867,27 @@ final class ma extends le {
                                                                                               } else {
                                                                                                 L55: {
                                                                                                   var50 = var13[var27];
+                                                                                                  var28 = var50;
                                                                                                   if (null == var50.field_h) {
                                                                                                     break L55;
                                                                                                   } else {
-                                                                                                    var50.field_i = var38.d((byte) -118);
+                                                                                                    var28.field_i = var38.d((byte) -118);
                                                                                                     break L55;
                                                                                                   }
                                                                                                 }
                                                                                                 L56: {
-                                                                                                  if (null == var50.field_b) {
+                                                                                                  if (null == var28.field_b) {
                                                                                                     break L56;
                                                                                                   } else {
-                                                                                                    var50.field_e = var38.d((byte) -120);
+                                                                                                    var28.field_e = var38.d((byte) -120);
                                                                                                     break L56;
                                                                                                   }
                                                                                                 }
                                                                                                 L57: {
-                                                                                                  if (var50.field_j <= 0) {
+                                                                                                  if (var28.field_j <= 0) {
                                                                                                     break L57;
                                                                                                   } else {
-                                                                                                    var50.field_c = var38.d((byte) -127);
+                                                                                                    var28.field_c = var38.d((byte) -127);
                                                                                                     break L57;
                                                                                                   }
                                                                                                 }
@@ -1058,6 +904,7 @@ final class ma extends le {
                                                                                       } else {
                                                                                         L58: {
                                                                                           var49 = var13[var27];
+                                                                                          var28 = var49;
                                                                                           if (null == var49.field_h) {
                                                                                             break L58;
                                                                                           } else {
@@ -1148,9 +995,9 @@ final class ma extends le {
                                                                               } else {
                                                                                 L67: {
                                                                                   if (var54.length > var21) {
-                                                                                    incrementValue$10 = var21;
+                                                                                    incrementValue$1 = var21;
                                                                                     var21++;
-                                                                                    var20 = var18[incrementValue$10];
+                                                                                    var20 = var18[incrementValue$1];
                                                                                     break L67;
                                                                                   } else {
                                                                                     var20 = -1;
@@ -1182,9 +1029,9 @@ final class ma extends le {
                                                                               } else {
                                                                                 var25 = var13[var53[var21]];
                                                                                 if (var21 < var57.length) {
-                                                                                  incrementValue$11 = var21;
+                                                                                  incrementValue$2 = var21;
                                                                                   var21++;
-                                                                                  var20 = var10[incrementValue$11];
+                                                                                  var20 = var10[incrementValue$2];
                                                                                   break L69;
                                                                                 } else {
                                                                                   var20 = -1;
@@ -1210,13 +1057,13 @@ final class ma extends le {
                                                                           if (var20 != 0) {
                                                                             break L71;
                                                                           } else {
-                                                                            incrementValue$12 = var8;
+                                                                            incrementValue$3 = var8;
                                                                             var8++;
-                                                                            var24 = 16 + var38.field_h[incrementValue$12] << 596389762;
+                                                                            var24 = 16 + var38.field_h[incrementValue$3] << 596389762;
                                                                             if (var21 < var56.length) {
-                                                                              incrementValue$13 = var21;
+                                                                              incrementValue$4 = var21;
                                                                               var21++;
-                                                                              var20 = var7[incrementValue$13];
+                                                                              var20 = var7[incrementValue$4];
                                                                               break L71;
                                                                             } else {
                                                                               var20 = -1;
@@ -1247,15 +1094,15 @@ final class ma extends le {
                                                                             var20 = -1;
                                                                             break L74;
                                                                           } else {
-                                                                            incrementValue$14 = var21;
+                                                                            incrementValue$5 = var21;
                                                                             var21++;
-                                                                            var20 = var4[incrementValue$14];
+                                                                            var20 = var4[incrementValue$5];
                                                                             break L74;
                                                                           }
                                                                         }
-                                                                        incrementValue$15 = var5;
+                                                                        incrementValue$6 = var5;
                                                                         var5++;
-                                                                        var23 = var38.field_h[incrementValue$15] + -1;
+                                                                        var23 = var38.field_h[incrementValue$6] + -1;
                                                                         break L73;
                                                                       }
                                                                     }
@@ -1278,9 +1125,9 @@ final class ma extends le {
                                                                     var20 = -1;
                                                                     break L76;
                                                                   } else {
-                                                                    incrementValue$16 = var21;
+                                                                    incrementValue$7 = var21;
                                                                     var21++;
-                                                                    var20 = var18[incrementValue$16];
+                                                                    var20 = var18[incrementValue$7];
                                                                     break L76;
                                                                   }
                                                                 }
@@ -1322,15 +1169,15 @@ final class ma extends le {
                                         }
                                       } else {
                                         L77: {
-                                          dupTemp$17 = new nf();
-                                          var13[var14] = dupTemp$17;
-                                          var40 = dupTemp$17;
-                                          var15 = var40;
+                                          dupTemp$8 = new nf();
+                                          var13[var14] = dupTemp$8;
+                                          var40 = dupTemp$8;
+                                          var15_ref = var40;
                                           var16_int = var38.d((byte) -125);
                                           if (-1 <= (var16_int ^ -1)) {
                                             break L77;
                                           } else {
-                                            var15.field_h = new byte[2 * var16_int];
+                                            var15_ref.field_h = new byte[2 * var16_int];
                                             break L77;
                                           }
                                         }
@@ -1339,7 +1186,7 @@ final class ma extends le {
                                           if ((var16_int ^ -1) >= -1) {
                                             break L78;
                                           } else {
-                                            var15.field_b = new byte[2 + var16_int * 2];
+                                            var15_ref.field_b = new byte[2 + var16_int * 2];
                                             var40.field_b[1] = (byte)64;
                                             break L78;
                                           }
@@ -1386,27 +1233,19 @@ final class ma extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L79: {
             var2 = decompiledCaughtException;
-            stackOut_203_0 = (RuntimeException) (var2);
-            stackOut_203_1 = new StringBuilder().append("ma.<init>(");
-            stackIn_205_0 = stackOut_203_0;
-            stackIn_205_1 = stackOut_203_1;
-            stackIn_204_0 = stackOut_203_0;
-            stackIn_204_1 = stackOut_203_1;
+            stackIn_205_0 = (RuntimeException) (var2);
+
+            stackIn_205_1 = new StringBuilder().append("ma.<init>(");
+
             if (param0 == null) {
-              stackOut_205_0 = (RuntimeException) ((Object) stackIn_205_0);
-              stackOut_205_1 = (StringBuilder) ((Object) stackIn_205_1);
-              stackOut_205_2 = "null";
-              stackIn_206_0 = stackOut_205_0;
-              stackIn_206_1 = stackOut_205_1;
-              stackIn_206_2 = stackOut_205_2;
+              stackIn_206_0 = (RuntimeException) ((Object) stackIn_205_0);
+              stackIn_206_1 = (StringBuilder) ((Object) stackIn_205_1);
+              stackIn_206_2 = "null";
               break L79;
             } else {
-              stackOut_204_0 = (RuntimeException) ((Object) stackIn_204_0);
-              stackOut_204_1 = (StringBuilder) ((Object) stackIn_204_1);
-              stackOut_204_2 = "{...}";
-              stackIn_206_0 = stackOut_204_0;
-              stackIn_206_1 = stackOut_204_1;
-              stackIn_206_2 = stackOut_204_2;
+              stackIn_206_0 = (RuntimeException) ((Object) stackIn_205_0);
+              stackIn_206_1 = (StringBuilder) ((Object) stackIn_205_1);
+              stackIn_206_2 = "{...}";
               break L79;
             }
           }

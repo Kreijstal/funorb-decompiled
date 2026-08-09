@@ -32,9 +32,6 @@ final class cd extends wj {
     final static boolean a(int param0, char param1) {
         int stackIn_20_0 = 0;
         int stackIn_25_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_18_0 = 0;
         if (param0 == -91) {
           if (param1 < 65) {
             if (param1 >= 97) {
@@ -56,20 +53,17 @@ final class cd extends wj {
                     if (122 < param1) {
                       break L1;
                     } else {
-                      stackOut_23_0 = 1;
-                      stackIn_25_0 = stackOut_23_0;
+                      stackIn_25_0 = 1;
                       break L0;
                     }
                   }
                 }
-                stackOut_24_0 = 0;
-                stackIn_25_0 = stackOut_24_0;
+                stackIn_25_0 = 0;
                 break L0;
               }
               return stackIn_25_0 != 0;
             } else {
-              stackOut_18_0 = 1;
-              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_0 = 1;
               return stackIn_20_0 != 0;
             }
           }
@@ -104,27 +98,15 @@ final class cd extends wj {
     }
 
     final static int a(CharSequence param0, int param1, int param2) {
-        int discarded$2 = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -132,39 +114,30 @@ final class cd extends wj {
                 break L1;
               } else {
                 var4 = (CharSequence) null;
-                discarded$2 = cd.a((CharSequence) null, -84, 37);
+                cd.a((CharSequence) null, -84, 37);
                 break L1;
               }
             }
-            stackOut_2_0 = af.a(true, param0, -126, param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = af.a(true, param0, -126, param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("cd.C(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("cd.C(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -174,8 +147,7 @@ final class cd extends wj {
     }
 
     final byte[] f(int param0) {
-        int discarded$6 = 0;
-        CharSequence var3 = null;
+        CharSequence var3;
         if (param0 == 0) {
           if (!this.field_l) {
             if (-this.field_s + this.field_u.field_j.length > this.field_u.field_i) {
@@ -188,7 +160,7 @@ final class cd extends wj {
           }
         } else {
           var3 = (CharSequence) null;
-          discarded$6 = cd.a((CharSequence) null, 97, -111);
+          cd.a((CharSequence) null, 97, -111);
           if (!this.field_l) {
             if (-this.field_s + this.field_u.field_j.length > this.field_u.field_i) {
               throw new RuntimeException();
@@ -214,12 +186,12 @@ final class cd extends wj {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         var8 = OrbDefence.field_D ? 1 : 0;
         if (-1 >= (ji.field_b ^ -1)) {
           L0: {

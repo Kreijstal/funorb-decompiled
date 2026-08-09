@@ -13,8 +13,6 @@ final class nl {
 
     final static boolean a(byte param0, int param1) {
         int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
         if (param1 != 0) {
           if (param0 < 95) {
             field_a = (String) null;
@@ -26,12 +24,10 @@ final class nl {
           } else {
             L0: {
               if (-2 == (param1 ^ -1)) {
-                stackOut_5_0 = 1;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 1;
                 break L0;
               } else {
-                stackOut_4_0 = 0;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 0;
                 break L0;
               }
             }

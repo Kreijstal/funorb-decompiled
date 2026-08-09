@@ -9,17 +9,17 @@ final class qab {
     int field_b;
 
     final char a(int param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         if (param0 > -75) {
           this.field_b = -65;
-          fieldTemp$4 = this.field_b;
+          fieldTemp$2 = this.field_b;
           this.field_b = this.field_b + 1;
-          return this.field_c.charAt(fieldTemp$4);
+          return this.field_c.charAt(fieldTemp$2);
         } else {
-          fieldTemp$5 = this.field_b;
+          fieldTemp$3 = this.field_b;
           this.field_b = this.field_b + 1;
-          return this.field_c.charAt(fieldTemp$5);
+          return this.field_c.charAt(fieldTemp$3);
         }
     }
 
@@ -28,23 +28,16 @@ final class qab {
     }
 
     final boolean a(byte param0) {
-        char discarded$10 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 > -102) {
           L0: {
-            discarded$10 = this.a(-42);
+            this.a(-42);
             if (this.field_e > this.field_b) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -52,12 +45,10 @@ final class qab {
         } else {
           L1: {
             if (this.field_e > this.field_b) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -66,9 +57,8 @@ final class qab {
     }
 
     public static void b(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 0) {
-            discarded$0 = qab.a(107, -118);
+            qab.a(107, -118);
             field_a = null;
             return;
         }

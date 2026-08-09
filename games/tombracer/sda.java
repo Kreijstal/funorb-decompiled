@@ -36,40 +36,16 @@ final class sda extends vg {
         Object var4 = null;
         java.net.URL stackIn_2_0 = null;
         java.net.URL stackIn_12_0 = null;
-        Object stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         Object stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         Object stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        Object stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        Object stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        Object stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        java.net.URL stackOut_11_0 = null;
-        java.net.URL stackOut_1_0 = null;
-        Object stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        Object stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        Object stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        Object stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        Object stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        Object stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         try {
           L0: {
             if (param1 == -1) {
@@ -101,13 +77,11 @@ final class sda extends vg {
                   }
                 }
               }
-              stackOut_11_0 = us.a((byte) 66, param2, (String) (var4), -1, (String) (var3));
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_0 = us.a((byte) 66, param2, (String) (var4), -1, (String) (var3));
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (java.net.URL) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (java.net.URL) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -116,56 +90,40 @@ final class sda extends vg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = var3;
-            stackOut_13_1 = new StringBuilder().append("sda.A(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = var3;
+
+            stackIn_15_1 = new StringBuilder().append("sda.A(");
+
             if (param0 == null) {
-              stackOut_15_0 = stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = stackIn_15_0;
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = stackIn_15_0;
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_16_0 = stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+
+
+            stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_18_0 = stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L4;
             } else {
-              stackOut_17_0 = stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L4;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_16_0), stackIn_19_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_2_0;

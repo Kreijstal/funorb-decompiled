@@ -12,8 +12,8 @@ final class gl extends vk implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int a(boolean param0) {
-        int var2 = 0;
-        java.awt.event.MouseWheelEvent var3 = null;
+        int var2;
+        java.awt.event.MouseWheelEvent var3;
         if (!param0) {
           var3 = (java.awt.event.MouseWheelEvent) null;
           this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);

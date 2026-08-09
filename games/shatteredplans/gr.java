@@ -15,8 +15,14 @@ final class gr extends oh {
     int field_l;
 
     final static void a(int param0, int param1, int[] param2, int param3) {
-        RuntimeException var4 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -24,22 +30,6 @@ final class gr extends oh {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -60,7 +50,7 @@ final class gr extends oh {
               } else {
                 L2: {
                   var7 = c.field_e;
-                  if (gf.field_i > var7) {
+                  if ((gf.field_i ^ -1) < (var7 ^ -1)) {
                     var7 = gf.field_i;
                     break L2;
                   } else {
@@ -96,38 +86,29 @@ final class gr extends oh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var4);
-            stackOut_14_1 = new StringBuilder().append("gr.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_17_0 = (RuntimeException) (var4);
+
+            stackIn_17_1 = new StringBuilder().append("gr.B(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L5;
             }
           }
-          throw r.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param3 + ')');
         }
     }
 
     public static void a(int param0) {
-        bi discarded$0 = null;
         if (param0 >= -25) {
-            discarded$0 = gr.a((byte) -99, 47, -15);
+            gr.a((byte) -99, 47, -15);
             field_p = null;
             return;
         }
@@ -135,9 +116,9 @@ final class gr extends oh {
     }
 
     final static bi a(byte param0, int param1, int param2) {
-        bi var3 = null;
-        int var4 = 0;
-        int var5 = 0;
+        bi var3;
+        int var4;
+        int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         var3 = new bi(param2, param2);
         var4 = 0;

@@ -29,32 +29,20 @@ abstract class nl {
     abstract void a(byte param0, java.awt.Component param1);
 
     final static boolean a(int param0, byte param1) {
-        int var2 = 0;
+        int var2;
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_26_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         var2 = nk.field_Fb[param0];
         if (var2 == 18) {
           L0: {
             if (0 >= mo.field_e) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               break L0;
             } else {
-              stackOut_3_0 = 1;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = 1;
               break L0;
             }
           }
@@ -66,12 +54,10 @@ abstract class nl {
                 if ((var2 ^ -1) == -25) {
                   L1: {
                     if (-7 != (mo.field_e ^ -1)) {
-                      stackOut_25_0 = 0;
-                      stackIn_26_0 = stackOut_25_0;
+                      stackIn_26_0 = 0;
                       break L1;
                     } else {
-                      stackOut_24_0 = 1;
-                      stackIn_26_0 = stackOut_24_0;
+                      stackIn_26_0 = 1;
                       break L1;
                     }
                   }
@@ -99,12 +85,10 @@ abstract class nl {
               } else {
                 L2: {
                   if (-7 != (mo.field_e ^ -1)) {
-                    stackOut_19_0 = 0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_20_0 = 0;
                     break L2;
                   } else {
-                    stackOut_18_0 = 1;
-                    stackIn_20_0 = stackOut_18_0;
+                    stackIn_20_0 = 1;
                     break L2;
                   }
                 }
@@ -113,12 +97,10 @@ abstract class nl {
             } else {
               L3: {
                 if (-7 != (mo.field_e ^ -1)) {
-                  stackOut_14_0 = 0;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = 0;
                   break L3;
                 } else {
-                  stackOut_13_0 = 1;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = 1;
                   break L3;
                 }
               }
@@ -127,12 +109,10 @@ abstract class nl {
           } else {
             L4: {
               if (mo.field_e >= -1 + en.field_a.length) {
-                stackOut_9_0 = 0;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = 0;
                 break L4;
               } else {
-                stackOut_8_0 = 1;
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = 1;
                 break L4;
               }
             }

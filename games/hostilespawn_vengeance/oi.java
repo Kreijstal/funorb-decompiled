@@ -8,13 +8,13 @@ final class oi {
 
     final void a() {
         int var1 = 0;
-        ((oi) this).field_a = 0;
-        for (var1 = 0; var1 < ((oi) this).field_c.length; var1++) {
-            ((oi) this).field_c[var1] = 0;
+        this.field_a = 0;
+        for (var1 = 0; var1 < this.field_c.length; var1++) {
+            this.field_c[var1] = 0;
         }
     }
 
     oi(int param0) {
-        ((oi) this).field_c = new int[param0];
+        this.field_c = new int[param0];
     }
 }

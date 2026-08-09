@@ -23,9 +23,9 @@ final class va extends IOException {
 
     final static void a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -43,7 +43,7 @@ final class va extends IOException {
                 break L0;
               } else {
                 L3: {
-                  if (field_c == var1_int) {
+                  if ((field_c ^ -1) == (var1_int ^ -1)) {
                     if (-33 < (md.field_k[var1_int] ^ -1)) {
                       md.field_k[var1_int] = md.field_k[var1_int] + 1;
                       break L3;

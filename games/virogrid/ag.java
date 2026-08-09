@@ -17,22 +17,16 @@ final class ag extends java.awt.Canvas {
     final static boolean c(int param0) {
         int stackIn_10_0 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_9_0 = 0;
         if (param0 <= -95) {
           if (md.field_e == null) {
             if (!md.a(false)) {
               L0: {
                 if (null != km.field_yb) {
-                  stackOut_18_0 = 1;
-                  stackIn_20_0 = stackOut_18_0;
+                  stackIn_20_0 = 1;
                   break L0;
                 } else {
                   if (!af.a(false)) {
-                    stackOut_19_0 = 0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_20_0 = 0;
                     break L0;
                   } else {
                     return true;
@@ -52,13 +46,11 @@ final class ag extends java.awt.Canvas {
             if (!md.a(false)) {
               L1: {
                 if (null != km.field_yb) {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_0 = 1;
                   break L1;
                 } else {
                   if (!af.a(false)) {
-                    stackOut_9_0 = 0;
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = 0;
                     break L1;
                   } else {
                     return true;
@@ -84,13 +76,12 @@ final class ag extends java.awt.Canvas {
     }
 
     final static void a(int param0) {
-        int discarded$2 = 0;
         int var1_int = 0;
-        RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -100,7 +91,7 @@ final class ag extends java.awt.Canvas {
               if (param0 == 255) {
                 break L1;
               } else {
-                discarded$2 = ag.a(false);
+                ag.a(false);
                 break L1;
               }
             }

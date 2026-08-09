@@ -32,12 +32,12 @@ final class vb extends dh {
 
     final static void d(int param0) {
         try {
+            Throwable decompiledCaughtException = null;
             IOException var1 = null;
-            RuntimeException var1_ref = null;
             int var1_int = 0;
+            RuntimeException var1_ref = null;
             IOException var2 = null;
             int var3 = 0;
-            Throwable decompiledCaughtException = null;
             var3 = Vertigo2.field_L ? 1 : 0;
             try {
               L0: {
@@ -135,22 +135,20 @@ final class vb extends dh {
     final byte[] b(int param0) {
         byte[] var4 = new byte[this.field_i.capacity()];
         byte[] var2 = var4;
-        java.nio.Buffer discarded$0 = this.field_i.position(0);
-        java.nio.ByteBuffer discarded$1 = this.field_i.get(var4);
+        this.field_i.position(0);
+        this.field_i.get(var4);
         int var3 = 8 / ((param0 - 13) / 58);
         return var4;
     }
 
     final void a(byte[] param0, boolean param1) {
-        java.nio.Buffer discarded$0 = null;
-        java.nio.ByteBuffer discarded$1 = null;
         try {
             this.field_i = java.nio.ByteBuffer.allocateDirect(param0.length);
             if (!param1) {
                 field_j = (cr) null;
             }
-            discarded$0 = this.field_i.position(0);
-            discarded$1 = this.field_i.put(param0);
+            this.field_i.position(0);
+            this.field_i.put(param0);
         } catch (RuntimeException runtimeException) {
             throw wn.a((Throwable) ((Object) runtimeException), "vb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

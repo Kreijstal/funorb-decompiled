@@ -30,12 +30,11 @@ abstract class vc {
     abstract int a(int param0, long param1);
 
     public static void c(int param0) {
-        boolean discarded$0 = false;
         field_d = null;
         field_c = null;
         field_f = null;
         if (param0 != 0) {
-            discarded$0 = vc.a(83, 26);
+            vc.a(83, 26);
         }
         field_e = null;
         field_b = null;
@@ -46,13 +45,11 @@ abstract class vc {
     final static boolean a(int param0, int param1) {
         try {
             int var2_int = 0;
-            IOException var2 = null;
             int stackIn_14_0 = 0;
             int stackIn_16_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_13_0 = 0;
-            int stackOut_15_0 = 0;
+            IOException var2 = null;
             L0: {
               if (param0 <= -97) {
                 break L0;
@@ -81,14 +78,12 @@ abstract class vc {
                       dm.field_c = ll.a(1000);
                       mk.field_j.field_k = mk.field_j.field_k + var2_int;
                       if (param1 > mk.field_j.field_k) {
-                        stackOut_13_0 = 0;
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = 0;
                         decompiledRegionSelector0 = 0;
                         break L1;
                       } else {
                         mk.field_j.field_k = 0;
-                        stackOut_15_0 = 1;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = 1;
                         decompiledRegionSelector0 = 1;
                         break L1;
                       }

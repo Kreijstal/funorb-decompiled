@@ -7,20 +7,17 @@ final class al {
 
     final hs a(int param0) {
         try {
-            oha discarded$1 = null;
-            IllegalAccessException var2 = null;
-            java.lang.reflect.InvocationTargetException var2_ref = null;
-            Object[] var3 = null;
             hs stackIn_3_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            hs stackOut_2_0 = null;
+            IllegalAccessException var2 = null;
+            java.lang.reflect.InvocationTargetException var2_ref = null;
+            Object[] var3 = null;
             if (!(this.field_b instanceof hs)) {
               try {
                 L0: {
                   var3 = (Object[]) null;
-                  stackOut_2_0 = (hs) (vb.field_n.invoke(this.field_b, (Object[]) null));
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = (hs) (vb.field_n.invoke(this.field_b, (Object[]) null));
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -45,7 +42,7 @@ final class al {
                 if (param0 == 0) {
                   return null;
                 } else {
-                  discarded$1 = al.a(-107, -17);
+                  al.a(-107, -17);
                   return null;
                 }
               }
@@ -61,26 +58,16 @@ final class al {
 
     al(hs param0) {
         try {
-            IllegalAccessException var2 = null;
-            java.lang.reflect.InvocationTargetException var2_ref = null;
-            InstantiationException var2_ref2 = null;
-            RuntimeException var2_ref3 = null;
-            RuntimeException stackIn_11_0 = null;
-            StringBuilder stackIn_11_1 = null;
             RuntimeException stackIn_12_0 = null;
             StringBuilder stackIn_12_1 = null;
             RuntimeException stackIn_13_0 = null;
             StringBuilder stackIn_13_1 = null;
             String stackIn_13_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_10_0 = null;
-            StringBuilder stackOut_10_1 = null;
-            RuntimeException stackOut_12_0 = null;
-            StringBuilder stackOut_12_1 = null;
-            String stackOut_12_2 = null;
-            RuntimeException stackOut_11_0 = null;
-            StringBuilder stackOut_11_1 = null;
-            String stackOut_11_2 = null;
+            IllegalAccessException var2 = null;
+            java.lang.reflect.InvocationTargetException var2_ref = null;
+            InstantiationException var2_ref2 = null;
+            RuntimeException var2_ref3 = null;
             try {
               this.field_b = param0;
               if (null != vb.field_g) {
@@ -111,27 +98,19 @@ final class al {
               decompiledCaughtException = decompiledCaughtParameter3;
               L1: {
                 var2_ref3 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_10_0 = (RuntimeException) (var2_ref3);
-                stackOut_10_1 = new StringBuilder().append("al.<init>(");
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_12_1 = stackOut_10_1;
-                stackIn_11_0 = stackOut_10_0;
-                stackIn_11_1 = stackOut_10_1;
+                stackIn_12_0 = (RuntimeException) (var2_ref3);
+
+                stackIn_12_1 = new StringBuilder().append("al.<init>(");
+
                 if (param0 == null) {
-                  stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-                  stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-                  stackOut_12_2 = "null";
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
-                  stackIn_13_2 = stackOut_12_2;
+                  stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+                  stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+                  stackIn_13_2 = "null";
                   break L1;
                 } else {
-                  stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-                  stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackOut_11_2 = "{...}";
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
-                  stackIn_13_2 = stackOut_11_2;
+                  stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+                  stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+                  stackIn_13_2 = "{...}";
                   break L1;
                 }
               }
@@ -157,9 +136,9 @@ final class al {
     }
 
     final static oha a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = BachelorFridge.field_y;
         var2 = -33 % ((param0 - 28) / 58);
         var3 = 0;

@@ -22,7 +22,7 @@ final class ud extends km {
     private int field_I;
 
     final void a(int param0, int param1, char param2) {
-        int var5 = 0;
+        int var5;
         L0: {
           var5 = BrickABrac.field_J ? 1 : 0;
           if (param0 == -120) {
@@ -112,44 +112,22 @@ final class ud extends km {
     }
 
     final void b(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        jp var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_16_1 = 0;
-        int stackIn_16_2 = 0;
-        int stackIn_16_3 = 0;
-        int stackIn_16_4 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_17_1 = 0;
-        int stackIn_17_2 = 0;
-        int stackIn_17_3 = 0;
-        int stackIn_17_4 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_18_1 = 0;
-        int stackIn_18_2 = 0;
-        int stackIn_18_3 = 0;
-        int stackIn_18_4 = 0;
-        int stackIn_18_5 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
-        int stackOut_15_2 = 0;
-        int stackOut_15_3 = 0;
-        int stackOut_15_4 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_17_1 = 0;
-        int stackOut_17_2 = 0;
-        int stackOut_17_3 = 0;
-        int stackOut_17_4 = 0;
-        int stackOut_17_5 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_16_1 = 0;
-        int stackOut_16_2 = 0;
-        int stackOut_16_3 = 0;
-        int stackOut_16_4 = 0;
-        int stackOut_16_5 = 0;
+        int stackIn_17_0;
+        int stackIn_17_1;
+        int stackIn_17_2;
+        int stackIn_17_3;
+        int stackIn_17_4;
+        int stackIn_18_0;
+        int stackIn_18_1;
+        int stackIn_18_2;
+        int stackIn_18_3;
+        int stackIn_18_4;
+        int stackIn_18_5;
+        int var2;
+        int var3;
+        jp var4;
+        int var5;
+        int var6;
         L0: {
           L1: {
             super.b((byte) -101);
@@ -217,48 +195,31 @@ final class ud extends km {
                         break L7;
                       } else {
                         L8: {
-                          stackOut_15_0 = 210;
-                          stackOut_15_1 = 178;
-                          stackOut_15_2 = 385;
-                          stackOut_15_3 = 233;
-                          stackOut_15_4 = 0;
-                          stackIn_17_0 = stackOut_15_0;
-                          stackIn_17_1 = stackOut_15_1;
-                          stackIn_17_2 = stackOut_15_2;
-                          stackIn_17_3 = stackOut_15_3;
-                          stackIn_17_4 = stackOut_15_4;
-                          stackIn_16_0 = stackOut_15_0;
-                          stackIn_16_1 = stackOut_15_1;
-                          stackIn_16_2 = stackOut_15_2;
-                          stackIn_16_3 = stackOut_15_3;
-                          stackIn_16_4 = stackOut_15_4;
+                          stackIn_17_0 = 210;
+
+                          stackIn_17_1 = 178;
+
+                          stackIn_17_2 = 385;
+
+                          stackIn_17_3 = 233;
+
+                          stackIn_17_4 = 0;
+
                           if (1 != -hh.field_b[0] + var3) {
-                            stackOut_17_0 = stackIn_17_0;
-                            stackOut_17_1 = stackIn_17_1;
-                            stackOut_17_2 = stackIn_17_2;
-                            stackOut_17_3 = stackIn_17_3;
-                            stackOut_17_4 = stackIn_17_4;
-                            stackOut_17_5 = 190;
-                            stackIn_18_0 = stackOut_17_0;
-                            stackIn_18_1 = stackOut_17_1;
-                            stackIn_18_2 = stackOut_17_2;
-                            stackIn_18_3 = stackOut_17_3;
-                            stackIn_18_4 = stackOut_17_4;
-                            stackIn_18_5 = stackOut_17_5;
+                            stackIn_18_0 = stackIn_17_0;
+                            stackIn_18_1 = stackIn_17_1;
+                            stackIn_18_2 = stackIn_17_2;
+                            stackIn_18_3 = stackIn_17_3;
+                            stackIn_18_4 = stackIn_17_4;
+                            stackIn_18_5 = 190;
                             break L8;
                           } else {
-                            stackOut_16_0 = stackIn_16_0;
-                            stackOut_16_1 = stackIn_16_1;
-                            stackOut_16_2 = stackIn_16_2;
-                            stackOut_16_3 = stackIn_16_3;
-                            stackOut_16_4 = stackIn_16_4;
-                            stackOut_16_5 = 128;
-                            stackIn_18_0 = stackOut_16_0;
-                            stackIn_18_1 = stackOut_16_1;
-                            stackIn_18_2 = stackOut_16_2;
-                            stackIn_18_3 = stackOut_16_3;
-                            stackIn_18_4 = stackOut_16_4;
-                            stackIn_18_5 = stackOut_16_5;
+                            stackIn_18_0 = stackIn_17_0;
+                            stackIn_18_1 = stackIn_17_1;
+                            stackIn_18_2 = stackIn_17_2;
+                            stackIn_18_3 = stackIn_17_3;
+                            stackIn_18_4 = stackIn_17_4;
+                            stackIn_18_5 = 128;
                             break L8;
                           }
                         }
@@ -320,18 +281,16 @@ final class ud extends km {
     }
 
     private final void c(int param0, int param1) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        int var3 = 0;
-        on var4 = null;
-        int var5 = 0;
+        int var3;
+        on var4;
+        int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
         var3 = 0;
         L0: while (true) {
           if (this.field_F.length <= var3) {
             L1: {
               this.field_z.c((byte) -78);
-              discarded$2 = td.a(this.field_F, this.field_A.field_j[param1], this.field_r, this.field_z, this.field_s, 10792131);
+              td.a(this.field_F, this.field_A.field_j[param1], this.field_r, this.field_z, this.field_s, 10792131);
               cg.a(this.field_F, (byte) 35, this.field_z, false);
               this.field_I = 122880;
               this.field_u = 163840;
@@ -339,7 +298,7 @@ final class ud extends km {
               if (param0 == -6845) {
                 break L1;
               } else {
-                discarded$3 = this.a(false);
+                this.a(false);
                 break L1;
               }
             }
@@ -356,7 +315,7 @@ final class ud extends km {
                     continue L2;
                   } else {
                     L4: {
-                      if ((1 & var4.field_N) != 0) {
+                      if ((1 & var4.field_N ^ -1) != -1) {
                         break L4;
                       } else {
                         L5: {
@@ -417,8 +376,6 @@ final class ud extends km {
         mp var5 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -426,17 +383,6 @@ final class ud extends km {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_8_0 = 0;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
@@ -446,8 +392,7 @@ final class ud extends km {
                 break L1;
               } else {
                 if (var5.field_Ub != null) {
-                  stackOut_3_0 = 1;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -463,14 +408,12 @@ final class ud extends km {
                   if (null == ac.a(param0, 2)) {
                     break L3;
                   } else {
-                    stackOut_7_0 = 1;
-                    stackIn_9_0 = stackOut_7_0;
+                    stackIn_9_0 = 1;
                     break L2;
                   }
                 }
               }
-              stackOut_8_0 = 0;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = 0;
               break L2;
             }
             decompiledRegionSelector0 = 1;
@@ -480,27 +423,19 @@ final class ud extends km {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var4);
-            stackOut_10_1 = new StringBuilder().append("ud.LA(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var4);
+
+            stackIn_12_1 = new StringBuilder().append("ud.LA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -514,9 +449,8 @@ final class ud extends km {
     }
 
     final boolean a(char param0, int param1, int param2) {
-        int discarded$0 = 0;
         if (param1 <= 98) {
-            discarded$0 = this.a(true);
+            this.a(true);
         }
         if (-49 != (param2 ^ -1)) {
             return super.a(param0, 100, param2);
@@ -587,18 +521,17 @@ final class ud extends km {
     }
 
     final boolean a(int param0, boolean param1, byte param2) {
-        boolean discarded$2 = false;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        q var8 = null;
+        int var5;
+        int var6;
+        int var7;
+        q var8;
         L0: {
           var7 = BrickABrac.field_J ? 1 : 0;
           var8 = this.field_m[param0];
           if (param2 == 123) {
             break L0;
           } else {
-            discarded$2 = this.a('ﾉ', -55, 73);
+            this.a('ﾉ', -55, 73);
             break L0;
           }
         }
@@ -667,7 +600,6 @@ final class ud extends km {
     final static void a(int param0, e param1, byte param2) {
         pi var6 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var6 = k.field_h;
             var6.e(-13413, param0);
@@ -681,7 +613,7 @@ final class ud extends km {
             var6.a(param1.field_m, (byte) -79);
             var6.a(param1.field_p, (byte) -79);
             int var5 = -68 / ((param2 - -15) / 63);
-            discarded$0 = var6.d(3, var4);
+            var6.d(3, var4);
             var6.d((byte) 117, var6.field_l - var4);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) ((Object) runtimeException), "ud.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -724,22 +656,20 @@ final class ud extends km {
     }
 
     final void b(boolean param0) {
-        int dupTemp$1 = 0;
-        q var3 = null;
-        q var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        q var7_ref_q = null;
-        String var8 = null;
-        int var9 = 0;
-        q var10 = null;
-        q var11 = null;
-        String var12 = null;
-        q var13 = null;
+        int dupTemp$0 = 0;
         String stackIn_9_0 = null;
-        String stackOut_8_0 = null;
-        String stackOut_7_0 = null;
+        q var3;
+        q var4;
+        int var5;
+        int var6;
+        int var7;
+        q var7_ref_q;
+        String var8;
+        int var9;
+        q var10;
+        q var11;
+        String var12;
+        q var13;
         var9 = BrickABrac.field_J ? 1 : 0;
         if (null != this.field_A) {
           L0: {
@@ -789,20 +719,18 @@ final class ud extends km {
               L3: {
                 var7_ref_q = this.field_m[var6];
                 if (var7_ref_q.field_f != 8) {
-                  stackOut_8_0 = ag.field_D[var7_ref_q.field_f];
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = ag.field_D[var7_ref_q.field_f];
                   break L3;
                 } else {
-                  stackOut_7_0 = this.e((byte) 74);
-                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_0 = this.e((byte) 74);
                   break L3;
                 }
               }
               var12 = stackIn_9_0;
               var8 = var12;
-              dupTemp$1 = 30 + nn.field_g.c(var12);
-              var7_ref_q.field_j = dupTemp$1;
-              var5 = var5 + dupTemp$1;
+              dupTemp$0 = 30 + nn.field_g.c(var12);
+              var7_ref_q.field_j = dupTemp$0;
+              var5 = var5 + dupTemp$0;
               if (-4 > (var6 ^ -1)) {
                 var5 += 10;
                 var6++;

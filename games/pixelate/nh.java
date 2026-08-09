@@ -8,12 +8,12 @@ final class nh {
     static int field_b;
 
     final static ae c(byte param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        ae var5 = null;
-        int var6 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        ae var5;
+        int var6;
         var6 = Pixelate.field_H ? 1 : 0;
         var3 = -63 / ((param0 - -27) / 63);
         L0: while (true) {
@@ -77,30 +77,19 @@ final class nh {
     }
 
     final static long a(CharSequence param0, int param1) {
+        long stackIn_25_0 = 0L;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        long stackIn_23_0 = 0L;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        long stackOut_22_0 = 0L;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -179,8 +168,7 @@ final class nh {
                     break L8;
                   }
                 }
-                stackOut_22_0 = var2_long;
-                stackIn_23_0 = stackOut_22_0;
+                stackIn_25_0 = var2_long;
                 break L0;
               }
             }
@@ -189,46 +177,38 @@ final class nh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var2);
-            stackOut_24_1 = new StringBuilder().append("nh.A(");
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_28_0 = (RuntimeException) (var2);
+
+            stackIn_28_1 = new StringBuilder().append("nh.A(");
+
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L9;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L9;
             }
           }
-          throw aa.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param1 + ')');
         }
-        return stackIn_23_0;
+        return stackIn_25_0;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var12 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {

@@ -29,31 +29,20 @@ final class d {
 
     final static String a(int param0, CharSequence param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         char[] var7 = null;
         char[] var8 = null;
-        String stackIn_22_0 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        String stackIn_24_0 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_21_0 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        RuntimeException var2 = null;
         var6 = HoldTheLine.field_D;
         try {
           L0: {
@@ -80,14 +69,13 @@ final class d {
                     break L3;
                   }
                 }
-                stackOut_21_0 = new String(var8);
-                stackIn_22_0 = stackOut_21_0;
+                stackIn_24_0 = new String(var8);
                 break L0;
               } else {
                 L4: {
                   L5: {
                     var5 = param1.charAt(var4);
-                    if (var5 < 65) {
+                    if (-66 < (var5 ^ -1)) {
                       break L5;
                     } else {
                       if (var5 <= 90) {
@@ -136,38 +124,30 @@ final class d {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var2);
-            stackOut_23_1 = new StringBuilder().append("d.B(").append(param0).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_27_0 = (RuntimeException) (var2);
+
+            stackIn_27_1 = new StringBuilder().append("d.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L9;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L9;
             }
           }
-          throw kk.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');
         }
-        return stackIn_22_0;
+        return stackIn_24_0;
     }
 
     final static void a(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = hg.a((byte) 95);
         if (param0) {
           return;

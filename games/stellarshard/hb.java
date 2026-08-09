@@ -27,7 +27,7 @@ final class hb extends fe implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int b(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = this.field_h;
         if (param0 > -110) {
           this.field_h = 59;

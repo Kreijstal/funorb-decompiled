@@ -9,19 +9,15 @@ final class eo {
     static String field_a;
 
     final static boolean a(int param0, boolean param1, int param2) {
-        int var3 = 0;
-        String var4 = null;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int var3;
+        String var4;
         L0: {
           if (null == ej.field_n) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }

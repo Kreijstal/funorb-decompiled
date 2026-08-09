@@ -46,8 +46,8 @@ final class sha extends oda {
     }
 
     private final void h(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = VoidHunters.field_G;
         var2 = -85 % ((param0 - -47) / 56);
         if (this.field_B != null) {
@@ -115,502 +115,178 @@ final class sha extends oda {
     }
 
     final void d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
-        vcb stackIn_14_0 = null;
         vcb stackIn_15_0 = null;
         vcb stackIn_16_0 = null;
         int stackIn_16_1 = 0;
-        vcb stackIn_20_0 = null;
-        int stackIn_20_1 = 0;
-        int stackIn_20_2 = 0;
-        int stackIn_20_3 = 0;
-        int stackIn_20_4 = 0;
-        vcb stackIn_21_0 = null;
-        int stackIn_21_1 = 0;
-        int stackIn_21_2 = 0;
-        int stackIn_21_3 = 0;
-        int stackIn_21_4 = 0;
-        vcb stackIn_22_0 = null;
-        int stackIn_22_1 = 0;
-        int stackIn_22_2 = 0;
-        int stackIn_22_3 = 0;
-        int stackIn_22_4 = 0;
-        int stackIn_22_5 = 0;
+        vcb stackIn_21_0;
+        int stackIn_21_1;
+        int stackIn_21_2;
+        int stackIn_21_3;
+        int stackIn_21_4;
+        vcb stackIn_22_0;
+        int stackIn_22_1;
+        int stackIn_22_2;
+        int stackIn_22_3;
+        int stackIn_22_4;
+        int stackIn_22_5;
         int stackIn_30_0 = 0;
         int stackIn_33_0 = 0;
-        vcb stackIn_36_0 = null;
         vcb stackIn_37_0 = null;
         vcb stackIn_38_0 = null;
         int stackIn_38_1 = 0;
-        vcb stackIn_42_0 = null;
-        int stackIn_42_1 = 0;
-        int stackIn_42_2 = 0;
-        int stackIn_42_3 = 0;
-        int stackIn_42_4 = 0;
-        vcb stackIn_43_0 = null;
-        int stackIn_43_1 = 0;
-        int stackIn_43_2 = 0;
-        int stackIn_43_3 = 0;
-        int stackIn_43_4 = 0;
-        vcb stackIn_44_0 = null;
-        int stackIn_44_1 = 0;
-        int stackIn_44_2 = 0;
-        int stackIn_44_3 = 0;
-        int stackIn_44_4 = 0;
-        int stackIn_44_5 = 0;
+        vcb stackIn_43_0;
+        int stackIn_43_1;
+        int stackIn_43_2;
+        int stackIn_43_3;
+        int stackIn_43_4;
+        vcb stackIn_44_0;
+        int stackIn_44_1;
+        int stackIn_44_2;
+        int stackIn_44_3;
+        int stackIn_44_4;
+        int stackIn_44_5;
         int stackIn_50_0 = 0;
         int stackIn_53_0 = 0;
-        vcb stackIn_56_0 = null;
         vcb stackIn_57_0 = null;
         vcb stackIn_58_0 = null;
         int stackIn_58_1 = 0;
-        vcb stackIn_62_0 = null;
-        int stackIn_62_1 = 0;
-        int stackIn_62_2 = 0;
-        int stackIn_62_3 = 0;
-        int stackIn_62_4 = 0;
-        vcb stackIn_63_0 = null;
-        int stackIn_63_1 = 0;
-        int stackIn_63_2 = 0;
-        int stackIn_63_3 = 0;
-        int stackIn_63_4 = 0;
-        vcb stackIn_64_0 = null;
-        int stackIn_64_1 = 0;
-        int stackIn_64_2 = 0;
-        int stackIn_64_3 = 0;
-        int stackIn_64_4 = 0;
-        int stackIn_64_5 = 0;
+        vcb stackIn_63_0;
+        int stackIn_63_1;
+        int stackIn_63_2;
+        int stackIn_63_3;
+        int stackIn_63_4;
+        vcb stackIn_64_0;
+        int stackIn_64_1;
+        int stackIn_64_2;
+        int stackIn_64_3;
+        int stackIn_64_4;
+        int stackIn_64_5;
         int stackIn_69_0 = 0;
         int stackIn_72_0 = 0;
-        vcb stackIn_75_0 = null;
         vcb stackIn_76_0 = null;
         vcb stackIn_77_0 = null;
         int stackIn_77_1 = 0;
-        vcb stackIn_81_0 = null;
-        int stackIn_81_1 = 0;
-        int stackIn_81_2 = 0;
-        int stackIn_81_3 = 0;
-        int stackIn_81_4 = 0;
-        vcb stackIn_82_0 = null;
-        int stackIn_82_1 = 0;
-        int stackIn_82_2 = 0;
-        int stackIn_82_3 = 0;
-        int stackIn_82_4 = 0;
-        vcb stackIn_83_0 = null;
-        int stackIn_83_1 = 0;
-        int stackIn_83_2 = 0;
-        int stackIn_83_3 = 0;
-        int stackIn_83_4 = 0;
-        int stackIn_83_5 = 0;
+        vcb stackIn_82_0;
+        int stackIn_82_1;
+        int stackIn_82_2;
+        int stackIn_82_3;
+        int stackIn_82_4;
+        vcb stackIn_83_0;
+        int stackIn_83_1;
+        int stackIn_83_2;
+        int stackIn_83_3;
+        int stackIn_83_4;
+        int stackIn_83_5;
         int stackIn_88_0 = 0;
         int stackIn_93_0 = 0;
         int stackIn_96_0 = 0;
-        vcb stackIn_99_0 = null;
         vcb stackIn_100_0 = null;
         vcb stackIn_101_0 = null;
         int stackIn_101_1 = 0;
-        vcb stackIn_105_0 = null;
-        int stackIn_105_1 = 0;
-        int stackIn_105_2 = 0;
-        int stackIn_105_3 = 0;
-        int stackIn_105_4 = 0;
-        vcb stackIn_106_0 = null;
-        int stackIn_106_1 = 0;
-        int stackIn_106_2 = 0;
-        int stackIn_106_3 = 0;
-        int stackIn_106_4 = 0;
-        vcb stackIn_107_0 = null;
-        int stackIn_107_1 = 0;
-        int stackIn_107_2 = 0;
-        int stackIn_107_3 = 0;
-        int stackIn_107_4 = 0;
-        int stackIn_107_5 = 0;
+        vcb stackIn_106_0;
+        int stackIn_106_1;
+        int stackIn_106_2;
+        int stackIn_106_3;
+        int stackIn_106_4;
+        vcb stackIn_107_0;
+        int stackIn_107_1;
+        int stackIn_107_2;
+        int stackIn_107_3;
+        int stackIn_107_4;
+        int stackIn_107_5;
         int stackIn_112_0 = 0;
         int stackIn_115_0 = 0;
-        vcb stackIn_118_0 = null;
         vcb stackIn_119_0 = null;
         vcb stackIn_120_0 = null;
         int stackIn_120_1 = 0;
-        vcb stackIn_124_0 = null;
-        int stackIn_124_1 = 0;
-        int stackIn_124_2 = 0;
-        int stackIn_124_3 = 0;
-        int stackIn_124_4 = 0;
-        vcb stackIn_125_0 = null;
-        int stackIn_125_1 = 0;
-        int stackIn_125_2 = 0;
-        int stackIn_125_3 = 0;
-        int stackIn_125_4 = 0;
-        vcb stackIn_126_0 = null;
-        int stackIn_126_1 = 0;
-        int stackIn_126_2 = 0;
-        int stackIn_126_3 = 0;
-        int stackIn_126_4 = 0;
-        int stackIn_126_5 = 0;
+        vcb stackIn_125_0;
+        int stackIn_125_1;
+        int stackIn_125_2;
+        int stackIn_125_3;
+        int stackIn_125_4;
+        vcb stackIn_126_0;
+        int stackIn_126_1;
+        int stackIn_126_2;
+        int stackIn_126_3;
+        int stackIn_126_4;
+        int stackIn_126_5;
         int stackIn_134_0 = 0;
         int stackIn_137_0 = 0;
-        vcb stackIn_140_0 = null;
         vcb stackIn_141_0 = null;
         vcb stackIn_142_0 = null;
         int stackIn_142_1 = 0;
-        vcb stackIn_146_0 = null;
-        int stackIn_146_1 = 0;
-        int stackIn_146_2 = 0;
-        int stackIn_146_3 = 0;
-        int stackIn_146_4 = 0;
-        vcb stackIn_147_0 = null;
-        int stackIn_147_1 = 0;
-        int stackIn_147_2 = 0;
-        int stackIn_147_3 = 0;
-        int stackIn_147_4 = 0;
-        vcb stackIn_148_0 = null;
-        int stackIn_148_1 = 0;
-        int stackIn_148_2 = 0;
-        int stackIn_148_3 = 0;
-        int stackIn_148_4 = 0;
-        int stackIn_148_5 = 0;
+        vcb stackIn_147_0;
+        int stackIn_147_1;
+        int stackIn_147_2;
+        int stackIn_147_3;
+        int stackIn_147_4;
+        vcb stackIn_148_0;
+        int stackIn_148_1;
+        int stackIn_148_2;
+        int stackIn_148_3;
+        int stackIn_148_4;
+        int stackIn_148_5;
         int stackIn_153_0 = 0;
         int stackIn_156_0 = 0;
-        vcb stackIn_159_0 = null;
         vcb stackIn_160_0 = null;
         vcb stackIn_161_0 = null;
         int stackIn_161_1 = 0;
-        vcb stackIn_165_0 = null;
-        int stackIn_165_1 = 0;
-        int stackIn_165_2 = 0;
-        int stackIn_165_3 = 0;
-        int stackIn_165_4 = 0;
-        vcb stackIn_166_0 = null;
-        int stackIn_166_1 = 0;
-        int stackIn_166_2 = 0;
-        int stackIn_166_3 = 0;
-        int stackIn_166_4 = 0;
-        vcb stackIn_167_0 = null;
-        int stackIn_167_1 = 0;
-        int stackIn_167_2 = 0;
-        int stackIn_167_3 = 0;
-        int stackIn_167_4 = 0;
-        int stackIn_167_5 = 0;
+        vcb stackIn_166_0;
+        int stackIn_166_1;
+        int stackIn_166_2;
+        int stackIn_166_3;
+        int stackIn_166_4;
+        vcb stackIn_167_0;
+        int stackIn_167_1;
+        int stackIn_167_2;
+        int stackIn_167_3;
+        int stackIn_167_4;
+        int stackIn_167_5;
         int stackIn_174_0 = 0;
         int stackIn_177_0 = 0;
-        vcb stackIn_180_0 = null;
         vcb stackIn_181_0 = null;
         vcb stackIn_182_0 = null;
         int stackIn_182_1 = 0;
-        vcb stackIn_186_0 = null;
-        int stackIn_186_1 = 0;
-        int stackIn_186_2 = 0;
-        int stackIn_186_3 = 0;
-        int stackIn_186_4 = 0;
-        vcb stackIn_187_0 = null;
-        int stackIn_187_1 = 0;
-        int stackIn_187_2 = 0;
-        int stackIn_187_3 = 0;
-        int stackIn_187_4 = 0;
-        vcb stackIn_188_0 = null;
-        int stackIn_188_1 = 0;
-        int stackIn_188_2 = 0;
-        int stackIn_188_3 = 0;
-        int stackIn_188_4 = 0;
-        int stackIn_188_5 = 0;
+        vcb stackIn_187_0;
+        int stackIn_187_1;
+        int stackIn_187_2;
+        int stackIn_187_3;
+        int stackIn_187_4;
+        vcb stackIn_188_0;
+        int stackIn_188_1;
+        int stackIn_188_2;
+        int stackIn_188_3;
+        int stackIn_188_4;
+        int stackIn_188_5;
         int stackIn_193_0 = 0;
         int stackIn_196_0 = 0;
-        vcb stackIn_199_0 = null;
         vcb stackIn_200_0 = null;
         vcb stackIn_201_0 = null;
         int stackIn_201_1 = 0;
-        vcb stackIn_205_0 = null;
-        int stackIn_205_1 = 0;
-        int stackIn_205_2 = 0;
-        int stackIn_205_3 = 0;
-        int stackIn_205_4 = 0;
-        vcb stackIn_206_0 = null;
-        int stackIn_206_1 = 0;
-        int stackIn_206_2 = 0;
-        int stackIn_206_3 = 0;
-        int stackIn_206_4 = 0;
-        vcb stackIn_207_0 = null;
-        int stackIn_207_1 = 0;
-        int stackIn_207_2 = 0;
-        int stackIn_207_3 = 0;
-        int stackIn_207_4 = 0;
-        int stackIn_207_5 = 0;
-        int stackOut_86_0 = 0;
-        int stackOut_87_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_71_0 = 0;
-        int stackOut_70_0 = 0;
-        vcb stackOut_74_0 = null;
-        vcb stackOut_76_0 = null;
-        int stackOut_76_1 = 0;
-        vcb stackOut_75_0 = null;
-        int stackOut_75_1 = 0;
-        vcb stackOut_80_0 = null;
-        int stackOut_80_1 = 0;
-        int stackOut_80_2 = 0;
-        int stackOut_80_3 = 0;
-        int stackOut_80_4 = 0;
-        vcb stackOut_82_0 = null;
-        int stackOut_82_1 = 0;
-        int stackOut_82_2 = 0;
-        int stackOut_82_3 = 0;
-        int stackOut_82_4 = 0;
-        int stackOut_82_5 = 0;
-        vcb stackOut_81_0 = null;
-        int stackOut_81_1 = 0;
-        int stackOut_81_2 = 0;
-        int stackOut_81_3 = 0;
-        int stackOut_81_4 = 0;
-        int stackOut_81_5 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_51_0 = 0;
-        vcb stackOut_55_0 = null;
-        vcb stackOut_57_0 = null;
-        int stackOut_57_1 = 0;
-        vcb stackOut_56_0 = null;
-        int stackOut_56_1 = 0;
-        vcb stackOut_61_0 = null;
-        int stackOut_61_1 = 0;
-        int stackOut_61_2 = 0;
-        int stackOut_61_3 = 0;
-        int stackOut_61_4 = 0;
-        vcb stackOut_63_0 = null;
-        int stackOut_63_1 = 0;
-        int stackOut_63_2 = 0;
-        int stackOut_63_3 = 0;
-        int stackOut_63_4 = 0;
-        int stackOut_63_5 = 0;
-        vcb stackOut_62_0 = null;
-        int stackOut_62_1 = 0;
-        int stackOut_62_2 = 0;
-        int stackOut_62_3 = 0;
-        int stackOut_62_4 = 0;
-        int stackOut_62_5 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
-        vcb stackOut_35_0 = null;
-        vcb stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        vcb stackOut_36_0 = null;
-        int stackOut_36_1 = 0;
-        vcb stackOut_41_0 = null;
-        int stackOut_41_1 = 0;
-        int stackOut_41_2 = 0;
-        int stackOut_41_3 = 0;
-        int stackOut_41_4 = 0;
-        vcb stackOut_43_0 = null;
-        int stackOut_43_1 = 0;
-        int stackOut_43_2 = 0;
-        int stackOut_43_3 = 0;
-        int stackOut_43_4 = 0;
-        int stackOut_43_5 = 0;
-        vcb stackOut_42_0 = null;
-        int stackOut_42_1 = 0;
-        int stackOut_42_2 = 0;
-        int stackOut_42_3 = 0;
-        int stackOut_42_4 = 0;
-        int stackOut_42_5 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        vcb stackOut_13_0 = null;
-        vcb stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        vcb stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        vcb stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_19_2 = 0;
-        int stackOut_19_3 = 0;
-        int stackOut_19_4 = 0;
-        vcb stackOut_21_0 = null;
-        int stackOut_21_1 = 0;
-        int stackOut_21_2 = 0;
-        int stackOut_21_3 = 0;
-        int stackOut_21_4 = 0;
-        int stackOut_21_5 = 0;
-        vcb stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        int stackOut_20_2 = 0;
-        int stackOut_20_3 = 0;
-        int stackOut_20_4 = 0;
-        int stackOut_20_5 = 0;
-        int stackOut_192_0 = 0;
-        int stackOut_191_0 = 0;
-        int stackOut_195_0 = 0;
-        int stackOut_194_0 = 0;
-        vcb stackOut_198_0 = null;
-        vcb stackOut_200_0 = null;
-        int stackOut_200_1 = 0;
-        vcb stackOut_199_0 = null;
-        int stackOut_199_1 = 0;
-        vcb stackOut_204_0 = null;
-        int stackOut_204_1 = 0;
-        int stackOut_204_2 = 0;
-        int stackOut_204_3 = 0;
-        int stackOut_204_4 = 0;
-        vcb stackOut_206_0 = null;
-        int stackOut_206_1 = 0;
-        int stackOut_206_2 = 0;
-        int stackOut_206_3 = 0;
-        int stackOut_206_4 = 0;
-        int stackOut_206_5 = 0;
-        vcb stackOut_205_0 = null;
-        int stackOut_205_1 = 0;
-        int stackOut_205_2 = 0;
-        int stackOut_205_3 = 0;
-        int stackOut_205_4 = 0;
-        int stackOut_205_5 = 0;
-        int stackOut_173_0 = 0;
-        int stackOut_172_0 = 0;
-        int stackOut_176_0 = 0;
-        int stackOut_175_0 = 0;
-        vcb stackOut_179_0 = null;
-        vcb stackOut_181_0 = null;
-        int stackOut_181_1 = 0;
-        vcb stackOut_180_0 = null;
-        int stackOut_180_1 = 0;
-        vcb stackOut_185_0 = null;
-        int stackOut_185_1 = 0;
-        int stackOut_185_2 = 0;
-        int stackOut_185_3 = 0;
-        int stackOut_185_4 = 0;
-        vcb stackOut_187_0 = null;
-        int stackOut_187_1 = 0;
-        int stackOut_187_2 = 0;
-        int stackOut_187_3 = 0;
-        int stackOut_187_4 = 0;
-        int stackOut_187_5 = 0;
-        vcb stackOut_186_0 = null;
-        int stackOut_186_1 = 0;
-        int stackOut_186_2 = 0;
-        int stackOut_186_3 = 0;
-        int stackOut_186_4 = 0;
-        int stackOut_186_5 = 0;
-        int stackOut_152_0 = 0;
-        int stackOut_151_0 = 0;
-        int stackOut_155_0 = 0;
-        int stackOut_154_0 = 0;
-        vcb stackOut_158_0 = null;
-        vcb stackOut_160_0 = null;
-        int stackOut_160_1 = 0;
-        vcb stackOut_159_0 = null;
-        int stackOut_159_1 = 0;
-        vcb stackOut_164_0 = null;
-        int stackOut_164_1 = 0;
-        int stackOut_164_2 = 0;
-        int stackOut_164_3 = 0;
-        int stackOut_164_4 = 0;
-        vcb stackOut_166_0 = null;
-        int stackOut_166_1 = 0;
-        int stackOut_166_2 = 0;
-        int stackOut_166_3 = 0;
-        int stackOut_166_4 = 0;
-        int stackOut_166_5 = 0;
-        vcb stackOut_165_0 = null;
-        int stackOut_165_1 = 0;
-        int stackOut_165_2 = 0;
-        int stackOut_165_3 = 0;
-        int stackOut_165_4 = 0;
-        int stackOut_165_5 = 0;
-        int stackOut_133_0 = 0;
-        int stackOut_132_0 = 0;
-        int stackOut_136_0 = 0;
-        int stackOut_135_0 = 0;
-        vcb stackOut_139_0 = null;
-        vcb stackOut_141_0 = null;
-        int stackOut_141_1 = 0;
-        vcb stackOut_140_0 = null;
-        int stackOut_140_1 = 0;
-        vcb stackOut_145_0 = null;
-        int stackOut_145_1 = 0;
-        int stackOut_145_2 = 0;
-        int stackOut_145_3 = 0;
-        int stackOut_145_4 = 0;
-        vcb stackOut_147_0 = null;
-        int stackOut_147_1 = 0;
-        int stackOut_147_2 = 0;
-        int stackOut_147_3 = 0;
-        int stackOut_147_4 = 0;
-        int stackOut_147_5 = 0;
-        vcb stackOut_146_0 = null;
-        int stackOut_146_1 = 0;
-        int stackOut_146_2 = 0;
-        int stackOut_146_3 = 0;
-        int stackOut_146_4 = 0;
-        int stackOut_146_5 = 0;
-        int stackOut_111_0 = 0;
-        int stackOut_110_0 = 0;
-        int stackOut_114_0 = 0;
-        int stackOut_113_0 = 0;
-        vcb stackOut_117_0 = null;
-        vcb stackOut_119_0 = null;
-        int stackOut_119_1 = 0;
-        vcb stackOut_118_0 = null;
-        int stackOut_118_1 = 0;
-        vcb stackOut_123_0 = null;
-        int stackOut_123_1 = 0;
-        int stackOut_123_2 = 0;
-        int stackOut_123_3 = 0;
-        int stackOut_123_4 = 0;
-        vcb stackOut_125_0 = null;
-        int stackOut_125_1 = 0;
-        int stackOut_125_2 = 0;
-        int stackOut_125_3 = 0;
-        int stackOut_125_4 = 0;
-        int stackOut_125_5 = 0;
-        vcb stackOut_124_0 = null;
-        int stackOut_124_1 = 0;
-        int stackOut_124_2 = 0;
-        int stackOut_124_3 = 0;
-        int stackOut_124_4 = 0;
-        int stackOut_124_5 = 0;
-        int stackOut_92_0 = 0;
-        int stackOut_91_0 = 0;
-        int stackOut_95_0 = 0;
-        int stackOut_94_0 = 0;
-        vcb stackOut_98_0 = null;
-        vcb stackOut_100_0 = null;
-        int stackOut_100_1 = 0;
-        vcb stackOut_99_0 = null;
-        int stackOut_99_1 = 0;
-        vcb stackOut_104_0 = null;
-        int stackOut_104_1 = 0;
-        int stackOut_104_2 = 0;
-        int stackOut_104_3 = 0;
-        int stackOut_104_4 = 0;
-        vcb stackOut_106_0 = null;
-        int stackOut_106_1 = 0;
-        int stackOut_106_2 = 0;
-        int stackOut_106_3 = 0;
-        int stackOut_106_4 = 0;
-        int stackOut_106_5 = 0;
-        vcb stackOut_105_0 = null;
-        int stackOut_105_1 = 0;
-        int stackOut_105_2 = 0;
-        int stackOut_105_3 = 0;
-        int stackOut_105_4 = 0;
-        int stackOut_105_5 = 0;
+        vcb stackIn_206_0;
+        int stackIn_206_1;
+        int stackIn_206_2;
+        int stackIn_206_3;
+        int stackIn_206_4;
+        vcb stackIn_207_0;
+        int stackIn_207_1;
+        int stackIn_207_2;
+        int stackIn_207_3;
+        int stackIn_207_4;
+        int stackIn_207_5;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           if (this.field_A) {
-            stackOut_86_0 = 0;
-            stackIn_88_0 = stackOut_86_0;
+            stackIn_88_0 = 0;
             break L0;
           } else {
             if (null != this.field_B) {
-              stackOut_87_0 = this.field_B.field_h;
-              stackIn_88_0 = stackOut_87_0;
+              stackIn_88_0 = this.field_B.field_h;
               break L0;
             } else {
               var2 = 0;
@@ -621,24 +297,20 @@ final class sha extends oda {
                     L1: {
                       this.field_y = (bk) null;
                       if (null == this.field_B) {
-                        stackOut_68_0 = this.field_h;
-                        stackIn_69_0 = stackOut_68_0;
+                        stackIn_69_0 = this.field_h;
                         break L1;
                       } else {
-                        stackOut_67_0 = -this.field_B.field_h + this.field_h;
-                        stackIn_69_0 = stackOut_67_0;
+                        stackIn_69_0 = -this.field_B.field_h + this.field_h;
                         break L1;
                       }
                     }
                     L2: {
                       var4 = stackIn_69_0;
                       if (null != this.field_v) {
-                        stackOut_71_0 = this.field_f + -this.field_v.field_f;
-                        stackIn_72_0 = stackOut_71_0;
+                        stackIn_72_0 = this.field_f + -this.field_v.field_f;
                         break L2;
                       } else {
-                        stackOut_70_0 = this.field_f;
-                        stackIn_72_0 = stackOut_70_0;
+                        stackIn_72_0 = this.field_f;
                         break L2;
                       }
                     }
@@ -647,20 +319,15 @@ final class sha extends oda {
                       this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
                       if (null != this.field_B) {
                         L4: {
-                          stackOut_74_0 = this.field_B;
-                          stackIn_76_0 = stackOut_74_0;
-                          stackIn_75_0 = stackOut_74_0;
+                          stackIn_76_0 = this.field_B;
+
                           if (!this.field_A) {
-                            stackOut_76_0 = (vcb) ((Object) stackIn_76_0);
-                            stackOut_76_1 = 0;
-                            stackIn_77_0 = stackOut_76_0;
-                            stackIn_77_1 = stackOut_76_1;
+                            stackIn_77_0 = (vcb) ((Object) stackIn_76_0);
+                            stackIn_77_1 = 0;
                             break L4;
                           } else {
-                            stackOut_75_0 = (vcb) ((Object) stackIn_75_0);
-                            stackOut_75_1 = this.field_h + -this.field_B.field_h;
-                            stackIn_77_0 = stackOut_75_0;
-                            stackIn_77_1 = stackOut_75_1;
+                            stackIn_77_0 = (vcb) ((Object) stackIn_76_0);
+                            stackIn_77_1 = this.field_h + -this.field_B.field_h;
                             break L4;
                           }
                         }
@@ -673,48 +340,31 @@ final class sha extends oda {
                     L5: {
                       if (null != this.field_v) {
                         L6: {
-                          stackOut_80_0 = this.field_v;
-                          stackOut_80_1 = this.field_y.field_g;
-                          stackOut_80_2 = this.field_y.field_h;
-                          stackOut_80_3 = this.field_v.field_f;
-                          stackOut_80_4 = 1;
-                          stackIn_82_0 = stackOut_80_0;
-                          stackIn_82_1 = stackOut_80_1;
-                          stackIn_82_2 = stackOut_80_2;
-                          stackIn_82_3 = stackOut_80_3;
-                          stackIn_82_4 = stackOut_80_4;
-                          stackIn_81_0 = stackOut_80_0;
-                          stackIn_81_1 = stackOut_80_1;
-                          stackIn_81_2 = stackOut_80_2;
-                          stackIn_81_3 = stackOut_80_3;
-                          stackIn_81_4 = stackOut_80_4;
+                          stackIn_82_0 = this.field_v;
+
+                          stackIn_82_1 = this.field_y.field_g;
+
+                          stackIn_82_2 = this.field_y.field_h;
+
+                          stackIn_82_3 = this.field_v.field_f;
+
+                          stackIn_82_4 = 1;
+
                           if (this.field_z) {
-                            stackOut_82_0 = (vcb) ((Object) stackIn_82_0);
-                            stackOut_82_1 = stackIn_82_1;
-                            stackOut_82_2 = stackIn_82_2;
-                            stackOut_82_3 = stackIn_82_3;
-                            stackOut_82_4 = stackIn_82_4;
-                            stackOut_82_5 = -this.field_v.field_f + this.field_f;
-                            stackIn_83_0 = stackOut_82_0;
-                            stackIn_83_1 = stackOut_82_1;
-                            stackIn_83_2 = stackOut_82_2;
-                            stackIn_83_3 = stackOut_82_3;
-                            stackIn_83_4 = stackOut_82_4;
-                            stackIn_83_5 = stackOut_82_5;
+                            stackIn_83_0 = (vcb) ((Object) stackIn_82_0);
+                            stackIn_83_1 = stackIn_82_1;
+                            stackIn_83_2 = stackIn_82_2;
+                            stackIn_83_3 = stackIn_82_3;
+                            stackIn_83_4 = stackIn_82_4;
+                            stackIn_83_5 = -this.field_v.field_f + this.field_f;
                             break L6;
                           } else {
-                            stackOut_81_0 = (vcb) ((Object) stackIn_81_0);
-                            stackOut_81_1 = stackIn_81_1;
-                            stackOut_81_2 = stackIn_81_2;
-                            stackOut_81_3 = stackIn_81_3;
-                            stackOut_81_4 = stackIn_81_4;
-                            stackOut_81_5 = 0;
-                            stackIn_83_0 = stackOut_81_0;
-                            stackIn_83_1 = stackOut_81_1;
-                            stackIn_83_2 = stackOut_81_2;
-                            stackIn_83_3 = stackOut_81_3;
-                            stackIn_83_4 = stackOut_81_4;
-                            stackIn_83_5 = stackOut_81_5;
+                            stackIn_83_0 = (vcb) ((Object) stackIn_82_0);
+                            stackIn_83_1 = stackIn_82_1;
+                            stackIn_83_2 = stackIn_82_2;
+                            stackIn_83_3 = stackIn_82_3;
+                            stackIn_83_4 = stackIn_82_4;
+                            stackIn_83_5 = 0;
                             break L6;
                           }
                         }
@@ -729,24 +379,20 @@ final class sha extends oda {
                   } else {
                     L7: {
                       if (null == this.field_B) {
-                        stackOut_49_0 = this.field_h;
-                        stackIn_50_0 = stackOut_49_0;
+                        stackIn_50_0 = this.field_h;
                         break L7;
                       } else {
-                        stackOut_48_0 = -this.field_B.field_h + this.field_h;
-                        stackIn_50_0 = stackOut_48_0;
+                        stackIn_50_0 = -this.field_B.field_h + this.field_h;
                         break L7;
                       }
                     }
                     L8: {
                       var4 = stackIn_50_0;
                       if (null != this.field_v) {
-                        stackOut_52_0 = this.field_f + -this.field_v.field_f;
-                        stackIn_53_0 = stackOut_52_0;
+                        stackIn_53_0 = this.field_f + -this.field_v.field_f;
                         break L8;
                       } else {
-                        stackOut_51_0 = this.field_f;
-                        stackIn_53_0 = stackOut_51_0;
+                        stackIn_53_0 = this.field_f;
                         break L8;
                       }
                     }
@@ -755,20 +401,15 @@ final class sha extends oda {
                       this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
                       if (null != this.field_B) {
                         L10: {
-                          stackOut_55_0 = this.field_B;
-                          stackIn_57_0 = stackOut_55_0;
-                          stackIn_56_0 = stackOut_55_0;
+                          stackIn_57_0 = this.field_B;
+
                           if (!this.field_A) {
-                            stackOut_57_0 = (vcb) ((Object) stackIn_57_0);
-                            stackOut_57_1 = 0;
-                            stackIn_58_0 = stackOut_57_0;
-                            stackIn_58_1 = stackOut_57_1;
+                            stackIn_58_0 = (vcb) ((Object) stackIn_57_0);
+                            stackIn_58_1 = 0;
                             break L10;
                           } else {
-                            stackOut_56_0 = (vcb) ((Object) stackIn_56_0);
-                            stackOut_56_1 = this.field_h + -this.field_B.field_h;
-                            stackIn_58_0 = stackOut_56_0;
-                            stackIn_58_1 = stackOut_56_1;
+                            stackIn_58_0 = (vcb) ((Object) stackIn_57_0);
+                            stackIn_58_1 = this.field_h + -this.field_B.field_h;
                             break L10;
                           }
                         }
@@ -781,48 +422,31 @@ final class sha extends oda {
                     L11: {
                       if (null != this.field_v) {
                         L12: {
-                          stackOut_61_0 = this.field_v;
-                          stackOut_61_1 = this.field_y.field_g;
-                          stackOut_61_2 = this.field_y.field_h;
-                          stackOut_61_3 = this.field_v.field_f;
-                          stackOut_61_4 = 1;
-                          stackIn_63_0 = stackOut_61_0;
-                          stackIn_63_1 = stackOut_61_1;
-                          stackIn_63_2 = stackOut_61_2;
-                          stackIn_63_3 = stackOut_61_3;
-                          stackIn_63_4 = stackOut_61_4;
-                          stackIn_62_0 = stackOut_61_0;
-                          stackIn_62_1 = stackOut_61_1;
-                          stackIn_62_2 = stackOut_61_2;
-                          stackIn_62_3 = stackOut_61_3;
-                          stackIn_62_4 = stackOut_61_4;
+                          stackIn_63_0 = this.field_v;
+
+                          stackIn_63_1 = this.field_y.field_g;
+
+                          stackIn_63_2 = this.field_y.field_h;
+
+                          stackIn_63_3 = this.field_v.field_f;
+
+                          stackIn_63_4 = 1;
+
                           if (this.field_z) {
-                            stackOut_63_0 = (vcb) ((Object) stackIn_63_0);
-                            stackOut_63_1 = stackIn_63_1;
-                            stackOut_63_2 = stackIn_63_2;
-                            stackOut_63_3 = stackIn_63_3;
-                            stackOut_63_4 = stackIn_63_4;
-                            stackOut_63_5 = -this.field_v.field_f + this.field_f;
-                            stackIn_64_0 = stackOut_63_0;
-                            stackIn_64_1 = stackOut_63_1;
-                            stackIn_64_2 = stackOut_63_2;
-                            stackIn_64_3 = stackOut_63_3;
-                            stackIn_64_4 = stackOut_63_4;
-                            stackIn_64_5 = stackOut_63_5;
+                            stackIn_64_0 = (vcb) ((Object) stackIn_63_0);
+                            stackIn_64_1 = stackIn_63_1;
+                            stackIn_64_2 = stackIn_63_2;
+                            stackIn_64_3 = stackIn_63_3;
+                            stackIn_64_4 = stackIn_63_4;
+                            stackIn_64_5 = -this.field_v.field_f + this.field_f;
                             break L12;
                           } else {
-                            stackOut_62_0 = (vcb) ((Object) stackIn_62_0);
-                            stackOut_62_1 = stackIn_62_1;
-                            stackOut_62_2 = stackIn_62_2;
-                            stackOut_62_3 = stackIn_62_3;
-                            stackOut_62_4 = stackIn_62_4;
-                            stackOut_62_5 = 0;
-                            stackIn_64_0 = stackOut_62_0;
-                            stackIn_64_1 = stackOut_62_1;
-                            stackIn_64_2 = stackOut_62_2;
-                            stackIn_64_3 = stackOut_62_3;
-                            stackIn_64_4 = stackOut_62_4;
-                            stackIn_64_5 = stackOut_62_5;
+                            stackIn_64_0 = (vcb) ((Object) stackIn_63_0);
+                            stackIn_64_1 = stackIn_63_1;
+                            stackIn_64_2 = stackIn_63_2;
+                            stackIn_64_3 = stackIn_63_3;
+                            stackIn_64_4 = stackIn_63_4;
+                            stackIn_64_5 = 0;
                             break L12;
                           }
                         }
@@ -847,24 +471,20 @@ final class sha extends oda {
                   }
                   L14: {
                     if (null == this.field_B) {
-                      stackOut_29_0 = this.field_h;
-                      stackIn_30_0 = stackOut_29_0;
+                      stackIn_30_0 = this.field_h;
                       break L14;
                     } else {
-                      stackOut_28_0 = -this.field_B.field_h + this.field_h;
-                      stackIn_30_0 = stackOut_28_0;
+                      stackIn_30_0 = -this.field_B.field_h + this.field_h;
                       break L14;
                     }
                   }
                   L15: {
                     var4 = stackIn_30_0;
                     if (null != this.field_v) {
-                      stackOut_32_0 = this.field_f + -this.field_v.field_f;
-                      stackIn_33_0 = stackOut_32_0;
+                      stackIn_33_0 = this.field_f + -this.field_v.field_f;
                       break L15;
                     } else {
-                      stackOut_31_0 = this.field_f;
-                      stackIn_33_0 = stackOut_31_0;
+                      stackIn_33_0 = this.field_f;
                       break L15;
                     }
                   }
@@ -873,20 +493,15 @@ final class sha extends oda {
                     this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
                     if (null != this.field_B) {
                       L17: {
-                        stackOut_35_0 = this.field_B;
-                        stackIn_37_0 = stackOut_35_0;
-                        stackIn_36_0 = stackOut_35_0;
+                        stackIn_37_0 = this.field_B;
+
                         if (!this.field_A) {
-                          stackOut_37_0 = (vcb) ((Object) stackIn_37_0);
-                          stackOut_37_1 = 0;
-                          stackIn_38_0 = stackOut_37_0;
-                          stackIn_38_1 = stackOut_37_1;
+                          stackIn_38_0 = (vcb) ((Object) stackIn_37_0);
+                          stackIn_38_1 = 0;
                           break L17;
                         } else {
-                          stackOut_36_0 = (vcb) ((Object) stackIn_36_0);
-                          stackOut_36_1 = this.field_h + -this.field_B.field_h;
-                          stackIn_38_0 = stackOut_36_0;
-                          stackIn_38_1 = stackOut_36_1;
+                          stackIn_38_0 = (vcb) ((Object) stackIn_37_0);
+                          stackIn_38_1 = this.field_h + -this.field_B.field_h;
                           break L17;
                         }
                       }
@@ -899,48 +514,31 @@ final class sha extends oda {
                   L18: {
                     if (null != this.field_v) {
                       L19: {
-                        stackOut_41_0 = this.field_v;
-                        stackOut_41_1 = this.field_y.field_g;
-                        stackOut_41_2 = this.field_y.field_h;
-                        stackOut_41_3 = this.field_v.field_f;
-                        stackOut_41_4 = 1;
-                        stackIn_43_0 = stackOut_41_0;
-                        stackIn_43_1 = stackOut_41_1;
-                        stackIn_43_2 = stackOut_41_2;
-                        stackIn_43_3 = stackOut_41_3;
-                        stackIn_43_4 = stackOut_41_4;
-                        stackIn_42_0 = stackOut_41_0;
-                        stackIn_42_1 = stackOut_41_1;
-                        stackIn_42_2 = stackOut_41_2;
-                        stackIn_42_3 = stackOut_41_3;
-                        stackIn_42_4 = stackOut_41_4;
+                        stackIn_43_0 = this.field_v;
+
+                        stackIn_43_1 = this.field_y.field_g;
+
+                        stackIn_43_2 = this.field_y.field_h;
+
+                        stackIn_43_3 = this.field_v.field_f;
+
+                        stackIn_43_4 = 1;
+
                         if (this.field_z) {
-                          stackOut_43_0 = (vcb) ((Object) stackIn_43_0);
-                          stackOut_43_1 = stackIn_43_1;
-                          stackOut_43_2 = stackIn_43_2;
-                          stackOut_43_3 = stackIn_43_3;
-                          stackOut_43_4 = stackIn_43_4;
-                          stackOut_43_5 = -this.field_v.field_f + this.field_f;
-                          stackIn_44_0 = stackOut_43_0;
-                          stackIn_44_1 = stackOut_43_1;
-                          stackIn_44_2 = stackOut_43_2;
-                          stackIn_44_3 = stackOut_43_3;
-                          stackIn_44_4 = stackOut_43_4;
-                          stackIn_44_5 = stackOut_43_5;
+                          stackIn_44_0 = (vcb) ((Object) stackIn_43_0);
+                          stackIn_44_1 = stackIn_43_1;
+                          stackIn_44_2 = stackIn_43_2;
+                          stackIn_44_3 = stackIn_43_3;
+                          stackIn_44_4 = stackIn_43_4;
+                          stackIn_44_5 = -this.field_v.field_f + this.field_f;
                           break L19;
                         } else {
-                          stackOut_42_0 = (vcb) ((Object) stackIn_42_0);
-                          stackOut_42_1 = stackIn_42_1;
-                          stackOut_42_2 = stackIn_42_2;
-                          stackOut_42_3 = stackIn_42_3;
-                          stackOut_42_4 = stackIn_42_4;
-                          stackOut_42_5 = 0;
-                          stackIn_44_0 = stackOut_42_0;
-                          stackIn_44_1 = stackOut_42_1;
-                          stackIn_44_2 = stackOut_42_2;
-                          stackIn_44_3 = stackOut_42_3;
-                          stackIn_44_4 = stackOut_42_4;
-                          stackIn_44_5 = stackOut_42_5;
+                          stackIn_44_0 = (vcb) ((Object) stackIn_43_0);
+                          stackIn_44_1 = stackIn_43_1;
+                          stackIn_44_2 = stackIn_43_2;
+                          stackIn_44_3 = stackIn_43_3;
+                          stackIn_44_4 = stackIn_43_4;
+                          stackIn_44_5 = 0;
                           break L19;
                         }
                       }
@@ -965,24 +563,20 @@ final class sha extends oda {
                 }
                 L21: {
                   if (null == this.field_B) {
-                    stackOut_7_0 = this.field_h;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = this.field_h;
                     break L21;
                   } else {
-                    stackOut_6_0 = -this.field_B.field_h + this.field_h;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = -this.field_B.field_h + this.field_h;
                     break L21;
                   }
                 }
                 L22: {
                   var4 = stackIn_8_0;
                   if (null != this.field_v) {
-                    stackOut_10_0 = this.field_f + -this.field_v.field_f;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = this.field_f + -this.field_v.field_f;
                     break L22;
                   } else {
-                    stackOut_9_0 = this.field_f;
-                    stackIn_11_0 = stackOut_9_0;
+                    stackIn_11_0 = this.field_f;
                     break L22;
                   }
                 }
@@ -991,20 +585,15 @@ final class sha extends oda {
                   this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
                   if (null != this.field_B) {
                     L24: {
-                      stackOut_13_0 = this.field_B;
-                      stackIn_15_0 = stackOut_13_0;
-                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_15_0 = this.field_B;
+
                       if (!this.field_A) {
-                        stackOut_15_0 = (vcb) ((Object) stackIn_15_0);
-                        stackOut_15_1 = 0;
-                        stackIn_16_0 = stackOut_15_0;
-                        stackIn_16_1 = stackOut_15_1;
+                        stackIn_16_0 = (vcb) ((Object) stackIn_15_0);
+                        stackIn_16_1 = 0;
                         break L24;
                       } else {
-                        stackOut_14_0 = (vcb) ((Object) stackIn_14_0);
-                        stackOut_14_1 = this.field_h + -this.field_B.field_h;
-                        stackIn_16_0 = stackOut_14_0;
-                        stackIn_16_1 = stackOut_14_1;
+                        stackIn_16_0 = (vcb) ((Object) stackIn_15_0);
+                        stackIn_16_1 = this.field_h + -this.field_B.field_h;
                         break L24;
                       }
                     }
@@ -1017,48 +606,31 @@ final class sha extends oda {
                 L25: {
                   if (null != this.field_v) {
                     L26: {
-                      stackOut_19_0 = this.field_v;
-                      stackOut_19_1 = this.field_y.field_g;
-                      stackOut_19_2 = this.field_y.field_h;
-                      stackOut_19_3 = this.field_v.field_f;
-                      stackOut_19_4 = 1;
-                      stackIn_21_0 = stackOut_19_0;
-                      stackIn_21_1 = stackOut_19_1;
-                      stackIn_21_2 = stackOut_19_2;
-                      stackIn_21_3 = stackOut_19_3;
-                      stackIn_21_4 = stackOut_19_4;
-                      stackIn_20_0 = stackOut_19_0;
-                      stackIn_20_1 = stackOut_19_1;
-                      stackIn_20_2 = stackOut_19_2;
-                      stackIn_20_3 = stackOut_19_3;
-                      stackIn_20_4 = stackOut_19_4;
+                      stackIn_21_0 = this.field_v;
+
+                      stackIn_21_1 = this.field_y.field_g;
+
+                      stackIn_21_2 = this.field_y.field_h;
+
+                      stackIn_21_3 = this.field_v.field_f;
+
+                      stackIn_21_4 = 1;
+
                       if (this.field_z) {
-                        stackOut_21_0 = (vcb) ((Object) stackIn_21_0);
-                        stackOut_21_1 = stackIn_21_1;
-                        stackOut_21_2 = stackIn_21_2;
-                        stackOut_21_3 = stackIn_21_3;
-                        stackOut_21_4 = stackIn_21_4;
-                        stackOut_21_5 = -this.field_v.field_f + this.field_f;
-                        stackIn_22_0 = stackOut_21_0;
-                        stackIn_22_1 = stackOut_21_1;
-                        stackIn_22_2 = stackOut_21_2;
-                        stackIn_22_3 = stackOut_21_3;
-                        stackIn_22_4 = stackOut_21_4;
-                        stackIn_22_5 = stackOut_21_5;
+                        stackIn_22_0 = (vcb) ((Object) stackIn_21_0);
+                        stackIn_22_1 = stackIn_21_1;
+                        stackIn_22_2 = stackIn_21_2;
+                        stackIn_22_3 = stackIn_21_3;
+                        stackIn_22_4 = stackIn_21_4;
+                        stackIn_22_5 = -this.field_v.field_f + this.field_f;
                         break L26;
                       } else {
-                        stackOut_20_0 = (vcb) ((Object) stackIn_20_0);
-                        stackOut_20_1 = stackIn_20_1;
-                        stackOut_20_2 = stackIn_20_2;
-                        stackOut_20_3 = stackIn_20_3;
-                        stackOut_20_4 = stackIn_20_4;
-                        stackOut_20_5 = 0;
-                        stackIn_22_0 = stackOut_20_0;
-                        stackIn_22_1 = stackOut_20_1;
-                        stackIn_22_2 = stackOut_20_2;
-                        stackIn_22_3 = stackOut_20_3;
-                        stackIn_22_4 = stackOut_20_4;
-                        stackIn_22_5 = stackOut_20_5;
+                        stackIn_22_0 = (vcb) ((Object) stackIn_21_0);
+                        stackIn_22_1 = stackIn_21_1;
+                        stackIn_22_2 = stackIn_21_2;
+                        stackIn_22_3 = stackIn_21_3;
+                        stackIn_22_4 = stackIn_21_4;
+                        stackIn_22_5 = 0;
                         break L26;
                       }
                     }
@@ -1082,24 +654,20 @@ final class sha extends oda {
               L27: {
                 this.field_y = (bk) null;
                 if (null == this.field_B) {
-                  stackOut_192_0 = this.field_h;
-                  stackIn_193_0 = stackOut_192_0;
+                  stackIn_193_0 = this.field_h;
                   break L27;
                 } else {
-                  stackOut_191_0 = -this.field_B.field_h + this.field_h;
-                  stackIn_193_0 = stackOut_191_0;
+                  stackIn_193_0 = -this.field_B.field_h + this.field_h;
                   break L27;
                 }
               }
               L28: {
                 var4 = stackIn_193_0;
                 if (null != this.field_v) {
-                  stackOut_195_0 = this.field_f + -this.field_v.field_f;
-                  stackIn_196_0 = stackOut_195_0;
+                  stackIn_196_0 = this.field_f + -this.field_v.field_f;
                   break L28;
                 } else {
-                  stackOut_194_0 = this.field_f;
-                  stackIn_196_0 = stackOut_194_0;
+                  stackIn_196_0 = this.field_f;
                   break L28;
                 }
               }
@@ -1108,20 +676,15 @@ final class sha extends oda {
                 this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
                 if (null != this.field_B) {
                   L30: {
-                    stackOut_198_0 = this.field_B;
-                    stackIn_200_0 = stackOut_198_0;
-                    stackIn_199_0 = stackOut_198_0;
+                    stackIn_200_0 = this.field_B;
+
                     if (!this.field_A) {
-                      stackOut_200_0 = (vcb) ((Object) stackIn_200_0);
-                      stackOut_200_1 = 0;
-                      stackIn_201_0 = stackOut_200_0;
-                      stackIn_201_1 = stackOut_200_1;
+                      stackIn_201_0 = (vcb) ((Object) stackIn_200_0);
+                      stackIn_201_1 = 0;
                       break L30;
                     } else {
-                      stackOut_199_0 = (vcb) ((Object) stackIn_199_0);
-                      stackOut_199_1 = this.field_h + -this.field_B.field_h;
-                      stackIn_201_0 = stackOut_199_0;
-                      stackIn_201_1 = stackOut_199_1;
+                      stackIn_201_0 = (vcb) ((Object) stackIn_200_0);
+                      stackIn_201_1 = this.field_h + -this.field_B.field_h;
                       break L30;
                     }
                   }
@@ -1134,48 +697,31 @@ final class sha extends oda {
               L31: {
                 if (null != this.field_v) {
                   L32: {
-                    stackOut_204_0 = this.field_v;
-                    stackOut_204_1 = this.field_y.field_g;
-                    stackOut_204_2 = this.field_y.field_h;
-                    stackOut_204_3 = this.field_v.field_f;
-                    stackOut_204_4 = 1;
-                    stackIn_206_0 = stackOut_204_0;
-                    stackIn_206_1 = stackOut_204_1;
-                    stackIn_206_2 = stackOut_204_2;
-                    stackIn_206_3 = stackOut_204_3;
-                    stackIn_206_4 = stackOut_204_4;
-                    stackIn_205_0 = stackOut_204_0;
-                    stackIn_205_1 = stackOut_204_1;
-                    stackIn_205_2 = stackOut_204_2;
-                    stackIn_205_3 = stackOut_204_3;
-                    stackIn_205_4 = stackOut_204_4;
+                    stackIn_206_0 = this.field_v;
+
+                    stackIn_206_1 = this.field_y.field_g;
+
+                    stackIn_206_2 = this.field_y.field_h;
+
+                    stackIn_206_3 = this.field_v.field_f;
+
+                    stackIn_206_4 = 1;
+
                     if (this.field_z) {
-                      stackOut_206_0 = (vcb) ((Object) stackIn_206_0);
-                      stackOut_206_1 = stackIn_206_1;
-                      stackOut_206_2 = stackIn_206_2;
-                      stackOut_206_3 = stackIn_206_3;
-                      stackOut_206_4 = stackIn_206_4;
-                      stackOut_206_5 = -this.field_v.field_f + this.field_f;
-                      stackIn_207_0 = stackOut_206_0;
-                      stackIn_207_1 = stackOut_206_1;
-                      stackIn_207_2 = stackOut_206_2;
-                      stackIn_207_3 = stackOut_206_3;
-                      stackIn_207_4 = stackOut_206_4;
-                      stackIn_207_5 = stackOut_206_5;
+                      stackIn_207_0 = (vcb) ((Object) stackIn_206_0);
+                      stackIn_207_1 = stackIn_206_1;
+                      stackIn_207_2 = stackIn_206_2;
+                      stackIn_207_3 = stackIn_206_3;
+                      stackIn_207_4 = stackIn_206_4;
+                      stackIn_207_5 = -this.field_v.field_f + this.field_f;
                       break L32;
                     } else {
-                      stackOut_205_0 = (vcb) ((Object) stackIn_205_0);
-                      stackOut_205_1 = stackIn_205_1;
-                      stackOut_205_2 = stackIn_205_2;
-                      stackOut_205_3 = stackIn_205_3;
-                      stackOut_205_4 = stackIn_205_4;
-                      stackOut_205_5 = 0;
-                      stackIn_207_0 = stackOut_205_0;
-                      stackIn_207_1 = stackOut_205_1;
-                      stackIn_207_2 = stackOut_205_2;
-                      stackIn_207_3 = stackOut_205_3;
-                      stackIn_207_4 = stackOut_205_4;
-                      stackIn_207_5 = stackOut_205_5;
+                      stackIn_207_0 = (vcb) ((Object) stackIn_206_0);
+                      stackIn_207_1 = stackIn_206_1;
+                      stackIn_207_2 = stackIn_206_2;
+                      stackIn_207_3 = stackIn_206_3;
+                      stackIn_207_4 = stackIn_206_4;
+                      stackIn_207_5 = 0;
                       break L32;
                     }
                   }
@@ -1190,24 +736,20 @@ final class sha extends oda {
             } else {
               L33: {
                 if (null == this.field_B) {
-                  stackOut_173_0 = this.field_h;
-                  stackIn_174_0 = stackOut_173_0;
+                  stackIn_174_0 = this.field_h;
                   break L33;
                 } else {
-                  stackOut_172_0 = -this.field_B.field_h + this.field_h;
-                  stackIn_174_0 = stackOut_172_0;
+                  stackIn_174_0 = -this.field_B.field_h + this.field_h;
                   break L33;
                 }
               }
               L34: {
                 var4 = stackIn_174_0;
                 if (null != this.field_v) {
-                  stackOut_176_0 = this.field_f + -this.field_v.field_f;
-                  stackIn_177_0 = stackOut_176_0;
+                  stackIn_177_0 = this.field_f + -this.field_v.field_f;
                   break L34;
                 } else {
-                  stackOut_175_0 = this.field_f;
-                  stackIn_177_0 = stackOut_175_0;
+                  stackIn_177_0 = this.field_f;
                   break L34;
                 }
               }
@@ -1216,20 +758,15 @@ final class sha extends oda {
                 this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
                 if (null != this.field_B) {
                   L36: {
-                    stackOut_179_0 = this.field_B;
-                    stackIn_181_0 = stackOut_179_0;
-                    stackIn_180_0 = stackOut_179_0;
+                    stackIn_181_0 = this.field_B;
+
                     if (!this.field_A) {
-                      stackOut_181_0 = (vcb) ((Object) stackIn_181_0);
-                      stackOut_181_1 = 0;
-                      stackIn_182_0 = stackOut_181_0;
-                      stackIn_182_1 = stackOut_181_1;
+                      stackIn_182_0 = (vcb) ((Object) stackIn_181_0);
+                      stackIn_182_1 = 0;
                       break L36;
                     } else {
-                      stackOut_180_0 = (vcb) ((Object) stackIn_180_0);
-                      stackOut_180_1 = this.field_h + -this.field_B.field_h;
-                      stackIn_182_0 = stackOut_180_0;
-                      stackIn_182_1 = stackOut_180_1;
+                      stackIn_182_0 = (vcb) ((Object) stackIn_181_0);
+                      stackIn_182_1 = this.field_h + -this.field_B.field_h;
                       break L36;
                     }
                   }
@@ -1242,48 +779,31 @@ final class sha extends oda {
               L37: {
                 if (null != this.field_v) {
                   L38: {
-                    stackOut_185_0 = this.field_v;
-                    stackOut_185_1 = this.field_y.field_g;
-                    stackOut_185_2 = this.field_y.field_h;
-                    stackOut_185_3 = this.field_v.field_f;
-                    stackOut_185_4 = 1;
-                    stackIn_187_0 = stackOut_185_0;
-                    stackIn_187_1 = stackOut_185_1;
-                    stackIn_187_2 = stackOut_185_2;
-                    stackIn_187_3 = stackOut_185_3;
-                    stackIn_187_4 = stackOut_185_4;
-                    stackIn_186_0 = stackOut_185_0;
-                    stackIn_186_1 = stackOut_185_1;
-                    stackIn_186_2 = stackOut_185_2;
-                    stackIn_186_3 = stackOut_185_3;
-                    stackIn_186_4 = stackOut_185_4;
+                    stackIn_187_0 = this.field_v;
+
+                    stackIn_187_1 = this.field_y.field_g;
+
+                    stackIn_187_2 = this.field_y.field_h;
+
+                    stackIn_187_3 = this.field_v.field_f;
+
+                    stackIn_187_4 = 1;
+
                     if (this.field_z) {
-                      stackOut_187_0 = (vcb) ((Object) stackIn_187_0);
-                      stackOut_187_1 = stackIn_187_1;
-                      stackOut_187_2 = stackIn_187_2;
-                      stackOut_187_3 = stackIn_187_3;
-                      stackOut_187_4 = stackIn_187_4;
-                      stackOut_187_5 = -this.field_v.field_f + this.field_f;
-                      stackIn_188_0 = stackOut_187_0;
-                      stackIn_188_1 = stackOut_187_1;
-                      stackIn_188_2 = stackOut_187_2;
-                      stackIn_188_3 = stackOut_187_3;
-                      stackIn_188_4 = stackOut_187_4;
-                      stackIn_188_5 = stackOut_187_5;
+                      stackIn_188_0 = (vcb) ((Object) stackIn_187_0);
+                      stackIn_188_1 = stackIn_187_1;
+                      stackIn_188_2 = stackIn_187_2;
+                      stackIn_188_3 = stackIn_187_3;
+                      stackIn_188_4 = stackIn_187_4;
+                      stackIn_188_5 = -this.field_v.field_f + this.field_f;
                       break L38;
                     } else {
-                      stackOut_186_0 = (vcb) ((Object) stackIn_186_0);
-                      stackOut_186_1 = stackIn_186_1;
-                      stackOut_186_2 = stackIn_186_2;
-                      stackOut_186_3 = stackIn_186_3;
-                      stackOut_186_4 = stackIn_186_4;
-                      stackOut_186_5 = 0;
-                      stackIn_188_0 = stackOut_186_0;
-                      stackIn_188_1 = stackOut_186_1;
-                      stackIn_188_2 = stackOut_186_2;
-                      stackIn_188_3 = stackOut_186_3;
-                      stackIn_188_4 = stackOut_186_4;
-                      stackIn_188_5 = stackOut_186_5;
+                      stackIn_188_0 = (vcb) ((Object) stackIn_187_0);
+                      stackIn_188_1 = stackIn_187_1;
+                      stackIn_188_2 = stackIn_187_2;
+                      stackIn_188_3 = stackIn_187_3;
+                      stackIn_188_4 = stackIn_187_4;
+                      stackIn_188_5 = 0;
                       break L38;
                     }
                   }
@@ -1302,24 +822,20 @@ final class sha extends oda {
               L39: {
                 this.field_y = (bk) null;
                 if (null == this.field_B) {
-                  stackOut_152_0 = this.field_h;
-                  stackIn_153_0 = stackOut_152_0;
+                  stackIn_153_0 = this.field_h;
                   break L39;
                 } else {
-                  stackOut_151_0 = -this.field_B.field_h + this.field_h;
-                  stackIn_153_0 = stackOut_151_0;
+                  stackIn_153_0 = -this.field_B.field_h + this.field_h;
                   break L39;
                 }
               }
               L40: {
                 var4 = stackIn_153_0;
                 if (null != this.field_v) {
-                  stackOut_155_0 = this.field_f + -this.field_v.field_f;
-                  stackIn_156_0 = stackOut_155_0;
+                  stackIn_156_0 = this.field_f + -this.field_v.field_f;
                   break L40;
                 } else {
-                  stackOut_154_0 = this.field_f;
-                  stackIn_156_0 = stackOut_154_0;
+                  stackIn_156_0 = this.field_f;
                   break L40;
                 }
               }
@@ -1328,20 +844,15 @@ final class sha extends oda {
                 this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
                 if (null != this.field_B) {
                   L42: {
-                    stackOut_158_0 = this.field_B;
-                    stackIn_160_0 = stackOut_158_0;
-                    stackIn_159_0 = stackOut_158_0;
+                    stackIn_160_0 = this.field_B;
+
                     if (!this.field_A) {
-                      stackOut_160_0 = (vcb) ((Object) stackIn_160_0);
-                      stackOut_160_1 = 0;
-                      stackIn_161_0 = stackOut_160_0;
-                      stackIn_161_1 = stackOut_160_1;
+                      stackIn_161_0 = (vcb) ((Object) stackIn_160_0);
+                      stackIn_161_1 = 0;
                       break L42;
                     } else {
-                      stackOut_159_0 = (vcb) ((Object) stackIn_159_0);
-                      stackOut_159_1 = this.field_h + -this.field_B.field_h;
-                      stackIn_161_0 = stackOut_159_0;
-                      stackIn_161_1 = stackOut_159_1;
+                      stackIn_161_0 = (vcb) ((Object) stackIn_160_0);
+                      stackIn_161_1 = this.field_h + -this.field_B.field_h;
                       break L42;
                     }
                   }
@@ -1354,48 +865,31 @@ final class sha extends oda {
               L43: {
                 if (null != this.field_v) {
                   L44: {
-                    stackOut_164_0 = this.field_v;
-                    stackOut_164_1 = this.field_y.field_g;
-                    stackOut_164_2 = this.field_y.field_h;
-                    stackOut_164_3 = this.field_v.field_f;
-                    stackOut_164_4 = 1;
-                    stackIn_166_0 = stackOut_164_0;
-                    stackIn_166_1 = stackOut_164_1;
-                    stackIn_166_2 = stackOut_164_2;
-                    stackIn_166_3 = stackOut_164_3;
-                    stackIn_166_4 = stackOut_164_4;
-                    stackIn_165_0 = stackOut_164_0;
-                    stackIn_165_1 = stackOut_164_1;
-                    stackIn_165_2 = stackOut_164_2;
-                    stackIn_165_3 = stackOut_164_3;
-                    stackIn_165_4 = stackOut_164_4;
+                    stackIn_166_0 = this.field_v;
+
+                    stackIn_166_1 = this.field_y.field_g;
+
+                    stackIn_166_2 = this.field_y.field_h;
+
+                    stackIn_166_3 = this.field_v.field_f;
+
+                    stackIn_166_4 = 1;
+
                     if (this.field_z) {
-                      stackOut_166_0 = (vcb) ((Object) stackIn_166_0);
-                      stackOut_166_1 = stackIn_166_1;
-                      stackOut_166_2 = stackIn_166_2;
-                      stackOut_166_3 = stackIn_166_3;
-                      stackOut_166_4 = stackIn_166_4;
-                      stackOut_166_5 = -this.field_v.field_f + this.field_f;
-                      stackIn_167_0 = stackOut_166_0;
-                      stackIn_167_1 = stackOut_166_1;
-                      stackIn_167_2 = stackOut_166_2;
-                      stackIn_167_3 = stackOut_166_3;
-                      stackIn_167_4 = stackOut_166_4;
-                      stackIn_167_5 = stackOut_166_5;
+                      stackIn_167_0 = (vcb) ((Object) stackIn_166_0);
+                      stackIn_167_1 = stackIn_166_1;
+                      stackIn_167_2 = stackIn_166_2;
+                      stackIn_167_3 = stackIn_166_3;
+                      stackIn_167_4 = stackIn_166_4;
+                      stackIn_167_5 = -this.field_v.field_f + this.field_f;
                       break L44;
                     } else {
-                      stackOut_165_0 = (vcb) ((Object) stackIn_165_0);
-                      stackOut_165_1 = stackIn_165_1;
-                      stackOut_165_2 = stackIn_165_2;
-                      stackOut_165_3 = stackIn_165_3;
-                      stackOut_165_4 = stackIn_165_4;
-                      stackOut_165_5 = 0;
-                      stackIn_167_0 = stackOut_165_0;
-                      stackIn_167_1 = stackOut_165_1;
-                      stackIn_167_2 = stackOut_165_2;
-                      stackIn_167_3 = stackOut_165_3;
-                      stackIn_167_4 = stackOut_165_4;
-                      stackIn_167_5 = stackOut_165_5;
+                      stackIn_167_0 = (vcb) ((Object) stackIn_166_0);
+                      stackIn_167_1 = stackIn_166_1;
+                      stackIn_167_2 = stackIn_166_2;
+                      stackIn_167_3 = stackIn_166_3;
+                      stackIn_167_4 = stackIn_166_4;
+                      stackIn_167_5 = 0;
                       break L44;
                     }
                   }
@@ -1410,24 +904,20 @@ final class sha extends oda {
             } else {
               L45: {
                 if (null == this.field_B) {
-                  stackOut_133_0 = this.field_h;
-                  stackIn_134_0 = stackOut_133_0;
+                  stackIn_134_0 = this.field_h;
                   break L45;
                 } else {
-                  stackOut_132_0 = -this.field_B.field_h + this.field_h;
-                  stackIn_134_0 = stackOut_132_0;
+                  stackIn_134_0 = -this.field_B.field_h + this.field_h;
                   break L45;
                 }
               }
               L46: {
                 var4 = stackIn_134_0;
                 if (null != this.field_v) {
-                  stackOut_136_0 = this.field_f + -this.field_v.field_f;
-                  stackIn_137_0 = stackOut_136_0;
+                  stackIn_137_0 = this.field_f + -this.field_v.field_f;
                   break L46;
                 } else {
-                  stackOut_135_0 = this.field_f;
-                  stackIn_137_0 = stackOut_135_0;
+                  stackIn_137_0 = this.field_f;
                   break L46;
                 }
               }
@@ -1436,20 +926,15 @@ final class sha extends oda {
                 this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
                 if (null != this.field_B) {
                   L48: {
-                    stackOut_139_0 = this.field_B;
-                    stackIn_141_0 = stackOut_139_0;
-                    stackIn_140_0 = stackOut_139_0;
+                    stackIn_141_0 = this.field_B;
+
                     if (!this.field_A) {
-                      stackOut_141_0 = (vcb) ((Object) stackIn_141_0);
-                      stackOut_141_1 = 0;
-                      stackIn_142_0 = stackOut_141_0;
-                      stackIn_142_1 = stackOut_141_1;
+                      stackIn_142_0 = (vcb) ((Object) stackIn_141_0);
+                      stackIn_142_1 = 0;
                       break L48;
                     } else {
-                      stackOut_140_0 = (vcb) ((Object) stackIn_140_0);
-                      stackOut_140_1 = this.field_h + -this.field_B.field_h;
-                      stackIn_142_0 = stackOut_140_0;
-                      stackIn_142_1 = stackOut_140_1;
+                      stackIn_142_0 = (vcb) ((Object) stackIn_141_0);
+                      stackIn_142_1 = this.field_h + -this.field_B.field_h;
                       break L48;
                     }
                   }
@@ -1462,48 +947,31 @@ final class sha extends oda {
               L49: {
                 if (null != this.field_v) {
                   L50: {
-                    stackOut_145_0 = this.field_v;
-                    stackOut_145_1 = this.field_y.field_g;
-                    stackOut_145_2 = this.field_y.field_h;
-                    stackOut_145_3 = this.field_v.field_f;
-                    stackOut_145_4 = 1;
-                    stackIn_147_0 = stackOut_145_0;
-                    stackIn_147_1 = stackOut_145_1;
-                    stackIn_147_2 = stackOut_145_2;
-                    stackIn_147_3 = stackOut_145_3;
-                    stackIn_147_4 = stackOut_145_4;
-                    stackIn_146_0 = stackOut_145_0;
-                    stackIn_146_1 = stackOut_145_1;
-                    stackIn_146_2 = stackOut_145_2;
-                    stackIn_146_3 = stackOut_145_3;
-                    stackIn_146_4 = stackOut_145_4;
+                    stackIn_147_0 = this.field_v;
+
+                    stackIn_147_1 = this.field_y.field_g;
+
+                    stackIn_147_2 = this.field_y.field_h;
+
+                    stackIn_147_3 = this.field_v.field_f;
+
+                    stackIn_147_4 = 1;
+
                     if (this.field_z) {
-                      stackOut_147_0 = (vcb) ((Object) stackIn_147_0);
-                      stackOut_147_1 = stackIn_147_1;
-                      stackOut_147_2 = stackIn_147_2;
-                      stackOut_147_3 = stackIn_147_3;
-                      stackOut_147_4 = stackIn_147_4;
-                      stackOut_147_5 = -this.field_v.field_f + this.field_f;
-                      stackIn_148_0 = stackOut_147_0;
-                      stackIn_148_1 = stackOut_147_1;
-                      stackIn_148_2 = stackOut_147_2;
-                      stackIn_148_3 = stackOut_147_3;
-                      stackIn_148_4 = stackOut_147_4;
-                      stackIn_148_5 = stackOut_147_5;
+                      stackIn_148_0 = (vcb) ((Object) stackIn_147_0);
+                      stackIn_148_1 = stackIn_147_1;
+                      stackIn_148_2 = stackIn_147_2;
+                      stackIn_148_3 = stackIn_147_3;
+                      stackIn_148_4 = stackIn_147_4;
+                      stackIn_148_5 = -this.field_v.field_f + this.field_f;
                       break L50;
                     } else {
-                      stackOut_146_0 = (vcb) ((Object) stackIn_146_0);
-                      stackOut_146_1 = stackIn_146_1;
-                      stackOut_146_2 = stackIn_146_2;
-                      stackOut_146_3 = stackIn_146_3;
-                      stackOut_146_4 = stackIn_146_4;
-                      stackOut_146_5 = 0;
-                      stackIn_148_0 = stackOut_146_0;
-                      stackIn_148_1 = stackOut_146_1;
-                      stackIn_148_2 = stackOut_146_2;
-                      stackIn_148_3 = stackOut_146_3;
-                      stackIn_148_4 = stackOut_146_4;
-                      stackIn_148_5 = stackOut_146_5;
+                      stackIn_148_0 = (vcb) ((Object) stackIn_147_0);
+                      stackIn_148_1 = stackIn_147_1;
+                      stackIn_148_2 = stackIn_147_2;
+                      stackIn_148_3 = stackIn_147_3;
+                      stackIn_148_4 = stackIn_147_4;
+                      stackIn_148_5 = 0;
                       break L50;
                     }
                   }
@@ -1523,24 +991,20 @@ final class sha extends oda {
             L51: {
               this.field_y = (bk) null;
               if (null == this.field_B) {
-                stackOut_111_0 = this.field_h;
-                stackIn_112_0 = stackOut_111_0;
+                stackIn_112_0 = this.field_h;
                 break L51;
               } else {
-                stackOut_110_0 = -this.field_B.field_h + this.field_h;
-                stackIn_112_0 = stackOut_110_0;
+                stackIn_112_0 = -this.field_B.field_h + this.field_h;
                 break L51;
               }
             }
             L52: {
               var4 = stackIn_112_0;
               if (null != this.field_v) {
-                stackOut_114_0 = this.field_f + -this.field_v.field_f;
-                stackIn_115_0 = stackOut_114_0;
+                stackIn_115_0 = this.field_f + -this.field_v.field_f;
                 break L52;
               } else {
-                stackOut_113_0 = this.field_f;
-                stackIn_115_0 = stackOut_113_0;
+                stackIn_115_0 = this.field_f;
                 break L52;
               }
             }
@@ -1549,20 +1013,15 @@ final class sha extends oda {
               this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
               if (null != this.field_B) {
                 L54: {
-                  stackOut_117_0 = this.field_B;
-                  stackIn_119_0 = stackOut_117_0;
-                  stackIn_118_0 = stackOut_117_0;
+                  stackIn_119_0 = this.field_B;
+
                   if (!this.field_A) {
-                    stackOut_119_0 = (vcb) ((Object) stackIn_119_0);
-                    stackOut_119_1 = 0;
-                    stackIn_120_0 = stackOut_119_0;
-                    stackIn_120_1 = stackOut_119_1;
+                    stackIn_120_0 = (vcb) ((Object) stackIn_119_0);
+                    stackIn_120_1 = 0;
                     break L54;
                   } else {
-                    stackOut_118_0 = (vcb) ((Object) stackIn_118_0);
-                    stackOut_118_1 = this.field_h + -this.field_B.field_h;
-                    stackIn_120_0 = stackOut_118_0;
-                    stackIn_120_1 = stackOut_118_1;
+                    stackIn_120_0 = (vcb) ((Object) stackIn_119_0);
+                    stackIn_120_1 = this.field_h + -this.field_B.field_h;
                     break L54;
                   }
                 }
@@ -1575,48 +1034,31 @@ final class sha extends oda {
             L55: {
               if (null != this.field_v) {
                 L56: {
-                  stackOut_123_0 = this.field_v;
-                  stackOut_123_1 = this.field_y.field_g;
-                  stackOut_123_2 = this.field_y.field_h;
-                  stackOut_123_3 = this.field_v.field_f;
-                  stackOut_123_4 = 1;
-                  stackIn_125_0 = stackOut_123_0;
-                  stackIn_125_1 = stackOut_123_1;
-                  stackIn_125_2 = stackOut_123_2;
-                  stackIn_125_3 = stackOut_123_3;
-                  stackIn_125_4 = stackOut_123_4;
-                  stackIn_124_0 = stackOut_123_0;
-                  stackIn_124_1 = stackOut_123_1;
-                  stackIn_124_2 = stackOut_123_2;
-                  stackIn_124_3 = stackOut_123_3;
-                  stackIn_124_4 = stackOut_123_4;
+                  stackIn_125_0 = this.field_v;
+
+                  stackIn_125_1 = this.field_y.field_g;
+
+                  stackIn_125_2 = this.field_y.field_h;
+
+                  stackIn_125_3 = this.field_v.field_f;
+
+                  stackIn_125_4 = 1;
+
                   if (this.field_z) {
-                    stackOut_125_0 = (vcb) ((Object) stackIn_125_0);
-                    stackOut_125_1 = stackIn_125_1;
-                    stackOut_125_2 = stackIn_125_2;
-                    stackOut_125_3 = stackIn_125_3;
-                    stackOut_125_4 = stackIn_125_4;
-                    stackOut_125_5 = -this.field_v.field_f + this.field_f;
-                    stackIn_126_0 = stackOut_125_0;
-                    stackIn_126_1 = stackOut_125_1;
-                    stackIn_126_2 = stackOut_125_2;
-                    stackIn_126_3 = stackOut_125_3;
-                    stackIn_126_4 = stackOut_125_4;
-                    stackIn_126_5 = stackOut_125_5;
+                    stackIn_126_0 = (vcb) ((Object) stackIn_125_0);
+                    stackIn_126_1 = stackIn_125_1;
+                    stackIn_126_2 = stackIn_125_2;
+                    stackIn_126_3 = stackIn_125_3;
+                    stackIn_126_4 = stackIn_125_4;
+                    stackIn_126_5 = -this.field_v.field_f + this.field_f;
                     break L56;
                   } else {
-                    stackOut_124_0 = (vcb) ((Object) stackIn_124_0);
-                    stackOut_124_1 = stackIn_124_1;
-                    stackOut_124_2 = stackIn_124_2;
-                    stackOut_124_3 = stackIn_124_3;
-                    stackOut_124_4 = stackIn_124_4;
-                    stackOut_124_5 = 0;
-                    stackIn_126_0 = stackOut_124_0;
-                    stackIn_126_1 = stackOut_124_1;
-                    stackIn_126_2 = stackOut_124_2;
-                    stackIn_126_3 = stackOut_124_3;
-                    stackIn_126_4 = stackOut_124_4;
-                    stackIn_126_5 = stackOut_124_5;
+                    stackIn_126_0 = (vcb) ((Object) stackIn_125_0);
+                    stackIn_126_1 = stackIn_125_1;
+                    stackIn_126_2 = stackIn_125_2;
+                    stackIn_126_3 = stackIn_125_3;
+                    stackIn_126_4 = stackIn_125_4;
+                    stackIn_126_5 = 0;
                     break L56;
                   }
                 }
@@ -1631,24 +1073,20 @@ final class sha extends oda {
           } else {
             L57: {
               if (null == this.field_B) {
-                stackOut_92_0 = this.field_h;
-                stackIn_93_0 = stackOut_92_0;
+                stackIn_93_0 = this.field_h;
                 break L57;
               } else {
-                stackOut_91_0 = -this.field_B.field_h + this.field_h;
-                stackIn_93_0 = stackOut_91_0;
+                stackIn_93_0 = -this.field_B.field_h + this.field_h;
                 break L57;
               }
             }
             L58: {
               var4 = stackIn_93_0;
               if (null != this.field_v) {
-                stackOut_95_0 = this.field_f + -this.field_v.field_f;
-                stackIn_96_0 = stackOut_95_0;
+                stackIn_96_0 = this.field_f + -this.field_v.field_f;
                 break L58;
               } else {
-                stackOut_94_0 = this.field_f;
-                stackIn_96_0 = stackOut_94_0;
+                stackIn_96_0 = this.field_f;
                 break L58;
               }
             }
@@ -1657,20 +1095,15 @@ final class sha extends oda {
               this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
               if (null != this.field_B) {
                 L60: {
-                  stackOut_98_0 = this.field_B;
-                  stackIn_100_0 = stackOut_98_0;
-                  stackIn_99_0 = stackOut_98_0;
+                  stackIn_100_0 = this.field_B;
+
                   if (!this.field_A) {
-                    stackOut_100_0 = (vcb) ((Object) stackIn_100_0);
-                    stackOut_100_1 = 0;
-                    stackIn_101_0 = stackOut_100_0;
-                    stackIn_101_1 = stackOut_100_1;
+                    stackIn_101_0 = (vcb) ((Object) stackIn_100_0);
+                    stackIn_101_1 = 0;
                     break L60;
                   } else {
-                    stackOut_99_0 = (vcb) ((Object) stackIn_99_0);
-                    stackOut_99_1 = this.field_h + -this.field_B.field_h;
-                    stackIn_101_0 = stackOut_99_0;
-                    stackIn_101_1 = stackOut_99_1;
+                    stackIn_101_0 = (vcb) ((Object) stackIn_100_0);
+                    stackIn_101_1 = this.field_h + -this.field_B.field_h;
                     break L60;
                   }
                 }
@@ -1683,48 +1116,31 @@ final class sha extends oda {
             L61: {
               if (null != this.field_v) {
                 L62: {
-                  stackOut_104_0 = this.field_v;
-                  stackOut_104_1 = this.field_y.field_g;
-                  stackOut_104_2 = this.field_y.field_h;
-                  stackOut_104_3 = this.field_v.field_f;
-                  stackOut_104_4 = 1;
-                  stackIn_106_0 = stackOut_104_0;
-                  stackIn_106_1 = stackOut_104_1;
-                  stackIn_106_2 = stackOut_104_2;
-                  stackIn_106_3 = stackOut_104_3;
-                  stackIn_106_4 = stackOut_104_4;
-                  stackIn_105_0 = stackOut_104_0;
-                  stackIn_105_1 = stackOut_104_1;
-                  stackIn_105_2 = stackOut_104_2;
-                  stackIn_105_3 = stackOut_104_3;
-                  stackIn_105_4 = stackOut_104_4;
+                  stackIn_106_0 = this.field_v;
+
+                  stackIn_106_1 = this.field_y.field_g;
+
+                  stackIn_106_2 = this.field_y.field_h;
+
+                  stackIn_106_3 = this.field_v.field_f;
+
+                  stackIn_106_4 = 1;
+
                   if (this.field_z) {
-                    stackOut_106_0 = (vcb) ((Object) stackIn_106_0);
-                    stackOut_106_1 = stackIn_106_1;
-                    stackOut_106_2 = stackIn_106_2;
-                    stackOut_106_3 = stackIn_106_3;
-                    stackOut_106_4 = stackIn_106_4;
-                    stackOut_106_5 = -this.field_v.field_f + this.field_f;
-                    stackIn_107_0 = stackOut_106_0;
-                    stackIn_107_1 = stackOut_106_1;
-                    stackIn_107_2 = stackOut_106_2;
-                    stackIn_107_3 = stackOut_106_3;
-                    stackIn_107_4 = stackOut_106_4;
-                    stackIn_107_5 = stackOut_106_5;
+                    stackIn_107_0 = (vcb) ((Object) stackIn_106_0);
+                    stackIn_107_1 = stackIn_106_1;
+                    stackIn_107_2 = stackIn_106_2;
+                    stackIn_107_3 = stackIn_106_3;
+                    stackIn_107_4 = stackIn_106_4;
+                    stackIn_107_5 = -this.field_v.field_f + this.field_f;
                     break L62;
                   } else {
-                    stackOut_105_0 = (vcb) ((Object) stackIn_105_0);
-                    stackOut_105_1 = stackIn_105_1;
-                    stackOut_105_2 = stackIn_105_2;
-                    stackOut_105_3 = stackIn_105_3;
-                    stackOut_105_4 = stackIn_105_4;
-                    stackOut_105_5 = 0;
-                    stackIn_107_0 = stackOut_105_0;
-                    stackIn_107_1 = stackOut_105_1;
-                    stackIn_107_2 = stackOut_105_2;
-                    stackIn_107_3 = stackOut_105_3;
-                    stackIn_107_4 = stackOut_105_4;
-                    stackIn_107_5 = stackOut_105_5;
+                    stackIn_107_0 = (vcb) ((Object) stackIn_106_0);
+                    stackIn_107_1 = stackIn_106_1;
+                    stackIn_107_2 = stackIn_106_2;
+                    stackIn_107_3 = stackIn_106_3;
+                    stackIn_107_4 = stackIn_106_4;
+                    stackIn_107_5 = 0;
                     break L62;
                   }
                 }
@@ -1755,27 +1171,15 @@ final class sha extends oda {
     }
 
     final boolean a(int param0, int param1, shb param2, char param3) {
-        boolean discarded$2 = false;
         RuntimeException var5 = null;
         shb var6 = null;
         int stackIn_5_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -1783,14 +1187,13 @@ final class sha extends oda {
                 break L1;
               } else {
                 var6 = (shb) null;
-                discarded$2 = this.a(-106, -5, (shb) null, '￘');
+                this.a(-106, -5, (shb) null, '￘');
                 break L1;
               }
             }
             if (super.a(param0 + 0, param1, param2, param3)) {
               this.e(-1715704688);
-              stackOut_4_0 = 1;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 1;
               break L0;
             } else {
               return false;
@@ -1800,27 +1203,19 @@ final class sha extends oda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5);
-            stackOut_6_1 = new StringBuilder().append("sha.N(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5);
+
+            stackIn_8_1 = new StringBuilder().append("sha.N(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -1844,7 +1239,7 @@ final class sha extends oda {
     }
 
     private final void e(int param0) {
-        eab var3 = null;
+        eab var3;
         L0: {
           if (null != this.field_B) {
             this.field_y.field_t.field_r = -(int)((long)(this.field_y.field_t.field_f + -this.field_y.field_f) * (long)this.field_B.field_L >> -1821903600);
@@ -1876,8 +1271,6 @@ final class sha extends oda {
         RuntimeException var8 = null;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -1885,22 +1278,10 @@ final class sha extends oda {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -1912,14 +1293,12 @@ final class sha extends oda {
                     if (!this.a(param2, param1 + -1715698682)) {
                       break L2;
                     } else {
-                      stackOut_6_0 = 1;
-                      stackIn_8_0 = stackOut_6_0;
+                      stackIn_8_0 = 1;
                       break L1;
                     }
                   }
                 }
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 0;
                 break L1;
               }
               decompiledRegionSelector0 = 1;
@@ -1930,27 +1309,19 @@ final class sha extends oda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var8 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var8);
-            stackOut_9_1 = new StringBuilder().append("sha.WA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var8);
+
+            stackIn_11_1 = new StringBuilder().append("sha.WA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }

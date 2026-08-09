@@ -6,12 +6,21 @@ final class oq {
     static int field_a;
 
     final static String a(CharSequence[] param0, int param1, int param2, boolean param3) {
-        String discarded$3 = null;
-        StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        RuntimeException var4 = null;
-        CharSequence var4_ref = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        String stackIn_4_0 = null;
+        String stackIn_9_0 = null;
+        String stackIn_27_0 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        CharSequence var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6_int = 0;
         StringBuilder var6 = null;
@@ -21,35 +30,11 @@ final class oq {
         int var9 = 0;
         CharSequence[] var10 = null;
         CharSequence var11 = null;
-        String stackIn_4_0 = null;
-        String stackIn_9_0 = null;
-        String stackIn_27_0 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        String stackOut_26_0 = null;
-        String stackOut_8_0 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
         var9 = BachelorFridge.field_y;
         try {
           L0: {
             if (param2 == 0) {
-              stackOut_3_0 = "";
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = "";
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -59,7 +44,7 @@ final class oq {
                     break L1;
                   } else {
                     var10 = (CharSequence[]) null;
-                    discarded$3 = oq.a((CharSequence[]) null, 104, -45, false);
+                    oq.a((CharSequence[]) null, 104, -45, false);
                     break L1;
                   }
                 }
@@ -72,18 +57,17 @@ final class oq {
                     var7 = param1;
                     L3: while (true) {
                       if (var4_int <= var7) {
-                        stackOut_26_0 = var6.toString();
-                        stackIn_27_0 = stackOut_26_0;
+                        stackIn_27_0 = var6.toString();
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         L4: {
                           var8 = param0[var7];
                           if (var8 != null) {
-                            discarded$4 = var6.append(var8);
+                            discarded$0 = var6.append(var8);
                             break L4;
                           } else {
-                            discarded$5 = var6.append("null");
+                            discarded$1 = var6.append("null");
                             break L4;
                           }
                         }
@@ -108,10 +92,9 @@ final class oq {
                 }
               } else {
                 var11 = param0[param1];
-                var4_ref = var11;
-                if (var4_ref == null) {
-                  stackOut_8_0 = "null";
-                  stackIn_9_0 = stackOut_8_0;
+                var4 = var11;
+                if (var4 == null) {
+                  stackIn_9_0 = "null";
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -123,28 +106,20 @@ final class oq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var4 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var4);
-            stackOut_28_1 = new StringBuilder().append("oq.A(");
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_30_0 = (RuntimeException) (var4_ref);
+
+            stackIn_30_1 = new StringBuilder().append("oq.A(");
+
             if (param0 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L6;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L6;
             }
           }
@@ -162,11 +137,10 @@ final class oq {
     }
 
     final static void a(boolean param0, boolean param1) {
-        eh discarded$0 = null;
         ge.field_L = param1 ? true : false;
         ge.a(320, 8, param0, aha.field_D, 2, 8, (aha.field_D.field_v + aha.field_D.field_B) * 3 / 2, (kv[]) null, aha.field_D.field_v, (byte) 91, 240, (kv[]) null);
         if (null != kga.field_c) {
-            discarded$0 = ju.field_r.a((java.awt.Component) ((Object) kga.field_c), false, 127);
+            ju.field_r.a((java.awt.Component) ((Object) kga.field_c), false, 127);
         }
     }
 

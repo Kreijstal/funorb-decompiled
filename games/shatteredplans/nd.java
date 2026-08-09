@@ -15,18 +15,16 @@ final class nd {
     int field_j;
 
     final static sq a(byte param0) {
-        String discarded$3 = null;
-        StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        sq var1 = null;
-        int var2 = 0;
-        StringBuilder var3 = null;
-        int var4 = 0;
-        String var5 = null;
-        Object[] var6 = null;
-        String[] var6_array = null;
-        int var7 = 0;
-        sq var8 = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        sq var1;
+        int var2;
+        StringBuilder var3;
+        int var4;
+        String var5;
+        Object var6;
+        int var7;
+        sq var8;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         L0: while (true) {
           if (sd.field_t != null) {
@@ -34,7 +32,7 @@ final class nd {
               var2 = -25 % ((0 - param0) / 59);
               var8 = new sq();
               var1 = var8;
-              discarded$3 = sd.field_t.substring(1, sd.field_t.indexOf(']'));
+              sd.field_t.substring(1, sd.field_t.indexOf(']'));
               var3 = new StringBuilder();
               tp.b((byte) 56);
               L1: while (true) {
@@ -46,11 +44,11 @@ final class nd {
                           var4 = sd.field_t.indexOf(' ');
                           if (-1 == var4) {
                             var5 = sd.field_t.substring(1);
-                            var6_array = null;
+                            var6 = null;
                             break L3;
                           } else {
                             var5 = sd.field_t.substring(1, var4);
-                            var6_array = kf.a(sd.field_t.substring(var4), (byte) 125, ',');
+                            var6 = kf.a(sd.field_t.substring(var4), (byte) 125, ',');
                             break L3;
                           }
                         }
@@ -58,31 +56,31 @@ final class nd {
                           var8 = var1;
                           if (var5.equalsIgnoreCase("topright")) {
                             var8 = var1;
-                            w.a(var6_array, 1, var8, -75);
+                            w.a((String[]) (var6), 1, var8, -75);
                             break L2;
                           } else {
                             if (var5.equalsIgnoreCase("bottomleft")) {
                               var8 = var1;
-                              w.a(var6_array, 2, var8, -92);
+                              w.a((String[]) (var6), 2, var8, -92);
                               break L2;
                             } else {
                               if (var5.equalsIgnoreCase("bottomright")) {
                                 var8 = var1;
-                                w.a(var6_array, 3, var8, -40);
+                                w.a((String[]) (var6), 3, var8, -40);
                                 break L2;
                               } else {
                                 if (!var5.equalsIgnoreCase("tag")) {
                                   var8 = var1;
                                   if (var5.equalsIgnoreCase("next")) {
-                                    var8.field_d = var6_array[0];
+                                    var8.field_d = (String) (((Object[]) (var6))[0]);
                                     break L2;
                                   } else {
                                     if (var5.equalsIgnoreCase("objective")) {
-                                      id.a(var6_array, 0, var8);
+                                      id.a((String[]) (var6), 0, var8);
                                       break L2;
                                     } else {
                                       if (var5.equalsIgnoreCase("action")) {
-                                        eq.a(var6_array, var8, 0);
+                                        eq.a((String[]) (var6), var8, 0);
                                         break L2;
                                       } else {
                                         if (!var5.equalsIgnoreCase("flag")) {
@@ -103,26 +101,26 @@ final class nd {
                                             break L2;
                                           }
                                         } else {
-                                          pa.a(var6_array, var8, (byte) -127);
+                                          pa.a((String[]) (var6), var8, (byte) -127);
                                           break L2;
                                         }
                                       }
                                     }
                                   }
                                 } else {
-                                  var8.field_g = var6_array[0];
+                                  var8.field_g = (String) (((Object[]) (var6))[0]);
                                   break L2;
                                 }
                               }
                             }
                           }
                         } else {
-                          w.a(var6_array, 0, var8, -117);
+                          w.a((String[]) (var6), 0, var8, -117);
                           break L2;
                         }
                       } else {
-                        discarded$4 = var3.append(sd.field_t);
-                        discarded$5 = var3.append(' ');
+                        discarded$0 = var3.append(sd.field_t);
+                        discarded$1 = var3.append(' ');
                         break L2;
                       }
                     }

@@ -41,9 +41,8 @@ final class fma extends mfb {
     }
 
     final int g(int param0) {
-        int discarded$0 = 0;
         if (param0 != 2769) {
-            discarded$0 = this.b(-10);
+            this.b(-10);
             return hrb.field_a;
         }
         return hrb.field_a;
@@ -106,9 +105,8 @@ final class fma extends mfb {
     }
 
     final int a(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 0) {
-            discarded$0 = this.h((byte) 11);
+            this.h((byte) 11);
             return bv.field_e;
         }
         return bv.field_e;

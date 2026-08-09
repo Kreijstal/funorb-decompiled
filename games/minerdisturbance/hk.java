@@ -14,8 +14,6 @@ final class hk {
 
     private final void a(int param0, bl param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -23,14 +21,6 @@ final class hk {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0 < -47) {
@@ -55,27 +45,19 @@ final class hk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (runtimeException);
-            stackOut_5_1 = new StringBuilder().append("hk.D(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (runtimeException);
+
+            stackIn_7_1 = new StringBuilder().append("hk.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -104,13 +86,11 @@ final class hk {
     }
 
     final static boolean a(int param0) {
-        pi discarded$2 = null;
-        pi discarded$3 = null;
-        Object var1 = null;
-        int var2 = 0;
-        tm var3 = null;
-        tm var4 = null;
-        tm var5 = null;
+        Object var1;
+        int var2;
+        tm var3;
+        tm var4;
+        tm var5;
         if (param0 == 27) {
           var1 = null;
           var2 = 0;
@@ -122,7 +102,7 @@ final class hk {
                 L1: {
                   var4 = (tm) ((Object) ok.field_b.b(120));
                   if (var4.a(param0 + -19)) {
-                    discarded$2 = ok.field_b.e(63854);
+                    ok.field_b.e(63854);
                     var2 = 1;
                     vc.a(109, cm.field_o, var4.field_s);
                     break L1;
@@ -161,7 +141,7 @@ final class hk {
             L3: {
               var3 = (tm) ((Object) ec.field_c.b(81));
               if (var3.a(param0 ^ 19)) {
-                discarded$3 = ec.field_c.e(63854);
+                ec.field_c.e(63854);
                 vc.a(-8, cm.field_o, var3.field_s);
                 var2 = 1;
                 break L3;
@@ -207,10 +187,10 @@ final class hk {
     }
 
     final Object a(long param0, byte param1) {
-        oh var6 = null;
-        bl var7 = null;
-        Object var8 = null;
-        Object var9 = null;
+        oh var6;
+        bl var7;
+        Object var8;
+        Object var9;
         var7 = (bl) ((Object) this.field_g.a(-94, param0));
         if (var7 != null) {
           if (param1 >= 56) {
@@ -288,12 +268,11 @@ final class hk {
     }
 
     private final void a(int param0, long param1) {
-        int[] discarded$2 = null;
-        Object var4 = null;
-        bl var5 = null;
+        Object var4;
+        bl var5;
         var4 = null;
         if (param0 != -4924) {
-          discarded$2 = hk.b(34);
+          hk.b(34);
           var5 = (bl) ((Object) this.field_g.a(param0 + 4856, param1));
           this.a(param0 + 4846, var5);
           return;

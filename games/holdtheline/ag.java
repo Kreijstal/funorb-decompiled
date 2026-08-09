@@ -18,9 +18,9 @@ final class ag extends wj {
 
     private final void f(int param0) {
         try {
+            Throwable decompiledCaughtException = null;
             IOException var2 = null;
             Exception var3 = null;
-            Throwable decompiledCaughtException = null;
             if (null != this.field_q) {
               try {
                 L0: {
@@ -74,51 +74,32 @@ final class ag extends wj {
 
     private final void a(boolean param0, int param1) {
         try {
-            boolean discarded$3 = false;
             IOException iOException = null;
-            Exception var4 = null;
-            th stackIn_3_0 = null;
-            int stackIn_3_1 = 0;
             th stackIn_4_0 = null;
             int stackIn_4_1 = 0;
             th stackIn_5_0 = null;
             int stackIn_5_1 = 0;
             int stackIn_5_2 = 0;
             Throwable decompiledCaughtException = null;
-            th stackOut_2_0 = null;
-            int stackOut_2_1 = 0;
-            th stackOut_4_0 = null;
-            int stackOut_4_1 = 0;
-            int stackOut_4_2 = 0;
-            th stackOut_3_0 = null;
-            int stackOut_3_1 = 0;
-            int stackOut_3_2 = 0;
+            Exception var4 = null;
             if (null != this.field_q) {
               try {
                 L0: {
                   L1: {
                     this.field_b.field_l = 0;
-                    stackOut_2_0 = this.field_b;
-                    stackOut_2_1 = 111;
-                    stackIn_4_0 = stackOut_2_0;
-                    stackIn_4_1 = stackOut_2_1;
-                    stackIn_3_0 = stackOut_2_0;
-                    stackIn_3_1 = stackOut_2_1;
+                    stackIn_4_0 = this.field_b;
+
+                    stackIn_4_1 = 111;
+
                     if (!param0) {
-                      stackOut_4_0 = (th) ((Object) stackIn_4_0);
-                      stackOut_4_1 = stackIn_4_1;
-                      stackOut_4_2 = 3;
-                      stackIn_5_0 = stackOut_4_0;
-                      stackIn_5_1 = stackOut_4_1;
-                      stackIn_5_2 = stackOut_4_2;
+                      stackIn_5_0 = (th) ((Object) stackIn_4_0);
+                      stackIn_5_1 = stackIn_4_1;
+                      stackIn_5_2 = 3;
                       break L1;
                     } else {
-                      stackOut_3_0 = (th) ((Object) stackIn_3_0);
-                      stackOut_3_1 = stackIn_3_1;
-                      stackOut_3_2 = 2;
-                      stackIn_5_0 = stackOut_3_0;
-                      stackIn_5_1 = stackOut_3_1;
-                      stackIn_5_2 = stackOut_3_2;
+                      stackIn_5_0 = (th) ((Object) stackIn_4_0);
+                      stackIn_5_1 = stackIn_4_1;
+                      stackIn_5_2 = 2;
                       break L1;
                     }
                   }
@@ -127,7 +108,7 @@ final class ag extends wj {
                     if (param1 == -11526) {
                       break L2;
                     } else {
-                      discarded$3 = ag.a(77, 'J');
+                      ag.a(77, 'J');
                       break L2;
                     }
                   }
@@ -170,28 +151,18 @@ final class ag extends wj {
 
     final void a(Object param0, boolean param1, int param2) {
         try {
-            Exception var4 = null;
-            IOException var4_ref = null;
-            RuntimeException var4_ref2 = null;
-            cc var4_ref3 = null;
-            Exception var5 = null;
-            int var6 = 0;
-            RuntimeException stackIn_25_0 = null;
-            StringBuilder stackIn_25_1 = null;
             RuntimeException stackIn_26_0 = null;
             StringBuilder stackIn_26_1 = null;
             RuntimeException stackIn_27_0 = null;
             StringBuilder stackIn_27_1 = null;
             String stackIn_27_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_24_0 = null;
-            StringBuilder stackOut_24_1 = null;
-            RuntimeException stackOut_26_0 = null;
-            StringBuilder stackOut_26_1 = null;
-            String stackOut_26_2 = null;
-            RuntimeException stackOut_25_0 = null;
-            StringBuilder stackOut_25_1 = null;
-            String stackOut_25_2 = null;
+            Exception var4 = null;
+            cc var4_ref = null;
+            IOException var4_ref2 = null;
+            RuntimeException var4_ref3 = null;
+            Exception var5 = null;
+            int var6 = 0;
             var6 = HoldTheLine.field_D;
             try {
               L0: {
@@ -221,8 +192,8 @@ final class ag extends wj {
                 this.field_k.field_l = 0;
                 this.field_m = null;
                 L4: while (true) {
-                  var4_ref3 = (cc) ((Object) this.field_i.a((byte) 85));
-                  if (var4_ref3 == null) {
+                  var4_ref = (cc) ((Object) this.field_i.a((byte) 85));
+                  if (var4_ref == null) {
                     L5: {
                       if (param2 == 20) {
                         break L5;
@@ -232,8 +203,8 @@ final class ag extends wj {
                       }
                     }
                     L6: while (true) {
-                      var4_ref3 = (cc) ((Object) this.field_e.a((byte) 84));
-                      if (var4_ref3 == null) {
+                      var4_ref = (cc) ((Object) this.field_e.a((byte) 84));
+                      if (var4_ref == null) {
                         L7: {
                           if (-1 == (this.field_l ^ -1)) {
                             break L7;
@@ -250,7 +221,7 @@ final class ag extends wj {
                             } catch (java.io.IOException decompiledCaughtParameter1) {
                               decompiledCaughtException = decompiledCaughtParameter1;
                               L9: {
-                                var4_ref = (IOException) (Object) decompiledCaughtException;
+                                var4_ref2 = (IOException) (Object) decompiledCaughtException;
                                 try {
                                   L10: {
                                     this.field_q.d(param2 + 21115);
@@ -276,12 +247,12 @@ final class ag extends wj {
                         this.field_j = bb.b(-1);
                         break L0;
                       } else {
-                        this.field_g.a(-35, var4_ref3);
+                        this.field_g.a(-35, var4_ref);
                         continue L6;
                       }
                     }
                   } else {
-                    this.field_d.a(-85, var4_ref3);
+                    this.field_d.a(-85, var4_ref);
                     continue L4;
                   }
                 }
@@ -289,28 +260,20 @@ final class ag extends wj {
             } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               L12: {
-                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_24_0 = (RuntimeException) (var4_ref2);
-                stackOut_24_1 = new StringBuilder().append("ag.H(");
-                stackIn_26_0 = stackOut_24_0;
-                stackIn_26_1 = stackOut_24_1;
-                stackIn_25_0 = stackOut_24_0;
-                stackIn_25_1 = stackOut_24_1;
+                var4_ref3 = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_26_0 = (RuntimeException) (var4_ref3);
+
+                stackIn_26_1 = new StringBuilder().append("ag.H(");
+
                 if (param0 == null) {
-                  stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-                  stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-                  stackOut_26_2 = "null";
-                  stackIn_27_0 = stackOut_26_0;
-                  stackIn_27_1 = stackOut_26_1;
-                  stackIn_27_2 = stackOut_26_2;
+                  stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+                  stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+                  stackIn_27_2 = "null";
                   break L12;
                 } else {
-                  stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-                  stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-                  stackOut_25_2 = "{...}";
-                  stackIn_27_0 = stackOut_25_0;
-                  stackIn_27_1 = stackOut_25_1;
-                  stackIn_27_2 = stackOut_25_2;
+                  stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+                  stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+                  stackIn_27_2 = "{...}";
                   break L12;
                 }
               }
@@ -337,12 +300,16 @@ final class ag extends wj {
 
     final boolean a(byte param0) {
         try {
-            IOException var2 = null;
+            int stackIn_46_0 = 0;
+            int stackIn_60_0 = 0;
+            int stackIn_80_0 = 0;
+            Throwable decompiledCaughtException = null;
             long var2_long = 0L;
             int var2_int = 0;
-            Exception var3 = null;
-            cc var3_ref = null;
+            IOException var2 = null;
+            cc var3 = null;
             int var3_int = 0;
+            Exception var3_ref = null;
             int var4 = 0;
             Exception var5_ref_Exception = null;
             int var5 = 0;
@@ -359,15 +326,6 @@ final class ag extends wj {
             int var16 = 0;
             int var17 = 0;
             int var18 = 0;
-            int stackIn_46_0 = 0;
-            int stackIn_60_0 = 0;
-            int stackIn_80_0 = 0;
-            Throwable decompiledCaughtException = null;
-            int stackOut_79_0 = 0;
-            int stackOut_45_0 = 0;
-            int stackOut_44_0 = 0;
-            int stackOut_59_0 = 0;
-            int stackOut_58_0 = 0;
             L0: {
               var17 = HoldTheLine.field_D;
               if (this.field_q != null) {
@@ -420,17 +378,16 @@ final class ag extends wj {
                 L4: {
                   var2_int = 51 % ((param0 - 24) / 56);
                   this.field_q.c(true);
-                  var3_ref = (cc) ((Object) this.field_d.c(105));
+                  var3 = (cc) ((Object) this.field_d.c(105));
                   L5: while (true) {
-                    if (var3_ref == null) {
-                      var3_ref = (cc) ((Object) this.field_g.c(79));
+                    if (var3 == null) {
+                      var3 = (cc) ((Object) this.field_g.c(79));
                       L6: while (true) {
-                        if (var3_ref == null) {
+                        if (var3 == null) {
                           var3_int = 0;
                           L7: while (true) {
                             if (-101 >= (var3_int ^ -1)) {
-                              stackOut_79_0 = 1;
-                              stackIn_80_0 = stackOut_79_0;
+                              stackIn_80_0 = 1;
                               break L4;
                             } else {
                               var4 = this.field_q.b(false);
@@ -544,12 +501,10 @@ final class ag extends wj {
                                             var10 = this.field_k.a(127);
                                             var11 = 127 & var9;
                                             if ((128 & var9) == 0) {
-                                              stackOut_45_0 = 0;
-                                              stackIn_46_0 = stackOut_45_0;
+                                              stackIn_46_0 = 0;
                                               break L17;
                                             } else {
-                                              stackOut_44_0 = 1;
-                                              stackIn_46_0 = stackOut_44_0;
+                                              stackIn_46_0 = 1;
                                               break L17;
                                             }
                                           }
@@ -590,12 +545,10 @@ final class ag extends wj {
                                           if (var15_ref != null) {
                                             L21: {
                                               if (0 != var11) {
-                                                stackOut_59_0 = 9;
-                                                stackIn_60_0 = stackOut_59_0;
+                                                stackIn_60_0 = 9;
                                                 break L21;
                                               } else {
-                                                stackOut_58_0 = 5;
-                                                stackIn_60_0 = stackOut_58_0;
+                                                stackIn_60_0 = 5;
                                                 break L21;
                                               }
                                             }
@@ -640,20 +593,20 @@ final class ag extends wj {
                         } else {
                           this.field_b.field_l = 0;
                           this.field_b.f(111, 0);
-                          this.field_b.b(-483502376, var3_ref.field_i);
+                          this.field_b.b(-483502376, var3.field_i);
                           this.field_q.a(this.field_b.field_i.length, this.field_b.field_i, 0, 1);
-                          this.field_e.a(126, var3_ref);
-                          var3_ref = (cc) ((Object) this.field_g.e(-54));
+                          this.field_e.a(126, var3);
+                          var3 = (cc) ((Object) this.field_g.e(-54));
                           continue L6;
                         }
                       }
                     } else {
                       this.field_b.field_l = 0;
                       this.field_b.f(111, 1);
-                      this.field_b.b(-483502376, var3_ref.field_i);
+                      this.field_b.b(-483502376, var3.field_i);
                       this.field_q.a(this.field_b.field_i.length, this.field_b.field_i, 0, 1);
-                      this.field_i.a(123, var3_ref);
-                      var3_ref = (cc) ((Object) this.field_d.e(-100));
+                      this.field_i.a(123, var3);
+                      var3 = (cc) ((Object) this.field_d.e(-100));
                       continue L5;
                     }
                   }
@@ -669,7 +622,7 @@ final class ag extends wj {
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   L23: {
-                    var3 = (Exception) (Object) decompiledCaughtException;
+                    var3_ref = (Exception) (Object) decompiledCaughtException;
                     break L23;
                   }
                 }
@@ -697,8 +650,6 @@ final class ag extends wj {
 
     final static boolean a(int param0, char param1) {
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
         if (param0 != -2821) {
           return false;
         } else {
@@ -714,8 +665,7 @@ final class ag extends wj {
                     break L1;
                   } else {
                     if (45 != param1) {
-                      stackOut_7_0 = 0;
-                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_8_0 = 0;
                       break L0;
                     } else {
                       break L1;
@@ -724,8 +674,7 @@ final class ag extends wj {
                 }
               }
             }
-            stackOut_6_0 = 1;
-            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_0 = 1;
             break L0;
           }
           return stackIn_8_0 != 0;
@@ -745,7 +694,6 @@ final class ag extends wj {
     }
 
     final void a(boolean param0) {
-        boolean discarded$0 = false;
         try {
             this.field_q.d(21135);
         } catch (Exception exception) {
@@ -754,7 +702,7 @@ final class ag extends wj {
         this.field_f = -1;
         this.field_q = null;
         if (param0) {
-            discarded$0 = this.a((byte) -72);
+            this.a((byte) -72);
         }
         this.field_l = (byte)(int)(Math.random() * 255.0 + 1.0);
     }

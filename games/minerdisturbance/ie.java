@@ -11,18 +11,6 @@ final class ie {
 
     final static void a(java.applet.Applet param0, boolean param1) {
         try {
-            Object discarded$6 = null;
-            Object discarded$7 = null;
-            Object discarded$8 = null;
-            Object discarded$9 = null;
-            Object discarded$10 = null;
-            Object discarded$11 = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            String var3 = null;
-            java.net.URL var4 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
@@ -30,14 +18,10 @@ final class ie {
             String stackIn_9_2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
+            String var3 = null;
+            java.net.URL var4 = null;
             try {
               L0: {
                 if (param1) {
@@ -45,12 +29,12 @@ final class ie {
                     L1: {
                       var4 = param0.getCodeBase();
                       var3 = nn.a(99, param0, var4).getFile();
-                      discarded$6 = lk.a("updatelinks", param0, 16715, new Object[]{"home", var3 + "home.ws"});
-                      discarded$7 = lk.a("updatelinks", param0, 16715, new Object[]{"gamelist", var3 + "togamelist.ws"});
-                      discarded$8 = lk.a("updatelinks", param0, 16715, new Object[]{"serverlist", var3 + "toserverlist.ws"});
-                      discarded$9 = lk.a("updatelinks", param0, 16715, new Object[]{"options", var3 + "options.ws"});
-                      discarded$10 = lk.a("updatelinks", param0, 16715, new Object[]{"terms", var3 + "terms.ws"});
-                      discarded$11 = lk.a("updatelinks", param0, 16715, new Object[]{"privacy", var3 + "privacy.ws"});
+                      lk.a("updatelinks", param0, 16715, new Object[]{"home", var3 + "home.ws"});
+                      lk.a("updatelinks", param0, 16715, new Object[]{"gamelist", var3 + "togamelist.ws"});
+                      lk.a("updatelinks", param0, 16715, new Object[]{"serverlist", var3 + "toserverlist.ws"});
+                      lk.a("updatelinks", param0, 16715, new Object[]{"options", var3 + "options.ws"});
+                      lk.a("updatelinks", param0, 16715, new Object[]{"terms", var3 + "terms.ws"});
+                      lk.a("updatelinks", param0, 16715, new Object[]{"privacy", var3 + "privacy.ws"});
                       break L1;
                     }
                   } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -71,27 +55,19 @@ final class ie {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var2_ref);
-                stackOut_6_1 = new StringBuilder().append("ie.H(");
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var2_ref);
+
+                stackIn_8_1 = new StringBuilder().append("ie.H(");
+
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L3;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L3;
                 }
               }
@@ -167,23 +143,12 @@ final class ie {
         int var5 = 0;
         int var6 = 0;
         StringBuilder stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        StringBuilder stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var6 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -200,8 +165,7 @@ final class ie {
             var5 = var4_int;
             L2: while (true) {
               if (param2 <= var5) {
-                stackOut_6_0 = (StringBuilder) (param0);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (StringBuilder) (param0);
                 break L0;
               } else {
                 param0.setCharAt(var5, param1);
@@ -214,27 +178,19 @@ final class ie {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("ie.A(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("ie.A(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -244,11 +200,10 @@ final class ie {
     }
 
     public static void b(int param0) {
-        StringBuilder discarded$0 = null;
         field_a = null;
         if (param0 != 5) {
             StringBuilder var2 = (StringBuilder) null;
-            discarded$0 = ie.a((StringBuilder) null, '@', 48, (byte) 21);
+            ie.a((StringBuilder) null, '@', 48, (byte) 21);
         }
     }
 

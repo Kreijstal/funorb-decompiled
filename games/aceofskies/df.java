@@ -12,7 +12,7 @@ abstract class df {
     int field_c;
 
     final static boolean a(char param0, int param1) {
-        int var2 = 0;
+        int var2;
         var2 = -120 / ((param1 - 22) / 39);
         if (param0 < 65) {
           if (param0 >= 97) {

@@ -89,10 +89,10 @@ final class pi {
     }
 
     final int g() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
         var1 = this.field_h.length;
         var2 = -1;
         var3 = 2147483647;
@@ -132,9 +132,9 @@ final class pi {
     }
 
     private final int f(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var2 = this.field_i.field_h[this.field_i.field_j];
           if (var2 >= 0) {

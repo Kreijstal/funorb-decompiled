@@ -12,26 +12,14 @@ final class nl extends al {
     static cg field_m;
 
     final static void a(lg param0, byte param1) {
-        RuntimeException var2 = null;
         int stackIn_5_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -41,16 +29,14 @@ final class nl extends al {
                   break L2;
                 } else {
                   if (rn.field_b.field_c) {
-                    stackOut_4_0 = 1;
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = 1;
                     break L1;
                   } else {
                     break L2;
                   }
                 }
               }
-              stackOut_3_0 = 0;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = 0;
               break L1;
             }
             L3: {
@@ -68,27 +54,19 @@ final class nl extends al {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2);
-            stackOut_8_1 = new StringBuilder().append("nl.BA(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2);
+
+            stackIn_10_1 = new StringBuilder().append("nl.BA(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }
@@ -97,31 +75,29 @@ final class nl extends al {
     }
 
     final void a(byte param0) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        String[] var2 = null;
-        String[] var3 = null;
-        String var4 = null;
-        String var5 = null;
-        tj var6 = null;
-        oi var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        vn var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var18 = 0;
-        String var19 = null;
-        int var20 = 0;
-        int var21 = 0;
-        String[] var22 = null;
-        vn var23 = null;
-        String var24 = null;
-        String var25 = null;
+        String[] var2;
+        String[] var3;
+        String var4;
+        String var5;
+        tj var6;
+        oi var7;
+        int var8;
+        int var9;
+        int var10;
+        vn var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var18;
+        String var19;
+        int var20;
+        int var21;
+        String[] var22;
+        vn var23;
+        String var24;
+        String var25;
         L0: {
           var21 = ZombieDawn.field_J;
           super.a((byte) -71);
@@ -172,7 +148,7 @@ final class nl extends al {
                     L4: {
                       var23 = this.c(var10, true);
                       var23.b(110 + vh.field_b, 140 + id.field_M + -32);
-                      discarded$2 = var6.a(var22[var10], vh.field_b + 260, id.field_M + 80, 300, 85, 0, 0, 1, 2, 35);
+                      var6.a(var22[var10], vh.field_b + 260, id.field_M + 80, 300, 85, 0, 0, 1, 2, 35);
                       var12 = 280 + vh.field_b;
                       var13 = -32 + id.field_M - -200;
                       var14 = 280;
@@ -183,7 +159,7 @@ final class nl extends al {
                       } else {
                         if (!this.g(var10, -7)) {
                           var25 = sh.field_f;
-                          discarded$3 = var7.a(var25, var12, var13, var14, var15, 16777215, 0, 0, 0, var16);
+                          var7.a(var25, var12, var13, var14, var15, 16777215, 0, 0, 0, var16);
                           break L3;
                         } else {
                           break L4;
@@ -320,10 +296,10 @@ final class nl extends al {
     }
 
     final void a(byte param0, boolean param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = ZombieDawn.field_J;
         super.a((byte) 85, param1);
         this.field_n = -1;
@@ -335,7 +311,7 @@ final class nl extends al {
             if (ld.field_k.length <= var5) {
               break L1;
             } else {
-              if (var3 >= ld.field_k[var5]) {
+              if ((var3 ^ -1) <= (ld.field_k[var5] ^ -1)) {
                 if (40 + ld.field_k[var5] > var3) {
                   if (var4 >= cg.field_g[var5]) {
                     if (var4 < 40 + cg.field_g[var5]) {
@@ -399,16 +375,16 @@ final class nl extends al {
     }
 
     final void a(byte param0, int param1, boolean param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int[] var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         L0: {
           var13 = ZombieDawn.field_J;
           super.a((byte) 73, param1, param2);
@@ -519,8 +495,6 @@ final class nl extends al {
 
     private final boolean e(int param0, int param1) {
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         if (param1 == -30858) {
           L0: {
             L1: {
@@ -546,13 +520,11 @@ final class nl extends al {
                     }
                   }
                 }
-                stackOut_9_0 = 0;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = 0;
                 break L0;
               }
             }
-            stackOut_8_0 = 1;
-            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_0 = 1;
             break L0;
           }
           return stackIn_10_0 != 0;
@@ -562,39 +534,21 @@ final class nl extends al {
     }
 
     final int a(boolean param0, int param1) {
-        byte[] discarded$2 = null;
-        byte[] var4 = null;
-        L0: {
-          if (param0) {
-            break L0;
-          } else {
-            var4 = (byte[]) null;
-            discarded$2 = nl.a(-87, -56, -85, (byte[]) null);
-            break L0;
-          }
+        if (!param0) {
+            byte[] var4 = (byte[]) null;
+            nl.a(-87, -56, -85, (byte[]) null);
         }
-        L1: {
-          if (!po.w(13296)) {
-            break L1;
-          } else {
-            if ((this.field_d ^ -1) != -7) {
-              if (0 != param1) {
-                return 100 + this.c(param1, 6);
-              } else {
-                return this.c(param1, 6) - -350;
-              }
-            } else {
-              break L1;
-            }
-          }
+        if (!po.w(13296) || (this.field_d ^ -1) == -7) {
+            return this.c(param1, 6) - -this.field_i;
         }
-        return this.c(param1, 6) - -this.field_i;
+        if (0 == param1) {
+            return this.c(param1, 6) - -350;
+        }
+        return 100 + this.c(param1, 6);
     }
 
     private final boolean f(int param0, int param1) {
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         if (param1 == -21) {
           L0: {
             L1: {
@@ -608,8 +562,7 @@ final class nl extends al {
                     break L1;
                   } else {
                     if (-21 != (param0 ^ -1)) {
-                      stackOut_8_0 = 0;
-                      stackIn_9_0 = stackOut_8_0;
+                      stackIn_9_0 = 0;
                       break L0;
                     } else {
                       break L1;
@@ -618,8 +571,7 @@ final class nl extends al {
                 }
               }
             }
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = 1;
             break L0;
           }
           return stackIn_9_0 != 0;
@@ -629,22 +581,22 @@ final class nl extends al {
     }
 
     final static void c(int param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = ZombieDawn.field_J;
         try {
           L0: {
@@ -658,30 +610,30 @@ final class nl extends al {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  incrementValue$40 = var2;
+                  incrementValue$16 = var2;
                   var2++;
-                  var5[incrementValue$40] = 0;
-                  incrementValue$41 = var2;
+                  var5[incrementValue$16] = 0;
+                  incrementValue$17 = var2;
                   var2++;
-                  var5[incrementValue$41] = 0;
-                  incrementValue$42 = var2;
+                  var5[incrementValue$17] = 0;
+                  incrementValue$18 = var2;
                   var2++;
-                  var5[incrementValue$42] = 0;
-                  incrementValue$43 = var2;
+                  var5[incrementValue$18] = 0;
+                  incrementValue$19 = var2;
                   var2++;
-                  var5[incrementValue$43] = 0;
-                  incrementValue$44 = var2;
+                  var5[incrementValue$19] = 0;
+                  incrementValue$20 = var2;
                   var2++;
-                  var5[incrementValue$44] = 0;
-                  incrementValue$45 = var2;
+                  var5[incrementValue$20] = 0;
+                  incrementValue$21 = var2;
                   var2++;
-                  var5[incrementValue$45] = 0;
-                  incrementValue$46 = var2;
+                  var5[incrementValue$21] = 0;
+                  incrementValue$22 = var2;
                   var2++;
-                  var5[incrementValue$46] = 0;
-                  incrementValue$47 = var2;
+                  var5[incrementValue$22] = 0;
+                  incrementValue$23 = var2;
                   var2++;
-                  var5[incrementValue$47] = 0;
+                  var5[incrementValue$23] = 0;
                   continue L1;
                 }
               }
@@ -704,30 +656,19 @@ final class nl extends al {
 
     final static byte[] a(int param0, int param1, int param2, byte[] param3) {
         byte[] var4 = null;
-        RuntimeException var4_ref = null;
         int var5_int = 0;
-        bd var5 = null;
-        byte[] var6 = null;
         int var7 = 0;
         byte[] var8 = null;
         byte[] stackIn_9_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_8_0 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var4_ref = null;
+        bd var5 = null;
+        byte[] var6 = null;
         var7 = ZombieDawn.field_J;
         try {
           L0: {
@@ -763,35 +704,26 @@ final class nl extends al {
             var5.a(true, var4, (long)(8 * param1));
             var6 = new byte[64];
             var5.a(var6, 0, -128);
-            stackOut_8_0 = (byte[]) (var6);
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = (byte[]) (var6);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var4_ref);
-            stackOut_10_1 = new StringBuilder().append("nl.LA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var4_ref);
+
+            stackIn_12_1 = new StringBuilder().append("nl.LA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }

@@ -27,9 +27,7 @@ final class jw extends ce {
     }
 
     final void a(java.awt.Graphics param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
-        boolean discarded$2 = false;
-        boolean discarded$3 = false;
-        java.awt.Graphics var10 = null;
+        java.awt.Graphics var10;
         this.field_t = param0.getClip();
         if (param7 > -47) {
           var10 = (java.awt.Graphics) null;
@@ -39,7 +37,7 @@ final class jw extends ce {
           this.field_s.width = param3;
           this.field_s.x = param6;
           param0.setClip((java.awt.Shape) ((Object) this.field_s));
-          discarded$2 = param0.drawImage(this.field_r, -param4 + param6, param1 - param2, (java.awt.image.ImageObserver) ((Object) this.field_u));
+          param0.drawImage(this.field_r, -param4 + param6, param1 - param2, (java.awt.image.ImageObserver) ((Object) this.field_u));
           param0.setClip(this.field_t);
           return;
         } else {
@@ -48,7 +46,7 @@ final class jw extends ce {
           this.field_s.width = param3;
           this.field_s.x = param6;
           param0.setClip((java.awt.Shape) ((Object) this.field_s));
-          discarded$3 = param0.drawImage(this.field_r, -param4 + param6, param1 - param2, (java.awt.image.ImageObserver) ((Object) this.field_u));
+          param0.drawImage(this.field_r, -param4 + param6, param1 - param2, (java.awt.image.ImageObserver) ((Object) this.field_u));
           param0.setClip(this.field_t);
           return;
         }

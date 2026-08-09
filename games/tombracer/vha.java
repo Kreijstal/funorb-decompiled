@@ -7,8 +7,8 @@ final class vha {
     static iu field_a;
 
     final static void a(int param0, byte param1, boolean param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         if (param1 == 95) {
           if (vo.field_b) {
             L0: {
@@ -25,43 +25,31 @@ final class vha {
                   if (param2) {
                     kga.field_n.a(param0, param3, (byte) -115);
                     if (var4 != 0) {
-                      L1: {
-                        rua.field_gb.c(30, param2);
-                        var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
-                        if (640 < var5) {
-                          break L1;
-                        } else {
-                          if (var5 < 635) {
-                            if ((wv.field_j ^ -1) < -1) {
-                              wv.field_j = wv.field_j - 5;
-                              if (TombRacer.field_G) {
-                                break L1;
-                              } else {
-                                return;
-                              }
-                            } else {
-                              return;
-                            }
+                      rua.field_gb.c(30, param2);
+                      var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
+                      if (640 >= var5) {
+                        if (var5 < 635) {
+                          if ((wv.field_j ^ -1) >= -1) {
+                            return;
                           } else {
+                            wv.field_j = wv.field_j - 5;
                             return;
                           }
+                        } else {
+                          return;
                         }
+                      } else {
+                        wv.field_j = wv.field_j + 5;
+                        return;
                       }
-                      wv.field_j = wv.field_j + 5;
-                      return;
                     } else {
                       var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
                       if (640 >= var5) {
                         if (var5 < 635) {
-                          if ((wv.field_j ^ -1) < -1) {
-                            wv.field_j = wv.field_j - 5;
-                            if (!TombRacer.field_G) {
-                              return;
-                            } else {
-                              wv.field_j = wv.field_j + 5;
-                              return;
-                            }
+                          if ((wv.field_j ^ -1) >= -1) {
+                            return;
                           } else {
+                            wv.field_j = wv.field_j - 5;
                             return;
                           }
                         } else {
@@ -73,16 +61,25 @@ final class vha {
                       }
                     }
                   } else {
-                    L2: {
+                    L1: {
                       rua.field_gb.c(30, param2);
                       var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
                       if (640 < var5) {
-                        break L2;
+                        wv.field_j = wv.field_j + 5;
+                        break L1;
                       } else {
-                        break L2;
+                        if (var5 >= 635) {
+                          break L1;
+                        } else {
+                          if ((wv.field_j ^ -1) < -1) {
+                            wv.field_j = wv.field_j - 5;
+                            break L1;
+                          } else {
+                            break L1;
+                          }
+                        }
                       }
                     }
-                    wv.field_j = wv.field_j + 5;
                     return;
                   }
                 }
@@ -90,118 +87,78 @@ final class vha {
             }
             if (!param2) {
               if (var4 == 0) {
-                L3: {
-                  var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
-                  if (640 < var5) {
-                    break L3;
-                  } else {
-                    L4: {
-                      if (var5 >= 635) {
-                        break L4;
-                      } else {
-                        if ((wv.field_j ^ -1) < -1) {
-                          wv.field_j = wv.field_j - 5;
-                          if (!TombRacer.field_G) {
-                            break L4;
-                          } else {
-                            break L3;
-                          }
-                        } else {
-                          return;
-                        }
-                      }
-                    }
+                var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
+                if (640 < var5) {
+                  wv.field_j = wv.field_j + 5;
+                  return;
+                } else {
+                  if (var5 >= 635) {
                     return;
+                  } else {
+                    if ((wv.field_j ^ -1) < -1) {
+                      wv.field_j = wv.field_j - 5;
+                      return;
+                    } else {
+                      return;
+                    }
                   }
                 }
-                wv.field_j = wv.field_j + 5;
-                return;
               } else {
-                L5: {
-                  rua.field_gb.c(30, param2);
-                  var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
-                  if (640 < var5) {
-                    break L5;
-                  } else {
-                    L6: {
-                      if (var5 >= 635) {
-                        break L6;
-                      } else {
-                        if ((wv.field_j ^ -1) < -1) {
-                          wv.field_j = wv.field_j - 5;
-                          if (!TombRacer.field_G) {
-                            break L6;
-                          } else {
-                            break L5;
-                          }
-                        } else {
-                          return;
-                        }
-                      }
+                rua.field_gb.c(30, param2);
+                var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
+                if (640 >= var5) {
+                  if (var5 < 635) {
+                    if ((wv.field_j ^ -1) >= -1) {
+                      return;
+                    } else {
+                      wv.field_j = wv.field_j - 5;
+                      return;
                     }
+                  } else {
                     return;
                   }
+                } else {
+                  wv.field_j = wv.field_j + 5;
+                  return;
                 }
-                wv.field_j = wv.field_j + 5;
-                return;
               }
             } else {
               kga.field_n.a(param0, param3, (byte) -115);
               if (var4 == 0) {
-                L7: {
-                  var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
-                  if (640 < var5) {
-                    break L7;
-                  } else {
-                    L8: {
-                      if (var5 >= 635) {
-                        break L8;
-                      } else {
-                        if ((wv.field_j ^ -1) < -1) {
-                          wv.field_j = wv.field_j - 5;
-                          if (!TombRacer.field_G) {
-                            break L8;
-                          } else {
-                            break L7;
-                          }
-                        } else {
-                          return;
-                        }
-                      }
+                var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
+                if (640 >= var5) {
+                  if (var5 < 635) {
+                    if ((wv.field_j ^ -1) >= -1) {
+                      return;
+                    } else {
+                      wv.field_j = wv.field_j - 5;
+                      return;
                     }
+                  } else {
                     return;
                   }
+                } else {
+                  wv.field_j = wv.field_j + 5;
+                  return;
                 }
-                wv.field_j = wv.field_j + 5;
-                return;
               } else {
-                L9: {
-                  rua.field_gb.c(30, param2);
-                  var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
-                  if (640 < var5) {
-                    break L9;
-                  } else {
-                    L10: {
-                      if (var5 >= 635) {
-                        break L10;
-                      } else {
-                        if ((wv.field_j ^ -1) < -1) {
-                          wv.field_j = wv.field_j - 5;
-                          if (!TombRacer.field_G) {
-                            break L10;
-                          } else {
-                            break L9;
-                          }
-                        } else {
-                          return;
-                        }
-                      }
+                rua.field_gb.c(30, param2);
+                var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
+                if (640 >= var5) {
+                  if (var5 < 635) {
+                    if ((wv.field_j ^ -1) < -1) {
+                      wv.field_j = wv.field_j - 5;
+                      return;
+                    } else {
+                      return;
                     }
+                  } else {
                     return;
                   }
+                } else {
+                  wv.field_j = wv.field_j + 5;
+                  return;
                 }
-                wv.field_j = wv.field_j + 5;
-                return;
               }
             }
           } else {

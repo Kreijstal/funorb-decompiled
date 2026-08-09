@@ -12,7 +12,6 @@ abstract class wj extends o {
     abstract int e(int param0);
 
     final static String g(int param0) {
-        String discarded$6 = null;
         if (param0 == -16470) {
           if (!bm.field_e) {
             if (sd.field_g >= gk.field_b) {
@@ -28,7 +27,7 @@ abstract class wj extends o {
             return null;
           }
         } else {
-          discarded$6 = wj.g(114);
+          wj.g(114);
           if (!bm.field_e) {
             if (sd.field_g >= gk.field_b) {
               if (gk.field_b + df.field_i <= sd.field_g) {

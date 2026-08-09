@@ -15,9 +15,17 @@ final class td extends kg {
     int field_I;
 
     final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, vg param6) {
-        boolean discarded$1 = false;
-        RuntimeException var8 = null;
+        int stackIn_22_0 = 0;
+        int stackIn_26_0 = 0;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -25,27 +33,6 @@ final class td extends kg {
         int var13 = 0;
         int var14 = 0;
         vg var15 = null;
-        int stackIn_21_0 = 0;
-        int stackIn_25_0 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        int stackOut_24_0 = 0;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -107,8 +94,7 @@ final class td extends kg {
                   }
                 }
               }
-              stackOut_20_0 = 1;
-              stackIn_21_0 = stackOut_20_0;
+              stackIn_22_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -117,12 +103,11 @@ final class td extends kg {
                   break L6;
                 } else {
                   var15 = (vg) null;
-                  discarded$1 = this.a(83, 56, (byte) 48, -95, 108, -98, (vg) null);
+                  this.a(83, 56, (byte) 48, -95, 108, -98, (vg) null);
                   break L6;
                 }
               }
-              stackOut_24_0 = 0;
-              stackIn_25_0 = stackOut_24_0;
+              stackIn_26_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -131,41 +116,33 @@ final class td extends kg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var8 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var8);
-            stackOut_26_1 = new StringBuilder().append("td.TA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_29_0 = (RuntimeException) (var8);
+
+            stackIn_29_1 = new StringBuilder().append("td.TA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+
             if (param6 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L7;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L7;
             }
           }
-          throw r.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_21_0 != 0;
+          return stackIn_22_0 != 0;
         } else {
-          return stackIn_25_0 != 0;
+          return stackIn_26_0 != 0;
         }
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var7 = 0;
+        int var7;
         if (param3 != param0) {
           L0: {
             if (param0 <= param3) {
@@ -225,11 +202,10 @@ final class td extends kg {
     }
 
     final int a(int param0, byte param1) {
-        int discarded$2 = 0;
         if ((param0 ^ -1) <= -1) {
           if (param0 < this.field_J.a((byte) 56)) {
             if (param1 != -58) {
-              discarded$2 = this.a((byte) -8);
+              this.a((byte) -8);
               return this.field_J.a((byte) 124, param0);
             } else {
               return this.field_J.a((byte) 124, param0);

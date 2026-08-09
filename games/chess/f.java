@@ -18,9 +18,9 @@ abstract class f {
     }
 
     final static void a(int param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         if (!param1) {
           return;
         } else {

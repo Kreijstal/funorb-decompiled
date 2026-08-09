@@ -15,7 +15,7 @@ public class IUnknown extends jaclib.peer.Peer {
     public final native long AddRef();
 
     public final long a(boolean param0) {
-        RuntimeException var2 = null;
+        RuntimeException var2;
         if (!param0) {
           return super.a();
         } else {

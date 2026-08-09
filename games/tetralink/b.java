@@ -40,10 +40,9 @@ final class b {
     }
 
     public static void a(byte param0) {
-        boolean discarded$0 = false;
         field_b = null;
         if (param0 != 41) {
-            discarded$0 = b.a(-42);
+            b.a(-42);
         }
     }
 

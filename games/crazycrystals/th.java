@@ -12,7 +12,7 @@ final class th extends om {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        dl var6 = null;
+        dl var6;
         if (param3 == 0) {
           if (this.field_w == null) {
             return;

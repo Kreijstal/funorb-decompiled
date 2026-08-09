@@ -10,17 +10,11 @@ abstract class uh {
     static int field_a;
 
     final static boolean a(int param0, int param1, boolean param2, byte param3) {
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_21_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_58_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
+        int var4;
+        int var5;
         if (!param2) {
           if (td.field_c[param1] >= td.field_c[param0]) {
             if (td.field_c[param1] > td.field_c[param0]) {
@@ -37,12 +31,10 @@ abstract class uh {
                       } else {
                         L0: {
                           if (param0 <= param1) {
-                            stackOut_57_0 = 0;
-                            stackIn_58_0 = stackOut_57_0;
+                            stackIn_58_0 = 0;
                             break L0;
                           } else {
-                            stackOut_56_0 = 1;
-                            stackIn_58_0 = stackOut_56_0;
+                            stackIn_58_0 = 1;
                             break L0;
                           }
                         }
@@ -60,12 +52,10 @@ abstract class uh {
                       } else {
                         L1: {
                           if (param0 <= param1) {
-                            stackOut_48_0 = 0;
-                            stackIn_49_0 = stackOut_48_0;
+                            stackIn_49_0 = 0;
                             break L1;
                           } else {
-                            stackOut_47_0 = 1;
-                            stackIn_49_0 = stackOut_47_0;
+                            stackIn_49_0 = 1;
                             break L1;
                           }
                         }
@@ -119,12 +109,10 @@ abstract class uh {
                       } else {
                         L2: {
                           if (param0 <= param1) {
-                            stackOut_20_0 = 0;
-                            stackIn_21_0 = stackOut_20_0;
+                            stackIn_21_0 = 0;
                             break L2;
                           } else {
-                            stackOut_19_0 = 1;
-                            stackIn_21_0 = stackOut_19_0;
+                            stackIn_21_0 = 1;
                             break L2;
                           }
                         }

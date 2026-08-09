@@ -157,30 +157,20 @@ final class qfa extends ha {
     }
 
     private final void a(boolean param0, boolean param1, int param2, int param3) {
-        Object var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        opa var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        boolean stackIn_2_0 = false;
         boolean stackIn_3_0 = false;
         boolean stackIn_4_0 = false;
         int stackIn_4_1 = 0;
         int stackIn_9_0 = 0;
         int stackIn_17_0 = 0;
-        boolean stackOut_1_0 = false;
-        boolean stackOut_3_0 = false;
-        int stackOut_3_1 = 0;
-        boolean stackOut_2_0 = false;
-        int stackOut_2_1 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
+        Object var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        opa var10;
+        int var11;
+        int var12;
+        int var13;
         L0: {
           L1: {
             var13 = VoidHunters.field_G;
@@ -188,20 +178,15 @@ final class qfa extends ha {
               break L1;
             } else {
               L2: {
-                stackOut_1_0 = this.field_Yb;
-                stackIn_3_0 = stackOut_1_0;
-                stackIn_2_0 = stackOut_1_0;
+                stackIn_3_0 = this.field_Yb;
+
                 if (this.field_kb) {
-                  stackOut_3_0 = stackIn_3_0;
-                  stackOut_3_1 = 0;
-                  stackIn_4_0 = stackOut_3_0;
-                  stackIn_4_1 = stackOut_3_1;
+                  stackIn_4_0 = stackIn_3_0;
+                  stackIn_4_1 = 0;
                   break L2;
                 } else {
-                  stackOut_2_0 = stackIn_2_0;
-                  stackOut_2_1 = 1;
-                  stackIn_4_0 = stackOut_2_0;
-                  stackIn_4_1 = stackOut_2_1;
+                  stackIn_4_0 = stackIn_3_0;
+                  stackIn_4_1 = 1;
                   break L2;
                 }
               }
@@ -218,12 +203,10 @@ final class qfa extends ha {
             var7 = 0;
             var8 = 0;
             if (!this.field_kb) {
-              stackOut_8_0 = 0;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = 0;
               break L3;
             } else {
-              stackOut_7_0 = 3;
-              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_0 = 3;
               break L3;
             }
           }
@@ -247,12 +230,10 @@ final class qfa extends ha {
                 }
                 L7: {
                   if (!var10.field_h) {
-                    stackOut_16_0 = 128;
-                    stackIn_17_0 = stackOut_16_0;
+                    stackIn_17_0 = 128;
                     break L7;
                   } else {
-                    stackOut_15_0 = 64;
-                    stackIn_17_0 = stackOut_15_0;
+                    stackIn_17_0 = 64;
                     break L7;
                   }
                 }
@@ -326,11 +307,23 @@ final class qfa extends ha {
     }
 
     final aja a(ima param0, boolean param1) {
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        RuntimeException var3 = null;
-        int[] var3_array = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int[] stackIn_8_0 = null;
+        int stackIn_8_1 = 0;
+        int[] stackIn_9_0 = null;
+        int stackIn_9_1 = 0;
+        int stackIn_9_2 = 0;
+        aja stackIn_18_0 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int[] var3 = null;
+        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -341,39 +334,6 @@ final class qfa extends ha {
         int[] var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        int[] stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        int[] stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        int[] stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        int stackIn_9_2 = 0;
-        aja stackIn_18_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int[] stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        int[] stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
-        int[] stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        aja stackOut_17_0 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
         var9 = VoidHunters.field_G;
         try {
           L0: {
@@ -381,7 +341,7 @@ final class qfa extends ha {
               var10 = new int[param0.field_f * param0.field_e];
               var12 = var10;
               var11 = var12;
-              var3_array = var11;
+              var3 = var11;
               var4 = 0;
               var5 = 0;
               if (param0.field_a != null) {
@@ -396,9 +356,9 @@ final class qfa extends ha {
                         var6_int++;
                         continue L2;
                       } else {
-                        incrementValue$3 = var5;
+                        incrementValue$0 = var5;
                         var5++;
-                        var3_array[incrementValue$3] = knb.a(param0.field_b[dla.a(255, (int) param0.field_h[var4])], param0.field_a[var4] << -85105096);
+                        var3[incrementValue$0] = knb.a(param0.field_b[dla.a(255, (int) param0.field_h[var4])], param0.field_a[var4] << -85105096);
                         var4++;
                         var7++;
                         continue L3;
@@ -419,32 +379,24 @@ final class qfa extends ha {
                         continue L4;
                       } else {
                         L6: {
-                          incrementValue$4 = var4;
+                          incrementValue$1 = var4;
                           var4++;
-                          var8 = param0.field_b[param0.field_h[incrementValue$4] & 255];
-                          incrementValue$5 = var5;
+                          var8 = param0.field_b[param0.field_h[incrementValue$1] & 255];
+                          incrementValue$2 = var5;
                           var5++;
-                          stackOut_6_0 = (int[]) (var10);
-                          stackOut_6_1 = incrementValue$5;
-                          stackIn_8_0 = stackOut_6_0;
-                          stackIn_8_1 = stackOut_6_1;
-                          stackIn_7_0 = stackOut_6_0;
-                          stackIn_7_1 = stackOut_6_1;
+                          stackIn_8_0 = (int[]) (var10);
+
+                          stackIn_8_1 = incrementValue$2;
+
                           if (var8 == 0) {
-                            stackOut_8_0 = (int[]) ((Object) stackIn_8_0);
-                            stackOut_8_1 = stackIn_8_1;
-                            stackOut_8_2 = 0;
-                            stackIn_9_0 = stackOut_8_0;
-                            stackIn_9_1 = stackOut_8_1;
-                            stackIn_9_2 = stackOut_8_2;
+                            stackIn_9_0 = (int[]) ((Object) stackIn_8_0);
+                            stackIn_9_1 = stackIn_8_1;
+                            stackIn_9_2 = 0;
                             break L6;
                           } else {
-                            stackOut_7_0 = (int[]) ((Object) stackIn_7_0);
-                            stackOut_7_1 = stackIn_7_1;
-                            stackOut_7_2 = knb.a(var8, -16777216);
-                            stackIn_9_0 = stackOut_7_0;
-                            stackIn_9_1 = stackOut_7_1;
-                            stackIn_9_2 = stackOut_7_2;
+                            stackIn_9_0 = (int[]) ((Object) stackIn_8_0);
+                            stackIn_9_1 = stackIn_8_1;
+                            stackIn_9_2 = knb.a(var8, -16777216);
                             break L6;
                           }
                         }
@@ -459,35 +411,26 @@ final class qfa extends ha {
             }
             var6 = this.a(param0.field_f, param0.field_f, var12, 0, (byte) 96, param0.field_e);
             var6.a(param0.field_c, param0.field_g, param0.field_i, param0.field_d);
-            stackOut_17_0 = (aja) (var6);
-            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_0 = (aja) (var6);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
-            var3 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var3);
-            stackOut_19_1 = new StringBuilder().append("qfa.AB(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            var3_ref = decompiledCaughtException;
+            stackIn_21_0 = (RuntimeException) (var3_ref);
+
+            stackIn_21_1 = new StringBuilder().append("qfa.AB(");
+
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L7;
             }
           }
@@ -497,7 +440,7 @@ final class qfa extends ha {
     }
 
     final void b(int param0, int param1, boolean param2) {
-        int var4 = 0;
+        int var4;
         L0: {
           if (this.field_Z != 0) {
             jaggl.OpenGL.glTexEnvi(8960, 34161, param0);
@@ -546,24 +489,14 @@ final class qfa extends ha {
     final void a(za param0) {
         od discarded$2 = null;
         od discarded$3 = null;
-        RuntimeException var2 = null;
+        RuntimeException runtimeException = null;
         mb var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -631,28 +564,20 @@ final class qfa extends ha {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("qfa.GB(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
+
+            stackIn_8_1 = new StringBuilder().append("qfa.GB(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -702,23 +627,13 @@ final class qfa extends ha {
     }
 
     final void a(int param0, uq param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -751,27 +666,19 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("qfa.FC(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3);
+
+            stackIn_10_1 = new StringBuilder().append("qfa.FC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }
@@ -780,24 +687,14 @@ final class qfa extends ha {
     }
 
     final void a(byte param0, jaa param1) {
-        int fieldTemp$2 = 0;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
+        int fieldTemp$1 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -819,9 +716,9 @@ final class qfa extends ha {
                       break L3;
                     }
                   }
-                  fieldTemp$2 = this.field_zc + 1;
+                  fieldTemp$1 = this.field_zc + 1;
                   this.field_zc = this.field_zc + 1;
-                  this.field_p[fieldTemp$2] = param1;
+                  this.field_p[fieldTemp$1] = param1;
                   this.field_lc = param1;
                   this.field_W = param1;
                   this.field_W.b(-5574);
@@ -841,27 +738,19 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3);
-            stackOut_10_1 = new StringBuilder().append("qfa.MA(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3);
+
+            stackIn_12_1 = new StringBuilder().append("qfa.MA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -888,54 +777,34 @@ final class qfa extends ha {
     final ka a(cbb param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         ne stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ne stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = new ne((qfa) (this), param0, param1, param3, param4, param2);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = new ne((qfa) (this), param0, param1, param3, param4, param2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var6 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var6);
-            stackOut_2_1 = new StringBuilder().append("qfa.H(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var6);
+
+            stackIn_4_1 = new StringBuilder().append("qfa.H(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -955,31 +824,21 @@ final class qfa extends ha {
     }
 
     final void a(aja param0, boolean param1) {
-        RuntimeException var3 = null;
-        tob var3_ref = null;
-        nv var3_ref2 = null;
-        fh var4 = null;
-        int var6 = 0;
-        nv var7 = null;
-        nv var8 = null;
-        tob var9 = null;
-        tob var10 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        tob var3 = null;
+        nv var3_ref = null;
+        RuntimeException var3_ref2 = null;
+        fh var4 = null;
+        int var6 = 0;
+        nv var7 = null;
+        nv var8 = null;
+        tob var9 = null;
+        tob var10 = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
@@ -988,12 +847,12 @@ final class qfa extends ha {
               if (!this.field_U) {
                 if (this.field_O) {
                   L2: {
-                    var3_ref = (tob) ((Object) this.field_Ic.a((long)(this.field_qc.d() << -112855472 | this.field_qc.a()), 116));
-                    if (var3_ref != null) {
+                    var3 = (tob) ((Object) this.field_Ic.a((long)(this.field_qc.d() << -112855472 | this.field_qc.a()), 116));
+                    if (var3 != null) {
                       break L2;
                     } else {
                       var9 = new tob((qfa) (this), this.field_qc.d(), this.field_qc.a());
-                      var3_ref = var9;
+                      var3 = var9;
                       this.field_Gc = this.field_Gc + 4 * var9.field_m;
                       L3: while (true) {
                         L4: {
@@ -1018,8 +877,8 @@ final class qfa extends ha {
                       }
                     }
                   }
-                  this.field_E.a((fh) (var3_ref), (byte) -22);
-                  this.field_c.setPbuffer(var3_ref.f(-128));
+                  this.field_E.a((fh) (var3), (byte) -22);
+                  this.field_c.setPbuffer(var3.f(-128));
                   break L1;
                 } else {
                   throw new RuntimeException("");
@@ -1040,12 +899,12 @@ final class qfa extends ha {
                       break L6;
                     } else {
                       L7: {
-                        var3_ref2 = (nv) ((Object) this.field_Ic.a((long)(this.field_qc.d() << 1088783632 | this.field_qc.a()), 100));
-                        if (var3_ref2 != null) {
+                        var3_ref = (nv) ((Object) this.field_Ic.a((long)(this.field_qc.d() << 1088783632 | this.field_qc.a()), 100));
+                        if (var3_ref != null) {
                           break L7;
                         } else {
                           var7 = new nv((qfa) (this), 6402, this.field_qc.d(), this.field_qc.a());
-                          var3_ref2 = var7;
+                          var3_ref = var7;
                           this.field_Gc = this.field_Gc + var7.field_m;
                           L8: while (true) {
                             L9: {
@@ -1070,8 +929,8 @@ final class qfa extends ha {
                           }
                         }
                       }
-                      this.field_E.a((fh) (var3_ref2), (byte) -22);
-                      this.field_jb.a(8, var3_ref2, (byte) -20);
+                      this.field_E.a((fh) (var3_ref), (byte) -22);
+                      this.field_jb.a(8, var3_ref, (byte) -20);
                       break L6;
                     }
                   }
@@ -1092,28 +951,20 @@ final class qfa extends ha {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
-            var3 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var3);
-            stackOut_27_1 = new StringBuilder().append("qfa.A(");
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            var3_ref2 = decompiledCaughtException;
+            stackIn_29_0 = (RuntimeException) (var3_ref2);
+
+            stackIn_29_1 = new StringBuilder().append("qfa.A(");
+
             if (param0 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L10;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L10;
             }
           }
@@ -1126,11 +977,11 @@ final class qfa extends ha {
     }
 
     final void s(int param0, int param1, int param2, int param3, int param4) {
-        float var6 = 0.0f;
-        float var7 = 0.0f;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        float var6;
+        float var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           var10 = VoidHunters.field_G;
           if ((param2 ^ -1) > -1) {
@@ -1207,98 +1058,58 @@ final class qfa extends ha {
     final da a(sw param0, ima[] param1, boolean param2) {
         RuntimeException var4 = null;
         fn stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fn stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
-            stackOut_0_0 = new fn((qfa) (this), param0, param1, param2);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = new fn((qfa) (this), param0, param1, param2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var4);
-            stackOut_2_1 = new StringBuilder().append("qfa.BA(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var4);
+
+            stackIn_4_1 = new StringBuilder().append("qfa.BA(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+
+
+            stackIn_7_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_5_0), stackIn_8_2 + ',' + param2 + ')');
         }
         return (da) ((Object) stackIn_1_0);
     }
@@ -1317,10 +1128,8 @@ final class qfa extends ha {
         if (!((this.field_Jb ^ -1) == -2)) {
             jaggl.OpenGL.glMatrixMode(5889);
             jaggl.OpenGL.glLoadIdentity();
-            if (this.field_Sb > 0) {
-                if (0 < this.field_Y) {
-                    jaggl.OpenGL.glOrtho(0.0, (double)this.field_Sb, (double)this.field_Y, 0.0, -1.0, 1.0);
-                }
+            if (this.field_Sb > 0 && 0 < this.field_Y) {
+                jaggl.OpenGL.glOrtho(0.0, (double)this.field_Sb, (double)this.field_Y, 0.0, -1.0, 1.0);
             }
             jaggl.OpenGL.glMatrixMode(5888);
             jaggl.OpenGL.glLoadIdentity();
@@ -1354,10 +1163,8 @@ final class qfa extends ha {
         if (param0 >= -80) {
             return;
         }
-        if (var2 != var4) {
-            if (var3 != var5) {
-                jaggl.OpenGL.glOrtho((double)var2, (double)var4, (double)(-var5), (double)(-var3), (double)this.field_ob, (double)this.field_bb);
-            }
+        if (var2 != var4 && var3 != var5) {
+            jaggl.OpenGL.glOrtho((double)var2, (double)var4, (double)(-var5), (double)(-var3), (double)this.field_ob, (double)this.field_bb);
         }
         jaggl.OpenGL.glMatrixMode(5888);
     }
@@ -1375,8 +1182,6 @@ final class qfa extends ha {
 
     final boolean c() {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           L1: {
             if (this.field_A == null) {
@@ -1393,13 +1198,11 @@ final class qfa extends ha {
                   }
                 }
               }
-              stackOut_4_0 = 1;
-              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_0 = 1;
               break L0;
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L0;
         }
         return stackIn_6_0 != 0;
@@ -1412,25 +1215,14 @@ final class qfa extends ha {
     }
 
     final void b(byte param0, jaa param1) {
-        int fieldTemp$4 = 0;
-        int discarded$5 = 0;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
+        int fieldTemp$1 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -1439,9 +1231,9 @@ final class qfa extends ha {
               } else {
                 if (param1 == this.field_Gb[this.field_rc]) {
                   L2: {
-                    fieldTemp$4 = this.field_rc;
+                    fieldTemp$1 = this.field_rc;
                     this.field_rc = this.field_rc - 1;
-                    this.field_Gb[fieldTemp$4] = null;
+                    this.field_Gb[fieldTemp$1] = null;
                     param1.a((byte) 55);
                     if (0 <= this.field_rc) {
                       this.field_lc = this.field_Gb[this.field_rc];
@@ -1456,7 +1248,7 @@ final class qfa extends ha {
                     if (param0 == 101) {
                       break L3;
                     } else {
-                      discarded$5 = this.e(-34, -7);
+                      this.e(-34, -7);
                       break L3;
                     }
                   }
@@ -1472,27 +1264,19 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3);
-            stackOut_10_1 = new StringBuilder().append("qfa.DC(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3);
+
+            stackIn_12_1 = new StringBuilder().append("qfa.DC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -1614,8 +1398,6 @@ final class qfa extends ha {
         oaa stackIn_5_0 = null;
         uq stackIn_8_0 = null;
         dda stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -1623,17 +1405,6 @@ final class qfa extends ha {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        oaa stackOut_4_0 = null;
-        dda stackOut_9_0 = null;
-        uq stackOut_7_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             L1: {
@@ -1651,20 +1422,17 @@ final class qfa extends ha {
                     }
                   }
                 }
-                stackOut_4_0 = new oaa((qfa) (this), param1, param0, param2, param3);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = new oaa((qfa) (this), param1, param0, param2, param3);
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
             }
             if (param4 >= 115) {
-              stackOut_9_0 = new dda((qfa) (this), param1, param0, param2);
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = new dda((qfa) (this), param1, param0, param2);
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_7_0 = (uq) null;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = (uq) null;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -1673,27 +1441,19 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var6);
-            stackOut_11_1 = new StringBuilder().append("qfa.ME(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var6);
+
+            stackIn_13_1 = new StringBuilder().append("qfa.ME(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -1718,24 +1478,14 @@ final class qfa extends ha {
 
     final void a(int param0, pib param1) {
         pib var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var3_ref = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -1786,27 +1536,19 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3_ref);
-            stackOut_14_1 = new StringBuilder().append("qfa.EC(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3_ref);
+
+            stackIn_16_1 = new StringBuilder().append("qfa.EC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L5;
             }
           }
@@ -1890,71 +1632,56 @@ final class qfa extends ha {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        int var5 = 0;
-        float[] var6 = null;
-        var5 = VoidHunters.field_G;
+        int var5 = VoidHunters.field_G;
         this.i(param0 ^ 5122, -2);
-        var2 = this.field_Dc - 1;
-        L0: while (true) {
-          if (var2 < 0) {
-            this.b(8448, 8448, false);
-            this.c(2, 34192, param0, 34168);
-            this.k(param0 ^ 770);
-            this.field_e = 1;
-            jaggl.OpenGL.glEnable(3042);
-            jaggl.OpenGL.glBlendFunc(770, 771);
-            this.field_xb = 1;
-            jaggl.OpenGL.glEnable(3008);
-            jaggl.OpenGL.glAlphaFunc(516, 0.0f);
-            this.field_db = true;
-            jaggl.OpenGL.glColorMask(true, true, true, true);
-            this.field_Lb = true;
-            this.a(true, -123);
-            this.b(-20951, true);
-            this.a((byte) 32, true);
-            this.a(true, (byte) -75);
-            this.f((byte) -25);
-            this.field_c.setSwapInterval(0);
-            jaggl.OpenGL.glShadeModel(7425);
-            jaggl.OpenGL.glClearDepth(1.0f);
-            jaggl.OpenGL.glDepthFunc(515);
-            jaggl.OpenGL.glPolygonMode(1028, 6914);
-            jaggl.OpenGL.glEnable(2884);
-            jaggl.OpenGL.glCullFace(1029);
-            jaggl.OpenGL.glMatrixMode(5888);
-            jaggl.OpenGL.glLoadIdentity();
-            jaggl.OpenGL.glColorMaterial(1028, 5634);
-            jaggl.OpenGL.glEnable(2903);
-            var6 = new float[]{0.0f, 0.0f, 0.0f, 1.0f};
-            var3 = 0;
-            L1: while (true) {
-              if (8 <= var3) {
-                jaggl.OpenGL.glEnable(16384);
-                jaggl.OpenGL.glEnable(16385);
-                jaggl.OpenGL.glFogf(2914, 0.949999988079071f);
-                jaggl.OpenGL.glFogi(2917, 9729);
-                jaggl.OpenGL.glHint(3156, 4353);
-                this.field_Jc = -1;
-                this.field_J = -1;
-                this.t(107);
-                return;
-              } else {
-                var4 = var3 + 16384;
-                jaggl.OpenGL.glLightfv(var4, 4608, var6, 0);
-                jaggl.OpenGL.glLightf(var4, 4615, 0.0f);
-                jaggl.OpenGL.glLightf(var4, 4616, 0.0f);
-                var3++;
-                continue L1;
-              }
-            }
-          } else {
+        for (var2 = this.field_Dc - 1; var2 >= 0; var2--) {
             this.h(33984, var2);
             this.a(param0 + -729, (pib) null);
             jaggl.OpenGL.glTexEnvi(8960, 8704, 34160);
-            var2--;
-            continue L0;
-          }
         }
+        this.b(8448, 8448, false);
+        this.c(2, 34192, param0, 34168);
+        this.k(param0 ^ 770);
+        this.field_e = 1;
+        jaggl.OpenGL.glEnable(3042);
+        jaggl.OpenGL.glBlendFunc(770, 771);
+        this.field_xb = 1;
+        jaggl.OpenGL.glEnable(3008);
+        jaggl.OpenGL.glAlphaFunc(516, 0.0f);
+        this.field_db = true;
+        jaggl.OpenGL.glColorMask(true, true, true, true);
+        this.field_Lb = true;
+        this.a(true, -123);
+        this.b(-20951, true);
+        this.a((byte) 32, true);
+        this.a(true, (byte) -75);
+        this.f((byte) -25);
+        this.field_c.setSwapInterval(0);
+        jaggl.OpenGL.glShadeModel(7425);
+        jaggl.OpenGL.glClearDepth(1.0f);
+        jaggl.OpenGL.glDepthFunc(515);
+        jaggl.OpenGL.glPolygonMode(1028, 6914);
+        jaggl.OpenGL.glEnable(2884);
+        jaggl.OpenGL.glCullFace(1029);
+        jaggl.OpenGL.glMatrixMode(5888);
+        jaggl.OpenGL.glLoadIdentity();
+        jaggl.OpenGL.glColorMaterial(1028, 5634);
+        jaggl.OpenGL.glEnable(2903);
+        float[] var6 = new float[]{0.0f, 0.0f, 0.0f, 1.0f};
+        for (var3 = 0; 8 > var3; var3++) {
+            var4 = var3 + 16384;
+            jaggl.OpenGL.glLightfv(var4, 4608, var6, 0);
+            jaggl.OpenGL.glLightf(var4, 4615, 0.0f);
+            jaggl.OpenGL.glLightf(var4, 4616, 0.0f);
+        }
+        jaggl.OpenGL.glEnable(16384);
+        jaggl.OpenGL.glEnable(16385);
+        jaggl.OpenGL.glFogf(2914, 0.949999988079071f);
+        jaggl.OpenGL.glFogi(2917, 9729);
+        jaggl.OpenGL.glHint(3156, 4353);
+        this.field_Jc = -1;
+        this.field_J = -1;
+        this.t(107);
     }
 
     private final void f(byte param0) {
@@ -2030,7 +1757,7 @@ final class qfa extends ha {
     }
 
     private final void c(byte param0) {
-        rpa discarded$14 = null;
+        rpa discarded$16 = null;
         this.field_wc = new pib[this.field_Dc];
         this.field_qb = new aia((qfa) (this), 3553, 6408, 1, 1);
         aia discarded$0 = new aia((qfa) (this), 3553, 6408, 1, 1);
@@ -2042,36 +1769,26 @@ final class qfa extends ha {
         ne discarded$6 = new ne((qfa) (this));
         ne discarded$7 = new ne((qfa) (this));
         ne discarded$8 = new ne((qfa) (this));
-        ne discarded$10 = new ne((qfa) (this));
+        ne discarded$11 = new ne((qfa) (this));
         if (param0 > -54) {
             this.c(102, -80);
         }
-        ne discarded$11 = new ne((qfa) (this));
-        ne discarded$13 = new ne((qfa) (this));
+        ne discarded$12 = new ne((qfa) (this));
+        ne discarded$15 = new ne((qfa) (this));
         if (this.field_U) {
             this.field_pb = new rpa((qfa) (this));
-            discarded$14 = new rpa((qfa) (this));
+            discarded$16 = new rpa((qfa) (this));
         }
     }
 
     final void a(pw param0) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -2092,27 +1809,19 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("qfa.FB(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("qfa.FB(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -2187,7 +1896,7 @@ final class qfa extends ha {
     }
 
     final void c(int param0, int param1) {
-        int var4 = 0;
+        int var4;
         L0: {
           var4 = VoidHunters.field_G;
           if (param1 != 1) {
@@ -2228,9 +1937,8 @@ final class qfa extends ha {
     }
 
     private final void i(int param0, int param1) {
-        za discarded$0 = null;
         if (param0 != 5888) {
-            discarded$0 = this.e(-78);
+            this.e(-78);
         }
         this.a(false, param1, true);
     }
@@ -2249,23 +1957,12 @@ final class qfa extends ha {
         int var7 = 0;
         int[] var8 = null;
         int[] stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int[] stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var7 = VoidHunters.field_G;
         try {
           L0: {
@@ -2283,8 +1980,7 @@ final class qfa extends ha {
             var4 = -2 + param1.length;
             L2: while (true) {
               if (0 > var4) {
-                stackOut_6_0 = (int[]) (var2);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (int[]) (var2);
                 break L0;
               } else {
                 var5 = param1[var4];
@@ -2301,27 +1997,19 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2_ref);
-            stackOut_8_1 = new StringBuilder().append("qfa.BD(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2_ref);
+
+            stackIn_10_1 = new StringBuilder().append("qfa.BD(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -2331,24 +2019,14 @@ final class qfa extends ha {
     }
 
     final void a(jaa param0, byte param1) {
-        int fieldTemp$2 = 0;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
+        int fieldTemp$1 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -2359,9 +2037,9 @@ final class qfa extends ha {
                   break L1;
                 } else {
                   L2: {
-                    fieldTemp$2 = this.field_Oc;
+                    fieldTemp$1 = this.field_Oc;
                     this.field_Oc = this.field_Oc - 1;
-                    this.field_kc[fieldTemp$2] = null;
+                    this.field_kc[fieldTemp$1] = null;
                     param0.d(70);
                     if (param1 < -68) {
                       break L2;
@@ -2390,27 +2068,19 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3);
-            stackOut_10_1 = new StringBuilder().append("qfa.FD(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3);
+
+            stackIn_12_1 = new StringBuilder().append("qfa.FD(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -2460,104 +2130,64 @@ final class qfa extends ha {
     final hf a(ekb param0, wib param1) {
         RuntimeException var3 = null;
         Object stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
-            stackOut_0_0 = null;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var3);
-            stackOut_2_1 = new StringBuilder().append("qfa.OB(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var3);
+
+            stackIn_4_1 = new StringBuilder().append("qfa.OB(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+
+
+            stackIn_7_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_5_0), stackIn_8_2 + ')');
         }
         return (hf) ((Object) stackIn_1_0);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        boolean discarded$0 = this.field_fc.a(param0, param1, param2, param3, -5214);
+        this.field_fc.a(param0, param1, param2, param3, -5214);
     }
 
     final void DA(int param0, int param1, int param2, int param3) {
@@ -2583,12 +2213,12 @@ final class qfa extends ha {
     }
 
     final void za(int param0, int param1, int param2, int param3, int param4) {
-        float var6 = 0.0f;
-        float var7 = 0.0f;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        float var6;
+        float var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         L0: {
           var11 = VoidHunters.field_G;
           if ((param2 ^ -1) <= -1) {
@@ -2692,68 +2322,72 @@ final class qfa extends ha {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        if (!this.field_Hb) {
-          return;
-        } else {
-          L0: {
-            if (0 >= this.field_Sb) {
-              break L0;
-            } else {
-              if (0 < this.field_Y) {
-                var1 = this.field_oc;
-                var2 = this.field_ab;
-                var3 = this.field_fb;
-                var4 = this.field_C;
-                this.t(-79);
-                jaggl.OpenGL.glReadBuffer(1028);
-                jaggl.OpenGL.glDrawBuffer(1029);
-                this.f((byte) -74);
-                this.a(false, -115);
-                this.b(-20951, false);
-                this.a((byte) 32, false);
-                this.a(false, (byte) 85);
-                this.a(111, (pib) null);
-                this.i(5888, -2);
-                this.c(0, 1);
-                this.d(0, 127);
-                jaggl.OpenGL.glMatrixMode(5889);
-                jaggl.OpenGL.glLoadIdentity();
-                jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
-                jaggl.OpenGL.glMatrixMode(5888);
-                jaggl.OpenGL.glLoadIdentity();
-                jaggl.OpenGL.glRasterPos2i(0, 0);
-                jaggl.OpenGL.glCopyPixels(0, 0, this.field_Sb, this.field_Y, 6144);
-                jaggl.OpenGL.glFlush();
-                jaggl.OpenGL.glReadBuffer(1029);
-                jaggl.OpenGL.glDrawBuffer(1029);
-                this.KA(var1, var3, var2, var4);
+        if (this.field_Hb) {
+            if (0 >= this.field_Sb || 0 >= this.field_Y) {
                 return;
-              } else {
-                break L0;
-              }
             }
-          }
-          return;
+            var1 = this.field_oc;
+            var2 = this.field_ab;
+            var3 = this.field_fb;
+            var4 = this.field_C;
+            this.t(-79);
+            jaggl.OpenGL.glReadBuffer(1028);
+            jaggl.OpenGL.glDrawBuffer(1029);
+            this.f((byte) -74);
+            this.a(false, -115);
+            this.b(-20951, false);
+            this.a((byte) 32, false);
+            this.a(false, (byte) 85);
+            this.a(111, (pib) null);
+            this.i(5888, -2);
+            this.c(0, 1);
+            this.d(0, 127);
+            jaggl.OpenGL.glMatrixMode(5889);
+            jaggl.OpenGL.glLoadIdentity();
+            jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
+            jaggl.OpenGL.glMatrixMode(5888);
+            jaggl.OpenGL.glLoadIdentity();
+            jaggl.OpenGL.glRasterPos2i(0, 0);
+            jaggl.OpenGL.glCopyPixels(0, 0, this.field_Sb, this.field_Y, 6144);
+            jaggl.OpenGL.glFlush();
+            jaggl.OpenGL.glReadBuffer(1029);
+            jaggl.OpenGL.glDrawBuffer(1029);
+            this.KA(var1, var3, var2, var4);
+            return;
         }
     }
 
     qfa(java.awt.Canvas param0, d param1, int param2) {
         super(param1);
-        long dupTemp$7 = 0L;
+        long dupTemp$3 = 0L;
+        Object stackIn_11_0 = null;
+        Object stackIn_12_0 = null;
+        int stackIn_12_1 = 0;
+        Object stackIn_51_0 = null;
+        Object stackIn_52_0 = null;
+        int stackIn_52_1 = 0;
+        RuntimeException stackIn_65_0 = null;
+        StringBuilder stackIn_65_1 = null;
+        RuntimeException stackIn_66_0 = null;
+        StringBuilder stackIn_66_1 = null;
+        String stackIn_66_2 = null;
+        StringBuilder stackIn_68_1 = null;
+        StringBuilder stackIn_69_1 = null;
+        String stackIn_69_2 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
+        int var4_int = 0;
         Throwable var4 = null;
         RuntimeException var4_ref = null;
-        int var4_int = 0;
-        Throwable var5 = null;
         int var5_int = 0;
+        Throwable var5 = null;
         int var6 = 0;
         int var7 = 0;
-        Object[] var8 = null;
-        String[] var8_array = null;
+        String[] var8 = null;
         int var9 = 0;
-        Object var10 = null;
-        String var10_ref = null;
+        String var10 = null;
         Exception var11 = null;
-        Object var13 = null;
+        String var13 = null;
         int[] var17 = null;
         Object var18 = null;
         Object var19 = null;
@@ -2761,65 +2395,14 @@ final class qfa extends ha {
         CharSequence var21 = null;
         CharSequence var22 = null;
         CharSequence var23 = null;
-        Object stackIn_10_0 = null;
-        Object stackIn_11_0 = null;
-        Object stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
-        Object stackIn_50_0 = null;
-        Object stackIn_51_0 = null;
-        Object stackIn_52_0 = null;
-        int stackIn_52_1 = 0;
-        RuntimeException stackIn_64_0 = null;
-        StringBuilder stackIn_64_1 = null;
-        RuntimeException stackIn_65_0 = null;
-        StringBuilder stackIn_65_1 = null;
-        RuntimeException stackIn_66_0 = null;
-        StringBuilder stackIn_66_1 = null;
-        String stackIn_66_2 = null;
-        RuntimeException stackIn_67_0 = null;
-        StringBuilder stackIn_67_1 = null;
-        RuntimeException stackIn_68_0 = null;
-        StringBuilder stackIn_68_1 = null;
-        RuntimeException stackIn_69_0 = null;
-        StringBuilder stackIn_69_1 = null;
-        String stackIn_69_2 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
-        Object stackOut_9_0 = null;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        Object stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        Object stackOut_49_0 = null;
-        Object stackOut_51_0 = null;
-        int stackOut_51_1 = 0;
-        Object stackOut_50_0 = null;
-        int stackOut_50_1 = 0;
-        RuntimeException stackOut_63_0 = null;
-        StringBuilder stackOut_63_1 = null;
-        RuntimeException stackOut_65_0 = null;
-        StringBuilder stackOut_65_1 = null;
-        String stackOut_65_2 = null;
-        RuntimeException stackOut_64_0 = null;
-        StringBuilder stackOut_64_1 = null;
-        String stackOut_64_2 = null;
-        RuntimeException stackOut_66_0 = null;
-        StringBuilder stackOut_66_1 = null;
-        RuntimeException stackOut_68_0 = null;
-        StringBuilder stackOut_68_1 = null;
-        String stackOut_68_2 = null;
-        RuntimeException stackOut_67_0 = null;
-        StringBuilder stackOut_67_1 = null;
-        String stackOut_67_2 = null;
-        String var13_ref = null;
         var18 = null;
         var19 = null;
         var20 = null;
         this.field_hb = new Hashtable();
         this.field_X = 128;
         this.field_Ec = new vf();
-        epb discarded$4 = new epb();
-        epb discarded$5 = new epb();
+        epb discarded$0 = new epb();
+        epb discarded$1 = new epb();
         this.field_m = false;
         this.field_D = new ij();
         this.field_zc = -1;
@@ -2879,7 +2462,7 @@ final class qfa extends ha {
         this.field_Bc = 8448;
         this.field_Q = 1.0f;
         this.field_Tb = new float[4];
-        mb discarded$6 = new mb(8192);
+        mb discarded$2 = new mb(8192);
         try {
           L0: {
             this.field_ib = param0;
@@ -2889,28 +2472,23 @@ final class qfa extends ha {
                 try {
                   L1: {
                     this.field_c = new jaggl.OpenGL();
-                    dupTemp$7 = this.field_c.init(param0, 8, 8, 8, 24, 0, this.field_Kc);
-                    this.field_uc = dupTemp$7;
-                    this.field_ic = dupTemp$7;
+                    dupTemp$3 = this.field_c.init(param0, 8, 8, 8, 24, 0, this.field_Kc);
+                    this.field_uc = dupTemp$3;
+                    this.field_ic = dupTemp$3;
                     if (this.field_uc != 0L) {
                       this.w(127);
                       var4_int = this.d((byte) 109);
                       if (-1 == (var4_int ^ -1)) {
                         L2: {
-                          stackOut_9_0 = this;
-                          stackIn_11_0 = stackOut_9_0;
-                          stackIn_10_0 = stackOut_9_0;
+                          stackIn_11_0 = this;
+
                           if (this.field_ac) {
-                            stackOut_11_0 = this;
-                            stackOut_11_1 = 33639;
-                            stackIn_12_0 = stackOut_11_0;
-                            stackIn_12_1 = stackOut_11_1;
+                            stackIn_12_0 = this;
+                            stackIn_12_1 = 33639;
                             break L2;
                           } else {
-                            stackOut_10_0 = this;
-                            stackOut_10_1 = 5121;
-                            stackIn_12_0 = stackOut_10_0;
-                            stackIn_12_1 = stackOut_10_1;
+                            stackIn_12_0 = this;
+                            stackIn_12_1 = 5121;
                             break L2;
                           }
                         }
@@ -2922,62 +2500,62 @@ final class qfa extends ha {
                             var5_int = 0;
                             var6 = 0;
                             var7 = 0;
-                            var8_array = up.a((byte) -67, ' ', this.field_Nb.replace('/', ' '));
+                            var8 = up.a((byte) -67, ' ', this.field_Nb.replace('/', ' '));
                             var9 = 0;
                             L4: while (true) {
                               L5: {
-                                if (var9 >= var8_array.length) {
+                                if (var9 >= var8.length) {
                                   break L5;
                                 } else {
-                                  var13_ref = var8_array[var9];
-                                  var10_ref = var13_ref;
-                                  var10_ref = var13_ref;
-                                  var10_ref = var13_ref;
+                                  var13 = var8[var9];
+                                  var10 = var13;
+                                  var10 = var13;
+                                  var10 = var13;
                                   try {
                                     L6: {
                                       L7: {
-                                        if (var13_ref.length() <= 0) {
+                                        if (var13.length() <= 0) {
                                           break L7;
                                         } else {
                                           L8: {
-                                            if (var13_ref.charAt(0) != 120) {
+                                            if (var13.charAt(0) != 120) {
                                               break L8;
                                             } else {
-                                              if (var13_ref.length() < 3) {
+                                              if (var13.length() < 3) {
                                                 break L8;
                                               } else {
-                                                var21 = (CharSequence) ((Object) var13_ref.substring(1, 3));
+                                                var21 = (CharSequence) ((Object) var13.substring(1, 3));
                                                 if (!hwa.a(var21, 10)) {
                                                   break L8;
                                                 } else {
-                                                  var10_ref = var13_ref.substring(1);
+                                                  var10 = var13.substring(1);
                                                   var7 = 1;
                                                   break L8;
                                                 }
                                               }
                                             }
                                           }
-                                          if (var10_ref.equals("hd")) {
+                                          if (var10.equals("hd")) {
                                             var6 = 1;
                                             break L7;
                                           } else {
                                             L9: {
-                                              if (!var10_ref.startsWith("hd")) {
+                                              if (!var10.startsWith("hd")) {
                                                 break L9;
                                               } else {
-                                                var10_ref = var10_ref.substring(2);
+                                                var10 = var10.substring(2);
                                                 var6 = 1;
                                                 break L9;
                                               }
                                             }
-                                            if (var10_ref.length() < 4) {
+                                            if (var10.length() < 4) {
                                               break L7;
                                             } else {
-                                              var22 = (CharSequence) ((Object) var10_ref.substring(0, 4));
+                                              var22 = (CharSequence) ((Object) var10.substring(0, 4));
                                               if (!hwa.a(var22, 10)) {
                                                 break L7;
                                               } else {
-                                                var23 = (CharSequence) ((Object) var10_ref.substring(0, 4));
+                                                var23 = (CharSequence) ((Object) var10.substring(0, 4));
                                                 var5_int = lob.a(-86, var23);
                                                 decompiledRegionSelector0 = 1;
                                                 break L6;
@@ -3067,20 +2645,15 @@ final class qfa extends ha {
                           }
                         }
                         L16: {
-                          stackOut_49_0 = this;
-                          stackIn_51_0 = stackOut_49_0;
-                          stackIn_50_0 = stackOut_49_0;
+                          stackIn_51_0 = this;
+
                           if (this.field_Ab.equals("s3 graphics")) {
-                            stackOut_51_0 = this;
-                            stackOut_51_1 = 0;
-                            stackIn_52_0 = stackOut_51_0;
-                            stackIn_52_1 = stackOut_51_1;
+                            stackIn_52_0 = this;
+                            stackIn_52_1 = 0;
                             break L16;
                           } else {
-                            stackOut_50_0 = this;
-                            stackOut_50_1 = 1;
-                            stackIn_52_0 = stackOut_50_0;
-                            stackIn_52_1 = stackOut_50_1;
+                            stackIn_52_0 = this;
+                            stackIn_52_1 = 1;
                             break L16;
                           }
                         }
@@ -3154,56 +2727,40 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter3;
           L20: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_63_0 = (RuntimeException) (var4_ref);
-            stackOut_63_1 = new StringBuilder().append("qfa.<init>(");
-            stackIn_65_0 = stackOut_63_0;
-            stackIn_65_1 = stackOut_63_1;
-            stackIn_64_0 = stackOut_63_0;
-            stackIn_64_1 = stackOut_63_1;
+            stackIn_65_0 = (RuntimeException) (var4_ref);
+
+            stackIn_65_1 = new StringBuilder().append("qfa.<init>(");
+
             if (param0 == null) {
-              stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
-              stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
-              stackOut_65_2 = "null";
-              stackIn_66_0 = stackOut_65_0;
-              stackIn_66_1 = stackOut_65_1;
-              stackIn_66_2 = stackOut_65_2;
+              stackIn_66_0 = (RuntimeException) ((Object) stackIn_65_0);
+              stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+              stackIn_66_2 = "null";
               break L20;
             } else {
-              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-              stackOut_64_2 = "{...}";
-              stackIn_66_0 = stackOut_64_0;
-              stackIn_66_1 = stackOut_64_1;
-              stackIn_66_2 = stackOut_64_2;
+              stackIn_66_0 = (RuntimeException) ((Object) stackIn_65_0);
+              stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+              stackIn_66_2 = "{...}";
               break L20;
             }
           }
           L21: {
-            stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
-            stackOut_66_1 = ((StringBuilder) (Object) stackIn_66_1).append(stackIn_66_2).append(',');
-            stackIn_68_0 = stackOut_66_0;
-            stackIn_68_1 = stackOut_66_1;
-            stackIn_67_0 = stackOut_66_0;
-            stackIn_67_1 = stackOut_66_1;
+
+
+            stackIn_68_1 = ((StringBuilder) (Object) stackIn_66_1).append(stackIn_66_2).append(',');
+
             if (param1 == null) {
-              stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
-              stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
-              stackOut_68_2 = "null";
-              stackIn_69_0 = stackOut_68_0;
-              stackIn_69_1 = stackOut_68_1;
-              stackIn_69_2 = stackOut_68_2;
+              stackIn_66_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
+              stackIn_69_2 = "null";
               break L21;
             } else {
-              stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
-              stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
-              stackOut_67_2 = "{...}";
-              stackIn_69_0 = stackOut_67_0;
-              stackIn_69_1 = stackOut_67_1;
-              stackIn_69_2 = stackOut_67_2;
+              stackIn_66_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
+              stackIn_69_2 = "{...}";
               break L21;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_69_0), stackIn_69_2 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_66_0), stackIn_69_2 + ',' + param2 + ')');
         }
     }
 
@@ -3215,13 +2772,13 @@ final class qfa extends ha {
     }
 
     private final void q(int param0) {
-        float[] var2 = null;
-        float var3 = 0.0f;
-        float var4 = 0.0f;
-        float var5 = 0.0f;
-        float var6 = 0.0f;
-        float var7 = 0.0f;
-        float[] var8 = null;
+        float[] var2;
+        float var3;
+        float var4;
+        float var5;
+        float var6;
+        float[] var8;
+        float var7;
         var8 = this.field_Xb;
         var2 = var8;
         if (param0 == -2) {
@@ -3319,9 +2876,9 @@ final class qfa extends ha {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        float var7 = 0.0f;
-        float var8 = 0.0f;
-        float var9 = 0.0f;
+        float var7;
+        float var8;
+        float var9;
         L0: {
           L1: {
             this.m(-97);
@@ -3486,35 +3043,13 @@ final class qfa extends ha {
     }
 
     private final void g(int param0) {
-        int var2 = 0;
         fsb var3 = null;
         int var4 = 0;
         int var5 = 0;
         float var6 = 0.0f;
-        int var7 = 0;
-        var7 = VoidHunters.field_G;
-        var2 = 0;
-        L0: while (true) {
-          if (this.field_P <= var2) {
-            L1: while (true) {
-              if (var2 >= this.field_Rb) {
-                L2: {
-                  if (param0 > 16) {
-                    break L2;
-                  } else {
-                    this.m(-35);
-                    break L2;
-                  }
-                }
-                this.field_Rb = this.field_P;
-                return;
-              } else {
-                jaggl.OpenGL.glDisable(var2 + 16386);
-                var2++;
-                continue L1;
-              }
-            }
-          } else {
+        int var2 = 0;
+        int var7 = VoidHunters.field_G;
+        for (var2 = 0; this.field_P > var2; var2++) {
             var3 = this.field_K[var2];
             var4 = 16386 + var2;
             we.field_o[0] = (float)var3.c((byte) -79);
@@ -3530,10 +3065,15 @@ final class qfa extends ha {
             jaggl.OpenGL.glLightfv(var4, 4609, we.field_o, 0);
             jaggl.OpenGL.glLightf(var4, 4617, 1.0f / (float)(var3.c(16777215) * var3.c(16777215)));
             jaggl.OpenGL.glEnable(var4);
-            var2++;
-            continue L0;
-          }
         }
+        while (var2 < this.field_Rb) {
+            jaggl.OpenGL.glDisable(var2 + 16386);
+            var2++;
+        }
+        if (param0 <= 16) {
+            this.m(-35);
+        }
+        this.field_Rb = this.field_P;
     }
 
     private final void j(int param0) {
@@ -3550,18 +3090,15 @@ final class qfa extends ha {
     }
 
     private final int d(byte param0) {
-        boolean discarded$1 = false;
+        int stackIn_30_0 = 0;
+        Throwable decompiledCaughtException = null;
         int var2 = 0;
         String var3 = null;
         String[] var4 = null;
-        NumberFormatException var5 = null;
         int var5_int = 0;
+        NumberFormatException var5 = null;
         int var6 = 0;
         int[] var9 = null;
-        int stackIn_30_0 = 0;
-        Throwable decompiledCaughtException = null;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
         L0: {
           this.field_Ab = jaggl.OpenGL.glGetString(7936).toLowerCase();
           var2 = 0;
@@ -3670,7 +3207,7 @@ final class qfa extends ha {
             this.field_cb = this.field_c.a("GL_ARB_vertex_buffer_object");
             this.field_y = this.field_c.a("GL_ARB_multisample");
             this.field_Zb = this.field_c.a("GL_ARB_vertex_program");
-            discarded$1 = this.field_c.a("GL_ARB_fragment_program");
+            this.field_c.a("GL_ARB_fragment_program");
             this.field_bc = this.field_c.a("GL_ARB_vertex_shader");
             this.field_B = this.field_c.a("GL_ARB_fragment_shader");
             this.field_tc = this.field_c.a("GL_EXT_texture3D");
@@ -3687,12 +3224,10 @@ final class qfa extends ha {
             this.field_Ac = tdb.field_o[1];
             this.field_Mb = tdb.field_o[0];
             if (var2 == 0) {
-              stackOut_29_0 = 0;
-              stackIn_30_0 = stackOut_29_0;
+              stackIn_30_0 = 0;
               break L11;
             } else {
-              stackOut_28_0 = var2;
-              stackIn_30_0 = stackOut_28_0;
+              stackIn_30_0 = var2;
               break L11;
             }
           }
@@ -3754,13 +3289,12 @@ final class qfa extends ha {
     }
 
     final void j() {
-        boolean discarded$0 = false;
         if (!this.field_U) {
             if (!this.field_O) {
                 throw new RuntimeException("");
             }
             this.field_qc.c(0, this.field_Sb, 0, 0, 101, 0, this.field_Y);
-            discarded$0 = this.field_c.setSurface(this.field_ic);
+            this.field_c.setSurface(this.field_ic);
         } else {
             if (this.field_jb != this.field_lc) {
                 throw new RuntimeException();
@@ -3793,52 +3327,20 @@ final class qfa extends ha {
     }
 
     final void d(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         int stackIn_11_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_14_0 = 0;
         int stackIn_14_1 = 0;
-        Object stackIn_16_0 = null;
         Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         int stackIn_22_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
-        Object stackIn_31_0 = null;
         Object stackIn_32_0 = null;
         Object stackIn_33_0 = null;
         int stackIn_33_1 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_13_1 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_12_1 = 0;
-        Object stackOut_15_0 = null;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_24_1 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_23_1 = 0;
-        Object stackOut_30_0 = null;
-        Object stackOut_32_0 = null;
-        int stackOut_32_1 = 0;
-        Object stackOut_31_0 = null;
-        int stackOut_31_1 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = VoidHunters.field_G;
           if (this.field_e == param0) {
@@ -3873,53 +3375,41 @@ final class qfa extends ha {
             }
             L2: {
               if (this.field_Lb) {
-                stackOut_10_0 = 0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = 0;
                 break L2;
               } else {
-                stackOut_9_0 = 1;
-                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_0 = 1;
                 break L2;
               }
             }
             L3: {
-              stackOut_11_0 = stackIn_11_0;
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_12_0 = stackOut_11_0;
+
+
               if (var3 != 0) {
-                stackOut_13_0 = stackIn_13_0;
-                stackOut_13_1 = 0;
-                stackIn_14_0 = stackOut_13_0;
-                stackIn_14_1 = stackOut_13_1;
+
+                stackIn_14_1 = 0;
                 break L3;
               } else {
-                stackOut_12_0 = stackIn_12_0;
-                stackOut_12_1 = 1;
-                stackIn_14_0 = stackOut_12_0;
-                stackIn_14_1 = stackOut_12_1;
+
+                stackIn_14_1 = 1;
                 break L3;
               }
             }
             L4: {
-              if (stackIn_14_0 == stackIn_14_1) {
+              if (stackIn_11_0 == stackIn_14_1) {
                 break L4;
               } else {
                 L5: {
                   jaggl.OpenGL.glColorMask(var3 != 0, var3 != 0, var3 != 0, true);
-                  stackOut_15_0 = this;
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_17_0 = this;
+
                   if (var3 == 0) {
-                    stackOut_17_0 = this;
-                    stackOut_17_1 = 0;
-                    stackIn_18_0 = stackOut_17_0;
-                    stackIn_18_1 = stackOut_17_1;
+                    stackIn_18_0 = this;
+                    stackIn_18_1 = 0;
                     break L5;
                   } else {
-                    stackOut_16_0 = this;
-                    stackOut_16_1 = 1;
-                    stackIn_18_0 = stackOut_16_0;
-                    stackIn_18_1 = stackOut_16_1;
+                    stackIn_18_0 = this;
+                    stackIn_18_1 = 1;
                     break L5;
                   }
                 }
@@ -3929,35 +3419,28 @@ final class qfa extends ha {
             }
             L6: {
               if (var4 != 0) {
-                stackOut_21_0 = 0;
-                stackIn_22_0 = stackOut_21_0;
+                stackIn_22_0 = 0;
                 break L6;
               } else {
-                stackOut_20_0 = 1;
-                stackIn_22_0 = stackOut_20_0;
+                stackIn_22_0 = 1;
                 break L6;
               }
             }
             L7: {
-              stackOut_22_0 = stackIn_22_0;
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_23_0 = stackOut_22_0;
+
+
               if (this.field_db) {
-                stackOut_24_0 = stackIn_24_0;
-                stackOut_24_1 = 0;
-                stackIn_25_0 = stackOut_24_0;
-                stackIn_25_1 = stackOut_24_1;
+
+                stackIn_25_1 = 0;
                 break L7;
               } else {
-                stackOut_23_0 = stackIn_23_0;
-                stackOut_23_1 = 1;
-                stackIn_25_0 = stackOut_23_0;
-                stackIn_25_1 = stackOut_23_1;
+
+                stackIn_25_1 = 1;
                 break L7;
               }
             }
             L8: {
-              if (stackIn_25_0 != stackIn_25_1) {
+              if (stackIn_22_0 != stackIn_25_1) {
                 L9: {
                   if (var4 == 0) {
                     jaggl.OpenGL.glDisable(3008);
@@ -3968,20 +3451,15 @@ final class qfa extends ha {
                   }
                 }
                 L10: {
-                  stackOut_30_0 = this;
-                  stackIn_32_0 = stackOut_30_0;
-                  stackIn_31_0 = stackOut_30_0;
+                  stackIn_32_0 = this;
+
                   if (var4 == 0) {
-                    stackOut_32_0 = this;
-                    stackOut_32_1 = 0;
-                    stackIn_33_0 = stackOut_32_0;
-                    stackIn_33_1 = stackOut_32_1;
+                    stackIn_33_0 = this;
+                    stackIn_33_1 = 0;
                     break L10;
                   } else {
-                    stackOut_31_0 = this;
-                    stackOut_31_1 = 1;
-                    stackIn_33_0 = stackOut_31_0;
-                    stackIn_33_1 = stackOut_31_1;
+                    stackIn_33_0 = this;
+                    stackIn_33_1 = 1;
                     break L10;
                   }
                 }
@@ -4042,8 +3520,6 @@ final class qfa extends ha {
 
     private final void b(byte param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 >= 84) {
             break L0;
@@ -4060,14 +3536,12 @@ final class qfa extends ha {
               if (!this.field_h) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         jaggl.OpenGL.glDepthMask(stackIn_6_0 != 0);
@@ -4089,19 +3563,15 @@ final class qfa extends ha {
     }
 
     final void ZA(int param0, float param1, float param2, float param3, float param4, float param5) {
-        int var7 = 0;
-        float var8 = 0.0f;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int var7;
+        float var8;
         L0: {
           if (param0 == this.field_Jc) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -4196,11 +3666,9 @@ final class qfa extends ha {
     }
 
     final void a(jaa param0, int param1) {
-        int fieldTemp$2 = 0;
-        RuntimeException var3 = null;
+        int fieldTemp$3 = 0;
+        jaa dupTemp$4 = null;
         int var4 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -4208,14 +3676,7 @@ final class qfa extends ha {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var3 = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -4227,17 +3688,18 @@ final class qfa extends ha {
                       break L2;
                     } else {
                       if (param0 == this.field_p[this.field_zc]) {
-                        fieldTemp$2 = this.field_zc;
+                        fieldTemp$3 = this.field_zc;
                         this.field_zc = this.field_zc - 1;
-                        this.field_p[fieldTemp$2] = null;
+                        this.field_p[fieldTemp$3] = null;
                         param0.b((byte) -75);
                         if ((this.field_zc ^ -1) > -1) {
                           this.field_lc = null;
                           this.field_W = null;
                           break L1;
                         } else {
-                          this.field_lc = this.field_p[this.field_zc];
-                          this.field_W = this.field_p[this.field_zc];
+                          dupTemp$4 = this.field_p[this.field_zc];
+                          this.field_lc = dupTemp$4;
+                          this.field_W = dupTemp$4;
                           this.field_W.b(param1 + -8470);
                           break L1;
                         }
@@ -4264,27 +3726,19 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3);
-            stackOut_13_1 = new StringBuilder().append("qfa.SD(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3);
+
+            stackIn_15_1 = new StringBuilder().append("qfa.SD(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }
@@ -4302,21 +3756,21 @@ final class qfa extends ha {
     }
 
     final synchronized void c(int param0) {
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int var2 = 0;
-        int var4 = 0;
-        hua var5 = null;
-        hua var6 = null;
-        hua var7 = null;
-        hua var8 = null;
-        hua var9 = null;
-        ksa var10 = null;
-        ksa var11 = null;
-        hua var12 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int var2;
+        int var4;
+        hua var5;
+        hua var6;
+        hua var7;
+        hua var8;
+        hua var9;
+        ksa var10;
+        ksa var11;
+        hua var12;
         var4 = VoidHunters.field_G;
         param0 = param0 & 2147483647;
         var2 = 0;
@@ -4345,9 +3799,9 @@ final class qfa extends ha {
                           break L3;
                         } else {
                           var7 = (hua) ((Object) this.field_hc.a(true));
-                          incrementValue$5 = var2;
+                          incrementValue$0 = var2;
                           var2++;
-                          cm.field_j[incrementValue$5] = var7.field_d;
+                          cm.field_j[incrementValue$0] = var7.field_d;
                           if ((var2 ^ -1) != -1001) {
                             continue L5;
                           } else {
@@ -4364,9 +3818,9 @@ final class qfa extends ha {
                       break L3;
                     } else {
                       var7 = (hua) ((Object) this.field_hc.a(true));
-                      incrementValue$6 = var2;
+                      incrementValue$1 = var2;
                       var2++;
-                      cm.field_j[incrementValue$6] = var7.field_d;
+                      cm.field_j[incrementValue$1] = var7.field_d;
                       if ((var2 ^ -1) == -1001) {
                         jaggl.OpenGL.glDeleteFramebuffersEXT(var2, cm.field_j, 0);
                         var2 = 0;
@@ -4386,7 +3840,7 @@ final class qfa extends ha {
                     break L7;
                   }
                 }
-                L8: while (true) {
+                L8: {
                   if (this.field_ec.b(105)) {
                     L9: {
                       if (var2 <= 0) {
@@ -4405,22 +3859,18 @@ final class qfa extends ha {
                               if (this.field_zb.b(106)) {
                                 L13: while (true) {
                                   if (this.field_v.b(-104)) {
-                                    L14: {
-                                      this.field_r.a(true);
-                                      if (-100663297 <= (this.u(97) ^ -1)) {
-                                        break L14;
+                                    this.field_r.a(true);
+                                    if (-100663297 <= (this.u(97) ^ -1)) {
+                                      break L8;
+                                    } else {
+                                      if (60000L + this.field_vc >= wt.a(false)) {
+                                        break L8;
                                       } else {
-                                        if (60000L + this.field_vc >= wt.a(false)) {
-                                          break L14;
-                                        } else {
-                                          System.gc();
-                                          this.field_vc = wt.a(false);
-                                          break L14;
-                                        }
+                                        System.gc();
+                                        this.field_vc = wt.a(false);
+                                        break L8;
                                       }
                                     }
-                                    this.field_Mc = param0;
-                                    return;
                                   } else {
                                     var12 = (hua) ((Object) this.field_v.a(true));
                                     jaggl.OpenGL.glDeleteLists((int)var12.field_b, var12.field_d);
@@ -4447,24 +3897,30 @@ final class qfa extends ha {
                     }
                   } else {
                     var8 = (hua) ((Object) this.field_ec.a(true));
-                    incrementValue$7 = var2;
+                    incrementValue$2 = var2;
                     var2++;
-                    cm.field_j[incrementValue$7] = (int)var8.field_b;
+                    cm.field_j[incrementValue$2] = (int)var8.field_b;
                     this.field_q = this.field_q - var8.field_d;
-                    if ((var2 ^ -1) != -1001) {
-                      continue L8;
+                    if ((var2 ^ -1) <= -1001) {
+                      break L8;
                     } else {
-                      jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, cm.field_j, 0);
-                      var2 = 0;
-                      continue L8;
+                      if (60000L + this.field_vc >= wt.a(false)) {
+                        break L8;
+                      } else {
+                        System.gc();
+                        this.field_vc = wt.a(false);
+                        break L8;
+                      }
                     }
                   }
                 }
+                this.field_Mc = param0;
+                return;
               } else {
                 var6 = (hua) ((Object) this.field_Nc.a(true));
-                incrementValue$8 = var2;
+                incrementValue$3 = var2;
                 var2++;
-                cm.field_j[incrementValue$8] = (int)var6.field_b;
+                cm.field_j[incrementValue$3] = (int)var6.field_b;
                 this.field_sb = this.field_sb - var6.field_d;
                 if (-1001 == (var2 ^ -1)) {
                   jaggl.OpenGL.glDeleteTextures(var2, cm.field_j, 0);
@@ -4477,9 +3933,9 @@ final class qfa extends ha {
             }
           } else {
             var5 = (hua) ((Object) this.field_xc.a(true));
-            incrementValue$9 = var2;
+            incrementValue$4 = var2;
             var2++;
-            cm.field_j[incrementValue$9] = (int)var5.field_b;
+            cm.field_j[incrementValue$4] = (int)var5.field_b;
             this.field_mc = this.field_mc - var5.field_d;
             if (-1001 != (var2 ^ -1)) {
               continue L0;
@@ -4527,54 +3983,34 @@ final class qfa extends ha {
     final aja a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
         tla stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        tla stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = new tla((qfa) (this), param3, param4, param0, param1, param2);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = new tla((qfa) (this), param3, param4, param0, param1, param2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var7);
-            stackOut_2_1 = new StringBuilder().append("qfa.W(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var7);
+
+            stackIn_4_1 = new StringBuilder().append("qfa.W(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -4595,33 +4031,18 @@ final class qfa extends ha {
     }
 
     final void f(int param0, int param1) {
-        L0: {
-          L1: {
-            if (param0 != this.field_ob) {
-              break L1;
+        if (param0 != this.field_ob || param1 != this.field_bb) {
+            this.field_ob = param0;
+            this.field_bb = param1;
+            this.q(-2);
+            this.s(2915);
+            if (this.field_Jb == 3) {
+                this.r(-105);
             } else {
-              if (param1 == this.field_bb) {
-                break L0;
-              } else {
-                break L1;
-              }
+                if (!((this.field_Jb ^ -1) != -3)) {
+                    this.d(115);
+                }
             }
-          }
-          this.field_ob = param0;
-          this.field_bb = param1;
-          this.q(-2);
-          this.s(2915);
-          if (this.field_Jb != 3) {
-            if ((this.field_Jb ^ -1) == -3) {
-              this.d(115);
-              break L0;
-            } else {
-              break L0;
-            }
-          } else {
-            this.r(-105);
-            break L0;
-          }
         }
     }
 
@@ -4668,21 +4089,20 @@ final class qfa extends ha {
     }
 
     final void a(int param0, jaa param1) {
-        rtb discarded$0 = null;
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         try {
             if (3 <= this.field_Oc) {
                 throw new RuntimeException();
             }
             if (param0 < 41) {
-                discarded$0 = this.a(false);
+                this.a(false);
             }
             if (!(-1 < (this.field_Oc ^ -1))) {
                 this.field_kc[this.field_Oc].d(105);
             }
-            fieldTemp$1 = this.field_Oc + 1;
+            fieldTemp$0 = this.field_Oc + 1;
             this.field_Oc = this.field_Oc + 1;
-            this.field_kc[fieldTemp$1] = param1;
+            this.field_kc[fieldTemp$0] = param1;
             this.field_W = param1;
             this.field_W.a(86);
         } catch (RuntimeException runtimeException) {
@@ -4691,8 +4111,8 @@ final class qfa extends ha {
     }
 
     final void a(int param0, int param1) throws jkb {
-        Exception var3 = null;
         Throwable decompiledCaughtException = null;
+        Exception var3 = null;
         try {
           L0: {
             this.field_c.swapBuffers();
@@ -4735,8 +4155,6 @@ final class qfa extends ha {
 
     final boolean f() {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           L1: {
             if (!this.field_y) {
@@ -4753,20 +4171,18 @@ final class qfa extends ha {
                   }
                 }
               }
-              stackOut_4_0 = 1;
-              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_0 = 1;
               break L0;
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L0;
         }
         return stackIn_6_0 != 0;
     }
 
     private final void h(byte param0) {
-        boolean discarded$5 = this.field_c.b();
+        this.field_c.b();
         if (param0 != -46) {
             this.o(46);
         }

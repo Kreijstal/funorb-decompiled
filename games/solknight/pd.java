@@ -34,31 +34,17 @@ abstract class pd {
     abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
 
     final static void a(int param0, String param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        String var4 = null;
         int stackIn_17_0 = 0;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
         String stackIn_48_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_10_0 = 0;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        RuntimeException stackOut_47_0 = null;
-        StringBuilder stackOut_47_1 = null;
-        String stackOut_47_2 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        String var4 = null;
         var3 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
@@ -96,22 +82,18 @@ abstract class pd {
                 if (!ab.field_u) {
                   if (kg.field_e <= kk.field_d) {
                     if (kg.field_e - -wi.field_l > kk.field_d) {
-                      stackOut_15_0 = 1;
-                      stackIn_17_0 = stackOut_15_0;
+                      stackIn_17_0 = 1;
                       break L4;
                     } else {
-                      stackOut_14_0 = 0;
-                      stackIn_17_0 = stackOut_14_0;
+                      stackIn_17_0 = 0;
                       break L4;
                     }
                   } else {
-                    stackOut_12_0 = 0;
-                    stackIn_17_0 = stackOut_12_0;
+                    stackIn_17_0 = 0;
                     break L4;
                   }
                 } else {
-                  stackOut_10_0 = 0;
-                  stackIn_17_0 = stackOut_10_0;
+                  stackIn_17_0 = 0;
                   break L4;
                 }
               }
@@ -215,27 +197,19 @@ abstract class pd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L12: {
             var2 = decompiledCaughtException;
-            stackOut_45_0 = (RuntimeException) (var2);
-            stackOut_45_1 = new StringBuilder().append("pd.G(").append(param0).append(',');
-            stackIn_47_0 = stackOut_45_0;
-            stackIn_47_1 = stackOut_45_1;
-            stackIn_46_0 = stackOut_45_0;
-            stackIn_46_1 = stackOut_45_1;
+            stackIn_47_0 = (RuntimeException) (var2);
+
+            stackIn_47_1 = new StringBuilder().append("pd.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackOut_47_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackOut_47_2 = "null";
-              stackIn_48_0 = stackOut_47_0;
-              stackIn_48_1 = stackOut_47_1;
-              stackIn_48_2 = stackOut_47_2;
+              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
+              stackIn_48_2 = "null";
               break L12;
             } else {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "{...}";
-              stackIn_48_0 = stackOut_46_0;
-              stackIn_48_1 = stackOut_46_1;
-              stackIn_48_2 = stackOut_46_2;
+              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
+              stackIn_48_2 = "{...}";
               break L12;
             }
           }

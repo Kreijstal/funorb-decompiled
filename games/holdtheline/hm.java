@@ -6,13 +6,10 @@ final class hm {
     static tk field_a;
 
     final static void a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
         int stackIn_88_0 = 0;
-        int stackOut_86_0 = 0;
-        int stackOut_85_0 = 0;
-        int stackOut_83_0 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = HoldTheLine.field_D;
         ol.field_f = ol.field_f + 1;
         var2 = 116 % ((param0 - -22) / 36);
@@ -21,17 +18,14 @@ final class hm {
             L0: {
               if (ol.field_f >= HoldTheLine.field_A) {
                 if (HoldTheLine.field_A - -lc.field_h > ol.field_f) {
-                  stackOut_86_0 = 1;
-                  stackIn_88_0 = stackOut_86_0;
+                  stackIn_88_0 = 1;
                   break L0;
                 } else {
-                  stackOut_85_0 = 0;
-                  stackIn_88_0 = stackOut_85_0;
+                  stackIn_88_0 = 0;
                   break L0;
                 }
               } else {
-                stackOut_83_0 = 0;
-                stackIn_88_0 = stackOut_83_0;
+                stackIn_88_0 = 0;
                 break L0;
               }
             }
@@ -545,11 +539,11 @@ final class hm {
 
     final static void a(byte param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = HoldTheLine.field_D;
         try {
           L0: {
@@ -585,23 +579,12 @@ final class hm {
     final static kg a(int param0, String param1) {
         RuntimeException var2 = null;
         kg stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kg stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -612,35 +595,26 @@ final class hm {
                 break L1;
               }
             }
-            stackOut_2_0 = new kg(param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new kg(param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("hm.C(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("hm.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -650,22 +624,21 @@ final class hm {
     }
 
     final static void b(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        ie var4_ref_ie = null;
         int var4 = 0;
+        ie var4_ref_ie = null;
         fl var5 = null;
         int var5_int = 0;
         Object var6 = null;
-        byte[] var6_array = null;
         int var7 = 0;
         byte[] var8 = null;
         da var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var7 = HoldTheLine.field_D;
         try {
           L0: {
@@ -714,13 +687,13 @@ final class hm {
                   L4: {
                     var5_int = var9.f((byte) -85);
                     if (0 == var5_int) {
-                      var6_array = null;
+                      var6 = null;
                       break L4;
                     } else {
                       var11 = new byte[var5_int];
                       var10 = var11;
                       var8 = var10;
-                      var6_array = var8;
+                      var6 = var8;
                       var9.a(var5_int, 0, (byte) 118, var11);
                       break L4;
                     }
@@ -728,7 +701,7 @@ final class hm {
                   var9.field_l = var9.field_l + 4;
                   if (var9.e((byte) 78)) {
                     var4_ref_ie.field_m = true;
-                    var4_ref_ie.field_l = var6_array;
+                    var4_ref_ie.field_l = (byte[]) (var6);
                     var4_ref_ie.d(0);
                     break L1;
                   } else {

@@ -5,11 +5,11 @@ final class chb {
     static int field_a;
 
     final static void a(int param0, int param1, boolean param2) {
-        vu var3 = null;
-        hqb var4 = null;
-        String var5_ref_String = null;
-        int var5 = 0;
-        int var6 = 0;
+        vu var3;
+        hqb var4;
+        String var5_ref_String;
+        int var5;
+        int var6;
         if (param0 != 0) {
           L0: {
             field_a = 126;

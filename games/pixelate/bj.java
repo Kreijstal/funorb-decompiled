@@ -28,11 +28,9 @@ final class bj {
     }
 
     final static dd a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
         if (param0 < 10) {
           return up.field_d[param0];
         } else {
@@ -55,12 +53,10 @@ final class bj {
           L2: {
             var3 = 85 / ((0 - param1) / 35);
             if (0 != ok.a(ea.field_b, -111, 4)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L2;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L2;
             }
           }

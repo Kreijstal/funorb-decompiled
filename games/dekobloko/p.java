@@ -24,12 +24,11 @@ final class p {
 
     final static void a(int param0, byte param1) {
         try {
-            Object discarded$2 = null;
             Throwable throwable = null;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                discarded$2 = nc.a("resizing", param1 + -14511, se.h(param1 ^ -25126), new Object[]{new Integer(param0)});
+                nc.a("resizing", param1 + -14511, se.h(param1 ^ -25126), new Object[]{new Integer(param0)});
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

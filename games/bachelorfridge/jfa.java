@@ -35,33 +35,25 @@ final class jfa extends bw {
     }
 
     private final int b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7_int = 0;
-        pd var7 = null;
-        int var8 = 0;
-        int var9 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_21_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        pd var7;
+        int var7_int;
+        int var8;
+        int var9;
         L0: {
           var8 = BachelorFridge.field_y;
           if (-1 > (dm.field_f ^ -1)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -69,12 +61,10 @@ final class jfa extends bw {
           var2 = stackIn_3_0;
           var3 = -117 % ((param0 - 6) / 37);
           if (var2 == 0) {
-            stackOut_5_0 = 5;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 5;
             break L1;
           } else {
-            stackOut_4_0 = 2;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = 2;
             break L1;
           }
         }
@@ -98,12 +88,10 @@ final class jfa extends bw {
           if (var6 >= var4) {
             L4: {
               if (var2 == 0) {
-                stackOut_20_0 = 15;
-                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_0 = 15;
                 break L4;
               } else {
-                stackOut_19_0 = 6;
-                stackIn_21_0 = stackOut_19_0;
+                stackIn_21_0 = 6;
                 break L4;
               }
             }
@@ -140,13 +128,9 @@ final class jfa extends bw {
     }
 
     final boolean a(int param0, byte param1, int param2) {
-        if (param2 > 12 + this.field_n) {
-            if (param2 < this.field_n - (-12 + -(bd.field_i.field_q >> -1005839646))) {
-                if (param0 > 10 + (-38 + this.field_k)) {
-                    if (!(param0 >= -38 + this.field_k - (-10 - (bd.field_i.field_p >> -1681546622)))) {
-                        return true;
-                    }
-                }
+        if (param2 > 12 + this.field_n && param2 < this.field_n - (-12 + -(bd.field_i.field_q >> -1005839646)) && param0 > 10 + (-38 + this.field_k)) {
+            if (!(param0 >= -38 + this.field_k - (-10 - (bd.field_i.field_p >> -1681546622)))) {
+                return true;
             }
         }
         if (param1 <= 115) {
@@ -164,12 +148,12 @@ final class jfa extends bw {
     }
 
     final void d(int param0) {
-        boolean discarded$2 = false;
-        pv var2_ref_pv = null;
-        int var2 = 0;
+        boolean discarded$1 = false;
+        pv var2_ref_pv;
+        int var2;
         L0: {
           if (this.field_i.e(12917)) {
-            discarded$2 = this.f(-4);
+            discarded$1 = this.f(-4);
             break L0;
           } else {
             var2_ref_pv = (pv) ((Object) this.field_i.b((byte) 90));
@@ -186,48 +170,24 @@ final class jfa extends bw {
     }
 
     final static kv[] a(vr param0, int param1, String param2) {
-        kv[] discarded$2 = null;
         kv[] var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         Object var5 = null;
         kv[] var5_array = null;
-        int var6 = 0;
         int var7 = 0;
         String var8 = null;
         kv[] stackIn_16_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kv[] stackOut_15_0 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var3_ref = null;
+        int var6 = 0;
         var7 = BachelorFridge.field_y;
         try {
           L0: {
@@ -237,15 +197,14 @@ final class jfa extends bw {
                 break L1;
               } else {
                 var8 = (String) null;
-                discarded$2 = jfa.a((vr) null, -103, (String) null);
+                jfa.a((vr) null, -103, (String) null);
                 break L1;
               }
             }
             var4 = 0;
             L2: while (true) {
               if (var4 >= 5) {
-                stackOut_15_0 = (kv[]) (var3);
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_0 = (kv[]) (var3);
                 break L0;
               } else {
                 L3: {
@@ -287,64 +246,47 @@ final class jfa extends bw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3_ref = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var3_ref);
-            stackOut_17_1 = new StringBuilder().append("jfa.F(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var3_ref);
+
+            stackIn_19_1 = new StringBuilder().append("jfa.F(");
+
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param1).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+
+
+            stackIn_22_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L7;
             }
           }
-          throw pe.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_20_0), stackIn_23_2 + ')');
         }
         return stackIn_16_0;
     }
 
     private final boolean f(int param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = BachelorFridge.field_y;
           if (this.field_t) {
@@ -399,7 +341,7 @@ final class jfa extends bw {
               if (param0 == -4) {
                 break L5;
               } else {
-                discarded$1 = jfa.a(false, 33);
+                jfa.a(false, 33);
                 break L5;
               }
             }
@@ -608,12 +550,12 @@ final class jfa extends bw {
     }
 
     private final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var7 = BachelorFridge.field_y;
         var2 = 4;
         var3 = 0;
@@ -756,11 +698,10 @@ final class jfa extends bw {
     }
 
     final static int a(boolean param0, int param1) {
-        int discarded$0 = 0;
         String var2 = lka.field_E[param1][18];
         var2 = var2.trim();
         if (param0) {
-            discarded$0 = jfa.a(true, -76);
+            jfa.a(true, -76);
         }
         var2 = var2.toLowerCase();
         if (!(!var2.equals(""))) {
@@ -770,10 +711,10 @@ final class jfa extends bw {
     }
 
     final void a(byte param0, int param1) {
-        int var4 = 0;
-        int var5 = 0;
-        vu var6 = null;
-        vu var7 = null;
+        int var4;
+        int var5;
+        vu var6;
+        vu var7;
         var5 = BachelorFridge.field_y;
         if (param0 > 39) {
           L0: {

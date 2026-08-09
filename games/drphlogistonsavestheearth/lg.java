@@ -25,8 +25,6 @@ final class lg implements cg {
     }
 
     final static void a(int param0) {
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
         RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
@@ -35,7 +33,7 @@ final class lg implements cg {
         try {
           L0: {
             if (fa.d(0)) {
-              discarded$12 = hg.field_S.a(jd.field_P, fl.field_f, true, 0);
+              hg.field_S.a(jd.field_P, fl.field_f, true, 0);
               hg.field_S.b(false);
               L1: while (true) {
                 if (!th.a(-109)) {
@@ -47,7 +45,7 @@ final class lg implements cg {
                     return;
                   }
                 } else {
-                  discarded$13 = hg.field_S.a(di.field_c, sj.field_g, 121);
+                  hg.field_S.a(di.field_c, sj.field_g, 121);
                   continue L1;
                 }
               }
@@ -96,7 +94,6 @@ final class lg implements cg {
     }
 
     public final void a(boolean param0, int param1, vg param2, int param3, int param4) {
-        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -106,8 +103,6 @@ final class lg implements cg {
         int var13 = 0;
         nd var14 = null;
         vg stackIn_3_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -115,26 +110,14 @@ final class lg implements cg {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        vg stackOut_2_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             L1: {
               if (param2 instanceof nd) {
-                stackOut_2_0 = (vg) (param2);
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (vg) (param2);
                 break L1;
               } else {
-                stackOut_1_0 = null;
-                stackIn_3_0 = (vg) ((Object) stackOut_1_0);
+                stackIn_3_0 = null;
                 break L1;
               }
             }
@@ -169,7 +152,7 @@ final class lg implements cg {
               wj.g(var7, var8, var7 - -var11, var8 + var12, 1);
               if (null != this.field_d) {
                 var13 = var14.field_J + (var14.field_O - -this.field_j);
-                discarded$1 = this.field_d.a(param2.field_p, var13 + param2.field_o + param4, this.field_l + (param3 + param2.field_m), param2.field_w - this.field_j - var13, -(this.field_j << -785132607) + param2.field_k, this.field_b, this.field_h, 1, 1, 0);
+                this.field_d.a(param2.field_p, var13 + param2.field_o + param4, this.field_l + (param3 + param2.field_m), param2.field_w - this.field_j - var13, -(this.field_j << -785132607) + param2.field_k, this.field_b, this.field_h, 1, 1, 0);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -184,27 +167,19 @@ final class lg implements cg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var6);
-            stackOut_13_1 = new StringBuilder().append("lg.J(").append(param0).append(',').append(param1).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var6);
+
+            stackIn_15_1 = new StringBuilder().append("lg.J(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }

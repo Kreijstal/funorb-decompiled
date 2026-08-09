@@ -37,7 +37,7 @@ final class lg {
     }
 
     final boolean c(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = 23 % ((param0 - -78) / 43);
         if (lo.field_l >= this.field_m) {
           if ((be.field_j ^ -1) >= -1) {
@@ -51,9 +51,8 @@ final class lg {
     }
 
     final void b(int param0, int param1, int param2) {
-        boolean discarded$2 = false;
         if (param2 != -1) {
-          discarded$2 = this.c(-74);
+          this.c(-74);
           this.field_p = param1;
           this.field_o = param0;
           return;
@@ -66,7 +65,6 @@ final class lg {
 
     final static void a(int param0, byte param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         qh var5_ref_qh = null;
         int var5 = 0;
@@ -75,6 +73,7 @@ final class lg {
         kd var8 = null;
         kd var9 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var7 = ZombieDawn.field_J;
         try {
           L0: {
@@ -150,10 +149,10 @@ final class lg {
     }
 
     private final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = ZombieDawn.field_J;
         var2 = this.field_p;
         var3 = this.field_o;
@@ -557,7 +556,7 @@ final class lg {
     }
 
     final void d(int param0) {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         if (null == cn.field_b) {
           L0: {
             if (be.field_j <= 0) {
@@ -568,9 +567,9 @@ final class lg {
             }
           }
           if (this.field_c) {
-            fieldTemp$1 = this.field_n - 1;
+            fieldTemp$0 = this.field_n - 1;
             this.field_n = this.field_n - 1;
-            if (0 < fieldTemp$1) {
+            if (0 < fieldTemp$0) {
               return;
             } else {
               this.field_n = this.field_l;
@@ -649,9 +648,8 @@ final class lg {
     }
 
     final boolean c(int param0, int param1, int param2) {
-        int var4 = 0;
+        int var4;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
         var4 = -71 / ((-63 - param2) / 60);
         if (this.field_k <= param1) {
           if (this.field_a >= param1) {
@@ -664,8 +662,7 @@ final class lg {
                     return false;
                   }
                 } else {
-                  stackOut_9_0 = 1;
-                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_11_0 = 1;
                   return stackIn_11_0 != 0;
                 }
               } else {
@@ -683,34 +680,16 @@ final class lg {
     }
 
     final la a(boolean param0) {
-        la var2 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_2_1 = 0;
-        ec stackIn_2_2 = null;
-        int stackIn_2_3 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_3_1 = 0;
-        ec stackIn_3_2 = null;
-        int stackIn_3_3 = 0;
+        la var2;
+        int stackIn_3_0;
+        int stackIn_3_1;
+        ec stackIn_3_2;
+        int stackIn_3_3;
         int stackIn_4_0 = 0;
         int stackIn_4_1 = 0;
         ec stackIn_4_2 = null;
         int stackIn_4_3 = 0;
         int stackIn_4_4 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_1_1 = 0;
-        ec stackOut_1_2 = null;
-        int stackOut_1_3 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_3_1 = 0;
-        ec stackOut_3_2 = null;
-        int stackOut_3_3 = 0;
-        int stackOut_3_4 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_2_1 = 0;
-        ec stackOut_2_2 = null;
-        int stackOut_2_3 = 0;
-        int stackOut_2_4 = 0;
         this.field_e = kj.field_c;
         this.field_q = te.field_eb;
         if (!param0) {
@@ -719,41 +698,27 @@ final class lg {
           L0: {
             this.field_g.a(this.field_t, 64, this.field_i);
             rl.field_f = false;
-            stackOut_1_0 = this.field_i;
-            stackOut_1_1 = this.field_t;
-            stackOut_1_2 = vh.field_a;
-            stackOut_1_3 = 0;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
-            stackIn_3_3 = stackOut_1_3;
-            stackIn_2_0 = stackOut_1_0;
-            stackIn_2_1 = stackOut_1_1;
-            stackIn_2_2 = stackOut_1_2;
-            stackIn_2_3 = stackOut_1_3;
+            stackIn_3_0 = this.field_i;
+
+            stackIn_3_1 = this.field_t;
+
+            stackIn_3_2 = vh.field_a;
+
+            stackIn_3_3 = 0;
+
             if (param0) {
-              stackOut_3_0 = stackIn_3_0;
-              stackOut_3_1 = stackIn_3_1;
-              stackOut_3_2 = (ec) ((Object) stackIn_3_2);
-              stackOut_3_3 = stackIn_3_3;
-              stackOut_3_4 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              stackIn_4_2 = stackOut_3_2;
-              stackIn_4_3 = stackOut_3_3;
-              stackIn_4_4 = stackOut_3_4;
+              stackIn_4_0 = stackIn_3_0;
+              stackIn_4_1 = stackIn_3_1;
+              stackIn_4_2 = (ec) ((Object) stackIn_3_2);
+              stackIn_4_3 = stackIn_3_3;
+              stackIn_4_4 = 0;
               break L0;
             } else {
-              stackOut_2_0 = stackIn_2_0;
-              stackOut_2_1 = stackIn_2_1;
-              stackOut_2_2 = (ec) ((Object) stackIn_2_2);
-              stackOut_2_3 = stackIn_2_3;
-              stackOut_2_4 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              stackIn_4_2 = stackOut_2_2;
-              stackIn_4_3 = stackOut_2_3;
-              stackIn_4_4 = stackOut_2_4;
+              stackIn_4_0 = stackIn_3_0;
+              stackIn_4_1 = stackIn_3_1;
+              stackIn_4_2 = (ec) ((Object) stackIn_3_2);
+              stackIn_4_3 = stackIn_3_3;
+              stackIn_4_4 = 1;
               break L0;
             }
           }

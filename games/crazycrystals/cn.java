@@ -21,10 +21,6 @@ final class cn {
         int stackIn_17_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_2_0 = 0;
         var4 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -35,8 +31,7 @@ final class cn {
               var3 = 0;
               L1: while (true) {
                 if (var1.field_i <= var3) {
-                  stackOut_16_0 = 1;
-                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_0 = 1;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
@@ -47,8 +42,7 @@ final class cn {
                       if (var5.field_k[var3].field_a != 0) {
                         break L2;
                       } else {
-                        stackOut_8_0 = 0;
-                        stackIn_9_0 = stackOut_8_0;
+                        stackIn_9_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -59,8 +53,7 @@ final class cn {
                       break L3;
                     } else {
                       if (var5.field_m[var3].field_a == 0) {
-                        stackOut_13_0 = 0;
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -73,8 +66,7 @@ final class cn {
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }

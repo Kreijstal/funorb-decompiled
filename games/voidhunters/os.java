@@ -72,8 +72,6 @@ class os extends gea implements oo {
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
         boolean stackIn_7_0 = false;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -81,35 +79,21 @@ class os extends gea implements oo {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_6_0 = false;
-        int stackOut_4_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if ((param1 ^ -1) != -14) {
               if (param0 == -15834) {
-                stackOut_6_0 = super.a(-15834, param1, param2, param3);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = super.a(-15834, param1, param2, param3);
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
               this.l((byte) -106);
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -118,27 +102,19 @@ class os extends gea implements oo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var5);
-            stackOut_8_1 = new StringBuilder().append("os.N(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var5);
+
+            stackIn_10_1 = new StringBuilder().append("os.N(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L1;
             }
           }
@@ -158,22 +134,12 @@ class os extends gea implements oo {
     public void a(int param0, int param1, int param2, htb param3, int param4) {
         RuntimeException var6 = null;
         String var7 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -198,27 +164,19 @@ class os extends gea implements oo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var6);
-            stackOut_6_1 = new StringBuilder().append("os.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var6);
+
+            stackIn_8_1 = new StringBuilder().append("os.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -227,29 +185,17 @@ class os extends gea implements oo {
     }
 
     final void a(boolean param0, String param1, int param2) {
-        htb discarded$2 = null;
-        htb discarded$3 = null;
-        RuntimeException var4 = null;
-        nna var4_ref = null;
-        int var5 = 0;
-        nna var6 = null;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
         int stackIn_10_1 = 0;
-        nna stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
         nna stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         nna stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         String stackIn_15_2 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
@@ -257,32 +203,10 @@ class os extends gea implements oo {
         String stackIn_31_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_7_0 = null;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        nna stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        nna stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        String stackOut_14_2 = null;
-        nna stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
+        nna var4 = null;
+        RuntimeException var4_ref = null;
+        int var5 = 0;
+        nna var6 = null;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -291,39 +215,29 @@ class os extends gea implements oo {
               break L0;
             } else {
               L1: {
-                stackOut_4_0 = this;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_6_0 = this;
+
                 if (param2 != 256) {
-                  stackOut_6_0 = this;
-                  stackOut_6_1 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_7_0 = this;
+                  stackIn_7_1 = 0;
                   break L1;
                 } else {
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
+                  stackIn_7_0 = this;
+                  stackIn_7_1 = 1;
                   break L1;
                 }
               }
               L2: {
                 ((os) (this)).field_V = stackIn_7_1 != 0;
-                stackOut_7_0 = this;
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_9_0 = this;
+
                 if (!param0) {
-                  stackOut_9_0 = this;
-                  stackOut_9_1 = 0;
-                  stackIn_10_0 = stackOut_9_0;
-                  stackIn_10_1 = stackOut_9_1;
+                  stackIn_10_0 = this;
+                  stackIn_10_1 = 0;
                   break L2;
                 } else {
-                  stackOut_8_0 = this;
-                  stackOut_8_1 = 1;
-                  stackIn_10_0 = stackOut_8_0;
-                  stackIn_10_1 = stackOut_8_1;
+                  stackIn_10_0 = this;
+                  stackIn_10_1 = 1;
                   break L2;
                 }
               }
@@ -331,38 +245,30 @@ class os extends gea implements oo {
                 ((os) (this)).field_S = stackIn_10_1 != 0;
                 this.field_R.b(8405024, -21202, 4210752);
                 var6 = new nna((os) (this), this.field_T, param1);
-                var4_ref = var6;
+                var4 = var6;
                 if (-6 == (param2 ^ -1)) {
                   var6.a(-123, fma.field_c, 11);
                   var6.a(-115, vda.field_q, 17);
                   break L3;
                 } else {
                   if (param2 == 256) {
-                    discarded$2 = var6.a((byte) 127, kj.field_p, (sba) (this));
+                    var6.a((byte) 127, kj.field_p, (sba) (this));
                     break L3;
                   } else {
                     L4: {
-                      stackOut_12_0 = (nna) (var6);
-                      stackOut_12_1 = -128;
-                      stackIn_14_0 = stackOut_12_0;
-                      stackIn_14_1 = stackOut_12_1;
-                      stackIn_13_0 = stackOut_12_0;
-                      stackIn_13_1 = stackOut_12_1;
+                      stackIn_14_0 = (nna) (var6);
+
+                      stackIn_14_1 = -128;
+
                       if (this.field_W) {
-                        stackOut_14_0 = (nna) ((Object) stackIn_14_0);
-                        stackOut_14_1 = stackIn_14_1;
-                        stackOut_14_2 = kj.field_p;
-                        stackIn_15_0 = stackOut_14_0;
-                        stackIn_15_1 = stackOut_14_1;
-                        stackIn_15_2 = stackOut_14_2;
+                        stackIn_15_0 = (nna) ((Object) stackIn_14_0);
+                        stackIn_15_1 = stackIn_14_1;
+                        stackIn_15_2 = kj.field_p;
                         break L4;
                       } else {
-                        stackOut_13_0 = (nna) ((Object) stackIn_13_0);
-                        stackOut_13_1 = stackIn_13_1;
-                        stackOut_13_2 = vab.field_a;
-                        stackIn_15_0 = stackOut_13_0;
-                        stackIn_15_1 = stackOut_13_1;
-                        stackIn_15_2 = stackOut_13_2;
+                        stackIn_15_0 = (nna) ((Object) stackIn_14_0);
+                        stackIn_15_1 = stackIn_14_1;
+                        stackIn_15_2 = vab.field_a;
                         break L4;
                       }
                     }
@@ -384,7 +290,7 @@ class os extends gea implements oo {
                       if ((param2 ^ -1) != -10) {
                         break L5;
                       } else {
-                        discarded$3 = var6.a((byte) 111, keb.field_o, (sba) (this));
+                        var6.a((byte) 111, keb.field_o, (sba) (this));
                         break L5;
                       }
                     } else {
@@ -402,28 +308,20 @@ class os extends gea implements oo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var4 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var4);
-            stackOut_28_1 = new StringBuilder().append("os.C(").append(param0).append(',');
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_30_0 = (RuntimeException) (var4_ref);
+
+            stackIn_30_1 = new StringBuilder().append("os.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L6;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L6;
             }
           }

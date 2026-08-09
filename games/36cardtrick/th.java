@@ -6,71 +6,39 @@ final class th {
     static String field_b;
 
     final static void a(int param0, int param1) {
-        byte[] stackIn_1_0 = null;
-        int stackIn_1_1 = 0;
-        byte[] stackIn_1_2 = null;
-        int stackIn_1_3 = 0;
-        byte[] stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
-        byte[] stackIn_2_2 = null;
-        int stackIn_2_3 = 0;
+        byte[] stackIn_2_0;
+        int stackIn_2_1;
+        byte[] stackIn_2_2;
+        int stackIn_2_3;
         byte[] stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         byte[] stackIn_3_2 = null;
         int stackIn_3_3 = 0;
         byte stackIn_3_4 = 0;
-        byte[] stackOut_0_0 = null;
-        int stackOut_0_1 = 0;
-        byte[] stackOut_0_2 = null;
-        int stackOut_0_3 = 0;
-        byte[] stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        byte[] stackOut_2_2 = null;
-        int stackOut_2_3 = 0;
-        byte stackOut_2_4 = 0;
-        byte[] stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        byte[] stackOut_1_2 = null;
-        int stackOut_1_3 = 0;
-        byte stackOut_1_4 = 0;
         L0: {
           jc.field_O.field_l[od.field_a] = (short)(param1 >> -1077771007);
           jc.field_O.field_l[qf.field_F] = (short)(param1 >> -1077771007);
-          stackOut_0_0 = jc.field_O.field_O;
-          stackOut_0_1 = qf.field_F;
-          stackOut_0_2 = jc.field_O.field_O;
-          stackOut_0_3 = od.field_a;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_2_1 = stackOut_0_1;
-          stackIn_2_2 = stackOut_0_2;
-          stackIn_2_3 = stackOut_0_3;
-          stackIn_1_0 = stackOut_0_0;
-          stackIn_1_1 = stackOut_0_1;
-          stackIn_1_2 = stackOut_0_2;
-          stackIn_1_3 = stackOut_0_3;
+          stackIn_2_0 = jc.field_O.field_O;
+
+          stackIn_2_1 = qf.field_F;
+
+          stackIn_2_2 = jc.field_O.field_O;
+
+          stackIn_2_3 = od.field_a;
+
           if (bc.a(param1, 1) == 0) {
-            stackOut_2_0 = (byte[]) ((Object) stackIn_2_0);
-            stackOut_2_1 = stackIn_2_1;
-            stackOut_2_2 = (byte[]) ((Object) stackIn_2_2);
-            stackOut_2_3 = stackIn_2_3;
-            stackOut_2_4 = cf.field_d;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            stackIn_3_2 = stackOut_2_2;
-            stackIn_3_3 = stackOut_2_3;
-            stackIn_3_4 = stackOut_2_4;
+            stackIn_3_0 = (byte[]) ((Object) stackIn_2_0);
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = (byte[]) ((Object) stackIn_2_2);
+            stackIn_3_3 = stackIn_2_3;
+            stackIn_3_4 = cf.field_d;
             break L0;
           } else {
-            stackOut_1_0 = (byte[]) ((Object) stackIn_1_0);
-            stackOut_1_1 = stackIn_1_1;
-            stackOut_1_2 = (byte[]) ((Object) stackIn_1_2);
-            stackOut_1_3 = stackIn_1_3;
-            stackOut_1_4 = sc.field_a;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
-            stackIn_3_3 = stackOut_1_3;
-            stackIn_3_4 = stackOut_1_4;
+            stackIn_3_0 = (byte[]) ((Object) stackIn_2_0);
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = (byte[]) ((Object) stackIn_2_2);
+            stackIn_3_3 = stackIn_2_3;
+            stackIn_3_4 = sc.field_a;
             break L0;
           }
         }
@@ -116,8 +84,7 @@ final class th {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        dh discarded$2 = null;
-        int var3 = 0;
+        int var3;
         tk.field_c = tk.field_c + 1;
         rj.field_p = rj.field_p - af.field_ob;
         vf.field_b = vf.field_b + af.field_ob;
@@ -131,7 +98,7 @@ final class th {
               ij.field_h.a(new dh(param2, param0, tk.field_a, jl.field_h, ol.field_W, bc.field_a), 27362);
               return true;
             } else {
-              discarded$2 = uh.a(tk.field_a, (byte) 119, 4, param0, ol.field_W, param2, jl.field_h, bc.field_a);
+              uh.a(tk.field_a, (byte) 119, 4, param0, ol.field_W, param2, jl.field_h, bc.field_a);
               return true;
             }
           } else {

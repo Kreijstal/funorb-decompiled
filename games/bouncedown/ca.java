@@ -9,22 +9,27 @@ final class ca {
     static ef field_d;
 
     final static void a(boolean param0) {
-        RuntimeException var1 = null;
-        boolean[] var1_array = null;
+        ud dupTemp$0 = null;
+        ud dupTemp$1 = null;
+        ud dupTemp$2 = null;
+        ud dupTemp$3 = null;
+        ud dupTemp$4 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         boolean[] var5 = null;
         int var6 = 0;
-        RuntimeException decompiledCaughtException = null;
         var4 = Bounce.field_N;
         try {
           L0: {
             var5 = new boolean[]{false, false, param0};
-            var1_array = var5;
+            var1 = var5;
             var2 = 0;
             L1: while (true) {
-              if ((vk.field_b ^ -1) >= (var2 ^ -1)) {
+              if (vk.field_b <= var2) {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= vk.field_b) {
@@ -36,13 +41,13 @@ final class ca {
                           if (var2 >= vk.field_b) {
                             var2 = 0;
                             L5: while (true) {
-                              if ((var2 ^ -1) <= (vk.field_b ^ -1)) {
+                              if (var2 >= vk.field_b) {
                                 break L0;
                               } else {
                                 var6 = 1 + var2;
                                 var3 = var6;
                                 L6: while (true) {
-                                  if ((var6 ^ -1) <= (vk.field_b ^ -1)) {
+                                  if (var6 >= vk.field_b) {
                                     var2++;
                                     continue L5;
                                   } else {
@@ -62,12 +67,16 @@ final class ca {
                                               if (he.field_n[var6].field_e / 2.0 + he.field_n[var6].field_u > -(he.field_n[var2].field_e / 2.0) + he.field_n[var2].field_u) {
                                                 L8: {
                                                   if (he.field_n[var2].field_u >= he.field_n[var6].field_u) {
-                                                    he.field_n[var2].field_c = he.field_n[var2].field_c + (he.field_n[var2].field_o + he.field_n[var6].field_o) / he.field_n[var2].field_o;
-                                                    he.field_n[var6].field_c = he.field_n[var6].field_c - (he.field_n[var6].field_o + he.field_n[var2].field_o) / he.field_n[var6].field_o;
+                                                    dupTemp$0 = he.field_n[var2];
+                                                    dupTemp$0.field_c = dupTemp$0.field_c + (he.field_n[var2].field_o + he.field_n[var6].field_o) / he.field_n[var2].field_o;
+                                                    dupTemp$1 = he.field_n[var6];
+                                                    dupTemp$1.field_c = dupTemp$1.field_c - (he.field_n[var6].field_o + he.field_n[var2].field_o) / he.field_n[var6].field_o;
                                                     break L8;
                                                   } else {
-                                                    he.field_n[var2].field_c = he.field_n[var2].field_c - (he.field_n[var2].field_o + he.field_n[var6].field_o) / he.field_n[var2].field_o;
-                                                    he.field_n[var6].field_c = he.field_n[var6].field_c + (he.field_n[var6].field_o + he.field_n[var2].field_o) / he.field_n[var6].field_o;
+                                                    dupTemp$2 = he.field_n[var2];
+                                                    dupTemp$2.field_c = dupTemp$2.field_c - (he.field_n[var2].field_o + he.field_n[var6].field_o) / he.field_n[var2].field_o;
+                                                    dupTemp$3 = he.field_n[var6];
+                                                    dupTemp$3.field_c = dupTemp$3.field_c + (he.field_n[var6].field_o + he.field_n[var2].field_o) / he.field_n[var6].field_o;
                                                     break L8;
                                                   }
                                                 }
@@ -150,7 +159,7 @@ final class ca {
                               if (he.field_n[var2].field_n > 0) {
                                 break L12;
                               } else {
-                                if ((he.field_n[var2].field_p ^ -1) != -1) {
+                                if (he.field_n[var2].field_p != 0) {
                                   break L12;
                                 } else {
                                   he.field_n[var2].field_j = -100.0;
@@ -163,7 +172,7 @@ final class ca {
                               ua.field_c[var2 + (ua.field_b + -3)].field_c = he.field_n[var2].field_u;
                               ua.field_c[var2 + (-3 + ua.field_b)].field_h = he.field_n[var2].field_j - 0.88 * he.field_n[var2].field_e;
                               ua.field_c[ua.field_b + -3 - -var2].field_b = (int)(he.field_n[var2].field_e / 2.0);
-                              if ((ua.field_b - 3 ^ -1) < (he.field_n[var2].field_t ^ -1)) {
+                              if (ua.field_b - 3 > he.field_n[var2].field_t) {
                                 break L13;
                               } else {
                                 L14: {
@@ -236,7 +245,8 @@ final class ca {
                           break L17;
                         } else {
                           he.field_n[var2].field_i = 100;
-                          he.field_n[var2].field_n = he.field_n[var2].field_n - 1;
+                          dupTemp$4 = he.field_n[var2];
+                          dupTemp$4.field_n = dupTemp$4.field_n - 1;
                           he.field_n[var2].field_q = -4.0;
                           he.field_n[var2].field_t = -1;
                           break L17;
@@ -274,20 +284,19 @@ final class ca {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw ii.a((Throwable) ((Object) var1), "ca.C(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw ii.a((Throwable) ((Object) var1_ref), "ca.C(" + param0 + ')');
         }
     }
 
     final static int a(int param0, byte param1) {
-        int discarded$0 = 0;
         int var2 = 0;
         if (-1 != (param0 & 7 ^ -1)) {
             var2 = 8 + -(7 & param0);
         }
         int var3 = param0 + var2;
         if (param1 != 27) {
-            discarded$0 = ca.a(-69, (byte) 34);
+            ca.a(-69, (byte) 34);
         }
         return var3;
     }

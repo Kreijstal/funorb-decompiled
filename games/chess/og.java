@@ -50,23 +50,21 @@ final class og {
     }
 
     final int[] a(int param0, int param1) {
-        double var3 = 0.0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
         int stackIn_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
+        double var3;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         ne.a(field_h, 0, param0);
         if (param1 >= 10) {
           L0: {
@@ -139,12 +137,10 @@ final class og {
                               L8: {
                                 var11 = 0;
                                 if (var13 != 0) {
-                                  stackOut_35_0 = 0;
-                                  stackIn_36_0 = stackOut_35_0;
+                                  stackIn_36_0 = 0;
                                   break L8;
                                 } else {
-                                  stackOut_34_0 = 1;
-                                  stackIn_36_0 = stackOut_34_0;
+                                  stackIn_36_0 = 1;
                                   break L8;
                                 }
                               }
@@ -413,79 +409,52 @@ final class og {
     }
 
     final void a(p param0) {
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        L0: {
-          this.field_g = new ll();
-          this.field_g.b(param0);
-          this.field_f = new ll();
-          this.field_f.b(param0);
-          var2 = param0.i(-89);
-          if (var2 == 0) {
-            break L0;
-          } else {
+        this.field_g = new ll();
+        this.field_g.b(param0);
+        this.field_f = new ll();
+        this.field_f.b(param0);
+        int var2 = param0.i(-89);
+        if (var2 != 0) {
             param0.field_l = param0.field_l - 1;
             this.field_t = new ll();
             this.field_t.b(param0);
             this.field_w = new ll();
             this.field_w.b(param0);
-            break L0;
-          }
         }
-        L1: {
-          var2 = param0.i(-128);
-          if (var2 == 0) {
-            break L1;
-          } else {
+        var2 = param0.i(-128);
+        if (var2 != 0) {
             param0.field_l = param0.field_l - 1;
             this.field_c = new ll();
             this.field_c.b(param0);
             this.field_k = new ll();
             this.field_k.b(param0);
-            break L1;
-          }
         }
-        L2: {
-          var2 = param0.i(-101);
-          if (var2 == 0) {
-            break L2;
-          } else {
+        var2 = param0.i(-101);
+        if (var2 != 0) {
             param0.field_l = param0.field_l - 1;
             this.field_j = new ll();
             this.field_j.b(param0);
             this.field_e = new ll();
             this.field_e.b(param0);
-            break L2;
-          }
         }
-        var3 = 0;
-        L3: while (true) {
-          L4: {
-            if (var3 >= 10) {
-              break L4;
-            } else {
-              var4 = param0.j(107);
-              if (var4 != 0) {
-                this.field_r[var3] = var4;
-                this.field_b[var3] = param0.a(false);
-                this.field_s[var3] = param0.j(116);
-                var3++;
-                continue L3;
-              } else {
-                break L4;
-              }
+        for (var3 = 0; var3 < 10; var3++) {
+            var4 = param0.j(107);
+            if (var4 == 0) {
+                break;
             }
-          }
-          this.field_o = param0.j(110);
-          this.field_x = param0.j(122);
-          this.field_u = param0.f(674914976);
-          this.field_m = param0.f(674914976);
-          this.field_l = new gn();
-          this.field_a = new ll();
-          this.field_l.a(param0, this.field_a);
-          return;
+            this.field_r[var3] = var4;
+            this.field_b[var3] = param0.a(false);
+            this.field_s[var3] = param0.j(116);
         }
+        this.field_o = param0.j(110);
+        this.field_x = param0.j(122);
+        this.field_u = param0.f(674914976);
+        this.field_m = param0.f(674914976);
+        this.field_l = new gn();
+        this.field_a = new ll();
+        this.field_l.a(param0, this.field_a);
     }
 
     public static void a() {

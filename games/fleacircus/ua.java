@@ -21,14 +21,6 @@ final class ua extends bd implements da {
     }
 
     private final void a(byte param0, mk param1, boolean param2) {
-        bb discarded$2 = null;
-        bb discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        bm var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_38_0 = null;
@@ -36,14 +28,10 @@ final class ua extends bd implements da {
         String stackIn_38_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        bm var5 = null;
+        int var6 = 0;
         var6 = fleas.field_A ? 1 : 0;
         try {
           L0: {
@@ -58,7 +46,7 @@ final class ua extends bd implements da {
                       if (param1.field_j == null) {
                         break L3;
                       } else {
-                        var4_ref = de.field_o;
+                        var4 = de.field_o;
                         if (null == this.field_ub) {
                           break L1;
                         } else {
@@ -71,7 +59,7 @@ final class ua extends bd implements da {
                         }
                       }
                     }
-                    var4_ref = param1.field_b;
+                    var4 = param1.field_b;
                     if (-249 == (param1.field_f ^ -1)) {
                       L4: {
                         if (param2) {
@@ -82,7 +70,7 @@ final class ua extends bd implements da {
                         }
                       }
                       this.field_vb = true;
-                      var4_ref = al.field_a;
+                      var4 = al.field_a;
                       if (var6 == 0) {
                         break L1;
                       } else {
@@ -93,12 +81,12 @@ final class ua extends bd implements da {
                     }
                   }
                 }
-                var4_ref = lc.field_q;
+                var4 = lc.field_q;
                 break L1;
               }
               L5: {
                 L6: {
-                  var5 = new bm((bd) (this), rg.field_o, var4_ref);
+                  var5 = new bm((bd) (this), rg.field_o, var4);
                   if (!param1.field_k) {
                     break L6;
                   } else {
@@ -107,7 +95,7 @@ final class ua extends bd implements da {
                       decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
-                      discarded$2 = var5.a((kd) (this), true, ee.field_k);
+                      var5.a((kd) (this), true, ee.field_k);
                       if (var6 == 0) {
                         break L5;
                       } else {
@@ -121,7 +109,7 @@ final class ua extends bd implements da {
                     if (!this.field_vb) {
                       break L8;
                     } else {
-                      discarded$3 = var5.a((kd) (this), true, ee.field_k);
+                      var5.a((kd) (this), true, ee.field_k);
                       if (var6 == 0) {
                         break L7;
                       } else {
@@ -173,28 +161,20 @@ final class ua extends bd implements da {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
-            var4 = decompiledCaughtException;
-            stackOut_35_0 = (RuntimeException) (var4);
-            stackOut_35_1 = new StringBuilder().append("ua.BA(").append(param0).append(',');
-            stackIn_37_0 = stackOut_35_0;
-            stackIn_37_1 = stackOut_35_1;
-            stackIn_36_0 = stackOut_35_0;
-            stackIn_36_1 = stackOut_35_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_37_0 = (RuntimeException) (var4_ref);
+
+            stackIn_37_1 = new StringBuilder().append("ua.BA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "null";
-              stackIn_38_0 = stackOut_37_0;
-              stackIn_38_1 = stackOut_37_1;
-              stackIn_38_2 = stackOut_37_2;
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "null";
               break L10;
             } else {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "{...}";
-              stackIn_38_0 = stackOut_36_0;
-              stackIn_38_1 = stackOut_36_1;
-              stackIn_38_2 = stackOut_36_2;
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "{...}";
               break L10;
             }
           }
@@ -219,8 +199,8 @@ final class ua extends bd implements da {
     }
 
     final boolean a(int param0) {
-        int var2 = 0;
-        mk var3 = null;
+        int var2;
+        mk var3;
         var2 = -66 / ((38 - param0) / 49);
         if (this.field_G) {
           if (!this.field_wb) {
@@ -241,8 +221,6 @@ final class ua extends bd implements da {
 
     public final void a(int param0, int param1, int param2, int param3, bb param4) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -250,14 +228,6 @@ final class ua extends bd implements da {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (this.field_vb) {
@@ -283,27 +253,19 @@ final class ua extends bd implements da {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (runtimeException);
-            stackOut_7_1 = new StringBuilder().append("ua.JA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (runtimeException);
+
+            stackIn_9_1 = new StringBuilder().append("ua.JA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }

@@ -10,13 +10,13 @@ abstract class kj {
     static String field_f;
 
     final static void a(int param0) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         df var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var3 = Torquing.field_u;
         try {
           L0: {
@@ -28,9 +28,9 @@ abstract class kj {
                   break L0;
                 } else {
                   var1.f(73, 8);
-                  fieldTemp$5 = var1.field_n + 1;
+                  fieldTemp$2 = var1.field_n + 1;
                   var1.field_n = var1.field_n + 1;
-                  var2 = fieldTemp$5;
+                  var2 = fieldTemp$2;
                   hk.a(var1, -2933);
                   wa.field_d.c((byte) 48, -var2 + var1.field_n);
                   continue L1;
@@ -54,7 +54,6 @@ abstract class kj {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
-        RuntimeException var17 = null;
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -75,14 +74,7 @@ abstract class kj {
         int var34 = 0;
         int var35 = 0;
         int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
         int var42 = 0;
-        RuntimeException stackIn_79_0 = null;
-        StringBuilder stackIn_79_1 = null;
         RuntimeException stackIn_80_0 = null;
         StringBuilder stackIn_80_1 = null;
         RuntimeException stackIn_81_0 = null;
@@ -91,14 +83,12 @@ abstract class kj {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_78_0 = null;
-        StringBuilder stackOut_78_1 = null;
-        RuntimeException stackOut_80_0 = null;
-        StringBuilder stackOut_80_1 = null;
-        String stackOut_80_2 = null;
-        RuntimeException stackOut_79_0 = null;
-        StringBuilder stackOut_79_1 = null;
-        String stackOut_79_2 = null;
+        RuntimeException var17 = null;
+        int var37 = 0;
+        int var38 = 0;
+        int var39 = 0;
+        int var40 = 0;
+        int var41 = 0;
         var42 = Torquing.field_u;
         try {
           L0: {
@@ -492,27 +482,19 @@ abstract class kj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var17 = decompiledCaughtException;
-            stackOut_78_0 = (RuntimeException) (var17);
-            stackOut_78_1 = new StringBuilder().append("kj.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_80_0 = stackOut_78_0;
-            stackIn_80_1 = stackOut_78_1;
-            stackIn_79_0 = stackOut_78_0;
-            stackIn_79_1 = stackOut_78_1;
+            stackIn_80_0 = (RuntimeException) (var17);
+
+            stackIn_80_1 = new StringBuilder().append("kj.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_80_0 = (RuntimeException) ((Object) stackIn_80_0);
-              stackOut_80_1 = (StringBuilder) ((Object) stackIn_80_1);
-              stackOut_80_2 = "null";
-              stackIn_81_0 = stackOut_80_0;
-              stackIn_81_1 = stackOut_80_1;
-              stackIn_81_2 = stackOut_80_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+              stackIn_81_2 = "null";
               break L18;
             } else {
-              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
-              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
-              stackOut_79_2 = "{...}";
-              stackIn_81_0 = stackOut_79_0;
-              stackIn_81_1 = stackOut_79_1;
-              stackIn_81_2 = stackOut_79_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+              stackIn_81_2 = "{...}";
               break L18;
             }
           }

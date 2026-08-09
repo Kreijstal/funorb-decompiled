@@ -30,16 +30,6 @@ final class ea {
         int stackIn_50_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_67_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_21_0 = 0;
         if (param1 <= -113) {
           if (param0 < 48) {
             if (param0 < 65) {
@@ -54,8 +44,7 @@ final class ea {
               }
             } else {
               if (param0 <= 90) {
-                stackOut_65_0 = 1;
-                stackIn_67_0 = stackOut_65_0;
+                stackIn_67_0 = 1;
                 return stackIn_67_0 != 0;
               } else {
                 L0: {
@@ -66,14 +55,12 @@ final class ea {
                       if (param0 > 122) {
                         break L1;
                       } else {
-                        stackOut_62_0 = 1;
-                        stackIn_64_0 = stackOut_62_0;
+                        stackIn_64_0 = 1;
                         break L0;
                       }
                     }
                   }
-                  stackOut_63_0 = 0;
-                  stackIn_64_0 = stackOut_63_0;
+                  stackIn_64_0 = 0;
                   break L0;
                 }
                 return stackIn_64_0 != 0;
@@ -101,26 +88,22 @@ final class ea {
                         if (param0 > 122) {
                           break L3;
                         } else {
-                          stackOut_48_0 = 1;
-                          stackIn_50_0 = stackOut_48_0;
+                          stackIn_50_0 = 1;
                           break L2;
                         }
                       }
                     }
-                    stackOut_49_0 = 0;
-                    stackIn_50_0 = stackOut_49_0;
+                    stackIn_50_0 = 0;
                     break L2;
                   }
                   return stackIn_50_0 != 0;
                 } else {
-                  stackOut_43_0 = 1;
-                  stackIn_45_0 = stackOut_43_0;
+                  stackIn_45_0 = 1;
                   return stackIn_45_0 != 0;
                 }
               }
             } else {
-              stackOut_38_0 = 1;
-              stackIn_40_0 = stackOut_38_0;
+              stackIn_40_0 = 1;
               return stackIn_40_0 != 0;
             }
           }
@@ -148,20 +131,17 @@ final class ea {
                         if (param0 > 122) {
                           break L5;
                         } else {
-                          stackOut_26_0 = 1;
-                          stackIn_28_0 = stackOut_26_0;
+                          stackIn_28_0 = 1;
                           break L4;
                         }
                       }
                     }
-                    stackOut_27_0 = 0;
-                    stackIn_28_0 = stackOut_27_0;
+                    stackIn_28_0 = 0;
                     break L4;
                   }
                   return stackIn_28_0 != 0;
                 } else {
-                  stackOut_21_0 = 1;
-                  stackIn_23_0 = stackOut_21_0;
+                  stackIn_23_0 = 1;
                   return stackIn_23_0 != 0;
                 }
               }

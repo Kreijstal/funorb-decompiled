@@ -11,10 +11,7 @@ final class qc extends ar {
     static String field_u;
 
     final static void a(int param0, int param1, int[] param2, int param3) {
-        RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -22,14 +19,7 @@ final class qc extends ar {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var4 = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -55,27 +45,19 @@ final class qc extends ar {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var4);
-            stackOut_7_1 = new StringBuilder().append("qc.L(").append(param0).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("qc.L(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -90,12 +72,16 @@ final class qc extends ar {
 
     final boolean d(int param0) {
         try {
-            IOException var2 = null;
+            int stackIn_44_0 = 0;
+            int stackIn_60_0 = 0;
+            int stackIn_84_0 = 0;
+            Throwable decompiledCaughtException = null;
             long var2_long = 0L;
-            tk var2_ref = null;
+            tk var2 = null;
             int var2_int = 0;
-            Exception var3 = null;
+            IOException var2_ref = null;
             int var3_int = 0;
+            Exception var3 = null;
             int var4 = 0;
             Exception var5_ref_Exception = null;
             int var5 = 0;
@@ -111,15 +97,6 @@ final class qc extends ar {
             int var15 = 0;
             int var16 = 0;
             int var17 = 0;
-            int stackIn_44_0 = 0;
-            int stackIn_60_0 = 0;
-            int stackIn_84_0 = 0;
-            Throwable decompiledCaughtException = null;
-            int stackOut_43_0 = 0;
-            int stackOut_42_0 = 0;
-            int stackOut_59_0 = 0;
-            int stackOut_58_0 = 0;
-            int stackOut_83_0 = 0;
             L0: {
               var16 = ShatteredPlansClient.field_F ? 1 : 0;
               if (this.field_v == null) {
@@ -161,12 +138,12 @@ final class qc extends ar {
               try {
                 L4: {
                   this.field_v.a(false);
-                  var2_ref = (tk) ((Object) this.field_h.c(-128));
+                  var2 = (tk) ((Object) this.field_h.c(-128));
                   L5: while (true) {
-                    if (var2_ref == null) {
-                      var2_ref = (tk) ((Object) this.field_m.c(-128));
+                    if (var2 == null) {
+                      var2 = (tk) ((Object) this.field_m.c(-128));
                       L6: while (true) {
-                        if (var2_ref == null) {
+                        if (var2 == null) {
                           var2_int = param0;
                           L7: while (true) {
                             L8: {
@@ -297,12 +274,10 @@ final class qc extends ar {
                                               var9 = this.field_q.a(16711680);
                                               var10 = var8 & 127;
                                               if (0 == (var8 & 128)) {
-                                                stackOut_43_0 = 0;
-                                                stackIn_44_0 = stackOut_43_0;
+                                                stackIn_44_0 = 0;
                                                 break L18;
                                               } else {
-                                                stackOut_42_0 = 1;
-                                                stackIn_44_0 = stackOut_42_0;
+                                                stackIn_44_0 = 1;
                                                 break L18;
                                               }
                                             }
@@ -345,12 +320,10 @@ final class qc extends ar {
                                             } else {
                                               L22: {
                                                 if (-1 == (var10 ^ -1)) {
-                                                  stackOut_59_0 = 5;
-                                                  stackIn_60_0 = stackOut_59_0;
+                                                  stackIn_60_0 = 5;
                                                   break L22;
                                                 } else {
-                                                  stackOut_58_0 = 9;
-                                                  stackIn_60_0 = stackOut_58_0;
+                                                  stackIn_60_0 = 9;
                                                   break L22;
                                                 }
                                               }
@@ -377,34 +350,33 @@ final class qc extends ar {
                                 }
                               }
                             }
-                            stackOut_83_0 = 1;
-                            stackIn_84_0 = stackOut_83_0;
+                            stackIn_84_0 = 1;
                             break L4;
                           }
                         } else {
                           this.field_c.field_j = 0;
                           this.field_c.c(0, (byte) -109);
-                          this.field_c.a(param0 ^ 1729379144, var2_ref.field_l);
+                          this.field_c.a(param0 ^ 1729379144, var2.field_l);
                           this.field_v.a(this.field_c.field_h.length, 0, this.field_c.field_h, param0 + -13976);
-                          this.field_f.a(var2_ref, 32);
-                          var2_ref = (tk) ((Object) this.field_m.b(32));
+                          this.field_f.a(var2, 32);
+                          var2 = (tk) ((Object) this.field_m.b(32));
                           continue L6;
                         }
                       }
                     } else {
                       this.field_c.field_j = 0;
                       this.field_c.c(1, (byte) -85);
-                      this.field_c.a(param0 + 1729379144, var2_ref.field_l);
+                      this.field_c.a(param0 + 1729379144, var2.field_l);
                       this.field_v.a(this.field_c.field_h.length, 0, this.field_c.field_h, -13976);
-                      this.field_j.a(var2_ref, 32);
-                      var2_ref = (tk) ((Object) this.field_h.b(32));
+                      this.field_j.a(var2, 32);
+                      var2 = (tk) ((Object) this.field_h.b(32));
                       continue L5;
                     }
                   }
                 }
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
-                var2 = (IOException) (Object) decompiledCaughtException;
+                var2_ref = (IOException) (Object) decompiledCaughtException;
                 try {
                   L23: {
                     this.field_v.b(117);
@@ -467,29 +439,19 @@ final class qc extends ar {
 
     final void a(byte param0, boolean param1, Object param2) {
         try {
-            Exception var4 = null;
-            IOException var4_ref = null;
-            RuntimeException var4_ref2 = null;
-            int var4_int = 0;
-            tk var4_ref3 = null;
-            Exception var5 = null;
-            int var6 = 0;
-            RuntimeException stackIn_25_0 = null;
-            StringBuilder stackIn_25_1 = null;
             RuntimeException stackIn_26_0 = null;
             StringBuilder stackIn_26_1 = null;
             RuntimeException stackIn_27_0 = null;
             StringBuilder stackIn_27_1 = null;
             String stackIn_27_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_24_0 = null;
-            StringBuilder stackOut_24_1 = null;
-            RuntimeException stackOut_26_0 = null;
-            StringBuilder stackOut_26_1 = null;
-            String stackOut_26_2 = null;
-            RuntimeException stackOut_25_0 = null;
-            StringBuilder stackOut_25_1 = null;
-            String stackOut_25_2 = null;
+            Exception var4 = null;
+            tk var4_ref = null;
+            IOException var4_ref2 = null;
+            int var4_int = 0;
+            RuntimeException var4_ref3 = null;
+            Exception var5 = null;
+            int var6 = 0;
             var6 = ShatteredPlansClient.field_F ? 1 : 0;
             try {
               L0: {
@@ -519,15 +481,15 @@ final class qc extends ar {
                 this.field_l = null;
                 this.field_q.field_j = 0;
                 L4: while (true) {
-                  var4_ref3 = (tk) ((Object) this.field_j.a(-44));
-                  if (var4_ref3 != null) {
-                    this.field_h.a(var4_ref3, 32);
+                  var4_ref = (tk) ((Object) this.field_j.a(-44));
+                  if (var4_ref != null) {
+                    this.field_h.a(var4_ref, 32);
                     continue L4;
                   } else {
                     L5: while (true) {
-                      var4_ref3 = (tk) ((Object) this.field_f.a(110));
-                      if (var4_ref3 != null) {
-                        this.field_m.a(var4_ref3, 32);
+                      var4_ref = (tk) ((Object) this.field_f.a(110));
+                      if (var4_ref != null) {
+                        this.field_m.a(var4_ref, 32);
                         continue L5;
                       } else {
                         L6: {
@@ -544,7 +506,7 @@ final class qc extends ar {
                             } catch (java.io.IOException decompiledCaughtParameter1) {
                               decompiledCaughtException = decompiledCaughtParameter1;
                               L8: {
-                                var4_ref = (IOException) (Object) decompiledCaughtException;
+                                var4_ref2 = (IOException) (Object) decompiledCaughtException;
                                 try {
                                   L9: {
                                     this.field_v.b(127);
@@ -580,28 +542,20 @@ final class qc extends ar {
             } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               L11: {
-                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_24_0 = (RuntimeException) (var4_ref2);
-                stackOut_24_1 = new StringBuilder().append("qc.F(").append(param0).append(',').append(param1).append(',');
-                stackIn_26_0 = stackOut_24_0;
-                stackIn_26_1 = stackOut_24_1;
-                stackIn_25_0 = stackOut_24_0;
-                stackIn_25_1 = stackOut_24_1;
+                var4_ref3 = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_26_0 = (RuntimeException) (var4_ref3);
+
+                stackIn_26_1 = new StringBuilder().append("qc.F(").append(param0).append(',').append(param1).append(',');
+
                 if (param2 == null) {
-                  stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-                  stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-                  stackOut_26_2 = "null";
-                  stackIn_27_0 = stackOut_26_0;
-                  stackIn_27_1 = stackOut_26_1;
-                  stackIn_27_2 = stackOut_26_2;
+                  stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+                  stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+                  stackIn_27_2 = "null";
                   break L11;
                 } else {
-                  stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-                  stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-                  stackOut_25_2 = "{...}";
-                  stackIn_27_0 = stackOut_25_0;
-                  stackIn_27_1 = stackOut_25_1;
-                  stackIn_27_2 = stackOut_25_2;
+                  stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+                  stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+                  stackIn_27_2 = "{...}";
                   break L11;
                 }
               }
@@ -648,17 +602,11 @@ final class qc extends ar {
     private final void a(boolean param0, int param1) {
         try {
             IOException iOException = null;
-            Exception var4 = null;
-            ob stackIn_4_0 = null;
             ob stackIn_5_0 = null;
             ob stackIn_6_0 = null;
             int stackIn_6_1 = 0;
             Throwable decompiledCaughtException = null;
-            ob stackOut_3_0 = null;
-            ob stackOut_5_0 = null;
-            int stackOut_5_1 = 0;
-            ob stackOut_4_0 = null;
-            int stackOut_4_1 = 0;
+            Exception var4 = null;
             if (null == this.field_v) {
               return;
             } else {
@@ -666,20 +614,15 @@ final class qc extends ar {
                 L0: {
                   L1: {
                     this.field_c.field_j = 0;
-                    stackOut_3_0 = this.field_c;
-                    stackIn_5_0 = stackOut_3_0;
-                    stackIn_4_0 = stackOut_3_0;
+                    stackIn_5_0 = this.field_c;
+
                     if (param0) {
-                      stackOut_5_0 = (ob) ((Object) stackIn_5_0);
-                      stackOut_5_1 = 2;
-                      stackIn_6_0 = stackOut_5_0;
-                      stackIn_6_1 = stackOut_5_1;
+                      stackIn_6_0 = (ob) ((Object) stackIn_5_0);
+                      stackIn_6_1 = 2;
                       break L1;
                     } else {
-                      stackOut_4_0 = (ob) ((Object) stackIn_4_0);
-                      stackOut_4_1 = 3;
-                      stackIn_6_0 = stackOut_4_0;
-                      stackIn_6_1 = stackOut_4_1;
+                      stackIn_6_0 = (ob) ((Object) stackIn_5_0);
+                      stackIn_6_1 = 3;
                       break L1;
                     }
                   }
@@ -734,8 +677,6 @@ final class qc extends ar {
         int stackIn_3_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -743,17 +684,6 @@ final class qc extends ar {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -762,14 +692,12 @@ final class qc extends ar {
               L1: while (true) {
                 if (var2 == null) {
                   qi.field_h.a((byte) -113, new de(param0));
-                  stackOut_11_0 = 1;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = 1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (param0.equalsIgnoreCase(var2.field_l)) {
-                    stackOut_8_0 = 0;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = 0;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -779,8 +707,7 @@ final class qc extends ar {
                 }
               }
             } else {
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -789,27 +716,19 @@ final class qc extends ar {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var2_ref);
-            stackOut_13_1 = new StringBuilder().append("qc.O(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var2_ref);
+
+            stackIn_15_1 = new StringBuilder().append("qc.O(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L2;
             }
           }
@@ -829,9 +748,9 @@ final class qc extends ar {
     private final void g(int param0) {
         try {
             IOException iOException = null;
-            Exception var3 = null;
             int[] var4 = null;
             Throwable decompiledCaughtException = null;
+            Exception var3 = null;
             if (null != this.field_v) {
               try {
                 L0: {

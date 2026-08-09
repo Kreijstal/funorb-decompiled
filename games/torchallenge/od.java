@@ -3,20 +3,20 @@
  */
 final class od {
     final static void b(ka param0, int param1, int param2, int param3, int param4) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         if (param0.field_x != 0) {
           L0: {
             var5 = param0.field_x;
@@ -87,9 +87,9 @@ final class od {
                     param2++;
                     continue L4;
                   } else {
-                    incrementValue$2 = var9;
+                    incrementValue$0 = var9;
                     var9++;
-                    var14 = param0.field_y[incrementValue$2];
+                    var14 = param0.field_y[incrementValue$0];
                     if (var14 == 0) {
                       var12++;
                       param1++;
@@ -101,9 +101,9 @@ final class od {
                       var16 = var14 + var15;
                       var14 = (var14 & 16711935) + (var15 & 16711935);
                       var15 = (var14 & 16777472) + (var16 - var14 & 65536);
-                      incrementValue$3 = var12;
+                      incrementValue$1 = var12;
                       var12++;
-                      qg.field_i[incrementValue$3] = var16 - var15 | var15 - (var15 >>> 8);
+                      qg.field_i[incrementValue$1] = var16 - var15 | var15 - (var15 >>> 8);
                       param1++;
                       continue L6;
                     }
@@ -125,8 +125,8 @@ final class od {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -140,9 +140,9 @@ final class od {
                 param8++;
                 continue L0;
               } else {
-                incrementValue$66 = param5;
+                incrementValue$11 = param5;
                 param5++;
-                param0 = param4[incrementValue$66];
+                param0 = param4[incrementValue$11];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -154,9 +154,9 @@ final class od {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  incrementValue$67 = param7;
+                  incrementValue$12 = param7;
                   param7++;
-                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -167,26 +167,26 @@ final class od {
     }
 
     final static void c(ka param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
         if (param3 <= param0.field_q) {
           L0: {
             var5 = param1 + param0.field_s * param3 / param0.field_q;
@@ -347,15 +347,15 @@ final class od {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int var12;
+        int var13;
+        int var14;
         var12 = -param9;
         L0: while (true) {
           if (var12 > 0) {
@@ -372,9 +372,9 @@ final class od {
                       param5 = 0;
                       param6 = 0;
                       param7 = 0;
-                      incrementValue$6 = param4;
+                      incrementValue$0 = param4;
                       param4++;
-                      param2 = param1[incrementValue$6];
+                      param2 = param1[incrementValue$0];
                       if (param2 != 0) {
                         break L3;
                       } else {
@@ -387,9 +387,9 @@ final class od {
                       param6 = param6 + (param2 >> 8 & 255);
                       param7 = param7 + (param2 & 255);
                       param4 = param4 + (param10 - 1);
-                      incrementValue$7 = param4;
+                      incrementValue$1 = param4;
                       param4++;
-                      param2 = param1[incrementValue$7];
+                      param2 = param1[incrementValue$1];
                       if (param2 != 0) {
                         break L4;
                       } else {
@@ -400,9 +400,9 @@ final class od {
                     param5 = param5 + (param2 >> 16);
                     param6 = param6 + (param2 >> 8 & 255);
                     param7 = param7 + (param2 & 255);
-                    incrementValue$8 = param3;
+                    incrementValue$2 = param3;
                     param3++;
-                    param0[incrementValue$8] = param5 >> 1 << 16 | param6 >> 1 << 8 | param7 >> 1;
+                    param0[incrementValue$2] = param5 >> 1 << 16 | param6 >> 1 << 8 | param7 >> 1;
                     param4 = param4 - param10;
                     break L2;
                   }
@@ -422,17 +422,17 @@ final class od {
                     var14 = -2;
                     L6: while (true) {
                       if (var14 >= 0) {
-                        incrementValue$9 = param3;
+                        incrementValue$3 = param3;
                         param3++;
-                        param0[incrementValue$9] = param5 >> 2 << 16 | param6 >> 2 << 8 | param7 >> 2;
+                        param0[incrementValue$3] = param5 >> 2 << 16 | param6 >> 2 << 8 | param7 >> 2;
                         param4 = param4 - param10;
                         var13 += 2;
                         continue L1;
                       } else {
                         L7: {
-                          incrementValue$10 = param4;
+                          incrementValue$4 = param4;
                           param4++;
-                          param2 = param1[incrementValue$10];
+                          param2 = param1[incrementValue$4];
                           if (param2 != 0) {
                             break L7;
                           } else {
@@ -449,9 +449,9 @@ final class od {
                     }
                   } else {
                     L8: {
-                      incrementValue$11 = param4;
+                      incrementValue$5 = param4;
                       param4++;
-                      param2 = param1[incrementValue$11];
+                      param2 = param1[incrementValue$5];
                       if (param2 != 0) {
                         break L8;
                       } else {
@@ -473,77 +473,61 @@ final class od {
     }
 
     final static void a(ka param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         L0: {
           var3 = param0.field_u >> 1;
           var4 = param0.field_x >> 1;
           param1 = param1 + param0.field_s / 2;
           param2 = param2 + param0.field_p / 2;
           if (param1 >= qg.field_a) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = qg.field_a - param1 << 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = qg.field_a - param1 << 1;
             break L0;
           }
         }
         L1: {
           var5 = stackIn_3_0;
           if (param1 + var3 <= qg.field_c) {
-            stackOut_5_0 = param0.field_u - 2;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = param0.field_u - 2;
             break L1;
           } else {
-            stackOut_4_0 = (qg.field_c - param1 << 1) - 2;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = (qg.field_c - param1 << 1) - 2;
             break L1;
           }
         }
         L2: {
           var6 = stackIn_6_0;
           if (param2 >= qg.field_k) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = qg.field_k - param2 << 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = qg.field_k - param2 << 1;
             break L2;
           }
         }
         L3: {
           var7 = stackIn_9_0;
           if (param2 + var4 <= qg.field_l) {
-            stackOut_11_0 = param0.field_x - 2;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = param0.field_x - 2;
             break L3;
           } else {
-            stackOut_10_0 = (qg.field_l - param2 << 1) - 2;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = (qg.field_l - param2 << 1) - 2;
             break L3;
           }
         }
@@ -632,56 +616,34 @@ final class od {
     }
 
     final static void a(ka param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        L0: {
-          param1 = param1 - param0.field_s;
-          param2 = param2 - param0.field_p;
-          var5 = param2 * param0.field_u + param1;
-          if (var5 < 0) {
-            break L0;
-          } else {
-            if (var5 < param0.field_y.length) {
-              L1: {
-                var6 = param1 + param3;
-                if (var6 <= param0.field_u) {
-                  break L1;
-                } else {
-                  var6 = param0.field_u;
-                  break L1;
-                }
-              }
-              L2: {
-                param3 = var6 - param1;
-                var7 = param2 + param4;
-                if (var7 <= param0.field_x) {
-                  break L2;
-                } else {
-                  var7 = param0.field_x;
-                  break L2;
-                }
-              }
-              param4 = var7 - param2;
-              var8 = param0.field_u - param3;
-              od.a(param0.field_y, var5, var8, param3, param4);
-              return;
-            } else {
-              break L0;
-            }
-          }
+        param1 = param1 - param0.field_s;
+        param2 = param2 - param0.field_p;
+        int var5 = param2 * param0.field_u + param1;
+        if (var5 < 0 || var5 >= param0.field_y.length) {
+            return;
         }
+        int var6 = param1 + param3;
+        if (var6 > param0.field_u) {
+            var6 = param0.field_u;
+        }
+        param3 = var6 - param1;
+        int var7 = param2 + param4;
+        if (var7 > param0.field_x) {
+            var7 = param0.field_x;
+        }
+        param4 = var7 - param2;
+        int var8 = param0.field_u - param3;
+        od.a(param0.field_y, var5, var8, param3, param4);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, ka param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         L0: {
           param0 = param0 + param5.field_s;
           param1 = param1 + param5.field_p;
@@ -763,8 +725,8 @@ final class od {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         var5 = -param4;
         L0: while (true) {
           if (var5 >= 0) {
@@ -794,23 +756,23 @@ final class od {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, ka param6, ka param7, int[] param8) {
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int[][][] var29 = null;
+        int var9;
+        int var10;
+        int var11;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int[][][] var29;
         var9 = 16777215;
         var10 = param2 - param4 >> 1;
         var11 = param3 - param5 >> 1;
@@ -1139,8 +1101,8 @@ final class od {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -1154,9 +1116,9 @@ final class od {
                 param8++;
                 continue L0;
               } else {
-                incrementValue$66 = param5;
+                incrementValue$11 = param5;
                 param5++;
-                param0 = param4[incrementValue$66];
+                param0 = param4[incrementValue$11];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -1166,9 +1128,9 @@ final class od {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  incrementValue$67 = param7;
+                  incrementValue$12 = param7;
                   param7++;
-                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -1179,10 +1141,10 @@ final class od {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         L0: {
           if (param13 <= 0) {
             param8 = -param10;
@@ -1198,9 +1160,9 @@ final class od {
                     param8++;
                     continue L1;
                   } else {
-                    incrementValue$4 = param5;
+                    incrementValue$0 = param5;
                     param5++;
-                    param0 = param4[incrementValue$4];
+                    param0 = param4[incrementValue$0];
                     if (param0 == 0) {
                       param7++;
                       param6++;
@@ -1213,9 +1175,9 @@ final class od {
                       param2 = param0 + param1;
                       param0 = (param0 & 16711935) + (param1 & 16711935);
                       param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                      incrementValue$5 = param7;
+                      incrementValue$1 = param7;
                       param7++;
-                      param3[incrementValue$5] = param2 - param1 | param1 - (param1 >>> 8);
+                      param3[incrementValue$1] = param2 - param1 | param1 - (param1 >>> 8);
                       param6++;
                       continue L2;
                     }
@@ -1237,9 +1199,9 @@ final class od {
                     param8++;
                     continue L3;
                   } else {
-                    incrementValue$6 = param5;
+                    incrementValue$2 = param5;
                     param5++;
-                    param0 = param4[incrementValue$6];
+                    param0 = param4[incrementValue$2];
                     if (param0 == 0) {
                       param7++;
                       param6++;
@@ -1252,9 +1214,9 @@ final class od {
                       param2 = param0 + param1;
                       param0 = (param0 & 16711935) + (param1 & 16711935);
                       param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                      incrementValue$7 = param7;
+                      incrementValue$3 = param7;
                       param7++;
-                      param3[incrementValue$7] = param2 - param1 | param1 - (param1 >>> 8);
+                      param3[incrementValue$3] = param2 - param1 | param1 - (param1 >>> 8);
                       param6++;
                       continue L4;
                     }

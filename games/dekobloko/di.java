@@ -42,7 +42,6 @@ class di extends a {
     }
 
     final static boolean a(boolean param0) {
-        boolean discarded$5 = false;
         if (!param0) {
           if (null != qc.field_s) {
             if (!ph.field_xb.b(22277)) {
@@ -54,7 +53,7 @@ class di extends a {
             return false;
           }
         } else {
-          discarded$5 = di.a(false);
+          di.a(false);
           if (null != qc.field_s) {
             if (!ph.field_xb.b(22277)) {
               return false;

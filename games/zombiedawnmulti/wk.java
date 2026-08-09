@@ -27,10 +27,9 @@ abstract class wk extends se implements kh {
     abstract boolean a(int param0);
 
     void a(int param0, dj param1) {
-        int discarded$0 = 0;
         try {
             if (param0 != 3) {
-                discarded$0 = this.j(-11);
+                this.j(-11);
             }
             this.field_H = param1;
             this.field_H.field_n = (wk) (this);

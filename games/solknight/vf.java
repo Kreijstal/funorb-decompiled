@@ -10,9 +10,9 @@ final class vf extends pd {
     }
 
     final void a(java.awt.Component param0, int param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         this.field_d = param2;
         this.field_a = param3;
         this.field_h = new int[param3 * param2 + 1];
@@ -30,7 +30,7 @@ final class vf extends pd {
     }
 
     final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
-        boolean discarded$10 = param3.drawImage(this.field_g, param0, param2, (java.awt.image.ImageObserver) ((Object) this.field_i));
+        param3.drawImage(this.field_g, param0, param2, (java.awt.image.ImageObserver) ((Object) this.field_i));
         if (param1 != 0) {
             this.field_i = (java.awt.Component) null;
         }

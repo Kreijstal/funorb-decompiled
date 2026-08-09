@@ -60,20 +60,10 @@ abstract class wb extends ke {
     }
 
     private final void a(String param0, int param1, int param2, int param3, int param4) {
-        Exception var6 = null;
-        RuntimeException var6_ref = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var11 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -82,21 +72,12 @@ abstract class wb extends ke {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        Exception var6 = null;
+        RuntimeException var6_ref = null;
+        String var7 = null;
+        String var8 = null;
+        String var9 = null;
+        String var11 = null;
         try {
           L0: {
             try {
@@ -106,32 +87,25 @@ abstract class wb extends ke {
                     L3: {
                       this.field_u = this.getCodeBase().getHost();
                       var11 = this.field_u.toLowerCase();
-                      stackOut_2_0 = this;
-                      stackIn_5_0 = stackOut_2_0;
-                      stackIn_3_0 = stackOut_2_0;
+                      stackIn_5_0 = this;
+
                       if (var11.equals("jagex.com")) {
                         break L3;
                       } else {
-                        stackOut_3_0 = this;
-                        stackIn_6_0 = stackOut_3_0;
-                        stackIn_4_0 = stackOut_3_0;
+                        stackIn_6_0 = this;
+
                         if (!var11.endsWith(".jagex.com")) {
-                          stackOut_6_0 = this;
-                          stackOut_6_1 = 0;
-                          stackIn_7_0 = stackOut_6_0;
-                          stackIn_7_1 = stackOut_6_1;
+                          stackIn_7_0 = this;
+                          stackIn_7_1 = 0;
                           break L2;
                         } else {
-                          stackOut_4_0 = this;
-                          stackIn_5_0 = stackOut_4_0;
+                          stackIn_5_0 = this;
                           break L3;
                         }
                       }
                     }
-                    stackOut_5_0 = this;
-                    stackOut_5_1 = 1;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_7_1 = stackOut_5_1;
+                    stackIn_7_0 = this;
+                    stackIn_7_1 = 1;
                     break L2;
                   }
                   L4: {
@@ -214,27 +188,19 @@ abstract class wb extends ke {
           decompiledCaughtException = decompiledCaughtParameter1;
           L10: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var6_ref);
-            stackOut_24_1 = new StringBuilder().append("wb.O(");
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var6_ref);
+
+            stackIn_26_1 = new StringBuilder().append("wb.O(");
+
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L10;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L10;
             }
           }
@@ -267,9 +233,8 @@ abstract class wb extends ke {
     }
 
     final void f(int param0) {
-        int discarded$0 = 0;
         if (param0 != -1) {
-            discarded$0 = this.a(81, true);
+            this.a(81, true);
         }
         i.field_X[2] = true;
     }
@@ -300,8 +265,8 @@ abstract class wb extends ke {
     }
 
     private final int e(boolean param0) {
-        int var2 = 0;
-        String var3 = null;
+        int var2;
+        String var3;
         if (!this.field_j) {
           if (dn.i(-19301)) {
             if (!ja.field_b) {
@@ -374,87 +339,39 @@ abstract class wb extends ke {
     }
 
     final int h(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        L0: {
-          L1: {
-            var3 = 80 / ((param0 - -51) / 51);
-            var2 = this.e(false);
-            if (0 == var2) {
-              break L1;
-            } else {
-              if (-2 != (var2 ^ -1)) {
-                break L0;
-              } else {
-                break L1;
-              }
+        int var3 = 80 / ((param0 - -51) / 51);
+        int var2 = this.e(false);
+        if (0 == var2 || -2 == (var2 ^ -1)) {
+            if (i.field_X[1]) {
+                td.a(2, (byte) -95);
             }
-          }
-          L2: {
-            if (!i.field_X[1]) {
-              break L2;
-            } else {
-              td.a(2, (byte) -95);
-              break L2;
+            if (i.field_X[2]) {
+                dp.a(3, -4);
             }
-          }
-          L3: {
-            if (!i.field_X[2]) {
-              break L3;
-            } else {
-              dp.a(3, -4);
-              break L3;
+            if (!(!i.field_X[3])) {
+                mj.a(4, -1);
             }
-          }
-          L4: {
-            if (i.field_X[3]) {
-              mj.a(4, -1);
-              break L4;
-            } else {
-              break L4;
+            if (i.field_X[4]) {
+                ca.a(5, (byte) -118);
             }
-          }
-          L5: {
-            if (!i.field_X[4]) {
-              break L5;
-            } else {
-              ca.a(5, (byte) -118);
-              break L5;
+            if (i.field_X[5]) {
+                wc.f(67600, 6);
             }
-          }
-          L6: {
-            if (!i.field_X[5]) {
-              break L6;
-            } else {
-              wc.f(67600, 6);
-              break L6;
+            if (i.field_X[6]) {
+                wi.a(0, 7);
             }
-          }
-          L7: {
-            if (!i.field_X[6]) {
-              break L7;
-            } else {
-              wi.a(0, 7);
-              break L7;
+            if (!(!i.field_X[8])) {
+                ni.a((byte) -78);
             }
-          }
-          if (i.field_X[8]) {
-            ni.a((byte) -78);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         return var2;
     }
 
     final void e(int param0) {
-        int var2 = 0;
-        aa var3 = null;
-        int var4 = 0;
         int stackIn_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_27_0 = 0;
+        int var2;
+        aa var3;
+        int var4;
         var4 = ZombieDawn.field_J;
         if (param0 == -12) {
           L0: {
@@ -512,12 +429,10 @@ abstract class wb extends ke {
                                       }
                                       L3: {
                                         if (var2 != 12) {
-                                          stackOut_28_0 = 0;
-                                          stackIn_29_0 = stackOut_28_0;
+                                          stackIn_29_0 = 0;
                                           break L3;
                                         } else {
-                                          stackOut_27_0 = 1;
-                                          stackIn_29_0 = stackOut_27_0;
+                                          stackIn_29_0 = 1;
                                           break L3;
                                         }
                                       }
@@ -571,53 +486,19 @@ abstract class wb extends ke {
     }
 
     final void b(boolean param0, boolean param1) {
-        int discarded$1 = 0;
-        int var3 = 0;
-        java.awt.Dimension var4 = null;
-        int var5 = 0;
-        java.awt.Container var6 = null;
+        int discarded$0 = 0;
         int stackIn_22_0 = 0;
-        int stackIn_98_0 = 0;
-        String stackIn_98_1 = null;
         int stackIn_99_0 = 0;
         String stackIn_99_1 = null;
         int stackIn_100_0 = 0;
         String stackIn_100_1 = null;
         int stackIn_100_2 = 0;
-        int stackIn_101_0 = 0;
-        String stackIn_101_1 = null;
-        int stackIn_101_2 = 0;
-        int stackIn_102_0 = 0;
-        String stackIn_102_1 = null;
-        int stackIn_102_2 = 0;
-        int stackIn_103_0 = 0;
-        String stackIn_103_1 = null;
-        int stackIn_103_2 = 0;
-        int stackIn_103_3 = 0;
+        int stackIn_103_3;
         int stackIn_133_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_97_0 = 0;
-        String stackOut_97_1 = null;
-        int stackOut_99_0 = 0;
-        String stackOut_99_1 = null;
-        int stackOut_99_2 = 0;
-        int stackOut_98_0 = 0;
-        String stackOut_98_1 = null;
-        int stackOut_98_2 = 0;
-        int stackOut_100_0 = 0;
-        String stackOut_100_1 = null;
-        int stackOut_100_2 = 0;
-        int stackOut_102_0 = 0;
-        String stackOut_102_1 = null;
-        int stackOut_102_2 = 0;
-        int stackOut_102_3 = 0;
-        int stackOut_101_0 = 0;
-        String stackOut_101_1 = null;
-        int stackOut_101_2 = 0;
-        int stackOut_101_3 = 0;
-        int stackOut_132_0 = 0;
-        int stackOut_131_0 = 0;
+        int var3;
+        java.awt.Dimension var4;
+        int var5;
+        java.awt.Container var6;
         L0: {
           var5 = ZombieDawn.field_J;
           if (null != rn.field_b) {
@@ -703,12 +584,10 @@ abstract class wb extends ke {
           }
           L8: {
             if (co.field_b != -1) {
-              stackOut_21_0 = 0;
-              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_0 = 0;
               break L8;
             } else {
-              stackOut_20_0 = 1;
-              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_0 = 1;
               break L8;
             }
           }
@@ -953,63 +832,44 @@ abstract class wb extends ke {
                     }
                   }
                   L24: {
-                    stackOut_97_0 = -753;
-                    stackOut_97_1 = fo.field_b;
-                    stackIn_99_0 = stackOut_97_0;
-                    stackIn_99_1 = stackOut_97_1;
-                    stackIn_98_0 = stackOut_97_0;
-                    stackIn_98_1 = stackOut_97_1;
+                    stackIn_99_0 = -753;
+
+                    stackIn_99_1 = fo.field_b;
+
                     if (sn.field_b) {
-                      stackOut_99_0 = stackIn_99_0;
-                      stackOut_99_1 = (String) ((Object) stackIn_99_1);
-                      stackOut_99_2 = 0;
-                      stackIn_100_0 = stackOut_99_0;
-                      stackIn_100_1 = stackOut_99_1;
-                      stackIn_100_2 = stackOut_99_2;
+                      stackIn_100_0 = stackIn_99_0;
+                      stackIn_100_1 = (String) ((Object) stackIn_99_1);
+                      stackIn_100_2 = 0;
                       break L24;
                     } else {
-                      stackOut_98_0 = stackIn_98_0;
-                      stackOut_98_1 = (String) ((Object) stackIn_98_1);
-                      stackOut_98_2 = 1;
-                      stackIn_100_0 = stackOut_98_0;
-                      stackIn_100_1 = stackOut_98_1;
-                      stackIn_100_2 = stackOut_98_2;
+                      stackIn_100_0 = stackIn_99_0;
+                      stackIn_100_1 = (String) ((Object) stackIn_99_1);
+                      stackIn_100_2 = 1;
                       break L24;
                     }
                   }
                   L25: {
-                    stackOut_100_0 = stackIn_100_0;
-                    stackOut_100_1 = (String) ((Object) stackIn_100_1);
-                    stackOut_100_2 = stackIn_100_2;
-                    stackIn_102_0 = stackOut_100_0;
-                    stackIn_102_1 = stackOut_100_1;
-                    stackIn_102_2 = stackOut_100_2;
-                    stackIn_101_0 = stackOut_100_0;
-                    stackIn_101_1 = stackOut_100_1;
-                    stackIn_101_2 = stackOut_100_2;
+
+
+
+
+
+
                     if (sn.field_b) {
-                      stackOut_102_0 = stackIn_102_0;
-                      stackOut_102_1 = (String) ((Object) stackIn_102_1);
-                      stackOut_102_2 = stackIn_102_2;
-                      stackOut_102_3 = 0;
-                      stackIn_103_0 = stackOut_102_0;
-                      stackIn_103_1 = stackOut_102_1;
-                      stackIn_103_2 = stackOut_102_2;
-                      stackIn_103_3 = stackOut_102_3;
+
+                      stackIn_100_1 = (String) ((Object) stackIn_100_1);
+
+                      stackIn_103_3 = 0;
                       break L25;
                     } else {
-                      stackOut_101_0 = stackIn_101_0;
-                      stackOut_101_1 = (String) ((Object) stackIn_101_1);
-                      stackOut_101_2 = stackIn_101_2;
-                      stackOut_101_3 = 1;
-                      stackIn_103_0 = stackOut_101_0;
-                      stackIn_103_1 = stackOut_101_1;
-                      stackIn_103_2 = stackOut_101_2;
-                      stackIn_103_3 = stackOut_101_3;
+
+                      stackIn_100_1 = (String) ((Object) stackIn_100_1);
+
+                      stackIn_103_3 = 1;
                       break L25;
                     }
                   }
-                  gl.a(stackIn_103_0, stackIn_103_1, stackIn_103_2 != 0, stackIn_103_3 != 0);
+                  gl.a(stackIn_100_0, stackIn_100_1, stackIn_100_2 != 0, stackIn_103_3 != 0);
                   break L22;
                 }
                 L26: {
@@ -1108,12 +968,10 @@ abstract class wb extends ke {
               if (null != bp.field_h) {
                 L36: {
                   if (!bp.field_h.a(-1)) {
-                    stackOut_132_0 = 0;
-                    stackIn_133_0 = stackOut_132_0;
+                    stackIn_133_0 = 0;
                     break L36;
                   } else {
-                    stackOut_131_0 = 1;
-                    stackIn_133_0 = stackOut_131_0;
+                    stackIn_133_0 = 1;
                     break L36;
                   }
                 }
@@ -1158,7 +1016,7 @@ abstract class wb extends ke {
           if (!param1) {
             break L39;
           } else {
-            discarded$1 = this.a(true, true, -49);
+            discarded$0 = this.a(true, true, -49);
             break L39;
           }
         }
@@ -1195,16 +1053,16 @@ abstract class wb extends ke {
 
     private final int a(boolean param0, boolean param1, int param2) {
         try {
+            Throwable decompiledCaughtException = null;
             int var4 = 0;
-            Exception var5 = null;
             int var5_int = 0;
+            Exception var5 = null;
             String var7 = null;
             int var8 = 0;
             String var9 = null;
             String var10 = null;
             Boolean var11 = null;
             de var12 = null;
-            Throwable decompiledCaughtException = null;
             var8 = ZombieDawn.field_J;
             var4 = bg.a(121, id.field_I, param1, jp.field_a);
             if (var4 != 0) {
@@ -1479,24 +1337,14 @@ abstract class wb extends ke {
     }
 
     final void i(byte param0) {
-        int discarded$102 = 0;
-        int discarded$103 = 0;
-        int var3 = 0;
-        Object stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
+        int var3;
         Object stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         Object stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         int stackIn_12_2 = 0;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        Object stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        int stackOut_10_2 = 0;
         L0: {
           var3 = ZombieDawn.field_J;
           if (param0 == 20) {
@@ -1509,31 +1357,23 @@ abstract class wb extends ke {
         L1: {
           if (bj.d(18840)) {
             L2: {
-              stackOut_9_0 = this;
-              stackOut_9_1 = 0;
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
+              stackIn_11_0 = this;
+
+              stackIn_11_1 = 0;
+
               if (cn.field_b == null) {
-                stackOut_11_0 = this;
-                stackOut_11_1 = stackIn_11_1;
-                stackOut_11_2 = 0;
-                stackIn_12_0 = stackOut_11_0;
-                stackIn_12_1 = stackOut_11_1;
-                stackIn_12_2 = stackOut_11_2;
+                stackIn_12_0 = this;
+                stackIn_12_1 = stackIn_11_1;
+                stackIn_12_2 = 0;
                 break L2;
               } else {
-                stackOut_10_0 = this;
-                stackOut_10_1 = stackIn_10_1;
-                stackOut_10_2 = 1;
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_12_1 = stackOut_10_1;
-                stackIn_12_2 = stackOut_10_2;
+                stackIn_12_0 = this;
+                stackIn_12_1 = stackIn_11_1;
+                stackIn_12_2 = 1;
                 break L2;
               }
             }
-            discarded$102 = this.a(stackIn_12_1 != 0, stackIn_12_2 != 0, 115);
+            discarded$4 = this.a(stackIn_12_1 != 0, stackIn_12_2 != 0, 115);
             break L1;
           } else {
             if (ld.field_j < 10) {
@@ -1544,7 +1384,7 @@ abstract class wb extends ke {
                   wd.b(112, id.field_I);
                   break L1;
                 } else {
-                  discarded$103 = this.a(false, false, param0 ^ 72);
+                  discarded$5 = this.a(false, false, param0 ^ 72);
                   break L1;
                 }
               } else {

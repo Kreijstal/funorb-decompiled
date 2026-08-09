@@ -20,31 +20,6 @@ final class uk extends bh {
     static String field_y;
 
     final void b(int param0, int param1) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        pi var15_ref_pi = null;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        pi var19_ref_pi = null;
-        pi var20 = null;
-        int var21 = 0;
-        uk var22 = null;
-        pi var23 = null;
-        pi var24 = null;
-        pi var25 = null;
-        pi var26 = null;
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_10_1 = 0;
@@ -79,39 +54,32 @@ final class uk extends bh {
         pi stackIn_142_0 = null;
         pi stackIn_145_0 = null;
         pi stackIn_145_1 = null;
-        int stackOut_4_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_18_1 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_48_1 = 0;
-        pi stackOut_50_0 = null;
-        int stackOut_53_0 = 0;
-        int stackOut_53_1 = 0;
-        pi stackOut_57_0 = null;
-        pi stackOut_57_1 = null;
-        pi stackOut_68_0 = null;
-        pi stackOut_71_0 = null;
-        pi stackOut_71_1 = null;
-        int stackOut_83_0 = 0;
-        int stackOut_88_0 = 0;
-        int stackOut_88_1 = 0;
-        int stackOut_94_0 = 0;
-        int stackOut_94_1 = 0;
-        int stackOut_121_0 = 0;
-        int stackOut_123_0 = 0;
-        int stackOut_123_1 = 0;
-        pi stackOut_125_0 = null;
-        int stackOut_128_0 = 0;
-        int stackOut_128_1 = 0;
-        pi stackOut_130_0 = null;
-        pi stackOut_130_1 = null;
-        pi stackOut_141_0 = null;
-        pi stackOut_144_0 = null;
-        pi stackOut_144_1 = null;
         int statePc = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        pi var15_ref_pi = null;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        pi var19_ref_pi = null;
+        int var19 = 0;
+        pi var20 = null;
+        int var21 = 0;
+        uk var22 = null;
+        pi var23 = null;
+        pi var24 = null;
+        pi var25 = null;
+        pi var26 = null;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -156,8 +124,7 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 4: {
-                    stackOut_4_0 = this.field_t;
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = this.field_t;
                     statePc = 5;
                     continue stateLoop;
                 }
@@ -196,12 +163,10 @@ final class uk extends bh {
                     var14 = var4 + (var9 * (var5 - var4) / var7 - -((var7 + -var9) * (var9 * var6) / var8));
                     ub.field_d[var13] = var14;
                     var9++;
-                    stackOut_9_0 = var11 ^ -1;
-                    stackOut_9_1 = var14 / this.field_w ^ -1;
-                    stackIn_19_0 = stackOut_9_0;
-                    stackIn_19_1 = stackOut_9_1;
-                    stackIn_10_0 = stackOut_9_0;
-                    stackIn_10_1 = stackOut_9_1;
+                    stackIn_19_0 = var11 ^ -1;
+                    stackIn_10_0 = stackIn_19_0;
+                    stackIn_19_1 = var14 / this.field_w ^ -1;
+                    stackIn_10_1 = stackIn_19_1;
                     if (var21 != 0) {
                         statePc = 19;
                     } else {
@@ -258,10 +223,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 18: {
-                    stackOut_18_0 = var12 ^ -1;
-                    stackOut_18_1 = this.field_A ^ -1;
-                    stackIn_19_0 = stackOut_18_0;
-                    stackIn_19_1 = stackOut_18_1;
+                    stackIn_19_0 = var12 ^ -1;
+                    stackIn_19_1 = this.field_A ^ -1;
                     statePc = 19;
                     continue stateLoop;
                 }
@@ -421,9 +384,8 @@ final class uk extends bh {
                     var15 = ub.field_d[var14];
                     var16 = this.field_w * var11;
                     var17 = var11;
-                    stackOut_46_0 = 0;
-                    stackIn_5_0 = stackOut_46_0;
-                    stackIn_47_0 = stackOut_46_0;
+                    stackIn_5_0 = 0;
+                    stackIn_47_0 = stackIn_5_0;
                     if (var21 != 0) {
                         statePc = 5;
                     } else {
@@ -437,10 +399,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 48: {
-                    stackOut_48_0 = var16 ^ -1;
-                    stackOut_48_1 = var15 ^ -1;
-                    stackIn_49_0 = stackOut_48_0;
-                    stackIn_49_1 = stackOut_48_1;
+                    stackIn_49_0 = var16 ^ -1;
+                    stackIn_49_1 = var15 ^ -1;
                     statePc = 49;
                     continue stateLoop;
                 }
@@ -453,9 +413,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 50: {
-                    stackOut_50_0 = var22.field_q[var10 * this.field_A + var17];
-                    stackIn_30_0 = stackOut_50_0;
-                    stackIn_51_0 = stackOut_50_0;
+                    stackIn_30_0 = var22.field_q[var10 * this.field_A + var17];
+                    stackIn_51_0 = stackIn_30_0;
                     if (var21 != 0) {
                         statePc = 30;
                     } else {
@@ -477,12 +436,10 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 53: {
-                    stackOut_53_0 = var16 ^ -1;
-                    stackOut_53_1 = var15 ^ -1;
-                    stackIn_49_0 = stackOut_53_0;
-                    stackIn_49_1 = stackOut_53_1;
-                    stackIn_54_0 = stackOut_53_0;
-                    stackIn_54_1 = stackOut_53_1;
+                    stackIn_49_0 = var16 ^ -1;
+                    stackIn_54_0 = stackIn_49_0;
+                    stackIn_49_1 = var15 ^ -1;
+                    stackIn_54_1 = stackIn_49_1;
                     if (var21 != 0) {
                         statePc = 49;
                     } else {
@@ -507,10 +464,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 57: {
-                    stackOut_57_0 = (pi) (var19_ref_pi);
-                    stackOut_57_1 = me.field_J;
-                    stackIn_58_0 = stackOut_57_0;
-                    stackIn_58_1 = stackOut_57_1;
+                    stackIn_58_0 = (pi) (var19_ref_pi);
+                    stackIn_58_1 = me.field_J;
                     statePc = 58;
                     continue stateLoop;
                 }
@@ -572,9 +527,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 68: {
-                    stackOut_68_0 = this.field_q[var17 + this.field_A * var10];
-                    stackIn_30_0 = stackOut_68_0;
-                    stackIn_69_0 = stackOut_68_0;
+                    stackIn_30_0 = this.field_q[var17 + this.field_A * var10];
+                    stackIn_69_0 = stackIn_30_0;
                     if (var21 != 0) {
                         statePc = 30;
                     } else {
@@ -596,12 +550,10 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 71: {
-                    stackOut_71_0 = me.field_J;
-                    stackOut_71_1 = (pi) (var19_ref_pi);
-                    stackIn_58_0 = stackOut_71_0;
-                    stackIn_58_1 = stackOut_71_1;
-                    stackIn_72_0 = stackOut_71_0;
-                    stackIn_72_1 = stackOut_71_1;
+                    stackIn_58_0 = me.field_J;
+                    stackIn_72_0 = stackIn_58_0;
+                    stackIn_58_1 = (pi) (var19_ref_pi);
+                    stackIn_72_1 = stackIn_58_1;
                     if (var21 != 0) {
                         statePc = 58;
                     } else {
@@ -698,8 +650,7 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 83: {
-                    stackOut_83_0 = this.field_A ^ -1;
-                    stackIn_84_0 = stackOut_83_0;
+                    stackIn_84_0 = this.field_A ^ -1;
                     statePc = 84;
                     continue stateLoop;
                 }
@@ -737,12 +688,10 @@ final class uk extends bh {
                 case 88: {
                     var14 = var4 - (-(var9 * (-var4 + var5) / var7) - var9 * var6 * (var7 - var9) / var8);
                     ub.field_d[var13] = var14;
-                    stackOut_88_0 = var11;
-                    stackOut_88_1 = var14 / this.field_v;
-                    stackIn_95_0 = stackOut_88_0;
-                    stackIn_95_1 = stackOut_88_1;
-                    stackIn_89_0 = stackOut_88_0;
-                    stackIn_89_1 = stackOut_88_1;
+                    stackIn_95_0 = var11;
+                    stackIn_89_0 = stackIn_95_0;
+                    stackIn_95_1 = var14 / this.field_v;
+                    stackIn_89_1 = stackIn_95_1;
                     if (var21 != 0) {
                         statePc = 95;
                     } else {
@@ -787,10 +736,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 94: {
-                    stackOut_94_0 = var12 ^ -1;
-                    stackOut_94_1 = this.field_t ^ -1;
-                    stackIn_95_0 = stackOut_94_0;
-                    stackIn_95_1 = stackOut_94_1;
+                    stackIn_95_0 = var12 ^ -1;
+                    stackIn_95_1 = this.field_t ^ -1;
                     statePc = 95;
                     continue stateLoop;
                 }
@@ -963,9 +910,8 @@ final class uk extends bh {
                     var16 = ub.field_d[var15];
                     var17 = var11 * this.field_v;
                     var18 = var11;
-                    stackOut_121_0 = 0;
-                    stackIn_84_0 = stackOut_121_0;
-                    stackIn_122_0 = stackOut_121_0;
+                    stackIn_84_0 = 0;
+                    stackIn_122_0 = stackIn_84_0;
                     if (var21 != 0) {
                         statePc = 84;
                     } else {
@@ -979,10 +925,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 123: {
-                    stackOut_123_0 = var17;
-                    stackOut_123_1 = var16;
-                    stackIn_124_0 = stackOut_123_0;
-                    stackIn_124_1 = stackOut_123_1;
+                    stackIn_124_0 = var17;
+                    stackIn_124_1 = var16;
                     statePc = 124;
                     continue stateLoop;
                 }
@@ -995,9 +939,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 125: {
-                    stackOut_125_0 = var22.field_q[this.field_A * var18 + var10];
-                    stackIn_108_0 = stackOut_125_0;
-                    stackIn_126_0 = stackOut_125_0;
+                    stackIn_108_0 = var22.field_q[this.field_A * var18 + var10];
+                    stackIn_126_0 = stackIn_108_0;
                     if (var21 != 0) {
                         statePc = 108;
                     } else {
@@ -1019,12 +962,10 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 128: {
-                    stackOut_128_0 = var16;
-                    stackOut_128_1 = var17;
-                    stackIn_124_0 = stackOut_128_0;
-                    stackIn_124_1 = stackOut_128_1;
-                    stackIn_129_0 = stackOut_128_0;
-                    stackIn_129_1 = stackOut_128_1;
+                    stackIn_124_0 = var16;
+                    stackIn_129_0 = stackIn_124_0;
+                    stackIn_124_1 = var17;
+                    stackIn_129_1 = stackIn_124_1;
                     if (var21 != 0) {
                         statePc = 124;
                     } else {
@@ -1041,10 +982,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 130: {
-                    stackOut_130_0 = me.field_J;
-                    stackOut_130_1 = (pi) (var20);
-                    stackIn_131_0 = stackOut_130_0;
-                    stackIn_131_1 = stackOut_130_1;
+                    stackIn_131_0 = me.field_J;
+                    stackIn_131_1 = (pi) (var20);
                     statePc = 131;
                     continue stateLoop;
                 }
@@ -1106,9 +1045,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 141: {
-                    stackOut_141_0 = this.field_q[var10 + this.field_A * var18];
-                    stackIn_108_0 = stackOut_141_0;
-                    stackIn_142_0 = stackOut_141_0;
+                    stackIn_108_0 = this.field_q[var10 + this.field_A * var18];
+                    stackIn_142_0 = stackIn_108_0;
                     if (var21 != 0) {
                         statePc = 108;
                     } else {
@@ -1130,12 +1068,10 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 144: {
-                    stackOut_144_0 = (pi) (var20);
-                    stackOut_144_1 = me.field_J;
-                    stackIn_131_0 = stackOut_144_0;
-                    stackIn_131_1 = stackOut_144_1;
-                    stackIn_145_0 = stackOut_144_0;
-                    stackIn_145_1 = stackOut_144_1;
+                    stackIn_131_0 = (pi) (var20);
+                    stackIn_145_0 = stackIn_131_0;
+                    stackIn_131_1 = me.field_J;
+                    stackIn_145_1 = stackIn_131_1;
                     if (var21 != 0) {
                         statePc = 131;
                     } else {
@@ -1231,9 +1167,8 @@ final class uk extends bh {
     }
 
     final static boolean c(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != -17) {
-            discarded$0 = uk.c((byte) 22);
+            uk.c((byte) 22);
         }
         return pa.field_V == ka.field_P ? true : false;
     }
@@ -1251,8 +1186,6 @@ final class uk extends bh {
 
     final static boolean a(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == -22802) {
             break L0;
@@ -1269,31 +1202,18 @@ final class uk extends bh {
               if (u.field_i.g((byte) -104) == null) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
     }
 
     private final void d(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        pi[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
         int stackIn_3_0 = 0;
         Object stackIn_6_0 = null;
         int stackIn_13_0 = 0;
@@ -1326,39 +1246,18 @@ final class uk extends bh {
         int stackIn_128_0 = 0;
         int stackIn_130_0 = 0;
         int stackIn_131_0 = 0;
-        int stackOut_2_0 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_12_0 = 0;
-        int stackOut_15_0 = 0;
-        pi stackOut_18_0 = null;
-        pi stackOut_18_1 = null;
-        int stackOut_24_0 = 0;
-        int stackOut_26_0 = 0;
-        pi stackOut_29_0 = null;
-        pi stackOut_29_1 = null;
-        int stackOut_38_0 = 0;
-        pi stackOut_42_0 = null;
-        pi stackOut_42_1 = null;
-        int stackOut_50_0 = 0;
-        Object stackOut_52_0 = null;
-        pi stackOut_78_0 = null;
-        pi stackOut_78_1 = null;
-        int stackOut_87_0 = 0;
-        int stackOut_88_0 = 0;
-        int stackOut_91_0 = 0;
-        pi stackOut_100_0 = null;
-        pi stackOut_100_1 = null;
-        int stackOut_109_0 = 0;
-        int stackOut_110_0 = 0;
-        int stackOut_113_0 = 0;
-        pi stackOut_122_0 = null;
-        pi stackOut_122_1 = null;
-        pi stackOut_123_0 = null;
-        pi stackOut_123_1 = null;
-        int stackOut_129_0 = 0;
-        int stackOut_130_0 = 0;
-        int stackOut_133_0 = 0;
         int statePc = 0;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        pi[] var9 = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -1380,9 +1279,8 @@ final class uk extends bh {
                 }
                 case 2: {
                     var5--;
-                    stackOut_2_0 = var2;
-                    stackIn_13_0 = stackOut_2_0;
-                    stackIn_3_0 = stackOut_2_0;
+                    stackIn_13_0 = var2;
+                    stackIn_3_0 = stackIn_13_0;
                     if (var12 != 0) {
                         statePc = 13;
                     } else {
@@ -1404,9 +1302,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 5: {
-                    stackOut_5_0 = this;
-                    stackIn_53_0 = stackOut_5_0;
-                    stackIn_6_0 = stackOut_5_0;
+                    stackIn_53_0 = this;
+                    stackIn_6_0 = stackIn_53_0;
                     if (var12 != 0) {
                         statePc = 53;
                     } else {
@@ -1449,8 +1346,7 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 12: {
-                    stackOut_12_0 = 32 / ((-48 - param0) / 43);
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = 32 / ((-48 - param0) / 43);
                     statePc = 13;
                     continue stateLoop;
                 }
@@ -1468,9 +1364,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 15: {
-                    stackOut_15_0 = var2;
-                    stackIn_25_0 = stackOut_15_0;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_25_0 = var2;
+                    stackIn_16_0 = stackIn_25_0;
                     if (var12 != 0) {
                         statePc = 25;
                     } else {
@@ -1492,12 +1387,10 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 18: {
-                    stackOut_18_0 = me.field_J;
-                    stackOut_18_1 = this.field_q[var4 * this.field_A + var7];
-                    stackIn_43_0 = stackOut_18_0;
-                    stackIn_43_1 = stackOut_18_1;
-                    stackIn_19_0 = stackOut_18_0;
-                    stackIn_19_1 = stackOut_18_1;
+                    stackIn_43_0 = me.field_J;
+                    stackIn_19_0 = stackIn_43_0;
+                    stackIn_43_1 = this.field_q[var4 * this.field_A + var7];
+                    stackIn_19_1 = stackIn_43_1;
                     if (var12 != 0) {
                         statePc = 43;
                     } else {
@@ -1532,8 +1425,7 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 24: {
-                    stackOut_24_0 = var3 ^ -1;
-                    stackIn_25_0 = stackOut_24_0;
+                    stackIn_25_0 = var3 ^ -1;
                     statePc = 25;
                     continue stateLoop;
                 }
@@ -1547,9 +1439,8 @@ final class uk extends bh {
                 }
                 case 26: {
                     var3--;
-                    stackOut_26_0 = var4;
-                    stackIn_89_0 = stackOut_26_0;
-                    stackIn_27_0 = stackOut_26_0;
+                    stackIn_89_0 = var4;
+                    stackIn_27_0 = stackIn_89_0;
                     if (var12 != 0) {
                         statePc = 89;
                     } else {
@@ -1571,12 +1462,10 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 29: {
-                    stackOut_29_0 = this.field_q[var3 + this.field_A * var7];
-                    stackOut_29_1 = me.field_J;
-                    stackIn_43_0 = stackOut_29_0;
-                    stackIn_43_1 = stackOut_29_1;
-                    stackIn_30_0 = stackOut_29_0;
-                    stackIn_30_1 = stackOut_29_1;
+                    stackIn_43_0 = this.field_q[var3 + this.field_A * var7];
+                    stackIn_30_0 = stackIn_43_0;
+                    stackIn_43_1 = me.field_J;
+                    stackIn_30_1 = stackIn_43_1;
                     if (var12 != 0) {
                         statePc = 43;
                     } else {
@@ -1627,9 +1516,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 38: {
-                    stackOut_38_0 = var4;
-                    stackIn_51_0 = stackOut_38_0;
-                    stackIn_39_0 = stackOut_38_0;
+                    stackIn_51_0 = var4;
+                    stackIn_39_0 = stackIn_51_0;
                     if (var12 != 0) {
                         statePc = 51;
                     } else {
@@ -1659,10 +1547,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 42: {
-                    stackOut_42_0 = me.field_J;
-                    stackOut_42_1 = this.field_q[var2 + this.field_A * var7];
-                    stackIn_43_0 = stackOut_42_0;
-                    stackIn_43_1 = stackOut_42_1;
+                    stackIn_43_0 = me.field_J;
+                    stackIn_43_1 = this.field_q[var2 + this.field_A * var7];
                     statePc = 43;
                     continue stateLoop;
                 }
@@ -1705,8 +1591,7 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 50: {
-                    stackOut_50_0 = 0;
-                    stackIn_51_0 = stackOut_50_0;
+                    stackIn_51_0 = 0;
                     statePc = 51;
                     continue stateLoop;
                 }
@@ -1719,8 +1604,7 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 52: {
-                    stackOut_52_0 = this;
-                    stackIn_53_0 = stackOut_52_0;
+                    stackIn_53_0 = this;
                     statePc = 53;
                     continue stateLoop;
                 }
@@ -1858,10 +1742,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 78: {
-                    stackOut_78_0 = me.field_J;
-                    stackOut_78_1 = this.field_q[var2 + this.field_A * var7];
-                    stackIn_76_0 = stackOut_78_0;
-                    stackIn_76_1 = stackOut_78_1;
+                    stackIn_76_0 = me.field_J;
+                    stackIn_76_1 = this.field_q[var2 + this.field_A * var7];
                     statePc = 76;
                     continue stateLoop;
                 }
@@ -1900,9 +1782,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 87: {
-                    stackOut_87_0 = var4;
-                    stackIn_51_0 = stackOut_87_0;
-                    stackIn_88_0 = stackOut_87_0;
+                    stackIn_51_0 = var4;
+                    stackIn_88_0 = stackIn_51_0;
                     if (var12 != 0) {
                         statePc = 51;
                     } else {
@@ -1911,8 +1792,7 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 88: {
-                    stackOut_88_0 = stackIn_88_0;
-                    stackIn_86_0 = stackOut_88_0;
+                    stackIn_86_0 = stackIn_88_0;
                     statePc = 86;
                     continue stateLoop;
                 }
@@ -1925,8 +1805,7 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 91: {
-                    stackOut_91_0 = var2 ^ -1;
-                    stackIn_89_0 = stackOut_91_0;
+                    stackIn_89_0 = var2 ^ -1;
                     statePc = 89;
                     continue stateLoop;
                 }
@@ -1956,10 +1835,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 100: {
-                    stackOut_100_0 = me.field_J;
-                    stackOut_100_1 = this.field_q[var2 + this.field_A * var7];
-                    stackIn_98_0 = stackOut_100_0;
-                    stackIn_98_1 = stackOut_100_1;
+                    stackIn_98_0 = me.field_J;
+                    stackIn_98_1 = this.field_q[var2 + this.field_A * var7];
                     statePc = 98;
                     continue stateLoop;
                 }
@@ -1998,9 +1875,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 109: {
-                    stackOut_109_0 = var4;
-                    stackIn_51_0 = stackOut_109_0;
-                    stackIn_110_0 = stackOut_109_0;
+                    stackIn_51_0 = var4;
+                    stackIn_110_0 = stackIn_51_0;
                     if (var12 != 0) {
                         statePc = 51;
                     } else {
@@ -2009,8 +1885,7 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 110: {
-                    stackOut_110_0 = stackIn_110_0;
-                    stackIn_108_0 = stackOut_110_0;
+                    stackIn_108_0 = stackIn_110_0;
                     statePc = 108;
                     continue stateLoop;
                 }
@@ -2023,8 +1898,7 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 113: {
-                    stackOut_113_0 = var2 ^ -1;
-                    stackIn_111_0 = stackOut_113_0;
+                    stackIn_111_0 = var2 ^ -1;
                     statePc = 111;
                     continue stateLoop;
                 }
@@ -2055,12 +1929,10 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 122: {
-                    stackOut_122_0 = this.field_q[var3 + this.field_A * var7];
-                    stackOut_122_1 = me.field_J;
-                    stackIn_43_0 = stackOut_122_0;
-                    stackIn_43_1 = stackOut_122_1;
-                    stackIn_123_0 = stackOut_122_0;
-                    stackIn_123_1 = stackOut_122_1;
+                    stackIn_43_0 = this.field_q[var3 + this.field_A * var7];
+                    stackIn_123_0 = stackIn_43_0;
+                    stackIn_43_1 = me.field_J;
+                    stackIn_123_1 = stackIn_43_1;
                     if (var12 != 0) {
                         statePc = 43;
                     } else {
@@ -2069,10 +1941,8 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 123: {
-                    stackOut_123_0 = (pi) ((Object) stackIn_123_0);
-                    stackOut_123_1 = (pi) ((Object) stackIn_123_1);
-                    stackIn_120_0 = stackOut_123_0;
-                    stackIn_120_1 = stackOut_123_1;
+                    stackIn_120_0 = (pi) ((Object) stackIn_123_0);
+                    stackIn_120_1 = (pi) ((Object) stackIn_123_1);
                     statePc = 120;
                     continue stateLoop;
                 }
@@ -2099,9 +1969,8 @@ final class uk extends bh {
                 }
                 case 129: {
                     var3--;
-                    stackOut_129_0 = var4;
-                    stackIn_89_0 = stackOut_129_0;
-                    stackIn_130_0 = stackOut_129_0;
+                    stackIn_89_0 = var4;
+                    stackIn_130_0 = stackIn_89_0;
                     if (var12 != 0) {
                         statePc = 89;
                     } else {
@@ -2110,8 +1979,7 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 130: {
-                    stackOut_130_0 = stackIn_130_0;
-                    stackIn_128_0 = stackOut_130_0;
+                    stackIn_128_0 = stackIn_130_0;
                     statePc = 128;
                     continue stateLoop;
                 }
@@ -2124,8 +1992,7 @@ final class uk extends bh {
                     continue stateLoop;
                 }
                 case 133: {
-                    stackOut_133_0 = var3 ^ -1;
-                    stackIn_131_0 = stackOut_133_0;
+                    stackIn_131_0 = var3 ^ -1;
                     statePc = 131;
                     continue stateLoop;
                 }
@@ -2138,96 +2005,46 @@ final class uk extends bh {
     }
 
     static {
-        $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            long var2 = 0L;
-            long var4 = 0L;
-            long var6 = 0L;
-            long var8 = 0L;
-            long var10 = 0L;
-            long var12 = 0L;
-            int var14 = 0;
-            long stackIn_5_0 = 0L;
-            long stackOut_4_0 = 0L;
-            long stackOut_3_0 = 0L;
-            field_p = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
-            field_z = new int[8192];
-            field_x = new long[11];
-            field_s = new long[8][256];
-            var0 = 0;
-            L0: while (true) {
-              if (256 <= var0) {
-                field_x[0] = 0L;
-                var0 = 1;
-                L1: while (true) {
-                  if (10 < var0) {
-                    field_y = "Passwords can only contain letters and numbers";
-                    break $cfr$clinit;
-                  } else {
-                    var1 = (-1 + var0) * 8;
-                    field_x[var0] = pj.a(jg.a(255L, field_s[7][7 + var1]), pj.a(pj.a(pj.a(pj.a(pj.a(pj.a(jg.a(field_s[1][var1 - -1], 71776119061217280L), jg.a(field_s[0][var1], -72057594037927936L)), jg.a(field_s[2][2 + var1], 280375465082880L)), jg.a(1095216660480L, field_s[3][var1 - -3])), jg.a(4278190080L, field_s[4][var1 - -4])), jg.a(16711680L, field_s[5][var1 - -5])), jg.a(65280L, field_s[6][var1 - -6])));
-                    var0++;
-                    continue L1;
-                  }
-                }
-              } else {
-                L2: {
-                  var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-                  if (0 != (1 & var0)) {
-                    stackOut_4_0 = (long)(var1 & 255);
-                    stackIn_5_0 = stackOut_4_0;
-                    break L2;
-                  } else {
-                    stackOut_3_0 = (long)(var1 >>> 1748502536);
-                    stackIn_5_0 = stackOut_3_0;
-                    break L2;
-                  }
-                }
-                L3: {
-                  var2 = stackIn_5_0;
-                  var4 = var2 << -1739026111;
-                  if ((var4 ^ -1L) <= -257L) {
-                    var4 = var4 ^ 285L;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  var6 = var4 << -2116044543;
-                  if ((var6 ^ -1L) > -257L) {
-                    break L4;
-                  } else {
-                    var6 = var6 ^ 285L;
-                    break L4;
-                  }
-                }
-                L5: {
-                  var8 = var2 ^ var6;
-                  var10 = var6 << -1833427391;
-                  if (-257L < (var10 ^ -1L)) {
-                    break L5;
-                  } else {
-                    var10 = var10 ^ 285L;
-                    break L5;
-                  }
-                }
-                var12 = var10 ^ var2;
-                field_s[0][var0] = jj.a(jj.a(jj.a(var8 << -536369200, jj.a(var10 << 1383493720, jj.a(jj.a(var6 << -473011736, jj.a(var2 << 962775152, var2 << 851384312)), var2 << -1186783072))), var4 << -1696148856), var12);
-                var14 = 1;
-                L6: while (true) {
-                  if (-9 >= (var14 ^ -1)) {
-                    var0++;
-                    continue L0;
-                  } else {
-                    field_s[var14][var0] = jj.a(field_s[var14 + -1][var0] >>> 225008840, field_s[var14 + -1][var0] << 538906104);
-                    var14++;
-                    continue L6;
-                  }
-                }
-              }
+        int var0 = 0;
+        int var1 = 0;
+        long var2 = 0L;
+        long var4 = 0L;
+        long var6 = 0L;
+        long var8 = 0L;
+        long var10 = 0L;
+        long var12 = 0L;
+        int var14 = 0;
+        field_p = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
+        field_z = new int[8192];
+        field_x = new long[11];
+        field_s = new long[8][256];
+        for (var0 = 0; 256 > var0; var0++) {
+            var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+            var2 = 0 == (1 & var0) ? (long)(var1 >>> 1748502536) : (long)(var1 & 255);
+            var4 = var2 << -1739026111;
+            if (!((var4 ^ -1L) > -257L)) {
+                var4 = var4 ^ 285L;
+            }
+            var6 = var4 << -2116044543;
+            if ((var6 ^ -1L) <= -257L) {
+                var6 = var6 ^ 285L;
+            }
+            var8 = var2 ^ var6;
+            var10 = var6 << -1833427391;
+            if (-257L >= (var10 ^ -1L)) {
+                var10 = var10 ^ 285L;
+            }
+            var12 = var10 ^ var2;
+            field_s[0][var0] = jj.a(jj.a(jj.a(var8 << -536369200, jj.a(var10 << 1383493720, jj.a(jj.a(var6 << -473011736, jj.a(var2 << 962775152, var2 << 851384312)), var2 << -1186783072))), var4 << -1696148856), var12);
+            for (var14 = 1; -9 < (var14 ^ -1); var14++) {
+                field_s[var14][var0] = jj.a(field_s[var14 + -1][var0] >>> 225008840, field_s[var14 + -1][var0] << 538906104);
             }
         }
+        field_x[0] = 0L;
+        for (var0 = 1; 10 >= var0; var0++) {
+            var1 = (-1 + var0) * 8;
+            field_x[var0] = pj.a(jg.a(255L, field_s[7][7 + var1]), pj.a(pj.a(pj.a(pj.a(pj.a(pj.a(jg.a(field_s[1][var1 - -1], 71776119061217280L), jg.a(field_s[0][var1], -72057594037927936L)), jg.a(field_s[2][2 + var1], 280375465082880L)), jg.a(1095216660480L, field_s[3][var1 - -3])), jg.a(4278190080L, field_s[4][var1 - -4])), jg.a(16711680L, field_s[5][var1 - -5])), jg.a(65280L, field_s[6][var1 - -6])));
+        }
+        field_y = "Passwords can only contain letters and numbers";
     }
 }

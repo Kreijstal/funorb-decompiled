@@ -8,7 +8,7 @@ final class hd {
     static wb field_c;
 
     final static void a(boolean param0) {
-        pe var1 = null;
+        pe var1;
         if (param0) {
           L0: {
             field_b = (String) null;

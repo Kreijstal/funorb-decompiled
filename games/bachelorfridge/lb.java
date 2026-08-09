@@ -27,16 +27,13 @@ final class lb extends ana {
     }
 
     private final void d(int param0) {
-        oha discarded$3 = null;
-        boolean discarded$4 = false;
-        oha discarded$5 = null;
-        Object var3 = null;
-        iv var3_ref = null;
-        int var5 = 0;
-        aga var6 = null;
-        ad var7 = null;
-        aga var8 = null;
-        ad var9 = null;
+        Object var3;
+        iv var3_ref;
+        int var5;
+        aga var6;
+        ad var7;
+        aga var8;
+        ad var9;
         var3 = null;
         var5 = BachelorFridge.field_y;
         if (param0 == 15084) {
@@ -45,7 +42,7 @@ final class lb extends ana {
             return;
           } else {
             var3_ref = (iv) ((Object) this.field_x.field_o.b((byte) 90));
-            discarded$3 = al.a(param0 + -14993, this.field_x.field_k);
+            al.a(param0 + -14993, this.field_x.field_k);
             L0: while (true) {
               if (var3_ref == null) {
                 return;
@@ -60,13 +57,13 @@ final class lb extends ana {
             }
           }
         } else {
-          discarded$4 = lb.g((byte) -55);
+          lb.g((byte) -55);
           var6 = this.field_x.field_l.a(79, this.field_q.field_h);
           if (var6.i(-82)) {
             return;
           } else {
             var3_ref = (iv) ((Object) this.field_x.field_o.b((byte) 90));
-            discarded$5 = al.a(param0 + -14993, this.field_x.field_k);
+            al.a(param0 + -14993, this.field_x.field_k);
             L1: while (true) {
               if (var3_ref == null) {
                 return;
@@ -84,9 +81,8 @@ final class lb extends ana {
     }
 
     final static boolean g(byte param0) {
-        int var1 = 0;
+        int var1;
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
         var1 = -88 % ((0 - param0) / 39);
         if (ms.field_u == null) {
           if (!em.d((byte) -104)) {
@@ -97,8 +93,7 @@ final class lb extends ana {
                 return false;
               }
             } else {
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = 1;
               return stackIn_7_0 != 0;
             }
           } else {

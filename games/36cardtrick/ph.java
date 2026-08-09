@@ -14,10 +14,9 @@ final class ph {
     }
 
     final he a(int param0, long param1) {
-        int discarded$1 = 0;
-        he var4 = null;
-        he var5 = null;
-        int var6 = 0;
+        he var4;
+        he var5;
+        int var6;
         var6 = Main.field_T;
         this.field_d = param1;
         if (param0 <= -26) {
@@ -39,7 +38,7 @@ final class ph {
             }
           }
         } else {
-          discarded$1 = ph.a(22, 12);
+          ph.a(22, 12);
           var4 = this.field_e[(int)(param1 & (long)(-1 + this.field_c))];
           this.field_b = var4.field_h;
           L1: while (true) {
@@ -93,9 +92,9 @@ final class ph {
     }
 
     final he a(int param0) {
-        he var2 = null;
-        he var3 = null;
-        int var4 = 0;
+        he var2;
+        he var3;
+        int var4;
         var4 = Main.field_T;
         if (param0 == 26847) {
           if (this.field_b != null) {
@@ -141,9 +140,6 @@ final class ph {
     final static boolean a(char param0, boolean param1) {
         int stackIn_27_0 = 0;
         int stackIn_30_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_26_0 = 0;
         if (!param1) {
           if (param0 < 48) {
             if (65 > param0) {
@@ -161,8 +157,7 @@ final class ph {
               return false;
             } else {
               if (param0 <= 90) {
-                stackOut_28_0 = 1;
-                stackIn_30_0 = stackOut_28_0;
+                stackIn_30_0 = 1;
                 return stackIn_30_0 != 0;
               } else {
                 L1: {
@@ -173,14 +168,12 @@ final class ph {
                       if (param0 > 122) {
                         break L2;
                       } else {
-                        stackOut_25_0 = 1;
-                        stackIn_27_0 = stackOut_25_0;
+                        stackIn_27_0 = 1;
                         break L1;
                       }
                     }
                   }
-                  stackOut_26_0 = 0;
-                  stackIn_27_0 = stackOut_26_0;
+                  stackIn_27_0 = 0;
                   break L1;
                 }
                 return stackIn_27_0 != 0;
@@ -243,24 +236,18 @@ final class ph {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         var2 = 35 / ((40 - param0) / 45);
         param1 = param1 & 8191;
         if (4096 <= param1) {
           L0: {
             if (param1 < 6144) {
-              stackOut_7_0 = -ad.field_g[param1 + -4096];
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = -ad.field_g[param1 + -4096];
               break L0;
             } else {
-              stackOut_6_0 = -ad.field_g[8192 - param1];
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = -ad.field_g[8192 - param1];
               break L0;
             }
           }
@@ -268,12 +255,10 @@ final class ph {
         } else {
           L1: {
             if (param1 >= 2048) {
-              stackOut_3_0 = ad.field_g[-param1 + 4096];
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = ad.field_g[-param1 + 4096];
               break L1;
             } else {
-              stackOut_2_0 = ad.field_g[param1];
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = ad.field_g[param1];
               break L1;
             }
           }

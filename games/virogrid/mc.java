@@ -11,26 +11,8 @@ final class mc {
     static String field_d;
 
     final static byte[] a(byte[] param0, int param1) {
-        byte[] discarded$2 = null;
-        int discarded$3 = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        byte[] var5_ref_byte__ = null;
-        byte[] var6 = null;
-        Object var7 = null;
-        Throwable var8 = null;
-        byte[] var9 = null;
-        jc var10 = null;
-        byte[] var11 = null;
-        byte[] var12 = null;
-        byte[] var13 = null;
-        byte[] var14 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_23_0 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -38,16 +20,19 @@ final class mc {
         String stackIn_27_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        byte[] stackOut_22_0 = null;
-        byte[] stackOut_8_0 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        byte[] var5_ref_byte__ = null;
+        byte[] var6 = null;
+        Object var7 = null;
+        byte[] var9 = null;
+        jc var10 = null;
+        byte[] var11 = null;
+        byte[] var12 = null;
+        byte[] var13 = null;
+        byte[] var14 = null;
         try {
           L0: {
             L1: {
@@ -56,7 +41,7 @@ final class mc {
                 break L1;
               } else {
                 var9 = (byte[]) null;
-                discarded$2 = mc.a((byte[]) null, 98);
+                mc.a((byte[]) null, 98);
                 break L1;
               }
             }
@@ -108,12 +93,11 @@ final class mc {
                           }
                           break L6;
                         } else {
-                          discarded$3 = bb.a(var14, var5, param0, var4, 9);
+                          bb.a(var14, var5, param0, var4, 9);
                           break L6;
                         }
                       }
-                      stackOut_22_0 = (byte[]) (var6);
-                      stackIn_23_0 = stackOut_22_0;
+                      stackIn_23_0 = (byte[]) (var6);
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -124,8 +108,7 @@ final class mc {
                   var11 = var13;
                   var5_ref_byte__ = var11;
                   var10.a(0, var4, true, var13);
-                  stackOut_8_0 = (byte[]) (var5_ref_byte__);
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = (byte[]) (var5_ref_byte__);
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -137,27 +120,19 @@ final class mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var2);
-            stackOut_24_1 = new StringBuilder().append("mc.C(");
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var2);
+
+            stackIn_26_1 = new StringBuilder().append("mc.C(");
+
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L8;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L8;
             }
           }
@@ -228,10 +203,9 @@ final class mc {
     }
 
     public static void a(boolean param0) {
-        boolean discarded$2 = false;
         field_d = null;
         if (param0) {
-          discarded$2 = mc.a(44, true, false, -98, 124, 89, 122);
+          mc.a(44, true, false, -98, 124, 89, 122);
           field_b = null;
           field_e = null;
           field_c = null;

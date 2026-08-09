@@ -54,7 +54,7 @@ final class ia extends mg {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        db var6 = null;
+        db var6;
         if (param3 == 0) {
           if (this.field_A == null) {
             return;

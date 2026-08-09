@@ -13,16 +13,16 @@ final class sh implements Iterator {
     static int field_f;
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        fa var1 = null;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        fa var1;
+        int var2;
         var2 = Pixelate.field_H ? 1 : 0;
         if (this.field_g.field_e[-1 + this.field_b] == this.field_a) {
           L0: while (true) {
             if (this.field_b < this.field_g.field_a) {
-              fieldTemp$2 = this.field_b;
+              fieldTemp$1 = this.field_b;
               this.field_b = this.field_b + 1;
-              var1 = this.field_g.field_e[fieldTemp$2].field_a;
+              var1 = this.field_g.field_e[fieldTemp$1].field_a;
               if (this.field_g.field_e[this.field_b - 1] == var1) {
                 continue L0;
               } else {
@@ -62,7 +62,7 @@ final class sh implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = Pixelate.field_H ? 1 : 0;
         if (this.field_a == this.field_g.field_e[this.field_b + -1]) {
           L0: while (true) {
@@ -88,19 +88,13 @@ final class sh implements Iterator {
     final static boolean a(boolean param0, int param1) {
         int stackIn_5_0 = 0;
         int stackIn_13_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
         if ((param1 ^ -1) > -1) {
           L0: {
             if (0 != (1 + param1) % 4) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               break L0;
             } else {
-              stackOut_3_0 = 1;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = 1;
               break L0;
             }
           }
@@ -110,12 +104,10 @@ final class sh implements Iterator {
             if (param1 < 1582) {
               L1: {
                 if (0 != param1 % 4) {
-                  stackOut_12_0 = 0;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = 0;
                   break L1;
                 } else {
-                  stackOut_11_0 = 1;
-                  stackIn_13_0 = stackOut_11_0;
+                  stackIn_13_0 = 1;
                   break L1;
                 }
               }

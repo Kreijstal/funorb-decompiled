@@ -15,10 +15,9 @@ abstract class en extends ab {
     static dl[] field_K;
 
     boolean e(byte param0) {
-        boolean discarded$0 = false;
         this.j(param0 ^ -80);
         if (param0 != 79) {
-            discarded$0 = this.g((byte) 101);
+            this.g((byte) 101);
         }
         return super.e((byte) 79);
     }
@@ -59,8 +58,6 @@ abstract class en extends ab {
         RuntimeException var2_ref = null;
         si stackIn_2_0 = null;
         si stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -68,28 +65,16 @@ abstract class en extends ab {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        si stackOut_3_0 = null;
-        si stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 == 169) {
               var2 = new si(false);
               var2.field_d = args;
-              stackOut_3_0 = (si) (var2);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (si) (var2);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (si) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (si) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -98,27 +83,19 @@ abstract class en extends ab {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2_ref);
-            stackOut_5_1 = new StringBuilder().append("en.S(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2_ref);
+
+            stackIn_7_1 = new StringBuilder().append("en.S(");
+
             if (args == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -142,19 +119,19 @@ abstract class en extends ab {
     }
 
     void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = CrazyCrystals.field_B;
         kh.a(6 + param1, param2 + 35, -12 + this.field_g, -40 + this.field_f, 2105376, 0);
         var5 = 211;

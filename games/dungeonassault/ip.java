@@ -12,7 +12,6 @@ abstract class ip extends m implements jo {
 
     final static ab a(int param0, String param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -20,8 +19,6 @@ abstract class ip extends m implements jo {
         ab stackIn_6_0 = null;
         ab stackIn_16_0 = null;
         ab stackIn_20_0 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -29,18 +26,7 @@ abstract class ip extends m implements jo {
         String stackIn_26_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ab stackOut_15_0 = null;
-        ab stackOut_19_0 = null;
-        ab stackOut_5_0 = null;
-        ab stackOut_2_0 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        RuntimeException var2 = null;
         var5 = DungeonAssault.field_K;
         try {
           L0: {
@@ -64,14 +50,12 @@ abstract class ip extends m implements jo {
                             }
                           }
                         }
-                        stackOut_15_0 = np.field_E;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = np.field_E;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         if ((qj.field_b.indexOf(var4) ^ -1) == 0) {
-                          stackOut_19_0 = np.field_E;
-                          stackIn_20_0 = stackOut_19_0;
+                          stackIn_20_0 = np.field_E;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
@@ -86,14 +70,12 @@ abstract class ip extends m implements jo {
                   }
                 }
               } else {
-                stackOut_5_0 = ta.field_d;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = ta.field_d;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = ri.field_e;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = ri.field_e;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -102,27 +84,19 @@ abstract class ip extends m implements jo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var2);
-            stackOut_23_1 = new StringBuilder().append("ip.M(").append(param0).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var2);
+
+            stackIn_25_1 = new StringBuilder().append("ip.M(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L4;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L4;
             }
           }
@@ -144,35 +118,24 @@ abstract class ip extends m implements jo {
     }
 
     public static void c(byte param0) {
-        ab discarded$0 = null;
         field_i = null;
         field_l = null;
         field_j = null;
         field_k = null;
         if (param0 != 19) {
             String var2 = (String) null;
-            discarded$0 = ip.a(-122, (String) null);
+            ip.a(-122, (String) null);
         }
     }
 
     public final void a(rm param0, byte param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -189,27 +152,19 @@ abstract class ip extends m implements jo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("ip.L(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("ip.L(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -218,9 +173,8 @@ abstract class ip extends m implements jo {
     }
 
     public final boolean a(int param0) {
-        int var2 = 0;
+        int var2;
         int stackIn_3_0 = 0;
-        int stackOut_1_0 = 0;
         var2 = -78 % ((param0 - 8) / 40);
         if (null != this.field_h.field_w) {
           if (this.field_h.field_w.length() == 0) {
@@ -229,8 +183,7 @@ abstract class ip extends m implements jo {
             return false;
           }
         } else {
-          stackOut_1_0 = 1;
-          stackIn_3_0 = stackOut_1_0;
+          stackIn_3_0 = 1;
           return stackIn_3_0 != 0;
         }
     }
@@ -238,9 +191,8 @@ abstract class ip extends m implements jo {
     abstract String a(byte param0, String param1);
 
     final od b(boolean param0) {
-        od discarded$2 = null;
         if (param0) {
-          discarded$2 = this.b(true);
+          this.b(true);
           return this.a(this.field_h.field_w, -92);
         } else {
           return this.a(this.field_h.field_w, -92);
@@ -266,22 +218,12 @@ abstract class ip extends m implements jo {
 
     public final void a(rm param0, int param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -299,27 +241,19 @@ abstract class ip extends m implements jo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("ip.R(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("ip.R(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

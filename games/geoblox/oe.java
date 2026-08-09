@@ -24,10 +24,9 @@ abstract class oe extends dd {
     }
 
     boolean h(int param0) {
-        boolean discarded$0 = false;
         this.b(true);
         if (param0 != 229) {
-            discarded$0 = this.f(45);
+            this.f(45);
         }
         return super.h(229);
     }
@@ -52,8 +51,6 @@ abstract class oe extends dd {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -61,26 +58,14 @@ abstract class oe extends dd {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0 == 44) {
-              stackOut_3_0 = ei.a(false, false, param1);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = ei.a(false, false, param1);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (String) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (String) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -89,27 +74,19 @@ abstract class oe extends dd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("oe.V(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("oe.V(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -135,21 +112,21 @@ abstract class oe extends dd {
     }
 
     final static void l(int param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = Geoblox.field_C;
         try {
           L0: {
@@ -161,30 +138,30 @@ abstract class oe extends dd {
               if (var2 >= var3) {
                 break L0;
               } else {
-                incrementValue$40 = var2;
+                incrementValue$16 = var2;
                 var2++;
-                var5[incrementValue$40] = 0;
-                incrementValue$41 = var2;
+                var5[incrementValue$16] = 0;
+                incrementValue$17 = var2;
                 var2++;
-                var5[incrementValue$41] = 0;
-                incrementValue$42 = var2;
+                var5[incrementValue$17] = 0;
+                incrementValue$18 = var2;
                 var2++;
-                var5[incrementValue$42] = 0;
-                incrementValue$43 = var2;
+                var5[incrementValue$18] = 0;
+                incrementValue$19 = var2;
                 var2++;
-                var5[incrementValue$43] = 0;
-                incrementValue$44 = var2;
+                var5[incrementValue$19] = 0;
+                incrementValue$20 = var2;
                 var2++;
-                var5[incrementValue$44] = 0;
-                incrementValue$45 = var2;
+                var5[incrementValue$20] = 0;
+                incrementValue$21 = var2;
                 var2++;
-                var5[incrementValue$45] = 0;
-                incrementValue$46 = var2;
+                var5[incrementValue$21] = 0;
+                incrementValue$22 = var2;
                 var2++;
-                var5[incrementValue$46] = 0;
-                incrementValue$47 = var2;
+                var5[incrementValue$22] = 0;
+                incrementValue$23 = var2;
                 var2++;
-                var5[incrementValue$47] = 0;
+                var5[incrementValue$23] = 0;
                 continue L1;
               }
             }
@@ -209,29 +186,17 @@ abstract class oe extends dd {
     }
 
     final static int a(int param0, byte[] param1, int param2, int param3) {
-        String discarded$2 = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -239,7 +204,7 @@ abstract class oe extends dd {
                 break L1;
               } else {
                 var6 = (CharSequence) null;
-                discarded$2 = oe.a((CharSequence) null, -115);
+                oe.a((CharSequence) null, -115);
                 break L1;
               }
             }
@@ -248,8 +213,7 @@ abstract class oe extends dd {
             L2: while (true) {
               if (var5 >= param0) {
                 var4_int = var4_int ^ -1;
-                stackOut_5_0 = var4_int;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = var4_int;
                 break L0;
               } else {
                 var4_int = sb.field_b[(var4_int ^ param1[var5]) & 255] ^ var4_int >>> 1495180680;
@@ -262,27 +226,19 @@ abstract class oe extends dd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var4);
-            stackOut_7_1 = new StringBuilder().append("oe.P(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("oe.P(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -325,19 +281,11 @@ abstract class oe extends dd {
     }
 
     final static String a(CharSequence param0, int param1) {
-        StringBuilder discarded$1 = null;
+        StringBuilder discarded$0 = null;
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
-        int var4 = 0;
-        StringBuilder var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         Object stackIn_26_0 = null;
         String stackIn_28_0 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
@@ -345,16 +293,12 @@ abstract class oe extends dd {
         String stackIn_32_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_27_0 = null;
-        Object stackOut_25_0 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        RuntimeException var2 = null;
+        int var4 = 0;
+        StringBuilder var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         try {
           L0: {
             if (param0 != null) {
@@ -402,13 +346,11 @@ abstract class oe extends dd {
                       L6: while (true) {
                         if (var6 >= var3) {
                           if (var5.length() != 0) {
-                            stackOut_27_0 = var5.toString();
-                            stackIn_28_0 = stackOut_27_0;
+                            stackIn_28_0 = var5.toString();
                             decompiledRegionSelector0 = 1;
                             break L0;
                           } else {
-                            stackOut_25_0 = null;
-                            stackIn_26_0 = stackOut_25_0;
+                            stackIn_26_0 = null;
                             decompiledRegionSelector0 = 0;
                             break L0;
                           }
@@ -422,7 +364,7 @@ abstract class oe extends dd {
                               if (var8 == 0) {
                                 break L7;
                               } else {
-                                discarded$1 = var5.append((char) var8);
+                                discarded$0 = var5.append((char) var8);
                                 break L7;
                               }
                             }
@@ -447,27 +389,19 @@ abstract class oe extends dd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) (var2);
-            stackOut_29_1 = new StringBuilder().append("oe.L(");
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            stackIn_31_0 = (RuntimeException) (var2);
+
+            stackIn_31_1 = new StringBuilder().append("oe.L(");
+
             if (param0 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L8;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L8;
             }
           }
@@ -481,10 +415,13 @@ abstract class oe extends dd {
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        RuntimeException var3 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int stackIn_7_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -492,11 +429,6 @@ abstract class oe extends dd {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int stackIn_7_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         var10 = Geoblox.field_C;
         try {
           L0: {
@@ -512,12 +444,10 @@ abstract class oe extends dd {
             }
             L2: {
               if (param0) {
-                stackOut_6_0 = ug.field_c;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = ug.field_c;
                 break L2;
               } else {
-                stackOut_5_0 = vl.field_p;
-                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_0 = vl.field_p;
                 break L2;
               }
             }
@@ -596,9 +526,9 @@ abstract class oe extends dd {
                                 }
                               }
                             }
-                            incrementValue$2 = var6;
+                            incrementValue$0 = var6;
                             var6++;
-                            if (7 != incrementValue$2) {
+                            if (7 != incrementValue$0) {
                               var3_int += 40;
                               break L7;
                             } else {
@@ -630,7 +560,7 @@ abstract class oe extends dd {
                       }
                     } else {
                       L12: {
-                        if ((var5 & 1 << var9) != 0) {
+                        if ((var5 & 1 << var9 ^ -1) != -1) {
                           break L12;
                         } else {
                           var7 += 20;
@@ -708,9 +638,9 @@ abstract class oe extends dd {
                             }
                           }
                         }
-                        incrementValue$3 = var6;
+                        incrementValue$1 = var6;
                         var6++;
-                        if (7 != incrementValue$3) {
+                        if (7 != incrementValue$1) {
                           var3_int += 40;
                           break L15;
                         } else {
@@ -762,19 +692,19 @@ abstract class oe extends dd {
     }
 
     void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = Geoblox.field_C;
         vb.d(param0 - -6, param2 + 35, -12 + this.field_r, -40 + this.field_h, 2105376, 0);
         var5 = 211;
@@ -831,7 +761,7 @@ abstract class oe extends dd {
               }
             }
           } else {
-            if (var8 >= vb.field_i) {
+            if ((var8 ^ -1) <= (vb.field_i ^ -1)) {
               if (vb.field_d > var8) {
                 L4: {
                   var9 = (-var5 + var6) * var7 / var4 + var5;

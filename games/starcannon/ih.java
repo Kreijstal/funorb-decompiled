@@ -14,7 +14,6 @@ final class ih {
 
     final void a(long param0, byte param1, rf param2) {
         rf var5 = null;
-        rf discarded$0 = null;
         try {
             if (param2.field_d != null) {
                 param2.b(4);
@@ -22,7 +21,7 @@ final class ih {
             var5 = this.field_b[(int)(param0 & (long)(this.field_e + -1))];
             param2.field_d = var5.field_d;
             if (param1 != -100) {
-                discarded$0 = this.a(-118);
+                this.a(-118);
             }
             param2.field_a = var5;
             param2.field_d.field_a = param2;
@@ -34,9 +33,8 @@ final class ih {
     }
 
     final rf a(int param0) {
-        rf discarded$0 = null;
         if (param0 != -1) {
-            discarded$0 = this.a(-125L, (byte) 91);
+            this.a(-125L, (byte) 91);
             this.field_h = 0;
             return this.a((byte) 111);
         }
@@ -47,12 +45,13 @@ final class ih {
     final rf a(byte param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var2 = 0;
-        int var4 = 0;
-        rf var5 = null;
-        rf var6 = null;
-        rf var10 = null;
-        rf var13 = null;
+        int var2;
+        int var4;
+        Object var5;
+        rf var5_ref;
+        rf var6;
+        rf var10;
+        rf var13;
         var4 = StarCannon.field_A;
         var2 = -28 % ((36 - param0) / 51);
         if (0 < this.field_h) {
@@ -65,9 +64,9 @@ final class ih {
               if (this.field_h < this.field_e) {
                 fieldTemp$2 = this.field_h;
                 this.field_h = this.field_h + 1;
-                var5 = this.field_b[fieldTemp$2].field_a;
-                var10 = var5;
-                if (var5 == this.field_b[-1 + this.field_h]) {
+                var5_ref = this.field_b[fieldTemp$2].field_a;
+                var10 = var5_ref;
+                if (var5_ref == this.field_b[-1 + this.field_h]) {
                   continue L0;
                 } else {
                   this.field_a = var10.field_a;
@@ -83,9 +82,9 @@ final class ih {
             if (this.field_h < this.field_e) {
               fieldTemp$3 = this.field_h;
               this.field_h = this.field_h + 1;
-              var5 = this.field_b[fieldTemp$3].field_a;
-              var6 = var5;
-              if (var5 == this.field_b[-1 + this.field_h]) {
+              var5_ref = this.field_b[fieldTemp$3].field_a;
+              var6 = var5_ref;
+              if (var5_ref == this.field_b[-1 + this.field_h]) {
                 continue L1;
               } else {
                 this.field_a = var6.field_a;
@@ -107,18 +106,18 @@ final class ih {
     }
 
     ih(int param0) {
-        rf dupTemp$2 = null;
-        int var2 = 0;
-        rf var3 = null;
+        rf dupTemp$1 = null;
+        int var2;
+        rf var3;
         this.field_h = 0;
         this.field_b = new rf[param0];
         this.field_e = param0;
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            dupTemp$2 = new rf();
-            var3 = dupTemp$2;
-            this.field_b[var2] = dupTemp$2;
+            dupTemp$1 = new rf();
+            var3 = dupTemp$1;
+            this.field_b[var2] = dupTemp$1;
             var3.field_a = var3;
             var3.field_d = var3;
             var2++;
@@ -130,9 +129,9 @@ final class ih {
     }
 
     final rf a(long param0, byte param1) {
-        rf var4 = null;
-        rf var5 = null;
-        int var6 = 0;
+        rf var4;
+        rf var5;
+        int var6;
         var6 = StarCannon.field_A;
         var4 = this.field_b[(int)(param0 & (long)(this.field_e - 1))];
         this.field_i = var4.field_a;

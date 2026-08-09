@@ -86,14 +86,12 @@ final class ek extends gi {
 
     final static boolean a(boolean param0, boolean param1) {
         try {
-            long dupTemp$1 = 0L;
+            long dupTemp$0 = 0L;
+            int stackIn_10_0 = 0;
+            Throwable decompiledCaughtException = null;
             IOException var2 = null;
             lh var4 = null;
             lh var5 = null;
-            int stackIn_10_0 = 0;
-            Throwable decompiledCaughtException = null;
-            int stackOut_9_0 = 0;
-            int stackOut_8_0 = 0;
             L0: {
               if (null == de.field_q) {
                 de.field_q = pi.field_I.a(ml.field_n, ei.field_o, 105);
@@ -105,9 +103,9 @@ final class ek extends gi {
             if (-1 == (de.field_q.field_b ^ -1)) {
               return false;
             } else {
-              dupTemp$1 = la.a(false);
-              ck.field_e = dupTemp$1;
-              el.field_rb = dupTemp$1;
+              dupTemp$0 = la.a(false);
+              ck.field_e = dupTemp$0;
+              el.field_rb = dupTemp$0;
               if ((de.field_q.field_b ^ -1) != -2) {
                 tl.field_O = sg.field_b;
                 if (!param0) {
@@ -125,12 +123,10 @@ final class ek extends gi {
                       var5 = var4;
                       nj.field_p.field_j = 0;
                       if (!param1) {
-                        stackOut_9_0 = -1;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = -1;
                         break L2;
                       } else {
-                        stackOut_8_0 = -2;
-                        stackIn_10_0 = stackOut_8_0;
+                        stackIn_10_0 = -2;
                         break L2;
                       }
                     }
@@ -171,22 +167,12 @@ final class ek extends gi {
 
     final void a(int param0, int[] param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -210,27 +196,19 @@ final class ek extends gi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("ek.C(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("ek.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

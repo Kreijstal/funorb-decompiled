@@ -15,7 +15,6 @@ final class pl extends bd {
     private int field_w;
 
     public static void a(boolean param0) {
-        wj discarded$0 = null;
         field_y = null;
         field_s = null;
         field_v = null;
@@ -25,29 +24,19 @@ final class pl extends bd {
         field_D = null;
         field_z = null;
         if (!param0) {
-            discarded$0 = pl.a(-31, -19, 87, -24, -42);
+            pl.a(-31, -19, 87, -24, -42);
         }
     }
 
     final void a(int param0, ha param1) {
         RuntimeException var3 = null;
         ha var4 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             L1: {
@@ -89,27 +78,19 @@ final class pl extends bd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("pl.C(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("pl.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L4;
             }
           }
@@ -118,51 +99,31 @@ final class pl extends bd {
     }
 
     final static wj a(int param0, int param1, int param2, int param3, int param4) {
-        wj var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        wj var5;
+        int var6;
         var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         var5 = (wj) ((Object) lf.field_c.e((byte) 114));
         L0: while (true) {
-          L1: {
-            if (var5 == null) {
-              break L1;
+          if (var5 == null) {
+            var5 = new wj();
+            var5.field_p = param4;
+            var5.field_k = param3;
+            var5.field_r = param1;
+            lf.field_c.a((byte) -119, (tc) (var5));
+            gn.a(param2, var5, 0);
+            if (param0 != 34) {
+              field_s = (int[]) null;
+              return var5;
             } else {
-              var8 = var5.field_r;
-              var7 = param1;
-              if (var6 != 0) {
-                if (var7 != var8) {
-                  field_s = (int[]) null;
-                  return var5;
-                } else {
-                  return var5;
-                }
-              } else {
-                if (var7 != var8) {
-                  var5 = (wj) ((Object) lf.field_c.a((byte) 123));
-                  if (var6 == 0) {
-                    continue L0;
-                  } else {
-                    break L1;
-                  }
-                } else {
-                  return var5;
-                }
-              }
+              return var5;
             }
-          }
-          var5 = new wj();
-          var5.field_p = param4;
-          var5.field_k = param3;
-          var5.field_r = param1;
-          lf.field_c.a((byte) -119, (tc) (var5));
-          gn.a(param2, var5, 0);
-          if (param0 != 34) {
-            field_s = (int[]) null;
-            return var5;
           } else {
-            return var5;
+            if (param1 != var5.field_r) {
+              var5 = (wj) ((Object) lf.field_c.a((byte) 123));
+              continue L0;
+            } else {
+              return var5;
+            }
           }
         }
     }

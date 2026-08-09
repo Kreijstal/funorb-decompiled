@@ -45,8 +45,6 @@ abstract class qo {
 
     final int b(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == 438) {
           L0: {
             L1: {
@@ -56,14 +54,12 @@ abstract class qo {
                 if (-1 <= (this.field_d.length ^ -1)) {
                   break L1;
                 } else {
-                  stackOut_4_0 = this.field_d[this.field_d.length + -1].field_c - this.field_d[0].field_e;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = this.field_d[this.field_d.length + -1].field_c - this.field_d[0].field_e;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0;
@@ -73,13 +69,13 @@ abstract class qo {
     }
 
     final int c(int param0) {
-        int var2 = 0;
-        ha[] var3_ref_ha__ = null;
-        int var3 = 0;
-        int var4 = 0;
-        ha var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        ha[] var3_ref_ha__;
+        int var4;
+        ha var5;
+        int var7;
+        int var3;
+        int var6;
         L0: {
           var7 = ShatteredPlansClient.field_F ? 1 : 0;
           var2 = -1;
@@ -117,33 +113,22 @@ abstract class qo {
 
     final int a(int param0, int param1, int param2, String param3) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int stackIn_3_0 = 0;
-        int stackIn_19_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        int stackIn_21_0 = 0;
+        int stackIn_23_0 = 0;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        RuntimeException var5 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -155,12 +140,13 @@ abstract class qo {
               L1: while (true) {
                 if (var7 <= var8) {
                   if ((var5_int ^ -1) < -1) {
-                    stackOut_18_0 = (param1 + -param2 << 1998035880) / var5_int;
-                    stackIn_19_0 = stackOut_18_0;
+                    stackIn_21_0 = (param1 + -param2 << 1998035880) / var5_int;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
-                    return 0;
+                    stackIn_23_0 = 0;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   }
                 } else {
                   L2: {
@@ -193,8 +179,7 @@ abstract class qo {
                 }
               }
             } else {
-              stackOut_2_0 = 43;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 43;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -203,46 +188,41 @@ abstract class qo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var5);
-            stackOut_21_1 = new StringBuilder().append("qo.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_26_0 = (RuntimeException) (var5);
+
+            stackIn_26_1 = new StringBuilder().append("qo.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L3;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L3;
             }
           }
-          throw r.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0;
         } else {
-          return stackIn_19_0;
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_21_0;
+          } else {
+            return stackIn_23_0;
+          }
         }
     }
 
     final int a(int param0, int param1, int param2) {
-        int discarded$2 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        ha var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+        int var4;
+        int var5;
+        ha var6;
+        int var7;
+        int var8;
         L0: {
           var8 = ShatteredPlansClient.field_F ? 1 : 0;
           if (this.field_d == null) {
@@ -265,7 +245,7 @@ abstract class qo {
                       if (param1 == 3357) {
                         break L1;
                       } else {
-                        discarded$2 = this.b(-63);
+                        this.b(-63);
                         break L1;
                       }
                     }

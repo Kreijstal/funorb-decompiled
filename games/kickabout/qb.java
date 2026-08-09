@@ -58,13 +58,6 @@ final class qb extends hd {
     }
 
     final boolean a(int param0, qb param1) {
-        boolean discarded$1 = false;
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        qb var7 = null;
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
@@ -77,8 +70,6 @@ final class qb extends hd {
         int stackIn_53_0 = 0;
         int stackIn_57_0 = 0;
         int stackIn_61_0 = 0;
-        RuntimeException stackIn_63_0 = null;
-        StringBuilder stackIn_63_1 = null;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
         RuntimeException stackIn_65_0 = null;
@@ -86,39 +77,12 @@ final class qb extends hd {
         String stackIn_65_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        boolean stackOut_24_0 = false;
-        int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_52_0 = 0;
-        RuntimeException stackOut_62_0 = null;
-        StringBuilder stackOut_62_1 = null;
-        RuntimeException stackOut_64_0 = null;
-        StringBuilder stackOut_64_1 = null;
-        String stackOut_64_2 = null;
-        RuntimeException stackOut_63_0 = null;
-        StringBuilder stackOut_63_1 = null;
-        String stackOut_63_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        qb var7 = null;
         try {
           L0: {
             L1: {
@@ -126,24 +90,21 @@ final class qb extends hd {
                 break L1;
               } else {
                 var7 = (qb) null;
-                discarded$1 = this.a(89, (qb) null);
+                this.a(89, (qb) null);
                 break L1;
               }
             }
             L2: {
               if (!this.field_hc) {
                 if ((this.field_Ab ^ -1) == -7) {
-                  stackOut_6_0 = 1;
-                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_0 = 1;
                   break L2;
                 } else {
-                  stackOut_5_0 = 0;
-                  stackIn_8_0 = stackOut_5_0;
+                  stackIn_8_0 = 0;
                   break L2;
                 }
               } else {
-                stackOut_3_0 = 1;
-                stackIn_8_0 = stackOut_3_0;
+                stackIn_8_0 = 1;
                 break L2;
               }
             }
@@ -151,24 +112,20 @@ final class qb extends hd {
               var3_int = stackIn_8_0;
               if (!param1.field_hc) {
                 if ((param1.field_Ab ^ -1) == -7) {
-                  stackOut_12_0 = 1;
-                  stackIn_14_0 = stackOut_12_0;
+                  stackIn_14_0 = 1;
                   break L3;
                 } else {
-                  stackOut_11_0 = 0;
-                  stackIn_14_0 = stackOut_11_0;
+                  stackIn_14_0 = 0;
                   break L3;
                 }
               } else {
-                stackOut_9_0 = 1;
-                stackIn_14_0 = stackOut_9_0;
+                stackIn_14_0 = 1;
                 break L3;
               }
             }
             var4 = stackIn_14_0;
             if (var3_int != var4) {
-              stackOut_16_0 = var3_int;
-              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_0 = var3_int;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -178,18 +135,15 @@ final class qb extends hd {
                 } else {
                   L5: {
                     if (this.field_Xb) {
-                      stackOut_21_0 = 0;
-                      stackIn_22_0 = stackOut_21_0;
+                      stackIn_22_0 = 0;
                       break L5;
                     } else {
-                      stackOut_20_0 = 1;
-                      stackIn_22_0 = stackOut_20_0;
+                      stackIn_22_0 = 1;
                       break L5;
                     }
                   }
                   if (stackIn_22_0 == (param1.field_Xb ? 1 : 0)) {
-                    stackOut_24_0 = this.field_Xb;
-                    stackIn_25_0 = stackOut_24_0;
+                    stackIn_25_0 = this.field_Xb;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -201,12 +155,10 @@ final class qb extends hd {
                       } else {
                         L6: {
                           if (this.field_Wb >= param1.field_Wb) {
-                            stackOut_30_0 = 0;
-                            stackIn_31_0 = stackOut_30_0;
+                            stackIn_31_0 = 0;
                             break L6;
                           } else {
-                            stackOut_29_0 = 1;
-                            stackIn_31_0 = stackOut_29_0;
+                            stackIn_31_0 = 1;
                             break L6;
                           }
                         }
@@ -220,12 +172,10 @@ final class qb extends hd {
               if (param1.field_Cb != this.field_Cb) {
                 L7: {
                   if (this.field_Cb) {
-                    stackOut_36_0 = 0;
-                    stackIn_37_0 = stackOut_36_0;
+                    stackIn_37_0 = 0;
                     break L7;
                   } else {
-                    stackOut_35_0 = 1;
-                    stackIn_37_0 = stackOut_35_0;
+                    stackIn_37_0 = 1;
                     break L7;
                   }
                 }
@@ -235,12 +185,10 @@ final class qb extends hd {
                 if (!this.field_Cb) {
                   L8: {
                     if ((this.field_Fb ^ -1L) <= (param1.field_Fb ^ -1L)) {
-                      stackOut_60_0 = 0;
-                      stackIn_61_0 = stackOut_60_0;
+                      stackIn_61_0 = 0;
                       break L8;
                     } else {
-                      stackOut_59_0 = 1;
-                      stackIn_61_0 = stackOut_59_0;
+                      stackIn_61_0 = 1;
                       break L8;
                     }
                   }
@@ -249,17 +197,14 @@ final class qb extends hd {
                 } else {
                   L9: {
                     if (this.field_ic) {
-                      stackOut_43_0 = 1;
-                      stackIn_45_0 = stackOut_43_0;
+                      stackIn_45_0 = 1;
                       break L9;
                     } else {
                       if (this.field_Mb == 2) {
-                        stackOut_42_0 = 1;
-                        stackIn_45_0 = stackOut_42_0;
+                        stackIn_45_0 = 1;
                         break L9;
                       } else {
-                        stackOut_41_0 = 0;
-                        stackIn_45_0 = stackOut_41_0;
+                        stackIn_45_0 = 0;
                         break L9;
                       }
                     }
@@ -268,17 +213,14 @@ final class qb extends hd {
                     var5 = stackIn_45_0;
                     if (!param1.field_ic) {
                       if (-3 == (param1.field_Mb ^ -1)) {
-                        stackOut_49_0 = 1;
-                        stackIn_51_0 = stackOut_49_0;
+                        stackIn_51_0 = 1;
                         break L10;
                       } else {
-                        stackOut_48_0 = 0;
-                        stackIn_51_0 = stackOut_48_0;
+                        stackIn_51_0 = 0;
                         break L10;
                       }
                     } else {
-                      stackOut_46_0 = 1;
-                      stackIn_51_0 = stackOut_46_0;
+                      stackIn_51_0 = 1;
                       break L10;
                     }
                   }
@@ -286,20 +228,17 @@ final class qb extends hd {
                   if (var5 == var6) {
                     L11: {
                       if ((this.field_Fb ^ -1L) >= (param1.field_Fb ^ -1L)) {
-                        stackOut_56_0 = 0;
-                        stackIn_57_0 = stackOut_56_0;
+                        stackIn_57_0 = 0;
                         break L11;
                       } else {
-                        stackOut_55_0 = 1;
-                        stackIn_57_0 = stackOut_55_0;
+                        stackIn_57_0 = 1;
                         break L11;
                       }
                     }
                     decompiledRegionSelector0 = 5;
                     break L0;
                   } else {
-                    stackOut_52_0 = var5;
-                    stackIn_53_0 = stackOut_52_0;
+                    stackIn_53_0 = var5;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   }
@@ -311,27 +250,19 @@ final class qb extends hd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L12: {
             var3 = decompiledCaughtException;
-            stackOut_62_0 = (RuntimeException) (var3);
-            stackOut_62_1 = new StringBuilder().append("qb.B(").append(param0).append(',');
-            stackIn_64_0 = stackOut_62_0;
-            stackIn_64_1 = stackOut_62_1;
-            stackIn_63_0 = stackOut_62_0;
-            stackIn_63_1 = stackOut_62_1;
+            stackIn_64_0 = (RuntimeException) (var3);
+
+            stackIn_64_1 = new StringBuilder().append("qb.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-              stackOut_64_2 = "null";
-              stackIn_65_0 = stackOut_64_0;
-              stackIn_65_1 = stackOut_64_1;
-              stackIn_65_2 = stackOut_64_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "null";
               break L12;
             } else {
-              stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
-              stackOut_63_1 = (StringBuilder) ((Object) stackIn_63_1);
-              stackOut_63_2 = "{...}";
-              stackIn_65_0 = stackOut_63_0;
-              stackIn_65_1 = stackOut_63_1;
-              stackIn_65_2 = stackOut_63_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "{...}";
               break L12;
             }
           }
@@ -367,20 +298,14 @@ final class qb extends hd {
     final boolean b(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -7) {
           L0: {
             this.field_Db = 32;
             if (this.a((byte) -60)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -388,12 +313,10 @@ final class qb extends hd {
         } else {
           L1: {
             if (this.a((byte) -60)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

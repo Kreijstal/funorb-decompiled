@@ -47,7 +47,6 @@ final class vb {
     }
 
     final static String b(byte param0) {
-        boolean discarded$1 = false;
         if ((uh.field_H ^ -1) > -3) {
           return c.field_i;
         } else {
@@ -55,7 +54,7 @@ final class vb {
             if (param0 == -27) {
               break L0;
             } else {
-              discarded$1 = vb.a(-69);
+              vb.a(-69);
               break L0;
             }
           }
@@ -127,23 +126,13 @@ final class vb {
 
     final void a(boolean param0, vh param1, long param2) {
         vh var5 = null;
-        RuntimeException var5_ref = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var5_ref = null;
         try {
           L0: {
             L1: {
@@ -174,27 +163,19 @@ final class vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var5_ref);
-            stackOut_5_1 = new StringBuilder().append("vb.E(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var5_ref);
+
+            stackIn_7_1 = new StringBuilder().append("vb.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L3;
             }
           }
@@ -217,8 +198,8 @@ final class vb {
     }
 
     final static byte a(byte param0, char param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Terraphoenix.field_V;
         if (param0 == -128) {
           if (param1 > 0) {

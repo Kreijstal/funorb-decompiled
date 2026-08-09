@@ -7,23 +7,12 @@ final class saa extends kna {
         RuntimeException var4_ref = null;
         kh var5 = null;
         fsa stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fsa stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -39,35 +28,26 @@ final class saa extends kna {
             var4.b((byte) -11, this.field_k, this.field_l);
             var4.l(1, 146366800);
             var4.a((byte) 83, (nv) (new sea(param2, false)));
-            stackOut_2_0 = (fsa) (var4);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (fsa) (var4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var4_ref);
-            stackOut_4_1 = new StringBuilder().append("saa.AC(").append(param0).append(',').append(param1).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var4_ref);
+
+            stackIn_6_1 = new StringBuilder().append("saa.AC(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -77,9 +57,8 @@ final class saa extends kna {
     }
 
     final boolean n(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != -122) {
-            discarded$0 = this.n((byte) -40);
+            this.n((byte) -40);
             return false;
         }
         return false;
@@ -113,9 +92,8 @@ final class saa extends kna {
     }
 
     final int t(int param0) {
-        int discarded$0 = 0;
         if (param0 != 8) {
-            discarded$0 = this.t(51);
+            this.t(51);
             return 4;
         }
         return 4;

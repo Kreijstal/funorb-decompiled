@@ -59,7 +59,6 @@ final class qc implements Iterable {
     }
 
     final void a(byte param0, al param1) {
-        al discarded$0 = null;
         try {
             if (!(null == param1.field_q)) {
                 param1.a((byte) -120);
@@ -68,7 +67,7 @@ final class qc implements Iterable {
             param1.field_t = this.field_e;
             param1.field_q.field_t = param1;
             if (param0 != -37) {
-                discarded$0 = this.a(113);
+                this.a(113);
             }
             param1.field_t.field_q = param1;
         } catch (RuntimeException runtimeException) {

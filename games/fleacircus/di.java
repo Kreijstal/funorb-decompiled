@@ -8,8 +8,8 @@ final class di {
     static qk field_b;
 
     final static void b(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = ef.a((byte) 30);
         var2 = jg.c(param0 + 44845);
         if (param0 != -20667) {

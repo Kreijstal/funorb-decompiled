@@ -16,9 +16,9 @@ final class rw extends le {
     static asb field_l;
 
     private final void d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var4 = VoidHunters.field_G;
           var2 = 51 / ((62 - param0) / 50);
@@ -61,8 +61,14 @@ final class rw extends le {
     }
 
     final void a(int param0, int param1, int[] param2) {
-        RuntimeException var4 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_40_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -78,22 +84,6 @@ final class rw extends le {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_40_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
         var19 = VoidHunters.field_G;
         try {
           L0: {
@@ -276,27 +266,19 @@ final class rw extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var4 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) (var4);
-            stackOut_37_1 = new StringBuilder().append("rw.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            stackIn_39_0 = (RuntimeException) (var4);
+
+            stackIn_39_1 = new StringBuilder().append("rw.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "null";
               break L16;
             } else {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "{...}";
               break L16;
             }
           }
@@ -305,9 +287,9 @@ final class rw extends le {
     }
 
     final void c(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = VoidHunters.field_G;
         this.field_p = ihb.a((byte) 95, this.field_i);
         this.d(-80);
@@ -351,35 +333,19 @@ final class rw extends le {
     }
 
     final void a(int param0, int param1, ds param2) {
-        int dupTemp$1 = 0;
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        Object stackIn_13_0 = null;
+        int dupTemp$0 = 0;
         Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
         int stackIn_15_1 = 0;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_12_0 = null;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -409,9 +375,9 @@ final class rw extends le {
                         }
                       }
                     } else {
-                      dupTemp$1 = param2.e((byte) -106);
-                      this.field_o = dupTemp$1;
-                      this.field_j = dupTemp$1;
+                      dupTemp$0 = param2.e((byte) -106);
+                      this.field_o = dupTemp$0;
+                      this.field_j = dupTemp$0;
                       break L1;
                     }
                   } else {
@@ -435,20 +401,15 @@ final class rw extends le {
                 }
               } else {
                 L3: {
-                  stackOut_12_0 = this;
-                  stackIn_14_0 = stackOut_12_0;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_14_0 = this;
+
                   if (-2 != (param2.e((byte) -127) ^ -1)) {
-                    stackOut_14_0 = this;
-                    stackOut_14_1 = 0;
-                    stackIn_15_0 = stackOut_14_0;
-                    stackIn_15_1 = stackOut_14_1;
+                    stackIn_15_0 = this;
+                    stackIn_15_1 = 0;
                     break L3;
                   } else {
-                    stackOut_13_0 = this;
-                    stackOut_13_1 = 1;
-                    stackIn_15_0 = stackOut_13_0;
-                    stackIn_15_1 = stackOut_13_1;
+                    stackIn_15_0 = this;
+                    stackIn_15_1 = 1;
                     break L3;
                   }
                 }
@@ -470,27 +431,19 @@ final class rw extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) (var4);
-            stackOut_29_1 = new StringBuilder().append("rw.F(").append(param0).append(',').append(param1).append(',');
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            stackIn_31_0 = (RuntimeException) (var4);
+
+            stackIn_31_1 = new StringBuilder().append("rw.F(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L5;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L5;
             }
           }
@@ -499,18 +452,6 @@ final class rw extends le {
     }
 
     private final int a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        ds var19 = null;
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
@@ -519,22 +460,18 @@ final class rw extends le {
         int stackIn_30_0 = 0;
         int stackIn_35_0 = 0;
         int stackIn_39_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_33_0 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        ds var19;
         L0: {
           var18 = VoidHunters.field_G;
           var13 = param3 >> -608679732;
@@ -566,12 +503,10 @@ final class rw extends le {
           if (-2 > (var14 ^ -1)) {
             L3: {
               if (var14 != 2) {
-                stackOut_11_0 = -param5 + -param3;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = -param5 + -param3;
                 break L3;
               } else {
-                stackOut_10_0 = -param5 + param3;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = -param5 + param3;
                 break L3;
               }
             }
@@ -580,12 +515,10 @@ final class rw extends le {
           } else {
             L4: {
               if (-1 == (var14 ^ -1)) {
-                stackOut_7_0 = param3 + param5;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = param3 + param5;
                 break L4;
               } else {
-                stackOut_6_0 = -param3 + param5;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = -param3 + param5;
                 break L4;
               }
             }
@@ -598,12 +531,10 @@ final class rw extends le {
           if ((var14 ^ -1) >= -2) {
             L6: {
               if (0 == var14) {
-                stackOut_20_0 = var11 - -param5;
-                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_0 = var11 - -param5;
                 break L6;
               } else {
-                stackOut_19_0 = -var11 + param5;
-                stackIn_21_0 = stackOut_19_0;
+                stackIn_21_0 = -var11 + param5;
                 break L6;
               }
             }
@@ -612,12 +543,10 @@ final class rw extends le {
           } else {
             L7: {
               if ((var14 ^ -1) != -3) {
-                stackOut_16_0 = -param5 + -var11;
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_0 = -param5 + -var11;
                 break L7;
               } else {
-                stackOut_15_0 = -param5 + var11;
-                stackIn_17_0 = stackOut_15_0;
+                stackIn_17_0 = -param5 + var11;
                 break L7;
               }
             }
@@ -631,12 +560,10 @@ final class rw extends le {
           if (var14 <= 1) {
             L9: {
               if (var14 == 0) {
-                stackOut_29_0 = param3 + var10;
-                stackIn_30_0 = stackOut_29_0;
+                stackIn_30_0 = param3 + var10;
                 break L9;
               } else {
-                stackOut_28_0 = var10 - param3;
-                stackIn_30_0 = stackOut_28_0;
+                stackIn_30_0 = var10 - param3;
                 break L9;
               }
             }
@@ -645,12 +572,10 @@ final class rw extends le {
           } else {
             L10: {
               if ((var14 ^ -1) != -3) {
-                stackOut_25_0 = -var10 + -param3;
-                stackIn_26_0 = stackOut_25_0;
+                stackIn_26_0 = -var10 + -param3;
                 break L10;
               } else {
-                stackOut_24_0 = param3 - var10;
-                stackIn_26_0 = stackOut_24_0;
+                stackIn_26_0 = param3 - var10;
                 break L10;
               }
             }
@@ -663,12 +588,10 @@ final class rw extends le {
           if (-2 > (var14 ^ -1)) {
             L12: {
               if (2 != var14) {
-                stackOut_38_0 = -var10 + -var11;
-                stackIn_39_0 = stackOut_38_0;
+                stackIn_39_0 = -var10 + -var11;
                 break L12;
               } else {
-                stackOut_37_0 = var11 - var10;
-                stackIn_39_0 = stackOut_37_0;
+                stackIn_39_0 = var11 - var10;
                 break L12;
               }
             }
@@ -677,12 +600,10 @@ final class rw extends le {
           } else {
             L13: {
               if (0 == var14) {
-                stackOut_34_0 = var11 + var10;
-                stackIn_35_0 = stackOut_34_0;
+                stackIn_35_0 = var11 + var10;
                 break L13;
               } else {
-                stackOut_33_0 = var10 + -var11;
-                stackIn_35_0 = stackOut_33_0;
+                stackIn_35_0 = var10 + -var11;
                 break L13;
               }
             }

@@ -13,14 +13,14 @@ final class npa implements dja {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        RuntimeException decompiledCaughtException = null;
         var10 = VoidHunters.field_G;
         try {
           L0: {
@@ -74,20 +74,10 @@ final class npa implements dja {
     }
 
     final static String a(byte param0, String param1, int param2) {
-        ksa discarded$1 = null;
-        RuntimeException var3 = null;
-        int var5 = 0;
-        int var6 = 0;
-        vu var7 = null;
-        vu var8 = null;
-        faa var9 = null;
-        CharSequence var10 = null;
         String stackIn_4_0 = null;
         String stackIn_8_0 = null;
         String stackIn_12_0 = null;
         Object stackIn_19_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -95,42 +85,34 @@ final class npa implements dja {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_11_0 = null;
-        Object stackOut_18_0 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var3 = null;
+        int var5 = 0;
+        int var6 = 0;
+        vu var7 = null;
+        vu var8 = null;
+        faa var9 = null;
+        CharSequence var10 = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
             var10 = (CharSequence) ((Object) param1);
             if (!mn.a(var10, (byte) -118)) {
-              stackOut_3_0 = tjb.field_Cb;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = tjb.field_Cb;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (iwa.field_b != 2) {
-                stackOut_7_0 = ei.field_e;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = ei.field_e;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 var8 = di.a(param1, param0 + -90);
                 if (var8 == null) {
-                  stackOut_11_0 = isa.a(dh.field_q, new String[]{param1}, 118);
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = isa.a(dh.field_q, new String[]{param1}, 118);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  discarded$1 = mr.field_M.a(3, var8);
+                  mr.field_M.a(3, var8);
                   L1: while (true) {
                     var7 = (vu) ((Object) mr.field_M.a((byte) 72));
                     if (var7 == null) {
@@ -152,8 +134,7 @@ final class npa implements dja {
                       var9.c(param0 + -90, 1);
                       var9.a(true, param1);
                       var9.e(var9.field_e - var5, -129);
-                      stackOut_18_0 = null;
-                      stackIn_19_0 = stackOut_18_0;
+                      stackIn_19_0 = null;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
@@ -169,27 +150,19 @@ final class npa implements dja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var3);
-            stackOut_20_1 = new StringBuilder().append("npa.C(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var3);
+
+            stackIn_22_1 = new StringBuilder().append("npa.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L3;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L3;
             }
           }
@@ -211,30 +184,18 @@ final class npa implements dja {
     }
 
     final static StringBuilder a(int param0, boolean param1, StringBuilder param2, char param3) {
-        String discarded$2 = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         String var7 = null;
         StringBuilder stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        StringBuilder stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
@@ -245,15 +206,14 @@ final class npa implements dja {
                 break L1;
               } else {
                 var7 = (String) null;
-                discarded$2 = npa.a((byte) -60, (String) null, -96);
+                npa.a((byte) -60, (String) null, -96);
                 break L1;
               }
             }
             var5 = var4_int;
             L2: while (true) {
               if (param0 <= var5) {
-                stackOut_6_0 = (StringBuilder) (param2);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (StringBuilder) (param2);
                 break L0;
               } else {
                 param2.setCharAt(var5, param3);
@@ -266,27 +226,19 @@ final class npa implements dja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("npa.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("npa.E(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }

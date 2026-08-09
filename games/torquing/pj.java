@@ -59,19 +59,19 @@ final class pj extends bk {
     }
 
     private final void b() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         var1 = 32767;
         var2 = 32767;
         var3 = 32767;
@@ -83,6 +83,7 @@ final class pj extends bk {
         var9 = 0;
         L0: while (true) {
           if (var9 >= this.field_w) {
+            Math.sqrt((double)var7);
             this.field_o = (short)(int)(Math.sqrt((double)var8) + 0.99);
             this.field_E = true;
             return;
@@ -170,22 +171,23 @@ final class pj extends bk {
     }
 
     pj(rm param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$1 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int[] var9_ref_int__ = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        dd var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int[] var17 = null;
-        bl var18 = null;
-        bl var19 = null;
-        int[] var20 = null;
+        int incrementValue$0 = 0;
+        int dupTemp$1 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int[] var9_ref_int__;
+        int var10;
+        int var11;
+        int var12;
+        dd var13;
+        int var14;
+        int var15;
+        int var16;
+        int[] var17;
+        bl var18;
+        bl var19;
+        int[] var20;
         L0: {
           this.field_m = 0;
           this.field_w = 0;
@@ -307,9 +309,9 @@ final class pj extends bk {
                                 this.field_h[var10] = param0.field_u[var11] & 65535;
                                 this.field_g[var10] = param0.field_n[var11] & 65535;
                                 this.field_i[var10] = param0.field_x[var11] & 65535;
-                                incrementValue$1 = var10;
+                                incrementValue$0 = var10;
                                 var10++;
-                                var9_ref_int__[var11] = incrementValue$1;
+                                var9_ref_int__[var11] = incrementValue$0;
                                 var11++;
                                 continue L6;
                               }
@@ -338,7 +340,8 @@ final class pj extends bk {
                   }
                 } else {
                   if (param0.field_D[var10] != -1) {
-                    var9_ref_int__[param0.field_D[var10] & 255] = var9_ref_int__[param0.field_D[var10] & 255] + 1;
+                    dupTemp$1 = param0.field_D[var10] & 255;
+                    var9_ref_int__[dupTemp$1] = var9_ref_int__[dupTemp$1] + 1;
                     var10++;
                     continue L4;
                   } else {
@@ -557,66 +560,34 @@ final class pj extends bk {
     }
 
     pj(pj[] param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        pj var8_ref_pj = null;
-        int var8 = 0;
-        int var9_int = 0;
-        pj var9 = null;
-        int var10 = 0;
-        pj var11 = null;
-        int var12 = 0;
-        pj var13 = null;
-        pj var14 = null;
-        int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_13_1 = 0;
-        int stackIn_14_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_16_1 = 0;
-        int stackIn_17_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_19_1 = 0;
-        byte[] stackIn_49_0 = null;
-        int stackIn_49_1 = 0;
-        byte[] stackIn_50_0 = null;
-        int stackIn_50_1 = 0;
         byte[] stackIn_51_0 = null;
         int stackIn_51_1 = 0;
         byte[] stackIn_52_0 = null;
         int stackIn_52_1 = 0;
         int stackIn_52_2 = 0;
-        byte[] stackOut_48_0 = null;
-        int stackOut_48_1 = 0;
-        byte[] stackOut_49_0 = null;
-        int stackOut_49_1 = 0;
-        byte[] stackOut_50_0 = null;
-        int stackOut_50_1 = 0;
-        int stackOut_50_2 = 0;
-        byte[] stackOut_51_0 = null;
-        int stackOut_51_1 = 0;
-        int stackOut_51_2 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_12_1 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_14_1 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_18_1 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_17_1 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        pj var8_ref_pj;
+        pj var9;
+        int var9_int;
+        int var10;
+        pj var11;
+        int var12;
+        pj var13;
+        pj var14;
         this.field_m = 0;
         this.field_w = 0;
         this.field_D = (byte) 0;
@@ -861,40 +832,28 @@ final class pj extends bk {
                         } else {
                           L22: {
                             L23: {
-                              stackOut_48_0 = this.field_F;
-                              stackOut_48_1 = this.field_x;
-                              stackIn_51_0 = stackOut_48_0;
-                              stackIn_51_1 = stackOut_48_1;
-                              stackIn_49_0 = stackOut_48_0;
-                              stackIn_49_1 = stackOut_48_1;
+                              stackIn_51_0 = this.field_F;
+
+                              stackIn_51_1 = this.field_x;
+
                               if (var14.field_F == null) {
                                 break L23;
                               } else {
-                                stackOut_49_0 = (byte[]) ((Object) stackIn_49_0);
-                                stackOut_49_1 = stackIn_49_1;
-                                stackIn_51_0 = stackOut_49_0;
-                                stackIn_51_1 = stackOut_49_1;
-                                stackIn_50_0 = stackOut_49_0;
-                                stackIn_50_1 = stackOut_49_1;
+                                stackIn_51_0 = (byte[]) ((Object) stackIn_51_0);
+
                                 if (var11.field_F[var9_int] == -1) {
                                   break L23;
                                 } else {
-                                  stackOut_50_0 = (byte[]) ((Object) stackIn_50_0);
-                                  stackOut_50_1 = stackIn_50_1;
-                                  stackOut_50_2 = var11.field_F[var9_int] + this.field_m;
-                                  stackIn_52_0 = stackOut_50_0;
-                                  stackIn_52_1 = stackOut_50_1;
-                                  stackIn_52_2 = stackOut_50_2;
+                                  stackIn_52_0 = (byte[]) ((Object) stackIn_51_0);
+                                  stackIn_52_1 = stackIn_51_1;
+                                  stackIn_52_2 = var11.field_F[var9_int] + this.field_m;
                                   break L22;
                                 }
                               }
                             }
-                            stackOut_51_0 = (byte[]) ((Object) stackIn_51_0);
-                            stackOut_51_1 = stackIn_51_1;
-                            stackOut_51_2 = -1;
-                            stackIn_52_0 = stackOut_51_0;
-                            stackIn_52_1 = stackOut_51_1;
-                            stackIn_52_2 = stackOut_51_2;
+                            stackIn_52_0 = (byte[]) ((Object) stackIn_51_0);
+                            stackIn_52_1 = stackIn_51_1;
+                            stackIn_52_2 = -1;
                             break L22;
                           }
                           stackIn_52_0[stackIn_52_1] = (byte)stackIn_52_2;
@@ -941,58 +900,43 @@ final class pj extends bk {
                 }
               }
               L26: {
-                stackOut_10_0 = var4;
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_12_0 = var4;
+
                 if (var13.field_q == null) {
-                  stackOut_12_0 = stackIn_12_0;
-                  stackOut_12_1 = 0;
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
+                  stackIn_13_0 = stackIn_12_0;
+                  stackIn_13_1 = 0;
                   break L26;
                 } else {
-                  stackOut_11_0 = stackIn_11_0;
-                  stackOut_11_1 = 1;
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
+                  stackIn_13_0 = stackIn_12_0;
+                  stackIn_13_1 = 1;
                   break L26;
                 }
               }
               L27: {
                 var4 = stackIn_13_0 | stackIn_13_1;
-                stackOut_13_0 = var5;
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_15_0 = var5;
+
                 if (var13.field_z == null) {
-                  stackOut_15_0 = stackIn_15_0;
-                  stackOut_15_1 = 0;
-                  stackIn_16_0 = stackOut_15_0;
-                  stackIn_16_1 = stackOut_15_1;
+                  stackIn_16_0 = stackIn_15_0;
+                  stackIn_16_1 = 0;
                   break L27;
                 } else {
-                  stackOut_14_0 = stackIn_14_0;
-                  stackOut_14_1 = 1;
-                  stackIn_16_0 = stackOut_14_0;
-                  stackIn_16_1 = stackOut_14_1;
+                  stackIn_16_0 = stackIn_15_0;
+                  stackIn_16_1 = 1;
                   break L27;
                 }
               }
               L28: {
                 var5 = stackIn_16_0 | stackIn_16_1;
-                stackOut_16_0 = var6;
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_18_0 = var6;
+
                 if (var13.field_F == null) {
-                  stackOut_18_0 = stackIn_18_0;
-                  stackOut_18_1 = 0;
-                  stackIn_19_0 = stackOut_18_0;
-                  stackIn_19_1 = stackOut_18_1;
+                  stackIn_19_0 = stackIn_18_0;
+                  stackIn_19_1 = 0;
                   break L28;
                 } else {
-                  stackOut_17_0 = stackIn_17_0;
-                  stackOut_17_1 = 1;
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_19_1 = stackOut_17_1;
+                  stackIn_19_0 = stackIn_18_0;
+                  stackIn_19_1 = 1;
                   break L28;
                 }
               }

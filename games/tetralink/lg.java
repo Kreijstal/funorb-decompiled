@@ -59,22 +59,18 @@ final class lg extends na {
     }
 
     private final oh a(int param0, byte param1, int param2) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        oh var14 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        oh var14;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
         var13 = TetraLink.field_J;
         var14 = new oh(this.field_U * 2, this.field_u);
         sk.a((byte) 112, var14);
@@ -96,32 +92,28 @@ final class lg extends na {
               var10 = -var5 + var6;
               var11 = 128 - -(int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0);
               if (256 > var11) {
-                stackOut_4_0 = (var9 * var11 & 16711680 | -16711936 & var11 * var8) >>> -1643299064;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_7_0 = (var9 * var11 & 16711680 | -16711936 & var11 * var8) >>> -1643299064;
                 break L1;
               } else {
-                stackOut_3_0 = var8 | var9;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_7_0 = var8 | var9;
                 break L1;
               }
             }
             L2: {
-              var12 = stackIn_5_0;
+              var12 = stackIn_7_0;
               ra.g(var7, var6, this.field_U, var12);
               var8 = param0 & 16711935;
               var9 = 65280 & param0;
               ra.g(-(2 * this.field_U) + var7, var6, this.field_U, var12);
               if (-257 < (var11 ^ -1)) {
-                stackOut_7_0 = (-16711936 & var8 * var11 | 16711680 & var9 * var11) >>> -1423673784;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_10_0 = (-16711936 & var8 * var11 | 16711680 & var9 * var11) >>> -1423673784;
                 break L2;
               } else {
-                stackOut_6_0 = var8 | var9;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_10_0 = var8 | var9;
                 break L2;
               }
             }
-            var12 = stackIn_8_0;
+            var12 = stackIn_10_0;
             ra.g(this.field_U + var7, var6, this.field_U, var12);
             ra.g(var7 + -this.field_U, var6, this.field_U, var12);
             var6++;
@@ -158,36 +150,25 @@ final class lg extends na {
     }
 
     final static String a(boolean param0, char param1) {
-        String discarded$0 = null;
         if (param0) {
-            discarded$0 = lg.a(false, '￐');
+            lg.a(false, '￐');
         }
         return String.valueOf(param1);
     }
 
     private final void a(int param0, oh param1, int param2, byte param3) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
         var9 = TetraLink.field_J;
         try {
           L0: {
@@ -244,27 +225,19 @@ final class lg extends na {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var5);
-            stackOut_14_1 = new StringBuilder().append("lg.C(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var5);
+
+            stackIn_16_1 = new StringBuilder().append("lg.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L5;
             }
           }
@@ -273,9 +246,6 @@ final class lg extends na {
     }
 
     final void a(na param0, int param1, int param2, boolean param3) {
-        RuntimeException var5 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -283,14 +253,7 @@ final class lg extends na {
         String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             if (param3) {
@@ -318,27 +281,19 @@ final class lg extends na {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5);
-            stackOut_6_1 = new StringBuilder().append("lg.MA(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5);
+
+            stackIn_8_1 = new StringBuilder().append("lg.MA(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }

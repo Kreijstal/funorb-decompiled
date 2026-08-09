@@ -8,29 +8,29 @@ final class tp extends ana {
     static int field_v;
 
     private final void d(int param0) {
-        uea discarded$3 = null;
-        hd var2 = null;
-        op var3 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        Object var16 = null;
-        hd var16_ref = null;
-        int[][] var20 = null;
+        uea discarded$0 = null;
+        hd var2;
+        op var3;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        Object var16;
+        hd var16_ref;
+        int[][] var20;
         var16 = null;
         var15 = BachelorFridge.field_y;
         var16_ref = (hd) ((Object) al.a(103, this.field_w.field_k));
         var2 = var16_ref;
         var3 = this.field_q.field_h;
-        aga discarded$2 = this.field_w.field_l.a(param0 + 46, this.field_q.field_h);
+        this.field_w.field_l.a(param0 + 46, this.field_q.field_h);
         var20 = this.field_w.e((byte) -18);
         var5 = this.field_w.field_r;
         var6 = this.field_w.field_q;
@@ -57,7 +57,7 @@ final class tp extends ana {
                     if (var3.field_z > var13) {
                       if ((var14 ^ -1) <= -1) {
                         if (var3.field_B > var14) {
-                          discarded$3 = new uea(this.field_q, var13, var14, gma.field_e[var16_ref.field_q].field_a);
+                          discarded$0 = new uea(this.field_q, var13, var14, gma.field_e[var16_ref.field_q].field_a);
                           var12++;
                           continue L1;
                         } else {
@@ -104,34 +104,21 @@ final class tp extends ana {
     }
 
     final boolean c(byte param0) {
-        int fieldTemp$2 = 0;
-        int var2 = 0;
-        var2 = -68 / ((71 - param0) / 47);
-        if (this.field_m.a((byte) -106)) {
-          return false;
-        } else {
-          if (!this.field_y.a((byte) -106)) {
-            fieldTemp$2 = this.field_l - 1;
-            this.field_l = this.field_l - 1;
-            if (fieldTemp$2 < 0) {
-              this.e(-1);
-              return true;
-            } else {
-              L0: {
-                if (this.field_l != 75) {
-                  break L0;
-                } else {
-                  jja.a(256, -1, 57);
-                  this.d(17);
-                  break L0;
-                }
-              }
-              return false;
-            }
-          } else {
+        int var2 = -68 / ((71 - param0) / 47);
+        if (this.field_m.a((byte) -106) || this.field_y.a((byte) -106)) {
             return false;
-          }
         }
+        int fieldTemp$0 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
+        if (fieldTemp$0 >= 0) {
+            if (this.field_l == 75) {
+                jja.a(256, -1, 57);
+                this.d(17);
+            }
+            return false;
+        }
+        this.e(-1);
+        return true;
     }
 
     public static void e(byte param0) {

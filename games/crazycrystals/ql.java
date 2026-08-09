@@ -3,16 +3,15 @@
  */
 final class ql extends ta {
     final int c(int param0) {
-        l discarded$0 = null;
         if (param0 != -1) {
-            discarded$0 = this.b(true);
+            this.b(true);
             return 0;
         }
         return 0;
     }
 
     final static wj d(int param0) {
-        wj var1 = null;
+        wj var1;
         if (param0 > -33) {
           return (wj) null;
         } else {
@@ -23,9 +22,8 @@ final class ql extends ta {
     }
 
     final l b(boolean param0) {
-        l discarded$2 = null;
         if (param0) {
-          discarded$2 = this.b(true);
+          this.b(true);
           return (l) ((Object) new o(60, new il()));
         } else {
           return (l) ((Object) new o(60, new il()));

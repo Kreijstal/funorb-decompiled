@@ -40,11 +40,10 @@ final class wo extends vo implements va {
     }
 
     public final void a(int param0, int param1, byte param2, byte[] param3) {
-        int discarded$0 = 0;
         try {
             this.a(-114, param3, param1);
             if (param2 > -109) {
-                discarded$0 = this.a(-43);
+                this.a(-43);
             }
             this.field_j = param0;
         } catch (RuntimeException runtimeException) {

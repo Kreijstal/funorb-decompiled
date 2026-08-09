@@ -53,9 +53,8 @@ class wj extends kk {
     }
 
     nk a(int param0) {
-        nk discarded$0 = null;
         if (param0 != -184) {
-            discarded$0 = this.a(52);
+            this.a(52);
             return vc.field_G;
         }
         return vc.field_G;

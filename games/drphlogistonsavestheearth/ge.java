@@ -31,15 +31,6 @@ final class ge {
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        int var5_int = 0;
-        long var5_long = 0L;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_52_0 = null;
-        StringBuilder stackIn_52_1 = null;
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         RuntimeException stackIn_54_0 = null;
@@ -48,14 +39,13 @@ final class ge {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_51_0 = null;
-        StringBuilder stackOut_51_1 = null;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        String stackOut_53_2 = null;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        String stackOut_52_2 = null;
+        int var5_int = 0;
+        long var5_long = 0L;
+        IOException var5 = null;
+        RuntimeException var5_ref = null;
+        long var7 = 0L;
+        int var9 = 0;
+        int var10 = 0;
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -253,27 +243,19 @@ final class ge {
           decompiledCaughtException = decompiledCaughtParameter1;
           L15: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_51_0 = (RuntimeException) (var5_ref);
-            stackOut_51_1 = new StringBuilder().append("ge.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_53_0 = stackOut_51_0;
-            stackIn_53_1 = stackOut_51_1;
-            stackIn_52_0 = stackOut_51_0;
-            stackIn_52_1 = stackOut_51_1;
+            stackIn_53_0 = (RuntimeException) (var5_ref);
+
+            stackIn_53_1 = new StringBuilder().append("ge.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
-              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
-              stackOut_53_2 = "null";
-              stackIn_54_0 = stackOut_53_0;
-              stackIn_54_1 = stackOut_53_1;
-              stackIn_54_2 = stackOut_53_2;
+              stackIn_54_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackIn_54_1 = (StringBuilder) ((Object) stackIn_53_1);
+              stackIn_54_2 = "null";
               break L15;
             } else {
-              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
-              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
-              stackOut_52_2 = "{...}";
-              stackIn_54_0 = stackOut_52_0;
-              stackIn_54_1 = stackOut_52_1;
-              stackIn_54_2 = stackOut_52_2;
+              stackIn_54_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackIn_54_1 = (StringBuilder) ((Object) stackIn_53_1);
+              stackIn_54_2 = "{...}";
               break L15;
             }
           }
@@ -306,24 +288,13 @@ final class ge {
     }
 
     final void a(byte param0, byte[] param1) throws IOException {
-        f discarded$2 = null;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -331,7 +302,7 @@ final class ge {
               if (param0 == -111) {
                 break L1;
               } else {
-                discarded$2 = ge.a(-11, (byte) 68);
+                ge.a(-11, (byte) 68);
                 break L1;
               }
             }
@@ -341,27 +312,19 @@ final class ge {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (var3);
-            stackOut_3_1 = new StringBuilder().append("ge.E(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (var3);
+
+            stackIn_5_1 = new StringBuilder().append("ge.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -370,16 +333,12 @@ final class ge {
     }
 
     final static String a(byte param0, boolean param1, CharSequence param2) {
-        String discarded$2 = null;
         String var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         CharSequence var6 = null;
         String stackIn_4_0 = null;
         String stackIn_12_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -387,23 +346,13 @@ final class ge {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        String stackOut_11_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException var3_ref = null;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
             var3 = ui.a(param1, param2, -3);
             if (var3 != null) {
-              stackOut_3_0 = (String) (var3);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (String) (var3);
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -412,7 +361,7 @@ final class ge {
                   break L1;
                 } else {
                   var6 = (CharSequence) null;
-                  discarded$2 = ge.a((byte) -112, false, (CharSequence) null);
+                  ge.a((byte) -112, false, (CharSequence) null);
                   break L1;
                 }
               }
@@ -423,8 +372,7 @@ final class ge {
                     var4++;
                     continue L2;
                   } else {
-                    stackOut_11_0 = ul.field_g;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = ul.field_g;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -438,27 +386,19 @@ final class ge {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var3_ref);
-            stackOut_15_1 = new StringBuilder().append("ge.K(").append(param0).append(',').append(param1).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var3_ref);
+
+            stackIn_17_1 = new StringBuilder().append("ge.K(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L3;
             }
           }
@@ -472,46 +412,22 @@ final class ge {
     }
 
     final static int a(byte[] param0, int param1, int param2, int param3, CharSequence param4, int param5) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        CharSequence var10 = null;
         int stackIn_69_0 = 0;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
         RuntimeException stackIn_72_0 = null;
         StringBuilder stackIn_72_1 = null;
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_73_2 = null;
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
-        RuntimeException stackIn_75_0 = null;
         StringBuilder stackIn_75_1 = null;
-        RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         String stackIn_76_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_68_0 = 0;
-        RuntimeException stackOut_70_0 = null;
-        StringBuilder stackOut_70_1 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        String stackOut_71_2 = null;
-        RuntimeException stackOut_73_0 = null;
-        StringBuilder stackOut_73_1 = null;
-        RuntimeException stackOut_75_0 = null;
-        StringBuilder stackOut_75_1 = null;
-        String stackOut_75_2 = null;
-        RuntimeException stackOut_74_0 = null;
-        StringBuilder stackOut_74_1 = null;
-        String stackOut_74_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        CharSequence var10 = null;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -521,15 +437,14 @@ final class ge {
                 break L1;
               } else {
                 var10 = (CharSequence) null;
-                discarded$1 = ge.a((byte[]) null, 67, 112, -126, (CharSequence) null, 48);
+                ge.a((byte[]) null, 67, 112, -126, (CharSequence) null, 48);
                 break L1;
               }
             }
             var7 = 0;
             L2: while (true) {
               if (var7 >= var6_int) {
-                stackOut_68_0 = var6_int;
-                stackIn_69_0 = stackOut_68_0;
+                stackIn_69_0 = var6_int;
                 break L0;
               } else {
                 L3: {
@@ -707,56 +622,40 @@ final class ge {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_70_0 = (RuntimeException) (var6);
-            stackOut_70_1 = new StringBuilder().append("ge.J(");
-            stackIn_72_0 = stackOut_70_0;
-            stackIn_72_1 = stackOut_70_1;
-            stackIn_71_0 = stackOut_70_0;
-            stackIn_71_1 = stackOut_70_1;
+            stackIn_72_0 = (RuntimeException) (var6);
+
+            stackIn_72_1 = new StringBuilder().append("ge.J(");
+
             if (param0 == null) {
-              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
-              stackOut_72_2 = "null";
-              stackIn_73_0 = stackOut_72_0;
-              stackIn_73_1 = stackOut_72_1;
-              stackIn_73_2 = stackOut_72_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "null";
               break L7;
             } else {
-              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
-              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackOut_71_2 = "{...}";
-              stackIn_73_0 = stackOut_71_0;
-              stackIn_73_1 = stackOut_71_1;
-              stackIn_73_2 = stackOut_71_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
-            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_75_0 = stackOut_73_0;
-            stackIn_75_1 = stackOut_73_1;
-            stackIn_74_0 = stackOut_73_0;
-            stackIn_74_1 = stackOut_73_1;
+
+
+            stackIn_75_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
-              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
-              stackOut_75_2 = "null";
-              stackIn_76_0 = stackOut_75_0;
-              stackIn_76_1 = stackOut_75_1;
-              stackIn_76_2 = stackOut_75_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackIn_76_1 = (StringBuilder) ((Object) stackIn_75_1);
+              stackIn_76_2 = "null";
               break L8;
             } else {
-              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
-              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
-              stackOut_74_2 = "{...}";
-              stackIn_76_0 = stackOut_74_0;
-              stackIn_76_1 = stackOut_74_1;
-              stackIn_76_2 = stackOut_74_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackIn_76_1 = (StringBuilder) ((Object) stackIn_75_1);
+              stackIn_76_2 = "{...}";
               break L8;
             }
           }
-          throw ie.a((Throwable) ((Object) stackIn_76_0), stackIn_76_2 + ',' + param5 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_73_0), stackIn_76_2 + ',' + param5 + ')');
         }
         return stackIn_69_0;
     }
@@ -806,19 +705,18 @@ final class ge {
     }
 
     private final void b(int param0) throws IOException {
-        int discarded$1 = 0;
-        long var2 = 0L;
-        long var4 = 0L;
-        int var6 = 0;
-        int var7 = 0;
-        CharSequence var8 = null;
+        long var2;
+        long var4;
+        int var6;
+        int var7;
+        CharSequence var8;
         L0: {
           var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (param0 == 0) {
             break L0;
           } else {
             var8 = (CharSequence) null;
-            discarded$1 = ge.a((byte[]) null, 111, 53, 38, (CharSequence) null, -38);
+            ge.a((byte[]) null, 111, 53, 38, (CharSequence) null, -38);
             break L0;
           }
         }
@@ -931,30 +829,17 @@ final class ge {
     }
 
     final static f a(int param0, byte param1) {
-        f discarded$0 = null;
         f var2 = new f();
         ql.field_i.a(var2, 255);
         if (param1 >= -74) {
-            discarded$0 = ge.a(103, (byte) 124);
+            ge.a(103, (byte) 124);
         }
         bj.a(2591, param0);
         return var2;
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
-        int incrementValue$1 = 0;
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        long var5_long = 0L;
-        int var7 = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        long var9 = 0L;
-        long var11 = 0L;
-        int var13 = 0;
-        int var14 = 0;
-        RuntimeException stackIn_61_0 = null;
-        StringBuilder stackIn_61_1 = null;
+        int incrementValue$0 = 0;
         RuntimeException stackIn_62_0 = null;
         StringBuilder stackIn_62_1 = null;
         RuntimeException stackIn_63_0 = null;
@@ -963,14 +848,16 @@ final class ge {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_60_0 = null;
-        StringBuilder stackOut_60_1 = null;
-        RuntimeException stackOut_62_0 = null;
-        StringBuilder stackOut_62_1 = null;
-        String stackOut_62_2 = null;
-        RuntimeException stackOut_61_0 = null;
-        StringBuilder stackOut_61_1 = null;
-        String stackOut_61_2 = null;
+        long var5_long = 0L;
+        IOException var5 = null;
+        RuntimeException var5_ref = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9_int = 0;
+        long var9 = 0L;
+        long var11 = 0L;
+        int var13 = 0;
+        int var14 = 0;
         var14 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -1094,9 +981,9 @@ final class ge {
                               if (param0 >= var9_int) {
                                 break L10;
                               } else {
-                                incrementValue$1 = param0;
+                                incrementValue$0 = param0;
                                 param0++;
-                                param1[incrementValue$1] = (byte) 0;
+                                param1[incrementValue$0] = (byte) 0;
                                 param2--;
                                 this.field_a = this.field_a + 1L;
                                 continue L12;
@@ -1204,27 +1091,19 @@ final class ge {
           decompiledCaughtException = decompiledCaughtParameter1;
           L17: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_60_0 = (RuntimeException) (var5_ref);
-            stackOut_60_1 = new StringBuilder().append("ge.C(").append(param0).append(',');
-            stackIn_62_0 = stackOut_60_0;
-            stackIn_62_1 = stackOut_60_1;
-            stackIn_61_0 = stackOut_60_0;
-            stackIn_61_1 = stackOut_60_1;
+            stackIn_62_0 = (RuntimeException) (var5_ref);
+
+            stackIn_62_1 = new StringBuilder().append("ge.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
-              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
-              stackOut_62_2 = "null";
-              stackIn_63_0 = stackOut_62_0;
-              stackIn_63_1 = stackOut_62_1;
-              stackIn_63_2 = stackOut_62_2;
+              stackIn_63_0 = (RuntimeException) ((Object) stackIn_62_0);
+              stackIn_63_1 = (StringBuilder) ((Object) stackIn_62_1);
+              stackIn_63_2 = "null";
               break L17;
             } else {
-              stackOut_61_0 = (RuntimeException) ((Object) stackIn_61_0);
-              stackOut_61_1 = (StringBuilder) ((Object) stackIn_61_1);
-              stackOut_61_2 = "{...}";
-              stackIn_63_0 = stackOut_61_0;
-              stackIn_63_1 = stackOut_61_1;
-              stackIn_63_2 = stackOut_61_2;
+              stackIn_63_0 = (RuntimeException) ((Object) stackIn_62_0);
+              stackIn_63_1 = (StringBuilder) ((Object) stackIn_62_1);
+              stackIn_63_2 = "{...}";
               break L17;
             }
           }

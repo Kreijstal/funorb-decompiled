@@ -50,42 +50,16 @@ final class sp extends im {
     final void a(boolean param0, int param1, String param2, float param3) {
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
-        Object stackIn_11_0 = null;
         Object stackIn_12_0 = null;
         Object stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        Object stackOut_10_0 = null;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
         try {
           L0: {
             L1: {
@@ -98,49 +72,37 @@ final class sp extends im {
             }
             L2: {
               if (this.field_P) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L2;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L2;
               }
             }
             L3: {
-              stackOut_5_0 = stackIn_5_0;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_6_0 = stackOut_5_0;
+
+
               if (param0) {
-                stackOut_7_0 = stackIn_7_0;
-                stackOut_7_1 = 0;
-                stackIn_8_0 = stackOut_7_0;
-                stackIn_8_1 = stackOut_7_1;
+
+                stackIn_8_1 = 0;
                 break L3;
               } else {
-                stackOut_6_0 = stackIn_6_0;
-                stackOut_6_1 = 1;
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
+
+                stackIn_8_1 = 1;
                 break L3;
               }
             }
-            if (stackIn_8_0 != stackIn_8_1) {
+            if (stackIn_5_0 != stackIn_8_1) {
               L4: {
-                stackOut_10_0 = this;
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_12_0 = this;
+
                 if (!param0) {
-                  stackOut_12_0 = this;
-                  stackOut_12_1 = 0;
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
+                  stackIn_13_0 = this;
+                  stackIn_13_1 = 0;
                   break L4;
                 } else {
-                  stackOut_11_0 = this;
-                  stackOut_11_1 = 1;
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
+                  stackIn_13_0 = this;
+                  stackIn_13_1 = 1;
                   break L4;
                 }
               }
@@ -173,27 +135,19 @@ final class sp extends im {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var5);
-            stackOut_19_1 = new StringBuilder().append("sp.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var5);
+
+            stackIn_21_1 = new StringBuilder().append("sp.E(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L6;
             }
           }
@@ -202,7 +156,6 @@ final class sp extends im {
     }
 
     final void b(int param0, int param1, byte param2) {
-        int discarded$1 = 0;
         if (param2 > -16) {
           return;
         } else {
@@ -211,7 +164,7 @@ final class sp extends im {
             pe.field_E.c(this.field_S, param1 + (this.field_p >> -111395007), param0 - -103, 16777215, -1);
             if (null != this.field_N) {
               ph.b(20 + param1, -7 + (param0 + 120), 260, 8421504);
-              discarded$1 = pe.field_E.a(this.field_N, 20 + param1, 8 + param0 - -120, 260, 100, 16777215, -1, 1, 0, pe.field_E.field_x);
+              pe.field_E.a(this.field_N, 20 + param1, 8 + param0 - -120, 260, 100, 16777215, -1, 1, 0, pe.field_E.field_x);
               break L0;
             } else {
               break L0;
@@ -222,8 +175,8 @@ final class sp extends im {
     }
 
     final static String a(String param0, String param1, String param2, byte param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = Torquing.field_u;
         var4 = param0.indexOf(param1);
         if (param3 < -64) {

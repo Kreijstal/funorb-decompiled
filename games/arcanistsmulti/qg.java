@@ -7,30 +7,16 @@ final class qg extends RuntimeException {
     static String[] field_a;
 
     final static void a(int param0, String param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
         int stackIn_17_0 = 0;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_10_0 = 0;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -68,22 +54,18 @@ final class qg extends RuntimeException {
                 if (!oh.field_i) {
                   if (jh.field_f >= oa.field_e) {
                     if (jh.field_f < qc.field_e + oa.field_e) {
-                      stackOut_15_0 = 1;
-                      stackIn_17_0 = stackOut_15_0;
+                      stackIn_17_0 = 1;
                       break L4;
                     } else {
-                      stackOut_14_0 = 0;
-                      stackIn_17_0 = stackOut_14_0;
+                      stackIn_17_0 = 0;
                       break L4;
                     }
                   } else {
-                    stackOut_12_0 = 0;
-                    stackIn_17_0 = stackOut_12_0;
+                    stackIn_17_0 = 0;
                     break L4;
                   }
                 } else {
-                  stackOut_10_0 = 0;
-                  stackIn_17_0 = stackOut_10_0;
+                  stackIn_17_0 = 0;
                   break L4;
                 }
               }
@@ -165,27 +147,19 @@ final class qg extends RuntimeException {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) (var2);
-            stackOut_41_1 = new StringBuilder().append("qg.C(").append(param0).append(',');
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackIn_43_0 = (RuntimeException) (var2);
+
+            stackIn_43_1 = new StringBuilder().append("qg.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "null";
               break L9;
             } else {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "{...}";
               break L9;
             }
           }

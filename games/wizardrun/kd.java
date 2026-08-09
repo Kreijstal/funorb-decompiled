@@ -7,11 +7,6 @@ final class kd {
     static boolean field_c;
 
     final static int a(int param0, boolean param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_66_0 = 0;
@@ -20,17 +15,13 @@ final class kd {
         int stackIn_80_0 = 0;
         int stackIn_84_0 = 0;
         int stackIn_86_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_75_0 = 0;
-        int stackOut_79_0 = 0;
-        int stackOut_83_0 = 0;
-        int stackOut_85_0 = 0;
         int statePc = 0;
         Throwable caughtException = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -55,8 +46,7 @@ final class kd {
                 }
                 case 2: {
                     try {
-                        stackOut_2_0 = -4;
-                        stackIn_3_0 = stackOut_2_0;
+                        stackIn_3_0 = -4;
                         statePc = 3;
                         continue stateLoop;
                     } catch (Throwable stateCaught_2) {
@@ -69,15 +59,13 @@ final class kd {
                     return stackIn_3_0;
                 }
                 case 4: {
-                    stackOut_4_0 = sb.field_d;
-                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_6_0 = sb.field_d;
                     statePc = 6;
                     continue stateLoop;
                 }
                 case 5: {
                     try {
-                        stackOut_5_0 = sb.field_d;
-                        stackIn_6_0 = stackOut_5_0;
+                        stackIn_6_0 = sb.field_d;
                         statePc = 6;
                         continue stateLoop;
                     } catch (Throwable stateCaught_5) {
@@ -840,8 +828,7 @@ final class kd {
                 }
                 case 65: {
                     try {
-                        stackOut_65_0 = 3;
-                        stackIn_66_0 = stackOut_65_0;
+                        stackIn_66_0 = 3;
                         statePc = 66;
                         continue stateLoop;
                     } catch (Throwable stateCaught_65) {
@@ -869,8 +856,7 @@ final class kd {
                 }
                 case 68: {
                     try {
-                        stackOut_68_0 = 2;
-                        stackIn_69_0 = stackOut_68_0;
+                        stackIn_69_0 = 2;
                         statePc = 69;
                         continue stateLoop;
                     } catch (Throwable stateCaught_68) {
@@ -937,8 +923,7 @@ final class kd {
                 }
                 case 75: {
                     try {
-                        stackOut_75_0 = 3;
-                        stackIn_76_0 = stackOut_75_0;
+                        stackIn_76_0 = 3;
                         statePc = 76;
                         continue stateLoop;
                     } catch (Throwable stateCaught_75) {
@@ -976,8 +961,7 @@ final class kd {
                 }
                 case 79: {
                     try {
-                        stackOut_79_0 = 1;
-                        stackIn_80_0 = stackOut_79_0;
+                        stackIn_80_0 = 1;
                         statePc = 80;
                         continue stateLoop;
                     } catch (Throwable stateCaught_79) {
@@ -1015,8 +999,7 @@ final class kd {
                 }
                 case 83: {
                     try {
-                        stackOut_83_0 = 1;
-                        stackIn_84_0 = stackOut_83_0;
+                        stackIn_84_0 = 1;
                         statePc = 84;
                         continue stateLoop;
                     } catch (Throwable stateCaught_83) {
@@ -1030,8 +1013,7 @@ final class kd {
                 }
                 case 85: {
                     try {
-                        stackOut_85_0 = 0;
-                        stackIn_86_0 = stackOut_85_0;
+                        stackIn_86_0 = 0;
                         statePc = 86;
                         continue stateLoop;
                     } catch (Throwable stateCaught_85) {
@@ -1057,9 +1039,8 @@ final class kd {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         if (param0 != 24188) {
-            discarded$0 = kd.a(58, false);
+            kd.a(58, false);
             field_b = null;
             field_a = null;
             return;

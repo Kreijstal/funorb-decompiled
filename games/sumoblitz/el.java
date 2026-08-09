@@ -12,11 +12,10 @@ public class el {
     private static boolean field_a;
 
     public static File a(String param0, byte param1) {
-        File discarded$2 = null;
-        String var3 = null;
+        String var3;
         if (param1 != -8) {
           var3 = (String) null;
-          discarded$2 = el.a((String) null, (byte) 113);
+          el.a((String) null, (byte) 113);
           return el.a(field_c, field_b, -58, param0);
         } else {
           return el.a(field_c, field_b, -58, param0);

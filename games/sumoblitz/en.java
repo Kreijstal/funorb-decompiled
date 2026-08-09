@@ -19,177 +19,156 @@ abstract class en {
     abstract void a(boolean param0);
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var36 = 0;
         int var37 = 0;
-        int[] var39 = null;
-        int[] var40 = null;
-        int[] var41 = null;
+        int var36 = 0;
+        int var35 = 0;
+        int var38 = 0;
+        int var6 = 0;
+        int var8 = 0;
+        int var5 = 0;
+        int var7 = 0;
+        int var10 = 0;
+        int var9 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var21 = 0;
+        int var22 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        int var20 = 0;
+        int var23 = 0;
+        int var19 = 0;
+        int var24 = 0;
+        int var27 = 0;
+        int var25 = 0;
+        int var28 = 0;
+        int var26 = 0;
+        int var29 = 0;
+        int var30 = 0;
+        int var31 = 0;
+        int var32 = 0;
+        int var33 = 0;
+        int var34 = 0;
         int var42 = 0;
-        int var43 = 0;
-        int[] var44 = null;
-        int[] var45 = null;
-        int[] var46 = null;
-        int[] var47 = null;
-        int[] var48 = null;
-        int[] var49 = null;
-        int stackIn_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_23_0 = 0;
-        L0: {
-          var43 = Sumoblitz.field_L ? 1 : 0;
-          if (param1 == 206) {
-            break L0;
-          } else {
+        int var43 = Sumoblitz.field_L ? 1 : 0;
+        if (param1 != 206) {
             this.field_f = (short[]) null;
-            break L0;
-          }
         }
-        var48 = new int[param3];
-        var45 = var48;
-        var39 = var45;
-        var47 = new int[param2];
-        var44 = var47;
-        var40 = var44;
-        var49 = new int[param0];
-        var46 = var49;
-        var41 = var46;
-        var42 = 0;
-        L1: while (true) {
-          L2: {
-            if (param3 <= var42) {
-              var42 = 0;
-              break L2;
-            } else {
-              var39[var42] = (var42 << 1046741740) / param3;
-              var42++;
-              if (var43 != 0) {
-                break L2;
-              } else {
-                continue L1;
-              }
-            }
-          }
-          L3: while (true) {
-            L4: {
-              if (param2 <= var42) {
-                var42 = 0;
-                break L4;
-              } else {
-                var40[var42] = (var42 << 788419340) / param2;
-                var42++;
-                if (var43 != 0) {
-                  break L4;
-                } else {
-                  continue L3;
-                }
-              }
-            }
-            L5: while (true) {
-              L6: {
-                if (param0 <= var42) {
-                  this.b(-21);
-                  break L6;
-                } else {
-                  var41[var42] = (var42 << -1138565684) / param0;
-                  var42++;
-                  if (var43 != 0) {
-                    break L6;
-                  } else {
-                    continue L5;
-                  }
-                }
-              }
-              var37 = 0;
-              L7: while (true) {
-                stackOut_19_0 = var37;
-                stackIn_20_0 = stackOut_19_0;
-                L8: while (true) {
-                  L9: {
-                    if (stackIn_20_0 >= param0) {
-                      break L9;
-                    } else {
-                      if (var43 != 0) {
-                        break L9;
-                      } else {
-                        var36 = 0;
-                        if (param2 <= var36) {
-                          var37++;
-                          if (var43 == 0) {
-                            continue L7;
-                          } else {
-                            break L9;
-                          }
+        int[] var48 = new int[param3];
+        int[] var45 = var48;
+        int[] var39 = var45;
+        int[] var47 = new int[param2];
+        int[] var44 = var47;
+        int[] var40 = var44;
+        int[] var49 = new int[param0];
+        int[] var46 = var49;
+        int[] var41 = var46;
+        for (var42 = 0; param3 > var42; var42++) {
+            var39[var42] = (var42 << 1046741740) / param3;
+        }
+        for (var42 = 0; param2 > var42; var42++) {
+            var40[var42] = (var42 << 788419340) / param2;
+        }
+        for (var42 = 0; param0 > var42; var42++) {
+            var41[var42] = (var42 << -1138565684) / param0;
+        }
+        this.b(-21);
+        for (var37 = 0; var37 < param0; var37++) {
+            for (var36 = 0; param2 > var36; var36++) {
+                for (var35 = 0; param3 > var35; var35++) {
+                    for (var38 = 0; this.field_g > var38; var38++) {
+                        var42 = this.field_c[var38] << -432518836;
+                        var6 = var47[var36] * var42 >> -687124148;
+                        var8 = this.field_a * var42 >> -1653163636;
+                        var5 = var48[var35] * var42 >> -741393364;
+                        var7 = var42 * var49[var37] >> -221290292;
+                        var10 = this.field_i * var42 >> -1617825876;
+                        var9 = this.field_b * var42 >> -497949972;
+                        var7 = var7 * this.field_i;
+                        var6 = var6 * this.field_b;
+                        var5 = var5 * this.field_a;
+                        var11 = var5 >> 1865365708;
+                        var12 = 1 + var11;
+                        var13 = var6 >> 244666284;
+                        var11 = var11 & 255;
+                        var14 = 1 + var13;
+                        var13 = var13 & 255;
+                        var15 = var7 >> -682112116;
+                        var16 = var15 - -1;
+                        if ((var16 ^ -1) > (var10 ^ -1)) {
+                            var16 = var16 & 255;
                         } else {
-                          stackOut_23_0 = 0;
-                          stackIn_20_0 = stackOut_23_0;
-                          continue L8;
+                            var16 = 0;
                         }
-                      }
+                        if (var12 >= var8) {
+                            var12 = 0;
+                        } else {
+                            var12 = var12 & 255;
+                        }
+                        if (var14 < var9) {
+                            var14 = var14 & 255;
+                        } else {
+                            var14 = 0;
+                        }
+                        var6 = var6 & 4095;
+                        var15 = var15 & 255;
+                        var7 = var7 & 4095;
+                        var5 = var5 & 4095;
+                        var21 = var6 + -4096;
+                        var22 = var7 - 4096;
+                        var17 = mu.field_y[var5];
+                        var18 = mu.field_y[var6];
+                        var20 = var5 - 4096;
+                        var23 = this.field_f[var15];
+                        var19 = mu.field_y[var7];
+                        var24 = this.field_f[var16];
+                        var27 = this.field_f[var13 - -var24];
+                        var25 = this.field_f[var23 + var13];
+                        var28 = this.field_f[var24 + var14];
+                        var26 = this.field_f[var14 + var23];
+                        var29 = qf.a(var6, var7, 8, (int) this.field_f[var11 - -var25], var5);
+                        var30 = qf.a(var6, var7, 8, (int) this.field_f[var12 + var25], var20);
+                        var31 = var29 - -((-var29 + var30) * var17 >> 888512364);
+                        var29 = qf.a(var21, var7, param1 + -198, (int) this.field_f[var11 + var26], var5);
+                        var30 = qf.a(var21, var7, param1 ^ 198, (int) this.field_f[var26 + var12], var20);
+                        var32 = var29 + (var17 * (var30 + -var29) >> 1021556812);
+                        var33 = var31 - -(var18 * (var32 - var31) >> 989731244);
+                        var29 = qf.a(var6, var22, param1 ^ 198, (int) this.field_f[var11 + var27], var5);
+                        var30 = qf.a(var6, var22, 8, (int) this.field_f[var27 + var12], var20);
+                        var31 = ((-var29 + var30) * var17 >> -1519766228) + var29;
+                        var29 = qf.a(var21, var22, 8, (int) this.field_f[var28 + var11], var5);
+                        var30 = qf.a(var21, var22, param1 ^ 198, (int) this.field_f[var28 + var12], var20);
+                        var32 = ((-var29 + var30) * var17 >> 1290288876) + var29;
+                        var34 = ((var32 - var31) * var18 >> -1309030932) + var31;
+                        this.a(var38, param1 + 951, (var19 * (var34 + -var33) >> -625341588) + var33);
                     }
-                  }
-                  return;
+                    this.a(false);
                 }
-              }
             }
-          }
         }
     }
 
     private final void c(int param0) {
-        Random var2 = null;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var7 = 0;
-        Random var8 = null;
-        var7 = Sumoblitz.field_L ? 1 : 0;
-        var8 = new Random((long)this.field_e);
-        var2 = var8;
-        var3 = 0;
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (-256 >= (var3 ^ -1)) {
-                break L2;
-              } else {
-                this.field_f[var3] = (short)var3;
-                var3++;
-                if (var7 != 0) {
-                  break L1;
-                } else {
-                  if (var7 == 0) {
-                    continue L0;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-            }
-            var3 = param0;
-            break L1;
-          }
-          L3: while (true) {
-            L4: {
-              if (var3 >= 255) {
-                break L4;
-              } else {
-                var4 = 255 + -var3;
-                var5 = fi.a(var4, var8, (byte) -96);
-                var6 = this.field_f[var5];
-                this.field_f[var5] = this.field_f[var4];
-                this.field_f[var4 - -256] = (short) var6;
-                this.field_f[var4] = (short) var6;
-                var3++;
-                if (var7 != 0) {
-                  break L4;
-                } else {
-                  continue L3;
-                }
-              }
-            }
-            return;
-          }
+        int var3 = 0;
+        int var7 = Sumoblitz.field_L ? 1 : 0;
+        Random var2 = new Random((long)this.field_e);
+        for (var3 = 0; -256 < (var3 ^ -1); var3++) {
+            this.field_f[var3] = (short)var3;
+        }
+        for (var3 = param0; var3 < 255; var3++) {
+            var4 = 255 + -var3;
+            var5 = fi.a(var4, var2, (byte) -96);
+            var6 = this.field_f[var5];
+            this.field_f[var5] = this.field_f[var4];
+            this.field_f[var4 - -256] = (short) var6;
+            this.field_f[var4] = (short) var6;
         }
     }
 
@@ -215,8 +194,6 @@ abstract class en {
 
     final static boolean a(int param0) {
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
         L0: {
           if (param0 == -23517) {
             break L0;
@@ -236,15 +213,13 @@ abstract class en {
                 if (nt.a((byte) 116)) {
                   break L2;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L1;
                 }
               }
             }
           }
-          stackOut_6_0 = 0;
-          stackIn_7_0 = stackOut_6_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0 != 0;
@@ -261,37 +236,13 @@ abstract class en {
 
     private final void a(byte param0) {
         int var2 = 0;
-        int var3 = 0;
-        var3 = Sumoblitz.field_L ? 1 : 0;
+        int var3 = Sumoblitz.field_L ? 1 : 0;
         this.field_c = new short[this.field_g];
-        var2 = 0;
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (this.field_g <= var2) {
-                break L2;
-              } else {
-                this.field_c[var2] = (short)(int)Math.pow(2.0, (double)var2);
-                var2++;
-                if (var3 != 0) {
-                  break L1;
-                } else {
-                  if (var3 == 0) {
-                    continue L0;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-            }
-            if (param0 > 43) {
-              break L1;
-            } else {
-              this.c(-19);
-              break L1;
-            }
-          }
-          return;
+        for (var2 = 0; this.field_g > var2; var2++) {
+            this.field_c[var2] = (short)(int)Math.pow(2.0, (double)var2);
+        }
+        if (param0 <= 43) {
+            this.c(-19);
         }
     }
 
@@ -319,13 +270,13 @@ abstract class en {
             var0 = System.getProperty("java.vendor").toLowerCase();
         } catch (Exception exception) {
         }
-        String discarded$0 = var0.toLowerCase();
+        var0.toLowerCase();
         var0 = "Unknown";
         try {
             var0 = System.getProperty("java.version").toLowerCase();
         } catch (Exception exception) {
         }
-        String discarded$1 = var0.toLowerCase();
+        var0.toLowerCase();
         var0 = "Unknown";
         try {
             var0 = System.getProperty("os.name").toLowerCase();
@@ -343,13 +294,13 @@ abstract class en {
             var0 = System.getProperty("os.version").toLowerCase();
         } catch (Exception exception) {
         }
-        String discarded$2 = var0.toLowerCase();
+        var0.toLowerCase();
         var0 = "~/";
         try {
             var0 = System.getProperty("user.home").toLowerCase();
         } catch (Exception exception) {
         }
-        File discarded$3 = new File(var0);
+        File discarded$0 = new File(var0);
         field_j = new dk();
     }
 }

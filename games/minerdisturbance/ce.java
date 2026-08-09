@@ -8,6 +8,11 @@ final class ce {
     static String[] field_c;
 
     final static void a(int param0, boolean param1, boolean param2, boolean param3) {
+        int[] stackIn_4_0 = null;
+        int stackIn_11_0 = 0;
+        int stackIn_21_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -22,32 +27,16 @@ final class ce {
         int[] var16 = null;
         int[] var18 = null;
         int[] var21 = null;
-        int[] stackIn_4_0 = null;
-        int stackIn_11_0 = 0;
-        int stackIn_21_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int[] stackOut_3_0 = null;
-        int[] stackOut_2_0 = null;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_13_0 = 0;
         var14 = MinerDisturbance.field_ab;
         try {
           L0: {
             L1: {
               param0 = 0 - param0;
               if (!param3) {
-                stackOut_3_0 = sj.field_d;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = sj.field_d;
                 break L1;
               } else {
-                stackOut_2_0 = di.field_x;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = di.field_x;
                 break L1;
               }
             }
@@ -165,41 +154,34 @@ final class ce {
                 } else {
                   L9: {
                     if (!nm.a(var7, var18, -827843803)) {
-                      stackOut_10_0 = 0;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_11_0 = 0;
                       break L9;
                     } else {
-                      stackOut_9_0 = 1;
-                      stackIn_11_0 = stackOut_9_0;
+                      stackIn_11_0 = 1;
                       break L9;
                     }
                   }
                   L10: {
                     var8 = stackIn_11_0;
                     if (param3) {
-                      stackOut_20_0 = 0;
-                      stackIn_21_0 = stackOut_20_0;
+                      stackIn_21_0 = 0;
                       break L10;
                     } else {
                       if (!pi.field_k[var7]) {
                         if (pi.field_e[var7]) {
                           if (0 < pj.field_a) {
-                            stackOut_18_0 = 1;
-                            stackIn_21_0 = stackOut_18_0;
+                            stackIn_21_0 = 1;
                             break L10;
                           } else {
-                            stackOut_17_0 = 0;
-                            stackIn_21_0 = stackOut_17_0;
+                            stackIn_21_0 = 0;
                             break L10;
                           }
                         } else {
-                          stackOut_15_0 = 1;
-                          stackIn_21_0 = stackOut_15_0;
+                          stackIn_21_0 = 1;
                           break L10;
                         }
                       } else {
-                        stackOut_13_0 = 0;
-                        stackIn_21_0 = stackOut_13_0;
+                        stackIn_21_0 = 0;
                         break L10;
                       }
                     }
@@ -261,10 +243,9 @@ final class ce {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int discarded$0 = 0;
         int var3 = param1 >> -1842190832;
         if (param0 != 4316) {
-            discarded$0 = ce.a(32, 8, 19);
+            ce.a(32, 8, 19);
         }
         int var4 = param1 & 65535;
         int var5 = param2 >> -459614096;

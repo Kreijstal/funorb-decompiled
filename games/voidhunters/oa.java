@@ -31,47 +31,22 @@ final class oa extends ha implements e {
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
         try {
-            Object discarded$2 = null;
-            Exception exception = null;
-            p var4 = null;
             java.lang.reflect.Method var6 = null;
             Class var7 = null;
-            Throwable decompiledCaughtException = null;
-            L0: {
-              var4 = (p) ((Object) this.field_i.a((long)param0.hashCode(), 122));
-              if (var4 != null) {
-                L1: {
-                  if (var4.field_e != param1) {
-                    break L1;
-                  } else {
-                    if (var4.field_g == param2) {
-                      break L0;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                var4.a(param0, param1, param2);
-                break L0;
-              } else {
+            p var4 = (p) ((Object) this.field_i.a((long)param0.hashCode(), 122));
+            if (var4 == null) {
                 try {
-                  L2: {
                     var7 = Class.forName("java.awt.Canvas");
                     var6 = var7.getMethod("setIgnoreRepaint", new Class[]{Boolean.TYPE});
-                    discarded$2 = var6.invoke((Object) (param0), new Object[]{Boolean.TRUE});
-                    break L2;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L3: {
-                    exception = (Exception) (Object) decompiledCaughtException;
-                    break L3;
-                  }
+                    var6.invoke((Object) (param0), new Object[]{Boolean.TRUE});
+                } catch (Exception exception) {
                 }
                 var4 = new p((oa) (this), param0, param1, param2);
                 this.field_i.a((long)param0.hashCode(), var4, (byte) -127);
-                break L0;
-              }
+            } else {
+                if (var4.field_e != param1 || var4.field_g != param2) {
+                    var4.a(param0, param1, param2);
+                }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -183,10 +158,10 @@ final class oa extends ha implements e {
     }
 
     final da a(sw param0, ima[] param1, boolean param2) {
-        int[] var4 = null;
-        int[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        int[] var4;
+        int[] var5;
+        int var6;
+        int var7;
         var4 = new int[param1.length];
         var5 = new int[param1.length];
         var6 = 0;
@@ -254,7 +229,7 @@ final class oa extends ha implements e {
     }
 
     private final a y() {
-        int var1 = 0;
+        int var1;
         var1 = 0;
         L0: while (true) {
           if (var1 < this.field_l) {
@@ -397,9 +372,9 @@ final class oa extends ha implements e {
 
     public oa(java.awt.Canvas param0, d param1, int param2, int param3) {
         super(param1);
-        ja discarded$2 = null;
-        Throwable var5 = null;
+        ja discarded$1 = null;
         Throwable decompiledCaughtException = null;
+        Throwable var5 = null;
         this.field_m = false;
         this.field_nativeid = 0L;
         this.field_c = new ij();
@@ -415,7 +390,7 @@ final class oa extends ha implements e {
                 this.MA(this.field_a, 0, 0);
                 ocb.a(false, (byte) 33, true);
                 this.field_h = true;
-                discarded$2 = new ja();
+                discarded$1 = new ja();
                 this.a(new ja());
                 this.g(1);
                 this.f(0);
@@ -449,8 +424,6 @@ final class oa extends ha implements e {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_2_0 = 0;
         var2_ref = this.field_a;
         synchronized (var2_ref) {
           L0: {
@@ -469,13 +442,11 @@ final class oa extends ha implements e {
                 this.CA(param0, var4, var3.field_l, var3.field_q, var3.field_c, var3.field_n, var3.field_o, var3.field_h, var3.field_b, var3.field_g, var3.field_p, var3.field_d, var3.field_r, var3.field_m, var3.field_a, var3.field_k, var3.field_s, var3.field_j, var3.field_i, var3.field_e, var3.field_f);
                 break L0;
               } else {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 return stackIn_6_0 != 0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               return stackIn_3_0 != 0;
             }
           }
@@ -490,7 +461,6 @@ final class oa extends ha implements e {
         Throwable var4 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         var2_ref = this;
         synchronized (var2_ref) {
           L0: {
@@ -499,8 +469,7 @@ final class oa extends ha implements e {
               this.AA(param0, var3.field_l, var3.field_q, var3.field_c, var3.field_n, var3.field_o, var3.field_h, var3.field_b, var3.field_g, var3.field_p, var3.field_d, var3.field_r, var3.field_m, var3.field_a, var3.field_k, var3.field_s, var3.field_j, var3.field_i, var3.field_e, var3.field_f);
               break L0;
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               return stackIn_3_0 != 0;
             }
           }
@@ -537,6 +506,6 @@ final class oa extends ha implements e {
     }
 
     static {
-        int discarded$0 = Math.max(Math.max(104, 20), 24573);
+        Math.max(Math.max(104, 20), 24573);
     }
 }

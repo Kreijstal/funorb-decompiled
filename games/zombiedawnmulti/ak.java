@@ -8,8 +8,8 @@ final class ak {
     static volatile int field_b;
 
     final static op a(int param0, byte param1, int param2, int param3) {
-        op var4 = null;
-        java.applet.Applet var5 = null;
+        op var4;
+        java.applet.Applet var5;
         if (param1 >= -35) {
           L0: {
             var5 = (java.applet.Applet) null;
@@ -76,40 +76,24 @@ final class ak {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            Object discarded$6 = null;
-            Object discarded$7 = null;
-            Object discarded$8 = null;
-            Object discarded$9 = null;
-            Object discarded$10 = null;
-            Object discarded$11 = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            String var3 = null;
-            java.net.URL var4 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
+            String var3 = null;
+            java.net.URL var4 = null;
             try {
               try {
                 L0: {
                   L1: {
                     var4 = param1.getCodeBase();
                     var3 = gf.a(param1, true, var4).getFile();
-                    discarded$6 = fo.a(param1, "updatelinks", (byte) 23, new Object[]{"home", var3 + "home.ws"});
-                    discarded$7 = fo.a(param1, "updatelinks", (byte) 23, new Object[]{"gamelist", var3 + "togamelist.ws"});
+                    fo.a(param1, "updatelinks", (byte) 23, new Object[]{"home", var3 + "home.ws"});
+                    fo.a(param1, "updatelinks", (byte) 23, new Object[]{"gamelist", var3 + "togamelist.ws"});
                     if (param0 == 14158) {
                       break L1;
                     } else {
@@ -117,10 +101,10 @@ final class ak {
                       break L1;
                     }
                   }
-                  discarded$8 = fo.a(param1, "updatelinks", (byte) 23, new Object[]{"serverlist", var3 + "toserverlist.ws"});
-                  discarded$9 = fo.a(param1, "updatelinks", (byte) 23, new Object[]{"options", var3 + "options.ws"});
-                  discarded$10 = fo.a(param1, "updatelinks", (byte) 23, new Object[]{"terms", var3 + "terms.ws"});
-                  discarded$11 = fo.a(param1, "updatelinks", (byte) 23, new Object[]{"privacy", var3 + "privacy.ws"});
+                  fo.a(param1, "updatelinks", (byte) 23, new Object[]{"serverlist", var3 + "toserverlist.ws"});
+                  fo.a(param1, "updatelinks", (byte) 23, new Object[]{"options", var3 + "options.ws"});
+                  fo.a(param1, "updatelinks", (byte) 23, new Object[]{"terms", var3 + "terms.ws"});
+                  fo.a(param1, "updatelinks", (byte) 23, new Object[]{"privacy", var3 + "privacy.ws"});
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -133,27 +117,19 @@ final class ak {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var2_ref);
-                stackOut_6_1 = new StringBuilder().append("ak.F(").append(param0).append(',');
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var2_ref);
+
+                stackIn_8_1 = new StringBuilder().append("ak.F(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L2;
                 }
               }

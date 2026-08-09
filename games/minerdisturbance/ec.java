@@ -39,14 +39,14 @@ final class ec {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
-            int var3 = 0;
-            int var4 = 0;
-            int var5 = 0;
-            int var6 = 0;
-            double var7 = 0.0;
+            int var0;
+            int var1;
+            int var2;
+            int var3;
+            int var4;
+            int var5;
+            int var6;
+            double var7;
             field_b = new int[36864];
             var0 = 96;
             var1 = 96;

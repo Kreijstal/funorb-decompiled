@@ -7,13 +7,11 @@ final class t extends ni {
     static volatile int field_c;
 
     final void a(byte param0, byte[] param1) {
-        java.nio.Buffer discarded$0 = null;
-        java.nio.ByteBuffer discarded$1 = null;
         try {
             int var3_int = 33 % ((param0 - -54) / 63);
             this.field_e = java.nio.ByteBuffer.allocateDirect(param1.length);
-            discarded$0 = this.field_e.position(0);
-            discarded$1 = this.field_e.put(param1);
+            this.field_e.position(0);
+            this.field_e.put(param1);
         } catch (RuntimeException runtimeException) {
             throw lj.a((Throwable) ((Object) runtimeException), "t.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -41,22 +39,18 @@ final class t extends ni {
     }
 
     final byte[] a(int param0) {
-        java.nio.Buffer discarded$8 = null;
-        java.nio.ByteBuffer discarded$9 = null;
-        java.nio.Buffer discarded$10 = null;
-        java.nio.ByteBuffer discarded$11 = null;
-        byte[] var2 = null;
-        byte[] var3 = null;
+        byte[] var2;
+        byte[] var3;
         var3 = new byte[this.field_e.capacity()];
         var2 = var3;
         if (param0 != 3006) {
           this.field_e = (java.nio.ByteBuffer) null;
-          discarded$8 = this.field_e.position(0);
-          discarded$9 = this.field_e.get(var3);
+          this.field_e.position(0);
+          this.field_e.get(var3);
           return var3;
         } else {
-          discarded$10 = this.field_e.position(0);
-          discarded$11 = this.field_e.get(var3);
+          this.field_e.position(0);
+          this.field_e.get(var3);
           return var3;
         }
     }

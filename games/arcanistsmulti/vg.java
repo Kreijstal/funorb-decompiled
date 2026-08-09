@@ -49,7 +49,7 @@ final class vg {
     int field_N;
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1;
         if (!td.e(true)) {
           return;
         } else {
@@ -158,17 +158,17 @@ final class vg {
     }
 
     final void b(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var12 = ArcanistsMulti.field_G ? 1 : 0;
         if (this.field_m) {
           return;

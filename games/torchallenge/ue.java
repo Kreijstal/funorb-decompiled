@@ -22,20 +22,16 @@ final class ue extends da {
     }
 
     final static void b(byte param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
-        int var2 = 0;
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
+        int var2 = 0;
         int[] var5 = null;
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var9 = TorChallenge.field_F ? 1 : 0;
+        int var9 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
             ii.field_h = new ka[8];
             var1_int = 0;
             ii.field_h[5] = rd.field_i[6];
@@ -64,81 +60,47 @@ final class ue extends da {
             qg.c(var1_int, var2, var3, var4, si.field_H[0], si.field_H[1]);
             qg.c(1 + var1_int, var2, 1, var4, ih.field_N[0], ih.field_N[1]);
             var5 = new int[640 * var3];
-            var7 = 0;
-            L1: while (true) {
-              if (-641 >= (var7 ^ -1)) {
-                var6 = ii.field_h[1].field_y;
-                ii.field_h[1].field_p = 0;
-                ii.field_h[1].field_v = var3;
-                ii.field_h[1].field_s = 0;
-                ii.field_h[1].field_u = 640;
-                ii.field_h[1].field_y = var5;
-                ii.field_h[1].field_q = 640;
-                ii.field_h[1].field_x = var3;
-                ii.field_h[1].h();
-                ii.field_h[6] = new ka(var3, 640);
-                ii.field_h[6].d();
-                qg.c(var1_int, var2, var3, var4, si.field_H[2], si.field_H[3]);
-                qg.c(1 + var1_int, var2, 1, var4, ih.field_N[2], ih.field_N[3]);
-                var7 = 0;
-                L2: while (true) {
-                  if (-641 >= (var7 ^ -1)) {
-                    var8 = 99 % ((-63 - param0) / 49);
-                    ii.field_h[6].field_u = 640;
-                    ii.field_h[6].field_y = var6;
-                    ii.field_h[6].field_v = var3;
-                    ii.field_h[6].field_p = 0;
-                    ii.field_h[6].field_q = 640;
-                    ii.field_h[6].field_x = var3;
-                    ii.field_h[6].field_s = 0;
-                    var5 = null;
-                    ii.field_h[6].h();
-                    var6 = null;
-                    la.field_f.a(112);
-                    break L0;
-                  } else {
-                    var8 = 0;
-                    L3: while (true) {
-                      if (var8 >= var3) {
-                        var7++;
-                        continue L2;
-                      } else {
-                        var6[var7 - -(var8 * 640)] = ii.field_h[6].field_y[var8 + var7 * var3];
-                        var8++;
-                        continue L3;
-                      }
-                    }
-                  }
-                }
-              } else {
-                var8 = 0;
-                L4: while (true) {
-                  if (var3 <= var8) {
-                    var7++;
-                    continue L1;
-                  } else {
+            for (var7 = 0; -641 < (var7 ^ -1); var7++) {
+                for (var8 = 0; var3 > var8; var8++) {
                     var5[var8 * 640 + var7] = ii.field_h[1].field_y[var8 + var7 * var3];
-                    var8++;
-                    continue L4;
-                  }
                 }
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "ue.E(" + param0 + ')');
+            var6 = ii.field_h[1].field_y;
+            ii.field_h[1].field_p = 0;
+            ii.field_h[1].field_v = var3;
+            ii.field_h[1].field_s = 0;
+            ii.field_h[1].field_u = 640;
+            ii.field_h[1].field_y = var5;
+            ii.field_h[1].field_q = 640;
+            ii.field_h[1].field_x = var3;
+            ii.field_h[1].h();
+            ii.field_h[6] = new ka(var3, 640);
+            ii.field_h[6].d();
+            qg.c(var1_int, var2, var3, var4, si.field_H[2], si.field_H[3]);
+            qg.c(1 + var1_int, var2, 1, var4, ih.field_N[2], ih.field_N[3]);
+            for (var7 = 0; -641 < (var7 ^ -1); var7++) {
+                for (var8 = 0; var8 < var3; var8++) {
+                    var6[var7 - -(var8 * 640)] = ii.field_h[6].field_y[var8 + var7 * var3];
+                }
+            }
+            var8 = 99 % ((-63 - param0) / 49);
+            ii.field_h[6].field_u = 640;
+            ii.field_h[6].field_y = var6;
+            ii.field_h[6].field_v = var3;
+            ii.field_h[6].field_p = 0;
+            ii.field_h[6].field_q = 640;
+            ii.field_h[6].field_x = var3;
+            ii.field_h[6].field_s = 0;
+            var5 = null;
+            ii.field_h[6].h();
+            var6 = null;
+            la.field_f.a(112);
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) ((Object) runtimeException), "ue.E(" + param0 + ')');
         }
     }
 
     final static ti[] a(int param0, pa param1) {
-        int discarded$12 = 0;
-        int discarded$13 = 0;
-        int discarded$14 = 0;
-        int discarded$15 = 0;
-        int discarded$16 = 0;
-        int discarded$17 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -149,8 +111,6 @@ final class ue extends da {
         int var7 = 0;
         Object stackIn_3_0 = null;
         ti[] stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -158,16 +118,6 @@ final class ue extends da {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ti[] stackOut_12_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -186,21 +136,20 @@ final class ue extends da {
               var5 = 0;
               L2: while (true) {
                 if (var5 >= var3) {
-                  stackOut_12_0 = (ti[]) (var4);
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = (ti[]) (var4);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   L3: {
                     if (fl.a(param1, (byte) 124)) {
                       var6 = new ti();
-                      discarded$12 = param1.e(24, 122);
-                      discarded$13 = param1.e(24, -77);
+                      param1.e(24, 122);
+                      param1.e(24, -77);
                       var6.field_b = param1.e(24, -17);
-                      discarded$14 = param1.e(9, param0 ^ 8162);
-                      discarded$15 = param1.e(12, 99);
-                      discarded$16 = param1.e(12, -70);
-                      discarded$17 = param1.e(12, param0 + 8311);
+                      param1.e(9, param0 ^ 8162);
+                      param1.e(12, 99);
+                      param1.e(12, -70);
+                      param1.e(12, param0 + 8311);
                       var4[var5] = var6;
                       break L3;
                     } else {
@@ -214,8 +163,7 @@ final class ue extends da {
                 }
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -224,27 +172,19 @@ final class ue extends da {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2);
-            stackOut_14_1 = new StringBuilder().append("ue.A(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2);
+
+            stackIn_16_1 = new StringBuilder().append("ue.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }
@@ -265,7 +205,6 @@ final class ue extends da {
     }
 
     final static int a(int param0, int param1, int param2, int param3, byte param4) {
-        ti[] discarded$0 = null;
         int var5 = -wb.field_p.field_o + param0;
         int var6 = param2 - wb.field_p.field_H;
         if (!(var5 >= 0)) {
@@ -273,7 +212,7 @@ final class ue extends da {
         }
         if (param4 != 79) {
             pa var8 = (pa) null;
-            discarded$0 = ue.a(71, (pa) null);
+            ue.a(71, (pa) null);
         }
         if (32 < var5) {
             var5 = 64 + -var5;
@@ -297,11 +236,11 @@ final class ue extends da {
     }
 
     final static void a(int param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = TorChallenge.field_F ? 1 : 0;
           var2 = 0;

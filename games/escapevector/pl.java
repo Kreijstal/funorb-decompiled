@@ -52,9 +52,9 @@ final class pl extends ld {
 
     static {
         $cfr$clinit: {
-            long var0 = 0L;
-            int var2 = 0;
-            int var3 = 0;
+            long var0;
+            int var2;
+            int var3;
             field_l = new long[256];
             var2 = 0;
             L0: while (true) {

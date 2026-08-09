@@ -43,7 +43,7 @@ final class qca extends llb {
     }
 
     private final void a(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         if (param1 != 64) {
           field_wb = -46;
           this.field_vb.a(0, -57, this.field_vb.e(78), 0, this.field_G);

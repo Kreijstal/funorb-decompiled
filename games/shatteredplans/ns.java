@@ -16,7 +16,7 @@ class ns extends il implements bp {
     static vk field_rb;
 
     final void p(int param0) {
-        cf var2 = null;
+        cf var2;
         if (param0 != -7011) {
           this.field_tb = false;
           this.field_yb.a(4210752, 2121792, -27855);
@@ -79,22 +79,12 @@ class ns extends il implements bp {
 
     public void a(kg param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             if (param1 == 6) {
@@ -116,27 +106,19 @@ class ns extends il implements bp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var6);
-            stackOut_6_1 = new StringBuilder().append("ns.F(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var6);
+
+            stackIn_8_1 = new StringBuilder().append("ns.F(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L1;
             }
           }
@@ -164,8 +146,6 @@ class ns extends il implements bp {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         boolean stackIn_5_0 = false;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -173,27 +153,15 @@ class ns extends il implements bp {
         String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        boolean stackOut_4_0 = false;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             if (param0 == param2) {
               this.i((byte) -104);
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
-              stackOut_4_0 = super.a(param0, param1, param2 + 0, param3);
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = super.a(param0, param1, param2 + 0, param3);
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -202,27 +170,19 @@ class ns extends il implements bp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5);
-            stackOut_6_1 = new StringBuilder().append("ns.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5);
+
+            stackIn_8_1 = new StringBuilder().append("ns.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L1;
             }
           }
@@ -236,22 +196,12 @@ class ns extends il implements bp {
     }
 
     final void a(String param0, int param1, int param2) {
-        kg discarded$2 = null;
-        kg discarded$3 = null;
-        RuntimeException var4 = null;
-        cf var4_ref = null;
-        int var5 = 0;
-        cf var6 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        cf stackIn_9_0 = null;
         cf stackIn_10_0 = null;
         cf stackIn_11_0 = null;
         String stackIn_11_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
@@ -259,43 +209,24 @@ class ns extends il implements bp {
         String stackIn_30_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        cf stackOut_8_0 = null;
-        cf stackOut_10_0 = null;
-        String stackOut_10_1 = null;
-        cf stackOut_9_0 = null;
-        String stackOut_9_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        cf var4 = null;
+        RuntimeException var4_ref = null;
+        int var5 = 0;
+        cf var6 = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
             if (!this.field_wb) {
               L1: {
-                stackOut_3_0 = this;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_5_0 = this;
+
                 if (256 != param1) {
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = 0;
-                  stackIn_6_0 = stackOut_5_0;
-                  stackIn_6_1 = stackOut_5_1;
+                  stackIn_6_0 = this;
+                  stackIn_6_1 = 0;
                   break L1;
                 } else {
-                  stackOut_4_0 = this;
-                  stackOut_4_1 = 1;
-                  stackIn_6_0 = stackOut_4_0;
-                  stackIn_6_1 = stackOut_4_1;
+                  stackIn_6_0 = this;
+                  stackIn_6_1 = 1;
                   break L1;
                 }
               }
@@ -304,31 +235,26 @@ class ns extends il implements bp {
                 this.field_wb = true;
                 this.field_yb.a(4210752, 8405024, -27855);
                 var6 = new cf((ns) (this), this.field_ub, param0);
-                var4_ref = var6;
+                var4 = var6;
                 if (5 == param1) {
                   var6.a(gg.field_b, (byte) 125, 11);
                   var6.a(em.field_g, (byte) 120, 17);
                   break L2;
                 } else {
                   if ((param1 ^ -1) == -257) {
-                    discarded$2 = var6.a((ko) (this), 121, ts.field_E);
+                    var6.a((ko) (this), 121, ts.field_E);
                     break L2;
                   } else {
                     L3: {
-                      stackOut_8_0 = (cf) (var6);
-                      stackIn_10_0 = stackOut_8_0;
-                      stackIn_9_0 = stackOut_8_0;
+                      stackIn_10_0 = (cf) (var6);
+
                       if (!this.field_tb) {
-                        stackOut_10_0 = (cf) ((Object) stackIn_10_0);
-                        stackOut_10_1 = ss.field_e;
-                        stackIn_11_0 = stackOut_10_0;
-                        stackIn_11_1 = stackOut_10_1;
+                        stackIn_11_0 = (cf) ((Object) stackIn_10_0);
+                        stackIn_11_1 = ss.field_e;
                         break L3;
                       } else {
-                        stackOut_9_0 = (cf) ((Object) stackIn_9_0);
-                        stackOut_9_1 = ts.field_E;
-                        stackIn_11_0 = stackOut_9_0;
-                        stackIn_11_1 = stackOut_9_1;
+                        stackIn_11_0 = (cf) ((Object) stackIn_10_0);
+                        stackIn_11_1 = ts.field_E;
                         break L3;
                       }
                     }
@@ -349,7 +275,7 @@ class ns extends il implements bp {
                         break L4;
                       } else {
                         if (param1 == 9) {
-                          discarded$3 = var6.a((ko) (this), 126, ib.field_d);
+                          var6.a((ko) (this), 126, ib.field_d);
                           break L4;
                         } else {
                           this.b(var6, 110);
@@ -377,28 +303,20 @@ class ns extends il implements bp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var4 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var4);
-            stackOut_27_1 = new StringBuilder().append("ns.J(");
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_29_0 = (RuntimeException) (var4_ref);
+
+            stackIn_29_1 = new StringBuilder().append("ns.J(");
+
             if (param0 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L5;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L5;
             }
           }

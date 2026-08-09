@@ -33,11 +33,11 @@ final class qa extends k {
     }
 
     final int[] a(int param0, int param1) {
-        int[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int[] var7 = null;
+        int[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int[] var7;
         var6 = BachelorFridge.field_y;
         if (param1 == 0) {
           var7 = this.field_j.a(param0, -1);
@@ -72,7 +72,7 @@ final class qa extends k {
     }
 
     private final int a(boolean param0, int param1, int param2) {
-        int var4 = 0;
+        int var4;
         var4 = param1 + 57 * param2;
         if (param0) {
           return -81;

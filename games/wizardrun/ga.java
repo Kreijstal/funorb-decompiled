@@ -23,8 +23,19 @@ final class ga {
     }
 
     final static boolean a(CharSequence param0, int param1, int param2, boolean param3) {
-        RuntimeException var4 = null;
+        int stackIn_23_0 = 0;
+        int stackIn_28_0 = 0;
+        int stackIn_34_0 = 0;
+        int stackIn_39_0 = 0;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_43_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -33,31 +44,6 @@ final class ga {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_34_0 = 0;
-        int stackIn_39_0 = 0;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        String stackIn_43_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_38_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_27_0 = 0;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
         var12 = wizardrun.field_H;
         try {
           L0: {
@@ -74,8 +60,7 @@ final class ga {
                   var9 = 0;
                   L2: while (true) {
                     if (var7 <= var9) {
-                      stackOut_38_0 = var5;
-                      stackIn_39_0 = stackOut_38_0;
+                      stackIn_39_0 = var5;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
@@ -127,8 +112,7 @@ final class ga {
                             }
                           }
                           if (var10 < 97) {
-                            stackOut_22_0 = 0;
-                            stackIn_23_0 = stackOut_22_0;
+                            stackIn_23_0 = 0;
                             decompiledRegionSelector0 = 0;
                             break L0;
                           } else {
@@ -155,14 +139,12 @@ final class ga {
                             var6 = var11;
                             break L3;
                           } else {
-                            stackOut_33_0 = 0;
-                            stackIn_34_0 = stackOut_33_0;
+                            stackIn_34_0 = 0;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           }
                         } else {
-                          stackOut_27_0 = 0;
-                          stackIn_28_0 = stackOut_27_0;
+                          stackIn_28_0 = 0;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         }
@@ -182,27 +164,19 @@ final class ga {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var4 = decompiledCaughtException;
-            stackOut_40_0 = (RuntimeException) (var4);
-            stackOut_40_1 = new StringBuilder().append("ga.B(");
-            stackIn_42_0 = stackOut_40_0;
-            stackIn_42_1 = stackOut_40_1;
-            stackIn_41_0 = stackOut_40_0;
-            stackIn_41_1 = stackOut_40_1;
+            stackIn_42_0 = (RuntimeException) (var4);
+
+            stackIn_42_1 = new StringBuilder().append("ga.B(");
+
             if (param0 == null) {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "null";
-              stackIn_43_0 = stackOut_42_0;
-              stackIn_43_1 = stackOut_42_1;
-              stackIn_43_2 = stackOut_42_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "null";
               break L9;
             } else {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "{...}";
-              stackIn_43_0 = stackOut_41_0;
-              stackIn_43_1 = stackOut_41_1;
-              stackIn_43_2 = stackOut_41_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "{...}";
               break L9;
             }
           }
@@ -231,22 +205,12 @@ final class ga {
             int var3 = 0;
             String var4 = null;
             java.net.URL var5 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
             RuntimeException stackIn_10_0 = null;
             StringBuilder stackIn_10_1 = null;
             RuntimeException stackIn_11_0 = null;
             StringBuilder stackIn_11_1 = null;
             String stackIn_11_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            RuntimeException stackOut_10_0 = null;
-            StringBuilder stackOut_10_1 = null;
-            String stackOut_10_2 = null;
-            RuntimeException stackOut_9_0 = null;
-            StringBuilder stackOut_9_1 = null;
-            String stackOut_9_2 = null;
             try {
               try {
                 L0: {
@@ -286,27 +250,19 @@ final class ga {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_8_0 = (RuntimeException) (var2_ref2);
-                stackOut_8_1 = new StringBuilder().append("ga.A(");
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_10_1 = stackOut_8_1;
-                stackIn_9_0 = stackOut_8_0;
-                stackIn_9_1 = stackOut_8_1;
+                stackIn_10_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_10_1 = new StringBuilder().append("ga.A(");
+
                 if (param0 == null) {
-                  stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-                  stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-                  stackOut_10_2 = "null";
-                  stackIn_11_0 = stackOut_10_0;
-                  stackIn_11_1 = stackOut_10_1;
-                  stackIn_11_2 = stackOut_10_2;
+                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+                  stackIn_11_2 = "null";
                   break L3;
                 } else {
-                  stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-                  stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-                  stackOut_9_2 = "{...}";
-                  stackIn_11_0 = stackOut_9_0;
-                  stackIn_11_1 = stackOut_9_1;
-                  stackIn_11_2 = stackOut_9_2;
+                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+                  stackIn_11_2 = "{...}";
                   break L3;
                 }
               }

@@ -14,144 +14,29 @@ final class vl extends ck {
     int field_u;
 
     final static void d(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        gh stackIn_1_0 = null;
-        int stackIn_1_1 = 0;
-        gh stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
-        gh stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        int stackIn_3_2 = 0;
-        gh stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        gh stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        int stackIn_5_2 = 0;
-        gh stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        int stackIn_6_2 = 0;
-        int stackIn_6_3 = 0;
-        int stackIn_9_0 = 0;
-        gh stackOut_0_0 = null;
-        int stackOut_0_1 = 0;
-        gh stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        gh stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        gh stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        gh stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        int stackOut_5_3 = 0;
-        gh stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        int stackOut_4_3 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        L0: {
-          sf.field_t = pb.field_j;
-          re.field_Z = pb.field_c;
-          bh.a(0);
-          sn.field_f.a(mg.field_Ub.field_Lb - 40 - 2, 0, mg.field_Ub.field_zb, 2, 0);
-          jb.field_C.a(0, 0, db.field_b, 0, ea.field_l.field_zb);
-          var1 = 2 + db.field_b;
-          stackOut_0_0 = fl.field_c;
-          stackOut_0_1 = 0;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_2_1 = stackOut_0_1;
-          stackIn_1_0 = stackOut_0_0;
-          stackIn_1_1 = stackOut_0_1;
-          if (!rm.field_p) {
-            stackOut_2_0 = (gh) ((Object) stackIn_2_0);
-            stackOut_2_1 = stackIn_2_1;
-            stackOut_2_2 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            stackIn_3_2 = stackOut_2_2;
-            break L0;
-          } else {
-            stackOut_1_0 = (gh) ((Object) stackIn_1_0);
-            stackOut_1_1 = stackIn_1_1;
-            stackOut_1_2 = var1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
-            break L0;
-          }
-        }
-        L1: {
-          stackOut_3_0 = (gh) ((Object) stackIn_3_0);
-          stackOut_3_1 = stackIn_3_1;
-          stackOut_3_2 = stackIn_3_2;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_5_1 = stackOut_3_1;
-          stackIn_5_2 = stackOut_3_2;
-          stackIn_4_0 = stackOut_3_0;
-          stackIn_4_1 = stackOut_3_1;
-          stackIn_4_2 = stackOut_3_2;
-          if (rm.field_p) {
-            stackOut_5_0 = (gh) ((Object) stackIn_5_0);
-            stackOut_5_1 = stackIn_5_1;
-            stackOut_5_2 = stackIn_5_2;
-            stackOut_5_3 = var1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            stackIn_6_2 = stackOut_5_2;
-            stackIn_6_3 = stackOut_5_3;
-            break L1;
-          } else {
-            stackOut_4_0 = (gh) ((Object) stackIn_4_0);
-            stackOut_4_1 = stackIn_4_1;
-            stackOut_4_2 = stackIn_4_2;
-            stackOut_4_3 = 0;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_6_2 = stackOut_4_2;
-            stackIn_6_3 = stackOut_4_3;
-            break L1;
-          }
-        }
-        L2: {
-          ((gh) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, -stackIn_6_3 + ea.field_l.field_Lb, 0, ea.field_l.field_zb);
-          ql.b(true);
-          sg.field_i.a(0, -40 + mg.field_Ub.field_Lb, 40, 0, mg.field_Ub.field_zb);
-          qi.field_c.a(param0, 0, 30, 0, pc.field_q.field_zb);
-          q.field_d.a(0, 30, -40 + pc.field_q.field_Lb - 2 - 30, 0, pc.field_q.field_zb);
-          td.field_bc.a(0, 5, 30, 5, 68);
-          dj.field_d.a(param0 + 0, 5, 30, 75, 78);
-          hd.field_q.a(0, 5, 30, 155, 48);
-          pe.field_v.a(0, 5, 30, 205, 48);
-          if (rm.field_p) {
-            stackOut_8_0 = 250;
-            stackIn_9_0 = stackOut_8_0;
-            break L2;
-          } else {
-            stackOut_7_0 = 200;
-            stackIn_9_0 = stackOut_7_0;
-            break L2;
-          }
-        }
-        L3: {
-          var2 = stackIn_9_0;
-          ql.field_Vb.a(0, 5, 30, var2 + 5, 363 - var2);
-          cf.field_w.a(0, 5, 30, 370, -5 + (-5 + pc.field_q.field_zb + -365));
-          rn.field_y.a(-5 + (-5 + q.field_d.field_zb), -2048, ua.field_G, -10 + (q.field_d.field_Lb - 32), 2, 5, 37);
-          var3 = (pc.field_q.field_zb + 2) / 2;
-          qm.field_b.a(0, pc.field_q.field_Lb + -40, 40, 0, var3 - 2);
-          if (rm.field_p) {
-            break L3;
-          } else {
+        sf.field_t = pb.field_j;
+        re.field_Z = pb.field_c;
+        bh.a(0);
+        sn.field_f.a(mg.field_Ub.field_Lb - 40 - 2, 0, mg.field_Ub.field_zb, 2, 0);
+        jb.field_C.a(0, 0, db.field_b, 0, ea.field_l.field_zb);
+        int var1 = 2 + db.field_b;
+        fl.field_c.a(0, rm.field_p ? var1 : 0, -(!rm.field_p ? 0 : var1) + ea.field_l.field_Lb, 0, ea.field_l.field_zb);
+        ql.b(true);
+        sg.field_i.a(0, -40 + mg.field_Ub.field_Lb, 40, 0, mg.field_Ub.field_zb);
+        qi.field_c.a(param0, 0, 30, 0, pc.field_q.field_zb);
+        q.field_d.a(0, 30, -40 + pc.field_q.field_Lb - 2 - 30, 0, pc.field_q.field_zb);
+        td.field_bc.a(0, 5, 30, 5, 68);
+        dj.field_d.a(param0 + 0, 5, 30, 75, 78);
+        hd.field_q.a(0, 5, 30, 155, 48);
+        pe.field_v.a(0, 5, 30, 205, 48);
+        int var2 = !rm.field_p ? 200 : 250;
+        ql.field_Vb.a(0, 5, 30, var2 + 5, 363 - var2);
+        cf.field_w.a(0, 5, 30, 370, -5 + (-5 + pc.field_q.field_zb + -365));
+        rn.field_y.a(-5 + (-5 + q.field_d.field_zb), -2048, ua.field_G, -10 + (q.field_d.field_Lb - 32), 2, 5, 37);
+        int var3 = (pc.field_q.field_zb + 2) / 2;
+        qm.field_b.a(0, pc.field_q.field_Lb + -40, 40, 0, var3 - 2);
+        if (!rm.field_p) {
             var3 = 0;
-            break L3;
-          }
         }
         uc.field_j.a(param0 ^ 0, -40 + pc.field_q.field_Lb, 40, var3, -var3 + pc.field_q.field_zb);
     }
@@ -168,23 +53,12 @@ final class vl extends ck {
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         ca stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ca stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -198,8 +72,7 @@ final class vl extends ck {
             var4 = param0.c(param1, param2 ^ 28734);
             var3 = var4;
             if (var4 != null) {
-              stackOut_5_0 = new ca(var4);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = new ca(var4);
               break L0;
             } else {
               return null;
@@ -209,27 +82,19 @@ final class vl extends ck {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3_ref);
-            stackOut_7_1 = new StringBuilder().append("vl.E(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3_ref);
+
+            stackIn_9_1 = new StringBuilder().append("vl.E(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -255,13 +120,12 @@ final class vl extends ck {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
-        ca discarded$1 = null;
-        int var9 = 0;
-        cm var10 = null;
+        int var9;
+        cm var10;
         var9 = SteelSentinels.field_G;
         if (param6) {
           var10 = (cm) null;
-          discarded$1 = vl.a((cm) null, 23, -121);
+          vl.a((cm) null, 23, -121);
           if (param2 >= param1) {
             if (param0 <= param2) {
               if (param0 > param1) {
@@ -321,9 +185,8 @@ final class vl extends ck {
     }
 
     final static boolean e(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 37) {
-            discarded$0 = vl.e(49);
+            vl.e(49);
             return bl.field_a;
         }
         return bl.field_a;

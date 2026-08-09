@@ -10,22 +10,18 @@ final class bl extends af {
     static String field_K;
 
     final void d(int param0) {
-        boolean discarded$0 = false;
         if (param0 > -60) {
-            discarded$0 = this.a(-74, (byte) 4);
+            this.a(-74, (byte) 4);
         }
         this.a(mi.field_b, 0);
     }
 
     final static String a(int param0, boolean param1, CharSequence param2) {
         String var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         String stackIn_4_0 = null;
         String stackIn_11_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -33,23 +29,13 @@ final class bl extends af {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        String stackOut_10_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var3_ref = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
             var3 = kf.a(param1, param2, 3);
             if (var3 != null) {
-              stackOut_3_0 = (String) (var3);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (String) (var3);
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -57,8 +43,7 @@ final class bl extends af {
               L1: while (true) {
                 if (var4 < param2.length()) {
                   if (!mh.a(true, param2.charAt(var4))) {
-                    stackOut_10_0 = cq.field_i;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = cq.field_i;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -75,27 +60,19 @@ final class bl extends af {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3_ref);
-            stackOut_14_1 = new StringBuilder().append("bl.D(").append(param0).append(',').append(param1).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3_ref);
+
+            stackIn_16_1 = new StringBuilder().append("bl.D(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L2;
             }
           }
@@ -110,8 +87,6 @@ final class bl extends af {
 
     final boolean a(int param0, byte param1) {
         int stackIn_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
         if (eo.a(this.field_t, param0, (byte) -75)) {
           return false;
         } else {
@@ -139,14 +114,12 @@ final class bl extends af {
                         }
                       }
                     }
-                    stackOut_12_0 = 0;
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = 0;
                     break L0;
                   }
                 }
               }
-              stackOut_11_0 = 1;
-              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_0 = 1;
               break L0;
             }
             return stackIn_13_0 != 0;

@@ -67,11 +67,10 @@ public class aj {
     }
 
     public static File a(String param0, byte param1) {
-        File discarded$2 = null;
-        String var3 = null;
+        String var3;
         if (param1 > -67) {
           var3 = (String) null;
-          discarded$2 = aj.a((String) null, (byte) -120);
+          aj.a((String) null, (byte) -120);
           return aj.a(field_d, -27533, param0, field_a);
         } else {
           return aj.a(field_d, -27533, param0, field_a);

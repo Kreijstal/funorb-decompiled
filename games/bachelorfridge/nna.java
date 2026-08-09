@@ -16,19 +16,17 @@ final class nna extends ana {
     }
 
     private final void e(byte param0) {
-        oha discarded$2 = null;
-        oha discarded$3 = null;
-        iv var3 = null;
-        int var5 = 0;
-        aga var6 = null;
-        ad var7 = null;
-        ad var8 = null;
+        iv var3;
+        int var5;
+        aga var6;
+        ad var7;
+        ad var8;
         var5 = BachelorFridge.field_y;
         var6 = this.field_x.field_l.a(54, this.field_q.field_h);
         if (!var6.i(119)) {
           var3 = (iv) ((Object) this.field_x.field_o.b((byte) 90));
           if (param0 < -11) {
-            discarded$2 = al.a(110, this.field_x.field_k);
+            al.a(110, this.field_x.field_k);
             L0: while (true) {
               if (var3 == null) {
                 return;
@@ -51,7 +49,7 @@ final class nna extends ana {
             }
           } else {
             field_v = (kv) null;
-            discarded$3 = al.a(110, this.field_x.field_k);
+            al.a(110, this.field_x.field_k);
             L2: while (true) {
               if (var3 == null) {
                 return;

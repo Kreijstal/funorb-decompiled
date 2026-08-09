@@ -21,29 +21,17 @@ final class fba {
     }
 
     final static float[] a(int param0, float[] param1, int param2) {
-        float[] discarded$2 = null;
         float[] var3 = null;
         RuntimeException var3_ref = null;
         float[] var4 = null;
         float[] var5 = null;
         float[] stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        float[] stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -51,42 +39,33 @@ final class fba {
                 break L1;
               } else {
                 var4 = (float[]) null;
-                discarded$2 = fba.a(60, (float[]) null, -59);
+                fba.a(60, (float[]) null, -59);
                 break L1;
               }
             }
             var5 = new float[param2];
             var3 = var5;
             lua.a(param1, 0, var5, 0, param2);
-            stackOut_2_0 = (float[]) (var5);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (float[]) (var5);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3_ref);
-            stackOut_4_1 = new StringBuilder().append("fba.B(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3_ref);
+
+            stackIn_6_1 = new StringBuilder().append("fba.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -96,18 +75,28 @@ final class fba {
     }
 
     final synchronized static byte[] a(int param0, int param1) {
-        int fieldTemp$63 = 0;
-        byte[][] fieldTemp$64 = null;
-        int fieldTemp$65 = 0;
-        byte[][] fieldTemp$66 = null;
-        int fieldTemp$67 = 0;
-        int fieldTemp$68 = 0;
-        byte[][] fieldTemp$69 = null;
-        int fieldTemp$70 = 0;
-        int fieldTemp$71 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        int fieldTemp$3 = 0;
+        int dupTemp$4 = 0;
+        byte[][] arrayValue$5 = null;
+        byte[][] fieldTemp$6 = null;
+        int fieldTemp$7 = 0;
+        int dupTemp$8 = 0;
+        byte[][] arrayValue$9 = null;
+        int dupTemp$10 = 0;
+        byte[][] arrayValue$11 = null;
+        int dupTemp$12 = 0;
+        byte[][] arrayValue$13 = null;
+        byte[][] fieldTemp$14 = null;
+        int fieldTemp$15 = 0;
+        int fieldTemp$16 = 0;
+        byte[][] fieldTemp$17 = null;
+        int fieldTemp$18 = 0;
+        int dupTemp$19 = 0;
+        byte[][] arrayValue$20 = null;
+        int fieldTemp$21 = 0;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
         if ((param0 ^ -1) != -101) {
           if (param1 == 0) {
             L0: {
@@ -117,9 +106,9 @@ final class fba {
                 if (-1 <= (rg.field_B ^ -1)) {
                   break L0;
                 } else {
-                  fieldTemp$63 = rg.field_B - 1;
+                  fieldTemp$3 = rg.field_B - 1;
                   rg.field_B = rg.field_B - 1;
-                  var2_ref_byte__ = tw.field_f[fieldTemp$63];
+                  var2_ref_byte__ = tw.field_f[fieldTemp$3];
                   tw.field_f[rg.field_B] = null;
                   return var2_ref_byte__;
                 }
@@ -137,8 +126,10 @@ final class fba {
                     } else {
                       if (param0 == cka.field_Mc[var2]) {
                         if ((qea.field_b[var2] ^ -1) < -1) {
-                          qea.field_b[var2] = qea.field_b[var2] - 1;
-                          var3 = osa.field_r[var2][qea.field_b[var2] - 1];
+                          dupTemp$4 = qea.field_b[var2] - 1;
+                          arrayValue$5 = osa.field_r[var2];
+                          qea.field_b[var2] = dupTemp$4;
+                          var3 = arrayValue$5[dupTemp$4];
                           osa.field_r[var2][qea.field_b[var2]] = null;
                           return var3;
                         } else {
@@ -156,10 +147,10 @@ final class fba {
               return new byte[param0];
             } else {
               if (ia.field_a > 0) {
-                fieldTemp$64 = fb.field_a;
-                fieldTemp$65 = ia.field_a - 1;
+                fieldTemp$6 = fb.field_a;
+                fieldTemp$7 = ia.field_a - 1;
                 ia.field_a = ia.field_a - 1;
-                var2_ref_byte__ = fieldTemp$64[fieldTemp$65];
+                var2_ref_byte__ = fieldTemp$6[fieldTemp$7];
                 fb.field_a[ia.field_a] = null;
                 return var2_ref_byte__;
               } else {
@@ -174,8 +165,10 @@ final class fba {
                       } else {
                         if (param0 == cka.field_Mc[var2]) {
                           if ((qea.field_b[var2] ^ -1) < -1) {
-                            qea.field_b[var2] = qea.field_b[var2] - 1;
-                            var3 = osa.field_r[var2][qea.field_b[var2] - 1];
+                            dupTemp$8 = qea.field_b[var2] - 1;
+                            arrayValue$9 = osa.field_r[var2];
+                            qea.field_b[var2] = dupTemp$8;
+                            var3 = arrayValue$9[dupTemp$8];
                             osa.field_r[var2][qea.field_b[var2]] = null;
                             return var3;
                           } else {
@@ -208,8 +201,10 @@ final class fba {
                         if (cka.field_Mc.length > var2) {
                           if (param0 == cka.field_Mc[var2]) {
                             if ((qea.field_b[var2] ^ -1) < -1) {
-                              qea.field_b[var2] = qea.field_b[var2] - 1;
-                              var3 = osa.field_r[var2][qea.field_b[var2] - 1];
+                              dupTemp$10 = qea.field_b[var2] - 1;
+                              arrayValue$11 = osa.field_r[var2];
+                              qea.field_b[var2] = dupTemp$10;
+                              var3 = arrayValue$11[dupTemp$10];
                               osa.field_r[var2][qea.field_b[var2]] = null;
                               return var3;
                             } else {
@@ -235,8 +230,10 @@ final class fba {
                           if (cka.field_Mc.length > var2) {
                             if (param0 == cka.field_Mc[var2]) {
                               if ((qea.field_b[var2] ^ -1) < -1) {
-                                qea.field_b[var2] = qea.field_b[var2] - 1;
-                                var3 = osa.field_r[var2][qea.field_b[var2] - 1];
+                                dupTemp$12 = qea.field_b[var2] - 1;
+                                arrayValue$13 = osa.field_r[var2];
+                                qea.field_b[var2] = dupTemp$12;
+                                var3 = arrayValue$13[dupTemp$12];
                                 osa.field_r[var2][qea.field_b[var2]] = null;
                                 return var3;
                               } else {
@@ -255,18 +252,18 @@ final class fba {
                         return new byte[param0];
                       }
                     } else {
-                      fieldTemp$66 = fb.field_a;
-                      fieldTemp$67 = ia.field_a - 1;
+                      fieldTemp$14 = fb.field_a;
+                      fieldTemp$15 = ia.field_a - 1;
                       ia.field_a = ia.field_a - 1;
-                      var2_ref_byte__ = fieldTemp$66[fieldTemp$67];
+                      var2_ref_byte__ = fieldTemp$14[fieldTemp$15];
                       fb.field_a[ia.field_a] = null;
                       return var2_ref_byte__;
                     }
                   }
                 } else {
-                  fieldTemp$68 = rg.field_B - 1;
+                  fieldTemp$16 = rg.field_B - 1;
                   rg.field_B = rg.field_B - 1;
-                  var2_ref_byte__ = tw.field_f[fieldTemp$68];
+                  var2_ref_byte__ = tw.field_f[fieldTemp$16];
                   tw.field_f[rg.field_B] = null;
                   return var2_ref_byte__;
                 }
@@ -276,10 +273,10 @@ final class fba {
                     break L7;
                   } else {
                     if (ia.field_a > 0) {
-                      fieldTemp$69 = fb.field_a;
-                      fieldTemp$70 = ia.field_a - 1;
+                      fieldTemp$17 = fb.field_a;
+                      fieldTemp$18 = ia.field_a - 1;
                       ia.field_a = ia.field_a - 1;
-                      var2_ref_byte__ = fieldTemp$69[fieldTemp$70];
+                      var2_ref_byte__ = fieldTemp$17[fieldTemp$18];
                       fb.field_a[ia.field_a] = null;
                       return var2_ref_byte__;
                     } else {
@@ -293,8 +290,10 @@ final class fba {
                     if (cka.field_Mc.length > var2) {
                       if (param0 == cka.field_Mc[var2]) {
                         if ((qea.field_b[var2] ^ -1) < -1) {
-                          qea.field_b[var2] = qea.field_b[var2] - 1;
-                          var3 = osa.field_r[var2][qea.field_b[var2] - 1];
+                          dupTemp$19 = qea.field_b[var2] - 1;
+                          arrayValue$20 = osa.field_r[var2];
+                          qea.field_b[var2] = dupTemp$19;
+                          var3 = arrayValue$20[dupTemp$19];
                           osa.field_r[var2][qea.field_b[var2]] = null;
                           return var3;
                         } else {
@@ -317,9 +316,9 @@ final class fba {
               return (byte[]) null;
             }
           } else {
-            fieldTemp$71 = ika.field_b - 1;
+            fieldTemp$21 = ika.field_b - 1;
             ika.field_b = ika.field_b - 1;
-            var2_ref_byte__ = eh.field_i[fieldTemp$71];
+            var2_ref_byte__ = eh.field_i[fieldTemp$21];
             eh.field_i[ika.field_b] = null;
             return var2_ref_byte__;
           }

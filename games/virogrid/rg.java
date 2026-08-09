@@ -14,14 +14,14 @@ final class rg extends RuntimeException {
     }
 
     final static String a(boolean param0) {
-        String var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        String var7 = null;
-        String var8 = null;
+        String var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        String var6;
+        String var7;
+        String var8;
         var5 = Virogrid.field_F ? 1 : 0;
         if (param0) {
           var6 = "(" + ah.field_e + " " + pl.field_c + " " + md.field_b + ") " + ci.field_q;

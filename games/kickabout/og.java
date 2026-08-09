@@ -11,17 +11,23 @@ abstract class og {
     abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
 
     final static void a(int param0, ut[] param1, int param2, int param3) {
-        RuntimeException var4 = null;
-        ut var4_ref = null;
+        ut var4 = null;
         int var5 = 0;
         int var6 = 0;
+        int var10 = 0;
+        ut var11 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var4_ref = null;
         ut var6_ref_ut = null;
         int var7 = 0;
         ut var7_ref_ut = null;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
-        ut var11 = null;
         int[] var12 = null;
         ut var13 = null;
         int[] var14 = null;
@@ -31,22 +37,6 @@ abstract class og {
         int[] var18 = null;
         ut var19 = null;
         int[] var20 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
         var10 = Kickabout.field_G;
         try {
           L0: {
@@ -92,11 +82,11 @@ abstract class og {
                     } else {
                       if (3 == rm.field_C) {
                         var11 = param1[p.a((byte) -24, 3)];
-                        var4_ref = var11;
+                        var4 = var11;
                         var5 = el.a(29430, 10, 896 + -var11.field_o >> 730531553);
                         var6 = el.a(29430, 10, 50 + -(var11.field_v >> 829059617));
                         var11.c(var5 + param2, var6 + param3);
-                        var4_ref.c(param2 - -var5, -var11.field_v + -var6 + (1344 + param3));
+                        var4.c(param2 - -var5, -var11.field_v + -var6 + (1344 + param3));
                         var5 = el.a(29430, 10, -var11.field_o + 896 >> -1266628095);
                         var6 = el.a(29430, 10, 1344 + -var11.field_v >> -1282865343);
                         param1[p.a((byte) -24, 3)].c(var5 + param2, param3 + var6);
@@ -143,28 +133,20 @@ abstract class og {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
-            var4 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var4);
-            stackOut_20_1 = new StringBuilder().append("og.G(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_22_0 = (RuntimeException) (var4_ref);
+
+            stackIn_22_1 = new StringBuilder().append("og.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L7;
             }
           }
@@ -190,25 +172,9 @@ abstract class og {
     abstract void a(int param0, int param1, int param2, java.awt.Component param3);
 
     final static String[] a(String param0, int param1, byte param2) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11_int = 0;
-        String[] var11 = null;
-        int var12 = 0;
-        int var13 = 0;
+        StringBuilder discarded$0 = null;
         String[] stackIn_4_0 = null;
         String[] stackIn_25_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
@@ -216,26 +182,28 @@ abstract class og {
         String stackIn_29_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String[] stackOut_3_0 = null;
-        String[] stackOut_24_0 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        String[] var11 = null;
+        int var11_int = 0;
+        int var12 = 0;
+        int var13 = 0;
         var13 = Kickabout.field_G;
         try {
           L0: {
             if (param0 == null) {
-              stackOut_3_0 = new String[]{};
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = new String[]{};
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
-              discarded$2 = dj.a(0, ' ', -11407, c.field_a);
+              dj.a(0, ' ', -11407, c.field_a);
               var3_int = 0;
               var4 = 0;
               var5 = -1;
@@ -260,8 +228,7 @@ abstract class og {
                   var12 = 0;
                   L3: while (true) {
                     if (var8 <= var12) {
-                      stackOut_24_0 = (String[]) (var11);
-                      stackIn_25_0 = stackOut_24_0;
+                      stackIn_25_0 = (String[]) (var11);
                       decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
@@ -273,10 +240,10 @@ abstract class og {
                 } else {
                   L4: {
                     var11_int = param0.charAt(var10);
-                    if (var11_int == 0) {
+                    if (-1 == (var11_int ^ -1)) {
                       break L4;
                     } else {
-                      discarded$3 = c.field_a.append((char) var11_int);
+                      discarded$0 = c.field_a.append((char) var11_int);
                       var3_int++;
                       var11_int = (char)(255 & mf.a((char) var11_int, (byte) -104));
                       break L4;
@@ -326,27 +293,19 @@ abstract class og {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var3);
-            stackOut_26_1 = new StringBuilder().append("og.F(");
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_28_0 = (RuntimeException) (var3);
+
+            stackIn_28_1 = new StringBuilder().append("og.F(");
+
             if (param0 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L7;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L7;
             }
           }

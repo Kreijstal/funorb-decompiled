@@ -16,8 +16,6 @@ final class ffb {
         byte[] stackIn_9_0 = null;
         byte[] stackIn_13_0 = null;
         byte[] stackIn_16_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -25,47 +23,31 @@ final class ffb {
         String stackIn_21_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_8_0 = null;
-        byte[] stackOut_6_0 = null;
-        byte[] stackOut_12_0 = null;
-        byte[] stackOut_15_0 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
         try {
           L0: {
             if (param1 != null) {
               if (param1 instanceof byte[]) {
                 var3 = (byte[]) (param1);
                 if (!param0) {
-                  stackOut_8_0 = (byte[]) (var3);
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = (byte[]) (var3);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_6_0 = nia.a(var3, (byte) -116);
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = nia.a(var3, (byte) -116);
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
               } else {
                 if (param1 instanceof ps) {
                   var4 = (ps) (param1);
-                  stackOut_12_0 = var4.b(3);
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = var4.b(3);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (param2) {
                     throw new IllegalArgumentException();
                   } else {
-                    stackOut_15_0 = (byte[]) null;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = (byte[]) null;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
@@ -79,27 +61,19 @@ final class ffb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var3_ref);
-            stackOut_18_1 = new StringBuilder().append("ffb.A(").append(param0).append(',');
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var3_ref);
+
+            stackIn_20_1 = new StringBuilder().append("ffb.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L1;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L1;
             }
           }
@@ -130,8 +104,9 @@ final class ffb {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -142,7 +117,6 @@ final class ffb {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        RuntimeException decompiledCaughtException = null;
         var15 = VoidHunters.field_G;
         try {
           L0: {

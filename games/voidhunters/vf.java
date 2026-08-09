@@ -21,7 +21,7 @@ final class vf {
 
     vf() {
         mb discarded$0 = new mb(786336);
-        int discarded$1 = ieb.a(1600, -61);
+        ieb.a(1600, -61);
     }
 
     public static void a(byte param0) {

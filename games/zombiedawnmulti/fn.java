@@ -29,7 +29,7 @@ final class fn extends RuntimeException {
     }
 
     final static uo a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        uo var6 = null;
+        uo var6;
         if (param3 <= 86) {
           return (uo) null;
         } else {

@@ -22,7 +22,6 @@ final class dk {
             Throwable var1 = null;
             ns stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            ns stackOut_2_0 = null;
             try {
               L0: {
                 L1: {
@@ -33,8 +32,7 @@ final class dk {
                     break L1;
                   }
                 }
-                stackOut_2_0 = (ns) (Class.forName("gp").newInstance());
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (ns) (Class.forName("gp").newInstance());
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

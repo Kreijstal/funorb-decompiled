@@ -15,8 +15,6 @@ final class rd extends rqa {
         RuntimeException var3 = null;
         nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -24,26 +22,14 @@ final class rd extends rqa {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_3_0 = null;
-        nc stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 <= -119) {
-              stackOut_3_0 = new nc(frb.a(114, 84));
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = new nc(frb.a(114, 84));
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (nc) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (nc) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -52,27 +38,19 @@ final class rd extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("rd.A(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("rd.A(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -90,50 +68,32 @@ final class rd extends rqa {
     }
 
     final static boolean a(String param0, int param1) {
-        Process discarded$11 = null;
         String var2 = null;
-        Exception var2_ref = null;
-        RuntimeException var2_ref2 = null;
         int var3 = 0;
         int var4 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_22_0 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
+        int stackIn_15_0 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_23_0 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_21_0 = 0;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        Exception var2_ref = null;
+        RuntimeException var2_ref2 = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
             try {
               L1: {
                 if (!eab.field_s.startsWith("win")) {
-                  stackOut_3_0 = 0;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L1;
                 } else {
@@ -144,8 +104,7 @@ final class rd extends rqa {
                       if (param0.startsWith("https://")) {
                         break L2;
                       } else {
-                        stackOut_7_0 = 0;
-                        stackIn_8_0 = stackOut_7_0;
+                        stackIn_8_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L1;
                       }
@@ -155,22 +114,19 @@ final class rd extends rqa {
                   var3 = 0;
                   L3: while (true) {
                     if (var3 >= param0.length()) {
-                      discarded$11 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
                       if (param1 > 28) {
-                        stackOut_19_0 = 1;
-                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_21_0 = 1;
                         decompiledRegionSelector0 = 4;
                         break L1;
                       } else {
-                        stackOut_17_0 = 0;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_19_0 = 0;
                         decompiledRegionSelector0 = 3;
                         break L1;
                       }
                     } else {
                       if (var2.indexOf((int) param0.charAt(var3)) == -1) {
-                        stackOut_13_0 = 0;
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_15_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L1;
                       } else {
@@ -184,9 +140,8 @@ final class rd extends rqa {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackOut_21_0 = 0;
-              stackIn_22_0 = stackOut_21_0;
-              return stackIn_22_0 != 0;
+              stackIn_23_0 = 0;
+              return stackIn_23_0 != 0;
             }
             if (decompiledRegionSelector0 == 0) {
               decompiledRegionSelector1 = 0;
@@ -215,31 +170,23 @@ final class rd extends rqa {
           decompiledCaughtException = decompiledCaughtParameter1;
           L4: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var2_ref2);
-            stackOut_23_1 = new StringBuilder().append("rd.B(");
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_26_0 = (RuntimeException) (var2_ref2);
+
+            stackIn_26_1 = new StringBuilder().append("rd.B(");
+
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L4;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L4;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param1 + ')');
         }
         if (decompiledRegionSelector1 == 0) {
           return stackIn_4_0 != 0;
@@ -248,12 +195,12 @@ final class rd extends rqa {
             return stackIn_8_0 != 0;
           } else {
             if (decompiledRegionSelector1 == 2) {
-              return stackIn_14_0 != 0;
+              return stackIn_15_0 != 0;
             } else {
               if (decompiledRegionSelector1 == 3) {
-                return stackIn_18_0 != 0;
+                return stackIn_19_0 != 0;
               } else {
-                return stackIn_20_0 != 0;
+                return stackIn_21_0 != 0;
               }
             }
           }

@@ -57,12 +57,12 @@ final class qk implements Runnable {
     }
 
     final synchronized boolean a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         if (-3 < (this.field_a ^ -1)) {
           L0: {
             if (this.field_a == 0) {

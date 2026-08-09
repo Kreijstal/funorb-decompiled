@@ -12,10 +12,9 @@ abstract class af extends cj implements ik {
     static char[] field_F;
 
     void a(int param0, df param1) {
-        int discarded$0 = 0;
         try {
             if (param0 != -11808) {
-                discarded$0 = this.a(10);
+                this.a(10);
             }
             this.field_K = param1;
             this.field_K.field_h = (af) (this);
@@ -31,8 +30,6 @@ abstract class af extends cj implements ik {
         int stackIn_3_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -40,17 +37,6 @@ abstract class af extends cj implements ik {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -66,8 +52,7 @@ abstract class af extends cj implements ik {
               var3_int = 0;
               L2: while (true) {
                 if (param1.length() <= var3_int) {
-                  stackOut_12_0 = 1;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = 1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -75,16 +60,14 @@ abstract class af extends cj implements ik {
                     var3_int++;
                     continue L2;
                   } else {
-                    stackOut_9_0 = 0;
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = 0;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -93,27 +76,19 @@ abstract class af extends cj implements ik {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("af.W(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3);
+
+            stackIn_16_1 = new StringBuilder().append("af.W(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L3;
             }
           }

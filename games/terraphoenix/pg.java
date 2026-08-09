@@ -28,7 +28,7 @@ final class pg {
     }
 
     pg(int param0) {
-        int var2 = 0;
+        int var2;
         this.field_c = new int[3];
         this.field_e = new int[3];
         this.field_a = new int[3];

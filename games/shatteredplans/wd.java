@@ -25,7 +25,7 @@ final class wd extends ji {
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
-        int var6 = 0;
+        int var6;
         super.a(param0, param1, (byte) 119, param3, param4);
         if (param2 > 99) {
           var6 = -130 + param4 >> -914328031;
@@ -121,18 +121,14 @@ final class wd extends ji {
         int stackIn_4_0 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
         try {
           L0: {
             if (param0 >= 65) {
-              stackOut_3_0 = Integer.parseInt(this.field_R.field_s);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = Integer.parseInt(this.field_R.field_s);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = -36;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = -36;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -150,16 +146,14 @@ final class wd extends ji {
     }
 
     final int f(byte param0) {
-        int var2 = 0;
-        NumberFormatException var3 = null;
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_1_0 = 0;
+        int var2 = 0;
+        NumberFormatException var3 = null;
         var2 = 74 / ((param0 - 48) / 42);
         try {
           L0: {
-            stackOut_1_0 = Integer.parseInt(this.field_M.field_s) - 1;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_2_0 = Integer.parseInt(this.field_M.field_s) - 1;
             break L0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -217,7 +211,7 @@ final class wd extends ji {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = 0;
+        int var3;
         var3 = 26 % ((80 - param1) / 43);
         if (-3 < (param2 ^ -1)) {
           if (param0 < 5) {
@@ -276,18 +270,14 @@ final class wd extends ji {
         int stackIn_4_0 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
         try {
           L0: {
             if (!param0) {
-              stackOut_3_0 = Integer.parseInt(this.field_O.field_s);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = Integer.parseInt(this.field_O.field_s);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 121;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 121;
               decompiledRegionSelector0 = 0;
               break L0;
             }

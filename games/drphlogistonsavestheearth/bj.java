@@ -19,10 +19,10 @@ final class bj {
     }
 
     final static int a(boolean param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var3 = param1 >> 1702595472;
         var4 = 65535 & param1;
         if (param0) {
@@ -79,7 +79,7 @@ final class bj {
     }
 
     final static void a(int param0, int param1) {
-        lh var2 = null;
+        lh var2;
         var2 = nj.field_p;
         var2.d(param1, -18392);
         var2.c(1, (byte) -117);

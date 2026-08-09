@@ -8,14 +8,14 @@ final class ma {
     static int field_c;
 
     final static kc[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
-        int var9 = 0;
-        kc[] var10 = null;
-        kc[] var11_ref_kc__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        kc var13 = null;
-        int var14 = 0;
-        int var15 = 0;
+        int var9;
+        kc[] var10;
+        kc[] var11_ref_kc__;
+        int var11;
+        int var12;
+        kc var13;
+        int var14;
+        int var15;
         var15 = Main.field_T;
         var9 = param3 + param1 + param6;
         var10 = new kc[]{new kc(var9, var9), new kc(param4, var9), new kc(var9, var9), new kc(var9, param4), new kc(64, 64), new kc(var9, param4), new kc(var9, var9), new kc(param4, var9), new kc(var9, var9)};
@@ -145,8 +145,6 @@ final class ma {
         qa stackIn_4_0 = null;
         qa stackIn_9_0 = null;
         qa stackIn_14_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -154,24 +152,12 @@ final class ma {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        qa stackOut_3_0 = null;
-        qa stackOut_13_0 = null;
-        qa stackOut_8_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         var6 = Main.field_T;
         try {
           L0: {
             var2 = he.a(param1 + -21124, param0, "jagex-last-login-method");
             if (var2 == null) {
-              stackOut_3_0 = bf.field_c;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = bf.field_c;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -187,8 +173,7 @@ final class ma {
                       break L2;
                     }
                   }
-                  stackOut_13_0 = bf.field_c;
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_0 = bf.field_c;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -197,8 +182,7 @@ final class ma {
                     var4++;
                     continue L1;
                   } else {
-                    stackOut_8_0 = (qa) (var5);
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = (qa) (var5);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -210,27 +194,19 @@ final class ma {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var2_ref);
-            stackOut_15_1 = new StringBuilder().append("ma.B(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var2_ref);
+
+            stackIn_17_1 = new StringBuilder().append("ma.B(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L3;
             }
           }
@@ -268,8 +244,8 @@ final class ma {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = Main.field_T;
           d.field_a = null;

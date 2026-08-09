@@ -42,31 +42,21 @@ final class gf {
     static int field_b;
 
     final boolean a(int param0, double param1, double param2) {
-        double var6 = 0.0;
-        double var8 = 0.0;
-        double var10 = 0.0;
-        double var12 = 0.0;
-        double var14 = 0.0;
-        double var16 = 0.0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
         int stackIn_39_0 = 0;
         int stackIn_43_0 = 0;
         int stackIn_57_0 = 0;
         int stackIn_61_0 = 0;
         int stackIn_87_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_86_0 = 0;
-        int stackOut_85_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
+        double var6;
+        double var8;
+        double var10;
+        double var12;
+        double var14;
+        double var16;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
         var21 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (-1 == this.field_I) {
           return true;
@@ -100,12 +90,10 @@ final class gf {
                   L1: {
                     this.field_a = this.field_a - 32;
                     if (-1 > (this.field_a ^ -1)) {
-                      stackOut_38_0 = 0;
-                      stackIn_39_0 = stackOut_38_0;
+                      stackIn_39_0 = 0;
                       break L1;
                     } else {
-                      stackOut_37_0 = 1;
-                      stackIn_39_0 = stackOut_37_0;
+                      stackIn_39_0 = 1;
                       break L1;
                     }
                   }
@@ -142,12 +130,10 @@ final class gf {
                                                 this.field_a = this.field_a - 4;
                                                 this.field_t = (int)Math.round((double)(this.field_a * af.field_f[this.field_I]) / 255.0);
                                                 if ((this.field_a ^ -1) < -1) {
-                                                  stackOut_60_0 = 0;
-                                                  stackIn_61_0 = stackOut_60_0;
+                                                  stackIn_61_0 = 0;
                                                   break L5;
                                                 } else {
-                                                  stackOut_59_0 = 1;
-                                                  stackIn_61_0 = stackOut_59_0;
+                                                  stackIn_61_0 = 1;
                                                   break L5;
                                                 }
                                               }
@@ -182,12 +168,10 @@ final class gf {
                                                             L6: {
                                                               this.field_a = this.field_a - 51;
                                                               if (this.field_a > 0) {
-                                                                stackOut_86_0 = 0;
-                                                                stackIn_87_0 = stackOut_86_0;
+                                                                stackIn_87_0 = 0;
                                                                 break L6;
                                                               } else {
-                                                                stackOut_85_0 = 1;
-                                                                stackIn_87_0 = stackOut_85_0;
+                                                                stackIn_87_0 = 1;
                                                                 break L6;
                                                               }
                                                             }
@@ -296,12 +280,10 @@ final class gf {
                                   L14: {
                                     this.field_t = (int)Math.round((double)(af.field_f[this.field_I] * this.field_a) / 255.0);
                                     if (0 < this.field_a) {
-                                      stackOut_56_0 = 0;
-                                      stackIn_57_0 = stackOut_56_0;
+                                      stackIn_57_0 = 0;
                                       break L14;
                                     } else {
-                                      stackOut_55_0 = 1;
-                                      stackIn_57_0 = stackOut_55_0;
+                                      stackIn_57_0 = 1;
                                       break L14;
                                     }
                                   }
@@ -348,12 +330,10 @@ final class gf {
                     L16: {
                       this.field_a = this.field_a - 4;
                       if ((this.field_a ^ -1) < -1) {
-                        stackOut_42_0 = 0;
-                        stackIn_43_0 = stackOut_42_0;
+                        stackIn_43_0 = 0;
                         break L16;
                       } else {
-                        stackOut_41_0 = 1;
-                        stackIn_43_0 = stackOut_41_0;
+                        stackIn_43_0 = 1;
                         break L16;
                       }
                     }
@@ -424,44 +404,32 @@ final class gf {
     }
 
     final static void b(byte param0) {
-        L0: {
-          kj.field_b[2] = 240;
-          ih.field_O[2] = 180;
-          kj.field_b[4] = 80;
-          kj.field_b[10] = 80;
-          ih.field_O[4] = 56;
-          if (param0 == 86) {
-            break L0;
-          } else {
+        kj.field_b[2] = 240;
+        ih.field_O[2] = 180;
+        kj.field_b[4] = 80;
+        kj.field_b[10] = 80;
+        ih.field_O[4] = 56;
+        if (param0 != 86) {
             field_s = (String) null;
-            break L0;
-          }
         }
-        L1: {
-          ih.field_O[10] = 56;
-          dl.a(new int[]{5}, 390, 275, 4, 455, 30, (byte) 123);
-          th.field_a[4] = new ld(4);
-          ul.field_j[9] = new int[]{2, 5};
-          th.field_a[9] = new ld(9);
-          dl.a(new int[]{35, 36, 37, 6}, 385, 200, 2, 540, 30, (byte) 124);
-          th.field_a[2] = new ld(2);
-          dl.a(new int[]{5}, 390, 200, 12, 455, 30, (byte) 119);
-          th.field_a[12] = new ld(12);
-          ul.field_b[10] = ul.field_b[4];
-          ul.field_j[10] = new int[]{5, 26, 27, 28, 29, 30, 31, 32, 33, 34};
-          ul.field_i[10] = ul.field_b[10] - -cb.field_b.b(hg.field_ob[10]);
-          th.field_a[10] = new ld(10);
-          if (0 >= hb.field_g) {
-            break L1;
-          } else {
-            if (ea.a(sb.field_d, 0)) {
-              dl.a(new int[]{1, 3, 10, 11, 4, 19, 7}, 200, 200, 1, 540, 30, (byte) 122);
-              th.field_a[1] = new ld(1);
-              break L1;
-            } else {
-              break L1;
+        ih.field_O[10] = 56;
+        dl.a(new int[]{5}, 390, 275, 4, 455, 30, (byte) 123);
+        th.field_a[4] = new ld(4);
+        ul.field_j[9] = new int[]{2, 5};
+        th.field_a[9] = new ld(9);
+        dl.a(new int[]{35, 36, 37, 6}, 385, 200, 2, 540, 30, (byte) 124);
+        th.field_a[2] = new ld(2);
+        dl.a(new int[]{5}, 390, 200, 12, 455, 30, (byte) 119);
+        th.field_a[12] = new ld(12);
+        ul.field_b[10] = ul.field_b[4];
+        ul.field_j[10] = new int[]{5, 26, 27, 28, 29, 30, 31, 32, 33, 34};
+        ul.field_i[10] = ul.field_b[10] - -cb.field_b.b(hg.field_ob[10]);
+        th.field_a[10] = new ld(10);
+        if (0 < hb.field_g) {
+            if (!(!ea.a(sb.field_d, 0))) {
+                dl.a(new int[]{1, 3, 10, 11, 4, 19, 7}, 200, 200, 1, 540, 30, (byte) 122);
+                th.field_a[1] = new ld(1);
             }
-          }
         }
     }
 
@@ -490,45 +458,31 @@ final class gf {
     }
 
     final void c(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5_int = 0;
-        double var5 = 0.0;
-        double var7 = 0.0;
-        int var9 = 0;
-        double var10 = 0.0;
-        gg var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int[] var16 = null;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int[] var20 = null;
-        int[] var21 = null;
-        gg stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
-        int stackIn_14_2 = 0;
         gg stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         int stackIn_15_2 = 0;
-        gg stackIn_16_0 = null;
-        int stackIn_16_1 = 0;
-        int stackIn_16_2 = 0;
-        int stackIn_16_3 = 0;
-        gg stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        gg stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        int stackOut_15_2 = 0;
-        int stackOut_15_3 = 0;
-        gg stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        int stackOut_14_2 = 0;
-        int stackOut_14_3 = 0;
+        gg stackIn_16_0;
+        int stackIn_16_1;
+        int stackIn_16_2;
+        int stackIn_16_3;
+        int var2;
+        int var3;
+        int var4;
+        int var5_int;
+        double var5;
+        double var7;
+        int var9;
+        double var10;
+        gg var12;
+        int var13;
+        int var14;
+        int var15;
+        int[] var16;
+        int var17;
+        int var18;
+        int var19;
+        int[] var20;
+        int[] var21;
         var19 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param0 >= 101) {
           L0: {
@@ -576,34 +530,23 @@ final class gf {
                   var4 = var4 >> 8;
                   var3 = var3 << 8;
                   var2 = var2 << 16;
-                  stackOut_13_0 = (gg) (var12);
-                  stackOut_13_1 = -1093327740;
-                  stackOut_13_2 = 16777215;
-                  stackIn_15_0 = stackOut_13_0;
-                  stackIn_15_1 = stackOut_13_1;
-                  stackIn_15_2 = stackOut_13_2;
-                  stackIn_14_0 = stackOut_13_0;
-                  stackIn_14_1 = stackOut_13_1;
-                  stackIn_14_2 = stackOut_13_2;
+                  stackIn_15_0 = (gg) (var12);
+
+                  stackIn_15_1 = -1093327740;
+
+                  stackIn_15_2 = 16777215;
+
                   if ((sd.field_e ^ -1) != -3) {
-                    stackOut_15_0 = (gg) ((Object) stackIn_15_0);
-                    stackOut_15_1 = stackIn_15_1;
-                    stackOut_15_2 = stackIn_15_2;
-                    stackOut_15_3 = 0;
-                    stackIn_16_0 = stackOut_15_0;
-                    stackIn_16_1 = stackOut_15_1;
-                    stackIn_16_2 = stackOut_15_2;
-                    stackIn_16_3 = stackOut_15_3;
+                    stackIn_16_0 = (gg) ((Object) stackIn_15_0);
+                    stackIn_16_1 = stackIn_15_1;
+                    stackIn_16_2 = stackIn_15_2;
+                    stackIn_16_3 = 0;
                     break L4;
                   } else {
-                    stackOut_14_0 = (gg) ((Object) stackIn_14_0);
-                    stackOut_14_1 = stackIn_14_1;
-                    stackOut_14_2 = stackIn_14_2;
-                    stackOut_14_3 = 1;
-                    stackIn_16_0 = stackOut_14_0;
-                    stackIn_16_1 = stackOut_14_1;
-                    stackIn_16_2 = stackOut_14_2;
-                    stackIn_16_3 = stackOut_14_3;
+                    stackIn_16_0 = (gg) ((Object) stackIn_15_0);
+                    stackIn_16_1 = stackIn_15_1;
+                    stackIn_16_2 = stackIn_15_2;
+                    stackIn_16_3 = 1;
                     break L4;
                   }
                 }
@@ -668,7 +611,7 @@ final class gf {
     }
 
     gf(int param0, double param1, double param2, double param3, double param4, double param5, double param6, int param7) {
-        int var15 = 0;
+        int var15;
         L0: {
           this.field_B = 0;
           this.field_x = new int[]{2, 0, 4, 0, 4, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 0, 8, 10, 0, 2, 0, 10, 8, 0, 0, 10, 0, 0};

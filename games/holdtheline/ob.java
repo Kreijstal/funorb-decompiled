@@ -8,7 +8,7 @@ abstract class ob implements ia {
     abstract String d(int param0);
 
     final static String d(byte param0) {
-        int var1 = 0;
+        int var1;
         if (bb.field_a == sf.field_n) {
           return ij.field_k;
         } else {
@@ -42,13 +42,12 @@ abstract class ob implements ia {
     }
 
     public final fd b(int param0) {
-        String discarded$2 = null;
         if (this.a((byte) -114)) {
           return di.field_q;
         } else {
           if ((bb.b(-1) ^ -1L) <= (this.field_a + 350L ^ -1L)) {
             if (param0 != -7447) {
-              discarded$2 = ob.d((byte) -36);
+              ob.d((byte) -36);
               return this.c((byte) -92);
             } else {
               return this.c((byte) -92);
@@ -69,10 +68,9 @@ abstract class ob implements ia {
     }
 
     public static void c(int param0) {
-        String discarded$0 = null;
         field_b = null;
         if (param0 != -24581) {
-            discarded$0 = ob.d((byte) 45);
+            ob.d((byte) 45);
         }
     }
 

@@ -54,10 +54,10 @@ abstract class mc extends ij {
     }
 
     final static dl a(int param0, int param1, int param2) {
-        dl var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        dl var6 = null;
+        dl var3;
+        int var4;
+        int var5;
+        dl var6;
         var5 = CrazyCrystals.field_B;
         if (param1 < -10) {
           var6 = new dl(param0, param0);

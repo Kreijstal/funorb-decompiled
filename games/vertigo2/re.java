@@ -25,8 +25,8 @@ final class re {
     }
 
     private final void b(int param0, byte param1) {
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         if (param1 <= 59) {
           return;
         } else {
@@ -39,47 +39,33 @@ final class re {
     }
 
     private final int a(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
-        var4 = Vertigo2.field_L ? 1 : 0;
-        var3 = this.field_i.length;
-        if (param1 == 120) {
-          L0: while (true) {
-            if (var3 > param0) {
-              return var3;
-            } else {
-              if (this.field_e) {
-                if (var3 == 0) {
-                  var3 = 1;
-                  continue L0;
-                } else {
-                  var3 = var3 * this.field_b;
-                  continue L0;
-                }
-              } else {
-                var3 = var3 + this.field_b;
-                continue L0;
-              }
-            }
+        int var3;
+        int var4;
+        L0: {
+          var4 = Vertigo2.field_L ? 1 : 0;
+          var3 = this.field_i.length;
+          if (param1 == 120) {
+            break L0;
+          } else {
+            this.a((byte) -28, -51, -53);
+            break L0;
           }
-        } else {
-          this.a((byte) -28, -51, -53);
-          L1: while (true) {
-            if (var3 > param0) {
-              return var3;
-            } else {
-              if (this.field_e) {
-                if (var3 == 0) {
-                  var3 = 1;
-                  continue L1;
-                } else {
-                  var3 = var3 * this.field_b;
-                  continue L1;
-                }
+        }
+        L1: while (true) {
+          if (var3 > param0) {
+            return var3;
+          } else {
+            if (this.field_e) {
+              if (var3 == 0) {
+                var3 = 1;
+                continue L1;
               } else {
-                var3 = var3 + this.field_b;
+                var3 = var3 * this.field_b;
                 continue L1;
               }
+            } else {
+              var3 = var3 + this.field_b;
+              continue L1;
             }
           }
         }
@@ -105,8 +91,8 @@ final class re {
     }
 
     private final void a(byte param0, int param1, int param2) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
+        int discarded$2 = 0;
+        int discarded$3 = 0;
         if (this.field_h >= param2) {
           L0: {
             if (param2 >= this.field_i.length) {
@@ -117,7 +103,7 @@ final class re {
             }
           }
           if (param0 >= -20) {
-            discarded$4 = this.a(110, (byte) -93);
+            discarded$2 = this.a(110, (byte) -93);
             this.field_i[param2] = param1;
             return;
           } else {
@@ -138,7 +124,7 @@ final class re {
             this.field_i[param2] = param1;
             return;
           } else {
-            discarded$5 = this.a(110, (byte) -93);
+            discarded$3 = this.a(110, (byte) -93);
             this.field_i[param2] = param1;
             return;
           }

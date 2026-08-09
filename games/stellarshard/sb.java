@@ -35,10 +35,9 @@ final class sb {
     }
 
     final ah a(boolean param0) {
-        ah discarded$5 = null;
-        ah var2 = null;
-        ah var3 = null;
-        int var4 = 0;
+        ah var2;
+        ah var3;
+        int var4;
         var4 = stellarshard.field_B;
         if (this.field_g != null) {
           if (param0) {
@@ -59,7 +58,7 @@ final class sb {
               }
             }
           } else {
-            discarded$5 = this.a(true);
+            this.a(true);
             var2 = this.field_f[(int)((long)(-1 + this.field_d) & this.field_h)];
             L1: while (true) {
               if (this.field_g != var2) {
@@ -98,9 +97,9 @@ final class sb {
     }
 
     final ah a(long param0, int param1) {
-        ah var4 = null;
-        ah var5 = null;
-        int var6 = 0;
+        ah var4;
+        ah var5;
+        int var6;
         var6 = stellarshard.field_B;
         this.field_h = param0;
         var4 = this.field_f[(int)(param0 & (long)(-1 + this.field_d))];

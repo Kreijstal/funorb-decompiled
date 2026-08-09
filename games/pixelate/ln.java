@@ -12,8 +12,6 @@ final class ln extends fa {
 
     final static String a(java.applet.Applet param0, byte param1) {
         try {
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -23,8 +21,6 @@ final class ln extends fa {
             String var9 = null;
             String stackIn_9_0 = null;
             String stackIn_16_0 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
             RuntimeException stackIn_20_0 = null;
@@ -33,16 +29,8 @@ final class ln extends fa {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            String stackOut_8_0 = null;
-            String stackOut_15_0 = null;
-            RuntimeException stackOut_17_0 = null;
-            StringBuilder stackOut_17_1 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            String stackOut_18_2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
             var8 = Pixelate.field_H ? 1 : 0;
             try {
               L0: {
@@ -72,8 +60,7 @@ final class ln extends fa {
                             break L4;
                           } else {
                             if (var5[var6].substring(0, var7).trim().equals(var3)) {
-                              stackOut_8_0 = var5[var6].substring(var7 - -1).trim();
-                              stackIn_9_0 = stackOut_8_0;
+                              stackIn_9_0 = var5[var6].substring(var7 - -1).trim();
                               decompiledRegionSelector0 = 1;
                               break L1;
                             } else {
@@ -96,8 +83,7 @@ final class ln extends fa {
                 }
                 if (decompiledRegionSelector0 == 0) {
                   if (jp.field_c != null) {
-                    stackOut_15_0 = jp.field_c;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = jp.field_c;
                     decompiledRegionSelector1 = 0;
                     break L0;
                   } else {
@@ -112,27 +98,19 @@ final class ln extends fa {
               decompiledCaughtException = decompiledCaughtParameter1;
               L6: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_17_0 = (RuntimeException) (var2_ref);
-                stackOut_17_1 = new StringBuilder().append("ln.D(");
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
+                stackIn_19_0 = (RuntimeException) (var2_ref);
+
+                stackIn_19_1 = new StringBuilder().append("ln.D(");
+
                 if (param0 == null) {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "null";
-                  stackIn_20_0 = stackOut_19_0;
-                  stackIn_20_1 = stackOut_19_1;
-                  stackIn_20_2 = stackOut_19_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "null";
                   break L6;
                 } else {
-                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackOut_18_2 = "{...}";
-                  stackIn_20_0 = stackOut_18_0;
-                  stackIn_20_1 = stackOut_18_1;
-                  stackIn_20_2 = stackOut_18_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "{...}";
                   break L6;
                 }
               }
@@ -161,7 +139,7 @@ final class ln extends fa {
 
     ln(int param0) {
         this.field_o = pp.a(pg.field_f[param0], 100, ci.field_m[param0]);
-        cm discarded$0 = mn.a(-21317, this.field_o);
+        mn.a(-21317, this.field_o);
     }
 
     final static void a(int param0) {
@@ -181,7 +159,7 @@ final class ln extends fa {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var9 = 0;
+        int var9;
         L0: {
           var9 = Pixelate.field_H ? 1 : 0;
           if (param6 == 100) {

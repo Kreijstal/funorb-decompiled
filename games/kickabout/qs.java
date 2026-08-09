@@ -88,22 +88,14 @@ final class qs extends ta {
     }
 
     final void a(byte param0, boolean param1) {
-        wh discarded$2 = null;
-        wh discarded$3 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        hd stackIn_14_0 = null;
         hd stackIn_15_0 = null;
         hd stackIn_16_0 = null;
         int stackIn_16_1 = 0;
-        hd stackOut_13_0 = null;
-        hd stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        hd stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         L0: {
           var6 = Kickabout.field_G;
           super.a((byte) 113, param1);
@@ -160,14 +152,23 @@ final class qs extends ta {
         L4: while (true) {
           if (var7 >= this.field_F.length) {
             L5: {
-              if (this.field_J.h((byte) -73) <= var3) {
+              if (this.field_J.h((byte) -73) > var3) {
+                L6: {
+                  if (this.field_O == 0) {
+                    sp.c(59, -112);
+                    this.field_O = 10;
+                    break L6;
+                  } else {
+                    break L6;
+                  }
+                }
                 if (this.field_J.h((byte) -86) >= var3) {
                   break L5;
                 } else {
                   if (-1 != (this.field_O ^ -1)) {
                     break L5;
                   } else {
-                    discarded$2 = sp.c(60, -127);
+                    sp.c(60, -127);
                     this.field_O = 10;
                     break L5;
                   }
@@ -179,7 +180,7 @@ final class qs extends ta {
                   if (-1 != (this.field_O ^ -1)) {
                     break L5;
                   } else {
-                    discarded$3 = sp.c(60, -127);
+                    sp.c(60, -127);
                     this.field_O = 10;
                     break L5;
                   }
@@ -188,22 +189,17 @@ final class qs extends ta {
             }
             return;
           } else {
-            L6: {
-              stackOut_13_0 = this.field_F[var7].field_Mb;
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_14_0 = stackOut_13_0;
+            L7: {
+              stackIn_15_0 = this.field_F[var7].field_Mb;
+
               if (ic.field_h.field_x < this.field_F[var7].field_Gb) {
-                stackOut_15_0 = (hd) ((Object) stackIn_15_0);
-                stackOut_15_1 = 0;
-                stackIn_16_0 = stackOut_15_0;
-                stackIn_16_1 = stackOut_15_1;
-                break L6;
+                stackIn_16_0 = (hd) ((Object) stackIn_15_0);
+                stackIn_16_1 = 0;
+                break L7;
               } else {
-                stackOut_14_0 = (hd) ((Object) stackIn_14_0);
-                stackOut_14_1 = 1;
-                stackIn_16_0 = stackOut_14_0;
-                stackIn_16_1 = stackOut_14_1;
-                break L6;
+                stackIn_16_0 = (hd) ((Object) stackIn_15_0);
+                stackIn_16_1 = 1;
+                break L7;
               }
             }
             stackIn_16_0.field_lb = stackIn_16_1 != 0;
@@ -240,11 +236,11 @@ final class qs extends ta {
 
     final static void a(boolean param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         nl var2 = null;
         int var3 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var3 = Kickabout.field_G;
         try {
           L0: {
@@ -298,18 +294,16 @@ final class qs extends ta {
     }
 
     private final void c(boolean param0) {
-        int var3 = 0;
-        sp var4 = null;
-        int var4_int = 0;
-        up var5 = null;
-        int var6 = 0;
-        oi var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        tf var10 = null;
         int stackIn_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
+        int var3;
+        int var4_int;
+        sp var4;
+        up var5;
+        int var6;
+        oi var7;
+        int var8;
+        int var9;
+        tf var10;
         var9 = Kickabout.field_G;
         if (param0) {
           var10 = new tf();
@@ -337,13 +331,11 @@ final class qs extends ta {
                     if (var4_int < 8) {
                       L4: {
                         var5 = ha.a(ic.field_h.field_e, var4_int, ic.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
-                        if (bh.field_k != var3) {
-                          stackOut_15_0 = 0;
-                          stackIn_16_0 = stackOut_15_0;
+                        if ((bh.field_k ^ -1) != (var3 ^ -1)) {
+                          stackIn_16_0 = 0;
                           break L4;
                         } else {
-                          stackOut_14_0 = 1;
-                          stackIn_16_0 = stackOut_14_0;
+                          stackIn_16_0 = 1;
                           break L4;
                         }
                       }
@@ -357,7 +349,7 @@ final class qs extends ta {
                         } else {
                           L6: {
                             var8 = var7.field_j;
-                            if (var8 >> 569094736 != var3) {
+                            if ((var8 >> 569094736 ^ -1) != (var3 ^ -1)) {
                               break L6;
                             } else {
                               if ((var8 & 65535) == var4_int) {

@@ -50,7 +50,6 @@ abstract class bb extends dl {
     }
 
     boolean j(int param0) {
-        lh discarded$2 = null;
         if (param0 <= -50) {
           this.field_U = this.a(false);
           if (-1 == (this.field_U ^ -1)) {
@@ -63,7 +62,7 @@ abstract class bb extends dl {
             return false;
           }
         } else {
-          discarded$2 = this.h(-124);
+          this.h(-124);
           this.field_U = this.a(false);
           if (-1 == (this.field_U ^ -1)) {
             if (this.field_Q) {
@@ -102,9 +101,10 @@ abstract class bb extends dl {
 
     final static void a(int param0, byte param1) {
         pc var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
+        boolean stackIn_14_0 = false;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = SteelSentinels.field_G;
         try {
           L0: {
@@ -129,8 +129,9 @@ abstract class bb extends dl {
                       if (var2 == null) {
                         break L3;
                       } else {
+                        stackIn_14_0 = var2.field_u.b((byte) -12);
                         L5: {
-                          if (var2.field_u.b((byte) -12)) {
+                          if (stackIn_14_0) {
                             var2.field_v.e(128 + lb.field_ac * var2.field_t >> 1637122248);
                             break L5;
                           } else {
@@ -169,26 +170,20 @@ abstract class bb extends dl {
 
     private final int a(boolean param0) {
         int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0) {
           return -118;
         } else {
           L0: {
             if (this.field_Q) {
               if (this.field_V.i(-1850) != this) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L0;
               } else {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L0;
             }
           }
@@ -197,14 +192,10 @@ abstract class bb extends dl {
     }
 
     boolean i(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_12_0 = 0;
         int stackIn_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
         var2 = this.a(false);
         var3 = var2 - this.field_U;
         if (param0 == -8350) {
@@ -223,12 +214,10 @@ abstract class bb extends dl {
               } else {
                 L1: {
                   if (this.field_Q) {
-                    stackOut_20_0 = 0;
-                    stackIn_21_0 = stackOut_20_0;
+                    stackIn_21_0 = 0;
                     break L1;
                   } else {
-                    stackOut_19_0 = 1;
-                    stackIn_21_0 = stackOut_19_0;
+                    stackIn_21_0 = 1;
                     break L1;
                   }
                 }
@@ -245,12 +234,10 @@ abstract class bb extends dl {
               } else {
                 L2: {
                   if (this.field_Q) {
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = 0;
                     break L2;
                   } else {
-                    stackOut_10_0 = 1;
-                    stackIn_12_0 = stackOut_10_0;
+                    stackIn_12_0 = 1;
                     break L2;
                   }
                 }

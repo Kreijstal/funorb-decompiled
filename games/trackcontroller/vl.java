@@ -9,10 +9,8 @@ final class vl extends ok {
     static qj field_K;
 
     final static boolean a(char param0, int param1) {
-        String var3 = null;
+        String var3;
         int stackIn_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
         L0: {
           if (param1 == 18102) {
             break L0;
@@ -57,12 +55,10 @@ final class vl extends ok {
                 }
               }
             }
-            stackOut_12_0 = 0;
-            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_0 = 0;
             break L1;
           }
-          stackOut_11_0 = 1;
-          stackIn_13_0 = stackOut_11_0;
+          stackIn_13_0 = 1;
           break L1;
         }
         return stackIn_13_0 != 0;
@@ -121,9 +117,9 @@ final class vl extends ok {
     }
 
     final al i(int param0) {
-        ue var2 = null;
-        hl var3 = null;
-        int var4 = 0;
+        ue var2;
+        hl var3;
+        int var4;
         L0: {
           var4 = TrackController.field_F ? 1 : 0;
           if (param0 == 199) {
@@ -155,9 +151,14 @@ final class vl extends ok {
     }
 
     final static void a(int param0, String param1) {
-        int discarded$1 = 0;
-        RuntimeException var2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -166,22 +167,6 @@ final class vl extends ok {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         try {
           L0: {
             L1: {
@@ -232,7 +217,7 @@ final class vl extends ok {
                 ll.f(var9, var10, 6 + var5, var6 - -6, var3);
                 ll.c(1 + var9, 1 + var10, var5 + 4, var6 + 4, var4);
                 if (1 < var7) {
-                  discarded$1 = re.field_c.a(param1, var9 - -3, re.field_c.field_H + (var10 - (-3 + re.field_c.field_G)), var5, 1000, var3, -1, 0, 0, var8);
+                  re.field_c.a(param1, var9 - -3, re.field_c.field_H + (var10 - (-3 + re.field_c.field_G)), var5, 1000, var3, -1, 0, 0, var8);
                   break L2;
                 } else {
                   re.field_c.c(param1, var9 - -3, var10 + (3 + re.field_c.field_H), var3, -1);
@@ -248,27 +233,19 @@ final class vl extends ok {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var2);
-            stackOut_15_1 = new StringBuilder().append("vl.S(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var2);
+
+            stackIn_17_1 = new StringBuilder().append("vl.S(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L6;
             }
           }
@@ -292,9 +269,9 @@ final class vl extends ok {
     }
 
     final hl j(int param0) {
-        ue var2 = null;
-        hl var3 = null;
-        int var4 = 0;
+        ue var2;
+        hl var3;
+        int var4;
         var4 = TrackController.field_F ? 1 : 0;
         var2 = new ue(this.field_L);
         if (param0 == -6121) {
@@ -318,7 +295,6 @@ final class vl extends ok {
 
     final void d(byte param0, al param1) {
         hl var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param1 instanceof hl)) {
                 throw new IllegalArgumentException();
@@ -329,7 +305,7 @@ final class vl extends ok {
             var3 = (hl) ((Object) param1);
             this.field_L.a(var3, (byte) 112);
             var3.field_E = true;
-            discarded$0 = var3.a((byte) -106, (al) (this));
+            var3.a((byte) -106, (al) (this));
         } catch (RuntimeException runtimeException) {
             throw sl.a((Throwable) ((Object) runtimeException), "vl.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -38,8 +38,8 @@ final class dw extends Exception {
     }
 
     final static void a(boolean param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Kickabout.field_G;
         if (param1 != 0) {
           dw.a(-109);

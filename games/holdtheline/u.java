@@ -16,19 +16,19 @@ abstract class u extends rl {
     private int field_W;
 
     void a(int param0, int param1, byte param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = HoldTheLine.field_D;
         tc.a(6 + param0, param1 + 35, -12 + this.field_x, this.field_u + -40, 2105376, 0);
         var5 = 211;
@@ -85,7 +85,7 @@ abstract class u extends rl {
               }
             }
           } else {
-            if (var8 >= tc.field_a) {
+            if ((var8 ^ -1) <= (tc.field_a ^ -1)) {
               if (var8 < tc.field_i) {
                 L4: {
                   var9 = var5 - -(var7 * (-var5 + var6) / var4);
@@ -265,9 +265,8 @@ abstract class u extends rl {
     }
 
     void k(int param0) {
-        boolean discarded$0 = false;
         if (param0 >= -100) {
-            discarded$0 = this.g((byte) -45);
+            this.g((byte) -45);
         }
     }
 

@@ -8,12 +8,11 @@ abstract class af implements rc {
     static int field_a;
 
     final static void d(int param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        int var4 = 0;
         ee var4_ref_ee = null;
+        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -34,6 +33,7 @@ abstract class af implements rc {
         int[] var20 = null;
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var19 = Terraphoenix.field_V;
         try {
           L0: {
@@ -172,7 +172,6 @@ abstract class af implements rc {
     }
 
     public final im a(int param0) {
-        String discarded$0 = null;
         if (this.a((byte) 117)) {
             return ab.field_d;
         }
@@ -180,18 +179,32 @@ abstract class af implements rc {
             return kj.field_d;
         }
         if (param0 != -16323) {
-            discarded$0 = this.b((byte) 22);
+            this.b((byte) 22);
         }
         return this.e(0);
     }
 
     final static int a(String param0, pk param1, int param2, String[] param3, int param4) {
-        int discarded$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        RuntimeException var5 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_27_0 = 0;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        StringBuilder stackIn_33_1 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        StringBuilder stackIn_36_1 = null;
+        StringBuilder stackIn_37_1 = null;
+        String stackIn_37_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -201,57 +214,6 @@ abstract class af implements rc {
         int var12 = 0;
         int var13 = 0;
         String[] var14 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_25_0 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        String stackIn_32_2 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_24_0 = 0;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
         var13 = Terraphoenix.field_V;
         try {
           L0: {
@@ -264,8 +226,7 @@ abstract class af implements rc {
                   break L1;
                 } else {
                   param3[0] = param0;
-                  stackOut_3_0 = 1;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -276,7 +237,7 @@ abstract class af implements rc {
                 break L2;
               } else {
                 var14 = (String[]) null;
-                discarded$4 = af.a((String) null, (pk) null, 80, (String[]) null, 47);
+                af.a((String) null, (pk) null, 80, (String[]) null, 47);
                 break L2;
               }
             }
@@ -290,23 +251,22 @@ abstract class af implements rc {
               if (var8 <= var9) {
                 L4: {
                   if (var8 > var7) {
-                    incrementValue$5 = var6;
+                    incrementValue$0 = var6;
                     var6++;
-                    param3[incrementValue$5] = param0.substring(var7, var8).trim();
+                    param3[incrementValue$0] = param0.substring(var7, var8).trim();
                     break L4;
                   } else {
                     break L4;
                   }
                 }
-                stackOut_24_0 = var6;
-                stackIn_25_0 = stackOut_24_0;
+                stackIn_27_0 = var6;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 L5: {
                   L6: {
                     var10 = param0.charAt(var9);
-                    if (var10 == 32) {
+                    if ((var10 ^ -1) == -33) {
                       break L6;
                     } else {
                       if (var10 != 45) {
@@ -319,9 +279,9 @@ abstract class af implements rc {
                   var11 = param0.substring(var7, 1 + var9).trim();
                   var12 = param1.b(var11);
                   if (var12 >= param4) {
-                    incrementValue$6 = var6;
+                    incrementValue$1 = var6;
                     var6++;
-                    param3[incrementValue$6] = var11;
+                    param3[incrementValue$1] = var11;
                     var7 = 1 + var9;
                     break L5;
                   } else {
@@ -331,9 +291,9 @@ abstract class af implements rc {
                 if (var10 == 62) {
                   L7: {
                     if (param0.regionMatches(-3 + var9, "<br>", 0, 4)) {
-                      incrementValue$7 = var6;
+                      incrementValue$2 = var6;
                       var6++;
-                      param3[incrementValue$7] = param0.substring(var7, -3 + var9).trim();
+                      param3[incrementValue$2] = param0.substring(var7, -3 + var9).trim();
                       var7 = var9 - -1;
                       break L7;
                     } else {
@@ -353,86 +313,62 @@ abstract class af implements rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var5);
-            stackOut_26_1 = new StringBuilder().append("af.W(");
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_30_0 = (RuntimeException) (var5);
+
+            stackIn_30_1 = new StringBuilder().append("af.W(");
+
             if (param0 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L8;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',');
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+
+
+            stackIn_33_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
+
             if (param1 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L9;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L9;
             }
           }
           L10: {
-            stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',').append(param2).append(',');
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+
+
+            stackIn_36_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_34_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "null";
               break L10;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "{...}";
               break L10;
             }
           }
-          throw qk.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ',' + param4 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_31_0), stackIn_37_2 + ',' + param4 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0;
         } else {
-          return stackIn_25_0;
+          return stackIn_27_0;
         }
     }
 
@@ -445,9 +381,8 @@ abstract class af implements rc {
     }
 
     public final void c(byte param0) {
-        String discarded$0 = null;
         if (param0 < 11) {
-            discarded$0 = this.b((byte) -21);
+            this.b((byte) -21);
         }
         this.field_c = ll.a(1000);
     }

@@ -7,12 +7,12 @@ final class oaa {
 
     final static void a(int param0, byte param1, int param2, int param3) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var4 = null;
         var8 = BachelorFridge.field_y;
         try {
           L0: {
@@ -58,8 +58,7 @@ final class oaa {
     }
 
     final static int a(int param0, int param1) {
-        int discarded$2 = 0;
-        String var2 = null;
+        String var2;
         if (param0 <= -66) {
           var2 = lka.field_E[param1][17];
           var2 = var2.trim();
@@ -70,7 +69,7 @@ final class oaa {
             return ((ji) ((Object) me.field_t.a(true, (long)var2.hashCode()))).field_h;
           }
         } else {
-          discarded$2 = oaa.a(84, -6);
+          oaa.a(84, -6);
           var2 = lka.field_E[param1][17];
           var2 = var2.trim();
           var2 = var2.toLowerCase();

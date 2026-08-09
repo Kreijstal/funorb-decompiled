@@ -9,7 +9,6 @@ final class r {
     static he[] field_e;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, byte param15, int param16) {
-        RuntimeException var17 = null;
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -26,18 +25,9 @@ final class r {
         int var30 = 0;
         int var31 = 0;
         int var32 = 0;
-        int var33 = 0;
         int var34 = 0;
         int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
         int var42 = 0;
-        RuntimeException stackIn_78_0 = null;
-        StringBuilder stackIn_78_1 = null;
         RuntimeException stackIn_79_0 = null;
         StringBuilder stackIn_79_1 = null;
         RuntimeException stackIn_80_0 = null;
@@ -46,14 +36,14 @@ final class r {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_77_0 = null;
-        StringBuilder stackOut_77_1 = null;
-        RuntimeException stackOut_79_0 = null;
-        StringBuilder stackOut_79_1 = null;
-        String stackOut_79_2 = null;
-        RuntimeException stackOut_78_0 = null;
-        StringBuilder stackOut_78_1 = null;
-        String stackOut_78_2 = null;
+        RuntimeException var17 = null;
+        int var33 = 0;
+        int var36 = 0;
+        int var37 = 0;
+        int var38 = 0;
+        int var39 = 0;
+        int var40 = 0;
+        int var41 = 0;
         var42 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -174,7 +164,7 @@ final class r {
                             } else {
                               L9: {
                                 var37 = var17_int >> 431273296;
-                                if (uc.field_f <= var37) {
+                                if ((uc.field_f ^ -1) >= (var37 ^ -1)) {
                                   break L9;
                                 } else {
                                   var38 = (var18 >> 1190865808) - (var17_int >> 90365584);
@@ -447,27 +437,19 @@ final class r {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var17 = decompiledCaughtException;
-            stackOut_77_0 = (RuntimeException) (var17);
-            stackOut_77_1 = new StringBuilder().append("r.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_79_0 = stackOut_77_0;
-            stackIn_79_1 = stackOut_77_1;
-            stackIn_78_0 = stackOut_77_0;
-            stackIn_78_1 = stackOut_77_1;
+            stackIn_79_0 = (RuntimeException) (var17);
+
+            stackIn_79_1 = new StringBuilder().append("r.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
-              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
-              stackOut_79_2 = "null";
-              stackIn_80_0 = stackOut_79_0;
-              stackIn_80_1 = stackOut_79_1;
-              stackIn_80_2 = stackOut_79_2;
+              stackIn_80_0 = (RuntimeException) ((Object) stackIn_79_0);
+              stackIn_80_1 = (StringBuilder) ((Object) stackIn_79_1);
+              stackIn_80_2 = "null";
               break L18;
             } else {
-              stackOut_78_0 = (RuntimeException) ((Object) stackIn_78_0);
-              stackOut_78_1 = (StringBuilder) ((Object) stackIn_78_1);
-              stackOut_78_2 = "{...}";
-              stackIn_80_0 = stackOut_78_0;
-              stackIn_80_1 = stackOut_78_1;
-              stackIn_80_2 = stackOut_78_2;
+              stackIn_80_0 = (RuntimeException) ((Object) stackIn_79_0);
+              stackIn_80_1 = (StringBuilder) ((Object) stackIn_79_1);
+              stackIn_80_2 = "{...}";
               break L18;
             }
           }

@@ -9,7 +9,7 @@ final class kk extends IOException {
     static int field_b;
 
     final static boolean a(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = 64 % ((param0 - -52) / 39);
         if (null != kl.field_G) {
           if (wd.field_f != lk.field_d) {

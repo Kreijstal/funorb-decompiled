@@ -25,20 +25,22 @@ final class mf {
     }
 
     final synchronized static byte[] a(int param0, int param1) {
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int dupTemp$6 = 0;
+        byte[][] arrayValue$7 = null;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
         L0: {
           if ((param0 ^ -1) != param1) {
             break L0;
           } else {
             if ((ol.field_h ^ -1) < -1) {
-              fieldTemp$6 = ol.field_h - 1;
+              fieldTemp$3 = ol.field_h - 1;
               ol.field_h = ol.field_h - 1;
-              var2_ref_byte__ = di.field_E[fieldTemp$6];
+              var2_ref_byte__ = di.field_E[fieldTemp$3];
               di.field_E[ol.field_h] = null;
               return var2_ref_byte__;
             } else {
@@ -51,9 +53,9 @@ final class mf {
             break L1;
           } else {
             if (0 < bl.field_P) {
-              fieldTemp$7 = bl.field_P - 1;
+              fieldTemp$4 = bl.field_P - 1;
               bl.field_P = bl.field_P - 1;
-              var2_ref_byte__ = nk.field_b[fieldTemp$7];
+              var2_ref_byte__ = nk.field_b[fieldTemp$4];
               nk.field_b[bl.field_P] = null;
               return var2_ref_byte__;
             } else {
@@ -66,9 +68,9 @@ final class mf {
             break L2;
           } else {
             if (0 < oj.field_c) {
-              fieldTemp$8 = oj.field_c - 1;
+              fieldTemp$5 = oj.field_c - 1;
               oj.field_c = oj.field_c - 1;
-              var2_ref_byte__ = cd.field_j[fieldTemp$8];
+              var2_ref_byte__ = cd.field_j[fieldTemp$5];
               cd.field_j[oj.field_c] = null;
               return var2_ref_byte__;
             } else {
@@ -85,8 +87,10 @@ final class mf {
               } else {
                 if (param0 == pe.field_gb[var2]) {
                   if (fk.field_v[var2] > 0) {
-                    fk.field_v[var2] = fk.field_v[var2] - 1;
-                    var3 = cg.field_i[var2][fk.field_v[var2] - 1];
+                    dupTemp$6 = fk.field_v[var2] - 1;
+                    arrayValue$7 = cg.field_i[var2];
+                    fk.field_v[var2] = dupTemp$6;
+                    var3 = arrayValue$7[dupTemp$6];
                     cg.field_i[var2][fk.field_v[var2]] = null;
                     return var3;
                   } else {
@@ -107,22 +111,26 @@ final class mf {
     }
 
     final static void a(boolean param0, byte[] param1, int param2, boolean param3) {
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int[][] array$19 = null;
-        boolean discarded$20 = false;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
-        int incrementValue$24 = 0;
-        int incrementValue$25 = 0;
-        int discarded$26 = 0;
-        int incrementValue$27 = 0;
-        RuntimeException var4 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int[][] array$5 = null;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        RuntimeException stackIn_80_0 = null;
+        StringBuilder stackIn_80_1 = null;
+        RuntimeException stackIn_81_0 = null;
+        StringBuilder stackIn_81_1 = null;
+        String stackIn_81_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -137,22 +145,6 @@ final class mf {
         Object var16 = null;
         int var17 = 0;
         int var18 = 0;
-        RuntimeException stackIn_79_0 = null;
-        StringBuilder stackIn_79_1 = null;
-        RuntimeException stackIn_80_0 = null;
-        StringBuilder stackIn_80_1 = null;
-        RuntimeException stackIn_81_0 = null;
-        StringBuilder stackIn_81_1 = null;
-        String stackIn_81_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_78_0 = null;
-        StringBuilder stackOut_78_1 = null;
-        RuntimeException stackOut_80_0 = null;
-        StringBuilder stackOut_80_1 = null;
-        String stackOut_80_2 = null;
-        RuntimeException stackOut_79_0 = null;
-        StringBuilder stackOut_79_1 = null;
-        String stackOut_79_2 = null;
         var18 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -171,13 +163,13 @@ final class mf {
               fg.field_N = 0;
               var6 = 5;
               if (param0) {
-                incrementValue$14 = var4_int;
+                incrementValue$0 = var4_int;
                 var4_int++;
-                var7 = param1[incrementValue$14];
+                var7 = param1[incrementValue$0];
                 if ((var7 ^ -1) == -2) {
-                  incrementValue$15 = var4_int;
+                  incrementValue$1 = var4_int;
                   var4_int++;
-                  fh.field_e = param1[incrementValue$15];
+                  fh.field_e = param1[incrementValue$1];
                   break L2;
                 } else {
                   break L2;
@@ -186,9 +178,9 @@ final class mf {
                 break L2;
               }
             }
-            incrementValue$16 = var4_int;
+            incrementValue$2 = var4_int;
             var4_int++;
-            var7 = param1[incrementValue$16];
+            var7 = param1[incrementValue$2];
             var5 = 0;
             L3: while (true) {
               L4: {
@@ -221,9 +213,9 @@ final class mf {
                       break L7;
                     } else {
                       L8: {
-                        incrementValue$17 = var4_int;
+                        incrementValue$3 = var4_int;
                         var4_int++;
-                        var8 = param1[incrementValue$17];
+                        var8 = param1[incrementValue$3];
                         if ((var8 ^ -1) > -1) {
                           var8 = var8 + 256;
                           break L8;
@@ -232,9 +224,9 @@ final class mf {
                         }
                       }
                       L9: {
-                        incrementValue$18 = var4_int;
+                        incrementValue$4 = var4_int;
                         var4_int++;
-                        var9 = param1[incrementValue$18];
+                        var9 = param1[incrementValue$4];
                         if (-1 < (var9 ^ -1)) {
                           var9 = 256 - -var9;
                           break L9;
@@ -262,8 +254,8 @@ final class mf {
                           if (-65 >= (var5 ^ -1)) {
                             break L10;
                           } else {
-                            array$19 = new int[ba.field_i.field_a][];
-                            n.field_kb[var5] = array$19;
+                            array$5 = new int[ba.field_i.field_a][];
+                            n.field_kb[var5] = array$5;
                             var5++;
                             continue L12;
                           }
@@ -289,7 +281,7 @@ final class mf {
                             }
                           }
                           ol.field_g = ba.field_i;
-                          discarded$20 = pg.d(0);
+                          pg.d(0);
                           qk.field_lb = 0;
                           wj.field_a = 0;
                           cb.field_c = new int[w.field_m][4];
@@ -314,18 +306,18 @@ final class mf {
                           }
                         } else {
                           L17: {
-                            incrementValue$21 = var4_int;
+                            incrementValue$6 = var4_int;
                             var4_int++;
-                            var10 = param1[incrementValue$21];
-                            incrementValue$22 = var4_int;
+                            var10 = param1[incrementValue$6];
+                            incrementValue$7 = var4_int;
                             var4_int++;
-                            var11 = param1[incrementValue$22];
-                            incrementValue$23 = var4_int;
+                            var11 = param1[incrementValue$7];
+                            incrementValue$8 = var4_int;
                             var4_int++;
-                            var12 = param1[incrementValue$23];
-                            incrementValue$24 = var4_int;
+                            var12 = param1[incrementValue$8];
+                            incrementValue$9 = var4_int;
                             var4_int++;
-                            var13 = param1[incrementValue$24];
+                            var13 = param1[incrementValue$9];
                             ea.field_g[var5] = new qe(var11, var12, var10, var13);
                             if (-29 != (var10 ^ -1)) {
                               break L17;
@@ -338,9 +330,9 @@ final class mf {
                             if (-20 != (var10 ^ -1)) {
                               break L18;
                             } else {
-                              incrementValue$25 = var4_int;
+                              incrementValue$10 = var4_int;
                               var4_int++;
-                              ea.field_g[var5].field_hb = param1[incrementValue$25];
+                              ea.field_g[var5].field_hb = param1[incrementValue$10];
                               break L18;
                             }
                           }
@@ -392,7 +384,7 @@ final class mf {
                           }
                           L23: {
                             ea.field_g[var5].field_y = var5;
-                            discarded$26 = kf.a(ea.field_g[var5], var5, 8);
+                            kf.a(ea.field_g[var5], var5, 8);
                             if (var10 == 0) {
                               wb.field_p = ea.field_g[var5];
                               break L23;
@@ -449,9 +441,9 @@ final class mf {
                       var8++;
                       continue L6;
                     } else {
-                      incrementValue$27 = var4_int;
+                      incrementValue$11 = var4_int;
                       var4_int++;
-                      ic.field_E[var8][var9] = param1[incrementValue$27];
+                      ic.field_E[var8][var9] = param1[incrementValue$11];
                       var9++;
                       continue L27;
                     }
@@ -464,27 +456,19 @@ final class mf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L28: {
             var4 = decompiledCaughtException;
-            stackOut_78_0 = (RuntimeException) (var4);
-            stackOut_78_1 = new StringBuilder().append("mf.F(").append(param0).append(',');
-            stackIn_80_0 = stackOut_78_0;
-            stackIn_80_1 = stackOut_78_1;
-            stackIn_79_0 = stackOut_78_0;
-            stackIn_79_1 = stackOut_78_1;
+            stackIn_80_0 = (RuntimeException) (var4);
+
+            stackIn_80_1 = new StringBuilder().append("mf.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_80_0 = (RuntimeException) ((Object) stackIn_80_0);
-              stackOut_80_1 = (StringBuilder) ((Object) stackIn_80_1);
-              stackOut_80_2 = "null";
-              stackIn_81_0 = stackOut_80_0;
-              stackIn_81_1 = stackOut_80_1;
-              stackIn_81_2 = stackOut_80_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+              stackIn_81_2 = "null";
               break L28;
             } else {
-              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
-              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
-              stackOut_79_2 = "{...}";
-              stackIn_81_0 = stackOut_79_0;
-              stackIn_81_1 = stackOut_79_1;
-              stackIn_81_2 = stackOut_79_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+              stackIn_81_2 = "{...}";
               break L28;
             }
           }
@@ -493,34 +477,23 @@ final class mf {
     }
 
     final static void b(int param0) {
-        int[] var4 = null;
-        int[] var6 = null;
-        int[] var8 = null;
-        int[] var15 = null;
-        int[] var16 = null;
         int[] var17 = null;
-        L0: {
-          var4 = new int[]{5};
-          var15 = lg.field_d[4];
-          da.a(200, 440, var15[6] + var15[8], 61, var15[3], 4, var4);
-          ug.field_i[4] = new pd(4, be.field_e);
-          var16 = lg.field_d[2];
-          var6 = new int[]{8, 9, 10, 5};
-          da.a(var16[1], var16[2], var16[6] + var16[8], 74, var16[3], param0, var6);
-          ug.field_i[2] = new pd(2, be.field_e);
-          if (0 >= ee.field_o) {
-            break L0;
-          } else {
-            if (ol.a((byte) -119, sh.field_u)) {
-              var17 = lg.field_d[1];
-              var8 = new int[]{1, 12, 13, 4, 31, 3, 7};
-              da.a(var17[1], var17[2], var17[6] + var17[8], 118, var17[3], 1, var8);
-              ug.field_i[1] = new pd(1, be.field_e);
-              break L0;
-            } else {
-              break L0;
+        int[] var8 = null;
+        int[] var4 = new int[]{5};
+        int[] var15 = lg.field_d[4];
+        da.a(200, 440, var15[6] + var15[8], 61, var15[3], 4, var4);
+        ug.field_i[4] = new pd(4, be.field_e);
+        int[] var16 = lg.field_d[2];
+        int[] var6 = new int[]{8, 9, 10, 5};
+        da.a(var16[1], var16[2], var16[6] + var16[8], 74, var16[3], param0, var6);
+        ug.field_i[2] = new pd(2, be.field_e);
+        if (0 < ee.field_o) {
+            if (!(!ol.a((byte) -119, sh.field_u))) {
+                var17 = lg.field_d[1];
+                var8 = new int[]{1, 12, 13, 4, 31, 3, 7};
+                da.a(var17[1], var17[2], var17[6] + var17[8], 118, var17[3], 1, var8);
+                ug.field_i[1] = new pd(1, be.field_e);
             }
-          }
         }
         ll.field_b = -1;
     }

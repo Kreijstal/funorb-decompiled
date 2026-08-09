@@ -38,7 +38,6 @@ final class wk {
     }
 
     final void a(byte param0) {
-        int discarded$0 = 0;
         this.field_c = this.field_k;
         this.field_f = this.field_k;
         this.field_d = true;
@@ -46,7 +45,7 @@ final class wk {
         this.field_v = this.field_l;
         this.field_g = 1.0f;
         if (param0 >= -33) {
-            discarded$0 = this.a(-48, true);
+            this.a(-48, true);
         }
         this.field_e = 0.0f;
         this.field_r = 0.004999999888241291f;
@@ -67,9 +66,8 @@ final class wk {
     }
 
     final int a(int param0, boolean param1) {
-        int discarded$0 = 0;
         if (param1) {
-            discarded$0 = this.b(64, false);
+            this.b(64, false);
         }
         return -bd.field_d + (param0 - -this.field_u);
     }
@@ -90,9 +88,12 @@ final class wk {
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_23_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -100,11 +101,6 @@ final class wk {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_23_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
         var14 = ZombieDawn.field_J;
         try {
           L0: {
@@ -133,12 +129,10 @@ final class wk {
                           L3: {
                             var12 = qd.field_c[var11];
                             if (param4) {
-                              stackOut_22_0 = dj.field_g[var12];
-                              stackIn_23_0 = stackOut_22_0;
+                              stackIn_23_0 = dj.field_g[var12];
                               break L3;
                             } else {
-                              stackOut_21_0 = qp.field_b[var12];
-                              stackIn_23_0 = stackOut_21_0;
+                              stackIn_23_0 = qp.field_b[var12];
                               break L3;
                             }
                           }
@@ -154,9 +148,9 @@ final class wk {
                                   break L5;
                                 }
                               }
-                              incrementValue$1 = var8;
+                              incrementValue$0 = var8;
                               var8++;
-                              qd.field_c[incrementValue$1] = var12;
+                              qd.field_c[incrementValue$0] = var12;
                               break L4;
                             } else {
                               if (var13 > var10) {
@@ -247,13 +241,11 @@ final class wk {
     }
 
     final void a(boolean param0, boolean param1, boolean param2, byte param3, boolean param4, boolean param5) {
-        float var7_float = 0.0f;
-        int var7 = 0;
-        float var8 = 0.0f;
-        int var9 = 0;
         int stackIn_33_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
+        int var7;
+        float var7_float;
+        float var8;
+        int var9;
         L0: {
           var9 = ZombieDawn.field_J;
           this.field_p = this.field_t - bd.field_d;
@@ -335,12 +327,10 @@ final class wk {
             }
             L9: {
               if (param5) {
-                stackOut_32_0 = 2;
-                stackIn_33_0 = stackOut_32_0;
+                stackIn_33_0 = 2;
                 break L9;
               } else {
-                stackOut_31_0 = 1;
-                stackIn_33_0 = stackOut_31_0;
+                stackIn_33_0 = 1;
                 break L9;
               }
             }

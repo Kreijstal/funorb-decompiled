@@ -12,31 +12,20 @@ final class rj {
     private int field_h;
 
     final void a(int param0, int param1, boolean param2, int param3) {
-        Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         int stackIn_5_1 = 0;
-        Object stackOut_2_0 = null;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
         if (param0 == -12785) {
           L0: {
-            stackOut_2_0 = this;
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_4_0 = this;
+
             if (!param2) {
-              stackOut_4_0 = this;
-              stackOut_4_1 = 0;
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_0 = this;
+              stackIn_5_1 = 0;
               break L0;
             } else {
-              stackOut_3_0 = this;
-              stackOut_3_1 = 1;
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_0 = this;
+              stackIn_5_1 = 1;
               break L0;
             }
           }
@@ -74,7 +63,7 @@ final class rj {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
+        int var4;
         if (param0 >= this.field_c) {
           throw new IllegalArgumentException();
         } else {
@@ -352,8 +341,6 @@ final class rj {
 
     final boolean b(int param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == -1) {
           if (this.field_b == 0) {
             if (84 != this.field_e) {
@@ -376,12 +363,10 @@ final class rj {
             } else {
               L0: {
                 if (this.field_e != 83) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }
@@ -394,7 +379,7 @@ final class rj {
     }
 
     final void a(int param0) {
-        String var3 = null;
+        String var3;
         L0: {
           this.field_e = 0;
           this.field_b = 0;
@@ -551,7 +536,7 @@ final class rj {
     }
 
     final void a(byte param0, int param1) {
-        int var3 = 0;
+        int var3;
         this.field_e = 0;
         this.field_b = 0;
         if (0 == this.field_h) {

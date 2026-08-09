@@ -15,28 +15,23 @@ class vc extends wd {
     }
 
     final void a(int param0) {
-        int var2 = 0;
-        sf var3 = null;
-        ed var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        Object var10 = null;
-        int var11 = 0;
-        bh var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        ui var15 = null;
-        int var16 = 0;
         int stackIn_8_0 = 0;
         int stackIn_13_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var2;
+        sf var3;
+        ed var4;
+        int var5;
+        String var6;
+        int var7;
+        int var8;
+        int var9;
+        Object var10;
+        int var11;
+        bh var12;
+        int var13;
+        int var14;
+        ui var15;
+        int var16;
         var16 = Bounce.field_N;
         this.field_C = new bc();
         var2 = 0;
@@ -60,29 +55,24 @@ class vc extends wd {
                 L2: {
                   var12 = var4.field_a[var11];
                   if (var11 == var8) {
-                    stackOut_7_0 = var4.a(var5, param0 + 116);
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = var4.a(var5, param0 + 116);
                     break L2;
                   } else {
-                    stackOut_6_0 = var12.field_a[0];
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = var12.field_a[0];
                     break L2;
                   }
                 }
                 L3: {
                   var13 = stackIn_8_0;
                   if (var9 == var11) {
-                    stackOut_12_0 = var4.a(var2, 105);
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = var4.a(var2, 105);
                     break L3;
                   } else {
                     if (var12 == null) {
-                      stackOut_11_0 = 0;
-                      stackIn_13_0 = stackOut_11_0;
+                      stackIn_13_0 = 0;
                       break L3;
                     } else {
-                      stackOut_10_0 = var12.field_a[var12.field_a.length - 1];
-                      stackIn_13_0 = stackOut_10_0;
+                      stackIn_13_0 = var12.field_a[var12.field_a.length - 1];
                       break L3;
                     }
                   }
@@ -117,10 +107,8 @@ class vc extends wd {
         }
         int var6 = param0 + -this.field_i;
         ui var7 = this.b(1, var5, var6);
-        if (var7 != null) {
-            if (this.field_n != null) {
-                ((ki) ((Object) this.field_n)).a((vc) (this), (byte) 125, param3, var7.field_q);
-            }
+        if (var7 != null && this.field_n != null) {
+            ((ki) ((Object) this.field_n)).a((vc) (this), (byte) 125, param3, var7.field_q);
         }
     }
 
@@ -131,11 +119,8 @@ class vc extends wd {
 
     final static void a(int param0, bl param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         bl var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -143,14 +128,7 @@ class vc extends wd {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var2 = null;
         var4 = Bounce.field_N;
         try {
           L0: {
@@ -221,27 +199,19 @@ class vc extends wd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var2);
-            stackOut_20_1 = new StringBuilder().append("vc.TA(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var2);
+
+            stackIn_22_1 = new StringBuilder().append("vc.TA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L7;
             }
           }
@@ -288,22 +258,12 @@ class vc extends wd {
         int var5 = 0;
         int var6 = 0;
         String[] var7 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var6 = Bounce.field_N;
         try {
           L0: {
@@ -348,27 +308,19 @@ class vc extends wd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             runtimeException = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (runtimeException);
-            stackOut_11_1 = new StringBuilder().append("vc.OA(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (runtimeException);
+
+            stackIn_13_1 = new StringBuilder().append("vc.OA(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L5;
             }
           }
@@ -405,24 +357,14 @@ class vc extends wd {
 
     void a(int param0, int param1, int param2, lk param3) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -443,27 +385,19 @@ class vc extends wd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var5);
-            stackOut_4_1 = new StringBuilder().append("vc.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var5);
+
+            stackIn_6_1 = new StringBuilder().append("vc.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -472,34 +406,22 @@ class vc extends wd {
     }
 
     boolean a(lk param0, boolean param1) {
-        ui discarded$2 = null;
+        ui discarded$1 = null;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             if (!param1) {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               break L0;
             } else {
-              discarded$2 = this.b(-72, 14, -4);
+              discarded$1 = this.b(-72, 14, -4);
               return false;
             }
           }
@@ -507,27 +429,19 @@ class vc extends wd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("vc.PA(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("vc.PA(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }
@@ -553,9 +467,9 @@ class vc extends wd {
     }
 
     private final ui b(int param0, int param1, int param2) {
-        ui var4 = null;
-        ui var5 = null;
-        int var6 = 0;
+        ui var4;
+        ui var5;
+        int var6;
         L0: {
           var6 = Bounce.field_N;
           var4 = (ui) ((Object) this.field_C.a((byte) -57));

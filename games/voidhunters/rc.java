@@ -11,9 +11,8 @@ final class rc implements dja {
     }
 
     public final tv[] a(int param0, int param1) {
-        tv[] discarded$0 = null;
         if (param0 != 11995) {
-            discarded$0 = this.a(127, -95);
+            this.a(127, -95);
             return (tv[]) ((Object) new qdb[param1]);
         }
         return (tv[]) ((Object) new qdb[param1]);

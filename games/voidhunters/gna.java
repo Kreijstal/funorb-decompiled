@@ -17,9 +17,21 @@ class gna extends elb {
 
     final static void a(Throwable param0, String param1, int param2) {
         try {
-            int discarded$1 = 0;
-            Exception var3 = null;
-            String var3_ref = null;
+            eab stackIn_13_0;
+            java.net.URL stackIn_13_1;
+            java.net.URL stackIn_13_2;
+            java.net.URL stackIn_13_3;
+            StringBuilder stackIn_13_4;
+            eab stackIn_14_0;
+            java.net.URL stackIn_14_1;
+            java.net.URL stackIn_14_2;
+            java.net.URL stackIn_14_3;
+            StringBuilder stackIn_14_4;
+            String stackIn_14_5;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            String var3 = null;
+            Exception var3_ref = null;
             mob var4 = null;
             DataInputStream var5 = null;
             int var6 = 0;
@@ -27,48 +39,13 @@ class gna extends elb {
             String var8 = null;
             String var9 = null;
             String var10 = null;
-            eab stackIn_12_0 = null;
-            java.net.URL stackIn_12_1 = null;
-            java.net.URL stackIn_12_2 = null;
-            java.net.URL stackIn_12_3 = null;
-            StringBuilder stackIn_12_4 = null;
-            eab stackIn_13_0 = null;
-            java.net.URL stackIn_13_1 = null;
-            java.net.URL stackIn_13_2 = null;
-            java.net.URL stackIn_13_3 = null;
-            StringBuilder stackIn_13_4 = null;
-            eab stackIn_14_0 = null;
-            java.net.URL stackIn_14_1 = null;
-            java.net.URL stackIn_14_2 = null;
-            java.net.URL stackIn_14_3 = null;
-            StringBuilder stackIn_14_4 = null;
-            String stackIn_14_5 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            eab stackOut_11_0 = null;
-            java.net.URL stackOut_11_1 = null;
-            java.net.URL stackOut_11_2 = null;
-            java.net.URL stackOut_11_3 = null;
-            StringBuilder stackOut_11_4 = null;
-            eab stackOut_13_0 = null;
-            java.net.URL stackOut_13_1 = null;
-            java.net.URL stackOut_13_2 = null;
-            java.net.URL stackOut_13_3 = null;
-            StringBuilder stackOut_13_4 = null;
-            String stackOut_13_5 = null;
-            eab stackOut_12_0 = null;
-            java.net.URL stackOut_12_1 = null;
-            java.net.URL stackOut_12_2 = null;
-            java.net.URL stackOut_12_3 = null;
-            StringBuilder stackOut_12_4 = null;
-            String stackOut_12_5 = null;
             var6 = VoidHunters.field_G;
             try {
               L0: {
                 L1: {
-                  var3_ref = "";
+                  var3 = "";
                   if (param0 != null) {
-                    var3_ref = eva.a(true, param0);
+                    var3 = eva.a(true, param0);
                     break L1;
                   } else {
                     break L1;
@@ -82,16 +59,16 @@ class gna extends elb {
                       if (param0 == null) {
                         break L3;
                       } else {
-                        var3_ref = var3_ref + " | ";
+                        var3 = var3 + " | ";
                         break L3;
                       }
                     }
-                    var3_ref = var3_ref + param1;
+                    var3 = var3 + param1;
                     break L2;
                   }
                 }
-                pa.a(var3_ref, 3);
-                var7 = sh.a("%3a", ":", var3_ref, param2 + param2);
+                pa.a(var3, 3);
+                var7 = sh.a("%3a", ":", var3, param2 + param2);
                 var8 = sh.a("%40", "@", var7, param2 + 0);
                 var9 = sh.a("%26", "&", var8, 0);
                 var10 = sh.a("%23", "#", var9, param2 + 0);
@@ -100,48 +77,31 @@ class gna extends elb {
                   break L0;
                 } else {
                   L4: {
-                    stackOut_11_0 = vpa.field_b;
-                    stackOut_11_1 = null;
-                    stackOut_11_2 = null;
-                    stackOut_11_3 = qv.field_p.getCodeBase();
-                    stackOut_11_4 = new StringBuilder().append("clienterror.ws?c=").append(w.field_y).append("&u=");
-                    stackIn_13_0 = stackOut_11_0;
-                    stackIn_13_1 = stackOut_11_1;
-                    stackIn_13_2 = stackOut_11_2;
-                    stackIn_13_3 = stackOut_11_3;
-                    stackIn_13_4 = stackOut_11_4;
-                    stackIn_12_0 = stackOut_11_0;
-                    stackIn_12_1 = stackOut_11_1;
-                    stackIn_12_2 = stackOut_11_2;
-                    stackIn_12_3 = stackOut_11_3;
-                    stackIn_12_4 = stackOut_11_4;
+                    stackIn_13_0 = vpa.field_b;
+
+                    stackIn_13_1 = null;
+
+                    stackIn_13_2 = null;
+
+                    stackIn_13_3 = qv.field_p.getCodeBase();
+
+                    stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(w.field_y).append("&u=");
+
                     if (null != ku.field_d) {
-                      stackOut_13_0 = (eab) ((Object) stackIn_13_0);
-                      stackOut_13_1 = null;
-                      stackOut_13_2 = null;
-                      stackOut_13_3 = (java.net.URL) ((Object) stackIn_13_3);
-                      stackOut_13_4 = (StringBuilder) ((Object) stackIn_13_4);
-                      stackOut_13_5 = ku.field_d;
-                      stackIn_14_0 = stackOut_13_0;
-                      stackIn_14_1 = stackOut_13_1;
-                      stackIn_14_2 = stackOut_13_2;
-                      stackIn_14_3 = stackOut_13_3;
-                      stackIn_14_4 = stackOut_13_4;
-                      stackIn_14_5 = stackOut_13_5;
+                      stackIn_14_0 = (eab) ((Object) stackIn_13_0);
+                      stackIn_14_1 = null;
+                      stackIn_14_2 = null;
+                      stackIn_14_3 = (java.net.URL) ((Object) stackIn_13_3);
+                      stackIn_14_4 = (StringBuilder) ((Object) stackIn_13_4);
+                      stackIn_14_5 = ku.field_d;
                       break L4;
                     } else {
-                      stackOut_12_0 = (eab) ((Object) stackIn_12_0);
-                      stackOut_12_1 = null;
-                      stackOut_12_2 = null;
-                      stackOut_12_3 = (java.net.URL) ((Object) stackIn_12_3);
-                      stackOut_12_4 = (StringBuilder) ((Object) stackIn_12_4);
-                      stackOut_12_5 = "" + tia.field_C;
-                      stackIn_14_0 = stackOut_12_0;
-                      stackIn_14_1 = stackOut_12_1;
-                      stackIn_14_2 = stackOut_12_2;
-                      stackIn_14_3 = stackOut_12_3;
-                      stackIn_14_4 = stackOut_12_4;
-                      stackIn_14_5 = stackOut_12_5;
+                      stackIn_14_0 = (eab) ((Object) stackIn_13_0);
+                      stackIn_14_1 = null;
+                      stackIn_14_2 = null;
+                      stackIn_14_3 = (java.net.URL) ((Object) stackIn_13_3);
+                      stackIn_14_4 = (StringBuilder) ((Object) stackIn_13_4);
+                      stackIn_14_5 = "" + tia.field_C;
                       break L4;
                     }
                   }
@@ -153,7 +113,7 @@ class gna extends elb {
                           break L6;
                         } else {
                           var5 = (DataInputStream) (var4.field_d);
-                          discarded$1 = var5.read();
+                          var5.read();
                           var5.close();
                           break L6;
                         }
@@ -170,7 +130,7 @@ class gna extends elb {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L7: {
-                var3 = (Exception) (Object) decompiledCaughtException;
+                var3_ref = (Exception) (Object) decompiledCaughtException;
                 decompiledRegionSelector0 = 1;
                 break L7;
               }

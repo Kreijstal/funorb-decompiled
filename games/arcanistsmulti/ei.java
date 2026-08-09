@@ -13,7 +13,7 @@ final class ei {
         if (param2 != 269) {
             return;
         }
-        Object discarded$0 = netscape.javascript.JSObject.getWindow(param1).eval(param0);
+        netscape.javascript.JSObject.getWindow(param1).eval(param0);
     }
 
     final static Object a(String param0, java.applet.Applet param1, byte param2, Object[] param3) throws Throwable {

@@ -7,14 +7,10 @@ abstract class fa {
     static eh field_b;
 
     final static bo a(ha param0, boolean param1) {
-        java.awt.Canvas discarded$2 = null;
         mq var2 = null;
-        RuntimeException var2_ref = null;
         bo var3 = null;
         bo stackIn_2_0 = null;
         bo stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -22,16 +18,7 @@ abstract class fa {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        bo stackOut_12_0 = null;
-        bo stackOut_1_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var2_ref = null;
         try {
           L0: {
             if (ns.field_a != param0) {
@@ -39,7 +26,7 @@ abstract class fa {
                 if (param1) {
                   break L1;
                 } else {
-                  discarded$2 = fa.a(72);
+                  fa.a(72);
                   break L1;
                 }
               }
@@ -71,13 +58,11 @@ abstract class fa {
               }
               un.field_f = var3;
               ns.field_a = param0;
-              stackOut_12_0 = (bo) (var3);
-              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_0 = (bo) (var3);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = un.field_f;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = un.field_f;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -86,27 +71,19 @@ abstract class fa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2_ref);
-            stackOut_14_1 = new StringBuilder().append("fa.B(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2_ref);
+
+            stackIn_16_1 = new StringBuilder().append("fa.B(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L5;
             }
           }
@@ -128,30 +105,19 @@ abstract class fa {
     }
 
     final static byte[] a(CharSequence param0, int param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        byte[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         byte[] stackIn_69_0 = null;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
         RuntimeException stackIn_72_0 = null;
         StringBuilder stackIn_72_1 = null;
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_73_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_68_0 = null;
-        RuntimeException stackOut_70_0 = null;
-        StringBuilder stackOut_70_1 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        String stackOut_71_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        byte[] var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
         var6 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -168,8 +134,7 @@ abstract class fa {
             var4 = 0;
             L2: while (true) {
               if (var4 >= var2_int) {
-                stackOut_68_0 = (byte[]) (var3);
-                stackIn_69_0 = stackOut_68_0;
+                stackIn_69_0 = (byte[]) (var3);
                 break L0;
               } else {
                 L3: {
@@ -347,27 +312,19 @@ abstract class fa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_70_0 = (RuntimeException) (var2);
-            stackOut_70_1 = new StringBuilder().append("fa.C(");
-            stackIn_72_0 = stackOut_70_0;
-            stackIn_72_1 = stackOut_70_1;
-            stackIn_71_0 = stackOut_70_0;
-            stackIn_71_1 = stackOut_70_1;
+            stackIn_72_0 = (RuntimeException) (var2);
+
+            stackIn_72_1 = new StringBuilder().append("fa.C(");
+
             if (param0 == null) {
-              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
-              stackOut_72_2 = "null";
-              stackIn_73_0 = stackOut_72_0;
-              stackIn_73_1 = stackOut_72_1;
-              stackIn_73_2 = stackOut_72_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "null";
               break L7;
             } else {
-              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
-              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackOut_71_2 = "{...}";
-              stackIn_73_0 = stackOut_71_0;
-              stackIn_73_1 = stackOut_71_1;
-              stackIn_73_2 = stackOut_71_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "{...}";
               break L7;
             }
           }

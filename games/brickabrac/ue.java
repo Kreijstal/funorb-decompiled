@@ -25,6 +25,7 @@ final class ue {
         }
         jl.field_c = var1;
         if (param0) {
+            ue.a(false);
         }
         return gn.field_C + var1;
     }

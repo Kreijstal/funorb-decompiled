@@ -36,9 +36,8 @@ final class hf {
     }
 
     final static void a(boolean param0, int param1) {
-        wk[] discarded$2 = null;
         if (param1 != 1) {
-          discarded$2 = hf.a(-30, 29, 66, -59, false);
+          hf.a(-30, 29, 66, -59, false);
           hh.field_a.a(param0, (byte) 127);
           return;
         } else {
@@ -48,7 +47,7 @@ final class hf {
     }
 
     final static wk[] a(int param0, int param1, int param2, int param3, boolean param4) {
-        ak var6 = null;
+        ak var6;
         if (!param4) {
           var6 = (ak) null;
           hf.a((ak) null, 52, -37, (ak) null, -67, 63);

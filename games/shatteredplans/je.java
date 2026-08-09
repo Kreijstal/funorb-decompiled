@@ -15,25 +15,15 @@ final class je {
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param1 == -104) {
           param0 = param0 & 8191;
           if ((param0 ^ -1) <= -4097) {
             L0: {
               if ((param0 ^ -1) > -6145) {
-                stackOut_18_0 = -br.field_o[param0 + -4096];
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = -br.field_o[param0 + -4096];
                 break L0;
               } else {
-                stackOut_17_0 = -br.field_o[-param0 + 8192];
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = -br.field_o[-param0 + 8192];
                 break L0;
               }
             }
@@ -41,12 +31,10 @@ final class je {
           } else {
             L1: {
               if (2048 <= param0) {
-                stackOut_14_0 = br.field_o[4096 - param0];
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = br.field_o[4096 - param0];
                 break L1;
               } else {
-                stackOut_13_0 = br.field_o[param0];
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = br.field_o[param0];
                 break L1;
               }
             }
@@ -58,12 +46,10 @@ final class je {
           if ((param0 ^ -1) <= -4097) {
             L2: {
               if ((param0 ^ -1) > -6145) {
-                stackOut_8_0 = -br.field_o[param0 + -4096];
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = -br.field_o[param0 + -4096];
                 break L2;
               } else {
-                stackOut_7_0 = -br.field_o[-param0 + 8192];
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = -br.field_o[-param0 + 8192];
                 break L2;
               }
             }
@@ -71,12 +57,10 @@ final class je {
           } else {
             L3: {
               if (2048 <= param0) {
-                stackOut_4_0 = br.field_o[4096 - param0];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = br.field_o[4096 - param0];
                 break L3;
               } else {
-                stackOut_3_0 = br.field_o[param0];
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = br.field_o[param0];
                 break L3;
               }
             }
@@ -86,12 +70,11 @@ final class je {
     }
 
     final static void a(byte param0, int param1) {
-        int discarded$2 = 0;
-        sl var2 = null;
+        sl var2;
         var2 = js.field_f;
         var2.h(param1, 255);
         if (param0 <= 32) {
-          discarded$2 = je.a(-116, (byte) -104);
+          je.a(-116, (byte) -104);
           var2.c(1, (byte) -104);
           var2.c(1, (byte) -93);
           return;

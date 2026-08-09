@@ -7,12 +7,12 @@ final class vc {
 
     final static void a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -54,9 +54,7 @@ final class vc {
     }
 
     final static void c(int param0) {
-        if (hm.field_F != 0 + -sq.field_e) {
-            if (-sq.field_e + 250 == hm.field_F) {
-            }
+        if (hm.field_F != 0 + -sq.field_e && -sq.field_e + 250 == hm.field_F) {
         }
         int var1 = 60 / ((param0 - -6) / 39);
         hm.field_F = hm.field_F + 1;
@@ -77,8 +75,6 @@ final class vc {
         int var4 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -86,16 +82,6 @@ final class vc {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -103,8 +89,7 @@ final class vc {
             L1: while (true) {
               if (param1.length() <= var2_int) {
                 var2_int = 35 / ((-66 - param0) / 41);
-                stackOut_8_0 = 0;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -116,8 +101,7 @@ final class vc {
                     if (ab.a(false, (char) var3)) {
                       break L2;
                     } else {
-                      stackOut_5_0 = 1;
-                      stackIn_6_0 = stackOut_5_0;
+                      stackIn_6_0 = 1;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     }
@@ -132,27 +116,19 @@ final class vc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var2);
-            stackOut_10_1 = new StringBuilder().append("vc.F(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var2);
+
+            stackIn_12_1 = new StringBuilder().append("vc.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L3;
             }
           }
@@ -166,17 +142,17 @@ final class vc {
     }
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
-        bs var1_ref = null;
-        uh var1_ref2 = null;
-        int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        bs var1 = null;
+        uh var1_ref = null;
+        RuntimeException var1_ref2 = null;
+        int var2 = 0;
         var2 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            var1_ref = (bs) ((Object) mk.field_J.a((byte) 100));
+            var1 = (bs) ((Object) mk.field_J.a((byte) 100));
             L1: while (true) {
-              if (var1_ref == null) {
+              if (var1 == null) {
                 L2: {
                   if (param0 == -59) {
                     break L2;
@@ -185,45 +161,45 @@ final class vc {
                     break L2;
                   }
                 }
-                var1_ref2 = (uh) ((Object) nr.field_p.a((byte) 100));
+                var1_ref = (uh) ((Object) nr.field_p.a((byte) 100));
                 L3: while (true) {
-                  if (var1_ref2 == null) {
-                    var1_ref = (bs) ((Object) kq.field_Rb.a((byte) 100));
+                  if (var1_ref == null) {
+                    var1 = (bs) ((Object) kq.field_Rb.a((byte) 100));
                     L4: while (true) {
-                      if (var1_ref == null) {
+                      if (var1 == null) {
                         break L0;
                       } else {
-                        if (-1 > (var1_ref.field_Ub ^ -1)) {
+                        if (-1 > (var1.field_Ub ^ -1)) {
                           L5: {
-                            var1_ref.field_Ub = var1_ref.field_Ub - 1;
-                            if (0 != var1_ref.field_Ub) {
+                            var1.field_Ub = var1.field_Ub - 1;
+                            if (0 != var1.field_Ub) {
                               break L5;
                             } else {
-                              var1_ref.field_Hb = 0;
-                              if (var1_ref.k(param0 ^ -54)) {
-                                var1_ref.c(2);
+                              var1.field_Hb = 0;
+                              if (var1.k(param0 ^ -54)) {
+                                var1.c(2);
                                 break L5;
                               } else {
                                 break L5;
                               }
                             }
                           }
-                          var1_ref = (bs) ((Object) kq.field_Rb.b(38));
+                          var1 = (bs) ((Object) kq.field_Rb.b(38));
                           continue L4;
                         } else {
-                          var1_ref = (bs) ((Object) kq.field_Rb.b(38));
+                          var1 = (bs) ((Object) kq.field_Rb.b(38));
                           continue L4;
                         }
                       }
                     }
                   } else {
                     L6: {
-                      if (-1 > (var1_ref2.field_ic ^ -1)) {
-                        var1_ref2.field_ic = var1_ref2.field_ic - 1;
-                        if (0 == var1_ref2.field_ic) {
-                          var1_ref2.field_Lb = 0;
-                          if (var1_ref2.k(param0 ^ -4082)) {
-                            var1_ref2.c(2);
+                      if (-1 > (var1_ref.field_ic ^ -1)) {
+                        var1_ref.field_ic = var1_ref.field_ic - 1;
+                        if (0 == var1_ref.field_ic) {
+                          var1_ref.field_Lb = 0;
+                          if (var1_ref.k(param0 ^ -4082)) {
+                            var1_ref.c(2);
                             break L6;
                           } else {
                             break L6;
@@ -235,18 +211,18 @@ final class vc {
                         break L6;
                       }
                     }
-                    var1_ref2 = (uh) ((Object) nr.field_p.b(47));
+                    var1_ref = (uh) ((Object) nr.field_p.b(47));
                     continue L3;
                   }
                 }
               } else {
                 L7: {
-                  if ((var1_ref.field_Ub ^ -1) < -1) {
-                    var1_ref.field_Ub = var1_ref.field_Ub - 1;
-                    if (-1 == (var1_ref.field_Ub ^ -1)) {
-                      var1_ref.field_Hb = 0;
-                      if (var1_ref.k(15)) {
-                        var1_ref.c(param0 + 61);
+                  if ((var1.field_Ub ^ -1) < -1) {
+                    var1.field_Ub = var1.field_Ub - 1;
+                    if (-1 == (var1.field_Ub ^ -1)) {
+                      var1.field_Hb = 0;
+                      if (var1.k(15)) {
+                        var1.c(param0 + 61);
                         break L7;
                       } else {
                         break L7;
@@ -258,25 +234,27 @@ final class vc {
                     break L7;
                   }
                 }
-                var1_ref = (bs) ((Object) mk.field_J.b(103));
+                var1 = (bs) ((Object) mk.field_J.b(103));
                 continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw wn.a((Throwable) ((Object) var1), "vc.E(" + param0 + ')');
+          var1_ref2 = decompiledCaughtException;
+          throw wn.a((Throwable) ((Object) var1_ref2), "vc.E(" + param0 + ')');
         }
     }
 
     final synchronized static byte[] a(int param0, byte param1) {
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int dupTemp$3 = 0;
+        byte[][] arrayValue$4 = null;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
         if (param1 == -69) {
           L0: {
             if (param0 != 100) {
@@ -285,9 +263,9 @@ final class vc {
               if (-1 <= (so.field_B ^ -1)) {
                 break L0;
               } else {
-                fieldTemp$3 = so.field_B - 1;
+                fieldTemp$0 = so.field_B - 1;
                 so.field_B = so.field_B - 1;
-                var2_ref_byte__ = ac.field_O[fieldTemp$3];
+                var2_ref_byte__ = ac.field_O[fieldTemp$0];
                 ac.field_O[so.field_B] = null;
                 return var2_ref_byte__;
               }
@@ -298,9 +276,9 @@ final class vc {
               break L1;
             } else {
               if ((ie.field_Kb ^ -1) < -1) {
-                fieldTemp$4 = ie.field_Kb - 1;
+                fieldTemp$1 = ie.field_Kb - 1;
                 ie.field_Kb = ie.field_Kb - 1;
-                var2_ref_byte__ = bh.field_g[fieldTemp$4];
+                var2_ref_byte__ = bh.field_g[fieldTemp$1];
                 bh.field_g[ie.field_Kb] = null;
                 return var2_ref_byte__;
               } else {
@@ -313,9 +291,9 @@ final class vc {
               break L2;
             } else {
               if ((ff.field_b ^ -1) < -1) {
-                fieldTemp$5 = ff.field_b - 1;
+                fieldTemp$2 = ff.field_b - 1;
                 ff.field_b = ff.field_b - 1;
-                var2_ref_byte__ = uo.field_f[fieldTemp$5];
+                var2_ref_byte__ = uo.field_f[fieldTemp$2];
                 uo.field_f[ff.field_b] = null;
                 return var2_ref_byte__;
               } else {
@@ -334,8 +312,10 @@ final class vc {
                 } else {
                   if (param0 == ue.field_M[var2]) {
                     if (-1 > (mi.field_w[var2] ^ -1)) {
-                      mi.field_w[var2] = mi.field_w[var2] - 1;
-                      var3 = df.field_j[var2][mi.field_w[var2] - 1];
+                      dupTemp$3 = mi.field_w[var2] - 1;
+                      arrayValue$4 = df.field_j[var2];
+                      mi.field_w[var2] = dupTemp$3;
+                      var3 = arrayValue$4[dupTemp$3];
                       df.field_j[var2][mi.field_w[var2]] = null;
                       return var3;
                     } else {
@@ -357,7 +337,6 @@ final class vc {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7, int param8, int param9) {
-        RuntimeException var10 = null;
         int var10_int = 0;
         int var11 = 0;
         int var12 = 0;
@@ -386,6 +365,7 @@ final class vc {
         int var35 = 0;
         int var36 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var10 = null;
         var36 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {

@@ -9,10 +9,10 @@ final class dl extends jla {
     static String[] field_k;
 
     final void e(int param0) {
-        ad[] var2 = null;
-        int var3 = 0;
-        ad var4 = null;
-        int var5 = 0;
+        ad[] var2;
+        int var3;
+        ad var4;
+        int var5;
         L0: {
           var5 = BachelorFridge.field_y;
           if (um.a(true)) {
@@ -49,7 +49,7 @@ final class dl extends jla {
     }
 
     final int a(int param0, boolean param1) {
-        int var3 = 0;
+        int var3;
         L0: {
           if (param1) {
             break L0;
@@ -71,8 +71,8 @@ final class dl extends jla {
     }
 
     final int b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = BachelorFridge.field_y;
         if (param1 == 40) {
           var3 = param0;
@@ -98,26 +98,23 @@ final class dl extends jla {
     }
 
     private final void p(int param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        String var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        String var15 = null;
-        int var16 = 0;
-        int var17 = 0;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        String var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        String var15;
+        int var16;
+        int var17;
         L0: {
           var17 = BachelorFridge.field_y;
           if (param0 == 1) {
@@ -145,12 +142,10 @@ final class dl extends jla {
               var12 = 8947848;
               var5 = 110;
               if ((1 & var9) != 0) {
-                stackOut_6_0 = 24;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 24;
                 break L2;
               } else {
-                stackOut_5_0 = 40;
-                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_0 = 40;
                 break L2;
               }
             }
@@ -172,13 +167,13 @@ final class dl extends jla {
                 }
                 var5 += 20;
                 dg.a(var4, var5, var8 + var4, var7 + var5);
-                discarded$1 = this.field_g.a(var15, var4 + 5, var5, -10 + var8, var7, var12, -1, 1, 0, var6);
+                this.field_g.a(var15, var4 + 5, var5, -10 + var8, var7, var12, -1, 1, 0, var6);
                 var4 = var4 + var8;
                 dg.c();
                 var9++;
                 continue L1;
               } else {
-                if (this.a((byte) 54, var16) == var9) {
+                if ((this.a((byte) 54, var16) ^ -1) == (var9 ^ -1)) {
                   L5: {
                     if (var14 == 0) {
                       var15 = var15 + ", ";
@@ -237,9 +232,9 @@ final class dl extends jla {
     }
 
     private final void o(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = BachelorFridge.field_y;
         var2 = param0;
         var3 = 0;
@@ -324,11 +319,11 @@ final class dl extends jla {
     }
 
     private final int a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var7 = BachelorFridge.field_y;
         var3 = 0;
         var4 = -1;

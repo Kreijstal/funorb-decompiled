@@ -21,9 +21,12 @@ final class ka extends l {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_24_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -31,11 +34,6 @@ final class ka extends l {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_24_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
         var14 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -69,12 +67,10 @@ final class ka extends l {
                           L3: {
                             var12 = lk.field_Tb[var11];
                             if (!param2) {
-                              stackOut_23_0 = vl.field_i[var12];
-                              stackIn_24_0 = stackOut_23_0;
+                              stackIn_24_0 = vl.field_i[var12];
                               break L3;
                             } else {
-                              stackOut_22_0 = wh.field_c[var12];
-                              stackIn_24_0 = stackOut_22_0;
+                              stackIn_24_0 = wh.field_c[var12];
                               break L3;
                             }
                           }
@@ -82,9 +78,9 @@ final class ka extends l {
                             var13 = stackIn_24_0;
                             if (var7_int < var13) {
                               lk.field_Tb[var11] = lk.field_Tb[var8];
-                              incrementValue$1 = var8;
+                              incrementValue$0 = var8;
                               var8++;
-                              lk.field_Tb[incrementValue$1] = var12;
+                              lk.field_Tb[incrementValue$0] = var12;
                               if (var13 < var9) {
                                 var9 = var13;
                                 break L4;

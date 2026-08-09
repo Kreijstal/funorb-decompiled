@@ -7,8 +7,38 @@ final class qg {
     static sna field_b;
 
     final static void a(int[] param0, int param1, kv param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
-        RuntimeException var17 = null;
+        int stackIn_67_0 = 0;
+        int stackIn_73_0 = 0;
+        int stackIn_80_0 = 0;
+        int stackIn_85_0 = 0;
+        int stackIn_113_0 = 0;
+        int stackIn_118_0 = 0;
+        int stackIn_126_0 = 0;
+        int stackIn_131_0 = 0;
+        int stackIn_160_0 = 0;
+        int stackIn_165_0 = 0;
+        int stackIn_174_0 = 0;
+        int stackIn_179_0 = 0;
+        int stackIn_204_0 = 0;
+        int stackIn_209_0 = 0;
+        int stackIn_218_0 = 0;
+        int stackIn_224_0 = 0;
+        RuntimeException stackIn_235_0 = null;
+        StringBuilder stackIn_235_1 = null;
+        RuntimeException stackIn_236_0 = null;
+        StringBuilder stackIn_236_1 = null;
+        String stackIn_236_2 = null;
+        StringBuilder stackIn_238_1 = null;
+        StringBuilder stackIn_239_1 = null;
+        String stackIn_239_2 = null;
+        StringBuilder stackIn_241_1 = null;
+        StringBuilder stackIn_242_1 = null;
+        String stackIn_242_2 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var17_int = 0;
+        RuntimeException var17 = null;
         int var18 = 0;
         double var19 = 0.0;
         int var21 = 0;
@@ -57,102 +87,6 @@ final class qg {
         int var66 = 0;
         int var67 = 0;
         int var68 = 0;
-        int stackIn_67_0 = 0;
-        int stackIn_73_0 = 0;
-        int stackIn_80_0 = 0;
-        int stackIn_85_0 = 0;
-        int stackIn_113_0 = 0;
-        int stackIn_118_0 = 0;
-        int stackIn_126_0 = 0;
-        int stackIn_131_0 = 0;
-        int stackIn_160_0 = 0;
-        int stackIn_165_0 = 0;
-        int stackIn_174_0 = 0;
-        int stackIn_179_0 = 0;
-        int stackIn_204_0 = 0;
-        int stackIn_209_0 = 0;
-        int stackIn_218_0 = 0;
-        int stackIn_224_0 = 0;
-        RuntimeException stackIn_234_0 = null;
-        StringBuilder stackIn_234_1 = null;
-        RuntimeException stackIn_235_0 = null;
-        StringBuilder stackIn_235_1 = null;
-        RuntimeException stackIn_236_0 = null;
-        StringBuilder stackIn_236_1 = null;
-        String stackIn_236_2 = null;
-        RuntimeException stackIn_237_0 = null;
-        StringBuilder stackIn_237_1 = null;
-        RuntimeException stackIn_238_0 = null;
-        StringBuilder stackIn_238_1 = null;
-        RuntimeException stackIn_239_0 = null;
-        StringBuilder stackIn_239_1 = null;
-        String stackIn_239_2 = null;
-        RuntimeException stackIn_240_0 = null;
-        StringBuilder stackIn_240_1 = null;
-        RuntimeException stackIn_241_0 = null;
-        StringBuilder stackIn_241_1 = null;
-        RuntimeException stackIn_242_0 = null;
-        StringBuilder stackIn_242_1 = null;
-        String stackIn_242_2 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_203_0 = 0;
-        int stackOut_202_0 = 0;
-        int stackOut_208_0 = 0;
-        int stackOut_207_0 = 0;
-        int stackOut_217_0 = 0;
-        int stackOut_216_0 = 0;
-        int stackOut_223_0 = 0;
-        int stackOut_222_0 = 0;
-        int stackOut_159_0 = 0;
-        int stackOut_158_0 = 0;
-        int stackOut_164_0 = 0;
-        int stackOut_163_0 = 0;
-        int stackOut_173_0 = 0;
-        int stackOut_172_0 = 0;
-        int stackOut_178_0 = 0;
-        int stackOut_177_0 = 0;
-        int stackOut_66_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_71_0 = 0;
-        int stackOut_79_0 = 0;
-        int stackOut_78_0 = 0;
-        int stackOut_84_0 = 0;
-        int stackOut_83_0 = 0;
-        int stackOut_112_0 = 0;
-        int stackOut_111_0 = 0;
-        int stackOut_117_0 = 0;
-        int stackOut_116_0 = 0;
-        int stackOut_125_0 = 0;
-        int stackOut_124_0 = 0;
-        int stackOut_130_0 = 0;
-        int stackOut_129_0 = 0;
-        RuntimeException stackOut_233_0 = null;
-        StringBuilder stackOut_233_1 = null;
-        RuntimeException stackOut_235_0 = null;
-        StringBuilder stackOut_235_1 = null;
-        String stackOut_235_2 = null;
-        RuntimeException stackOut_234_0 = null;
-        StringBuilder stackOut_234_1 = null;
-        String stackOut_234_2 = null;
-        RuntimeException stackOut_236_0 = null;
-        StringBuilder stackOut_236_1 = null;
-        RuntimeException stackOut_238_0 = null;
-        StringBuilder stackOut_238_1 = null;
-        String stackOut_238_2 = null;
-        RuntimeException stackOut_237_0 = null;
-        StringBuilder stackOut_237_1 = null;
-        String stackOut_237_2 = null;
-        RuntimeException stackOut_239_0 = null;
-        StringBuilder stackOut_239_1 = null;
-        RuntimeException stackOut_241_0 = null;
-        StringBuilder stackOut_241_1 = null;
-        String stackOut_241_2 = null;
-        RuntimeException stackOut_240_0 = null;
-        StringBuilder stackOut_240_1 = null;
-        String stackOut_240_2 = null;
         var68 = BachelorFridge.field_y;
         try {
           L0: {
@@ -398,12 +332,10 @@ final class qg {
                                                     L24: {
                                                       var57 = param0[var62 + var17_int - -1];
                                                       if ((var57 & -16777216) != 0) {
-                                                        stackOut_203_0 = var53 * var52;
-                                                        stackIn_204_0 = stackOut_203_0;
+                                                        stackIn_204_0 = var53 * var52;
                                                         break L24;
                                                       } else {
-                                                        stackOut_202_0 = 0;
-                                                        stackIn_204_0 = stackOut_202_0;
+                                                        stackIn_204_0 = 0;
                                                         break L24;
                                                       }
                                                     }
@@ -423,12 +355,10 @@ final class qg {
                                                   L25: {
                                                     var56 = param0[var62 - -var17_int];
                                                     if ((var56 & -16777216) != 0) {
-                                                      stackOut_208_0 = (-var52 + 4096) * var53;
-                                                      stackIn_209_0 = stackOut_208_0;
+                                                      stackIn_209_0 = (-var52 + 4096) * var53;
                                                       break L25;
                                                     } else {
-                                                      stackOut_207_0 = 0;
-                                                      stackIn_209_0 = stackOut_207_0;
+                                                      stackIn_209_0 = 0;
                                                       break L25;
                                                     }
                                                   }
@@ -450,12 +380,10 @@ final class qg {
                                                     L28: {
                                                       var54 = param0[var62];
                                                       if (-1 == (-16777216 & var54 ^ -1)) {
-                                                        stackOut_217_0 = 0;
-                                                        stackIn_218_0 = stackOut_217_0;
+                                                        stackIn_218_0 = 0;
                                                         break L28;
                                                       } else {
-                                                        stackOut_216_0 = (-var52 + 4096) * (-var53 + 4096);
-                                                        stackIn_218_0 = stackOut_216_0;
+                                                        stackIn_218_0 = (-var52 + 4096) * (-var53 + 4096);
                                                         break L28;
                                                       }
                                                     }
@@ -471,12 +399,10 @@ final class qg {
                                                   L29: {
                                                     var55 = param0[var62 - -1];
                                                     if ((var55 & -16777216) == 0) {
-                                                      stackOut_223_0 = 0;
-                                                      stackIn_224_0 = stackOut_223_0;
+                                                      stackIn_224_0 = 0;
                                                       break L29;
                                                     } else {
-                                                      stackOut_222_0 = (4096 - var53) * var52;
-                                                      stackIn_224_0 = stackOut_222_0;
+                                                      stackIn_224_0 = (4096 - var53) * var52;
                                                       break L29;
                                                     }
                                                   }
@@ -594,12 +520,10 @@ final class qg {
                                                     L38: {
                                                       var56 = param0[var62 - -var17_int];
                                                       if (-1 != (-16777216 & var56 ^ -1)) {
-                                                        stackOut_159_0 = var53 * (4096 - var52);
-                                                        stackIn_160_0 = stackOut_159_0;
+                                                        stackIn_160_0 = var53 * (4096 - var52);
                                                         break L38;
                                                       } else {
-                                                        stackOut_158_0 = 0;
-                                                        stackIn_160_0 = stackOut_158_0;
+                                                        stackIn_160_0 = 0;
                                                         break L38;
                                                       }
                                                     }
@@ -619,12 +543,10 @@ final class qg {
                                                   L39: {
                                                     var57 = param0[1 + (var17_int + var62)];
                                                     if (-1 == (-16777216 & var57 ^ -1)) {
-                                                      stackOut_164_0 = 0;
-                                                      stackIn_165_0 = stackOut_164_0;
+                                                      stackIn_165_0 = 0;
                                                       break L39;
                                                     } else {
-                                                      stackOut_163_0 = var52 * var53;
-                                                      stackIn_165_0 = stackOut_163_0;
+                                                      stackIn_165_0 = var52 * var53;
                                                       break L39;
                                                     }
                                                   }
@@ -646,12 +568,10 @@ final class qg {
                                                     L42: {
                                                       var55 = param0[1 + var62];
                                                       if (-1 == (-16777216 & var55 ^ -1)) {
-                                                        stackOut_173_0 = 0;
-                                                        stackIn_174_0 = stackOut_173_0;
+                                                        stackIn_174_0 = 0;
                                                         break L42;
                                                       } else {
-                                                        stackOut_172_0 = var52 * (4096 - var53);
-                                                        stackIn_174_0 = stackOut_172_0;
+                                                        stackIn_174_0 = var52 * (4096 - var53);
                                                         break L42;
                                                       }
                                                     }
@@ -671,12 +591,10 @@ final class qg {
                                                   L43: {
                                                     var54 = param0[var62];
                                                     if ((var54 & -16777216) == 0) {
-                                                      stackOut_178_0 = 0;
-                                                      stackIn_179_0 = stackOut_178_0;
+                                                      stackIn_179_0 = 0;
                                                       break L43;
                                                     } else {
-                                                      stackOut_177_0 = (-var52 + 4096) * (4096 + -var53);
-                                                      stackIn_179_0 = stackOut_177_0;
+                                                      stackIn_179_0 = (-var52 + 4096) * (4096 + -var53);
                                                       break L43;
                                                     }
                                                   }
@@ -802,12 +720,10 @@ final class qg {
                                                         L53: {
                                                           var54 = param0[var62];
                                                           if (0 == (-16777216 & var54)) {
-                                                            stackOut_66_0 = 0;
-                                                            stackIn_67_0 = stackOut_66_0;
+                                                            stackIn_67_0 = 0;
                                                             break L53;
                                                           } else {
-                                                            stackOut_65_0 = (-var52 + 4096) * (4096 + -var53);
-                                                            stackIn_67_0 = stackOut_65_0;
+                                                            stackIn_67_0 = (-var52 + 4096) * (4096 + -var53);
                                                             break L53;
                                                           }
                                                         }
@@ -823,12 +739,10 @@ final class qg {
                                                       L54: {
                                                         var55 = param0[1 + var62];
                                                         if ((-16777216 & var55) == 0) {
-                                                          stackOut_72_0 = 0;
-                                                          stackIn_73_0 = stackOut_72_0;
+                                                          stackIn_73_0 = 0;
                                                           break L54;
                                                         } else {
-                                                          stackOut_71_0 = var52 * (4096 - var53);
-                                                          stackIn_73_0 = stackOut_71_0;
+                                                          stackIn_73_0 = var52 * (4096 - var53);
                                                           break L54;
                                                         }
                                                       }
@@ -860,12 +774,10 @@ final class qg {
                                                         L57: {
                                                           var57 = param0[1 + (var62 + var17_int)];
                                                           if ((-16777216 & var57) != 0) {
-                                                            stackOut_79_0 = var53 * var52;
-                                                            stackIn_80_0 = stackOut_79_0;
+                                                            stackIn_80_0 = var53 * var52;
                                                             break L57;
                                                           } else {
-                                                            stackOut_78_0 = 0;
-                                                            stackIn_80_0 = stackOut_78_0;
+                                                            stackIn_80_0 = 0;
                                                             break L57;
                                                           }
                                                         }
@@ -885,12 +797,10 @@ final class qg {
                                                       L58: {
                                                         var56 = param0[var17_int + var62];
                                                         if (-1 != (var56 & -16777216 ^ -1)) {
-                                                          stackOut_84_0 = (4096 - var52) * var53;
-                                                          stackIn_85_0 = stackOut_84_0;
+                                                          stackIn_85_0 = (4096 - var52) * var53;
                                                           break L58;
                                                         } else {
-                                                          stackOut_83_0 = 0;
-                                                          stackIn_85_0 = stackOut_83_0;
+                                                          stackIn_85_0 = 0;
                                                           break L58;
                                                         }
                                                       }
@@ -1010,12 +920,10 @@ final class qg {
                                                     L68: {
                                                       var56 = param0[var62 - -var17_int];
                                                       if (-1 != (var56 & -16777216 ^ -1)) {
-                                                        stackOut_112_0 = (-var52 + 4096) * var53;
-                                                        stackIn_113_0 = stackOut_112_0;
+                                                        stackIn_113_0 = (-var52 + 4096) * var53;
                                                         break L68;
                                                       } else {
-                                                        stackOut_111_0 = 0;
-                                                        stackIn_113_0 = stackOut_111_0;
+                                                        stackIn_113_0 = 0;
                                                         break L68;
                                                       }
                                                     }
@@ -1035,12 +943,10 @@ final class qg {
                                                   L69: {
                                                     var57 = param0[var17_int + (var62 + 1)];
                                                     if (-1 == (-16777216 & var57 ^ -1)) {
-                                                      stackOut_117_0 = 0;
-                                                      stackIn_118_0 = stackOut_117_0;
+                                                      stackIn_118_0 = 0;
                                                       break L69;
                                                     } else {
-                                                      stackOut_116_0 = var53 * var52;
-                                                      stackIn_118_0 = stackOut_116_0;
+                                                      stackIn_118_0 = var53 * var52;
                                                       break L69;
                                                     }
                                                   }
@@ -1068,12 +974,10 @@ final class qg {
                                                     L72: {
                                                       var54 = param0[var62];
                                                       if ((var54 & -16777216) != 0) {
-                                                        stackOut_125_0 = (4096 - var53) * (-var52 + 4096);
-                                                        stackIn_126_0 = stackOut_125_0;
+                                                        stackIn_126_0 = (4096 - var53) * (-var52 + 4096);
                                                         break L72;
                                                       } else {
-                                                        stackOut_124_0 = 0;
-                                                        stackIn_126_0 = stackOut_124_0;
+                                                        stackIn_126_0 = 0;
                                                         break L72;
                                                       }
                                                     }
@@ -1093,12 +997,10 @@ final class qg {
                                                   L73: {
                                                     var55 = param0[1 + var62];
                                                     if (0 == (var55 & -16777216)) {
-                                                      stackOut_130_0 = 0;
-                                                      stackIn_131_0 = stackOut_130_0;
+                                                      stackIn_131_0 = 0;
                                                       break L73;
                                                     } else {
-                                                      stackOut_129_0 = (-var53 + 4096) * var52;
-                                                      stackIn_131_0 = stackOut_129_0;
+                                                      stackIn_131_0 = (-var53 + 4096) * var52;
                                                       break L73;
                                                     }
                                                   }
@@ -1177,81 +1079,57 @@ final class qg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L75: {
             var17 = decompiledCaughtException;
-            stackOut_233_0 = (RuntimeException) (var17);
-            stackOut_233_1 = new StringBuilder().append("qg.A(");
-            stackIn_235_0 = stackOut_233_0;
-            stackIn_235_1 = stackOut_233_1;
-            stackIn_234_0 = stackOut_233_0;
-            stackIn_234_1 = stackOut_233_1;
+            stackIn_235_0 = (RuntimeException) (var17);
+
+            stackIn_235_1 = new StringBuilder().append("qg.A(");
+
             if (param0 == null) {
-              stackOut_235_0 = (RuntimeException) ((Object) stackIn_235_0);
-              stackOut_235_1 = (StringBuilder) ((Object) stackIn_235_1);
-              stackOut_235_2 = "null";
-              stackIn_236_0 = stackOut_235_0;
-              stackIn_236_1 = stackOut_235_1;
-              stackIn_236_2 = stackOut_235_2;
+              stackIn_236_0 = (RuntimeException) ((Object) stackIn_235_0);
+              stackIn_236_1 = (StringBuilder) ((Object) stackIn_235_1);
+              stackIn_236_2 = "null";
               break L75;
             } else {
-              stackOut_234_0 = (RuntimeException) ((Object) stackIn_234_0);
-              stackOut_234_1 = (StringBuilder) ((Object) stackIn_234_1);
-              stackOut_234_2 = "{...}";
-              stackIn_236_0 = stackOut_234_0;
-              stackIn_236_1 = stackOut_234_1;
-              stackIn_236_2 = stackOut_234_2;
+              stackIn_236_0 = (RuntimeException) ((Object) stackIn_235_0);
+              stackIn_236_1 = (StringBuilder) ((Object) stackIn_235_1);
+              stackIn_236_2 = "{...}";
               break L75;
             }
           }
           L76: {
-            stackOut_236_0 = (RuntimeException) ((Object) stackIn_236_0);
-            stackOut_236_1 = ((StringBuilder) (Object) stackIn_236_1).append(stackIn_236_2).append(',').append(param1).append(',');
-            stackIn_238_0 = stackOut_236_0;
-            stackIn_238_1 = stackOut_236_1;
-            stackIn_237_0 = stackOut_236_0;
-            stackIn_237_1 = stackOut_236_1;
+
+
+            stackIn_238_1 = ((StringBuilder) (Object) stackIn_236_1).append(stackIn_236_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_238_0 = (RuntimeException) ((Object) stackIn_238_0);
-              stackOut_238_1 = (StringBuilder) ((Object) stackIn_238_1);
-              stackOut_238_2 = "null";
-              stackIn_239_0 = stackOut_238_0;
-              stackIn_239_1 = stackOut_238_1;
-              stackIn_239_2 = stackOut_238_2;
+              stackIn_236_0 = (RuntimeException) ((Object) stackIn_236_0);
+              stackIn_239_1 = (StringBuilder) ((Object) stackIn_238_1);
+              stackIn_239_2 = "null";
               break L76;
             } else {
-              stackOut_237_0 = (RuntimeException) ((Object) stackIn_237_0);
-              stackOut_237_1 = (StringBuilder) ((Object) stackIn_237_1);
-              stackOut_237_2 = "{...}";
-              stackIn_239_0 = stackOut_237_0;
-              stackIn_239_1 = stackOut_237_1;
-              stackIn_239_2 = stackOut_237_2;
+              stackIn_236_0 = (RuntimeException) ((Object) stackIn_236_0);
+              stackIn_239_1 = (StringBuilder) ((Object) stackIn_238_1);
+              stackIn_239_2 = "{...}";
               break L76;
             }
           }
           L77: {
-            stackOut_239_0 = (RuntimeException) ((Object) stackIn_239_0);
-            stackOut_239_1 = ((StringBuilder) (Object) stackIn_239_1).append(stackIn_239_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
-            stackIn_241_0 = stackOut_239_0;
-            stackIn_241_1 = stackOut_239_1;
-            stackIn_240_0 = stackOut_239_0;
-            stackIn_240_1 = stackOut_239_1;
+
+
+            stackIn_241_1 = ((StringBuilder) (Object) stackIn_239_1).append(stackIn_239_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
+
             if (param8 == null) {
-              stackOut_241_0 = (RuntimeException) ((Object) stackIn_241_0);
-              stackOut_241_1 = (StringBuilder) ((Object) stackIn_241_1);
-              stackOut_241_2 = "null";
-              stackIn_242_0 = stackOut_241_0;
-              stackIn_242_1 = stackOut_241_1;
-              stackIn_242_2 = stackOut_241_2;
+              stackIn_236_0 = (RuntimeException) ((Object) stackIn_236_0);
+              stackIn_242_1 = (StringBuilder) ((Object) stackIn_241_1);
+              stackIn_242_2 = "null";
               break L77;
             } else {
-              stackOut_240_0 = (RuntimeException) ((Object) stackIn_240_0);
-              stackOut_240_1 = (StringBuilder) ((Object) stackIn_240_1);
-              stackOut_240_2 = "{...}";
-              stackIn_242_0 = stackOut_240_0;
-              stackIn_242_1 = stackOut_240_1;
-              stackIn_242_2 = stackOut_240_2;
+              stackIn_236_0 = (RuntimeException) ((Object) stackIn_236_0);
+              stackIn_242_1 = (StringBuilder) ((Object) stackIn_241_1);
+              stackIn_242_2 = "{...}";
               break L77;
             }
           }
-          throw pe.a((Throwable) ((Object) stackIn_242_0), stackIn_242_2 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ',' + param15 + ',' + param16 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_236_0), stackIn_242_2 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ',' + param15 + ',' + param16 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

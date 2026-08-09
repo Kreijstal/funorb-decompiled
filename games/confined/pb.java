@@ -110,11 +110,11 @@ final class pb {
 
     final static void b(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = Confined.field_J ? 1 : 0;
         try {
           L0: {

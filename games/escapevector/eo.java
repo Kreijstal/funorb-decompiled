@@ -41,7 +41,6 @@ abstract class eo {
     abstract int a(byte param0, long param1);
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, int param8, int param9) {
-        char discarded$1 = 0;
         if (param5) {
           if (param7) {
             fc.a(param9, param3, param6, param1, true, 29788, false, param8, param4, param0, param2, false);
@@ -51,7 +50,7 @@ abstract class eo {
             return;
           }
         } else {
-          discarded$1 = eo.a(-21, '7');
+          eo.a(-21, '7');
           if (param7) {
             fc.a(param9, param3, param6, param1, true, 29788, false, param8, param4, param0, param2, false);
             return;
@@ -65,11 +64,10 @@ abstract class eo {
     abstract long c(byte param0);
 
     final static void a(int param0, boolean param1) {
-        String discarded$1 = null;
-        ed[] var3 = null;
-        ed[] var4 = null;
-        ed[] var5 = null;
-        ed[] var6 = null;
+        ed[] var3;
+        ed[] var4;
+        ed[] var5;
+        ed[] var6;
         if (param0 == 24) {
           if (null != ma.field_a) {
             pc.field_d = 16777215;
@@ -93,7 +91,7 @@ abstract class eo {
             return;
           }
         } else {
-          discarded$1 = eo.a((byte) 53);
+          eo.a((byte) 53);
           if (null != ma.field_a) {
             pc.field_d = 16777215;
             gd.field_X = 7899280;
@@ -142,7 +140,7 @@ abstract class eo {
     }
 
     final int a(long param0, int param1) {
-        long var4 = 0L;
+        long var4;
         if (param1 < 34) {
           L0: {
             field_a = (String) null;
@@ -170,8 +168,8 @@ abstract class eo {
     }
 
     final static char a(int param0, char param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = EscapeVector.field_A;
         if (param0 != 227) {
           eo.b((byte) -68);

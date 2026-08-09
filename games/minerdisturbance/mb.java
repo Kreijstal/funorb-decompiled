@@ -8,8 +8,8 @@ final class mb {
     static String field_a;
 
     final static char a(boolean param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         if (!param0) {
           var2 = 255 & param1;
           if (0 == var2) {
@@ -76,13 +76,13 @@ final class mb {
 
     final static void a(byte param0) {
         try {
-            Exception var1 = null;
-            java.lang.reflect.Method var1_ref = null;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
+            Throwable decompiledCaughtException = null;
+            java.lang.reflect.Method var1 = null;
+            Exception var1_ref = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
             Long var3 = null;
             Object[] var4 = null;
-            Throwable decompiledCaughtException = null;
             L0: {
               if (param0 == -71) {
                 break L0;
@@ -92,19 +92,19 @@ final class mb {
               }
             }
             try {
-              var1_ref = Runtime.class.getMethod("maxMemory", new Class[]{});
-              if (var1_ref != null) {
+              var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+              if (var1 != null) {
                 try {
                   L1: {
-                    var2_ref = Runtime.getRuntime();
+                    var2 = Runtime.getRuntime();
                     var4 = (Object[]) null;
-                    var3 = (Long) (var1_ref.invoke((Object) (var2_ref), (Object[]) null));
+                    var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
                     ec.field_e = 1 + (int)(var3.longValue() / 1048576L);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  var2 = decompiledCaughtException;
+                  var2_ref = decompiledCaughtException;
                   return;
                 }
                 return;
@@ -113,7 +113,7 @@ final class mb {
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              var1 = (Exception) (Object) decompiledCaughtException;
+              var1_ref = (Exception) (Object) decompiledCaughtException;
               return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {

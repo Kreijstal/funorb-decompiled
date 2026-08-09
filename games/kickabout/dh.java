@@ -14,13 +14,12 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
     private java.awt.image.ColorModel field_h;
 
     final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
-        boolean discarded$0 = false;
         try {
             if (param1 != 10) {
                 this.b((byte) 4);
             }
             this.b((byte) -104);
-            discarded$0 = param3.drawImage(this.field_d, param2, param0, (java.awt.image.ImageObserver) (this));
+            param3.drawImage(this.field_d, param2, param0, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) ((Object) runtimeException), "dh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -33,11 +32,11 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
         this.field_h = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
         this.field_d = param3.createImage((java.awt.image.ImageProducer) (this));
         this.b((byte) 119);
-        boolean discarded$0 = param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
+        param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
         this.b((byte) -127);
-        boolean discarded$1 = param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
+        param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
         this.b((byte) 116);
-        boolean discarded$9 = param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
+        param3.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
         if (param0 != 30) {
             return;
         }
@@ -61,7 +60,7 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final static sj a(byte param0, int param1) {
-        iw var3 = null;
+        iw var3;
         if (param0 > -124) {
           var3 = (iw) null;
           dh.a(81, 114, (iw) null, 122, 17);
@@ -72,7 +71,7 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     private final synchronized void b(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = -79 % ((62 - param0) / 32);
         if (null == this.field_f) {
           return;
@@ -91,23 +90,12 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -131,35 +119,26 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
                 }
               }
             }
-            stackOut_5_0 = var2_int;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = var2_int;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2);
-            stackOut_7_1 = new StringBuilder().append("dh.N(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2);
+
+            stackIn_9_1 = new StringBuilder().append("dh.N(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -171,54 +150,34 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_0_0 = 0;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = 1;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var7);
-            stackOut_2_1 = new StringBuilder().append("dh.imageUpdate(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var7);
+
+            stackIn_4_1 = new StringBuilder().append("dh.imageUpdate(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -280,18 +239,17 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final static void b(boolean param0) {
-        int fieldTemp$21 = 0;
-        int fieldTemp$22 = 0;
-        int fieldTemp$23 = 0;
-        int fieldTemp$24 = 0;
-        int discarded$25 = 0;
-        int fieldTemp$26 = 0;
-        int fieldTemp$27 = 0;
-        int fieldTemp$28 = 0;
-        int fieldTemp$29 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        up var3 = null;
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
+        int fieldTemp$15 = 0;
+        int var1;
+        int var2;
+        up var3;
         if (param0) {
           if (iu.field_h) {
             if (null != um.field_e) {
@@ -305,9 +263,9 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
                     var1 = tq.h(-2521) - nv.field_E[ew.field_a];
                     var2 = aq.a(true) + -qt.field_r[ew.field_a];
                     if (var2 * var2 + var1 * var1 < 10000) {
-                      fieldTemp$21 = ew.field_a + 1;
+                      fieldTemp$8 = ew.field_a + 1;
                       ew.field_a = ew.field_a + 1;
-                      ew.field_a = fieldTemp$21 % nv.field_E.length;
+                      ew.field_a = fieldTemp$8 % nv.field_E.length;
                       break L0;
                     } else {
                       break L0;
@@ -324,9 +282,9 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
                     var1 = tq.h(-2521) - nv.field_E[ew.field_a];
                     var2 = aq.a(true) + -qt.field_r[ew.field_a];
                     if (var2 * var2 + var1 * var1 < 10000) {
-                      fieldTemp$22 = ew.field_a + 1;
+                      fieldTemp$9 = ew.field_a + 1;
                       ew.field_a = ew.field_a + 1;
-                      ew.field_a = fieldTemp$22 % nv.field_E.length;
+                      ew.field_a = fieldTemp$9 % nv.field_E.length;
                       break L1;
                     } else {
                       break L1;
@@ -343,9 +301,9 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
                         var1 = tq.h(-2521) - nv.field_E[ew.field_a];
                         var2 = aq.a(true) + -qt.field_r[ew.field_a];
                         if (var2 * var2 + var1 * var1 < 10000) {
-                          fieldTemp$23 = ew.field_a + 1;
+                          fieldTemp$10 = ew.field_a + 1;
                           ew.field_a = ew.field_a + 1;
-                          ew.field_a = fieldTemp$23 % nv.field_E.length;
+                          ew.field_a = fieldTemp$10 % nv.field_E.length;
                           break L3;
                         } else {
                           break L3;
@@ -368,9 +326,9 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
                 var1 = tq.h(-2521) - nv.field_E[ew.field_a];
                 var2 = aq.a(true) + -qt.field_r[ew.field_a];
                 if (var2 * var2 + var1 * var1 < 10000) {
-                  fieldTemp$24 = ew.field_a + 1;
+                  fieldTemp$11 = ew.field_a + 1;
                   ew.field_a = ew.field_a + 1;
-                  ew.field_a = fieldTemp$24 % nv.field_E.length;
+                  ew.field_a = fieldTemp$11 % nv.field_E.length;
                   break L4;
                 } else {
                   break L4;
@@ -386,7 +344,7 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
           }
         } else {
           var3 = (up) null;
-          discarded$25 = dh.a((up) null, false);
+          dh.a((up) null, false);
           if (iu.field_h) {
             if (null != um.field_e) {
               if (ra.field_G != null) {
@@ -397,9 +355,9 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
                       var1 = tq.h(-2521) - nv.field_E[ew.field_a];
                       var2 = aq.a(true) + -qt.field_r[ew.field_a];
                       if (var2 * var2 + var1 * var1 < 10000) {
-                        fieldTemp$26 = ew.field_a + 1;
+                        fieldTemp$12 = ew.field_a + 1;
                         ew.field_a = ew.field_a + 1;
-                        ew.field_a = fieldTemp$26 % nv.field_E.length;
+                        ew.field_a = fieldTemp$12 % nv.field_E.length;
                         break L5;
                       } else {
                         break L5;
@@ -418,9 +376,9 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
                     var1 = tq.h(-2521) - nv.field_E[ew.field_a];
                     var2 = aq.a(true) + -qt.field_r[ew.field_a];
                     if (var2 * var2 + var1 * var1 < 10000) {
-                      fieldTemp$27 = ew.field_a + 1;
+                      fieldTemp$13 = ew.field_a + 1;
                       ew.field_a = ew.field_a + 1;
-                      ew.field_a = fieldTemp$27 % nv.field_E.length;
+                      ew.field_a = fieldTemp$13 % nv.field_E.length;
                       break L6;
                     } else {
                       break L6;
@@ -438,9 +396,9 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
                       var1 = tq.h(-2521) - nv.field_E[ew.field_a];
                       var2 = aq.a(true) + -qt.field_r[ew.field_a];
                       if (var2 * var2 + var1 * var1 < 10000) {
-                        fieldTemp$28 = ew.field_a + 1;
+                        fieldTemp$14 = ew.field_a + 1;
                         ew.field_a = ew.field_a + 1;
-                        ew.field_a = fieldTemp$28 % nv.field_E.length;
+                        ew.field_a = fieldTemp$14 % nv.field_E.length;
                         break L8;
                       } else {
                         break L8;
@@ -462,9 +420,9 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
                 var1 = tq.h(-2521) - nv.field_E[ew.field_a];
                 var2 = aq.a(true) + -qt.field_r[ew.field_a];
                 if (var2 * var2 + var1 * var1 < 10000) {
-                  fieldTemp$29 = ew.field_a + 1;
+                  fieldTemp$15 = ew.field_a + 1;
                   ew.field_a = ew.field_a + 1;
-                  ew.field_a = fieldTemp$29 % nv.field_E.length;
+                  ew.field_a = fieldTemp$15 % nv.field_E.length;
                   break L9;
                 } else {
                   break L9;
@@ -483,22 +441,12 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
         RuntimeException var2 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             if (param0 == this.field_f) {
@@ -512,27 +460,19 @@ final class dh extends og implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("dh.removeConsumer(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("dh.removeConsumer(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }

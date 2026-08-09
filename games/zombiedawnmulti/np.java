@@ -14,22 +14,12 @@ final class np extends ae {
 
     final void a(int param0, qd param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -47,27 +37,19 @@ final class np extends ae {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("np.D(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("np.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -76,26 +58,22 @@ final class np extends ae {
     }
 
     final void a(int param0, boolean param1, int param2, int param3) {
-        if (param1) {
-          if ((this.field_j ^ -1) == -2) {
-            return;
-          } else {
+        if (!param1) {
+            this.a(-45, true, 92, -81);
+            if (!((this.field_j ^ -1) != -2)) {
+                return;
+            }
             pb.field_e.c(Integer.toString(this.field_f - param3), this.field_i >> -param2 + 16, this.field_o >> -param0 + 16, 4, -1);
             pb.field_e.c(Integer.toString(-param3 + this.field_f), -param2 + this.field_n, -param0 + this.field_p, 0, -1);
             oo.d(this.field_i >> -param2 + 16, this.field_o >> 16 - param0, -param2 + this.field_n, this.field_p + -param0, 16711680, 10);
             return;
-          }
-        } else {
-          this.a(-45, true, 92, -81);
-          if ((this.field_j ^ -1) == -2) {
-            return;
-          } else {
-            pb.field_e.c(Integer.toString(this.field_f - param3), this.field_i >> -param2 + 16, this.field_o >> -param0 + 16, 4, -1);
-            pb.field_e.c(Integer.toString(-param3 + this.field_f), -param2 + this.field_n, -param0 + this.field_p, 0, -1);
-            oo.d(this.field_i >> -param2 + 16, this.field_o >> 16 - param0, -param2 + this.field_n, this.field_p + -param0, 16711680, 10);
-            return;
-          }
         }
+        if (!((this.field_j ^ -1) != -2)) {
+            return;
+        }
+        pb.field_e.c(Integer.toString(this.field_f - param3), this.field_i >> -param2 + 16, this.field_o >> -param0 + 16, 4, -1);
+        pb.field_e.c(Integer.toString(-param3 + this.field_f), -param2 + this.field_n, -param0 + this.field_p, 0, -1);
+        oo.d(this.field_i >> -param2 + 16, this.field_o >> 16 - param0, -param2 + this.field_n, this.field_p + -param0, 16711680, 10);
     }
 
     np(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

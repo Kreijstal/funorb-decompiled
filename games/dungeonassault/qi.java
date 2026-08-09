@@ -40,9 +40,9 @@ final class qi implements Iterable {
     }
 
     final ne a(int param0, long param1) {
-        ne var4 = null;
-        ne var5 = null;
-        int var6 = 0;
+        ne var4;
+        ne var5;
+        int var6;
         var6 = DungeonAssault.field_K;
         var4 = this.field_d[(int)((long)(this.field_g - param0) & param1)];
         this.field_j = var4.field_e;

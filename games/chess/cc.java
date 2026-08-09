@@ -10,8 +10,8 @@ final class cc extends ab {
     static String field_v;
 
     final static void a(byte param0, int param1) {
-        nk var2 = null;
-        int var3 = 0;
+        nk var2;
+        int var3;
         if (param0 != 81) {
           return;
         } else {

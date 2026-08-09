@@ -15,10 +15,8 @@ final class je extends ec {
             field_I = (String) null;
         }
         String var1 = ne.a((byte) -52);
-        if (var1 != null) {
-            if (0 <= var1.indexOf('@')) {
-                var1 = "";
-            }
+        if (var1 != null && 0 <= var1.indexOf('@')) {
+            var1 = "";
         }
         return new uh(ne.a((byte) -52), db.b(16));
     }
@@ -42,24 +40,14 @@ final class je extends ec {
 
     final static void a(lk param0, byte param1) {
         lk var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException var2_ref = null;
         var3 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -102,27 +90,19 @@ final class je extends ec {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var2_ref);
-            stackOut_11_1 = new StringBuilder().append("je.B(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var2_ref);
+
+            stackIn_13_1 = new StringBuilder().append("je.B(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L5;
             }
           }
@@ -156,9 +136,9 @@ final class je extends ec {
     }
 
     final gg c(byte param0) {
-        ma var2 = null;
-        gg var3 = null;
-        int var4 = 0;
+        ma var2;
+        gg var3;
+        int var4;
         L0: {
           var4 = Virogrid.field_F ? 1 : 0;
           if (param0 == 51) {
@@ -199,7 +179,6 @@ final class je extends ec {
 
     final void a(int param0, fi param1) {
         gg var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param1 instanceof gg)) {
                 throw new IllegalArgumentException();
@@ -210,19 +189,18 @@ final class je extends ec {
             }
             this.field_F.b(var3, (byte) -45);
             var3.field_G = true;
-            discarded$0 = var3.a((fi) (this), param0 ^ -8515);
+            var3.a((fi) (this), param0 ^ -8515);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) ((Object) runtimeException), "je.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0) {
-        fi discarded$0 = null;
         int var4 = Virogrid.field_F ? 1 : 0;
         ma var2 = new ma(this.field_F);
         gg var3 = (gg) ((Object) var2.c(12677));
         if (param0 != 76) {
-            discarded$0 = this.g(true);
+            this.g(true);
         }
         while (var3 != null) {
             var3.field_G = false;
@@ -232,9 +210,9 @@ final class je extends ec {
     }
 
     final fi g(boolean param0) {
-        ma var2 = null;
-        gg var3 = null;
-        int var4 = 0;
+        ma var2;
+        gg var3;
+        int var4;
         L0: {
           var4 = Virogrid.field_F ? 1 : 0;
           var2 = new ma(this.field_F);

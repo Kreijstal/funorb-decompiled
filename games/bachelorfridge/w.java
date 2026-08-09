@@ -36,8 +36,13 @@ class w implements q {
     }
 
     final static void a(boolean param0) {
-        RuntimeException var1 = null;
+        int stackIn_12_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_13_1 = 0;
+        lda stackIn_18_0 = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -47,19 +52,6 @@ class w implements q {
         int var8 = 0;
         lda var9 = null;
         int var10 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_13_1 = 0;
-        lda stackIn_18_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_12_1 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
-        lda stackOut_17_0 = null;
-        lda stackOut_16_0 = null;
         var10 = BachelorFridge.field_y;
         try {
           L0: {
@@ -98,20 +90,15 @@ class w implements q {
                 }
                 L4: {
                   var6 = pt.field_a[var3];
-                  stackOut_10_0 = 1;
-                  stackIn_12_0 = stackOut_10_0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_12_0 = 1;
+
                   if (var4 < 0) {
-                    stackOut_12_0 = stackIn_12_0;
-                    stackOut_12_1 = 0;
-                    stackIn_13_0 = stackOut_12_0;
-                    stackIn_13_1 = stackOut_12_1;
+                    stackIn_13_0 = stackIn_12_0;
+                    stackIn_13_1 = 0;
                     break L4;
                   } else {
-                    stackOut_11_0 = stackIn_11_0;
-                    stackOut_11_1 = 1;
-                    stackIn_13_0 = stackOut_11_0;
-                    stackIn_13_1 = stackOut_11_1;
+                    stackIn_13_0 = stackIn_12_0;
+                    stackIn_13_1 = 1;
                     break L4;
                   }
                 }
@@ -121,12 +108,10 @@ class w implements q {
                   if (var4 >= 0) {
                     L6: {
                       if (fw.field_i.field_g == var4) {
-                        stackOut_17_0 = nj.field_j;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = nj.field_j;
                         break L6;
                       } else {
-                        stackOut_16_0 = aka.field_x;
-                        stackIn_18_0 = stackOut_16_0;
+                        stackIn_18_0 = aka.field_x;
                         break L6;
                       }
                     }
@@ -177,96 +162,30 @@ class w implements q {
     }
 
     w(vr param0, vr param1, vr param2) {
-        int discarded$14 = 0;
-        int discarded$15 = 0;
-        int discarded$16 = 0;
-        int discarded$17 = 0;
-        int discarded$18 = 0;
-        byte discarded$19 = 0;
-        int discarded$20 = 0;
-        byte discarded$21 = 0;
-        byte discarded$22 = 0;
-        byte discarded$23 = 0;
-        byte discarded$24 = 0;
-        byte discarded$25 = 0;
-        byte discarded$26 = 0;
-        int discarded$27 = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        lu var7 = null;
-        gma stackIn_10_0 = null;
         gma stackIn_11_0 = null;
         gma stackIn_12_0 = null;
         int stackIn_12_1 = 0;
-        gma stackIn_18_0 = null;
         gma stackIn_19_0 = null;
         gma stackIn_20_0 = null;
         int stackIn_20_1 = 0;
-        gma stackIn_71_0 = null;
         gma stackIn_72_0 = null;
         gma stackIn_73_0 = null;
         int stackIn_73_1 = 0;
-        RuntimeException stackIn_112_0 = null;
-        StringBuilder stackIn_112_1 = null;
         RuntimeException stackIn_113_0 = null;
         StringBuilder stackIn_113_1 = null;
         RuntimeException stackIn_114_0 = null;
         StringBuilder stackIn_114_1 = null;
         String stackIn_114_2 = null;
-        RuntimeException stackIn_115_0 = null;
-        StringBuilder stackIn_115_1 = null;
-        RuntimeException stackIn_116_0 = null;
         StringBuilder stackIn_116_1 = null;
-        RuntimeException stackIn_117_0 = null;
         StringBuilder stackIn_117_1 = null;
         String stackIn_117_2 = null;
-        RuntimeException stackIn_118_0 = null;
-        StringBuilder stackIn_118_1 = null;
-        RuntimeException stackIn_119_0 = null;
         StringBuilder stackIn_119_1 = null;
-        RuntimeException stackIn_120_0 = null;
         StringBuilder stackIn_120_1 = null;
         String stackIn_120_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gma stackOut_70_0 = null;
-        gma stackOut_72_0 = null;
-        int stackOut_72_1 = 0;
-        gma stackOut_71_0 = null;
-        int stackOut_71_1 = 0;
-        gma stackOut_17_0 = null;
-        gma stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        gma stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        gma stackOut_9_0 = null;
-        gma stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        gma stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        RuntimeException stackOut_111_0 = null;
-        StringBuilder stackOut_111_1 = null;
-        RuntimeException stackOut_113_0 = null;
-        StringBuilder stackOut_113_1 = null;
-        String stackOut_113_2 = null;
-        RuntimeException stackOut_112_0 = null;
-        StringBuilder stackOut_112_1 = null;
-        String stackOut_112_2 = null;
-        RuntimeException stackOut_114_0 = null;
-        StringBuilder stackOut_114_1 = null;
-        RuntimeException stackOut_116_0 = null;
-        StringBuilder stackOut_116_1 = null;
-        String stackOut_116_2 = null;
-        RuntimeException stackOut_115_0 = null;
-        StringBuilder stackOut_115_1 = null;
-        String stackOut_115_2 = null;
-        RuntimeException stackOut_117_0 = null;
-        StringBuilder stackOut_117_1 = null;
-        RuntimeException stackOut_119_0 = null;
-        StringBuilder stackOut_119_1 = null;
-        String stackOut_119_2 = null;
-        RuntimeException stackOut_118_0 = null;
-        StringBuilder stackOut_118_1 = null;
-        String stackOut_118_2 = null;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        lu var7 = null;
         this.field_a = new vi(256);
         try {
           L0: {
@@ -354,7 +273,7 @@ class w implements q {
                                                                                           if (null == this.field_c[var5]) {
                                                                                             break L22;
                                                                                           } else {
-                                                                                            discarded$14 = var7.f(57);
+                                                                                            var7.f(57);
                                                                                             break L22;
                                                                                           }
                                                                                         }
@@ -367,7 +286,7 @@ class w implements q {
                                                                                       if (this.field_c[var5] == null) {
                                                                                         break L23;
                                                                                       } else {
-                                                                                        discarded$15 = var7.b(16711935);
+                                                                                        var7.b(16711935);
                                                                                         break L23;
                                                                                       }
                                                                                     }
@@ -380,7 +299,7 @@ class w implements q {
                                                                                   if (null == this.field_c[var5]) {
                                                                                     break L24;
                                                                                   } else {
-                                                                                    discarded$16 = var7.b(16711935);
+                                                                                    var7.b(16711935);
                                                                                     break L24;
                                                                                   }
                                                                                 }
@@ -393,7 +312,7 @@ class w implements q {
                                                                               if (this.field_c[var5] == null) {
                                                                                 break L25;
                                                                               } else {
-                                                                                discarded$17 = var7.b(16711935);
+                                                                                var7.b(16711935);
                                                                                 break L25;
                                                                               }
                                                                             }
@@ -406,7 +325,7 @@ class w implements q {
                                                                           if (null == this.field_c[var5]) {
                                                                             break L26;
                                                                           } else {
-                                                                            discarded$18 = var7.b(16711935);
+                                                                            var7.b(16711935);
                                                                             break L26;
                                                                           }
                                                                         }
@@ -419,7 +338,7 @@ class w implements q {
                                                                       if (this.field_c[var5] == null) {
                                                                         break L27;
                                                                       } else {
-                                                                        discarded$19 = var7.b(true);
+                                                                        var7.b(true);
                                                                         break L27;
                                                                       }
                                                                     }
@@ -433,20 +352,15 @@ class w implements q {
                                                                     break L28;
                                                                   } else {
                                                                     L29: {
-                                                                      stackOut_70_0 = this.field_c[var5];
-                                                                      stackIn_72_0 = stackOut_70_0;
-                                                                      stackIn_71_0 = stackOut_70_0;
+                                                                      stackIn_72_0 = this.field_c[var5];
+
                                                                       if (-2 != (var7.b(16711935) ^ -1)) {
-                                                                        stackOut_72_0 = (gma) ((Object) stackIn_72_0);
-                                                                        stackOut_72_1 = 0;
-                                                                        stackIn_73_0 = stackOut_72_0;
-                                                                        stackIn_73_1 = stackOut_72_1;
+                                                                        stackIn_73_0 = (gma) ((Object) stackIn_72_0);
+                                                                        stackIn_73_1 = 0;
                                                                         break L29;
                                                                       } else {
-                                                                        stackOut_71_0 = (gma) ((Object) stackIn_71_0);
-                                                                        stackOut_71_1 = 1;
-                                                                        stackIn_73_0 = stackOut_71_0;
-                                                                        stackIn_73_1 = stackOut_71_1;
+                                                                        stackIn_73_0 = (gma) ((Object) stackIn_72_0);
+                                                                        stackIn_73_1 = 1;
                                                                         break L29;
                                                                       }
                                                                     }
@@ -463,7 +377,7 @@ class w implements q {
                                                               if (null == this.field_c[var5]) {
                                                                 break L30;
                                                               } else {
-                                                                discarded$20 = var7.b(16711935);
+                                                                var7.b(16711935);
                                                                 break L30;
                                                               }
                                                             }
@@ -476,7 +390,7 @@ class w implements q {
                                                           if (null == this.field_c[var5]) {
                                                             break L31;
                                                           } else {
-                                                            discarded$21 = var7.b(true);
+                                                            var7.b(true);
                                                             break L31;
                                                           }
                                                         }
@@ -489,7 +403,7 @@ class w implements q {
                                                       if (null == this.field_c[var5]) {
                                                         break L32;
                                                       } else {
-                                                        discarded$22 = var7.b(true);
+                                                        var7.b(true);
                                                         break L32;
                                                       }
                                                     }
@@ -515,7 +429,7 @@ class w implements q {
                                               if (this.field_c[var5] == null) {
                                                 break L34;
                                               } else {
-                                                discarded$23 = var7.b(true);
+                                                var7.b(true);
                                                 break L34;
                                               }
                                             }
@@ -528,7 +442,7 @@ class w implements q {
                                           if (null == this.field_c[var5]) {
                                             break L35;
                                           } else {
-                                            discarded$24 = var7.b(true);
+                                            var7.b(true);
                                             break L35;
                                           }
                                         }
@@ -541,7 +455,7 @@ class w implements q {
                                       if (this.field_c[var5] == null) {
                                         break L36;
                                       } else {
-                                        discarded$25 = var7.b(true);
+                                        var7.b(true);
                                         break L36;
                                       }
                                     }
@@ -554,7 +468,7 @@ class w implements q {
                                   if (this.field_c[var5] == null) {
                                     break L37;
                                   } else {
-                                    discarded$26 = var7.b(true);
+                                    var7.b(true);
                                     break L37;
                                   }
                                 }
@@ -567,7 +481,7 @@ class w implements q {
                               if (null == this.field_c[var5]) {
                                 break L38;
                               } else {
-                                discarded$27 = var7.b(16711935);
+                                var7.b(16711935);
                                 break L38;
                               }
                             }
@@ -581,20 +495,15 @@ class w implements q {
                             break L39;
                           } else {
                             L40: {
-                              stackOut_17_0 = this.field_c[var5];
-                              stackIn_19_0 = stackOut_17_0;
-                              stackIn_18_0 = stackOut_17_0;
+                              stackIn_19_0 = this.field_c[var5];
+
                               if (var7.b(16711935) != 1) {
-                                stackOut_19_0 = (gma) ((Object) stackIn_19_0);
-                                stackOut_19_1 = 0;
-                                stackIn_20_0 = stackOut_19_0;
-                                stackIn_20_1 = stackOut_19_1;
+                                stackIn_20_0 = (gma) ((Object) stackIn_19_0);
+                                stackIn_20_1 = 0;
                                 break L40;
                               } else {
-                                stackOut_18_0 = (gma) ((Object) stackIn_18_0);
-                                stackOut_18_1 = 1;
-                                stackIn_20_0 = stackOut_18_0;
-                                stackIn_20_1 = stackOut_18_1;
+                                stackIn_20_0 = (gma) ((Object) stackIn_19_0);
+                                stackIn_20_1 = 1;
                                 break L40;
                               }
                             }
@@ -612,20 +521,15 @@ class w implements q {
                         break L41;
                       } else {
                         L42: {
-                          stackOut_9_0 = this.field_c[var5];
-                          stackIn_11_0 = stackOut_9_0;
-                          stackIn_10_0 = stackOut_9_0;
+                          stackIn_11_0 = this.field_c[var5];
+
                           if (var7.b(16711935) != 0) {
-                            stackOut_11_0 = (gma) ((Object) stackIn_11_0);
-                            stackOut_11_1 = 0;
-                            stackIn_12_0 = stackOut_11_0;
-                            stackIn_12_1 = stackOut_11_1;
+                            stackIn_12_0 = (gma) ((Object) stackIn_11_0);
+                            stackIn_12_1 = 0;
                             break L42;
                           } else {
-                            stackOut_10_0 = (gma) ((Object) stackIn_10_0);
-                            stackOut_10_1 = 1;
-                            stackIn_12_0 = stackOut_10_0;
-                            stackIn_12_1 = stackOut_10_1;
+                            stackIn_12_0 = (gma) ((Object) stackIn_11_0);
+                            stackIn_12_1 = 1;
                             break L42;
                           }
                         }
@@ -655,81 +559,57 @@ class w implements q {
           decompiledCaughtException = decompiledCaughtParameter0;
           L44: {
             var4 = decompiledCaughtException;
-            stackOut_111_0 = (RuntimeException) (var4);
-            stackOut_111_1 = new StringBuilder().append("w.<init>(");
-            stackIn_113_0 = stackOut_111_0;
-            stackIn_113_1 = stackOut_111_1;
-            stackIn_112_0 = stackOut_111_0;
-            stackIn_112_1 = stackOut_111_1;
+            stackIn_113_0 = (RuntimeException) (var4);
+
+            stackIn_113_1 = new StringBuilder().append("w.<init>(");
+
             if (param0 == null) {
-              stackOut_113_0 = (RuntimeException) ((Object) stackIn_113_0);
-              stackOut_113_1 = (StringBuilder) ((Object) stackIn_113_1);
-              stackOut_113_2 = "null";
-              stackIn_114_0 = stackOut_113_0;
-              stackIn_114_1 = stackOut_113_1;
-              stackIn_114_2 = stackOut_113_2;
+              stackIn_114_0 = (RuntimeException) ((Object) stackIn_113_0);
+              stackIn_114_1 = (StringBuilder) ((Object) stackIn_113_1);
+              stackIn_114_2 = "null";
               break L44;
             } else {
-              stackOut_112_0 = (RuntimeException) ((Object) stackIn_112_0);
-              stackOut_112_1 = (StringBuilder) ((Object) stackIn_112_1);
-              stackOut_112_2 = "{...}";
-              stackIn_114_0 = stackOut_112_0;
-              stackIn_114_1 = stackOut_112_1;
-              stackIn_114_2 = stackOut_112_2;
+              stackIn_114_0 = (RuntimeException) ((Object) stackIn_113_0);
+              stackIn_114_1 = (StringBuilder) ((Object) stackIn_113_1);
+              stackIn_114_2 = "{...}";
               break L44;
             }
           }
           L45: {
-            stackOut_114_0 = (RuntimeException) ((Object) stackIn_114_0);
-            stackOut_114_1 = ((StringBuilder) (Object) stackIn_114_1).append(stackIn_114_2).append(',');
-            stackIn_116_0 = stackOut_114_0;
-            stackIn_116_1 = stackOut_114_1;
-            stackIn_115_0 = stackOut_114_0;
-            stackIn_115_1 = stackOut_114_1;
+
+
+            stackIn_116_1 = ((StringBuilder) (Object) stackIn_114_1).append(stackIn_114_2).append(',');
+
             if (param1 == null) {
-              stackOut_116_0 = (RuntimeException) ((Object) stackIn_116_0);
-              stackOut_116_1 = (StringBuilder) ((Object) stackIn_116_1);
-              stackOut_116_2 = "null";
-              stackIn_117_0 = stackOut_116_0;
-              stackIn_117_1 = stackOut_116_1;
-              stackIn_117_2 = stackOut_116_2;
+              stackIn_114_0 = (RuntimeException) ((Object) stackIn_114_0);
+              stackIn_117_1 = (StringBuilder) ((Object) stackIn_116_1);
+              stackIn_117_2 = "null";
               break L45;
             } else {
-              stackOut_115_0 = (RuntimeException) ((Object) stackIn_115_0);
-              stackOut_115_1 = (StringBuilder) ((Object) stackIn_115_1);
-              stackOut_115_2 = "{...}";
-              stackIn_117_0 = stackOut_115_0;
-              stackIn_117_1 = stackOut_115_1;
-              stackIn_117_2 = stackOut_115_2;
+              stackIn_114_0 = (RuntimeException) ((Object) stackIn_114_0);
+              stackIn_117_1 = (StringBuilder) ((Object) stackIn_116_1);
+              stackIn_117_2 = "{...}";
               break L45;
             }
           }
           L46: {
-            stackOut_117_0 = (RuntimeException) ((Object) stackIn_117_0);
-            stackOut_117_1 = ((StringBuilder) (Object) stackIn_117_1).append(stackIn_117_2).append(',');
-            stackIn_119_0 = stackOut_117_0;
-            stackIn_119_1 = stackOut_117_1;
-            stackIn_118_0 = stackOut_117_0;
-            stackIn_118_1 = stackOut_117_1;
+
+
+            stackIn_119_1 = ((StringBuilder) (Object) stackIn_117_1).append(stackIn_117_2).append(',');
+
             if (param2 == null) {
-              stackOut_119_0 = (RuntimeException) ((Object) stackIn_119_0);
-              stackOut_119_1 = (StringBuilder) ((Object) stackIn_119_1);
-              stackOut_119_2 = "null";
-              stackIn_120_0 = stackOut_119_0;
-              stackIn_120_1 = stackOut_119_1;
-              stackIn_120_2 = stackOut_119_2;
+              stackIn_114_0 = (RuntimeException) ((Object) stackIn_114_0);
+              stackIn_120_1 = (StringBuilder) ((Object) stackIn_119_1);
+              stackIn_120_2 = "null";
               break L46;
             } else {
-              stackOut_118_0 = (RuntimeException) ((Object) stackIn_118_0);
-              stackOut_118_1 = (StringBuilder) ((Object) stackIn_118_1);
-              stackOut_118_2 = "{...}";
-              stackIn_120_0 = stackOut_118_0;
-              stackIn_120_1 = stackOut_118_1;
-              stackIn_120_2 = stackOut_118_2;
+              stackIn_114_0 = (RuntimeException) ((Object) stackIn_114_0);
+              stackIn_120_1 = (StringBuilder) ((Object) stackIn_119_1);
+              stackIn_120_2 = "{...}";
               break L46;
             }
           }
-          throw pe.a((Throwable) ((Object) stackIn_120_0), stackIn_120_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_114_0), stackIn_120_2 + ')');
         }
     }
 
@@ -741,17 +621,14 @@ class w implements q {
     }
 
     public final boolean c(byte param0, int param1) {
-        gma discarded$2 = null;
-        on var3 = null;
+        on var3;
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           var3 = this.d(param1, -23060);
           if (param0 < -45) {
             break L0;
           } else {
-            discarded$2 = this.c(-79, 92);
+            this.c(-79, 92);
             break L0;
           }
         }
@@ -763,14 +640,12 @@ class w implements q {
               if (!var3.a((q) (this), this.field_b, -63)) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;

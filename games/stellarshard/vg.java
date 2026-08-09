@@ -24,12 +24,12 @@ class vg extends id {
     }
 
     final static pb c(byte param0) {
-        int var1 = 0;
-        byte[] var2 = null;
-        int[] var3 = null;
-        int var4_int = 0;
-        pb var4 = null;
-        int var5 = 0;
+        int var1;
+        byte[] var2;
+        int[] var3;
+        int var4_int;
+        pb var4;
+        int var5;
         var5 = stellarshard.field_B;
         if (param0 > -80) {
           return (pb) null;

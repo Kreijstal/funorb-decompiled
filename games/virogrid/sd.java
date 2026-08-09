@@ -45,7 +45,7 @@ final class sd {
     }
 
     final static void a(int param0, int param1, int param2, byte param3) {
-        int var4 = 0;
+        int var4;
         var4 = -72 / ((param3 - -13) / 32);
         if (0 == param2) {
           if (param0 != ca.field_D) {

@@ -6,7 +6,7 @@ final class aa {
     static int field_a;
 
     final static boolean a(byte param0) {
-        int var1 = 0;
+        int var1;
         var1 = 116 / ((16 - param0) / 34);
         if (10 <= ff.field_e) {
           if (fc.field_a < 13) {
@@ -26,8 +26,6 @@ final class aa {
         int var4 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -35,16 +33,6 @@ final class aa {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         var4 = EscapeVector.field_A;
         try {
           L0: {
@@ -52,14 +40,12 @@ final class aa {
             var3 = param0;
             L1: while (true) {
               if (param1.length() <= var3) {
-                stackOut_8_0 = 1;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (param1.charAt(var3) != var2_int) {
-                  stackOut_5_0 = 0;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -73,27 +59,19 @@ final class aa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var2);
-            stackOut_10_1 = new StringBuilder().append("aa.C(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var2);
+
+            stackIn_12_1 = new StringBuilder().append("aa.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L2;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L2;
             }
           }
@@ -107,10 +85,9 @@ final class aa {
     }
 
     public static void b(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != -96) {
             String var2 = (String) null;
-            discarded$0 = aa.a(-12, (String) null);
+            aa.a(-12, (String) null);
             field_b = null;
             return;
         }

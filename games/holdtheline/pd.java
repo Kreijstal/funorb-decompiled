@@ -17,12 +17,6 @@ class pd extends sd {
     }
 
     final static int a(byte param0, boolean param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        hj var6 = null;
         int stackIn_63_0 = 0;
         int stackIn_66_0 = 0;
         int stackIn_73_0 = 0;
@@ -31,12 +25,12 @@ class pd extends sd {
         int stackIn_83_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_65_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_82_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_80_0 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        hj var6 = null;
         var5 = HoldTheLine.field_D;
         try {
           L0: {
@@ -235,14 +229,12 @@ class pd extends sd {
                         if (1 != ln.field_k.field_g) {
                           break L13;
                         } else {
-                          stackOut_65_0 = 2;
-                          stackIn_66_0 = stackOut_65_0;
+                          stackIn_66_0 = 2;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         }
                       } else {
-                        stackOut_62_0 = 3;
-                        stackIn_63_0 = stackOut_62_0;
+                        stackIn_63_0 = 3;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
@@ -250,8 +242,7 @@ class pd extends sd {
                   }
                   L14: while (true) {
                     if (!qh.c(-121)) {
-                      stackOut_82_0 = 0;
-                      stackIn_83_0 = stackOut_82_0;
+                      stackIn_83_0 = 0;
                       decompiledRegionSelector0 = 5;
                       break L0;
                     } else {
@@ -261,14 +252,12 @@ class pd extends sd {
                           break L15;
                         } else {
                           if (ln.field_k.field_g == 0) {
-                            stackOut_72_0 = 3;
-                            stackIn_73_0 = stackOut_72_0;
+                            stackIn_73_0 = 3;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
                             if (ln.field_k.field_g == 1) {
-                              stackOut_76_0 = 1;
-                              stackIn_77_0 = stackOut_76_0;
+                              stackIn_77_0 = 1;
                               decompiledRegionSelector0 = 3;
                               break L0;
                             } else {
@@ -278,8 +267,7 @@ class pd extends sd {
                         }
                       }
                       if (-14 == (aa.field_n ^ -1)) {
-                        stackOut_80_0 = 1;
-                        stackIn_81_0 = stackOut_80_0;
+                        stackIn_81_0 = 1;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
@@ -326,10 +314,9 @@ class pd extends sd {
     }
 
     final static Boolean b(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != -29) {
             vk var2 = (vk) null;
-            discarded$0 = pd.a((vk) null, true);
+            pd.a((vk) null, true);
         }
         Boolean var1 = wd.field_u;
         wd.field_u = null;
@@ -337,19 +324,6 @@ class pd extends sd {
     }
 
     final static boolean a(vk param0, boolean param1) {
-        RuntimeException var2 = null;
-        int[] var2_array = null;
-        int var3_int = 0;
-        mg[] var3 = null;
-        int[] var4 = null;
-        int var5_int = 0;
-        hj[] var5 = null;
-        int var6_int = 0;
-        hj[] var6 = null;
-        int var7 = 0;
-        hj var8 = null;
-        int var9 = 0;
-        int[] var10 = null;
         int stackIn_3_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_16_0 = 0;
@@ -357,8 +331,6 @@ class pd extends sd {
         int stackIn_25_0 = 0;
         int stackIn_35_0 = 0;
         int stackIn_42_0 = 0;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         RuntimeException stackIn_46_0 = null;
@@ -366,27 +338,25 @@ class pd extends sd {
         String stackIn_46_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
+        int[] var2 = null;
+        RuntimeException var2_ref = null;
+        int var3_int = 0;
+        mg[] var3 = null;
+        int[] var4 = null;
+        int var5_int = 0;
+        hj[] var5 = null;
+        hj[] var6 = null;
+        int var6_int = 0;
+        int var7 = 0;
+        hj var8 = null;
+        int var9 = 0;
+        int[] var10 = null;
         var9 = HoldTheLine.field_D;
         try {
           L0: {
             if (mm.a(param0, -65)) {
               var10 = go.field_g[param0.field_p];
-              var2_array = var10;
+              var2 = var10;
               var3_int = 0;
               L1: while (true) {
                 if (var10.length <= var3_int) {
@@ -400,8 +370,7 @@ class pd extends sd {
                   }
                   if (mc.field_a[9].b((byte) 116)) {
                     if (!mc.field_a[11].b((byte) 124)) {
-                      stackOut_19_0 = 0;
-                      stackIn_20_0 = stackOut_19_0;
+                      stackIn_20_0 = 0;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
@@ -411,8 +380,7 @@ class pd extends sd {
                         } else {
                           var3 = wi.field_a.a(16);
                           if (var3 == null) {
-                            stackOut_24_0 = 0;
-                            stackIn_25_0 = stackOut_24_0;
+                            stackIn_25_0 = 0;
                             decompiledRegionSelector0 = 4;
                             break L0;
                           } else {
@@ -423,8 +391,7 @@ class pd extends sd {
                               if (-5 >= (var5_int ^ -1)) {
                                 var5 = tn.field_b.a(180);
                                 if (var5 == null) {
-                                  stackOut_34_0 = 0;
-                                  stackIn_35_0 = stackOut_34_0;
+                                  stackIn_35_0 = 0;
                                   decompiledRegionSelector0 = 5;
                                   break L0;
                                 } else {
@@ -460,8 +427,7 @@ class pd extends sd {
                         }
                       }
                       if (!nn.a(-74)) {
-                        stackOut_41_0 = 0;
-                        stackIn_42_0 = stackOut_41_0;
+                        stackIn_42_0 = 0;
                         decompiledRegionSelector0 = 6;
                         break L0;
                       } else {
@@ -469,15 +435,13 @@ class pd extends sd {
                       }
                     }
                   } else {
-                    stackOut_15_0 = 0;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = 0;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 } else {
                   if (ge.field_c[var10[var3_int]].field_b.c((byte) 41) == null) {
-                    stackOut_9_0 = 0;
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = 0;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -491,8 +455,7 @@ class pd extends sd {
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -500,28 +463,20 @@ class pd extends sd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
-            var2 = decompiledCaughtException;
-            stackOut_43_0 = (RuntimeException) (var2);
-            stackOut_43_1 = new StringBuilder().append("pd.G(");
-            stackIn_45_0 = stackOut_43_0;
-            stackIn_45_1 = stackOut_43_1;
-            stackIn_44_0 = stackOut_43_0;
-            stackIn_44_1 = stackOut_43_1;
+            var2_ref = decompiledCaughtException;
+            stackIn_45_0 = (RuntimeException) (var2_ref);
+
+            stackIn_45_1 = new StringBuilder().append("pd.G(");
+
             if (param0 == null) {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "null";
-              stackIn_46_0 = stackOut_45_0;
-              stackIn_46_1 = stackOut_45_1;
-              stackIn_46_2 = stackOut_45_2;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "null";
               break L7;
             } else {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "{...}";
-              stackIn_46_0 = stackOut_44_0;
-              stackIn_46_1 = stackOut_44_1;
-              stackIn_46_2 = stackOut_44_2;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "{...}";
               break L7;
             }
           }
@@ -574,8 +529,15 @@ class pd extends sd {
     }
 
     final static void a(hj param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -584,23 +546,6 @@ class pd extends sd {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
         var14 = HoldTheLine.field_D;
         try {
           L0: {
@@ -702,27 +647,19 @@ class pd extends sd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var6 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var6);
-            stackOut_27_1 = new StringBuilder().append("pd.F(");
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackIn_29_0 = (RuntimeException) (var6);
+
+            stackIn_29_1 = new StringBuilder().append("pd.F(");
+
             if (param0 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L9;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L9;
             }
           }

@@ -18,73 +18,46 @@ class ij extends lc implements tsa {
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
-            L1: {
-              if (param4 > 44) {
-                break L1;
-              } else {
-                this.field_cb = (rk) null;
-                break L1;
-              }
+            if (param4 > 44) {
+              break L0;
+            } else {
+              this.field_cb = (rk) null;
+              break L0;
             }
-            L2: {
-              if (this.field_Y) {
-                break L2;
-              } else {
-                jc.a("tochangedisplayname.ws", di.a(72), (byte) -68);
-                if (!TombRacer.field_G) {
-                  break L0;
-                } else {
-                  break L2;
-                }
-              }
-            }
+          }
+          if (this.field_Y) {
             jsa.a(false, 3);
             this.i((byte) -124);
+            return;
+          } else {
+            jc.a("tochangedisplayname.ws", di.a(72), (byte) -68);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L1: {
             var6 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var6);
-            stackOut_7_1 = new StringBuilder().append("ij.M(").append(param0).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_8_0 = (RuntimeException) (var6);
+
+            stackIn_8_1 = new StringBuilder().append("ij.M(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
+              break L1;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L3;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
+              break L1;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -92,8 +65,6 @@ class ij extends lc implements tsa {
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
         boolean stackIn_7_0 = false;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -101,16 +72,6 @@ class ij extends lc implements tsa {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        boolean stackOut_6_0 = false;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
@@ -123,13 +84,11 @@ class ij extends lc implements tsa {
             }
             if (13 == param2) {
               this.i((byte) -115);
-              stackOut_4_0 = 1;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = super.a(param0, param1, param2, true);
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = super.a(param0, param1, param2, true);
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -138,27 +97,19 @@ class ij extends lc implements tsa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var5);
-            stackOut_8_1 = new StringBuilder().append("ij.P(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var5);
+
+            stackIn_10_1 = new StringBuilder().append("ij.P(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }
@@ -172,7 +123,7 @@ class ij extends lc implements tsa {
     }
 
     final void f(boolean param0) {
-        sr var2 = null;
+        sr var2;
         this.field_cb.a(param0, 4210752, 2121792);
         if (!param0) {
           this.field_Y = false;
@@ -260,48 +211,24 @@ class ij extends lc implements tsa {
     }
 
     final void a(int param0, byte param1, String param2) {
-        boolean discarded$3 = false;
-        rj discarded$4 = null;
-        rj discarded$5 = null;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        ae var6 = null;
-        sr var7 = null;
-        Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
         int stackIn_9_1 = 0;
-        sr stackIn_12_0 = null;
         sr stackIn_13_0 = null;
         sr stackIn_14_0 = null;
         String stackIn_14_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_6_0 = null;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        sr stackOut_11_0 = null;
-        sr stackOut_13_0 = null;
-        String stackOut_13_1 = null;
-        sr stackOut_12_0 = null;
-        String stackOut_12_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
+        sr var4 = null;
+        RuntimeException var4_ref = null;
+        int var5 = 0;
+        ae var6 = null;
+        sr var7 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -314,26 +241,21 @@ class ij extends lc implements tsa {
                   break L1;
                 } else {
                   var6 = (ae) null;
-                  discarded$3 = this.a('F', (ae) null, 118, true);
+                  this.a('F', (ae) null, 118, true);
                   break L1;
                 }
               }
               L2: {
                 this.field_W = true;
-                stackOut_6_0 = this;
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_8_0 = this;
+
                 if (param0 != 256) {
-                  stackOut_8_0 = this;
-                  stackOut_8_1 = 0;
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_0 = this;
+                  stackIn_9_1 = 0;
                   break L2;
                 } else {
-                  stackOut_7_0 = this;
-                  stackOut_7_1 = 1;
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_0 = this;
+                  stackIn_9_1 = 1;
                   break L2;
                 }
               }
@@ -341,95 +263,57 @@ class ij extends lc implements tsa {
                 ((ij) (this)).field_Y = stackIn_9_1 != 0;
                 this.field_cb.a(true, 4210752, 8405024);
                 var7 = new sr((ij) (this), this.field_ab, param2);
+                var4 = var7;
                 if (param0 == 5) {
                   var7.a(sba.field_n, 11, 61);
                   var7.a(nj.field_q, 17, 36);
                   break L3;
                 } else {
-                  L4: {
-                    if (param0 == 256) {
-                      break L4;
-                    } else {
-                      L5: {
-                        stackOut_11_0 = (sr) (var7);
-                        stackIn_13_0 = stackOut_11_0;
-                        stackIn_12_0 = stackOut_11_0;
-                        if (this.field_V) {
-                          stackOut_13_0 = (sr) ((Object) stackIn_13_0);
-                          stackOut_13_1 = nga.field_q;
-                          stackIn_14_0 = stackOut_13_0;
-                          stackIn_14_1 = stackOut_13_1;
-                          break L5;
-                        } else {
-                          stackOut_12_0 = (sr) ((Object) stackIn_12_0);
-                          stackOut_12_1 = sm.field_o;
-                          stackIn_14_0 = stackOut_12_0;
-                          stackIn_14_1 = stackOut_12_1;
-                          break L5;
-                        }
-                      }
-                      ((sr) (Object) stackIn_14_0).a(stackIn_14_1, -1, 78);
-                      if (var5 == 0) {
-                        break L3;
+                  if (param0 == 256) {
+                    var7.a(nga.field_q, (byte) -102, (qc) (this));
+                    break L3;
+                  } else {
+                    L4: {
+                      stackIn_13_0 = (sr) (var7);
+
+                      if (this.field_V) {
+                        stackIn_14_0 = (sr) ((Object) stackIn_13_0);
+                        stackIn_14_1 = nga.field_q;
+                        break L4;
                       } else {
+                        stackIn_14_0 = (sr) ((Object) stackIn_13_0);
+                        stackIn_14_1 = sm.field_o;
                         break L4;
                       }
                     }
-                  }
-                  discarded$4 = var7.a(nga.field_q, (byte) -102, (qc) (this));
-                  if (var5 == 0) {
-                    break L3;
-                  } else {
-                    var7.a(sba.field_n, 11, 61);
-                    var7.a(nj.field_q, 17, 36);
+                    ((sr) (Object) stackIn_14_0).a(stackIn_14_1, -1, 78);
                     break L3;
                   }
                 }
               }
-              L6: {
-                L7: {
-                  if (3 == param0) {
-                    break L7;
-                  } else {
-                    L8: {
-                      if (param0 != 4) {
-                        break L8;
+              L5: {
+                if (3 == param0) {
+                  var7.a(tca.field_M, 7, 28);
+                  break L5;
+                } else {
+                  if (param0 != 4) {
+                    if ((param0 ^ -1) != -7) {
+                      if ((param0 ^ -1) == -10) {
+                        var7.a(epa.field_q, (byte) -102, (qc) (this));
+                        break L5;
                       } else {
-                        var7.a(bg.field_p, 8, -83);
-                        if (var5 == 0) {
-                          break L6;
-                        } else {
-                          break L8;
-                        }
-                      }
-                    }
-                    L9: {
-                      if ((param0 ^ -1) != -7) {
-                        break L9;
-                      } else {
-                        var7.a(vf.field_a, 9, -65);
-                        if (var5 == 0) {
-                          break L6;
-                        } else {
-                          break L9;
-                        }
-                      }
-                    }
-                    if ((param0 ^ -1) == -10) {
-                      discarded$5 = var7.a(epa.field_q, (byte) -102, (qc) (this));
-                      if (var5 == 0) {
-                        break L6;
-                      } else {
-                        break L7;
+                        this.a(95, var7);
+                        return;
                       }
                     } else {
-                      this.a(95, var7);
-                      return;
+                      var7.a(vf.field_a, 9, -65);
+                      break L5;
                     }
+                  } else {
+                    var7.a(bg.field_p, 8, -83);
+                    break L5;
                   }
                 }
-                var7.a(tca.field_M, 7, 28);
-                break L6;
               }
               this.a(95, var7);
               decompiledRegionSelector0 = 1;
@@ -438,33 +322,25 @@ class ij extends lc implements tsa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
-            var4 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) (var4);
-            stackOut_32_1 = new StringBuilder().append("ij.O(").append(param0).append(',').append(param1).append(',');
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+          L6: {
+            var4_ref = decompiledCaughtException;
+            stackIn_30_0 = (RuntimeException) (var4_ref);
+
+            stackIn_30_1 = new StringBuilder().append("ij.O(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
-              break L10;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
+              break L6;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
-              break L10;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
+              break L6;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -474,7 +350,7 @@ class ij extends lc implements tsa {
     }
 
     final void i(byte param0) {
-        int var2 = 0;
+        int var2;
         if (this.field_B) {
           var2 = -25 / ((-69 - param0) / 37);
           this.field_B = false;
@@ -487,19 +363,7 @@ class ij extends lc implements tsa {
             }
           } else {
             kla.a((byte) -72);
-            if (TombRacer.field_G) {
-              L0: {
-                if (this.field_bb) {
-                  vg.q(30497);
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         } else {
           return;

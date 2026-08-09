@@ -7,8 +7,9 @@ abstract class is extends fh {
     abstract Object a(int param0);
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        RuntimeException var7 = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -19,7 +20,6 @@ abstract class is extends fh {
         int var15 = 0;
         int var17 = 0;
         int[] var21 = null;
-        RuntimeException decompiledCaughtException = null;
         var17 = VoidHunters.field_G;
         try {
           L0: {

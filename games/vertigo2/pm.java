@@ -34,6 +34,8 @@ final class pm implements Runnable {
 
     public final void run() {
         try {
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             int var1_int = 0;
             IOException var1 = null;
             Exception var1_ref = null;
@@ -41,11 +43,8 @@ final class pm implements Runnable {
             Object var3 = null;
             IOException var3_ref = null;
             InterruptedException var4 = null;
-            Throwable var5 = null;
             int var6 = 0;
             String var7 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
             var6 = Vertigo2.field_L ? 1 : 0;
             try {
               L0: {
@@ -190,14 +189,13 @@ final class pm implements Runnable {
 
     final void b(int param0) {
         try {
-            r discarded$5 = null;
             int var4 = 0;
             var4 = Vertigo2.field_L ? 1 : 0;
             if (!(!this.field_c)) {
                 return;
             }
             if (param0 != 0) {
-                discarded$5 = pm.a(79, 67);
+                pm.a(79, 67);
             }
             synchronized (this) {
                 this.field_c = true;
@@ -224,10 +222,7 @@ final class pm implements Runnable {
 
     final void a(byte[] param0, boolean param1, int param2, int param3) throws IOException {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -235,14 +230,7 @@ final class pm implements Runnable {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException var5 = null;
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -279,27 +267,19 @@ final class pm implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var5);
-            stackOut_11_1 = new StringBuilder().append("pm.F(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var5);
+
+            stackIn_13_1 = new StringBuilder().append("pm.F(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -326,10 +306,9 @@ final class pm implements Runnable {
     }
 
     final static void a(byte param0, boolean param1) {
-        r discarded$0 = null;
         ak.a(false, param1, 3);
         if (param0 != 52) {
-            discarded$0 = pm.a(-23, -49);
+            pm.a(-23, -49);
         }
     }
 
@@ -346,14 +325,6 @@ final class pm implements Runnable {
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
-        RuntimeException var5 = null;
-        Object var5_ref = null;
-        int var6 = 0;
-        int var7 = 0;
-        Throwable var8 = null;
-        int var9 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -361,14 +332,11 @@ final class pm implements Runnable {
         String stackIn_26_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        Object var5 = null;
+        RuntimeException var5_ref = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var9 = 0;
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -385,8 +353,8 @@ final class pm implements Runnable {
                     break L1;
                   }
                 }
-                var5_ref = this;
-                synchronized (var5_ref) {
+                var5 = this;
+                synchronized (var5) {
                   L2: {
                     var6 = 0;
                     L3: while (true) {
@@ -426,28 +394,20 @@ final class pm implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var5 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var5);
-            stackOut_23_1 = new StringBuilder().append("pm.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_25_0 = (RuntimeException) (var5_ref);
+
+            stackIn_25_1 = new StringBuilder().append("pm.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L5;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L5;
             }
           }

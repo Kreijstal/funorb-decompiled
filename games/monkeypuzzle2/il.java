@@ -10,12 +10,6 @@ final class il extends ug {
     static int field_e;
 
     final void e(int param0) {
-        float var2 = 0.0f;
-        float var3 = 0.0f;
-        float var4 = 0.0f;
-        float var5 = 0.0f;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_10_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_59_0 = 0;
@@ -25,29 +19,12 @@ final class il extends ug {
         int stackIn_150_0 = 0;
         int stackIn_186_0 = 0;
         int stackIn_222_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_104_0 = 0;
-        int stackOut_103_0 = 0;
-        int stackOut_221_0 = 0;
-        int stackOut_220_0 = 0;
-        int stackOut_185_0 = 0;
-        int stackOut_184_0 = 0;
-        int stackOut_145_0 = 0;
-        int stackOut_149_0 = 0;
-        int stackOut_148_0 = 0;
-        int stackOut_110_0 = 0;
-        int stackOut_109_0 = 0;
+        float var2;
+        float var3;
+        float var4;
+        float var5;
+        int var6;
+        int var7;
         L0: {
           L1: {
             var2 = -this.field_j.field_B + this.field_i.field_B;
@@ -63,12 +40,10 @@ final class il extends ug {
                 if (this.field_i.field_j) {
                   L2: {
                     if (5 == this.field_j.field_w) {
-                      stackOut_58_0 = 0;
-                      stackIn_59_0 = stackOut_58_0;
+                      stackIn_59_0 = 0;
                       break L2;
                     } else {
-                      stackOut_57_0 = 1;
-                      stackIn_59_0 = stackOut_57_0;
+                      stackIn_59_0 = 1;
                       break L2;
                     }
                   }
@@ -92,19 +67,16 @@ final class il extends ug {
                         if (this.field_j.field_j) {
                           break L4;
                         } else {
-                          stackOut_64_0 = 0;
-                          stackIn_70_0 = stackOut_64_0;
+                          stackIn_70_0 = 0;
                           break L3;
                         }
                       }
                     }
                     if ((this.field_i.field_w ^ -1) != -6) {
-                      stackOut_68_0 = 1;
-                      stackIn_70_0 = stackOut_68_0;
+                      stackIn_70_0 = 1;
                       break L3;
                     } else {
-                      stackOut_67_0 = 0;
-                      stackIn_70_0 = stackOut_67_0;
+                      stackIn_70_0 = 0;
                       break L3;
                     }
                   }
@@ -219,8 +191,7 @@ final class il extends ug {
                   }
                   return;
                 } else {
-                  stackOut_55_0 = 0;
-                  stackIn_106_0 = stackOut_55_0;
+                  stackIn_106_0 = 0;
                   break L0;
                 }
               }
@@ -236,19 +207,16 @@ final class il extends ug {
                       if (this.field_i.field_j) {
                         break L20;
                       } else {
-                        stackOut_4_0 = 0;
-                        stackIn_10_0 = stackOut_4_0;
+                        stackIn_10_0 = 0;
                         break L19;
                       }
                     }
                   }
                   if (5 != this.field_j.field_w) {
-                    stackOut_8_0 = 1;
-                    stackIn_10_0 = stackOut_8_0;
+                    stackIn_10_0 = 1;
                     break L19;
                   } else {
-                    stackOut_7_0 = 0;
-                    stackIn_10_0 = stackOut_7_0;
+                    stackIn_10_0 = 0;
                     break L19;
                   }
                 }
@@ -272,19 +240,16 @@ final class il extends ug {
                       if (this.field_j.field_j) {
                         break L22;
                       } else {
-                        stackOut_15_0 = 0;
-                        stackIn_21_0 = stackOut_15_0;
+                        stackIn_21_0 = 0;
                         break L21;
                       }
                     }
                   }
                   if ((this.field_i.field_w ^ -1) != -6) {
-                    stackOut_19_0 = 1;
-                    stackIn_21_0 = stackOut_19_0;
+                    stackIn_21_0 = 1;
                     break L21;
                   } else {
-                    stackOut_18_0 = 0;
-                    stackIn_21_0 = stackOut_18_0;
+                    stackIn_21_0 = 0;
                     break L21;
                   }
                 }
@@ -402,12 +367,10 @@ final class il extends ug {
             }
           }
           if (5 != this.field_j.field_w) {
-            stackOut_104_0 = 1;
-            stackIn_106_0 = stackOut_104_0;
+            stackIn_106_0 = 1;
             break L0;
           } else {
-            stackOut_103_0 = 0;
-            stackIn_106_0 = stackOut_103_0;
+            stackIn_106_0 = 0;
             break L0;
           }
         }
@@ -771,12 +734,10 @@ final class il extends ug {
             } else {
               L75: {
                 if ((this.field_i.field_w ^ -1) == -6) {
-                  stackOut_221_0 = 0;
-                  stackIn_222_0 = stackOut_221_0;
+                  stackIn_222_0 = 0;
                   break L75;
                 } else {
-                  stackOut_220_0 = 1;
-                  stackIn_222_0 = stackOut_220_0;
+                  stackIn_222_0 = 1;
                   break L75;
                 }
               }
@@ -894,12 +855,10 @@ final class il extends ug {
           } else {
             L89: {
               if ((this.field_i.field_w ^ -1) == -6) {
-                stackOut_185_0 = 0;
-                stackIn_186_0 = stackOut_185_0;
+                stackIn_186_0 = 0;
                 break L89;
               } else {
-                stackOut_184_0 = 1;
-                stackIn_186_0 = stackOut_184_0;
+                stackIn_186_0 = 1;
                 break L89;
               }
             }
@@ -1024,19 +983,16 @@ final class il extends ug {
                   if (this.field_j.field_j) {
                     break L104;
                   } else {
-                    stackOut_145_0 = 0;
-                    stackIn_150_0 = stackOut_145_0;
+                    stackIn_150_0 = 0;
                     break L103;
                   }
                 }
               }
               if ((this.field_i.field_w ^ -1) == -6) {
-                stackOut_149_0 = 0;
-                stackIn_150_0 = stackOut_149_0;
+                stackIn_150_0 = 0;
                 break L103;
               } else {
-                stackOut_148_0 = 1;
-                stackIn_150_0 = stackOut_148_0;
+                stackIn_150_0 = 1;
                 break L103;
               }
             }
@@ -1153,12 +1109,10 @@ final class il extends ug {
           } else {
             L118: {
               if ((this.field_i.field_w ^ -1) == -6) {
-                stackOut_110_0 = 0;
-                stackIn_111_0 = stackOut_110_0;
+                stackIn_111_0 = 0;
                 break L118;
               } else {
-                stackOut_109_0 = 1;
-                stackIn_111_0 = stackOut_109_0;
+                stackIn_111_0 = 1;
                 break L118;
               }
             }

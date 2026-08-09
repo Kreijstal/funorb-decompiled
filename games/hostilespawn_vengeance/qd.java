@@ -13,13 +13,13 @@ public class qd {
 
     public static void a(int param0, int param1, String param2) {
         Exception exception = null;
-        Object var4 = null;
+        String var4 = null;
         Throwable decompiledCaughtException = null;
         L0: {
           if (param0 == -1) {
             break L0;
           } else {
-            var4 = null;
+            var4 = (String) null;
             qd.a(107, 107, (String) null);
             break L0;
           }
@@ -64,9 +64,9 @@ public class qd {
     }
 
     public static File a(String param0, int param1) {
-        Object var3 = null;
+        String var3;
         if (param1 != -19005) {
-          var3 = null;
+          var3 = (String) null;
           qd.a(107, -10, (String) null);
           return qd.a(field_a, field_e, param0, true);
         } else {
@@ -75,10 +75,6 @@ public class qd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_c = new Hashtable(16);
     }

@@ -13,14 +13,13 @@ abstract class ee implements pd {
     abstract String a(boolean param0);
 
     public static void c(boolean param0) {
-        boolean discarded$2 = false;
-        ll var2 = null;
+        ll var2;
         field_c = null;
         field_a = null;
         field_g = null;
         if (!param0) {
           var2 = (ll) null;
-          discarded$2 = ee.a((ll) null, -106, -125, 14);
+          ee.a((ll) null, -106, -125, 14);
           field_d = null;
           field_b = null;
           field_f = null;
@@ -34,6 +33,19 @@ abstract class ee implements pd {
     }
 
     final static boolean a(ll param0, int param1, int param2, int param3) {
+        int stackIn_4_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_32_0 = 0;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
+        String stackIn_36_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -49,37 +61,6 @@ abstract class ee implements pd {
         int var16 = 0;
         int var17 = 0;
         byte[] var21 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_32_0 = 0;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        String stackIn_36_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
         try {
           L0: {
             param2 = param2 >> 1;
@@ -103,12 +84,10 @@ abstract class ee implements pd {
                     } else {
                       L2: {
                         if (var4_int <= 0) {
-                          stackOut_13_0 = 0;
-                          stackIn_14_0 = stackOut_13_0;
+                          stackIn_14_0 = 0;
                           break L2;
                         } else {
-                          stackOut_12_0 = var4_int;
-                          stackIn_14_0 = stackOut_12_0;
+                          stackIn_14_0 = var4_int;
                           break L2;
                         }
                       }
@@ -124,12 +103,10 @@ abstract class ee implements pd {
                       }
                       L4: {
                         if (var7 <= 0) {
-                          stackOut_19_0 = 0;
-                          stackIn_20_0 = stackOut_19_0;
+                          stackIn_20_0 = 0;
                           break L4;
                         } else {
-                          stackOut_18_0 = var7;
-                          stackIn_20_0 = stackOut_18_0;
+                          stackIn_20_0 = var7;
                           break L4;
                         }
                       }
@@ -161,16 +138,14 @@ abstract class ee implements pd {
                               break L6;
                             }
                           }
-                          stackOut_31_0 = 1;
-                          stackIn_32_0 = stackOut_31_0;
+                          stackIn_32_0 = 1;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
                           return false;
                         }
                       } else {
-                        stackOut_24_0 = 1;
-                        stackIn_25_0 = stackOut_24_0;
+                        stackIn_25_0 = 1;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
@@ -179,13 +154,11 @@ abstract class ee implements pd {
                     break L1;
                   }
                 }
-                stackOut_9_0 = 0;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                stackOut_3_0 = 0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = 0;
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -197,27 +170,19 @@ abstract class ee implements pd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var4 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) (var4);
-            stackOut_33_1 = new StringBuilder().append("ee.N(");
-            stackIn_35_0 = stackOut_33_0;
-            stackIn_35_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+            stackIn_35_0 = (RuntimeException) (var4);
+
+            stackIn_35_1 = new StringBuilder().append("ee.N(");
+
             if (param0 == null) {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "null";
               break L7;
             } else {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "{...}";
-              stackIn_36_0 = stackOut_34_0;
-              stackIn_36_1 = stackOut_34_1;
-              stackIn_36_2 = stackOut_34_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "{...}";
               break L7;
             }
           }
@@ -265,17 +230,15 @@ abstract class ee implements pd {
 
     final static void b(boolean param0) {
         try {
-            boolean discarded$2 = false;
-            boolean discarded$3 = false;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
             Long var3 = null;
             Object[] var4 = null;
             ll var5 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
             try {
               L0: {
                 L1: {
@@ -285,9 +248,9 @@ abstract class ee implements pd {
                   } else {
                     try {
                       L2: {
-                        var2_ref = Runtime.getRuntime();
+                        var2 = Runtime.getRuntime();
                         var4 = (Object[]) null;
-                        var3 = (Long) (var1.invoke((Object) (var2_ref), (Object[]) null));
+                        var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
                         wl.field_K = (int)(var3.longValue() / 1048576L) - -1;
                         decompiledRegionSelector0 = 0;
                         break L2;
@@ -295,7 +258,7 @@ abstract class ee implements pd {
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L3: {
-                        var2 = decompiledCaughtException;
+                        var2_ref = decompiledCaughtException;
                         decompiledRegionSelector0 = 1;
                         break L3;
                       }
@@ -305,7 +268,7 @@ abstract class ee implements pd {
                         return;
                       } else {
                         var5 = (ll) null;
-                        discarded$2 = ee.a((ll) null, 125, 14, -99);
+                        ee.a((ll) null, 125, 14, -99);
                         return;
                       }
                     } else {
@@ -324,7 +287,7 @@ abstract class ee implements pd {
             }
             if (!param0) {
               var5 = (ll) null;
-              discarded$3 = ee.a((ll) null, 125, 14, -99);
+              ee.a((ll) null, 125, 14, -99);
               return;
             } else {
               return;
@@ -340,55 +303,35 @@ abstract class ee implements pd {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_0_0 = false;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var2_int = 88 / ((-13 - param0) / 38);
-            stackOut_0_0 = hd.a(param1, (byte) 59, false);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = hd.a(param1, (byte) 59, false);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var2);
-            stackOut_2_1 = new StringBuilder().append("ee.J(").append(param0).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var2);
+
+            stackIn_4_1 = new StringBuilder().append("ee.J(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }

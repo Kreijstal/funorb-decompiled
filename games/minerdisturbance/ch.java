@@ -30,23 +30,16 @@ abstract class ch {
     }
 
     final boolean c(byte param0) {
-        boolean discarded$10 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 >= -29) {
           L0: {
-            discarded$10 = this.c((byte) 86);
+            this.c((byte) 86);
             if (-21 < (this.b(1461895584) ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -54,12 +47,10 @@ abstract class ch {
         } else {
           L1: {
             if (-21 < (this.b(1461895584) ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -115,9 +106,8 @@ abstract class ch {
     abstract void d(int param0);
 
     final int a(int param0) {
-        boolean discarded$2 = false;
         if (param0 != -11975) {
-          discarded$2 = this.c((byte) 83);
+          this.c((byte) 83);
           return this.field_n.b(-69) - -this.field_i.b(-63);
         } else {
           return this.field_n.b(-69) - -this.field_i.b(-63);
@@ -125,23 +115,16 @@ abstract class ch {
     }
 
     final boolean d(byte param0) {
-        boolean discarded$10 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -111) {
           L0: {
-            discarded$10 = this.d((byte) 74);
+            this.d((byte) 74);
             if (20 > this.a(-11975)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -149,12 +132,10 @@ abstract class ch {
         } else {
           L1: {
             if (20 > this.a(-11975)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

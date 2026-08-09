@@ -10,7 +10,7 @@ final class bh extends nl {
     int field_K;
 
     final static String a(int param0, byte param1) {
-        String var2 = null;
+        String var2;
         if (param1 != 74) {
           return (String) null;
         } else {
@@ -39,7 +39,7 @@ final class bh extends nl {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        wk var6 = null;
+        wk var6;
         if (-1 != (param3 ^ -1)) {
           return;
         } else {
@@ -86,9 +86,9 @@ final class bh extends nl {
     }
 
     final static void d(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var1;
+        int var2;
+        int var3;
         var1 = (tq.field_c + -640) / 2;
         var2 = mj.field_c * mj.field_c;
         var3 = -(gk.field_J * gk.field_J) + var2;

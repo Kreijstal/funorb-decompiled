@@ -9,7 +9,7 @@ abstract class hl extends td {
     private int field_G;
 
     boolean k(int param0) {
-        be var3 = null;
+        be var3;
         if (param0 == 0) {
           this.field_G = this.n(127);
           if (0 == this.field_G) {
@@ -63,28 +63,19 @@ abstract class hl extends td {
     private final int n(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 <= 126) {
           L0: {
             field_C = (aa) null;
             if (this.field_E) {
               if (this == this.field_D.j(-6121)) {
-                stackOut_11_0 = 256;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = 256;
                 break L0;
               } else {
-                stackOut_10_0 = 0;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 0;
                 break L0;
               }
             } else {
-              stackOut_8_0 = 0;
-              stackIn_12_0 = stackOut_8_0;
+              stackIn_12_0 = 0;
               break L0;
             }
           }
@@ -93,17 +84,14 @@ abstract class hl extends td {
           L1: {
             if (this.field_E) {
               if (this == this.field_D.j(-6121)) {
-                stackOut_5_0 = 256;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 256;
                 break L1;
               } else {
-                stackOut_4_0 = 0;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 0;
                 break L1;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L1;
             }
           }
@@ -226,14 +214,10 @@ abstract class hl extends td {
     }
 
     boolean j(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_13_0 = 0;
         int stackIn_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
         L0: {
           var2 = this.n(127);
           var3 = var2 - this.field_G;
@@ -259,12 +243,10 @@ abstract class hl extends td {
             } else {
               L2: {
                 if (this.field_E) {
-                  stackOut_24_0 = 0;
-                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_25_0 = 0;
                   break L2;
                 } else {
-                  stackOut_23_0 = 1;
-                  stackIn_25_0 = stackOut_23_0;
+                  stackIn_25_0 = 1;
                   break L2;
                 }
               }
@@ -289,12 +271,10 @@ abstract class hl extends td {
             } else {
               L4: {
                 if (this.field_E) {
-                  stackOut_12_0 = 0;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = 0;
                   break L4;
                 } else {
-                  stackOut_11_0 = 1;
-                  stackIn_13_0 = stackOut_11_0;
+                  stackIn_13_0 = 1;
                   break L4;
                 }
               }

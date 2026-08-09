@@ -12,10 +12,9 @@ final class rp extends ri {
     static String[][] field_z;
 
     final static void a(int param0, int param1) {
-        int discarded$2 = 0;
-        hn var2 = null;
+        hn var2;
         if (param0 != 65536) {
-          discarded$2 = rp.a(false, -70);
+          rp.a(false, -70);
           var2 = new hn(1, new int[]{param1});
           ii.a(var2, 69);
           return;
@@ -47,12 +46,6 @@ final class rp extends ri {
     }
 
     final static int a(boolean param0, int param1) {
-        ff[] discarded$1 = null;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_58_0 = 0;
         int stackIn_61_0 = 0;
         int stackIn_64_0 = 0;
@@ -62,14 +55,11 @@ final class rp extends ri {
         int stackIn_77_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_60_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_71_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_74_0 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = Kickabout.field_G;
         try {
           L0: {
@@ -78,7 +68,7 @@ final class rp extends ri {
               if (param1 == -587) {
                 break L1;
               } else {
-                discarded$1 = rp.b(-111);
+                rp.b(-111);
                 break L1;
               }
             }
@@ -266,25 +256,21 @@ final class rp extends ri {
                         if ((fp.field_l.field_e ^ -1) != -2) {
                           break L13;
                         } else {
-                          stackOut_60_0 = 2;
-                          stackIn_61_0 = stackOut_60_0;
+                          stackIn_61_0 = 2;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         }
                       } else {
-                        stackOut_57_0 = 3;
-                        stackIn_58_0 = stackOut_57_0;
+                        stackIn_58_0 = 3;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
                     }
                   }
-                  stackOut_62_0 = -59;
-                  stackIn_64_0 = stackOut_62_0;
+                  stackIn_64_0 = -59;
                   L14: while (true) {
                     if (!nk.b((byte) stackIn_64_0)) {
-                      stackOut_76_0 = 0;
-                      stackIn_77_0 = stackOut_76_0;
+                      stackIn_77_0 = 0;
                       decompiledRegionSelector0 = 5;
                       break L0;
                     } else {
@@ -294,16 +280,14 @@ final class rp extends ri {
                           break L15;
                         } else {
                           if (fp.field_l.field_e == 0) {
-                            stackOut_68_0 = 3;
-                            stackIn_69_0 = stackOut_68_0;
+                            stackIn_69_0 = 3;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
                             if (1 != fp.field_l.field_e) {
                               break L15;
                             } else {
-                              stackOut_71_0 = 1;
-                              stackIn_72_0 = stackOut_71_0;
+                              stackIn_72_0 = 1;
                               decompiledRegionSelector0 = 3;
                               break L0;
                             }
@@ -311,12 +295,10 @@ final class rp extends ri {
                         }
                       }
                       if (cc.field_e != 13) {
-                        stackOut_63_0 = -59;
-                        stackIn_64_0 = stackOut_63_0;
+                        stackIn_64_0 = -59;
                         continue L14;
                       } else {
-                        stackOut_74_0 = 1;
-                        stackIn_75_0 = stackOut_74_0;
+                        stackIn_75_0 = 1;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       }
@@ -366,23 +348,12 @@ final class rp extends ri {
     final String b(byte param0, fd param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -393,35 +364,26 @@ final class rp extends ri {
                 break L1;
               }
             }
-            stackOut_2_0 = ce.a('*', (byte) 48, param1.field_q.length());
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = ce.a('*', (byte) 48, param1.field_q.length());
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("rp.AA(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("rp.AA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -444,7 +406,6 @@ final class rp extends ri {
     }
 
     public static void a(int param0) {
-        int discarded$2 = 0;
         field_C = null;
         field_z = (String[][]) null;
         field_y = null;
@@ -454,7 +415,7 @@ final class rp extends ri {
         if (param0 >= 84) {
           return;
         } else {
-          discarded$2 = rp.a(114, -72, -26);
+          rp.a(114, -72, -26);
           return;
         }
     }

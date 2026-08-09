@@ -33,22 +33,22 @@ final class ck extends ud {
     }
 
     final static void n(int param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -62,30 +62,30 @@ final class ck extends ud {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  incrementValue$40 = var2;
+                  incrementValue$16 = var2;
                   var2++;
-                  var5[incrementValue$40] = 0;
-                  incrementValue$41 = var2;
+                  var5[incrementValue$16] = 0;
+                  incrementValue$17 = var2;
                   var2++;
-                  var5[incrementValue$41] = 0;
-                  incrementValue$42 = var2;
+                  var5[incrementValue$17] = 0;
+                  incrementValue$18 = var2;
                   var2++;
-                  var5[incrementValue$42] = 0;
-                  incrementValue$43 = var2;
+                  var5[incrementValue$18] = 0;
+                  incrementValue$19 = var2;
                   var2++;
-                  var5[incrementValue$43] = 0;
-                  incrementValue$44 = var2;
+                  var5[incrementValue$19] = 0;
+                  incrementValue$20 = var2;
                   var2++;
-                  var5[incrementValue$44] = 0;
-                  incrementValue$45 = var2;
+                  var5[incrementValue$20] = 0;
+                  incrementValue$21 = var2;
                   var2++;
-                  var5[incrementValue$45] = 0;
-                  incrementValue$46 = var2;
+                  var5[incrementValue$21] = 0;
+                  incrementValue$22 = var2;
                   var2++;
-                  var5[incrementValue$46] = 0;
-                  incrementValue$47 = var2;
+                  var5[incrementValue$22] = 0;
+                  incrementValue$23 = var2;
                   var2++;
-                  var5[incrementValue$47] = 0;
+                  var5[incrementValue$23] = 0;
                   continue L1;
                 }
               }
@@ -115,30 +115,19 @@ final class ck extends ud {
     }
 
     final static long a(byte param0, CharSequence param1) {
-        RuntimeException var2 = null;
-        long var2_long = 0L;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
         long stackIn_20_0 = 0L;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        long stackOut_19_0 = 0L;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
         var7 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -210,8 +199,7 @@ final class ck extends ud {
                     }
                   }
                 }
-                stackOut_19_0 = var2_long;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = var2_long;
                 break L0;
               }
             }
@@ -220,27 +208,19 @@ final class ck extends ud {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var2);
-            stackOut_21_1 = new StringBuilder().append("ck.W(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var2);
+
+            stackIn_23_1 = new StringBuilder().append("ck.W(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L8;
             }
           }

@@ -17,6 +17,6 @@ final class ee {
     static {
         field_z = "ee.A(";
         field_a = new String[]{"Speed", "Traction", "Bounce", "Spikes", "Armour"};
-        int discarded$0 = mr.a(1600, (byte) -115);
+        mr.a(1600, (byte) -115);
     }
 }

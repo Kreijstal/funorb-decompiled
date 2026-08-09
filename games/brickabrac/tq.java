@@ -12,7 +12,7 @@ final class tq {
     static String field_e;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, byte param9, int param10, int param11, int param12, int param13, int param14, int param15) {
-        int var17 = 0;
+        int var17;
         var17 = BrickABrac.field_J ? 1 : 0;
         if (param9 >= -51) {
           tq.a(82);

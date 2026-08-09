@@ -18,12 +18,11 @@ final class a {
     }
 
     public static void a(int param0) {
-        o[] discarded$0 = null;
         field_f = null;
         field_c = null;
         field_b = null;
         if (param0 != -1) {
-            discarded$0 = a.b(33);
+            a.b(33);
         }
     }
 

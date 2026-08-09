@@ -59,17 +59,17 @@ final class ia {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var12;
+        int var11;
         var12 = EscapeVector.field_A;
         if (!this.field_B) {
           this.field_B = true;
@@ -97,7 +97,7 @@ final class ia {
               L1: {
                 var9 = this.field_L[var8];
                 var10 = this.field_r[var8];
-                if (var5 < var9) {
+                if ((var5 ^ -1) > (var9 ^ -1)) {
                   var5 = var9;
                   break L1;
                 } else {

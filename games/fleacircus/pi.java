@@ -21,7 +21,6 @@ final class pi {
     }
 
     final int b(byte param0) {
-        int discarded$7 = 0;
         if (param0 == -42) {
           if (null != this.field_d) {
             if (this.field_d.length == 0) {
@@ -33,7 +32,7 @@ final class pi {
             return 0;
           }
         } else {
-          discarded$7 = this.a(85, 27);
+          this.a(85, 27);
           if (null != this.field_d) {
             if (this.field_d.length == 0) {
               return 0;
@@ -47,8 +46,8 @@ final class pi {
     }
 
     final static void c(byte param0) {
-        CharSequence var2 = null;
-        CharSequence var3 = null;
+        CharSequence var2;
+        CharSequence var3;
         if (param0 != 15) {
           pi.a((byte) -9);
           b.field_e = ae.field_a.h(0);
@@ -74,14 +73,10 @@ final class pi {
     }
 
     final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_11_1 = 0;
+        int var3;
+        int var4;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
         var4 = fleas.field_A ? 1 : 0;
         if (this.field_d != null) {
           if (this.field_d.length != 0) {
@@ -89,21 +84,23 @@ final class pi {
               var3 = 1;
               L0: while (true) {
                 if (var3 < this.field_d.length) {
-                  stackOut_10_0 = param1;
-                  stackOut_10_1 = this.field_d[var3 + -1] + this.field_d[var3] >> -1248493535;
-                  stackIn_12_0 = stackOut_10_0;
-                  stackIn_12_1 = stackOut_10_1;
-                  stackIn_11_0 = stackOut_10_0;
-                  stackIn_11_1 = stackOut_10_1;
+                  stackIn_12_0 = param1;
+
+                  stackIn_12_1 = this.field_d[var3 + -1] + this.field_d[var3] >> -1248493535;
+
                   if (var4 == 0) {
                     if (stackIn_12_0 >= stackIn_12_1) {
                       var3++;
-                      continue L0;
+                      if (var4 == 0) {
+                        continue L0;
+                      } else {
+                        return this.field_d.length + -1;
+                      }
                     } else {
                       return var3 + -1;
                     }
                   } else {
-                    return stackIn_11_0 + stackIn_11_1;
+                    return stackIn_12_0 + stackIn_12_1;
                   }
                 } else {
                   return this.field_d.length + -1;

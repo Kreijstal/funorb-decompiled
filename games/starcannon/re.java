@@ -25,15 +25,12 @@ final class re extends rf {
     }
 
     final static qc a(int param0, ka param1, int param2, boolean param3, int param4, int param5) {
-        java.awt.Component discarded$2 = null;
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         qc var7 = null;
         java.awt.Frame var8 = null;
         qc stackIn_5_0 = null;
         qc stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -41,16 +38,6 @@ final class re extends rf {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        qc stackOut_6_0 = null;
-        qc stackOut_4_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             var8 = oh.a(param5, param1, param2, param4, param0, -100);
@@ -59,17 +46,15 @@ final class re extends rf {
               if (param3) {
                 var7 = new qc();
                 var7.field_f = var8;
-                discarded$2 = var7.field_f.add((java.awt.Component) ((Object) var7));
+                var7.field_f.add((java.awt.Component) ((Object) var7));
                 var7.setBounds(0, 0, param4, param5);
                 var7.addFocusListener(var7);
                 var7.requestFocus();
-                stackOut_6_0 = (qc) (var7);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (qc) (var7);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                stackOut_4_0 = (qc) null;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (qc) null;
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -81,27 +66,19 @@ final class re extends rf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var6_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var6_ref);
-            stackOut_8_1 = new StringBuilder().append("re.C(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var6_ref);
+
+            stackIn_10_1 = new StringBuilder().append("re.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L1;
             }
           }

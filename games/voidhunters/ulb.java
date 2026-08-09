@@ -3,8 +3,10 @@
  */
 final class ulb implements dja {
     final static void a(int param0) {
-        RuntimeException var1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         wfb var2 = null;
         int var4 = 0;
         int var5 = 0;
@@ -14,8 +16,6 @@ final class ulb implements dja {
         int var9 = 0;
         int var10 = 0;
         int[] var14 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var10 = VoidHunters.field_G;
         try {
           L0: {

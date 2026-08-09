@@ -35,10 +35,10 @@ final class ed implements Iterable {
     }
 
     final qb a(byte param0, long param1) {
-        int var4 = 0;
-        qb var5 = null;
-        qb var6 = null;
-        int var7 = 0;
+        int var4;
+        qb var5;
+        qb var6;
+        int var7;
         var7 = Main.field_T;
         var4 = -24 / ((21 - param0) / 48);
         var5 = this.field_b[(int)((long)(-1 + this.field_a) & param1)];

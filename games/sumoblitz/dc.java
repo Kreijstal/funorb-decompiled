@@ -32,16 +32,11 @@ final class dc extends ur {
     }
 
     final static void l(int param0) {
-        int var1 = 0;
+        int var1;
         if (param0 > kr.field_c) {
           var1 = kr.field_c % 32;
           lf.a(32 + (kr.field_c + -var1), (byte) -58);
-          if (Sumoblitz.field_L) {
-            lf.a(256, (byte) -58);
-            return;
-          } else {
-            return;
-          }
+          return;
         } else {
           lf.a(256, (byte) -58);
           return;

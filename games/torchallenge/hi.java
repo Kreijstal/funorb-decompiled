@@ -7,9 +7,8 @@ final class hi extends ic {
     static ka[] field_F;
 
     public static void h(int param0) {
-        qe discarded$0 = null;
         if (param0 != -1) {
-            discarded$0 = hi.a(-17, -69, -84, 52, -66, 71);
+            hi.a(-17, -69, -84, 52, -66, 71);
         }
         field_F = null;
         field_G = null;
@@ -27,8 +26,13 @@ final class hi extends ic {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        int stackIn_46_0 = 0;
+        int stackIn_87_0 = 0;
+        int stackIn_95_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -56,21 +60,6 @@ final class hi extends ic {
         int var30 = 0;
         int var31 = 0;
         int var32 = 0;
-        int stackIn_46_0 = 0;
-        int stackIn_87_0 = 0;
-        int stackIn_95_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_44_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_85_0 = 0;
-        int stackOut_84_0 = 0;
-        int stackOut_82_0 = 0;
-        int stackOut_80_0 = 0;
-        int stackOut_94_0 = 0;
-        int stackOut_93_0 = 0;
         var32 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -187,22 +176,18 @@ final class hi extends ic {
                       if (var14 != param4) {
                         if ((var23 ^ -1) < -1) {
                           if (var22 == param4) {
-                            stackOut_44_0 = 1;
-                            stackIn_46_0 = stackOut_44_0;
+                            stackIn_46_0 = 1;
                             break L6;
                           } else {
-                            stackOut_43_0 = 0;
-                            stackIn_46_0 = stackOut_43_0;
+                            stackIn_46_0 = 0;
                             break L6;
                           }
                         } else {
-                          stackOut_41_0 = 0;
-                          stackIn_46_0 = stackOut_41_0;
+                          stackIn_46_0 = 0;
                           break L6;
                         }
                       } else {
-                        stackOut_39_0 = 1;
-                        stackIn_46_0 = stackOut_39_0;
+                        stackIn_46_0 = 1;
                         break L6;
                       }
                     }
@@ -323,22 +308,18 @@ final class hi extends ic {
                         if (var19 == 0) {
                           if (var17 == 0) {
                             if (var18 != 0) {
-                              stackOut_85_0 = 1;
-                              stackIn_87_0 = stackOut_85_0;
+                              stackIn_87_0 = 1;
                               break L20;
                             } else {
-                              stackOut_84_0 = 0;
-                              stackIn_87_0 = stackOut_84_0;
+                              stackIn_87_0 = 0;
                               break L20;
                             }
                           } else {
-                            stackOut_82_0 = 1;
-                            stackIn_87_0 = stackOut_82_0;
+                            stackIn_87_0 = 1;
                             break L20;
                           }
                         } else {
-                          stackOut_80_0 = 1;
-                          stackIn_87_0 = stackOut_80_0;
+                          stackIn_87_0 = 1;
                           break L20;
                         }
                       }
@@ -356,12 +337,10 @@ final class hi extends ic {
                                 var30 = 2;
                                 var29 = var29 + -128;
                                 if (0 <= var29) {
-                                  stackOut_94_0 = 1;
-                                  stackIn_95_0 = stackOut_94_0;
+                                  stackIn_95_0 = 1;
                                   break L22;
                                 } else {
-                                  stackOut_93_0 = -1;
-                                  stackIn_95_0 = stackOut_93_0;
+                                  stackIn_95_0 = -1;
                                   break L22;
                                 }
                               }
@@ -453,29 +432,19 @@ final class hi extends ic {
     }
 
     final static qe a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        Object var6 = null;
-        qe var6_ref = null;
-        Object var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        qe var14 = null;
         int stackIn_26_0 = 0;
         int stackIn_34_0 = 0;
         int stackIn_43_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_40_0 = 0;
+        Object var6;
+        qe var6_ref;
+        Object var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        qe var14;
         L0: {
           var13 = TorChallenge.field_F ? 1 : 0;
           var6 = null;
@@ -507,17 +476,14 @@ final class hi extends ic {
                             L2: {
                               if (8 <= var14.field_F) {
                                 if (21 >= var14.field_F) {
-                                  stackOut_24_0 = 1;
-                                  stackIn_26_0 = stackOut_24_0;
+                                  stackIn_26_0 = 1;
                                   break L2;
                                 } else {
-                                  stackOut_23_0 = 0;
-                                  stackIn_26_0 = stackOut_23_0;
+                                  stackIn_26_0 = 0;
                                   break L2;
                                 }
                               } else {
-                                stackOut_21_0 = 0;
-                                stackIn_26_0 = stackOut_21_0;
+                                stackIn_26_0 = 0;
                                 break L2;
                               }
                             }
@@ -526,22 +492,18 @@ final class hi extends ic {
                               if (-14 != (var14.field_L ^ -1)) {
                                 if (var9 == 0) {
                                   if (-23 != (var14.field_F ^ -1)) {
-                                    stackOut_32_0 = 1;
-                                    stackIn_34_0 = stackOut_32_0;
+                                    stackIn_34_0 = 1;
                                     break L3;
                                   } else {
-                                    stackOut_31_0 = 0;
-                                    stackIn_34_0 = stackOut_31_0;
+                                    stackIn_34_0 = 0;
                                     break L3;
                                   }
                                 } else {
-                                  stackOut_29_0 = 0;
-                                  stackIn_34_0 = stackOut_29_0;
+                                  stackIn_34_0 = 0;
                                   break L3;
                                 }
                               } else {
-                                stackOut_27_0 = 0;
-                                stackIn_34_0 = stackOut_27_0;
+                                stackIn_34_0 = 0;
                                 break L3;
                               }
                             }
@@ -557,20 +519,17 @@ final class hi extends ic {
                                     if ((var14.field_F ^ -1) == -23) {
                                       break L5;
                                     } else {
-                                      stackOut_37_0 = 0;
-                                      stackIn_43_0 = stackOut_37_0;
+                                      stackIn_43_0 = 0;
                                       break L4;
                                     }
                                   }
                                 }
                               }
                               if (var9 == 0) {
-                                stackOut_41_0 = 1;
-                                stackIn_43_0 = stackOut_41_0;
+                                stackIn_43_0 = 1;
                                 break L4;
                               } else {
-                                stackOut_40_0 = 0;
-                                stackIn_43_0 = stackOut_40_0;
+                                stackIn_43_0 = 0;
                                 break L4;
                               }
                             }

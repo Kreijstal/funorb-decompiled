@@ -28,15 +28,14 @@ final class ki {
     }
 
     final static int a(int param0, int param1) {
-        int discarded$2 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var2 = (param0 * param0 >> 62406156) * param0 >> -1072900884;
         var3 = param0 * 6 + -61440;
         var4 = (var3 * param0 >> -1249041204) + 40960;
         if (param1 >= -26) {
-          discarded$2 = ki.a(85, -2);
+          ki.a(85, -2);
           return var4 * var2 >> 1795605868;
         } else {
           return var4 * var2 >> 1795605868;

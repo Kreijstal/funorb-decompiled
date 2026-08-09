@@ -7,69 +7,37 @@ final class mj {
     static String field_a;
 
     final static void a(byte param0) {
-        je stackIn_1_0 = null;
-        int stackIn_1_1 = 0;
-        int stackIn_1_2 = 0;
-        int stackIn_1_3 = 0;
-        je stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
-        int stackIn_2_2 = 0;
-        int stackIn_2_3 = 0;
+        je stackIn_2_0;
+        int stackIn_2_1;
+        int stackIn_2_2;
+        int stackIn_2_3;
         je stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
         int stackIn_3_3 = 0;
         int stackIn_3_4 = 0;
-        je stackOut_0_0 = null;
-        int stackOut_0_1 = 0;
-        int stackOut_0_2 = 0;
-        int stackOut_0_3 = 0;
-        je stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        int stackOut_2_3 = 0;
-        int stackOut_2_4 = 0;
-        je stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        int stackOut_1_3 = 0;
-        int stackOut_1_4 = 0;
         L0: {
-          stackOut_0_0 = rj.field_F;
-          stackOut_0_1 = 18;
-          stackOut_0_2 = -20500;
-          stackOut_0_3 = nf.field_Kb.field_gb;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_2_1 = stackOut_0_1;
-          stackIn_2_2 = stackOut_0_2;
-          stackIn_2_3 = stackOut_0_3;
-          stackIn_1_0 = stackOut_0_0;
-          stackIn_1_1 = stackOut_0_1;
-          stackIn_1_2 = stackOut_0_2;
-          stackIn_1_3 = stackOut_0_3;
+          stackIn_2_0 = rj.field_F;
+
+          stackIn_2_1 = 18;
+
+          stackIn_2_2 = -20500;
+
+          stackIn_2_3 = nf.field_Kb.field_gb;
+
           if (fh.field_c) {
-            stackOut_2_0 = (je) ((Object) stackIn_2_0);
-            stackOut_2_1 = stackIn_2_1;
-            stackOut_2_2 = stackIn_2_2;
-            stackOut_2_3 = stackIn_2_3;
-            stackOut_2_4 = 40 + (jn.field_c - -4);
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            stackIn_3_2 = stackOut_2_2;
-            stackIn_3_3 = stackOut_2_3;
-            stackIn_3_4 = stackOut_2_4;
+            stackIn_3_0 = (je) ((Object) stackIn_2_0);
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = stackIn_2_2;
+            stackIn_3_3 = stackIn_2_3;
+            stackIn_3_4 = 40 + (jn.field_c - -4);
             break L0;
           } else {
-            stackOut_1_0 = (je) ((Object) stackIn_1_0);
-            stackOut_1_1 = stackIn_1_1;
-            stackOut_1_2 = stackIn_1_2;
-            stackOut_1_3 = stackIn_1_3;
-            stackOut_1_4 = 0;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
-            stackIn_3_3 = stackOut_1_3;
-            stackIn_3_4 = stackOut_1_4;
+            stackIn_3_0 = (je) ((Object) stackIn_2_0);
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = stackIn_2_2;
+            stackIn_3_3 = stackIn_2_3;
+            stackIn_3_4 = 0;
             break L0;
           }
         }

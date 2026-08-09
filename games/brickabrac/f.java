@@ -7,17 +7,19 @@ final class f {
     static hj field_c;
 
     final static void a(byte param0) {
-        String[][] dupTemp$6 = null;
-        long[][] dupTemp$7 = null;
-        int[][] dupTemp$8 = null;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
+        String[][] dupTemp$0 = null;
+        long[][] dupTemp$1 = null;
+        int[][] dupTemp$2 = null;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        eg var4_ref_eg = null;
         long var4 = 0L;
+        eg var4_ref_eg = null;
         int var5 = 0;
         sp var6 = null;
         int var6_int = 0;
@@ -42,8 +44,6 @@ final class f {
         int var25 = 0;
         int var26 = 0;
         pi var27 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -121,16 +121,16 @@ final class f {
                         var8_int = 1;
                         L8: while (true) {
                           if (var5 <= var8_int) {
-                            dupTemp$6 = new String[3][var6_int];
-                            var4_ref_eg.field_i = dupTemp$6;
-                            var8 = dupTemp$6;
+                            dupTemp$0 = new String[3][var6_int];
+                            var4_ref_eg.field_i = dupTemp$0;
+                            var8 = dupTemp$0;
                             var9 = new String[3][var6_int];
-                            dupTemp$7 = new long[3][var6_int];
-                            var4_ref_eg.field_r = dupTemp$7;
-                            var10 = dupTemp$7;
-                            dupTemp$8 = new int[3][var6_int * var7];
-                            var4_ref_eg.field_n = dupTemp$8;
-                            var11 = dupTemp$8;
+                            dupTemp$1 = new long[3][var6_int];
+                            var4_ref_eg.field_r = dupTemp$1;
+                            var10 = dupTemp$1;
+                            dupTemp$2 = new int[3][var6_int * var7];
+                            var4_ref_eg.field_n = dupTemp$2;
+                            var11 = dupTemp$2;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -161,9 +161,9 @@ final class f {
                                           var12++;
                                           break L10;
                                         } else {
-                                          incrementValue$9 = var15;
+                                          incrementValue$3 = var15;
                                           var15++;
-                                          var11[0][incrementValue$9] = var27.e(255);
+                                          var11[0][incrementValue$3] = var27.e(255);
                                           var25++;
                                           continue L11;
                                         }
@@ -187,9 +187,9 @@ final class f {
                                           if (var25 >= var7) {
                                             break L12;
                                           } else {
-                                            incrementValue$10 = var16;
+                                            incrementValue$4 = var16;
                                             var16++;
-                                            var11[1][incrementValue$10] = var27.e(255);
+                                            var11[1][incrementValue$4] = var27.e(255);
                                             var25++;
                                             continue L13;
                                           }
@@ -215,9 +215,9 @@ final class f {
                                           if (var7 <= var25) {
                                             break L14;
                                           } else {
-                                            incrementValue$11 = var17;
+                                            incrementValue$5 = var17;
                                             var17++;
-                                            var11[2][incrementValue$11] = var27.e(255);
+                                            var11[2][incrementValue$5] = var27.e(255);
                                             var25++;
                                             continue L15;
                                           }

@@ -21,8 +21,8 @@ final class da extends ue {
     private int field_j;
 
     private final void c(int param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
+        int discarded$0 = 0;
+        int var2;
         if (this.field_r == 1) {
           L0: {
             var2 = this.field_s + 1;
@@ -79,7 +79,7 @@ final class da extends ue {
             if (param0 <= -19) {
               break L2;
             } else {
-              discarded$1 = this.c((byte) -122);
+              discarded$0 = this.c((byte) -122);
               break L2;
             }
           }
@@ -137,30 +137,18 @@ final class da extends ue {
     }
 
     private final boolean f(int param0, int param1) {
-        if (param0 < this.field_s) {
-          return true;
-        } else {
-          if (param1 > 1) {
-            L0: {
-              if (this.field_r != 1) {
-                break L0;
-              } else {
-                if (-21 == (param0 ^ -1)) {
-                  return true;
-                } else {
-                  if (40 != param0) {
-                    break L0;
-                  } else {
-                    return true;
-                  }
-                }
-              }
-            }
-            return false;
-          } else {
-            return false;
-          }
+        if (!(param0 >= this.field_s)) {
+            return true;
         }
+        if (param1 <= 1) {
+            return false;
+        }
+        if (this.field_r == 1) {
+            if (-21 == (param0 ^ -1) || 40 == param0) {
+                return true;
+            }
+        }
+        return false;
     }
 
     da(re param0, int param1, int param2, int param3) {
@@ -224,8 +212,6 @@ final class da extends ue {
         String stackIn_5_0 = null;
         String stackIn_8_0 = null;
         String stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -233,17 +219,6 @@ final class da extends ue {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_4_0 = null;
-        String stackOut_9_0 = null;
-        String stackOut_7_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             L1: {
@@ -255,20 +230,17 @@ final class da extends ue {
               }
             }
             if (-2 != (this.field_r ^ -1)) {
-              stackOut_4_0 = (String) (param0);
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = (String) (param0);
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               var4_int = this.e(118, param1);
               if (param1 == var4_int) {
-                stackOut_9_0 = (String) (param0);
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = (String) (param0);
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_7_0 = param1 + 1 + "-" + (1 + var4_int) + ". ";
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = param1 + 1 + "-" + (1 + var4_int) + ". ";
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -278,27 +250,19 @@ final class da extends ue {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var4);
-            stackOut_11_1 = new StringBuilder().append("da.W(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var4);
+
+            stackIn_13_1 = new StringBuilder().append("da.W(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L2;
             }
           }
@@ -316,12 +280,10 @@ final class da extends ue {
     }
 
     final static boolean a(int param0, byte param1, boolean param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         int stackIn_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           if (!param2) {
             if (jk.field_g[param3] > jk.field_g[param0]) {
@@ -370,12 +332,10 @@ final class da extends ue {
           if (var4 <= var5) {
             L1: {
               if (param3 <= param0) {
-                stackOut_29_0 = 0;
-                stackIn_30_0 = stackOut_29_0;
+                stackIn_30_0 = 0;
                 break L1;
               } else {
-                stackOut_28_0 = 1;
-                stackIn_30_0 = stackOut_28_0;
+                stackIn_30_0 = 1;
                 break L1;
               }
             }
@@ -387,30 +347,21 @@ final class da extends ue {
     }
 
     final void b(int param0) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int var2 = 0;
-        f[][] var3 = null;
-        String var3_ref = null;
-        double var4 = 0.0;
-        String var4_ref_String = null;
-        int var5 = 0;
-        String var6 = null;
-        String var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        f[][] var11 = null;
-        re stackIn_5_0 = null;
         re stackIn_6_0 = null;
         re stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        re stackOut_4_0 = null;
-        re stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        re stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
+        int var2;
+        f[][] var3;
+        String var3_ref;
+        double var4;
+        String var4_ref_String;
+        int var5;
+        String var6;
+        String var7;
+        int var8;
+        int var9;
+        int var10;
+        f[][] var11;
         L0: {
           L1: {
             var10 = CrazyCrystals.field_B;
@@ -434,20 +385,15 @@ final class da extends ue {
             L2: {
               this.field_n.e(18);
               this.g(param0 + 112);
-              stackOut_4_0 = this.field_n;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_6_0 = this.field_n;
+
               if (this.field_k) {
-                stackOut_6_0 = (re) ((Object) stackIn_6_0);
-                stackOut_6_1 = -1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = (re) ((Object) stackIn_6_0);
+                stackIn_7_1 = -1;
                 break L2;
               } else {
-                stackOut_5_0 = (re) ((Object) stackIn_5_0);
-                stackOut_5_1 = this.field_r;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+                stackIn_7_0 = (re) ((Object) stackIn_6_0);
+                stackIn_7_1 = this.field_r;
                 break L2;
               }
             }
@@ -497,8 +443,8 @@ final class da extends ue {
                     kh.a(31, 448 + -var9, 320, 0, 128);
                     kh.a(31, -1 + (450 - var9), 320, 0, 160);
                     kh.d(31, -var9 + 450, 320, var9, 0, 192);
-                    discarded$3 = go.field_l.a(var6, 39, 132, 304, 316, 16777215, -1, 1, 0, 20);
-                    discarded$4 = go.field_l.a(var7, 39, 132, 304, 316, 16777215, -1, 1, 2, 20);
+                    go.field_l.a(var6, 39, 132, 304, 316, 16777215, -1, 1, 0, 20);
+                    go.field_l.a(var7, 39, 132, 304, 316, 16777215, -1, 1, 2, 20);
                     break L4;
                   }
                 } else {
@@ -547,7 +493,7 @@ final class da extends ue {
                   break L9;
                 }
               }
-              discarded$5 = go.field_l.a(var3_ref, 39, 130, 304, 320, var5, -1, 1, 1, 20);
+              go.field_l.a(var3_ref, 39, 130, 304, 320, var5, -1, 1, 1, 20);
               break L4;
             } else {
               break L4;
@@ -571,14 +517,14 @@ final class da extends ue {
     }
 
     private final void c(boolean param0) {
-        kb var3 = null;
-        f[][] var4 = null;
-        int var5 = 0;
-        double var6 = 0.0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        Vector var11 = null;
+        int var10;
+        kb var3;
+        f[][] var4;
+        int var5;
+        double var6;
+        int var8;
+        int var9;
+        Vector var11;
         L0: {
           var10 = CrazyCrystals.field_B;
           if (this.field_o == this.field_e) {
@@ -644,11 +590,11 @@ final class da extends ue {
     }
 
     private final void g(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = CrazyCrystals.field_B;
         var2 = 0;
         L0: while (true) {
@@ -805,10 +751,10 @@ final class da extends ue {
     }
 
     private final int c(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = CrazyCrystals.field_B;
         if (this.field_r != 1) {
           return 0;
@@ -974,12 +920,6 @@ final class da extends ue {
     }
 
     final static int a(boolean param0, boolean param1) {
-        int discarded$1 = 0;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_59_0 = 0;
         int stackIn_62_0 = 0;
         int stackIn_69_0 = 0;
@@ -988,12 +928,11 @@ final class da extends ue {
         int stackIn_79_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_61_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_78_0 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -1005,7 +944,7 @@ final class da extends ue {
                   if (param1) {
                     break L2;
                   } else {
-                    discarded$1 = da.a(false, true);
+                    da.a(false, true);
                     break L2;
                   }
                 }
@@ -1197,14 +1136,12 @@ final class da extends ue {
                           if (bc.field_f.field_c != 1) {
                             break L15;
                           } else {
-                            stackOut_61_0 = 2;
-                            stackIn_62_0 = stackOut_61_0;
+                            stackIn_62_0 = 2;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           }
                         } else {
-                          stackOut_58_0 = 3;
-                          stackIn_59_0 = stackOut_58_0;
+                          stackIn_59_0 = 3;
                           decompiledRegionSelector0 = 0;
                           break L0;
                         }
@@ -1219,16 +1156,14 @@ final class da extends ue {
                           if (bc.field_f.a(true)) {
                             if (bc.field_f.field_c != 0) {
                               if (-2 == (bc.field_f.field_c ^ -1)) {
-                                stackOut_72_0 = 1;
-                                stackIn_73_0 = stackOut_72_0;
+                                stackIn_73_0 = 1;
                                 decompiledRegionSelector0 = 3;
                                 break L0;
                               } else {
                                 break L17;
                               }
                             } else {
-                              stackOut_68_0 = 3;
-                              stackIn_69_0 = stackOut_68_0;
+                              stackIn_69_0 = 3;
                               decompiledRegionSelector0 = 2;
                               break L0;
                             }
@@ -1237,8 +1172,7 @@ final class da extends ue {
                           }
                         }
                         if (pj.field_q == 13) {
-                          stackOut_76_0 = 1;
-                          stackIn_77_0 = stackOut_76_0;
+                          stackIn_77_0 = 1;
                           decompiledRegionSelector0 = 4;
                           break L0;
                         } else {
@@ -1248,8 +1182,7 @@ final class da extends ue {
                     }
                   }
                 }
-                stackOut_78_0 = 0;
-                stackIn_79_0 = stackOut_78_0;
+                stackIn_79_0 = 0;
                 decompiledRegionSelector0 = 5;
                 break L0;
               } else {
@@ -1288,31 +1221,21 @@ final class da extends ue {
     }
 
     final void a(boolean param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        Object stackIn_39_0 = null;
+        int discarded$0 = 0;
+        ik dupTemp$1 = null;
+        ik dupTemp$2 = null;
         Object stackIn_40_0 = null;
         Object stackIn_41_0 = null;
         int stackIn_41_1 = 0;
-        Object stackIn_57_0 = null;
         Object stackIn_58_0 = null;
         Object stackIn_59_0 = null;
         int stackIn_59_1 = 0;
-        Object stackOut_38_0 = null;
-        Object stackOut_40_0 = null;
-        int stackOut_40_1 = 0;
-        Object stackOut_39_0 = null;
-        int stackOut_39_1 = 0;
-        Object stackOut_56_0 = null;
-        Object stackOut_58_0 = null;
-        int stackOut_58_1 = 0;
-        Object stackOut_57_0 = null;
-        int stackOut_57_1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var6 = CrazyCrystals.field_B;
         if (!this.field_k) {
           this.field_n.f(-116);
@@ -1425,20 +1348,15 @@ final class da extends ue {
                               break L11;
                             } else {
                               L12: {
-                                stackOut_38_0 = this;
-                                stackIn_40_0 = stackOut_38_0;
-                                stackIn_39_0 = stackOut_38_0;
+                                stackIn_40_0 = this;
+
                                 if (this.field_s <= this.field_i) {
-                                  stackOut_40_0 = this;
-                                  stackOut_40_1 = 0;
-                                  stackIn_41_0 = stackOut_40_0;
-                                  stackIn_41_1 = stackOut_40_1;
+                                  stackIn_41_0 = this;
+                                  stackIn_41_1 = 0;
                                   break L12;
                                 } else {
-                                  stackOut_39_0 = this;
-                                  stackOut_39_1 = this.field_i;
-                                  stackIn_41_0 = stackOut_39_0;
-                                  stackIn_41_1 = stackOut_39_1;
+                                  stackIn_41_0 = this;
+                                  stackIn_41_1 = this.field_i;
                                   break L12;
                                 }
                               }
@@ -1472,20 +1390,15 @@ final class da extends ue {
                                     break L16;
                                   } else {
                                     L17: {
-                                      stackOut_56_0 = this;
-                                      stackIn_58_0 = stackOut_56_0;
-                                      stackIn_57_0 = stackOut_56_0;
+                                      stackIn_58_0 = this;
+
                                       if (this.field_s > this.field_i) {
-                                        stackOut_58_0 = this;
-                                        stackOut_58_1 = this.field_i;
-                                        stackIn_59_0 = stackOut_58_0;
-                                        stackIn_59_1 = stackOut_58_1;
+                                        stackIn_59_0 = this;
+                                        stackIn_59_1 = this.field_i;
                                         break L17;
                                       } else {
-                                        stackOut_57_0 = this;
-                                        stackOut_57_1 = 0;
-                                        stackIn_59_0 = stackOut_57_0;
-                                        stackIn_59_1 = stackOut_57_1;
+                                        stackIn_59_0 = this;
+                                        stackIn_59_1 = 0;
                                         break L17;
                                       }
                                     }
@@ -1882,7 +1795,7 @@ final class da extends ue {
                     if (!param0) {
                       break L49;
                     } else {
-                      discarded$1 = this.c((byte) 35);
+                      discarded$0 = this.c((byte) 35);
                       break L49;
                     }
                   }
@@ -1892,11 +1805,13 @@ final class da extends ue {
                     } else {
                       var5 = this.b(var7, -19);
                       if (var5 < this.field_d[var7].field_d) {
-                        this.field_d[var7].field_d = this.field_d[var7].field_d + (var5 - this.field_d[var7].field_d >> -1604438365);
+                        dupTemp$1 = this.field_d[var7];
+                        dupTemp$1.field_d = dupTemp$1.field_d + (var5 - this.field_d[var7].field_d >> -1604438365);
                         var7++;
                         continue L50;
                       } else {
-                        this.field_d[var7].field_d = this.field_d[var7].field_d - (-var5 + this.field_d[var7].field_d >> 1220392003);
+                        dupTemp$2 = this.field_d[var7];
+                        dupTemp$2.field_d = dupTemp$2.field_d - (-var5 + this.field_d[var7].field_d >> 1220392003);
                         var7++;
                         continue L50;
                       }
@@ -1994,50 +1909,40 @@ final class da extends ue {
         }
         int var3 = 1 + this.field_s;
         if (!(mo.field_l != 0)) {
-            if (param0 >= var3) {
-                if (this.field_g > param0) {
-                    return true;
-                }
+            if (param0 >= var3 && this.field_g > param0) {
+                return true;
             }
             if (!(1 + this.field_g <= var3)) {
                 var3 = 1 + this.field_g;
             }
         }
-        if (var3 <= param0) {
-            if (20 > param0) {
-                return true;
-            }
+        if (var3 <= param0 && 20 > param0) {
+            return true;
         }
         if (!(-23 >= (var3 ^ -1))) {
             var3 = 22;
         }
-        if (param0 >= var3) {
-            if (param0 < 40) {
-                return true;
-            }
+        if (param0 >= var3 && param0 < 40) {
+            return true;
         }
         if (!(42 <= var3)) {
             var3 = 42;
         }
-        if (var3 <= param0) {
-            if (-61 < (param0 ^ -1)) {
-                return true;
-            }
+        if (var3 <= param0 && -61 < (param0 ^ -1)) {
+            return true;
         }
-        if (60 > this.field_i) {
-            if (-61 >= (param0 ^ -1)) {
-                if (param0 >= this.field_m) {
-                    return false;
-                }
-                return true;
+        if (60 > this.field_i && -61 >= (param0 ^ -1)) {
+            if (param0 >= this.field_m) {
+                return false;
             }
+            return true;
         }
         return false;
     }
 
     private final void f(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         if (this.field_r == 1) {
           L0: {
             var2 = 1 + this.field_s;
@@ -2142,24 +2047,18 @@ final class da extends ue {
     }
 
     private final void b(boolean param0) {
-        int var3 = 0;
-        String var4 = null;
-        String var6 = null;
-        String var7 = null;
-        int var8 = 0;
-        Vector var9 = null;
-        kb var10 = null;
-        String var11 = null;
-        String var12 = null;
-        Object stackIn_10_0 = null;
         Object stackIn_11_0 = null;
         Object stackIn_12_0 = null;
         int stackIn_12_1 = 0;
-        Object stackOut_9_0 = null;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        Object stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
+        int var3;
+        String var4;
+        String var6;
+        Object var7;
+        int var8;
+        Vector var9;
+        kb var10;
+        String var11;
+        String var12;
         L0: {
           var8 = CrazyCrystals.field_B;
           this.field_p = (f[][]) null;
@@ -2195,20 +2094,15 @@ final class da extends ue {
           }
         }
         L3: {
-          stackOut_9_0 = this;
-          stackIn_11_0 = stackOut_9_0;
-          stackIn_10_0 = stackOut_9_0;
+          stackIn_11_0 = this;
+
           if (this.field_i < this.field_s) {
-            stackOut_11_0 = this;
-            stackOut_11_1 = this.field_i;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_12_0 = this;
+            stackIn_12_1 = this.field_i;
             break L3;
           } else {
-            stackOut_10_0 = this;
-            stackOut_10_1 = 0;
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
+            stackIn_12_0 = this;
+            stackIn_12_1 = 0;
             break L3;
           }
         }
@@ -2329,7 +2223,7 @@ final class da extends ue {
                 }
               }
             }
-            this.field_d[var3] = (ik) ((Object) new an(-go.field_l.a(var12) + 410, this.b(var3, -15), var6 + var4, 0, var7));
+            this.field_d[var3] = (ik) ((Object) new an(-go.field_l.a(var12) + 410, this.b(var3, -15), var6 + var4, 0, (String) (var7)));
             var3++;
             continue L4;
           }
@@ -2337,18 +2231,12 @@ final class da extends ue {
     }
 
     private final void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        ik stackIn_36_0 = null;
         ik stackIn_37_0 = null;
         ik stackIn_38_0 = null;
         int stackIn_38_1 = 0;
-        ik stackOut_35_0 = null;
-        ik stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        ik stackOut_36_0 = null;
-        int stackOut_36_1 = 0;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = CrazyCrystals.field_B;
           if (param1 == 22370) {
@@ -2467,20 +2355,15 @@ final class da extends ue {
                 break L8;
               }
               L10: {
-                stackOut_35_0 = this.field_d[var4];
-                stackIn_37_0 = stackOut_35_0;
-                stackIn_36_0 = stackOut_35_0;
+                stackIn_37_0 = this.field_d[var4];
+
                 if (16777215 != var5) {
-                  stackOut_37_0 = (ik) ((Object) stackIn_37_0);
-                  stackOut_37_1 = 0;
-                  stackIn_38_0 = stackOut_37_0;
-                  stackIn_38_1 = stackOut_37_1;
+                  stackIn_38_0 = (ik) ((Object) stackIn_37_0);
+                  stackIn_38_1 = 0;
                   break L10;
                 } else {
-                  stackOut_36_0 = (ik) ((Object) stackIn_36_0);
-                  stackOut_36_1 = 1;
-                  stackIn_38_0 = stackOut_36_0;
-                  stackIn_38_1 = stackOut_36_1;
+                  stackIn_38_0 = (ik) ((Object) stackIn_37_0);
+                  stackIn_38_1 = 1;
                   break L10;
                 }
               }
@@ -2496,28 +2379,12 @@ final class da extends ue {
     }
 
     private final void e(int param0) {
-        int var2 = 0;
-        L0: {
-          var2 = this.c((byte) -99);
-          if (-7 < (this.field_j ^ -1)) {
+        int var2 = this.c((byte) -99);
+        if (-7 < (this.field_j ^ -1) || var2 < this.field_j) {
             this.field_j = 6;
-            break L0;
-          } else {
-            if (var2 >= this.field_j) {
-              break L0;
-            } else {
-              this.field_j = var2;
-              break L0;
-            }
-          }
         }
-        L1: {
-          if (param0 == 17832) {
-            break L1;
-          } else {
+        if (param0 != 17832) {
             this.a(true);
-            break L1;
-          }
         }
     }
 

@@ -16,25 +16,24 @@ final class ks {
     }
 
     final static ej a(int param0, int param1) {
-        ej discarded$2 = null;
-        ej[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        ej[] var5 = null;
+        ej[] var2;
+        int var3;
+        int var4;
+        ej[] var5;
         var4 = AceOfSkies.field_G ? 1 : 0;
         var5 = sf.d((byte) 112);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
           if (var5.length <= var3) {
-            if (param1 == -28228) {
+            if (param1 != -28228) {
+              ks.a(-73, -126);
               return null;
             } else {
-              discarded$2 = ks.a(-73, -126);
               return null;
             }
           } else {
-            if (var5[var3].field_d == param0) {
+            if ((var5[var3].field_d ^ -1) == (param0 ^ -1)) {
               return var5[var3];
             } else {
               var3++;

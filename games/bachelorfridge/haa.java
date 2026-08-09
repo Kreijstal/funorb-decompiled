@@ -50,12 +50,12 @@ final class haa extends kj {
     }
 
     final static int[][] b(int param0, int param1, int param2) {
-        int[][] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int[][] var7 = null;
-        int[][] var8 = null;
+        int[][] var3;
+        int var4;
+        int var5;
+        int var6;
+        int[][] var7;
+        int[][] var8;
         var6 = BachelorFridge.field_y;
         if (param0 == 1) {
           var8 = new int[17][17];

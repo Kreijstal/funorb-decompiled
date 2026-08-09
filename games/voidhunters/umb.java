@@ -20,31 +20,15 @@ final class umb extends ksa implements ntb {
         RuntimeException var3 = null;
         int var4 = 0;
         umb var5 = null;
-        boolean stackIn_6_0 = false;
         boolean stackIn_7_0 = false;
         boolean stackIn_8_0 = false;
         int stackIn_8_1 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_5_0 = false;
-        boolean stackOut_7_0 = false;
-        int stackOut_7_1 = 0;
-        boolean stackOut_6_0 = false;
-        int stackOut_6_1 = 0;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
         try {
           L0: {
             L1: {
@@ -68,20 +52,15 @@ final class umb extends ksa implements ntb {
               }
             }
             L3: {
-              stackOut_5_0 = this.field_e;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_7_0 = this.field_e;
+
               if (var5.field_e) {
-                stackOut_7_0 = stackIn_7_0;
-                stackOut_7_1 = 0;
-                stackIn_8_0 = stackOut_7_0;
-                stackIn_8_1 = stackOut_7_1;
+                stackIn_8_0 = stackIn_7_0;
+                stackIn_8_1 = 0;
                 break L3;
               } else {
-                stackOut_6_0 = stackIn_6_0;
-                stackOut_6_1 = 1;
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
+                stackIn_8_0 = stackIn_7_0;
+                stackIn_8_1 = 1;
                 break L3;
               }
             }
@@ -113,27 +92,19 @@ final class umb extends ksa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var3);
-            stackOut_17_1 = new StringBuilder().append("umb.F(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var3);
+
+            stackIn_19_1 = new StringBuilder().append("umb.F(");
+
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L6;
             }
           }
@@ -142,14 +113,13 @@ final class umb extends ksa implements ntb {
     }
 
     public final void b(faa param0, int param1) {
-        boolean discarded$0 = false;
         try {
             param0.a(-632, this.field_f, 32);
             param0.a(-632, this.field_g, 32);
             if (param1 > -109) {
                 field_d = (llb) null;
             }
-            discarded$0 = vq.a(param0, 43, this.field_e);
+            vq.a(param0, 43, this.field_e);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) ((Object) runtimeException), "umb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -157,36 +127,18 @@ final class umb extends ksa implements ntb {
 
     public final boolean a(byte param0, tv param1) {
         umb var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
-        boolean stackIn_3_0 = false;
         boolean stackIn_4_0 = false;
         boolean stackIn_5_0 = false;
         int stackIn_5_1 = 0;
         int stackIn_8_0 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
-        boolean stackOut_4_0 = false;
-        int stackOut_4_1 = 0;
-        boolean stackOut_3_0 = false;
-        int stackOut_3_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var3_ref = null;
         try {
           L0: {
             L1: {
@@ -200,26 +152,20 @@ final class umb extends ksa implements ntb {
                     break L2;
                   } else {
                     L3: {
-                      stackOut_2_0 = var3.field_e;
-                      stackIn_4_0 = stackOut_2_0;
-                      stackIn_3_0 = stackOut_2_0;
+                      stackIn_4_0 = var3.field_e;
+
                       if (this.field_e) {
-                        stackOut_4_0 = stackIn_4_0;
-                        stackOut_4_1 = 0;
-                        stackIn_5_0 = stackOut_4_0;
-                        stackIn_5_1 = stackOut_4_1;
+                        stackIn_5_0 = stackIn_4_0;
+                        stackIn_5_1 = 0;
                         break L3;
                       } else {
-                        stackOut_3_0 = stackIn_3_0;
-                        stackOut_3_1 = 1;
-                        stackIn_5_0 = stackOut_3_0;
-                        stackIn_5_1 = stackOut_3_1;
+                        stackIn_5_0 = stackIn_4_0;
+                        stackIn_5_1 = 1;
                         break L3;
                       }
                     }
                     if ((stackIn_5_0 ? 1 : 0) != stackIn_5_1) {
-                      stackOut_7_0 = 0;
-                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_8_0 = 0;
                       break L1;
                     } else {
                       break L2;
@@ -227,8 +173,7 @@ final class umb extends ksa implements ntb {
                   }
                 }
               }
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L1;
             }
             break L0;
@@ -237,27 +182,19 @@ final class umb extends ksa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3_ref);
-            stackOut_9_1 = new StringBuilder().append("umb.C(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3_ref);
+
+            stackIn_11_1 = new StringBuilder().append("umb.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -284,22 +221,12 @@ final class umb extends ksa implements ntb {
     public final void a(faa param0, boolean param1) {
         RuntimeException runtimeException = null;
         tv var4 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -320,27 +247,19 @@ final class umb extends ksa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("umb.H(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("umb.H(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

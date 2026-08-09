@@ -16,34 +16,21 @@ final class ld implements el {
     static String field_b;
 
     public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        va var6_ref = null;
+        va var6 = null;
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
         gm stackIn_7_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gm stackOut_6_0 = null;
-        Object stackOut_4_0 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        RuntimeException var6_ref = null;
+        int var13 = 0;
         try {
           L0: {
             L1: {
@@ -56,18 +43,16 @@ final class ld implements el {
             }
             L2: {
               if (param4 instanceof va) {
-                stackOut_6_0 = (gm) (param4);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (gm) (param4);
                 break L2;
               } else {
-                stackOut_4_0 = null;
-                stackIn_7_0 = (gm) ((Object) stackOut_4_0);
+                stackIn_7_0 = null;
                 break L2;
               }
             }
             L3: {
-              var6_ref = (va) ((Object) stackIn_7_0);
-              if (var6_ref == null) {
+              var6 = (va) ((Object) stackIn_7_0);
+              if (var6 == null) {
                 break L3;
               } else {
                 break L3;
@@ -75,13 +60,13 @@ final class ld implements el {
             }
             L4: {
               ph.d(param4.field_w + param2, param4.field_k + param1, param4.field_p, param4.field_o, this.field_h);
-              var7 = param2 - -param4.field_w - -var6_ref.field_G;
-              var8 = var6_ref.field_F + (param1 - -param4.field_k);
-              ph.d(var7, var8, var6_ref.field_C, this.field_a);
-              if (0 != (var6_ref.field_I ^ -1)) {
-                var9 = 2.0 * ((double)var6_ref.field_I * 3.141592653589793) / (double)var6_ref.field_E;
-                var11 = (int)(-Math.sin(var9) * (double)var6_ref.field_C);
-                var12 = (int)(Math.cos(var9) * (double)var6_ref.field_C);
+              var7 = param2 - -param4.field_w - -var6.field_G;
+              var8 = var6.field_F + (param1 - -param4.field_k);
+              ph.d(var7, var8, var6.field_C, this.field_a);
+              if (0 != (var6.field_I ^ -1)) {
+                var9 = 2.0 * ((double)var6.field_I * 3.141592653589793) / (double)var6.field_E;
+                var11 = (int)(-Math.sin(var9) * (double)var6.field_C);
+                var12 = (int)(Math.cos(var9) * (double)var6.field_C);
                 ph.d(var11 + var7, var12 + var8, 1, this.field_g);
                 break L4;
               } else {
@@ -90,13 +75,13 @@ final class ld implements el {
             }
             L5: {
               ph.d(var7, var8, 2, 1);
-              var9 = 2.0 * (3.141592653589793 * (double)var6_ref.field_D) / (double)var6_ref.field_E;
-              var11 = (int)(-Math.sin(var9) * (double)var6_ref.field_C);
-              var12 = (int)(Math.cos(var9) * (double)var6_ref.field_C);
+              var9 = 2.0 * (3.141592653589793 * (double)var6.field_D) / (double)var6.field_E;
+              var11 = (int)(-Math.sin(var9) * (double)var6.field_C);
+              var12 = (int)(Math.cos(var9) * (double)var6.field_C);
               ph.a(var7, var8, var7 + var11, var12 + var8, 1);
               if (this.field_j != null) {
-                var13 = this.field_c + var6_ref.field_C + var6_ref.field_G;
-                discarded$1 = this.field_j.a(param4.field_m, var13 + (param2 + param4.field_w), this.field_d + (param1 - -param4.field_k), -this.field_c + -var13 + param4.field_p, -(this.field_c << -725819935) + param4.field_o, this.field_i, this.field_f, 1, 1, 0);
+                var13 = this.field_c + var6.field_C + var6.field_G;
+                this.field_j.a(param4.field_m, var13 + (param2 + param4.field_w), this.field_d + (param1 - -param4.field_k), -this.field_c + -var13 + param4.field_p, -(this.field_c << -725819935) + param4.field_o, this.field_i, this.field_f, 1, 1, 0);
                 break L5;
               } else {
                 break L5;
@@ -107,28 +92,20 @@ final class ld implements el {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var6 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var6);
-            stackOut_17_1 = new StringBuilder().append("ld.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_20_0 = stackOut_17_0;
-            stackIn_20_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            var6_ref = decompiledCaughtException;
+            stackIn_20_0 = (RuntimeException) (var6_ref);
+
+            stackIn_20_1 = new StringBuilder().append("ld.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_21_0 = stackOut_18_0;
-              stackIn_21_1 = stackOut_18_1;
-              stackIn_21_2 = stackOut_18_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L6;
             }
           }
@@ -137,14 +114,16 @@ final class ld implements el {
     }
 
     final static void a(byte param0) {
-        String discarded$3 = null;
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        RuntimeException var1 = null;
-        df var1_ref = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int stackIn_14_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        df var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
-        String var3 = null;
+        Object var3 = null;
         String var4_ref_String = null;
         int var4 = 0;
         ae var5 = null;
@@ -154,16 +133,11 @@ final class ld implements el {
         String var7 = null;
         ae var7_ref = null;
         int var8 = 0;
-        int stackIn_14_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_11_0 = 0;
         var8 = Torquing.field_u;
         try {
           L0: {
             L1: {
-              var1_ref = kj.field_d;
+              var1 = kj.field_d;
               if (param0 == 123) {
                 break L1;
               } else {
@@ -171,7 +145,7 @@ final class ld implements el {
                 break L1;
               }
             }
-            var2 = var1_ref.i((byte) -101);
+            var2 = var1.i((byte) -101);
             if (-1 == (var2 ^ -1)) {
               L2: {
                 if (ed.field_c != null) {
@@ -183,29 +157,27 @@ final class ld implements el {
                 }
               }
               L3: {
-                if ((var1_ref.i((byte) -101) ^ -1) != -2) {
-                  stackOut_13_0 = 0;
-                  stackIn_14_0 = stackOut_13_0;
+                if ((var1.i((byte) -101) ^ -1) != -2) {
+                  stackIn_14_0 = 0;
                   break L3;
                 } else {
-                  stackOut_11_0 = 1;
-                  stackIn_14_0 = stackOut_11_0;
+                  stackIn_14_0 = 1;
                   break L3;
                 }
               }
               L4: {
                 var3_int = stackIn_14_0;
-                var4_ref_String = var1_ref.h((byte) 124);
+                var4_ref_String = var1.h((byte) 124);
                 if (var3_int == 0) {
                   break L4;
                 } else {
-                  discarded$3 = var1_ref.h((byte) 120);
+                  var1.h((byte) 120);
                   break L4;
                 }
               }
               L5: {
                 var5 = ac.a(var4_ref_String, 0);
-                var6 = var1_ref.h((byte) 116);
+                var6 = var1.h((byte) 116);
                 var7 = hf.a((CharSequence) ((Object) var4_ref_String), 121);
                 if (null == var7) {
                   var7 = var4_ref_String;
@@ -233,9 +205,9 @@ final class ld implements el {
                 } else {
                   var5 = new ae();
                   ed.field_c.a(var5, (long)var7.hashCode(), 0);
-                  fieldTemp$4 = vf.field_d;
+                  fieldTemp$0 = vf.field_d;
                   vf.field_d = vf.field_d + 1;
-                  var5.field_kb = fieldTemp$4;
+                  var5.field_kb = fieldTemp$0;
                   eh.field_b.a((byte) 54, var5);
                   break L7;
                 }
@@ -260,9 +232,9 @@ final class ld implements el {
                   } else {
                     if (var2 == 4) {
                       cn.field_b = 1;
-                      var3 = var1_ref.h((byte) 116);
-                      og.field_m = var3.intern();
-                      var4 = var1_ref.i((byte) -101);
+                      var3 = var1.h((byte) 116);
+                      og.field_m = ((String) (var3)).intern();
+                      var4 = var1.i((byte) -101);
                       rf.a(var4, 64);
                       decompiledRegionSelector0 = 4;
                       break L0;
@@ -296,8 +268,8 @@ final class ld implements el {
                   }
                 }
                 L11: {
-                  var3 = var1_ref.h((byte) 124);
-                  if (var3.equals("")) {
+                  var3 = var1.h((byte) 124);
+                  if (((String) (var3)).equals("")) {
                     var3 = null;
                     break L11;
                   } else {
@@ -305,8 +277,8 @@ final class ld implements el {
                   }
                 }
                 L12: {
-                  var4_ref_String = var1_ref.h((byte) 122);
-                  var5_ref = var1_ref.h((byte) 124);
+                  var4_ref_String = var1.h((byte) 122);
+                  var5_ref = var1.h((byte) 124);
                   var6_ref = qm.a(var4_ref_String, (byte) 45);
                   if (null != var6_ref) {
                     break L12;
@@ -324,9 +296,9 @@ final class ld implements el {
                   if (null == var6_ref) {
                     var6_ref = new ae();
                     sh.field_a.a(var6_ref, (long)hf.a((CharSequence) ((Object) var4_ref_String), 118).hashCode(), 0);
-                    fieldTemp$5 = mm.field_g;
+                    fieldTemp$1 = mm.field_g;
                     mm.field_g = mm.field_g + 1;
-                    var6_ref.field_kb = fieldTemp$5;
+                    var6_ref.field_kb = fieldTemp$1;
                     wf.field_x.a((byte) 54, var6_ref);
                     break L13;
                   } else {
@@ -337,11 +309,11 @@ final class ld implements el {
                   if (null == var3) {
                     break L14;
                   } else {
-                    var3 = var3.intern();
+                    var3 = ((String) (var3)).intern();
                     break L14;
                   }
                 }
-                var6_ref.field_jb = var3;
+                var6_ref.field_jb = (String) (var3);
                 var6_ref.field_ob = var4_ref_String;
                 var6_ref.f(param0 + -123);
                 var7_ref = (ae) ((Object) wf.field_x.b(0));
@@ -386,8 +358,8 @@ final class ld implements el {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "ld.C(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw rb.a((Throwable) ((Object) var1_ref), "ld.C(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -425,8 +397,8 @@ final class ld implements el {
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
-        RuntimeException var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -450,22 +422,12 @@ final class ld implements el {
 
     ld(uc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             this.field_c = param1;
@@ -482,27 +444,19 @@ final class ld implements el {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("ld.<init>(");
-            stackIn_6_0 = stackOut_3_0;
-            stackIn_6_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("ld.<init>(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_7_0 = stackOut_4_0;
-              stackIn_7_1 = stackOut_4_1;
-              stackIn_7_2 = stackOut_4_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }

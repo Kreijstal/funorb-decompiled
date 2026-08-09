@@ -14,8 +14,6 @@ final class md extends sk {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -23,26 +21,14 @@ final class md extends sk {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0 == -124) {
-              stackOut_3_0 = param1.b((byte) -117);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = param1.b((byte) -117);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -51,27 +37,19 @@ final class md extends sk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("md.E(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("md.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -102,6 +80,19 @@ final class md extends sk {
     }
 
     final static o[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int stackIn_3_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_25_1 = 0;
+        int stackIn_27_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_30_1 = 0;
+        int stackIn_35_0 = 0;
+        int stackIn_38_0 = 0;
+        int stackIn_46_0 = 0;
+        int statePc = 0;
         int var9 = 0;
         o[] var10 = null;
         o[] var11_ref_o__ = null;
@@ -110,250 +101,409 @@ final class md extends sk {
         o var13 = null;
         int var14 = 0;
         int var15 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_25_1 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_43_0 = 0;
-        int stackIn_60_0 = 0;
-        int stackIn_62_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_24_1 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_28_1 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_34_0 = 0;
-        var15 = SolKnight.field_L ? 1 : 0;
-        var9 = param4 + (param6 + param8);
-        var10 = new o[]{new o(var9, var9), new o(param7, var9), new o(var9, var9), new o(var9, param7), new o(64, 64), new o(var9, param7), new o(var9, var9), new o(param7, var9), new o(var9, var9)};
-        var11_ref_o__ = var10;
-        var12 = 0;
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (var11_ref_o__.length <= var12) {
-                break L2;
-              } else {
-                var13 = var11_ref_o__[var12];
-                stackOut_2_0 = 0;
-                stackIn_11_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
-                if (var15 != 0) {
-                  break L1;
-                } else {
-                  var14 = stackIn_3_0;
-                  L3: while (true) {
-                    L4: {
-                      L5: {
-                        if (var13.field_v.length <= var14) {
-                          break L5;
-                        } else {
-                          var13.field_v[var14] = param3;
-                          var14++;
-                          if (var15 != 0) {
-                            break L4;
-                          } else {
-                            if (var15 == 0) {
-                              continue L3;
-                            } else {
-                              break L5;
-                            }
-                          }
-                        }
-                      }
-                      var12++;
-                      break L4;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var15 = SolKnight.field_L ? 1 : 0;
+                    var9 = param4 + (param6 + param8);
+                    var10 = new o[]{new o(var9, var9), new o(param7, var9), new o(var9, var9), new o(var9, param7), new o(64, 64), new o(var9, param7), new o(var9, var9), new o(param7, var9), new o(var9, var9)};
+                    var11_ref_o__ = var10;
+                    var12 = 0;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    if (var11_ref_o__.length <= var12) {
+                        statePc = 10;
+                    } else {
+                        statePc = 2;
                     }
+                    continue stateLoop;
+                }
+                case 2: {
+                    var13 = var11_ref_o__[var12];
+                    stackIn_11_0 = 0;
+                    stackIn_3_0 = stackIn_11_0;
+                    if (var15 != 0) {
+                        statePc = 11;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    var14 = stackIn_3_0;
+                    statePc = 4;
+                    continue stateLoop;
+                }
+                case 4: {
+                    if (var13.field_v.length <= var14) {
+                        statePc = 8;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    var13.field_v[var14] = param3;
+                    var14++;
+                    if (var15 != 0) {
+                        statePc = 9;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
                     if (var15 == 0) {
-                      continue L0;
+                        statePc = 4;
                     } else {
-                      break L2;
+                        statePc = 8;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
-            }
-            stackOut_10_0 = 0;
-            stackIn_11_0 = stackOut_10_0;
-            break L1;
-          }
-          var11 = stackIn_11_0;
-          if (param5 == -1) {
-            L6: while (true) {
-              L7: {
-                if (var11 >= param8) {
-                  stackOut_22_0 = 0;
-                  stackIn_23_0 = stackOut_22_0;
-                  break L7;
-                } else {
-                  stackOut_61_0 = 0;
-                  stackIn_23_0 = stackOut_61_0;
-                  stackIn_62_0 = stackOut_61_0;
-                  if (var15 != 0) {
-                    break L7;
-                  } else {
-                    stackOut_62_0 = stackIn_62_0;
-                    stackIn_60_0 = stackOut_62_0;
-                    var12 = stackIn_60_0;
-                    L8: while (true) {
-                      L9: {
-                        if (var9 <= var12) {
-                          var11++;
-                          break L9;
-                        } else {
-                          var10[6].field_v[var12 + var9 * (-1 + (-var11 + var9))] = param2;
-                          var10[8].field_v[var12 + (-var11 + (var9 + -1)) * var9] = param2;
-                          var10[2].field_v[var9 * var12 - var11 - (1 + -var9)] = param2;
-                          var10[8].field_v[var9 * var12 - (var11 + 1) - -var9] = param2;
-                          var12++;
-                          if (var15 != 0) {
-                            break L9;
-                          } else {
-                            continue L8;
-                          }
-                        }
-                      }
-                      continue L6;
+                case 8: {
+                    var12++;
+                    statePc = 9;
+                    continue stateLoop;
+                }
+                case 9: {
+                    if (var15 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 10;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
-              var11 = stackIn_23_0;
-              L10: while (true) {
-                stackOut_24_0 = var11;
-                stackOut_24_1 = param8;
-                stackIn_25_0 = stackOut_24_0;
-                stackIn_25_1 = stackOut_24_1;
-                L11: while (true) {
-                  L12: {
+                case 10: {
+                    stackIn_11_0 = 0;
+                    statePc = 11;
+                    continue stateLoop;
+                }
+                case 11: {
+                    var11 = stackIn_11_0;
+                    if (param5 == -1) {
+                        statePc = 13;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
+                    return (o[]) null;
+                }
+                case 13: {
+                    if (var11 >= param8) {
+                        statePc = 22;
+                    } else {
+                        statePc = 14;
+                    }
+                    continue stateLoop;
+                }
+                case 14: {
+                    stackIn_23_0 = 0;
+                    stackIn_15_0 = stackIn_23_0;
+                    if (var15 != 0) {
+                        statePc = 23;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 15: {
+                    var12 = stackIn_15_0;
+                    statePc = 16;
+                    continue stateLoop;
+                }
+                case 16: {
+                    if (var9 <= var12) {
+                        statePc = 20;
+                    } else {
+                        statePc = 17;
+                    }
+                    continue stateLoop;
+                }
+                case 17: {
+                    var10[6].field_v[var12 + var9 * (-1 + (-var11 + var9))] = param2;
+                    var10[8].field_v[var12 + (-var11 + (var9 + -1)) * var9] = param2;
+                    var10[2].field_v[var9 * var12 - var11 - (1 + -var9)] = param2;
+                    var10[8].field_v[var9 * var12 - (var11 + 1) - -var9] = param2;
+                    var12++;
+                    if (var15 != 0) {
+                        statePc = 21;
+                    } else {
+                        statePc = 18;
+                    }
+                    continue stateLoop;
+                }
+                case 18: {
+                    if (var15 == 0) {
+                        statePc = 16;
+                    } else {
+                        statePc = 20;
+                    }
+                    continue stateLoop;
+                }
+                case 20: {
+                    var11++;
+                    statePc = 21;
+                    continue stateLoop;
+                }
+                case 21: {
+                    if (var15 == 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 22;
+                    }
+                    continue stateLoop;
+                }
+                case 22: {
+                    stackIn_23_0 = 0;
+                    statePc = 23;
+                    continue stateLoop;
+                }
+                case 23: {
+                    var11 = stackIn_23_0;
+                    statePc = 24;
+                    continue stateLoop;
+                }
+                case 24: {
+                    stackIn_25_0 = var11;
+                    stackIn_25_1 = param8;
+                    statePc = 25;
+                    continue stateLoop;
+                }
+                case 25: {
                     if (stackIn_25_0 >= stackIn_25_1) {
-                      stackOut_31_0 = 0;
-                      stackIn_32_0 = stackOut_31_0;
-                      break L12;
+                        statePc = 34;
                     } else {
-                      stackOut_26_0 = 0;
-                      stackIn_32_0 = stackOut_26_0;
-                      stackIn_27_0 = stackOut_26_0;
-                      if (var15 != 0) {
-                        break L12;
-                      } else {
-                        var12 = stackIn_27_0;
-                        if (var12 >= var9) {
-                          var11++;
-                          continue L10;
-                        } else {
-                          var10[0].field_v[var11 * var9 + var12] = param1;
-                          var10[0].field_v[var9 * var12 + var11] = param1;
-                          stackOut_28_0 = var9 - var11 ^ -1;
-                          stackOut_28_1 = var12 ^ -1;
-                          stackIn_25_0 = stackOut_28_0;
-                          stackIn_25_1 = stackOut_28_1;
-                          continue L11;
-                        }
-                      }
+                        statePc = 26;
                     }
-                  }
-                  var11 = stackIn_32_0;
-                  L13: while (true) {
-                    L14: {
-                      if (var11 >= param7) {
-                        stackOut_42_0 = 0;
-                        stackIn_43_0 = stackOut_42_0;
-                        break L14;
-                      } else {
-                        stackOut_34_0 = 0;
-                        stackIn_43_0 = stackOut_34_0;
-                        stackIn_35_0 = stackOut_34_0;
-                        if (var15 != 0) {
-                          break L14;
-                        } else {
-                          var12 = stackIn_35_0;
-                          L15: while (true) {
-                            L16: {
-                              if (var12 >= param8) {
-                                var11++;
-                                break L16;
-                              } else {
-                                var10[7].field_v[(-1 + (-var12 + var9)) * param7 - -var11] = param2;
-                                var10[5].field_v[-var12 - -var9 + (-1 + var9 * var11)] = param2;
-                                var10[1].field_v[var12 * param7 - -var11] = param1;
-                                var10[3].field_v[var12 + var9 * var11] = param1;
-                                var12++;
-                                if (var15 != 0) {
-                                  break L16;
-                                } else {
-                                  continue L15;
-                                }
-                              }
-                            }
-                            continue L13;
-                          }
-                        }
-                      }
-                    }
-                    var11 = stackIn_43_0;
-                    L17: while (true) {
-                      L18: {
-                        if (var11 >= param7 >> -1951266271) {
-                          break L18;
-                        } else {
-                          var12 = 0;
-                          L19: while (true) {
-                            L20: {
-                              if (var12 >= param4) {
-                                var11++;
-                                break L20;
-                              } else {
-                                var10[1].field_v[(-1 + (var9 - var12)) * param7 + var11] = param0;
-                                var10[3].field_v[var9 * var11 - 1 - (-var9 + var12)] = param0;
-                                var10[7].field_v[var11 + var12 * param7] = param0;
-                                var10[5].field_v[var12 + var11 * var9] = param0;
-                                var12++;
-                                if (var15 != 0) {
-                                  break L20;
-                                } else {
-                                  continue L19;
-                                }
-                              }
-                            }
-                            if (var15 == 0) {
-                              continue L17;
-                            } else {
-                              break L18;
-                            }
-                          }
-                        }
-                      }
-                      return var10;
-                    }
-                  }
+                    continue stateLoop;
                 }
-              }
+                case 26: {
+                    stackIn_35_0 = 0;
+                    stackIn_27_0 = stackIn_35_0;
+                    if (var15 != 0) {
+                        statePc = 35;
+                    } else {
+                        statePc = 27;
+                    }
+                    continue stateLoop;
+                }
+                case 27: {
+                    var12 = stackIn_27_0;
+                    statePc = 28;
+                    continue stateLoop;
+                }
+                case 28: {
+                    if (var12 >= var9) {
+                        statePc = 33;
+                    } else {
+                        statePc = 29;
+                    }
+                    continue stateLoop;
+                }
+                case 29: {
+                    var10[0].field_v[var11 * var9 + var12] = param1;
+                    var10[0].field_v[var9 * var12 + var11] = param1;
+                    stackIn_25_0 = var9 - var11 ^ -1;
+                    stackIn_30_0 = stackIn_25_0;
+                    stackIn_25_1 = var12 ^ -1;
+                    stackIn_30_1 = stackIn_25_1;
+                    if (var15 != 0) {
+                        statePc = 25;
+                    } else {
+                        statePc = 30;
+                    }
+                    continue stateLoop;
+                }
+                case 30: {
+                    if (stackIn_30_0 >= stackIn_30_1) {
+                        statePc = 32;
+                    } else {
+                        statePc = 31;
+                    }
+                    continue stateLoop;
+                }
+                case 31: {
+                    var10[2].field_v[var9 * var11 + var12] = param1;
+                    var10[6].field_v[var9 * var12 + var11] = param1;
+                    statePc = 32;
+                    continue stateLoop;
+                }
+                case 32: {
+                    var12++;
+                    if (var15 == 0) {
+                        statePc = 28;
+                    } else {
+                        statePc = 33;
+                    }
+                    continue stateLoop;
+                }
+                case 33: {
+                    var11++;
+                    if (var15 == 0) {
+                        statePc = 24;
+                    } else {
+                        statePc = 34;
+                    }
+                    continue stateLoop;
+                }
+                case 34: {
+                    stackIn_35_0 = 0;
+                    statePc = 35;
+                    continue stateLoop;
+                }
+                case 35: {
+                    var11 = stackIn_35_0;
+                    statePc = 36;
+                    continue stateLoop;
+                }
+                case 36: {
+                    if (var11 >= param7) {
+                        statePc = 45;
+                    } else {
+                        statePc = 37;
+                    }
+                    continue stateLoop;
+                }
+                case 37: {
+                    stackIn_46_0 = 0;
+                    stackIn_38_0 = stackIn_46_0;
+                    if (var15 != 0) {
+                        statePc = 46;
+                    } else {
+                        statePc = 38;
+                    }
+                    continue stateLoop;
+                }
+                case 38: {
+                    var12 = stackIn_38_0;
+                    statePc = 39;
+                    continue stateLoop;
+                }
+                case 39: {
+                    if (var12 >= param8) {
+                        statePc = 43;
+                    } else {
+                        statePc = 40;
+                    }
+                    continue stateLoop;
+                }
+                case 40: {
+                    var10[7].field_v[(-1 + (-var12 + var9)) * param7 - -var11] = param2;
+                    var10[5].field_v[-var12 - -var9 + (-1 + var9 * var11)] = param2;
+                    var10[1].field_v[var12 * param7 - -var11] = param1;
+                    var10[3].field_v[var12 + var9 * var11] = param1;
+                    var12++;
+                    if (var15 != 0) {
+                        statePc = 44;
+                    } else {
+                        statePc = 41;
+                    }
+                    continue stateLoop;
+                }
+                case 41: {
+                    if (var15 == 0) {
+                        statePc = 39;
+                    } else {
+                        statePc = 43;
+                    }
+                    continue stateLoop;
+                }
+                case 43: {
+                    var11++;
+                    statePc = 44;
+                    continue stateLoop;
+                }
+                case 44: {
+                    if (var15 == 0) {
+                        statePc = 36;
+                    } else {
+                        statePc = 45;
+                    }
+                    continue stateLoop;
+                }
+                case 45: {
+                    stackIn_46_0 = 0;
+                    statePc = 46;
+                    continue stateLoop;
+                }
+                case 46: {
+                    var11 = stackIn_46_0;
+                    statePc = 47;
+                    continue stateLoop;
+                }
+                case 47: {
+                    if (var11 >= param7 >> -1951266271) {
+                        statePc = 55;
+                    } else {
+                        statePc = 48;
+                    }
+                    continue stateLoop;
+                }
+                case 48: {
+                    var12 = 0;
+                    statePc = 49;
+                    continue stateLoop;
+                }
+                case 49: {
+                    if (var12 >= param4) {
+                        statePc = 53;
+                    } else {
+                        statePc = 50;
+                    }
+                    continue stateLoop;
+                }
+                case 50: {
+                    var10[1].field_v[(-1 + (var9 - var12)) * param7 + var11] = param0;
+                    var10[3].field_v[var9 * var11 - 1 - (-var9 + var12)] = param0;
+                    var10[7].field_v[var11 + var12 * param7] = param0;
+                    var10[5].field_v[var12 + var11 * var9] = param0;
+                    var12++;
+                    if (var15 != 0) {
+                        statePc = 54;
+                    } else {
+                        statePc = 51;
+                    }
+                    continue stateLoop;
+                }
+                case 51: {
+                    if (var15 == 0) {
+                        statePc = 49;
+                    } else {
+                        statePc = 53;
+                    }
+                    continue stateLoop;
+                }
+                case 53: {
+                    var11++;
+                    statePc = 54;
+                    continue stateLoop;
+                }
+                case 54: {
+                    if (var15 == 0) {
+                        statePc = 47;
+                    } else {
+                        statePc = 55;
+                    }
+                    continue stateLoop;
+                }
+                case 55: {
+                    return var10;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          } else {
-            return (o[]) null;
-          }
         }
     }
 
     final int a(byte param0) {
-        int discarded$0 = 0;
         if (!(!this.field_m)) {
             return 0;
         }
         if (param0 != -126) {
-            discarded$0 = this.a((byte) 102);
+            this.a((byte) 102);
         }
         return 100;
     }

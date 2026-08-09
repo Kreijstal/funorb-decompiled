@@ -13,37 +13,36 @@ final class pm {
     static int field_d;
 
     public static void b(byte param0) {
+        if (param0 != -12) {
+            return;
+        }
         field_g = null;
     }
 
     final int a(byte param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 >= 111) {
             break L0;
           } else {
-            ((pm) this).field_i = -31;
+            this.field_i = -31;
             break L0;
           }
         }
         L1: {
           L2: {
-            if (((pm) this).field_b == null) {
+            if (this.field_b == null) {
               break L2;
             } else {
-              if (((pm) this).field_b.length == 0) {
+              if (this.field_b.length == 0) {
                 break L2;
               } else {
-                stackOut_4_0 = ((pm) this).field_b[-1 + ((pm) this).field_b.length];
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = this.field_b[-1 + this.field_b.length];
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0;
@@ -78,6 +77,9 @@ final class pm {
     }
 
     final static bd[] a(int param0, int param1, byte param2, int param3) {
+        if (param2 != -117) {
+            pm.b((byte) -84);
+        }
         return ei.a(param0, 1, param1, param3, 119);
     }
 
@@ -85,20 +87,21 @@ final class pm {
         long var8 = 0L;
         int var10 = 0;
         int var11 = 0;
+        StringBuilder discarded$0 = null;
         int var12 = HostileSpawn.field_I ? 1 : 0;
         if (0L >= param0) {
             return null;
         }
-        if (param0 >= 6582952005840035281L) {
+        if (-6582952005840035282L >= (param0 ^ -1L)) {
             return null;
         }
-        if (param0 % 37L == 0L) {
+        if ((param0 % 37L ^ -1L) == -1L) {
             return null;
         }
-        int var4 = 74;
+        int var4 = -74 / ((41 - param1) / 33);
         int var3 = 0;
         long var5 = param0;
-        while (var5 != 0L) {
+        while ((var5 ^ -1L) != -1L) {
             var3++;
             var5 = var5 / 37L;
         }
@@ -112,32 +115,32 @@ final class pm {
                 var7.setCharAt(var11, Character.toUpperCase(var7.charAt(var11)));
                 var10 = 160;
             }
-            StringBuilder discarded$0 = var7.append((char) var10);
+            discarded$0 = var7.append((char) var10);
         }
-        StringBuilder discarded$1 = var7.reverse();
+        var7.reverse();
         var7.setCharAt(0, Character.toUpperCase(var7.charAt(0)));
         return var7.toString();
     }
 
     final int a(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = HostileSpawn.field_I ? 1 : 0;
-          if (null == ((pm) this).field_b) {
+          if (null == this.field_b) {
             break L0;
           } else {
-            if (((pm) this).field_b.length == 0) {
+            if (this.field_b.length == 0) {
               break L0;
             } else {
               var3 = 1;
               L1: while (true) {
-                if (var3 >= ((pm) this).field_b.length) {
+                if (var3 >= this.field_b.length) {
                   var4 = -108 / ((-45 - param1) / 61);
-                  return ((pm) this).field_b.length + -1;
+                  return this.field_b.length + -1;
                 } else {
-                  if (((pm) this).field_b[var3] + ((pm) this).field_b[var3 - 1] >> 1 > param0) {
+                  if (this.field_b[var3] + this.field_b[var3 - 1] >> 1023397505 > param0) {
                     return var3 + -1;
                   } else {
                     var3++;
@@ -152,16 +155,12 @@ final class pm {
     }
 
     pm(int param0, int param1, int param2) {
-        ((pm) this).field_i = param0;
-        ((pm) this).field_f = param1;
-        ((pm) this).field_b = new int[param2 + 1];
+        this.field_i = param0;
+        this.field_f = param1;
+        this.field_b = new int[param2 + 1];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = false;
         field_g = new int[]{0, 1000, 2500, 5000, 10000, 15000, 20000, 25000, 40000, 50000, 60000, 70000, 80000, 90000, 100000, 125000, 150000, 175000, 200000, 250000};
         field_e = true;

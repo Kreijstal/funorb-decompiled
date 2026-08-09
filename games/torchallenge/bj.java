@@ -57,15 +57,6 @@ final class bj extends IOException {
     }
 
     final static int a(int param0, boolean param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_20_0 = 0;
@@ -73,11 +64,15 @@ final class bj extends IOException {
         int stackIn_30_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_29_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_2_0 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
         var12 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -138,8 +133,7 @@ final class bj extends IOException {
                             break L6;
                           }
                         }
-                        stackOut_29_0 = var7;
-                        stackIn_30_0 = stackOut_29_0;
+                        stackIn_30_0 = var7;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
@@ -149,26 +143,22 @@ final class bj extends IOException {
                       }
                     }
                   } else {
-                    stackOut_22_0 = -1;
-                    stackIn_23_0 = stackOut_22_0;
+                    stackIn_23_0 = -1;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
-                  stackOut_19_0 = -1;
-                  stackIn_20_0 = stackOut_19_0;
+                  stackIn_20_0 = -1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_16_0 = -1;
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = -82;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = -82;
               decompiledRegionSelector0 = 0;
               break L0;
             }

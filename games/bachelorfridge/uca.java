@@ -27,9 +27,9 @@ final class uca {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
+            int var0;
+            int var1;
+            int var2;
             field_b = new du(6, 0, 4, 2);
             field_c = "From only <%0>/month";
             field_d = new int[256];

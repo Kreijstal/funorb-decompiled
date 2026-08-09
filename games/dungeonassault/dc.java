@@ -45,7 +45,6 @@ final class dc {
     boolean[] field_n;
 
     public static void a(byte param0) {
-        String discarded$0 = null;
         field_p = null;
         field_k = null;
         field_H = null;
@@ -54,7 +53,7 @@ final class dc {
         field_v = null;
         field_e = null;
         if (param0 <= 76) {
-            discarded$0 = dc.a(-94);
+            dc.a(-94);
         }
     }
 

@@ -14,103 +14,58 @@ final class ec extends fj implements ru {
     }
 
     ec(ir param0, iw param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
-        super(param0, param1, io.field_g, false, param3 * param2);
-        boolean discarded$1 = false;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        jagdx.PixelBuffer var13 = null;
-        Object stackIn_1_0 = null;
-        ir stackIn_1_1 = null;
-        iw stackIn_1_2 = null;
-        io stackIn_1_3 = null;
-        Object stackIn_2_0 = null;
-        ir stackIn_2_1 = null;
-        iw stackIn_2_2 = null;
-        io stackIn_2_3 = null;
-        Object stackIn_3_0 = null;
-        ir stackIn_3_1 = null;
-        iw stackIn_3_2 = null;
-        io stackIn_3_3 = null;
+        super(null, null, null, false, param3 * param2);
+        Object stackIn_3_0;
+        ir stackIn_3_1;
+        iw stackIn_3_2;
+        io stackIn_3_3;
         Object stackIn_4_0 = null;
         ir stackIn_4_1 = null;
         iw stackIn_4_2 = null;
         io stackIn_4_3 = null;
         int stackIn_4_4 = 0;
-        Object stackOut_0_0 = null;
-        ir stackOut_0_1 = null;
-        iw stackOut_0_2 = null;
-        io stackOut_0_3 = null;
-        Object stackOut_1_0 = null;
-        ir stackOut_1_1 = null;
-        iw stackOut_1_2 = null;
-        io stackOut_1_3 = null;
-        Object stackOut_2_0 = null;
-        ir stackOut_2_1 = null;
-        iw stackOut_2_2 = null;
-        io stackOut_2_3 = null;
-        int stackOut_2_4 = 0;
-        Object stackOut_3_0 = null;
-        ir stackOut_3_1 = null;
-        iw stackOut_3_2 = null;
-        io stackOut_3_3 = null;
-        int stackOut_3_4 = 0;
+        int var10;
+        int var11;
+        int var12;
+        jagdx.PixelBuffer var13;
         L0: {
           L1: {
-            stackOut_0_0 = this;
-            stackOut_0_1 = (ir) (param0);
-            stackOut_0_2 = (iw) (param1);
-            stackOut_0_3 = io.field_g;
-            stackIn_3_0 = stackOut_0_0;
-            stackIn_3_1 = stackOut_0_1;
-            stackIn_3_2 = stackOut_0_2;
-            stackIn_3_3 = stackOut_0_3;
-            stackIn_1_0 = stackOut_0_0;
-            stackIn_1_1 = stackOut_0_1;
-            stackIn_1_2 = stackOut_0_2;
-            stackIn_1_3 = stackOut_0_3;
+            stackIn_3_0 = this;
+
+            stackIn_3_1 = (ir) (param0);
+
+            stackIn_3_2 = (iw) (param1);
+
+            stackIn_3_3 = io.field_g;
+
             if (!param4) {
               break L1;
             } else {
-              stackOut_1_0 = this;
-              stackOut_1_1 = (ir) ((Object) stackIn_1_1);
-              stackOut_1_2 = (iw) ((Object) stackIn_1_2);
-              stackOut_1_3 = (io) ((Object) stackIn_1_3);
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_3_2 = stackOut_1_2;
-              stackIn_3_3 = stackOut_1_3;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              stackIn_2_2 = stackOut_1_2;
-              stackIn_2_3 = stackOut_1_3;
+              stackIn_3_0 = this;
+
+              stackIn_3_1 = (ir) ((Object) stackIn_3_1);
+
+              stackIn_3_2 = (iw) ((Object) stackIn_3_2);
+
+              stackIn_3_3 = (io) ((Object) stackIn_3_3);
+
               if (!param0.field_Sc) {
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = (ir) ((Object) stackIn_2_1);
-                stackOut_2_2 = (iw) ((Object) stackIn_2_2);
-                stackOut_2_3 = (io) ((Object) stackIn_2_3);
-                stackOut_2_4 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                stackIn_4_3 = stackOut_2_3;
-                stackIn_4_4 = stackOut_2_4;
+                stackIn_4_0 = this;
+                stackIn_4_1 = (ir) ((Object) stackIn_3_1);
+                stackIn_4_2 = (iw) ((Object) stackIn_3_2);
+                stackIn_4_3 = (io) ((Object) stackIn_3_3);
+                stackIn_4_4 = 1;
                 break L0;
               }
             }
           }
-          stackOut_3_0 = this;
-          stackOut_3_1 = (ir) ((Object) stackIn_3_1);
-          stackOut_3_2 = (iw) ((Object) stackIn_3_2);
-          stackOut_3_3 = (io) ((Object) stackIn_3_3);
-          stackOut_3_4 = 0;
-          stackIn_4_0 = stackOut_3_0;
-          stackIn_4_1 = stackOut_3_1;
-          stackIn_4_2 = stackOut_3_2;
-          stackIn_4_3 = stackOut_3_3;
-          stackIn_4_4 = stackOut_3_4;
+          stackIn_4_0 = this;
+          stackIn_4_1 = (ir) ((Object) stackIn_3_1);
+          stackIn_4_2 = (iw) ((Object) stackIn_3_2);
+          stackIn_4_3 = (io) ((Object) stackIn_3_3);
+          stackIn_4_4 = 0;
           break L0;
         }
         L2: {
@@ -174,7 +129,7 @@ final class ec extends fj implements ru {
                 }
               }
             }
-            discarded$1 = this.field_f.UnlockRect(0);
+            this.field_f.UnlockRect(0);
             break L4;
           }
         }
@@ -189,103 +144,58 @@ final class ec extends fj implements ru {
     }
 
     ec(ir param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
-        super(param0, nl.field_p, io.field_g, false, param1 * param2);
-        boolean discarded$1 = false;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        jagdx.PixelBuffer var12 = null;
-        Object stackIn_1_0 = null;
-        ir stackIn_1_1 = null;
-        iw stackIn_1_2 = null;
-        io stackIn_1_3 = null;
-        Object stackIn_2_0 = null;
-        ir stackIn_2_1 = null;
-        iw stackIn_2_2 = null;
-        io stackIn_2_3 = null;
-        Object stackIn_3_0 = null;
-        ir stackIn_3_1 = null;
-        iw stackIn_3_2 = null;
-        io stackIn_3_3 = null;
+        super(null, null, null, false, param1 * param2);
+        Object stackIn_3_0;
+        ir stackIn_3_1;
+        iw stackIn_3_2;
+        io stackIn_3_3;
         Object stackIn_4_0 = null;
         ir stackIn_4_1 = null;
         iw stackIn_4_2 = null;
         io stackIn_4_3 = null;
         int stackIn_4_4 = 0;
-        Object stackOut_0_0 = null;
-        ir stackOut_0_1 = null;
-        iw stackOut_0_2 = null;
-        io stackOut_0_3 = null;
-        Object stackOut_1_0 = null;
-        ir stackOut_1_1 = null;
-        iw stackOut_1_2 = null;
-        io stackOut_1_3 = null;
-        Object stackOut_2_0 = null;
-        ir stackOut_2_1 = null;
-        iw stackOut_2_2 = null;
-        io stackOut_2_3 = null;
-        int stackOut_2_4 = 0;
-        Object stackOut_3_0 = null;
-        ir stackOut_3_1 = null;
-        iw stackOut_3_2 = null;
-        io stackOut_3_3 = null;
-        int stackOut_3_4 = 0;
+        int var9;
+        int var10;
+        int var11;
+        jagdx.PixelBuffer var12;
         L0: {
           L1: {
-            stackOut_0_0 = this;
-            stackOut_0_1 = (ir) (param0);
-            stackOut_0_2 = nl.field_p;
-            stackOut_0_3 = io.field_g;
-            stackIn_3_0 = stackOut_0_0;
-            stackIn_3_1 = stackOut_0_1;
-            stackIn_3_2 = stackOut_0_2;
-            stackIn_3_3 = stackOut_0_3;
-            stackIn_1_0 = stackOut_0_0;
-            stackIn_1_1 = stackOut_0_1;
-            stackIn_1_2 = stackOut_0_2;
-            stackIn_1_3 = stackOut_0_3;
+            stackIn_3_0 = this;
+
+            stackIn_3_1 = (ir) (param0);
+
+            stackIn_3_2 = nl.field_p;
+
+            stackIn_3_3 = io.field_g;
+
             if (!param3) {
               break L1;
             } else {
-              stackOut_1_0 = this;
-              stackOut_1_1 = (ir) ((Object) stackIn_1_1);
-              stackOut_1_2 = (iw) ((Object) stackIn_1_2);
-              stackOut_1_3 = (io) ((Object) stackIn_1_3);
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_3_2 = stackOut_1_2;
-              stackIn_3_3 = stackOut_1_3;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              stackIn_2_2 = stackOut_1_2;
-              stackIn_2_3 = stackOut_1_3;
+              stackIn_3_0 = this;
+
+              stackIn_3_1 = (ir) ((Object) stackIn_3_1);
+
+              stackIn_3_2 = (iw) ((Object) stackIn_3_2);
+
+              stackIn_3_3 = (io) ((Object) stackIn_3_3);
+
               if (!param0.field_Sc) {
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = (ir) ((Object) stackIn_2_1);
-                stackOut_2_2 = (iw) ((Object) stackIn_2_2);
-                stackOut_2_3 = (io) ((Object) stackIn_2_3);
-                stackOut_2_4 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                stackIn_4_3 = stackOut_2_3;
-                stackIn_4_4 = stackOut_2_4;
+                stackIn_4_0 = this;
+                stackIn_4_1 = (ir) ((Object) stackIn_3_1);
+                stackIn_4_2 = (iw) ((Object) stackIn_3_2);
+                stackIn_4_3 = (io) ((Object) stackIn_3_3);
+                stackIn_4_4 = 1;
                 break L0;
               }
             }
           }
-          stackOut_3_0 = this;
-          stackOut_3_1 = (ir) ((Object) stackIn_3_1);
-          stackOut_3_2 = (iw) ((Object) stackIn_3_2);
-          stackOut_3_3 = (io) ((Object) stackIn_3_3);
-          stackOut_3_4 = 0;
-          stackIn_4_0 = stackOut_3_0;
-          stackIn_4_1 = stackOut_3_1;
-          stackIn_4_2 = stackOut_3_2;
-          stackIn_4_3 = stackOut_3_3;
-          stackIn_4_4 = stackOut_3_4;
+          stackIn_4_0 = this;
+          stackIn_4_1 = (ir) ((Object) stackIn_3_1);
+          stackIn_4_2 = (iw) ((Object) stackIn_3_2);
+          stackIn_4_3 = (io) ((Object) stackIn_3_3);
+          stackIn_4_4 = 0;
           break L0;
         }
         L2: {
@@ -353,7 +263,7 @@ final class ec extends fj implements ru {
                 }
               }
             }
-            discarded$1 = this.field_f.UnlockRect(0);
+            this.field_f.UnlockRect(0);
             break L4;
           }
         }
@@ -371,9 +281,8 @@ final class ec extends fj implements ru {
     }
 
     public final int b(int param0) {
-        float discarded$0 = 0.0f;
         if (param0 != -16625) {
-            discarded$0 = this.b(-1.7616260051727295f, 87);
+            this.b(-1.7616260051727295f, 87);
         }
         return this.field_j;
     }

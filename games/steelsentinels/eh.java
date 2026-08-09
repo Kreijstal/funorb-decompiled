@@ -27,14 +27,12 @@ final class eh {
         if (!(var2 != 0)) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
-        if (var2 >= 128) {
-            if (160 > var2) {
-                var3 = gl.field_w[-128 + var2];
-                if (!(0 != var3)) {
-                    var3 = 63;
-                }
-                var2 = var3;
+        if (var2 >= 128 && 160 > var2) {
+            var3 = gl.field_w[-128 + var2];
+            if (!(0 != var3)) {
+                var3 = 63;
             }
+            var2 = var3;
         }
         return (char)var2;
     }
@@ -48,15 +46,14 @@ final class eh {
 
     final static int a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        long var4 = 0L;
-        int var6 = 0;
         int var7 = 0;
         int stackIn_26_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_25_0 = 0;
+        RuntimeException var1 = null;
+        long var4 = 0L;
+        int var6 = 0;
         var7 = SteelSentinels.field_G;
         try {
           L0: {
@@ -129,8 +126,7 @@ final class eh {
                     }
                   }
                 }
-                stackOut_25_0 = var3;
-                stackIn_26_0 = stackOut_25_0;
+                stackIn_26_0 = var3;
                 break L0;
               } else {
                 L7: {
@@ -180,8 +176,22 @@ final class eh {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        RuntimeException var3 = null;
+        kg stackIn_5_0;
+        int stackIn_5_1;
+        int stackIn_5_2;
+        int stackIn_5_3;
+        kg stackIn_6_0 = null;
+        int stackIn_6_1 = 0;
+        int stackIn_6_2 = 0;
+        int stackIn_6_3 = 0;
+        int stackIn_6_4 = 0;
+        gh stackIn_22_0 = null;
+        gh stackIn_23_0 = null;
+        String stackIn_23_1 = null;
+        int stackIn_26_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         ul var4 = null;
         Object var5 = null;
         ah var6 = null;
@@ -196,46 +206,6 @@ final class eh {
         int var15 = 0;
         dd var16 = null;
         dd var17 = null;
-        kg stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        int stackIn_4_3 = 0;
-        kg stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        int stackIn_5_2 = 0;
-        int stackIn_5_3 = 0;
-        kg stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        int stackIn_6_2 = 0;
-        int stackIn_6_3 = 0;
-        int stackIn_6_4 = 0;
-        gh stackIn_21_0 = null;
-        gh stackIn_22_0 = null;
-        gh stackIn_23_0 = null;
-        String stackIn_23_1 = null;
-        int stackIn_26_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        kg stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        int stackOut_3_3 = 0;
-        kg stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        int stackOut_5_3 = 0;
-        int stackOut_5_4 = 0;
-        kg stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        int stackOut_4_3 = 0;
-        int stackOut_4_4 = 0;
-        gh stackOut_20_0 = null;
-        gh stackOut_22_0 = null;
-        String stackOut_22_1 = null;
-        gh stackOut_21_0 = null;
-        String stackOut_21_1 = null;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
         var15 = SteelSentinels.field_G;
         try {
           L0: {
@@ -248,41 +218,27 @@ final class eh {
               }
             }
             L2: {
-              stackOut_3_0 = vi.field_W.field_Xb;
-              stackOut_3_1 = 2;
-              stackOut_3_2 = 2 + db.field_b;
-              stackOut_3_3 = 3 * ((db.field_b + 2) * param2);
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              stackIn_5_3 = stackOut_3_3;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              stackIn_4_2 = stackOut_3_2;
-              stackIn_4_3 = stackOut_3_3;
+              stackIn_5_0 = vi.field_W.field_Xb;
+
+              stackIn_5_1 = 2;
+
+              stackIn_5_2 = 2 + db.field_b;
+
+              stackIn_5_3 = 3 * ((db.field_b + 2) * param2);
+
               if (vi.field_W.field_Xb != la.field_c) {
-                stackOut_5_0 = (kg) ((Object) stackIn_5_0);
-                stackOut_5_1 = stackIn_5_1;
-                stackOut_5_2 = stackIn_5_2;
-                stackOut_5_3 = stackIn_5_3;
-                stackOut_5_4 = 0;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
-                stackIn_6_2 = stackOut_5_2;
-                stackIn_6_3 = stackOut_5_3;
-                stackIn_6_4 = stackOut_5_4;
+                stackIn_6_0 = (kg) ((Object) stackIn_5_0);
+                stackIn_6_1 = stackIn_5_1;
+                stackIn_6_2 = stackIn_5_2;
+                stackIn_6_3 = stackIn_5_3;
+                stackIn_6_4 = 0;
                 break L2;
               } else {
-                stackOut_4_0 = (kg) ((Object) stackIn_4_0);
-                stackOut_4_1 = stackIn_4_1;
-                stackOut_4_2 = stackIn_4_2;
-                stackOut_4_3 = stackIn_4_3;
-                stackOut_4_4 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_6_1 = stackOut_4_1;
-                stackIn_6_2 = stackOut_4_2;
-                stackIn_6_3 = stackOut_4_3;
-                stackIn_6_4 = stackOut_4_4;
+                stackIn_6_0 = (kg) ((Object) stackIn_5_0);
+                stackIn_6_1 = stackIn_5_1;
+                stackIn_6_2 = stackIn_5_2;
+                stackIn_6_3 = stackIn_5_3;
+                stackIn_6_4 = 1;
                 break L2;
               }
             }
@@ -370,32 +326,25 @@ final class eh {
                     }
                   }
                   L10: {
-                    stackOut_20_0 = var6.field_Ub;
-                    stackIn_22_0 = stackOut_20_0;
-                    stackIn_21_0 = stackOut_20_0;
+                    stackIn_22_0 = var6.field_Ub;
+
                     if (-1 > (var10 ^ -1)) {
-                      stackOut_22_0 = (gh) ((Object) stackIn_22_0);
-                      stackOut_22_1 = mi.a(var6.field_Ub.field_L, var6.field_dc, var10);
-                      stackIn_23_0 = stackOut_22_0;
-                      stackIn_23_1 = stackOut_22_1;
+                      stackIn_23_0 = (gh) ((Object) stackIn_22_0);
+                      stackIn_23_1 = mi.a(var6.field_Ub.field_L, var6.field_dc, var10);
                       break L10;
                     } else {
-                      stackOut_21_0 = (gh) ((Object) stackIn_21_0);
-                      stackOut_21_1 = var6.field_dc;
-                      stackIn_23_0 = stackOut_21_0;
-                      stackIn_23_1 = stackOut_21_1;
+                      stackIn_23_0 = (gh) ((Object) stackIn_22_0);
+                      stackIn_23_1 = var6.field_dc;
                       break L10;
                     }
                   }
                   L11: {
                     stackIn_23_0.field_S = stackIn_23_1;
                     if (var6.field_Ub.field_S.equals(var6.field_dc)) {
-                      stackOut_25_0 = 0;
-                      stackIn_26_0 = stackOut_25_0;
+                      stackIn_26_0 = 0;
                       break L11;
                     } else {
-                      stackOut_24_0 = 1;
-                      stackIn_26_0 = stackOut_24_0;
+                      stackIn_26_0 = 1;
                       break L11;
                     }
                   }

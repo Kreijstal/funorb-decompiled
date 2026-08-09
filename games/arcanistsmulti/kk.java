@@ -3,30 +3,26 @@
  */
 final class kk {
     final static boolean a(qb param0, int param1, int param2, ll param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int[] var30 = null;
-        byte[] var31 = null;
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var22;
+        int var23;
+        int[] var30;
+        byte[] var31;
         L0: {
           param1 = param1 + param0.field_x;
           param4 = param4 + param3.field_j;
@@ -49,12 +45,10 @@ final class kk {
                   if (var9 > -param3.field_c) {
                     L2: {
                       if (var6 > 0) {
-                        stackOut_8_0 = var6;
-                        stackIn_9_0 = stackOut_8_0;
+                        stackIn_9_0 = var6;
                         break L2;
                       } else {
-                        stackOut_7_0 = 0;
-                        stackIn_9_0 = stackOut_7_0;
+                        stackIn_9_0 = 0;
                         break L2;
                       }
                     }
@@ -70,12 +64,10 @@ final class kk {
                     }
                     L4: {
                       if (var9 > 0) {
-                        stackOut_13_0 = var9;
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = var9;
                         break L4;
                       } else {
-                        stackOut_12_0 = 0;
-                        stackIn_14_0 = stackOut_12_0;
+                        stackIn_14_0 = 0;
                         break L4;
                       }
                     }

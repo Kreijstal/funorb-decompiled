@@ -13,13 +13,6 @@ final class al {
     private int field_b;
 
     final void a(int param0, int param1, int param2) {
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
         if (param2 < this.field_a) {
           if (this.field_a <= param1) {
             throw new IllegalArgumentException();
@@ -57,7 +50,7 @@ final class al {
                       if (param0 <= -105) {
                         break L2;
                       } else {
-                        discarded$7 = this.b((byte) 29);
+                        this.b((byte) 29);
                         break L2;
                       }
                     }
@@ -106,7 +99,7 @@ final class al {
                       if (param0 <= -105) {
                         break L5;
                       } else {
-                        discarded$8 = this.b((byte) 29);
+                        this.b((byte) 29);
                         break L5;
                       }
                     }
@@ -171,7 +164,7 @@ final class al {
                     if (param0 <= -105) {
                       break L9;
                     } else {
-                      discarded$9 = this.b((byte) 29);
+                      this.b((byte) 29);
                       break L9;
                     }
                   }
@@ -303,7 +296,7 @@ final class al {
                           return;
                         }
                       } else {
-                        discarded$10 = this.b((byte) 29);
+                        this.b((byte) 29);
                         if (0 == this.field_e) {
                           L12: {
                             if (this.field_f) {
@@ -399,7 +392,7 @@ final class al {
                   return;
                 } else {
                   L16: {
-                    discarded$11 = this.b((byte) 29);
+                    this.b((byte) 29);
                     if (0 != this.field_e) {
                       break L16;
                     } else {
@@ -462,7 +455,7 @@ final class al {
                       if (param0 <= -105) {
                         break L19;
                       } else {
-                        discarded$12 = this.b((byte) 29);
+                        this.b((byte) 29);
                         break L19;
                       }
                     }
@@ -556,7 +549,7 @@ final class al {
                   return;
                 }
               } else {
-                discarded$13 = this.b((byte) 29);
+                this.b((byte) 29);
                 if (0 == this.field_e) {
                   L23: {
                     if (this.field_f) {
@@ -607,7 +600,6 @@ final class al {
 
     final boolean a(byte param0) {
         int stackIn_5_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == -112) {
           if ((this.field_c ^ -1) != -3) {
             if (-97 == (this.field_b ^ -1)) {
@@ -616,8 +608,7 @@ final class al {
               return false;
             }
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             return stackIn_5_0 != 0;
           }
         } else {
@@ -626,31 +617,20 @@ final class al {
     }
 
     final void a(int param0, int param1, byte param2, boolean param3) {
-        int var5 = 0;
-        Object stackIn_1_0 = null;
+        int var5;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param3) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -694,8 +674,6 @@ final class al {
     final boolean d(int param0) {
         int stackIn_8_0 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_6_0 = 0;
         if (param0 > 38) {
           if ((this.field_c ^ -1) != -2) {
             if (this.field_b != 97) {
@@ -706,8 +684,7 @@ final class al {
                   return false;
                 }
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 1;
                 return stackIn_20_0 != 0;
               }
             } else {
@@ -727,8 +704,7 @@ final class al {
                   return false;
                 }
               } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 1;
                 return stackIn_8_0 != 0;
               }
             } else {
@@ -743,20 +719,14 @@ final class al {
     final boolean c(boolean param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (!param0) {
           L0: {
             al.a(25);
             if (this.field_b != 96) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -764,12 +734,10 @@ final class al {
         } else {
           L1: {
             if (this.field_b != 96) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -895,20 +863,14 @@ final class al {
     final boolean e(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 0) {
           L0: {
             this.field_c = -84;
             if ((this.field_b ^ -1) != -103) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -916,12 +878,10 @@ final class al {
         } else {
           L1: {
             if ((this.field_b ^ -1) != -103) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -1200,20 +1160,14 @@ final class al {
     final boolean b(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 <= 69) {
           L0: {
             al.a(-25);
             if (-1 == (this.field_e ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -1221,12 +1175,10 @@ final class al {
         } else {
           L1: {
             if (-1 == (this.field_e ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

@@ -46,67 +46,38 @@ final class sfa {
     }
 
     final void a(pe param0, int param1, anb param2, boolean param3) {
-        int discarded$1 = 0;
-        RuntimeException var5 = null;
+        int stackIn_7_0 = 0;
+        RuntimeException stackIn_72_0 = null;
+        StringBuilder stackIn_72_1 = null;
+        RuntimeException stackIn_73_0 = null;
+        StringBuilder stackIn_73_1 = null;
+        String stackIn_73_2 = null;
+        StringBuilder stackIn_75_1 = null;
+        StringBuilder stackIn_76_1 = null;
+        String stackIn_76_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6_int = 0;
         wfb var6 = null;
         int var7 = 0;
         int var8 = 0;
         wfb var9 = null;
         int var10 = 0;
-        int stackIn_7_0 = 0;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
-        RuntimeException stackIn_73_0 = null;
-        StringBuilder stackIn_73_1 = null;
-        String stackIn_73_2 = null;
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
-        RuntimeException stackIn_75_0 = null;
-        StringBuilder stackIn_75_1 = null;
-        RuntimeException stackIn_76_0 = null;
-        StringBuilder stackIn_76_1 = null;
-        String stackIn_76_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_70_0 = null;
-        StringBuilder stackOut_70_1 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        String stackOut_71_2 = null;
-        RuntimeException stackOut_73_0 = null;
-        StringBuilder stackOut_73_1 = null;
-        RuntimeException stackOut_75_0 = null;
-        StringBuilder stackOut_75_1 = null;
-        String stackOut_75_2 = null;
-        RuntimeException stackOut_74_0 = null;
-        StringBuilder stackOut_74_1 = null;
-        String stackOut_74_2 = null;
         var10 = VoidHunters.field_G;
         try {
           L0: {
             L1: {
               if (-2 != (this.field_a.g((byte) -104) ^ -1)) {
                 if (3 != this.field_a.g((byte) -104)) {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L1;
                 } else {
-                  stackOut_4_0 = 0;
-                  stackIn_7_0 = stackOut_4_0;
+                  stackIn_7_0 = 0;
                   break L1;
                 }
               } else {
-                stackOut_2_0 = 0;
-                stackIn_7_0 = stackOut_2_0;
+                stackIn_7_0 = 0;
                 break L1;
               }
             }
@@ -272,7 +243,7 @@ final class sfa {
                     break L9;
                   } else {
                     if (this.field_c != param2.field_k) {
-                      discarded$1 = this.field_c.a(true, false, var9.field_p);
+                      this.field_c.a(true, false, var9.field_p);
                       param2.field_k.a(true, this.field_c, param0, param1 ^ -39, param2);
                       param2.field_k.a((byte) 97, param2);
                       break L9;
@@ -305,56 +276,40 @@ final class sfa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var5 = decompiledCaughtException;
-            stackOut_70_0 = (RuntimeException) (var5);
-            stackOut_70_1 = new StringBuilder().append("sfa.B(");
-            stackIn_72_0 = stackOut_70_0;
-            stackIn_72_1 = stackOut_70_1;
-            stackIn_71_0 = stackOut_70_0;
-            stackIn_71_1 = stackOut_70_1;
+            stackIn_72_0 = (RuntimeException) (var5);
+
+            stackIn_72_1 = new StringBuilder().append("sfa.B(");
+
             if (param0 == null) {
-              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
-              stackOut_72_2 = "null";
-              stackIn_73_0 = stackOut_72_0;
-              stackIn_73_1 = stackOut_72_1;
-              stackIn_73_2 = stackOut_72_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "null";
               break L16;
             } else {
-              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
-              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackOut_71_2 = "{...}";
-              stackIn_73_0 = stackOut_71_0;
-              stackIn_73_1 = stackOut_71_1;
-              stackIn_73_2 = stackOut_71_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "{...}";
               break L16;
             }
           }
           L17: {
-            stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
-            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(',').append(param1).append(',');
-            stackIn_75_0 = stackOut_73_0;
-            stackIn_75_1 = stackOut_73_1;
-            stackIn_74_0 = stackOut_73_0;
-            stackIn_74_1 = stackOut_73_1;
+
+
+            stackIn_75_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
-              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
-              stackOut_75_2 = "null";
-              stackIn_76_0 = stackOut_75_0;
-              stackIn_76_1 = stackOut_75_1;
-              stackIn_76_2 = stackOut_75_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackIn_76_1 = (StringBuilder) ((Object) stackIn_75_1);
+              stackIn_76_2 = "null";
               break L17;
             } else {
-              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
-              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
-              stackOut_74_2 = "{...}";
-              stackIn_76_0 = stackOut_74_0;
-              stackIn_76_1 = stackOut_74_1;
-              stackIn_76_2 = stackOut_74_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackIn_76_1 = (StringBuilder) ((Object) stackIn_75_1);
+              stackIn_76_2 = "{...}";
               break L17;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_76_0), stackIn_76_2 + ',' + param3 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_73_0), stackIn_76_2 + ',' + param3 + ')');
         }
     }
 

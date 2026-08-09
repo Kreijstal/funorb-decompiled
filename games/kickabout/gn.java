@@ -8,11 +8,9 @@ class gn {
     gn field_d;
 
     final static boolean a(byte param0, boolean param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_41_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
+        int var4;
+        int var5;
         if (param1) {
           if (bl.field_m[param2] >= bl.field_m[param3]) {
             if (bl.field_m[param2] > bl.field_m[param3]) {
@@ -33,12 +31,10 @@ class gn {
                       } else {
                         L0: {
                           if (param2 >= param3) {
-                            stackOut_40_0 = 0;
-                            stackIn_41_0 = stackOut_40_0;
+                            stackIn_41_0 = 0;
                             break L0;
                           } else {
-                            stackOut_39_0 = 1;
-                            stackIn_41_0 = stackOut_39_0;
+                            stackIn_41_0 = 1;
                             break L0;
                           }
                         }
@@ -177,7 +173,7 @@ class gn {
     }
 
     final static boolean a(int param0, char param1) {
-        StringBuilder var3 = null;
+        StringBuilder var3;
         if (param0 == 12105) {
           if (param1 >= 48) {
             if (param1 > 57) {

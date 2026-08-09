@@ -14,16 +14,12 @@ final class una implements ntb {
         bba var3 = null;
         bba var4 = null;
         int var2 = 19 / ((param0 - 35) / 63);
-        if (null != this.field_b) {
-            if (this.field_g > 0) {
-                if (this.field_b.length > this.field_g) {
-                    var3 = this.field_b[-1 + this.field_g];
-                    var4 = this.field_b[this.field_g];
-                    this.field_b[-1 + this.field_g] = var4;
-                    this.field_b[this.field_g] = var3;
-                    this.field_g = this.field_g - 1;
-                }
-            }
+        if (null != this.field_b && this.field_g > 0 && this.field_b.length > this.field_g) {
+            var3 = this.field_b[-1 + this.field_g];
+            var4 = this.field_b[this.field_g];
+            this.field_b[-1 + this.field_g] = var4;
+            this.field_b[this.field_g] = var3;
+            this.field_g = this.field_g - 1;
         }
     }
 
@@ -47,16 +43,12 @@ final class una implements ntb {
         wm[] var3 = null;
         rna[] var4 = null;
         int var5 = 0;
-        if (this.field_b != null) {
-            if ((this.field_g ^ -1) <= -1) {
-                if (this.field_b.length > this.field_g) {
-                    var2 = this.field_b[this.field_g];
-                    var3 = var2.a((byte) -125);
-                    var4 = var2.c((byte) -42);
-                    var5 = (var4 != null ? var4.length : 0) + (var3 == null ? 0 : var3.length);
-                    this.field_e = (this.field_e - -1) % var5;
-                }
-            }
+        if (this.field_b != null && (this.field_g ^ -1) <= -1 && this.field_b.length > this.field_g) {
+            var2 = this.field_b[this.field_g];
+            var3 = var2.a((byte) -125);
+            var4 = var2.c((byte) -42);
+            var5 = (var4 != null ? var4.length : 0) + (var3 == null ? 0 : var3.length);
+            this.field_e = (this.field_e - -1) % var5;
         }
         if (param0 > -123) {
             this.field_d = (int[]) null;
@@ -65,15 +57,13 @@ final class una implements ntb {
 
     final void e(byte param0) {
         bba var2 = null;
-        if (this.field_b != null) {
-            if (-1 >= (this.field_g ^ -1)) {
-                if (!(this.field_g >= this.field_b.length)) {
-                    var2 = this.field_b[this.field_g];
-                    var2.a(this.field_e, (byte) -79);
-                    this.field_e = this.field_e - 1;
-                    if (this.field_e < 0) {
-                        this.field_e = 0;
-                    }
+        if (this.field_b != null && -1 >= (this.field_g ^ -1)) {
+            if (!(this.field_g >= this.field_b.length)) {
+                var2 = this.field_b[this.field_g];
+                var2.a(this.field_e, (byte) -79);
+                this.field_e = this.field_e - 1;
+                if (this.field_e < 0) {
+                    this.field_e = 0;
                 }
             }
         }
@@ -83,24 +73,13 @@ final class una implements ntb {
     }
 
     final void a(byte param0, wm param1) {
-        boolean discarded$2 = false;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -123,7 +102,7 @@ final class una implements ntb {
               if (param0 <= -112) {
                 break L2;
               } else {
-                discarded$2 = this.a(121, (byte) -5);
+                this.a(121, (byte) -5);
                 break L2;
               }
             }
@@ -133,27 +112,19 @@ final class una implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("una.Q(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("una.Q(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -198,7 +169,7 @@ final class una implements ntb {
                 var6 = var4;
                 for (var7 = 0; var7 < var6.length; var7++) {
                     var8 = var6[var7];
-                    if (!(vq.a(var3, -126, var8 == null ? true : false))) {
+                    if (!(!vq.a(var3, -126, var8 != null ? true : false))) {
                         stb.a(2, 1, var10, var8);
                     }
                 }
@@ -214,22 +185,12 @@ final class una implements ntb {
     final void a(int param0, rsb param1) {
         RuntimeException runtimeException = null;
         int var4 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -265,27 +226,19 @@ final class una implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (runtimeException);
-            stackOut_9_1 = new StringBuilder().append("una.N(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (runtimeException);
+
+            stackIn_11_1 = new StringBuilder().append("una.N(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -301,8 +254,6 @@ final class una implements ntb {
         int stackIn_15_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -310,20 +261,6 @@ final class una implements ntb {
         String stackIn_24_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
         try {
           L0: {
             L1: {
@@ -335,20 +272,17 @@ final class una implements ntb {
               }
             }
             if (ep.field_o == param1) {
-              stackOut_18_0 = 6407;
-              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_0 = 6407;
               decompiledRegionSelector0 = 5;
               break L0;
             } else {
               if (param1 == qua.field_d) {
-                stackOut_16_0 = 6408;
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_0 = 6408;
                 decompiledRegionSelector0 = 4;
                 break L0;
               } else {
                 if (nw.field_p == param1) {
-                  stackOut_14_0 = 6406;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = 6406;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
@@ -357,20 +291,17 @@ final class una implements ntb {
                       if (qf.field_o != param1) {
                         throw new IllegalStateException();
                       } else {
-                        stackOut_12_0 = 6145;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = 6145;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
                     } else {
-                      stackOut_9_0 = 6410;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_0 = 6410;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
                   } else {
-                    stackOut_6_0 = 6409;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = 6409;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -382,27 +313,19 @@ final class una implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var2);
-            stackOut_21_1 = new StringBuilder().append("una.M(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var2);
+
+            stackIn_23_1 = new StringBuilder().append("una.M(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L2;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L2;
             }
           }
@@ -433,24 +356,14 @@ final class una implements ntb {
 
     final void a(int param0, int param1, pe param2) {
         bba var4 = null;
-        RuntimeException var4_ref = null;
         int var5 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var4_ref = null;
         try {
           L0: {
             L1: {
@@ -485,27 +398,19 @@ final class una implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var4_ref);
-            stackOut_7_1 = new StringBuilder().append("una.I(").append(param0).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var4_ref);
+
+            stackIn_9_1 = new StringBuilder().append("una.I(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -515,27 +420,15 @@ final class una implements ntb {
 
     public final boolean a(byte param0, tv param1) {
         una var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var3_ref = null;
         try {
           L0: {
             L1: {
@@ -552,8 +445,7 @@ final class una implements ntb {
                       break L2;
                     } else {
                       if (!wpb.a(var3.field_d, this.field_d, (byte) 28)) {
-                        stackOut_6_0 = 0;
-                        stackIn_7_0 = stackOut_6_0;
+                        stackIn_7_0 = 0;
                         break L1;
                       } else {
                         break L2;
@@ -562,8 +454,7 @@ final class una implements ntb {
                   }
                 }
               }
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = 1;
               break L1;
             }
             break L0;
@@ -572,27 +463,19 @@ final class una implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3_ref);
-            stackOut_8_1 = new StringBuilder().append("una.C(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3_ref);
+
+            stackIn_10_1 = new StringBuilder().append("una.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -618,23 +501,13 @@ final class una implements ntb {
     }
 
     final void a(rna param0, int param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -667,27 +540,19 @@ final class una implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("una.R(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3);
+
+            stackIn_10_1 = new StringBuilder().append("una.R(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -714,12 +579,6 @@ final class una implements ntb {
     }
 
     public final void a(tv param0, int param1) {
-        boolean discarded$1 = false;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        una var5 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -727,19 +586,14 @@ final class una implements ntb {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        una var5 = null;
         try {
           L0: {
             L1: {
               var5 = (una) ((Object) param0);
-              discarded$1 = tja.a(var5.field_b, 1, this.field_b, false, 5547);
+              tja.a(var5.field_b, 1, this.field_b, false, 5547);
               var4 = 0;
               if (dn.a(var5.field_b, false, 1, this.field_b, 115)) {
                 var4 = 1;
@@ -796,27 +650,19 @@ final class una implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var3);
-            stackOut_16_1 = new StringBuilder().append("una.F(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var3);
+
+            stackIn_18_1 = new StringBuilder().append("una.F(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L6;
             }
           }
@@ -836,14 +682,13 @@ final class una implements ntb {
     }
 
     final void c(byte param0) {
-        boolean discarded$2 = false;
-        tv var3 = null;
+        tv var3;
         L0: {
           if (param0 == 55) {
             break L0;
           } else {
             var3 = (tv) null;
-            discarded$2 = this.a((byte) -25, (tv) null);
+            this.a((byte) -25, (tv) null);
             break L0;
           }
         }
@@ -885,24 +730,14 @@ final class una implements ntb {
 
     final void a(boolean param0, pe param1, int param2) {
         bba var4 = null;
-        RuntimeException var4_ref = null;
         int var5 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var4_ref = null;
         try {
           L0: {
             L1: {
@@ -937,27 +772,19 @@ final class una implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var4_ref);
-            stackOut_7_1 = new StringBuilder().append("una.J(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var4_ref);
+
+            stackIn_9_1 = new StringBuilder().append("una.J(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -966,25 +793,25 @@ final class una implements ntb {
     }
 
     private final void d(byte param0) {
-        int var2 = 0;
-        bba[] var3 = null;
-        int var4 = 0;
-        bba var5 = null;
-        wm[] var6 = null;
-        rna[] var7 = null;
-        int var9 = 0;
-        wm var10 = null;
-        rna var10_ref = null;
-        int var12 = 0;
-        wm[] var13 = null;
-        rna[] var14 = null;
-        int var15 = 0;
-        wm var16 = null;
-        Object var17 = null;
-        rna var18 = null;
-        Object var19 = null;
-        hd var20 = null;
-        hd var21 = null;
+        int var2;
+        bba[] var3;
+        int var4;
+        bba var5;
+        wm[] var6;
+        rna[] var7;
+        int var9;
+        wm var10;
+        int var12;
+        wm[] var13;
+        wm var16;
+        Object var17;
+        Object var19;
+        rna var10_ref;
+        rna[] var14;
+        int var15;
+        rna var18;
+        hd var20;
+        hd var21;
         L0: {
           var17 = null;
           var19 = null;
@@ -1077,13 +904,9 @@ final class una implements ntb {
         if (param0 != -828) {
             this.field_g = 33;
         }
-        if (null != this.field_b) {
-            if (this.field_g >= 0) {
-                if (this.field_g < this.field_b.length) {
-                    var2 = this.field_b[this.field_g];
-                    var2.a(this.field_e, -1);
-                }
-            }
+        if (null != this.field_b && this.field_g >= 0 && this.field_g < this.field_b.length) {
+            var2 = this.field_b[this.field_g];
+            var2.a(this.field_e, -1);
         }
     }
 

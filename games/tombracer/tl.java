@@ -16,88 +16,56 @@ final class tl extends nv implements ut {
         int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             L1: while (true) {
-              L2: {
-                L3: {
-                  param1--;
-                  if ((param1 ^ -1) > -1) {
-                    break L3;
-                  } else {
-                    var9 = param4;
-                    var5 = var9;
-                    var6 = param0;
-                    var7 = param2;
-                    var9[var6] = var7 - -(sea.c(16711422, var9[var6]) >> 1535993377);
-                    param0++;
-                    if (var8 != 0) {
-                      break L2;
-                    } else {
-                      if (var8 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                }
+              param1--;
+              if ((param1 ^ -1) > -1) {
                 if (param3 == 1535993377) {
-                  break L2;
+                  break L0;
                 } else {
                   tl.a((byte) 72, -101, -90, -85, 66, 71, -106, -32);
                   return;
                 }
+              } else {
+                var9 = param4;
+                var5 = var9;
+                var6 = param0;
+                var7 = param2;
+                var9[var6] = var7 - -(sea.c(16711422, var9[var6]) >> 1535993377);
+                param0++;
+                continue L1;
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var5_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var5_ref);
-            stackOut_8_1 = new StringBuilder().append("tl.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_8_0 = (RuntimeException) (var5_ref);
+
+            stackIn_8_1 = new StringBuilder().append("tl.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L4;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
+              break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L4;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
+              break L2;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
@@ -112,9 +80,8 @@ final class tl extends nv implements ut {
     }
 
     public final int c(int param0) {
-        jma discarded$0 = null;
         if (param0 != 17832) {
-            discarded$0 = this.k((byte) 44);
+            this.k((byte) 44);
             return 5570594;
         }
         return 5570594;
@@ -149,89 +116,49 @@ final class tl extends nv implements ut {
         if (param0 < -32) {
           if (param1 >= pka.field_b) {
             if (ss.field_c >= param3) {
-              if (gca.field_d > param2) {
-                pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
-                if (!TombRacer.field_G) {
+              if (gca.field_d <= param2) {
+                if (param4 > hc.field_h) {
+                  pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
                   return;
                 } else {
                   rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
                   return;
                 }
               } else {
-                if (param4 > hc.field_h) {
-                  pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
-                  if (!TombRacer.field_G) {
-                    return;
-                  } else {
-                    rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
-                    return;
-                  }
-                } else {
-                  rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
-                  return;
-                }
+                pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
+                return;
               }
             } else {
               pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
-              if (TombRacer.field_G) {
-                rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
-                return;
-              } else {
-                return;
-              }
+              return;
             }
           } else {
             pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
-            if (TombRacer.field_G) {
-              rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         } else {
           field_q = (long[]) null;
           if (param1 >= pka.field_b) {
             if (ss.field_c >= param3) {
-              if (gca.field_d > param2) {
-                pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
-                if (TombRacer.field_G) {
-                  rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
+              if (gca.field_d <= param2) {
+                if (param4 > hc.field_h) {
+                  pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
                   return;
                 } else {
+                  rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
                   return;
                 }
               } else {
-                if (param4 > hc.field_h) {
-                  pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
-                  if (TombRacer.field_G) {
-                    rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
-                  return;
-                }
+                pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
+                return;
               }
             } else {
               pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
-              if (TombRacer.field_G) {
-                rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
-                return;
-              } else {
-                return;
-              }
+              return;
             }
           } else {
             pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
-            if (TombRacer.field_G) {
-              rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         }
     }
@@ -302,7 +229,6 @@ final class tl extends nv implements ut {
     }
 
     final void k(int param0) {
-        int discarded$1 = 0;
         if (param0 == 5418) {
           if (this.field_s.f((byte) -56)) {
             this.c(false);
@@ -315,7 +241,7 @@ final class tl extends nv implements ut {
             return;
           }
         } else {
-          discarded$1 = this.b(27);
+          this.b(27);
           if (!this.field_s.f((byte) -56)) {
             this.field_o.d(0);
             this.field_s.a((byte) -14, this.field_o.c(0));

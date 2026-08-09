@@ -12,8 +12,8 @@ final class wc extends mb {
     static hl field_D;
 
     public static void c(byte param0) {
-        RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         try {
           L0: {
             L1: {
@@ -39,13 +39,19 @@ final class wc extends mb {
     }
 
     final static void h(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        RuntimeException var1 = null;
-        bc var1_ref = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int stackIn_11_0 = 0;
+        ud stackIn_59_0 = null;
+        int stackIn_59_1 = 0;
+        ud stackIn_59_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        bc var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
-        String var3 = null;
+        Object var3 = null;
         String var4_ref_String = null;
         int var4 = 0;
         String var5 = null;
@@ -54,28 +60,11 @@ final class wc extends mb {
         ud var7_ref = null;
         String var8 = null;
         int var9 = 0;
-        int stackIn_11_0 = 0;
-        ud stackIn_49_0 = null;
-        int stackIn_49_1 = 0;
-        ud stackIn_49_2 = null;
-        ud stackIn_59_0 = null;
-        int stackIn_59_1 = 0;
-        ud stackIn_59_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        ud stackOut_48_0 = null;
-        int stackOut_48_1 = 0;
-        ud stackOut_48_2 = null;
-        ud stackOut_57_0 = null;
-        int stackOut_57_1 = 0;
-        ud stackOut_57_2 = null;
         var9 = TetraLink.field_J;
         try {
           L0: {
-            var1_ref = kb.field_q;
-            var2 = var1_ref.d((byte) -99);
+            var1 = kb.field_q;
+            var2 = var1.d((byte) -99);
             if (0 == var2) {
               L1: {
                 if (null != sd.field_nb) {
@@ -87,20 +76,18 @@ final class wc extends mb {
                 }
               }
               L2: {
-                if (-2 != (var1_ref.d((byte) -99) ^ -1)) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
+                if (-2 != (var1.d((byte) -99) ^ -1)) {
+                  stackIn_11_0 = 0;
                   break L2;
                 } else {
-                  stackOut_8_0 = 1;
-                  stackIn_11_0 = stackOut_8_0;
+                  stackIn_11_0 = 1;
                   break L2;
                 }
               }
               L3: {
                 L4: {
                   var3_int = stackIn_11_0;
-                  var4_ref_String = var1_ref.g((byte) 81);
+                  var4_ref_String = var1.g((byte) 81);
                   if (var3_int != 0) {
                     break L4;
                   } else {
@@ -112,12 +99,12 @@ final class wc extends mb {
                     }
                   }
                 }
-                var5 = var1_ref.g((byte) 81);
+                var5 = var1.g((byte) 81);
                 break L3;
               }
               L5: {
                 var6 = fh.a(-32055, var4_ref_String);
-                var7 = var1_ref.g((byte) 81);
+                var7 = var1.g((byte) 81);
                 var8 = cc.a((CharSequence) ((Object) var4_ref_String), (byte) 98);
                 if (var8 == null) {
                   var8 = var4_ref_String;
@@ -143,9 +130,9 @@ final class wc extends mb {
                 if (var6 == null) {
                   var6 = new ud();
                   sd.field_nb.a((long)var8.hashCode(), var6, 113);
-                  fieldTemp$2 = ca.field_c;
+                  fieldTemp$0 = ca.field_c;
                   ca.field_c = ca.field_c + 1;
-                  var6.field_Rb = fieldTemp$2;
+                  var6.field_Rb = fieldTemp$0;
                   mm.field_s.a(var6, false);
                   break L7;
                 } else {
@@ -169,8 +156,8 @@ final class wc extends mb {
                   }
                 }
                 L9: {
-                  var3 = var1_ref.g((byte) 81);
-                  if (!var3.equals("")) {
+                  var3 = var1.g((byte) 81);
+                  if (!((String) (var3)).equals("")) {
                     break L9;
                   } else {
                     var3 = null;
@@ -178,8 +165,8 @@ final class wc extends mb {
                   }
                 }
                 L10: {
-                  var4_ref_String = var1_ref.g((byte) 81);
-                  var5 = var1_ref.g((byte) 81);
+                  var4_ref_String = var1.g((byte) 81);
+                  var5 = var1.g((byte) 81);
                   var6 = ke.a(var4_ref_String, false);
                   if (null != var6) {
                     break L10;
@@ -199,9 +186,9 @@ final class wc extends mb {
                   } else {
                     var6 = new ud();
                     wb.field_f.a((long)cc.a((CharSequence) ((Object) var4_ref_String), (byte) 95).hashCode(), var6, 96);
-                    fieldTemp$3 = qi.field_q;
+                    fieldTemp$1 = qi.field_q;
                     qi.field_q = qi.field_q + 1;
-                    var6.field_Rb = fieldTemp$3;
+                    var6.field_Rb = fieldTemp$1;
                     og.field_j.a(var6, false);
                     break L11;
                   }
@@ -210,12 +197,12 @@ final class wc extends mb {
                   if (var3 == null) {
                     break L12;
                   } else {
-                    var3 = var3.intern();
+                    var3 = ((String) (var3)).intern();
                     break L12;
                   }
                 }
                 var6.field_Mb = var4_ref_String;
-                var6.field_Ub = var3;
+                var6.field_Ub = (String) (var3);
                 var6.field_Vb = var5;
                 var6.b(false);
                 var7_ref = (ud) ((Object) og.field_j.c(false));
@@ -226,19 +213,16 @@ final class wc extends mb {
                         if (null == var7_ref) {
                           break L16;
                         } else {
-                          stackOut_48_0 = (ud) (var6);
-                          stackOut_48_1 = 126;
-                          stackOut_48_2 = (ud) (var7_ref);
-                          stackIn_59_0 = stackOut_48_0;
-                          stackIn_59_1 = stackOut_48_1;
-                          stackIn_59_2 = stackOut_48_2;
-                          stackIn_49_0 = stackOut_48_0;
-                          stackIn_49_1 = stackOut_48_1;
-                          stackIn_49_2 = stackOut_48_2;
+                          stackIn_59_0 = (ud) (var6);
+
+                          stackIn_59_1 = 126;
+
+                          stackIn_59_2 = (ud) (var7_ref);
+
                           if (var9 != 0) {
                             break L15;
                           } else {
-                            if (!om.a(stackIn_49_0, (byte) stackIn_49_1, stackIn_49_2)) {
+                            if (!om.a(stackIn_59_0, (byte) stackIn_59_1, stackIn_59_2)) {
                               break L16;
                             } else {
                               var7_ref = (ud) ((Object) og.field_j.a((byte) -70));
@@ -263,12 +247,9 @@ final class wc extends mb {
                           }
                         }
                       }
-                      stackOut_57_0 = (ud) (var7_ref);
-                      stackOut_57_1 = 10;
-                      stackOut_57_2 = (ud) (var6);
-                      stackIn_59_0 = stackOut_57_0;
-                      stackIn_59_1 = stackOut_57_1;
-                      stackIn_59_2 = stackOut_57_2;
+                      stackIn_59_0 = (ud) (var7_ref);
+                      stackIn_59_1 = 10;
+                      stackIn_59_2 = (ud) (var6);
                       break L15;
                     }
                     cl.a(stackIn_59_0, stackIn_59_1, stackIn_59_2);
@@ -293,9 +274,9 @@ final class wc extends mb {
                   if (3 != var2) {
                     if (4 == var2) {
                       ji.field_Tb = 1;
-                      var3 = var1_ref.g((byte) 81);
-                      ul.field_e = var3.intern();
-                      var4 = var1_ref.d((byte) -99);
+                      var3 = var1.g((byte) 81);
+                      ul.field_e = ((String) (var3)).intern();
+                      var4 = var1.d((byte) -99);
                       gd.d(var4, 3);
                       decompiledRegionSelector0 = 4;
                       break L0;
@@ -323,8 +304,8 @@ final class wc extends mb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "wc.F(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw oi.a((Throwable) ((Object) var1_ref), "wc.F(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -355,18 +336,14 @@ final class wc extends mb {
         Object stackIn_4_0 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
         try {
           L0: {
             if (param0 == 22850) {
-              stackOut_3_0 = this.field_F;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = this.field_F;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (Object) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (Object) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -386,22 +363,12 @@ final class wc extends mb {
     wc(Object param0, int param1) {
         super(param1);
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             this.field_F = param0;
@@ -411,27 +378,19 @@ final class wc extends mb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("wc.<init>(");
-            stackIn_6_0 = stackOut_3_0;
-            stackIn_6_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("wc.<init>(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_7_0 = stackOut_4_0;
-              stackIn_7_1 = stackOut_4_1;
-              stackIn_7_2 = stackOut_4_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }
@@ -440,81 +399,151 @@ final class wc extends mb {
     }
 
     final static void i(int param0) {
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         RuntimeException runtimeException = null;
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var4 = TetraLink.field_J;
-        try {
-          L0: {
-            var1 = c.field_m;
-            var2 = 0;
-            var3 = var1.length;
-            L1: while (true) {
-              L2: {
-                L3: {
-                  if ((var3 ^ -1) >= (var2 ^ -1)) {
-                    break L3;
-                  } else {
-                    incrementValue$16 = var2;
-                    var2++;
-                    var1[incrementValue$16] = 0;
-                    incrementValue$17 = var2;
-                    var2++;
-                    var1[incrementValue$17] = 0;
-                    incrementValue$18 = var2;
-                    var2++;
-                    var1[incrementValue$18] = 0;
-                    incrementValue$19 = var2;
-                    var2++;
-                    var1[incrementValue$19] = 0;
-                    incrementValue$20 = var2;
-                    var2++;
-                    var1[incrementValue$20] = 0;
-                    incrementValue$21 = var2;
-                    var2++;
-                    var1[incrementValue$21] = 0;
-                    incrementValue$22 = var2;
-                    var2++;
-                    var1[incrementValue$22] = 0;
-                    incrementValue$23 = var2;
-                    var2++;
-                    var1[incrementValue$23] = 0;
-                    if (var4 != 0) {
-                      break L2;
-                    } else {
-                      if (var4 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = TetraLink.field_J;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    try {
+                        var1 = c.field_m;
+                        var2 = 0;
+                        var3 = var1.length;
+                        statePc = 2;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 11;
+                        continue stateLoop;
                     }
-                  }
                 }
-                if (param0 == 3) {
-                  break L2;
-                } else {
-                  wc.c((byte) 12);
-                  break L2;
+                case 2: {
+                    try {
+                        if ((var3 ^ -1) >= (var2 ^ -1)) {
+                            statePc = 7;
+                        } else {
+                            statePc = 3;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
                 }
-              }
-              break L0;
+                case 3: {
+                    try {
+                        incrementValue$8 = var2;
+                        var2++;
+                        var1[incrementValue$8] = 0;
+                        incrementValue$9 = var2;
+                        var2++;
+                        var1[incrementValue$9] = 0;
+                        incrementValue$10 = var2;
+                        var2++;
+                        var1[incrementValue$10] = 0;
+                        incrementValue$11 = var2;
+                        var2++;
+                        var1[incrementValue$11] = 0;
+                        incrementValue$12 = var2;
+                        var2++;
+                        var1[incrementValue$12] = 0;
+                        incrementValue$13 = var2;
+                        var2++;
+                        var1[incrementValue$13] = 0;
+                        incrementValue$14 = var2;
+                        var2++;
+                        var1[incrementValue$14] = 0;
+                        incrementValue$15 = var2;
+                        var2++;
+                        var1[incrementValue$15] = 0;
+                        if (var4 != 0) {
+                            statePc = 12;
+                        } else {
+                            statePc = 4;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        if (var4 == 0) {
+                            statePc = 2;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        statePc = 7;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        if (param0 == 3) {
+                            statePc = 12;
+                        } else {
+                            statePc = 8;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        wc.c((byte) 12);
+                        statePc = 12;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    runtimeException = (RuntimeException) ((Object) caughtException);
+                    throw oi.a((Throwable) ((Object) runtimeException), "wc.G(" + param0 + ')');
+                }
+                case 12: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) runtimeException), "wc.G(" + param0 + ')');
         }
     }
 
@@ -524,18 +553,14 @@ final class wc extends mb {
         int stackIn_4_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
         try {
           L0: {
             if (param0 > 37) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }

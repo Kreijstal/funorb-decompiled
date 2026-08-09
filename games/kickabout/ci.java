@@ -18,7 +18,7 @@ final class ci implements Iterable {
     }
 
     final am a(byte param0) {
-        am var2 = null;
+        am var2;
         var2 = this.field_d.field_f;
         if (var2 != this.field_d) {
           var2.f(-124);
@@ -57,8 +57,8 @@ final class ci implements Iterable {
     }
 
     final static void a(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = wq.b((byte) 46);
         if (param0) {
           return;

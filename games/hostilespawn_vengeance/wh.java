@@ -12,6 +12,9 @@ final class wh {
     public static void a(int param0) {
         field_e = null;
         field_a = null;
+        if (param0 != 0) {
+            field_a = (String) null;
+        }
         field_d = null;
         field_b = null;
         field_c = null;
@@ -20,24 +23,26 @@ final class wh {
     final static void b(int param0) {
         int var1 = lm.e(0);
         int var2 = ti.a((byte) -1);
-        ne.field_j.a(var1 + (ac.field_a << 1), s.field_g + -ac.field_g, var2 - -(ac.field_g << 1), hg.field_f + -ac.field_a, 5);
+        ne.field_j.a(var1 + (ac.field_a << -1009418719), s.field_g + -ac.field_g, var2 - -(ac.field_g << 1269285729), hg.field_f + -ac.field_a, 5);
         rh.d((byte) -93);
         if (param0 <= 99) {
-            field_e = null;
+            field_e = (bd) null;
         }
     }
 
     final static void a(boolean param0, int param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
+        int stackIn_33_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
             L1: {
               L2: {
-                if (ln.field_a.field_c[param1] == 2) {
+                if ((ln.field_a.field_c[param1] ^ -1) == -3) {
                   break L2;
                 } else {
                   if (ln.field_a.field_c[param1] != 4) {
@@ -91,7 +96,7 @@ final class wh {
               }
             }
             L8: {
-              if (ln.field_a.field_c[param1] != 3) {
+              if ((ln.field_a.field_c[param1] ^ -1) != -4) {
                 break L8;
               } else {
                 var2_int = 0;
@@ -109,7 +114,7 @@ final class wh {
                           if (mm.field_m[var2_int].field_i == 0) {
                             break L10;
                           } else {
-                            if (mm.field_m[var2_int].field_i == 231) {
+                            if ((mm.field_m[var2_int].field_i ^ -1) == -232) {
                               break L10;
                             } else {
                               if (param1 != mm.field_m[var2_int].field_j.b(-4)) {
@@ -140,41 +145,57 @@ final class wh {
             }
             L12: {
               if (148 == ln.field_a.field_y[param1]) {
-                mf.a(true, 4);
+                L13: {
+                  if (param0) {
+                    stackIn_33_0 = 0;
+                    break L13;
+                  } else {
+                    stackIn_33_0 = 1;
+                    break L13;
+                  }
+                }
+                mf.a(stackIn_33_0 != 0, 4);
                 break L12;
               } else {
                 break L12;
               }
             }
-            L13: {
+            if (param0) {
               L14: {
-                if (ln.field_a.field_y[param1] < 480) {
-                  break L14;
-                } else {
-                  if (ln.field_a.field_y[param1] <= 583) {
-                    break L13;
+                L15: {
+                  if ((ln.field_a.field_y[param1] ^ -1) > -481) {
+                    break L15;
                   } else {
-                    break L14;
+                    if (ln.field_a.field_y[param1] <= 583) {
+                      break L14;
+                    } else {
+                      break L15;
+                    }
                   }
                 }
+                ln.field_a.field_y[param1] = 513;
+                break L14;
               }
-              ln.field_a.field_y[param1] = 513;
-              break L13;
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "wh.A(" + true + ',' + param1 + ')');
+          throw wg.a((Throwable) ((Object) var2), "wh.A(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Unpacking music";
         field_c = new fa("usename");
     }

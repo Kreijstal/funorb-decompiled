@@ -11,10 +11,9 @@ final class rn {
     static volatile boolean field_b;
 
     public static void b(int param0) {
-        int discarded$0 = 0;
         field_g = null;
         if (param0 != 64) {
-            discarded$0 = rn.a(93);
+            rn.a(93);
         }
         field_d = null;
         field_c = null;
@@ -24,30 +23,19 @@ final class rn {
 
     final static byte[] a(int param0, int param1, int param2, byte[] param3) {
         byte[] var4 = null;
-        RuntimeException var4_ref = null;
         int var5_int = 0;
-        ol var5 = null;
-        byte[] var6 = null;
         int var7 = 0;
         byte[] var8 = null;
         byte[] stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var4_ref = null;
+        ol var5 = null;
+        byte[] var6 = null;
         var7 = DungeonAssault.field_K;
         try {
           L0: {
@@ -75,35 +63,26 @@ final class rn {
             var5.a((long)(param0 * param2), 17567, var4);
             var6 = new byte[64];
             var5.a((byte) -88, var6, 0);
-            stackOut_6_0 = (byte[]) (var6);
-            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_0 = (byte[]) (var6);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4_ref);
-            stackOut_8_1 = new StringBuilder().append("rn.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4_ref);
+
+            stackIn_10_1 = new StringBuilder().append("rn.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }

@@ -26,8 +26,6 @@ final class ng extends mc {
         RuntimeException var2_ref = null;
         sj stackIn_2_0 = null;
         sj stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -35,28 +33,16 @@ final class ng extends mc {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        sj stackOut_3_0 = null;
-        sj stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0 == -67) {
               var2 = new sj(false);
               var2.field_h = param1;
-              stackOut_3_0 = (sj) (var2);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (sj) (var2);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (sj) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (sj) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -65,27 +51,19 @@ final class ng extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2_ref);
-            stackOut_5_1 = new StringBuilder().append("ng.D(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2_ref);
+
+            stackIn_7_1 = new StringBuilder().append("ng.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -107,53 +85,18 @@ final class ng extends mc {
         int var9 = 0;
         int var10 = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
         var10 = TetraLink.field_J;
         try {
           L0: {
@@ -171,8 +114,7 @@ final class ng extends mc {
             var8 = 0;
             L2: while (true) {
               if ((var8 ^ -1) <= -129) {
-                stackOut_18_0 = var5_int;
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = var5_int;
                 break L0;
               } else {
                 L3: {
@@ -232,103 +174,69 @@ final class ng extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var5 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var5);
-            stackOut_20_1 = new StringBuilder().append("ng.A(");
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var5);
+
+            stackIn_22_1 = new StringBuilder().append("ng.A(");
+
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+
+
+            stackIn_25_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
+
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L8;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(param2).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+
+
+            stackIn_28_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L9;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L9;
             }
           }
-          throw oi.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_23_0), stackIn_29_2 + ')');
         }
         return stackIn_19_0 != 0;
     }
 
     final static void a(String param0, boolean param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -346,27 +254,19 @@ final class ng extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("ng.F(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("ng.F(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -375,12 +275,6 @@ final class ng extends mc {
     }
 
     final static void a(byte param0, int param1, boolean param2, hm param3, boolean param4) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        String var7 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -388,14 +282,10 @@ final class ng extends mc {
         String stackIn_27_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        String var7 = null;
         try {
           L0: {
             L1: {
@@ -491,27 +381,19 @@ final class ng extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var5);
-            stackOut_24_1 = new StringBuilder().append("ng.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var5);
+
+            stackIn_26_1 = new StringBuilder().append("ng.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L8;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L8;
             }
           }
@@ -541,15 +423,24 @@ final class ng extends mc {
     }
 
     ng(byte[] param0) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        lm dupTemp$17 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        lm dupTemp$8 = null;
+        byte[] stackIn_39_0 = null;
+        byte[] stackIn_42_0 = null;
+        RuntimeException stackIn_205_0 = null;
+        StringBuilder stackIn_205_1 = null;
+        RuntimeException stackIn_206_0 = null;
+        StringBuilder stackIn_206_1 = null;
+        String stackIn_206_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         byte[] var4 = null;
@@ -566,10 +457,10 @@ final class ng extends mc {
         lm[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
-        lm var15 = null;
-        byte[] var15_array = null;
-        int var16_int = 0;
+        byte[] var15 = null;
+        lm var15_ref = null;
         byte[] var16 = null;
+        int var16_int = 0;
         int var17 = 0;
         byte[] var18 = null;
         int var19 = 0;
@@ -612,29 +503,6 @@ final class ng extends mc {
         byte[] var56 = null;
         byte[] var57 = null;
         byte[] var58 = null;
-        byte[] stackIn_39_0 = null;
-        byte[] stackIn_42_0 = null;
-        RuntimeException stackIn_204_0 = null;
-        StringBuilder stackIn_204_1 = null;
-        RuntimeException stackIn_205_0 = null;
-        StringBuilder stackIn_205_1 = null;
-        RuntimeException stackIn_206_0 = null;
-        StringBuilder stackIn_206_1 = null;
-        String stackIn_206_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_38_0 = null;
-        byte[] stackOut_37_0 = null;
-        byte[] stackOut_41_0 = null;
-        Object stackOut_40_0 = null;
-        RuntimeException stackOut_203_0 = null;
-        StringBuilder stackOut_203_1 = null;
-        RuntimeException stackOut_205_0 = null;
-        StringBuilder stackOut_205_1 = null;
-        String stackOut_205_2 = null;
-        RuntimeException stackOut_204_0 = null;
-        StringBuilder stackOut_204_1 = null;
-        String stackOut_204_2 = null;
         try {
           L0: {
             this.field_z = new wf[128];
@@ -698,9 +566,9 @@ final class ng extends mc {
                                             L9: {
                                               var15_int = var38.d((byte) -99);
                                               if (var15_int == 0) {
-                                                incrementValue$9 = var12;
+                                                incrementValue$0 = var12;
                                                 var12++;
-                                                var13_int = incrementValue$9;
+                                                var13_int = incrementValue$0;
                                                 break L9;
                                               } else {
                                                 L10: {
@@ -732,26 +600,22 @@ final class ng extends mc {
                                         L12: {
                                           var14 = var38.d((byte) -99);
                                           if ((var14 ^ -1) >= -1) {
-                                            stackOut_38_0 = null;
-                                            stackIn_39_0 = (byte[]) ((Object) stackOut_38_0);
+                                            stackIn_39_0 = null;
                                             break L12;
                                           } else {
-                                            stackOut_37_0 = new byte[var14 * 2];
-                                            stackIn_39_0 = stackOut_37_0;
+                                            stackIn_39_0 = new byte[var14 * 2];
                                             break L12;
                                           }
                                         }
                                         L13: {
                                           var46 = stackIn_39_0;
-                                          var15_array = var46;
+                                          var15 = var46;
                                           var14 = var38.d((byte) -99);
                                           if ((var14 ^ -1) < -1) {
-                                            stackOut_41_0 = new byte[2 * var14];
-                                            stackIn_42_0 = stackOut_41_0;
+                                            stackIn_42_0 = new byte[2 * var14];
                                             break L13;
                                           } else {
-                                            stackOut_40_0 = null;
-                                            stackIn_42_0 = (byte[]) ((Object) stackOut_40_0);
+                                            stackIn_42_0 = null;
                                             break L13;
                                           }
                                         }
@@ -812,7 +676,7 @@ final class ng extends mc {
                                                                             L23: while (true) {
                                                                               if (var12 <= var27) {
                                                                                 L24: {
-                                                                                  if (var15_array == null) {
+                                                                                  if (var15 == null) {
                                                                                     break L24;
                                                                                   } else {
                                                                                     var27 = 1;
@@ -820,7 +684,7 @@ final class ng extends mc {
                                                                                       if (var46.length <= var27) {
                                                                                         break L24;
                                                                                       } else {
-                                                                                        var15_array[var27] = var38.g(-1772093437);
+                                                                                        var15[var27] = var38.g(-1772093437);
                                                                                         var27 += 2;
                                                                                         continue L25;
                                                                                       }
@@ -850,11 +714,11 @@ final class ng extends mc {
                                                                                     L29: while (true) {
                                                                                       if (var27 >= var12) {
                                                                                         L30: {
-                                                                                          if (var15_array == null) {
+                                                                                          if (null == var15) {
                                                                                             break L30;
                                                                                           } else {
                                                                                             var19 = var38.d((byte) -99);
-                                                                                            var15_array[0] = (byte)var19;
+                                                                                            var15[0] = (byte)var19;
                                                                                             var27 = 2;
                                                                                             L31: while (true) {
                                                                                               if (var46.length <= var27) {
@@ -866,7 +730,7 @@ final class ng extends mc {
                                                                                                     var29 = 2;
                                                                                                     L33: while (true) {
                                                                                                       if (var46.length <= var29) {
-                                                                                                        var15_array = null;
+                                                                                                        var15 = null;
                                                                                                         var30 = var27;
                                                                                                         L34: while (true) {
                                                                                                           if (128 <= var30) {
@@ -879,7 +743,7 @@ final class ng extends mc {
                                                                                                         }
                                                                                                       } else {
                                                                                                         var30 = var46[var29];
-                                                                                                        var31 = var15_array[var29 - -1];
+                                                                                                        var31 = var15[var29 - -1];
                                                                                                         var32 = var28 * (-var27 + var30) - -((var30 - var27) / 2);
                                                                                                         var33 = var27;
                                                                                                         L35: while (true) {
@@ -906,7 +770,7 @@ final class ng extends mc {
                                                                                                 }
                                                                                               } else {
                                                                                                 var19 = var38.d((byte) -99) + (var19 - -1);
-                                                                                                var15_array[var27] = (byte)var19;
+                                                                                                var15[var27] = (byte)var19;
                                                                                                 var27 += 2;
                                                                                                 continue L31;
                                                                                               }
@@ -1208,9 +1072,9 @@ final class ng extends mc {
                                                                               } else {
                                                                                 L67: {
                                                                                   if (var54.length > var21) {
-                                                                                    incrementValue$10 = var21;
+                                                                                    incrementValue$1 = var21;
                                                                                     var21++;
-                                                                                    var20 = var18[incrementValue$10];
+                                                                                    var20 = var18[incrementValue$1];
                                                                                     break L67;
                                                                                   } else {
                                                                                     var20 = -1;
@@ -1245,9 +1109,9 @@ final class ng extends mc {
                                                                                   var20 = -1;
                                                                                   break L69;
                                                                                 } else {
-                                                                                  incrementValue$11 = var21;
+                                                                                  incrementValue$2 = var21;
                                                                                   var21++;
-                                                                                  var20 = var10[incrementValue$11];
+                                                                                  var20 = var10[incrementValue$2];
                                                                                   break L69;
                                                                                 }
                                                                               }
@@ -1272,18 +1136,18 @@ final class ng extends mc {
                                                                           } else {
                                                                             L72: {
                                                                               if (var21 < var56.length) {
-                                                                                incrementValue$12 = var21;
+                                                                                incrementValue$3 = var21;
                                                                                 var21++;
-                                                                                var20 = var7[incrementValue$12];
+                                                                                var20 = var7[incrementValue$3];
                                                                                 break L72;
                                                                               } else {
                                                                                 var20 = -1;
                                                                                 break L72;
                                                                               }
                                                                             }
-                                                                            incrementValue$13 = var8;
+                                                                            incrementValue$4 = var8;
                                                                             var8++;
-                                                                            var24 = 16 + var38.field_u[incrementValue$13] << 1181506754;
+                                                                            var24 = 16 + var38.field_u[incrementValue$4] << 1181506754;
                                                                             break L71;
                                                                           }
                                                                         }
@@ -1307,18 +1171,18 @@ final class ng extends mc {
                                                                       } else {
                                                                         L75: {
                                                                           if (var55.length > var21) {
-                                                                            incrementValue$14 = var21;
+                                                                            incrementValue$5 = var21;
                                                                             var21++;
-                                                                            var20 = var4[incrementValue$14];
+                                                                            var20 = var4[incrementValue$5];
                                                                             break L75;
                                                                           } else {
                                                                             var20 = -1;
                                                                             break L75;
                                                                           }
                                                                         }
-                                                                        incrementValue$15 = var5;
+                                                                        incrementValue$6 = var5;
                                                                         var5++;
-                                                                        var23 = -1 + var38.field_u[incrementValue$15];
+                                                                        var23 = -1 + var38.field_u[incrementValue$6];
                                                                         break L74;
                                                                       }
                                                                     }
@@ -1338,9 +1202,9 @@ final class ng extends mc {
                                                               } else {
                                                                 L77: {
                                                                   if (var54.length > var21) {
-                                                                    incrementValue$16 = var21;
+                                                                    incrementValue$7 = var21;
                                                                     var21++;
-                                                                    var20 = var18[incrementValue$16];
+                                                                    var20 = var18[incrementValue$7];
                                                                     break L77;
                                                                   } else {
                                                                     var20 = -1;
@@ -1385,15 +1249,15 @@ final class ng extends mc {
                                         }
                                       } else {
                                         L78: {
-                                          dupTemp$17 = new lm();
-                                          var13[var14] = dupTemp$17;
-                                          var40 = dupTemp$17;
-                                          var15 = var40;
+                                          dupTemp$8 = new lm();
+                                          var13[var14] = dupTemp$8;
+                                          var40 = dupTemp$8;
+                                          var15_ref = var40;
                                           var16_int = var38.d((byte) -99);
                                           if (var16_int <= 0) {
                                             break L78;
                                           } else {
-                                            var15.field_d = new byte[var16_int * 2];
+                                            var15_ref.field_d = new byte[var16_int * 2];
                                             break L78;
                                           }
                                         }
@@ -1402,7 +1266,7 @@ final class ng extends mc {
                                           if (var16_int <= 0) {
                                             break L79;
                                           } else {
-                                            var15.field_e = new byte[var16_int * 2 + 2];
+                                            var15_ref.field_e = new byte[var16_int * 2 + 2];
                                             var40.field_e[1] = (byte)64;
                                             break L79;
                                           }
@@ -1449,27 +1313,19 @@ final class ng extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L80: {
             var2 = decompiledCaughtException;
-            stackOut_203_0 = (RuntimeException) (var2);
-            stackOut_203_1 = new StringBuilder().append("ng.<init>(");
-            stackIn_205_0 = stackOut_203_0;
-            stackIn_205_1 = stackOut_203_1;
-            stackIn_204_0 = stackOut_203_0;
-            stackIn_204_1 = stackOut_203_1;
+            stackIn_205_0 = (RuntimeException) (var2);
+
+            stackIn_205_1 = new StringBuilder().append("ng.<init>(");
+
             if (param0 == null) {
-              stackOut_205_0 = (RuntimeException) ((Object) stackIn_205_0);
-              stackOut_205_1 = (StringBuilder) ((Object) stackIn_205_1);
-              stackOut_205_2 = "null";
-              stackIn_206_0 = stackOut_205_0;
-              stackIn_206_1 = stackOut_205_1;
-              stackIn_206_2 = stackOut_205_2;
+              stackIn_206_0 = (RuntimeException) ((Object) stackIn_205_0);
+              stackIn_206_1 = (StringBuilder) ((Object) stackIn_205_1);
+              stackIn_206_2 = "null";
               break L80;
             } else {
-              stackOut_204_0 = (RuntimeException) ((Object) stackIn_204_0);
-              stackOut_204_1 = (StringBuilder) ((Object) stackIn_204_1);
-              stackOut_204_2 = "{...}";
-              stackIn_206_0 = stackOut_204_0;
-              stackIn_206_1 = stackOut_204_1;
-              stackIn_206_2 = stackOut_204_2;
+              stackIn_206_0 = (RuntimeException) ((Object) stackIn_205_0);
+              stackIn_206_1 = (StringBuilder) ((Object) stackIn_205_1);
+              stackIn_206_2 = "{...}";
               break L80;
             }
           }

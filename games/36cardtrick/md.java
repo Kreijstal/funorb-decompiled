@@ -10,9 +10,8 @@ final class md {
     int field_a;
 
     final static boolean a(byte param0) {
-        boolean discarded$0 = false;
         if (param0 > -6) {
-            discarded$0 = md.a(122, false);
+            md.a(122, false);
             return qe.a(mk.g(-122), (byte) -98);
         }
         return qe.a(mk.g(-122), (byte) -98);
@@ -20,14 +19,12 @@ final class md {
 
     final static boolean a(int param0, boolean param1) {
         try {
-            long dupTemp$2 = 0L;
+            long dupTemp$1 = 0L;
             IOException var2 = null;
             w var4 = null;
             w var5 = null;
             int stackIn_13_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_12_0 = 0;
-            int stackOut_11_0 = 0;
             L0: {
               if (null == fe.field_c) {
                 fe.field_c = td.field_b.a(mk.field_k, (byte) -108, ag.field_e);
@@ -40,9 +37,9 @@ final class md {
               if (0 == fe.field_c.field_a) {
                 return false;
               } else {
-                dupTemp$2 = id.a(94);
-                ua.field_E = dupTemp$2;
-                uk.field_a = dupTemp$2;
+                dupTemp$1 = id.a(94);
+                ua.field_E = dupTemp$1;
+                uk.field_a = dupTemp$1;
                 if (-2 == (fe.field_c.field_a ^ -1)) {
                   try {
                     L1: {
@@ -53,12 +50,10 @@ final class md {
                         na.field_r.field_i = 0;
                         var5.field_i = 0;
                         if (param1) {
-                          stackOut_12_0 = -2;
-                          stackIn_13_0 = stackOut_12_0;
+                          stackIn_13_0 = -2;
                           break L2;
                         } else {
-                          stackOut_11_0 = -1;
-                          stackIn_13_0 = stackOut_11_0;
+                          stackIn_13_0 = -1;
                           break L2;
                         }
                       }

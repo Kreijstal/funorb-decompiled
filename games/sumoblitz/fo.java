@@ -7,79 +7,53 @@ final class fo extends sp implements ai {
     private wp field_B;
 
     final void a(int param0, int param1, byte param2, int param3) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         if (param2 > -35) {
           this.field_B = (wp) null;
           var5 = this.field_r - -param0;
           var6 = param1 + this.field_v;
-          discarded$2 = kw.field_b.a(qn.field_h, 20 + var5, var6 - -20, this.field_q - 40, -50 + this.field_p, 16777215, -1, 1, 0, kw.field_b.field_s);
+          kw.field_b.a(qn.field_h, 20 + var5, var6 - -20, this.field_q - 40, -50 + this.field_p, 16777215, -1, 1, 0, kw.field_b.field_s);
           super.a(param0, param1, (byte) -96, param3);
           return;
         } else {
           var5 = this.field_r - -param0;
           var6 = param1 + this.field_v;
-          discarded$3 = kw.field_b.a(qn.field_h, 20 + var5, var6 - -20, this.field_q - 40, -50 + this.field_p, 16777215, -1, 1, 0, kw.field_b.field_s);
+          kw.field_b.a(qn.field_h, 20 + var5, var6 - -20, this.field_q - 40, -50 + this.field_p, 16777215, -1, 1, 0, kw.field_b.field_s);
           super.a(param0, param1, (byte) -96, param3);
           return;
         }
     }
 
     public final void a(int param0, int param1, wp param2, int param3, int param4) {
-        RuntimeException var6 = null;
         int var7 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var6 = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                if (param2 == this.field_A) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (param2 != this.field_B) {
-                      break L3;
-                    } else {
-                      rv.a((byte) 114);
-                      if (var7 == 0) {
-                        break L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
+              if (param2 == this.field_A) {
+                mu.e(0);
+                break L1;
+              } else {
+                if (param2 != this.field_B) {
                   if (this.field_C != param2) {
                     break L1;
                   } else {
                     vi.e(4);
-                    if (var7 == 0) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
+                    break L1;
                   }
+                } else {
+                  rv.a((byte) 114);
+                  break L1;
                 }
               }
-              mu.e(0);
-              break L1;
             }
             if (param1 == 710) {
               break L0;
@@ -90,33 +64,25 @@ final class fo extends sp implements ai {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var6);
-            stackOut_12_1 = new StringBuilder().append("fo.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_12_0 = (RuntimeException) (var6);
+
+            stackIn_12_1 = new StringBuilder().append("fo.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L4;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L4;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L2;
             }
           }
-          throw qo.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param3 + ',' + param4 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -151,8 +117,6 @@ final class fo extends sp implements ai {
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -160,18 +124,6 @@ final class fo extends sp implements ai {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_7_0 = false;
-        int stackOut_12_0 = 0;
-        boolean stackOut_10_0 = false;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
@@ -184,26 +136,22 @@ final class fo extends sp implements ai {
             }
             if (!super.a(param0, param1, (byte) 20, param3)) {
               if ((param3 ^ -1) == -99) {
-                stackOut_7_0 = this.a((byte) 123, param0);
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = this.a((byte) 123, param0);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (param3 != 99) {
-                  stackOut_12_0 = 0;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = 0;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_10_0 = this.a(param0, false);
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = this.a(param0, false);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               }
             } else {
-              stackOut_3_0 = 1;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -212,27 +160,19 @@ final class fo extends sp implements ai {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var5);
-            stackOut_14_1 = new StringBuilder().append("fo.KA(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var5);
+
+            stackIn_16_1 = new StringBuilder().append("fo.KA(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L2;
             }
           }

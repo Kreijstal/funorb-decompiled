@@ -18,11 +18,12 @@ abstract class t {
     abstract void a(uf param0, int param1);
 
     final static void b(boolean param0) {
+        int[] dupTemp$1 = null;
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -49,7 +50,8 @@ abstract class t {
                       if (-1 <= (ol.field_c[var1_int][var2][4] ^ -1)) {
                         break L4;
                       } else {
-                        ol.field_c[var1_int][var2][4] = ol.field_c[var1_int][var2][4] - 1;
+                        dupTemp$1 = ol.field_c[var1_int][var2];
+                        dupTemp$1[4] = dupTemp$1[4] - 1;
                         break L4;
                       }
                     }
@@ -112,9 +114,7 @@ abstract class t {
     }
 
     final static void c(int param0) {
-        if (0 - vk.field_h != jc.field_c) {
-            if (jc.field_c == 250 + -vk.field_h) {
-            }
+        if (0 - vk.field_h != jc.field_c && jc.field_c == 250 + -vk.field_h) {
         }
         if (param0 != 3870) {
             return;

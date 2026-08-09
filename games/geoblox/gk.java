@@ -19,11 +19,10 @@ final class gk {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_a = null;
         field_c = null;
         if (param0 != 0) {
-            discarded$0 = gk.a(103, 65, true, (byte) -104);
+            gk.a(103, 65, true, (byte) -104);
             field_d = null;
             return;
         }

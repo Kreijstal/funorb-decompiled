@@ -10,16 +10,16 @@ final class rk extends ov {
         if (param0 >= -47) {
             return;
         }
-        boolean discarded$0 = param2.drawImage(this.field_f, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_j));
+        param2.drawImage(this.field_f, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_j));
     }
 
     public rk() {
     }
 
     final void a(java.awt.Component param0, int param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         this.field_c = new int[1 + param1 * param2];
         this.field_b = param1;
         this.field_h = param2;

@@ -27,23 +27,13 @@ final class gp extends ak {
 
     final static void a(boolean param0, String param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -138,27 +128,19 @@ final class gp extends ak {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var3 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) (var3);
-            stackOut_29_1 = new StringBuilder().append("gp.I(").append(param0).append(',');
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            stackIn_31_0 = (RuntimeException) (var3);
+
+            stackIn_31_1 = new StringBuilder().append("gp.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L9;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L9;
             }
           }
@@ -167,7 +149,7 @@ final class gp extends ak {
     }
 
     private final void a(boolean param0, int param1, int param2, int param3, byte param4) {
-        int var6 = 0;
+        int var6;
         L0: {
           if (!this.field_Gb.e((byte) 123)) {
             break L0;
@@ -416,15 +398,11 @@ final class gp extends ak {
     }
 
     private final boolean a(int param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6) {
-        uj discarded$4 = null;
-        uj discarded$5 = null;
-        uj discarded$6 = null;
-        uj discarded$7 = null;
-        int var8 = 0;
+        int var8;
         if (param3) {
           var8 = 1;
           if (param5 != 7736) {
-            discarded$4 = gp.a(-48, -99L);
+            gp.a(-48, -99L);
             this.field_Fb.a(param1, (byte) -128, var8 != 0, this.field_Ib.field_nb);
             this.a(false, param4, param2, param0, (byte) 127);
             return var8 != 0;
@@ -438,7 +416,7 @@ final class gp extends ak {
             if (!param6) {
               var8 = 1;
               if (param5 != 7736) {
-                discarded$5 = gp.a(-48, -99L);
+                gp.a(-48, -99L);
                 this.field_Fb.a(param1, (byte) -128, var8 != 0, this.field_Ib.field_nb);
                 this.a(false, param4, param2, param0, (byte) 127);
                 return var8 != 0;
@@ -450,7 +428,7 @@ final class gp extends ak {
             } else {
               var8 = 0;
               if (param5 != 7736) {
-                discarded$6 = gp.a(-48, -99L);
+                gp.a(-48, -99L);
                 this.field_Fb.a(param1, (byte) -128, var8 != 0, this.field_Ib.field_nb);
                 this.a(false, param4, param2, param0, (byte) 127);
                 return var8 != 0;
@@ -463,7 +441,7 @@ final class gp extends ak {
           } else {
             var8 = 0;
             if (param5 != 7736) {
-              discarded$7 = gp.a(-48, -99L);
+              gp.a(-48, -99L);
               this.field_Fb.a(param1, (byte) -128, var8 != 0, this.field_Ib.field_nb);
               this.a(false, param4, param2, param0, (byte) 127);
               return var8 != 0;
@@ -477,7 +455,7 @@ final class gp extends ak {
     }
 
     final static uj a(int param0, long param1) {
-        String var4 = null;
+        String var4;
         if (param0 != 2) {
           var4 = (String) null;
           gp.a(true, (String) null, -69);
@@ -504,9 +482,8 @@ final class gp extends ak {
     }
 
     final boolean a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
-        boolean discarded$2 = false;
         if (param4 != 0) {
-          discarded$2 = this.a(false, true, -57, 93, -15, 99);
+          this.a(false, true, -57, 93, -15, 99);
           return this.a(param3, param2, param5, param1, this.field_Ib.field_nb, 7736, param0);
         } else {
           return this.a(param3, param2, param5, param1, this.field_Ib.field_nb, 7736, param0);

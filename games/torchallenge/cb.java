@@ -11,9 +11,8 @@ final class cb {
     static ka field_f;
 
     final static void a(int param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         var1 = te.field_b;
         synchronized (var1) {
           L0: {
@@ -55,6 +54,8 @@ final class cb {
     }
 
     final static void a(int param0, int param1, byte param2, int param3) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         Object var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -63,9 +64,6 @@ final class cb {
         qe var9 = null;
         qe var10 = null;
         qe var11 = null;
-        qe var12 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -111,13 +109,13 @@ final class cb {
                     if (hc.field_Q) {
                       if (ea.field_g.length > lh.field_s) {
                         L6: {
-                          var12 = ea.field_g[lh.field_s];
-                          if (var12 == null) {
+                          var4 = ea.field_g[lh.field_s];
+                          if (var4 == null) {
                             break L6;
                           } else {
-                            if ((var12.field_F ^ -1) == -5) {
+                            if ((((qe) (var4)).field_F ^ -1) == -5) {
                               L7: {
-                                dg.a(var12.field_o, dg.field_T[var12.field_F], var12.field_V, 1, param0, var12.field_y, var12.field_H, param1, (byte) -72, param3);
+                                dg.a(((qe) (var4)).field_o, dg.field_T[((qe) (var4)).field_F], ((qe) (var4)).field_V, 1, param0, ((qe) (var4)).field_y, ((qe) (var4)).field_H, param1, (byte) -72, param3);
                                 if (nj.field_g != 0) {
                                   break L7;
                                 } else {
@@ -179,6 +177,7 @@ final class cb {
                     break L9;
                   } else {
                     var10 = ea.field_g[var7];
+                    var4 = var10;
                     if (4 == var10.field_F) {
                       var6 = ue.a(var10.field_o, param3, var10.field_H, param1, (byte) 79);
                       if (-1 < (var6 ^ -1)) {

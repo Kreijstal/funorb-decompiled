@@ -11,10 +11,6 @@ final class ap implements pv {
     private boolean field_f;
 
     public final jaclib.memory.Buffer a(int param0, boolean param1) {
-        int discarded$2 = 0;
-        jagdx.IDirect3DVertexBuffer stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        int stackIn_6_2 = 0;
         jagdx.IDirect3DVertexBuffer stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_7_2 = 0;
@@ -22,9 +18,6 @@ final class ap implements pv {
         int stackIn_8_1 = 0;
         int stackIn_8_2 = 0;
         int stackIn_8_3 = 0;
-        jagdx.IDirect3DVertexBuffer stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
-        int stackIn_15_2 = 0;
         jagdx.IDirect3DVertexBuffer stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         int stackIn_16_2 = 0;
@@ -32,61 +25,28 @@ final class ap implements pv {
         int stackIn_17_1 = 0;
         int stackIn_17_2 = 0;
         int stackIn_17_3 = 0;
-        jagdx.IDirect3DVertexBuffer stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        int stackOut_14_2 = 0;
-        jagdx.IDirect3DVertexBuffer stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        int stackOut_16_2 = 0;
-        int stackOut_16_3 = 0;
-        jagdx.IDirect3DVertexBuffer stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        int stackOut_15_2 = 0;
-        int stackOut_15_3 = 0;
-        jagdx.IDirect3DVertexBuffer stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        jagdx.IDirect3DVertexBuffer stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        int stackOut_7_3 = 0;
-        jagdx.IDirect3DVertexBuffer stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
-        int stackOut_6_3 = 0;
         if (null != this.field_b) {
           if (param0 == 7454) {
             param1 = param1 & this.field_f;
             if (!this.field_d) {
               L0: {
-                stackOut_14_0 = this.field_b;
-                stackOut_14_1 = 0;
-                stackOut_14_2 = this.field_g;
-                stackIn_16_0 = stackOut_14_0;
-                stackIn_16_1 = stackOut_14_1;
-                stackIn_16_2 = stackOut_14_2;
-                stackIn_15_0 = stackOut_14_0;
-                stackIn_15_1 = stackOut_14_1;
-                stackIn_15_2 = stackOut_14_2;
+                stackIn_16_0 = this.field_b;
+
+                stackIn_16_1 = 0;
+
+                stackIn_16_2 = this.field_g;
+
                 if (!param1) {
-                  stackOut_16_0 = (jagdx.IDirect3DVertexBuffer) ((Object) stackIn_16_0);
-                  stackOut_16_1 = stackIn_16_1;
-                  stackOut_16_2 = stackIn_16_2;
-                  stackOut_16_3 = 0;
-                  stackIn_17_0 = stackOut_16_0;
-                  stackIn_17_1 = stackOut_16_1;
-                  stackIn_17_2 = stackOut_16_2;
-                  stackIn_17_3 = stackOut_16_3;
+                  stackIn_17_0 = (jagdx.IDirect3DVertexBuffer) ((Object) stackIn_16_0);
+                  stackIn_17_1 = stackIn_16_1;
+                  stackIn_17_2 = stackIn_16_2;
+                  stackIn_17_3 = 0;
                   break L0;
                 } else {
-                  stackOut_15_0 = (jagdx.IDirect3DVertexBuffer) ((Object) stackIn_15_0);
-                  stackOut_15_1 = stackIn_15_1;
-                  stackOut_15_2 = stackIn_15_2;
-                  stackOut_15_3 = 8192;
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_17_1 = stackOut_15_1;
-                  stackIn_17_2 = stackOut_15_2;
-                  stackIn_17_3 = stackOut_15_3;
+                  stackIn_17_0 = (jagdx.IDirect3DVertexBuffer) ((Object) stackIn_16_0);
+                  stackIn_17_1 = stackIn_16_1;
+                  stackIn_17_2 = stackIn_16_2;
+                  stackIn_17_3 = 8192;
                   break L0;
                 }
               }
@@ -100,38 +60,27 @@ final class ap implements pv {
               return null;
             }
           } else {
-            discarded$2 = this.c(-80);
+            this.c(-80);
             param1 = param1 & this.field_f;
             if (!this.field_d) {
               L1: {
-                stackOut_5_0 = this.field_b;
-                stackOut_5_1 = 0;
-                stackOut_5_2 = this.field_g;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
-                stackIn_7_2 = stackOut_5_2;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
-                stackIn_6_2 = stackOut_5_2;
+                stackIn_7_0 = this.field_b;
+
+                stackIn_7_1 = 0;
+
+                stackIn_7_2 = this.field_g;
+
                 if (!param1) {
-                  stackOut_7_0 = (jagdx.IDirect3DVertexBuffer) ((Object) stackIn_7_0);
-                  stackOut_7_1 = stackIn_7_1;
-                  stackOut_7_2 = stackIn_7_2;
-                  stackOut_7_3 = 0;
-                  stackIn_8_0 = stackOut_7_0;
-                  stackIn_8_1 = stackOut_7_1;
-                  stackIn_8_2 = stackOut_7_2;
-                  stackIn_8_3 = stackOut_7_3;
+                  stackIn_8_0 = (jagdx.IDirect3DVertexBuffer) ((Object) stackIn_7_0);
+                  stackIn_8_1 = stackIn_7_1;
+                  stackIn_8_2 = stackIn_7_2;
+                  stackIn_8_3 = 0;
                   break L1;
                 } else {
-                  stackOut_6_0 = (jagdx.IDirect3DVertexBuffer) ((Object) stackIn_6_0);
-                  stackOut_6_1 = stackIn_6_1;
-                  stackOut_6_2 = stackIn_6_2;
-                  stackOut_6_3 = 8192;
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_8_1 = stackOut_6_1;
-                  stackIn_8_2 = stackOut_6_2;
-                  stackIn_8_3 = stackOut_6_3;
+                  stackIn_8_0 = (jagdx.IDirect3DVertexBuffer) ((Object) stackIn_7_0);
+                  stackIn_8_1 = stackIn_7_1;
+                  stackIn_8_2 = stackIn_7_2;
+                  stackIn_8_3 = 8192;
                   break L1;
                 }
               }
@@ -178,6 +127,7 @@ final class ap implements pv {
             return;
           }
         } else {
+          this.field_b.a(param0 ^ -30320);
           this.field_b = null;
           this.field_a = 0;
           this.field_g = 0;
@@ -191,17 +141,11 @@ final class ap implements pv {
     }
 
     public final boolean a(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_11_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
+        int var4;
+        int var5;
         if (param1 == -35) {
           this.field_e = (byte)param0;
           this.field_a = param2;
@@ -219,15 +163,14 @@ final class ap implements pv {
             }
             if (this.field_b != null) {
               L1: {
+                this.field_b.a(-22671);
                 this.field_b = this.field_c.field_Cc.a(this.field_a, var5, 0, var4, this.field_b);
                 this.field_g = this.field_a;
                 if (this.field_b == null) {
-                  stackOut_14_0 = 0;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = 0;
                   break L1;
                 } else {
-                  stackOut_13_0 = 1;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = 1;
                   break L1;
                 }
               }
@@ -237,12 +180,10 @@ final class ap implements pv {
                 this.field_b = this.field_c.field_Cc.a(this.field_a, var5, 0, var4, this.field_b);
                 this.field_g = this.field_a;
                 if (this.field_b == null) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = 0;
                   break L2;
                 } else {
-                  stackOut_9_0 = 1;
-                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_11_0 = 1;
                   break L2;
                 }
               }
@@ -251,12 +192,10 @@ final class ap implements pv {
           } else {
             L3: {
               if (this.field_b == null) {
-                stackOut_19_0 = 0;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = 0;
                 break L3;
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 1;
                 break L3;
               }
             }

@@ -7,11 +7,10 @@ final class i {
 
     final static void a(int param0) {
         Object var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
-        Throwable var3 = null;
         int var4 = 0;
         Throwable decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = Main.field_T;
         try {
           L0: {

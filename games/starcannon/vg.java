@@ -7,7 +7,7 @@ final class vg {
     static String field_a;
 
     final static void a(int param0) {
-        String var1 = null;
+        String var1;
         if (!tc.field_x) {
           throw new IllegalStateException();
         } else {

@@ -37,18 +37,8 @@ final class nb extends ig {
     }
 
     final boolean a(rj param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
-        RuntimeException var8 = null;
-        int var8_int = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
         int stackIn_20_0 = 0;
         int stackIn_24_0 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
@@ -56,16 +46,14 @@ final class nb extends ig {
         String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_23_0 = 0;
-        int stackOut_19_0 = 0;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        int var8_int = 0;
+        RuntimeException var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
         var14 = stellarshard.field_B;
         try {
           L0: {
@@ -78,8 +66,7 @@ final class nb extends ig {
                   break L1;
                 }
               }
-              stackOut_23_0 = 0;
-              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
@@ -125,7 +112,7 @@ final class nb extends ig {
                         L6: {
                           var13 = this.field_L.a((byte) -117, var12) - var8_int;
                           var13 = var13 * var13;
-                          if (var10 > var13) {
+                          if ((var10 ^ -1) < (var13 ^ -1)) {
                             var10 = var13;
                             var11 = var12;
                             break L6;
@@ -140,8 +127,7 @@ final class nb extends ig {
                   }
                 }
               }
-              stackOut_19_0 = 1;
-              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -150,27 +136,19 @@ final class nb extends ig {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var8 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var8);
-            stackOut_25_1 = new StringBuilder().append("nb.P(");
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var8);
+
+            stackIn_27_1 = new StringBuilder().append("nb.P(");
+
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L7;
             }
           }
@@ -203,10 +181,9 @@ final class nb extends ig {
     }
 
     final int d(boolean param0) {
-        boolean discarded$0 = false;
         if (!param0) {
             rj var3 = (rj) null;
-            discarded$0 = this.a((rj) null, -89, -58, -17, 18, (byte) 87, -5);
+            this.a((rj) null, -89, -58, -17, 18, (byte) 87, -5);
         }
         return this.field_L.a(19692);
     }
@@ -228,9 +205,9 @@ final class nb extends ig {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
+            int var0;
+            int var1;
+            int var2;
             field_K = new di();
             field_H = 0;
             field_F = new int[256];

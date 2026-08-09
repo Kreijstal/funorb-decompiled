@@ -20,8 +20,6 @@ abstract class rj {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_14_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -29,17 +27,6 @@ abstract class rj {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_13_0 = null;
-        String stackOut_5_0 = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -73,20 +60,17 @@ abstract class rj {
                       }
                     }
                   }
-                  stackOut_13_0 = ne.field_c + " - " + var4 / (-1 + var9.length) + "%";
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_0 = ne.field_c + " - " + var4 / (-1 + var9.length) + "%";
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_5_0 = (String) null;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (String) null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = bd.field_r;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = bd.field_r;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -95,27 +79,19 @@ abstract class rj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var2_ref);
-            stackOut_15_1 = new StringBuilder().append("rj.C(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var2_ref);
+
+            stackIn_17_1 = new StringBuilder().append("rj.C(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L4;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L4;
             }
           }
@@ -133,11 +109,9 @@ abstract class rj {
     }
 
     final static h b(boolean param0) {
-        h discarded$4 = null;
-        h discarded$5 = null;
         if (null != eh.field_e) {
           if (!param0) {
-            discarded$4 = rj.b(false);
+            rj.b(false);
             return eh.field_e;
           } else {
             return eh.field_e;
@@ -147,7 +121,7 @@ abstract class rj {
           if (param0) {
             return eh.field_e;
           } else {
-            discarded$5 = rj.b(false);
+            rj.b(false);
             return eh.field_e;
           }
         }

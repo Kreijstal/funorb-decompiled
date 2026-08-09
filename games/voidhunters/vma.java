@@ -5,7 +5,7 @@ final class vma {
     private static String field_z;
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         L0: {
           if ((param1 ^ -1) <= -1) {
             break L0;

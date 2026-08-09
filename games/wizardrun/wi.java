@@ -15,10 +15,9 @@ final class wi extends mi {
     }
 
     final ub a(byte param0) {
-        ub discarded$2 = null;
-        pf var2 = null;
-        tj var3 = null;
-        int var4 = 0;
+        pf var2;
+        tj var3;
+        int var4;
         L0: {
           var4 = wizardrun.field_H;
           var2 = new pf(this.field_I);
@@ -26,7 +25,7 @@ final class wi extends mi {
           if (param0 < -29) {
             break L0;
           } else {
-            discarded$2 = this.a((byte) -88);
+            this.a((byte) -88);
             break L0;
           }
         }
@@ -74,9 +73,9 @@ final class wi extends mi {
     }
 
     final tj f(int param0) {
-        pf var2 = null;
-        tj var3 = null;
-        int var4 = 0;
+        pf var2;
+        tj var3;
+        int var4;
         var4 = wizardrun.field_H;
         var2 = new pf(this.field_I);
         if (param0 == 0) {
@@ -100,19 +99,17 @@ final class wi extends mi {
 
     final void b(ub param0, byte param1) {
         tj var3 = null;
-        tj discarded$0 = null;
-        boolean discarded$1 = false;
         try {
             if (!(param0 instanceof tj)) {
                 throw new IllegalArgumentException();
             }
             var3 = (tj) ((Object) param0);
             if (param1 < 50) {
-                discarded$0 = this.f(95);
+                this.f(95);
             }
             this.field_I.a(var3, -5441);
             var3.field_H = true;
-            discarded$1 = var3.a((ub) (this), 8);
+            var3.a((ub) (this), 8);
         } catch (RuntimeException runtimeException) {
             throw bd.a((Throwable) ((Object) runtimeException), "wi.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

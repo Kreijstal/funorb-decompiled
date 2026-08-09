@@ -39,12 +39,11 @@ final class uga extends ana {
     }
 
     private final void e(byte param0) {
-        oha discarded$1 = null;
-        Object var3 = null;
-        iv var3_ref = null;
-        int var5 = 0;
-        aga var6 = null;
-        ad var7 = null;
+        Object var3;
+        iv var3_ref;
+        int var5;
+        aga var6;
+        ad var7;
         L0: {
           var3 = null;
           var5 = BachelorFridge.field_y;
@@ -60,7 +59,7 @@ final class uga extends ana {
           return;
         } else {
           var3_ref = (iv) ((Object) this.field_z.field_o.b((byte) 90));
-          discarded$1 = al.a(-86, this.field_z.field_k);
+          al.a(-86, this.field_z.field_k);
           L1: while (true) {
             if (var3_ref == null) {
               return;
@@ -83,18 +82,16 @@ final class uga extends ana {
     }
 
     final static String a(long param0, int param1) {
-        StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        int var3 = 0;
-        long var4 = 0L;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        StringBuilder var12 = null;
-        StringBuilder var13 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        int var3;
+        long var4;
+        long var7;
+        int var9;
+        int var10;
+        int var11;
+        StringBuilder var12;
+        StringBuilder var13;
         var11 = BachelorFridge.field_y;
         if (param1 > 43) {
           if (param0 > 0L) {
@@ -109,7 +106,7 @@ final class uga extends ana {
                     var13 = new StringBuilder(var3);
                     L1: while (true) {
                       if (-1L == (param0 ^ -1L)) {
-                        discarded$4 = var13.reverse();
+                        var13.reverse();
                         var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
                         return var13.toString();
                       } else {
@@ -126,7 +123,7 @@ final class uga extends ana {
                             break L2;
                           }
                         }
-                        discarded$5 = var13.append((char) var9);
+                        discarded$2 = var13.append((char) var9);
                         continue L1;
                       }
                     }
@@ -157,7 +154,7 @@ final class uga extends ana {
                     var12 = new StringBuilder(var3);
                     L4: while (true) {
                       if (-1L == (param0 ^ -1L)) {
-                        discarded$6 = var12.reverse();
+                        var12.reverse();
                         var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
                         return var12.toString();
                       } else {
@@ -174,7 +171,7 @@ final class uga extends ana {
                             break L5;
                           }
                         }
-                        discarded$7 = var12.append((char) var9);
+                        discarded$3 = var12.append((char) var9);
                         continue L4;
                       }
                     }

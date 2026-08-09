@@ -7,7 +7,7 @@ final class mda {
     static sna field_c;
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         var2 = 0;
         if (-1 >= (param0 ^ -1)) {
           if ((param0 ^ -1) <= -65537) {

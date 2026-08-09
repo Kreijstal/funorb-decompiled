@@ -30,7 +30,6 @@ final class jf extends n {
 
     final static void m(int param0) {
         double var1_double = 0.0;
-        RuntimeException var1 = null;
         double var3 = 0.0;
         double var5 = 0.0;
         double var7 = 0.0;
@@ -39,6 +38,7 @@ final class jf extends n {
         int var11 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {

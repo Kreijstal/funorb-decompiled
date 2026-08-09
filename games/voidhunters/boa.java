@@ -9,25 +9,14 @@ final class boa implements ntb {
     static String field_b;
 
     public final void b(byte param0, tv param1) {
-        boolean discarded$2 = false;
         boa var3 = null;
         RuntimeException var3_ref = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             var3 = (boa) ((Object) param1);
@@ -35,7 +24,7 @@ final class boa implements ntb {
             if (param0 > 54) {
               break L0;
             } else {
-              discarded$2 = boa.a(-115, -119);
+              boa.a(-115, -119);
               return;
             }
           }
@@ -43,27 +32,19 @@ final class boa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (var3_ref);
-            stackOut_3_1 = new StringBuilder().append("boa.D(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (var3_ref);
+
+            stackIn_5_1 = new StringBuilder().append("boa.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L1;
             }
           }
@@ -72,9 +53,6 @@ final class boa implements ntb {
     }
 
     final int a(byte param0) {
-        int stackIn_2_0 = 0;
-        int stackIn_2_1 = 0;
-        int[] stackIn_2_2 = null;
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
         int[] stackIn_3_2 = null;
@@ -82,49 +60,27 @@ final class boa implements ntb {
         int stackIn_4_1 = 0;
         int[] stackIn_4_2 = null;
         int stackIn_4_3 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_1_1 = 0;
-        int[] stackOut_1_2 = null;
-        int stackOut_3_0 = 0;
-        int stackOut_3_1 = 0;
-        int[] stackOut_3_2 = null;
-        int stackOut_3_3 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_2_1 = 0;
-        int[] stackOut_2_2 = null;
-        int stackOut_2_3 = 0;
         if (param0 <= 113) {
           return 100;
         } else {
           L0: {
-            stackOut_1_0 = -95;
-            stackOut_1_1 = 8;
-            stackOut_1_2 = this.field_c;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
-            stackIn_2_0 = stackOut_1_0;
-            stackIn_2_1 = stackOut_1_1;
-            stackIn_2_2 = stackOut_1_2;
+            stackIn_3_0 = -95;
+
+            stackIn_3_1 = 8;
+
+            stackIn_3_2 = this.field_c;
+
             if (null == this.field_c) {
-              stackOut_3_0 = stackIn_3_0;
-              stackOut_3_1 = stackIn_3_1;
-              stackOut_3_2 = (int[]) ((Object) stackIn_3_2);
-              stackOut_3_3 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              stackIn_4_2 = stackOut_3_2;
-              stackIn_4_3 = stackOut_3_3;
+              stackIn_4_0 = stackIn_3_0;
+              stackIn_4_1 = stackIn_3_1;
+              stackIn_4_2 = (int[]) ((Object) stackIn_3_2);
+              stackIn_4_3 = 0;
               break L0;
             } else {
-              stackOut_2_0 = stackIn_2_0;
-              stackOut_2_1 = stackIn_2_1;
-              stackOut_2_2 = (int[]) ((Object) stackIn_2_2);
-              stackOut_2_3 = this.field_c.length;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              stackIn_4_2 = stackOut_2_2;
-              stackIn_4_3 = stackOut_2_3;
+              stackIn_4_0 = stackIn_3_0;
+              stackIn_4_1 = stackIn_3_1;
+              stackIn_4_2 = (int[]) ((Object) stackIn_3_2);
+              stackIn_4_3 = this.field_c.length;
               break L0;
             }
           }
@@ -133,24 +89,13 @@ final class boa implements ntb {
     }
 
     public final void a(faa param0, boolean param1) {
-        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -158,7 +103,7 @@ final class boa implements ntb {
               if (!param1) {
                 break L1;
               } else {
-                discarded$2 = boa.a(-120, 56);
+                boa.a(-120, 56);
                 break L1;
               }
             }
@@ -168,27 +113,19 @@ final class boa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("boa.H(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("boa.H(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -198,12 +135,11 @@ final class boa implements ntb {
 
     final static boolean a(int param0, int param1) {
         try {
-            boolean discarded$0 = false;
             if (qga.field_b.field_e >= param0) {
                 return true;
             }
             if (param1 != 30000) {
-                discarded$0 = boa.a(-32, -68);
+                boa.a(-32, -68);
             }
             if (null == ov.field_o) {
                 return false;
@@ -224,10 +160,8 @@ final class boa implements ntb {
             }
             try {
                 if (false) throw (IOException) null;
-                if (var2_int >= 0) {
-                    if (30000L >= mw.e(0)) {
-                        return false;
-                    }
+                if (var2_int >= 0 && 30000L >= mw.e(0)) {
+                    return false;
                 }
                 ifb.l(param1 ^ -30026);
             } catch (IOException iOException) {
@@ -245,22 +179,12 @@ final class boa implements ntb {
         boa var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
@@ -293,27 +217,19 @@ final class boa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3_ref);
-            stackOut_8_1 = new StringBuilder().append("boa.F(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3_ref);
+
+            stackIn_10_1 = new StringBuilder().append("boa.F(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -326,56 +242,36 @@ final class boa implements ntb {
         RuntimeException var3_ref = null;
         int var4 = 0;
         boolean stackIn_1_0 = false;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_0_0 = false;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var3 = (boa) ((Object) param1);
             var4 = -3 / ((param0 - 22) / 59);
-            stackOut_0_0 = wpb.a(var3.field_c, this.field_c, (byte) 28);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = wpb.a(var3.field_c, this.field_c, (byte) 28);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var3_ref);
-            stackOut_2_1 = new StringBuilder().append("boa.C(").append(param0).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var3_ref);
+
+            stackIn_4_1 = new StringBuilder().append("boa.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -398,48 +294,27 @@ final class boa implements ntb {
     public final void b(faa param0, int param1) {
         RuntimeException var3 = null;
         faa var4 = null;
-        int stackIn_1_0 = 0;
         int stackIn_2_0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_0_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_2_1 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_1_1 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
-              stackOut_0_0 = 8;
-              stackIn_2_0 = stackOut_0_0;
-              stackIn_1_0 = stackOut_0_0;
+              stackIn_2_0 = 8;
+
               if (null == this.field_c) {
-                stackOut_2_0 = stackIn_2_0;
-                stackOut_2_1 = 0;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
+                stackIn_3_0 = stackIn_2_0;
+                stackIn_3_1 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = stackIn_1_0;
-                stackOut_1_1 = this.field_c.length;
-                stackIn_3_0 = stackOut_1_0;
-                stackIn_3_1 = stackOut_1_1;
+                stackIn_3_0 = stackIn_2_0;
+                stackIn_3_1 = this.field_c.length;
                 break L1;
               }
             }
@@ -456,27 +331,19 @@ final class boa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("boa.B(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("boa.B(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }

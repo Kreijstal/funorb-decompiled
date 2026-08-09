@@ -47,7 +47,7 @@ final class mk extends ai {
     }
 
     final static void b(int param0) {
-        ud var1 = null;
+        ud var1;
         if (param0 != 128) {
           L0: {
             field_m = (String) null;

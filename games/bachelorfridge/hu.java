@@ -12,11 +12,10 @@ public class hu {
     private static String field_e;
 
     public static File a(String param0, int param1) {
-        File discarded$2 = null;
-        String var3 = null;
+        String var3;
         if (param1 != 0) {
           var3 = (String) null;
-          discarded$2 = hu.a((String) null, -116);
+          hu.a((String) null, -116);
           return hu.a(field_a, param0, field_e, 1);
         } else {
           return hu.a(field_a, param0, field_e, 1);

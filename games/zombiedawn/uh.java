@@ -20,24 +20,24 @@ final class uh {
     private int field_k;
 
     final void g(int param0) {
-        int var2 = 0;
-        wk var3 = null;
-        ej var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
+        int var2;
+        wk var3;
+        ej var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
         var19 = ZombieDawn.field_J;
         if (param0 == -1293) {
           L0: {
@@ -143,20 +143,11 @@ final class uh {
     }
 
     private final int c(int param0) {
-        int var2 = 0;
-        L0: {
-          var2 = -40 % ((param0 - -59) / 44);
-          if (this.field_k == -1) {
-            break L0;
-          } else {
-            if (this.field_b[this.field_k] != null) {
-              return this.field_b[this.field_k].b((byte) -111);
-            } else {
-              break L0;
-            }
-          }
+        int var2 = -40 % ((param0 - -59) / 44);
+        if (this.field_k == -1 || this.field_b[this.field_k] == null) {
+            return -1;
         }
-        return -1;
+        return this.field_b[this.field_k].b((byte) -111);
     }
 
     final boolean a(byte param0) {
@@ -172,25 +163,12 @@ final class uh {
         int var3 = 0;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -204,45 +182,34 @@ final class uh {
             }
             L2: {
               if (-2 == (var2_int ^ -1)) {
-                stackOut_4_0 = 1;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 1;
                 break L2;
               } else {
-                stackOut_3_0 = 0;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 0;
                 break L2;
               }
             }
             var3 = stackIn_5_0;
-            stackOut_5_0 = var3;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = var3;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2);
-            stackOut_7_1 = new StringBuilder().append("uh.C(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2);
+
+            stackIn_9_1 = new StringBuilder().append("uh.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -252,10 +219,9 @@ final class uh {
     }
 
     final void a(byte param0, int param1) {
-        boolean discarded$1 = false;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = ZombieDawn.field_J;
           this.field_k = -1;
@@ -275,7 +241,7 @@ final class uh {
             return;
           } else {
             if (null != qp.a(param1 + var4, 95)) {
-              discarded$1 = this.b(-4149, var4 + param1);
+              this.b(-4149, var4 + param1);
               var4++;
               continue L1;
             } else {
@@ -287,13 +253,13 @@ final class uh {
     }
 
     final void b(byte param0) {
-        cc[] var2_ref_cc__ = null;
-        int var2 = 0;
-        int var3 = 0;
-        cc var4 = null;
-        int var5 = 0;
-        g var6 = null;
-        cc[] var7 = null;
+        cc[] var2_ref_cc__;
+        int var2;
+        int var3;
+        cc var4;
+        int var5;
+        g var6;
+        cc[] var7;
         L0: {
           var5 = ZombieDawn.field_J;
           if (param0 == -55) {
@@ -384,164 +350,35 @@ final class uh {
     }
 
     final void b(int param0, int param1, boolean param2) {
-        boolean discarded$3 = false;
-        int var4 = 0;
-        int var5 = 0;
-        hi stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        int stackIn_8_2 = 0;
-        hi stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        int stackIn_9_2 = 0;
-        hi stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
-        int stackIn_10_2 = 0;
-        int stackIn_10_3 = 0;
-        hi stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
-        int stackIn_15_2 = 0;
-        hi stackIn_16_0 = null;
-        int stackIn_16_1 = 0;
-        int stackIn_16_2 = 0;
-        hi stackIn_17_0 = null;
-        int stackIn_17_1 = 0;
-        int stackIn_17_2 = 0;
-        int stackIn_17_3 = 0;
-        hi stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        int stackOut_14_2 = 0;
-        hi stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        int stackOut_16_2 = 0;
-        int stackOut_16_3 = 0;
-        hi stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        int stackOut_15_2 = 0;
-        int stackOut_15_3 = 0;
-        hi stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        hi stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        int stackOut_9_3 = 0;
-        hi stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
-        int stackOut_8_3 = 0;
-        var5 = ZombieDawn.field_J;
-        var4 = this.c(-116);
-        if ((var4 ^ -1) != 0) {
-          L0: {
-            if (var4 != 9) {
-              if (-11 != (var4 ^ -1)) {
-                if (var4 != 13) {
-                  if (var4 == 15) {
-                    L1: {
-                      stackOut_14_0 = dj.field_e;
-                      stackOut_14_1 = param0;
-                      stackOut_14_2 = param1;
-                      stackIn_16_0 = stackOut_14_0;
-                      stackIn_16_1 = stackOut_14_1;
-                      stackIn_16_2 = stackOut_14_2;
-                      stackIn_15_0 = stackOut_14_0;
-                      stackIn_15_1 = stackOut_14_1;
-                      stackIn_15_2 = stackOut_14_2;
-                      if (param2) {
-                        stackOut_16_0 = (hi) ((Object) stackIn_16_0);
-                        stackOut_16_1 = stackIn_16_1;
-                        stackOut_16_2 = stackIn_16_2;
-                        stackOut_16_3 = 0;
-                        stackIn_17_0 = stackOut_16_0;
-                        stackIn_17_1 = stackOut_16_1;
-                        stackIn_17_2 = stackOut_16_2;
-                        stackIn_17_3 = stackOut_16_3;
-                        break L1;
-                      } else {
-                        stackOut_15_0 = (hi) ((Object) stackIn_15_0);
-                        stackOut_15_1 = stackIn_15_1;
-                        stackOut_15_2 = stackIn_15_2;
-                        stackOut_15_3 = 1;
-                        stackIn_17_0 = stackOut_15_0;
-                        stackIn_17_1 = stackOut_15_1;
-                        stackIn_17_2 = stackOut_15_2;
-                        stackIn_17_3 = stackOut_15_3;
-                        break L1;
-                      }
-                    }
-                    ((hi) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_17_2, stackIn_17_3 != 0, 120);
-                    break L0;
-                  } else {
-                    if (var4 != 12) {
-                      break L0;
-                    } else {
-                      dj.field_e.f((byte) 9);
-                      break L0;
-                    }
-                  }
-                } else {
-                  L2: {
-                    stackOut_7_0 = dj.field_e;
-                    stackOut_7_1 = 1;
-                    stackOut_7_2 = param0;
-                    stackIn_9_0 = stackOut_7_0;
-                    stackIn_9_1 = stackOut_7_1;
-                    stackIn_9_2 = stackOut_7_2;
-                    stackIn_8_0 = stackOut_7_0;
-                    stackIn_8_1 = stackOut_7_1;
-                    stackIn_8_2 = stackOut_7_2;
-                    if (param2) {
-                      stackOut_9_0 = (hi) ((Object) stackIn_9_0);
-                      stackOut_9_1 = stackIn_9_1;
-                      stackOut_9_2 = stackIn_9_2;
-                      stackOut_9_3 = 0;
-                      stackIn_10_0 = stackOut_9_0;
-                      stackIn_10_1 = stackOut_9_1;
-                      stackIn_10_2 = stackOut_9_2;
-                      stackIn_10_3 = stackOut_9_3;
-                      break L2;
-                    } else {
-                      stackOut_8_0 = (hi) ((Object) stackIn_8_0);
-                      stackOut_8_1 = stackIn_8_1;
-                      stackOut_8_2 = stackIn_8_2;
-                      stackOut_8_3 = 1;
-                      stackIn_10_0 = stackOut_8_0;
-                      stackIn_10_1 = stackOut_8_1;
-                      stackIn_10_2 = stackOut_8_2;
-                      stackIn_10_3 = stackOut_8_3;
-                      break L2;
-                    }
-                  }
-                  discarded$3 = ((hi) (Object) stackIn_10_0).b(stackIn_10_1, stackIn_10_2, stackIn_10_3 != 0, param1);
-                  break L0;
-                }
-              } else {
-                dj.field_e.a(false, -6355, param1, param0);
-                break L0;
-              }
-            } else {
-              dj.field_e.a(true, -6355, param1, param0);
-              break L0;
-            }
-          }
-          L3: {
-            if (!param2) {
-              break L3;
-            } else {
-              this.field_a = 83;
-              break L3;
-            }
-          }
-          this.b(-92);
-          return;
-        } else {
-          return;
+        int var5 = ZombieDawn.field_J;
+        int var4 = this.c(-116);
+        if ((var4 ^ -1) == 0) {
+            return;
         }
+        if (var4 == 9) {
+            dj.field_e.a(true, -6355, param1, param0);
+        } else {
+            if (-11 == (var4 ^ -1)) {
+                dj.field_e.a(false, -6355, param1, param0);
+            } else {
+                if (var4 == 13) {
+                    dj.field_e.b(1, param0, !param2 ? true : false, param1);
+                } else {
+                    if (var4 == 15 || var4 == 12) {
+                        dj.field_e.a(param0, param1, !param2 ? true : false, 120);
+                    }
+                }
+            }
+        }
+        if (param2) {
+            this.field_a = 83;
+        }
+        this.b(-92);
     }
 
     private final void c(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         L0: {
           L1: {
             var4 = ZombieDawn.field_J;
@@ -587,15 +424,14 @@ final class uh {
     }
 
     final void a(int param0, int param1, boolean param2) {
-        cc[] var4 = null;
-        int var5 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        cc[] var9 = null;
-        cc[] var10 = null;
-        int var11 = 0;
-        cc var12 = null;
-        cc var13 = null;
+        cc[] var4;
+        int var5;
+        cc var6;
+        int var8;
+        cc[] var9;
+        cc var10;
+        cc var11;
+        int var7;
         var8 = ZombieDawn.field_J;
         var9 = this.field_b;
         var4 = var9;
@@ -633,39 +469,40 @@ final class uh {
                   }
                 }
               }
-              var10 = this.field_b;
-              var4 = var10;
-              var11 = 0;
-              var5 = var11;
+              var4 = this.field_b;
+              var5 = 0;
               L4: while (true) {
-                if (var10.length <= var11) {
+                if (var4.length <= var5) {
                   return;
                 } else {
-                  var13 = var10[var11];
-                  if (var13 != null) {
-                    var7 = var13.a(param1, (byte) -128);
+                  var11 = var4[var5];
+                  var6 = var11;
+                  if (var6 != null) {
+                    var7 = var11.a(param1, (byte) -128);
                     if (var7 != -1) {
                       this.field_m = var7;
-                      this.field_d = 20 + var13.field_l;
-                      var11++;
+                      this.field_d = 20 + var11.field_l;
+                      var5++;
                       continue L4;
                     } else {
-                      var11++;
+                      var5++;
                       continue L4;
                     }
                   } else {
-                    var11++;
+                    var5++;
                     continue L4;
                   }
                 }
               }
             }
           } else {
-            var12 = var9[var5];
-            var13 = var12;
-            var13 = var12;
-            if (var12 != null) {
-              var12.a((byte) 117, param0, param1);
+            var10 = var9[var5];
+            var11 = var10;
+            var6 = var11;
+            var11 = var10;
+            var6 = var11;
+            if (var10 != null) {
+              var10.a((byte) 117, param0, param1);
               var5++;
               continue L0;
             } else {
@@ -677,16 +514,7 @@ final class uh {
     }
 
     final void a(int param0, g param1) {
-        boolean discarded$3 = false;
-        fn discarded$4 = null;
-        fn discarded$5 = null;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        kd var6 = null;
         g stackIn_6_0 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
         RuntimeException stackIn_48_0 = null;
@@ -694,28 +522,20 @@ final class uh {
         String stackIn_48_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_5_0 = null;
-        g stackOut_4_0 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        RuntimeException stackOut_47_0 = null;
-        StringBuilder stackOut_47_1 = null;
-        String stackOut_47_2 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        kd var6 = null;
         var5 = ZombieDawn.field_J;
         try {
           L0: {
             if (param0 == 67) {
               L1: {
                 if (!(param1 instanceof kd)) {
-                  stackOut_5_0 = null;
-                  stackIn_6_0 = (g) ((Object) stackOut_5_0);
+                  stackIn_6_0 = null;
                   break L1;
                 } else {
-                  stackOut_4_0 = (g) (param1);
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = (g) (param1);
                   break L1;
                 }
               }
@@ -794,7 +614,7 @@ final class uh {
                       }
                     }
                   } else {
-                    discarded$3 = var6.y(98);
+                    var6.y(98);
                     break L2;
                   }
                 }
@@ -810,7 +630,7 @@ final class uh {
                           break L4;
                         } else {
                           if (0 != var4) {
-                            discarded$4 = kh.a(46, false);
+                            kh.a(46, false);
                             break L3;
                           } else {
                             break L4;
@@ -819,7 +639,7 @@ final class uh {
                       }
                     }
                   }
-                  discarded$5 = kh.a(67, false);
+                  kh.a(67, false);
                   break L3;
                 }
                 this.b(-58);
@@ -835,27 +655,19 @@ final class uh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_45_0 = (RuntimeException) (var3);
-            stackOut_45_1 = new StringBuilder().append("uh.H(").append(param0).append(',');
-            stackIn_47_0 = stackOut_45_0;
-            stackIn_47_1 = stackOut_45_1;
-            stackIn_46_0 = stackOut_45_0;
-            stackIn_46_1 = stackOut_45_1;
+            stackIn_47_0 = (RuntimeException) (var3);
+
+            stackIn_47_1 = new StringBuilder().append("uh.H(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackOut_47_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackOut_47_2 = "null";
-              stackIn_48_0 = stackOut_47_0;
-              stackIn_48_1 = stackOut_47_1;
-              stackIn_48_2 = stackOut_47_2;
+              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
+              stackIn_48_2 = "null";
               break L5;
             } else {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "{...}";
-              stackIn_48_0 = stackOut_46_0;
-              stackIn_48_1 = stackOut_46_1;
-              stackIn_48_2 = stackOut_46_2;
+              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
+              stackIn_48_2 = "{...}";
               break L5;
             }
           }
@@ -912,33 +724,15 @@ final class uh {
     }
 
     final boolean a(byte param0, int param1, int param2) {
-        int var4 = 0;
-        if (param0 == 118) {
-          L0: {
-            var4 = (-190 + param2) / 40;
-            if (var4 < 0) {
-              break L0;
-            } else {
-              if (this.field_n <= var4) {
-                break L0;
-              } else {
-                if (null == this.field_b[var4]) {
-                  break L0;
-                } else {
-                  if (this.field_b[var4].a(false, param1, param2)) {
-                    this.a(3158064, var4);
-                    return true;
-                  } else {
-                    return false;
-                  }
-                }
-              }
-            }
-          }
-          return false;
-        } else {
-          return false;
+        if (param0 != 118) {
+            return false;
         }
+        int var4 = (-190 + param2) / 40;
+        if (var4 < 0 || this.field_n <= var4 || null == this.field_b[var4] || !this.field_b[var4].a(false, param1, param2)) {
+            return false;
+        }
+        this.a(3158064, var4);
+        return true;
     }
 
     final boolean d(int param0) {
@@ -973,24 +767,14 @@ final class uh {
     final static void a(int param0, int param1, int param2, java.awt.Canvas param3) {
         java.awt.Graphics var4 = null;
         int var4_int = 0;
-        Exception var4_ref = null;
-        RuntimeException var4_ref2 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        Exception var4_ref = null;
+        RuntimeException var4_ref2 = null;
         try {
           L0: {
             try {
@@ -1015,27 +799,19 @@ final class uh {
           decompiledCaughtException = decompiledCaughtParameter1;
           L3: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var4_ref2);
-            stackOut_5_1 = new StringBuilder().append("uh.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var4_ref2);
+
+            stackIn_7_1 = new StringBuilder().append("uh.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L3;
             }
           }
@@ -1044,9 +820,9 @@ final class uh {
     }
 
     private final void b(int param0) {
-        int fieldTemp$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int fieldTemp$0 = 0;
+        int var2;
+        int var3;
         var3 = ZombieDawn.field_J;
         var2 = this.field_k;
         L0: while (true) {
@@ -1059,9 +835,9 @@ final class uh {
                 break L1;
               }
             }
-            fieldTemp$1 = this.field_n - 1;
+            fieldTemp$0 = this.field_n - 1;
             this.field_n = this.field_n - 1;
-            this.field_b[fieldTemp$1] = null;
+            this.field_b[fieldTemp$0] = null;
             this.f(-1);
             return;
           } else {
@@ -1086,12 +862,12 @@ final class uh {
     }
 
     final void a(int param0, int param1) {
-        cc[] var3_ref_cc__ = null;
-        int var3 = 0;
-        int var4 = 0;
-        cc var5 = null;
-        int var6 = 0;
-        cc[] var7 = null;
+        cc[] var3_ref_cc__;
+        int var3;
+        int var4;
+        cc var5;
+        int var6;
+        cc[] var7;
         L0: {
           var6 = ZombieDawn.field_J;
           if (param1 < 0) {

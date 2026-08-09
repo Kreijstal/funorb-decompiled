@@ -5,23 +5,25 @@ final class nh {
     private static String field_z;
 
     final synchronized static byte[] a(int param0, int param1) {
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        byte[][] fieldTemp$10 = null;
-        int fieldTemp$11 = 0;
-        int var2 = 0;
-        byte[] var3_ref_byte__ = null;
-        int var3 = 0;
-        byte[] var4 = null;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        byte[][] fieldTemp$6 = null;
+        int fieldTemp$7 = 0;
+        int dupTemp$8 = 0;
+        byte[][] arrayValue$9 = null;
+        int var2;
+        byte[] var3_ref_byte__;
+        int var3;
+        byte[] var4;
         L0: {
           var2 = 100 % ((10 - param0) / 54);
           if (-101 != (param1 ^ -1)) {
             break L0;
           } else {
             if ((ll.field_c ^ -1) < -1) {
-              fieldTemp$8 = ll.field_c - 1;
+              fieldTemp$4 = ll.field_c - 1;
               ll.field_c = ll.field_c - 1;
-              var3_ref_byte__ = al.field_b[fieldTemp$8];
+              var3_ref_byte__ = al.field_b[fieldTemp$4];
               al.field_b[ll.field_c] = null;
               return var3_ref_byte__;
             } else {
@@ -34,9 +36,9 @@ final class nh {
             break L1;
           } else {
             if (0 < fd.field_h) {
-              fieldTemp$9 = fd.field_h - 1;
+              fieldTemp$5 = fd.field_h - 1;
               fd.field_h = fd.field_h - 1;
-              var3_ref_byte__ = cf.field_b[fieldTemp$9];
+              var3_ref_byte__ = cf.field_b[fieldTemp$5];
               cf.field_b[fd.field_h] = null;
               return var3_ref_byte__;
             } else {
@@ -49,10 +51,10 @@ final class nh {
             break L2;
           } else {
             if (qa.field_c > 0) {
-              fieldTemp$10 = lf.field_c;
-              fieldTemp$11 = qa.field_c - 1;
+              fieldTemp$6 = lf.field_c;
+              fieldTemp$7 = qa.field_c - 1;
               qa.field_c = qa.field_c - 1;
-              var3_ref_byte__ = fieldTemp$10[fieldTemp$11];
+              var3_ref_byte__ = fieldTemp$6[fieldTemp$7];
               lf.field_c[qa.field_c] = null;
               return var3_ref_byte__;
             } else {
@@ -71,8 +73,10 @@ final class nh {
               } else {
                 if (param1 == fd.field_q[var3]) {
                   if (-1 > (sg.field_f[var3] ^ -1)) {
-                    sg.field_f[var3] = sg.field_f[var3] - 1;
-                    var4 = ui.field_H[var3][sg.field_f[var3] - 1];
+                    dupTemp$8 = sg.field_f[var3] - 1;
+                    arrayValue$9 = ui.field_H[var3];
+                    sg.field_f[var3] = dupTemp$8;
+                    var4 = arrayValue$9[dupTemp$8];
                     ui.field_H[var3][sg.field_f[var3]] = null;
                     return var4;
                   } else {

@@ -156,9 +156,8 @@ final class rma extends mfb {
     }
 
     final int k(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 0) {
-            discarded$0 = this.h((byte) 56);
+            this.h((byte) 56);
             return 3;
         }
         return 3;
@@ -170,9 +169,8 @@ final class rma extends mfb {
     }
 
     final int f(byte param0) {
-        int discarded$0 = 0;
         if (param0 < 0) {
-            discarded$0 = this.b(true);
+            this.b(true);
             return brb.field_o;
         }
         return brb.field_o;

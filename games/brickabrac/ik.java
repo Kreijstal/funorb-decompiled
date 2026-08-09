@@ -30,19 +30,19 @@ final class ik implements Iterator {
     }
 
     public final boolean hasNext() {
-        nm[] fieldTemp$16 = null;
-        int fieldTemp$17 = 0;
-        int var2 = 0;
+        nm[] fieldTemp$4 = null;
+        int fieldTemp$5 = 0;
+        int var2;
         var2 = BrickABrac.field_J ? 1 : 0;
         if (this.field_h == this.field_e.field_d[this.field_d - 1]) {
           L0: while (true) {
             if (this.field_e.field_c <= this.field_d) {
               return false;
             } else {
-              fieldTemp$16 = this.field_e.field_d;
-              fieldTemp$17 = this.field_d;
+              fieldTemp$4 = this.field_e.field_d;
+              fieldTemp$5 = this.field_d;
               this.field_d = this.field_d + 1;
-              if (fieldTemp$16[fieldTemp$17].field_e != this.field_e.field_d[this.field_d + -1]) {
+              if (fieldTemp$4[fieldTemp$5].field_e != this.field_e.field_d[this.field_d + -1]) {
                 this.field_h = this.field_e.field_d[this.field_d + -1].field_e;
                 return true;
               } else {
@@ -83,8 +83,6 @@ final class ik implements Iterator {
 
     final static boolean a(boolean param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (!param0) {
             break L0;
@@ -101,14 +99,12 @@ final class ik implements Iterator {
               if (q.field_i != rf.field_b) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
@@ -116,12 +112,9 @@ final class ik implements Iterator {
 
     final static int a(int param0, gb param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int stackIn_16_0 = 0;
         int stackIn_18_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -129,16 +122,7 @@ final class ik implements Iterator {
         String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        int stackOut_15_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -180,13 +164,11 @@ final class ik implements Iterator {
               }
             }
             if (param0 == -31126) {
-              stackOut_17_0 = var2_int;
-              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_0 = var2_int;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_15_0 = -27;
-              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_0 = -27;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -195,27 +177,19 @@ final class ik implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2);
-            stackOut_19_1 = new StringBuilder().append("ik.F(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2);
+
+            stackIn_21_1 = new StringBuilder().append("ik.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L3;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L3;
             }
           }
@@ -249,18 +223,13 @@ final class ik implements Iterator {
         int stackIn_17_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_13_0 = 0;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
             var5 = (bg) ((Object) mf.field_i.d(-78));
             var1 = var5;
             if (var1 == null) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -268,8 +237,7 @@ final class ik implements Iterator {
               var3 = -90 / ((param0 - -28) / 50);
               L1: while (true) {
                 if (var2 >= var1.field_s) {
-                  stackOut_16_0 = 1;
-                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_0 = 1;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
@@ -280,8 +248,7 @@ final class ik implements Iterator {
                       if (0 != var5.field_j[var2].field_f) {
                         break L2;
                       } else {
-                        stackOut_9_0 = 0;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -294,8 +261,7 @@ final class ik implements Iterator {
                       if (var5.field_l[var2].field_f != 0) {
                         break L3;
                       } else {
-                        stackOut_13_0 = 0;
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
@@ -340,15 +306,12 @@ final class ik implements Iterator {
     }
 
     final static boolean a(byte param0, char param1) {
-        boolean discarded$2 = false;
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           if (param0 == -9) {
             break L0;
           } else {
-            discarded$2 = ik.a((byte) -124, 'V');
+            ik.a((byte) -124, 'V');
             break L0;
           }
         }
@@ -364,8 +327,7 @@ final class ik implements Iterator {
                   break L2;
                 } else {
                   if (param1 != 45) {
-                    stackOut_8_0 = 0;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = 0;
                     break L1;
                   } else {
                     break L2;
@@ -374,8 +336,7 @@ final class ik implements Iterator {
               }
             }
           }
-          stackOut_7_0 = 1;
-          stackIn_9_0 = stackOut_7_0;
+          stackIn_9_0 = 1;
           break L1;
         }
         return stackIn_9_0 != 0;

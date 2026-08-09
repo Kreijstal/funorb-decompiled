@@ -14,7 +14,7 @@ final class ah {
     static int field_b;
 
     final static void b(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         ba.field_i = null;
         var2 = 32 - -(4 * param0);
         kd.field_m = null;
@@ -134,8 +134,6 @@ final class ah {
         Object stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -143,52 +141,34 @@ final class ah {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_12_0 = null;
-        byte[] stackOut_10_0 = null;
-        Object stackOut_7_0 = null;
-        oi stackOut_4_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             if (param2 != null) {
               if (param2.length <= 136) {
                 if (!param0) {
                   if (!param1) {
-                    stackOut_12_0 = (byte[]) (param2);
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = (byte[]) (param2);
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
-                    stackOut_10_0 = ek.a(param2, -48);
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = ek.a(param2, -48);
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
-                  stackOut_7_0 = (Object) null;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = (Object) null;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
                 var3 = new oi();
                 ((of) ((Object) var3)).a(50, param2);
-                stackOut_4_0 = (oi) (var3);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (oi) (var3);
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -197,27 +177,19 @@ final class ah {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3_ref);
-            stackOut_14_1 = new StringBuilder().append("ah.F(").append(param0).append(',').append(param1).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3_ref);
+
+            stackIn_16_1 = new StringBuilder().append("ah.F(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L1;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L1;
             }
           }
@@ -259,16 +231,16 @@ final class ah {
     }
 
     final static void a(byte param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
-        bk var4 = null;
-        tc var5 = null;
+        tc var4 = null;
+        bk var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
             L1: {
-              var4 = (bk) ((Object) na.field_d.c((byte) 118));
+              var5 = (bk) ((Object) na.field_d.c((byte) 118));
               if (param0 == -86) {
                 break L1;
               } else {
@@ -277,20 +249,20 @@ final class ah {
               }
             }
             L2: while (true) {
-              if (var4 == null) {
-                var5 = (tc) ((Object) gf.field_q.c((byte) -18));
+              if (var5 == null) {
+                var4 = (tc) ((Object) gf.field_q.c((byte) -18));
                 L3: while (true) {
-                  if (var5 == null) {
+                  if (var4 == null) {
                     break L0;
                   } else {
-                    ue.a(var5, 2, param1);
-                    var5 = (tc) ((Object) gf.field_q.c(param0 ^ 344));
+                    ue.a(var4, 2, param1);
+                    var4 = (tc) ((Object) gf.field_q.c(param0 ^ 344));
                     continue L3;
                   }
                 }
               } else {
-                ae.a(param1, var4, -15024);
-                var4 = (bk) ((Object) na.field_d.c(-270));
+                ae.a(param1, var5, -15024);
+                var5 = (bk) ((Object) na.field_d.c(-270));
                 continue L2;
               }
             }

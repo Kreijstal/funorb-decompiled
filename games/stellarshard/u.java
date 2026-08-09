@@ -20,9 +20,8 @@ final class u extends gg {
     }
 
     final static int a(int param0, int param1) {
-        int discarded$1 = 0;
         if (param0 != 7527) {
-          discarded$1 = u.a(-49, 96);
+          u.a(-49, 96);
           param1--;
           param1 = param1 | param1 >>> -932587423;
           param1 = param1 | param1 >>> -23164702;

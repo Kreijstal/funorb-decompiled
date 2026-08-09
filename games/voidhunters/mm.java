@@ -46,11 +46,10 @@ final class mm extends llb {
     }
 
     final int f(byte param0) {
-        boolean discarded$2 = false;
-        mm var3 = null;
+        mm var3;
         if (param0 != -13) {
           var3 = (mm) null;
-          discarded$2 = this.a((mm) null, -117);
+          this.a((mm) null, -117);
           return (int)this.c(26390);
         } else {
           return (int)this.c(26390);
@@ -58,23 +57,16 @@ final class mm extends llb {
     }
 
     final boolean e(byte param0) {
-        int discarded$10 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 < 21) {
           L0: {
-            discarded$10 = this.f((byte) -41);
+            this.f((byte) -41);
             if (this.c((byte) 87)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -82,12 +74,10 @@ final class mm extends llb {
         } else {
           L1: {
             if (this.c((byte) 87)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -96,13 +86,6 @@ final class mm extends llb {
     }
 
     final boolean a(mm param0, int param1) {
-        boolean discarded$1 = false;
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        mm var7 = null;
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
@@ -116,8 +99,6 @@ final class mm extends llb {
         int stackIn_57_0 = 0;
         int stackIn_59_0 = 0;
         int stackIn_63_0 = 0;
-        RuntimeException stackIn_65_0 = null;
-        StringBuilder stackIn_65_1 = null;
         RuntimeException stackIn_66_0 = null;
         StringBuilder stackIn_66_1 = null;
         RuntimeException stackIn_67_0 = null;
@@ -125,57 +106,25 @@ final class mm extends llb {
         String stackIn_67_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        boolean stackOut_23_0 = false;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_18_0 = 0;
-        RuntimeException stackOut_64_0 = null;
-        StringBuilder stackOut_64_1 = null;
-        RuntimeException stackOut_66_0 = null;
-        StringBuilder stackOut_66_1 = null;
-        String stackOut_66_2 = null;
-        RuntimeException stackOut_65_0 = null;
-        StringBuilder stackOut_65_1 = null;
-        String stackOut_65_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        mm var7 = null;
         try {
           L0: {
             L1: {
               if (!this.field_ac) {
                 if (6 == this.field_ec) {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L1;
                 } else {
-                  stackOut_3_0 = 0;
-                  stackIn_6_0 = stackOut_3_0;
+                  stackIn_6_0 = 0;
                   break L1;
                 }
               } else {
-                stackOut_1_0 = 1;
-                stackIn_6_0 = stackOut_1_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
@@ -185,36 +134,31 @@ final class mm extends llb {
                 break L2;
               } else {
                 var7 = (mm) null;
-                discarded$1 = this.a((mm) null, -66);
+                this.a((mm) null, -66);
                 break L2;
               }
             }
             L3: {
               if (!param0.field_ac) {
                 if (-7 == (param0.field_ec ^ -1)) {
-                  stackOut_12_0 = 1;
-                  stackIn_14_0 = stackOut_12_0;
+                  stackIn_14_0 = 1;
                   break L3;
                 } else {
-                  stackOut_11_0 = 0;
-                  stackIn_14_0 = stackOut_11_0;
+                  stackIn_14_0 = 0;
                   break L3;
                 }
               } else {
-                stackOut_9_0 = 1;
-                stackIn_14_0 = stackOut_9_0;
+                stackIn_14_0 = 1;
                 break L3;
               }
             }
             L4: {
               var4 = stackIn_14_0;
               if (var4 != 0) {
-                stackOut_16_0 = 0;
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_0 = 0;
                 break L4;
               } else {
-                stackOut_15_0 = 1;
-                stackIn_17_0 = stackOut_15_0;
+                stackIn_17_0 = 1;
                 break L4;
               }
             }
@@ -224,8 +168,7 @@ final class mm extends llb {
                   break L5;
                 } else {
                   if (param0.field_cc != this.field_cc) {
-                    stackOut_23_0 = this.field_cc;
-                    stackIn_24_0 = stackOut_23_0;
+                    stackIn_24_0 = this.field_cc;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -237,12 +180,10 @@ final class mm extends llb {
                       } else {
                         L6: {
                           if (this.field_Cb >= param0.field_Cb) {
-                            stackOut_29_0 = 0;
-                            stackIn_30_0 = stackOut_29_0;
+                            stackIn_30_0 = 0;
                             break L6;
                           } else {
-                            stackOut_28_0 = 1;
-                            stackIn_30_0 = stackOut_28_0;
+                            stackIn_30_0 = 1;
                             break L6;
                           }
                         }
@@ -256,12 +197,10 @@ final class mm extends llb {
               if (param0.field_fc != this.field_fc) {
                 L7: {
                   if (this.field_fc) {
-                    stackOut_35_0 = 0;
-                    stackIn_36_0 = stackOut_35_0;
+                    stackIn_36_0 = 0;
                     break L7;
                   } else {
-                    stackOut_34_0 = 1;
-                    stackIn_36_0 = stackOut_34_0;
+                    stackIn_36_0 = 1;
                     break L7;
                   }
                 }
@@ -271,17 +210,14 @@ final class mm extends llb {
                 if (this.field_fc) {
                   L8: {
                     if (this.field_Gb) {
-                      stackOut_46_0 = 1;
-                      stackIn_48_0 = stackOut_46_0;
+                      stackIn_48_0 = 1;
                       break L8;
                     } else {
                       if (this.field_Bb == 2) {
-                        stackOut_45_0 = 1;
-                        stackIn_48_0 = stackOut_45_0;
+                        stackIn_48_0 = 1;
                         break L8;
                       } else {
-                        stackOut_44_0 = 0;
-                        stackIn_48_0 = stackOut_44_0;
+                        stackIn_48_0 = 0;
                         break L8;
                       }
                     }
@@ -290,61 +226,51 @@ final class mm extends llb {
                     var5 = stackIn_48_0;
                     if (!param0.field_Gb) {
                       if ((param0.field_Bb ^ -1) == -3) {
-                        stackOut_52_0 = 1;
-                        stackIn_54_0 = stackOut_52_0;
+                        stackIn_54_0 = 1;
                         break L9;
                       } else {
-                        stackOut_51_0 = 0;
-                        stackIn_54_0 = stackOut_51_0;
+                        stackIn_54_0 = 0;
                         break L9;
                       }
                     } else {
-                      stackOut_49_0 = 1;
-                      stackIn_54_0 = stackOut_49_0;
+                      stackIn_54_0 = 1;
                       break L9;
                     }
                   }
                   L10: {
                     var6 = stackIn_54_0;
                     if (var6 != 0) {
-                      stackOut_56_0 = 0;
-                      stackIn_57_0 = stackOut_56_0;
+                      stackIn_57_0 = 0;
                       break L10;
                     } else {
-                      stackOut_55_0 = 1;
-                      stackIn_57_0 = stackOut_55_0;
+                      stackIn_57_0 = 1;
                       break L10;
                     }
                   }
                   if (stackIn_57_0 != var5) {
                     L11: {
                       if (param0.field_Ob >= this.field_Ob) {
-                        stackOut_62_0 = 0;
-                        stackIn_63_0 = stackOut_62_0;
+                        stackIn_63_0 = 0;
                         break L11;
                       } else {
-                        stackOut_61_0 = 1;
-                        stackIn_63_0 = stackOut_61_0;
+                        stackIn_63_0 = 1;
                         break L11;
                       }
                     }
                     decompiledRegionSelector0 = 6;
                     break L0;
                   } else {
-                    stackOut_58_0 = var5;
-                    stackIn_59_0 = stackOut_58_0;
+                    stackIn_59_0 = var5;
                     decompiledRegionSelector0 = 5;
                     break L0;
                   }
                 } else {
                   L12: {
                     if (param0.field_Ob <= this.field_Ob) {
-                      stackOut_40_0 = 0;
-                      stackIn_41_0 = stackOut_40_0;
+                      stackIn_41_0 = 0;
                       break L12;
                     } else {
-                      stackOut_39_0 = 1;
-                      stackIn_41_0 = stackOut_39_0;
+                      stackIn_41_0 = 1;
                       break L12;
                     }
                   }
@@ -353,8 +279,7 @@ final class mm extends llb {
                 }
               }
             } else {
-              stackOut_18_0 = var3_int;
-              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_0 = var3_int;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -363,27 +288,19 @@ final class mm extends llb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
             var3 = decompiledCaughtException;
-            stackOut_64_0 = (RuntimeException) (var3);
-            stackOut_64_1 = new StringBuilder().append("mm.A(");
-            stackIn_66_0 = stackOut_64_0;
-            stackIn_66_1 = stackOut_64_1;
-            stackIn_65_0 = stackOut_64_0;
-            stackIn_65_1 = stackOut_64_1;
+            stackIn_66_0 = (RuntimeException) (var3);
+
+            stackIn_66_1 = new StringBuilder().append("mm.A(");
+
             if (param0 == null) {
-              stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
-              stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
-              stackOut_66_2 = "null";
-              stackIn_67_0 = stackOut_66_0;
-              stackIn_67_1 = stackOut_66_1;
-              stackIn_67_2 = stackOut_66_2;
+              stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+              stackIn_67_2 = "null";
               break L13;
             } else {
-              stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
-              stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
-              stackOut_65_2 = "{...}";
-              stackIn_67_0 = stackOut_65_0;
-              stackIn_67_1 = stackOut_65_1;
-              stackIn_67_2 = stackOut_65_2;
+              stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+              stackIn_67_2 = "{...}";
               break L13;
             }
           }

@@ -7,8 +7,8 @@ class bd extends ij {
     static volatile long field_m;
 
     final static void a(byte param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           uo.field_o = uo.field_o + 1;
           var2 = rc.field_a.size();
@@ -84,9 +84,8 @@ class bd extends ij {
     }
 
     public static void e(int param0) {
-        int discarded$0 = 0;
         if (param0 != 7279) {
-            discarded$0 = bd.a(102, (byte) -53);
+            bd.a(102, (byte) -53);
             field_n = null;
             field_l = null;
             return;
@@ -110,7 +109,7 @@ class bd extends ij {
     }
 
     final static int a(int param0, byte param1) {
-        int var2 = 0;
+        int var2;
         if (param0 != 0) {
           if (0 < param0) {
             L0: {

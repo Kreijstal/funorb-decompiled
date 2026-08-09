@@ -15,14 +15,14 @@ final class dg {
     static String field_i;
 
     final void a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5_int = 0;
-        double var5 = 0.0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var3;
+        int var4;
+        int var5_int;
+        double var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         L0: {
           var9 = Bounce.field_N;
           var4 = this.field_d;
@@ -165,8 +165,8 @@ final class dg {
     }
 
     final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = Bounce.field_N;
           var2 = this.field_d;
@@ -269,7 +269,7 @@ final class dg {
         if (param0 != 16) {
             field_a = (tg[]) null;
         }
-        int discarded$0 = jc.field_g.d((byte) -72);
+        jc.field_g.d((byte) -72);
     }
 
     final void a(int param0, int param1, double param2) {

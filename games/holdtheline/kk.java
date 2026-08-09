@@ -13,15 +13,14 @@ final class kk extends hl {
     ui field_p;
 
     final static String a(boolean param0, long param1) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        int var3 = 0;
-        long var4 = 0L;
-        StringBuilder var6 = null;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        StringBuilder discarded$1 = null;
+        int var3;
+        long var4;
+        StringBuilder var6;
+        long var7;
+        int var9;
+        int var10;
+        int var11;
         var11 = HoldTheLine.field_D;
         if (0L < param1) {
           if (6582952005840035281L > param1) {
@@ -34,7 +33,7 @@ final class kk extends hl {
                   if (param0) {
                     L1: while (true) {
                       if (param1 == 0L) {
-                        discarded$2 = var6.reverse();
+                        var6.reverse();
                         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                         return var6.toString();
                       } else {
@@ -51,7 +50,7 @@ final class kk extends hl {
                             break L2;
                           }
                         }
-                        discarded$3 = var6.append((char) var9);
+                        discarded$1 = var6.append((char) var9);
                         continue L1;
                       }
                     }
@@ -86,13 +85,12 @@ final class kk extends hl {
     }
 
     final void a(ee param0, byte param1, int param2, el param3) {
-        String discarded$0 = null;
         try {
             this.field_o = db.b(param3, 256, param2);
             this.field_n = param2;
             this.field_q = param0;
             if (param1 >= -69) {
-                discarded$0 = kk.a(false, -7L);
+                kk.a(false, -7L);
             }
             this.field_p = null;
         } catch (RuntimeException runtimeException) {

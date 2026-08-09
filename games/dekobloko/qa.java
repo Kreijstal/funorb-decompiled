@@ -19,9 +19,9 @@ final class qa extends wk {
     }
 
     final static void a(int param0, int param1) {
-        uf var2 = null;
-        int var3 = 0;
-        int var4 = 0;
+        uf var2;
+        int var3;
+        int var4;
         var2 = we.field_b;
         var2.f(param0, -4);
         var2.field_n = var2.field_n + 1;

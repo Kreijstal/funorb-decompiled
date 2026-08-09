@@ -23,8 +23,8 @@ final class wb {
     }
 
     final void a(byte param0) {
-        cn var2 = null;
-        int var3 = 0;
+        cn var2;
+        int var3;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         L0: while (true) {
           var2 = this.field_c.field_x;
@@ -47,7 +47,6 @@ final class wb {
     }
 
     final int c(int param0) {
-        int discarded$0 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = 0;
         cn var3 = this.field_c.field_x;
@@ -56,43 +55,32 @@ final class wb {
             var2++;
         }
         if (param0 != -7432) {
-            discarded$0 = this.c(107);
+            this.c(107);
         }
         return var2;
     }
 
     final static int[][] a(ln[] param0, int param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int[][] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        ln[] var5_ref_ln__ = null;
-        int var6 = 0;
-        ln var7_ref_ln = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int[][] var10 = null;
-        int[][] var11 = null;
         int[][] stackIn_29_0 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int[][] stackOut_28_0 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int[][] var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        ln[] var5_ref_ln__ = null;
+        int var6 = 0;
+        int var7 = 0;
+        ln var7_ref_ln = null;
+        int var8 = 0;
+        int var9 = 0;
+        int[][] var10 = null;
+        int[][] var11 = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -106,8 +94,7 @@ final class wb {
                 var4 = param1;
                 L2: while (true) {
                   if (var2_int <= var4) {
-                    stackOut_28_0 = (int[][]) (var3);
-                    stackIn_29_0 = stackOut_28_0;
+                    stackIn_29_0 = (int[][]) (var3);
                     break L0;
                   } else {
                     var5 = 0;
@@ -193,27 +180,19 @@ final class wb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var2 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) (var2);
-            stackOut_30_1 = new StringBuilder().append("wb.C(");
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackIn_32_0 = (RuntimeException) (var2);
+
+            stackIn_32_1 = new StringBuilder().append("wb.C(");
+
             if (param0 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L10;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L10;
             }
           }
@@ -257,8 +236,6 @@ final class wb {
 
     final static boolean b(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 > 79) {
             break L0;
@@ -275,14 +252,12 @@ final class wb {
               if (-14 < (ma.field_p ^ -1)) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;

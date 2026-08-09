@@ -10,35 +10,24 @@ final class sk extends kj {
     static int[] field_I;
 
     final void o(int param0) {
-        km var2 = null;
-        sg var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        var5 = OrbDefence.field_D ? 1 : 0;
-        var2 = new km(this.field_B);
-        var4 = -70 / ((param0 - 85) / 32);
-        var3 = (sg) ((Object) var2.d(27935));
-        L0: while (true) {
-          if (var3 != null) {
-            if (var5 == 0) {
-              L1: {
-                if (var3.d(false)) {
-                  var3.b(57);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              var3 = (sg) ((Object) var2.b(true));
-              continue L0;
-            } else {
-              return;
+        int var5 = OrbDefence.field_D ? 1 : 0;
+        km var2 = new km(this.field_B);
+        int var4 = -70 / ((param0 - 85) / 32);
+        sg var3 = (sg) ((Object) var2.d(27935));
+        do {
+            if (var3 == null) {
+                this.field_y = (pj) ((Object) this.k(3469));
+                return;
             }
-          } else {
-            this.field_y = (pj) ((Object) this.k(3469));
-            return;
-          }
-        }
+            if (var5 != 0) {
+                return;
+            }
+            if (!(!var3.d(false))) {
+                var3.b(57);
+            }
+            var3 = (sg) ((Object) var2.b(true));
+        } while (var5 == 0);
+        this.field_y = (pj) ((Object) this.k(3469));
     }
 
     public static void m(int param0) {
@@ -58,22 +47,13 @@ final class sk extends kj {
     }
 
     final pj c(boolean param0) {
-        km var2 = null;
-        sg var3 = null;
-        int var4 = 0;
-        boolean stackIn_3_0 = false;
-        km stackIn_7_0 = null;
+        km var2;
+        sg var3;
+        int var4;
         km stackIn_8_0 = null;
         km stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         boolean stackIn_11_0 = false;
-        boolean stackOut_2_0 = false;
-        km stackOut_6_0 = null;
-        km stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        km stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        boolean stackOut_10_0 = false;
         var4 = OrbDefence.field_D ? 1 : 0;
         var2 = new km(this.field_B);
         var3 = (sg) ((Object) var2.d(27935));
@@ -83,30 +63,24 @@ final class sk extends kj {
               if (var3 == null) {
                 break L2;
               } else {
-                stackOut_2_0 = var3.field_A;
-                stackIn_11_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_11_0 = var3.field_A;
+
                 if (var4 != 0) {
                   break L1;
                 } else {
-                  if (stackIn_3_0) {
+                  if (stackIn_11_0) {
                     return var3.b((byte) -109);
                   } else {
                     L3: {
-                      stackOut_6_0 = (km) (var2);
-                      stackIn_8_0 = stackOut_6_0;
-                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_8_0 = (km) (var2);
+
                       if (param0) {
-                        stackOut_8_0 = (km) ((Object) stackIn_8_0);
-                        stackOut_8_1 = 0;
-                        stackIn_9_0 = stackOut_8_0;
-                        stackIn_9_1 = stackOut_8_1;
+                        stackIn_9_0 = (km) ((Object) stackIn_8_0);
+                        stackIn_9_1 = 0;
                         break L3;
                       } else {
-                        stackOut_7_0 = (km) ((Object) stackIn_7_0);
-                        stackOut_7_1 = 1;
-                        stackIn_9_0 = stackOut_7_0;
-                        stackIn_9_1 = stackOut_7_1;
+                        stackIn_9_0 = (km) ((Object) stackIn_8_0);
+                        stackIn_9_1 = 1;
                         break L3;
                       }
                     }
@@ -120,8 +94,7 @@ final class sk extends kj {
                 }
               }
             }
-            stackOut_10_0 = param0;
-            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_0 = param0;
             break L1;
           }
           if (!stackIn_11_0) {
@@ -139,57 +112,124 @@ final class sk extends kj {
         int var4 = 0;
         km var5 = null;
         km var6 = null;
-        var4 = OrbDefence.field_D ? 1 : 0;
-        if (param0 == 7920) {
-          var5 = new km(this.field_B);
-          var2 = var5;
-          var3 = (sg) ((Object) var5.d(27935));
-          L0: while (true) {
-            if (var3 != null) {
-              var3.field_A = false;
-              var3 = (sg) ((Object) var5.b(true));
-              if (var4 == 0) {
-                continue L0;
-              } else {
-                return;
-              }
-            } else {
-              this.field_y = null;
-              return;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = OrbDefence.field_D ? 1 : 0;
+                    if (param0 == 7920) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    this.field_B = (im) null;
+                    statePc = 10;
+                    continue stateLoop;
+                }
+                case 2: {
+                    var5 = new km(this.field_B);
+                    var2 = var5;
+                    var3 = (sg) ((Object) var5.d(27935));
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (var3 != null) {
+                        statePc = 6;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    this.field_y = null;
+                    return;
+                }
+                case 6: {
+                    var3.field_A = false;
+                    var3 = (sg) ((Object) var5.b(true));
+                    if (var4 == 0) {
+                        statePc = 8;
+                    } else {
+                        statePc = 7;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    return;
+                }
+                case 8: {
+                    if (var4 == 0) {
+                        statePc = 3;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    this.field_y = null;
+                    return;
+                }
+                case 10: {
+                    var6 = new km(this.field_B);
+                    var2 = var6;
+                    var3 = (sg) ((Object) var6.d(27935));
+                    statePc = 11;
+                    continue stateLoop;
+                }
+                case 11: {
+                    if (var3 != null) {
+                        statePc = 14;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
+                    this.field_y = null;
+                    return;
+                }
+                case 14: {
+                    var3.field_A = false;
+                    var3 = (sg) ((Object) var6.b(true));
+                    if (var4 == 0) {
+                        statePc = 16;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 15: {
+                    return;
+                }
+                case 16: {
+                    if (var4 == 0) {
+                        statePc = 11;
+                    } else {
+                        statePc = 17;
+                    }
+                    continue stateLoop;
+                }
+                case 17: {
+                    this.field_y = null;
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } else {
-          this.field_B = (im) null;
-          var6 = new km(this.field_B);
-          var2 = var6;
-          var3 = (sg) ((Object) var6.d(27935));
-          L1: while (true) {
-            if (var3 != null) {
-              var3.field_A = false;
-              var3 = (sg) ((Object) var6.b(true));
-              if (var4 == 0) {
-                continue L1;
-              } else {
-                return;
-              }
-            } else {
-              this.field_y = null;
-              return;
-            }
-          }
         }
     }
 
     final sg k(int param0) {
-        int discarded$2 = 0;
-        km var2 = null;
-        sg var3 = null;
-        int var4 = 0;
-        CharSequence var5 = null;
+        km var2;
+        sg var3;
+        int var4;
+        CharSequence var5;
         boolean stackIn_3_0 = false;
         int stackIn_8_0 = 0;
-        boolean stackOut_2_0 = false;
-        int stackOut_7_0 = 0;
+        boolean stackOut_2_0;
         var4 = OrbDefence.field_D ? 1 : 0;
         var2 = new km(this.field_B);
         var3 = (sg) ((Object) var2.d(param0 + 24466));
@@ -218,15 +258,14 @@ final class sk extends kj {
                 }
               }
             }
-            stackOut_7_0 = param0;
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = param0;
             break L1;
           }
           if (stackIn_8_0 == 3469) {
             return null;
           } else {
             var5 = (CharSequence) null;
-            discarded$2 = sk.a((byte) -126, (CharSequence) null);
+            sk.a((byte) -126, (CharSequence) null);
             return null;
           }
         }
@@ -238,9 +277,9 @@ final class sk extends kj {
     }
 
     final void l(int param0) {
-        km var2 = null;
-        sg var3 = null;
-        int var4 = 0;
+        km var2;
+        sg var3;
+        int var4;
         var4 = OrbDefence.field_D ? 1 : 0;
         if (param0 <= -5) {
           var2 = new km(this.field_B);
@@ -257,7 +296,11 @@ final class sk extends kj {
                   }
                 }
                 var3 = (sg) ((Object) var2.b(true));
-                continue L0;
+                if (var4 == 0) {
+                  continue L0;
+                } else {
+                  return;
+                }
               } else {
                 return;
               }
@@ -281,7 +324,11 @@ final class sk extends kj {
                   }
                 }
                 var3 = (sg) ((Object) var2.b(true));
-                continue L2;
+                if (var4 == 0) {
+                  continue L2;
+                } else {
+                  return;
+                }
               } else {
                 return;
               }
@@ -295,8 +342,6 @@ final class sk extends kj {
     final static boolean a(char param0, int param1) {
         int stackIn_8_0 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_6_0 = 0;
         if (param1 == -46) {
           if (param0 != 160) {
             if (param0 != 32) {
@@ -307,8 +352,7 @@ final class sk extends kj {
                   return false;
                 }
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 1;
                 return stackIn_20_0 != 0;
               }
             } else {
@@ -328,8 +372,7 @@ final class sk extends kj {
                   return false;
                 }
               } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 1;
                 return stackIn_8_0 != 0;
               }
             } else {
@@ -348,111 +391,208 @@ final class sk extends kj {
         km var9 = null;
         km var10 = null;
         km var11 = null;
-        var7 = OrbDefence.field_D ? 1 : 0;
-        if (null == this.field_j) {
-          var11 = new km(this.field_B);
-          var9 = var11;
-          var6 = (pj) ((Object) var11.c(param2 ^ -1040926));
-          if (param2 != 1048575) {
-            var8 = (pj) null;
-            this.b((byte) -95, (pj) null);
-            L0: while (true) {
-              if (var6 != null) {
-                var6.a(param0 + this.field_n, param1, param2 ^ 0, param3 - -this.field_s);
-                var6 = (pj) ((Object) var11.a((byte) -84));
-                if (var7 == 0) {
-                  if (var7 == 0) {
-                    continue L0;
-                  } else {
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var7 = OrbDefence.field_D ? 1 : 0;
+                    if (null == this.field_j) {
+                        statePc = 17;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    this.field_j.a(param0, param3, (pj) (this), param2 + -1052969, true);
+                    var10 = new km(this.field_B);
+                    var9 = var10;
+                    var6 = (pj) ((Object) var10.c(param2 ^ -1040926));
+                    if (param2 != 1048575) {
+                        statePc = 9;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
+                }
+                case 2: {
+                    if (var6 != null) {
+                        statePc = 4;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
                     return;
-                  }
-                } else {
-                  return;
                 }
-              } else {
-                return;
-              }
-            }
-          } else {
-            L1: while (true) {
-              if (var6 != null) {
-                var6.a(param0 + this.field_n, param1, param2 ^ 0, param3 - -this.field_s);
-                var6 = (pj) ((Object) var11.a((byte) -84));
-                if (var7 == 0) {
-                  if (var7 == 0) {
-                    continue L1;
-                  } else {
+                case 4: {
+                    var6.a(param0 + this.field_n, param1, param2 ^ 0, param3 - -this.field_s);
+                    var6 = (pj) ((Object) var10.a((byte) -84));
+                    if (var7 == 0) {
+                        statePc = 6;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
                     return;
-                  }
-                } else {
-                  return;
                 }
-              } else {
-                return;
-              }
-            }
-          }
-        } else {
-          this.field_j.a(param0, param3, (pj) (this), param2 + -1052969, true);
-          var10 = new km(this.field_B);
-          var9 = var10;
-          var6 = (pj) ((Object) var10.c(param2 ^ -1040926));
-          if (param2 != 1048575) {
-            var8 = (pj) null;
-            this.b((byte) -95, (pj) null);
-            L2: while (true) {
-              if (var6 != null) {
-                var6.a(param0 + this.field_n, param1, param2 ^ 0, param3 - -this.field_s);
-                var6 = (pj) ((Object) var10.a((byte) -84));
-                if (var7 == 0) {
-                  continue L2;
-                } else {
-                  return;
+                case 6: {
+                    if (var7 == 0) {
+                        statePc = 2;
+                    } else {
+                        statePc = 7;
+                    }
+                    continue stateLoop;
                 }
-              } else {
-                return;
-              }
-            }
-          } else {
-            L3: while (true) {
-              if (var6 != null) {
-                var6.a(param0 + this.field_n, param1, param2 ^ 0, param3 - -this.field_s);
-                var6 = (pj) ((Object) var10.a((byte) -84));
-                if (var7 == 0) {
-                  continue L3;
-                } else {
-                  return;
+                case 7: {
+                    return;
                 }
-              } else {
-                return;
-              }
+                case 9: {
+                    var8 = (pj) null;
+                    this.b((byte) -95, (pj) null);
+                    statePc = 10;
+                    continue stateLoop;
+                }
+                case 10: {
+                    if (var6 != null) {
+                        statePc = 12;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    return;
+                }
+                case 12: {
+                    var6.a(param0 + this.field_n, param1, param2 ^ 0, param3 - -this.field_s);
+                    var6 = (pj) ((Object) var10.a((byte) -84));
+                    if (var7 == 0) {
+                        statePc = 14;
+                    } else {
+                        statePc = 13;
+                    }
+                    continue stateLoop;
+                }
+                case 13: {
+                    return;
+                }
+                case 14: {
+                    if (var7 == 0) {
+                        statePc = 10;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 15: {
+                    return;
+                }
+                case 17: {
+                    var11 = new km(this.field_B);
+                    var9 = var11;
+                    var6 = (pj) ((Object) var11.c(param2 ^ -1040926));
+                    if (param2 != 1048575) {
+                        statePc = 24;
+                    } else {
+                        statePc = 18;
+                    }
+                    continue stateLoop;
+                }
+                case 18: {
+                    if (var6 != null) {
+                        statePc = 20;
+                    } else {
+                        statePc = 19;
+                    }
+                    continue stateLoop;
+                }
+                case 19: {
+                    return;
+                }
+                case 20: {
+                    var6.a(param0 + this.field_n, param1, param2 ^ 0, param3 - -this.field_s);
+                    var6 = (pj) ((Object) var11.a((byte) -84));
+                    if (var7 == 0) {
+                        statePc = 22;
+                    } else {
+                        statePc = 21;
+                    }
+                    continue stateLoop;
+                }
+                case 21: {
+                    return;
+                }
+                case 22: {
+                    if (var7 == 0) {
+                        statePc = 18;
+                    } else {
+                        statePc = 23;
+                    }
+                    continue stateLoop;
+                }
+                case 23: {
+                    return;
+                }
+                case 24: {
+                    var8 = (pj) null;
+                    this.b((byte) -95, (pj) null);
+                    statePc = 25;
+                    continue stateLoop;
+                }
+                case 25: {
+                    if (var6 != null) {
+                        statePc = 27;
+                    } else {
+                        statePc = 26;
+                    }
+                    continue stateLoop;
+                }
+                case 26: {
+                    return;
+                }
+                case 27: {
+                    var6.a(param0 + this.field_n, param1, param2 ^ 0, param3 - -this.field_s);
+                    var6 = (pj) ((Object) var11.a((byte) -84));
+                    if (var7 == 0) {
+                        statePc = 29;
+                    } else {
+                        statePc = 28;
+                    }
+                    continue stateLoop;
+                }
+                case 28: {
+                    return;
+                }
+                case 29: {
+                    if (var7 == 0) {
+                        statePc = 25;
+                    } else {
+                        statePc = 30;
+                    }
+                    continue stateLoop;
+                }
+                case 30: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
         }
     }
 
     final void b(byte param0, pj param1) {
-        boolean discarded$10 = false;
-        int discarded$11 = 0;
         sg var3 = null;
-        RuntimeException var3_ref = null;
         CharSequence var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var3_ref = null;
         try {
           L0: {
             if (!(param1 instanceof sg)) {
@@ -462,12 +602,12 @@ final class sk extends kj {
                 var3 = (sg) ((Object) param1);
                 this.field_B.a(var3, 9);
                 var3.field_A = true;
-                discarded$10 = var3.a(-81, (pj) (this));
+                var3.a(-81, (pj) (this));
                 if (param0 == 74) {
                   break L1;
                 } else {
                   var4 = (CharSequence) null;
-                  discarded$11 = sk.a((byte) 48, (CharSequence) null);
+                  sk.a((byte) 48, (CharSequence) null);
                   break L1;
                 }
               }
@@ -478,27 +618,19 @@ final class sk extends kj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3_ref);
-            stackOut_6_1 = new StringBuilder().append("sk.N(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3_ref);
+
+            stackIn_8_1 = new StringBuilder().append("sk.N(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -507,7 +639,6 @@ final class sk extends kj {
     }
 
     final static int a(byte param0, CharSequence param1) {
-        int discarded$2 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -523,85 +654,147 @@ final class sk extends kj {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        var5 = OrbDefence.field_D ? 1 : 0;
-        try {
-          L0: {
-            L1: {
-              if (param0 == 76) {
-                break L1;
-              } else {
-                var6 = (CharSequence) null;
-                discarded$2 = sk.a((byte) 9, (CharSequence) null);
-                break L1;
-              }
-            }
-            var2_int = param1.length();
-            var3 = 0;
-            var4 = 0;
-            L2: while (true) {
-              L3: {
-                if (var4 >= var2_int) {
-                  stackOut_7_0 = var3;
-                  stackIn_8_0 = stackOut_7_0;
-                  break L3;
-                } else {
-                  stackOut_5_0 = -var3 + (var3 << 180463845) + oc.a(-109, param1.charAt(var4));
-                  stackIn_8_0 = stackOut_5_0;
-                  stackIn_6_0 = stackOut_5_0;
-                  if (var5 != 0) {
-                    break L3;
-                  } else {
-                    var3 = stackIn_6_0;
-                    var4++;
-                    continue L2;
-                  }
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var5 = OrbDefence.field_D ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
-              break L0;
+                case 1: {
+                    try {
+                        if (param0 == 76) {
+                            statePc = 3;
+                        } else {
+                            statePc = 2;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        var6 = (CharSequence) null;
+                        sk.a((byte) 9, (CharSequence) null);
+                        statePc = 3;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        var2_int = param1.length();
+                        var3 = 0;
+                        var4 = 0;
+                        statePc = 4;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        if (var4 >= var2_int) {
+                            statePc = 7;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        stackIn_8_0 = -var3 + (var3 << 180463845) + oc.a(-109, param1.charAt(var4));
+                        stackIn_6_0 = stackIn_8_0;
+                        if (var5 != 0) {
+                            statePc = 8;
+                        } else {
+                            statePc = 6;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        var3 = stackIn_6_0;
+                        var4++;
+                        if (var5 == 0) {
+                            statePc = 4;
+                        } else {
+                            statePc = 7;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        stackIn_8_0 = var3;
+                        statePc = 8;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    return stackIn_8_0;
+                }
+                case 9: {
+                    var2 = (RuntimeException) ((Object) caughtException);
+                    stackIn_11_0 = (RuntimeException) (var2);
+                    stackIn_10_0 = stackIn_11_0;
+                    stackIn_11_1 = new StringBuilder().append("sk.H(").append(param0).append(',');
+                    stackIn_10_1 = stackIn_11_1;
+                    if (param1 == null) {
+                        statePc = 11;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    stackIn_12_0 = (RuntimeException) ((Object) stackIn_10_0);
+                    stackIn_12_1 = (StringBuilder) ((Object) stackIn_10_1);
+                    stackIn_12_2 = "{...}";
+                    statePc = 12;
+                    continue stateLoop;
+                }
+                case 11: {
+                    stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+                    stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+                    stackIn_12_2 = "null";
+                    statePc = 12;
+                    continue stateLoop;
+                }
+                case 12: {
+                    throw dd.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2);
-            stackOut_9_1 = new StringBuilder().append("sk.H(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
-            if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L4;
-            } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L4;
-            }
-          }
-          throw dd.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
-        return stackIn_8_0;
     }
 
     static {

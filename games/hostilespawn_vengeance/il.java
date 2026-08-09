@@ -26,8 +26,8 @@ final class il {
     }
 
     final static boolean a(char param0, byte param1) {
-        int var2 = 0;
-        var2 = 12;
+        int var2;
+        var2 = -24 / ((param1 - -7) / 40);
         if (param0 < 65) {
           if (param0 >= 97) {
             if (param0 <= 122) {
@@ -56,10 +56,6 @@ final class il {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new bd(540, 140);
         field_b = new String[]{"Starship Trooper", "Alien Bane", "Starship Warrior", "Starship Marine", "Starship Commando", "Eat This!", "Pyromaniac", "Giblet Maker", "Sniper", "Blaster", "Cool Killer", "Golden Reactor", "Golden Turret", "Golden Claw", "Golden Egg", "Golden Queen", "Golden Gun", "Postal", "Phoenix Nova", "Boldly Go", "Megacide", "Outpatient", "B&E", "Oology", "Monstracide", "Arsenal", "Trimonstracide", "Unimanus", "Ovaphobia", "Harsh Language", "Gordon's Alive!", "Starship Champion", "Starship Guard", "Golden Key", "Golden Shield", "Golden Guard", "Golden Wheel", "Golden Lights", "Golden Bomb", "Golden Parachute", "Golden Sunset", "Diamond Champion"};
         field_d = "Instructions";

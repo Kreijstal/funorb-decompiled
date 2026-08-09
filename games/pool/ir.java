@@ -23,15 +23,6 @@ final class ir {
     private int field_q;
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        int var5_int = 0;
-        long var5_long = 0L;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_50_0 = null;
-        StringBuilder stackIn_50_1 = null;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
         RuntimeException stackIn_52_0 = null;
@@ -40,14 +31,13 @@ final class ir {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_49_0 = null;
-        StringBuilder stackOut_49_1 = null;
-        RuntimeException stackOut_51_0 = null;
-        StringBuilder stackOut_51_1 = null;
-        String stackOut_51_2 = null;
-        RuntimeException stackOut_50_0 = null;
-        StringBuilder stackOut_50_1 = null;
-        String stackOut_50_2 = null;
+        int var5_int = 0;
+        long var5_long = 0L;
+        IOException var5 = null;
+        RuntimeException var5_ref = null;
+        long var7 = 0L;
+        int var9 = 0;
+        int var10 = 0;
         var10 = Pool.field_O;
         try {
           L0: {
@@ -235,27 +225,19 @@ final class ir {
           decompiledCaughtException = decompiledCaughtParameter1;
           L15: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_49_0 = (RuntimeException) (var5_ref);
-            stackOut_49_1 = new StringBuilder().append("ir.H(").append(param0).append(',');
-            stackIn_51_0 = stackOut_49_0;
-            stackIn_51_1 = stackOut_49_1;
-            stackIn_50_0 = stackOut_49_0;
-            stackIn_50_1 = stackOut_49_1;
+            stackIn_51_0 = (RuntimeException) (var5_ref);
+
+            stackIn_51_1 = new StringBuilder().append("ir.H(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
-              stackOut_51_1 = (StringBuilder) ((Object) stackIn_51_1);
-              stackOut_51_2 = "null";
-              stackIn_52_0 = stackOut_51_0;
-              stackIn_52_1 = stackOut_51_1;
-              stackIn_52_2 = stackOut_51_2;
+              stackIn_52_0 = (RuntimeException) ((Object) stackIn_51_0);
+              stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
+              stackIn_52_2 = "null";
               break L15;
             } else {
-              stackOut_50_0 = (RuntimeException) ((Object) stackIn_50_0);
-              stackOut_50_1 = (StringBuilder) ((Object) stackIn_50_1);
-              stackOut_50_2 = "{...}";
-              stackIn_52_0 = stackOut_50_0;
-              stackIn_52_1 = stackOut_50_1;
-              stackIn_52_2 = stackOut_50_2;
+              stackIn_52_0 = (RuntimeException) ((Object) stackIn_51_0);
+              stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
+              stackIn_52_2 = "{...}";
               break L15;
             }
           }
@@ -286,6 +268,7 @@ final class ir {
         int var4 = Pool.field_O;
         this.field_o = 0;
         if (param0 != -28) {
+            this.d((byte) 81);
         }
         if (!(this.field_f == this.field_g)) {
             this.field_l.a(-1, this.field_f);
@@ -320,8 +303,6 @@ final class ir {
         RuntimeException var2 = null;
         double[][] stackIn_2_0 = null;
         double[][] stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -329,26 +310,14 @@ final class ir {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        double[][] stackOut_3_0 = null;
-        double[][] stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0 <= -90) {
-              stackOut_3_0 = new double[][]{param1, new double[]{576.0 - param1[0], -param1[1] + 288.0, param1[2], -param1[3] + 576.0, 288.0 - param1[4], param1[5]}};
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = new double[][]{param1, new double[]{576.0 - param1[0], -param1[1] + 288.0, param1[2], -param1[3] + 576.0, 288.0 - param1[4], param1[5]}};
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (double[][]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (double[][]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -357,27 +326,19 @@ final class ir {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("ir.D(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("ir.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -391,19 +352,7 @@ final class ir {
     }
 
     final void a(byte param0, int param1, int param2, byte[] param3) throws IOException {
-        int incrementValue$1 = 0;
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        long var5_long = 0L;
-        int var7 = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        long var9 = 0L;
-        long var11 = 0L;
-        int var13 = 0;
-        int var14 = 0;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
+        int incrementValue$0 = 0;
         RuntimeException stackIn_56_0 = null;
         StringBuilder stackIn_56_1 = null;
         RuntimeException stackIn_57_0 = null;
@@ -412,14 +361,16 @@ final class ir {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_54_0 = null;
-        StringBuilder stackOut_54_1 = null;
-        RuntimeException stackOut_56_0 = null;
-        StringBuilder stackOut_56_1 = null;
-        String stackOut_56_2 = null;
-        RuntimeException stackOut_55_0 = null;
-        StringBuilder stackOut_55_1 = null;
-        String stackOut_55_2 = null;
+        long var5_long = 0L;
+        IOException var5 = null;
+        RuntimeException var5_ref = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9_int = 0;
+        long var9 = 0L;
+        long var11 = 0L;
+        int var13 = 0;
+        int var14 = 0;
         var14 = Pool.field_O;
         try {
           L0: {
@@ -477,6 +428,7 @@ final class ir {
                     if (param0 < -109) {
                       break L5;
                     } else {
+                      this.d((byte) 60);
                       break L5;
                     }
                   }
@@ -546,9 +498,9 @@ final class ir {
                               if (param2 >= var9_int) {
                                 break L10;
                               } else {
-                                incrementValue$1 = param2;
+                                incrementValue$0 = param2;
                                 param2++;
-                                param3[incrementValue$1] = (byte) 0;
+                                param3[incrementValue$0] = (byte) 0;
                                 param1--;
                                 this.field_f = this.field_f + 1L;
                                 continue L12;
@@ -652,27 +604,19 @@ final class ir {
           decompiledCaughtException = decompiledCaughtParameter1;
           L17: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_54_0 = (RuntimeException) (var5_ref);
-            stackOut_54_1 = new StringBuilder().append("ir.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_56_0 = stackOut_54_0;
-            stackIn_56_1 = stackOut_54_1;
-            stackIn_55_0 = stackOut_54_0;
-            stackIn_55_1 = stackOut_54_1;
+            stackIn_56_0 = (RuntimeException) (var5_ref);
+
+            stackIn_56_1 = new StringBuilder().append("ir.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_56_0 = (RuntimeException) ((Object) stackIn_56_0);
-              stackOut_56_1 = (StringBuilder) ((Object) stackIn_56_1);
-              stackOut_56_2 = "null";
-              stackIn_57_0 = stackOut_56_0;
-              stackIn_57_1 = stackOut_56_1;
-              stackIn_57_2 = stackOut_56_2;
+              stackIn_57_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackIn_57_1 = (StringBuilder) ((Object) stackIn_56_1);
+              stackIn_57_2 = "null";
               break L17;
             } else {
-              stackOut_55_0 = (RuntimeException) ((Object) stackIn_55_0);
-              stackOut_55_1 = (StringBuilder) ((Object) stackIn_55_1);
-              stackOut_55_2 = "{...}";
-              stackIn_57_0 = stackOut_55_0;
-              stackIn_57_1 = stackOut_55_1;
-              stackIn_57_2 = stackOut_55_2;
+              stackIn_57_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackIn_57_1 = (StringBuilder) ((Object) stackIn_56_1);
+              stackIn_57_2 = "{...}";
               break L17;
             }
           }
@@ -694,10 +638,9 @@ final class ir {
     }
 
     final long d(byte param0) {
-        double[][] discarded$0 = null;
         if (param0 != 17) {
             double[] var3 = (double[]) null;
-            discarded$0 = ir.a(54, (double[]) null);
+            ir.a(54, (double[]) null);
         }
         return this.field_e;
     }
@@ -714,10 +657,10 @@ final class ir {
     }
 
     private final void a(boolean param0) throws IOException {
-        long var2 = 0L;
-        long var4 = 0L;
-        int var6 = 0;
-        int var7 = 0;
+        long var2;
+        long var4;
+        int var6;
+        int var7;
         L0: {
           var7 = Pool.field_O;
           if ((this.field_j ^ -1L) != 0L) {

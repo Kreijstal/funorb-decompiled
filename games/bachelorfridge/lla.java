@@ -14,7 +14,7 @@ final class lla extends pu {
     }
 
     final static void a(boolean param0, byte param1, int param2) {
-        int var4 = 0;
+        int var4;
         var4 = BachelorFridge.field_y;
         iea.field_d = new eaa();
         cb.field_m = mka.a(8698113, 8698113, 8698113, (byte) -125, jha.field_g, 8698113, 10724259, 8698113);

@@ -58,17 +58,17 @@ final class jp {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var12 = Vertigo2.field_L ? 1 : 0;
         if (!this.field_i) {
           L0: {
@@ -156,7 +156,6 @@ final class jp {
     }
 
     final static char a(boolean param0, char param1) {
-        char discarded$2 = 0;
         L0: {
           if (param1 == 181) {
             break L0;
@@ -168,7 +167,7 @@ final class jp {
                 if (param0) {
                   break L1;
                 } else {
-                  discarded$2 = jp.a(true, 'f');
+                  jp.a(true, 'f');
                   break L1;
                 }
               }

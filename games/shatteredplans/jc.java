@@ -31,7 +31,6 @@ abstract class jc extends df {
     abstract int e(int param0);
 
     final static bg a(java.applet.Applet param0, boolean param1) {
-        bg discarded$2 = null;
         String var2 = null;
         RuntimeException var2_ref = null;
         bg[] var3 = null;
@@ -42,8 +41,6 @@ abstract class jc extends df {
         bg stackIn_4_0 = null;
         bg stackIn_10_0 = null;
         bg stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -51,24 +48,12 @@ abstract class jc extends df {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        bg stackOut_3_0 = null;
-        bg stackOut_14_0 = null;
-        bg stackOut_9_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
             var2 = rp.a(false, "jagex-last-login-method", param0);
             if (var2 == null) {
-              stackOut_3_0 = mj.field_Rb;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = mj.field_Rb;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -81,19 +66,17 @@ abstract class jc extends df {
                       break L2;
                     } else {
                       var7 = (java.applet.Applet) null;
-                      discarded$2 = jc.a((java.applet.Applet) null, false);
+                      jc.a((java.applet.Applet) null, false);
                       break L2;
                     }
                   }
-                  stackOut_14_0 = mj.field_Rb;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = mj.field_Rb;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   var5 = var3[var4];
                   if (var5.a((byte) 80, var2)) {
-                    stackOut_9_0 = (bg) (var5);
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = (bg) (var5);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -108,27 +91,19 @@ abstract class jc extends df {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var2_ref);
-            stackOut_16_1 = new StringBuilder().append("jc.D(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var2_ref);
+
+            stackIn_18_1 = new StringBuilder().append("jc.D(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L3;
             }
           }
@@ -147,11 +122,10 @@ abstract class jc extends df {
 
     final static void a(int param0, bc param1) {
         fd var2 = null;
-        kk discarded$0 = null;
         try {
             fd.b(param1.a(true, "", "headers.packvorbis"));
             var2 = fd.a(param1, "jagex logo2.packvorbis", "");
-            discarded$0 = var2.b();
+            var2.b();
             int var3 = 38 / ((param0 - 28) / 50);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -161,10 +135,6 @@ abstract class jc extends df {
     final static boolean f(int param0) {
         int stackIn_7_0 = 0;
         int stackIn_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == -11) {
           if ((gm.field_i ^ -1) <= -11) {
             if (eh.field_P) {
@@ -172,12 +142,10 @@ abstract class jc extends df {
             } else {
               L0: {
                 if (cb.b((byte) -119)) {
-                  stackOut_15_0 = 0;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_0 = 0;
                   break L0;
                 } else {
-                  stackOut_14_0 = 1;
-                  stackIn_16_0 = stackOut_14_0;
+                  stackIn_16_0 = 1;
                   break L0;
                 }
               }
@@ -194,12 +162,10 @@ abstract class jc extends df {
             } else {
               L1: {
                 if (cb.b((byte) -119)) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L1;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L1;
                 }
               }

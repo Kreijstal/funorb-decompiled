@@ -28,7 +28,6 @@ abstract class gf {
     }
 
     public static void c(byte param0) {
-        cq discarded$2 = null;
         field_g = null;
         field_b = null;
         field_d = null;
@@ -38,16 +37,16 @@ abstract class gf {
         if (param0 == -91) {
           return;
         } else {
-          discarded$2 = gf.a(119, 39, -126, (byte) 48);
+          gf.a(119, 39, -126, (byte) 48);
           return;
         }
     }
 
     final static cq a(int param0, int param1, int param2, byte param3) {
-        cq var4 = null;
-        int var5 = 0;
-        cq var6 = null;
-        cq var7 = null;
+        cq var4;
+        int var5;
+        cq var6;
+        cq var7;
         var5 = BrickABrac.field_J ? 1 : 0;
         var4 = (cq) ((Object) fk.field_f.d(-55));
         if (param3 >= -102) {

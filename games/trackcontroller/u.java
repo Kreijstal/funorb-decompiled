@@ -11,13 +11,13 @@ final class u extends fc {
     static int field_o;
 
     final void d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        qj var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        qj var6;
+        int var7;
+        int var8;
         L0: {
           var8 = TrackController.field_F ? 1 : 0;
           var2 = this.field_n;
@@ -75,8 +75,6 @@ final class u extends fc {
         int var5 = 0;
         Object stackIn_9_0 = null;
         oi stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -84,16 +82,6 @@ final class u extends fc {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        oi stackOut_11_0 = null;
-        Object stackOut_8_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         var5 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -109,8 +97,7 @@ final class u extends fc {
             var3 = 0;
             L2: while (true) {
               if (var3 >= var2_int) {
-                stackOut_11_0 = fh.field_e;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = fh.field_e;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -120,8 +107,7 @@ final class u extends fc {
                     var3++;
                     continue L2;
                   } else {
-                    stackOut_8_0 = null;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = null;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -135,27 +121,19 @@ final class u extends fc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var2);
-            stackOut_13_1 = new StringBuilder().append("u.A(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var2);
+
+            stackIn_15_1 = new StringBuilder().append("u.A(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }

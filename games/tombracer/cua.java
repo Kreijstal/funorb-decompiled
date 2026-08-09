@@ -46,26 +46,12 @@ final class cua {
         ht var2 = null;
         int var3 = 0;
         int var4 = 0;
-        boolean stackIn_4_0 = false;
-        int stackIn_11_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        int stackOut_10_0 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -73,82 +59,51 @@ final class cua {
             var2 = (ht) ((Object) asa.field_j.f(-80));
             L1: while (true) {
               L2: {
-                L3: {
-                  if (var2 == null) {
-                    break L3;
+                if (var2 == null) {
+                  break L2;
+                } else {
+                  if (!var2.a(param0, 71)) {
+                    break L2;
                   } else {
-                    stackOut_3_0 = var2.a(param0, 71);
-                    stackIn_11_0 = stackOut_3_0 ? 1 : 0;
-                    stackIn_4_0 = stackOut_3_0;
-                    if (var4 != 0) {
-                      break L2;
-                    } else {
-                      if (!stackIn_4_0) {
-                        break L3;
-                      } else {
-                        var2 = (ht) ((Object) asa.field_j.e(113));
-                        if (var4 == 0) {
-                          continue L1;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
+                    var2 = (ht) ((Object) asa.field_j.e(113));
+                    continue L1;
                   }
                 }
-                L4: {
-                  L5: {
-                    if (var2 == null) {
-                      break L5;
-                    } else {
-                      ln.a(var2, param0, (byte) -120);
-                      if (var4 == 0) {
-                        break L4;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                  asa.field_j.b((byte) -59, param0);
-                  break L4;
-                }
-                stackOut_10_0 = 27 % ((-29 - param1) / 55);
-                stackIn_11_0 = stackOut_10_0;
-                break L2;
               }
-              var3 = stackIn_11_0;
+              L3: {
+                if (var2 == null) {
+                  asa.field_j.b((byte) -59, param0);
+                  break L3;
+                } else {
+                  ln.a(var2, param0, (byte) -120);
+                  break L3;
+                }
+              }
+              var3 = 27 % ((-29 - param1) / 55);
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L4: {
             runtimeException = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (runtimeException);
-            stackOut_13_1 = new StringBuilder().append("cua.D(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_12_0 = (RuntimeException) (runtimeException);
+
+            stackIn_12_1 = new StringBuilder().append("cua.D(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L6;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L6;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L4;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
     }
 

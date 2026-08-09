@@ -6,9 +6,7 @@ final class tc {
     static int field_b;
 
     final static boolean a(byte param0, char param1) {
-        String discarded$2 = null;
         char[] var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -20,23 +18,17 @@ final class tc {
         int var11 = 0;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
-        int stackIn_22_0 = 0;
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_2_0 = 0;
+        RuntimeException var2_ref = null;
         var5 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
             if (!Character.isISOControl(param1)) {
               if (nh.a(false, param1)) {
-                stackOut_6_0 = 1;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -49,7 +41,7 @@ final class tc {
                     break L1;
                   } else {
                     var6 = (java.applet.Applet) null;
-                    discarded$2 = tc.a((byte) -96, (java.applet.Applet) null);
+                    tc.a((byte) -96, (java.applet.Applet) null);
                     break L1;
                   }
                 }
@@ -71,13 +63,12 @@ final class tc {
                               } else {
                                 L7: while (true) {
                                   var4 = var2[var3];
-                                  stackOut_21_0 = var4 ^ -1;
-                                  stackIn_28_0 = stackOut_21_0;
-                                  stackIn_22_0 = stackOut_21_0;
+                                  stackIn_28_0 = var4 ^ -1;
+
                                   if (var5 != 0) {
                                     break L3;
                                   } else {
-                                    if (stackIn_22_0 == (param1 ^ -1)) {
+                                    if (stackIn_28_0 == (param1 ^ -1)) {
                                       break L5;
                                     } else {
                                       var3++;
@@ -115,13 +106,12 @@ final class tc {
                             break L4;
                           } else {
                             var4 = var2[var3];
-                            stackOut_21_0 = var4 ^ -1;
-                            stackIn_28_0 = stackOut_21_0;
-                            stackIn_22_0 = stackOut_21_0;
+                            stackIn_28_0 = var4 ^ -1;
+
                             if (var5 != 0) {
                               break L3;
                             } else {
-                              if (stackIn_22_0 == (param1 ^ -1)) {
+                              if (stackIn_28_0 == (param1 ^ -1)) {
                                 break L5;
                               } else {
                                 var3++;
@@ -135,13 +125,11 @@ final class tc {
                           }
                         }
                       }
-                      stackOut_24_0 = 1;
-                      stackIn_25_0 = stackOut_24_0;
+                      stackIn_25_0 = 1;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }
-                    stackOut_27_0 = 0;
-                    stackIn_28_0 = stackOut_27_0;
+                    stackIn_28_0 = 0;
                     break L3;
                   }
                   decompiledRegionSelector0 = 2;
@@ -149,8 +137,7 @@ final class tc {
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -176,31 +163,26 @@ final class tc {
     }
 
     public static void a(boolean param0) {
-        String discarded$0 = null;
         field_a = null;
         if (!param0) {
             java.applet.Applet var2 = (java.applet.Applet) null;
-            discarded$0 = tc.a((byte) -85, (java.applet.Applet) null);
+            tc.a((byte) -85, (java.applet.Applet) null);
         }
     }
 
     final static void a(int param0) {
-        int discarded$48 = 0;
-        int discarded$49 = 0;
-        int discarded$50 = 0;
-        int discarded$51 = 0;
-        mj var1 = null;
-        se var2 = null;
+        mj var1;
+        se var2;
         var1 = (mj) ((Object) nd.field_b.b((byte) -58));
         if (var1 == null) {
           th.a(109);
           return;
         } else {
           var2 = cd.field_t;
-          discarded$48 = var2.l(0);
-          discarded$49 = var2.l(0);
-          discarded$50 = var2.l(0);
-          discarded$51 = var2.l(0);
+          var2.l(0);
+          var2.l(0);
+          var2.l(0);
+          var2.l(0);
           var1.b(57);
           if (param0 > -35) {
             field_b = 85;
@@ -214,7 +196,6 @@ final class tc {
     final static String a(byte param0, java.applet.Applet param1) {
         try {
             RuntimeException var2 = null;
-            Throwable var2_ref = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -226,8 +207,6 @@ final class tc {
             String stackIn_10_0 = null;
             String stackIn_16_0 = null;
             String stackIn_18_0 = null;
-            RuntimeException stackIn_20_0 = null;
-            StringBuilder stackIn_20_1 = null;
             RuntimeException stackIn_21_0 = null;
             StringBuilder stackIn_21_1 = null;
             RuntimeException stackIn_22_0 = null;
@@ -236,18 +215,7 @@ final class tc {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            String stackOut_9_0 = null;
-            String stackOut_2_0 = null;
-            String stackOut_17_0 = null;
-            String stackOut_15_0 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            RuntimeException stackOut_21_0 = null;
-            StringBuilder stackOut_21_1 = null;
-            String stackOut_21_2 = null;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            String stackOut_20_2 = null;
+            Throwable var2_ref = null;
             var8 = OrbDefence.field_D ? 1 : 0;
             try {
               L0: {
@@ -275,8 +243,7 @@ final class tc {
                                   if (!var5[var6].substring(0, var7).trim().equals(var3)) {
                                     break L4;
                                   } else {
-                                    stackOut_9_0 = var5[var6].substring(var7 - -1).trim();
-                                    stackIn_10_0 = stackOut_9_0;
+                                    stackIn_10_0 = var5[var6].substring(var7 - -1).trim();
                                     decompiledRegionSelector0 = 2;
                                     break L1;
                                   }
@@ -295,8 +262,7 @@ final class tc {
                         break L1;
                       }
                     } else {
-                      stackOut_2_0 = (String) null;
-                      stackIn_3_0 = stackOut_2_0;
+                      stackIn_3_0 = (String) null;
                       decompiledRegionSelector0 = 0;
                       break L1;
                     }
@@ -315,13 +281,11 @@ final class tc {
                 } else {
                   if (decompiledRegionSelector0 == 1) {
                     if (ld.field_e == null) {
-                      stackOut_17_0 = param1.getParameter("settings");
-                      stackIn_18_0 = stackOut_17_0;
+                      stackIn_18_0 = param1.getParameter("settings");
                       decompiledRegionSelector1 = 1;
                       break L0;
                     } else {
-                      stackOut_15_0 = ld.field_e;
-                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_16_0 = ld.field_e;
                       decompiledRegionSelector1 = 0;
                       break L0;
                     }
@@ -335,27 +299,19 @@ final class tc {
               decompiledCaughtException = decompiledCaughtParameter1;
               L6: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_19_0 = (RuntimeException) (var2);
-                stackOut_19_1 = new StringBuilder().append("tc.C(").append(param0).append(',');
-                stackIn_21_0 = stackOut_19_0;
-                stackIn_21_1 = stackOut_19_1;
-                stackIn_20_0 = stackOut_19_0;
-                stackIn_20_1 = stackOut_19_1;
+                stackIn_21_0 = (RuntimeException) (var2);
+
+                stackIn_21_1 = new StringBuilder().append("tc.C(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-                  stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-                  stackOut_21_2 = "null";
-                  stackIn_22_0 = stackOut_21_0;
-                  stackIn_22_1 = stackOut_21_1;
-                  stackIn_22_2 = stackOut_21_2;
+                  stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+                  stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+                  stackIn_22_2 = "null";
                   break L6;
                 } else {
-                  stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackOut_20_2 = "{...}";
-                  stackIn_22_0 = stackOut_20_0;
-                  stackIn_22_1 = stackOut_20_1;
-                  stackIn_22_2 = stackOut_20_2;
+                  stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+                  stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+                  stackIn_22_2 = "{...}";
                   break L6;
                 }
               }

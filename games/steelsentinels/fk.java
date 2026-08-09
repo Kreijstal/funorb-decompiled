@@ -90,23 +90,16 @@ final class fk implements Runnable {
     }
 
     final static boolean a(int param0) {
-        boolean discarded$9 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 0) {
           L0: {
-            discarded$9 = fk.a(-111);
+            fk.a(-111);
             if (null == kc.field_y) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -114,12 +107,10 @@ final class fk implements Runnable {
         } else {
           L1: {
             if (null == kc.field_y) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -161,11 +152,11 @@ final class fk implements Runnable {
     }
 
     final synchronized boolean c(int param0) {
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        Throwable decompiledCaughtException = null;
         if (this.field_j >= 2) {
           return true;
         } else {

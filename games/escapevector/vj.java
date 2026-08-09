@@ -16,9 +16,12 @@ abstract class vj {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_25_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -26,11 +29,6 @@ abstract class vj {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_25_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
         var14 = EscapeVector.field_A;
         try {
           L0: {
@@ -59,12 +57,10 @@ abstract class vj {
                             L3: {
                               var12 = cd.field_q[var11];
                               if (param4) {
-                                stackOut_24_0 = fl.field_k[var12];
-                                stackIn_25_0 = stackOut_24_0;
+                                stackIn_25_0 = fl.field_k[var12];
                                 break L3;
                               } else {
-                                stackOut_23_0 = th.field_v[var12];
-                                stackIn_25_0 = stackOut_23_0;
+                                stackIn_25_0 = th.field_v[var12];
                                 break L3;
                               }
                             }
@@ -80,9 +76,9 @@ abstract class vj {
                                     break L5;
                                   }
                                 }
-                                incrementValue$1 = var8;
+                                incrementValue$0 = var8;
                                 var8++;
-                                cd.field_q[incrementValue$1] = var12;
+                                cd.field_q[incrementValue$0] = var12;
                                 break L4;
                               } else {
                                 if (var13 > var10) {

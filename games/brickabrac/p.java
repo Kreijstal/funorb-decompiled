@@ -19,17 +19,17 @@ final class p extends nm {
     }
 
     final int a(byte param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         if (param0 != -104) {
           p.b(true);
-          fieldTemp$4 = this.field_o;
+          fieldTemp$2 = this.field_o;
           this.field_o = this.field_o + 1;
-          return this.field_n[fieldTemp$4];
+          return this.field_n[fieldTemp$2];
         } else {
-          fieldTemp$5 = this.field_o;
+          fieldTemp$3 = this.field_o;
           this.field_o = this.field_o + 1;
-          return this.field_n[fieldTemp$5];
+          return this.field_n[fieldTemp$3];
         }
     }
 
@@ -59,7 +59,7 @@ final class p extends nm {
     }
 
     final static String a(int param0) {
-        String var1 = null;
+        String var1;
         L0: {
           var1 = "";
           if (null == eo.field_k) {
@@ -124,23 +124,12 @@ final class p extends nm {
         int var6 = 0;
         jp var7 = null;
         jp stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        jp stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -160,8 +149,7 @@ final class p extends nm {
                   }
                 }
                 var7.field_E = param1.field_E + -param2;
-                stackOut_6_0 = (jp) (var7);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (jp) (var7);
                 break L0;
               } else {
                 param1.d(param2 - param1.field_E, -param1.field_F + param2, param3);
@@ -175,27 +163,19 @@ final class p extends nm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("p.A(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("p.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }

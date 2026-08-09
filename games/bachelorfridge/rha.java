@@ -15,9 +15,9 @@ final class rha {
     }
 
     private final void b(int param0) {
-        StringBuilder discarded$2 = null;
-        int var2 = 0;
-        int var3 = 0;
+        StringBuilder discarded$1 = null;
+        int var2;
+        int var3;
         var3 = BachelorFridge.field_y;
         var2 = 0;
         L0: while (true) {
@@ -31,7 +31,7 @@ final class rha {
               return;
             }
           } else {
-            discarded$2 = this.field_c.append(" ");
+            discarded$1 = this.field_c.append(" ");
             var2++;
             continue L0;
           }
@@ -67,12 +67,12 @@ final class rha {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         var8 = BachelorFridge.field_y;
         if (ur.field_d < 0) {
           return;

@@ -13,19 +13,18 @@ final class tg {
     private pi[] field_b;
 
     final pi a(int param0) {
-        pi discarded$0 = null;
         this.field_h = 0;
         if (param0 != -16545) {
-            discarded$0 = this.a(77);
+            this.a(77);
             return this.a(true);
         }
         return this.a(true);
     }
 
     final pi a(long param0, int param1) {
-        pi var4 = null;
-        pi var5 = null;
-        int var6 = 0;
+        pi var4;
+        pi var5;
+        int var6;
         var6 = MinerDisturbance.field_ab;
         var4 = this.field_b[(int)(param0 & (long)(this.field_a - 1))];
         this.field_c = var4.field_f;
@@ -52,30 +51,16 @@ final class tg {
     }
 
     final static void a(int param0, String param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
         int stackIn_20_0 = 0;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_13_0 = 0;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
         var3 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -121,22 +106,18 @@ final class tg {
                 if (!il.field_n) {
                   if (pe.field_pb >= ch.field_f) {
                     if (od.field_o + ch.field_f > pe.field_pb) {
-                      stackOut_18_0 = 1;
-                      stackIn_20_0 = stackOut_18_0;
+                      stackIn_20_0 = 1;
                       break L5;
                     } else {
-                      stackOut_17_0 = 0;
-                      stackIn_20_0 = stackOut_17_0;
+                      stackIn_20_0 = 0;
                       break L5;
                     }
                   } else {
-                    stackOut_15_0 = 0;
-                    stackIn_20_0 = stackOut_15_0;
+                    stackIn_20_0 = 0;
                     break L5;
                   }
                 } else {
-                  stackOut_13_0 = 0;
-                  stackIn_20_0 = stackOut_13_0;
+                  stackIn_20_0 = 0;
                   break L5;
                 }
               }
@@ -214,27 +195,19 @@ final class tg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) (var2);
-            stackOut_41_1 = new StringBuilder().append("tg.G(").append(param0).append(',');
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackIn_43_0 = (RuntimeException) (var2);
+
+            stackIn_43_1 = new StringBuilder().append("tg.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "null";
               break L9;
             } else {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "{...}";
               break L9;
             }
           }
@@ -243,8 +216,8 @@ final class tg {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = MinerDisturbance.field_ab;
         tl.field_m = 0;
         mb.field_c = null;
@@ -452,18 +425,18 @@ final class tg {
     }
 
     tg(int param0) {
-        pi dupTemp$2 = null;
-        int var2 = 0;
-        pi var3 = null;
+        pi dupTemp$1 = null;
+        int var2;
+        pi var3;
         this.field_h = 0;
         this.field_b = new pi[param0];
         this.field_a = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new pi();
-            var3 = dupTemp$2;
-            this.field_b[var2] = dupTemp$2;
+            dupTemp$1 = new pi();
+            var3 = dupTemp$1;
+            this.field_b[var2] = dupTemp$1;
             var3.field_f = var3;
             var3.field_c = var3;
             var2++;
@@ -479,14 +452,15 @@ final class tg {
         int fieldTemp$5 = 0;
         int fieldTemp$6 = 0;
         int fieldTemp$7 = 0;
-        int var3 = 0;
-        pi var4 = null;
-        pi var5 = null;
-        pi var6 = null;
-        pi var18 = null;
-        pi var19 = null;
-        pi var23 = null;
-        pi var32 = null;
+        int var3;
+        pi var4;
+        Object var5;
+        pi var5_ref;
+        pi var6;
+        pi var18;
+        pi var19;
+        pi var23;
+        pi var32;
         var3 = MinerDisturbance.field_ab;
         if (-1 > (this.field_h ^ -1)) {
           if (this.field_b[-1 + this.field_h] == this.field_e) {
@@ -497,9 +471,9 @@ final class tg {
                 if (this.field_a > this.field_h) {
                   fieldTemp$4 = this.field_h;
                   this.field_h = this.field_h + 1;
-                  var5 = this.field_b[fieldTemp$4].field_f;
-                  var23 = var5;
-                  if (var5 == this.field_b[this.field_h - 1]) {
+                  var5_ref = this.field_b[fieldTemp$4].field_f;
+                  var23 = var5_ref;
+                  if (var5_ref == this.field_b[this.field_h - 1]) {
                     continue L0;
                   } else {
                     this.field_e = var23.field_f;
@@ -514,9 +488,9 @@ final class tg {
                 if (this.field_a > this.field_h) {
                   fieldTemp$5 = this.field_h;
                   this.field_h = this.field_h + 1;
-                  var5 = this.field_b[fieldTemp$5].field_f;
-                  var19 = var5;
-                  if (var5 == this.field_b[this.field_h - 1]) {
+                  var5_ref = this.field_b[fieldTemp$5].field_f;
+                  var19 = var5_ref;
+                  if (var5_ref == this.field_b[this.field_h - 1]) {
                     continue L1;
                   } else {
                     this.field_e = var19.field_f;
@@ -538,9 +512,9 @@ final class tg {
               if (this.field_a > this.field_h) {
                 fieldTemp$6 = this.field_h;
                 this.field_h = this.field_h + 1;
-                var5 = this.field_b[fieldTemp$6].field_f;
-                var18 = var5;
-                if (var5 == this.field_b[this.field_h - 1]) {
+                var5_ref = this.field_b[fieldTemp$6].field_f;
+                var18 = var5_ref;
+                if (var5_ref == this.field_b[this.field_h - 1]) {
                   continue L2;
                 } else {
                   this.field_e = var18.field_f;
@@ -557,9 +531,9 @@ final class tg {
               if (this.field_a > this.field_h) {
                 fieldTemp$7 = this.field_h;
                 this.field_h = this.field_h + 1;
-                var5 = this.field_b[fieldTemp$7].field_f;
-                var6 = var5;
-                if (var5 == this.field_b[this.field_h - 1]) {
+                var5_ref = this.field_b[fieldTemp$7].field_f;
+                var6 = var5_ref;
+                if (var5_ref == this.field_b[this.field_h - 1]) {
                   continue L3;
                 } else {
                   this.field_e = var6.field_f;
@@ -575,7 +549,6 @@ final class tg {
 
     final void a(int param0, long param1, pi param2) {
         pi var5 = null;
-        pi discarded$0 = null;
         try {
             if (!(param2.field_c == null)) {
                 param2.b(34);
@@ -585,7 +558,7 @@ final class tg {
             param2.field_f = var5;
             param2.field_c.field_f = param2;
             if (param0 != 0) {
-                discarded$0 = this.a(true);
+                this.a(true);
             }
             param2.field_f.field_c = param2;
             param2.field_d = param1;
@@ -597,10 +570,6 @@ final class tg {
     final static void a(byte param0, java.applet.Applet param1) {
         try {
             java.net.URL var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
@@ -608,14 +577,8 @@ final class tg {
             String stackIn_9_2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             try {
               L0: {
                 if (param0 <= -108) {
@@ -644,27 +607,19 @@ final class tg {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var2_ref2);
-                stackOut_6_1 = new StringBuilder().append("tg.B(").append(param0).append(',');
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_8_1 = new StringBuilder().append("tg.B(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L3;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L3;
                 }
               }

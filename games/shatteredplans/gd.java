@@ -14,8 +14,8 @@ final class gd {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         L0: {
           if (null == va.field_d) {
             va.field_d = new bi[]{lg.a(0, qq.field_w[0]), lg.a(0, qq.field_w[1])};

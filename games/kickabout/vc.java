@@ -13,28 +13,16 @@ final class vc extends fp {
     static bt field_x;
 
     final static vc a(int param0, iw param1) {
-        int discarded$1 = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        vc var4 = null;
         vc stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vc stackOut_14_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        vc var4 = null;
         try {
           L0: {
             L1: {
@@ -98,7 +86,7 @@ final class vc extends fp {
               if (param0 == -21832) {
                 break L8;
               } else {
-                discarded$1 = vc.b(20);
+                vc.b(20);
                 break L8;
               }
             }
@@ -107,35 +95,26 @@ final class vc extends fp {
             var4.field_s = param1.h((byte) -108);
             var4.field_m = new up();
             var4.field_m.a(28, param1);
-            stackOut_14_0 = (vc) (var4);
-            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_0 = (vc) (var4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var2);
-            stackOut_16_1 = new StringBuilder().append("vc.B(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var2);
+
+            stackIn_18_1 = new StringBuilder().append("vc.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L9;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L9;
             }
           }
@@ -167,17 +146,18 @@ final class vc extends fp {
     }
 
     final static void f(byte param0) {
-        int discarded$0 = 0;
         da.b(67);
         ra.i((byte) -90);
         ck.field_b = null;
         fa.b(47);
         if (param0 != 119) {
-            discarded$0 = vc.b(104);
+            vc.b(104);
         }
     }
 
     final static void h(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         nl var2_ref_nl = null;
@@ -189,8 +169,6 @@ final class vc extends fp {
         int var7 = 0;
         String var8 = null;
         tj var9 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var7 = Kickabout.field_G;
         try {
           L0: {
@@ -254,41 +232,47 @@ final class vc extends fp {
                     }
                   }
                 } else {
-                  if (0 != (var9.field_m ^ -1)) {
-                    break L2;
-                  } else {
-                    if ((var9.field_p ^ -1) >= -1) {
-                      break L2;
+                  L6: {
+                    if (0 != (var9.field_m ^ -1)) {
+                      break L6;
                     } else {
-                      if ((var9.field_p ^ -1) > -88080385) {
-                        var2_ref_nl = et.field_d.a((byte) 120, 0);
-                        var3_int = 0;
-                        var4 = et.field_d.field_x;
-                        var5 = 0;
-                        L6: while (true) {
-                          if (var5 >= var4.length) {
-                            if (var3_int != 0) {
+                      if ((var9.field_p ^ -1) >= -1) {
+                        break L6;
+                      } else {
+                        if ((var9.field_p ^ -1) > -88080385) {
+                          var2_ref_nl = et.field_d.a((byte) 120, 0);
+                          var3_int = 0;
+                          var4 = et.field_d.field_x;
+                          var5 = 0;
+                          L7: while (true) {
+                            if (var5 >= var4.length) {
+                              L8: {
+                                if (var3_int != 0) {
+                                  break L8;
+                                } else {
+                                  if (262144 > var9.e(-111)) {
+                                    ic.field_i = true;
+                                    break L8;
+                                  } else {
+                                    break L2;
+                                  }
+                                }
+                              }
                               break L2;
                             } else {
-                              if (262144 > var9.e(-111)) {
-                                ic.field_i = true;
-                                break L2;
-                              } else {
-                                break L2;
-                              }
+                              var6 = var4[var5];
+                              var3_int = var3_int != 0 | var6.a(var2_ref_nl.field_M, var2_ref_nl.field_w, 703166480, var2_ref_nl.field_v) ? 1 : 0;
+                              var5++;
+                              continue L7;
                             }
-                          } else {
-                            var6 = var4[var5];
-                            var3_int = var3_int != 0 | var6.a(var2_ref_nl.field_M, var2_ref_nl.field_w, 703166480, var2_ref_nl.field_v) ? 1 : 0;
-                            var5++;
-                            continue L6;
                           }
+                        } else {
+                          break L2;
                         }
-                      } else {
-                        break L2;
                       }
                     }
                   }
+                  break L2;
                 }
               }
               decompiledRegionSelector0 = 1;
@@ -323,14 +307,12 @@ final class vc extends fp {
 
     final static void i(byte param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
-        gm var2 = null;
-        int var3 = 0;
         int var4 = 0;
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        RuntimeException var1 = null;
+        gm var2 = null;
+        int var3 = 0;
         var4 = Kickabout.field_G;
         try {
           L0: {
@@ -353,12 +335,10 @@ final class vc extends fp {
                     L3: {
                       var2 = (gm) ((Object) tq.field_F.a((byte) -60, var1_int));
                       if (jn.field_kb != var1_int) {
-                        stackOut_11_0 = 160;
-                        stackIn_12_0 = stackOut_11_0;
+                        stackIn_12_0 = 160;
                         break L3;
                       } else {
-                        stackOut_10_0 = 256;
-                        stackIn_12_0 = stackOut_10_0;
+                        stackIn_12_0 = 256;
                         break L3;
                       }
                     }

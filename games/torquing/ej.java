@@ -46,29 +46,25 @@ final class ej implements lm {
     }
 
     public final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        double var13 = 0.0;
-        double var15 = 0.0;
-        double var17 = 0.0;
-        double var19 = 0.0;
-        double var21 = 0.0;
-        int var23 = 0;
-        double var24 = 0.0;
-        double var26 = 0.0;
-        double var28 = 0.0;
-        double var30 = 0.0;
-        double var32 = 0.0;
-        double var34 = 0.0;
-        double var36 = 0.0;
-        double var38 = 0.0;
-        double var40 = 0.0;
-        double var42 = 0.0;
-        double var44 = 0.0;
-        double var46 = 0.0;
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
+        double var13;
+        double var15;
+        double var17;
+        double var19;
+        double var21;
+        int var23;
+        double var24;
+        double var26;
+        double var28;
+        double var30;
+        double var32;
+        double var34;
+        double var36;
+        double var38;
+        double var40;
+        double var42;
+        double var44;
+        double var46;
         L0: {
           field_g[6] = (double)param9;
           field_g[7] = (double)param10;
@@ -88,22 +84,18 @@ final class ej implements lm {
                 var21 = Math.abs(field_g[8]);
                 if (var17 <= var19) {
                   if (var19 <= var21) {
-                    stackOut_9_0 = 2;
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = 2;
                     break L1;
                   } else {
-                    stackOut_8_0 = 1;
-                    stackIn_10_0 = stackOut_8_0;
+                    stackIn_10_0 = 1;
                     break L1;
                   }
                 } else {
                   if (var17 <= var21) {
-                    stackOut_6_0 = 2;
-                    stackIn_10_0 = stackOut_6_0;
+                    stackIn_10_0 = 2;
                     break L1;
                   } else {
-                    stackOut_5_0 = 0;
-                    stackIn_10_0 = stackOut_5_0;
+                    stackIn_10_0 = 0;
                     break L1;
                   }
                 }
@@ -241,10 +233,8 @@ final class ej implements lm {
     }
 
     public final boolean a(lm param0) {
-        ej var2 = null;
+        ej var2;
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
         L0: {
           L1: {
             if (!(param0 instanceof ej)) {
@@ -263,8 +253,7 @@ final class ej implements lm {
                     if (this.field_a != var2.field_a) {
                       break L1;
                     } else {
-                      stackOut_5_0 = 1;
-                      stackIn_7_0 = stackOut_5_0;
+                      stackIn_7_0 = 1;
                       break L0;
                     }
                   }
@@ -272,8 +261,7 @@ final class ej implements lm {
               }
             }
           }
-          stackOut_6_0 = 0;
-          stackIn_7_0 = stackOut_6_0;
+          stackIn_7_0 = 0;
           break L0;
         }
         return stackIn_7_0 != 0;
@@ -284,8 +272,8 @@ final class ej implements lm {
     }
 
     public final long a(int param0, int param1) {
-        long var3 = 0L;
-        int var5 = 0;
+        long var3;
+        int var5;
         L0: {
           L1: {
             this.field_r = param0 * this.field_p + param1 * this.field_h + this.field_x;
@@ -332,49 +320,33 @@ final class ej implements lm {
     }
 
     public final void a(int[] param0, int[] param1, int[] param2, int param3) {
-        int[] var5 = null;
-        int[] var6 = null;
-        int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int[] var11 = null;
-        int[] var12 = null;
-        L0: {
-          var12 = new int[12];
-          var11 = var12;
-          var5 = var11;
-          var6 = new int[]{1, 12, -12};
-          var5[0] = param0[0] - param0[2];
-          var5[1] = param1[0] - param1[2];
-          var5[2] = param2[0] - param2[2];
-          this.field_p = ap.a(var12, 0, var6, 0);
-          ap.a(var12, 0, var6, 0, var12, 3);
-          var5[0] = param0[1] - param0[2];
-          var5[1] = param1[1] - param1[2];
-          var5[2] = param2[1] - param2[2];
-          this.field_h = ap.a(var12, 0, var6, 0);
-          ap.a(var12, 0, var6, 0, var12, 6);
-          var5[0] = param0[2] - (int)(1.0 + this.field_e);
-          var5[1] = param1[2] - (int)(-1.0 + this.field_v);
-          var5[2] = param2[2] - (int)(1.0 + this.field_f);
-          var7 = ke.a(ap.a(var12, 0, var12, 0), (byte) -97);
-          if (var7 % 2 != 0) {
-            var8 = 1518500249 >> 30 - var7 / 2;
-            break L0;
-          } else {
+        int[] var12 = new int[12];
+        int[] var11 = var12;
+        int[] var5 = var11;
+        int[] var6 = new int[]{1, 12, -12};
+        var5[0] = param0[0] - param0[2];
+        var5[1] = param1[0] - param1[2];
+        var5[2] = param2[0] - param2[2];
+        this.field_p = ap.a(var12, 0, var6, 0);
+        ap.a(var12, 0, var6, 0, var12, 3);
+        var5[0] = param0[1] - param0[2];
+        var5[1] = param1[1] - param1[2];
+        var5[2] = param2[1] - param2[2];
+        this.field_h = ap.a(var12, 0, var6, 0);
+        ap.a(var12, 0, var6, 0, var12, 6);
+        var5[0] = param0[2] - (int)(1.0 + this.field_e);
+        var5[1] = param1[2] - (int)(-1.0 + this.field_v);
+        var5[2] = param2[2] - (int)(1.0 + this.field_f);
+        int var7 = ke.a(ap.a(var12, 0, var12, 0), (byte) -97);
+        if (var7 % 2 == 0) {
             var8 = 1 << var7 / 2;
-            break L0;
-          }
+        } else {
+            var8 = 1518500249 >> 30 - var7 / 2;
         }
-        L1: {
-          var9 = 67108864 / (var8 * 17);
-          if (var9 <= 303104) {
-            break L1;
-          } else {
+        int var9 = 67108864 / (var8 * 17);
+        if (var9 > 303104) {
             var9 = 303104;
-            break L1;
-          }
         }
         var5[0] = var9 * param0[2] - (int)(0.5 + (double)var9 * this.field_e);
         var5[1] = var9 * param1[2] - (int)(-0.5 + (double)var9 * this.field_v);
@@ -384,7 +356,7 @@ final class ej implements lm {
         var5[9] = var5[9] / var9;
         var5[10] = var5[10] / var9;
         var5[11] = var5[11] / var9;
-        var10 = 289;
+        int var10 = 289;
         this.field_s = ap.a(var12, 3, var12, 3) / var10;
         this.field_i = ap.a(var12, 6, var12, 6) / var10;
         this.field_u = ap.a(var12, 9, var12, 9) / var10;

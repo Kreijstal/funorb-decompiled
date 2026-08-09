@@ -17,7 +17,7 @@ final class un {
     int field_i;
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1;
         L0: {
           if (-1 != ii.field_q) {
             var1 = -gk.field_bb + 50;

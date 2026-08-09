@@ -7,8 +7,15 @@ final class lca extends bca {
     private nq field_q;
 
     final static void a(int param0, int param1, byte param2, int[] param3, int param4, int param5, int param6, int param7, int param8) {
-        RuntimeException var9 = null;
+        RuntimeException stackIn_77_0 = null;
+        StringBuilder stackIn_77_1 = null;
+        RuntimeException stackIn_78_0 = null;
+        StringBuilder stackIn_78_1 = null;
+        String stackIn_78_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var9_int = 0;
+        RuntimeException var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -19,23 +26,6 @@ final class lca extends bca {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        RuntimeException stackIn_76_0 = null;
-        StringBuilder stackIn_76_1 = null;
-        RuntimeException stackIn_77_0 = null;
-        StringBuilder stackIn_77_1 = null;
-        RuntimeException stackIn_78_0 = null;
-        StringBuilder stackIn_78_1 = null;
-        String stackIn_78_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_75_0 = null;
-        StringBuilder stackOut_75_1 = null;
-        RuntimeException stackOut_77_0 = null;
-        StringBuilder stackOut_77_1 = null;
-        String stackOut_77_2 = null;
-        RuntimeException stackOut_76_0 = null;
-        StringBuilder stackOut_76_1 = null;
-        String stackOut_76_2 = null;
         var19 = BachelorFridge.field_y;
         try {
           L0: {
@@ -168,7 +158,7 @@ final class lca extends bca {
                           } else {
                             L11: {
                               var17 = var9_int >> -365039184;
-                              if (jb.field_o <= var17) {
+                              if ((jb.field_o ^ -1) >= (var17 ^ -1)) {
                                 break L11;
                               } else {
                                 var18 = (var10 >> 1837019184) - (var9_int >> -1669086896);
@@ -312,27 +302,19 @@ final class lca extends bca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var9 = decompiledCaughtException;
-            stackOut_75_0 = (RuntimeException) (var9);
-            stackOut_75_1 = new StringBuilder().append("lca.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_77_0 = stackOut_75_0;
-            stackIn_77_1 = stackOut_75_1;
-            stackIn_76_0 = stackOut_75_0;
-            stackIn_76_1 = stackOut_75_1;
+            stackIn_77_0 = (RuntimeException) (var9);
+
+            stackIn_77_1 = new StringBuilder().append("lca.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_77_0 = (RuntimeException) ((Object) stackIn_77_0);
-              stackOut_77_1 = (StringBuilder) ((Object) stackIn_77_1);
-              stackOut_77_2 = "null";
-              stackIn_78_0 = stackOut_77_0;
-              stackIn_78_1 = stackOut_77_1;
-              stackIn_78_2 = stackOut_77_2;
+              stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
+              stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
+              stackIn_78_2 = "null";
               break L18;
             } else {
-              stackOut_76_0 = (RuntimeException) ((Object) stackIn_76_0);
-              stackOut_76_1 = (StringBuilder) ((Object) stackIn_76_1);
-              stackOut_76_2 = "{...}";
-              stackIn_78_0 = stackOut_76_0;
-              stackIn_78_1 = stackOut_76_1;
-              stackIn_78_2 = stackOut_76_2;
+              stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
+              stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
+              stackIn_78_2 = "{...}";
               break L18;
             }
           }
@@ -362,27 +344,15 @@ final class lca extends bca {
     }
 
     final at a(int param0, gj param1) {
-        at discarded$2 = null;
         RuntimeException var3 = null;
         gj var4 = null;
         bna stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        bna stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -390,39 +360,30 @@ final class lca extends bca {
                 break L1;
               } else {
                 var4 = (gj) null;
-                discarded$2 = this.a(-68, (gj) null);
+                this.a(-68, (gj) null);
                 break L1;
               }
             }
-            stackOut_2_0 = new bna(param1, (lca) (this));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new bna(param1, (lca) (this));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("lca.A(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("lca.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -497,8 +458,6 @@ final class lca extends bca {
         int stackIn_10_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_6_0 = 0;
         var2 = BachelorFridge.field_y;
         try {
           L0: {
@@ -513,8 +472,7 @@ final class lca extends bca {
             var1 = (kha) ((Object) iea.field_d.b((byte) 90));
             L2: while (true) {
               if (var1 == null) {
-                stackOut_9_0 = 1;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -522,8 +480,7 @@ final class lca extends bca {
                   var1 = (kha) ((Object) iea.field_d.c(0));
                   continue L2;
                 } else {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }

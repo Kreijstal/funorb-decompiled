@@ -22,12 +22,12 @@ final class ro extends kl {
     private dd field_n;
 
     final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var7 = DungeonAssault.field_K;
         super.b(-125);
         var2 = (this.field_a + -200 >> 666655681) + this.field_k;
@@ -205,7 +205,7 @@ final class ro extends kl {
     }
 
     private final int e(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = this.f(-2);
         if (-1 == (var2 ^ -1)) {
           return 0;
@@ -323,10 +323,7 @@ final class ro extends kl {
     }
 
     private final void a(q param0, int param1, byte param2, int param3, int param4) {
-        RuntimeException var6 = null;
         int var7 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -334,14 +331,7 @@ final class ro extends kl {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var6 = null;
         var7 = DungeonAssault.field_K;
         try {
           L0: {
@@ -391,27 +381,19 @@ final class ro extends kl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var6);
-            stackOut_14_1 = new StringBuilder().append("ro.R(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var6);
+
+            stackIn_16_1 = new StringBuilder().append("ro.R(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }
@@ -493,37 +475,26 @@ final class ro extends kl {
     }
 
     final void a(int param0, int param1, byte param2) {
-        int var4 = 0;
-        int var5 = 0;
-        Object stackIn_1_0 = null;
+        int var4;
+        int var5;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           var4 = 37 % ((65 - param2) / 45);
           this.field_D = param1;
           this.field_t = 1;
           this.field_C = param0;
           var5 = this.f(-2);
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (var5 == 0) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = oi.b(0, this.f(-2));
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = oi.b(0, this.f(-2));
             break L0;
           }
         }
@@ -539,16 +510,16 @@ final class ro extends kl {
     }
 
     final void b(byte param0) {
-        int[] var2 = null;
-        int var3_int = 0;
-        cn var3 = null;
-        int[] var4 = null;
-        cn var5 = null;
-        ph var6 = null;
-        cn var7 = null;
-        cn var8 = null;
-        int var9 = 0;
-        int[] var10 = null;
+        int[] var2;
+        int var3_int;
+        cn var3;
+        int[] var4;
+        cn var5;
+        ph var6;
+        cn var7;
+        cn var8;
+        int var9;
+        int[] var10;
         var9 = DungeonAssault.field_K;
         var10 = new int[64];
         var2 = var10;
@@ -615,11 +586,11 @@ final class ro extends kl {
     }
 
     final void c(int param0) {
-        eh[] var2 = null;
-        int var3 = 0;
-        eh var4 = null;
-        int var5 = 0;
-        eh[] var6 = null;
+        eh[] var2;
+        int var3;
+        eh var4;
+        int var5;
+        eh[] var6;
         var5 = DungeonAssault.field_K;
         super.c(-125);
         var6 = rg.field_M;
@@ -646,24 +617,14 @@ final class ro extends kl {
 
     ro(go param0) {
         super(300, 420);
-        RuntimeException var2 = null;
         int var2_int = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var2 = null;
         this.field_t = 0;
         try {
           L0: {
@@ -695,27 +656,19 @@ final class ro extends kl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("ro.<init>(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("ro.<init>(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -784,23 +737,21 @@ final class ro extends kl {
     }
 
     final void c(byte param0) {
-        o discarded$2 = null;
-        o discarded$3 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        String var5 = null;
-        int var7 = 0;
-        int var8 = 0;
-        Object var9 = null;
-        String var10 = null;
-        String var11 = null;
-        String var12 = null;
-        String var13 = null;
-        Object var14 = null;
-        String var15 = null;
-        String var16 = null;
-        String var17 = null;
+        int var2;
+        int var3;
+        int var4;
+        String var5;
+        int var7;
+        int var8;
+        Object var9;
+        String var10;
+        String var11;
+        String var12;
+        String var13;
+        Object var14;
+        String var15;
+        String var16;
+        String var17;
         var8 = DungeonAssault.field_K;
         super.c((byte) -97);
         this.field_o.a((byte) 109, 20);
@@ -825,7 +776,7 @@ final class ro extends kl {
                       break L2;
                     } else {
                       if (0 == (7 & -18 + this.field_A)) {
-                        discarded$2 = je.a(0, eb.field_O);
+                        je.a(0, eb.field_O);
                         break L2;
                       } else {
                         L3: {
@@ -979,7 +930,7 @@ final class ro extends kl {
                       break L8;
                     } else {
                       if (0 == (7 & -18 + this.field_A)) {
-                        discarded$3 = je.a(0, eb.field_O);
+                        je.a(0, eb.field_O);
                         break L8;
                       } else {
                         L9: {
@@ -1116,7 +1067,7 @@ final class ro extends kl {
     }
 
     final void a(boolean param0) {
-        int var3 = 0;
+        int var3;
         var3 = DungeonAssault.field_K;
         super.a(param0);
         if (hh.field_s == this.field_s) {
@@ -1146,19 +1097,17 @@ final class ro extends kl {
     }
 
     private final void a(int param0, int param1, int param2, byte param3, int param4) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        double var9 = 0.0;
-        double var11 = 0.0;
-        int var13 = 0;
-        int var14 = 0;
+        int var6;
+        int var7;
+        int var8;
+        double var9;
+        double var11;
+        int var13;
+        int var14;
         var14 = DungeonAssault.field_K;
         var6 = this.field_D;
         if (this.field_t == 5) {
-          discarded$2 = db.field_v.a(jk.a(new String[]{gh.a(this.field_p.field_Y.field_l, (byte) -120)}, wm.field_e, 30496), 30 + param0, param1 + -20, param2 - 60, 40, 16777215, -1, 1, 1, la.field_b.field_H);
+          db.field_v.a(jk.a(new String[]{gh.a(this.field_p.field_Y.field_l, (byte) -120)}, wm.field_e, 30496), 30 + param0, param1 + -20, param2 - 60, 40, 16777215, -1, 1, 1, la.field_b.field_H);
           if (param3 == 4) {
             return;
           } else {
@@ -1233,7 +1182,7 @@ final class ro extends kl {
                 }
               }
             } else {
-              discarded$3 = db.field_v.a(oo.field_b, 30 + param0, -db.field_v.field_H + var8, param2 - 60, 30, this.field_r, -1, 1, 1, db.field_v.field_H);
+              db.field_v.a(oo.field_b, 30 + param0, -db.field_v.field_H + var8, param2 - 60, 30, this.field_r, -1, 1, 1, db.field_v.field_H);
               if (param3 == 4) {
                 return;
               } else {
@@ -1259,104 +1208,67 @@ final class ro extends kl {
     }
 
     private final void e(byte param0) {
-        double var2 = 0.0;
-        int var4 = 0;
-        int var5 = 0;
-        Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_10_0 = 0;
-        pp stackIn_11_0 = null;
-        pp stackIn_12_0 = null;
         pp stackIn_28_0 = null;
-        pp stackIn_29_0 = null;
         pp stackIn_30_0 = null;
         int stackIn_30_1 = 0;
-        Object stackOut_2_0 = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        pp stackOut_10_0 = null;
-        pp stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        pp stackOut_11_0 = null;
-        pp stackOut_29_0 = null;
-        int stackOut_29_1 = 0;
+        double var2;
+        int var4;
+        int var5;
         var2 = this.field_p.field_Y.b(gm.field_d.field_N, this.field_D, 69);
         if (param0 <= -52) {
           L0: {
-            stackOut_2_0 = this;
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_4_0 = this;
+
             if (1.0 > var2) {
-              stackOut_4_0 = this;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_6_0 = this;
+
               if (var2 < 0.5) {
-                stackOut_6_0 = this;
-                stackOut_6_1 = 16777215;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = this;
+                stackIn_7_1 = 16777215;
                 break L0;
               } else {
-                stackOut_5_0 = this;
-                stackOut_5_1 = 16776960;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+                stackIn_7_0 = this;
+                stackIn_7_1 = 16776960;
                 break L0;
               }
             } else {
-              stackOut_3_0 = this;
-              stackOut_3_1 = 16711680;
-              stackIn_7_0 = stackOut_3_0;
-              stackIn_7_1 = stackOut_3_1;
+              stackIn_7_0 = this;
+              stackIn_7_1 = 16711680;
               break L0;
             }
           }
           L1: {
             ((ro) (this)).field_r = stackIn_7_1;
             if (this.field_p.field_Y.b(gm.field_d.field_N, 0, 53) != 1.0) {
-              stackOut_9_0 = 0;
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = 0;
               break L1;
             } else {
-              stackOut_8_0 = 1;
-              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_0 = 1;
               break L1;
             }
           }
           L2: {
             var4 = stackIn_10_0;
-            stackOut_10_0 = this.field_s;
-            stackIn_28_0 = stackOut_10_0;
-            stackIn_11_0 = stackOut_10_0;
+            stackIn_28_0 = this.field_s;
+
             if (var4 != 0) {
-              stackOut_28_0 = (pp) ((Object) stackIn_28_0);
-              stackOut_28_1 = 1;
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_0 = (pp) ((Object) stackIn_28_0);
+              stackIn_30_1 = 1;
               break L2;
             } else {
-              stackOut_11_0 = (pp) ((Object) stackIn_11_0);
-              stackIn_29_0 = stackOut_11_0;
-              stackIn_12_0 = stackOut_11_0;
+
+
               if (var2 >= 1.0) {
-                stackOut_29_0 = (pp) ((Object) stackIn_29_0);
-                stackOut_29_1 = 0;
-                stackIn_30_0 = stackOut_29_0;
-                stackIn_30_1 = stackOut_29_1;
+                stackIn_30_0 = (pp) ((Object) stackIn_28_0);
+                stackIn_30_1 = 0;
                 break L2;
               } else {
-                stackIn_12_0.field_w = true;
+                stackIn_28_0.field_w = true;
                 if (this.field_D <= this.field_p.field_Y.c(-114)) {
                   L3: {
                     var5 = (int)(var2 * 4.0);

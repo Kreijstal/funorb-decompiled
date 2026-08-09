@@ -18,7 +18,7 @@ final class kh {
     }
 
     public static void a(int param0) {
-        String var2 = null;
+        String var2;
         field_a = null;
         field_c = null;
         if (param0 != 21601) {

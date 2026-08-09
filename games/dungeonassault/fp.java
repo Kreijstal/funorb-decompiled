@@ -20,7 +20,6 @@ final class fp {
     }
 
     final static int a(byte param0) {
-        int discarded$6 = 0;
         bl.field_r.a((byte) 62);
         if (param0 > 51) {
           if (!hb.field_a.b((byte) 60)) {
@@ -29,7 +28,7 @@ final class fp {
             return 0;
           }
         } else {
-          discarded$6 = fp.a((byte) 113);
+          fp.a((byte) 113);
           if (!hb.field_a.b((byte) 60)) {
             return bk.a(0);
           } else {

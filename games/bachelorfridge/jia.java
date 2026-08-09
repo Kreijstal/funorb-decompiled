@@ -9,33 +9,17 @@ final class jia extends k {
 
     final void a(byte param0, lu param1, int param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        Object stackIn_11_0 = null;
         Object stackIn_12_0 = null;
         Object stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_10_0 = null;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException var4 = null;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -58,20 +42,15 @@ final class jia extends k {
                     break L2;
                   } else {
                     L3: {
-                      stackOut_10_0 = this;
-                      stackIn_12_0 = stackOut_10_0;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_12_0 = this;
+
                       if (1 != param1.b(param0 ^ -16711866)) {
-                        stackOut_12_0 = this;
-                        stackOut_12_1 = 0;
-                        stackIn_13_0 = stackOut_12_0;
-                        stackIn_13_1 = stackOut_12_1;
+                        stackIn_13_0 = this;
+                        stackIn_13_1 = 0;
                         break L3;
                       } else {
-                        stackOut_11_0 = this;
-                        stackOut_11_1 = 1;
-                        stackIn_13_0 = stackOut_11_0;
-                        stackIn_13_1 = stackOut_11_1;
+                        stackIn_13_0 = this;
+                        stackIn_13_1 = 1;
                         break L3;
                       }
                     }
@@ -90,27 +69,19 @@ final class jia extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var4);
-            stackOut_15_1 = new StringBuilder().append("jia.E(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var4);
+
+            stackIn_17_1 = new StringBuilder().append("jia.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L4;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L4;
             }
           }
@@ -133,53 +104,43 @@ final class jia extends k {
     }
 
     final int[][] a(boolean param0, int param1) {
-        int[][] var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
+        int[][][] var38 = null;
+        int[][][] var30 = null;
         int[][][] var8 = null;
         int var9_int = 0;
-        int[] var9 = null;
-        int[] var10 = null;
-        int[] var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int[][] var46 = null;
+        int[][] var50 = null;
+        int[] var49 = null;
+        int[] var48 = null;
+        int[] var47 = null;
         int var18_int = 0;
+        int var19_int = 0;
         int[] var18 = null;
         int[] var19 = null;
-        int var19_int = 0;
         int[] var20 = null;
         int var21 = 0;
         int var22 = 0;
-        int var23 = 0;
-        int[][] var29 = null;
-        int[][][] var30 = null;
-        int[][] var37 = null;
-        int[][][] var38 = null;
-        int[][] var46 = null;
-        int[] var47 = null;
-        int[] var48 = null;
-        int[] var49 = null;
-        int[][] var50 = null;
+        int[] var9 = null;
+        int[] var10 = null;
+        int[] var11 = null;
+        int var15 = 0;
+        int var16 = 0;
         int[][] var51 = null;
-        L0: {
-          var23 = BachelorFridge.field_y;
-          var37 = this.field_h.a(param1, -858);
-          var29 = var37;
-          var3 = var29;
-          if (!param0) {
-            break L0;
-          } else {
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var23 = BachelorFridge.field_y;
+        int[][] var37 = this.field_h.a(param1, -858);
+        int[][] var29 = var37;
+        int[][] var3 = var29;
+        if (param0) {
             this.field_k = -49;
-            break L0;
-          }
         }
-        L1: {
-          if (this.field_h.field_b) {
+        if (!(!this.field_h.field_b)) {
             var4 = this.field_n + this.field_n - -1;
             var5 = 65536 / var4;
             var6 = 1 + this.field_k + this.field_k;
@@ -187,40 +148,7 @@ final class jia extends k {
             var38 = new int[var4][][];
             var30 = var38;
             var8 = var30;
-            var9_int = param1 - this.field_n;
-            L2: while (true) {
-              if (this.field_n + param1 < var9_int) {
-                var9 = var37[0];
-                var10 = var37[1];
-                var11 = var37[2];
-                var12 = 0;
-                L3: while (true) {
-                  if (var12 >= hh.field_d) {
-                    break L1;
-                  } else {
-                    var13 = 0;
-                    var14 = 0;
-                    var15 = 0;
-                    var16 = 0;
-                    L4: while (true) {
-                      if (var4 <= var16) {
-                        var9[var12] = var5 * var13 >> 464244016;
-                        var10[var12] = var5 * var14 >> 1849367792;
-                        var11[var12] = var15 * var5 >> -443855152;
-                        var12++;
-                        continue L3;
-                      } else {
-                        var51 = var38[var16];
-                        var14 = var14 + var51[1][var12];
-                        var13 = var13 + var51[0][var12];
-                        var15 = var15 + var51[2][var12];
-                        var16++;
-                        continue L4;
-                      }
-                    }
-                  }
-                }
-              } else {
+            for (var9_int = param1 - this.field_n; this.field_n + param1 >= var9_int; var9_int++) {
                 var46 = this.a((byte) -59, 0, var9_int & it.field_r);
                 var50 = new int[3][hh.field_d];
                 var12 = 0;
@@ -229,105 +157,72 @@ final class jia extends k {
                 var49 = var46[0];
                 var48 = var46[1];
                 var47 = var46[2];
-                var18_int = -this.field_k;
-                L5: while (true) {
-                  if (this.field_k < var18_int) {
-                    var18 = var50[0];
-                    var19 = var50[1];
-                    var20 = var50[2];
-                    var21 = 0;
-                    L6: while (true) {
-                      if (var21 >= hh.field_d) {
-                        var8[-param1 + var9_int - -this.field_n] = var50;
-                        var9_int++;
-                        continue L2;
-                      } else {
-                        var18[var21] = var7 * var12 >> -1666805520;
-                        var19[var21] = var7 * var13 >> -1374346768;
-                        var20[var21] = var14 * var7 >> 1976600848;
-                        var22 = -this.field_k + var21 & wp.field_r;
-                        var13 = var13 - var48[var22];
-                        var21++;
-                        var14 = var14 - var47[var22];
-                        var12 = var12 - var49[var22];
-                        var22 = var21 + this.field_k & wp.field_r;
-                        var13 = var13 + var48[var22];
-                        var14 = var14 + var47[var22];
-                        var12 = var12 + var49[var22];
-                        continue L6;
-                      }
-                    }
-                  } else {
+                for (var18_int = -this.field_k; this.field_k >= var18_int; var18_int++) {
                     var19_int = var18_int & wp.field_r;
                     var14 = var14 + var47[var19_int];
                     var13 = var13 + var48[var19_int];
                     var12 = var12 + var49[var19_int];
-                    var18_int++;
-                    continue L5;
-                  }
                 }
-              }
+                var18 = var50[0];
+                var19 = var50[1];
+                var20 = var50[2];
+                var21 = 0;
+                while (var21 < hh.field_d) {
+                    var18[var21] = var7 * var12 >> -1666805520;
+                    var19[var21] = var7 * var13 >> -1374346768;
+                    var20[var21] = var14 * var7 >> 1976600848;
+                    var22 = -this.field_k + var21 & wp.field_r;
+                    var13 = var13 - var48[var22];
+                    var21++;
+                    var14 = var14 - var47[var22];
+                    var12 = var12 - var49[var22];
+                    var22 = var21 + this.field_k & wp.field_r;
+                    var13 = var13 + var48[var22];
+                    var14 = var14 + var47[var22];
+                    var12 = var12 + var49[var22];
+                }
+                var8[-param1 + var9_int - -this.field_n] = var50;
             }
-          } else {
-            break L1;
-          }
+            var9 = var37[0];
+            var10 = var37[1];
+            var11 = var37[2];
+            for (var12 = 0; var12 < hh.field_d; var12++) {
+                var13 = 0;
+                var14 = 0;
+                var15 = 0;
+                for (var16 = 0; var4 > var16; var16++) {
+                    var51 = var38[var16];
+                    var14 = var14 + var51[1][var12];
+                    var13 = var13 + var51[0][var12];
+                    var15 = var15 + var51[2][var12];
+                }
+                var9[var12] = var5 * var13 >> 464244016;
+                var10[var12] = var5 * var14 >> 1849367792;
+                var11[var12] = var15 * var5 >> -443855152;
+            }
         }
         return var3;
     }
 
     final static void a(po param0, mla param1, int param2, byte param3, String param4) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_20_2 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_23_2 = null;
-        RuntimeException stackIn_24_0 = null;
+        String stackIn_22_2 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        String stackIn_25_2 = null;
+        StringBuilder stackIn_27_1 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
         var9 = BachelorFridge.field_y;
         try {
           L0: {
@@ -389,81 +284,57 @@ final class jia extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var5 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var5);
-            stackOut_17_1 = new StringBuilder().append("jia.D(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_21_0 = (RuntimeException) (var5);
+
+            stackIn_21_1 = new StringBuilder().append("jia.D(");
+
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L7;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+
+
+            stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L8;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+
+
+            stackIn_27_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L9;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L9;
             }
           }
-          throw pe.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_22_0), stackIn_28_2 + ')');
         }
     }
 
@@ -499,25 +370,25 @@ final class jia extends k {
     }
 
     final int[] a(int param0, int param1) {
-        int[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int[][] var8 = null;
-        int var9 = 0;
-        int[] var10_ref_int__ = null;
-        int var10 = 0;
-        int[] var11_ref_int__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int[] var16 = null;
-        int[][] var17 = null;
-        int[] var18 = null;
-        int[][] var19 = null;
+        int[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int[][] var8;
+        int var9;
+        int var10;
+        int[] var10_ref_int__;
+        int var11;
+        int[] var11_ref_int__;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int[] var16;
+        int[][] var17;
+        int[] var18;
+        int[][] var19;
         L0: {
           var14 = BachelorFridge.field_y;
           var3 = this.field_j.a(param0, -1);

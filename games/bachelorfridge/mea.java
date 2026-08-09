@@ -48,7 +48,7 @@ final class mea extends ana {
     }
 
     final static void e(byte param0) {
-        cq discarded$6 = ol.a(bi.field_i[1], true);
+        ol.a(bi.field_i[1], true);
         if (param0 < 86) {
             field_v = (kv[]) null;
         }

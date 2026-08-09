@@ -8,67 +8,38 @@ final class ci extends ki {
     static boolean field_t;
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        jp discarded$1 = null;
-        pb var7 = null;
-        pb var8 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_6_1 = 0;
+        pb var7;
+        pb var8;
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
         int stackIn_8_2 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_16_1 = 0;
         int stackIn_17_0 = 0;
         int stackIn_17_1 = 0;
         int stackIn_18_0 = 0;
         int stackIn_18_1 = 0;
         int stackIn_18_2 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_17_1 = 0;
-        int stackOut_17_2 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_16_1 = 0;
-        int stackOut_16_2 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
         if (!param0) {
-          discarded$1 = this.c((byte) 70);
+          this.c((byte) 70);
           if (this.b((byte) -102)) {
             L0: {
               var7 = ge.a(this.field_m, param3, -20777);
               if (!var7.a((byte) -84, param3, this.field_m)) {
                 L1: {
-                  stackOut_15_0 = 1;
-                  stackOut_15_1 = 0;
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_17_1 = stackOut_15_1;
-                  stackIn_16_0 = stackOut_15_0;
-                  stackIn_16_1 = stackOut_15_1;
+                  stackIn_17_0 = 1;
+
+                  stackIn_17_1 = 0;
+
                   if (param0) {
-                    stackOut_17_0 = stackIn_17_0;
-                    stackOut_17_1 = stackIn_17_1;
-                    stackOut_17_2 = 0;
-                    stackIn_18_0 = stackOut_17_0;
-                    stackIn_18_1 = stackOut_17_1;
-                    stackIn_18_2 = stackOut_17_2;
+                    stackIn_18_0 = stackIn_17_0;
+                    stackIn_18_1 = stackIn_17_1;
+                    stackIn_18_2 = 0;
                     break L1;
                   } else {
-                    stackOut_16_0 = stackIn_16_0;
-                    stackOut_16_1 = stackIn_16_1;
-                    stackOut_16_2 = 1;
-                    stackIn_18_0 = stackOut_16_0;
-                    stackIn_18_1 = stackOut_16_1;
-                    stackIn_18_2 = stackOut_16_2;
+                    stackIn_18_0 = stackIn_17_0;
+                    stackIn_18_1 = stackIn_17_1;
+                    stackIn_18_2 = 1;
                     break L1;
                   }
                 }
@@ -92,27 +63,19 @@ final class ci extends ki {
                 var8 = ge.a(this.field_m, param3, -20777);
                 if (!var8.a((byte) -84, param3, this.field_m)) {
                   L4: {
-                    stackOut_5_0 = 1;
-                    stackOut_5_1 = 0;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_7_1 = stackOut_5_1;
-                    stackIn_6_0 = stackOut_5_0;
-                    stackIn_6_1 = stackOut_5_1;
+                    stackIn_7_0 = 1;
+
+                    stackIn_7_1 = 0;
+
                     if (param0) {
-                      stackOut_7_0 = stackIn_7_0;
-                      stackOut_7_1 = stackIn_7_1;
-                      stackOut_7_2 = 0;
-                      stackIn_8_0 = stackOut_7_0;
-                      stackIn_8_1 = stackOut_7_1;
-                      stackIn_8_2 = stackOut_7_2;
+                      stackIn_8_0 = stackIn_7_0;
+                      stackIn_8_1 = stackIn_7_1;
+                      stackIn_8_2 = 0;
                       break L4;
                     } else {
-                      stackOut_6_0 = stackIn_6_0;
-                      stackOut_6_1 = stackIn_6_1;
-                      stackOut_6_2 = 1;
-                      stackIn_8_0 = stackOut_6_0;
-                      stackIn_8_1 = stackOut_6_1;
-                      stackIn_8_2 = stackOut_6_2;
+                      stackIn_8_0 = stackIn_7_0;
+                      stackIn_8_1 = stackIn_7_1;
+                      stackIn_8_2 = 1;
                       break L4;
                     }
                   }
@@ -135,17 +98,16 @@ final class ci extends ki {
     }
 
     final jp[] b(int param0) {
-        boolean discarded$0 = false;
         if (param0 > -12) {
-            discarded$0 = this.b((byte) 4);
+            this.b((byte) 4);
             return b.field_b;
         }
         return b.field_b;
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var7 = null;
-        pb var8 = null;
+        pb var7;
+        pb var8;
         if (param1 > -84) {
           L0: {
             field_s = (String) null;
@@ -193,7 +155,7 @@ final class ci extends ki {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        int var5;
         if ((param1 ^ -1) < 0) {
           L0: {
             la.a(param2, param3, 153, 238, 0, nj.field_G[param1], 96);
@@ -250,10 +212,9 @@ final class ci extends ki {
     }
 
     final jp c(byte param0) {
-        boolean discarded$0 = false;
         if (param0 > -74) {
             String var3 = (String) null;
-            discarded$0 = ci.a((String) null, -110);
+            ci.a((String) null, -110);
             return pk.field_f;
         }
         return pk.field_f;
@@ -262,10 +223,6 @@ final class ci extends ki {
     final boolean b(byte param0) {
         int stackIn_11_0 = 0;
         int stackIn_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
         if (param0 <= -91) {
           if (om.field_fc != null) {
             if (null != pn.field_m) {
@@ -275,12 +232,10 @@ final class ci extends ki {
                 } else {
                   L0: {
                     if (null == pk.field_f) {
-                      stackOut_23_0 = 0;
-                      stackIn_24_0 = stackOut_23_0;
+                      stackIn_24_0 = 0;
                       break L0;
                     } else {
-                      stackOut_22_0 = 1;
-                      stackIn_24_0 = stackOut_22_0;
+                      stackIn_24_0 = 1;
                       break L0;
                     }
                   }
@@ -305,12 +260,10 @@ final class ci extends ki {
                 } else {
                   L1: {
                     if (null == pk.field_f) {
-                      stackOut_10_0 = 0;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_11_0 = 0;
                       break L1;
                     } else {
-                      stackOut_9_0 = 1;
-                      stackIn_11_0 = stackOut_9_0;
+                      stackIn_11_0 = 1;
                       break L1;
                     }
                   }
@@ -332,23 +285,12 @@ final class ci extends ki {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -360,35 +302,26 @@ final class ci extends ki {
               }
             }
             var3 = (CharSequence) ((Object) param0);
-            stackOut_2_0 = ih.field_d.equals(gb.a(var3, 92));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = ih.field_d.equals(gb.a(var3, 92));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("ci.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("ci.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }

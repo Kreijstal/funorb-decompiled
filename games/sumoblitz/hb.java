@@ -12,16 +12,12 @@ final class hb implements java.awt.event.KeyListener, java.awt.event.FocusListen
         try {
             if (!(null == wd.field_e)) {
                 var2_int = param0.getKeyChar();
-                if (var2_int != 0) {
-                    if (var2_int != 65535) {
-                        if (vo.a(-125, (char) var2_int)) {
-                            var3 = jt.field_s - -1 & 127;
-                            if (var3 != bj.field_a) {
-                                cp.field_c[jt.field_s] = -1;
-                                aa.field_c[jt.field_s] = (char)var2_int;
-                                jt.field_s = var3;
-                            }
-                        }
+                if (var2_int != 0 && var2_int != 65535 && vo.a(-125, (char) var2_int)) {
+                    var3 = jt.field_s - -1 & 127;
+                    if (var3 != bj.field_a) {
+                        cp.field_c[jt.field_s] = -1;
+                        aa.field_c[jt.field_s] = (char)var2_int;
+                        jt.field_s = var3;
                     }
                 }
             }
@@ -32,89 +28,72 @@ final class hb implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
-        RuntimeException var2 = null;
         int var2_int = 0;
-        int var3 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
         try {
           L0: {
             if (null != wd.field_e) {
               L1: {
                 L2: {
-                  L3: {
-                    kj.field_e = 0;
-                    var2_int = param0.getKeyCode();
-                    if (0 > var2_int) {
-                      break L3;
-                    } else {
-                      if (var2_int < kn.field_c.length) {
-                        break L2;
+                  kj.field_e = 0;
+                  var2_int = param0.getKeyCode();
+                  if (0 > var2_int) {
+                    break L2;
+                  } else {
+                    if (var2_int < kn.field_c.length) {
+                      var2_int = kn.field_c[var2_int];
+                      if (0 == (128 & var2_int)) {
+                        break L1;
                       } else {
-                        break L3;
+                        var2_int = -1;
+                        break L1;
                       }
+                    } else {
+                      break L2;
                     }
                   }
-                  var2_int = -1;
-                  if (!Sumoblitz.field_L) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
                 }
-                var2_int = kn.field_c[var2_int];
-                if (0 == (128 & var2_int)) {
-                  break L1;
-                } else {
-                  var2_int = -1;
-                  break L1;
-                }
+                var2_int = -1;
+                break L1;
               }
-              L4: {
+              L3: {
                 if (lv.field_i < 0) {
-                  break L4;
+                  break L3;
                 } else {
                   if (-1 >= (var2_int ^ -1)) {
                     jf.field_d[lv.field_i] = var2_int;
                     lv.field_i = lv.field_i - -1 & 127;
                     if (lv.field_i != ks.field_v) {
-                      break L4;
+                      break L3;
                     } else {
                       lv.field_i = -1;
-                      break L4;
+                      break L3;
                     }
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
               }
-              L5: {
+              L4: {
                 if (var2_int >= 0) {
                   var3 = 1 + jt.field_s & 127;
                   if (var3 != bj.field_a) {
                     cp.field_c[jt.field_s] = var2_int;
                     aa.field_c[jt.field_s] = (char)0;
                     jt.field_s = var3;
-                    break L5;
+                    break L4;
                   } else {
-                    break L5;
+                    break L4;
                   }
                 } else {
-                  break L5;
+                  break L4;
                 }
               }
               var3 = param0.getModifiers();
@@ -140,30 +119,22 @@ final class hb implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var2 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var2);
-            stackOut_26_1 = new StringBuilder().append("hb.keyPressed(");
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_28_0 = (RuntimeException) (var2);
+
+            stackIn_28_1 = new StringBuilder().append("hb.keyPressed(");
+
             if (param0 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
-              break L6;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
+              break L5;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
-              break L6;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
+              break L5;
             }
           }
           throw qo.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
@@ -199,22 +170,12 @@ final class hb implements java.awt.event.KeyListener, java.awt.event.FocusListen
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             L1: {
@@ -232,11 +193,7 @@ final class hb implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         break L3;
                       } else {
                         var2_int = -129 & kn.field_c[var2_int];
-                        if (!Sumoblitz.field_L) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
+                        break L2;
                       }
                     }
                   }
@@ -268,27 +225,19 @@ final class hb implements java.awt.event.KeyListener, java.awt.event.FocusListen
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             runtimeException = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (runtimeException);
-            stackOut_13_1 = new StringBuilder().append("hb.keyReleased(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (runtimeException);
+
+            stackIn_15_1 = new StringBuilder().append("hb.keyReleased(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }
@@ -308,22 +257,12 @@ final class hb implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         RuntimeException var2 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             if (null != wd.field_e) {
@@ -337,27 +276,19 @@ final class hb implements java.awt.event.KeyListener, java.awt.event.FocusListen
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("hb.focusLost(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("hb.focusLost(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }
@@ -372,169 +303,111 @@ final class hb implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     final static boolean a(cn param0, int param1, cn param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_17_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_16_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
-        RuntimeException stackIn_22_0 = null;
+        String stackIn_20_2 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_12_0 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        RuntimeException var3 = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                var3_int = -param2.field_kb + param0.field_kb;
-                if (jm.field_d != param0.field_gb) {
+              var3_int = -param2.field_kb + param0.field_kb;
+              if (jm.field_d != param0.field_gb) {
+                if (null != param0.field_gb) {
+                  break L1;
+                } else {
+                  var3_int += 200;
+                  break L1;
+                }
+              } else {
+                var3_int -= 200;
+                break L1;
+              }
+            }
+            L2: {
+              if (jm.field_d == param2.field_gb) {
+                var3_int += 200;
+                break L2;
+              } else {
+                if (null == param2.field_gb) {
+                  var3_int -= 200;
                   break L2;
                 } else {
-                  var3_int -= 200;
-                  if (var4 == 0) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
+                  break L2;
                 }
               }
-              if (null != param0.field_gb) {
-                break L1;
-              } else {
-                var3_int += 200;
-                break L1;
-              }
-            }
-            L3: {
-              L4: {
-                if (jm.field_d == param2.field_gb) {
-                  break L4;
-                } else {
-                  if (null == param2.field_gb) {
-                    var3_int -= 200;
-                    if (var4 == 0) {
-                      break L3;
-                    } else {
-                      break L4;
-                    }
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              var3_int += 200;
-              break L3;
             }
             if (param1 == 0) {
-              L5: {
+              L3: {
                 if (var3_int <= 0) {
-                  stackOut_16_0 = 0;
-                  stackIn_17_0 = stackOut_16_0;
-                  break L5;
+                  stackIn_16_0 = 0;
+                  break L3;
                 } else {
-                  stackOut_15_0 = 1;
-                  stackIn_17_0 = stackOut_15_0;
-                  break L5;
+                  stackIn_16_0 = 1;
+                  break L3;
                 }
               }
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_12_0 = 1;
-              stackIn_13_0 = stackOut_12_0;
+              stackIn_12_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L4: {
             var3 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var3);
-            stackOut_18_1 = new StringBuilder().append("hb.C(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_19_0 = (RuntimeException) (var3);
+
+            stackIn_19_1 = new StringBuilder().append("hb.C(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
-              break L6;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
+              break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
-              break L6;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
+              break L4;
             }
           }
-          L7: {
-            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param1).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+          L5: {
+
+
+            stackIn_22_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
-              break L7;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
+              break L5;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
-              break L7;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
+              break L5;
             }
           }
-          throw qo.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_20_0), stackIn_23_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_13_0 != 0;
+          return stackIn_12_0 != 0;
         } else {
-          return stackIn_17_0 != 0;
+          return stackIn_16_0 != 0;
         }
     }
 

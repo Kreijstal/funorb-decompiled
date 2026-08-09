@@ -25,7 +25,7 @@ final class m {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7) {
-        int var9 = 0;
+        int var9;
         var9 = StarCannon.field_A;
         if (param6 >= 16) {
           if (param0 > param2) {
@@ -61,23 +61,16 @@ final class m {
     }
 
     final static boolean a(int param0) {
-        boolean discarded$8 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 >= 0) {
           L0: {
-            discarded$8 = m.a(-56);
+            m.a(-56);
             if (qb.field_h <= 250) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -85,12 +78,10 @@ final class m {
         } else {
           L1: {
             if (qb.field_h <= 250) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -99,7 +90,7 @@ final class m {
     }
 
     final static void a(byte param0, boolean param1, int param2, int param3) {
-        int var4 = 0;
+        int var4;
         if (param0 == 112) {
           bg.field_c.e(param2, param3);
           if (param1) {

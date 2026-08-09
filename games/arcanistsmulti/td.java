@@ -18,15 +18,14 @@ final class td extends df implements vb {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int discarded$1 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         if (param0 >= -52) {
           return;
         } else {
           var5 = param1 + this.field_n;
           var6 = this.field_j - -param3;
-          discarded$1 = ia.field_c.a(qe.field_j, 20 + var5, var6 - -20, this.field_v - 40, -50 + this.field_k, 16777215, -1, 1, 0, ia.field_c.field_C);
+          ia.field_c.a(qe.field_j, 20 + var5, var6 - -20, this.field_v - 40, -50 + this.field_k, 16777215, -1, 1, 0, ia.field_c.field_C);
           super.a((byte) -60, param1, param2, param3);
           return;
         }
@@ -60,22 +59,12 @@ final class td extends df implements vb {
     public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
         RuntimeException var6 = null;
         int var7 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -108,27 +97,19 @@ final class td extends df implements vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var6);
-            stackOut_10_1 = new StringBuilder().append("td.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var6);
+
+            stackIn_12_1 = new StringBuilder().append("td.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L2;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L2;
             }
           }
@@ -169,8 +150,6 @@ final class td extends df implements vb {
         byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_12_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -178,17 +157,6 @@ final class td extends df implements vb {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_8_0 = null;
-        byte[] stackOut_6_0 = null;
-        byte[] stackOut_11_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             if (param0 != null) {
@@ -196,13 +164,11 @@ final class td extends df implements vb {
               if (param0 instanceof byte[]) {
                 var4 = (byte[]) (param0);
                 if (param2) {
-                  stackOut_8_0 = dd.a(var4, 0);
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = dd.a(var4, 0);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_6_0 = (byte[]) (var4);
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = (byte[]) (var4);
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -211,8 +177,7 @@ final class td extends df implements vb {
                   throw new IllegalArgumentException();
                 } else {
                   var5 = (bg) (param0);
-                  stackOut_11_0 = var5.b((byte) -43);
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = var5.b((byte) -43);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -225,27 +190,19 @@ final class td extends df implements vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("td.J(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3);
+
+            stackIn_16_1 = new StringBuilder().append("td.J(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L1;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L1;
             }
           }
@@ -277,8 +234,6 @@ final class td extends df implements vb {
         int stackIn_6_0 = 0;
         boolean stackIn_10_0 = false;
         boolean stackIn_14_0 = false;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -286,36 +241,21 @@ final class td extends df implements vb {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        boolean stackOut_9_0 = false;
-        boolean stackOut_13_0 = false;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         try {
           L0: {
             if (param1 < -120) {
               if (super.a(param0, (byte) -127, param2, param3)) {
-                stackOut_5_0 = 1;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (-99 == (param3 ^ -1)) {
-                  stackOut_9_0 = this.a(param0, 9555);
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = this.a(param0, 9555);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (-100 == (param3 ^ -1)) {
-                    stackOut_13_0 = this.b(2, param0);
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = this.b(2, param0);
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
@@ -324,8 +264,7 @@ final class td extends df implements vb {
                 }
               }
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -334,27 +273,19 @@ final class td extends df implements vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var5);
-            stackOut_15_1 = new StringBuilder().append("td.N(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var5);
+
+            stackIn_17_1 = new StringBuilder().append("td.N(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L1;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L1;
             }
           }
@@ -383,9 +314,16 @@ final class td extends df implements vb {
     }
 
     final static void a(int param0, byte param1, int param2, ll param3, int param4, int param5) {
-        int incrementValue$1 = 0;
-        RuntimeException var6 = null;
+        int incrementValue$0 = 0;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        String stackIn_35_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -401,23 +339,6 @@ final class td extends df implements vb {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
         var21 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -508,9 +429,9 @@ final class td extends df implements vb {
                               break L8;
                             } else {
                               L9: {
-                                incrementValue$1 = var9;
+                                incrementValue$0 = var9;
                                 var9++;
-                                var18 = param3.field_l[255 & param3.field_m[incrementValue$1]];
+                                var18 = param3.field_l[255 & param3.field_m[incrementValue$0]];
                                 if (-1 != (var18 ^ -1)) {
                                   if (-256 <= (var16 ^ -1)) {
                                     var19 = de.field_l[var8];
@@ -547,27 +468,19 @@ final class td extends df implements vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var6 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) (var6);
-            stackOut_32_1 = new StringBuilder().append("td.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackIn_34_0 = (RuntimeException) (var6);
+
+            stackIn_34_1 = new StringBuilder().append("td.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L10;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L10;
             }
           }

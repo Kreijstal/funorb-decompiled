@@ -39,11 +39,11 @@ final class ol {
     }
 
     final Object a(long param0, int param1) {
-        Object var5 = null;
-        m var6 = null;
-        mc var7 = null;
-        Object var8 = null;
-        Object var9 = null;
+        Object var5;
+        m var6;
+        mc var7;
+        Object var8;
+        Object var9;
         var7 = (mc) ((Object) this.field_h.a(-78, param0));
         if (param1 == 0) {
           if (var7 != null) {
@@ -105,8 +105,6 @@ final class ol {
     final static boolean a(int param0) {
         int stackIn_8_0 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_6_0 = 0;
         if (param0 < -79) {
           if (null == hp.field_m) {
             if (!ih.b(-124)) {
@@ -117,8 +115,7 @@ final class ol {
                   return false;
                 }
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 1;
                 return stackIn_20_0 != 0;
               }
             } else {
@@ -138,8 +135,7 @@ final class ol {
                   return false;
                 }
               } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 1;
                 return stackIn_8_0 != 0;
               }
             } else {
@@ -159,10 +155,10 @@ final class ol {
     }
 
     final static os a(byte param0) {
-        ad var1 = null;
-        ff var2 = null;
-        bd var3 = null;
-        bd var4 = null;
+        ad var1;
+        ff var2;
+        bd var3;
+        bd var4;
         go.field_E = new os(5, 5, 500, 45);
         var1 = new ad();
         go.field_E.field_v = (jk) ((Object) var1);
@@ -182,31 +178,20 @@ final class ol {
     }
 
     private final void a(mc param0, byte param1) {
-        Object discarded$2 = null;
         RuntimeException var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
               if (param1 == -88) {
                 break L1;
               } else {
-                discarded$2 = this.a(89L, -55);
+                this.a(89L, -55);
                 break L1;
               }
             }
@@ -223,27 +208,19 @@ final class ol {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("ol.E(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("ol.E(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -295,7 +272,7 @@ final class ol {
     }
 
     private ol(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         this.field_c = new up();
         this.field_k = param0;
         this.field_b = param0;

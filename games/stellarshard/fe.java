@@ -20,7 +20,6 @@ abstract class fe {
         int var4 = 0;
         int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
         var4 = stellarshard.field_B;
         try {
           L0: {
@@ -60,8 +59,7 @@ abstract class fe {
                 }
               }
             }
-            stackOut_9_0 = param1;
-            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_0 = param1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

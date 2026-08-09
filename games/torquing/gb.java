@@ -24,7 +24,7 @@ final class gb {
     }
 
     final ta c(int param0) {
-        ta var2 = null;
+        ta var2;
         if (param0 == 24542) {
           var2 = this.field_b;
           if (this.field_a == var2) {
@@ -48,10 +48,10 @@ final class gb {
     }
 
     final int b(int param0) {
-        int var2 = 0;
-        ta var3 = null;
-        int var4 = 0;
-        ta var5 = null;
+        int var2;
+        ta var3;
+        int var4;
+        ta var5;
         var4 = Torquing.field_u;
         if (param0 != -24088) {
           var5 = (ta) null;
@@ -83,8 +83,8 @@ final class gb {
     }
 
     final ta a(int param0) {
-        int var2 = 0;
-        ta var3 = null;
+        int var2;
+        ta var3;
         var2 = 25 / ((69 - param0) / 55);
         var3 = this.field_a.field_p;
         if (var3 == this.field_a) {
@@ -96,7 +96,7 @@ final class gb {
     }
 
     final ta a(byte param0) {
-        ta var2 = null;
+        ta var2;
         var2 = this.field_a.field_p;
         if (var2 == this.field_a) {
           this.field_b = null;

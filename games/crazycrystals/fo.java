@@ -13,11 +13,11 @@ final class fo extends jb {
     fo field_k;
 
     final static void a(int param0, byte param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         hp var4 = null;
         ak var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -66,46 +66,22 @@ final class fo extends jb {
     }
 
     final static int a(int param0, byte[] param1, int param2, CharSequence param3, byte param4, int param5) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        CharSequence var10 = null;
         int stackIn_69_0 = 0;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
         RuntimeException stackIn_72_0 = null;
         StringBuilder stackIn_72_1 = null;
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_73_2 = null;
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
-        RuntimeException stackIn_75_0 = null;
         StringBuilder stackIn_75_1 = null;
-        RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         String stackIn_76_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_68_0 = 0;
-        RuntimeException stackOut_70_0 = null;
-        StringBuilder stackOut_70_1 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        String stackOut_71_2 = null;
-        RuntimeException stackOut_73_0 = null;
-        StringBuilder stackOut_73_1 = null;
-        RuntimeException stackOut_75_0 = null;
-        StringBuilder stackOut_75_1 = null;
-        String stackOut_75_2 = null;
-        RuntimeException stackOut_74_0 = null;
-        StringBuilder stackOut_74_1 = null;
-        String stackOut_74_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        CharSequence var10 = null;
         var9 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -114,7 +90,7 @@ final class fo extends jb {
                 break L1;
               } else {
                 var10 = (CharSequence) null;
-                discarded$1 = fo.a(-11, (byte[]) null, 31, (CharSequence) null, (byte) -124, 11);
+                fo.a(-11, (byte[]) null, 31, (CharSequence) null, (byte) -124, 11);
                 break L1;
               }
             }
@@ -122,8 +98,7 @@ final class fo extends jb {
             var7 = 0;
             L2: while (true) {
               if (var6_int <= var7) {
-                stackOut_68_0 = var6_int;
-                stackIn_69_0 = stackOut_68_0;
+                stackIn_69_0 = var6_int;
                 break L0;
               } else {
                 L3: {
@@ -301,56 +276,40 @@ final class fo extends jb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_70_0 = (RuntimeException) (var6);
-            stackOut_70_1 = new StringBuilder().append("fo.E(").append(param0).append(',');
-            stackIn_72_0 = stackOut_70_0;
-            stackIn_72_1 = stackOut_70_1;
-            stackIn_71_0 = stackOut_70_0;
-            stackIn_71_1 = stackOut_70_1;
+            stackIn_72_0 = (RuntimeException) (var6);
+
+            stackIn_72_1 = new StringBuilder().append("fo.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
-              stackOut_72_2 = "null";
-              stackIn_73_0 = stackOut_72_0;
-              stackIn_73_1 = stackOut_72_1;
-              stackIn_73_2 = stackOut_72_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "null";
               break L7;
             } else {
-              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
-              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackOut_71_2 = "{...}";
-              stackIn_73_0 = stackOut_71_0;
-              stackIn_73_1 = stackOut_71_1;
-              stackIn_73_2 = stackOut_71_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
-            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(',').append(param2).append(',');
-            stackIn_75_0 = stackOut_73_0;
-            stackIn_75_1 = stackOut_73_1;
-            stackIn_74_0 = stackOut_73_0;
-            stackIn_74_1 = stackOut_73_1;
+
+
+            stackIn_75_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
-              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
-              stackOut_75_2 = "null";
-              stackIn_76_0 = stackOut_75_0;
-              stackIn_76_1 = stackOut_75_1;
-              stackIn_76_2 = stackOut_75_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackIn_76_1 = (StringBuilder) ((Object) stackIn_75_1);
+              stackIn_76_2 = "null";
               break L8;
             } else {
-              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
-              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
-              stackOut_74_2 = "{...}";
-              stackIn_76_0 = stackOut_74_0;
-              stackIn_76_1 = stackOut_74_1;
-              stackIn_76_2 = stackOut_74_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackIn_76_1 = (StringBuilder) ((Object) stackIn_75_1);
+              stackIn_76_2 = "{...}";
               break L8;
             }
           }
-          throw dn.a((Throwable) ((Object) stackIn_76_0), stackIn_76_2 + ',' + param4 + ',' + param5 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_73_0), stackIn_76_2 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_69_0;
     }
@@ -367,12 +326,11 @@ final class fo extends jb {
     final static void a(int param0) {
         rm var1 = null;
         int var1_int = 0;
-        RuntimeException var1_ref = null;
-        Object var2 = null;
-        Throwable var3 = null;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
+        Object var2 = null;
         var4 = CrazyCrystals.field_B;
         try {
           L0: {

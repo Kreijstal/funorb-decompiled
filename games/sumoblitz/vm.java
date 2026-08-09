@@ -7,9 +7,8 @@ final class vm {
     static hr[] field_a;
 
     final static int a(int param0) {
-        int discarded$0 = 0;
         if (param0 > -30) {
-            discarded$0 = vm.a(-16);
+            vm.a(-16);
             return (int)(1000000000L / pj.field_p);
         }
         return (int)(1000000000L / pj.field_p);

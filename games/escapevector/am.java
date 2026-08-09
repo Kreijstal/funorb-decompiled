@@ -10,12 +10,11 @@ final class am extends hg {
     int field_i;
 
     final static int a(byte param0, int param1) {
-        int discarded$2 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         if (param0 != 57) {
           L0: {
-            discarded$2 = am.a((byte) 123, -70);
+            am.a((byte) 123, -70);
             var2 = 0;
             if ((param1 & 7) != 0) {
               var2 = -(param1 & 7) + 8;

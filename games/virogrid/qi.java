@@ -10,11 +10,20 @@ final class qi {
     static wk field_c;
 
     final static void b(int param0) {
-        RuntimeException var1 = null;
+        int stackIn_18_0 = 0;
+        String stackIn_24_0 = null;
+        int stackIn_28_0 = 0;
+        String stackIn_33_0 = null;
+        int stackIn_39_0 = 0;
+        int stackIn_40_0 = 0;
+        int stackIn_40_1 = 0;
+        wg stackIn_44_0 = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
-        int var3 = 0;
         long var3_long = 0L;
+        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
@@ -22,31 +31,6 @@ final class qi {
         int var8 = 0;
         wg var9 = null;
         int var10 = 0;
-        int stackIn_18_0 = 0;
-        String stackIn_24_0 = null;
-        int stackIn_28_0 = 0;
-        String stackIn_33_0 = null;
-        int stackIn_38_0 = 0;
-        int stackIn_39_0 = 0;
-        int stackIn_40_0 = 0;
-        int stackIn_40_1 = 0;
-        wg stackIn_44_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        String stackOut_23_0 = null;
-        String stackOut_22_0 = null;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
-        String stackOut_32_0 = null;
-        String stackOut_31_0 = null;
-        int stackOut_37_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_39_1 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_38_1 = 0;
-        wg stackOut_43_0 = null;
-        wg stackOut_42_0 = null;
         var10 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -104,12 +88,10 @@ final class qi {
                     } else {
                       L6: {
                         if (dh.field_o.length <= rj.field_d.length) {
-                          stackOut_17_0 = rj.field_d.length;
-                          stackIn_18_0 = stackOut_17_0;
+                          stackIn_18_0 = rj.field_d.length;
                           break L6;
                         } else {
-                          stackOut_16_0 = dh.field_o.length;
-                          stackIn_18_0 = stackOut_16_0;
+                          stackIn_18_0 = dh.field_o.length;
                           break L6;
                         }
                       }
@@ -121,12 +103,10 @@ final class qi {
                           if (var3 < var7 + 6) {
                             L8: {
                               if ((-6 + (var3 - -rj.field_d.length) + -var7 ^ -1) <= -1) {
-                                stackOut_23_0 = rj.field_d[var3 - (6 - (rj.field_d.length + -var7))];
-                                stackIn_24_0 = stackOut_23_0;
+                                stackIn_24_0 = rj.field_d[var3 - (6 - (rj.field_d.length + -var7))];
                                 break L8;
                               } else {
-                                stackOut_22_0 = "";
-                                stackIn_24_0 = stackOut_22_0;
+                                stackIn_24_0 = "";
                                 break L8;
                               }
                             }
@@ -139,12 +119,10 @@ final class qi {
                       }
                       L9: {
                         if (de.field_rb.length <= eh.field_j.length) {
-                          stackOut_27_0 = eh.field_j.length;
-                          stackIn_28_0 = stackOut_27_0;
+                          stackIn_28_0 = eh.field_j.length;
                           break L9;
                         } else {
-                          stackOut_26_0 = de.field_rb.length;
-                          stackIn_28_0 = stackOut_26_0;
+                          stackIn_28_0 = de.field_rb.length;
                           break L9;
                         }
                       }
@@ -157,12 +135,10 @@ final class qi {
                         } else {
                           L10: {
                             if (-7 + (var3 + -var7) < eh.field_j.length) {
-                              stackOut_32_0 = eh.field_j[var3 - 7 - var7];
-                              stackIn_33_0 = stackOut_32_0;
+                              stackIn_33_0 = eh.field_j[var3 - 7 - var7];
                               break L10;
                             } else {
-                              stackOut_31_0 = "";
-                              stackIn_33_0 = stackOut_31_0;
+                              stackIn_33_0 = "";
                               break L10;
                             }
                           }
@@ -182,20 +158,15 @@ final class qi {
                   }
                 }
                 L12: {
-                  stackOut_37_0 = 1492912648;
-                  stackIn_39_0 = stackOut_37_0;
-                  stackIn_38_0 = stackOut_37_0;
+                  stackIn_39_0 = 1492912648;
+
                   if ((var4 ^ -1) > -1) {
-                    stackOut_39_0 = stackIn_39_0;
-                    stackOut_39_1 = 0;
-                    stackIn_40_0 = stackOut_39_0;
-                    stackIn_40_1 = stackOut_39_1;
+                    stackIn_40_0 = stackIn_39_0;
+                    stackIn_40_1 = 0;
                     break L12;
                   } else {
-                    stackOut_38_0 = stackIn_38_0;
-                    stackOut_38_1 = 1;
-                    stackIn_40_0 = stackOut_38_0;
-                    stackIn_40_1 = stackOut_38_1;
+                    stackIn_40_0 = stackIn_39_0;
+                    stackIn_40_1 = 1;
                     break L12;
                   }
                 }
@@ -207,12 +178,10 @@ final class qi {
                   } else {
                     L14: {
                       if (co.field_k.field_d != var4) {
-                        stackOut_43_0 = qg.field_l;
-                        stackIn_44_0 = stackOut_43_0;
+                        stackIn_44_0 = qg.field_l;
                         break L14;
                       } else {
-                        stackOut_42_0 = ul.field_g;
-                        stackIn_44_0 = stackOut_42_0;
+                        stackIn_44_0 = ul.field_g;
                         break L14;
                       }
                     }

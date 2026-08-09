@@ -16,20 +16,14 @@ final class us {
     final static boolean a(boolean param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (!param0) {
           L0: {
             us.a(125);
             if (null == jl.field_b) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -37,12 +31,10 @@ final class us {
         } else {
           L1: {
             if (null == jl.field_b) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -51,16 +43,10 @@ final class us {
     }
 
     final static int a(int param0, byte param1) {
-        int var2 = 0;
         int stackIn_12_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var2;
         var2 = -69 % ((param1 - -61) / 59);
         if (null != jf.field_C.field_T) {
           if ((4 & jf.field_C.field_vb.field_e[param0]) == 0) {
@@ -73,12 +59,10 @@ final class us {
                 } else {
                   L0: {
                     if (bv.field_w.field_gb != jf.field_C.field_q) {
-                      stackOut_21_0 = 128;
-                      stackIn_22_0 = stackOut_21_0;
+                      stackIn_22_0 = 128;
                       break L0;
                     } else {
-                      stackOut_20_0 = 256;
-                      stackIn_22_0 = stackOut_20_0;
+                      stackIn_22_0 = 256;
                       break L0;
                     }
                   }
@@ -88,12 +72,10 @@ final class us {
                 if (-1 == (jf.field_C.field_T.field_B ^ -1)) {
                   L1: {
                     if (0 == (jf.field_C.field_vb.field_e[param0] & 2)) {
-                      stackOut_15_0 = 0;
-                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_16_0 = 0;
                       break L1;
                     } else {
-                      stackOut_14_0 = 128;
-                      stackIn_16_0 = stackOut_14_0;
+                      stackIn_16_0 = 128;
                       break L1;
                     }
                   }
@@ -101,12 +83,10 @@ final class us {
                 } else {
                   L2: {
                     if (-1 == (jf.field_C.field_vb.field_e[param0] & 1 ^ -1)) {
-                      stackOut_11_0 = 0;
-                      stackIn_12_0 = stackOut_11_0;
+                      stackIn_12_0 = 0;
                       break L2;
                     } else {
-                      stackOut_10_0 = 256;
-                      stackIn_12_0 = stackOut_10_0;
+                      stackIn_12_0 = 256;
                       break L2;
                     }
                   }

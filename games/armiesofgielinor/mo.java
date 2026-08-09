@@ -93,7 +93,6 @@ final class mo {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_g = null;
         field_s = null;
         field_l = null;
@@ -101,27 +100,16 @@ final class mo {
         field_t = null;
         field_i = null;
         if (param0 != 0) {
-            discarded$0 = mo.a(-123, 18, -64, -107, -63, (byte) 82, 91);
+            mo.a(-123, 18, -64, -107, -63, (byte) 82, 91);
         }
     }
 
     mo(boolean param0) {
-        L0: {
-          L1: {
-            this.field_h = dg.field_b;
-            if (!param0) {
-              break L1;
-            } else {
-              this.field_d = hv.field_R;
-              if (!ArmiesOfGielinor.field_M) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          this.field_d = null;
-          break L0;
+        this.field_h = dg.field_b;
+        if (param0) {
+            this.field_d = hv.field_R;
+        } else {
+            this.field_d = null;
         }
         this.field_a = rh.field_e;
         this.field_b = u.field_k;

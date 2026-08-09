@@ -13,20 +13,18 @@ final class bn implements uj {
     }
 
     public final void a(boolean param0) {
-        boolean discarded$0 = false;
         tb.field_a = 0;
         if (param0) {
-            discarded$0 = bn.a(126, 'ﾂ');
+            bn.a(126, 'ﾂ');
         }
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_d = null;
         field_b = null;
         field_a = null;
         if (param0 != 160) {
-            discarded$0 = bn.a(-15, '￬');
+            bn.a(-15, '￬');
         }
     }
 
@@ -42,9 +40,6 @@ final class bn implements uj {
         int stackIn_18_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_7_0 = 0;
         var6 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -77,8 +72,7 @@ final class bn implements uj {
                 var4 = 0;
                 L4: while (true) {
                   if (var4 >= var3.length) {
-                    stackOut_17_0 = 0;
-                    stackIn_18_0 = stackOut_17_0;
+                    stackIn_18_0 = 0;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
@@ -87,8 +81,7 @@ final class bn implements uj {
                       var4++;
                       continue L4;
                     } else {
-                      stackOut_14_0 = 1;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 1;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -98,8 +91,7 @@ final class bn implements uj {
                 return false;
               }
             }
-            stackOut_7_0 = 1;
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = 1;
             decompiledRegionSelector0 = 0;
             break L0;
           }

@@ -21,14 +21,12 @@ final class pg extends java.awt.Canvas {
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_14_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_15_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_13_0 = 0;
+        RuntimeException var3 = null;
         var4 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -44,13 +42,11 @@ final class pg extends java.awt.Canvas {
             L2: while (true) {
               if ((param1 ^ -1) >= -2) {
                 if (param1 == 1) {
-                  stackOut_11_0 = param0 * var3_int;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_13_0 = param0 * var3_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  stackOut_13_0 = var3_int;
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_15_0 = var3_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
@@ -75,9 +71,9 @@ final class pg extends java.awt.Canvas {
           throw dn.a((Throwable) ((Object) var3), "pg.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_12_0;
+          return stackIn_13_0;
         } else {
-          return stackIn_14_0;
+          return stackIn_15_0;
         }
     }
 
@@ -99,21 +95,11 @@ final class pg extends java.awt.Canvas {
     }
 
     final static java.awt.Frame a(byte param0, int param1, int param2, int param3, un param4, int param5) {
-        RuntimeException var6 = null;
-        al[] var6_array = null;
-        int var7_int = 0;
-        java.awt.Frame var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        al[] var10 = null;
-        gb var11 = null;
         Object stackIn_3_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_31_0 = null;
         Object stackIn_34_0 = null;
         java.awt.Frame stackIn_36_0 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
@@ -121,19 +107,14 @@ final class pg extends java.awt.Canvas {
         String stackIn_40_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_6_0 = null;
-        java.awt.Frame stackOut_35_0 = null;
-        Object stackOut_33_0 = null;
-        Object stackOut_30_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
+        al[] var6 = null;
+        RuntimeException var6_ref = null;
+        int var7_int = 0;
+        java.awt.Frame var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        al[] var10 = null;
+        gb var11 = null;
         var9 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -143,8 +124,8 @@ final class pg extends java.awt.Canvas {
                   break L1;
                 } else {
                   var10 = ri.a(param4, (byte) 27);
-                  var6_array = var10;
-                  if (var6_array != null) {
+                  var6 = var10;
+                  if (var6 != null) {
                     var7_int = 0;
                     var8 = 0;
                     L2: while (true) {
@@ -198,8 +179,7 @@ final class pg extends java.awt.Canvas {
                       }
                     }
                   } else {
-                    stackOut_6_0 = null;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = null;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -212,20 +192,17 @@ final class pg extends java.awt.Canvas {
                   if (var7 != null) {
                     var8 = 101 % ((param0 - 14) / 62);
                     if (2 != var11.field_a) {
-                      stackOut_35_0 = (java.awt.Frame) (var7);
-                      stackIn_36_0 = stackOut_35_0;
+                      stackIn_36_0 = (java.awt.Frame) (var7);
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       bo.a(param4, var7, 1);
-                      stackOut_33_0 = null;
-                      stackIn_34_0 = stackOut_33_0;
+                      stackIn_34_0 = null;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }
                   } else {
-                    stackOut_30_0 = null;
-                    stackIn_31_0 = stackOut_30_0;
+                    stackIn_31_0 = null;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   }
@@ -235,8 +212,7 @@ final class pg extends java.awt.Canvas {
                 }
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -244,28 +220,20 @@ final class pg extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
-            var6 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) (var6);
-            stackOut_37_1 = new StringBuilder().append("pg.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            var6_ref = decompiledCaughtException;
+            stackIn_39_0 = (RuntimeException) (var6_ref);
+
+            stackIn_39_1 = new StringBuilder().append("pg.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "null";
               break L7;
             } else {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "{...}";
               break L7;
             }
           }

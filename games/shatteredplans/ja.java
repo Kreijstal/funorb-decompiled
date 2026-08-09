@@ -10,10 +10,9 @@ final class ja extends da implements od, g {
     static int[] field_i;
 
     public final void a(go param0, int param1) {
-        boolean discarded$0 = false;
         try {
             if (param1 != 95) {
-                discarded$0 = this.a(25);
+                this.a(25);
             }
             this.b(param1 + -158);
         } catch (RuntimeException runtimeException) {
@@ -33,8 +32,20 @@ final class ja extends da implements od, g {
     }
 
     final static void a(int param0, int param1, bi param2, int param3) {
-        RuntimeException var4 = null;
+        int[] stackIn_20_0 = null;
+        int stackIn_20_1 = 0;
+        int[] stackIn_21_0 = null;
+        int stackIn_21_1 = 0;
+        int stackIn_21_2 = 0;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -47,38 +58,6 @@ final class ja extends da implements od, g {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        int[] stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
-        int[] stackIn_20_0 = null;
-        int stackIn_20_1 = 0;
-        int[] stackIn_21_0 = null;
-        int stackIn_21_1 = 0;
-        int stackIn_21_2 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int[] stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int[] stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        int stackOut_20_2 = 0;
-        int[] stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_19_2 = 0;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -119,7 +98,7 @@ final class ja extends da implements od, g {
                       L5: {
                         var4_int++;
                         var11 = param2.field_B[var4_int];
-                        if (var11 != 0) {
+                        if ((var11 ^ -1) != -1) {
                           var12 = (float)((-param1 + var10) * (var10 - param1) + (-param3 + var9) * (-param3 + var9));
                           var12 = var12 / (float)(var8 * var8 + var6 * var6);
                           var13 = (int)(256.0f * (-(float)Math.sqrt((double)var12) + 1.0f));
@@ -134,27 +113,19 @@ final class ja extends da implements od, g {
                                 var15 = 65280 & var11;
                                 var15 = var15 * var13;
                                 var11 = (16711680 & var15 | -16711936 & var14) >>> -174137048;
-                                stackOut_18_0 = param2.field_B;
-                                stackOut_18_1 = var4_int;
-                                stackIn_20_0 = stackOut_18_0;
-                                stackIn_20_1 = stackOut_18_1;
-                                stackIn_19_0 = stackOut_18_0;
-                                stackIn_19_1 = stackOut_18_1;
+                                stackIn_20_0 = param2.field_B;
+
+                                stackIn_20_1 = var4_int;
+
                                 if (var11 == 0) {
-                                  stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
-                                  stackOut_20_1 = stackIn_20_1;
-                                  stackOut_20_2 = 1;
-                                  stackIn_21_0 = stackOut_20_0;
-                                  stackIn_21_1 = stackOut_20_1;
-                                  stackIn_21_2 = stackOut_20_2;
+                                  stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
+                                  stackIn_21_1 = stackIn_20_1;
+                                  stackIn_21_2 = 1;
                                   break L6;
                                 } else {
-                                  stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
-                                  stackOut_19_1 = stackIn_19_1;
-                                  stackOut_19_2 = var11;
-                                  stackIn_21_0 = stackOut_19_0;
-                                  stackIn_21_1 = stackOut_19_1;
-                                  stackIn_21_2 = stackOut_19_2;
+                                  stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
+                                  stackIn_21_1 = stackIn_20_1;
+                                  stackIn_21_2 = var11;
                                   break L6;
                                 }
                               }
@@ -184,27 +155,19 @@ final class ja extends da implements od, g {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var4 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var4);
-            stackOut_25_1 = new StringBuilder().append("ja.V(").append(param0).append(',').append(param1).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var4);
+
+            stackIn_27_1 = new StringBuilder().append("ja.V(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L7;
             }
           }
@@ -228,8 +191,6 @@ final class ja extends da implements od, g {
         Object stackIn_9_0 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_8_0 = null;
-        String stackOut_5_0 = null;
         try {
           L0: {
             L1: {
@@ -254,8 +215,7 @@ final class ja extends da implements od, g {
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
-                    stackOut_8_0 = null;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = null;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   }
@@ -264,8 +224,7 @@ final class ja extends da implements od, g {
                 }
               }
             }
-            stackOut_5_0 = re.a(um.field_b, 4371, new String[]{"1890", Integer.toString(var5 - 3)});
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = re.a(um.field_b, 4371, new String[]{"1890", Integer.toString(var5 - 3)});
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -302,9 +261,6 @@ final class ja extends da implements od, g {
         u stackIn_10_0 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        u stackOut_2_0 = null;
-        u stackOut_6_0 = null;
-        u stackOut_9_0 = null;
         try {
           L0: {
             var2_int = this.field_m.d(param0);
@@ -312,14 +268,12 @@ final class ja extends da implements od, g {
             var4 = this.field_m.l(66);
             var5 = vn.e(-13299);
             if (1890 > var4) {
-              stackOut_2_0 = tj.field_b;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = tj.field_b;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (-3 + var5 < var4) {
-                stackOut_6_0 = tj.field_b;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = tj.field_b;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -327,8 +281,7 @@ final class ja extends da implements od, g {
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  stackOut_9_0 = tj.field_b;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = tj.field_b;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 }
@@ -357,22 +310,12 @@ final class ja extends da implements od, g {
 
     public final void a(int param0, go param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -389,27 +332,19 @@ final class ja extends da implements od, g {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("ja.K(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("ja.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

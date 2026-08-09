@@ -22,36 +22,23 @@ final class vi extends mc {
     }
 
     final static kk a(byte param0, ml param1) {
-        int discarded$1 = 0;
-        RuntimeException var2 = null;
+        kk stackIn_25_0 = null;
+        kk stackIn_27_0 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         kk var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        kk stackIn_24_0 = null;
-        kk stackIn_26_0 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        kk stackOut_25_0 = null;
-        kk stackOut_23_0 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
         var8 = Kickabout.field_G;
         try {
           L0: {
@@ -86,7 +73,7 @@ final class vi extends mc {
               }
               L2: {
                 if (var4 != 0) {
-                  discarded$1 = param1.l(16, 59);
+                  param1.l(16, 59);
                   var5.field_p = nq.a(var5.field_p, param1, 16, 116);
                   var5.field_E = nq.a(var5.field_E, param1, 16, -104);
                   var5.field_N = nq.a(var5.field_N, param1, 16, -76);
@@ -122,7 +109,7 @@ final class vi extends mc {
                         break L4;
                       }
                     } else {
-                      if (var6 < (var5.field_G[var7] & 255)) {
+                      if ((var6 ^ -1) > (var5.field_G[var7] & 255 ^ -1)) {
                         var6 = 255 & var5.field_G[var7];
                         var7++;
                         continue L5;
@@ -135,13 +122,11 @@ final class vi extends mc {
                 }
               }
               if (param0 > 54) {
-                stackOut_25_0 = (kk) (var5);
-                stackIn_26_0 = stackOut_25_0;
+                stackIn_27_0 = (kk) (var5);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                stackOut_23_0 = (kk) null;
-                stackIn_24_0 = stackOut_23_0;
+                stackIn_25_0 = (kk) null;
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -151,42 +136,33 @@ final class vi extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var2);
-            stackOut_27_1 = new StringBuilder().append("vi.I(").append(param0).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackIn_30_0 = (RuntimeException) (var2);
+
+            stackIn_30_1 = new StringBuilder().append("vi.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L6;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L6;
             }
           }
-          throw nb.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_24_0;
+          return stackIn_25_0;
         } else {
-          return stackIn_26_0;
+          return stackIn_27_0;
         }
     }
 
     final static boolean a(int param0, int param1, int[][] param2, byte[] param3) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -194,40 +170,17 @@ final class vi extends mc {
         int var9 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_15_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        RuntimeException var4 = null;
         var9 = Kickabout.field_G;
         try {
           L0: {
@@ -243,8 +196,7 @@ final class vi extends mc {
               var4_int = 0;
               L2: while (true) {
                 if (var4_int >= param2.length) {
-                  stackOut_18_0 = 0;
-                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_0 = 0;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -252,8 +204,7 @@ final class vi extends mc {
                   var6 = 0;
                   L3: while (true) {
                     if (var6 >= var5.length) {
-                      stackOut_15_0 = 1;
-                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_16_0 = 1;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     } else {
@@ -292,56 +243,40 @@ final class vi extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var4);
-            stackOut_20_1 = new StringBuilder().append("vi.H(").append(param0).append(',').append(param1).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var4);
+
+            stackIn_22_1 = new StringBuilder().append("vi.H(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+
+
+            stackIn_25_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
+
             if (param3 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L7;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L7;
             }
           }
-          throw nb.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_23_0), stackIn_26_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_16_0 != 0;
@@ -351,7 +286,7 @@ final class vi extends mc {
     }
 
     final static void c(byte param0) {
-        int var1 = 0;
+        int var1;
         L0: {
           var1 = -1;
           if (param0 == -59) {
@@ -418,13 +353,11 @@ final class vi extends mc {
         long var2 = System.nanoTime();
         long var4 = -this.field_u + var2;
         this.field_u = var2;
-        if (4999999999L > (var4 ^ -1L)) {
-            if (5000000000L > var4) {
-                this.field_w[this.field_m] = var4;
-                this.field_m = (this.field_m + 1) % 10;
-                if ((this.field_r ^ -1) > -2) {
-                    this.field_r = this.field_r + 1;
-                }
+        if (4999999999L > (var4 ^ -1L) && 5000000000L > var4) {
+            this.field_w[this.field_m] = var4;
+            this.field_m = (this.field_m + 1) % 10;
+            if ((this.field_r ^ -1) > -2) {
+                this.field_r = this.field_r + 1;
             }
         }
         long var6 = 0L;
@@ -447,9 +380,9 @@ final class vi extends mc {
     }
 
     final int a(int param0, long param1) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var4;
+        int var5;
+        int var6;
         var6 = Kickabout.field_G;
         var4 = 78 % ((param0 - 45) / 63);
         if (this.field_p < this.field_v) {

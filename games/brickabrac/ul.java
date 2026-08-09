@@ -15,12 +15,12 @@ final class ul extends nm {
 
     final static void a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         double var3 = 0.0;
         int var5 = 0;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {

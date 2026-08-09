@@ -11,16 +11,21 @@ final class tc {
 
     public static void a(boolean param0) {
         field_c = null;
-        field_b = null;
-        field_d = null;
-        field_e = null;
+        if (!param0) {
+          field_b = (bd) null;
+          field_b = null;
+          field_d = null;
+          field_e = null;
+          return;
+        } else {
+          field_b = null;
+          field_d = null;
+          field_e = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "tc.A(";
         field_a = -1;
         field_c = "This level is too dangerous to hang around. Find a way to reach the lift.";

@@ -9,7 +9,6 @@ final class ek extends ji {
     }
 
     final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, boolean param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
-        RuntimeException var17 = null;
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -26,18 +25,9 @@ final class ek extends ji {
         int var30 = 0;
         int var31 = 0;
         int var32 = 0;
-        int var33 = 0;
         int var34 = 0;
         int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
         int var42 = 0;
-        RuntimeException stackIn_76_0 = null;
-        StringBuilder stackIn_76_1 = null;
         RuntimeException stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
         RuntimeException stackIn_78_0 = null;
@@ -46,14 +36,14 @@ final class ek extends ji {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_75_0 = null;
-        StringBuilder stackOut_75_1 = null;
-        RuntimeException stackOut_77_0 = null;
-        StringBuilder stackOut_77_1 = null;
-        String stackOut_77_2 = null;
-        RuntimeException stackOut_76_0 = null;
-        StringBuilder stackOut_76_1 = null;
-        String stackOut_76_2 = null;
+        RuntimeException var17 = null;
+        int var33 = 0;
+        int var36 = 0;
+        int var37 = 0;
+        int var38 = 0;
+        int var39 = 0;
+        int var40 = 0;
+        int var41 = 0;
         var42 = Bounce.field_N;
         try {
           L0: {
@@ -174,7 +164,7 @@ final class ek extends ji {
                             } else {
                               L9: {
                                 var37 = var17_int >> -1195746640;
-                                if (qk.field_a > var37) {
+                                if ((qk.field_a ^ -1) < (var37 ^ -1)) {
                                   var38 = (var18 >> 1807415408) + -(var17_int >> -1799602960);
                                   if (var38 == 0) {
                                     if ((var37 ^ -1) > -1) {
@@ -444,27 +434,19 @@ final class ek extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var17 = decompiledCaughtException;
-            stackOut_75_0 = (RuntimeException) (var17);
-            stackOut_75_1 = new StringBuilder().append("ek.B(").append(param0).append(',');
-            stackIn_77_0 = stackOut_75_0;
-            stackIn_77_1 = stackOut_75_1;
-            stackIn_76_0 = stackOut_75_0;
-            stackIn_76_1 = stackOut_75_1;
+            stackIn_77_0 = (RuntimeException) (var17);
+
+            stackIn_77_1 = new StringBuilder().append("ek.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_77_0 = (RuntimeException) ((Object) stackIn_77_0);
-              stackOut_77_1 = (StringBuilder) ((Object) stackIn_77_1);
-              stackOut_77_2 = "null";
-              stackIn_78_0 = stackOut_77_0;
-              stackIn_78_1 = stackOut_77_1;
-              stackIn_78_2 = stackOut_77_2;
+              stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
+              stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
+              stackIn_78_2 = "null";
               break L17;
             } else {
-              stackOut_76_0 = (RuntimeException) ((Object) stackIn_76_0);
-              stackOut_76_1 = (StringBuilder) ((Object) stackIn_76_1);
-              stackOut_76_2 = "{...}";
-              stackIn_78_0 = stackOut_76_0;
-              stackIn_78_1 = stackOut_76_1;
-              stackIn_78_2 = stackOut_76_2;
+              stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
+              stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
+              stackIn_78_2 = "{...}";
               break L17;
             }
           }
@@ -498,32 +480,28 @@ final class ek extends ji {
     }
 
     final sb b(byte param0) {
-        sb discarded$0 = null;
         if (param0 > -57) {
-            discarded$0 = this.b((byte) 46);
+            this.b((byte) 46);
         }
         return og.field_b;
     }
 
     final static kf c(int param0) {
         try {
-            kf discarded$2 = null;
             Throwable var1 = null;
             kf stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            kf stackOut_2_0 = null;
             try {
               L0: {
                 L1: {
                   if (param0 == 0) {
                     break L1;
                   } else {
-                    discarded$2 = ek.c(25);
+                    ek.c(25);
                     break L1;
                   }
                 }
-                stackOut_2_0 = (kf) (Class.forName("af").newInstance());
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (kf) (Class.forName("af").newInstance());
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

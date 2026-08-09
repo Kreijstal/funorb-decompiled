@@ -17,55 +17,59 @@ abstract class wb extends ul {
         if (param0 >= 0) {
             return;
         }
-        if (((wb) this).field_U <= 0) {
+        if (-1 <= (this.field_U ^ -1)) {
             return;
         }
-        ((wb) this).a(((wb) this).field_Q, 15767, ((wb) this).field_Y);
-        ((wb) this).field_U = 0;
-        ((wb) this).o(20);
+        this.a(this.field_Q, 15767, this.field_Y);
+        this.field_U = 0;
+        this.o(20);
     }
 
     boolean l(int param0) {
         int var2 = 0;
         int var3 = 0;
+        int fieldTemp$0 = 0;
         int var5 = 0;
         int var4 = 0;
-        if (((wb) this).field_U <= 0) {
+        if (param0 != 65393) {
+            return false;
+        }
+        if (-1 <= (this.field_U ^ -1)) {
         } else {
-            var2 = ((wb) this).field_Q;
-            var3 = ((wb) this).field_Y;
-            int fieldTemp$0 = ((wb) this).field_T + 1;
-            ((wb) this).field_T = ((wb) this).field_T + 1;
-            if (((wb) this).field_U > fieldTemp$0) {
-                var4 = (-((wb) this).field_T + 2 * ((wb) this).field_U) * ((wb) this).field_T;
-                var5 = ((wb) this).field_U * ((wb) this).field_U;
-                var3 = ((wb) this).field_X + var4 * (-((wb) this).field_X + ((wb) this).field_Y) / var5;
-                var2 = ((wb) this).field_V - -(var4 * (-((wb) this).field_V + ((wb) this).field_Q) / var5);
+            var2 = this.field_Q;
+            var3 = this.field_Y;
+            fieldTemp$0 = this.field_T + 1;
+            this.field_T = this.field_T + 1;
+            if (this.field_U > fieldTemp$0) {
+                var4 = (-this.field_T + 2 * this.field_U) * this.field_T;
+                var5 = this.field_U * this.field_U;
+                var3 = this.field_X + var4 * (-this.field_X + this.field_Y) / var5;
+                var2 = this.field_V - -(var4 * (-this.field_V + this.field_Q) / var5);
             } else {
-                ((wb) this).field_U = 0;
-                ((wb) this).o(20);
+                this.field_U = 0;
+                this.o(param0 + -65373);
             }
-            ((wb) this).a(var2, 15767, var3);
+            this.a(var2, 15767, var3);
         }
         return super.l(65393);
     }
 
     void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = HostileSpawn.field_I ? 1 : 0;
-        si.c(6 + param2, param0 + 35, -12 + ((wb) this).field_s, -40 + ((wb) this).field_x, 2105376, 0);
+        si.c(6 + param2, param0 + 35, -12 + this.field_s, -40 + this.field_x, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
@@ -81,12 +85,12 @@ abstract class wb extends ul {
               var8 = 35 + param0;
               L1: while (true) {
                 if (var7 >= var4) {
-                  sf.field_ab.e(-90 + (((wb) this).field_s + param2), 10 + param0);
-                  tg.a(110, bh.field_a, -10 + ((wb) this).field_s, 35 + param0, param2 + 5);
-                  tg.a(108, g.field_G, ((wb) this).field_s, param0 - -((wb) this).field_x - 22, param2);
+                  sf.field_ab.e(-90 + (this.field_s + param2), 10 + param0);
+                  tg.a(110, bh.field_a, -10 + this.field_s, 35 + param0, param2 + 5);
+                  tg.a(108, g.field_G, this.field_s, param0 - -this.field_x - 22, param2);
                   var6 = 127;
                   var5 = 169;
-                  var4 = -79 + ((wb) this).field_x;
+                  var4 = -79 + this.field_x;
                   var7 = 0;
                   var8 = param0 + 57;
                   L2: while (true) {
@@ -94,9 +98,9 @@ abstract class wb extends ul {
                       return;
                     } else {
                       var9 = (var6 - var5) * var7 / var4 + var5;
-                      var9 = var9 | (var9 << 8 | var9 << 16);
+                      var9 = var9 | (var9 << 85717768 | var9 << 1580487984);
                       si.a(param2, var8, 6, var9);
-                      si.a(-6 + ((wb) this).field_s + param2, var8, 6, var9);
+                      si.a(-6 + this.field_s + param2, var8, 6, var9);
                       var8++;
                       var7++;
                       continue L2;
@@ -104,9 +108,9 @@ abstract class wb extends ul {
                   }
                 } else {
                   var9 = (-var5 + var6) * var7 / var4 + var5;
-                  var9 = var9 | (var9 << 16 | var9 << 8);
+                  var9 = var9 | (var9 << -1887167504 | var9 << -2129196120);
                   si.a(param2, var8, 6, var9);
-                  si.a(((wb) this).field_s + (param2 - 6), var8, 6, var9);
+                  si.a(this.field_s + (param2 - 6), var8, 6, var9);
                   var7++;
                   var8++;
                   continue L1;
@@ -120,36 +124,36 @@ abstract class wb extends ul {
                       L5: {
                         var9 = var5 - -(var7 * (-var5 + var6) / var4);
                         var10 = 0;
-                        var11 = ((wb) this).field_s;
+                        var11 = this.field_s;
                         if (var7 > 20) {
                           break L5;
                         } else {
                           L6: while (true) {
-                            if (var10 > 20) {
+                            if (-21 > (var10 ^ -1)) {
                               break L5;
                             } else {
                               var12 = (-var10 + 20) * (20 - var10) + (20 - var7) * (20 + -var7);
                               if (var12 <= 462) {
                                 if (420 <= var12) {
                                   var13 = (462 - var12) * var9 / 42;
-                                  var13 = var13 | (var13 << 8 | var13 << 16);
+                                  var13 = var13 | (var13 << -71613464 | var13 << -158903376);
                                   si.field_i[var10 + si.field_e * var8 - -param2] = var13;
                                   var10++;
                                   continue L6;
                                 } else {
-                                  if (var7 <= 20) {
+                                  if (-21 <= (var7 ^ -1)) {
                                     var12 = var11;
                                     var11 -= 21;
                                     var13 = 0;
                                     L7: while (true) {
-                                      if (var13 > 20) {
+                                      if ((var13 ^ -1) < -21) {
                                         break L4;
                                       } else {
                                         var14 = var13 * var13 + (20 + -var7) * (20 - var7);
                                         if (462 >= var14) {
-                                          if (var14 >= 420) {
+                                          if ((var14 ^ -1) <= -421) {
                                             var15 = (-var14 + 462) * var9 / 42;
-                                            var15 = var15 | (var15 << 8 | var15 << 16);
+                                            var15 = var15 | (var15 << 177358920 | var15 << -2037525232);
                                             si.field_i[var8 * si.field_e + (param2 + var11)] = var15;
                                             var13++;
                                             var11++;
@@ -177,19 +181,19 @@ abstract class wb extends ul {
                           }
                         }
                       }
-                      if (var7 <= 20) {
+                      if (-21 <= (var7 ^ -1)) {
                         var12 = var11;
                         var11 -= 21;
                         var13 = 0;
                         L8: while (true) {
-                          if (var13 > 20) {
+                          if ((var13 ^ -1) < -21) {
                             break L4;
                           } else {
                             var14 = var13 * var13 + (20 + -var7) * (20 - var7);
                             if (462 >= var14) {
-                              if (var14 >= 420) {
+                              if ((var14 ^ -1) <= -421) {
                                 var15 = (-var14 + 462) * var9 / 42;
-                                var15 = var15 | (var15 << 8 | var15 << 16);
+                                var15 = var15 | (var15 << 177358920 | var15 << -2037525232);
                                 si.field_i[var8 * si.field_e + (param2 + var11)] = var15;
                                 var13++;
                                 var11++;
@@ -212,7 +216,7 @@ abstract class wb extends ul {
                     var11 = var12;
                     break L3;
                   }
-                  var9 = var9 | (var9 << 16 | var9 << 8);
+                  var9 = var9 | (var9 << -423765296 | var9 << -793447768);
                   si.a(var10 + param2, var8, -var10 + var11, var9);
                   var8++;
                   var7++;
@@ -235,17 +239,17 @@ abstract class wb extends ul {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (!(param0 > 0)) {
-            ((wb) this).a(param1, 15767, param3);
+        if (!(-1 > (param0 ^ -1))) {
+            this.a(param1, 15767, param3);
             return;
         }
-        ((wb) this).field_Q = param1;
-        ((wb) this).field_V = ((wb) this).field_s;
-        ((wb) this).field_Y = param3;
-        ((wb) this).field_T = 0;
-        ((wb) this).field_X = ((wb) this).field_x;
-        int var5 = -90 / (param2 / 63);
-        ((wb) this).field_U = param0;
+        this.field_Q = param1;
+        this.field_V = this.field_s;
+        this.field_Y = param3;
+        this.field_T = 0;
+        this.field_X = this.field_x;
+        int var5 = -90 / ((param2 - 0) / 63);
+        this.field_U = param0;
     }
 
     public static void n(int param0) {
@@ -257,7 +261,7 @@ abstract class wb extends ul {
 
     final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
         if (param2) {
-            String discarded$0 = wb.a(true, false, true, false);
+            wb.a(true, false, true, false);
         }
         int var4 = 0;
         if (param3) {
@@ -276,24 +280,13 @@ abstract class wb extends ul {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -305,70 +298,65 @@ abstract class wb extends ul {
               }
             }
             if (!param1) {
-              stackOut_5_0 = lj.field_u.a(param2);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = lj.field_u.a(param2);
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_3_0 = na.field_c.a(param2);
-              stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              stackIn_4_0 = na.field_c.a(param2);
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("wb.AC(").append(param0).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("wb.AC(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw wg.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
-        return stackIn_6_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          return stackIn_6_0;
+        }
     }
 
     boolean j(int param0) {
-        ((wb) this).m(-76);
+        if (param0 != -15953) {
+            return false;
+        }
+        this.m(param0 + 15877);
         return super.j(-15953);
     }
 
     wb(gg param0, int param1, int param2) {
         super(param0, param1, param2);
-        ((wb) this).field_U = 0;
-        ((wb) this).field_T = 0;
+        this.field_U = 0;
+        this.field_T = 0;
     }
 
     void o(int param0) {
         if (param0 != 20) {
-            ((wb) this).o(0);
+            this.o(0);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Z = false;
         field_R = 0;
     }

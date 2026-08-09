@@ -3,45 +3,26 @@
  */
 final class nj extends wk {
     final void g(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_w;
-          param1 = param1 + this.field_z;
-          var3 = param0 + param1 * qn.field_l;
-          var4 = 0;
-          var5 = this.field_v;
-          var6 = this.field_y;
-          var7 = qn.field_l - var6;
-          var8 = 0;
-          if (param1 >= qn.field_a) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_w;
+        param1 = param1 + this.field_z;
+        int var3 = param0 + param1 * qn.field_l;
+        int var4 = 0;
+        int var5 = this.field_v;
+        int var6 = this.field_y;
+        int var7 = qn.field_l - var6;
+        int var8 = 0;
+        if (param1 < qn.field_a) {
             var9 = qn.field_a - param1;
             var5 = var5 - var9;
             param1 = qn.field_a;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * qn.field_l;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= qn.field_f) {
-            break L1;
-          } else {
+        if (param1 + var5 > qn.field_f) {
             var5 = var5 - (param1 + var5 - qn.field_f);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= qn.field_j) {
-            break L2;
-          } else {
+        if (param0 < qn.field_j) {
             var9 = qn.field_j - param0;
             var6 = var6 - var9;
             param0 = qn.field_j;
@@ -49,44 +30,29 @@ final class nj extends wk {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= qn.field_e) {
-            break L3;
-          } else {
+        if (param0 + var6 > qn.field_e) {
             var9 = param0 + var6 - qn.field_e;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        L4: {
-          if (var6 <= 0) {
-            break L4;
-          } else {
-            if (var5 > 0) {
-              nj.e(qn.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var6 <= 0 || var5 <= 0) {
+            return;
         }
+        nj.e(qn.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void f(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var10 = -param6;
         L0: while (true) {
           if (var10 >= 0) {
@@ -100,9 +66,9 @@ final class nj extends wk {
                 var10++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -114,9 +80,9 @@ final class nj extends wk {
                   var15 = (param2 & 16711935) * param9 & -16711936;
                   var16 = (param2 & 65280) * param9 & 16711680;
                   param2 = (var15 | var16) >>> 8;
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var13 & 16711935) * var14 & -16711936) + ((param2 & 65280) * var12 + (var13 & 65280) * var14 & 16711680) >>> 8;
+                  param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var13 & 16711935) * var14 & -16711936) + ((param2 & 65280) * var12 + (var13 & 65280) * var14 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -158,45 +124,26 @@ final class nj extends wk {
     }
 
     final void c(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_w;
-          param1 = param1 + (this.field_x - this.field_v - this.field_z);
-          var3 = param0 + (param1 + this.field_v - 1) * qn.field_l;
-          var4 = 0;
-          var5 = this.field_v;
-          var6 = this.field_y;
-          var7 = -qn.field_l - var6;
-          var8 = 0;
-          if (param1 >= qn.field_a) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_w;
+        param1 = param1 + (this.field_x - this.field_v - this.field_z);
+        int var3 = param0 + (param1 + this.field_v - 1) * qn.field_l;
+        int var4 = 0;
+        int var5 = this.field_v;
+        int var6 = this.field_y;
+        int var7 = -qn.field_l - var6;
+        int var8 = 0;
+        if (param1 < qn.field_a) {
             var5 = var5 - (qn.field_a - param1);
             param1 = qn.field_a;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= qn.field_f) {
-            break L1;
-          } else {
+        if (param1 + var5 > qn.field_f) {
             var9 = param1 + var5 - qn.field_f;
             var5 = var5 - var9;
             var3 = var3 - var9 * qn.field_l;
             var4 = var4 + var9 * var6;
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= qn.field_j) {
-            break L2;
-          } else {
+        if (param0 < qn.field_j) {
             var9 = qn.field_j - param0;
             var6 = var6 - var9;
             param0 = qn.field_j;
@@ -204,43 +151,28 @@ final class nj extends wk {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= qn.field_e) {
-            break L3;
-          } else {
+        if (param0 + var6 > qn.field_e) {
             var9 = param0 + var6 - qn.field_e;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        L4: {
-          if (var6 <= 0) {
-            break L4;
-          } else {
-            if (var5 > 0) {
-              nj.e(qn.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var6 <= 0 || var5 <= 0) {
+            return;
         }
+        nj.e(qn.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         var12 = param11 & 16711935;
         var13 = param11 >> 8 & 255;
         param6 = -param8;
@@ -256,9 +188,9 @@ final class nj extends wk {
                 param6++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 var14 = param2 >>> 24;
                 param2 = param2 & 16777215;
                 if (var14 == 0) {
@@ -279,9 +211,9 @@ final class nj extends wk {
                   }
                   var16 = 256 - var14;
                   var17 = param0[param4];
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
+                  param0[incrementValue$12] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
                   param5++;
                   continue L1;
                 }
@@ -292,45 +224,26 @@ final class nj extends wk {
     }
 
     final void f(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_w;
-          param1 = param1 + this.field_z;
-          var4 = param0 + param1 * qn.field_l;
-          var5 = 0;
-          var6 = this.field_v;
-          var7 = this.field_y;
-          var8 = qn.field_l - var7;
-          var9 = 0;
-          if (param1 >= qn.field_a) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_w;
+        param1 = param1 + this.field_z;
+        int var4 = param0 + param1 * qn.field_l;
+        int var5 = 0;
+        int var6 = this.field_v;
+        int var7 = this.field_y;
+        int var8 = qn.field_l - var7;
+        int var9 = 0;
+        if (param1 < qn.field_a) {
             var10 = qn.field_a - param1;
             var6 = var6 - var10;
             param1 = qn.field_a;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * qn.field_l;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= qn.field_f) {
-            break L1;
-          } else {
+        if (param1 + var6 > qn.field_f) {
             var6 = var6 - (param1 + var6 - qn.field_f);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= qn.field_j) {
-            break L2;
-          } else {
+        if (param0 < qn.field_j) {
             var10 = qn.field_j - param0;
             var7 = var7 - var10;
             param0 = qn.field_j;
@@ -338,74 +251,40 @@ final class nj extends wk {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= qn.field_e) {
-            break L3;
-          } else {
+        if (param0 + var7 > qn.field_e) {
             var10 = param0 + var7 - qn.field_e;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        L4: {
-          if (var7 <= 0) {
-            break L4;
-          } else {
-            if (var6 > 0) {
-              nj.b(0, 0, 0, qn.field_d, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var7 <= 0 || var6 <= 0) {
+            return;
         }
+        nj.b(0, 0, 0, qn.field_d, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     final void d(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_w;
-          param1 = param1 + this.field_z;
-          var4 = param0 + param1 * qn.field_l;
-          var5 = 0;
-          var6 = this.field_v;
-          var7 = this.field_y;
-          var8 = qn.field_l - var7;
-          var9 = 0;
-          if (param1 >= qn.field_a) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_w;
+        param1 = param1 + this.field_z;
+        int var4 = param0 + param1 * qn.field_l;
+        int var5 = 0;
+        int var6 = this.field_v;
+        int var7 = this.field_y;
+        int var8 = qn.field_l - var7;
+        int var9 = 0;
+        if (param1 < qn.field_a) {
             var10 = qn.field_a - param1;
             var6 = var6 - var10;
             param1 = qn.field_a;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * qn.field_l;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= qn.field_f) {
-            break L1;
-          } else {
+        if (param1 + var6 > qn.field_f) {
             var6 = var6 - (param1 + var6 - qn.field_f);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= qn.field_j) {
-            break L2;
-          } else {
+        if (param0 < qn.field_j) {
             var10 = qn.field_j - param0;
             var7 = var7 - var10;
             param0 = qn.field_j;
@@ -413,74 +292,40 @@ final class nj extends wk {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= qn.field_e) {
-            break L3;
-          } else {
+        if (param0 + var7 > qn.field_e) {
             var10 = param0 + var7 - qn.field_e;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        L4: {
-          if (var7 <= 0) {
-            break L4;
-          } else {
-            if (var6 > 0) {
-              nj.c(qn.field_d, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var7 <= 0 || var6 <= 0) {
+            return;
         }
+        nj.c(qn.field_d, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
     }
 
     final void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_w;
-          param1 = param1 + this.field_z;
-          var4 = param0 + param1 * qn.field_l;
-          var5 = 0;
-          var6 = this.field_v;
-          var7 = this.field_y;
-          var8 = qn.field_l - var7;
-          var9 = 0;
-          if (param1 >= qn.field_a) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_w;
+        param1 = param1 + this.field_z;
+        int var4 = param0 + param1 * qn.field_l;
+        int var5 = 0;
+        int var6 = this.field_v;
+        int var7 = this.field_y;
+        int var8 = qn.field_l - var7;
+        int var9 = 0;
+        if (param1 < qn.field_a) {
             var10 = qn.field_a - param1;
             var6 = var6 - var10;
             param1 = qn.field_a;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * qn.field_l;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= qn.field_f) {
-            break L1;
-          } else {
+        if (param1 + var6 > qn.field_f) {
             var6 = var6 - (param1 + var6 - qn.field_f);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= qn.field_j) {
-            break L2;
-          } else {
+        if (param0 < qn.field_j) {
             var10 = qn.field_j - param0;
             var7 = var7 - var10;
             param0 = qn.field_j;
@@ -488,145 +333,73 @@ final class nj extends wk {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= qn.field_e) {
-            break L3;
-          } else {
+        if (param0 + var7 > qn.field_e) {
             var10 = param0 + var7 - qn.field_e;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        L4: {
-          if (var7 <= 0) {
-            break L4;
-          } else {
-            if (var6 > 0) {
-              nj.e(qn.field_d, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var7 <= 0 || var6 <= 0) {
+            return;
         }
+        nj.e(qn.field_d, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void c(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
+        int var13 = 0;
+        int var15 = 0;
+        if (param2 <= 0 || param3 <= 0) {
+            return;
+        }
+        int var5 = this.field_y;
+        int var6 = this.field_v;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        L0: {
-          if (param2 <= 0) {
-            break L0;
-          } else {
-            if (param3 > 0) {
-              L1: {
-                var5 = this.field_y;
-                var6 = this.field_v;
-                var7 = 0;
-                var8 = 0;
-                var9 = this.field_A;
-                var10 = this.field_x;
-                var11 = (var9 << 16) / param2;
-                var12 = (var10 << 16) / param3;
-                if (this.field_w <= 0) {
-                  break L1;
-                } else {
-                  var13 = ((this.field_w << 16) + var11 - 1) / var11;
-                  param0 = param0 + var13;
-                  var7 = var7 + (var13 * var11 - (this.field_w << 16));
-                  break L1;
-                }
-              }
-              L2: {
-                if (this.field_z <= 0) {
-                  break L2;
-                } else {
-                  var13 = ((this.field_z << 16) + var12 - 1) / var12;
-                  param1 = param1 + var13;
-                  var8 = var8 + (var13 * var12 - (this.field_z << 16));
-                  break L2;
-                }
-              }
-              L3: {
-                if (var5 >= var9) {
-                  break L3;
-                } else {
-                  param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
-                  break L3;
-                }
-              }
-              L4: {
-                if (var6 >= var10) {
-                  break L4;
-                } else {
-                  param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
-                  break L4;
-                }
-              }
-              L5: {
-                var13 = param0 + param1 * qn.field_l;
-                var14 = qn.field_l - param2;
-                if (param1 + param3 <= qn.field_f) {
-                  break L5;
-                } else {
-                  param3 = param3 - (param1 + param3 - qn.field_f);
-                  break L5;
-                }
-              }
-              L6: {
-                if (param1 >= qn.field_a) {
-                  break L6;
-                } else {
-                  var15 = qn.field_a - param1;
-                  param3 = param3 - var15;
-                  var13 = var13 + var15 * qn.field_l;
-                  var8 = var8 + var12 * var15;
-                  break L6;
-                }
-              }
-              L7: {
-                if (param0 + param2 <= qn.field_e) {
-                  break L7;
-                } else {
-                  var15 = param0 + param2 - qn.field_e;
-                  param2 = param2 - var15;
-                  var14 = var14 + var15;
-                  break L7;
-                }
-              }
-              L8: {
-                if (param0 >= qn.field_j) {
-                  break L8;
-                } else {
-                  var15 = qn.field_j - param0;
-                  param2 = param2 - var15;
-                  var13 = var13 + var15;
-                  var7 = var7 + var11 * var15;
-                  var14 = var14 + var15;
-                  break L8;
-                }
-              }
-              nj.d(qn.field_d, this.field_B, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
-              return;
-            } else {
-              break L0;
-            }
-          }
+        int var9 = this.field_A;
+        int var10 = this.field_x;
+        int var11 = (var9 << 16) / param2;
+        int var12 = (var10 << 16) / param3;
+        if (this.field_w > 0) {
+            var13 = ((this.field_w << 16) + var11 - 1) / var11;
+            param0 = param0 + var13;
+            var7 = var7 + (var13 * var11 - (this.field_w << 16));
         }
+        if (this.field_z > 0) {
+            var13 = ((this.field_z << 16) + var12 - 1) / var12;
+            param1 = param1 + var13;
+            var8 = var8 + (var13 * var12 - (this.field_z << 16));
+        }
+        if (var5 < var9) {
+            param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
+        }
+        if (var6 < var10) {
+            param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
+        }
+        var13 = param0 + param1 * qn.field_l;
+        int var14 = qn.field_l - param2;
+        if (param1 + param3 > qn.field_f) {
+            param3 = param3 - (param1 + param3 - qn.field_f);
+        }
+        if (param1 < qn.field_a) {
+            var15 = qn.field_a - param1;
+            param3 = param3 - var15;
+            var13 = var13 + var15 * qn.field_l;
+            var8 = var8 + var12 * var15;
+        }
+        if (param0 + param2 > qn.field_e) {
+            var15 = param0 + param2 - qn.field_e;
+            param2 = param2 - var15;
+            var14 = var14 + var15;
+        }
+        if (param0 < qn.field_j) {
+            var15 = qn.field_j - param0;
+            param2 = param2 - var15;
+            var13 = var13 + var15;
+            var7 = var7 + var11 * var15;
+            var14 = var14 + var15;
+        }
+        nj.d(qn.field_d, this.field_B, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
@@ -658,100 +431,74 @@ final class nj extends wk {
     }
 
     final void h(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int[] stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
         int[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         int[] stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_21_2 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int[] stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int[] stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        int stackOut_20_2 = 0;
-        int[] stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_19_2 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
         L0: {
           var3 = this.field_y >> 1;
           var4 = this.field_v >> 1;
           param0 = param0 + this.field_w / 2;
           param1 = param1 + this.field_z / 2;
           if (param0 >= qn.field_j) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = qn.field_j - param0 << 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = qn.field_j - param0 << 1;
             break L0;
           }
         }
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= qn.field_e) {
-            stackOut_5_0 = this.field_y - 2;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = this.field_y - 2;
             break L1;
           } else {
-            stackOut_4_0 = (qn.field_e - param0 << 1) - 2;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = (qn.field_e - param0 << 1) - 2;
             break L1;
           }
         }
         L2: {
           var6 = stackIn_6_0;
           if (param1 >= qn.field_a) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = qn.field_a - param1 << 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = qn.field_a - param1 << 1;
             break L2;
           }
         }
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= qn.field_f) {
-            stackOut_11_0 = this.field_v - 2;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = this.field_v - 2;
             break L3;
           } else {
-            stackOut_10_0 = (qn.field_f - param1 << 1) - 2;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = (qn.field_f - param1 << 1) - 2;
             break L3;
           }
         }
@@ -797,27 +544,19 @@ final class nj extends wk {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = this.field_B;
-                      stackOut_18_1 = var10 + (var19 & 1);
-                      stackIn_20_0 = stackOut_18_0;
-                      stackIn_20_1 = stackOut_18_1;
-                      stackIn_19_0 = stackOut_18_0;
-                      stackIn_19_1 = stackOut_18_1;
+                      stackIn_20_0 = this.field_B;
+
+                      stackIn_20_1 = var10 + (var19 & 1);
+
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
-                        stackOut_20_1 = stackIn_20_1;
-                        stackOut_20_2 = 0;
-                        stackIn_21_0 = stackOut_20_0;
-                        stackIn_21_1 = stackOut_20_1;
-                        stackIn_21_2 = stackOut_20_2;
+                        stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
+                        stackIn_21_1 = stackIn_20_1;
+                        stackIn_21_2 = 0;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
-                        stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = this.field_y;
-                        stackIn_21_0 = stackOut_19_0;
-                        stackIn_21_1 = stackOut_19_1;
-                        stackIn_21_2 = stackOut_19_2;
+                        stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
+                        stackIn_21_1 = stackIn_20_1;
+                        stackIn_21_2 = this.field_y;
                         break L7;
                       }
                     }
@@ -838,14 +577,14 @@ final class nj extends wk {
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var9 = -param5;
         var10 = -param6;
         L0: while (true) {
@@ -860,9 +599,9 @@ final class nj extends wk {
                 var10++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -871,9 +610,9 @@ final class nj extends wk {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+                  param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -884,45 +623,26 @@ final class nj extends wk {
     }
 
     final void f(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_w;
-          param1 = param1 + this.field_z;
-          var3 = param0 + param1 * qn.field_l;
-          var4 = 0;
-          var5 = this.field_v;
-          var6 = this.field_y;
-          var7 = qn.field_l - var6;
-          var8 = 0;
-          if (param1 >= qn.field_a) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_w;
+        param1 = param1 + this.field_z;
+        int var3 = param0 + param1 * qn.field_l;
+        int var4 = 0;
+        int var5 = this.field_v;
+        int var6 = this.field_y;
+        int var7 = qn.field_l - var6;
+        int var8 = 0;
+        if (param1 < qn.field_a) {
             var9 = qn.field_a - param1;
             var5 = var5 - var9;
             param1 = qn.field_a;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * qn.field_l;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= qn.field_f) {
-            break L1;
-          } else {
+        if (param1 + var5 > qn.field_f) {
             var5 = var5 - (param1 + var5 - qn.field_f);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= qn.field_j) {
-            break L2;
-          } else {
+        if (param0 < qn.field_j) {
             var9 = qn.field_j - param0;
             var6 = var6 - var9;
             param0 = qn.field_j;
@@ -930,43 +650,28 @@ final class nj extends wk {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= qn.field_e) {
-            break L3;
-          } else {
+        if (param0 + var6 > qn.field_e) {
             var9 = param0 + var6 - qn.field_e;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        L4: {
-          if (var6 <= 0) {
-            break L4;
-          } else {
-            if (var5 > 0) {
-              nj.e(qn.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var6 <= 0 || var5 <= 0) {
+            return;
         }
+        nj.e(qn.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var9 = -param5;
         var10 = -param6;
         L0: while (true) {
@@ -981,9 +686,9 @@ final class nj extends wk {
                 var10++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3--;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -992,9 +697,9 @@ final class nj extends wk {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+                  param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -1013,164 +718,86 @@ final class nj extends wk {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
+        int var14 = 0;
+        int var16 = 0;
+        if (param4 == 256) {
+            this.c(param0, param1, param2, param3);
+            return;
+        }
+        if (param2 <= 0 || param3 <= 0) {
+            return;
+        }
+        int var6 = this.field_y;
+        int var7 = this.field_v;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        if (param4 != 256) {
-          L0: {
-            if (param2 <= 0) {
-              break L0;
-            } else {
-              if (param3 > 0) {
-                L1: {
-                  var6 = this.field_y;
-                  var7 = this.field_v;
-                  var8 = 0;
-                  var9 = 0;
-                  var10 = this.field_A;
-                  var11 = this.field_x;
-                  var12 = (var10 << 16) / param2;
-                  var13 = (var11 << 16) / param3;
-                  if (this.field_w <= 0) {
-                    break L1;
-                  } else {
-                    var14 = ((this.field_w << 16) + var12 - 1) / var12;
-                    param0 = param0 + var14;
-                    var8 = var8 + (var14 * var12 - (this.field_w << 16));
-                    break L1;
-                  }
-                }
-                L2: {
-                  if (this.field_z <= 0) {
-                    break L2;
-                  } else {
-                    var14 = ((this.field_z << 16) + var13 - 1) / var13;
-                    param1 = param1 + var14;
-                    var9 = var9 + (var14 * var13 - (this.field_z << 16));
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (var6 >= var10) {
-                    break L3;
-                  } else {
-                    param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (var7 >= var11) {
-                    break L4;
-                  } else {
-                    param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
-                    break L4;
-                  }
-                }
-                L5: {
-                  var14 = param0 + param1 * qn.field_l;
-                  var15 = qn.field_l - param2;
-                  if (param1 + param3 <= qn.field_f) {
-                    break L5;
-                  } else {
-                    param3 = param3 - (param1 + param3 - qn.field_f);
-                    break L5;
-                  }
-                }
-                L6: {
-                  if (param1 >= qn.field_a) {
-                    break L6;
-                  } else {
-                    var16 = qn.field_a - param1;
-                    param3 = param3 - var16;
-                    var14 = var14 + var16 * qn.field_l;
-                    var9 = var9 + var13 * var16;
-                    break L6;
-                  }
-                }
-                L7: {
-                  if (param0 + param2 <= qn.field_e) {
-                    break L7;
-                  } else {
-                    var16 = param0 + param2 - qn.field_e;
-                    param2 = param2 - var16;
-                    var15 = var15 + var16;
-                    break L7;
-                  }
-                }
-                L8: {
-                  if (param0 >= qn.field_j) {
-                    break L8;
-                  } else {
-                    var16 = qn.field_j - param0;
-                    param2 = param2 - var16;
-                    var14 = var14 + var16;
-                    var8 = var8 + var12 * var16;
-                    var15 = var15 + var16;
-                    break L8;
-                  }
-                }
-                nj.d(qn.field_d, this.field_B, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
-                return;
-              } else {
-                break L0;
-              }
-            }
-          }
-          return;
-        } else {
-          this.c(param0, param1, param2, param3);
-          return;
+        int var10 = this.field_A;
+        int var11 = this.field_x;
+        int var12 = (var10 << 16) / param2;
+        int var13 = (var11 << 16) / param3;
+        if (this.field_w > 0) {
+            var14 = ((this.field_w << 16) + var12 - 1) / var12;
+            param0 = param0 + var14;
+            var8 = var8 + (var14 * var12 - (this.field_w << 16));
         }
+        if (this.field_z > 0) {
+            var14 = ((this.field_z << 16) + var13 - 1) / var13;
+            param1 = param1 + var14;
+            var9 = var9 + (var14 * var13 - (this.field_z << 16));
+        }
+        if (var6 < var10) {
+            param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
+        }
+        if (var7 < var11) {
+            param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
+        }
+        var14 = param0 + param1 * qn.field_l;
+        int var15 = qn.field_l - param2;
+        if (param1 + param3 > qn.field_f) {
+            param3 = param3 - (param1 + param3 - qn.field_f);
+        }
+        if (param1 < qn.field_a) {
+            var16 = qn.field_a - param1;
+            param3 = param3 - var16;
+            var14 = var14 + var16 * qn.field_l;
+            var9 = var9 + var13 * var16;
+        }
+        if (param0 + param2 > qn.field_e) {
+            var16 = param0 + param2 - qn.field_e;
+            param2 = param2 - var16;
+            var15 = var15 + var16;
+        }
+        if (param0 < qn.field_j) {
+            var16 = qn.field_j - param0;
+            param2 = param2 - var16;
+            var14 = var14 + var16;
+            var8 = var8 + var12 * var16;
+            var15 = var15 + var16;
+        }
+        nj.d(qn.field_d, this.field_B, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
     }
 
     final void e(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_w;
-          param1 = param1 + this.field_z;
-          var4 = param0 + param1 * qn.field_l;
-          var5 = 0;
-          var6 = this.field_v;
-          var7 = this.field_y;
-          var8 = qn.field_l - var7;
-          var9 = 0;
-          if (param1 >= qn.field_a) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_w;
+        param1 = param1 + this.field_z;
+        int var4 = param0 + param1 * qn.field_l;
+        int var5 = 0;
+        int var6 = this.field_v;
+        int var7 = this.field_y;
+        int var8 = qn.field_l - var7;
+        int var9 = 0;
+        if (param1 < qn.field_a) {
             var10 = qn.field_a - param1;
             var6 = var6 - var10;
             param1 = qn.field_a;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * qn.field_l;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= qn.field_f) {
-            break L1;
-          } else {
+        if (param1 + var6 > qn.field_f) {
             var6 = var6 - (param1 + var6 - qn.field_f);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= qn.field_j) {
-            break L2;
-          } else {
+        if (param0 < qn.field_j) {
             var10 = qn.field_j - param0;
             var7 = var7 - var10;
             param0 = qn.field_j;
@@ -1178,32 +805,17 @@ final class nj extends wk {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= qn.field_e) {
-            break L3;
-          } else {
+        if (param0 + var7 > qn.field_e) {
             var10 = param0 + var7 - qn.field_e;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        L4: {
-          if (var7 <= 0) {
-            break L4;
-          } else {
-            if (var6 > 0) {
-              nj.d(qn.field_d, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var7 <= 0 || var6 <= 0) {
+            return;
         }
+        nj.d(qn.field_d, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
@@ -1269,45 +881,26 @@ final class nj extends wk {
     }
 
     final void d(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + (this.field_A - this.field_y - this.field_w);
-          param1 = param1 + this.field_z;
-          var3 = param0 + param1 * qn.field_l;
-          var4 = this.field_y - 1;
-          var5 = this.field_v;
-          var6 = this.field_y;
-          var7 = qn.field_l - var6;
-          var8 = var6 + var6;
-          if (param1 >= qn.field_a) {
-            break L0;
-          } else {
+        param0 = param0 + (this.field_A - this.field_y - this.field_w);
+        param1 = param1 + this.field_z;
+        int var3 = param0 + param1 * qn.field_l;
+        int var4 = this.field_y - 1;
+        int var5 = this.field_v;
+        int var6 = this.field_y;
+        int var7 = qn.field_l - var6;
+        int var8 = var6 + var6;
+        if (param1 < qn.field_a) {
             var9 = qn.field_a - param1;
             var5 = var5 - var9;
             param1 = qn.field_a;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * qn.field_l;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= qn.field_f) {
-            break L1;
-          } else {
+        if (param1 + var5 > qn.field_f) {
             var5 = var5 - (param1 + var5 - qn.field_f);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= qn.field_j) {
-            break L2;
-          } else {
+        if (param0 < qn.field_j) {
             var9 = qn.field_j - param0;
             var6 = var6 - var9;
             param0 = qn.field_j;
@@ -1315,323 +908,189 @@ final class nj extends wk {
             var3 = var3 + var9;
             var8 = var8 - var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= qn.field_e) {
-            break L3;
-          } else {
+        if (param0 + var6 > qn.field_e) {
             var9 = param0 + var6 - qn.field_e;
             var6 = var6 - var9;
             var8 = var8 - var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        L4: {
-          if (var6 <= 0) {
-            break L4;
-          } else {
-            if (var5 > 0) {
-              nj.d(qn.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var6 <= 0 || var5 <= 0) {
+            return;
         }
+        nj.d(qn.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void c(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
+        int var14 = 0;
+        int var16 = 0;
+        if (param2 <= 0 || param3 <= 0) {
+            return;
+        }
+        int var6 = this.field_y;
+        int var7 = this.field_v;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        L0: {
-          if (param2 <= 0) {
-            break L0;
-          } else {
-            if (param3 > 0) {
-              L1: {
-                var6 = this.field_y;
-                var7 = this.field_v;
-                var8 = 0;
-                var9 = 0;
-                var10 = this.field_A;
-                var11 = this.field_x;
-                var12 = (var10 << 16) / param2;
-                var13 = (var11 << 16) / param3;
-                if (this.field_w <= 0) {
-                  break L1;
-                } else {
-                  var14 = ((this.field_w << 16) + var12 - 1) / var12;
-                  param0 = param0 + var14;
-                  var8 = var8 + (var14 * var12 - (this.field_w << 16));
-                  break L1;
-                }
-              }
-              L2: {
-                if (this.field_z <= 0) {
-                  break L2;
-                } else {
-                  var14 = ((this.field_z << 16) + var13 - 1) / var13;
-                  param1 = param1 + var14;
-                  var9 = var9 + (var14 * var13 - (this.field_z << 16));
-                  break L2;
-                }
-              }
-              L3: {
-                if (var6 >= var10) {
-                  break L3;
-                } else {
-                  param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
-                  break L3;
-                }
-              }
-              L4: {
-                if (var7 >= var11) {
-                  break L4;
-                } else {
-                  param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
-                  break L4;
-                }
-              }
-              L5: {
-                var14 = param0 + param1 * qn.field_l;
-                var15 = qn.field_l - param2;
-                if (param1 + param3 <= qn.field_f) {
-                  break L5;
-                } else {
-                  param3 = param3 - (param1 + param3 - qn.field_f);
-                  break L5;
-                }
-              }
-              L6: {
-                if (param1 >= qn.field_a) {
-                  break L6;
-                } else {
-                  var16 = qn.field_a - param1;
-                  param3 = param3 - var16;
-                  var14 = var14 + var16 * qn.field_l;
-                  var9 = var9 + var13 * var16;
-                  break L6;
-                }
-              }
-              L7: {
-                if (param0 + param2 <= qn.field_e) {
-                  break L7;
-                } else {
-                  var16 = param0 + param2 - qn.field_e;
-                  param2 = param2 - var16;
-                  var15 = var15 + var16;
-                  break L7;
-                }
-              }
-              L8: {
-                if (param0 >= qn.field_j) {
-                  break L8;
-                } else {
-                  var16 = qn.field_j - param0;
-                  param2 = param2 - var16;
-                  var14 = var14 + var16;
-                  var8 = var8 + var12 * var16;
-                  var15 = var15 + var16;
-                  break L8;
-                }
-              }
-              nj.c(qn.field_d, this.field_B, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
-              return;
-            } else {
-              break L0;
-            }
-          }
+        int var10 = this.field_A;
+        int var11 = this.field_x;
+        int var12 = (var10 << 16) / param2;
+        int var13 = (var11 << 16) / param3;
+        if (this.field_w > 0) {
+            var14 = ((this.field_w << 16) + var12 - 1) / var12;
+            param0 = param0 + var14;
+            var8 = var8 + (var14 * var12 - (this.field_w << 16));
         }
+        if (this.field_z > 0) {
+            var14 = ((this.field_z << 16) + var13 - 1) / var13;
+            param1 = param1 + var14;
+            var9 = var9 + (var14 * var13 - (this.field_z << 16));
+        }
+        if (var6 < var10) {
+            param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
+        }
+        if (var7 < var11) {
+            param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
+        }
+        var14 = param0 + param1 * qn.field_l;
+        int var15 = qn.field_l - param2;
+        if (param1 + param3 > qn.field_f) {
+            param3 = param3 - (param1 + param3 - qn.field_f);
+        }
+        if (param1 < qn.field_a) {
+            var16 = qn.field_a - param1;
+            param3 = param3 - var16;
+            var14 = var14 + var16 * qn.field_l;
+            var9 = var9 + var13 * var16;
+        }
+        if (param0 + param2 > qn.field_e) {
+            var16 = param0 + param2 - qn.field_e;
+            param2 = param2 - var16;
+            var15 = var15 + var16;
+        }
+        if (param0 < qn.field_j) {
+            var16 = qn.field_j - param0;
+            param2 = param2 - var16;
+            var14 = var14 + var16;
+            var8 = var8 + var12 * var16;
+            var15 = var15 + var16;
+        }
+        nj.c(qn.field_d, this.field_B, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
     }
 
     final void g(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        if (param2 != 256) {
-          L0: {
-            param0 = param0 + this.field_w;
-            param1 = param1 + this.field_z;
-            var4 = param0 + param1 * qn.field_l;
-            var5 = 0;
-            var6 = this.field_v;
-            var7 = this.field_y;
-            var8 = qn.field_l - var7;
-            var9 = 0;
-            if (param1 >= qn.field_a) {
-              break L0;
-            } else {
-              var10 = qn.field_a - param1;
-              var6 = var6 - var10;
-              param1 = qn.field_a;
-              var5 = var5 + var10 * var7;
-              var4 = var4 + var10 * qn.field_l;
-              break L0;
-            }
-          }
-          L1: {
-            if (param1 + var6 <= qn.field_f) {
-              break L1;
-            } else {
-              var6 = var6 - (param1 + var6 - qn.field_f);
-              break L1;
-            }
-          }
-          L2: {
-            if (param0 >= qn.field_j) {
-              break L2;
-            } else {
-              var10 = qn.field_j - param0;
-              var7 = var7 - var10;
-              param0 = qn.field_j;
-              var5 = var5 + var10;
-              var4 = var4 + var10;
-              var9 = var9 + var10;
-              var8 = var8 + var10;
-              break L2;
-            }
-          }
-          L3: {
-            if (param0 + var7 <= qn.field_e) {
-              break L3;
-            } else {
-              var10 = param0 + var7 - qn.field_e;
-              var7 = var7 - var10;
-              var9 = var9 + var10;
-              var8 = var8 + var10;
-              break L3;
-            }
-          }
-          L4: {
-            if (var7 <= 0) {
-              break L4;
-            } else {
-              if (var6 > 0) {
-                nj.f(qn.field_d, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
-                return;
-              } else {
-                break L4;
-              }
-            }
-          }
-          return;
-        } else {
-          this.g(param0, param1);
-          return;
+        if (param2 == 256) {
+            this.g(param0, param1);
+            return;
         }
+        param0 = param0 + this.field_w;
+        param1 = param1 + this.field_z;
+        int var4 = param0 + param1 * qn.field_l;
+        int var5 = 0;
+        int var6 = this.field_v;
+        int var7 = this.field_y;
+        int var8 = qn.field_l - var7;
+        int var9 = 0;
+        if (param1 < qn.field_a) {
+            var10 = qn.field_a - param1;
+            var6 = var6 - var10;
+            param1 = qn.field_a;
+            var5 = var5 + var10 * var7;
+            var4 = var4 + var10 * qn.field_l;
+        }
+        if (param1 + var6 > qn.field_f) {
+            var6 = var6 - (param1 + var6 - qn.field_f);
+        }
+        if (param0 < qn.field_j) {
+            var10 = qn.field_j - param0;
+            var7 = var7 - var10;
+            param0 = qn.field_j;
+            var5 = var5 + var10;
+            var4 = var4 + var10;
+            var9 = var9 + var10;
+            var8 = var8 + var10;
+        }
+        if (param0 + var7 > qn.field_e) {
+            var10 = param0 + var7 - qn.field_e;
+            var7 = var7 - var10;
+            var9 = var9 + var10;
+            var8 = var8 + var10;
+        }
+        if (var7 <= 0 || var6 <= 0) {
+            return;
+        }
+        nj.f(qn.field_d, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void h(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int[] stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
         int[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         int[] stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_21_2 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int[] stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int[] stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        int stackOut_20_2 = 0;
-        int[] stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_19_2 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
         L0: {
           var4 = this.field_y >> 1;
           var5 = this.field_v >> 1;
           param0 = param0 + this.field_w / 2;
           param1 = param1 + this.field_z / 2;
           if (param0 >= qn.field_j) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = qn.field_j - param0 << 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = qn.field_j - param0 << 1;
             break L0;
           }
         }
         L1: {
           var6 = stackIn_3_0;
           if (param0 + var4 <= qn.field_e) {
-            stackOut_5_0 = this.field_y - 2;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = this.field_y - 2;
             break L1;
           } else {
-            stackOut_4_0 = (qn.field_e - param0 << 1) - 2;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = (qn.field_e - param0 << 1) - 2;
             break L1;
           }
         }
         L2: {
           var7 = stackIn_6_0;
           if (param1 >= qn.field_a) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = qn.field_a - param1 << 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = qn.field_a - param1 << 1;
             break L2;
           }
         }
         L3: {
           var8 = stackIn_9_0;
           if (param1 + var5 <= qn.field_f) {
-            stackOut_11_0 = this.field_v - 2;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = this.field_v - 2;
             break L3;
           } else {
-            stackOut_10_0 = (qn.field_f - param1 << 1) - 2;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = (qn.field_f - param1 << 1) - 2;
             break L3;
           }
         }
@@ -1677,27 +1136,19 @@ final class nj extends wk {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = this.field_B;
-                      stackOut_18_1 = var11 + (var20 & 1);
-                      stackIn_20_0 = stackOut_18_0;
-                      stackIn_20_1 = stackOut_18_1;
-                      stackIn_19_0 = stackOut_18_0;
-                      stackIn_19_1 = stackOut_18_1;
+                      stackIn_20_0 = this.field_B;
+
+                      stackIn_20_1 = var11 + (var20 & 1);
+
                       if ((var20 & 2) != 0) {
-                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
-                        stackOut_20_1 = stackIn_20_1;
-                        stackOut_20_2 = 0;
-                        stackIn_21_0 = stackOut_20_0;
-                        stackIn_21_1 = stackOut_20_1;
-                        stackIn_21_2 = stackOut_20_2;
+                        stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
+                        stackIn_21_1 = stackIn_20_1;
+                        stackIn_21_2 = 0;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
-                        stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = this.field_y;
-                        stackIn_21_0 = stackOut_19_0;
-                        stackIn_21_1 = stackOut_19_1;
-                        stackIn_21_2 = stackOut_19_2;
+                        stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
+                        stackIn_21_1 = stackIn_20_1;
+                        stackIn_21_2 = this.field_y;
                         break L7;
                       }
                     }
@@ -1718,9 +1169,9 @@ final class nj extends wk {
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var14;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -1734,9 +1185,9 @@ final class nj extends wk {
                 param8++;
                 continue L0;
               } else {
-                incrementValue$66 = param5;
+                incrementValue$11 = param5;
                 param5++;
-                param0 = param4[incrementValue$66];
+                param0 = param4[incrementValue$11];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -1749,9 +1200,9 @@ final class nj extends wk {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  incrementValue$67 = param7;
+                  incrementValue$12 = param7;
                   param7++;
-                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -1762,22 +1213,22 @@ final class nj extends wk {
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
         var10 = param9 >> 16 & 255;
         var11 = param9 >> 8 & 255;
         var12 = param9 & 255;
@@ -1797,9 +1248,9 @@ final class nj extends wk {
                 var15++;
                 continue L0;
               } else {
-                incrementValue$2 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                param2 = param1[incrementValue$2];
+                param2 = param1[incrementValue$0];
                 var17 = param2 >>> 24;
                 if (var17 == 0) {
                   param4++;
@@ -1832,9 +1283,9 @@ final class nj extends wk {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  incrementValue$3 = param4;
+                  incrementValue$1 = param4;
                   param4++;
-                  param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
+                  param0[incrementValue$1] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
                   continue L1;
                 }
@@ -1845,87 +1296,71 @@ final class nj extends wk {
     }
 
     final void e(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int[] var22 = null;
-        int[] var23 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int[] var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int[] var22;
+        int[] var23;
         L0: {
           var3 = this.field_y >> 2;
           var4 = this.field_v >> 2;
           param0 = param0 + this.field_w / 4;
           param1 = param1 + this.field_z / 4;
           if (param0 >= qn.field_j) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = qn.field_j - param0 << 2;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = qn.field_j - param0 << 2;
             break L0;
           }
         }
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= qn.field_e) {
-            stackOut_5_0 = this.field_y - 4;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = this.field_y - 4;
             break L1;
           } else {
-            stackOut_4_0 = (qn.field_e - param0 << 2) - 4;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = (qn.field_e - param0 << 2) - 4;
             break L1;
           }
         }
         L2: {
           var6 = stackIn_6_0;
           if (param1 >= qn.field_a) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = qn.field_a - param1 << 2;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = qn.field_a - param1 << 2;
             break L2;
           }
         }
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= qn.field_f) {
-            stackOut_11_0 = this.field_v - 4;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = this.field_v - 4;
             break L3;
           } else {
-            stackOut_10_0 = (qn.field_f - param1 << 2) - 4;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = (qn.field_f - param1 << 2) - 4;
             break L3;
           }
         }

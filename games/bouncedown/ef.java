@@ -13,19 +13,15 @@ abstract class ef {
     int[] field_g;
 
     final static void a(byte param0) {
-        int discarded$48 = 0;
-        int discarded$49 = 0;
-        int discarded$50 = 0;
-        int discarded$51 = 0;
-        qa var1 = null;
-        ii var2 = null;
+        qa var1;
+        ii var2;
         var1 = (qa) ((Object) md.field_t.a((byte) -71));
         if (var1 != null) {
           var2 = jc.field_g;
-          discarded$48 = var2.j(-3);
-          discarded$49 = var2.j(-3);
-          discarded$50 = var2.j(-3);
-          discarded$51 = var2.j(-3);
+          var2.j(-3);
+          var2.j(-3);
+          var2.j(-3);
+          var2.j(-3);
           var1.c(2);
           if (param0 < 99) {
             ef.b(-125);
@@ -40,7 +36,7 @@ abstract class ef {
     }
 
     final static ve a(int param0) {
-        String var1 = null;
+        String var1;
         if (param0 == 30923) {
           var1 = uf.a((byte) -115);
           if (var1 != null) {

@@ -8,7 +8,7 @@ final class nj extends aa {
     static qo field_f;
 
     final static void c(int param0) {
-        int var1 = 0;
+        int var1;
         vn.field_f.e((byte) 116);
         if (fu.field_d == null) {
           fu.field_d = new ng(vn.field_f, uf.field_e);

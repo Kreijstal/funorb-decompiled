@@ -10,26 +10,16 @@ final class wla extends k {
     static String field_n;
 
     final void a(byte param0, lu param1, int param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         var6 = BachelorFridge.field_y;
         try {
           L0: {
@@ -79,27 +69,19 @@ final class wla extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var4);
-            stackOut_15_1 = new StringBuilder().append("wla.E(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var4);
+
+            stackIn_17_1 = new StringBuilder().append("wla.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L3;
             }
           }
@@ -124,29 +106,29 @@ final class wla extends k {
     }
 
     final int[][] a(boolean param0, int param1) {
-        int[][] var3 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int[][] var17 = null;
-        int[][] var19 = null;
-        int[] var21 = null;
-        int[] var24 = null;
-        int[] var25 = null;
-        int[][] var27 = null;
-        int[] var29 = null;
-        int[] var32 = null;
-        int[] var33 = null;
-        int[][] var38 = null;
-        int[] var39 = null;
-        int[] var40 = null;
-        int[] var41 = null;
+        int[][] var3;
+        int[] var8;
+        int[] var9;
+        int[] var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int[][] var17;
+        int[][] var19;
+        int[] var21;
+        int[] var24;
+        int[] var25;
+        int[][] var27;
+        int[] var29;
+        int[] var32;
+        int[] var33;
+        int[][] var38;
+        int[] var39;
+        int[] var40;
+        int[] var41;
         L0: {
           var16 = BachelorFridge.field_y;
           var27 = this.field_h.a(param1, -858);

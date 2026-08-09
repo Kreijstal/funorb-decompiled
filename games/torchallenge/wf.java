@@ -30,9 +30,7 @@ final class wf {
     }
 
     final static qk a(byte param0, String param1) {
-        qk discarded$2 = null;
         String var2 = null;
-        RuntimeException var2_ref = null;
         qk var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -40,23 +38,13 @@ final class wf {
         CharSequence var7 = null;
         CharSequence var8 = null;
         qk stackIn_15_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qk stackOut_14_0 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException var2_ref = null;
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -77,7 +65,7 @@ final class wf {
                   break L2;
                 } else {
                   var6 = (String) null;
-                  discarded$2 = wf.a((byte) -81, (String) null);
+                  wf.a((byte) -81, (String) null);
                   break L2;
                 }
               }
@@ -94,8 +82,7 @@ final class wf {
                     }
                   }
                   if (var4.equals(var2)) {
-                    stackOut_14_0 = (qk) (var3);
-                    stackIn_15_0 = stackOut_14_0;
+                    stackIn_15_0 = (qk) (var3);
                     break L0;
                   } else {
                     var3 = (qk) ((Object) mh.field_e.a((byte) 126));
@@ -113,27 +100,19 @@ final class wf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2_ref = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var2_ref);
-            stackOut_18_1 = new StringBuilder().append("wf.C(").append(param0).append(',');
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var2_ref);
+
+            stackIn_20_1 = new StringBuilder().append("wf.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L5;
             }
           }
@@ -143,8 +122,8 @@ final class wf {
     }
 
     final static byte a(byte param0, char param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = TorChallenge.field_F ? 1 : 0;
         if (param0 != -126) {
           field_i = (oa) null;

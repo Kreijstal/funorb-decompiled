@@ -15,27 +15,16 @@ final class ada extends k {
     }
 
     final void a(byte param0, lu param1, int param2) {
-        int[][] discarded$2 = null;
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException var4 = null;
         var6 = BachelorFridge.field_y;
         try {
           L0: {
@@ -69,7 +58,7 @@ final class ada extends k {
               if (param0 == -71) {
                 break L3;
               } else {
-                discarded$2 = this.a(false, -103);
+                this.a(false, -103);
                 break L3;
               }
             }
@@ -79,27 +68,19 @@ final class ada extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var4);
-            stackOut_11_1 = new StringBuilder().append("ada.E(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var4);
+
+            stackIn_13_1 = new StringBuilder().append("ada.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L4;
             }
           }
@@ -108,20 +89,20 @@ final class ada extends k {
     }
 
     private final void e(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int[] var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int[] var14 = null;
-        int[] var17 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int[] var10;
+        int var11;
+        int var12;
+        int var13;
+        int[] var14;
+        int[] var17;
         L0: {
           var13 = BachelorFridge.field_y;
           if (param0 == 578) {
@@ -147,7 +128,7 @@ final class ada extends k {
                     if (var9 >= var5) {
                       break L4;
                     } else {
-                      if (var8 < this.field_n[var9][0]) {
+                      if ((var8 ^ -1) > (this.field_n[var9][0] ^ -1)) {
                         break L4;
                       } else {
                         var7++;
@@ -236,91 +217,21 @@ final class ada extends k {
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3) {
-        sna stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        sna stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        sna stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        sna stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        sna stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
         sna stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         sna stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         int stackIn_10_2 = 0;
-        sna stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        sna stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
-        sna stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
-        sna stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
-        sna stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
         sna stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         sna stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         int stackIn_17_2 = 0;
-        sna stackIn_18_0 = null;
-        int stackIn_18_1 = 0;
-        sna stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
-        sna stackIn_20_0 = null;
-        int stackIn_20_1 = 0;
         sna stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         sna stackIn_22_0 = null;
         int stackIn_22_1 = 0;
         int stackIn_22_2 = 0;
-        sna stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        sna stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        sna stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        sna stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        sna stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        sna stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
-        sna stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        sna stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        sna stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        sna stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        sna stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        sna stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        sna stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        int stackOut_15_2 = 0;
-        sna stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        int stackOut_16_2 = 0;
-        sna stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        sna stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        sna stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        sna stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        int stackOut_20_2 = 0;
-        sna stackOut_21_0 = null;
-        int stackOut_21_1 = 0;
-        int stackOut_21_2 = 0;
         L0: {
           pm.f(199);
           if (-1 >= (wk.field_a ^ -1)) {
@@ -333,57 +244,36 @@ final class ada extends k {
         }
         L1: {
           L2: {
-            stackOut_3_0 = ng.field_e;
-            stackOut_3_1 = 19842;
-            stackIn_9_0 = stackOut_3_0;
-            stackIn_9_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_9_0 = ng.field_e;
+
+            stackIn_9_1 = 19842;
+
             if (!param0) {
               break L2;
             } else {
-              stackOut_4_0 = (sna) ((Object) stackIn_4_0);
-              stackOut_4_1 = stackIn_4_1;
-              stackIn_9_0 = stackOut_4_0;
-              stackIn_9_1 = stackOut_4_1;
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
+              stackIn_9_0 = (sna) ((Object) stackIn_9_0);
+
               if (param3) {
                 break L2;
               } else {
-                stackOut_5_0 = (sna) ((Object) stackIn_5_0);
-                stackOut_5_1 = stackIn_5_1;
-                stackIn_9_0 = stackOut_5_0;
-                stackIn_9_1 = stackOut_5_1;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
+                stackIn_9_0 = (sna) ((Object) stackIn_9_0);
+
                 if (eda.field_j) {
                   break L2;
                 } else {
-                  stackOut_6_0 = (sna) ((Object) stackIn_6_0);
-                  stackOut_6_1 = stackIn_6_1;
-                  stackIn_9_0 = stackOut_6_0;
-                  stackIn_9_1 = stackOut_6_1;
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_9_0 = (sna) ((Object) stackIn_9_0);
+
                   if (pw.field_w != null) {
                     break L2;
                   } else {
-                    stackOut_7_0 = (sna) ((Object) stackIn_7_0);
-                    stackOut_7_1 = stackIn_7_1;
-                    stackIn_9_0 = stackOut_7_0;
-                    stackIn_9_1 = stackOut_7_1;
-                    stackIn_8_0 = stackOut_7_0;
-                    stackIn_8_1 = stackOut_7_1;
+                    stackIn_9_0 = (sna) ((Object) stackIn_9_0);
+
                     if (null != rv.field_n) {
                       break L2;
                     } else {
-                      stackOut_8_0 = (sna) ((Object) stackIn_8_0);
-                      stackOut_8_1 = stackIn_8_1;
-                      stackOut_8_2 = 1;
-                      stackIn_10_0 = stackOut_8_0;
-                      stackIn_10_1 = stackOut_8_1;
-                      stackIn_10_2 = stackOut_8_2;
+                      stackIn_10_0 = (sna) ((Object) stackIn_9_0);
+                      stackIn_10_1 = stackIn_9_1;
+                      stackIn_10_2 = 1;
                       break L1;
                     }
                   }
@@ -391,68 +281,44 @@ final class ada extends k {
               }
             }
           }
-          stackOut_9_0 = (sna) ((Object) stackIn_9_0);
-          stackOut_9_1 = stackIn_9_1;
-          stackOut_9_2 = 0;
-          stackIn_10_0 = stackOut_9_0;
-          stackIn_10_1 = stackOut_9_1;
-          stackIn_10_2 = stackOut_9_2;
+          stackIn_10_0 = (sna) ((Object) stackIn_9_0);
+          stackIn_10_1 = stackIn_9_1;
+          stackIn_10_2 = 0;
           break L1;
         }
         L3: {
           L4: {
             ((sna) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2 != 0);
-            stackOut_10_0 = ui.field_r;
-            stackOut_10_1 = 19842;
-            stackIn_16_0 = stackOut_10_0;
-            stackIn_16_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_16_0 = ui.field_r;
+
+            stackIn_16_1 = 19842;
+
             if (!param0) {
               break L4;
             } else {
-              stackOut_11_0 = (sna) ((Object) stackIn_11_0);
-              stackOut_11_1 = stackIn_11_1;
-              stackIn_16_0 = stackOut_11_0;
-              stackIn_16_1 = stackOut_11_1;
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
+              stackIn_16_0 = (sna) ((Object) stackIn_16_0);
+
               if (param3) {
                 break L4;
               } else {
-                stackOut_12_0 = (sna) ((Object) stackIn_12_0);
-                stackOut_12_1 = stackIn_12_1;
-                stackIn_16_0 = stackOut_12_0;
-                stackIn_16_1 = stackOut_12_1;
-                stackIn_13_0 = stackOut_12_0;
-                stackIn_13_1 = stackOut_12_1;
+                stackIn_16_0 = (sna) ((Object) stackIn_16_0);
+
                 if (eda.field_j) {
                   break L4;
                 } else {
-                  stackOut_13_0 = (sna) ((Object) stackIn_13_0);
-                  stackOut_13_1 = stackIn_13_1;
-                  stackIn_16_0 = stackOut_13_0;
-                  stackIn_16_1 = stackOut_13_1;
-                  stackIn_14_0 = stackOut_13_0;
-                  stackIn_14_1 = stackOut_13_1;
+                  stackIn_16_0 = (sna) ((Object) stackIn_16_0);
+
                   if (pw.field_w != null) {
                     break L4;
                   } else {
-                    stackOut_14_0 = (sna) ((Object) stackIn_14_0);
-                    stackOut_14_1 = stackIn_14_1;
-                    stackIn_16_0 = stackOut_14_0;
-                    stackIn_16_1 = stackOut_14_1;
-                    stackIn_15_0 = stackOut_14_0;
-                    stackIn_15_1 = stackOut_14_1;
+                    stackIn_16_0 = (sna) ((Object) stackIn_16_0);
+
                     if (rv.field_n != null) {
                       break L4;
                     } else {
-                      stackOut_15_0 = (sna) ((Object) stackIn_15_0);
-                      stackOut_15_1 = stackIn_15_1;
-                      stackOut_15_2 = 1;
-                      stackIn_17_0 = stackOut_15_0;
-                      stackIn_17_1 = stackOut_15_1;
-                      stackIn_17_2 = stackOut_15_2;
+                      stackIn_17_0 = (sna) ((Object) stackIn_16_0);
+                      stackIn_17_1 = stackIn_16_1;
+                      stackIn_17_2 = 1;
                       break L3;
                     }
                   }
@@ -460,61 +326,42 @@ final class ada extends k {
               }
             }
           }
-          stackOut_16_0 = (sna) ((Object) stackIn_16_0);
-          stackOut_16_1 = stackIn_16_1;
-          stackOut_16_2 = 0;
-          stackIn_17_0 = stackOut_16_0;
-          stackIn_17_1 = stackOut_16_1;
-          stackIn_17_2 = stackOut_16_2;
+          stackIn_17_0 = (sna) ((Object) stackIn_16_0);
+          stackIn_17_1 = stackIn_16_1;
+          stackIn_17_2 = 0;
           break L3;
         }
         L5: {
           L6: {
             ((sna) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_17_2 != 0);
-            stackOut_17_0 = sb.field_n;
-            stackOut_17_1 = 19842;
-            stackIn_21_0 = stackOut_17_0;
-            stackIn_21_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_21_0 = sb.field_n;
+
+            stackIn_21_1 = 19842;
+
             if (!param0) {
               break L6;
             } else {
-              stackOut_18_0 = (sna) ((Object) stackIn_18_0);
-              stackOut_18_1 = stackIn_18_1;
-              stackIn_21_0 = stackOut_18_0;
-              stackIn_21_1 = stackOut_18_1;
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
+              stackIn_21_0 = (sna) ((Object) stackIn_21_0);
+
               if (param3) {
                 break L6;
               } else {
-                stackOut_19_0 = (sna) ((Object) stackIn_19_0);
-                stackOut_19_1 = stackIn_19_1;
-                stackIn_21_0 = stackOut_19_0;
-                stackIn_21_1 = stackOut_19_1;
-                stackIn_20_0 = stackOut_19_0;
-                stackIn_20_1 = stackOut_19_1;
+                stackIn_21_0 = (sna) ((Object) stackIn_21_0);
+
                 if (!eda.field_j) {
                   break L6;
                 } else {
-                  stackOut_20_0 = (sna) ((Object) stackIn_20_0);
-                  stackOut_20_1 = stackIn_20_1;
-                  stackOut_20_2 = 1;
-                  stackIn_22_0 = stackOut_20_0;
-                  stackIn_22_1 = stackOut_20_1;
-                  stackIn_22_2 = stackOut_20_2;
+                  stackIn_22_0 = (sna) ((Object) stackIn_21_0);
+                  stackIn_22_1 = stackIn_21_1;
+                  stackIn_22_2 = 1;
                   break L5;
                 }
               }
             }
           }
-          stackOut_21_0 = (sna) ((Object) stackIn_21_0);
-          stackOut_21_1 = stackIn_21_1;
-          stackOut_21_2 = 0;
-          stackIn_22_0 = stackOut_21_0;
-          stackIn_22_1 = stackOut_21_1;
-          stackIn_22_2 = stackOut_21_2;
+          stackIn_22_0 = (sna) ((Object) stackIn_21_0);
+          stackIn_22_1 = stackIn_21_1;
+          stackIn_22_2 = 0;
           break L5;
         }
         L7: {
@@ -633,10 +480,10 @@ final class ada extends k {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        int var7 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        int var7 = 0;
         var6 = BachelorFridge.field_y;
         try {
           L0: {
@@ -684,8 +531,8 @@ final class ada extends k {
     }
 
     private final void a(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         L0: {
           var4 = BachelorFridge.field_y;
           if (param1 == 33) {

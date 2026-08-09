@@ -7,9 +7,9 @@ final class lf extends pj {
     private java.awt.Component field_g;
 
     final void a(byte param0, int param1, int param2, java.awt.Component param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         this.field_e = new int[1 + param1 * param2];
         this.field_b = param1;
         this.field_c = param2;
@@ -28,7 +28,7 @@ final class lf extends pj {
 
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
         int var5 = 43 / ((-72 - param0) / 48);
-        boolean discarded$0 = param1.drawImage(this.field_d, param3, param2, (java.awt.image.ImageObserver) ((Object) this.field_g));
+        param1.drawImage(this.field_d, param3, param2, (java.awt.image.ImageObserver) ((Object) this.field_g));
     }
 
     public lf() {

@@ -6,7 +6,7 @@ final class ti {
     static String field_b;
 
     final static String a(byte param0) {
-        int var1 = 0;
+        int var1;
         if (cb.field_v == wi.field_f) {
           return oa.field_o;
         } else {
@@ -24,9 +24,8 @@ final class ti {
     }
 
     final static boolean b(int param0) {
-        String discarded$0 = null;
         if (param0 != 10618) {
-            discarded$0 = ti.a((byte) -1);
+            ti.a((byte) -1);
             return ma.a(-120, rl.a((byte) -77));
         }
         return ma.a(-120, rl.a((byte) -77));

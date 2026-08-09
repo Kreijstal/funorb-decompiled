@@ -11,10 +11,9 @@ final class kd extends qe {
     private String field_q;
 
     public static void c(byte param0) {
-        mg[] discarded$0 = null;
         field_r = null;
         if (param0 >= -84) {
-            discarded$0 = kd.c(false);
+            kd.c(false);
         }
         field_p = null;
         field_n = null;
@@ -25,8 +24,6 @@ final class kd extends qe {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -34,22 +31,10 @@ final class kd extends qe {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        String stackOut_9_0 = null;
-        String stackOut_5_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             if (this.field_o.a(param1, true) == ee.field_c) {
-              stackOut_2_0 = this.field_o.a(param0 + 0, param1);
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = this.field_o.a(param0 + 0, param1);
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -62,13 +47,11 @@ final class kd extends qe {
                     break L1;
                   }
                 }
-                stackOut_9_0 = bk.field_c;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = bk.field_c;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_5_0 = sg.field_g;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = sg.field_g;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -78,27 +61,19 @@ final class kd extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("kd.H(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("kd.H(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L2;
             }
           }
@@ -124,16 +99,6 @@ final class kd extends qe {
     }
 
     final static void a(mg[] param0, int param1, boolean param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        mg[] var12 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -141,14 +106,14 @@ final class kd extends qe {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        mg[] var12 = null;
         var11 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -199,27 +164,19 @@ final class kd extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var6);
-            stackOut_11_1 = new StringBuilder().append("kd.Q(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var6);
+
+            stackIn_13_1 = new StringBuilder().append("kd.Q(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L4;
             }
           }
@@ -268,15 +225,6 @@ final class kd extends qe {
     }
 
     final static boolean a(int param0, int[] param1) {
-        RuntimeException var2 = null;
-        long var2_long = 0L;
-        bj var4_ref_bj = null;
-        int var4 = 0;
-        int var5_int = 0;
-        bj var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        mg[] var8 = null;
         int stackIn_5_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_20_0 = 0;
@@ -290,24 +238,17 @@ final class kd extends qe {
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
         String stackIn_42_2 = null;
-        int stackOut_4_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_37_0 = 0;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
         int statePc = 0;
         Throwable caughtException = null;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
+        bj var4_ref_bj = null;
+        int var4 = 0;
+        int var5_int = 0;
+        bj var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        mg[] var8 = null;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -357,8 +298,7 @@ final class kd extends qe {
                 }
                 case 4: {
                     try {
-                        stackOut_4_0 = 0;
-                        stackIn_5_0 = stackOut_4_0;
+                        stackIn_5_0 = 0;
                         statePc = 5;
                         continue stateLoop;
                     } catch (Throwable stateCaught_4) {
@@ -494,8 +434,7 @@ final class kd extends qe {
                         pl.field_c = md.field_b;
                         md.field_b = ci.field_q;
                         ci.field_q = var4_ref_bj.field_i;
-                        stackOut_15_0 = 1;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = 1;
                         statePc = 16;
                         continue stateLoop;
                     } catch (Throwable stateCaught_15) {
@@ -508,21 +447,18 @@ final class kd extends qe {
                     return stackIn_16_0 != 0;
                 }
                 case 17: {
-                    stackOut_17_0 = s.field_g;
-                    stackIn_20_0 = stackOut_17_0;
+                    stackIn_20_0 = s.field_g;
                     statePc = 20;
                     continue stateLoop;
                 }
                 case 18: {
-                    stackOut_18_0 = s.field_g;
-                    stackIn_20_0 = stackOut_18_0;
+                    stackIn_20_0 = s.field_g;
                     statePc = 20;
                     continue stateLoop;
                 }
                 case 19: {
                     try {
-                        stackOut_19_0 = s.field_g;
-                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_0 = s.field_g;
                         statePc = 20;
                         continue stateLoop;
                     } catch (Throwable stateCaught_19) {
@@ -562,8 +498,7 @@ final class kd extends qe {
                 }
                 case 22: {
                     try {
-                        stackOut_22_0 = 0;
-                        stackIn_23_0 = stackOut_22_0;
+                        stackIn_23_0 = 0;
                         statePc = 23;
                         continue stateLoop;
                     } catch (Throwable stateCaught_22) {
@@ -604,8 +539,7 @@ final class kd extends qe {
                 }
                 case 26: {
                     try {
-                        stackOut_26_0 = 0;
-                        stackIn_27_0 = stackOut_26_0;
+                        stackIn_27_0 = 0;
                         statePc = 27;
                         continue stateLoop;
                     } catch (Throwable stateCaught_26) {
@@ -739,8 +673,7 @@ final class kd extends qe {
                         md.field_b = ci.field_q;
                         ci.field_q = s.field_g;
                         s.field_g = -1;
-                        stackOut_37_0 = 1;
-                        stackIn_38_0 = stackOut_37_0;
+                        stackIn_38_0 = 1;
                         statePc = 38;
                         continue stateLoop;
                     } catch (Throwable stateCaught_37) {
@@ -754,12 +687,10 @@ final class kd extends qe {
                 }
                 case 39: {
                     var2 = (RuntimeException) ((Object) caughtException);
-                    stackOut_39_0 = (RuntimeException) (var2);
-                    stackOut_39_1 = new StringBuilder().append("kd.J(").append(param0).append(',');
-                    stackIn_41_0 = stackOut_39_0;
-                    stackIn_41_1 = stackOut_39_1;
-                    stackIn_40_0 = stackOut_39_0;
-                    stackIn_40_1 = stackOut_39_1;
+                    stackIn_41_0 = (RuntimeException) (var2);
+                    stackIn_40_0 = stackIn_41_0;
+                    stackIn_41_1 = new StringBuilder().append("kd.J(").append(param0).append(',');
+                    stackIn_40_1 = stackIn_41_1;
                     if (param1 == null) {
                         statePc = 41;
                     } else {
@@ -768,22 +699,16 @@ final class kd extends qe {
                     continue stateLoop;
                 }
                 case 40: {
-                    stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-                    stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-                    stackOut_40_2 = "{...}";
-                    stackIn_42_0 = stackOut_40_0;
-                    stackIn_42_1 = stackOut_40_1;
-                    stackIn_42_2 = stackOut_40_2;
+                    stackIn_42_0 = (RuntimeException) ((Object) stackIn_40_0);
+                    stackIn_42_1 = (StringBuilder) ((Object) stackIn_40_1);
+                    stackIn_42_2 = "{...}";
                     statePc = 42;
                     continue stateLoop;
                 }
                 case 41: {
-                    stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-                    stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-                    stackOut_41_2 = "null";
-                    stackIn_42_0 = stackOut_41_0;
-                    stackIn_42_1 = stackOut_41_1;
-                    stackIn_42_2 = stackOut_41_2;
+                    stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+                    stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+                    stackIn_42_2 = "null";
                     statePc = 42;
                     continue stateLoop;
                 }
@@ -801,8 +726,6 @@ final class kd extends qe {
         wl stackIn_2_0 = null;
         wl stackIn_7_0 = null;
         wl stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -810,18 +733,6 @@ final class kd extends qe {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        wl stackOut_6_0 = null;
-        wl stackOut_11_0 = null;
-        wl stackOut_10_0 = null;
-        wl stackOut_1_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             if (this.field_o.a(param0, param1) != ee.field_c) {
@@ -831,8 +742,7 @@ final class kd extends qe {
                 } else {
                   var3 = ub.a(99, param0);
                   if (!var3.b(-114)) {
-                    stackOut_6_0 = te.field_d;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = te.field_d;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -844,20 +754,17 @@ final class kd extends qe {
               }
               L2: {
                 if (this.field_s) {
-                  stackOut_11_0 = bm.field_i;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = bm.field_i;
                   break L2;
                 } else {
-                  stackOut_10_0 = ee.field_c;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = ee.field_c;
                   break L2;
                 }
               }
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_1_0 = ee.field_c;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = ee.field_c;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -866,27 +773,19 @@ final class kd extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3_ref);
-            stackOut_13_1 = new StringBuilder().append("kd.E(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3_ref);
+
+            stackIn_15_1 = new StringBuilder().append("kd.E(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }

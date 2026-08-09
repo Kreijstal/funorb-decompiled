@@ -6,8 +6,8 @@ final class lia extends pw {
     static int field_b;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, byte param9) {
-        RuntimeException var10 = null;
         int var10_int = 0;
+        RuntimeException var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;

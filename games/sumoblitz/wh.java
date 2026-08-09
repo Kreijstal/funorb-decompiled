@@ -37,7 +37,7 @@ final class wh extends pj {
     }
 
     final static String a(byte param0) {
-        String var1 = null;
+        String var1;
         L0: {
           var1 = "";
           if (no.field_a == null) {

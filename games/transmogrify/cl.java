@@ -25,7 +25,6 @@ final class cl extends rh {
     }
 
     final byte[] e(int param0) {
-        int discarded$6 = 0;
         if (param0 == 256) {
           if (this.field_m) {
             throw new RuntimeException();
@@ -33,7 +32,7 @@ final class cl extends rh {
             return this.field_B;
           }
         } else {
-          discarded$6 = this.f(95);
+          this.f(95);
           if (this.field_m) {
             throw new RuntimeException();
           } else {

@@ -24,10 +24,10 @@ final class ne {
 
     final static void a(byte param0, int param1) {
         l var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         fa var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -67,7 +67,6 @@ final class ne {
     }
 
     final static boolean a(int param0, String param1) {
-        Process discarded$2 = null;
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -78,8 +77,6 @@ final class ne {
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_18_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -88,19 +85,6 @@ final class ne {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -114,8 +98,7 @@ final class ne {
                       if (param1.startsWith("https://")) {
                         break L2;
                       } else {
-                        stackOut_6_0 = 0;
-                        stackIn_7_0 = stackOut_6_0;
+                        stackIn_7_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L1;
                       }
@@ -133,9 +116,8 @@ final class ne {
                   }
                   L4: while (true) {
                     if (var3 >= param1.length()) {
-                      discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
-                      stackOut_15_0 = 1;
-                      stackIn_16_0 = stackOut_15_0;
+                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
+                      stackIn_16_0 = 1;
                       decompiledRegionSelector0 = 3;
                       break L1;
                     } else {
@@ -143,16 +125,14 @@ final class ne {
                         var3++;
                         continue L4;
                       } else {
-                        stackOut_12_0 = 0;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L1;
                       }
                     }
                   }
                 } else {
-                  stackOut_2_0 = 0;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L1;
                 }
@@ -160,8 +140,7 @@ final class ne {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackOut_17_0 = 0;
-              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_0 = 0;
               return stackIn_18_0 != 0;
             }
             if (decompiledRegionSelector0 == 0) {
@@ -186,27 +165,19 @@ final class ne {
           decompiledCaughtException = decompiledCaughtParameter1;
           L5: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2_ref2);
-            stackOut_19_1 = new StringBuilder().append("ne.F(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2_ref2);
+
+            stackIn_21_1 = new StringBuilder().append("ne.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L5;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L5;
             }
           }
@@ -244,59 +215,37 @@ final class ne {
     }
 
     final static mg[] a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        mg var9 = null;
-        mg var10 = null;
-        mg var11 = null;
-        mg var12 = null;
-        mg var13 = null;
-        Object var14 = null;
-        int[] var15 = null;
         mg var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
-        L0: {
-          var18 = df.field_d;
-          var17 = var18;
-          var15 = var17;
-          var6 = var15;
-          var7 = df.field_e;
-          var8 = df.field_f;
-          var9 = new mg(param1, -(param1 * 2) + param0);
-          var9.b();
-          df.a(0, 0, param1, param0 + -(2 * param1), param5, param4);
-          var10 = new mg(param1, param1);
-          var10.b();
-          df.b(0, 0, param1, param1, param5);
-          var11 = new mg(16, param1);
-          var11.b();
-          df.b(0, 0, 16, param1, param5);
-          var12 = new mg(param1, param1);
-          var12.b();
-          df.b(0, 0, param1, param1, param4);
-          var13 = new mg(16, param1);
-          var13.b();
-          if (param3 == 106) {
-            break L0;
-          } else {
+        int[] var18 = df.field_d;
+        int[] var17 = var18;
+        int[] var15 = var17;
+        int[] var6 = var15;
+        int var7 = df.field_e;
+        int var8 = df.field_f;
+        mg var9 = new mg(param1, -(param1 * 2) + param0);
+        var9.b();
+        df.a(0, 0, param1, param0 + -(2 * param1), param5, param4);
+        mg var10 = new mg(param1, param1);
+        var10.b();
+        df.b(0, 0, param1, param1, param5);
+        mg var11 = new mg(16, param1);
+        var11.b();
+        df.b(0, 0, 16, param1, param5);
+        mg var12 = new mg(param1, param1);
+        var12.b();
+        df.b(0, 0, param1, param1, param4);
+        mg var13 = new mg(16, param1);
+        var13.b();
+        if (param3 != 106) {
             field_c = (um) null;
-            break L0;
-          }
         }
-        L1: {
-          df.b(0, 0, 16, param1, param4);
-          var14 = null;
-          if ((param2 ^ -1) < -1) {
+        df.b(0, 0, 16, param1, param4);
+        Object var14 = null;
+        if (!((param2 ^ -1) >= -1)) {
             var16 = new mg(16, 16);
             var14 = var16;
             var16.b();
             df.b(0, 0, 16, 16, param2);
-            break L1;
-          } else {
-            break L1;
-          }
         }
         df.a(var18, var7, var8);
         return new mg[]{var10, var11, var10, var9, (mg) (var14), var9, var12, var13, var12};

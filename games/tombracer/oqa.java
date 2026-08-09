@@ -9,9 +9,8 @@ final class oqa extends osa {
     static cn field_v;
 
     final int a(int param0, int param1) {
-        int discarded$0 = 0;
         if (param0 != 0) {
-            discarded$0 = this.c(-68);
+            this.c(-68);
             return param1;
         }
         return param1;
@@ -35,186 +34,74 @@ final class oqa extends osa {
         if (param0 == 11683) {
             return;
         }
-        String discarded$0 = oqa.a(true, false, -42, false);
+        oqa.a(true, false, -42, false);
     }
 
     final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 == 1) {
           var2 = this.field_n.q((byte) -80) - this.e((byte) -43);
           L0: while (true) {
             if ((var2 ^ -1) <= -1) {
               L1: while (true) {
-                if ((var2 ^ -1) < -8193) {
-                  var2 -= 8192;
-                  if (var5 != 0) {
-                    var3 = 0;
-                    var4 = this.field_u / 2;
-                    if (var4 >= var2) {
-                      if (-var4 <= var2) {
-                        L2: {
-                          if (-1 != (var3 ^ -1)) {
-                            this.field_n.c(false, var3);
-                            break L2;
-                          } else {
-                            break L2;
-                          }
-                        }
-                        return;
-                      } else {
-                        L3: {
-                          var3 = -var2 + -var4;
-                          if (var5 == 0) {
-                            break L3;
-                          } else {
-                            var3 = -var2 + var4;
-                            break L3;
-                          }
-                        }
-                        L4: {
-                          if (-1 != (var3 ^ -1)) {
-                            this.field_n.c(false, var3);
-                            break L4;
-                          } else {
-                            break L4;
-                          }
-                        }
-                        return;
-                      }
-                    } else {
-                      L5: {
-                        var3 = -var2 + var4;
-                        if (-1 != (var3 ^ -1)) {
-                          this.field_n.c(false, var3);
-                          break L5;
-                        } else {
-                          break L5;
-                        }
-                      }
-                      return;
-                    }
-                  } else {
-                    continue L1;
-                  }
-                } else {
-                  L6: {
+                if ((var2 ^ -1) >= -8193) {
+                  L2: {
                     if (4096 >= var2) {
-                      break L6;
+                      break L2;
                     } else {
                       var2 = var2 + -8192;
-                      break L6;
+                      break L2;
                     }
                   }
                   var3 = 0;
                   var4 = this.field_u / 2;
                   if (var4 >= var2) {
                     if (-var4 <= var2) {
-                      L7: {
+                      L3: {
                         if (-1 != (var3 ^ -1)) {
                           this.field_n.c(false, var3);
-                          break L7;
+                          break L3;
                         } else {
-                          break L7;
+                          break L3;
                         }
                       }
                       return;
                     } else {
-                      L8: {
+                      L4: {
                         var3 = -var2 + -var4;
-                        if (var5 == 0) {
-                          break L8;
-                        } else {
-                          var3 = -var2 + var4;
-                          break L8;
-                        }
-                      }
-                      L9: {
                         if (-1 != (var3 ^ -1)) {
                           this.field_n.c(false, var3);
-                          break L9;
+                          break L4;
                         } else {
-                          break L9;
+                          break L4;
                         }
                       }
                       return;
                     }
                   } else {
-                    L10: {
+                    L5: {
                       var3 = -var2 + var4;
                       if (-1 != (var3 ^ -1)) {
                         this.field_n.c(false, var3);
-                        break L10;
+                        break L5;
                       } else {
-                        break L10;
-                      }
-                    }
-                    return;
-                  }
-                }
-              }
-            } else {
-              var2 += 8192;
-              if (var5 == 0) {
-                continue L0;
-              } else {
-                L11: {
-                  if (4096 >= var2) {
-                    break L11;
-                  } else {
-                    var2 = var2 + -8192;
-                    break L11;
-                  }
-                }
-                var3 = 0;
-                var4 = this.field_u / 2;
-                if (var4 >= var2) {
-                  if (-var4 <= var2) {
-                    L12: {
-                      if (-1 != (var3 ^ -1)) {
-                        this.field_n.c(false, var3);
-                        break L12;
-                      } else {
-                        break L12;
-                      }
-                    }
-                    return;
-                  } else {
-                    L13: {
-                      var3 = -var2 + -var4;
-                      if (var5 == 0) {
-                        break L13;
-                      } else {
-                        var3 = -var2 + var4;
-                        break L13;
-                      }
-                    }
-                    L14: {
-                      if (-1 != (var3 ^ -1)) {
-                        this.field_n.c(false, var3);
-                        break L14;
-                      } else {
-                        break L14;
+                        break L5;
                       }
                     }
                     return;
                   }
                 } else {
-                  L15: {
-                    var3 = -var2 + var4;
-                    if (-1 != (var3 ^ -1)) {
-                      this.field_n.c(false, var3);
-                      break L15;
-                    } else {
-                      break L15;
-                    }
-                  }
-                  return;
+                  var2 -= 8192;
+                  continue L1;
                 }
               }
+            } else {
+              var2 += 8192;
+              continue L0;
             }
           }
         } else {
@@ -235,9 +122,7 @@ final class oqa extends osa {
     }
 
     final static String a(boolean param0, boolean param1, int param2, boolean param3) {
-        String discarded$2 = null;
-        String discarded$3 = null;
-        int var4 = 0;
+        int var4;
         var4 = 0;
         if (!param0) {
           L0: {
@@ -256,7 +141,7 @@ final class oqa extends osa {
               return cua.field_b[var4];
             }
           } else {
-            discarded$2 = oqa.a(false, true, 65, true);
+            oqa.a(false, true, 65, true);
             if (param3) {
               var4++;
               return cua.field_b[var4];
@@ -275,7 +160,7 @@ final class oqa extends osa {
             }
           }
           if (param2 != 21297) {
-            discarded$3 = oqa.a(false, true, 65, true);
+            oqa.a(false, true, 65, true);
             if (!param3) {
               return cua.field_b[var4];
             } else {

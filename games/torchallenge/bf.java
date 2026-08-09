@@ -76,12 +76,12 @@ final class bf {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var3;
+        int var4;
+        int var8;
+        int var5;
+        int var6;
+        int var7;
         L0: {
           var8 = TorChallenge.field_F ? 1 : 0;
           var4 = 7 % ((param2 - -45) / 32);

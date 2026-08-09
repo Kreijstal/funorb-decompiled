@@ -14,34 +14,23 @@ final class br extends ob {
     }
 
     final void b(int param0, boolean param1, int param2) {
-        int var4 = 0;
-        Object stackIn_5_0 = null;
+        int var4;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
         var4 = this.field_h[param2];
         if (23 == var4) {
           if (this.field_B.b((byte) 61)) {
             L0: {
-              stackOut_4_0 = null;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_6_0 = null;
+
               if (!oe.a(false, hp.field_c)) {
-                stackOut_6_0 = stackIn_6_0;
-                stackOut_6_1 = 16;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = stackIn_6_0;
+                stackIn_7_1 = 16;
                 break L0;
               } else {
-                stackOut_5_0 = stackIn_5_0;
-                stackOut_5_1 = 18;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+                stackIn_7_0 = stackIn_6_0;
+                stackIn_7_1 = 18;
                 break L0;
               }
             }
@@ -89,22 +78,18 @@ final class br extends ob {
     }
 
     final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        String var4 = null;
+        int var2;
+        int var3;
+        String var4;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
         L0: {
           super.c(91);
           var2 = oe.a(false, hp.field_c) ? 1 : 0;
           if (ti.field_d == null) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }

@@ -16,40 +16,7 @@ final class vi {
     }
 
     final static byte a(char param0, boolean param1) {
-        String discarded$33 = null;
-        String discarded$34 = null;
-        String discarded$35 = null;
-        String discarded$36 = null;
-        String discarded$37 = null;
-        String discarded$38 = null;
-        String discarded$39 = null;
-        String discarded$40 = null;
-        String discarded$41 = null;
-        String discarded$42 = null;
-        String discarded$43 = null;
-        String discarded$44 = null;
-        String discarded$45 = null;
-        String discarded$46 = null;
-        String discarded$47 = null;
-        String discarded$48 = null;
-        String discarded$49 = null;
-        String discarded$50 = null;
-        String discarded$51 = null;
-        String discarded$52 = null;
-        String discarded$53 = null;
-        String discarded$54 = null;
-        String discarded$55 = null;
-        String discarded$56 = null;
-        String discarded$57 = null;
-        String discarded$58 = null;
-        String discarded$59 = null;
-        String discarded$60 = null;
-        String discarded$61 = null;
-        String discarded$62 = null;
-        String discarded$63 = null;
-        String discarded$64 = null;
-        String discarded$65 = null;
-        int var2 = 0;
+        int var2;
         if (0 < param0) {
           if (param0 >= 128) {
             if (param0 >= 160) {
@@ -65,7 +32,7 @@ final class vi {
                         if (param1) {
                           return (byte) var2;
                         } else {
-                          discarded$33 = vi.a((byte) -101, 91, -44, 41L);
+                          vi.a((byte) -101, 91, -44, 41L);
                           return (byte) var2;
                         }
                       } else {
@@ -74,7 +41,7 @@ final class vi {
                           if (param1) {
                             return (byte) var2;
                           } else {
-                            discarded$34 = vi.a((byte) -101, 91, -44, 41L);
+                            vi.a((byte) -101, 91, -44, 41L);
                             return (byte) var2;
                           }
                         } else {
@@ -84,7 +51,7 @@ final class vi {
                               if (param1) {
                                 return (byte) var2;
                               } else {
-                                discarded$35 = vi.a((byte) -101, 91, -44, 41L);
+                                vi.a((byte) -101, 91, -44, 41L);
                                 return (byte) var2;
                               }
                             } else {
@@ -95,7 +62,7 @@ final class vi {
                                     if (param1) {
                                       return (byte) var2;
                                     } else {
-                                      discarded$36 = vi.a((byte) -101, 91, -44, 41L);
+                                      vi.a((byte) -101, 91, -44, 41L);
                                       return (byte) var2;
                                     }
                                   } else {
@@ -107,7 +74,7 @@ final class vi {
                                             if (param1) {
                                               return (byte) var2;
                                             } else {
-                                              discarded$37 = vi.a((byte) -101, 91, -44, 41L);
+                                              vi.a((byte) -101, 91, -44, 41L);
                                               return (byte) var2;
                                             }
                                           } else {
@@ -117,7 +84,7 @@ final class vi {
                                                 if (param1) {
                                                   return (byte) var2;
                                                 } else {
-                                                  discarded$38 = vi.a((byte) -101, 91, -44, 41L);
+                                                  vi.a((byte) -101, 91, -44, 41L);
                                                   return (byte) var2;
                                                 }
                                               } else {
@@ -126,7 +93,7 @@ final class vi {
                                                   if (param1) {
                                                     return (byte) var2;
                                                   } else {
-                                                    discarded$39 = vi.a((byte) -101, 91, -44, 41L);
+                                                    vi.a((byte) -101, 91, -44, 41L);
                                                     return (byte) var2;
                                                   }
                                                 } else {
@@ -136,7 +103,7 @@ final class vi {
                                                       if (param1) {
                                                         return (byte) var2;
                                                       } else {
-                                                        discarded$40 = vi.a((byte) -101, 91, -44, 41L);
+                                                        vi.a((byte) -101, 91, -44, 41L);
                                                         return (byte) var2;
                                                       }
                                                     } else {
@@ -145,7 +112,7 @@ final class vi {
                                                         if (param1) {
                                                           return (byte) var2;
                                                         } else {
-                                                          discarded$41 = vi.a((byte) -101, 91, -44, 41L);
+                                                          vi.a((byte) -101, 91, -44, 41L);
                                                           return (byte) var2;
                                                         }
                                                       } else {
@@ -158,7 +125,7 @@ final class vi {
                                                                   if (param1) {
                                                                     return (byte) var2;
                                                                   } else {
-                                                                    discarded$42 = vi.a((byte) -101, 91, -44, 41L);
+                                                                    vi.a((byte) -101, 91, -44, 41L);
                                                                     return (byte) var2;
                                                                   }
                                                                 } else {
@@ -169,7 +136,7 @@ final class vi {
                                                                         if (param1) {
                                                                           return (byte) var2;
                                                                         } else {
-                                                                          discarded$43 = vi.a((byte) -101, 91, -44, 41L);
+                                                                          vi.a((byte) -101, 91, -44, 41L);
                                                                           return (byte) var2;
                                                                         }
                                                                       } else {
@@ -177,7 +144,7 @@ final class vi {
                                                                         if (param1) {
                                                                           return (byte) var2;
                                                                         } else {
-                                                                          discarded$44 = vi.a((byte) -101, 91, -44, 41L);
+                                                                          vi.a((byte) -101, 91, -44, 41L);
                                                                           return (byte) var2;
                                                                         }
                                                                       }
@@ -260,7 +227,7 @@ final class vi {
               if (param1) {
                 return (byte) var2;
               } else {
-                discarded$45 = vi.a((byte) -101, 91, -44, 41L);
+                vi.a((byte) -101, 91, -44, 41L);
                 return (byte) var2;
               }
             } else {
@@ -275,7 +242,7 @@ final class vi {
                       if (param1) {
                         return (byte) var2;
                       } else {
-                        discarded$46 = vi.a((byte) -101, 91, -44, 41L);
+                        vi.a((byte) -101, 91, -44, 41L);
                         return (byte) var2;
                       }
                     } else {
@@ -284,7 +251,7 @@ final class vi {
                         if (param1) {
                           return (byte) var2;
                         } else {
-                          discarded$47 = vi.a((byte) -101, 91, -44, 41L);
+                          vi.a((byte) -101, 91, -44, 41L);
                           return (byte) var2;
                         }
                       } else {
@@ -294,7 +261,7 @@ final class vi {
                             if (param1) {
                               return (byte) var2;
                             } else {
-                              discarded$48 = vi.a((byte) -101, 91, -44, 41L);
+                              vi.a((byte) -101, 91, -44, 41L);
                               return (byte) var2;
                             }
                           } else {
@@ -305,7 +272,7 @@ final class vi {
                                   if (param1) {
                                     return (byte) var2;
                                   } else {
-                                    discarded$49 = vi.a((byte) -101, 91, -44, 41L);
+                                    vi.a((byte) -101, 91, -44, 41L);
                                     return (byte) var2;
                                   }
                                 } else {
@@ -317,7 +284,7 @@ final class vi {
                                           if (param1) {
                                             return (byte) var2;
                                           } else {
-                                            discarded$50 = vi.a((byte) -101, 91, -44, 41L);
+                                            vi.a((byte) -101, 91, -44, 41L);
                                             return (byte) var2;
                                           }
                                         } else {
@@ -327,7 +294,7 @@ final class vi {
                                               if (param1) {
                                                 return (byte) var2;
                                               } else {
-                                                discarded$51 = vi.a((byte) -101, 91, -44, 41L);
+                                                vi.a((byte) -101, 91, -44, 41L);
                                                 return (byte) var2;
                                               }
                                             } else {
@@ -336,7 +303,7 @@ final class vi {
                                                 if (param1) {
                                                   return (byte) var2;
                                                 } else {
-                                                  discarded$52 = vi.a((byte) -101, 91, -44, 41L);
+                                                  vi.a((byte) -101, 91, -44, 41L);
                                                   return (byte) var2;
                                                 }
                                               } else {
@@ -346,7 +313,7 @@ final class vi {
                                                     if (param1) {
                                                       return (byte) var2;
                                                     } else {
-                                                      discarded$53 = vi.a((byte) -101, 91, -44, 41L);
+                                                      vi.a((byte) -101, 91, -44, 41L);
                                                       return (byte) var2;
                                                     }
                                                   } else {
@@ -355,7 +322,7 @@ final class vi {
                                                       if (param1) {
                                                         return (byte) var2;
                                                       } else {
-                                                        discarded$54 = vi.a((byte) -101, 91, -44, 41L);
+                                                        vi.a((byte) -101, 91, -44, 41L);
                                                         return (byte) var2;
                                                       }
                                                     } else {
@@ -368,7 +335,7 @@ final class vi {
                                                                 if (param1) {
                                                                   return (byte) var2;
                                                                 } else {
-                                                                  discarded$55 = vi.a((byte) -101, 91, -44, 41L);
+                                                                  vi.a((byte) -101, 91, -44, 41L);
                                                                   return (byte) var2;
                                                                 }
                                                               } else {
@@ -379,7 +346,7 @@ final class vi {
                                                                       if (param1) {
                                                                         return (byte) var2;
                                                                       } else {
-                                                                        discarded$56 = vi.a((byte) -101, 91, -44, 41L);
+                                                                        vi.a((byte) -101, 91, -44, 41L);
                                                                         return (byte) var2;
                                                                       }
                                                                     } else {
@@ -387,7 +354,7 @@ final class vi {
                                                                       if (param1) {
                                                                         return (byte) var2;
                                                                       } else {
-                                                                        discarded$57 = vi.a((byte) -101, 91, -44, 41L);
+                                                                        vi.a((byte) -101, 91, -44, 41L);
                                                                         return (byte) var2;
                                                                       }
                                                                     }
@@ -466,7 +433,7 @@ final class vi {
               if (param1) {
                 return (byte) var2;
               } else {
-                discarded$58 = vi.a((byte) -101, 91, -44, 41L);
+                vi.a((byte) -101, 91, -44, 41L);
                 return (byte) var2;
               }
             }
@@ -475,7 +442,7 @@ final class vi {
             if (param1) {
               return (byte) var2;
             } else {
-              discarded$59 = vi.a((byte) -101, 91, -44, 41L);
+              vi.a((byte) -101, 91, -44, 41L);
               return (byte) var2;
             }
           }
@@ -514,7 +481,7 @@ final class vi {
                                         if (param1) {
                                           break L4;
                                         } else {
-                                          discarded$60 = vi.a((byte) -101, 91, -44, 41L);
+                                          vi.a((byte) -101, 91, -44, 41L);
                                           break L4;
                                         }
                                       }
@@ -611,7 +578,7 @@ final class vi {
                                 if (param1) {
                                   break L5;
                                 } else {
-                                  discarded$61 = vi.a((byte) -101, 91, -44, 41L);
+                                  vi.a((byte) -101, 91, -44, 41L);
                                   break L5;
                                 }
                               }
@@ -631,7 +598,7 @@ final class vi {
                           if (param1) {
                             break L6;
                           } else {
-                            discarded$62 = vi.a((byte) -101, 91, -44, 41L);
+                            vi.a((byte) -101, 91, -44, 41L);
                             break L6;
                           }
                         }
@@ -647,7 +614,7 @@ final class vi {
                       if (param1) {
                         break L7;
                       } else {
-                        discarded$63 = vi.a((byte) -101, 91, -44, 41L);
+                        vi.a((byte) -101, 91, -44, 41L);
                         break L7;
                       }
                     }
@@ -659,7 +626,7 @@ final class vi {
                     if (param1) {
                       break L8;
                     } else {
-                      discarded$64 = vi.a((byte) -101, 91, -44, 41L);
+                      vi.a((byte) -101, 91, -44, 41L);
                       break L8;
                     }
                   }
@@ -672,7 +639,7 @@ final class vi {
             }
           }
           if (!param1) {
-            discarded$65 = vi.a((byte) -101, 91, -44, 41L);
+            vi.a((byte) -101, 91, -44, 41L);
             return (byte) var2;
           } else {
             return (byte) var2;

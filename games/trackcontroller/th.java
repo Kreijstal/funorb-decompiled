@@ -19,7 +19,7 @@ final class th extends fc {
     }
 
     final static kh f(int param0) {
-        String var1 = null;
+        String var1;
         L0: {
           var1 = l.h(0);
           if (var1 == null) {

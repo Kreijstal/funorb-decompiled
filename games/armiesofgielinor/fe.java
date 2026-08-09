@@ -19,20 +19,20 @@ final class fe {
     private static int[] field_e;
 
     private final static void a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, boolean param6) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
         var7 = 0;
         var8 = (param5.length << 16) / param3;
         var9 = 0;
@@ -215,9 +215,9 @@ final class fe {
     }
 
     final static void a(int param0, int param1, int param2, int param3, wk[] param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var6;
+        int var7;
+        int var8;
         param4[0].e(param0, param1, param5);
         param4[1].e(param0 + param2 - param4[0].field_y, param1, param5);
         param4[2].e(param0, param1 + param3 - param4[0].field_v, param5);
@@ -253,16 +253,11 @@ final class fe {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
         double var11 = 0.0;
-        var7 = param5 / 2 + 1;
-        var8 = 0;
-        L0: while (true) {
-          if (var8 >= param3) {
-            return;
-          } else {
+        int var7 = param5 / 2 + 1;
+        for (var8 = 0; var8 < param3; var8++) {
             var9 = (double)param4 * 3.141592653589793 * 2.0 / 100.0;
             var11 = (double)var8 * 3.141592653589793 * 2.0 / (double)param3;
             qn.a((int)(((double)param0 + (Math.cos(var9) * Math.cos(var11) * (double)param5 - Math.sin(var9) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9) * Math.cos(var11) * (double)var7 + Math.cos(var9) * Math.sin(var11) * (double)param5)) * 16.0), param6, 15, field_o[param2]);
@@ -270,41 +265,33 @@ final class fe {
             qn.a((int)(((double)param0 + (Math.cos(var9) * Math.cos(var11) * (double)param5 - Math.sin(var9) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9) * Math.cos(var11) * (double)var7 + Math.cos(var9) * Math.sin(var11) * (double)param5)) * 16.0), param6, 31, field_o[param2]);
             var9 = (double)(param4 + 10) * 3.141592653589793 * 2.0 / 100.0;
             qn.a((int)(((double)param0 + (Math.cos(var9) * Math.cos(var11) * (double)param5 - Math.sin(var9) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9) * Math.cos(var11) * (double)var7 + Math.cos(var9) * Math.sin(var11) * (double)param5)) * 16.0), param6, 63, field_o[param2]);
-            var8++;
-            continue L0;
-          }
         }
     }
 
     final static void a(String param0, int param1, int param2, boolean param3) {
-        int var4 = 0;
-        L0: {
-          var4 = field_i.a(param0) + 40;
-          if (!param3) {
-            param2 -= 26;
-            param1 -= 20;
-            fe.a(field_l[0], param1, param2);
-            fe.a(field_l[2], param1 + var4 - field_l[2].field_y, param2);
-            fe.a(field_l[1], param1 + field_l[0].field_y, param2, var4 - (field_l[0].field_y << 1), field_l[1].field_v);
-            break L0;
-          } else {
+        int var4 = field_i.a(param0) + 40;
+        if (param3) {
             var4 = var4 >> 1;
             param2 -= 26;
             param1 -= 10;
             fe.a(field_l[0], param1, param2, field_l[2].field_y >> 1, field_l[2].field_v >> 1);
             fe.a(field_l[2], param1 + var4 - (field_l[2].field_y >> 1), param2, field_l[2].field_y >> 1, field_l[2].field_v >> 1);
             fe.a(field_l[1], param1 + (field_l[0].field_y >> 1), param2, var4 - field_l[0].field_y, field_l[1].field_v >> 1);
-            break L0;
-          }
+        } else {
+            param2 -= 26;
+            param1 -= 20;
+            fe.a(field_l[0], param1, param2);
+            fe.a(field_l[2], param1 + var4 - field_l[2].field_y, param2);
+            fe.a(field_l[1], param1 + field_l[0].field_y, param2, var4 - (field_l[0].field_y << 1), field_l[1].field_v);
         }
     }
 
     private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
-        int incrementValue$145 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
+        int incrementValue$7 = 0;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
         var16 = param3;
         L0: while (true) {
           if (param8 >= 0) {
@@ -334,9 +321,9 @@ final class fe {
                       var17 = ((param0 & 16711680) >>> 16) * ((param1 & 16711680) >>> 16) >>> 8;
                       var18 = (param0 & 65280) * (param1 & 65280) >>> 24;
                       var19 = (param0 & 255) * (param1 & 255) >>> 8;
-                      incrementValue$145 = param10;
+                      incrementValue$7 = param10;
                       param10++;
-                      param5[incrementValue$145] = (var17 << 16) + (var18 << 8) + var19;
+                      param5[incrementValue$7] = (var17 << 16) + (var18 << 8) + var19;
                       param3 = param3 + param13;
                       param6++;
                       continue L1;
@@ -416,148 +403,86 @@ final class fe {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
         int var14 = 0;
+        int var13 = 0;
         int var15 = 0;
-        if (param3 <= 0) {
-          return;
-        } else {
-          if (param4 > 0) {
-            L0: {
-              var5 = param0.field_y;
-              var6 = param0.field_v;
-              var7 = 0;
-              var8 = 0;
-              var9 = param0.field_A;
-              var10 = param0.field_x;
-              var11 = (var9 << 16) / param3;
-              var12 = (var10 << 16) / param4;
-              if (param0.field_w <= 0) {
-                break L0;
-              } else {
+        if (param3 > 0) {
+            if (param4 <= 0) {
+                return;
+            }
+            var5 = param0.field_y;
+            var6 = param0.field_v;
+            var7 = 0;
+            var8 = 0;
+            var9 = param0.field_A;
+            var10 = param0.field_x;
+            var11 = (var9 << 16) / param3;
+            var12 = (var10 << 16) / param4;
+            if (param0.field_w > 0) {
                 var13 = ((param0.field_w << 16) + var11 - 1) / var11;
                 param1 = param1 + var13;
                 var7 = var7 + (var13 * var11 - (param0.field_w << 16));
-                break L0;
-              }
             }
-            L1: {
-              if (param0.field_z <= 0) {
-                break L1;
-              } else {
+            if (param0.field_z > 0) {
                 var13 = ((param0.field_z << 16) + var12 - 1) / var12;
                 param2 = param2 + var13;
                 var8 = var8 + (var13 * var12 - (param0.field_z << 16));
-                break L1;
-              }
             }
-            L2: {
-              if (var5 >= var9) {
-                break L2;
-              } else {
+            if (var5 < var9) {
                 param3 = ((var5 << 16) - var7 + var11 - 1) / var11;
-                break L2;
-              }
             }
-            L3: {
-              if (var6 >= var10) {
-                break L3;
-              } else {
+            if (var6 < var10) {
                 param4 = ((var6 << 16) - var8 + var12 - 1) / var12;
-                break L3;
-              }
             }
-            L4: {
-              var13 = param1 + param2 * qn.field_l;
-              var14 = qn.field_l - param3;
-              if (param2 + param4 <= qn.field_f) {
-                break L4;
-              } else {
+            var13 = param1 + param2 * qn.field_l;
+            var14 = qn.field_l - param3;
+            if (param2 + param4 > qn.field_f) {
                 param4 = param4 - (param2 + param4 - qn.field_f);
-                break L4;
-              }
             }
-            L5: {
-              if (param2 >= qn.field_a) {
-                break L5;
-              } else {
+            if (param2 < qn.field_a) {
                 var15 = qn.field_a - param2;
                 param4 = param4 - var15;
                 var13 = var13 + var15 * qn.field_l;
                 var8 = var8 + var12 * var15;
-                break L5;
-              }
             }
-            L6: {
-              if (param1 + param3 <= qn.field_e) {
-                break L6;
-              } else {
+            if (param1 + param3 > qn.field_e) {
                 var15 = param1 + param3 - qn.field_e;
                 param3 = param3 - var15;
                 var14 = var14 + var15;
-                break L6;
-              }
             }
-            L7: {
-              if (param1 >= qn.field_j) {
-                break L7;
-              } else {
+            if (param1 < qn.field_j) {
                 var15 = qn.field_j - param1;
                 param3 = param3 - var15;
                 var13 = var13 + var15;
                 var7 = var7 + var11 * var15;
                 var14 = var14 + var15;
-                break L7;
-              }
             }
             fe.a(0, 0, 0, var7, param0.field_B, qn.field_d, 0, 0, -param4, var8, var13, var14, param3, var11, var12, var5);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final static void a(wk param0, int param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param1 = param1 + param0.field_w;
-          param2 = param2 + param0.field_z;
-          var4 = param1 + param2 * qn.field_l;
-          var5 = 0;
-          var6 = param0.field_v;
-          var7 = param0.field_y;
-          var8 = qn.field_l - var7;
-          var9 = 0;
-          if (param2 >= qn.field_a) {
-            break L0;
-          } else {
+        param1 = param1 + param0.field_w;
+        param2 = param2 + param0.field_z;
+        int var4 = param1 + param2 * qn.field_l;
+        int var5 = 0;
+        int var6 = param0.field_v;
+        int var7 = param0.field_y;
+        int var8 = qn.field_l - var7;
+        int var9 = 0;
+        if (param2 < qn.field_a) {
             var10 = qn.field_a - param2;
             var6 = var6 - var10;
             param2 = qn.field_a;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * qn.field_l;
-            break L0;
-          }
         }
-        L1: {
-          if (param2 + var6 <= qn.field_f) {
-            break L1;
-          } else {
+        if (param2 + var6 > qn.field_f) {
             var6 = var6 - (param2 + var6 - qn.field_f);
-            break L1;
-          }
         }
-        L2: {
-          if (param1 >= qn.field_j) {
-            break L2;
-          } else {
+        if (param1 < qn.field_j) {
             var10 = qn.field_j - param1;
             var7 = var7 - var10;
             param1 = qn.field_j;
@@ -565,29 +490,19 @@ final class fe {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param1 + var7 <= qn.field_e) {
-            break L3;
-          } else {
+        if (param1 + var7 > qn.field_e) {
             var10 = param1 + var7 - qn.field_e;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
             fe.a(0, qn.field_d, param0.field_B, 0, var5, var4, var7, var6, var8, var9, param3);
             return;
-          } else {
-            return;
-          }
         }
     }
 
@@ -626,18 +541,18 @@ final class fe {
     }
 
     final static wk[] a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5) {
-        wk[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        wk[] var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         var6 = new wk[4];
         var6[0] = new wk(param2, param4[0].field_v);
         var6[3] = new wk(param2, param4[0].field_v);
@@ -825,7 +740,7 @@ final class fe {
     }
 
     final static void a(wk param0) {
-        int var1 = 0;
+        int var1;
         if (param0 == null) {
           return;
         } else {
@@ -856,6 +771,7 @@ final class fe {
     }
 
     final static void a(wk param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+        Throwable decompiledCaughtException = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -868,11 +784,10 @@ final class fe {
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        Exception var19 = null;
         int var19_int = 0;
+        Exception var19 = null;
         int var20 = 0;
         int var21 = 0;
-        Throwable decompiledCaughtException = null;
         L0: {
           L1: {
             if (field_e == null) {
@@ -945,22 +860,22 @@ final class fe {
     }
 
     final static void c(int param0, int param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
         L0: {
           var4 = 1;
           var5 = param2 * param2;
@@ -1180,9 +1095,9 @@ final class fe {
     }
 
     final static void c(wk param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var5;
+        int var6;
+        int var7;
         param2 -= 3;
         param1 = param1 + param0.field_w;
         param2 = param2 + param0.field_z;
@@ -1216,13 +1131,13 @@ final class fe {
     }
 
     private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var10 = -param7;
         L0: while (true) {
           if (var10 >= 0) {
@@ -1236,18 +1151,18 @@ final class fe {
                 var10++;
                 continue L0;
               } else {
-                incrementValue$14 = param4;
+                incrementValue$4 = param4;
                 param4++;
-                param3 = param2[incrementValue$14];
+                param3 = param2[incrementValue$4];
                 if (param3 != 0) {
                   param0 = param1[param5];
                   if (param0 != 0) {
                     var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
                     var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
                     var14 = (param3 & 255) * (param0 & 255) >>> 8;
-                    incrementValue$15 = param5;
+                    incrementValue$5 = param5;
                     param5++;
-                    param1[incrementValue$15] = (var12 << 16) + (var13 << 8) + var14;
+                    param1[incrementValue$5] = (var12 << 16) + (var13 << 8) + var14;
                     var11++;
                     continue L1;
                   } else {
@@ -1322,45 +1237,26 @@ final class fe {
     }
 
     final static void a(wk param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param1 = param1 + param0.field_w;
-          param2 = param2 + param0.field_z;
-          var3 = param1 + param2 * qn.field_l;
-          var4 = 0;
-          var5 = param0.field_v;
-          var6 = param0.field_y;
-          var7 = qn.field_l - var6;
-          var8 = 0;
-          if (param2 >= qn.field_a) {
-            break L0;
-          } else {
+        param1 = param1 + param0.field_w;
+        param2 = param2 + param0.field_z;
+        int var3 = param1 + param2 * qn.field_l;
+        int var4 = 0;
+        int var5 = param0.field_v;
+        int var6 = param0.field_y;
+        int var7 = qn.field_l - var6;
+        int var8 = 0;
+        if (param2 < qn.field_a) {
             var9 = qn.field_a - param2;
             var5 = var5 - var9;
             param2 = qn.field_a;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * qn.field_l;
-            break L0;
-          }
         }
-        L1: {
-          if (param2 + var5 <= qn.field_f) {
-            break L1;
-          } else {
+        if (param2 + var5 > qn.field_f) {
             var5 = var5 - (param2 + var5 - qn.field_f);
-            break L1;
-          }
         }
-        L2: {
-          if (param1 >= qn.field_j) {
-            break L2;
-          } else {
+        if (param1 < qn.field_j) {
             var9 = qn.field_j - param1;
             var6 = var6 - var9;
             param1 = qn.field_j;
@@ -1368,43 +1264,33 @@ final class fe {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param1 + var6 <= qn.field_e) {
-            break L3;
-          } else {
+        if (param1 + var6 > qn.field_e) {
             var9 = param1 + var6 - qn.field_e;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
             fe.a(0, qn.field_d, param0.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     private final static void a(wk param0, int param1, int param2, int param3, int[] param4) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           param2 -= 3;
           if (param3 <= param0.field_y) {
@@ -1432,18 +1318,18 @@ final class fe {
                 var7++;
                 continue L1;
               } else {
-                incrementValue$4 = var5;
+                incrementValue$0 = var5;
                 var5++;
-                var10 = param0.field_B[incrementValue$4] & 255;
-                incrementValue$5 = var5;
+                var10 = param0.field_B[incrementValue$0] & 255;
+                incrementValue$1 = var5;
                 var5++;
-                var10 = var10 + (param0.field_B[incrementValue$5] & 255);
-                incrementValue$6 = var6;
+                var10 = var10 + (param0.field_B[incrementValue$1] & 255);
+                incrementValue$2 = var6;
                 var6++;
-                var10 = var10 + (param0.field_B[incrementValue$6] & 255);
-                incrementValue$7 = var6;
+                var10 = var10 + (param0.field_B[incrementValue$2] & 255);
+                incrementValue$3 = var6;
                 var6++;
-                var10 = var10 + (param0.field_B[incrementValue$7] & 255);
+                var10 = var10 + (param0.field_B[incrementValue$3] & 255);
                 var10 = var10 >> 2;
                 if (var10 > 0) {
                   fe.b(param1 + var9, param2 + var7, var8, var10);
@@ -1467,15 +1353,15 @@ final class fe {
     }
 
     private final static void b(wk param0, int param1, int param2, int param3, int param4) {
-        int incrementValue$256 = 0;
-        int incrementValue$257 = 0;
-        int incrementValue$258 = 0;
-        int incrementValue$259 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         L0: {
           param2 -= 3;
           if (param3 <= param0.field_y) {
@@ -1502,18 +1388,18 @@ final class fe {
                 var7++;
                 continue L1;
               } else {
-                incrementValue$256 = var5;
+                incrementValue$20 = var5;
                 var5++;
-                var9 = param0.field_B[incrementValue$256] & 255;
-                incrementValue$257 = var5;
+                var9 = param0.field_B[incrementValue$20] & 255;
+                incrementValue$21 = var5;
                 var5++;
-                var9 = var9 + (param0.field_B[incrementValue$257] & 255);
-                incrementValue$258 = var6;
+                var9 = var9 + (param0.field_B[incrementValue$21] & 255);
+                incrementValue$22 = var6;
                 var6++;
-                var9 = var9 + (param0.field_B[incrementValue$258] & 255);
-                incrementValue$259 = var6;
+                var9 = var9 + (param0.field_B[incrementValue$22] & 255);
+                incrementValue$23 = var6;
                 var6++;
-                var9 = var9 + (param0.field_B[incrementValue$259] & 255);
+                var9 = var9 + (param0.field_B[incrementValue$23] & 255);
                 var9 = var9 >> 2;
                 if (var9 > 0) {
                   fe.b(param1 + var8, param2 + var7, param4, var9);
@@ -1563,20 +1449,20 @@ final class fe {
     }
 
     final static void a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, int param6, int param7, boolean param8) {
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
         L0: {
           if (param7 <= 0) {
             break L0;
@@ -1783,13 +1669,13 @@ final class fe {
     }
 
     private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
         var11 = -param7;
         L0: while (true) {
           if (var11 >= 0) {
@@ -1803,9 +1689,9 @@ final class fe {
                 var11++;
                 continue L0;
               } else {
-                incrementValue$2 = param4;
+                incrementValue$0 = param4;
                 param4++;
-                param3 = param2[incrementValue$2];
+                param3 = param2[incrementValue$0];
                 if (param3 != 0) {
                   param0 = param1[param5];
                   if (param0 != 0) {
@@ -1815,9 +1701,9 @@ final class fe {
                     var13 = var13 * param10 + ((param0 & 16711680) >>> 16) * (256 - param10) >> 8;
                     var14 = var14 * param10 + ((param0 & 65280) >>> 8) * (256 - param10) >> 8;
                     var15 = var15 * param10 + (param0 & 255) * (256 - param10) >> 8;
-                    incrementValue$3 = param5;
+                    incrementValue$1 = param5;
                     param5++;
-                    param1[incrementValue$3] = (var13 << 16) + (var14 << 8) + var15;
+                    param1[incrementValue$1] = (var13 << 16) + (var14 << 8) + var15;
                     var12++;
                     continue L1;
                   } else {
@@ -1837,10 +1723,10 @@ final class fe {
     }
 
     private final static void b(wk param0, int param1, int param2, int param3, int[] param4) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         L0: {
           param2 -= 3;
           var5 = 0;

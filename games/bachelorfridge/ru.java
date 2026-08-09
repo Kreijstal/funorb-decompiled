@@ -19,8 +19,8 @@ final class ru extends tn {
     }
 
     final int a(long param0, int param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         L0: {
           var5 = BachelorFridge.field_y;
           if (param1 == 0) {

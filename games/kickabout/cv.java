@@ -11,22 +11,6 @@ abstract class cv {
     static hu field_f;
 
     final static void a(int param0) {
-        int incrementValue$27 = 0;
-        int incrementValue$28 = 0;
-        int incrementValue$29 = 0;
-        int incrementValue$30 = 0;
-        int incrementValue$31 = 0;
-        int incrementValue$32 = 0;
-        int incrementValue$33 = 0;
-        int incrementValue$34 = 0;
-        int incrementValue$35 = 0;
-        int incrementValue$36 = 0;
-        int incrementValue$37 = 0;
-        int incrementValue$38 = 0;
-        int incrementValue$39 = 0;
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
         int incrementValue$43 = 0;
         int incrementValue$44 = 0;
         int incrementValue$45 = 0;
@@ -38,33 +22,38 @@ abstract class cv {
         int incrementValue$51 = 0;
         int incrementValue$52 = 0;
         int incrementValue$53 = 0;
-        RuntimeException var1 = null;
+        int incrementValue$54 = 0;
+        int incrementValue$55 = 0;
+        int incrementValue$56 = 0;
+        int incrementValue$57 = 0;
+        int incrementValue$58 = 0;
+        int incrementValue$59 = 0;
+        int incrementValue$60 = 0;
+        int incrementValue$61 = 0;
+        int incrementValue$62 = 0;
+        int incrementValue$63 = 0;
+        int incrementValue$64 = 0;
+        int incrementValue$65 = 0;
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
+        int incrementValue$68 = 0;
+        int incrementValue$69 = 0;
         int var1_int = 0;
+        int var6 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_18_1 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_22_1 = 0;
+        int stackIn_22_2 = 0;
+        int stackIn_25_1 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         ut var3_ref_ut = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_18_1 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_24_1 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_21_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_23_1 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_22_1 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_17_1 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_16_1 = 0;
         var6 = Kickabout.field_G;
         try {
           L0: {
@@ -86,51 +75,44 @@ abstract class cv {
                             if (var3 >= 6) {
                               break L1;
                             } else {
+                              incrementValue$43 = var1_int;
+                              var1_int++;
+                              oi.field_e[incrementValue$43] = new oh(ku.field_g[p.a((byte) -24, 2)], var2, -90);
+                              stackIn_22_0 = var2;
+                              stackIn_22_1 = 1 & var3 ^ -1;
+                              stackIn_22_2 = -1;
                               L5: {
-                                incrementValue$27 = var1_int;
-                                var1_int++;
-                                oi.field_e[incrementValue$27] = new oh(ku.field_g[p.a((byte) -24, 2)], var2, -90);
-                                stackOut_21_0 = var2;
-                                stackIn_23_0 = stackOut_21_0;
-                                stackIn_22_0 = stackOut_21_0;
-                                if ((1 & var3) != 0) {
-                                  stackOut_23_0 = stackIn_23_0;
-                                  stackOut_23_1 = 265;
-                                  stackIn_24_0 = stackOut_23_0;
-                                  stackIn_24_1 = stackOut_23_1;
+
+
+                                if (stackIn_22_1 != stackIn_22_2) {
+
+                                  stackIn_25_1 = 265;
                                   break L5;
                                 } else {
-                                  stackOut_22_0 = stackIn_22_0;
-                                  stackOut_22_1 = 95;
-                                  stackIn_24_0 = stackOut_22_0;
-                                  stackIn_24_1 = stackOut_22_1;
+
+                                  stackIn_25_1 = 95;
                                   break L5;
                                 }
                               }
-                              var2 = stackIn_24_0 + stackIn_24_1;
+                              var2 = stackIn_22_0 + stackIn_25_1;
                               var3++;
                               continue L4;
                             }
                           }
                         } else {
                           L6: {
-                            incrementValue$28 = var1_int;
+                            incrementValue$44 = var1_int;
                             var1_int++;
-                            oi.field_e[incrementValue$28] = new oh(ku.field_g[p.a((byte) -24, 2)], var2, 1394);
-                            stackOut_15_0 = var2;
-                            stackIn_17_0 = stackOut_15_0;
-                            stackIn_16_0 = stackOut_15_0;
+                            oi.field_e[incrementValue$44] = new oh(ku.field_g[p.a((byte) -24, 2)], var2, 1394);
+                            stackIn_17_0 = var2;
+
                             if (0 == (var3 & 1)) {
-                              stackOut_17_0 = stackIn_17_0;
-                              stackOut_17_1 = 95;
-                              stackIn_18_0 = stackOut_17_0;
-                              stackIn_18_1 = stackOut_17_1;
+                              stackIn_18_0 = stackIn_17_0;
+                              stackIn_18_1 = 95;
                               break L6;
                             } else {
-                              stackOut_16_0 = stackIn_16_0;
-                              stackOut_16_1 = 265;
-                              stackIn_18_0 = stackOut_16_0;
-                              stackIn_18_1 = stackOut_16_1;
+                              stackIn_18_0 = stackIn_17_0;
+                              stackIn_18_1 = 265;
                               break L6;
                             }
                           }
@@ -151,9 +133,9 @@ abstract class cv {
                           break L7;
                         }
                       }
-                      incrementValue$29 = var1_int;
+                      incrementValue$45 = var1_int;
                       var1_int++;
-                      oi.field_e[incrementValue$29] = new oh(var3_ref_ut, var4, var5);
+                      oi.field_e[incrementValue$45] = new oh(var3_ref_ut, var4, var5);
                       var2++;
                       continue L2;
                     }
@@ -162,21 +144,21 @@ abstract class cv {
                   if (rm.field_C == 2) {
                     oi.field_e = new oh[5];
                     var1_int = 0;
-                    incrementValue$30 = var1_int;
+                    incrementValue$46 = var1_int;
                     var1_int++;
-                    oi.field_e[incrementValue$30] = new oh(oo.field_b[1], 1002, -229);
-                    incrementValue$31 = var1_int;
+                    oi.field_e[incrementValue$46] = new oh(oo.field_b[1], 1002, -229);
+                    incrementValue$47 = var1_int;
                     var1_int++;
-                    oi.field_e[incrementValue$31] = new oh(oo.field_b[2], 1126, -206);
-                    incrementValue$32 = var1_int;
+                    oi.field_e[incrementValue$47] = new oh(oo.field_b[2], 1126, -206);
+                    incrementValue$48 = var1_int;
                     var1_int++;
-                    oi.field_e[incrementValue$32] = new oh(oo.field_b[0], -332, 200);
-                    incrementValue$33 = var1_int;
+                    oi.field_e[incrementValue$48] = new oh(oo.field_b[0], -332, 200);
+                    incrementValue$49 = var1_int;
                     var1_int++;
-                    oi.field_e[incrementValue$33] = new oh(oo.field_b[0], -170, 1428);
-                    incrementValue$34 = var1_int;
+                    oi.field_e[incrementValue$49] = new oh(oo.field_b[0], -170, 1428);
+                    incrementValue$50 = var1_int;
                     var1_int++;
-                    oi.field_e[incrementValue$34] = new oh(oo.field_b[1], -296, 1415);
+                    oi.field_e[incrementValue$50] = new oh(oo.field_b[1], -296, 1415);
                     break L1;
                   } else {
                     if ((rm.field_C ^ -1) != -4) {
@@ -190,63 +172,63 @@ abstract class cv {
               } else {
                 oi.field_e = new oh[19];
                 var1_int = 0;
-                incrementValue$35 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$35] = new oh(oo.field_b[0], -156, -31);
-                incrementValue$36 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$36] = new oh(oo.field_b[2], 933, 763);
-                incrementValue$37 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$37] = new oh(oo.field_b[0], 943, -36);
-                incrementValue$38 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$38] = new oh(oo.field_b[0], -141, 1275);
-                incrementValue$39 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$39] = new oh(ku.field_g[0], -390, 629);
-                incrementValue$40 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$40] = new oh(ku.field_g[1], -264, 584);
-                incrementValue$41 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$41] = new oh(ku.field_g[1], -357, 447);
-                incrementValue$42 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$42] = new oh(ku.field_g[0], -259, 379);
-                incrementValue$43 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$43] = new oh(oo.field_b[0], 180, 1371);
-                incrementValue$44 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$44] = new oh(oo.field_b[1], 566, 1422);
-                incrementValue$45 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$45] = new oh(oo.field_b[0], 750, 1353);
-                incrementValue$46 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$46] = new oh(oo.field_b[2], 51, 1415);
-                incrementValue$47 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$47] = new oh(oo.field_b[1], 1014, 211);
-                incrementValue$48 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$48] = new oh(oo.field_b[2], 775, -174);
-                incrementValue$49 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$49] = new oh(oo.field_b[1], 570, -220);
-                incrementValue$50 = var1_int;
-                var1_int++;
-                oi.field_e[incrementValue$50] = new oh(oo.field_b[0], 211, -199);
                 incrementValue$51 = var1_int;
                 var1_int++;
-                oi.field_e[incrementValue$51] = new oh(oo.field_b[2], -31, -163);
+                oi.field_e[incrementValue$51] = new oh(oo.field_b[0], -156, -31);
                 incrementValue$52 = var1_int;
                 var1_int++;
-                oi.field_e[incrementValue$52] = new oh(oo.field_b[1], -288, 1213);
+                oi.field_e[incrementValue$52] = new oh(oo.field_b[2], 933, 763);
                 incrementValue$53 = var1_int;
                 var1_int++;
-                oi.field_e[incrementValue$53] = new oh(oo.field_b[2], -200, 1041);
+                oi.field_e[incrementValue$53] = new oh(oo.field_b[0], 943, -36);
+                incrementValue$54 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$54] = new oh(oo.field_b[0], -141, 1275);
+                incrementValue$55 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$55] = new oh(ku.field_g[0], -390, 629);
+                incrementValue$56 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$56] = new oh(ku.field_g[1], -264, 584);
+                incrementValue$57 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$57] = new oh(ku.field_g[1], -357, 447);
+                incrementValue$58 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$58] = new oh(ku.field_g[0], -259, 379);
+                incrementValue$59 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$59] = new oh(oo.field_b[0], 180, 1371);
+                incrementValue$60 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$60] = new oh(oo.field_b[1], 566, 1422);
+                incrementValue$61 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$61] = new oh(oo.field_b[0], 750, 1353);
+                incrementValue$62 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$62] = new oh(oo.field_b[2], 51, 1415);
+                incrementValue$63 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$63] = new oh(oo.field_b[1], 1014, 211);
+                incrementValue$64 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$64] = new oh(oo.field_b[2], 775, -174);
+                incrementValue$65 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$65] = new oh(oo.field_b[1], 570, -220);
+                incrementValue$66 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$66] = new oh(oo.field_b[0], 211, -199);
+                incrementValue$67 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$67] = new oh(oo.field_b[2], -31, -163);
+                incrementValue$68 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$68] = new oh(oo.field_b[1], -288, 1213);
+                incrementValue$69 = var1_int;
+                var1_int++;
+                oi.field_e[incrementValue$69] = new oh(oo.field_b[2], -200, 1041);
                 break L1;
               }
             }
@@ -268,8 +250,10 @@ abstract class cv {
     }
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
-        int[] var1_array = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int[] var4 = null;
@@ -279,8 +263,6 @@ abstract class cv {
         int[] var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var3 = Kickabout.field_G;
         try {
           L0: {
@@ -331,14 +313,14 @@ abstract class cv {
                   var9 = bh.field_f;
                   var7 = var9;
                   var4 = var7;
-                  var1_array = var4;
+                  var1 = var4;
                   var2 = 0;
                   L5: while (true) {
                     if ((var2 ^ -1) <= -9) {
                       var10 = ha.field_F;
                       var8 = var10;
                       var5 = var8;
-                      var1_array = var5;
+                      var1 = var5;
                       var6 = 0;
                       var2 = var6;
                       L6: while (true) {
@@ -384,8 +366,8 @@ abstract class cv {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var1), "cv.I(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw nb.a((Throwable) ((Object) var1_ref), "cv.I(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

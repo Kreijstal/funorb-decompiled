@@ -6,7 +6,7 @@ final class ib {
     static String field_a;
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1;
         if (param0 == 99) {
           if (c.field_a < 224) {
             var1 = c.field_a % 32;
@@ -30,9 +30,9 @@ final class ib {
     }
 
     final static void b(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var1;
+        int var2;
+        int var3;
         var1 = ve.field_t * ve.field_t;
         var2 = var1 + -(db.field_D * db.field_D);
         var3 = vf.field_c - -((p.field_h - vf.field_c) * var2 / var1);

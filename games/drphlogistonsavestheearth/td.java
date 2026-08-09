@@ -29,19 +29,13 @@ final class td {
     }
 
     final void a(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        Object stackIn_12_0 = null;
         Object stackIn_13_0 = null;
         Object stackIn_14_0 = null;
         int stackIn_14_1 = 0;
-        Object stackOut_11_0 = null;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (this.field_i) {
           return;
@@ -72,20 +66,15 @@ final class td {
                   }
                 }
                 L2: {
-                  stackOut_11_0 = this;
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_13_0 = this;
+
                   if (var2 != 0) {
-                    stackOut_13_0 = this;
-                    stackOut_13_1 = 0;
-                    stackIn_14_0 = stackOut_13_0;
-                    stackIn_14_1 = stackOut_13_1;
+                    stackIn_14_0 = this;
+                    stackIn_14_1 = 0;
                     break L2;
                   } else {
-                    stackOut_12_0 = this;
-                    stackOut_12_1 = 1;
-                    stackIn_14_0 = stackOut_12_0;
-                    stackIn_14_1 = stackOut_12_1;
+                    stackIn_14_0 = this;
+                    stackIn_14_1 = 1;
                     break L2;
                   }
                 }
@@ -140,22 +129,11 @@ final class td {
     }
 
     final boolean a(byte param0) {
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_14_0 = 0;
-        Object stackOut_2_0 = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
         L0: {
           this.field_k = this.field_k + 1;
           if (param0 <= -98) {
@@ -167,32 +145,25 @@ final class td {
         }
         L1: {
           L2: {
-            stackOut_2_0 = this;
-            stackIn_5_0 = stackOut_2_0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_5_0 = this;
+
             if (this.field_b == null) {
               break L2;
             } else {
-              stackOut_3_0 = this;
-              stackIn_6_0 = stackOut_3_0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_6_0 = this;
+
               if (!this.field_b.m()) {
-                stackOut_6_0 = this;
-                stackOut_6_1 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = this;
+                stackIn_7_1 = 0;
                 break L1;
               } else {
-                stackOut_4_0 = this;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = this;
                 break L2;
               }
             }
           }
-          stackOut_5_0 = this;
-          stackOut_5_1 = 1;
-          stackIn_7_0 = stackOut_5_0;
-          stackIn_7_1 = stackOut_5_1;
+          stackIn_7_0 = this;
+          stackIn_7_1 = 1;
           break L1;
         }
         L3: {
@@ -210,26 +181,21 @@ final class td {
               }
             }
             if (-1 != (this.field_n ^ -1)) {
-              stackOut_13_0 = 0;
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_0 = 0;
               break L3;
             } else {
               break L4;
             }
           }
-          stackOut_12_0 = 1;
-          stackIn_14_0 = stackOut_12_0;
+          stackIn_14_0 = 1;
           break L3;
         }
         return stackIn_14_0 != 0;
     }
 
     td(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
+        int var8 = 0;
         this.field_k = 0;
         this.field_j = false;
         this.field_h = 0;
@@ -241,41 +207,25 @@ final class td {
         this.field_a = param2;
         this.field_l = param1;
         this.field_n = param0;
-        var5 = fa.field_l[this.field_n] >> -1309204080;
-        var6 = 255 & fa.field_l[this.field_n] >> 869637800;
-        var7 = fa.field_l[this.field_n] & 255;
-        var8 = 0;
-        L0: while (true) {
-          if (var8 >= 250) {
-            L1: {
-              if (-12 != (this.field_n ^ -1)) {
-                break L1;
-              } else {
-                this.field_c = 5;
-                this.field_e = 1;
-                this.field_h = 5;
-                this.field_d = oj.field_c;
-                break L1;
-              }
-            }
-            L2: {
-              if (param3 != -1) {
-                var8 = e.a(104, param1);
-                this.field_b = ag.a(nl.field_r[param3], 100, dk.field_a[this.field_n], var8);
-                od.a(-1630758008, this.field_b);
-                break L2;
-              } else {
-                this.field_b = null;
-                break L2;
-              }
-            }
-            return;
-          } else {
+        int var5 = fa.field_l[this.field_n] >> -1309204080;
+        int var6 = 255 & fa.field_l[this.field_n] >> 869637800;
+        int var7 = fa.field_l[this.field_n] & 255;
+        for (var8 = 0; var8 < 250; var8++) {
             var9 = 1 - -(var8 >> -714237947);
             this.field_p[var8] = var7 / var9 + (var5 / var9 << -842691504) - -(var6 / var9 << 1228323784);
-            var8++;
-            continue L0;
-          }
+        }
+        if (-12 == (this.field_n ^ -1)) {
+            this.field_c = 5;
+            this.field_e = 1;
+            this.field_h = 5;
+            this.field_d = oj.field_c;
+        }
+        if (param3 == -1) {
+            this.field_b = null;
+        } else {
+            var8 = e.a(104, param1);
+            this.field_b = ag.a(nl.field_r[param3], 100, dk.field_a[this.field_n], var8);
+            od.a(-1630758008, this.field_b);
         }
     }
 

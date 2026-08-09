@@ -11,10 +11,10 @@ final class fe extends vo {
     static int field_k;
 
     final void a(byte param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         if (param0 > -70) {
           this.a((byte) -76, -16, 37);
           var4 = this.field_g * param2 >> 1682790508;

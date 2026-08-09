@@ -25,11 +25,10 @@ final class k {
     }
 
     final static String a(byte param0, int param1, int param2, int param3) {
-        String discarded$2 = null;
-        long var4 = 0L;
-        String var6 = null;
+        long var4;
+        String var6;
         if (param0 != -122) {
-          discarded$2 = k.a((byte) 65, -82, -76, 109);
+          k.a((byte) 65, -82, -76, 109);
           var4 = 60000L * ((long)param3 + 16912800L);
           var6 = java.text.DateFormat.getDateTimeInstance(param2, param1).format(new Date(var4));
           return var6;

@@ -18,14 +18,14 @@ final class dea {
     }
 
     final static String a(int param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        int var7 = 0;
-        String var8 = null;
-        String var9 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        String var6;
+        int var7;
+        String var8;
+        String var9;
         var7 = TombRacer.field_G ? 1 : 0;
         var2 = param0 * 20;
         var3 = var2 / 10;
@@ -36,68 +36,43 @@ final class dea {
           return (String) null;
         } else {
           L0: {
-            L1: {
-              var4 = var4 % 60;
-              if (10 <= var5) {
-                break L1;
-              } else {
-                var6 = "0" + var5;
-                if (var7 == 0) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
+            var4 = var4 % 60;
+            if (10 <= var5) {
+              var6 = "" + var5;
+              break L0;
+            } else {
+              var6 = "0" + var5;
+              break L0;
             }
-            var6 = "" + var5;
-            break L0;
+          }
+          L1: {
+            var8 = var6 + ":";
+            var6 = var8;
+            var6 = var8;
+            if (-11 >= (var4 ^ -1)) {
+              var6 = var8 + var4;
+              break L1;
+            } else {
+              var6 = var8 + "0" + var4;
+              break L1;
+            }
           }
           L2: {
-            L3: {
-              var8 = var6 + ":";
-              var6 = var8;
-              var6 = var8;
-              var6 = var8;
-              if (-11 >= (var4 ^ -1)) {
-                break L3;
-              } else {
-                var6 = var8 + "0" + var4;
-                if (var7 == 0) {
-                  break L2;
-                } else {
-                  break L3;
-                }
-              }
+            var9 = var6 + ".";
+            if (10 <= var3) {
+              var6 = var9 + var3;
+              break L2;
+            } else {
+              var6 = var9 + "0" + var3;
+              break L2;
             }
-            var6 = var6 + var4;
-            break L2;
-          }
-          L4: {
-            L5: {
-              var9 = var6 + ".";
-              var6 = var9;
-              var6 = var9;
-              var6 = var9;
-              if (10 <= var3) {
-                break L5;
-              } else {
-                var6 = var9 + "0" + var3;
-                if (var7 == 0) {
-                  break L4;
-                } else {
-                  break L5;
-                }
-              }
-            }
-            var6 = var6 + var3;
-            break L4;
           }
           return var6;
         }
     }
 
     final boolean b(int param0) {
-        float var2 = 0.0f;
+        float var2;
         var2 = this.field_e - this.field_b;
         if (param0 == 20) {
           if (this.field_d * this.field_d > var2 * var2) {
@@ -124,12 +99,7 @@ final class dea {
     }
 
     final void a(byte param0, boolean param1, boolean param2) {
-        vb discarded$5 = null;
-        vb discarded$6 = null;
-        vb discarded$7 = null;
-        vb discarded$8 = null;
-        vb discarded$9 = null;
-        float var4 = 0.0f;
+        float var4;
         if (param0 <= -109) {
           L0: {
             var4 = (float)koa.b(0) / 500.0f;
@@ -150,7 +120,7 @@ final class dea {
                       this.field_b = this.field_e;
                       return;
                     } else {
-                      discarded$5 = paa.c(141);
+                      paa.c(141);
                       this.field_f = true;
                       this.field_d = -this.field_d / 8.0f;
                       this.field_b = this.field_e;
@@ -172,7 +142,7 @@ final class dea {
                 this.field_b = this.field_e;
                 return;
               } else {
-                discarded$6 = paa.c(141);
+                paa.c(141);
                 this.field_f = true;
                 this.field_d = -this.field_d / 8.0f;
                 this.field_b = this.field_e;
@@ -200,7 +170,7 @@ final class dea {
                     this.field_b = this.field_e;
                     return;
                   } else {
-                    discarded$7 = paa.c(141);
+                    paa.c(141);
                     this.field_f = true;
                     this.field_d = -this.field_d / 8.0f;
                     this.field_b = this.field_e;
@@ -220,7 +190,7 @@ final class dea {
                     this.field_b = this.field_e;
                     return;
                   } else {
-                    discarded$8 = paa.c(141);
+                    paa.c(141);
                     this.field_f = true;
                     this.field_d = -this.field_d / 8.0f;
                     this.field_b = this.field_e;
@@ -241,7 +211,7 @@ final class dea {
                   this.field_b = this.field_e;
                   return;
                 } else {
-                  discarded$9 = paa.c(141);
+                  paa.c(141);
                   this.field_f = true;
                   this.field_d = -this.field_d / 8.0f;
                   this.field_b = this.field_e;

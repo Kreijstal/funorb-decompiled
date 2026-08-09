@@ -71,30 +71,30 @@ final class qn {
     }
 
     private final static void f(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
         if (param4 != 0) {
           L0: {
             if (param4 >= 0) {
@@ -190,9 +190,9 @@ final class qn {
                             if (var15 <= var12) {
                               break L11;
                             } else {
-                              incrementValue$7 = var13;
+                              incrementValue$0 = var13;
                               var13--;
-                              var16 = var16 - (incrementValue$7 + var13);
+                              var16 = var16 - (incrementValue$0 + var13);
                               var15 = var15 - (var13 + var13);
                               continue L10;
                             }
@@ -222,14 +222,14 @@ final class qn {
                           if (var20 > var18) {
                             var11++;
                             var16 = var16 + (var14 + var14);
-                            incrementValue$8 = var14;
+                            incrementValue$1 = var14;
                             var14++;
-                            var15 = var15 + (incrementValue$8 + var14);
+                            var15 = var15 + (incrementValue$1 + var14);
                             continue L9;
                           } else {
-                            incrementValue$9 = var19;
+                            incrementValue$2 = var19;
                             var19++;
-                            field_d[incrementValue$9] = param5;
+                            field_d[incrementValue$2] = param5;
                             var20++;
                             continue L14;
                           }
@@ -245,9 +245,9 @@ final class qn {
                       var19 = var19 + var20;
                       continue L8;
                     } else {
-                      incrementValue$10 = var19;
+                      incrementValue$3 = var19;
                       var19++;
-                      field_d[incrementValue$10] = param5;
+                      field_d[incrementValue$3] = param5;
                       var22++;
                       continue L15;
                     }
@@ -284,15 +284,15 @@ final class qn {
                       L20: while (true) {
                         if (var20 >= var18) {
                           var11++;
-                          incrementValue$11 = var14;
+                          incrementValue$4 = var14;
                           var14--;
-                          var15 = var15 - (incrementValue$11 + var14);
+                          var15 = var15 - (incrementValue$4 + var14);
                           var16 = var16 - (var14 + var14);
                           continue L4;
                         } else {
-                          incrementValue$12 = var19;
+                          incrementValue$5 = var19;
                           var19++;
-                          field_d[incrementValue$12] = param5;
+                          field_d[incrementValue$5] = param5;
                           var20++;
                           continue L20;
                         }
@@ -303,9 +303,9 @@ final class qn {
                   }
                 }
                 var15 = var15 + (var13 + var13);
-                incrementValue$13 = var13;
+                incrementValue$6 = var13;
                 var13++;
-                var16 = var16 + (incrementValue$13 + var13);
+                var16 = var16 + (incrementValue$6 + var13);
                 continue L16;
               }
             }
@@ -320,33 +320,19 @@ final class qn {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        if (param0 < field_j) {
-          return;
-        } else {
-          L0: {
-            if (param1 < field_a) {
-              break L0;
-            } else {
-              if (param0 >= field_e) {
-                break L0;
-              } else {
-                if (param1 < field_f) {
-                  var4 = param0 + param1 * field_l;
-                  var5 = (param2 & 16711935) * param3;
-                  param2 = (var5 & -16711936) + (param2 * param3 - var5 & 16711680) >>> 8;
-                  var5 = field_d[var4];
-                  var6 = param2 + var5;
-                  param2 = (param2 & 16711935) + (var5 & 16711935);
-                  var5 = (param2 & 16777472) + (var6 - param2 & 65536);
-                  field_d[var4] = var6 - var5 | var5 - (var5 >>> 8);
-                  return;
-                } else {
-                  break L0;
-                }
-              }
+        if (param0 >= field_j) {
+            if (param1 < field_a || param0 >= field_e || param1 >= field_f) {
+                return;
             }
-          }
-          return;
+            var4 = param0 + param1 * field_l;
+            var5 = (param2 & 16711935) * param3;
+            param2 = (var5 & -16711936) + (param2 * param3 - var5 & 16711680) >>> 8;
+            var5 = field_d[var4];
+            var6 = param2 + var5;
+            param2 = (param2 & 16711935) + (var5 & 16711935);
+            var5 = (param2 & 16777472) + (var6 - param2 & 65536);
+            field_d[var4] = var6 - var5 | var5 - (var5 >>> 8);
+            return;
         }
     }
 
@@ -431,82 +417,43 @@ final class qn {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        L0: {
-          var5 = param2 * param2;
-          var6 = param0 - param2 >> 4;
-          var7 = param0 + param2 + 15 >> 4;
-          var8 = param1 - param2 >> 4;
-          var9 = param1 + param2 + 15 >> 4;
-          if (var6 >= field_j) {
-            break L0;
-          } else {
+        int var5 = param2 * param2;
+        int var6 = param0 - param2 >> 4;
+        int var7 = param0 + param2 + 15 >> 4;
+        int var8 = param1 - param2 >> 4;
+        int var9 = param1 + param2 + 15 >> 4;
+        if (var6 < field_j) {
             var6 = field_j;
-            break L0;
-          }
         }
-        L1: {
-          if (var7 <= field_e) {
-            break L1;
-          } else {
+        if (var7 > field_e) {
             var7 = field_e;
-            break L1;
-          }
         }
-        L2: {
-          if (var8 >= field_a) {
-            break L2;
-          } else {
+        if (var8 < field_a) {
             var8 = field_a;
-            break L2;
-          }
         }
-        L3: {
-          if (var9 <= field_f) {
-            break L3;
-          } else {
+        if (var9 > field_f) {
             var9 = field_f;
-            break L3;
-          }
         }
-        var10 = (var6 << 4) - param0;
+        int var10 = (var6 << 4) - param0;
         var10 = var10 * var10;
-        var11 = (var6 + 1 << 4) - param0;
+        int var11 = (var6 + 1 << 4) - param0;
         var11 = var11 * var11;
-        var12 = (var6 + 2 << 4) - param0;
+        int var12 = (var6 + 2 << 4) - param0;
         var12 = var12 * var12;
-        var13 = var11 - var10;
-        var14 = var12 - var11;
-        var15 = var14 - var13;
-        var16 = (var8 << 4) - param1;
+        int var13 = var11 - var10;
+        int var14 = var12 - var11;
+        int var15 = var14 - var13;
+        int var16 = (var8 << 4) - param1;
         var16 = var16 * var16;
-        var17 = (var8 + 1 << 4) - param1;
+        int var17 = (var8 + 1 << 4) - param1;
         var17 = var17 * var17;
-        var18 = (var8 + 2 << 4) - param1;
+        int var18 = (var8 + 2 << 4) - param1;
         var18 = var18 * var18;
-        var19 = var17 - var16;
-        var20 = var18 - var17;
-        var21 = var20 - var19;
-        var22 = var6 + var8 * field_l;
-        var23 = field_l + var6 - var7;
+        int var19 = var17 - var16;
+        int var20 = var18 - var17;
+        int var21 = var20 - var19;
+        int var22 = var6 + var8 * field_l;
+        int var23 = field_l + var6 - var7;
         qn.a(0, 0, 0, 0, 0, var15, var5, var22, field_d, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
@@ -542,18 +489,18 @@ final class qn {
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         param2 = param2 - param0;
         param3 = param3 - param1;
         if (param3 != 0) {
@@ -742,81 +689,51 @@ final class qn {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int[] var9 = null;
-        int[] var10 = null;
-        int[] var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int[] var24 = null;
-        int[] var25 = null;
-        int[] var26 = null;
-        int[] var27 = null;
-        int[] var28 = null;
-        int[] var29 = null;
-        int[] stackIn_37_0 = null;
-        int stackIn_37_1 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
         int[] stackIn_38_0 = null;
         int stackIn_38_1 = 0;
         int[] stackIn_39_0 = null;
         int stackIn_39_1 = 0;
         int stackIn_39_2 = 0;
-        int[] stackIn_40_0 = null;
-        int stackIn_40_1 = 0;
         int[] stackIn_41_0 = null;
         int stackIn_41_1 = 0;
         int[] stackIn_42_0 = null;
         int stackIn_42_1 = 0;
         int stackIn_42_2 = 0;
-        int[] stackIn_43_0 = null;
-        int stackIn_43_1 = 0;
         int[] stackIn_44_0 = null;
         int stackIn_44_1 = 0;
         int[] stackIn_45_0 = null;
         int stackIn_45_1 = 0;
         int stackIn_45_2 = 0;
-        int[] stackOut_36_0 = null;
-        int stackOut_36_1 = 0;
-        int[] stackOut_38_0 = null;
-        int stackOut_38_1 = 0;
-        int stackOut_38_2 = 0;
-        int[] stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        int stackOut_37_2 = 0;
-        int[] stackOut_39_0 = null;
-        int stackOut_39_1 = 0;
-        int[] stackOut_41_0 = null;
-        int stackOut_41_1 = 0;
-        int stackOut_41_2 = 0;
-        int[] stackOut_40_0 = null;
-        int stackOut_40_1 = 0;
-        int stackOut_40_2 = 0;
-        int[] stackOut_42_0 = null;
-        int stackOut_42_1 = 0;
-        int[] stackOut_44_0 = null;
-        int stackOut_44_1 = 0;
-        int stackOut_44_2 = 0;
-        int[] stackOut_43_0 = null;
-        int stackOut_43_1 = 0;
-        int stackOut_43_2 = 0;
+        int[] var9;
+        int[] var10;
+        int[] var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int[] var24;
+        int[] var25;
+        int[] var26;
+        int[] var27;
+        int[] var28;
+        int[] var29;
         L0: {
           L1: {
             if (field_b == null) {
@@ -966,17 +883,17 @@ final class qn {
                                         break L16;
                                       }
                                     }
-                                    incrementValue$9 = param2;
+                                    incrementValue$0 = param2;
                                     param2++;
-                                    param0[incrementValue$9] = (var21 << 16) + (var22 << 8) + var23;
+                                    param0[incrementValue$0] = (var21 << 16) + (var22 << 8) + var23;
                                     var20++;
                                     continue L13;
                                   }
                                 }
                               } else {
-                                incrementValue$10 = var19;
+                                incrementValue$1 = var19;
                                 var19++;
-                                param1 = param0[incrementValue$10];
+                                param1 = param0[incrementValue$1];
                                 var9[var20] = var9[var20] - (param1 >> 16 & 255);
                                 var10[var20] = var10[var20] - (param1 >> 8 & 255);
                                 var11[var20] = var11[var20] - (param1 & 255);
@@ -1029,17 +946,17 @@ final class qn {
                                         break L22;
                                       }
                                     }
-                                    incrementValue$11 = param2;
+                                    incrementValue$2 = param2;
                                     param2++;
-                                    param0[incrementValue$11] = (var21 << 16) + (var22 << 8) + var23;
+                                    param0[incrementValue$2] = (var21 << 16) + (var22 << 8) + var23;
                                     var20++;
                                     continue L19;
                                   }
                                 }
                               } else {
-                                incrementValue$12 = var14;
+                                incrementValue$3 = var14;
                                 var14++;
-                                param1 = param0[incrementValue$12];
+                                param1 = param0[incrementValue$3];
                                 var9[var20] = var9[var20] + (param1 >> 16 & 255);
                                 var10[var20] = var10[var20] + (param1 >> 8 & 255);
                                 var11[var20] = var11[var20] + (param1 & 255);
@@ -1049,85 +966,61 @@ final class qn {
                             }
                           } else {
                             L23: {
-                              incrementValue$13 = var19;
+                              incrementValue$4 = var19;
                               var19++;
-                              param1 = param0[incrementValue$13];
+                              param1 = param0[incrementValue$4];
                               var21 = var27[var20] - (param1 >> 16 & 255);
-                              stackOut_36_0 = (int[]) (var9);
-                              stackOut_36_1 = var20;
-                              stackIn_38_0 = stackOut_36_0;
-                              stackIn_38_1 = stackOut_36_1;
-                              stackIn_37_0 = stackOut_36_0;
-                              stackIn_37_1 = stackOut_36_1;
+                              stackIn_38_0 = (int[]) (var9);
+
+                              stackIn_38_1 = var20;
+
                               if (var21 >= 0) {
-                                stackOut_38_0 = (int[]) ((Object) stackIn_38_0);
-                                stackOut_38_1 = stackIn_38_1;
-                                stackOut_38_2 = var21;
-                                stackIn_39_0 = stackOut_38_0;
-                                stackIn_39_1 = stackOut_38_1;
-                                stackIn_39_2 = stackOut_38_2;
+                                stackIn_39_0 = (int[]) ((Object) stackIn_38_0);
+                                stackIn_39_1 = stackIn_38_1;
+                                stackIn_39_2 = var21;
                                 break L23;
                               } else {
-                                stackOut_37_0 = (int[]) ((Object) stackIn_37_0);
-                                stackOut_37_1 = stackIn_37_1;
-                                stackOut_37_2 = 0;
-                                stackIn_39_0 = stackOut_37_0;
-                                stackIn_39_1 = stackOut_37_1;
-                                stackIn_39_2 = stackOut_37_2;
+                                stackIn_39_0 = (int[]) ((Object) stackIn_38_0);
+                                stackIn_39_1 = stackIn_38_1;
+                                stackIn_39_2 = 0;
                                 break L23;
                               }
                             }
                             L24: {
                               stackIn_39_0[stackIn_39_1] = stackIn_39_2;
                               var21 = var28[var20] - (param1 >> 8 & 255);
-                              stackOut_39_0 = (int[]) (var10);
-                              stackOut_39_1 = var20;
-                              stackIn_41_0 = stackOut_39_0;
-                              stackIn_41_1 = stackOut_39_1;
-                              stackIn_40_0 = stackOut_39_0;
-                              stackIn_40_1 = stackOut_39_1;
+                              stackIn_41_0 = (int[]) (var10);
+
+                              stackIn_41_1 = var20;
+
                               if (var21 >= 0) {
-                                stackOut_41_0 = (int[]) ((Object) stackIn_41_0);
-                                stackOut_41_1 = stackIn_41_1;
-                                stackOut_41_2 = var21;
-                                stackIn_42_0 = stackOut_41_0;
-                                stackIn_42_1 = stackOut_41_1;
-                                stackIn_42_2 = stackOut_41_2;
+                                stackIn_42_0 = (int[]) ((Object) stackIn_41_0);
+                                stackIn_42_1 = stackIn_41_1;
+                                stackIn_42_2 = var21;
                                 break L24;
                               } else {
-                                stackOut_40_0 = (int[]) ((Object) stackIn_40_0);
-                                stackOut_40_1 = stackIn_40_1;
-                                stackOut_40_2 = 0;
-                                stackIn_42_0 = stackOut_40_0;
-                                stackIn_42_1 = stackOut_40_1;
-                                stackIn_42_2 = stackOut_40_2;
+                                stackIn_42_0 = (int[]) ((Object) stackIn_41_0);
+                                stackIn_42_1 = stackIn_41_1;
+                                stackIn_42_2 = 0;
                                 break L24;
                               }
                             }
                             L25: {
                               stackIn_42_0[stackIn_42_1] = stackIn_42_2;
                               var21 = var29[var20] - (param1 & 255);
-                              stackOut_42_0 = (int[]) (var11);
-                              stackOut_42_1 = var20;
-                              stackIn_44_0 = stackOut_42_0;
-                              stackIn_44_1 = stackOut_42_1;
-                              stackIn_43_0 = stackOut_42_0;
-                              stackIn_43_1 = stackOut_42_1;
+                              stackIn_44_0 = (int[]) (var11);
+
+                              stackIn_44_1 = var20;
+
                               if (var21 >= 0) {
-                                stackOut_44_0 = (int[]) ((Object) stackIn_44_0);
-                                stackOut_44_1 = stackIn_44_1;
-                                stackOut_44_2 = var21;
-                                stackIn_45_0 = stackOut_44_0;
-                                stackIn_45_1 = stackOut_44_1;
-                                stackIn_45_2 = stackOut_44_2;
+                                stackIn_45_0 = (int[]) ((Object) stackIn_44_0);
+                                stackIn_45_1 = stackIn_44_1;
+                                stackIn_45_2 = var21;
                                 break L25;
                               } else {
-                                stackOut_43_0 = (int[]) ((Object) stackIn_43_0);
-                                stackOut_43_1 = stackIn_43_1;
-                                stackOut_43_2 = 0;
-                                stackIn_45_0 = stackOut_43_0;
-                                stackIn_45_1 = stackOut_43_1;
-                                stackIn_45_2 = stackOut_43_2;
+                                stackIn_45_0 = (int[]) ((Object) stackIn_44_0);
+                                stackIn_45_1 = stackIn_44_1;
+                                stackIn_45_2 = 0;
                                 break L25;
                               }
                             }
@@ -1151,9 +1044,9 @@ final class qn {
                             var17++;
                             break L26;
                           } else {
-                            incrementValue$14 = var14;
+                            incrementValue$5 = var14;
                             var14++;
-                            param1 = param0[incrementValue$14];
+                            param1 = param0[incrementValue$5];
                             var9[var20] = var9[var20] + (param1 >> 16 & 255);
                             var10[var20] = var10[var20] + (param1 >> 8 & 255);
                             var11[var20] = var11[var20] + (param1 & 255);
@@ -1173,9 +1066,9 @@ final class qn {
                         var21 = var27[var20] / var17;
                         var22 = var28[var20] / var17;
                         var23 = var29[var20] / var17;
-                        incrementValue$15 = param2;
+                        incrementValue$6 = param2;
                         param2++;
-                        param0[incrementValue$15] = (var21 << 16) + (var22 << 8) + var23;
+                        param0[incrementValue$6] = (var21 << 16) + (var22 << 8) + var23;
                         var20++;
                         continue L28;
                       }
@@ -1183,9 +1076,9 @@ final class qn {
                   }
                 }
               } else {
-                incrementValue$16 = param2;
+                incrementValue$7 = param2;
                 param2++;
-                param0[incrementValue$16] = (var27[var18] / var17 << 16) + (var28[var18] / var17 << 8) + var29[var18] / var17;
+                param0[incrementValue$7] = (var27[var18] / var17 << 16) + (var28[var18] / var17 << 8) + var29[var18] / var17;
                 var18++;
                 continue L5;
               }
@@ -1198,9 +1091,9 @@ final class qn {
                 var13++;
                 continue L4;
               } else {
-                incrementValue$17 = var14;
+                incrementValue$8 = var14;
                 var14++;
-                param1 = param0[incrementValue$17];
+                param1 = param0[incrementValue$8];
                 var9[var18] = var9[var18] + (param1 >> 16 & 255);
                 var10[var18] = var10[var18] + (param1 >> 8 & 255);
                 var11[var18] = var11[var18] + (param1 & 255);
@@ -1254,48 +1147,34 @@ final class qn {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (param0 < field_j) {
-          return;
-        } else {
-          L0: {
-            if (param1 < field_a) {
-              break L0;
-            } else {
-              if (param0 >= field_e) {
-                break L0;
-              } else {
-                if (param1 < field_f) {
-                  field_d[param0 + param1 * field_l] = param2;
-                  return;
-                } else {
-                  break L0;
-                }
-              }
+        if (param0 >= field_j) {
+            if (param1 < field_a || param0 >= field_e || param1 >= field_f) {
+                return;
             }
-          }
-          return;
+            field_d[param0 + param1 * field_l] = param2;
+            return;
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
         if (param2 != 0) {
           L0: {
             if (param2 >= 0) {
@@ -1356,9 +1235,9 @@ final class qn {
                         if (var10 <= var7) {
                           break L7;
                         } else {
-                          incrementValue$6 = var8;
+                          incrementValue$0 = var8;
                           var8--;
-                          var11 = var11 - (incrementValue$6 + var8);
+                          var11 = var11 - (incrementValue$0 + var8);
                           var10 = var10 - (var8 + var8);
                           continue L6;
                         }
@@ -1388,14 +1267,14 @@ final class qn {
                       if (var15 > var13) {
                         var6++;
                         var11 = var11 + (var9 + var9);
-                        incrementValue$7 = var9;
+                        incrementValue$1 = var9;
                         var9++;
-                        var10 = var10 + (incrementValue$7 + var9);
+                        var10 = var10 + (incrementValue$1 + var9);
                         continue L5;
                       } else {
-                        incrementValue$8 = var14;
+                        incrementValue$2 = var14;
                         var14++;
-                        field_d[incrementValue$8] = param3;
+                        field_d[incrementValue$2] = param3;
                         var15++;
                         continue L10;
                       }
@@ -1433,15 +1312,15 @@ final class qn {
                       L15: while (true) {
                         if (var15 >= var13) {
                           var6++;
-                          incrementValue$9 = var9;
+                          incrementValue$3 = var9;
                           var9--;
-                          var10 = var10 - (incrementValue$9 + var9);
+                          var10 = var10 - (incrementValue$3 + var9);
                           var11 = var11 - (var9 + var9);
                           continue L4;
                         } else {
-                          incrementValue$10 = var14;
+                          incrementValue$4 = var14;
                           var14++;
-                          field_d[incrementValue$10] = param3;
+                          field_d[incrementValue$4] = param3;
                           var15++;
                           continue L15;
                         }
@@ -1452,9 +1331,9 @@ final class qn {
                   }
                 }
                 var10 = var10 + (var8 + var8);
-                incrementValue$11 = var8;
+                incrementValue$5 = var8;
                 var8++;
-                var11 = var11 + (incrementValue$11 + var8);
+                var11 = var11 + (incrementValue$5 + var8);
                 continue L11;
               }
             }
@@ -1581,32 +1460,32 @@ final class qn {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
         if (param6 != 256) {
           if (param4 != 0) {
             L0: {
@@ -1705,9 +1584,9 @@ final class qn {
                               if (var17 <= var14) {
                                 break L11;
                               } else {
-                                incrementValue$7 = var15;
+                                incrementValue$0 = var15;
                                 var15--;
-                                var18 = var18 - (incrementValue$7 + var15);
+                                var18 = var18 - (incrementValue$0 + var15);
                                 var17 = var17 - (var15 + var15);
                                 continue L10;
                               }
@@ -1737,16 +1616,16 @@ final class qn {
                             if (var22 > var20) {
                               var13++;
                               var18 = var18 + (var16 + var16);
-                              incrementValue$8 = var16;
+                              incrementValue$1 = var16;
                               var16++;
-                              var17 = var17 + (incrementValue$8 + var16);
+                              var17 = var17 + (incrementValue$1 + var16);
                               continue L9;
                             } else {
                               var23 = field_d[var21];
                               var23 = ((var23 & 16711935) * var7 >> 8 & 16711935) + ((var23 & 65280) * var7 >> 8 & 65280);
-                              incrementValue$9 = var21;
+                              incrementValue$2 = var21;
                               var21++;
-                              field_d[incrementValue$9] = param5 + var23;
+                              field_d[incrementValue$2] = param5 + var23;
                               var22++;
                               continue L14;
                             }
@@ -1764,9 +1643,9 @@ final class qn {
                       } else {
                         var25 = field_d[var21];
                         var25 = ((var25 & 16711935) * var7 >> 8 & 16711935) + ((var25 & 65280) * var7 >> 8 & 65280);
-                        incrementValue$10 = var21;
+                        incrementValue$3 = var21;
                         var21++;
-                        field_d[incrementValue$10] = param5 + var25;
+                        field_d[incrementValue$3] = param5 + var25;
                         var24++;
                         continue L15;
                       }
@@ -1803,17 +1682,17 @@ final class qn {
                         L20: while (true) {
                           if (var22 >= var20) {
                             var13++;
-                            incrementValue$11 = var16;
+                            incrementValue$4 = var16;
                             var16--;
-                            var17 = var17 - (incrementValue$11 + var16);
+                            var17 = var17 - (incrementValue$4 + var16);
                             var18 = var18 - (var16 + var16);
                             continue L4;
                           } else {
                             var23 = field_d[var21];
                             var23 = ((var23 & 16711935) * var7 >> 8 & 16711935) + ((var23 & 65280) * var7 >> 8 & 65280);
-                            incrementValue$12 = var21;
+                            incrementValue$5 = var21;
                             var21++;
-                            field_d[incrementValue$12] = param5 + var23;
+                            field_d[incrementValue$5] = param5 + var23;
                             var22++;
                             continue L20;
                           }
@@ -1824,9 +1703,9 @@ final class qn {
                     }
                   }
                   var17 = var17 + (var15 + var15);
-                  incrementValue$13 = var15;
+                  incrementValue$6 = var15;
                   var15++;
-                  var18 = var18 + (incrementValue$13 + var15);
+                  var18 = var18 + (incrementValue$6 + var15);
                   continue L16;
                 }
               }
@@ -1842,17 +1721,17 @@ final class qn {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         param2 = param2 - param0;
         param3 = param3 - param1;
         if (param3 != 0) {
@@ -2088,8 +1967,8 @@ final class qn {
     }
 
     final static void h(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         param2 = param2 - param0;
         param3 = param3 - param1;
         if (param3 != 0) {
@@ -2245,33 +2124,33 @@ final class qn {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
         if (param4 != 0) {
           if (param4 != 256) {
             L0: {
@@ -2337,9 +2216,9 @@ final class qn {
                           if (var18 <= var15) {
                             break L7;
                           } else {
-                            incrementValue$6 = var16;
+                            incrementValue$0 = var16;
                             var16--;
-                            var19 = var19 - (incrementValue$6 + var16);
+                            var19 = var19 - (incrementValue$0 + var16);
                             var18 = var18 - (var16 + var16);
                             continue L6;
                           }
@@ -2370,18 +2249,18 @@ final class qn {
                         if (var23 > var21) {
                           var14++;
                           var19 = var19 + (var17 + var17);
-                          incrementValue$7 = var17;
+                          incrementValue$1 = var17;
                           var17++;
-                          var18 = var18 + (incrementValue$7 + var17);
+                          var18 = var18 + (incrementValue$1 + var17);
                           continue L5;
                         } else {
                           var9 = (field_d[var25] >> 16 & 255) * var5;
                           var10 = (field_d[var25] >> 8 & 255) * var5;
                           var11 = (field_d[var25] & 255) * var5;
                           var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                          incrementValue$8 = var25;
+                          incrementValue$2 = var25;
                           var25++;
-                          field_d[incrementValue$8] = var24;
+                          field_d[incrementValue$2] = var24;
                           var23++;
                           continue L10;
                         }
@@ -2419,9 +2298,9 @@ final class qn {
                         L15: while (true) {
                           if (var23 >= var21) {
                             var14++;
-                            incrementValue$9 = var17;
+                            incrementValue$3 = var17;
                             var17--;
-                            var18 = var18 - (incrementValue$9 + var17);
+                            var18 = var18 - (incrementValue$3 + var17);
                             var19 = var19 - (var17 + var17);
                             continue L4;
                           } else {
@@ -2429,9 +2308,9 @@ final class qn {
                             var10 = (field_d[var22] >> 8 & 255) * var5;
                             var11 = (field_d[var22] & 255) * var5;
                             var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                            incrementValue$10 = var22;
+                            incrementValue$4 = var22;
                             var22++;
-                            field_d[incrementValue$10] = var24;
+                            field_d[incrementValue$4] = var24;
                             var23++;
                             continue L15;
                           }
@@ -2442,9 +2321,9 @@ final class qn {
                     }
                   }
                   var18 = var18 + (var16 + var16);
-                  incrementValue$11 = var16;
+                  incrementValue$5 = var16;
                   var16++;
-                  var19 = var19 + (incrementValue$11 + var16);
+                  var19 = var19 + (incrementValue$5 + var16);
                   continue L11;
                 }
               }
@@ -2492,32 +2371,31 @@ final class qn {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int[] param4) {
-        boolean discarded$1 = false;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
         L0: {
           var5 = param2 * param2;
           var6 = param1 - param2 >> 4;
@@ -2595,7 +2473,7 @@ final class qn {
                       if (!qn.a(0, 0, 0, 0, 0, var26, var5, var14 + var17, var17 - var18, field_d, param3, param4, 1, var24, var8 + var21)) {
                         break L7;
                       } else {
-                        discarded$1 = qn.a(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, field_d, param3, param4, -1, var29, var8 + var27);
+                        qn.a(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, field_d, param3, param4, -1, var29, var8 + var27);
                         break L7;
                       }
                     }
@@ -2635,28 +2513,28 @@ final class qn {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
         L0: {
           var8 = 16384 / (2 * param3 + 1);
           var9 = 1 + param3 - param5 - param4;
@@ -2712,9 +2590,9 @@ final class qn {
             L5: while (true) {
               if (var19 >= var12) {
                 var18 = var18 + var11;
-                incrementValue$6 = param2;
+                incrementValue$0 = param2;
                 param2++;
-                param0[incrementValue$6] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
+                param0[incrementValue$0] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
                 var19 = 1 - param5;
                 L6: while (true) {
                   if (var19 >= var9) {
@@ -2727,9 +2605,9 @@ final class qn {
                             continue L3;
                           } else {
                             L9: {
-                              incrementValue$7 = var18;
+                              incrementValue$1 = var18;
                               var18++;
-                              param1 = param0[incrementValue$7];
+                              param1 = param0[incrementValue$1];
                               var14 = var14 - (param1 >> 16 & 255);
                               var15 = var15 - (param1 >> 8 & 255);
                               var16 = var16 - (param1 & 255);
@@ -2775,18 +2653,18 @@ final class qn {
                                 break L11;
                               }
                             }
-                            incrementValue$8 = param2;
+                            incrementValue$2 = param2;
                             param2++;
-                            param0[incrementValue$8] = (var21 << 16) + (var22 << 8) + var23;
+                            param0[incrementValue$2] = (var21 << 16) + (var22 << 8) + var23;
                             var19++;
                             continue L8;
                           }
                         }
                       } else {
                         L12: {
-                          incrementValue$9 = var18;
+                          incrementValue$3 = var18;
                           var18++;
-                          param1 = param0[incrementValue$9];
+                          param1 = param0[incrementValue$3];
                           var14 = var14 - (param1 >> 16 & 255);
                           if (var14 >= 0) {
                             break L12;
@@ -2845,9 +2723,9 @@ final class qn {
                             break L17;
                           }
                         }
-                        incrementValue$10 = param2;
+                        incrementValue$4 = param2;
                         param2++;
-                        param0[incrementValue$10] = (var21 << 16) + (var22 << 8) + var23;
+                        param0[incrementValue$4] = (var21 << 16) + (var22 << 8) + var23;
                         var19++;
                         continue L7;
                       }
@@ -2870,9 +2748,9 @@ final class qn {
                     var21 = var14 / var20;
                     var22 = var15 / var20;
                     var23 = var16 / var20;
-                    incrementValue$11 = param2;
+                    incrementValue$5 = param2;
                     param2++;
-                    param0[incrementValue$11] = (var21 << 16) + (var22 << 8) + var23;
+                    param0[incrementValue$5] = (var21 << 16) + (var22 << 8) + var23;
                     var19++;
                     continue L6;
                   }
@@ -2900,16 +2778,16 @@ final class qn {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$1 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$0 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         L0: {
           var6 = 0;
           var7 = 65536 / param3;
@@ -2965,9 +2843,9 @@ final class qn {
                 var10++;
                 continue L4;
               } else {
-                incrementValue$1 = var9;
+                incrementValue$0 = var9;
                 var9++;
-                field_d[incrementValue$1] = var13;
+                field_d[incrementValue$0] = var13;
                 var14++;
                 continue L5;
               }

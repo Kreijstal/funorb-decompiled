@@ -29,17 +29,16 @@ final class bn {
     private int field_k;
 
     final void a(int param0) {
-        c discarded$0 = null;
         this.field_g.a(this.field_e, this.field_t, (byte) -107);
         if (param0 != 6733) {
             java.awt.Component var3 = (java.awt.Component) null;
-            discarded$0 = bn.a(-69, (java.awt.Component) null, -15, 123);
+            bn.a(-69, (java.awt.Component) null, -15, 123);
         }
     }
 
     final void e(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         if (param0 == 6731) {
           if (cm.field_R == null) {
             L0: {
@@ -51,9 +50,9 @@ final class bn {
               }
             }
             if (this.field_d) {
-              fieldTemp$2 = this.field_c - 1;
+              fieldTemp$0 = this.field_c - 1;
               this.field_c = this.field_c - 1;
-              if (0 < fieldTemp$2) {
+              if (0 < fieldTemp$0) {
                 return;
               } else {
                 this.field_c = this.field_k;
@@ -123,9 +122,9 @@ final class bn {
               }
             }
             if (this.field_d) {
-              fieldTemp$3 = this.field_c - 1;
+              fieldTemp$1 = this.field_c - 1;
               this.field_c = this.field_c - 1;
-              if (0 < fieldTemp$3) {
+              if (0 < fieldTemp$1) {
                 return;
               } else {
                 this.field_c = this.field_k;
@@ -183,7 +182,7 @@ final class bn {
     }
 
     final boolean b(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = -125 / ((param0 - 24) / 43);
         if (this.field_b <= sj.field_bb) {
           if ((pb.field_G ^ -1) >= -1) {
@@ -206,7 +205,6 @@ final class bn {
 
     final static c a(int param0, java.awt.Component param1, int param2, int param3) {
         try {
-            c discarded$2 = null;
             Class var4 = null;
             Throwable var4_ref = null;
             RuntimeException var4_ref2 = null;
@@ -215,24 +213,12 @@ final class bn {
             java.awt.Component var6 = null;
             c stackIn_3_0 = null;
             kf stackIn_5_0 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            c stackOut_2_0 = null;
-            kf stackOut_4_0 = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
             try {
               L0: {
                 try {
@@ -245,12 +231,11 @@ final class bn {
                         break L2;
                       } else {
                         var6 = (java.awt.Component) null;
-                        discarded$2 = bn.a(92, (java.awt.Component) null, 26, -40);
+                        bn.a(92, (java.awt.Component) null, 26, -40);
                         break L2;
                       }
                     }
-                    stackOut_2_0 = (c) (var5);
-                    stackIn_3_0 = stackOut_2_0;
+                    stackIn_3_0 = (c) (var5);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -258,8 +243,7 @@ final class bn {
                   var4_ref = decompiledCaughtException;
                   var5_ref = new kf();
                   ((c) ((Object) var5_ref)).a((byte) 72, param1, param3, param2);
-                  stackOut_4_0 = (kf) (var5_ref);
-                  stackIn_5_0 = stackOut_4_0;
+                  stackIn_5_0 = (kf) (var5_ref);
                   return (c) ((Object) stackIn_5_0);
                 }
                 break L0;
@@ -268,27 +252,19 @@ final class bn {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var4_ref2);
-                stackOut_6_1 = new StringBuilder().append("bn.C(").append(param0).append(',');
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var4_ref2);
+
+                stackIn_8_1 = new StringBuilder().append("bn.C(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L3;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L3;
                 }
               }
@@ -303,11 +279,11 @@ final class bn {
     }
 
     private final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = DungeonAssault.field_K;
         var2 = this.field_x;
         var4 = -124 / ((param0 - -40) / 32);
@@ -628,15 +604,14 @@ final class bn {
     }
 
     public static void a(byte param0) {
-        c discarded$2 = null;
-        java.awt.Component var2 = null;
+        java.awt.Component var2;
         field_i = null;
         field_f = null;
         field_m = null;
         field_h = null;
         if (param0 > -102) {
           var2 = (java.awt.Component) null;
-          discarded$2 = bn.a(41, (java.awt.Component) null, 93, -122);
+          bn.a(41, (java.awt.Component) null, 93, -122);
           field_q = null;
           field_j = null;
           return;
@@ -652,7 +627,7 @@ final class bn {
     }
 
     final ek d(int param0) {
-        ek var2 = null;
+        ek var2;
         this.field_e = eg.field_d;
         this.field_t = up.field_d;
         this.field_g.a(this.field_w, this.field_u, (byte) -86);

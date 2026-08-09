@@ -35,10 +35,10 @@ final class bt {
     }
 
     final static void a(int param0) {
-        ft var1 = null;
-        ft var2 = null;
-        int var3 = 0;
-        int var4 = 0;
+        ft var1;
+        ft var2;
+        int var3;
+        int var4;
         kr.field_E = new dm();
         kr.field_E.i(1);
         var1 = kr.field_E.b((byte) -72);

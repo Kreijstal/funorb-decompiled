@@ -31,9 +31,8 @@ class uj {
     }
 
     int d(byte param0) {
-        int discarded$0 = 0;
         if (param0 != 64) {
-            discarded$0 = this.d((byte) -115);
+            this.d((byte) -115);
             return 10 * oq.field_l;
         }
         return 10 * oq.field_l;

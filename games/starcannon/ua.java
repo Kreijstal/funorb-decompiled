@@ -27,9 +27,6 @@ final class ua {
         int stackIn_18_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_17_0 = 0;
         var5 = StarCannon.field_A;
         try {
           L0: {
@@ -38,8 +35,7 @@ final class ua {
                 break L1;
               } else {
                 if (128 > param0) {
-                  stackOut_7_0 = 1;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -72,8 +68,7 @@ final class ua {
                       var3++;
                       continue L4;
                     } else {
-                      stackOut_14_0 = 1;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 1;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -83,8 +78,7 @@ final class ua {
                 break L3;
               }
             }
-            stackOut_17_0 = 0;
-            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_0 = 0;
             decompiledRegionSelector0 = 2;
             break L0;
           }

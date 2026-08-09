@@ -8,8 +8,8 @@ final class im {
     private ca field_c;
 
     final ca a(byte param0) {
-        ca var2 = null;
-        int var3 = 0;
+        ca var2;
+        int var3;
         var2 = this.field_d.field_c;
         if (this.field_d == var2) {
           return null;
@@ -21,7 +21,7 @@ final class im {
     }
 
     final ca d(int param0) {
-        ca var2 = null;
+        ca var2;
         var2 = this.field_c;
         if (this.field_d == var2) {
           this.field_c = null;
@@ -38,8 +38,8 @@ final class im {
     }
 
     final ca b(byte param0) {
-        ca var2 = null;
-        int var3 = 0;
+        ca var2;
+        int var3;
         var2 = this.field_d.field_e;
         if (var2 == this.field_d) {
           this.field_c = null;
@@ -54,20 +54,14 @@ final class im {
     final boolean c(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -3088) {
           L0: {
             field_a = (int[]) null;
             if (this.field_d.field_e != this.field_d) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -75,12 +69,10 @@ final class im {
         } else {
           L1: {
             if (this.field_d.field_e != this.field_d) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -89,7 +81,7 @@ final class im {
     }
 
     final ca d(byte param0) {
-        ca var2 = null;
+        ca var2;
         var2 = this.field_d.field_c;
         if (var2 != this.field_d) {
           this.field_c = var2.field_c;
@@ -127,30 +119,63 @@ final class im {
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        var5 = OrbDefence.field_D ? 1 : 0;
-        var6 = new char[param1];
-        var3 = var6;
-        var4 = 0;
-        L0: while (true) {
-          if (var4 < param1) {
-            var6[var4] = param0;
-            var4++;
-            if (var5 == 0) {
-              continue L0;
-            } else {
-              return new String(var6);
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var5 = OrbDefence.field_D ? 1 : 0;
+                    var6 = new char[param1];
+                    var3 = var6;
+                    var4 = 0;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    if (var4 < param1) {
+                        statePc = 3;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
+                }
+                case 2: {
+                    var4 = 70 / ((0 - param2) / 53);
+                    return new String(var6);
+                }
+                case 3: {
+                    var6[var4] = param0;
+                    var4++;
+                    if (var5 == 0) {
+                        statePc = 5;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    return new String(var6);
+                }
+                case 5: {
+                    if (var5 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    var4 = 70 / ((0 - param2) / 53);
+                    return new String(var6);
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          } else {
-            var4 = 70 / ((0 - param2) / 53);
-            return new String(var6);
-          }
         }
     }
 
     final int c(byte param0) {
-        int var2 = 0;
-        ca var3 = null;
-        int var4 = 0;
+        int var2;
+        ca var3;
+        int var4;
         var4 = OrbDefence.field_D ? 1 : 0;
         var2 = 0;
         var3 = this.field_d.field_e;
@@ -193,9 +218,8 @@ final class im {
     }
 
     public static void a(int param0) {
-        String discarded$0 = null;
         if (param0 != 9) {
-            discarded$0 = im.a('O', 32, 30);
+            im.a('O', 32, 30);
             field_b = null;
             field_a = null;
             return;
@@ -205,10 +229,9 @@ final class im {
     }
 
     final ca b(int param0) {
-        ca discarded$9 = null;
         ca var2 = this.field_c;
         if (param0 != 10708) {
-            discarded$9 = this.a((byte) 52);
+            this.a((byte) 52);
             if (!(var2 != this.field_d)) {
                 this.field_c = null;
                 return null;
@@ -248,34 +271,86 @@ final class im {
     }
 
     final void a(boolean param0) {
-        ca discarded$1 = null;
         ca var2 = null;
         int var3 = 0;
-        var3 = OrbDefence.field_D ? 1 : 0;
-        L0: while (true) {
-          var2 = this.field_d.field_e;
-          if (var2 == this.field_d) {
-            if (param0) {
-              discarded$1 = this.d(79);
-              this.field_c = null;
-              return;
-            } else {
-              this.field_c = null;
-              return;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var3 = OrbDefence.field_D ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    var2 = this.field_d.field_e;
+                    if (var2 == this.field_d) {
+                        statePc = 9;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
+                }
+                case 2: {
+                    var2.b(57);
+                    if (var3 == 0) {
+                        statePc = 4;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    return;
+                }
+                case 4: {
+                    if (var3 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    if (!param0) {
+                        statePc = 7;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    this.d(79);
+                    this.field_c = null;
+                    return;
+                }
+                case 7: {
+                    this.field_c = null;
+                    return;
+                }
+                case 9: {
+                    if (param0) {
+                        statePc = 11;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    this.field_c = null;
+                    return;
+                }
+                case 11: {
+                    this.d(79);
+                    this.field_c = null;
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          } else {
-            var2.b(57);
-            if (var3 == 0) {
-              continue L0;
-            } else {
-              return;
-            }
-          }
         }
     }
 
     final ca e(int param0) {
-        ca var2 = null;
+        ca var2;
         if (param0 == 0) {
           var2 = this.field_d.field_e;
           if (this.field_d == var2) {

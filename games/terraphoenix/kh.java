@@ -130,28 +130,19 @@ abstract class kh extends gb {
     private final int h(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 0) {
           L0: {
             this.field_N = (d) null;
             if (this.field_J) {
               if (this.field_N.c(true) == this) {
-                stackOut_11_0 = 256;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = 256;
                 break L0;
               } else {
-                stackOut_10_0 = 0;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 0;
                 break L0;
               }
             } else {
-              stackOut_8_0 = 0;
-              stackIn_12_0 = stackOut_8_0;
+              stackIn_12_0 = 0;
               break L0;
             }
           }
@@ -160,17 +151,14 @@ abstract class kh extends gb {
           L1: {
             if (this.field_J) {
               if (this.field_N.c(true) == this) {
-                stackOut_5_0 = 256;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 256;
                 break L1;
               } else {
-                stackOut_4_0 = 0;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 0;
                 break L1;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L1;
             }
           }
@@ -179,7 +167,7 @@ abstract class kh extends gb {
     }
 
     boolean i(int param0) {
-        int var2 = 0;
+        int var2;
         this.field_G = this.h(0);
         var2 = 17 / ((param0 - -2) / 63);
         if (0 == this.field_G) {
@@ -194,13 +182,12 @@ abstract class kh extends gb {
     }
 
     final static char a(char param0, byte param1) {
-        char discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Terraphoenix.field_V;
         if (param1 >= -125) {
           L0: {
-            discarded$1 = kh.a('￥', (byte) -127);
+            kh.a('￥', (byte) -127);
             var2 = param0;
             if (-33 != (var2 ^ -1)) {
               if (160 != var2) {
@@ -707,20 +694,12 @@ abstract class kh extends gb {
     }
 
     boolean f(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_10_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_41_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_9_0 = 0;
+        int var2;
+        int var3;
         var2 = this.h(0);
         if (param0 == -121) {
           var3 = -this.field_G + var2;
@@ -745,15 +724,13 @@ abstract class kh extends gb {
                     if (this.field_J) {
                       break L2;
                     } else {
-                      stackOut_39_0 = 1;
-                      stackIn_41_0 = stackOut_39_0;
+                      stackIn_41_0 = 1;
                       break L1;
                     }
                   }
                 }
               }
-              stackOut_40_0 = 0;
-              stackIn_41_0 = stackOut_40_0;
+              stackIn_41_0 = 0;
               break L1;
             }
             return stackIn_41_0 != 0;
@@ -777,15 +754,13 @@ abstract class kh extends gb {
                     if (this.field_J) {
                       break L5;
                     } else {
-                      stackOut_30_0 = 1;
-                      stackIn_32_0 = stackOut_30_0;
+                      stackIn_32_0 = 1;
                       break L4;
                     }
                   }
                 }
               }
-              stackOut_31_0 = 0;
-              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_0 = 0;
               break L4;
             }
             return stackIn_32_0 != 0;
@@ -808,12 +783,10 @@ abstract class kh extends gb {
               } else {
                 L7: {
                   if (this.field_J) {
-                    stackOut_19_0 = 0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_20_0 = 0;
                     break L7;
                   } else {
-                    stackOut_18_0 = 1;
-                    stackIn_20_0 = stackOut_18_0;
+                    stackIn_20_0 = 1;
                     break L7;
                   }
                 }
@@ -843,15 +816,13 @@ abstract class kh extends gb {
                     if (this.field_J) {
                       break L10;
                     } else {
-                      stackOut_8_0 = 1;
-                      stackIn_10_0 = stackOut_8_0;
+                      stackIn_10_0 = 1;
                       break L9;
                     }
                   }
                 }
               }
-              stackOut_9_0 = 0;
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = 0;
               break L9;
             }
             return stackIn_10_0 != 0;

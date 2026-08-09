@@ -21,23 +21,19 @@ final class uea extends kj {
     }
 
     final boolean b(int param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 <= 21) {
           return true;
         } else {
           L0: {
-            fieldTemp$2 = this.field_h - 1;
+            fieldTemp$1 = this.field_h - 1;
             this.field_h = this.field_h - 1;
-            if ((fieldTemp$2 ^ -1) < -1) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+            if ((fieldTemp$1 ^ -1) < -1) {
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L0;
             }
           }

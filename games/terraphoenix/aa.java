@@ -41,9 +41,8 @@ final class aa extends uf {
     }
 
     final static nd a(int param0, int param1, int param2, int param3, int param4) {
-        nd discarded$2 = null;
-        nd var5 = null;
-        int var6 = 0;
+        nd var5;
+        int var6;
         var6 = Terraphoenix.field_V;
         var5 = (nd) ((Object) r.field_Q.d(9272));
         L0: while (true) {
@@ -54,7 +53,7 @@ final class aa extends uf {
             var5.field_n = param4;
             r.field_Q.a(var5, -16611);
             if (param0 != 8166) {
-              discarded$2 = aa.a(2, 40, -127, -46, 80);
+              aa.a(2, 40, -127, -46, 80);
               gb.a((byte) 15, var5, param3);
               return var5;
             } else {
@@ -62,11 +61,11 @@ final class aa extends uf {
               return var5;
             }
           } else {
-            if (param2 == var5.field_s) {
-              return var5;
-            } else {
+            if ((param2 ^ -1) != (var5.field_s ^ -1)) {
               var5 = (nd) ((Object) r.field_Q.e((byte) -119));
               continue L0;
+            } else {
+              return var5;
             }
           }
         }

@@ -11,23 +11,12 @@ final class psa extends rqa {
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
         nc stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -39,35 +28,26 @@ final class psa extends rqa {
               }
             }
             si.a(34, 62, param0[0].a(94));
-            stackOut_2_0 = new nc("void");
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new nc("void");
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("psa.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("psa.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -77,9 +57,11 @@ final class psa extends rqa {
     }
 
     final static void e(int param0) {
-        int incrementValue$1 = 0;
-        RuntimeException var1 = null;
+        int incrementValue$0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         double var1_double = 0.0;
+        RuntimeException var1 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -102,8 +84,6 @@ final class psa extends rqa {
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var24 = VoidHunters.field_G;
         try {
           L0: {
@@ -192,9 +172,9 @@ final class psa extends rqa {
                       var21 = (int)(var11 * 256.0f);
                       var22 = (int)(256.0f * var12);
                       var23 = var22 + (var21 << 1501463016) + (-16777216 - -(var20 << -1851724336));
-                      incrementValue$1 = var3;
+                      incrementValue$0 = var3;
                       var3++;
-                      mpb.field_h[incrementValue$1] = var23;
+                      mpb.field_h[incrementValue$0] = var23;
                       var8++;
                       continue L2;
                     }

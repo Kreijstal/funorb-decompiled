@@ -6,9 +6,8 @@ final class nma implements dja {
     static da[] field_b;
 
     public final tv[] a(int param0, int param1) {
-        tv discarded$0 = null;
         if (param0 != 11995) {
-            discarded$0 = this.a((byte) -57);
+            this.a((byte) -57);
             return (tv[]) ((Object) new gtb[param1]);
         }
         return (tv[]) ((Object) new gtb[param1]);

@@ -21,17 +21,17 @@ final class uh {
     }
 
     final int[] a() {
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int var1 = 0;
-        int[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int var1;
+        int[] var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         L0: {
           var1 = this.d();
           var2 = new int[var1 * this.b()];
@@ -49,19 +49,19 @@ final class uh {
                     var3++;
                     continue L1;
                   } else {
-                    incrementValue$12 = var4;
+                    incrementValue$1 = var4;
                     var4++;
-                    var7 = this.field_e[this.field_d[incrementValue$12] & 255];
+                    var7 = this.field_e[this.field_d[incrementValue$1] & 255];
                     if (var7 == 0) {
-                      incrementValue$13 = var5;
+                      incrementValue$2 = var5;
                       var5++;
-                      var2[incrementValue$13] = 0;
+                      var2[incrementValue$2] = 0;
                       var6++;
                       continue L2;
                     } else {
-                      incrementValue$14 = var5;
+                      incrementValue$3 = var5;
                       var5++;
-                      var2[incrementValue$14] = -16777216 | var7;
+                      var2[incrementValue$3] = -16777216 | var7;
                       var6++;
                       continue L2;
                     }
@@ -83,9 +83,9 @@ final class uh {
                     var3++;
                     continue L3;
                   } else {
-                    incrementValue$15 = var5;
+                    incrementValue$4 = var5;
                     var5++;
-                    var2[incrementValue$15] = this.field_g[var4] << 24 | this.field_e[this.field_d[var4] & 255];
+                    var2[incrementValue$4] = this.field_g[var4] << 24 | this.field_e[this.field_d[var4] & 255];
                     var4++;
                     var6++;
                     continue L4;
@@ -99,45 +99,33 @@ final class uh {
     }
 
     private final static uh[] a(byte[] param0) {
-        byte dupTemp$2 = 0;
-        byte dupTemp$3 = 0;
-        lu var1 = null;
-        int var2 = 0;
-        uh[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7_int = 0;
-        int[] var7 = null;
-        int var8 = 0;
-        uh var8_ref_uh = null;
-        uh var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int[] var16 = null;
-        int[] var17 = null;
-        int stackIn_48_0 = 0;
+        byte dupTemp$0 = 0;
+        byte dupTemp$1 = 0;
         int stackIn_49_0 = 0;
         int stackIn_50_0 = 0;
         int stackIn_50_1 = 0;
-        int stackIn_62_0 = 0;
         int stackIn_63_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_64_1 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_63_1 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_62_1 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_49_1 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_48_1 = 0;
+        lu var1;
+        int var2;
+        uh[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7_int;
+        int[] var7;
+        int var8;
+        uh var8_ref_uh;
+        uh var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int[] var16;
+        int[] var17;
         var1 = new lu(param0);
         var1.field_g = param0.length - 2;
         var2 = var1.e((byte) 99);
@@ -204,23 +192,18 @@ final class uh {
                                                               continue L11;
                                                             } else {
                                                               L13: {
-                                                                dupTemp$2 = var1.b(true);
-                                                                var9.field_g[var13 + var14 * var9.field_i] = dupTemp$2;
-                                                                var15 = dupTemp$2;
-                                                                stackOut_61_0 = var12;
-                                                                stackIn_63_0 = stackOut_61_0;
-                                                                stackIn_62_0 = stackOut_61_0;
+                                                                dupTemp$0 = var1.b(true);
+                                                                var9.field_g[var13 + var14 * var9.field_i] = dupTemp$0;
+                                                                var15 = dupTemp$0;
+                                                                stackIn_63_0 = var12;
+
                                                                 if (var15 == -1) {
-                                                                  stackOut_63_0 = stackIn_63_0;
-                                                                  stackOut_63_1 = 0;
-                                                                  stackIn_64_0 = stackOut_63_0;
-                                                                  stackIn_64_1 = stackOut_63_1;
+                                                                  stackIn_64_0 = stackIn_63_0;
+                                                                  stackIn_64_1 = 0;
                                                                   break L13;
                                                                 } else {
-                                                                  stackOut_62_0 = stackIn_62_0;
-                                                                  stackOut_62_1 = 1;
-                                                                  stackIn_64_0 = stackOut_62_0;
-                                                                  stackIn_64_1 = stackOut_62_1;
+                                                                  stackIn_64_0 = stackIn_63_0;
+                                                                  stackIn_64_1 = 1;
                                                                   break L13;
                                                                 }
                                                               }
@@ -255,23 +238,18 @@ final class uh {
                                                           break L9;
                                                         } else {
                                                           L17: {
-                                                            dupTemp$3 = var1.b(true);
-                                                            var9.field_g[var13] = dupTemp$3;
-                                                            var14 = dupTemp$3;
-                                                            stackOut_47_0 = var12;
-                                                            stackIn_49_0 = stackOut_47_0;
-                                                            stackIn_48_0 = stackOut_47_0;
+                                                            dupTemp$1 = var1.b(true);
+                                                            var9.field_g[var13] = dupTemp$1;
+                                                            var14 = dupTemp$1;
+                                                            stackIn_49_0 = var12;
+
                                                             if (var14 == -1) {
-                                                              stackOut_49_0 = stackIn_49_0;
-                                                              stackOut_49_1 = 0;
-                                                              stackIn_50_0 = stackOut_49_0;
-                                                              stackIn_50_1 = stackOut_49_1;
+                                                              stackIn_50_0 = stackIn_49_0;
+                                                              stackIn_50_1 = 0;
                                                               break L17;
                                                             } else {
-                                                              stackOut_48_0 = stackIn_48_0;
-                                                              stackOut_48_1 = 1;
-                                                              stackIn_50_0 = stackOut_48_0;
-                                                              stackIn_50_1 = stackOut_48_1;
+                                                              stackIn_50_0 = stackIn_49_0;
+                                                              stackIn_50_1 = 1;
                                                               break L17;
                                                             }
                                                           }
@@ -396,19 +374,19 @@ final class uh {
     }
 
     final void c() {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        byte[] var3 = null;
-        int var4 = 0;
-        byte[] var4_ref_byte__ = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int var1;
+        int var2;
+        byte[] var3;
+        int var4;
+        byte[] var4_ref_byte__;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         L0: {
           var1 = this.d();
           var2 = this.b();
@@ -438,11 +416,11 @@ final class uh {
                     var4++;
                     continue L2;
                   } else {
-                    incrementValue$4 = var6;
+                    incrementValue$0 = var6;
                     var6++;
-                    incrementValue$5 = var5;
+                    incrementValue$1 = var5;
                     var5++;
-                    var3[incrementValue$4] = this.field_d[incrementValue$5];
+                    var3[incrementValue$0] = this.field_d[incrementValue$1];
                     var7++;
                     continue L3;
                   }
@@ -466,11 +444,11 @@ final class uh {
                     continue L4;
                   } else {
                     var3[var7] = this.field_d[var6];
-                    incrementValue$6 = var7;
+                    incrementValue$2 = var7;
                     var7++;
-                    incrementValue$7 = var6;
+                    incrementValue$3 = var6;
                     var6++;
-                    var4_ref_byte__[incrementValue$6] = this.field_g[incrementValue$7];
+                    var4_ref_byte__[incrementValue$2] = this.field_g[incrementValue$3];
                     var8++;
                     continue L5;
                   }

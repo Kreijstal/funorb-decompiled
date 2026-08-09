@@ -18,8 +18,6 @@ final class cd {
 
     final boolean d(int param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == 0) {
           if (0 == this.field_d) {
             if (84 != this.field_f) {
@@ -42,12 +40,10 @@ final class cd {
             } else {
               L0: {
                 if (-84 != (this.field_f ^ -1)) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }
@@ -60,13 +56,13 @@ final class cd {
     }
 
     final void a(int param0, int param1, int param2, boolean param3, int param4) {
-        int discarded$2 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int discarded$1 = 0;
+        int var6;
+        int var7;
         var6 = this.a(param1, fg.field_a, param4, -85, param0, param2, kf.field_b);
         var7 = this.a(param1, wg.field_e, param4, -85, param0, param2, db.field_X);
         if (param3) {
-          discarded$2 = this.a(-49, 68, -96, -111, -56, 63, 114);
+          discarded$1 = this.a(-49, 68, -96, -111, -56, 63, 114);
           this.a(-126, var6, var7);
           return;
         } else {
@@ -78,20 +74,14 @@ final class cd {
     final boolean a(boolean param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (!param0) {
           L0: {
             this.b((byte) -61);
             if ((this.field_f ^ -1) != -103) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -99,12 +89,10 @@ final class cd {
         } else {
           L1: {
             if ((this.field_f ^ -1) != -103) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -115,20 +103,14 @@ final class cd {
     final boolean e(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 0) {
           L0: {
             this.field_d = 58;
             if (this.field_l == 0) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -136,12 +118,10 @@ final class cd {
         } else {
           L1: {
             if (this.field_l == 0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -413,31 +393,20 @@ final class cd {
     }
 
     final void a(int param0, int param1, boolean param2, int param3) {
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           this.field_l = 0;
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param2) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -458,20 +427,14 @@ final class cd {
     final boolean a(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 0) {
           L0: {
             this.field_a = false;
             if ((this.field_f ^ -1) != -98) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -479,12 +442,10 @@ final class cd {
         } else {
           L1: {
             if ((this.field_f ^ -1) != -98) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -501,30 +462,6 @@ final class cd {
     }
 
     final void a(int param0, int param1, int param2) {
-        boolean discarded$24 = false;
-        boolean discarded$25 = false;
-        boolean discarded$26 = false;
-        boolean discarded$27 = false;
-        boolean discarded$28 = false;
-        boolean discarded$29 = false;
-        boolean discarded$30 = false;
-        boolean discarded$31 = false;
-        boolean discarded$32 = false;
-        boolean discarded$33 = false;
-        boolean discarded$34 = false;
-        boolean discarded$35 = false;
-        boolean discarded$36 = false;
-        boolean discarded$37 = false;
-        boolean discarded$38 = false;
-        boolean discarded$39 = false;
-        boolean discarded$40 = false;
-        boolean discarded$41 = false;
-        boolean discarded$42 = false;
-        boolean discarded$43 = false;
-        boolean discarded$44 = false;
-        boolean discarded$45 = false;
-        boolean discarded$46 = false;
-        boolean discarded$47 = false;
         if (this.field_i <= param1) {
           throw new IllegalArgumentException();
         } else {
@@ -604,7 +541,7 @@ final class cd {
                         if (param0 < -117) {
                           break L5;
                         } else {
-                          discarded$24 = this.a(true);
+                          this.a(true);
                           break L5;
                         }
                       }
@@ -621,7 +558,7 @@ final class cd {
                         if (param0 < -117) {
                           return;
                         } else {
-                          discarded$25 = this.a(true);
+                          this.a(true);
                           return;
                         }
                       } else {
@@ -630,7 +567,7 @@ final class cd {
                         if (param0 < -117) {
                           return;
                         } else {
-                          discarded$26 = this.a(true);
+                          this.a(true);
                           return;
                         }
                       }
@@ -639,7 +576,7 @@ final class cd {
                         if (param0 < -117) {
                           return;
                         } else {
-                          discarded$27 = this.a(true);
+                          this.a(true);
                           return;
                         }
                       } else {
@@ -647,7 +584,7 @@ final class cd {
                         if (param0 < -117) {
                           return;
                         } else {
-                          discarded$28 = this.a(true);
+                          this.a(true);
                           return;
                         }
                       }
@@ -662,7 +599,7 @@ final class cd {
                             if (param0 < -117) {
                               break L6;
                             } else {
-                              discarded$29 = this.a(true);
+                              this.a(true);
                               break L6;
                             }
                           }
@@ -674,7 +611,7 @@ final class cd {
                             if (param0 < -117) {
                               break L7;
                             } else {
-                              discarded$30 = this.a(true);
+                              this.a(true);
                               break L7;
                             }
                           }
@@ -690,7 +627,7 @@ final class cd {
                           }
                         }
                         if (param0 >= -117) {
-                          discarded$31 = this.a(true);
+                          this.a(true);
                           return;
                         } else {
                           return;
@@ -698,7 +635,7 @@ final class cd {
                       }
                     } else {
                       if (param0 >= -117) {
-                        discarded$32 = this.a(true);
+                        this.a(true);
                         return;
                       } else {
                         return;
@@ -707,7 +644,7 @@ final class cd {
                   }
                 } else {
                   if (param0 >= -117) {
-                    discarded$33 = this.a(true);
+                    this.a(true);
                     return;
                   } else {
                     return;
@@ -761,7 +698,7 @@ final class cd {
                         if (param0 < -117) {
                           break L12;
                         } else {
-                          discarded$34 = this.a(true);
+                          this.a(true);
                           break L12;
                         }
                       }
@@ -779,7 +716,7 @@ final class cd {
                           if (param0 < -117) {
                             break L13;
                           } else {
-                            discarded$35 = this.a(true);
+                            this.a(true);
                             break L13;
                           }
                         }
@@ -791,7 +728,7 @@ final class cd {
                           if (param0 < -117) {
                             break L14;
                           } else {
-                            discarded$36 = this.a(true);
+                            this.a(true);
                             break L14;
                           }
                         }
@@ -800,7 +737,7 @@ final class cd {
                     } else {
                       if (!this.field_a) {
                         if (param0 >= -117) {
-                          discarded$37 = this.a(true);
+                          this.a(true);
                           return;
                         } else {
                           return;
@@ -811,7 +748,7 @@ final class cd {
                           if (param0 < -117) {
                             break L15;
                           } else {
-                            discarded$38 = this.a(true);
+                            this.a(true);
                             break L15;
                           }
                         }
@@ -821,7 +758,7 @@ final class cd {
                   } else {
                     if (!mg.field_a) {
                       if (param0 >= -117) {
-                        discarded$39 = this.a(true);
+                        this.a(true);
                         return;
                       } else {
                         return;
@@ -851,7 +788,7 @@ final class cd {
                         if (param0 < -117) {
                           break L17;
                         } else {
-                          discarded$40 = this.a(true);
+                          this.a(true);
                           break L17;
                         }
                       }
@@ -860,7 +797,7 @@ final class cd {
                   }
                 } else {
                   if (param0 >= -117) {
-                    discarded$41 = this.a(true);
+                    this.a(true);
                     return;
                   } else {
                     return;
@@ -915,7 +852,7 @@ final class cd {
                       if (param0 < -117) {
                         break L21;
                       } else {
-                        discarded$42 = this.a(true);
+                        this.a(true);
                         break L21;
                       }
                     }
@@ -936,7 +873,7 @@ final class cd {
                           if (param0 < -117) {
                             break L23;
                           } else {
-                            discarded$43 = this.a(true);
+                            this.a(true);
                             break L23;
                           }
                         }
@@ -948,7 +885,7 @@ final class cd {
                           if (param0 < -117) {
                             break L24;
                           } else {
-                            discarded$44 = this.a(true);
+                            this.a(true);
                             break L24;
                           }
                         }
@@ -963,7 +900,7 @@ final class cd {
                           if (param0 < -117) {
                             break L25;
                           } else {
-                            discarded$45 = this.a(true);
+                            this.a(true);
                             break L25;
                           }
                         }
@@ -998,7 +935,7 @@ final class cd {
                         if (param0 < -117) {
                           break L27;
                         } else {
-                          discarded$46 = this.a(true);
+                          this.a(true);
                           break L27;
                         }
                       }
@@ -1008,7 +945,7 @@ final class cd {
                 }
               }
               if (param0 >= -117) {
-                discarded$47 = this.a(true);
+                this.a(true);
                 return;
               } else {
                 return;
@@ -1030,30 +967,19 @@ final class cd {
     }
 
     final void a(int param0, boolean param1, byte param2) {
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param1) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -1137,23 +1063,16 @@ final class cd {
     }
 
     final boolean c(byte param0) {
-        boolean discarded$10 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 11) {
           L0: {
-            discarded$10 = this.c((byte) 69);
+            this.c((byte) 69);
             if (96 != this.field_f) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -1161,12 +1080,10 @@ final class cd {
         } else {
           L1: {
             if (96 != this.field_f) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

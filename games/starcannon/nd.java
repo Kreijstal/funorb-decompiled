@@ -32,8 +32,6 @@ final class nd extends qf {
         p stackIn_2_0 = null;
         p stackIn_11_0 = null;
         p stackIn_16_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -41,18 +39,6 @@ final class nd extends qf {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        p stackOut_10_0 = null;
-        p stackOut_15_0 = null;
-        p stackOut_14_0 = null;
-        p stackOut_1_0 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
         try {
           L0: {
             var4 = (CharSequence) ((Object) param0);
@@ -81,8 +67,7 @@ final class nd extends qf {
                       }
                     }
                   }
-                  stackOut_10_0 = cd.field_a;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = cd.field_a;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -91,20 +76,17 @@ final class nd extends qf {
               }
               L4: {
                 if (this.field_o) {
-                  stackOut_15_0 = bf.field_x;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_0 = bf.field_x;
                   break L4;
                 } else {
-                  stackOut_14_0 = sb.field_n;
-                  stackIn_16_0 = stackOut_14_0;
+                  stackIn_16_0 = sb.field_n;
                   break L4;
                 }
               }
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_1_0 = sb.field_n;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = sb.field_n;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -113,27 +95,19 @@ final class nd extends qf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3_ref = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var3_ref);
-            stackOut_17_1 = new StringBuilder().append("nd.B(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var3_ref);
+
+            stackIn_19_1 = new StringBuilder().append("nd.B(");
+
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L5;
             }
           }
@@ -151,14 +125,13 @@ final class nd extends qf {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int discarded$2 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        ud var10 = null;
-        ud var11 = null;
-        byte[] var15 = null;
+        int var5;
+        int var6;
+        int var8;
+        int var9;
+        ud var10;
+        ud var11;
+        byte[] var15;
         L0: {
           var10 = gf.field_c[param3];
           var11 = var10;
@@ -208,7 +181,7 @@ final class nd extends qf {
           }
         }
         if (param1 != -3763) {
-          discarded$2 = nd.a(false, -9, -79);
+          nd.a(false, -9, -79);
           gf.field_c[param3] = new ud(var11.field_j, var15, var8, var9, var10.field_k);
           return;
         } else {
@@ -227,7 +200,6 @@ final class nd extends qf {
     }
 
     final String a(String param0, boolean param1) {
-        String discarded$2 = null;
         String var3 = null;
         RuntimeException var3_ref = null;
         ig var4 = null;
@@ -236,8 +208,6 @@ final class nd extends qf {
         String stackIn_5_0 = null;
         String stackIn_15_0 = null;
         String stackIn_17_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -245,17 +215,6 @@ final class nd extends qf {
         String stackIn_21_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_4_0 = null;
-        String stackOut_16_0 = null;
-        String stackOut_14_0 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
         try {
           L0: {
             L1: {
@@ -263,15 +222,14 @@ final class nd extends qf {
                 break L1;
               } else {
                 var5 = (String) null;
-                discarded$2 = this.a((String) null, false);
+                this.a((String) null, false);
                 break L1;
               }
             }
             var6 = (CharSequence) ((Object) param0);
             var3 = lj.a((byte) -5, var6);
             if (var3 != null) {
-              stackOut_4_0 = (String) (var3);
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = (String) (var3);
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -294,13 +252,11 @@ final class nd extends qf {
                 }
               }
               if (this.field_o) {
-                stackOut_16_0 = ll.field_a;
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_0 = ll.field_a;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_14_0 = cf.field_s;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = cf.field_s;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -310,27 +266,19 @@ final class nd extends qf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var3_ref);
-            stackOut_18_1 = new StringBuilder().append("nd.A(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var3_ref);
+
+            stackIn_20_1 = new StringBuilder().append("nd.A(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L3;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L3;
             }
           }
@@ -359,7 +307,6 @@ final class nd extends qf {
         int var4 = 0;
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
         var4 = StarCannon.field_A;
         try {
           L0: {
@@ -374,8 +321,7 @@ final class nd extends qf {
             var3_int = 0;
             L2: while (true) {
               if (0 >= param2) {
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = var3_int;
                 break L0;
               } else {
                 var3_int = var3_int << -1464204255 | param1 & 1;
@@ -395,10 +341,10 @@ final class nd extends qf {
 
     final static void b(int param0, byte param1) {
         rf var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         of var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = StarCannon.field_A;
         try {
           L0: {

@@ -9,9 +9,9 @@ public final class tqb {
     private jaclib.peer.PeerReference a;
 
     private final void a(int param0) {
-        java.lang.ref.Reference var2 = null;
-        jaclib.peer.PeerReference var4 = null;
-        jaclib.peer.PeerReference var5 = null;
+        java.lang.ref.Reference var2;
+        jaclib.peer.PeerReference var5;
+        jaclib.peer.PeerReference var4;
         if (param0 == -18289) {
           L0: while (true) {
             var2 = this.b.poll();
@@ -63,6 +63,7 @@ public final class tqb {
 
     private final void a(int param0, jaclib.peer.PeerReference param1) {
         L0: {
+          param1.a(0);
           if (param1 == this.c) {
             this.c = param1.b;
             break L0;

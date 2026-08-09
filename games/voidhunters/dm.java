@@ -25,9 +25,8 @@ final class dm extends mfb {
     }
 
     final static int a(int param0, byte param1) {
-        int discarded$4 = 0;
         if (param1 != -78) {
-            discarded$4 = dm.a(-119, (byte) -85);
+            dm.a(-119, (byte) -85);
             if (param0 == 3) {
                 return oq.field_l * wkb.field_a;
             }
@@ -46,9 +45,8 @@ final class dm extends mfb {
     }
 
     final int f(byte param0) {
-        int discarded$0 = 0;
         if (param0 < 0) {
-            discarded$0 = this.b(-118);
+            this.b(-118);
             return oq.field_m;
         }
         return oq.field_m;
@@ -84,9 +82,8 @@ final class dm extends mfb {
     }
 
     final boolean c(boolean param0) {
-        boolean discarded$0 = false;
         if (!param0) {
-            discarded$0 = this.c(false);
+            this.c(false);
             return true;
         }
         return true;

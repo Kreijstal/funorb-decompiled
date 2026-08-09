@@ -16,7 +16,28 @@ final class ka extends hj {
     static String field_l;
 
     final java.net.Socket a(boolean param0) throws IOException {
-        String discarded$2 = null;
+        int stackIn_5_0 = 0;
+        java.net.ProxySelector stackIn_8_0;
+        java.net.URI stackIn_8_1;
+        java.net.URI stackIn_8_2;
+        StringBuilder stackIn_8_3;
+        java.net.ProxySelector stackIn_9_0 = null;
+        java.net.URI stackIn_9_1 = null;
+        java.net.URI stackIn_9_2 = null;
+        StringBuilder stackIn_9_3 = null;
+        String stackIn_9_4 = null;
+        java.net.ProxySelector stackIn_11_0;
+        java.net.URI stackIn_11_1;
+        java.net.URI stackIn_11_2;
+        StringBuilder stackIn_11_3;
+        java.net.ProxySelector stackIn_12_0;
+        java.net.URI stackIn_12_1;
+        java.net.URI stackIn_12_2;
+        StringBuilder stackIn_12_3;
+        String stackIn_12_4;
+        java.net.Socket stackIn_23_0 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         List var3 = null;
         List var4 = null;
         int var5 = 0;
@@ -24,92 +45,28 @@ final class ka extends hj {
         Object[] var6_array = null;
         Object var7 = null;
         Object[] var8 = null;
-        Object[] var8_array = null;
         int var9 = 0;
         Object var10 = null;
         java.net.Proxy var11 = null;
-        qk var12 = null;
-        IOException var12_ref = null;
-        java.net.Socket var12_ref2 = null;
+        java.net.Socket var12 = null;
+        qk var12_ref = null;
+        IOException var12_ref2 = null;
         int var13 = 0;
-        int stackIn_5_0 = 0;
-        java.net.ProxySelector stackIn_7_0 = null;
-        java.net.URI stackIn_7_1 = null;
-        java.net.URI stackIn_7_2 = null;
-        StringBuilder stackIn_7_3 = null;
-        java.net.ProxySelector stackIn_8_0 = null;
-        java.net.URI stackIn_8_1 = null;
-        java.net.URI stackIn_8_2 = null;
-        StringBuilder stackIn_8_3 = null;
-        java.net.ProxySelector stackIn_9_0 = null;
-        java.net.URI stackIn_9_1 = null;
-        java.net.URI stackIn_9_2 = null;
-        StringBuilder stackIn_9_3 = null;
-        String stackIn_9_4 = null;
-        java.net.ProxySelector stackIn_10_0 = null;
-        java.net.URI stackIn_10_1 = null;
-        java.net.URI stackIn_10_2 = null;
-        StringBuilder stackIn_10_3 = null;
-        java.net.ProxySelector stackIn_11_0 = null;
-        java.net.URI stackIn_11_1 = null;
-        java.net.URI stackIn_11_2 = null;
-        StringBuilder stackIn_11_3 = null;
-        java.net.ProxySelector stackIn_12_0 = null;
-        java.net.URI stackIn_12_1 = null;
-        java.net.URI stackIn_12_2 = null;
-        StringBuilder stackIn_12_3 = null;
-        String stackIn_12_4 = null;
-        java.net.Socket stackIn_23_0 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        java.net.ProxySelector stackOut_6_0 = null;
-        java.net.URI stackOut_6_1 = null;
-        java.net.URI stackOut_6_2 = null;
-        StringBuilder stackOut_6_3 = null;
-        java.net.ProxySelector stackOut_8_0 = null;
-        java.net.URI stackOut_8_1 = null;
-        java.net.URI stackOut_8_2 = null;
-        StringBuilder stackOut_8_3 = null;
-        String stackOut_8_4 = null;
-        java.net.ProxySelector stackOut_7_0 = null;
-        java.net.URI stackOut_7_1 = null;
-        java.net.URI stackOut_7_2 = null;
-        StringBuilder stackOut_7_3 = null;
-        String stackOut_7_4 = null;
-        java.net.ProxySelector stackOut_9_0 = null;
-        java.net.URI stackOut_9_1 = null;
-        java.net.URI stackOut_9_2 = null;
-        StringBuilder stackOut_9_3 = null;
-        java.net.ProxySelector stackOut_11_0 = null;
-        java.net.URI stackOut_11_1 = null;
-        java.net.URI stackOut_11_2 = null;
-        StringBuilder stackOut_11_3 = null;
-        String stackOut_11_4 = null;
-        java.net.ProxySelector stackOut_10_0 = null;
-        java.net.URI stackOut_10_1 = null;
-        java.net.URI stackOut_10_2 = null;
-        StringBuilder stackOut_10_3 = null;
-        String stackOut_10_4 = null;
-        java.net.Socket stackOut_22_0 = null;
         L0: {
           var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
             break L0;
           } else {
-            discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
+            System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           }
         }
         L1: {
           if (this.field_d != 443) {
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 0;
             break L1;
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             break L1;
           }
         }
@@ -117,81 +74,53 @@ final class ka extends hj {
         try {
           L2: {
             L3: {
-              stackOut_6_0 = this.field_k;
-              stackOut_6_1 = null;
-              stackOut_6_2 = null;
-              stackOut_6_3 = new StringBuilder();
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
-              stackIn_8_3 = stackOut_6_3;
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              stackIn_7_3 = stackOut_6_3;
+              stackIn_8_0 = this.field_k;
+
+              stackIn_8_1 = null;
+
+              stackIn_8_2 = null;
+
+              stackIn_8_3 = new StringBuilder();
+
               if (var5 == 0) {
-                stackOut_8_0 = (java.net.ProxySelector) ((Object) stackIn_8_0);
-                stackOut_8_1 = null;
-                stackOut_8_2 = null;
-                stackOut_8_3 = (StringBuilder) ((Object) stackIn_8_3);
-                stackOut_8_4 = "http";
-                stackIn_9_0 = stackOut_8_0;
-                stackIn_9_1 = stackOut_8_1;
-                stackIn_9_2 = stackOut_8_2;
-                stackIn_9_3 = stackOut_8_3;
-                stackIn_9_4 = stackOut_8_4;
+                stackIn_9_0 = (java.net.ProxySelector) ((Object) stackIn_8_0);
+                stackIn_9_1 = null;
+                stackIn_9_2 = null;
+                stackIn_9_3 = (StringBuilder) ((Object) stackIn_8_3);
+                stackIn_9_4 = "http";
                 break L3;
               } else {
-                stackOut_7_0 = (java.net.ProxySelector) ((Object) stackIn_7_0);
-                stackOut_7_1 = null;
-                stackOut_7_2 = null;
-                stackOut_7_3 = (StringBuilder) ((Object) stackIn_7_3);
-                stackOut_7_4 = "https";
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_9_1 = stackOut_7_1;
-                stackIn_9_2 = stackOut_7_2;
-                stackIn_9_3 = stackOut_7_3;
-                stackIn_9_4 = stackOut_7_4;
+                stackIn_9_0 = (java.net.ProxySelector) ((Object) stackIn_8_0);
+                stackIn_9_1 = null;
+                stackIn_9_2 = null;
+                stackIn_9_3 = (StringBuilder) ((Object) stackIn_8_3);
+                stackIn_9_4 = "https";
                 break L3;
               }
             }
             L4: {
               var3 = ((java.net.ProxySelector) (Object) stackIn_9_0).select(new java.net.URI(stackIn_9_4 + "://" + this.field_b));
-              stackOut_9_0 = this.field_k;
-              stackOut_9_1 = null;
-              stackOut_9_2 = null;
-              stackOut_9_3 = new StringBuilder();
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              stackIn_11_3 = stackOut_9_3;
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              stackIn_10_3 = stackOut_9_3;
+              stackIn_11_0 = this.field_k;
+
+              stackIn_11_1 = null;
+
+              stackIn_11_2 = null;
+
+              stackIn_11_3 = new StringBuilder();
+
               if (var5 == 0) {
-                stackOut_11_0 = (java.net.ProxySelector) ((Object) stackIn_11_0);
-                stackOut_11_1 = null;
-                stackOut_11_2 = null;
-                stackOut_11_3 = (StringBuilder) ((Object) stackIn_11_3);
-                stackOut_11_4 = "https";
-                stackIn_12_0 = stackOut_11_0;
-                stackIn_12_1 = stackOut_11_1;
-                stackIn_12_2 = stackOut_11_2;
-                stackIn_12_3 = stackOut_11_3;
-                stackIn_12_4 = stackOut_11_4;
+                stackIn_12_0 = (java.net.ProxySelector) ((Object) stackIn_11_0);
+                stackIn_12_1 = null;
+                stackIn_12_2 = null;
+                stackIn_12_3 = (StringBuilder) ((Object) stackIn_11_3);
+                stackIn_12_4 = "https";
                 break L4;
               } else {
-                stackOut_10_0 = (java.net.ProxySelector) ((Object) stackIn_10_0);
-                stackOut_10_1 = null;
-                stackOut_10_2 = null;
-                stackOut_10_3 = (StringBuilder) ((Object) stackIn_10_3);
-                stackOut_10_4 = "http";
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_12_1 = stackOut_10_1;
-                stackIn_12_2 = stackOut_10_2;
-                stackIn_12_3 = stackOut_10_3;
-                stackIn_12_4 = stackOut_10_4;
+                stackIn_12_0 = (java.net.ProxySelector) ((Object) stackIn_11_0);
+                stackIn_12_1 = null;
+                stackIn_12_2 = null;
+                stackIn_12_3 = (StringBuilder) ((Object) stackIn_11_3);
+                stackIn_12_4 = "http";
                 break L4;
               }
             }
@@ -203,28 +132,27 @@ final class ka extends hj {
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
           return this.b(31619);
         }
-        boolean discarded$3 = var3.addAll((Collection) ((Object) var4));
+        var3.addAll((Collection) ((Object) var4));
         if (param0) {
           var6_array = var3.toArray();
           var7 = null;
-          var8_array = var6_array;
+          var8 = var6_array;
           var9 = 0;
           L5: while (true) {
-            if (var8_array.length <= var9) {
+            if (var8.length <= var9) {
               if (var7 == null) {
                 return this.b(31619);
               } else {
                 throw ka.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
               }
             } else {
-              var10 = var8_array[var9];
+              var10 = var8[var9];
               var11 = (java.net.Proxy) (var10);
               try {
                 L6: {
-                  var12_ref2 = this.a(-39, var11);
-                  if (var12_ref2 != null) {
-                    stackOut_22_0 = (java.net.Socket) (var12_ref2);
-                    stackIn_23_0 = stackOut_22_0;
+                  var12 = this.a(-39, var11);
+                  if (var12 != null) {
+                    stackIn_23_0 = (java.net.Socket) (var12);
                     decompiledRegionSelector0 = 1;
                     break L6;
                   } else {
@@ -236,8 +164,8 @@ final class ka extends hj {
               } catch (qk decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 L7: {
-                  var12 = (qk) (Object) decompiledCaughtException;
-                  var7 = var12;
+                  var12_ref = (qk) (Object) decompiledCaughtException;
+                  var7 = var12_ref;
                   var9++;
                   decompiledRegionSelector0 = 0;
                   break L7;
@@ -245,7 +173,7 @@ final class ka extends hj {
               } catch (java.io.IOException decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 L8: {
-                  var12_ref = (IOException) (Object) decompiledCaughtException;
+                  var12_ref2 = (IOException) (Object) decompiledCaughtException;
                   var9++;
                   decompiledRegionSelector0 = 0;
                   break L8;
@@ -264,14 +192,12 @@ final class ka extends hj {
     }
 
     private final java.net.Socket a(int param0, java.net.Proxy param1) throws IOException {
-        RuntimeException var3 = null;
-        java.net.SocketAddress var3_ref = null;
+        java.net.SocketAddress var3 = null;
+        RuntimeException var3_ref = null;
         int var4 = 0;
-        Object var5 = null;
-        java.net.InetSocketAddress var5_ref = null;
+        java.net.InetSocketAddress var5 = null;
         Object var6 = null;
-        Exception var7 = null;
-        Class var7_ref = null;
+        Class var7 = null;
         java.lang.reflect.Method var8 = null;
         Object var9 = null;
         java.lang.reflect.Method var10 = null;
@@ -284,8 +210,6 @@ final class ka extends hj {
         Object stackIn_5_0 = null;
         Object stackIn_10_0 = null;
         java.net.Socket stackIn_19_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -293,42 +217,31 @@ final class ka extends hj {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        java.net.Socket stackOut_18_0 = null;
-        Object stackOut_9_0 = null;
-        Object stackOut_4_0 = null;
-        java.net.Socket stackOut_1_0 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        Exception var7_ref = null;
         try {
           L0: {
             if (param1.type() != java.net.Proxy.Type.DIRECT) {
               var4 = -7 % ((7 - param0) / 35);
-              var3_ref = param1.address();
-              if ((Object) var3_ref instanceof java.net.InetSocketAddress) {
-                var5_ref = (java.net.InetSocketAddress) ((Object) var3_ref);
+              var3 = param1.address();
+              if ((Object) var3 instanceof java.net.InetSocketAddress) {
+                var5 = (java.net.InetSocketAddress) ((Object) var3);
                 if (param1.type() == java.net.Proxy.Type.HTTP) {
                   var6 = null;
                   try {
                     L1: {
                       L2: {
                         var15 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
-                        var7_ref = var15;
+                        var7 = var15;
                         var8 = var15.getDeclaredMethod("getProxyAuth", new Class[]{String.class, Integer.TYPE});
                         var8.setAccessible(true);
-                        var9 = var8.invoke((Object) null, new Object[]{var5_ref.getHostName(), new Integer(var5_ref.getPort())});
+                        var9 = var8.invoke((Object) null, new Object[]{var5.getHostName(), new Integer(var5.getPort())});
                         if (var9 != null) {
-                          var10 = var7_ref.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[]{});
+                          var10 = var7.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[]{});
                           var10.setAccessible(true);
                           if (!((Boolean) (var10.invoke(var9, new Object[]{}))).booleanValue()) {
                             break L2;
                           } else {
-                            var11 = var7_ref.getDeclaredMethod("getHeaderName", new Class[]{});
+                            var11 = var7.getDeclaredMethod("getHeaderName", new Class[]{});
                             var11.setAccessible(true);
                             var12 = var15.getDeclaredMethod("getHeaderValue", new Class[]{java.net.URL.class, String.class});
                             var12.setAccessible(true);
@@ -346,20 +259,18 @@ final class ka extends hj {
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     L3: {
-                      var7 = (Exception) (Object) decompiledCaughtException;
+                      var7_ref = (Exception) (Object) decompiledCaughtException;
                       break L3;
                     }
                   }
-                  stackOut_18_0 = this.a(var5_ref.getPort(), var5_ref.getHostName(), 0, (String) (var6));
-                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_0 = this.a(var5.getPort(), var5.getHostName(), 0, (String) (var6));
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   if (param1.type() == java.net.Proxy.Type.SOCKS) {
                     var6 = new java.net.Socket(param1);
                     ((java.net.Socket) (var6)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.field_b, this.field_d)));
-                    stackOut_9_0 = var6;
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = var6;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
@@ -367,14 +278,12 @@ final class ka extends hj {
                   }
                 }
               } else {
-                stackOut_4_0 = null;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = this.b(31619);
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = this.b(31619);
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -382,28 +291,20 @@ final class ka extends hj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           L4: {
-            var3 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var3);
-            stackOut_20_1 = new StringBuilder().append("ka.K(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_22_0 = (RuntimeException) (var3_ref);
+
+            stackIn_22_1 = new StringBuilder().append("ka.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L4;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L4;
             }
           }
@@ -426,19 +327,16 @@ final class ka extends hj {
 
     final static boolean a(char param0, int param1) {
         char[] var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
         int stackIn_8_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_20_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_19_0 = 0;
+        RuntimeException var2_ref = null;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -447,8 +345,7 @@ final class ka extends hj {
                 break L1;
               } else {
                 if (param0 < 128) {
-                  stackOut_7_0 = 1;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -479,9 +376,8 @@ final class ka extends hj {
                     break L3;
                   } else {
                     var4 = var6[var3];
-                    if (param0 == var4) {
-                      stackOut_14_0 = 1;
-                      stackIn_15_0 = stackOut_14_0;
+                    if ((param0 ^ -1) == (var4 ^ -1)) {
+                      stackIn_16_0 = 1;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
@@ -500,8 +396,7 @@ final class ka extends hj {
                 break L5;
               }
             }
-            stackOut_19_0 = 0;
-            stackIn_20_0 = stackOut_19_0;
+            stackIn_21_0 = 0;
             decompiledRegionSelector0 = 2;
             break L0;
           }
@@ -514,19 +409,19 @@ final class ka extends hj {
           return stackIn_8_0 != 0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_15_0 != 0;
+            return stackIn_16_0 != 0;
           } else {
-            return stackIn_20_0 != 0;
+            return stackIn_21_0 != 0;
           }
         }
     }
 
     final static void a(int param0, byte param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         bg var4 = null;
         vb var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -578,6 +473,19 @@ final class ka extends hj {
     }
 
     private final java.net.Socket a(int param0, String param1, int param2, String param3) throws IOException {
+        java.net.Socket stackIn_9_0 = null;
+        java.net.Socket stackIn_25_0 = null;
+        Object stackIn_27_0 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        StringBuilder stackIn_33_1 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         OutputStream var6 = null;
         BufferedReader var7 = null;
@@ -588,44 +496,6 @@ final class ka extends hj {
         int var12 = 0;
         java.net.Socket var13 = null;
         String var14 = null;
-        java.net.Socket stackIn_9_0 = null;
-        java.net.Socket stackIn_25_0 = null;
-        Object stackIn_27_0 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_34_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        java.net.Socket stackOut_8_0 = null;
-        Object stackOut_26_0 = null;
-        java.net.Socket stackOut_24_0 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
         var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -703,8 +573,7 @@ final class ka extends hj {
                     }
                   }
                 }
-                stackOut_8_0 = (java.net.Socket) (var13);
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = (java.net.Socket) (var13);
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -713,13 +582,11 @@ final class ka extends hj {
             if (param2 == 0) {
               var7.close();
               var13.close();
-              stackOut_26_0 = null;
-              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_0 = null;
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_24_0 = (java.net.Socket) null;
-              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_0 = (java.net.Socket) null;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -728,56 +595,40 @@ final class ka extends hj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var5);
-            stackOut_28_1 = new StringBuilder().append("ka.J(").append(param0).append(',');
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackIn_30_0 = (RuntimeException) (var5);
+
+            stackIn_30_1 = new StringBuilder().append("ka.J(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L8;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',').append(param2).append(',');
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+
+
+            stackIn_33_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L9;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L9;
             }
           }
-          throw ie.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_31_0), stackIn_34_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_9_0;

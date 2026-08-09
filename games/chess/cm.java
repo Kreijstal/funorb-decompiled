@@ -15,7 +15,7 @@ abstract class cm extends l {
     abstract Object f(int param0);
 
     final static void d(byte param0) {
-        int var1 = 0;
+        int var1;
         if (bc.field_b > 10) {
           rf.b(80, bc.field_b + -10);
           var1 = 4 % ((-52 - param0) / 51);

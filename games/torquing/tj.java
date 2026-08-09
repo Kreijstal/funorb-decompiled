@@ -28,8 +28,8 @@ final class tj extends q {
     }
 
     final static am a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Torquing.field_u;
         var2 = param0;
         if (0 != var2) {

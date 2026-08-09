@@ -57,6 +57,8 @@ final class q {
     }
 
     final static void c(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -70,8 +72,6 @@ final class q {
         da var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = HoldTheLine.field_D;
         try {
           L0: {
@@ -124,7 +124,7 @@ final class q {
                         break L5;
                       } else {
                         L6: {
-                          if (var3 != var5_ref_se.field_j) {
+                          if ((var3 ^ -1) != (var5_ref_se.field_j ^ -1)) {
                             break L6;
                           } else {
                             if (var5_ref_se.field_k == var4_int) {
@@ -199,28 +199,18 @@ final class q {
     final static void a(int param0, th param1) {
         try {
             byte[] var2 = null;
-            RuntimeException var2_ref = null;
             int var3_int = 0;
             Exception var3 = null;
             int var4 = 0;
             int var5 = 0;
             byte[] var6 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
             RuntimeException stackIn_20_0 = null;
             StringBuilder stackIn_20_1 = null;
             String stackIn_20_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_17_0 = null;
-            StringBuilder stackOut_17_1 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            String stackOut_18_2 = null;
+            RuntimeException var2_ref = null;
             var5 = HoldTheLine.field_D;
             try {
               L0: {
@@ -289,27 +279,19 @@ final class q {
               decompiledCaughtException = decompiledCaughtParameter1;
               L8: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_17_0 = (RuntimeException) (var2_ref);
-                stackOut_17_1 = new StringBuilder().append("q.F(").append(param0).append(',');
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
+                stackIn_19_0 = (RuntimeException) (var2_ref);
+
+                stackIn_19_1 = new StringBuilder().append("q.F(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "null";
-                  stackIn_20_0 = stackOut_19_0;
-                  stackIn_20_1 = stackOut_19_1;
-                  stackIn_20_2 = stackOut_19_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "null";
                   break L8;
                 } else {
-                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackOut_18_2 = "{...}";
-                  stackIn_20_0 = stackOut_18_0;
-                  stackIn_20_1 = stackOut_18_1;
-                  stackIn_20_2 = stackOut_18_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "{...}";
                   break L8;
                 }
               }

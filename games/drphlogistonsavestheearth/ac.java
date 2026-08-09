@@ -14,13 +14,12 @@ final class ac {
     static int field_a;
 
     public static void a(byte param0) {
-        int discarded$2 = 0;
         field_d = null;
         field_b = null;
         field_j = null;
         field_h = null;
         if (param0 >= -52) {
-          discarded$2 = ac.a(115);
+          ac.a(115);
           field_g = null;
           field_f = null;
           return;
@@ -32,9 +31,9 @@ final class ac {
     }
 
     final ai a(int param0, byte param1) {
-        ai var3 = null;
-        byte[] var4 = null;
-        ai var5 = null;
+        ai var3;
+        byte[] var4;
+        ai var5;
         var3 = (ai) (this.field_i.a(true, (long)param0));
         if (var3 == null) {
           L0: {

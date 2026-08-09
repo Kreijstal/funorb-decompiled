@@ -23,28 +23,15 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
     }
 
     final static boolean a(int param0, String param1) {
-        boolean discarded$2 = false;
         RuntimeException var2 = null;
         String var3 = null;
         int stackIn_5_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -52,18 +39,16 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 break L1;
               } else {
                 var3 = (String) null;
-                discarded$2 = i.a(54, (String) null);
+                i.a(54, (String) null);
                 break L1;
               }
             }
             L2: {
               if (fh.a(param1, -99) == null) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L2;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L2;
               }
             }
@@ -73,27 +58,19 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("i.F(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("i.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -103,10 +80,9 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
     }
 
     final void a(java.awt.Graphics param0, boolean param1, int param2, int param3) {
-        boolean discarded$0 = false;
         try {
             this.b(param1);
-            discarded$0 = param0.drawImage(this.field_d, param3, param2, (java.awt.image.ImageObserver) (this));
+            param0.drawImage(this.field_d, param3, param2, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) ((Object) runtimeException), "i.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -140,54 +116,34 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_0_0 = 0;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = 1;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var7);
-            stackOut_2_1 = new StringBuilder().append("i.imageUpdate(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var7);
+
+            stackIn_4_1 = new StringBuilder().append("i.imageUpdate(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -197,9 +153,6 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
     }
 
     final void a(int param0, java.awt.Component param1, int param2, byte param3) {
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
         try {
             this.field_i = param2;
             this.field_a = param0;
@@ -207,14 +160,14 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
             this.field_o = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
             this.field_d = param1.createImage((java.awt.image.ImageProducer) (this));
             this.b(false);
-            discarded$6 = param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
+            param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
             if (param3 > -51) {
                 i.a(-29, true, false, false, true, 57, -40, true, -122, -23);
             }
             this.b(false);
-            discarded$7 = param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
+            param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
             this.b(false);
-            discarded$8 = param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
+            param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
             this.a(19692);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) ((Object) runtimeException), "i.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -250,8 +203,6 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
         Class stackIn_28_0 = null;
         Class stackIn_31_0 = null;
         Class stackIn_33_0 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
@@ -259,46 +210,25 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
         String stackIn_37_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Class stackOut_2_0 = null;
-        Class stackOut_6_0 = null;
-        Class stackOut_10_0 = null;
-        Class stackOut_14_0 = null;
-        Class stackOut_23_0 = null;
-        Class stackOut_27_0 = null;
-        Class stackOut_32_0 = null;
-        Class stackOut_30_0 = null;
-        Class stackOut_17_0 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
         try {
           L0: {
             if (param0.equals("B")) {
-              stackOut_2_0 = Byte.TYPE;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = Byte.TYPE;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (param0.equals("I")) {
-                stackOut_6_0 = Integer.TYPE;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = Integer.TYPE;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (param0.equals("S")) {
-                  stackOut_10_0 = Short.TYPE;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = Short.TYPE;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (param0.equals("J")) {
-                    stackOut_14_0 = Long.TYPE;
-                    stackIn_15_0 = stackOut_14_0;
+                    stackIn_15_0 = Long.TYPE;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
@@ -312,33 +242,28 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                         }
                       }
                       if (param0.equals("F")) {
-                        stackOut_23_0 = Float.TYPE;
-                        stackIn_24_0 = stackOut_23_0;
+                        stackIn_24_0 = Float.TYPE;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       } else {
                         if (param0.equals("D")) {
-                          stackOut_27_0 = Double.TYPE;
-                          stackIn_28_0 = stackOut_27_0;
+                          stackIn_28_0 = Double.TYPE;
                           decompiledRegionSelector0 = 6;
                           break L0;
                         } else {
                           if (!param0.equals("C")) {
-                            stackOut_32_0 = Class.forName(param0);
-                            stackIn_33_0 = stackOut_32_0;
+                            stackIn_33_0 = Class.forName(param0);
                             decompiledRegionSelector0 = 8;
                             break L0;
                           } else {
-                            stackOut_30_0 = Character.TYPE;
-                            stackIn_31_0 = stackOut_30_0;
+                            stackIn_31_0 = Character.TYPE;
                             decompiledRegionSelector0 = 7;
                             break L0;
                           }
                         }
                       }
                     } else {
-                      stackOut_17_0 = Boolean.TYPE;
-                      stackIn_18_0 = stackOut_17_0;
+                      stackIn_18_0 = Boolean.TYPE;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     }
@@ -351,27 +276,19 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_34_0 = (RuntimeException) (var2);
-            stackOut_34_1 = new StringBuilder().append("i.E(");
-            stackIn_36_0 = stackOut_34_0;
-            stackIn_36_1 = stackOut_34_1;
-            stackIn_35_0 = stackOut_34_0;
-            stackIn_35_1 = stackOut_34_1;
+            stackIn_36_0 = (RuntimeException) (var2);
+
+            stackIn_36_1 = new StringBuilder().append("i.E(");
+
             if (param0 == null) {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
+              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "null";
               break L2;
             } else {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "{...}";
-              stackIn_37_0 = stackOut_35_0;
-              stackIn_37_1 = stackOut_35_1;
-              stackIn_37_2 = stackOut_35_2;
+              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "{...}";
               break L2;
             }
           }
@@ -413,7 +330,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
     }
 
     final static void a(int param0, boolean param1, boolean param2, boolean param3, boolean param4, int param5, int param6, boolean param7, int param8, int param9) {
-        int var11 = 0;
+        int var11;
         var11 = Pixelate.field_H ? 1 : 0;
         if (!param4) {
           if (ni.field_q == t.field_j) {
@@ -1148,23 +1065,13 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -1181,27 +1088,19 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("i.removeConsumer(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("i.removeConsumer(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }

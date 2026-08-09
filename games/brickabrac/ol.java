@@ -13,7 +13,7 @@ final class ol extends km {
     static boolean field_s;
 
     final void a(int param0, int param1, char param2) {
-        int var5 = 0;
+        int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
         if (param0 == -120) {
           L0: {
@@ -76,9 +76,9 @@ final class ol extends km {
     }
 
     final boolean a(int param0, boolean param1, byte param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = BrickABrac.field_J ? 1 : 0;
           var4 = this.field_m[param0].field_f;
@@ -122,22 +122,20 @@ final class ol extends km {
     }
 
     final void b(boolean param0) {
-        int dupTemp$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        q var5 = null;
-        String var5_ref = null;
-        int var6 = 0;
-        q var7 = null;
-        q var8 = null;
-        q var9 = null;
-        String var10 = null;
-        q var11 = null;
-        q var12 = null;
+        int dupTemp$0 = 0;
         String stackIn_7_0 = null;
-        String stackOut_6_0 = null;
-        String stackOut_5_0 = null;
+        int var2;
+        int var3;
+        int var4;
+        q var5;
+        String var5_ref;
+        int var6;
+        q var7;
+        q var8;
+        q var9;
+        String var10;
+        q var11;
+        q var12;
         var6 = BrickABrac.field_J ? 1 : 0;
         if (param0) {
           var2 = 0;
@@ -175,20 +173,18 @@ final class ol extends km {
                 var7 = this.field_m[var3];
                 var9 = var7;
                 if (var9.field_f == 8) {
-                  stackOut_6_0 = this.e((byte) 81);
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = this.e((byte) 81);
                   break L2;
                 } else {
-                  stackOut_5_0 = ag.field_D[var7.field_f];
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = ag.field_D[var7.field_f];
                   break L2;
                 }
               }
               var10 = stackIn_7_0;
               var5_ref = var10;
-              dupTemp$1 = nn.field_g.c(var10) - -30;
-              var9.field_j = dupTemp$1;
-              var2 = var2 + dupTemp$1;
+              dupTemp$0 = nn.field_g.c(var10) - -30;
+              var9.field_j = dupTemp$0;
+              var2 = var2 + dupTemp$0;
               if (var3 > 0) {
                 var2 += 10;
                 var3++;

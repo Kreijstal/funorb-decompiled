@@ -14,25 +14,21 @@ final class ra extends at {
     static String field_p;
 
     final boolean c(byte param0) {
-        int fieldTemp$2 = 0;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        int var2;
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (this.field_q.a((byte) -106)) {
           return false;
         } else {
           L0: {
             var2 = -46 / ((param0 - 71) / 47);
-            fieldTemp$2 = this.field_m - 1;
+            fieldTemp$1 = this.field_m - 1;
             this.field_m = this.field_m - 1;
-            if (-1 > (fieldTemp$2 ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+            if (-1 > (fieldTemp$1 ^ -1)) {
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L0;
             }
           }

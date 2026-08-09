@@ -9,44 +9,28 @@ final class bd extends en {
     static String[] field_e;
 
     private final cn a(boolean param0, int param1) {
-        String var3 = null;
-        String[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        wb[] var8 = null;
-        int var9 = 0;
-        cn var10 = null;
-        int var12 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        sa var16 = null;
-        int var17 = 0;
-        String[] var18 = null;
-        String var19 = null;
-        wb[] var20 = null;
-        wb var21 = null;
         wb[] stackIn_3_0 = null;
         boolean stackIn_9_0 = false;
-        int stackIn_10_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_12_0 = 0;
         int stackIn_13_0 = 0;
-        int stackIn_14_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_15_1 = 0;
-        wb[] stackOut_2_0 = null;
-        Object stackOut_1_0 = null;
-        boolean stackOut_8_0 = false;
-        boolean stackOut_7_0 = false;
-        int stackOut_9_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_14_1 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_13_1 = 0;
+        String var3;
+        String[] var4;
+        int var5;
+        int var6;
+        int var7;
+        wb[] var8;
+        int var9;
+        cn var10;
+        int var12;
+        int var14;
+        int var15;
+        sa var16;
+        int var17;
+        String[] var18;
+        String var19;
+        wb[] var20;
+        wb var21;
         L0: {
           var15 = DungeonAssault.field_K;
           jh.c();
@@ -56,12 +40,10 @@ final class bd extends en {
           var6 = (var5 - -2) * la.field_b.field_H - -la.field_b.field_E;
           var7 = la.field_b.field_H;
           if (null != this.field_d) {
-            stackOut_2_0 = this.field_d.field_f;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = this.field_d.field_f;
             break L0;
           } else {
-            stackOut_1_0 = null;
-            stackIn_3_0 = (wb[]) ((Object) stackOut_1_0);
+            stackIn_3_0 = null;
             break L0;
           }
         }
@@ -76,51 +58,40 @@ final class bd extends en {
         }
         L2: {
           if (null != this.field_d) {
-            stackOut_8_0 = this.field_d.field_i;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = this.field_d.field_i;
             break L2;
           } else {
-            stackOut_7_0 = this.field_h.field_b;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = this.field_h.field_b;
             break L2;
           }
         }
         L3: {
           L4: {
             var9 = stackIn_9_0 ? 1 : 0;
-            stackOut_9_0 = var9;
-            stackIn_13_0 = stackOut_9_0;
-            stackIn_10_0 = stackOut_9_0;
+            stackIn_13_0 = var9;
+
             if (this.field_h.field_g == 2) {
               break L4;
             } else {
-              stackOut_10_0 = stackIn_10_0;
-              stackIn_13_0 = stackOut_10_0;
-              stackIn_11_0 = stackOut_10_0;
+
               if (this.field_h.field_g == 1) {
                 break L4;
               } else {
-                stackOut_11_0 = stackIn_11_0;
-                stackIn_14_0 = stackOut_11_0;
-                stackIn_12_0 = stackOut_11_0;
+
+
                 if (-4 != (this.field_h.field_g ^ -1)) {
-                  stackOut_14_0 = stackIn_14_0;
-                  stackOut_14_1 = 0;
-                  stackIn_15_0 = stackOut_14_0;
-                  stackIn_15_1 = stackOut_14_1;
+                  stackIn_15_0 = stackIn_13_0;
+                  stackIn_15_1 = 0;
                   break L3;
                 } else {
-                  stackOut_12_0 = stackIn_12_0;
-                  stackIn_13_0 = stackOut_12_0;
+
                   break L4;
                 }
               }
             }
           }
-          stackOut_13_0 = stackIn_13_0;
-          stackOut_13_1 = 1;
-          stackIn_15_0 = stackOut_13_0;
-          stackIn_15_1 = stackOut_13_1;
+          stackIn_15_0 = stackIn_13_0;
+          stackIn_15_1 = 1;
           break L3;
         }
         L5: {
@@ -222,27 +193,21 @@ final class bd extends en {
     }
 
     final cn b(byte param0) {
-        String var2 = null;
-        Object var3 = null;
-        String var4_ref_String = null;
-        int var4 = 0;
-        cn var5 = null;
-        int var6 = 0;
-        Object[] var7_ref = null;
-        int var7 = 0;
-        int var8 = 0;
-        Object var9 = null;
-        int var10 = 0;
-        String var11 = null;
-        int stackIn_7_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_9_1 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
+        String var2;
+        Object var3;
+        String var4_ref_String;
+        int var4;
+        cn var5;
+        int var6;
+        Object[] var7_ref;
+        int var7;
+        int var8;
+        Object var9;
+        int var10;
+        String var11;
         L0: {
           var10 = DungeonAssault.field_K;
           jh.c();
@@ -271,20 +236,15 @@ final class bd extends en {
           }
         }
         L2: {
-          stackOut_6_0 = db.field_v.field_H;
-          stackIn_8_0 = stackOut_6_0;
-          stackIn_7_0 = stackOut_6_0;
+          stackIn_8_0 = db.field_v.field_H;
+
           if (var2 == null) {
-            stackOut_8_0 = stackIn_8_0;
-            stackOut_8_1 = 1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_9_0 = stackIn_8_0;
+            stackIn_9_1 = 1;
             break L2;
           } else {
-            stackOut_7_0 = stackIn_7_0;
-            stackOut_7_1 = 2 + ((Object[]) (var3)).length;
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
+            stackIn_9_0 = stackIn_8_0;
+            stackIn_9_1 = 2 + ((Object[]) (var3)).length;
             break L2;
           }
         }
@@ -296,7 +256,7 @@ final class bd extends en {
           db.field_v.c(this.field_h.field_z, 100, var6, 16777215, -1);
           var6 = var6 + db.field_v.field_H;
           if (var2 != null) {
-            var7_ref = (Object[]) (var3);
+            var7_ref = (Object[]) (Object) (var3);
             var8 = 0;
             L4: while (true) {
               if (var7_ref.length <= var8) {

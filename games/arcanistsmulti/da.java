@@ -60,7 +60,7 @@ final class da {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1;
         ff.field_c = tj.field_t.b(ce.field_g[20]);
         var1 = tj.field_t.b(ce.field_g[21]);
         if (param0 == -101) {

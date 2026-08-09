@@ -17,22 +17,22 @@ final class r {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
         int[] var10_ref_int__ = null;
-        int var11 = 0;
+        int var10 = 0;
         int[] var11_ref_int__ = null;
-        int[] var12 = null;
+        int var11 = 0;
         int var12_int = 0;
-        int[] var13 = null;
+        int[] var12 = null;
         int var13_int = 0;
+        int[] var13 = null;
         int var14 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         var14 = Torquing.field_u;
         try {
           L0: {

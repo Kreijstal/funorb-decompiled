@@ -12,24 +12,15 @@ final class ei {
 
     final static void a(int param0, fb param1) {
         fb var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
+        int stackIn_8_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var2_ref = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -50,7 +41,8 @@ final class ei {
               }
               L3: {
                 if (var2 != null) {
-                  wp.a((byte) -123, param1, var2);
+                  stackIn_8_0 = -123;
+                  wp.a((byte) stackIn_8_0, param1, var2);
                   break L3;
                 } else {
                   kj.field_a.a((byte) -113, param1);
@@ -64,46 +56,31 @@ final class ei {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2_ref);
-            stackOut_9_1 = new StringBuilder().append("ei.C(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_12_0 = (RuntimeException) (var2_ref);
+
+            stackIn_12_1 = new StringBuilder().append("ei.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
-          throw r.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 
     final static void a(byte param0, nf param1) {
-        int dupTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int incrementValue$6 = 0;
-        int dupTemp$7 = 0;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
+        int dupTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int dupTemp$3 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -111,14 +88,11 @@ final class ei {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -129,16 +103,16 @@ final class ei {
                   var2_int = 0;
                   L2: while (true) {
                     if (var2_int >= da.field_g) {
-                      dupTemp$4 = param1.a((byte) 113);
-                      im.field_b[dupTemp$4] = im.field_b[dupTemp$4] + 1;
+                      dupTemp$0 = param1.a((byte) 113);
+                      im.field_b[dupTemp$0] = im.field_b[dupTemp$0] + 1;
                       var2_int = 0;
                       var3 = 0;
                       L3: while (true) {
                         if (var3 >= da.field_g) {
                           da.field_g = var2_int;
-                          fieldTemp$5 = da.field_g;
+                          fieldTemp$1 = da.field_g;
                           da.field_g = da.field_g + 1;
-                          wm.field_d[fieldTemp$5] = param1;
+                          wm.field_d[fieldTemp$1] = param1;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -156,9 +130,9 @@ final class ei {
                                 }
                               }
                             }
-                            incrementValue$6 = var2_int;
+                            incrementValue$2 = var2_int;
                             var2_int++;
-                            wm.field_d[incrementValue$6] = wm.field_d[var3];
+                            wm.field_d[incrementValue$2] = wm.field_d[var3];
                             break L4;
                           }
                           var3++;
@@ -170,8 +144,8 @@ final class ei {
                         if (wm.field_d[var2_int].field_n != param1.field_n) {
                           break L6;
                         } else {
-                          dupTemp$7 = wm.field_d[var2_int].a((byte) 115);
-                          im.field_b[dupTemp$7] = im.field_b[dupTemp$7] + 1;
+                          dupTemp$3 = wm.field_d[var2_int].a((byte) 115);
+                          im.field_b[dupTemp$3] = im.field_b[dupTemp$3] + 1;
                           break L6;
                         }
                       }
@@ -194,27 +168,19 @@ final class ei {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var2);
-            stackOut_20_1 = new StringBuilder().append("ei.B(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var2);
+
+            stackIn_22_1 = new StringBuilder().append("ei.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L7;
             }
           }
@@ -255,8 +221,7 @@ final class ei {
     }
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        RuntimeException var7 = null;
-        int[] var7_array = null;
+        int[] var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -267,6 +232,7 @@ final class ei {
         int[] var15 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var7_ref = null;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -280,7 +246,7 @@ final class ei {
                   var15 = new int[4];
                   var14 = var15;
                   var13 = var14;
-                  var7_array = var13;
+                  var7 = var13;
                   gf.a(var15);
                   gf.a(param5, param4, param2, param1, 10, 0, 200);
                   am.a(-10 + param2, param6, param3 ^ 12362, -10 + param1, param5, param4);
@@ -345,8 +311,8 @@ final class ei {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var7), "ei.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          var7_ref = decompiledCaughtException;
+          throw r.a((Throwable) ((Object) var7_ref), "ei.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

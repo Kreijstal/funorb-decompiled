@@ -14,7 +14,6 @@ final class vh {
     static int field_c;
 
     final static boolean a(int param0, int param1, int param2) {
-        boolean discarded$7 = false;
         if (-14 == (vg.field_a ^ -1)) {
           kf.a(-87);
           return true;
@@ -34,7 +33,7 @@ final class vh {
                 return false;
               }
             } else {
-              discarded$7 = vh.a(-29, -66, -74);
+              vh.a(-29, -66, -74);
               if (null != tl.field_Fb) {
                 if (!tl.field_Fb.b((byte) -63, param2, param1)) {
                   return false;
@@ -50,15 +49,14 @@ final class vh {
     }
 
     public static void a(int param0) {
-        byte[] discarded$2 = null;
-        String var2 = null;
+        String var2;
         field_d = null;
         field_h = null;
         field_f = null;
         field_b = null;
         if (param0 != 102) {
           var2 = (String) null;
-          discarded$2 = vh.a((byte) 46, (String) null);
+          vh.a((byte) 46, (String) null);
           field_a = null;
           return;
         } else {
@@ -136,23 +134,12 @@ final class vh {
     final static byte[] a(byte param0, String param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -163,35 +150,26 @@ final class vh {
                 break L1;
               }
             }
-            stackOut_2_0 = jj.field_e.a("", 30045, param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = jj.field_e.a("", 30045, param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("vh.A(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("vh.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }

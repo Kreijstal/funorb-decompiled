@@ -14,10 +14,9 @@ final class kg {
     }
 
     final void a(byte param0) {
-        boolean discarded$2 = false;
-        boolean discarded$3 = false;
         L0: {
           if (this.field_a != null) {
+            this.field_a.a(-22671);
             this.field_a = null;
             break L0;
           } else {
@@ -27,8 +26,9 @@ final class kg {
         if (null == this.field_c) {
           if (param0 != 71) {
             L1: {
-              discarded$2 = this.a(40);
+              this.a(40);
               if (this.field_b != null) {
+                this.field_b.a(-22671);
                 this.field_b = null;
                 break L1;
               } else {
@@ -39,6 +39,7 @@ final class kg {
           } else {
             L2: {
               if (this.field_b != null) {
+                this.field_b.a(-22671);
                 this.field_b = null;
                 break L2;
               } else {
@@ -48,10 +49,12 @@ final class kg {
             return;
           }
         } else {
+          this.field_c.a(-22671);
           this.field_c = null;
           if (param0 == 71) {
             L3: {
               if (this.field_b != null) {
+                this.field_b.a(-22671);
                 this.field_b = null;
                 break L3;
               } else {
@@ -61,8 +64,9 @@ final class kg {
             return;
           } else {
             L4: {
-              discarded$3 = this.a(40);
+              this.a(40);
               if (this.field_b != null) {
+                this.field_b.a(-22671);
                 this.field_b = null;
                 break L4;
               } else {
@@ -75,7 +79,7 @@ final class kg {
     }
 
     final void a(boolean param0, jagdx.IDirect3DSurface param1, jagdx.IDirect3DSwapChain param2) {
-        jagdx.IDirect3DSwapChain var5 = null;
+        jagdx.IDirect3DSwapChain var5;
         if (param0) {
           var5 = (jagdx.IDirect3DSwapChain) null;
           this.a(false, (jagdx.IDirect3DSurface) null, (jagdx.IDirect3DSwapChain) null);

@@ -8,9 +8,8 @@ final class rf {
     static String field_c;
 
     final static String a(byte param0) {
-        int discarded$0 = 0;
         if (param0 != -54) {
-            discarded$0 = rf.a(-112, 99);
+            rf.a(-112, 99);
         }
         return tk.field_h.d(param0 ^ -54);
     }
@@ -21,22 +20,22 @@ final class rf {
     }
 
     final static km[] b(byte param0) {
-        km[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var5 = null;
-        int var6 = 0;
-        int[] var6_ref_int__ = null;
-        int var7 = 0;
-        int var8 = 0;
-        byte[] var9 = null;
-        int[] var10 = null;
-        byte[] var11 = null;
-        int[] var13 = null;
-        byte[] var15 = null;
-        int[] var17 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
+        km[] var1;
+        int var2;
+        int var3;
+        byte[] var5;
+        int var6;
+        int[] var6_ref_int__;
+        int var7;
+        int var8;
+        byte[] var9;
+        int[] var10;
+        byte[] var11;
+        int[] var13;
+        byte[] var15;
+        int[] var17;
+        byte[] var21;
+        int[] var22;
         var8 = Chess.field_G;
         var1 = new km[h.field_n];
         var2 = 0;
@@ -130,10 +129,8 @@ final class rf {
         if (param0 >= -56) {
             return;
         }
-        if (null != cd.field_x) {
-            if (cd.field_x.a(-23647, param1)) {
-                cd.field_x = null;
-            }
+        if (null != cd.field_x && cd.field_x.a(-23647, param1)) {
+            cd.field_x = null;
         }
     }
 

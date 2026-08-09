@@ -27,7 +27,7 @@ final class pc {
     }
 
     pc(byte[] param0, oe param1) {
-        int discarded$1 = 0;
+        Throwable decompiledCaughtException = null;
         Exception var3 = null;
         bh var4 = null;
         int var5 = 0;
@@ -40,7 +40,6 @@ final class pc {
         int var12 = 0;
         int var13 = 0;
         bh var14 = null;
-        Throwable decompiledCaughtException = null;
         this.field_f = null;
         this.field_d = -1;
         this.field_f = param1;
@@ -48,7 +47,7 @@ final class pc {
           L0: {
             var14 = new bh(param0);
             var4 = new bh(param0);
-            discarded$1 = var14.d((byte) -99);
+            var14.d((byte) -99);
             var14.field_t = var14.field_t + 2;
             var5 = var14.d((byte) -99);
             var6 = 0;

@@ -53,9 +53,9 @@ final class oi {
     }
 
     private final int f(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var2 = this.field_g.field_l[this.field_g.field_m];
           if (var2 >= 0) {
@@ -175,10 +175,10 @@ final class oi {
     }
 
     final int f() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
         var1 = this.field_d.length;
         var2 = -1;
         var3 = 2147483647;

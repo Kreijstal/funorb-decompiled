@@ -25,41 +25,33 @@ final class kc extends nm {
     }
 
     final boolean c(byte param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 < 47) {
           L0: {
             field_o = (String) null;
-            fieldTemp$4 = this.field_k + 1;
+            fieldTemp$2 = this.field_k + 1;
             this.field_k = this.field_k + 1;
-            if (fieldTemp$4 >= 40) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+            if (fieldTemp$2 >= 40) {
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            fieldTemp$5 = this.field_k + 1;
+            fieldTemp$3 = this.field_k + 1;
             this.field_k = this.field_k + 1;
-            if (fieldTemp$5 >= 40) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+            if (fieldTemp$3 >= 40) {
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -86,14 +78,13 @@ final class kc extends nm {
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
-        boolean discarded$2 = false;
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         var5 = (int)((Math.exp((double)((float)(-this.field_k) / 20.0f)) - Math.exp(-2.0)) * 200.0);
         var6 = this.a((byte) 116);
         al.a(param2 - -((this.field_l >> 1038645896) / param0), var6 / (param0 << -1847929663), (-this.field_k + 40 << 1955229544) / 40, var5, -94, var6 / param0, (this.field_m >> 492714920) / param0 + param1);
         if (!param3) {
-          discarded$2 = this.c((byte) -61);
+          this.c((byte) -61);
           return;
         } else {
           return;
@@ -101,13 +92,12 @@ final class kc extends nm {
     }
 
     final static jp[] a(int param0, boolean param1) {
-        gb discarded$2 = null;
-        jp[] var2 = null;
-        jp[] var3 = null;
+        jp[] var2;
+        jp[] var3;
         var3 = new jp[9];
         var2 = var3;
         if (param1) {
-          discarded$2 = kc.a((byte) -5, false);
+          kc.a((byte) -5, false);
           var3[4] = hd.a(param0, 64, (byte) -6);
           return var2;
         } else {
@@ -122,7 +112,10 @@ final class kc extends nm {
     }
 
     final static gb a(byte param0, boolean param1) {
-        jp[] discarded$1 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_11_0 = 0;
+        int[] stackIn_24_0 = null;
+        Throwable decompiledCaughtException = null;
         pi var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -131,16 +124,6 @@ final class kc extends nm {
         int var7 = 0;
         pi var8 = null;
         wd var9 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int[] stackIn_24_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        Object stackOut_23_0 = null;
-        int[] stackOut_22_0 = null;
         L0: {
           var7 = BrickABrac.field_J ? 1 : 0;
           var8 = jl.field_e;
@@ -150,18 +133,16 @@ final class kc extends nm {
           if (param0 == 67) {
             break L0;
           } else {
-            discarded$1 = kc.a(73, true);
+            kc.a(73, true);
             break L0;
           }
         }
         L1: {
           if ((var3 & 128) == 0) {
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 0;
             break L1;
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             break L1;
           }
         }
@@ -181,12 +162,10 @@ final class kc extends nm {
         }
         L3: {
           if ((var8.l(255) ^ -1) != -2) {
-            stackOut_10_0 = 0;
-            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_0 = 0;
             break L3;
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             break L3;
           }
         }
@@ -227,12 +206,10 @@ final class kc extends nm {
                 var9 = nh.field_c.a(var5, true);
                 gd.field_d = var9.h(-3);
                 if (nd.field_g.equals(tb.field_cb)) {
-                  stackOut_23_0 = null;
-                  stackIn_24_0 = (int[]) ((Object) stackOut_23_0);
+                  stackIn_24_0 = null;
                   break L8;
                 } else {
-                  stackOut_22_0 = var9.field_u;
-                  stackIn_24_0 = stackOut_22_0;
+                  stackIn_24_0 = var9.field_u;
                   break L8;
                 }
               }

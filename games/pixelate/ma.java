@@ -19,7 +19,6 @@ final class ma extends bg {
     private int field_p;
 
     final static void d(byte param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
@@ -45,6 +44,7 @@ final class ma extends bg {
         int[] var20 = null;
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var19 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -123,7 +123,7 @@ final class ma extends bg {
                         }
                       } else {
                         L7: {
-                          if (var21[var17_int] > var21[var16]) {
+                          if ((var21[var17_int] ^ -1) < (var21[var16] ^ -1)) {
                             var16 = var17_int;
                             break L7;
                           } else {
@@ -178,18 +178,17 @@ final class ma extends bg {
     }
 
     final static boolean a(boolean param0) {
-        boolean discarded$2 = false;
-        long var1 = 0L;
-        long var3 = 0L;
-        int var5 = 0;
-        int var6 = 0;
+        long var1;
+        long var3;
+        int var5;
+        int var6;
         L0: {
           var6 = Pixelate.field_H ? 1 : 0;
           var1 = hm.a(64);
           if (param0) {
             break L0;
           } else {
-            discarded$2 = ma.a(true);
+            ma.a(true);
             break L0;
           }
         }
@@ -252,24 +251,18 @@ final class ma extends bg {
     }
 
     final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int[] var10 = null;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
         int[] stackIn_21_0 = null;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int[] stackOut_20_0 = null;
-        int[] stackOut_19_0 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int[] var6;
+        int var7;
+        int var8;
+        int[] var9;
+        int[] var10;
         L0: {
           var8 = Pixelate.field_H ? 1 : 0;
           var2 = (this.field_v << -1032182367) + (this.field_n >> -806683327);
@@ -295,24 +288,20 @@ final class ma extends bg {
           if (this.field_v != this.field_A) {
             L3: {
               if (this.field_A <= this.field_v) {
-                stackOut_10_0 = this.field_A;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = this.field_A;
                 break L3;
               } else {
-                stackOut_9_0 = this.field_v;
-                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_0 = this.field_v;
                 break L3;
               }
             }
             L4: {
               var3 = stackIn_11_0;
               if (this.field_A > this.field_v) {
-                stackOut_13_0 = this.field_A;
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_0 = this.field_A;
                 break L4;
               } else {
-                stackOut_12_0 = this.field_v;
-                stackIn_14_0 = stackOut_12_0;
+                stackIn_14_0 = this.field_v;
                 break L4;
               }
             }
@@ -325,12 +314,10 @@ final class ma extends bg {
                 if (-1 != (var5 ^ -1)) {
                   L6: {
                     if (0 > var5) {
-                      stackOut_20_0 = kp.field_z;
-                      stackIn_21_0 = stackOut_20_0;
+                      stackIn_21_0 = kp.field_z;
                       break L6;
                     } else {
-                      stackOut_19_0 = kp.field_w;
-                      stackIn_21_0 = stackOut_19_0;
+                      stackIn_21_0 = kp.field_w;
                       break L6;
                     }
                   }
@@ -387,11 +374,11 @@ final class ma extends bg {
     }
 
     final void a(int param0, boolean param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         L0: {
           var7 = Pixelate.field_H ? 1 : 0;
           super.a((byte) 21);

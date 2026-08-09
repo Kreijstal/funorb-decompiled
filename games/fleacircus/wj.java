@@ -8,7 +8,7 @@ abstract class wj {
     static sf[] field_b;
 
     final int b(int param0, long param1) {
-        long var4 = 0L;
+        long var4;
         if (param0 == 0) {
           var4 = this.b(-31887);
           if ((var4 ^ -1L) < -1L) {

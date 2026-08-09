@@ -14,14 +14,13 @@ final class la extends l {
 
     final static void a(int param0, eh param1) {
         gj var2 = null;
-        ml discarded$0 = null;
         if (param0 != 1048576) {
             return;
         }
         try {
             gj.a(param1.a("headers.packvorbis", 100, ""));
             var2 = gj.a(param1, "jagex logo2.packvorbis", "");
-            discarded$0 = var2.a();
+            var2.a();
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -45,22 +44,12 @@ final class la extends l {
     final static void a(int param0, int param1, boolean param2, sc param3) {
         Object var4 = null;
         Throwable var5 = null;
-        Object stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         Object stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         Object stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         Throwable decompiledCaughtException = null;
-        Object stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        Object stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        Object stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
         try {
           L0: {
             L1: {
@@ -107,27 +96,19 @@ final class la extends l {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_17_0 = var4;
-            stackOut_17_1 = new StringBuilder().append("la.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = var4;
+
+            stackIn_19_1 = new StringBuilder().append("la.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_19_0 = stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = stackIn_19_0;
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L4;
             } else {
-              stackOut_18_0 = stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = stackIn_19_0;
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L4;
             }
           }
@@ -136,8 +117,8 @@ final class la extends l {
     }
 
     final static void a(int param0, boolean param1) {
-        ab var2 = null;
-        sc var3 = null;
+        ab var2;
+        sc var3;
         we.field_c.a(param1, 24960);
         var2 = fh.field_c;
         if (param0 >= -60) {

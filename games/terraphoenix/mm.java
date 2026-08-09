@@ -12,9 +12,8 @@ final class mm {
     static String field_a;
 
     final static String a(char param0, int param1) {
-        String discarded$0 = null;
         if (param1 != 0) {
-            discarded$0 = mm.a('ￛ', -125);
+            mm.a('ￛ', -125);
             return String.valueOf(param0);
         }
         return String.valueOf(param0);

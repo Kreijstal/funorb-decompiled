@@ -9,23 +9,12 @@ final class qi {
         int var2_int = 0;
         RuntimeException var2 = null;
         nq stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nq stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -38,8 +27,7 @@ final class qi {
             }
             var2_int = param0.b(16711935);
             if (255 != var2_int) {
-              stackOut_5_0 = new nq(var2_int >> 1651991109, var2_int & 31);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = new nq(var2_int >> 1651991109, var2_int & 31);
               break L0;
             } else {
               return null;
@@ -49,27 +37,19 @@ final class qi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2);
-            stackOut_7_1 = new StringBuilder().append("qi.D(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2);
+
+            stackIn_9_1 = new StringBuilder().append("qi.D(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -89,7 +69,7 @@ final class qi {
     }
 
     final static void a(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = BachelorFridge.field_y;
         if (-1 == (dj.field_c.field_h.field_h & 1 << dj.field_c.field_n ^ -1)) {
           if (0 != dj.field_c.field_h.field_h) {
@@ -121,7 +101,6 @@ final class qi {
     }
 
     final static void b(int param0) {
-        nq discarded$4 = null;
         Object var1 = null;
         Throwable var2 = null;
         lu var3 = null;
@@ -131,7 +110,7 @@ final class qi {
             break L0;
           } else {
             var3 = (lu) null;
-            discarded$4 = qi.a((lu) null, (byte) 14);
+            qi.a((lu) null, (byte) 14);
             break L0;
           }
         }

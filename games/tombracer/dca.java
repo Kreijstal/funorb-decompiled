@@ -11,23 +11,23 @@ final class dca extends or {
     }
 
     final void a(int param0, boolean param1, byte param2) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int var4 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int var4;
         var4 = param0 * 2;
         if (param1) {
           dca.g(-128);
           param2 = (byte)(127 + (param2 >> 17049473 & 127));
-          incrementValue$4 = var4;
+          incrementValue$2 = var4;
           var4++;
-          this.field_p[incrementValue$4] = (byte)param2;
+          this.field_p[incrementValue$2] = (byte)param2;
           this.field_p[var4] = (byte)param2;
           return;
         } else {
           param2 = (byte)(127 + (param2 >> 17049473 & 127));
-          incrementValue$5 = var4;
+          incrementValue$3 = var4;
           var4++;
-          this.field_p[incrementValue$5] = (byte)param2;
+          this.field_p[incrementValue$3] = (byte)param2;
           this.field_p[var4] = (byte)param2;
           return;
         }
@@ -41,9 +41,8 @@ final class dca extends or {
     }
 
     final static String f(int param0) {
-        String discarded$0 = null;
         if (param0 != 12) {
-            discarded$0 = dca.f(68);
+            dca.f(68);
             return vc.field_q.e((byte) -76);
         }
         return vc.field_q.e((byte) -76);

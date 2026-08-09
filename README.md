@@ -11,20 +11,21 @@ over the obfuscated gamepacks by the pipeline in
 
 ## What changed in this regeneration
 
-The 2026-07-18 regeneration updates all 44 games with the latest owned
-decompiler output. The main readability changes are interclass constant-argument
-specialization, integer/long constant folding, removal of constant branches and
-unreachable blocks, and removal of checked catches whose try body cannot declare
-the caught exception. Trailing-parameter compaction was requested, but the
-pipeline's atomic bytecode guard rejected descriptor staging for every gamepack,
-so this snapshot retains the original method descriptors and contains no
-`signature-map.json` files. The detailed proof rules, safety boundaries, and
-Java/bytecode examples are documented below.
+The 2026-08-09 regeneration updates all 44 games from tracked-clean generator
+commits. Every game has a complete source set and passed the transformed-bytecode
+verifier and a whole-game `javac` compilation. The exact generator commits,
+arguments, gates, destination base, and synchronized game list are recorded in
+[`decompilation-provenance.json`](decompilation-provenance.json).
 
-The generator also fixes source emission that could select the wrong Java
-overload after decompilation (notably character values appended to strings).
-That correction is required for decompiled-and-recompiled games to preserve
-their displayed text.
+This publication uses the verifier-safe bytecode profile plus the closed-world
+fixed-point proof for mutually guarded default-false static fields. It does not
+enable the broader experimental interclass constant-argument, signature
+compaction, or checked-catch cleanup gates. Consequently, this snapshot retains
+the original method descriptors and contains no `signature-map.json` files.
+
+The owned decompiler also now normalizes duplicate JVM-slot declarations in
+static initializers using parsed Java declaration nodes. This fixes a real
+865-class Bachelor Fridge failure without class or method-name special cases.
 
 ## What "obfuscated" means here
 
@@ -37,23 +38,25 @@ semantic meaning. This is expected and is not something the decompiler tries to
 
 ## Constant-expression cleanup
 
-This snapshot was generated with dekobloko-work's gated
-`--experimental-interclass-dce` mode. Before Java is emitted, the pipeline
-uses CFG stack analysis to specialize any read-only integer-like parameter when
-every reachable direct call supplies the same constant. It repeats
-specialization, constant folding, branch DCE, and unreachable-code removal to a
-bounded fixed point, allowing a dead dummy call to expose constant arguments in
-its callees. Parameters written with either a store or `iinc` are excluded.
-As a separately gated closed-world cleanup, the pipeline can remove a contiguous
-trailing run of those specialized parameters from private or internal static
-method descriptors and from every proven direct call. The gate was enabled for
-this regeneration, but descriptor staging produced verifier-invalid candidates.
-The atomic guard therefore disabled compaction before any gamepack was emitted;
-no signatures were changed and no mapping dictionaries were produced. When the
-guard accepts a future batch, each game's `signature-map.json` will record old
-and new signatures, removed parameter indexes and values, analysis iterations,
-and inherited call-site owner aliases resolved against the complete hierarchy.
-Virtual and interface method families are not compacted in this snapshot. An
+This snapshot enables
+`PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES=1`. The pipeline analyzes each
+complete gamepack as a closed world and removes only static zero/false sentinel
+cycles whose writes cannot make any member true. The proof reaches a fixed point
+across the complete class corpus; partial-corpus use is deliberately not
+enabled by default.
+
+The broader `--experimental-interclass-dce` mode is available but was not used
+for this publication. It uses CFG stack analysis to specialize a read-only
+integer-like parameter when every reachable direct call supplies the same
+constant, then repeats specialization, constant folding, branch DCE, and
+unreachable-code removal to a bounded fixed point. Parameters written with
+either a store or `iinc` are excluded. A separate signature gate can remove a
+contiguous trailing run of specialized parameters from private or internal
+static method descriptors and every proven direct call. When enabled and
+accepted, each game's `signature-map.json` records old and new signatures,
+removed parameter indexes and values, analysis iterations, and inherited
+call-site owner aliases resolved against the complete hierarchy. Virtual and
+interface method families are not compacted. An
 internal interface would need a family-wide proof that the parameter is dead in
 the interface declaration and every implementation, followed by a coordinated
 rewrite of every implementation and every `invokeinterface`/`invokevirtual`
@@ -77,8 +80,9 @@ entry points remain open. The feature is gated in the generating pipeline so a
 runtime A/B build can disable it if later experimentation finds a bad
 closed-world assumption.
 
-This snapshot also enables the independently gated checked-catch cleanup
-(`PIPELINE_EXPERIMENTAL_UNTHROWABLE_CATCH_DCE=1`). After control-flow
+The independently gated checked-catch cleanup
+(`PIPELINE_EXPERIMENTAL_UNTHROWABLE_CATCH_DCE=1`) was also not enabled for this
+snapshot. When enabled, after control-flow
 reconstruction, a catch of a specific checked type is retained only when the
 emitted try contains a call whose Java declaration throws that type. Otherwise
 both the catch and the decompiler's synthetic `if (false)` reachability throw
@@ -101,10 +105,10 @@ repository. Stronger experimental transforms remain gated as noted.
 | --- | --- | --- |
 | Literal constant evaluation | Implemented | JVM integer/long semantics; do not remove observable exceptions |
 | Constant-branch and unreachable-code DCE | Implemented | CFG reachability and incoming-edge checks |
-| Interclass constant-argument specialization | Implemented, gated | Complete gamepack; every resolved direct caller agrees |
-| Private/internal-static signature compaction | Implemented and gated; rejected for this snapshot | Trailing dead parameters; all owner aliases rewritten; complete staged gamepack verifies |
+| Interclass constant-argument specialization | Implemented, gated; not enabled for this snapshot | Complete gamepack; every resolved direct caller agrees |
+| Private/internal-static signature compaction | Implemented and gated; not enabled for this snapshot | Trailing dead parameters; all owner aliases rewritten; complete staged gamepack verifies |
 | Virtual/interface family compaction | Not implemented | Would require one proof and rewrite across the whole family |
-| Checked-catch cleanup | Implemented, separately gated | Specific checked type is not declared throwable by the emitted try |
+| Checked-catch cleanup | Implemented, separately gated; not enabled for this snapshot | Specific checked type is not declared throwable by the emitted try |
 | Control-flow and stack-shape normalization | Implemented | Stack effects, labels, exception ranges, and verifier guards agree |
 
 ### Literal evaluation and branch DCE

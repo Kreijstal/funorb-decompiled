@@ -25,16 +25,7 @@ final class nd implements jm {
     }
 
     public final void a(byte param0, int param1, int param2, boolean param3, mf param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        ki var11 = null;
         mf stackIn_3_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -42,26 +33,20 @@ final class nd implements jm {
         String stackIn_21_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        mf stackOut_1_0 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        ki var11 = null;
         try {
           L0: {
             L1: {
               if (!(param4 instanceof ki)) {
-                stackOut_2_0 = null;
-                stackIn_3_0 = (mf) ((Object) stackOut_2_0);
+                stackIn_3_0 = null;
                 break L1;
               } else {
-                stackOut_1_0 = (mf) (param4);
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = (mf) (param4);
                 break L1;
               }
             }
@@ -100,7 +85,7 @@ final class nd implements jm {
               }
               if (this.field_m != null) {
                 var10 = this.field_o + (this.field_c + this.field_f);
-                discarded$1 = this.field_m.a(param4.field_v, var10 + (param4.field_u + param1), this.field_e + param4.field_r + param2, param4.field_y + (-var10 - this.field_o), -(this.field_o << 134573473) + param4.field_C, this.field_g, this.field_i, this.field_j, this.field_n, 0);
+                this.field_m.a(param4.field_v, var10 + (param4.field_u + param1), this.field_e + param4.field_r + param2, param4.field_y + (-var10 - this.field_o), -(this.field_o << 134573473) + param4.field_C, this.field_g, this.field_i, this.field_j, this.field_n, 0);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -115,27 +100,19 @@ final class nd implements jm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var6);
-            stackOut_18_1 = new StringBuilder().append("nd.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var6);
+
+            stackIn_20_1 = new StringBuilder().append("nd.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L5;
             }
           }

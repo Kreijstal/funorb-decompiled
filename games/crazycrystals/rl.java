@@ -13,7 +13,7 @@ abstract class rl extends oh {
     }
 
     final static void d(int param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         md var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -33,9 +33,9 @@ abstract class rl extends oh {
                 }
               } else {
                 var1.d(param0 ^ 8, 8);
-                fieldTemp$2 = var1.field_f + 1;
+                fieldTemp$1 = var1.field_f + 1;
                 var1.field_f = var1.field_f + 1;
-                var2 = fieldTemp$2;
+                var2 = fieldTemp$1;
                 ke.a(var1, -9129);
                 tp.field_f.c((byte) 47, var1.field_f - var2);
                 continue L1;
@@ -50,23 +50,16 @@ abstract class rl extends oh {
     }
 
     final int a(byte param0, boolean param1) {
-        int discarded$13 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 >= -53) {
           L0: {
-            discarded$13 = this.a((byte) 90, false);
+            this.a((byte) 90, false);
             if (!param1) {
-              stackOut_7_0 = 4;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 4;
               break L0;
             } else {
-              stackOut_6_0 = 16;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 16;
               break L0;
             }
           }
@@ -74,12 +67,10 @@ abstract class rl extends oh {
         } else {
           L1: {
             if (!param1) {
-              stackOut_3_0 = 4;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 4;
               break L1;
             } else {
-              stackOut_2_0 = 16;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 16;
               break L1;
             }
           }
@@ -129,9 +120,8 @@ abstract class rl extends oh {
     }
 
     final int a(int param0, int param1) {
-        int discarded$2 = 0;
         if (param0 != 1843275042) {
-          discarded$2 = rl.b(117, (byte) -122);
+          rl.b(117, (byte) -122);
           return q.field_a[ma.field_n[param1]].field_e[0];
         } else {
           return q.field_a[ma.field_n[param1]].field_e[0];
@@ -139,7 +129,7 @@ abstract class rl extends oh {
     }
 
     final static void a(byte param0, int param1, int param2) {
-        int var3 = 0;
+        int var3;
         L0: {
           pc.field_y = 0;
           lo.field_b = null;
@@ -178,21 +168,15 @@ abstract class rl extends oh {
     final static int b(int param0, byte param1) {
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
         param0 = param0 & 8191;
         if (param1 == -23) {
           if ((param0 ^ -1) > -4097) {
             L0: {
               if ((param0 ^ -1) > -2049) {
-                stackOut_9_0 = fe.field_h[param0];
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = fe.field_h[param0];
                 break L0;
               } else {
-                stackOut_8_0 = fe.field_h[-param0 + 4096];
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = fe.field_h[-param0 + 4096];
                 break L0;
               }
             }
@@ -200,12 +184,10 @@ abstract class rl extends oh {
           } else {
             L1: {
               if ((param0 ^ -1) > -6145) {
-                stackOut_5_0 = -fe.field_h[param0 - 4096];
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = -fe.field_h[param0 - 4096];
                 break L1;
               } else {
-                stackOut_4_0 = -fe.field_h[-param0 + 8192];
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = -fe.field_h[-param0 + 8192];
                 break L1;
               }
             }

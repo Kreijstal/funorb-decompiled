@@ -26,7 +26,7 @@ final class ga implements Iterable {
     }
 
     final static boolean a(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = 3 % ((param0 - -50) / 53);
         if (gl.field_I >= 20) {
           if (ic.a(1)) {
@@ -65,9 +65,9 @@ final class ga implements Iterable {
     }
 
     final fc a(long param0, int param1) {
-        fc var4 = null;
-        fc var5 = null;
-        int var6 = 0;
+        fc var4;
+        fc var5;
+        int var6;
         var6 = TrackController.field_F ? 1 : 0;
         var4 = this.field_c[(int)((long)(-1 + this.field_a) & param0)];
         this.field_g = var4.field_h;

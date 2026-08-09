@@ -23,20 +23,14 @@ final class usa extends vw {
     final boolean c(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 1185) {
           L0: {
             this.a((byte) -57, 54, -28);
             if (this.field_f == null) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -44,12 +38,10 @@ final class usa extends vw {
         } else {
           L1: {
             if (this.field_f == null) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -58,15 +50,14 @@ final class usa extends vw {
     }
 
     final void b(byte param0) {
-        int discarded$2 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        asa var3 = null;
-        iva var4 = null;
+        jagdx.IDirect3DDevice var2;
+        asa var3;
+        iva var4;
         L0: {
           if (null != this.field_f) {
             var2 = this.field_e.field_jd;
             var3 = this.field_e.n((byte) 95);
-            discarded$2 = var2.a(0, var3.a(false, field_d));
+            var2.a(0, var3.a(false, field_d));
             break L0;
           } else {
             break L0;
@@ -82,12 +73,11 @@ final class usa extends vw {
     }
 
     final void b(int param0) {
-        int discarded$2 = 0;
-        jagdx.IDirect3DDevice var2 = null;
+        jagdx.IDirect3DDevice var2;
         L0: {
           if (null != this.field_f) {
             var2 = this.field_e.field_jd;
-            discarded$2 = var2.a(4, this.field_c.a(field_d, false));
+            var2.a(4, this.field_c.a(field_d, false));
             break L0;
           } else {
             break L0;
@@ -102,17 +92,15 @@ final class usa extends vw {
     }
 
     final void c(boolean param0) {
-        float[] discarded$4 = null;
-        int discarded$5 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        asa var3 = null;
+        jagdx.IDirect3DDevice var2;
+        asa var3;
         L0: {
           if (null == this.field_f) {
             break L0;
           } else {
             var2 = this.field_e.field_jd;
             var3 = this.field_c.a((byte) 113);
-            discarded$4 = var3.a(field_d, -101);
+            var3.a(field_d, -101);
             field_d[3] = field_d[3] * 0.25f;
             field_d[6] = field_d[6] * 0.25f;
             field_d[5] = field_d[5] * 0.25f;
@@ -121,7 +109,7 @@ final class usa extends vw {
             field_d[7] = field_d[7] * 0.25f;
             field_d[2] = field_d[2] * 0.25f;
             field_d[0] = field_d[0] * 0.25f;
-            discarded$5 = var2.SetVertexShaderConstantF(8, field_d, 2);
+            var2.SetVertexShaderConstantF(8, field_d, 2);
             break L0;
           }
         }
@@ -140,14 +128,13 @@ final class usa extends vw {
     }
 
     final void b(boolean param0) {
-        int discarded$2 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        asa var3 = null;
+        jagdx.IDirect3DDevice var2;
+        asa var3;
         L0: {
           if (null != this.field_f) {
             var2 = this.field_e.field_jd;
             var3 = this.field_e.n((byte) -86);
-            discarded$2 = var2.a(0, var3.a(false, field_d));
+            var2.a(0, var3.a(false, field_d));
             break L0;
           } else {
             break L0;
@@ -162,14 +149,10 @@ final class usa extends vw {
     }
 
     final void a(byte param0, int param1, int param2) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        int var5 = 0;
-        float var5_float = 0.0f;
-        jagdx.IDirect3DDevice var6 = null;
-        jagdx.IDirect3DDevice var7 = null;
+        float var5_float;
+        int var5;
+        jagdx.IDirect3DDevice var6;
+        jagdx.IDirect3DDevice var7;
         if (param0 != 55) {
           L0: {
             field_d = (float[]) null;
@@ -177,12 +160,12 @@ final class usa extends vw {
             if (!this.field_g.field_g) {
               var5 = 16 * (this.field_c.field_Dc % 4000) / 4000;
               this.field_c.a(true, this.field_g.field_d[var5]);
-              discarded$4 = var6.a(11, 0.0f, 0.0f, 0.0f, 0.0f);
+              var6.a(11, 0.0f, 0.0f, 0.0f, 0.0f);
               break L0;
             } else {
               var5_float = (float)(this.field_c.field_Dc % 4000) / 4000.0f;
               this.field_c.a(true, this.field_g.field_c);
-              discarded$5 = var6.a(11, var5_float, 0.0f, 0.0f, 0.0f);
+              var6.a(11, var5_float, 0.0f, 0.0f, 0.0f);
               break L0;
             }
           }
@@ -193,12 +176,12 @@ final class usa extends vw {
             if (!this.field_g.field_g) {
               var5 = 16 * (this.field_c.field_Dc % 4000) / 4000;
               this.field_c.a(true, this.field_g.field_d[var5]);
-              discarded$6 = var7.a(11, 0.0f, 0.0f, 0.0f, 0.0f);
+              var7.a(11, 0.0f, 0.0f, 0.0f, 0.0f);
               break L1;
             } else {
               var5_float = (float)(this.field_c.field_Dc % 4000) / 4000.0f;
               this.field_c.a(true, this.field_g.field_c);
-              discarded$7 = var7.a(11, var5_float, 0.0f, 0.0f, 0.0f);
+              var7.a(11, var5_float, 0.0f, 0.0f, 0.0f);
               break L1;
             }
           }
@@ -215,15 +198,11 @@ final class usa extends vw {
     }
 
     final void a(boolean param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        float var3 = 0.0f;
-        float var4 = 0.0f;
-        float var5 = 0.0f;
-        jagdx.IDirect3DDevice var6 = null;
-        jagdx.IDirect3DDevice var7 = null;
+        float var3;
+        float var4;
+        float var5;
+        jagdx.IDirect3DDevice var6;
+        jagdx.IDirect3DDevice var7;
         if (!param0) {
           L0: {
             this.a(false);
@@ -234,10 +213,10 @@ final class usa extends vw {
                   var3 = this.field_c.field_Hc;
                   var4 = this.field_c.field_B;
                   var5 = -512.0f + var4;
-                  discarded$4 = var6.a(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (var3 - var4));
+                  var6.a(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (var3 - var4));
                   break L1;
                 } else {
-                  discarded$5 = var6.a(10, 0.0f, 0.0f, 0.0f, 0.0f);
+                  var6.a(10, 0.0f, 0.0f, 0.0f, 0.0f);
                   break L1;
                 }
               }
@@ -257,10 +236,10 @@ final class usa extends vw {
                   var3 = this.field_c.field_Hc;
                   var4 = this.field_c.field_B;
                   var5 = -512.0f + var4;
-                  discarded$6 = var7.a(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (var3 - var4));
+                  var7.a(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (var3 - var4));
                   break L3;
                 } else {
-                  discarded$7 = var7.a(10, 0.0f, 0.0f, 0.0f, 0.0f);
+                  var7.a(10, 0.0f, 0.0f, 0.0f, 0.0f);
                   break L3;
                 }
               }

@@ -47,6 +47,17 @@ abstract class sk {
     abstract void a(boolean param0, byte param1);
 
     final static rm[] a(rk param0, int param1) {
+        rm[] stackIn_3_0 = null;
+        rm[] stackIn_9_0 = null;
+        rm[] stackIn_13_0 = null;
+        rm[] stackIn_18_0 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
         rm[] var4 = null;
@@ -56,31 +67,6 @@ abstract class sk {
         en var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        rm[] stackIn_3_0 = null;
-        rm[] stackIn_9_0 = null;
-        rm[] stackIn_13_0 = null;
-        rm[] stackIn_18_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        rm[] stackOut_12_0 = null;
-        rm[] stackOut_17_0 = null;
-        rm[] stackOut_8_0 = null;
-        rm[] stackOut_2_0 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
         var7 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -90,8 +76,7 @@ abstract class sk {
                 if (var8.field_a != 0) {
                   if (param1 == 1175069442) {
                     if ((var8.field_a ^ -1) == -3) {
-                      stackOut_12_0 = new rm[]{};
-                      stackIn_13_0 = stackOut_12_0;
+                      stackIn_13_0 = new rm[]{};
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -102,8 +87,7 @@ abstract class sk {
                       var5 = 0;
                       L2: while (true) {
                         if (var5 >= var4.length) {
-                          stackOut_17_0 = (rm[]) (var4);
-                          stackIn_18_0 = stackOut_17_0;
+                          stackIn_18_0 = (rm[]) (var4);
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
@@ -119,8 +103,7 @@ abstract class sk {
                       }
                     }
                   } else {
-                    stackOut_8_0 = (rm[]) null;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = (rm[]) null;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -130,8 +113,7 @@ abstract class sk {
                 }
               }
             } else {
-              stackOut_2_0 = new rm[]{};
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = new rm[]{};
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -140,27 +122,19 @@ abstract class sk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2);
-            stackOut_19_1 = new StringBuilder().append("sk.M(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2);
+
+            stackIn_21_1 = new StringBuilder().append("sk.M(");
+
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L3;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L3;
             }
           }

@@ -29,10 +29,9 @@ final class lla {
     }
 
     final static int a(boolean param0, int param1) {
-        int discarded$1 = 0;
         param1--;
         if (param0) {
-          discarded$1 = lla.a(false, 59);
+          lla.a(false, 59);
           param1 = param1 | param1 >>> -1784174847;
           param1 = param1 | param1 >>> -676230750;
           param1 = param1 | param1 >>> -627728092;

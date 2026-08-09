@@ -15,15 +15,14 @@ final class ik extends hg {
     int field_i;
 
     public static void d(int param0) {
-        String discarded$0 = null;
         field_h = null;
         if (param0 != 65535) {
-            discarded$0 = ik.a(false, false, (byte) -31, false);
+            ik.a(false, false, (byte) -31, false);
         }
     }
 
     final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         if (param2 == -112) {
           L0: {
             var4 = 0;

@@ -10,21 +10,20 @@ final class lf {
     static boolean field_b;
 
     final static int[] a(int param0, int param1, boolean param2) {
-        int[] discarded$1 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         var3 = ph.a(-86, param0);
         var4 = kh.a(-101, param0);
         var5 = ph.a(-107, param1);
         var6 = kh.a(-110, param1);
         if (!param2) {
-          discarded$1 = lf.a(35, -76, false);
+          lf.a(35, -76, false);
           var7 = (int)((long)var3 * (long)var5 >> 738112592);
           var8 = (int)((long)var3 * (long)var6 >> 488210960);
           var9 = (int)((long)var4 * (long)var5 >> -1902491952);
@@ -56,7 +55,6 @@ final class lf {
             pb var9 = null;
             qk stackIn_15_0 = null;
             Throwable decompiledCaughtException = null;
-            qk stackOut_14_0 = null;
             try {
               L0: {
                 L1: {
@@ -114,8 +112,7 @@ final class lf {
                     break L6;
                   }
                 }
-                stackOut_14_0 = new qk(var8, param0, param2);
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = new qk(var8, param0, param2);
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {

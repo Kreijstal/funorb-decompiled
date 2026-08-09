@@ -17,14 +17,13 @@ final class fd {
     }
 
     public static void a(byte param0) {
-        boolean discarded$0 = false;
         field_d = null;
         field_e = null;
         field_b = null;
         field_a = null;
         field_f = null;
         if (param0 != 86) {
-            discarded$0 = fd.a(true, 'ﾩ');
+            fd.a(true, 'ﾩ');
         }
     }
 
@@ -39,8 +38,6 @@ final class fd {
     final static boolean a(boolean param0, char param1) {
         int stackIn_8_0 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_6_0 = 0;
         if (param0) {
           if (160 != param1) {
             if (param1 != 32) {
@@ -51,8 +48,7 @@ final class fd {
                   return false;
                 }
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 1;
                 return stackIn_20_0 != 0;
               }
             } else {
@@ -72,8 +68,7 @@ final class fd {
                   return false;
                 }
               } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 1;
                 return stackIn_8_0 != 0;
               }
             } else {

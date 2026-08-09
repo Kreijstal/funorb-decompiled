@@ -9,9 +9,8 @@ class bia extends tb {
     }
 
     final static boolean a(boolean param0, byte param1, int param2) {
-        boolean discarded$2 = false;
         if (param1 != -31) {
-          discarded$2 = bia.a(true, (byte) 77, 66);
+          bia.a(true, (byte) 77, 66);
           return fwa.field_g.a(param2, 11, param0);
         } else {
           return fwa.field_g.a(param2, 11, param0);

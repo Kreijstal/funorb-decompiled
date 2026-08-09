@@ -36,28 +36,13 @@ final class tla extends aja {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        L0: {
-          this.field_f.a(-78, false);
-          this.field_g.n(27841);
-          this.field_g.d(param4, 73);
-          jaggl.OpenGL.glColor4ub((byte)(param3 >> -1898587152), (byte)(param3 >> 1433623560), (byte)param3, (byte)(param3 >> 1320538392));
-          param1 = param1 + this.field_d;
-          param0 = param0 + this.field_i;
-          if (this.field_e == null) {
-            this.field_g.a(117, this.field_f);
-            this.field_g.c(0, param2);
-            jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_f.field_o);
-            jaggl.OpenGL.glVertex2i(param0, param1);
-            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0, this.field_f.field_p + param1);
-            jaggl.OpenGL.glTexCoord2f(this.field_f.field_n, 0.0f);
-            jaggl.OpenGL.glVertex2i(this.field_f.field_m + param0, param1 + this.field_f.field_p);
-            jaggl.OpenGL.glTexCoord2f(this.field_f.field_n, this.field_f.field_o);
-            jaggl.OpenGL.glVertex2i(this.field_f.field_m + param0, param1);
-            jaggl.OpenGL.glEnd();
-            break L0;
-          } else {
+        this.field_f.a(-78, false);
+        this.field_g.n(27841);
+        this.field_g.d(param4, 73);
+        jaggl.OpenGL.glColor4ub((byte)(param3 >> -1898587152), (byte)(param3 >> 1433623560), (byte)param3, (byte)(param3 >> 1320538392));
+        param1 = param1 + this.field_d;
+        param0 = param0 + this.field_i;
+        if (this.field_e != null) {
             this.a(true, param2);
             this.field_e.a(-77, false);
             jaggl.OpenGL.glBegin(7);
@@ -75,8 +60,19 @@ final class tla extends aja {
             jaggl.OpenGL.glVertex2i(param0 - -this.field_f.field_m, param1);
             jaggl.OpenGL.glEnd();
             this.a(-27568);
-            break L0;
-          }
+        } else {
+            this.field_g.a(117, this.field_f);
+            this.field_g.c(0, param2);
+            jaggl.OpenGL.glBegin(7);
+            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_f.field_o);
+            jaggl.OpenGL.glVertex2i(param0, param1);
+            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
+            jaggl.OpenGL.glVertex2i(param0, this.field_f.field_p + param1);
+            jaggl.OpenGL.glTexCoord2f(this.field_f.field_n, 0.0f);
+            jaggl.OpenGL.glVertex2i(this.field_f.field_m + param0, param1 + this.field_f.field_p);
+            jaggl.OpenGL.glTexCoord2f(this.field_f.field_n, this.field_f.field_o);
+            jaggl.OpenGL.glVertex2i(this.field_f.field_m + param0, param1);
+            jaggl.OpenGL.glEnd();
         }
     }
 
@@ -89,28 +85,14 @@ final class tla extends aja {
     }
 
     private final void a(boolean param0, int param1) {
-        int var4 = 0;
-        qfa stackIn_11_0 = null;
-        float stackIn_11_1 = 0.0f;
-        float stackIn_11_2 = 0.0f;
         qfa stackIn_12_0 = null;
         float stackIn_12_1 = 0.0f;
         float stackIn_12_2 = 0.0f;
-        qfa stackIn_13_0 = null;
-        float stackIn_13_1 = 0.0f;
-        float stackIn_13_2 = 0.0f;
-        int stackIn_13_3 = 0;
-        qfa stackOut_10_0 = null;
-        float stackOut_10_1 = 0.0f;
-        float stackOut_10_2 = 0.0f;
-        qfa stackOut_12_0 = null;
-        float stackOut_12_1 = 0.0f;
-        float stackOut_12_2 = 0.0f;
-        int stackOut_12_3 = 0;
-        qfa stackOut_11_0 = null;
-        float stackOut_11_1 = 0.0f;
-        float stackOut_11_2 = 0.0f;
-        int stackOut_11_3 = 0;
+        qfa stackIn_13_0;
+        float stackIn_13_1;
+        float stackIn_13_2;
+        int stackIn_13_3;
+        int var4;
         L0: {
           var4 = VoidHunters.field_G;
           if (param0) {
@@ -132,34 +114,23 @@ final class tla extends aja {
           this.field_g.c(1, 34192, 768, 34166);
           if (-1 == (this.field_j ^ -1)) {
             L2: {
-              stackOut_10_0 = this.field_g;
-              stackOut_10_1 = 0.0f;
-              stackOut_10_2 = 0.5f;
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_12_0 = this.field_g;
+
+              stackIn_12_1 = 0.0f;
+
+              stackIn_12_2 = 0.5f;
+
               if (param0) {
-                stackOut_12_0 = (qfa) ((Object) stackIn_12_0);
-                stackOut_12_1 = stackIn_12_1;
-                stackOut_12_2 = stackIn_12_2;
-                stackOut_12_3 = 0;
-                stackIn_13_0 = stackOut_12_0;
-                stackIn_13_1 = stackOut_12_1;
-                stackIn_13_2 = stackOut_12_2;
-                stackIn_13_3 = stackOut_12_3;
+                stackIn_13_0 = (qfa) ((Object) stackIn_12_0);
+                stackIn_13_1 = stackIn_12_1;
+                stackIn_13_2 = stackIn_12_2;
+                stackIn_13_3 = 0;
                 break L2;
               } else {
-                stackOut_11_0 = (qfa) ((Object) stackIn_11_0);
-                stackOut_11_1 = stackIn_11_1;
-                stackOut_11_2 = stackIn_11_2;
-                stackOut_11_3 = 1;
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_13_1 = stackOut_11_1;
-                stackIn_13_2 = stackOut_11_2;
-                stackIn_13_3 = stackOut_11_3;
+                stackIn_13_0 = (qfa) ((Object) stackIn_12_0);
+                stackIn_13_1 = stackIn_12_1;
+                stackIn_13_2 = stackIn_12_2;
+                stackIn_13_3 = 1;
                 break L2;
               }
             }
@@ -195,51 +166,33 @@ final class tla extends aja {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        float var9 = 0.0f;
-        float var10 = 0.0f;
-        float var11 = 0.0f;
-        float var12 = 0.0f;
-        float var13 = 0.0f;
-        float var14 = 0.0f;
-        int var15 = 0;
-        im stackIn_1_0 = null;
-        int stackIn_1_1 = 0;
+        float var9;
+        float var10;
+        float var11;
+        float var12;
+        float var13;
+        float var14;
+        int var15;
         im stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         im stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
-        im stackOut_0_0 = null;
-        int stackOut_0_1 = 0;
-        im stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        im stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
         L0: {
           var15 = VoidHunters.field_G;
-          stackOut_0_0 = this.field_f;
-          stackOut_0_1 = -124;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_2_1 = stackOut_0_1;
-          stackIn_1_0 = stackOut_0_0;
-          stackIn_1_1 = stackOut_0_1;
+          stackIn_2_0 = this.field_f;
+
+          stackIn_2_1 = -124;
+
           if ((param7 & 1) == 0) {
-            stackOut_2_0 = (im) ((Object) stackIn_2_0);
-            stackOut_2_1 = stackIn_2_1;
-            stackOut_2_2 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            stackIn_3_2 = stackOut_2_2;
+            stackIn_3_0 = (im) ((Object) stackIn_2_0);
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (im) ((Object) stackIn_1_0);
-            stackOut_1_1 = stackIn_1_1;
-            stackOut_1_2 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
+            stackIn_3_0 = (im) ((Object) stackIn_2_0);
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = 1;
             break L0;
           }
         }
@@ -329,21 +282,21 @@ final class tla extends aja {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10_int = 0;
-        float var10 = 0.0f;
-        int var11_int = 0;
-        float var11 = 0.0f;
-        int var12 = 0;
-        int var13 = 0;
-        int var14_int = 0;
-        float var14 = 0.0f;
-        int var15 = 0;
-        int var16 = 0;
-        float var16_float = 0.0f;
-        float var17 = 0.0f;
-        int var18 = 0;
+        int var8;
+        int var9;
+        int var10_int;
+        int var11_int;
+        int var12;
+        int var13;
+        int var14_int;
+        float var14;
+        int var15;
+        float var16_float;
+        int var16;
+        float var17;
+        int var18;
+        float var10;
+        float var11;
         L0: {
           L1: {
             var18 = VoidHunters.field_G;
@@ -478,69 +431,47 @@ final class tla extends aja {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        Object stackIn_1_0 = null;
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_2_0 = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
         L0: {
           L1: {
             this.field_a = param2;
             this.field_b = param3;
             this.field_d = param1;
             this.field_i = param0;
-            stackOut_0_0 = this;
-            stackIn_5_0 = stackOut_0_0;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_5_0 = this;
+
             if (this.field_i != 0) {
               break L1;
             } else {
-              stackOut_1_0 = this;
-              stackIn_5_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_5_0 = this;
+
               if (0 != this.field_d) {
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackIn_5_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_5_0 = this;
+
                 if (0 != this.field_a) {
                   break L1;
                 } else {
-                  stackOut_3_0 = this;
-                  stackIn_6_0 = stackOut_3_0;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_6_0 = this;
+
                   if (0 == this.field_b) {
-                    stackOut_6_0 = this;
-                    stackOut_6_1 = 0;
-                    stackIn_7_0 = stackOut_6_0;
-                    stackIn_7_1 = stackOut_6_1;
+                    stackIn_7_0 = this;
+                    stackIn_7_1 = 0;
                     break L0;
                   } else {
-                    stackOut_4_0 = this;
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = this;
                     break L1;
                   }
                 }
               }
             }
           }
-          stackOut_5_0 = this;
-          stackOut_5_1 = 1;
-          stackIn_7_0 = stackOut_5_0;
-          stackIn_7_1 = stackOut_5_1;
+          stackIn_7_0 = this;
+          stackIn_7_1 = 1;
           break L0;
         }
         ((tla) (this)).field_l = stackIn_7_1 != 0;
@@ -577,8 +508,6 @@ final class tla extends aja {
     }
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
-        float var11 = 0.0f;
-        float var12 = 0.0f;
         float var13 = 0.0f;
         float var14 = 0.0f;
         float var15 = 0.0f;
@@ -591,23 +520,9 @@ final class tla extends aja {
         float var22 = 0.0f;
         float var23 = 0.0f;
         float var24 = 0.0f;
-        im stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        im stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        im stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        int stackIn_6_2 = 0;
-        im stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        im stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        im stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        L0: {
-          if (this.field_l) {
+        float var11 = 0.0f;
+        float var12 = 0.0f;
+        if (!(!this.field_l)) {
             var11 = (float)this.c();
             var12 = (float)this.b();
             var13 = (-param0 + param2) / var11;
@@ -628,38 +543,9 @@ final class tla extends aja {
             var24 = (float)this.field_b * -var16;
             param2 = var17 + (var21 + param2);
             param5 = var24 + (var20 + param5);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        L1: {
-          var11 = param4 + (param2 - param0);
-          stackOut_3_0 = this.field_f;
-          stackOut_3_1 = 109;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_5_1 = stackOut_3_1;
-          stackIn_4_0 = stackOut_3_0;
-          stackIn_4_1 = stackOut_3_1;
-          if ((1 & param9) == 0) {
-            stackOut_5_0 = (im) ((Object) stackIn_5_0);
-            stackOut_5_1 = stackIn_5_1;
-            stackOut_5_2 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            stackIn_6_2 = stackOut_5_2;
-            break L1;
-          } else {
-            stackOut_4_0 = (im) ((Object) stackIn_4_0);
-            stackOut_4_1 = stackIn_4_1;
-            stackOut_4_2 = 1;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_6_2 = stackOut_4_2;
-            break L1;
-          }
-        }
-        ((im) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 != 0);
+        var11 = param4 + (param2 - param0);
+        this.field_f.a(109, (1 & param9) != 0 ? true : false);
         var12 = -param1 + param5 + param3;
         this.field_g.n(27841);
         this.field_g.a(54, this.field_f);

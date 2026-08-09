@@ -21,6 +21,13 @@ final class kr extends Exception {
     }
 
     final static void a(byte param0, ln param1) {
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         mg var3 = null;
         int var4 = 0;
@@ -31,23 +38,6 @@ final class kr extends Exception {
         int var9 = 0;
         int var10 = 0;
         pf var11 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -103,27 +93,19 @@ final class kr extends Exception {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var2);
-            stackOut_16_1 = new StringBuilder().append("kr.A(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var2);
+
+            stackIn_18_1 = new StringBuilder().append("kr.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }
@@ -137,14 +119,14 @@ final class kr extends Exception {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10_int = 0;
-        long var10 = 0L;
-        long var12 = 0L;
-        int var14 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10_int;
+        long var10;
+        long var12;
+        int var14;
         L0: {
           var6 = 0;
           var7 = 0;
@@ -257,9 +239,11 @@ final class kr extends Exception {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
-        ik discarded$1 = null;
-        RuntimeException var6 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -278,9 +262,6 @@ final class kr extends Exception {
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
         var24 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -456,7 +437,7 @@ final class kr extends Exception {
                 if (param1 == -55) {
                   break L6;
                 } else {
-                  discarded$1 = kr.b((byte) 124);
+                  kr.b((byte) 124);
                   break L6;
                 }
               }
@@ -780,12 +761,11 @@ final class kr extends Exception {
     }
 
     final static ik b(byte param0) {
-        ik discarded$0 = null;
         if (ed.field_c.g(69)) {
             return new ik();
         }
         if (param0 != -103) {
-            discarded$0 = kr.b((byte) -5);
+            kr.b((byte) -5);
         }
         return (ik) ((Object) ed.field_c.h(44));
     }

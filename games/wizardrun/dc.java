@@ -20,8 +20,6 @@ final class dc extends wl {
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
         gb stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -29,28 +27,16 @@ final class dc extends wl {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        gb stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0 != null) {
               var2 = new gb(param0, ph.field_q, ne.field_h, cg.field_k, tf.field_b, mf.field_j);
               eb.a(param1);
-              stackOut_3_0 = (gb) (var2);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (gb) (var2);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -59,27 +45,19 @@ final class dc extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2_ref);
-            stackOut_5_1 = new StringBuilder().append("dc.A(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2_ref);
+
+            stackIn_7_1 = new StringBuilder().append("dc.A(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -93,21 +71,20 @@ final class dc extends wl {
     }
 
     final static o[] a(int param0) {
-        gb discarded$1 = null;
-        o[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int[] var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        byte[] var9 = null;
-        int[] var10 = null;
-        int[] var14 = null;
-        int[] var17 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
-        byte[] var23 = null;
+        o[] var1;
+        int var2;
+        int var3;
+        int[] var6;
+        int var6_int;
+        int var7;
+        int var8;
+        byte[] var9;
+        int[] var10;
+        int[] var14;
+        int[] var17;
+        byte[] var21;
+        int[] var22;
+        byte[] var23;
         var8 = wizardrun.field_H;
         var1 = new o[wb.field_f];
         var2 = 0;
@@ -116,7 +93,7 @@ final class dc extends wl {
             eb.a(0);
             if (param0 != 19999) {
               var9 = (byte[]) null;
-              discarded$1 = dc.a((byte[]) null, 37);
+              dc.a((byte[]) null, 37);
               return var1;
             } else {
               return var1;
@@ -162,7 +139,7 @@ final class dc extends wl {
     }
 
     final static te a(byte param0, int param1) {
-        te var2 = null;
+        te var2;
         var2 = new te();
         bk.field_d.a(var2, false);
         hg.a(param1, (byte) 106);
@@ -183,14 +160,13 @@ final class dc extends wl {
     }
 
     public static void c(int param0) {
-        gb discarded$2 = null;
-        byte[] var2 = null;
+        byte[] var2;
         field_s = null;
         field_o = null;
         field_q = null;
         if (param0 > -2) {
           var2 = (byte[]) null;
-          discarded$2 = dc.a((byte[]) null, 30);
+          dc.a((byte[]) null, 30);
           field_n = null;
           return;
         } else {

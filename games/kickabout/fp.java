@@ -23,26 +23,14 @@ class fp extends gn {
     boolean field_j;
 
     final static boolean a(int param0, Class param1) {
-        RuntimeException var2 = null;
         int stackIn_11_0 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -71,8 +59,7 @@ class fp extends gn {
                           break L3;
                         } else {
                           if (Double.TYPE != param1) {
-                            stackOut_10_0 = 0;
-                            stackIn_11_0 = stackOut_10_0;
+                            stackIn_11_0 = 0;
                             break L2;
                           } else {
                             break L3;
@@ -83,8 +70,7 @@ class fp extends gn {
                   }
                 }
               }
-              stackOut_9_0 = 1;
-              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_0 = 1;
               break L2;
             }
             break L0;
@@ -93,27 +79,19 @@ class fp extends gn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var2);
-            stackOut_12_1 = new StringBuilder().append("fp.K(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var2);
+
+            stackIn_14_1 = new StringBuilder().append("fp.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
@@ -123,10 +101,9 @@ class fp extends gn {
     }
 
     final static vn a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, boolean param8, boolean param9) {
-        boolean discarded$0 = false;
         if (param7) {
             Class var13 = (Class) null;
-            discarded$0 = fp.a(100, (Class) null);
+            fp.a(100, (Class) null);
         }
         int var10 = ev.field_B[param1];
         int var11 = ev.field_B[param6];
@@ -135,12 +112,11 @@ class fp extends gn {
     }
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        int var4 = 0;
         kk var4_ref_kk = null;
+        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -162,6 +138,7 @@ class fp extends gn {
         int[] var21 = null;
         int[] var22 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var20 = Kickabout.field_G;
         try {
           L0: {

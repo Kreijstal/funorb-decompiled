@@ -35,7 +35,7 @@ final class vh extends lh {
     }
 
     final static void a(long param0, int param1) {
-        int var3 = 0;
+        int var3;
         var3 = 9 % ((param1 - -45) / 39);
         if (param0 <= 0L) {
           return;

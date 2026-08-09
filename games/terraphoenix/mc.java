@@ -6,10 +6,9 @@ final class mc {
     static he field_b;
 
     public static void b(byte param0) {
-        ci discarded$0 = null;
         field_a = null;
         if (param0 != 53) {
-            discarded$0 = mc.a((byte) 52);
+            mc.a((byte) 52);
             field_b = null;
             return;
         }
@@ -22,12 +21,12 @@ final class mc {
     }
 
     final static ci a(byte param0) {
-        int var1 = 0;
-        byte[] var2 = null;
-        int[] var3 = null;
-        int var4_int = 0;
-        ci var4 = null;
-        int var5 = 0;
+        int var1;
+        byte[] var2;
+        int[] var3;
+        int var4_int;
+        ci var4;
+        int var5;
         var5 = Terraphoenix.field_V;
         var1 = rf.field_p[0] * sb.field_m[0];
         var2 = qc.field_b[0];

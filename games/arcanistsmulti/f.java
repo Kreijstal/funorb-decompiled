@@ -9,20 +9,6 @@ final class f extends pg {
     static int field_h;
 
     final static jg a(int param0, int param1, int param2, int param3) {
-        jg discarded$1 = null;
-        Object var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        jg var8_ref_jg = null;
-        int var9 = 0;
-        jg var9_ref_jg = null;
-        int var10_int = 0;
-        String var10 = null;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
         int stackIn_41_0 = 0;
         int stackIn_52_0 = 0;
         int stackIn_59_0 = 0;
@@ -39,38 +25,19 @@ final class f extends pg {
         int stackIn_120_0 = 0;
         int stackIn_126_0 = 0;
         int stackIn_130_0 = 0;
-        int stackOut_119_0 = 0;
-        int stackOut_118_0 = 0;
-        int stackOut_115_0 = 0;
-        int stackOut_114_0 = 0;
-        int stackOut_129_0 = 0;
-        int stackOut_128_0 = 0;
-        int stackOut_125_0 = 0;
-        int stackOut_124_0 = 0;
-        int stackOut_107_0 = 0;
-        int stackOut_106_0 = 0;
-        int stackOut_103_0 = 0;
-        int stackOut_102_0 = 0;
-        int stackOut_97_0 = 0;
-        int stackOut_96_0 = 0;
-        int stackOut_93_0 = 0;
-        int stackOut_92_0 = 0;
-        int stackOut_86_0 = 0;
-        int stackOut_85_0 = 0;
-        int stackOut_82_0 = 0;
-        int stackOut_81_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_70_0 = 0;
-        int stackOut_69_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
+        Object var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        jg var8_ref_jg;
+        int var9;
+        jg var9_ref_jg;
+        int var10_int;
+        String var10;
+        String var11;
+        int var12;
+        int var13;
         var13 = ArcanistsMulti.field_G ? 1 : 0;
         var4 = null;
         qo.field_f.field_Cb.field_G.c(param0 ^ -16711298);
@@ -104,12 +71,10 @@ final class f extends pg {
                                 qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9;
                                 qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                                 if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                                  stackOut_119_0 = 0;
-                                  stackIn_120_0 = stackOut_119_0;
+                                  stackIn_120_0 = 0;
                                   break L3;
                                 } else {
-                                  stackOut_118_0 = 1;
-                                  stackIn_120_0 = stackOut_118_0;
+                                  stackIn_120_0 = 1;
                                   break L3;
                                 }
                               }
@@ -119,12 +84,10 @@ final class f extends pg {
                               L4: {
                                 qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                                 if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                                  stackOut_115_0 = 0;
-                                  stackIn_116_0 = stackOut_115_0;
+                                  stackIn_116_0 = 0;
                                   break L4;
                                 } else {
-                                  stackOut_114_0 = 1;
-                                  stackIn_116_0 = stackOut_114_0;
+                                  stackIn_116_0 = 1;
                                   break L4;
                                 }
                               }
@@ -140,12 +103,10 @@ final class f extends pg {
                           qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9;
                           qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                           if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                            stackOut_129_0 = 0;
-                            stackIn_130_0 = stackOut_129_0;
+                            stackIn_130_0 = 0;
                             break L5;
                           } else {
-                            stackOut_128_0 = 1;
-                            stackIn_130_0 = stackOut_128_0;
+                            stackIn_130_0 = 1;
                             break L5;
                           }
                         }
@@ -155,12 +116,10 @@ final class f extends pg {
                         L6: {
                           qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                           if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                            stackOut_125_0 = 0;
-                            stackIn_126_0 = stackOut_125_0;
+                            stackIn_126_0 = 0;
                             break L6;
                           } else {
-                            stackOut_124_0 = 1;
-                            stackIn_126_0 = stackOut_124_0;
+                            stackIn_126_0 = 1;
                             break L6;
                           }
                         }
@@ -181,12 +140,10 @@ final class f extends pg {
                               qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9;
                               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                               if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                                stackOut_107_0 = 0;
-                                stackIn_108_0 = stackOut_107_0;
+                                stackIn_108_0 = 0;
                                 break L7;
                               } else {
-                                stackOut_106_0 = 1;
-                                stackIn_108_0 = stackOut_106_0;
+                                stackIn_108_0 = 1;
                                 break L7;
                               }
                             }
@@ -196,12 +153,10 @@ final class f extends pg {
                             L8: {
                               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                               if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                                stackOut_103_0 = 0;
-                                stackIn_104_0 = stackOut_103_0;
+                                stackIn_104_0 = 0;
                                 break L8;
                               } else {
-                                stackOut_102_0 = 1;
-                                stackIn_104_0 = stackOut_102_0;
+                                stackIn_104_0 = 1;
                                 break L8;
                               }
                             }
@@ -215,12 +170,10 @@ final class f extends pg {
                               qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9;
                               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                               if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                                stackOut_97_0 = 0;
-                                stackIn_98_0 = stackOut_97_0;
+                                stackIn_98_0 = 0;
                                 break L9;
                               } else {
-                                stackOut_96_0 = 1;
-                                stackIn_98_0 = stackOut_96_0;
+                                stackIn_98_0 = 1;
                                 break L9;
                               }
                             }
@@ -230,12 +183,10 @@ final class f extends pg {
                             L10: {
                               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                               if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                                stackOut_93_0 = 0;
-                                stackIn_94_0 = stackOut_93_0;
+                                stackIn_94_0 = 0;
                                 break L10;
                               } else {
-                                stackOut_92_0 = 1;
-                                stackIn_94_0 = stackOut_92_0;
+                                stackIn_94_0 = 1;
                                 break L10;
                               }
                             }
@@ -250,12 +201,10 @@ final class f extends pg {
                             qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9;
                             qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                             if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                              stackOut_86_0 = 0;
-                              stackIn_87_0 = stackOut_86_0;
+                              stackIn_87_0 = 0;
                               break L11;
                             } else {
-                              stackOut_85_0 = 1;
-                              stackIn_87_0 = stackOut_85_0;
+                              stackIn_87_0 = 1;
                               break L11;
                             }
                           }
@@ -265,12 +214,10 @@ final class f extends pg {
                           L12: {
                             qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                             if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                              stackOut_82_0 = 0;
-                              stackIn_83_0 = stackOut_82_0;
+                              stackIn_83_0 = 0;
                               break L12;
                             } else {
-                              stackOut_81_0 = 1;
-                              stackIn_83_0 = stackOut_81_0;
+                              stackIn_83_0 = 1;
                               break L12;
                             }
                           }
@@ -295,12 +242,10 @@ final class f extends pg {
                               qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9;
                               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                               if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                                stackOut_74_0 = 0;
-                                stackIn_75_0 = stackOut_74_0;
+                                stackIn_75_0 = 0;
                                 break L13;
                               } else {
-                                stackOut_73_0 = 1;
-                                stackIn_75_0 = stackOut_73_0;
+                                stackIn_75_0 = 1;
                                 break L13;
                               }
                             }
@@ -310,12 +255,10 @@ final class f extends pg {
                             L14: {
                               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                               if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                                stackOut_70_0 = 0;
-                                stackIn_71_0 = stackOut_70_0;
+                                stackIn_71_0 = 0;
                                 break L14;
                               } else {
-                                stackOut_69_0 = 1;
-                                stackIn_71_0 = stackOut_69_0;
+                                stackIn_71_0 = 1;
                                 break L14;
                               }
                             }
@@ -336,12 +279,10 @@ final class f extends pg {
                           L16: {
                             qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                             if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                              stackOut_65_0 = 0;
-                              stackIn_66_0 = stackOut_65_0;
+                              stackIn_66_0 = 0;
                               break L16;
                             } else {
-                              stackOut_64_0 = 1;
-                              stackIn_66_0 = stackOut_64_0;
+                              stackIn_66_0 = 1;
                               break L16;
                             }
                           }
@@ -361,12 +302,10 @@ final class f extends pg {
                         L18: {
                           qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                           if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                            stackOut_58_0 = 0;
-                            stackIn_59_0 = stackOut_58_0;
+                            stackIn_59_0 = 0;
                             break L18;
                           } else {
-                            stackOut_57_0 = 1;
-                            stackIn_59_0 = stackOut_57_0;
+                            stackIn_59_0 = 1;
                             break L18;
                           }
                         }
@@ -398,12 +337,10 @@ final class f extends pg {
                       L21: {
                         qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                         if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                          stackOut_51_0 = 0;
-                          stackIn_52_0 = stackOut_51_0;
+                          stackIn_52_0 = 0;
                           break L21;
                         } else {
-                          stackOut_50_0 = 1;
-                          stackIn_52_0 = stackOut_50_0;
+                          stackIn_52_0 = 1;
                           break L21;
                         }
                       }
@@ -413,7 +350,7 @@ final class f extends pg {
                   }
                 } else {
                   L22: {
-                    discarded$1 = f.a(-105, 114, -71, 4);
+                    f.a(-105, 114, -71, 4);
                     qo.field_f.field_Cb.field_db = qo.field_f.field_Cb.field_db + var8;
                     if (!ui.field_s) {
                       break L22;
@@ -458,12 +395,10 @@ final class f extends pg {
                   L26: {
                     qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                     if (qo.field_f.field_Cb.field_db - -qo.field_f.field_Cb.field_bb != var9) {
-                      stackOut_40_0 = 0;
-                      stackIn_41_0 = stackOut_40_0;
+                      stackIn_41_0 = 0;
                       break L26;
                     } else {
-                      stackOut_39_0 = 1;
-                      stackIn_41_0 = stackOut_39_0;
+                      stackIn_41_0 = 1;
                       break L26;
                     }
                   }

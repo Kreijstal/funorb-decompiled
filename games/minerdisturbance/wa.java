@@ -10,8 +10,8 @@ final class wa {
     private al field_a;
 
     final al d(int param0) {
-        al var2 = null;
-        int var3 = 0;
+        al var2;
+        int var3;
         var3 = -97 / ((param0 - 73) / 51);
         var2 = this.field_a;
         if (this.field_c == var2) {
@@ -24,8 +24,7 @@ final class wa {
     }
 
     final al c(int param0) {
-        int discarded$7 = 0;
-        al var2 = null;
+        al var2;
         var2 = this.field_c.field_t;
         if (param0 == 8192) {
           if (var2 == this.field_c) {
@@ -35,7 +34,7 @@ final class wa {
             return var2;
           }
         } else {
-          discarded$7 = this.b(-20);
+          this.b(-20);
           if (var2 == this.field_c) {
             return null;
           } else {

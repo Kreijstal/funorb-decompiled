@@ -69,7 +69,6 @@ abstract class mc {
 
     final static boolean a(long param0, boolean param1) {
         int stackIn_5_0 = 0;
-        int stackOut_3_0 = 0;
         if (param1) {
           if (-1272878999116L != (param0 ^ -1L)) {
             if ((param0 ^ -1L) == -1272878132286L) {
@@ -78,8 +77,7 @@ abstract class mc {
               return false;
             }
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             return stackIn_5_0 != 0;
           }
         } else {
@@ -88,7 +86,7 @@ abstract class mc {
     }
 
     final int a(byte param0, long param1) {
-        long var4 = 0L;
+        long var4;
         L0: {
           var4 = this.b((byte) -36);
           if (-1L > (var4 ^ -1L)) {

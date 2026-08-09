@@ -6,10 +6,9 @@ abstract class ua {
     static java.math.BigInteger field_a;
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_a = null;
         if (param0 != -6) {
-            discarded$0 = ua.a(false);
+            ua.a(false);
             field_b = null;
             return;
         }
@@ -17,16 +16,15 @@ abstract class ua {
     }
 
     final static int a(boolean param0) {
-        RuntimeException var1 = null;
+        int stackIn_25_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_25_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_24_0 = 0;
         var7 = Torquing.field_u;
         try {
           L0: {
@@ -97,8 +95,7 @@ abstract class ua {
                     }
                   }
                 }
-                stackOut_24_0 = var3;
-                stackIn_25_0 = stackOut_24_0;
+                stackIn_25_0 = var3;
                 break L0;
               } else {
                 L6: {

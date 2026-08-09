@@ -43,19 +43,15 @@ final class ke implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(int param0, int param1, int param2, java.awt.Frame param3, int param4, int param5) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        com.ms.awt.WComponentPeer var7 = null;
-        int var8 = 0;
+        com.ms.awt.WComponentPeer var7;
+        int var8;
         if (param0 < 52) {
           this.field_a = (com.ms.directX.DirectDraw) null;
           param3.setVisible(true);
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
-          discarded$4 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$5 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param3), 17);
           this.field_a.setDisplayMode(param5, param4, param1, param2, 0);
           param3.setBounds(0, 0, param5, param4);
@@ -66,8 +62,8 @@ final class ke implements com.ms.directX.IEnumModesCallback {
           param3.setVisible(true);
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
-          discarded$6 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$7 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param3), 17);
           this.field_a.setDisplayMode(param5, param4, param1, param2, 0);
           param3.setBounds(0, 0, param5, param4);

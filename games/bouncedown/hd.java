@@ -33,8 +33,8 @@ final class hd {
     }
 
     final static char a(int param0, char param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Bounce.field_N;
         if (param0 == 31400) {
           var2 = param1;

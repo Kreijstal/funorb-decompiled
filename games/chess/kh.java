@@ -15,9 +15,9 @@ final class kh extends gm {
     static boolean field_o;
 
     final int a(long param0, int param1) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var4;
+        int var5;
+        int var6;
         var6 = Chess.field_G;
         var4 = 108 % ((param1 - 64) / 54);
         if ((this.field_j ^ -1L) < (this.field_i ^ -1L)) {
@@ -56,31 +56,20 @@ final class kh extends gm {
 
     final static byte[] a(int param0, int param1, byte param2, byte[] param3) {
         byte[] var4 = null;
-        RuntimeException var4_ref = null;
         int var5_int = 0;
-        df var5 = null;
-        int var6 = 0;
-        byte[] var7 = null;
         int var8 = 0;
         byte[] var9 = null;
         byte[] stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var4_ref = null;
+        df var5 = null;
+        int var6 = 0;
+        byte[] var7 = null;
         var8 = Chess.field_G;
         try {
           L0: {
@@ -109,35 +98,26 @@ final class kh extends gm {
             var5.a((byte) -122, var4, (long)(8 * param1));
             var7 = new byte[64];
             var5.a(-115, 0, var7);
-            stackOut_6_0 = (byte[]) (var7);
-            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_0 = (byte[]) (var7);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4_ref);
-            stackOut_8_1 = new StringBuilder().append("kh.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4_ref);
+
+            stackIn_10_1 = new StringBuilder().append("kh.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -147,19 +127,27 @@ final class kh extends gm {
     }
 
     final static void c(int param0) {
-        RuntimeException var1 = null;
-        nk var1_ref = null;
+        int stackIn_12_0 = 0;
+        r stackIn_18_0 = null;
+        r stackIn_19_0 = null;
+        int stackIn_19_1 = 0;
+        r stackIn_79_0 = null;
+        r stackIn_80_0 = null;
+        int stackIn_80_1 = 0;
+        RuntimeException decompiledCaughtException = null;
+        nk var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
-        r var3_ref_r = null;
         long var3_long = 0L;
         int var3 = 0;
-        ln var4_ref_ln = null;
+        r var3_ref_r = null;
         int var4 = 0;
+        ln var4_ref_ln = null;
         int var5 = 0;
         ln var6 = null;
         r var7 = null;
-        r var8_ref_r = null;
         int var8 = 0;
+        r var8_ref_r = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -183,35 +171,13 @@ final class kh extends gm {
         ln var28 = null;
         r var29 = null;
         ln var30 = null;
-        int stackIn_12_0 = 0;
-        r stackIn_17_0 = null;
-        r stackIn_18_0 = null;
-        r stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
-        r stackIn_78_0 = null;
-        r stackIn_79_0 = null;
-        r stackIn_80_0 = null;
-        int stackIn_80_1 = 0;
-        RuntimeException decompiledCaughtException = null;
-        r stackOut_77_0 = null;
-        r stackOut_79_0 = null;
-        int stackOut_79_1 = 0;
-        r stackOut_78_0 = null;
-        int stackOut_78_1 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        r stackOut_16_0 = null;
-        r stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        r stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
         var16 = null;
         var27 = null;
         var11 = Chess.field_G;
         try {
           L0: {
             L1: {
-              var1_ref = tk.field_h;
+              var1 = tk.field_h;
               if (param0 == 17) {
                 break L1;
               } else {
@@ -221,7 +187,7 @@ final class kh extends gm {
             }
             L2: {
               L3: {
-                var2 = ((p) ((Object) var1_ref)).i(param0 ^ -100);
+                var2 = ((p) ((Object) var1)).i(param0 ^ -100);
                 if (-1 == (var2 ^ -1)) {
                   break L3;
                 } else {
@@ -239,8 +205,8 @@ final class kh extends gm {
                         } else {
                           if (5 != var2) {
                             if ((var2 ^ -1) == -7) {
-                              var3_long = ((p) ((Object) var1_ref)).d((byte) -127);
-                              var5 = ((p) ((Object) var1_ref)).i(-77);
+                              var3_long = ((p) ((Object) var1)).d((byte) -127);
+                              var5 = ((p) ((Object) var1)).i(-77);
                               var29 = ug.a((byte) -92, var3_long);
                               if (var29 == null) {
                                 break L2;
@@ -280,8 +246,8 @@ final class kh extends gm {
                                             break L6;
                                           } else {
                                             if (var2 == 13) {
-                                              var3 = ((p) ((Object) var1_ref)).f(674914976);
-                                              var4 = ((p) ((Object) var1_ref)).i(-97);
+                                              var3 = ((p) ((Object) var1)).f(674914976);
+                                              var4 = ((p) ((Object) var1)).i(-97);
                                               var27_ref = (ln) ((Object) ae.field_f.a((long)var3, 3000));
                                               if (var27_ref != null) {
                                                 L7: {
@@ -317,9 +283,9 @@ final class kh extends gm {
                                                         } else {
                                                           if ((var2 ^ -1) == -19) {
                                                             L10: {
-                                                              var3_long = ((p) ((Object) var1_ref)).d((byte) 116);
-                                                              var24 = ((p) ((Object) var1_ref)).d(0);
-                                                              var25 = ((p) ((Object) var1_ref)).d(0);
+                                                              var3_long = ((p) ((Object) var1)).d((byte) 116);
+                                                              var24 = ((p) ((Object) var1)).d(0);
+                                                              var25 = ((p) ((Object) var1)).d(0);
                                                               var7 = mi.a(param0 ^ 134217710, var3_long);
                                                               if (var7 != null) {
                                                                 break L10;
@@ -331,35 +297,30 @@ final class kh extends gm {
                                                               }
                                                             }
                                                             L11: {
-                                                              var7.field_Pb = ((p) ((Object) var1_ref)).f(param0 ^ 674914993);
-                                                              var8 = ((p) ((Object) var1_ref)).c((byte) -59);
+                                                              var7.field_Pb = ((p) ((Object) var1)).f(param0 ^ 674914993);
+                                                              var8 = ((p) ((Object) var1)).c((byte) -59);
                                                               var7.field_Jb = var8 >> 1772151457;
-                                                              stackOut_77_0 = (r) (var7);
-                                                              stackIn_79_0 = stackOut_77_0;
-                                                              stackIn_78_0 = stackOut_77_0;
+                                                              stackIn_79_0 = (r) (var7);
+
                                                               if (0 == (1 & var8)) {
-                                                                stackOut_79_0 = (r) ((Object) stackIn_79_0);
-                                                                stackOut_79_1 = 0;
-                                                                stackIn_80_0 = stackOut_79_0;
-                                                                stackIn_80_1 = stackOut_79_1;
+                                                                stackIn_80_0 = (r) ((Object) stackIn_79_0);
+                                                                stackIn_80_1 = 0;
                                                                 break L11;
                                                               } else {
-                                                                stackOut_78_0 = (r) ((Object) stackIn_78_0);
-                                                                stackOut_78_1 = 1;
-                                                                stackIn_80_0 = stackOut_78_0;
-                                                                stackIn_80_1 = stackOut_78_1;
+                                                                stackIn_80_0 = (r) ((Object) stackIn_79_0);
+                                                                stackIn_80_1 = 1;
                                                                 break L11;
                                                               }
                                                             }
                                                             stackIn_80_0.field_Hb = stackIn_80_1 != 0;
-                                                            var7.field_Vb = ((p) ((Object) var1_ref)).i(param0 + -142);
-                                                            var7.field_Wb = ((p) ((Object) var1_ref)).i(-106);
+                                                            var7.field_Vb = ((p) ((Object) var1)).i(param0 + -142);
+                                                            var7.field_Wb = ((p) ((Object) var1)).i(-106);
                                                             pd.field_Sb.a((o) (var7), (byte) 109);
                                                             break L2;
                                                           } else {
                                                             if (var2 == 19) {
-                                                              var3_long = ((p) ((Object) var1_ref)).d((byte) -60);
-                                                              var5 = ((p) ((Object) var1_ref)).i(param0 + -144);
+                                                              var3_long = ((p) ((Object) var1)).d((byte) -60);
+                                                              var5 = ((p) ((Object) var1)).i(param0 + -144);
                                                               var23 = mi.a(134217727, var3_long);
                                                               if (var23 != null) {
                                                                 L12: {
@@ -387,16 +348,16 @@ final class kh extends gm {
                                                                       si.d(param0 ^ 65297);
                                                                       break L2;
                                                                     } else {
-                                                                      gb.field_t = ((p) ((Object) var1_ref)).d((byte) 116);
+                                                                      gb.field_t = ((p) ((Object) var1)).d((byte) 116);
                                                                       break L2;
                                                                     }
                                                                   } else {
-                                                                    fm.field_W = ((p) ((Object) var1_ref)).f(674914976);
-                                                                    jf.field_b = ((p) ((Object) var1_ref)).c((byte) 75);
+                                                                    fm.field_W = ((p) ((Object) var1)).f(674914976);
+                                                                    jf.field_b = ((p) ((Object) var1)).c((byte) 75);
                                                                     break L2;
                                                                   }
                                                                 } else {
-                                                                  var3 = ((p) ((Object) var1_ref)).f(param0 ^ 674914993);
+                                                                  var3 = ((p) ((Object) var1)).f(param0 ^ 674914993);
                                                                   if (var3 == 0) {
                                                                     eg.field_e = 0L;
                                                                     break L2;
@@ -406,7 +367,7 @@ final class kh extends gm {
                                                                   }
                                                                 }
                                                               } else {
-                                                                vl.a(var1_ref, pd.field_Rb, false, param0 ^ 127);
+                                                                vl.a(var1, pd.field_Rb, false, param0 ^ 127);
                                                                 break L2;
                                                               }
                                                             }
@@ -414,8 +375,8 @@ final class kh extends gm {
                                                         }
                                                       }
                                                     }
-                                                    var3_long = ((p) ((Object) var1_ref)).d((byte) -84);
-                                                    var5 = ((p) ((Object) var1_ref)).i(-125);
+                                                    var3_long = ((p) ((Object) var1)).d((byte) -84);
+                                                    var5 = ((p) ((Object) var1)).i(-125);
                                                     var26 = ug.a((byte) -87, var3_long);
                                                     if (var26 != null) {
                                                       L13: {
@@ -451,7 +412,7 @@ final class kh extends gm {
                                                   }
                                                 }
                                               }
-                                              var3_long = ((p) ((Object) var1_ref)).d((byte) -74);
+                                              var3_long = ((p) ((Object) var1)).d((byte) -74);
                                               var22 = ug.a((byte) -107, var3_long);
                                               if (var22 == null) {
                                                 break L2;
@@ -477,7 +438,7 @@ final class kh extends gm {
                                           }
                                         }
                                       }
-                                      var3 = ((p) ((Object) var1_ref)).f(674914976);
+                                      var3 = ((p) ((Object) var1)).f(674914976);
                                       var14 = (ln) ((Object) ae.field_f.a((long)var3, 3000));
                                       var28 = var14;
                                       if (var14 == null) {
@@ -509,8 +470,8 @@ final class kh extends gm {
                                       }
                                     }
                                   } else {
-                                    var3 = ((p) ((Object) var1_ref)).f(param0 + 674914959);
-                                    var4 = ((p) ((Object) var1_ref)).i(-96);
+                                    var3 = ((p) ((Object) var1)).f(param0 + 674914959);
+                                    var4 = ((p) ((Object) var1)).i(-96);
                                     var12 = (ln) ((Object) ae.field_f.a((long)var3, 3000));
                                     var21 = var12;
                                     if (var12 != null) {
@@ -532,7 +493,7 @@ final class kh extends gm {
                                   }
                                 } else {
                                   L19: {
-                                    var3 = ((p) ((Object) var1_ref)).f(674914976);
+                                    var3 = ((p) ((Object) var1)).f(674914976);
                                     var4_ref_ln = (ln) ((Object) ae.field_f.a((long)var3, param0 + 2983));
                                     if (var4_ref_ln == null) {
                                       var4_ref_ln = new ln(qa.field_e);
@@ -542,7 +503,7 @@ final class kh extends gm {
                                       break L19;
                                     }
                                   }
-                                  vl.a(var1_ref, var4_ref_ln, true, param0 ^ 101);
+                                  vl.a(var1, var4_ref_ln, true, param0 ^ 101);
                                   fh.a((byte) -119, var4_ref_ln);
                                   break L2;
                                 }
@@ -563,19 +524,17 @@ final class kh extends gm {
                             }
                           } else {
                             L21: {
-                              var3_long = ((p) ((Object) var1_ref)).d((byte) -124);
-                              var20 = ((p) ((Object) var1_ref)).d(0);
-                              var17 = ((p) ((Object) var1_ref)).d(0);
-                              var19 = ((p) ((Object) var1_ref)).d(0);
+                              var3_long = ((p) ((Object) var1)).d((byte) -124);
+                              var20 = ((p) ((Object) var1)).d(0);
+                              var17 = ((p) ((Object) var1)).d(0);
+                              var19 = ((p) ((Object) var1)).d(0);
                               var18 = ug.a((byte) -104, var3_long);
                               var8_ref_r = var18;
                               if (var17.equals("")) {
-                                stackOut_11_0 = 0;
-                                stackIn_12_0 = stackOut_11_0;
+                                stackIn_12_0 = 0;
                                 break L21;
                               } else {
-                                stackOut_10_0 = 1;
-                                stackIn_12_0 = stackOut_10_0;
+                                stackIn_12_0 = 1;
                                 break L21;
                               }
                             }
@@ -595,30 +554,25 @@ final class kh extends gm {
                               }
                             }
                             L23: {
-                              var8_ref_r.field_Nb = ud.a(2) + -(long)((p) ((Object) var1_ref)).e((byte) -112);
-                              var8_ref_r.field_Pb = ((p) ((Object) var1_ref)).f(674914976);
-                              var10 = ((p) ((Object) var1_ref)).c((byte) 112);
-                              stackOut_16_0 = (r) (var8_ref_r);
-                              stackIn_18_0 = stackOut_16_0;
-                              stackIn_17_0 = stackOut_16_0;
+                              var8_ref_r.field_Nb = ud.a(2) + -(long)((p) ((Object) var1)).e((byte) -112);
+                              var8_ref_r.field_Pb = ((p) ((Object) var1)).f(674914976);
+                              var10 = ((p) ((Object) var1)).c((byte) 112);
+                              stackIn_18_0 = (r) (var8_ref_r);
+
                               if (-1 == (var10 & 1 ^ -1)) {
-                                stackOut_18_0 = (r) ((Object) stackIn_18_0);
-                                stackOut_18_1 = 0;
-                                stackIn_19_0 = stackOut_18_0;
-                                stackIn_19_1 = stackOut_18_1;
+                                stackIn_19_0 = (r) ((Object) stackIn_18_0);
+                                stackIn_19_1 = 0;
                                 break L23;
                               } else {
-                                stackOut_17_0 = (r) ((Object) stackIn_17_0);
-                                stackOut_17_1 = 1;
-                                stackIn_19_0 = stackOut_17_0;
-                                stackIn_19_1 = stackOut_17_1;
+                                stackIn_19_0 = (r) ((Object) stackIn_18_0);
+                                stackIn_19_1 = 1;
                                 break L23;
                               }
                             }
                             stackIn_19_0.field_Hb = stackIn_19_1 != 0;
                             var8_ref_r.field_Jb = var10 >> 1028370977;
-                            var8_ref_r.field_Vb = ((p) ((Object) var1_ref)).i(-99);
-                            var8_ref_r.field_Wb = ((p) ((Object) var1_ref)).i(param0 + -112);
+                            var8_ref_r.field_Vb = ((p) ((Object) var1)).i(-99);
+                            var8_ref_r.field_Wb = ((p) ((Object) var1)).i(param0 + -112);
                             ta.a(var8_ref_r, param0 ^ -66);
                             break L2;
                           }
@@ -651,10 +605,10 @@ final class kh extends gm {
                           pd.field_Rb = null;
                           break L27;
                         } else {
-                          var3 = ((p) ((Object) var1_ref)).f(674914976);
+                          var3 = ((p) ((Object) var1)).f(674914976);
                           pd.field_Rb = new ln(qa.field_e);
                           pd.field_Rb.a((long)var3, (byte) 71);
-                          vl.a(var1_ref, pd.field_Rb, false, 120);
+                          vl.a(var1, pd.field_Rb, false, 120);
                           eg.field_e = 0L;
                           break L27;
                         }
@@ -687,20 +641,20 @@ final class kh extends gm {
                         var3 = 0;
                         L30: while (true) {
                           if (g.field_f.length <= var3) {
-                            qd.field_u = ((p) ((Object) var1_ref)).i(param0 ^ -105);
-                            p.field_n = ((p) ((Object) var1_ref)).i(-107);
+                            qd.field_u = ((p) ((Object) var1)).i(param0 ^ -105);
+                            p.field_n = ((p) ((Object) var1)).i(-107);
                             var3 = 0;
                             L31: while (true) {
                               if (var3 >= fe.field_d.length) {
                                 break L2;
                               } else {
-                                fe.field_d[var3] = ((p) ((Object) var1_ref)).g(0);
+                                fe.field_d[var3] = ((p) ((Object) var1)).g(0);
                                 var3++;
                                 continue L31;
                               }
                             }
                           } else {
-                            g.field_f[var3] = ((p) ((Object) var1_ref)).g(0);
+                            g.field_f[var3] = ((p) ((Object) var1)).g(0);
                             var3++;
                             continue L30;
                           }
@@ -748,8 +702,8 @@ final class kh extends gm {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw fk.a((Throwable) ((Object) var1), "kh.B(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw fk.a((Throwable) ((Object) var1_ref), "kh.B(" + param0 + ')');
         }
     }
 
@@ -760,13 +714,11 @@ final class kh extends gm {
         long var2 = System.nanoTime();
         long var4 = -this.field_h + var2;
         this.field_h = var2;
-        if ((var4 ^ -1L) < 4999999999L) {
-            if (-5000000001L < (var4 ^ -1L)) {
-                this.field_q[this.field_n] = var4;
-                this.field_n = (this.field_n - -1) % 10;
-                if (1 > this.field_g) {
-                    this.field_g = this.field_g + 1;
-                }
+        if ((var4 ^ -1L) < 4999999999L && -5000000001L < (var4 ^ -1L)) {
+            this.field_q[this.field_n] = var4;
+            this.field_n = (this.field_n - -1) % 10;
+            if (1 > this.field_g) {
+                this.field_g = this.field_g + 1;
             }
         }
         long var7 = 0L;

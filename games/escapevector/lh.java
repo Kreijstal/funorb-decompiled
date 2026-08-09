@@ -9,31 +9,31 @@ final class lh {
     static String field_a;
 
     final static void a(int param0) {
-        tj var1 = null;
-        Object var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        ed var12 = null;
-        ed var13 = null;
-        ed var14 = null;
-        ed var15 = null;
-        ed var16 = null;
-        ed var17 = null;
-        ed var18 = null;
-        ed var19 = null;
-        ed var20 = null;
-        ed var21 = null;
-        ed var22 = null;
-        ed var23 = null;
-        ed var24 = null;
-        ed var25 = null;
-        ed var26 = null;
-        ed var27 = null;
-        ed var28 = null;
-        ed var29 = null;
-        ed var30 = null;
-        ed var31 = null;
-        ed var32 = null;
+        tj var1;
+        Object var2;
+        int var3;
+        int var4;
+        ed var12;
+        ed var13;
+        ed var14;
+        ed var15;
+        ed var16;
+        ed var17;
+        ed var18;
+        ed var19;
+        ed var20;
+        ed var21;
+        ed var22;
+        ed var23;
+        ed var24;
+        ed var25;
+        ed var26;
+        ed var27;
+        ed var28;
+        ed var29;
+        ed var30;
+        ed var31;
+        ed var32;
         var4 = EscapeVector.field_A;
         var1 = qa.f((byte) -49);
         if (param0 < 60) {
@@ -785,11 +785,10 @@ final class lh {
     }
 
     public static void a(byte param0) {
-        boolean discarded$0 = false;
         field_a = null;
         field_b = null;
         if (param0 != 26) {
-            discarded$0 = lh.b((byte) 37);
+            lh.b((byte) 37);
             field_c = null;
             return;
         }

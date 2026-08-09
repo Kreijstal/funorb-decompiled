@@ -7,16 +7,16 @@ final class qb extends rc {
     private java.awt.Component field_e;
 
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
-        boolean discarded$10 = param1.drawImage(this.field_d, param2, param3, (java.awt.image.ImageObserver) ((Object) this.field_e));
+        param1.drawImage(this.field_d, param2, param3, (java.awt.image.ImageObserver) ((Object) this.field_e));
         if (param0 != -11) {
             this.field_e = (java.awt.Component) null;
         }
     }
 
     final void a(int param0, int param1, java.awt.Component param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         if (param1 > -37) {
           this.field_e = (java.awt.Component) null;
           this.field_b = new int[param0 * param3 - -1];

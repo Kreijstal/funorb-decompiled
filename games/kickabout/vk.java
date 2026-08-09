@@ -6,8 +6,8 @@ final class vk {
     static boolean field_b;
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Kickabout.field_G;
         iv.field_o = null;
         je.field_e = null;

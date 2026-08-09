@@ -11,9 +11,8 @@ final class lca implements fo {
     int field_d;
 
     public final boolean d(byte param0) {
-        int discarded$0 = 0;
         if (param0 != 48) {
-            discarded$0 = this.e((byte) 127);
+            this.e((byte) 127);
             return this.field_a.d((byte) 48);
         }
         return this.field_a.d((byte) 48);
@@ -75,10 +74,8 @@ final class lca implements fo {
             return;
         }
         gr var3 = this.field_a.c(-114);
-        if (var3 != null) {
-            if (!var3.a(-50)) {
-                return;
-            }
+        if (var3 != null && !var3.a(-50)) {
+            return;
         }
         try {
             gqa.a(dfa.a(this.field_e, 2048, -108), -83584144, this.c((byte) 97), this.b((byte) -92), this.field_a.a(false, (lca) (this)), this.e((byte) -110));

@@ -81,14 +81,12 @@ final class w extends vg {
     }
 
     final void b(int param0, int param1, byte param2) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
         super.b(param0, param1, (byte) 109);
         dl.field_b.c(this.field_db, param1 + (this.field_g >> -135666879), 103 + param0, 16777215, -1);
         if (param2 >= 80) {
           if (this.field_Z != null) {
             em.e(param1 - -20, -7 + (120 + param0), 260, 8421504);
-            discarded$2 = dl.field_b.a(this.field_Z, 20 + param1, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.field_r);
+            dl.field_b.a(this.field_Z, 20 + param1, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.field_r);
             return;
           } else {
             return;
@@ -99,7 +97,7 @@ final class w extends vg {
             return;
           } else {
             em.e(param1 - -20, -7 + (120 + param0), 260, 8421504);
-            discarded$3 = dl.field_b.a(this.field_Z, 20 + param1, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.field_r);
+            dl.field_b.a(this.field_Z, 20 + param1, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, dl.field_b.field_r);
             return;
           }
         }

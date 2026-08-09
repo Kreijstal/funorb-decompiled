@@ -24,9 +24,8 @@ abstract class jf {
     }
 
     final int a(int param0) {
-        int discarded$2 = 0;
         if (param0 != -28475) {
-          discarded$2 = this.c((byte) -99);
+          this.c((byte) -99);
           return this.field_o.b(true) + this.field_j.b(true);
         } else {
           return this.field_o.b(true) + this.field_j.b(true);
@@ -45,35 +44,23 @@ abstract class jf {
     }
 
     final tn a(int param0, boolean param1, int param2, int param3, byte param4) {
-        nf[] discarded$1 = null;
-        long var6 = 0L;
-        tn var8 = null;
-        tn stackIn_1_0 = null;
         tn stackIn_2_0 = null;
         tn stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        tn stackOut_0_0 = null;
-        tn stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        tn stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
+        long var6;
+        tn var8;
         L0: {
           var6 = (long)param3 + ((long)param0 << -1911606496);
           var8 = new tn();
-          stackOut_0_0 = (tn) (var8);
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = (tn) (var8);
+
           if (!param1) {
-            stackOut_2_0 = (tn) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (tn) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (tn) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (tn) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -97,7 +84,7 @@ abstract class jf {
             }
           }
         } else {
-          discarded$1 = jf.a(-99, (byte) -57);
+          jf.a(-99, (byte) -57);
           if (!param1) {
             if (this.c((byte) -5) >= 20) {
               throw new RuntimeException();
@@ -121,20 +108,14 @@ abstract class jf {
     final boolean b(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 > -123) {
           L0: {
             this.field_n = (wd) null;
             if (-21 < (this.c((byte) -5) ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -142,12 +123,10 @@ abstract class jf {
         } else {
           L1: {
             if (-21 < (this.c((byte) -5) ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -164,10 +143,10 @@ abstract class jf {
     }
 
     final static e a(byte param0, int param1) {
-        e[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        e[] var5 = null;
+        e[] var2;
+        int var3;
+        int var4;
+        e[] var5;
         var4 = Confined.field_J ? 1 : 0;
         var5 = ah.l(20253);
         var2 = var5;
@@ -204,12 +183,12 @@ abstract class jf {
     abstract void a(boolean param0, Object param1, byte param2);
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         var8 = Confined.field_J ? 1 : 0;
         if (0 > tg.field_H) {
           return;
@@ -567,8 +546,8 @@ abstract class jf {
     }
 
     final static nf[] a(int param0, byte param1) {
-        nf[] var2 = null;
-        nf[] var3 = null;
+        nf[] var2;
+        nf[] var3;
         var3 = new nf[9];
         var2 = var3;
         if (param1 < 2) {

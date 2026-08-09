@@ -18,13 +18,11 @@ final class ab extends ln {
         }
         long var4 = -this.field_g + var2;
         this.field_g = var2;
-        if (4999999999L > (var4 ^ -1L)) {
-            if (5000000000L > var4) {
-                this.field_e[this.field_d] = var4;
-                this.field_d = (this.field_d + 1) % 10;
-                if (!(1 <= this.field_i)) {
-                    this.field_i = this.field_i + 1;
-                }
+        if (4999999999L > (var4 ^ -1L) && 5000000000L > var4) {
+            this.field_e[this.field_d] = var4;
+            this.field_d = (this.field_d + 1) % 10;
+            if (!(1 <= this.field_i)) {
+                this.field_i = this.field_i + 1;
             }
         }
         long var6 = 0L;
@@ -46,25 +44,15 @@ final class ab extends ln {
     }
 
     final static void a(vn[] param0, byte param1, int param2) {
-        RuntimeException var3 = null;
         int var4 = 0;
         vn[] var5 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException var3 = null;
         var4 = ZombieDawn.field_J;
         try {
           L0: {
@@ -212,27 +200,19 @@ final class ab extends ln {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var3);
-            stackOut_15_1 = new StringBuilder().append("ab.G(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var3);
+
+            stackIn_17_1 = new StringBuilder().append("ab.G(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L3;
             }
           }
@@ -251,8 +231,8 @@ final class ab extends ln {
     }
 
     final int a(int param0, long param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         L0: {
           var5 = ZombieDawn.field_J;
           if (param0 <= -76) {
@@ -297,9 +277,8 @@ final class ab extends ln {
     }
 
     final static vn[] a(int param0, byte param1, int param2, int param3, int param4) {
-        vn[] discarded$0 = null;
         if (param1 >= -6) {
-            discarded$0 = ab.a(61, (byte) -100, -10, 45, -84);
+            ab.a(61, (byte) -100, -10, 45, -84);
         }
         return ca.a(param2, param0, 1, 1, param4, 1, 3, param3, -120);
     }

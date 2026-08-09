@@ -6,11 +6,11 @@ final class kl extends lr {
     private byte[][] field_V;
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         L0: {
           var9 = param1 + param2 * qh.field_l;
           var10 = qh.field_l - param3;
@@ -83,19 +83,24 @@ final class kl extends lr {
     }
 
     private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$10 = 0;
+        int incrementValue$0 = 0;
+        byte dupTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        byte dupTemp$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        byte dupTemp$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        byte dupTemp$10 = 0;
         int incrementValue$11 = 0;
         int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
+        byte dupTemp$13 = 0;
         int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var10;
+        int var11;
+        int var12;
         var10 = -(param6 >> 2);
         param6 = -(param6 & 3);
         var11 = -param7;
@@ -114,17 +119,18 @@ final class kl extends lr {
                     var11++;
                     continue L0;
                   } else {
-                    incrementValue$10 = param4;
+                    incrementValue$0 = param4;
                     param4++;
-                    param0 = param2[incrementValue$10];
-                    if (param2[incrementValue$10] == 0) {
+                    dupTemp$1 = param2[incrementValue$0];
+                    param0 = dupTemp$1;
+                    if (dupTemp$1 == 0) {
                       param5++;
                       var12++;
                       continue L2;
                     } else {
-                      incrementValue$11 = param5;
+                      incrementValue$2 = param5;
                       param5++;
-                      param1[incrementValue$11] = param3[param0 & 255];
+                      param1[incrementValue$2] = param3[param0 & 255];
                       var12++;
                       continue L2;
                     }
@@ -132,58 +138,62 @@ final class kl extends lr {
                 }
               } else {
                 L3: {
-                  incrementValue$12 = param4;
+                  incrementValue$3 = param4;
                   param4++;
-                  param0 = param2[incrementValue$12];
-                  if (param2[incrementValue$12] == 0) {
+                  dupTemp$4 = param2[incrementValue$3];
+                  param0 = dupTemp$4;
+                  if (dupTemp$4 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    incrementValue$13 = param5;
+                    incrementValue$5 = param5;
                     param5++;
-                    param1[incrementValue$13] = param3[param0 & 255];
+                    param1[incrementValue$5] = param3[param0 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  incrementValue$14 = param4;
+                  incrementValue$6 = param4;
                   param4++;
-                  param0 = param2[incrementValue$14];
-                  if (param2[incrementValue$14] == 0) {
+                  dupTemp$7 = param2[incrementValue$6];
+                  param0 = dupTemp$7;
+                  if (dupTemp$7 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    incrementValue$15 = param5;
+                    incrementValue$8 = param5;
                     param5++;
-                    param1[incrementValue$15] = param3[param0 & 255];
+                    param1[incrementValue$8] = param3[param0 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  incrementValue$16 = param4;
+                  incrementValue$9 = param4;
                   param4++;
-                  param0 = param2[incrementValue$16];
-                  if (param2[incrementValue$16] == 0) {
+                  dupTemp$10 = param2[incrementValue$9];
+                  param0 = dupTemp$10;
+                  if (dupTemp$10 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    incrementValue$17 = param5;
+                    incrementValue$11 = param5;
                     param5++;
-                    param1[incrementValue$17] = param3[param0 & 255];
+                    param1[incrementValue$11] = param3[param0 & 255];
                     break L5;
                   }
                 }
-                incrementValue$18 = param4;
+                incrementValue$12 = param4;
                 param4++;
-                param0 = param2[incrementValue$18];
-                if (param2[incrementValue$18] == 0) {
+                dupTemp$13 = param2[incrementValue$12];
+                param0 = dupTemp$13;
+                if (dupTemp$13 == 0) {
                   param5++;
                   var12++;
                   continue L1;
                 } else {
-                  incrementValue$19 = param5;
+                  incrementValue$14 = param5;
                   param5++;
-                  param1[incrementValue$19] = param3[param0 & 255];
+                  param1[incrementValue$14] = param3[param0 & 255];
                   var12++;
                   continue L1;
                 }
@@ -202,12 +212,12 @@ final class kl extends lr {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         L0: {
           var9 = param1 + param2 * qh.field_l;
           var10 = qh.field_l - param3;
@@ -280,11 +290,11 @@ final class kl extends lr {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         L0: {
           var8 = param1 + param2 * qh.field_l;
           var9 = qh.field_l - param3;
@@ -357,13 +367,14 @@ final class kl extends lr {
     }
 
     private final static void b(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
-        int incrementValue$50 = 0;
-        int incrementValue$51 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
+        int incrementValue$16 = 0;
+        byte dupTemp$17 = 0;
+        int incrementValue$18 = 0;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
         var11 = 256 - param10;
         var12 = -param7;
         L0: while (true) {
@@ -378,19 +389,20 @@ final class kl extends lr {
                 var12++;
                 continue L0;
               } else {
-                incrementValue$50 = param4;
+                incrementValue$16 = param4;
                 param4++;
-                param0 = param2[incrementValue$50];
-                if (param2[incrementValue$50] == 0) {
+                dupTemp$17 = param2[incrementValue$16];
+                param0 = dupTemp$17;
+                if (dupTemp$17 == 0) {
                   param5++;
                   var13++;
                   continue L1;
                 } else {
                   var14 = param1[param5];
                   var15 = param3[param0 & 255];
-                  incrementValue$51 = param5;
+                  incrementValue$18 = param5;
                   param5++;
-                  param1[incrementValue$51] = ((var15 & 16711935) * param10 + (var14 & 16711935) * var11 & -16711936) + ((var15 & 65280) * param10 + (var14 & 65280) * var11 & 16711680) >> 8;
+                  param1[incrementValue$18] = ((var15 & 16711935) * param10 + (var14 & 16711935) * var11 & -16711936) + ((var15 & 65280) * param10 + (var14 & 65280) * var11 & 16711680) >> 8;
                   var13++;
                   continue L1;
                 }
@@ -401,12 +413,12 @@ final class kl extends lr {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         L0: {
           var8 = param1 + param2 * qh.field_l;
           var9 = qh.field_l - param3;
@@ -481,19 +493,21 @@ final class kl extends lr {
     private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
+        byte dupTemp$0 = 0;
         int var16 = 0;
-        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
         int var15 = 0;
         int var12 = 256 - param11;
         for (var13 = -param8; var13 < 0; var13++) {
             for (var14 = -param7; var14 < 0; var14++) {
-                param0 = param2[param4];
-                if (param2[param4] != 0) {
+                dupTemp$0 = param2[param4];
+                param0 = dupTemp$0;
+                if (dupTemp$0 != 0) {
                     var15 = param1[param5];
                     var16 = param3[param0 & 255];
-                    incrementValue$0 = param5;
+                    incrementValue$1 = param5;
                     param5++;
-                    param1[incrementValue$0] = ((var16 & 16711935) * param11 + (var15 & 16711935) * var12 & -16711936) + ((var16 & 65280) * param11 + (var15 & 65280) * var12 & 16711680) >> 8;
+                    param1[incrementValue$1] = ((var16 & 16711935) * param11 + (var15 & 16711935) * var12 & -16711936) + ((var16 & 65280) * param11 + (var15 & 65280) * var12 & 16711680) >> 8;
                 } else {
                     param5++;
                 }
@@ -505,14 +519,19 @@ final class kl extends lr {
     }
 
     private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+        byte dupTemp$0 = 0;
+        int incrementValue$1 = 0;
+        byte dupTemp$2 = 0;
+        int incrementValue$3 = 0;
+        byte dupTemp$4 = 0;
         int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
+        byte dupTemp$6 = 0;
         int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
+        byte dupTemp$8 = 0;
         int incrementValue$9 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var11;
+        int var12;
+        int var13;
         var11 = -(param7 >> 2);
         param7 = -(param7 & 3);
         var12 = -param8;
@@ -532,14 +551,15 @@ final class kl extends lr {
                     continue L0;
                   } else {
                     L3: {
-                      param0 = param2[param4];
-                      if (param2[param4] == 0) {
+                      dupTemp$0 = param2[param4];
+                      param0 = dupTemp$0;
+                      if (dupTemp$0 == 0) {
                         param5++;
                         break L3;
                       } else {
-                        incrementValue$5 = param5;
+                        incrementValue$1 = param5;
                         param5++;
-                        param1[incrementValue$5] = param3[param0 & 255];
+                        param1[incrementValue$1] = param3[param0 & 255];
                         break L3;
                       }
                     }
@@ -550,47 +570,51 @@ final class kl extends lr {
                 }
               } else {
                 L4: {
-                  param0 = param2[param4];
-                  if (param2[param4] == 0) {
+                  dupTemp$2 = param2[param4];
+                  param0 = dupTemp$2;
+                  if (dupTemp$2 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    incrementValue$6 = param5;
+                    incrementValue$3 = param5;
                     param5++;
-                    param1[incrementValue$6] = param3[param0 & 255];
+                    param1[incrementValue$3] = param3[param0 & 255];
                     break L4;
                   }
                 }
                 L5: {
                   param4 = param4 + param6;
-                  param0 = param2[param4];
-                  if (param2[param4] == 0) {
+                  dupTemp$4 = param2[param4];
+                  param0 = dupTemp$4;
+                  if (dupTemp$4 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    incrementValue$7 = param5;
+                    incrementValue$5 = param5;
                     param5++;
-                    param1[incrementValue$7] = param3[param0 & 255];
+                    param1[incrementValue$5] = param3[param0 & 255];
                     break L5;
                   }
                 }
                 L6: {
                   param4 = param4 + param6;
-                  param0 = param2[param4];
-                  if (param2[param4] == 0) {
+                  dupTemp$6 = param2[param4];
+                  param0 = dupTemp$6;
+                  if (dupTemp$6 == 0) {
                     param5++;
                     break L6;
                   } else {
-                    incrementValue$8 = param5;
+                    incrementValue$7 = param5;
                     param5++;
-                    param1[incrementValue$8] = param3[param0 & 255];
+                    param1[incrementValue$7] = param3[param0 & 255];
                     break L6;
                   }
                 }
                 L7: {
                   param4 = param4 + param6;
-                  param0 = param2[param4];
-                  if (param2[param4] == 0) {
+                  dupTemp$8 = param2[param4];
+                  param0 = dupTemp$8;
+                  if (dupTemp$8 == 0) {
                     param5++;
                     break L7;
                   } else {

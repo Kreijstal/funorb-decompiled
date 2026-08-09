@@ -10,10 +10,8 @@ final class bh {
     static int field_c;
 
     final int a(byte param0) {
-        int var2 = 0;
+        int var2;
         int stackIn_4_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_3_0 = 0;
         L0: {
           L1: {
             var2 = -44 % ((param0 - 9) / 63);
@@ -23,22 +21,20 @@ final class bh {
               if (this.field_a.length == 0) {
                 break L1;
               } else {
-                stackOut_2_0 = this.field_a[this.field_a.length + -1];
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = this.field_a[this.field_a.length + -1];
                 break L0;
               }
             }
           }
-          stackOut_3_0 = 0;
-          stackIn_4_0 = stackOut_3_0;
+          stackIn_4_0 = 0;
           break L0;
         }
         return stackIn_4_0;
     }
 
     final int a(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         L0: {
           var4 = Bounce.field_N;
           if (this.field_a == null) {
@@ -56,7 +52,7 @@ final class bh {
                     return -26;
                   }
                 } else {
-                  if (this.field_a[-1 + var3] - -this.field_a[var3] >> 1571861633 > param0) {
+                  if ((this.field_a[-1 + var3] - -this.field_a[var3] >> 1571861633 ^ -1) < (param0 ^ -1)) {
                     return var3 + -1;
                   } else {
                     var3++;

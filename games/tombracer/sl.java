@@ -49,14 +49,8 @@ final class sl extends vw {
             this.field_c.a(true, (iva) null);
             this.field_c.e(0, false);
             this.field_f = false;
-            if (!TombRacer.field_G) {
-              this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
-              return;
-            } else {
-              this.field_c.a(0, false, ej.field_c);
-              this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
-              return;
-            }
+            this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+            return;
           }
         } else {
           return;
@@ -69,9 +63,9 @@ final class sl extends vw {
     }
 
     final void a(int param0, boolean param1) {
-        na var3 = null;
-        int var4 = 0;
-        asa var4_ref_asa = null;
+        na var3;
+        int var4;
+        asa var4_ref_asa;
         var3 = this.field_c.n(-79);
         if (var3 != null) {
           if (param1) {
@@ -87,14 +81,8 @@ final class sl extends vw {
             this.field_c.a(cva.field_b, false);
             this.field_c.e(0, false);
             this.field_f = true;
-            if (TombRacer.field_G) {
-              this.field_c.a(0, false, tla.field_c);
-              var4 = 19 % ((param0 - 41) / 62);
-              return;
-            } else {
-              var4 = 19 % ((param0 - 41) / 62);
-              return;
-            }
+            var4 = 19 % ((param0 - 41) / 62);
+            return;
           } else {
             this.field_c.a(0, false, tla.field_c);
             var4 = 19 % ((param0 - 41) / 62);

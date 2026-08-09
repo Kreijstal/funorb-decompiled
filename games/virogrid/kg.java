@@ -36,10 +36,9 @@ final class kg {
     }
 
     final String a(int param0) {
-        rg discarded$0 = null;
         if (param0 != 32) {
             String var3 = (String) null;
-            discarded$0 = kg.a((Throwable) null, (String) null);
+            kg.a((Throwable) null, (String) null);
             return this.field_f;
         }
         return this.field_f;

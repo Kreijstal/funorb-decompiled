@@ -22,7 +22,7 @@ final class qi extends dd {
     }
 
     final void a(int param0, java.awt.Graphics param1, byte param2, int param3) {
-        boolean discarded$0 = param1.drawImage(this.field_e, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_g));
+        param1.drawImage(this.field_e, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_g));
         int var5 = -41 % ((param2 - 26) / 52);
     }
 }

@@ -25,53 +25,18 @@ final class h extends wl {
         int var10 = 0;
         int var11 = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
         var11 = wizardrun.field_H;
         try {
           L0: {
@@ -82,8 +47,7 @@ final class h extends wl {
             var9 = 0;
             L1: while (true) {
               if (var9 >= 128) {
-                stackOut_18_0 = var5_int;
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = var5_int;
                 break L0;
               } else {
                 L2: {
@@ -143,89 +107,63 @@ final class h extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var5);
-            stackOut_20_1 = new StringBuilder().append("h.E(");
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var5);
+
+            stackIn_22_1 = new StringBuilder().append("h.E(");
+
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+
+
+            stackIn_25_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
+
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L7;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(param2).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+
+
+            stackIn_28_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L8;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L8;
             }
           }
-          throw bd.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_23_0), stackIn_29_2 + ')');
         }
         return stackIn_19_0 != 0;
     }
 
     final static boolean b(boolean param0) {
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
         if (param0) {
           L0: {
             L1: {
@@ -238,15 +176,13 @@ final class h extends wl {
                   if (wj.a(0)) {
                     break L1;
                   } else {
-                    stackOut_5_0 = 1;
-                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_0 = 1;
                     break L0;
                   }
                 }
               }
             }
-            stackOut_6_0 = 0;
-            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_0 = 0;
             break L0;
           }
           return stackIn_7_0 != 0;
@@ -262,8 +198,6 @@ final class h extends wl {
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -271,17 +205,6 @@ final class h extends wl {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if (param3 <= -113) {
@@ -289,19 +212,16 @@ final class h extends wl {
               var4 = var5;
               if (var5 != null) {
                 jg.a(var5, true);
-                stackOut_6_0 = 1;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 1;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -310,27 +230,19 @@ final class h extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4_ref);
-            stackOut_8_1 = new StringBuilder().append("h.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4_ref);
+
+            stackIn_10_1 = new StringBuilder().append("h.B(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L1;
             }
           }
@@ -348,14 +260,13 @@ final class h extends wl {
     }
 
     final static String a(boolean param0, boolean param1, boolean param2, int param3) {
-        boolean discarded$0 = false;
         int var4 = 0;
         if (!(!param0)) {
             var4 += 4;
         }
         if (param3 != 26505) {
             kl var5 = (kl) null;
-            discarded$0 = h.a(-70, -30, (kl) null, 2);
+            h.a(-70, -30, (kl) null, 2);
         }
         if (!(!param2)) {
             var4 += 2;
@@ -372,25 +283,33 @@ final class h extends wl {
     }
 
     public static void c(boolean param0) {
-        boolean discarded$0 = false;
         if (!param0) {
             kl var2 = (kl) null;
-            discarded$0 = h.a(109, -121, (kl) null, -59);
+            h.a(109, -121, (kl) null, -59);
         }
         field_j = null;
         field_s = null;
     }
 
     h(byte[] param0) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        q dupTemp$17 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        q dupTemp$8 = null;
+        byte[] stackIn_39_0 = null;
+        byte[] stackIn_42_0 = null;
+        RuntimeException stackIn_208_0 = null;
+        StringBuilder stackIn_208_1 = null;
+        RuntimeException stackIn_209_0 = null;
+        StringBuilder stackIn_209_1 = null;
+        String stackIn_209_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         byte[] var4 = null;
@@ -407,10 +326,10 @@ final class h extends wl {
         q[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
-        q var15 = null;
-        byte[] var15_array = null;
-        int var16_int = 0;
+        byte[] var15 = null;
+        q var15_ref = null;
         byte[] var16 = null;
+        int var16_int = 0;
         int var17 = 0;
         byte[] var18 = null;
         int var19 = 0;
@@ -453,29 +372,6 @@ final class h extends wl {
         byte[] var56 = null;
         byte[] var57 = null;
         byte[] var58 = null;
-        byte[] stackIn_39_0 = null;
-        byte[] stackIn_42_0 = null;
-        RuntimeException stackIn_207_0 = null;
-        StringBuilder stackIn_207_1 = null;
-        RuntimeException stackIn_208_0 = null;
-        StringBuilder stackIn_208_1 = null;
-        RuntimeException stackIn_209_0 = null;
-        StringBuilder stackIn_209_1 = null;
-        String stackIn_209_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_38_0 = null;
-        byte[] stackOut_37_0 = null;
-        byte[] stackOut_41_0 = null;
-        Object stackOut_40_0 = null;
-        RuntimeException stackOut_206_0 = null;
-        StringBuilder stackOut_206_1 = null;
-        RuntimeException stackOut_208_0 = null;
-        StringBuilder stackOut_208_1 = null;
-        String stackOut_208_2 = null;
-        RuntimeException stackOut_207_0 = null;
-        StringBuilder stackOut_207_1 = null;
-        String stackOut_207_2 = null;
         try {
           L0: {
             this.field_r = new short[128];
@@ -539,9 +435,9 @@ final class h extends wl {
                                             L9: {
                                               var15_int = var38.f(255);
                                               if (0 == var15_int) {
-                                                incrementValue$9 = var12;
+                                                incrementValue$0 = var12;
                                                 var12++;
-                                                var13_int = incrementValue$9;
+                                                var13_int = incrementValue$0;
                                                 break L9;
                                               } else {
                                                 L10: {
@@ -573,26 +469,22 @@ final class h extends wl {
                                         L12: {
                                           var14 = var38.f(255);
                                           if ((var14 ^ -1) >= -1) {
-                                            stackOut_38_0 = null;
-                                            stackIn_39_0 = (byte[]) ((Object) stackOut_38_0);
+                                            stackIn_39_0 = null;
                                             break L12;
                                           } else {
-                                            stackOut_37_0 = new byte[2 * var14];
-                                            stackIn_39_0 = stackOut_37_0;
+                                            stackIn_39_0 = new byte[2 * var14];
                                             break L12;
                                           }
                                         }
                                         L13: {
                                           var46 = stackIn_39_0;
-                                          var15_array = var46;
+                                          var15 = var46;
                                           var14 = var38.f(255);
                                           if ((var14 ^ -1) < -1) {
-                                            stackOut_41_0 = new byte[var14 * 2];
-                                            stackIn_42_0 = stackOut_41_0;
+                                            stackIn_42_0 = new byte[var14 * 2];
                                             break L13;
                                           } else {
-                                            stackOut_40_0 = null;
-                                            stackIn_42_0 = (byte[]) ((Object) stackOut_40_0);
+                                            stackIn_42_0 = null;
                                             break L13;
                                           }
                                         }
@@ -653,7 +545,7 @@ final class h extends wl {
                                                                             L23: while (true) {
                                                                               if (var27 >= var12) {
                                                                                 L24: {
-                                                                                  if (var15_array == null) {
+                                                                                  if (null == var15) {
                                                                                     break L24;
                                                                                   } else {
                                                                                     var27 = 1;
@@ -661,7 +553,7 @@ final class h extends wl {
                                                                                       if (var27 >= var46.length) {
                                                                                         break L24;
                                                                                       } else {
-                                                                                        var15_array[var27] = var38.k(0);
+                                                                                        var15[var27] = var38.k(0);
                                                                                         var27 += 2;
                                                                                         continue L25;
                                                                                       }
@@ -692,9 +584,9 @@ final class h extends wl {
                                                                                       if (var12 <= var27) {
                                                                                         L30: {
                                                                                           L31: {
-                                                                                            if (var15_array != null) {
+                                                                                            if (var15 != null) {
                                                                                               var19 = var38.f(255);
-                                                                                              var15_array[0] = (byte)var19;
+                                                                                              var15[0] = (byte)var19;
                                                                                               var27 = 2;
                                                                                               L32: while (true) {
                                                                                                 if (var46.length <= var27) {
@@ -706,11 +598,11 @@ final class h extends wl {
                                                                                                       var29 = 2;
                                                                                                       L34: while (true) {
                                                                                                         if (var29 >= var46.length) {
-                                                                                                          var15_array = null;
+                                                                                                          var15 = null;
                                                                                                           var30 = var27;
                                                                                                           L35: while (true) {
                                                                                                             if (128 <= var30) {
-                                                                                                              if (var16 == null) {
+                                                                                                              if (null == var16) {
                                                                                                                 break L30;
                                                                                                               } else {
                                                                                                                 var19 = var38.f(255);
@@ -735,7 +627,7 @@ final class h extends wl {
                                                                                                           }
                                                                                                         } else {
                                                                                                           var30 = var46[var29];
-                                                                                                          var31 = var15_array[var29 + 1];
+                                                                                                          var31 = var15[var29 + 1];
                                                                                                           var32 = (var30 + -var27) / 2 + (-var27 + var30) * var28;
                                                                                                           var33 = var27;
                                                                                                           L37: while (true) {
@@ -762,7 +654,7 @@ final class h extends wl {
                                                                                                   }
                                                                                                 } else {
                                                                                                   var19 = var38.f(255) + var19 - -1;
-                                                                                                  var15_array[var27] = (byte)var19;
+                                                                                                  var15[var27] = (byte)var19;
                                                                                                   var27 += 2;
                                                                                                   continue L32;
                                                                                                 }
@@ -1065,9 +957,9 @@ final class h extends wl {
                                                                               } else {
                                                                                 L68: {
                                                                                   if (var21 < var54.length) {
-                                                                                    incrementValue$10 = var21;
+                                                                                    incrementValue$1 = var21;
                                                                                     var21++;
-                                                                                    var20 = var18[incrementValue$10];
+                                                                                    var20 = var18[incrementValue$1];
                                                                                     break L68;
                                                                                   } else {
                                                                                     var20 = -1;
@@ -1099,9 +991,9 @@ final class h extends wl {
                                                                               } else {
                                                                                 var25 = var13[var53[var21]];
                                                                                 if (var21 < var57.length) {
-                                                                                  incrementValue$11 = var21;
+                                                                                  incrementValue$2 = var21;
                                                                                   var21++;
-                                                                                  var20 = var10[incrementValue$11];
+                                                                                  var20 = var10[incrementValue$2];
                                                                                   break L70;
                                                                                 } else {
                                                                                   var20 = -1;
@@ -1127,16 +1019,16 @@ final class h extends wl {
                                                                           if (var20 != 0) {
                                                                             break L72;
                                                                           } else {
-                                                                            incrementValue$12 = var8;
+                                                                            incrementValue$3 = var8;
                                                                             var8++;
-                                                                            var24 = var38.field_k[incrementValue$12] - -16 << -2021932958;
+                                                                            var24 = var38.field_k[incrementValue$3] - -16 << -2021932958;
                                                                             if (var56.length <= var21) {
                                                                               var20 = -1;
                                                                               break L72;
                                                                             } else {
-                                                                              incrementValue$13 = var21;
+                                                                              incrementValue$4 = var21;
                                                                               var21++;
-                                                                              var20 = var7[incrementValue$13];
+                                                                              var20 = var7[incrementValue$4];
                                                                               break L72;
                                                                             }
                                                                           }
@@ -1164,15 +1056,15 @@ final class h extends wl {
                                                                             var20 = -1;
                                                                             break L75;
                                                                           } else {
-                                                                            incrementValue$14 = var21;
+                                                                            incrementValue$5 = var21;
                                                                             var21++;
-                                                                            var20 = var4[incrementValue$14];
+                                                                            var20 = var4[incrementValue$5];
                                                                             break L75;
                                                                           }
                                                                         }
-                                                                        incrementValue$15 = var5;
+                                                                        incrementValue$6 = var5;
                                                                         var5++;
-                                                                        var23 = -1 + var38.field_k[incrementValue$15];
+                                                                        var23 = -1 + var38.field_k[incrementValue$6];
                                                                         break L74;
                                                                       }
                                                                     }
@@ -1192,9 +1084,9 @@ final class h extends wl {
                                                               } else {
                                                                 L77: {
                                                                   if (var21 < var54.length) {
-                                                                    incrementValue$16 = var21;
+                                                                    incrementValue$7 = var21;
                                                                     var21++;
-                                                                    var20 = var18[incrementValue$16];
+                                                                    var20 = var18[incrementValue$7];
                                                                     break L77;
                                                                   } else {
                                                                     var20 = -1;
@@ -1239,15 +1131,15 @@ final class h extends wl {
                                         }
                                       } else {
                                         L78: {
-                                          dupTemp$17 = new q();
-                                          var13[var14] = dupTemp$17;
-                                          var40 = dupTemp$17;
-                                          var15 = var40;
+                                          dupTemp$8 = new q();
+                                          var13[var14] = dupTemp$8;
+                                          var40 = dupTemp$8;
+                                          var15_ref = var40;
                                           var16_int = var38.f(255);
                                           if (-1 <= (var16_int ^ -1)) {
                                             break L78;
                                           } else {
-                                            var15.field_f = new byte[2 * var16_int];
+                                            var15_ref.field_f = new byte[2 * var16_int];
                                             break L78;
                                           }
                                         }
@@ -1256,7 +1148,7 @@ final class h extends wl {
                                           if ((var16_int ^ -1) >= -1) {
                                             break L79;
                                           } else {
-                                            var15.field_c = new byte[var16_int * 2 + 2];
+                                            var15_ref.field_c = new byte[var16_int * 2 + 2];
                                             var40.field_c[1] = (byte)64;
                                             break L79;
                                           }
@@ -1303,27 +1195,19 @@ final class h extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L80: {
             var2 = decompiledCaughtException;
-            stackOut_206_0 = (RuntimeException) (var2);
-            stackOut_206_1 = new StringBuilder().append("h.<init>(");
-            stackIn_208_0 = stackOut_206_0;
-            stackIn_208_1 = stackOut_206_1;
-            stackIn_207_0 = stackOut_206_0;
-            stackIn_207_1 = stackOut_206_1;
+            stackIn_208_0 = (RuntimeException) (var2);
+
+            stackIn_208_1 = new StringBuilder().append("h.<init>(");
+
             if (param0 == null) {
-              stackOut_208_0 = (RuntimeException) ((Object) stackIn_208_0);
-              stackOut_208_1 = (StringBuilder) ((Object) stackIn_208_1);
-              stackOut_208_2 = "null";
-              stackIn_209_0 = stackOut_208_0;
-              stackIn_209_1 = stackOut_208_1;
-              stackIn_209_2 = stackOut_208_2;
+              stackIn_209_0 = (RuntimeException) ((Object) stackIn_208_0);
+              stackIn_209_1 = (StringBuilder) ((Object) stackIn_208_1);
+              stackIn_209_2 = "null";
               break L80;
             } else {
-              stackOut_207_0 = (RuntimeException) ((Object) stackIn_207_0);
-              stackOut_207_1 = (StringBuilder) ((Object) stackIn_207_1);
-              stackOut_207_2 = "{...}";
-              stackIn_209_0 = stackOut_207_0;
-              stackIn_209_1 = stackOut_207_1;
-              stackIn_209_2 = stackOut_207_2;
+              stackIn_209_0 = (RuntimeException) ((Object) stackIn_208_0);
+              stackIn_209_1 = (StringBuilder) ((Object) stackIn_208_1);
+              stackIn_209_2 = "{...}";
               break L80;
             }
           }

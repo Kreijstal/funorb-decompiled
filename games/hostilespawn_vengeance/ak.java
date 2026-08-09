@@ -19,10 +19,10 @@ final class ak {
             if (null != jj.field_d) {
                 jj.field_d.g((byte) -122);
             }
-            ib.field_e = new lk(param2, param1, false, true, true);
-            ke.field_s.b((ag) (Object) ib.field_e, (byte) 110);
+            ib.field_e = new lk(param2, param1, param0, true, true);
+            ke.field_s.b(ib.field_e, (byte) 110);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "ak.A(" + false + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw wg.a((Throwable) ((Object) runtimeException), "ak.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,10 +39,6 @@ final class ak {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new vl();
         field_f = 0;
         field_c = new int[]{5, 17, 18};

@@ -5,16 +5,15 @@ final class mn {
     static String field_a;
 
     final static void a(boolean param0, int param1, int param2, int param3) {
-        boolean discarded$1 = false;
-        RuntimeException var4 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         llb var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         pgb var9 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var7 = VoidHunters.field_G;
         try {
           L0: {
@@ -43,7 +42,7 @@ final class mn {
                   break L3;
                 } else {
                   if (erb.field_p) {
-                    discarded$1 = ada.field_b.a((byte) -5, hca.field_o.field_M, hca.field_o.field_u, param0);
+                    ada.field_b.a((byte) -5, hca.field_o.field_M, hca.field_o.field_u, param0);
                     break L3;
                   } else {
                     ada.field_b = null;
@@ -134,8 +133,6 @@ final class mn {
         int stackIn_4_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -143,23 +140,11 @@ final class mn {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_11_0 = 0;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         var3 = VoidHunters.field_G;
         try {
           L0: {
             if (!je.a((byte) -31, param0, true)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -174,14 +159,12 @@ final class mn {
               var2_int = 0;
               L2: while (true) {
                 if (var2_int >= param0.length()) {
-                  stackOut_14_0 = 1;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = 1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (!qnb.a((byte) -108, param0.charAt(var2_int))) {
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = 0;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -196,27 +179,19 @@ final class mn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var2);
-            stackOut_16_1 = new StringBuilder().append("mn.A(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var2);
+
+            stackIn_18_1 = new StringBuilder().append("mn.A(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L3;
             }
           }

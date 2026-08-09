@@ -18,12 +18,10 @@ final class rb {
     }
 
     final static boolean a(int param0, boolean param1, byte param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         int stackIn_39_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_37_0 = 0;
+        int var4;
+        int var5;
+        int var6;
         if (param1) {
           if (a.field_c[param0] < a.field_c[param3]) {
             return true;
@@ -46,12 +44,10 @@ final class rb {
                     } else {
                       L0: {
                         if (param3 <= param0) {
-                          stackOut_38_0 = 0;
-                          stackIn_39_0 = stackOut_38_0;
+                          stackIn_39_0 = 0;
                           break L0;
                         } else {
-                          stackOut_37_0 = 1;
-                          stackIn_39_0 = stackOut_37_0;
+                          stackIn_39_0 = 1;
                           break L0;
                         }
                       }

@@ -8,7 +8,7 @@ final class tea extends mf implements lja {
     private boolean field_mb;
 
     final boolean a(int param0) {
-        eq var2 = null;
+        eq var2;
         if (this.field_C) {
           if (!this.field_nb) {
             var2 = nea.f((byte) 94);
@@ -43,14 +43,6 @@ final class tea extends mf implements lja {
     }
 
     private final void a(int param0, boolean param1, eq param2) {
-        hf discarded$2 = null;
-        hf discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        hc var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         RuntimeException stackIn_35_0 = null;
@@ -58,14 +50,10 @@ final class tea extends mf implements lja {
         String stackIn_35_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        hc var5 = null;
+        int var6 = 0;
         var6 = BachelorFridge.field_y;
         try {
           L0: {
@@ -81,7 +69,7 @@ final class tea extends mf implements lja {
               this.field_nb = true;
               if (!param2.field_e) {
                 if (param2.field_a == null) {
-                  var4_ref = param2.field_g;
+                  var4 = param2.field_g;
                   if (param2.field_d == 248) {
                     L3: {
                       if (param1) {
@@ -91,14 +79,14 @@ final class tea extends mf implements lja {
                         break L3;
                       }
                     }
-                    var4_ref = lda.field_b;
+                    var4 = lda.field_b;
                     this.field_mb = true;
                     break L2;
                   } else {
                     break L2;
                   }
                 } else {
-                  var4_ref = uga.field_A;
+                  var4 = uga.field_A;
                   if (this.field_ob != null) {
                     this.field_ob.a(param0 + 26653);
                     break L2;
@@ -107,19 +95,19 @@ final class tea extends mf implements lja {
                   }
                 }
               } else {
-                var4_ref = dla.field_m;
+                var4 = dla.field_m;
                 break L2;
               }
             }
             L4: {
-              var5 = new hc((mf) (this), qia.field_a, var4_ref);
+              var5 = new hc((mf) (this), qia.field_a, var4);
               if (param2.field_e) {
                 if (param2.field_h) {
                   this.e(new ar((tea) (this)), 33);
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  discarded$2 = var5.a((pl) (this), tj.field_a, 19528);
+                  var5.a((pl) (this), tj.field_a, 19528);
                   break L4;
                 }
               } else {
@@ -134,7 +122,7 @@ final class tea extends mf implements lja {
                       break L5;
                     }
                   } else {
-                    discarded$3 = var5.a((pl) (this), tj.field_a, 19528);
+                    var5.a((pl) (this), tj.field_a, 19528);
                     break L5;
                   }
                 }
@@ -159,28 +147,20 @@ final class tea extends mf implements lja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var4 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) (var4);
-            stackOut_32_1 = new StringBuilder().append("tea.NA(").append(param0).append(',').append(param1).append(',');
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_34_0 = (RuntimeException) (var4_ref);
+
+            stackIn_34_1 = new StringBuilder().append("tea.NA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L6;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L6;
             }
           }
@@ -218,8 +198,6 @@ final class tea extends mf implements lja {
 
     public final void a(int param0, hf param1, int param2, byte param3, int param4) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -227,14 +205,6 @@ final class tea extends mf implements lja {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (this.field_mb) {
@@ -260,27 +230,19 @@ final class tea extends mf implements lja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (runtimeException);
-            stackOut_7_1 = new StringBuilder().append("tea.AA(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (runtimeException);
+
+            stackIn_9_1 = new StringBuilder().append("tea.AA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -295,14 +257,11 @@ final class tea extends mf implements lja {
 
     final static int a(CharSequence param0, char param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int stackIn_3_0 = 0;
         int stackIn_12_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -310,16 +269,7 @@ final class tea extends mf implements lja {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var3 = null;
         var6 = BachelorFridge.field_y;
         try {
           L0: {
@@ -329,8 +279,7 @@ final class tea extends mf implements lja {
               var5 = 0;
               L1: while (true) {
                 if (var4 <= var5) {
-                  stackOut_11_0 = var3_int;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = var3_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -347,8 +296,7 @@ final class tea extends mf implements lja {
                 }
               }
             } else {
-              stackOut_2_0 = -33;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = -33;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -357,27 +305,19 @@ final class tea extends mf implements lja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3);
-            stackOut_13_1 = new StringBuilder().append("tea.LA(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3);
+
+            stackIn_15_1 = new StringBuilder().append("tea.LA(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }

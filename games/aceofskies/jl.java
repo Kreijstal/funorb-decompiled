@@ -37,7 +37,7 @@ final class jl extends sk {
             this.a(10);
         }
         var6.a(0.0f, -1.0f, field_o, 0.0f, (float)var5, 11);
-        int discarded$0 = var4.a(12, field_o);
+        var4.a(12, field_o);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -47,17 +47,15 @@ final class jl extends sk {
     }
 
     final void b(byte param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        ec var3 = null;
+        jagdx.IDirect3DDevice var2;
+        ec var3;
         if (param0 != -25) {
           L0: {
             this.a(77, -13, -23);
             if (this.field_f != null) {
               var2 = this.field_j.field_Rc;
               var3 = this.field_j.v((byte) 68);
-              discarded$4 = var2.a(0, var3.c(field_m, 78));
+              var2.a(0, var3.c(field_m, 78));
               break L0;
             } else {
               break L0;
@@ -69,7 +67,7 @@ final class jl extends sk {
             if (this.field_f != null) {
               var2 = this.field_j.field_Rc;
               var3 = this.field_j.v((byte) 68);
-              discarded$5 = var2.a(0, var3.c(field_m, 78));
+              var2.a(0, var3.c(field_m, 78));
               break L1;
             } else {
               break L1;
@@ -80,13 +78,11 @@ final class jl extends sk {
     }
 
     final void a(int param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        float var5 = 0.0f;
-        float var6 = 0.0f;
+        jagdx.IDirect3DDevice var2;
+        int var3;
+        int var4;
+        float var5;
+        float var6;
         L0: {
           if (null != this.field_f) {
             var2 = this.field_j.field_Rc;
@@ -94,8 +90,8 @@ final class jl extends sk {
             var4 = this.field_b.i();
             var5 = (float)var3 - 0.125f * (float)(-var4 + var3);
             var6 = (float)var3 - 0.25f * (float)(var3 - var4);
-            discarded$4 = var2.b(10, var6, 1.0f / (-var6 + var5), var5, 1.0f / (-var5 + (float)var3));
-            discarded$5 = var2.b(11, 1.0f / (float)this.field_b.j((byte) 5), (float)this.field_b.H(param0 + 73) / 255.0f, this.field_b.field_y, 1.0f / (-this.field_b.field_Xb + this.field_b.field_y));
+            var2.b(10, var6, 1.0f / (-var6 + var5), var5, 1.0f / (-var5 + (float)var3));
+            var2.b(11, 1.0f / (float)this.field_b.j((byte) 5), (float)this.field_b.H(param0 + 73) / 255.0f, this.field_b.field_y, 1.0f / (-this.field_b.field_Xb + this.field_b.field_y));
             this.field_b.a((byte) -74, this.field_b.q(0));
             break L0;
           } else {
@@ -111,16 +107,15 @@ final class jl extends sk {
     }
 
     final void b(int param0) {
-        int discarded$2 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        ec var3 = null;
+        jagdx.IDirect3DDevice var2;
+        ec var3;
         L0: {
           if (this.field_f == null) {
             break L0;
           } else {
             var2 = this.field_j.field_Rc;
             var3 = this.field_j.v((byte) -83);
-            discarded$2 = var2.a(0, var3.c(field_m, 59));
+            var2.a(0, var3.c(field_m, 59));
             break L0;
           }
         }
@@ -135,41 +130,11 @@ final class jl extends sk {
     jl(kr param0, gk param1) {
         super(param0);
         int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_9_1 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_10_1 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
-        int stackIn_12_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_14_1 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
-        int stackOut_10_2 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_13_1 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_12_1 = 0;
         this.field_h = false;
         this.field_j = param0;
         if (param1 == null) {
@@ -186,73 +151,53 @@ final class jl extends sk {
               this.field_p = this.field_j.field_Rc.b(param1.a("dx", (byte) -71, "uw_model_unlit"));
               this.field_i = this.field_j.field_Rc.b(param1.a("dx", (byte) -71, "uw_model_lit"));
               if (null == this.field_p) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }
             L1: {
-              stackOut_5_0 = stackIn_5_0;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_6_0 = stackOut_5_0;
+
+
               if (this.field_l == null) {
-                stackOut_7_0 = stackIn_7_0;
-                stackOut_7_1 = 0;
-                stackIn_8_0 = stackOut_7_0;
-                stackIn_8_1 = stackOut_7_1;
+
+                stackIn_8_1 = 0;
                 break L1;
               } else {
-                stackOut_6_0 = stackIn_6_0;
-                stackOut_6_1 = 1;
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
+
+                stackIn_8_1 = 1;
                 break L1;
               }
             }
             L2: {
-              stackOut_8_0 = stackIn_8_0;
-              stackOut_8_1 = stackIn_8_1;
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
+
+
+
+
               if (null == this.field_g) {
-                stackOut_10_0 = stackIn_10_0;
-                stackOut_10_1 = stackIn_10_1;
-                stackOut_10_2 = 0;
-                stackIn_11_0 = stackOut_10_0;
-                stackIn_11_1 = stackOut_10_1;
-                stackIn_11_2 = stackOut_10_2;
+
+
+                stackIn_11_2 = 0;
                 break L2;
               } else {
-                stackOut_9_0 = stackIn_9_0;
-                stackOut_9_1 = stackIn_9_1;
-                stackOut_9_2 = 1;
-                stackIn_11_0 = stackOut_9_0;
-                stackIn_11_1 = stackOut_9_1;
-                stackIn_11_2 = stackOut_9_2;
+
+
+                stackIn_11_2 = 1;
                 break L2;
               }
             }
             L3: {
-              stackOut_11_0 = stackIn_11_0 & (stackIn_11_1 & stackIn_11_2);
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_13_0 = stackIn_5_0 & (stackIn_8_1 & stackIn_11_2);
+
               if (this.field_i == null) {
-                stackOut_13_0 = stackIn_13_0;
-                stackOut_13_1 = 0;
-                stackIn_14_0 = stackOut_13_0;
-                stackIn_14_1 = stackOut_13_1;
+                stackIn_14_0 = stackIn_13_0;
+                stackIn_14_1 = 0;
                 break L3;
               } else {
-                stackOut_12_0 = stackIn_12_0;
-                stackOut_12_1 = 1;
-                stackIn_14_0 = stackOut_12_0;
-                stackIn_14_1 = stackOut_12_1;
+                stackIn_14_0 = stackIn_13_0;
+                stackIn_14_1 = 1;
                 break L3;
               }
             }
@@ -276,30 +221,19 @@ final class jl extends sk {
     }
 
     final void a(boolean param0, byte param1) {
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param0) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -428,16 +362,15 @@ final class jl extends sk {
     }
 
     final void d(int param0) {
-        int discarded$2 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        ec var3 = null;
+        jagdx.IDirect3DDevice var2;
+        ec var3;
         L0: {
           if (this.field_f == null) {
             break L0;
           } else {
             var2 = this.field_j.field_Rc;
             var3 = this.field_b.J(-120);
-            discarded$2 = var2.SetVertexShaderConstantF(8, var3.a(false, field_m), 2);
+            var2.SetVertexShaderConstantF(8, var3.a(false, field_m), 2);
             break L0;
           }
         }
@@ -450,42 +383,25 @@ final class jl extends sk {
     }
 
     private final void f(int param0) {
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        int discarded$8 = 0;
-        int discarded$9 = 0;
-        int var2 = 0;
-        ec var2_ref_ec = null;
-        jagdx.IDirect3DDevice var3 = null;
         ec var4 = null;
-        L0: {
-          if (this.field_f == null) {
-            break L0;
-          } else {
-            if (!this.field_q) {
-              break L0;
-            } else {
-              var4 = this.field_b.f(false);
-              var2_ref_ec = var4;
-              var3 = this.field_j.field_Rc;
-              discarded$5 = var3.b(13, this.field_b.field_g * this.field_b.field_Wb, this.field_b.field_rb * this.field_b.field_Wb, this.field_b.field_Hb * this.field_b.field_Wb, 1.0f);
-              discarded$6 = var3.b(14, this.field_b.field_fb * this.field_b.field_g, this.field_b.field_fb * this.field_b.field_rb, this.field_b.field_fb * this.field_b.field_Hb, 1.0f);
-              discarded$7 = var3.b(16, this.field_b.field_g * this.field_b.field_ub, this.field_b.field_rb * this.field_b.field_ub, this.field_b.field_Hb * this.field_b.field_ub, 1.0f);
-              var4.a(this.field_b.field_Jb[1], field_o, -11232, this.field_b.field_Jb[2], this.field_b.field_Jb[0]);
-              discarded$8 = var3.SetVertexShaderConstantF(15, field_o, 1);
-              var4.a(this.field_b.field_Gb[1], field_o, -11232, this.field_b.field_Gb[2], this.field_b.field_Gb[0]);
-              discarded$9 = var3.SetVertexShaderConstantF(17, field_o, 1);
-              break L0;
-            }
-          }
+        jagdx.IDirect3DDevice var3 = null;
+        if (this.field_f != null && this.field_q) {
+            var4 = this.field_b.f(false);
+            ec var2_ref_ec = var4;
+            var3 = this.field_j.field_Rc;
+            var3.b(13, this.field_b.field_g * this.field_b.field_Wb, this.field_b.field_rb * this.field_b.field_Wb, this.field_b.field_Hb * this.field_b.field_Wb, 1.0f);
+            var3.b(14, this.field_b.field_fb * this.field_b.field_g, this.field_b.field_fb * this.field_b.field_rb, this.field_b.field_fb * this.field_b.field_Hb, 1.0f);
+            var3.b(16, this.field_b.field_g * this.field_b.field_ub, this.field_b.field_rb * this.field_b.field_ub, this.field_b.field_Hb * this.field_b.field_ub, 1.0f);
+            var4.a(this.field_b.field_Jb[1], field_o, -11232, this.field_b.field_Jb[2], this.field_b.field_Jb[0]);
+            var3.SetVertexShaderConstantF(15, field_o, 1);
+            var4.a(this.field_b.field_Gb[1], field_o, -11232, this.field_b.field_Gb[2], this.field_b.field_Gb[0]);
+            var3.SetVertexShaderConstantF(17, field_o, 1);
         }
-        var2 = -25 / ((param0 - -87) / 36);
+        int var2 = -25 / ((param0 - -87) / 36);
     }
 
     final void c(int param0) {
-        int discarded$2 = 0;
-        jagdx.IDirect3DDevice var2 = null;
+        jagdx.IDirect3DDevice var2;
         if (param0 != 404277666) {
           return;
         } else {
@@ -494,7 +410,7 @@ final class jl extends sk {
               break L0;
             } else {
               var2 = this.field_j.field_Rc;
-              discarded$2 = var2.a(4, this.field_b.a(param0 + -404277654, field_m));
+              var2.a(4, this.field_b.a(param0 + -404277654, field_m));
               break L0;
             }
           }

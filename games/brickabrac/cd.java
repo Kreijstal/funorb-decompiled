@@ -12,10 +12,10 @@ final class cd {
     static jp[] field_h;
 
     final static boolean a(int param0) {
-        long var1 = 0L;
-        long var3 = 0L;
-        int var5 = 0;
-        int var6 = 0;
+        long var1;
+        long var3;
+        int var5;
+        int var6;
         var6 = BrickABrac.field_J ? 1 : 0;
         if (param0 < -126) {
           var1 = ue.a(false);

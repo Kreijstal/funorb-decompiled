@@ -21,8 +21,8 @@ final class ug extends fa {
     }
 
     final static void a(int param0) {
-        String var1 = null;
-        String var2 = null;
+        String var1;
+        String var2;
         L0: {
           if (null != wo.field_b) {
             var2 = wo.field_b;

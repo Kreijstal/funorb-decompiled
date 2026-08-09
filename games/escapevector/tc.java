@@ -27,9 +27,9 @@ final class tc extends hg {
     }
 
     private final void a(byte param0) {
-        int var2 = 0;
-        ed var3 = null;
-        int var4 = 0;
+        int var2;
+        ed var3;
+        int var4;
         var4 = EscapeVector.field_A;
         this.field_m = 0;
         if (null == this.field_l) {
@@ -68,9 +68,9 @@ final class tc extends hg {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        ed var5 = null;
-        int var6 = 0;
+        int var4;
+        ed var5;
+        int var6;
         L0: {
           var6 = EscapeVector.field_A;
           if (param0 == 103) {

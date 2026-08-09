@@ -16,13 +16,10 @@ abstract class cg extends k implements pi {
         int var5 = 0;
         char[] var6 = null;
         int stackIn_8_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_19_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_18_0 = 0;
         var5 = Main.field_T;
         try {
           L0: {
@@ -31,8 +28,7 @@ abstract class cg extends k implements pi {
                 break L1;
               } else {
                 if (param1 < 128) {
-                  stackOut_7_0 = 1;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -63,12 +59,11 @@ abstract class cg extends k implements pi {
                     break L3;
                   } else {
                     var4 = var6[var3];
-                    if (param1 != var4) {
+                    if ((param1 ^ -1) != (var4 ^ -1)) {
                       var3++;
                       continue L4;
                     } else {
-                      stackOut_13_0 = 1;
-                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_16_0 = 1;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -84,8 +79,7 @@ abstract class cg extends k implements pi {
                 break L5;
               }
             }
-            stackOut_18_0 = 0;
-            stackIn_19_0 = stackOut_18_0;
+            stackIn_21_0 = 0;
             decompiledRegionSelector0 = 2;
             break L0;
           }
@@ -98,9 +92,9 @@ abstract class cg extends k implements pi {
           return stackIn_8_0 != 0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_14_0 != 0;
+            return stackIn_16_0 != 0;
           } else {
-            return stackIn_19_0 != 0;
+            return stackIn_21_0 != 0;
           }
         }
     }
@@ -116,9 +110,6 @@ abstract class cg extends k implements pi {
     public final boolean a(byte param0) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 <= -1) {
           if (null != this.field_g.field_r) {
             if (this.field_g.field_r.length() == 0) {
@@ -127,8 +118,7 @@ abstract class cg extends k implements pi {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
@@ -138,12 +128,10 @@ abstract class cg extends k implements pi {
           } else {
             L0: {
               if (this.field_g.field_r.length() != 0) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }
@@ -190,22 +178,12 @@ abstract class cg extends k implements pi {
 
     public final void a(hf param0, int param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -223,27 +201,19 @@ abstract class cg extends k implements pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("cg.MA(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("cg.MA(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -252,31 +222,20 @@ abstract class cg extends k implements pi {
     }
 
     public final void a(int param0, hf param1) {
-        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
               if (param0 == -1) {
                 break L1;
               } else {
-                discarded$2 = this.a((byte) -37);
+                this.a((byte) -37);
                 break L1;
               }
             }
@@ -286,27 +245,19 @@ abstract class cg extends k implements pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("cg.GA(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("cg.GA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

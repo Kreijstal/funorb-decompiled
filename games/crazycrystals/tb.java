@@ -13,30 +13,21 @@ abstract class tb {
 
     final int a(byte param0, int param1, String param2, int param3) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int stackIn_18_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_23_2 = null;
+        int stackIn_20_0 = 0;
+        int stackIn_22_0 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var5 = null;
         var10 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -55,11 +46,13 @@ abstract class tb {
             L2: while (true) {
               if (var8 >= var7) {
                 if (-1 > (var5_int ^ -1)) {
-                  stackOut_17_0 = (param1 + -param3 << 95664328) / var5_int;
-                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_20_0 = (param1 + -param3 << 95664328) / var5_int;
+                  decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  return 0;
+                  stackIn_22_0 = 0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               } else {
                 L3: {
@@ -95,33 +88,29 @@ abstract class tb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var5);
-            stackOut_20_1 = new StringBuilder().append("tb.N(").append(param0).append(',').append(param1).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_25_0 = (RuntimeException) (var5);
+
+            stackIn_25_1 = new StringBuilder().append("tb.N(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L4;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L4;
             }
           }
-          throw dn.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param3 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param3 + ')');
         }
-        return stackIn_18_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_20_0;
+        } else {
+          return stackIn_22_0;
+        }
     }
 
     final static void a(int param0, ng param1) {
@@ -149,41 +138,15 @@ abstract class tb {
     }
 
     final static void a(int param0, hp param1, byte param2) {
-        int discarded$1 = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        String var7 = null;
         md var8 = null;
         md var9 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        var6 = CrazyCrystals.field_B;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = CrazyCrystals.field_B;
         try {
-          L0: {
-            L1: {
-              if (param2 <= -122) {
-                break L1;
-              } else {
-                var7 = (String) null;
+            if (param2 > -122) {
+                String var7 = (String) null;
                 tb.a(114, true, 91, -82, (String) null);
-                break L1;
-              }
             }
             var8 = tp.field_f;
             var9 = var8;
@@ -199,58 +162,23 @@ abstract class tb {
             var9.a(param1.field_o, -16384);
             var9.a(param1.field_h, -16384);
             var9.a(true, param1.field_p.length);
-            var5 = 0;
-            L2: while (true) {
-              if (var5 >= param1.field_p.length) {
-                discarded$1 = var9.b(var4, (byte) -75);
-                var9.c((byte) 68, var9.field_f + -var4);
-                break L0;
-              } else {
+            for (var5 = 0; var5 < param1.field_p.length; var5++) {
                 var8.a(param1.field_p[var5], -16384);
-                var5++;
-                continue L2;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("tb.P(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L3;
-            } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L3;
-            }
-          }
-          throw dn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ')');
+            var9.b(var4, (byte) -75);
+            var9.c((byte) 68, var9.field_f + -var4);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) ((Object) runtimeException), "tb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final int a(int param0) {
-        int var2 = 0;
-        bh[] var3 = null;
-        int var4 = 0;
-        bh var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        bh[] var3;
+        int var4;
+        bh var5;
+        int var7;
+        int var6;
         L0: {
           var7 = CrazyCrystals.field_B;
           var2 = -1;
@@ -290,10 +218,9 @@ abstract class tb {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, String param4) {
-        int discarded$0 = 0;
         try {
             if (param1) {
-                discarded$0 = tb.a(false);
+                tb.a(false);
             }
             an.field_q.a(param4, -1 + param3, param0, 0, -1);
             an.field_q.a(param4, param3 - -1, param0, 0, -1);
@@ -355,17 +282,14 @@ abstract class tb {
     }
 
     final int a(byte param0) {
-        int discarded$2 = 0;
-        String var3 = null;
+        String var3;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == -90) {
             break L0;
           } else {
             var3 = (String) null;
-            discarded$2 = this.a((byte) 90, -21, (String) null, 101);
+            this.a((byte) 90, -21, (String) null, 101);
             break L0;
           }
         }
@@ -375,28 +299,25 @@ abstract class tb {
               break L2;
             } else {
               if ((this.field_h.length ^ -1) < -1) {
-                stackOut_6_0 = this.field_h[this.field_h.length - 1].field_b + -this.field_h[0].field_f;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = this.field_h[this.field_h.length - 1].field_b + -this.field_h[0].field_f;
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0;
     }
 
     final int a(int param0, int param1, byte param2) {
-        int discarded$2 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        bh var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+        int var4;
+        int var5;
+        bh var6;
+        int var7;
+        int var8;
         L0: {
           var8 = CrazyCrystals.field_B;
           if (this.field_h == null) {
@@ -418,7 +339,7 @@ abstract class tb {
                       if (param2 == 51) {
                         break L1;
                       } else {
-                        discarded$2 = this.a(85, 75);
+                        this.a(85, 75);
                         break L1;
                       }
                     }
@@ -461,15 +382,14 @@ abstract class tb {
 
     final static int a(boolean param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        long var4 = 0L;
-        int var6 = 0;
         int var7 = 0;
         int stackIn_26_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_25_0 = 0;
+        RuntimeException var1 = null;
+        long var4 = 0L;
+        int var6 = 0;
         var7 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -542,8 +462,7 @@ abstract class tb {
                     }
                   }
                 }
-                stackOut_25_0 = var3;
-                stackIn_26_0 = stackOut_25_0;
+                stackIn_26_0 = var3;
                 break L0;
               } else {
                 L7: {

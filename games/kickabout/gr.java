@@ -50,9 +50,9 @@ final class gr {
     static String[] field_l;
 
     final boolean a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var4 = Kickabout.field_G;
           var2 = -122 / ((2 - param0) / 36);
@@ -109,7 +109,6 @@ final class gr {
     }
 
     final boolean c(int param0) {
-        boolean discarded$0 = false;
         int var4 = Kickabout.field_G;
         int var2 = 0;
         cq var3 = (cq) ((Object) this.field_O.g(24009));
@@ -120,7 +119,7 @@ final class gr {
             var3 = (cq) ((Object) this.field_O.c(param0 ^ -36));
         }
         if (param0 != -3) {
-            discarded$0 = this.c(-68);
+            this.c(-68);
         }
         return 5 > var2 ? true : false;
     }
@@ -136,32 +135,22 @@ final class gr {
     }
 
     final void a(gr param0, byte param1) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        cq var3_ref = null;
-        int var4_int = 0;
-        cq var4 = null;
-        pt var5 = null;
-        int var6 = 0;
-        iw var7 = null;
-        pt var8 = null;
-        up var9 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        int var3_int = 0;
+        cq var3 = null;
+        RuntimeException var3_ref = null;
+        cq var4 = null;
+        int var4_int = 0;
+        pt var5 = null;
+        int var6 = 0;
+        iw var7 = null;
+        pt var8 = null;
+        up var9 = null;
         var6 = Kickabout.field_G;
         try {
           L0: {
@@ -187,9 +176,9 @@ final class gr {
                 L2: while (true) {
                   if ((var3_int ^ -1) <= -10) {
                     this.field_O = new tf();
-                    var3_ref = (cq) ((Object) param0.field_O.g(24009));
+                    var3 = (cq) ((Object) param0.field_O.g(24009));
                     L3: while (true) {
-                      if (var3_ref == null) {
+                      if (var3 == null) {
                         this.field_g = new tf();
                         var8 = (pt) ((Object) param0.field_g.g(24009));
                         L4: while (true) {
@@ -249,9 +238,9 @@ final class gr {
                           }
                         }
                       } else {
-                        var4 = new cq(var3_ref.field_k, var3_ref.field_l, var3_ref.field_i);
+                        var4 = new cq(var3.field_k, var3.field_l, var3.field_i);
                         this.field_O.a(var4, 3);
-                        var3_ref = (cq) ((Object) param0.field_O.c(33));
+                        var3 = (cq) ((Object) param0.field_O.c(33));
                         continue L3;
                       }
                     }
@@ -288,28 +277,20 @@ final class gr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
-            var3 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) (var3);
-            stackOut_29_1 = new StringBuilder().append("gr.N(");
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            var3_ref = decompiledCaughtException;
+            stackIn_31_0 = (RuntimeException) (var3_ref);
+
+            stackIn_31_1 = new StringBuilder().append("gr.N(");
+
             if (param0 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L10;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L10;
             }
           }
@@ -318,150 +299,136 @@ final class gr {
     }
 
     public final String toString() {
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        String var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        cq var4_ref_cq = null;
-        pt var4_ref_pt = null;
-        int var5 = 0;
-        int var6 = 0;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
-        String var11 = null;
-        String var12 = null;
-        String var13 = null;
-        String var14 = null;
-        String var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
-        String var20 = null;
-        String var21 = null;
-        String var22 = null;
-        String var23 = null;
-        String var24 = null;
-        String var25 = null;
-        String var26 = null;
-        String var27 = null;
-        String var28 = null;
-        String var29 = null;
-        String var30 = null;
-        String var31 = null;
-        String var32 = null;
-        String var33 = null;
-        String var34 = null;
-        String var35 = null;
-        String var36 = null;
-        String var37 = null;
-        String var38 = null;
-        String var39 = null;
-        String var40 = null;
-        String var41 = null;
-        String var42 = null;
-        String var43 = null;
-        String var44 = null;
-        String var45 = null;
-        StringBuilder stackIn_44_0 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        String var1;
+        int var2;
+        int var3;
+        int var5;
+        String var6;
+        String var7;
+        String var8;
+        String var9;
+        String var10;
+        String var11;
+        String var12;
+        String var13;
+        String var14;
+        String var15;
+        String var16;
+        String var17;
+        String var18;
+        String var19;
         StringBuilder stackIn_45_0 = null;
         StringBuilder stackIn_46_0 = null;
         String stackIn_46_1 = null;
-        StringBuilder stackIn_47_0 = null;
         StringBuilder stackIn_48_0 = null;
         StringBuilder stackIn_49_0 = null;
         String stackIn_49_1 = null;
-        StringBuilder stackOut_43_0 = null;
-        StringBuilder stackOut_45_0 = null;
-        String stackOut_45_1 = null;
-        StringBuilder stackOut_44_0 = null;
-        String stackOut_44_1 = null;
-        StringBuilder stackOut_46_0 = null;
-        StringBuilder stackOut_48_0 = null;
-        String stackOut_48_1 = null;
-        StringBuilder stackOut_47_0 = null;
-        String stackOut_47_1 = null;
+        int var4;
+        cq var4_ref_cq;
+        pt var4_ref_pt;
+        String var20;
+        String var21;
+        String var22;
+        String var23;
+        String var24;
+        String var25;
+        String var26;
+        String var27;
+        String var28;
+        String var29;
+        String var30;
+        String var31;
+        String var32;
+        String var33;
+        String var34;
+        String var35;
+        String var36;
+        String var37;
+        String var38;
+        String var39;
+        String var40;
+        String var41;
+        String var42;
+        String var43;
         L0: {
           var5 = Kickabout.field_G;
-          var7 = "=====PROFILE[" + su.a(0, this.field_e) + "]=====\n";
-          var1 = var7;
-          var1 = var7;
+          var6 = "=====PROFILE[" + su.a(0, this.field_e) + "]=====\n";
+          var1 = var6;
+          var1 = var6;
           if (this.field_M) {
-            var1 = var7 + "Active - Yes\n";
+            var1 = var6 + "Active - Yes\n";
             break L0;
           } else {
-            var1 = var7 + "Active - No\n";
+            var1 = var6 + "Active - No\n";
             break L0;
           }
         }
         L1: {
-          var8 = var1 + "Created - " + this.field_h;
+          var7 = var1 + "Created - " + this.field_h;
+          var1 = var7;
+          var1 = var7;
+          var8 = var7 + "\n";
           var1 = var8;
           var1 = var8;
-          var9 = var8 + "\n";
+          var9 = var8 + "League Week - " + this.field_G + "\n";
           var1 = var9;
           var1 = var9;
-          var10 = var9 + "League Week - " + this.field_G + "\n";
+          var10 = var9 + "Pts - " + this.field_E + "\n";
           var1 = var10;
           var1 = var10;
-          var11 = var10 + "Pts - " + this.field_E + "\n";
+          var11 = var10 + "Diamond Pts - " + this.field_r + "\n";
           var1 = var11;
           var1 = var11;
-          var12 = var11 + "Diamond Pts - " + this.field_r + "\n";
+          var12 = var11 + "League - " + q.field_h[this.field_t] + "\n";
           var1 = var12;
           var1 = var12;
-          var13 = var12 + "League - " + q.field_h[this.field_t] + "\n";
+          var13 = var12 + "Trophies - " + this.field_s + "\n";
           var1 = var13;
           var1 = var13;
-          var14 = var13 + "Trophies - " + this.field_s + "\n";
-          var1 = var14;
-          var1 = var14;
           if (!this.field_m) {
-            var1 = var14 + "Diamond Win Dialog - No\n";
+            var1 = var13 + "Diamond Win Dialog - No\n";
             break L1;
           } else {
-            var1 = var14 + "Diamond Win Dialog - Yes\n";
+            var1 = var13 + "Diamond Win Dialog - Yes\n";
             break L1;
           }
         }
-        var15 = var1 + "\n";
+        var14 = var1 + "\n";
+        var1 = var14;
+        var1 = var14;
+        var15 = var14 + "Money - " + ad.a(this.field_x, 26300) + "\n";
         var1 = var15;
         var1 = var15;
-        var16 = var15 + "Money - " + ad.a(this.field_x, 26300) + "\n";
+        var16 = var15 + "\n";
         var1 = var16;
         var1 = var16;
-        var17 = var16 + "\n";
+        var17 = var16 + "Kit ID - " + this.field_w + "\n";
         var1 = var17;
         var1 = var17;
-        var18 = var17 + "Kit ID - " + this.field_w + "\n";
+        var18 = var17 + "Pri Col - " + this.field_k + "\n";
         var1 = var18;
         var1 = var18;
-        var19 = var18 + "Pri Col - " + this.field_k + "\n";
+        var19 = var18 + "Sec Col - " + this.field_R + "\n";
         var1 = var19;
         var1 = var19;
-        var20 = var19 + "Sec Col - " + this.field_R + "\n";
-        var1 = var20;
-        var1 = var20;
-        var1 = var20 + "\n";
+        var1 = var19 + "\n";
         var2 = 0;
         L2: while (true) {
           if (-4 >= (var2 ^ -1)) {
-            var21 = var1 + "Surface - " + this.field_K + "\n";
-            var23 = var21;
-            var1 = var23;
-            var1 = var21;
-            var22 = var21 + "Tier - " + this.field_o + "\n";
-            var23 = var22;
-            var1 = var23;
+            var20 = var1 + "Surface - " + this.field_K + "\n";
+            var22 = var20;
             var1 = var22;
-            var1 = var22 + "\n";
-            var23 = var1;
-            var1 = var23;
+            var1 = var20;
+            var21 = var20 + "Tier - " + this.field_o + "\n";
+            var22 = var21;
+            var1 = var22;
+            var1 = var21;
+            var1 = var21 + "\n";
+            var22 = var1;
+            var1 = var22;
             var2 = 0;
             L3: while (true) {
               if (-10 >= (var2 ^ -1)) {
@@ -470,50 +437,47 @@ final class gr {
                 var4 = 0;
                 L4: while (true) {
                   if (this.field_N.length <= var4) {
-                    var25 = var1 + "\n";
-                    var26 = var25;
-                    var1 = var26;
-                    var1 = var25 + "Auction Log Size - " + this.field_O.a(false) + "\n";
-                    var26 = var1;
-                    var1 = var26;
+                    var24 = var1 + "\n";
+                    var25 = var24;
+                    var1 = var25;
+                    var1 = var24 + "Auction Log Size - " + this.field_O.a(false) + "\n";
+                    var25 = var1;
+                    var1 = var25;
                     var2 = 0;
                     var4_ref_cq = (cq) ((Object) this.field_O.g(24009));
                     L5: while (true) {
                       if (var4_ref_cq == null) {
-                        var27 = var1 + "\n";
-                        var28 = var27;
-                        var1 = var28;
+                        var26 = var1 + "\n";
+                        var27 = var26;
                         var1 = var27;
+                        var1 = var26;
                         var2 = 0;
-                        var1 = var27 + "Resolve Log Size - " + this.field_g.a(false) + "\n";
-                        var28 = var1;
-                        var1 = var28;
+                        var1 = var26 + "Resolve Log Size - " + this.field_g.a(false) + "\n";
+                        var27 = var1;
+                        var1 = var27;
                         var4_ref_pt = (pt) ((Object) this.field_g.g(24009));
                         L6: while (true) {
                           if (var4_ref_pt == null) {
-                            var29 = var1 + "\n";
+                            var28 = var1 + "\n";
+                            var1 = var28;
+                            var1 = var28;
+                            var29 = var28 + "SFX Vol - " + this.field_F + "\n";
                             var1 = var29;
                             var1 = var29;
-                            var30 = var29 + "SFX Vol - " + this.field_F + "\n";
+                            var30 = var29 + "Music Vol - " + this.field_p + "\n";
                             var1 = var30;
                             var1 = var30;
-                            var31 = var30 + "Music Vol - " + this.field_p + "\n";
-                            var1 = var31;
-                            var1 = var31;
-                            var1 = var31 + "Help Flags  - ";
-                            var6 = 0;
-                            var4 = var6;
+                            var1 = var30 + "Help Flags  - ";
+                            var4 = 0;
                             L7: while (true) {
-                              if (var6 >= this.field_J.length) {
+                              if (var4 >= this.field_J.length) {
                                 L8: {
-                                  var32 = var1 + "\n";
-                                  var1 = var32;
-                                  var1 = var32;
+                                  var1 = var1 + "\n";
                                   if (!this.field_d) {
-                                    var1 = var32 + "Lock Mouse - No\n";
+                                    var1 = var1 + "Lock Mouse - No\n";
                                     break L8;
                                   } else {
-                                    var1 = var32 + "Lock Mouse - Yes\n";
+                                    var1 = var1 + "Lock Mouse - Yes\n";
                                     break L8;
                                   }
                                 }
@@ -536,87 +500,77 @@ final class gr {
                                   }
                                 }
                                 L11: {
-                                  var33 = var1 + "\n";
-                                  var34 = var33 + "Team Wins - " + this.field_C + "\n";
-                                  var35 = var34 + "Stadium Wins - " + Integer.toBinaryString(this.field_b) + "\n";
-                                  var36 = var35 + "Formation Wins - " + Integer.toBinaryString(this.field_B) + "\n";
-                                  var37 = var36 + "Total Goals - " + this.field_z + "\n";
-                                  var38 = var37 + "Total Halloween Goals - " + this.field_j + "\n";
-                                  var39 = var38 + "Total 8+ Tournament Wins - " + this.field_u + "\n";
-                                  var40 = var39 + "Total 8+ Tournament Knockouts - " + this.field_D + "\n";
-                                  var41 = var40 + "Nemesis - " + su.a(0, this.field_H) + "\n";
-                                  var42 = var41 + "\n";
-                                  var43 = var42 + "Misc Unlockables - " + Integer.toBinaryString(this.field_n) + "\n";
-                                  stackOut_43_0 = new StringBuilder().append(var43).append("Refunded Trinkets? - ");
-                                  stackIn_45_0 = stackOut_43_0;
-                                  stackIn_44_0 = stackOut_43_0;
+                                  var31 = var1 + "\n";
+                                  var32 = var31 + "Team Wins - " + this.field_C + "\n";
+                                  var33 = var32 + "Stadium Wins - " + Integer.toBinaryString(this.field_b) + "\n";
+                                  var34 = var33 + "Formation Wins - " + Integer.toBinaryString(this.field_B) + "\n";
+                                  var35 = var34 + "Total Goals - " + this.field_z + "\n";
+                                  var36 = var35 + "Total Halloween Goals - " + this.field_j + "\n";
+                                  var37 = var36 + "Total 8+ Tournament Wins - " + this.field_u + "\n";
+                                  var38 = var37 + "Total 8+ Tournament Knockouts - " + this.field_D + "\n";
+                                  var39 = var38 + "Nemesis - " + su.a(0, this.field_H) + "\n";
+                                  var40 = var39 + "\n";
+                                  var41 = var40 + "Misc Unlockables - " + Integer.toBinaryString(this.field_n) + "\n";
+                                  stackIn_45_0 = new StringBuilder().append(var41).append("Refunded Trinkets? - ");
+
                                   if (!this.field_I) {
-                                    stackOut_45_0 = (StringBuilder) ((Object) stackIn_45_0);
-                                    stackOut_45_1 = "NO";
-                                    stackIn_46_0 = stackOut_45_0;
-                                    stackIn_46_1 = stackOut_45_1;
+                                    stackIn_46_0 = (StringBuilder) ((Object) stackIn_45_0);
+                                    stackIn_46_1 = "NO";
                                     break L11;
                                   } else {
-                                    stackOut_44_0 = (StringBuilder) ((Object) stackIn_44_0);
-                                    stackOut_44_1 = "YES";
-                                    stackIn_46_0 = stackOut_44_0;
-                                    stackIn_46_1 = stackOut_44_1;
+                                    stackIn_46_0 = (StringBuilder) ((Object) stackIn_45_0);
+                                    stackIn_46_1 = "YES";
                                     break L11;
                                   }
                                 }
                                 L12: {
-                                  var44 = stackIn_46_1 + "\n";
-                                  stackOut_46_0 = new StringBuilder().append(var44).append("Refund Confirmed? - ");
-                                  stackIn_48_0 = stackOut_46_0;
-                                  stackIn_47_0 = stackOut_46_0;
+                                  var42 = stackIn_46_1 + "\n";
+                                  stackIn_48_0 = new StringBuilder().append(var42).append("Refund Confirmed? - ");
+
                                   if (!this.field_P) {
-                                    stackOut_48_0 = (StringBuilder) ((Object) stackIn_48_0);
-                                    stackOut_48_1 = "NO";
-                                    stackIn_49_0 = stackOut_48_0;
-                                    stackIn_49_1 = stackOut_48_1;
+                                    stackIn_49_0 = (StringBuilder) ((Object) stackIn_48_0);
+                                    stackIn_49_1 = "NO";
                                     break L12;
                                   } else {
-                                    stackOut_47_0 = (StringBuilder) ((Object) stackIn_47_0);
-                                    stackOut_47_1 = "YES";
-                                    stackIn_49_0 = stackOut_47_0;
-                                    stackIn_49_1 = stackOut_47_1;
+                                    stackIn_49_0 = (StringBuilder) ((Object) stackIn_48_0);
+                                    stackIn_49_1 = "YES";
                                     break L12;
                                   }
                                 }
-                                var45 = stackIn_49_1 + "\n";
-                                var1 = var45 + "Refund Amount - £" + Integer.toString(this.field_f) + "\n";
+                                var43 = stackIn_49_1 + "\n";
+                                var1 = var43 + "Refund Amount - £" + Integer.toString(this.field_f) + "\n";
                                 return var1;
                               } else {
-                                if (!this.field_J[var6]) {
+                                if (!this.field_J[var4]) {
                                   var1 = var1 + "0,";
-                                  var6++;
+                                  var4++;
                                   continue L7;
                                 } else {
                                   var1 = var1 + "1,";
-                                  var6++;
+                                  var4++;
                                   continue L7;
                                 }
                               }
                             }
                           } else {
-                            incrementValue$3 = var2;
+                            incrementValue$0 = var2;
                             var2++;
-                            var28 = var1 + "   Log [" + incrementValue$3 + "]\n";
-                            var1 = var28;
-                            var1 = var28;
-                            var1 = var28 + "   " + var4_ref_pt + "\n";
+                            var27 = var1 + "   Log [" + incrementValue$0 + "]\n";
+                            var1 = var27;
+                            var1 = var27;
+                            var1 = var27 + "   " + var4_ref_pt + "\n";
                             var4_ref_pt = (pt) ((Object) this.field_g.c(33));
                             continue L6;
                           }
                         }
                       } else {
-                        incrementValue$4 = var2;
+                        incrementValue$1 = var2;
                         var2++;
-                        var26 = var1 + "   Log [" + incrementValue$4 + "]\n";
-                        var28 = var26;
-                        var1 = var28;
-                        var1 = var26;
-                        var1 = var26 + "   " + var4_ref_cq + "\n";
+                        var25 = var1 + "   Log [" + incrementValue$1 + "]\n";
+                        var27 = var25;
+                        var1 = var27;
+                        var1 = var25;
+                        var1 = var25 + "   " + var4_ref_cq + "\n";
                         var4_ref_cq = (cq) ((Object) this.field_O.c(33));
                         continue L5;
                       }
@@ -624,9 +578,9 @@ final class gr {
                   } else {
                     L13: {
                       if (-1 == (var2 % 8 ^ -1)) {
-                        incrementValue$5 = var3;
+                        incrementValue$2 = var3;
                         var3++;
-                        var1 = var1 + "\nShop Transaction [" + incrementValue$5 + "] ";
+                        var1 = var1 + "\nShop Transaction [" + incrementValue$2 + "] ";
                         break L13;
                       } else {
                         break L13;
@@ -639,13 +593,13 @@ final class gr {
                   }
                 }
               } else {
-                var23 = var1 + "Team Member [" + var2 + "]\n";
+                var22 = var1 + "Team Member [" + var2 + "]\n";
+                var1 = var22;
+                var1 = var22;
+                var23 = var22 + this.field_i[var2] + "\n";
                 var1 = var23;
                 var1 = var23;
-                var24 = var23 + this.field_i[var2] + "\n";
-                var1 = var24;
-                var1 = var24;
-                var1 = var24 + "Render Order - " + this.field_q[var2] + "\n";
+                var1 = var23 + "Render Order - " + this.field_q[var2] + "\n";
                 var2++;
                 continue L3;
               }
@@ -682,73 +636,63 @@ final class gr {
     }
 
     final int d(int param0) {
-        int var3 = 0;
-        int var4 = Kickabout.field_G;
-        int var2 = param0;
-        if (this.c(-3)) {
-            for (var3 = 0; var3 < this.field_i.length; var3++) {
-                if (this.field_i[var3].c(-2)) {
-                    return var3;
+        int var2;
+        int var3;
+        int var4;
+        L0: {
+          var4 = Kickabout.field_G;
+          var2 = param0;
+          if (!this.c(-3)) {
+            break L0;
+          } else {
+            var3 = 0;
+            L1: while (true) {
+              if (var3 >= this.field_i.length) {
+                break L0;
+              } else {
+                if (!this.field_i[var3].c(-2)) {
+                  var3++;
+                  continue L1;
+                } else {
+                  return var3;
                 }
+              }
             }
+          }
         }
         return var2;
     }
 
     final boolean a(long param0, byte param1) {
-        cq var4 = null;
-        int var5 = 0;
-        L0: {
-          var5 = Kickabout.field_G;
-          if (param1 == -79) {
-            break L0;
-          } else {
+        int var5 = Kickabout.field_G;
+        if (param1 != -79) {
             this.field_P = false;
-            break L0;
-          }
         }
-        var4 = (cq) ((Object) this.field_O.g(24009));
-        L1: while (true) {
-          if (var4 == null) {
-            return false;
-          } else {
-            L2: {
-              L3: {
-                if (-1 == (var4.field_k ^ -1)) {
-                  break L3;
-                } else {
-                  if ((var4.field_k ^ -1) != -2) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
+        cq var4 = (cq) ((Object) this.field_O.g(24009));
+        while (var4 != null) {
+            if (-1 == (var4.field_k ^ -1) || (var4.field_k ^ -1) == -2) {
+                if (!((param0 ^ -1L) != (var4.field_i ^ -1L))) {
+                    return true;
                 }
-              }
-              if ((param0 ^ -1L) == (var4.field_i ^ -1L)) {
-                return true;
-              } else {
-                break L2;
-              }
             }
             var4 = (cq) ((Object) this.field_O.c(33));
-            continue L1;
-          }
         }
+        return false;
     }
 
     private final void b(int param0) {
-        int var3 = 0;
-        int var4 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        up var11 = null;
-        int var12 = 0;
-        up var13 = null;
-        Random var14 = null;
-        up var15 = null;
+        int var3;
+        int var4;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        up var11;
+        int var12;
+        up var13;
+        Random var14;
+        up var15;
         L0: {
           var10 = Kickabout.field_G;
           var14 = new Random(this.field_e);
@@ -861,23 +805,12 @@ final class gr {
     final static boolean a(byte param0, CharSequence param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -888,35 +821,26 @@ final class gr {
                 break L1;
               }
             }
-            stackOut_2_0 = vl.a(10, true, true, param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = vl.a(10, true, true, param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("gr.J(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("gr.J(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -926,20 +850,17 @@ final class gr {
     }
 
     final boolean d(byte param0) {
-        boolean discarded$2 = false;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
         L0: {
           var4 = Kickabout.field_G;
           var2 = 0;
           if (param0 >= 3) {
             break L0;
           } else {
-            discarded$2 = this.d((byte) -19);
+            this.d((byte) -19);
             break L0;
           }
         }
@@ -948,12 +869,10 @@ final class gr {
           if (-10 >= (var3 ^ -1)) {
             L2: {
               if (4 > var2) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = 0;
                 break L2;
               } else {
-                stackOut_10_0 = 1;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 1;
                 break L2;
               }
             }
@@ -980,10 +899,8 @@ final class gr {
         int var5 = Kickabout.field_G;
         cq var4 = (cq) ((Object) this.field_O.g(24009));
         while (var4 != null) {
-            if (-3 == (var4.field_k ^ -1)) {
-                if ((param1 ^ -1L) == (var4.field_i ^ -1L)) {
-                    return true;
-                }
+            if (-3 == (var4.field_k ^ -1) && (param1 ^ -1L) == (var4.field_i ^ -1L)) {
+                return true;
             }
             var4 = (cq) ((Object) this.field_O.c(param0 ^ 32));
         }
@@ -995,19 +912,16 @@ final class gr {
     }
 
     final boolean b(int param0, long param1) {
-        hn discarded$0 = null;
         int var5 = Kickabout.field_G;
         cq var4 = (cq) ((Object) this.field_O.g(param0 + -6515));
         while (var4 != null) {
-            if ((var4.field_k ^ -1) == -4) {
-                if (var4.field_i == param1) {
-                    return true;
-                }
+            if ((var4.field_k ^ -1) == -4 && var4.field_i == param1) {
+                return true;
             }
             var4 = (cq) ((Object) this.field_O.c(33));
         }
         if (param0 != 30524) {
-            discarded$0 = this.a(-50, 63, 62);
+            this.a(-50, 63, 62);
             return false;
         }
         return false;
@@ -1017,10 +931,8 @@ final class gr {
         int var4 = Kickabout.field_G;
         cq var3_ref_cq = (cq) ((Object) this.field_O.g(24009));
         while (var3_ref_cq != null) {
-            if (var3_ref_cq.field_k != 3) {
-                if (param1 == var3_ref_cq.field_l) {
-                    return var3_ref_cq;
-                }
+            if (var3_ref_cq.field_k != 3 && param1 == var3_ref_cq.field_l) {
+                return var3_ref_cq;
             }
             var3_ref_cq = (cq) ((Object) this.field_O.c(33));
         }
@@ -1029,8 +941,27 @@ final class gr {
     }
 
     final void a(hn param0, boolean param1, int param2) {
-        RuntimeException var4 = null;
+        up dupTemp$0 = null;
+        up dupTemp$1 = null;
+        up dupTemp$2 = null;
+        up dupTemp$3 = null;
+        boolean stackIn_23_0 = false;
+        boolean stackIn_35_0 = false;
+        int stackIn_40_0 = 0;
+        boolean stackIn_126_0 = false;
+        int stackIn_131_0 = 0;
+        RuntimeException stackIn_175_0 = null;
+        StringBuilder stackIn_175_1 = null;
+        RuntimeException stackIn_176_0 = null;
+        StringBuilder stackIn_176_1 = null;
+        String stackIn_176_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_125_0;
+        boolean stackOut_34_0;
+        boolean stackOut_22_0;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         boolean[] var6_ref_boolean__ = null;
@@ -1047,23 +978,6 @@ final class gr {
         int var14 = 0;
         int[] var21 = null;
         int[] var22 = null;
-        RuntimeException stackIn_169_0 = null;
-        StringBuilder stackIn_169_1 = null;
-        RuntimeException stackIn_170_0 = null;
-        StringBuilder stackIn_170_1 = null;
-        RuntimeException stackIn_171_0 = null;
-        StringBuilder stackIn_171_1 = null;
-        String stackIn_171_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_168_0 = null;
-        StringBuilder stackOut_168_1 = null;
-        RuntimeException stackOut_170_0 = null;
-        StringBuilder stackOut_170_1 = null;
-        String stackOut_170_2 = null;
-        RuntimeException stackOut_169_0 = null;
-        StringBuilder stackOut_169_1 = null;
-        String stackOut_169_2 = null;
         var11 = Kickabout.field_G;
         try {
           L0: {
@@ -1198,23 +1112,30 @@ final class gr {
                                             if (-10 >= (var7 ^ -1)) {
                                               var7 = 0;
                                               L11: while (true) {
-                                                if ((var7 ^ -1) <= -10) {
-                                                  var7 = 0;
-                                                  L12: while (true) {
-                                                    if (-10 >= (var7 ^ -1)) {
-                                                      break L3;
+                                                L12: {
+                                                  if ((var7 ^ -1) <= -10) {
+                                                    stackIn_131_0 = 0;
+                                                    break L12;
+                                                  } else {
+                                                    stackOut_125_0 = var6_ref_boolean__[var7];
+                                                    stackIn_131_0 = stackOut_125_0 ? 1 : 0;
+                                                    stackIn_126_0 = stackOut_125_0;
+                                                    if (!stackIn_126_0) {
+                                                      throw new IllegalStateException("Invalid ordering. No slot allocated for player " + var7);
                                                     } else {
-                                                      this.field_q[var7] = var22[var7];
                                                       var7++;
-                                                      continue L12;
+                                                      continue L11;
                                                     }
                                                   }
-                                                } else {
-                                                  if (!var6_ref_boolean__[var7]) {
-                                                    throw new IllegalStateException("Invalid ordering. No slot allocated for player " + var7);
+                                                }
+                                                var7 = stackIn_131_0;
+                                                L13: while (true) {
+                                                  if (-10 >= (var7 ^ -1)) {
+                                                    break L3;
                                                   } else {
+                                                    this.field_q[var7] = var22[var7];
                                                     var7++;
-                                                    continue L11;
+                                                    continue L13;
                                                   }
                                                 }
                                               }
@@ -1230,13 +1151,13 @@ final class gr {
                                       }
                                     }
                                   } else {
-                                    L13: {
+                                    L14: {
                                       var5 = param0.field_g[0];
                                       if (0 > var5) {
-                                        break L13;
+                                        break L14;
                                       } else {
                                         if (var5 >= 32) {
-                                          break L13;
+                                          break L14;
                                         } else {
                                           this.field_R = var5;
                                           break L2;
@@ -1246,79 +1167,82 @@ final class gr {
                                     throw new IllegalStateException("User tried to select a Secondary Colour that doesn't exist " + param0.toString());
                                   }
                                 } else {
-                                  L14: {
+                                  L15: {
                                     var5 = param0.field_g[0];
                                     if (-1 < (var5 ^ -1)) {
-                                      break L14;
+                                      break L15;
                                     } else {
                                       if (32 > var5) {
                                         this.field_k = var5;
                                         break L2;
                                       } else {
-                                        break L14;
+                                        break L15;
                                       }
                                     }
                                   }
                                   throw new IllegalStateException("User tried to select a Primary Colour that doesn't exist " + param0.toString());
                                 }
                               } else {
-                                L15: {
+                                L16: {
                                   var5 = param0.field_g[0];
                                   if (var5 < 0) {
-                                    break L15;
+                                    break L16;
                                   } else {
                                     if (var5 < je.field_g.length) {
                                       this.field_w = var5;
                                       break L2;
                                     } else {
-                                      break L15;
+                                      break L16;
                                     }
                                   }
                                 }
                                 throw new IllegalStateException("User tried to select a kit that doesn't exist " + param0.toString());
                               }
                             } else {
-                              L16: {
+                              L17: {
                                 var5 = param0.field_g[0];
                                 var6 = param0.field_g[1];
                                 if (0 > var5) {
-                                  break L16;
+                                  break L17;
                                 } else {
                                   if ((var5 ^ -1) <= -10) {
-                                    break L16;
+                                    break L17;
                                   } else {
-                                    L17: {
+                                    L18: {
                                       if (var6 < 0) {
-                                        break L17;
+                                        break L18;
                                       } else {
                                         if ((var6 ^ -1) >= -3) {
                                           if (this.field_i[var5].c(-2)) {
                                             throw new IllegalStateException("User tried to level up an empty player " + param0.toString());
                                           } else {
                                             if (-101 >= (this.field_i[var5].field_r ^ -1)) {
-                                              L18: {
+                                              L19: {
                                                 if ((var6 ^ -1) == -1) {
                                                   if (this.field_i[var5].field_n >= 100) {
                                                     throw new IllegalStateException("User tried to level up a POW which is max " + param0.toString());
                                                   } else {
-                                                    this.field_i[var5].field_n = this.field_i[var5].field_n + 1;
-                                                    break L18;
+                                                    dupTemp$0 = this.field_i[var5];
+                                                    dupTemp$0.field_n = dupTemp$0.field_n + 1;
+                                                    break L19;
                                                   }
                                                 } else {
                                                   if ((var6 ^ -1) == -2) {
                                                     if (this.field_i[var5].field_g >= 100) {
                                                       throw new IllegalStateException("User tried to level up a SPD which is max " + param0.toString());
                                                     } else {
-                                                      this.field_i[var5].field_g = this.field_i[var5].field_g + 1;
-                                                      break L18;
+                                                      dupTemp$1 = this.field_i[var5];
+                                                      dupTemp$1.field_g = dupTemp$1.field_g + 1;
+                                                      break L19;
                                                     }
                                                   } else {
                                                     if (-3 != (var6 ^ -1)) {
-                                                      break L18;
+                                                      break L19;
                                                     } else {
                                                       if (this.field_i[var5].field_o < 100) {
-                                                        this.field_i[var5].field_o = this.field_i[var5].field_o + 1;
-                                                        break L18;
+                                                        dupTemp$2 = this.field_i[var5];
+                                                        dupTemp$2.field_o = dupTemp$2.field_o + 1;
+                                                        break L19;
                                                       } else {
                                                         throw new IllegalStateException("User tried to level up a TCK which is max " + param0.toString());
                                                       }
@@ -1326,14 +1250,15 @@ final class gr {
                                                   }
                                                 }
                                               }
-                                              this.field_i[var5].field_r = this.field_i[var5].field_r - 100;
+                                              dupTemp$3 = this.field_i[var5];
+                                              dupTemp$3.field_r = dupTemp$3.field_r - 100;
                                               break L2;
                                             } else {
                                               throw new IllegalStateException("User tried to level up a player who doesn't have 100 exp " + param0.toString());
                                             }
                                           }
                                         } else {
-                                          break L17;
+                                          break L18;
                                         }
                                       }
                                     }
@@ -1344,45 +1269,45 @@ final class gr {
                               throw new IllegalStateException("User tried to level up a player from an invalid position " + param0.toString());
                             }
                           } else {
-                            L19: {
+                            L20: {
                               var5 = param0.field_g[0];
                               var6 = param0.field_g[1];
                               var7 = param0.field_g[2];
                               var21 = this.field_i[var5].field_h;
                               if ((var5 ^ -1) > -1) {
-                                break L19;
+                                break L20;
                               } else {
                                 if (-10 < (var5 ^ -1)) {
-                                  L20: {
+                                  L21: {
                                     if (-1 < (var6 ^ -1)) {
-                                      break L20;
+                                      break L21;
                                     } else {
                                       if ((var6 ^ -1) > (var21.length ^ -1)) {
-                                        L21: {
+                                        L22: {
                                           if (var7 < 0) {
-                                            break L21;
+                                            break L22;
                                           } else {
                                             if (111 > var7) {
-                                              L22: {
+                                              L23: {
                                                 var9 = pa.field_g[var7];
                                                 var10 = pa.field_g[var21[var6]];
                                                 if ((var9.field_h ^ -1) != -74) {
-                                                  break L22;
+                                                  break L23;
                                                 } else {
                                                   if (!il.b((byte) 115)) {
                                                     throw new IllegalStateException("User tried to use the Halloween Costume trinket when we haven't released it yet " + param0.toString());
                                                   } else {
-                                                    break L22;
+                                                    break L23;
                                                   }
                                                 }
                                               }
                                               if (var9.field_k == var10.field_k) {
-                                                L23: {
+                                                L24: {
                                                   if (72 != var9.field_h) {
-                                                    break L23;
+                                                    break L24;
                                                   } else {
                                                     if (this.a(-2, 0)) {
-                                                      break L23;
+                                                      break L24;
                                                     } else {
                                                       throw new IllegalStateException("User tried to attach Pumpkins trinket but they haven't unlocked the Halloween Achievement " + param0.toString());
                                                     }
@@ -1399,19 +1324,19 @@ final class gr {
                                                 throw new IllegalStateException("User tried to attach a trinket that is the wrong shape for the slot " + param0.toString());
                                               }
                                             } else {
-                                              break L21;
+                                              break L22;
                                             }
                                           }
                                         }
                                         throw new IllegalStateException("User tried to attach an unknown trinket " + param0.toString());
                                       } else {
-                                        break L20;
+                                        break L21;
                                       }
                                     }
                                   }
                                   throw new IllegalStateException("User tried to attach a trinket to a slot in invalid position " + param0.toString());
                                 } else {
-                                  break L19;
+                                  break L20;
                                 }
                               }
                             }
@@ -1421,64 +1346,28 @@ final class gr {
                       }
                       break L2;
                     } else {
-                      L24: {
+                      L25: {
                         var5 = -1 + param0.field_g[0];
                         var6 = param0.field_g[1];
                         if (var6 < 0) {
-                          break L24;
+                          break L25;
                         } else {
                           if (var6 >= 8) {
-                            break L24;
+                            break L25;
                           } else {
-                            L25: {
+                            L26: {
                               if (var5 < -1) {
-                                break L25;
+                                break L26;
                               } else {
                                 if (var5 >= 7) {
-                                  break L25;
+                                  break L26;
                                 } else {
-                                  L26: {
-                                    if (-1 != var5) {
-                                      L27: {
-                                        var13 = ha.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
-                                        var7_ref_up = var13;
-                                        var8 = 0;
-                                        if (-1 == var5) {
-                                          break L27;
-                                        } else {
-                                          var8 = gp.a(var7_ref_up, -576054046);
-                                          break L27;
-                                        }
-                                      }
-                                      if ((var8 ^ -1) >= (this.field_x ^ -1)) {
-                                        var9_int = 0;
-                                        var14 = 0;
-                                        var10_int = var14;
-                                        L28: while (true) {
-                                          if (9 <= var14) {
-                                            break L26;
-                                          } else {
-                                            if (this.field_i[this.field_q[var14]].c(param2 ^ -2)) {
-                                              this.field_i[this.field_q[var14]].a((byte) -70, var13);
-                                              this.field_i[this.field_q[var14]].field_c = false;
-                                              var9_int = 1;
-                                              break L26;
-                                            } else {
-                                              var14++;
-                                              continue L28;
-                                            }
-                                          }
-                                        }
-                                      } else {
-                                        throw new IllegalStateException("User bought a player but did not have enough money" + param0.toString());
-                                      }
-                                    } else {
-                                      if (!param1) {
-                                        throw new IllegalStateException("User tried to buy a MOD player when they are not a MOD" + param0.toString());
-                                      } else {
+                                  L27: {
+                                    L28: {
+                                      if (-1 != var5) {
                                         L29: {
-                                          var12 = ha.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
-                                          var7_ref_up = var12;
+                                          var13 = ha.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
+                                          var7_ref_up = var13;
                                           var8 = 0;
                                           if (-1 == var5) {
                                             break L29;
@@ -1489,18 +1378,22 @@ final class gr {
                                         }
                                         if ((var8 ^ -1) >= (this.field_x ^ -1)) {
                                           var9_int = 0;
-                                          var10_int = 0;
+                                          var14 = 0;
+                                          var10_int = var14;
                                           L30: while (true) {
-                                            if (9 <= var10_int) {
-                                              break L26;
+                                            if (9 <= var14) {
+                                              break L28;
                                             } else {
-                                              if (this.field_i[this.field_q[var10_int]].c(param2 ^ -2)) {
-                                                this.field_i[this.field_q[var10_int]].a((byte) -70, var12);
-                                                this.field_i[this.field_q[var10_int]].field_c = false;
+                                              stackOut_34_0 = this.field_i[this.field_q[var14]].c(param2 ^ -2);
+                                              stackIn_40_0 = stackOut_34_0 ? 1 : 0;
+                                              stackIn_35_0 = stackOut_34_0;
+                                              if (stackIn_35_0) {
+                                                this.field_i[this.field_q[var14]].a((byte) -70, var13);
+                                                this.field_i[this.field_q[var14]].field_c = false;
                                                 var9_int = 1;
-                                                break L26;
+                                                break L28;
                                               } else {
-                                                var10_int++;
+                                                var14++;
                                                 continue L30;
                                               }
                                             }
@@ -1508,10 +1401,52 @@ final class gr {
                                         } else {
                                           throw new IllegalStateException("User bought a player but did not have enough money" + param0.toString());
                                         }
+                                      } else {
+                                        if (!param1) {
+                                          throw new IllegalStateException("User tried to buy a MOD player when they are not a MOD" + param0.toString());
+                                        } else {
+                                          L31: {
+                                            var12 = ha.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
+                                            var7_ref_up = var12;
+                                            var8 = 0;
+                                            if (-1 == var5) {
+                                              break L31;
+                                            } else {
+                                              var8 = gp.a(var7_ref_up, -576054046);
+                                              break L31;
+                                            }
+                                          }
+                                          if ((var8 ^ -1) >= (this.field_x ^ -1)) {
+                                            var9_int = 0;
+                                            var10_int = 0;
+                                            L32: while (true) {
+                                              if (9 <= var10_int) {
+                                                break L28;
+                                              } else {
+                                                stackOut_22_0 = this.field_i[this.field_q[var10_int]].c(param2 ^ -2);
+                                                stackIn_40_0 = stackOut_22_0 ? 1 : 0;
+                                                stackIn_23_0 = stackOut_22_0;
+                                                if (stackIn_23_0) {
+                                                  this.field_i[this.field_q[var10_int]].a((byte) -70, var12);
+                                                  this.field_i[this.field_q[var10_int]].field_c = false;
+                                                  var9_int = 1;
+                                                  break L28;
+                                                } else {
+                                                  var10_int++;
+                                                  continue L32;
+                                                }
+                                              }
+                                            }
+                                          } else {
+                                            throw new IllegalStateException("User bought a player but did not have enough money" + param0.toString());
+                                          }
+                                        }
                                       }
                                     }
+                                    stackIn_40_0 = var9_int;
+                                    break L27;
                                   }
-                                  if (var9_int != 0) {
+                                  if (stackIn_40_0 != 0) {
                                     this.field_x = this.field_x - var8;
                                     this.field_N[8 * var5 + 8 + var6] = this.field_N[8 * var5 + 8 + var6] + 1;
                                     break L2;
@@ -1538,64 +1473,66 @@ final class gr {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L31: {
+          L33: {
             var4 = decompiledCaughtException;
-            stackOut_168_0 = (RuntimeException) (var4);
-            stackOut_168_1 = new StringBuilder().append("gr.P(");
-            stackIn_170_0 = stackOut_168_0;
-            stackIn_170_1 = stackOut_168_1;
-            stackIn_169_0 = stackOut_168_0;
-            stackIn_169_1 = stackOut_168_1;
+            stackIn_175_0 = (RuntimeException) (var4);
+
+            stackIn_175_1 = new StringBuilder().append("gr.P(");
+
             if (param0 == null) {
-              stackOut_170_0 = (RuntimeException) ((Object) stackIn_170_0);
-              stackOut_170_1 = (StringBuilder) ((Object) stackIn_170_1);
-              stackOut_170_2 = "null";
-              stackIn_171_0 = stackOut_170_0;
-              stackIn_171_1 = stackOut_170_1;
-              stackIn_171_2 = stackOut_170_2;
-              break L31;
+              stackIn_176_0 = (RuntimeException) ((Object) stackIn_175_0);
+              stackIn_176_1 = (StringBuilder) ((Object) stackIn_175_1);
+              stackIn_176_2 = "null";
+              break L33;
             } else {
-              stackOut_169_0 = (RuntimeException) ((Object) stackIn_169_0);
-              stackOut_169_1 = (StringBuilder) ((Object) stackIn_169_1);
-              stackOut_169_2 = "{...}";
-              stackIn_171_0 = stackOut_169_0;
-              stackIn_171_1 = stackOut_169_1;
-              stackIn_171_2 = stackOut_169_2;
-              break L31;
+              stackIn_176_0 = (RuntimeException) ((Object) stackIn_175_0);
+              stackIn_176_1 = (StringBuilder) ((Object) stackIn_175_1);
+              stackIn_176_2 = "{...}";
+              break L33;
             }
           }
-          throw nb.a((Throwable) ((Object) stackIn_171_0), stackIn_171_2 + ',' + param1 + ',' + param2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_176_0), stackIn_176_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final boolean c(byte param0) {
-        int var3 = Kickabout.field_G;
-        int var2 = 0;
-        if (param0 >= -55) {
-            return true;
-        }
-        while (this.field_i.length > var2) {
-            if (this.field_i[var2].c(-2)) {
+        int var2;
+        int var3;
+        var3 = Kickabout.field_G;
+        var2 = 0;
+        if (param0 < -55) {
+          L0: while (true) {
+            if (this.field_i.length <= var2) {
+              return false;
+            } else {
+              if (!this.field_i[var2].c(-2)) {
+                var2++;
+                continue L0;
+              } else {
                 return true;
+              }
             }
-            var2++;
+          }
+        } else {
+          return true;
         }
-        return false;
     }
 
     final void a(int param0, iw param1, int param2) {
-        int discarded$10 = 0;
-        int discarded$11 = 0;
-        int discarded$12 = 0;
-        int discarded$13 = 0;
-        int discarded$14 = 0;
-        int discarded$15 = 0;
-        int discarded$16 = 0;
-        int discarded$17 = 0;
-        int discarded$18 = 0;
-        int discarded$19 = 0;
-        RuntimeException var4 = null;
+        Object stackIn_56_0 = null;
+        Object stackIn_57_0 = null;
+        int stackIn_57_1 = 0;
+        Object stackIn_62_0 = null;
+        Object stackIn_63_0 = null;
+        int stackIn_63_1 = 0;
+        RuntimeException stackIn_67_0 = null;
+        StringBuilder stackIn_67_1 = null;
+        RuntimeException stackIn_68_0 = null;
+        StringBuilder stackIn_68_1 = null;
+        String stackIn_68_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1606,43 +1543,9 @@ final class gr {
         int var12 = 0;
         int var13 = 0;
         cq var13_ref_cq = null;
-        pt var14_ref_pt = null;
         int var14 = 0;
+        pt var14_ref_pt = null;
         int var15 = 0;
-        Object stackIn_55_0 = null;
-        Object stackIn_56_0 = null;
-        Object stackIn_57_0 = null;
-        int stackIn_57_1 = 0;
-        Object stackIn_61_0 = null;
-        Object stackIn_62_0 = null;
-        Object stackIn_63_0 = null;
-        int stackIn_63_1 = 0;
-        RuntimeException stackIn_66_0 = null;
-        StringBuilder stackIn_66_1 = null;
-        RuntimeException stackIn_67_0 = null;
-        StringBuilder stackIn_67_1 = null;
-        RuntimeException stackIn_68_0 = null;
-        StringBuilder stackIn_68_1 = null;
-        String stackIn_68_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_54_0 = null;
-        Object stackOut_56_0 = null;
-        int stackOut_56_1 = 0;
-        Object stackOut_55_0 = null;
-        int stackOut_55_1 = 0;
-        Object stackOut_60_0 = null;
-        Object stackOut_62_0 = null;
-        int stackOut_62_1 = 0;
-        Object stackOut_61_0 = null;
-        int stackOut_61_1 = 0;
-        RuntimeException stackOut_65_0 = null;
-        StringBuilder stackOut_65_1 = null;
-        RuntimeException stackOut_67_0 = null;
-        StringBuilder stackOut_67_1 = null;
-        String stackOut_67_2 = null;
-        RuntimeException stackOut_66_0 = null;
-        StringBuilder stackOut_66_1 = null;
-        String stackOut_66_2 = null;
         var15 = Kickabout.field_G;
         try {
           L0: {
@@ -1709,7 +1612,7 @@ final class gr {
                 this.field_t = param1.h((byte) -116);
                 this.field_s = param1.h((byte) -119);
                 this.field_G = param1.a((byte) 81);
-                discarded$10 = param1.k(4);
+                param1.k(4);
                 this.field_w = param1.h((byte) -119);
                 this.field_k = param1.h((byte) -122);
                 this.field_R = param1.h((byte) -116);
@@ -1750,17 +1653,17 @@ final class gr {
                                           this.field_j = param1.h((byte) -128);
                                           this.field_u = param1.h((byte) -125);
                                           this.field_D = param1.h((byte) -122);
-                                          discarded$11 = param1.h((byte) -106);
-                                          discarded$12 = param1.k(4);
-                                          discarded$13 = param1.k(4);
+                                          param1.h((byte) -106);
+                                          param1.k(4);
+                                          param1.k(4);
                                           this.field_n = param1.k(4);
                                           if (param2 > 1) {
-                                            discarded$14 = param1.a((byte) 81);
-                                            discarded$15 = param1.a((byte) 81);
-                                            discarded$16 = param1.a((byte) 81);
-                                            discarded$17 = param1.a((byte) 81);
-                                            discarded$18 = param1.a((byte) 81);
-                                            discarded$19 = param1.a((byte) 81);
+                                            param1.a((byte) 81);
+                                            param1.a((byte) 81);
+                                            param1.a((byte) 81);
+                                            param1.a((byte) 81);
+                                            param1.a((byte) 81);
+                                            param1.a((byte) 81);
                                             break L13;
                                           } else {
                                             break L13;
@@ -1769,20 +1672,15 @@ final class gr {
                                         L14: {
                                           if (2 < param2) {
                                             L15: {
-                                              stackOut_54_0 = this;
-                                              stackIn_56_0 = stackOut_54_0;
-                                              stackIn_55_0 = stackOut_54_0;
+                                              stackIn_56_0 = this;
+
                                               if (param1.h((byte) -118) != 1) {
-                                                stackOut_56_0 = this;
-                                                stackOut_56_1 = 0;
-                                                stackIn_57_0 = stackOut_56_0;
-                                                stackIn_57_1 = stackOut_56_1;
+                                                stackIn_57_0 = this;
+                                                stackIn_57_1 = 0;
                                                 break L15;
                                               } else {
-                                                stackOut_55_0 = this;
-                                                stackOut_55_1 = 1;
-                                                stackIn_57_0 = stackOut_55_0;
-                                                stackIn_57_1 = stackOut_55_1;
+                                                stackIn_57_0 = this;
+                                                stackIn_57_1 = 1;
                                                 break L15;
                                               }
                                             }
@@ -1795,20 +1693,15 @@ final class gr {
                                         L16: {
                                           if ((param2 ^ -1) < -4) {
                                             L17: {
-                                              stackOut_60_0 = this;
-                                              stackIn_62_0 = stackOut_60_0;
-                                              stackIn_61_0 = stackOut_60_0;
+                                              stackIn_62_0 = this;
+
                                               if (param1.h((byte) -124) != 1) {
-                                                stackOut_62_0 = this;
-                                                stackOut_62_1 = 0;
-                                                stackIn_63_0 = stackOut_62_0;
-                                                stackIn_63_1 = stackOut_62_1;
+                                                stackIn_63_0 = this;
+                                                stackIn_63_1 = 0;
                                                 break L17;
                                               } else {
-                                                stackOut_61_0 = this;
-                                                stackOut_61_1 = 1;
-                                                stackIn_63_0 = stackOut_61_0;
-                                                stackIn_63_1 = stackOut_61_1;
+                                                stackIn_63_0 = this;
+                                                stackIn_63_1 = 1;
                                                 break L17;
                                               }
                                             }
@@ -1905,27 +1798,19 @@ final class gr {
           decompiledCaughtException = decompiledCaughtParameter0;
           L22: {
             var4 = decompiledCaughtException;
-            stackOut_65_0 = (RuntimeException) (var4);
-            stackOut_65_1 = new StringBuilder().append("gr.G(").append(param0).append(',');
-            stackIn_67_0 = stackOut_65_0;
-            stackIn_67_1 = stackOut_65_1;
-            stackIn_66_0 = stackOut_65_0;
-            stackIn_66_1 = stackOut_65_1;
+            stackIn_67_0 = (RuntimeException) (var4);
+
+            stackIn_67_1 = new StringBuilder().append("gr.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
-              stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
-              stackOut_67_2 = "null";
-              stackIn_68_0 = stackOut_67_0;
-              stackIn_68_1 = stackOut_67_1;
-              stackIn_68_2 = stackOut_67_2;
+              stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
+              stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
+              stackIn_68_2 = "null";
               break L22;
             } else {
-              stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
-              stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
-              stackOut_66_2 = "{...}";
-              stackIn_68_0 = stackOut_66_0;
-              stackIn_68_1 = stackOut_66_1;
-              stackIn_68_2 = stackOut_66_2;
+              stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
+              stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
+              stackIn_68_2 = "{...}";
               break L22;
             }
           }
@@ -1935,7 +1820,6 @@ final class gr {
 
     public gr() {
         int var1 = 0;
-        int var2 = 0;
         this.field_I = false;
         this.field_P = false;
         this.field_h = -1;
@@ -1950,48 +1834,37 @@ final class gr {
         this.field_r = 0;
         this.field_M = false;
         this.field_w = 0;
-        var1 = 0;
-        L0: while (true) {
-          if (-4 >= (var1 ^ -1)) {
-            this.field_i = new up[9];
-            this.field_o = 0;
-            this.field_K = 0;
-            this.field_O = new tf();
-            this.field_g = new tf();
-            this.field_q = new int[9];
-            var2 = 0;
-            var1 = var2;
-            L1: while (true) {
-              if (-10 >= (var2 ^ -1)) {
-                this.field_u = 0;
-                this.field_H = -1L;
-                this.field_b = 0;
-                this.field_A = true;
-                this.field_N = new int[80];
-                this.field_C = 0;
-                this.field_m = false;
-                this.field_F = 255;
-                this.field_B = 0;
-                this.field_d = true;
-                this.field_z = 0;
-                this.field_p = 255;
-                this.field_J = new boolean[7];
-                this.field_L = true;
-                this.field_D = 0;
-                this.field_j = 0;
-                return;
-              } else {
-                this.field_q[var2] = var2;
-                var2++;
-                continue L1;
-              }
-            }
-          } else {
+        for (var1 = 0; -4 < (var1 ^ -1); var1++) {
             this.field_a[var1][0] = true;
-            var1++;
-            continue L0;
-          }
         }
+        this.field_i = new up[9];
+        this.field_o = 0;
+        this.field_K = 0;
+        this.field_O = new tf();
+        this.field_g = new tf();
+        this.field_q = new int[9];
+        int var2 = 0;
+        var1 = var2;
+        while (-10 < (var2 ^ -1)) {
+            this.field_q[var2] = var2;
+            var2++;
+        }
+        this.field_u = 0;
+        this.field_H = -1L;
+        this.field_b = 0;
+        this.field_A = true;
+        this.field_N = new int[80];
+        this.field_C = 0;
+        this.field_m = false;
+        this.field_F = 255;
+        this.field_B = 0;
+        this.field_d = true;
+        this.field_z = 0;
+        this.field_p = 255;
+        this.field_J = new boolean[7];
+        this.field_L = true;
+        this.field_D = 0;
+        this.field_j = 0;
     }
 
     static {

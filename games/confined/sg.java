@@ -19,23 +19,23 @@ final class sg extends jl {
     }
 
     final boolean g(byte param0) {
-        int var2 = 0;
-        int var3_int = 0;
-        mn var3 = null;
-        int var4 = 0;
-        kg var6_ref_kg = null;
-        int var6 = 0;
-        int var7 = 0;
-        kg var8 = null;
-        int var9 = 0;
-        Object var10 = null;
-        ij var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int[] var26 = null;
-        byte[] var27 = null;
-        int[] var28 = null;
-        byte[] var29 = null;
+        int var2;
+        int var3_int;
+        mn var3;
+        int var4;
+        int var6;
+        kg var6_ref_kg;
+        int var7;
+        kg var8;
+        int var9;
+        Object var10;
+        ij var11;
+        int var12;
+        int var13;
+        int[] var26;
+        byte[] var27;
+        int[] var28;
+        byte[] var29;
         var12 = Confined.field_J ? 1 : 0;
         if (this.field_t != null) {
           return true;
@@ -133,8 +133,6 @@ final class sg extends jl {
     final static boolean a(byte param0, java.applet.Applet param1) {
         try {
             String var2 = null;
-            Throwable var2_ref = null;
-            RuntimeException var2_ref2 = null;
             String var3 = null;
             int var4 = 0;
             String[] var5 = null;
@@ -144,8 +142,6 @@ final class sg extends jl {
             int stackIn_3_0 = 0;
             int stackIn_9_0 = 0;
             int stackIn_16_0 = 0;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
             RuntimeException stackIn_20_0 = null;
@@ -154,18 +150,8 @@ final class sg extends jl {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_8_0 = 0;
-            int stackOut_15_0 = 0;
-            int stackOut_14_0 = 0;
-            int stackOut_2_0 = 0;
-            RuntimeException stackOut_17_0 = null;
-            StringBuilder stackOut_17_1 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            String stackOut_18_2 = null;
+            Throwable var2_ref = null;
+            RuntimeException var2_ref2 = null;
             var8 = Confined.field_J ? 1 : 0;
             try {
               L0: {
@@ -190,8 +176,7 @@ final class sg extends jl {
                               if (!var5[var6].substring(0, var7).trim().equals(var2)) {
                                 break L3;
                               } else {
-                                stackOut_8_0 = 1;
-                                stackIn_9_0 = stackOut_8_0;
+                                stackIn_9_0 = 1;
                                 decompiledRegionSelector0 = 1;
                                 break L1;
                               }
@@ -213,12 +198,10 @@ final class sg extends jl {
                   if (decompiledRegionSelector0 == 0) {
                     L5: {
                       if (null == param1.getParameter("tuhstatbut")) {
-                        stackOut_15_0 = 0;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = 0;
                         break L5;
                       } else {
-                        stackOut_14_0 = 1;
-                        stackIn_16_0 = stackOut_14_0;
+                        stackIn_16_0 = 1;
                         break L5;
                       }
                     }
@@ -229,8 +212,7 @@ final class sg extends jl {
                     break L0;
                   }
                 } else {
-                  stackOut_2_0 = 1;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = 1;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 }
@@ -239,27 +221,19 @@ final class sg extends jl {
               decompiledCaughtException = decompiledCaughtParameter1;
               L6: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_17_0 = (RuntimeException) (var2_ref2);
-                stackOut_17_1 = new StringBuilder().append("sg.E(").append(param0).append(',');
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
+                stackIn_19_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_19_1 = new StringBuilder().append("sg.E(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "null";
-                  stackIn_20_0 = stackOut_19_0;
-                  stackIn_20_1 = stackOut_19_1;
-                  stackIn_20_2 = stackOut_19_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "null";
                   break L6;
                 } else {
-                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackOut_18_2 = "{...}";
-                  stackIn_20_0 = stackOut_18_0;
-                  stackIn_20_1 = stackOut_18_1;
-                  stackIn_20_2 = stackOut_18_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "{...}";
                   break L6;
                 }
               }

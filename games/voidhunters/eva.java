@@ -14,35 +14,35 @@ final class eva extends rqa {
     }
 
     final static String a(boolean param0, Throwable param1) throws IOException {
-        String var2 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        hva var14 = null;
-        PrintWriter var20 = null;
-        StringWriter var21 = null;
-        String var22 = null;
-        BufferedReader var23 = null;
-        String var24 = null;
-        String var25 = null;
-        String var26 = null;
-        String var27 = null;
-        String var28 = null;
-        String var29 = null;
-        PrintWriter var30 = null;
-        StringWriter var31 = null;
-        String var32 = null;
-        BufferedReader var33 = null;
-        String var34 = null;
-        String var35 = null;
-        String var36 = null;
-        String var37 = null;
-        String var38 = null;
-        String var39 = null;
+        String var2;
+        BufferedReader var6;
+        String var7;
+        int var9;
+        int var10;
+        String var11;
+        int var12;
+        int var13;
+        hva var14;
+        PrintWriter var20;
+        StringWriter var21;
+        String var22;
+        BufferedReader var23;
+        String var24;
+        String var25;
+        String var26;
+        String var27;
+        String var28;
+        String var29;
+        PrintWriter var30;
+        StringWriter var31;
+        String var32;
+        BufferedReader var33;
+        String var34;
+        String var35;
+        String var36;
+        String var37;
+        String var38;
+        String var39;
         L0: {
           var13 = VoidHunters.field_G;
           if (param1 instanceof hva) {
@@ -220,23 +220,12 @@ final class eva extends rqa {
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
         nc stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -247,35 +236,26 @@ final class eva extends rqa {
                 break L1;
               }
             }
-            stackOut_2_0 = new nc(frb.a(146, 124));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new nc(frb.a(146, 124));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("eva.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("eva.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }

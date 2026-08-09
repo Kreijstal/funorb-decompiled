@@ -15,12 +15,9 @@ final class feb {
 
     final static kla a(ha param0, boolean param1) {
         qgb var2 = null;
-        RuntimeException var2_ref = null;
         kla var3 = null;
         kla stackIn_3_0 = null;
         kla stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -28,21 +25,11 @@ final class feb {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        kla stackOut_2_0 = null;
-        kla stackOut_14_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var2_ref = null;
         try {
           L0: {
             if (nsa.field_p == param0) {
-              stackOut_2_0 = eia.field_q;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = eia.field_q;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -82,8 +69,7 @@ final class feb {
               }
               nsa.field_p = param0;
               eia.field_q = var3;
-              stackOut_14_0 = (kla) (var3);
-              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_0 = (kla) (var3);
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -92,27 +78,19 @@ final class feb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var2_ref);
-            stackOut_16_1 = new StringBuilder().append("feb.A(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var2_ref);
+
+            stackIn_18_1 = new StringBuilder().append("feb.A(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }

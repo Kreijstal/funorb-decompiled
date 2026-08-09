@@ -28,13 +28,23 @@ final class ak {
     }
 
     private final void a(byte[] param0, int param1) {
-        int dupTemp$7 = 0;
-        int dupTemp$8 = 0;
-        int[] array$9 = null;
-        int dupTemp$10 = 0;
-        int[] array$11 = null;
-        int dupTemp$12 = 0;
-        int[] array$13 = null;
+        int dupTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int[] array$2 = null;
+        int dupTemp$3 = 0;
+        int[] dupTemp$4 = null;
+        int[] array$5 = null;
+        int dupTemp$6 = 0;
+        int[] dupTemp$7 = null;
+        int[] array$8 = null;
+        int stackIn_11_0 = 0;
+        int stackIn_17_0 = 0;
+        RuntimeException stackIn_97_0 = null;
+        StringBuilder stackIn_97_1 = null;
+        RuntimeException stackIn_98_0 = null;
+        StringBuilder stackIn_98_1 = null;
+        String stackIn_98_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -51,28 +61,6 @@ final class ak {
         int var16 = 0;
         rb var17 = null;
         byte[] var21 = null;
-        int stackIn_11_0 = 0;
-        int stackIn_17_0 = 0;
-        RuntimeException stackIn_96_0 = null;
-        StringBuilder stackIn_96_1 = null;
-        RuntimeException stackIn_97_0 = null;
-        StringBuilder stackIn_97_1 = null;
-        RuntimeException stackIn_98_0 = null;
-        StringBuilder stackIn_98_1 = null;
-        String stackIn_98_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        RuntimeException stackOut_95_0 = null;
-        StringBuilder stackOut_95_1 = null;
-        RuntimeException stackOut_97_0 = null;
-        StringBuilder stackOut_97_1 = null;
-        String stackOut_97_2 = null;
-        RuntimeException stackOut_96_0 = null;
-        StringBuilder stackOut_96_1 = null;
-        String stackOut_96_2 = null;
         var16 = StarCannon.field_A;
         try {
           L0: {
@@ -97,12 +85,10 @@ final class ak {
                   L3: {
                     var5 = var17.j(7909);
                     if ((var5 & 1) == 0) {
-                      stackOut_10_0 = 0;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_11_0 = 0;
                       break L3;
                     } else {
-                      stackOut_9_0 = 1;
-                      stackIn_11_0 = stackOut_9_0;
+                      stackIn_11_0 = 1;
                       break L3;
                     }
                   }
@@ -118,12 +104,10 @@ final class ak {
                   }
                   L5: {
                     if ((2 & var5) == 0) {
-                      stackOut_16_0 = 0;
-                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_0 = 0;
                       break L5;
                     } else {
-                      stackOut_15_0 = 1;
-                      stackIn_17_0 = stackOut_15_0;
+                      stackIn_17_0 = 1;
                       break L5;
                     }
                   }
@@ -147,10 +131,10 @@ final class ak {
                           break L7;
                         } else {
                           L9: {
-                            dupTemp$7 = var8 + var17.i(-1174051992);
-                            var8 = dupTemp$7;
-                            this.field_g[var10] = dupTemp$7;
-                            if (var9 < this.field_g[var10]) {
+                            dupTemp$0 = var8 + var17.i(-1174051992);
+                            var8 = dupTemp$0;
+                            this.field_g[var10] = dupTemp$0;
+                            if ((var9 ^ -1) > (this.field_g[var10] ^ -1)) {
                               var9 = this.field_g[var10];
                               break L9;
                             } else {
@@ -167,10 +151,10 @@ final class ak {
                         if (var10 >= this.field_o) {
                           break L7;
                         } else {
-                          dupTemp$8 = var8 + var17.e(90);
-                          var8 = dupTemp$8;
-                          this.field_g[var10] = dupTemp$8;
-                          if (this.field_g[var10] > var9) {
+                          dupTemp$1 = var8 + var17.e(90);
+                          var8 = dupTemp$1;
+                          this.field_g[var10] = dupTemp$1;
+                          if ((this.field_g[var10] ^ -1) < (var9 ^ -1)) {
                             var9 = this.field_g[var10];
                             var10++;
                             continue L10;
@@ -260,8 +244,8 @@ final class ak {
                                       var11 = this.field_g[var10];
                                       var8 = 0;
                                       var12 = this.field_i[var11];
-                                      array$9 = new int[var12];
-                                      this.field_k[var11] = array$9;
+                                      array$2 = new int[var12];
+                                      this.field_k[var11] = array$2;
                                       var13 = -1;
                                       var14 = 0;
                                       L22: while (true) {
@@ -279,11 +263,12 @@ final class ak {
                                           continue L21;
                                         } else {
                                           L24: {
-                                            dupTemp$10 = var8 + var17.i(-1174051992);
-                                            var8 = dupTemp$10;
-                                            this.field_k[var11][var14] = dupTemp$10;
-                                            var15 = dupTemp$10;
-                                            if (var13 < var15) {
+                                            dupTemp$3 = var8 + var17.i(-1174051992);
+                                            var8 = dupTemp$3;
+                                            dupTemp$4 = this.field_k[var11];
+                                            dupTemp$4[var14] = dupTemp$3;
+                                            var15 = dupTemp$3;
+                                            if ((var13 ^ -1) > (var15 ^ -1)) {
                                               var13 = var15;
                                               break L24;
                                             } else {
@@ -315,8 +300,8 @@ final class ak {
                                       var8 = 0;
                                       var12 = this.field_i[var11];
                                       var13 = -1;
-                                      array$11 = new int[var12];
-                                      this.field_k[var11] = array$11;
+                                      array$5 = new int[var12];
+                                      this.field_k[var11] = array$5;
                                       var14 = 0;
                                       L27: while (true) {
                                         if (var14 >= var12) {
@@ -332,11 +317,12 @@ final class ak {
                                           var10++;
                                           continue L26;
                                         } else {
-                                          dupTemp$12 = var8 + var17.e(74);
-                                          var8 = dupTemp$12;
-                                          this.field_k[var11][var14] = dupTemp$12;
-                                          var15 = dupTemp$12;
-                                          if (var15 > var13) {
+                                          dupTemp$6 = var8 + var17.e(74);
+                                          var8 = dupTemp$6;
+                                          dupTemp$7 = this.field_k[var11];
+                                          dupTemp$7[var14] = dupTemp$6;
+                                          var15 = dupTemp$6;
+                                          if ((var15 ^ -1) < (var13 ^ -1)) {
                                             var13 = var15;
                                             var14++;
                                             continue L27;
@@ -369,8 +355,8 @@ final class ak {
                                 } else {
                                   var11 = this.field_g[var10];
                                   var12 = this.field_i[var11];
-                                  array$13 = new int[this.field_j[var11]];
-                                  this.field_a[var11] = array$13;
+                                  array$8 = new int[this.field_j[var11]];
+                                  this.field_a[var11] = array$8;
                                   var13 = 0;
                                   L31: while (true) {
                                     if (var13 >= this.field_j[var11]) {
@@ -427,27 +413,19 @@ final class ak {
           decompiledCaughtException = decompiledCaughtParameter0;
           L34: {
             var3 = decompiledCaughtException;
-            stackOut_95_0 = (RuntimeException) (var3);
-            stackOut_95_1 = new StringBuilder().append("ak.C(");
-            stackIn_97_0 = stackOut_95_0;
-            stackIn_97_1 = stackOut_95_1;
-            stackIn_96_0 = stackOut_95_0;
-            stackIn_96_1 = stackOut_95_1;
+            stackIn_97_0 = (RuntimeException) (var3);
+
+            stackIn_97_1 = new StringBuilder().append("ak.C(");
+
             if (param0 == null) {
-              stackOut_97_0 = (RuntimeException) ((Object) stackIn_97_0);
-              stackOut_97_1 = (StringBuilder) ((Object) stackIn_97_1);
-              stackOut_97_2 = "null";
-              stackIn_98_0 = stackOut_97_0;
-              stackIn_98_1 = stackOut_97_1;
-              stackIn_98_2 = stackOut_97_2;
+              stackIn_98_0 = (RuntimeException) ((Object) stackIn_97_0);
+              stackIn_98_1 = (StringBuilder) ((Object) stackIn_97_1);
+              stackIn_98_2 = "null";
               break L34;
             } else {
-              stackOut_96_0 = (RuntimeException) ((Object) stackIn_96_0);
-              stackOut_96_1 = (StringBuilder) ((Object) stackIn_96_1);
-              stackOut_96_2 = "{...}";
-              stackIn_98_0 = stackOut_96_0;
-              stackIn_98_1 = stackOut_96_1;
-              stackIn_98_2 = stackOut_96_2;
+              stackIn_98_0 = (RuntimeException) ((Object) stackIn_97_0);
+              stackIn_98_1 = (StringBuilder) ((Object) stackIn_97_1);
+              stackIn_98_2 = "{...}";
               break L34;
             }
           }
@@ -456,22 +434,24 @@ final class ak {
     }
 
     final static void a(int param0) {
-        String[][] dupTemp$6 = null;
-        long[][] dupTemp$7 = null;
-        int[][] dupTemp$8 = null;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        RuntimeException var1 = null;
+        String[][] dupTemp$0 = null;
+        long[][] dupTemp$1 = null;
+        int[][] dupTemp$2 = null;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         ia var2 = null;
         int var3 = 0;
         int var4 = 0;
         vc var5 = null;
         long var5_long = 0L;
         int var6 = 0;
-        re var7_ref_re = null;
         int var7 = 0;
+        re var7_ref_re = null;
         int var8 = 0;
         int var9_int = 0;
         String[][] var9 = null;
@@ -492,8 +472,6 @@ final class ak {
         int var25 = 0;
         int var26 = 0;
         int var27 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var27 = StarCannon.field_A;
         try {
           L0: {
@@ -533,16 +511,16 @@ final class ak {
                         var9_int = 1;
                         L5: while (true) {
                           if (var6 <= var9_int) {
-                            dupTemp$6 = new String[3][var7];
-                            var5.field_n = dupTemp$6;
-                            var9 = dupTemp$6;
+                            dupTemp$0 = new String[3][var7];
+                            var5.field_n = dupTemp$0;
+                            var9 = dupTemp$0;
                             var10 = new String[3][var7];
-                            dupTemp$7 = new long[3][var7];
-                            var5.field_g = dupTemp$7;
-                            var11 = dupTemp$7;
-                            dupTemp$8 = new int[3][var8 * var7];
-                            var5.field_o = dupTemp$8;
-                            var12 = dupTemp$8;
+                            dupTemp$1 = new long[3][var7];
+                            var5.field_g = dupTemp$1;
+                            var11 = dupTemp$1;
+                            dupTemp$2 = new int[3][var8 * var7];
+                            var5.field_o = dupTemp$2;
+                            var12 = dupTemp$2;
                             var13 = 0;
                             var14 = 0;
                             var15 = 0;
@@ -573,9 +551,9 @@ final class ak {
                                         if (var8 <= var26) {
                                           break L7;
                                         } else {
-                                          incrementValue$9 = var16;
+                                          incrementValue$3 = var16;
                                           var16++;
-                                          var12[0][incrementValue$9] = var2.f((byte) -101);
+                                          var12[0][incrementValue$3] = var2.f((byte) -101);
                                           var26++;
                                           continue L8;
                                         }
@@ -599,9 +577,9 @@ final class ak {
                                           if (var8 <= var26) {
                                             break L9;
                                           } else {
-                                            incrementValue$10 = var17;
+                                            incrementValue$4 = var17;
                                             var17++;
-                                            var12[1][incrementValue$10] = var2.f((byte) -94);
+                                            var12[1][incrementValue$4] = var2.f((byte) -94);
                                             var26++;
                                             continue L10;
                                           }
@@ -629,9 +607,9 @@ final class ak {
                                           if (var26 >= var8) {
                                             break L11;
                                           } else {
-                                            incrementValue$11 = var18;
+                                            incrementValue$5 = var18;
                                             var18++;
-                                            var12[2][incrementValue$11] = var2.f((byte) -99);
+                                            var12[2][incrementValue$5] = var2.f((byte) -99);
                                             var26++;
                                             continue L12;
                                           }
@@ -724,7 +702,6 @@ final class ak {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
-        RuntimeException var17 = null;
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -752,8 +729,6 @@ final class ak {
         int var41 = 0;
         int var42 = 0;
         int var43 = 0;
-        RuntimeException stackIn_75_0 = null;
-        StringBuilder stackIn_75_1 = null;
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         RuntimeException stackIn_77_0 = null;
@@ -762,14 +737,7 @@ final class ak {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_74_0 = null;
-        StringBuilder stackOut_74_1 = null;
-        RuntimeException stackOut_76_0 = null;
-        StringBuilder stackOut_76_1 = null;
-        String stackOut_76_2 = null;
-        RuntimeException stackOut_75_0 = null;
-        StringBuilder stackOut_75_1 = null;
-        String stackOut_75_2 = null;
+        RuntimeException var17 = null;
         var43 = StarCannon.field_A;
         try {
           L0: {
@@ -1156,27 +1124,19 @@ final class ak {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var17 = decompiledCaughtException;
-            stackOut_74_0 = (RuntimeException) (var17);
-            stackOut_74_1 = new StringBuilder().append("ak.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-            stackIn_76_0 = stackOut_74_0;
-            stackIn_76_1 = stackOut_74_1;
-            stackIn_75_0 = stackOut_74_0;
-            stackIn_75_1 = stackOut_74_1;
+            stackIn_76_0 = (RuntimeException) (var17);
+
+            stackIn_76_1 = new StringBuilder().append("ak.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+
             if (param6 == null) {
-              stackOut_76_0 = (RuntimeException) ((Object) stackIn_76_0);
-              stackOut_76_1 = (StringBuilder) ((Object) stackIn_76_1);
-              stackOut_76_2 = "null";
-              stackIn_77_0 = stackOut_76_0;
-              stackIn_77_1 = stackOut_76_1;
-              stackIn_77_2 = stackOut_76_2;
+              stackIn_77_0 = (RuntimeException) ((Object) stackIn_76_0);
+              stackIn_77_1 = (StringBuilder) ((Object) stackIn_76_1);
+              stackIn_77_2 = "null";
               break L17;
             } else {
-              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
-              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
-              stackOut_75_2 = "{...}";
-              stackIn_77_0 = stackOut_75_0;
-              stackIn_77_1 = stackOut_75_1;
-              stackIn_77_2 = stackOut_75_2;
+              stackIn_77_0 = (RuntimeException) ((Object) stackIn_76_0);
+              stackIn_77_1 = (StringBuilder) ((Object) stackIn_76_1);
+              stackIn_77_2 = "{...}";
               break L17;
             }
           }

@@ -23,18 +23,20 @@ final class dc extends o {
     }
 
     final static void c(byte param0) {
-        boolean discarded$0 = false;
         if (param0 < 124) {
-            discarded$0 = dc.a(-70);
+            dc.a(-70);
         }
         kb.field_O = new ol();
         nj.field_w.c(kb.field_O, 79);
     }
 
     final static void a(int param0, int param1, boolean param2, byte param3, int param4, int param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_26_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -42,11 +44,6 @@ final class dc extends o {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_26_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
         var14 = Chess.field_G;
         try {
           L0: {
@@ -85,12 +82,10 @@ final class dc extends o {
                           L4: {
                             var12 = vn.field_Ab[var11];
                             if (!param2) {
-                              stackOut_25_0 = gh.field_a[var12];
-                              stackIn_26_0 = stackOut_25_0;
+                              stackIn_26_0 = gh.field_a[var12];
                               break L4;
                             } else {
-                              stackOut_24_0 = hg.field_d[var12];
-                              stackIn_26_0 = stackOut_24_0;
+                              stackIn_26_0 = hg.field_d[var12];
                               break L4;
                             }
                           }
@@ -106,9 +101,9 @@ final class dc extends o {
                                   break L6;
                                 }
                               }
-                              incrementValue$1 = var8;
+                              incrementValue$0 = var8;
                               var8++;
-                              vn.field_Ab[incrementValue$1] = var12;
+                              vn.field_Ab[incrementValue$0] = var12;
                               break L5;
                             } else {
                               if (var13 > var10) {

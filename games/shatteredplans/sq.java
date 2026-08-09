@@ -24,7 +24,6 @@ final class sq {
     String field_g;
 
     final static byte[] a(int param0, Object param1, boolean param2) {
-        byte[] discarded$2 = null;
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         Object var4 = null;
@@ -32,8 +31,6 @@ final class sq {
         byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_15_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -41,30 +38,17 @@ final class sq {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_8_0 = null;
-        byte[] stackOut_6_0 = null;
-        byte[] stackOut_14_0 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
         try {
           L0: {
             if (param1 != null) {
               if (param1 instanceof byte[]) {
                 var3 = (byte[]) (param1);
                 if (param2) {
-                  stackOut_8_0 = ck.a(var3, false);
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = ck.a(var3, false);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_6_0 = (byte[]) (var3);
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = (byte[]) (var3);
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -74,14 +58,13 @@ final class sq {
                     break L1;
                   } else {
                     var4 = (Object) null;
-                    discarded$2 = sq.a(101, (Object) null, true);
+                    sq.a(101, (Object) null, true);
                     break L1;
                   }
                 }
                 if (param1 instanceof le) {
                   var5 = (le) (param1);
-                  stackOut_14_0 = var5.a(false);
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = var5.a(false);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -96,27 +79,19 @@ final class sq {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var3_ref);
-            stackOut_17_1 = new StringBuilder().append("sq.E(").append(param0).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var3_ref);
+
+            stackIn_19_1 = new StringBuilder().append("sq.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L2;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L2;
             }
           }
@@ -160,13 +135,10 @@ final class sq {
 
     final void a(String param0, byte param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         String[] var4 = null;
         int var5 = 0;
         int var6 = 0;
         String var7 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -174,14 +146,7 @@ final class sq {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var3 = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -220,27 +185,19 @@ final class sq {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3);
-            stackOut_10_1 = new StringBuilder().append("sq.C(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3);
+
+            stackIn_12_1 = new StringBuilder().append("sq.C(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L3;
             }
           }
@@ -297,13 +254,13 @@ final class sq {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        RuntimeException var7 = null;
-        wa var7_ref = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        wa var7 = null;
+        RuntimeException var7_ref = null;
         int var8 = 0;
         wa var9 = null;
         wa var10 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -348,7 +305,7 @@ final class sq {
                     L4: {
                       var9 = bj.field_J[param0];
                       var10 = var9;
-                      var7_ref = var10;
+                      var7 = var10;
                       if (var10 == null) {
                         break L4;
                       } else {
@@ -368,17 +325,17 @@ final class sq {
                           }
                           L6: while (true) {
                             L7: {
-                              if (null == var7_ref.field_c) {
+                              if (null == var7.field_c) {
                                 break L7;
                               } else {
                                 L8: {
-                                  if (param4 > var7_ref.field_c.field_g) {
+                                  if (param4 > var7.field_c.field_g) {
                                     break L8;
                                   } else {
-                                    if (param4 != var7_ref.field_c.field_g) {
+                                    if (param4 != var7.field_c.field_g) {
                                       break L7;
                                     } else {
-                                      if (param2 >= var7_ref.field_c.field_h) {
+                                      if (param2 >= var7.field_c.field_h) {
                                         break L7;
                                       } else {
                                         break L8;
@@ -386,11 +343,11 @@ final class sq {
                                     }
                                   }
                                 }
-                                var7_ref = var7_ref.field_c;
+                                var7 = var7.field_c;
                                 continue L6;
                               }
                             }
-                            var7_ref.field_c = wi.a(param1, param6, var7_ref.field_c, param3, param2, param4, -3903);
+                            var7.field_c = wi.a(param1, param6, var7.field_c, param3, param2, param4, -3903);
                             break L3;
                           }
                         }
@@ -407,8 +364,8 @@ final class sq {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) var7), "sq.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          var7_ref = decompiledCaughtException;
+          throw r.a((Throwable) ((Object) var7_ref), "sq.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

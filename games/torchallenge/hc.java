@@ -32,34 +32,24 @@ final class hc extends ng {
         if (!(var8 != null)) {
             return;
         }
-        e discarded$0 = ol.a(-120, var8, var9);
+        ol.a(-120, var8, var9);
     }
 
     final static void a(uf param0, byte param1) {
         try {
             byte[] var2 = null;
-            RuntimeException var2_ref = null;
             int var3_int = 0;
             Exception var3 = null;
             int var4 = 0;
             int var5 = 0;
             byte[] var6 = null;
-            RuntimeException stackIn_19_0 = null;
-            StringBuilder stackIn_19_1 = null;
             RuntimeException stackIn_20_0 = null;
             StringBuilder stackIn_20_1 = null;
             RuntimeException stackIn_21_0 = null;
             StringBuilder stackIn_21_1 = null;
             String stackIn_21_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            String stackOut_20_2 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
+            RuntimeException var2_ref = null;
             var5 = TorChallenge.field_F ? 1 : 0;
             try {
               L0: {
@@ -85,7 +75,7 @@ final class hc extends ng {
                             if ((var3_int ^ -1) <= -25) {
                               break L5;
                             } else {
-                              if (var2[var3_int] == 0) {
+                              if ((var2[var3_int] ^ -1) == -1) {
                                 var3_int++;
                                 continue L4;
                               } else {
@@ -129,27 +119,19 @@ final class hc extends ng {
               decompiledCaughtException = decompiledCaughtParameter1;
               L8: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_18_0 = (RuntimeException) (var2_ref);
-                stackOut_18_1 = new StringBuilder().append("hc.AA(");
-                stackIn_20_0 = stackOut_18_0;
-                stackIn_20_1 = stackOut_18_1;
-                stackIn_19_0 = stackOut_18_0;
-                stackIn_19_1 = stackOut_18_1;
+                stackIn_20_0 = (RuntimeException) (var2_ref);
+
+                stackIn_20_1 = new StringBuilder().append("hc.AA(");
+
                 if (param0 == null) {
-                  stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackOut_20_2 = "null";
-                  stackIn_21_0 = stackOut_20_0;
-                  stackIn_21_1 = stackOut_20_1;
-                  stackIn_21_2 = stackOut_20_2;
+                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+                  stackIn_21_2 = "null";
                   break L8;
                 } else {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "{...}";
-                  stackIn_21_0 = stackOut_19_0;
-                  stackIn_21_1 = stackOut_19_1;
-                  stackIn_21_2 = stackOut_19_2;
+                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+                  stackIn_21_2 = "{...}";
                   break L8;
                 }
               }
@@ -181,18 +163,19 @@ final class hc extends ng {
     }
 
     final static void d(byte param0) {
-        boolean discarded$7 = false;
-        String[][] dupTemp$8 = null;
-        long[][] dupTemp$9 = null;
-        int[][] dupTemp$10 = null;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
+        String[][] dupTemp$0 = null;
+        long[][] dupTemp$1 = null;
+        int[][] dupTemp$2 = null;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        ae var4_ref_ae = null;
         long var4 = 0L;
+        ae var4_ref_ae = null;
         int var5 = 0;
         ji var6 = null;
         int var6_int = 0;
@@ -217,8 +200,6 @@ final class hc extends ng {
         int var25 = 0;
         int var26 = 0;
         pa var28 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -228,7 +209,7 @@ final class hc extends ng {
               if (param0 == -117) {
                 break L1;
               } else {
-                discarded$7 = hc.c((byte) -46);
+                hc.c((byte) -46);
                 break L1;
               }
             }
@@ -300,16 +281,16 @@ final class hc extends ng {
                         var8_int = 1;
                         L8: while (true) {
                           if (var5 <= var8_int) {
-                            dupTemp$8 = new String[3][var6_int];
-                            var4_ref_ae.field_i = dupTemp$8;
-                            var8 = dupTemp$8;
+                            dupTemp$0 = new String[3][var6_int];
+                            var4_ref_ae.field_i = dupTemp$0;
+                            var8 = dupTemp$0;
                             var9 = new String[3][var6_int];
-                            dupTemp$9 = new long[3][var6_int];
-                            var4_ref_ae.field_t = dupTemp$9;
-                            var10 = dupTemp$9;
-                            dupTemp$10 = new int[3][var7 * var6_int];
-                            var4_ref_ae.field_l = dupTemp$10;
-                            var11 = dupTemp$10;
+                            dupTemp$1 = new long[3][var6_int];
+                            var4_ref_ae.field_t = dupTemp$1;
+                            var10 = dupTemp$1;
+                            dupTemp$2 = new int[3][var7 * var6_int];
+                            var4_ref_ae.field_l = dupTemp$2;
+                            var11 = dupTemp$2;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -342,9 +323,9 @@ final class hc extends ng {
                                         if (var7 <= var25) {
                                           break L10;
                                         } else {
-                                          incrementValue$11 = var15;
+                                          incrementValue$3 = var15;
                                           var15++;
-                                          var11[0][incrementValue$11] = var28.i(51);
+                                          var11[0][incrementValue$3] = var28.i(51);
                                           var25++;
                                           continue L11;
                                         }
@@ -366,9 +347,9 @@ final class hc extends ng {
                                           if (var25 >= var7) {
                                             break L12;
                                           } else {
-                                            incrementValue$12 = var16;
+                                            incrementValue$4 = var16;
                                             var16++;
-                                            var11[1][incrementValue$12] = var28.i(46);
+                                            var11[1][incrementValue$4] = var28.i(46);
                                             var25++;
                                             continue L13;
                                           }
@@ -394,9 +375,9 @@ final class hc extends ng {
                                           if (var7 <= var25) {
                                             break L14;
                                           } else {
-                                            incrementValue$13 = var17;
+                                            incrementValue$5 = var17;
                                             var17++;
-                                            var11[2][incrementValue$13] = var28.i(param0 + 158);
+                                            var11[2][incrementValue$5] = var28.i(param0 + 158);
                                             var25++;
                                             continue L15;
                                           }
@@ -473,10 +454,8 @@ final class hc extends ng {
     }
 
     final static boolean c(byte param0) {
-        int var1 = 0;
+        int var1;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           L1: {
             var1 = -73 % ((param0 - -52) / 54);
@@ -497,14 +476,12 @@ final class hc extends ng {
                     }
                   }
                 }
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L0;
               }
             }
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 1;
           break L0;
         }
         return stackIn_7_0 != 0;

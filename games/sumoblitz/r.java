@@ -5,10 +5,11 @@ abstract class r extends pj {
     static int[] field_r;
 
     final static br a(boolean param0, byte param1) {
-        int discarded$4 = 0;
-        String discarded$5 = null;
-        int discarded$6 = 0;
-        String discarded$7 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_11_0 = 0;
+        int[] stackIn_24_0 = null;
+        Throwable decompiledCaughtException = null;
+        pl var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -16,28 +17,17 @@ abstract class r extends pj {
         int var7 = 0;
         pl var8 = null;
         oq var9 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_13_0 = 0;
-        int[] stackIn_28_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int[] stackOut_27_0 = null;
-        Object stackOut_26_0 = null;
         L0: {
           var7 = Sumoblitz.field_L ? 1 : 0;
           var8 = ig.field_a;
+          var2 = var8;
           var3 = var8.e(-31302);
           jb.field_h = 127 & var3;
           if (0 == (var3 & 128)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -52,13 +42,7 @@ abstract class r extends pj {
           } else {
             jt.field_w = 0;
             eh.field_c = 0;
-            if (var7 == 0) {
-              break L1;
-            } else {
-              eh.field_c = var8.a(255);
-              jt.field_w = var8.c((byte) 126);
-              break L1;
-            }
+            break L1;
           }
         }
         L2: {
@@ -71,42 +55,35 @@ abstract class r extends pj {
         }
         L3: {
           if (-2 != (var8.e(-31302) ^ -1)) {
-            stackOut_12_0 = 0;
-            stackIn_13_0 = stackOut_12_0;
+            stackIn_11_0 = 0;
             break L3;
           } else {
-            stackOut_11_0 = 1;
-            stackIn_13_0 = stackOut_11_0;
+            stackIn_11_0 = 1;
             break L3;
           }
         }
         L4: {
-          var4 = stackIn_13_0;
+          var4 = stackIn_11_0;
           wk.field_f = var8.d(-1);
           if (var4 == 0) {
             fu.field_E = wk.field_f;
             break L4;
           } else {
             fu.field_E = var8.d(-1);
-            if (var7 == 0) {
-              break L4;
-            } else {
-              fu.field_E = wk.field_f;
-              break L4;
-            }
+            break L4;
           }
         }
         L5: {
           if ((jb.field_h ^ -1) == -2) {
-            discarded$4 = var8.a(255);
-            discarded$5 = var8.d(-1);
+            var8.a(255);
+            var8.d(-1);
             break L5;
           } else {
             if (4 != jb.field_h) {
               break L5;
             } else {
-              discarded$6 = var8.a(255);
-              discarded$7 = var8.d(-1);
+              var8.a(255);
+              var8.d(-1);
               break L5;
             }
           }
@@ -123,35 +100,25 @@ abstract class r extends pj {
                 var9 = kb.field_c.a(var5, -32769);
                 oi.field_c = var9.f(1118);
                 if (!fu.field_E.equals(qv.field_o)) {
-                  stackOut_27_0 = var9.field_u;
-                  stackIn_28_0 = stackOut_27_0;
+                  stackIn_24_0 = var9.field_u;
                   break L7;
                 } else {
-                  stackOut_26_0 = null;
-                  stackIn_28_0 = (int[]) ((Object) stackOut_26_0);
+                  stackIn_24_0 = null;
                   break L7;
                 }
               }
-              tm.field_c = stackIn_28_0;
+              tm.field_c = stackIn_24_0;
               break L6;
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            L8: {
-              var6 = (Exception) (Object) decompiledCaughtException;
-              ms.a("CC1", (Throwable) ((Object) var6), 0);
-              tm.field_c = null;
-              oi.field_c = null;
-              break L8;
-            }
-          }
-          if (var7 != 0) {
-            oi.field_c = jb.a(var8, 80, -14832);
+            var6 = (Exception) (Object) decompiledCaughtException;
+            ms.a("CC1", (Throwable) ((Object) var6), 0);
             tm.field_c = null;
-            return new br(param0);
-          } else {
+            oi.field_c = null;
             return new br(param0);
           }
+          return new br(param0);
         }
     }
 

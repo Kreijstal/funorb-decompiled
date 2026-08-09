@@ -32,7 +32,6 @@ final class lf extends ji {
 
     final static void d(int param0, int param1) {
         try {
-            int discarded$2 = 0;
             IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
@@ -66,7 +65,7 @@ final class lf extends ji {
                   if (param0 > 37) {
                     break L3;
                   } else {
-                    discarded$2 = lf.g(-114);
+                    lf.g(-114);
                     break L3;
                   }
                 }

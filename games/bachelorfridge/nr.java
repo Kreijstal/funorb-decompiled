@@ -8,10 +8,10 @@ final class nr extends ana {
     static String field_y;
 
     final boolean c(byte param0) {
-        int var2 = 0;
-        int fieldTemp$2 = this.field_l - 1;
+        int var2;
+        int fieldTemp$1 = this.field_l - 1;
         this.field_l = this.field_l - 1;
-        if (0 <= fieldTemp$2) {
+        if (0 <= fieldTemp$1) {
           if ((this.field_l ^ -1) != -26) {
             return false;
           } else {
@@ -28,7 +28,6 @@ final class nr extends ana {
     final static void a(int param0, cfa param1, byte param2) {
         pf var6 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var6 = sja.field_fb;
             var6.c(param0, (byte) 116);
@@ -41,7 +40,7 @@ final class nr extends ana {
             var6.e(param1.field_h, -1615464796);
             var6.e(param1.field_k, -1615464796);
             var6.e(param1.field_f, -1615464796);
-            discarded$0 = var6.a(var4, 19);
+            var6.a(var4, 19);
             var6.b((byte) 85, -var4 + var6.field_g);
             int var5 = 47 % ((1 - param2) / 47);
         } catch (RuntimeException runtimeException) {
@@ -71,13 +70,12 @@ final class nr extends ana {
     }
 
     private final void f(int param0) {
-        oha discarded$2 = null;
-        rq discarded$3 = null;
-        Object var3 = null;
-        pp var3_ref = null;
-        int var5 = 0;
-        aga var6 = null;
-        ad var7 = null;
+        rq discarded$1 = null;
+        Object var3;
+        pp var3_ref;
+        int var5;
+        aga var6;
+        ad var7;
         L0: {
           var3 = null;
           var5 = BachelorFridge.field_y;
@@ -94,13 +92,13 @@ final class nr extends ana {
           return;
         } else {
           var3_ref = (pp) ((Object) this.field_x.field_o.b((byte) 90));
-          discarded$2 = al.a(-52, this.field_x.field_k);
+          al.a(-52, this.field_x.field_k);
           L1: while (true) {
             if (var3_ref == null) {
               return;
             } else {
               var7 = var3_ref.field_h.a(-27449, this.field_q);
-              discarded$3 = new rq(this.field_q, var7.field_s.field_x, var7.field_s.field_J);
+              discarded$1 = new rq(this.field_q, var7.field_s.field_x, var7.field_s.field_J);
               var3_ref.a(var6, this.field_q.field_h, 12);
               var3_ref = (pp) ((Object) this.field_x.field_o.c(0));
               continue L1;

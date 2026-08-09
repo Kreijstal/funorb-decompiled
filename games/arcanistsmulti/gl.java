@@ -10,8 +10,7 @@ final class gl {
     static String field_f;
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, byte param9) {
-        RuntimeException var10 = null;
-        int[] var10_array = null;
+        int[] var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -20,22 +19,13 @@ final class gl {
         int var16 = 0;
         int[] var17 = null;
         int[] var18 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var10_ref = null;
         var16 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -54,13 +44,13 @@ final class gl {
                 break L0;
               } else {
                 var18 = param4;
-                var10_array = var18;
+                var10 = var18;
                 var11 = param1;
                 var12 = param6;
                 var13 = param5;
                 var14 = param0;
                 var15 = (16711422 & var18[var11]) >> -469845279;
-                var10_array[var11] = dg.a(255, var14 >> -858249455) - (-(dg.a(var13, 33423780) >> -1006873719) + -dg.a(16711680, var12 >> 225687201)) + var15;
+                var10[var11] = dg.a(255, var14 >> -858249455) - (-(dg.a(var13, 33423780) >> -1006873719) + -dg.a(16711680, var12 >> 225687201)) + var15;
                 param6 = param6 + param7;
                 param1++;
                 param0 = param0 + param8;
@@ -72,28 +62,20 @@ final class gl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var10 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var10);
-            stackOut_6_1 = new StringBuilder().append("gl.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            var10_ref = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (var10_ref);
+
+            stackIn_8_1 = new StringBuilder().append("gl.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -113,8 +95,19 @@ final class gl {
     }
 
     final static void a(int param0, int param1, int param2, int param3, qb[] param4, int param5) {
-        RuntimeException var6 = null;
+        int stackIn_10_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_21_0 = 0;
+        RuntimeException stackIn_74_0 = null;
+        StringBuilder stackIn_74_1 = null;
+        RuntimeException stackIn_75_0 = null;
+        StringBuilder stackIn_75_1 = null;
+        String stackIn_75_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -131,35 +124,6 @@ final class gl {
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
-        RuntimeException stackIn_73_0 = null;
-        StringBuilder stackIn_73_1 = null;
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
-        RuntimeException stackIn_75_0 = null;
-        StringBuilder stackIn_75_1 = null;
-        String stackIn_75_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        RuntimeException stackOut_74_0 = null;
-        StringBuilder stackOut_74_1 = null;
-        String stackOut_74_2 = null;
-        RuntimeException stackOut_73_0 = null;
-        StringBuilder stackOut_73_1 = null;
-        String stackOut_73_2 = null;
         var22 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -174,12 +138,10 @@ final class gl {
                   if (param0 > 0) {
                     L2: {
                       if (null == param4[3]) {
-                        stackOut_9_0 = 0;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = 0;
                         break L2;
                       } else {
-                        stackOut_8_0 = param4[3].field_n;
-                        stackIn_10_0 = stackOut_8_0;
+                        stackIn_10_0 = param4[3].field_n;
                         break L2;
                       }
                     }
@@ -194,36 +156,30 @@ final class gl {
                     }
                     L4: {
                       if (null != param4[5]) {
-                        stackOut_14_0 = param4[5].field_n;
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = param4[5].field_n;
                         break L4;
                       } else {
-                        stackOut_13_0 = 0;
-                        stackIn_15_0 = stackOut_13_0;
+                        stackIn_15_0 = 0;
                         break L4;
                       }
                     }
                     L5: {
                       var7 = stackIn_15_0;
                       if (null != param4[1]) {
-                        stackOut_17_0 = param4[1].field_w;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = param4[1].field_w;
                         break L5;
                       } else {
-                        stackOut_16_0 = 0;
-                        stackIn_18_0 = stackOut_16_0;
+                        stackIn_18_0 = 0;
                         break L5;
                       }
                     }
                     L6: {
                       var8 = stackIn_18_0;
                       if (null != param4[7]) {
-                        stackOut_20_0 = param4[7].field_w;
-                        stackIn_21_0 = stackOut_20_0;
+                        stackIn_21_0 = param4[7].field_w;
                         break L6;
                       } else {
-                        stackOut_19_0 = 0;
-                        stackIn_21_0 = stackOut_19_0;
+                        stackIn_21_0 = 0;
                         break L6;
                       }
                     }
@@ -434,27 +390,19 @@ final class gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L24: {
             var6 = decompiledCaughtException;
-            stackOut_72_0 = (RuntimeException) (var6);
-            stackOut_72_1 = new StringBuilder().append("gl.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_74_0 = stackOut_72_0;
-            stackIn_74_1 = stackOut_72_1;
-            stackIn_73_0 = stackOut_72_0;
-            stackIn_73_1 = stackOut_72_1;
+            stackIn_74_0 = (RuntimeException) (var6);
+
+            stackIn_74_1 = new StringBuilder().append("gl.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
-              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
-              stackOut_74_2 = "null";
-              stackIn_75_0 = stackOut_74_0;
-              stackIn_75_1 = stackOut_74_1;
-              stackIn_75_2 = stackOut_74_2;
+              stackIn_75_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackIn_75_1 = (StringBuilder) ((Object) stackIn_74_1);
+              stackIn_75_2 = "null";
               break L24;
             } else {
-              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
-              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
-              stackOut_73_2 = "{...}";
-              stackIn_75_0 = stackOut_73_0;
-              stackIn_75_1 = stackOut_73_1;
-              stackIn_75_2 = stackOut_73_2;
+              stackIn_75_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackIn_75_1 = (StringBuilder) ((Object) stackIn_74_1);
+              stackIn_75_2 = "{...}";
               break L24;
             }
           }
@@ -472,8 +420,8 @@ final class gl {
     }
 
     final static void a(boolean param0, int param1) {
-        int var3 = 0;
-        qb[] var4 = null;
+        int var3;
+        qb[] var4;
         L0: {
           L1: {
             var3 = ArcanistsMulti.field_G ? 1 : 0;

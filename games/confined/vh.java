@@ -41,52 +41,40 @@ final class vh {
     }
 
     final static void b(int param0) {
-        if (param0 == -4749) {
-          if ((rk.field_e ^ -1) == -11) {
-            ec.a((byte) 126);
-            rk.field_e = 11;
-            mk.field_o = true;
-            return;
-          } else {
+        if (param0 != -4749) {
+            field_e = (pf[]) null;
+            if ((rk.field_e ^ -1) == -11) {
+                ec.a((byte) 126);
+                rk.field_e = 11;
+                mk.field_o = true;
+                return;
+            }
             if (ja.c((byte) -126)) {
-              mk.field_o = true;
-              return;
-            } else {
-              ec.a((byte) 126);
-              rk.field_e = 11;
-              mk.field_o = true;
-              return;
+                mk.field_o = true;
+                return;
             }
-          }
-        } else {
-          field_e = (pf[]) null;
-          if ((rk.field_e ^ -1) != -11) {
-            if (!ja.c((byte) -126)) {
-              ec.a((byte) 126);
-              rk.field_e = 11;
-              mk.field_o = true;
-              return;
-            } else {
-              mk.field_o = true;
-              return;
-            }
-          } else {
             ec.a((byte) 126);
             rk.field_e = 11;
             mk.field_o = true;
             return;
-          }
         }
+        if ((rk.field_e ^ -1) == -11 || !ja.c((byte) -126)) {
+            ec.a((byte) 126);
+            rk.field_e = 11;
+            mk.field_o = true;
+            return;
+        }
+        mk.field_o = true;
     }
 
     final rk a(int param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var3 = 0;
-        rk var4 = null;
-        rk var5 = null;
-        rk var9 = null;
-        rk var12 = null;
+        int var3;
+        rk var4;
+        rk var5;
+        rk var9;
+        rk var12;
         var3 = Confined.field_J ? 1 : 0;
         if (param0 >= 66) {
           if (0 < this.field_f) {
@@ -136,9 +124,9 @@ final class vh {
     }
 
     final rk a(int param0, long param1) {
-        rk var4 = null;
-        rk var5 = null;
-        int var6 = 0;
+        rk var4;
+        rk var5;
+        int var6;
         var6 = Confined.field_J ? 1 : 0;
         var4 = this.field_b[(int)((long)(-1 + this.field_d) & param1)];
         this.field_g = var4.field_h;
@@ -188,10 +176,9 @@ final class vh {
     }
 
     final static int a(int param0, int param1) {
-        int discarded$4 = 0;
         param1 = param1 & 8191;
         if (param0 != 21872) {
-            discarded$4 = vh.a(-94, 118);
+            vh.a(-94, 118);
             if (-4097 >= (param1 ^ -1)) {
                 return -6145 >= (param1 ^ -1) ? -vj.field_e[8192 - param1] : -vj.field_e[-4096 + param1];
             }
@@ -204,18 +191,18 @@ final class vh {
     }
 
     vh(int param0) {
-        rk dupTemp$2 = null;
-        int var2 = 0;
-        rk var3 = null;
+        rk dupTemp$1 = null;
+        int var2;
+        rk var3;
         this.field_f = 0;
         this.field_d = param0;
         this.field_b = new rk[param0];
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            dupTemp$2 = new rk();
-            var3 = dupTemp$2;
-            this.field_b[var2] = dupTemp$2;
+            dupTemp$1 = new rk();
+            var3 = dupTemp$1;
+            this.field_b[var2] = dupTemp$1;
             var3.field_a = var3;
             var3.field_h = var3;
             var2++;

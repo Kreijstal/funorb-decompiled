@@ -31,10 +31,9 @@ final class b extends ka {
     private int[] field_e;
 
     final void H(int param0, int param1, int param2) {
-        Object var4 = null;
         int var5 = 0;
-        Throwable var6 = null;
         Throwable decompiledCaughtException = null;
+        Object var4 = null;
         L0: {
           if (param0 == 0) {
             break L0;
@@ -88,10 +87,9 @@ final class b extends ka {
     }
 
     final void O(int param0, int param1, int param2) {
-        Object var4 = null;
         int var5 = 0;
-        Throwable var6 = null;
         Throwable decompiledCaughtException = null;
+        Object var4 = null;
         L0: {
           if (param0 == 128) {
             break L0;
@@ -167,19 +165,19 @@ final class b extends ka {
     }
 
     private final void a() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         if (!this.field_n) {
           var1 = 0;
           var2 = 0;
@@ -196,6 +194,8 @@ final class b extends ka {
               this.field_d = (short)var6;
               this.field_w = (short)var5;
               this.field_r = (short)var8;
+              Math.sqrt((double)var1);
+              Math.sqrt((double)var2);
               this.field_n = true;
               return;
             } else {
@@ -292,111 +292,90 @@ final class b extends ka {
     }
 
     b(sob param0, cbb param1, int param2, int param3, int param4, int param5) {
-        int[][] discarded$3 = null;
-        int[][] discarded$4 = null;
-        int[][] discarded$5 = null;
-        d var7 = null;
-        int var9_int = 0;
-        long[] var9 = null;
-        int var10 = 0;
-        int var11_int = 0;
-        kua var11 = null;
-        int var12 = 0;
-        Object var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18_int = 0;
-        opa var18 = null;
-        int var19_int = 0;
-        float[] var19 = null;
-        float[] var20 = null;
-        sr var21_ref_sr = null;
-        int var21 = 0;
-        opa var22_ref_opa = null;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        float var29 = 0.0f;
-        int var30 = 0;
-        float var30_float = 0.0f;
-        float var31 = 0.0f;
-        float var32 = 0.0f;
-        float var33 = 0.0f;
-        float var34_float = 0.0f;
-        int var34 = 0;
-        float var35_float = 0.0f;
-        int var35 = 0;
-        float var36_float = 0.0f;
-        int var36 = 0;
-        float var37_float = 0.0f;
-        int var37 = 0;
-        float var38_float = 0.0f;
-        int var38 = 0;
-        float var39_float = 0.0f;
-        int var39 = 0;
-        float var40_float = 0.0f;
-        int var40 = 0;
-        float var41_float = 0.0f;
-        int var41 = 0;
-        float var42_float = 0.0f;
-        int var42 = 0;
-        float var43 = 0.0f;
-        float var44 = 0.0f;
-        float var45 = 0.0f;
-        float var46 = 0.0f;
-        float var47 = 0.0f;
-        float var48 = 0.0f;
-        float var49 = 0.0f;
-        float var50 = 0.0f;
-        float var51 = 0.0f;
-        float var52 = 0.0f;
-        float var53 = 0.0f;
-        int var54 = 0;
-        bqa var56 = null;
-        opa var57 = null;
-        long[] var58 = null;
-        bqa var59 = null;
-        sr var60 = null;
-        co var61 = null;
-        opa var62 = null;
-        float[] var65 = null;
-        float[] var66 = null;
-        long[] var68 = null;
-        int[] var74 = null;
-        float[] var75 = null;
-        float[] var76 = null;
         int stackIn_6_0 = 0;
         int stackIn_37_0 = 0;
-        int stackIn_50_0 = 0;
-        int stackIn_50_1 = 0;
         int stackIn_51_0 = 0;
         int stackIn_51_1 = 0;
         int stackIn_52_0 = 0;
         int stackIn_52_1 = 0;
         int stackIn_52_2 = 0;
         int stackIn_61_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_49_1 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_51_1 = 0;
-        int stackOut_51_2 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_50_1 = 0;
-        int stackOut_50_2 = 0;
-        short stackOut_60_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_32_0 = 0;
+        d var7;
+        int var9_int;
+        long[] var9;
+        int var10;
+        int var11_int;
+        kua var11;
+        int var12;
+        Object var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        opa var18;
+        int var18_int;
+        float[] var19;
+        int var19_int;
+        float[] var20;
+        int var21;
+        sr var21_ref_sr;
+        int var22;
+        opa var22_ref_opa;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        float var29;
+        int var30;
+        float var30_float;
+        float var31;
+        float var32;
+        float var33;
+        int var34;
+        float var34_float;
+        int var35;
+        float var35_float;
+        int var36;
+        float var36_float;
+        int var37;
+        float var37_float;
+        int var38;
+        float var38_float;
+        int var39;
+        float var39_float;
+        int var40;
+        float var40_float;
+        int var41;
+        float var41_float;
+        int var42;
+        float var42_float;
+        float var43;
+        float var44;
+        float var45;
+        float var46;
+        float var47;
+        float var48;
+        float var49;
+        float var50;
+        float var51;
+        float var52;
+        float var53;
+        int var54;
+        bqa var56;
+        opa var57;
+        long[] var58;
+        bqa var59;
+        sr var60;
+        co var61;
+        opa var62;
+        float[] var65;
+        float[] var66;
+        long[] var68;
+        int[] var74;
+        float[] var75;
+        float[] var76;
         this.field_n = false;
         this.field_A = 0;
         this.field_z = false;
@@ -425,12 +404,10 @@ final class b extends ka {
               var58 = var68;
               var9 = var58;
               if ((this.field_x & 256) == 0) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L1;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
@@ -456,27 +433,19 @@ final class b extends ka {
                           var59 = param1.field_g[var54];
                           var60 = jm.a(var59.field_e, 0);
                           var14 = mpb.field_h[param1.field_b[var59.field_b] & 65535] & 16777215;
-                          stackOut_49_0 = var14;
-                          stackOut_49_1 = 255;
-                          stackIn_51_0 = stackOut_49_0;
-                          stackIn_51_1 = stackOut_49_1;
-                          stackIn_50_0 = stackOut_49_0;
-                          stackIn_50_1 = stackOut_49_1;
+                          stackIn_51_0 = var14;
+
+                          stackIn_51_1 = 255;
+
                           if (param1.field_r == null) {
-                            stackOut_51_0 = stackIn_51_0;
-                            stackOut_51_1 = stackIn_51_1;
-                            stackOut_51_2 = 0;
-                            stackIn_52_0 = stackOut_51_0;
-                            stackIn_52_1 = stackOut_51_1;
-                            stackIn_52_2 = stackOut_51_2;
+                            stackIn_52_0 = stackIn_51_0;
+                            stackIn_52_1 = stackIn_51_1;
+                            stackIn_52_2 = 0;
                             break L5;
                           } else {
-                            stackOut_50_0 = stackIn_50_0;
-                            stackOut_50_1 = stackIn_50_1;
-                            stackOut_50_2 = param1.field_r[var59.field_b] & 255;
-                            stackIn_52_0 = stackOut_50_0;
-                            stackIn_52_1 = stackOut_50_1;
-                            stackIn_52_2 = stackOut_50_2;
+                            stackIn_52_0 = stackIn_51_0;
+                            stackIn_52_1 = stackIn_51_1;
+                            stackIn_52_2 = param1.field_r[var59.field_b] & 255;
                             break L5;
                           }
                         }
@@ -514,7 +483,7 @@ final class b extends ka {
                         if ((this.field_x & 32) == 0) {
                           break L8;
                         } else {
-                          discarded$3 = param1.a((byte) -37, true);
+                          param1.a((byte) -37, true);
                           break L8;
                         }
                       }
@@ -526,7 +495,7 @@ final class b extends ka {
                         if ((this.field_x & 384) == 0) {
                           break L9;
                         } else {
-                          discarded$4 = param1.b(0);
+                          param1.b(0);
                           break L9;
                         }
                       }
@@ -538,7 +507,7 @@ final class b extends ka {
                         if ((this.field_x & 1024) == 0) {
                           break L10;
                         } else {
-                          discarded$5 = param1.a(-125);
+                          param1.a(-125);
                           break L10;
                         }
                       }
@@ -652,12 +621,10 @@ final class b extends ka {
                     }
                     L19: {
                       if (param1.field_u != null) {
-                        stackOut_60_0 = param1.field_u[var16];
-                        stackIn_61_0 = stackOut_60_0;
+                        stackIn_61_0 = param1.field_u[var16];
                         break L19;
                       } else {
-                        stackOut_59_0 = -1;
-                        stackIn_61_0 = stackOut_59_0;
+                        stackIn_61_0 = -1;
                         break L19;
                       }
                     }
@@ -1015,25 +982,21 @@ final class b extends ka {
                       if (this.field_h[var12] == 0) {
                         break L32;
                       } else {
-                        stackOut_30_0 = 1;
-                        stackIn_37_0 = stackOut_30_0;
+                        stackIn_37_0 = 1;
                         break L31;
                       }
                     }
                   }
                   if (var13 != null) {
                     if (((opa) (var13)).field_q == 2) {
-                      stackOut_35_0 = 1;
-                      stackIn_37_0 = stackOut_35_0;
+                      stackIn_37_0 = 1;
                       break L31;
                     } else {
-                      stackOut_34_0 = 0;
-                      stackIn_37_0 = stackOut_34_0;
+                      stackIn_37_0 = 0;
                       break L31;
                     }
                   } else {
-                    stackOut_32_0 = 0;
-                    stackIn_37_0 = stackOut_32_0;
+                    stackIn_37_0 = 0;
                     break L31;
                   }
                 }

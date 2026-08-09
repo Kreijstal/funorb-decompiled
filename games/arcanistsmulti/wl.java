@@ -19,6 +19,10 @@ final class wl extends mg {
     static String field_P;
 
     final static jg a(boolean param0, int param1) {
+        int stackIn_3_0 = 0;
+        int stackIn_9_0 = 0;
+        int[] stackIn_24_0 = null;
+        Throwable decompiledCaughtException = null;
         ab var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -27,28 +31,16 @@ final class wl extends mg {
         int var7 = 0;
         ab var8 = null;
         tk var9 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
-        int[] stackIn_24_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        Object stackOut_23_0 = null;
-        int[] stackOut_22_0 = null;
         L0: {
           var7 = ArcanistsMulti.field_G ? 1 : 0;
           var8 = df.field_z;
           var2 = var8;
           var3 = var8.e((byte) 122);
           if (-1 == (128 & var3 ^ -1)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -69,12 +61,10 @@ final class wl extends mg {
         }
         L2: {
           if (var8.e((byte) -105) != 1) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = 1;
             break L2;
           }
         }
@@ -119,12 +109,10 @@ final class wl extends mg {
                   var9 = th.field_d.a(var5, (byte) -119);
                   fe.field_p = var9.c(true);
                   if (ff.field_a.equals(ah.field_b)) {
-                    stackOut_23_0 = null;
-                    stackIn_24_0 = (int[]) ((Object) stackOut_23_0);
+                    stackIn_24_0 = null;
                     break L6;
                   } else {
-                    stackOut_22_0 = var9.field_u;
-                    stackIn_24_0 = stackOut_22_0;
+                    stackIn_24_0 = var9.field_u;
                     break L6;
                   }
                 }
@@ -147,14 +135,9 @@ final class wl extends mg {
     }
 
     final String b(boolean param0) {
-        String discarded$10 = null;
-        String var2 = null;
+        String var2;
         String stackIn_8_0 = null;
         String stackIn_18_0 = null;
-        String stackOut_17_0 = null;
-        String stackOut_16_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_6_0 = null;
         var2 = this.field_Q.b(param0);
         if (!param0) {
           if (var2 != null) {
@@ -165,12 +148,10 @@ final class wl extends mg {
             } else {
               L0: {
                 if (this.field_q == null) {
-                  stackOut_17_0 = this.field_g;
-                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_18_0 = this.field_g;
                   break L0;
                 } else {
-                  stackOut_16_0 = this.field_q;
-                  stackIn_18_0 = stackOut_16_0;
+                  stackIn_18_0 = this.field_q;
                   break L0;
                 }
               }
@@ -178,7 +159,7 @@ final class wl extends mg {
             }
           }
         } else {
-          discarded$10 = this.b(false);
+          this.b(false);
           if (var2 != null) {
             return var2;
           } else {
@@ -187,12 +168,10 @@ final class wl extends mg {
             } else {
               L1: {
                 if (this.field_q == null) {
-                  stackOut_7_0 = this.field_g;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = this.field_g;
                   break L1;
                 } else {
-                  stackOut_6_0 = this.field_q;
-                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_0 = this.field_q;
                   break L1;
                 }
               }
@@ -240,9 +219,8 @@ final class wl extends mg {
     }
 
     public static void k(int param0) {
-        jg discarded$2 = null;
         if (param0 != 0) {
-          discarded$2 = wl.a(false, 47);
+          wl.a(false, 47);
           field_P = null;
           field_N = null;
           field_H = null;
@@ -268,10 +246,9 @@ final class wl extends mg {
     }
 
     final static void f(boolean param0) {
-        jg discarded$0 = null;
         pn.a(-47);
         if (!param0) {
-            discarded$0 = wl.a(false, -104);
+            wl.a(false, -104);
         }
     }
 
@@ -279,7 +256,6 @@ final class wl extends mg {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         try {
           L0: {
             L1: {
@@ -290,8 +266,7 @@ final class wl extends mg {
                 break L1;
               }
             }
-            stackOut_2_0 = Integer.parseInt(this.field_T.field_g);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = Integer.parseInt(this.field_T.field_g);
             break L0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -314,7 +289,7 @@ final class wl extends mg {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
+        int var6;
         super.a(param0, param1, param2, param3, -67);
         if (param4 <= -49) {
           var6 = -130 + param2 >> 1125942593;
@@ -371,7 +346,6 @@ final class wl extends mg {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         L0: {
           if (param0) {
             break L0;
@@ -382,8 +356,7 @@ final class wl extends mg {
         }
         try {
           L1: {
-            stackOut_2_0 = Integer.parseInt(this.field_J.field_g);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = Integer.parseInt(this.field_J.field_g);
             break L1;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -398,7 +371,6 @@ final class wl extends mg {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         L0: {
           if (param0 > 59) {
             break L0;
@@ -409,8 +381,7 @@ final class wl extends mg {
         }
         try {
           L1: {
-            stackOut_2_0 = Integer.parseInt(this.field_Q.field_g) - 1;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = Integer.parseInt(this.field_Q.field_g) - 1;
             break L1;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

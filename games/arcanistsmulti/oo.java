@@ -23,58 +23,28 @@ final class oo extends tf {
     static qb field_t;
 
     private final void a(wk param0, int param1, int param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        char[] stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
         char[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         char[] stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
-        char[] stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
         char[] stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         char[] stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         char stackIn_17_2 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        char[] stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        char[] stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        char stackOut_16_2 = 0;
-        char[] stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        char stackOut_15_2 = 0;
-        char[] stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        char[] stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        char stackOut_10_2 = 0;
-        char[] stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -96,27 +66,19 @@ final class oo extends tf {
                       L3: {
                         this.field_p[var6] = param0.n(-98);
                         var7 = param0.o(6);
-                        stackOut_14_0 = this.field_n;
-                        stackOut_14_1 = var6;
-                        stackIn_16_0 = stackOut_14_0;
-                        stackIn_16_1 = stackOut_14_1;
-                        stackIn_15_0 = stackOut_14_0;
-                        stackIn_15_1 = stackOut_14_1;
+                        stackIn_16_0 = this.field_n;
+
+                        stackIn_16_1 = var6;
+
                         if (var7 == 0) {
-                          stackOut_16_0 = (char[]) ((Object) stackIn_16_0);
-                          stackOut_16_1 = stackIn_16_1;
-                          stackOut_16_2 = (char)0;
-                          stackIn_17_0 = stackOut_16_0;
-                          stackIn_17_1 = stackOut_16_1;
-                          stackIn_17_2 = stackOut_16_2;
+                          stackIn_17_0 = (char[]) ((Object) stackIn_16_0);
+                          stackIn_17_1 = stackIn_16_1;
+                          stackIn_17_2 = (char)0;
                           break L3;
                         } else {
-                          stackOut_15_0 = (char[]) ((Object) stackIn_15_0);
-                          stackOut_15_1 = stackIn_15_1;
-                          stackOut_15_2 = hm.a((byte) var7, -112);
-                          stackIn_17_0 = stackOut_15_0;
-                          stackIn_17_1 = stackOut_15_1;
-                          stackIn_17_2 = stackOut_15_2;
+                          stackIn_17_0 = (char[]) ((Object) stackIn_16_0);
+                          stackIn_17_1 = stackIn_16_1;
+                          stackIn_17_2 = hm.a((byte) var7, -112);
                           break L3;
                         }
                       }
@@ -138,27 +100,19 @@ final class oo extends tf {
                         L5: {
                           this.field_D[var6] = param0.n(-98);
                           var7 = param0.o(6);
-                          stackOut_8_0 = this.field_z;
-                          stackOut_8_1 = var6;
-                          stackIn_10_0 = stackOut_8_0;
-                          stackIn_10_1 = stackOut_8_1;
-                          stackIn_9_0 = stackOut_8_0;
-                          stackIn_9_1 = stackOut_8_1;
+                          stackIn_10_0 = this.field_z;
+
+                          stackIn_10_1 = var6;
+
                           if (var7 != 0) {
-                            stackOut_10_0 = (char[]) ((Object) stackIn_10_0);
-                            stackOut_10_1 = stackIn_10_1;
-                            stackOut_10_2 = hm.a((byte) var7, -104);
-                            stackIn_11_0 = stackOut_10_0;
-                            stackIn_11_1 = stackOut_10_1;
-                            stackIn_11_2 = stackOut_10_2;
+                            stackIn_11_0 = (char[]) ((Object) stackIn_10_0);
+                            stackIn_11_1 = stackIn_10_1;
+                            stackIn_11_2 = hm.a((byte) var7, -104);
                             break L5;
                           } else {
-                            stackOut_9_0 = (char[]) ((Object) stackIn_9_0);
-                            stackOut_9_1 = stackIn_9_1;
-                            stackOut_9_2 = 0;
-                            stackIn_11_0 = stackOut_9_0;
-                            stackIn_11_1 = stackOut_9_1;
-                            stackIn_11_2 = stackOut_9_2;
+                            stackIn_11_0 = (char[]) ((Object) stackIn_10_0);
+                            stackIn_11_1 = stackIn_10_1;
+                            stackIn_11_2 = 0;
                             break L5;
                           }
                         }
@@ -184,27 +138,19 @@ final class oo extends tf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var4);
-            stackOut_20_1 = new StringBuilder().append("oo.D(");
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var4);
+
+            stackIn_22_1 = new StringBuilder().append("oo.D(");
+
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L6;
             }
           }
@@ -286,24 +232,14 @@ final class oo extends tf {
 
     final void a(byte param0, wk param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var3 = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -329,27 +265,19 @@ final class oo extends tf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("oo.C(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("oo.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }

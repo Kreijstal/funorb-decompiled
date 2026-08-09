@@ -19,8 +19,6 @@ final class p extends og implements wa {
         int var4 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -28,16 +26,6 @@ final class p extends og implements wa {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var4 = wizardrun.field_H;
         try {
           L0: {
@@ -53,14 +41,12 @@ final class p extends og implements wa {
             }
             L2: while (true) {
               if (var3 >= param1.length()) {
-                stackOut_9_0 = 1;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (param1.charAt(var3) != var2_int) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -74,27 +60,19 @@ final class p extends og implements wa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var2);
-            stackOut_11_1 = new StringBuilder().append("p.FA(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var2);
+
+            stackIn_13_1 = new StringBuilder().append("p.FA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -169,7 +147,6 @@ final class p extends og implements wa {
     }
 
     final String c(boolean param0) {
-        dk discarded$0 = null;
         if (!this.field_v) {
             return null;
         }
@@ -177,7 +154,7 @@ final class p extends og implements wa {
             return null;
         }
         if (param0) {
-            discarded$0 = this.a((byte) -27);
+            this.a((byte) -27);
         }
         og.a(pg.field_n + -this.field_X + this.field_r, fi.field_B, -91);
         return this.field_p;

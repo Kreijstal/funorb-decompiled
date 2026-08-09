@@ -9,7 +9,7 @@ final class ll extends rqa {
     static boolean field_o;
 
     final static int a(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = 17 / ((param0 - -41) / 54);
         ho.field_a.a(0);
         if (ff.field_o.e(0)) {
@@ -26,23 +26,12 @@ final class ll extends rqa {
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
         nc stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -53,35 +42,26 @@ final class ll extends rqa {
                 break L1;
               }
             }
-            stackOut_2_0 = new nc(frb.a(15, 75));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new nc(frb.a(15, 75));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("ll.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("ll.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -128,22 +108,17 @@ final class ll extends rqa {
         if (var1_ref == null) {
           return;
         } else {
-          exception = (Exception) (asa.a(var1_ref, (byte) -48));
-          if (!((Object) exception instanceof Hashtable)) {
+          var2 = asa.a(var1_ref, (byte) -48);
+          if (!(var2 instanceof Hashtable)) {
             return;
           } else {
-            wqb.field_e = (Hashtable) ((Object) exception);
+            wqb.field_e = (Hashtable) (var2);
             return;
           }
         }
     }
 
     final static int a(boolean param0, byte param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_61_0 = 0;
         int stackIn_65_0 = 0;
         int stackIn_68_0 = 0;
@@ -153,14 +128,11 @@ final class ll extends rqa {
         int stackIn_82_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_64_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_66_0 = 0;
-        int stackOut_81_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_79_0 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -346,16 +318,14 @@ final class ll extends rqa {
                     if (nna.field_z.e((byte) -120)) {
                       if (nna.field_z.field_j != 0) {
                         if (nna.field_z.field_j == 1) {
-                          stackOut_64_0 = 2;
-                          stackIn_65_0 = stackOut_64_0;
+                          stackIn_65_0 = 2;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
                           break L12;
                         }
                       } else {
-                        stackOut_60_0 = 3;
-                        stackIn_61_0 = stackOut_60_0;
+                        stackIn_61_0 = 3;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
@@ -363,12 +333,10 @@ final class ll extends rqa {
                       break L12;
                     }
                   }
-                  stackOut_66_0 = 127;
-                  stackIn_68_0 = stackOut_66_0;
+                  stackIn_68_0 = 127;
                   L13: while (true) {
                     if (!ata.e(stackIn_68_0)) {
-                      stackOut_81_0 = 0;
-                      stackIn_82_0 = stackOut_81_0;
+                      stackIn_82_0 = 0;
                       decompiledRegionSelector0 = 5;
                       break L0;
                     } else {
@@ -376,16 +344,14 @@ final class ll extends rqa {
                         nna.field_z.a(false, 0);
                         if (nna.field_z.e((byte) -127)) {
                           if (0 == nna.field_z.field_j) {
-                            stackOut_73_0 = 3;
-                            stackIn_74_0 = stackOut_73_0;
+                            stackIn_74_0 = 3;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
                             if (-2 != (nna.field_z.field_j ^ -1)) {
                               break L14;
                             } else {
-                              stackOut_76_0 = 1;
-                              stackIn_77_0 = stackOut_76_0;
+                              stackIn_77_0 = 1;
                               decompiledRegionSelector0 = 3;
                               break L0;
                             }
@@ -395,12 +361,10 @@ final class ll extends rqa {
                         }
                       }
                       if ((pma.field_o ^ -1) != -14) {
-                        stackOut_67_0 = 127;
-                        stackIn_68_0 = stackOut_67_0;
+                        stackIn_68_0 = 127;
                         continue L13;
                       } else {
-                        stackOut_79_0 = 1;
-                        stackIn_80_0 = stackOut_79_0;
+                        stackIn_80_0 = 1;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       }

@@ -5,29 +5,21 @@ final class dc {
     static int field_a;
 
     final static void a(int param0, boolean param1) {
-        od discarded$21 = null;
-        od discarded$22 = null;
-        boolean discarded$23 = false;
-        StringBuilder discarded$24 = null;
-        od discarded$25 = null;
-        od discarded$26 = null;
-        od discarded$27 = null;
-        od discarded$28 = null;
-        od discarded$29 = null;
-        od discarded$30 = null;
-        od discarded$31 = null;
-        od discarded$32 = null;
-        od discarded$33 = null;
-        od discarded$34 = null;
-        od discarded$35 = null;
-        od discarded$36 = null;
-        od discarded$37 = null;
-        od discarded$38 = null;
-        od discarded$39 = null;
-        od discarded$40 = null;
-        od discarded$41 = null;
-        RuntimeException var2 = null;
+        StringBuilder discarded$0 = null;
+        int stackIn_8_0 = 0;
+        boolean stackIn_20_0 = false;
+        int stackIn_25_0 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_36_1 = 0;
+        int stackIn_68_0 = 0;
+        int stackIn_138_0 = 0;
+        int stackIn_138_1 = 0;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_19_0;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3_int = 0;
         byte[] var3 = null;
         int var4 = 0;
@@ -43,36 +35,6 @@ final class dc {
         sj var14 = null;
         sj var15 = null;
         byte[] var16 = null;
-        int stackIn_8_0 = 0;
-        boolean stackIn_20_0 = false;
-        int stackIn_25_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_30_1 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_36_1 = 0;
-        int stackIn_55_0 = 0;
-        int stackIn_55_1 = 0;
-        int stackIn_63_0 = 0;
-        int stackIn_68_0 = 0;
-        int stackIn_138_0 = 0;
-        int stackIn_138_1 = 0;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        boolean stackOut_19_0 = false;
-        int stackOut_24_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_29_1 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_35_1 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_54_1 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_137_0 = 0;
-        int stackOut_137_1 = 0;
         var12 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -89,18 +51,16 @@ final class dc {
               if ((var2_int ^ -1) == -1) {
                 L3: {
                   if (ad.field_e) {
-                    stackOut_7_0 = 0;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = 0;
                     break L3;
                   } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = 1;
                     break L3;
                   }
                 }
                 ad.field_e = stackIn_8_0 != 0;
                 if (ad.field_e) {
-                  discarded$21 = vk.a((byte) 115, dg.field_d[7]);
+                  vk.a((byte) 115, dg.field_d[7]);
                   a.field_S.a(kk.a(param0 + 23327, oa.field_j, bk.field_a), 1, (byte) -112, param1);
                   decompiledRegionSelector0 = 0;
                   break L0;
@@ -116,7 +76,7 @@ final class dc {
                 if (-1 >= (var2_int ^ -1)) {
                   break L5;
                 } else {
-                  discarded$22 = vk.a((byte) 98, dg.field_d[2]);
+                  vk.a((byte) 98, dg.field_d[2]);
                   if (var12 == 0) {
                     break L4;
                   } else {
@@ -140,7 +100,7 @@ final class dc {
                         } else {
                           L9: {
                             if (stackIn_20_0) {
-                              discarded$23 = fi.b(0, 240, 15);
+                              fi.b(0, 240, 15);
                               break L9;
                             } else {
                               break L9;
@@ -159,11 +119,10 @@ final class dc {
                     break L7;
                   }
                 }
-                discarded$24 = vi.field_g[n.field_a].append((CharSequence) ((Object) of.field_e));
+                discarded$0 = vi.field_g[n.field_a].append((CharSequence) ((Object) of.field_e));
                 vi.field_a[n.field_a] = var2_int;
                 hf.field_j = hf.field_j + (var2_int << -565285210);
-                stackOut_24_0 = eh.field_a + var2_int;
-                stackIn_25_0 = stackOut_24_0;
+                stackIn_25_0 = eh.field_a + var2_int;
                 break L6;
               }
               L10: {
@@ -174,7 +133,7 @@ final class dc {
                 var4 = var3[(2147483647 & bc.field_b) % var16.length];
                 nc.field_t = nc.field_t + var4 * jk.field_B;
                 gh.field_l = gh.field_l + var4;
-                discarded$25 = vk.a((byte) 123, dg.field_d[1]);
+                vk.a((byte) 123, dg.field_d[1]);
                 var5 = var2_int;
                 if ((var2_int ^ -1) < -1) {
                   var6 = 0;
@@ -185,17 +144,15 @@ final class dc {
                         if ((gd.field_n.length ^ -1) >= (var7 ^ -1)) {
                           break L13;
                         } else {
-                          stackOut_29_0 = gd.field_n[var7] ^ -1;
-                          stackOut_29_1 = field_a ^ -1;
-                          stackIn_36_0 = stackOut_29_0;
-                          stackIn_36_1 = stackOut_29_1;
-                          stackIn_30_0 = stackOut_29_0;
-                          stackIn_30_1 = stackOut_29_1;
+                          stackIn_36_0 = gd.field_n[var7] ^ -1;
+
+                          stackIn_36_1 = field_a ^ -1;
+
                           if (var12 != 0) {
                             break L12;
                           } else {
                             L14: {
-                              if (stackIn_30_0 < stackIn_30_1) {
+                              if (stackIn_36_0 < stackIn_36_1) {
                                 break L14;
                               } else {
                                 if (var12 == 0) {
@@ -217,10 +174,8 @@ final class dc {
                       }
                       wk.field_d = wk.field_d + var6;
                       var7 = gj.a((byte) -39, vi.field_g[n.field_a].toString(), true);
-                      stackOut_35_0 = 0;
-                      stackOut_35_1 = n.field_a;
-                      stackIn_36_0 = stackOut_35_0;
-                      stackIn_36_1 = stackOut_35_1;
+                      stackIn_36_0 = 0;
+                      stackIn_36_1 = n.field_a;
                       break L12;
                     }
                     if (stackIn_36_0 < stackIn_36_1) {
@@ -308,17 +263,15 @@ final class dc {
                             if (var8 >= gd.field_n.length) {
                               break L25;
                             } else {
-                              stackOut_54_0 = gd.field_n[var8] ^ -1;
-                              stackOut_54_1 = rb.field_a ^ -1;
-                              stackIn_138_0 = stackOut_54_0;
-                              stackIn_138_1 = stackOut_54_1;
-                              stackIn_55_0 = stackOut_54_0;
-                              stackIn_55_1 = stackOut_54_1;
+                              stackIn_138_0 = gd.field_n[var8] ^ -1;
+
+                              stackIn_138_1 = rb.field_a ^ -1;
+
                               if (var12 != 0) {
                                 break L18;
                               } else {
                                 L26: {
-                                  if (stackIn_55_0 < stackIn_55_1) {
+                                  if (stackIn_138_0 < stackIn_138_1) {
                                     break L26;
                                   } else {
                                     if (var12 == 0) {
@@ -346,14 +299,13 @@ final class dc {
                                 if (10 <= var9) {
                                   break L29;
                                 } else {
-                                  stackOut_62_0 = vi.field_a[var9];
-                                  stackIn_68_0 = stackOut_62_0;
-                                  stackIn_63_0 = stackOut_62_0;
+                                  stackIn_68_0 = vi.field_a[var9];
+
                                   if (var12 != 0) {
                                     break L28;
                                   } else {
                                     L30: {
-                                      if (stackIn_63_0 > 0) {
+                                      if (stackIn_68_0 > 0) {
                                         var8++;
                                         break L30;
                                       } else {
@@ -375,8 +327,7 @@ final class dc {
                               eh.field_a = eh.field_a + wk.field_d;
                               hf.field_j = hf.field_j + (wk.field_d << 1374049669);
                               ug.b(true);
-                              stackOut_67_0 = 100;
-                              stackIn_68_0 = stackOut_67_0;
+                              stackIn_68_0 = 100;
                               break L28;
                             }
                             L31: {
@@ -650,10 +601,8 @@ final class dc {
                           }
                         }
                       }
-                      stackOut_137_0 = eh.field_a ^ -1;
-                      stackOut_137_1 = -601;
-                      stackIn_138_0 = stackOut_137_0;
-                      stackIn_138_1 = stackOut_137_1;
+                      stackIn_138_0 = eh.field_a ^ -1;
+                      stackIn_138_1 = -601;
                       break L18;
                     }
                     L56: {
@@ -848,8 +797,8 @@ final class dc {
                   if ((var6 ^ -1) != -2) {
                     break L69;
                   } else {
-                    discarded$26 = jj.a((byte) 78, 0, dg.field_d[11]);
-                    discarded$27 = fa.a(256, dg.field_d[11], (byte) 127, 40);
+                    jj.a((byte) 78, 0, dg.field_d[11]);
+                    fa.a(256, dg.field_d[11], (byte) 127, 40);
                     if (var12 == 0) {
                       break L68;
                     } else {
@@ -874,10 +823,10 @@ final class dc {
                                 break L73;
                               } else {
                                 if (-1 > (var6 ^ -1)) {
-                                  discarded$28 = jj.a((byte) 115, 0, dg.field_d[12]);
-                                  discarded$29 = jj.a((byte) 119, 256, dg.field_d[10]);
-                                  discarded$30 = fa.a(256, dg.field_d[12], (byte) 127, 40);
-                                  discarded$31 = fa.a(0, dg.field_d[10], (byte) 126, 40);
+                                  jj.a((byte) 115, 0, dg.field_d[12]);
+                                  jj.a((byte) 119, 256, dg.field_d[10]);
+                                  fa.a(256, dg.field_d[12], (byte) 127, 40);
+                                  fa.a(0, dg.field_d[10], (byte) 126, 40);
                                   if (var12 == 0) {
                                     break L68;
                                   } else {
@@ -888,8 +837,8 @@ final class dc {
                                 }
                               }
                             }
-                            discarded$32 = jj.a((byte) 105, 0, dg.field_d[10]);
-                            discarded$33 = fa.a(256, dg.field_d[10], (byte) 127, 40);
+                            jj.a((byte) 105, 0, dg.field_d[10]);
+                            fa.a(256, dg.field_d[10], (byte) 127, 40);
                             if (var12 == 0) {
                               break L68;
                             } else {
@@ -897,8 +846,8 @@ final class dc {
                             }
                           }
                         }
-                        discarded$34 = jj.a((byte) 85, 0, dg.field_d[12]);
-                        discarded$35 = fa.a(256, dg.field_d[12], (byte) 125, 40);
+                        jj.a((byte) 85, 0, dg.field_d[12]);
+                        fa.a(256, dg.field_d[12], (byte) 125, 40);
                         if (var12 == 0) {
                           break L68;
                         } else {
@@ -906,8 +855,8 @@ final class dc {
                         }
                       }
                     }
-                    discarded$36 = jj.a((byte) 90, 0, dg.field_d[9]);
-                    discarded$37 = fa.a(256, dg.field_d[9], (byte) 125, 40);
+                    jj.a((byte) 90, 0, dg.field_d[9]);
+                    fa.a(256, dg.field_d[9], (byte) 125, 40);
                     if (var12 == 0) {
                       break L68;
                     } else {
@@ -915,10 +864,10 @@ final class dc {
                     }
                   }
                 }
-                discarded$38 = jj.a((byte) 105, 0, dg.field_d[11]);
-                discarded$39 = jj.a((byte) 95, 256, dg.field_d[8]);
-                discarded$40 = fa.a(256, dg.field_d[11], (byte) 125, 40);
-                discarded$41 = fa.a(0, dg.field_d[8], (byte) 127, 40);
+                jj.a((byte) 105, 0, dg.field_d[11]);
+                jj.a((byte) 95, 256, dg.field_d[8]);
+                fa.a(256, dg.field_d[11], (byte) 125, 40);
+                fa.a(0, dg.field_d[8], (byte) 127, 40);
                 break L68;
               }
               L74: {

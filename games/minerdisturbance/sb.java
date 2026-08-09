@@ -14,26 +14,16 @@ class sb extends pi {
     static int field_p;
 
     final void a(int param0, int param1, boolean param2, byte[] param3) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var5 = null;
         var6 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -50,9 +40,9 @@ class sb extends pi {
                 }
                 break L0;
               } else {
-                fieldTemp$2 = this.field_o;
+                fieldTemp$1 = this.field_o;
                 this.field_o = this.field_o + 1;
-                this.field_u[fieldTemp$2] = param3[var5_int];
+                this.field_u[fieldTemp$1] = param3[var5_int];
                 var5_int++;
                 continue L1;
               }
@@ -62,27 +52,19 @@ class sb extends pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var5);
-            stackOut_7_1 = new StringBuilder().append("sb.HB(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var5);
+
+            stackIn_9_1 = new StringBuilder().append("sb.HB(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -137,11 +119,9 @@ class sb extends pi {
         if (param0 >= -3) {
             return;
         }
-        if (64 > param1) {
-            if ((param1 ^ -1) <= 63) {
-                this.c(64 + param1, 25564);
-                return;
-            }
+        if (64 > param1 && (param1 ^ -1) <= 63) {
+            this.c(64 + param1, 25564);
+            return;
         }
         if (param1 < 16384) {
             if (!(-16384 > param1)) {
@@ -153,9 +133,15 @@ class sb extends pi {
     }
 
     final void a(int[] param0, int param1) {
-        int incrementValue$1 = 0;
-        RuntimeException var3 = null;
+        int incrementValue$0 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -163,22 +149,6 @@ class sb extends pi {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         var10 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -203,9 +173,9 @@ class sb extends pi {
                 var8 = -1640531527;
                 var9 = 32;
                 L3: while (true) {
-                  incrementValue$1 = var9;
+                  incrementValue$0 = var9;
                   var9--;
-                  if ((incrementValue$1 ^ -1) >= -1) {
+                  if ((incrementValue$0 ^ -1) >= -1) {
                     this.field_o = this.field_o - 8;
                     this.a((byte) 106, var5);
                     this.a((byte) 111, var6);
@@ -225,27 +195,19 @@ class sb extends pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3);
-            stackOut_10_1 = new StringBuilder().append("sb.EA(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3);
+
+            stackIn_12_1 = new StringBuilder().append("sb.EA(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -302,9 +264,8 @@ class sb extends pi {
     }
 
     final void b(int param0, int param1) {
-        int discarded$0 = 0;
         if (param1 != -506270856) {
-            discarded$0 = this.e(13);
+            this.e(13);
         }
         this.field_u[this.field_o - param0 - 2] = (byte)(param0 >> 1148462568);
         this.field_u[-1 + (this.field_o + -param0)] = (byte)param0;
@@ -322,9 +283,16 @@ class sb extends pi {
     }
 
     final void a(int param0, int param1, int[] param2, boolean param3) {
-        int incrementValue$1 = 0;
-        RuntimeException var5 = null;
+        int incrementValue$0 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -333,23 +301,6 @@ class sb extends pi {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         var13 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -370,9 +321,9 @@ class sb extends pi {
                   var11 = -1640531527;
                   var12 = 32;
                   L2: while (true) {
-                    incrementValue$1 = var12;
+                    incrementValue$0 = var12;
                     var12--;
-                    if (-1 <= (incrementValue$1 ^ -1)) {
+                    if (-1 <= (incrementValue$0 ^ -1)) {
                       this.field_o = this.field_o - 8;
                       this.a((byte) 104, var8);
                       this.a((byte) 84, var9);
@@ -396,27 +347,19 @@ class sb extends pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var5);
-            stackOut_10_1 = new StringBuilder().append("sb.CA(").append(param0).append(',').append(param1).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var5);
+
+            stackIn_12_1 = new StringBuilder().append("sb.CA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L3;
             }
           }
@@ -489,12 +432,9 @@ class sb extends pi {
     }
 
     final void a(byte[] param0, byte param1, int param2, int param3) {
-        int fieldTemp$7 = 0;
+        int fieldTemp$2 = 0;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -502,14 +442,7 @@ class sb extends pi {
         String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var5 = null;
         var6 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -520,9 +453,9 @@ class sb extends pi {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  fieldTemp$7 = this.field_o;
+                  fieldTemp$2 = this.field_o;
                   this.field_o = this.field_o + 1;
-                  param0[var5_int] = this.field_u[fieldTemp$7];
+                  param0[var5_int] = this.field_u[fieldTemp$2];
                   var5_int++;
                   continue L1;
                 }
@@ -536,27 +469,19 @@ class sb extends pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5);
-            stackOut_6_1 = new StringBuilder().append("sb.FA(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5);
+
+            stackIn_8_1 = new StringBuilder().append("sb.FA(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -578,14 +503,12 @@ class sb extends pi {
         if (param0 != 6) {
             field_n = (p) null;
         }
-        if (!si.field_a) {
-            if (null != dm.field_f) {
-                if (!(!dm.field_f.field_q)) {
-                    fn.a(dm.field_f.field_t, true);
-                    si.field_a = true;
-                    aa.field_j.a(35, pj.field_c);
-                    ck.a(param0 + -30839);
-                }
+        if (!si.field_a && null != dm.field_f) {
+            if (!(!dm.field_f.field_q)) {
+                fn.a(dm.field_f.field_t, true);
+                si.field_a = true;
+                aa.field_j.a(35, pj.field_c);
+                ck.a(param0 + -30839);
             }
         }
     }
@@ -660,16 +583,15 @@ class sb extends pi {
     }
 
     final void b(byte param0, int param1) {
-        int discarded$0 = 0;
         if (param0 <= 120) {
-            discarded$0 = this.a((byte) 11);
+            this.a((byte) 11);
         }
+        int fieldTemp$0 = this.field_o;
+        this.field_o = this.field_o + 1;
+        this.field_u[fieldTemp$0] = (byte)(param1 >> 1094513736);
         int fieldTemp$1 = this.field_o;
         this.field_o = this.field_o + 1;
-        this.field_u[fieldTemp$1] = (byte)(param1 >> 1094513736);
-        int fieldTemp$2 = this.field_o;
-        this.field_o = this.field_o + 1;
-        this.field_u[fieldTemp$2] = (byte)param1;
+        this.field_u[fieldTemp$1] = (byte)param1;
     }
 
     public static void l(int param0) {
@@ -740,7 +662,6 @@ class sb extends pi {
     }
 
     private final void a(long param0, int param1) {
-        int discarded$5 = 0;
         int fieldTemp$0 = this.field_o;
         this.field_o = this.field_o + 1;
         this.field_u[fieldTemp$0] = (byte)(int)(param0 >> 1748100848);
@@ -757,14 +678,14 @@ class sb extends pi {
         this.field_o = this.field_o + 1;
         this.field_u[fieldTemp$4] = (byte)(int)(param0 >> 207836944);
         if (param1 != 63) {
-            discarded$5 = this.d((byte) -44);
+            this.d((byte) -44);
         }
+        int fieldTemp$5 = this.field_o;
+        this.field_o = this.field_o + 1;
+        this.field_u[fieldTemp$5] = (byte)(int)(param0 >> -1490915512);
         int fieldTemp$6 = this.field_o;
         this.field_o = this.field_o + 1;
-        this.field_u[fieldTemp$6] = (byte)(int)(param0 >> -1490915512);
-        int fieldTemp$7 = this.field_o;
-        this.field_o = this.field_o + 1;
-        this.field_u[fieldTemp$7] = (byte)(int)param0;
+        this.field_u[fieldTemp$6] = (byte)(int)param0;
     }
 
     final void a(int param0, int param1) {
@@ -819,30 +740,20 @@ class sb extends pi {
     }
 
     final void a(byte param0, String param1) {
-        RuntimeException var3 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         long var3_long = 0L;
+        RuntimeException var3 = null;
         long var5 = 0L;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
         var10 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -864,7 +775,7 @@ class sb extends pi {
               } else {
                 L2: {
                   var3_long = var3_long * 38L;
-                  if (var8 < var7) {
+                  if ((var8 ^ -1) > (var7 ^ -1)) {
                     L3: {
                       L4: {
                         var9 = param1.charAt(var8);
@@ -932,31 +843,23 @@ class sb extends pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var3);
-            stackOut_26_1 = new StringBuilder().append("sb.MA(").append(param0).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_29_0 = (RuntimeException) (var3);
+
+            stackIn_29_1 = new StringBuilder().append("sb.MA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L7;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L7;
             }
           }
-          throw lj.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

@@ -42,8 +42,8 @@ final class aj {
     }
 
     final static String a(int param0, String param1, String param2, String param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = Kickabout.field_G;
         if (param0 != -1) {
           return (String) null;

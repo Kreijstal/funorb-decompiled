@@ -16,11 +16,10 @@ public class fk {
     }
 
     public static File a(int param0, String param1) {
-        File discarded$2 = null;
-        String var3 = null;
+        String var3;
         if (param0 != 0) {
           var3 = (String) null;
-          discarded$2 = fk.a(-100, (String) null);
+          fk.a(-100, (String) null);
           return fk.a(field_e, param1, false, field_b);
         } else {
           return fk.a(field_e, param1, false, field_b);

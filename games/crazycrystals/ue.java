@@ -36,10 +36,10 @@ abstract class ue {
     }
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         sc var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -97,17 +97,16 @@ abstract class ue {
     }
 
     final void a(boolean param0, int param1) {
-        int discarded$2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = CrazyCrystals.field_B;
           var3 = -1;
           if (param1 == -13880) {
             break L0;
           } else {
-            discarded$2 = ue.a(-19, 34, 105);
+            ue.a(-19, 34, 105);
             break L0;
           }
         }
@@ -141,11 +140,11 @@ abstract class ue {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = CrazyCrystals.field_B;
         var2 = -1;
         var3 = -1;
@@ -186,7 +185,7 @@ abstract class ue {
     }
 
     void a(boolean param0) {
-        int var3 = 0;
+        int var3;
         var3 = CrazyCrystals.field_B;
         L0: while (true) {
           if (!ge.b(-120)) {

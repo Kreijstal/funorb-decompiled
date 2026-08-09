@@ -5,8 +5,13 @@ final class ji {
     static int field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -15,19 +20,6 @@ final class ji {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
         var13 = StarCannon.field_A;
         try {
           L0: {
@@ -35,48 +27,40 @@ final class ji {
               var5_int = param0 + param4;
               var6 = param3 + param1;
               if (ki.field_l < param4) {
-                stackOut_3_0 = param4;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = param4;
                 break L1;
               } else {
-                stackOut_2_0 = ki.field_l;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = ki.field_l;
                 break L1;
               }
             }
             L2: {
               var7 = stackIn_4_0;
               if (ki.field_e < param3) {
-                stackOut_6_0 = param3;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = param3;
                 break L2;
               } else {
-                stackOut_5_0 = ki.field_e;
-                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_0 = ki.field_e;
                 break L2;
               }
             }
             L3: {
               var8 = stackIn_7_0;
               if (var5_int < ki.field_g) {
-                stackOut_9_0 = var5_int;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = var5_int;
                 break L3;
               } else {
-                stackOut_8_0 = ki.field_g;
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = ki.field_g;
                 break L3;
               }
             }
             L4: {
               var9 = stackIn_10_0;
               if (var6 < ki.field_i) {
-                stackOut_12_0 = var6;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = var6;
                 break L4;
               } else {
-                stackOut_11_0 = ki.field_i;
-                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_0 = ki.field_i;
                 break L4;
               }
             }
@@ -189,23 +173,12 @@ final class ji {
     final static id[] a(boolean param0, ue param1, int param2, int param3) {
         RuntimeException var4 = null;
         id[] stackIn_2_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        id[] stackOut_1_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (param0) {
@@ -215,8 +188,7 @@ final class ji {
                 return null;
               }
             } else {
-              stackOut_1_0 = (id[]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (id[]) null;
               break L0;
             }
           }
@@ -224,27 +196,19 @@ final class ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var4);
-            stackOut_7_1 = new StringBuilder().append("ji.B(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("ji.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L1;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L1;
             }
           }
@@ -254,9 +218,12 @@ final class ji {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, boolean param4, int param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_23_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -264,11 +231,6 @@ final class ji {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_23_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
         try {
           L0: {
             if (param1 >= param5) {
@@ -297,12 +259,10 @@ final class ji {
                           L3: {
                             var13 = jk.field_c[var12];
                             if (!param4) {
-                              stackOut_22_0 = fg.field_b[var13];
-                              stackIn_23_0 = stackOut_22_0;
+                              stackIn_23_0 = fg.field_b[var13];
                               break L3;
                             } else {
-                              stackOut_21_0 = tk.field_f[var13];
-                              stackIn_23_0 = stackOut_21_0;
+                              stackIn_23_0 = tk.field_f[var13];
                               break L3;
                             }
                           }
@@ -318,9 +278,9 @@ final class ji {
                                   break L5;
                                 }
                               }
-                              incrementValue$1 = var8;
+                              incrementValue$0 = var8;
                               var8++;
-                              jk.field_c[incrementValue$1] = var13;
+                              jk.field_c[incrementValue$0] = var13;
                               break L4;
                             } else {
                               if (var11 < var14) {

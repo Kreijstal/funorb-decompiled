@@ -36,16 +36,15 @@ final class fh implements dh {
     }
 
     final static String a(long param0, int param1) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        int var3 = 0;
-        long var4 = 0L;
-        StringBuilder var6 = null;
-        int var7 = 0;
-        long var7_long = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        StringBuilder discarded$1 = null;
+        int var3;
+        long var4;
+        StringBuilder var6;
+        long var7_long;
+        int var7;
+        int var9;
+        int var10;
+        int var11;
         var11 = Geoblox.field_C;
         if ((param0 ^ -1L) < -1L) {
           if (param0 < 6582952005840035281L) {
@@ -59,7 +58,7 @@ final class fh implements dh {
                   var6 = new StringBuilder(var3);
                   L1: while (true) {
                     if (-1L == (param0 ^ -1L)) {
-                      discarded$2 = var6.reverse();
+                      var6.reverse();
                       var7 = 49 % ((27 - param1) / 36);
                       var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                       return var6.toString();
@@ -77,7 +76,7 @@ final class fh implements dh {
                           break L2;
                         }
                       }
-                      discarded$3 = var6.append((char) var9);
+                      discarded$1 = var6.append((char) var9);
                       continue L1;
                     }
                   }
@@ -97,34 +96,20 @@ final class fh implements dh {
     }
 
     public final void a(int param0, int param1, int param2, boolean param3, el param4) {
-        int discarded$2 = 0;
-        String discarded$3 = null;
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_5_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         var11 = Geoblox.field_C;
         try {
           L0: {
@@ -136,23 +121,21 @@ final class fh implements dh {
                   if (param4.e((byte) 54)) {
                     break L2;
                   } else {
-                    stackOut_3_0 = 2188450;
-                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_0 = 2188450;
                     break L1;
                   }
                 }
               }
-              stackOut_4_0 = 3249872;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 3249872;
               break L1;
             }
             L3: {
               var6_int = stackIn_5_0;
-              discarded$2 = this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_s + "</u>", param4.field_v + param0, param2 - -param4.field_m, param4.field_r, param4.field_h, var6_int, -1, this.field_b, this.field_a, this.field_d.field_o - -this.field_d.field_q);
+              this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_s + "</u>", param4.field_v + param0, param2 - -param4.field_m, param4.field_r, param4.field_h, var6_int, -1, this.field_b, this.field_a, this.field_d.field_o - -this.field_d.field_q);
               if (param1 <= -5) {
                 break L3;
               } else {
-                discarded$3 = fh.a(53L, -116);
+                fh.a(53L, -116);
                 break L3;
               }
             }
@@ -197,27 +180,19 @@ final class fh implements dh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var6);
-            stackOut_20_1 = new StringBuilder().append("fh.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var6);
+
+            stackIn_22_1 = new StringBuilder().append("fh.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L6;
             }
           }

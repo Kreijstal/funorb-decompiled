@@ -16,10 +16,11 @@ final class vk {
 
     final static void a(int param0, byte param1) {
         e var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
+        boolean stackIn_15_0 = false;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -35,8 +36,9 @@ final class vk {
                         decompiledRegionSelector0 = 1;
                         break L0;
                       } else {
+                        stackIn_15_0 = var2.field_k.b(11163);
                         L3: {
-                          if (var2.field_k.b(11163)) {
+                          if (stackIn_15_0) {
                             var2.field_n.f(128 + sh.field_r * var2.field_l >> -1351907416);
                             break L3;
                           } else {

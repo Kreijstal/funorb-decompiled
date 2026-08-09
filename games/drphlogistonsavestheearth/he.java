@@ -32,19 +32,19 @@ final class he extends pe {
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int var10;
+        int var11;
+        int var12;
         var10 = -(param6 >> 2);
         param6 = -(param6 & 3);
         var11 = -param7;
@@ -63,17 +63,17 @@ final class he extends pe {
                     var11++;
                     continue L0;
                   } else {
-                    incrementValue$10 = param4;
+                    incrementValue$0 = param4;
                     param4++;
-                    param3 = param1[incrementValue$10];
+                    param3 = param1[incrementValue$0];
                     if (param3 == 0) {
                       param5++;
                       var12++;
                       continue L2;
                     } else {
-                      incrementValue$11 = param5;
+                      incrementValue$1 = param5;
                       param5++;
-                      param0[incrementValue$11] = param2[param3 & 255];
+                      param0[incrementValue$1] = param2[param3 & 255];
                       var12++;
                       continue L2;
                     }
@@ -81,58 +81,58 @@ final class he extends pe {
                 }
               } else {
                 L3: {
-                  incrementValue$12 = param4;
+                  incrementValue$2 = param4;
                   param4++;
-                  param3 = param1[incrementValue$12];
+                  param3 = param1[incrementValue$2];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    incrementValue$13 = param5;
+                    incrementValue$3 = param5;
                     param5++;
-                    param0[incrementValue$13] = param2[param3 & 255];
+                    param0[incrementValue$3] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  incrementValue$14 = param4;
+                  incrementValue$4 = param4;
                   param4++;
-                  param3 = param1[incrementValue$14];
+                  param3 = param1[incrementValue$4];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    incrementValue$15 = param5;
+                    incrementValue$5 = param5;
                     param5++;
-                    param0[incrementValue$15] = param2[param3 & 255];
+                    param0[incrementValue$5] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  incrementValue$16 = param4;
+                  incrementValue$6 = param4;
                   param4++;
-                  param3 = param1[incrementValue$16];
+                  param3 = param1[incrementValue$6];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    incrementValue$17 = param5;
+                    incrementValue$7 = param5;
                     param5++;
-                    param0[incrementValue$17] = param2[param3 & 255];
+                    param0[incrementValue$7] = param2[param3 & 255];
                     break L5;
                   }
                 }
-                incrementValue$18 = param4;
+                incrementValue$8 = param4;
                 param4++;
-                param3 = param1[incrementValue$18];
+                param3 = param1[incrementValue$8];
                 if (param3 == 0) {
                   param5++;
                   var12++;
                   continue L1;
                 } else {
-                  incrementValue$19 = param5;
+                  incrementValue$9 = param5;
                   param5++;
-                  param0[incrementValue$19] = param2[param3 & 255];
+                  param0[incrementValue$9] = param2[param3 & 255];
                   var12++;
                   continue L1;
                 }
@@ -143,19 +143,19 @@ final class he extends pe {
     }
 
     private final static void c(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int var10;
+        int var11;
+        int var12;
         var10 = -(param6 >> 2);
         param6 = -(param6 & 3);
         var11 = -param7;
@@ -174,17 +174,17 @@ final class he extends pe {
                     var11++;
                     continue L0;
                   } else {
-                    incrementValue$10 = param4;
+                    incrementValue$0 = param4;
                     param4--;
-                    param3 = param2[param1[incrementValue$10] & 255];
+                    param3 = param2[param1[incrementValue$0] & 255];
                     if (param3 == 0) {
                       param5++;
                       var12++;
                       continue L2;
                     } else {
-                      incrementValue$11 = param5;
+                      incrementValue$1 = param5;
                       param5++;
-                      param0[incrementValue$11] = param3;
+                      param0[incrementValue$1] = param3;
                       var12++;
                       continue L2;
                     }
@@ -192,58 +192,58 @@ final class he extends pe {
                 }
               } else {
                 L3: {
-                  incrementValue$12 = param4;
+                  incrementValue$2 = param4;
                   param4--;
-                  param3 = param2[param1[incrementValue$12] & 255];
+                  param3 = param2[param1[incrementValue$2] & 255];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    incrementValue$13 = param5;
+                    incrementValue$3 = param5;
                     param5++;
-                    param0[incrementValue$13] = param3;
+                    param0[incrementValue$3] = param3;
                     break L3;
                   }
                 }
                 L4: {
-                  incrementValue$14 = param4;
+                  incrementValue$4 = param4;
                   param4--;
-                  param3 = param2[param1[incrementValue$14] & 255];
+                  param3 = param2[param1[incrementValue$4] & 255];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    incrementValue$15 = param5;
+                    incrementValue$5 = param5;
                     param5++;
-                    param0[incrementValue$15] = param3;
+                    param0[incrementValue$5] = param3;
                     break L4;
                   }
                 }
                 L5: {
-                  incrementValue$16 = param4;
+                  incrementValue$6 = param4;
                   param4--;
-                  param3 = param2[param1[incrementValue$16] & 255];
+                  param3 = param2[param1[incrementValue$6] & 255];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    incrementValue$17 = param5;
+                    incrementValue$7 = param5;
                     param5++;
-                    param0[incrementValue$17] = param3;
+                    param0[incrementValue$7] = param3;
                     break L5;
                   }
                 }
-                incrementValue$18 = param4;
+                incrementValue$8 = param4;
                 param4--;
-                param3 = param2[param1[incrementValue$18] & 255];
+                param3 = param2[param1[incrementValue$8] & 255];
                 if (param3 == 0) {
                   param5++;
                   var12++;
                   continue L1;
                 } else {
-                  incrementValue$19 = param5;
+                  incrementValue$9 = param5;
                   param5++;
-                  param0[incrementValue$19] = param3;
+                  param0[incrementValue$9] = param3;
                   var12++;
                   continue L1;
                 }
@@ -304,9 +304,9 @@ final class he extends pe {
     }
 
     private final static void a(int param0, byte[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8, int param9, int param10, int param11) {
-        int incrementValue$211 = 0;
-        int incrementValue$212 = 0;
-        int incrementValue$213 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
         param10 = -param11;
         L0: while (true) {
           if (param10 >= 0) {
@@ -334,24 +334,24 @@ final class he extends pe {
                 param10++;
                 continue L0;
               } else {
-                incrementValue$211 = param2;
+                incrementValue$12 = param2;
                 param2++;
-                param0 = param1[incrementValue$211];
+                param0 = param1[incrementValue$12];
                 param4--;
                 if (param0 == 0) {
                   param3++;
                   continue L2;
                 } else {
                   if (param0 != -1) {
-                    incrementValue$212 = param3;
+                    incrementValue$13 = param3;
                     param3++;
-                    param5[incrementValue$212] = param6[param0 & 255];
+                    param5[incrementValue$13] = param6[param0 & 255];
                     continue L2;
                   } else {
                     L3: {
-                      incrementValue$213 = param2;
+                      incrementValue$14 = param2;
                       param2++;
-                      param0 = param1[incrementValue$213] & 255;
+                      param0 = param1[incrementValue$14] & 255;
                       param4--;
                       param0 = param0 + param0;
                       if (param0 <= param4) {
@@ -374,81 +374,65 @@ final class he extends pe {
     }
 
     final void b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         L0: {
           var3 = this.field_d >> 2;
           var4 = this.field_k >> 2;
           param0 = param0 + this.field_a / 4;
           param1 = param1 + this.field_f / 4;
           if (param0 >= wj.field_g) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = wj.field_g - param0 << 2;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = wj.field_g - param0 << 2;
             break L0;
           }
         }
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= wj.field_b) {
-            stackOut_5_0 = this.field_d - 4;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = this.field_d - 4;
             break L1;
           } else {
-            stackOut_4_0 = (wj.field_b - param0 << 2) - 4;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = (wj.field_b - param0 << 2) - 4;
             break L1;
           }
         }
         L2: {
           var6 = stackIn_6_0;
           if (param1 >= wj.field_e) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = wj.field_e - param1 << 2;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = wj.field_e - param1 << 2;
             break L2;
           }
         }
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= wj.field_j) {
-            stackOut_11_0 = this.field_k - 4;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = this.field_k - 4;
             break L3;
           } else {
-            stackOut_10_0 = (wj.field_j - param1 << 2) - 4;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = (wj.field_j - param1 << 2) - 4;
             break L3;
           }
         }
@@ -506,11 +490,11 @@ final class he extends pe {
     }
 
     final void h() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         if (this.field_l.length <= 255) {
           var1 = this.field_d * this.field_k - 1;
           var2 = this.field_k - 1;
@@ -563,45 +547,26 @@ final class he extends pe {
     }
 
     final void a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_a;
-          param1 = param1 + this.field_f;
-          var3 = param0 + param1 * wj.field_k;
-          var4 = 0;
-          var5 = this.field_k;
-          var6 = this.field_d;
-          var7 = wj.field_k - var6;
-          var8 = 0;
-          if (param1 >= wj.field_e) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_a;
+        param1 = param1 + this.field_f;
+        int var3 = param0 + param1 * wj.field_k;
+        int var4 = 0;
+        int var5 = this.field_k;
+        int var6 = this.field_d;
+        int var7 = wj.field_k - var6;
+        int var8 = 0;
+        if (param1 < wj.field_e) {
             var9 = wj.field_e - param1;
             var5 = var5 - var9;
             param1 = wj.field_e;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * wj.field_k;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= wj.field_j) {
-            break L1;
-          } else {
+        if (param1 + var5 > wj.field_j) {
             var5 = var5 - (param1 + var5 - wj.field_j);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= wj.field_g) {
-            break L2;
-          } else {
+        if (param0 < wj.field_g) {
             var9 = wj.field_g - param0;
             var6 = var6 - var9;
             param0 = wj.field_g;
@@ -609,29 +574,19 @@ final class he extends pe {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= wj.field_b) {
-            break L3;
-          } else {
+        if (param0 + var6 > wj.field_b) {
             var9 = param0 + var6 - wj.field_b;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
             he.b(wj.field_l, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
@@ -702,45 +657,26 @@ final class he extends pe {
     }
 
     final void c(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + (this.field_h - this.field_d - this.field_a);
-          param1 = param1 + this.field_f;
-          var3 = param0 + param1 * wj.field_k;
-          var4 = this.field_d - 1;
-          var5 = this.field_k;
-          var6 = this.field_d;
-          var7 = wj.field_k - var6;
-          var8 = var6 + var6;
-          if (param1 >= wj.field_e) {
-            break L0;
-          } else {
+        param0 = param0 + (this.field_h - this.field_d - this.field_a);
+        param1 = param1 + this.field_f;
+        int var3 = param0 + param1 * wj.field_k;
+        int var4 = this.field_d - 1;
+        int var5 = this.field_k;
+        int var6 = this.field_d;
+        int var7 = wj.field_k - var6;
+        int var8 = var6 + var6;
+        if (param1 < wj.field_e) {
             var9 = wj.field_e - param1;
             var5 = var5 - var9;
             param1 = wj.field_e;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * wj.field_k;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= wj.field_j) {
-            break L1;
-          } else {
+        if (param1 + var5 > wj.field_j) {
             var5 = var5 - (param1 + var5 - wj.field_j);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= wj.field_g) {
-            break L2;
-          } else {
+        if (param0 < wj.field_g) {
             var9 = wj.field_g - param0;
             var6 = var6 - var9;
             param0 = wj.field_g;
@@ -748,69 +684,32 @@ final class he extends pe {
             var3 = var3 + var9;
             var8 = var8 - var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= wj.field_b) {
-            break L3;
-          } else {
+        if (param0 + var6 > wj.field_b) {
             var9 = param0 + var6 - wj.field_b;
             var6 = var6 - var9;
             var8 = var8 - var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
             he.c(wj.field_l, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final boolean b(int param0, int param1, int param2, int param3) {
-        int stackIn_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
         param2 = param2 - (param0 + this.field_a);
-        if (param2 < 0) {
-          return false;
-        } else {
-          if (param2 < this.field_d) {
-            L0: {
-              param3 = param3 - (param1 + this.field_f);
-              if (param3 < 0) {
-                break L0;
-              } else {
-                if (param3 < this.field_k) {
-                  L1: {
-                    if (this.field_m[param3 * this.field_d + param2] == 0) {
-                      stackOut_10_0 = 0;
-                      stackIn_11_0 = stackOut_10_0;
-                      break L1;
-                    } else {
-                      stackOut_9_0 = 1;
-                      stackIn_11_0 = stackOut_9_0;
-                      break L1;
-                    }
-                  }
-                  return stackIn_11_0 != 0;
-                } else {
-                  break L0;
-                }
-              }
-            }
+        if (param2 < 0 || param2 >= this.field_d) {
             return false;
-          } else {
-            return false;
-          }
         }
+        param3 = param3 - (param1 + this.field_f);
+        if (param3 < 0 || param3 >= this.field_k) {
+            return false;
+        }
+        return this.field_m[param3 * this.field_d + param2] != 0 ? true : false;
     }
 
     final void i() {
@@ -856,80 +755,50 @@ final class he extends pe {
     }
 
     final void c(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
-        if (param2 != 256) {
-          L0: {
-            param0 = param0 + this.field_a;
-            param1 = param1 + this.field_f;
-            var5 = param0 + param1 * wj.field_k;
-            var6 = 0;
-            var7 = this.field_k;
-            var8 = this.field_d;
-            var9 = wj.field_k - var8;
-            var10 = 0;
-            if (param1 >= wj.field_e) {
-              break L0;
-            } else {
-              var11 = wj.field_e - param1;
-              var7 = var7 - var11;
-              param1 = wj.field_e;
-              var6 = var6 + var11 * var8;
-              var5 = var5 + var11 * wj.field_k;
-              break L0;
-            }
-          }
-          L1: {
-            if (param1 + var7 <= wj.field_j) {
-              break L1;
-            } else {
-              var7 = var7 - (param1 + var7 - wj.field_j);
-              break L1;
-            }
-          }
-          L2: {
-            if (param0 >= wj.field_g) {
-              break L2;
-            } else {
-              var11 = wj.field_g - param0;
-              var8 = var8 - var11;
-              param0 = wj.field_g;
-              var6 = var6 + var11;
-              var5 = var5 + var11;
-              var10 = var10 + var11;
-              var9 = var9 + var11;
-              break L2;
-            }
-          }
-          L3: {
-            if (param0 + var8 <= wj.field_b) {
-              break L3;
-            } else {
-              var11 = param0 + var8 - wj.field_b;
-              var8 = var8 - var11;
-              var10 = var10 + var11;
-              var9 = var9 + var11;
-              break L3;
-            }
-          }
-          if (var8 <= 0) {
+        if (param2 == 256) {
+            this.a(param0, param1);
             return;
-          } else {
-            if (var7 > 0) {
-              he.b(wj.field_l, this.field_m, this.field_l, 0, var6, var5, var8, var7, var9, var10, param2, param3);
-              return;
-            } else {
-              return;
+        }
+        param0 = param0 + this.field_a;
+        param1 = param1 + this.field_f;
+        int var5 = param0 + param1 * wj.field_k;
+        int var6 = 0;
+        int var7 = this.field_k;
+        int var8 = this.field_d;
+        int var9 = wj.field_k - var8;
+        int var10 = 0;
+        if (param1 < wj.field_e) {
+            var11 = wj.field_e - param1;
+            var7 = var7 - var11;
+            param1 = wj.field_e;
+            var6 = var6 + var11 * var8;
+            var5 = var5 + var11 * wj.field_k;
+        }
+        if (param1 + var7 > wj.field_j) {
+            var7 = var7 - (param1 + var7 - wj.field_j);
+        }
+        if (param0 < wj.field_g) {
+            var11 = wj.field_g - param0;
+            var8 = var8 - var11;
+            param0 = wj.field_g;
+            var6 = var6 + var11;
+            var5 = var5 + var11;
+            var10 = var10 + var11;
+            var9 = var9 + var11;
+        }
+        if (param0 + var8 > wj.field_b) {
+            var11 = param0 + var8 - wj.field_b;
+            var8 = var8 - var11;
+            var10 = var10 + var11;
+            var9 = var9 + var11;
+        }
+        if (var8 > 0) {
+            if (var7 <= 0) {
+                return;
             }
-          }
-        } else {
-          this.a(param0, param1);
-          return;
+            he.b(wj.field_l, this.field_m, this.field_l, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+            return;
         }
     }
 
@@ -984,103 +853,54 @@ final class he extends pe {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
+        int var13 = 0;
+        int var15 = 0;
+        int var5 = this.field_d;
+        int var6 = this.field_k;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        L0: {
-          var5 = this.field_d;
-          var6 = this.field_k;
-          var7 = 0;
-          var8 = 0;
-          var9 = this.field_h;
-          var10 = this.field_c;
-          var11 = (var9 << 16) / param2;
-          var12 = (var10 << 16) / param3;
-          if (this.field_a <= 0) {
-            break L0;
-          } else {
+        int var9 = this.field_h;
+        int var10 = this.field_c;
+        int var11 = (var9 << 16) / param2;
+        int var12 = (var10 << 16) / param3;
+        if (this.field_a > 0) {
             var13 = ((this.field_a << 16) + var11 - 1) / var11;
             param0 = param0 + var13;
             var7 = var7 + (var13 * var11 - (this.field_a << 16));
-            break L0;
-          }
         }
-        L1: {
-          if (this.field_f <= 0) {
-            break L1;
-          } else {
+        if (this.field_f > 0) {
             var13 = ((this.field_f << 16) + var12 - 1) / var12;
             param1 = param1 + var13;
             var8 = var8 + (var13 * var12 - (this.field_f << 16));
-            break L1;
-          }
         }
-        L2: {
-          if (var5 >= var9) {
-            break L2;
-          } else {
+        if (var5 < var9) {
             param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
-            break L2;
-          }
         }
-        L3: {
-          if (var6 >= var10) {
-            break L3;
-          } else {
+        if (var6 < var10) {
             param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
-            break L3;
-          }
         }
-        L4: {
-          var13 = param0 + param1 * wj.field_k;
-          var14 = wj.field_k - param2;
-          if (param1 + param3 <= wj.field_j) {
-            break L4;
-          } else {
+        var13 = param0 + param1 * wj.field_k;
+        int var14 = wj.field_k - param2;
+        if (param1 + param3 > wj.field_j) {
             param3 = param3 - (param1 + param3 - wj.field_j);
-            break L4;
-          }
         }
-        L5: {
-          if (param1 >= wj.field_e) {
-            break L5;
-          } else {
+        if (param1 < wj.field_e) {
             var15 = wj.field_e - param1;
             param3 = param3 - var15;
             var13 = var13 + var15 * wj.field_k;
             var8 = var8 + var12 * var15;
-            break L5;
-          }
         }
-        L6: {
-          if (param0 + param2 <= wj.field_b) {
-            break L6;
-          } else {
+        if (param0 + param2 > wj.field_b) {
             var15 = param0 + param2 - wj.field_b;
             param2 = param2 - var15;
             var14 = var14 + var15;
-            break L6;
-          }
         }
-        L7: {
-          if (param0 >= wj.field_g) {
-            break L7;
-          } else {
+        if (param0 < wj.field_g) {
             var15 = wj.field_g - param0;
             param2 = param2 - var15;
             var13 = var13 + var15;
             var7 = var7 + var11 * var15;
             var14 = var14 + var15;
-            break L7;
-          }
         }
         he.a(wj.field_l, this.field_m, this.field_l, var7, var8, var13, var14, param2, param3, var11, var12, var5);
     }
@@ -1103,45 +923,26 @@ final class he extends pe {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_a;
-          param1 = param1 + this.field_f;
-          var4 = param0 + param1 * wj.field_k;
-          var5 = 0;
-          var6 = this.field_k;
-          var7 = this.field_d;
-          var8 = wj.field_k - var7;
-          var9 = 0;
-          if (param1 >= wj.field_e) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_a;
+        param1 = param1 + this.field_f;
+        int var4 = param0 + param1 * wj.field_k;
+        int var5 = 0;
+        int var6 = this.field_k;
+        int var7 = this.field_d;
+        int var8 = wj.field_k - var7;
+        int var9 = 0;
+        if (param1 < wj.field_e) {
             var10 = wj.field_e - param1;
             var6 = var6 - var10;
             param1 = wj.field_e;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * wj.field_k;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= wj.field_j) {
-            break L1;
-          } else {
+        if (param1 + var6 > wj.field_j) {
             var6 = var6 - (param1 + var6 - wj.field_j);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= wj.field_g) {
-            break L2;
-          } else {
+        if (param0 < wj.field_g) {
             var10 = wj.field_g - param0;
             var7 = var7 - var10;
             param0 = wj.field_g;
@@ -1149,29 +950,19 @@ final class he extends pe {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= wj.field_b) {
-            break L3;
-          } else {
+        if (param0 + var7 > wj.field_b) {
             var10 = param0 + var7 - wj.field_b;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
             he.a(wj.field_l, this.field_m, this.field_l, var5, var4, var7, var6, var8, var9, param2);
             return;
-          } else {
-            return;
-          }
         }
     }
 
@@ -1179,10 +970,8 @@ final class he extends pe {
         int var3 = 0;
         int var4 = 0;
         int incrementValue$0 = 0;
-        if (this.field_d == this.field_h) {
-            if (this.field_k == this.field_c) {
-                return;
-            }
+        if (this.field_d == this.field_h && this.field_k == this.field_c) {
+            return;
         }
         byte[] var1 = new byte[this.field_h * this.field_c];
         int var2 = 0;
@@ -1201,13 +990,13 @@ final class he extends pe {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var10 = 256 - param9;
         var11 = -param6;
         L0: while (true) {
@@ -1222,9 +1011,9 @@ final class he extends pe {
                 var11++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                var13 = param1[incrementValue$66];
+                var13 = param1[incrementValue$11];
                 if (var13 == 0) {
                   param4++;
                   var12++;
@@ -1232,9 +1021,9 @@ final class he extends pe {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
+                  param0[incrementValue$12] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
                   continue L1;
                 }
@@ -1245,13 +1034,13 @@ final class he extends pe {
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var12 = 256 - param10;
         var13 = (param11 & 16711935) * var12 & -16711936;
         var14 = (param11 & 65280) * var12 & 16711680;
@@ -1269,9 +1058,9 @@ final class he extends pe {
                 var15++;
                 continue L0;
               } else {
-                incrementValue$66 = param4;
+                incrementValue$11 = param4;
                 param4++;
-                param3 = param2[param1[incrementValue$66] & 255];
+                param3 = param2[param1[incrementValue$11] & 255];
                 if (param3 == 0) {
                   param5++;
                   var16++;
@@ -1279,9 +1068,9 @@ final class he extends pe {
                 } else {
                   var13 = (param3 & 16711935) * param10 & -16711936;
                   var14 = (param3 & 65280) * param10 & 16711680;
-                  incrementValue$67 = param5;
+                  incrementValue$12 = param5;
                   param5++;
-                  param0[incrementValue$67] = ((var13 | var14) >>> 8) + param11;
+                  param0[incrementValue$12] = ((var13 | var14) >>> 8) + param11;
                   var16++;
                   continue L1;
                 }
@@ -1292,45 +1081,26 @@ final class he extends pe {
     }
 
     final void d(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_a;
-          param1 = param1 + this.field_f;
-          var3 = param0 + param1 * wj.field_k;
-          var4 = 0;
-          var5 = this.field_k;
-          var6 = this.field_d;
-          var7 = wj.field_k - var6;
-          var8 = 0;
-          if (param1 >= wj.field_e) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_a;
+        param1 = param1 + this.field_f;
+        int var3 = param0 + param1 * wj.field_k;
+        int var4 = 0;
+        int var5 = this.field_k;
+        int var6 = this.field_d;
+        int var7 = wj.field_k - var6;
+        int var8 = 0;
+        if (param1 < wj.field_e) {
             var9 = wj.field_e - param1;
             var5 = var5 - var9;
             param1 = wj.field_e;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * wj.field_k;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= wj.field_j) {
-            break L1;
-          } else {
+        if (param1 + var5 > wj.field_j) {
             var5 = var5 - (param1 + var5 - wj.field_j);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= wj.field_g) {
-            break L2;
-          } else {
+        if (param0 < wj.field_g) {
             var9 = wj.field_g - param0;
             var6 = var6 - var9;
             param0 = wj.field_g;
@@ -1338,72 +1108,43 @@ final class he extends pe {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= wj.field_b) {
-            break L3;
-          } else {
+        if (param0 + var6 > wj.field_b) {
             var9 = param0 + var6 - wj.field_b;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
             he.a(0, this.field_m, var4, var3, 0, wj.field_l, this.field_l, var6, var7, var8, 0, var5);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final void e(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_a;
-          param1 = param1 + this.field_f;
-          var3 = param0 + param1 * wj.field_k;
-          var4 = 0;
-          var5 = this.field_k;
-          var6 = this.field_d;
-          var7 = wj.field_k - var6;
-          var8 = 0;
-          if (param1 >= wj.field_e) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_a;
+        param1 = param1 + this.field_f;
+        int var3 = param0 + param1 * wj.field_k;
+        int var4 = 0;
+        int var5 = this.field_k;
+        int var6 = this.field_d;
+        int var7 = wj.field_k - var6;
+        int var8 = 0;
+        if (param1 < wj.field_e) {
             var9 = wj.field_e - param1;
             var5 = var5 - var9;
             param1 = wj.field_e;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * wj.field_k;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= wj.field_j) {
-            break L1;
-          } else {
+        if (param1 + var5 > wj.field_j) {
             var5 = var5 - (param1 + var5 - wj.field_j);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= wj.field_g) {
-            break L2;
-          } else {
+        if (param0 < wj.field_g) {
             var9 = wj.field_g - param0;
             var6 = var6 - var9;
             param0 = wj.field_g;
@@ -1411,29 +1152,19 @@ final class he extends pe {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= wj.field_b) {
-            break L3;
-          } else {
+        if (param0 + var6 > wj.field_b) {
             var9 = param0 + var6 - wj.field_b;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
             he.a(wj.field_l, this.field_m, this.field_l, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
@@ -1449,15 +1180,15 @@ final class he extends pe {
     }
 
     final void d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        byte[] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        byte[] var8;
+        int var9;
+        int var10;
         L0: {
           if (this.field_d != this.field_h) {
             break L0;

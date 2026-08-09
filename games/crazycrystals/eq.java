@@ -15,10 +15,9 @@ final class eq extends rl {
     }
 
     public static void f(int param0) {
-        int discarded$0 = 0;
         field_k = null;
         if (param0 != 1) {
-            discarded$0 = eq.c(-34, (byte) 28);
+            eq.c(-34, (byte) 28);
             field_l = null;
             return;
         }
@@ -26,7 +25,7 @@ final class eq extends rl {
     }
 
     final static int c(int param0, byte param1) {
-        int var2 = 0;
+        int var2;
         L0: {
           var2 = 0;
           if (param0 < 0) {
@@ -202,8 +201,6 @@ final class eq extends rl {
         int var7 = 0;
         f stackIn_2_0 = null;
         f stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -211,16 +208,6 @@ final class eq extends rl {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        f stackOut_3_0 = null;
-        f stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             var6_int = -6 + (int)(Math.random() * 12.99);
@@ -228,13 +215,11 @@ final class eq extends rl {
               var7 = (int)(100.0 * Math.pow(2.0, (double)var6_int / 12.0));
               tb.field_d.a(qp.field_i, var7, 48 * gi.field_m, param3);
               ph.a(10, (byte) 107, param1, param4);
-              stackOut_3_0 = bm.field_g;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = bm.field_g;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (f) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (f) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -243,27 +228,19 @@ final class eq extends rl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var6 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var6);
-            stackOut_5_1 = new StringBuilder().append("eq.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var6);
+
+            stackIn_7_1 = new StringBuilder().append("eq.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }

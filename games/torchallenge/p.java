@@ -26,13 +26,15 @@ final class p {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int[] dupTemp$0 = null;
+        int[] dupTemp$1 = null;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         L0: {
           var14 = TorChallenge.field_F ? 1 : 0;
           var8 = -param0 + 32 * param4;
@@ -86,13 +88,15 @@ final class p {
             if (0 <= vb.field_a[param3][param2]) {
               break L4;
             } else {
-              vb.field_a[param3][param2] = vb.field_a[param3][param2] + 64;
+              dupTemp$0 = vb.field_a[param3];
+              dupTemp$0[param2] = dupTemp$0[param2] + 64;
               break L4;
             }
           }
           L5: {
             if (-65 >= (vb.field_a[param3][param2] ^ -1)) {
-              vb.field_a[param3][param2] = vb.field_a[param3][param2] - 64;
+              dupTemp$1 = vb.field_a[param3];
+              dupTemp$1[param2] = dupTemp$1[param2] - 64;
               break L5;
             } else {
               break L5;
@@ -137,21 +141,11 @@ final class p {
     }
 
     final static boolean a(int param0, int[] param1) {
-        RuntimeException var2 = null;
-        long var2_long = 0L;
-        lc var4_ref_lc = null;
-        int var4 = 0;
-        int var5_int = 0;
-        lc var5 = null;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_26_0 = 0;
         int stackIn_36_0 = 0;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
@@ -159,19 +153,14 @@ final class p {
         String stackIn_40_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
+        lc var4_ref_lc = null;
+        int var4 = 0;
+        int var5_int = 0;
+        lc var5 = null;
+        int var6 = 0;
+        int var7 = 0;
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -205,8 +194,7 @@ final class p {
                             uc.field_X = md.field_i;
                             md.field_i = cb.field_g;
                             cb.field_g = var4_ref_lc.field_i;
-                            stackOut_15_0 = 1;
-                            stackIn_16_0 = stackOut_15_0;
+                            stackIn_16_0 = 1;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           } else {
@@ -234,8 +222,7 @@ final class p {
                       bb.field_i = param1[jf.field_tb];
                       break L5;
                     } else {
-                      stackOut_20_0 = 0;
-                      stackIn_21_0 = stackOut_20_0;
+                      stackIn_21_0 = 0;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
@@ -244,8 +231,7 @@ final class p {
                   }
                 }
                 if (!md.a((byte) 124)) {
-                  stackOut_25_0 = 0;
-                  stackIn_26_0 = stackOut_25_0;
+                  stackIn_26_0 = 0;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
@@ -255,8 +241,7 @@ final class p {
                     md.field_i = cb.field_g;
                     cb.field_g = jf.field_tb;
                     jf.field_tb = -1;
-                    stackOut_35_0 = 1;
-                    stackIn_36_0 = stackOut_35_0;
+                    stackIn_36_0 = 1;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
@@ -291,8 +276,7 @@ final class p {
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -301,27 +285,19 @@ final class p {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) (var2);
-            stackOut_37_1 = new StringBuilder().append("p.A(").append(param0).append(',');
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            stackIn_39_0 = (RuntimeException) (var2);
+
+            stackIn_39_1 = new StringBuilder().append("p.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "null";
               break L8;
             } else {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "{...}";
               break L8;
             }
           }

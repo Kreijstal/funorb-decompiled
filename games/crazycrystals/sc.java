@@ -10,10 +10,9 @@ final class sc extends jb {
     static am[] field_i;
 
     public static void b(byte param0) {
-        int discarded$0 = 0;
         field_i = null;
         if (param0 != -34) {
-            discarded$0 = sc.a((byte) -64);
+            sc.a((byte) -64);
         }
     }
 

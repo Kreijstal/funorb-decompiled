@@ -29,8 +29,8 @@ final class ld extends wl {
     }
 
     final static char a(int param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         if (param0 <= -15) {
           var2 = 255 & param1;
           if (var2 != 0) {
@@ -62,7 +62,6 @@ final class ld extends wl {
     }
 
     final int b(byte param0) {
-        int discarded$7 = 0;
         if (param0 >= 18) {
           if (null == this.field_s) {
             return 0;
@@ -70,7 +69,7 @@ final class ld extends wl {
             return this.field_s.field_f * 100 / (this.field_s.field_h.length - this.field_u);
           }
         } else {
-          discarded$7 = this.b((byte) -98);
+          this.b((byte) -98);
           if (null == this.field_s) {
             return 0;
           } else {
@@ -80,8 +79,8 @@ final class ld extends wl {
     }
 
     final static void g(int param0) {
-        CharSequence var2 = null;
-        CharSequence var3 = null;
+        CharSequence var2;
+        CharSequence var3;
         je.field_g = kd.field_n.i(111);
         if (param0 != -1266) {
           field_r = (String) null;
@@ -96,7 +95,7 @@ final class ld extends wl {
     }
 
     final byte[] e(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = 8 % ((55 - param0) / 55);
         if (!this.field_n) {
           if (this.field_s.field_f < this.field_s.field_h.length - this.field_u) {

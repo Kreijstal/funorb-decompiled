@@ -10,12 +10,7 @@ final class tg {
             if (-1L == (param0 % 10L ^ -1L)) {
               br.a(param0 - 1L, (byte) -21);
               br.a(1L, (byte) -21);
-              if (Sumoblitz.field_L) {
-                br.a(param0, (byte) -21);
-                return;
-              } else {
-                return;
-              }
+              return;
             } else {
               br.a(param0, (byte) -21);
               return;
@@ -25,12 +20,7 @@ final class tg {
             if (-1L == (param0 % 10L ^ -1L)) {
               br.a(param0 - 1L, (byte) -21);
               br.a(1L, (byte) -21);
-              if (!Sumoblitz.field_L) {
-                return;
-              } else {
-                br.a(param0, (byte) -21);
-                return;
-              }
+              return;
             } else {
               br.a(param0, (byte) -21);
               return;

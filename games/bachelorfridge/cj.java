@@ -11,12 +11,8 @@ abstract class cj extends bw {
     abstract void a(lu param0, int param1);
 
     final static boolean b(boolean param0) {
-        int discarded$6 = 0;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0) {
           if (!dma.field_a) {
             if (bp.e(-29919)) {
@@ -25,23 +21,20 @@ abstract class cj extends bw {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
-          discarded$6 = cj.a(47, 23);
+          cj.a(47, 23);
           if (dma.field_a) {
             return true;
           } else {
             L0: {
               if (!bp.e(-29919)) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }
@@ -53,8 +46,8 @@ abstract class cj extends bw {
     abstract at a(int param0, gj param1);
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = BachelorFridge.field_y;
         ch.field_p = null;
         hla.field_s = null;

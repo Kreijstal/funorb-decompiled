@@ -10,12 +10,11 @@ final class qp {
     static String field_d;
 
     public static void a(boolean param0) {
-        int discarded$2 = 0;
         field_c = null;
         field_b = null;
         field_a = null;
         if (param0) {
-          discarded$2 = qp.a(-100, -97, (byte) -12);
+          qp.a(-100, -97, (byte) -12);
           field_f = null;
           field_d = null;
           field_e = null;

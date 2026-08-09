@@ -65,47 +65,30 @@ final class aq {
     }
 
     final int[] a(int param0, byte param1) {
-        int var3 = 0;
-        fd var4 = null;
-        fd var5 = null;
-        int var6 = 0;
-        Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
         Object stackIn_16_0 = null;
         int stackIn_16_1 = 0;
-        Object stackOut_13_0 = null;
-        Object stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
+        int var3;
+        fd var4;
+        fd var5;
+        int var6;
         var6 = Vertigo2.field_L ? 1 : 0;
         var3 = 28 % ((param1 - 6) / 48);
         if (this.field_h != this.field_g) {
           if (-2 == (this.field_h ^ -1)) {
             L0: {
-              stackOut_13_0 = this;
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_15_0 = this;
+
               if (this.field_a == param0) {
-                stackOut_15_0 = this;
-                stackOut_15_1 = 0;
-                stackIn_16_0 = stackOut_15_0;
-                stackIn_16_1 = stackOut_15_1;
+                stackIn_16_0 = this;
+                stackIn_16_1 = 0;
                 break L0;
               } else {
-                stackOut_14_0 = this;
-                stackOut_14_1 = 1;
-                stackIn_16_0 = stackOut_14_0;
-                stackIn_16_1 = stackOut_14_1;
+                stackIn_16_0 = this;
+                stackIn_16_1 = 1;
                 break L0;
               }
             }
@@ -144,20 +127,15 @@ final class aq {
           }
         } else {
           L3: {
-            stackOut_1_0 = this;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_3_0 = this;
+
             if (null != this.field_c[param0]) {
-              stackOut_3_0 = this;
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_0 = this;
+              stackIn_4_1 = 0;
               break L3;
             } else {
-              stackOut_2_0 = this;
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_0 = this;
+              stackIn_4_1 = 1;
               break L3;
             }
           }

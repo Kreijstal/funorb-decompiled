@@ -44,29 +44,29 @@ final class lfa extends le {
     }
 
     final int[][] a(int param0, int param1) {
-        int[][] var3 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int[][] var16 = null;
-        int[][] var18 = null;
-        int[][] var23 = null;
-        int[] var24 = null;
-        int[] var25 = null;
-        int[] var26 = null;
-        int[] var28 = null;
-        int[] var29 = null;
-        int[] var30 = null;
-        int[][] var35 = null;
-        int[][] var36 = null;
-        int[] var37 = null;
-        int[] var38 = null;
-        int[] var39 = null;
+        int[][] var3;
+        int[] var8;
+        int[] var9;
+        int[] var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int[][] var16;
+        int[][] var18;
+        int[][] var23;
+        int[] var24;
+        int[] var25;
+        int[] var26;
+        int[] var28;
+        int[] var29;
+        int[] var30;
+        int[][] var35;
+        int[][] var36;
+        int[] var37;
+        int[] var38;
+        int[] var39;
         var15 = VoidHunters.field_G;
         if (param0 == 255) {
           var23 = this.field_d.a(param1, (byte) -92);
@@ -171,22 +171,12 @@ final class lfa extends le {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -218,27 +208,19 @@ final class lfa extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var4);
-            stackOut_11_1 = new StringBuilder().append("lfa.F(").append(param0).append(',').append(param1).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var4);
+
+            stackIn_13_1 = new StringBuilder().append("lfa.F(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L1;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L1;
             }
           }

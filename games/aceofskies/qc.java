@@ -12,11 +12,10 @@ public class qc {
     private static boolean field_e;
 
     public static File a(boolean param0, String param1) {
-        File discarded$2 = null;
-        String var3 = null;
+        String var3;
         if (!param0) {
           var3 = (String) null;
-          discarded$2 = qc.a(false, (String) null);
+          qc.a(false, (String) null);
           return qc.a(param1, 1, field_a, field_d);
         } else {
           return qc.a(param1, 1, field_a, field_d);

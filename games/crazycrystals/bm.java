@@ -25,22 +25,12 @@ final class bm {
 
     final static void a(int param0, dl[] param1) {
         RuntimeException var2 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -69,27 +59,19 @@ final class bm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("bm.A(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("bm.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -98,35 +80,33 @@ final class bm {
     }
 
     final int a(boolean param0) {
-        String discarded$6 = null;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
         int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        String discarded$10 = null;
-        int fieldTemp$11 = 0;
         if (0 != this.field_b) {
           if (param0) {
-            discarded$6 = bm.b((byte) 50);
-            fieldTemp$7 = this.field_b - 1;
+            bm.b((byte) 50);
+            fieldTemp$4 = this.field_b - 1;
             this.field_b = this.field_b - 1;
-            return this.field_f[fieldTemp$7];
+            return this.field_f[fieldTemp$4];
           } else {
-            fieldTemp$8 = this.field_b - 1;
+            fieldTemp$5 = this.field_b - 1;
             this.field_b = this.field_b - 1;
-            return this.field_f[fieldTemp$8];
+            return this.field_f[fieldTemp$5];
           }
         } else {
           this.a(-95);
           this.field_b = 256;
           if (!param0) {
-            fieldTemp$9 = this.field_b - 1;
+            fieldTemp$6 = this.field_b - 1;
             this.field_b = this.field_b - 1;
-            return this.field_f[fieldTemp$9];
+            return this.field_f[fieldTemp$6];
           } else {
-            discarded$10 = bm.b((byte) 50);
-            fieldTemp$11 = this.field_b - 1;
+            bm.b((byte) 50);
+            fieldTemp$7 = this.field_b - 1;
             this.field_b = this.field_b - 1;
-            return this.field_f[fieldTemp$11];
+            return this.field_f[fieldTemp$7];
           }
         }
     }
@@ -141,16 +121,16 @@ final class bm {
     }
 
     private final void b(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         var11 = CrazyCrystals.field_B;
         var5 = -1640531527;
         var6 = -1640531527;
@@ -362,21 +342,21 @@ final class bm {
     }
 
     private final void a(int param0) {
-        int fieldTemp$6 = 0;
-        int dupTemp$7 = 0;
-        int dupTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int dupTemp$10 = 0;
-        int dupTemp$11 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int fieldTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int dupTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int dupTemp$4 = 0;
+        int dupTemp$5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = CrazyCrystals.field_B;
         if (param0 <= -35) {
-          fieldTemp$6 = this.field_d + 1;
+          fieldTemp$0 = this.field_d + 1;
           this.field_d = this.field_d + 1;
-          this.field_c = this.field_c + fieldTemp$6;
+          this.field_c = this.field_c + fieldTemp$0;
           var2 = 0;
           L0: while (true) {
             if (256 <= var2) {
@@ -403,21 +383,21 @@ final class bm {
                 }
               }
               this.field_i = this.field_i + this.field_a[var2 - -128 & 255];
-              dupTemp$7 = this.field_a[pf.b(255, var3 >> -1441265758)] + this.field_i + this.field_c;
-              var4 = dupTemp$7;
-              this.field_a[var2] = dupTemp$7;
-              dupTemp$8 = var3 + this.field_a[pf.b(1020, var4 >> 1986300136) >> 1435372002];
-              this.field_c = dupTemp$8;
-              this.field_f[var2] = dupTemp$8;
+              dupTemp$1 = this.field_a[pf.b(255, var3 >> -1441265758)] + this.field_i + this.field_c;
+              var4 = dupTemp$1;
+              this.field_a[var2] = dupTemp$1;
+              dupTemp$2 = var3 + this.field_a[pf.b(1020, var4 >> 1986300136) >> 1435372002];
+              this.field_c = dupTemp$2;
+              this.field_f[var2] = dupTemp$2;
               var2++;
               continue L0;
             }
           }
         } else {
           field_j = (String) null;
-          fieldTemp$9 = this.field_d + 1;
+          fieldTemp$3 = this.field_d + 1;
           this.field_d = this.field_d + 1;
-          this.field_c = this.field_c + fieldTemp$9;
+          this.field_c = this.field_c + fieldTemp$3;
           var2 = 0;
           L2: while (true) {
             if (256 <= var2) {
@@ -444,12 +424,12 @@ final class bm {
                 }
               }
               this.field_i = this.field_i + this.field_a[var2 - -128 & 255];
-              dupTemp$10 = this.field_a[pf.b(255, var3 >> -1441265758)] + this.field_i + this.field_c;
-              var4 = dupTemp$10;
-              this.field_a[var2] = dupTemp$10;
-              dupTemp$11 = var3 + this.field_a[pf.b(1020, var4 >> 1986300136) >> 1435372002];
-              this.field_c = dupTemp$11;
-              this.field_f[var2] = dupTemp$11;
+              dupTemp$4 = this.field_a[pf.b(255, var3 >> -1441265758)] + this.field_i + this.field_c;
+              var4 = dupTemp$4;
+              this.field_a[var2] = dupTemp$4;
+              dupTemp$5 = var3 + this.field_a[pf.b(1020, var4 >> 1986300136) >> 1435372002];
+              this.field_c = dupTemp$5;
+              this.field_f[var2] = dupTemp$5;
               var2++;
               continue L2;
             }

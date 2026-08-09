@@ -20,7 +20,7 @@ public class dk {
     }
 
     public static File a(boolean param0, String param1) {
-        String var3 = null;
+        String var3;
         if (param0) {
           var3 = (String) null;
           dk.a((String) null, -87, (byte) -32);

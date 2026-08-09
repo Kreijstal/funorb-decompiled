@@ -6,15 +6,11 @@ final class nd {
     static long field_b;
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int stackIn_7_0 = 0;
         int stackIn_17_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
+        int var6;
+        int var7;
+        int var8;
         L0: {
           hb.field_l[md.field_c] = param1;
           qi.field_i[md.field_c] = md.field_c;
@@ -34,12 +30,10 @@ final class nd {
             var6 = param0 + (param4 + param3);
             var8 = -80 / ((30 - param2) / 42);
             if (var6 != 0) {
-              stackOut_16_0 = param3 * 1000 / var6;
-              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_0 = param3 * 1000 / var6;
               break L1;
             } else {
-              stackOut_15_0 = 0;
-              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_0 = 0;
               break L1;
             }
           }
@@ -69,12 +63,10 @@ final class nd {
             var6 = param0 + (param4 + param3);
             var8 = -80 / ((30 - param2) / 42);
             if (var6 != 0) {
-              stackOut_6_0 = param3 * 1000 / var6;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = param3 * 1000 / var6;
               break L3;
             } else {
-              stackOut_5_0 = 0;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = 0;
               break L3;
             }
           }
@@ -103,7 +95,6 @@ final class nd {
             Throwable var1 = null;
             vk stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            vk stackOut_2_0 = null;
             L0: {
               if (param0 >= 2) {
                 break L0;
@@ -114,8 +105,7 @@ final class nd {
             }
             try {
               L1: {
-                stackOut_2_0 = (vk) (Class.forName("gl").newInstance());
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (vk) (Class.forName("gl").newInstance());
                 break L1;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -140,14 +130,12 @@ final class nd {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
         try {
           L0: {
             var3_int = param1;
             L1: while (true) {
               if ((param2 ^ -1) >= -1) {
-                stackOut_3_0 = var3_int;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = var3_int;
                 break L0;
               } else {
                 var3_int = var3_int << -137336543 | param0 & 1;

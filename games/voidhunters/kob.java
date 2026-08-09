@@ -7,8 +7,8 @@ final class kob extends ksa {
     boolean field_d;
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         var5 = 128 + (eu.a(kdb.field_o * 128 % 8192, param0 + 90) * 127 >> -2064326160);
         var5 = var5 / 4;
         var6 = 16711680 | var5 << 740697416 | var5;
@@ -38,8 +38,8 @@ final class kob extends ksa {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         if (param1 != -18262) {
           return -48;
         } else {

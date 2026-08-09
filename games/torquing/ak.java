@@ -13,7 +13,7 @@ final class ak extends kj {
         if (param2 < -101) {
             return;
         }
-        t[] discarded$0 = ak.a(-126, 108, 95, (byte) 69);
+        ak.a(-126, 108, 95, (byte) 69);
     }
 
     final static t[] a(int param0, int param1, int param2, byte param3) {
@@ -39,13 +39,11 @@ final class ak extends kj {
     }
 
     final static boolean c(int param0) {
-        int fieldTemp$3 = 0;
-        RuntimeException var1 = null;
+        int fieldTemp$2 = 0;
         int var2 = 0;
         int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
+        RuntimeException var1 = null;
         var2 = Torquing.field_u;
         try {
           L0: {
@@ -67,9 +65,9 @@ final class ak extends kj {
             }
             L3: while (true) {
               L4: {
-                fieldTemp$3 = po.field_z + 1;
+                fieldTemp$2 = po.field_z + 1;
                 po.field_z = po.field_z + 1;
-                if (fieldTemp$3 >= i.field_P.length) {
+                if (fieldTemp$2 >= i.field_P.length) {
                   break L4;
                 } else {
                   if (i.field_P[po.field_z]) {
@@ -115,12 +113,10 @@ final class ak extends kj {
               }
               L6: {
                 if (po.field_z >= i.field_P.length) {
-                  stackOut_21_0 = 0;
-                  stackIn_22_0 = stackOut_21_0;
+                  stackIn_22_0 = 0;
                   break L6;
                 } else {
-                  stackOut_20_0 = 1;
-                  stackIn_22_0 = stackOut_20_0;
+                  stackIn_22_0 = 1;
                   break L6;
                 }
               }
@@ -136,10 +132,10 @@ final class ak extends kj {
     }
 
     final void a(int param0, int param1, byte param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var4 = this.field_i * param1 >> 615189964;
         if (param2 != 106) {
           return;
@@ -153,9 +149,8 @@ final class ak extends kj {
     }
 
     public static void b(int param0) {
-        t[] discarded$0 = null;
         if (param0 != -1507) {
-            discarded$0 = ak.a(-101, -57, 63, (byte) -67);
+            ak.a(-101, -57, 63, (byte) -67);
             field_h = null;
             return;
         }

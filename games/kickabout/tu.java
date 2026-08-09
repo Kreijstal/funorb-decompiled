@@ -63,25 +63,15 @@ abstract class tu extends ma implements hc {
     abstract void o(int param0);
 
     final void e(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        ii var5 = null;
-        Object stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_7_2 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
+        int var2;
+        int var3;
+        int var4;
+        ii var5;
         L0: {
           var4 = Kickabout.field_G;
           if (e.field_m == null) {
@@ -97,27 +87,19 @@ abstract class tu extends ma implements hc {
           }
         }
         L1: {
-          stackOut_4_0 = this;
-          stackOut_4_1 = 0;
-          stackIn_6_0 = stackOut_4_0;
-          stackIn_6_1 = stackOut_4_1;
-          stackIn_5_0 = stackOut_4_0;
-          stackIn_5_1 = stackOut_4_1;
+          stackIn_6_0 = this;
+
+          stackIn_6_1 = 0;
+
           if (e.field_m == null) {
-            stackOut_6_0 = this;
-            stackOut_6_1 = stackIn_6_1;
-            stackOut_6_2 = 0;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
-            stackIn_7_2 = stackOut_6_2;
+            stackIn_7_0 = this;
+            stackIn_7_1 = stackIn_6_1;
+            stackIn_7_2 = 0;
             break L1;
           } else {
-            stackOut_5_0 = this;
-            stackOut_5_1 = stackIn_5_1;
-            stackOut_5_2 = 1;
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_7_2 = stackOut_5_2;
+            stackIn_7_0 = this;
+            stackIn_7_1 = stackIn_6_1;
+            stackIn_7_2 = 1;
             break L1;
           }
         }
@@ -260,35 +242,19 @@ abstract class tu extends ma implements hc {
     abstract boolean m(byte param0);
 
     private final void p(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        hc var6 = null;
-        Object stackIn_27_0 = null;
-        int stackIn_27_1 = 0;
         Object stackIn_28_0 = null;
         int stackIn_28_1 = 0;
         Object stackIn_29_0 = null;
         int stackIn_29_1 = 0;
         int stackIn_29_2 = 0;
-        int stackIn_53_0 = 0;
         int stackIn_54_0 = 0;
         int stackIn_55_0 = 0;
         int stackIn_55_1 = 0;
-        Object stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
-        Object stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        int stackOut_28_2 = 0;
-        Object stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        int stackOut_27_2 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_54_1 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_53_1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        hc var6;
         L0: {
           var5 = Kickabout.field_G;
           var2 = 0;
@@ -324,27 +290,19 @@ abstract class tu extends ma implements hc {
             } else {
               if (up.a((byte) -3)) {
                 L2: {
-                  stackOut_26_0 = this;
-                  stackOut_26_1 = param0 + -18856;
-                  stackIn_28_0 = stackOut_26_0;
-                  stackIn_28_1 = stackOut_26_1;
-                  stackIn_27_0 = stackOut_26_0;
-                  stackIn_27_1 = stackOut_26_1;
+                  stackIn_28_0 = this;
+
+                  stackIn_28_1 = param0 + -18856;
+
                   if (null == e.field_m) {
-                    stackOut_28_0 = this;
-                    stackOut_28_1 = stackIn_28_1;
-                    stackOut_28_2 = 0;
-                    stackIn_29_0 = stackOut_28_0;
-                    stackIn_29_1 = stackOut_28_1;
-                    stackIn_29_2 = stackOut_28_2;
+                    stackIn_29_0 = this;
+                    stackIn_29_1 = stackIn_28_1;
+                    stackIn_29_2 = 0;
                     break L2;
                   } else {
-                    stackOut_27_0 = this;
-                    stackOut_27_1 = stackIn_27_1;
-                    stackOut_27_2 = 1;
-                    stackIn_29_0 = stackOut_27_0;
-                    stackIn_29_1 = stackOut_27_1;
-                    stackIn_29_2 = stackOut_27_2;
+                    stackIn_29_0 = this;
+                    stackIn_29_1 = stackIn_28_1;
+                    stackIn_29_2 = 1;
                     break L2;
                   }
                 }
@@ -468,20 +426,15 @@ abstract class tu extends ma implements hc {
             L11: {
               var6 = (hc) (sn.field_g.elementAt(var3));
               var6.a(param0 + -18886, var2 != 0);
-              stackOut_52_0 = var2;
-              stackIn_54_0 = stackOut_52_0;
-              stackIn_53_0 = stackOut_52_0;
+              stackIn_54_0 = var2;
+
               if (var6.a((byte) 81)) {
-                stackOut_54_0 = stackIn_54_0;
-                stackOut_54_1 = 0;
-                stackIn_55_0 = stackOut_54_0;
-                stackIn_55_1 = stackOut_54_1;
+                stackIn_55_0 = stackIn_54_0;
+                stackIn_55_1 = 0;
                 break L11;
               } else {
-                stackOut_53_0 = stackIn_53_0;
-                stackOut_53_1 = 1;
-                stackIn_55_0 = stackOut_53_0;
-                stackIn_55_1 = stackOut_53_1;
+                stackIn_55_0 = stackIn_54_0;
+                stackIn_55_1 = 1;
                 break L11;
               }
             }
@@ -499,8 +452,6 @@ abstract class tu extends ma implements hc {
 
     final void b(byte param0) {
         int var3 = 0;
-        boolean discarded$0 = false;
-        boolean discarded$1 = false;
         int var4 = Kickabout.field_G;
         java.awt.Canvas var2 = ln.l(64);
         if (uf.c(608)) {
@@ -511,24 +462,22 @@ abstract class tu extends ma implements hc {
             wr.a(var2, -14142);
             return;
         }
-        if (!rg.field_b) {
-            if (!la.a(100)) {
-                ju.a(100.0f, hm.field_H, (byte) 30);
-                wr.a(var2, -14142);
-                return;
-            }
+        if (!rg.field_b && !la.a(100)) {
+            ju.a(100.0f, hm.field_H, (byte) 30);
+            wr.a(var2, -14142);
+            return;
         }
         vg.field_Rb = true;
         for (var3 = -1 + sn.field_g.size(); var3 >= 0; var3--) {
             ((hc) (sn.field_g.elementAt(var3))).a(109);
         }
         if (param0 < 50) {
-            discarded$0 = this.a(34, 72, 'ￆ');
+            this.a(34, 72, 'ￆ');
         }
         if (!vg.field_Rb) {
             this.r(10);
         } else {
-            discarded$1 = md.d(-27302);
+            md.d(-27302);
             su.a(27744, 0, 0, var2);
         }
     }
@@ -537,10 +486,10 @@ abstract class tu extends ma implements hc {
 
     final static void n(byte param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = Kickabout.field_G;
         try {
           L0: {
@@ -599,8 +548,8 @@ abstract class tu extends ma implements hc {
     public abstract void a(int param0);
 
     private final void s(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Kickabout.field_G;
         L0: while (true) {
           if (!dr.a(-125, uc.field_A)) {

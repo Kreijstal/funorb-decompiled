@@ -7,11 +7,10 @@ final class bb {
     private static String field_z;
 
     public static void a(boolean param0) {
-        String discarded$2 = null;
-        String var2 = null;
+        String var2;
         if (!param0) {
           var2 = (String) null;
-          discarded$2 = bb.a((String) null, (byte) 22, (String) null, (String) null);
+          bb.a((String) null, (byte) 22, (String) null, (String) null);
           field_a = null;
           field_b = null;
           return;
@@ -23,8 +22,8 @@ final class bb {
     }
 
     final static String a(String param0, byte param1, String param2, String param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = TrackController.field_F ? 1 : 0;
         var4 = param0.indexOf(param3);
         if (param1 == -82) {

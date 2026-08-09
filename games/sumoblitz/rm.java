@@ -57,19 +57,15 @@ final class rm {
 
     final static boolean a(int param0, int param1) {
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param1 > -100) {
           return false;
         } else {
           L0: {
             if (param0 != (param0 & -param0)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L0;
             }
           }

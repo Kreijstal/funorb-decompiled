@@ -14,34 +14,34 @@ final class ea {
     private int field_b;
 
     final void a(int param0, double param1, int[] param2) {
-        int incrementValue$1 = 0;
-        double var5 = 0.0;
-        double var7 = 0.0;
-        double var9 = 0.0;
-        double var11 = 0.0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        double var23 = 0.0;
-        double var25 = 0.0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int[] var30 = null;
-        int var31 = 0;
-        int var32 = 0;
-        double var33 = 0.0;
-        double var35 = 0.0;
-        int var37 = 0;
-        int[] var38 = null;
-        int[] var39 = null;
+        int incrementValue$0 = 0;
+        double var5;
+        double var7;
+        double var9;
+        double var11;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        double var23;
+        double var25;
+        int var27;
+        int var28;
+        int var29;
+        int[] var30;
+        int var31;
+        int var32;
+        double var33;
+        double var35;
+        int var37;
+        int[] var38;
+        int[] var39;
         var29 = 0;
         var39 = oo.field_i;
         var38 = var39;
@@ -81,9 +81,9 @@ final class ea {
                           break L3;
                         }
                       }
-                      incrementValue$1 = var29;
+                      incrementValue$0 = var29;
                       var29++;
-                      var30[incrementValue$1] = param2[var16];
+                      var30[incrementValue$0] = param2[var16];
                       var32++;
                       continue L1;
                     } else {
@@ -139,10 +139,12 @@ final class ea {
     }
 
     public ea() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        double[] dupTemp$0 = null;
+        double[] dupTemp$1 = null;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
         this.field_j = oo.field_b;
         this.field_b = oo.field_l;
         this.field_g = oo.field_b / 2;
@@ -179,11 +181,13 @@ final class ea {
                 this.field_h[var3][var4] = 128.0 + this.field_i * Math.atan((double)var2 / ((double)var1 + 0.5));
                 if (var1 < 0) {
                   if (var2 <= 0) {
-                    this.field_h[var3][var4] = this.field_h[var3][var4] - 128.0;
+                    dupTemp$0 = this.field_h[var3];
+                    dupTemp$0[var4] = dupTemp$0[var4] - 128.0;
                     var4++;
                     continue L2;
                   } else {
-                    this.field_h[var3][var4] = this.field_h[var3][var4] + 128.0;
+                    dupTemp$1 = this.field_h[var3];
+                    dupTemp$1[var4] = dupTemp$1[var4] + 128.0;
                     var4++;
                     continue L2;
                   }

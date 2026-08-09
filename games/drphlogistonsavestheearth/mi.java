@@ -14,15 +14,14 @@ final class mi {
     static he[] field_i;
 
     final int a(int param0, int param1) {
-        int discarded$7 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (null != this.field_a) {
           if (-1 != (this.field_a.length ^ -1)) {
             var3 = 1;
             if (param0 != -21878) {
-              discarded$7 = this.a(84, -16);
+              this.a(84, -16);
               L0: while (true) {
                 if (this.field_a.length <= var3) {
                   return -1 + this.field_a.length;
@@ -58,10 +57,10 @@ final class mi {
     }
 
     final static nh a(int param0, byte param1, int param2) {
-        nh var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        nh var6 = null;
+        nh var3;
+        int var4;
+        int var5;
+        nh var6;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param1 < -62) {
           var6 = new nh(param0, param0);

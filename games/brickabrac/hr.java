@@ -55,10 +55,10 @@ final class hr {
     }
 
     final int a() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
         var1 = this.field_g.length;
         var2 = -1;
         var3 = 2147483647;
@@ -117,9 +117,9 @@ final class hr {
     }
 
     private final int d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var2 = this.field_b.field_k[this.field_b.field_l];
           if (var2 >= 0) {

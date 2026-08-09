@@ -41,9 +41,21 @@ abstract class k implements ba {
 
     final static void a(Throwable param0, byte param1, String param2) {
         try {
-            int discarded$1 = 0;
-            Exception var3 = null;
-            String var3_ref = null;
+            le stackIn_11_0;
+            java.net.URL stackIn_11_1;
+            java.net.URL stackIn_11_2;
+            java.net.URL stackIn_11_3;
+            StringBuilder stackIn_11_4;
+            le stackIn_12_0;
+            java.net.URL stackIn_12_1;
+            java.net.URL stackIn_12_2;
+            java.net.URL stackIn_12_3;
+            StringBuilder stackIn_12_4;
+            String stackIn_12_5;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            String var3 = null;
+            Exception var3_ref = null;
             int var4 = 0;
             vi var5 = null;
             DataInputStream var6 = null;
@@ -52,50 +64,15 @@ abstract class k implements ba {
             String var9 = null;
             String var10 = null;
             String var11 = null;
-            le stackIn_10_0 = null;
-            java.net.URL stackIn_10_1 = null;
-            java.net.URL stackIn_10_2 = null;
-            java.net.URL stackIn_10_3 = null;
-            StringBuilder stackIn_10_4 = null;
-            le stackIn_11_0 = null;
-            java.net.URL stackIn_11_1 = null;
-            java.net.URL stackIn_11_2 = null;
-            java.net.URL stackIn_11_3 = null;
-            StringBuilder stackIn_11_4 = null;
-            le stackIn_12_0 = null;
-            java.net.URL stackIn_12_1 = null;
-            java.net.URL stackIn_12_2 = null;
-            java.net.URL stackIn_12_3 = null;
-            StringBuilder stackIn_12_4 = null;
-            String stackIn_12_5 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            le stackOut_9_0 = null;
-            java.net.URL stackOut_9_1 = null;
-            java.net.URL stackOut_9_2 = null;
-            java.net.URL stackOut_9_3 = null;
-            StringBuilder stackOut_9_4 = null;
-            le stackOut_11_0 = null;
-            java.net.URL stackOut_11_1 = null;
-            java.net.URL stackOut_11_2 = null;
-            java.net.URL stackOut_11_3 = null;
-            StringBuilder stackOut_11_4 = null;
-            String stackOut_11_5 = null;
-            le stackOut_10_0 = null;
-            java.net.URL stackOut_10_1 = null;
-            java.net.URL stackOut_10_2 = null;
-            java.net.URL stackOut_10_3 = null;
-            StringBuilder stackOut_10_4 = null;
-            String stackOut_10_5 = null;
             var7 = Main.field_T;
             try {
               L0: {
                 L1: {
-                  var3_ref = "";
+                  var3 = "";
                   if (param0 == null) {
                     break L1;
                   } else {
-                    var3_ref = mf.a(param0, (byte) -3);
+                    var3 = mf.a(param0, (byte) -3);
                     break L1;
                   }
                 }
@@ -107,64 +84,47 @@ abstract class k implements ba {
                       if (param0 == null) {
                         break L3;
                       } else {
-                        var3_ref = var3_ref + " | ";
+                        var3 = var3 + " | ";
                         break L3;
                       }
                     }
-                    var3_ref = var3_ref + param2;
+                    var3 = var3 + param2;
                     break L2;
                   }
                 }
-                n.a(var3_ref, (byte) 120);
+                n.a(var3, (byte) 120);
                 var4 = 71 % ((param1 - -20) / 48);
-                var8 = sb.a(var3_ref, ":", "%3a", 96);
+                var8 = sb.a(var3, ":", "%3a", 96);
                 var9 = sb.a(var8, "@", "%40", 118);
                 var10 = sb.a(var9, "&", "%26", 109);
                 var11 = sb.a(var10, "#", "%23", 90);
                 if (tk.field_o != null) {
                   L4: {
-                    stackOut_9_0 = Main.field_W;
-                    stackOut_9_1 = null;
-                    stackOut_9_2 = null;
-                    stackOut_9_3 = tk.field_o.getCodeBase();
-                    stackOut_9_4 = new StringBuilder().append("clienterror.ws?c=").append(ca.field_d).append("&u=");
-                    stackIn_11_0 = stackOut_9_0;
-                    stackIn_11_1 = stackOut_9_1;
-                    stackIn_11_2 = stackOut_9_2;
-                    stackIn_11_3 = stackOut_9_3;
-                    stackIn_11_4 = stackOut_9_4;
-                    stackIn_10_0 = stackOut_9_0;
-                    stackIn_10_1 = stackOut_9_1;
-                    stackIn_10_2 = stackOut_9_2;
-                    stackIn_10_3 = stackOut_9_3;
-                    stackIn_10_4 = stackOut_9_4;
+                    stackIn_11_0 = Main.field_W;
+
+                    stackIn_11_1 = null;
+
+                    stackIn_11_2 = null;
+
+                    stackIn_11_3 = tk.field_o.getCodeBase();
+
+                    stackIn_11_4 = new StringBuilder().append("clienterror.ws?c=").append(ca.field_d).append("&u=");
+
                     if (fk.field_o == null) {
-                      stackOut_11_0 = (le) ((Object) stackIn_11_0);
-                      stackOut_11_1 = null;
-                      stackOut_11_2 = null;
-                      stackOut_11_3 = (java.net.URL) ((Object) stackIn_11_3);
-                      stackOut_11_4 = (StringBuilder) ((Object) stackIn_11_4);
-                      stackOut_11_5 = "" + kb.field_f;
-                      stackIn_12_0 = stackOut_11_0;
-                      stackIn_12_1 = stackOut_11_1;
-                      stackIn_12_2 = stackOut_11_2;
-                      stackIn_12_3 = stackOut_11_3;
-                      stackIn_12_4 = stackOut_11_4;
-                      stackIn_12_5 = stackOut_11_5;
+                      stackIn_12_0 = (le) ((Object) stackIn_11_0);
+                      stackIn_12_1 = null;
+                      stackIn_12_2 = null;
+                      stackIn_12_3 = (java.net.URL) ((Object) stackIn_11_3);
+                      stackIn_12_4 = (StringBuilder) ((Object) stackIn_11_4);
+                      stackIn_12_5 = "" + kb.field_f;
                       break L4;
                     } else {
-                      stackOut_10_0 = (le) ((Object) stackIn_10_0);
-                      stackOut_10_1 = null;
-                      stackOut_10_2 = null;
-                      stackOut_10_3 = (java.net.URL) ((Object) stackIn_10_3);
-                      stackOut_10_4 = (StringBuilder) ((Object) stackIn_10_4);
-                      stackOut_10_5 = fk.field_o;
-                      stackIn_12_0 = stackOut_10_0;
-                      stackIn_12_1 = stackOut_10_1;
-                      stackIn_12_2 = stackOut_10_2;
-                      stackIn_12_3 = stackOut_10_3;
-                      stackIn_12_4 = stackOut_10_4;
-                      stackIn_12_5 = stackOut_10_5;
+                      stackIn_12_0 = (le) ((Object) stackIn_11_0);
+                      stackIn_12_1 = null;
+                      stackIn_12_2 = null;
+                      stackIn_12_3 = (java.net.URL) ((Object) stackIn_11_3);
+                      stackIn_12_4 = (StringBuilder) ((Object) stackIn_11_4);
+                      stackIn_12_5 = fk.field_o;
                       break L4;
                     }
                   }
@@ -176,7 +136,7 @@ abstract class k implements ba {
                           break L6;
                         } else {
                           var6 = (DataInputStream) (var5.field_e);
-                          discarded$1 = var6.read();
+                          var6.read();
                           var6.close();
                           break L6;
                         }
@@ -196,7 +156,7 @@ abstract class k implements ba {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L7: {
-                var3 = (Exception) (Object) decompiledCaughtException;
+                var3_ref = (Exception) (Object) decompiledCaughtException;
                 decompiledRegionSelector0 = 1;
                 break L7;
               }

@@ -50,8 +50,6 @@ abstract class wd extends hl {
         int var6 = 0;
         StringBuilder stackIn_3_0 = null;
         StringBuilder stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -59,16 +57,6 @@ abstract class wd extends hl {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        StringBuilder stackOut_7_0 = null;
-        StringBuilder stackOut_2_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var6 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -78,8 +66,7 @@ abstract class wd extends hl {
               var5 = var4_int;
               L1: while (true) {
                 if (param2 <= var5) {
-                  stackOut_7_0 = (StringBuilder) (param0);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = (StringBuilder) (param0);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -89,8 +76,7 @@ abstract class wd extends hl {
                 }
               }
             } else {
-              stackOut_2_0 = (StringBuilder) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (StringBuilder) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -99,27 +85,19 @@ abstract class wd extends hl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var4);
-            stackOut_9_1 = new StringBuilder().append("wd.F(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var4);
+
+            stackIn_11_1 = new StringBuilder().append("wd.F(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -186,19 +164,19 @@ abstract class wd extends hl {
     }
 
     void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = TrackController.field_F ? 1 : 0;
         ll.b(6 + param0, param2 + 35, this.field_x - 12, -40 + this.field_u, 2105376, 0);
         var5 = 211;
@@ -255,7 +233,7 @@ abstract class wd extends hl {
               }
             }
           } else {
-            if (ll.field_b <= var8) {
+            if ((ll.field_b ^ -1) >= (var8 ^ -1)) {
               if (ll.field_g > var8) {
                 L4: {
                   var9 = var5 - -((-var5 + var6) * var7 / var4);

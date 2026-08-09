@@ -37,14 +37,14 @@ final class qqa extends le {
     }
 
     final int[] a(int param0, boolean param1) {
-        int[] var3 = null;
-        int[][] var4 = null;
-        int[] var5 = null;
-        int[] var6 = null;
-        int[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int[] var10 = null;
+        int[] var3;
+        int[][] var4;
+        int[] var5;
+        int[] var6;
+        int[] var7;
+        int var8;
+        int var9;
+        int[] var10;
         var9 = VoidHunters.field_G;
         var10 = this.field_f.a((byte) -62, param0);
         var3 = var10;

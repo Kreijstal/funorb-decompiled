@@ -11,10 +11,9 @@ final class am {
     static ad field_b;
 
     final static void b(int param0) {
-        StringBuilder discarded$0 = null;
         if (param0 <= 34) {
             StringBuilder var2 = (StringBuilder) null;
-            discarded$0 = am.a((StringBuilder) null, 'ﾍ', -124, false);
+            am.a((StringBuilder) null, 'ﾍ', -124, false);
         }
     }
 
@@ -36,8 +35,6 @@ final class am {
         int var6 = 0;
         StringBuilder stackIn_3_0 = null;
         StringBuilder stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -45,16 +42,6 @@ final class am {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        StringBuilder stackOut_7_0 = null;
-        StringBuilder stackOut_2_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var6 = DungeonAssault.field_K;
         try {
           L0: {
@@ -64,8 +51,7 @@ final class am {
               var5 = var4_int;
               L1: while (true) {
                 if (param2 <= var5) {
-                  stackOut_7_0 = (StringBuilder) (param0);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = (StringBuilder) (param0);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -75,8 +61,7 @@ final class am {
                 }
               }
             } else {
-              stackOut_2_0 = (StringBuilder) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (StringBuilder) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -85,27 +70,19 @@ final class am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var4);
-            stackOut_9_1 = new StringBuilder().append("am.B(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var4);
+
+            stackIn_11_1 = new StringBuilder().append("am.B(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }

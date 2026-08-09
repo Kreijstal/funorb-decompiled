@@ -13,7 +13,7 @@ final class un {
     private int field_e;
 
     final void a(int param0) {
-        int var2 = 0;
+        int var2;
         L0: {
           this.field_c.field_m.field_Y = this.field_c.field_m.field_Y + 0.002;
           if (this.field_c.field_m.field_Y > 1.0) {
@@ -66,8 +66,8 @@ final class un {
     }
 
     final void b(int param0) {
-        int var2 = 0;
-        double var3 = 0.0;
+        int var2;
+        double var3;
         if (param0 > -55) {
           L0: {
             this.field_g = (kn) null;

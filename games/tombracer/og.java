@@ -11,89 +11,50 @@ final class og extends hl implements qm {
 
     public final jaclib.memory.Buffer a(int param0, boolean param1) {
         if (param0 != -15730) {
-          this.field_l = (byte) -118;
-          return super.a(this.field_h.field_Tc, param1, 1);
-        } else {
-          return super.a(this.field_h.field_Tc, param1, 1);
+            this.field_l = (byte) -118;
         }
+        return super.a(this.field_h.field_Tc, param1, 1);
     }
 
     final static void b(int param0) {
-        if (null != dq.field_f) {
-          pq.a(dq.field_f, false);
-          dq.field_f.a((byte) -34, dsa.field_c);
-          dq.field_f = null;
-          if (null == wba.field_o) {
-            nma.field_l.requestFocus();
-            if (param0 != 0) {
-              field_m = -90;
-              return;
-            } else {
-              return;
-            }
-          } else {
+        if (null == dq.field_f) {
+            return;
+        }
+        pq.a(dq.field_f, false);
+        dq.field_f.a((byte) -34, dsa.field_c);
+        dq.field_f = null;
+        if (null != wba.field_o) {
             wba.field_o.a(118);
-            nma.field_l.requestFocus();
-            if (param0 == 0) {
-              return;
-            } else {
-              field_m = -90;
-              return;
-            }
-          }
-        } else {
-          return;
+        }
+        nma.field_l.requestFocus();
+        if (param0 != 0) {
+            field_m = -90;
         }
     }
 
     final static String a(java.applet.Applet param0, String param1, byte param2) {
         try {
             String var3 = null;
-            Throwable var3_ref = null;
-            RuntimeException var3_ref2 = null;
             String[] var4 = null;
             int var5 = 0;
             int var6 = 0;
             int var7 = 0;
             String stackIn_3_0 = null;
-            String stackIn_12_0 = null;
-            Object stackIn_17_0 = null;
+            String stackIn_10_0 = null;
+            Object stackIn_15_0 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
-            RuntimeException stackIn_20_0 = null;
-            StringBuilder stackIn_20_1 = null;
-            RuntimeException stackIn_21_0 = null;
+            String stackIn_19_2 = null;
             StringBuilder stackIn_21_1 = null;
-            String stackIn_21_2 = null;
-            RuntimeException stackIn_22_0 = null;
             StringBuilder stackIn_22_1 = null;
-            RuntimeException stackIn_23_0 = null;
-            StringBuilder stackIn_23_1 = null;
-            RuntimeException stackIn_24_0 = null;
-            StringBuilder stackIn_24_1 = null;
-            String stackIn_24_2 = null;
+            String stackIn_22_2 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            String stackOut_11_0 = null;
-            String stackOut_2_0 = null;
-            Object stackOut_16_0 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            String stackOut_20_2 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
-            RuntimeException stackOut_21_0 = null;
-            StringBuilder stackOut_21_1 = null;
-            RuntimeException stackOut_23_0 = null;
-            StringBuilder stackOut_23_1 = null;
-            String stackOut_23_2 = null;
-            RuntimeException stackOut_22_0 = null;
-            StringBuilder stackOut_22_1 = null;
-            String stackOut_22_2 = null;
+            Throwable var3_ref = null;
+            RuntimeException var3_ref2 = null;
             var7 = TombRacer.field_G ? 1 : 0;
             try {
               L0: {
@@ -108,32 +69,26 @@ final class og extends hl implements qm {
                           decompiledRegionSelector0 = 1;
                           break L1;
                         } else {
-                          var6 = var4[var5].indexOf('=');
-                          if (var7 == 0) {
-                            L3: {
-                              if ((var6 ^ -1) > -1) {
-                                break L3;
+                          L3: {
+                            var6 = var4[var5].indexOf('=');
+                            if ((var6 ^ -1) > -1) {
+                              break L3;
+                            } else {
+                              if (var4[var5].substring(0, var6).trim().equals(param1)) {
+                                stackIn_10_0 = var4[var5].substring(var6 + 1).trim();
+                                decompiledRegionSelector0 = 2;
+                                break L1;
                               } else {
-                                if (var4[var5].substring(0, var6).trim().equals(param1)) {
-                                  stackOut_11_0 = var4[var5].substring(var6 + 1).trim();
-                                  stackIn_12_0 = stackOut_11_0;
-                                  decompiledRegionSelector0 = 2;
-                                  break L1;
-                                } else {
-                                  break L3;
-                                }
+                                break L3;
                               }
                             }
-                            var5++;
-                            continue L2;
-                          } else {
-                            return null;
                           }
+                          var5++;
+                          continue L2;
                         }
                       }
                     } else {
-                      stackOut_2_0 = (String) null;
-                      stackIn_3_0 = stackOut_2_0;
+                      stackIn_3_0 = (String) null;
                       decompiledRegionSelector0 = 0;
                       break L1;
                     }
@@ -151,8 +106,7 @@ final class og extends hl implements qm {
                   break L0;
                 } else {
                   if (decompiledRegionSelector0 == 1) {
-                    stackOut_16_0 = null;
-                    stackIn_17_0 = stackOut_16_0;
+                    stackIn_15_0 = null;
                     decompiledRegionSelector1 = 0;
                     break L0;
                   } else {
@@ -165,64 +119,48 @@ final class og extends hl implements qm {
               decompiledCaughtException = decompiledCaughtParameter1;
               L5: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_18_0 = (RuntimeException) (var3_ref2);
-                stackOut_18_1 = new StringBuilder().append("og.F(");
-                stackIn_20_0 = stackOut_18_0;
-                stackIn_20_1 = stackOut_18_1;
-                stackIn_19_0 = stackOut_18_0;
-                stackIn_19_1 = stackOut_18_1;
+                stackIn_18_0 = (RuntimeException) (var3_ref2);
+
+                stackIn_18_1 = new StringBuilder().append("og.F(");
+
                 if (param0 == null) {
-                  stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackOut_20_2 = "null";
-                  stackIn_21_0 = stackOut_20_0;
-                  stackIn_21_1 = stackOut_20_1;
-                  stackIn_21_2 = stackOut_20_2;
+                  stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+                  stackIn_19_2 = "null";
                   break L5;
                 } else {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "{...}";
-                  stackIn_21_0 = stackOut_19_0;
-                  stackIn_21_1 = stackOut_19_1;
-                  stackIn_21_2 = stackOut_19_2;
+                  stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+                  stackIn_19_2 = "{...}";
                   break L5;
                 }
               }
               L6: {
-                stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-                stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
-                stackIn_23_0 = stackOut_21_0;
-                stackIn_23_1 = stackOut_21_1;
-                stackIn_22_0 = stackOut_21_0;
-                stackIn_22_1 = stackOut_21_1;
+
+
+                stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
+
                 if (param1 == null) {
-                  stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-                  stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-                  stackOut_23_2 = "null";
-                  stackIn_24_0 = stackOut_23_0;
-                  stackIn_24_1 = stackOut_23_1;
-                  stackIn_24_2 = stackOut_23_2;
+                  stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+                  stackIn_22_2 = "null";
                   break L6;
                 } else {
-                  stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-                  stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-                  stackOut_22_2 = "{...}";
-                  stackIn_24_0 = stackOut_22_0;
-                  stackIn_24_1 = stackOut_22_1;
-                  stackIn_24_2 = stackOut_22_2;
+                  stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+                  stackIn_22_2 = "{...}";
                   break L6;
                 }
               }
-              throw tba.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param2 + ')');
+              throw tba.a((Throwable) ((Object) stackIn_19_0), stackIn_22_2 + ',' + param2 + ')');
             }
             if (decompiledRegionSelector1 == 0) {
-              return (String) ((Object) stackIn_17_0);
+              return (String) ((Object) stackIn_15_0);
             } else {
               if (decompiledRegionSelector1 == 1) {
                 return stackIn_3_0;
               } else {
-                return stackIn_12_0;
+                return stackIn_10_0;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -257,11 +195,9 @@ final class og extends hl implements qm {
 
     public final boolean a(boolean param0) {
         if (!param0) {
-          field_m = 54;
-          return super.a(this.field_h.field_Tc, 108);
-        } else {
-          return super.a(this.field_h.field_Tc, 108);
+            field_m = 54;
         }
+        return super.a(this.field_h.field_Tc, 108);
     }
 
     static {

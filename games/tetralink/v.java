@@ -19,8 +19,8 @@ final class v extends mc {
     int field_n;
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = -74 / ((param0 - -57) / 45);
         if (32 < wb.field_c) {
           L0: {

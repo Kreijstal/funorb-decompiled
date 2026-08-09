@@ -30,8 +30,6 @@ final class rb extends ue {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -39,14 +37,6 @@ final class rb extends ue {
         String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -78,27 +68,19 @@ final class rb extends ue {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2_ref);
-            stackOut_6_1 = new StringBuilder().append("rb.C(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2_ref);
+
+            stackIn_8_1 = new StringBuilder().append("rb.C(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -122,7 +104,7 @@ final class rb extends ue {
     }
 
     final void b(int param0) {
-        dl var3 = null;
+        dl var3;
         if (null != ga.field_L) {
           L0: {
             if (tf.field_c) {
@@ -289,16 +271,7 @@ final class rb extends ue {
     }
 
     final void a(boolean param0) {
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
-        boolean discarded$14 = false;
-        boolean discarded$15 = false;
-        boolean discarded$16 = false;
-        boolean discarded$17 = false;
-        int var2 = 0;
+        int var2;
         this.field_f.c(-1);
         if (0 == this.field_f.field_f) {
           var2 = da.a(true, true);
@@ -308,14 +281,14 @@ final class rb extends ue {
                 if (!param0) {
                   return;
                 } else {
-                  discarded$9 = this.a(96);
+                  this.a(96);
                   return;
                 }
               } else {
                 a.field_b = (ue) ((Object) this.field_f);
                 this.field_f.a(true, -13880);
                 if (param0) {
-                  discarded$10 = this.a(96);
+                  this.a(96);
                   return;
                 } else {
                   return;
@@ -326,7 +299,7 @@ final class rb extends ue {
               this.field_f.a(false, -13880);
               if ((var2 ^ -1) != -3) {
                 if (param0) {
-                  discarded$11 = this.a(96);
+                  this.a(96);
                   return;
                 } else {
                   return;
@@ -335,7 +308,7 @@ final class rb extends ue {
                 a.field_b = (ue) ((Object) this.field_f);
                 this.field_f.a(true, -13880);
                 if (param0) {
-                  discarded$12 = this.a(96);
+                  this.a(96);
                   return;
                 } else {
                   return;
@@ -350,7 +323,7 @@ final class rb extends ue {
               this.field_f.a(false, -13880);
               if ((var2 ^ -1) != -3) {
                 if (param0) {
-                  discarded$13 = this.a(96);
+                  this.a(96);
                   return;
                 } else {
                   return;
@@ -359,7 +332,7 @@ final class rb extends ue {
                 a.field_b = (ue) ((Object) this.field_f);
                 this.field_f.a(true, -13880);
                 if (param0) {
-                  discarded$14 = this.a(96);
+                  this.a(96);
                   return;
                 } else {
                   return;
@@ -372,12 +345,12 @@ final class rb extends ue {
                 if (!param0) {
                   return;
                 } else {
-                  discarded$15 = this.a(96);
+                  this.a(96);
                   return;
                 }
               } else {
                 if (param0) {
-                  discarded$16 = this.a(96);
+                  this.a(96);
                   return;
                 } else {
                   return;
@@ -387,7 +360,7 @@ final class rb extends ue {
           }
         } else {
           if (param0) {
-            discarded$17 = this.a(96);
+            this.a(96);
             return;
           } else {
             return;

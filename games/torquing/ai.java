@@ -18,7 +18,6 @@ final class ai extends q {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        RuntimeException var8 = null;
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
@@ -64,8 +63,7 @@ final class ai extends q {
         int stackIn_8_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
+        RuntimeException var8 = null;
         var47 = Torquing.field_u;
         try {
           L0: {
@@ -114,12 +112,10 @@ final class ai extends q {
                 } else {
                   L2: {
                     if (var12 < var9) {
-                      stackOut_7_0 = 0;
-                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_8_0 = 0;
                       break L2;
                     } else {
-                      stackOut_6_0 = 1;
-                      stackIn_8_0 = stackOut_6_0;
+                      stackIn_8_0 = 1;
                       break L2;
                     }
                   }

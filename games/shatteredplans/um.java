@@ -31,81 +31,43 @@ final class um {
     int field_s;
 
     final int[] b(byte param0) {
-        int[] var2 = null;
-        int[] var3 = null;
-        int[] var4 = null;
-        int[] var5 = null;
-        int[] stackIn_1_0 = null;
-        int stackIn_1_1 = 0;
+        int[] var2;
+        int[] var3;
+        int[] var4;
+        int[] var5;
         int[] stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int[] stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
-        int[] stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
         int[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         int stackIn_9_2 = 0;
-        int[] stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
         int[] stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         int[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         int stackIn_13_2 = 0;
-        int[] stackOut_0_0 = null;
-        int stackOut_0_1 = 0;
-        int[] stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        int[] stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        int[] stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        int[] stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        int[] stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        int[] stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        int[] stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
-        int[] stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
         L0: {
           var3 = new int[16];
           var5 = var3;
           var4 = var5;
           var2 = var4;
-          stackOut_0_0 = (int[]) (var3);
-          stackOut_0_1 = 3;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_2_1 = stackOut_0_1;
-          stackIn_1_0 = stackOut_0_0;
-          stackIn_1_1 = stackOut_0_1;
+          stackIn_2_0 = (int[]) (var3);
+
+          stackIn_2_1 = 3;
+
           if (this.field_t != 0) {
-            stackOut_2_0 = (int[]) ((Object) stackIn_2_0);
-            stackOut_2_1 = stackIn_2_1;
-            stackOut_2_2 = 200 * this.field_i / this.field_t;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            stackIn_3_2 = stackOut_2_2;
+            stackIn_3_0 = (int[]) ((Object) stackIn_2_0);
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = 200 * this.field_i / this.field_t;
             break L0;
           } else {
-            stackOut_1_0 = (int[]) ((Object) stackIn_1_0);
-            stackOut_1_1 = stackIn_1_1;
-            stackOut_1_2 = 0;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
+            stackIn_3_0 = (int[]) ((Object) stackIn_2_0);
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = 0;
             break L0;
           }
         }
@@ -124,27 +86,19 @@ final class um {
               var3[12] = (this.field_l + 2 * this.field_u) / (2 * this.field_l);
               var3[13] = (2 * this.field_w - -this.field_l) / (this.field_l * 2);
               var3[14] = (this.field_l + 2 * this.field_z) / (2 * this.field_l);
-              stackOut_10_0 = (int[]) (var2);
-              stackOut_10_1 = 15;
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
+              stackIn_12_0 = (int[]) (var2);
+
+              stackIn_12_1 = 15;
+
               if (this.field_a == 0) {
-                stackOut_12_0 = (int[]) ((Object) stackIn_12_0);
-                stackOut_12_1 = stackIn_12_1;
-                stackOut_12_2 = 100;
-                stackIn_13_0 = stackOut_12_0;
-                stackIn_13_1 = stackOut_12_1;
-                stackIn_13_2 = stackOut_12_2;
+                stackIn_13_0 = (int[]) ((Object) stackIn_12_0);
+                stackIn_13_1 = stackIn_12_1;
+                stackIn_13_2 = 100;
                 break L1;
               } else {
-                stackOut_11_0 = (int[]) ((Object) stackIn_11_0);
-                stackOut_11_1 = stackIn_11_1;
-                stackOut_11_2 = (this.field_a + 201 * this.field_y) / ((this.field_y + this.field_a) * 2);
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_13_1 = stackOut_11_1;
-                stackIn_13_2 = stackOut_11_2;
+                stackIn_13_0 = (int[]) ((Object) stackIn_12_0);
+                stackIn_13_1 = stackIn_12_1;
+                stackIn_13_2 = (this.field_a + 201 * this.field_y) / ((this.field_y + this.field_a) * 2);
                 break L1;
               }
             }
@@ -158,27 +112,19 @@ final class um {
               var5[14] = -1;
               var5[12] = -1;
               var5[13] = -1;
-              stackOut_6_0 = (int[]) (var2);
-              stackOut_6_1 = 15;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
+              stackIn_8_0 = (int[]) (var2);
+
+              stackIn_8_1 = 15;
+
               if (this.field_a == 0) {
-                stackOut_8_0 = (int[]) ((Object) stackIn_8_0);
-                stackOut_8_1 = stackIn_8_1;
-                stackOut_8_2 = 100;
-                stackIn_9_0 = stackOut_8_0;
-                stackIn_9_1 = stackOut_8_1;
-                stackIn_9_2 = stackOut_8_2;
+                stackIn_9_0 = (int[]) ((Object) stackIn_8_0);
+                stackIn_9_1 = stackIn_8_1;
+                stackIn_9_2 = 100;
                 break L2;
               } else {
-                stackOut_7_0 = (int[]) ((Object) stackIn_7_0);
-                stackOut_7_1 = stackIn_7_1;
-                stackOut_7_2 = (this.field_a + 201 * this.field_y) / ((this.field_y + this.field_a) * 2);
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_9_1 = stackOut_7_1;
-                stackIn_9_2 = stackOut_7_2;
+                stackIn_9_0 = (int[]) ((Object) stackIn_8_0);
+                stackIn_9_1 = stackIn_8_1;
+                stackIn_9_2 = (this.field_a + 201 * this.field_y) / ((this.field_y + this.field_a) * 2);
                 break L2;
               }
             }
@@ -194,10 +140,11 @@ final class um {
     }
 
     final static void b(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        RuntimeException var1 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         nd[] var4 = null;
@@ -211,7 +158,6 @@ final class um {
         float var11 = 0.0f;
         int var12 = 0;
         nd[] var13 = null;
-        RuntimeException decompiledCaughtException = null;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -236,9 +182,9 @@ final class um {
                         break L3;
                       }
                     }
-                    fieldTemp$2 = di.field_m + 1;
+                    fieldTemp$0 = di.field_m + 1;
                     di.field_m = di.field_m + 1;
-                    if (-951 == (fieldTemp$2 ^ -1)) {
+                    if (-951 == (fieldTemp$0 ^ -1)) {
                       jc.a(3, (byte) -113);
                       break L0;
                     } else {
@@ -248,9 +194,9 @@ final class um {
                     L4: {
                       var4_ref.field_o[var4_ref.field_q] = var4_ref.field_l;
                       var4_ref.field_i[var4_ref.field_q] = var4_ref.field_n;
-                      fieldTemp$3 = var4_ref.field_q + 1;
+                      fieldTemp$1 = var4_ref.field_q + 1;
                       var4_ref.field_q = var4_ref.field_q + 1;
-                      if (fieldTemp$3 == 50) {
+                      if (fieldTemp$1 == 50) {
                         var4_ref.field_q = 0;
                         break L4;
                       } else {
@@ -327,24 +273,19 @@ final class um {
     }
 
     final String[] a(int param0) {
-        String[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        String[] var5 = null;
-        String[] stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        String stackIn_7_2 = null;
-        int stackIn_7_3 = 0;
-        String[] stackIn_7_4 = null;
-        String[] stackIn_7_5 = null;
-        int stackIn_7_6 = 0;
-        String[] stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        String stackIn_8_2 = null;
-        int stackIn_8_3 = 0;
-        String[] stackIn_8_4 = null;
-        String[] stackIn_8_5 = null;
-        int stackIn_8_6 = 0;
+        String[] array$0 = null;
+        String[] array$1 = null;
+        String[] var2;
+        int var3;
+        int var4;
+        String[] var5;
+        String[] stackIn_8_0;
+        int stackIn_8_1;
+        String stackIn_8_2;
+        int stackIn_8_3;
+        String[] stackIn_8_4;
+        String[] stackIn_8_5;
+        int stackIn_8_6;
         String[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         String stackIn_9_2 = null;
@@ -353,20 +294,13 @@ final class um {
         String[] stackIn_9_5 = null;
         int stackIn_9_6 = 0;
         int stackIn_9_7 = 0;
-        String[] stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        String stackIn_11_2 = null;
-        int stackIn_11_3 = 0;
-        String[] stackIn_11_4 = null;
-        String[] stackIn_11_5 = null;
-        int stackIn_11_6 = 0;
-        String[] stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
-        String stackIn_12_2 = null;
-        int stackIn_12_3 = 0;
-        String[] stackIn_12_4 = null;
-        String[] stackIn_12_5 = null;
-        int stackIn_12_6 = 0;
+        String[] stackIn_12_0;
+        int stackIn_12_1;
+        String stackIn_12_2;
+        int stackIn_12_3;
+        String[] stackIn_12_4;
+        String[] stackIn_12_5;
+        int stackIn_12_6;
         String[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         String stackIn_13_2 = null;
@@ -375,52 +309,6 @@ final class um {
         String[] stackIn_13_5 = null;
         int stackIn_13_6 = 0;
         int stackIn_13_7 = 0;
-        String[] stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        String stackOut_10_2 = null;
-        int stackOut_10_3 = 0;
-        String[] stackOut_10_4 = null;
-        String[] stackOut_10_5 = null;
-        int stackOut_10_6 = 0;
-        String[] stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        String stackOut_12_2 = null;
-        int stackOut_12_3 = 0;
-        String[] stackOut_12_4 = null;
-        String[] stackOut_12_5 = null;
-        int stackOut_12_6 = 0;
-        int stackOut_12_7 = 0;
-        String[] stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        String stackOut_11_2 = null;
-        int stackOut_11_3 = 0;
-        String[] stackOut_11_4 = null;
-        String[] stackOut_11_5 = null;
-        int stackOut_11_6 = 0;
-        int stackOut_11_7 = 0;
-        String[] stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        String stackOut_6_2 = null;
-        int stackOut_6_3 = 0;
-        String[] stackOut_6_4 = null;
-        String[] stackOut_6_5 = null;
-        int stackOut_6_6 = 0;
-        String[] stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        String stackOut_8_2 = null;
-        int stackOut_8_3 = 0;
-        String[] stackOut_8_4 = null;
-        String[] stackOut_8_5 = null;
-        int stackOut_8_6 = 0;
-        int stackOut_8_7 = 0;
-        String[] stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        String stackOut_7_2 = null;
-        int stackOut_7_3 = 0;
-        String[] stackOut_7_4 = null;
-        String[] stackOut_7_5 = null;
-        int stackOut_7_6 = 0;
-        int stackOut_7_7 = 0;
         L0: {
           var4 = ShatteredPlansClient.field_F ? 1 : 0;
           var5 = new String[16];
@@ -451,62 +339,40 @@ final class um {
               var2[12] = re.a(jl.field_O, 4371, new String[]{Integer.toString((this.field_l + this.field_u * 2) / (this.field_l * 2))});
               var2[13] = re.a(jl.field_O, 4371, new String[]{Integer.toString((2 * this.field_w - -this.field_l) / (2 * this.field_l))});
               var2[14] = re.a(jl.field_O, 4371, new String[]{Integer.toString((this.field_l + 2 * this.field_z) / (this.field_l * 2))});
-              stackOut_10_0 = (String[]) (var2);
-              stackOut_10_1 = 15;
-              stackOut_10_2 = jl.field_O;
-              stackOut_10_3 = 4371;
-              stackOut_10_4 = new String[1];
-              stackOut_10_5 = new String[1];
-              stackOut_10_6 = 0;
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              stackIn_12_3 = stackOut_10_3;
-              stackIn_12_4 = stackOut_10_4;
-              stackIn_12_5 = stackOut_10_5;
-              stackIn_12_6 = stackOut_10_6;
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              stackIn_11_3 = stackOut_10_3;
-              stackIn_11_4 = stackOut_10_4;
-              stackIn_11_5 = stackOut_10_5;
-              stackIn_11_6 = stackOut_10_6;
+              array$0 = new String[1];
+              stackIn_12_0 = (String[]) (var2);
+
+              stackIn_12_1 = 15;
+
+              stackIn_12_2 = jl.field_O;
+
+              stackIn_12_3 = 4371;
+
+              stackIn_12_4 = (String[]) (array$0);
+
+              stackIn_12_5 = (String[]) (array$0);
+
+              stackIn_12_6 = 0;
+
               if (this.field_a != 0) {
-                stackOut_12_0 = (String[]) ((Object) stackIn_12_0);
-                stackOut_12_1 = stackIn_12_1;
-                stackOut_12_2 = (String) ((Object) stackIn_12_2);
-                stackOut_12_3 = stackIn_12_3;
-                stackOut_12_4 = (String[]) ((Object) stackIn_12_4);
-                stackOut_12_5 = (String[]) ((Object) stackIn_12_5);
-                stackOut_12_6 = stackIn_12_6;
-                stackOut_12_7 = (this.field_y * 201 + this.field_a) / (2 * (this.field_a + this.field_y));
-                stackIn_13_0 = stackOut_12_0;
-                stackIn_13_1 = stackOut_12_1;
-                stackIn_13_2 = stackOut_12_2;
-                stackIn_13_3 = stackOut_12_3;
-                stackIn_13_4 = stackOut_12_4;
-                stackIn_13_5 = stackOut_12_5;
-                stackIn_13_6 = stackOut_12_6;
-                stackIn_13_7 = stackOut_12_7;
+                stackIn_13_0 = (String[]) ((Object) stackIn_12_0);
+                stackIn_13_1 = stackIn_12_1;
+                stackIn_13_2 = (String) ((Object) stackIn_12_2);
+                stackIn_13_3 = stackIn_12_3;
+                stackIn_13_4 = (String[]) ((Object) stackIn_12_4);
+                stackIn_13_5 = (String[]) ((Object) stackIn_12_5);
+                stackIn_13_6 = stackIn_12_6;
+                stackIn_13_7 = (this.field_y * 201 + this.field_a) / (2 * (this.field_a + this.field_y));
                 break L1;
               } else {
-                stackOut_11_0 = (String[]) ((Object) stackIn_11_0);
-                stackOut_11_1 = stackIn_11_1;
-                stackOut_11_2 = (String) ((Object) stackIn_11_2);
-                stackOut_11_3 = stackIn_11_3;
-                stackOut_11_4 = (String[]) ((Object) stackIn_11_4);
-                stackOut_11_5 = (String[]) ((Object) stackIn_11_5);
-                stackOut_11_6 = stackIn_11_6;
-                stackOut_11_7 = 100;
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_13_1 = stackOut_11_1;
-                stackIn_13_2 = stackOut_11_2;
-                stackIn_13_3 = stackOut_11_3;
-                stackIn_13_4 = stackOut_11_4;
-                stackIn_13_5 = stackOut_11_5;
-                stackIn_13_6 = stackOut_11_6;
-                stackIn_13_7 = stackOut_11_7;
+                stackIn_13_0 = (String[]) ((Object) stackIn_12_0);
+                stackIn_13_1 = stackIn_12_1;
+                stackIn_13_2 = (String) ((Object) stackIn_12_2);
+                stackIn_13_3 = stackIn_12_3;
+                stackIn_13_4 = (String[]) ((Object) stackIn_12_4);
+                stackIn_13_5 = (String[]) ((Object) stackIn_12_5);
+                stackIn_13_6 = stackIn_12_6;
+                stackIn_13_7 = 100;
                 break L1;
               }
             }
@@ -518,62 +384,40 @@ final class um {
               var2[14] = qc.field_t;
               var2[12] = qc.field_t;
               var2[13] = qc.field_t;
-              stackOut_6_0 = (String[]) (var2);
-              stackOut_6_1 = 15;
-              stackOut_6_2 = jl.field_O;
-              stackOut_6_3 = 4371;
-              stackOut_6_4 = new String[1];
-              stackOut_6_5 = new String[1];
-              stackOut_6_6 = 0;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
-              stackIn_8_3 = stackOut_6_3;
-              stackIn_8_4 = stackOut_6_4;
-              stackIn_8_5 = stackOut_6_5;
-              stackIn_8_6 = stackOut_6_6;
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              stackIn_7_3 = stackOut_6_3;
-              stackIn_7_4 = stackOut_6_4;
-              stackIn_7_5 = stackOut_6_5;
-              stackIn_7_6 = stackOut_6_6;
+              array$1 = new String[1];
+              stackIn_8_0 = (String[]) (var2);
+
+              stackIn_8_1 = 15;
+
+              stackIn_8_2 = jl.field_O;
+
+              stackIn_8_3 = 4371;
+
+              stackIn_8_4 = (String[]) (array$1);
+
+              stackIn_8_5 = (String[]) (array$1);
+
+              stackIn_8_6 = 0;
+
               if (this.field_a != 0) {
-                stackOut_8_0 = (String[]) ((Object) stackIn_8_0);
-                stackOut_8_1 = stackIn_8_1;
-                stackOut_8_2 = (String) ((Object) stackIn_8_2);
-                stackOut_8_3 = stackIn_8_3;
-                stackOut_8_4 = (String[]) ((Object) stackIn_8_4);
-                stackOut_8_5 = (String[]) ((Object) stackIn_8_5);
-                stackOut_8_6 = stackIn_8_6;
-                stackOut_8_7 = (this.field_y * 201 + this.field_a) / (2 * (this.field_a + this.field_y));
-                stackIn_9_0 = stackOut_8_0;
-                stackIn_9_1 = stackOut_8_1;
-                stackIn_9_2 = stackOut_8_2;
-                stackIn_9_3 = stackOut_8_3;
-                stackIn_9_4 = stackOut_8_4;
-                stackIn_9_5 = stackOut_8_5;
-                stackIn_9_6 = stackOut_8_6;
-                stackIn_9_7 = stackOut_8_7;
+                stackIn_9_0 = (String[]) ((Object) stackIn_8_0);
+                stackIn_9_1 = stackIn_8_1;
+                stackIn_9_2 = (String) ((Object) stackIn_8_2);
+                stackIn_9_3 = stackIn_8_3;
+                stackIn_9_4 = (String[]) ((Object) stackIn_8_4);
+                stackIn_9_5 = (String[]) ((Object) stackIn_8_5);
+                stackIn_9_6 = stackIn_8_6;
+                stackIn_9_7 = (this.field_y * 201 + this.field_a) / (2 * (this.field_a + this.field_y));
                 break L2;
               } else {
-                stackOut_7_0 = (String[]) ((Object) stackIn_7_0);
-                stackOut_7_1 = stackIn_7_1;
-                stackOut_7_2 = (String) ((Object) stackIn_7_2);
-                stackOut_7_3 = stackIn_7_3;
-                stackOut_7_4 = (String[]) ((Object) stackIn_7_4);
-                stackOut_7_5 = (String[]) ((Object) stackIn_7_5);
-                stackOut_7_6 = stackIn_7_6;
-                stackOut_7_7 = 100;
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_9_1 = stackOut_7_1;
-                stackIn_9_2 = stackOut_7_2;
-                stackIn_9_3 = stackOut_7_3;
-                stackIn_9_4 = stackOut_7_4;
-                stackIn_9_5 = stackOut_7_5;
-                stackIn_9_6 = stackOut_7_6;
-                stackIn_9_7 = stackOut_7_7;
+                stackIn_9_0 = (String[]) ((Object) stackIn_8_0);
+                stackIn_9_1 = stackIn_8_1;
+                stackIn_9_2 = (String) ((Object) stackIn_8_2);
+                stackIn_9_3 = stackIn_8_3;
+                stackIn_9_4 = (String[]) ((Object) stackIn_8_4);
+                stackIn_9_5 = (String[]) ((Object) stackIn_8_5);
+                stackIn_9_6 = stackIn_8_6;
+                stackIn_9_7 = 100;
                 break L2;
               }
             }
@@ -590,8 +434,6 @@ final class um {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         bi[] stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -599,16 +441,6 @@ final class um {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        bi[] stackOut_5_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (vd.a(param0, param1, param2, 2)) {
@@ -620,13 +452,11 @@ final class um {
                   break L1;
                 }
               }
-              stackOut_5_0 = ti.a(-126);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = ti.a(-126);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -635,27 +465,19 @@ final class um {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var4);
-            stackOut_7_1 = new StringBuilder().append("um.D(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("um.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }

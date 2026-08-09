@@ -32,6 +32,12 @@ final class oj extends ma {
     }
 
     final static void a(di param0, byte param1) {
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -40,22 +46,6 @@ final class oj extends ma {
         oq var7 = null;
         int var8 = 0;
         oq var9 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             var7 = new oq(param0.a(false, "", "logo.fo3d"));
@@ -104,27 +94,19 @@ final class oj extends ma {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2);
-            stackOut_9_1 = new StringBuilder().append("oj.A(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var2);
+
+            stackIn_11_1 = new StringBuilder().append("oj.A(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -133,10 +115,8 @@ final class oj extends ma {
     }
 
     final static boolean c(int param0) {
-        int var1 = 0;
+        int var1;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           L1: {
             var1 = 38 / ((param0 - 45) / 37);
@@ -150,8 +130,7 @@ final class oj extends ma {
                   break L1;
                 } else {
                   if (!wj.i(-1)) {
-                    stackOut_6_0 = 0;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = 0;
                     break L0;
                   } else {
                     break L1;
@@ -160,8 +139,7 @@ final class oj extends ma {
               }
             }
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 1;
           break L0;
         }
         return stackIn_7_0 != 0;
@@ -169,15 +147,11 @@ final class oj extends ma {
 
     final static boolean a(int param0, int param1, int param2) {
         int var3 = tp.field_e != null ? 1 : 0;
-        if ((qi.field_a ^ -1) == param2) {
-            if (fj.a(ro.field_s, rn.field_g, 17, hg.field_a, hp.field_a)) {
-                if (hg.field_a != 2) {
-                    if (var3 != 0) {
-                        return false;
-                    }
-                }
-                return hj.a(hg.field_a, rn.field_g, hp.field_a, ro.field_s, (byte) 76);
+        if ((qi.field_a ^ -1) == param2 && fj.a(ro.field_s, rn.field_g, 17, hg.field_a, hp.field_a)) {
+            if (hg.field_a != 2 && var3 != 0) {
+                return false;
             }
+            return hj.a(hg.field_a, rn.field_g, hp.field_a, ro.field_s, (byte) 76);
         }
         if (!((qi.field_a ^ -1) != -11)) {
             if (!(var3 == 0)) {
@@ -195,10 +169,8 @@ final class oj extends ma {
                     return false;
                 }
             }
-            if (2 != tq.field_t) {
-                if (var3 != 0) {
-                    return false;
-                }
+            if (2 != tq.field_t && var3 != 0) {
+                return false;
             }
             if (vl.j(param2 + 12010)) {
                 String var4 = (String) null;

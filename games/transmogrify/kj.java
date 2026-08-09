@@ -3,7 +3,7 @@
  */
 final class kj {
     final static void a(int param0, String param1, java.applet.Applet param2) throws Throwable {
-        Object discarded$0 = netscape.javascript.JSObject.getWindow(param2).eval(param1);
+        netscape.javascript.JSObject.getWindow(param2).eval(param1);
         int var3 = 50 / ((param0 - -39) / 41);
     }
 

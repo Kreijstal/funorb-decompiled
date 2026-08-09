@@ -35,55 +35,35 @@ final class uea extends bob {
         int var2_int = 0;
         RuntimeException var2 = null;
         uma stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        uma stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var2_int = 50 / ((param1 - -28) / 55);
-            stackOut_0_0 = new uma(param0.a(true), param0.a(true), param0.a(true), param0.a(true), param0.c((byte) -81), param0.c((byte) -45), param0.e((byte) -119));
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = new uma(param0.a(true), param0.a(true), param0.a(true), param0.a(true), param0.c((byte) -81), param0.c((byte) -45), param0.e((byte) -119));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var2);
-            stackOut_2_1 = new StringBuilder().append("uea.Q(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var2);
+
+            stackIn_4_1 = new StringBuilder().append("uea.Q(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -106,43 +86,23 @@ final class uea extends bob {
     }
 
     private final void a(uea param0, int param1, boolean param2) {
-        vv dupTemp$17 = null;
+        vv dupTemp$2 = null;
         int var4_int = 0;
-        RuntimeException var4 = null;
         vv var5 = null;
         vv var6 = null;
         int var7 = 0;
-        vv stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
         vv stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         vv stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         vv stackIn_9_2 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vv stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        vv stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        vv stackOut_8_2 = null;
-        vv stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        vv stackOut_7_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException var4 = null;
         var7 = VoidHunters.field_G;
         try {
           L0: {
@@ -164,29 +124,21 @@ final class uea extends bob {
                       if (var5 != null) {
                         L4: {
                           var6 = param0.field_q[var4_int];
-                          stackOut_6_0 = (vv) (var5);
-                          stackOut_6_1 = 105;
-                          stackIn_8_0 = stackOut_6_0;
-                          stackIn_8_1 = stackOut_6_1;
-                          stackIn_7_0 = stackOut_6_0;
-                          stackIn_7_1 = stackOut_6_1;
+                          stackIn_8_0 = (vv) (var5);
+
+                          stackIn_8_1 = 105;
+
                           if (var6 != null) {
-                            stackOut_8_0 = (vv) ((Object) stackIn_8_0);
-                            stackOut_8_1 = stackIn_8_1;
-                            stackOut_8_2 = (vv) (var6);
-                            stackIn_9_0 = stackOut_8_0;
-                            stackIn_9_1 = stackOut_8_1;
-                            stackIn_9_2 = stackOut_8_2;
+                            stackIn_9_0 = (vv) ((Object) stackIn_8_0);
+                            stackIn_9_1 = stackIn_8_1;
+                            stackIn_9_2 = (vv) (var6);
                             break L4;
                           } else {
-                            dupTemp$17 = new vv();
-                            param0.field_q[var4_int] = dupTemp$17;
-                            stackOut_7_0 = (vv) ((Object) stackIn_7_0);
-                            stackOut_7_1 = stackIn_7_1;
-                            stackOut_7_2 = (vv) (dupTemp$17);
-                            stackIn_9_0 = stackOut_7_0;
-                            stackIn_9_1 = stackOut_7_1;
-                            stackIn_9_2 = stackOut_7_2;
+                            dupTemp$2 = new vv();
+                            param0.field_q[var4_int] = dupTemp$2;
+                            stackIn_9_0 = (vv) ((Object) stackIn_8_0);
+                            stackIn_9_1 = stackIn_8_1;
+                            stackIn_9_2 = (vv) (dupTemp$2);
                             break L4;
                           }
                         }
@@ -217,27 +169,19 @@ final class uea extends bob {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var4);
-            stackOut_15_1 = new StringBuilder().append("uea.B(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var4);
+
+            stackIn_17_1 = new StringBuilder().append("uea.B(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L6;
             }
           }
@@ -254,13 +198,10 @@ final class uea extends bob {
 
     final void a(phb[] param0, byte param1) {
         vv[] var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         vv var5 = null;
         int var6 = 0;
         vv[] var7 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -268,14 +209,7 @@ final class uea extends bob {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var3_ref = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
@@ -310,27 +244,19 @@ final class uea extends bob {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3_ref);
-            stackOut_9_1 = new StringBuilder().append("uea.N(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3_ref);
+
+            stackIn_11_1 = new StringBuilder().append("uea.N(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -344,20 +270,14 @@ final class uea extends bob {
     }
 
     final static void a(byte param0, boolean param1, boolean param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        dla stackIn_9_0 = null;
+        int var4;
+        int var8;
         dla stackIn_10_0 = null;
         dla stackIn_11_0 = null;
         int stackIn_11_1 = 0;
-        dla stackOut_8_0 = null;
-        dla stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        dla stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
+        int var5;
+        int var6;
+        int var7;
         L0: {
           var8 = VoidHunters.field_G;
           if (param0 == 88) {
@@ -397,20 +317,15 @@ final class uea extends bob {
                   break L1;
                 } else {
                   L3: {
-                    stackOut_8_0 = wca.field_b;
-                    stackIn_10_0 = stackOut_8_0;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_10_0 = wca.field_b;
+
                     if (0 != (lo.field_a[param3].a(noa.field_q, pk.field_o, 6868) ^ -1)) {
-                      stackOut_10_0 = (dla) ((Object) stackIn_10_0);
-                      stackOut_10_1 = 0;
-                      stackIn_11_0 = stackOut_10_0;
-                      stackIn_11_1 = stackOut_10_1;
+                      stackIn_11_0 = (dla) ((Object) stackIn_10_0);
+                      stackIn_11_1 = 0;
                       break L3;
                     } else {
-                      stackOut_9_0 = (dla) ((Object) stackIn_9_0);
-                      stackOut_9_1 = 1;
-                      stackIn_11_0 = stackOut_9_0;
-                      stackIn_11_1 = stackOut_9_1;
+                      stackIn_11_0 = (dla) ((Object) stackIn_10_0);
+                      stackIn_11_1 = 1;
                       break L3;
                     }
                   }
@@ -445,28 +360,18 @@ final class uea extends bob {
 
     final void a(int param0, phb param1) {
         vv[] var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         vv var5 = null;
         int var6 = 0;
         phb[] var7 = null;
         vv[] var8 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var3_ref = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
@@ -504,27 +409,19 @@ final class uea extends bob {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3_ref);
-            stackOut_9_1 = new StringBuilder().append("uea.S(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3_ref);
+
+            stackIn_11_1 = new StringBuilder().append("uea.S(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -533,6 +430,13 @@ final class uea extends bob {
     }
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
+        shb stackIn_3_0 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        String stackIn_33_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         vv var7 = null;
         int var8 = 0;
@@ -542,35 +446,14 @@ final class uea extends bob {
         vv var13 = null;
         vv var14 = null;
         vv var15 = null;
-        shb stackIn_3_0 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        shb stackOut_2_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
         try {
           L0: {
             L1: {
               if (param1 instanceof htb) {
-                stackOut_2_0 = (shb) (param1);
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (shb) (param1);
                 break L1;
               } else {
-                stackOut_1_0 = null;
-                stackIn_3_0 = (shb) ((Object) stackOut_1_0);
+                stackIn_3_0 = null;
                 break L1;
               }
             }
@@ -665,27 +548,19 @@ final class uea extends bob {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var6 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) (var6);
-            stackOut_30_1 = new StringBuilder().append("uea.A(").append(param0).append(',');
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackIn_32_0 = (RuntimeException) (var6);
+
+            stackIn_32_1 = new StringBuilder().append("uea.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L8;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L8;
             }
           }

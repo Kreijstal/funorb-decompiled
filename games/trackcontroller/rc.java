@@ -13,11 +13,18 @@ abstract class rc {
 
     final static void a(int param0, la param1) {
         try {
-            int discarded$1 = 0;
+            RuntimeException stackIn_68_0 = null;
+            StringBuilder stackIn_68_1 = null;
+            RuntimeException stackIn_69_0 = null;
+            StringBuilder stackIn_69_1 = null;
+            String stackIn_69_2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
             int var5 = 0;
+            int var6_int = 0;
             ClassNotFoundException var6 = null;
             InvalidClassException var6_ref = null;
             StreamCorruptedException var6_ref2 = null;
@@ -30,7 +37,6 @@ abstract class rc {
             NullPointerException var6_ref9 = null;
             Exception var6_ref10 = null;
             Throwable var6_ref11 = null;
-            int var6_int = 0;
             int var8 = 0;
             Object[] var9 = null;
             int var10_int = 0;
@@ -52,23 +58,6 @@ abstract class rc {
             java.lang.reflect.Field var29 = null;
             java.lang.reflect.Method var30 = null;
             java.lang.reflect.Method var31 = null;
-            RuntimeException stackIn_67_0 = null;
-            StringBuilder stackIn_67_1 = null;
-            RuntimeException stackIn_68_0 = null;
-            StringBuilder stackIn_68_1 = null;
-            RuntimeException stackIn_69_0 = null;
-            StringBuilder stackIn_69_1 = null;
-            String stackIn_69_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_66_0 = null;
-            StringBuilder stackOut_66_1 = null;
-            RuntimeException stackOut_68_0 = null;
-            StringBuilder stackOut_68_1 = null;
-            String stackOut_68_2 = null;
-            RuntimeException stackOut_67_0 = null;
-            StringBuilder stackOut_67_1 = null;
-            String stackOut_67_2 = null;
             var19 = null;
             var20 = null;
             var17 = null;
@@ -102,7 +91,7 @@ abstract class rc {
                         var5 = 0;
                         L3: while (true) {
                           if (var5 >= var18.field_n) {
-                            discarded$1 = param1.a(var4, false);
+                            param1.a(var4, false);
                             var18.a(-79);
                             decompiledRegionSelector0 = 2;
                             break L0;
@@ -337,27 +326,19 @@ abstract class rc {
               decompiledCaughtException = decompiledCaughtParameter12;
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_66_0 = (RuntimeException) (var2);
-                stackOut_66_1 = new StringBuilder().append("rc.E(").append(param0).append(',');
-                stackIn_68_0 = stackOut_66_0;
-                stackIn_68_1 = stackOut_66_1;
-                stackIn_67_0 = stackOut_66_0;
-                stackIn_67_1 = stackOut_66_1;
+                stackIn_68_0 = (RuntimeException) (var2);
+
+                stackIn_68_1 = new StringBuilder().append("rc.E(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
-                  stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
-                  stackOut_68_2 = "null";
-                  stackIn_69_0 = stackOut_68_0;
-                  stackIn_69_1 = stackOut_68_1;
-                  stackIn_69_2 = stackOut_68_2;
+                  stackIn_69_0 = (RuntimeException) ((Object) stackIn_68_0);
+                  stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
+                  stackIn_69_2 = "null";
                   break L24;
                 } else {
-                  stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
-                  stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
-                  stackOut_67_2 = "{...}";
-                  stackIn_69_0 = stackOut_67_0;
-                  stackIn_69_1 = stackOut_67_1;
-                  stackIn_69_2 = stackOut_67_2;
+                  stackIn_69_0 = (RuntimeException) ((Object) stackIn_68_0);
+                  stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
+                  stackIn_69_2 = "{...}";
                   break L24;
                 }
               }
@@ -393,8 +374,6 @@ abstract class rc {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -402,26 +381,14 @@ abstract class rc {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0 <= -23) {
-              stackOut_3_0 = param1.a((byte) 48);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = param1.a((byte) 48);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -430,27 +397,19 @@ abstract class rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("rc.B(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("rc.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }

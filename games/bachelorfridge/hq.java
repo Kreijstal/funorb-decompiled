@@ -18,36 +18,24 @@ final class hq extends tda {
     private jp field_o;
 
     final synchronized void a(kia param0, boolean param1, int param2, int param3, int param4, boolean param5) {
-        RuntimeException var7 = null;
-        int var7_int = 0;
-        int var8 = 0;
-        Object stackIn_19_0 = null;
         Object stackIn_20_0 = null;
         Object stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_33_0 = 0;
-        jp stackIn_41_0 = null;
-        kia stackIn_41_1 = null;
-        int stackIn_41_2 = 0;
         jp stackIn_42_0 = null;
         kia stackIn_42_1 = null;
         int stackIn_42_2 = 0;
-        jp stackIn_43_0 = null;
-        kia stackIn_43_1 = null;
-        int stackIn_43_2 = 0;
-        int stackIn_43_3 = 0;
-        jp stackIn_49_0 = null;
-        kia stackIn_49_1 = null;
-        int stackIn_49_2 = 0;
+        jp stackIn_43_0;
+        kia stackIn_43_1;
+        int stackIn_43_2;
+        int stackIn_43_3;
         jp stackIn_50_0 = null;
         kia stackIn_50_1 = null;
         int stackIn_50_2 = 0;
-        jp stackIn_51_0 = null;
-        kia stackIn_51_1 = null;
-        int stackIn_51_2 = 0;
-        int stackIn_51_3 = 0;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
+        jp stackIn_51_0;
+        kia stackIn_51_1;
+        int stackIn_51_2;
+        int stackIn_51_3;
         RuntimeException stackIn_56_0 = null;
         StringBuilder stackIn_56_1 = null;
         RuntimeException stackIn_57_0 = null;
@@ -55,43 +43,9 @@ final class hq extends tda {
         String stackIn_57_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_18_0 = null;
-        Object stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        Object stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
-        jp stackOut_48_0 = null;
-        kia stackOut_48_1 = null;
-        int stackOut_48_2 = 0;
-        jp stackOut_50_0 = null;
-        kia stackOut_50_1 = null;
-        int stackOut_50_2 = 0;
-        int stackOut_50_3 = 0;
-        jp stackOut_49_0 = null;
-        kia stackOut_49_1 = null;
-        int stackOut_49_2 = 0;
-        int stackOut_49_3 = 0;
-        jp stackOut_40_0 = null;
-        kia stackOut_40_1 = null;
-        int stackOut_40_2 = 0;
-        jp stackOut_42_0 = null;
-        kia stackOut_42_1 = null;
-        int stackOut_42_2 = 0;
-        int stackOut_42_3 = 0;
-        jp stackOut_41_0 = null;
-        kia stackOut_41_1 = null;
-        int stackOut_41_2 = 0;
-        int stackOut_41_3 = 0;
-        RuntimeException stackOut_54_0 = null;
-        StringBuilder stackOut_54_1 = null;
-        RuntimeException stackOut_56_0 = null;
-        StringBuilder stackOut_56_1 = null;
-        String stackOut_56_2 = null;
-        RuntimeException stackOut_55_0 = null;
-        StringBuilder stackOut_55_1 = null;
-        String stackOut_55_2 = null;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8 = 0;
         var8 = BachelorFridge.field_y;
         try {
           L0: {
@@ -146,20 +100,15 @@ final class hq extends tda {
                 }
               }
               L5: {
-                stackOut_18_0 = this;
-                stackIn_20_0 = stackOut_18_0;
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_20_0 = this;
+
                 if (!param1) {
-                  stackOut_20_0 = this;
-                  stackOut_20_1 = 0;
-                  stackIn_21_0 = stackOut_20_0;
-                  stackIn_21_1 = stackOut_20_1;
+                  stackIn_21_0 = this;
+                  stackIn_21_1 = 0;
                   break L5;
                 } else {
-                  stackOut_19_0 = this;
-                  stackOut_19_1 = 1;
-                  stackIn_21_0 = stackOut_19_0;
-                  stackIn_21_1 = stackOut_19_1;
+                  stackIn_21_0 = this;
+                  stackIn_21_1 = 1;
                   break L5;
                 }
               }
@@ -174,12 +123,10 @@ final class hq extends tda {
                       } else {
                         L7: {
                           if (-524289 >= (this.field_t ^ -1)) {
-                            stackOut_32_0 = 0;
-                            stackIn_33_0 = stackOut_32_0;
+                            stackIn_33_0 = 0;
                             break L7;
                           } else {
-                            stackOut_31_0 = 1;
-                            stackIn_33_0 = stackOut_31_0;
+                            stackIn_33_0 = 1;
                             break L7;
                           }
                         }
@@ -207,34 +154,23 @@ final class hq extends tda {
                           break L10;
                         } else {
                           L11: {
-                            stackOut_48_0 = this.field_o;
-                            stackOut_48_1 = (kia) (param0);
-                            stackOut_48_2 = -111;
-                            stackIn_50_0 = stackOut_48_0;
-                            stackIn_50_1 = stackOut_48_1;
-                            stackIn_50_2 = stackOut_48_2;
-                            stackIn_49_0 = stackOut_48_0;
-                            stackIn_49_1 = stackOut_48_1;
-                            stackIn_49_2 = stackOut_48_2;
+                            stackIn_50_0 = this.field_o;
+
+                            stackIn_50_1 = (kia) (param0);
+
+                            stackIn_50_2 = -111;
+
                             if (param1) {
-                              stackOut_50_0 = (jp) ((Object) stackIn_50_0);
-                              stackOut_50_1 = (kia) ((Object) stackIn_50_1);
-                              stackOut_50_2 = stackIn_50_2;
-                              stackOut_50_3 = 0;
-                              stackIn_51_0 = stackOut_50_0;
-                              stackIn_51_1 = stackOut_50_1;
-                              stackIn_51_2 = stackOut_50_2;
-                              stackIn_51_3 = stackOut_50_3;
+                              stackIn_51_0 = (jp) ((Object) stackIn_50_0);
+                              stackIn_51_1 = (kia) ((Object) stackIn_50_1);
+                              stackIn_51_2 = stackIn_50_2;
+                              stackIn_51_3 = 0;
                               break L11;
                             } else {
-                              stackOut_49_0 = (jp) ((Object) stackIn_49_0);
-                              stackOut_49_1 = (kia) ((Object) stackIn_49_1);
-                              stackOut_49_2 = stackIn_49_2;
-                              stackOut_49_3 = 1;
-                              stackIn_51_0 = stackOut_49_0;
-                              stackIn_51_1 = stackOut_49_1;
-                              stackIn_51_2 = stackOut_49_2;
-                              stackIn_51_3 = stackOut_49_3;
+                              stackIn_51_0 = (jp) ((Object) stackIn_50_0);
+                              stackIn_51_1 = (kia) ((Object) stackIn_50_1);
+                              stackIn_51_2 = stackIn_50_2;
+                              stackIn_51_3 = 1;
                               break L11;
                             }
                           }
@@ -258,34 +194,23 @@ final class hq extends tda {
                         this.field_u = param0;
                         if (param0 != null) {
                           L14: {
-                            stackOut_40_0 = this.field_s;
-                            stackOut_40_1 = (kia) (param0);
-                            stackOut_40_2 = -115;
-                            stackIn_42_0 = stackOut_40_0;
-                            stackIn_42_1 = stackOut_40_1;
-                            stackIn_42_2 = stackOut_40_2;
-                            stackIn_41_0 = stackOut_40_0;
-                            stackIn_41_1 = stackOut_40_1;
-                            stackIn_41_2 = stackOut_40_2;
+                            stackIn_42_0 = this.field_s;
+
+                            stackIn_42_1 = (kia) (param0);
+
+                            stackIn_42_2 = -115;
+
                             if (param1) {
-                              stackOut_42_0 = (jp) ((Object) stackIn_42_0);
-                              stackOut_42_1 = (kia) ((Object) stackIn_42_1);
-                              stackOut_42_2 = stackIn_42_2;
-                              stackOut_42_3 = 0;
-                              stackIn_43_0 = stackOut_42_0;
-                              stackIn_43_1 = stackOut_42_1;
-                              stackIn_43_2 = stackOut_42_2;
-                              stackIn_43_3 = stackOut_42_3;
+                              stackIn_43_0 = (jp) ((Object) stackIn_42_0);
+                              stackIn_43_1 = (kia) ((Object) stackIn_42_1);
+                              stackIn_43_2 = stackIn_42_2;
+                              stackIn_43_3 = 0;
                               break L14;
                             } else {
-                              stackOut_41_0 = (jp) ((Object) stackIn_41_0);
-                              stackOut_41_1 = (kia) ((Object) stackIn_41_1);
-                              stackOut_41_2 = stackIn_41_2;
-                              stackOut_41_3 = 1;
-                              stackIn_43_0 = stackOut_41_0;
-                              stackIn_43_1 = stackOut_41_1;
-                              stackIn_43_2 = stackOut_41_2;
-                              stackIn_43_3 = stackOut_41_3;
+                              stackIn_43_0 = (jp) ((Object) stackIn_42_0);
+                              stackIn_43_1 = (kia) ((Object) stackIn_42_1);
+                              stackIn_43_2 = stackIn_42_2;
+                              stackIn_43_3 = 1;
                               break L14;
                             }
                           }
@@ -323,27 +248,19 @@ final class hq extends tda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var7 = decompiledCaughtException;
-            stackOut_54_0 = (RuntimeException) (var7);
-            stackOut_54_1 = new StringBuilder().append("hq.H(");
-            stackIn_56_0 = stackOut_54_0;
-            stackIn_56_1 = stackOut_54_1;
-            stackIn_55_0 = stackOut_54_0;
-            stackIn_55_1 = stackOut_54_1;
+            stackIn_56_0 = (RuntimeException) (var7);
+
+            stackIn_56_1 = new StringBuilder().append("hq.H(");
+
             if (param0 == null) {
-              stackOut_56_0 = (RuntimeException) ((Object) stackIn_56_0);
-              stackOut_56_1 = (StringBuilder) ((Object) stackIn_56_1);
-              stackOut_56_2 = "null";
-              stackIn_57_0 = stackOut_56_0;
-              stackIn_57_1 = stackOut_56_1;
-              stackIn_57_2 = stackOut_56_2;
+              stackIn_57_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackIn_57_1 = (StringBuilder) ((Object) stackIn_56_1);
+              stackIn_57_2 = "null";
               break L15;
             } else {
-              stackOut_55_0 = (RuntimeException) ((Object) stackIn_55_0);
-              stackOut_55_1 = (StringBuilder) ((Object) stackIn_55_1);
-              stackOut_55_2 = "{...}";
-              stackIn_57_0 = stackOut_55_0;
-              stackIn_57_1 = stackOut_55_1;
-              stackIn_57_2 = stackOut_55_2;
+              stackIn_57_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackIn_57_1 = (StringBuilder) ((Object) stackIn_56_1);
+              stackIn_57_2 = "{...}";
               break L15;
             }
           }
@@ -369,7 +286,7 @@ final class hq extends tda {
     }
 
     final synchronized void a(int param0) {
-        int var3 = 0;
+        int var3;
         L0: {
           var3 = BachelorFridge.field_y;
           if (-1 > (this.field_t ^ -1)) {
@@ -592,20 +509,9 @@ final class hq extends tda {
     }
 
     final void a(int[] param0, int param1, int param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_34_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_62_0 = 0;
-        RuntimeException stackIn_67_0 = null;
-        StringBuilder stackIn_67_1 = null;
         RuntimeException stackIn_68_0 = null;
         StringBuilder stackIn_68_1 = null;
         RuntimeException stackIn_69_0 = null;
@@ -613,20 +519,15 @@ final class hq extends tda {
         String stackIn_69_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_33_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_60_0 = 0;
-        RuntimeException stackOut_66_0 = null;
-        StringBuilder stackOut_66_1 = null;
-        RuntimeException stackOut_68_0 = null;
-        StringBuilder stackOut_68_1 = null;
-        String stackOut_68_2 = null;
-        RuntimeException stackOut_67_0 = null;
-        StringBuilder stackOut_67_1 = null;
-        String stackOut_67_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         var11 = BachelorFridge.field_y;
         try {
           L0: {
@@ -725,12 +626,10 @@ final class hq extends tda {
               }
               L6: {
                 if (!pb.field_q) {
-                  stackOut_33_0 = param2;
-                  stackIn_34_0 = stackOut_33_0;
+                  stackIn_34_0 = param2;
                   break L6;
                 } else {
-                  stackOut_32_0 = param2 << 893102177;
-                  stackIn_34_0 = stackOut_32_0;
+                  stackIn_34_0 = param2 << 893102177;
                   break L6;
                 }
               }
@@ -777,13 +676,11 @@ final class hq extends tda {
                         this.field_s.a(this.field_j, 0, param2);
                         this.field_o.a(this.field_k, 0, param2);
                         if (!pb.field_q) {
-                          stackOut_47_0 = param1;
-                          stackIn_48_0 = stackOut_47_0;
+                          stackIn_48_0 = param1;
                           break L11;
                         } else {
                           param1 = param1 << 1;
-                          stackOut_46_0 = param1 << 1;
-                          stackIn_48_0 = stackOut_46_0;
+                          stackIn_48_0 = param1 << 1;
                           break L11;
                         }
                       }
@@ -831,12 +728,10 @@ final class hq extends tda {
                       this.field_r.a(this.field_j, 0, param2);
                       if (pb.field_q) {
                         param1 = param1 << 1;
-                        stackOut_61_0 = param1 << 1;
-                        stackIn_62_0 = stackOut_61_0;
+                        stackIn_62_0 = param1 << 1;
                         break L16;
                       } else {
-                        stackOut_60_0 = param1;
-                        stackIn_62_0 = stackOut_60_0;
+                        stackIn_62_0 = param1;
                         break L16;
                       }
                     }
@@ -866,27 +761,19 @@ final class hq extends tda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var4 = decompiledCaughtException;
-            stackOut_66_0 = (RuntimeException) (var4);
-            stackOut_66_1 = new StringBuilder().append("hq.C(");
-            stackIn_68_0 = stackOut_66_0;
-            stackIn_68_1 = stackOut_66_1;
-            stackIn_67_0 = stackOut_66_0;
-            stackIn_67_1 = stackOut_66_1;
+            stackIn_68_0 = (RuntimeException) (var4);
+
+            stackIn_68_1 = new StringBuilder().append("hq.C(");
+
             if (param0 == null) {
-              stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
-              stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
-              stackOut_68_2 = "null";
-              stackIn_69_0 = stackOut_68_0;
-              stackIn_69_1 = stackOut_68_1;
-              stackIn_69_2 = stackOut_68_2;
+              stackIn_69_0 = (RuntimeException) ((Object) stackIn_68_0);
+              stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
+              stackIn_69_2 = "null";
               break L18;
             } else {
-              stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
-              stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
-              stackOut_67_2 = "{...}";
-              stackIn_69_0 = stackOut_67_0;
-              stackIn_69_1 = stackOut_67_1;
-              stackIn_69_2 = stackOut_67_2;
+              stackIn_69_0 = (RuntimeException) ((Object) stackIn_68_0);
+              stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
+              stackIn_69_2 = "{...}";
               break L18;
             }
           }
@@ -916,10 +803,9 @@ final class hq extends tda {
     }
 
     private final void a(int param0, int param1, jp param2, int param3) {
-        int discarded$0 = 0;
         try {
             if (param3 > 0) {
-                discarded$0 = this.d();
+                this.d();
             }
             param2.a(-1, param0, (byte) -107);
             param2.c(224, param1);

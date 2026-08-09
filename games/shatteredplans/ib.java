@@ -10,8 +10,9 @@ abstract class ib {
     static String field_e;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -26,7 +27,6 @@ abstract class ib {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        RuntimeException decompiledCaughtException = null;
         var20 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {

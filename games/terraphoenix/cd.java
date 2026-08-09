@@ -3,7 +3,7 @@
  */
 final class cd {
     final static void a(java.applet.Applet param0, int param1, String param2) throws Throwable {
-        Object discarded$6 = netscape.javascript.JSObject.getWindow(param0).eval(param2);
+        netscape.javascript.JSObject.getWindow(param0).eval(param2);
         if (param1 != 13162) {
             return;
         }

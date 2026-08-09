@@ -16,10 +16,10 @@ final class kb {
     }
 
     final static String a(int param0, boolean param1, char param2) {
-        char[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        char[] var6 = null;
+        char[] var3;
+        int var4;
+        int var5;
+        char[] var6;
         var5 = MinerDisturbance.field_ab;
         var6 = new char[param0];
         var3 = var6;

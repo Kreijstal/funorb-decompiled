@@ -27,10 +27,8 @@ final class rh extends rf {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var7 = 0;
+        int var7;
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           L1: {
             var7 = 91 % ((param6 - 41) / 38);
@@ -46,32 +44,30 @@ final class rh extends rf {
                   if (param0 + param4 <= param5) {
                     break L1;
                   } else {
-                    stackOut_4_0 = 1;
-                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_6_0 = 1;
                     break L0;
                   }
                 }
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L0;
         }
         return stackIn_6_0 != 0;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        RuntimeException var6 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var12 = StarCannon.field_A;
         try {
           L0: {
@@ -203,11 +199,18 @@ final class rh extends rf {
 
     final static void a(ia param0, byte param1) {
         try {
-            int discarded$1 = 0;
+            RuntimeException stackIn_64_0 = null;
+            StringBuilder stackIn_64_1 = null;
+            RuntimeException stackIn_65_0 = null;
+            StringBuilder stackIn_65_1 = null;
+            String stackIn_65_2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
             int var5 = 0;
+            int var6_int = 0;
             ClassNotFoundException var6 = null;
             InvalidClassException var6_ref = null;
             StreamCorruptedException var6_ref2 = null;
@@ -220,7 +223,6 @@ final class rh extends rf {
             NullPointerException var6_ref9 = null;
             Exception var6_ref10 = null;
             Throwable var6_ref11 = null;
-            int var6_int = 0;
             int var8 = 0;
             Object[] var9 = null;
             int var10_int = 0;
@@ -241,23 +243,6 @@ final class rh extends rf {
             java.lang.reflect.Field var28 = null;
             java.lang.reflect.Method var29 = null;
             java.lang.reflect.Method var30 = null;
-            RuntimeException stackIn_63_0 = null;
-            StringBuilder stackIn_63_1 = null;
-            RuntimeException stackIn_64_0 = null;
-            StringBuilder stackIn_64_1 = null;
-            RuntimeException stackIn_65_0 = null;
-            StringBuilder stackIn_65_1 = null;
-            String stackIn_65_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_62_0 = null;
-            StringBuilder stackOut_62_1 = null;
-            RuntimeException stackOut_64_0 = null;
-            StringBuilder stackOut_64_1 = null;
-            String stackOut_64_2 = null;
-            RuntimeException stackOut_63_0 = null;
-            StringBuilder stackOut_63_1 = null;
-            String stackOut_63_2 = null;
             var18 = null;
             var19 = null;
             var16 = null;
@@ -285,7 +270,7 @@ final class rh extends rf {
                         var5 = 0;
                         L2: while (true) {
                           if (var17.field_n <= var5) {
-                            discarded$1 = param0.b((byte) -89, var4);
+                            param0.b((byte) -89, var4);
                             var17.b(4);
                             var5 = -107 % ((param1 - -16) / 37);
                             decompiledRegionSelector0 = 2;
@@ -520,27 +505,19 @@ final class rh extends rf {
               decompiledCaughtException = decompiledCaughtParameter12;
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_62_0 = (RuntimeException) (var2);
-                stackOut_62_1 = new StringBuilder().append("rh.A(");
-                stackIn_64_0 = stackOut_62_0;
-                stackIn_64_1 = stackOut_62_1;
-                stackIn_63_0 = stackOut_62_0;
-                stackIn_63_1 = stackOut_62_1;
+                stackIn_64_0 = (RuntimeException) (var2);
+
+                stackIn_64_1 = new StringBuilder().append("rh.A(");
+
                 if (param0 == null) {
-                  stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-                  stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-                  stackOut_64_2 = "null";
-                  stackIn_65_0 = stackOut_64_0;
-                  stackIn_65_1 = stackOut_64_1;
-                  stackIn_65_2 = stackOut_64_2;
+                  stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+                  stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+                  stackIn_65_2 = "null";
                   break L24;
                 } else {
-                  stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
-                  stackOut_63_1 = (StringBuilder) ((Object) stackIn_63_1);
-                  stackOut_63_2 = "{...}";
-                  stackIn_65_0 = stackOut_63_0;
-                  stackIn_65_1 = stackOut_63_1;
-                  stackIn_65_2 = stackOut_63_2;
+                  stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+                  stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+                  stackIn_65_2 = "{...}";
                   break L24;
                 }
               }

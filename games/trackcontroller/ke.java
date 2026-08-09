@@ -17,22 +17,36 @@ final class ke {
     }
 
     final synchronized static byte[] b(int param0, int param1) {
-        int fieldTemp$49 = 0;
-        int fieldTemp$50 = 0;
-        int fieldTemp$51 = 0;
-        int fieldTemp$52 = 0;
-        int fieldTemp$53 = 0;
-        int fieldTemp$54 = 0;
-        int fieldTemp$55 = 0;
-        byte[] var2 = null;
-        int var2_int = 0;
-        byte[] var3 = null;
+        int fieldTemp$2 = 0;
+        int dupTemp$3 = 0;
+        byte[][] arrayValue$4 = null;
+        int fieldTemp$5 = 0;
+        int dupTemp$6 = 0;
+        byte[][] arrayValue$7 = null;
+        int dupTemp$8 = 0;
+        byte[][] arrayValue$9 = null;
+        int fieldTemp$10 = 0;
+        int dupTemp$11 = 0;
+        byte[][] arrayValue$12 = null;
+        int dupTemp$13 = 0;
+        byte[][] arrayValue$14 = null;
+        int dupTemp$15 = 0;
+        byte[][] arrayValue$16 = null;
+        int fieldTemp$17 = 0;
+        int fieldTemp$18 = 0;
+        int fieldTemp$19 = 0;
+        int dupTemp$20 = 0;
+        byte[][] arrayValue$21 = null;
+        int fieldTemp$22 = 0;
+        byte[] var2;
+        int var2_int;
+        byte[] var3;
         if ((param0 ^ -1) != -101) {
           if (-5001 == (param0 ^ -1)) {
             if ((be.field_i ^ -1) < -1) {
-              fieldTemp$49 = be.field_i - 1;
+              fieldTemp$2 = be.field_i - 1;
               be.field_i = be.field_i - 1;
-              var2 = ch.field_z[fieldTemp$49];
+              var2 = ch.field_z[fieldTemp$2];
               ch.field_z[be.field_i] = null;
               return var2;
             } else {
@@ -45,8 +59,10 @@ final class ke {
                     } else {
                       if (param0 == sa.field_R[var2_int]) {
                         if ((ai.field_e[var2_int] ^ -1) < -1) {
-                          ai.field_e[var2_int] = ai.field_e[var2_int] - 1;
-                          var3 = me.field_i[var2_int][ai.field_e[var2_int] - 1];
+                          dupTemp$3 = ai.field_e[var2_int] - 1;
+                          arrayValue$4 = me.field_i[var2_int];
+                          ai.field_e[var2_int] = dupTemp$3;
+                          var3 = arrayValue$4[dupTemp$3];
                           me.field_i[var2_int][ai.field_e[var2_int]] = null;
                           return var3;
                         } else {
@@ -64,9 +80,9 @@ final class ke {
                 }
               } else {
                 if (0 < ee.field_e) {
-                  fieldTemp$50 = ee.field_e - 1;
+                  fieldTemp$5 = ee.field_e - 1;
                   ee.field_e = ee.field_e - 1;
-                  var2 = hf.field_b[fieldTemp$50];
+                  var2 = hf.field_b[fieldTemp$5];
                   hf.field_b[ee.field_e] = null;
                   return var2;
                 } else {
@@ -78,8 +94,10 @@ final class ke {
                       } else {
                         if (param0 == sa.field_R[var2_int]) {
                           if ((ai.field_e[var2_int] ^ -1) < -1) {
-                            ai.field_e[var2_int] = ai.field_e[var2_int] - 1;
-                            var3 = me.field_i[var2_int][ai.field_e[var2_int] - 1];
+                            dupTemp$6 = ai.field_e[var2_int] - 1;
+                            arrayValue$7 = me.field_i[var2_int];
+                            ai.field_e[var2_int] = dupTemp$6;
+                            var3 = arrayValue$7[dupTemp$6];
                             me.field_i[var2_int][ai.field_e[var2_int]] = null;
                             return var3;
                           } else {
@@ -108,8 +126,10 @@ final class ke {
                   } else {
                     if (param0 == sa.field_R[var2_int]) {
                       if ((ai.field_e[var2_int] ^ -1) < -1) {
-                        ai.field_e[var2_int] = ai.field_e[var2_int] - 1;
-                        var3 = me.field_i[var2_int][ai.field_e[var2_int] - 1];
+                        dupTemp$8 = ai.field_e[var2_int] - 1;
+                        arrayValue$9 = me.field_i[var2_int];
+                        ai.field_e[var2_int] = dupTemp$8;
+                        var3 = arrayValue$9[dupTemp$8];
                         me.field_i[var2_int][ai.field_e[var2_int]] = null;
                         return var3;
                       } else {
@@ -127,9 +147,9 @@ final class ke {
               }
             } else {
               if (0 < ee.field_e) {
-                fieldTemp$51 = ee.field_e - 1;
+                fieldTemp$10 = ee.field_e - 1;
                 ee.field_e = ee.field_e - 1;
-                var2 = hf.field_b[fieldTemp$51];
+                var2 = hf.field_b[fieldTemp$10];
                 hf.field_b[ee.field_e] = null;
                 return var2;
               } else {
@@ -141,8 +161,10 @@ final class ke {
                     } else {
                       if (param0 == sa.field_R[var2_int]) {
                         if ((ai.field_e[var2_int] ^ -1) < -1) {
-                          ai.field_e[var2_int] = ai.field_e[var2_int] - 1;
-                          var3 = me.field_i[var2_int][ai.field_e[var2_int] - 1];
+                          dupTemp$11 = ai.field_e[var2_int] - 1;
+                          arrayValue$12 = me.field_i[var2_int];
+                          ai.field_e[var2_int] = dupTemp$11;
+                          var3 = arrayValue$12[dupTemp$11];
                           me.field_i[var2_int][ai.field_e[var2_int]] = null;
                           return var3;
                         } else {
@@ -172,8 +194,10 @@ final class ke {
                       if (sa.field_R.length > var2_int) {
                         if (param0 == sa.field_R[var2_int]) {
                           if ((ai.field_e[var2_int] ^ -1) < -1) {
-                            ai.field_e[var2_int] = ai.field_e[var2_int] - 1;
-                            var3 = me.field_i[var2_int][ai.field_e[var2_int] - 1];
+                            dupTemp$13 = ai.field_e[var2_int] - 1;
+                            arrayValue$14 = me.field_i[var2_int];
+                            ai.field_e[var2_int] = dupTemp$13;
+                            var3 = arrayValue$14[dupTemp$13];
                             me.field_i[var2_int][ai.field_e[var2_int]] = null;
                             return var3;
                           } else {
@@ -199,8 +223,10 @@ final class ke {
                         if (sa.field_R.length > var2_int) {
                           if (param0 == sa.field_R[var2_int]) {
                             if ((ai.field_e[var2_int] ^ -1) < -1) {
-                              ai.field_e[var2_int] = ai.field_e[var2_int] - 1;
-                              var3 = me.field_i[var2_int][ai.field_e[var2_int] - 1];
+                              dupTemp$15 = ai.field_e[var2_int] - 1;
+                              arrayValue$16 = me.field_i[var2_int];
+                              ai.field_e[var2_int] = dupTemp$15;
+                              var3 = arrayValue$16[dupTemp$15];
                               me.field_i[var2_int][ai.field_e[var2_int]] = null;
                               return var3;
                             } else {
@@ -219,17 +245,17 @@ final class ke {
                       return new byte[param0];
                     }
                   } else {
-                    fieldTemp$52 = ee.field_e - 1;
+                    fieldTemp$17 = ee.field_e - 1;
                     ee.field_e = ee.field_e - 1;
-                    var2 = hf.field_b[fieldTemp$52];
+                    var2 = hf.field_b[fieldTemp$17];
                     hf.field_b[ee.field_e] = null;
                     return var2;
                   }
                 }
               } else {
-                fieldTemp$53 = be.field_i - 1;
+                fieldTemp$18 = be.field_i - 1;
                 be.field_i = be.field_i - 1;
-                var2 = ch.field_z[fieldTemp$53];
+                var2 = ch.field_z[fieldTemp$18];
                 ch.field_z[be.field_i] = null;
                 return var2;
               }
@@ -239,9 +265,9 @@ final class ke {
                   break L6;
                 } else {
                   if (0 < ee.field_e) {
-                    fieldTemp$54 = ee.field_e - 1;
+                    fieldTemp$19 = ee.field_e - 1;
                     ee.field_e = ee.field_e - 1;
-                    var2 = hf.field_b[fieldTemp$54];
+                    var2 = hf.field_b[fieldTemp$19];
                     hf.field_b[ee.field_e] = null;
                     return var2;
                   } else {
@@ -255,8 +281,10 @@ final class ke {
                   if (sa.field_R.length > var2_int) {
                     if (param0 == sa.field_R[var2_int]) {
                       if ((ai.field_e[var2_int] ^ -1) < -1) {
-                        ai.field_e[var2_int] = ai.field_e[var2_int] - 1;
-                        var3 = me.field_i[var2_int][ai.field_e[var2_int] - 1];
+                        dupTemp$20 = ai.field_e[var2_int] - 1;
+                        arrayValue$21 = me.field_i[var2_int];
+                        ai.field_e[var2_int] = dupTemp$20;
+                        var3 = arrayValue$21[dupTemp$20];
                         me.field_i[var2_int][ai.field_e[var2_int]] = null;
                         return var3;
                       } else {
@@ -276,9 +304,9 @@ final class ke {
               }
             }
           } else {
-            fieldTemp$55 = mf.field_c - 1;
+            fieldTemp$22 = mf.field_c - 1;
             mf.field_c = mf.field_c - 1;
-            var2 = f.field_b[fieldTemp$55];
+            var2 = f.field_b[fieldTemp$22];
             f.field_b[mf.field_c] = null;
             return var2;
           }
@@ -286,10 +314,10 @@ final class ke {
     }
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         vk var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
           L0: {

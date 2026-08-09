@@ -18,21 +18,17 @@ abstract class ba {
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_5_0 = 0;
         var1 = wj.field_k;
         synchronized (var1) {
           L0: {
             if (o.field_b == bh.field_e) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               return stackIn_4_0 != 0;
             } else {
               oa.field_H = oi.field_e[o.field_b];
               rd.field_p = ia.field_d[o.field_b];
               o.field_b = o.field_b - param0 & 127;
-              stackOut_5_0 = 1;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 1;
               break L0;
             }
           }

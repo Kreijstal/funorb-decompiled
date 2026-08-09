@@ -16,7 +16,7 @@ final class eh extends mc {
     static u field_p;
 
     final static void b(byte param0) {
-        int var1 = 0;
+        int var1;
         var1 = 6 % ((40 - param0) / 42);
         if ((th.field_g ^ -1) >= -1) {
           if (te.field_P != pk.field_O.field_j) {

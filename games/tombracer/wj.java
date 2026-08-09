@@ -8,7 +8,6 @@ final class wj {
     final static void a(cga param0, int param1, int param2) {
         kh var5 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             if (param2 > -116) {
                 wj.a((byte) 1);
@@ -24,7 +23,7 @@ final class wj {
             var5.a(param0.field_h, (byte) -20);
             var5.a(param0.field_m, (byte) -123);
             var5.a(param0.field_n, (byte) 92);
-            discarded$0 = var5.g(var4, 64);
+            var5.g(var4, 64);
             var5.d(var5.field_h - var4, (byte) 16);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) ((Object) runtimeException), "wj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -33,21 +32,10 @@ final class wj {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         String var7 = null;
-        L0: {
-          L1: {
-            if (bta.field_q == param3) {
-              break L1;
-            } else {
-              var7 = lw.field_i;
-              if (!TombRacer.field_G) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          var7 = jaa.field_a;
-          break L0;
+        if (bta.field_q != param3) {
+            var7 = lw.field_i;
+        } else {
+            var7 = jaa.field_a;
         }
         lba.a(param6, param5, param1, (byte) 53, param0, param2, var7, param4);
     }

@@ -26,23 +26,12 @@ final class og {
         bc var3 = null;
         RuntimeException var3_ref = null;
         bc stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        bc stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -56,35 +45,26 @@ final class og {
             }
             ((nl) ((Object) var3)).field_g = param2;
             ((nl) ((Object) var3)).field_c = param1;
-            stackOut_2_0 = (bc) (var3);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (bc) (var3);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3_ref);
-            stackOut_4_1 = new StringBuilder().append("og.B(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3_ref);
+
+            stackIn_6_1 = new StringBuilder().append("og.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -94,8 +74,14 @@ final class og {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -104,20 +90,6 @@ final class og {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
         var13 = stellarshard.field_B;
         try {
           L0: {
@@ -126,48 +98,40 @@ final class og {
                 var5_int = param2 + param0;
                 var6 = param4 + param3;
                 if (ti.field_e >= param0) {
-                  stackOut_5_0 = ti.field_e;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = ti.field_e;
                   break L1;
                 } else {
-                  stackOut_4_0 = param0;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = param0;
                   break L1;
                 }
               }
               L2: {
                 var7 = stackIn_6_0;
                 if (param4 > ti.field_f) {
-                  stackOut_8_0 = param4;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = param4;
                   break L2;
                 } else {
-                  stackOut_7_0 = ti.field_f;
-                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_0 = ti.field_f;
                   break L2;
                 }
               }
               L3: {
                 var8 = stackIn_9_0;
                 if (var5_int >= ti.field_c) {
-                  stackOut_11_0 = ti.field_c;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = ti.field_c;
                   break L3;
                 } else {
-                  stackOut_10_0 = var5_int;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = var5_int;
                   break L3;
                 }
               }
               L4: {
                 var9 = stackIn_12_0;
                 if (ti.field_l > var6) {
-                  stackOut_14_0 = var6;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = var6;
                   break L4;
                 } else {
-                  stackOut_13_0 = ti.field_l;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = ti.field_l;
                   break L4;
                 }
               }

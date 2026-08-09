@@ -37,10 +37,6 @@ final class ub implements uj {
         int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_2_0 = 0;
         var3 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -58,16 +54,14 @@ final class ub implements uj {
               var2 = 0;
               L2: while (true) {
                 if (var1.field_y <= var2) {
-                  stackOut_20_0 = 1;
-                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_0 = 1;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   L3: {
                     if (var4.field_r[var2] != null) {
                       if (var4.field_r[var2].field_c == 0) {
-                        stackOut_12_0 = 0;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       } else {
@@ -82,8 +76,7 @@ final class ub implements uj {
                       break L4;
                     } else {
                       if (var4.field_q[var2].field_c == 0) {
-                        stackOut_17_0 = 0;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -96,8 +89,7 @@ final class ub implements uj {
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }

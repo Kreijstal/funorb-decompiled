@@ -27,8 +27,6 @@ final class rf {
         int var5 = 0;
         Object stackIn_8_0 = null;
         mh stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -36,16 +34,6 @@ final class rf {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        mh stackOut_10_0 = null;
-        Object stackOut_7_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         var5 = TetraLink.field_J;
         try {
           L0: {
@@ -61,8 +49,7 @@ final class rf {
             }
             L2: while (true) {
               if (var2_int <= var3) {
-                stackOut_10_0 = jg.field_h;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = jg.field_h;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -72,8 +59,7 @@ final class rf {
                     var3++;
                     continue L2;
                   } else {
-                    stackOut_7_0 = null;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = null;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -87,27 +73,19 @@ final class rf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var2);
-            stackOut_12_1 = new StringBuilder().append("rf.B(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var2);
+
+            stackIn_14_1 = new StringBuilder().append("rf.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }
@@ -121,80 +99,42 @@ final class rf {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
         int var15 = 0;
-        L0: {
-          var7 = param2 - param0;
-          var8 = param3 - param1;
-          var9 = (int)Math.sqrt((double)(var7 * var7 + var8 * var8));
-          var10 = (int)(65536.0 / Math.sqrt((double)(var7 * var7 + var8 * var8)));
-          var7 = var7 * var10;
-          var8 = var8 * var10;
-          var11 = param0;
-          var12 = param1;
-          var13 = param2;
-          var14 = param3;
-          if (var11 <= var13) {
-            break L0;
-          } else {
+        int var7 = param2 - param0;
+        int var8 = param3 - param1;
+        int var9 = (int)Math.sqrt((double)(var7 * var7 + var8 * var8));
+        int var10 = (int)(65536.0 / Math.sqrt((double)(var7 * var7 + var8 * var8)));
+        var7 = var7 * var10;
+        var8 = var8 * var10;
+        int var11 = param0;
+        int var12 = param1;
+        int var13 = param2;
+        int var14 = param3;
+        if (var11 > var13) {
             var15 = var11;
             var11 = var13;
             var13 = var15;
-            break L0;
-          }
         }
-        L1: {
-          if (var12 <= var14) {
-            break L1;
-          } else {
+        if (var12 > var14) {
             var15 = var12;
             var12 = var14;
             var14 = var15;
-            break L1;
-          }
         }
-        L2: {
-          var11 = var11 - param4;
-          var12 = var12 - param4;
-          var13 = var13 + param4;
-          var14 = var14 + param4;
-          if (var11 >= ra.field_j) {
-            break L2;
-          } else {
+        var11 = var11 - param4;
+        var12 = var12 - param4;
+        var13 = var13 + param4;
+        var14 = var14 + param4;
+        if (var11 < ra.field_j) {
             var11 = ra.field_j;
-            break L2;
-          }
         }
-        L3: {
-          if (var12 >= ra.field_i) {
-            break L3;
-          } else {
+        if (var12 < ra.field_i) {
             var12 = ra.field_i;
-            break L3;
-          }
         }
-        L4: {
-          if (var13 <= ra.field_l) {
-            break L4;
-          } else {
+        if (var13 > ra.field_l) {
             var13 = ra.field_l;
-            break L4;
-          }
         }
-        L5: {
-          if (var14 <= ra.field_g) {
-            break L5;
-          } else {
+        if (var14 > ra.field_g) {
             var14 = ra.field_g;
-            break L5;
-          }
         }
         dk.field_b = 256 / param4;
         ng.field_n = param5 * 128 / param4;
@@ -208,19 +148,19 @@ final class rf {
 
     private final static void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$1 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
         var14 = (param0 << 4) - param13;
         var15 = param11;
         var16 = param1;
@@ -340,31 +280,31 @@ final class rf {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
         L0: {
           var4 = param2 * param2;
           var5 = param0 - param2 >> 4;
@@ -504,19 +444,19 @@ final class rf {
 
     private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$1 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
         var14 = (param0 << 4) - param13;
         var15 = param11;
         var16 = param1;
@@ -632,14 +572,9 @@ final class rf {
     }
 
     private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        int var14 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
+        int var14;
         L0: while (true) {
           if (param11 >= 0) {
             return;
@@ -665,17 +600,14 @@ final class rf {
                           L3: {
                             if (param0 >= param2) {
                               if (param0 <= param5 - param2) {
-                                stackOut_15_0 = param8;
-                                stackIn_16_0 = stackOut_15_0;
+                                stackIn_16_0 = param8;
                                 break L3;
                               } else {
-                                stackOut_14_0 = (param5 + param2 - param0) * ng.field_n >> 8;
-                                stackIn_16_0 = stackOut_14_0;
+                                stackIn_16_0 = (param5 + param2 - param0) * ng.field_n >> 8;
                                 break L3;
                               }
                             } else {
-                              stackOut_12_0 = (param0 + param2) * ng.field_n >> 8;
-                              stackIn_16_0 = stackOut_12_0;
+                              stackIn_16_0 = (param0 + param2) * ng.field_n >> 8;
                               break L3;
                             }
                           }
@@ -683,12 +615,10 @@ final class rf {
                             param3 = stackIn_16_0;
                             param4 = param1 * param3 * dk.field_b >> 8;
                             if (param4 < 0) {
-                              stackOut_18_0 = bg.field_k[param3 + param4];
-                              stackIn_19_0 = stackOut_18_0;
+                              stackIn_19_0 = bg.field_k[param3 + param4];
                               break L4;
                             } else {
-                              stackOut_17_0 = bg.field_k[param3 - param4];
-                              stackIn_19_0 = stackOut_17_0;
+                              stackIn_19_0 = bg.field_k[param3 - param4];
                               break L4;
                             }
                           }

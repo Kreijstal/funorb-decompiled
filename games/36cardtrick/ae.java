@@ -3,12 +3,12 @@
  */
 final class ae {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int[] var9;
         if (param5 > 0) {
           if (param5 < param4) {
             L0: {
@@ -63,12 +63,12 @@ final class ae {
                       if (param0 >= 0) {
                         return;
                       } else {
-                        incrementValue$2 = var8;
+                        incrementValue$0 = var8;
                         var8++;
-                        if (incrementValue$2 != var6) {
-                          incrementValue$3 = var7;
+                        if (incrementValue$0 != var6) {
+                          incrementValue$1 = var7;
                           var7++;
-                          var9[incrementValue$3] = param3;
+                          var9[incrementValue$1] = param3;
                           param0++;
                           continue L5;
                         } else {
@@ -98,11 +98,11 @@ final class ae {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$1 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var13 = null;
+        int incrementValue$0 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int[] var13;
         if (param5 > 0) {
           if (param5 < param4) {
             L0: {
@@ -157,9 +157,9 @@ final class ae {
                       if (param1 >= 0) {
                         return;
                       } else {
-                        incrementValue$1 = var8;
+                        incrementValue$0 = var8;
                         var8++;
-                        if (incrementValue$1 != var6) {
+                        if (incrementValue$0 != var6) {
                           var13[var7] = param3;
                           var7 = var7 + vj.field_l;
                           param1++;
@@ -191,23 +191,23 @@ final class ae {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var13 = param7;
         var14 = -param6;
         L0: while (true) {
           if (var14 >= 0) {
             return;
           } else {
-            incrementValue$8 = param8;
+            incrementValue$3 = param8;
             param8++;
-            if (incrementValue$8 != param9) {
+            if (incrementValue$3 != param9) {
               param7 = var13;
               var15 = -param5;
               L1: while (true) {
@@ -217,20 +217,20 @@ final class ae {
                   var14++;
                   continue L0;
                 } else {
-                  incrementValue$9 = param7;
+                  incrementValue$4 = param7;
                   param7++;
-                  if (incrementValue$9 != param9) {
-                    incrementValue$10 = param3;
+                  if (incrementValue$4 != param9) {
+                    incrementValue$5 = param3;
                     param3++;
-                    param2 = param1[incrementValue$10];
+                    param2 = param1[incrementValue$5];
                     if (param2 == 0) {
                       param4++;
                       var15++;
                       continue L1;
                     } else {
-                      incrementValue$11 = param4;
+                      incrementValue$6 = param4;
                       param4++;
-                      param0[incrementValue$11] = param2;
+                      param0[incrementValue$6] = param2;
                       var15++;
                       continue L1;
                     }
@@ -264,11 +264,11 @@ final class ae {
     }
 
     final static void a(kc param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         if (param5 > 0) {
           if (param5 < param4) {
             L0: {
@@ -378,13 +378,13 @@ final class ae {
     }
 
     final static void a(kc param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         if (param4 > 0) {
           if (param4 < param3) {
             L0: {
@@ -497,17 +497,17 @@ final class ae {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
         var14 = param13 & 16711935;
         var15 = param13 >> 8 & 255;
         var16 = param7;
@@ -516,9 +516,9 @@ final class ae {
           if (var17 >= 0) {
             return;
           } else {
-            incrementValue$5 = param8;
+            incrementValue$0 = param8;
             param8++;
-            if (incrementValue$5 != param9) {
+            if (incrementValue$0 != param9) {
               param7 = var16;
               var18 = -param5;
               L1: while (true) {
@@ -528,28 +528,28 @@ final class ae {
                   var17++;
                   continue L0;
                 } else {
-                  incrementValue$6 = param7;
+                  incrementValue$1 = param7;
                   param7++;
-                  if (incrementValue$6 != param9) {
-                    incrementValue$7 = param3;
+                  if (incrementValue$1 != param9) {
+                    incrementValue$2 = param3;
                     param3++;
-                    param2 = param1[incrementValue$7];
+                    param2 = param1[incrementValue$2];
                     if (param2 == 0) {
                       param4++;
                       var18++;
                       continue L1;
                     } else {
                       if (param2 >> 8 != (param2 & 65535)) {
-                        incrementValue$8 = param4;
+                        incrementValue$3 = param4;
                         param4++;
-                        param0[incrementValue$8] = param2;
+                        param0[incrementValue$3] = param2;
                         var18++;
                         continue L1;
                       } else {
                         param2 = param2 & 255;
-                        incrementValue$9 = param4;
+                        incrementValue$4 = param4;
                         param4++;
-                        param0[incrementValue$9] = (param2 * var14 >> 8 & 16711935) + (param2 * var15 & 65280);
+                        param0[incrementValue$4] = (param2 * var14 >> 8 & 16711935) + (param2 * var15 & 65280);
                         var18++;
                         continue L1;
                       }
@@ -584,8 +584,8 @@ final class ae {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var7 = 0;
-        int var8 = 0;
+        int var7;
+        int var8;
         if (param6 > 0) {
           if (param6 < param5) {
             L0: {
@@ -684,22 +684,22 @@ final class ae {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         var10 = param5;
         var11 = -param4;
         L0: while (true) {
           if (var11 >= 0) {
             return;
           } else {
-            incrementValue$7 = param6;
+            incrementValue$3 = param6;
             param6++;
-            if (incrementValue$7 != param7) {
+            if (incrementValue$3 != param7) {
               param5 = var10;
               var12 = -param3;
               L1: while (true) {
@@ -708,12 +708,12 @@ final class ae {
                   var11++;
                   continue L0;
                 } else {
-                  incrementValue$8 = param5;
+                  incrementValue$4 = param5;
                   param5++;
-                  if (incrementValue$8 != param7) {
-                    incrementValue$9 = param2;
+                  if (incrementValue$4 != param7) {
+                    incrementValue$5 = param2;
                     param2++;
-                    param0[incrementValue$9] = param1;
+                    param0[incrementValue$5] = param1;
                     var12++;
                     continue L1;
                   } else {

@@ -10,14 +10,14 @@ final class js implements Iterator {
     private hs field_b;
 
     public final Object next() {
-        wt var1 = this.field_d;
+        Object var1 = this.field_d;
         if (var1 == this.field_b.field_c) {
             this.field_d = null;
             var1 = null;
         } else {
-            this.field_d = var1.field_j;
+            this.field_d = ((wt) (var1)).field_j;
         }
-        this.field_a = var1;
+        this.field_a = (wt) (var1);
         return var1;
     }
 

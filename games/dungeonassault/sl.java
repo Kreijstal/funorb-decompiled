@@ -34,25 +34,18 @@ final class sl {
     }
 
     final static boolean b(int param0) {
-        boolean discarded$2 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 15000) {
           L0: {
-            discarded$2 = sl.b(126);
+            sl.b(126);
             rm.field_P = true;
             ab.field_a = kd.c(-2456) - -15000L;
             if (11 != kh.field_n) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -62,12 +55,10 @@ final class sl {
             rm.field_P = true;
             ab.field_a = kd.c(-2456) - -15000L;
             if (11 != kh.field_n) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

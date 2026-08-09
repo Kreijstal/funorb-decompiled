@@ -19,9 +19,9 @@ final class ia extends pv {
     }
 
     final boolean b(boolean param0) {
-        int fieldTemp$2 = this.field_g + 1;
+        int fieldTemp$1 = this.field_g + 1;
         this.field_g = this.field_g + 1;
-        if (fieldTemp$2 > this.d(300)) {
+        if (fieldTemp$1 > this.d(300)) {
           this.b(-1);
           return true;
         } else {

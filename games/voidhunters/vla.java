@@ -31,10 +31,7 @@ final class vla extends dqa implements en, oo {
     }
 
     public final void a(int param0, int param1, int param2, htb param3, int param4) {
-        RuntimeException var6 = null;
         int var7 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -42,14 +39,7 @@ final class vla extends dqa implements en, oo {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var6 = null;
         var7 = VoidHunters.field_G;
         try {
           L0: {
@@ -93,27 +83,19 @@ final class vla extends dqa implements en, oo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var6);
-            stackOut_14_1 = new StringBuilder().append("vla.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var6);
+
+            stackIn_16_1 = new StringBuilder().append("vla.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L2;
             }
           }
@@ -127,9 +109,8 @@ final class vla extends dqa implements en, oo {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        int discarded$0 = 0;
         if (!(this.field_v == null)) {
-            discarded$0 = loa.field_o.a(this.field_v, this.field_g + (param0 - -20), 15 + (param3 + this.field_r), -40 + this.field_h, this.field_f, 16777215, -1, 1, 0, loa.field_o.field_k);
+            loa.field_o.a(this.field_v, this.field_g + (param0 - -20), 15 + (param3 + this.field_r), -40 + this.field_h, this.field_f, 16777215, -1, 1, 0, loa.field_o.field_k);
         }
         if (!(this.field_z == null)) {
             dma.h(param0 + 10, param3 + 134, -20 + this.field_h, 4210752);
@@ -150,7 +131,7 @@ final class vla extends dqa implements en, oo {
     }
 
     private final void d(int param0) {
-        uf var3 = null;
+        uf var3;
         L0: {
           if (param0 == -1) {
             break L0;
@@ -187,8 +168,6 @@ final class vla extends dqa implements en, oo {
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
         int stackIn_11_0 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -196,41 +175,25 @@ final class vla extends dqa implements en, oo {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_10_0 = 0;
-        boolean stackOut_8_0 = false;
-        boolean stackOut_5_0 = false;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             if (super.a(param0, param1, param2, param3)) {
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (-99 != (param1 ^ -1)) {
                 if (param1 != 99) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = 0;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_8_0 = this.a(true, param2);
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = this.a(true, param2);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_5_0 = this.a(param2, 0);
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = this.a(param2, 0);
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -240,27 +203,19 @@ final class vla extends dqa implements en, oo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var5);
-            stackOut_12_1 = new StringBuilder().append("vla.N(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var5);
+
+            stackIn_14_1 = new StringBuilder().append("vla.N(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L1;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L1;
             }
           }
@@ -293,30 +248,17 @@ final class vla extends dqa implements en, oo {
 
     vla(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (wwa) null);
-        sca dupTemp$2 = null;
-        sca dupTemp$3 = null;
-        RuntimeException var6 = null;
-        vva var6_ref = null;
-        no var7 = null;
-        String var8 = null;
-        khb var9 = null;
-        sca var12 = null;
-        sca var13 = null;
-        Object stackIn_2_0 = null;
+        sca dupTemp$0 = null;
+        sca dupTemp$1 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
         int stackIn_10_1 = 0;
-        Object stackIn_16_0 = null;
-        htb stackIn_16_1 = null;
-        htb stackIn_16_2 = null;
         Object stackIn_17_0 = null;
         htb stackIn_17_1 = null;
         htb stackIn_17_2 = null;
@@ -324,118 +266,62 @@ final class vla extends dqa implements en, oo {
         htb stackIn_18_1 = null;
         htb stackIn_18_2 = null;
         String stackIn_18_3 = null;
-        RuntimeException stackIn_58_0 = null;
-        StringBuilder stackIn_58_1 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
         RuntimeException stackIn_60_0 = null;
         StringBuilder stackIn_60_1 = null;
         String stackIn_60_2 = null;
-        RuntimeException stackIn_61_0 = null;
-        StringBuilder stackIn_61_1 = null;
-        RuntimeException stackIn_62_0 = null;
         StringBuilder stackIn_62_1 = null;
-        RuntimeException stackIn_63_0 = null;
         StringBuilder stackIn_63_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_7_0 = null;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        Object stackOut_15_0 = null;
-        htb stackOut_15_1 = null;
-        htb stackOut_15_2 = null;
-        Object stackOut_17_0 = null;
-        htb stackOut_17_1 = null;
-        htb stackOut_17_2 = null;
-        String stackOut_17_3 = null;
-        Object stackOut_16_0 = null;
-        htb stackOut_16_1 = null;
-        htb stackOut_16_2 = null;
-        String stackOut_16_3 = null;
-        RuntimeException stackOut_57_0 = null;
-        StringBuilder stackOut_57_1 = null;
-        RuntimeException stackOut_59_0 = null;
-        StringBuilder stackOut_59_1 = null;
-        String stackOut_59_2 = null;
-        RuntimeException stackOut_58_0 = null;
-        StringBuilder stackOut_58_1 = null;
-        String stackOut_58_2 = null;
-        RuntimeException stackOut_60_0 = null;
-        StringBuilder stackOut_60_1 = null;
-        RuntimeException stackOut_62_0 = null;
-        StringBuilder stackOut_62_1 = null;
-        String stackOut_62_2 = null;
-        RuntimeException stackOut_61_0 = null;
-        StringBuilder stackOut_61_1 = null;
-        String stackOut_61_2 = null;
+        vva var6 = null;
+        RuntimeException var6_ref = null;
+        no var7 = null;
+        String var8 = null;
+        khb var9 = null;
+        sca var12 = null;
+        sca var13 = null;
         try {
           L0: {
             L1: {
-              stackOut_1_0 = this;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_3_0 = this;
+
               if (!param4) {
-                stackOut_3_0 = this;
-                stackOut_3_1 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 1;
                 break L1;
               }
             }
             L2: {
               ((vla) (this)).field_w = stackIn_4_1 != 0;
-              stackOut_4_0 = this;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_6_0 = this;
+
               if (!param3) {
-                stackOut_6_0 = this;
-                stackOut_6_1 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = this;
+                stackIn_7_1 = 0;
                 break L2;
               } else {
-                stackOut_5_0 = this;
-                stackOut_5_1 = 1;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+                stackIn_7_0 = this;
+                stackIn_7_1 = 1;
                 break L2;
               }
             }
             L3: {
               ((vla) (this)).field_F = stackIn_7_1 != 0;
-              stackOut_7_0 = this;
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_9_0 = this;
+
               if (!param2) {
-                stackOut_9_0 = this;
-                stackOut_9_1 = 0;
-                stackIn_10_0 = stackOut_9_0;
-                stackIn_10_1 = stackOut_9_1;
+                stackIn_10_0 = this;
+                stackIn_10_1 = 0;
                 break L3;
               } else {
-                stackOut_8_0 = this;
-                stackOut_8_1 = 1;
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_10_1 = stackOut_8_1;
+                stackIn_10_0 = this;
+                stackIn_10_1 = 1;
                 break L3;
               }
             }
@@ -470,34 +356,23 @@ final class vla extends dqa implements en, oo {
               } else {
                 L7: {
                   this.field_x = new htb(jmb.field_s, (sba) null);
-                  stackOut_15_0 = this;
-                  stackOut_15_1 = null;
-                  stackOut_15_2 = null;
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_17_1 = stackOut_15_1;
-                  stackIn_17_2 = stackOut_15_2;
-                  stackIn_16_0 = stackOut_15_0;
-                  stackIn_16_1 = stackOut_15_1;
-                  stackIn_16_2 = stackOut_15_2;
+                  stackIn_17_0 = this;
+
+                  stackIn_17_1 = null;
+
+                  stackIn_17_2 = null;
+
                   if (this.field_w) {
-                    stackOut_17_0 = this;
-                    stackOut_17_1 = null;
-                    stackOut_17_2 = null;
-                    stackOut_17_3 = cjb.field_a;
-                    stackIn_18_0 = stackOut_17_0;
-                    stackIn_18_1 = stackOut_17_1;
-                    stackIn_18_2 = stackOut_17_2;
-                    stackIn_18_3 = stackOut_17_3;
+                    stackIn_18_0 = this;
+                    stackIn_18_1 = null;
+                    stackIn_18_2 = null;
+                    stackIn_18_3 = cjb.field_a;
                     break L7;
                   } else {
-                    stackOut_16_0 = this;
-                    stackOut_16_1 = null;
-                    stackOut_16_2 = null;
-                    stackOut_16_3 = vab.field_a;
-                    stackIn_18_0 = stackOut_16_0;
-                    stackIn_18_1 = stackOut_16_1;
-                    stackIn_18_2 = stackOut_16_2;
-                    stackIn_18_3 = stackOut_16_3;
+                    stackIn_18_0 = this;
+                    stackIn_18_1 = null;
+                    stackIn_18_2 = null;
+                    stackIn_18_3 = vab.field_a;
                     break L7;
                   }
                 }
@@ -513,12 +388,12 @@ final class vla extends dqa implements en, oo {
             L8: {
               this.field_y.field_q = (wwa) ((Object) new io(10000536));
               this.field_G.field_q = (wwa) ((Object) new kpb(10000536));
-              var6_ref = new vva();
-              this.field_x.field_q = (wwa) ((Object) var6_ref);
+              var6 = new vva();
+              this.field_x.field_q = (wwa) ((Object) var6);
               if (null == this.field_A) {
                 break L8;
               } else {
-                this.field_A.field_q = (wwa) ((Object) var6_ref);
+                this.field_A.field_q = (wwa) ((Object) var6);
                 break L8;
               }
             }
@@ -527,7 +402,7 @@ final class vla extends dqa implements en, oo {
               if (this.field_z == null) {
                 break L9;
               } else {
-                this.field_z.field_q = (wwa) ((Object) var6_ref);
+                this.field_z.field_q = (wwa) ((Object) var6);
                 break L9;
               }
             }
@@ -580,13 +455,13 @@ final class vla extends dqa implements en, oo {
               }
             }
             L14: {
-              dupTemp$2 = new sca(10, this.field_r, this.field_h + -20, 25, this.field_y, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$2;
-              this.b(-18756, dupTemp$2);
+              dupTemp$0 = new sca(10, this.field_r, this.field_h + -20, 25, this.field_y, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$0;
+              this.b(-18756, dupTemp$0);
               this.field_r = this.field_r + (((shb) ((Object) var12)).field_f - -5);
-              dupTemp$3 = new sca(10, this.field_r, -20 + this.field_h, 25, this.field_G, false, 80, 3, var7, 16777215, dpa.field_q);
-              var13 = dupTemp$3;
-              this.b(-18756, dupTemp$3);
+              dupTemp$1 = new sca(10, this.field_r, -20 + this.field_h, 25, this.field_G, false, 80, 3, var7, 16777215, dpa.field_q);
+              var13 = dupTemp$1;
+              this.b(-18756, dupTemp$1);
               this.field_r = this.field_r + (((shb) ((Object) var13)).field_f - -5);
               this.field_x.field_l = (sba) (this);
               if (this.field_z == null) {
@@ -669,57 +544,41 @@ final class vla extends dqa implements en, oo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L22: {
-            var6 = decompiledCaughtException;
-            stackOut_57_0 = (RuntimeException) (var6);
-            stackOut_57_1 = new StringBuilder().append("vla.<init>(");
-            stackIn_59_0 = stackOut_57_0;
-            stackIn_59_1 = stackOut_57_1;
-            stackIn_58_0 = stackOut_57_0;
-            stackIn_58_1 = stackOut_57_1;
+            var6_ref = decompiledCaughtException;
+            stackIn_59_0 = (RuntimeException) (var6_ref);
+
+            stackIn_59_1 = new StringBuilder().append("vla.<init>(");
+
             if (param0 == null) {
-              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
-              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
-              stackOut_59_2 = "null";
-              stackIn_60_0 = stackOut_59_0;
-              stackIn_60_1 = stackOut_59_1;
-              stackIn_60_2 = stackOut_59_2;
+              stackIn_60_0 = (RuntimeException) ((Object) stackIn_59_0);
+              stackIn_60_1 = (StringBuilder) ((Object) stackIn_59_1);
+              stackIn_60_2 = "null";
               break L22;
             } else {
-              stackOut_58_0 = (RuntimeException) ((Object) stackIn_58_0);
-              stackOut_58_1 = (StringBuilder) ((Object) stackIn_58_1);
-              stackOut_58_2 = "{...}";
-              stackIn_60_0 = stackOut_58_0;
-              stackIn_60_1 = stackOut_58_1;
-              stackIn_60_2 = stackOut_58_2;
+              stackIn_60_0 = (RuntimeException) ((Object) stackIn_59_0);
+              stackIn_60_1 = (StringBuilder) ((Object) stackIn_59_1);
+              stackIn_60_2 = "{...}";
               break L22;
             }
           }
           L23: {
-            stackOut_60_0 = (RuntimeException) ((Object) stackIn_60_0);
-            stackOut_60_1 = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_60_2).append(',');
-            stackIn_62_0 = stackOut_60_0;
-            stackIn_62_1 = stackOut_60_1;
-            stackIn_61_0 = stackOut_60_0;
-            stackIn_61_1 = stackOut_60_1;
+
+
+            stackIn_62_1 = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_60_2).append(',');
+
             if (param1 == null) {
-              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
-              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
-              stackOut_62_2 = "null";
-              stackIn_63_0 = stackOut_62_0;
-              stackIn_63_1 = stackOut_62_1;
-              stackIn_63_2 = stackOut_62_2;
+              stackIn_60_0 = (RuntimeException) ((Object) stackIn_60_0);
+              stackIn_63_1 = (StringBuilder) ((Object) stackIn_62_1);
+              stackIn_63_2 = "null";
               break L23;
             } else {
-              stackOut_61_0 = (RuntimeException) ((Object) stackIn_61_0);
-              stackOut_61_1 = (StringBuilder) ((Object) stackIn_61_1);
-              stackOut_61_2 = "{...}";
-              stackIn_63_0 = stackOut_61_0;
-              stackIn_63_1 = stackOut_61_1;
-              stackIn_63_2 = stackOut_61_2;
+              stackIn_60_0 = (RuntimeException) ((Object) stackIn_60_0);
+              stackIn_63_1 = (StringBuilder) ((Object) stackIn_62_1);
+              stackIn_63_2 = "{...}";
               break L23;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_63_0), stackIn_63_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_60_0), stackIn_63_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -738,23 +597,12 @@ final class vla extends dqa implements en, oo {
         int var4 = 0;
         int var5 = 0;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -771,8 +619,7 @@ final class vla extends dqa implements en, oo {
             var4 = 0;
             L2: while (true) {
               if (var4 >= var2_int) {
-                stackOut_6_0 = var3;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = var3;
                 break L0;
               } else {
                 var3 = aea.a(-125, param1.charAt(var4)) + (-var3 + (var3 << -2095977691));
@@ -785,27 +632,19 @@ final class vla extends dqa implements en, oo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2);
-            stackOut_8_1 = new StringBuilder().append("vla.D(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2);
+
+            stackIn_10_1 = new StringBuilder().append("vla.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -816,22 +655,12 @@ final class vla extends dqa implements en, oo {
 
     public final void a(uf param0, byte param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -848,27 +677,19 @@ final class vla extends dqa implements en, oo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("vla.L(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("vla.L(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -877,26 +698,14 @@ final class vla extends dqa implements en, oo {
     }
 
     public final void a(int param0, uf param1) {
-        int discarded$6 = 0;
-        boolean discarded$7 = false;
-        RuntimeException var3 = null;
         CharSequence var4 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -904,7 +713,7 @@ final class vla extends dqa implements en, oo {
                 break L1;
               } else {
                 var4 = (CharSequence) null;
-                discarded$6 = vla.a((byte) -119, (CharSequence) null);
+                vla.a((byte) -119, (CharSequence) null);
                 break L1;
               }
             }
@@ -912,7 +721,7 @@ final class vla extends dqa implements en, oo {
               if (param1 != this.field_y) {
                 break L2;
               } else {
-                discarded$7 = this.field_G.a(param0 ^ -12409, (shb) (this));
+                this.field_G.a(param0 ^ -12409, (shb) (this));
                 break L2;
               }
             }
@@ -930,27 +739,19 @@ final class vla extends dqa implements en, oo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("vla.I(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3);
+
+            stackIn_10_1 = new StringBuilder().append("vla.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }

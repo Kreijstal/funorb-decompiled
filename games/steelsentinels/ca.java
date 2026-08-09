@@ -14,61 +14,26 @@ final class ca extends ck {
     int field_t;
 
     final boolean a(byte[] param0, int param1, ub param2, int[] param3) {
-        RuntimeException var5 = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         Object var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int stackIn_20_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
         var10 = SteelSentinels.field_G;
         try {
           L0: {
@@ -86,8 +51,7 @@ final class ca extends ck {
             var8 = 0;
             L2: while (true) {
               if ((var8 ^ -1) <= -129) {
-                stackOut_19_0 = var5_int;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = var5_int;
                 break L0;
               } else {
                 L3: {
@@ -105,13 +69,13 @@ final class ca extends ck {
                   var9 = this.field_s[var8];
                   if (0 != var9) {
                     L5: {
-                      if ((var6 ^ -1) == (var9 ^ -1)) {
+                      if (var6 == var9) {
                         break L5;
                       } else {
                         L6: {
                           var6 = var9;
                           var9--;
-                          if ((1 & var9 ^ -1) != -1) {
+                          if ((1 & var9) != 0) {
                             var7 = param2.a((byte) -35, param3, var9 >> 275544706);
                             break L6;
                           } else {
@@ -147,81 +111,57 @@ final class ca extends ck {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var5 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var5);
-            stackOut_21_1 = new StringBuilder().append("ca.A(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var5);
+
+            stackIn_23_1 = new StringBuilder().append("ca.A(");
+
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param1).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+
+
+            stackIn_26_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L8;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+
+
+            stackIn_29_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
+
             if (param3 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L9;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L9;
             }
           }
-          throw ci.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_24_0), stackIn_30_2 + ')');
         }
         return stackIn_20_0 != 0;
     }
@@ -253,20 +193,63 @@ final class ca extends ck {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6) {
+        gh dupTemp$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        RuntimeException var7 = null;
+        kg stackIn_3_0;
+        int stackIn_3_1;
+        int stackIn_3_2;
+        int stackIn_3_3;
+        kg stackIn_4_0 = null;
+        int stackIn_4_1 = 0;
+        int stackIn_4_2 = 0;
+        int stackIn_4_3 = 0;
+        int stackIn_4_4 = 0;
+        hk stackIn_12_0;
+        gh stackIn_12_1;
+        gh stackIn_12_2;
+        long stackIn_12_3;
+        hk stackIn_13_0 = null;
+        gh stackIn_13_1 = null;
+        gh stackIn_13_2 = null;
+        long stackIn_13_3 = 0L;
+        gh stackIn_13_4 = null;
+        hk stackIn_30_0;
+        gh stackIn_30_1;
+        gh stackIn_30_2;
+        long stackIn_30_3;
+        hk stackIn_31_0;
+        gh stackIn_31_1;
+        gh stackIn_31_2;
+        long stackIn_31_3;
+        gh stackIn_31_4;
+        int stackIn_35_0 = 0;
+        int stackIn_70_0 = 0;
+        int stackIn_80_0 = 0;
+        wk[] stackIn_82_0 = null;
+        wk[] stackIn_83_0 = null;
+        int stackIn_83_1 = 0;
+        wk[] stackIn_90_0 = null;
+        wk[] stackIn_91_0 = null;
+        int stackIn_91_1 = 0;
+        String stackIn_154_0 = null;
+        String stackIn_163_0 = null;
+        String stackIn_169_0 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         ul var8 = null;
         long var9 = 0L;
         Object var11 = null;
         hk var12 = null;
         int var13 = 0;
         int var14 = 0;
-        gh var18 = null;
         int var18_int = 0;
+        gh var18 = null;
         gh var19 = null;
         gh var20 = null;
         gh var21 = null;
@@ -282,8 +265,8 @@ final class ca extends ck {
         gh var30 = null;
         int var31 = 0;
         String var32 = null;
-        String var33 = null;
         int var33_int = 0;
+        String var33 = null;
         int var34_int = 0;
         String var34 = null;
         Object var35 = null;
@@ -312,127 +295,6 @@ final class ca extends ck {
         Object var53 = null;
         wk var53_ref = null;
         wk var54 = null;
-        kg stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
-        int stackIn_2_2 = 0;
-        int stackIn_2_3 = 0;
-        kg stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        int stackIn_3_2 = 0;
-        int stackIn_3_3 = 0;
-        kg stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        int stackIn_4_3 = 0;
-        int stackIn_4_4 = 0;
-        hk stackIn_11_0 = null;
-        gh stackIn_11_1 = null;
-        gh stackIn_11_2 = null;
-        long stackIn_11_3 = 0L;
-        hk stackIn_12_0 = null;
-        gh stackIn_12_1 = null;
-        gh stackIn_12_2 = null;
-        long stackIn_12_3 = 0L;
-        hk stackIn_13_0 = null;
-        gh stackIn_13_1 = null;
-        gh stackIn_13_2 = null;
-        long stackIn_13_3 = 0L;
-        gh stackIn_13_4 = null;
-        hk stackIn_29_0 = null;
-        gh stackIn_29_1 = null;
-        gh stackIn_29_2 = null;
-        long stackIn_29_3 = 0L;
-        hk stackIn_30_0 = null;
-        gh stackIn_30_1 = null;
-        gh stackIn_30_2 = null;
-        long stackIn_30_3 = 0L;
-        hk stackIn_31_0 = null;
-        gh stackIn_31_1 = null;
-        gh stackIn_31_2 = null;
-        long stackIn_31_3 = 0L;
-        gh stackIn_31_4 = null;
-        int stackIn_35_0 = 0;
-        int stackIn_70_0 = 0;
-        int stackIn_79_0 = 0;
-        wk[] stackIn_80_0 = null;
-        wk[] stackIn_81_0 = null;
-        wk[] stackIn_82_0 = null;
-        int stackIn_82_1 = 0;
-        wk[] stackIn_88_0 = null;
-        wk[] stackIn_89_0 = null;
-        wk[] stackIn_90_0 = null;
-        int stackIn_90_1 = 0;
-        String stackIn_152_0 = null;
-        String stackIn_161_0 = null;
-        String stackIn_167_0 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        kg stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        int stackOut_1_3 = 0;
-        kg stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        int stackOut_3_3 = 0;
-        int stackOut_3_4 = 0;
-        kg stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        int stackOut_2_3 = 0;
-        int stackOut_2_4 = 0;
-        hk stackOut_10_0 = null;
-        gh stackOut_10_1 = null;
-        gh stackOut_10_2 = null;
-        long stackOut_10_3 = 0L;
-        hk stackOut_12_0 = null;
-        gh stackOut_12_1 = null;
-        gh stackOut_12_2 = null;
-        long stackOut_12_3 = 0L;
-        gh stackOut_12_4 = null;
-        hk stackOut_11_0 = null;
-        gh stackOut_11_1 = null;
-        gh stackOut_11_2 = null;
-        long stackOut_11_3 = 0L;
-        gh stackOut_11_4 = null;
-        hk stackOut_28_0 = null;
-        gh stackOut_28_1 = null;
-        gh stackOut_28_2 = null;
-        long stackOut_28_3 = 0L;
-        hk stackOut_30_0 = null;
-        gh stackOut_30_1 = null;
-        gh stackOut_30_2 = null;
-        long stackOut_30_3 = 0L;
-        gh stackOut_30_4 = null;
-        hk stackOut_29_0 = null;
-        gh stackOut_29_1 = null;
-        gh stackOut_29_2 = null;
-        long stackOut_29_3 = 0L;
-        gh stackOut_29_4 = null;
-        int stackOut_34_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_69_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_78_0 = 0;
-        int stackOut_77_0 = 0;
-        wk[] stackOut_79_0 = null;
-        wk[] stackOut_81_0 = null;
-        int stackOut_81_1 = 0;
-        wk[] stackOut_80_0 = null;
-        int stackOut_80_1 = 0;
-        wk[] stackOut_87_0 = null;
-        wk[] stackOut_89_0 = null;
-        int stackOut_89_1 = 0;
-        wk[] stackOut_88_0 = null;
-        int stackOut_88_1 = 0;
-        String stackOut_151_0 = null;
-        String stackOut_150_0 = null;
-        String stackOut_159_0 = null;
-        String stackOut_158_0 = null;
-        String stackOut_160_0 = null;
-        String stackOut_166_0 = null;
-        String stackOut_165_0 = null;
         var50 = null;
         var51 = null;
         var52 = null;
@@ -441,41 +303,27 @@ final class ca extends ck {
         try {
           L0: {
             L1: {
-              stackOut_1_0 = rn.field_y;
-              stackOut_1_1 = 2;
-              stackOut_1_2 = 2 * (2 + db.field_b);
-              stackOut_1_3 = param3 * (4 * (db.field_b - -2));
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_3_2 = stackOut_1_2;
-              stackIn_3_3 = stackOut_1_3;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              stackIn_2_2 = stackOut_1_2;
-              stackIn_2_3 = stackOut_1_3;
+              stackIn_3_0 = rn.field_y;
+
+              stackIn_3_1 = 2;
+
+              stackIn_3_2 = 2 * (2 + db.field_b);
+
+              stackIn_3_3 = param3 * (4 * (db.field_b - -2));
+
               if (la.field_c != rn.field_y) {
-                stackOut_3_0 = (kg) ((Object) stackIn_3_0);
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = stackIn_3_2;
-                stackOut_3_3 = stackIn_3_3;
-                stackOut_3_4 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
-                stackIn_4_3 = stackOut_3_3;
-                stackIn_4_4 = stackOut_3_4;
+                stackIn_4_0 = (kg) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = stackIn_3_2;
+                stackIn_4_3 = stackIn_3_3;
+                stackIn_4_4 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = (kg) ((Object) stackIn_2_0);
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = stackIn_2_2;
-                stackOut_2_3 = stackIn_2_3;
-                stackOut_2_4 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                stackIn_4_3 = stackOut_2_3;
-                stackIn_4_4 = stackOut_2_4;
+                stackIn_4_0 = (kg) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = stackIn_3_2;
+                stackIn_4_3 = stackIn_3_3;
+                stackIn_4_4 = 1;
                 break L1;
               }
             }
@@ -509,41 +357,27 @@ final class ca extends ck {
                         var12.field_Ic = new gh(0L, bb.field_W);
                         var12.a(var12.field_Ic, 118);
                         var12.field_Ic.field_Kb = 2;
-                        stackOut_10_0 = (hk) (var12);
-                        stackOut_10_1 = null;
-                        stackOut_10_2 = null;
-                        stackOut_10_3 = 0L;
-                        stackIn_12_0 = stackOut_10_0;
-                        stackIn_12_1 = stackOut_10_1;
-                        stackIn_12_2 = stackOut_10_2;
-                        stackIn_12_3 = stackOut_10_3;
-                        stackIn_11_0 = stackOut_10_0;
-                        stackIn_11_1 = stackOut_10_1;
-                        stackIn_11_2 = stackOut_10_2;
-                        stackIn_11_3 = stackOut_10_3;
+                        stackIn_12_0 = (hk) (var12);
+
+                        stackIn_12_1 = null;
+
+                        stackIn_12_2 = null;
+
+                        stackIn_12_3 = 0L;
+
                         if (rm.field_p) {
-                          stackOut_12_0 = (hk) ((Object) stackIn_12_0);
-                          stackOut_12_1 = null;
-                          stackOut_12_2 = null;
-                          stackOut_12_3 = stackIn_12_3;
-                          stackOut_12_4 = SteelSentinels.field_J;
-                          stackIn_13_0 = stackOut_12_0;
-                          stackIn_13_1 = stackOut_12_1;
-                          stackIn_13_2 = stackOut_12_2;
-                          stackIn_13_3 = stackOut_12_3;
-                          stackIn_13_4 = stackOut_12_4;
+                          stackIn_13_0 = (hk) ((Object) stackIn_12_0);
+                          stackIn_13_1 = null;
+                          stackIn_13_2 = null;
+                          stackIn_13_3 = stackIn_12_3;
+                          stackIn_13_4 = SteelSentinels.field_J;
                           break L4;
                         } else {
-                          stackOut_11_0 = (hk) ((Object) stackIn_11_0);
-                          stackOut_11_1 = null;
-                          stackOut_11_2 = null;
-                          stackOut_11_3 = stackIn_11_3;
-                          stackOut_11_4 = bb.field_W;
-                          stackIn_13_0 = stackOut_11_0;
-                          stackIn_13_1 = stackOut_11_1;
-                          stackIn_13_2 = stackOut_11_2;
-                          stackIn_13_3 = stackOut_11_3;
-                          stackIn_13_4 = stackOut_11_4;
+                          stackIn_13_0 = (hk) ((Object) stackIn_12_0);
+                          stackIn_13_1 = null;
+                          stackIn_13_2 = null;
+                          stackIn_13_3 = stackIn_12_3;
+                          stackIn_13_4 = bb.field_W;
                           break L4;
                         }
                       }
@@ -595,43 +429,29 @@ final class ca extends ck {
                       var45.field_Fb = 1;
                       var18_int = 0;
                       L9: while (true) {
-                        if ((var18_int ^ -1) <= (be.field_a ^ -1)) {
+                        if (var18_int >= be.field_a) {
                           L10: {
-                            stackOut_28_0 = (hk) (var12);
-                            stackOut_28_1 = null;
-                            stackOut_28_2 = null;
-                            stackOut_28_3 = 0L;
-                            stackIn_30_0 = stackOut_28_0;
-                            stackIn_30_1 = stackOut_28_1;
-                            stackIn_30_2 = stackOut_28_2;
-                            stackIn_30_3 = stackOut_28_3;
-                            stackIn_29_0 = stackOut_28_0;
-                            stackIn_29_1 = stackOut_28_1;
-                            stackIn_29_2 = stackOut_28_2;
-                            stackIn_29_3 = stackOut_28_3;
+                            stackIn_30_0 = (hk) (var12);
+
+                            stackIn_30_1 = null;
+
+                            stackIn_30_2 = null;
+
+                            stackIn_30_3 = 0L;
+
                             if (!rm.field_p) {
-                              stackOut_30_0 = (hk) ((Object) stackIn_30_0);
-                              stackOut_30_1 = null;
-                              stackOut_30_2 = null;
-                              stackOut_30_3 = stackIn_30_3;
-                              stackOut_30_4 = SteelSentinels.field_J;
-                              stackIn_31_0 = stackOut_30_0;
-                              stackIn_31_1 = stackOut_30_1;
-                              stackIn_31_2 = stackOut_30_2;
-                              stackIn_31_3 = stackOut_30_3;
-                              stackIn_31_4 = stackOut_30_4;
+                              stackIn_31_0 = (hk) ((Object) stackIn_30_0);
+                              stackIn_31_1 = null;
+                              stackIn_31_2 = null;
+                              stackIn_31_3 = stackIn_30_3;
+                              stackIn_31_4 = SteelSentinels.field_J;
                               break L10;
                             } else {
-                              stackOut_29_0 = (hk) ((Object) stackIn_29_0);
-                              stackOut_29_1 = null;
-                              stackOut_29_2 = null;
-                              stackOut_29_3 = stackIn_29_3;
-                              stackOut_29_4 = bb.field_W;
-                              stackIn_31_0 = stackOut_29_0;
-                              stackIn_31_1 = stackOut_29_1;
-                              stackIn_31_2 = stackOut_29_2;
-                              stackIn_31_3 = stackOut_29_3;
-                              stackIn_31_4 = stackOut_29_4;
+                              stackIn_31_0 = (hk) ((Object) stackIn_30_0);
+                              stackIn_31_1 = null;
+                              stackIn_31_2 = null;
+                              stackIn_31_3 = stackIn_30_3;
+                              stackIn_31_4 = bb.field_W;
                               break L10;
                             }
                           }
@@ -673,12 +493,10 @@ final class ca extends ck {
                   L12: {
                     var12.field_kc.field_S = null;
                     if (var12.field_rc) {
-                      stackOut_34_0 = param4;
-                      stackIn_35_0 = stackOut_34_0;
+                      stackIn_35_0 = param4;
                       break L12;
                     } else {
-                      stackOut_33_0 = param0;
-                      stackIn_35_0 = stackOut_33_0;
+                      stackIn_35_0 = param0;
                       break L12;
                     }
                   }
@@ -851,12 +669,10 @@ final class ca extends ck {
                             var12.field_Ic.field_S = Integer.toString(var12.field_yc);
                             var12.field_Ic.a(0, var31, db.field_b, 200, 48);
                             if (rm.field_p) {
-                              stackOut_69_0 = 250;
-                              stackIn_70_0 = stackOut_69_0;
+                              stackIn_70_0 = 250;
                               break L22;
                             } else {
-                              stackOut_68_0 = 200;
-                              stackIn_70_0 = stackOut_68_0;
+                              stackIn_70_0 = 200;
                               break L22;
                             }
                           }
@@ -877,43 +693,34 @@ final class ca extends ck {
                           L24: {
                             if (-1 != (1 << sn.field_b & var14 ^ -1)) {
                               L25: {
-                                L26: {
-                                  if (var12.field_cc) {
-                                    break L26;
+                                if (!var12.field_cc) {
+                                  if (var12.field_vc) {
+                                    stackIn_80_0 = 1;
+                                    break L25;
                                   } else {
-                                    if (!var12.field_vc) {
-                                      stackOut_78_0 = 0;
-                                      stackIn_79_0 = stackOut_78_0;
-                                      break L25;
-                                    } else {
-                                      break L26;
-                                    }
+                                    stackIn_80_0 = 0;
+                                    break L25;
                                   }
-                                }
-                                stackOut_77_0 = 1;
-                                stackIn_79_0 = stackOut_77_0;
-                                break L25;
-                              }
-                              L27: {
-                                var36 = stackIn_79_0;
-                                stackOut_79_0 = jn.field_d;
-                                stackIn_81_0 = stackOut_79_0;
-                                stackIn_80_0 = stackOut_79_0;
-                                if (var36 != 0) {
-                                  stackOut_81_0 = (wk[]) ((Object) stackIn_81_0);
-                                  stackOut_81_1 = 1;
-                                  stackIn_82_0 = stackOut_81_0;
-                                  stackIn_82_1 = stackOut_81_1;
-                                  break L27;
                                 } else {
-                                  stackOut_80_0 = (wk[]) ((Object) stackIn_80_0);
-                                  stackOut_80_1 = 0;
-                                  stackIn_82_0 = stackOut_80_0;
-                                  stackIn_82_1 = stackOut_80_1;
-                                  break L27;
+                                  stackIn_80_0 = 1;
+                                  break L25;
                                 }
                               }
-                              var51_ref = stackIn_82_0[stackIn_82_1];
+                              L26: {
+                                var36 = stackIn_80_0;
+                                stackIn_82_0 = jn.field_d;
+
+                                if (var36 != 0) {
+                                  stackIn_83_0 = (wk[]) ((Object) stackIn_82_0);
+                                  stackIn_83_1 = 1;
+                                  break L26;
+                                } else {
+                                  stackIn_83_0 = (wk[]) ((Object) stackIn_82_0);
+                                  stackIn_83_1 = 0;
+                                  break L26;
+                                }
+                              }
+                              var51_ref = stackIn_83_0[stackIn_83_1];
                               var12.field_Wb.field_Pb = var51_ref;
                               var12.field_Wb.a(0, 0, var12.field_uc.field_Lb, var34_int, var51_ref.field_z);
                               var34_int = var34_int + (va.field_e + var51_ref.field_z);
@@ -922,78 +729,74 @@ final class ca extends ck {
                               break L24;
                             }
                           }
-                          L28: {
-                            if ((1 << jf.field_Z & var14 ^ -1) != -1) {
+                          L27: {
+                            if ((1 << jf.field_Z & var14) != 0) {
                               var52_ref = bm.field_Z[-1 + var12.field_sc];
                               var12.field_ac.field_Pb = var52_ref;
                               var12.field_ac.a(0, 0, var12.field_uc.field_Lb, var34_int, var52_ref.field_z);
                               var34_int = var34_int + (va.field_e + var52_ref.field_z);
-                              break L28;
+                              break L27;
                             } else {
-                              break L28;
+                              break L27;
                             }
                           }
-                          L29: {
-                            if ((1 << ja.field_f & var14 ^ -1) == -1) {
-                              break L29;
+                          L28: {
+                            if ((1 << ja.field_f & var14) == 0) {
+                              break L28;
                             } else {
-                              L30: {
-                                stackOut_87_0 = ha.field_Q;
-                                stackIn_89_0 = stackOut_87_0;
-                                stackIn_88_0 = stackOut_87_0;
+                              L29: {
+                                stackIn_90_0 = ha.field_Q;
+
                                 if (var12.field_ec) {
-                                  stackOut_89_0 = (wk[]) ((Object) stackIn_89_0);
-                                  stackOut_89_1 = 1;
-                                  stackIn_90_0 = stackOut_89_0;
-                                  stackIn_90_1 = stackOut_89_1;
-                                  break L30;
+                                  stackIn_91_0 = (wk[]) ((Object) stackIn_90_0);
+                                  stackIn_91_1 = 1;
+                                  break L29;
                                 } else {
-                                  stackOut_88_0 = (wk[]) ((Object) stackIn_88_0);
-                                  stackOut_88_1 = 0;
-                                  stackIn_90_0 = stackOut_88_0;
-                                  stackIn_90_1 = stackOut_88_1;
-                                  break L30;
+                                  stackIn_91_0 = (wk[]) ((Object) stackIn_90_0);
+                                  stackIn_91_1 = 0;
+                                  break L29;
                                 }
                               }
-                              var53_ref = stackIn_90_0[stackIn_90_1];
+                              var53_ref = stackIn_91_0[stackIn_91_1];
                               var12.field_tc.field_Pb = var53_ref;
                               var12.field_tc.a(0, 0, var12.field_uc.field_Lb, var34_int, var53_ref.field_z);
                               var34_int = var34_int + (var53_ref.field_z - -va.field_e);
-                              break L29;
+                              break L28;
                             }
                           }
-                          L31: {
+                          L30: {
                             if (li.field_D != null) {
                               var36 = 0;
-                              L32: while (true) {
-                                if ((var36 ^ -1) <= (be.field_a ^ -1)) {
-                                  break L31;
+                              L31: while (true) {
+                                if (var36 >= be.field_a) {
+                                  break L30;
                                 } else {
-                                  L33: {
-                                    if (null == li.field_D[var36]) {
-                                      break L33;
-                                    } else {
+                                  if (null != li.field_D[var36]) {
+                                    L32: {
                                       if ((1 << var36 + ch.field_L & var14) != 0) {
                                         var42 = li.field_D[var36][var12.field_Sb[var36] & 255];
                                         var54 = var42;
                                         var12.field_Gc[var36].field_Pb = var42;
                                         var12.field_Gc[var36].a(param1 ^ 1, 0, var12.field_uc.field_Lb, var34_int, var54.field_z);
                                         var34_int = var34_int + (var54.field_z + va.field_e);
-                                        break L33;
+                                        break L32;
                                       } else {
-                                        break L33;
+                                        break L32;
                                       }
                                     }
+                                    var36++;
+                                    continue L31;
+                                  } else {
+                                    var36++;
+                                    continue L31;
                                   }
-                                  var36++;
-                                  continue L32;
                                 }
                               }
                             } else {
-                              break L31;
+                              break L30;
                             }
                           }
-                          L34: {
+                          L33: {
                             var36 = (-var34_int + var12.field_uc.field_zb) / 2;
                             if (var36 > 0) {
                               var12.field_Fc.field_Y = var12.field_Fc.field_Y + var36;
@@ -1001,30 +804,31 @@ final class ca extends ck {
                               var12.field_ac.field_Y = var12.field_ac.field_Y + var36;
                               var12.field_tc.field_Y = var12.field_tc.field_Y + var36;
                               var37_int = 0;
-                              L35: while (true) {
+                              L34: while (true) {
                                 if (be.field_a <= var37_int) {
-                                  break L34;
+                                  break L33;
                                 } else {
-                                  var12.field_Gc[var37_int].field_Y = var12.field_Gc[var37_int].field_Y + var36;
+                                  dupTemp$0 = var12.field_Gc[var37_int];
+                                  dupTemp$0.field_Y = dupTemp$0.field_Y + var36;
                                   var37_int++;
-                                  continue L35;
+                                  continue L34;
                                 }
                               }
                             } else {
-                              break L34;
+                              break L33;
                             }
                           }
-                          L36: {
+                          L35: {
                             if (!var12.field_rc) {
-                              break L36;
+                              break L35;
                             } else {
-                              L37: {
+                              L36: {
                                 var37_int = var12.field_Mc;
                                 if ((var37_int ^ -1) > -1) {
                                   var37_int = (int)(-var12.field_Hc + var9);
-                                  break L37;
+                                  break L36;
                                 } else {
-                                  break L37;
+                                  break L36;
                                 }
                               }
                               var38_int = var37_int / 1000;
@@ -1032,51 +836,51 @@ final class ca extends ck {
                               var38_int = var38_int % 60;
                               if (var39 < 60) {
                                 var12.field_Lc.field_S = var39 + ":" + var38_int / 10 + var38_int % 10;
-                                break L36;
+                                break L35;
                               } else {
                                 var40 = var39 / 60;
                                 var39 = var39 % 60;
                                 var12.field_Lc.field_S = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
-                                break L36;
+                                break L35;
                               }
                             }
                           }
-                          L38: {
+                          L37: {
                             var12.field_Lc.a(param1 ^ 1, var31, db.field_b, 365, -365 + var12.field_zb);
                             var31 = var31 + db.field_b;
                             if (null != var12.field_hc) {
                               var31 += 2;
                               var37 = new StringBuilder(64);
-                              discarded$4 = var37.append(ph.field_a);
-                              discarded$5 = var37.append(var12.field_hc[0]);
+                              discarded$1 = var37.append(ph.field_a);
+                              discarded$2 = var37.append(var12.field_hc[0]);
                               var38_int = 1;
-                              L39: while (true) {
-                                if ((var38_int ^ -1) <= (var12.field_wc ^ -1)) {
+                              L38: while (true) {
+                                if (var38_int >= var12.field_wc) {
                                   var38 = var37.toString();
                                   var12.field_Bc.field_S = var38;
                                   var39 = var12.field_Bc.field_L.b(var38, -(2 * var12.field_Bc.field_ub) + var12.field_zb);
                                   var12.field_Bc.a(param1 ^ 1, var31, db.field_b * var39, 0, var12.field_zb);
                                   var31 = var31 + db.field_b * var39;
-                                  break L38;
+                                  break L37;
                                 } else {
-                                  discarded$6 = var37.append(", ");
-                                  discarded$7 = var37.append(var12.field_hc[var38_int]);
+                                  discarded$3 = var37.append(", ");
+                                  discarded$4 = var37.append(var12.field_hc[var38_int]);
                                   var38_int++;
-                                  continue L39;
+                                  continue L38;
                                 }
                               }
                             } else {
-                              break L38;
+                              break L37;
                             }
                           }
-                          L40: {
+                          L39: {
                             if (var12.field_vc) {
                               var12.field_Dc.field_S = db.a(de.field_a, -121, new String[]{var32});
                               var12.field_Dc.a(0, var31, db.field_b, da.field_g, var12.field_zb - da.field_g * 2);
                               var31 = var31 + db.field_b;
-                              break L40;
+                              break L39;
                             } else {
-                              break L40;
+                              break L39;
                             }
                           }
                           if (!var12.field_bc) {
@@ -1091,7 +895,7 @@ final class ca extends ck {
                           break L14;
                         }
                       }
-                      L41: {
+                      L40: {
                         var33 = dh.a(var32, (byte) 112, var12.field_Ac);
                         if (var33 != null) {
                           var34_int = var12.field_xc.field_L.b(var33, -da.field_g + -da.field_g + var12.field_zb);
@@ -1099,151 +903,144 @@ final class ca extends ck {
                           var12.field_xc.field_V = var12.field_mc * 256 / ta.field_l;
                           var12.field_xc.a(0, var31, db.field_b * var34_int, da.field_g, -(2 * da.field_g) + var12.field_zb);
                           var31 = var31 + var34_int * db.field_b;
+                          break L40;
+                        } else {
+                          break L40;
+                        }
+                      }
+                      L41: {
+                        if (var7_int != 0) {
                           break L41;
                         } else {
+                          var12.field_lb = var31 - var12.field_Lb;
                           break L41;
                         }
                       }
                       L42: {
-                        if (var7_int != 0) {
-                          break L42;
-                        } else {
-                          var12.field_lb = var31 - var12.field_Lb;
-                          break L42;
-                        }
-                      }
-                      L43: {
                         if (var13 != 0) {
                           rn.field_y.field_Ub.a(2, (byte) 111, (gh) (var11), var12);
-                          break L43;
+                          break L42;
                         } else {
-                          break L43;
+                          break L42;
                         }
                       }
                       var34_int = 0;
-                      L44: while (true) {
+                      L43: while (true) {
                         if (var34_int >= be.field_a) {
-                          L45: {
+                          L44: {
                             if (!var12.field_Fc.field_kb) {
-                              break L45;
+                              break L44;
                             } else {
-                              L46: {
+                              L45: {
                                 if (1 == var12.field_Nc) {
                                   var34 = na.field_r;
-                                  break L46;
+                                  break L45;
                                 } else {
                                   var34 = m.field_j[var12.field_Nc];
-                                  break L46;
+                                  break L45;
                                 }
                               }
                               ll.field_i = bc.field_xb + " - " + var34;
-                              break L45;
+                              break L44;
                             }
                           }
-                          L47: {
+                          L46: {
                             if (!var12.field_tc.field_kb) {
-                              break L47;
+                              break L46;
                             } else {
-                              L48: {
+                              L47: {
                                 if (var12.field_ec) {
-                                  stackOut_151_0 = he.field_g;
-                                  stackIn_152_0 = stackOut_151_0;
-                                  break L48;
+                                  stackIn_154_0 = he.field_g;
+                                  break L47;
                                 } else {
-                                  stackOut_150_0 = i.field_b;
-                                  stackIn_152_0 = stackOut_150_0;
-                                  break L48;
+                                  stackIn_154_0 = i.field_b;
+                                  break L47;
                                 }
                               }
-                              ll.field_i = stackIn_152_0;
-                              break L47;
+                              ll.field_i = stackIn_154_0;
+                              break L46;
                             }
                           }
-                          L49: {
+                          L48: {
                             if (var12.field_Wb.field_kb) {
-                              L50: {
-                                L51: {
+                              L49: {
+                                L50: {
                                   if (var12.field_cc) {
-                                    break L51;
+                                    break L50;
                                   } else {
                                     if (var12.field_vc) {
-                                      break L51;
+                                      break L50;
                                     } else {
                                       if (var12.field_dc) {
-                                        stackOut_159_0 = fb.field_p;
-                                        stackIn_161_0 = stackOut_159_0;
-                                        break L50;
+                                        stackIn_163_0 = fb.field_p;
+                                        break L49;
                                       } else {
-                                        stackOut_158_0 = jh.field_e;
-                                        stackIn_161_0 = stackOut_158_0;
-                                        break L50;
+                                        stackIn_163_0 = jh.field_e;
+                                        break L49;
                                       }
                                     }
                                   }
                                 }
-                                stackOut_160_0 = ij.field_V;
-                                stackIn_161_0 = stackOut_160_0;
-                                break L50;
+                                stackIn_163_0 = ij.field_V;
+                                break L49;
                               }
-                              ll.field_i = stackIn_161_0;
-                              break L49;
+                              ll.field_i = stackIn_163_0;
+                              break L48;
                             } else {
-                              break L49;
+                              break L48;
                             }
                           }
-                          L52: {
+                          L51: {
                             if (var12.field_ac.field_kb) {
-                              L53: {
+                              L52: {
                                 if (2 == var12.field_sc) {
-                                  stackOut_166_0 = jf.field_db;
-                                  stackIn_167_0 = stackOut_166_0;
-                                  break L53;
+                                  stackIn_169_0 = jf.field_db;
+                                  break L52;
                                 } else {
-                                  stackOut_165_0 = hk.field_Yb;
-                                  stackIn_167_0 = stackOut_165_0;
-                                  break L53;
+                                  stackIn_169_0 = hk.field_Yb;
+                                  break L52;
                                 }
                               }
-                              ll.field_i = stackIn_167_0;
-                              break L52;
+                              ll.field_i = stackIn_169_0;
+                              break L51;
                             } else {
-                              break L52;
+                              break L51;
                             }
                           }
-                          L54: {
+                          L53: {
                             if (var12.field_Eb == 0) {
-                              break L54;
+                              break L53;
                             } else {
                               if (!var12.k(4219)) {
                                 if (0 != var12.field_gc.field_Eb) {
-                                  L55: {
+                                  L54: {
                                     if (!var12.field_rc) {
-                                      break L55;
+                                      break L54;
                                     } else {
-                                      L56: {
+                                      L55: {
                                         if (!var12.field_dc) {
-                                          break L56;
+                                          break L55;
                                         } else {
                                           if (var12.field_cc) {
-                                            break L55;
+                                            break L54;
                                           } else {
                                             if (var12.field_vc) {
-                                              break L55;
+                                              break L54;
                                             } else {
-                                              break L56;
+                                              break L55;
                                             }
                                           }
                                         }
                                       }
                                       ei.a(var12.j(param1 + -34), (byte) -23, param6);
-                                      break L54;
+                                      break L53;
                                     }
                                   }
                                   jg.a(var12.j(param1 + -41), (byte) -74, param6);
-                                  break L54;
+                                  break L53;
                                 } else {
                                   qa.a(var32, param5, var12, 88);
-                                  break L54;
+                                  break L53;
                                 }
                               } else {
                                 var12 = (hk) ((Object) var8.a((byte) -123));
@@ -1254,35 +1051,35 @@ final class ca extends ck {
                           var12 = (hk) ((Object) var8.a((byte) -123));
                           continue L2;
                         } else {
-                          L57: {
+                          L56: {
                             if (!var12.field_Gc[var34_int].field_kb) {
-                              break L57;
+                              break L56;
                             } else {
-                              L58: {
+                              L57: {
                                 if (fj.field_b == null) {
                                   var35 = null;
-                                  break L58;
+                                  break L57;
                                 } else {
                                   if (null != fj.field_b[var34_int]) {
                                     var35 = fj.field_b[var34_int][255 & var12.field_Sb[var34_int]];
-                                    break L58;
+                                    break L57;
                                   } else {
                                     var35 = null;
-                                    break L58;
+                                    break L57;
                                   }
                                 }
                               }
                               if (var35 == null) {
                                 ll.field_i = al.field_a[var34_int];
-                                break L57;
+                                break L56;
                               } else {
                                 ll.field_i = al.field_a[var34_int] + " - " + (String) (var35);
-                                break L57;
+                                break L56;
                               }
                             }
                           }
                           var34_int++;
-                          continue L44;
+                          continue L43;
                         }
                       }
                     } else {
@@ -1314,15 +1111,24 @@ final class ca extends ck {
     }
 
     ca(byte[] param0) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        bj dupTemp$17 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        bj dupTemp$8 = null;
+        byte[] stackIn_39_0 = null;
+        byte[] stackIn_42_0 = null;
+        RuntimeException stackIn_208_0 = null;
+        StringBuilder stackIn_208_1 = null;
+        RuntimeException stackIn_209_0 = null;
+        StringBuilder stackIn_209_1 = null;
+        String stackIn_209_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         byte[] var4 = null;
@@ -1339,10 +1145,10 @@ final class ca extends ck {
         bj[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
-        bj var15 = null;
-        byte[] var15_array = null;
-        int var16_int = 0;
+        byte[] var15 = null;
+        bj var15_ref = null;
         byte[] var16 = null;
+        int var16_int = 0;
         int var17 = 0;
         byte[] var18 = null;
         int var19 = 0;
@@ -1385,29 +1191,6 @@ final class ca extends ck {
         byte[] var56 = null;
         byte[] var57 = null;
         byte[] var58 = null;
-        byte[] stackIn_39_0 = null;
-        byte[] stackIn_42_0 = null;
-        RuntimeException stackIn_207_0 = null;
-        StringBuilder stackIn_207_1 = null;
-        RuntimeException stackIn_208_0 = null;
-        StringBuilder stackIn_208_1 = null;
-        RuntimeException stackIn_209_0 = null;
-        StringBuilder stackIn_209_1 = null;
-        String stackIn_209_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_38_0 = null;
-        Object stackOut_37_0 = null;
-        Object stackOut_41_0 = null;
-        byte[] stackOut_40_0 = null;
-        RuntimeException stackOut_206_0 = null;
-        StringBuilder stackOut_206_1 = null;
-        RuntimeException stackOut_208_0 = null;
-        StringBuilder stackOut_208_1 = null;
-        String stackOut_208_2 = null;
-        RuntimeException stackOut_207_0 = null;
-        StringBuilder stackOut_207_1 = null;
-        String stackOut_207_2 = null;
         try {
           L0: {
             this.field_p = new short[128];
@@ -1439,7 +1222,7 @@ final class ca extends ck {
                         var7 = var43;
                         var8 = 0;
                         L4: while (true) {
-                          if ((var6 ^ -1) >= (var8 ^ -1)) {
+                          if (var6 <= var8) {
                             var38.field_p = var38.field_p + 1;
                             var6++;
                             var8 = var38.field_p;
@@ -1452,7 +1235,7 @@ final class ca extends ck {
                                 var10 = var44;
                                 var11_int = 0;
                                 L6: while (true) {
-                                  if ((var9 ^ -1) >= (var11_int ^ -1)) {
+                                  if (var9 <= var11_int) {
                                     L7: {
                                       var38.field_p = var38.field_p + 1;
                                       var9++;
@@ -1468,14 +1251,14 @@ final class ca extends ck {
                                         var13_int = 1;
                                         var14 = 2;
                                         L8: while (true) {
-                                          if ((var9 ^ -1) >= (var14 ^ -1)) {
+                                          if (var9 <= var14) {
                                             break L7;
                                           } else {
                                             L9: {
                                               var15_int = var38.f((byte) -106);
-                                              if ((var15_int ^ -1) != -1) {
+                                              if (var15_int != 0) {
                                                 L10: {
-                                                  if ((var15_int ^ -1) < (var13_int ^ -1)) {
+                                                  if (var15_int > var13_int) {
                                                     break L10;
                                                   } else {
                                                     var15_int--;
@@ -1485,9 +1268,9 @@ final class ca extends ck {
                                                 var13_int = var15_int;
                                                 break L9;
                                               } else {
-                                                incrementValue$9 = var12;
+                                                incrementValue$0 = var12;
                                                 var12++;
-                                                var13_int = incrementValue$9;
+                                                var13_int = incrementValue$0;
                                                 break L9;
                                               }
                                             }
@@ -1505,27 +1288,23 @@ final class ca extends ck {
                                         L12: {
                                           var14 = var38.f((byte) -63);
                                           if (-1 > (var14 ^ -1)) {
-                                            stackOut_38_0 = new byte[var14 * 2];
-                                            stackIn_39_0 = stackOut_38_0;
+                                            stackIn_39_0 = new byte[var14 * 2];
                                             break L12;
                                           } else {
-                                            stackOut_37_0 = null;
-                                            stackIn_39_0 = (byte[]) ((Object) stackOut_37_0);
+                                            stackIn_39_0 = null;
                                             break L12;
                                           }
                                         }
                                         L13: {
                                           var58 = stackIn_39_0;
                                           var46 = var58;
-                                          var15_array = var46;
+                                          var15 = var46;
                                           var14 = var38.f((byte) -60);
                                           if (0 >= var14) {
-                                            stackOut_41_0 = null;
-                                            stackIn_42_0 = (byte[]) ((Object) stackOut_41_0);
+                                            stackIn_42_0 = null;
                                             break L13;
                                           } else {
-                                            stackOut_40_0 = new byte[2 * var14];
-                                            stackIn_42_0 = stackOut_40_0;
+                                            stackIn_42_0 = new byte[2 * var14];
                                             break L13;
                                           }
                                         }
@@ -1585,7 +1364,7 @@ final class ca extends ck {
                                                                             L23: while (true) {
                                                                               if (var27 >= var12) {
                                                                                 L24: {
-                                                                                  if (var15_array == null) {
+                                                                                  if (null == var15) {
                                                                                     break L24;
                                                                                   } else {
                                                                                     var27 = 1;
@@ -1593,7 +1372,7 @@ final class ca extends ck {
                                                                                       if (var27 >= var58.length) {
                                                                                         break L24;
                                                                                       } else {
-                                                                                        var15_array[var27] = var38.d((byte) -2);
+                                                                                        var15[var27] = var38.d((byte) -2);
                                                                                         var27 += 2;
                                                                                         continue L25;
                                                                                       }
@@ -1606,7 +1385,7 @@ final class ca extends ck {
                                                                                   } else {
                                                                                     var27 = 1;
                                                                                     L27: while (true) {
-                                                                                      if ((var47.length ^ -1) >= (var27 ^ -1)) {
+                                                                                      if (var47.length <= var27) {
                                                                                         break L26;
                                                                                       } else {
                                                                                         var16[var27] = var38.d((byte) -2);
@@ -1618,19 +1397,19 @@ final class ca extends ck {
                                                                                 }
                                                                                 var27 = 0;
                                                                                 L28: while (true) {
-                                                                                  if ((var12 ^ -1) >= (var27 ^ -1)) {
+                                                                                  if (var12 <= var27) {
                                                                                     var27 = 0;
                                                                                     L29: while (true) {
                                                                                       if (var12 <= var27) {
                                                                                         L30: {
-                                                                                          if (var15_array == null) {
+                                                                                          if (null == var15) {
                                                                                             break L30;
                                                                                           } else {
                                                                                             var19 = var38.f((byte) -90);
-                                                                                            var15_array[0] = (byte)var19;
+                                                                                            var15[0] = (byte)var19;
                                                                                             var27 = 2;
                                                                                             L31: while (true) {
-                                                                                              if ((var58.length ^ -1) >= (var27 ^ -1)) {
+                                                                                              if (var58.length <= var27) {
                                                                                                 var27 = var58[0];
                                                                                                 var28 = var58[1];
                                                                                                 var29 = 0;
@@ -1642,7 +1421,7 @@ final class ca extends ck {
                                                                                                         var30 = var27;
                                                                                                         L34: while (true) {
                                                                                                           if ((var30 ^ -1) <= -129) {
-                                                                                                            var15_array = null;
+                                                                                                            var15 = null;
                                                                                                             break L30;
                                                                                                           } else {
                                                                                                             this.field_q[var30] = (byte)(32 + var28 * this.field_q[var30] >> -813327610);
@@ -1652,7 +1431,7 @@ final class ca extends ck {
                                                                                                         }
                                                                                                       } else {
                                                                                                         var30 = var58[var29];
-                                                                                                        var31 = var15_array[1 + var29];
+                                                                                                        var31 = var15[1 + var29];
                                                                                                         var32 = (-var27 + var30) / 2 + (-var27 + var30) * var28;
                                                                                                         var33 = var27;
                                                                                                         L35: while (true) {
@@ -1679,7 +1458,7 @@ final class ca extends ck {
                                                                                                 }
                                                                                               } else {
                                                                                                 var19 = var38.f((byte) -55) + (1 + var19);
-                                                                                                var15_array[var27] = (byte)var19;
+                                                                                                var15[var27] = (byte)var19;
                                                                                                 var27 += 2;
                                                                                                 continue L31;
                                                                                               }
@@ -1692,22 +1471,22 @@ final class ca extends ck {
                                                                                             var16[0] = (byte)var19;
                                                                                             var27 = 2;
                                                                                             L37: while (true) {
-                                                                                              if ((var47.length ^ -1) >= (var27 ^ -1)) {
+                                                                                              if (var47.length <= var27) {
                                                                                                 var27 = var47[0];
                                                                                                 var28 = var47[1] << -1631026079;
                                                                                                 var29 = 0;
                                                                                                 L38: while (true) {
-                                                                                                  if ((var29 ^ -1) <= (var27 ^ -1)) {
+                                                                                                  if (var29 >= var27) {
                                                                                                     var29 = 2;
                                                                                                     L39: while (true) {
-                                                                                                      if ((var47.length ^ -1) >= (var29 ^ -1)) {
+                                                                                                      if (var47.length <= var29) {
                                                                                                         var16 = null;
                                                                                                         var30 = var27;
                                                                                                         L40: while (true) {
                                                                                                           if (128 <= var30) {
                                                                                                             var27 = 0;
                                                                                                             L41: while (true) {
-                                                                                                              if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                                                              if (var27 >= var12) {
                                                                                                                 break L36;
                                                                                                               } else {
                                                                                                                 var13[var27].field_i = var38.f((byte) -126);
@@ -1745,7 +1524,7 @@ final class ca extends ck {
                                                                                                         var37 = var27;
                                                                                                         var33 = var37;
                                                                                                         L44: while (true) {
-                                                                                                          if ((var37 ^ -1) <= (var30 ^ -1)) {
+                                                                                                          if (var37 >= var30) {
                                                                                                             var29 += 2;
                                                                                                             var27 = var30;
                                                                                                             var28 = var31;
@@ -1810,7 +1589,7 @@ final class ca extends ck {
                                                                                           } else {
                                                                                             var27 = 0;
                                                                                             L49: while (true) {
-                                                                                              if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                                              if (var27 >= var12) {
                                                                                                 break L36;
                                                                                               } else {
                                                                                                 var13[var27].field_i = var38.f((byte) -126);
@@ -1825,7 +1604,7 @@ final class ca extends ck {
                                                                                           if (var27 >= var12) {
                                                                                             var27 = 0;
                                                                                             L51: while (true) {
-                                                                                              if ((var12 ^ -1) >= (var27 ^ -1)) {
+                                                                                              if (var12 <= var27) {
                                                                                                 var27 = 0;
                                                                                                 L52: while (true) {
                                                                                                   if (var12 <= var27) {
@@ -1930,7 +1709,7 @@ final class ca extends ck {
                                                                                         var19 = 0;
                                                                                         var29 = 2;
                                                                                         L62: while (true) {
-                                                                                          if ((var29 ^ -1) <= (var48.field_p.length ^ -1)) {
+                                                                                          if (var29 >= var48.field_p.length) {
                                                                                             break L61;
                                                                                           } else {
                                                                                             var19 = 1 + (var19 - -var38.f((byte) -90));
@@ -1953,7 +1732,7 @@ final class ca extends ck {
                                                                                   } else {
                                                                                     var29 = 1;
                                                                                     L64: while (true) {
-                                                                                      if ((var29 ^ -1) <= (var45.field_m.length ^ -1)) {
+                                                                                      if (var29 >= var45.field_m.length) {
                                                                                         break L63;
                                                                                       } else {
                                                                                         var45.field_m[var29] = var38.d((byte) -2);
@@ -1969,7 +1748,7 @@ final class ca extends ck {
                                                                                   } else {
                                                                                     var29 = 3;
                                                                                     L66: while (true) {
-                                                                                      if ((var29 ^ -1) <= (-2 + var45.field_p.length ^ -1)) {
+                                                                                      if (var29 >= -2 + var45.field_p.length) {
                                                                                         break L65;
                                                                                       } else {
                                                                                         var45.field_p[var29] = var38.d((byte) -2);
@@ -1993,9 +1772,9 @@ final class ca extends ck {
                                                                                     var20 = -1;
                                                                                     break L68;
                                                                                   } else {
-                                                                                    incrementValue$10 = var21;
+                                                                                    incrementValue$1 = var21;
                                                                                     var21++;
-                                                                                    var20 = var18[incrementValue$10];
+                                                                                    var20 = var18[incrementValue$1];
                                                                                     break L68;
                                                                                   }
                                                                                 }
@@ -2024,9 +1803,9 @@ final class ca extends ck {
                                                                               } else {
                                                                                 var25 = var13[var53[var21]];
                                                                                 if (var21 < var57.length) {
-                                                                                  incrementValue$11 = var21;
+                                                                                  incrementValue$2 = var21;
                                                                                   var21++;
-                                                                                  var20 = var10[incrementValue$11];
+                                                                                  var20 = var10[incrementValue$2];
                                                                                   break L70;
                                                                                 } else {
                                                                                   var20 = -1;
@@ -2052,16 +1831,16 @@ final class ca extends ck {
                                                                           if (var20 != 0) {
                                                                             break L72;
                                                                           } else {
-                                                                            incrementValue$12 = var8;
+                                                                            incrementValue$3 = var8;
                                                                             var8++;
-                                                                            var24 = 16 + var38.field_t[incrementValue$12] << 1474846018;
+                                                                            var24 = 16 + var38.field_t[incrementValue$3] << 1474846018;
                                                                             if (var21 >= var56.length) {
                                                                               var20 = -1;
                                                                               break L72;
                                                                             } else {
-                                                                              incrementValue$13 = var21;
+                                                                              incrementValue$4 = var21;
                                                                               var21++;
-                                                                              var20 = var7[incrementValue$13];
+                                                                              var20 = var7[incrementValue$4];
                                                                               break L72;
                                                                             }
                                                                           }
@@ -2077,27 +1856,27 @@ final class ca extends ck {
                                                                 }
                                                               } else {
                                                                 L73: {
-                                                                  if ((this.field_s[var24] ^ -1) == -1) {
+                                                                  if (this.field_s[var24] == 0) {
                                                                     break L73;
                                                                   } else {
                                                                     L74: {
-                                                                      if ((var20 ^ -1) != -1) {
+                                                                      if (var20 != 0) {
                                                                         break L74;
                                                                       } else {
                                                                         L75: {
-                                                                          if ((var21 ^ -1) <= (var55.length ^ -1)) {
+                                                                          if (var21 >= var55.length) {
                                                                             var20 = -1;
                                                                             break L75;
                                                                           } else {
-                                                                            incrementValue$14 = var21;
+                                                                            incrementValue$5 = var21;
                                                                             var21++;
-                                                                            var20 = var4[incrementValue$14];
+                                                                            var20 = var4[incrementValue$5];
                                                                             break L75;
                                                                           }
                                                                         }
-                                                                        incrementValue$15 = var5;
+                                                                        incrementValue$6 = var5;
                                                                         var5++;
-                                                                        var23 = var38.field_t[incrementValue$15] + -1;
+                                                                        var23 = var38.field_t[incrementValue$6] + -1;
                                                                         break L74;
                                                                       }
                                                                     }
@@ -2117,9 +1896,9 @@ final class ca extends ck {
                                                               } else {
                                                                 L77: {
                                                                   if (var21 < var54.length) {
-                                                                    incrementValue$16 = var21;
+                                                                    incrementValue$7 = var21;
                                                                     var21++;
-                                                                    var20 = var18[incrementValue$16];
+                                                                    var20 = var18[incrementValue$7];
                                                                     break L77;
                                                                   } else {
                                                                     var20 = -1;
@@ -2164,15 +1943,15 @@ final class ca extends ck {
                                         }
                                       } else {
                                         L78: {
-                                          dupTemp$17 = new bj();
-                                          var13[var14] = dupTemp$17;
-                                          var40 = dupTemp$17;
-                                          var15 = var40;
+                                          dupTemp$8 = new bj();
+                                          var13[var14] = dupTemp$8;
+                                          var40 = dupTemp$8;
+                                          var15_ref = var40;
                                           var16_int = var38.f((byte) -120);
                                           if ((var16_int ^ -1) >= -1) {
                                             break L78;
                                           } else {
-                                            var15.field_m = new byte[var16_int * 2];
+                                            var15_ref.field_m = new byte[var16_int * 2];
                                             break L78;
                                           }
                                         }
@@ -2181,7 +1960,7 @@ final class ca extends ck {
                                           if (0 >= var16_int) {
                                             break L79;
                                           } else {
-                                            var15.field_p = new byte[2 + var16_int * 2];
+                                            var15_ref.field_p = new byte[2 + var16_int * 2];
                                             var40.field_p[1] = (byte)64;
                                             break L79;
                                           }
@@ -2228,27 +2007,19 @@ final class ca extends ck {
           decompiledCaughtException = decompiledCaughtParameter0;
           L80: {
             var2 = decompiledCaughtException;
-            stackOut_206_0 = (RuntimeException) (var2);
-            stackOut_206_1 = new StringBuilder().append("ca.<init>(");
-            stackIn_208_0 = stackOut_206_0;
-            stackIn_208_1 = stackOut_206_1;
-            stackIn_207_0 = stackOut_206_0;
-            stackIn_207_1 = stackOut_206_1;
+            stackIn_208_0 = (RuntimeException) (var2);
+
+            stackIn_208_1 = new StringBuilder().append("ca.<init>(");
+
             if (param0 == null) {
-              stackOut_208_0 = (RuntimeException) ((Object) stackIn_208_0);
-              stackOut_208_1 = (StringBuilder) ((Object) stackIn_208_1);
-              stackOut_208_2 = "null";
-              stackIn_209_0 = stackOut_208_0;
-              stackIn_209_1 = stackOut_208_1;
-              stackIn_209_2 = stackOut_208_2;
+              stackIn_209_0 = (RuntimeException) ((Object) stackIn_208_0);
+              stackIn_209_1 = (StringBuilder) ((Object) stackIn_208_1);
+              stackIn_209_2 = "null";
               break L80;
             } else {
-              stackOut_207_0 = (RuntimeException) ((Object) stackIn_207_0);
-              stackOut_207_1 = (StringBuilder) ((Object) stackIn_207_1);
-              stackOut_207_2 = "{...}";
-              stackIn_209_0 = stackOut_207_0;
-              stackIn_209_1 = stackOut_207_1;
-              stackIn_209_2 = stackOut_207_2;
+              stackIn_209_0 = (RuntimeException) ((Object) stackIn_208_0);
+              stackIn_209_1 = (StringBuilder) ((Object) stackIn_208_1);
+              stackIn_209_2 = "{...}";
               break L80;
             }
           }

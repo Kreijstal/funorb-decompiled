@@ -15,8 +15,6 @@ final class km {
     }
 
     final static boolean a(String param0, int param1) {
-        boolean discarded$4 = false;
-        Process discarded$5 = null;
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -28,8 +26,6 @@ final class km {
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -38,19 +34,6 @@ final class km {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_18_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
         var4 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -64,8 +47,7 @@ final class km {
                       if (param0.startsWith("https://")) {
                         break L2;
                       } else {
-                        stackOut_6_0 = 0;
-                        stackIn_7_0 = stackOut_6_0;
+                        stackIn_7_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L1;
                       }
@@ -77,16 +59,15 @@ final class km {
                       break L3;
                     } else {
                       var5 = (String) null;
-                      discarded$4 = km.a((String) null, -68);
+                      km.a((String) null, -68);
                       break L3;
                     }
                   }
                   var3 = 0;
                   L4: while (true) {
                     if (param0.length() <= var3) {
-                      discarded$5 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                      stackOut_16_0 = 1;
-                      stackIn_17_0 = stackOut_16_0;
+                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+                      stackIn_17_0 = 1;
                       decompiledRegionSelector0 = 3;
                       break L1;
                     } else {
@@ -94,16 +75,14 @@ final class km {
                         var3++;
                         continue L4;
                       } else {
-                        stackOut_13_0 = 0;
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L1;
                       }
                     }
                   }
                 } else {
-                  stackOut_2_0 = 0;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L1;
                 }
@@ -111,8 +90,7 @@ final class km {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackOut_18_0 = 0;
-              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_0 = 0;
               return stackIn_19_0 != 0;
             }
             if (decompiledRegionSelector0 == 0) {
@@ -137,27 +115,19 @@ final class km {
           decompiledCaughtException = decompiledCaughtParameter1;
           L5: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var2_ref2);
-            stackOut_20_1 = new StringBuilder().append("km.B(");
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var2_ref2);
+
+            stackIn_22_1 = new StringBuilder().append("km.B(");
+
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L5;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L5;
             }
           }
@@ -179,9 +149,9 @@ final class km {
     }
 
     final jr a(int param0, int param1) {
-        jr var3 = null;
-        int var4 = 0;
-        byte[] var5 = null;
+        jr var3;
+        int var4;
+        byte[] var5;
         var3 = (jr) (this.field_a.a((long)param0, -94));
         var4 = -15 / ((36 - param1) / 45);
         if (var3 != null) {

@@ -24,11 +24,11 @@ final class pv extends i {
     }
 
     final void a(int param0, int param1) {
-        boolean[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        boolean[] var7 = null;
+        boolean[] var3;
+        int var4;
+        int var5;
+        int var6;
+        boolean[] var7;
         var6 = Kickabout.field_G;
         super.a(84, param1);
         if (!la.a(100)) {

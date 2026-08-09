@@ -17,9 +17,6 @@ final class mr {
         int stackIn_20_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_9_0 = 0;
         var5 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -60,8 +57,7 @@ final class mr {
                 var3 = 0;
                 L5: while (true) {
                   if (var3 >= var6.length) {
-                    stackOut_19_0 = 0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_20_0 = 0;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
@@ -70,8 +66,7 @@ final class mr {
                       var3++;
                       continue L5;
                     } else {
-                      stackOut_16_0 = 1;
-                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_0 = 1;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -81,8 +76,7 @@ final class mr {
                 return false;
               }
             }
-            stackOut_9_0 = 1;
-            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_0 = 1;
             decompiledRegionSelector0 = 0;
             break L0;
           }

@@ -5,9 +5,8 @@ final class lka implements dja {
     static int[] field_a;
 
     public final tv[] a(int param0, int param1) {
-        tv discarded$0 = null;
         if (param0 != 11995) {
-            discarded$0 = this.a((byte) 43);
+            this.a((byte) 43);
             return (tv[]) ((Object) new imb[param1]);
         }
         return (tv[]) ((Object) new imb[param1]);

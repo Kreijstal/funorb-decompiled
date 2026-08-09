@@ -48,20 +48,20 @@ final class kd {
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        double var15 = 0.0;
-        int var15_int = 0;
-        long var17 = 0L;
-        int var19 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        double var15;
+        int var15_int;
+        long var17;
+        int var19;
         L0: {
           var19 = OrbDefence.field_D ? 1 : 0;
           var5 = (param2 + -320) / ol.field_e;
@@ -370,12 +370,12 @@ final class kd {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
-        int var3_int = 0;
-        j var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3_int;
+        j var3;
+        int var4;
+        int var5;
+        int var6;
         var5 = OrbDefence.field_D ? 1 : 0;
         if (param0 == 100) {
           L0: {
@@ -527,7 +527,7 @@ final class kd {
     }
 
     final boolean a(int param0, boolean param1, int param2) {
-        int var4 = 0;
+        int var4;
         if (param1) {
           L0: {
             var4 = param0 - -(param2 * this.field_c);
@@ -565,9 +565,8 @@ final class kd {
     }
 
     private final int a(int param0, byte param1) {
-        jc discarded$0 = null;
         if (param1 <= 38) {
-            discarded$0 = kd.a(false);
+            kd.a(false);
         }
         return m.field_d[this.field_o[param0]] - -(!this.field_e[param0] ? 0 : 25000) - -((this.field_v[param0] + this.field_g[param0]) * this.field_n);
     }
@@ -590,27 +589,17 @@ final class kd {
     }
 
     kd(hj param0) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        RuntimeException stackIn_107_0 = null;
-        StringBuilder stackIn_107_1 = null;
         RuntimeException stackIn_108_0 = null;
         StringBuilder stackIn_108_1 = null;
         RuntimeException stackIn_109_0 = null;
         StringBuilder stackIn_109_1 = null;
         String stackIn_109_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_106_0 = null;
-        StringBuilder stackOut_106_1 = null;
-        RuntimeException stackOut_108_0 = null;
-        StringBuilder stackOut_108_1 = null;
-        String stackOut_108_2 = null;
-        RuntimeException stackOut_107_0 = null;
-        StringBuilder stackOut_107_1 = null;
-        String stackOut_107_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         this.field_n = 0;
         try {
           L0: {
@@ -1051,27 +1040,19 @@ final class kd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L38: {
             var2 = decompiledCaughtException;
-            stackOut_106_0 = (RuntimeException) (var2);
-            stackOut_106_1 = new StringBuilder().append("kd.<init>(");
-            stackIn_108_0 = stackOut_106_0;
-            stackIn_108_1 = stackOut_106_1;
-            stackIn_107_0 = stackOut_106_0;
-            stackIn_107_1 = stackOut_106_1;
+            stackIn_108_0 = (RuntimeException) (var2);
+
+            stackIn_108_1 = new StringBuilder().append("kd.<init>(");
+
             if (param0 == null) {
-              stackOut_108_0 = (RuntimeException) ((Object) stackIn_108_0);
-              stackOut_108_1 = (StringBuilder) ((Object) stackIn_108_1);
-              stackOut_108_2 = "null";
-              stackIn_109_0 = stackOut_108_0;
-              stackIn_109_1 = stackOut_108_1;
-              stackIn_109_2 = stackOut_108_2;
+              stackIn_109_0 = (RuntimeException) ((Object) stackIn_108_0);
+              stackIn_109_1 = (StringBuilder) ((Object) stackIn_108_1);
+              stackIn_109_2 = "null";
               break L38;
             } else {
-              stackOut_107_0 = (RuntimeException) ((Object) stackIn_107_0);
-              stackOut_107_1 = (StringBuilder) ((Object) stackIn_107_1);
-              stackOut_107_2 = "{...}";
-              stackIn_109_0 = stackOut_107_0;
-              stackIn_109_1 = stackOut_107_1;
-              stackIn_109_2 = stackOut_107_2;
+              stackIn_109_0 = (RuntimeException) ((Object) stackIn_108_0);
+              stackIn_109_1 = (StringBuilder) ((Object) stackIn_108_1);
+              stackIn_109_2 = "{...}";
               break L38;
             }
           }

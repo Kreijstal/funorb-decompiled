@@ -29,8 +29,8 @@ abstract class nb extends wb {
     }
 
     final static void a(boolean param0, int param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         if (ac.field_e) {
           cm.field_h.a(param0, (byte) 97);
           if (param3 == 5) {

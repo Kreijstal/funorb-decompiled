@@ -13,113 +13,65 @@ final class og extends ib implements qi {
     }
 
     public final void a(byte param0) {
-        int discarded$0 = 0;
         this.field_c.a((og) (this), 87);
         if (param0 != -50) {
-            discarded$0 = this.b((byte) -21);
+            this.b((byte) -21);
         }
     }
 
     og(kr param0, hd param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
-        super(param0, param1, la.field_h, false, param2 * param3);
-        boolean discarded$3 = false;
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        jagdx.PixelBuffer var13 = null;
-        Object stackIn_1_0 = null;
-        kr stackIn_1_1 = null;
-        hd stackIn_1_2 = null;
-        la stackIn_1_3 = null;
-        Object stackIn_2_0 = null;
-        kr stackIn_2_1 = null;
-        hd stackIn_2_2 = null;
-        la stackIn_2_3 = null;
-        Object stackIn_3_0 = null;
-        kr stackIn_3_1 = null;
-        hd stackIn_3_2 = null;
-        la stackIn_3_3 = null;
+        super(null, null, null, false, param2 * param3);
+        Object stackIn_3_0;
+        kr stackIn_3_1;
+        hd stackIn_3_2;
+        la stackIn_3_3;
         Object stackIn_4_0 = null;
         kr stackIn_4_1 = null;
         hd stackIn_4_2 = null;
         la stackIn_4_3 = null;
         int stackIn_4_4 = 0;
-        Object stackOut_0_0 = null;
-        kr stackOut_0_1 = null;
-        hd stackOut_0_2 = null;
-        la stackOut_0_3 = null;
-        Object stackOut_1_0 = null;
-        kr stackOut_1_1 = null;
-        hd stackOut_1_2 = null;
-        la stackOut_1_3 = null;
-        Object stackOut_2_0 = null;
-        kr stackOut_2_1 = null;
-        hd stackOut_2_2 = null;
-        la stackOut_2_3 = null;
-        int stackOut_2_4 = 0;
-        Object stackOut_3_0 = null;
-        kr stackOut_3_1 = null;
-        hd stackOut_3_2 = null;
-        la stackOut_3_3 = null;
-        int stackOut_3_4 = 0;
+        int var10;
+        int var11;
+        int var12;
+        jagdx.PixelBuffer var13;
         L0: {
           L1: {
-            stackOut_0_0 = this;
-            stackOut_0_1 = (kr) (param0);
-            stackOut_0_2 = (hd) (param1);
-            stackOut_0_3 = la.field_h;
-            stackIn_3_0 = stackOut_0_0;
-            stackIn_3_1 = stackOut_0_1;
-            stackIn_3_2 = stackOut_0_2;
-            stackIn_3_3 = stackOut_0_3;
-            stackIn_1_0 = stackOut_0_0;
-            stackIn_1_1 = stackOut_0_1;
-            stackIn_1_2 = stackOut_0_2;
-            stackIn_1_3 = stackOut_0_3;
+            stackIn_3_0 = this;
+
+            stackIn_3_1 = (kr) (param0);
+
+            stackIn_3_2 = (hd) (param1);
+
+            stackIn_3_3 = la.field_h;
+
             if (!param4) {
               break L1;
             } else {
-              stackOut_1_0 = this;
-              stackOut_1_1 = (kr) ((Object) stackIn_1_1);
-              stackOut_1_2 = (hd) ((Object) stackIn_1_2);
-              stackOut_1_3 = (la) ((Object) stackIn_1_3);
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_3_2 = stackOut_1_2;
-              stackIn_3_3 = stackOut_1_3;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              stackIn_2_2 = stackOut_1_2;
-              stackIn_2_3 = stackOut_1_3;
+              stackIn_3_0 = this;
+
+              stackIn_3_1 = (kr) ((Object) stackIn_3_1);
+
+              stackIn_3_2 = (hd) ((Object) stackIn_3_2);
+
+              stackIn_3_3 = (la) ((Object) stackIn_3_3);
+
               if (!param0.field_Gc) {
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = (kr) ((Object) stackIn_2_1);
-                stackOut_2_2 = (hd) ((Object) stackIn_2_2);
-                stackOut_2_3 = (la) ((Object) stackIn_2_3);
-                stackOut_2_4 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                stackIn_4_3 = stackOut_2_3;
-                stackIn_4_4 = stackOut_2_4;
+                stackIn_4_0 = this;
+                stackIn_4_1 = (kr) ((Object) stackIn_3_1);
+                stackIn_4_2 = (hd) ((Object) stackIn_3_2);
+                stackIn_4_3 = (la) ((Object) stackIn_3_3);
+                stackIn_4_4 = 1;
                 break L0;
               }
             }
           }
-          stackOut_3_0 = this;
-          stackOut_3_1 = (kr) ((Object) stackIn_3_1);
-          stackOut_3_2 = (hd) ((Object) stackIn_3_2);
-          stackOut_3_3 = (la) ((Object) stackIn_3_3);
-          stackOut_3_4 = 0;
-          stackIn_4_0 = stackOut_3_0;
-          stackIn_4_1 = stackOut_3_1;
-          stackIn_4_2 = stackOut_3_2;
-          stackIn_4_3 = stackOut_3_3;
-          stackIn_4_4 = stackOut_3_4;
+          stackIn_4_0 = this;
+          stackIn_4_1 = (kr) ((Object) stackIn_3_1);
+          stackIn_4_2 = (hd) ((Object) stackIn_3_2);
+          stackIn_4_3 = (la) ((Object) stackIn_3_3);
+          stackIn_4_4 = 0;
           break L0;
         }
         L2: {
@@ -163,7 +115,7 @@ final class og extends ib implements qi {
               var12 = 0;
               L6: while (true) {
                 if (param3 <= var12) {
-                  discarded$3 = this.field_i.UnlockRect(0);
+                  this.field_i.UnlockRect(0);
                   return;
                 } else {
                   var13.a(param5, param6 + param7 * var12, var11 * var12, param2);
@@ -174,13 +126,13 @@ final class og extends ib implements qi {
             } else {
               if (param2 == param7) {
                 var13.a(param5, param6, 0, param2 * param3);
-                discarded$4 = this.field_i.UnlockRect(0);
+                this.field_i.UnlockRect(0);
                 break L4;
               } else {
                 var12 = 0;
                 L7: while (true) {
                   if (param3 <= var12) {
-                    discarded$5 = this.field_i.UnlockRect(0);
+                    this.field_i.UnlockRect(0);
                     return;
                   } else {
                     var13.a(param5, param6 + param7 * var12, var11 * var12, param2);
@@ -253,105 +205,58 @@ final class og extends ib implements qi {
     }
 
     og(kr param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
-        super(param0, lc.field_g, la.field_h, false, param1 * param2);
-        boolean discarded$3 = false;
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        jagdx.PixelBuffer var12 = null;
-        Object stackIn_1_0 = null;
-        kr stackIn_1_1 = null;
-        hd stackIn_1_2 = null;
-        la stackIn_1_3 = null;
-        Object stackIn_2_0 = null;
-        kr stackIn_2_1 = null;
-        hd stackIn_2_2 = null;
-        la stackIn_2_3 = null;
-        Object stackIn_3_0 = null;
-        kr stackIn_3_1 = null;
-        hd stackIn_3_2 = null;
-        la stackIn_3_3 = null;
+        super(null, null, null, false, param1 * param2);
+        Object stackIn_3_0;
+        kr stackIn_3_1;
+        hd stackIn_3_2;
+        la stackIn_3_3;
         Object stackIn_4_0 = null;
         kr stackIn_4_1 = null;
         hd stackIn_4_2 = null;
         la stackIn_4_3 = null;
         int stackIn_4_4 = 0;
-        Object stackOut_0_0 = null;
-        kr stackOut_0_1 = null;
-        hd stackOut_0_2 = null;
-        la stackOut_0_3 = null;
-        Object stackOut_1_0 = null;
-        kr stackOut_1_1 = null;
-        hd stackOut_1_2 = null;
-        la stackOut_1_3 = null;
-        Object stackOut_2_0 = null;
-        kr stackOut_2_1 = null;
-        hd stackOut_2_2 = null;
-        la stackOut_2_3 = null;
-        int stackOut_2_4 = 0;
-        Object stackOut_3_0 = null;
-        kr stackOut_3_1 = null;
-        hd stackOut_3_2 = null;
-        la stackOut_3_3 = null;
-        int stackOut_3_4 = 0;
+        int var9;
+        int var10;
+        int var11;
+        jagdx.PixelBuffer var12;
         L0: {
           L1: {
-            stackOut_0_0 = this;
-            stackOut_0_1 = (kr) (param0);
-            stackOut_0_2 = lc.field_g;
-            stackOut_0_3 = la.field_h;
-            stackIn_3_0 = stackOut_0_0;
-            stackIn_3_1 = stackOut_0_1;
-            stackIn_3_2 = stackOut_0_2;
-            stackIn_3_3 = stackOut_0_3;
-            stackIn_1_0 = stackOut_0_0;
-            stackIn_1_1 = stackOut_0_1;
-            stackIn_1_2 = stackOut_0_2;
-            stackIn_1_3 = stackOut_0_3;
+            stackIn_3_0 = this;
+
+            stackIn_3_1 = (kr) (param0);
+
+            stackIn_3_2 = lc.field_g;
+
+            stackIn_3_3 = la.field_h;
+
             if (!param3) {
               break L1;
             } else {
-              stackOut_1_0 = this;
-              stackOut_1_1 = (kr) ((Object) stackIn_1_1);
-              stackOut_1_2 = (hd) ((Object) stackIn_1_2);
-              stackOut_1_3 = (la) ((Object) stackIn_1_3);
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_3_2 = stackOut_1_2;
-              stackIn_3_3 = stackOut_1_3;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              stackIn_2_2 = stackOut_1_2;
-              stackIn_2_3 = stackOut_1_3;
+              stackIn_3_0 = this;
+
+              stackIn_3_1 = (kr) ((Object) stackIn_3_1);
+
+              stackIn_3_2 = (hd) ((Object) stackIn_3_2);
+
+              stackIn_3_3 = (la) ((Object) stackIn_3_3);
+
               if (!param0.field_Gc) {
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = (kr) ((Object) stackIn_2_1);
-                stackOut_2_2 = (hd) ((Object) stackIn_2_2);
-                stackOut_2_3 = (la) ((Object) stackIn_2_3);
-                stackOut_2_4 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                stackIn_4_3 = stackOut_2_3;
-                stackIn_4_4 = stackOut_2_4;
+                stackIn_4_0 = this;
+                stackIn_4_1 = (kr) ((Object) stackIn_3_1);
+                stackIn_4_2 = (hd) ((Object) stackIn_3_2);
+                stackIn_4_3 = (la) ((Object) stackIn_3_3);
+                stackIn_4_4 = 1;
                 break L0;
               }
             }
           }
-          stackOut_3_0 = this;
-          stackOut_3_1 = (kr) ((Object) stackIn_3_1);
-          stackOut_3_2 = (hd) ((Object) stackIn_3_2);
-          stackOut_3_3 = (la) ((Object) stackIn_3_3);
-          stackOut_3_4 = 0;
-          stackIn_4_0 = stackOut_3_0;
-          stackIn_4_1 = stackOut_3_1;
-          stackIn_4_2 = stackOut_3_2;
-          stackIn_4_3 = stackOut_3_3;
-          stackIn_4_4 = stackOut_3_4;
+          stackIn_4_0 = this;
+          stackIn_4_1 = (kr) ((Object) stackIn_3_1);
+          stackIn_4_2 = (hd) ((Object) stackIn_3_2);
+          stackIn_4_3 = (la) ((Object) stackIn_3_3);
+          stackIn_4_4 = 0;
           break L0;
         }
         L2: {
@@ -391,13 +296,13 @@ final class og extends ib implements qi {
           if (4 * param1 == var10) {
             if (param1 == param6) {
               var12.a(param4, param5, 0, param2 * param1);
-              discarded$3 = this.field_i.UnlockRect(0);
+              this.field_i.UnlockRect(0);
               return;
             } else {
               var11 = 0;
               L5: while (true) {
                 if (param2 <= var11) {
-                  discarded$4 = this.field_i.UnlockRect(0);
+                  this.field_i.UnlockRect(0);
                   return;
                 } else {
                   var12.a(param4, param6 * var11 + param5, var10 * var11, param1);
@@ -410,7 +315,7 @@ final class og extends ib implements qi {
             var11 = 0;
             L6: while (true) {
               if (param2 <= var11) {
-                discarded$5 = this.field_i.UnlockRect(0);
+                this.field_i.UnlockRect(0);
                 return;
               } else {
                 var12.a(param4, param6 * var11 + param5, var10 * var11, param1);
@@ -423,70 +328,41 @@ final class og extends ib implements qi {
     }
 
     public final void a(boolean param0, boolean param1, byte param2) {
-        boolean discarded$11 = false;
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
         Object stackIn_11_0 = null;
         int stackIn_11_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        Object stackOut_8_0 = null;
-        Object stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
         L0: {
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param0) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
         ((og) (this)).field_g = stackIn_3_1 != 0;
         if (param2 != -127) {
           L1: {
-            discarded$11 = this.c((byte) -41);
-            stackOut_8_0 = this;
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_9_0 = stackOut_8_0;
+            this.c((byte) -41);
+            stackIn_10_0 = this;
+
             if (!param1) {
-              stackOut_10_0 = this;
-              stackOut_10_1 = 0;
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_0 = this;
+              stackIn_11_1 = 0;
               break L1;
             } else {
-              stackOut_9_0 = this;
-              stackOut_9_1 = 1;
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_0 = this;
+              stackIn_11_1 = 1;
               break L1;
             }
           }
@@ -494,20 +370,15 @@ final class og extends ib implements qi {
           return;
         } else {
           L2: {
-            stackOut_4_0 = this;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_6_0 = this;
+
             if (!param1) {
-              stackOut_6_0 = this;
-              stackOut_6_1 = 0;
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_0 = this;
+              stackIn_7_1 = 0;
               break L2;
             } else {
-              stackOut_5_0 = this;
-              stackOut_5_1 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_0 = this;
+              stackIn_7_1 = 1;
               break L2;
             }
           }

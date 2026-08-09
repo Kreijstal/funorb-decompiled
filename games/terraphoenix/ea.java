@@ -21,16 +21,7 @@ final class ea implements cj {
     static String field_n;
 
     public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        df var11 = null;
         gl stackIn_3_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -38,26 +29,20 @@ final class ea implements cj {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        gl stackOut_1_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        df var11 = null;
         try {
           L0: {
             L1: {
               if (!(param1 instanceof df)) {
-                stackOut_2_0 = null;
-                stackIn_3_0 = (gl) ((Object) stackOut_2_0);
+                stackIn_3_0 = null;
                 break L1;
               } else {
-                stackOut_1_0 = (gl) (param1);
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = (gl) (param1);
                 break L1;
               }
             }
@@ -99,7 +84,7 @@ final class ea implements cj {
                   break L5;
                 } else {
                   var10 = this.field_i - -this.field_g + this.field_a;
-                  discarded$1 = this.field_h.a(param1.field_o, param1.field_w + param2 - -var10, this.field_b + (param0 + param1.field_u), param1.field_p + -this.field_a + -var10, param1.field_n + -(this.field_a << -781167679), this.field_p, this.field_f, this.field_c, this.field_d, 0);
+                  this.field_h.a(param1.field_o, param1.field_w + param2 - -var10, this.field_b + (param0 + param1.field_u), param1.field_p + -this.field_a + -var10, param1.field_n + -(this.field_a << -781167679), this.field_p, this.field_f, this.field_c, this.field_d, 0);
                   break L5;
                 }
               }
@@ -114,27 +99,19 @@ final class ea implements cj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var6);
-            stackOut_16_1 = new StringBuilder().append("ea.E(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var6);
+
+            stackIn_18_1 = new StringBuilder().append("ea.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L6;
             }
           }

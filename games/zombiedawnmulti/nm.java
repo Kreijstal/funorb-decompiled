@@ -44,27 +44,21 @@ final class nm {
     }
 
     private final void b(int param0) {
-        float var2 = 0.0f;
-        float var3 = 0.0f;
-        int var4 = 0;
-        int var5 = 0;
         float stackIn_6_0 = 0.0f;
         float stackIn_24_0 = 0.0f;
-        float stackOut_23_0 = 0.0f;
-        float stackOut_22_0 = 0.0f;
-        float stackOut_5_0 = 0.0f;
-        float stackOut_4_0 = 0.0f;
+        float var2;
+        float var3;
+        int var4;
+        int var5;
         var2 = 320.0f * this.field_d;
         if (param0 == 27) {
           if (var2 <= (float)this.field_k) {
             L0: {
               if (!he.field_a) {
-                stackOut_23_0 = this.field_d * 200.0f;
-                stackIn_24_0 = stackOut_23_0;
+                stackIn_24_0 = this.field_d * 200.0f;
                 break L0;
               } else {
-                stackOut_22_0 = this.field_d * 240.0f;
-                stackIn_24_0 = stackOut_22_0;
+                stackIn_24_0 = this.field_d * 240.0f;
                 break L0;
               }
             }
@@ -109,12 +103,10 @@ final class nm {
             L3: {
               this.field_k = (int)var2;
               if (!he.field_a) {
-                stackOut_5_0 = this.field_d * 200.0f;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = this.field_d * 200.0f;
                 break L3;
               } else {
-                stackOut_4_0 = this.field_d * 240.0f;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = this.field_d * 240.0f;
                 break L3;
               }
             }
@@ -162,7 +154,7 @@ final class nm {
     }
 
     final static uj b(int param0, int param1) {
-        wj var2 = null;
+        wj var2;
         var2 = new wj(param1);
         fd.field_M.a(var2, false);
         if (param0 > -125) {
@@ -211,9 +203,8 @@ final class nm {
     }
 
     final void a(byte param0) {
-        int discarded$10 = 0;
         if (param0 <= 41) {
-            discarded$10 = this.c(-95, 100);
+            this.c(-95, 100);
             if (!(!gf.field_h)) {
                 return;
             }
@@ -261,19 +252,13 @@ final class nm {
     }
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, byte param4, boolean param5) {
-        float var7 = 0.0f;
-        int var7_int = 0;
-        float var8 = 0.0f;
-        int var9 = 0;
         int stackIn_13_0 = 0;
         int stackIn_47_0 = 0;
         int stackIn_92_0 = 0;
-        int stackOut_91_0 = 0;
-        int stackOut_90_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
+        int var7_int;
+        float var7;
+        float var8;
+        int var9;
         L0: {
           L1: {
             var9 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -300,12 +285,10 @@ final class nm {
                   }
                   L4: {
                     if (param1) {
-                      stackOut_91_0 = 2;
-                      stackIn_92_0 = stackOut_91_0;
+                      stackIn_92_0 = 2;
                       break L4;
                     } else {
-                      stackOut_90_0 = 1;
-                      stackIn_92_0 = stackOut_90_0;
+                      stackIn_92_0 = 1;
                       break L4;
                     }
                   }
@@ -494,12 +477,10 @@ final class nm {
                   }
                   L20: {
                     if (param1) {
-                      stackOut_46_0 = 2;
-                      stackIn_47_0 = stackOut_46_0;
+                      stackIn_47_0 = 2;
                       break L20;
                     } else {
-                      stackOut_45_0 = 1;
-                      stackIn_47_0 = stackOut_45_0;
+                      stackIn_47_0 = 1;
                       break L20;
                     }
                   }
@@ -643,12 +624,10 @@ final class nm {
                 }
                 L32: {
                   if (param1) {
-                    stackOut_12_0 = 2;
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = 2;
                     break L32;
                   } else {
-                    stackOut_11_0 = 1;
-                    stackIn_13_0 = stackOut_11_0;
+                    stackIn_13_0 = 1;
                     break L32;
                   }
                 }
@@ -817,6 +796,7 @@ final class nm {
 
     final int d(int param0, int param1) {
         if (param1 < 104) {
+          nm.a(-81, -0.29647944214546124);
           return (int)((float)(-this.field_g) + (this.field_d * 240.0f + (float)param0));
         } else {
           return (int)((float)(-this.field_g) + (this.field_d * 240.0f + (float)param0));
@@ -844,6 +824,7 @@ final class nm {
         this.field_k = param2;
         this.b(27);
         if (param1 > -35) {
+            nm.a(-48, -0.08284056706899026);
         }
     }
 

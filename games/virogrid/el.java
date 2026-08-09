@@ -30,10 +30,7 @@ final class el implements Runnable {
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -41,14 +38,7 @@ final class el implements Runnable {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var5 = null;
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -85,27 +75,19 @@ final class el implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var5);
-            stackOut_10_1 = new StringBuilder().append("el.I(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var5);
+
+            stackIn_12_1 = new StringBuilder().append("el.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L3;
             }
           }
@@ -119,6 +101,10 @@ final class el implements Runnable {
     }
 
     final static cj a(boolean param0, int param1) {
+        int stackIn_3_0 = 0;
+        int stackIn_9_0 = 0;
+        int[] stackIn_23_0 = null;
+        Throwable decompiledCaughtException = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -126,28 +112,16 @@ final class el implements Runnable {
         int var7 = 0;
         hg var8 = null;
         th var9 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
-        int[] stackIn_23_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        Object stackOut_22_0 = null;
-        int[] stackOut_21_0 = null;
         L0: {
           var7 = Virogrid.field_F ? 1 : 0;
           var8 = sh.field_qb;
           var3 = var8.g(11132);
           td.field_h = 127 & var3;
           if (param1 == (128 & var3)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -167,12 +141,10 @@ final class el implements Runnable {
         }
         L2: {
           if (1 != var8.g(11132)) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = 1;
             break L2;
           }
         }
@@ -214,12 +186,10 @@ final class el implements Runnable {
                   var9 = cj.field_s.a((byte) 125, var5);
                   aa.field_f = var9.d(124);
                   if (vl.field_k.equals(mi.field_d)) {
-                    stackOut_22_0 = null;
-                    stackIn_23_0 = (int[]) ((Object) stackOut_22_0);
+                    stackIn_23_0 = null;
                     break L8;
                   } else {
-                    stackOut_21_0 = var9.field_u;
-                    stackIn_23_0 = stackOut_21_0;
+                    stackIn_23_0 = var9.field_u;
                     break L8;
                   }
                 }
@@ -312,21 +282,14 @@ final class el implements Runnable {
             return;
         }
         hg var2 = sh.field_qb;
-        int discarded$0 = var2.d((byte) 118);
-        int discarded$1 = var2.d((byte) 102);
-        int discarded$2 = var2.d((byte) 99);
-        int discarded$3 = var2.d((byte) 102);
+        var2.d((byte) 118);
+        var2.d((byte) 102);
+        var2.d((byte) 99);
+        var2.d((byte) 102);
         var1.a(false);
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
-        RuntimeException var5 = null;
-        Object var5_ref = null;
-        int var6 = 0;
-        Throwable var7 = null;
-        int var8 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -334,14 +297,10 @@ final class el implements Runnable {
         String stackIn_24_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        Object var5 = null;
+        RuntimeException var5_ref = null;
+        int var6 = 0;
+        int var8 = 0;
         var8 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -355,8 +314,8 @@ final class el implements Runnable {
                     break L1;
                   }
                 }
-                var5_ref = this;
-                synchronized (var5_ref) {
+                var5 = this;
+                synchronized (var5) {
                   L2: {
                     var6 = param1;
                     L3: while (true) {
@@ -398,28 +357,20 @@ final class el implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var5 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var5);
-            stackOut_21_1 = new StringBuilder().append("el.F(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_23_0 = (RuntimeException) (var5_ref);
+
+            stackIn_23_1 = new StringBuilder().append("el.F(");
+
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L5;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L5;
             }
           }
@@ -470,11 +421,9 @@ final class el implements Runnable {
     }
 
     final static void a(int param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
         L0: {
           L1: {
             ad.field_g[2] = 0.0;
@@ -537,12 +486,10 @@ final class el implements Runnable {
             }
             L5: {
               if (-16 < (mj.field_E ^ -1)) {
-                stackOut_15_0 = 2;
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_0 = 2;
                 break L5;
               } else {
-                stackOut_14_0 = 3;
-                stackIn_16_0 = stackOut_14_0;
+                stackIn_16_0 = 3;
                 break L5;
               }
             }
@@ -556,24 +503,23 @@ final class el implements Runnable {
 
     public final void run() {
         try {
-            IOException var1 = null;
-            Exception var1_ref = null;
-            int var1_int = 0;
-            int var2 = 0;
-            IOException var3 = null;
-            Object var3_ref = null;
-            InterruptedException var4 = null;
-            Throwable var5 = null;
-            int var6 = 0;
-            String var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            int var1_int = 0;
+            IOException var1 = null;
+            Exception var1_ref = null;
+            int var2 = 0;
+            Object var3 = null;
+            IOException var3_ref = null;
+            InterruptedException var4 = null;
+            int var6 = 0;
+            String var7 = null;
             var6 = Virogrid.field_F ? 1 : 0;
             try {
               L0: {
                 L1: while (true) {
-                  var3_ref = this;
-                  synchronized (var3_ref) {
+                  var3 = this;
+                  synchronized (var3) {
                     L2: {
                       L3: {
                         if (this.field_u != this.field_c) {
@@ -663,7 +609,7 @@ final class el implements Runnable {
                       } catch (java.io.IOException decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         L13: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_p = true;
                           break L13;
                         }
@@ -684,7 +630,7 @@ final class el implements Runnable {
                       } catch (java.io.IOException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L16: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_p = true;
                           break L16;
                         }

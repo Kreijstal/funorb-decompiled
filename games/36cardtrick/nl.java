@@ -22,26 +22,24 @@ final class nl {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_e = null;
         field_c = null;
         field_a = null;
         if (param0 != 10000) {
-            discarded$0 = nl.a(false);
+            nl.a(false);
         }
     }
 
     final static int a(boolean param0) {
-        RuntimeException var1 = null;
+        int stackIn_28_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_28_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_27_0 = 0;
         var7 = Main.field_T;
         try {
           L0: {
@@ -112,8 +110,7 @@ final class nl {
                     }
                   }
                 }
-                stackOut_27_0 = var3;
-                stackIn_28_0 = stackOut_27_0;
+                stackIn_28_0 = var3;
                 break L0;
               } else {
                 L6: {

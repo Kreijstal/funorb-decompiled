@@ -30,10 +30,10 @@ final class bf {
     }
 
     final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         if (tb.field_a == 0) {
           return;
         } else {
@@ -101,11 +101,11 @@ final class bf {
     }
 
     final void d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = MinerDisturbance.field_ab;
         if (param0 != 32) {
           this.b(94);

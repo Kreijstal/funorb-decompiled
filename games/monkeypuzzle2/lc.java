@@ -12,35 +12,21 @@ final class lc implements ml {
     private ta field_g;
 
     public final void a(boolean param0, we param1, int param2, int param3, int param4) {
-        String discarded$2 = null;
-        int discarded$3 = 0;
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        java.applet.Applet var12 = null;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        java.applet.Applet var12 = null;
         var11 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
@@ -49,7 +35,7 @@ final class lc implements ml {
                 break L1;
               } else {
                 var12 = (java.applet.Applet) null;
-                discarded$2 = lc.a((java.applet.Applet) null, (byte) 96);
+                lc.a((java.applet.Applet) null, (byte) 96);
                 break L1;
               }
             }
@@ -61,19 +47,17 @@ final class lc implements ml {
                   if (param1.b((byte) 127)) {
                     break L3;
                   } else {
-                    stackOut_5_0 = 2188450;
-                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_0 = 2188450;
                     break L2;
                   }
                 }
               }
-              stackOut_6_0 = 3249872;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = 3249872;
               break L2;
             }
             L4: {
               var6_int = stackIn_7_0;
-              discarded$3 = this.field_g.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_s + "</u>", param3 + param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, var6_int, -1, this.field_a, this.field_c, this.field_g.field_C + this.field_g.field_D);
+              this.field_g.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_s + "</u>", param3 + param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, var6_int, -1, this.field_a, this.field_c, this.field_g.field_C + this.field_g.field_D);
               if (!param1.b((byte) 75)) {
                 break L4;
               } else {
@@ -131,27 +115,19 @@ final class lc implements ml {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var6 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var6);
-            stackOut_19_1 = new StringBuilder().append("lc.C(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var6);
+
+            stackIn_21_1 = new StringBuilder().append("lc.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L9;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L9;
             }
           }
@@ -161,8 +137,6 @@ final class lc implements ml {
 
     final static String a(java.applet.Applet param0, byte param1) {
         try {
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -175,8 +149,6 @@ final class lc implements ml {
             String stackIn_11_0 = null;
             String stackIn_19_0 = null;
             String stackIn_21_0 = null;
-            RuntimeException stackIn_23_0 = null;
-            StringBuilder stackIn_23_1 = null;
             RuntimeException stackIn_24_0 = null;
             StringBuilder stackIn_24_1 = null;
             RuntimeException stackIn_25_0 = null;
@@ -185,17 +157,8 @@ final class lc implements ml {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            String stackOut_10_0 = null;
-            String stackOut_20_0 = null;
-            String stackOut_18_0 = null;
-            RuntimeException stackOut_22_0 = null;
-            StringBuilder stackOut_22_1 = null;
-            RuntimeException stackOut_24_0 = null;
-            StringBuilder stackOut_24_1 = null;
-            String stackOut_24_2 = null;
-            RuntimeException stackOut_23_0 = null;
-            StringBuilder stackOut_23_1 = null;
-            String stackOut_23_2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
             var8 = MonkeyPuzzle2.field_F ? 1 : 0;
             try {
               L0: {
@@ -228,8 +191,7 @@ final class lc implements ml {
                                 break L4;
                               } else {
                                 if (var5[var6].substring(0, var7).trim().equals(var3)) {
-                                  stackOut_10_0 = var5[var6].substring(1 + var7).trim();
-                                  stackIn_11_0 = stackOut_10_0;
+                                  stackIn_11_0 = var5[var6].substring(1 + var7).trim();
                                   decompiledRegionSelector0 = 3;
                                   break L1;
                                 } else {
@@ -283,13 +245,11 @@ final class lc implements ml {
                   break L6;
                 }
                 if (null == e.field_c) {
-                  stackOut_20_0 = param0.getParameter("settings");
-                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_0 = param0.getParameter("settings");
                   decompiledRegionSelector1 = 1;
                   break L0;
                 } else {
-                  stackOut_18_0 = e.field_c;
-                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_0 = e.field_c;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 }
@@ -298,27 +258,19 @@ final class lc implements ml {
               decompiledCaughtException = decompiledCaughtParameter1;
               L8: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_22_0 = (RuntimeException) (var2_ref);
-                stackOut_22_1 = new StringBuilder().append("lc.A(");
-                stackIn_24_0 = stackOut_22_0;
-                stackIn_24_1 = stackOut_22_1;
-                stackIn_23_0 = stackOut_22_0;
-                stackIn_23_1 = stackOut_22_1;
+                stackIn_24_0 = (RuntimeException) (var2_ref);
+
+                stackIn_24_1 = new StringBuilder().append("lc.A(");
+
                 if (param0 == null) {
-                  stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-                  stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-                  stackOut_24_2 = "null";
-                  stackIn_25_0 = stackOut_24_0;
-                  stackIn_25_1 = stackOut_24_1;
-                  stackIn_25_2 = stackOut_24_2;
+                  stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+                  stackIn_25_2 = "null";
                   break L8;
                 } else {
-                  stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-                  stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-                  stackOut_23_2 = "{...}";
-                  stackIn_25_0 = stackOut_23_0;
-                  stackIn_25_1 = stackOut_23_1;
-                  stackIn_25_2 = stackOut_23_2;
+                  stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+                  stackIn_25_2 = "{...}";
                   break L8;
                 }
               }

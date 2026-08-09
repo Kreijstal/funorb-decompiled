@@ -41,23 +41,22 @@ final class vq {
     byte[] field_j;
 
     final static void a(int param0) {
-        String discarded$42 = null;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
-        int incrementValue$48 = 0;
-        int incrementValue$49 = 0;
-        int incrementValue$50 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         java.applet.Applet var5 = null;
         int[] var6 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -66,7 +65,7 @@ final class vq {
                 break L1;
               } else {
                 var5 = (java.applet.Applet) null;
-                discarded$42 = vq.a((java.applet.Applet) null, (byte) 54);
+                vq.a((java.applet.Applet) null, (byte) 54);
                 break L1;
               }
             }
@@ -78,30 +77,30 @@ final class vq {
               if (var2 >= var3) {
                 break L0;
               } else {
-                incrementValue$43 = var2;
+                incrementValue$16 = var2;
                 var2++;
-                var6[incrementValue$43] = 0;
-                incrementValue$44 = var2;
+                var6[incrementValue$16] = 0;
+                incrementValue$17 = var2;
                 var2++;
-                var6[incrementValue$44] = 0;
-                incrementValue$45 = var2;
+                var6[incrementValue$17] = 0;
+                incrementValue$18 = var2;
                 var2++;
-                var6[incrementValue$45] = 0;
-                incrementValue$46 = var2;
+                var6[incrementValue$18] = 0;
+                incrementValue$19 = var2;
                 var2++;
-                var6[incrementValue$46] = 0;
-                incrementValue$47 = var2;
+                var6[incrementValue$19] = 0;
+                incrementValue$20 = var2;
                 var2++;
-                var6[incrementValue$47] = 0;
-                incrementValue$48 = var2;
+                var6[incrementValue$20] = 0;
+                incrementValue$21 = var2;
                 var2++;
-                var6[incrementValue$48] = 0;
-                incrementValue$49 = var2;
+                var6[incrementValue$21] = 0;
+                incrementValue$22 = var2;
                 var2++;
-                var6[incrementValue$49] = 0;
-                incrementValue$50 = var2;
+                var6[incrementValue$22] = 0;
+                incrementValue$23 = var2;
                 var2++;
-                var6[incrementValue$50] = 0;
+                var6[incrementValue$23] = 0;
                 continue L2;
               }
             }
@@ -115,8 +114,6 @@ final class vq {
 
     final static String a(java.applet.Applet param0, byte param1) {
         try {
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -126,8 +123,6 @@ final class vq {
             String var9 = null;
             String stackIn_9_0 = null;
             String stackIn_16_0 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
             RuntimeException stackIn_20_0 = null;
@@ -136,16 +131,8 @@ final class vq {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            String stackOut_8_0 = null;
-            String stackOut_15_0 = null;
-            RuntimeException stackOut_17_0 = null;
-            StringBuilder stackOut_17_1 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            String stackOut_18_2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
             var8 = Vertigo2.field_L ? 1 : 0;
             try {
               L0: {
@@ -175,8 +162,7 @@ final class vq {
                             break L4;
                           } else {
                             if (var5[var6].substring(0, var7).trim().equals(var3)) {
-                              stackOut_8_0 = var5[var6].substring(1 + var7).trim();
-                              stackIn_9_0 = stackOut_8_0;
+                              stackIn_9_0 = var5[var6].substring(1 + var7).trim();
                               decompiledRegionSelector0 = 1;
                               break L1;
                             } else {
@@ -199,8 +185,7 @@ final class vq {
                 }
                 if (decompiledRegionSelector0 == 0) {
                   if (null != v.field_b) {
-                    stackOut_15_0 = v.field_b;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = v.field_b;
                     decompiledRegionSelector1 = 0;
                     break L0;
                   } else {
@@ -215,27 +200,19 @@ final class vq {
               decompiledCaughtException = decompiledCaughtParameter1;
               L6: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_17_0 = (RuntimeException) (var2_ref);
-                stackOut_17_1 = new StringBuilder().append("vq.A(");
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
+                stackIn_19_0 = (RuntimeException) (var2_ref);
+
+                stackIn_19_1 = new StringBuilder().append("vq.A(");
+
                 if (param0 == null) {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "null";
-                  stackIn_20_0 = stackOut_19_0;
-                  stackIn_20_1 = stackOut_19_1;
-                  stackIn_20_2 = stackOut_19_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "null";
                   break L6;
                 } else {
-                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackOut_18_2 = "{...}";
-                  stackIn_20_0 = stackOut_18_0;
-                  stackIn_20_1 = stackOut_18_1;
-                  stackIn_20_2 = stackOut_18_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "{...}";
                   break L6;
                 }
               }

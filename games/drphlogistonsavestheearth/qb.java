@@ -32,11 +32,11 @@ final class qb {
 
     final static void a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -73,93 +73,43 @@ final class qb {
     }
 
     static {
-        $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            long var2 = 0L;
-            long var4 = 0L;
-            long var6 = 0L;
-            long var8 = 0L;
-            long var10 = 0L;
-            long var12 = 0L;
-            int var14 = 0;
-            long stackIn_5_0 = 0L;
-            long stackOut_4_0 = 0L;
-            long stackOut_3_0 = 0L;
-            field_e = new long[11];
-            field_c = new long[8][256];
-            var0 = 0;
-            L0: while (true) {
-              if ((var0 ^ -1) <= -257) {
-                field_e[0] = 0L;
-                var0 = 1;
-                L1: while (true) {
-                  if (-11 > (var0 ^ -1)) {
-                    break $cfr$clinit;
-                  } else {
-                    var1 = (var0 - 1) * 8;
-                    field_e[var0] = ff.a(ff.a(ff.a(ff.a(hg.a(4278190080L, field_c[4][4 + var1]), ff.a(hg.a(1095216660480L, field_c[3][var1 - -3]), ff.a(ff.a(hg.a(71776119061217280L, field_c[1][1 + var1]), hg.a(field_c[0][var1], -72057594037927936L)), hg.a(280375465082880L, field_c[2][2 + var1])))), hg.a(field_c[5][5 + var1], 16711680L)), hg.a(65280L, field_c[6][6 + var1])), hg.a(field_c[7][var1 - -7], 255L));
-                    var0++;
-                    continue L1;
-                  }
-                }
-              } else {
-                L2: {
-                  var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-                  if ((var0 & 1) == 0) {
-                    stackOut_4_0 = (long)(var1 >>> -1106701784);
-                    stackIn_5_0 = stackOut_4_0;
-                    break L2;
-                  } else {
-                    stackOut_3_0 = (long)(255 & var1);
-                    stackIn_5_0 = stackOut_3_0;
-                    break L2;
-                  }
-                }
-                L3: {
-                  var2 = stackIn_5_0;
-                  var4 = var2 << -111092735;
-                  if (-257L >= (var4 ^ -1L)) {
-                    var4 = var4 ^ 285L;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  var6 = var4 << -215194431;
-                  if (-257L < (var6 ^ -1L)) {
-                    break L4;
-                  } else {
-                    var6 = var6 ^ 285L;
-                    break L4;
-                  }
-                }
-                L5: {
-                  var8 = var2 ^ var6;
-                  var10 = var6 << 1067178177;
-                  if ((var10 ^ -1L) > -257L) {
-                    break L5;
-                  } else {
-                    var10 = var10 ^ 285L;
-                    break L5;
-                  }
-                }
-                var12 = var10 ^ var2;
-                field_c[0][var0] = gb.a(var12, gb.a(var4 << -1361118776, gb.a(var8 << 1670170704, gb.a(gb.a(gb.a(var6 << 1741398952, gb.a(var2 << -143737872, var2 << 137998200)), var2 << -606579616), var10 << 1567276696))));
-                var14 = 1;
-                L6: while (true) {
-                  if ((var14 ^ -1) <= -9) {
-                    var0++;
-                    continue L0;
-                  } else {
-                    field_c[var14][var0] = gb.a(field_c[var14 + -1][var0] >>> -101773752, field_c[-1 + var14][var0] << -1558383432);
-                    var14++;
-                    continue L6;
-                  }
-                }
-              }
+        int var0 = 0;
+        int var1 = 0;
+        long var2 = 0L;
+        long var4 = 0L;
+        long var6 = 0L;
+        long var8 = 0L;
+        long var10 = 0L;
+        long var12 = 0L;
+        int var14 = 0;
+        field_e = new long[11];
+        field_c = new long[8][256];
+        for (var0 = 0; (var0 ^ -1) > -257; var0++) {
+            var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+            var2 = (var0 & 1) != 0 ? (long)(255 & var1) : (long)(var1 >>> -1106701784);
+            var4 = var2 << -111092735;
+            if (!(-257L < (var4 ^ -1L))) {
+                var4 = var4 ^ 285L;
             }
+            var6 = var4 << -215194431;
+            if (-257L >= (var6 ^ -1L)) {
+                var6 = var6 ^ 285L;
+            }
+            var8 = var2 ^ var6;
+            var10 = var6 << 1067178177;
+            if ((var10 ^ -1L) <= -257L) {
+                var10 = var10 ^ 285L;
+            }
+            var12 = var10 ^ var2;
+            field_c[0][var0] = gb.a(var12, gb.a(var4 << -1361118776, gb.a(var8 << 1670170704, gb.a(gb.a(gb.a(var6 << 1741398952, gb.a(var2 << -143737872, var2 << 137998200)), var2 << -606579616), var10 << 1567276696))));
+            for (var14 = 1; (var14 ^ -1) > -9; var14++) {
+                field_c[var14][var0] = gb.a(field_c[var14 + -1][var0] >>> -101773752, field_c[-1 + var14][var0] << -1558383432);
+            }
+        }
+        field_e[0] = 0L;
+        for (var0 = 1; -11 <= (var0 ^ -1); var0++) {
+            var1 = (var0 - 1) * 8;
+            field_e[var0] = ff.a(ff.a(ff.a(ff.a(hg.a(4278190080L, field_c[4][4 + var1]), ff.a(hg.a(1095216660480L, field_c[3][var1 - -3]), ff.a(ff.a(hg.a(71776119061217280L, field_c[1][1 + var1]), hg.a(field_c[0][var1], -72057594037927936L)), hg.a(280375465082880L, field_c[2][2 + var1])))), hg.a(field_c[5][5 + var1], 16711680L)), hg.a(65280L, field_c[6][6 + var1])), hg.a(field_c[7][var1 - -7], 255L));
         }
     }
 }

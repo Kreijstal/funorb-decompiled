@@ -6,11 +6,10 @@ final class lk {
     static int field_a;
 
     final static String a(int param0, boolean param1, boolean param2, boolean param3) {
-        String discarded$2 = null;
-        int var4 = 0;
+        int var4;
         if (param0 >= -35) {
           L0: {
-            discarded$2 = lk.a(-28, false, true, true);
+            lk.a(-28, false, true, true);
             var4 = 0;
             if (param1) {
               var4 += 4;

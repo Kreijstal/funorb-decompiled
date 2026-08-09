@@ -35,11 +35,10 @@ final class he extends ci {
     }
 
     private final void a(int param0, byte param1) {
-        int discarded$1 = 0;
-        int var3 = 0;
+        int var3;
         this.field_Ib.a(0, this.field_Ib.e((byte) -101), -2147483648, this.field_pb, 0);
         if (param1 != -3) {
-          discarded$1 = this.a((byte) 94, -58);
+          this.a((byte) 94, -58);
           var3 = this.field_Ib.field_M + param0;
           this.field_Kb.a(var3, -var3 + this.field_M, param1 + -2147483645, this.field_pb, 0);
           return;
@@ -78,7 +77,7 @@ final class he extends ci {
     }
 
     final int a(byte param0, int param1) {
-        java.awt.Component var4 = null;
+        java.awt.Component var4;
         if (param0 < 101) {
           var4 = (java.awt.Component) null;
           he.a(-34, (java.awt.Component) null);

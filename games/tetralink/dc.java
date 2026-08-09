@@ -24,8 +24,16 @@ final class dc implements kg {
     }
 
     final static void a(int param0) {
-        RuntimeException var1 = null;
+        int stackIn_20_0 = 0;
+        String stackIn_26_0 = null;
+        int stackIn_30_0 = 0;
+        String stackIn_36_0 = null;
+        int stackIn_43_0 = 0;
+        ve stackIn_47_0 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         long var3_long = 0L;
         int var3 = 0;
@@ -36,26 +44,6 @@ final class dc implements kg {
         int var8 = 0;
         ve var9 = null;
         int var10 = 0;
-        int stackIn_20_0 = 0;
-        String stackIn_26_0 = null;
-        int stackIn_30_0 = 0;
-        String stackIn_36_0 = null;
-        int stackIn_43_0 = 0;
-        ve stackIn_47_0 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        String stackOut_25_0 = null;
-        String stackOut_24_0 = null;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        String stackOut_35_0 = null;
-        String stackOut_34_0 = null;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
-        ve stackOut_46_0 = null;
-        ve stackOut_45_0 = null;
         var10 = TetraLink.field_J;
         try {
           L0: {
@@ -105,12 +93,10 @@ final class dc implements kg {
                       if (var2 == 1) {
                         L5: {
                           if (jl.field_b.length <= fi.field_Ab.length) {
-                            stackOut_19_0 = fi.field_Ab.length;
-                            stackIn_20_0 = stackOut_19_0;
+                            stackIn_20_0 = fi.field_Ab.length;
                             break L5;
                           } else {
-                            stackOut_18_0 = jl.field_b.length;
-                            stackIn_20_0 = stackOut_18_0;
+                            stackIn_20_0 = jl.field_b.length;
                             break L5;
                           }
                         }
@@ -122,12 +108,10 @@ final class dc implements kg {
                             if (var3 < 6 + var7) {
                               L7: {
                                 if (-1 < (-6 + var3 - -fi.field_Ab.length + -var7 ^ -1)) {
-                                  stackOut_25_0 = "";
-                                  stackIn_26_0 = stackOut_25_0;
+                                  stackIn_26_0 = "";
                                   break L7;
                                 } else {
-                                  stackOut_24_0 = fi.field_Ab[-var7 + var3 + (-6 - -fi.field_Ab.length)];
-                                  stackIn_26_0 = stackOut_24_0;
+                                  stackIn_26_0 = fi.field_Ab[-var7 + var3 + (-6 - -fi.field_Ab.length)];
                                   break L7;
                                 }
                               }
@@ -140,12 +124,10 @@ final class dc implements kg {
                         }
                         L8: {
                           if (qc.field_db.length < ah.field_j.length) {
-                            stackOut_29_0 = ah.field_j.length;
-                            stackIn_30_0 = stackOut_29_0;
+                            stackIn_30_0 = ah.field_j.length;
                             break L8;
                           } else {
-                            stackOut_28_0 = qc.field_db.length;
-                            stackIn_30_0 = stackOut_28_0;
+                            stackIn_30_0 = qc.field_db.length;
                             break L8;
                           }
                         }
@@ -156,12 +138,10 @@ final class dc implements kg {
                           if (var3 < var7 + (7 - -var8)) {
                             L9: {
                               if (qc.field_db.length > var3 - (7 - -var7)) {
-                                stackOut_35_0 = qc.field_db[-var7 + -7 + var3];
-                                stackIn_36_0 = stackOut_35_0;
+                                stackIn_36_0 = qc.field_db[-var7 + -7 + var3];
                                 break L9;
                               } else {
-                                stackOut_34_0 = "";
-                                stackIn_36_0 = stackOut_34_0;
+                                stackIn_36_0 = "";
                                 break L9;
                               }
                             }
@@ -186,12 +166,10 @@ final class dc implements kg {
                   }
                   L11: {
                     if (var4 < 0) {
-                      stackOut_42_0 = 0;
-                      stackIn_43_0 = stackOut_42_0;
+                      stackIn_43_0 = 0;
                       break L11;
                     } else {
-                      stackOut_41_0 = 1;
-                      stackIn_43_0 = stackOut_41_0;
+                      stackIn_43_0 = 1;
                       break L11;
                     }
                   }
@@ -204,12 +182,10 @@ final class dc implements kg {
                       L13: {
                         var1_int = var1_int + mn.field_c;
                         if (gm.field_h.field_b != var4) {
-                          stackOut_46_0 = hj.field_e;
-                          stackIn_47_0 = stackOut_46_0;
+                          stackIn_47_0 = hj.field_e;
                           break L13;
                         } else {
-                          stackOut_45_0 = hd.field_t;
-                          stackIn_47_0 = stackOut_45_0;
+                          stackIn_47_0 = hd.field_t;
                           break L13;
                         }
                       }
@@ -280,6 +256,13 @@ final class dc implements kg {
     }
 
     public final void a(na param0, int param1, int param2, boolean param3, boolean param4) {
+        na stackIn_4_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -287,36 +270,15 @@ final class dc implements kg {
         int var10 = 0;
         int var11 = 0;
         kk var12 = null;
-        na stackIn_4_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        na stackOut_3_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var11 = TetraLink.field_J;
         try {
           L0: {
             L1: {
               if (param0 instanceof kk) {
-                stackOut_3_0 = (na) (param0);
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = (na) (param0);
                 break L1;
               } else {
-                stackOut_2_0 = null;
-                stackIn_4_0 = (na) ((Object) stackOut_2_0);
+                stackIn_4_0 = null;
                 break L1;
               }
             }
@@ -361,27 +323,19 @@ final class dc implements kg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var6);
-            stackOut_14_1 = new StringBuilder().append("dc.L(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var6);
+
+            stackIn_16_1 = new StringBuilder().append("dc.L(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L5;
             }
           }

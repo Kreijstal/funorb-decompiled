@@ -25,8 +25,6 @@ final class um extends gf {
         cd stackIn_5_0 = null;
         cd stackIn_8_0 = null;
         cd stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -34,18 +32,6 @@ final class um extends gf {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        cd stackOut_4_0 = null;
-        cd stackOut_11_0 = null;
-        cd stackOut_10_0 = null;
-        cd stackOut_7_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             L1: {
@@ -57,8 +43,7 @@ final class um extends gf {
                   if (var3.a((byte) -95) == so.field_s) {
                     break L1;
                   } else {
-                    stackOut_4_0 = so.field_u;
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = so.field_u;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -70,20 +55,17 @@ final class um extends gf {
             if (param0 >= 62) {
               L2: {
                 if (!param1.equals(this.field_n.field_m)) {
-                  stackOut_11_0 = so.field_u;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = so.field_u;
                   break L2;
                 } else {
-                  stackOut_10_0 = so.field_s;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = so.field_s;
                   break L2;
                 }
               }
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_7_0 = (cd) null;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = (cd) null;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -92,27 +74,19 @@ final class um extends gf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3_ref);
-            stackOut_13_1 = new StringBuilder().append("um.F(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3_ref);
+
+            stackIn_15_1 = new StringBuilder().append("um.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }
@@ -135,8 +109,6 @@ final class um extends gf {
         String stackIn_9_0 = null;
         String stackIn_11_0 = null;
         String stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -144,17 +116,6 @@ final class um extends gf {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_8_0 = null;
-        String stackOut_10_0 = null;
-        String stackOut_14_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         try {
           L0: {
             L1: {
@@ -176,15 +137,13 @@ final class um extends gf {
                       if (param1.equals(this.field_n.field_m)) {
                         break L3;
                       } else {
-                        stackOut_8_0 = hm.field_u;
-                        stackIn_9_0 = stackOut_8_0;
+                        stackIn_9_0 = hm.field_u;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
                     }
                   }
-                  stackOut_10_0 = var3.a(param0 ^ -8);
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = var3.a(param0 ^ -8);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -195,8 +154,7 @@ final class um extends gf {
               }
             }
             if (!param1.equals(this.field_n.field_m)) {
-              stackOut_14_0 = hm.field_u;
-              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_0 = hm.field_u;
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
@@ -207,27 +165,19 @@ final class um extends gf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var3_ref);
-            stackOut_16_1 = new StringBuilder().append("um.H(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var3_ref);
+
+            stackIn_18_1 = new StringBuilder().append("um.H(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L4;
             }
           }
@@ -260,15 +210,15 @@ final class um extends gf {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var14 = Torquing.field_u;
         if (!param5) {
           var6 = -param0 + param3;

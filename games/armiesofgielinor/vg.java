@@ -16,9 +16,6 @@ final class vg extends tc {
     final static boolean a(int param0) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == 10) {
           if (ik.field_d == null) {
             if (iu.field_h) {
@@ -27,8 +24,7 @@ final class vg extends tc {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
@@ -38,12 +34,10 @@ final class vg extends tc {
           } else {
             L0: {
               if (!iu.field_h) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }

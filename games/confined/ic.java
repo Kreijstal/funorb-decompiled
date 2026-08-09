@@ -20,7 +20,7 @@ final class ic {
     }
 
     final static int a(int param0, byte param1) {
-        int var2 = 0;
+        int var2;
         if (-1 == (param0 ^ -1)) {
           return 0;
         } else {

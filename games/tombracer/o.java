@@ -14,11 +14,10 @@ final class o extends ora implements sca {
     }
 
     public final void a(int param0, int param1, byte[] param2, int param3) {
-        int discarded$0 = 0;
         try {
             this.a(param2, param0);
             if (param1 != -11783) {
-                discarded$0 = this.a(100);
+                this.a(100);
             }
             this.field_c = param3;
         } catch (RuntimeException runtimeException) {

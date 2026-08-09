@@ -9,7 +9,7 @@ final class pf {
     static String field_b;
 
     final synchronized static long a(int param0) {
-        long var1 = 0L;
+        long var1;
         if (param0 == 0) {
           var1 = System.currentTimeMillis();
           if ((field_a ^ -1L) < (var1 ^ -1L)) {
@@ -40,7 +40,6 @@ final class pf {
     final static void a(byte param0, vl param1, int param2) {
         hb var6 = null;
         int var5 = 0;
-        int discarded$0 = 0;
         try {
             var6 = gf.field_c;
             int var4 = 95 / ((param0 - -41) / 42);
@@ -54,7 +53,7 @@ final class pf {
             var6.a(-803539344, param1.field_i);
             var6.a(-803539344, param1.field_e);
             var6.a(-803539344, param1.field_k);
-            discarded$0 = var6.a((byte) -47, var5);
+            var6.a((byte) -47, var5);
             var6.a(-var5 + var6.field_h, (byte) -116);
         } catch (RuntimeException runtimeException) {
             throw la.a((Throwable) ((Object) runtimeException), "pf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -69,14 +68,14 @@ final class pf {
 
     final static void a(boolean param0) {
         try {
-            Exception var1 = null;
-            java.lang.reflect.Method var1_ref = null;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
-            Long var3 = null;
-            Object[] var4 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            java.lang.reflect.Method var1 = null;
+            Exception var1_ref = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
+            Long var3 = null;
+            Object[] var4 = null;
             L0: {
               if (param0) {
                 break L0;
@@ -88,15 +87,15 @@ final class pf {
             try {
               L1: {
                 L2: {
-                  var1_ref = Runtime.class.getMethod("maxMemory", new Class[]{});
-                  if (var1_ref == null) {
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+                  if (var1 == null) {
                     break L2;
                   } else {
                     try {
                       L3: {
-                        var2_ref = Runtime.getRuntime();
+                        var2 = Runtime.getRuntime();
                         var4 = (Object[]) null;
-                        var3 = (Long) (var1_ref.invoke((Object) (var2_ref), (Object[]) null));
+                        var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
                         gb.field_i = (int)(var3.longValue() / 1048576L) + 1;
                         decompiledRegionSelector0 = 0;
                         break L3;
@@ -104,7 +103,7 @@ final class pf {
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L4: {
-                        var2 = decompiledCaughtException;
+                        var2_ref = decompiledCaughtException;
                         decompiledRegionSelector0 = 1;
                         break L4;
                       }
@@ -121,7 +120,7 @@ final class pf {
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L5: {
-                var1 = (Exception) (Object) decompiledCaughtException;
+                var1_ref = (Exception) (Object) decompiledCaughtException;
                 break L5;
               }
             }

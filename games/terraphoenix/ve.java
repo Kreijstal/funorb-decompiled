@@ -14,8 +14,8 @@ final class ve {
     }
 
     final static String a(int param0, CharSequence[] param1, int param2, int param3) {
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -31,8 +31,6 @@ final class ve {
         String stackIn_9_0 = null;
         String stackIn_18_0 = null;
         String stackIn_26_0 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
@@ -40,18 +38,6 @@ final class ve {
         String stackIn_30_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_8_0 = null;
-        String stackOut_25_0 = null;
-        String stackOut_17_0 = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
         var9 = Terraphoenix.field_V;
         try {
           L0: {
@@ -60,8 +46,7 @@ final class ve {
                 var10 = param1[param3];
                 var4 = var10;
                 if (var4 == null) {
-                  stackOut_8_0 = "null";
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = "null";
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -78,18 +63,17 @@ final class ve {
                       var7 = param3;
                       L2: while (true) {
                         if (var7 >= var4_int) {
-                          stackOut_25_0 = var6.toString();
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = var6.toString();
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
                           L3: {
                             var8 = param1[var7];
                             if (var8 != null) {
-                              discarded$5 = var6.append(var8);
+                              discarded$3 = var6.append(var8);
                               break L3;
                             } else {
-                              discarded$6 = var6.append("null");
+                              discarded$4 = var6.append("null");
                               break L3;
                             }
                           }
@@ -98,8 +82,7 @@ final class ve {
                         }
                       }
                     } else {
-                      stackOut_17_0 = (String) null;
-                      stackIn_18_0 = stackOut_17_0;
+                      stackIn_18_0 = (String) null;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
@@ -120,8 +103,7 @@ final class ve {
                 }
               }
             } else {
-              stackOut_2_0 = "";
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = "";
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -130,27 +112,19 @@ final class ve {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var4_ref);
-            stackOut_27_1 = new StringBuilder().append("ve.D(").append(param0).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackIn_29_0 = (RuntimeException) (var4_ref);
+
+            stackIn_29_1 = new StringBuilder().append("ve.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L5;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L5;
             }
           }
@@ -187,22 +161,29 @@ final class ve {
     }
 
     final static void a(ci param0, int param1, int param2, int param3, int param4) {
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
-        int incrementValue$24 = 0;
-        int incrementValue$25 = 0;
-        int incrementValue$26 = 0;
-        int incrementValue$27 = 0;
-        RuntimeException var5 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        RuntimeException stackIn_52_0 = null;
+        StringBuilder stackIn_52_1 = null;
+        RuntimeException stackIn_53_0 = null;
+        StringBuilder stackIn_53_1 = null;
+        String stackIn_53_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -216,23 +197,6 @@ final class ve {
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        RuntimeException stackIn_51_0 = null;
-        StringBuilder stackIn_51_1 = null;
-        RuntimeException stackIn_52_0 = null;
-        StringBuilder stackIn_52_1 = null;
-        RuntimeException stackIn_53_0 = null;
-        StringBuilder stackIn_53_1 = null;
-        String stackIn_53_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_50_0 = null;
-        StringBuilder stackOut_50_1 = null;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        String stackOut_52_2 = null;
-        RuntimeException stackOut_51_0 = null;
-        StringBuilder stackOut_51_1 = null;
-        String stackOut_51_2 = null;
         var18 = Terraphoenix.field_V;
         try {
           L0: {
@@ -332,16 +296,16 @@ final class ve {
                                 continue L6;
                               } else {
                                 L10: {
-                                  incrementValue$14 = var6;
+                                  incrementValue$0 = var6;
                                   var6++;
-                                  var14 = param0.field_z[incrementValue$14];
-                                  if (var14 == 0) {
+                                  var14 = param0.field_z[incrementValue$0];
+                                  if ((var14 ^ -1) == -1) {
                                     var5_int++;
                                     break L10;
                                   } else {
-                                    incrementValue$15 = var5_int;
+                                    incrementValue$1 = var5_int;
                                     var5_int++;
-                                    l.field_i[incrementValue$15] = var14;
+                                    l.field_i[incrementValue$1] = var14;
                                     break L10;
                                   }
                                 }
@@ -352,19 +316,19 @@ final class ve {
                           } else {
                             L11: {
                               L12: {
-                                incrementValue$16 = var6;
+                                incrementValue$2 = var6;
                                 var6++;
-                                var14 = param0.field_z[incrementValue$16];
+                                var14 = param0.field_z[incrementValue$2];
                                 if (-1 == (var14 ^ -1)) {
                                   break L12;
                                 } else {
                                   if (gd.field_a[var7][var8] <= param2) {
-                                    incrementValue$17 = var7;
+                                    incrementValue$3 = var7;
                                     var7++;
-                                    gd.field_a[incrementValue$17][var8] = param2;
-                                    incrementValue$18 = var5_int;
+                                    gd.field_a[incrementValue$3][var8] = param2;
+                                    incrementValue$4 = var5_int;
                                     var5_int++;
-                                    l.field_i[incrementValue$18] = var14;
+                                    l.field_i[incrementValue$4] = var14;
                                     break L11;
                                   } else {
                                     break L12;
@@ -377,19 +341,19 @@ final class ve {
                             }
                             L13: {
                               L14: {
-                                incrementValue$19 = var6;
+                                incrementValue$5 = var6;
                                 var6++;
-                                var14 = param0.field_z[incrementValue$19];
+                                var14 = param0.field_z[incrementValue$5];
                                 if (0 == var14) {
                                   break L14;
                                 } else {
                                   if (param2 >= gd.field_a[var7][var8]) {
-                                    incrementValue$20 = var7;
+                                    incrementValue$6 = var7;
                                     var7++;
-                                    gd.field_a[incrementValue$20][var8] = param2;
-                                    incrementValue$21 = var5_int;
+                                    gd.field_a[incrementValue$6][var8] = param2;
+                                    incrementValue$7 = var5_int;
                                     var5_int++;
-                                    l.field_i[incrementValue$21] = var14;
+                                    l.field_i[incrementValue$7] = var14;
                                     break L13;
                                   } else {
                                     break L14;
@@ -402,21 +366,21 @@ final class ve {
                             }
                             L15: {
                               L16: {
-                                incrementValue$22 = var6;
+                                incrementValue$8 = var6;
                                 var6++;
-                                var14 = param0.field_z[incrementValue$22];
+                                var14 = param0.field_z[incrementValue$8];
                                 if (0 == var14) {
                                   break L16;
                                 } else {
                                   if (param2 < gd.field_a[var7][var8]) {
                                     break L16;
                                   } else {
-                                    incrementValue$23 = var7;
+                                    incrementValue$9 = var7;
                                     var7++;
-                                    gd.field_a[incrementValue$23][var8] = param2;
-                                    incrementValue$24 = var5_int;
+                                    gd.field_a[incrementValue$9][var8] = param2;
+                                    incrementValue$10 = var5_int;
                                     var5_int++;
-                                    l.field_i[incrementValue$24] = var14;
+                                    l.field_i[incrementValue$10] = var14;
                                     break L15;
                                   }
                                 }
@@ -427,19 +391,19 @@ final class ve {
                             }
                             L17: {
                               L18: {
-                                incrementValue$25 = var6;
+                                incrementValue$11 = var6;
                                 var6++;
-                                var14 = param0.field_z[incrementValue$25];
+                                var14 = param0.field_z[incrementValue$11];
                                 if (0 == var14) {
                                   break L18;
                                 } else {
                                   if (param2 >= gd.field_a[var7][var8]) {
-                                    incrementValue$26 = var7;
+                                    incrementValue$12 = var7;
                                     var7++;
-                                    gd.field_a[incrementValue$26][var8] = param2;
-                                    incrementValue$27 = var5_int;
+                                    gd.field_a[incrementValue$12][var8] = param2;
+                                    incrementValue$13 = var5_int;
                                     var5_int++;
-                                    l.field_i[incrementValue$27] = var14;
+                                    l.field_i[incrementValue$13] = var14;
                                     break L17;
                                   } else {
                                     break L18;
@@ -472,27 +436,19 @@ final class ve {
           decompiledCaughtException = decompiledCaughtParameter0;
           L19: {
             var5 = decompiledCaughtException;
-            stackOut_50_0 = (RuntimeException) (var5);
-            stackOut_50_1 = new StringBuilder().append("ve.C(");
-            stackIn_52_0 = stackOut_50_0;
-            stackIn_52_1 = stackOut_50_1;
-            stackIn_51_0 = stackOut_50_0;
-            stackIn_51_1 = stackOut_50_1;
+            stackIn_52_0 = (RuntimeException) (var5);
+
+            stackIn_52_1 = new StringBuilder().append("ve.C(");
+
             if (param0 == null) {
-              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
-              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
-              stackOut_52_2 = "null";
-              stackIn_53_0 = stackOut_52_0;
-              stackIn_53_1 = stackOut_52_1;
-              stackIn_53_2 = stackOut_52_2;
+              stackIn_53_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
+              stackIn_53_2 = "null";
               break L19;
             } else {
-              stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
-              stackOut_51_1 = (StringBuilder) ((Object) stackIn_51_1);
-              stackOut_51_2 = "{...}";
-              stackIn_53_0 = stackOut_51_0;
-              stackIn_53_1 = stackOut_51_1;
-              stackIn_53_2 = stackOut_51_2;
+              stackIn_53_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
+              stackIn_53_2 = "{...}";
               break L19;
             }
           }

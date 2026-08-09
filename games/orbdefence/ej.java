@@ -92,19 +92,19 @@ abstract class ej extends sg {
     }
 
     void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = OrbDefence.field_D ? 1 : 0;
         ul.a(6 + param0, 35 + param1, -12 + this.field_m, -40 + this.field_r, 2105376, 0);
         var5 = 211;
@@ -153,7 +153,7 @@ abstract class ej extends sg {
               }
             }
           } else {
-            if (var8 >= ul.field_d) {
+            if ((var8 ^ -1) <= (ul.field_d ^ -1)) {
               if (var8 < ul.field_a) {
                 L3: {
                   var9 = var5 + (var6 - var5) * var7 / var4;

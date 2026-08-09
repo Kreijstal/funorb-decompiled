@@ -22,8 +22,8 @@ final class sh {
     static int[] field_r;
 
     private final void a(byte param0) {
-        int var2 = 0;
-        wp var3 = null;
+        int var2;
+        wp var3;
         if (param0 < 20) {
           field_m = (je) null;
           var2 = this.field_n.field_i >> -286506128;
@@ -39,7 +39,7 @@ final class sh {
     }
 
     final void b(int param0) {
-        int var2 = 0;
+        int var2;
         if (!this.field_b) {
           return;
         } else {
@@ -54,48 +54,54 @@ final class sh {
               }
             }
             if (this.field_n.field_c) {
-              L1: {
-                if (3 != this.field_o) {
-                  break L1;
-                } else {
-                  if (this.field_n.field_m != je.field_K[this.field_c][0]) {
-                    break L1;
-                  } else {
-                    dh.a(this.field_c, 4, 32);
-                    if (this.field_o == 4) {
-                      if (this.field_n.field_m == je.field_K[this.field_c][1]) {
-                        dh.a(this.field_c, 7, 32);
-                        return;
-                      } else {
-                        return;
-                      }
+              if (3 == this.field_o) {
+                if (this.field_n.field_m != je.field_K[this.field_c][0]) {
+                  if (this.field_o == 4) {
+                    if (this.field_n.field_m == je.field_K[this.field_c][1]) {
+                      dh.a(this.field_c, 7, 32);
+                      return;
                     } else {
                       return;
                     }
+                  } else {
+                    return;
+                  }
+                } else {
+                  dh.a(this.field_c, 4, 32);
+                  if (this.field_o == 4) {
+                    if (this.field_n.field_m == je.field_K[this.field_c][1]) {
+                      dh.a(this.field_c, 7, 32);
+                      return;
+                    } else {
+                      return;
+                    }
+                  } else {
+                    return;
                   }
                 }
-              }
-              if (this.field_o == 4) {
-                if (this.field_n.field_m == je.field_K[this.field_c][1]) {
-                  dh.a(this.field_c, 7, 32);
-                  return;
+              } else {
+                if (this.field_o == 4) {
+                  if (this.field_n.field_m != je.field_K[this.field_c][1]) {
+                    return;
+                  } else {
+                    dh.a(this.field_c, 7, 32);
+                    return;
+                  }
                 } else {
                   return;
                 }
-              } else {
-                return;
               }
             } else {
               return;
             }
           } else {
-            L2: {
+            L1: {
               this.field_p = -51;
               if (var2 != 0) {
                 this.a((byte) -125, this.field_k);
-                break L2;
+                break L1;
               } else {
-                break L2;
+                break L1;
               }
             }
             if (this.field_n.field_c) {
@@ -162,35 +168,31 @@ final class sh {
     }
 
     final void e(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        Object var18 = null;
-        gd var18_ref = null;
-        gd var19 = null;
-        Object var20 = null;
-        gd var20_ref = null;
-        gd var21 = null;
-        Object var22 = null;
-        gd var22_ref = null;
-        gd var23 = null;
-        Object var24 = null;
-        gd var24_ref = null;
-        gd var25 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        Object var18;
+        gd var18_ref;
+        gd var19;
+        Object var20;
+        gd var20_ref;
+        gd var21;
+        Object var22;
+        gd var22_ref;
+        gd var23;
+        Object var24;
+        gd var24_ref;
+        gd var25;
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
         var18 = null;
         var20 = null;
         var22 = null;
@@ -209,46 +211,37 @@ final class sh {
               var9 = th.a(this.field_f + -(var7 / var8) + var7, 1, 2048);
               var10 = 0;
               if (this.field_q) {
-                stackOut_12_0 = 400;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = 400;
                 break L0;
               } else {
-                stackOut_11_0 = 300;
-                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_0 = 300;
                 break L0;
               }
             }
             L1: {
-              L2: {
-                var11 = stackIn_13_0 + -(this.field_f * 2);
-                var12 = -400;
-                if (!this.field_b) {
-                  break L2;
-                } else {
-                  var18_ref = (gd) ((Object) this.field_n.a(var2 != 0, true, var3 != 0, this.field_e));
-                  var19 = var18_ref;
-                  var18_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
-                  tm.a();
-                  tm.c(this.field_i, this.field_g);
-                  var19.a(var4, var5, var6, var9, var10, var11, var12);
-                  if (!ArmiesOfGielinor.field_M) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
+              var11 = stackIn_13_0 + -(this.field_f * 2);
+              var12 = -400;
+              if (!this.field_b) {
+                tm.a();
+                tm.c(this.field_i, this.field_g);
+                var20_ref = (gd) ((Object) this.field_e.a(var2 != 0, false, var3 != 0));
+                var21 = var20_ref;
+                var20_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
+                var21.a(var4, var5, var6, var9, var10, var11, var12);
+                break L1;
+              } else {
+                var18_ref = (gd) ((Object) this.field_n.a(var2 != 0, true, var3 != 0, this.field_e));
+                var19 = var18_ref;
+                var18_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
+                tm.a();
+                tm.c(this.field_i, this.field_g);
+                var19.a(var4, var5, var6, var9, var10, var11, var12);
+                break L1;
               }
-              tm.a();
-              tm.c(this.field_i, this.field_g);
-              var20_ref = (gd) ((Object) this.field_e.a(var2 != 0, false, var3 != 0));
-              var21 = var20_ref;
-              var20_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
-              var21.a(var4, var5, var6, var9, var10, var11, var12);
-              break L1;
             }
             return;
           } else {
-            L3: {
+            L2: {
               var2 = 0;
               var3 = 0;
               var4 = 0;
@@ -259,42 +252,33 @@ final class sh {
               var9 = th.a(this.field_f + -(var7 / var8) + var7, 1, 2048);
               var10 = 0;
               if (this.field_q) {
-                stackOut_5_0 = 400;
-                stackIn_6_0 = stackOut_5_0;
-                break L3;
+                stackIn_6_0 = 400;
+                break L2;
               } else {
-                stackOut_4_0 = 300;
-                stackIn_6_0 = stackOut_4_0;
-                break L3;
+                stackIn_6_0 = 300;
+                break L2;
               }
             }
-            L4: {
-              L5: {
-                var11 = stackIn_6_0 + -(this.field_f * 2);
-                var12 = -400;
-                if (!this.field_b) {
-                  break L5;
-                } else {
-                  var22_ref = (gd) ((Object) this.field_n.a(var2 != 0, true, var3 != 0, this.field_e));
-                  var23 = var22_ref;
-                  var22_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
-                  tm.a();
-                  tm.c(this.field_i, this.field_g);
-                  var23.a(var4, var5, var6, var9, var10, var11, var12);
-                  if (!ArmiesOfGielinor.field_M) {
-                    break L4;
-                  } else {
-                    break L5;
-                  }
-                }
+            L3: {
+              var11 = stackIn_6_0 + -(this.field_f * 2);
+              var12 = -400;
+              if (!this.field_b) {
+                tm.a();
+                tm.c(this.field_i, this.field_g);
+                var24_ref = (gd) ((Object) this.field_e.a(var2 != 0, false, var3 != 0));
+                var25 = var24_ref;
+                var24_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
+                var25.a(var4, var5, var6, var9, var10, var11, var12);
+                break L3;
+              } else {
+                var22_ref = (gd) ((Object) this.field_n.a(var2 != 0, true, var3 != 0, this.field_e));
+                var23 = var22_ref;
+                var22_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
+                tm.a();
+                tm.c(this.field_i, this.field_g);
+                var23.a(var4, var5, var6, var9, var10, var11, var12);
+                break L3;
               }
-              tm.a();
-              tm.c(this.field_i, this.field_g);
-              var24_ref = (gd) ((Object) this.field_e.a(var2 != 0, false, var3 != 0));
-              var25 = var24_ref;
-              var24_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
-              var25.a(var4, var5, var6, var9, var10, var11, var12);
-              break L4;
             }
             return;
           }
@@ -304,11 +288,11 @@ final class sh {
     }
 
     private final void a(byte param0, int param1) {
-        int var3 = 0;
-        qb var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var3;
+        qb var4;
+        int var5;
+        int var6;
+        int var7;
         var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (!this.field_b) {
           return;
@@ -320,238 +304,38 @@ final class sh {
           this.field_n.a(-1, var4);
           this.a((byte) 122);
           var6 = this.field_o;
-          if (-2 == (var6 ^ -1)) {
-            if (var7 != 0) {
-              L0: {
-                if (2 != var6) {
-                  if (var6 == 3) {
-                    dh.a(this.field_c, 3, 32);
-                    if (var7 == 0) {
-                      break L0;
-                    } else {
-                      dh.a(this.field_c, 6, 32);
-                      dh.a(this.field_c, 2, 32);
-                      dh.a(this.field_c, 1, 32);
+          if (-2 != (var6 ^ -1)) {
+            if (2 != var6) {
+              if (var6 != 3) {
+                if ((var6 ^ -1) != -6) {
+                  if (var6 != 6) {
+                    if (var6 == 7) {
                       dh.a(this.field_c, 5, 32);
                       dh.a(this.field_c, 2, 32);
                       return;
+                    } else {
+                      return;
                     }
                   } else {
-                    if ((var6 ^ -1) == -6) {
-                      dh.a(this.field_c, 6, 32);
-                      if (var7 == 0) {
-                        break L0;
-                      } else {
-                        dh.a(this.field_c, 2, 32);
-                        dh.a(this.field_c, 1, 32);
-                        dh.a(this.field_c, 5, 32);
-                        dh.a(this.field_c, 2, 32);
-                        return;
-                      }
-                    } else {
-                      if (var6 == 6) {
-                        dh.a(this.field_c, 2, 32);
-                        dh.a(this.field_c, 1, 32);
-                        if (var7 == 0) {
-                          break L0;
-                        } else {
-                          dh.a(this.field_c, 5, 32);
-                          dh.a(this.field_c, 2, 32);
-                          return;
-                        }
-                      } else {
-                        if (var6 == 7) {
-                          if (var7 == 0) {
-                            dh.a(this.field_c, 5, 32);
-                            dh.a(this.field_c, 2, 32);
-                            return;
-                          } else {
-                            dh.a(this.field_c, 0, 32);
-                            if (var7 != 0) {
-                              dh.a(this.field_c, 0, 32);
-                              if (var7 == 0) {
-                                return;
-                              } else {
-                                dh.a(this.field_c, 3, 32);
-                                dh.a(this.field_c, 6, 32);
-                                dh.a(this.field_c, 2, 32);
-                                dh.a(this.field_c, 1, 32);
-                                dh.a(this.field_c, 5, 32);
-                                dh.a(this.field_c, 2, 32);
-                                return;
-                              }
-                            } else {
-                              return;
-                            }
-                          }
-                        } else {
-                          return;
-                        }
-                      }
-                    }
+                    dh.a(this.field_c, 2, 32);
+                    dh.a(this.field_c, 1, 32);
+                    return;
                   }
                 } else {
-                  if (var7 == 0) {
-                    dh.a(this.field_c, 0, 32);
-                    if (var7 == 0) {
-                      break L0;
-                    } else {
-                      dh.a(this.field_c, 3, 32);
-                      dh.a(this.field_c, 6, 32);
-                      dh.a(this.field_c, 2, 32);
-                      dh.a(this.field_c, 1, 32);
-                      dh.a(this.field_c, 5, 32);
-                      dh.a(this.field_c, 2, 32);
-                      return;
-                    }
-                  } else {
-                    if (var6 == 3) {
-                      dh.a(this.field_c, 3, 32);
-                      if (var7 == 0) {
-                        return;
-                      } else {
-                        dh.a(this.field_c, 6, 32);
-                        dh.a(this.field_c, 2, 32);
-                        dh.a(this.field_c, 1, 32);
-                        dh.a(this.field_c, 5, 32);
-                        dh.a(this.field_c, 2, 32);
-                        return;
-                      }
-                    } else {
-                      if ((var6 ^ -1) == -6) {
-                        dh.a(this.field_c, 6, 32);
-                        if (var7 == 0) {
-                          return;
-                        } else {
-                          dh.a(this.field_c, 2, 32);
-                          dh.a(this.field_c, 1, 32);
-                          dh.a(this.field_c, 5, 32);
-                          dh.a(this.field_c, 2, 32);
-                          return;
-                        }
-                      } else {
-                        if (var6 == 6) {
-                          dh.a(this.field_c, 2, 32);
-                          dh.a(this.field_c, 1, 32);
-                          if (var7 == 0) {
-                            return;
-                          } else {
-                            dh.a(this.field_c, 5, 32);
-                            dh.a(this.field_c, 2, 32);
-                            return;
-                          }
-                        } else {
-                          if (var6 == 7) {
-                            if (var7 == 0) {
-                              dh.a(this.field_c, 5, 32);
-                              dh.a(this.field_c, 2, 32);
-                              return;
-                            } else {
-                              dh.a(this.field_c, 0, 32);
-                              dh.a(this.field_c, 0, 32);
-                              dh.a(this.field_c, 3, 32);
-                              dh.a(this.field_c, 6, 32);
-                              dh.a(this.field_c, 2, 32);
-                              dh.a(this.field_c, 1, 32);
-                              dh.a(this.field_c, 5, 32);
-                              dh.a(this.field_c, 2, 32);
-                              return;
-                            }
-                          } else {
-                            return;
-                          }
-                        }
-                      }
-                    }
-                  }
+                  dh.a(this.field_c, 6, 32);
+                  return;
                 }
+              } else {
+                dh.a(this.field_c, 3, 32);
+                return;
               }
-              return;
             } else {
               dh.a(this.field_c, 0, 32);
               return;
             }
           } else {
-            L1: {
-              if (2 != var6) {
-                break L1;
-              } else {
-                if (var7 == 0) {
-                  dh.a(this.field_c, 0, 32);
-                  if (var7 != 0) {
-                    dh.a(this.field_c, 3, 32);
-                    dh.a(this.field_c, 6, 32);
-                    dh.a(this.field_c, 2, 32);
-                    dh.a(this.field_c, 1, 32);
-                    dh.a(this.field_c, 5, 32);
-                    dh.a(this.field_c, 2, 32);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  break L1;
-                }
-              }
-            }
-            if (var6 == 3) {
-              dh.a(this.field_c, 3, 32);
-              if (var7 != 0) {
-                dh.a(this.field_c, 6, 32);
-                dh.a(this.field_c, 2, 32);
-                dh.a(this.field_c, 1, 32);
-                dh.a(this.field_c, 5, 32);
-                dh.a(this.field_c, 2, 32);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              if ((var6 ^ -1) == -6) {
-                dh.a(this.field_c, 6, 32);
-                if (var7 != 0) {
-                  dh.a(this.field_c, 2, 32);
-                  dh.a(this.field_c, 1, 32);
-                  dh.a(this.field_c, 5, 32);
-                  dh.a(this.field_c, 2, 32);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                if (var6 == 6) {
-                  dh.a(this.field_c, 2, 32);
-                  dh.a(this.field_c, 1, 32);
-                  if (var7 != 0) {
-                    dh.a(this.field_c, 5, 32);
-                    dh.a(this.field_c, 2, 32);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  if (var6 == 7) {
-                    if (var7 != 0) {
-                      dh.a(this.field_c, 0, 32);
-                      dh.a(this.field_c, 0, 32);
-                      dh.a(this.field_c, 3, 32);
-                      dh.a(this.field_c, 6, 32);
-                      dh.a(this.field_c, 2, 32);
-                      dh.a(this.field_c, 1, 32);
-                      dh.a(this.field_c, 5, 32);
-                      dh.a(this.field_c, 2, 32);
-                      return;
-                    } else {
-                      dh.a(this.field_c, 5, 32);
-                      dh.a(this.field_c, 2, 32);
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              }
-            }
+            dh.a(this.field_c, 0, 32);
+            return;
           }
         }
     }

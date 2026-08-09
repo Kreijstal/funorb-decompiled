@@ -17,10 +17,10 @@ final class ef {
             return;
         }
         pc var2 = vi.field_o;
-        int discarded$20 = var2.k(0);
-        int discarded$36 = var2.k(0);
-        int discarded$47 = var2.k(0);
-        int discarded$53 = var2.k(0);
+        var2.k(0);
+        var2.k(0);
+        var2.k(0);
+        var2.k(0);
         var1.c(2779);
         if (param0 != -14439) {
             ef.b(false);
@@ -28,20 +28,24 @@ final class ef {
     }
 
     final static void b(boolean param0) {
-        String[][] dupTemp$6 = null;
-        long[][] dupTemp$7 = null;
-        int[][] dupTemp$8 = null;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
+        String[][] dupTemp$0 = null;
+        long[][] dupTemp$1 = null;
+        int[][] dupTemp$2 = null;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_16_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         ue var4 = null;
         long var4_long = 0L;
         int var5 = 0;
-        rh var6_ref_rh = null;
         int var6 = 0;
+        rh var6_ref_rh = null;
         int var7 = 0;
         int var8_int = 0;
         String[][] var8 = null;
@@ -63,14 +67,6 @@ final class ef {
         int var25 = 0;
         int var26 = 0;
         pc var28 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_16_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
         var26 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -111,16 +107,16 @@ final class ef {
                         var8_int = 1;
                         L5: while (true) {
                           if (var5 <= var8_int) {
-                            dupTemp$6 = new String[3][var6];
-                            var4.field_r = dupTemp$6;
-                            var8 = dupTemp$6;
+                            dupTemp$0 = new String[3][var6];
+                            var4.field_r = dupTemp$0;
+                            var8 = dupTemp$0;
                             var9 = new String[3][var6];
-                            dupTemp$7 = new long[3][var6];
-                            var4.field_k = dupTemp$7;
-                            var10 = dupTemp$7;
-                            dupTemp$8 = new int[3][var6 * var7];
-                            var4.field_l = dupTemp$8;
-                            var11 = dupTemp$8;
+                            dupTemp$1 = new long[3][var6];
+                            var4.field_k = dupTemp$1;
+                            var10 = dupTemp$1;
+                            dupTemp$2 = new int[3][var6 * var7];
+                            var4.field_l = dupTemp$2;
+                            var11 = dupTemp$2;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -149,9 +145,9 @@ final class ef {
                                         if (var7 <= var25) {
                                           break L7;
                                         } else {
-                                          incrementValue$9 = var15;
+                                          incrementValue$3 = var15;
                                           var15++;
-                                          var11[0][incrementValue$9] = var28.k(0);
+                                          var11[0][incrementValue$3] = var28.k(0);
                                           var25++;
                                           continue L8;
                                         }
@@ -177,9 +173,9 @@ final class ef {
                                           if (var7 <= var25) {
                                             break L9;
                                           } else {
-                                            incrementValue$10 = var16;
+                                            incrementValue$4 = var16;
                                             var16++;
-                                            var11[1][incrementValue$10] = var28.k(0);
+                                            var11[1][incrementValue$4] = var28.k(0);
                                             var25++;
                                             continue L10;
                                           }
@@ -205,9 +201,9 @@ final class ef {
                                           if (var7 <= var25) {
                                             break L11;
                                           } else {
-                                            incrementValue$11 = var17;
+                                            incrementValue$5 = var17;
                                             var17++;
-                                            var11[2][incrementValue$11] = var28.k(0);
+                                            var11[2][incrementValue$5] = var28.k(0);
                                             var25++;
                                             continue L12;
                                           }
@@ -266,12 +262,10 @@ final class ef {
                     if (var6_ref_rh == null) {
                       L16: {
                         if (param0) {
-                          stackOut_15_0 = 0;
-                          stackIn_16_0 = stackOut_15_0;
+                          stackIn_16_0 = 0;
                           break L16;
                         } else {
-                          stackOut_14_0 = 1;
-                          stackIn_16_0 = stackOut_14_0;
+                          stackIn_16_0 = 1;
                           break L16;
                         }
                       }
@@ -288,12 +282,10 @@ final class ef {
                   L17: {
                     jo.a(1, "HS1: " + jm.b(-63), (Throwable) null);
                     if (param0) {
-                      stackOut_5_0 = 0;
-                      stackIn_6_0 = stackOut_5_0;
+                      stackIn_6_0 = 0;
                       break L17;
                     } else {
-                      stackOut_4_0 = 1;
-                      stackIn_6_0 = stackOut_4_0;
+                      stackIn_6_0 = 1;
                       break L17;
                     }
                   }

@@ -50,8 +50,18 @@ final class ug {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        RuntimeException var3 = null;
+        np stackIn_3_0 = null;
+        int stackIn_3_1 = 0;
+        np stackIn_4_0 = null;
+        int stackIn_4_1 = 0;
+        int stackIn_4_2 = 0;
+        hd stackIn_18_0 = null;
+        hd stackIn_19_0 = null;
+        String stackIn_19_1 = null;
+        int stackIn_22_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         tf var4 = null;
         Object var5 = null;
         gg var6 = null;
@@ -66,59 +76,23 @@ final class ug {
         int var15 = 0;
         uv var16 = null;
         uv var17 = null;
-        np stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
-        np stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        np stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        hd stackIn_17_0 = null;
-        hd stackIn_18_0 = null;
-        hd stackIn_19_0 = null;
-        String stackIn_19_1 = null;
-        int stackIn_22_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        np stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        np stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        np stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        hd stackOut_16_0 = null;
-        hd stackOut_18_0 = null;
-        String stackOut_18_1 = null;
-        hd stackOut_17_0 = null;
-        String stackOut_17_1 = null;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
         var15 = Kickabout.field_G;
         try {
           L0: {
             L1: {
-              stackOut_1_0 = nq.field_F.field_Cb;
-              stackOut_1_1 = (3 * sh.field_c - -6) * param0;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
+              stackIn_3_0 = nq.field_F.field_Cb;
+
+              stackIn_3_1 = (3 * sh.field_c - -6) * param0;
+
               if (nq.field_F.field_Cb != ig.field_f) {
-                stackOut_3_0 = (np) ((Object) stackIn_3_0);
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
+                stackIn_4_0 = (np) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = (np) ((Object) stackIn_2_0);
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
+                stackIn_4_0 = (np) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = 1;
                 break L1;
               }
             }
@@ -206,32 +180,25 @@ final class ug {
                     }
                   }
                   L9: {
-                    stackOut_16_0 = var6.field_Bb;
-                    stackIn_18_0 = stackOut_16_0;
-                    stackIn_17_0 = stackOut_16_0;
+                    stackIn_18_0 = var6.field_Bb;
+
                     if (0 < var10) {
-                      stackOut_18_0 = (hd) ((Object) stackIn_18_0);
-                      stackOut_18_1 = hu.a(var6.field_Bb.field_X, var6.field_Gb, var10);
-                      stackIn_19_0 = stackOut_18_0;
-                      stackIn_19_1 = stackOut_18_1;
+                      stackIn_19_0 = (hd) ((Object) stackIn_18_0);
+                      stackIn_19_1 = hu.a(var6.field_Bb.field_X, var6.field_Gb, var10);
                       break L9;
                     } else {
-                      stackOut_17_0 = (hd) ((Object) stackIn_17_0);
-                      stackOut_17_1 = var6.field_Gb;
-                      stackIn_19_0 = stackOut_17_0;
-                      stackIn_19_1 = stackOut_17_1;
+                      stackIn_19_0 = (hd) ((Object) stackIn_18_0);
+                      stackIn_19_1 = var6.field_Gb;
                       break L9;
                     }
                   }
                   L10: {
                     stackIn_19_0.field_E = stackIn_19_1;
                     if (var6.field_Bb.field_E.equals(var6.field_Gb)) {
-                      stackOut_21_0 = 0;
-                      stackIn_22_0 = stackOut_21_0;
+                      stackIn_22_0 = 0;
                       break L10;
                     } else {
-                      stackOut_20_0 = 1;
-                      stackIn_22_0 = stackOut_20_0;
+                      stackIn_22_0 = 1;
                       break L10;
                     }
                   }

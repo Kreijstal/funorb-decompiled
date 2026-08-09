@@ -19,12 +19,14 @@ abstract class wj {
     cc field_m;
 
     final static void b(byte param0) {
-        String[][] dupTemp$6 = null;
-        long[][] dupTemp$7 = null;
-        int[][] dupTemp$8 = null;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
+        String[][] dupTemp$0 = null;
+        long[][] dupTemp$1 = null;
+        int[][] dupTemp$2 = null;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -32,8 +34,8 @@ abstract class wj {
         jg var5 = null;
         long var5_long = 0L;
         int var6 = 0;
-        fb var7_ref_fb = null;
         int var7 = 0;
+        fb var7_ref_fb = null;
         int var8 = 0;
         int var9_int = 0;
         String[][] var9 = null;
@@ -55,8 +57,6 @@ abstract class wj {
         int var26 = 0;
         int var27 = 0;
         da var28 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var27 = HoldTheLine.field_D;
         try {
           L0: {
@@ -92,16 +92,16 @@ abstract class wj {
                         var9_int = 1;
                         L5: while (true) {
                           if (var6 <= var9_int) {
-                            dupTemp$6 = new String[3][var7];
-                            var5.field_m = dupTemp$6;
-                            var9 = dupTemp$6;
+                            dupTemp$0 = new String[3][var7];
+                            var5.field_m = dupTemp$0;
+                            var9 = dupTemp$0;
                             var10 = new String[3][var7];
-                            dupTemp$7 = new long[3][var7];
-                            var5.field_k = dupTemp$7;
-                            var11 = dupTemp$7;
-                            dupTemp$8 = new int[3][var7 * var8];
-                            var5.field_p = dupTemp$8;
-                            var12 = dupTemp$8;
+                            dupTemp$1 = new long[3][var7];
+                            var5.field_k = dupTemp$1;
+                            var11 = dupTemp$1;
+                            dupTemp$2 = new int[3][var7 * var8];
+                            var5.field_p = dupTemp$2;
+                            var12 = dupTemp$2;
                             var13 = 0;
                             var14 = 0;
                             var15 = 0;
@@ -132,9 +132,9 @@ abstract class wj {
                                           var13++;
                                           break L7;
                                         } else {
-                                          incrementValue$9 = var16;
+                                          incrementValue$3 = var16;
                                           var16++;
-                                          var12[0][incrementValue$9] = var28.a(-107);
+                                          var12[0][incrementValue$3] = var28.a(-107);
                                           var26++;
                                           continue L8;
                                         }
@@ -156,9 +156,9 @@ abstract class wj {
                                           if (var8 <= var26) {
                                             break L9;
                                           } else {
-                                            incrementValue$10 = var17;
+                                            incrementValue$4 = var17;
                                             var17++;
-                                            var12[1][incrementValue$10] = var28.a(98);
+                                            var12[1][incrementValue$4] = var28.a(98);
                                             var26++;
                                             continue L10;
                                           }
@@ -184,9 +184,9 @@ abstract class wj {
                                           if (var26 >= var8) {
                                             break L11;
                                           } else {
-                                            incrementValue$11 = var18;
+                                            incrementValue$5 = var18;
                                             var18++;
-                                            var12[2][incrementValue$11] = var28.a(111);
+                                            var12[2][incrementValue$5] = var28.a(111);
                                             var26++;
                                             continue L12;
                                           }
@@ -289,9 +289,8 @@ abstract class wj {
     abstract void a(Object param0, boolean param1, int param2);
 
     final boolean c(int param0) {
-        boolean discarded$0 = false;
         if (param0 < 73) {
-            discarded$0 = this.c(3);
+            this.c(3);
         }
         return (this.b(39) ^ -1) <= -21 ? true : false;
     }

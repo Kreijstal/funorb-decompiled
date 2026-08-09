@@ -28,11 +28,10 @@ abstract class wd {
     abstract byte[] b(int param0, int param1);
 
     final static void b(int param0) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        RuntimeException var1 = null;
-        nh var1_ref = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        nh var1 = null;
+        RuntimeException var1_ref = null;
         int var2_int = 0;
         Object var2 = null;
         int var3 = 0;
@@ -41,8 +40,6 @@ abstract class wd {
         nh var6 = null;
         nh var7 = null;
         nh var8 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -53,7 +50,7 @@ abstract class wd {
                 if (sc.field_f == null) {
                   break L1;
                 } else {
-                  discarded$3 = sc.field_f.a(ha.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                  sc.field_f.a(ha.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                   break L1;
                 }
               }
@@ -63,7 +60,7 @@ abstract class wd {
               if (param0 == 139) {
                 L2: {
                   var6 = gl.field_e[ig.field_k];
-                  var1_ref = var6;
+                  var1 = var6;
                   if (var6 != null) {
                     var6.d(245, 199);
                     break L2;
@@ -71,7 +68,7 @@ abstract class wd {
                     if (null == sc.field_f) {
                       break L2;
                     } else {
-                      discarded$4 = sc.field_f.a(ha.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                      sc.field_f.a(ha.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                       break L2;
                     }
                   }
@@ -106,7 +103,7 @@ abstract class wd {
                         if (var2 == null) {
                           break L4;
                         } else {
-                          discarded$5 = sc.field_f.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                          sc.field_f.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                           break L4;
                         }
                       } else {
@@ -154,8 +151,8 @@ abstract class wd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "wd.L(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw ie.a((Throwable) ((Object) var1_ref), "wd.L(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

@@ -57,27 +57,17 @@ final class go extends qe {
     }
 
     private final void a(byte param0, hb param1) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        ec var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        ec var4 = null;
+        int var5 = 0;
+        int var6 = 0;
         var6 = DungeonAssault.field_K;
         try {
           L0: {
@@ -179,27 +169,19 @@ final class go extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) (var3);
-            stackOut_30_1 = new StringBuilder().append("go.IC(").append(param0).append(',');
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackIn_32_0 = (RuntimeException) (var3);
+
+            stackIn_32_1 = new StringBuilder().append("go.IC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L4;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L4;
             }
           }
@@ -211,6 +193,7 @@ final class go extends qe {
         RuntimeException runtimeException = null;
         fa var1 = null;
         int var2 = 0;
+        boolean stackIn_20_0 = false;
         RuntimeException decompiledCaughtException = null;
         var2 = DungeonAssault.field_K;
         try {
@@ -274,7 +257,8 @@ final class go extends qe {
               if (null == ob.field_Xb) {
                 break L7;
               } else {
-                if (ob.field_Xb.b((byte) -124)) {
+                stackIn_20_0 = ob.field_Xb.b((byte) -124);
+                if (stackIn_20_0) {
                   break L7;
                 } else {
                   break L7;
@@ -291,24 +275,13 @@ final class go extends qe {
     }
 
     private final void a(byte param0, ai param1) {
-        o discarded$2 = null;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -331,7 +304,7 @@ final class go extends qe {
               if (null == param1.field_h.field_x) {
                 break L3;
               } else {
-                discarded$2 = gd.a(64, param1.field_h.field_x);
+                gd.a(64, param1.field_h.field_x);
                 break L3;
               }
             }
@@ -341,27 +314,19 @@ final class go extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("go.AC(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3);
+
+            stackIn_10_1 = new StringBuilder().append("go.AC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }
@@ -383,20 +348,16 @@ final class go extends qe {
     }
 
     private final void c(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5_int = 0;
-        mo var5 = null;
-        hb[] var6 = null;
-        int var7 = 0;
-        hb var8 = null;
-        int var9 = 0;
+        int var9;
         int stackIn_24_0 = 0;
         mo stackIn_28_0 = null;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        mo stackOut_27_0 = null;
-        mo stackOut_26_0 = null;
+        int var3;
+        int var4;
+        int var5_int;
+        mo var5;
+        hb[] var6;
+        int var7;
+        hb var8;
         var9 = DungeonAssault.field_K;
         if (this.field_w) {
           if (this.h(6)) {
@@ -440,12 +401,10 @@ final class go extends qe {
                 if (var6.length <= var7) {
                   L4: {
                     if (1 != var5_int) {
-                      stackOut_23_0 = 0;
-                      stackIn_24_0 = stackOut_23_0;
+                      stackIn_24_0 = 0;
                       break L4;
                     } else {
-                      stackOut_22_0 = 1;
-                      stackIn_24_0 = stackOut_22_0;
+                      stackIn_24_0 = 1;
                       break L4;
                     }
                   }
@@ -472,12 +431,10 @@ final class go extends qe {
           }
           L5: {
             if (var4 == 0) {
-              stackOut_27_0 = this.field_Y.b((byte) 121, param1);
-              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_0 = this.field_Y.b((byte) 121, param1);
               break L5;
             } else {
-              stackOut_26_0 = this.field_Y.c(-94, param1);
-              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_0 = this.field_Y.c(-94, param1);
               break L5;
             }
           }
@@ -510,13 +467,12 @@ final class go extends qe {
     }
 
     private final void b(ai param0, int param1) {
-        o discarded$0 = null;
         try {
             if (param0.field_h.field_m != null) {
                 param0.field_c.a(li.field_h, param0.field_h.field_m, -10872);
             }
             if (!(null == param0.field_h.field_p)) {
-                discarded$0 = gd.a(64, param0.field_h.field_p);
+                gd.a(64, param0.field_h.field_p);
             }
             int var3_int = 51 % ((param1 - -47) / 49);
         } catch (RuntimeException runtimeException) {
@@ -525,14 +481,14 @@ final class go extends qe {
     }
 
     private final void g(boolean param0) {
-        rh discarded$4 = null;
-        rh discarded$5 = null;
-        int var2_int = 0;
-        hb[] var2 = null;
-        int var3 = 0;
-        hb var4 = null;
-        int var5 = 0;
-        hb[] var6 = null;
+        rh discarded$2 = null;
+        rh discarded$3 = null;
+        int var2_int;
+        hb[] var2;
+        int var3;
+        hb var4;
+        int var5;
+        hb[] var6;
         var5 = DungeonAssault.field_K;
         super.b(param0);
         bl.a((byte) 98);
@@ -561,8 +517,8 @@ final class go extends qe {
             ke.a(-99, 488, 2, 398);
             en.a((byte) -1, 40, 552, 100, 60);
             jh.b();
-            discarded$4 = new rh(191, 345, 80, 160, 16711680, 768, 249);
-            discarded$5 = new rh(449, 345, 80, 160, 16711680, 768, 249);
+            discarded$2 = new rh(191, 345, 80, 160, 16711680, 768, 249);
+            discarded$3 = new rh(449, 345, 80, 160, 16711680, 768, 249);
             this.a((byte) 57);
             var6 = this.field_Y.field_A;
             var2 = var6;
@@ -598,31 +554,20 @@ final class go extends qe {
     }
 
     private final void a(hb param0, boolean param1) {
-        o discarded$2 = null;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
               if (null == param0.field_n.field_a) {
                 break L1;
               } else {
-                discarded$2 = gd.a(64, param0.field_n.field_a);
+                gd.a(64, param0.field_n.field_a);
                 break L1;
               }
             }
@@ -640,27 +585,19 @@ final class go extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("go.QB(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("go.QB(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L3;
             }
           }
@@ -669,51 +606,33 @@ final class go extends qe {
     }
 
     private final void e(byte param0) {
-        o discarded$2 = null;
-        int var2 = 0;
         ro var3 = null;
-        L0: {
-          ib.c(-107);
-          var2 = -56 % ((-42 - param0) / 52);
-          if (this.field_Y.field_g != 1) {
-            L1: {
-              L2: {
-                if ((this.field_Y.field_g ^ -1) == -5) {
-                  break L2;
-                } else {
-                  if ((this.field_Y.field_g ^ -1) != -4) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              discarded$2 = gd.a(64, ef.field_d);
-              var3 = new ro((go) (this));
-              var3.d(2);
-              this.field_b = (kl) ((Object) var3);
-              break L1;
+        ib.c(-107);
+        int var2 = -56 % ((-42 - param0) / 52);
+        if (this.field_Y.field_g == 1) {
+            t.a(1048576, kj.field_o, false, true);
+        } else {
+            if ((this.field_Y.field_g ^ -1) == -5 || (this.field_Y.field_g ^ -1) == -4) {
+                gd.a(64, ef.field_d);
+                var3 = new ro((go) (this));
+                var3.d(2);
+                this.field_b = (kl) ((Object) var3);
             }
             t.a(1048576, tm.field_b, false, true);
-            break L0;
-          } else {
-            t.a(1048576, kj.field_o, false, true);
-            break L0;
-          }
         }
     }
 
     private final void m(int param0) {
-        int var2 = 0;
-        hb[] var3_ref_hb__ = null;
-        int var3 = 0;
-        int var4_int = 0;
-        hb[] var4 = null;
-        hb var5_ref_hb = null;
-        int var5 = 0;
-        hb var6 = null;
-        int[] var7 = null;
-        int var8 = 0;
+        int var2;
+        hb[] var3_ref_hb__;
+        int var3;
+        int var4_int;
+        hb[] var4;
+        int var5;
+        hb var5_ref_hb;
+        hb var6;
+        int[] var7;
+        int var8;
         L0: {
           var8 = DungeonAssault.field_K;
           if (param0 >= 86) {
@@ -821,50 +740,28 @@ final class go extends qe {
     }
 
     private final void a(int param0, boolean param1, hb param2) {
-        o discarded$2 = null;
-        RuntimeException var4 = null;
-        wd stackIn_1_0 = null;
         wd stackIn_2_0 = null;
         wd stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        wd stackOut_0_0 = null;
-        wd stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        wd stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
-              stackOut_0_0 = param2.field_b;
-              stackIn_2_0 = stackOut_0_0;
-              stackIn_1_0 = stackOut_0_0;
+              stackIn_2_0 = param2.field_b;
+
               if (!param1) {
-                stackOut_2_0 = (wd) ((Object) stackIn_2_0);
-                stackOut_2_1 = rf.field_M;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
+                stackIn_3_0 = (wd) ((Object) stackIn_2_0);
+                stackIn_3_1 = rf.field_M;
                 break L1;
               } else {
-                stackOut_1_0 = (wd) ((Object) stackIn_1_0);
-                stackOut_1_1 = li.field_h;
-                stackIn_3_0 = stackOut_1_0;
-                stackIn_3_1 = stackOut_1_1;
+                stackIn_3_0 = (wd) ((Object) stackIn_2_0);
+                stackIn_3_1 = li.field_h;
                 break L1;
               }
             }
@@ -873,7 +770,7 @@ final class go extends qe {
               if (null == param2.field_n.field_g) {
                 break L2;
               } else {
-                discarded$2 = gd.a(64, param2.field_n.field_g);
+                gd.a(64, param2.field_n.field_g);
                 break L2;
               }
             }
@@ -891,27 +788,19 @@ final class go extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("go.HC(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("go.HC(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }
@@ -920,12 +809,12 @@ final class go extends qe {
     }
 
     private final void g(int param0) {
-        int var2 = 0;
-        int var3_int = 0;
-        ai var3 = null;
-        hb var4 = null;
-        int var5 = 0;
-        hb[] var6 = null;
+        int var3_int;
+        hb var4;
+        int var5;
+        hb[] var6;
+        int var2;
+        ai var3;
         L0: {
           var5 = DungeonAssault.field_K;
           this.field_R.c(-30876);
@@ -994,9 +883,15 @@ final class go extends qe {
     }
 
     private final void a(byte param0, ec param1, boolean param2) {
-        String discarded$1 = null;
-        RuntimeException var4 = null;
+        hb stackIn_4_0 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_43_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         hb var6 = null;
         ai var7 = null;
@@ -1007,25 +902,6 @@ final class go extends qe {
         ai var11 = null;
         ai var12 = null;
         String var13 = null;
-        hb stackIn_4_0 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        String stackIn_43_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        hb stackOut_2_0 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
         var10 = DungeonAssault.field_K;
         try {
           L0: {
@@ -1033,12 +909,10 @@ final class go extends qe {
               var4_int = param1.c(true);
               var5 = param1.c(true);
               if (-1 == var5) {
-                stackOut_3_0 = null;
-                stackIn_4_0 = (hb) ((Object) stackOut_3_0);
+                stackIn_4_0 = null;
                 break L1;
               } else {
-                stackOut_2_0 = this.field_Y.field_A[var5];
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = this.field_Y.field_A[var5];
                 break L1;
               }
             }
@@ -1074,7 +948,7 @@ final class go extends qe {
               if (param0 == -110) {
                 break L4;
               } else {
-                discarded$1 = go.a(117L, -45);
+                go.a(117L, -45);
                 break L4;
               }
             }
@@ -1182,27 +1056,19 @@ final class go extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var4 = decompiledCaughtException;
-            stackOut_40_0 = (RuntimeException) (var4);
-            stackOut_40_1 = new StringBuilder().append("go.P(").append(param0).append(',');
-            stackIn_42_0 = stackOut_40_0;
-            stackIn_42_1 = stackOut_40_1;
-            stackIn_41_0 = stackOut_40_0;
-            stackIn_41_1 = stackOut_40_1;
+            stackIn_42_0 = (RuntimeException) (var4);
+
+            stackIn_42_1 = new StringBuilder().append("go.P(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "null";
-              stackIn_43_0 = stackOut_42_0;
-              stackIn_43_1 = stackOut_42_1;
-              stackIn_43_2 = stackOut_42_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "null";
               break L11;
             } else {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "{...}";
-              stackIn_43_0 = stackOut_41_0;
-              stackIn_43_1 = stackOut_41_1;
-              stackIn_43_2 = stackOut_41_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "{...}";
               break L11;
             }
           }
@@ -1218,108 +1084,37 @@ final class go extends qe {
     }
 
     final void c(boolean param0) {
-        hj[] var2 = null;
-        int var3 = 0;
-        ec var3_ref_ec = null;
-        hj var4 = null;
-        int var5 = 0;
-        hj[] var6 = null;
-        hn var7 = null;
-        hj stackIn_28_0 = null;
-        hj stackIn_29_0 = null;
-        hj stackIn_30_0 = null;
-        hj stackIn_31_0 = null;
         hj stackIn_32_0 = null;
         hj stackIn_33_0 = null;
         int stackIn_33_1 = 0;
-        pp stackIn_35_0 = null;
-        pp stackIn_36_0 = null;
         pp stackIn_37_0 = null;
         pp stackIn_38_0 = null;
         int stackIn_38_1 = 0;
-        pp stackIn_39_0 = null;
-        pp stackIn_40_0 = null;
         pp stackIn_41_0 = null;
-        pp stackIn_42_0 = null;
         pp stackIn_43_0 = null;
         int stackIn_43_1 = 0;
-        pp stackIn_44_0 = null;
-        pp stackIn_45_0 = null;
-        pp stackIn_46_0 = null;
         pp stackIn_47_0 = null;
         pp stackIn_48_0 = null;
         int stackIn_48_1 = 0;
-        pp stackIn_49_0 = null;
-        pp stackIn_50_0 = null;
         pp stackIn_51_0 = null;
         pp stackIn_52_0 = null;
         int stackIn_52_1 = 0;
-        Object stackIn_53_0 = null;
-        Object stackIn_54_0 = null;
         Object stackIn_55_0 = null;
-        Object stackIn_56_0 = null;
-        Object stackIn_57_0 = null;
         Object stackIn_58_0 = null;
         Object stackIn_59_0 = null;
         Object stackIn_60_0 = null;
         int stackIn_60_1 = 0;
-        Object stackIn_61_0 = null;
-        Object stackIn_62_0 = null;
         Object stackIn_63_0 = null;
         Object stackIn_64_0 = null;
         Object stackIn_65_0 = null;
         int stackIn_65_1 = 0;
-        pp stackOut_34_0 = null;
-        pp stackOut_35_0 = null;
-        pp stackOut_36_0 = null;
-        int stackOut_36_1 = 0;
-        pp stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        pp stackOut_38_0 = null;
-        pp stackOut_39_0 = null;
-        pp stackOut_42_0 = null;
-        int stackOut_42_1 = 0;
-        pp stackOut_40_0 = null;
-        pp stackOut_41_0 = null;
-        int stackOut_41_1 = 0;
-        pp stackOut_43_0 = null;
-        pp stackOut_44_0 = null;
-        pp stackOut_45_0 = null;
-        pp stackOut_46_0 = null;
-        int stackOut_46_1 = 0;
-        pp stackOut_47_0 = null;
-        int stackOut_47_1 = 0;
-        pp stackOut_48_0 = null;
-        pp stackOut_49_0 = null;
-        pp stackOut_50_0 = null;
-        int stackOut_50_1 = 0;
-        pp stackOut_51_0 = null;
-        int stackOut_51_1 = 0;
-        Object stackOut_52_0 = null;
-        Object stackOut_53_0 = null;
-        Object stackOut_54_0 = null;
-        Object stackOut_55_0 = null;
-        Object stackOut_56_0 = null;
-        Object stackOut_57_0 = null;
-        Object stackOut_58_0 = null;
-        int stackOut_58_1 = 0;
-        Object stackOut_59_0 = null;
-        int stackOut_59_1 = 0;
-        Object stackOut_60_0 = null;
-        Object stackOut_61_0 = null;
-        Object stackOut_64_0 = null;
-        int stackOut_64_1 = 0;
-        Object stackOut_62_0 = null;
-        Object stackOut_63_0 = null;
-        int stackOut_63_1 = 0;
-        hj stackOut_27_0 = null;
-        hj stackOut_28_0 = null;
-        hj stackOut_29_0 = null;
-        hj stackOut_30_0 = null;
-        hj stackOut_31_0 = null;
-        int stackOut_31_1 = 0;
-        hj stackOut_32_0 = null;
-        int stackOut_32_1 = 0;
+        hj[] var2;
+        ec var3_ref_ec;
+        int var3;
+        hj var4;
+        int var5;
+        hj[] var6;
+        hn var7;
         L0: {
           var5 = DungeonAssault.field_K;
           super.c(param0);
@@ -1417,210 +1212,167 @@ final class go extends qe {
           if (var3 >= var6.length) {
             L8: {
               L9: {
-                stackOut_34_0 = this.field_O;
-                stackIn_37_0 = stackOut_34_0;
-                stackIn_35_0 = stackOut_34_0;
+                stackIn_37_0 = this.field_O;
+
                 if (this.field_Y.field_u == null) {
                   break L9;
                 } else {
-                  stackOut_35_0 = (pp) ((Object) stackIn_35_0);
-                  stackIn_37_0 = stackOut_35_0;
-                  stackIn_36_0 = stackOut_35_0;
+                  stackIn_37_0 = (pp) ((Object) stackIn_37_0);
+
                   if (!this.field_Y.b(0, this.field_Y.field_u)) {
                     break L9;
                   } else {
-                    stackOut_36_0 = (pp) ((Object) stackIn_36_0);
-                    stackOut_36_1 = 1;
-                    stackIn_38_0 = stackOut_36_0;
-                    stackIn_38_1 = stackOut_36_1;
+                    stackIn_38_0 = (pp) ((Object) stackIn_37_0);
+                    stackIn_38_1 = 1;
                     break L8;
                   }
                 }
               }
-              stackOut_37_0 = (pp) ((Object) stackIn_37_0);
-              stackOut_37_1 = 0;
-              stackIn_38_0 = stackOut_37_0;
-              stackIn_38_1 = stackOut_37_1;
+              stackIn_38_0 = (pp) ((Object) stackIn_37_0);
+              stackIn_38_1 = 0;
               break L8;
             }
             L10: {
               L11: {
                 stackIn_38_0.field_w = stackIn_38_1 != 0;
-                stackOut_38_0 = this.field_N;
-                stackIn_41_0 = stackOut_38_0;
-                stackIn_39_0 = stackOut_38_0;
+                stackIn_41_0 = this.field_N;
+
                 if (-17 == (this.field_Y.field_k ^ -1)) {
                   break L11;
                 } else {
-                  stackOut_39_0 = (pp) ((Object) stackIn_39_0);
-                  stackIn_42_0 = stackOut_39_0;
-                  stackIn_40_0 = stackOut_39_0;
+
+
                   if (32 != this.field_Y.field_k) {
-                    stackOut_42_0 = (pp) ((Object) stackIn_42_0);
-                    stackOut_42_1 = 0;
-                    stackIn_43_0 = stackOut_42_0;
-                    stackIn_43_1 = stackOut_42_1;
+                    stackIn_43_0 = (pp) ((Object) stackIn_41_0);
+                    stackIn_43_1 = 0;
                     break L10;
                   } else {
-                    stackOut_40_0 = (pp) ((Object) stackIn_40_0);
-                    stackIn_41_0 = stackOut_40_0;
+                    stackIn_41_0 = (pp) ((Object) stackIn_41_0);
                     break L11;
                   }
                 }
               }
-              stackOut_41_0 = (pp) ((Object) stackIn_41_0);
-              stackOut_41_1 = 1;
-              stackIn_43_0 = stackOut_41_0;
-              stackIn_43_1 = stackOut_41_1;
+              stackIn_43_0 = (pp) ((Object) stackIn_41_0);
+              stackIn_43_1 = 1;
               break L10;
             }
             L12: {
               L13: {
                 stackIn_43_0.field_w = stackIn_43_1 != 0;
-                stackOut_43_0 = this.field_r;
-                stackIn_47_0 = stackOut_43_0;
-                stackIn_44_0 = stackOut_43_0;
+                stackIn_47_0 = this.field_r;
+
                 if ((this.field_Y.field_k ^ -1) != -17) {
                   break L13;
                 } else {
-                  stackOut_44_0 = (pp) ((Object) stackIn_44_0);
-                  stackIn_47_0 = stackOut_44_0;
-                  stackIn_45_0 = stackOut_44_0;
+                  stackIn_47_0 = (pp) ((Object) stackIn_47_0);
+
                   if (this.field_Y.field_h[this.field_Y.field_B].field_h.field_g != 2) {
                     break L13;
                   } else {
-                    stackOut_45_0 = (pp) ((Object) stackIn_45_0);
-                    stackIn_47_0 = stackOut_45_0;
-                    stackIn_46_0 = stackOut_45_0;
+                    stackIn_47_0 = (pp) ((Object) stackIn_47_0);
+
                     if (this.field_Y.field_h[this.field_Y.field_B].field_h.a((byte) -45, 15)) {
                       break L13;
                     } else {
-                      stackOut_46_0 = (pp) ((Object) stackIn_46_0);
-                      stackOut_46_1 = 1;
-                      stackIn_48_0 = stackOut_46_0;
-                      stackIn_48_1 = stackOut_46_1;
+                      stackIn_48_0 = (pp) ((Object) stackIn_47_0);
+                      stackIn_48_1 = 1;
                       break L12;
                     }
                   }
                 }
               }
-              stackOut_47_0 = (pp) ((Object) stackIn_47_0);
-              stackOut_47_1 = 0;
-              stackIn_48_0 = stackOut_47_0;
-              stackIn_48_1 = stackOut_47_1;
+              stackIn_48_0 = (pp) ((Object) stackIn_47_0);
+              stackIn_48_1 = 0;
               break L12;
             }
             L14: {
               L15: {
                 stackIn_48_0.field_w = stackIn_48_1 != 0;
-                stackOut_48_0 = this.field_t;
-                stackIn_51_0 = stackOut_48_0;
-                stackIn_49_0 = stackOut_48_0;
+                stackIn_51_0 = this.field_t;
+
                 if (16 != this.field_Y.field_k) {
                   break L15;
                 } else {
-                  stackOut_49_0 = (pp) ((Object) stackIn_49_0);
-                  stackIn_51_0 = stackOut_49_0;
-                  stackIn_50_0 = stackOut_49_0;
+                  stackIn_51_0 = (pp) ((Object) stackIn_51_0);
+
                   if (-3 != (this.field_Y.field_h[this.field_Y.field_B].field_h.field_g ^ -1)) {
                     break L15;
                   } else {
-                    stackOut_50_0 = (pp) ((Object) stackIn_50_0);
-                    stackOut_50_1 = 1;
-                    stackIn_52_0 = stackOut_50_0;
-                    stackIn_52_1 = stackOut_50_1;
+                    stackIn_52_0 = (pp) ((Object) stackIn_51_0);
+                    stackIn_52_1 = 1;
                     break L14;
                   }
                 }
               }
-              stackOut_51_0 = (pp) ((Object) stackIn_51_0);
-              stackOut_51_1 = 0;
-              stackIn_52_0 = stackOut_51_0;
-              stackIn_52_1 = stackOut_51_1;
+              stackIn_52_0 = (pp) ((Object) stackIn_51_0);
+              stackIn_52_1 = 0;
               break L14;
             }
             L16: {
               L17: {
                 L18: {
                   stackIn_52_0.field_w = stackIn_52_1 != 0;
-                  stackOut_52_0 = this;
-                  stackIn_55_0 = stackOut_52_0;
-                  stackIn_53_0 = stackOut_52_0;
+                  stackIn_55_0 = this;
+
                   if (this.field_Y.field_u == null) {
                     break L18;
                   } else {
-                    stackOut_53_0 = this;
-                    stackIn_59_0 = stackOut_53_0;
-                    stackIn_54_0 = stackOut_53_0;
+                    stackIn_59_0 = this;
+
                     if (-1 == (6 & this.field_Y.field_u.field_o ^ -1)) {
                       break L17;
                     } else {
-                      stackOut_54_0 = this;
-                      stackIn_55_0 = stackOut_54_0;
+                      stackIn_55_0 = this;
                       break L18;
                     }
                   }
                 }
                 L19: {
-                  stackOut_55_0 = this;
-                  stackIn_58_0 = stackOut_55_0;
-                  stackIn_56_0 = stackOut_55_0;
+                  stackIn_58_0 = this;
+
                   if ((this.field_Y.field_k ^ -1) != -5) {
                     break L19;
                   } else {
-                    stackOut_56_0 = this;
-                    stackIn_59_0 = stackOut_56_0;
-                    stackIn_57_0 = stackOut_56_0;
+                    stackIn_59_0 = this;
+
                     if (kn.field_g) {
                       break L17;
                     } else {
-                      stackOut_57_0 = this;
-                      stackIn_58_0 = stackOut_57_0;
+                      stackIn_58_0 = this;
                       break L19;
                     }
                   }
                 }
-                stackOut_58_0 = this;
-                stackOut_58_1 = 1;
-                stackIn_60_0 = stackOut_58_0;
-                stackIn_60_1 = stackOut_58_1;
+                stackIn_60_0 = this;
+                stackIn_60_1 = 1;
                 break L16;
               }
-              stackOut_59_0 = this;
-              stackOut_59_1 = 0;
-              stackIn_60_0 = stackOut_59_0;
-              stackIn_60_1 = stackOut_59_1;
+              stackIn_60_0 = this;
+              stackIn_60_1 = 0;
               break L16;
             }
             L20: {
               L21: {
                 ((go) (this)).field_v = stackIn_60_1 != 0;
-                stackOut_60_0 = this;
-                stackIn_63_0 = stackOut_60_0;
-                stackIn_61_0 = stackOut_60_0;
+                stackIn_63_0 = this;
+
                 if (-17 == (this.field_Y.field_k ^ -1)) {
                   break L21;
                 } else {
-                  stackOut_61_0 = this;
-                  stackIn_64_0 = stackOut_61_0;
-                  stackIn_62_0 = stackOut_61_0;
+                  stackIn_64_0 = this;
+
                   if (this.field_Y.field_k != 32) {
-                    stackOut_64_0 = this;
-                    stackOut_64_1 = 0;
-                    stackIn_65_0 = stackOut_64_0;
-                    stackIn_65_1 = stackOut_64_1;
+                    stackIn_65_0 = this;
+                    stackIn_65_1 = 0;
                     break L20;
                   } else {
-                    stackOut_62_0 = this;
-                    stackIn_63_0 = stackOut_62_0;
+                    stackIn_63_0 = this;
                     break L21;
                   }
                 }
               }
-              stackOut_63_0 = this;
-              stackOut_63_1 = 1;
-              stackIn_65_0 = stackOut_63_0;
-              stackIn_65_1 = stackOut_63_1;
+              stackIn_65_0 = this;
+              stackIn_65_1 = 1;
               break L20;
             }
             ((go) (this)).field_Q = stackIn_65_1 != 0;
@@ -1630,42 +1382,34 @@ final class go extends qe {
             if (var4 != null) {
               L22: {
                 L23: {
-                  stackOut_27_0 = (hj) (var4);
-                  stackIn_32_0 = stackOut_27_0;
-                  stackIn_28_0 = stackOut_27_0;
+                  stackIn_32_0 = (hj) (var4);
+
                   if ((6 & var4.field_V.field_o) != 0) {
                     break L23;
                   } else {
                     L24: {
-                      stackOut_28_0 = (hj) ((Object) stackIn_28_0);
-                      stackIn_31_0 = stackOut_28_0;
-                      stackIn_29_0 = stackOut_28_0;
+                      stackIn_32_0 = (hj) ((Object) stackIn_32_0);
+
                       if ((this.field_Y.field_k ^ -1) == -9) {
                         break L24;
                       } else {
-                        stackOut_29_0 = (hj) ((Object) stackIn_29_0);
-                        stackIn_32_0 = stackOut_29_0;
-                        stackIn_30_0 = stackOut_29_0;
+                        stackIn_32_0 = (hj) ((Object) stackIn_32_0);
+
                         if (-5 != (this.field_Y.field_k ^ -1)) {
                           break L23;
                         } else {
-                          stackOut_30_0 = (hj) ((Object) stackIn_30_0);
-                          stackIn_31_0 = stackOut_30_0;
+                          stackIn_32_0 = (hj) ((Object) stackIn_32_0);
                           break L24;
                         }
                       }
                     }
-                    stackOut_31_0 = (hj) ((Object) stackIn_31_0);
-                    stackOut_31_1 = 1;
-                    stackIn_33_0 = stackOut_31_0;
-                    stackIn_33_1 = stackOut_31_1;
+                    stackIn_33_0 = (hj) ((Object) stackIn_32_0);
+                    stackIn_33_1 = 1;
                     break L22;
                   }
                 }
-                stackOut_32_0 = (hj) ((Object) stackIn_32_0);
-                stackOut_32_1 = 0;
-                stackIn_33_0 = stackOut_32_0;
-                stackIn_33_1 = stackOut_32_1;
+                stackIn_33_0 = (hj) ((Object) stackIn_32_0);
+                stackIn_33_1 = 0;
                 break L22;
               }
               stackIn_33_0.field_Y = stackIn_33_1 != 0;
@@ -1680,24 +1424,13 @@ final class go extends qe {
     }
 
     private final void a(ai param0, int param1) {
-        o discarded$2 = null;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -1707,7 +1440,7 @@ final class go extends qe {
                 if (null == param0.field_h.field_a) {
                   break L1;
                 } else {
-                  discarded$2 = gd.a(64, param0.field_h.field_a);
+                  gd.a(64, param0.field_h.field_a);
                   break L1;
                 }
               }
@@ -1727,27 +1460,19 @@ final class go extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("go.K(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("go.K(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -1756,45 +1481,39 @@ final class go extends qe {
     }
 
     private final void k(int param0) {
-        Object var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        ai var4_ref_ai = null;
-        wb[] var4_ref_wb__ = null;
-        en var5 = null;
-        int var5_int = 0;
-        ai var5_ref = null;
-        int var6_int = 0;
-        wb[] var6 = null;
-        int var7_int = 0;
-        Object var7 = null;
-        int var8 = 0;
-        int var9_int = 0;
-        ac var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        wb var12_ref_wb = null;
-        int var12 = 0;
-        int var13 = 0;
-        wb var14 = null;
-        int var15 = 0;
-        md var16 = null;
-        wb[] var17 = null;
-        hb var18 = null;
-        ai var19 = null;
-        ac var20 = null;
-        Object var21 = null;
-        ai var21_ref = null;
         int stackIn_65_0 = 0;
         int stackIn_106_0 = 0;
         ai stackIn_113_0 = null;
-        int stackOut_63_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_105_0 = 0;
-        int stackOut_104_0 = 0;
-        ai stackOut_112_0 = null;
-        ai stackOut_111_0 = null;
+        boolean stackIn_128_0 = false;
+        Object var2;
+        int var3;
+        int var4;
+        ai var4_ref_ai;
+        wb[] var4_ref_wb__;
+        en var5;
+        ai var5_ref;
+        int var5_int;
+        int var6_int;
+        wb[] var6;
+        int var7_int;
+        Object var7;
+        int var8;
+        int var9_int;
+        ac var9;
+        int var10;
+        int var11;
+        wb var12_ref_wb;
+        int var12;
+        int var13;
+        wb var14;
+        int var15;
+        md var16;
+        wb[] var17;
+        hb var18;
+        ai var19;
+        ac var20;
+        Object var21;
+        ai var21_ref;
         var21 = null;
         var15 = DungeonAssault.field_K;
         this.field_s = -1;
@@ -1984,17 +1703,14 @@ final class go extends qe {
                         L14: {
                           if (null != this.field_Y.field_u) {
                             if ((6 & this.field_Y.field_u.field_o) == 0) {
-                              stackOut_63_0 = 1;
-                              stackIn_65_0 = stackOut_63_0;
+                              stackIn_65_0 = 1;
                               break L14;
                             } else {
-                              stackOut_62_0 = 0;
-                              stackIn_65_0 = stackOut_62_0;
+                              stackIn_65_0 = 0;
                               break L14;
                             }
                           } else {
-                            stackOut_60_0 = 0;
-                            stackIn_65_0 = stackOut_60_0;
+                            stackIn_65_0 = 0;
                             break L14;
                           }
                         }
@@ -2124,16 +1840,14 @@ final class go extends qe {
                         break L27;
                       } else {
                         if (this.field_Y.field_p.a(this.field_u, (byte) 73)) {
-                          stackOut_105_0 = this.field_u;
-                          stackIn_106_0 = stackOut_105_0;
+                          stackIn_106_0 = this.field_u;
                           break L26;
                         } else {
                           break L27;
                         }
                       }
                     }
-                    stackOut_104_0 = -1;
-                    stackIn_106_0 = stackOut_104_0;
+                    stackIn_106_0 = -1;
                     break L26;
                   }
                   L28: {
@@ -2151,12 +1865,10 @@ final class go extends qe {
                   }
                   L29: {
                     if (-1 < (var4 ^ -1)) {
-                      stackOut_112_0 = (ai) null;
-                      stackIn_113_0 = stackOut_112_0;
+                      stackIn_113_0 = (ai) null;
                       break L29;
                     } else {
-                      stackOut_111_0 = this.field_Y.field_h[var4];
-                      stackIn_113_0 = stackOut_111_0;
+                      stackIn_113_0 = this.field_Y.field_h[var4];
                       break L29;
                     }
                   }
@@ -2213,8 +1925,9 @@ final class go extends qe {
                               var7 = kh.field_u;
                               break L34;
                             } else {
+                              stackIn_128_0 = this.field_Y.field_p.a(var4, (byte) 105);
                               L35: {
-                                if (this.field_Y.field_p.a(var4, (byte) 105)) {
+                                if (stackIn_128_0) {
                                   break L35;
                                 } else {
                                   if (24 == var4) {
@@ -2275,19 +1988,21 @@ final class go extends qe {
     }
 
     private final void a(int param0, ec param1, boolean param2) {
-        o discarded$4 = null;
-        o discarded$5 = null;
-        o discarded$6 = null;
-        mo discarded$7 = null;
-        RuntimeException var4 = null;
-        hb var4_ref = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        hb var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ai var8 = null;
         int var8_int = 0;
-        int var9 = 0;
+        ai var8 = null;
         ai var9_ref_ai = null;
+        int var9 = 0;
         int var10 = 0;
         ai var11 = null;
         int var12 = 0;
@@ -2296,29 +2011,13 @@ final class go extends qe {
         hb var15 = null;
         hb var16 = null;
         hb var17 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        String stackIn_45_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
         var13 = DungeonAssault.field_K;
         try {
           L0: {
             L1: {
               this.field_y = null;
               var15 = this.field_Y.field_A[param1.c(true)];
-              var4_ref = var15;
+              var4 = var15;
               if (param0 == -67) {
                 break L1;
               } else {
@@ -2379,13 +2078,13 @@ final class go extends qe {
                         var17.field_b.a(li.field_h, var17.field_n.field_l, -10872);
                         param1.field_o = var6;
                         if (null != var17.field_n.field_g) {
-                          discarded$4 = gd.a(64, var17.field_n.field_g);
+                          gd.a(64, var17.field_n.field_g);
                           break L6;
                         } else {
                           break L6;
                         }
                       }
-                      var4_ref.field_b = new wd(var15.field_n.field_e, var15.field_n.field_t, rf.field_M);
+                      var4.field_b = new wd(var15.field_n.field_e, var15.field_n.field_t, rf.field_M);
                       break L2;
                     } else {
                       L7: {
@@ -2424,7 +2123,7 @@ final class go extends qe {
                           break L9;
                         }
                       }
-                      discarded$5 = je.a(param0 ^ -67, dc.field_q);
+                      je.a(param0 ^ -67, dc.field_q);
                       param1.field_o = var6;
                       break L2;
                     }
@@ -2455,7 +2154,7 @@ final class go extends qe {
               }
               L12: {
                 if (ob.field_dc == var5) {
-                  discarded$6 = je.a(0, dc.field_q);
+                  je.a(0, dc.field_q);
                   break L12;
                 } else {
                   break L12;
@@ -2466,7 +2165,7 @@ final class go extends qe {
             }
             L13: {
               L14: {
-                discarded$7 = this.field_Y.a(var15, param1, 118);
+                this.field_Y.a(var15, param1, 118);
                 this.d(false);
                 if (var5 == ob.field_lc) {
                   break L14;
@@ -2486,28 +2185,20 @@ final class go extends qe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
-            var4 = decompiledCaughtException;
-            stackOut_42_0 = (RuntimeException) (var4);
-            stackOut_42_1 = new StringBuilder().append("go.NC(").append(param0).append(',');
-            stackIn_44_0 = stackOut_42_0;
-            stackIn_44_1 = stackOut_42_1;
-            stackIn_43_0 = stackOut_42_0;
-            stackIn_43_1 = stackOut_42_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_44_0 = (RuntimeException) (var4_ref);
+
+            stackIn_44_1 = new StringBuilder().append("go.NC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "null";
-              stackIn_45_0 = stackOut_44_0;
-              stackIn_45_1 = stackOut_44_1;
-              stackIn_45_2 = stackOut_44_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "null";
               break L15;
             } else {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "{...}";
-              stackIn_45_0 = stackOut_43_0;
-              stackIn_45_1 = stackOut_43_1;
-              stackIn_45_2 = stackOut_43_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "{...}";
               break L15;
             }
           }
@@ -2517,7 +2208,6 @@ final class go extends qe {
 
     private final void c(int param0) {
         int var2 = 0;
-        String discarded$0 = null;
         int var3 = DungeonAssault.field_K;
         this.field_U = new int[32];
         for (var2 = 0; 32 > var2; var2++) {
@@ -2525,7 +2215,7 @@ final class go extends qe {
         }
         this.field_P = new int[4];
         if (param0 != 7872) {
-            discarded$0 = go.a(117L, 85);
+            go.a(117L, 85);
         }
         this.field_B = new md();
         this.field_T = new md();
@@ -2533,17 +2223,16 @@ final class go extends qe {
         this.field_L = ni.a(k.field_f.field_e, 256, 0);
         this.field_D.e(-1);
         this.field_L.e(-1);
-        fa discarded$1 = l.a(this.field_D, 0);
-        fa discarded$2 = l.a(this.field_L, 0);
+        l.a(this.field_D, 0);
+        l.a(this.field_L, 0);
         t.a(64, g.field_Lb, true, true);
     }
 
     private final void b(hb param0, int param1) {
-        o discarded$0 = null;
         try {
             param0.field_b.a(li.field_h, param0.field_n.field_l, -10872);
             if (!(param0.field_n.field_g == null)) {
-                discarded$0 = gd.a(64, param0.field_n.field_g);
+                gd.a(64, param0.field_n.field_g);
             }
             if (param1 > -120) {
                 String var4 = (String) null;
@@ -2557,12 +2246,12 @@ final class go extends qe {
     }
 
     final void f() {
-        ai dupTemp$1 = null;
-        int var1 = 0;
-        int var2 = 0;
-        int var3_int = 0;
-        ai var3 = null;
-        int var4 = 0;
+        ai dupTemp$0 = null;
+        int var1;
+        int var2;
+        int var3_int;
+        ai var3;
+        int var4;
         var4 = DungeonAssault.field_K;
         if (13 != mm.field_t) {
           L0: {
@@ -2645,9 +2334,9 @@ final class go extends qe {
                         }
                       }
                       if (var1 != var2) {
-                        dupTemp$1 = new ai(var2);
-                        this.field_Y.field_h[this.field_u] = dupTemp$1;
-                        var3 = dupTemp$1;
+                        dupTemp$0 = new ai(var2);
+                        this.field_Y.field_h[this.field_u] = dupTemp$0;
+                        var3 = dupTemp$0;
                         this.field_Y.field_j.b(this.field_u, 31);
                         this.a(var3, 76);
                         var3.field_c = new wd(var3.field_h.field_d);
@@ -2676,10 +2365,6 @@ final class go extends qe {
     }
 
     private final void b(int param0, hb param1) {
-        o discarded$2 = null;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -2687,14 +2372,7 @@ final class go extends qe {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             if (param0 == 2) {
@@ -2704,7 +2382,7 @@ final class go extends qe {
                 } else {
                   param1.field_b.a(126, param1.field_n.field_u);
                   if (null != param1.field_n.field_p) {
-                    discarded$2 = gd.a(64, param1.field_n.field_p);
+                    gd.a(64, param1.field_n.field_p);
                     break L1;
                   } else {
                     break L1;
@@ -2722,27 +2400,19 @@ final class go extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("go.SC(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("go.SC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -2768,9 +2438,9 @@ final class go extends qe {
     }
 
     final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = DungeonAssault.field_K;
           this.a(sm.field_e, -8963);
@@ -2781,7 +2451,7 @@ final class go extends qe {
             break L0;
           }
         }
-        o discarded$2 = gd.a(64, ef.field_d);
+        gd.a(64, ef.field_d);
         var3 = 0;
         var4 = 0;
         L1: while (true) {
@@ -2815,51 +2485,23 @@ final class go extends qe {
     }
 
     private final void a(hb param0, hb param1, int param2, byte param3) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        ec var6 = null;
-        int var7 = 0;
-        int var8 = 0;
         int stackIn_32_0 = 0;
         int stackIn_51_0 = 0;
-        RuntimeException stackIn_70_0 = null;
-        StringBuilder stackIn_70_1 = null;
         RuntimeException stackIn_71_0 = null;
         StringBuilder stackIn_71_1 = null;
         RuntimeException stackIn_72_0 = null;
         StringBuilder stackIn_72_1 = null;
         String stackIn_72_2 = null;
-        RuntimeException stackIn_73_0 = null;
-        StringBuilder stackIn_73_1 = null;
-        RuntimeException stackIn_74_0 = null;
         StringBuilder stackIn_74_1 = null;
-        RuntimeException stackIn_75_0 = null;
         StringBuilder stackIn_75_1 = null;
         String stackIn_75_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_31_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_46_0 = 0;
-        RuntimeException stackOut_69_0 = null;
-        StringBuilder stackOut_69_1 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        String stackOut_71_2 = null;
-        RuntimeException stackOut_70_0 = null;
-        StringBuilder stackOut_70_1 = null;
-        String stackOut_70_2 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        RuntimeException stackOut_74_0 = null;
-        StringBuilder stackOut_74_1 = null;
-        String stackOut_74_2 = null;
-        RuntimeException stackOut_73_0 = null;
-        StringBuilder stackOut_73_1 = null;
-        String stackOut_73_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        ec var6 = null;
+        int var7 = 0;
+        int var8 = 0;
         try {
           L0: {
             if (-3 != (no.field_d ^ -1)) {
@@ -2959,17 +2601,14 @@ final class go extends qe {
                 L8: {
                   if (ob.field_fc != var5_int) {
                     if (var5_int == ob.field_Jb) {
-                      stackOut_31_0 = 2;
-                      stackIn_32_0 = stackOut_31_0;
+                      stackIn_32_0 = 2;
                       break L8;
                     } else {
-                      stackOut_30_0 = 4;
-                      stackIn_32_0 = stackOut_30_0;
+                      stackIn_32_0 = 4;
                       break L8;
                     }
                   } else {
-                    stackOut_28_0 = 1;
-                    stackIn_32_0 = stackOut_28_0;
+                    stackIn_32_0 = 1;
                     break L8;
                   }
                 }
@@ -3024,17 +2663,14 @@ final class go extends qe {
                   L11: {
                     if (param2 != -1) {
                       if (param2 != this.field_G) {
-                        stackOut_49_0 = 1;
-                        stackIn_51_0 = stackOut_49_0;
+                        stackIn_51_0 = 1;
                         break L11;
                       } else {
-                        stackOut_48_0 = 0;
-                        stackIn_51_0 = stackOut_48_0;
+                        stackIn_51_0 = 0;
                         break L11;
                       }
                     } else {
-                      stackOut_46_0 = 0;
-                      stackIn_51_0 = stackOut_46_0;
+                      stackIn_51_0 = 0;
                       break L11;
                     }
                   }
@@ -3109,56 +2745,40 @@ final class go extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L14: {
             var5 = decompiledCaughtException;
-            stackOut_69_0 = (RuntimeException) (var5);
-            stackOut_69_1 = new StringBuilder().append("go.TC(");
-            stackIn_71_0 = stackOut_69_0;
-            stackIn_71_1 = stackOut_69_1;
-            stackIn_70_0 = stackOut_69_0;
-            stackIn_70_1 = stackOut_69_1;
+            stackIn_71_0 = (RuntimeException) (var5);
+
+            stackIn_71_1 = new StringBuilder().append("go.TC(");
+
             if (param0 == null) {
-              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
-              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackOut_71_2 = "null";
-              stackIn_72_0 = stackOut_71_0;
-              stackIn_72_1 = stackOut_71_1;
-              stackIn_72_2 = stackOut_71_2;
+              stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
+              stackIn_72_2 = "null";
               break L14;
             } else {
-              stackOut_70_0 = (RuntimeException) ((Object) stackIn_70_0);
-              stackOut_70_1 = (StringBuilder) ((Object) stackIn_70_1);
-              stackOut_70_2 = "{...}";
-              stackIn_72_0 = stackOut_70_0;
-              stackIn_72_1 = stackOut_70_1;
-              stackIn_72_2 = stackOut_70_2;
+              stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
+              stackIn_72_2 = "{...}";
               break L14;
             }
           }
           L15: {
-            stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-            stackOut_72_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_72_2).append(',');
-            stackIn_74_0 = stackOut_72_0;
-            stackIn_74_1 = stackOut_72_1;
-            stackIn_73_0 = stackOut_72_0;
-            stackIn_73_1 = stackOut_72_1;
+
+
+            stackIn_74_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_72_2).append(',');
+
             if (param1 == null) {
-              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
-              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
-              stackOut_74_2 = "null";
-              stackIn_75_0 = stackOut_74_0;
-              stackIn_75_1 = stackOut_74_1;
-              stackIn_75_2 = stackOut_74_2;
+              stackIn_72_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_75_1 = (StringBuilder) ((Object) stackIn_74_1);
+              stackIn_75_2 = "null";
               break L15;
             } else {
-              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
-              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
-              stackOut_73_2 = "{...}";
-              stackIn_75_0 = stackOut_73_0;
-              stackIn_75_1 = stackOut_73_1;
-              stackIn_75_2 = stackOut_73_2;
+              stackIn_72_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_75_1 = (StringBuilder) ((Object) stackIn_74_1);
+              stackIn_75_2 = "{...}";
               break L15;
             }
           }
-          throw vk.a((Throwable) ((Object) stackIn_75_0), stackIn_75_2 + ',' + param2 + ',' + param3 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_72_0), stackIn_75_2 + ',' + param2 + ',' + param3 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -3169,25 +2789,15 @@ final class go extends qe {
 
     private final void b(byte param0, hb param1) {
         String[] var3 = null;
-        RuntimeException var3_ref = null;
         String var4 = null;
         String[] var5 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var3_ref = null;
         try {
           L0: {
             L1: {
@@ -3218,27 +2828,19 @@ final class go extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3_ref);
-            stackOut_6_1 = new StringBuilder().append("go.BA(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3_ref);
+
+            stackIn_8_1 = new StringBuilder().append("go.BA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -3247,18 +2849,11 @@ final class go extends qe {
     }
 
     private final void a(hb param0, int param1, byte param2) {
-        o discarded$1 = null;
-        RuntimeException var4 = null;
-        ec var5 = null;
-        ec stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
         ec stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         ec stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         int stackIn_17_2 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -3266,22 +2861,8 @@ final class go extends qe {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ec stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        ec stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        int stackOut_16_2 = 0;
-        ec stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        int stackOut_15_2 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        RuntimeException var4 = null;
+        ec var5 = null;
         try {
           L0: {
             L1: {
@@ -3300,7 +2881,7 @@ final class go extends qe {
               if (this.field_Y.field_p.a(param1, (byte) 89)) {
                 break L2;
               } else {
-                discarded$1 = je.a(0, dc.field_q);
+                je.a(0, dc.field_q);
                 break L2;
               }
             }
@@ -3316,27 +2897,19 @@ final class go extends qe {
                 }
               }
               L4: {
-                stackOut_14_0 = (ec) (var5);
-                stackOut_14_1 = 6;
-                stackIn_16_0 = stackOut_14_0;
-                stackIn_16_1 = stackOut_14_1;
-                stackIn_15_0 = stackOut_14_0;
-                stackIn_15_1 = stackOut_14_1;
+                stackIn_16_0 = (ec) (var5);
+
+                stackIn_16_1 = 6;
+
                 if (param0 == null) {
-                  stackOut_16_0 = (ec) ((Object) stackIn_16_0);
-                  stackOut_16_1 = stackIn_16_1;
-                  stackOut_16_2 = -1;
-                  stackIn_17_0 = stackOut_16_0;
-                  stackIn_17_1 = stackOut_16_1;
-                  stackIn_17_2 = stackOut_16_2;
+                  stackIn_17_0 = (ec) ((Object) stackIn_16_0);
+                  stackIn_17_1 = stackIn_16_1;
+                  stackIn_17_2 = -1;
                   break L4;
                 } else {
-                  stackOut_15_0 = (ec) ((Object) stackIn_15_0);
-                  stackOut_15_1 = stackIn_15_1;
-                  stackOut_15_2 = param0.field_j;
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_17_1 = stackOut_15_1;
-                  stackIn_17_2 = stackOut_15_2;
+                  stackIn_17_0 = (ec) ((Object) stackIn_16_0);
+                  stackIn_17_1 = stackIn_16_1;
+                  stackIn_17_2 = param0.field_j;
                   break L4;
                 }
               }
@@ -3375,27 +2948,19 @@ final class go extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var4);
-            stackOut_22_1 = new StringBuilder().append("go.J(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var4);
+
+            stackIn_24_1 = new StringBuilder().append("go.J(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L6;
             }
           }
@@ -3477,64 +3042,41 @@ final class go extends qe {
     }
 
     final void a(int param0, int param1, boolean param2, int param3) {
-        boolean discarded$1 = false;
-        int var6 = 0;
-        hb var7 = null;
-        int var8 = 0;
-        hb[] var9_ref_hb__ = null;
-        int var9 = 0;
-        int var10 = 0;
-        hb var11_ref_hb = null;
-        int var11 = 0;
-        int var12 = 0;
-        ai var13 = null;
-        ai stackIn_1_0 = null;
+        boolean discarded$0 = false;
         ai stackIn_2_0 = null;
         ai stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_8_0 = 0;
         int stackIn_38_0 = 0;
         int stackIn_41_0 = 0;
-        ai stackIn_98_0 = null;
         ai stackIn_99_0 = null;
         ai stackIn_100_0 = null;
         int stackIn_100_1 = 0;
-        ai stackOut_0_0 = null;
-        ai stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        ai stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
-        ai stackOut_97_0 = null;
-        ai stackOut_99_0 = null;
-        int stackOut_99_1 = 0;
-        ai stackOut_98_0 = null;
-        int stackOut_98_1 = 0;
+        int var6;
+        hb var7;
+        int var8;
+        hb[] var9_ref_hb__;
+        int var9;
+        int var10;
+        hb var11_ref_hb;
+        int var11;
+        int var12;
+        ai var13;
         L0: {
           var12 = DungeonAssault.field_K;
           var13 = this.field_Y.field_h[param1];
           var6 = 0;
           var7 = this.field_Y.field_u;
           var8 = var13.field_i ? 1 : 0;
-          stackOut_0_0 = (ai) (var13);
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = (ai) (var13);
+
           if ((param0 & 2048) == 0) {
-            stackOut_2_0 = (ai) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (ai) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (ai) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (ai) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -3622,12 +3164,10 @@ final class go extends qe {
             } else {
               L6: {
                 if (-1 == (param0 & 32768 ^ -1)) {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 0;
                   break L6;
                 } else {
-                  stackOut_6_0 = 1;
-                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_0 = 1;
                   break L6;
                 }
               }
@@ -3734,24 +3274,20 @@ final class go extends qe {
               }
               L14: {
                 if (0 == (param0 & 8192)) {
-                  stackOut_37_0 = 0;
-                  stackIn_38_0 = stackOut_37_0;
+                  stackIn_38_0 = 0;
                   break L14;
                 } else {
-                  stackOut_36_0 = 1;
-                  stackIn_38_0 = stackOut_36_0;
+                  stackIn_38_0 = 1;
                   break L14;
                 }
               }
               L15: {
                 var9 = stackIn_38_0;
                 if (-1 == (param0 & 4096 ^ -1)) {
-                  stackOut_40_0 = 0;
-                  stackIn_41_0 = stackOut_40_0;
+                  stackIn_41_0 = 0;
                   break L15;
                 } else {
-                  stackOut_39_0 = 1;
-                  stackIn_41_0 = stackOut_39_0;
+                  stackIn_41_0 = 1;
                   break L15;
                 }
               }
@@ -3839,25 +3375,20 @@ final class go extends qe {
           if (param3 == -1) {
             break L20;
           } else {
-            discarded$1 = this.h(-79);
+            discarded$0 = this.h(-79);
             break L20;
           }
         }
         L21: {
-          stackOut_97_0 = (ai) (var13);
-          stackIn_99_0 = stackOut_97_0;
-          stackIn_98_0 = stackOut_97_0;
+          stackIn_99_0 = (ai) (var13);
+
           if (var8 == 0) {
-            stackOut_99_0 = (ai) ((Object) stackIn_99_0);
-            stackOut_99_1 = 0;
-            stackIn_100_0 = stackOut_99_0;
-            stackIn_100_1 = stackOut_99_1;
+            stackIn_100_0 = (ai) ((Object) stackIn_99_0);
+            stackIn_100_1 = 0;
             break L21;
           } else {
-            stackOut_98_0 = (ai) ((Object) stackIn_98_0);
-            stackOut_98_1 = 1;
-            stackIn_100_0 = stackOut_98_0;
-            stackIn_100_1 = stackOut_98_1;
+            stackIn_100_0 = (ai) ((Object) stackIn_99_0);
+            stackIn_100_1 = 1;
             break L21;
           }
         }
@@ -3866,65 +3397,37 @@ final class go extends qe {
     }
 
     final void a(boolean param0) {
-        int var2 = 0;
-        String[] var3 = null;
-        ai var3_ref = null;
-        int var4 = 0;
-        String var5_ref_String = null;
-        int var5 = 0;
-        String[] var6_ref_String__ = null;
-        int var6 = 0;
-        int var7 = 0;
-        String var8_ref_String = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        hb var12 = null;
-        wd var13 = null;
-        String[] var14 = null;
-        rj var15 = null;
-        ai var16 = null;
         ai stackIn_16_0 = null;
-        int stackIn_23_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
-        int stackIn_29_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_31_0 = 0;
         int stackIn_31_1 = 0;
-        cl stackIn_56_0 = null;
-        cl stackIn_57_0 = null;
         cl stackIn_58_0 = null;
-        cl stackIn_59_0 = null;
         cl stackIn_60_0 = null;
         int stackIn_60_1 = 0;
         int stackIn_75_0 = 0;
         int stackIn_85_0 = 0;
-        ai stackOut_15_0 = null;
-        Object stackOut_14_0 = null;
-        int stackOut_22_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_24_1 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_23_1 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_30_1 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_29_1 = 0;
-        cl stackOut_55_0 = null;
-        cl stackOut_56_0 = null;
-        cl stackOut_59_0 = null;
-        int stackOut_59_1 = 0;
-        cl stackOut_57_0 = null;
-        cl stackOut_58_0 = null;
-        int stackOut_58_1 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_84_0 = 0;
-        int stackOut_83_0 = 0;
+        int var2;
+        String[] var3;
+        ai var3_ref;
+        int var4;
+        String var5_ref_String;
+        int var5;
+        String[] var6_ref_String__;
+        int var6;
+        int var7;
+        String var8_ref_String;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        hb var12;
+        wd var13;
+        String[] var14;
+        rj var15;
+        ai var16;
         var11 = DungeonAssault.field_K;
         super.a(param0);
         this.field_e.b(0, 0);
@@ -3980,12 +3483,10 @@ final class go extends qe {
           }
           L4: {
             if ((var2 ^ -1) <= -1) {
-              stackOut_15_0 = this.field_Y.field_h[var2];
-              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_0 = this.field_Y.field_h[var2];
               break L4;
             } else {
-              stackOut_14_0 = null;
-              stackIn_16_0 = (ai) ((Object) stackOut_14_0);
+              stackIn_16_0 = null;
               break L4;
             }
           }
@@ -4013,20 +3514,15 @@ final class go extends qe {
             }
           }
           L7: {
-            stackOut_22_0 = var4;
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_23_0 = stackOut_22_0;
+            stackIn_24_0 = var4;
+
             if (this.field_Y.field_B != var2) {
-              stackOut_24_0 = stackIn_24_0;
-              stackOut_24_1 = 0;
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_0 = stackIn_24_0;
+              stackIn_25_1 = 0;
               break L7;
             } else {
-              stackOut_23_0 = stackIn_23_0;
-              stackOut_23_1 = 1;
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_0 = stackIn_24_0;
+              stackIn_25_1 = 1;
               break L7;
             }
           }
@@ -4037,20 +3533,15 @@ final class go extends qe {
             } else {
               if (var16.field_h != null) {
                 L9: {
-                  stackOut_28_0 = var4;
-                  stackIn_30_0 = stackOut_28_0;
-                  stackIn_29_0 = stackOut_28_0;
+                  stackIn_30_0 = var4;
+
                   if (var16.field_h.field_g != 2) {
-                    stackOut_30_0 = stackIn_30_0;
-                    stackOut_30_1 = 0;
-                    stackIn_31_0 = stackOut_30_0;
-                    stackIn_31_1 = stackOut_30_1;
+                    stackIn_31_0 = stackIn_30_0;
+                    stackIn_31_1 = 0;
                     break L9;
                   } else {
-                    stackOut_29_0 = stackIn_29_0;
-                    stackOut_29_1 = 1;
-                    stackIn_31_0 = stackOut_29_0;
-                    stackIn_31_1 = stackOut_29_1;
+                    stackIn_31_0 = stackIn_30_0;
+                    stackIn_31_1 = 1;
                     break L9;
                   }
                 }
@@ -4149,32 +3640,25 @@ final class go extends qe {
                     }
                     L19: {
                       L20: {
-                        stackOut_55_0 = this.field_R;
-                        stackIn_58_0 = stackOut_55_0;
-                        stackIn_56_0 = stackOut_55_0;
+                        stackIn_58_0 = this.field_R;
+
                         if (!this.field_w) {
                           break L20;
                         } else {
-                          stackOut_56_0 = (cl) ((Object) stackIn_56_0);
-                          stackIn_59_0 = stackOut_56_0;
-                          stackIn_57_0 = stackOut_56_0;
+
+
                           if (0 != this.field_H) {
-                            stackOut_59_0 = (cl) ((Object) stackIn_59_0);
-                            stackOut_59_1 = 0;
-                            stackIn_60_0 = stackOut_59_0;
-                            stackIn_60_1 = stackOut_59_1;
+                            stackIn_60_0 = (cl) ((Object) stackIn_58_0);
+                            stackIn_60_1 = 0;
                             break L19;
                           } else {
-                            stackOut_57_0 = (cl) ((Object) stackIn_57_0);
-                            stackIn_58_0 = stackOut_57_0;
+                            stackIn_58_0 = (cl) ((Object) stackIn_58_0);
                             break L20;
                           }
                         }
                       }
-                      stackOut_58_0 = (cl) ((Object) stackIn_58_0);
-                      stackOut_58_1 = 1;
-                      stackIn_60_0 = stackOut_58_0;
-                      stackIn_60_1 = stackOut_58_1;
+                      stackIn_60_0 = (cl) ((Object) stackIn_58_0);
+                      stackIn_60_1 = 1;
                       break L19;
                     }
                     ((cl) (Object) stackIn_60_0).a(stackIn_60_1 != 0, -1723, this.field_X);
@@ -4221,12 +3705,10 @@ final class go extends qe {
                         } else {
                           L26: {
                             if ((this.field_X ^ -1) >= -1) {
-                              stackOut_74_0 = (int)((1.0 + Math.cos((double)((float)mo.field_a / 10.0f))) * 64.0) + 128;
-                              stackIn_75_0 = stackOut_74_0;
+                              stackIn_75_0 = (int)((1.0 + Math.cos((double)((float)mo.field_a / 10.0f))) * 64.0) + 128;
                               break L26;
                             } else {
-                              stackOut_73_0 = 256;
-                              stackIn_75_0 = stackOut_73_0;
+                              stackIn_75_0 = 256;
                               break L26;
                             }
                           }
@@ -4257,12 +3739,10 @@ final class go extends qe {
                       } else {
                         L28: {
                           if ((this.field_X ^ -1) >= -1) {
-                            stackOut_84_0 = (int)(64.0 * (Math.cos((double)((float)mo.field_a / 10.0f)) + 1.0)) + 128;
-                            stackIn_85_0 = stackOut_84_0;
+                            stackIn_85_0 = (int)(64.0 * (Math.cos((double)((float)mo.field_a / 10.0f)) + 1.0)) + 128;
                             break L28;
                           } else {
-                            stackOut_83_0 = 256;
-                            stackIn_85_0 = stackOut_83_0;
+                            stackIn_85_0 = 256;
                             break L28;
                           }
                         }
@@ -4343,15 +3823,11 @@ final class go extends qe {
     }
 
     final void a(int param0, boolean param1) {
-        int var3 = 0;
-        int var4 = 0;
-        ai var5 = null;
+        int var3;
+        int var4;
+        ai var5;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
         L0: {
           var4 = DungeonAssault.field_K;
           if (this.field_w) {
@@ -4391,12 +3867,10 @@ final class go extends qe {
             L4: {
               var3 = param1 ? 1 : 0;
               if (ve.a(false)) {
-                stackOut_18_0 = 12;
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = 12;
                 break L4;
               } else {
-                stackOut_17_0 = 0;
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = 0;
                 break L4;
               }
             }
@@ -4407,12 +3881,10 @@ final class go extends qe {
               L5: {
                 var3 = param1 ? 1 : 0;
                 if (ve.a(false)) {
-                  stackOut_14_0 = 12;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = 12;
                   break L5;
                 } else {
-                  stackOut_13_0 = 0;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = 0;
                   break L5;
                 }
               }
@@ -4444,61 +3916,45 @@ final class go extends qe {
     }
 
     final void a(boolean param0, int param1) {
-        int var3_int = 0;
-        o var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        ec var11 = null;
-        int var12 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_11_1 = 0;
+        int var3_int;
+        o var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        ec var11;
+        int var12;
         L0: {
           L1: {
             var10 = DungeonAssault.field_K;
             if (!param0) {
               var12 = 0;
               var3_int = var12;
-              L2: while (true) {
-                if (var12 < 4) {
-                  if (0 < this.field_P[var12]) {
-                    this.field_P[var12] = this.field_P[var12] - 1;
-                    var12++;
-                    continue L2;
-                  } else {
-                    var12++;
-                    continue L2;
-                  }
+              if (var12 >= 4) {
+                if (-1 <= (this.field_P[2] ^ -1)) {
+                  break L1;
                 } else {
-                  if (-1 > (this.field_P[2] ^ -1)) {
-                    if (0 == oi.b(0, 100)) {
-                      this.field_B.a(je.a(0, sa.field_v), false);
-                      break L1;
-                    } else {
-                      if (this.field_P[3] <= 0) {
-                        break L0;
-                      } else {
-                        if (-1 != (oi.b(0, 100) ^ -1)) {
-                          break L0;
-                        } else {
-                          this.field_T.a(je.a(param1 + -251569954, hp.field_c), false);
-                          break L0;
-                        }
-                      }
-                    }
+                  if (0 != oi.b(0, 100)) {
+                    break L1;
                   } else {
-                    if (this.field_P[3] <= 0) {
-                      break L0;
-                    } else {
-                      if (-1 != (oi.b(0, 100) ^ -1)) {
-                        break L0;
-                      } else {
-                        this.field_T.a(je.a(param1 + -251569954, hp.field_c), false);
-                        break L0;
-                      }
-                    }
+                    this.field_B.a(je.a(0, sa.field_v), false);
+                    break L1;
+                  }
+                }
+              } else {
+                if (this.field_P[3] <= 0) {
+                  break L0;
+                } else {
+                  if (-1 != (oi.b(0, 100) ^ -1)) {
+                    break L0;
+                  } else {
+                    this.field_T.a(je.a(param1 + -251569954, hp.field_c), false);
+                    break L0;
                   }
                 }
               }
@@ -4511,96 +3967,42 @@ final class go extends qe {
                 var7 = this.field_U[var5];
                 var8 = this.field_U[var6];
                 var9 = 0;
-                L3: while (true) {
-                  if (-5 < (var9 ^ -1)) {
-                    L4: {
-                      if (var9 == var7) {
-                        break L4;
-                      } else {
-                        if (var8 == var9) {
-                          break L4;
-                        } else {
-                          if (0 < this.field_P[var9]) {
-                            this.field_P[var9] = this.field_P[var9] - 1;
-                            var9++;
-                            continue L3;
-                          } else {
-                            var9++;
-                            continue L3;
-                          }
-                        }
-                      }
-                    }
-                    if (256 > this.field_P[var9]) {
-                      this.field_P[var9] = this.field_P[var9] + 1;
-                      var9++;
-                      continue L3;
-                    } else {
-                      var9++;
-                      continue L3;
-                    }
+                if (-5 < (var9 ^ -1)) {
+                  stackIn_11_0 = var9 ^ -1;
+
+                  stackIn_11_1 = var7 ^ -1;
+
+                  if (stackIn_11_0 <= stackIn_11_1) {
+                    break L1;
                   } else {
-                    if (-1 <= (this.field_P[2] ^ -1)) {
-                      if (this.field_P[3] > 0) {
-                        if (-1 != (oi.b(0, 100) ^ -1)) {
-                          break L0;
-                        } else {
-                          this.field_T.a(je.a(param1 + -251569954, hp.field_c), false);
-                          break L0;
-                        }
-                      } else {
-                        if (this.field_P[3] <= 0) {
-                          break L0;
-                        } else {
-                          if (-1 != (oi.b(0, 100) ^ -1)) {
-                            break L0;
-                          } else {
-                            this.field_T.a(je.a(param1 + -251569954, hp.field_c), false);
-                            break L0;
-                          }
-                        }
-                      }
+                    if (0 != oi.b(0, 100)) {
+                      break L1;
                     } else {
-                      if (this.field_P[3] <= 0) {
-                        break L0;
-                      } else {
-                        if (-1 != (oi.b(0, 100) ^ -1)) {
-                          break L0;
-                        } else {
-                          this.field_T.a(je.a(param1 + -251569954, hp.field_c), false);
-                          break L0;
-                        }
-                      }
+                      this.field_B.a(je.a(0, sa.field_v), false);
+                      break L1;
+                    }
+                  }
+                } else {
+                  if (-1 <= (this.field_P[2] ^ -1)) {
+                    break L1;
+                  } else {
+                    if (0 != oi.b(0, 100)) {
+                      break L1;
+                    } else {
+                      this.field_B.a(je.a(0, sa.field_v), false);
+                      break L1;
                     }
                   }
                 }
               } else {
-                if (-1 > (this.field_P[2] ^ -1)) {
-                  if (0 == oi.b(0, 100)) {
-                    this.field_B.a(je.a(0, sa.field_v), false);
+                if (-1 <= (this.field_P[2] ^ -1)) {
+                  break L1;
+                } else {
+                  if (0 != oi.b(0, 100)) {
                     break L1;
                   } else {
-                    if (this.field_P[3] <= 0) {
-                      break L0;
-                    } else {
-                      if (-1 != (oi.b(0, 100) ^ -1)) {
-                        break L0;
-                      } else {
-                        this.field_T.a(je.a(param1 + -251569954, hp.field_c), false);
-                        break L0;
-                      }
-                    }
-                  }
-                } else {
-                  if (this.field_P[3] <= 0) {
-                    break L0;
-                  } else {
-                    if (-1 != (oi.b(0, 100) ^ -1)) {
-                      break L0;
-                    } else {
-                      this.field_T.a(je.a(param1 + -251569954, hp.field_c), false);
-                      break L0;
-                    }
+                    this.field_B.a(je.a(0, sa.field_v), false);
+                    break L1;
                   }
                 }
               }
@@ -4617,34 +4019,34 @@ final class go extends qe {
             }
           }
         }
-        L5: {
+        L2: {
           this.field_D.d(oo.field_d * (om.field_b.field_a * this.field_P[0]) / 96 >> -1341838648);
           this.field_L.d(this.field_P[1] * (k.field_f.field_a * oo.field_d) / 96 >> 866147112);
           var3 = (o) ((Object) this.field_B.e(param1 + -251594126));
           if (param1 == 251569954) {
-            break L5;
+            break L2;
           } else {
             var11 = (ec) null;
             this.a(false, (ec) null, 74);
-            break L5;
+            break L2;
           }
         }
-        L6: while (true) {
+        L3: while (true) {
           if (var3 == null) {
             var3 = (o) ((Object) this.field_T.e(param1 ^ -251590986));
-            L7: while (true) {
+            L4: while (true) {
               if (var3 == null) {
                 return;
               } else {
                 var3.field_k.a(var3.field_p * this.field_P[3] >> 229253122, -111);
                 var3 = (o) ((Object) this.field_T.a(4));
-                continue L7;
+                continue L4;
               }
             }
           } else {
             var3.field_k.a(var3.field_p * this.field_P[2] >> 251569954, param1 ^ 251569970);
             var3 = (o) ((Object) this.field_B.a(4));
-            continue L6;
+            continue L3;
           }
         }
     }
@@ -4657,41 +4059,20 @@ final class go extends qe {
     }
 
     private final boolean f(boolean param0) {
-        Object var2 = null;
-        int var3 = 0;
-        gg var4_ref_gg = null;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_23_0 = 0;
         int stackIn_41_0 = 0;
         int stackIn_57_0 = 0;
-        int stackIn_59_0 = 0;
         int stackIn_60_0 = 0;
         int stackIn_61_0 = 0;
         int stackIn_61_1 = 0;
-        int stackIn_63_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_65_0 = 0;
         int stackIn_65_1 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_60_1 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_59_1 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_64_1 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_63_1 = 0;
+        Object var2;
+        int var3;
+        gg var4_ref_gg;
+        int var4;
+        int var5;
         var5 = DungeonAssault.field_K;
         if (null != this.field_y) {
           L0: {
@@ -4738,17 +4119,14 @@ final class go extends qe {
                     L5: {
                       if (this.field_Y.b(this.field_s, 27747)) {
                         if (-25 != (this.field_s ^ -1)) {
-                          stackOut_21_0 = 1;
-                          stackIn_23_0 = stackOut_21_0;
+                          stackIn_23_0 = 1;
                           break L5;
                         } else {
-                          stackOut_20_0 = 0;
-                          stackIn_23_0 = stackOut_20_0;
+                          stackIn_23_0 = 0;
                           break L5;
                         }
                       } else {
-                        stackOut_18_0 = 0;
-                        stackIn_23_0 = stackOut_18_0;
+                        stackIn_23_0 = 0;
                         break L5;
                       }
                     }
@@ -4785,22 +4163,18 @@ final class go extends qe {
                       if (0 != (this.field_s ^ -1)) {
                         if (this.field_s != this.field_G) {
                           if ((this.field_s ^ -1) != -25) {
-                            stackOut_39_0 = 1;
-                            stackIn_41_0 = stackOut_39_0;
+                            stackIn_41_0 = 1;
                             break L8;
                           } else {
-                            stackOut_38_0 = 0;
-                            stackIn_41_0 = stackOut_38_0;
+                            stackIn_41_0 = 0;
                             break L8;
                           }
                         } else {
-                          stackOut_36_0 = 0;
-                          stackIn_41_0 = stackOut_36_0;
+                          stackIn_41_0 = 0;
                           break L8;
                         }
                       } else {
-                        stackOut_34_0 = 0;
-                        stackIn_41_0 = stackOut_34_0;
+                        stackIn_41_0 = 0;
                         break L8;
                       }
                     }
@@ -4856,12 +4230,10 @@ final class go extends qe {
                   } else {
                     L14: {
                       if (0 != ((hb) (var2)).field_n.field_z) {
-                        stackOut_56_0 = 0;
-                        stackIn_57_0 = stackOut_56_0;
+                        stackIn_57_0 = 0;
                         break L14;
                       } else {
-                        stackOut_55_0 = 1;
-                        stackIn_57_0 = stackOut_55_0;
+                        stackIn_57_0 = 1;
                         break L14;
                       }
                     }
@@ -4871,20 +4243,15 @@ final class go extends qe {
                         break L15;
                       } else {
                         L16: {
-                          stackOut_58_0 = var4;
-                          stackIn_60_0 = stackOut_58_0;
-                          stackIn_59_0 = stackOut_58_0;
+                          stackIn_60_0 = var4;
+
                           if (((hb) (var2)).field_n.field_z != 1) {
-                            stackOut_60_0 = stackIn_60_0;
-                            stackOut_60_1 = 0;
-                            stackIn_61_0 = stackOut_60_0;
-                            stackIn_61_1 = stackOut_60_1;
+                            stackIn_61_0 = stackIn_60_0;
+                            stackIn_61_1 = 0;
                             break L16;
                           } else {
-                            stackOut_59_0 = stackIn_59_0;
-                            stackOut_59_1 = 1;
-                            stackIn_61_0 = stackOut_59_0;
-                            stackIn_61_1 = stackOut_59_1;
+                            stackIn_61_0 = stackIn_60_0;
+                            stackIn_61_1 = 1;
                             break L16;
                           }
                         }
@@ -4893,20 +4260,15 @@ final class go extends qe {
                       }
                     }
                     L17: {
-                      stackOut_62_0 = var4;
-                      stackIn_64_0 = stackOut_62_0;
-                      stackIn_63_0 = stackOut_62_0;
+                      stackIn_64_0 = var4;
+
                       if (0 != (6 & ((hb) (var2)).field_o)) {
-                        stackOut_64_0 = stackIn_64_0;
-                        stackOut_64_1 = 0;
-                        stackIn_65_0 = stackOut_64_0;
-                        stackIn_65_1 = stackOut_64_1;
+                        stackIn_65_0 = stackIn_64_0;
+                        stackIn_65_1 = 0;
                         break L17;
                       } else {
-                        stackOut_63_0 = stackIn_63_0;
-                        stackOut_63_1 = 1;
-                        stackIn_65_0 = stackOut_63_0;
-                        stackIn_65_1 = stackOut_63_1;
+                        stackIn_65_0 = stackIn_64_0;
+                        stackIn_65_1 = 1;
                         break L17;
                       }
                     }
@@ -5037,7 +4399,7 @@ final class go extends qe {
         if (param0 >= -107) {
             go.b((byte) 51);
         }
-        o discarded$0 = gd.a(64, qm.field_n);
+        gd.a(64, qm.field_n);
         this.e((byte) -119);
     }
 
@@ -5067,16 +4429,14 @@ final class go extends qe {
     }
 
     private final void d(int param0) {
-        String[] var2 = null;
-        ai var2_ref = null;
-        String var3_ref_String = null;
-        int var3 = 0;
-        int var4 = 0;
-        String[] var5 = null;
-        ai var6 = null;
         ai stackIn_8_0 = null;
-        ai stackOut_7_0 = null;
-        Object stackOut_6_0 = null;
+        String[] var2;
+        ai var2_ref;
+        String var3_ref_String;
+        int var3;
+        int var4;
+        String[] var5;
+        ai var6;
         L0: {
           L1: {
             var4 = DungeonAssault.field_K;
@@ -5099,12 +4459,10 @@ final class go extends qe {
         }
         L2: {
           if (this.field_Y.field_B != -1) {
-            stackOut_7_0 = this.field_Y.field_h[this.field_Y.field_B];
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = this.field_Y.field_h[this.field_Y.field_B];
             break L2;
           } else {
-            stackOut_6_0 = null;
-            stackIn_8_0 = (ai) ((Object) stackOut_6_0);
+            stackIn_8_0 = null;
             break L2;
           }
         }
@@ -5191,28 +4549,18 @@ final class go extends qe {
     }
 
     private final void a(boolean param0, ec param1, int param2) {
-        ro dupTemp$5 = null;
+        ro dupTemp$3 = null;
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
         ro var6 = null;
         int var7 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var4 = null;
         var7 = DungeonAssault.field_K;
         try {
           L0: {
@@ -5224,9 +4572,9 @@ final class go extends qe {
                 var6 = (ro) ((Object) this.field_b);
                 break L1;
               } else {
-                dupTemp$5 = new ro((go) (this));
-                var6 = dupTemp$5;
-                this.field_b = (kl) ((Object) dupTemp$5);
+                dupTemp$3 = new ro((go) (this));
+                var6 = dupTemp$3;
+                this.field_b = (kl) ((Object) dupTemp$3);
                 break L1;
               }
             }
@@ -5261,27 +4609,19 @@ final class go extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var4);
-            stackOut_13_1 = new StringBuilder().append("go.W(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var4);
+
+            stackIn_15_1 = new StringBuilder().append("go.W(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }
@@ -5290,31 +4630,19 @@ final class go extends qe {
     }
 
     private final void d(boolean param0) {
-        int var2 = 0;
-        int var3_int = 0;
-        ai var3 = null;
-        hb var4_ref_hb = null;
-        int var4 = 0;
-        int var5 = 0;
-        hb[] var6 = null;
-        int stackIn_18_0 = 0;
+        int var3_int;
+        hb var4_ref_hb;
+        int var5;
+        hb[] var6;
         int stackIn_19_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_20_1 = 0;
-        int stackIn_21_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_23_1 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_19_1 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_18_1 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_22_1 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_21_1 = 0;
+        int var2;
+        ai var3;
+        int var4;
         var5 = DungeonAssault.field_K;
         var6 = this.field_Y.field_A;
         var3_int = 0;
@@ -5357,39 +4685,29 @@ final class go extends qe {
                     }
                   }
                   L5: {
-                    stackOut_17_0 = var4;
-                    stackIn_19_0 = stackOut_17_0;
-                    stackIn_18_0 = stackOut_17_0;
+                    stackIn_19_0 = var4;
+
                     if (this.field_Y.field_B != var2) {
-                      stackOut_19_0 = stackIn_19_0;
-                      stackOut_19_1 = 0;
-                      stackIn_20_0 = stackOut_19_0;
-                      stackIn_20_1 = stackOut_19_1;
+                      stackIn_20_0 = stackIn_19_0;
+                      stackIn_20_1 = 0;
                       break L5;
                     } else {
-                      stackOut_18_0 = stackIn_18_0;
-                      stackOut_18_1 = 1;
-                      stackIn_20_0 = stackOut_18_0;
-                      stackIn_20_1 = stackOut_18_1;
+                      stackIn_20_0 = stackIn_19_0;
+                      stackIn_20_1 = 1;
                       break L5;
                     }
                   }
                   L6: {
                     var4 = stackIn_20_0 & stackIn_20_1;
-                    stackOut_20_0 = var4;
-                    stackIn_22_0 = stackOut_20_0;
-                    stackIn_21_0 = stackOut_20_0;
+                    stackIn_22_0 = var4;
+
                     if (-3 != (var3.field_h.field_g ^ -1)) {
-                      stackOut_22_0 = stackIn_22_0;
-                      stackOut_22_1 = 0;
-                      stackIn_23_0 = stackOut_22_0;
-                      stackIn_23_1 = stackOut_22_1;
+                      stackIn_23_0 = stackIn_22_0;
+                      stackIn_23_1 = 0;
                       break L6;
                     } else {
-                      stackOut_21_0 = stackIn_21_0;
-                      stackOut_21_1 = 1;
-                      stackIn_23_0 = stackOut_21_0;
-                      stackIn_23_1 = stackOut_21_1;
+                      stackIn_23_0 = stackIn_22_0;
+                      stackIn_23_1 = 1;
                       break L6;
                     }
                   }
@@ -5444,19 +4762,13 @@ final class go extends qe {
     }
 
     private final void l(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        Object stackIn_9_0 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         Object stackIn_10_0 = null;
         Object stackIn_11_0 = null;
         tf stackIn_11_1 = null;
-        Object stackOut_8_0 = null;
-        Object stackOut_10_0 = null;
-        Object stackOut_10_1 = null;
-        Object stackOut_9_0 = null;
-        tf stackOut_9_1 = null;
         var5 = DungeonAssault.field_K;
         if (param0 == 18014) {
           this.b();
@@ -5480,20 +4792,15 @@ final class go extends qe {
                 this.field_p.a(this.field_O, false);
                 this.field_p.a(this.field_J, false);
                 this.field_p.a(this.field_K, false);
-                stackOut_8_0 = this;
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_10_0 = this;
+
                 if (null == this.field_Y.field_f) {
-                  stackOut_10_0 = this;
-                  stackOut_10_1 = null;
-                  stackIn_11_0 = stackOut_10_0;
-                  stackIn_11_1 = (tf) ((Object) stackOut_10_1);
+                  stackIn_11_0 = this;
+                  stackIn_11_1 = null;
                   break L1;
                 } else {
-                  stackOut_9_0 = this;
-                  stackOut_9_1 = new tf(ne.field_c, this.field_Y.field_f, ag.field_c);
-                  stackIn_11_0 = stackOut_9_0;
-                  stackIn_11_1 = stackOut_9_1;
+                  stackIn_11_0 = this;
+                  stackIn_11_1 = new tf(ne.field_c, this.field_Y.field_f, ag.field_c);
                   break L1;
                 }
               }
@@ -5520,12 +4827,24 @@ final class go extends qe {
     }
 
     private final void a(boolean param0, ec param1, int param2, int param3) {
-        RuntimeException var5 = null;
+        int stackIn_17_0 = 0;
+        int stackIn_41_0 = 0;
+        int stackIn_44_0 = 0;
+        Object stackIn_95_0 = null;
+        Object stackIn_96_0 = null;
+        int stackIn_96_1 = 0;
+        RuntimeException stackIn_100_0 = null;
+        StringBuilder stackIn_100_1 = null;
+        RuntimeException stackIn_101_0 = null;
+        StringBuilder stackIn_101_1 = null;
+        String stackIn_101_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         ai var6 = null;
         hb var7 = null;
         int var8 = 0;
-        oc var9 = null;
+        Object var9 = null;
         String var10 = null;
         int var11 = 0;
         int var12 = 0;
@@ -5537,40 +4856,6 @@ final class go extends qe {
         String var18 = null;
         String var19 = null;
         String var20 = null;
-        int stackIn_17_0 = 0;
-        int stackIn_41_0 = 0;
-        int stackIn_44_0 = 0;
-        oc stackIn_94_0 = null;
-        oc stackIn_95_0 = null;
-        oc stackIn_96_0 = null;
-        int stackIn_96_1 = 0;
-        RuntimeException stackIn_99_0 = null;
-        StringBuilder stackIn_99_1 = null;
-        RuntimeException stackIn_100_0 = null;
-        StringBuilder stackIn_100_1 = null;
-        RuntimeException stackIn_101_0 = null;
-        StringBuilder stackIn_101_1 = null;
-        String stackIn_101_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_42_0 = 0;
-        oc stackOut_93_0 = null;
-        oc stackOut_95_0 = null;
-        int stackOut_95_1 = 0;
-        oc stackOut_94_0 = null;
-        int stackOut_94_1 = 0;
-        RuntimeException stackOut_98_0 = null;
-        StringBuilder stackOut_98_1 = null;
-        RuntimeException stackOut_100_0 = null;
-        StringBuilder stackOut_100_1 = null;
-        String stackOut_100_2 = null;
-        RuntimeException stackOut_99_0 = null;
-        StringBuilder stackOut_99_1 = null;
-        String stackOut_99_2 = null;
         var17 = DungeonAssault.field_K;
         try {
           L0: {
@@ -5609,12 +4894,10 @@ final class go extends qe {
                 if (2 == var6.field_h.field_g) {
                   L3: {
                     if (-1 == (var5_int & 32768 ^ -1)) {
-                      stackOut_16_0 = 0;
-                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_0 = 0;
                       break L3;
                     } else {
-                      stackOut_15_0 = 1;
-                      stackIn_17_0 = stackOut_15_0;
+                      stackIn_17_0 = 1;
                       break L3;
                     }
                   }
@@ -5711,24 +4994,20 @@ final class go extends qe {
                   }
                   L11: {
                     if (-1 == (var5_int & 8192 ^ -1)) {
-                      stackOut_40_0 = 0;
-                      stackIn_41_0 = stackOut_40_0;
+                      stackIn_41_0 = 0;
                       break L11;
                     } else {
-                      stackOut_39_0 = 1;
-                      stackIn_41_0 = stackOut_39_0;
+                      stackIn_41_0 = 1;
                       break L11;
                     }
                   }
                   L12: {
                     var11 = stackIn_41_0;
                     if (0 == (4096 & var5_int)) {
-                      stackOut_43_0 = 0;
-                      stackIn_44_0 = stackOut_43_0;
+                      stackIn_44_0 = 0;
                       break L12;
                     } else {
-                      stackOut_42_0 = 1;
-                      stackIn_44_0 = stackOut_42_0;
+                      stackIn_44_0 = 1;
                       break L12;
                     }
                   }
@@ -5829,7 +5108,12 @@ final class go extends qe {
                       if (var13 > 0) {
                         break L20;
                       } else {
-                        break L20;
+                        if (var12 != 0) {
+                          break L20;
+                        } else {
+                          var9 = new oc(var7, var6, false, var10 + " " + h.field_i);
+                          break L2;
+                        }
                       }
                     }
                     var13--;
@@ -5875,28 +5159,23 @@ final class go extends qe {
                   }
                 }
                 L23: {
-                  stackOut_93_0 = (oc) (var9);
-                  stackIn_95_0 = stackOut_93_0;
-                  stackIn_94_0 = stackOut_93_0;
+                  stackIn_95_0 = var9;
+
                   if (!param0) {
-                    stackOut_95_0 = (oc) ((Object) stackIn_95_0);
-                    stackOut_95_1 = 0;
-                    stackIn_96_0 = stackOut_95_0;
-                    stackIn_96_1 = stackOut_95_1;
+                    stackIn_96_0 = stackIn_95_0;
+                    stackIn_96_1 = 0;
                     break L23;
                   } else {
-                    stackOut_94_0 = (oc) ((Object) stackIn_94_0);
-                    stackOut_94_1 = 1;
-                    stackIn_96_0 = stackOut_94_0;
-                    stackIn_96_1 = stackOut_94_1;
+                    stackIn_96_0 = stackIn_95_0;
+                    stackIn_96_1 = 1;
                     break L23;
                   }
                 }
-                stackIn_96_0.field_t = stackIn_96_1 != 0;
-                var9.field_B = var5_int;
-                this.field_b = (kl) ((Object) var9);
-                var9.field_w = (go) (this);
-                var9.field_q = param2;
+                ((oc) ((Object) stackIn_96_0)).field_t = stackIn_96_1 != 0;
+                ((oc) (var9)).field_B = var5_int;
+                this.field_b = (kl) (var9);
+                ((oc) (var9)).field_w = (go) (this);
+                ((oc) (var9)).field_q = param2;
                 break L21;
               }
             }
@@ -5906,27 +5185,19 @@ final class go extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L24: {
             var5 = decompiledCaughtException;
-            stackOut_98_0 = (RuntimeException) (var5);
-            stackOut_98_1 = new StringBuilder().append("go.GC(").append(param0).append(',');
-            stackIn_100_0 = stackOut_98_0;
-            stackIn_100_1 = stackOut_98_1;
-            stackIn_99_0 = stackOut_98_0;
-            stackIn_99_1 = stackOut_98_1;
+            stackIn_100_0 = (RuntimeException) (var5);
+
+            stackIn_100_1 = new StringBuilder().append("go.GC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_100_0 = (RuntimeException) ((Object) stackIn_100_0);
-              stackOut_100_1 = (StringBuilder) ((Object) stackIn_100_1);
-              stackOut_100_2 = "null";
-              stackIn_101_0 = stackOut_100_0;
-              stackIn_101_1 = stackOut_100_1;
-              stackIn_101_2 = stackOut_100_2;
+              stackIn_101_0 = (RuntimeException) ((Object) stackIn_100_0);
+              stackIn_101_1 = (StringBuilder) ((Object) stackIn_100_1);
+              stackIn_101_2 = "null";
               break L24;
             } else {
-              stackOut_99_0 = (RuntimeException) ((Object) stackIn_99_0);
-              stackOut_99_1 = (StringBuilder) ((Object) stackIn_99_1);
-              stackOut_99_2 = "{...}";
-              stackIn_101_0 = stackOut_99_0;
-              stackIn_101_1 = stackOut_99_1;
-              stackIn_101_2 = stackOut_99_2;
+              stackIn_101_0 = (RuntimeException) ((Object) stackIn_100_0);
+              stackIn_101_1 = (StringBuilder) ((Object) stackIn_100_1);
+              stackIn_101_2 = "{...}";
               break L24;
             }
           }
@@ -5935,7 +5206,7 @@ final class go extends qe {
     }
 
     private final void a(int param0) {
-        int var3 = 0;
+        int var3;
         L0: {
           var3 = DungeonAssault.field_K;
           if (param0 == 27989) {
@@ -5976,53 +5247,35 @@ final class go extends qe {
     }
 
     go(boolean param0, pj param1) {
-        e dupTemp$4 = null;
-        e dupTemp$5 = null;
-        RuntimeException var3 = null;
-        int[] var3_array = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        hb var6 = null;
-        int[] var6_array = null;
-        int[] var8 = null;
-        int var9 = 0;
-        hb var10 = null;
-        int[] var11 = null;
-        hb[] var12 = null;
-        hb var13 = null;
-        int[] var14 = null;
-        hb[] var15 = null;
-        hb[] var16 = null;
-        ai var17 = null;
-        int[] var18 = null;
-        int[] var19 = null;
-        Object stackIn_2_0 = null;
+        e dupTemp$1 = null;
+        e dupTemp$2 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        md discarded$3 = new md();
+        int[] var3 = null;
+        int var3_int = 0;
+        RuntimeException var3_ref = null;
+        int var4 = 0;
+        hb[] var4_ref_hb__ = null;
+        int var5 = 0;
+        int[] var6 = null;
+        hb var6_ref = null;
+        int[] var8 = null;
+        int[] var9 = null;
+        hb[] var10 = null;
+        hb var11 = null;
+        int[] var12 = null;
+        hb[] var13 = null;
+        ai var14 = null;
+        int[] var15 = null;
+        int[] var16 = null;
+        md discarded$0 = new md();
         this.field_v = true;
         this.field_y = null;
         this.field_Q = true;
@@ -6031,28 +5284,23 @@ final class go extends qe {
         try {
           L0: {
             L1: {
-              stackOut_1_0 = this;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_3_0 = this;
+
               if (!param0) {
-                stackOut_3_0 = this;
-                stackOut_3_1 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 1;
                 break L1;
               }
             }
             ((go) (this)).field_w = stackIn_4_1 != 0;
-            var18 = bp.field_e;
-            var11 = var18;
-            var8 = var11;
-            var3_array = var8;
+            var15 = bp.field_e;
+            var9 = var15;
+            var8 = var9;
+            var3 = var8;
             var4 = 0;
             L2: while (true) {
               if (8 <= var4) {
@@ -6067,26 +5315,26 @@ final class go extends qe {
                   } else {
                     cc.field_d = 0;
                     qa.field_a = new int[this.field_Y.field_A.length][];
-                    var12 = this.field_Y.field_A;
+                    var10 = this.field_Y.field_A;
                     var4 = 0;
                     L4: while (true) {
-                      if (var12.length <= var4) {
+                      if (var10.length <= var4) {
                         fm.a(60, 0);
                         break L3;
                       } else {
                         L5: {
-                          var13 = var12[var4];
-                          if (var13 == null) {
+                          var11 = var10[var4];
+                          if (var11 == null) {
                             break L5;
                           } else {
-                            var19 = new int[4];
-                            var14 = var19;
-                            var6_array = var14;
-                            var6_array[1] = var13.field_n.field_r;
-                            var6_array[0] = var13.field_n.field_m;
-                            var6_array[2] = var13.field_n.field_b;
-                            var6_array[3] = var13.field_n.field_o;
-                            qa.field_a[var13.field_j] = var19;
+                            var16 = new int[4];
+                            var12 = var16;
+                            var6 = var12;
+                            var6[1] = var11.field_n.field_r;
+                            var6[0] = var11.field_n.field_m;
+                            var6[2] = var11.field_n.field_b;
+                            var6[3] = var11.field_n.field_o;
+                            qa.field_a[var11.field_j] = var16;
                             break L5;
                           }
                         }
@@ -6103,12 +5351,12 @@ final class go extends qe {
                   } else {
                     rd.field_F = new en[4];
                     fi.field_r = new en[4];
-                    dupTemp$4 = new e(ck.field_H.a("attack", -53));
-                    rd.field_F[0] = (en) ((Object) dupTemp$4);
-                    fi.field_r[0] = (en) ((Object) dupTemp$4);
-                    dupTemp$5 = new e(ck.field_H.a("defence", -126));
-                    rd.field_F[1] = (en) ((Object) dupTemp$5);
-                    fi.field_r[1] = (en) ((Object) dupTemp$5);
+                    dupTemp$1 = new e(ck.field_H.a("attack", -53));
+                    rd.field_F[0] = (en) ((Object) dupTemp$1);
+                    fi.field_r[0] = (en) ((Object) dupTemp$1);
+                    dupTemp$2 = new e(ck.field_H.a("defence", -126));
+                    rd.field_F[1] = (en) ((Object) dupTemp$2);
+                    fi.field_r[1] = (en) ((Object) dupTemp$2);
                     fi.field_r[2] = (en) ((Object) new e(ck.field_H.a("dodge", -96)));
                     fi.field_r[3] = (en) ((Object) new e(ck.field_H.a("sneak", -48)));
                     rd.field_F[2] = (en) ((Object) new e(ck.field_H.a("snare", -115)));
@@ -6117,31 +5365,31 @@ final class go extends qe {
                   }
                 }
                 var3_int = 0;
-                var15 = this.field_Y.field_A;
+                var13 = this.field_Y.field_A;
+                var4_ref_hb__ = var13;
                 var5 = 0;
                 L7: while (true) {
-                  if (var5 >= var15.length) {
+                  if (var5 >= var13.length) {
                     L8: {
                       if (var3_int != 1) {
                         break L8;
                       } else {
-                        var16 = this.field_Y.field_A;
-                        var9 = 0;
-                        var5 = var9;
+                        var4_ref_hb__ = this.field_Y.field_A;
+                        var5 = 0;
                         L9: while (true) {
-                          if (var9 >= var16.length) {
+                          if (var5 >= var4_ref_hb__.length) {
                             break L8;
                           } else {
                             L10: {
-                              var10 = var16[var9];
-                              if (var10 == null) {
+                              var6_ref = var4_ref_hb__[var5];
+                              if (null == var6_ref) {
                                 break L10;
                               } else {
-                                this.field_Y.field_u = var10;
+                                this.field_Y.field_u = var6_ref;
                                 break L10;
                               }
                             }
-                            var9++;
+                            var5++;
                             continue L9;
                           }
                         }
@@ -6164,8 +5412,8 @@ final class go extends qe {
                           if (!this.field_Y.field_p.a(var4, (byte) 96)) {
                             break L13;
                           } else {
-                            var17 = this.field_Y.field_h[var4];
-                            var17.field_c = new wd(var17.field_h.field_d);
+                            var14 = this.field_Y.field_h[var4];
+                            var14.field_c = new wd(var14.field_h.field_d);
                             break L13;
                           }
                         }
@@ -6175,8 +5423,8 @@ final class go extends qe {
                     }
                   } else {
                     L14: {
-                      var6 = var15[var5];
-                      if (var6 == null) {
+                      var6_ref = var13[var5];
+                      if (null == var6_ref) {
                         break L14;
                       } else {
                         var3_int++;
@@ -6188,7 +5436,7 @@ final class go extends qe {
                   }
                 }
               } else {
-                var18[var4] = 0;
+                var15[var4] = 0;
                 var4++;
                 continue L2;
               }
@@ -6197,28 +5445,20 @@ final class go extends qe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
-            var3 = decompiledCaughtException;
-            stackOut_35_0 = (RuntimeException) (var3);
-            stackOut_35_1 = new StringBuilder().append("go.<init>(").append(param0).append(',');
-            stackIn_37_0 = stackOut_35_0;
-            stackIn_37_1 = stackOut_35_1;
-            stackIn_36_0 = stackOut_35_0;
-            stackIn_36_1 = stackOut_35_1;
+            var3_ref = decompiledCaughtException;
+            stackIn_37_0 = (RuntimeException) (var3_ref);
+
+            stackIn_37_1 = new StringBuilder().append("go.<init>(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "null";
-              stackIn_38_0 = stackOut_37_0;
-              stackIn_38_1 = stackOut_37_1;
-              stackIn_38_2 = stackOut_37_2;
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "null";
               break L15;
             } else {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "{...}";
-              stackIn_38_0 = stackOut_36_0;
-              stackIn_38_1 = stackOut_36_1;
-              stackIn_38_2 = stackOut_36_2;
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "{...}";
               break L15;
             }
           }

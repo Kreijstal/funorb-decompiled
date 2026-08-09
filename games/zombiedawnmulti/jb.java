@@ -35,13 +35,7 @@ final class jb {
     }
 
     private final boolean a(byte param0, int param1, int param2) {
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        int var5 = 0;
+        int var5;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != 98) {
           this.c(123);
@@ -85,7 +79,7 @@ final class jb {
                               if (param1 != 19) {
                                 return false;
                               } else {
-                                discarded$6 = na.a(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
+                                na.a(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
                                 if (var5 == 0) {
                                   break L0;
                                 } else {
@@ -98,7 +92,7 @@ final class jb {
                                 if (param1 != 19) {
                                   return false;
                                 } else {
-                                  discarded$7 = na.a(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
+                                  na.a(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
                                   if (var5 == 0) {
                                     return true;
                                   } else {
@@ -140,7 +134,7 @@ final class jb {
                           } else {
                             if (param1 != 20) {
                               if (param1 == 19) {
-                                discarded$8 = na.a(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
+                                na.a(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
                                 if (var5 == 0) {
                                   return true;
                                 } else {
@@ -153,7 +147,7 @@ final class jb {
                               q.a(13151);
                               if (var5 != 0) {
                                 if (param1 == 19) {
-                                  discarded$9 = na.a(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
+                                  na.a(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
                                   if (var5 == 0) {
                                     return true;
                                   } else {
@@ -236,7 +230,7 @@ final class jb {
                     } else {
                       if (param1 != 20) {
                         if (param1 == 19) {
-                          discarded$10 = na.a(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
+                          na.a(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
                           if (var5 != 0) {
                             return false;
                           } else {
@@ -249,7 +243,7 @@ final class jb {
                         q.a(13151);
                         if (var5 != 0) {
                           if (param1 == 19) {
-                            discarded$11 = na.a(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
+                            na.a(this.field_g, (byte) -50, this.field_f, this.field_i, this.field_h);
                             return false;
                           } else {
                             return false;
@@ -280,10 +274,10 @@ final class jb {
     }
 
     final void a(boolean param0, byte param1) {
-        dm var4 = null;
-        String var5 = null;
-        int var6 = 0;
-        dm var7 = null;
+        dm var4;
+        String var5;
+        int var6;
+        dm var7;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         if (null != this.field_f) {
           if (this.field_i != ie.field_sb) {
@@ -452,7 +446,7 @@ final class jb {
     }
 
     private final boolean b(int param0, int param1, int param2) {
-        int var5 = 0;
+        int var5;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param1 == 19) {
           if (param2 != 0) {
@@ -766,9 +760,9 @@ final class jb {
     }
 
     final void a(byte param0) {
-        String var3 = null;
-        int var4 = 0;
-        jh var5 = null;
+        String var3;
+        int var4;
+        jh var5;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (mh.field_c == null) {
           var5 = on.c(false, this.field_b);
@@ -1034,7 +1028,7 @@ final class jb {
         boolean discarded$13 = false;
         boolean discarded$14 = false;
         boolean discarded$15 = false;
-        int var6 = 0;
+        int var6;
         var6 = this.field_j.e(param3, param2 ^ 1839469049);
         if (-2 != var6) {
           if (param2 != -8) {
@@ -1057,9 +1051,6 @@ final class jb {
     }
 
     final void a(ka param0, int param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -1067,14 +1058,7 @@ final class jb {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             if (param0.field_k) {
@@ -1146,27 +1130,19 @@ final class jb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var3);
-            stackOut_20_1 = new StringBuilder().append("jb.H(");
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var3);
+
+            stackIn_22_1 = new StringBuilder().append("jb.H(");
+
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L8;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L8;
             }
           }
@@ -1180,13 +1156,13 @@ final class jb {
     }
 
     private final boolean a(int param0, int param1, byte param2) {
-        Object var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
+        Object var4;
+        int var5;
+        String var6;
+        String var7;
+        String var8;
+        String var9;
+        String var10;
         var4 = null;
         if ((param1 ^ -1) != -5) {
           if (5 != param1) {
@@ -1261,7 +1237,7 @@ final class jb {
     }
 
     private final String b(int param0) {
-        String var2 = null;
+        String var2;
         if (param0 != -20516) {
           L0: {
             L1: {
@@ -1303,8 +1279,8 @@ final class jb {
     }
 
     final void c(int param0) {
-        String var2 = null;
-        String var3 = null;
+        String var2;
+        String var3;
         if (param0 >= -45) {
           L0: {
             field_c = (cj) null;
@@ -1342,27 +1318,17 @@ final class jb {
     }
 
     final void a(int param0, int[] param1, byte param2) {
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        ml var5 = null;
-        int var6 = 0;
-        String var7 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        ml var5 = null;
+        int var6 = 0;
+        String var7 = null;
         try {
           L0: {
             L1: {
@@ -1383,7 +1349,7 @@ final class jb {
                 if (ge.field_zb == 2) {
                   L3: {
                     var7 = this.b(-20516);
-                    var4_ref = var7;
+                    var4 = var7;
                     var5 = dn.a(this.field_f, false);
                     var6 = hp.a(this.field_f, param2 ^ 1009) ? 1 : 0;
                     if (var5 != null) {
@@ -1470,28 +1436,20 @@ final class jb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
-            var4 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) (var4);
-            stackOut_29_1 = new StringBuilder().append("jb.K(").append(param0).append(',');
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_31_0 = (RuntimeException) (var4_ref);
+
+            stackIn_31_1 = new StringBuilder().append("jb.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L8;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L8;
             }
           }

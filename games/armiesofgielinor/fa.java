@@ -50,11 +50,11 @@ final class fa implements Runnable {
     }
 
     final synchronized boolean b(int param0) {
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        Throwable decompiledCaughtException = null;
         if (this.field_n < 2) {
           L0: {
             if (-1 != (this.field_n ^ -1)) {
@@ -217,81 +217,50 @@ final class fa implements Runnable {
     public final void run() {
         try {
             int var1_int = 0;
-            Exception var1 = null;
-            Object var1_ref = null;
-            Throwable var2 = null;
-            Object var2_ref = null;
+            Object var1 = null;
+            Object var2 = null;
             Throwable var3 = null;
             int var4 = 0;
-            int var5 = 0;
-            int var6 = 0;
             Throwable decompiledCaughtException = null;
             var4 = ArmiesOfGielinor.field_M ? 1 : 0;
             try {
               L0: while (true) {
                 L1: {
-                  L2: {
-                    L3: {
-                      if (this.field_o.field_o.length <= this.field_o.field_q) {
-                        break L3;
-                      } else {
-                        var1_int = this.field_m.read(this.field_o.field_o, this.field_o.field_q, -this.field_o.field_q + this.field_o.field_o.length);
-                        var6 = var1_int;
-                        var5 = 0;
-                        if (var4 != 0) {
-                          if (var5 == var6) {
-                            break L1;
-                          } else {
-                            break L2;
-                          }
-                        } else {
-                          L4: {
-                            if (var5 <= var6) {
-                              break L4;
-                            } else {
-                              if (var4 == 0) {
-                                break L3;
-                              } else {
-                                break L4;
-                              }
-                            }
-                          }
-                          this.field_o.field_q = this.field_o.field_q + var1_int;
-                          if (var4 == 0) {
-                            continue L0;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                    }
-                    if (this.field_o.field_q == this.field_o.field_o.length) {
-                      break L1;
+                  if (this.field_o.field_o.length <= this.field_o.field_q) {
+                    break L1;
+                  } else {
+                    var1_int = this.field_m.read(this.field_o.field_o, this.field_o.field_q, -this.field_o.field_q + this.field_o.field_o.length);
+                    if (0 <= var1_int) {
+                      this.field_o.field_q = this.field_o.field_q + var1_int;
+                      continue L0;
                     } else {
-                      break L2;
+                      break L1;
                     }
                   }
-                  var1_ref = this;
-                  synchronized (var1_ref) {
-                    L5: {
+                }
+                if (this.field_o.field_q == this.field_o.field_o.length) {
+                  throw fa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_o.field_o.length + " " + this.field_b));
+                } else {
+                  var1 = this;
+                  synchronized (var1) {
+                    L2: {
                       this.finalize();
                       this.field_n = 3;
-                      break L5;
+                      break L2;
                     }
                   }
                   return;
                 }
-                throw fa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_o.field_o.length + " " + this.field_b));
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
-              var2_ref = this;
-              synchronized (var2_ref) {
-                L6: {
+              var2 = this;
+              synchronized (var2) {
+                L3: {
                   this.finalize();
                   this.field_n = this.field_n + 1;
-                  break L6;
+                  break L3;
                 }
               }
               return;

@@ -7,11 +7,11 @@ final class ve {
     static sl field_c;
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var7 = TorChallenge.field_F ? 1 : 0;
         if (param0 <= 49) {
           ve.a(34, 8, 89);

@@ -12,16 +12,12 @@ final class bo extends ok {
     static String[] field_Gb;
 
     final static void a(int param0, gn param1, int param2, int param3) {
-        int discarded$2 = 0;
         int var4_int = 0;
-        RuntimeException var4 = null;
         String[] var5 = null;
         String[] var6 = null;
         int var7 = 0;
         String var8 = null;
         int var9 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -29,14 +25,7 @@ final class bo extends ok {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException var4 = null;
         var9 = DungeonAssault.field_K;
         try {
           L0: {
@@ -47,7 +36,7 @@ final class bo extends ok {
               L1: {
                 var4_int = param2;
                 if (null != param1.field_b) {
-                  discarded$2 = ne.field_c.a(param1.field_b, param3 + 3, var4_int, 194, 0, 0, -1, 1, 0, ne.field_c.field_H);
+                  ne.field_c.a(param1.field_b, param3 + 3, var4_int, 194, 0, 0, -1, 1, 0, ne.field_c.field_H);
                   var4_int = var4_int + param1.field_g;
                   var4_int += 7;
                   gf.b(param3, var4_int, 200, 0);
@@ -79,27 +68,19 @@ final class bo extends ok {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var4);
-            stackOut_11_1 = new StringBuilder().append("bo.D(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var4);
+
+            stackIn_13_1 = new StringBuilder().append("bo.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -118,72 +99,70 @@ final class bo extends ok {
 
     final static void h(int param0) {
         int var1 = 0;
-        if (ec.field_k == null) {
-          id.field_i = mk.a(3, (byte) 34);
-          mi.field_e = mk.a(4, (byte) 34);
-          hj.field_Z = bg.a(true, 9, false, false, true);
-          np.field_A = mk.a(10, (byte) 34);
-          kf.field_p = bg.a(true, 11, false, false, true);
-          sb.field_a = bg.a(true, 12, false, false, true);
-          ia.field_W = mk.a(13, (byte) 34);
-          ll.field_r = mk.a(14, (byte) 34);
-          tl.field_k = mk.a(15, (byte) 34);
-          bl.field_t = mk.a(16, (byte) 34);
-          be.field_s = new wk(75);
-          var1 = -17 / ((3 - param0) / 44);
-          be.field_s.a(sa.field_w, "basic", qk.field_c, uc.field_I, -108);
-          be.field_s.a(sa.field_w, "lobby", qk.field_c, uc.field_I, -110);
-          be.field_s.a(sa.field_w, "lobby", qk.field_c, gh.field_c, -83);
-          be.field_s.a(qk.field_c, 237, sa.field_w, hj.field_Z);
-          be.field_s.a(qk.field_c, 237, sa.field_w, sb.field_a);
-          be.field_s.a(uc.field_L, 237, nb.field_b, kf.field_p);
-          be.field_s.a(mp.field_c, "roman20", rf.field_L, uc.field_I, -109);
-          be.field_s.a(mp.field_c, "roman20", rf.field_L, gh.field_c, -101);
-          be.field_s.a(mp.field_c, "roman12", rf.field_L, uc.field_I, -93);
-          be.field_s.a(mp.field_c, "roman12", rf.field_L, gh.field_c, -128);
-          be.field_s.a(rf.field_L, 237, mp.field_c, np.field_A);
-          be.field_s.a(wo.field_h, 237, rl.field_k, ia.field_W);
-          be.field_s.a(wo.field_h, 237, rl.field_k, ll.field_r);
-          be.field_s.a(id.field_f, 237, dg.field_P, tl.field_k);
-          be.field_s.a(id.field_f, 237, dg.field_P, bl.field_t);
-          be.field_s.a(fg.field_m, 237, kj.field_m, id.field_i);
-          be.field_s.a(fg.field_m, 237, kj.field_m, mi.field_e);
-          return;
-        } else {
-          ec.a(ec.field_k, false);
-          ec.field_k = null;
-          nf.d(0);
-          id.field_i = mk.a(3, (byte) 34);
-          mi.field_e = mk.a(4, (byte) 34);
-          hj.field_Z = bg.a(true, 9, false, false, true);
-          np.field_A = mk.a(10, (byte) 34);
-          kf.field_p = bg.a(true, 11, false, false, true);
-          sb.field_a = bg.a(true, 12, false, false, true);
-          ia.field_W = mk.a(13, (byte) 34);
-          ll.field_r = mk.a(14, (byte) 34);
-          tl.field_k = mk.a(15, (byte) 34);
-          bl.field_t = mk.a(16, (byte) 34);
-          be.field_s = new wk(75);
-          var1 = -17 / ((3 - param0) / 44);
-          be.field_s.a(sa.field_w, "basic", qk.field_c, uc.field_I, -108);
-          be.field_s.a(sa.field_w, "lobby", qk.field_c, uc.field_I, -110);
-          be.field_s.a(sa.field_w, "lobby", qk.field_c, gh.field_c, -83);
-          be.field_s.a(qk.field_c, 237, sa.field_w, hj.field_Z);
-          be.field_s.a(qk.field_c, 237, sa.field_w, sb.field_a);
-          be.field_s.a(uc.field_L, 237, nb.field_b, kf.field_p);
-          be.field_s.a(mp.field_c, "roman20", rf.field_L, uc.field_I, -109);
-          be.field_s.a(mp.field_c, "roman20", rf.field_L, gh.field_c, -101);
-          be.field_s.a(mp.field_c, "roman12", rf.field_L, uc.field_I, -93);
-          be.field_s.a(mp.field_c, "roman12", rf.field_L, gh.field_c, -128);
-          be.field_s.a(rf.field_L, 237, mp.field_c, np.field_A);
-          be.field_s.a(wo.field_h, 237, rl.field_k, ia.field_W);
-          be.field_s.a(wo.field_h, 237, rl.field_k, ll.field_r);
-          be.field_s.a(id.field_f, 237, dg.field_P, tl.field_k);
-          be.field_s.a(id.field_f, 237, dg.field_P, bl.field_t);
-          be.field_s.a(fg.field_m, 237, kj.field_m, id.field_i);
-          be.field_s.a(fg.field_m, 237, kj.field_m, mi.field_e);
-          return;
+        if (ec.field_k != null) {
+            ec.a(ec.field_k, false);
+            ec.field_k = null;
+            nf.d(0);
+            id.field_i = mk.a(3, (byte) 34);
+            mi.field_e = mk.a(4, (byte) 34);
+            hj.field_Z = bg.a(true, 9, false, false, true);
+            np.field_A = mk.a(10, (byte) 34);
+            kf.field_p = bg.a(true, 11, false, false, true);
+            sb.field_a = bg.a(true, 12, false, false, true);
+            ia.field_W = mk.a(13, (byte) 34);
+            ll.field_r = mk.a(14, (byte) 34);
+            tl.field_k = mk.a(15, (byte) 34);
+            bl.field_t = mk.a(16, (byte) 34);
+            be.field_s = new wk(75);
+            var1 = -17 / ((3 - param0) / 44);
+            be.field_s.a(sa.field_w, "basic", qk.field_c, uc.field_I, -108);
+            be.field_s.a(sa.field_w, "lobby", qk.field_c, uc.field_I, -110);
+            be.field_s.a(sa.field_w, "lobby", qk.field_c, gh.field_c, -83);
+            be.field_s.a(qk.field_c, 237, sa.field_w, hj.field_Z);
+            be.field_s.a(qk.field_c, 237, sa.field_w, sb.field_a);
+            be.field_s.a(uc.field_L, 237, nb.field_b, kf.field_p);
+            be.field_s.a(mp.field_c, "roman20", rf.field_L, uc.field_I, -109);
+            be.field_s.a(mp.field_c, "roman20", rf.field_L, gh.field_c, -101);
+            be.field_s.a(mp.field_c, "roman12", rf.field_L, uc.field_I, -93);
+            be.field_s.a(mp.field_c, "roman12", rf.field_L, gh.field_c, -128);
+            be.field_s.a(rf.field_L, 237, mp.field_c, np.field_A);
+            be.field_s.a(wo.field_h, 237, rl.field_k, ia.field_W);
+            be.field_s.a(wo.field_h, 237, rl.field_k, ll.field_r);
+            be.field_s.a(id.field_f, 237, dg.field_P, tl.field_k);
+            be.field_s.a(id.field_f, 237, dg.field_P, bl.field_t);
+            be.field_s.a(fg.field_m, 237, kj.field_m, id.field_i);
+            be.field_s.a(fg.field_m, 237, kj.field_m, mi.field_e);
+            return;
         }
+        id.field_i = mk.a(3, (byte) 34);
+        mi.field_e = mk.a(4, (byte) 34);
+        hj.field_Z = bg.a(true, 9, false, false, true);
+        np.field_A = mk.a(10, (byte) 34);
+        kf.field_p = bg.a(true, 11, false, false, true);
+        sb.field_a = bg.a(true, 12, false, false, true);
+        ia.field_W = mk.a(13, (byte) 34);
+        ll.field_r = mk.a(14, (byte) 34);
+        tl.field_k = mk.a(15, (byte) 34);
+        bl.field_t = mk.a(16, (byte) 34);
+        be.field_s = new wk(75);
+        var1 = -17 / ((3 - param0) / 44);
+        be.field_s.a(sa.field_w, "basic", qk.field_c, uc.field_I, -108);
+        be.field_s.a(sa.field_w, "lobby", qk.field_c, uc.field_I, -110);
+        be.field_s.a(sa.field_w, "lobby", qk.field_c, gh.field_c, -83);
+        be.field_s.a(qk.field_c, 237, sa.field_w, hj.field_Z);
+        be.field_s.a(qk.field_c, 237, sa.field_w, sb.field_a);
+        be.field_s.a(uc.field_L, 237, nb.field_b, kf.field_p);
+        be.field_s.a(mp.field_c, "roman20", rf.field_L, uc.field_I, -109);
+        be.field_s.a(mp.field_c, "roman20", rf.field_L, gh.field_c, -101);
+        be.field_s.a(mp.field_c, "roman12", rf.field_L, uc.field_I, -93);
+        be.field_s.a(mp.field_c, "roman12", rf.field_L, gh.field_c, -128);
+        be.field_s.a(rf.field_L, 237, mp.field_c, np.field_A);
+        be.field_s.a(wo.field_h, 237, rl.field_k, ia.field_W);
+        be.field_s.a(wo.field_h, 237, rl.field_k, ll.field_r);
+        be.field_s.a(id.field_f, 237, dg.field_P, tl.field_k);
+        be.field_s.a(id.field_f, 237, dg.field_P, bl.field_t);
+        be.field_s.a(fg.field_m, 237, kj.field_m, id.field_i);
+        be.field_s.a(fg.field_m, 237, kj.field_m, mi.field_e);
     }
 
     public static void c(byte param0) {

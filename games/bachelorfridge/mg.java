@@ -40,7 +40,7 @@ final class mg extends at {
     }
 
     final static be a(byte param0, int param1) {
-        be var2 = null;
+        be var2;
         if (param0 <= -114) {
           if (0 == (param1 ^ -1)) {
             return null;

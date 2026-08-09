@@ -18,7 +18,7 @@ abstract class ib {
     static volatile int field_g;
 
     void a(int param0, int param1, byte param2, int param3, int param4, boolean param5) {
-        int var8 = 0;
+        int var8;
         var8 = stellarshard.field_B;
         if (param2 == 8) {
           if (!param5) {
@@ -67,7 +67,7 @@ abstract class ib {
     }
 
     int a(byte param0, int param1, int param2) {
-        int var4 = 0;
+        int var4;
         if (param2 >= this.field_e) {
           if (param2 < this.field_i) {
             if (param1 >= this.field_b) {
@@ -116,8 +116,8 @@ abstract class ib {
     }
 
     final void a(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = stellarshard.field_B;
         if (-1 == (gh.field_c ^ -1)) {
           L0: {

@@ -22,10 +22,10 @@ final class oa {
     private int field_o;
 
     private final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = CrazyCrystals.field_B;
         if (param0 != 2) {
           this.a(-86);
@@ -440,8 +440,8 @@ final class oa {
     }
 
     final void a(boolean param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         if (ph.field_E != null) {
           return;
         } else {
@@ -490,9 +490,9 @@ final class oa {
                   }
                 }
               } else {
-                fieldTemp$2 = this.field_i - 1;
+                fieldTemp$0 = this.field_i - 1;
                 this.field_i = this.field_i - 1;
-                if (-1 <= (fieldTemp$2 ^ -1)) {
+                if (-1 <= (fieldTemp$0 ^ -1)) {
                   this.field_i = this.field_o;
                   if (jk.field_f < this.field_l) {
                     this.field_c = false;
@@ -533,9 +533,9 @@ final class oa {
                   return;
                 }
               } else {
-                fieldTemp$3 = this.field_i - 1;
+                fieldTemp$1 = this.field_i - 1;
                 this.field_i = this.field_i - 1;
-                if (-1 <= (fieldTemp$3 ^ -1)) {
+                if (-1 <= (fieldTemp$1 ^ -1)) {
                   this.field_i = this.field_o;
                   if (jk.field_f < this.field_l) {
                     this.field_c = false;

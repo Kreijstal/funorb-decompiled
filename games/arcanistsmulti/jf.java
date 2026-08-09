@@ -20,22 +20,12 @@ final class jf implements Iterator {
         RuntimeException var2 = null;
         cg var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -68,27 +58,19 @@ final class jf implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2);
-            stackOut_9_1 = new StringBuilder().append("jf.B(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var2);
+
+            stackIn_11_1 = new StringBuilder().append("jf.B(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -97,18 +79,18 @@ final class jf implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        int var2 = 0;
-        Object var3 = null;
-        pg var3_ref = null;
-        pg var4 = null;
+        int fieldTemp$1 = 0;
+        int var2;
+        Object var3;
+        pg var3_ref;
+        pg var4;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         if (this.field_c.field_c[-1 + this.field_b] == this.field_g) {
           L0: while (true) {
             if (this.field_c.field_d > this.field_b) {
-              fieldTemp$2 = this.field_b;
+              fieldTemp$1 = this.field_b;
               this.field_b = this.field_b + 1;
-              var3_ref = this.field_c.field_c[fieldTemp$2].field_b;
+              var3_ref = this.field_c.field_c[fieldTemp$1].field_b;
               if (this.field_c.field_c[-1 + this.field_b] == var3_ref) {
                 continue L0;
               } else {
@@ -149,7 +131,7 @@ final class jf implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         if (this.field_c.field_c[this.field_b + -1] == this.field_g) {
           L0: while (true) {

@@ -10,16 +10,9 @@ final class jk extends vg {
     static jea field_g;
 
     final static vna a(byte param0) {
-        vna discarded$1 = null;
-        vna var1 = null;
-        L0: {
-          var1 = new vna();
-          if (param0 == 122) {
-            break L0;
-          } else {
-            discarded$1 = jk.a((byte) 64);
-            break L0;
-          }
+        vna var1 = new vna();
+        if (param0 != 122) {
+            jk.a((byte) 64);
         }
         var1.b((byte) -117, new ak("load", new Class[]{String.class}, "Run a test level from the freelevels directory."));
         var1.b((byte) -47, new dia("hello", new Class[]{}, "Be friendly."));
@@ -39,25 +32,19 @@ final class jk extends vg {
         field_i = null;
         if (param0 <= 11) {
             field_h = (int[]) null;
-            field_g = null;
-            return;
         }
         field_g = null;
     }
 
     final static int a(byte param0, BitSet param1, boolean param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         g[] var5 = null;
         int var6 = 0;
         g var7 = null;
         int var8 = 0;
         int stackIn_3_0 = 0;
-        boolean stackIn_6_0 = false;
         int stackIn_16_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -65,17 +52,7 @@ final class jk extends vg {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_5_0 = false;
-        int stackOut_15_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        RuntimeException var3 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -86,97 +63,72 @@ final class jk extends vg {
             if (param0 == 22) {
               L1: while (true) {
                 L2: {
-                  L3: {
-                    if (var6 >= var5.length) {
-                      break L3;
-                    } else {
+                  if (var6 >= var5.length) {
+                    break L2;
+                  } else {
+                    L3: {
                       var7 = var5[var6];
-                      stackOut_5_0 = param2;
-                      stackIn_16_0 = stackOut_5_0 ? 1 : 0;
-                      stackIn_6_0 = stackOut_5_0;
-                      if (var8 != 0) {
-                        break L2;
+                      if (param2) {
+                        break L3;
                       } else {
-                        L4: {
-                          L5: {
-                            if (stackIn_6_0) {
-                              break L5;
-                            } else {
-                              if (var7.field_d) {
-                                break L4;
-                              } else {
-                                break L5;
-                              }
-                            }
-                          }
-                          if (param1.get(var7.field_a)) {
-                            break L4;
-                          } else {
-                            L6: {
-                              var3_int++;
-                              if (var4 >= var7.field_a) {
-                                break L6;
-                              } else {
-                                var4 = var7.field_a;
-                                break L6;
-                              }
-                            }
-                            if (10 <= var3_int) {
-                              break L3;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
-                        var6++;
-                        if (var8 == 0) {
-                          continue L1;
-                        } else {
+                        if (!var7.field_d) {
                           break L3;
+                        } else {
+                          var6++;
+                          continue L1;
                         }
                       }
                     }
+                    if (!param1.get(var7.field_a)) {
+                      L4: {
+                        var3_int++;
+                        if (var4 >= var7.field_a) {
+                          break L4;
+                        } else {
+                          var4 = var7.field_a;
+                          break L4;
+                        }
+                      }
+                      if (10 <= var3_int) {
+                        break L2;
+                      } else {
+                        var6++;
+                        continue L1;
+                      }
+                    } else {
+                      var6++;
+                      continue L1;
+                    }
                   }
-                  stackOut_15_0 = var4;
-                  stackIn_16_0 = stackOut_15_0;
-                  break L2;
                 }
+                stackIn_16_0 = var4;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = -122;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = -122;
               decompiledRegionSelector0 = 0;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L5: {
             var3 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var3);
-            stackOut_17_1 = new StringBuilder().append("jk.D(").append(param0).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var3);
+
+            stackIn_19_1 = new StringBuilder().append("jk.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
-              break L7;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
+              break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
-              break L7;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
+              break L5;
             }
           }
           throw tba.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param2 + ')');
@@ -189,20 +141,12 @@ final class jk extends vg {
     }
 
     final static void a(int param0, int param1) {
-        int discarded$2 = 0;
-        int var2 = 0;
-        BitSet var3 = null;
         if (param1 != 0) {
-          var3 = (BitSet) null;
-          discarded$2 = jk.a((byte) 69, (BitSet) null, true);
-          var2 = param0;
-          lu.a(var2, al.field_h, -1, var2, sua.field_J);
-          return;
-        } else {
-          var2 = param0;
-          lu.a(var2, al.field_h, -1, var2, sua.field_J);
-          return;
+            BitSet var3 = (BitSet) null;
+            jk.a((byte) 69, (BitSet) null, true);
         }
+        int var2 = param0;
+        lu.a(var2, al.field_h, -1, var2, sua.field_J);
     }
 
     jk(byte[] param0) {

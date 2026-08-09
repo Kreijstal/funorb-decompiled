@@ -18,21 +18,21 @@ final class si extends qk {
     }
 
     final void g(int param0) {
-        int fieldTemp$14 = 0;
-        int fieldTemp$15 = 0;
-        int fieldTemp$16 = 0;
-        int fieldTemp$17 = 0;
-        int fieldTemp$18 = 0;
-        int fieldTemp$19 = 0;
-        int fieldTemp$20 = 0;
-        int fieldTemp$21 = 0;
-        int fieldTemp$22 = 0;
-        int fieldTemp$23 = 0;
-        int fieldTemp$24 = 0;
-        int fieldTemp$25 = 0;
-        int fieldTemp$26 = 0;
-        int fieldTemp$27 = 0;
-        int var3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int var3;
         var3 = ZombieDawn.field_J;
         super.g(109);
         if (-1 <= (this.field_Ab ^ -1)) {
@@ -42,9 +42,9 @@ final class si extends qk {
             field_Rb = 94;
             if (-1 == (this.field_F ^ -1)) {
               if (this.field_Ob == null) {
-                fieldTemp$14 = this.field_Pb;
+                fieldTemp$0 = this.field_Pb;
                 this.field_Pb = this.field_Pb + 1;
-                if (5 <= fieldTemp$14) {
+                if (5 <= fieldTemp$0) {
                   this.z(124);
                   this.field_Pb = 0;
                   return;
@@ -64,9 +64,9 @@ final class si extends qk {
                   return;
                 }
               } else {
-                fieldTemp$15 = this.field_Pb;
+                fieldTemp$1 = this.field_Pb;
                 this.field_Pb = this.field_Pb + 1;
-                if (fieldTemp$15 >= 5) {
+                if (fieldTemp$1 >= 5) {
                   this.o((byte) 71);
                   this.field_Pb = 0;
                   if (this.field_U != null) {
@@ -78,9 +78,9 @@ final class si extends qk {
                           break L0;
                         } else {
                           this.field_U = dc.a((byte) 18, 85);
-                          fieldTemp$16 = this.field_Tb;
+                          fieldTemp$2 = this.field_Tb;
                           this.field_Tb = this.field_Tb + 1;
-                          if ((fieldTemp$16 ^ -1) <= -5) {
+                          if ((fieldTemp$2 ^ -1) <= -5) {
                             this.l((byte) 52);
                             this.field_Tb = 0;
                             return;
@@ -90,9 +90,9 @@ final class si extends qk {
                         }
                       }
                     }
-                    fieldTemp$17 = this.field_Tb;
+                    fieldTemp$3 = this.field_Tb;
                     this.field_Tb = this.field_Tb + 1;
-                    if ((fieldTemp$17 ^ -1) <= -5) {
+                    if ((fieldTemp$3 ^ -1) <= -5) {
                       this.l((byte) 52);
                       this.field_Tb = 0;
                       return;
@@ -101,9 +101,9 @@ final class si extends qk {
                     }
                   } else {
                     if (0L != tp.field_p % 3L) {
-                      fieldTemp$18 = this.field_Tb;
+                      fieldTemp$4 = this.field_Tb;
                       this.field_Tb = this.field_Tb + 1;
-                      if ((fieldTemp$18 ^ -1) <= -5) {
+                      if ((fieldTemp$4 ^ -1) <= -5) {
                         this.l((byte) 52);
                         this.field_Tb = 0;
                         return;
@@ -112,9 +112,9 @@ final class si extends qk {
                       }
                     } else {
                       this.field_U = dc.a((byte) 18, 85);
-                      fieldTemp$19 = this.field_Tb;
+                      fieldTemp$5 = this.field_Tb;
                       this.field_Tb = this.field_Tb + 1;
-                      if ((fieldTemp$19 ^ -1) <= -5) {
+                      if ((fieldTemp$5 ^ -1) <= -5) {
                         this.l((byte) 52);
                         this.field_Tb = 0;
                         return;
@@ -124,9 +124,9 @@ final class si extends qk {
                     }
                   }
                 } else {
-                  fieldTemp$20 = this.field_Tb;
+                  fieldTemp$6 = this.field_Tb;
                   this.field_Tb = this.field_Tb + 1;
-                  if ((fieldTemp$20 ^ -1) > -5) {
+                  if ((fieldTemp$6 ^ -1) > -5) {
                     return;
                   } else {
                     this.l((byte) 52);
@@ -139,9 +139,9 @@ final class si extends qk {
           } else {
             if (-1 == (this.field_F ^ -1)) {
               if (this.field_Ob == null) {
-                fieldTemp$21 = this.field_Pb;
+                fieldTemp$7 = this.field_Pb;
                 this.field_Pb = this.field_Pb + 1;
-                if (5 > fieldTemp$21) {
+                if (5 > fieldTemp$7) {
                   return;
                 } else {
                   this.z(124);
@@ -161,17 +161,17 @@ final class si extends qk {
                   return;
                 }
               } else {
-                fieldTemp$22 = this.field_Pb;
+                fieldTemp$8 = this.field_Pb;
                 this.field_Pb = this.field_Pb + 1;
-                if (fieldTemp$22 >= 5) {
+                if (fieldTemp$8 >= 5) {
                   this.o((byte) 71);
                   this.field_Pb = 0;
                   if (this.field_U == null) {
                     if (0L == tp.field_p % 3L) {
                       this.field_U = dc.a((byte) 18, 85);
-                      fieldTemp$23 = this.field_Tb;
+                      fieldTemp$9 = this.field_Tb;
                       this.field_Tb = this.field_Tb + 1;
-                      if ((fieldTemp$23 ^ -1) > -5) {
+                      if ((fieldTemp$9 ^ -1) > -5) {
                         return;
                       } else {
                         this.l((byte) 52);
@@ -179,9 +179,9 @@ final class si extends qk {
                         return;
                       }
                     } else {
-                      fieldTemp$24 = this.field_Tb;
+                      fieldTemp$10 = this.field_Tb;
                       this.field_Tb = this.field_Tb + 1;
-                      if ((fieldTemp$24 ^ -1) > -5) {
+                      if ((fieldTemp$10 ^ -1) > -5) {
                         return;
                       } else {
                         this.l((byte) 52);
@@ -199,9 +199,9 @@ final class si extends qk {
                           break L1;
                         }
                       }
-                      fieldTemp$25 = this.field_Tb;
+                      fieldTemp$11 = this.field_Tb;
                       this.field_Tb = this.field_Tb + 1;
-                      if ((fieldTemp$25 ^ -1) > -5) {
+                      if ((fieldTemp$11 ^ -1) > -5) {
                         return;
                       } else {
                         this.l((byte) 52);
@@ -209,9 +209,9 @@ final class si extends qk {
                         return;
                       }
                     } else {
-                      fieldTemp$26 = this.field_Tb;
+                      fieldTemp$12 = this.field_Tb;
                       this.field_Tb = this.field_Tb + 1;
-                      if ((fieldTemp$26 ^ -1) > -5) {
+                      if ((fieldTemp$12 ^ -1) > -5) {
                         return;
                       } else {
                         this.l((byte) 52);
@@ -221,9 +221,9 @@ final class si extends qk {
                     }
                   }
                 } else {
-                  fieldTemp$27 = this.field_Tb;
+                  fieldTemp$13 = this.field_Tb;
                   this.field_Tb = this.field_Tb + 1;
-                  if ((fieldTemp$27 ^ -1) > -5) {
+                  if ((fieldTemp$13 ^ -1) > -5) {
                     return;
                   } else {
                     this.l((byte) 52);
@@ -238,33 +238,27 @@ final class si extends qk {
     }
 
     private final void z(int param0) {
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        int discarded$8 = 0;
-        int discarded$9 = 0;
-        vn discarded$10 = null;
-        vn discarded$11 = null;
-        Object var2 = null;
-        Object var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        Object var6 = null;
-        kd var6_ref = null;
-        int var8 = 0;
-        dj var9 = null;
-        qh var10 = null;
-        qh var11 = null;
-        qh var18 = null;
+        Object var2;
+        Object var3;
+        int var4;
+        int var5;
+        Object var6;
+        kd var6_ref;
+        int var8;
+        dj var9;
+        qh var10;
+        qh var11;
+        qh var18;
         L0: {
           var6 = null;
           var8 = ZombieDawn.field_J;
-          discarded$6 = this.a(true);
-          discarded$7 = this.f(237239984);
+          this.a(true);
+          this.f(237239984);
           if (null == this.field_yb) {
             break L0;
           } else {
-            discarded$8 = this.field_yb.a(true);
-            discarded$9 = this.field_yb.f(237239984);
+            this.field_yb.a(true);
+            this.field_yb.f(237239984);
             this.field_yb = null;
             break L0;
           }
@@ -367,7 +361,7 @@ final class si extends qk {
             }
           } else {
             var9 = (dj) null;
-            discarded$10 = si.a(50, 105, (dj) null, -55);
+            si.a(50, 105, (dj) null, -55);
             var3 = null;
             var4 = -1;
             var5 = -1;
@@ -474,7 +468,7 @@ final class si extends qk {
               break L17;
             } else {
               var9 = (dj) null;
-              discarded$11 = si.a(50, 105, (dj) null, -55);
+              si.a(50, 105, (dj) null, -55);
               var3 = null;
               var4 = -1;
               var5 = -1;
@@ -563,23 +557,13 @@ final class si extends qk {
 
     private final void a(int param0, kd param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -606,27 +590,19 @@ final class si extends qk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("si.NA(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("si.NA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L3;
             }
           }
@@ -635,27 +611,17 @@ final class si extends qk {
     }
 
     final void a(wk param0, int param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
         try {
           L0: {
             L1: {
@@ -688,27 +654,19 @@ final class si extends qk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("si.L(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("si.L(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -717,32 +675,21 @@ final class si extends qk {
     }
 
     final static vn a(int param0, int param1, dj param2, int param3) {
-        vn discarded$2 = null;
         RuntimeException var4 = null;
         dj var5 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             if (param3 == 48) {
               break L0;
             } else {
               var5 = (dj) null;
-              discarded$2 = si.a(-109, -74, (dj) null, 70);
+              si.a(-109, -74, (dj) null, 70);
               break L0;
             }
           }
@@ -755,27 +702,19 @@ final class si extends qk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var4);
-            stackOut_6_1 = new StringBuilder().append("si.TB(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var4);
+
+            stackIn_8_1 = new StringBuilder().append("si.TB(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L1;
             }
           }
@@ -838,7 +777,7 @@ final class si extends qk {
     }
 
     final void l(byte param0) {
-        int var3 = 0;
+        int var3;
         var3 = ZombieDawn.field_J;
         if (this.field_Ab < 0) {
           super.l((byte) 52);

@@ -10,9 +10,16 @@ final class qf extends pi {
     static String field_q;
 
     final static void a(int param0, int param1, ln param2, int param3, int param4, int param5) {
-        int incrementValue$1 = 0;
-        RuntimeException var6 = null;
+        int incrementValue$0 = 0;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
+        String stackIn_36_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -27,23 +34,6 @@ final class qf extends pi {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        String stackIn_36_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
         var20 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -131,9 +121,9 @@ final class qf extends pi {
                             var16 = 256 - var15;
                             if (var15 >= 0) {
                               L9: {
-                                incrementValue$1 = var9;
+                                incrementValue$0 = var9;
                                 var9++;
-                                var17 = param2.field_n[255 & param2.field_m[incrementValue$1]];
+                                var17 = param2.field_n[255 & param2.field_m[incrementValue$0]];
                                 if (0 != var17) {
                                   if (var15 > 255) {
                                     eh.field_f[var8] = var17;
@@ -172,27 +162,19 @@ final class qf extends pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var6 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) (var6);
-            stackOut_33_1 = new StringBuilder().append("qf.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_35_0 = stackOut_33_0;
-            stackIn_35_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+            stackIn_35_0 = (RuntimeException) (var6);
+
+            stackIn_35_1 = new StringBuilder().append("qf.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "null";
               break L10;
             } else {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "{...}";
-              stackIn_36_0 = stackOut_34_0;
-              stackIn_36_1 = stackOut_34_1;
-              stackIn_36_2 = stackOut_34_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "{...}";
               break L10;
             }
           }

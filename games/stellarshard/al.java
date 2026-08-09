@@ -11,9 +11,9 @@ final class al {
     static String field_e;
 
     final int b(byte param0) {
-        int var2 = 0;
-        ah var3 = null;
-        int var4 = 0;
+        int var2;
+        ah var3;
+        int var4;
         var4 = stellarshard.field_B;
         var2 = 0;
         var3 = this.field_d.field_m;
@@ -42,7 +42,7 @@ final class al {
     }
 
     final ah a(byte param0) {
-        ah var2 = null;
+        ah var2;
         var2 = this.field_d.field_m;
         if (param0 >= 57) {
           if (var2 == this.field_d) {
@@ -63,7 +63,6 @@ final class al {
     }
 
     final void a(byte param0, ah param1) {
-        ah discarded$0 = null;
         try {
             if (param1.field_l != null) {
                 param1.c((byte) 36);
@@ -71,7 +70,7 @@ final class al {
             param1.field_l = this.field_d.field_l;
             param1.field_m = this.field_d;
             if (param0 < 122) {
-                discarded$0 = this.a(-109);
+                this.a(-109);
             }
             param1.field_l.field_m = param1;
             param1.field_m.field_l = param1;
@@ -90,7 +89,7 @@ final class al {
     }
 
     final ah a(int param0) {
-        ah var2 = null;
+        ah var2;
         if (param0 <= -94) {
           var2 = this.field_g;
           if (var2 == this.field_d) {
@@ -106,21 +105,21 @@ final class al {
     }
 
     final static void b(boolean param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = stellarshard.field_B;
         try {
           L0: {
@@ -140,30 +139,30 @@ final class al {
               if (var3 <= var2) {
                 break L0;
               } else {
-                incrementValue$40 = var2;
+                incrementValue$16 = var2;
                 var2++;
-                var5[incrementValue$40] = 0;
-                incrementValue$41 = var2;
+                var5[incrementValue$16] = 0;
+                incrementValue$17 = var2;
                 var2++;
-                var5[incrementValue$41] = 0;
-                incrementValue$42 = var2;
+                var5[incrementValue$17] = 0;
+                incrementValue$18 = var2;
                 var2++;
-                var5[incrementValue$42] = 0;
-                incrementValue$43 = var2;
+                var5[incrementValue$18] = 0;
+                incrementValue$19 = var2;
                 var2++;
-                var5[incrementValue$43] = 0;
-                incrementValue$44 = var2;
+                var5[incrementValue$19] = 0;
+                incrementValue$20 = var2;
                 var2++;
-                var5[incrementValue$44] = 0;
-                incrementValue$45 = var2;
+                var5[incrementValue$20] = 0;
+                incrementValue$21 = var2;
                 var2++;
-                var5[incrementValue$45] = 0;
-                incrementValue$46 = var2;
+                var5[incrementValue$21] = 0;
+                incrementValue$22 = var2;
                 var2++;
-                var5[incrementValue$46] = 0;
-                incrementValue$47 = var2;
+                var5[incrementValue$22] = 0;
+                incrementValue$23 = var2;
                 var2++;
-                var5[incrementValue$47] = 0;
+                var5[incrementValue$23] = 0;
                 continue L2;
               }
             }
@@ -176,7 +175,7 @@ final class al {
     }
 
     final ah a(boolean param0) {
-        ah var2 = null;
+        ah var2;
         var2 = this.field_d.field_m;
         if (var2 != this.field_d) {
           if (param0) {

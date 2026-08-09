@@ -10,8 +10,21 @@ class bn extends vi {
     static wq field_r;
 
     boolean a(no param0, byte param1) {
-        RuntimeException var3 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_58_0 = 0;
+        int stackIn_62_0 = 0;
+        int stackIn_64_0 = 0;
+        RuntimeException stackIn_67_0 = null;
+        StringBuilder stackIn_67_1 = null;
+        RuntimeException stackIn_68_0 = null;
+        StringBuilder stackIn_68_1 = null;
+        String stackIn_68_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -43,35 +56,6 @@ class bn extends vi {
         int var32 = 0;
         int var33 = 0;
         int var34 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_58_0 = 0;
-        int stackIn_62_0 = 0;
-        int stackIn_64_0 = 0;
-        RuntimeException stackIn_66_0 = null;
-        StringBuilder stackIn_66_1 = null;
-        RuntimeException stackIn_67_0 = null;
-        StringBuilder stackIn_67_1 = null;
-        RuntimeException stackIn_68_0 = null;
-        StringBuilder stackIn_68_1 = null;
-        String stackIn_68_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_65_0 = null;
-        StringBuilder stackOut_65_1 = null;
-        RuntimeException stackOut_67_0 = null;
-        StringBuilder stackOut_67_1 = null;
-        String stackOut_67_2 = null;
-        RuntimeException stackOut_66_0 = null;
-        StringBuilder stackOut_66_1 = null;
-        String stackOut_66_2 = null;
         var34 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -98,8 +82,7 @@ class bn extends vi {
                 }
               }
               if (var6 >= (this.field_u >> 1822499265) + var3_int) {
-                stackOut_10_0 = 0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -286,8 +269,7 @@ class bn extends vi {
                   var33 = -(var32 * var18 + var31 * var24) >> -2057217048;
                   if (-1 <= (var33 ^ -1)) {
                     if (var10 > ea.field_b) {
-                      stackOut_61_0 = 1;
-                      stackIn_62_0 = stackOut_61_0;
+                      stackIn_62_0 = 1;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
@@ -298,27 +280,23 @@ class bn extends vi {
                       dj.field_c = (bn) (this);
                       sh.field_a = var15;
                       mm.field_Tb = -param0.field_u + var14;
-                      stackOut_63_0 = 1;
-                      stackIn_64_0 = stackOut_63_0;
+                      stackIn_64_0 = 1;
                       decompiledRegionSelector0 = 5;
                       break L0;
                     }
                   } else {
-                    stackOut_57_0 = 0;
-                    stackIn_58_0 = stackOut_57_0;
+                    stackIn_58_0 = 0;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
-                  stackOut_21_0 = 0;
-                  stackIn_22_0 = stackOut_21_0;
+                  stackIn_22_0 = 0;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               }
             } else {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -327,27 +305,19 @@ class bn extends vi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var3 = decompiledCaughtException;
-            stackOut_65_0 = (RuntimeException) (var3);
-            stackOut_65_1 = new StringBuilder().append("bn.F(");
-            stackIn_67_0 = stackOut_65_0;
-            stackIn_67_1 = stackOut_65_1;
-            stackIn_66_0 = stackOut_65_0;
-            stackIn_66_1 = stackOut_65_1;
+            stackIn_67_0 = (RuntimeException) (var3);
+
+            stackIn_67_1 = new StringBuilder().append("bn.F(");
+
             if (param0 == null) {
-              stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
-              stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
-              stackOut_67_2 = "null";
-              stackIn_68_0 = stackOut_67_0;
-              stackIn_68_1 = stackOut_67_1;
-              stackIn_68_2 = stackOut_67_2;
+              stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
+              stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
+              stackIn_68_2 = "null";
               break L16;
             } else {
-              stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
-              stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
-              stackOut_66_2 = "{...}";
-              stackIn_68_0 = stackOut_66_0;
-              stackIn_68_1 = stackOut_66_1;
-              stackIn_68_2 = stackOut_66_2;
+              stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
+              stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
+              stackIn_68_2 = "{...}";
               break L16;
             }
           }
@@ -383,20 +353,9 @@ class bn extends vi {
     }
 
     final boolean a(no param0, boolean param1) {
-        RuntimeException var3 = null;
-        long var3_long = 0L;
-        long var5 = 0L;
-        long var7 = 0L;
-        long var9 = 0L;
-        long var11 = 0L;
-        long var13 = 0L;
-        long var15 = 0L;
-        int var17 = 0;
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_28_0 = 0;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
@@ -404,17 +363,15 @@ class bn extends vi {
         String stackIn_32_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        long var3_long = 0L;
+        RuntimeException var3 = null;
+        long var5 = 0L;
+        long var7 = 0L;
+        long var9 = 0L;
+        long var11 = 0L;
+        long var13 = 0L;
+        long var15 = 0L;
+        int var17 = 0;
         var17 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -449,8 +406,7 @@ class bn extends vi {
                 }
               }
               if (var3_long + (long)(this.field_u / 2) <= var9) {
-                stackOut_14_0 = 0;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -484,8 +440,7 @@ class bn extends vi {
                 }
                 var15 = (var11 + -var5) * (var11 + -var5) + (-var7 + var13) * (var13 + -var7);
                 if (var15 > var3_long * var3_long) {
-                  stackOut_27_0 = 0;
-                  stackIn_28_0 = stackOut_27_0;
+                  stackIn_28_0 = 0;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -493,8 +448,7 @@ class bn extends vi {
                 }
               }
             } else {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -503,27 +457,19 @@ class bn extends vi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) (var3);
-            stackOut_29_1 = new StringBuilder().append("bn.C(");
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            stackIn_31_0 = (RuntimeException) (var3);
+
+            stackIn_31_1 = new StringBuilder().append("bn.C(");
+
             if (param0 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L6;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L6;
             }
           }
@@ -541,11 +487,10 @@ class bn extends vi {
     }
 
     void a(byte param0, j param1, no param2) {
-        boolean discarded$0 = false;
         try {
             if (param0 != 53) {
                 no var5 = (no) null;
-                discarded$0 = this.a((no) null, (byte) 44);
+                this.a((no) null, (byte) 44);
             }
             param2.field_j = oh.field_f;
             param2.field_m = mm.field_Tb;
@@ -566,23 +511,12 @@ class bn extends vi {
     int a(int param0, StringBuilder param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -593,35 +527,26 @@ class bn extends vi {
                 break L1;
               }
             }
-            stackOut_2_0 = (33029 + this.field_s * 37 << -1457884979) + (41 * this.field_u - -29813 << -819356926) ^ super.a(80, param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (33029 + this.field_s * 37 << -1457884979) + (41 * this.field_u - -29813 << -819356926) ^ super.a(80, param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("bn.A(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("bn.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }

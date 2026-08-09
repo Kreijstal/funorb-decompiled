@@ -14,7 +14,6 @@ final class gh {
     static wh field_d;
 
     public static void a(int param0) {
-        String discarded$0 = null;
         field_e = null;
         field_b = null;
         field_d = null;
@@ -25,42 +24,28 @@ final class gh {
         field_a = null;
         field_j = null;
         if (param0 != 7) {
-            discarded$0 = gh.a(-121, (byte) 117);
+            gh.a(-121, (byte) 117);
         }
     }
 
     final static void a(int param0, String param1, boolean param2) {
         RuntimeException runtimeException = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
               cd.field_b = true;
               if (!param2) {
-                stackOut_2_0 = 0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = 1;
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = 1;
                 break L1;
               }
             }
@@ -81,27 +66,19 @@ final class gh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (runtimeException);
-            stackOut_6_1 = new StringBuilder().append("gh.E(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
+
+            stackIn_8_1 = new StringBuilder().append("gh.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -110,27 +87,23 @@ final class gh {
     }
 
     final static String a(int param0, byte param1) {
-        ek discarded$0 = null;
         if (!((param0 ^ -1) <= -1)) {
             return "-" + -param0 / 10 + "." + -param0 % 10;
         }
         if (param1 >= -97) {
             qg var3 = (qg) null;
-            discarded$0 = gh.a(101, -9, -53, 62, (qg) null, -6);
+            gh.a(101, -9, -53, 62, (qg) null, -6);
         }
         return param0 / 10 + "." + param0 % 10;
     }
 
     final static ek a(int param0, int param1, int param2, int param3, qg param4, int param5) {
-        java.awt.Component discarded$8 = null;
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         ek var7 = null;
         java.awt.Frame var8 = null;
         ek stackIn_5_0 = null;
         ek stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -138,16 +111,6 @@ final class gh {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ek stackOut_6_0 = null;
-        ek stackOut_4_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             var8 = ga.a(param4, param5, param0, param2, 122, param3);
@@ -155,18 +118,16 @@ final class gh {
             if (var8 != null) {
               var7 = new ek();
               var7.field_e = var8;
-              discarded$8 = var7.field_e.add((java.awt.Component) ((Object) var7));
+              var7.field_e.add((java.awt.Component) ((Object) var7));
               var7.setBounds(0, 0, param5, param3);
               var7.addFocusListener(var7);
               var7.requestFocus();
               if (param1 < -63) {
-                stackOut_6_0 = (ek) (var7);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (ek) (var7);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                stackOut_4_0 = (ek) null;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (ek) null;
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -178,27 +139,19 @@ final class gh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var6_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var6_ref);
-            stackOut_8_1 = new StringBuilder().append("gh.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var6_ref);
+
+            stackIn_10_1 = new StringBuilder().append("gh.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L1;
             }
           }
@@ -221,18 +174,16 @@ final class gh {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            long var2 = 0L;
-            long var4 = 0L;
-            long var6 = 0L;
-            long var8 = 0L;
-            long var10 = 0L;
-            long var12 = 0L;
-            int var14 = 0;
             long stackIn_5_0 = 0L;
-            long stackOut_4_0 = 0L;
-            long stackOut_3_0 = 0L;
+            int var0;
+            int var1;
+            long var2;
+            long var4;
+            long var6;
+            long var8;
+            long var10;
+            long var12;
+            int var14;
             field_i = new ac[38];
             field_e = "Centaur";
             field_b = "Hugely muscled man wearing only a loincloth and leather helm for protection, but wielding a ridiculously large hammer to compensate. The berserker enters a trance-like state when he engages foes in combat, giving him great strength, but leaving him vulnerable to skilled opponents.";
@@ -258,12 +209,10 @@ final class gh {
                 L2: {
                   var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
                   if (0 == (var0 & 1)) {
-                    stackOut_4_0 = (long)(var1 >>> -399659256);
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = (long)(var1 >>> -399659256);
                     break L2;
                   } else {
-                    stackOut_3_0 = (long)(255 & var1);
-                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_0 = (long)(255 & var1);
                     break L2;
                   }
                 }

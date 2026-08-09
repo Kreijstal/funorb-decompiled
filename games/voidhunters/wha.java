@@ -19,22 +19,8 @@ final class wha implements dja {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        String[] var10 = null;
-        String[] var11 = null;
-        String var12 = null;
-        String var13 = null;
         int stackIn_49_0 = 0;
         int stackIn_52_0 = 0;
-        String[] stackIn_58_0 = null;
-        int stackIn_58_1 = 0;
         String[] stackIn_59_0 = null;
         int stackIn_59_1 = 0;
         String[] stackIn_60_0 = null;
@@ -42,50 +28,29 @@ final class wha implements dja {
         String stackIn_60_2 = null;
         String[] stackIn_64_0 = null;
         int stackIn_64_1 = 0;
-        String[] stackIn_65_0 = null;
-        int stackIn_65_1 = 0;
-        String[] stackIn_66_0 = null;
-        int stackIn_66_1 = 0;
-        String stackIn_66_2 = null;
-        int stackIn_85_0 = 0;
-        int stackIn_86_0 = 0;
+        int stackIn_64_2 = 0;
+        int stackIn_64_3 = 0;
+        String stackIn_67_2 = null;
         int stackIn_87_0 = 0;
-        int stackIn_87_1 = 0;
-        int stackIn_105_0 = 0;
-        int stackIn_106_0 = 0;
+        int stackIn_88_0 = 0;
+        int stackIn_88_1 = 0;
         int stackIn_107_0 = 0;
-        int stackIn_107_1 = 0;
+        int stackIn_108_0 = 0;
+        int stackIn_108_1 = 0;
+        Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_48_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_50_0 = 0;
-        String[] stackOut_63_0 = null;
-        int stackOut_63_1 = 0;
-        String[] stackOut_65_0 = null;
-        int stackOut_65_1 = 0;
-        String stackOut_65_2 = null;
-        String[] stackOut_64_0 = null;
-        int stackOut_64_1 = 0;
-        String stackOut_64_2 = null;
-        String[] stackOut_57_0 = null;
-        int stackOut_57_1 = 0;
-        String[] stackOut_59_0 = null;
-        int stackOut_59_1 = 0;
-        String stackOut_59_2 = null;
-        String[] stackOut_58_0 = null;
-        int stackOut_58_1 = 0;
-        String stackOut_58_2 = null;
-        int stackOut_104_0 = 0;
-        int stackOut_106_0 = 0;
-        int stackOut_106_1 = 0;
-        int stackOut_105_0 = 0;
-        int stackOut_105_1 = 0;
-        int stackOut_84_0 = 0;
-        int stackOut_86_0 = 0;
-        int stackOut_86_1 = 0;
-        int stackOut_85_0 = 0;
-        int stackOut_85_1 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        String[] var4_ref_String__ = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        String[] var10 = null;
+        String var11 = null;
+        String var12 = null;
         var9 = VoidHunters.field_G;
         try {
           L0: {
@@ -202,24 +167,20 @@ final class wha implements dja {
                               jha.field_o = new String[-var4 + (var3_int + -1)];
                               cua.a(ob.field_l, var4 + 1, jha.field_o, 0, -1 + -var4 + var3_int);
                               if (tj.field_k.length >= dha.field_q.length) {
-                                stackOut_48_0 = tj.field_k.length;
-                                stackIn_49_0 = stackOut_48_0;
+                                stackIn_49_0 = tj.field_k.length;
                                 break L10;
                               } else {
-                                stackOut_47_0 = dha.field_q.length;
-                                stackIn_49_0 = stackOut_47_0;
+                                stackIn_49_0 = dha.field_q.length;
                                 break L10;
                               }
                             }
                             L11: {
                               var5 = stackIn_49_0;
                               if (jha.field_o.length <= vg.field_p.length) {
-                                stackOut_51_0 = vg.field_p.length;
-                                stackIn_52_0 = stackOut_51_0;
+                                stackIn_52_0 = vg.field_p.length;
                                 break L11;
                               } else {
-                                stackOut_50_0 = jha.field_o.length;
-                                stackIn_52_0 = stackOut_50_0;
+                                stackIn_52_0 = jha.field_o.length;
                                 break L11;
                               }
                             }
@@ -249,61 +210,50 @@ final class wha implements dja {
                                     var8 = 0;
                                     L14: while (true) {
                                       if (var8 >= var6) {
+                                        wt.a(false);
                                         break L1;
                                       } else {
+                                        stackIn_64_0 = bra.field_f;
+                                        stackIn_64_1 = var8 + (var5 + 7);
+                                        stackIn_64_2 = var8 ^ -1;
+                                        stackIn_64_3 = jha.field_o.length ^ -1;
                                         L15: {
-                                          stackOut_63_0 = bra.field_f;
-                                          stackOut_63_1 = var8 + (var5 + 7);
-                                          stackIn_65_0 = stackOut_63_0;
-                                          stackIn_65_1 = stackOut_63_1;
-                                          stackIn_64_0 = stackOut_63_0;
-                                          stackIn_64_1 = stackOut_63_1;
-                                          if (var8 < jha.field_o.length) {
-                                            stackOut_65_0 = (String[]) ((Object) stackIn_65_0);
-                                            stackOut_65_1 = stackIn_65_1;
-                                            stackOut_65_2 = jha.field_o[var8];
-                                            stackIn_66_0 = stackOut_65_0;
-                                            stackIn_66_1 = stackOut_65_1;
-                                            stackIn_66_2 = stackOut_65_2;
+
+
+
+
+                                          if (stackIn_64_2 > stackIn_64_3) {
+                                            stackIn_64_0 = (String[]) ((Object) stackIn_64_0);
+
+                                            stackIn_67_2 = jha.field_o[var8];
                                             break L15;
                                           } else {
-                                            stackOut_64_0 = (String[]) ((Object) stackIn_64_0);
-                                            stackOut_64_1 = stackIn_64_1;
-                                            stackOut_64_2 = "";
-                                            stackIn_66_0 = stackOut_64_0;
-                                            stackIn_66_1 = stackOut_64_1;
-                                            stackIn_66_2 = stackOut_64_2;
+                                            stackIn_64_0 = (String[]) ((Object) stackIn_64_0);
+
+                                            stackIn_67_2 = "";
                                             break L15;
                                           }
                                         }
-                                        stackIn_66_0[stackIn_66_1] = stackIn_66_2;
+                                        stackIn_64_0[stackIn_64_1] = stackIn_67_2;
                                         var8++;
                                         continue L14;
                                       }
                                     }
                                   } else {
                                     L16: {
-                                      stackOut_57_0 = bra.field_f;
-                                      stackOut_57_1 = var8 + 6;
-                                      stackIn_59_0 = stackOut_57_0;
-                                      stackIn_59_1 = stackOut_57_1;
-                                      stackIn_58_0 = stackOut_57_0;
-                                      stackIn_58_1 = stackOut_57_1;
+                                      stackIn_59_0 = bra.field_f;
+
+                                      stackIn_59_1 = var8 + 6;
+
                                       if (0 > -var5 + var8 + dha.field_q.length) {
-                                        stackOut_59_0 = (String[]) ((Object) stackIn_59_0);
-                                        stackOut_59_1 = stackIn_59_1;
-                                        stackOut_59_2 = "";
-                                        stackIn_60_0 = stackOut_59_0;
-                                        stackIn_60_1 = stackOut_59_1;
-                                        stackIn_60_2 = stackOut_59_2;
+                                        stackIn_60_0 = (String[]) ((Object) stackIn_59_0);
+                                        stackIn_60_1 = stackIn_59_1;
+                                        stackIn_60_2 = "";
                                         break L16;
                                       } else {
-                                        stackOut_58_0 = (String[]) ((Object) stackIn_58_0);
-                                        stackOut_58_1 = stackIn_58_1;
-                                        stackOut_58_2 = dha.field_q[dha.field_q.length + var8 - var5];
-                                        stackIn_60_0 = stackOut_58_0;
-                                        stackIn_60_1 = stackOut_58_1;
-                                        stackIn_60_2 = stackOut_58_2;
+                                        stackIn_60_0 = (String[]) ((Object) stackIn_59_0);
+                                        stackIn_60_1 = stackIn_59_1;
+                                        stackIn_60_2 = dha.field_q[dha.field_q.length + var8 - var5];
                                         break L16;
                                       }
                                     }
@@ -446,18 +396,19 @@ final class wha implements dja {
                     break L25;
                   } else {
                     var10 = tj.field_k;
+                    var4_ref_String__ = var10;
                     var5 = 0;
                     L26: while (true) {
                       if (var5 >= var10.length) {
-                        var11 = vg.field_p;
+                        var4_ref_String__ = vg.field_p;
                         var5 = 0;
                         L27: while (true) {
-                          if (var5 >= var11.length) {
+                          if (var5 >= var4_ref_String__.length) {
                             break L25;
                           } else {
-                            var13 = var11[var5];
-                            var7 = ptb.a((byte) -107, false, var13);
-                            if (var3_int < var7) {
+                            var12 = var4_ref_String__[var5];
+                            var7 = ptb.a((byte) -107, false, var12);
+                            if ((var3_int ^ -1) > (var7 ^ -1)) {
                               var3_int = var7;
                               var5++;
                               continue L27;
@@ -468,8 +419,8 @@ final class wha implements dja {
                           }
                         }
                       } else {
-                        var12 = var10[var5];
-                        var7 = ptb.a((byte) -107, false, var12);
+                        var11 = var10[var5];
+                        var7 = ptb.a((byte) -107, false, var11);
                         if (var7 > var3_int) {
                           var3_int = var7;
                           var5++;
@@ -527,49 +478,39 @@ final class wha implements dja {
                     }
                   } else {
                     L32: {
-                      stackOut_104_0 = sg.field_E;
-                      stackIn_106_0 = stackOut_104_0;
-                      stackIn_105_0 = stackOut_104_0;
+                      stackIn_107_0 = sg.field_E;
+
                       if (edb.field_o[var4] >= 0) {
-                        stackOut_106_0 = stackIn_106_0;
-                        stackOut_106_1 = rua.field_p;
-                        stackIn_107_0 = stackOut_106_0;
-                        stackIn_107_1 = stackOut_106_1;
+                        stackIn_108_0 = stackIn_107_0;
+                        stackIn_108_1 = rua.field_p;
                         break L32;
                       } else {
-                        stackOut_105_0 = stackIn_105_0;
-                        stackOut_105_1 = u.field_r;
-                        stackIn_107_0 = stackOut_105_0;
-                        stackIn_107_1 = stackOut_105_1;
+                        stackIn_108_0 = stackIn_107_0;
+                        stackIn_108_1 = u.field_r;
                         break L32;
                       }
                     }
-                    sg.field_E = stackIn_107_0 + stackIn_107_1;
+                    sg.field_E = stackIn_108_0 + stackIn_108_1;
                     var4++;
                     continue L28;
                   }
                 }
               } else {
                 L33: {
-                  stackOut_84_0 = -107;
-                  stackIn_86_0 = stackOut_84_0;
-                  stackIn_85_0 = stackOut_84_0;
+                  stackIn_87_0 = -107;
+
                   if ((edb.field_o[var4] ^ -1) > -1) {
-                    stackOut_86_0 = stackIn_86_0;
-                    stackOut_86_1 = 0;
-                    stackIn_87_0 = stackOut_86_0;
-                    stackIn_87_1 = stackOut_86_1;
+                    stackIn_88_0 = stackIn_87_0;
+                    stackIn_88_1 = 0;
                     break L33;
                   } else {
-                    stackOut_85_0 = stackIn_85_0;
-                    stackOut_85_1 = 1;
-                    stackIn_87_0 = stackOut_85_0;
-                    stackIn_87_1 = stackOut_85_1;
+                    stackIn_88_0 = stackIn_87_0;
+                    stackIn_88_1 = 1;
                     break L33;
                   }
                 }
                 L34: {
-                  var5 = ptb.a((byte) stackIn_87_0, stackIn_87_1 != 0, bra.field_f[var4]);
+                  var5 = ptb.a((byte) stackIn_88_0, stackIn_88_1 != 0, bra.field_f[var4]);
                   if (var3_int < var5) {
                     var3_int = var5;
                     break L34;

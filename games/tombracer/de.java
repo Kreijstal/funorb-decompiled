@@ -10,7 +10,7 @@ final class de extends cha {
         if (param3 != 2) {
             return;
         }
-        boolean discarded$0 = param2.drawImage(this.field_a, param1, param0, (java.awt.image.ImageObserver) ((Object) this.field_i));
+        param2.drawImage(this.field_a, param1, param0, (java.awt.image.ImageObserver) ((Object) this.field_i));
     }
 
     final void a(int param0, int param1, java.awt.Component param2, byte param3) {

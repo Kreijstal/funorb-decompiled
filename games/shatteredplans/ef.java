@@ -28,9 +28,6 @@ final class ef {
     final static boolean a(char param0, boolean param1) {
         int stackIn_27_0 = 0;
         int stackIn_30_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_26_0 = 0;
         if (!param1) {
           if (param0 < 48) {
             if (param0 < 65) {
@@ -48,8 +45,7 @@ final class ef {
               return false;
             } else {
               if (param0 <= 90) {
-                stackOut_28_0 = 1;
-                stackIn_30_0 = stackOut_28_0;
+                stackIn_30_0 = 1;
                 return stackIn_30_0 != 0;
               } else {
                 L1: {
@@ -60,14 +56,12 @@ final class ef {
                       if (122 < param0) {
                         break L2;
                       } else {
-                        stackOut_25_0 = 1;
-                        stackIn_27_0 = stackOut_25_0;
+                        stackIn_27_0 = 1;
                         break L1;
                       }
                     }
                   }
-                  stackOut_26_0 = 0;
-                  stackIn_27_0 = stackOut_26_0;
+                  stackIn_27_0 = 0;
                   break L1;
                 }
                 return stackIn_27_0 != 0;
@@ -117,8 +111,8 @@ final class ef {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var2 = 0;
           if ((param0 & 7) == 0) {

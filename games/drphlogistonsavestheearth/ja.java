@@ -59,32 +59,22 @@ final class ja {
     }
 
     final static void a(fg param0, byte param1) {
-        int dupTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int incrementValue$6 = 0;
-        int dupTemp$7 = 0;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
+        int dupTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int dupTemp$3 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -95,16 +85,16 @@ final class ja {
                 var3 = 0;
                 L2: while (true) {
                   if (var3 >= sf.field_e) {
-                    dupTemp$4 = param0.a((byte) -99);
-                    fm.field_e[dupTemp$4] = fm.field_e[dupTemp$4] + 1;
+                    dupTemp$0 = param0.a((byte) -99);
+                    fm.field_e[dupTemp$0] = fm.field_e[dupTemp$0] + 1;
                     var3 = 0;
                     var4 = 0;
                     L3: while (true) {
                       if (var4 >= sf.field_e) {
                         sf.field_e = var3;
-                        fieldTemp$5 = sf.field_e;
+                        fieldTemp$1 = sf.field_e;
                         sf.field_e = sf.field_e + 1;
-                        mi.field_c[fieldTemp$5] = param0;
+                        mi.field_c[fieldTemp$1] = param0;
                         break L0;
                       } else {
                         L4: {
@@ -121,9 +111,9 @@ final class ja {
                               }
                             }
                           }
-                          incrementValue$6 = var3;
+                          incrementValue$2 = var3;
                           var3++;
-                          mi.field_c[incrementValue$6] = mi.field_c[var4];
+                          mi.field_c[incrementValue$2] = mi.field_c[var4];
                           break L4;
                         }
                         var4++;
@@ -135,8 +125,8 @@ final class ja {
                       if (param0.field_a != mi.field_c[var3].field_a) {
                         break L6;
                       } else {
-                        dupTemp$7 = mi.field_c[var3].a((byte) -93);
-                        fm.field_e[dupTemp$7] = fm.field_e[dupTemp$7] + 1;
+                        dupTemp$3 = mi.field_c[var3].a((byte) -93);
+                        fm.field_e[dupTemp$3] = fm.field_e[dupTemp$3] + 1;
                         break L6;
                       }
                     }
@@ -155,27 +145,19 @@ final class ja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2);
-            stackOut_19_1 = new StringBuilder().append("ja.F(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2);
+
+            stackIn_21_1 = new StringBuilder().append("ja.F(");
+
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L7;
             }
           }
@@ -209,17 +191,17 @@ final class ja {
     }
 
     final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (!this.field_F) {
           this.field_F = true;

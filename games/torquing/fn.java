@@ -8,7 +8,6 @@ final class fn {
     static String field_a;
 
     final static am a(int param0, fj param1) {
-        int discarded$2 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         am var3 = null;
@@ -18,8 +17,6 @@ final class fn {
         int var7 = 0;
         am stackIn_3_0 = null;
         am stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -27,20 +24,10 @@ final class fn {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        am stackOut_7_0 = null;
-        am stackOut_2_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var7 = Torquing.field_u;
         try {
           L0: {
-            discarded$2 = param1.i((byte) -101);
+            param1.i((byte) -101);
             var2_int = param1.i((byte) -101);
             var3 = tj.a(var2_int, 37);
             var3.field_k = param1.i((byte) -101);
@@ -50,8 +37,7 @@ final class fn {
               L1: while (true) {
                 if (var4 <= var5) {
                   var3.a((byte) 125);
-                  stackOut_7_0 = (am) (var3);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = (am) (var3);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -62,8 +48,7 @@ final class fn {
                 }
               }
             } else {
-              stackOut_2_0 = (am) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (am) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -72,27 +57,19 @@ final class fn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2);
-            stackOut_9_1 = new StringBuilder().append("fn.B(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var2);
+
+            stackIn_11_1 = new StringBuilder().append("fn.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -114,11 +91,10 @@ final class fn {
     }
 
     public static void a(boolean param0) {
-        am discarded$0 = null;
         field_a = null;
         if (param0) {
             fj var2 = (fj) null;
-            discarded$0 = fn.a(15, (fj) null);
+            fn.a(15, (fj) null);
         }
     }
 

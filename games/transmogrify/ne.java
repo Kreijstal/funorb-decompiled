@@ -7,8 +7,8 @@ final class ne {
     static int field_b;
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var2 = Transmogrify.field_A ? 1 : 0;
         bi.field_J = bi.field_J + 1;
         bg.field_m = bg.field_m - 1;
@@ -251,7 +251,6 @@ final class ne {
 
     final static void a(byte param0, gd param1, int param2) {
         int var4 = 0;
-        int discarded$0 = 0;
         hj var5 = ff.field_D;
         var5.a(false, param2);
         if (param0 != 7) {
@@ -267,7 +266,7 @@ final class ne {
             var5.a(-104, param1.field_i);
             var5.a(-128, param1.field_p);
             var5.a(param0 + -108, param1.field_g);
-            discarded$0 = var5.d(var4, -1323322296);
+            var5.d(var4, -1323322296);
             var5.a((byte) -42, var5.field_h + -var4);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) ((Object) runtimeException), "ne.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

@@ -10,9 +10,8 @@ final class fk {
     }
 
     public static void a(byte param0) {
-        int discarded$2 = 0;
         if (param0 != 28) {
-          discarded$2 = fk.a(-27, -84);
+          fk.a(-27, -84);
           field_b = null;
           field_a = (byte[][]) null;
           return;

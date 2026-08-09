@@ -14,7 +14,7 @@ final class vm extends ab implements pi {
     static hj field_vb;
 
     final boolean g(byte param0) {
-        nd var2 = null;
+        nd var2;
         if (this.field_F) {
           if (!this.field_wb) {
             var2 = th.c((byte) -67);
@@ -49,15 +49,6 @@ final class vm extends ab implements pi {
     }
 
     private final void a(byte param0, boolean param1, nd param2) {
-        rm discarded$2 = null;
-        rm discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        nh var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
@@ -65,14 +56,11 @@ final class vm extends ab implements pi {
         String stackIn_31_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        nh var5 = null;
+        int var6 = 0;
+        int var7 = 0;
         var7 = HoldTheLine.field_D;
         try {
           L0: {
@@ -81,7 +69,7 @@ final class vm extends ab implements pi {
               var6 = 74 / ((7 - param0) / 34);
               if (!param2.field_f) {
                 if (null != param2.field_j) {
-                  var4_ref = ud.field_j;
+                  var4 = ud.field_j;
                   if (this.field_sb == null) {
                     break L1;
                   } else {
@@ -89,7 +77,7 @@ final class vm extends ab implements pi {
                     break L1;
                   }
                 } else {
-                  var4_ref = param2.field_d;
+                  var4 = param2.field_d;
                   if (-249 != (param2.field_b ^ -1)) {
                     break L1;
                   } else {
@@ -101,31 +89,31 @@ final class vm extends ab implements pi {
                         break L2;
                       }
                     }
-                    var4_ref = vn.field_e;
+                    var4 = vn.field_e;
                     this.field_yb = true;
                     break L1;
                   }
                 }
               } else {
-                var4_ref = nh.field_H;
+                var4 = nh.field_H;
                 break L1;
               }
             }
             L3: {
-              var5 = new nh((ab) (this), de.field_I, var4_ref);
+              var5 = new nh((ab) (this), de.field_I, var4);
               if (param2.field_f) {
                 if (param2.field_i) {
                   this.a((n) (new bj((vm) (this))), (byte) 126);
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  discarded$2 = var5.a(112, (tb) (this), sf.field_j);
+                  var5.a(112, (tb) (this), sf.field_j);
                   break L3;
                 }
               } else {
                 L4: {
                   if (this.field_yb) {
-                    discarded$3 = var5.a(81, (tb) (this), sf.field_j);
+                    var5.a(81, (tb) (this), sf.field_j);
                     break L4;
                   } else {
                     if (-6 == (param2.field_b ^ -1)) {
@@ -158,28 +146,20 @@ final class vm extends ab implements pi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var4 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var4);
-            stackOut_28_1 = new StringBuilder().append("vm.EA(").append(param0).append(',').append(param1).append(',');
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_30_0 = (RuntimeException) (var4_ref);
+
+            stackIn_30_1 = new StringBuilder().append("vm.EA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L5;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L5;
             }
           }
@@ -213,10 +193,7 @@ final class vm extends ab implements pi {
     }
 
     public final void a(int param0, rm param1, int param2, int param3, int param4) {
-        RuntimeException var6 = null;
         nd var7 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -224,14 +201,7 @@ final class vm extends ab implements pi {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var6 = null;
         try {
           L0: {
             if (!this.field_yb) {
@@ -259,27 +229,19 @@ final class vm extends ab implements pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var6);
-            stackOut_8_1 = new StringBuilder().append("vm.M(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var6);
+
+            stackIn_10_1 = new StringBuilder().append("vm.M(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }

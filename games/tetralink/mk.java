@@ -12,8 +12,8 @@ final class mk {
     static de field_b;
 
     final static char a(byte param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var2 = 255 & param1;
         if (param0 == -13) {
           if (var2 != 0) {
@@ -110,8 +110,8 @@ final class mk {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
+        int var6;
+        int var7;
         var6 = 24;
         var7 = 5;
         this.field_g.b(0, param2, param1, var7, param0, param4, var6);

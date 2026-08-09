@@ -47,25 +47,15 @@ final class on {
     final static void a(int param0, java.applet.Applet param1) {
         try {
             int var2_int = 0;
-            Exception var2 = null;
-            RuntimeException var2_ref = null;
             java.net.URL var3 = null;
-            RuntimeException stackIn_5_0 = null;
-            StringBuilder stackIn_5_1 = null;
             RuntimeException stackIn_6_0 = null;
             StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             String stackIn_7_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_4_0 = null;
-            StringBuilder stackOut_4_1 = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            String stackOut_6_2 = null;
-            RuntimeException stackOut_5_0 = null;
-            StringBuilder stackOut_5_1 = null;
-            String stackOut_5_2 = null;
+            Exception var2 = null;
+            RuntimeException var2_ref = null;
             try {
               L0: {
                 try {
@@ -89,27 +79,19 @@ final class on {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_4_0 = (RuntimeException) (var2_ref);
-                stackOut_4_1 = new StringBuilder().append("on.B(").append(param0).append(',');
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_6_1 = stackOut_4_1;
-                stackIn_5_0 = stackOut_4_0;
-                stackIn_5_1 = stackOut_4_1;
+                stackIn_6_0 = (RuntimeException) (var2_ref);
+
+                stackIn_6_1 = new StringBuilder().append("on.B(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-                  stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-                  stackOut_6_2 = "null";
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
-                  stackIn_7_2 = stackOut_6_2;
+                  stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+                  stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+                  stackIn_7_2 = "null";
                   break L3;
                 } else {
-                  stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-                  stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-                  stackOut_5_2 = "{...}";
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
-                  stackIn_7_2 = stackOut_5_2;
+                  stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+                  stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+                  stackIn_7_2 = "{...}";
                   break L3;
                 }
               }

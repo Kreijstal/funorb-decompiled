@@ -29,13 +29,13 @@ abstract class q {
     }
 
     final static String a(long param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         ad.field_b.setTime(new Date(param0));
         var3 = ad.field_b.get(7);
         var4 = ad.field_b.get(5);

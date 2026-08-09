@@ -18,7 +18,6 @@ final class id {
     }
 
     final static void a(byte param0, hf param1, int param2) {
-        int discarded$0 = 0;
         pc var5 = aa.field_f;
         var5.g(param2, 15514);
         var5.field_m = var5.field_m + 1;
@@ -34,7 +33,7 @@ final class id {
             var5.d(param1.field_r, -102);
             var5.d(param1.field_l, -112);
             var5.d(param1.field_p, -120);
-            discarded$0 = var5.b(var4, (byte) 84);
+            var5.b(var4, (byte) 84);
             var5.f(var5.field_m - var4, -1);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -51,10 +50,10 @@ final class id {
 
     final static void b(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -87,7 +86,7 @@ final class id {
                         continue L2;
                       } else {
                         L5: {
-                          if (ok.a(ea.field_b, param0 ^ -124, 9) > var1_int) {
+                          if ((ok.a(ea.field_b, param0 ^ -124, 9) ^ -1) < (var1_int ^ -1)) {
                             ii.field_p[var1_int].field_n[var2] = (byte) 1;
                             break L5;
                           } else {

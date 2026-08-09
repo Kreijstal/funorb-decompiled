@@ -75,17 +75,17 @@ final class rl {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var12 = Pixelate.field_H ? 1 : 0;
         if (this.field_Q) {
           return;
@@ -194,17 +194,15 @@ final class rl {
     }
 
     final static int b(byte param0) {
-        int discarded$1 = 0;
-        RuntimeException var1 = null;
+        int stackIn_31_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_31_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_30_0 = 0;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -217,7 +215,7 @@ final class rl {
                   if (param0 > 74) {
                     break L2;
                   } else {
-                    discarded$1 = rl.b((byte) -77);
+                    rl.b((byte) -77);
                     break L2;
                   }
                 }
@@ -285,8 +283,7 @@ final class rl {
                     }
                   }
                 }
-                stackOut_30_0 = var3;
-                stackIn_31_0 = stackOut_30_0;
+                stackIn_31_0 = var3;
                 break L0;
               } else {
                 L8: {

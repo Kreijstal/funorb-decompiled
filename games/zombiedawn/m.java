@@ -44,7 +44,6 @@ abstract class m extends wb implements ib {
 
     final void c(byte param0) {
         int var3 = 0;
-        boolean discarded$1 = false;
         int var5 = ZombieDawn.field_J;
         java.awt.Canvas var2 = uh.e(-122);
         if (uk.a((byte) -44)) {
@@ -68,7 +67,7 @@ abstract class m extends wb implements ib {
         }
         int var4 = 35 / ((param0 - -27) / 44);
         if (wn.field_b) {
-            discarded$1 = rm.a(false);
+            rm.a(false);
             uh.a(-126, 0, 0, var2);
         } else {
             this.l(29268);
@@ -80,35 +79,19 @@ abstract class m extends wb implements ib {
     public abstract void a(int param0);
 
     private final void p(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        ib var6 = null;
-        Object stackIn_27_0 = null;
-        int stackIn_27_1 = 0;
         Object stackIn_28_0 = null;
         int stackIn_28_1 = 0;
         Object stackIn_29_0 = null;
         int stackIn_29_1 = 0;
         int stackIn_29_2 = 0;
-        int stackIn_57_0 = 0;
         int stackIn_58_0 = 0;
         int stackIn_59_0 = 0;
         int stackIn_59_1 = 0;
-        Object stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
-        Object stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        int stackOut_28_2 = 0;
-        Object stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        int stackOut_27_2 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_58_1 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_57_1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        ib var6;
         L0: {
           var5 = ZombieDawn.field_J;
           var2 = 0;
@@ -143,27 +126,19 @@ abstract class m extends wb implements ib {
             } else {
               if (nk.b(15000)) {
                 L1: {
-                  stackOut_26_0 = this;
-                  stackOut_26_1 = -27698;
-                  stackIn_28_0 = stackOut_26_0;
-                  stackIn_28_1 = stackOut_26_1;
-                  stackIn_27_0 = stackOut_26_0;
-                  stackIn_27_1 = stackOut_26_1;
+                  stackIn_28_0 = this;
+
+                  stackIn_28_1 = -27698;
+
                   if (null == cn.field_b) {
-                    stackOut_28_0 = this;
-                    stackOut_28_1 = stackIn_28_1;
-                    stackOut_28_2 = 0;
-                    stackIn_29_0 = stackOut_28_0;
-                    stackIn_29_1 = stackOut_28_1;
-                    stackIn_29_2 = stackOut_28_2;
+                    stackIn_29_0 = this;
+                    stackIn_29_1 = stackIn_28_1;
+                    stackIn_29_2 = 0;
                     break L1;
                   } else {
-                    stackOut_27_0 = this;
-                    stackOut_27_1 = stackIn_27_1;
-                    stackOut_27_2 = 1;
-                    stackIn_29_0 = stackOut_27_0;
-                    stackIn_29_1 = stackOut_27_1;
-                    stackIn_29_2 = stackOut_27_2;
+                    stackIn_29_0 = this;
+                    stackIn_29_1 = stackIn_28_1;
+                    stackIn_29_2 = 1;
                     break L1;
                   }
                 }
@@ -280,20 +255,15 @@ abstract class m extends wb implements ib {
               L9: {
                 var6 = (ib) (cf.field_eb.elementAt(var3));
                 var6.a(var2 != 0, false);
-                stackOut_56_0 = var2;
-                stackIn_58_0 = stackOut_56_0;
-                stackIn_57_0 = stackOut_56_0;
+                stackIn_58_0 = var2;
+
                 if (var6.a((byte) 119)) {
-                  stackOut_58_0 = stackIn_58_0;
-                  stackOut_58_1 = 0;
-                  stackIn_59_0 = stackOut_58_0;
-                  stackIn_59_1 = stackOut_58_1;
+                  stackIn_59_0 = stackIn_58_0;
+                  stackIn_59_1 = 0;
                   break L9;
                 } else {
-                  stackOut_57_0 = stackIn_57_0;
-                  stackOut_57_1 = 1;
-                  stackIn_59_0 = stackOut_57_0;
-                  stackIn_59_1 = stackOut_57_1;
+                  stackIn_59_0 = stackIn_58_0;
+                  stackIn_59_1 = 1;
                   break L9;
                 }
               }
@@ -308,7 +278,7 @@ abstract class m extends wb implements ib {
     }
 
     private final void m(int param0) {
-        int var3 = 0;
+        int var3;
         var3 = ZombieDawn.field_J;
         L0: while (true) {
           if (!gf.a(wh.field_d, (byte) 44)) {
@@ -343,26 +313,19 @@ abstract class m extends wb implements ib {
     public abstract boolean a(char param0, int param1, int param2);
 
     final void e(byte param0) {
-        lo discarded$1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        bo var5 = null;
-        Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
         int stackIn_9_1 = 0;
-        Object stackOut_6_0 = null;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        bo var5;
         L0: {
           var4 = ZombieDawn.field_J;
           if (param0 == 15) {
             break L0;
           } else {
-            discarded$1 = m.a((byte) 91, 77, -4, -72);
+            m.a((byte) 91, 77, -4, -72);
             break L0;
           }
         }
@@ -380,20 +343,15 @@ abstract class m extends wb implements ib {
           }
         }
         L2: {
-          stackOut_6_0 = this;
-          stackIn_8_0 = stackOut_6_0;
-          stackIn_7_0 = stackOut_6_0;
+          stackIn_8_0 = this;
+
           if (cn.field_b == null) {
-            stackOut_8_0 = this;
-            stackOut_8_1 = 0;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_9_0 = this;
+            stackIn_9_1 = 0;
             break L2;
           } else {
-            stackOut_7_0 = this;
-            stackOut_7_1 = 1;
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
+            stackIn_9_0 = this;
+            stackIn_9_1 = 1;
             break L2;
           }
         }
@@ -534,11 +492,10 @@ abstract class m extends wb implements ib {
     }
 
     public static void j(byte param0) {
-        lo discarded$0 = null;
         field_C = null;
         field_B = null;
         if (param0 > -121) {
-            discarded$0 = m.a((byte) -29, 125, -97, 86);
+            m.a((byte) -29, 125, -97, 86);
         }
         field_A = null;
     }

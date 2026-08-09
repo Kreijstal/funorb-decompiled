@@ -36,21 +36,11 @@ final class qja extends vg {
           }
         } else {
           bea.a();
-          if (!TombRacer.field_G) {
-            if (param2 > -121) {
-              return;
-            } else {
-              tqa.a(param0, (byte) 106);
-              return;
-            }
+          if (param2 > -121) {
+            return;
           } else {
-            bea.c(0, 0, bea.field_g, bea.field_a, 0, 192);
-            if (param2 > -121) {
-              return;
-            } else {
-              tqa.a(param0, (byte) 106);
-              return;
-            }
+            tqa.a(param0, (byte) 106);
+            return;
           }
         }
     }

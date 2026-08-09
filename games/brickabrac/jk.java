@@ -115,8 +115,8 @@ final class jk extends ki {
     }
 
     final static void a(int param0, byte param1) {
-        pi var2 = null;
-        int var3 = 0;
+        pi var2;
+        int var3;
         var2 = k.field_h;
         var2.e(param1 ^ -13319, param0);
         var2.field_l = var2.field_l + 1;
@@ -138,8 +138,8 @@ final class jk extends ki {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var8 = null;
-        pb var9 = null;
+        pb var8;
+        pb var9;
         if (param1 <= -84) {
           if (this.b((byte) -95)) {
             L0: {
@@ -181,8 +181,8 @@ final class jk extends ki {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var7 = null;
-        pb var8 = null;
+        pb var7;
+        pb var8;
         if (param0) {
           if (this.b((byte) -112)) {
             L0: {
@@ -224,7 +224,7 @@ final class jk extends ki {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        int var5;
         if (param1 > -1) {
           lb.g(param2, param3, 153, 238, um.field_u[param1], 928072);
           if (!this.b((byte) -98)) {

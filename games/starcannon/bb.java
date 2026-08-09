@@ -23,10 +23,10 @@ final class bb {
     private int field_h;
 
     private final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var5;
+        int var4;
         var5 = StarCannon.field_A;
         var2 = this.field_b;
         var3 = this.field_r;
@@ -274,7 +274,7 @@ final class bb {
     }
 
     final void b(byte param0) {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         if (n.field_a != null) {
           return;
         } else {
@@ -288,9 +288,9 @@ final class bb {
               }
             }
             if (this.field_a) {
-              fieldTemp$1 = this.field_e - 1;
+              fieldTemp$0 = this.field_e - 1;
               this.field_e = this.field_e - 1;
-              if (fieldTemp$1 <= 0) {
+              if (fieldTemp$0 <= 0) {
                 this.field_e = this.field_c;
                 if (this.field_i > la.field_b) {
                   this.field_a = false;
@@ -362,7 +362,6 @@ final class bb {
 
     final static void a(int param0, int param1, of param2) {
         int var4 = 0;
-        int discarded$0 = 0;
         ia var5 = d.field_b;
         var5.d((byte) 67, param1);
         if (param0 != 2) {
@@ -378,7 +377,7 @@ final class bb {
             } else {
                 var5.a(0, -111);
             }
-            discarded$0 = var5.b((byte) -121, var4);
+            var5.b((byte) -121, var4);
             var5.field_g = var5.field_g - 4;
             param2.field_h = var5.f((byte) -109);
             var5.b(-var4 + var5.field_g, param0 ^ 31702);
@@ -406,7 +405,7 @@ final class bb {
     }
 
     final qc a(int param0) {
-        qc var2 = null;
+        qc var2;
         if (param0 == 2) {
           this.field_n = eh.field_n;
           this.field_o = ef.field_d;

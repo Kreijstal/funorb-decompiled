@@ -12,6 +12,13 @@ final class iu implements mh {
     private int field_a;
 
     public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+        pk stackIn_4_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -20,36 +27,15 @@ final class iu implements mh {
         int var11 = 0;
         pk var12 = null;
         fu var13 = null;
-        pk stackIn_4_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        pk stackOut_3_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
             L1: {
               if (param0 instanceof fu) {
-                stackOut_3_0 = (pk) (param0);
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = (pk) (param0);
                 break L1;
               } else {
-                stackOut_2_0 = null;
-                stackIn_4_0 = (pk) ((Object) stackOut_2_0);
+                stackIn_4_0 = null;
                 break L1;
               }
             }
@@ -77,63 +63,41 @@ final class iu implements mh {
             lk.e(var8, var9, var7 + var8, var9, this.field_g);
             var10 = -1 + var13.g(0);
             L4: while (true) {
-              L5: {
-                L6: {
-                  if (var10 < 0) {
-                    break L6;
-                  } else {
-                    lk.b(var8 + var13.a(var10, param2 + -5616599) * var7 / var13.h(-1), var9, this.field_d, this.field_a);
-                    var10--;
-                    if (var11 != 0) {
-                      break L5;
-                    } else {
-                      if (var11 == 0) {
-                        continue L4;
-                      } else {
-                        break L6;
-                      }
-                    }
-                  }
-                }
+              if (var10 < 0) {
                 if (this.field_c != null) {
-                  break L5;
+                  this.field_c.a(var13.field_m, var8 + var7 / 2, var13.field_J + (this.field_c.field_F + var9), this.field_b, this.field_f);
+                  break L0;
                 } else {
                   return;
                 }
+              } else {
+                lk.b(var8 + var13.a(var10, param2 + -5616599) * var7 / var13.h(-1), var9, this.field_d, this.field_a);
+                var10--;
+                continue L4;
               }
-              this.field_c.a(var13.field_m, var8 + var7 / 2, var13.field_J + (this.field_c.field_F + var9), this.field_b, this.field_f);
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L5: {
             var6 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var6);
-            stackOut_16_1 = new StringBuilder().append("iu.A(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_16_0 = (RuntimeException) (var6);
+
+            stackIn_16_1 = new StringBuilder().append("iu.A(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
-              break L7;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
+              break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
-              break L7;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
+              break L5;
             }
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

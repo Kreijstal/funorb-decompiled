@@ -10,8 +10,7 @@ final class nl {
     static jp field_b;
 
     public static void a(int param0) {
-        boolean discarded$2 = false;
-        int[] var2 = null;
+        int[] var2;
         field_a = null;
         field_d = null;
         field_f = null;
@@ -21,27 +20,17 @@ final class nl {
           return;
         } else {
           var2 = (int[]) null;
-          discarded$2 = nl.a((int[]) null, (byte) -73);
+          nl.a((int[]) null, (byte) -73);
           return;
         }
     }
 
     final static boolean a(int[] param0, byte param1) {
-        RuntimeException var2 = null;
-        long var2_long = 0L;
-        pg var4_ref_pg = null;
-        int var4 = 0;
-        int var5_int = 0;
-        pg var5 = null;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         RuntimeException stackIn_39_0 = null;
@@ -49,19 +38,14 @@ final class nl {
         String stackIn_39_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
+        pg var4_ref_pg = null;
+        int var4 = 0;
+        int var5_int = 0;
+        pg var5 = null;
+        int var6 = 0;
+        int var7 = 0;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -99,8 +83,7 @@ final class nl {
                             we.field_a = mh.field_gb;
                             mh.field_gb = si.field_a;
                             si.field_a = var4_ref_pg.field_r;
-                            stackOut_13_0 = 1;
-                            stackIn_14_0 = stackOut_13_0;
+                            stackIn_14_0 = 1;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           } else {
@@ -121,8 +104,7 @@ final class nl {
                   } else {
                     jl.field_e.field_l = 0;
                     if (!vd.a(20, 1)) {
-                      stackOut_19_0 = 0;
-                      stackIn_20_0 = stackOut_19_0;
+                      stackIn_20_0 = 0;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -134,8 +116,7 @@ final class nl {
                   }
                 }
                 if (!um.b((byte) -104)) {
-                  stackOut_24_0 = 0;
-                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_25_0 = 0;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
@@ -173,16 +154,14 @@ final class nl {
                     mh.field_gb = si.field_a;
                     si.field_a = ob.field_I;
                     ob.field_I = -1;
-                    stackOut_27_0 = 1;
-                    stackIn_28_0 = stackOut_27_0;
+                    stackIn_28_0 = 1;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   }
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -191,27 +170,19 @@ final class nl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) (var2);
-            stackOut_36_1 = new StringBuilder().append("nl.A(");
-            stackIn_38_0 = stackOut_36_0;
-            stackIn_38_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+            stackIn_38_0 = (RuntimeException) (var2);
+
+            stackIn_38_1 = new StringBuilder().append("nl.A(");
+
             if (param0 == null) {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "null";
               break L8;
             } else {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "{...}";
-              stackIn_39_0 = stackOut_37_0;
-              stackIn_39_1 = stackOut_37_1;
-              stackIn_39_2 = stackOut_37_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "{...}";
               break L8;
             }
           }
@@ -237,25 +208,25 @@ final class nl {
     }
 
     final static String a(boolean param0, boolean param1, int param2, long param3, int param4) {
-        StringBuilder discarded$10 = null;
-        StringBuilder discarded$11 = null;
-        StringBuilder discarded$12 = null;
-        StringBuilder discarded$13 = null;
-        StringBuilder discarded$14 = null;
-        StringBuilder discarded$15 = null;
-        StringBuilder discarded$16 = null;
-        StringBuilder discarded$17 = null;
-        StringBuilder discarded$18 = null;
-        StringBuilder discarded$19 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        StringBuilder var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        StringBuilder var13 = null;
-        StringBuilder var14 = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
+        StringBuilder discarded$8 = null;
+        StringBuilder discarded$9 = null;
+        int var6;
+        int var7;
+        int var8;
+        StringBuilder var9;
+        int var10;
+        int var11;
+        int var12;
+        StringBuilder var13;
+        StringBuilder var14;
         L0: {
           var12 = BrickABrac.field_J ? 1 : 0;
           var6 = 44;
@@ -295,12 +266,12 @@ final class nl {
               var10 = 0;
               L4: while (true) {
                 if (param2 <= var10) {
-                  discarded$10 = var14.append((char) var6);
+                  discarded$0 = var14.append((char) var6);
                   break L3;
                 } else {
                   var11 = (int)param3;
                   param3 = param3 / 10L;
-                  discarded$11 = var14.append((char)(-((int)param3 * 10) + (48 - -var11)));
+                  discarded$1 = var14.append((char)(-((int)param3 * 10) + (48 - -var11)));
                   var10++;
                   continue L4;
                 }
@@ -311,10 +282,10 @@ final class nl {
           L5: while (true) {
             var11 = (int)param3;
             param3 = param3 / 10L;
-            discarded$12 = var14.append((char)(-(10 * (int)param3) + var11 + 48));
+            discarded$2 = var14.append((char)(-(10 * (int)param3) + var11 + 48));
             if (-1L == (param3 ^ -1L)) {
               if (var8 != 0) {
-                discarded$13 = var14.append('-');
+                discarded$3 = var14.append('-');
                 return var14.reverse().toString();
               } else {
                 return var14.reverse().toString();
@@ -327,7 +298,7 @@ final class nl {
                 if (var10 % 3 != 0) {
                   continue L5;
                 } else {
-                  discarded$14 = var14.append((char) var7);
+                  discarded$4 = var14.append((char) var7);
                   continue L5;
                 }
               }
@@ -354,12 +325,12 @@ final class nl {
               var10 = 0;
               L8: while (true) {
                 if (param2 <= var10) {
-                  discarded$15 = var13.append((char) var6);
+                  discarded$5 = var13.append((char) var6);
                   break L7;
                 } else {
                   var11 = (int)param3;
                   param3 = param3 / 10L;
-                  discarded$16 = var13.append((char)(-((int)param3 * 10) + (48 - -var11)));
+                  discarded$6 = var13.append((char)(-((int)param3 * 10) + (48 - -var11)));
                   var10++;
                   continue L8;
                 }
@@ -370,12 +341,12 @@ final class nl {
           L9: while (true) {
             var11 = (int)param3;
             param3 = param3 / 10L;
-            discarded$17 = var13.append((char)(-(10 * (int)param3) + var11 + 48));
+            discarded$7 = var13.append((char)(-(10 * (int)param3) + var11 + 48));
             if (-1L == (param3 ^ -1L)) {
               if (var8 == 0) {
                 return var13.reverse().toString();
               } else {
-                discarded$18 = var13.append('-');
+                discarded$8 = var13.append('-');
                 return var13.reverse().toString();
               }
             } else {
@@ -386,7 +357,7 @@ final class nl {
                 if (var10 % 3 != 0) {
                   continue L9;
                 } else {
-                  discarded$19 = var13.append((char) var7);
+                  discarded$9 = var13.append((char) var7);
                   continue L9;
                 }
               }

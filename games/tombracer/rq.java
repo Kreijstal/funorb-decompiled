@@ -27,7 +27,7 @@ final class rq {
     }
 
     rq(byte[] param0, nk param1) {
-        int discarded$1 = 0;
+        Throwable decompiledCaughtException = null;
         Exception var3 = null;
         uia var4 = null;
         int var5 = 0;
@@ -40,7 +40,6 @@ final class rq {
         int var12 = 0;
         int var13 = 0;
         uia var14 = null;
-        Throwable decompiledCaughtException = null;
         this.field_f = null;
         this.field_i = 0;
         this.field_f = param1;
@@ -48,7 +47,7 @@ final class rq {
           L0: {
             var14 = new uia(param0);
             var4 = new uia(param0);
-            discarded$1 = var14.h(255);
+            var14.h(255);
             var14.field_h = var14.field_h + 2;
             var5 = var14.h(255);
             var6 = 0;

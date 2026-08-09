@@ -75,13 +75,13 @@ abstract class ub extends wj {
     }
 
     final static ut[] i(byte param0) {
-        ut[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var4 = null;
-        int[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        ut[] var1;
+        int var2;
+        int var3;
+        byte[] var4;
+        int[] var5;
+        int var6;
+        int var7;
         var7 = Kickabout.field_G;
         var1 = new ut[io.field_l];
         if (param0 != 78) {
@@ -143,28 +143,19 @@ abstract class ub extends wj {
     private final int b(boolean param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (!param0) {
           L0: {
             this.field_F = -20;
             if (this.field_C) {
               if (this != this.field_H.h((byte) 18)) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = 0;
                 break L0;
               } else {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 256;
                 break L0;
               }
             } else {
-              stackOut_8_0 = 0;
-              stackIn_12_0 = stackOut_8_0;
+              stackIn_12_0 = 0;
               break L0;
             }
           }
@@ -173,17 +164,14 @@ abstract class ub extends wj {
           L1: {
             if (this.field_C) {
               if (this != this.field_H.h((byte) 18)) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L1;
               } else {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L1;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L1;
             }
           }
@@ -209,14 +197,10 @@ abstract class ub extends wj {
     }
 
     boolean k(int param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_10_0 = 0;
         int stackIn_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+        int var2;
+        int var3;
         var2 = this.b(true);
         var3 = -this.field_F + var2;
         if ((var3 ^ -1) >= -1) {
@@ -234,12 +218,10 @@ abstract class ub extends wj {
             } else {
               L1: {
                 if (this.field_C) {
-                  stackOut_21_0 = 0;
-                  stackIn_22_0 = stackOut_21_0;
+                  stackIn_22_0 = 0;
                   break L1;
                 } else {
-                  stackOut_20_0 = 1;
-                  stackIn_22_0 = stackOut_20_0;
+                  stackIn_22_0 = 1;
                   break L1;
                 }
               }
@@ -264,12 +246,10 @@ abstract class ub extends wj {
             } else {
               L3: {
                 if (this.field_C) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = 0;
                   break L3;
                 } else {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_0 = 1;
                   break L3;
                 }
               }

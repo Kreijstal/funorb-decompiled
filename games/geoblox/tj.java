@@ -8,7 +8,6 @@ final class tj {
     final static void a(int param0, int param1, se param2) {
         pk var6 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var6 = fj.field_q;
             var6.a(param0, (byte) -63);
@@ -25,7 +24,7 @@ final class tj {
             var6.c((byte) 95, param2.field_h);
             var6.c((byte) 95, param2.field_l);
             var6.c((byte) 95, param2.field_f);
-            discarded$0 = var6.d(104, var4);
+            var6.d(104, var4);
             var6.f(11700, -var4 + var6.field_f);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "tj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -33,10 +32,10 @@ final class tj {
     }
 
     final static void b(byte param0) {
-        String var2 = null;
-        String var3 = null;
-        String var4 = null;
-        String var5 = null;
+        String var2;
+        String var3;
+        String var4;
+        String var5;
         if (cf.field_i) {
           if (Geoblox.field_y == null) {
             if (param0 >= -47) {

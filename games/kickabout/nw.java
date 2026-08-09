@@ -21,8 +21,6 @@ final class nw {
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
         gn stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -30,16 +28,6 @@ final class nw {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_7_0 = null;
-        gn stackOut_9_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             L1: {
@@ -61,14 +49,12 @@ final class nw {
             }
             if (this.field_e.field_c == var3) {
               this.field_f = null;
-              stackOut_7_0 = null;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               this.field_f = var3.field_b;
-              stackOut_9_0 = (gn) (var3);
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = (gn) (var3);
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -77,27 +63,19 @@ final class nw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3_ref);
-            stackOut_11_1 = new StringBuilder().append("nw.G(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3_ref);
+
+            stackIn_13_1 = new StringBuilder().append("nw.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -116,8 +94,6 @@ final class nw {
         Object stackIn_6_0 = null;
         gn stackIn_9_0 = null;
         gn stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -125,17 +101,6 @@ final class nw {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_5_0 = null;
-        gn stackOut_10_0 = null;
-        gn stackOut_8_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             L1: {
@@ -149,20 +114,17 @@ final class nw {
             }
             if (this.field_e.field_c == var3) {
               this.field_f = null;
-              stackOut_5_0 = null;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (param0 == 395869153) {
                 this.field_f = var3.field_d;
-                stackOut_10_0 = (gn) (var3);
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = (gn) (var3);
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_8_0 = (gn) null;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = (gn) null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -172,27 +134,19 @@ final class nw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var3_ref);
-            stackOut_12_1 = new StringBuilder().append("nw.E(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var3_ref);
+
+            stackIn_14_1 = new StringBuilder().append("nw.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L2;
             }
           }
@@ -239,8 +193,8 @@ final class nw {
     }
 
     final gn a(int param0) {
-        gn var2 = null;
-        ut var3 = null;
+        gn var2;
+        ut var3;
         if (param0 == 0) {
           var2 = this.field_f;
           if (this.field_e.field_c == var2) {
@@ -265,7 +219,7 @@ final class nw {
     }
 
     final gn b(int param0) {
-        gn var2 = null;
+        gn var2;
         var2 = this.field_e.field_c.field_b;
         if (param0 == 0) {
           if (var2 == this.field_e.field_c) {
@@ -288,9 +242,8 @@ final class nw {
     }
 
     final gn b(byte param0) {
-        gn discarded$2 = null;
-        gn var2 = null;
-        gn var3 = null;
+        gn var2;
+        gn var3;
         if (param0 == 46) {
           var2 = this.field_f;
           if (var2 == this.field_e.field_c) {
@@ -302,7 +255,7 @@ final class nw {
           }
         } else {
           var3 = (gn) null;
-          discarded$2 = this.a((byte) -96, (gn) null);
+          this.a((byte) -96, (gn) null);
           var2 = this.field_f;
           if (var2 == this.field_e.field_c) {
             this.field_f = null;

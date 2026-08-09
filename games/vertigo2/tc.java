@@ -11,9 +11,8 @@ final class tc {
     }
 
     final static String a(int param0) {
-        String discarded$0 = null;
         if (param0 <= 126) {
-            discarded$0 = tc.a(19);
+            tc.a(19);
             return id.field_f.f(128);
         }
         return id.field_f.f(128);

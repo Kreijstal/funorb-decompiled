@@ -27,8 +27,6 @@ final class ok {
     final static boolean a(int param0, char param1) {
         int stackIn_8_0 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_6_0 = 0;
         if (param0 < -38) {
           if (param1 != 160) {
             if (param1 != 32) {
@@ -39,8 +37,7 @@ final class ok {
                   return false;
                 }
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 1;
                 return stackIn_20_0 != 0;
               }
             } else {
@@ -60,8 +57,7 @@ final class ok {
                   return false;
                 }
               } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 1;
                 return stackIn_8_0 != 0;
               }
             } else {
@@ -113,9 +109,8 @@ final class ok {
     }
 
     final static void a(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 15376) {
-            discarded$0 = ok.a(-54, '>');
+            ok.a(-54, '>');
             qh.a(4, true);
             return;
         }

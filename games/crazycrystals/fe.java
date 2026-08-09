@@ -19,11 +19,10 @@ final class fe extends l {
     }
 
     final static void a(boolean param0, int param1) {
-        String discarded$0 = null;
         dc.a(param0, (byte) 114, true);
         if (param1 != 7923) {
             CharSequence var3 = (CharSequence) null;
-            discarded$0 = fe.a(91, (CharSequence) null);
+            fe.a(91, (CharSequence) null);
         }
     }
 
@@ -53,21 +52,10 @@ final class fe extends l {
     }
 
     final static String a(int param0, CharSequence param1) {
-        StringBuilder discarded$1 = null;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        StringBuilder var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        StringBuilder discarded$0 = null;
         Object stackIn_18_0 = null;
         Object stackIn_29_0 = null;
         String stackIn_31_0 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         RuntimeException stackIn_35_0 = null;
@@ -75,17 +63,15 @@ final class fe extends l {
         String stackIn_35_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_30_0 = null;
-        Object stackOut_28_0 = null;
-        Object stackOut_17_0 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        StringBuilder var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
         var9 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -134,13 +120,11 @@ final class fe extends l {
                       L6: while (true) {
                         if (var6 >= var3) {
                           if (0 != var5.length()) {
-                            stackOut_30_0 = var5.toString();
-                            stackIn_31_0 = stackOut_30_0;
+                            stackIn_31_0 = var5.toString();
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
-                            stackOut_28_0 = null;
-                            stackIn_29_0 = stackOut_28_0;
+                            stackIn_29_0 = null;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           }
@@ -150,7 +134,7 @@ final class fe extends l {
                             if (pf.a((byte) -96, (char) var7)) {
                               var8 = tk.a(235, (char) var7);
                               if (0 != var8) {
-                                discarded$1 = var5.append((char) var8);
+                                discarded$0 = var5.append((char) var8);
                                 break L7;
                               } else {
                                 break L7;
@@ -164,8 +148,7 @@ final class fe extends l {
                         }
                       }
                     } else {
-                      stackOut_17_0 = null;
-                      stackIn_18_0 = stackOut_17_0;
+                      stackIn_18_0 = null;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     }
@@ -182,27 +165,19 @@ final class fe extends l {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) (var2);
-            stackOut_32_1 = new StringBuilder().append("fe.A(").append(param0).append(',');
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackIn_34_0 = (RuntimeException) (var2);
+
+            stackIn_34_1 = new StringBuilder().append("fe.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L8;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L8;
             }
           }
@@ -230,65 +205,42 @@ final class fe extends l {
     }
 
     final static void b(int param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
-        int var2 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var2 = CrazyCrystals.field_B;
-        try {
-          L0: {
-            sc.field_i[0] = new am(kg.a(fk.field_x[0], 100, 0));
-            sc.field_i[1] = new am(kg.a(fk.field_x[1], 100, 0));
-            ga.field_B = new am(kg.a(nk.field_j, 100, 0));
-            ua.field_a = new am(kg.a(uk.field_i, 100, 0));
-            cb.field_n = new am(kg.a(aq.field_t, 100, 0));
-            tm.field_f = new am(kg.a(qf.field_w, 100, 0));
-            var1_int = 0;
-            L1: while (true) {
-              if (var1_int >= 4) {
-                if (param0 == 42806) {
-                  si.field_e = new am(kg.a(rn.field_p, 100, 0));
-                  td.field_e = new am(kg.a(ti.field_l, 100, 0));
-                  bc.field_a = new am(kg.a(mg.field_d, 100, 0));
-                  dn.field_d = new am(kg.a(io.field_H, 100, 0));
-                  wp.field_b = new am(kg.a(cf.field_f, 100, 0));
-                  bn.field_h = new am(kg.a(lm.field_a, 100, 0));
-                  pm.field_b = new am(kg.a(jc.field_a, 100, 0));
-                  so.field_g = new am(kg.a(oa.field_e, 100, 0));
-                  fn.field_h = new am(kg.a(gk.field_j, 100, 0));
-                  dd.field_c = new am(kg.a(jm.field_k, (int)(Math.random() * 11.0) + 95, 0));
-                  cn.field_e = new am(kg.a(lb.field_d, 95 - -(int)(Math.random() * 11.0), 0));
-                  jj.field_c = new am(kg.a(an.field_s, 100, 0));
-                  m.field_n = new am(kg.a(cl.field_m, 100, 0));
-                  a.field_d = new am(kg.a(ab.field_z, 100, 0));
-                  rb.field_g = new am(kg.a(sa.field_nb, 100, 0));
-                  ln.field_f = new am(kg.a(tg.field_c, 100, 0));
-                  oj.field_E = new am(kg.a(va.field_b, 100, 0));
-                  c.field_q = new am(kg.a(ga.field_H, 100, 0));
-                  e.b((byte) -122);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                il.field_h[var1_int] = new am(kg.a(fo.field_i[var1_int], 100, 0));
-                var1_int++;
-                continue L1;
-              }
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1), "fe.G(" + param0 + ')');
+        int var2 = CrazyCrystals.field_B;
+        sc.field_i[0] = new am(kg.a(fk.field_x[0], 100, 0));
+        sc.field_i[1] = new am(kg.a(fk.field_x[1], 100, 0));
+        ga.field_B = new am(kg.a(nk.field_j, 100, 0));
+        ua.field_a = new am(kg.a(uk.field_i, 100, 0));
+        cb.field_n = new am(kg.a(aq.field_t, 100, 0));
+        tm.field_f = new am(kg.a(qf.field_w, 100, 0));
+        for (var1_int = 0; var1_int < 4; var1_int++) {
+            il.field_h[var1_int] = new am(kg.a(fo.field_i[var1_int], 100, 0));
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        if (param0 != 42806) {
+            return;
+        }
+        try {
+            si.field_e = new am(kg.a(rn.field_p, 100, 0));
+            td.field_e = new am(kg.a(ti.field_l, 100, 0));
+            bc.field_a = new am(kg.a(mg.field_d, 100, 0));
+            dn.field_d = new am(kg.a(io.field_H, 100, 0));
+            wp.field_b = new am(kg.a(cf.field_f, 100, 0));
+            bn.field_h = new am(kg.a(lm.field_a, 100, 0));
+            pm.field_b = new am(kg.a(jc.field_a, 100, 0));
+            so.field_g = new am(kg.a(oa.field_e, 100, 0));
+            fn.field_h = new am(kg.a(gk.field_j, 100, 0));
+            dd.field_c = new am(kg.a(jm.field_k, (int)(Math.random() * 11.0) + 95, 0));
+            cn.field_e = new am(kg.a(lb.field_d, 95 - -(int)(Math.random() * 11.0), 0));
+            jj.field_c = new am(kg.a(an.field_s, 100, 0));
+            m.field_n = new am(kg.a(cl.field_m, 100, 0));
+            a.field_d = new am(kg.a(ab.field_z, 100, 0));
+            rb.field_g = new am(kg.a(sa.field_nb, 100, 0));
+            ln.field_f = new am(kg.a(tg.field_c, 100, 0));
+            oj.field_E = new am(kg.a(va.field_b, 100, 0));
+            c.field_q = new am(kg.a(ga.field_H, 100, 0));
+            e.b((byte) -122);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) ((Object) runtimeException), "fe.G(" + param0 + ')');
         }
     }
 

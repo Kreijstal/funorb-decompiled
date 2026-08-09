@@ -21,12 +21,11 @@ final class e extends da {
     }
 
     final static ka a(int param0, int param1, byte param2) {
-        int discarded$0 = 0;
         int var5 = TorChallenge.field_F ? 1 : 0;
         ka var3 = new ka(param1, param1);
         int var4 = 0;
         if (param2 > -44) {
-            discarded$0 = e.b((byte) -104, 50);
+            e.b((byte) -104, 50);
         }
         while (var4 < var3.field_y.length) {
             var3.field_y[var4] = param0;
@@ -36,12 +35,12 @@ final class e extends da {
     }
 
     final static void a(byte param0, int param1) {
-        RuntimeException var2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        RuntimeException decompiledCaughtException = null;
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -125,10 +124,10 @@ final class e extends da {
     }
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         ue var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -159,15 +158,14 @@ final class e extends da {
     }
 
     final static ka[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        ka[] discarded$1 = null;
-        int var9 = 0;
-        ka[] var10 = null;
-        ka[] var11_ref_ka__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        ka var13 = null;
-        int var14 = 0;
-        int var15 = 0;
+        int var9;
+        ka[] var10;
+        ka[] var11_ref_ka__;
+        int var11;
+        int var12;
+        ka var13;
+        int var14;
+        int var15;
         var15 = TorChallenge.field_F ? 1 : 0;
         var9 = param4 + param2 + param8;
         var10 = new ka[]{new ka(var9, var9), new ka(param0, var9), new ka(var9, var9), new ka(var9, param0), new ka(64, 64), new ka(var9, param0), new ka(var9, var9), new ka(param0, var9), new ka(var9, var9)};
@@ -185,7 +183,7 @@ final class e extends da {
                       if (param3 == 1065) {
                         break L3;
                       } else {
-                        discarded$1 = e.a(32, -20, -114, -96, -32, 54, -99, -97, 73);
+                        e.a(32, -20, -114, -96, -32, 54, -99, -97, 73);
                         break L3;
                       }
                     }
@@ -287,10 +285,9 @@ final class e extends da {
     }
 
     public static void b(byte param0) {
-        ka[] discarded$0 = null;
         field_p = (int[][]) null;
         if (param0 != -83) {
-            discarded$0 = e.a(-61, 114, -62, 9, 74, -72, 46, -127, -48);
+            e.a(-61, 114, -62, 9, 74, -72, 46, -127, -48);
         }
         field_j = null;
         field_i = null;

@@ -30,12 +30,12 @@ class b {
 
     final synchronized void e() {
         try {
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             long var1 = 0L;
             Exception var3 = null;
             int var3_int = 0;
             int var4 = 0;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
             if (!this.field_c) {
               var1 = rf.c(0);
               try {
@@ -214,35 +214,12 @@ class b {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_r = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_j = stackIn_7_0 != 0;
-              field_l = param2;
-              return;
-            } else {
-              break L0;
-            }
-          }
+        if (param0 < 8000 || param0 > 48000) {
+            throw new IllegalArgumentException();
         }
-        throw new IllegalArgumentException();
+        field_r = param0;
+        field_j = param1 ? true : false;
+        field_l = param2;
     }
 
     void a(int param0) throws Exception {
@@ -254,12 +231,9 @@ class b {
 
     final static b a(ab param0, java.awt.Component param1, int param2, int param3) {
         try {
-            ei discarded$2 = null;
             sl var4 = null;
             Throwable var4_ref = null;
             sl var5 = null;
-            sl stackIn_9_0 = null;
-            int stackIn_9_1 = 0;
             sl stackIn_10_0 = null;
             int stackIn_10_1 = 0;
             sl stackIn_11_0 = null;
@@ -267,15 +241,6 @@ class b {
             int stackIn_11_2 = 0;
             sl stackIn_21_0 = null;
             Throwable decompiledCaughtException = null;
-            sl stackOut_8_0 = null;
-            int stackOut_8_1 = 0;
-            sl stackOut_10_0 = null;
-            int stackOut_10_1 = 0;
-            int stackOut_10_2 = 0;
-            sl stackOut_9_0 = null;
-            int stackOut_9_1 = 0;
-            int stackOut_9_2 = 0;
-            sl stackOut_20_0 = null;
             if (field_r != 0) {
               L0: {
                 if (param2 < 0) {
@@ -295,27 +260,19 @@ class b {
                         L3: {
                           var5 = new sl();
                           var4 = var5;
-                          stackOut_8_0 = (sl) (var4);
-                          stackOut_8_1 = 256;
-                          stackIn_10_0 = stackOut_8_0;
-                          stackIn_10_1 = stackOut_8_1;
-                          stackIn_9_0 = stackOut_8_0;
-                          stackIn_9_1 = stackOut_8_1;
+                          stackIn_10_0 = (sl) (var4);
+
+                          stackIn_10_1 = 256;
+
                           if (!field_j) {
-                            stackOut_10_0 = (sl) ((Object) stackIn_10_0);
-                            stackOut_10_1 = stackIn_10_1;
-                            stackOut_10_2 = 1;
-                            stackIn_11_0 = stackOut_10_0;
-                            stackIn_11_1 = stackOut_10_1;
-                            stackIn_11_2 = stackOut_10_2;
+                            stackIn_11_0 = (sl) ((Object) stackIn_10_0);
+                            stackIn_11_1 = stackIn_10_1;
+                            stackIn_11_2 = 1;
                             break L3;
                           } else {
-                            stackOut_9_0 = (sl) ((Object) stackIn_9_0);
-                            stackOut_9_1 = stackIn_9_1;
-                            stackOut_9_2 = 2;
-                            stackIn_11_0 = stackOut_9_0;
-                            stackIn_11_1 = stackOut_9_1;
-                            stackIn_11_2 = stackOut_9_2;
+                            stackIn_11_0 = (sl) ((Object) stackIn_10_0);
+                            stackIn_11_1 = stackIn_10_1;
+                            stackIn_11_2 = 2;
                             break L3;
                           }
                         }
@@ -341,7 +298,7 @@ class b {
                             } else {
                               field_t = new fd();
                               field_t.field_b = param0;
-                              discarded$2 = param0.a((Runnable) ((Object) field_t), false, field_l);
+                              param0.a((Runnable) ((Object) field_t), false, field_l);
                               break L5;
                             }
                           }
@@ -358,8 +315,7 @@ class b {
                             }
                           }
                         }
-                        stackOut_20_0 = (sl) (var4);
-                        stackIn_21_0 = stackOut_20_0;
+                        stackIn_21_0 = (sl) (var4);
                         break L2;
                       }
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -399,22 +355,22 @@ class b {
     }
 
     private final void a(int[] param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7_int = 0;
-        lk var7 = null;
-        int var8_int = 0;
-        lk[] var8 = null;
-        int var9 = 0;
-        Object var10 = null;
-        lk var11 = null;
-        kh var12 = null;
-        int var13 = 0;
-        lk var14 = null;
-        lk var15 = null;
-        int var15_int = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7_int;
+        Object var7;
+        int var8_int;
+        lk[] var8;
+        int var9;
+        Object var10;
+        lk var11;
+        kh var12;
+        int var13;
+        lk var14;
+        int var15_int;
+        lk var15;
         L0: {
           var3 = param1;
           if (!field_j) {
@@ -569,9 +525,9 @@ class b {
                         var6++;
                         continue L14;
                       } else {
-                        var10 = var7.field_i;
-                        var7.field_i = null;
-                        var7 = (lk) (var10);
+                        var10 = ((lk) (var7)).field_i;
+                        ((lk) (var7)).field_i = null;
+                        var7 = var10;
                         continue L15;
                       }
                     }
@@ -629,8 +585,8 @@ class b {
     }
 
     final synchronized void a() {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         L0: {
           if (field_t == null) {
             break L0;

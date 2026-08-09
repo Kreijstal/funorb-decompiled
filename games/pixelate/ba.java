@@ -12,17 +12,16 @@ final class ba {
     private int field_c;
 
     final static ak a(int param0) {
-        ak discarded$0 = null;
         if (param0 != -26573) {
-            discarded$0 = ba.a(77);
+            ba.a(77);
             return g.b(false);
         }
         return g.b(false);
     }
 
     final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Pixelate.field_H ? 1 : 0;
         if (param0 != -904) {
           this.field_e = (wl[]) null;
@@ -68,9 +67,9 @@ final class ba {
     }
 
     final boolean a(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = Pixelate.field_H ? 1 : 0;
         var2 = param0 ? 1 : 0;
         var3 = this.field_e.length - 1;

@@ -46,7 +46,7 @@ final class cc extends gh {
     }
 
     final static void a(boolean param0, int param1) {
-        int var3 = 0;
+        int var3;
         var3 = SteelSentinels.field_G;
         if (param1 == 0) {
           L0: {
@@ -191,28 +191,24 @@ final class cc extends gh {
     cc(String param0, String param1, long param2) {
         super(0L, (gh) null);
         CharSequence var6 = null;
-        String discarded$0 = null;
         try {
             this.field_mc = param0;
             this.field_ec = param2;
             this.field_Vb = param1;
             var6 = (CharSequence) ((Object) this.field_mc);
-            discarded$0 = ui.a(1, var6);
+            ui.a(1, var6);
         } catch (RuntimeException runtimeException) {
             throw ci.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final boolean a(cc param0, int param1) {
-        boolean discarded$2 = false;
         RuntimeException var3 = null;
         cc var4 = null;
         int stackIn_3_0 = 0;
         boolean stackIn_5_0 = false;
         boolean stackIn_11_0 = false;
         int stackIn_15_0 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -220,30 +216,14 @@ final class cc extends gh {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        boolean stackOut_10_0 = false;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        boolean stackOut_4_0 = false;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         try {
           L0: {
             L1: {
               if (param0.field_kc) {
-                stackOut_2_0 = 0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = 1;
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = 1;
                 break L1;
               }
             }
@@ -253,24 +233,21 @@ final class cc extends gh {
                   break L2;
                 } else {
                   var4 = (cc) null;
-                  discarded$2 = this.a((cc) null, 15);
+                  this.a((cc) null, 15);
                   break L2;
                 }
               }
               if (param0.field_Zb != this.field_Zb) {
-                stackOut_10_0 = this.field_Zb;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = this.field_Zb;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 L3: {
                   if (this.field_fc >= param0.field_fc) {
-                    stackOut_14_0 = 0;
-                    stackIn_15_0 = stackOut_14_0;
+                    stackIn_15_0 = 0;
                     break L3;
                   } else {
-                    stackOut_13_0 = 1;
-                    stackIn_15_0 = stackOut_13_0;
+                    stackIn_15_0 = 1;
                     break L3;
                   }
                 }
@@ -278,8 +255,7 @@ final class cc extends gh {
                 break L0;
               }
             } else {
-              stackOut_4_0 = this.field_kc;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = this.field_kc;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -288,27 +264,19 @@ final class cc extends gh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var3);
-            stackOut_16_1 = new StringBuilder().append("cc.G(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var3);
+
+            stackIn_18_1 = new StringBuilder().append("cc.G(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L4;
             }
           }
@@ -344,12 +312,11 @@ final class cc extends gh {
 
     final void a(int param0, String param1, String param2) {
         CharSequence var5 = null;
-        String discarded$0 = null;
         try {
             this.field_mc = param1;
             this.field_Vb = param2;
             var5 = (CharSequence) ((Object) this.field_mc);
-            discarded$0 = ui.a(1, var5);
+            ui.a(1, var5);
             int var4_int = -54 / ((54 - param0) / 38);
         } catch (RuntimeException runtimeException) {
             throw ci.a((Throwable) ((Object) runtimeException), "cc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

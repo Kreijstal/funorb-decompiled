@@ -16,9 +16,9 @@ final class ii {
     static int[][] field_f;
 
     final int a(boolean param0) {
-        int var2 = 0;
-        w var3 = null;
-        int var4 = 0;
+        int var2;
+        w var3;
+        int var4;
         var4 = TorChallenge.field_F ? 1 : 0;
         if (!param0) {
           return -18;
@@ -38,10 +38,9 @@ final class ii {
     }
 
     final w a(int param0) {
-        int discarded$9 = 0;
         w var2 = this.field_l.field_k;
         if (param0 != 25777) {
-            discarded$9 = this.a(false);
+            this.a(false);
             if (!(var2 != this.field_l)) {
                 this.field_b = null;
                 return null;
@@ -77,7 +76,7 @@ final class ii {
     }
 
     final w c(int param0) {
-        w var2 = null;
+        w var2;
         var2 = this.field_l.field_k;
         if (var2 != this.field_l) {
           if (param0 != -1) {
@@ -94,13 +93,12 @@ final class ii {
     }
 
     final w d(int param0) {
-        int discarded$2 = 0;
-        w var2 = null;
+        w var2;
         var2 = this.field_b;
         if (this.field_l != var2) {
           this.field_b = var2.field_k;
           if (param0 < 12) {
-            discarded$2 = this.a(false);
+            this.a(false);
             return var2;
           } else {
             return var2;
@@ -114,22 +112,12 @@ final class ii {
     final void a(w param0, int param1) {
         RuntimeException var3 = null;
         w var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -156,27 +144,19 @@ final class ii {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("ii.D(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("ii.D(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -185,16 +165,16 @@ final class ii {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var12 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -257,7 +237,7 @@ final class ii {
                           } else {
                             L8: {
                               var8 = qg.field_i[var6_int];
-                              if ((255 & var8 >> 1796256872) <= param2) {
+                              if ((255 & var8 >> 1796256872 ^ -1) >= (param2 ^ -1)) {
                                 break L8;
                               } else {
                                 if ((var8 & 65280) >> -1727660024 >= (var8 & 16711680) >> 367754512) {

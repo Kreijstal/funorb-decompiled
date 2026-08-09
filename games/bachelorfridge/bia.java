@@ -19,8 +19,8 @@ class bia extends bw {
     }
 
     final static void a(byte param0, long param1, int param2) {
-        pf var4 = null;
-        int var5 = 0;
+        pf var4;
+        int var5;
         if (param0 < 23) {
           field_h = (kv[]) null;
           var4 = sja.field_fb;

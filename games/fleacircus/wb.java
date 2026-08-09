@@ -19,8 +19,8 @@ abstract class wb extends cd {
     private boolean field_v;
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = fleas.field_A ? 1 : 0;
           lc.field_r = 0;
@@ -106,28 +106,14 @@ abstract class wb extends cd {
     }
 
     final void b(boolean param0, byte param1) {
-        int var3 = 0;
-        java.awt.Dimension var4 = null;
-        int var5 = 0;
-        java.awt.Container var6 = null;
         int stackIn_26_0 = 0;
         int stackIn_110_0 = 0;
-        int stackIn_111_0 = 0;
-        int stackIn_112_0 = 0;
-        int stackIn_113_0 = 0;
         int stackIn_113_1 = 0;
         int stackIn_145_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_109_0 = 0;
-        int stackOut_108_0 = 0;
-        int stackOut_110_0 = 0;
-        int stackOut_112_0 = 0;
-        int stackOut_112_1 = 0;
-        int stackOut_111_0 = 0;
-        int stackOut_111_1 = 0;
-        int stackOut_144_0 = 0;
-        int stackOut_143_0 = 0;
+        int var3;
+        java.awt.Dimension var4;
+        int var5;
+        java.awt.Container var6;
         L0: {
           var5 = fleas.field_A ? 1 : 0;
           if (null == aa.field_r) {
@@ -221,12 +207,10 @@ abstract class wb extends cd {
           }
           L9: {
             if (0 != (oa.field_j ^ -1)) {
-              stackOut_25_0 = 0;
-              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_0 = 0;
               break L9;
             } else {
-              stackOut_24_0 = 1;
-              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_0 = 1;
               break L9;
             }
           }
@@ -542,34 +526,27 @@ abstract class wb extends cd {
                   }
                   L35: {
                     if (of.field_i) {
-                      stackOut_109_0 = 0;
-                      stackIn_110_0 = stackOut_109_0;
+                      stackIn_110_0 = 0;
                       break L35;
                     } else {
-                      stackOut_108_0 = 1;
-                      stackIn_110_0 = stackOut_108_0;
+                      stackIn_110_0 = 1;
                       break L35;
                     }
                   }
                   L36: {
-                    stackOut_110_0 = stackIn_110_0;
-                    stackIn_112_0 = stackOut_110_0;
-                    stackIn_111_0 = stackOut_110_0;
+
+
                     if (of.field_i) {
-                      stackOut_112_0 = stackIn_112_0;
-                      stackOut_112_1 = 0;
-                      stackIn_113_0 = stackOut_112_0;
-                      stackIn_113_1 = stackOut_112_1;
+
+                      stackIn_113_1 = 0;
                       break L36;
                     } else {
-                      stackOut_111_0 = stackIn_111_0;
-                      stackOut_111_1 = 1;
-                      stackIn_113_0 = stackOut_111_0;
-                      stackIn_113_1 = stackOut_111_1;
+
+                      stackIn_113_1 = 1;
                       break L36;
                     }
                   }
-                  fl.a(stackIn_113_0 != 0, stackIn_113_1 != 0, hc.field_d, -22175);
+                  fl.a(stackIn_110_0 != 0, stackIn_113_1 != 0, hc.field_d, -22175);
                   break L33;
                 }
                 L37: {
@@ -674,12 +651,10 @@ abstract class wb extends cd {
               } else {
                 L47: {
                   if (!fc.field_c.c(0)) {
-                    stackOut_144_0 = 0;
-                    stackIn_145_0 = stackOut_144_0;
+                    stackIn_145_0 = 0;
                     break L47;
                   } else {
-                    stackOut_143_0 = 1;
-                    stackIn_145_0 = stackOut_143_0;
+                    stackIn_145_0 = 1;
                     break L47;
                   }
                 }
@@ -721,8 +696,8 @@ abstract class wb extends cd {
     }
 
     private final int h(int param0) {
-        int var2 = 0;
-        String var3 = null;
+        int var2;
+        String var3;
         if (!this.field_i) {
           if (!lk.i(10)) {
             return -1;
@@ -810,12 +785,10 @@ abstract class wb extends cd {
     }
 
     final void g(int param0) {
-        int var2 = 0;
-        sg var3 = null;
-        int var4 = 0;
         int stackIn_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
+        int var2;
+        sg var3;
+        int var4;
         L0: {
           var4 = fleas.field_A ? 1 : 0;
           var2 = be.field_a;
@@ -943,12 +916,10 @@ abstract class wb extends cd {
                                                 }
                                                 L17: {
                                                   if (12 != var2) {
-                                                    stackOut_35_0 = 0;
-                                                    stackIn_36_0 = stackOut_35_0;
+                                                    stackIn_36_0 = 0;
                                                     break L17;
                                                   } else {
-                                                    stackOut_34_0 = 1;
-                                                    stackIn_36_0 = stackOut_34_0;
+                                                    stackIn_36_0 = 1;
                                                     break L17;
                                                   }
                                                 }
@@ -1030,19 +1001,13 @@ abstract class wb extends cd {
     }
 
     final void f(byte param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        Object stackIn_2_0 = null;
+        int discarded$2 = 0;
+        int discarded$3 = 0;
+        int var2;
+        int var3;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
         L0: {
           L1: {
             var3 = fleas.field_A ? 1 : 0;
@@ -1050,24 +1015,19 @@ abstract class wb extends cd {
               break L1;
             } else {
               L2: {
-                stackOut_1_0 = this;
-                stackIn_3_0 = stackOut_1_0;
-                stackIn_2_0 = stackOut_1_0;
+                stackIn_3_0 = this;
+
                 if (rh.field_p == null) {
-                  stackOut_3_0 = this;
-                  stackOut_3_1 = 0;
-                  stackIn_4_0 = stackOut_3_0;
-                  stackIn_4_1 = stackOut_3_1;
+                  stackIn_4_0 = this;
+                  stackIn_4_1 = 0;
                   break L2;
                 } else {
-                  stackOut_2_0 = this;
-                  stackOut_2_1 = 1;
-                  stackIn_4_0 = stackOut_2_0;
-                  stackIn_4_1 = stackOut_2_1;
+                  stackIn_4_0 = this;
+                  stackIn_4_1 = 1;
                   break L2;
                 }
               }
-              discarded$4 = this.a(stackIn_4_1 != 0, 0, false);
+              discarded$2 = this.a(stackIn_4_1 != 0, 0, false);
               if (var3 == 0) {
                 break L0;
               } else {
@@ -1094,7 +1054,7 @@ abstract class wb extends cd {
                     }
                   }
                 }
-                discarded$5 = this.a(false, 0, false);
+                discarded$3 = this.a(false, 0, false);
                 if (var3 == 0) {
                   break L0;
                 } else {
@@ -1149,21 +1109,10 @@ abstract class wb extends cd {
     }
 
     private final void a(int param0, int param1, boolean param2, String param3, int param4) {
-        Exception var6 = null;
-        RuntimeException var6_ref = null;
-        String var6_ref2 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
-        Object stackIn_4_0 = null;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -1172,21 +1121,13 @@ abstract class wb extends cd {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_5_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        String var6 = null;
+        Exception var6_ref = null;
+        RuntimeException var6_ref2 = null;
+        String var7 = null;
+        String var8 = null;
+        String var9 = null;
+        String var10 = null;
         try {
           L0: {
             try {
@@ -1198,33 +1139,26 @@ abstract class wb extends cd {
                   L2: {
                     L3: {
                       this.field_n = this.getCodeBase().getHost();
-                      var6_ref2 = this.field_n.toLowerCase();
-                      stackOut_3_0 = this;
-                      stackIn_6_0 = stackOut_3_0;
-                      stackIn_4_0 = stackOut_3_0;
-                      if (var6_ref2.equals("jagex.com")) {
+                      var6 = this.field_n.toLowerCase();
+                      stackIn_6_0 = this;
+
+                      if (var6.equals("jagex.com")) {
                         break L3;
                       } else {
-                        stackOut_4_0 = this;
-                        stackIn_7_0 = stackOut_4_0;
-                        stackIn_5_0 = stackOut_4_0;
-                        if (!var6_ref2.endsWith(".jagex.com")) {
-                          stackOut_7_0 = this;
-                          stackOut_7_1 = 0;
-                          stackIn_8_0 = stackOut_7_0;
-                          stackIn_8_1 = stackOut_7_1;
+                        stackIn_7_0 = this;
+
+                        if (!var6.endsWith(".jagex.com")) {
+                          stackIn_8_0 = this;
+                          stackIn_8_1 = 0;
                           break L2;
                         } else {
-                          stackOut_5_0 = this;
-                          stackIn_6_0 = stackOut_5_0;
+                          stackIn_6_0 = this;
                           break L3;
                         }
                       }
                     }
-                    stackOut_6_0 = this;
-                    stackOut_6_1 = 1;
-                    stackIn_8_0 = stackOut_6_0;
-                    stackIn_8_1 = stackOut_6_1;
+                    stackIn_8_0 = this;
+                    stackIn_8_1 = 1;
                     break L2;
                   }
                   L4: {
@@ -1282,9 +1216,9 @@ abstract class wb extends cd {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L8: {
-                var6 = (Exception) (Object) decompiledCaughtException;
+                var6_ref = (Exception) (Object) decompiledCaughtException;
                 var10 = (String) null;
-                ud.a((String) null, (Throwable) ((Object) var6), 0);
+                ud.a((String) null, (Throwable) ((Object) var6_ref), 0);
                 this.a(-6469, "crash");
                 decompiledRegionSelector0 = 2;
                 break L8;
@@ -1306,28 +1240,20 @@ abstract class wb extends cd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           L9: {
-            var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var6_ref);
-            stackOut_23_1 = new StringBuilder().append("wb.PA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_25_0 = (RuntimeException) (var6_ref2);
+
+            stackIn_25_1 = new StringBuilder().append("wb.PA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L9;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L9;
             }
           }
@@ -1383,7 +1309,7 @@ abstract class wb extends cd {
     }
 
     final int e(boolean param0) {
-        int var2 = 0;
+        int var2;
         if (!param0) {
           L0: {
             L1: {
@@ -1479,16 +1405,16 @@ abstract class wb extends cd {
 
     private final int a(boolean param0, int param1, boolean param2) {
         try {
+            Throwable decompiledCaughtException = null;
             int var4 = 0;
-            Exception var5 = null;
             int var5_int = 0;
+            Exception var5 = null;
             String var7 = null;
             int var8 = 0;
             String var9 = null;
             String var10 = null;
             Boolean var11 = null;
             ni var12 = null;
-            Throwable decompiledCaughtException = null;
             var8 = fleas.field_A ? 1 : 0;
             var4 = mg.a(param0, cg.field_y, 10, al.field_f);
             if (var4 != 0) {
@@ -1764,7 +1690,7 @@ abstract class wb extends cd {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
-        int var9 = 0;
+        int var9;
         L0: {
           var9 = fleas.field_A ? 1 : 0;
           if (param3 == -39) {

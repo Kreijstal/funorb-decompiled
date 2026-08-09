@@ -13,20 +13,15 @@ final class aq extends oh {
     static double field_h;
 
     final static boolean a(int param0, boolean param1, int param2, boolean param3) {
-        boolean discarded$1 = false;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_30_0 = 0;
         int stackIn_41_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
+        int var4;
+        int var5;
         L0: {
           if (param1) {
             break L0;
           } else {
-            discarded$1 = aq.a(-82);
+            aq.a(-82);
             break L0;
           }
         }
@@ -47,12 +42,10 @@ final class aq extends oh {
                     } else {
                       L1: {
                         if (param0 <= param2) {
-                          stackOut_29_0 = 0;
-                          stackIn_30_0 = stackOut_29_0;
+                          stackIn_30_0 = 0;
                           break L1;
                         } else {
-                          stackOut_28_0 = 1;
-                          stackIn_30_0 = stackOut_28_0;
+                          stackIn_30_0 = 1;
                           break L1;
                         }
                       }
@@ -86,12 +79,10 @@ final class aq extends oh {
                     } else {
                       L2: {
                         if (param0 <= param2) {
-                          stackOut_40_0 = 0;
-                          stackIn_41_0 = stackOut_40_0;
+                          stackIn_41_0 = 0;
                           break L2;
                         } else {
-                          stackOut_39_0 = 1;
-                          stackIn_41_0 = stackOut_39_0;
+                          stackIn_41_0 = 1;
                           break L2;
                         }
                       }
@@ -142,10 +133,10 @@ final class aq extends oh {
     }
 
     final static gq a(int param0, int param1) {
-        gq[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        gq[] var5 = null;
+        gq[] var2;
+        int var3;
+        int var4;
+        gq[] var5;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         var5 = dn.a(4);
         var2 = var5;

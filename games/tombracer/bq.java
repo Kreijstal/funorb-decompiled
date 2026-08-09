@@ -18,21 +18,21 @@ final class bq {
     static String field_a;
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
         int[] var9_ref_int__ = null;
-        int var10 = 0;
+        int var9 = 0;
         int[] var10_ref_int__ = null;
-        int[] var11 = null;
+        int var10 = 0;
         int var11_int = 0;
-        int[] var12 = null;
+        int[] var11 = null;
         int var12_int = 0;
+        int[] var12 = null;
         int var13 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -53,35 +53,31 @@ final class bq {
               if (var6 <= var5_int) {
                 break L0;
               } else {
-                var8 += 2;
-                var5_int++;
-                var7 = var7 + var8;
-                if (var13 == 0) {
-                  L3: {
-                    if (0 > var7) {
-                      break L3;
-                    } else {
-                      var6--;
-                      var7 = var7 - (var6 << -1333958623);
-                      var9_ref_int__ = vaa.field_a[var6 + param0];
-                      var10_ref_int__ = vaa.field_a[-var6 + param0];
-                      var11_int = param1 + var5_int;
-                      var12_int = -var5_int + param1;
-                      nra.a((byte) -55, param2, var11_int, var9_ref_int__, var12_int);
-                      nra.a((byte) -55, param2, var11_int, var10_ref_int__, var12_int);
-                      break L3;
-                    }
+                L3: {
+                  var8 += 2;
+                  var5_int++;
+                  var7 = var7 + var8;
+                  if (0 > var7) {
+                    break L3;
+                  } else {
+                    var6--;
+                    var7 = var7 - (var6 << -1333958623);
+                    var9_ref_int__ = vaa.field_a[var6 + param0];
+                    var10_ref_int__ = vaa.field_a[-var6 + param0];
+                    var11_int = param1 + var5_int;
+                    var12_int = -var5_int + param1;
+                    nra.a((byte) -55, param2, var11_int, var9_ref_int__, var12_int);
+                    nra.a((byte) -55, param2, var11_int, var10_ref_int__, var12_int);
+                    break L3;
                   }
-                  var9 = param1 + var6;
-                  var10 = param1 - var6;
-                  var11 = vaa.field_a[var5_int + param0];
-                  var12 = vaa.field_a[-var5_int + param0];
-                  nra.a((byte) -55, param2, var9, var11, var10);
-                  nra.a((byte) -55, param2, var9, var12, var10);
-                  continue L2;
-                } else {
-                  return;
                 }
+                var9 = param1 + var6;
+                var10 = param1 - var6;
+                var11 = vaa.field_a[var5_int + param0];
+                var12 = vaa.field_a[-var5_int + param0];
+                nra.a((byte) -55, param2, var9, var11, var10);
+                nra.a((byte) -55, param2, var9, var12, var10);
+                continue L2;
               }
             }
           }

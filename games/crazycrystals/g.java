@@ -20,9 +20,9 @@ final class g {
 
     final static void a(byte param0, long param1) {
         try {
+            Throwable decompiledCaughtException = null;
             int var3 = 0;
             InterruptedException var4 = null;
-            Throwable decompiledCaughtException = null;
             var3 = -60 % ((64 - param0) / 39);
             try {
               L0: {

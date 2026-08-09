@@ -28,10 +28,10 @@ final class ce extends pg {
     }
 
     final static qb b(int param0, int param1, int param2) {
-        qb var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        qb var6 = null;
+        qb var3;
+        int var4;
+        int var5;
+        qb var6;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param2 == 21385) {
           var6 = new qb(param0, param0);

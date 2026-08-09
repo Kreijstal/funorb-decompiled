@@ -12,20 +12,11 @@ final class rg implements dja {
     }
 
     final static int b(byte param0) {
-        int var1 = 0;
-        L0: {
-          var1 = 8 % ((param0 - 63) / 33);
-          if (!vba.f((byte) -89)) {
-            break L0;
-          } else {
-            if (null != qn.field_h.g(0)) {
-              return qn.field_h.g(0).field_r;
-            } else {
-              break L0;
-            }
-          }
+        int var1 = 8 % ((param0 - 63) / 33);
+        if (!vba.f((byte) -89) || null == qn.field_h.g(0)) {
+            return -1;
         }
-        return -1;
+        return qn.field_h.g(0).field_r;
     }
 
     public final tv[] a(int param0, int param1) {
@@ -37,7 +28,6 @@ final class rg implements dja {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7_int = 0;
-        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -46,6 +36,7 @@ final class rg implements dja {
         int[] var17 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
         var13 = VoidHunters.field_G;
         try {
           L0: {

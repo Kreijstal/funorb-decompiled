@@ -14,7 +14,7 @@ final class lj {
     static int[] field_c;
 
     final synchronized static long a(byte param0) {
-        long var1 = 0L;
+        long var1;
         if (param0 < -17) {
           var1 = System.currentTimeMillis();
           if (var1 < tg.field_k) {
@@ -26,6 +26,7 @@ final class lj {
             return var1 + ml.field_P;
           }
         } else {
+          lj.a((byte) 69);
           var1 = System.currentTimeMillis();
           if (var1 >= tg.field_k) {
             tg.field_k = var1;

@@ -42,9 +42,9 @@ final class og {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
+            int var0;
+            int var1;
+            int var2;
             field_f = 640;
             field_i = "Mega Power: <%0>";
             field_k = "No highscores";

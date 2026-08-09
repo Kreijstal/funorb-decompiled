@@ -15,8 +15,6 @@ final class ga extends wf {
 
     final static boolean a(int param0, int param1, int param2) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == 0) {
             break L0;
@@ -33,29 +31,28 @@ final class ga extends wf {
               if ((param1 & 55) == 0) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
     }
 
     final static void a(int param0) {
-        pa[] array$2 = null;
-        pa[] array$3 = null;
+        pa[] array$0 = null;
+        pa[] array$1 = null;
+        pa[] stackIn_78_0 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         ha var6 = null;
-        RuntimeException decompiledCaughtException = null;
         var4 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -90,8 +87,8 @@ final class ga extends wf {
                   if (ii.field_k.length <= var2) {
                     break L1;
                   } else {
-                    array$2 = new pa[ps.field_f[var2].length];
-                    ii.field_k[var2] = array$2;
+                    array$0 = new pa[ps.field_f[var2].length];
+                    ii.field_k[var2] = array$0;
                     var2++;
                     continue L2;
                   }
@@ -180,7 +177,8 @@ final class ga extends wf {
                                                                                                 dh.field_k = var6.a(uc.field_g, false);
                                                                                                 break L0;
                                                                                               } else {
-                                                                                                rs.field_u[var2] = var6.a(af.field_c[var2], false);
+                                                                                                stackIn_78_0 = rs.field_u;
+                                                                                                stackIn_78_0[var2] = var6.a(af.field_c[var2], false);
                                                                                                 var2++;
                                                                                                 continue L24;
                                                                                               }
@@ -311,8 +309,8 @@ final class ga extends wf {
               } else {
                 L26: {
                   if (hr.field_d[var2] == null) {
-                    array$3 = new pa[jd.field_d[var2].length];
-                    hr.field_d[var2] = array$3;
+                    array$1 = new pa[jd.field_d[var2].length];
+                    hr.field_d[var2] = array$1;
                     break L26;
                   } else {
                     break L26;

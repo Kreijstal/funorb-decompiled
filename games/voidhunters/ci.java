@@ -50,7 +50,6 @@ final class ci implements dja {
     }
 
     final static boolean b(byte param0) {
-        boolean discarded$7 = false;
         if (!(vja.field_a != -1)) {
             if (!boa.a(1, 30000)) {
                 return false;
@@ -59,7 +58,7 @@ final class ci implements dja {
             qga.field_b.field_e = 0;
         }
         if (param0 <= 9) {
-            discarded$7 = ci.b((byte) -116);
+            ci.b((byte) -116);
             if (!((vja.field_a ^ -1) != 1)) {
                 if (boa.a(2, 30000)) {
                     vja.field_a = qga.field_b.e(1869);

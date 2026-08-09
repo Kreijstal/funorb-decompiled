@@ -17,9 +17,9 @@ final class qpb extends mc {
     }
 
     final static int a(boolean param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var4;
+        int var5;
         var5 = VoidHunters.field_G;
         var3 = 16777215;
         var4 = param1;
@@ -187,9 +187,8 @@ final class qpb extends mc {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        int discarded$1 = 0;
-        phb var7 = null;
-        phb var8 = null;
+        phb var7;
+        phb var8;
         if (-1 == (param1 ^ -1)) {
           if (null != this.field_t) {
             if (param2 > 47) {
@@ -209,7 +208,7 @@ final class qpb extends mc {
                 return;
               }
             } else {
-              discarded$1 = qpb.a(false, 44, 54);
+              qpb.a(false, 44, 54);
               if (-1 != (this.field_v ^ -1)) {
                 if (256 == this.field_v) {
                   this.field_t.b(param0 + this.field_g, param1, 74, param3 - -this.field_r);

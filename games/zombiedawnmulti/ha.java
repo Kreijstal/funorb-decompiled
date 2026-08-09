@@ -29,17 +29,13 @@ final class ha extends br {
 
     final static ob b(boolean param0) {
         int var1_int = 0;
-        IllegalArgumentException var1 = null;
-        ob var2 = null;
         ob stackIn_2_0 = null;
         ig stackIn_5_0 = null;
         ob stackIn_8_0 = null;
-        ob stackOut_1_0 = null;
-        ig stackOut_3_0 = null;
-        ig stackOut_4_0 = null;
-        ob stackOut_7_0 = null;
         int statePc = 0;
         Throwable caughtException = null;
+        IllegalArgumentException var1 = null;
+        ob var2 = null;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -59,8 +55,7 @@ final class ha extends br {
                 }
                 case 1: {
                     try {
-                        stackOut_1_0 = (ob) null;
-                        stackIn_2_0 = stackOut_1_0;
+                        stackIn_2_0 = (ob) null;
                         statePc = 2;
                         continue stateLoop;
                     } catch (Throwable stateCaught_1) {
@@ -73,15 +68,13 @@ final class ha extends br {
                     return stackIn_2_0;
                 }
                 case 3: {
-                    stackOut_3_0 = ok.field_p;
-                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_0 = ok.field_p;
                     statePc = 5;
                     continue stateLoop;
                 }
                 case 4: {
                     try {
-                        stackOut_4_0 = ok.field_p;
-                        stackIn_5_0 = stackOut_4_0;
+                        stackIn_5_0 = ok.field_p;
                         statePc = 5;
                         continue stateLoop;
                     } catch (Throwable stateCaught_4) {
@@ -117,8 +110,7 @@ final class ha extends br {
                 }
                 case 7: {
                     try {
-                        stackOut_7_0 = (ob) (var2);
-                        stackIn_8_0 = stackOut_7_0;
+                        stackIn_8_0 = (ob) (var2);
                         statePc = 8;
                         continue stateLoop;
                     } catch (Throwable stateCaught_7) {

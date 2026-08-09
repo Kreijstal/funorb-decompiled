@@ -43,7 +43,7 @@ final class pr {
     }
 
     final synchronized static long a(int param0) {
-        long var1 = 0L;
+        long var1;
         if (param0 == 14274) {
           var1 = System.currentTimeMillis();
           if (lh.field_z > var1) {
@@ -55,6 +55,7 @@ final class pr {
             return var1 + wd.field_N;
           }
         } else {
+          pr.a(81);
           var1 = System.currentTimeMillis();
           if (lh.field_z <= var1) {
             lh.field_z = var1;

@@ -14,9 +14,8 @@ final class bb extends br {
     byte[] field_f;
 
     public static void a(int param0) {
-        String discarded$2 = null;
         if (param0 != -18535) {
-          discarded$2 = bb.c(-69);
+          bb.c(-69);
           field_h = null;
           field_g = null;
           field_n = null;

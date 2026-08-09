@@ -47,11 +47,11 @@ final class mh implements Runnable {
     }
 
     final synchronized boolean b(int param0) {
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        Throwable decompiledCaughtException = null;
         if ((this.field_k ^ -1) <= -3) {
           return true;
         } else {
@@ -218,15 +218,13 @@ final class mh implements Runnable {
     public final void run() {
         try {
             int var1_int = 0;
-            Exception var1 = null;
-            Object var1_ref = null;
-            Throwable var2 = null;
-            Object var2_ref = null;
-            Throwable var3 = null;
             int var4 = 0;
             int var5 = 0;
             int var6 = 0;
             Throwable decompiledCaughtException = null;
+            Object var1 = null;
+            Exception var1_ref = null;
+            Object var2 = null;
             var4 = ZombieDawnMulti.field_E ? 1 : 0;
             try {
               L0: while (true) {
@@ -274,8 +272,8 @@ final class mh implements Runnable {
                   }
                   throw mh.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.field_m.length + " " + this.field_a));
                 }
-                var1_ref = this;
-                synchronized (var1_ref) {
+                var1 = this;
+                synchronized (var1) {
                   L5: {
                     this.finalize();
                     this.field_k = 3;
@@ -286,9 +284,9 @@ final class mh implements Runnable {
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var2_ref = this;
-              synchronized (var2_ref) {
+              var1_ref = (Exception) (Object) decompiledCaughtException;
+              var2 = this;
+              synchronized (var2) {
                 L6: {
                   this.finalize();
                   this.field_k = this.field_k + 1;
@@ -305,10 +303,6 @@ final class mh implements Runnable {
     }
 
     final static void c(int param0) {
-        int discarded$0 = 0;
-        int discarded$1 = 0;
-        int discarded$2 = 0;
-        int discarded$3 = 0;
         vl var1 = null;
         ga var2 = null;
         if (param0 != 0) {
@@ -319,10 +313,10 @@ final class mh implements Runnable {
                 return;
             }
             var2 = s.field_e;
-            discarded$0 = var2.i(-1478490344);
-            discarded$1 = var2.i(-1478490344);
-            discarded$2 = var2.i(-1478490344);
-            discarded$3 = var2.i(-1478490344);
+            var2.i(-1478490344);
+            var2.i(-1478490344);
+            var2.i(-1478490344);
+            var2.i(-1478490344);
             var1.a(true);
             return;
         }
@@ -332,10 +326,10 @@ final class mh implements Runnable {
             return;
         }
         var2 = s.field_e;
-        int discarded$4 = var2.i(-1478490344);
-        int discarded$5 = var2.i(-1478490344);
-        int discarded$6 = var2.i(-1478490344);
-        int discarded$7 = var2.i(-1478490344);
+        var2.i(-1478490344);
+        var2.i(-1478490344);
+        var2.i(-1478490344);
+        var2.i(-1478490344);
         var1.a(true);
     }
 

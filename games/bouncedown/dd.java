@@ -10,15 +10,15 @@ final class dd implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        Exception var1 = null;
-        RuntimeException var1_ref = null;
         e var2 = null;
-        Throwable var3 = null;
         int var4 = 0;
-        String var5 = null;
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
+        Exception var1 = null;
+        RuntimeException var1_ref = null;
+        Throwable var3 = null;
+        String var5 = null;
         var4 = Bounce.field_N;
         try {
           L0: {

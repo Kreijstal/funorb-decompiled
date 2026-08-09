@@ -14,11 +14,12 @@ final class ab {
     final wl b(int param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var3 = 0;
-        wl var4 = null;
-        wl var5 = null;
-        wl var8 = null;
-        wl var9 = null;
+        int var3;
+        Object var4;
+        wl var4_ref;
+        wl var5;
+        wl var8;
+        wl var9;
         var3 = wizardrun.field_H;
         if (0 >= this.field_g) {
           if (param0 == 1) {
@@ -26,9 +27,9 @@ final class ab {
               if (this.field_g < this.field_a) {
                 fieldTemp$2 = this.field_g;
                 this.field_g = this.field_g + 1;
-                var4 = this.field_d[fieldTemp$2].field_b;
-                var9 = var4;
-                if (var4 == this.field_d[-1 + this.field_g]) {
+                var4_ref = this.field_d[fieldTemp$2].field_b;
+                var9 = var4_ref;
+                if (var4_ref == this.field_d[-1 + this.field_g]) {
                   continue L0;
                 } else {
                   this.field_e = var9.field_b;
@@ -48,9 +49,9 @@ final class ab {
                 if (this.field_g < this.field_a) {
                   fieldTemp$3 = this.field_g;
                   this.field_g = this.field_g + 1;
-                  var4 = this.field_d[fieldTemp$3].field_b;
-                  var5 = var4;
-                  if (var4 == this.field_d[-1 + this.field_g]) {
+                  var4_ref = this.field_d[fieldTemp$3].field_b;
+                  var5 = var4_ref;
+                  if (var4_ref == this.field_d[-1 + this.field_g]) {
                     continue L1;
                   } else {
                     this.field_e = var5.field_b;
@@ -72,9 +73,9 @@ final class ab {
     }
 
     final wl a(int param0, long param1) {
-        wl var4 = null;
-        wl var5 = null;
-        int var6 = 0;
+        wl var4;
+        wl var5;
+        int var6;
         var6 = wizardrun.field_H;
         var4 = this.field_d[(int)((long)(this.field_a - param0) & param1)];
         this.field_f = var4.field_b;
@@ -158,18 +159,18 @@ final class ab {
     }
 
     ab(int param0) {
-        wl dupTemp$2 = null;
-        int var2 = 0;
-        wl var3 = null;
+        wl dupTemp$1 = null;
+        int var2;
+        wl var3;
         this.field_g = 0;
         this.field_a = param0;
         this.field_d = new wl[param0];
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new wl();
-            var3 = dupTemp$2;
-            this.field_d[var2] = dupTemp$2;
+            dupTemp$1 = new wl();
+            var3 = dupTemp$1;
+            this.field_d[var2] = dupTemp$1;
             var3.field_c = var3;
             var3.field_b = var3;
             var2++;

@@ -9,13 +9,13 @@ final class bh extends le {
 
     final static void a(int param0) {
         al[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         al var3 = null;
         int var4 = 0;
         al[] var5 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = ZombieDawn.field_J;
         try {
           L0: {
@@ -78,23 +78,16 @@ final class bh extends le {
         char[] var6 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_23_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_24_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_2_0 = 0;
         var5 = ZombieDawn.field_J;
         try {
           L0: {
             if (!Character.isISOControl(param0)) {
               if (c.a(param0, 441)) {
-                stackOut_6_0 = 1;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -115,16 +108,14 @@ final class bh extends le {
                     }
                     L3: while (true) {
                       if (var3 >= var2.length) {
-                        stackOut_22_0 = 0;
-                        stackIn_23_0 = stackOut_22_0;
-                        decompiledRegionSelector0 = 4;
+                        stackIn_24_0 = 0;
+                        decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
                         var4 = var2[var3];
                         if (param0 == var4) {
-                          stackOut_19_0 = 1;
-                          stackIn_20_0 = stackOut_19_0;
-                          decompiledRegionSelector0 = 3;
+                          stackIn_21_0 = 1;
+                          decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
                           var3++;
@@ -134,21 +125,17 @@ final class bh extends le {
                     }
                   } else {
                     var4 = var6[var3];
-                    if (param0 != var4) {
+                    if ((param0 ^ -1) != (var4 ^ -1)) {
                       var3++;
                       continue L1;
                     } else {
-                      stackOut_11_0 = 1;
-                      stackIn_12_0 = stackOut_11_0;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
+                      return true;
                     }
                   }
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -165,13 +152,9 @@ final class bh extends le {
             return stackIn_7_0 != 0;
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return stackIn_12_0 != 0;
+              return stackIn_21_0 != 0;
             } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_20_0 != 0;
-              } else {
-                return stackIn_23_0 != 0;
-              }
+              return stackIn_24_0 != 0;
             }
           }
         }

@@ -18,51 +18,34 @@ final class cs extends oh {
     }
 
     final static bi[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        bi var9 = null;
-        bi var10 = null;
-        bi var11 = null;
-        bi var12 = null;
-        bi var13 = null;
-        Object var14 = null;
-        int[] var15 = null;
         bi var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
-        L0: {
-          var18 = gf.field_h;
-          var17 = var18;
-          var15 = var17;
-          var6 = var15;
-          var7 = gf.field_b;
-          var8 = gf.field_k;
-          var9 = new bi(param1, param2 - 2 * param1);
-          var9.e();
-          gf.i(0, 0, param1, param2 - param1 * 2, param3, param4);
-          var10 = new bi(param1, param1);
-          var10.e();
-          gf.d(0, 0, param1, param1, param3);
-          var11 = new bi(16, param1);
-          var11.e();
-          gf.d(0, 0, param0, param1, param3);
-          var12 = new bi(param1, param1);
-          var12.e();
-          gf.d(0, 0, param1, param1, param4);
-          var13 = new bi(16, param1);
-          var13.e();
-          gf.d(0, 0, 16, param1, param4);
-          var14 = null;
-          if (0 < param5) {
+        int[] var18 = gf.field_h;
+        int[] var17 = var18;
+        int[] var15 = var17;
+        int[] var6 = var15;
+        int var7 = gf.field_b;
+        int var8 = gf.field_k;
+        bi var9 = new bi(param1, param2 - 2 * param1);
+        var9.e();
+        gf.i(0, 0, param1, param2 - param1 * 2, param3, param4);
+        bi var10 = new bi(param1, param1);
+        var10.e();
+        gf.d(0, 0, param1, param1, param3);
+        bi var11 = new bi(16, param1);
+        var11.e();
+        gf.d(0, 0, param0, param1, param3);
+        bi var12 = new bi(param1, param1);
+        var12.e();
+        gf.d(0, 0, param1, param1, param4);
+        bi var13 = new bi(16, param1);
+        var13.e();
+        gf.d(0, 0, 16, param1, param4);
+        Object var14 = null;
+        if (!(0 >= param5)) {
             var16 = new bi(16, 16);
             var14 = var16;
             var16.e();
             gf.d(0, 0, 16, 16, param5);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         gf.a(var18, var7, var8);
         return new bi[]{var10, var11, var10, var9, (bi) (var14), var9, var12, var13, var12};

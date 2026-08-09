@@ -9,9 +9,12 @@ final class ai {
     static int field_e;
 
     final static void a(int param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_25_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -19,11 +22,6 @@ final class ai {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_25_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -54,12 +52,10 @@ final class ai {
                           L3: {
                             var12 = lg.field_d[var11];
                             if (!param1) {
-                              stackOut_24_0 = dc.field_c[var12];
-                              stackIn_25_0 = stackOut_24_0;
+                              stackIn_25_0 = dc.field_c[var12];
                               break L3;
                             } else {
-                              stackOut_23_0 = kf.field_f[var12];
-                              stackIn_25_0 = stackOut_23_0;
+                              stackIn_25_0 = kf.field_f[var12];
                               break L3;
                             }
                           }
@@ -82,9 +78,9 @@ final class ai {
                                   break L5;
                                 }
                               }
-                              incrementValue$1 = var8;
+                              incrementValue$0 = var8;
                               var8++;
-                              lg.field_d[incrementValue$1] = var12;
+                              lg.field_d[incrementValue$0] = var12;
                               break L4;
                             }
                           }
@@ -160,8 +156,8 @@ final class ai {
     }
 
     final static void a(boolean param0) {
-        double var1 = 0.0;
-        int var3 = 0;
+        double var1;
+        int var3;
         var1 = 3.141592653589793 * (double)(cl.field_n % 512) / 256.0;
         var3 = 16 * (vg.field_t.field_z / 2 - 9);
         em.field_c[0] = (int)((double)var3 * Math.sin(var1));

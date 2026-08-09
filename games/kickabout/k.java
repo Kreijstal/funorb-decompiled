@@ -13,10 +13,9 @@ final class k extends gn {
     static String field_h;
 
     final static void a(boolean param0, int param1) {
-        int discarded$0 = 0;
         np.field_Jb.a(new hg(param1), 3);
         if (!param0) {
-            discarded$0 = k.b(-78);
+            k.b(-78);
         }
     }
 

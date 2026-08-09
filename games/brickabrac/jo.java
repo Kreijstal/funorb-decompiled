@@ -14,64 +14,12 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
-            L1: {
-              if (this.field_l != param0) {
-                break L1;
-              } else {
+            if (this.field_l == param0) {
                 this.field_l = null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("jo.removeConsumer(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
-            }
-          }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) ((Object) runtimeException), "jo.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,89 +33,34 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
-        boolean discarded$3 = false;
-        RuntimeException runtimeException = null;
-        java.awt.Component var6 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
-            L1: {
-              this.c(0);
-              discarded$3 = param3.drawImage(this.field_c, param1, param0, (java.awt.image.ImageObserver) (this));
-              if (param2 == -17260) {
-                break L1;
-              } else {
-                var6 = (java.awt.Component) null;
+            this.c(0);
+            param3.drawImage(this.field_c, param1, param0, (java.awt.image.ImageObserver) (this));
+            if (param2 != -17260) {
+                java.awt.Component var6 = (java.awt.Component) null;
                 this.a((java.awt.Component) null, 25, false, -96);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("jo.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param3 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
-            }
-          }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) ((Object) runtimeException), "jo.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(java.awt.Component param0, int param1, boolean param2, int param3) {
-        boolean discarded$9 = false;
         this.field_f = param1;
         this.field_d = new int[1 + param1 * param3];
         this.field_g = param3;
         this.field_i = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
         this.field_c = param0.createImage((java.awt.image.ImageProducer) (this));
         this.c(0);
-        boolean discarded$0 = param0.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
+        param0.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
         this.c(0);
-        boolean discarded$8 = param0.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
+        param0.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
         if (!param2) {
             return;
         }
         try {
             this.c(0);
-            discarded$9 = param0.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
+            param0.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
             this.a((byte) 100);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) ((Object) runtimeException), "jo.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -181,54 +74,34 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_0_0 = 0;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = 1;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var7);
-            stackOut_2_1 = new StringBuilder().append("jo.imageUpdate(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var7);
+
+            stackIn_4_1 = new StringBuilder().append("jo.imageUpdate(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -266,8 +139,29 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final static void a(int param0, j param1, int param2, ak param3, int param4, int param5, int param6) {
-        RuntimeException var7 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_15_1 = 0;
+        jp stackIn_18_0 = null;
+        int stackIn_35_0 = 0;
+        int stackIn_35_1 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_36_1 = 0;
+        int stackIn_36_2 = 0;
+        int stackIn_71_0 = 0;
+        RuntimeException stackIn_86_0 = null;
+        StringBuilder stackIn_86_1 = null;
+        RuntimeException stackIn_87_0 = null;
+        StringBuilder stackIn_87_1 = null;
+        String stackIn_87_2 = null;
+        StringBuilder stackIn_89_1 = null;
+        StringBuilder stackIn_90_1 = null;
+        String stackIn_90_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         jp var10 = null;
         int var11 = 0;
@@ -281,71 +175,6 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         int var19 = 0;
         int var20 = 0;
         int[] var24 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_15_1 = 0;
-        jp stackIn_18_0 = null;
-        int stackIn_34_0 = 0;
-        int stackIn_34_1 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_35_1 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_36_1 = 0;
-        int stackIn_36_2 = 0;
-        int stackIn_71_0 = 0;
-        RuntimeException stackIn_85_0 = null;
-        StringBuilder stackIn_85_1 = null;
-        RuntimeException stackIn_86_0 = null;
-        StringBuilder stackIn_86_1 = null;
-        RuntimeException stackIn_87_0 = null;
-        StringBuilder stackIn_87_1 = null;
-        String stackIn_87_2 = null;
-        RuntimeException stackIn_88_0 = null;
-        StringBuilder stackIn_88_1 = null;
-        RuntimeException stackIn_89_0 = null;
-        StringBuilder stackIn_89_1 = null;
-        RuntimeException stackIn_90_0 = null;
-        StringBuilder stackIn_90_1 = null;
-        String stackIn_90_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_14_1 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_13_1 = 0;
-        jp stackOut_17_0 = null;
-        jp stackOut_16_0 = null;
-        int stackOut_33_0 = 0;
-        int stackOut_33_1 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_35_1 = 0;
-        int stackOut_35_2 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_34_1 = 0;
-        int stackOut_34_2 = 0;
-        int stackOut_70_0 = 0;
-        int stackOut_69_0 = 0;
-        RuntimeException stackOut_84_0 = null;
-        StringBuilder stackOut_84_1 = null;
-        RuntimeException stackOut_86_0 = null;
-        StringBuilder stackOut_86_1 = null;
-        String stackOut_86_2 = null;
-        RuntimeException stackOut_85_0 = null;
-        StringBuilder stackOut_85_1 = null;
-        String stackOut_85_2 = null;
-        RuntimeException stackOut_87_0 = null;
-        StringBuilder stackOut_87_1 = null;
-        RuntimeException stackOut_89_0 = null;
-        StringBuilder stackOut_89_1 = null;
-        String stackOut_89_2 = null;
-        RuntimeException stackOut_88_0 = null;
-        StringBuilder stackOut_88_1 = null;
-        String stackOut_88_2 = null;
         var20 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -368,12 +197,10 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
               kc.field_q.a((byte) 105);
               lb.b(var24);
               if ((1 << param2 & (param3.field_a | (param3.field_i | param3.field_g))) != 0) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L2;
               }
             }
@@ -391,36 +218,29 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                     continue L3;
                   } else {
                     L5: {
-                      if ((1 & var14.field_N) == 0) {
+                      if ((1 & var14.field_N ^ -1) == -1) {
                         L6: {
                           var8 = param6 - -((var14.field_m >> 460994568) / param0);
                           var7_int = (var14.field_j >> -1100158744) / param0 + param4;
-                          stackOut_12_0 = var14.field_i;
-                          stackIn_14_0 = stackOut_12_0;
-                          stackIn_13_0 = stackOut_12_0;
+                          stackIn_14_0 = var14.field_i;
+
                           if (-1 != (var14.field_N & 2 ^ -1)) {
-                            stackOut_14_0 = stackIn_14_0;
-                            stackOut_14_1 = 29;
-                            stackIn_15_0 = stackOut_14_0;
-                            stackIn_15_1 = stackOut_14_1;
+                            stackIn_15_0 = stackIn_14_0;
+                            stackIn_15_1 = 29;
                             break L6;
                           } else {
-                            stackOut_13_0 = stackIn_13_0;
-                            stackOut_13_1 = 0;
-                            stackIn_15_0 = stackOut_13_0;
-                            stackIn_15_1 = stackOut_13_1;
+                            stackIn_15_0 = stackIn_14_0;
+                            stackIn_15_1 = 0;
                             break L6;
                           }
                         }
                         L7: {
                           var15 = stackIn_15_0 + stackIn_15_1;
                           if (var15 != 24) {
-                            stackOut_17_0 = nj.field_l[var15];
-                            stackIn_18_0 = stackOut_17_0;
+                            stackIn_18_0 = nj.field_l[var15];
                             break L7;
                           } else {
-                            stackOut_16_0 = (jp) (var10);
-                            stackIn_18_0 = stackOut_16_0;
+                            stackIn_18_0 = (jp) (var10);
                             break L7;
                           }
                         }
@@ -469,27 +289,19 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                             if (var11 == 0) {
                               L10: {
                                 var19 = var14.field_l + param1.field_U;
-                                stackOut_33_0 = 256;
-                                stackOut_33_1 = 16;
-                                stackIn_35_0 = stackOut_33_0;
-                                stackIn_35_1 = stackOut_33_1;
-                                stackIn_34_0 = stackOut_33_0;
-                                stackIn_34_1 = stackOut_33_1;
+                                stackIn_35_0 = 256;
+
+                                stackIn_35_1 = 16;
+
                                 if (16 >= var19) {
-                                  stackOut_35_0 = stackIn_35_0;
-                                  stackOut_35_1 = stackIn_35_1;
-                                  stackOut_35_2 = var19;
-                                  stackIn_36_0 = stackOut_35_0;
-                                  stackIn_36_1 = stackOut_35_1;
-                                  stackIn_36_2 = stackOut_35_2;
+                                  stackIn_36_0 = stackIn_35_0;
+                                  stackIn_36_1 = stackIn_35_1;
+                                  stackIn_36_2 = var19;
                                   break L10;
                                 } else {
-                                  stackOut_34_0 = stackIn_34_0;
-                                  stackOut_34_1 = stackIn_34_1;
-                                  stackOut_34_2 = 16;
-                                  stackIn_36_0 = stackOut_34_0;
-                                  stackIn_36_1 = stackOut_34_1;
-                                  stackIn_36_2 = stackOut_34_2;
+                                  stackIn_36_0 = stackIn_35_0;
+                                  stackIn_36_1 = stackIn_35_1;
+                                  stackIn_36_2 = 16;
                                   break L10;
                                 }
                               }
@@ -535,12 +347,10 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                                                       if (-15 == (var17 ^ -1)) {
                                                         L12: {
                                                           if ((2 * var14.field_l ^ -1) >= -9) {
-                                                            stackOut_70_0 = 2 * var14.field_l;
-                                                            stackIn_71_0 = stackOut_70_0;
+                                                            stackIn_71_0 = 2 * var14.field_l;
                                                             break L12;
                                                           } else {
-                                                            stackOut_69_0 = 8;
-                                                            stackIn_71_0 = stackOut_69_0;
+                                                            stackIn_71_0 = 8;
                                                             break L12;
                                                           }
                                                         }
@@ -663,56 +473,40 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var7 = decompiledCaughtException;
-            stackOut_84_0 = (RuntimeException) (var7);
-            stackOut_84_1 = new StringBuilder().append("jo.E(").append(param0).append(',');
-            stackIn_86_0 = stackOut_84_0;
-            stackIn_86_1 = stackOut_84_1;
-            stackIn_85_0 = stackOut_84_0;
-            stackIn_85_1 = stackOut_84_1;
+            stackIn_86_0 = (RuntimeException) (var7);
+
+            stackIn_86_1 = new StringBuilder().append("jo.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_86_0 = (RuntimeException) ((Object) stackIn_86_0);
-              stackOut_86_1 = (StringBuilder) ((Object) stackIn_86_1);
-              stackOut_86_2 = "null";
-              stackIn_87_0 = stackOut_86_0;
-              stackIn_87_1 = stackOut_86_1;
-              stackIn_87_2 = stackOut_86_2;
+              stackIn_87_0 = (RuntimeException) ((Object) stackIn_86_0);
+              stackIn_87_1 = (StringBuilder) ((Object) stackIn_86_1);
+              stackIn_87_2 = "null";
               break L17;
             } else {
-              stackOut_85_0 = (RuntimeException) ((Object) stackIn_85_0);
-              stackOut_85_1 = (StringBuilder) ((Object) stackIn_85_1);
-              stackOut_85_2 = "{...}";
-              stackIn_87_0 = stackOut_85_0;
-              stackIn_87_1 = stackOut_85_1;
-              stackIn_87_2 = stackOut_85_2;
+              stackIn_87_0 = (RuntimeException) ((Object) stackIn_86_0);
+              stackIn_87_1 = (StringBuilder) ((Object) stackIn_86_1);
+              stackIn_87_2 = "{...}";
               break L17;
             }
           }
           L18: {
-            stackOut_87_0 = (RuntimeException) ((Object) stackIn_87_0);
-            stackOut_87_1 = ((StringBuilder) (Object) stackIn_87_1).append(stackIn_87_2).append(',').append(param2).append(',');
-            stackIn_89_0 = stackOut_87_0;
-            stackIn_89_1 = stackOut_87_1;
-            stackIn_88_0 = stackOut_87_0;
-            stackIn_88_1 = stackOut_87_1;
+
+
+            stackIn_89_1 = ((StringBuilder) (Object) stackIn_87_1).append(stackIn_87_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_89_0 = (RuntimeException) ((Object) stackIn_89_0);
-              stackOut_89_1 = (StringBuilder) ((Object) stackIn_89_1);
-              stackOut_89_2 = "null";
-              stackIn_90_0 = stackOut_89_0;
-              stackIn_90_1 = stackOut_89_1;
-              stackIn_90_2 = stackOut_89_2;
+              stackIn_87_0 = (RuntimeException) ((Object) stackIn_87_0);
+              stackIn_90_1 = (StringBuilder) ((Object) stackIn_89_1);
+              stackIn_90_2 = "null";
               break L18;
             } else {
-              stackOut_88_0 = (RuntimeException) ((Object) stackIn_88_0);
-              stackOut_88_1 = (StringBuilder) ((Object) stackIn_88_1);
-              stackOut_88_2 = "{...}";
-              stackIn_90_0 = stackOut_88_0;
-              stackIn_90_1 = stackOut_88_1;
-              stackIn_90_2 = stackOut_88_2;
+              stackIn_87_0 = (RuntimeException) ((Object) stackIn_87_0);
+              stackIn_90_1 = (StringBuilder) ((Object) stackIn_89_1);
+              stackIn_90_2 = "{...}";
               break L18;
             }
           }
-          throw qb.a((Throwable) ((Object) stackIn_90_0), stackIn_90_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_87_0), stackIn_90_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

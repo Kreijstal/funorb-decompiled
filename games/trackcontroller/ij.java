@@ -18,9 +18,12 @@ final class ij implements t {
     static wg field_d;
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_26_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -28,11 +31,6 @@ final class ij implements t {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_26_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
         var14 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -64,12 +62,10 @@ final class ij implements t {
                             L3: {
                               var12 = lf.field_Y[var11];
                               if (param5) {
-                                stackOut_25_0 = g.field_u[var12];
-                                stackIn_26_0 = stackOut_25_0;
+                                stackIn_26_0 = g.field_u[var12];
                                 break L3;
                               } else {
-                                stackOut_24_0 = va.field_e[var12];
-                                stackIn_26_0 = stackOut_24_0;
+                                stackIn_26_0 = va.field_e[var12];
                                 break L3;
                               }
                             }
@@ -85,9 +81,9 @@ final class ij implements t {
                                 }
                               } else {
                                 lf.field_Y[var11] = lf.field_Y[var8];
-                                incrementValue$1 = var8;
+                                incrementValue$0 = var8;
                                 var8++;
-                                lf.field_Y[incrementValue$1] = var12;
+                                lf.field_Y[incrementValue$0] = var12;
                                 if (var13 < var9) {
                                   var9 = var13;
                                   break L4;
@@ -167,9 +163,8 @@ final class ij implements t {
     }
 
     final static void a(int param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         L0: {
           if (param0 == 13809) {
             break L0;
@@ -195,11 +190,10 @@ final class ij implements t {
     }
 
     final static void a(dh param0, int param1, int param2) {
-        boolean discarded$0 = false;
         try {
             pa.field_c.a((byte) -115, param0);
             if (param2 > -120) {
-                discarded$0 = ij.b(63);
+                ij.b(63);
             }
             me.a(param0, 0, param1);
         } catch (RuntimeException runtimeException) {
@@ -224,16 +218,7 @@ final class ij implements t {
     }
 
     public final void a(int param0, al param1, int param2, boolean param3, int param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        ed var11 = null;
         al stackIn_3_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -241,26 +226,20 @@ final class ij implements t {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        al stackOut_2_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        ed var11 = null;
         try {
           L0: {
             L1: {
               if (param1 instanceof ed) {
-                stackOut_2_0 = (al) (param1);
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (al) (param1);
                 break L1;
               } else {
-                stackOut_1_0 = null;
-                stackIn_3_0 = (al) ((Object) stackOut_1_0);
+                stackIn_3_0 = null;
                 break L1;
               }
             }
@@ -302,7 +281,7 @@ final class ij implements t {
                   break L5;
                 } else {
                   var10 = this.field_b + (this.field_l + this.field_c);
-                  discarded$1 = this.field_i.a(param1.field_s, var10 + (param1.field_p + param4), this.field_f + (param2 + param1.field_m), param1.field_x + (-this.field_b + -var10), param1.field_u - (this.field_b << -1220046175), this.field_n, this.field_k, this.field_h, this.field_g, 0);
+                  this.field_i.a(param1.field_s, var10 + (param1.field_p + param4), this.field_f + (param2 + param1.field_m), param1.field_x + (-this.field_b + -var10), param1.field_u - (this.field_b << -1220046175), this.field_n, this.field_k, this.field_h, this.field_g, 0);
                   break L5;
                 }
               }
@@ -317,27 +296,19 @@ final class ij implements t {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var6);
-            stackOut_16_1 = new StringBuilder().append("ij.L(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var6);
+
+            stackIn_18_1 = new StringBuilder().append("ij.L(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L6;
             }
           }
@@ -364,67 +335,36 @@ final class ij implements t {
     }
 
     final static void a(byte param0, int param1, boolean param2) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        String[] var10 = null;
-        String[] var11 = null;
-        String var12 = null;
-        String var13 = null;
         int stackIn_22_0 = 0;
         int stackIn_25_0 = 0;
-        String[] stackIn_31_0 = null;
-        int stackIn_31_1 = 0;
         String[] stackIn_32_0 = null;
         int stackIn_32_1 = 0;
         String[] stackIn_33_0 = null;
         int stackIn_33_1 = 0;
         String stackIn_33_2 = null;
-        String[] stackIn_37_0 = null;
-        int stackIn_37_1 = 0;
         String[] stackIn_38_0 = null;
         int stackIn_38_1 = 0;
         String[] stackIn_39_0 = null;
         int stackIn_39_1 = 0;
         String stackIn_39_2 = null;
         int stackIn_88_0 = 0;
-        int stackIn_109_0 = 0;
         int stackIn_110_0 = 0;
         int stackIn_111_0 = 0;
         int stackIn_111_1 = 0;
+        Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        String[] stackOut_36_0 = null;
-        int stackOut_36_1 = 0;
-        String[] stackOut_38_0 = null;
-        int stackOut_38_1 = 0;
-        String stackOut_38_2 = null;
-        String[] stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        String stackOut_37_2 = null;
-        String[] stackOut_30_0 = null;
-        int stackOut_30_1 = 0;
-        String[] stackOut_32_0 = null;
-        int stackOut_32_1 = 0;
-        String stackOut_32_2 = null;
-        String[] stackOut_31_0 = null;
-        int stackOut_31_1 = 0;
-        String stackOut_31_2 = null;
-        int stackOut_108_0 = 0;
-        int stackOut_110_0 = 0;
-        int stackOut_110_1 = 0;
-        int stackOut_109_0 = 0;
-        int stackOut_109_1 = 0;
-        int stackOut_87_0 = 0;
-        int stackOut_86_0 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        String[] var4_ref_String__ = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        String[] var10 = null;
+        String var11 = null;
+        String var12 = null;
         var9 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -649,24 +589,20 @@ final class ij implements t {
                               ue.field_c = new String[-var4 + var3_int + -1];
                               pd.a(ok.field_C, 1 + var4, ue.field_c, 0, -1 + (var3_int - var4));
                               if (jf.field_i.length > el.field_O.length) {
-                                stackOut_21_0 = jf.field_i.length;
-                                stackIn_22_0 = stackOut_21_0;
+                                stackIn_22_0 = jf.field_i.length;
                                 break L17;
                               } else {
-                                stackOut_20_0 = el.field_O.length;
-                                stackIn_22_0 = stackOut_20_0;
+                                stackIn_22_0 = el.field_O.length;
                                 break L17;
                               }
                             }
                             L18: {
                               var5 = stackIn_22_0;
                               if (ue.field_c.length <= bk.field_J.length) {
-                                stackOut_24_0 = bk.field_J.length;
-                                stackIn_25_0 = stackOut_24_0;
+                                stackIn_25_0 = bk.field_J.length;
                                 break L18;
                               } else {
-                                stackOut_23_0 = ue.field_c.length;
-                                stackIn_25_0 = stackOut_23_0;
+                                stackIn_25_0 = ue.field_c.length;
                                 break L18;
                               }
                             }
@@ -700,27 +636,19 @@ final class ij implements t {
                                         break L1;
                                       } else {
                                         L22: {
-                                          stackOut_36_0 = sa.field_I;
-                                          stackOut_36_1 = var8 + (var5 + 7);
-                                          stackIn_38_0 = stackOut_36_0;
-                                          stackIn_38_1 = stackOut_36_1;
-                                          stackIn_37_0 = stackOut_36_0;
-                                          stackIn_37_1 = stackOut_36_1;
+                                          stackIn_38_0 = sa.field_I;
+
+                                          stackIn_38_1 = var8 + (var5 + 7);
+
                                           if (ue.field_c.length <= var8) {
-                                            stackOut_38_0 = (String[]) ((Object) stackIn_38_0);
-                                            stackOut_38_1 = stackIn_38_1;
-                                            stackOut_38_2 = "";
-                                            stackIn_39_0 = stackOut_38_0;
-                                            stackIn_39_1 = stackOut_38_1;
-                                            stackIn_39_2 = stackOut_38_2;
+                                            stackIn_39_0 = (String[]) ((Object) stackIn_38_0);
+                                            stackIn_39_1 = stackIn_38_1;
+                                            stackIn_39_2 = "";
                                             break L22;
                                           } else {
-                                            stackOut_37_0 = (String[]) ((Object) stackIn_37_0);
-                                            stackOut_37_1 = stackIn_37_1;
-                                            stackOut_37_2 = ue.field_c[var8];
-                                            stackIn_39_0 = stackOut_37_0;
-                                            stackIn_39_1 = stackOut_37_1;
-                                            stackIn_39_2 = stackOut_37_2;
+                                            stackIn_39_0 = (String[]) ((Object) stackIn_38_0);
+                                            stackIn_39_1 = stackIn_38_1;
+                                            stackIn_39_2 = ue.field_c[var8];
                                             break L22;
                                           }
                                         }
@@ -731,27 +659,19 @@ final class ij implements t {
                                     }
                                   } else {
                                     L23: {
-                                      stackOut_30_0 = sa.field_I;
-                                      stackOut_30_1 = var8 + 6;
-                                      stackIn_32_0 = stackOut_30_0;
-                                      stackIn_32_1 = stackOut_30_1;
-                                      stackIn_31_0 = stackOut_30_0;
-                                      stackIn_31_1 = stackOut_30_1;
+                                      stackIn_32_0 = sa.field_I;
+
+                                      stackIn_32_1 = var8 + 6;
+
                                       if (jf.field_i.length + (var8 - var5) >= 0) {
-                                        stackOut_32_0 = (String[]) ((Object) stackIn_32_0);
-                                        stackOut_32_1 = stackIn_32_1;
-                                        stackOut_32_2 = jf.field_i[var8 + jf.field_i.length + -var5];
-                                        stackIn_33_0 = stackOut_32_0;
-                                        stackIn_33_1 = stackOut_32_1;
-                                        stackIn_33_2 = stackOut_32_2;
+                                        stackIn_33_0 = (String[]) ((Object) stackIn_32_0);
+                                        stackIn_33_1 = stackIn_32_1;
+                                        stackIn_33_2 = jf.field_i[var8 + jf.field_i.length + -var5];
                                         break L23;
                                       } else {
-                                        stackOut_31_0 = (String[]) ((Object) stackIn_31_0);
-                                        stackOut_31_1 = stackIn_31_1;
-                                        stackOut_31_2 = "";
-                                        stackIn_33_0 = stackOut_31_0;
-                                        stackIn_33_1 = stackOut_31_1;
-                                        stackIn_33_2 = stackOut_31_2;
+                                        stackIn_33_0 = (String[]) ((Object) stackIn_32_0);
+                                        stackIn_33_1 = stackIn_32_1;
+                                        stackIn_33_2 = "";
                                         break L23;
                                       }
                                     }
@@ -784,19 +704,20 @@ final class ij implements t {
                 L25: {
                   if (2 == di.field_h) {
                     var10 = el.field_O;
+                    var4_ref_String__ = var10;
                     var5 = 0;
                     L26: while (true) {
                       if (var5 >= var10.length) {
-                        var11 = bk.field_J;
+                        var4_ref_String__ = bk.field_J;
                         var5 = 0;
                         L27: while (true) {
-                          if (var11.length <= var5) {
+                          if (var4_ref_String__.length <= var5) {
                             break L25;
                           } else {
                             L28: {
-                              var13 = var11[var5];
-                              var7 = ib.a(false, 10, var13);
-                              if (var3_int < var7) {
+                              var12 = var4_ref_String__[var5];
+                              var7 = ib.a(false, 10, var12);
+                              if ((var3_int ^ -1) > (var7 ^ -1)) {
                                 var3_int = var7;
                                 break L28;
                               } else {
@@ -809,9 +730,9 @@ final class ij implements t {
                         }
                       } else {
                         L29: {
-                          var12 = var10[var5];
-                          var7 = ib.a(false, 10, var12);
-                          if (var7 > var3_int) {
+                          var11 = var10[var5];
+                          var7 = ib.a(false, 10, var11);
+                          if ((var7 ^ -1) < (var3_int ^ -1)) {
                             var3_int = var7;
                             break L29;
                           } else {
@@ -881,20 +802,15 @@ final class ij implements t {
                     }
                   } else {
                     L35: {
-                      stackOut_108_0 = oi.field_b;
-                      stackIn_110_0 = stackOut_108_0;
-                      stackIn_109_0 = stackOut_108_0;
+                      stackIn_110_0 = oi.field_b;
+
                       if (mj.field_b[var4] < 0) {
-                        stackOut_110_0 = stackIn_110_0;
-                        stackOut_110_1 = dh.field_l;
-                        stackIn_111_0 = stackOut_110_0;
-                        stackIn_111_1 = stackOut_110_1;
+                        stackIn_111_0 = stackIn_110_0;
+                        stackIn_111_1 = dh.field_l;
                         break L35;
                       } else {
-                        stackOut_109_0 = stackIn_109_0;
-                        stackOut_109_1 = pc.field_m;
-                        stackIn_111_0 = stackOut_109_0;
-                        stackIn_111_1 = stackOut_109_1;
+                        stackIn_111_0 = stackIn_110_0;
+                        stackIn_111_1 = pc.field_m;
                         break L35;
                       }
                     }
@@ -906,12 +822,10 @@ final class ij implements t {
               } else {
                 L36: {
                   if (-1 < (mj.field_b[var4] ^ -1)) {
-                    stackOut_87_0 = 0;
-                    stackIn_88_0 = stackOut_87_0;
+                    stackIn_88_0 = 0;
                     break L36;
                   } else {
-                    stackOut_86_0 = 1;
-                    stackIn_88_0 = stackOut_86_0;
+                    stackIn_88_0 = 1;
                     break L36;
                   }
                 }

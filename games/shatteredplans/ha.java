@@ -9,8 +9,8 @@ final class ha {
     int field_e;
 
     final int a(boolean param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!param0) {
           if (null != this.field_b) {
@@ -18,7 +18,7 @@ final class ha {
               var3 = 1;
               L0: while (true) {
                 if (this.field_b.length > var3) {
-                  if (param1 >= this.field_b[var3] + this.field_b[-1 + var3] >> -838636703) {
+                  if ((param1 ^ -1) <= (this.field_b[var3] + this.field_b[-1 + var3] >> -838636703 ^ -1)) {
                     var3++;
                     continue L0;
                   } else {
@@ -41,7 +41,6 @@ final class ha {
 
     final int b(int param0) {
         int stackIn_5_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 >= 20) {
           if (null != this.field_b) {
             if (this.field_b.length == 0) {
@@ -50,8 +49,7 @@ final class ha {
               return this.field_b[-1 + this.field_b.length];
             }
           } else {
-            stackOut_3_0 = 0;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 0;
             return stackIn_5_0;
           }
         } else {
@@ -71,7 +69,6 @@ final class ha {
     }
 
     final static boolean a(byte param0) {
-        boolean discarded$5 = false;
         if (!sr.field_h) {
           return false;
         } else {
@@ -82,7 +79,7 @@ final class ha {
               return true;
             }
           } else {
-            discarded$5 = ha.a((byte) 11);
+            ha.a((byte) 11);
             if (em.field_h != 0) {
               return false;
             } else {

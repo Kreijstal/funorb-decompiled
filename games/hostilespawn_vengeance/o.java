@@ -19,7 +19,7 @@ final class o extends ql {
         field_l = null;
         field_g = null;
         field_j = null;
-        int var1 = 41;
+        int var1 = -82 / ((-63 - param0) / 43);
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
@@ -36,7 +36,7 @@ final class o extends ql {
                 var5 = var3;
                 var4 = var3.indexOf('?');
                 var5 = "reload.ws";
-                if (var4 >= 0) {
+                if (-1 >= (var4 ^ -1)) {
                     var5 = var5 + var3.substring(var4);
                 }
                 var6 = new java.net.URL(param1.getCodeBase(), var5);
@@ -52,15 +52,15 @@ final class o extends ql {
     }
 
     final boolean b(int param0) {
-        we[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        we var5 = null;
-        int var6 = 0;
-        we[] var7 = null;
+        we[] var2;
+        int var3;
+        int var4;
+        we var5;
+        int var6;
+        we[] var7;
         var6 = HostileSpawn.field_I ? 1 : 0;
         var3 = 118 % ((38 - param0) / 53);
-        var7 = ((o) this).field_f;
+        var7 = this.field_f;
         var2 = var7;
         var4 = 0;
         L0: while (true) {
@@ -83,31 +83,29 @@ final class o extends ql {
     final void e(int param0) {
         int var3 = 0;
         int var4 = HostileSpawn.field_I ? 1 : 0;
-        int[] var9 = ln.field_a.field_v;
-        int[] var8 = var9;
-        int[] var7 = var8;
+        int[] var7 = ln.field_a.field_v;
         int[] var6 = var7;
         int[] var5 = var6;
         int[] var2 = var5;
-        ((o) this).field_i = new oc(var9[4], var9[5]);
-        ((o) this).field_m = new oc(var9[8], var9[9]);
-        ((o) this).field_h[0] = new oc(var9[10], var9[11]);
-        ((o) this).field_h[1] = new oc(var9[12], var9[13]);
-        for (var3 = param0; var3 < ((o) this).field_f.length; var3++) {
-            ((o) this).field_f[var3] = new we(((o) this).field_h[var3]);
+        this.field_i = new oc(var7[4], var7[5]);
+        this.field_m = new oc(var7[8], var7[9]);
+        this.field_h[0] = new oc(var7[10], var7[11]);
+        this.field_h[1] = new oc(var7[12], var7[13]);
+        for (var3 = param0; var3 < this.field_f.length; var3++) {
+            this.field_f[var3] = new we(this.field_h[var3]);
         }
-        ((o) this).field_d = new v(we.field_h, 0, 0, 140);
-        ((o) this).field_d.field_l = (((o) this).field_i.field_e + 4) * 24;
-        ((o) this).field_d.field_d = (((o) this).field_i.field_g + -1) * 24;
-        ((o) this).field_k = new v(ch.field_f, ((o) this).field_m.field_e * 24, (((o) this).field_m.field_g - -2) * 24);
+        this.field_d = new v(we.field_h, 0, 0, 140);
+        this.field_d.field_l = (this.field_i.field_e + 4) * 24;
+        this.field_d.field_d = (this.field_i.field_g + -1) * 24;
+        this.field_k = new v(ch.field_f, this.field_m.field_e * 24, (this.field_m.field_g - -2) * 24);
         kd.a(14, param0 ^ 1);
         nh.field_E.a(-1, param0 + 8360, -1);
     }
 
     final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = HostileSpawn.field_I ? 1 : 0;
         var2 = 0;
         var3 = param0;
@@ -117,9 +115,9 @@ final class o extends ql {
               break L1;
             } else {
               if (mm.field_m[var3] != null) {
-                if (mm.field_m[var3].field_I > 0) {
+                if ((mm.field_m[var3].field_I ^ -1) < -1) {
                   L2: {
-                    if (mm.field_m[var3].field_i == 4) {
+                    if ((mm.field_m[var3].field_i ^ -1) == -5) {
                       break L2;
                     } else {
                       if (24 == mm.field_m[var3].field_i) {
@@ -157,27 +155,21 @@ final class o extends ql {
     final void d(int param0) {
         int var2 = 0;
         oc var3 = mm.field_m[0].field_j;
-        if (!(param0 != ~((o) this).field_d.field_a)) {
-            var2 = ih.a(var3, (byte) -126, ((o) this).field_i);
+        if (!(param0 != (this.field_d.field_a ^ -1))) {
+            var2 = ih.a(var3, (byte) -126, this.field_i);
             if (var2 < 2) {
-                ((o) this).field_d.field_a = 1;
+                this.field_d.field_a = 1;
             }
         }
-        if (((o) this).field_k.field_a == 0) {
-            var2 = ih.a(var3, (byte) -101, ((o) this).field_m);
+        if (-1 == (this.field_k.field_a ^ -1)) {
+            var2 = ih.a(var3, (byte) -101, this.field_m);
             if (var2 < 2) {
-                ((o) this).field_h[1].field_e = -1;
-                ((o) this).field_k.field_a = 1;
+                this.field_h[1].field_e = -1;
+                this.field_k.field_a = 1;
             }
         }
-        if (((o) this).field_h[0].field_g + -4 <= var3.field_g) {
-            if (((o) this).field_h[0].field_g - -5 >= var3.field_g) {
-                if (var3.field_e > -2 + ((o) this).field_h[0].field_e) {
-                    if (var3.field_e < 6 + ((o) this).field_h[0].field_e) {
-                        mf.a(false, 2);
-                    }
-                }
-            }
+        if (this.field_h[0].field_g + -4 <= var3.field_g && this.field_h[0].field_g - -5 >= var3.field_g && var3.field_e > -2 + this.field_h[0].field_e && var3.field_e < 6 + this.field_h[0].field_e) {
+            mf.a(false, 2);
         }
     }
 
@@ -185,20 +177,20 @@ final class o extends ql {
         int var3 = 0;
         int var4 = HostileSpawn.field_I ? 1 : 0;
         oc var2 = mm.field_m[0].field_j;
-        if (((o) this).field_d.field_a == 1) {
-            if (4 + ((o) this).field_i.field_e <= var2.field_e) {
-                ((o) this).field_d.field_a = 2;
+        if (-2 == (this.field_d.field_a ^ -1)) {
+            if (4 + this.field_i.field_e <= var2.field_e) {
+                this.field_d.field_a = 2;
             } else {
-                ((o) this).field_d.e(-111);
+                this.field_d.e(-111);
             }
         }
-        if (1 != ((o) this).field_k.field_a) {
+        if (1 != this.field_k.field_a) {
             var3 = -18 / ((-48 - param0) / 38);
         } else {
-            if (((o) this).field_k.field_d > var2.field_g * 24) {
-                ((o) this).field_k.e(-116);
+            if (this.field_k.field_d > var2.field_g * 24) {
+                this.field_k.e(-116);
             } else {
-                ((o) this).field_k.field_a = 2;
+                this.field_k.field_a = 2;
             }
             var3 = -18 / ((-48 - param0) / 38);
         }
@@ -212,15 +204,11 @@ final class o extends ql {
     }
 
     public o() {
-        ((o) this).field_h = new oc[2];
-        ((o) this).field_f = new we[2];
+        this.field_h = new oc[2];
+        this.field_f = new we[2];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Find and destroy the spawn queen.";
         field_j = "Score: <%0>";
         field_e = true;

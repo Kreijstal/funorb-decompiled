@@ -10,11 +10,11 @@ final class c extends gca {
     private eaa field_l;
 
     private final void e(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        cia var6 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        cia var6;
         var2 = baa.field_v.nextInt() & 8191;
         var3 = (255 & baa.field_v.nextInt()) + 128;
         var4 = var3 * via.a(var2, (byte) 72) >> -1366520336;
@@ -38,10 +38,10 @@ final class c extends gca {
     }
 
     final static int a(int param0, int param1, boolean param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         if (param2) {
           return -114;
         } else {
@@ -54,9 +54,9 @@ final class c extends gca {
     }
 
     final void a(int param0, int param1, byte param2) {
-        Object var4 = null;
-        cia var4_ref = null;
-        int var5 = 0;
+        Object var4;
+        cia var4_ref;
+        int var5;
         var4 = null;
         var5 = BachelorFridge.field_y;
         if (param2 == -34) {
@@ -97,9 +97,7 @@ final class c extends gca {
     }
 
     final static void a(int param0, int param1) {
-        cq discarded$4 = null;
-        cq discarded$5 = null;
-        int var2 = 0;
+        int var2;
         var2 = 3;
         if (param0 != 1220394217) {
           L0: {
@@ -111,7 +109,7 @@ final class c extends gca {
               break L0;
             }
           }
-          discarded$4 = ol.a(pja.field_a[param1][6 + kla.a(var2, m.field_a, -2147483648)], true);
+          ol.a(pja.field_a[param1][6 + kla.a(var2, m.field_a, -2147483648)], true);
           return;
         } else {
           L1: {
@@ -122,7 +120,7 @@ final class c extends gca {
               break L1;
             }
           }
-          discarded$5 = ol.a(pja.field_a[param1][6 + kla.a(var2, m.field_a, -2147483648)], true);
+          ol.a(pja.field_a[param1][6 + kla.a(var2, m.field_a, -2147483648)], true);
           return;
         }
     }
@@ -133,22 +131,13 @@ final class c extends gca {
     }
 
     final boolean a(boolean param0, boolean param1) {
-        boolean discarded$1 = false;
-        cia var3 = null;
-        float var4 = 0.0f;
-        int var5 = 0;
-        cia stackIn_8_0 = null;
         cia stackIn_9_0 = null;
         cia stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         int stackIn_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        cia stackOut_7_0 = null;
-        cia stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        cia stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
+        cia var3;
+        float var4;
+        int var5;
         L0: {
           var5 = BachelorFridge.field_y;
           this.field_j = this.field_j * 0.9800000190734863f;
@@ -178,12 +167,10 @@ final class c extends gca {
               } else {
                 L4: {
                   if (this.field_l.e(12917)) {
-                    stackOut_15_0 = 0;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = 0;
                     break L4;
                   } else {
-                    stackOut_14_0 = 1;
-                    stackIn_16_0 = stackOut_14_0;
+                    stackIn_16_0 = 1;
                     break L4;
                   }
                 }
@@ -192,24 +179,19 @@ final class c extends gca {
             }
           } else {
             L5: {
-              stackOut_7_0 = (cia) (var3);
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_9_0 = (cia) (var3);
+
               if (param0) {
-                stackOut_9_0 = (cia) ((Object) stackIn_9_0);
-                stackOut_9_1 = 0;
-                stackIn_10_0 = stackOut_9_0;
-                stackIn_10_1 = stackOut_9_1;
+                stackIn_10_0 = (cia) ((Object) stackIn_9_0);
+                stackIn_10_1 = 0;
                 break L5;
               } else {
-                stackOut_8_0 = (cia) ((Object) stackIn_8_0);
-                stackOut_8_1 = 1;
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_10_1 = stackOut_8_1;
+                stackIn_10_0 = (cia) ((Object) stackIn_9_0);
+                stackIn_10_1 = 1;
                 break L5;
               }
             }
-            discarded$1 = ((cia) (Object) stackIn_10_0).b(stackIn_10_1 != 0);
+            ((cia) (Object) stackIn_10_0).b(stackIn_10_1 != 0);
             var3 = (cia) ((Object) this.field_l.c(0));
             continue L2;
           }

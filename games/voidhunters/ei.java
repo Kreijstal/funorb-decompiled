@@ -27,8 +27,7 @@ final class ei implements wwa {
     }
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
+        RuntimeException runtimeException = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -38,34 +37,20 @@ final class ei implements wwa {
         int var14 = 0;
         ata var15 = null;
         shb stackIn_3_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        shb stackOut_2_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
               if (param1 instanceof ata) {
-                stackOut_2_0 = (shb) (param1);
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (shb) (param1);
                 break L1;
               } else {
-                stackOut_1_0 = null;
-                stackIn_3_0 = (shb) ((Object) stackOut_1_0);
+                stackIn_3_0 = null;
                 break L1;
               }
             }
@@ -103,7 +88,7 @@ final class ei implements wwa {
                 break L4;
               } else {
                 var14 = var15.field_J + var15.field_F + this.field_k;
-                discarded$1 = this.field_j.a(param1.field_j, var14 + param1.field_g + param2, param1.field_r + (param3 - -this.field_g), param1.field_h - var14 - this.field_k, -(this.field_k << -1386778239) + param1.field_f, this.field_l, this.field_b, 1, 1, 0);
+                this.field_j.a(param1.field_j, var14 + param1.field_g + param2, param1.field_r + (param3 - -this.field_g), param1.field_h - var14 - this.field_k, -(this.field_k << -1386778239) + param1.field_f, this.field_l, this.field_b, 1, 1, 0);
                 break L4;
               }
             }
@@ -112,28 +97,20 @@ final class ei implements wwa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var6 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var6);
-            stackOut_10_1 = new StringBuilder().append("ei.A(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            runtimeException = decompiledCaughtException;
+            stackIn_12_0 = (RuntimeException) (runtimeException);
+
+            stackIn_12_1 = new StringBuilder().append("ei.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L5;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L5;
             }
           }

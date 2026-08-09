@@ -15,22 +15,21 @@ final class aka extends ana {
     static lda field_x;
 
     public static void e(byte param0) {
-        boolean discarded$0 = false;
         field_G = null;
         field_y = null;
         field_w = null;
         field_E = null;
         field_x = null;
         if (param0 >= -91) {
-            discarded$0 = aka.a(-64, -126, 88, (byte) 79);
+            aka.a(-64, -126, 88, (byte) 79);
         }
     }
 
     final boolean c(byte param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        int var2 = 0;
-        ad var3 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int var2;
+        ad var3;
         if (!this.field_v.a((byte) -106)) {
           L0: {
             if (li.field_l != this.field_z) {
@@ -65,9 +64,9 @@ final class aka extends ana {
               break L1;
             }
           }
-          fieldTemp$2 = this.field_l - 1;
+          fieldTemp$0 = this.field_l - 1;
           this.field_l = this.field_l - 1;
-          if ((fieldTemp$2 ^ -1) >= -1) {
+          if ((fieldTemp$0 ^ -1) >= -1) {
             if (fn.field_m == this.field_z) {
               this.field_v = new taa(this.field_q, this.field_C.field_q, this.field_C.field_r);
               this.a(27799, this.field_v);
@@ -85,9 +84,9 @@ final class aka extends ana {
                 }
               }
               if (this.field_D < mp.field_q.length) {
-                fieldTemp$3 = this.field_D;
+                fieldTemp$1 = this.field_D;
                 this.field_D = this.field_D + 1;
-                this.a(-1, fieldTemp$3);
+                this.a(-1, fieldTemp$1);
                 this.field_l = this.field_l + 30;
                 var2 = 96 % ((71 - param0) / 47);
                 return false;
@@ -105,31 +104,21 @@ final class aka extends ana {
     }
 
     private final void a(int param0, int param1) {
-        int var4 = 0;
-        int var5 = 0;
-        ad var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        Object var14 = null;
-        int var15 = 0;
-        op var16 = null;
         int stackIn_15_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_18_0 = 0;
         int stackIn_18_1 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_17_1 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_16_1 = 0;
+        int var4;
+        int var5;
+        ad var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        Object var14;
+        int var15;
+        op var16;
         var15 = BachelorFridge.field_y;
         var16 = this.field_q.field_h;
         var4 = var16.field_z;
@@ -156,34 +145,27 @@ final class aka extends ana {
                       if (var5 > var12) {
                         L2: {
                           if (-1 < (var9 ^ -1)) {
-                            stackOut_14_0 = -var9;
-                            stackIn_15_0 = stackOut_14_0;
+                            stackIn_15_0 = -var9;
                             break L2;
                           } else {
-                            stackOut_13_0 = var9;
-                            stackIn_15_0 = stackOut_13_0;
+                            stackIn_15_0 = var9;
                             break L2;
                           }
                         }
                         L3: {
-                          stackOut_15_0 = stackIn_15_0;
-                          stackIn_17_0 = stackOut_15_0;
-                          stackIn_16_0 = stackOut_15_0;
+
+
                           if (-1 >= (var10 ^ -1)) {
-                            stackOut_17_0 = stackIn_17_0;
-                            stackOut_17_1 = var10;
-                            stackIn_18_0 = stackOut_17_0;
-                            stackIn_18_1 = stackOut_17_1;
+
+                            stackIn_18_1 = var10;
                             break L3;
                           } else {
-                            stackOut_16_0 = stackIn_16_0;
-                            stackOut_16_1 = -var10;
-                            stackIn_18_0 = stackOut_16_0;
-                            stackIn_18_1 = stackOut_16_1;
+
+                            stackIn_18_1 = -var10;
                             break L3;
                           }
                         }
-                        var13 = stackIn_18_0 + stackIn_18_1;
+                        var13 = stackIn_15_0 + stackIn_18_1;
                         if (var13 == param1) {
                           L4: {
                             if (var13 != 0) {
@@ -269,9 +251,8 @@ final class aka extends ana {
     }
 
     final static boolean a(int param0, int param1, int param2, byte param3) {
-        boolean discarded$0 = false;
         if (param3 > -80) {
-            discarded$0 = aka.a(22, 90, 31, (byte) -58);
+            aka.a(22, 90, 31, (byte) -58);
         }
         return nv.a(param1, param2, -106, param0);
     }

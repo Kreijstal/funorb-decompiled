@@ -7,23 +7,12 @@ final class ic extends rqa {
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
         nc stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -34,35 +23,26 @@ final class ic extends rqa {
                 break L1;
               }
             }
-            stackOut_2_0 = new nc(frb.a(24, 109));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new nc(frb.a(24, 109));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("ic.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("ic.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -83,10 +63,7 @@ final class ic extends rqa {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        boolean discarded$1 = false;
         int stackIn_19_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_18_0 = 0;
         if (param1 == -9307) {
           if (pma.field_o != 13) {
             if (-103 == (pma.field_o ^ -1)) {
@@ -101,14 +78,12 @@ final class ic extends rqa {
                     if (!fkb.field_m.a(param0, -122, param2)) {
                       break L1;
                     } else {
-                      stackOut_17_0 = 1;
-                      stackIn_19_0 = stackOut_17_0;
+                      stackIn_19_0 = 1;
                       break L0;
                     }
                   }
                 }
-                stackOut_18_0 = 0;
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = 0;
                 break L0;
               }
               return stackIn_19_0 != 0;
@@ -118,7 +93,7 @@ final class ic extends rqa {
             return true;
           }
         } else {
-          discarded$1 = ic.a(-44, 13, -90);
+          ic.a(-44, 13, -90);
           if (pma.field_o != 13) {
             if (-103 != (pma.field_o ^ -1)) {
               if (null != fkb.field_m) {

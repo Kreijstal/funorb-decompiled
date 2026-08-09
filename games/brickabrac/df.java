@@ -8,9 +8,8 @@ final class df {
     static jp[] field_a;
 
     final static String a(int param0, int param1, byte[] param2, int param3) {
-        int incrementValue$5 = 0;
+        int incrementValue$1 = 0;
         int var4_int = 0;
-        RuntimeException var4 = null;
         char[] var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -20,23 +19,13 @@ final class df {
         char[] var11 = null;
         char[] var12 = null;
         String stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_14_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var4 = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -48,8 +37,7 @@ final class df {
             var7 = 0;
             L1: while (true) {
               if (param0 <= var7) {
-                stackOut_14_0 = new String(var12, 0, var6);
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = new String(var12, 0, var6);
                 break L0;
               } else {
                 L2: {
@@ -78,9 +66,9 @@ final class df {
                         }
                       }
                     }
-                    incrementValue$5 = var6;
+                    incrementValue$1 = var6;
                     var6++;
-                    var5[incrementValue$5] = (char)var8;
+                    var5[incrementValue$1] = (char)var8;
                     break L2;
                   }
                 }
@@ -93,27 +81,19 @@ final class df {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var4);
-            stackOut_16_1 = new StringBuilder().append("df.G(").append(param0).append(',').append(param1).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var4);
+
+            stackIn_18_1 = new StringBuilder().append("df.G(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }
@@ -148,7 +128,7 @@ final class df {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = 0;
+        int var3;
         var3 = param2 >>> -1624543745;
         if (param1 != 15) {
           field_c = (String) null;
@@ -173,7 +153,7 @@ final class df {
     final static void a(int param0, byte param1, int param2, int param3) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var4 = 0;
+        int var4;
         if (param1 != 103) {
           field_c = (String) null;
           tq.field_f.field_l = 0;

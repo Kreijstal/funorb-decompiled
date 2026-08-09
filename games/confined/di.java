@@ -25,8 +25,19 @@ final class di {
     }
 
     final static void a(int param0, nf[] param1, byte param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        int stackIn_10_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_19_0 = 0;
+        RuntimeException stackIn_73_0 = null;
+        StringBuilder stackIn_73_1 = null;
+        RuntimeException stackIn_74_0 = null;
+        StringBuilder stackIn_74_1 = null;
+        String stackIn_74_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -44,35 +55,6 @@ final class di {
         int var21 = 0;
         int var22 = 0;
         nf[] var23 = null;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_19_0 = 0;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
-        RuntimeException stackIn_73_0 = null;
-        StringBuilder stackIn_73_1 = null;
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
-        String stackIn_74_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        RuntimeException stackOut_73_0 = null;
-        StringBuilder stackOut_73_1 = null;
-        String stackOut_73_2 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
         var22 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -86,48 +68,40 @@ final class di {
                   } else {
                     L2: {
                       if (param1[3] == null) {
-                        stackOut_9_0 = 0;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = 0;
                         break L2;
                       } else {
-                        stackOut_8_0 = param1[3].field_t;
-                        stackIn_10_0 = stackOut_8_0;
+                        stackIn_10_0 = param1[3].field_t;
                         break L2;
                       }
                     }
                     L3: {
                       var6_int = stackIn_10_0;
                       if (null == param1[5]) {
-                        stackOut_12_0 = 0;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = 0;
                         break L3;
                       } else {
-                        stackOut_11_0 = param1[5].field_t;
-                        stackIn_13_0 = stackOut_11_0;
+                        stackIn_13_0 = param1[5].field_t;
                         break L3;
                       }
                     }
                     L4: {
                       var7 = stackIn_13_0;
                       if (null != param1[1]) {
-                        stackOut_15_0 = param1[1].field_x;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = param1[1].field_x;
                         break L4;
                       } else {
-                        stackOut_14_0 = 0;
-                        stackIn_16_0 = stackOut_14_0;
+                        stackIn_16_0 = 0;
                         break L4;
                       }
                     }
                     L5: {
                       var8 = stackIn_16_0;
                       if (param1[7] == null) {
-                        stackOut_18_0 = 0;
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_0 = 0;
                         break L5;
                       } else {
-                        stackOut_17_0 = param1[7].field_x;
-                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_19_0 = param1[7].field_x;
                         break L5;
                       }
                     }
@@ -348,27 +322,19 @@ final class di {
           decompiledCaughtException = decompiledCaughtParameter0;
           L24: {
             var6 = decompiledCaughtException;
-            stackOut_71_0 = (RuntimeException) (var6);
-            stackOut_71_1 = new StringBuilder().append("di.C(").append(param0).append(',');
-            stackIn_73_0 = stackOut_71_0;
-            stackIn_73_1 = stackOut_71_1;
-            stackIn_72_0 = stackOut_71_0;
-            stackIn_72_1 = stackOut_71_1;
+            stackIn_73_0 = (RuntimeException) (var6);
+
+            stackIn_73_1 = new StringBuilder().append("di.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
-              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
-              stackOut_73_2 = "null";
-              stackIn_74_0 = stackOut_73_0;
-              stackIn_74_1 = stackOut_73_1;
-              stackIn_74_2 = stackOut_73_2;
+              stackIn_74_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
+              stackIn_74_2 = "null";
               break L24;
             } else {
-              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
-              stackOut_72_2 = "{...}";
-              stackIn_74_0 = stackOut_72_0;
-              stackIn_74_1 = stackOut_72_1;
-              stackIn_74_2 = stackOut_72_2;
+              stackIn_74_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
+              stackIn_74_2 = "{...}";
               break L24;
             }
           }

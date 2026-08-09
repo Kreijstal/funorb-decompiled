@@ -20,8 +20,6 @@ final class aj {
         int stackIn_3_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -29,17 +27,6 @@ final class aj {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -59,8 +46,7 @@ final class aj {
                         var3_int = 0;
                         L2: while (true) {
                           if (8 <= var3_int) {
-                            stackOut_18_0 = 1;
-                            stackIn_19_0 = stackOut_18_0;
+                            stackIn_19_0 = 1;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
@@ -80,16 +66,14 @@ final class aj {
                     }
                   }
                 }
-                stackOut_10_0 = -1;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return -1;
               }
             } else {
-              stackOut_2_0 = 24;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 24;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -98,27 +82,19 @@ final class aj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var3);
-            stackOut_20_1 = new StringBuilder().append("aj.D(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var3);
+
+            stackIn_22_1 = new StringBuilder().append("aj.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L4;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L4;
             }
           }
@@ -145,8 +121,6 @@ final class aj {
         vi stackIn_8_0 = null;
         vi stackIn_13_0 = null;
         vi stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -154,18 +128,6 @@ final class aj {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        vi stackOut_7_0 = null;
-        vi stackOut_14_0 = null;
-        vi stackOut_12_0 = null;
-        vi stackOut_3_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         try {
           L0: {
             L1: {
@@ -177,8 +139,7 @@ final class aj {
                 } else {
                   var2_int = param0.indexOf('@');
                   if (-1 == var2_int) {
-                    stackOut_7_0 = dj.field_W;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = dj.field_W;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -194,13 +155,11 @@ final class aj {
                     var4 = param0.substring(var2_int - -1);
                     var5 = re.a(var3, (byte) 104);
                     if (var5 == null) {
-                      stackOut_14_0 = pl.a(var4, 96);
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = pl.a(var4, 96);
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
-                      stackOut_12_0 = (vi) (var5);
-                      stackIn_13_0 = stackOut_12_0;
+                      stackIn_13_0 = (vi) (var5);
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
@@ -208,8 +167,7 @@ final class aj {
                 }
               }
             }
-            stackOut_3_0 = vh.field_b;
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = vh.field_b;
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -217,27 +175,19 @@ final class aj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var2);
-            stackOut_16_1 = new StringBuilder().append("aj.C(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var2);
+
+            stackIn_18_1 = new StringBuilder().append("aj.C(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L3;
             }
           }
@@ -259,6 +209,8 @@ final class aj {
     }
 
     final static void c(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         ue var3 = null;
@@ -273,17 +225,14 @@ final class aj {
         int var12 = 0;
         pa var13 = null;
         int var14 = 0;
-        int var15 = 0;
-        pa var16 = null;
-        int[][] var20 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
+        pa var15 = null;
+        int[][] var19 = null;
         var12 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
             var13 = id.field_b;
-            var16 = var13;
-            var2 = var16.j(-87);
+            var15 = var13;
+            var2 = var15.j(-87);
             var3 = (ue) ((Object) wl.field_b.c((byte) -63));
             L1: while (true) {
               L2: {
@@ -304,7 +253,7 @@ final class aj {
                 break L0;
               } else {
                 L3: {
-                  var4 = var16.j(-90);
+                  var4 = var15.j(-90);
                   if (var4 != 0) {
                     var5 = var3.field_m;
                     mf.field_b[0] = mf.field_a;
@@ -317,31 +266,30 @@ final class aj {
                           if (var4 <= var6_int) {
                             hl.a((byte) -44, var5);
                             var6 = new String[2][var5];
-                            var20 = new int[2][4 * var5];
+                            var19 = new int[2][4 * var5];
                             var8 = bb.field_c;
                             var9 = 0;
                             var10 = 0;
                             L6: while (true) {
                               if (var8 <= var9) {
+                                var9 = 0;
                                 var14 = 0;
-                                var9 = var14;
-                                var15 = 0;
-                                var10 = var15;
+                                var10 = var14;
                                 L7: while (true) {
-                                  if (var8 <= var14) {
+                                  if (var8 <= var9) {
                                     break L3;
                                   } else {
                                     L8: {
-                                      var11 = hi.field_G[var14 + var5];
-                                      var6[1][var15] = mf.field_b[var11];
-                                      var20[1][var15 * 4] = bg.field_Q[var11];
-                                      var20[1][1 + 4 * var15] = rk.field_p[var11];
-                                      var20[1][2 + var15 * 4] = ea.field_a[var11];
-                                      var20[1][3 + 4 * var15] = cb.field_e[var11];
+                                      var11 = hi.field_G[var9 + var5];
+                                      var6[1][var14] = mf.field_b[var11];
+                                      var19[1][var14 * 4] = bg.field_Q[var11];
+                                      var19[1][1 + 4 * var14] = rk.field_p[var11];
+                                      var19[1][2 + var14 * 4] = ea.field_a[var11];
+                                      var19[1][3 + 4 * var14] = cb.field_e[var11];
                                       if (jc.a(mf.field_b[var11], 26691)) {
                                         if (rk.field_p[var11] + (ea.field_a[var11] - -cb.field_e[var11]) == 0) {
-                                          var6[1][var15] = null;
-                                          var15--;
+                                          var6[1][var14] = null;
+                                          var14--;
                                           break L8;
                                         } else {
                                           break L8;
@@ -350,8 +298,8 @@ final class aj {
                                         break L8;
                                       }
                                     }
+                                    var9++;
                                     var14++;
-                                    var15++;
                                     continue L7;
                                   }
                                 }
@@ -359,10 +307,10 @@ final class aj {
                                 L9: {
                                   var11 = hi.field_G[var9];
                                   var6[0][var10] = mf.field_b[var11];
-                                  var20[0][4 * var10] = bg.field_Q[var11];
-                                  var20[0][var10 * 4 - -1] = rk.field_p[var11];
-                                  var20[0][var10 * 4 - -2] = ea.field_a[var11];
-                                  var20[0][3 + var10 * 4] = cb.field_e[var11];
+                                  var19[0][4 * var10] = bg.field_Q[var11];
+                                  var19[0][var10 * 4 - -1] = rk.field_p[var11];
+                                  var19[0][var10 * 4 - -2] = ea.field_a[var11];
+                                  var19[0][3 + var10 * 4] = cb.field_e[var11];
                                   if (!jc.a(mf.field_b[var11], 26691)) {
                                     break L9;
                                   } else {
@@ -382,8 +330,8 @@ final class aj {
                             }
                           } else {
                             L10: {
-                              ob.a(-33, var16);
-                              if (var6_int == 0) {
+                              ob.a(-33, var15);
+                              if ((var6_int ^ -1) == -1) {
                                 dd.a(ia.field_j, var6_int, 27715, jf.field_sb, uc.field_U, ti.field_e);
                                 break L10;
                               } else {
@@ -446,11 +394,11 @@ final class aj {
     }
 
     final static void b(int param0) {
-        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {

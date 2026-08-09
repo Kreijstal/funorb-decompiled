@@ -10,11 +10,11 @@ final class o {
     static int field_e;
 
     final static void a(int param0, byte param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         hn var4 = null;
         oc var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {

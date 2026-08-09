@@ -37,24 +37,21 @@ final class h extends RuntimeException {
     }
 
     final static void a(int param0) {
-        int[] discarded$6 = null;
-        int[] discarded$7 = null;
-        int[] discarded$8 = null;
-        int var1 = 0;
+        int var1;
         if (224 > gf.field_d) {
           var1 = gf.field_d % 32;
           ia.a(true, -var1 + (gf.field_d - -32));
           if (param0 == -32) {
             return;
           } else {
-            discarded$6 = h.a((byte) 30);
+            h.a((byte) 30);
             return;
           }
         } else {
           ia.a(true, 256);
           if (!fleas.field_A) {
             if (param0 != -32) {
-              discarded$7 = h.a((byte) 30);
+              h.a((byte) 30);
               return;
             } else {
               return;
@@ -65,7 +62,7 @@ final class h extends RuntimeException {
             if (param0 == -32) {
               return;
             } else {
-              discarded$8 = h.a((byte) 30);
+              h.a((byte) 30);
               return;
             }
           }

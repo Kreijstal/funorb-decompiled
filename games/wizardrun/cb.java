@@ -18,14 +18,14 @@ final class cb {
     }
 
     final static o[] a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9 = 0;
-        o[] var10 = null;
-        o[] var11_ref_o__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        o var13 = null;
-        int var14 = 0;
-        int var15 = 0;
+        int var9;
+        o[] var10;
+        o[] var11_ref_o__;
+        int var11;
+        int var12;
+        o var13;
+        int var14;
+        int var15;
         var15 = wizardrun.field_H;
         var9 = param2 + (param4 + param8);
         var10 = new o[]{new o(var9, var9), new o(param6, var9), new o(var9, var9), new o(var9, param6), new o(64, 64), new o(var9, param6), new o(var9, var9), new o(param6, var9), new o(var9, var9)};
@@ -97,7 +97,7 @@ final class cb {
                       } else {
                         var10[0].field_B[var12 + var9 * var11] = param7;
                         var10[0].field_B[var11 + var9 * var12] = param7;
-                        if (var9 - var11 > var12) {
+                        if ((var9 - var11 ^ -1) < (var12 ^ -1)) {
                           var10[2].field_B[var12 + var11 * var9] = param7;
                           var10[6].field_B[var9 * var12 + var11] = param7;
                           var12++;

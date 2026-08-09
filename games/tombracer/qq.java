@@ -14,72 +14,33 @@ final class qq extends vg {
     }
 
     final void a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
         int var8_int = 0;
-        int[] var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        L0: {
-          if (param0 != 0) {
-            break L0;
-          } else {
-            if (param1 != 0) {
-              break L0;
-            } else {
-              return;
-            }
-          }
-        }
-        L1: {
-          L2: {
-            if (field_h == null) {
-              break L2;
-            } else {
-              if (field_h.length == this.field_k.length) {
-                break L1;
-              } else {
-                break L2;
-              }
-            }
-          }
-          field_h = new int[this.field_k.length];
-          break L1;
-        }
-        var3 = this.field_k.length;
-        var4 = param0;
-        var5 = this.field_i - 1;
-        var6 = this.field_i * param1;
-        var7 = var3 - 1;
-        var8_int = 0;
-        L3: while (true) {
-          if (var8_int >= var3) {
-            var8 = this.field_k;
-            this.field_k = field_h;
-            field_h = var8;
+        if (param0 == 0 && param1 == 0) {
             return;
-          } else {
+        }
+        if (field_h == null || field_h.length != this.field_k.length) {
+            field_h = new int[this.field_k.length];
+        }
+        int var3 = this.field_k.length;
+        int var4 = param0;
+        int var5 = this.field_i - 1;
+        int var6 = this.field_i * param1;
+        int var7 = var3 - 1;
+        for (var8_int = 0; var8_int < var3; var8_int = var8_int + this.field_i) {
             var9 = var8_int + var6 & var7;
-            var10 = 0;
-            L4: while (true) {
-              if (var10 >= this.field_i) {
-                var8_int = var8_int + this.field_i;
-                continue L3;
-              } else {
+            for (var10 = 0; var10 < this.field_i; var10++) {
                 var11 = var8_int + var10;
                 var12 = var9 + (var10 + var4 & var5);
                 field_h[var11] = this.field_k[var12];
-                var10++;
-                continue L4;
-              }
             }
-          }
         }
+        int[] var8 = this.field_k;
+        this.field_k = field_h;
+        field_h = var8;
     }
 
     public static void a() {
@@ -87,42 +48,42 @@ final class qq extends vg {
     }
 
     qq(int param0, int param1, int[] param2, boolean param3) {
-        int[] var5 = null;
-        int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31_int = 0;
-        int[] var31 = null;
-        int[] var32 = null;
-        int[] var33 = null;
-        int[] var34 = null;
-        int[] var35 = null;
-        int[] var36 = null;
-        int[] var37 = null;
-        int[] var38 = null;
-        int[] var39 = null;
+        int[] var5;
+        int[] var6;
+        int[] var7;
+        int[] var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31_int;
+        int[] var31;
+        int[] var32;
+        int[] var33;
+        int[] var34;
+        int[] var35;
+        int[] var36;
+        int[] var37;
+        int[] var38;
+        int[] var39;
         L0: {
           this.field_f = param0;
           this.field_i = param1;

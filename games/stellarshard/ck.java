@@ -29,28 +29,16 @@ class ck extends wl implements oi {
     }
 
     final void a(String param0, int param1, int param2) {
-        ig discarded$2 = null;
-        ig discarded$3 = null;
-        RuntimeException var4 = null;
-        vf var4_ref = null;
-        int var5 = 0;
-        vf var6 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        vf stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
-        int stackIn_10_2 = 0;
         vf stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
-        vf stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
-        int stackIn_12_2 = 0;
-        String stackIn_12_3 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
+        vf stackIn_12_0;
+        int stackIn_12_1;
+        int stackIn_12_2;
+        String stackIn_12_3;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
@@ -58,49 +46,24 @@ class ck extends wl implements oi {
         String stackIn_29_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        vf stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        vf stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        String stackOut_11_3 = null;
-        vf stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        int stackOut_10_2 = 0;
-        String stackOut_10_3 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
+        vf var4 = null;
+        RuntimeException var4_ref = null;
+        int var5 = 0;
+        vf var6 = null;
         var5 = stellarshard.field_B;
         try {
           L0: {
             if (!this.field_kb) {
               L1: {
-                stackOut_3_0 = this;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_5_0 = this;
+
                 if (256 != param1) {
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = 0;
-                  stackIn_6_0 = stackOut_5_0;
-                  stackIn_6_1 = stackOut_5_1;
+                  stackIn_6_0 = this;
+                  stackIn_6_1 = 0;
                   break L1;
                 } else {
-                  stackOut_4_0 = this;
-                  stackOut_4_1 = 1;
-                  stackIn_6_0 = stackOut_4_0;
-                  stackIn_6_1 = stackOut_4_1;
+                  stackIn_6_0 = this;
+                  stackIn_6_1 = 1;
                   break L1;
                 }
               }
@@ -109,41 +72,30 @@ class ck extends wl implements oi {
                 this.field_kb = true;
                 this.field_cb.c(65280, 4210752, 8405024);
                 var6 = new vf((ck) (this), this.field_jb, param0);
-                var4_ref = var6;
+                var4 = var6;
                 if (5 != param1) {
                   if (param1 == 256) {
-                    discarded$2 = var6.a((lf) (this), qb.field_l, (byte) -69);
+                    var6.a((lf) (this), qb.field_l, (byte) -69);
                     break L2;
                   } else {
                     L3: {
-                      stackOut_9_0 = (vf) (var6);
-                      stackOut_9_1 = -31805;
-                      stackOut_9_2 = -1;
-                      stackIn_11_0 = stackOut_9_0;
-                      stackIn_11_1 = stackOut_9_1;
-                      stackIn_11_2 = stackOut_9_2;
-                      stackIn_10_0 = stackOut_9_0;
-                      stackIn_10_1 = stackOut_9_1;
-                      stackIn_10_2 = stackOut_9_2;
+                      stackIn_11_0 = (vf) (var6);
+
+                      stackIn_11_1 = -31805;
+
+                      stackIn_11_2 = -1;
+
                       if (this.field_eb) {
-                        stackOut_11_0 = (vf) ((Object) stackIn_11_0);
-                        stackOut_11_1 = stackIn_11_1;
-                        stackOut_11_2 = stackIn_11_2;
-                        stackOut_11_3 = qb.field_l;
-                        stackIn_12_0 = stackOut_11_0;
-                        stackIn_12_1 = stackOut_11_1;
-                        stackIn_12_2 = stackOut_11_2;
-                        stackIn_12_3 = stackOut_11_3;
+                        stackIn_12_0 = (vf) ((Object) stackIn_11_0);
+                        stackIn_12_1 = stackIn_11_1;
+                        stackIn_12_2 = stackIn_11_2;
+                        stackIn_12_3 = qb.field_l;
                         break L3;
                       } else {
-                        stackOut_10_0 = (vf) ((Object) stackIn_10_0);
-                        stackOut_10_1 = stackIn_10_1;
-                        stackOut_10_2 = stackIn_10_2;
-                        stackOut_10_3 = bk.field_e;
-                        stackIn_12_0 = stackOut_10_0;
-                        stackIn_12_1 = stackOut_10_1;
-                        stackIn_12_2 = stackOut_10_2;
-                        stackIn_12_3 = stackOut_10_3;
+                        stackIn_12_0 = (vf) ((Object) stackIn_11_0);
+                        stackIn_12_1 = stackIn_11_1;
+                        stackIn_12_2 = stackIn_11_2;
+                        stackIn_12_3 = bk.field_e;
                         break L3;
                       }
                     }
@@ -170,7 +122,7 @@ class ck extends wl implements oi {
                         if ((param1 ^ -1) != -10) {
                           break L4;
                         } else {
-                          discarded$3 = var6.a((lf) (this), eg.field_c, (byte) 72);
+                          var6.a((lf) (this), eg.field_c, (byte) 72);
                           break L4;
                         }
                       } else {
@@ -195,28 +147,20 @@ class ck extends wl implements oi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var4 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var4);
-            stackOut_26_1 = new StringBuilder().append("ck.S(");
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_28_0 = (RuntimeException) (var4_ref);
+
+            stackIn_28_1 = new StringBuilder().append("ck.S(");
+
             if (param0 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L5;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L5;
             }
           }
@@ -234,12 +178,9 @@ class ck extends wl implements oi {
     }
 
     final boolean a(int param0, int param1, char param2, rj param3) {
-        int discarded$2 = 0;
         RuntimeException var5 = null;
         int stackIn_4_0 = 0;
         boolean stackIn_6_0 = false;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -247,35 +188,23 @@ class ck extends wl implements oi {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_5_0 = false;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
               if (param0 == 29657) {
                 break L1;
               } else {
-                discarded$2 = ck.a(-53, 99, true, false);
+                ck.a(-53, 99, true, false);
                 break L1;
               }
             }
             if (param1 != 13) {
-              stackOut_5_0 = super.a(29657, param1, param2, param3);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = super.a(29657, param1, param2, param3);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
               this.o(3);
-              stackOut_3_0 = 1;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -284,27 +213,19 @@ class ck extends wl implements oi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var5);
-            stackOut_7_1 = new StringBuilder().append("ck.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var5);
+
+            stackIn_9_1 = new StringBuilder().append("ck.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -318,10 +239,9 @@ class ck extends wl implements oi {
     }
 
     public static void m(int param0) {
-        fe discarded$0 = null;
         field_ib = (byte[][]) null;
         if (param0 > -100) {
-            discarded$0 = ck.n(-17);
+            ck.n(-17);
         }
     }
 
@@ -330,7 +250,6 @@ class ck extends wl implements oi {
             Throwable var1 = null;
             fe stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            fe stackOut_2_0 = null;
             L0: {
               if (param0 == 2113632) {
                 break L0;
@@ -341,8 +260,7 @@ class ck extends wl implements oi {
             }
             try {
               L1: {
-                stackOut_2_0 = (fe) (Class.forName("hb").newInstance());
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (fe) (Class.forName("hb").newInstance());
                 break L1;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -359,7 +277,7 @@ class ck extends wl implements oi {
     }
 
     final void h(byte param0) {
-        vf var2 = null;
+        vf var2;
         this.field_cb.c(65280, 4210752, 2121792);
         if (param0 != 52) {
           ck.m(-107);
@@ -377,22 +295,12 @@ class ck extends wl implements oi {
 
     public void a(int param0, int param1, ig param2, boolean param3, int param4) {
         RuntimeException var6 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             if (!param3) {
@@ -414,27 +322,19 @@ class ck extends wl implements oi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var6);
-            stackOut_6_1 = new StringBuilder().append("ck.M(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var6);
+
+            stackIn_8_1 = new StringBuilder().append("ck.M(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L1;
             }
           }
@@ -443,7 +343,7 @@ class ck extends wl implements oi {
     }
 
     final void o(int param0) {
-        ig var3 = null;
+        ig var3;
         if (!this.field_G) {
           return;
         } else {
@@ -490,7 +390,6 @@ class ck extends wl implements oi {
 
     final static fd a(boolean param0, String param1) {
         String var2 = null;
-        RuntimeException var2_ref = null;
         fd var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -498,8 +397,6 @@ class ck extends wl implements oi {
         CharSequence var7 = null;
         Object stackIn_9_0 = null;
         fd stackIn_19_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -507,16 +404,7 @@ class ck extends wl implements oi {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        fd stackOut_18_0 = null;
-        Object stackOut_8_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        RuntimeException var2_ref = null;
         var5 = stellarshard.field_B;
         try {
           L0: {
@@ -540,8 +428,7 @@ class ck extends wl implements oi {
                         var7 = (CharSequence) ((Object) var3.field_rb);
                         var4 = nh.a(var7, false);
                         if (var4.equals(var2)) {
-                          stackOut_18_0 = (fd) (var3);
-                          stackIn_19_0 = stackOut_18_0;
+                          stackIn_19_0 = (fd) (var3);
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -556,8 +443,7 @@ class ck extends wl implements oi {
                     return null;
                   }
                 } else {
-                  stackOut_8_0 = null;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = null;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -572,27 +458,19 @@ class ck extends wl implements oi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2_ref);
-            stackOut_22_1 = new StringBuilder().append("ck.RA(").append(param0).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2_ref);
+
+            stackIn_24_1 = new StringBuilder().append("ck.RA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L3;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L3;
             }
           }

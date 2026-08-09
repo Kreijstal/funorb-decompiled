@@ -26,8 +26,8 @@ final class ac {
     }
 
     final boolean a(int param0) {
-        int var3 = 0;
-        ic var4 = null;
+        int var3;
+        ic var4;
         var3 = HoldTheLine.field_D;
         L0: while (true) {
           if (this.field_f >= this.field_i) {

@@ -12,10 +12,9 @@ final class sj {
     static int field_f;
 
     final void a(java.applet.Applet param0, int param1) {
-        String discarded$0 = null;
         try {
             if (param1 != 447616545) {
-                discarded$0 = this.toString();
+                this.toString();
             }
             eg.a("jagex-last-login-method", param1 + -447616669, this.field_b, 31536000L, param0);
         } catch (RuntimeException runtimeException) {
@@ -31,23 +30,12 @@ final class sj {
         RuntimeException var3 = null;
         String var4 = null;
         boolean stackIn_3_0 = false;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -59,35 +47,26 @@ final class sj {
                 break L1;
               }
             }
-            stackOut_2_0 = this.field_b.equals(param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = this.field_b.equals(param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("sj.E(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("sj.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -116,7 +95,6 @@ final class sj {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int discarded$2 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -124,12 +102,10 @@ final class sj {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_14_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_16_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_7_0 = 0;
         var8 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -141,12 +117,11 @@ final class sj {
                   if (param1 > 123) {
                     break L2;
                   } else {
-                    discarded$2 = sj.a(-11, (byte) 112, -37);
+                    sj.a(-11, (byte) 112, -37);
                     break L2;
                   }
                 }
-                stackOut_13_0 = -1;
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_16_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -157,8 +132,7 @@ final class sj {
                     var7 = -(var6 >> -310215615) + rj.field_e;
                     var4 = var4 + hi.field_z;
                     if (hc.a(103, var4, nk.field_u - -(sn.field_d << 447616545), var7 - ka.field_a, param0, (ka.field_a << 418362849) + var6, param2)) {
-                      stackOut_7_0 = var5;
-                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_10_0 = var5;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     } else {
@@ -181,9 +155,9 @@ final class sj {
           throw lj.a((Throwable) ((Object) var3), "sj.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0;
+          return stackIn_10_0;
         } else {
-          return stackIn_14_0;
+          return stackIn_16_0;
         }
     }
 

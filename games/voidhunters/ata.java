@@ -14,9 +14,8 @@ final class ata extends htb {
     static String field_G;
 
     public static void a(int param0) {
-        boolean discarded$2 = false;
         if (param0 != 6344) {
-          discarded$2 = ata.e(-68);
+          ata.e(-68);
           field_G = null;
           field_L = null;
           field_K = null;
@@ -36,8 +35,6 @@ final class ata extends htb {
         int stackIn_3_0 = 0;
         int stackIn_5_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         var1_ref = gha.field_q;
         synchronized (var1_ref) {
           L0: {
@@ -45,12 +42,10 @@ final class ata extends htb {
               pma.field_o = npa.field_a[bva.field_c];
               jl.field_r = gca.field_q[bva.field_c];
               bva.field_c = param0 & bva.field_c + 1;
-              stackOut_4_0 = 1;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               return stackIn_3_0 != 0;
             }
           }
@@ -59,15 +54,8 @@ final class ata extends htb {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
-        RuntimeException var8 = null;
-        int var8_int = 0;
-        int var9 = 0;
-        double var10 = 0.0;
-        int var12 = 0;
         int stackIn_17_0 = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -75,16 +63,11 @@ final class ata extends htb {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_16_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        int var8_int = 0;
+        RuntimeException var8 = null;
+        int var9 = 0;
+        double var10 = 0.0;
+        int var12 = 0;
         var12 = VoidHunters.field_G;
         try {
           L0: {
@@ -97,8 +80,7 @@ final class ata extends htb {
               }
             }
             if (!super.a(param0, param1, param2, param3, param4, param5, (byte) -99)) {
-              stackOut_18_0 = 0;
-              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
@@ -124,8 +106,7 @@ final class ata extends htb {
                   if (this.field_D < this.field_I) {
                     L4: while (true) {
                       if (-1 >= (this.field_D ^ -1)) {
-                        stackOut_16_0 = 1;
-                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_0 = 1;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
@@ -147,27 +128,19 @@ final class ata extends htb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var8);
-            stackOut_20_1 = new StringBuilder().append("ata.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var8);
+
+            stackIn_22_1 = new StringBuilder().append("ata.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L5;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L5;
             }
           }

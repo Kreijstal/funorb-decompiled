@@ -8,13 +8,10 @@ final class oo extends se {
     static int field_i;
 
     final oi a(String param0, byte param1) {
-        int discarded$2 = 0;
         n var3 = null;
         RuntimeException var3_ref = null;
         oi stackIn_8_0 = null;
         oi stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -22,24 +19,13 @@ final class oo extends se {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        oi stackOut_7_0 = null;
-        oi stackOut_11_0 = null;
-        oi stackOut_10_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             L1: {
               if (param1 == -122) {
                 break L1;
               } else {
-                discarded$2 = oo.e((byte) 2);
+                oo.e((byte) 2);
                 break L1;
               }
             }
@@ -50,8 +36,7 @@ final class oo extends se {
                   break L2;
                 } else {
                   if (var3.c((byte) 45) != ih.field_b) {
-                    stackOut_7_0 = rk.field_c;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = rk.field_c;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   } else {
@@ -64,12 +49,10 @@ final class oo extends se {
             }
             L3: {
               if (!param0.equals(this.field_j.field_o)) {
-                stackOut_11_0 = rk.field_c;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = rk.field_c;
                 break L3;
               } else {
-                stackOut_10_0 = ih.field_b;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = ih.field_b;
                 break L3;
               }
             }
@@ -80,27 +63,19 @@ final class oo extends se {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3_ref);
-            stackOut_13_1 = new StringBuilder().append("oo.G(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3_ref);
+
+            stackIn_15_1 = new StringBuilder().append("oo.G(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }
@@ -120,8 +95,6 @@ final class oo extends se {
         String stackIn_7_0 = null;
         String stackIn_9_0 = null;
         String stackIn_13_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -129,17 +102,6 @@ final class oo extends se {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_6_0 = null;
-        String stackOut_8_0 = null;
-        String stackOut_12_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         try {
           L0: {
             L1: {
@@ -153,15 +115,13 @@ final class oo extends se {
                       if (param0.equals(this.field_j.field_o)) {
                         break L2;
                       } else {
-                        stackOut_6_0 = lj.field_a;
-                        stackIn_7_0 = stackOut_6_0;
+                        stackIn_7_0 = lj.field_a;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
                     }
                   }
-                  stackOut_8_0 = var3.a(-16774);
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = var3.a(-16774);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -173,8 +133,7 @@ final class oo extends se {
             }
             var3_int = -53 % ((param1 - 41) / 49);
             if (!param0.equals(this.field_j.field_o)) {
-              stackOut_12_0 = lj.field_a;
-              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_0 = lj.field_a;
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
@@ -185,27 +144,19 @@ final class oo extends se {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var3_ref);
-            stackOut_15_1 = new StringBuilder().append("oo.H(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var3_ref);
+
+            stackIn_17_1 = new StringBuilder().append("oo.H(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L3;
             }
           }
@@ -232,124 +183,93 @@ final class oo extends se {
     }
 
     final static boolean b(boolean param0) {
-        int discarded$0 = 0;
         if (param0) {
-            discarded$0 = oo.e((byte) 86);
+            oo.e((byte) 86);
             return ne.field_d;
         }
         return ne.field_d;
     }
 
     final static String a(byte param0, Throwable param1) throws IOException {
-        String var2 = null;
-        int var4 = 0;
-        PrintWriter var5 = null;
-        String var6 = null;
-        BufferedReader var7 = null;
-        String var8 = null;
         String var9 = null;
         int var10 = 0;
         int var11 = 0;
-        String var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        ub var15 = null;
-        StringWriter var16 = null;
         String var17 = null;
         String var18 = null;
         String var19 = null;
         String var20 = null;
-        L0: {
-          var14 = CrazyCrystals.field_B;
-          if (!(param1 instanceof ub)) {
+        int var13 = 0;
+        ub var15 = null;
+        String var2 = null;
+        String var12 = null;
+        int var14 = CrazyCrystals.field_B;
+        if (param1 instanceof ub) {
+            var15 = (ub) ((Object) param1);
+            var2 = var15.field_a + " | ";
+            param1 = var15.field_c;
+        } else {
             var2 = "";
             var12 = var2;
             var2 = var12;
             var12 = var2;
-            break L0;
-          } else {
-            var15 = (ub) ((Object) param1);
-            var2 = var15.field_a + " | ";
-            param1 = var15.field_c;
-            break L0;
-          }
         }
-        var4 = -43 % ((26 - param0) / 34);
-        var16 = new StringWriter();
-        var5 = new PrintWriter((Writer) ((Object) var16));
+        int var4 = -43 % ((26 - param0) / 34);
+        StringWriter var16 = new StringWriter();
+        PrintWriter var5 = new PrintWriter((Writer) ((Object) var16));
         param1.printStackTrace(var5);
         var5.close();
-        var6 = var16.toString();
+        String var6 = var16.toString();
         var12 = var6;
         var2 = var12;
         var12 = var6;
-        var7 = new BufferedReader((Reader) ((Object) new StringReader(var6)));
-        var8 = var7.readLine();
+        BufferedReader var7 = new BufferedReader((Reader) ((Object) new StringReader(var6)));
+        String var8 = var7.readLine();
         var12 = var8;
         var2 = var12;
         var12 = var8;
-        L1: while (true) {
-          var9 = var7.readLine();
-          var12 = var9;
-          var2 = var12;
-          var12 = var9;
-          if (var9 == null) {
-            var2 = var2 + "| " + var8;
-            return var2;
-          } else {
-            L2: {
-              var10 = var9.indexOf('(');
-              var11 = var9.indexOf(')', var10 - -1);
-              if (var10 == -1) {
+        while (true) {
+            var9 = var7.readLine();
+            var12 = var9;
+            var2 = var12;
+            var12 = var9;
+            if (var9 == null) {
+                break;
+            }
+            var10 = var9.indexOf('(');
+            var11 = var9.indexOf(')', var10 - -1);
+            if (var10 != -1) {
+                var12 = var9.substring(0, var10);
+            } else {
                 var12 = var9;
                 var2 = var12;
                 var2 = var12;
-                break L2;
-              } else {
-                var12 = var9.substring(0, var10);
-                break L2;
-              }
             }
-            L3: {
-              var17 = var12.trim();
-              var2 = var17;
-              var2 = var17;
-              var18 = var17.substring(1 + var17.lastIndexOf(' '));
-              var2 = var18;
-              var2 = var18;
-              var19 = var18.substring(1 + var18.lastIndexOf('\t'));
-              var2 = var19;
-              var2 = var19;
-              var20 = var2 + var19;
-              var2 = var20;
-              var2 = var20;
-              var2 = var20;
-              if (0 == (var10 ^ -1)) {
-                break L3;
-              } else {
-                if ((var11 ^ -1) == 0) {
-                  break L3;
-                } else {
-                  var13 = var9.indexOf(".java:", var10);
-                  if (-1 < (var13 ^ -1)) {
-                    break L3;
-                  } else {
+            var17 = var12.trim();
+            var2 = var17;
+            var2 = var17;
+            var18 = var17.substring(1 + var17.lastIndexOf(' '));
+            var2 = var18;
+            var2 = var18;
+            var19 = var18.substring(1 + var18.lastIndexOf('\t'));
+            var2 = var19;
+            var2 = var19;
+            var20 = var2 + var19;
+            var2 = var20;
+            var2 = var20;
+            var2 = var20;
+            if (0 != (var10 ^ -1) && (var11 ^ -1) != 0) {
+                var13 = var9.indexOf(".java:", var10);
+                if (-1 >= (var13 ^ -1)) {
                     var2 = var20 + var9.substring(5 + var13, var11);
-                    break L3;
-                  }
                 }
-              }
             }
             var2 = var2 + ' ';
-            continue L1;
-          }
         }
+        var2 = var2 + "| " + var8;
+        return var2;
     }
 
     final static int e(byte param0) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
         if (2 > eq.field_j) {
           return 0;
         } else {
@@ -371,7 +291,7 @@ final class oo extends se {
                             if (dd.field_a.a((byte) 102)) {
                               if (dd.field_a.a(false)) {
                                 if (param0 > -6) {
-                                  discarded$3 = oo.e((byte) 119);
+                                  oo.e((byte) 119);
                                   return 100;
                                 } else {
                                   return 100;
@@ -409,7 +329,7 @@ final class oo extends se {
                       if (dd.field_a.a((byte) 102)) {
                         if (dd.field_a.a(false)) {
                           if (param0 > -6) {
-                            discarded$4 = oo.e((byte) 119);
+                            oo.e((byte) 119);
                             return 100;
                           } else {
                             return 100;
@@ -441,7 +361,7 @@ final class oo extends se {
                         if (param0 <= -6) {
                           return 100;
                         } else {
-                          discarded$5 = oo.e((byte) 119);
+                          oo.e((byte) 119);
                           return 100;
                         }
                       } else {

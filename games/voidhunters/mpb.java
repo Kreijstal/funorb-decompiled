@@ -21,8 +21,6 @@ final class mpb extends mea {
 
     final boolean f(byte param0) {
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
         if (param0 >= 15) {
           L0: {
             L1: {
@@ -35,15 +33,13 @@ final class mpb extends mea {
                   if (!this.field_d.field_I) {
                     break L1;
                   } else {
-                    stackOut_5_0 = 1;
-                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_0 = 1;
                     break L0;
                   }
                 }
               }
             }
-            stackOut_6_0 = 0;
-            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_0 = 0;
             break L0;
           }
           return stackIn_7_0 != 0;
@@ -54,87 +50,51 @@ final class mpb extends mea {
 
     final static java.net.URL a(int param0, java.net.URL param1, byte param2, String param3, String param4) {
         try {
-            StringBuilder discarded$9 = null;
-            StringBuilder discarded$10 = null;
-            StringBuilder discarded$11 = null;
-            StringBuilder discarded$12 = null;
-            StringBuilder discarded$13 = null;
-            StringBuilder discarded$14 = null;
-            StringBuilder discarded$15 = null;
-            StringBuilder discarded$16 = null;
-            StringBuilder discarded$17 = null;
-            RuntimeException var5 = null;
-            String var5_ref = null;
-            int var6 = 0;
-            int var7_int = 0;
-            StringBuilder var7 = null;
-            Exception var8 = null;
-            int var9 = 0;
+            StringBuilder discarded$0 = null;
+            StringBuilder discarded$1 = null;
+            StringBuilder discarded$2 = null;
+            StringBuilder discarded$3 = null;
+            StringBuilder discarded$4 = null;
+            StringBuilder discarded$5 = null;
+            StringBuilder discarded$6 = null;
+            StringBuilder discarded$7 = null;
+            StringBuilder discarded$8 = null;
             java.net.URL stackIn_42_0 = null;
             java.net.URL stackIn_44_0 = null;
-            RuntimeException stackIn_46_0 = null;
-            StringBuilder stackIn_46_1 = null;
             RuntimeException stackIn_47_0 = null;
             StringBuilder stackIn_47_1 = null;
             RuntimeException stackIn_48_0 = null;
             StringBuilder stackIn_48_1 = null;
             String stackIn_48_2 = null;
-            RuntimeException stackIn_49_0 = null;
-            StringBuilder stackIn_49_1 = null;
-            RuntimeException stackIn_50_0 = null;
             StringBuilder stackIn_50_1 = null;
-            RuntimeException stackIn_51_0 = null;
             StringBuilder stackIn_51_1 = null;
             String stackIn_51_2 = null;
-            RuntimeException stackIn_52_0 = null;
-            StringBuilder stackIn_52_1 = null;
-            RuntimeException stackIn_53_0 = null;
             StringBuilder stackIn_53_1 = null;
-            RuntimeException stackIn_54_0 = null;
             StringBuilder stackIn_54_1 = null;
             String stackIn_54_2 = null;
             Throwable decompiledCaughtException = null;
-            java.net.URL stackOut_41_0 = null;
-            java.net.URL stackOut_43_0 = null;
-            RuntimeException stackOut_45_0 = null;
-            StringBuilder stackOut_45_1 = null;
-            RuntimeException stackOut_47_0 = null;
-            StringBuilder stackOut_47_1 = null;
-            String stackOut_47_2 = null;
-            RuntimeException stackOut_46_0 = null;
-            StringBuilder stackOut_46_1 = null;
-            String stackOut_46_2 = null;
-            RuntimeException stackOut_48_0 = null;
-            StringBuilder stackOut_48_1 = null;
-            RuntimeException stackOut_50_0 = null;
-            StringBuilder stackOut_50_1 = null;
-            String stackOut_50_2 = null;
-            RuntimeException stackOut_49_0 = null;
-            StringBuilder stackOut_49_1 = null;
-            String stackOut_49_2 = null;
-            RuntimeException stackOut_51_0 = null;
-            StringBuilder stackOut_51_1 = null;
-            RuntimeException stackOut_53_0 = null;
-            StringBuilder stackOut_53_1 = null;
-            String stackOut_53_2 = null;
-            RuntimeException stackOut_52_0 = null;
-            StringBuilder stackOut_52_1 = null;
-            String stackOut_52_2 = null;
+            String var5 = null;
+            RuntimeException var5_ref = null;
+            int var6 = 0;
+            int var7_int = 0;
+            StringBuilder var7 = null;
+            Exception var8 = null;
+            int var9 = 0;
             var9 = VoidHunters.field_G;
             try {
               L0: {
-                var5_ref = param1.getFile();
+                var5 = param1.getFile();
                 var6 = 0;
                 L1: while (true) {
                   L2: {
                     L3: {
-                      if (var5_ref.regionMatches(var6, "/l=", 0, 3)) {
-                        var7_int = var5_ref.indexOf('/', 1 + var6);
+                      if (var5.regionMatches(var6, "/l=", 0, 3)) {
+                        var7_int = var5.indexOf('/', 1 + var6);
                         if (-1 >= (var7_int ^ -1)) {
                           if (0 > param0) {
                             break L2;
                           } else {
-                            var5_ref = var5_ref.substring(0, var6) + var5_ref.substring(var7_int);
+                            var5 = var5.substring(0, var6) + var5.substring(var7_int);
                             continue L1;
                           }
                         } else {
@@ -145,10 +105,10 @@ final class mpb extends mea {
                       }
                     }
                     L4: {
-                      if (!var5_ref.regionMatches(var6, "/a=", 0, 3)) {
+                      if (!var5.regionMatches(var6, "/a=", 0, 3)) {
                         break L4;
                       } else {
-                        var7_int = var5_ref.indexOf('/', var6 - -1);
+                        var7_int = var5.indexOf('/', var6 - -1);
                         if ((var7_int ^ -1) <= -1) {
                           break L2;
                         } else {
@@ -157,17 +117,17 @@ final class mpb extends mea {
                       }
                     }
                     L5: {
-                      if (!var5_ref.regionMatches(var6, "/p=", 0, 3)) {
+                      if (!var5.regionMatches(var6, "/p=", 0, 3)) {
                         break L5;
                       } else {
-                        var7_int = var5_ref.indexOf('/', var6 + 1);
+                        var7_int = var5.indexOf('/', var6 + 1);
                         if (0 > var7_int) {
                           break L5;
                         } else {
                           if (param3 == null) {
                             break L2;
                           } else {
-                            var5_ref = var5_ref.substring(0, var6) + var5_ref.substring(var7_int);
+                            var5 = var5.substring(0, var6) + var5.substring(var7_int);
                             continue L1;
                           }
                         }
@@ -175,20 +135,20 @@ final class mpb extends mea {
                     }
                     L6: {
                       L7: {
-                        if (var5_ref.regionMatches(var6, "/s=", 0, 3)) {
+                        if (var5.regionMatches(var6, "/s=", 0, 3)) {
                           break L7;
                         } else {
-                          if (!var5_ref.regionMatches(var6, "/c=", 0, 3)) {
+                          if (!var5.regionMatches(var6, "/c=", 0, 3)) {
                             break L6;
                           } else {
                             break L7;
                           }
                         }
                       }
-                      var7_int = var5_ref.indexOf('/', var6 - -1);
+                      var7_int = var5.indexOf('/', var6 - -1);
                       if (var7_int >= 0) {
                         if (param4 != null) {
-                          var5_ref = var5_ref.substring(0, var6) + var5_ref.substring(var7_int);
+                          var5 = var5.substring(0, var6) + var5.substring(var7_int);
                           continue L1;
                         } else {
                           var6 = var7_int;
@@ -200,10 +160,10 @@ final class mpb extends mea {
                     }
                     L8: {
                       var7 = new StringBuilder(var6);
-                      discarded$9 = var7.append(var5_ref.substring(0, var6));
+                      discarded$0 = var7.append(var5.substring(0, var6));
                       if ((param0 ^ -1) < -1) {
-                        discarded$10 = var7.append("/l=");
-                        discarded$11 = var7.append(Integer.toString(param0));
+                        discarded$1 = var7.append("/l=");
+                        discarded$2 = var7.append(Integer.toString(param0));
                         break L8;
                       } else {
                         break L8;
@@ -216,8 +176,8 @@ final class mpb extends mea {
                         if ((param3.length() ^ -1) >= -1) {
                           break L9;
                         } else {
-                          discarded$12 = var7.append("/p=");
-                          discarded$13 = var7.append(param3);
+                          discarded$3 = var7.append("/p=");
+                          discarded$4 = var7.append(param3);
                           break L9;
                         }
                       }
@@ -227,8 +187,8 @@ final class mpb extends mea {
                         break L10;
                       } else {
                         if (0 < param4.length()) {
-                          discarded$14 = var7.append("/s=");
-                          discarded$15 = var7.append(param4);
+                          discarded$5 = var7.append("/s=");
+                          discarded$6 = var7.append(param4);
                           break L10;
                         } else {
                           break L10;
@@ -236,11 +196,11 @@ final class mpb extends mea {
                       }
                     }
                     L11: {
-                      if (var5_ref.length() <= var6) {
-                        discarded$16 = var7.append('/');
+                      if (var5.length() <= var6) {
+                        discarded$7 = var7.append('/');
                         break L11;
                       } else {
-                        discarded$17 = var7.append(var5_ref.substring(var6, var5_ref.length()));
+                        discarded$8 = var7.append(var5.substring(var6, var5.length()));
                         break L11;
                       }
                     }
@@ -254,16 +214,14 @@ final class mpb extends mea {
                             break L13;
                           }
                         }
-                        stackOut_41_0 = new java.net.URL(param1, var7.toString());
-                        stackIn_42_0 = stackOut_41_0;
+                        stackIn_42_0 = new java.net.URL(param1, var7.toString());
                         break L12;
                       }
                     } catch (java.lang.Exception decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       var8 = (Exception) (Object) decompiledCaughtException;
                       var8.printStackTrace();
-                      stackOut_43_0 = (java.net.URL) (param1);
-                      stackIn_44_0 = stackOut_43_0;
+                      stackIn_44_0 = (java.net.URL) (param1);
                       return stackIn_44_0;
                     }
                     break L0;
@@ -275,82 +233,58 @@ final class mpb extends mea {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L14: {
-                var5 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_45_0 = (RuntimeException) (var5);
-                stackOut_45_1 = new StringBuilder().append("mpb.Q(").append(param0).append(',');
-                stackIn_47_0 = stackOut_45_0;
-                stackIn_47_1 = stackOut_45_1;
-                stackIn_46_0 = stackOut_45_0;
-                stackIn_46_1 = stackOut_45_1;
+                var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_47_0 = (RuntimeException) (var5_ref);
+
+                stackIn_47_1 = new StringBuilder().append("mpb.Q(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-                  stackOut_47_1 = (StringBuilder) ((Object) stackIn_47_1);
-                  stackOut_47_2 = "null";
-                  stackIn_48_0 = stackOut_47_0;
-                  stackIn_48_1 = stackOut_47_1;
-                  stackIn_48_2 = stackOut_47_2;
+                  stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
+                  stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
+                  stackIn_48_2 = "null";
                   break L14;
                 } else {
-                  stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-                  stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-                  stackOut_46_2 = "{...}";
-                  stackIn_48_0 = stackOut_46_0;
-                  stackIn_48_1 = stackOut_46_1;
-                  stackIn_48_2 = stackOut_46_2;
+                  stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
+                  stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
+                  stackIn_48_2 = "{...}";
                   break L14;
                 }
               }
               L15: {
-                stackOut_48_0 = (RuntimeException) ((Object) stackIn_48_0);
-                stackOut_48_1 = ((StringBuilder) (Object) stackIn_48_1).append(stackIn_48_2).append(',').append(param2).append(',');
-                stackIn_50_0 = stackOut_48_0;
-                stackIn_50_1 = stackOut_48_1;
-                stackIn_49_0 = stackOut_48_0;
-                stackIn_49_1 = stackOut_48_1;
+
+
+                stackIn_50_1 = ((StringBuilder) (Object) stackIn_48_1).append(stackIn_48_2).append(',').append(param2).append(',');
+
                 if (param3 == null) {
-                  stackOut_50_0 = (RuntimeException) ((Object) stackIn_50_0);
-                  stackOut_50_1 = (StringBuilder) ((Object) stackIn_50_1);
-                  stackOut_50_2 = "null";
-                  stackIn_51_0 = stackOut_50_0;
-                  stackIn_51_1 = stackOut_50_1;
-                  stackIn_51_2 = stackOut_50_2;
+                  stackIn_48_0 = (RuntimeException) ((Object) stackIn_48_0);
+                  stackIn_51_1 = (StringBuilder) ((Object) stackIn_50_1);
+                  stackIn_51_2 = "null";
                   break L15;
                 } else {
-                  stackOut_49_0 = (RuntimeException) ((Object) stackIn_49_0);
-                  stackOut_49_1 = (StringBuilder) ((Object) stackIn_49_1);
-                  stackOut_49_2 = "{...}";
-                  stackIn_51_0 = stackOut_49_0;
-                  stackIn_51_1 = stackOut_49_1;
-                  stackIn_51_2 = stackOut_49_2;
+                  stackIn_48_0 = (RuntimeException) ((Object) stackIn_48_0);
+                  stackIn_51_1 = (StringBuilder) ((Object) stackIn_50_1);
+                  stackIn_51_2 = "{...}";
                   break L15;
                 }
               }
               L16: {
-                stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
-                stackOut_51_1 = ((StringBuilder) (Object) stackIn_51_1).append(stackIn_51_2).append(',');
-                stackIn_53_0 = stackOut_51_0;
-                stackIn_53_1 = stackOut_51_1;
-                stackIn_52_0 = stackOut_51_0;
-                stackIn_52_1 = stackOut_51_1;
+
+
+                stackIn_53_1 = ((StringBuilder) (Object) stackIn_51_1).append(stackIn_51_2).append(',');
+
                 if (param4 == null) {
-                  stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
-                  stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
-                  stackOut_53_2 = "null";
-                  stackIn_54_0 = stackOut_53_0;
-                  stackIn_54_1 = stackOut_53_1;
-                  stackIn_54_2 = stackOut_53_2;
+                  stackIn_48_0 = (RuntimeException) ((Object) stackIn_48_0);
+                  stackIn_54_1 = (StringBuilder) ((Object) stackIn_53_1);
+                  stackIn_54_2 = "null";
                   break L16;
                 } else {
-                  stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
-                  stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
-                  stackOut_52_2 = "{...}";
-                  stackIn_54_0 = stackOut_52_0;
-                  stackIn_54_1 = stackOut_52_1;
-                  stackIn_54_2 = stackOut_52_2;
+                  stackIn_48_0 = (RuntimeException) ((Object) stackIn_48_0);
+                  stackIn_54_1 = (StringBuilder) ((Object) stackIn_53_1);
+                  stackIn_54_2 = "{...}";
                   break L16;
                 }
               }
-              throw rta.a((Throwable) ((Object) stackIn_54_0), stackIn_54_2 + ')');
+              throw rta.a((Throwable) ((Object) stackIn_48_0), stackIn_54_2 + ')');
             }
             return stackIn_42_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -361,46 +295,24 @@ final class mpb extends mea {
     }
 
     final void a(aia param0, int param1, aia param2, int param3) {
-        RuntimeException var5 = null;
-        long var5_long = 0L;
         int var5_int = 0;
         int var6 = 0;
         int var7_int = 0;
-        long var7 = 0L;
-        long var8 = 0L;
         int var10 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
+        String stackIn_26_2 = null;
         StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        long var5_long = 0L;
+        RuntimeException var5 = null;
+        long var7 = 0L;
+        long var8 = 0L;
         var10 = VoidHunters.field_G;
         try {
           L0: {
@@ -572,56 +484,40 @@ final class mpb extends mea {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var5 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var5);
-            stackOut_22_1 = new StringBuilder().append("mpb.I(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_25_0 = (RuntimeException) (var5);
+
+            stackIn_25_1 = new StringBuilder().append("mpb.I(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param1).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+
+
+            stackIn_28_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L8;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L8;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param3 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_26_0), stackIn_29_2 + ',' + param3 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -631,14 +527,15 @@ final class mpb extends mea {
     }
 
     final void a(int param0, int param1, int param2) {
-        boolean discarded$2 = false;
-        int incrementValue$3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int incrementValue$0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_30_1 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         L0: {
           var9 = VoidHunters.field_G;
           this.field_o = param1;
@@ -646,7 +543,7 @@ final class mpb extends mea {
           if (param2 == -19454) {
             break L0;
           } else {
-            discarded$2 = this.f((byte) 118);
+            this.f((byte) 118);
             break L0;
           }
         }
@@ -717,26 +614,33 @@ final class mpb extends mea {
                     var8 = 0;
                     L10: while (true) {
                       L11: {
-                        if (256 < var6) {
-                          break L11;
-                        } else {
-                          if ((var7 ^ -1) >= -257) {
-                            break L5;
-                          } else {
+                        L12: {
+                          L13: {
+                            if (256 < var6) {
+                              break L13;
+                            } else {
+                              stackIn_30_0 = var7 ^ -1;
+
+                              stackIn_30_1 = -257;
+
+                              if (stackIn_30_0 >= stackIn_30_1) {
+                                break L5;
+                              } else {
+                                break L13;
+                              }
+                            }
+                          }
+                          incrementValue$0 = var8;
+                          var8++;
+                          this.field_p[incrementValue$0] = new aia(this.field_d, 3553, 34842, var6, var7);
+                          if (-257 <= (var7 ^ -1)) {
                             break L11;
+                          } else {
+                            break L12;
                           }
                         }
-                      }
-                      L12: {
-                        incrementValue$3 = var8;
-                        var8++;
-                        this.field_p[incrementValue$3] = new aia(this.field_d, 3553, 34842, var6, var7);
-                        if (-257 <= (var7 ^ -1)) {
-                          break L12;
-                        } else {
-                          var7 = var7 >> 1;
-                          break L12;
-                        }
+                        var7 = var7 >> 1;
+                        break L11;
                       }
                       if (-257 > (var6 ^ -1)) {
                         var6 = var6 >> 1;
@@ -750,12 +654,12 @@ final class mpb extends mea {
                   }
                 }
               }
-              L13: {
+              L14: {
                 if (256 < var6) {
                   var6 = var6 >> 1;
-                  break L13;
+                  break L14;
                 } else {
-                  break L13;
+                  break L14;
                 }
               }
               var8++;
@@ -781,10 +685,8 @@ final class mpb extends mea {
     }
 
     final boolean a(int param0) {
-        int var2 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_11_0 = 0;
+        int var2;
         L0: {
           if (!this.field_d.field_U) {
             break L0;
@@ -827,16 +729,14 @@ final class mpb extends mea {
                             if (null == this.field_v) {
                               break L2;
                             } else {
-                              stackOut_10_0 = 1;
-                              stackIn_12_0 = stackOut_10_0;
+                              stackIn_12_0 = 1;
                               break L1;
                             }
                           }
                         }
                       }
                     }
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = 0;
                     break L1;
                   }
                   return stackIn_12_0 != 0;

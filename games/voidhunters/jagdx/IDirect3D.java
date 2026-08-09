@@ -7,8 +7,8 @@ public class IDirect3D extends jaclib.peer.IUnknown {
     private jaclib.peer.tqb a;
 
     public final jagdx.IDirect3DDevice a(int param0, int param1, java.awt.Canvas param2, int param3, jagdx.D3DPRESENT_PARAMETERS param4) {
-        jagdx.IDirect3DDevice var6 = null;
-        int var7 = 0;
+        jagdx.IDirect3DDevice var6;
+        int var7;
         var6 = new jagdx.IDirect3DDevice(this.a);
         var7 = this._CreateDevice(param0, param1, param2, param3, param4, var6);
         if (jagdx.hea.a(var7, (byte) -121)) {
@@ -19,8 +19,8 @@ public class IDirect3D extends jaclib.peer.IUnknown {
     }
 
     public final static jagdx.IDirect3D a(int param0, jaclib.peer.tqb param1) {
-        jagdx.IDirect3D var2 = null;
-        int var3 = 0;
+        jagdx.IDirect3D var2;
+        int var3;
         var2 = new jagdx.IDirect3D(param1);
         var3 = jagdx.IDirect3D._Direct3DCreate(param0, var2);
         if (jagdx.hea.a(var3, (byte) 11)) {

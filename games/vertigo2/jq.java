@@ -21,8 +21,6 @@ abstract class jq {
     final static boolean a(char param0, int param1) {
         int stackIn_8_0 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_6_0 = 0;
         if (param1 == -96) {
           if (param0 != 160) {
             if (32 != param0) {
@@ -33,8 +31,7 @@ abstract class jq {
                   return false;
                 }
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 1;
                 return stackIn_20_0 != 0;
               }
             } else {
@@ -54,8 +51,7 @@ abstract class jq {
                   return false;
                 }
               } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 1;
                 return stackIn_8_0 != 0;
               }
             } else {
@@ -79,7 +75,7 @@ abstract class jq {
     abstract void b(int param0, byte param1, int param2);
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        er var6 = null;
+        er var6;
         var6 = new er(param3, param4);
         var6.d();
         bi.f(0, 0, param3, param4, 12, 5921370);

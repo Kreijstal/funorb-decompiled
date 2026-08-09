@@ -28,12 +28,11 @@ final class ni {
     }
 
     final static int a(byte param0) {
-        int discarded$1 = 0;
         L0: {
           if (param0 < -54) {
             break L0;
           } else {
-            discarded$1 = ni.a((byte) -3);
+            ni.a((byte) -3);
             break L0;
           }
         }

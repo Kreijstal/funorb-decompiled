@@ -11,27 +11,15 @@ final class oga extends rqa {
     }
 
     final nc a(nc[] param0, int param1) {
-        nc discarded$2 = null;
         RuntimeException var3 = null;
         nc[] var4 = null;
         nc stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -39,39 +27,30 @@ final class oga extends rqa {
                 break L1;
               } else {
                 var4 = (nc[]) null;
-                discarded$2 = this.a((nc[]) null, 8);
+                this.a((nc[]) null, 8);
                 break L1;
               }
             }
-            stackOut_2_0 = new nc(frb.a(32, 118));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new nc(frb.a(32, 118));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("oga.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("oga.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -81,17 +60,14 @@ final class oga extends rqa {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
-        boolean discarded$0 = false;
         if (param0 <= 27) {
-            discarded$0 = oga.a(23, 89, -52, 81, -123, -26, false);
+            oga.a(23, 89, -52, 81, -123, -26, false);
         }
         if (!(!wq.e((byte) 105))) {
             gaa.a(param2, 11343, param4, param6);
-            if (null != cka.field_o) {
-                if (cka.field_o.a(param6, -11, param1, param4, param3)) {
-                    lnb.d(0);
-                    param6 = false;
-                }
+            if (null != cka.field_o && cka.field_o.a(param6, -11, param1, param4, param3)) {
+                lnb.d(0);
+                param6 = false;
             }
             jra.a(param4, param6, 19717);
             oj.a((byte) -127, param6, param5);
@@ -157,10 +133,10 @@ final class oga extends rqa {
         try {
             IOException iOException = null;
             int var1_int = 0;
-            RuntimeException var1 = null;
-            IOException var2 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
+            RuntimeException var1 = null;
+            IOException var2 = null;
             var3 = VoidHunters.field_G;
             try {
               L0: {

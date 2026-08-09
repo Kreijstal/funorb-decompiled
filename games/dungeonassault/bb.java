@@ -54,20 +54,14 @@ abstract class bb {
     final boolean d(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 20) {
           L0: {
             this.field_d = (up) null;
             if (20 > this.e(param0 + 0)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -75,12 +69,10 @@ abstract class bb {
         } else {
           L1: {
             if (20 > this.e(param0 + 0)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -111,9 +103,8 @@ abstract class bb {
     }
 
     final int e(int param0) {
-        boolean discarded$2 = false;
         if (param0 != 20) {
-          discarded$2 = this.d(38);
+          this.d(38);
           return this.field_d.b((byte) 53) + this.field_s.b((byte) 53);
         } else {
           return this.field_d.b((byte) 53) + this.field_s.b((byte) 53);
@@ -121,36 +112,25 @@ abstract class bb {
     }
 
     final em a(boolean param0, int param1, byte param2, int param3, byte param4) {
-        long var6 = 0L;
-        em var8 = null;
-        em stackIn_1_0 = null;
+        long var6;
+        em var8;
         em stackIn_2_0 = null;
         em stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        em stackOut_0_0 = null;
-        em stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        em stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           var6 = (long)param3 + ((long)param1 << -1369774112);
           var8 = new em();
           var8.field_E = param2;
           var8.field_o = var6;
-          stackOut_0_0 = (em) (var8);
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = (em) (var8);
+
           if (!param0) {
-            stackOut_2_0 = (em) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (em) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (em) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (em) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }

@@ -17,25 +17,15 @@ final class via implements qda {
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param1 > 55) {
           param0 = param0 & 8191;
           if (4096 > param0) {
             L0: {
               if (param0 < 2048) {
-                stackOut_18_0 = ed.field_b[param0];
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = ed.field_b[param0];
                 break L0;
               } else {
-                stackOut_17_0 = ed.field_b[4096 + -param0];
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = ed.field_b[4096 + -param0];
                 break L0;
               }
             }
@@ -43,12 +33,10 @@ final class via implements qda {
           } else {
             L1: {
               if (-6145 >= (param0 ^ -1)) {
-                stackOut_14_0 = -ed.field_b[-param0 + 8192];
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = -ed.field_b[-param0 + 8192];
                 break L1;
               } else {
-                stackOut_13_0 = -ed.field_b[-4096 + param0];
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = -ed.field_b[-4096 + param0];
                 break L1;
               }
             }
@@ -60,12 +48,10 @@ final class via implements qda {
           if (4096 > param0) {
             L2: {
               if (param0 < 2048) {
-                stackOut_8_0 = ed.field_b[param0];
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = ed.field_b[param0];
                 break L2;
               } else {
-                stackOut_7_0 = ed.field_b[4096 + -param0];
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = ed.field_b[4096 + -param0];
                 break L2;
               }
             }
@@ -73,12 +59,10 @@ final class via implements qda {
           } else {
             L3: {
               if (-6145 >= (param0 ^ -1)) {
-                stackOut_4_0 = -ed.field_b[-param0 + 8192];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = -ed.field_b[-param0 + 8192];
                 break L3;
               } else {
-                stackOut_3_0 = -ed.field_b[-4096 + param0];
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = -ed.field_b[-4096 + param0];
                 break L3;
               }
             }
@@ -88,6 +72,10 @@ final class via implements qda {
     }
 
     final static gs a(int param0, boolean param1) {
+        int stackIn_5_0 = 0;
+        int stackIn_11_0 = 0;
+        int[] stackIn_25_0 = null;
+        Throwable decompiledCaughtException = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -95,16 +83,6 @@ final class via implements qda {
         int var7 = 0;
         pf var8 = null;
         pda var9 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int[] stackIn_25_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int[] stackOut_24_0 = null;
-        Object stackOut_23_0 = null;
         L0: {
           var7 = BachelorFridge.field_y;
           var8 = ig.field_m;
@@ -119,12 +97,10 @@ final class via implements qda {
           var3 = var8.b(16711935);
           wka.field_a = var3 & 127;
           if ((128 & var3) == 0) {
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 0;
             break L1;
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             break L1;
           }
         }
@@ -144,12 +120,10 @@ final class via implements qda {
         }
         L3: {
           if (var8.b(16711935) != 1) {
-            stackOut_10_0 = 0;
-            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_0 = 0;
             break L3;
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             break L3;
           }
         }
@@ -193,12 +167,10 @@ final class via implements qda {
                 var9 = cea.field_h.a(-22834, var5);
                 qk.field_n = var9.d((byte) 117);
                 if (!qia.field_b.equals(cha.field_l)) {
-                  stackOut_24_0 = var9.field_s;
-                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_25_0 = var9.field_s;
                   break L7;
                 } else {
-                  stackOut_23_0 = null;
-                  stackIn_25_0 = (int[]) ((Object) stackOut_23_0);
+                  stackIn_25_0 = null;
                   break L7;
                 }
               }
@@ -218,7 +190,6 @@ final class via implements qda {
     }
 
     public final void a(int param0, wj param1, int param2, int param3, boolean param4) {
-        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -228,8 +199,6 @@ final class via implements qda {
         int var13 = 0;
         km var14 = null;
         wj stackIn_5_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -237,27 +206,15 @@ final class via implements qda {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        wj stackOut_4_0 = null;
-        Object stackOut_3_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             if (param2 == 32679) {
               L1: {
                 if (param1 instanceof km) {
-                  stackOut_4_0 = (wj) (param1);
-                  stackIn_5_0 = stackOut_4_0;
+                  stackIn_5_0 = (wj) (param1);
                   break L1;
                 } else {
-                  stackOut_3_0 = null;
-                  stackIn_5_0 = (wj) ((Object) stackOut_3_0);
+                  stackIn_5_0 = null;
                   break L1;
                 }
               }
@@ -291,7 +248,7 @@ final class via implements qda {
               dg.d(var7, var8, var7 + var11, var8 + var12, 1);
               if (this.field_i != null) {
                 var13 = var14.field_G + var14.field_A + this.field_f;
-                discarded$1 = this.field_i.a(param1.field_w, param0 - (-param1.field_s - var13), param1.field_v + (param3 - -this.field_g), -var13 + (-this.field_f + param1.field_p), -(this.field_f << 65857697) + param1.field_q, this.field_h, this.field_b, 1, 1, 0);
+                this.field_i.a(param1.field_w, param0 - (-param1.field_s - var13), param1.field_v + (param3 - -this.field_g), -var13 + (-this.field_f + param1.field_p), -(this.field_f << 65857697) + param1.field_q, this.field_h, this.field_b, 1, 1, 0);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -306,27 +263,19 @@ final class via implements qda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var6);
-            stackOut_12_1 = new StringBuilder().append("via.A(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var6);
+
+            stackIn_14_1 = new StringBuilder().append("via.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
@@ -349,20 +298,10 @@ final class via implements qda {
     }
 
     final static String a(int param0, String param1, int param2) {
-        bw discarded$1 = null;
-        RuntimeException var3 = null;
-        int var5 = 0;
-        int var6 = 0;
-        nea var7 = null;
-        nea var8 = null;
-        pf var9 = null;
-        CharSequence var10 = null;
         String stackIn_4_0 = null;
         String stackIn_8_0 = null;
         String stackIn_11_0 = null;
         Object stackIn_19_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -370,37 +309,30 @@ final class via implements qda {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        String stackOut_7_0 = null;
-        Object stackOut_18_0 = null;
-        String stackOut_10_0 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var3 = null;
+        int var5 = 0;
+        int var6 = 0;
+        nea var7 = null;
+        nea var8 = null;
+        pf var9 = null;
+        CharSequence var10 = null;
         var6 = BachelorFridge.field_y;
         try {
           L0: {
             var10 = (CharSequence) ((Object) param1);
             if (!wc.a(0, var10)) {
-              stackOut_3_0 = mk.field_f;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = mk.field_f;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (2 != um.field_c) {
-                stackOut_7_0 = nha.field_d;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = nha.field_d;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 var8 = bna.b(-50, param1);
                 if (var8 != null) {
-                  discarded$1 = es.field_j.a(var8, 0);
+                  es.field_j.a(var8, 0);
                   L1: while (true) {
                     var7 = (nea) ((Object) es.field_j.c(0));
                     if (var7 != null) {
@@ -425,15 +357,13 @@ final class via implements qda {
                       var9.d(1, 0);
                       var9.a((byte) -50, param1);
                       var9.b((byte) -63, var9.field_g + -var5);
-                      stackOut_18_0 = null;
-                      stackIn_19_0 = stackOut_18_0;
+                      stackIn_19_0 = null;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }
                   }
                 } else {
-                  stackOut_10_0 = lga.a(true, new String[]{param1}, qga.field_q);
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = lga.a(true, new String[]{param1}, qga.field_q);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -444,27 +374,19 @@ final class via implements qda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var3);
-            stackOut_20_1 = new StringBuilder().append("via.D(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var3);
+
+            stackIn_22_1 = new StringBuilder().append("via.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L3;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L3;
             }
           }

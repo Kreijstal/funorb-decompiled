@@ -27,7 +27,7 @@ final class pn extends dk {
     }
 
     final static int a(int param0, byte param1) {
-        int var2 = 0;
+        int var2;
         L0: {
           L1: {
             var2 = 0;
@@ -89,12 +89,11 @@ final class pn extends dk {
     }
 
     public static void c(boolean param0) {
-        int discarded$0 = 0;
         field_C = null;
         field_z = null;
         field_A = null;
         if (!param0) {
-            discarded$0 = pn.a(125, 76, (byte) -34);
+            pn.a(125, 76, (byte) -34);
         }
         field_y = null;
         field_w = null;
@@ -103,17 +102,11 @@ final class pn extends dk {
     private final void a(boolean param0, int param1) {
         try {
             IOException iOException = null;
-            Exception var4 = null;
-            jc stackIn_5_0 = null;
             jc stackIn_6_0 = null;
             jc stackIn_7_0 = null;
             int stackIn_7_1 = 0;
             Throwable decompiledCaughtException = null;
-            jc stackOut_4_0 = null;
-            jc stackOut_6_0 = null;
-            int stackOut_6_1 = 0;
-            jc stackOut_5_0 = null;
-            int stackOut_5_1 = 0;
+            Exception var4 = null;
             if (this.field_B != null) {
               try {
                 L0: {
@@ -127,20 +120,15 @@ final class pn extends dk {
                     }
                   }
                   L2: {
-                    stackOut_4_0 = this.field_t;
-                    stackIn_6_0 = stackOut_4_0;
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_6_0 = this.field_t;
+
                     if (param0) {
-                      stackOut_6_0 = (jc) ((Object) stackIn_6_0);
-                      stackOut_6_1 = 2;
-                      stackIn_7_0 = stackOut_6_0;
-                      stackIn_7_1 = stackOut_6_1;
+                      stackIn_7_0 = (jc) ((Object) stackIn_6_0);
+                      stackIn_7_1 = 2;
                       break L2;
                     } else {
-                      stackOut_5_0 = (jc) ((Object) stackIn_5_0);
-                      stackOut_5_1 = 3;
-                      stackIn_7_0 = stackOut_5_0;
-                      stackIn_7_1 = stackOut_5_1;
+                      stackIn_7_0 = (jc) ((Object) stackIn_6_0);
+                      stackIn_7_1 = 3;
                       break L2;
                     }
                   }
@@ -195,8 +183,6 @@ final class pn extends dk {
         int stackIn_11_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_6_0 = 0;
         var9 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -205,8 +191,7 @@ final class pn extends dk {
             var5 = ih.field_a;
             L1: while (true) {
               if (var4 >= mn.field_c.length) {
-                stackOut_10_0 = -1;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -220,8 +205,7 @@ final class pn extends dk {
                       var5 = var5 + (mi.field_c + (bj.field_j << 1959035009) - -oh.field_d);
                       break L2;
                     } else {
-                      stackOut_6_0 = var6;
-                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_7_0 = var6;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     }
@@ -258,28 +242,18 @@ final class pn extends dk {
 
     final void a(int param0, boolean param1, Object param2) {
         try {
-            Exception var4 = null;
-            IOException var4_ref = null;
-            RuntimeException var4_ref2 = null;
-            ub var4_ref3 = null;
-            Exception var5 = null;
-            int var6 = 0;
-            RuntimeException stackIn_28_0 = null;
-            StringBuilder stackIn_28_1 = null;
             RuntimeException stackIn_29_0 = null;
             StringBuilder stackIn_29_1 = null;
             RuntimeException stackIn_30_0 = null;
             StringBuilder stackIn_30_1 = null;
             String stackIn_30_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_27_0 = null;
-            StringBuilder stackOut_27_1 = null;
-            RuntimeException stackOut_29_0 = null;
-            StringBuilder stackOut_29_1 = null;
-            String stackOut_29_2 = null;
-            RuntimeException stackOut_28_0 = null;
-            StringBuilder stackOut_28_1 = null;
-            String stackOut_28_2 = null;
+            Exception var4 = null;
+            ub var4_ref = null;
+            IOException var4_ref2 = null;
+            RuntimeException var4_ref3 = null;
+            Exception var5 = null;
+            int var6 = 0;
             var6 = Virogrid.field_F ? 1 : 0;
             try {
               L0: {
@@ -309,15 +283,15 @@ final class pn extends dk {
                 this.field_n.field_l = 0;
                 this.field_d = null;
                 L4: while (true) {
-                  var4_ref3 = (ub) ((Object) this.field_c.a((byte) -103));
-                  if (var4_ref3 != null) {
-                    this.field_i.a(var4_ref3, (byte) 93);
+                  var4_ref = (ub) ((Object) this.field_c.a((byte) -103));
+                  if (var4_ref != null) {
+                    this.field_i.a(var4_ref, (byte) 93);
                     continue L4;
                   } else {
                     L5: while (true) {
-                      var4_ref3 = (ub) ((Object) this.field_h.a((byte) -103));
-                      if (var4_ref3 != null) {
-                        this.field_p.a(var4_ref3, (byte) 119);
+                      var4_ref = (ub) ((Object) this.field_h.a((byte) -103));
+                      if (var4_ref != null) {
+                        this.field_p.a(var4_ref, (byte) 119);
                         continue L5;
                       } else {
                         L6: {
@@ -334,7 +308,7 @@ final class pn extends dk {
                             } catch (java.io.IOException decompiledCaughtParameter1) {
                               decompiledCaughtException = decompiledCaughtParameter1;
                               L8: {
-                                var4_ref = (IOException) (Object) decompiledCaughtException;
+                                var4_ref2 = (IOException) (Object) decompiledCaughtException;
                                 try {
                                   L9: {
                                     this.field_B.b(4155);
@@ -377,28 +351,20 @@ final class pn extends dk {
             } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               L12: {
-                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_27_0 = (RuntimeException) (var4_ref2);
-                stackOut_27_1 = new StringBuilder().append("pn.J(").append(param0).append(',').append(param1).append(',');
-                stackIn_29_0 = stackOut_27_0;
-                stackIn_29_1 = stackOut_27_1;
-                stackIn_28_0 = stackOut_27_0;
-                stackIn_28_1 = stackOut_27_1;
+                var4_ref3 = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_29_0 = (RuntimeException) (var4_ref3);
+
+                stackIn_29_1 = new StringBuilder().append("pn.J(").append(param0).append(',').append(param1).append(',');
+
                 if (param2 == null) {
-                  stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-                  stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-                  stackOut_29_2 = "null";
-                  stackIn_30_0 = stackOut_29_0;
-                  stackIn_30_1 = stackOut_29_1;
-                  stackIn_30_2 = stackOut_29_2;
+                  stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+                  stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+                  stackIn_30_2 = "null";
                   break L12;
                 } else {
-                  stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-                  stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-                  stackOut_28_2 = "{...}";
-                  stackIn_30_0 = stackOut_28_0;
-                  stackIn_30_1 = stackOut_28_1;
-                  stackIn_30_2 = stackOut_28_2;
+                  stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+                  stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+                  stackIn_30_2 = "{...}";
                   break L12;
                 }
               }
@@ -412,10 +378,9 @@ final class pn extends dk {
     }
 
     final static void a(boolean param0) {
-        int discarded$0 = 0;
         ok.field_L = hd.field_b.a(de.field_pb[14]);
         if (param0) {
-            discarded$0 = pn.a(-7, (byte) 94);
+            pn.a(-7, (byte) 94);
         }
         int var1 = hd.field_b.a(de.field_pb[15]);
         if (!(var1 <= ok.field_L)) {
@@ -425,12 +390,16 @@ final class pn extends dk {
 
     final boolean d(int param0) {
         try {
-            IOException var2 = null;
+            int stackIn_60_0 = 0;
+            int stackIn_75_0 = 0;
+            int stackIn_84_0 = 0;
+            Throwable decompiledCaughtException = null;
             long var2_long = 0L;
-            ub var2_ref = null;
+            ub var2 = null;
             int var2_int = 0;
-            Exception var3 = null;
+            IOException var2_ref = null;
             int var3_int = 0;
+            Exception var3 = null;
             int var4 = 0;
             Exception var5_ref_Exception = null;
             int var5 = 0;
@@ -445,15 +414,6 @@ final class pn extends dk {
             ub var14_ref = null;
             int var15 = 0;
             int var16 = 0;
-            int stackIn_60_0 = 0;
-            int stackIn_75_0 = 0;
-            int stackIn_84_0 = 0;
-            Throwable decompiledCaughtException = null;
-            int stackOut_59_0 = 0;
-            int stackOut_58_0 = 0;
-            int stackOut_74_0 = 0;
-            int stackOut_73_0 = 0;
-            int stackOut_83_0 = 0;
             L0: {
               var16 = Virogrid.field_F ? 1 : 0;
               if (this.field_B == null) {
@@ -503,12 +463,12 @@ final class pn extends dk {
                       break L5;
                     }
                   }
-                  var2_ref = (ub) ((Object) this.field_i.d(-1));
+                  var2 = (ub) ((Object) this.field_i.d(-1));
                   L6: while (true) {
-                    if (var2_ref == null) {
-                      var2_ref = (ub) ((Object) this.field_p.d(-1));
+                    if (var2 == null) {
+                      var2 = (ub) ((Object) this.field_p.d(-1));
                       L7: while (true) {
-                        if (var2_ref == null) {
+                        if (var2 == null) {
                           var2_int = 0;
                           L8: while (true) {
                             L9: {
@@ -591,12 +551,10 @@ final class pn extends dk {
                                               var9 = this.field_n.d((byte) 116);
                                               var10 = 127 & var8;
                                               if ((128 & var8) == 0) {
-                                                stackOut_59_0 = 0;
-                                                stackIn_60_0 = stackOut_59_0;
+                                                stackIn_60_0 = 0;
                                                 break L15;
                                               } else {
-                                                stackOut_58_0 = 1;
-                                                stackIn_60_0 = stackOut_58_0;
+                                                stackIn_60_0 = 1;
                                                 break L15;
                                               }
                                             }
@@ -637,12 +595,10 @@ final class pn extends dk {
                                             if (var14_ref != null) {
                                               L19: {
                                                 if (var10 == 0) {
-                                                  stackOut_74_0 = 5;
-                                                  stackIn_75_0 = stackOut_74_0;
+                                                  stackIn_75_0 = 5;
                                                   break L19;
                                                 } else {
-                                                  stackOut_73_0 = 9;
-                                                  stackIn_75_0 = stackOut_73_0;
+                                                  stackIn_75_0 = 9;
                                                   break L19;
                                                 }
                                               }
@@ -718,34 +674,33 @@ final class pn extends dk {
                                 }
                               }
                             }
-                            stackOut_83_0 = 1;
-                            stackIn_84_0 = stackOut_83_0;
+                            stackIn_84_0 = 1;
                             break L4;
                           }
                         } else {
                           this.field_t.field_l = 0;
                           this.field_t.a(0, 104);
-                          this.field_t.a(var2_ref.field_j, 65280);
+                          this.field_t.a(var2.field_j, 65280);
                           this.field_B.a(this.field_t.field_g, 0, 0, this.field_t.field_g.length);
-                          this.field_h.a(var2_ref, (byte) 99);
-                          var2_ref = (ub) ((Object) this.field_p.a(26605));
+                          this.field_h.a(var2, (byte) 99);
+                          var2 = (ub) ((Object) this.field_p.a(26605));
                           continue L7;
                         }
                       }
                     } else {
                       this.field_t.field_l = 0;
                       this.field_t.a(1, -83);
-                      this.field_t.a(var2_ref.field_j, 65280);
+                      this.field_t.a(var2.field_j, 65280);
                       this.field_B.a(this.field_t.field_g, 0, 0, this.field_t.field_g.length);
-                      this.field_c.a(var2_ref, (byte) 93);
-                      var2_ref = (ub) ((Object) this.field_i.a(26605));
+                      this.field_c.a(var2, (byte) 93);
+                      var2 = (ub) ((Object) this.field_i.a(26605));
                       continue L6;
                     }
                   }
                 }
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
-                var2 = (IOException) (Object) decompiledCaughtException;
+                var2_ref = (IOException) (Object) decompiledCaughtException;
                 try {
                   L24: {
                     this.field_B.b(4155);
@@ -799,8 +754,8 @@ final class pn extends dk {
     private final void b(boolean param0) {
         try {
             IOException iOException = null;
-            Exception var3 = null;
             Throwable decompiledCaughtException = null;
+            Exception var3 = null;
             if (null != this.field_B) {
               try {
                 L0: {

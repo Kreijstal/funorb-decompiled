@@ -39,16 +39,16 @@ final class nc implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        hl var1 = null;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        hl var1;
+        int var2;
         var2 = HoldTheLine.field_D;
         if (this.field_f.field_j[this.field_i - 1] == this.field_k) {
           L0: while (true) {
             if (this.field_f.field_g > this.field_i) {
-              fieldTemp$2 = this.field_i;
+              fieldTemp$1 = this.field_i;
               this.field_i = this.field_i + 1;
-              var1 = this.field_f.field_j[fieldTemp$2].field_h;
+              var1 = this.field_f.field_j[fieldTemp$1].field_h;
               if (this.field_f.field_j[this.field_i - 1] != var1) {
                 this.field_d = var1;
                 this.field_k = var1.field_h;
@@ -70,7 +70,7 @@ final class nc implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = HoldTheLine.field_D;
         if (this.field_k == this.field_f.field_j[-1 + this.field_i]) {
           L0: while (true) {

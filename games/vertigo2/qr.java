@@ -24,22 +24,22 @@ final class qr extends jq {
     }
 
     final static tn a(int param0, int param1, int param2, int param3) {
-        Object var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        tn var8_ref_tn = null;
-        int var9 = 0;
-        tn var9_ref_tn = null;
-        int var10_int = 0;
-        String var10 = null;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int stackIn_41_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
+        Object stackIn_34_0 = null;
+        cr stackIn_34_1 = null;
+        int stackIn_42_0 = 0;
+        Object var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        tn var8_ref_tn;
+        int var9;
+        tn var9_ref_tn;
+        int var10_int;
+        String var10;
+        String var11;
+        int var12;
+        int var13;
         var13 = Vertigo2.field_L ? 1 : 0;
         mg.field_R.field_Nb.field_M.c(0);
         var4 = null;
@@ -80,7 +80,9 @@ final class qr extends jq {
                     if (!il.field_a) {
                       break L4;
                     } else {
-                      if (null != gk.field_c) {
+                      stackIn_34_0 = null;
+                      stackIn_34_1 = gk.field_c;
+                      if (stackIn_34_0 != stackIn_34_1) {
                         nb.field_z = true;
                         break L4;
                       } else {
@@ -100,16 +102,14 @@ final class qr extends jq {
                   L6: {
                     mg.field_R.a(param3, true, -1, param2 * 2 * param3);
                     if (mg.field_R.field_Nb.field_L + mg.field_R.field_Nb.field_N != var9) {
-                      stackOut_40_0 = 0;
-                      stackIn_41_0 = stackOut_40_0;
+                      stackIn_42_0 = 0;
                       break L6;
                     } else {
-                      stackOut_39_0 = 1;
-                      stackIn_41_0 = stackOut_39_0;
+                      stackIn_42_0 = 1;
                       break L6;
                     }
                   }
-                  nb.field_z = stackIn_41_0 != 0;
+                  nb.field_z = stackIn_42_0 != 0;
                   return (tn) (var4);
                 } else {
                   return (tn) null;

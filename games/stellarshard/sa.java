@@ -10,32 +10,25 @@ final class sa extends i {
     final byte[] a(int param0) {
         byte[] var4 = new byte[this.field_f.capacity()];
         byte[] var2 = var4;
-        java.nio.Buffer discarded$0 = this.field_f.position(0);
+        this.field_f.position(0);
         int var3 = 12 / ((param0 - 74) / 44);
-        java.nio.ByteBuffer discarded$1 = this.field_f.get(var4);
+        this.field_f.get(var4);
         return var4;
     }
 
     final static boolean a(byte param0) {
-        bm discarded$6 = null;
-        byte[] var2 = null;
+        byte[] var2;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 < 72) {
           L0: {
             var2 = (byte[]) null;
-            discarded$6 = sa.a(53, (byte[]) null);
+            sa.a(53, (byte[]) null);
             if (el.field_E != dj.field_a) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -43,12 +36,10 @@ final class sa extends i {
         } else {
           L1: {
             if (el.field_E != dj.field_a) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -57,9 +48,8 @@ final class sa extends i {
     }
 
     public static void c(int param0) {
-        boolean discarded$0 = false;
         if (param0 != -17002) {
-            discarded$0 = sa.a((byte) -29);
+            sa.a((byte) -29);
             field_g = null;
             return;
         }
@@ -67,12 +57,10 @@ final class sa extends i {
     }
 
     final void a(byte[] param0, byte param1) {
-        java.nio.Buffer discarded$0 = null;
-        java.nio.ByteBuffer discarded$1 = null;
         try {
             this.field_f = java.nio.ByteBuffer.allocateDirect(param0.length);
-            discarded$0 = this.field_f.position(0);
-            discarded$1 = this.field_f.put(param0);
+            this.field_f.position(0);
+            this.field_f.put(param0);
             int var3_int = -42 % ((param1 - 19) / 40);
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) ((Object) runtimeException), "sa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -84,8 +72,6 @@ final class sa extends i {
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
         bm stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -93,16 +79,6 @@ final class sa extends i {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        bm stackOut_5_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (param1 != null) {
@@ -116,13 +92,11 @@ final class sa extends i {
                 }
               }
               tb.f((byte) -62);
-              stackOut_5_0 = (bm) (var2);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = (bm) (var2);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -131,27 +105,19 @@ final class sa extends i {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2_ref);
-            stackOut_7_1 = new StringBuilder().append("sa.I(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2_ref);
+
+            stackIn_9_1 = new StringBuilder().append("sa.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }

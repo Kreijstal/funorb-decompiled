@@ -76,10 +76,9 @@ final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final void a(ib param0, int param1) {
-        String discarded$0 = null;
         try {
             if (param1 != 50) {
-                discarded$0 = ef.c(62);
+                ef.c(62);
             }
             rd.a((byte) 118, param0, this.field_f);
         } catch (RuntimeException runtimeException) {
@@ -100,8 +99,6 @@ final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
         qm var13 = null;
         float stackIn_3_0 = 0.0f;
         float stackIn_7_0 = 0.0f;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -109,21 +106,10 @@ final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        float stackOut_2_0 = 0.0f;
-        float stackOut_6_0 = 0.0f;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if (param1.field_k != 0) {
-              stackOut_2_0 = 0.0f;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0.0f;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -146,8 +132,7 @@ final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
               var12 = (float)Math.sqrt((double)(var11 * var11 + (var9 * var9 + var10 * var10)));
               var10 = var10 / var12;
               var9 = var9 / var12;
-              stackOut_6_0 = (var9 + var10) * -5.0f;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = (var9 + var10) * -5.0f;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -156,27 +141,19 @@ final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("ef.A(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("ef.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }

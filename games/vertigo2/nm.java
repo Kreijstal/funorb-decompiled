@@ -106,27 +106,18 @@ abstract class nm extends cj {
     private final int i(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 >= -117) {
           L0: {
             this.field_I = false;
             if (!this.field_I) {
-              stackOut_11_0 = 0;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_0 = 0;
               break L0;
             } else {
               if (this == this.field_H.k(0)) {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 256;
                 break L0;
               } else {
-                stackOut_9_0 = 0;
-                stackIn_12_0 = stackOut_9_0;
+                stackIn_12_0 = 0;
                 break L0;
               }
             }
@@ -135,17 +126,14 @@ abstract class nm extends cj {
         } else {
           L1: {
             if (!this.field_I) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               break L1;
             } else {
               if (this == this.field_H.k(0)) {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L1;
               } else {
-                stackOut_3_0 = 0;
-                stackIn_6_0 = stackOut_3_0;
+                stackIn_6_0 = 0;
                 break L1;
               }
             }
@@ -156,9 +144,8 @@ abstract class nm extends cj {
 
     final static void b(boolean param0, int param1) {
         try {
-            Object discarded$1 = null;
-            Throwable var2 = null;
             Throwable decompiledCaughtException = null;
+            Throwable var2 = null;
             L0: {
               if (!param0) {
                 break L0;
@@ -169,7 +156,7 @@ abstract class nm extends cj {
             }
             try {
               L1: {
-                discarded$1 = je.a((byte) 49, "resizing", ob.e((byte) 71), new Object[]{new Integer(param1)});
+                je.a((byte) 49, "resizing", ob.e((byte) 71), new Object[]{new Integer(param1)});
                 break L1;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -187,14 +174,10 @@ abstract class nm extends cj {
     }
 
     boolean j(int param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_13_0 = 0;
         int stackIn_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
+        int var2;
+        int var3;
         L0: {
           var2 = this.i(-125);
           var3 = -this.field_G + var2;
@@ -220,12 +203,10 @@ abstract class nm extends cj {
             } else {
               L2: {
                 if (this.field_I) {
-                  stackOut_24_0 = 0;
-                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_25_0 = 0;
                   break L2;
                 } else {
-                  stackOut_23_0 = 1;
-                  stackIn_25_0 = stackOut_23_0;
+                  stackIn_25_0 = 1;
                   break L2;
                 }
               }
@@ -250,12 +231,10 @@ abstract class nm extends cj {
             } else {
               L4: {
                 if (this.field_I) {
-                  stackOut_12_0 = 0;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = 0;
                   break L4;
                 } else {
-                  stackOut_11_0 = 1;
-                  stackIn_13_0 = stackOut_11_0;
+                  stackIn_13_0 = 1;
                   break L4;
                 }
               }

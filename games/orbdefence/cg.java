@@ -25,27 +25,30 @@ final class cg {
     }
 
     final j a(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        j var2 = null;
-        j var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        j var11 = null;
-        j var12 = null;
+        int fieldTemp$4 = 0;
+        j dupTemp$5 = null;
+        int fieldTemp$6 = 0;
+        j dupTemp$7 = null;
+        j var2;
+        j var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        j var11;
+        j var12;
         var10 = OrbDefence.field_D ? 1 : 0;
         if (-1 != (this.field_e ^ -1)) {
           var2 = this.field_g[0];
           if (param0 == -2) {
-            fieldTemp$2 = this.field_e - 1;
+            fieldTemp$4 = this.field_e - 1;
             this.field_e = this.field_e - 1;
-            this.field_g[0] = this.field_g[fieldTemp$2];
-            var11 = this.field_g[fieldTemp$2];
+            dupTemp$5 = this.field_g[fieldTemp$4];
+            this.field_g[0] = dupTemp$5;
+            var11 = dupTemp$5;
             var3 = var11;
             var4 = 0;
             var9 = this.field_g[0].field_d;
@@ -100,10 +103,11 @@ final class cg {
             }
           } else {
             this.field_a = -105;
-            fieldTemp$3 = this.field_e - 1;
+            fieldTemp$6 = this.field_e - 1;
             this.field_e = this.field_e - 1;
-            this.field_g[0] = this.field_g[fieldTemp$3];
-            var12 = this.field_g[fieldTemp$3];
+            dupTemp$7 = this.field_g[fieldTemp$6];
+            this.field_g[0] = dupTemp$7;
+            var12 = dupTemp$7;
             var3 = var12;
             var4 = 0;
             var9 = this.field_g[0].field_d;
@@ -164,28 +168,19 @@ final class cg {
 
     final void a(j param0, byte param1) {
         int fieldTemp$2 = 0;
+        j dupTemp$3 = null;
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         j var6 = null;
         int var7 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var3 = null;
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -218,8 +213,9 @@ final class cg {
                   var4 = -1 + var3_int >> -1878277695;
                   if (var7 == 0) {
                     L5: {
-                      var6 = this.field_g[var4];
-                      if (this.field_g[var4].field_d > var5) {
+                      dupTemp$3 = this.field_g[var4];
+                      var6 = dupTemp$3;
+                      if (dupTemp$3.field_d > var5) {
                         break L5;
                       } else {
                         if (var7 == 0) {
@@ -231,7 +227,11 @@ final class cg {
                     }
                     this.field_g[var4] = param0;
                     this.field_g[var3_int] = var6;
-                    continue L3;
+                    if (var7 == 0) {
+                      continue L3;
+                    } else {
+                      break L4;
+                    }
                   } else {
                     return;
                   }
@@ -244,27 +244,19 @@ final class cg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("cg.C(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3);
+
+            stackIn_16_1 = new StringBuilder().append("cg.C(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L6;
             }
           }
@@ -293,45 +285,94 @@ final class cg {
         int var4 = 0;
         j[] var5 = null;
         j[] var6 = null;
-        var4 = OrbDefence.field_D ? 1 : 0;
-        this.field_a = this.field_a << 1;
-        var5 = new j[this.field_a];
-        var6 = var5;
-        var2 = var6;
-        var3 = 0;
-        L0: while (true) {
-          if (var3 >= this.field_e) {
-            this.field_g = var6;
-            if (param0 == -1) {
-              return;
-            } else {
-              field_b = (long[]) null;
-              return;
-            }
-          } else {
-            var5[var3] = this.field_g[var3];
-            var3++;
-            if (var4 != 0) {
-              if (param0 == -1) {
-                return;
-              } else {
-                field_b = (long[]) null;
-                return;
-              }
-            } else {
-              if (var4 == 0) {
-                continue L0;
-              } else {
-                this.field_g = var6;
-                if (param0 == -1) {
-                  return;
-                } else {
-                  field_b = (long[]) null;
-                  return;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = OrbDefence.field_D ? 1 : 0;
+                    this.field_a = this.field_a << 1;
+                    var5 = new j[this.field_a];
+                    var6 = var5;
+                    var2 = var6;
+                    var3 = 0;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
+                case 1: {
+                    if (var3 >= this.field_e) {
+                        statePc = 5;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
+                }
+                case 2: {
+                    var5[var3] = this.field_g[var3];
+                    var3++;
+                    if (var4 != 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (var4 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    this.field_g = var6;
+                    if (param0 == -1) {
+                        statePc = 7;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    field_b = (long[]) null;
+                    return;
+                }
+                case 7: {
+                    return;
+                }
+                case 9: {
+                    this.field_g = var6;
+                    if (param0 == -1) {
+                        statePc = 11;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    field_b = (long[]) null;
+                    return;
+                }
+                case 11: {
+                    return;
+                }
+                case 13: {
+                    if (param0 == -1) {
+                        statePc = 15;
+                    } else {
+                        statePc = 14;
+                    }
+                    continue stateLoop;
+                }
+                case 14: {
+                    field_b = (long[]) null;
+                    return;
+                }
+                case 15: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
         }
     }
 
@@ -345,9 +386,9 @@ final class cg {
 
     static {
         $cfr$clinit: {
-            long var0 = 0L;
-            int var2 = 0;
-            int var3 = 0;
+            long var0;
+            int var2;
+            int var3;
             field_d = new hj(640, 480);
             field_h = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
             field_b = new long[256];

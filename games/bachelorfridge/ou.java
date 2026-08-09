@@ -10,8 +10,8 @@ final class ou implements Iterable {
     static String field_c;
 
     final eo a(int param0) {
-        eo var2 = null;
-        eo var3 = null;
+        eo var2;
+        eo var3;
         if (param0 == 24383) {
           var2 = this.field_a.field_m;
           if (this.field_a == var2) {
@@ -52,7 +52,6 @@ final class ou implements Iterable {
     }
 
     final void a(eo param0, byte param1) {
-        eo discarded$0 = null;
         try {
             if (!(null == param0.field_i)) {
                 param0.b(0);
@@ -61,7 +60,7 @@ final class ou implements Iterable {
             param0.field_i = this.field_a.field_i;
             param0.field_i.field_m = param0;
             if (param1 != -118) {
-                discarded$0 = this.a(42);
+                this.a(42);
             }
             param0.field_m.field_i = param0;
         } catch (RuntimeException runtimeException) {

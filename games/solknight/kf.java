@@ -71,20 +71,12 @@ abstract class kf extends ki {
     abstract void a(int param0, byte param1, int param2);
 
     boolean h(int param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_11_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_38_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int var2;
+        int var3;
         if (param0 == 1784) {
           L0: {
             var2 = this.a((byte) -104);
@@ -109,15 +101,13 @@ abstract class kf extends ki {
                     if (this.field_J) {
                       break L2;
                     } else {
-                      stackOut_36_0 = 1;
-                      stackIn_38_0 = stackOut_36_0;
+                      stackIn_38_0 = 1;
                       break L1;
                     }
                   }
                 }
               }
-              stackOut_37_0 = 0;
-              stackIn_38_0 = stackOut_37_0;
+              stackIn_38_0 = 0;
               break L1;
             }
             return stackIn_38_0 != 0;
@@ -133,15 +123,13 @@ abstract class kf extends ki {
                     if (this.field_J) {
                       break L4;
                     } else {
-                      stackOut_30_0 = 1;
-                      stackIn_32_0 = stackOut_30_0;
+                      stackIn_32_0 = 1;
                       break L3;
                     }
                   }
                 }
               }
-              stackOut_31_0 = 0;
-              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_0 = 0;
               break L3;
             }
             return stackIn_32_0 != 0;
@@ -166,12 +154,10 @@ abstract class kf extends ki {
               } else {
                 L6: {
                   if (this.field_J) {
-                    stackOut_19_0 = 0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_20_0 = 0;
                     break L6;
                   } else {
-                    stackOut_18_0 = 1;
-                    stackIn_20_0 = stackOut_18_0;
+                    stackIn_20_0 = 1;
                     break L6;
                   }
                 }
@@ -187,12 +173,10 @@ abstract class kf extends ki {
               } else {
                 L7: {
                   if (this.field_J) {
-                    stackOut_10_0 = 0;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = 0;
                     break L7;
                   } else {
-                    stackOut_9_0 = 1;
-                    stackIn_11_0 = stackOut_9_0;
+                    stackIn_11_0 = 1;
                     break L7;
                   }
                 }
@@ -207,8 +191,6 @@ abstract class kf extends ki {
 
     final static void a(int param0, String[] param1) {
         RuntimeException var2 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -216,14 +198,6 @@ abstract class kf extends ki {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if (param0 == 1) {
@@ -251,27 +225,19 @@ abstract class kf extends ki {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2);
-            stackOut_8_1 = new StringBuilder().append("kf.WB(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2);
+
+            stackIn_10_1 = new StringBuilder().append("kf.WB(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }

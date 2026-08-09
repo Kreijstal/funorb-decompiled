@@ -42,19 +42,19 @@ abstract class wk extends ri {
     }
 
     void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         L0: {
           var16 = Bounce.field_N;
           if (param1 < -6) {
@@ -111,7 +111,7 @@ abstract class wk extends ri {
               }
             }
           } else {
-            if (var8 >= na.field_i) {
+            if ((var8 ^ -1) <= (na.field_i ^ -1)) {
               if (var8 < na.field_f) {
                 L4: {
                   var9 = var7 * (var6 - var5) / var4 + var5;

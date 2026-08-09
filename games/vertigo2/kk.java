@@ -19,27 +19,15 @@ final class kk {
     static cr field_f;
 
     final int[][] a(int param0, int param1) {
-        mn var3 = null;
-        mn var4 = null;
-        int var5 = 0;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
         Object stackIn_11_0 = null;
         int stackIn_11_1 = 0;
-        Object stackOut_8_0 = null;
-        Object stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
+        mn var3;
+        mn var4;
+        int var5;
         L0: {
           var5 = Vertigo2.field_L ? 1 : 0;
           if (param1 == -2) {
@@ -79,20 +67,15 @@ final class kk {
             return this.field_l[var3.field_s];
           } else {
             L3: {
-              stackOut_8_0 = this;
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_10_0 = this;
+
               if (this.field_b == param0) {
-                stackOut_10_0 = this;
-                stackOut_10_1 = 0;
-                stackIn_11_0 = stackOut_10_0;
-                stackIn_11_1 = stackOut_10_1;
+                stackIn_11_0 = this;
+                stackIn_11_1 = 0;
                 break L3;
               } else {
-                stackOut_9_0 = this;
-                stackOut_9_1 = 1;
-                stackIn_11_0 = stackOut_9_0;
-                stackIn_11_1 = stackOut_9_1;
+                stackIn_11_0 = this;
+                stackIn_11_1 = 1;
                 break L3;
               }
             }
@@ -102,20 +85,15 @@ final class kk {
           }
         } else {
           L4: {
-            stackOut_3_0 = this;
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_5_0 = this;
+
             if (null != this.field_m[param0]) {
-              stackOut_5_0 = this;
-              stackOut_5_1 = 0;
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_0 = this;
+              stackIn_6_1 = 0;
               break L4;
             } else {
-              stackOut_4_0 = this;
-              stackOut_4_1 = 1;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_0 = this;
+              stackIn_6_1 = 1;
               break L4;
             }
           }
@@ -172,10 +150,9 @@ final class kk {
     }
 
     final static void a(byte param0) {
-        byte[] discarded$0 = null;
         id.field_a = gk.a(53);
         if (param0 != 43) {
-            discarded$0 = kk.a(-94, (byte) -26);
+            kk.a(-94, (byte) -26);
         }
         nj.field_d = 0;
     }
@@ -197,23 +174,12 @@ final class kk {
         RuntimeException var2 = null;
         byte[] var3 = null;
         byte[] stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -227,35 +193,26 @@ final class kk {
                 break L1;
               }
             }
-            stackOut_2_0 = (byte[]) (var3);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (byte[]) (var3);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("kk.H(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("kk.H(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -265,10 +222,9 @@ final class kk {
     }
 
     final static void b(byte param0) {
-        byte[] discarded$0 = null;
         il.field_a = true;
         if (param0 <= 78) {
-            discarded$0 = kk.a(117, (byte) 117);
+            kk.a(117, (byte) 117);
         }
         field_a = null;
         gk.field_c = null;

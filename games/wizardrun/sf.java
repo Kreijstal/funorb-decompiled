@@ -14,13 +14,10 @@ final class sf {
     static int field_d;
 
     final static int a(boolean param0, int param1, String param2) {
-        int discarded$2 = 0;
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -28,16 +25,6 @@ final class sf {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -45,18 +32,16 @@ final class sf {
                 break L1;
               } else {
                 var4 = (String) null;
-                discarded$2 = sf.a(false, 17, (String) null);
+                sf.a(false, 17, (String) null);
                 break L1;
               }
             }
             if (!param0) {
-              stackOut_5_0 = le.field_j.b(param2);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = le.field_j.b(param2);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_3_0 = uf.field_c.b(param2);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = uf.field_c.b(param2);
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -65,27 +50,19 @@ final class sf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("sf.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("sf.B(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -99,15 +76,14 @@ final class sf {
     }
 
     final static char a(int param0, char param1) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        String var4 = null;
+        int var2;
+        int var3;
+        String var4;
         var3 = wizardrun.field_H;
         if (param0 != -1514) {
           L0: {
             var4 = (String) null;
-            discarded$1 = sf.a(true, -67, (String) null);
+            sf.a(true, -67, (String) null);
             var2 = param1;
             if (32 != var2) {
               if (-161 != (var2 ^ -1)) {
@@ -617,9 +593,8 @@ final class sf {
     }
 
     final boolean a(boolean param0) {
-        boolean discarded$0 = false;
         if (!param0) {
-            discarded$0 = this.b(-43);
+            this.b(-43);
             return this.field_f;
         }
         return this.field_f;

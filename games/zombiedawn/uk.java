@@ -57,8 +57,8 @@ final class uk {
     }
 
     final static void a(boolean param0) {
-        CharSequence var2 = null;
-        CharSequence var3 = null;
+        CharSequence var2;
+        CharSequence var3;
         ce.field_r = fj.field_g.a(true);
         if (param0) {
           field_b = (String) null;

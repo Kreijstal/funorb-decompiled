@@ -38,42 +38,28 @@ final class kk extends lf {
     }
 
     final synchronized void b(int[] param0, int param1, int param2) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
         int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
         int var6 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException var4 = null;
+        int var5 = 0;
         var6 = Torquing.field_u;
         try {
           L0: {
             L1: {
               if (!pi.field_r) {
-                stackOut_3_0 = param2;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = param2;
                 break L1;
               } else {
-                stackOut_2_0 = param2 << -1862505791;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = param2 << -1862505791;
                 break L1;
               }
             }
@@ -108,11 +94,11 @@ final class kk extends lf {
               if (var4_int <= var5) {
                 break L0;
               } else {
-                incrementValue$2 = param1;
+                incrementValue$0 = param1;
                 param1++;
-                incrementValue$3 = var5;
+                incrementValue$1 = var5;
                 var5++;
-                param0[incrementValue$2] = param0[incrementValue$2] + on.field_c * this.field_p[incrementValue$3] / 160;
+                param0[incrementValue$0] = param0[incrementValue$0] + on.field_c * this.field_p[incrementValue$1] / 160;
                 continue L5;
               }
             }
@@ -121,27 +107,19 @@ final class kk extends lf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var4);
-            stackOut_15_1 = new StringBuilder().append("kk.A(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var4);
+
+            stackIn_17_1 = new StringBuilder().append("kk.A(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L6;
             }
           }

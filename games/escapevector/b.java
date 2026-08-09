@@ -14,8 +14,6 @@ final class b {
     }
 
     final static void a(int param0) {
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
         RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
@@ -24,7 +22,7 @@ final class b {
         try {
           L0: {
             if (hg.b(12)) {
-              discarded$12 = pn.field_pb.a(true, (byte) -33, on.field_a, sm.field_b);
+              pn.field_pb.a(true, (byte) -33, on.field_a, sm.field_b);
               pn.field_pb.m(0);
               L1: while (true) {
                 if (!pn.p(-104)) {
@@ -36,7 +34,7 @@ final class b {
                     return;
                   }
                 } else {
-                  discarded$13 = pn.field_pb.a(jc.field_c, nk.field_n, (byte) -121);
+                  pn.field_pb.a(jc.field_c, nk.field_n, (byte) -121);
                   continue L1;
                 }
               }

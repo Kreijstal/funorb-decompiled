@@ -114,7 +114,7 @@ final class dda extends kj {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
+        int var4;
         dg.a(dga.field_b);
         var4 = this.field_i * 36 / 150;
         if (param1 != 0) {

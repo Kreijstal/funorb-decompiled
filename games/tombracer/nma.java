@@ -14,14 +14,14 @@ final class nma extends rra {
     private int field_o;
 
     final void a(int param0, int param1, boolean param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         var4 = this.field_j * param0 >> 1682847340;
         var5 = param1 * this.field_g >> 768434636;
         if (!param2) {
@@ -74,7 +74,7 @@ final class nma extends rra {
     }
 
     final static int b(boolean param0, int param1) {
-        int var2 = 0;
+        int var2;
         if (param1 == 0) {
           return 0;
         } else {

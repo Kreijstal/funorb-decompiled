@@ -6,6 +6,7 @@ final class sf {
 
     public static void a(int param0) {
         if (param0 != 8192) {
+            sf.a((byte) 91);
             field_a = null;
             return;
         }
@@ -13,8 +14,8 @@ final class sf {
     }
 
     final synchronized static long a(byte param0) {
-        long var1 = 0L;
-        int var3 = 0;
+        long var1;
+        int var3;
         var3 = -9 / ((47 - param0) / 49);
         var1 = System.currentTimeMillis();
         if (em.field_A > var1) {

@@ -9,29 +9,18 @@ abstract class af {
     static int field_b;
 
     final static String a(mo param0, byte param1) {
-        Object var2 = null;
-        Object var3 = null;
-        String var3_ref = null;
-        int var4 = 0;
-        String var5 = null;
         String stackIn_33_0 = null;
-        Object stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
         Object stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         Object stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_32_0 = null;
-        Object stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        Object stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        Object stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
+        Object var2 = null;
+        Object var3 = null;
+        String var3_ref = null;
+        int var4 = 0;
+        String var5 = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -72,119 +61,96 @@ abstract class af {
               }
             }
             L4: {
-              L5: {
-                var3_ref = "";
-                if (2 == param0.field_b) {
-                  break L5;
-                } else {
-                  L6: {
-                    if (0 != param0.field_b) {
-                      break L6;
-                    } else {
-                      if (!bq.field_c) {
-                        break L6;
-                      } else {
-                        var3_ref = "[" + sa.field_c + "] ";
-                        break L6;
-                      }
-                    }
-                  }
-                  L7: {
-                    if (-2 == (param0.field_b ^ -1)) {
-                      var3_ref = "[" + fo.a(param1 + 4697, cv.field_m, new String[]{param0.field_k}) + "] ";
-                      break L7;
-                    } else {
-                      break L7;
-                    }
-                  }
-                  L8: {
-                    if (4 != param0.field_b) {
-                      break L8;
-                    } else {
-                      if (null == ur.field_C) {
-                        break L8;
-                      } else {
-                        var3_ref = "[" + ur.field_C + "] ";
-                        break L8;
-                      }
-                    }
-                  }
-                  L9: {
-                    if ((param0.field_b ^ -1) != -4) {
-                      break L9;
-                    } else {
-                      var3_ref = "[#" + param0.field_k + "] ";
-                      break L9;
-                    }
-                  }
-                  if (!param0.field_f) {
-                    var3_ref = var3_ref + (String) (var2) + ": ";
-                    if (var4 == 0) {
-                      break L4;
-                    } else {
-                      break L5;
-                    }
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              if (!param0.field_f) {
-                L10: {
-                  L11: {
+              var3_ref = "";
+              if (2 == param0.field_b) {
+                if (!param0.field_f) {
+                  L5: {
                     if (0 != param0.field_a) {
-                      break L11;
+                      break L5;
                     } else {
                       if (param0.field_e == 0) {
-                        break L10;
+                        var3_ref = fo.a(param1 + 4697, ta.field_Q, new String[]{(String) (var2)});
+                        break L4;
                       } else {
-                        break L11;
+                        break L5;
                       }
                     }
                   }
                   var3_ref = fo.a(param1 + 4697, ov.field_l, new String[]{(String) (var2)});
-                  if (var4 == 0) {
-                    break L4;
+                  break L4;
+                } else {
+                  break L4;
+                }
+              } else {
+                L6: {
+                  if (0 != param0.field_b) {
+                    break L6;
                   } else {
-                    break L10;
+                    if (!bq.field_c) {
+                      break L6;
+                    } else {
+                      var3_ref = "[" + sa.field_c + "] ";
+                      break L6;
+                    }
                   }
                 }
-                var3_ref = fo.a(param1 + 4697, ta.field_Q, new String[]{(String) (var2)});
-                break L4;
-              } else {
-                break L4;
+                L7: {
+                  if (-2 == (param0.field_b ^ -1)) {
+                    var3_ref = "[" + fo.a(param1 + 4697, cv.field_m, new String[]{param0.field_k}) + "] ";
+                    break L7;
+                  } else {
+                    break L7;
+                  }
+                }
+                L8: {
+                  if (4 != param0.field_b) {
+                    break L8;
+                  } else {
+                    if (null == ur.field_C) {
+                      break L8;
+                    } else {
+                      var3_ref = "[" + ur.field_C + "] ";
+                      break L8;
+                    }
+                  }
+                }
+                L9: {
+                  if ((param0.field_b ^ -1) != -4) {
+                    break L9;
+                  } else {
+                    var3_ref = "[#" + param0.field_k + "] ";
+                    break L9;
+                  }
+                }
+                if (!param0.field_f) {
+                  var3_ref = var3_ref + (String) (var2) + ": ";
+                  break L4;
+                } else {
+                  break L4;
+                }
               }
             }
-            stackOut_32_0 = (String) (var3_ref);
-            stackIn_33_0 = stackOut_32_0;
+            stackIn_33_0 = (String) (var3_ref);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L12: {
+          L10: {
             var2 = decompiledCaughtException;
-            stackOut_34_0 = var2;
-            stackOut_34_1 = new StringBuilder().append("af.H(");
-            stackIn_36_0 = stackOut_34_0;
-            stackIn_36_1 = stackOut_34_1;
-            stackIn_35_0 = stackOut_34_0;
-            stackIn_35_1 = stackOut_34_1;
+            stackIn_36_0 = var2;
+
+            stackIn_36_1 = new StringBuilder().append("af.H(");
+
             if (param0 == null) {
-              stackOut_36_0 = stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
-              break L12;
+              stackIn_37_0 = stackIn_36_0;
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "null";
+              break L10;
             } else {
-              stackOut_35_0 = stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "{...}";
-              stackIn_37_0 = stackOut_35_0;
-              stackIn_37_1 = stackOut_35_1;
-              stackIn_37_2 = stackOut_35_2;
-              break L12;
+              stackIn_37_0 = stackIn_36_0;
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "{...}";
+              break L10;
             }
           }
           throw ig.a((Throwable) ((Object) stackIn_37_0), stackIn_37_2 + ',' + param1 + ')');
@@ -203,9 +169,21 @@ abstract class af {
 
     final static void a(Throwable param0, int param1, String param2) {
         try {
-            int discarded$1 = 0;
-            Exception var3 = null;
+            hd stackIn_12_0;
+            java.net.URL stackIn_12_1;
+            java.net.URL stackIn_12_2;
+            java.net.URL stackIn_12_3;
+            StringBuilder stackIn_12_4;
+            hd stackIn_13_0;
+            java.net.URL stackIn_13_1;
+            java.net.URL stackIn_13_2;
+            java.net.URL stackIn_13_3;
+            StringBuilder stackIn_13_4;
+            String stackIn_13_5;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             int var3_int = 0;
+            Exception var3 = null;
             String var4 = null;
             wo var5 = null;
             DataInputStream var6 = null;
@@ -214,41 +192,6 @@ abstract class af {
             String var9 = null;
             String var10 = null;
             String var11 = null;
-            hd stackIn_11_0 = null;
-            java.net.URL stackIn_11_1 = null;
-            java.net.URL stackIn_11_2 = null;
-            java.net.URL stackIn_11_3 = null;
-            StringBuilder stackIn_11_4 = null;
-            hd stackIn_12_0 = null;
-            java.net.URL stackIn_12_1 = null;
-            java.net.URL stackIn_12_2 = null;
-            java.net.URL stackIn_12_3 = null;
-            StringBuilder stackIn_12_4 = null;
-            hd stackIn_13_0 = null;
-            java.net.URL stackIn_13_1 = null;
-            java.net.URL stackIn_13_2 = null;
-            java.net.URL stackIn_13_3 = null;
-            StringBuilder stackIn_13_4 = null;
-            String stackIn_13_5 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            hd stackOut_10_0 = null;
-            java.net.URL stackOut_10_1 = null;
-            java.net.URL stackOut_10_2 = null;
-            java.net.URL stackOut_10_3 = null;
-            StringBuilder stackOut_10_4 = null;
-            hd stackOut_12_0 = null;
-            java.net.URL stackOut_12_1 = null;
-            java.net.URL stackOut_12_2 = null;
-            java.net.URL stackOut_12_3 = null;
-            StringBuilder stackOut_12_4 = null;
-            String stackOut_12_5 = null;
-            hd stackOut_11_0 = null;
-            java.net.URL stackOut_11_1 = null;
-            java.net.URL stackOut_11_2 = null;
-            java.net.URL stackOut_11_3 = null;
-            StringBuilder stackOut_11_4 = null;
-            String stackOut_11_5 = null;
             var7 = ArmiesOfGielinor.field_M ? 1 : 0;
             try {
               L0: {
@@ -285,81 +228,50 @@ abstract class af {
                 var11 = dv.a(var10, -102, "#", "%23");
                 if (vu.field_L != null) {
                   L4: {
-                    stackOut_10_0 = vh.field_s;
-                    stackOut_10_1 = null;
-                    stackOut_10_2 = null;
-                    stackOut_10_3 = vu.field_L.getCodeBase();
-                    stackOut_10_4 = new StringBuilder().append("clienterror.ws?c=").append(hw.field_B).append("&u=");
-                    stackIn_12_0 = stackOut_10_0;
-                    stackIn_12_1 = stackOut_10_1;
-                    stackIn_12_2 = stackOut_10_2;
-                    stackIn_12_3 = stackOut_10_3;
-                    stackIn_12_4 = stackOut_10_4;
-                    stackIn_11_0 = stackOut_10_0;
-                    stackIn_11_1 = stackOut_10_1;
-                    stackIn_11_2 = stackOut_10_2;
-                    stackIn_11_3 = stackOut_10_3;
-                    stackIn_11_4 = stackOut_10_4;
+                    stackIn_12_0 = vh.field_s;
+
+                    stackIn_12_1 = null;
+
+                    stackIn_12_2 = null;
+
+                    stackIn_12_3 = vu.field_L.getCodeBase();
+
+                    stackIn_12_4 = new StringBuilder().append("clienterror.ws?c=").append(hw.field_B).append("&u=");
+
                     if (uk.field_l == null) {
-                      stackOut_12_0 = (hd) ((Object) stackIn_12_0);
-                      stackOut_12_1 = null;
-                      stackOut_12_2 = null;
-                      stackOut_12_3 = (java.net.URL) ((Object) stackIn_12_3);
-                      stackOut_12_4 = (StringBuilder) ((Object) stackIn_12_4);
-                      stackOut_12_5 = "" + ck.field_b;
-                      stackIn_13_0 = stackOut_12_0;
-                      stackIn_13_1 = stackOut_12_1;
-                      stackIn_13_2 = stackOut_12_2;
-                      stackIn_13_3 = stackOut_12_3;
-                      stackIn_13_4 = stackOut_12_4;
-                      stackIn_13_5 = stackOut_12_5;
+                      stackIn_13_0 = (hd) ((Object) stackIn_12_0);
+                      stackIn_13_1 = null;
+                      stackIn_13_2 = null;
+                      stackIn_13_3 = (java.net.URL) ((Object) stackIn_12_3);
+                      stackIn_13_4 = (StringBuilder) ((Object) stackIn_12_4);
+                      stackIn_13_5 = "" + ck.field_b;
                       break L4;
                     } else {
-                      stackOut_11_0 = (hd) ((Object) stackIn_11_0);
-                      stackOut_11_1 = null;
-                      stackOut_11_2 = null;
-                      stackOut_11_3 = (java.net.URL) ((Object) stackIn_11_3);
-                      stackOut_11_4 = (StringBuilder) ((Object) stackIn_11_4);
-                      stackOut_11_5 = uk.field_l;
-                      stackIn_13_0 = stackOut_11_0;
-                      stackIn_13_1 = stackOut_11_1;
-                      stackIn_13_2 = stackOut_11_2;
-                      stackIn_13_3 = stackOut_11_3;
-                      stackIn_13_4 = stackOut_11_4;
-                      stackIn_13_5 = stackOut_11_5;
+                      stackIn_13_0 = (hd) ((Object) stackIn_12_0);
+                      stackIn_13_1 = null;
+                      stackIn_13_2 = null;
+                      stackIn_13_3 = (java.net.URL) ((Object) stackIn_12_3);
+                      stackIn_13_4 = (StringBuilder) ((Object) stackIn_12_4);
+                      stackIn_13_5 = uk.field_l;
                       break L4;
                     }
                   }
                   var5 = ((hd) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, stackIn_13_5 + "&v1=" + hd.field_t + "&v2=" + hd.field_u + "&e=" + var11), false);
                   L5: while (true) {
-                    L6: {
-                      L7: {
-                        if (var5.field_g != 0) {
-                          break L7;
-                        } else {
-                          nu.a(1L, 0);
-                          if (var7 != 0) {
-                            break L6;
-                          } else {
-                            if (var7 == 0) {
-                              continue L5;
-                            } else {
-                              break L7;
-                            }
-                          }
-                        }
-                      }
+                    if (var5.field_g != 0) {
                       if (var5.field_g == 1) {
-                        break L6;
+                        var6 = (DataInputStream) (var5.field_f);
+                        var6.read();
+                        var6.close();
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       } else {
                         return;
                       }
+                    } else {
+                      nu.a(1L, 0);
+                      continue L5;
                     }
-                    var6 = (DataInputStream) (var5.field_f);
-                    discarded$1 = var6.read();
-                    var6.close();
-                    decompiledRegionSelector0 = 1;
-                    break L0;
                   }
                 } else {
                   decompiledRegionSelector0 = 0;

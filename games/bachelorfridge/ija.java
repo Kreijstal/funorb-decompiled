@@ -12,8 +12,6 @@ final class ija extends td {
         gs var6 = null;
         ew stackIn_4_0 = null;
         rb stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -21,16 +19,6 @@ final class ija extends td {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        rb stackOut_7_0 = null;
-        ew stackOut_3_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
@@ -51,8 +39,7 @@ final class ija extends td {
                     }
                   }
                   var5.field_o.a(new iv(new nq(var4), false, 1, 0, 39), true);
-                  stackOut_7_0 = (rb) (var5);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = (rb) (var5);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -60,8 +47,7 @@ final class ija extends td {
                 }
               }
             }
-            stackOut_3_0 = new ew(new nq(var3));
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = new ew(new nq(var3));
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -69,27 +55,19 @@ final class ija extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3_ref);
-            stackOut_9_1 = new StringBuilder().append("ija.A(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3_ref);
+
+            stackIn_11_1 = new StringBuilder().append("ija.A(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -112,31 +90,21 @@ final class ija extends td {
     }
 
     final static void a(byte param0, gs param1) {
-        int dupTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int incrementValue$6 = 0;
-        int dupTemp$7 = 0;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
+        int dupTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int dupTemp$3 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -146,17 +114,17 @@ final class ija extends td {
                 var2_int = 0;
                 L2: while (true) {
                   if (var2_int >= qs.field_n) {
-                    dupTemp$4 = param1.a((byte) 124);
-                    oma.field_a[dupTemp$4] = oma.field_a[dupTemp$4] + 1;
+                    dupTemp$0 = param1.a((byte) 124);
+                    oma.field_a[dupTemp$0] = oma.field_a[dupTemp$0] + 1;
                     var2_int = 0;
                     var3 = 0;
                     L3: while (true) {
                       if (qs.field_n <= var3) {
                         var3 = 16 / ((-12 - param0) / 59);
                         qs.field_n = var2_int;
-                        fieldTemp$5 = qs.field_n;
+                        fieldTemp$1 = qs.field_n;
                         qs.field_n = qs.field_n + 1;
-                        kw.field_k[fieldTemp$5] = param1;
+                        kw.field_k[fieldTemp$1] = param1;
                         break L0;
                       } else {
                         L4: {
@@ -173,9 +141,9 @@ final class ija extends td {
                               break L5;
                             }
                           }
-                          incrementValue$6 = var2_int;
+                          incrementValue$2 = var2_int;
                           var2_int++;
-                          kw.field_k[incrementValue$6] = kw.field_k[var3];
+                          kw.field_k[incrementValue$2] = kw.field_k[var3];
                           break L4;
                         }
                         var3++;
@@ -185,8 +153,8 @@ final class ija extends td {
                   } else {
                     L6: {
                       if (param1.field_p == kw.field_k[var2_int].field_p) {
-                        dupTemp$7 = kw.field_k[var2_int].a((byte) 124);
-                        oma.field_a[dupTemp$7] = oma.field_a[dupTemp$7] + 1;
+                        dupTemp$3 = kw.field_k[var2_int].a((byte) 124);
+                        oma.field_a[dupTemp$3] = oma.field_a[dupTemp$3] + 1;
                         break L6;
                       } else {
                         break L6;
@@ -207,27 +175,19 @@ final class ija extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var2);
-            stackOut_21_1 = new StringBuilder().append("ija.C(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var2);
+
+            stackIn_23_1 = new StringBuilder().append("ija.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L7;
             }
           }

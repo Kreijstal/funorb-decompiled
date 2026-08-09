@@ -7,7 +7,7 @@ final class jk extends vi {
     private java.awt.Component field_h;
 
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
-        boolean discarded$10 = param1.drawImage(this.field_b, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_h));
+        param1.drawImage(this.field_b, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_h));
         if (param2 != -22984) {
             this.field_h = (java.awt.Component) null;
         }

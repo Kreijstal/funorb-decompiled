@@ -34,14 +34,14 @@ final class sf implements Iterator {
     }
 
     public final Object next() {
-        gb var1 = this.field_g;
+        Object var1 = this.field_g;
         if (this.field_e.field_e != var1) {
-            this.field_g = var1.field_o;
+            this.field_g = ((gb) (var1)).field_o;
         } else {
             var1 = null;
             this.field_g = null;
         }
-        this.field_f = var1;
+        this.field_f = (gb) (var1);
         return var1;
     }
 

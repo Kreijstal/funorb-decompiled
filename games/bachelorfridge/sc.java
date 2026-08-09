@@ -8,7 +8,7 @@ final class sc extends lw {
     static nv field_m;
 
     final void a(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = (int)((1.0 - Math.cos((double)(vr.field_b * 4) * 3.141592653589793 / 100.0)) * 256.0);
         if (param0 <= 103) {
           this.a(48, (byte) -20);

@@ -7,8 +7,8 @@ public class MapBuffer extends jaclib.memory.NativeBuffer {
     private int c;
 
     public final boolean a() {
-        int var1_int = 0;
-        RuntimeException var1 = null;
+        int var1_int;
+        RuntimeException var1;
         L0: {
           var1_int = 1;
           if (-1 != (this.c ^ -1)) {
@@ -24,8 +24,8 @@ public class MapBuffer extends jaclib.memory.NativeBuffer {
     }
 
     public final boolean a(int param0, int param1, int param2) {
-        long var4_long = 0L;
-        RuntimeException var4 = null;
+        long var4_long;
+        RuntimeException var4;
         if (-1 == (this.c ^ -1)) {
           var4_long = jaggl.OpenGL.glMapBufferARB(param0, param2);
           if ((var4_long ^ -1L) == -1L) {

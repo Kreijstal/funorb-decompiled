@@ -9,17 +9,14 @@ final class qs extends fj implements nh {
 
     qs(ir param0, iw param1, int param2, int param3, int param4, byte[] param5) {
         super(param0, param1, io.field_g, false, param3 * param2 * param4);
-        boolean discarded$3 = false;
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        jagdx.PixelBuffer var15 = null;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        jagdx.PixelBuffer var15;
         this.field_f = param4;
         this.field_g = param2;
         this.field_i = param3;
@@ -38,7 +35,7 @@ final class qs extends fj implements nh {
               var13 = 0;
               L0: while (true) {
                 if (this.field_f <= var13) {
-                  discarded$3 = this.field_h.UnlockBox(0);
+                  this.field_h.UnlockBox(0);
                   return;
                 } else {
                   var14 = 0;
@@ -58,7 +55,7 @@ final class qs extends fj implements nh {
               var13 = 0;
               L2: while (true) {
                 if (this.field_f <= var13) {
-                  discarded$4 = this.field_h.UnlockBox(0);
+                  this.field_h.UnlockBox(0);
                   return;
                 } else {
                   var15.a(param5, var10 * var13, var13 * var11, var10);
@@ -69,7 +66,7 @@ final class qs extends fj implements nh {
             }
           } else {
             var15.a(param5, 0, 0, var9 * this.field_i * this.field_f);
-            discarded$5 = this.field_h.UnlockBox(0);
+            this.field_h.UnlockBox(0);
             return;
           }
         }

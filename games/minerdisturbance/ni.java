@@ -7,7 +7,6 @@ abstract class ni {
 
     final static boolean a(int param0, int param1) {
         int stackIn_5_0 = 0;
-        int stackOut_3_0 = 0;
         if (param1 == 11764) {
           if (!ke.field_X[param0]) {
             if (d.a(param0, cm.field_o, (byte) 68)) {
@@ -16,8 +15,7 @@ abstract class ni {
               return false;
             }
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             return stackIn_5_0 != 0;
           }
         } else {

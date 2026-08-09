@@ -14,6 +14,7 @@ final class cr extends ma {
 
     final static int a(int param0, double param1) {
         if (param0 != 4885) {
+            cr.a((byte) -24, 59L);
             return ud.a(param1, 3, 1);
         }
         return ud.a(param1, 3, 1);
@@ -57,9 +58,8 @@ final class cr extends ma {
     }
 
     final static double a(byte param0, long param1) {
-        int discarded$0 = 0;
         if (param0 != 89) {
-            discarded$0 = cr.a(-26, 0.6233354276237926);
+            cr.a(-26, 0.6233354276237926);
             return bb.a((byte) -107, 16, param1);
         }
         return bb.a((byte) -107, 16, param1);

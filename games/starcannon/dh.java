@@ -14,14 +14,13 @@ final class dh {
     }
 
     final static void a(byte param0, ue param1) {
-        ud discarded$0 = null;
         nj.b(param1.a("headers.packvorbis", (byte) 45, ""));
         nj var2 = nj.a(param1, "jagex logo2.packvorbis", "");
         if (param0 != 115) {
             return;
         }
         try {
-            discarded$0 = var2.c();
+            var2.c();
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) ((Object) runtimeException), "dh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

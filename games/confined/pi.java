@@ -15,22 +15,12 @@ final class pi extends ga implements ge, el {
     public final void a(na param0, int param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         var6 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -77,27 +67,19 @@ final class pi extends ga implements ge, el {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var5);
-            stackOut_12_1 = new StringBuilder().append("pi.LA(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var5);
+
+            stackIn_14_1 = new StringBuilder().append("pi.LA(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
@@ -106,78 +88,113 @@ final class pi extends ga implements ge, el {
     }
 
     final static String a(String param0, String param1, int param2, String param3) {
-        int var4 = 0;
-        int var5 = 0;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
         String stackIn_11_0 = null;
         String stackIn_13_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_6_0 = null;
-        String stackOut_10_0 = null;
-        String stackOut_12_0 = null;
-        var5 = Confined.field_J ? 1 : 0;
-        if (param2 == 22232) {
-          var4 = param3.indexOf(param0);
-          L0: while (true) {
-            L1: {
-              L2: {
-                if (-1 == var4) {
-                  break L2;
-                } else {
-                  param3 = param3.substring(0, var4) + param1 + param3.substring(var4 - -param0.length());
-                  stackOut_4_0 = (String) (param3);
-                  stackIn_7_0 = stackOut_4_0;
-                  stackIn_5_0 = stackOut_4_0;
-                  if (var5 != 0) {
-                    break L1;
-                  } else {
+        int statePc = 0;
+        int var4 = 0;
+        int var5 = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var5 = Confined.field_J ? 1 : 0;
+                    if (param2 == 22232) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    pi.j(-6);
+                    statePc = 8;
+                    continue stateLoop;
+                }
+                case 2: {
+                    var4 = param3.indexOf(param0);
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (-1 == var4) {
+                        statePc = 6;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    param3 = param3.substring(0, var4) + param1 + param3.substring(var4 - -param0.length());
+                    stackIn_7_0 = (String) (param3);
+                    stackIn_5_0 = stackIn_7_0;
+                    if (var5 != 0) {
+                        statePc = 7;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
                     var4 = ((String) (Object) stackIn_5_0).indexOf(param0, param1.length() + var4);
                     if (var5 == 0) {
-                      continue L0;
+                        statePc = 3;
                     } else {
-                      break L2;
+                        statePc = 6;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
-              stackOut_6_0 = (String) (param3);
-              stackIn_7_0 = stackOut_6_0;
-              break L1;
-            }
-            return stackIn_7_0;
-          }
-        } else {
-          pi.j(-6);
-          var4 = param3.indexOf(param0);
-          L3: while (true) {
-            L4: {
-              L5: {
-                if (-1 == var4) {
-                  break L5;
-                } else {
-                  param3 = param3.substring(0, var4) + param1 + param3.substring(var4 - -param0.length());
-                  stackOut_10_0 = (String) (param3);
-                  stackIn_13_0 = stackOut_10_0;
-                  stackIn_11_0 = stackOut_10_0;
-                  if (var5 != 0) {
-                    break L4;
-                  } else {
+                case 6: {
+                    stackIn_7_0 = (String) (param3);
+                    statePc = 7;
+                    continue stateLoop;
+                }
+                case 7: {
+                    return stackIn_7_0;
+                }
+                case 8: {
+                    var4 = param3.indexOf(param0);
+                    statePc = 9;
+                    continue stateLoop;
+                }
+                case 9: {
+                    if (-1 == var4) {
+                        statePc = 12;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    param3 = param3.substring(0, var4) + param1 + param3.substring(var4 - -param0.length());
+                    stackIn_13_0 = (String) (param3);
+                    stackIn_11_0 = stackIn_13_0;
+                    if (var5 != 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
                     var4 = ((String) (Object) stackIn_11_0).indexOf(param0, param1.length() + var4);
                     if (var5 == 0) {
-                      continue L3;
+                        statePc = 9;
                     } else {
-                      break L5;
+                        statePc = 12;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
-              stackOut_12_0 = (String) (param3);
-              stackIn_13_0 = stackOut_12_0;
-              break L4;
+                case 12: {
+                    stackIn_13_0 = (String) (param3);
+                    statePc = 13;
+                    continue stateLoop;
+                }
+                case 13: {
+                    return stackIn_13_0;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            return stackIn_13_0;
-          }
         }
     }
 
@@ -205,8 +222,6 @@ final class pi extends ga implements ge, el {
         int stackIn_2_0 = 0;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -214,39 +229,25 @@ final class pi extends ga implements ge, el {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_8_0 = false;
-        boolean stackOut_4_0 = false;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             if (!super.a(param0, (byte) -80, param2, param3)) {
               if (-99 != (param2 ^ -1)) {
                 var5_int = 103 % ((47 - param1) / 43);
                 if (99 == param2) {
-                  stackOut_8_0 = this.a(17731, param0);
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = this.a(17731, param0);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   return false;
                 }
               } else {
-                stackOut_4_0 = this.c(param0, 32);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = this.c(param0, 32);
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -255,27 +256,19 @@ final class pi extends ga implements ge, el {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var5);
-            stackOut_10_1 = new StringBuilder().append("pi.Q(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var5);
+
+            stackIn_12_1 = new StringBuilder().append("pi.Q(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L1;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L1;
             }
           }
@@ -302,8 +295,6 @@ final class pi extends ga implements ge, el {
         Class stackIn_19_0 = null;
         Class stackIn_23_0 = null;
         Class stackIn_29_0 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
@@ -311,43 +302,24 @@ final class pi extends ga implements ge, el {
         String stackIn_33_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Class stackOut_5_0 = null;
-        Class stackOut_15_0 = null;
-        Class stackOut_22_0 = null;
-        Class stackOut_28_0 = null;
-        Class stackOut_18_0 = null;
-        Class stackOut_11_0 = null;
-        Class stackOut_8_0 = null;
-        Class stackOut_1_0 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
         try {
           L0: {
             if (!param1.equals("B")) {
               if (param1.equals("I")) {
-                stackOut_5_0 = Integer.TYPE;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = Integer.TYPE;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (!param1.equals("S")) {
                   if (!param1.equals("J")) {
                     if (param1.equals("Z")) {
-                      stackOut_15_0 = Boolean.TYPE;
-                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_16_0 = Boolean.TYPE;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       if (!param1.equals("F")) {
                         if (param1.equals("D")) {
-                          stackOut_22_0 = Double.TYPE;
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_23_0 = Double.TYPE;
                           decompiledRegionSelector0 = 6;
                           break L0;
                         } else {
@@ -360,8 +332,7 @@ final class pi extends ga implements ge, el {
                             }
                           }
                           if (param1.equals("C")) {
-                            stackOut_28_0 = Character.TYPE;
-                            stackIn_29_0 = stackOut_28_0;
+                            stackIn_29_0 = Character.TYPE;
                             decompiledRegionSelector0 = 7;
                             break L0;
                           } else {
@@ -369,28 +340,24 @@ final class pi extends ga implements ge, el {
                           }
                         }
                       } else {
-                        stackOut_18_0 = Float.TYPE;
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_0 = Float.TYPE;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       }
                     }
                   } else {
-                    stackOut_11_0 = Long.TYPE;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = Long.TYPE;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
-                  stackOut_8_0 = Short.TYPE;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = Short.TYPE;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               }
             } else {
-              stackOut_1_0 = Byte.TYPE;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = Byte.TYPE;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -399,27 +366,19 @@ final class pi extends ga implements ge, el {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) (var2);
-            stackOut_30_1 = new StringBuilder().append("pi.E(").append(param0).append(',');
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackIn_32_0 = (RuntimeException) (var2);
+
+            stackIn_32_1 = new StringBuilder().append("pi.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L2;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L2;
             }
           }
@@ -457,24 +416,14 @@ final class pi extends ga implements ge, el {
     }
 
     public final void a(int param0, int param1, int param2, rg param3, int param4) {
-        String discarded$2 = null;
+        String discarded$1 = null;
         RuntimeException var6 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -489,7 +438,7 @@ final class pi extends ga implements ge, el {
             if (param0 > 68) {
               break L0;
             } else {
-              discarded$2 = this.l(86);
+              discarded$1 = this.l(86);
               return;
             }
           }
@@ -497,27 +446,19 @@ final class pi extends ga implements ge, el {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var6);
-            stackOut_6_1 = new StringBuilder().append("pi.FA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var6);
+
+            stackIn_8_1 = new StringBuilder().append("pi.FA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -527,30 +468,12 @@ final class pi extends ga implements ge, el {
 
     pi(v param0) {
         super(0, 0, 288, 0, (fe) null);
-        RuntimeException var2 = null;
+        String var7 = null;
         int var3 = 0;
         vf var4 = null;
         int var5 = 0;
         int var6 = 0;
-        String var7 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
             this.field_O = param0;
             this.field_Q = new rg(gi.field_fb, (uk) null);
             this.field_Q.field_n = (fe) ((Object) new je());
@@ -572,43 +495,14 @@ final class pi extends ga implements ge, el {
             this.field_Q.field_t = (uk) (this);
             this.b(this.field_Q, 10);
             this.a(-126, 300, 0, var5 + (var3 - -55), 0);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (var2);
-            stackOut_3_1 = new StringBuilder().append("pi.<init>(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L1;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L1;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void j(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = hn.d(24860);
         if (param0 != -1101556575) {
           return;

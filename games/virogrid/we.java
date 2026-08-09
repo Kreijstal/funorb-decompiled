@@ -17,14 +17,14 @@ final class we {
 
     final static void a(int param0) {
         try {
-            Exception var1 = null;
-            java.lang.reflect.Method var1_ref = null;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
-            Long var3 = null;
-            Object[] var4 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            java.lang.reflect.Method var1 = null;
+            Exception var1_ref = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
+            Long var3 = null;
+            Object[] var4 = null;
             L0: {
               if (param0 == 1) {
                 break L0;
@@ -36,15 +36,15 @@ final class we {
             try {
               L1: {
                 L2: {
-                  var1_ref = Runtime.class.getMethod("maxMemory", new Class[]{});
-                  if (var1_ref == null) {
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+                  if (var1 == null) {
                     break L2;
                   } else {
                     try {
                       L3: {
-                        var2_ref = Runtime.getRuntime();
+                        var2 = Runtime.getRuntime();
                         var4 = (Object[]) null;
-                        var3 = (Long) (var1_ref.invoke((Object) (var2_ref), (Object[]) null));
+                        var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
                         qk.field_b = 1 + (int)(var3.longValue() / 1048576L);
                         decompiledRegionSelector0 = 0;
                         break L3;
@@ -52,7 +52,7 @@ final class we {
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L4: {
-                        var2 = decompiledCaughtException;
+                        var2_ref = decompiledCaughtException;
                         decompiledRegionSelector0 = 1;
                         break L4;
                       }
@@ -69,7 +69,7 @@ final class we {
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L5: {
-                var1 = (Exception) (Object) decompiledCaughtException;
+                var1_ref = (Exception) (Object) decompiledCaughtException;
                 break L5;
               }
             }
@@ -123,23 +123,12 @@ final class we {
     final static boolean a(byte param0, String param1) {
         RuntimeException var2 = null;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
@@ -165,35 +154,26 @@ final class we {
                 }
               }
             }
-            stackOut_6_0 = 1;
-            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2);
-            stackOut_8_1 = new StringBuilder().append("we.A(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2);
+
+            stackIn_10_1 = new StringBuilder().append("we.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }

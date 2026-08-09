@@ -50,9 +50,8 @@ final class pb extends nm {
     }
 
     final void a(int param0, int param1, byte param2) {
-        String discarded$2 = null;
         if (param2 != 78) {
-          discarded$2 = pb.a(13, -48);
+          pb.a(13, -48);
           this.field_k = param1;
           this.field_m = param0;
           return;

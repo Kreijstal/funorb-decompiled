@@ -44,8 +44,8 @@ final class vg {
     short[] field_I;
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         var6 = TorChallenge.field_F ? 1 : 0;
         if (param0 < 67) {
           this.field_s = (byte) 40;
@@ -91,92 +91,33 @@ final class vg {
     }
 
     final static void a(int param0, int param1, ka param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9_int = 0;
-        RuntimeException var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        int var9_int = param2.field_s + (param3 + (param1 - param7));
+        int var10 = param6 + param3 + (param2.field_s - -param1);
+        int var11 = (param2.field_x >> 606002657) + param2.field_p - -param4;
+        qg.a(var9_int, 0, var10, param5 + var11);
+        param2.b(param3 + -1, -1 + param4, param0);
+        param2.b(param3 + -1, 1 + param4, param0);
+        qg.b(ck.field_c);
+        qg.a(var9_int - -1, 0, 1 + var10, var11 - -param5);
+        param2.b(param3 - -1, -1 + param4, param0);
+        param2.b(param3 + 1, param4 + 1, param0);
+        qg.b(ck.field_c);
+        var9_int = -param6 + (param3 + param2.field_u) + (param2.field_s + -param1);
+        var10 = -param1 + (param3 + param2.field_s) - (-param2.field_u - -param7);
+        qg.a(var9_int, var11 - param5, var10, 480);
+        if (param8 <= 56) {
+            return;
+        }
         try {
-          L0: {
-            var9_int = param2.field_s + (param3 + (param1 - param7));
-            var10 = param6 + param3 + (param2.field_s - -param1);
-            var11 = (param2.field_x >> 606002657) + param2.field_p - -param4;
-            qg.a(var9_int, 0, var10, param5 + var11);
-            param2.b(param3 + -1, -1 + param4, param0);
-            param2.b(param3 + -1, 1 + param4, param0);
+            param2.b(-1 + param3, param4 + -1, param0);
+            param2.b(param3 - 1, 1 + param4, param0);
             qg.b(ck.field_c);
-            qg.a(var9_int - -1, 0, 1 + var10, var11 - -param5);
-            param2.b(param3 - -1, -1 + param4, param0);
+            qg.a(1 + var9_int, var11 - param5, var10 - -1, 480);
+            param2.b(1 + param3, param4 + -1, param0);
             param2.b(param3 + 1, param4 + 1, param0);
             qg.b(ck.field_c);
-            var9_int = -param6 + (param3 + param2.field_u) + (param2.field_s + -param1);
-            var10 = -param1 + (param3 + param2.field_s) - (-param2.field_u - -param7);
-            qg.a(var9_int, var11 - param5, var10, 480);
-            if (param8 > 56) {
-              param2.b(-1 + param3, param4 + -1, param0);
-              param2.b(param3 - 1, 1 + param4, param0);
-              qg.b(ck.field_c);
-              qg.a(1 + var9_int, var11 - param5, var10 - -1, 480);
-              param2.b(1 + param3, param4 + -1, param0);
-              param2.b(param3 + 1, param4 + 1, param0);
-              qg.b(ck.field_c);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var9 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var9);
-            stackOut_4_1 = new StringBuilder().append("vg.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
-            if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L1;
-            } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L1;
-            }
-          }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) ((Object) runtimeException), "vg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -191,36 +132,30 @@ final class vg {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_10_0 = 0;
-        int decompiledRegionSelector0 = 0;
+        int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
             var2_int = 0;
             L1: while (true) {
               if (-11 >= (var2_int ^ -1)) {
-                if (param1 == -1) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  field_b = (String[][]) null;
-                  return false;
+                L2: {
+                  if (param1 == -1) {
+                    break L2;
+                  } else {
+                    field_b = (String[][]) null;
+                    break L2;
+                  }
                 }
+                stackIn_11_0 = 0;
+                break L0;
               } else {
                 if (ba.field_g[var2_int] != param0) {
                   var2_int++;
                   continue L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_5_0 = stackOut_4_0;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
+                  return true;
                 }
               }
             }
@@ -230,25 +165,21 @@ final class vg {
           var2 = decompiledCaughtException;
           throw oj.a((Throwable) ((Object) var2), "vg.D(" + param0 + ',' + param1 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0 != 0;
-        } else {
-          return stackIn_10_0 != 0;
-        }
+        return stackIn_11_0 != 0;
     }
 
     final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var12 = TorChallenge.field_F ? 1 : 0;
         if (!this.field_v) {
           this.field_v = true;
@@ -265,12 +196,12 @@ final class vg {
               this.field_N = var6;
               this.field_p = var2;
               this.field_B = var7;
-              if (param0 < -88) {
+              if (param0 >= -88) {
+                this.field_o = (int[]) null;
                 this.field_h = var4;
                 this.field_e = var5;
                 return;
               } else {
-                this.field_o = (int[]) null;
                 this.field_h = var4;
                 this.field_e = var5;
                 return;

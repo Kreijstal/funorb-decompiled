@@ -17,10 +17,10 @@ final class gh extends dk {
 
     final static void a(byte param0, int param1) {
         rf var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         hb var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = StarCannon.field_A;
         try {
           L0: {
@@ -89,39 +89,27 @@ final class gh extends dk {
     }
 
     final static boolean f(int param0) {
-        boolean discarded$0 = false;
         if (param0 != -23093) {
-            discarded$0 = gh.f(-117);
+            gh.f(-117);
             return m.field_c;
         }
         return m.field_c;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (this.field_z) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }

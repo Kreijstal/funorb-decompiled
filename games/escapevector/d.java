@@ -19,37 +19,28 @@ final class d {
 
     final static boolean a(char param0, int param1) {
         char[] var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_24_0 = 0;
+        int stackIn_22_0 = 0;
         int stackIn_26_0 = 0;
+        int stackIn_28_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_12_0 = 0;
+        RuntimeException var2_ref = null;
         var5 = EscapeVector.field_A;
         try {
           L0: {
             if (Character.isISOControl(param0)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (k.a(true, param0)) {
-                stackOut_7_0 = 1;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -63,22 +54,19 @@ final class d {
                     L2: while (true) {
                       if (var2.length <= var3) {
                         if (param1 == -11217) {
-                          stackOut_25_0 = 0;
-                          stackIn_26_0 = stackOut_25_0;
-                          decompiledRegionSelector0 = 5;
+                          stackIn_28_0 = 0;
+                          decompiledRegionSelector0 = 4;
                           break L0;
                         } else {
-                          stackOut_23_0 = 0;
-                          stackIn_24_0 = stackOut_23_0;
-                          decompiledRegionSelector0 = 4;
+                          stackIn_26_0 = 0;
+                          decompiledRegionSelector0 = 3;
                           break L0;
                         }
                       } else {
                         var4 = var2[var3];
                         if (var4 == param0) {
-                          stackOut_19_0 = 1;
-                          stackIn_20_0 = stackOut_19_0;
-                          decompiledRegionSelector0 = 3;
+                          stackIn_22_0 = 1;
+                          decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
                           var3++;
@@ -88,14 +76,11 @@ final class d {
                     }
                   } else {
                     var4 = var6[var3];
-                    if (var4 != param0) {
+                    if ((var4 ^ -1) != (param0 ^ -1)) {
                       var3++;
                       continue L1;
                     } else {
-                      stackOut_12_0 = 1;
-                      stackIn_13_0 = stackOut_12_0;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
+                      return true;
                     }
                   }
                 }
@@ -114,16 +99,12 @@ final class d {
             return stackIn_8_0 != 0;
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return stackIn_13_0 != 0;
+              return stackIn_22_0 != 0;
             } else {
               if (decompiledRegionSelector0 == 3) {
-                return stackIn_20_0 != 0;
+                return stackIn_26_0 != 0;
               } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_24_0 != 0;
-                } else {
-                  return stackIn_26_0 != 0;
-                }
+                return stackIn_28_0 != 0;
               }
             }
           }

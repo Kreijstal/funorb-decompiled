@@ -61,12 +61,10 @@ final class fc {
         jb var3 = null;
         int var4 = CrazyCrystals.field_B;
         int var2 = -42 % ((param0 - -70) / 47);
-        if ((this.field_b ^ -1) < -1) {
-            if (this.field_a != this.field_e[-1 + this.field_b]) {
-                var3 = this.field_a;
-                this.field_a = var3.field_b;
-                return var3;
-            }
+        if ((this.field_b ^ -1) < -1 && this.field_a != this.field_e[-1 + this.field_b]) {
+            var3 = this.field_a;
+            this.field_a = var3.field_b;
+            return var3;
         }
         do {
             if (this.field_b >= this.field_c) {

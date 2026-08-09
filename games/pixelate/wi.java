@@ -47,13 +47,6 @@ final class wi {
     }
 
     final void a(int param0, int[] param1, int param2) {
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        im var5 = null;
-        int var6 = 0;
-        String var7 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
@@ -61,14 +54,11 @@ final class wi {
         String stackIn_29_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        im var5 = null;
+        int var6 = 0;
+        String var7 = null;
         try {
           L0: {
             if (param2 == -3) {
@@ -90,7 +80,7 @@ final class wi {
                   if (2 == gk.field_db) {
                     L3: {
                       var7 = this.a((byte) 114);
-                      var4_ref = var7;
+                      var4 = var7;
                       var5 = re.a(this.field_h, -1);
                       var6 = i.a(-640, this.field_h) ? 1 : 0;
                       if (var5 != null) {
@@ -174,28 +164,20 @@ final class wi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
-            var4 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var4);
-            stackOut_26_1 = new StringBuilder().append("wi.E(").append(param0).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_28_0 = (RuntimeException) (var4_ref);
+
+            stackIn_28_1 = new StringBuilder().append("wi.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L7;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L7;
             }
           }
@@ -219,19 +201,19 @@ final class wi {
     }
 
     private final boolean a(int param0, int param1, int param2) {
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
-        int var5 = 0;
+        boolean discarded$0 = false;
+        boolean discarded$1 = false;
+        boolean discarded$2 = false;
+        boolean discarded$3 = false;
+        boolean discarded$4 = false;
+        boolean discarded$5 = false;
+        boolean discarded$6 = false;
+        int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         if (param0 == 0) {
           bg.a(this.field_l, param1, param2 ^ -31541);
           if (param2 != 7490) {
-            discarded$7 = this.a(67, true, 49);
+            discarded$0 = this.a(67, true, 49);
             return true;
           } else {
             return true;
@@ -240,7 +222,7 @@ final class wi {
           if (-2 == (param0 ^ -1)) {
             pe.a(7, param1, this.field_l);
             if (param2 != 7490) {
-              discarded$8 = this.a(67, true, 49);
+              discarded$1 = this.a(67, true, 49);
               return true;
             } else {
               return true;
@@ -249,7 +231,7 @@ final class wi {
             if (-3 == (param0 ^ -1)) {
               wi.b(param1, param2 ^ -7903, this.field_m);
               if (param2 != 7490) {
-                discarded$9 = this.a(67, true, 49);
+                discarded$2 = this.a(67, true, 49);
                 return true;
               } else {
                 return true;
@@ -260,7 +242,7 @@ final class wi {
                 if (param2 == 7490) {
                   return true;
                 } else {
-                  discarded$10 = this.a(67, true, 49);
+                  discarded$3 = this.a(67, true, 49);
                   return true;
                 }
               } else {
@@ -269,14 +251,14 @@ final class wi {
                   if (param2 == 7490) {
                     return true;
                   } else {
-                    discarded$11 = this.a(67, true, 49);
+                    discarded$4 = this.a(67, true, 49);
                     return true;
                   }
                 } else {
                   if ((param0 ^ -1) == -16) {
                     df.a(param2 ^ 7489, this.field_m, param1);
                     if (param2 != 7490) {
-                      discarded$12 = this.a(67, true, 49);
+                      discarded$5 = this.a(67, true, 49);
                       return true;
                     } else {
                       return true;
@@ -285,7 +267,7 @@ final class wi {
                     if ((param0 ^ -1) == -17) {
                       df.a(3, 0, param1);
                       if (param2 != 7490) {
-                        discarded$13 = this.a(67, true, 49);
+                        discarded$6 = this.a(67, true, 49);
                         return true;
                       } else {
                         return true;
@@ -311,24 +293,24 @@ final class wi {
     }
 
     final void b(boolean param0, byte param1) {
-        boolean discarded$14 = false;
-        boolean discarded$15 = false;
-        boolean discarded$16 = false;
-        boolean discarded$17 = false;
-        boolean discarded$18 = false;
-        boolean discarded$19 = false;
-        boolean discarded$20 = false;
-        boolean discarded$21 = false;
-        boolean discarded$22 = false;
-        boolean discarded$23 = false;
-        boolean discarded$24 = false;
-        boolean discarded$25 = false;
-        boolean discarded$26 = false;
-        boolean discarded$27 = false;
-        uj var4 = null;
-        String var5 = null;
-        int var6 = 0;
-        uj var7 = null;
+        boolean discarded$0 = false;
+        boolean discarded$1 = false;
+        boolean discarded$2 = false;
+        boolean discarded$3 = false;
+        boolean discarded$4 = false;
+        boolean discarded$5 = false;
+        boolean discarded$6 = false;
+        boolean discarded$7 = false;
+        boolean discarded$8 = false;
+        boolean discarded$9 = false;
+        boolean discarded$10 = false;
+        boolean discarded$11 = false;
+        boolean discarded$12 = false;
+        boolean discarded$13 = false;
+        uj var4;
+        String var5;
+        int var6;
+        uj var7;
         var6 = Pixelate.field_H ? 1 : 0;
         if (this.field_h != null) {
           if (this.field_l != hn.field_f) {
@@ -343,7 +325,7 @@ final class wi {
                     if (param1 == -98) {
                       return;
                     } else {
-                      discarded$14 = this.a(48, 58, -125);
+                      discarded$0 = this.a(48, 58, -125);
                       return;
                     }
                   } else {
@@ -351,7 +333,7 @@ final class wi {
                       if (param1 == -98) {
                         return;
                       } else {
-                        discarded$15 = this.a(48, 58, -125);
+                        discarded$1 = this.a(48, 58, -125);
                         return;
                       }
                     } else {
@@ -359,7 +341,7 @@ final class wi {
                       if (param1 == -98) {
                         return;
                       } else {
-                        discarded$16 = this.a(48, 58, -125);
+                        discarded$2 = this.a(48, 58, -125);
                         return;
                       }
                     }
@@ -373,7 +355,7 @@ final class wi {
                           if (param1 == -98) {
                             return;
                           } else {
-                            discarded$17 = this.a(48, 58, -125);
+                            discarded$3 = this.a(48, 58, -125);
                             return;
                           }
                         } else {
@@ -382,7 +364,7 @@ final class wi {
                             if (param1 == -98) {
                               return;
                             } else {
-                              discarded$18 = this.a(48, 58, -125);
+                              discarded$4 = this.a(48, 58, -125);
                               return;
                             }
                           } else {
@@ -392,13 +374,13 @@ final class wi {
                               if (param1 == -98) {
                                 return;
                               } else {
-                                discarded$19 = this.a(48, 58, -125);
+                                discarded$5 = this.a(48, 58, -125);
                                 return;
                               }
                             } else {
                               this.field_b.a(sd.a(i.field_m, 67, new String[]{var5}), (byte) -83, 0);
                               if (param1 != -98) {
-                                discarded$20 = this.a(48, 58, -125);
+                                discarded$6 = this.a(48, 58, -125);
                                 return;
                               } else {
                                 return;
@@ -408,7 +390,7 @@ final class wi {
                         }
                       } else {
                         if (param1 != -98) {
-                          discarded$21 = this.a(48, 58, -125);
+                          discarded$7 = this.a(48, 58, -125);
                           return;
                         } else {
                           return;
@@ -416,7 +398,7 @@ final class wi {
                       }
                     } else {
                       if (param1 != -98) {
-                        discarded$22 = this.a(48, 58, -125);
+                        discarded$8 = this.a(48, 58, -125);
                         return;
                       } else {
                         return;
@@ -424,7 +406,7 @@ final class wi {
                     }
                   } else {
                     if (param1 != -98) {
-                      discarded$23 = this.a(48, 58, -125);
+                      discarded$9 = this.a(48, 58, -125);
                       return;
                     } else {
                       return;
@@ -433,7 +415,7 @@ final class wi {
                 }
               } else {
                 if (param1 != -98) {
-                  discarded$24 = this.a(48, 58, -125);
+                  discarded$10 = this.a(48, 58, -125);
                   return;
                 } else {
                   return;
@@ -441,7 +423,7 @@ final class wi {
               }
             } else {
               if (param1 != -98) {
-                discarded$25 = this.a(48, 58, -125);
+                discarded$11 = this.a(48, 58, -125);
                 return;
               } else {
                 return;
@@ -449,7 +431,7 @@ final class wi {
             }
           } else {
             if (param1 != -98) {
-              discarded$26 = this.a(48, 58, -125);
+              discarded$12 = this.a(48, 58, -125);
               return;
             } else {
               return;
@@ -457,7 +439,7 @@ final class wi {
           }
         } else {
           if (param1 != -98) {
-            discarded$27 = this.a(48, 58, -125);
+            discarded$13 = this.a(48, 58, -125);
             return;
           } else {
             return;
@@ -466,7 +448,7 @@ final class wi {
     }
 
     final static void b(int param0, int param1, int param2) {
-        pc var3 = null;
+        pc var3;
         if (param1 != -925) {
           field_e = (String) null;
           var3 = aa.field_f;
@@ -486,11 +468,11 @@ final class wi {
     }
 
     private final boolean a(int param0, byte param1, int param2) {
-        Object var4 = null;
-        String var5 = null;
-        String var6 = null;
-        String var7 = null;
-        String var8 = null;
+        Object var4;
+        String var5;
+        String var6;
+        String var7;
+        String var8;
         var4 = null;
         if (param2 != 4) {
           if (param2 != 5) {
@@ -585,8 +567,6 @@ final class wi {
 
     final void a(byte param0, aa param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -594,14 +574,6 @@ final class wi {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
         try {
           L0: {
             L1: {
@@ -673,27 +645,19 @@ final class wi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             runtimeException = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (runtimeException);
-            stackOut_20_1 = new StringBuilder().append("wi.B(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (runtimeException);
+
+            stackIn_22_1 = new StringBuilder().append("wi.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L8;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L8;
             }
           }
@@ -722,8 +686,7 @@ final class wi {
     }
 
     private final boolean b(int param0, byte param1, int param2) {
-        boolean discarded$1 = false;
-        int var5 = 0;
+        int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         if ((param0 ^ -1) == -9) {
           pm.a((byte) 85, this.field_h, this.field_l);
@@ -765,7 +728,7 @@ final class wi {
                   if ((param0 ^ -1) != -15) {
                     if (20 != param0) {
                       if (-20 == (param0 ^ -1)) {
-                        discarded$1 = tg.a(this.field_h, this.field_l, this.field_k, -2, this.field_j);
+                        tg.a(this.field_h, this.field_l, this.field_k, -2, this.field_j);
                         if (param1 == 10) {
                           return true;
                         } else {
@@ -809,13 +772,13 @@ final class wi {
     }
 
     private final boolean a(int param0, boolean param1, int param2) {
-        boolean discarded$2 = false;
+        boolean discarded$1 = false;
         if (param0 == 17) {
           hc.field_M = new oe(this.field_o.field_tb, this.field_o.field_gb, this.field_o.field_K, this.field_o.field_nb, param2, cm.field_o, pj.field_i, ae.field_f, mg.field_h, um.field_q, dn.field_c, this.field_h, this.field_l);
           return true;
         } else {
           if (param1) {
-            discarded$2 = this.a(-50, false, 11);
+            discarded$1 = this.a(-50, false, 11);
             return false;
           } else {
             return false;
@@ -824,10 +787,10 @@ final class wi {
     }
 
     final void c(int param0) {
-        int var2 = 0;
-        eq var3 = null;
-        String var4 = null;
-        int var5 = 0;
+        int var2;
+        eq var3;
+        String var4;
+        int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         var2 = -90 % ((42 - param0) / 62);
         if (io.field_c == null) {
@@ -919,10 +882,10 @@ final class wi {
     }
 
     final void b(int param0) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        String var2 = null;
-        String var3 = null;
+        boolean discarded$2 = false;
+        boolean discarded$3 = false;
+        String var2;
+        String var3;
         L0: {
           if (null == this.field_h) {
             break L0;
@@ -936,14 +899,14 @@ final class wi {
               if (param0 == 8893) {
                 return;
               } else {
-                discarded$4 = this.a(-105, 67, -5);
+                discarded$2 = this.a(-105, 67, -5);
                 return;
               }
             }
           }
         }
         if (param0 != 8893) {
-          discarded$5 = this.a(-105, 67, -5);
+          discarded$3 = this.a(-105, 67, -5);
           return;
         } else {
           return;

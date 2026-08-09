@@ -59,9 +59,8 @@ final class pl extends ae implements je {
     }
 
     final static void b(byte param0, int param1) {
-        int discarded$0 = 0;
         if (param0 != 105) {
-            discarded$0 = pl.e((byte) -67);
+            pl.e((byte) -67);
         }
         lk.field_h = (param1 & 54) >> -1395595708;
         if (!(-3 <= (lk.field_h ^ -1))) {
@@ -107,8 +106,6 @@ final class pl extends ae implements je {
         int stackIn_9_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
         var2 = stellarshard.field_B;
         try {
           L0: {
@@ -123,8 +120,7 @@ final class pl extends ae implements je {
             }
             L2: while (true) {
               if (var1_int >= 1000) {
-                stackOut_8_0 = -1;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -132,8 +128,7 @@ final class pl extends ae implements je {
                   var1_int++;
                   continue L2;
                 } else {
-                  stackOut_5_0 = var1_int;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = var1_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }

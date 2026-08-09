@@ -12,8 +12,6 @@ final class jsa {
             ha stackIn_9_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            ha stackOut_8_0 = null;
-            ha stackOut_6_0 = null;
             try {
               L0: {
                 if (sab.e((byte) -118)) {
@@ -23,13 +21,11 @@ final class jsa {
                     var5 = Class.forName("nla");
                     if (param2 == 27908) {
                       var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("d"), Class.forName("asb"), Class.forName("java.lang.Integer")});
-                      stackOut_8_0 = (ha) (var6.invoke((Object) null, new Object[]{param3, param4, param0, new Integer(param1)}));
-                      stackIn_9_0 = stackOut_8_0;
+                      stackIn_9_0 = (ha) (var6.invoke((Object) null, new Object[]{param3, param4, param0, new Integer(param1)}));
                       decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
-                      stackOut_6_0 = (ha) null;
-                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_7_0 = (ha) null;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     }

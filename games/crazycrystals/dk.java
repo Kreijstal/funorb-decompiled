@@ -24,53 +24,18 @@ final class dk extends jb {
         int var9 = 0;
         int var10 = 0;
         int stackIn_20_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
         var10 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -80,8 +45,7 @@ final class dk extends jb {
             var8 = 0;
             L1: while (true) {
               if (var8 >= 128) {
-                stackOut_19_0 = var5_int;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = var5_int;
                 break L0;
               } else {
                 L2: {
@@ -141,81 +105,57 @@ final class dk extends jb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var5);
-            stackOut_21_1 = new StringBuilder().append("dk.A(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var5);
+
+            stackIn_23_1 = new StringBuilder().append("dk.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+
+
+            stackIn_26_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
+
             if (param2 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L7;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+
+
+            stackIn_29_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
+
             if (param3 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L8;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L8;
             }
           }
-          throw dn.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_24_0), stackIn_30_2 + ')');
         }
         return stackIn_20_0 != 0;
     }
@@ -223,23 +163,12 @@ final class dk extends jb {
     final static String a(CharSequence[] param0, byte param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -250,35 +179,26 @@ final class dk extends jb {
                 break L1;
               }
             }
-            stackOut_2_0 = mk.a(115, param0, 0, param0.length);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = mk.a(115, param0, 0, param0.length);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("dk.C(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("dk.C(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -288,25 +208,33 @@ final class dk extends jb {
     }
 
     public static void a(byte param0) {
-        String discarded$0 = null;
         field_l = null;
         if (param0 != 55) {
             CharSequence[] var2 = (CharSequence[]) null;
-            discarded$0 = dk.a((CharSequence[]) null, (byte) 19);
+            dk.a((CharSequence[]) null, (byte) 19);
         }
         field_o = null;
     }
 
     dk(byte[] param0) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        cp dupTemp$17 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        cp dupTemp$8 = null;
+        byte[] stackIn_39_0 = null;
+        byte[] stackIn_42_0 = null;
+        RuntimeException stackIn_204_0 = null;
+        StringBuilder stackIn_204_1 = null;
+        RuntimeException stackIn_205_0 = null;
+        StringBuilder stackIn_205_1 = null;
+        String stackIn_205_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         byte[] var4 = null;
@@ -323,10 +251,10 @@ final class dk extends jb {
         cp[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
-        cp var15 = null;
-        byte[] var15_array = null;
-        int var16_int = 0;
+        byte[] var15 = null;
+        cp var15_ref = null;
         byte[] var16 = null;
+        int var16_int = 0;
         int var17 = 0;
         byte[] var18 = null;
         int var19 = 0;
@@ -368,29 +296,6 @@ final class dk extends jb {
         byte[] var55 = null;
         byte[] var56 = null;
         byte[] var57 = null;
-        byte[] stackIn_39_0 = null;
-        byte[] stackIn_42_0 = null;
-        RuntimeException stackIn_203_0 = null;
-        StringBuilder stackIn_203_1 = null;
-        RuntimeException stackIn_204_0 = null;
-        StringBuilder stackIn_204_1 = null;
-        RuntimeException stackIn_205_0 = null;
-        StringBuilder stackIn_205_1 = null;
-        String stackIn_205_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_38_0 = null;
-        byte[] stackOut_37_0 = null;
-        Object stackOut_41_0 = null;
-        byte[] stackOut_40_0 = null;
-        RuntimeException stackOut_202_0 = null;
-        StringBuilder stackOut_202_1 = null;
-        RuntimeException stackOut_204_0 = null;
-        StringBuilder stackOut_204_1 = null;
-        String stackOut_204_2 = null;
-        RuntimeException stackOut_203_0 = null;
-        StringBuilder stackOut_203_1 = null;
-        String stackOut_203_2 = null;
         try {
           L0: {
             this.field_j = new cp[128];
@@ -468,9 +373,9 @@ final class dk extends jb {
                                                 var13_int = var15_int;
                                                 break L9;
                                               } else {
-                                                incrementValue$9 = var12;
+                                                incrementValue$0 = var12;
                                                 var12++;
-                                                var13_int = incrementValue$9;
+                                                var13_int = incrementValue$0;
                                                 break L9;
                                               }
                                             }
@@ -488,26 +393,22 @@ final class dk extends jb {
                                         L12: {
                                           var14 = var38.h(255);
                                           if (0 >= var14) {
-                                            stackOut_38_0 = null;
-                                            stackIn_39_0 = (byte[]) ((Object) stackOut_38_0);
+                                            stackIn_39_0 = null;
                                             break L12;
                                           } else {
-                                            stackOut_37_0 = new byte[var14 * 2];
-                                            stackIn_39_0 = stackOut_37_0;
+                                            stackIn_39_0 = new byte[var14 * 2];
                                             break L12;
                                           }
                                         }
                                         L13: {
                                           var46 = stackIn_39_0;
-                                          var15_array = var46;
+                                          var15 = var46;
                                           var14 = var38.h(255);
                                           if (0 >= var14) {
-                                            stackOut_41_0 = null;
-                                            stackIn_42_0 = (byte[]) ((Object) stackOut_41_0);
+                                            stackIn_42_0 = null;
                                             break L13;
                                           } else {
-                                            stackOut_40_0 = new byte[var14 * 2];
-                                            stackIn_42_0 = stackOut_40_0;
+                                            stackIn_42_0 = new byte[var14 * 2];
                                             break L13;
                                           }
                                         }
@@ -567,7 +468,7 @@ final class dk extends jb {
                                                                             L23: while (true) {
                                                                               if (var27 >= var12) {
                                                                                 L24: {
-                                                                                  if (var15_array == null) {
+                                                                                  if (var15 == null) {
                                                                                     break L24;
                                                                                   } else {
                                                                                     var27 = 1;
@@ -575,7 +476,7 @@ final class dk extends jb {
                                                                                       if (var27 >= var46.length) {
                                                                                         break L24;
                                                                                       } else {
-                                                                                        var15_array[var27] = var38.d((byte) 106);
+                                                                                        var15[var27] = var38.d((byte) 106);
                                                                                         var27 += 2;
                                                                                         continue L25;
                                                                                       }
@@ -605,11 +506,11 @@ final class dk extends jb {
                                                                                     L29: while (true) {
                                                                                       if (var27 >= var12) {
                                                                                         L30: {
-                                                                                          if (var15_array == null) {
+                                                                                          if (var15 == null) {
                                                                                             break L30;
                                                                                           } else {
                                                                                             var19 = var38.h(255);
-                                                                                            var15_array[0] = (byte)var19;
+                                                                                            var15[0] = (byte)var19;
                                                                                             var27 = 2;
                                                                                             L31: while (true) {
                                                                                               if (var46.length <= var27) {
@@ -621,7 +522,7 @@ final class dk extends jb {
                                                                                                     var29 = 2;
                                                                                                     L33: while (true) {
                                                                                                       if (var46.length <= var29) {
-                                                                                                        var15_array = null;
+                                                                                                        var15 = null;
                                                                                                         var30 = var27;
                                                                                                         L34: while (true) {
                                                                                                           if ((var30 ^ -1) <= -129) {
@@ -634,7 +535,7 @@ final class dk extends jb {
                                                                                                         }
                                                                                                       } else {
                                                                                                         var30 = var46[var29];
-                                                                                                        var31 = var15_array[var29 - -1];
+                                                                                                        var31 = var15[var29 - -1];
                                                                                                         var32 = (var30 + -var27) / 2 + var28 * (-var27 + var30);
                                                                                                         var33 = var27;
                                                                                                         L35: while (true) {
@@ -661,7 +562,7 @@ final class dk extends jb {
                                                                                                 }
                                                                                               } else {
                                                                                                 var19 = var38.h(255) + (var19 + 1);
-                                                                                                var15_array[var27] = (byte)var19;
+                                                                                                var15[var27] = (byte)var19;
                                                                                                 var27 += 2;
                                                                                                 continue L31;
                                                                                               }
@@ -669,7 +570,7 @@ final class dk extends jb {
                                                                                           }
                                                                                         }
                                                                                         L36: {
-                                                                                          if (var16 == null) {
+                                                                                          if (null == var16) {
                                                                                             break L36;
                                                                                           } else {
                                                                                             var19 = var38.h(255);
@@ -963,9 +864,9 @@ final class dk extends jb {
                                                                               } else {
                                                                                 L67: {
                                                                                   if (var54.length > var21) {
-                                                                                    incrementValue$10 = var21;
+                                                                                    incrementValue$1 = var21;
                                                                                     var21++;
-                                                                                    var20 = var18[incrementValue$10];
+                                                                                    var20 = var18[incrementValue$1];
                                                                                     break L67;
                                                                                   } else {
                                                                                     var20 = -1;
@@ -997,9 +898,9 @@ final class dk extends jb {
                                                                               } else {
                                                                                 var25 = var13[var53[var21]];
                                                                                 if (var21 < var57.length) {
-                                                                                  incrementValue$11 = var21;
+                                                                                  incrementValue$2 = var21;
                                                                                   var21++;
-                                                                                  var20 = var10[incrementValue$11];
+                                                                                  var20 = var10[incrementValue$2];
                                                                                   break L69;
                                                                                 } else {
                                                                                   var20 = -1;
@@ -1030,15 +931,15 @@ final class dk extends jb {
                                                                                 var20 = -1;
                                                                                 break L72;
                                                                               } else {
-                                                                                incrementValue$12 = var21;
+                                                                                incrementValue$3 = var21;
                                                                                 var21++;
-                                                                                var20 = var7[incrementValue$12];
+                                                                                var20 = var7[incrementValue$3];
                                                                                 break L72;
                                                                               }
                                                                             }
-                                                                            incrementValue$13 = var8;
+                                                                            incrementValue$4 = var8;
                                                                             var8++;
-                                                                            var24 = 16 + var38.field_h[incrementValue$13] << -410681694;
+                                                                            var24 = 16 + var38.field_h[incrementValue$4] << -410681694;
                                                                             break L71;
                                                                           }
                                                                         }
@@ -1060,16 +961,16 @@ final class dk extends jb {
                                                                       if (var20 != 0) {
                                                                         break L74;
                                                                       } else {
-                                                                        incrementValue$14 = var5;
+                                                                        incrementValue$5 = var5;
                                                                         var5++;
-                                                                        var23 = -1 + var38.field_h[incrementValue$14];
+                                                                        var23 = -1 + var38.field_h[incrementValue$5];
                                                                         if (var55.length <= var21) {
                                                                           var20 = -1;
                                                                           break L74;
                                                                         } else {
-                                                                          incrementValue$15 = var21;
+                                                                          incrementValue$6 = var21;
                                                                           var21++;
-                                                                          var20 = var4[incrementValue$15];
+                                                                          var20 = var4[incrementValue$6];
                                                                           break L74;
                                                                         }
                                                                       }
@@ -1090,9 +991,9 @@ final class dk extends jb {
                                                               } else {
                                                                 L76: {
                                                                   if (var21 < var54.length) {
-                                                                    incrementValue$16 = var21;
+                                                                    incrementValue$7 = var21;
                                                                     var21++;
-                                                                    var20 = var18[incrementValue$16];
+                                                                    var20 = var18[incrementValue$7];
                                                                     break L76;
                                                                   } else {
                                                                     var20 = -1;
@@ -1137,15 +1038,15 @@ final class dk extends jb {
                                         }
                                       } else {
                                         L77: {
-                                          dupTemp$17 = new cp();
-                                          var13[var14] = dupTemp$17;
-                                          var40 = dupTemp$17;
-                                          var15 = var40;
+                                          dupTemp$8 = new cp();
+                                          var13[var14] = dupTemp$8;
+                                          var40 = dupTemp$8;
+                                          var15_ref = var40;
                                           var16_int = var38.h(255);
                                           if (-1 <= (var16_int ^ -1)) {
                                             break L77;
                                           } else {
-                                            var15.field_a = new byte[2 * var16_int];
+                                            var15_ref.field_a = new byte[2 * var16_int];
                                             break L77;
                                           }
                                         }
@@ -1154,7 +1055,7 @@ final class dk extends jb {
                                           if (0 >= var16_int) {
                                             break L78;
                                           } else {
-                                            var15.field_b = new byte[2 + var16_int * 2];
+                                            var15_ref.field_b = new byte[2 + var16_int * 2];
                                             var40.field_b[1] = (byte)64;
                                             break L78;
                                           }
@@ -1201,27 +1102,19 @@ final class dk extends jb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L79: {
             var2 = decompiledCaughtException;
-            stackOut_202_0 = (RuntimeException) (var2);
-            stackOut_202_1 = new StringBuilder().append("dk.<init>(");
-            stackIn_204_0 = stackOut_202_0;
-            stackIn_204_1 = stackOut_202_1;
-            stackIn_203_0 = stackOut_202_0;
-            stackIn_203_1 = stackOut_202_1;
+            stackIn_204_0 = (RuntimeException) (var2);
+
+            stackIn_204_1 = new StringBuilder().append("dk.<init>(");
+
             if (param0 == null) {
-              stackOut_204_0 = (RuntimeException) ((Object) stackIn_204_0);
-              stackOut_204_1 = (StringBuilder) ((Object) stackIn_204_1);
-              stackOut_204_2 = "null";
-              stackIn_205_0 = stackOut_204_0;
-              stackIn_205_1 = stackOut_204_1;
-              stackIn_205_2 = stackOut_204_2;
+              stackIn_205_0 = (RuntimeException) ((Object) stackIn_204_0);
+              stackIn_205_1 = (StringBuilder) ((Object) stackIn_204_1);
+              stackIn_205_2 = "null";
               break L79;
             } else {
-              stackOut_203_0 = (RuntimeException) ((Object) stackIn_203_0);
-              stackOut_203_1 = (StringBuilder) ((Object) stackIn_203_1);
-              stackOut_203_2 = "{...}";
-              stackIn_205_0 = stackOut_203_0;
-              stackIn_205_1 = stackOut_203_1;
-              stackIn_205_2 = stackOut_203_2;
+              stackIn_205_0 = (RuntimeException) ((Object) stackIn_204_0);
+              stackIn_205_1 = (StringBuilder) ((Object) stackIn_204_1);
+              stackIn_205_2 = "{...}";
               break L79;
             }
           }

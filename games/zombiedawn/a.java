@@ -47,8 +47,6 @@ final class a {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
         this.field_i = param2;
         this.field_o = param0 + (-(so.c(8) << -2067900720) + 262144);
         this.field_k = param1 << 1383290256;
@@ -60,7 +58,7 @@ final class a {
           this.field_d = 12 + so.c(3);
           this.field_n = 0;
           this.field_b = 0;
-          discarded$2 = so.a(sg.field_fb);
+          so.a(sg.field_fb);
           return;
         } else {
           this.field_j = (so.c(1) << -1903033520) + 65536;
@@ -69,7 +67,7 @@ final class a {
           this.field_d = 12 + so.c(3);
           this.field_n = 0;
           this.field_b = 0;
-          discarded$3 = so.a(sg.field_fb);
+          so.a(sg.field_fb);
           return;
         }
     }
@@ -84,11 +82,9 @@ final class a {
     }
 
     final void a(int param0) {
-        int fieldTemp$4 = 0;
-        fn discarded$5 = null;
-        int fieldTemp$6 = 0;
-        fn discarded$7 = null;
-        int var2 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int var2;
         if (this.field_a) {
           if (-1 <= (this.field_k ^ -1)) {
             return;
@@ -100,13 +96,13 @@ final class a {
               if (this.field_b >= 2) {
                 return;
               } else {
-                fieldTemp$4 = this.field_n + 1;
+                fieldTemp$0 = this.field_n + 1;
                 this.field_n = this.field_n + 1;
-                if (this.field_d < fieldTemp$4) {
+                if (this.field_d < fieldTemp$0) {
                   this.field_n = 0;
                   this.field_b = this.field_b + 1;
                   if ((this.field_b ^ -1) == -3) {
-                    discarded$5 = kh.a(so.c(1) + 153, false);
+                    kh.a(so.c(1) + 153, false);
                     return;
                   } else {
                     return;
@@ -121,15 +117,15 @@ final class a {
               if (this.field_b >= 2) {
                 return;
               } else {
-                fieldTemp$6 = this.field_n + 1;
+                fieldTemp$1 = this.field_n + 1;
                 this.field_n = this.field_n + 1;
-                if (this.field_d < fieldTemp$6) {
+                if (this.field_d < fieldTemp$1) {
                   this.field_n = 0;
                   this.field_b = this.field_b + 1;
                   if ((this.field_b ^ -1) != -3) {
                     return;
                   } else {
-                    discarded$7 = kh.a(so.c(1) + 153, false);
+                    kh.a(so.c(1) + 153, false);
                     return;
                   }
                 } else {

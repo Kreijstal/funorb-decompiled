@@ -23,12 +23,12 @@ final class km {
     }
 
     final static void a(byte param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         qk var5 = null;
         h var6 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var4 = Torquing.field_u;
         try {
           L0: {
@@ -61,7 +61,7 @@ final class km {
     }
 
     final synchronized static long b(int param0) {
-        long var1 = 0L;
+        long var1;
         var1 = System.currentTimeMillis();
         if ((var1 ^ -1L) <= (j.field_p ^ -1L)) {
           if (param0 != -1) {

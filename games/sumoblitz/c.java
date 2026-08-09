@@ -11,23 +11,12 @@ final class c extends nl {
     final String a(boolean param0, pk param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -38,35 +27,26 @@ final class c extends nl {
                 break L1;
               }
             }
-            stackOut_2_0 = oc.a(param1.field_m.length(), '*', -1);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = oc.a(param1.field_m.length(), '*', -1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("c.I(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("c.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -99,109 +79,60 @@ final class c extends nl {
     }
 
     final static void a(byte param0) {
+        int var2 = 0;
+        int var4 = 0;
+        Throwable decompiledCaughtException = null;
         Object var1 = null;
         RuntimeException var1_ref = null;
-        Object var1_ref2 = null;
-        int var2 = 0;
-        Throwable var3 = null;
-        int var4 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_20_0 = 0;
-        Throwable decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_19_0 = 0;
+        int var5 = 0;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          L0: {
-            var1_ref2 = wd.field_e;
-            synchronized (var1_ref2) {
-              L1: {
-                if (param0 >= 108) {
-                  L2: {
-                    L3: {
-                      L4: {
-                        L5: {
-                          bj.field_a = ua.field_a;
-                          kj.field_e = kj.field_e + 1;
-                          if (0 > lv.field_i) {
-                            break L5;
-                          } else {
-                            L6: while (true) {
-                              if (ks.field_v == lv.field_i) {
-                                break L4;
-                              } else {
-                                var2 = jf.field_d[ks.field_v];
-                                ks.field_v = 127 & ks.field_v + 1;
-                                stackOut_7_0 = 0;
-                                stackIn_20_0 = stackOut_7_0;
-                                stackIn_8_0 = stackOut_7_0;
-                                if (var4 != 0) {
-                                  break L3;
-                                } else {
-                                  L7: {
-                                    L8: {
-                                      if (stackIn_8_0 <= var2) {
-                                        break L8;
-                                      } else {
-                                        hw.field_b[var2 ^ -1] = false;
-                                        if (var4 == 0) {
-                                          break L7;
-                                        } else {
-                                          break L8;
-                                        }
-                                      }
-                                    }
-                                    hw.field_b[var2] = true;
-                                    break L7;
-                                  }
-                                  if (var4 == 0) {
-                                    continue L6;
-                                  } else {
-                                    break L5;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                        var2 = 0;
-                        L9: while (true) {
-                          L10: {
-                            if (-113 >= (var2 ^ -1)) {
-                              break L10;
-                            } else {
-                              hw.field_b[var2] = false;
-                              var2++;
-                              if (var4 != 0) {
-                                break L2;
-                              } else {
-                                if (var4 == 0) {
-                                  continue L9;
-                                } else {
-                                  break L10;
-                                }
-                              }
-                            }
-                          }
-                          lv.field_i = ks.field_v;
-                          break L4;
+          var1 = wd.field_e;
+          synchronized (var1) {
+            L0: {
+              if (param0 >= 108) {
+                L1: {
+                  bj.field_a = ua.field_a;
+                  kj.field_e = kj.field_e + 1;
+                  if (0 > lv.field_i) {
+                    var5 = 0;
+                    var2 = var5;
+                    L2: while (true) {
+                      if (-113 >= (var5 ^ -1)) {
+                        lv.field_i = ks.field_v;
+                        break L1;
+                      } else {
+                        hw.field_b[var5] = false;
+                        var5++;
+                        continue L2;
+                      }
+                    }
+                  } else {
+                    L3: while (true) {
+                      if (ks.field_v == lv.field_i) {
+                        break L1;
+                      } else {
+                        var2 = jf.field_d[ks.field_v];
+                        ks.field_v = 127 & ks.field_v + 1;
+                        if (0 <= var2) {
+                          hw.field_b[var2] = true;
+                          continue L3;
+                        } else {
+                          hw.field_b[var2 ^ -1] = false;
+                          continue L3;
                         }
                       }
-                      stackOut_19_0 = jt.field_s;
-                      stackIn_20_0 = stackOut_19_0;
-                      break L3;
                     }
-                    ua.field_a = stackIn_20_0;
-                    break L2;
                   }
-                  break L1;
-                } else {
-                  return;
                 }
+                ua.field_a = jt.field_s;
+                break L0;
+              } else {
+                return;
               }
             }
-            break L0;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;

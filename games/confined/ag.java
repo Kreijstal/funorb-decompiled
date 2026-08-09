@@ -46,33 +46,33 @@ final class ag {
     }
 
     final static String a(int param0, Throwable param1) throws IOException {
-        String var2 = null;
-        PrintWriter var4 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        ec var14 = null;
-        StringWriter var15 = null;
-        String var20 = null;
-        BufferedReader var21 = null;
-        String var22 = null;
-        String var23 = null;
-        String var24 = null;
-        String var25 = null;
-        String var26 = null;
-        String var27 = null;
-        String var28 = null;
-        BufferedReader var29 = null;
-        String var30 = null;
-        String var31 = null;
-        String var32 = null;
-        String var33 = null;
-        String var34 = null;
-        String var35 = null;
+        String var2;
+        PrintWriter var4;
+        BufferedReader var6;
+        String var7;
+        int var9;
+        int var10;
+        String var11;
+        int var12;
+        int var13;
+        ec var14;
+        StringWriter var15;
+        String var20;
+        BufferedReader var21;
+        String var22;
+        String var23;
+        String var24;
+        String var25;
+        String var26;
+        String var27;
+        String var28;
+        BufferedReader var29;
+        String var30;
+        String var31;
+        String var32;
+        String var33;
+        String var34;
+        String var35;
         L0: {
           var13 = Confined.field_J ? 1 : 0;
           if (param1 instanceof ec) {
@@ -242,8 +242,8 @@ final class ag {
     }
 
     private final void b(int param0, long param1) {
-        Object var4 = null;
-        nd var5 = null;
+        Object var4;
+        nd var5;
         var4 = null;
         if (param0 >= -76) {
           this.b(64, 29L);
@@ -285,9 +285,9 @@ final class ag {
     }
 
     final Object a(int param0, long param1) {
-        Object var5 = null;
-        oj var6 = null;
-        nd var7 = null;
+        Object var5;
+        oj var6;
+        nd var7;
         var7 = (nd) ((Object) this.field_f.a(1, param1));
         if (param0 == 0) {
           if (var7 != null) {

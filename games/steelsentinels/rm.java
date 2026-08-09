@@ -30,20 +30,14 @@ final class rm {
     final boolean a(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 0) {
           L0: {
             this.a(false, -82);
             if (0 == this.field_d) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -51,12 +45,10 @@ final class rm {
         } else {
           L1: {
             if (0 == this.field_d) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -65,30 +57,19 @@ final class rm {
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param0) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -104,7 +85,6 @@ final class rm {
     }
 
     final void a(boolean param0, int param1) {
-        boolean discarded$1 = false;
         this.field_c = false;
         if (param0) {
           L0: {
@@ -253,7 +233,7 @@ final class rm {
             return;
           }
         } else {
-          discarded$1 = this.c(-28);
+          this.c(-28);
           this.field_b = 0;
           this.field_k = 0;
           if (-1 == (this.field_d ^ -1)) {
@@ -452,23 +432,16 @@ final class rm {
     }
 
     final boolean d(int param0) {
-        boolean discarded$10 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -97) {
           L0: {
-            discarded$10 = this.a(2);
+            this.a(2);
             if ((this.field_b ^ -1) != -97) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -476,12 +449,10 @@ final class rm {
         } else {
           L1: {
             if ((this.field_b ^ -1) != -97) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -668,20 +639,14 @@ final class rm {
     final boolean c(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 51) {
           L0: {
             rm.b((byte) 74);
             if (-98 != (this.field_b ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -689,12 +654,10 @@ final class rm {
         } else {
           L1: {
             if (-98 != (this.field_b ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -703,10 +666,6 @@ final class rm {
     }
 
     final void a(int param0, int param1, int param2) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
         if (this.field_m <= param1) {
           throw new IllegalArgumentException();
         } else {
@@ -789,7 +748,7 @@ final class rm {
                       return;
                     } else {
                       L5: {
-                        discarded$4 = this.d(-13);
+                        this.d(-13);
                         if (0 != this.field_d) {
                           break L5;
                         } else {
@@ -881,7 +840,7 @@ final class rm {
                   return;
                 }
               } else {
-                discarded$5 = this.d(-13);
+                this.d(-13);
                 if (0 == this.field_d) {
                   L7: {
                     if (this.field_l) {
@@ -930,7 +889,7 @@ final class rm {
                       if (param0 > 123) {
                         break L9;
                       } else {
-                        discarded$6 = this.d(-13);
+                        this.d(-13);
                         break L9;
                       }
                     }
@@ -1029,7 +988,7 @@ final class rm {
                 }
               } else {
                 L13: {
-                  discarded$7 = this.d(-13);
+                  this.d(-13);
                   if (0 != this.field_d) {
                     break L13;
                   } else {
@@ -1075,7 +1034,6 @@ final class rm {
     }
 
     final void e(byte param0) {
-        boolean discarded$2 = false;
         this.field_k = 0;
         if (param0 == 22) {
           this.field_b = 0;
@@ -1087,7 +1045,7 @@ final class rm {
             return;
           }
         } else {
-          discarded$2 = this.d(51);
+          this.d(51);
           this.field_b = 0;
           this.field_c = false;
           if (this.field_d != 0) {

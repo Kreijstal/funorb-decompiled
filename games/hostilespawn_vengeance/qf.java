@@ -40,39 +40,27 @@ final class qf extends am {
     private static float[] field_r;
 
     final static void a(byte[] param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        float[] var6_ref_float__ = null;
-        int var6 = 0;
-        int var7_int = 0;
-        float[] var7 = null;
-        int var8_int = 0;
-        float[] var8 = null;
-        int var9_int = 0;
-        int[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_5_0 = 0;
-        boolean[] stackIn_38_0 = null;
-        int stackIn_38_1 = 0;
         boolean[] stackIn_39_0 = null;
         int stackIn_39_1 = 0;
         boolean[] stackIn_40_0 = null;
         int stackIn_40_1 = 0;
         int stackIn_40_2 = 0;
-        boolean[] stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        boolean[] stackOut_39_0 = null;
-        int stackOut_39_1 = 0;
-        int stackOut_39_2 = 0;
-        boolean[] stackOut_38_0 = null;
-        int stackOut_38_1 = 0;
-        int stackOut_38_2 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        float[] var6_ref_float__;
+        int var7_int;
+        float[] var7;
+        int var8_int;
+        float[] var8;
+        int var9_int;
+        int[] var9;
+        int var10;
+        int var11;
         qf.a(param0, 0);
         field_A = 1 << qf.e(4);
         field_m = 1 << qf.e(4);
@@ -114,33 +102,25 @@ final class qf extends am {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) field_v;
-                                      stackOut_37_1 = var6;
-                                      stackIn_39_0 = stackOut_37_0;
-                                      stackIn_39_1 = stackOut_37_1;
-                                      stackIn_38_0 = stackOut_37_0;
-                                      stackIn_38_1 = stackOut_37_1;
+                                      stackIn_39_0 = (boolean[]) (field_v);
+
+                                      stackIn_39_1 = var6;
+
                                       if (qf.b() == 0) {
-                                        stackOut_39_0 = (boolean[]) (Object) stackIn_39_0;
-                                        stackOut_39_1 = stackIn_39_1;
-                                        stackOut_39_2 = 0;
-                                        stackIn_40_0 = stackOut_39_0;
-                                        stackIn_40_1 = stackOut_39_1;
-                                        stackIn_40_2 = stackOut_39_2;
+                                        stackIn_40_0 = (boolean[]) ((Object) stackIn_39_0);
+                                        stackIn_40_1 = stackIn_39_1;
+                                        stackIn_40_2 = 0;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) (Object) stackIn_38_0;
-                                        stackOut_38_1 = stackIn_38_1;
-                                        stackOut_38_2 = 1;
-                                        stackIn_40_0 = stackOut_38_0;
-                                        stackIn_40_1 = stackOut_38_1;
-                                        stackIn_40_2 = stackOut_38_2;
+                                        stackIn_40_0 = (boolean[]) ((Object) stackIn_39_0);
+                                        stackIn_40_1 = stackIn_39_1;
+                                        stackIn_40_2 = 1;
                                         break L7;
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = qf.e(16);
-                                    int discarded$4 = qf.e(16);
+                                    qf.e(16);
+                                    qf.e(16);
                                     field_C[var6] = qf.e(8);
                                     var6++;
                                     continue L6;
@@ -165,7 +145,7 @@ final class qf extends am {
                       }
                     }
                   } else {
-                    int discarded$5 = qf.e(16);
+                    qf.e(16);
                     var3++;
                     continue L2;
                   }
@@ -179,12 +159,10 @@ final class qf extends am {
           } else {
             L8: {
               if (var1 == 0) {
-                stackOut_4_0 = field_A;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = field_A;
                 break L8;
               } else {
-                stackOut_3_0 = field_m;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = field_m;
                 break L8;
               }
             }
@@ -256,72 +234,6 @@ final class qf extends am {
     }
 
     private final float[] d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        rk var14 = null;
-        int var15 = 0;
-        int var16 = 0;
-        int var17_int = 0;
-        Object var17 = null;
-        int var18_int = 0;
-        float[] var18 = null;
-        int var19 = 0;
-        float[] var20_ref_float__ = null;
-        int var20 = 0;
-        int var21_int = 0;
-        float[] var21 = null;
-        float[] var22 = null;
-        float[] var23 = null;
-        int[] var24 = null;
-        int var25 = 0;
-        float var26_float = 0.0f;
-        int var26 = 0;
-        float var27 = 0.0f;
-        int var27_int = 0;
-        float var28 = 0.0f;
-        int var28_int = 0;
-        float var29 = 0.0f;
-        int var29_int = 0;
-        float var30 = 0.0f;
-        int var30_int = 0;
-        float var31 = 0.0f;
-        int var31_int = 0;
-        int var32_int = 0;
-        float var32 = 0.0f;
-        int var33_int = 0;
-        float var33 = 0.0f;
-        float var34 = 0.0f;
-        float var35 = 0.0f;
-        float var36 = 0.0f;
-        float var37 = 0.0f;
-        float var38 = 0.0f;
-        float var39 = 0.0f;
-        float[] var40 = null;
-        int var41 = 0;
-        fi var42 = null;
-        int[] var44 = null;
-        float[] var45 = null;
-        float[] var46 = null;
-        int[] var48 = null;
-        float[] var49 = null;
-        float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -330,43 +242,79 @@ final class qf extends am {
         float[] stackIn_43_0 = null;
         float[] stackIn_46_0 = null;
         int[] stackIn_49_0 = null;
-        Object stackIn_109_0 = null;
         Object stackIn_110_0 = null;
         Object stackIn_111_0 = null;
         int stackIn_111_1 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        float[] stackOut_39_0 = null;
-        float[] stackOut_38_0 = null;
-        float[] stackOut_42_0 = null;
-        float[] stackOut_41_0 = null;
-        float[] stackOut_45_0 = null;
-        float[] stackOut_44_0 = null;
-        int[] stackOut_48_0 = null;
-        int[] stackOut_47_0 = null;
-        Object stackOut_108_0 = null;
-        Object stackOut_110_0 = null;
-        int stackOut_110_1 = 0;
-        Object stackOut_109_0 = null;
-        int stackOut_109_1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        rk var14;
+        int var15;
+        int var16;
+        int var17_int;
+        Object var17;
+        int var18_int;
+        float[] var18;
+        int var19;
+        float[] var20_ref_float__;
+        int var20;
+        int var21_int;
+        float[] var21;
+        float[] var22;
+        float[] var23;
+        int[] var24;
+        int var25;
+        int var26;
+        float var26_float;
+        float var27;
+        int var27_int;
+        float var28;
+        int var28_int;
+        float var29;
+        int var29_int;
+        float var30;
+        int var30_int;
+        float var31;
+        int var31_int;
+        float var32;
+        int var32_int;
+        float var33;
+        int var33_int;
+        float var34;
+        float var35;
+        float var36;
+        float var37;
+        float var38;
+        float var39;
+        float[] var40;
+        int var41;
+        fi var42;
+        int[] var44;
+        float[] var45;
+        float[] var46;
+        int[] var48;
+        float[] var49;
+        float[] var50;
+        float[] var52;
         L0: {
-          qf.a(((qf) this).field_L[param0], 0);
-          int discarded$1 = qf.b();
+          qf.a(this.field_L[param0], 0);
+          qf.b();
           var2 = qf.e(vf.b(-101, field_C.length - 1));
           var3 = field_v[var2] ? 1 : 0;
           if (var3 == 0) {
-            stackOut_2_0 = field_A;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = field_A;
             break L0;
           } else {
-            stackOut_1_0 = field_m;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = field_m;
             break L0;
           }
         }
@@ -379,24 +327,20 @@ final class qf extends am {
           } else {
             L2: {
               if (qf.b() == 0) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L2;
               } else {
-                stackOut_5_0 = 1;
-                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_0 = 1;
                 break L2;
               }
             }
             L3: {
               var5 = stackIn_7_0;
               if (qf.b() == 0) {
-                stackOut_9_0 = 0;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = 0;
                 break L3;
               } else {
-                stackOut_8_0 = 1;
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = 1;
                 break L3;
               }
             }
@@ -450,12 +394,10 @@ final class qf extends am {
           var16 = var14.field_d;
           var17_int = var14.field_b[var16];
           if (field_q[var17_int].a()) {
-            stackOut_21_0 = 0;
-            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_0 = 0;
             break L8;
           } else {
-            stackOut_20_0 = 1;
-            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_0 = 1;
             break L8;
           }
         }
@@ -479,9 +421,7 @@ final class qf extends am {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_r;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_r;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -493,54 +433,44 @@ final class qf extends am {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) field_t;
-                            stackIn_40_0 = stackOut_39_0;
+                            stackIn_40_0 = (float[]) (field_t);
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) field_M;
-                            stackIn_40_0 = stackOut_38_0;
+                            stackIn_40_0 = (float[]) (field_M);
                             break L14;
                           }
                         }
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) field_j;
-                            stackIn_43_0 = stackOut_42_0;
+                            stackIn_43_0 = (float[]) (field_j);
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) field_D;
-                            stackIn_43_0 = stackOut_41_0;
+                            stackIn_43_0 = (float[]) (field_D);
                             break L15;
                           }
                         }
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) field_G;
-                            stackIn_46_0 = stackOut_45_0;
+                            stackIn_46_0 = (float[]) (field_G);
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) field_y;
-                            stackIn_46_0 = stackOut_44_0;
+                            stackIn_46_0 = (float[]) (field_y);
                             break L16;
                           }
                         }
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) field_z;
-                            stackIn_49_0 = stackOut_48_0;
+                            stackIn_49_0 = (int[]) (field_z);
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) field_i;
-                            stackIn_49_0 = stackOut_47_0;
+                            stackIn_49_0 = (int[]) (field_i);
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -620,7 +550,7 @@ final class qf extends am {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -665,7 +595,7 @@ final class qf extends am {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -778,27 +708,25 @@ final class qf extends am {
             }
             L35: {
               var17 = null;
-              if (((qf) this).field_E <= 0) {
+              if (this.field_E <= 0) {
                 break L35;
               } else {
                 L36: {
-                  var18_int = ((qf) this).field_E + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var18_int = this.field_E + var4 >> 2;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
-                  if (((qf) this).field_H) {
+                  var17 = var40;
+                  if (this.field_H) {
                     break L36;
                   } else {
                     var19 = 0;
                     L37: while (true) {
-                      if (var19 >= ((qf) this).field_o) {
+                      if (var19 >= this.field_o) {
                         break L36;
                       } else {
-                        var20 = (((qf) this).field_E >> 1) + var19;
-                        var40[var19] = var40[var19] + ((qf) this).field_p[var20];
+                        var20 = (this.field_E >> 1) + var19;
+                        var40[var19] = var40[var19] + this.field_p[var20];
                         var19++;
                         continue L37;
                       }
@@ -813,7 +741,7 @@ final class qf extends am {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_r[var19];
                       var19++;
                       continue L38;
@@ -823,34 +751,29 @@ final class qf extends am {
               }
             }
             L39: {
-              var18 = ((qf) this).field_p;
-              ((qf) this).field_p = field_r;
+              var18 = this.field_p;
+              this.field_p = field_r;
               field_r = var18;
-              ((qf) this).field_E = var4;
-              ((qf) this).field_o = var12 - (var4 >> 1);
-              stackOut_108_0 = this;
-              stackIn_110_0 = stackOut_108_0;
-              stackIn_109_0 = stackOut_108_0;
+              this.field_E = var4;
+              this.field_o = var12 - (var4 >> 1);
+              stackIn_110_0 = this;
+
               if (var15 == 0) {
-                stackOut_110_0 = this;
-                stackOut_110_1 = 0;
-                stackIn_111_0 = stackOut_110_0;
-                stackIn_111_1 = stackOut_110_1;
+                stackIn_111_0 = this;
+                stackIn_111_1 = 0;
                 break L39;
               } else {
-                stackOut_109_0 = this;
-                stackOut_109_1 = 1;
-                stackIn_111_0 = stackOut_109_0;
-                stackIn_111_1 = stackOut_109_1;
+                stackIn_111_0 = this;
+                stackIn_111_1 = 1;
                 break L39;
               }
             }
-            ((qf) this).field_H = stackIn_111_1 != 0;
-            return (float[]) var17;
+            ((qf) (this)).field_H = stackIn_111_1 != 0;
+            return (float[]) (var17);
           } else {
             var42 = field_N[var14.field_c[var17_int]];
-            var55 = field_r;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_r;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -858,14 +781,13 @@ final class qf extends am {
     }
 
     final jb a(int[] param0) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        int incrementValue$0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        float[] var7;
+        byte[] var12;
         L0: {
           if (param0 == null) {
             break L0;
@@ -878,23 +800,23 @@ final class qf extends am {
           }
         }
         L1: {
-          if (((qf) this).field_s != null) {
+          if (this.field_s != null) {
             break L1;
           } else {
-            ((qf) this).field_E = 0;
-            ((qf) this).field_p = new float[field_m];
-            ((qf) this).field_s = new byte[((qf) this).field_x];
-            ((qf) this).field_h = 0;
-            ((qf) this).field_J = 0;
+            this.field_E = 0;
+            this.field_p = new float[field_m];
+            this.field_s = new byte[this.field_x];
+            this.field_h = 0;
+            this.field_J = 0;
             break L1;
           }
         }
         L2: while (true) {
-          if (((qf) this).field_J >= ((qf) this).field_L.length) {
-            ((qf) this).field_p = null;
-            var14 = ((qf) this).field_s;
-            ((qf) this).field_s = null;
-            return new jb(((qf) this).field_l, var14, ((qf) this).field_u, ((qf) this).field_B, ((qf) this).field_n);
+          if (this.field_J >= this.field_L.length) {
+            this.field_p = null;
+            var12 = this.field_s;
+            this.field_s = null;
+            return new jb(this.field_l, var12, this.field_u, this.field_B, this.field_n);
           } else {
             L3: {
               if (param0 == null) {
@@ -908,19 +830,17 @@ final class qf extends am {
               }
             }
             L4: {
-              var13 = this.d(((qf) this).field_J);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.d(this.field_J);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
-                  var3 = ((qf) this).field_h;
-                  var4 = var13.length;
-                  if (var4 <= ((qf) this).field_x - var3) {
+                  var3 = this.field_h;
+                  var4 = var7.length;
+                  if (var4 <= this.field_x - var3) {
                     break L5;
                   } else {
-                    var4 = ((qf) this).field_x - var3;
+                    var4 = this.field_x - var3;
                     break L5;
                   }
                 }
@@ -931,40 +851,40 @@ final class qf extends am {
                       if (param0 == null) {
                         break L7;
                       } else {
-                        param0[0] = param0[0] - (var3 - ((qf) this).field_h);
+                        param0[0] = param0[0] - (var3 - this.field_h);
                         break L7;
                       }
                     }
-                    ((qf) this).field_h = var3;
+                    this.field_h = var3;
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
-                    int incrementValue$1 = var3;
+                    incrementValue$0 = var3;
                     var3++;
-                    ((qf) this).field_s[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_s[incrementValue$0] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
                 }
               }
             }
-            ((qf) this).field_J = ((qf) this).field_J + 1;
+            this.field_J = this.field_J + 1;
             continue L2;
           }
         }
     }
 
     final static int e(int param0) {
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_O) {
@@ -1019,7 +939,7 @@ final class qf extends am {
         try {
             qf var4_ref = null;
             if (!qf.a(param0)) {
-                boolean discarded$0 = param0.a(param2, param1, (byte) 86);
+                param0.a(param2, param1, (byte) 86);
                 return null;
             }
             byte[] var3 = param0.a(false, param2, param1);
@@ -1027,8 +947,10 @@ final class qf extends am {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new qf(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1042,7 +964,7 @@ final class qf extends am {
         try {
             qf var4_ref = null;
             if (!qf.a(param0)) {
-                boolean discarded$0 = param0.a(-121, param1, param2);
+                param0.a(-121, param1, param2);
                 return null;
             }
             byte[] var3 = param0.a(param2, param1, 0);
@@ -1050,8 +972,10 @@ final class qf extends am {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new qf(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1063,7 +987,7 @@ final class qf extends am {
 
     private final static void a(byte[] param0, int param1) {
         field_F = param0;
-        field_k = 0;
+        field_k = param1;
         field_O = 0;
     }
 
@@ -1073,19 +997,19 @@ final class qf extends am {
         int var6_int = 0;
         byte[] var6 = null;
         vi var2 = new vi(param0);
-        ((qf) this).field_l = var2.d(8195);
-        ((qf) this).field_x = var2.d(8195);
-        ((qf) this).field_u = var2.d(8195);
-        ((qf) this).field_B = var2.d(8195);
-        if (((qf) this).field_B < 0) {
-            ((qf) this).field_B = ~((qf) this).field_B;
-            ((qf) this).field_n = true;
+        this.field_l = var2.d(8195);
+        this.field_x = var2.d(8195);
+        this.field_u = var2.d(8195);
+        this.field_B = var2.d(8195);
+        if (this.field_B < 0) {
+            this.field_B = this.field_B ^ -1;
+            this.field_n = true;
         }
         int var3 = var2.d(8195);
         if (var3 < 0) {
             throw new IOException();
         }
-        ((qf) this).field_L = new byte[var3][];
+        this.field_L = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
@@ -1094,7 +1018,7 @@ final class qf extends am {
             } while (var6_int >= 255);
             var6 = new byte[var5];
             var2.a(var5, 0, var6, -18181);
-            ((qf) this).field_L[var4] = var6;
+            this.field_L[var4] = var6;
         }
     }
 
@@ -1121,31 +1045,32 @@ final class qf extends am {
     }
 
     final jb c() {
-        byte[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        float[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        ((qf) this).field_E = 0;
-        ((qf) this).field_p = new float[field_m];
-        var1 = new byte[((qf) this).field_x];
+        int incrementValue$0 = 0;
+        byte[] var1;
+        int var2;
+        int var3;
+        float[] var4;
+        int var5;
+        int var6;
+        int var7;
+        this.field_E = 0;
+        this.field_p = new float[field_m];
+        var1 = new byte[this.field_x];
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((qf) this).field_L.length) {
-            ((qf) this).field_p = null;
-            return new jb(((qf) this).field_l, var1, ((qf) this).field_u, ((qf) this).field_B, ((qf) this).field_n);
+          if (var3 >= this.field_L.length) {
+            this.field_p = null;
+            return new jb(this.field_l, var1, this.field_u, this.field_B, this.field_n);
           } else {
             var4 = this.d(var3);
             if (var4 != null) {
               L1: {
                 var5 = var4.length;
-                if (var5 <= ((qf) this).field_x - var2) {
+                if (var5 <= this.field_x - var2) {
                   break L1;
                 } else {
-                  var5 = ((qf) this).field_x - var2;
+                  var5 = this.field_x - var2;
                   break L1;
                 }
               }
@@ -1157,13 +1082,13 @@ final class qf extends am {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
-                  int incrementValue$1 = var2;
+                  incrementValue$0 = var2;
                   var2++;
-                  var1[incrementValue$1] = (byte)(var7 - 128);
+                  var1[incrementValue$0] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -1180,10 +1105,6 @@ final class qf extends am {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = false;
     }
 }

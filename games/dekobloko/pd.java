@@ -28,54 +28,160 @@ final class pd {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var3 = client.field_A ? 1 : 0;
-        try {
-          L0: {
-            j.a((byte) -33, true, og.field_eb, bg.field_d, param0, ge.field_b, 0);
-            var2_int = 0;
-            L1: while (true) {
-              L2: {
-                L3: {
-                  if (og.field_eb <= var2_int) {
-                    break L3;
-                  } else {
-                    ch.field_a[var2_int + param0] = var2_int;
-                    var2_int++;
-                    if (var3 != 0) {
-                      break L2;
-                    } else {
-                      if (var3 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var3 = client.field_A ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    try {
+                        j.a((byte) -33, true, og.field_eb, bg.field_d, param0, ge.field_b, 0);
+                        var2_int = 0;
+                        statePc = 2;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 13;
+                        continue stateLoop;
                     }
-                  }
                 }
-                L4: {
-                  if (param1 == 6) {
-                    break L4;
-                  } else {
-                    field_e = (byte[][]) null;
-                    break L4;
-                  }
+                case 2: {
+                    try {
+                        if (og.field_eb <= var2_int) {
+                            statePc = 6;
+                        } else {
+                            statePc = 3;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
                 }
-                j.a((byte) -33, false, param0 + og.field_eb, rf.field_g, param0 - -param0, mf.field_Q, param0);
-                break L2;
-              }
-              if (og.field_eb > param0) {
-                og.field_eb = param0;
-                break L0;
-              } else {
-                return;
-              }
+                case 3: {
+                    try {
+                        ch.field_a[var2_int + param0] = var2_int;
+                        var2_int++;
+                        if (var3 != 0) {
+                            statePc = 9;
+                        } else {
+                            statePc = 4;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        if (var3 == 0) {
+                            statePc = 2;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        statePc = 6;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        if (param1 == 6) {
+                            statePc = 8;
+                        } else {
+                            statePc = 7;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        field_e = (byte[][]) null;
+                        statePc = 8;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        j.a((byte) -33, false, param0 + og.field_eb, rf.field_g, param0 - -param0, mf.field_Q, param0);
+                        statePc = 9;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 9: {
+                    try {
+                        if (og.field_eb > param0) {
+                            statePc = 11;
+                        } else {
+                            statePc = 10;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_9) {
+                        caughtException = stateCaught_9;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    try {
+                        return;
+                    } catch (Throwable stateCaught_10) {
+                        caughtException = stateCaught_10;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    try {
+                        og.field_eb = param0;
+                        statePc = 12;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_11) {
+                        caughtException = stateCaught_11;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 12: {
+                    return;
+                }
+                case 13: {
+                    var2 = (RuntimeException) ((Object) caughtException);
+                    throw dh.a((Throwable) ((Object) var2), "pd.A(" + param0 + ',' + param1 + ')');
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw dh.a((Throwable) ((Object) var2), "pd.A(" + param0 + ',' + param1 + ')');
         }
     }
 

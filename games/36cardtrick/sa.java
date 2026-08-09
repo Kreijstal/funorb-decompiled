@@ -15,22 +15,22 @@ final class sa {
     }
 
     final static void a(int param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int[] var6 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var5 = Main.field_T;
         try {
           L0: {
@@ -43,30 +43,30 @@ final class sa {
               if (var4 <= var3) {
                 break L0;
               } else {
-                incrementValue$40 = var3;
+                incrementValue$16 = var3;
                 var3++;
-                var6[incrementValue$40] = 0;
-                incrementValue$41 = var3;
+                var6[incrementValue$16] = 0;
+                incrementValue$17 = var3;
                 var3++;
-                var6[incrementValue$41] = 0;
-                incrementValue$42 = var3;
+                var6[incrementValue$17] = 0;
+                incrementValue$18 = var3;
                 var3++;
-                var6[incrementValue$42] = 0;
-                incrementValue$43 = var3;
+                var6[incrementValue$18] = 0;
+                incrementValue$19 = var3;
                 var3++;
-                var6[incrementValue$43] = 0;
-                incrementValue$44 = var3;
+                var6[incrementValue$19] = 0;
+                incrementValue$20 = var3;
                 var3++;
-                var6[incrementValue$44] = 0;
-                incrementValue$45 = var3;
+                var6[incrementValue$20] = 0;
+                incrementValue$21 = var3;
                 var3++;
-                var6[incrementValue$45] = 0;
-                incrementValue$46 = var3;
+                var6[incrementValue$21] = 0;
+                incrementValue$22 = var3;
                 var3++;
-                var6[incrementValue$46] = 0;
-                incrementValue$47 = var3;
+                var6[incrementValue$22] = 0;
+                incrementValue$23 = var3;
                 var3++;
-                var6[incrementValue$47] = 0;
+                var6[incrementValue$23] = 0;
                 continue L1;
               }
             }
@@ -80,14 +80,12 @@ final class sa {
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_14_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_15_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_13_0 = 0;
+        RuntimeException var3 = null;
         var4 = Main.field_T;
         try {
           L0: {
@@ -95,8 +93,7 @@ final class sa {
             L1: while (true) {
               if (1 >= param2) {
                 if (-2 == (param2 ^ -1)) {
-                  stackOut_9_0 = var3_int * param1;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_11_0 = var3_int * param1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -108,14 +105,13 @@ final class sa {
                       break L2;
                     }
                   }
-                  stackOut_13_0 = var3_int;
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_15_0 = var3_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
               } else {
                 L3: {
-                  if ((1 & param2) != 0) {
+                  if ((1 & param2 ^ -1) != -1) {
                     var3_int = var3_int * param1;
                     break L3;
                   } else {
@@ -134,9 +130,9 @@ final class sa {
           throw ma.a((Throwable) ((Object) var3), "sa.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_10_0;
+          return stackIn_11_0;
         } else {
-          return stackIn_14_0;
+          return stackIn_15_0;
         }
     }
 

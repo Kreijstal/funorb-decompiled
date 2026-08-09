@@ -43,23 +43,12 @@ final class jha extends kj {
     final static kv a(vr param0, byte param1, int param2, int param3) {
         RuntimeException var4 = null;
         kv stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kv stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (g.a(param2, param3, param1 ^ -30740, param0)) {
@@ -71,8 +60,7 @@ final class jha extends kj {
                   break L1;
                 }
               }
-              stackOut_5_0 = ws.a((byte) 98);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = ws.a((byte) 98);
               break L0;
             } else {
               return null;
@@ -82,27 +70,19 @@ final class jha extends kj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var4);
-            stackOut_7_1 = new StringBuilder().append("jha.A(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("jha.A(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -125,22 +105,22 @@ final class jha extends kj {
     }
 
     final boolean b(int param0) {
-        int fieldTemp$2 = 0;
-        int[][] var2 = null;
-        int var3 = 0;
-        int[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int[][] var7 = null;
-        int[][] var8 = null;
-        int[] var9 = null;
-        int[][] var10 = null;
-        int[] var11 = null;
+        int fieldTemp$1 = 0;
+        int[][] var2;
+        int var3;
+        int[] var4;
+        int var6;
+        int[][] var7;
+        int[][] var8;
+        int[] var9;
+        int[][] var10;
+        int[] var11;
+        int var5;
         var6 = BachelorFridge.field_y;
         if (param0 > 21) {
-          fieldTemp$2 = this.field_f - 1;
+          fieldTemp$1 = this.field_f - 1;
           this.field_f = this.field_f - 1;
-          if ((fieldTemp$2 ^ -1) >= -1) {
+          if ((fieldTemp$1 ^ -1) >= -1) {
             return true;
           } else {
             if (32 == this.field_f) {

@@ -12,8 +12,8 @@ final class pe {
     static String field_g;
 
     final static sa a(int param0, int param1, int param2, int param3, int param4) {
-        sa var5 = null;
-        int var6 = 0;
+        sa var5;
+        int var6;
         var6 = Bounce.field_N;
         var5 = (sa) ((Object) jl.field_f.a((byte) -50));
         L0: while (true) {
@@ -30,11 +30,11 @@ final class pe {
               return var5;
             }
           } else {
-            if (param4 == var5.field_n) {
-              return var5;
-            } else {
+            if ((param4 ^ -1) != (var5.field_n ^ -1)) {
               var5 = (sa) ((Object) jl.field_f.d((byte) -24));
               continue L0;
+            } else {
+              return var5;
             }
           }
         }

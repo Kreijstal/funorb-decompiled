@@ -17,13 +17,13 @@ final class nf extends li {
 
     final static void a(boolean param0) {
         try {
+            Throwable decompiledCaughtException = null;
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
             Long var3 = null;
             Object[] var4 = null;
-            Throwable decompiledCaughtException = null;
             try {
               L0: {
                 var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
@@ -37,15 +37,15 @@ final class nf extends li {
               if (var1 != null) {
                 try {
                   L1: {
-                    var2_ref = Runtime.getRuntime();
+                    var2 = Runtime.getRuntime();
                     var4 = (Object[]) null;
-                    var3 = (Long) (var1.invoke((Object) (var2_ref), (Object[]) null));
+                    var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
                     ci.field_a = 1 + (int)(var3.longValue() / 1048576L);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  var2 = decompiledCaughtException;
+                  var2_ref = decompiledCaughtException;
                   return;
                 }
                 return;
@@ -134,25 +134,15 @@ final class nf extends li {
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         param1 = param1 & 8191;
         if (param0 == -28) {
           if (param1 >= 4096) {
             L0: {
               if (-6145 >= (param1 ^ -1)) {
-                stackOut_18_0 = -jc.field_b[-param1 + 8192];
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = -jc.field_b[-param1 + 8192];
                 break L0;
               } else {
-                stackOut_17_0 = -jc.field_b[param1 - 4096];
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = -jc.field_b[param1 - 4096];
                 break L0;
               }
             }
@@ -160,12 +150,10 @@ final class nf extends li {
           } else {
             L1: {
               if (param1 < 2048) {
-                stackOut_14_0 = jc.field_b[param1];
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = jc.field_b[param1];
                 break L1;
               } else {
-                stackOut_13_0 = jc.field_b[-param1 + 4096];
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = jc.field_b[-param1 + 4096];
                 break L1;
               }
             }
@@ -176,12 +164,10 @@ final class nf extends li {
           if (param1 >= 4096) {
             L2: {
               if (-6145 >= (param1 ^ -1)) {
-                stackOut_8_0 = -jc.field_b[-param1 + 8192];
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = -jc.field_b[-param1 + 8192];
                 break L2;
               } else {
-                stackOut_7_0 = -jc.field_b[param1 - 4096];
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = -jc.field_b[param1 - 4096];
                 break L2;
               }
             }
@@ -189,12 +175,10 @@ final class nf extends li {
           } else {
             L3: {
               if (param1 < 2048) {
-                stackOut_4_0 = jc.field_b[param1];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = jc.field_b[param1];
                 break L3;
               } else {
-                stackOut_3_0 = jc.field_b[-param1 + 4096];
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = jc.field_b[-param1 + 4096];
                 break L3;
               }
             }

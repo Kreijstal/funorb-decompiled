@@ -6,23 +6,20 @@ final class ghb extends ksa {
 
     final static fg c(byte param0) {
         try {
-            fg discarded$2 = null;
             Throwable var1 = null;
             fg stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            fg stackOut_2_0 = null;
             try {
               L0: {
                 L1: {
                   if (param0 == -127) {
                     break L1;
                   } else {
-                    discarded$2 = ghb.c((byte) 73);
+                    ghb.c((byte) 73);
                     break L1;
                   }
                 }
-                stackOut_2_0 = (fg) (Class.forName("an").newInstance());
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (fg) (Class.forName("an").newInstance());
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

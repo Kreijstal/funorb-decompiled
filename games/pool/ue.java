@@ -9,30 +9,15 @@ final class ue {
     static int field_e;
 
     final static void a(byte param0, String param1) {
-        boolean discarded$1 = false;
-        RuntimeException var2 = null;
-        int var2_int = 0;
         int stackIn_18_0 = 0;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
         String stackIn_42_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_11_0 = 0;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -40,7 +25,7 @@ final class ue {
               if (param0 == 70) {
                 break L1;
               } else {
-                discarded$1 = ue.a((byte) 11);
+                ue.a((byte) 11);
                 break L1;
               }
             }
@@ -77,22 +62,18 @@ final class ue {
                 if (!nn.field_d) {
                   if (wp.field_c <= jo.field_J) {
                     if (jo.field_J < ji.field_d + wp.field_c) {
-                      stackOut_16_0 = 1;
-                      stackIn_18_0 = stackOut_16_0;
+                      stackIn_18_0 = 1;
                       break L5;
                     } else {
-                      stackOut_15_0 = 0;
-                      stackIn_18_0 = stackOut_15_0;
+                      stackIn_18_0 = 0;
                       break L5;
                     }
                   } else {
-                    stackOut_13_0 = 0;
-                    stackIn_18_0 = stackOut_13_0;
+                    stackIn_18_0 = 0;
                     break L5;
                   }
                 } else {
-                  stackOut_11_0 = 0;
-                  stackIn_18_0 = stackOut_11_0;
+                  stackIn_18_0 = 0;
                   break L5;
                 }
               }
@@ -175,27 +156,19 @@ final class ue {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var2 = decompiledCaughtException;
-            stackOut_39_0 = (RuntimeException) (var2);
-            stackOut_39_1 = new StringBuilder().append("ue.D(").append(param0).append(',');
-            stackIn_41_0 = stackOut_39_0;
-            stackIn_41_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            stackIn_41_0 = (RuntimeException) (var2);
+
+            stackIn_41_1 = new StringBuilder().append("ue.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "null";
               break L11;
             } else {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "{...}";
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_42_1 = stackOut_40_1;
-              stackIn_42_2 = stackOut_40_2;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "{...}";
               break L11;
             }
           }
@@ -217,8 +190,6 @@ final class ue {
 
     final static boolean a(int param0) {
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 11) {
           return false;
         } else {
@@ -226,12 +197,10 @@ final class ue {
             bi.field_f = true;
             ia.field_k = rl.a((byte) -110) - -15000L;
             if (11 != fk.field_ab) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L0;
             }
           }

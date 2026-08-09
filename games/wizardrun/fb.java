@@ -20,8 +20,6 @@ final class fb {
 
     final static String a(java.applet.Applet param0, byte param1) {
         try {
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -31,8 +29,6 @@ final class fb {
             String var9 = null;
             String stackIn_9_0 = null;
             String stackIn_16_0 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
             RuntimeException stackIn_20_0 = null;
@@ -41,16 +37,8 @@ final class fb {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            String stackOut_8_0 = null;
-            String stackOut_15_0 = null;
-            RuntimeException stackOut_17_0 = null;
-            StringBuilder stackOut_17_1 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            String stackOut_18_2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
             var8 = wizardrun.field_H;
             try {
               L0: {
@@ -80,8 +68,7 @@ final class fb {
                             break L4;
                           } else {
                             if (var5[var6].substring(0, var7).trim().equals(var3)) {
-                              stackOut_8_0 = var5[var6].substring(1 + var7).trim();
-                              stackIn_9_0 = stackOut_8_0;
+                              stackIn_9_0 = var5[var6].substring(1 + var7).trim();
                               decompiledRegionSelector0 = 1;
                               break L1;
                             } else {
@@ -104,8 +91,7 @@ final class fb {
                 }
                 if (decompiledRegionSelector0 == 0) {
                   if (pa.field_f != null) {
-                    stackOut_15_0 = pa.field_f;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = pa.field_f;
                     decompiledRegionSelector1 = 0;
                     break L0;
                   } else {
@@ -120,27 +106,19 @@ final class fb {
               decompiledCaughtException = decompiledCaughtParameter1;
               L6: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_17_0 = (RuntimeException) (var2_ref);
-                stackOut_17_1 = new StringBuilder().append("fb.A(");
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
+                stackIn_19_0 = (RuntimeException) (var2_ref);
+
+                stackIn_19_1 = new StringBuilder().append("fb.A(");
+
                 if (param0 == null) {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "null";
-                  stackIn_20_0 = stackOut_19_0;
-                  stackIn_20_1 = stackOut_19_1;
-                  stackIn_20_2 = stackOut_19_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "null";
                   break L6;
                 } else {
-                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackOut_18_2 = "{...}";
-                  stackIn_20_0 = stackOut_18_0;
-                  stackIn_20_1 = stackOut_18_1;
-                  stackIn_20_2 = stackOut_18_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "{...}";
                   break L6;
                 }
               }

@@ -8,7 +8,7 @@ class vo {
     private le field_c;
 
     final le b(byte param0) {
-        le var2 = null;
+        le var2;
         var2 = this.field_b.field_b;
         if (this.field_b != var2) {
           if (param0 != 26) {
@@ -41,7 +41,7 @@ class vo {
     }
 
     final le a(boolean param0) {
-        le var2 = null;
+        le var2;
         if (!param0) {
           var2 = this.field_c;
           if (var2 == this.field_b) {
@@ -65,15 +65,14 @@ class vo {
     }
 
     final le c(int param0) {
-        le discarded$2 = null;
-        le var2 = null;
+        le var2;
         var2 = this.field_c;
         if (this.field_b == var2) {
           this.field_c = null;
           return null;
         } else {
           if (param0 != 26853) {
-            discarded$2 = this.b((byte) -101);
+            this.b((byte) -101);
             this.field_c = var2.field_d;
             return var2;
           } else {
@@ -84,8 +83,7 @@ class vo {
     }
 
     final le f(int param0) {
-        le discarded$2 = null;
-        le var2 = null;
+        le var2;
         if (param0 > 9) {
           var2 = this.field_b.field_b;
           if (this.field_b == var2) {
@@ -95,7 +93,7 @@ class vo {
             return var2;
           }
         } else {
-          discarded$2 = this.a(-117);
+          this.a(-117);
           var2 = this.field_b.field_b;
           if (this.field_b == var2) {
             return null;
@@ -107,9 +105,9 @@ class vo {
     }
 
     final int d(int param0) {
-        int var2 = 0;
-        le var3 = null;
-        int var4 = 0;
+        int var2;
+        le var3;
+        int var4;
         var4 = ZombieDawn.field_J;
         var2 = 0;
         var3 = this.field_b.field_b;
@@ -167,8 +165,7 @@ class vo {
     }
 
     final le a(int param0) {
-        boolean discarded$2 = false;
-        le var2 = null;
+        le var2;
         if (param0 == 0) {
           var2 = this.field_b.field_d;
           if (var2 == this.field_b) {
@@ -178,7 +175,7 @@ class vo {
             return var2;
           }
         } else {
-          discarded$2 = this.a((byte) 96);
+          this.a((byte) 96);
           var2 = this.field_b.field_d;
           if (var2 == this.field_b) {
             return null;
@@ -204,13 +201,12 @@ class vo {
     }
 
     final le e(int param0) {
-        le discarded$2 = null;
-        le var2 = null;
+        le var2;
         var2 = this.field_b.field_d;
         if (var2 != this.field_b) {
           this.field_c = var2.field_d;
           if (param0 != 0) {
-            discarded$2 = this.a(false);
+            this.a(false);
             return var2;
           } else {
             return var2;

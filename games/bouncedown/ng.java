@@ -31,8 +31,6 @@ abstract class ng {
 
     final static boolean a(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 > 108) {
             break L0;
@@ -49,14 +47,12 @@ abstract class ng {
               if (!vd.field_b.b((byte) 121)) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
@@ -65,7 +61,6 @@ abstract class ng {
     abstract sb b(byte param0);
 
     final static void a(int param0, int param1, int param2) {
-        tg[] discarded$1 = null;
         L0: {
           L1: {
             if (null == bl.field_e) {
@@ -115,7 +110,7 @@ abstract class ng {
           if (param0 == -15936) {
             break L6;
           } else {
-            discarded$1 = ng.a((byte) -73);
+            ng.a((byte) -73);
             break L6;
           }
         }
@@ -212,35 +207,28 @@ abstract class ng {
 
     final static boolean a(byte param0, char param1) {
         char[] var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_26_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_27_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_15_0 = 0;
+        RuntimeException var2_ref = null;
         var5 = Bounce.field_N;
         try {
           L0: {
             if (Character.isISOControl(param1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (md.a(106, param1)) {
-                stackOut_7_0 = 1;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -261,15 +249,13 @@ abstract class ng {
                     var3 = 0;
                     L3: while (true) {
                       if (var2.length <= var3) {
-                        stackOut_25_0 = 0;
-                        stackIn_26_0 = stackOut_25_0;
+                        stackIn_27_0 = 0;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
                         var4 = var2[var3];
                         if (param1 == var4) {
-                          stackOut_22_0 = 1;
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_24_0 = 1;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
@@ -281,8 +267,7 @@ abstract class ng {
                   } else {
                     var4 = var6[var3];
                     if (param1 == var4) {
-                      stackOut_15_0 = 1;
-                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_17_0 = 1;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -306,12 +291,12 @@ abstract class ng {
             return stackIn_8_0 != 0;
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return stackIn_16_0 != 0;
+              return stackIn_17_0 != 0;
             } else {
               if (decompiledRegionSelector0 == 3) {
-                return stackIn_23_0 != 0;
+                return stackIn_24_0 != 0;
               } else {
-                return stackIn_26_0 != 0;
+                return stackIn_27_0 != 0;
               }
             }
           }

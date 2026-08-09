@@ -59,8 +59,17 @@ final class ho {
     }
 
     final static void a(int param0, boolean param1) {
-        RuntimeException var2 = null;
+        cr dupTemp$0 = null;
+        int stackIn_4_0 = 0;
+        cr stackIn_6_0 = null;
+        int stackIn_6_1 = 0;
+        cr stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
+        int stackIn_7_2 = 0;
+        int stackIn_46_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -69,39 +78,14 @@ final class ho {
         int var7_int = 0;
         int var8 = 0;
         cr var8_ref_cr = null;
-        int var9_int = 0;
         nk var9 = null;
+        int var9_int = 0;
         int var10 = 0;
         nk var10_ref_nk = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         cr var14 = null;
-        int stackIn_4_0 = 0;
-        cr stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        cr stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        cr stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        int stackIn_7_2 = 0;
-        int stackIn_46_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        cr stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        cr stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
-        cr stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_37_0 = 0;
         var13 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -109,12 +93,10 @@ final class ho {
               om.field_D = bi.field_j;
               qg.field_G = bi.field_e;
               if (param1) {
-                stackOut_3_0 = ko.field_P;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = ko.field_P;
                 break L1;
               } else {
-                stackOut_2_0 = mp.field_b;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = mp.field_b;
                 break L1;
               }
             }
@@ -122,27 +104,19 @@ final class ho {
               hq.b(stackIn_4_0, -127);
               el.field_e.a(0, 14017, hk.field_o.field_Fb, 0, -2 + (-40 + hk.field_o.field_db));
               nb.field_D.a(param0 ^ 108, de.field_g.field_Fb, r.field_f, 0, 0);
-              stackOut_4_0 = uc.field_a;
-              stackOut_4_1 = param0 + 83;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
+              stackIn_6_0 = uc.field_a;
+
+              stackIn_6_1 = param0 + 83;
+
               if (db.field_S) {
-                stackOut_6_0 = (cr) ((Object) stackIn_6_0);
-                stackOut_6_1 = stackIn_6_1;
-                stackOut_6_2 = 40 + re.field_k + 4;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
-                stackIn_7_2 = stackOut_6_2;
+                stackIn_7_0 = (cr) ((Object) stackIn_6_0);
+                stackIn_7_1 = stackIn_6_1;
+                stackIn_7_2 = 40 + re.field_k + 4;
                 break L2;
               } else {
-                stackOut_5_0 = (cr) ((Object) stackIn_5_0);
-                stackOut_5_1 = stackIn_5_1;
-                stackOut_5_2 = 0;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
-                stackIn_7_2 = stackOut_5_2;
+                stackIn_7_0 = (cr) ((Object) stackIn_6_0);
+                stackIn_7_1 = stackIn_6_1;
+                stackIn_7_2 = 0;
                 break L2;
               }
             }
@@ -229,8 +203,9 @@ final class ho {
                       break L11;
                     } else {
                       if (-4 == (var6 ^ -1)) {
-                        var14 = el.field_h[var6];
-                        var7 = el.field_h[var6];
+                        dupTemp$0 = el.field_h[var6];
+                        var14 = dupTemp$0;
+                        var7 = dupTemp$0;
                         el.field_h[var6].field_db = 0;
                         var14.field_Fb = 0;
                         var8 = 0;
@@ -292,27 +267,22 @@ final class ho {
                       if ((var6 ^ -1) <= -5) {
                         if (null != kf.field_d) {
                           if (kf.field_d[-4 + var6]) {
-                            stackOut_44_0 = 1;
-                            stackIn_46_0 = stackOut_44_0;
+                            stackIn_46_0 = 1;
                             break L16;
                           } else {
-                            stackOut_43_0 = 0;
-                            stackIn_46_0 = stackOut_43_0;
+                            stackIn_46_0 = 0;
                             break L16;
                           }
                         } else {
-                          stackOut_41_0 = 0;
-                          stackIn_46_0 = stackOut_41_0;
+                          stackIn_46_0 = 0;
                           break L16;
                         }
                       } else {
-                        stackOut_39_0 = 0;
-                        stackIn_46_0 = stackOut_39_0;
+                        stackIn_46_0 = 0;
                         break L16;
                       }
                     } else {
-                      stackOut_37_0 = 0;
-                      stackIn_46_0 = stackOut_37_0;
+                      stackIn_46_0 = 0;
                       break L16;
                     }
                   }

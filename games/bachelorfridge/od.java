@@ -49,14 +49,13 @@ final class od extends ana {
 
     final static void a(long param0, String param1, boolean param2) {
         CharSequence var5 = null;
-        boolean discarded$0 = false;
         try {
             gk.field_d = 2;
             bd.field_k = param1;
             var5 = (CharSequence) ((Object) param1);
             df.field_s = fq.a(0, var5);
             if (param2) {
-                discarded$0 = od.e((byte) 9);
+                od.e((byte) 9);
             }
             eaa.field_a = param0;
             lna.field_q = true;
@@ -77,8 +76,8 @@ final class od extends ana {
     }
 
     final static void a(long param0, int param1, int param2) {
-        pf var4 = null;
-        int var5 = 0;
+        pf var4;
+        int var5;
         var4 = sja.field_fb;
         if (param2 != 2) {
           return;
@@ -103,23 +102,12 @@ final class od extends ana {
         RuntimeException var2 = null;
         String var3 = null;
         byte[] stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -131,35 +119,26 @@ final class od extends ana {
                 break L1;
               }
             }
-            stackOut_2_0 = ko.field_g.a((byte) 123, param0, "");
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = ko.field_g.a((byte) 123, param0, "");
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("od.B(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("od.B(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -170,8 +149,8 @@ final class od extends ana {
 
     final boolean c(byte param0) {
         int fieldTemp$1 = 0;
-        int var2_int = 0;
-        tka var2 = null;
+        int var2_int;
+        tka var2;
         if (!this.field_x) {
           if (!this.field_m.a((byte) -106)) {
             fieldTemp$1 = this.field_l - 1;

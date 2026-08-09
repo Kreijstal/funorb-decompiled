@@ -19,10 +19,9 @@ final class pe extends nm {
     boolean field_v;
 
     public static void a(int param0) {
-        int discarded$2 = 0;
         field_l = null;
         if (param0 != 112) {
-          discarded$2 = pe.a((byte) 91);
+          pe.a((byte) 91);
           field_p = null;
           field_o = null;
           field_k = null;

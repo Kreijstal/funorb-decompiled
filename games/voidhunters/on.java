@@ -8,7 +8,7 @@ final class on extends mab {
 
     final void a(java.awt.Graphics param0, int param1, byte param2, int param3) {
         int var5 = -11 / ((param2 - -6) / 41);
-        boolean discarded$0 = param0.drawImage(this.field_g, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_i));
+        param0.drawImage(this.field_g, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_i));
     }
 
     final void a(int param0, int param1, java.awt.Component param2, byte param3) {

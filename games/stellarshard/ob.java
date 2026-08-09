@@ -17,16 +17,16 @@ final class ob {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var12 = stellarshard.field_B;
         try {
           L0: {
@@ -95,7 +95,7 @@ final class ob {
                           continue L7;
                         } else {
                           var8 = ti.field_a[var6_int];
-                          if (param2 < (255 & var8 >> -980601784)) {
+                          if ((param2 ^ -1) > (255 & var8 >> -980601784 ^ -1)) {
                             L9: {
                               if ((var8 >> -635973080 & 255) >= (var8 & 16711680) >> -311196592) {
                                 L10: {

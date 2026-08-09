@@ -33,7 +33,7 @@ abstract class vb {
     abstract void c(int param0);
 
     final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         var4 = 0;
         if (!param2) {
           L0: {
@@ -104,44 +104,27 @@ abstract class vb {
     }
 
     final db a(boolean param0, int param1, int param2, byte param3, int param4) {
-        long var6 = 0L;
-        db var8 = null;
-        db stackIn_2_0 = null;
         db stackIn_3_0 = null;
         db stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        db stackIn_14_0 = null;
         db stackIn_15_0 = null;
         db stackIn_16_0 = null;
         int stackIn_16_1 = 0;
-        db stackOut_13_0 = null;
-        db stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        db stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        db stackOut_1_0 = null;
-        db stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        db stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
+        long var6;
+        db var8;
         if (param4 > 30) {
           L0: {
             var6 = ((long)param1 << 200776032) - -(long)param2;
             var8 = new db();
-            stackOut_13_0 = (db) (var8);
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_14_0 = stackOut_13_0;
+            stackIn_15_0 = (db) (var8);
+
             if (!param0) {
-              stackOut_15_0 = (db) ((Object) stackIn_15_0);
-              stackOut_15_1 = 0;
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_0 = (db) ((Object) stackIn_15_0);
+              stackIn_16_1 = 0;
               break L0;
             } else {
-              stackOut_14_0 = (db) ((Object) stackIn_14_0);
-              stackOut_14_1 = 1;
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_0 = (db) ((Object) stackIn_15_0);
+              stackIn_16_1 = 1;
               break L0;
             }
           }
@@ -168,20 +151,15 @@ abstract class vb {
             field_r = -38;
             var6 = ((long)param1 << 200776032) - -(long)param2;
             var8 = new db();
-            stackOut_1_0 = (db) (var8);
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_3_0 = (db) (var8);
+
             if (!param0) {
-              stackOut_3_0 = (db) ((Object) stackIn_3_0);
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_0 = (db) ((Object) stackIn_3_0);
+              stackIn_4_1 = 0;
               break L1;
             } else {
-              stackOut_2_0 = (db) ((Object) stackIn_2_0);
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_0 = (db) ((Object) stackIn_3_0);
+              stackIn_4_1 = 1;
               break L1;
             }
           }
@@ -218,23 +196,16 @@ abstract class vb {
     abstract void a(int param0);
 
     final boolean b(byte param0) {
-        boolean discarded$10 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 100) {
           L0: {
-            discarded$10 = this.b(41);
+            this.b(41);
             if (-21 < (this.a((byte) 116) ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -242,12 +213,10 @@ abstract class vb {
         } else {
           L1: {
             if (-21 < (this.a((byte) 116) ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -256,8 +225,8 @@ abstract class vb {
     }
 
     final static String a(int param0, byte param1, int param2) {
-        String var3 = null;
-        String[] var4 = null;
+        String var3;
+        String[] var4;
         L0: {
           if (null != aa.field_h[param0][param2]) {
             var3 = aa.field_h[param0][param2];

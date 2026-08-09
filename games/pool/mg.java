@@ -8,16 +8,15 @@ final class mg {
     static vh field_c;
 
     final static im a(int param0, long param1) {
-        boolean discarded$0 = false;
         if (param0 != 0) {
-            discarded$0 = mg.a(-80);
+            mg.a(-80);
             return (im) ((Object) ln.field_n.a(param1, false));
         }
         return (im) ((Object) ln.field_n.a(param1, false));
     }
 
     final static boolean a(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = -30 / ((-4 - param0) / 49);
         if (jd.field_c != null) {
           if (ta.field_a != tl.field_J) {
@@ -31,29 +30,24 @@ final class mg {
     }
 
     public static void a(byte param0) {
-        boolean discarded$0 = false;
         field_a = null;
         field_c = null;
         field_b = null;
         if (param0 >= -40) {
-            discarded$0 = mg.a(true);
+            mg.a(true);
         }
     }
 
     final static boolean a(boolean param0) {
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
         if (param0) {
           L0: {
             if (hk.b(-18)) {
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = 1;
               break L0;
             } else {
               if (0 < mp.field_V) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L0;
               } else {
                 return true;

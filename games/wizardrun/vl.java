@@ -29,42 +29,27 @@ final class vl implements bf {
     }
 
     public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        ef var11 = null;
         ub stackIn_3_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ub stackOut_2_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        ef var11 = null;
         try {
           L0: {
             L1: {
               if (param2 instanceof ef) {
-                stackOut_2_0 = (ub) (param2);
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (ub) (param2);
                 break L1;
               } else {
-                stackOut_1_0 = null;
-                stackIn_3_0 = (ub) ((Object) stackOut_1_0);
+                stackIn_3_0 = null;
                 break L1;
               }
             }
@@ -110,7 +95,7 @@ final class vl implements bf {
             }
             if (null != this.field_j) {
               var10 = this.field_i + this.field_l + this.field_m;
-              discarded$1 = this.field_j.a(param2.field_k, param2.field_o + param0 - -var10, this.field_o + param1 + param2.field_l, -this.field_i - (var10 - param2.field_r), param2.field_n - (this.field_i << -898435263), this.field_r, this.field_e, this.field_k, this.field_q, 0);
+              this.field_j.a(param2.field_k, param2.field_o + param0 - -var10, this.field_o + param1 + param2.field_l, -this.field_i - (var10 - param2.field_r), param2.field_n - (this.field_i << -898435263), this.field_r, this.field_e, this.field_k, this.field_q, 0);
               break L0;
             } else {
               return;
@@ -120,27 +105,19 @@ final class vl implements bf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var6);
-            stackOut_17_1 = new StringBuilder().append("vl.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var6);
+
+            stackIn_19_1 = new StringBuilder().append("vl.B(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L6;
             }
           }
@@ -166,7 +143,6 @@ final class vl implements bf {
     }
 
     final static boolean a(char param0, int param1) {
-        String discarded$5 = null;
         if (param1 == -5717) {
           if (param0 >= 48) {
             if (param0 > 57) {
@@ -178,7 +154,7 @@ final class vl implements bf {
             return false;
           }
         } else {
-          discarded$5 = vl.a(-107);
+          vl.a(-107);
           if (param0 >= 48) {
             if (param0 > 57) {
               return false;

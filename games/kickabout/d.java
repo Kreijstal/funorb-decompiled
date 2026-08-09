@@ -36,7 +36,6 @@ final class d {
     }
 
     final static int a(boolean param0, int param1) {
-        int discarded$6 = 0;
         L0: {
           if (-1 >= (param1 ^ -1)) {
             param1 = Math.max(param1 - 91750, 0);
@@ -48,7 +47,7 @@ final class d {
         }
         if (!param0) {
           L1: {
-            discarded$6 = d.a(true, -93);
+            d.a(true, -93);
             if (Math.abs(param1) >= 58982) {
               break L1;
             } else {

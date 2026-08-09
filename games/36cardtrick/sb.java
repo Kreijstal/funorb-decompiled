@@ -6,9 +6,8 @@ final class sb {
     static String[] field_b;
 
     public static void a(boolean param0) {
-        String discarded$0 = null;
         if (param0) {
-            discarded$0 = sb.a(-48);
+            sb.a(-48);
             field_b = null;
             return;
         }
@@ -16,8 +15,8 @@ final class sb {
     }
 
     final static String a(String param0, String param1, String param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = Main.field_T;
         if (param3 >= 82) {
           var4 = param0.indexOf(param1);

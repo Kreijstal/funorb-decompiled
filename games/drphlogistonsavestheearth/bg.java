@@ -25,11 +25,7 @@ final class bg extends gi {
     }
 
     final static void d(int param0) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        RuntimeException var1 = null;
-        nh var1_ref = null;
+        nh var1 = null;
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -50,9 +46,6 @@ final class bg extends gi {
         int[] var29 = null;
         int[] var30 = null;
         int[] var31 = null;
-        int stackIn_50_0 = 0;
-        int stackIn_50_1 = 0;
-        int stackIn_50_2 = 0;
         int stackIn_51_0 = 0;
         int stackIn_51_1 = 0;
         int stackIn_51_2 = 0;
@@ -65,21 +58,7 @@ final class bg extends gi {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_49_0 = 0;
-        int stackOut_49_1 = 0;
-        int stackOut_49_2 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_51_1 = 0;
-        int stackOut_51_2 = 0;
-        int stackOut_51_3 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_50_1 = 0;
-        int stackOut_50_2 = 0;
-        int stackOut_50_3 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_66_0 = 0;
-        int stackOut_65_0 = 0;
+        RuntimeException var1_ref = null;
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -150,7 +129,7 @@ final class bg extends gi {
                               break L1;
                             } else {
                               bh.field_c[var7].c();
-                              discarded$3 = sc.field_f.a(bc.field_b[var7], 3, 3, -6 + bh.field_c[var7].field_y, bh.field_c[var7].field_w - 6, rh.field_e, -1, 1, 1, sc.field_f.field_x + sc.field_f.field_S);
+                              sc.field_f.a(bc.field_b[var7], 3, 3, -6 + bh.field_c[var7].field_y, bh.field_c[var7].field_w - 6, rh.field_e, -1, 1, 1, sc.field_f.field_x + sc.field_f.field_S);
                               p.a(bh.field_c[var7].field_y, 3, 0, bh.field_c[var7].field_w, 1, 0, 0, bh.field_c[var7]);
                               var7++;
                               continue L2;
@@ -243,7 +222,7 @@ final class bg extends gi {
                     hf.field_z.b();
                     var9 = new nh(hf.field_z.field_z, hf.field_z.field_C);
                     var9.c();
-                    discarded$4 = md.field_a.a(var14, fe.field_a, ph.field_e, ca.field_db, af.field_d, 16777215, -1, 1, 1, md.field_a.field_x + md.field_a.field_S);
+                    md.field_a.a(var14, fe.field_a, ph.field_e, ca.field_db, af.field_d, 16777215, -1, 1, 1, md.field_a.field_x + md.field_a.field_S);
                     p.a(var9.field_z, 3, 0, var9.field_C, 1, 0, 0, var9);
                     hf.field_z.c();
                     var9.d(0, 0);
@@ -279,7 +258,7 @@ final class bg extends gi {
                     var17 = a.a(5044, jl.field_i, new String[]{df.field_b});
                     df.field_b = null;
                     var16.c();
-                    discarded$5 = sc.field_f.a(var17, 3, 3, -6 + var16.field_y, var16.field_w - 6, 16777215, -1, 0, 1, sc.field_f.field_S + sc.field_f.field_x);
+                    sc.field_f.a(var17, 3, 3, -6 + var16.field_y, var16.field_w - 6, 16777215, -1, 0, 1, sc.field_f.field_S + sc.field_f.field_x);
                     p.a(var16.field_y, 3, 0, var16.field_w, 1, 0, 0, var16);
                     hf.field_D.c();
                     var16.d(-hf.field_D.field_D + 199, -hf.field_D.field_v + 83);
@@ -353,44 +332,33 @@ final class bg extends gi {
                   if (null != uh.field_r) {
                     L15: {
                       r.field_b.d(231, 390);
-                      var1_ref = eg.field_d;
+                      var1 = eg.field_d;
                       if (lb.field_w.field_f != 0) {
                         break L15;
                       } else {
-                        var1_ref = ul.field_c;
+                        var1 = ul.field_c;
                         break L15;
                       }
                     }
                     L16: {
-                      var1_ref.d(0, 0);
-                      stackOut_49_0 = 40;
-                      stackOut_49_1 = 0;
-                      stackOut_49_2 = k.field_L;
-                      stackIn_51_0 = stackOut_49_0;
-                      stackIn_51_1 = stackOut_49_1;
-                      stackIn_51_2 = stackOut_49_2;
-                      stackIn_50_0 = stackOut_49_0;
-                      stackIn_50_1 = stackOut_49_1;
-                      stackIn_50_2 = stackOut_49_2;
+                      var1.d(0, 0);
+                      stackIn_51_0 = 40;
+
+                      stackIn_51_1 = 0;
+
+                      stackIn_51_2 = k.field_L;
+
                       if (lb.field_w.field_f == 0) {
-                        stackOut_51_0 = stackIn_51_0;
-                        stackOut_51_1 = stackIn_51_1;
-                        stackOut_51_2 = stackIn_51_2;
-                        stackOut_51_3 = 4;
-                        stackIn_52_0 = stackOut_51_0;
-                        stackIn_52_1 = stackOut_51_1;
-                        stackIn_52_2 = stackOut_51_2;
-                        stackIn_52_3 = stackOut_51_3;
+                        stackIn_52_0 = stackIn_51_0;
+                        stackIn_52_1 = stackIn_51_1;
+                        stackIn_52_2 = stackIn_51_2;
+                        stackIn_52_3 = 4;
                         break L16;
                       } else {
-                        stackOut_50_0 = stackIn_50_0;
-                        stackOut_50_1 = stackIn_50_1;
-                        stackOut_50_2 = stackIn_50_2;
-                        stackOut_50_3 = 3;
-                        stackIn_52_0 = stackOut_50_0;
-                        stackIn_52_1 = stackOut_50_1;
-                        stackIn_52_2 = stackOut_50_2;
-                        stackIn_52_3 = stackOut_50_3;
+                        stackIn_52_0 = stackIn_51_0;
+                        stackIn_52_1 = stackIn_51_1;
+                        stackIn_52_2 = stackIn_51_2;
+                        stackIn_52_3 = 3;
                         break L16;
                       }
                     }
@@ -401,10 +369,10 @@ final class bg extends gi {
                         r.field_b.a(232, 389, var2);
                         r.field_b.a(232, 391, var2);
                         r.field_b.a(230, 391, var2);
-                        var1_ref.a(1, 1, var2);
-                        var1_ref.a(-1, 1, var2);
-                        var1_ref.a(1, -1, var2);
-                        var1_ref.a(-1, -1, var2);
+                        var1.a(1, 1, var2);
+                        var1.a(-1, 1, var2);
+                        var1.a(1, -1, var2);
+                        var1.a(-1, -1, var2);
                         break L17;
                       } else {
                         break L17;
@@ -412,12 +380,10 @@ final class bg extends gi {
                     }
                     L18: {
                       if (-1 != (lb.field_w.field_f ^ -1)) {
-                        stackOut_57_0 = 0;
-                        stackIn_58_0 = stackOut_57_0;
+                        stackIn_58_0 = 0;
                         break L18;
                       } else {
-                        stackOut_56_0 = 1;
-                        stackIn_58_0 = stackOut_56_0;
+                        stackIn_58_0 = 1;
                         break L18;
                       }
                     }
@@ -447,12 +413,10 @@ final class bg extends gi {
                     }
                     L21: {
                       if (1 != lb.field_w.field_f) {
-                        stackOut_66_0 = 0;
-                        stackIn_67_0 = stackOut_66_0;
+                        stackIn_67_0 = 0;
                         break L21;
                       } else {
-                        stackOut_65_0 = 1;
-                        stackIn_67_0 = stackOut_65_0;
+                        stackIn_67_0 = 1;
                         break L21;
                       }
                     }
@@ -527,8 +491,8 @@ final class bg extends gi {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "bg.D(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw ie.a((Throwable) ((Object) var1_ref), "bg.D(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -553,7 +517,7 @@ final class bg extends gi {
         }
         vb var5 = (vb) ((Object) je.field_i.h(-11151));
         while (var5 != null) {
-            if (param1 == var5.field_i) {
+            if ((param1 ^ -1) == (var5.field_i ^ -1)) {
                 return var5;
             }
             var5 = (vb) ((Object) je.field_i.e(0));

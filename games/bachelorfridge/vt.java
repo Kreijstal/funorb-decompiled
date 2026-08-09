@@ -9,16 +9,43 @@ final class vt extends tia {
     private kv[] field_i;
 
     final static void a(sga param0, int param1, int param2, boolean param3, int param4) {
-        RuntimeException var5 = null;
+        sga stackIn_37_0;
+        int stackIn_37_1;
+        int stackIn_37_2;
+        int stackIn_37_3;
+        sga stackIn_38_0 = null;
+        int stackIn_38_1 = 0;
+        int stackIn_38_2 = 0;
+        int stackIn_38_3 = 0;
+        int stackIn_38_4 = 0;
+        int stackIn_41_0 = 0;
+        int stackIn_54_0 = 0;
+        sna stackIn_92_0;
+        int stackIn_92_1;
+        int stackIn_92_2;
+        int stackIn_92_3;
+        sna stackIn_93_0 = null;
+        int stackIn_93_1 = 0;
+        int stackIn_93_2 = 0;
+        int stackIn_93_3 = 0;
+        int stackIn_93_4 = 0;
+        RuntimeException stackIn_213_0 = null;
+        StringBuilder stackIn_213_1 = null;
+        RuntimeException stackIn_214_0 = null;
+        StringBuilder stackIn_214_1 = null;
+        String stackIn_214_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
         eaa var10 = null;
-        Object var11 = null;
         int var11_int = 0;
+        Object var11 = null;
         ema var12 = null;
         int var13 = 0;
         sna var14 = null;
@@ -30,100 +57,24 @@ final class vt extends tia {
         String var20 = null;
         int var21 = 0;
         int var22 = 0;
-        String var23 = null;
         int var23_int = 0;
-        String var24 = null;
+        String var23 = null;
         int var24_int = 0;
-        String var25 = null;
+        Object var24 = null;
         int var25_int = 0;
+        Object var25 = null;
         int var26 = 0;
         int var27_int = 0;
         String var27 = null;
         int var28 = 0;
         int var29 = 0;
-        String var30 = null;
+        Object var30 = null;
+        String var30_ref = null;
         int var30_int = 0;
         int var31 = 0;
         String var32 = null;
         String var33 = null;
         String var34 = null;
-        sga stackIn_36_0 = null;
-        int stackIn_36_1 = 0;
-        int stackIn_36_2 = 0;
-        int stackIn_36_3 = 0;
-        sga stackIn_37_0 = null;
-        int stackIn_37_1 = 0;
-        int stackIn_37_2 = 0;
-        int stackIn_37_3 = 0;
-        sga stackIn_38_0 = null;
-        int stackIn_38_1 = 0;
-        int stackIn_38_2 = 0;
-        int stackIn_38_3 = 0;
-        int stackIn_38_4 = 0;
-        int stackIn_41_0 = 0;
-        int stackIn_54_0 = 0;
-        sna stackIn_91_0 = null;
-        int stackIn_91_1 = 0;
-        int stackIn_91_2 = 0;
-        int stackIn_91_3 = 0;
-        sna stackIn_92_0 = null;
-        int stackIn_92_1 = 0;
-        int stackIn_92_2 = 0;
-        int stackIn_92_3 = 0;
-        sna stackIn_93_0 = null;
-        int stackIn_93_1 = 0;
-        int stackIn_93_2 = 0;
-        int stackIn_93_3 = 0;
-        int stackIn_93_4 = 0;
-        RuntimeException stackIn_212_0 = null;
-        StringBuilder stackIn_212_1 = null;
-        RuntimeException stackIn_213_0 = null;
-        StringBuilder stackIn_213_1 = null;
-        RuntimeException stackIn_214_0 = null;
-        StringBuilder stackIn_214_1 = null;
-        String stackIn_214_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        sga stackOut_35_0 = null;
-        int stackOut_35_1 = 0;
-        int stackOut_35_2 = 0;
-        int stackOut_35_3 = 0;
-        sga stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        int stackOut_37_2 = 0;
-        int stackOut_37_3 = 0;
-        int stackOut_37_4 = 0;
-        sga stackOut_36_0 = null;
-        int stackOut_36_1 = 0;
-        int stackOut_36_2 = 0;
-        int stackOut_36_3 = 0;
-        int stackOut_36_4 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_52_0 = 0;
-        sna stackOut_90_0 = null;
-        int stackOut_90_1 = 0;
-        int stackOut_90_2 = 0;
-        int stackOut_90_3 = 0;
-        sna stackOut_92_0 = null;
-        int stackOut_92_1 = 0;
-        int stackOut_92_2 = 0;
-        int stackOut_92_3 = 0;
-        int stackOut_92_4 = 0;
-        sna stackOut_91_0 = null;
-        int stackOut_91_1 = 0;
-        int stackOut_91_2 = 0;
-        int stackOut_91_3 = 0;
-        int stackOut_91_4 = 0;
-        RuntimeException stackOut_211_0 = null;
-        StringBuilder stackOut_211_1 = null;
-        RuntimeException stackOut_213_0 = null;
-        StringBuilder stackOut_213_1 = null;
-        String stackOut_213_2 = null;
-        RuntimeException stackOut_212_0 = null;
-        StringBuilder stackOut_212_1 = null;
-        String stackOut_212_2 = null;
         var31 = BachelorFridge.field_y;
         try {
           L0: {
@@ -252,52 +203,36 @@ final class vt extends tia {
               }
             }
             L9: {
-              stackOut_35_0 = (sga) (param0);
-              stackOut_35_1 = 4 + rg.field_h * 2;
-              stackOut_35_2 = 2;
-              stackOut_35_3 = (rg.field_h * 4 - -8) * param4;
-              stackIn_37_0 = stackOut_35_0;
-              stackIn_37_1 = stackOut_35_1;
-              stackIn_37_2 = stackOut_35_2;
-              stackIn_37_3 = stackOut_35_3;
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
-              stackIn_36_3 = stackOut_35_3;
+              stackIn_37_0 = (sga) (param0);
+
+              stackIn_37_1 = 4 + rg.field_h * 2;
+
+              stackIn_37_2 = 2;
+
+              stackIn_37_3 = (rg.field_h * 4 - -8) * param4;
+
               if (bga.field_m != param0) {
-                stackOut_37_0 = (sga) ((Object) stackIn_37_0);
-                stackOut_37_1 = stackIn_37_1;
-                stackOut_37_2 = stackIn_37_2;
-                stackOut_37_3 = stackIn_37_3;
-                stackOut_37_4 = 0;
-                stackIn_38_0 = stackOut_37_0;
-                stackIn_38_1 = stackOut_37_1;
-                stackIn_38_2 = stackOut_37_2;
-                stackIn_38_3 = stackOut_37_3;
-                stackIn_38_4 = stackOut_37_4;
+                stackIn_38_0 = (sga) ((Object) stackIn_37_0);
+                stackIn_38_1 = stackIn_37_1;
+                stackIn_38_2 = stackIn_37_2;
+                stackIn_38_3 = stackIn_37_3;
+                stackIn_38_4 = 0;
                 break L9;
               } else {
-                stackOut_36_0 = (sga) ((Object) stackIn_36_0);
-                stackOut_36_1 = stackIn_36_1;
-                stackOut_36_2 = stackIn_36_2;
-                stackOut_36_3 = stackIn_36_3;
-                stackOut_36_4 = 1;
-                stackIn_38_0 = stackOut_36_0;
-                stackIn_38_1 = stackOut_36_1;
-                stackIn_38_2 = stackOut_36_2;
-                stackIn_38_3 = stackOut_36_3;
-                stackIn_38_4 = stackOut_36_4;
+                stackIn_38_0 = (sga) ((Object) stackIn_37_0);
+                stackIn_38_1 = stackIn_37_1;
+                stackIn_38_2 = stackIn_37_2;
+                stackIn_38_3 = stackIn_37_3;
+                stackIn_38_4 = 1;
                 break L9;
               }
             }
             L10: {
-              if (((sga) (Object) stackIn_38_0).a(stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4 == 0, param3, true)) {
-                stackOut_40_0 = 0;
-                stackIn_41_0 = stackOut_40_0;
+              if (!((sga) (Object) stackIn_38_0).a(stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4 != 0, param3, true)) {
+                stackIn_41_0 = 0;
                 break L10;
               } else {
-                stackOut_39_0 = 1;
-                stackIn_41_0 = stackOut_39_0;
+                stackIn_41_0 = 1;
                 break L10;
               }
             }
@@ -373,12 +308,10 @@ final class vt extends tia {
                   var33 = po.a(var12.field_Ib.field_jb, var32, var21);
                   var20 = var33;
                   if (var33.equals(var12.field_Nb)) {
-                    stackOut_53_0 = 0;
-                    stackIn_54_0 = stackOut_53_0;
+                    stackIn_54_0 = 0;
                     break L15;
                   } else {
-                    stackOut_52_0 = 1;
-                    stackIn_54_0 = stackOut_52_0;
+                    stackIn_54_0 = 1;
                     break L15;
                   }
                 }
@@ -514,41 +447,27 @@ final class vt extends tia {
                       }
                     }
                     L25: {
-                      stackOut_90_0 = var12.field_Ib;
-                      stackOut_90_1 = rg.field_h;
-                      stackOut_90_2 = param2 + 31407;
-                      stackOut_90_3 = var12.field_sb;
-                      stackIn_92_0 = stackOut_90_0;
-                      stackIn_92_1 = stackOut_90_1;
-                      stackIn_92_2 = stackOut_90_2;
-                      stackIn_92_3 = stackOut_90_3;
-                      stackIn_91_0 = stackOut_90_0;
-                      stackIn_91_1 = stackOut_90_1;
-                      stackIn_91_2 = stackOut_90_2;
-                      stackIn_91_3 = stackOut_90_3;
+                      stackIn_92_0 = var12.field_Ib;
+
+                      stackIn_92_1 = rg.field_h;
+
+                      stackIn_92_2 = param2 + 31407;
+
+                      stackIn_92_3 = var12.field_sb;
+
                       if (!eaa.field_c) {
-                        stackOut_92_0 = (sna) ((Object) stackIn_92_0);
-                        stackOut_92_1 = stackIn_92_1;
-                        stackOut_92_2 = stackIn_92_2;
-                        stackOut_92_3 = stackIn_92_3;
-                        stackOut_92_4 = 0;
-                        stackIn_93_0 = stackOut_92_0;
-                        stackIn_93_1 = stackOut_92_1;
-                        stackIn_93_2 = stackOut_92_2;
-                        stackIn_93_3 = stackOut_92_3;
-                        stackIn_93_4 = stackOut_92_4;
+                        stackIn_93_0 = (sna) ((Object) stackIn_92_0);
+                        stackIn_93_1 = stackIn_92_1;
+                        stackIn_93_2 = stackIn_92_2;
+                        stackIn_93_3 = stackIn_92_3;
+                        stackIn_93_4 = 0;
                         break L25;
                       } else {
-                        stackOut_91_0 = (sna) ((Object) stackIn_91_0);
-                        stackOut_91_1 = stackIn_91_1;
-                        stackOut_91_2 = stackIn_91_2;
-                        stackOut_91_3 = stackIn_91_3;
-                        stackOut_91_4 = 42;
-                        stackIn_93_0 = stackOut_91_0;
-                        stackIn_93_1 = stackOut_91_1;
-                        stackIn_93_2 = stackOut_91_2;
-                        stackIn_93_3 = stackOut_91_3;
-                        stackIn_93_4 = stackOut_91_4;
+                        stackIn_93_0 = (sna) ((Object) stackIn_92_0);
+                        stackIn_93_1 = stackIn_92_1;
+                        stackIn_93_2 = stackIn_92_2;
+                        stackIn_93_3 = stackIn_92_3;
+                        stackIn_93_4 = 42;
                         break L25;
                       }
                     }
@@ -783,12 +702,12 @@ final class vt extends tia {
                       if (var24 == null) {
                         break L32;
                       } else {
-                        var34 = "<col=A00000>" + var24;
-                        var30 = var34;
-                        var25 = var30;
+                        var34 = "<col=A00000>" + (String) (var24);
+                        var30_ref = var34;
+                        var25 = var30_ref;
                         var24 = var25;
-                        var30 = var34;
-                        var25 = var30;
+                        var30_ref = var34;
+                        var25 = var30_ref;
                         var25 = null;
                         var26 = 0;
                         var27_int = 0;
@@ -803,20 +722,20 @@ final class vt extends tia {
                                     break L40;
                                   } else {
                                     if (var26 != 0) {
-                                      var24 = var34 + "<br>" + qn.field_h + var25;
+                                      var24 = var34 + "<br>" + qn.field_h + (String) (var25);
                                       break L39;
                                     } else {
-                                      var24 = var34 + "<br>" + lga.a(true, new String[]{var25}, cb.field_n);
+                                      var24 = var34 + "<br>" + lga.a(true, new String[]{(String) (var25)}, cb.field_n);
                                       break L39;
                                     }
                                   }
                                 }
                               }
                               if (var26 == 0) {
-                                var24 = var34 + "<br>" + lga.a(true, new String[]{var25}, jn.field_a);
+                                var24 = var34 + "<br>" + lga.a(true, new String[]{(String) (var25)}, jn.field_a);
                                 break L39;
                               } else {
-                                var24 = var34 + "<br>" + ra.field_l + var25;
+                                var24 = var34 + "<br>" + ra.field_l + (String) (var25);
                                 break L39;
                               }
                             }
@@ -828,12 +747,12 @@ final class vt extends tia {
                                   break L41;
                                 } else {
                                   var27 = pw.field_w.field_Jb;
-                                  var24 = var24 + "<br>" + lga.a(true, new String[]{var27}, ef.field_m);
+                                  var24 = (String) (var24) + "<br>" + lga.a(true, new String[]{var27}, ef.field_m);
                                   break L41;
                                 }
                               }
                             }
-                            jja.field_m = var24;
+                            jja.field_m = (String) (var24);
                             break L32;
                           } else {
                             L42: {
@@ -942,17 +861,17 @@ final class vt extends tia {
                             }
                             L48: {
                               if (var29 != 0) {
-                                var30 = "<col=A00000>" + kka.field_k[var27_int] + "</col>";
-                                var25 = var30;
+                                var30_ref = "<col=A00000>" + kka.field_k[var27_int] + "</col>";
+                                var25 = var30_ref;
                                 var24 = var25;
-                                var25 = var30;
+                                var25 = var30_ref;
                                 if (var25 == null) {
-                                  var25 = var30;
+                                  var25 = var30_ref;
                                   var24 = var25;
                                   var24 = var25;
                                   break L48;
                                 } else {
-                                  var25 = var25 + ", " + var30;
+                                  var25 = (String) (var25) + ", " + var30_ref;
                                   var26 = 1;
                                   break L48;
                                 }
@@ -977,27 +896,19 @@ final class vt extends tia {
           decompiledCaughtException = decompiledCaughtParameter0;
           L49: {
             var5 = decompiledCaughtException;
-            stackOut_211_0 = (RuntimeException) (var5);
-            stackOut_211_1 = new StringBuilder().append("vt.B(");
-            stackIn_213_0 = stackOut_211_0;
-            stackIn_213_1 = stackOut_211_1;
-            stackIn_212_0 = stackOut_211_0;
-            stackIn_212_1 = stackOut_211_1;
+            stackIn_213_0 = (RuntimeException) (var5);
+
+            stackIn_213_1 = new StringBuilder().append("vt.B(");
+
             if (param0 == null) {
-              stackOut_213_0 = (RuntimeException) ((Object) stackIn_213_0);
-              stackOut_213_1 = (StringBuilder) ((Object) stackIn_213_1);
-              stackOut_213_2 = "null";
-              stackIn_214_0 = stackOut_213_0;
-              stackIn_214_1 = stackOut_213_1;
-              stackIn_214_2 = stackOut_213_2;
+              stackIn_214_0 = (RuntimeException) ((Object) stackIn_213_0);
+              stackIn_214_1 = (StringBuilder) ((Object) stackIn_213_1);
+              stackIn_214_2 = "null";
               break L49;
             } else {
-              stackOut_212_0 = (RuntimeException) ((Object) stackIn_212_0);
-              stackOut_212_1 = (StringBuilder) ((Object) stackIn_212_1);
-              stackOut_212_2 = "{...}";
-              stackIn_214_0 = stackOut_212_0;
-              stackIn_214_1 = stackOut_212_1;
-              stackIn_214_2 = stackOut_212_2;
+              stackIn_214_0 = (RuntimeException) ((Object) stackIn_213_0);
+              stackIn_214_1 = (StringBuilder) ((Object) stackIn_213_1);
+              stackIn_214_2 = "{...}";
               break L49;
             }
           }
@@ -1031,18 +942,15 @@ final class vt extends tia {
     }
 
     final boolean a(int param0) {
-        int fieldTemp$4 = 0;
-        boolean discarded$5 = false;
-        int var3 = 0;
-        b var4 = null;
+        int fieldTemp$1 = 0;
+        int var3;
+        b var4;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
         L0: {
           var3 = BachelorFridge.field_y;
-          fieldTemp$4 = this.field_g - 1;
+          fieldTemp$1 = this.field_g - 1;
           this.field_g = this.field_g - 1;
-          if (-1 != (fieldTemp$4 & 31 ^ -1)) {
+          if (-1 != (fieldTemp$1 & 31 ^ -1)) {
             break L0;
           } else {
             this.field_j.a(new b(), true);
@@ -1066,21 +974,19 @@ final class vt extends tia {
                   break L4;
                 } else {
                   if (!this.field_j.e(12917)) {
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = 0;
                     break L3;
                   } else {
                     break L4;
                   }
                 }
               }
-              stackOut_10_0 = 1;
-              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_0 = 1;
               break L3;
             }
             return stackIn_12_0 != 0;
           } else {
-            discarded$5 = var4.b(true);
+            var4.b(true);
             var4 = (b) ((Object) this.field_j.c(0));
             continue L2;
           }

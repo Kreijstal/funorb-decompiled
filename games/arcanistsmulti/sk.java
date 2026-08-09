@@ -41,11 +41,10 @@ final class sk {
     }
 
     final static void a(ec param0, int param1, int param2, int param3) {
-        String discarded$0 = null;
         try {
             mj.field_r = param2;
             if (param1 != -28995) {
-                discarded$0 = sk.a(-70);
+                sk.a(-70);
             }
             ol.field_f = param0;
             tg.field_d = param3;

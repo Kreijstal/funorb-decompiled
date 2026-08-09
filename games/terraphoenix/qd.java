@@ -26,7 +26,6 @@ final class qd extends uf {
     final static void a(int param0, int param1, vi param2) {
         uc var5 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var5 = di.field_l;
             var5.k(-17410, param0);
@@ -42,7 +41,7 @@ final class qd extends uf {
             if (param1 != -7357) {
                 qd.a((byte) -69, -70);
             }
-            discarded$0 = var5.d(var4, 8600);
+            var5.d(var4, 8600);
             var5.j(var5.field_k + -var4, -119);
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) ((Object) runtimeException), "qd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -75,53 +74,18 @@ final class qd extends uf {
         int var9 = 0;
         int var10 = 0;
         int stackIn_18_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
         var10 = Terraphoenix.field_V;
         try {
           L0: {
@@ -131,8 +95,7 @@ final class qd extends uf {
             var8 = param2;
             L1: while (true) {
               if ((var8 ^ -1) <= -129) {
-                stackOut_17_0 = var5_int;
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_0 = var5_int;
                 break L0;
               } else {
                 L2: {
@@ -192,110 +155,75 @@ final class qd extends uf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var5);
-            stackOut_19_1 = new StringBuilder().append("qd.C(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var5);
+
+            stackIn_21_1 = new StringBuilder().append("qd.C(");
+
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+
+
+            stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
+
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param2).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+
+
+            stackIn_27_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L8;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L8;
             }
           }
-          throw qk.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_22_0), stackIn_28_2 + ')');
         }
         return stackIn_18_0 != 0;
     }
 
     final static long a(int param0, CharSequence param1) {
         long var2_long = 0L;
-        RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         long stackIn_23_0 = 0L;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        long stackOut_22_0 = 0L;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        RuntimeException var2 = null;
         var7 = Terraphoenix.field_V;
         try {
           L0: {
@@ -374,8 +302,7 @@ final class qd extends uf {
                     }
                   }
                 }
-                stackOut_22_0 = var2_long;
-                stackIn_23_0 = stackOut_22_0;
+                stackIn_23_0 = var2_long;
                 break L0;
               }
             }
@@ -384,27 +311,19 @@ final class qd extends uf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var2);
-            stackOut_24_1 = new StringBuilder().append("qd.D(").append(param0).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var2);
+
+            stackIn_26_1 = new StringBuilder().append("qd.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L9;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L9;
             }
           }
@@ -414,15 +333,24 @@ final class qd extends uf {
     }
 
     qd(byte[] param0) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        gm dupTemp$17 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        gm dupTemp$8 = null;
+        byte[] stackIn_39_0 = null;
+        byte[] stackIn_42_0 = null;
+        RuntimeException stackIn_206_0 = null;
+        StringBuilder stackIn_206_1 = null;
+        RuntimeException stackIn_207_0 = null;
+        StringBuilder stackIn_207_1 = null;
+        String stackIn_207_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         byte[] var4 = null;
@@ -439,10 +367,10 @@ final class qd extends uf {
         gm[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
-        gm var15 = null;
-        byte[] var15_array = null;
-        int var16_int = 0;
+        byte[] var15 = null;
+        gm var15_ref = null;
         byte[] var16 = null;
+        int var16_int = 0;
         int var17 = 0;
         byte[] var18 = null;
         int var19 = 0;
@@ -455,7 +383,8 @@ final class qd extends uf {
         Object var25 = null;
         int var26 = 0;
         int var27 = 0;
-        int var28 = 0;
+        int var28_int = 0;
+        gm var28 = null;
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
@@ -484,29 +413,6 @@ final class qd extends uf {
         byte[] var55 = null;
         byte[] var56 = null;
         byte[] var57 = null;
-        byte[] stackIn_39_0 = null;
-        byte[] stackIn_42_0 = null;
-        RuntimeException stackIn_205_0 = null;
-        StringBuilder stackIn_205_1 = null;
-        RuntimeException stackIn_206_0 = null;
-        StringBuilder stackIn_206_1 = null;
-        RuntimeException stackIn_207_0 = null;
-        StringBuilder stackIn_207_1 = null;
-        String stackIn_207_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_38_0 = null;
-        byte[] stackOut_37_0 = null;
-        Object stackOut_41_0 = null;
-        byte[] stackOut_40_0 = null;
-        RuntimeException stackOut_204_0 = null;
-        StringBuilder stackOut_204_1 = null;
-        RuntimeException stackOut_206_0 = null;
-        StringBuilder stackOut_206_1 = null;
-        String stackOut_206_2 = null;
-        RuntimeException stackOut_205_0 = null;
-        StringBuilder stackOut_205_1 = null;
-        String stackOut_205_2 = null;
         try {
           L0: {
             this.field_s = new byte[128];
@@ -581,9 +487,9 @@ final class qd extends uf {
                                                 var13_int = var15_int;
                                                 break L9;
                                               } else {
-                                                incrementValue$9 = var12;
+                                                incrementValue$0 = var12;
                                                 var12++;
-                                                var13_int = incrementValue$9;
+                                                var13_int = incrementValue$0;
                                                 break L9;
                                               }
                                             }
@@ -604,26 +510,22 @@ final class qd extends uf {
                                         L12: {
                                           var14 = var38.a(-16384);
                                           if ((var14 ^ -1) >= -1) {
-                                            stackOut_38_0 = null;
-                                            stackIn_39_0 = (byte[]) ((Object) stackOut_38_0);
+                                            stackIn_39_0 = null;
                                             break L12;
                                           } else {
-                                            stackOut_37_0 = new byte[2 * var14];
-                                            stackIn_39_0 = stackOut_37_0;
+                                            stackIn_39_0 = new byte[2 * var14];
                                             break L12;
                                           }
                                         }
                                         L13: {
                                           var46 = stackIn_39_0;
-                                          var15_array = var46;
+                                          var15 = var46;
                                           var14 = var38.a(-16384);
                                           if (-1 <= (var14 ^ -1)) {
-                                            stackOut_41_0 = null;
-                                            stackIn_42_0 = (byte[]) ((Object) stackOut_41_0);
+                                            stackIn_42_0 = null;
                                             break L13;
                                           } else {
-                                            stackOut_40_0 = new byte[2 * var14];
-                                            stackIn_42_0 = stackOut_40_0;
+                                            stackIn_42_0 = new byte[2 * var14];
                                             break L13;
                                           }
                                         }
@@ -683,7 +585,7 @@ final class qd extends uf {
                                                                             L23: while (true) {
                                                                               if (var12 <= var27) {
                                                                                 L24: {
-                                                                                  if (var15_array == null) {
+                                                                                  if (var15 == null) {
                                                                                     break L24;
                                                                                   } else {
                                                                                     var27 = 1;
@@ -691,7 +593,7 @@ final class qd extends uf {
                                                                                       if (var27 >= var46.length) {
                                                                                         break L24;
                                                                                       } else {
-                                                                                        var15_array[var27] = var38.f(2);
+                                                                                        var15[var27] = var38.f(2);
                                                                                         var27 += 2;
                                                                                         continue L25;
                                                                                       }
@@ -721,47 +623,47 @@ final class qd extends uf {
                                                                                     L29: while (true) {
                                                                                       if (var12 <= var27) {
                                                                                         L30: {
-                                                                                          if (var15_array == null) {
+                                                                                          if (var15 == null) {
                                                                                             break L30;
                                                                                           } else {
                                                                                             var19 = var38.a(-16384);
-                                                                                            var15_array[0] = (byte)var19;
+                                                                                            var15[0] = (byte)var19;
                                                                                             var27 = 2;
                                                                                             L31: while (true) {
                                                                                               if (var46.length <= var27) {
                                                                                                 var27 = var46[0];
-                                                                                                var28 = var46[1];
+                                                                                                var28_int = var46[1];
                                                                                                 var29 = 0;
                                                                                                 L32: while (true) {
                                                                                                   if (var29 >= var27) {
                                                                                                     var29 = 2;
                                                                                                     L33: while (true) {
                                                                                                       if (var46.length <= var29) {
-                                                                                                        var15_array = null;
+                                                                                                        var15 = null;
                                                                                                         var30 = var27;
                                                                                                         L34: while (true) {
                                                                                                           if (var30 >= 128) {
                                                                                                             break L30;
                                                                                                           } else {
-                                                                                                            this.field_s[var30] = (byte)(this.field_s[var30] * var28 + 32 >> 1662190086);
+                                                                                                            this.field_s[var30] = (byte)(this.field_s[var30] * var28_int + 32 >> 1662190086);
                                                                                                             var30++;
                                                                                                             continue L34;
                                                                                                           }
                                                                                                         }
                                                                                                       } else {
                                                                                                         var30 = var46[var29];
-                                                                                                        var31 = var15_array[var29 - -1];
-                                                                                                        var32 = var28 * (-var27 + var30) - -((-var27 + var30) / 2);
+                                                                                                        var31 = var15[var29 - -1];
+                                                                                                        var32 = var28_int * (-var27 + var30) - -((-var27 + var30) / 2);
                                                                                                         var33 = var27;
                                                                                                         L35: while (true) {
                                                                                                           if (var30 <= var33) {
                                                                                                             var29 += 2;
-                                                                                                            var28 = var31;
+                                                                                                            var28_int = var31;
                                                                                                             var27 = var30;
                                                                                                             continue L33;
                                                                                                           } else {
                                                                                                             var34 = pc.a(-64, -var27 + var30, var32);
-                                                                                                            var32 = var32 + (-var28 + var31);
+                                                                                                            var32 = var32 + (-var28_int + var31);
                                                                                                             this.field_s[var33] = (byte)(32 + var34 * this.field_s[var33] >> -1127737018);
                                                                                                             var33++;
                                                                                                             continue L35;
@@ -770,14 +672,14 @@ final class qd extends uf {
                                                                                                       }
                                                                                                     }
                                                                                                   } else {
-                                                                                                    this.field_s[var29] = (byte)(32 + var28 * this.field_s[var29] >> 1793838790);
+                                                                                                    this.field_s[var29] = (byte)(32 + var28_int * this.field_s[var29] >> 1793838790);
                                                                                                     var29++;
                                                                                                     continue L32;
                                                                                                   }
                                                                                                 }
                                                                                               } else {
                                                                                                 var19 = 1 + var19 + var38.a(-16384);
-                                                                                                var15_array[var27] = (byte)var19;
+                                                                                                var15[var27] = (byte)var19;
                                                                                                 var27 += 2;
                                                                                                 continue L31;
                                                                                               }
@@ -794,7 +696,7 @@ final class qd extends uf {
                                                                                             L37: while (true) {
                                                                                               if (var47.length <= var27) {
                                                                                                 var27 = var47[0];
-                                                                                                var28 = var47[1] << 973967425;
+                                                                                                var28_int = var47[1] << 973967425;
                                                                                                 var29 = 0;
                                                                                                 L38: while (true) {
                                                                                                   if (var27 <= var29) {
@@ -808,7 +710,7 @@ final class qd extends uf {
                                                                                                             break L36;
                                                                                                           } else {
                                                                                                             L41: {
-                                                                                                              var31 = (this.field_r[var30] & 255) - -var28;
+                                                                                                              var31 = (this.field_r[var30] & 255) - -var28_int;
                                                                                                               if ((var31 ^ -1) <= -1) {
                                                                                                                 break L41;
                                                                                                               } else {
@@ -832,14 +734,14 @@ final class qd extends uf {
                                                                                                       } else {
                                                                                                         var30 = var47[var29];
                                                                                                         var31 = var16[1 + var29] << 626180737;
-                                                                                                        var32 = (var30 + -var27) / 2 + var28 * (var30 + -var27);
+                                                                                                        var32 = (var30 + -var27) / 2 + var28_int * (var30 + -var27);
                                                                                                         var37 = var27;
                                                                                                         var33 = var37;
                                                                                                         L43: while (true) {
                                                                                                           if (var30 <= var37) {
                                                                                                             var27 = var30;
                                                                                                             var29 += 2;
-                                                                                                            var28 = var31;
+                                                                                                            var28_int = var31;
                                                                                                             continue L39;
                                                                                                           } else {
                                                                                                             L44: {
@@ -861,7 +763,7 @@ final class qd extends uf {
                                                                                                               }
                                                                                                             }
                                                                                                             this.field_r[var37] = (byte)var35;
-                                                                                                            var32 = var32 + (var31 + -var28);
+                                                                                                            var32 = var32 + (var31 + -var28_int);
                                                                                                             var37++;
                                                                                                             continue L43;
                                                                                                           }
@@ -870,7 +772,7 @@ final class qd extends uf {
                                                                                                     }
                                                                                                   } else {
                                                                                                     L46: {
-                                                                                                      var30 = (255 & this.field_r[var29]) + var28;
+                                                                                                      var30 = (255 & this.field_r[var29]) + var28_int;
                                                                                                       if (var30 >= 0) {
                                                                                                         break L46;
                                                                                                       } else {
@@ -953,6 +855,7 @@ final class qd extends uf {
                                                                                               } else {
                                                                                                 L55: {
                                                                                                   var50 = var13[var27];
+                                                                                                  var28 = var50;
                                                                                                   if (var50.field_h == null) {
                                                                                                     break L55;
                                                                                                   } else {
@@ -964,15 +867,15 @@ final class qd extends uf {
                                                                                                   if (null == var50.field_g) {
                                                                                                     break L56;
                                                                                                   } else {
-                                                                                                    var50.field_k = var38.a(-16384);
+                                                                                                    var28.field_k = var38.a(-16384);
                                                                                                     break L56;
                                                                                                   }
                                                                                                 }
                                                                                                 L57: {
-                                                                                                  if ((var50.field_i ^ -1) >= -1) {
+                                                                                                  if ((var28.field_i ^ -1) >= -1) {
                                                                                                     break L57;
                                                                                                   } else {
-                                                                                                    var50.field_e = var38.a(-16384);
+                                                                                                    var28.field_e = var38.a(-16384);
                                                                                                     break L57;
                                                                                                   }
                                                                                                 }
@@ -989,6 +892,7 @@ final class qd extends uf {
                                                                                       } else {
                                                                                         L58: {
                                                                                           var49 = var13[var27];
+                                                                                          var28 = var49;
                                                                                           if (null == var49.field_h) {
                                                                                             break L58;
                                                                                           } else {
@@ -1013,6 +917,7 @@ final class qd extends uf {
                                                                                   } else {
                                                                                     L60: {
                                                                                       var48 = var13[var27];
+                                                                                      var28 = var48;
                                                                                       if (null == var48.field_g) {
                                                                                         break L60;
                                                                                       } else {
@@ -1082,9 +987,9 @@ final class qd extends uf {
                                                                                     var20 = -1;
                                                                                     break L67;
                                                                                   } else {
-                                                                                    incrementValue$10 = var21;
+                                                                                    incrementValue$1 = var21;
                                                                                     var21++;
-                                                                                    var20 = var18[incrementValue$10];
+                                                                                    var20 = var18[incrementValue$1];
                                                                                     break L67;
                                                                                   }
                                                                                 }
@@ -1116,9 +1021,9 @@ final class qd extends uf {
                                                                                   var20 = -1;
                                                                                   break L69;
                                                                                 } else {
-                                                                                  incrementValue$11 = var21;
+                                                                                  incrementValue$2 = var21;
                                                                                   var21++;
-                                                                                  var20 = var10[incrementValue$11];
+                                                                                  var20 = var10[incrementValue$2];
                                                                                   break L69;
                                                                                 }
                                                                               }
@@ -1143,18 +1048,18 @@ final class qd extends uf {
                                                                           } else {
                                                                             L72: {
                                                                               if (var21 < var56.length) {
-                                                                                incrementValue$12 = var21;
+                                                                                incrementValue$3 = var21;
                                                                                 var21++;
-                                                                                var20 = var7[incrementValue$12];
+                                                                                var20 = var7[incrementValue$3];
                                                                                 break L72;
                                                                               } else {
                                                                                 var20 = -1;
                                                                                 break L72;
                                                                               }
                                                                             }
-                                                                            incrementValue$13 = var8;
+                                                                            incrementValue$4 = var8;
                                                                             var8++;
-                                                                            var24 = var38.field_i[incrementValue$13] + 16 << 975808098;
+                                                                            var24 = var38.field_i[incrementValue$4] + 16 << 975808098;
                                                                             break L71;
                                                                           }
                                                                         }
@@ -1178,18 +1083,18 @@ final class qd extends uf {
                                                                       } else {
                                                                         L75: {
                                                                           if (var55.length > var21) {
-                                                                            incrementValue$14 = var21;
+                                                                            incrementValue$5 = var21;
                                                                             var21++;
-                                                                            var20 = var4[incrementValue$14];
+                                                                            var20 = var4[incrementValue$5];
                                                                             break L75;
                                                                           } else {
                                                                             var20 = -1;
                                                                             break L75;
                                                                           }
                                                                         }
-                                                                        incrementValue$15 = var5;
+                                                                        incrementValue$6 = var5;
                                                                         var5++;
-                                                                        var23 = var38.field_i[incrementValue$15] + -1;
+                                                                        var23 = var38.field_i[incrementValue$6] + -1;
                                                                         break L74;
                                                                       }
                                                                     }
@@ -1212,9 +1117,9 @@ final class qd extends uf {
                                                                     var20 = -1;
                                                                     break L77;
                                                                   } else {
-                                                                    incrementValue$16 = var21;
+                                                                    incrementValue$7 = var21;
                                                                     var21++;
-                                                                    var20 = var18[incrementValue$16];
+                                                                    var20 = var18[incrementValue$7];
                                                                     break L77;
                                                                   }
                                                                 }
@@ -1256,15 +1161,15 @@ final class qd extends uf {
                                         }
                                       } else {
                                         L78: {
-                                          dupTemp$17 = new gm();
-                                          var13[var14] = dupTemp$17;
-                                          var40 = dupTemp$17;
-                                          var15 = var40;
+                                          dupTemp$8 = new gm();
+                                          var13[var14] = dupTemp$8;
+                                          var40 = dupTemp$8;
+                                          var15_ref = var40;
                                           var16_int = var38.a(-16384);
                                           if (var16_int <= 0) {
                                             break L78;
                                           } else {
-                                            var15.field_h = new byte[var16_int * 2];
+                                            var15_ref.field_h = new byte[var16_int * 2];
                                             break L78;
                                           }
                                         }
@@ -1273,7 +1178,7 @@ final class qd extends uf {
                                           if ((var16_int ^ -1) >= -1) {
                                             break L79;
                                           } else {
-                                            var15.field_g = new byte[2 + var16_int * 2];
+                                            var15_ref.field_g = new byte[2 + var16_int * 2];
                                             var40.field_g[1] = (byte)64;
                                             break L79;
                                           }
@@ -1320,27 +1225,19 @@ final class qd extends uf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L80: {
             var2 = decompiledCaughtException;
-            stackOut_204_0 = (RuntimeException) (var2);
-            stackOut_204_1 = new StringBuilder().append("qd.<init>(");
-            stackIn_206_0 = stackOut_204_0;
-            stackIn_206_1 = stackOut_204_1;
-            stackIn_205_0 = stackOut_204_0;
-            stackIn_205_1 = stackOut_204_1;
+            stackIn_206_0 = (RuntimeException) (var2);
+
+            stackIn_206_1 = new StringBuilder().append("qd.<init>(");
+
             if (param0 == null) {
-              stackOut_206_0 = (RuntimeException) ((Object) stackIn_206_0);
-              stackOut_206_1 = (StringBuilder) ((Object) stackIn_206_1);
-              stackOut_206_2 = "null";
-              stackIn_207_0 = stackOut_206_0;
-              stackIn_207_1 = stackOut_206_1;
-              stackIn_207_2 = stackOut_206_2;
+              stackIn_207_0 = (RuntimeException) ((Object) stackIn_206_0);
+              stackIn_207_1 = (StringBuilder) ((Object) stackIn_206_1);
+              stackIn_207_2 = "null";
               break L80;
             } else {
-              stackOut_205_0 = (RuntimeException) ((Object) stackIn_205_0);
-              stackOut_205_1 = (StringBuilder) ((Object) stackIn_205_1);
-              stackOut_205_2 = "{...}";
-              stackIn_207_0 = stackOut_205_0;
-              stackIn_207_1 = stackOut_205_1;
-              stackIn_207_2 = stackOut_205_2;
+              stackIn_207_0 = (RuntimeException) ((Object) stackIn_206_0);
+              stackIn_207_1 = (StringBuilder) ((Object) stackIn_206_1);
+              stackIn_207_2 = "{...}";
               break L80;
             }
           }

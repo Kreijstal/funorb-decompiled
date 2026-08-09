@@ -52,9 +52,8 @@ final class wn extends l {
     }
 
     final static co[] a(int param0) {
-        co[] discarded$2 = null;
         if (param0 != 5) {
-          discarded$2 = wn.a(56);
+          wn.a(56);
           return new co[]{aa.field_b, Virogrid.field_O, nd.field_j};
         } else {
           return new co[]{aa.field_b, Virogrid.field_O, nd.field_j};

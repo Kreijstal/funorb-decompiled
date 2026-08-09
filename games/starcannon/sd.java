@@ -32,11 +32,10 @@ final class sd {
     }
 
     final static void a(byte param0) {
-        ii discarded$0 = null;
         ee.field_a = new rk();
         if (param0 != 38) {
             String var2 = (String) null;
-            discarded$0 = sd.a((Throwable) null, (String) null);
+            sd.a((Throwable) null, (String) null);
         }
     }
 

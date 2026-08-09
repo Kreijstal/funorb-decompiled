@@ -13,6 +13,9 @@ abstract class sf extends be {
     abstract byte[] g(byte param0);
 
     final static String c(int param0) {
+        String stackIn_58_0 = null;
+        Object stackIn_97_0 = null;
+        RuntimeException decompiledCaughtException = null;
         Object var1 = null;
         Object var2 = null;
         String var3_ref_String = null;
@@ -24,12 +27,6 @@ abstract class sf extends be {
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
-        String stackIn_58_0 = null;
-        Object stackIn_97_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_57_0 = null;
-        String stackOut_55_0 = null;
-        Object stackOut_96_0 = null;
         var10 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -176,12 +173,10 @@ abstract class sf extends be {
                   }
                   L14: {
                     if (rc.a(false)) {
-                      stackOut_57_0 = ": ";
-                      stackIn_58_0 = stackOut_57_0;
+                      stackIn_58_0 = ": ";
                       break L14;
                     } else {
-                      stackOut_55_0 = "<img=3>: ";
-                      stackIn_58_0 = stackOut_55_0;
+                      stackIn_58_0 = "<img=3>: ";
                       break L14;
                     }
                   }
@@ -267,8 +262,7 @@ abstract class sf extends be {
               }
             }
             var3 = 125 % ((30 - param0) / 41);
-            stackOut_96_0 = var1;
-            stackIn_97_0 = stackOut_96_0;
+            stackIn_97_0 = var1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -282,8 +276,8 @@ abstract class sf extends be {
     abstract int a(boolean param0);
 
     public static void f(byte param0) {
-        RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         try {
           L0: {
             L1: {

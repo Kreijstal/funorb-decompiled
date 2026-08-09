@@ -18,7 +18,7 @@ final class kl {
             return false;
           }
         } else {
-          boolean discarded$5 = kl.b(-84);
+          kl.b(-84);
           if (ag.field_t != null) {
             if (ci.field_d != rc.field_a) {
               return false;
@@ -35,18 +35,14 @@ final class kl {
         if (param0 < 90) {
             kl.a(92);
             field_c = null;
-            field_b = null;
+            field_b = (bd[][]) null;
             return;
         }
         field_c = null;
-        field_b = null;
+        field_b = (bd[][]) null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[50];
     }
 }

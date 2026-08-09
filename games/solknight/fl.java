@@ -6,7 +6,14 @@ final class fl {
     static int[] field_b;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, o param5) {
-        int incrementValue$1 = 0;
+        int incrementValue$0 = 0;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -23,23 +30,6 @@ final class fl {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        String stackIn_32_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
         try {
           L0: {
             L1: {
@@ -125,9 +115,9 @@ final class fl {
                             var17 = -var16 + 256;
                             if (var16 >= 0) {
                               L9: {
-                                incrementValue$1 = var10;
+                                incrementValue$0 = var10;
                                 var10++;
-                                var18 = param5.field_v[incrementValue$1];
+                                var18 = param5.field_v[incrementValue$0];
                                 if (-1 == (var18 ^ -1)) {
                                   break L9;
                                 } else {
@@ -168,27 +158,19 @@ final class fl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var6 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) (var6);
-            stackOut_29_1 = new StringBuilder().append("fl.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            stackIn_31_0 = (RuntimeException) (var6);
+
+            stackIn_31_1 = new StringBuilder().append("fl.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L10;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L10;
             }
           }
@@ -202,13 +184,15 @@ final class fl {
     }
 
     final synchronized static byte[] a(int param0, int param1) {
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
-        o var4 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int dupTemp$3 = 0;
+        byte[][] arrayValue$4 = null;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
+        o var4;
         L0: {
           if (param0 != 100) {
             break L0;
@@ -216,9 +200,9 @@ final class fl {
             if (-1 <= (kk.field_e ^ -1)) {
               break L0;
             } else {
-              fieldTemp$3 = kk.field_e - 1;
+              fieldTemp$0 = kk.field_e - 1;
               kk.field_e = kk.field_e - 1;
-              var2_ref_byte__ = ng.field_g[fieldTemp$3];
+              var2_ref_byte__ = ng.field_g[fieldTemp$0];
               ng.field_g[kk.field_e] = null;
               return var2_ref_byte__;
             }
@@ -231,9 +215,9 @@ final class fl {
             if (0 >= nf.field_V) {
               break L1;
             } else {
-              fieldTemp$4 = nf.field_V - 1;
+              fieldTemp$1 = nf.field_V - 1;
               nf.field_V = nf.field_V - 1;
-              var2_ref_byte__ = hc.field_e[fieldTemp$4];
+              var2_ref_byte__ = hc.field_e[fieldTemp$1];
               hc.field_e[nf.field_V] = null;
               return var2_ref_byte__;
             }
@@ -253,9 +237,9 @@ final class fl {
             break L3;
           } else {
             if ((sf.field_c ^ -1) < -1) {
-              fieldTemp$5 = sf.field_c - 1;
+              fieldTemp$2 = sf.field_c - 1;
               sf.field_c = sf.field_c - 1;
-              var2_ref_byte__ = ef.field_d[fieldTemp$5];
+              var2_ref_byte__ = ef.field_d[fieldTemp$2];
               ef.field_d[sf.field_c] = null;
               return var2_ref_byte__;
             } else {
@@ -274,8 +258,10 @@ final class fl {
               } else {
                 if (sf.field_i[var2] == param0) {
                   if (cl.field_l[var2] > 0) {
-                    cl.field_l[var2] = cl.field_l[var2] - 1;
-                    var3 = rg.field_d[var2][cl.field_l[var2] - 1];
+                    dupTemp$3 = cl.field_l[var2] - 1;
+                    arrayValue$4 = rg.field_d[var2];
+                    cl.field_l[var2] = dupTemp$3;
+                    var3 = arrayValue$4[dupTemp$3];
                     rg.field_d[var2][cl.field_l[var2]] = null;
                     return var3;
                   } else {
@@ -294,9 +280,8 @@ final class fl {
     }
 
     final static void b(byte param0) {
-        byte[] discarded$0 = null;
         if (param0 != 91) {
-            discarded$0 = fl.a(112, -6);
+            fl.a(112, -6);
         }
         al var1 = (al) ((Object) uc.field_a.e((byte) 86));
         if (var1 == null) {

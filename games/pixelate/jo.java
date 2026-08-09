@@ -25,9 +25,23 @@ final class jo implements eb {
 
     final static void a(int param0, String param1, Throwable param2) {
         try {
-            int discarded$1 = 0;
-            Exception var3 = null;
-            String var3_ref = null;
+            cb stackIn_15_0;
+            int stackIn_15_1;
+            java.net.URL stackIn_15_2;
+            java.net.URL stackIn_15_3;
+            java.net.URL stackIn_15_4;
+            StringBuilder stackIn_15_5;
+            cb stackIn_16_0;
+            int stackIn_16_1;
+            java.net.URL stackIn_16_2;
+            java.net.URL stackIn_16_3;
+            java.net.URL stackIn_16_4;
+            StringBuilder stackIn_16_5;
+            String stackIn_16_6;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            String var3 = null;
+            Exception var3_ref = null;
             ei var4 = null;
             DataInputStream var5 = null;
             int var6 = 0;
@@ -35,56 +49,15 @@ final class jo implements eb {
             String var8 = null;
             String var9 = null;
             String var10 = null;
-            cb stackIn_14_0 = null;
-            int stackIn_14_1 = 0;
-            java.net.URL stackIn_14_2 = null;
-            java.net.URL stackIn_14_3 = null;
-            java.net.URL stackIn_14_4 = null;
-            StringBuilder stackIn_14_5 = null;
-            cb stackIn_15_0 = null;
-            int stackIn_15_1 = 0;
-            java.net.URL stackIn_15_2 = null;
-            java.net.URL stackIn_15_3 = null;
-            java.net.URL stackIn_15_4 = null;
-            StringBuilder stackIn_15_5 = null;
-            cb stackIn_16_0 = null;
-            int stackIn_16_1 = 0;
-            java.net.URL stackIn_16_2 = null;
-            java.net.URL stackIn_16_3 = null;
-            java.net.URL stackIn_16_4 = null;
-            StringBuilder stackIn_16_5 = null;
-            String stackIn_16_6 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            cb stackOut_13_0 = null;
-            int stackOut_13_1 = 0;
-            java.net.URL stackOut_13_2 = null;
-            java.net.URL stackOut_13_3 = null;
-            java.net.URL stackOut_13_4 = null;
-            StringBuilder stackOut_13_5 = null;
-            cb stackOut_15_0 = null;
-            int stackOut_15_1 = 0;
-            java.net.URL stackOut_15_2 = null;
-            java.net.URL stackOut_15_3 = null;
-            java.net.URL stackOut_15_4 = null;
-            StringBuilder stackOut_15_5 = null;
-            String stackOut_15_6 = null;
-            cb stackOut_14_0 = null;
-            int stackOut_14_1 = 0;
-            java.net.URL stackOut_14_2 = null;
-            java.net.URL stackOut_14_3 = null;
-            java.net.URL stackOut_14_4 = null;
-            StringBuilder stackOut_14_5 = null;
-            String stackOut_14_6 = null;
             var6 = Pixelate.field_H ? 1 : 0;
             try {
               L0: {
                 L1: {
-                  var3_ref = "";
+                  var3 = "";
                   if (param2 == null) {
                     break L1;
                   } else {
-                    var3_ref = oa.a(param2, (byte) 120);
+                    var3 = oa.a(param2, (byte) 120);
                     break L1;
                   }
                 }
@@ -92,21 +65,21 @@ final class jo implements eb {
                   if (param1 != null) {
                     L3: {
                       if (param2 != null) {
-                        var3_ref = var3_ref + " | ";
+                        var3 = var3 + " | ";
                         break L3;
                       } else {
                         break L3;
                       }
                     }
-                    var3_ref = var3_ref + param1;
+                    var3 = var3 + param1;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
                 L4: {
-                  al.a(var3_ref, 0);
-                  var7 = qk.a(var3_ref, ":", "%3a", -123);
+                  al.a(var3, 0);
+                  var7 = qk.a(var3, ":", "%3a", -123);
                   var8 = qk.a(var7, "@", "%40", -128);
                   if (param0 == 1) {
                     break L4;
@@ -119,55 +92,35 @@ final class jo implements eb {
                 var10 = qk.a(var9, "#", "%23", -127);
                 if (null != qm.field_L) {
                   L5: {
-                    stackOut_13_0 = fp.field_c;
-                    stackOut_13_1 = -44;
-                    stackOut_13_2 = null;
-                    stackOut_13_3 = null;
-                    stackOut_13_4 = qm.field_L.getCodeBase();
-                    stackOut_13_5 = new StringBuilder().append("clienterror.ws?c=").append(jh.field_M).append("&u=");
-                    stackIn_15_0 = stackOut_13_0;
-                    stackIn_15_1 = stackOut_13_1;
-                    stackIn_15_2 = stackOut_13_2;
-                    stackIn_15_3 = stackOut_13_3;
-                    stackIn_15_4 = stackOut_13_4;
-                    stackIn_15_5 = stackOut_13_5;
-                    stackIn_14_0 = stackOut_13_0;
-                    stackIn_14_1 = stackOut_13_1;
-                    stackIn_14_2 = stackOut_13_2;
-                    stackIn_14_3 = stackOut_13_3;
-                    stackIn_14_4 = stackOut_13_4;
-                    stackIn_14_5 = stackOut_13_5;
+                    stackIn_15_0 = fp.field_c;
+
+                    stackIn_15_1 = -44;
+
+                    stackIn_15_2 = null;
+
+                    stackIn_15_3 = null;
+
+                    stackIn_15_4 = qm.field_L.getCodeBase();
+
+                    stackIn_15_5 = new StringBuilder().append("clienterror.ws?c=").append(jh.field_M).append("&u=");
+
                     if (null == ui.field_c) {
-                      stackOut_15_0 = (cb) ((Object) stackIn_15_0);
-                      stackOut_15_1 = stackIn_15_1;
-                      stackOut_15_2 = null;
-                      stackOut_15_3 = null;
-                      stackOut_15_4 = (java.net.URL) ((Object) stackIn_15_4);
-                      stackOut_15_5 = (StringBuilder) ((Object) stackIn_15_5);
-                      stackOut_15_6 = "" + ff.field_d;
-                      stackIn_16_0 = stackOut_15_0;
-                      stackIn_16_1 = stackOut_15_1;
-                      stackIn_16_2 = stackOut_15_2;
-                      stackIn_16_3 = stackOut_15_3;
-                      stackIn_16_4 = stackOut_15_4;
-                      stackIn_16_5 = stackOut_15_5;
-                      stackIn_16_6 = stackOut_15_6;
+                      stackIn_16_0 = (cb) ((Object) stackIn_15_0);
+                      stackIn_16_1 = stackIn_15_1;
+                      stackIn_16_2 = null;
+                      stackIn_16_3 = null;
+                      stackIn_16_4 = (java.net.URL) ((Object) stackIn_15_4);
+                      stackIn_16_5 = (StringBuilder) ((Object) stackIn_15_5);
+                      stackIn_16_6 = "" + ff.field_d;
                       break L5;
                     } else {
-                      stackOut_14_0 = (cb) ((Object) stackIn_14_0);
-                      stackOut_14_1 = stackIn_14_1;
-                      stackOut_14_2 = null;
-                      stackOut_14_3 = null;
-                      stackOut_14_4 = (java.net.URL) ((Object) stackIn_14_4);
-                      stackOut_14_5 = (StringBuilder) ((Object) stackIn_14_5);
-                      stackOut_14_6 = ui.field_c;
-                      stackIn_16_0 = stackOut_14_0;
-                      stackIn_16_1 = stackOut_14_1;
-                      stackIn_16_2 = stackOut_14_2;
-                      stackIn_16_3 = stackOut_14_3;
-                      stackIn_16_4 = stackOut_14_4;
-                      stackIn_16_5 = stackOut_14_5;
-                      stackIn_16_6 = stackOut_14_6;
+                      stackIn_16_0 = (cb) ((Object) stackIn_15_0);
+                      stackIn_16_1 = stackIn_15_1;
+                      stackIn_16_2 = null;
+                      stackIn_16_3 = null;
+                      stackIn_16_4 = (java.net.URL) ((Object) stackIn_15_4);
+                      stackIn_16_5 = (StringBuilder) ((Object) stackIn_15_5);
+                      stackIn_16_6 = ui.field_c;
                       break L5;
                     }
                   }
@@ -176,7 +129,7 @@ final class jo implements eb {
                     if (0 != var4.field_b) {
                       if ((var4.field_b ^ -1) == -2) {
                         var5 = (DataInputStream) (var4.field_e);
-                        discarded$1 = var5.read();
+                        var5.read();
                         var5.close();
                         decompiledRegionSelector0 = 1;
                         break L0;
@@ -195,7 +148,7 @@ final class jo implements eb {
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (Exception) (Object) decompiledCaughtException;
+              var3_ref = (Exception) (Object) decompiledCaughtException;
               return;
             }
             if (decompiledRegionSelector0 == 0) {
@@ -211,42 +164,27 @@ final class jo implements eb {
     }
 
     public final void a(ng param0, byte param1, int param2, int param3, boolean param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        h var11 = null;
         ng stackIn_3_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        ng stackOut_1_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        h var11 = null;
         try {
           L0: {
             L1: {
               if (!(param0 instanceof h)) {
-                stackOut_2_0 = null;
-                stackIn_3_0 = (ng) ((Object) stackOut_2_0);
+                stackIn_3_0 = null;
                 break L1;
               } else {
-                stackOut_1_0 = (ng) (param0);
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = (ng) (param0);
                 break L1;
               }
             }
@@ -292,7 +230,7 @@ final class jo implements eb {
             }
             if (this.field_m != null) {
               var10 = this.field_q - (-this.field_f + -this.field_b);
-              discarded$1 = this.field_m.a(param0.field_q, param0.field_z + param3 + var10, this.field_d + (param0.field_p + param2), param0.field_E - (var10 - -this.field_b), param0.field_C - (this.field_b << -1127572639), this.field_g, this.field_i, this.field_e, this.field_o, 0);
+              this.field_m.a(param0.field_q, param0.field_z + param3 + var10, this.field_d + (param0.field_p + param2), param0.field_E - (var10 - -this.field_b), param0.field_C - (this.field_b << -1127572639), this.field_g, this.field_i, this.field_e, this.field_o, 0);
               break L0;
             } else {
               return;
@@ -302,27 +240,19 @@ final class jo implements eb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var6);
-            stackOut_16_1 = new StringBuilder().append("jo.A(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var6);
+
+            stackIn_18_1 = new StringBuilder().append("jo.A(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L6;
             }
           }

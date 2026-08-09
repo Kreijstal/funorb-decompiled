@@ -17,7 +17,6 @@ final class ar {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int discarded$0 = 0;
         if (param0 != 15707) {
             return;
         }
@@ -31,7 +30,7 @@ final class ar {
             var8 = nj.a(var3, 20, var6, 29079);
             on.e(var7, var8, var5, var6, 0);
             on.a(var7 - -1, 1 + var8, var5 + -2, -2 + var6, 16777088);
-            discarded$0 = dw.field_e.field_X.a(param1, 3 + var7, var8 - (-1 + -ig.field_c) - dw.field_e.field_X.field_G, 500, 1000, 0, -1, 0, 0, sh.field_c);
+            dw.field_e.field_X.a(param1, 3 + var7, var8 - (-1 + -ig.field_c) - dw.field_e.field_X.field_G, 500, 1000, 0, -1, 0, 0, sh.field_c);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) ((Object) runtimeException), "ar.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -39,13 +38,12 @@ final class ar {
 
     final static void a(int param0, int param1) {
         try {
-            Object discarded$2 = null;
             Throwable throwable = null;
             String var3 = null;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                discarded$2 = mm.a(new Object[]{new Integer(param1)}, so.a(-120), "resizing", 25449);
+                mm.a(new Object[]{new Integer(param1)}, so.a(-120), "resizing", 25449);
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

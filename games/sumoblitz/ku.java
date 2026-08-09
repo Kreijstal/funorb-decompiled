@@ -42,8 +42,6 @@ final class ku {
         field_I = null;
         if (!param0) {
             field_j = 2;
-            field_J = null;
-            return;
         }
         field_J = null;
     }
@@ -53,11 +51,8 @@ final class ku {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_8_0 = 0;
+        int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_7_0 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
@@ -72,32 +67,14 @@ final class ku {
             }
             var2 = 0;
             L2: while (true) {
-              L3: {
-                L4: {
-                  if ((var2 ^ -1) <= -26) {
-                    break L4;
-                  } else {
-                    stackOut_5_0 = var1_int + go.field_j[var2];
-                    stackIn_8_0 = stackOut_5_0;
-                    stackIn_6_0 = stackOut_5_0;
-                    if (var3 != 0) {
-                      break L3;
-                    } else {
-                      var1_int = stackIn_6_0;
-                      var2++;
-                      if (var3 == 0) {
-                        continue L2;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                }
-                stackOut_7_0 = var1_int;
-                stackIn_8_0 = stackOut_7_0;
-                break L3;
+              if ((var2 ^ -1) <= -26) {
+                stackIn_7_0 = var1_int;
+                break L0;
+              } else {
+                var1_int = var1_int + go.field_j[var2];
+                var2++;
+                continue L2;
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,7 +82,7 @@ final class ku {
           var1 = decompiledCaughtException;
           throw qo.a((Throwable) ((Object) var1), "ku.B(" + param0 + ')');
         }
-        return stackIn_8_0;
+        return stackIn_7_0;
     }
 
     ku() {

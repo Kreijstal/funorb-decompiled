@@ -24,11 +24,11 @@ final class dw extends kj {
     }
 
     final boolean b(int param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         if (param0 >= 21) {
-          fieldTemp$2 = this.field_h - 1;
+          fieldTemp$1 = this.field_h - 1;
           this.field_h = this.field_h - 1;
-          if (fieldTemp$2 != 0) {
+          if (fieldTemp$1 != 0) {
             return false;
           } else {
             return true;
@@ -39,7 +39,6 @@ final class dw extends kj {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -61,6 +60,7 @@ final class dw extends kj {
         int var24 = 0;
         int var25 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         var25 = BachelorFridge.field_y;
         try {
           L0: {

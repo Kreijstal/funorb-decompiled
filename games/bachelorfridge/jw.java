@@ -17,17 +17,16 @@ final class jw extends ana {
     }
 
     private final void e(int param0) {
-        oha discarded$1 = null;
-        iv var3 = null;
-        int var5 = 0;
-        aga var6 = null;
-        ad var7 = null;
-        ad var8 = null;
+        iv var3;
+        int var5;
+        aga var6;
+        ad var7;
+        ad var8;
         var5 = BachelorFridge.field_y;
         var6 = this.field_w.field_l.a(14, this.field_q.field_h);
         if (!var6.i(80)) {
           var3 = (iv) ((Object) this.field_w.field_o.b((byte) 90));
-          discarded$1 = al.a(-44, this.field_w.field_k);
+          al.a(-44, this.field_w.field_k);
           if (param0 != -23403) {
             jw.d(-10);
             L0: while (true) {

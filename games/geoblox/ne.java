@@ -13,16 +13,16 @@ final class ne {
     static dm field_b;
 
     private final void a(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         var11 = Geoblox.field_C;
         var8 = -1640531527;
         var5 = -1640531527;
@@ -180,16 +180,16 @@ final class ne {
     }
 
     private final void a(int param0) {
-        int fieldTemp$3 = 0;
-        int dupTemp$4 = 0;
-        int dupTemp$5 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int fieldTemp$1 = 0;
+        int dupTemp$2 = 0;
+        int dupTemp$3 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
-          fieldTemp$3 = this.field_h + 1;
+          fieldTemp$1 = this.field_h + 1;
           this.field_h = this.field_h + 1;
-          this.field_f = this.field_f + fieldTemp$3;
+          this.field_f = this.field_f + fieldTemp$1;
           var2 = 0;
           if (param0 < -10) {
             break L0;
@@ -223,12 +223,12 @@ final class ne {
               }
             }
             this.field_g = this.field_g + this.field_a[255 & 128 + var2];
-            dupTemp$4 = this.field_f + (this.field_g + this.field_a[cd.a(255, var3 >> -2024261374)]);
-            var4 = dupTemp$4;
-            this.field_a[var2] = dupTemp$4;
-            dupTemp$5 = var3 + this.field_a[cd.a(var4 >> -1997213592, 1020) >> -1417268222];
-            this.field_f = dupTemp$5;
-            this.field_e[var2] = dupTemp$5;
+            dupTemp$2 = this.field_f + (this.field_g + this.field_a[cd.a(255, var3 >> -2024261374)]);
+            var4 = dupTemp$2;
+            this.field_a[var2] = dupTemp$2;
+            dupTemp$3 = var3 + this.field_a[cd.a(var4 >> -1997213592, 1020) >> -1417268222];
+            this.field_f = dupTemp$3;
+            this.field_e[var2] = dupTemp$3;
             var2++;
             continue L1;
           }

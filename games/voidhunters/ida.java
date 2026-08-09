@@ -9,7 +9,6 @@ final class ida extends mc {
     private ij field_v;
 
     final void a(boolean param0, shb param1) {
-        boolean discarded$0 = false;
         if (!(param1 instanceof bl)) {
             throw new IllegalArgumentException();
         }
@@ -20,17 +19,17 @@ final class ida extends mc {
             return;
         }
         try {
-            discarded$0 = var3.a(0, (shb) (this));
+            var3.a(0, (shb) (this));
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) ((Object) runtimeException), "ida.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final int f(int param0) {
-        wc var2 = null;
-        int var3 = 0;
-        bl var4 = null;
-        int var5 = 0;
+        wc var2;
+        int var3;
+        bl var4;
+        int var5;
         var5 = VoidHunters.field_G;
         var2 = new wc(this.field_v);
         var3 = param0;
@@ -73,9 +72,9 @@ final class ida extends mc {
     }
 
     final bl g(int param0) {
-        wc var2 = null;
-        bl var3 = null;
-        int var4 = 0;
+        wc var2;
+        bl var3;
+        int var4;
         L0: {
           var4 = VoidHunters.field_G;
           var2 = new wc(this.field_v);
@@ -102,24 +101,14 @@ final class ida extends mc {
     }
 
     final static void a(boolean param0, String param1, int param2) {
-        RuntimeException var3 = null;
         faa var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -146,27 +135,19 @@ final class ida extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("ida.R(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("ida.R(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -205,13 +186,12 @@ final class ida extends mc {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        shb discarded$0 = null;
         int var7 = VoidHunters.field_G;
         if (!(this.field_q == null)) {
             this.field_q.a(-93, (shb) (this), param0, param3, true);
         }
         if (param2 < 47) {
-            discarded$0 = this.d(51);
+            this.d(51);
         }
         wc var5 = new wc(this.field_v);
         shb var6 = (shb) ((Object) var5.b((byte) 83));
@@ -236,10 +216,8 @@ final class ida extends mc {
         }
         bl var4 = (bl) ((Object) var2.c(570));
         while (var4 != null) {
-            if (var4.field_z) {
-                if (var3 < var4.field_h) {
-                    var3 = var4.field_h;
-                }
+            if (var4.field_z && var3 < var4.field_h) {
+                var3 = var4.field_h;
             }
             var4 = (bl) ((Object) var2.a(19072));
         }
@@ -253,11 +231,18 @@ final class ida extends mc {
 
     final static void a(faa param0, byte param1) {
         try {
-            int discarded$1 = 0;
+            RuntimeException stackIn_66_0 = null;
+            StringBuilder stackIn_66_1 = null;
+            RuntimeException stackIn_67_0 = null;
+            StringBuilder stackIn_67_1 = null;
+            String stackIn_67_2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
             int var5 = 0;
+            int var6_int = 0;
             ClassNotFoundException var6 = null;
             InvalidClassException var6_ref = null;
             StreamCorruptedException var6_ref2 = null;
@@ -270,7 +255,6 @@ final class ida extends mc {
             NullPointerException var6_ref9 = null;
             Exception var6_ref10 = null;
             Throwable var6_ref11 = null;
-            int var6_int = 0;
             int var8 = 0;
             Object[] var9 = null;
             int var10_int = 0;
@@ -279,62 +263,45 @@ final class ida extends mc {
             int var12 = 0;
             mv var13 = null;
             java.lang.reflect.Field var15 = null;
-            mv var16 = null;
-            java.lang.reflect.Field var17 = null;
-            Object var18 = null;
-            Object var19 = null;
+            Object var16 = null;
+            Object var17 = null;
+            java.lang.reflect.Field var17_ref = null;
+            mv var18 = null;
+            java.lang.reflect.Field var19 = null;
             Object var20 = null;
             Object var22 = null;
             byte[][] var25 = null;
             java.lang.reflect.Field var26 = null;
-            java.lang.reflect.Field var27 = null;
+            java.lang.reflect.Method var27 = null;
             java.lang.reflect.Method var28 = null;
-            java.lang.reflect.Method var29 = null;
-            RuntimeException stackIn_65_0 = null;
-            StringBuilder stackIn_65_1 = null;
-            RuntimeException stackIn_66_0 = null;
-            StringBuilder stackIn_66_1 = null;
-            RuntimeException stackIn_67_0 = null;
-            StringBuilder stackIn_67_1 = null;
-            String stackIn_67_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_64_0 = null;
-            StringBuilder stackOut_64_1 = null;
-            RuntimeException stackOut_66_0 = null;
-            StringBuilder stackOut_66_1 = null;
-            String stackOut_66_2 = null;
-            RuntimeException stackOut_65_0 = null;
-            StringBuilder stackOut_65_1 = null;
-            String stackOut_65_2 = null;
-            var18 = null;
-            var19 = null;
+            var17 = null;
+            var16 = null;
             var20 = null;
             var22 = null;
             var12 = VoidHunters.field_G;
             try {
               L0: {
                 var13 = (mv) ((Object) tma.field_r.d(0));
-                var16 = var13;
-                if (var16 == null) {
+                var18 = var13;
+                if (var18 == null) {
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
                   var3 = 0;
                   var4 = 0;
                   L1: while (true) {
-                    if (var4 >= var16.field_i) {
+                    if (var4 >= var18.field_i) {
                       if (var3 != 0) {
                         decompiledRegionSelector0 = 1;
                         break L0;
                       } else {
                         var4 = param0.field_e;
-                        param0.d(var16.field_d, 332614536);
+                        param0.d(var18.field_d, 332614536);
                         var5 = 0;
                         L2: while (true) {
-                          if (var5 >= var16.field_i) {
-                            discarded$1 = param0.g(1595, var4);
-                            var16.b(-3846);
+                          if (var5 >= var18.field_i) {
+                            param0.g(1595, var4);
+                            var18.b(-3846);
                             if (param1 >= 77) {
                               decompiledRegionSelector0 = 2;
                               break L0;
@@ -344,21 +311,21 @@ final class ida extends mc {
                             }
                           } else {
                             L3: {
-                              if (-1 == (var16.field_k[var5] ^ -1)) {
+                              if (-1 == (var18.field_k[var5] ^ -1)) {
                                 try {
                                   L4: {
                                     L5: {
-                                      var6_int = var16.field_h[var5];
+                                      var6_int = var18.field_h[var5];
                                       if (-1 == (var6_int ^ -1)) {
-                                        var27 = (java.lang.reflect.Field) (var16.field_g[var5].field_d);
-                                        var8 = var27.getInt((Object) null);
+                                        var15 = (java.lang.reflect.Field) (var18.field_g[var5].field_d);
+                                        var8 = var15.getInt((Object) null);
                                         param0.c(0, 0);
                                         param0.d(var8, 332614536);
                                         break L5;
                                       } else {
                                         if (var6_int != 1) {
                                           if (-3 == (var6_int ^ -1)) {
-                                            var26 = (java.lang.reflect.Field) (var16.field_g[var5].field_d);
+                                            var26 = (java.lang.reflect.Field) (var18.field_g[var5].field_d);
                                             var8 = var26.getModifiers();
                                             param0.c(0, 0);
                                             param0.d(var8, 332614536);
@@ -367,9 +334,9 @@ final class ida extends mc {
                                             break L5;
                                           }
                                         } else {
-                                          var15 = (java.lang.reflect.Field) (var16.field_g[var5].field_d);
-                                          var17 = var15;
-                                          var17.setInt((Object) null, var16.field_j[var5]);
+                                          var17_ref = (java.lang.reflect.Field) (var18.field_g[var5].field_d);
+                                          var19 = var17_ref;
+                                          var19.setInt((Object) null, var18.field_j[var5]);
                                           param0.c(0, 0);
                                           break L5;
                                         }
@@ -377,13 +344,13 @@ final class ida extends mc {
                                     }
                                     L6: {
                                       if (var6_int == 3) {
-                                        var29 = (java.lang.reflect.Method) (var16.field_e[var5].field_d);
-                                        var25 = var16.field_f[var5];
+                                        var28 = (java.lang.reflect.Method) (var18.field_e[var5].field_d);
+                                        var25 = var18.field_f[var5];
                                         var9 = new Object[var25.length];
                                         var10_int = 0;
                                         L7: while (true) {
                                           if (var10_int >= var25.length) {
-                                            var10 = var29.invoke((Object) null, var9);
+                                            var10 = var28.invoke((Object) null, var9);
                                             if (var10 == null) {
                                               param0.c(0, 0);
                                               break L6;
@@ -414,8 +381,8 @@ final class ida extends mc {
                                         if (-5 != (var6_int ^ -1)) {
                                           break L6;
                                         } else {
-                                          var28 = (java.lang.reflect.Method) (var16.field_e[var5].field_d);
-                                          var8 = var28.getModifiers();
+                                          var27 = (java.lang.reflect.Method) (var18.field_e[var5].field_d);
+                                          var8 = var27.getModifiers();
                                           param0.c(0, 0);
                                           param0.d(var8, 332614536);
                                           break L6;
@@ -511,7 +478,7 @@ final class ida extends mc {
                                 }
                                 break L3;
                               } else {
-                                param0.c(0, var16.field_k[var5]);
+                                param0.c(0, var18.field_k[var5]);
                                 break L3;
                               }
                             }
@@ -570,27 +537,19 @@ final class ida extends mc {
               decompiledCaughtException = decompiledCaughtParameter12;
               L23: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_64_0 = (RuntimeException) (var2);
-                stackOut_64_1 = new StringBuilder().append("ida.O(");
-                stackIn_66_0 = stackOut_64_0;
-                stackIn_66_1 = stackOut_64_1;
-                stackIn_65_0 = stackOut_64_0;
-                stackIn_65_1 = stackOut_64_1;
+                stackIn_66_0 = (RuntimeException) (var2);
+
+                stackIn_66_1 = new StringBuilder().append("ida.O(");
+
                 if (param0 == null) {
-                  stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
-                  stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
-                  stackOut_66_2 = "null";
-                  stackIn_67_0 = stackOut_66_0;
-                  stackIn_67_1 = stackOut_66_1;
-                  stackIn_67_2 = stackOut_66_2;
+                  stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+                  stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+                  stackIn_67_2 = "null";
                   break L23;
                 } else {
-                  stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
-                  stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
-                  stackOut_65_2 = "{...}";
-                  stackIn_67_0 = stackOut_65_0;
-                  stackIn_67_1 = stackOut_65_1;
-                  stackIn_67_2 = stackOut_65_2;
+                  stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+                  stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+                  stackIn_67_2 = "{...}";
                   break L23;
                 }
               }

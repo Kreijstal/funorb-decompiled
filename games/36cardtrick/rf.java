@@ -21,10 +21,9 @@ final class rf implements Runnable {
             int var1_int = 0;
             Object var1 = null;
             Throwable var2 = null;
-            Object var2_ref = null;
-            Throwable var3 = null;
             int var4 = 0;
             Throwable decompiledCaughtException = null;
+            Object var2_ref = null;
             var4 = Main.field_T;
             try {
               L0: {
@@ -80,9 +79,8 @@ final class rf implements Runnable {
     }
 
     final static void c(int param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         var1 = wc.field_B;
         synchronized (var1) {
           L0: {
@@ -110,11 +108,11 @@ final class rf implements Runnable {
     }
 
     final synchronized boolean a(boolean param0) {
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        Throwable decompiledCaughtException = null;
         if (this.field_i >= 2) {
           return true;
         } else {
@@ -246,23 +244,16 @@ final class rf implements Runnable {
         char[] var6 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_23_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_2_0 = 0;
         var5 = Main.field_T;
         try {
           L0: {
             if (!Character.isISOControl(param0)) {
               if (ph.a(param0, false)) {
-                stackOut_6_0 = 1;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -275,16 +266,14 @@ final class rf implements Runnable {
                     var3 = 0;
                     L2: while (true) {
                       if (var3 >= var2.length) {
-                        stackOut_21_0 = 0;
-                        stackIn_22_0 = stackOut_21_0;
-                        decompiledRegionSelector0 = 4;
+                        stackIn_23_0 = 0;
+                        decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
                         var4 = var2[var3];
                         if (var4 == param0) {
-                          stackOut_18_0 = 1;
-                          stackIn_19_0 = stackOut_18_0;
-                          decompiledRegionSelector0 = 3;
+                          stackIn_20_0 = 1;
+                          decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
                           var3++;
@@ -298,17 +287,13 @@ final class rf implements Runnable {
                       var3++;
                       continue L1;
                     } else {
-                      stackOut_11_0 = 1;
-                      stackIn_12_0 = stackOut_11_0;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
+                      return true;
                     }
                   }
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -325,13 +310,9 @@ final class rf implements Runnable {
             return stackIn_7_0 != 0;
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return stackIn_12_0 != 0;
+              return stackIn_20_0 != 0;
             } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_19_0 != 0;
-              } else {
-                return stackIn_22_0 != 0;
-              }
+              return stackIn_23_0 != 0;
             }
           }
         }
@@ -377,9 +358,9 @@ final class rf implements Runnable {
 
     final static void a(int param0, int param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = Main.field_T;
         try {
           L0: {

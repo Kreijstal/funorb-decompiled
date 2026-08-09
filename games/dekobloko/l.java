@@ -21,47 +21,74 @@ final class l {
     }
 
     final static int[] c(int param0) {
-        w discarded$2 = null;
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
         int[] var4 = null;
         int[] stackIn_5_0 = null;
         int[] stackIn_8_0 = null;
-        int[] stackOut_7_0 = null;
-        int[] stackOut_4_0 = null;
-        L0: {
-          var3 = client.field_A ? 1 : 0;
-          if (param0 == 4) {
-            break L0;
-          } else {
-            discarded$2 = l.a(64);
-            break L0;
-          }
-        }
-        var4 = new int[4];
-        var1 = var4;
-        var2 = 0;
-        L1: while (true) {
-          L2: {
-            if (var2 >= 4) {
-              stackOut_7_0 = (int[]) (var4);
-              stackIn_8_0 = stackOut_7_0;
-              break L2;
-            } else {
-              stackOut_4_0 = (int[]) (var4);
-              stackIn_8_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
-              if (var3 != 0) {
-                break L2;
-              } else {
-                stackIn_5_0[var2] = bf.field_y.nextInt();
-                var2++;
-                continue L1;
-              }
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var3 = client.field_A ? 1 : 0;
+                    if (param0 == 4) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    l.a(64);
+                    statePc = 2;
+                    continue stateLoop;
+                }
+                case 2: {
+                    var4 = new int[4];
+                    var1 = var4;
+                    var2 = 0;
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (var2 >= 4) {
+                        statePc = 7;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    stackIn_8_0 = (int[]) (var4);
+                    stackIn_5_0 = stackIn_8_0;
+                    if (var3 != 0) {
+                        statePc = 8;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    stackIn_5_0[var2] = bf.field_y.nextInt();
+                    var2++;
+                    if (var3 == 0) {
+                        statePc = 3;
+                    } else {
+                        statePc = 7;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    stackIn_8_0 = (int[]) (var4);
+                    statePc = 8;
+                    continue stateLoop;
+                }
+                case 8: {
+                    return stackIn_8_0;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-          return stackIn_8_0;
         }
     }
 

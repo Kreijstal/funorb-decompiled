@@ -15,47 +15,28 @@ final class rba {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int incrementValue$2 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        if (param2 < 0) {
-          return;
-        } else {
-          L0: {
-            if (param2 >= dg.field_i) {
-              break L0;
-            } else {
-              if ((param1 ^ -1) > -1) {
-                break L0;
-              } else {
-                if (dg.field_c > param1) {
-                  L1: {
-                    if (param3 == -1) {
-                      break L1;
-                    } else {
-                      field_c = (kia) null;
-                      break L1;
-                    }
-                  }
-                  var5 = param0 * (param4 >>> -1185860040) >> 1147446472;
-                  var6 = 256 - var5;
-                  var7 = dg.field_i * param1 + param2;
-                  var8 = param4;
-                  var9 = dg.field_e[var7];
-                  incrementValue$2 = var7;
-                  var7++;
-                  dg.field_e[incrementValue$2] = dda.a(dda.a(var9, 16711935) * var6 + dda.a(16711935, var8) * var5, -16711936) + dda.a(16711680, var5 * dda.a(var8, 65280) - -(dda.a(65280, var9) * var6)) >>> 1843057384;
-                  return;
-                } else {
-                  break L0;
-                }
-              }
+        int incrementValue$0 = 0;
+        if (param2 >= 0) {
+            if (param2 >= dg.field_i || (param1 ^ -1) > -1 || dg.field_c <= param1) {
+                return;
             }
-          }
-          return;
+            if (param3 != -1) {
+                field_c = (kia) null;
+            }
+            var5 = param0 * (param4 >>> -1185860040) >> 1147446472;
+            var6 = 256 - var5;
+            var7 = dg.field_i * param1 + param2;
+            var8 = param4;
+            var9 = dg.field_e[var7];
+            incrementValue$0 = var7;
+            var7++;
+            dg.field_e[incrementValue$0] = dda.a(dda.a(var9, 16711935) * var6 + dda.a(16711935, var8) * var5, -16711936) + dda.a(16711680, var5 * dda.a(var8, 65280) - -(dda.a(65280, var9) * var6)) >>> 1843057384;
+            return;
         }
     }
 
@@ -102,8 +83,6 @@ final class rba {
         int var4 = 0;
         int var5 = 0;
         int[] var6 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -111,14 +90,6 @@ final class rba {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -140,7 +111,7 @@ final class rba {
                       break L0;
                     } else {
                       var4 = var6[var3];
-                      if (var4 != 0) {
+                      if ((var4 ^ -1) != -1) {
                         lp.field_u = true;
                         decompiledRegionSelector0 = 1;
                         break L0;
@@ -160,27 +131,19 @@ final class rba {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2_ref);
-            stackOut_14_1 = new StringBuilder().append("rba.D(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2_ref);
+
+            stackIn_16_1 = new StringBuilder().append("rba.D(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L3;
             }
           }

@@ -34,8 +34,8 @@ final class wg {
     }
 
     final boolean a(int param0) {
-        int var3 = 0;
-        bb var4 = null;
+        int var3;
+        bb var4;
         var3 = Terraphoenix.field_V;
         L0: while (true) {
           if (this.field_a >= this.field_i) {

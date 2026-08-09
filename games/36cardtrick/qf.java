@@ -38,39 +38,29 @@ abstract class qf extends g {
     abstract void b(int param0, byte param1, int param2);
 
     public static void n(int param0) {
-        int discarded$0 = 0;
         field_J = null;
         field_I = null;
         if (param0 != 8736) {
-            discarded$0 = qf.m(111);
+            qf.m(111);
         }
     }
 
     private final int l(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 < 66) {
           L0: {
             this.field_D = (j) null;
             if (this.field_E) {
               if (this == this.field_D.d((byte) 10)) {
-                stackOut_11_0 = 256;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = 256;
                 break L0;
               } else {
-                stackOut_10_0 = 0;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 0;
                 break L0;
               }
             } else {
-              stackOut_8_0 = 0;
-              stackIn_12_0 = stackOut_8_0;
+              stackIn_12_0 = 0;
               break L0;
             }
           }
@@ -79,17 +69,14 @@ abstract class qf extends g {
           L1: {
             if (this.field_E) {
               if (this == this.field_D.d((byte) 10)) {
-                stackOut_5_0 = 256;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 256;
                 break L1;
               } else {
-                stackOut_4_0 = 0;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 0;
                 break L1;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L1;
             }
           }
@@ -98,7 +85,7 @@ abstract class qf extends g {
     }
 
     final lk i(int param0) {
-        lk var2 = null;
+        lk var2;
         var2 = super.i(param0 + 0);
         if (var2 != null) {
           return var2;
@@ -113,21 +100,12 @@ abstract class qf extends g {
     }
 
     boolean a(boolean param0) {
-        boolean discarded$1 = false;
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_11_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_38_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int var2;
+        int var3;
         if (param0) {
           L0: {
             var2 = this.l(70);
@@ -152,15 +130,13 @@ abstract class qf extends g {
                     if (this.field_E) {
                       break L2;
                     } else {
-                      stackOut_36_0 = 1;
-                      stackIn_38_0 = stackOut_36_0;
+                      stackIn_38_0 = 1;
                       break L1;
                     }
                   }
                 }
               }
-              stackOut_37_0 = 0;
-              stackIn_38_0 = stackOut_37_0;
+              stackIn_38_0 = 0;
               break L1;
             }
             return stackIn_38_0 != 0;
@@ -176,22 +152,20 @@ abstract class qf extends g {
                     if (this.field_E) {
                       break L4;
                     } else {
-                      stackOut_30_0 = 1;
-                      stackIn_32_0 = stackOut_30_0;
+                      stackIn_32_0 = 1;
                       break L3;
                     }
                   }
                 }
               }
-              stackOut_31_0 = 0;
-              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_0 = 0;
               break L3;
             }
             return stackIn_32_0 != 0;
           }
         } else {
           L5: {
-            discarded$1 = this.o(-76);
+            this.o(-76);
             var2 = this.l(70);
             var3 = var2 - this.field_H;
             if ((var3 ^ -1) < -1) {
@@ -209,12 +183,10 @@ abstract class qf extends g {
               } else {
                 L6: {
                   if (this.field_E) {
-                    stackOut_19_0 = 0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_20_0 = 0;
                     break L6;
                   } else {
-                    stackOut_18_0 = 1;
-                    stackIn_20_0 = stackOut_18_0;
+                    stackIn_20_0 = 1;
                     break L6;
                   }
                 }
@@ -230,12 +202,10 @@ abstract class qf extends g {
               } else {
                 L7: {
                   if (this.field_E) {
-                    stackOut_10_0 = 0;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = 0;
                     break L7;
                   } else {
-                    stackOut_9_0 = 1;
-                    stackIn_11_0 = stackOut_9_0;
+                    stackIn_11_0 = 1;
                     break L7;
                   }
                 }

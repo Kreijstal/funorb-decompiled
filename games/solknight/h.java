@@ -11,7 +11,7 @@ final class h {
     static int field_g;
 
     public static void a(int param0) {
-        fj var2 = null;
+        fj var2;
         field_c = null;
         field_e = null;
         field_b = null;
@@ -47,7 +47,7 @@ final class h {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1;
         ab.field_s[3] = new int[]{5};
         vd.field_d[3] = new ie(3);
         fj.a(37, new int[]{8, 9, 10, 5}, 468, (byte) 15, 0, 2, 30);

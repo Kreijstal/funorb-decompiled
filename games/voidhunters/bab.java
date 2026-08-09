@@ -11,14 +11,22 @@ final class bab implements dja {
     }
 
     final static String a(String param0, int param1) {
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
-        StringBuilder discarded$10 = null;
-        StringBuilder discarded$11 = null;
-        RuntimeException var2 = null;
-        tsa[] var2_array = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
+        int stackIn_8_0 = 0;
+        String stackIn_21_0 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        tsa[] var2 = null;
+        RuntimeException var2_ref = null;
         StringBuilder var3 = null;
         int var4 = 0;
         tsa var5 = null;
@@ -27,27 +35,6 @@ final class bab implements dja {
         String var8 = null;
         int var9 = 0;
         tsa[] var10 = null;
-        int stackIn_8_0 = 0;
-        String stackIn_21_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_20_0 = null;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         var9 = VoidHunters.field_G;
         try {
           L0: {
@@ -60,25 +47,22 @@ final class bab implements dja {
               }
             }
             var10 = dib.a(param0, 127);
-            var2_array = var10;
+            var2 = var10;
             var3 = new StringBuilder();
             var4 = 0;
             L2: while (true) {
               if (var4 >= var10.length) {
-                stackOut_20_0 = var3.toString();
-                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_0 = var3.toString();
                 break L0;
               } else {
                 L3: {
                   var5 = var10[var4];
                   var6 = var5.field_g;
                   if (-1 + var10.length == var4) {
-                    stackOut_7_0 = param0.length();
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = param0.length();
                     break L3;
                   } else {
-                    stackOut_6_0 = var2_array[1 + var4].field_g;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = var2[1 + var4].field_g;
                     break L3;
                   }
                 }
@@ -87,29 +71,29 @@ final class bab implements dja {
                   var8 = param0.substring(var6, var7);
                   if (var5.field_e != dla.field_d) {
                     if (var5.field_e == ek.field_o) {
-                      discarded$6 = var3.append("<col=33bbff>").append(var8).append("</col>");
+                      discarded$0 = var3.append("<col=33bbff>").append(var8).append("</col>");
                       break L4;
                     } else {
                       if (hpa.field_p == var5.field_e) {
-                        discarded$7 = var3.append("<col=ffff99>").append(var8).append("</col>");
+                        discarded$1 = var3.append("<col=ffff99>").append(var8).append("</col>");
                         break L4;
                       } else {
                         if (fwa.field_h == var5.field_e) {
-                          discarded$8 = var3.append("<col=ffaaff>").append(var8).append("</col>");
+                          discarded$2 = var3.append("<col=ffaaff>").append(var8).append("</col>");
                           break L4;
                         } else {
                           if (var5.field_e != io.field_p) {
-                            discarded$9 = var3.append(var8);
+                            discarded$3 = var3.append(var8);
                             break L4;
                           } else {
-                            discarded$10 = var3.append("<col=33ffaa>").append(var8).append("</col>");
+                            discarded$4 = var3.append("<col=33ffaa>").append(var8).append("</col>");
                             break L4;
                           }
                         }
                       }
                     }
                   } else {
-                    discarded$11 = var3.append("<col=66ffff>").append(var8).append("</col>");
+                    discarded$5 = var3.append("<col=66ffff>").append(var8).append("</col>");
                     break L4;
                   }
                 }
@@ -121,28 +105,20 @@ final class bab implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2);
-            stackOut_22_1 = new StringBuilder().append("bab.F(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            var2_ref = decompiledCaughtException;
+            stackIn_24_0 = (RuntimeException) (var2_ref);
+
+            stackIn_24_1 = new StringBuilder().append("bab.F(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L5;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L5;
             }
           }
@@ -182,27 +158,16 @@ final class bab implements dja {
     }
 
     final static void a(boolean param0, ml param1) {
-        String discarded$1 = null;
-        RuntimeException var2 = null;
         String var3 = null;
         ml var4 = null;
         ml var5 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -228,7 +193,7 @@ final class bab implements dja {
                 break L1;
               } else {
                 var3 = (String) null;
-                discarded$1 = bab.a((String) null, 85);
+                bab.a((String) null, 85);
                 break L1;
               }
             }
@@ -238,27 +203,19 @@ final class bab implements dja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (var2);
-            stackOut_3_1 = new StringBuilder().append("bab.C(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (var2);
+
+            stackIn_5_1 = new StringBuilder().append("bab.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

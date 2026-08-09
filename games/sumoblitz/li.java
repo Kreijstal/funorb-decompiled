@@ -54,64 +54,12 @@ final class li extends ce implements java.awt.image.ImageProducer {
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
-            L1: {
-              if (this.field_t != param0) {
-                break L1;
-              } else {
+            if (this.field_t == param0) {
                 this.field_t = null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("li.removeConsumer(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
-            }
-          }
-          throw qo.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) ((Object) runtimeException), "li.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -127,9 +75,6 @@ final class li extends ce implements java.awt.image.ImageProducer {
     }
 
     final void a(java.awt.Canvas param0, int param1, int param2, int param3) {
-        boolean discarded$0 = false;
-        boolean discarded$1 = false;
-        boolean discarded$2 = false;
         try {
             this.field_k = param1;
             this.field_n = param2;
@@ -138,12 +83,12 @@ final class li extends ce implements java.awt.image.ImageProducer {
             this.field_s = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
             this.field_x = this.field_w.createImage((java.awt.image.ImageProducer) (this));
             this.c(true);
-            discarded$0 = this.field_w.prepareImage(this.field_x, (java.awt.image.ImageObserver) ((Object) this.field_w));
+            this.field_w.prepareImage(this.field_x, (java.awt.image.ImageObserver) ((Object) this.field_w));
             int var5_int = 85 / ((-34 - param3) / 39);
             this.c(true);
-            discarded$1 = this.field_w.prepareImage(this.field_x, (java.awt.image.ImageObserver) ((Object) this.field_w));
+            this.field_w.prepareImage(this.field_x, (java.awt.image.ImageObserver) ((Object) this.field_w));
             this.c(true);
-            discarded$2 = this.field_w.prepareImage(this.field_x, (java.awt.image.ImageObserver) ((Object) this.field_w));
+            this.field_w.prepareImage(this.field_x, (java.awt.image.ImageObserver) ((Object) this.field_w));
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) ((Object) runtimeException), "li.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -166,7 +111,6 @@ final class li extends ce implements java.awt.image.ImageProducer {
 
     final void a(java.awt.Graphics param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
         java.awt.Shape var9 = null;
-        boolean discarded$0 = false;
         try {
             this.a(param2, param4, param3, true, param5);
             if (param7 >= -47) {
@@ -175,7 +119,7 @@ final class li extends ce implements java.awt.image.ImageProducer {
             }
             var9 = param0.getClip();
             param0.clipRect(param6, param1, param3, param5);
-            discarded$0 = param0.drawImage(this.field_x, -param4 + param6, -param2 + param1, (java.awt.image.ImageObserver) ((Object) this.field_w));
+            param0.drawImage(this.field_x, -param4 + param6, -param2 + param1, (java.awt.image.ImageObserver) ((Object) this.field_w));
             param0.setClip(var9);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) ((Object) runtimeException), "li.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');

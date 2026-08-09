@@ -39,7 +39,7 @@ final class vl {
     boolean[] field_q;
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3;
         var3 = param2 >>> 1762660287;
         if (param0 != 23841) {
           field_k = -119;

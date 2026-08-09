@@ -15,7 +15,7 @@ final class mi {
     static tg field_k;
 
     final void a(int param0, int param1, int param2) {
-        he var5 = null;
+        he var5;
         if (param0 >= this.field_f) {
           throw new IllegalArgumentException();
         } else {
@@ -593,8 +593,6 @@ final class mi {
         int stackIn_7_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_2_0 = 0;
         var4 = Bounce.field_N;
         try {
           L0: {
@@ -602,8 +600,7 @@ final class mi {
             if (param1 == 122) {
               L1: while (true) {
                 if ((param0 ^ -1) >= -1) {
-                  stackOut_6_0 = var3_int;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = var3_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -614,8 +611,7 @@ final class mi {
                 }
               }
             } else {
-              stackOut_2_0 = -76;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = -76;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -644,32 +640,12 @@ final class mi {
     }
 
     final static void a(int param0, int param1, he param2) {
-        int discarded$1 = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         ii var7 = null;
         ii var8 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        var6 = Bounce.field_N;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = Bounce.field_N;
         try {
-          L0: {
             var7 = hh.field_p;
             var8 = var7;
             var8.a(true, param0);
@@ -684,56 +660,16 @@ final class mi {
             var8.b(param2.field_q, (byte) 92);
             var8.b(param2.field_t, (byte) -50);
             var8.a(param2.field_g.length, (byte) 50);
-            var5 = 0;
-            L1: while (true) {
-              if (param2.field_g.length <= var5) {
-                L2: {
-                  if (param1 < -58) {
-                    break L2;
-                  } else {
-                    mi.b((byte) -128);
-                    break L2;
-                  }
-                }
-                discarded$1 = var8.b(var4, -1);
-                var8.b(-var4 + var8.field_h, true);
-                break L0;
-              } else {
+            for (var5 = 0; param2.field_g.length > var5; var5++) {
                 var7.b(param2.field_g[var5], (byte) -59);
-                var5++;
-                continue L1;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("mi.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L3;
-            } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L3;
+            if (param1 >= -58) {
+                mi.b((byte) -128);
             }
-          }
-          throw ii.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+            var8.b(var4, -1);
+            var8.b(-var4 + var8.field_h, true);
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) ((Object) runtimeException), "mi.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1059,10 +995,7 @@ final class mi {
     }
 
     final boolean a(int param0) {
-        int discarded$8 = 0;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == -1) {
           if (this.field_h == 0) {
             if (-85 != (this.field_a ^ -1)) {
@@ -1078,19 +1011,17 @@ final class mi {
             return true;
           }
         } else {
-          discarded$8 = mi.a(30, (byte) -44, -106);
+          mi.a(30, (byte) -44, -106);
           if (this.field_h == 0) {
             if (-85 == (this.field_a ^ -1)) {
               return true;
             } else {
               L0: {
                 if (-84 != (this.field_a ^ -1)) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }

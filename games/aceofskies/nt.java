@@ -17,17 +17,14 @@ final class nt extends ib implements bp {
 
     nt(kr param0, hd param1, int param2, int param3, int param4, byte[] param5) {
         super(param0, param1, la.field_h, false, param2 * param3 * param4);
-        boolean discarded$3 = false;
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        jagdx.PixelBuffer var15 = null;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        jagdx.PixelBuffer var15;
         L0: {
           this.field_h = param3;
           this.field_f = param4;
@@ -43,7 +40,7 @@ final class nt extends ib implements bp {
             var11 = var15.getSlicePitch();
             if (var10 == var11) {
               var15.a(param5, 0, 0, this.field_f * this.field_h * var9);
-              discarded$3 = this.field_g.UnlockBox(0);
+              this.field_g.UnlockBox(0);
               break L0;
             } else {
               var12 = var15.getRowPitch();
@@ -55,7 +52,7 @@ final class nt extends ib implements bp {
                     var13++;
                     continue L1;
                   } else {
-                    discarded$4 = this.field_g.UnlockBox(0);
+                    this.field_g.UnlockBox(0);
                     return;
                   }
                 }
@@ -75,7 +72,7 @@ final class nt extends ib implements bp {
                       }
                     }
                   } else {
-                    discarded$5 = this.field_g.UnlockBox(0);
+                    this.field_g.UnlockBox(0);
                     return;
                   }
                 }
@@ -86,10 +83,9 @@ final class nt extends ib implements bp {
     }
 
     public final void a(byte param0) {
-        jagdx.IDirect3DBaseTexture discarded$0 = null;
         this.field_c.a(param0 + 66, (nt) (this));
         if (param0 != -50) {
-            discarded$0 = this.b(15);
+            this.b(15);
         }
     }
 

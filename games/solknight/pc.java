@@ -22,7 +22,7 @@ final class pc {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1;
         if (wc.field_a <= 32) {
           ah.a((byte) -102, 0);
           if (SolKnight.field_L) {

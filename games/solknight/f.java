@@ -24,12 +24,10 @@ final class f extends rk {
     }
 
     final void a(int param0, byte[] param1) {
-        java.nio.Buffer discarded$0 = null;
-        java.nio.ByteBuffer discarded$1 = null;
         try {
             this.field_f = java.nio.ByteBuffer.allocateDirect(param1.length);
-            discarded$0 = this.field_f.position(param0);
-            discarded$1 = this.field_f.put(param1);
+            this.field_f.position(param0);
+            this.field_f.put(param1);
         } catch (RuntimeException runtimeException) {
             throw fc.a((Throwable) ((Object) runtimeException), "f.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -43,25 +41,20 @@ final class f extends rk {
     }
 
     final byte[] a(int param0) {
-        byte[] discarded$10 = null;
-        java.nio.Buffer discarded$11 = null;
-        java.nio.ByteBuffer discarded$12 = null;
-        java.nio.Buffer discarded$13 = null;
-        java.nio.ByteBuffer discarded$14 = null;
-        byte[] var2 = null;
-        byte[] var3 = null;
+        byte[] var2;
+        byte[] var3;
         if (param0 < 26) {
-          discarded$10 = this.a(-87);
+          this.a(-87);
           var3 = new byte[this.field_f.capacity()];
           var2 = var3;
-          discarded$11 = this.field_f.position(0);
-          discarded$12 = this.field_f.get(var3);
+          this.field_f.position(0);
+          this.field_f.get(var3);
           return var3;
         } else {
           var3 = new byte[this.field_f.capacity()];
           var2 = var3;
-          discarded$13 = this.field_f.position(0);
-          discarded$14 = this.field_f.get(var3);
+          this.field_f.position(0);
+          this.field_f.get(var3);
           return var3;
         }
     }

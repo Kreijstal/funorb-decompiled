@@ -17,10 +17,10 @@ final class bo {
 
     final static void a(int param0, int param1) {
         fa var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         og var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -89,7 +89,7 @@ final class bo {
     }
 
     final static int a(byte param0, int param1, int param2) {
-        int var3 = 0;
+        int var3;
         if (-2 == (param2 ^ -1)) {
           if (!sh.a(false, param1)) {
             var3 = 54 / ((43 - param0) / 45);

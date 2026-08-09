@@ -24,8 +24,6 @@ final class aj extends fa {
         bh stackIn_5_0 = null;
         byte[] stackIn_8_0 = null;
         byte[] stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -33,45 +31,29 @@ final class aj extends fa {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_9_0 = null;
-        byte[] stackOut_7_0 = null;
-        bh stackOut_4_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             if (param1 != null) {
               var3_int = -39 / ((param2 - -35) / 52);
               if (param1.length <= 136) {
                 if (param0) {
-                  stackOut_9_0 = re.a(true, param1);
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = re.a(true, param1);
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_7_0 = (byte[]) (param1);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = (byte[]) (param1);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
                 var4 = new bh();
                 ((gf) ((Object) var4)).a(param1, true);
-                stackOut_4_0 = (bh) (var4);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (bh) (var4);
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -80,27 +62,19 @@ final class aj extends fa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("aj.D(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("aj.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L1;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L1;
             }
           }
@@ -144,19 +118,11 @@ final class aj extends fa {
     }
 
     final static boolean b(byte param0) {
-        Object discarded$5 = null;
-        byte[] var2 = null;
+        byte[] var2;
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 <= -42) {
           if (!ik.field_a) {
             if (jg.a((byte) 78)) {
@@ -168,37 +134,32 @@ final class aj extends fa {
             if (!db.field_U) {
               L0: {
                 if (!jg.a((byte) 78)) {
-                  stackOut_20_0 = 0;
-                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_0 = 0;
                   break L0;
                 } else {
-                  stackOut_19_0 = 1;
-                  stackIn_21_0 = stackOut_19_0;
+                  stackIn_21_0 = 1;
                   break L0;
                 }
               }
               return stackIn_21_0 != 0;
             } else {
-              stackOut_15_0 = 1;
-              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_0 = 1;
               return stackIn_17_0 != 0;
             }
           }
         } else {
           var2 = (byte[]) null;
-          discarded$5 = aj.a(false, (byte[]) null, -36);
+          aj.a(false, (byte[]) null, -36);
           if (ik.field_a) {
             if (db.field_U) {
               return true;
             } else {
               L1: {
                 if (!jg.a((byte) 78)) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = 0;
                   break L1;
                 } else {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_0 = 1;
                   break L1;
                 }
               }
@@ -207,12 +168,10 @@ final class aj extends fa {
           } else {
             L2: {
               if (!jg.a((byte) 78)) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L2;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L2;
               }
             }

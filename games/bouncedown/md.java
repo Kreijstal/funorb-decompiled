@@ -12,12 +12,9 @@ final class md extends gj {
     static mk field_q;
 
     final static boolean a(int param0, char param1) {
-        int var2 = 0;
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_24_0 = 0;
+        int var2;
         var2 = 92 % ((param0 - 32) / 39);
         if (param1 < 48) {
           if (65 > param1) {
@@ -35,8 +32,7 @@ final class md extends gj {
             return false;
           } else {
             if (90 >= param1) {
-              stackOut_26_0 = 1;
-              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_0 = 1;
               return stackIn_28_0 != 0;
             } else {
               L1: {
@@ -47,14 +43,12 @@ final class md extends gj {
                     if (param1 > 122) {
                       break L2;
                     } else {
-                      stackOut_23_0 = 1;
-                      stackIn_25_0 = stackOut_23_0;
+                      stackIn_25_0 = 1;
                       break L1;
                     }
                   }
                 }
-                stackOut_24_0 = 0;
-                stackIn_25_0 = stackOut_24_0;
+                stackIn_25_0 = 0;
                 break L1;
               }
               return stackIn_25_0 != 0;

@@ -5,6 +5,8 @@ final class p {
     static String field_a;
 
     final static void a(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -21,8 +23,6 @@ final class p {
         hq var14 = null;
         hq var15 = null;
         int[] var16 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {

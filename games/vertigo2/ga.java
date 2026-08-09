@@ -26,7 +26,7 @@ final class ga extends rl {
     }
 
     public static void m(int param0) {
-        int[] var2 = null;
+        int[] var2;
         field_ib = null;
         field_jb = null;
         if (param0 != 11840) {

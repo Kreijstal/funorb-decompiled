@@ -9,7 +9,6 @@ abstract class vk {
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4, byte param5, int param6, int param7, int param8, int param9) {
         int[] var10 = null;
-        RuntimeException var10_ref = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -17,22 +16,13 @@ abstract class vk {
         int var15 = 0;
         int var16 = 0;
         int[] var17 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var10_ref = null;
         var16 = stellarshard.field_B;
         try {
           L0: {
@@ -69,27 +59,19 @@ abstract class vk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var10_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var10_ref);
-            stackOut_6_1 = new StringBuilder().append("vk.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var10_ref);
+
+            stackIn_8_1 = new StringBuilder().append("vk.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -116,8 +98,6 @@ abstract class vk {
 
     final int a(int param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == 17201) {
             break L0;
@@ -132,16 +112,14 @@ abstract class vk {
               break L2;
             } else {
               if (-1 > (this.field_a.length ^ -1)) {
-                stackOut_6_0 = this.field_a[this.field_a.length - 1].field_c - this.field_a[0].field_b;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = this.field_a[this.field_a.length - 1].field_c - this.field_a[0].field_b;
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0;
@@ -149,33 +127,23 @@ abstract class vk {
 
     final int a(String param0, boolean param1, int param2, int param3) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int stackIn_15_0 = 0;
-        int stackIn_17_0 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
+        int stackIn_15_1 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        int stackOut_14_0 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException var5 = null;
         var10 = stellarshard.field_B;
         try {
           L0: {
@@ -186,20 +154,20 @@ abstract class vk {
             L1: while (true) {
               if (var7 <= var8) {
                 if (var5_int <= 0) {
-                  stackOut_16_0 = 0;
-                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_18_0 = 0;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_14_0 = (param2 - param3 << 1616124776) / var5_int;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = param2 - param3 << 1616124776;
+                  stackIn_15_1 = var5_int;
+                  stackIn_16_0 = stackIn_15_0 / stackIn_15_1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
               } else {
                 L2: {
                   var9 = param0.charAt(var8);
-                  if (var9 != 60) {
+                  if ((var9 ^ -1) != -61) {
                     if (62 != var9) {
                       if (var6 == 0) {
                         if (var9 == 32) {
@@ -230,36 +198,28 @@ abstract class vk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var5);
-            stackOut_18_1 = new StringBuilder().append("vk.I(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_21_0 = (RuntimeException) (var5);
+
+            stackIn_21_1 = new StringBuilder().append("vk.I(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L3;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L3;
             }
           }
-          throw ma.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_15_0;
+          return stackIn_16_0;
         } else {
-          return stackIn_17_0;
+          return stackIn_18_0;
         }
     }
 
@@ -281,11 +241,11 @@ abstract class vk {
     }
 
     final int a(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        uj var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+        int var4;
+        int var5;
+        uj var6;
+        int var7;
+        int var8;
         L0: {
           var8 = stellarshard.field_B;
           if (null == this.field_a) {
@@ -345,13 +305,13 @@ abstract class vk {
     }
 
     final int a(boolean param0) {
-        int var2 = 0;
-        uj[] var3 = null;
-        int var4 = 0;
-        uj var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int[] var8 = null;
+        int var2;
+        uj[] var3;
+        int var4;
+        uj var5;
+        int var7;
+        int[] var8;
+        int var6;
         L0: {
           var7 = stellarshard.field_B;
           if (!param0) {
@@ -401,11 +361,11 @@ abstract class vk {
     }
 
     final static void a(byte param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         nf var4 = null;
         hk var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = stellarshard.field_B;
         try {
           L0: {

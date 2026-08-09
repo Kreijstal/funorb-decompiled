@@ -24,21 +24,21 @@ final class ji {
     }
 
     final static void b(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         ca var4_ref_ca = null;
         int var4 = 0;
-        om var5_ref_om = null;
         int var5 = 0;
+        om var5_ref_om = null;
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
         hb var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -87,7 +87,7 @@ final class ji {
                         break L5;
                       } else {
                         L6: {
-                          if (var3 != var5_ref_om.field_n) {
+                          if ((var3 ^ -1) != (var5_ref_om.field_n ^ -1)) {
                             break L6;
                           } else {
                             if (var4 == var5_ref_om.field_v) {

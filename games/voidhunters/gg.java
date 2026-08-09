@@ -16,24 +16,14 @@ final class gg extends le {
 
     final void a(int param0, int param1, ds param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var4 = null;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -70,27 +60,19 @@ final class gg extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var4);
-            stackOut_12_1 = new StringBuilder().append("gg.F(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var4);
+
+            stackIn_14_1 = new StringBuilder().append("gg.F(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }
@@ -99,18 +81,18 @@ final class gg extends le {
     }
 
     final int[] a(int param0, boolean param1) {
-        int[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
+        int[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int[] var12;
+        int[] var13;
+        int[] var14;
         L0: {
           var11 = VoidHunters.field_G;
           var14 = this.field_f.a((byte) -80, param0);
@@ -128,7 +110,7 @@ final class gg extends le {
                 L2: {
                   var8 = grb.field_l[var6];
                   var9 = var8 + -2048 >> -1734398271;
-                  if (this.field_k == 0) {
+                  if ((this.field_k ^ -1) == -1) {
                     var7 = this.field_l * (var8 - var4);
                     break L2;
                   } else {
@@ -141,6 +123,7 @@ final class gg extends le {
                 L3: {
                   var7 = var7 - (-4096 & var7);
                   if (this.field_i == 0) {
+                    var14 = var13;
                     var7 = 4096 + qta.field_o[255 & var7 >> 885122980] >> 785270529;
                     break L3;
                   } else {
@@ -157,12 +140,11 @@ final class gg extends le {
                       var7 = -var7 + 2048 << -1650733919;
                       break L3;
                     } else {
-                      var14[var6] = var7;
-                      var6++;
-                      continue L1;
+                      break L3;
                     }
                   }
                 }
+                var14 = var13;
                 var14[var6] = var7;
                 var6++;
                 continue L1;
@@ -180,7 +162,7 @@ final class gg extends le {
             break L5;
           }
         }
-        return var3;
+        return var12;
     }
 
     public gg() {

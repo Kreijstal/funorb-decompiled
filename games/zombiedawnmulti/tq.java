@@ -40,7 +40,7 @@ final class tq extends cj {
     }
 
     private final boolean a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
-        int var8 = 0;
+        int var8;
         if (param0) {
           var8 = 1;
           this.field_Gb.a((byte) 109, this.field_Jb.field_z, param1, var8 != 0);
@@ -102,9 +102,9 @@ final class tq extends cj {
     }
 
     final boolean a(int param0, boolean param1, int param2, boolean param3, int param4, int param5) {
-        boolean discarded$2 = false;
+        boolean discarded$1 = false;
         if (param5 >= -22) {
-          discarded$2 = this.a(false, -109, -80, -22, -26, true, -105);
+          discarded$1 = this.a(false, -109, -80, -22, -26, true, -105);
           return this.a(param3, param0, this.field_Jb.field_z, param2, -4719, param1, param4);
         } else {
           return this.a(param3, param0, this.field_Jb.field_z, param2, -4719, param1, param4);

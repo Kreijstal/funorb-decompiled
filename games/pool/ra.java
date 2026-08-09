@@ -47,7 +47,7 @@ final class ra {
         var5.a(true, param1.field_m);
         var5.a(true, param1.field_s);
         var5.a(true, param1.field_p);
-        int discarded$45 = var5.d(-1, var4);
+        var5.d(-1, var4);
         if (param2 > -23) {
             return;
         }

@@ -20,8 +20,6 @@ final class ke {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -29,26 +27,14 @@ final class ke {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 == 21106) {
-              stackOut_3_0 = ci.a(-82, param0, 0, param2);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = ci.a(-82, param0, 0, param2);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = -122;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = -122;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -57,27 +43,19 @@ final class ke {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("ke.F(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("ke.F(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -101,12 +79,12 @@ final class ke {
     }
 
     private final void a(boolean param0) {
-        int dupTemp$4 = 0;
-        int dupTemp$5 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int dupTemp$1 = 0;
+        int dupTemp$2 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = Chess.field_G;
           if (param0) {
@@ -116,9 +94,9 @@ final class ke {
             break L0;
           }
         }
-        int fieldTemp$3 = this.field_h + 1;
+        int fieldTemp$0 = this.field_h + 1;
         this.field_h = this.field_h + 1;
-        this.field_f = this.field_f + fieldTemp$3;
+        this.field_f = this.field_f + fieldTemp$0;
         var2 = 0;
         L1: while (true) {
           if ((var2 ^ -1) <= -257) {
@@ -145,12 +123,12 @@ final class ke {
               }
             }
             this.field_m = this.field_m + this.field_j[255 & var2 + 128];
-            dupTemp$4 = this.field_m + this.field_j[ce.a(1020, var3) >> 898509890] - -this.field_f;
-            var4 = dupTemp$4;
-            this.field_j[var2] = dupTemp$4;
-            dupTemp$5 = var3 + this.field_j[ce.a(var4, 261311) >> -1336342712 >> 413519362];
-            this.field_f = dupTemp$5;
-            this.field_a[var2] = dupTemp$5;
+            dupTemp$1 = this.field_m + this.field_j[ce.a(1020, var3) >> 898509890] - -this.field_f;
+            var4 = dupTemp$1;
+            this.field_j[var2] = dupTemp$1;
+            dupTemp$2 = var3 + this.field_j[ce.a(var4, 261311) >> -1336342712 >> 413519362];
+            this.field_f = dupTemp$2;
+            this.field_a[var2] = dupTemp$2;
             var2++;
             continue L1;
           }
@@ -159,7 +137,6 @@ final class ke {
 
     final static void a(int param0, int param1, String param2, int param3, int param4, String param5) {
         int var7 = 0;
-        int discarded$0 = 0;
         nk var8 = qn.field_U;
         var8.f(param3, param0 ^ -9832);
         var8.field_l = var8.field_l + 1;
@@ -175,7 +152,7 @@ final class ke {
             if (param5 == null) {
                 var8.b(param4, 119);
             } else {
-                discarded$0 = rm.a(var8, param5, param0 ^ 16701600);
+                rm.a(var8, param5, param0 ^ 16701600);
             }
             var8.a(-var7 + var8.field_l, -1);
         } catch (RuntimeException runtimeException) {
@@ -184,139 +161,21 @@ final class ke {
     }
 
     private final void b(byte param0) {
-        int discarded$1 = 0;
         int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        byte[] var12 = null;
-        L0: {
-          var11 = Chess.field_G;
-          if (param0 == 41) {
-            break L0;
-          } else {
-            var12 = (byte[]) null;
-            discarded$1 = ke.a((byte[]) null, -20, 3);
-            break L0;
-          }
+        int var11 = Chess.field_G;
+        if (param0 != 41) {
+            byte[] var12 = (byte[]) null;
+            ke.a((byte[]) null, -20, 3);
         }
-        var5 = -1640531527;
-        var9 = -1640531527;
-        var3 = -1640531527;
-        var4 = -1640531527;
-        var6 = -1640531527;
-        var8 = -1640531527;
-        var7 = -1640531527;
-        var10 = -1640531527;
-        var2 = 0;
-        L1: while (true) {
-          if (4 <= var2) {
-            var2 = 0;
-            L2: while (true) {
-              if (256 <= var2) {
-                var2 = 0;
-                L3: while (true) {
-                  if (-257 >= (var2 ^ -1)) {
-                    this.a(true);
-                    this.field_k = 256;
-                    return;
-                  } else {
-                    var8 = var8 + this.field_j[5 + var2];
-                    var6 = var6 + this.field_j[3 + var2];
-                    var7 = var7 + this.field_j[var2 - -4];
-                    var4 = var4 + this.field_j[var2 - -1];
-                    var10 = var10 + this.field_j[var2 + 7];
-                    var9 = var9 + this.field_j[var2 + 6];
-                    var3 = var3 + this.field_j[var2];
-                    var5 = var5 + this.field_j[2 + var2];
-                    var3 = var3 ^ var4 << -724429525;
-                    var6 = var6 + var3;
-                    var4 = var4 + var5;
-                    var4 = var4 ^ var5 >>> -1268769374;
-                    var5 = var5 + var6;
-                    var7 = var7 + var4;
-                    var5 = var5 ^ var6 << -369173688;
-                    var6 = var6 + var7;
-                    var8 = var8 + var5;
-                    var6 = var6 ^ var7 >>> 2110567152;
-                    var7 = var7 + var8;
-                    var9 = var9 + var6;
-                    var7 = var7 ^ var8 << -816920182;
-                    var8 = var8 + var9;
-                    var10 = var10 + var7;
-                    var8 = var8 ^ var9 >>> -1663832924;
-                    var3 = var3 + var8;
-                    var9 = var9 + var10;
-                    var9 = var9 ^ var10 << -1715727864;
-                    var4 = var4 + var9;
-                    var10 = var10 + var3;
-                    var10 = var10 ^ var3 >>> 1636059721;
-                    var5 = var5 + var10;
-                    var3 = var3 + var4;
-                    this.field_j[var2] = var3;
-                    this.field_j[var2 - -1] = var4;
-                    this.field_j[var2 - -2] = var5;
-                    this.field_j[3 + var2] = var6;
-                    this.field_j[var2 - -4] = var7;
-                    this.field_j[var2 - -5] = var8;
-                    this.field_j[6 + var2] = var9;
-                    this.field_j[var2 - -7] = var10;
-                    var2 += 8;
-                    continue L3;
-                  }
-                }
-              } else {
-                var6 = var6 + this.field_a[3 + var2];
-                var5 = var5 + this.field_a[2 + var2];
-                var9 = var9 + this.field_a[var2 - -6];
-                var8 = var8 + this.field_a[var2 + 5];
-                var4 = var4 + this.field_a[var2 + 1];
-                var10 = var10 + this.field_a[7 + var2];
-                var3 = var3 + this.field_a[var2];
-                var7 = var7 + this.field_a[4 + var2];
-                var3 = var3 ^ var4 << 1306040267;
-                var6 = var6 + var3;
-                var4 = var4 + var5;
-                var4 = var4 ^ var5 >>> 871329634;
-                var7 = var7 + var4;
-                var5 = var5 + var6;
-                var5 = var5 ^ var6 << -1968662872;
-                var6 = var6 + var7;
-                var8 = var8 + var5;
-                var6 = var6 ^ var7 >>> 947956912;
-                var9 = var9 + var6;
-                var7 = var7 + var8;
-                var7 = var7 ^ var8 << -2072973654;
-                var8 = var8 + var9;
-                var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> 930582820;
-                var9 = var9 + var10;
-                var3 = var3 + var8;
-                var9 = var9 ^ var10 << -1038043256;
-                var4 = var4 + var9;
-                var10 = var10 + var3;
-                var10 = var10 ^ var3 >>> -480895831;
-                var5 = var5 + var10;
-                var3 = var3 + var4;
-                this.field_j[var2] = var3;
-                this.field_j[1 + var2] = var4;
-                this.field_j[var2 - -2] = var5;
-                this.field_j[var2 + 3] = var6;
-                this.field_j[var2 - -4] = var7;
-                this.field_j[var2 - -5] = var8;
-                this.field_j[6 + var2] = var9;
-                this.field_j[var2 - -7] = var10;
-                var2 += 8;
-                continue L2;
-              }
-            }
-          } else {
+        int var5 = -1640531527;
+        int var9 = -1640531527;
+        int var3 = -1640531527;
+        int var4 = -1640531527;
+        int var6 = -1640531527;
+        int var8 = -1640531527;
+        int var7 = -1640531527;
+        int var10 = -1640531527;
+        for (var2 = 0; 4 > var2; var2++) {
             var3 = var3 ^ var4 << -274702325;
             var4 = var4 + var5;
             var6 = var6 + var3;
@@ -341,17 +200,99 @@ final class ke {
             var10 = var10 ^ var3 >>> 1765238761;
             var5 = var5 + var10;
             var3 = var3 + var4;
-            var2++;
-            continue L1;
-          }
         }
+        for (var2 = 0; 256 > var2; var2 += 8) {
+            var6 = var6 + this.field_a[3 + var2];
+            var5 = var5 + this.field_a[2 + var2];
+            var9 = var9 + this.field_a[var2 - -6];
+            var8 = var8 + this.field_a[var2 + 5];
+            var4 = var4 + this.field_a[var2 + 1];
+            var10 = var10 + this.field_a[7 + var2];
+            var3 = var3 + this.field_a[var2];
+            var7 = var7 + this.field_a[4 + var2];
+            var3 = var3 ^ var4 << 1306040267;
+            var6 = var6 + var3;
+            var4 = var4 + var5;
+            var4 = var4 ^ var5 >>> 871329634;
+            var7 = var7 + var4;
+            var5 = var5 + var6;
+            var5 = var5 ^ var6 << -1968662872;
+            var6 = var6 + var7;
+            var8 = var8 + var5;
+            var6 = var6 ^ var7 >>> 947956912;
+            var9 = var9 + var6;
+            var7 = var7 + var8;
+            var7 = var7 ^ var8 << -2072973654;
+            var8 = var8 + var9;
+            var10 = var10 + var7;
+            var8 = var8 ^ var9 >>> 930582820;
+            var9 = var9 + var10;
+            var3 = var3 + var8;
+            var9 = var9 ^ var10 << -1038043256;
+            var4 = var4 + var9;
+            var10 = var10 + var3;
+            var10 = var10 ^ var3 >>> -480895831;
+            var5 = var5 + var10;
+            var3 = var3 + var4;
+            this.field_j[var2] = var3;
+            this.field_j[1 + var2] = var4;
+            this.field_j[var2 - -2] = var5;
+            this.field_j[var2 + 3] = var6;
+            this.field_j[var2 - -4] = var7;
+            this.field_j[var2 - -5] = var8;
+            this.field_j[6 + var2] = var9;
+            this.field_j[var2 - -7] = var10;
+        }
+        for (var2 = 0; -257 < (var2 ^ -1); var2 += 8) {
+            var8 = var8 + this.field_j[5 + var2];
+            var6 = var6 + this.field_j[3 + var2];
+            var7 = var7 + this.field_j[var2 - -4];
+            var4 = var4 + this.field_j[var2 - -1];
+            var10 = var10 + this.field_j[var2 + 7];
+            var9 = var9 + this.field_j[var2 + 6];
+            var3 = var3 + this.field_j[var2];
+            var5 = var5 + this.field_j[2 + var2];
+            var3 = var3 ^ var4 << -724429525;
+            var6 = var6 + var3;
+            var4 = var4 + var5;
+            var4 = var4 ^ var5 >>> -1268769374;
+            var5 = var5 + var6;
+            var7 = var7 + var4;
+            var5 = var5 ^ var6 << -369173688;
+            var6 = var6 + var7;
+            var8 = var8 + var5;
+            var6 = var6 ^ var7 >>> 2110567152;
+            var7 = var7 + var8;
+            var9 = var9 + var6;
+            var7 = var7 ^ var8 << -816920182;
+            var8 = var8 + var9;
+            var10 = var10 + var7;
+            var8 = var8 ^ var9 >>> -1663832924;
+            var3 = var3 + var8;
+            var9 = var9 + var10;
+            var9 = var9 ^ var10 << -1715727864;
+            var4 = var4 + var9;
+            var10 = var10 + var3;
+            var10 = var10 ^ var3 >>> 1636059721;
+            var5 = var5 + var10;
+            var3 = var3 + var4;
+            this.field_j[var2] = var3;
+            this.field_j[var2 - -1] = var4;
+            this.field_j[var2 - -2] = var5;
+            this.field_j[3 + var2] = var6;
+            this.field_j[var2 - -4] = var7;
+            this.field_j[var2 - -5] = var8;
+            this.field_j[6 + var2] = var9;
+            this.field_j[var2 - -7] = var10;
+        }
+        this.a(true);
+        this.field_k = 256;
     }
 
     final static lb a(int param0) {
-        int discarded$0 = 0;
         if (param0 != -27212) {
             byte[] var2 = (byte[]) null;
-            discarded$0 = ke.a((byte[]) null, 98, 120);
+            ke.a((byte[]) null, 98, 120);
         }
         return rm.field_M;
     }

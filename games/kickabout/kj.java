@@ -14,19 +14,11 @@ final class kj {
     }
 
     final static ot a(int param0, int param1, up param2, int param3, int param4, boolean param5) {
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        long var6_long = 0L;
-        vs var7 = null;
-        int var8 = 0;
-        boolean stackIn_8_0 = false;
         boolean stackIn_9_0 = false;
         boolean stackIn_10_0 = false;
         int stackIn_10_1 = 0;
         ot stackIn_13_0 = null;
         ot stackIn_21_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -34,21 +26,11 @@ final class kj {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ot stackOut_20_0 = null;
-        boolean stackOut_7_0 = false;
-        boolean stackOut_9_0 = false;
-        int stackOut_9_1 = 0;
-        boolean stackOut_8_0 = false;
-        int stackOut_8_1 = 0;
-        ot stackOut_12_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        int var6_int = 0;
+        long var6_long = 0L;
+        RuntimeException var6 = null;
+        vs var7 = null;
+        int var8 = 0;
         var8 = Kickabout.field_G;
         try {
           L0: {
@@ -61,8 +43,7 @@ final class kj {
                     bk.field_b = var6_long;
                     ue.field_f[63].a(param1 + 184, param3, param0, param2, param5, param4);
                     dc.a(63, (byte) 88);
-                    stackOut_20_0 = ue.field_f[0].field_h;
-                    stackIn_21_0 = stackOut_20_0;
+                    stackIn_21_0 = ue.field_f[0].field_h;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -87,27 +68,21 @@ final class kj {
                           break L2;
                         } else {
                           L3: {
-                            stackOut_7_0 = var7.field_j;
-                            stackIn_9_0 = stackOut_7_0;
-                            stackIn_8_0 = stackOut_7_0;
+                            stackIn_9_0 = var7.field_j;
+
                             if (param5) {
-                              stackOut_9_0 = stackIn_9_0;
-                              stackOut_9_1 = 0;
-                              stackIn_10_0 = stackOut_9_0;
-                              stackIn_10_1 = stackOut_9_1;
+                              stackIn_10_0 = stackIn_9_0;
+                              stackIn_10_1 = 0;
                               break L3;
                             } else {
-                              stackOut_8_0 = stackIn_8_0;
-                              stackOut_8_1 = 1;
-                              stackIn_10_0 = stackOut_8_0;
-                              stackIn_10_1 = stackOut_8_1;
+                              stackIn_10_0 = stackIn_9_0;
+                              stackIn_10_1 = 1;
                               break L3;
                             }
                           }
                           if ((stackIn_10_0 ? 1 : 0) != stackIn_10_1) {
                             dc.a(var6_int, (byte) 46);
-                            stackOut_12_0 = ue.field_f[0].field_h;
-                            stackIn_13_0 = stackOut_12_0;
+                            stackIn_13_0 = ue.field_f[0].field_h;
                             decompiledRegionSelector0 = 0;
                             break L0;
                           } else {
@@ -127,27 +102,19 @@ final class kj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var6);
-            stackOut_22_1 = new StringBuilder().append("kj.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var6);
+
+            stackIn_24_1 = new StringBuilder().append("kj.B(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L4;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L4;
             }
           }
@@ -161,7 +128,7 @@ final class kj {
     }
 
     final static void a(byte param0) {
-        wh discarded$0 = sp.c(44, -96);
+        sp.c(44, -96);
         int var1 = 45 % ((param0 - -37) / 58);
     }
 
@@ -183,13 +150,13 @@ final class kj {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         var10 = Kickabout.field_G;
         try {
           L0: {

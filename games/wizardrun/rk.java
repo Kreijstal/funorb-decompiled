@@ -34,18 +34,18 @@ class rk extends wl {
     }
 
     final static void c(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        ie var4_ref_ie = null;
         int var4 = 0;
+        ie var4_ref_ie = null;
         Object var5 = null;
         int var6 = 0;
         tc var8 = null;
         mg var9 = null;
         byte[] var13 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var6 = wizardrun.field_H;
         try {
           L0: {

@@ -24,8 +24,6 @@ final class vb extends fb {
         int stackIn_28_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_34_0 = 0;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_38_0 = null;
@@ -33,27 +31,11 @@ final class vb extends fb {
         String stackIn_38_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
         var8 = ZombieDawn.field_J;
         try {
           L0: {
             if (param1 == null) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -74,8 +56,7 @@ final class vb extends fb {
                           break L2;
                         } else {
                           if (vi.a(param0 + 31153, var4.charAt(0))) {
-                            stackOut_18_0 = 0;
-                            stackIn_19_0 = stackOut_18_0;
+                            stackIn_19_0 = 0;
                             decompiledRegionSelector0 = 3;
                             break L0;
                           } else {
@@ -85,13 +66,11 @@ final class vb extends fb {
                               L3: while (true) {
                                 if (var6 >= param1.length()) {
                                   if (0 >= var5) {
-                                    stackOut_33_0 = 1;
-                                    stackIn_34_0 = stackOut_33_0;
+                                    stackIn_34_0 = 1;
                                     decompiledRegionSelector0 = 6;
                                     break L0;
                                   } else {
-                                    stackOut_31_0 = 0;
-                                    stackIn_32_0 = stackOut_31_0;
+                                    stackIn_32_0 = 0;
                                     decompiledRegionSelector0 = 5;
                                     break L0;
                                   }
@@ -113,8 +92,7 @@ final class vb extends fb {
                                       if (param2) {
                                         break L5;
                                       } else {
-                                        stackOut_27_0 = 0;
-                                        stackIn_28_0 = stackOut_27_0;
+                                        stackIn_28_0 = 0;
                                         decompiledRegionSelector0 = 4;
                                         break L0;
                                       }
@@ -131,15 +109,13 @@ final class vb extends fb {
                         }
                       }
                     }
-                    stackOut_13_0 = 0;
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = 0;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 }
               }
-              stackOut_8_0 = 0;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -148,27 +124,19 @@ final class vb extends fb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_35_0 = (RuntimeException) (var3);
-            stackOut_35_1 = new StringBuilder().append("vb.C(").append(param0).append(',');
-            stackIn_37_0 = stackOut_35_0;
-            stackIn_37_1 = stackOut_35_1;
-            stackIn_36_0 = stackOut_35_0;
-            stackIn_36_1 = stackOut_35_1;
+            stackIn_37_0 = (RuntimeException) (var3);
+
+            stackIn_37_1 = new StringBuilder().append("vb.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "null";
-              stackIn_38_0 = stackOut_37_0;
-              stackIn_38_1 = stackOut_37_1;
-              stackIn_38_2 = stackOut_37_2;
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "null";
               break L6;
             } else {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "{...}";
-              stackIn_38_0 = stackOut_36_0;
-              stackIn_38_1 = stackOut_36_1;
-              stackIn_38_2 = stackOut_36_2;
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "{...}";
               break L6;
             }
           }
@@ -202,74 +170,38 @@ final class vb extends fb {
     }
 
     final void g(int param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        java.applet.Applet var3 = null;
-        L0: {
-          if (param0 >= 95) {
-            break L0;
-          } else {
-            var3 = (java.applet.Applet) null;
+        int fieldTemp$1 = 0;
+        if (param0 < 95) {
+            java.applet.Applet var3 = (java.applet.Applet) null;
             vb.a((byte) 55, (java.applet.Applet) null);
-            break L0;
-          }
         }
-        L1: {
-          fieldTemp$4 = this.field_F;
-          this.field_F = this.field_F + 1;
-          if (fieldTemp$4 <= 17) {
-            break L1;
-          } else {
+        int fieldTemp$0 = this.field_F;
+        this.field_F = this.field_F + 1;
+        if (fieldTemp$0 > 17) {
             this.field_F = 0;
-            fieldTemp$5 = this.field_G + 1;
+            fieldTemp$1 = this.field_G + 1;
             this.field_G = this.field_G + 1;
-            if (2 > fieldTemp$5) {
-              break L1;
-            } else {
-              this.field_G = 0;
-              break L1;
+            if (2 <= fieldTemp$1) {
+                this.field_G = 0;
             }
-          }
         }
-        L2: {
-          L3: {
-            this.field_E = this.field_E + this.field_H;
-            if (-161 > (this.field_E ^ -1)) {
-              break L3;
-            } else {
-              if ((this.field_E ^ -1) <= -81) {
-                break L2;
-              } else {
-                break L3;
-              }
-            }
-          }
-          this.field_H = -this.field_H;
-          break L2;
+        this.field_E = this.field_E + this.field_H;
+        if (-161 > (this.field_E ^ -1) || (this.field_E ^ -1) > -81) {
+            this.field_H = -this.field_H;
         }
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
         try {
             java.net.URL var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            RuntimeException stackIn_6_0 = null;
-            StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             String stackIn_8_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_5_0 = null;
-            StringBuilder stackOut_5_1 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            String stackOut_6_2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             try {
               L0: {
                 try {
@@ -300,27 +232,19 @@ final class vb extends fb {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_5_0 = (RuntimeException) (var2_ref2);
-                stackOut_5_1 = new StringBuilder().append("vb.D(").append(param0).append(',');
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
+                stackIn_7_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_7_1 = new StringBuilder().append("vb.D(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "null";
-                  stackIn_8_0 = stackOut_7_0;
-                  stackIn_8_1 = stackOut_7_1;
-                  stackIn_8_2 = stackOut_7_2;
+                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+                  stackIn_8_2 = "null";
                   break L4;
                 } else {
-                  stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-                  stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-                  stackOut_6_2 = "{...}";
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_8_1 = stackOut_6_1;
-                  stackIn_8_2 = stackOut_6_2;
+                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+                  stackIn_8_2 = "{...}";
                   break L4;
                 }
               }
@@ -350,151 +274,19 @@ final class vb extends fb {
     }
 
     final void a(byte param0, wk param1) {
-        RuntimeException runtimeException = null;
-        int var3_int = 0;
-        int var4 = 0;
-        wk var5 = null;
-        vn stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        int stackIn_9_2 = 0;
-        vn stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
-        int stackIn_10_2 = 0;
-        vn stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        int stackIn_11_2 = 0;
-        int stackIn_11_3 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        vn stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
-        vn stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        int stackOut_10_2 = 0;
-        int stackOut_10_3 = 0;
-        vn stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        int stackOut_9_3 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        try {
-          L0: {
-            L1: {
-              var3_int = param1.a(this.a(true), (byte) -97) + -24;
-              var4 = -48 + param1.a(this.f(237239984), 0);
-              if (-48 > var3_int) {
-                break L1;
-              } else {
-                if (-48 > var4) {
-                  break L1;
-                } else {
-                  if (qj.field_d < var3_int) {
-                    break L1;
-                  } else {
-                    if (var4 <= me.field_Bb) {
-                      L2: {
-                        if (param0 < -76) {
-                          break L2;
-                        } else {
-                          var5 = (wk) null;
-                          this.a((byte) 89, (wk) null);
-                          break L2;
-                        }
-                      }
-                      L3: {
-                        stackOut_8_0 = ad.field_g[this.field_t][this.field_G + 32];
-                        stackOut_8_1 = 0;
-                        stackOut_8_2 = 339;
-                        stackIn_10_0 = stackOut_8_0;
-                        stackIn_10_1 = stackOut_8_1;
-                        stackIn_10_2 = stackOut_8_2;
-                        stackIn_9_0 = stackOut_8_0;
-                        stackIn_9_1 = stackOut_8_1;
-                        stackIn_9_2 = stackOut_8_2;
-                        if (this.field_t != 0) {
-                          stackOut_10_0 = (vn) ((Object) stackIn_10_0);
-                          stackOut_10_1 = stackIn_10_1;
-                          stackOut_10_2 = stackIn_10_2;
-                          stackOut_10_3 = 0;
-                          stackIn_11_0 = stackOut_10_0;
-                          stackIn_11_1 = stackOut_10_1;
-                          stackIn_11_2 = stackOut_10_2;
-                          stackIn_11_3 = stackOut_10_3;
-                          break L3;
-                        } else {
-                          stackOut_9_0 = (vn) ((Object) stackIn_9_0);
-                          stackOut_9_1 = stackIn_9_1;
-                          stackOut_9_2 = stackIn_9_2;
-                          stackOut_9_3 = 1;
-                          stackIn_11_0 = stackOut_9_0;
-                          stackIn_11_1 = stackOut_9_1;
-                          stackIn_11_2 = stackOut_9_2;
-                          stackIn_11_3 = stackOut_9_3;
-                          break L3;
-                        }
-                      }
-                      fj.a(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3 != 0).e(var3_int + -3, var4 - 3, this.field_E);
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-              }
-            }
-            decompiledRegionSelector0 = 0;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (runtimeException);
-            stackOut_13_1 = new StringBuilder().append("vb.B(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
-            if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L4;
-            } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L4;
-            }
-          }
-          throw sh.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+        int var3_int = param1.a(this.a(true), (byte) -97) + -24;
+        int var4 = -48 + param1.a(this.f(237239984), 0);
+        if (-48 > var3_int || -48 > var4 || qj.field_d < var3_int || var4 > me.field_Bb) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            if (param0 >= -76) {
+                wk var5 = (wk) null;
+                this.a((byte) 89, (wk) null);
+            }
+            fj.a(ad.field_g[this.field_t][this.field_G + 32], 0, 339, this.field_t == 0 ? true : false).e(var3_int + -3, var4 - 3, this.field_E);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) ((Object) runtimeException), "vb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

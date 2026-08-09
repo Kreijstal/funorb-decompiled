@@ -57,8 +57,6 @@ final class vc extends rg implements ie {
 
     final static boolean e(boolean param0) {
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
         if (!param0) {
           if (-11 >= (gl.field_y ^ -1)) {
             if (ge.field_x) {
@@ -66,12 +64,10 @@ final class vc extends rg implements ie {
             } else {
               L0: {
                 if (i.b(true)) {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 0;
                   break L0;
                 } else {
-                  stackOut_6_0 = 1;
-                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_0 = 1;
                   break L0;
                 }
               }

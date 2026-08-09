@@ -13,53 +13,38 @@ abstract class ko extends ms {
 
     final static void a(int param0, int param1) {
         ms var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         hg var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
             var4 = (hg) ((Object) hi.field_f.b(-101));
             L1: while (true) {
-              L2: {
-                L3: {
-                  if (var4 == null) {
-                    break L3;
+              if (var4 == null) {
+                L2: {
+                  if (param0 == 0) {
+                    break L2;
                   } else {
-                    pm.a(param1, 1, var4);
-                    var4 = (hg) ((Object) hi.field_f.d((byte) 18));
-                    if (var3 != 0) {
-                      break L2;
-                    } else {
-                      if (var3 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
-                    }
+                    field_m = (jn) null;
+                    break L2;
                   }
                 }
-                if (param0 == 0) {
-                  break L2;
-                } else {
-                  field_m = (jn) null;
-                  break L2;
-                }
-              }
-              var2 = wr.field_E.b(-105);
-              L4: while (true) {
-                if (var2 == null) {
-                  break L0;
-                } else {
-                  ou.a(125, param1);
-                  var2 = wr.field_E.d((byte) 18);
-                  if (var3 == 0) {
-                    continue L4;
+                var2 = wr.field_E.b(-105);
+                L3: while (true) {
+                  if (var2 == null) {
+                    break L0;
                   } else {
-                    return;
+                    ou.a(125, param1);
+                    var2 = wr.field_E.d((byte) 18);
+                    continue L3;
                   }
                 }
+              } else {
+                pm.a(param1, 1, var4);
+                var4 = (hg) ((Object) hi.field_f.d((byte) 18));
+                continue L1;
               }
             }
           }
@@ -94,9 +79,8 @@ abstract class ko extends ms {
     }
 
     final int c(int param0) {
-        int discarded$0 = 0;
         if (param0 != 0) {
-            discarded$0 = this.c(false);
+            this.c(false);
             return this.field_q;
         }
         return this.field_q;

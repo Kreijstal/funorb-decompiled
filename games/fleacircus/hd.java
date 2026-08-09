@@ -12,13 +12,13 @@ abstract class hd {
     static String field_d;
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        java.awt.Component var9 = null;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        java.awt.Component var9;
         var8 = fleas.field_A ? 1 : 0;
         if (vg.field_z >= 0) {
           L0: {
@@ -528,11 +528,8 @@ abstract class hd {
         int var6 = 0;
         java.awt.Component var7 = null;
         wh stackIn_6_0 = null;
-        wh stackIn_10_0 = null;
         wh stackIn_12_0 = null;
         wh stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -540,18 +537,6 @@ abstract class hd {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        wh stackOut_5_0 = null;
-        wh stackOut_9_0 = null;
-        wh stackOut_11_0 = null;
-        wh stackOut_14_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         var6 = fleas.field_A ? 1 : 0;
         try {
           L0: {
@@ -566,8 +551,7 @@ abstract class hd {
               }
             }
             if (var2 == null) {
-              stackOut_5_0 = bf.field_a;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = bf.field_a;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -580,13 +564,12 @@ abstract class hd {
                       break L4;
                     } else {
                       var5 = var3[var4];
-                      stackOut_9_0 = (wh) (var5);
-                      stackIn_15_0 = stackOut_9_0;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_15_0 = (wh) (var5);
+
                       if (var6 != 0) {
                         break L3;
                       } else {
-                        if (!((wh) (Object) stackIn_10_0).a((byte) -38, var2)) {
+                        if (!((wh) (Object) stackIn_15_0).a((byte) -38, var2)) {
                           var4++;
                           if (var6 == 0) {
                             continue L2;
@@ -594,16 +577,14 @@ abstract class hd {
                             break L4;
                           }
                         } else {
-                          stackOut_11_0 = (wh) (var5);
-                          stackIn_12_0 = stackOut_11_0;
+                          stackIn_12_0 = (wh) (var5);
                           decompiledRegionSelector0 = 2;
                           break L0;
                         }
                       }
                     }
                   }
-                  stackOut_14_0 = bf.field_a;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = bf.field_a;
                   break L3;
                 }
                 decompiledRegionSelector0 = 1;
@@ -615,27 +596,19 @@ abstract class hd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var2_ref);
-            stackOut_16_1 = new StringBuilder().append("hd.E(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var2_ref);
+
+            stackIn_18_1 = new StringBuilder().append("hd.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }
@@ -664,18 +637,13 @@ abstract class hd {
         int stackIn_20_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_19_0 = 0;
         var3 = fleas.field_A ? 1 : 0;
         try {
           L0: {
             var4 = (fg) ((Object) jk.field_m.c((byte) 47));
             var1 = var4;
             if (var1 == null) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -696,8 +664,7 @@ abstract class hd {
                             if (var4.field_n[var2].field_b != 0) {
                               break L4;
                             } else {
-                              stackOut_10_0 = 0;
-                              stackIn_11_0 = stackOut_10_0;
+                              stackIn_11_0 = 0;
                               decompiledRegionSelector0 = 1;
                               break L0;
                             }
@@ -708,8 +675,7 @@ abstract class hd {
                             if (-1 != (var4.field_s[var2].field_b ^ -1)) {
                               break L5;
                             } else {
-                              stackOut_15_0 = 0;
-                              stackIn_16_0 = stackOut_15_0;
+                              stackIn_16_0 = 0;
                               decompiledRegionSelector0 = 2;
                               break L0;
                             }
@@ -729,8 +695,7 @@ abstract class hd {
                   var2 = 73 / ((-19 - param0) / 56);
                   break L2;
                 }
-                stackOut_19_0 = 1;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = 1;
                 decompiledRegionSelector0 = 3;
                 break L0;
               }

@@ -22,12 +22,10 @@ final class tl implements ug {
     private int[] field_r;
 
     final void b(int param0, int param1) {
-        boolean discarded$0 = false;
-        boolean discarded$1 = false;
         int var3 = 26 / ((-33 - param0) / 58);
         if (!(-2 != (param1 ^ -1))) {
-            discarded$0 = a.field_h.a(-1, "menusuk");
-            discarded$1 = this.a(false, 12);
+            a.field_h.a(-1, "menusuk");
+            this.a(false, 12);
         }
     }
 
@@ -42,6 +40,7 @@ final class tl implements ug {
         if (!this.a(false, param1, param0 ^ 95)) {
             return false;
         }
+        pd.a(-22826);
         ul.field_b = 0L;
         this.field_n = !this.c((byte) 126) ? true : false;
         bb.field_a[param1] = true;
@@ -57,34 +56,17 @@ final class tl implements ug {
     }
 
     public final void b(int param0) {
-        dj var3 = null;
-        dj var4 = null;
-        L0: {
-          if (param0 >= 72) {
-            break L0;
-          } else {
+        if (param0 < 72) {
             this.a(-0.6271905303001404f, 80, -50, -1.1520227193832397f);
-            break L0;
-          }
         }
-        L1: {
-          if (aa.field_f == null) {
-            break L1;
-          } else {
+        if (aa.field_f != null) {
             gl.a(aa.field_f, 734);
             aa.field_f = null;
             ep.c((byte) -50);
-            break L1;
-          }
         }
-        L2: {
-          if (ng.field_e) {
+        if (!(!ng.field_e)) {
             nl.field_p = mm.a(0, (byte) -113);
             gj.field_i = mm.a(1, (byte) -115);
-            break L2;
-          } else {
-            break L2;
-          }
         }
         a.field_h = pb.a(true, false, 2, true, 1);
         ZombieDawn.field_H = mm.a(3, (byte) -115);
@@ -94,8 +76,8 @@ final class tl implements ug {
         an.field_B = pb.a(true, false, 6, true, 1);
         this.field_h = pb.a(true, false, 7, true, 1);
         bp.field_h = new jk(50);
-        var4 = nl.field_p;
-        var3 = gj.field_i;
+        dj var4 = nl.field_p;
+        dj var3 = gj.field_i;
         bp.field_h.a("basic", nb.field_o, el.field_m, var4, (byte) -84);
         bp.field_h.a("arialish12", nb.field_o, el.field_m, var4, (byte) -84);
         bp.field_h.a("arialish12", nb.field_o, el.field_m, var3, (byte) -84);
@@ -108,19 +90,20 @@ final class tl implements ug {
     }
 
     private final void c(int param0) {
-        boolean discarded$3 = false;
-        vn[] discarded$4 = null;
-        vn[] discarded$5 = null;
+        Object stackIn_91_0 = null;
+        Object stackIn_92_0 = null;
+        int stackIn_92_1 = 0;
+        Throwable decompiledCaughtException = null;
         dj var3 = null;
         int var4_int = 0;
         float var4 = 0.0f;
         int var5_int = 0;
-        IllegalArgumentException var5_ref_IllegalArgumentException = null;
         float var5 = 0.0f;
-        IllegalArgumentException var6_ref_IllegalArgumentException = null;
+        IllegalArgumentException var5_ref_IllegalArgumentException = null;
         int var6 = 0;
-        vn[] var7 = null;
-        v[] var7_array = null;
+        IllegalArgumentException var6_ref_IllegalArgumentException = null;
+        v[] var7 = null;
+        vn[] var7_array = null;
         int var8 = 0;
         vn[] var8_ref_vn__ = null;
         int var9 = 0;
@@ -132,24 +115,6 @@ final class tl implements ug {
         dj var15 = null;
         v[] var16 = null;
         vn[] var17 = null;
-        Object stackIn_86_0 = null;
-        Object stackIn_87_0 = null;
-        Object stackIn_88_0 = null;
-        Object stackIn_89_0 = null;
-        Object stackIn_90_0 = null;
-        Object stackIn_91_0 = null;
-        Object stackIn_92_0 = null;
-        int stackIn_92_1 = 0;
-        Throwable decompiledCaughtException = null;
-        Object stackOut_85_0 = null;
-        Object stackOut_86_0 = null;
-        Object stackOut_87_0 = null;
-        Object stackOut_88_0 = null;
-        Object stackOut_89_0 = null;
-        Object stackOut_90_0 = null;
-        int stackOut_90_1 = 0;
-        Object stackOut_91_0 = null;
-        int stackOut_91_1 = 0;
         L0: {
           var11 = ZombieDawn.field_J;
           oh.d((byte) -95);
@@ -158,7 +123,7 @@ final class tl implements ug {
           if (param0 == 75) {
             break L0;
           } else {
-            discarded$3 = this.a(60, -55);
+            this.a(60, -55);
             break L0;
           }
         }
@@ -315,8 +280,8 @@ final class tl implements ug {
                         break L9;
                       } else {
                         var16 = dd.a("membersexpansion", "screenshots", -1864, a.field_h);
-                        var7_array = var16;
-                        if (var7_array == null) {
+                        var7 = var16;
+                        if (var7 == null) {
                           return;
                         } else {
                           jp.field_c = new o(sa.field_Y, qc.field_b, var16, false, kl.field_o);
@@ -360,15 +325,15 @@ final class tl implements ug {
                     qn.field_k = vm.a((byte) -42, "instructions_survivors", "basic", a.field_h);
                     l.field_b = vm.a((byte) 2, "instructions_zombies", "basic", a.field_h);
                     this.a(var5, 0, var6, var4);
-                    discarded$4 = bj.a("basic", -118, a.field_h, "frame");
+                    bj.a("basic", -118, a.field_h, "frame");
                     ca.field_b = bj.a("basic", -122, a.field_h, "button_frame");
                     ti.field_c = bj.a("basic", param0 + -201, a.field_h, "button_raised");
-                    discarded$5 = bj.a("basic", -120, a.field_h, "button_depressed");
+                    bj.a("basic", -120, a.field_h, "button_depressed");
                     jb.field_a = vm.a((byte) -104, "pin_flags", "basic", a.field_h);
                     this.a(var5, param0 + -75, var6, var4);
                     ed.field_a = new vn[32];
                     var17 = vm.a((byte) 126, "all_achievements", "basic", a.field_h);
-                    var7 = var17;
+                    var7_array = var17;
                     var8 = 0;
                     L10: while (true) {
                       if ((var8 ^ -1) <= -33) {
@@ -447,40 +412,33 @@ final class tl implements ug {
             }
             L15: {
               L16: {
-                stackOut_85_0 = this;
-                stackIn_91_0 = stackOut_85_0;
-                stackIn_86_0 = stackOut_85_0;
+                stackIn_91_0 = this;
+
                 if (!r.field_F) {
                   break L16;
                 } else {
-                  stackOut_86_0 = this;
-                  stackIn_91_0 = stackOut_86_0;
-                  stackIn_87_0 = stackOut_86_0;
+                  stackIn_91_0 = this;
+
                   if (!rm.field_f) {
                     break L16;
                   } else {
-                    stackOut_87_0 = this;
-                    stackIn_91_0 = stackOut_87_0;
-                    stackIn_88_0 = stackOut_87_0;
+                    stackIn_91_0 = this;
+
                     if (!sa.field_T) {
                       break L16;
                     } else {
-                      stackOut_88_0 = this;
-                      stackIn_91_0 = stackOut_88_0;
-                      stackIn_89_0 = stackOut_88_0;
+                      stackIn_91_0 = this;
+
                       if (!eh.field_x) {
                         break L16;
                       } else {
-                        stackOut_89_0 = this;
-                        stackIn_91_0 = stackOut_89_0;
-                        stackIn_90_0 = stackOut_89_0;
+                        stackIn_91_0 = this;
+
                         if (!ti.field_a) {
                           break L16;
                         } else {
-                          stackOut_90_0 = this;
-                          stackOut_90_1 = 1;
-                          stackIn_92_0 = stackOut_90_0;
-                          stackIn_92_1 = stackOut_90_1;
+                          stackIn_92_0 = this;
+                          stackIn_92_1 = 1;
                           break L15;
                         }
                       }
@@ -488,10 +446,8 @@ final class tl implements ug {
                   }
                 }
               }
-              stackOut_91_0 = this;
-              stackOut_91_1 = 0;
-              stackIn_92_0 = stackOut_91_0;
-              stackIn_92_1 = stackOut_91_1;
+              stackIn_92_0 = this;
+              stackIn_92_1 = 0;
               break L15;
             }
             L17: {
@@ -574,8 +530,6 @@ final class tl implements ug {
 
     public final boolean a(byte param0) {
         int stackIn_25_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_24_0 = 0;
         L0: {
           if (!this.field_i) {
             if (!this.field_c) {
@@ -654,15 +608,13 @@ final class tl implements ug {
                 if (!this.field_m) {
                   break L4;
                 } else {
-                  stackOut_23_0 = 1;
-                  stackIn_25_0 = stackOut_23_0;
+                  stackIn_25_0 = 1;
                   break L3;
                 }
               }
             }
           }
-          stackOut_24_0 = 0;
-          stackIn_25_0 = stackOut_24_0;
+          stackIn_25_0 = 0;
           break L3;
         }
         return stackIn_25_0 != 0;
@@ -679,23 +631,12 @@ final class tl implements ug {
         IllegalArgumentException var4 = null;
         RuntimeException var4_ref = null;
         boolean stackIn_10_0 = false;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_9_0 = false;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             if (null == w.field_a[param2]) {
@@ -720,8 +661,7 @@ final class tl implements ug {
                   break L2;
                 }
               }
-              stackOut_9_0 = cc.field_c[param2];
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = cc.field_c[param2];
               break L0;
             }
           }
@@ -729,27 +669,19 @@ final class tl implements ug {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var4_ref);
-            stackOut_11_1 = new StringBuilder().append("tl.F(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var4_ref);
+
+            stackIn_13_1 = new StringBuilder().append("tl.F(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -766,24 +698,14 @@ final class tl implements ug {
     }
 
     private final void a(float param0, int param1, String param2) {
-        boolean discarded$2 = false;
-        RuntimeException var4 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
+        boolean discarded$1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
@@ -803,7 +725,7 @@ final class tl implements ug {
             L2: {
               eh.a(this.field_d, this.field_b, -1);
               if (param1 <= 122) {
-                discarded$2 = this.b((byte) 10);
+                discarded$1 = this.b((byte) 10);
                 sa.field_Y.c((byte) 81);
                 break L2;
               } else {
@@ -817,27 +739,19 @@ final class tl implements ug {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var4);
-            stackOut_9_1 = new StringBuilder().append("tl.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var4);
+
+            stackIn_11_1 = new StringBuilder().append("tl.E(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -846,9 +760,9 @@ final class tl implements ug {
     }
 
     private final boolean b(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var4 = ZombieDawn.field_J;
           if (null == this.field_q) {
@@ -991,11 +905,11 @@ final class tl implements ug {
     }
 
     final void e(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        long var4_long = 0L;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        long var4_long;
+        int var6;
         L0: {
           var6 = ZombieDawn.field_J;
           if (0 < this.field_f) {
@@ -1029,6 +943,7 @@ final class tl implements ug {
               }
             }
             this.a((-((float)var3 / (float)this.field_a) + 1.0f) * 100.0f, 127, (String) null);
+            pd.a(-22826);
             if (this.a(0, var2)) {
               this.field_p = this.field_p - eo.field_h[var2];
               var4 = 0;
@@ -1084,35 +999,22 @@ final class tl implements ug {
     }
 
     private final boolean a(boolean param0, int param1, int param2) {
-        boolean discarded$5 = false;
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        int var4 = 0;
-        int var5 = 0;
-        String var5_ref_String = null;
-        int var6 = 0;
-        int var7 = 0;
-        String var7_ref_String = null;
-        ml var8 = null;
-        mb var8_ref = null;
-        int var9 = 0;
-        mb var10 = null;
-        ml var11 = null;
-        String var12 = null;
         String stackIn_10_0 = null;
         int stackIn_52_0 = 0;
         String stackIn_103_0 = null;
         int stackIn_112_0 = 0;
-        String stackOut_9_0 = null;
-        String stackOut_8_0 = null;
-        int stackOut_51_0 = 0;
-        int stackOut_50_0 = 0;
-        String stackOut_102_0 = null;
-        String stackOut_101_0 = null;
-        int stackOut_111_0 = 0;
-        int stackOut_110_0 = 0;
+        int var4;
+        int var5;
+        String var5_ref_String;
+        int var6;
+        String var7_ref_String;
+        int var7;
+        ml var8;
+        mb var8_ref;
+        int var9;
+        mb var10;
+        ml var11;
+        String var12;
         L0: {
           var9 = ZombieDawn.field_J;
           var4 = 12 % ((param2 - -2) / 56);
@@ -1129,12 +1031,10 @@ final class tl implements ug {
                   if (param1 == tc.field_w[var5]) {
                     L2: {
                       if (1 == tk.a(param1, 101)) {
-                        stackOut_9_0 = "uk";
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = "uk";
                         break L2;
                       } else {
-                        stackOut_8_0 = "sfx";
-                        stackIn_10_0 = stackOut_8_0;
+                        stackIn_10_0 = "sfx";
                         break L2;
                       }
                     }
@@ -1147,14 +1047,14 @@ final class tl implements ug {
                         var5++;
                         continue L1;
                       } else {
-                        discarded$5 = gm.field_h.a(-1, var7_ref_String);
+                        gm.field_h.a(-1, var7_ref_String);
                         return false;
                       }
                     } else {
                       var10 = mb.a(qn.field_i, var7_ref_String, tc.field_x[var5]);
                       var8_ref = var10;
                       if (var8_ref == null) {
-                        discarded$6 = qn.field_i.a(-1, var7_ref_String);
+                        qn.field_i.a(-1, var7_ref_String);
                         return false;
                       } else {
                         vb.field_D[tc.field_s[var5]] = var10.b();
@@ -1181,12 +1081,10 @@ final class tl implements ug {
             if (!param0) {
               L4: {
                 if (!fj.a(0, 117)) {
-                  stackOut_51_0 = 0;
-                  stackIn_52_0 = stackOut_51_0;
+                  stackIn_52_0 = 0;
                   break L4;
                 } else {
-                  stackOut_50_0 = 1;
-                  stackIn_52_0 = stackOut_50_0;
+                  stackIn_52_0 = 1;
                   break L4;
                 }
               }
@@ -1253,7 +1151,7 @@ final class tl implements ug {
               }
               L7: {
                 if (null == ld.field_l[0]) {
-                  discarded$7 = a.field_h.a(-1, "game");
+                  a.field_h.a(-1, "game");
                   break L7;
                 } else {
                   break L7;
@@ -1262,7 +1160,7 @@ final class tl implements ug {
               if (var6 == 0) {
                 return false;
               } else {
-                discarded$8 = a.field_h.a(-1, var5_ref_String);
+                a.field_h.a(-1, var5_ref_String);
                 return false;
               }
             } else {
@@ -1318,7 +1216,7 @@ final class tl implements ug {
                 ip.field_p = vm.a((byte) -43, "keycard", "gameuk", a.field_h);
                 break L3;
               } else {
-                discarded$9 = a.field_h.a(-1, "gameuk");
+                a.field_h.a(-1, "gameuk");
                 return false;
               }
             } else {
@@ -1460,12 +1358,10 @@ final class tl implements ug {
             } else {
               L18: {
                 if (-2 == (tk.a(param1, 126) ^ -1)) {
-                  stackOut_102_0 = "gameuk";
-                  stackIn_103_0 = stackOut_102_0;
+                  stackIn_103_0 = "gameuk";
                   break L18;
                 } else {
-                  stackOut_101_0 = "game";
-                  stackIn_103_0 = stackOut_101_0;
+                  stackIn_103_0 = "game";
                   break L18;
                 }
               }
@@ -1489,12 +1385,10 @@ final class tl implements ug {
               } else {
                 L20: {
                   if (!this.a(tc.field_v[var5], 0, var5)) {
-                    stackOut_111_0 = 0;
-                    stackIn_112_0 = stackOut_111_0;
+                    stackIn_112_0 = 0;
                     break L20;
                   } else {
-                    stackOut_110_0 = 1;
-                    stackIn_112_0 = stackOut_110_0;
+                    stackIn_112_0 = 1;
                     break L20;
                   }
                 }

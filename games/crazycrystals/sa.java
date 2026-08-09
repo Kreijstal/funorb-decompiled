@@ -13,12 +13,10 @@ final class sa extends na implements vd {
 
     final boolean g(byte param0) {
         si var2 = null;
-        if (this.field_C) {
-            if (!this.field_sb) {
-                var2 = jd.f((byte) 93);
-                if (!(var2 == null)) {
-                    this.a(-1, false, var2);
-                }
+        if (this.field_C && !this.field_sb) {
+            var2 = jd.f((byte) 93);
+            if (!(var2 == null)) {
+                this.a(-1, false, var2);
             }
         }
         if (param0 != 8) {
@@ -97,14 +95,6 @@ final class sa extends na implements vd {
     }
 
     private final void a(int param0, boolean param1, si param2) {
-        pc discarded$2 = null;
-        pc discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        jd var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
@@ -112,25 +102,21 @@ final class sa extends na implements vd {
         String stackIn_34_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        jd var5 = null;
+        int var6 = 0;
         var6 = CrazyCrystals.field_B;
         try {
           L0: {
             L1: {
               this.field_sb = true;
               if (param2.field_b) {
-                var4_ref = td.field_a;
+                var4 = td.field_a;
                 break L1;
               } else {
                 if (null == param2.field_d) {
-                  var4_ref = param2.field_h;
+                  var4 = param2.field_h;
                   if (-249 != (param2.field_g ^ -1)) {
                     break L1;
                   } else {
@@ -143,11 +129,11 @@ final class sa extends na implements vd {
                       }
                     }
                     this.field_ob = true;
-                    var4_ref = on.field_c;
+                    var4 = on.field_c;
                     break L1;
                   }
                 } else {
-                  var4_ref = db.field_f;
+                  var4 = db.field_f;
                   if (this.field_pb != null) {
                     this.field_pb.a(param0 ^ -21);
                     break L1;
@@ -157,13 +143,13 @@ final class sa extends na implements vd {
                 }
               }
             }
-            var5 = new jd((na) (this), mo.field_m, var4_ref);
+            var5 = new jd((na) (this), mo.field_m, var4);
             if (param0 == -1) {
               L3: {
                 L4: {
                   if (param2.field_b) {
                     if (!param2.field_f) {
-                      discarded$2 = var5.a(go.field_j, (bi) (this), 39);
+                      var5.a(go.field_j, (bi) (this), 39);
                       break L4;
                     } else {
                       this.a((qm) (new ph((sa) (this))), (byte) -50);
@@ -173,7 +159,7 @@ final class sa extends na implements vd {
                   } else {
                     L5: {
                       if (this.field_ob) {
-                        discarded$3 = var5.a(go.field_j, (bi) (this), 117);
+                        var5.a(go.field_j, (bi) (this), 117);
                         break L5;
                       } else {
                         if (-6 != (param2.field_g ^ -1)) {
@@ -213,28 +199,20 @@ final class sa extends na implements vd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var4);
-            stackOut_31_1 = new StringBuilder().append("sa.U(").append(param0).append(',').append(param1).append(',');
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_33_0 = (RuntimeException) (var4_ref);
+
+            stackIn_33_1 = new StringBuilder().append("sa.U(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L6;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L6;
             }
           }

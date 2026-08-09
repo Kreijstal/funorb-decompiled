@@ -19,6 +19,7 @@ final class od {
     private int[] field_b;
 
     private final void a(byte param0) {
+        int statePc = 0;
         int[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -27,104 +28,175 @@ final class od {
         int[] var7 = null;
         int var8 = 0;
         int var9 = 0;
-        L0: {
-          var6 = OrbDefence.field_D ? 1 : 0;
-          var7 = ul.field_b;
-          var2 = var7;
-          var3 = ul.field_f;
-          this.field_o = 0;
-          this.field_m = new int[200];
-          this.field_e = 0;
-          if (param0 <= -58) {
-            break L0;
-          } else {
-            od.b((byte) -52);
-            break L0;
-          }
-        }
-        var4 = ul.field_l;
-        this.field_d = new int[200];
-        this.field_b = new int[200];
-        this.field_g = 320;
-        this.field_c = new int[200];
-        this.field_l = new re(new int[]{1, 2, 3, 4, 5});
-        this.field_i = new int[64];
-        var5 = 0;
-        L1: while (true) {
-          L2: {
-            L3: {
-              L4: {
-                if (-65 >= (var5 ^ -1)) {
-                  break L4;
-                } else {
-                  this.field_i[var5] = 65537 * var5;
-                  var9 = -33;
-                  var8 = var5 ^ -1;
-                  if (var6 != 0) {
-                    if (var8 > var9) {
-                      L5: while (true) {
-                        this.field_n[var5] = var5 * 262660;
-                        this.field_n[31 + -var5] = var5 * 262660;
-                        var5++;
-                        if (var6 == 0) {
-                          if ((var5 ^ -1) > -17) {
-                            continue L5;
-                          } else {
-                            break L3;
-                          }
-                        } else {
-                          break L2;
-                        }
-                      }
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var6 = OrbDefence.field_D ? 1 : 0;
+                    var7 = ul.field_b;
+                    var2 = var7;
+                    var3 = ul.field_f;
+                    this.field_o = 0;
+                    this.field_m = new int[200];
+                    this.field_e = 0;
+                    if (param0 <= -58) {
+                        statePc = 2;
                     } else {
-                      ul.field_f = var3;
-                      ul.field_b = var7;
-                      ul.field_l = var4;
-                      ul.c();
-                      return;
+                        statePc = 1;
                     }
-                  } else {
-                    L6: {
-                      if (var8 >= var9) {
-                        break L6;
-                      } else {
-                        this.field_i[var5] = ge.a(this.field_i[var5], -8192 + 256 * var5);
-                        break L6;
-                      }
+                    continue stateLoop;
+                }
+                case 1: {
+                    od.b((byte) -52);
+                    statePc = 2;
+                    continue stateLoop;
+                }
+                case 2: {
+                    var4 = ul.field_l;
+                    this.field_d = new int[200];
+                    this.field_b = new int[200];
+                    this.field_g = 320;
+                    this.field_c = new int[200];
+                    this.field_l = new re(new int[]{1, 2, 3, 4, 5});
+                    this.field_i = new int[64];
+                    var5 = 0;
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (-65 >= (var5 ^ -1)) {
+                        statePc = 12;
+                    } else {
+                        statePc = 4;
                     }
+                    continue stateLoop;
+                }
+                case 4: {
+                    this.field_i[var5] = 65537 * var5;
+                    var9 = -33;
+                    var8 = var5 ^ -1;
+                    if (var6 != 0) {
+                        statePc = 7;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    if (var8 >= var9) {
+                        statePc = 11;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    if (var8 > var9) {
+                        statePc = 24;
+                    } else {
+                        statePc = 8;
+                    }
+                    continue stateLoop;
+                }
+                case 8: {
+                    ul.field_f = var3;
+                    ul.field_b = var7;
+                    ul.field_l = var4;
+                    ul.c();
+                    return;
+                }
+                case 10: {
+                    this.field_i[var5] = ge.a(this.field_i[var5], -8192 + 256 * var5);
+                    statePc = 11;
+                    continue stateLoop;
+                }
+                case 11: {
                     var5++;
                     if (var6 == 0) {
-                      continue L1;
+                        statePc = 3;
                     } else {
-                      break L4;
+                        statePc = 12;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
-              this.field_n = new int[32];
-              var5 = 0;
-              L7: while (true) {
-                if ((var5 ^ -1) > -17) {
-                  this.field_n[var5] = var5 * 262660;
-                  this.field_n[31 + -var5] = var5 * 262660;
-                  var5++;
-                  if (var6 == 0) {
-                    continue L7;
-                  } else {
-                    break L2;
-                  }
-                } else {
-                  break L3;
+                case 12: {
+                    this.field_n = new int[32];
+                    var5 = 0;
+                    statePc = 13;
+                    continue stateLoop;
                 }
-              }
+                case 13: {
+                    if ((var5 ^ -1) > -17) {
+                        statePc = 15;
+                    } else {
+                        statePc = 14;
+                    }
+                    continue stateLoop;
+                }
+                case 14: {
+                    ul.field_f = var3;
+                    ul.field_b = var7;
+                    ul.field_l = var4;
+                    ul.c();
+                    return;
+                }
+                case 15: {
+                    this.field_n[var5] = var5 * 262660;
+                    this.field_n[31 + -var5] = var5 * 262660;
+                    var5++;
+                    if (var6 == 0) {
+                        statePc = 17;
+                    } else {
+                        statePc = 16;
+                    }
+                    continue stateLoop;
+                }
+                case 16: {
+                    return;
+                }
+                case 17: {
+                    if (var6 == 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 20;
+                    }
+                    continue stateLoop;
+                }
+                case 20: {
+                    ul.field_f = var3;
+                    ul.field_b = var7;
+                    ul.field_l = var4;
+                    ul.c();
+                    return;
+                }
+                case 22: {
+                    if (var6 == 0) {
+                        statePc = 26;
+                    } else {
+                        statePc = 20;
+                    }
+                    continue stateLoop;
+                }
+                case 24: {
+                    this.field_n[var5] = var5 * 262660;
+                    this.field_n[31 + -var5] = var5 * 262660;
+                    var5++;
+                    if (var6 == 0) {
+                        statePc = 22;
+                    } else {
+                        statePc = 16;
+                    }
+                    continue stateLoop;
+                }
+                case 26: {
+                    if ((var5 ^ -1) > -17) {
+                        statePc = 24;
+                    } else {
+                        statePc = 14;
+                    }
+                    continue stateLoop;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            ul.field_f = var3;
-            ul.field_b = var7;
-            ul.field_l = var4;
-            ul.c();
-            return;
-          }
-          return;
         }
     }
 
@@ -159,46 +231,132 @@ final class od {
     }
 
     final static void a(int param0) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$1 = 0;
         se var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var3 = OrbDefence.field_D ? 1 : 0;
-        try {
-          L0: {
-            L1: {
-              if (param0 == 192) {
-                break L1;
-              } else {
-                od.b((byte) 41);
-                break L1;
-              }
-            }
-            var1 = uk.field_b;
-            L2: while (true) {
-              if (!wl.a(-1)) {
-                break L0;
-              } else {
-                var1.i(8, -44);
-                fieldTemp$5 = var1.field_i + 1;
-                var1.field_i = var1.field_i + 1;
-                var2 = fieldTemp$5;
-                dk.a((byte) 15, var1);
-                uk.field_b.c((byte) 115, var1.field_i - var2);
-                if (var3 == 0) {
-                  continue L2;
-                } else {
-                  return;
+        int statePc = 0;
+        Throwable caughtException = null;
+        RuntimeException var1_ref = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var3 = OrbDefence.field_D ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
+                case 1: {
+                    try {
+                        if (param0 == 192) {
+                            statePc = 3;
+                        } else {
+                            statePc = 2;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        od.b((byte) 41);
+                        statePc = 3;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        var1 = uk.field_b;
+                        statePc = 4;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        if (!wl.a(-1)) {
+                            statePc = 11;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        var1.i(8, -44);
+                        fieldTemp$1 = var1.field_i + 1;
+                        var1.field_i = var1.field_i + 1;
+                        var2 = fieldTemp$1;
+                        dk.a((byte) 15, var1);
+                        uk.field_b.c((byte) 115, var1.field_i - var2);
+                        if (var3 == 0) {
+                            statePc = 7;
+                        } else {
+                            statePc = 6;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        return;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        if (var3 == 0) {
+                            statePc = 4;
+                        } else {
+                            statePc = 8;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        statePc = 11;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    var1_ref = (RuntimeException) ((Object) caughtException);
+                    throw dd.a((Throwable) ((Object) var1_ref), "od.D(" + param0 + ')');
+                }
+                case 11: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1_ref), "od.D(" + param0 + ')');
         }
     }
 
@@ -220,17 +378,17 @@ final class od {
     }
 
     private final void a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         L0: {
           var11 = OrbDefence.field_D ? 1 : 0;
           var3 = -120 - -(2 * lc.field_o);
@@ -324,25 +482,13 @@ final class od {
     }
 
     final void b(int param0) {
-        int var2 = 0;
-        double var3 = 0.0;
-        int var5 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_7_1 = 0;
         int stackIn_19_0 = 0;
         int stackIn_19_1 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_26_1 = 0;
         int stackIn_38_0 = 0;
         int stackIn_38_1 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_37_1 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_25_1 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_18_1 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
+        int var2;
+        double var3;
+        int var5;
         var5 = OrbDefence.field_D ? 1 : 0;
         if (vj.a(52)) {
           return;
@@ -352,59 +498,62 @@ final class od {
             var2 = 0;
             L0: while (true) {
               L1: {
-                if (var2 >= 200) {
-                  var2 = 864 + this.field_l.a(128) % 160;
-                  stackOut_37_0 = this.field_l.a(128);
-                  stackOut_37_1 = 214;
-                  stackIn_38_0 = stackOut_37_0;
-                  stackIn_38_1 = stackOut_37_1;
-                  break L1;
-                } else {
-                  stackOut_25_0 = this.field_m[var2] ^ -1;
-                  stackOut_25_1 = this.field_d[var2] ^ -1;
-                  stackIn_38_0 = stackOut_25_0;
-                  stackIn_38_1 = stackOut_25_1;
-                  stackIn_26_0 = stackOut_25_0;
-                  stackIn_26_1 = stackOut_25_1;
-                  if (var5 != 0) {
-                    break L1;
+                L2: {
+                  if (var2 >= 200) {
+                    break L2;
                   } else {
-                    L2: {
-                      if (stackIn_26_0 >= stackIn_26_1) {
+                    stackIn_38_0 = this.field_m[var2] ^ -1;
+
+                    stackIn_38_1 = this.field_d[var2] ^ -1;
+
+                    if (var5 != 0) {
+                      break L1;
+                    } else {
+                      L3: {
+                        if (stackIn_38_0 >= stackIn_38_1) {
+                          break L3;
+                        } else {
+                          this.field_d[var2] = this.field_d[var2] + 6;
+                          break L3;
+                        }
+                      }
+                      L4: {
+                        if (this.field_d[var2] > this.field_m[var2]) {
+                          this.field_d[var2] = this.field_d[var2] - 3;
+                          break L4;
+                        } else {
+                          break L4;
+                        }
+                      }
+                      L5: {
+                        if (this.field_c[var2] < this.field_b[var2]) {
+                          this.field_c[var2] = this.field_c[var2] + 3;
+                          break L5;
+                        } else {
+                          break L5;
+                        }
+                      }
+                      L6: {
+                        if (this.field_b[var2] >= this.field_c[var2]) {
+                          break L6;
+                        } else {
+                          this.field_c[var2] = this.field_c[var2] - 6;
+                          break L6;
+                        }
+                      }
+                      var2++;
+                      if (var5 == 0) {
+                        continue L0;
+                      } else {
                         break L2;
-                      } else {
-                        this.field_d[var2] = this.field_d[var2] + 6;
-                        break L2;
                       }
                     }
-                    L3: {
-                      if (this.field_d[var2] > this.field_m[var2]) {
-                        this.field_d[var2] = this.field_d[var2] - 3;
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    L4: {
-                      if (this.field_c[var2] < this.field_b[var2]) {
-                        this.field_c[var2] = this.field_c[var2] + 3;
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    L5: {
-                      if (this.field_b[var2] >= this.field_c[var2]) {
-                        break L5;
-                      } else {
-                        this.field_c[var2] = this.field_c[var2] - 6;
-                        break L5;
-                      }
-                    }
-                    var2++;
-                    continue L0;
                   }
                 }
+                var2 = 864 + this.field_l.a(128) % 160;
+                stackIn_38_0 = this.field_l.a(128);
+                stackIn_38_1 = 214;
+                break L1;
               }
               var3 = (double)(stackIn_38_0 % stackIn_38_1) + (double)(this.field_l.a(128) % 100) * 0.01;
               this.field_m[this.field_o] = (int)((double)var2 * Math.sin(var3));
@@ -420,61 +569,64 @@ final class od {
           } else {
             this.field_m = (int[]) null;
             var2 = 0;
-            L6: while (true) {
-              L7: {
-                if (var2 >= 200) {
-                  var2 = 864 + this.field_l.a(128) % 160;
-                  stackOut_18_0 = this.field_l.a(128);
-                  stackOut_18_1 = 214;
-                  stackIn_19_0 = stackOut_18_0;
-                  stackIn_19_1 = stackOut_18_1;
-                  break L7;
-                } else {
-                  stackOut_6_0 = this.field_m[var2] ^ -1;
-                  stackOut_6_1 = this.field_d[var2] ^ -1;
-                  stackIn_19_0 = stackOut_6_0;
-                  stackIn_19_1 = stackOut_6_1;
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
-                  if (var5 != 0) {
-                    break L7;
+            L7: while (true) {
+              L8: {
+                L9: {
+                  if (var2 >= 200) {
+                    break L9;
                   } else {
-                    L8: {
-                      if (stackIn_7_0 >= stackIn_7_1) {
-                        break L8;
-                      } else {
-                        this.field_d[var2] = this.field_d[var2] + 6;
-                        break L8;
+                    stackIn_19_0 = this.field_m[var2] ^ -1;
+
+                    stackIn_19_1 = this.field_d[var2] ^ -1;
+
+                    if (var5 != 0) {
+                      break L8;
+                    } else {
+                      L10: {
+                        if (stackIn_19_0 >= stackIn_19_1) {
+                          break L10;
+                        } else {
+                          this.field_d[var2] = this.field_d[var2] + 6;
+                          break L10;
+                        }
                       }
-                    }
-                    L9: {
-                      if (this.field_d[var2] > this.field_m[var2]) {
-                        this.field_d[var2] = this.field_d[var2] - 3;
+                      L11: {
+                        if (this.field_d[var2] > this.field_m[var2]) {
+                          this.field_d[var2] = this.field_d[var2] - 3;
+                          break L11;
+                        } else {
+                          break L11;
+                        }
+                      }
+                      L12: {
+                        if (this.field_c[var2] < this.field_b[var2]) {
+                          this.field_c[var2] = this.field_c[var2] + 3;
+                          break L12;
+                        } else {
+                          break L12;
+                        }
+                      }
+                      L13: {
+                        if (this.field_b[var2] >= this.field_c[var2]) {
+                          break L13;
+                        } else {
+                          this.field_c[var2] = this.field_c[var2] - 6;
+                          break L13;
+                        }
+                      }
+                      var2++;
+                      if (var5 == 0) {
+                        continue L7;
+                      } else {
                         break L9;
-                      } else {
-                        break L9;
                       }
                     }
-                    L10: {
-                      if (this.field_c[var2] < this.field_b[var2]) {
-                        this.field_c[var2] = this.field_c[var2] + 3;
-                        break L10;
-                      } else {
-                        break L10;
-                      }
-                    }
-                    L11: {
-                      if (this.field_b[var2] >= this.field_c[var2]) {
-                        break L11;
-                      } else {
-                        this.field_c[var2] = this.field_c[var2] - 6;
-                        break L11;
-                      }
-                    }
-                    var2++;
-                    continue L6;
                   }
                 }
+                var2 = 864 + this.field_l.a(128) % 160;
+                stackIn_19_0 = this.field_l.a(128);
+                stackIn_19_1 = 214;
+                break L8;
               }
               var3 = (double)(stackIn_19_0 % stackIn_19_1) + (double)(this.field_l.a(128) % 100) * 0.01;
               this.field_m[this.field_o] = (int)((double)var2 * Math.sin(var3));

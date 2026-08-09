@@ -19,8 +19,10 @@ final class rk extends ag {
     int field_V;
 
     final static void g(int param0) {
-        RuntimeException var1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -43,8 +45,6 @@ final class rk extends ag {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var23 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -325,15 +325,13 @@ final class rk extends ag {
     final static boolean a(byte param0, int param1, int param2) {
         int var3 = -66 / ((param0 - 8) / 46);
         int var4 = om.field_x != null ? 1 : 0;
-        if ((vn.field_d ^ -1) == -10) {
-            if (wj.a(of.field_c, ao.field_e, gd.field_rb, 2, fo.field_h)) {
-                if (2 != gd.field_rb) {
-                    if (!(var4 == 0)) {
-                        return false;
-                    }
+        if ((vn.field_d ^ -1) == -10 && wj.a(of.field_c, ao.field_e, gd.field_rb, 2, fo.field_h)) {
+            if (2 != gd.field_rb) {
+                if (!(var4 == 0)) {
+                    return false;
                 }
-                return va.a(fo.field_h, 1, ao.field_e, of.field_c, gd.field_rb);
             }
+            return va.a(fo.field_h, 1, ao.field_e, of.field_c, gd.field_rb);
         }
         if (!(-11 != (vn.field_d ^ -1))) {
             if (var4 != 0) {
@@ -342,40 +340,30 @@ final class rk extends ag {
             gj.a((byte) 103);
             return true;
         }
-        if (-12 == (vn.field_d ^ -1)) {
-            if (bo.field_c) {
-                if (2 == qj.field_c) {
-                    if (!(kg.a(rf.field_n, true, vh.field_A))) {
-                        return false;
-                    }
+        if (-12 == (vn.field_d ^ -1) && bo.field_c) {
+            if (2 == qj.field_c) {
+                if (!(kg.a(rf.field_n, true, vh.field_A))) {
+                    return false;
                 }
-                if ((qj.field_c ^ -1) != -3) {
-                    if (!(var4 == 0)) {
-                        return false;
-                    }
+            }
+            if ((qj.field_c ^ -1) != -3) {
+                if (!(var4 == 0)) {
+                    return false;
                 }
-                if (!le.a((byte) 82)) {
-                    return true;
-                }
-                String var5 = (String) null;
-                sd.a(hi.field_g, (String) null, 68, param1, qj.field_c, vh.field_A);
+            }
+            if (!le.a((byte) 82)) {
                 return true;
             }
+            String var5 = (String) null;
+            sd.a(hi.field_g, (String) null, 68, param1, qj.field_c, vh.field_A);
+            return true;
         }
         return false;
     }
 
     final boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
-        RuntimeException var8 = null;
-        int var8_int = 0;
-        int var9 = 0;
-        int var10 = 0;
-        double var11 = 0.0;
-        int var13 = 0;
         int stackIn_15_0 = 0;
         int stackIn_17_0 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -383,23 +371,18 @@ final class rk extends ag {
         String stackIn_21_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        int stackOut_14_0 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        int var8_int = 0;
+        RuntimeException var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        double var11 = 0.0;
+        int var13 = 0;
         var13 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
             var8_int = -57 / ((param4 - -42) / 35);
             if (!super.a(param0, param1, param2, param3, 92, param5, param6)) {
-              stackOut_16_0 = 0;
-              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
@@ -425,8 +408,7 @@ final class rk extends ag {
                   if (this.field_Q < this.field_P) {
                     L3: while (true) {
                       if (this.field_Q >= 0) {
-                        stackOut_14_0 = 1;
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = 1;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
@@ -448,27 +430,19 @@ final class rk extends ag {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var8 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var8);
-            stackOut_18_1 = new StringBuilder().append("rk.DA(").append(param0).append(',').append(param1).append(',');
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var8);
+
+            stackIn_20_1 = new StringBuilder().append("rk.DA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L4;
             }
           }
@@ -482,10 +456,8 @@ final class rk extends ag {
     }
 
     final static boolean a(byte param0, char param1) {
-        int var2 = 0;
+        int var2;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           L1: {
             var2 = 50 / ((65 - param0) / 52);
@@ -499,8 +471,7 @@ final class rk extends ag {
                   break L1;
                 } else {
                   if (45 != param1) {
-                    stackOut_6_0 = 0;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = 0;
                     break L0;
                   } else {
                     break L1;
@@ -509,8 +480,7 @@ final class rk extends ag {
               }
             }
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 1;
           break L0;
         }
         return stackIn_7_0 != 0;
@@ -531,9 +501,8 @@ final class rk extends ag {
     }
 
     final static long a(int param0) {
-        boolean discarded$0 = false;
         if (param0 >= -45) {
-            discarded$0 = rk.a((byte) -44, 74, 126);
+            rk.a((byte) -44, 74, 126);
         }
         return -hi.field_d + qj.b(-26572);
     }

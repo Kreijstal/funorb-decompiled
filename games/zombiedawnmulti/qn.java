@@ -10,24 +10,22 @@ final class qn extends l {
     }
 
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        java.awt.Component var6 = null;
+        java.awt.Component var6;
         if (param2 != 2) {
           var6 = (java.awt.Component) null;
           this.a(87, (java.awt.Component) null, -87, -91);
-          discarded$4 = param1.drawImage(this.field_g, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_i));
+          param1.drawImage(this.field_g, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_i));
           return;
         } else {
-          discarded$5 = param1.drawImage(this.field_g, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_i));
+          param1.drawImage(this.field_g, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_i));
           return;
         }
     }
 
     final void a(int param0, java.awt.Component param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         this.field_f = param2;
         if (param0 != -6) {
           this.field_i = (java.awt.Component) null;

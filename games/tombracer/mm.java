@@ -11,9 +11,8 @@ final class mm extends vg {
     }
 
     public static void a(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != -44) {
-            discarded$0 = mm.a(-1, -14, 26);
+            mm.a(-1, -14, 26);
             field_f = null;
             return;
         }

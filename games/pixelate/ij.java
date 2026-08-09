@@ -14,30 +14,16 @@ final class ij extends de {
     }
 
     final static void a(int param0, String param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
         int stackIn_20_0 = 0;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_13_0 = 0;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -83,22 +69,18 @@ final class ij extends de {
                 if (!re.field_h) {
                   if (no.field_h >= am.field_c) {
                     if (pc.field_s + am.field_c > no.field_h) {
-                      stackOut_18_0 = 1;
-                      stackIn_20_0 = stackOut_18_0;
+                      stackIn_20_0 = 1;
                       break L5;
                     } else {
-                      stackOut_17_0 = 0;
-                      stackIn_20_0 = stackOut_17_0;
+                      stackIn_20_0 = 0;
                       break L5;
                     }
                   } else {
-                    stackOut_15_0 = 0;
-                    stackIn_20_0 = stackOut_15_0;
+                    stackIn_20_0 = 0;
                     break L5;
                   }
                 } else {
-                  stackOut_13_0 = 0;
-                  stackIn_20_0 = stackOut_13_0;
+                  stackIn_20_0 = 0;
                   break L5;
                 }
               }
@@ -176,27 +158,19 @@ final class ij extends de {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_42_0 = (RuntimeException) (var2);
-            stackOut_42_1 = new StringBuilder().append("ij.B(").append(param0).append(',');
-            stackIn_44_0 = stackOut_42_0;
-            stackIn_44_1 = stackOut_42_1;
-            stackIn_43_0 = stackOut_42_0;
-            stackIn_43_1 = stackOut_42_1;
+            stackIn_44_0 = (RuntimeException) (var2);
+
+            stackIn_44_1 = new StringBuilder().append("ij.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "null";
-              stackIn_45_0 = stackOut_44_0;
-              stackIn_45_1 = stackOut_44_1;
-              stackIn_45_2 = stackOut_44_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "null";
               break L9;
             } else {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "{...}";
-              stackIn_45_0 = stackOut_43_0;
-              stackIn_45_1 = stackOut_43_1;
-              stackIn_45_2 = stackOut_43_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "{...}";
               break L9;
             }
           }

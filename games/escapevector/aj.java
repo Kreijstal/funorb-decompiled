@@ -26,7 +26,7 @@ final class aj {
     }
 
     public static void a(int param0) {
-        ij var2 = null;
+        ij var2;
         field_b = null;
         field_a = null;
         field_e = null;

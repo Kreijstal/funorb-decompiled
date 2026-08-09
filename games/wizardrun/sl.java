@@ -32,12 +32,18 @@ final class sl extends na {
 
     final boolean b(byte param0) {
         try {
-            IOException var2 = null;
+            int stackIn_20_0 = 0;
+            int stackIn_47_0 = 0;
+            int stackIn_63_0 = 0;
+            int stackIn_87_0 = 0;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             long var2_long = 0L;
-            fi var2_ref = null;
+            fi var2 = null;
             int var2_int = 0;
-            Exception var3 = null;
+            IOException var2_ref = null;
             int var3_int = 0;
+            Exception var3 = null;
             int var4 = 0;
             Exception var5_ref_Exception = null;
             int var5 = 0;
@@ -53,18 +59,6 @@ final class sl extends na {
             int var15 = 0;
             int var16 = 0;
             int var17 = 0;
-            int stackIn_20_0 = 0;
-            int stackIn_47_0 = 0;
-            int stackIn_63_0 = 0;
-            int stackIn_87_0 = 0;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            int stackOut_46_0 = 0;
-            int stackOut_45_0 = 0;
-            int stackOut_62_0 = 0;
-            int stackOut_61_0 = 0;
-            int stackOut_86_0 = 0;
-            int stackOut_19_0 = 0;
             L0: {
               var16 = wizardrun.field_H;
               if (null != this.field_p) {
@@ -106,13 +100,13 @@ final class sl extends na {
               try {
                 L4: {
                   this.field_p.a(param0 ^ 0);
-                  var2_ref = (fi) ((Object) this.field_b.a(0));
+                  var2 = (fi) ((Object) this.field_b.a(0));
                   L5: while (true) {
-                    if (var2_ref == null) {
+                    if (var2 == null) {
                       if (param0 == 0) {
-                        var2_ref = (fi) ((Object) this.field_j.a(0));
+                        var2 = (fi) ((Object) this.field_j.a(0));
                         L6: while (true) {
-                          if (var2_ref == null) {
+                          if (var2 == null) {
                             var2_int = 0;
                             L7: while (true) {
                               L8: {
@@ -230,12 +224,10 @@ final class sl extends na {
                                                 var9 = this.field_g.i(255);
                                                 var10 = var8 & 127;
                                                 if (-1 == (128 & var8 ^ -1)) {
-                                                  stackOut_46_0 = 0;
-                                                  stackIn_47_0 = stackOut_46_0;
+                                                  stackIn_47_0 = 0;
                                                   break L18;
                                                 } else {
-                                                  stackOut_45_0 = 1;
-                                                  stackIn_47_0 = stackOut_45_0;
+                                                  stackIn_47_0 = 1;
                                                   break L18;
                                                 }
                                               }
@@ -278,12 +270,10 @@ final class sl extends na {
                                               } else {
                                                 L22: {
                                                   if (-1 != (var10 ^ -1)) {
-                                                    stackOut_62_0 = 9;
-                                                    stackIn_63_0 = stackOut_62_0;
+                                                    stackIn_63_0 = 9;
                                                     break L22;
                                                   } else {
-                                                    stackOut_61_0 = 5;
-                                                    stackIn_63_0 = stackOut_61_0;
+                                                    stackIn_63_0 = 5;
                                                     break L22;
                                                   }
                                                 }
@@ -323,41 +313,39 @@ final class sl extends na {
                                   }
                                 }
                               }
-                              stackOut_86_0 = 1;
-                              stackIn_87_0 = stackOut_86_0;
+                              stackIn_87_0 = 1;
                               decompiledRegionSelector0 = 1;
                               break L4;
                             }
                           } else {
                             this.field_i.field_m = 0;
                             this.field_i.b((byte) 11, 0);
-                            this.field_i.a(var2_ref.field_o, (byte) 123);
+                            this.field_i.a(var2.field_o, (byte) 123);
                             this.field_p.a(this.field_i.field_k.length, this.field_i.field_k, 1, 0);
-                            this.field_m.a(var2_ref, 14);
-                            var2_ref = (fi) ((Object) this.field_j.d(94));
+                            this.field_m.a(var2, 14);
+                            var2 = (fi) ((Object) this.field_j.d(94));
                             continue L6;
                           }
                         }
                       } else {
-                        stackOut_19_0 = 0;
-                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_0 = 0;
                         decompiledRegionSelector0 = 0;
                         break L4;
                       }
                     } else {
                       this.field_i.field_m = 0;
                       this.field_i.b((byte) 11, 1);
-                      this.field_i.a(var2_ref.field_o, (byte) 122);
+                      this.field_i.a(var2.field_o, (byte) 122);
                       this.field_p.a(this.field_i.field_k.length, this.field_i.field_k, 1, 0);
-                      this.field_a.a(var2_ref, 14);
-                      var2_ref = (fi) ((Object) this.field_b.d(14));
+                      this.field_a.a(var2, 14);
+                      var2 = (fi) ((Object) this.field_b.d(14));
                       continue L5;
                     }
                   }
                 }
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
-                var2 = (IOException) (Object) decompiledCaughtException;
+                var2_ref = (IOException) (Object) decompiledCaughtException;
                 try {
                   L23: {
                     this.field_p.b((byte) 76);
@@ -413,8 +401,8 @@ final class sl extends na {
         try {
             IOException iOException = null;
             int var2 = 0;
-            Exception var4 = null;
             Throwable decompiledCaughtException = null;
+            Exception var4 = null;
             var2 = 66 / ((17 - param0) / 48);
             if (null != this.field_p) {
               try {
@@ -502,23 +490,13 @@ final class sl extends na {
     private final void a(int param0, boolean param1) {
         try {
             IOException iOException = null;
-            Exception var4 = null;
-            va stackIn_5_0 = null;
-            int stackIn_5_1 = 0;
             va stackIn_6_0 = null;
             int stackIn_6_1 = 0;
             va stackIn_7_0 = null;
             int stackIn_7_1 = 0;
             int stackIn_7_2 = 0;
             Throwable decompiledCaughtException = null;
-            va stackOut_4_0 = null;
-            int stackOut_4_1 = 0;
-            va stackOut_6_0 = null;
-            int stackOut_6_1 = 0;
-            int stackOut_6_2 = 0;
-            va stackOut_5_0 = null;
-            int stackOut_5_1 = 0;
-            int stackOut_5_2 = 0;
+            Exception var4 = null;
             if (null != this.field_p) {
               try {
                 L0: {
@@ -532,27 +510,19 @@ final class sl extends na {
                   }
                   L2: {
                     this.field_i.field_m = 0;
-                    stackOut_4_0 = this.field_i;
-                    stackOut_4_1 = 11;
-                    stackIn_6_0 = stackOut_4_0;
-                    stackIn_6_1 = stackOut_4_1;
-                    stackIn_5_0 = stackOut_4_0;
-                    stackIn_5_1 = stackOut_4_1;
+                    stackIn_6_0 = this.field_i;
+
+                    stackIn_6_1 = 11;
+
                     if (param1) {
-                      stackOut_6_0 = (va) ((Object) stackIn_6_0);
-                      stackOut_6_1 = stackIn_6_1;
-                      stackOut_6_2 = 2;
-                      stackIn_7_0 = stackOut_6_0;
-                      stackIn_7_1 = stackOut_6_1;
-                      stackIn_7_2 = stackOut_6_2;
+                      stackIn_7_0 = (va) ((Object) stackIn_6_0);
+                      stackIn_7_1 = stackIn_6_1;
+                      stackIn_7_2 = 2;
                       break L2;
                     } else {
-                      stackOut_5_0 = (va) ((Object) stackIn_5_0);
-                      stackOut_5_1 = stackIn_5_1;
-                      stackOut_5_2 = 3;
-                      stackIn_7_0 = stackOut_5_0;
-                      stackIn_7_1 = stackOut_5_1;
-                      stackIn_7_2 = stackOut_5_2;
+                      stackIn_7_0 = (va) ((Object) stackIn_6_0);
+                      stackIn_7_1 = stackIn_6_1;
+                      stackIn_7_2 = 3;
                       break L2;
                     }
                   }
@@ -599,14 +569,6 @@ final class sl extends na {
 
     final void a(boolean param0, Object param1, int param2) {
         try {
-            Exception var4 = null;
-            IOException var4_ref = null;
-            RuntimeException var4_ref2 = null;
-            fi var4_ref3 = null;
-            Exception var5 = null;
-            int var6 = 0;
-            RuntimeException stackIn_26_0 = null;
-            StringBuilder stackIn_26_1 = null;
             RuntimeException stackIn_27_0 = null;
             StringBuilder stackIn_27_1 = null;
             RuntimeException stackIn_28_0 = null;
@@ -614,14 +576,12 @@ final class sl extends na {
             String stackIn_28_2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_25_0 = null;
-            StringBuilder stackOut_25_1 = null;
-            RuntimeException stackOut_27_0 = null;
-            StringBuilder stackOut_27_1 = null;
-            String stackOut_27_2 = null;
-            RuntimeException stackOut_26_0 = null;
-            StringBuilder stackOut_26_1 = null;
-            String stackOut_26_2 = null;
+            Exception var4 = null;
+            fi var4_ref = null;
+            IOException var4_ref2 = null;
+            RuntimeException var4_ref3 = null;
+            Exception var5 = null;
+            int var6 = 0;
             var6 = wizardrun.field_H;
             try {
               L0: {
@@ -652,14 +612,14 @@ final class sl extends na {
                   this.field_g.field_m = 0;
                   this.field_c = null;
                   L4: while (true) {
-                    var4_ref3 = (fi) ((Object) this.field_a.b(58));
-                    if (var4_ref3 != null) {
-                      this.field_b.a(var4_ref3, 14);
+                    var4_ref = (fi) ((Object) this.field_a.b(58));
+                    if (var4_ref != null) {
+                      this.field_b.a(var4_ref, 14);
                       continue L4;
                     } else {
                       L5: while (true) {
-                        var4_ref3 = (fi) ((Object) this.field_m.b(70));
-                        if (var4_ref3 == null) {
+                        var4_ref = (fi) ((Object) this.field_m.b(70));
+                        if (var4_ref == null) {
                           L6: {
                             if (this.field_h == 0) {
                               break L6;
@@ -676,7 +636,7 @@ final class sl extends na {
                               } catch (java.io.IOException decompiledCaughtParameter1) {
                                 decompiledCaughtException = decompiledCaughtParameter1;
                                 L8: {
-                                  var4_ref = (IOException) (Object) decompiledCaughtException;
+                                  var4_ref2 = (IOException) (Object) decompiledCaughtException;
                                   try {
                                     L9: {
                                       this.field_p.b((byte) 76);
@@ -703,7 +663,7 @@ final class sl extends na {
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
-                          this.field_j.a(var4_ref3, 14);
+                          this.field_j.a(var4_ref, 14);
                           continue L5;
                         }
                       }
@@ -717,28 +677,20 @@ final class sl extends na {
             } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               L11: {
-                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_25_0 = (RuntimeException) (var4_ref2);
-                stackOut_25_1 = new StringBuilder().append("sl.A(").append(param0).append(',');
-                stackIn_27_0 = stackOut_25_0;
-                stackIn_27_1 = stackOut_25_1;
-                stackIn_26_0 = stackOut_25_0;
-                stackIn_26_1 = stackOut_25_1;
+                var4_ref3 = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_27_0 = (RuntimeException) (var4_ref3);
+
+                stackIn_27_1 = new StringBuilder().append("sl.A(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-                  stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-                  stackOut_27_2 = "null";
-                  stackIn_28_0 = stackOut_27_0;
-                  stackIn_28_1 = stackOut_27_1;
-                  stackIn_28_2 = stackOut_27_2;
+                  stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+                  stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+                  stackIn_28_2 = "null";
                   break L11;
                 } else {
-                  stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-                  stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-                  stackOut_26_2 = "{...}";
-                  stackIn_28_0 = stackOut_26_0;
-                  stackIn_28_1 = stackOut_26_1;
-                  stackIn_28_2 = stackOut_26_2;
+                  stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+                  stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+                  stackIn_28_2 = "{...}";
                   break L11;
                 }
               }

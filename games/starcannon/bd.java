@@ -12,8 +12,6 @@ abstract class bd {
 
     final int a(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 < -93) {
             break L0;
@@ -30,26 +28,24 @@ abstract class bd {
               if (-1 <= (this.field_d.length ^ -1)) {
                 break L2;
               } else {
-                stackOut_4_0 = this.field_d[-1 + this.field_d.length].field_c - this.field_d[0].field_g;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = this.field_d[-1 + this.field_d.length].field_c - this.field_d[0].field_g;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0;
     }
 
     final int c(int param0) {
-        int var2 = 0;
-        nh[] var3 = null;
-        int var4 = 0;
-        nh var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        nh[] var3;
+        int var4;
+        nh var5;
+        int var7;
+        int var6;
         var7 = StarCannon.field_A;
         if (param0 >= 98) {
           L0: {
@@ -89,17 +85,15 @@ abstract class bd {
     }
 
     final static int b(int param0) {
-        int discarded$1 = 0;
-        RuntimeException var1 = null;
+        int stackIn_27_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_27_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_26_0 = 0;
         var7 = StarCannon.field_A;
         try {
           L0: {
@@ -108,7 +102,7 @@ abstract class bd {
               if (param0 == 31380) {
                 break L1;
               } else {
-                discarded$1 = bd.b(121);
+                bd.b(121);
                 break L1;
               }
             }
@@ -180,8 +174,7 @@ abstract class bd {
                     }
                   }
                 }
-                stackOut_26_0 = var3;
-                stackIn_27_0 = stackOut_26_0;
+                stackIn_27_0 = var3;
                 break L0;
               } else {
                 L8: {
@@ -211,12 +204,11 @@ abstract class bd {
     }
 
     final int a(int param0, byte param1, int param2) {
-        int discarded$2 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        nh var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+        int var4;
+        int var5;
+        nh var6;
+        int var7;
+        int var8;
         L0: {
           var8 = StarCannon.field_A;
           if (this.field_d == null) {
@@ -235,7 +227,7 @@ abstract class bd {
                     if (param1 == 19) {
                       break L1;
                     } else {
-                      discarded$2 = bd.b(74);
+                      bd.b(74);
                       break L1;
                     }
                   }
@@ -299,7 +291,6 @@ abstract class bd {
 
     final int a(byte param0, int param1, int param2, String param3) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -307,26 +298,17 @@ abstract class bd {
         int var10 = 0;
         int var11 = 0;
         int stackIn_15_0 = 0;
-        int stackIn_17_0 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
+        int stackIn_15_1 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        int stackOut_14_0 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException var5 = null;
         var11 = StarCannon.field_A;
         try {
           L0: {
@@ -338,20 +320,20 @@ abstract class bd {
             L1: while (true) {
               if (var8 <= var9) {
                 if (var6 <= 0) {
-                  stackOut_16_0 = 0;
-                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_18_0 = 0;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_14_0 = (-param2 + param1 << 1052271144) / var6;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = -param2 + param1 << 1052271144;
+                  stackIn_15_1 = var6;
+                  stackIn_16_0 = stackIn_15_0 / stackIn_15_1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
               } else {
                 L2: {
                   var10 = param3.charAt(var9);
-                  if (var10 == 60) {
+                  if ((var10 ^ -1) == -61) {
                     var7 = 1;
                     break L2;
                   } else {
@@ -382,36 +364,28 @@ abstract class bd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var5);
-            stackOut_18_1 = new StringBuilder().append("bd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_21_0 = (RuntimeException) (var5);
+
+            stackIn_21_1 = new StringBuilder().append("bd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L3;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L3;
             }
           }
-          throw sd.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_15_0;
+          return stackIn_16_0;
         } else {
-          return stackIn_17_0;
+          return stackIn_18_0;
         }
     }
 
@@ -439,29 +413,18 @@ abstract class bd {
 
     final static byte[] a(int param0, byte[] param1, byte param2, int param3) {
         byte[] var4 = null;
-        RuntimeException var4_ref = null;
         int var5_int = 0;
-        nf var5 = null;
-        byte[] var6 = null;
         byte[] var7 = null;
         byte[] stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_7_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var4_ref = null;
+        nf var5 = null;
+        byte[] var6 = null;
         try {
           L0: {
             L1: {
@@ -496,35 +459,26 @@ abstract class bd {
             var5.a((long)(8 * param0), 614, var4);
             var6 = new byte[64];
             var5.a(0, 494486752, var6);
-            stackOut_7_0 = (byte[]) (var6);
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = (byte[]) (var6);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var4_ref);
-            stackOut_9_1 = new StringBuilder().append("bd.C(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var4_ref);
+
+            stackIn_11_1 = new StringBuilder().append("bd.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }

@@ -17,38 +17,32 @@ final class qw extends vg {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        if (param0 == 256) {
-          if (224 <= ff.field_w) {
-            cf.a(256, -116);
-            if (TombRacer.field_G) {
+        int var1;
+        if (param0 != 256) {
+          L0: {
+            qw.a(false);
+            if (224 > ff.field_w) {
               var1 = ff.field_w % 32;
               cf.a(ff.field_w - (-32 + var1), -127);
-              return;
+              break L0;
             } else {
-              return;
+              cf.a(256, -116);
+              break L0;
             }
-          } else {
-            var1 = ff.field_w % 32;
-            cf.a(ff.field_w - (-32 + var1), -127);
-            return;
           }
+          return;
         } else {
-          qw.a(false);
-          if (224 <= ff.field_w) {
-            cf.a(256, -116);
-            if (!TombRacer.field_G) {
-              return;
-            } else {
+          L1: {
+            if (224 > ff.field_w) {
               var1 = ff.field_w % 32;
               cf.a(ff.field_w - (-32 + var1), -127);
-              return;
+              break L1;
+            } else {
+              cf.a(256, -116);
+              break L1;
             }
-          } else {
-            var1 = ff.field_w % 32;
-            cf.a(ff.field_w - (-32 + var1), -127);
-            return;
           }
+          return;
         }
     }
 

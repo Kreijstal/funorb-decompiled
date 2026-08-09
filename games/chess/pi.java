@@ -8,8 +8,10 @@ final class pi {
     static String field_b;
 
     final static void a(int param0) {
-        String[][] dupTemp$2 = null;
-        int[][] dupTemp$3 = null;
+        String[][] dupTemp$0 = null;
+        int[][] dupTemp$1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         pg var3 = null;
@@ -25,17 +27,14 @@ final class pi {
         int var12 = 0;
         nk var13 = null;
         int var14 = 0;
-        int var15 = 0;
-        nk var16 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
+        nk var15 = null;
         var12 = Chess.field_G;
         try {
           L0: {
             L1: {
               var13 = tk.field_h;
-              var16 = var13;
-              var2 = var16.i(-125);
+              var15 = var13;
+              var2 = var15.i(-125);
               if (param0 >= 102) {
                 break L1;
               } else {
@@ -63,7 +62,7 @@ final class pi {
                 break L0;
               } else {
                 L4: {
-                  var4 = var16.i(-89);
+                  var4 = var15.i(-89);
                   if (var4 != 0) {
                     ag.field_d[0] = ci.field_J;
                     var5 = var3.field_u;
@@ -75,47 +74,46 @@ final class pi {
                         L6: while (true) {
                           if (var4 <= var6_int) {
                             pd.b(var5, -109);
-                            dupTemp$2 = new String[2][var5];
-                            var3.field_t = dupTemp$2;
-                            var6 = dupTemp$2;
-                            dupTemp$3 = new int[2][var5 * 4];
-                            var3.field_j = dupTemp$3;
-                            var7 = dupTemp$3;
+                            dupTemp$0 = new String[2][var5];
+                            var3.field_t = dupTemp$0;
+                            var6 = dupTemp$0;
+                            dupTemp$1 = new int[2][var5 * 4];
+                            var3.field_j = dupTemp$1;
+                            var7 = dupTemp$1;
                             var8 = ed.field_b;
                             var9 = 0;
                             var10 = 0;
                             L7: while (true) {
                               if (var8 <= var9) {
+                                var9 = 0;
                                 var14 = 0;
-                                var9 = var14;
-                                var15 = 0;
-                                var10 = var15;
+                                var10 = var14;
                                 L8: while (true) {
-                                  if (var14 >= var8) {
+                                  if (var9 >= var8) {
                                     break L4;
                                   } else {
-                                    var11 = vn.field_Ab[var14 + var5];
-                                    var6[1][var15] = ag.field_d[var11];
-                                    var7[1][4 * var15] = hg.field_d[var11];
-                                    var7[1][1 + 4 * var15] = hn.field_e[var11];
-                                    var7[1][2 + var15 * 4] = in.field_j[var11];
-                                    var7[1][3 + var15 * 4] = oc.field_n[var11];
+                                    var11 = vn.field_Ab[var9 + var5];
+                                    var6[1][var14] = ag.field_d[var11];
+                                    var7[1][4 * var14] = hg.field_d[var11];
+                                    var7[1][1 + 4 * var14] = hn.field_e[var11];
+                                    var7[1][2 + var14 * 4] = in.field_j[var11];
+                                    var7[1][3 + var14 * 4] = oc.field_n[var11];
                                     if (qd.a((byte) 13, ag.field_d[var11])) {
                                       L9: {
                                         if (0 == hn.field_e[var11] - (-in.field_j[var11] - oc.field_n[var11])) {
-                                          var6[1][var15] = null;
-                                          var15--;
+                                          var6[1][var14] = null;
+                                          var14--;
                                           break L9;
                                         } else {
                                           break L9;
                                         }
                                       }
-                                      var15++;
                                       var14++;
+                                      var9++;
                                       continue L8;
                                     } else {
-                                      var15++;
                                       var14++;
+                                      var9++;
                                       continue L8;
                                     }
                                   }
@@ -149,7 +147,7 @@ final class pi {
                             }
                           } else {
                             L11: {
-                              nj.a((byte) 20, var16);
+                              nj.a((byte) 20, var15);
                               if (-1 != (var6_int ^ -1)) {
                                 lf.a(jb.field_b, (byte) 117, l.field_o, var6_int, gm.field_c, sl.field_e);
                                 break L11;
@@ -196,86 +194,36 @@ final class pi {
     }
 
     final static void a(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        RuntimeException var10 = null;
-        int var10_int = 0;
-        int[] var10_array = null;
+        int[] var17 = null;
+        int[] var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        int var16 = 0;
-        int[] var17 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        var16 = Chess.field_G;
+        int var16 = Chess.field_G;
         try {
-          L0: {
-            L1: while (true) {
-              param5--;
-              if (0 > param5) {
-                var10_int = 48 / ((-44 - param9) / 39);
-                break L0;
-              } else {
+            while (true) {
+                param5--;
+                if (0 > param5) {
+                    break;
+                }
                 var17 = param3;
-                var10_array = var17;
+                var10 = var17;
                 var11 = param7;
                 var12 = param8;
                 var13 = param2;
                 var14 = param6;
                 var15 = var17[var11] >> 1170726593 & 8355711;
-                var10_array[var11] = (ce.a(var14, 33503610) >> 2014530545) - -(ce.a(var13, 33423475) >> -1207284919) - (-(ce.a(33423361, var12) >> 1443047329) - var15);
+                var10[var11] = (ce.a(var14, 33503610) >> 2014530545) - -(ce.a(var13, 33423475) >> -1207284919) - (-(ce.a(33423361, var12) >> 1443047329) - var15);
                 param8 = param8 + param4;
                 param7++;
                 param6 = param6 + param0;
                 param2 = param2 + param1;
-                continue L1;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var10 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var10);
-            stackOut_5_1 = new StringBuilder().append("pi.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            if (param3 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L2;
-            } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
-              break L2;
-            }
-          }
-          throw fk.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+            int var10_int = 48 / ((-44 - param9) / 39);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) ((Object) runtimeException), "pi.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

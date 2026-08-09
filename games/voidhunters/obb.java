@@ -5,9 +5,8 @@ final class obb extends rqa {
     static String[] field_o;
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         if (param0 != 21942) {
-            discarded$0 = obb.a(7, -102, -66);
+            obb.a(7, -102, -66);
             field_o = null;
             return;
         }
@@ -20,7 +19,6 @@ final class obb extends rqa {
         int var4 = 0;
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -35,8 +33,7 @@ final class obb extends rqa {
             var3_int = 0;
             L2: while (true) {
               if (param0 <= 0) {
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = var3_int;
                 break L0;
               } else {
                 var3_int = 1 & param2 | var3_int << 1288312641;
@@ -58,8 +55,6 @@ final class obb extends rqa {
         RuntimeException var3 = null;
         nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -67,27 +62,15 @@ final class obb extends rqa {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_3_0 = null;
-        nc stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             si.a(184, 62, param0[0].a(73));
             if (param1 < -119) {
-              stackOut_3_0 = new nc("void");
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = new nc("void");
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (nc) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (nc) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -96,27 +79,19 @@ final class obb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("obb.A(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("obb.A(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }

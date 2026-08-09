@@ -8,7 +8,6 @@ final class tc extends kf {
 
     final void a(byte param0, uj param1) {
         qd var3 = null;
-        boolean discarded$0 = false;
         if (param0 <= 68) {
             return;
         }
@@ -19,7 +18,7 @@ final class tc extends kf {
             var3 = (qd) ((Object) param1);
             this.field_w.a(-125, var3);
             var3.field_G = true;
-            discarded$0 = var3.a(0, (uj) (this));
+            var3.a(0, (uj) (this));
         } catch (RuntimeException runtimeException) {
             throw sd.a((Throwable) ((Object) runtimeException), "tc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -51,8 +50,8 @@ final class tc extends kf {
     }
 
     final qd k(int param0) {
-        ba var2 = null;
-        qd var3 = null;
+        ba var2;
+        qd var3;
         var2 = new ba(this.field_w);
         var3 = (qd) ((Object) var2.a(param0 ^ param0));
         L0: while (true) {
@@ -85,7 +84,6 @@ final class tc extends kf {
     }
 
     final void l(int param0) {
-        uj discarded$0 = null;
         ba var2 = new ba(this.field_w);
         qd var3 = (qd) ((Object) var2.a(0));
         while (var3 != null) {
@@ -94,13 +92,13 @@ final class tc extends kf {
         }
         this.field_t = null;
         if (param0 != 26756) {
-            discarded$0 = this.e(-38);
+            this.e(-38);
         }
     }
 
     final uj e(int param0) {
-        ba var2 = null;
-        qd var3 = null;
+        ba var2;
+        qd var3;
         var2 = new ba(this.field_w);
         var3 = (qd) ((Object) var2.a(param0 + param0));
         L0: while (true) {

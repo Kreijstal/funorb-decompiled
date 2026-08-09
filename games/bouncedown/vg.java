@@ -16,10 +16,10 @@ final class vg implements fc {
     private int field_h;
 
     final static bl a(boolean param0, int param1) {
-        int discarded$4 = 0;
-        String discarded$5 = null;
-        int discarded$6 = 0;
-        String discarded$7 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_11_0 = 0;
+        int[] stackIn_25_0 = null;
+        Throwable decompiledCaughtException = null;
         ii var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -28,16 +28,6 @@ final class vg implements fc {
         int var7 = 0;
         ii var8 = null;
         ne var9 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int[] stackIn_25_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int[] stackOut_24_0 = null;
-        Object stackOut_23_0 = null;
         L0: {
           var7 = Bounce.field_N;
           if (param1 == 3904) {
@@ -52,12 +42,10 @@ final class vg implements fc {
           var2 = var8;
           var3 = var8.d((byte) -90);
           if ((128 & var3) == 0) {
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 0;
             break L1;
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             break L1;
           }
         }
@@ -78,12 +66,10 @@ final class vg implements fc {
         }
         L3: {
           if (1 != var8.d((byte) -76)) {
-            stackOut_10_0 = 0;
-            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_0 = 0;
             break L3;
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             break L3;
           }
         }
@@ -100,15 +86,15 @@ final class vg implements fc {
         }
         L5: {
           if (eg.field_o == 1) {
-            discarded$4 = var8.a(-1640531527);
-            discarded$5 = var8.b(true);
+            var8.a(-1640531527);
+            var8.b(true);
             break L5;
           } else {
             if (-5 != (eg.field_o ^ -1)) {
               break L5;
             } else {
-              discarded$6 = var8.a(-1640531527);
-              discarded$7 = var8.b(true);
+              var8.a(-1640531527);
+              var8.b(true);
               break L5;
             }
           }
@@ -121,12 +107,10 @@ final class vg implements fc {
                 var9 = ag.field_a.a(var5, (byte) -127);
                 jg.field_D = var9.e(99);
                 if (!g.field_i.equals(ja.field_b)) {
-                  stackOut_24_0 = var9.field_s;
-                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_25_0 = var9.field_s;
                   break L7;
                 } else {
-                  stackOut_23_0 = null;
-                  stackIn_25_0 = (int[]) ((Object) stackOut_23_0);
+                  stackIn_25_0 = null;
                   break L7;
                 }
               }
@@ -150,12 +134,12 @@ final class vg implements fc {
     }
 
     final static void a(byte param0) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         ii var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var3 = Bounce.field_N;
         try {
           L0: {
@@ -173,9 +157,9 @@ final class vg implements fc {
                 break L0;
               } else {
                 var1.a(true, 8);
-                fieldTemp$5 = var1.field_h + 1;
+                fieldTemp$2 = var1.field_h + 1;
                 var1.field_h = var1.field_h + 1;
-                var2 = fieldTemp$5;
+                var2 = fieldTemp$2;
                 sa.a((byte) -97, var1);
                 hh.field_p.b(-var2 + var1.field_h, true);
                 continue L2;
@@ -199,35 +183,21 @@ final class vg implements fc {
         int var12 = 0;
         d var13 = null;
         lk stackIn_4_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        lk stackOut_2_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         var12 = Bounce.field_N;
         try {
           L0: {
             L1: {
               if (!(param1 instanceof d)) {
-                stackOut_3_0 = null;
-                stackIn_4_0 = (lk) ((Object) stackOut_3_0);
+                stackIn_4_0 = null;
                 break L1;
               } else {
-                stackOut_2_0 = (lk) (param1);
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = (lk) (param1);
                 break L1;
               }
             }
@@ -265,27 +235,19 @@ final class vg implements fc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var6);
-            stackOut_12_1 = new StringBuilder().append("vg.B(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var6);
+
+            stackIn_14_1 = new StringBuilder().append("vg.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }

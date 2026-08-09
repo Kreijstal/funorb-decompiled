@@ -21,20 +21,23 @@ final class ri extends am {
             rf.field_e = param3;
             qa.a(param1, (byte) -24, jj.field_i);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "ri.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw wg.a((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, p param2, int param3) {
         try {
+            if (param0 <= 77) {
+                field_o = true;
+            }
             dn.a(param2.field_e, uf.field_f, uf.field_d, param3, -1, param1);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "ri.C(" + 91 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw wg.a((Throwable) ((Object) runtimeException), "ri.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     ri() {
-        ((ri) this).field_l = false;
+        this.field_l = false;
     }
 
     public static void c(int param0) {
@@ -49,10 +52,6 @@ final class ri extends am {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = -1;
         field_i = "Create";
     }

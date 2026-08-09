@@ -31,99 +31,70 @@ final class fka {
     private co field_h;
 
     final void a(uia param0) {
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        L0: {
-          this.field_g = new co();
-          this.field_g.b(param0);
-          this.field_y = new co();
-          this.field_y.b(param0);
-          var2 = param0.h(255);
-          if (var2 == 0) {
-            break L0;
-          } else {
+        this.field_g = new co();
+        this.field_g.b(param0);
+        this.field_y = new co();
+        this.field_y.b(param0);
+        int var2 = param0.h(255);
+        if (var2 != 0) {
             param0.field_h = param0.field_h - 1;
             this.field_c = new co();
             this.field_c.b(param0);
             this.field_l = new co();
             this.field_l.b(param0);
-            break L0;
-          }
         }
-        L1: {
-          var2 = param0.h(255);
-          if (var2 == 0) {
-            break L1;
-          } else {
+        var2 = param0.h(255);
+        if (var2 != 0) {
             param0.field_h = param0.field_h - 1;
             this.field_e = new co();
             this.field_e.b(param0);
             this.field_p = new co();
             this.field_p.b(param0);
-            break L1;
-          }
         }
-        L2: {
-          var2 = param0.h(255);
-          if (var2 == 0) {
-            break L2;
-          } else {
+        var2 = param0.h(255);
+        if (var2 != 0) {
             param0.field_h = param0.field_h - 1;
             this.field_k = new co();
             this.field_k.b(param0);
             this.field_h = new co();
             this.field_h.b(param0);
-            break L2;
-          }
         }
-        var3 = 0;
-        L3: while (true) {
-          L4: {
-            if (var3 >= 10) {
-              break L4;
-            } else {
-              var4 = param0.d((byte) -46);
-              if (var4 != 0) {
-                this.field_a[var3] = var4;
-                this.field_u[var3] = param0.f((byte) -128);
-                this.field_t[var3] = param0.d((byte) -46);
-                var3++;
-                continue L3;
-              } else {
-                break L4;
-              }
+        for (var3 = 0; var3 < 10; var3++) {
+            var4 = param0.d((byte) -46);
+            if (var4 == 0) {
+                break;
             }
-          }
-          this.field_f = param0.d((byte) -46);
-          this.field_m = param0.d((byte) -46);
-          this.field_v = param0.d(123);
-          this.field_i = param0.d(126);
-          this.field_n = new hva();
-          this.field_d = new co();
-          this.field_n.a(param0, this.field_d);
-          return;
+            this.field_a[var3] = var4;
+            this.field_u[var3] = param0.f((byte) -128);
+            this.field_t[var3] = param0.d((byte) -46);
         }
+        this.field_f = param0.d((byte) -46);
+        this.field_m = param0.d((byte) -46);
+        this.field_v = param0.d(123);
+        this.field_i = param0.d(126);
+        this.field_n = new hva();
+        this.field_d = new co();
+        this.field_n.a(param0, this.field_d);
     }
 
     final int[] a(int param0, int param1) {
-        double var3 = 0.0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
         int stackIn_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
+        double var3;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         lua.a(field_x, 0, param0);
         if (param1 >= 10) {
           L0: {
@@ -196,12 +167,10 @@ final class fka {
                               L8: {
                                 var11 = 0;
                                 if (var13 != 0) {
-                                  stackOut_35_0 = 0;
-                                  stackIn_36_0 = stackOut_35_0;
+                                  stackIn_36_0 = 0;
                                   break L8;
                                 } else {
-                                  stackOut_34_0 = 1;
-                                  stackIn_36_0 = stackOut_34_0;
+                                  stackIn_36_0 = 1;
                                   break L8;
                                 }
                               }

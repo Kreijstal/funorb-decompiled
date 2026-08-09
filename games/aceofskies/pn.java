@@ -10,25 +10,9 @@ final class pn implements Runnable {
     volatile tk[] field_c;
 
     final static byte[] a(byte[] param0, int param1) {
-        int discarded$1 = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        byte[] var5 = null;
-        int var5_int = 0;
-        byte[] var6 = null;
-        Object var7 = null;
-        Throwable var8 = null;
-        rb var9 = null;
-        byte[] var10 = null;
-        byte[] var11 = null;
-        byte[] var12 = null;
-        byte[] var13 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_22_0 = null;
         byte[] stackIn_24_0 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
@@ -36,17 +20,18 @@ final class pn implements Runnable {
         String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        byte[] stackOut_23_0 = null;
-        byte[] stackOut_21_0 = null;
-        byte[] stackOut_1_0 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        byte[] var5 = null;
+        int var5_int = 0;
+        byte[] var6 = null;
+        Object var7 = null;
+        rb var9 = null;
+        byte[] var10 = null;
+        byte[] var11 = null;
+        byte[] var12 = null;
+        byte[] var13 = null;
         try {
           L0: {
             if (param1 == 0) {
@@ -73,8 +58,7 @@ final class pn implements Runnable {
                     var11 = var13;
                     var5 = var11;
                     var9.a(0, param1 + 7186, var4, var13);
-                    stackOut_23_0 = (byte[]) (var5);
-                    stackIn_24_0 = stackOut_23_0;
+                    stackIn_24_0 = (byte[]) (var5);
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
@@ -99,7 +83,7 @@ final class pn implements Runnable {
                           var10 = var12;
                           var6 = var10;
                           if (var3 == 1) {
-                            discarded$1 = on.a(var12, var5_int, param0, var4, 9);
+                            on.a(var12, var5_int, param0, var4, 9);
                             break L5;
                           } else {
                             var7 = vg.field_h;
@@ -112,8 +96,7 @@ final class pn implements Runnable {
                             break L5;
                           }
                         }
-                        stackOut_21_0 = (byte[]) (var6);
-                        stackIn_22_0 = stackOut_21_0;
+                        stackIn_22_0 = (byte[]) (var6);
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -124,8 +107,7 @@ final class pn implements Runnable {
               }
               throw new RuntimeException();
             } else {
-              stackOut_1_0 = (byte[]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (byte[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -134,27 +116,19 @@ final class pn implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var2);
-            stackOut_25_1 = new StringBuilder().append("pn.D(");
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var2);
+
+            stackIn_27_1 = new StringBuilder().append("pn.D(");
+
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L7;
             }
           }
@@ -227,12 +201,12 @@ final class pn implements Runnable {
 
     final static void a(boolean param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {

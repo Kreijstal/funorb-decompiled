@@ -17,8 +17,6 @@ final class qc extends nm {
         oh stackIn_5_0 = null;
         oh stackIn_9_0 = null;
         Object stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -26,17 +24,6 @@ final class qc extends nm {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        oh stackOut_8_0 = null;
-        Object stackOut_10_0 = null;
-        oh stackOut_4_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             if (ka.field_l != jm.field_f) {
@@ -49,8 +36,7 @@ final class qc extends nm {
                       break L1;
                     } else {
                       ka.field_l = ej.field_P;
-                      stackOut_8_0 = he.field_H;
-                      stackIn_9_0 = stackOut_8_0;
+                      stackIn_9_0 = he.field_H;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -59,13 +45,11 @@ final class qc extends nm {
                 he.field_H = null;
                 ka.field_l = jm.field_f;
                 om.field_pc = param0;
-                stackOut_10_0 = null;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = null;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_4_0 = (oh) null;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (oh) null;
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -77,27 +61,19 @@ final class qc extends nm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var2);
-            stackOut_12_1 = new StringBuilder().append("qc.B(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var2);
+
+            stackIn_14_1 = new StringBuilder().append("qc.B(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L2;
             }
           }
@@ -127,11 +103,11 @@ final class qc extends nm {
         try {
             IOException iOException = null;
             int var1_int = 0;
-            RuntimeException var1 = null;
-            IOException var2 = null;
             int var3 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            RuntimeException var1 = null;
+            IOException var2 = null;
             var3 = BrickABrac.field_J ? 1 : 0;
             try {
               L0: {
@@ -228,17 +204,15 @@ final class qc extends nm {
     }
 
     final static void c(int param0) {
-        boolean discarded$17 = false;
-        boolean discarded$18 = false;
-        RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
             if (m.a(param0 ^ 27146)) {
-              discarded$17 = wo.field_b.a(rj.field_b, fh.field_g, param0 + -27268, true);
+              wo.field_b.a(rj.field_b, fh.field_g, param0 + -27268, true);
               if (param0 == 27144) {
                 wo.field_b.i(82);
                 L1: while (true) {
@@ -246,7 +220,7 @@ final class qc extends nm {
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    discarded$18 = wo.field_b.a(go.field_b, dc.field_b, true);
+                    wo.field_b.a(go.field_b, dc.field_b, true);
                     continue L1;
                   }
                 }
@@ -328,7 +302,7 @@ final class qc extends nm {
             }
             discarded$0 = var6.append((char) var9);
         }
-        StringBuilder discarded$1 = var6.reverse();
+        var6.reverse();
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
         return var6.toString();
     }

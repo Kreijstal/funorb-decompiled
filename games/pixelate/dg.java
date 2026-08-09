@@ -11,7 +11,6 @@ final class dg {
 
     final static void a(boolean param0, int param1, int param2, String param3, String param4, int param5) {
         int var7 = 0;
-        int discarded$1 = 0;
         pc var8 = aa.field_f;
         var8.g(param5, 15514);
         var8.field_m = var8.field_m + 1;
@@ -25,7 +24,7 @@ final class dg {
                 var8.b((byte) -41, param4);
             }
             if (param3 != null) {
-                discarded$1 = hn.a(!param0 ? true : false, param3, var8);
+                hn.a(!param0 ? true : false, param3, var8);
             } else {
                 var8.b(1276387944, param2);
             }

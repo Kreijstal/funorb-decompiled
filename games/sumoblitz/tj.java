@@ -17,22 +17,21 @@ final class tj extends ms {
     }
 
     final static wb c(byte param0) {
-        wb discarded$1 = null;
-        int var1 = 0;
-        int[] var3 = null;
-        int var4_int = 0;
-        wb var4 = null;
-        int var5 = 0;
-        byte[] var7 = null;
+        int var1;
+        byte[] var2;
+        int[] var3;
+        int var4_int;
+        wb var4;
+        int var5;
         var5 = Sumoblitz.field_L ? 1 : 0;
         var1 = vg.field_k[0] * we.field_B[0];
-        var7 = ag.field_d[0];
+        var2 = ag.field_d[0];
         var3 = new int[var1];
         var4_int = 0;
         L0: while (true) {
           if (var1 <= var4_int) {
             if (param0 != -8) {
-              discarded$1 = tj.c((byte) -8);
+              tj.c((byte) -8);
               var4 = new wb(vf.field_d, li.field_u, er.field_h[0], av.field_C[0], vg.field_k[0], we.field_B[0], var3);
               tl.a((byte) -59);
               return var4;
@@ -42,15 +41,9 @@ final class tj extends ms {
               return var4;
             }
           } else {
-            var3[var4_int] = iv.field_l[eb.a(255, (int) var7[var4_int])];
+            var3[var4_int] = iv.field_l[eb.a(255, (int) var2[var4_int])];
             var4_int++;
-            if (var5 == 0) {
-              continue L0;
-            } else {
-              var4 = new wb(vf.field_d, li.field_u, er.field_h[0], av.field_C[0], vg.field_k[0], we.field_B[0], var3);
-              tl.a((byte) -59);
-              return var4;
-            }
+            continue L0;
           }
         }
     }

@@ -24,13 +24,13 @@ abstract class ji {
     abstract void h(int param0);
 
     final static void f(int param0) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         pk var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var3 = Geoblox.field_C;
         try {
           L0: {
@@ -42,9 +42,9 @@ abstract class ji {
                   break L0;
                 } else {
                   var1.a(8, (byte) -71);
-                  fieldTemp$5 = var1.field_f + 1;
+                  fieldTemp$2 = var1.field_f + 1;
                   var1.field_f = var1.field_f + 1;
-                  var2 = fieldTemp$5;
+                  var2 = fieldTemp$2;
                   pf.a(46, var1);
                   fj.field_q.f(11700, var1.field_f + -var2);
                   continue L1;
@@ -70,35 +70,24 @@ abstract class ji {
     abstract void a(Object param0, boolean param1, boolean param2);
 
     final sd a(byte param0, int param1, int param2, int param3, boolean param4) {
-        long var6 = 0L;
-        sd var8 = null;
-        sd stackIn_1_0 = null;
+        long var6;
+        sd var8;
         sd stackIn_2_0 = null;
         sd stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        sd stackOut_0_0 = null;
-        sd stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        sd stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           var6 = ((long)param1 << 1984104992) - -(long)param3;
           var8 = new sd();
           var8.field_i = var6;
-          stackOut_0_0 = (sd) (var8);
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = (sd) (var8);
+
           if (!param4) {
-            stackOut_2_0 = (sd) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (sd) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (sd) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (sd) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -140,8 +129,8 @@ abstract class ji {
 
     final static void a(long param0, byte param1) {
         try {
-            InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
+            InterruptedException var3 = null;
             try {
               L0: {
                 Thread.sleep(param0);
@@ -169,20 +158,14 @@ abstract class ji {
     final boolean g(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 20) {
           L0: {
             field_l = (String) null;
             if (this.a(-104) < 20) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -190,12 +173,10 @@ abstract class ji {
         } else {
           L1: {
             if (this.a(-104) < 20) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -216,44 +197,21 @@ abstract class ji {
 
     final static short[] a(short[] param0, int param1, int param2, pk param3) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         short[] stackIn_16_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        short[] stackOut_15_0 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var4 = null;
         var8 = Geoblox.field_C;
         try {
           L0: {
@@ -301,8 +259,7 @@ abstract class ji {
                   }
                 }
               }
-              stackOut_15_0 = (short[]) (param0);
-              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_0 = (short[]) (param0);
               break L0;
             } else {
               return null;
@@ -312,56 +269,40 @@ abstract class ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var4);
-            stackOut_17_1 = new StringBuilder().append("ji.J(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var4);
+
+            stackIn_19_1 = new StringBuilder().append("ji.J(");
+
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+
+
+            stackIn_22_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L7;
             }
           }
-          throw t.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_20_0), stackIn_23_2 + ')');
         }
         return stackIn_16_0;
     }
@@ -369,23 +310,16 @@ abstract class ji {
     abstract boolean a(byte param0);
 
     final boolean b(int param0) {
-        boolean discarded$10 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -21) {
           L0: {
-            discarded$10 = this.a((byte) 74);
+            this.a((byte) 74);
             if ((this.a(false) ^ -1) > -21) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -393,12 +327,10 @@ abstract class ji {
         } else {
           L1: {
             if ((this.a(false) ^ -1) > -21) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

@@ -40,11 +40,10 @@ final class bd {
     }
 
     public static void c(int param0) {
-        eb discarded$2 = null;
-        String var2 = null;
+        String var2;
         if (param0 != 1) {
           var2 = (String) null;
-          discarded$2 = bd.a((Throwable) null, (String) null);
+          bd.a((Throwable) null, (String) null);
           field_b = null;
           field_a = null;
           field_c = null;

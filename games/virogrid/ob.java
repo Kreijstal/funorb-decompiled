@@ -12,7 +12,7 @@ final class ob {
     }
 
     public static void a(int param0) {
-        String var2 = null;
+        String var2;
         if (param0 != 29137) {
           var2 = (String) null;
           ob.a((byte) 35, (String) null);
@@ -31,6 +31,8 @@ final class ob {
     }
 
     final static void a(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -48,8 +50,6 @@ final class ob {
         Object var16 = null;
         ka var16_ref = null;
         int[] var17 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var16 = null;
         var8 = Virogrid.field_F ? 1 : 0;
         try {
@@ -157,7 +157,6 @@ final class ob {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int discarded$0 = 0;
         try {
             var2_int = nl.field_u;
             var3 = hk.field_Jb;
@@ -171,7 +170,7 @@ final class ob {
             var8 = p.a(-1, var6, var3, 20);
             df.e(var7, var8, var5, var6, 0);
             df.b(var7 - -1, var8 + 1, var5 - 2, -2 + var6, 16777088);
-            discarded$0 = ti.field_h.field_C.a(param1, 3 + var7, -ti.field_h.field_C.field_H + var8 - (-1 + -rf.field_e), 500, 1000, 0, -1, 0, 0, pg.field_e);
+            ti.field_h.field_C.a(param1, 3 + var7, -ti.field_h.field_C.field_H + var8 - (-1 + -rf.field_e), 500, 1000, 0, -1, 0, 0, pg.field_e);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) ((Object) runtimeException), "ob.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

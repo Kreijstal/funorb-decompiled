@@ -47,25 +47,25 @@ final class rp {
     }
 
     final static dd[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        Object var14 = null;
-        int[] var15 = null;
-        int[] var17 = null;
-        int[] var18 = null;
-        dd var19 = null;
-        dd var20 = null;
-        dd var21 = null;
-        dd var22 = null;
-        dd var23 = null;
-        dd var24 = null;
-        dd var25 = null;
-        dd var26 = null;
-        dd var27 = null;
-        dd var28 = null;
-        dd var29 = null;
-        dd var30 = null;
+        int[] var6;
+        int var7;
+        int var8;
+        Object var14;
+        int[] var15;
+        int[] var17;
+        int[] var18;
+        dd var19;
+        dd var20;
+        dd var21;
+        dd var22;
+        dd var23;
+        dd var24;
+        dd var25;
+        dd var26;
+        dd var27;
+        dd var28;
+        dd var29;
+        dd var30;
         var18 = qh.field_d;
         var17 = var18;
         var15 = var17;

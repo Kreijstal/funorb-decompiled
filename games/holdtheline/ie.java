@@ -10,7 +10,7 @@ final class ie extends hl {
     boolean field_m;
 
     final static fo a(int param0, int param1, int param2, int param3) {
-        fo var4 = null;
+        fo var4;
         var4 = new fo();
         var4.field_j = param0;
         var4.field_l = param3;

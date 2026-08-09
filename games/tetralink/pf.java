@@ -44,7 +44,7 @@ final class pf {
     }
 
     private final String b(int param0) {
-        String var2 = null;
+        String var2;
         if (param0 != 2) {
           L0: {
             field_a = (jk) null;
@@ -72,8 +72,7 @@ final class pf {
     }
 
     private final boolean d(int param0, int param1, int param2) {
-        boolean discarded$1 = false;
-        int var5 = 0;
+        int var5;
         var5 = TetraLink.field_J;
         if ((param2 ^ -1) != -9) {
           if ((param2 ^ -1) == -19) {
@@ -104,7 +103,7 @@ final class pf {
                   } else {
                     if (20 != param2) {
                       if (19 == param2) {
-                        discarded$1 = sj.a(this.field_e, this.field_b, this.field_g, 60, this.field_f);
+                        sj.a(this.field_e, this.field_b, this.field_g, 60, this.field_f);
                         if (param0 != -15) {
                           return false;
                         } else {
@@ -151,8 +150,8 @@ final class pf {
     }
 
     final void a(boolean param0) {
-        String var2 = null;
-        String var3 = null;
+        String var2;
+        String var3;
         L0: {
           if (null == this.field_b) {
             break L0;
@@ -176,10 +175,10 @@ final class pf {
     }
 
     private final boolean c(int param0, int param1, int param2) {
-        Object var4 = null;
-        String var4_ref = null;
-        int var5 = 0;
-        String var6 = null;
+        Object var4;
+        String var4_ref;
+        int var5;
+        String var6;
         var4 = null;
         if (4 == param2) {
           var4_ref = qf.a((byte) 122, this.field_b, param1);
@@ -252,8 +251,6 @@ final class pf {
     final void a(fj param0, int param1) {
         RuntimeException runtimeException = null;
         int[] var4 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -261,14 +258,6 @@ final class pf {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
         try {
           L0: {
             if (param0.field_l) {
@@ -341,27 +330,19 @@ final class pf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             runtimeException = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (runtimeException);
-            stackOut_20_1 = new StringBuilder().append("pf.N(");
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (runtimeException);
+
+            stackIn_22_1 = new StringBuilder().append("pf.N(");
+
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L8;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L8;
             }
           }
@@ -402,9 +383,9 @@ final class pf {
     }
 
     final void b(byte param0) {
-        String var3 = null;
-        int var4 = 0;
-        el var5 = null;
+        String var3;
+        int var4;
+        el var5;
         var4 = TetraLink.field_J;
         if (qb.field_N == null) {
           var5 = qd.c(param0 ^ 35, this.field_c);
@@ -554,10 +535,10 @@ final class pf {
     }
 
     final void a(int param0, boolean param1) {
-        gd var4 = null;
-        String var5 = null;
-        int var6 = 0;
-        gd var7 = null;
+        gd var4;
+        String var5;
+        int var6;
+        gd var7;
         var6 = TetraLink.field_J;
         if (this.field_b != null) {
           if (oj.field_c != this.field_e) {
@@ -718,17 +699,9 @@ final class pf {
     }
 
     final void a(int param0, int[] param1, boolean param2) {
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        ud var5 = null;
-        int var6 = 0;
-        String var7 = null;
-        String stackIn_8_0 = null;
         String stackIn_9_0 = null;
         String stackIn_10_0 = null;
         int stackIn_10_1 = 0;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
@@ -736,19 +709,11 @@ final class pf {
         String stackIn_32_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_7_0 = null;
-        String stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        String stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        ud var5 = null;
+        int var6 = 0;
+        String var7 = null;
         try {
           L0: {
             if (param2) {
@@ -772,21 +737,16 @@ final class pf {
                   } else {
                     L3: {
                       var7 = this.b(2);
-                      var4_ref = var7;
-                      stackOut_7_0 = this.field_b;
-                      stackIn_9_0 = stackOut_7_0;
-                      stackIn_8_0 = stackOut_7_0;
+                      var4 = var7;
+                      stackIn_9_0 = this.field_b;
+
                       if (param2) {
-                        stackOut_9_0 = (String) ((Object) stackIn_9_0);
-                        stackOut_9_1 = 0;
-                        stackIn_10_0 = stackOut_9_0;
-                        stackIn_10_1 = stackOut_9_1;
+                        stackIn_10_0 = (String) ((Object) stackIn_9_0);
+                        stackIn_10_1 = 0;
                         break L3;
                       } else {
-                        stackOut_8_0 = (String) ((Object) stackIn_8_0);
-                        stackOut_8_1 = 1;
-                        stackIn_10_0 = stackOut_8_0;
-                        stackIn_10_1 = stackOut_8_1;
+                        stackIn_10_0 = (String) ((Object) stackIn_9_0);
+                        stackIn_10_1 = 1;
                         break L3;
                       }
                     }
@@ -872,28 +832,20 @@ final class pf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
-            var4 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) (var4);
-            stackOut_29_1 = new StringBuilder().append("pf.K(").append(param0).append(',');
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_31_0 = (RuntimeException) (var4_ref);
+
+            stackIn_31_1 = new StringBuilder().append("pf.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L8;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L8;
             }
           }
@@ -907,7 +859,7 @@ final class pf {
     }
 
     private final boolean a(int param0, int param1, int param2) {
-        int var5 = 0;
+        int var5;
         var5 = TetraLink.field_J;
         if (0 == param0) {
           q.a(param2, (byte) -118, this.field_e);
@@ -977,13 +929,12 @@ final class pf {
 
     final static void a(int param0, int param1) {
         try {
-            Object discarded$1 = null;
-            Throwable var2 = null;
             Throwable decompiledCaughtException = null;
+            Throwable var2 = null;
             try {
               L0: {
                 L1: {
-                  discarded$1 = ii.a(new Object[]{new Integer(param1)}, 6760, "resizing", lk.q(13));
+                  ii.a(new Object[]{new Integer(param1)}, 6760, "resizing", lk.q(13));
                   if (param0 > 115) {
                     break L1;
                   } else {

@@ -18,8 +18,6 @@ final class nf extends ei {
         vh stackIn_4_0 = null;
         vh stackIn_7_0 = null;
         vh stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -27,18 +25,6 @@ final class nf extends ei {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        vh stackOut_3_0 = null;
-        vh stackOut_10_0 = null;
-        vh stackOut_9_0 = null;
-        vh stackOut_6_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             L1: {
@@ -52,8 +38,7 @@ final class nf extends ei {
                   if (var3.a(-12317) == ce.field_e) {
                     break L1;
                   } else {
-                    stackOut_3_0 = u.field_b;
-                    stackIn_4_0 = stackOut_3_0;
+                    stackIn_4_0 = u.field_b;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -63,20 +48,17 @@ final class nf extends ei {
             if (param0 == 8192) {
               L2: {
                 if (!param1.equals(this.field_r.field_p)) {
-                  stackOut_10_0 = u.field_b;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = u.field_b;
                   break L2;
                 } else {
-                  stackOut_9_0 = ce.field_e;
-                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_11_0 = ce.field_e;
                   break L2;
                 }
               }
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_6_0 = (vh) null;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = (vh) null;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -85,27 +67,19 @@ final class nf extends ei {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var3_ref);
-            stackOut_12_1 = new StringBuilder().append("nf.G(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var3_ref);
+
+            stackIn_14_1 = new StringBuilder().append("nf.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }
@@ -167,8 +141,6 @@ final class nf extends ei {
         String stackIn_8_0 = null;
         String stackIn_11_0 = null;
         Object stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -176,18 +148,6 @@ final class nf extends ei {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_5_0 = null;
-        String stackOut_7_0 = null;
-        Object stackOut_14_0 = null;
-        String stackOut_10_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         try {
           L0: {
             L1: {
@@ -203,8 +163,7 @@ final class nf extends ei {
                       break L2;
                     } else {
                       if (!param1.equals(this.field_r.field_p)) {
-                        stackOut_5_0 = ih.field_N;
-                        stackIn_6_0 = stackOut_5_0;
+                        stackIn_6_0 = ih.field_N;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
@@ -212,8 +171,7 @@ final class nf extends ei {
                       }
                     }
                   }
-                  stackOut_7_0 = var3.b(-16034);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = var3.b(-16034);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
@@ -222,16 +180,14 @@ final class nf extends ei {
             if (param1.equals(this.field_r.field_p)) {
               if (param0 < 47) {
                 nf.d((byte) -95);
-                stackOut_14_0 = null;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = null;
                 decompiledRegionSelector0 = 3;
                 break L0;
               } else {
                 return null;
               }
             } else {
-              stackOut_10_0 = ih.field_N;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = ih.field_N;
               decompiledRegionSelector0 = 2;
               break L0;
             }
@@ -240,27 +196,19 @@ final class nf extends ei {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var3_ref);
-            stackOut_16_1 = new StringBuilder().append("nf.D(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var3_ref);
+
+            stackIn_18_1 = new StringBuilder().append("nf.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L3;
             }
           }
@@ -282,11 +230,10 @@ final class nf extends ei {
     }
 
     public static void d(byte param0) {
-        java.awt.Container discarded$2 = null;
         field_s = null;
         field_x = null;
         if (param0 != -95) {
-          discarded$2 = nf.b(true);
+          nf.b(true);
           field_p = null;
           field_v = null;
           field_q = null;

@@ -25,8 +25,21 @@ final class ql extends ud {
     }
 
     final void a(boolean param0, int[] param1, int param2) {
-        RuntimeException var4 = null;
+        Object stackIn_26_0 = null;
+        Object stackIn_27_0 = null;
+        int stackIn_27_1 = 0;
+        Object stackIn_32_0 = null;
+        Object stackIn_33_0 = null;
+        int stackIn_33_1 = 0;
+        RuntimeException stackIn_47_0 = null;
+        StringBuilder stackIn_47_1 = null;
+        RuntimeException stackIn_48_0 = null;
+        StringBuilder stackIn_48_1 = null;
+        String stackIn_48_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -42,41 +55,6 @@ final class ql extends ud {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        Object stackIn_25_0 = null;
-        Object stackIn_26_0 = null;
-        Object stackIn_27_0 = null;
-        int stackIn_27_1 = 0;
-        Object stackIn_31_0 = null;
-        Object stackIn_32_0 = null;
-        Object stackIn_33_0 = null;
-        int stackIn_33_1 = 0;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
-        String stackIn_48_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_24_0 = null;
-        Object stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
-        Object stackOut_25_0 = null;
-        int stackOut_25_1 = 0;
-        Object stackOut_30_0 = null;
-        Object stackOut_32_0 = null;
-        int stackOut_32_1 = 0;
-        Object stackOut_31_0 = null;
-        int stackOut_31_1 = 0;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        RuntimeException stackOut_47_0 = null;
-        StringBuilder stackOut_47_1 = null;
-        String stackOut_47_2 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
         var19 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -226,20 +204,15 @@ final class ql extends ud {
                                 } else {
                                   L15: {
                                     var4_int = ct.field_v[var10] * this.field_q;
-                                    stackOut_24_0 = this;
-                                    stackIn_26_0 = stackOut_24_0;
-                                    stackIn_25_0 = stackOut_24_0;
+                                    stackIn_26_0 = this;
+
                                     if (param0) {
-                                      stackOut_26_0 = this;
-                                      stackOut_26_1 = 0;
-                                      stackIn_27_0 = stackOut_26_0;
-                                      stackIn_27_1 = stackOut_26_1;
+                                      stackIn_27_0 = this;
+                                      stackIn_27_1 = 0;
                                       break L15;
                                     } else {
-                                      stackOut_25_0 = this;
-                                      stackOut_25_1 = 1;
-                                      stackIn_27_0 = stackOut_25_0;
-                                      stackIn_27_1 = stackOut_25_1;
+                                      stackIn_27_0 = this;
+                                      stackIn_27_1 = 1;
                                       break L15;
                                     }
                                   }
@@ -260,20 +233,15 @@ final class ql extends ud {
                           } else {
                             L17: {
                               var4_int = this.field_q * ct.field_v[var10];
-                              stackOut_30_0 = this;
-                              stackIn_32_0 = stackOut_30_0;
-                              stackIn_31_0 = stackOut_30_0;
+                              stackIn_32_0 = this;
+
                               if (param0) {
-                                stackOut_32_0 = this;
-                                stackOut_32_1 = 0;
-                                stackIn_33_0 = stackOut_32_0;
-                                stackIn_33_1 = stackOut_32_1;
+                                stackIn_33_0 = this;
+                                stackIn_33_1 = 0;
                                 break L17;
                               } else {
-                                stackOut_31_0 = this;
-                                stackOut_31_1 = 1;
-                                stackIn_33_0 = stackOut_31_0;
-                                stackIn_33_1 = stackOut_31_1;
+                                stackIn_33_0 = this;
+                                stackIn_33_1 = 1;
                                 break L17;
                               }
                             }
@@ -301,27 +269,19 @@ final class ql extends ud {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var4 = decompiledCaughtException;
-            stackOut_45_0 = (RuntimeException) (var4);
-            stackOut_45_1 = new StringBuilder().append("ql.E(").append(param0).append(',');
-            stackIn_47_0 = stackOut_45_0;
-            stackIn_47_1 = stackOut_45_1;
-            stackIn_46_0 = stackOut_45_0;
-            stackIn_46_1 = stackOut_45_1;
+            stackIn_47_0 = (RuntimeException) (var4);
+
+            stackIn_47_1 = new StringBuilder().append("ql.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackOut_47_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackOut_47_2 = "null";
-              stackIn_48_0 = stackOut_47_0;
-              stackIn_48_1 = stackOut_47_1;
-              stackIn_48_2 = stackOut_47_2;
+              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
+              stackIn_48_2 = "null";
               break L18;
             } else {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "{...}";
-              stackIn_48_0 = stackOut_46_0;
-              stackIn_48_1 = stackOut_46_1;
-              stackIn_48_2 = stackOut_46_2;
+              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
+              stackIn_48_2 = "{...}";
               break L18;
             }
           }
@@ -335,9 +295,9 @@ final class ql extends ud {
     }
 
     final void d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var4 = AceOfSkies.field_G ? 1 : 0;
           this.field_i = ro.b(-3992, this.field_m);
@@ -374,8 +334,8 @@ final class ql extends ud {
     }
 
     final static void a(byte param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = AceOfSkies.field_G ? 1 : 0;
           if (param0 <= -72) {
@@ -430,17 +390,6 @@ final class ql extends ud {
     }
 
     private final int a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
         int stackIn_9_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_18_0 = 0;
@@ -449,22 +398,17 @@ final class ql extends ud {
         int stackIn_31_0 = 0;
         int stackIn_36_0 = 0;
         int stackIn_40_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
         L0: {
           var18 = AceOfSkies.field_G ? 1 : 0;
           if (!param0) {
@@ -495,12 +439,10 @@ final class ql extends ud {
           if (-2 <= (var14 ^ -1)) {
             L3: {
               if (var14 != 0) {
-                stackOut_12_0 = param4 + -param1;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = param4 + -param1;
                 break L3;
               } else {
-                stackOut_11_0 = param4 + param1;
-                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_0 = param4 + param1;
                 break L3;
               }
             }
@@ -509,12 +451,10 @@ final class ql extends ud {
           } else {
             L4: {
               if (var14 == 2) {
-                stackOut_8_0 = param1 - param4;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = param1 - param4;
                 break L4;
               } else {
-                stackOut_7_0 = -param1 - param4;
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = -param1 - param4;
                 break L4;
               }
             }
@@ -527,12 +467,10 @@ final class ql extends ud {
           if (-2 > (var14 ^ -1)) {
             L6: {
               if (-3 != (var14 ^ -1)) {
-                stackOut_21_0 = -param4 + -var11;
-                stackIn_22_0 = stackOut_21_0;
+                stackIn_22_0 = -param4 + -var11;
                 break L6;
               } else {
-                stackOut_20_0 = -param4 + var11;
-                stackIn_22_0 = stackOut_20_0;
+                stackIn_22_0 = -param4 + var11;
                 break L6;
               }
             }
@@ -541,12 +479,10 @@ final class ql extends ud {
           } else {
             L7: {
               if (-1 == (var14 ^ -1)) {
-                stackOut_17_0 = var11 - -param4;
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_0 = var11 - -param4;
                 break L7;
               } else {
-                stackOut_16_0 = param4 - var11;
-                stackIn_18_0 = stackOut_16_0;
+                stackIn_18_0 = param4 - var11;
                 break L7;
               }
             }
@@ -560,12 +496,10 @@ final class ql extends ud {
           if (1 >= var14) {
             L9: {
               if (-1 != (var14 ^ -1)) {
-                stackOut_30_0 = var10 + -param1;
-                stackIn_31_0 = stackOut_30_0;
+                stackIn_31_0 = var10 + -param1;
                 break L9;
               } else {
-                stackOut_29_0 = var10 + param1;
-                stackIn_31_0 = stackOut_29_0;
+                stackIn_31_0 = var10 + param1;
                 break L9;
               }
             }
@@ -574,12 +508,10 @@ final class ql extends ud {
           } else {
             L10: {
               if (-3 != (var14 ^ -1)) {
-                stackOut_26_0 = -var10 + -param1;
-                stackIn_27_0 = stackOut_26_0;
+                stackIn_27_0 = -var10 + -param1;
                 break L10;
               } else {
-                stackOut_25_0 = param1 + -var10;
-                stackIn_27_0 = stackOut_25_0;
+                stackIn_27_0 = param1 + -var10;
                 break L10;
               }
             }
@@ -592,12 +524,10 @@ final class ql extends ud {
           if (var14 > 1) {
             L12: {
               if (2 != var14) {
-                stackOut_39_0 = -var11 - var10;
-                stackIn_40_0 = stackOut_39_0;
+                stackIn_40_0 = -var11 - var10;
                 break L12;
               } else {
-                stackOut_38_0 = -var10 + var11;
-                stackIn_40_0 = stackOut_38_0;
+                stackIn_40_0 = -var10 + var11;
                 break L12;
               }
             }
@@ -606,12 +536,10 @@ final class ql extends ud {
           } else {
             L13: {
               if (var14 == 0) {
-                stackOut_35_0 = var10 + var11;
-                stackIn_36_0 = stackOut_35_0;
+                stackIn_36_0 = var10 + var11;
                 break L13;
               } else {
-                stackOut_34_0 = -var11 + var10;
-                stackIn_36_0 = stackOut_34_0;
+                stackIn_36_0 = -var11 + var10;
                 break L13;
               }
             }
@@ -644,8 +572,8 @@ final class ql extends ud {
     }
 
     private final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = AceOfSkies.field_G ? 1 : 0;
           if (param0 >= 23) {

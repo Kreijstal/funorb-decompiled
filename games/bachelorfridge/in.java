@@ -9,7 +9,7 @@ final class in {
     static kv field_b;
 
     final eo a(boolean param0) {
-        eo var2 = null;
+        eo var2;
         var2 = this.field_a.field_m;
         if (this.field_a != var2) {
           var2.b(0);
@@ -24,9 +24,9 @@ final class in {
     }
 
     final int b(boolean param0) {
-        int var2 = 0;
-        eo var3 = null;
-        int var4 = 0;
+        int var2;
+        eo var3;
+        int var4;
         var4 = BachelorFridge.field_y;
         var2 = 0;
         var3 = this.field_a.field_m;
@@ -47,7 +47,7 @@ final class in {
     }
 
     final eo a(int param0) {
-        eo var2 = null;
+        eo var2;
         var2 = this.field_a.field_m;
         if (param0 < -73) {
           if (var2 == this.field_a) {
@@ -63,13 +63,12 @@ final class in {
     }
 
     final eo a(byte param0) {
-        eo discarded$2 = null;
-        eo var2 = null;
+        eo var2;
         var2 = this.field_c;
         if (var2 != this.field_a) {
           this.field_c = var2.field_m;
           if (param0 < 80) {
-            discarded$2 = this.a((byte) 52);
+            this.a((byte) 52);
             return var2;
           } else {
             return var2;

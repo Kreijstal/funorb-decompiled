@@ -11,7 +11,6 @@ final class bl {
     }
 
     final static boolean b(int param0) {
-        int discarded$6 = 0;
         if (param0 == 255) {
           if (-21 >= (mi.field_C ^ -1)) {
             if (fj.f(-31456)) {
@@ -31,7 +30,7 @@ final class bl {
             return true;
           }
         } else {
-          discarded$6 = bl.a(-112, (byte) -119);
+          bl.a(-112, (byte) -119);
           if (-21 >= (mi.field_C ^ -1)) {
             if (fj.f(-31456)) {
               if ((ik.field_a ^ -1) < -1) {
@@ -71,9 +70,8 @@ final class bl {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         if (param0 != -9751) {
-            discarded$0 = bl.a(31, (byte) -123);
+            bl.a(31, (byte) -123);
             field_a = null;
             return;
         }

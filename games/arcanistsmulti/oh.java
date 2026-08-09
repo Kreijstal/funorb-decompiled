@@ -32,7 +32,7 @@ final class oh extends pg {
     }
 
     final static int a(byte param0, int param1) {
-        int var2 = 0;
+        int var2;
         var2 = 0;
         if (param0 < 114) {
           return 99;

@@ -11,16 +11,16 @@ final class aq implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        Exception var1 = null;
-        RuntimeException var1_ref = null;
         tj var2 = null;
-        Throwable var3 = null;
         int var4 = 0;
         Object var5 = null;
-        String var6 = null;
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
+        Exception var1 = null;
+        RuntimeException var1_ref = null;
+        Throwable var3 = null;
+        String var6 = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {

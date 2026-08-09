@@ -12,9 +12,8 @@ final class fpa extends uj {
     }
 
     final boolean c(byte param0) {
-        boolean discarded$0 = false;
         if (param0 >= -104) {
-            discarded$0 = this.c((byte) -63);
+            this.c((byte) -63);
             return true;
         }
         return true;

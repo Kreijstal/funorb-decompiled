@@ -26,33 +26,24 @@ final class mr extends kj {
     }
 
     final void a(int param0, boolean param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        ee var6 = null;
-        int var7 = 0;
-        int var8 = 0;
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
+        int var4;
+        int var5;
+        ee var6;
+        int var7;
+        int var8;
         L0: {
           var8 = BachelorFridge.field_y;
           if ((this.field_g ^ -1) > -1) {
-            stackOut_4_0 = this.field_g * -20;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = this.field_g * -20;
             break L0;
           } else {
             if (this.field_g <= 30) {
-              stackOut_3_0 = 0;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 16 * this.field_g + -480;
-              stackIn_5_0 = stackOut_2_0;
+              stackIn_5_0 = 16 * this.field_g + -480;
               break L0;
             }
           }
@@ -60,17 +51,14 @@ final class mr extends kj {
         L1: {
           var4 = stackIn_5_0;
           if (-1 < (this.field_g ^ -1)) {
-            stackOut_9_0 = 0;
-            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_0 = 0;
             break L1;
           } else {
             if ((this.field_g ^ -1) <= -16) {
-              stackOut_8_0 = 2;
-              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_0 = 2;
               break L1;
             } else {
-              stackOut_7_0 = 1;
-              stackIn_10_0 = stackOut_7_0;
+              stackIn_10_0 = 1;
               break L1;
             }
           }
@@ -104,9 +92,9 @@ final class mr extends kj {
     }
 
     final boolean b(int param0) {
-        int fieldTemp$2 = this.field_g + 1;
+        int fieldTemp$1 = this.field_g + 1;
         this.field_g = this.field_g + 1;
-        if (fieldTemp$2 < 65) {
+        if (fieldTemp$1 < 65) {
           L0: {
             if (-36 == (this.field_g ^ -1)) {
               wf.a(44, (byte) 20);

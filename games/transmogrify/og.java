@@ -19,8 +19,8 @@ final class og {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Transmogrify.field_A ? 1 : 0;
         cl.field_A = 0;
         re.field_y = null;
@@ -319,7 +319,7 @@ final class og {
     }
 
     final static void a(byte param0) {
-        ia var1 = null;
+        ia var1;
         if (param0 <= 3) {
           return;
         } else {
@@ -339,8 +339,8 @@ final class og {
     }
 
     final static void b(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = jk.l(-889);
         var2 = ba.a((byte) 101);
         kf.field_i.a(var1 - -(tj.field_y << -1335042783), qa.field_u - dg.field_b, -tj.field_y + ic.field_b, (byte) 110, (dg.field_b << -1731931423) + var2);

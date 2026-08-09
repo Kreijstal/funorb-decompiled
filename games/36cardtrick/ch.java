@@ -19,12 +19,11 @@ abstract class ch {
 
     final static void a(int param0, qk param1) {
         ig var2 = null;
-        ib discarded$0 = null;
         try {
             ig.a(param1.a((byte) 7, "", "headers.packvorbis"));
             var2 = ig.a(param1, "jagex logo2.packvorbis", "");
             int var3 = -108 / ((param0 - -29) / 58);
-            discarded$0 = var2.c();
+            var2.c();
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) ((Object) runtimeException), "ch.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -42,23 +41,16 @@ abstract class ch {
     }
 
     final boolean a(boolean param0) {
-        na discarded$18 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0) {
           L0: {
-            discarded$18 = this.a(true, -13, 58, (byte) 80, 74);
+            this.a(true, -13, 58, (byte) 80, 74);
             if ((this.a((byte) 72) ^ -1) > -21) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -66,12 +58,10 @@ abstract class ch {
         } else {
           L1: {
             if ((this.a((byte) 72) ^ -1) > -21) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

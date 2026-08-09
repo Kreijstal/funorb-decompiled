@@ -18,7 +18,6 @@ final class cl {
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
-        RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
@@ -45,8 +44,7 @@ final class cl {
         int stackIn_22_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
+        RuntimeException var7 = null;
         var25 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -140,12 +138,10 @@ final class cl {
                   if (var8 > var7_int) {
                     L6: {
                       if (var7_int <= var11) {
-                        stackOut_21_0 = var11;
-                        stackIn_22_0 = stackOut_21_0;
+                        stackIn_22_0 = var11;
                         break L6;
                       } else {
-                        stackOut_20_0 = jo.field_h[var7_int];
-                        stackIn_22_0 = stackOut_20_0;
+                        stackIn_22_0 = jo.field_h[var7_int];
                         break L6;
                       }
                     }

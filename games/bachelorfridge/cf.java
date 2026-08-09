@@ -20,7 +20,7 @@ final class cf {
     }
 
     final static void a(boolean param0, int param1, boolean param2, byte param3) {
-        int var5 = 0;
+        int var5;
         var5 = BachelorFridge.field_y;
         if (param1 != -1) {
           if (-3 != param1) {

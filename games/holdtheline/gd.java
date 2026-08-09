@@ -28,13 +28,12 @@ abstract class gd extends ob implements ed {
     }
 
     public static void e(int param0) {
-        boolean discarded$0 = false;
         field_e = (int[][]) null;
         field_c = null;
         field_d = null;
         field_h = null;
         if (param0 != -1) {
-            discarded$0 = gd.e((byte) -13);
+            gd.e((byte) -13);
         }
     }
 
@@ -46,10 +45,9 @@ abstract class gd extends ob implements ed {
     }
 
     final static void a(String param0, hj param1, int param2) {
-        boolean discarded$0 = false;
         try {
             if (param2 != 0) {
-                discarded$0 = gd.e((byte) -29);
+                gd.e((byte) -29);
             }
             lf.field_e = param1;
             dl.field_j = param0;
@@ -61,13 +59,11 @@ abstract class gd extends ob implements ed {
     abstract String a(String param0, boolean param1);
 
     final static int a(int param0, byte param1, int param2) {
-        boolean discarded$2 = false;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int stackIn_6_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
         var4 = HoldTheLine.field_D;
         try {
           L0: {
@@ -76,14 +72,13 @@ abstract class gd extends ob implements ed {
               if (param1 <= -1) {
                 break L1;
               } else {
-                discarded$2 = gd.e((byte) 28);
+                gd.e((byte) 28);
                 break L1;
               }
             }
             L2: while (true) {
               if (-1 <= (param2 ^ -1)) {
-                stackOut_5_0 = var3_int;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = var3_int;
                 break L0;
               } else {
                 var3_int = param0 & 1 | var3_int << -606366175;
@@ -103,22 +98,12 @@ abstract class gd extends ob implements ed {
 
     public final void a(byte param0, nk param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -135,27 +120,19 @@ abstract class gd extends ob implements ed {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("gd.F(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("gd.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -165,8 +142,6 @@ abstract class gd extends ob implements ed {
 
     public final boolean a(byte param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 < -10) {
             break L0;
@@ -181,16 +156,14 @@ abstract class gd extends ob implements ed {
               break L2;
             } else {
               if (this.field_f.field_q.length() != 0) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 1;
           break L1;
         }
         return stackIn_7_0 != 0;
@@ -222,8 +195,6 @@ abstract class gd extends ob implements ed {
 
     final static boolean e(byte param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 >= 1) {
           L0: {
             L1: {
@@ -233,14 +204,12 @@ abstract class gd extends ob implements ed {
                 if (d.field_f != ad.field_b) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0 != 0;
@@ -250,19 +219,19 @@ abstract class gd extends ob implements ed {
     }
 
     final static ji f(int param0) {
-        StringBuilder discarded$1 = null;
-        ji var2 = null;
-        StringBuilder var3 = null;
-        int var4 = 0;
-        String var5 = null;
-        String var6 = null;
-        String[] var7 = null;
-        int var8 = 0;
-        String var9 = null;
-        ok var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        String var13 = null;
+        StringBuilder discarded$0 = null;
+        ji var2;
+        StringBuilder var3;
+        int var4;
+        String var5;
+        String var6;
+        String[] var7;
+        int var8;
+        String var9;
+        ok var10;
+        int var11;
+        int var12;
+        String var13;
         var11 = HoldTheLine.field_D;
         L0: while (true) {
           if (null != kf.field_q) {
@@ -292,7 +261,7 @@ abstract class gd extends ob implements ed {
                     } else {
                       L4: {
                         if (kf.field_q.charAt(0) != 64) {
-                          discarded$1 = var3.append(kf.field_q);
+                          discarded$0 = var3.append(kf.field_q);
                           break L4;
                         } else {
                           var4 = kf.field_q.indexOf(' ');

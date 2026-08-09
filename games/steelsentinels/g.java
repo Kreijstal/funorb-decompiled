@@ -31,9 +31,9 @@ final class g {
     }
 
     private final int b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var4;
+        int var5;
         var5 = SteelSentinels.field_G;
         var3 = this.field_k.length;
         var4 = 36 / ((-20 - param1) / 46);
@@ -58,31 +58,16 @@ final class g {
     }
 
     final void d(int param0, int param1) {
-        if (param0 < -97) {
-          L0: {
-            if ((param1 ^ -1) > -1) {
-              break L0;
-            } else {
-              if (this.field_j >= param1) {
-                L1: {
-                  if (this.field_j != param1) {
-                    ii.a(this.field_k, 1 + param1, this.field_k, param1, -param1 + this.field_j);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                this.field_j = this.field_j - 1;
-                return;
-              } else {
-                break L0;
-              }
-            }
-          }
-          throw new ArrayIndexOutOfBoundsException(param1);
-        } else {
-          return;
+        if (param0 >= -97) {
+            return;
         }
+        if ((param1 ^ -1) > -1 || this.field_j < param1) {
+            throw new ArrayIndexOutOfBoundsException(param1);
+        }
+        if (!(this.field_j == param1)) {
+            ii.a(this.field_k, 1 + param1, this.field_k, param1, -param1 + this.field_j);
+        }
+        this.field_j = this.field_j - 1;
     }
 
     final int a(boolean param0) {
@@ -93,20 +78,22 @@ final class g {
     }
 
     final static void b(int param0) {
-        String[][] dupTemp$6 = null;
-        long[][] dupTemp$7 = null;
-        int[][] dupTemp$8 = null;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
+        String[][] dupTemp$0 = null;
+        long[][] dupTemp$1 = null;
+        int[][] dupTemp$2 = null;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         kf var4 = null;
         long var4_long = 0L;
         int var5 = 0;
-        tc var6_ref_tc = null;
         int var6 = 0;
+        tc var6_ref_tc = null;
         int var7 = 0;
         int var8_int = 0;
         String[][] var8 = null;
@@ -128,8 +115,6 @@ final class g {
         int var25 = 0;
         int var26 = 0;
         kj var28 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = SteelSentinels.field_G;
         try {
           L0: {
@@ -165,16 +150,16 @@ final class g {
                           var8_int = 1;
                           L5: while (true) {
                             if (var8_int >= var5) {
-                              dupTemp$6 = new String[3][var6];
-                              var4.field_x = dupTemp$6;
-                              var8 = dupTemp$6;
+                              dupTemp$0 = new String[3][var6];
+                              var4.field_x = dupTemp$0;
+                              var8 = dupTemp$0;
                               var9 = new String[3][var6];
-                              dupTemp$7 = new long[3][var6];
-                              var4.field_D = dupTemp$7;
-                              var10 = dupTemp$7;
-                              dupTemp$8 = new int[3][var7 * var6];
-                              var4.field_z = dupTemp$8;
-                              var11 = dupTemp$8;
+                              dupTemp$1 = new long[3][var6];
+                              var4.field_D = dupTemp$1;
+                              var10 = dupTemp$1;
+                              dupTemp$2 = new int[3][var7 * var6];
+                              var4.field_z = dupTemp$2;
+                              var11 = dupTemp$2;
                               var12 = 0;
                               var13 = 0;
                               var14 = 0;
@@ -205,9 +190,9 @@ final class g {
                                             var12++;
                                             break L7;
                                           } else {
-                                            incrementValue$9 = var15;
+                                            incrementValue$3 = var15;
                                             var15++;
-                                            var11[0][incrementValue$9] = var28.i(0);
+                                            var11[0][incrementValue$3] = var28.i(0);
                                             var25++;
                                             continue L8;
                                           }
@@ -231,9 +216,9 @@ final class g {
                                             if (var25 >= var7) {
                                               break L9;
                                             } else {
-                                              incrementValue$10 = var16;
+                                              incrementValue$4 = var16;
                                               var16++;
-                                              var11[1][incrementValue$10] = var28.i(0);
+                                              var11[1][incrementValue$4] = var28.i(0);
                                               var25++;
                                               continue L10;
                                             }
@@ -259,9 +244,9 @@ final class g {
                                             if (var25 >= var7) {
                                               break L11;
                                             } else {
-                                              incrementValue$11 = var17;
+                                              incrementValue$5 = var17;
                                               var17++;
-                                              var11[2][incrementValue$11] = var28.i(0);
+                                              var11[2][incrementValue$5] = var28.i(0);
                                               var25++;
                                               continue L12;
                                             }

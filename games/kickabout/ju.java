@@ -22,15 +22,6 @@ final class ju extends lb {
     }
 
     final static void a(int param0, int param1, int param2, ut[] param3, int param4) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -38,14 +29,13 @@ final class ju extends lb {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
         var10 = Kickabout.field_G;
         try {
           L0: {
@@ -95,27 +85,19 @@ final class ju extends lb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var5);
-            stackOut_12_1 = new StringBuilder().append("ju.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var5);
+
+            stackIn_14_1 = new StringBuilder().append("ju.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
@@ -138,51 +120,26 @@ final class ju extends lb {
     }
 
     final static char b(int param0, char param1) {
-        String var3 = null;
-        L0: {
-          if (param1 == 181) {
-            break L0;
-          } else {
-            if (param1 != 402) {
-              L1: {
-                if (param0 == 19805) {
-                  break L1;
-                } else {
-                  var3 = (String) null;
-                  ju.a(1.7499217987060547f, (String) null, (byte) -94);
-                  break L1;
-                }
-              }
-              return Character.toTitleCase(param1);
-            } else {
-              break L0;
-            }
-          }
+        if (param1 == 181 || param1 == 402) {
+            return param1;
         }
-        return param1;
+        if (param0 != 19805) {
+            String var3 = (String) null;
+            ju.a(1.7499217987060547f, (String) null, (byte) -94);
+        }
+        return Character.toTitleCase(param1);
     }
 
     final boolean a(fd param0, int param1) {
         RuntimeException var3 = null;
         ut[] var4 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -194,35 +151,26 @@ final class ju extends lb {
                 break L1;
               }
             }
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("ju.HA(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("ju.HA(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -250,17 +198,17 @@ final class ju extends lb {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        String var5 = null;
-        rv var6 = null;
-        ke var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        ut var14 = null;
-        ut var15 = null;
-        ut var16 = null;
+        String var5;
+        rv var6;
+        ke var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        ut var14;
+        ut var15;
+        ut var16;
         L0: {
           L1: {
             var13 = Kickabout.field_G;
@@ -358,8 +306,6 @@ final class ju extends lb {
         RuntimeException var4 = null;
         ut stackIn_2_0 = null;
         ut stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -367,30 +313,18 @@ final class ju extends lb {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ut stackOut_6_0 = null;
-        ut stackOut_1_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if (param3 == -9) {
               if (cu.a(param1, param2, param0, param3 ^ -105)) {
-                stackOut_6_0 = mo.b(param3 + 9);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = mo.b(param3 + 9);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return null;
               }
             } else {
-              stackOut_1_0 = (ut) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (ut) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -399,27 +333,19 @@ final class ju extends lb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("ju.R(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("ju.R(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L1;
             }
           }
@@ -445,95 +371,45 @@ final class ju extends lb {
     }
 
     static {
-        $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            long var2 = 0L;
-            long var4 = 0L;
-            long var6 = 0L;
-            long var8 = 0L;
-            long var10 = 0L;
-            long var12 = 0L;
-            int var14 = 0;
-            long stackIn_5_0 = 0L;
-            long stackOut_4_0 = 0L;
-            long stackOut_3_0 = 0L;
-            field_T = false;
-            field_W = new long[8][256];
-            field_V = new long[11];
-            var0 = 0;
-            L0: while (true) {
-              if (var0 >= 256) {
-                field_V[0] = 0L;
-                var0 = 1;
-                L1: while (true) {
-                  if (var0 > 10) {
-                    field_P = "Log in";
-                    break $cfr$clinit;
-                  } else {
-                    var1 = -8 + 8 * var0;
-                    field_V[var0] = sd.a(mg.a(255L, field_W[7][var1 - -7]), sd.a(mg.a(65280L, field_W[6][var1 + 6]), sd.a(sd.a(mg.a(4278190080L, field_W[4][4 + var1]), sd.a(sd.a(mg.a(field_W[2][var1 - -2], 280375465082880L), sd.a(mg.a(71776119061217280L, field_W[1][1 + var1]), mg.a(field_W[0][var1], -72057594037927936L))), mg.a(1095216660480L, field_W[3][var1 + 3]))), mg.a(field_W[5][var1 + 5], 16711680L))));
-                    var0++;
-                    continue L1;
-                  }
-                }
-              } else {
-                L2: {
-                  var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-                  if ((var0 & 1) != 0) {
-                    stackOut_4_0 = (long)(255 & var1);
-                    stackIn_5_0 = stackOut_4_0;
-                    break L2;
-                  } else {
-                    stackOut_3_0 = (long)(var1 >>> 803707464);
-                    stackIn_5_0 = stackOut_3_0;
-                    break L2;
-                  }
-                }
-                L3: {
-                  var2 = stackIn_5_0;
-                  var4 = var2 << 1450181185;
-                  if (256L > var4) {
-                    break L3;
-                  } else {
-                    var4 = var4 ^ 285L;
-                    break L3;
-                  }
-                }
-                L4: {
-                  var6 = var4 << 2128848897;
-                  if ((var6 ^ -1L) <= -257L) {
-                    var6 = var6 ^ 285L;
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                L5: {
-                  var8 = var6 ^ var2;
-                  var10 = var6 << -1531683007;
-                  if (256L > var10) {
-                    break L5;
-                  } else {
-                    var10 = var10 ^ 285L;
-                    break L5;
-                  }
-                }
-                var12 = var2 ^ var10;
-                field_W[0][var0] = aq.a(var12, aq.a(var4 << -365431480, aq.a(aq.a(var10 << -1151721192, aq.a(aq.a(var6 << -725582488, aq.a(var2 << 1009455792, var2 << 1006682360)), var2 << -80238496)), var8 << 464022992)));
-                var14 = 1;
-                L6: while (true) {
-                  if ((var14 ^ -1) <= -9) {
-                    var0++;
-                    continue L0;
-                  } else {
-                    field_W[var14][var0] = aq.a(field_W[var14 - 1][var0] << -2076280904, field_W[var14 - 1][var0] >>> 1322694792);
-                    var14++;
-                    continue L6;
-                  }
-                }
-              }
+        int var0 = 0;
+        int var1 = 0;
+        long var2 = 0L;
+        long var4 = 0L;
+        long var6 = 0L;
+        long var8 = 0L;
+        long var10 = 0L;
+        long var12 = 0L;
+        int var14 = 0;
+        field_T = false;
+        field_W = new long[8][256];
+        field_V = new long[11];
+        for (var0 = 0; var0 < 256; var0++) {
+            var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+            var2 = (var0 & 1) == 0 ? (long)(var1 >>> 803707464) : (long)(255 & var1);
+            var4 = var2 << 1450181185;
+            if (256L <= var4) {
+                var4 = var4 ^ 285L;
+            }
+            var6 = var4 << 2128848897;
+            if (!((var6 ^ -1L) > -257L)) {
+                var6 = var6 ^ 285L;
+            }
+            var8 = var6 ^ var2;
+            var10 = var6 << -1531683007;
+            if (256L <= var10) {
+                var10 = var10 ^ 285L;
+            }
+            var12 = var2 ^ var10;
+            field_W[0][var0] = aq.a(var12, aq.a(var4 << -365431480, aq.a(aq.a(var10 << -1151721192, aq.a(aq.a(var6 << -725582488, aq.a(var2 << 1009455792, var2 << 1006682360)), var2 << -80238496)), var8 << 464022992)));
+            for (var14 = 1; (var14 ^ -1) > -9; var14++) {
+                field_W[var14][var0] = aq.a(field_W[var14 - 1][var0] << -2076280904, field_W[var14 - 1][var0] >>> 1322694792);
             }
         }
+        field_V[0] = 0L;
+        for (var0 = 1; var0 <= 10; var0++) {
+            var1 = -8 + 8 * var0;
+            field_V[var0] = sd.a(mg.a(255L, field_W[7][var1 - -7]), sd.a(mg.a(65280L, field_W[6][var1 + 6]), sd.a(sd.a(mg.a(4278190080L, field_W[4][4 + var1]), sd.a(sd.a(mg.a(field_W[2][var1 - -2], 280375465082880L), sd.a(mg.a(71776119061217280L, field_W[1][1 + var1]), mg.a(field_W[0][var1], -72057594037927936L))), mg.a(1095216660480L, field_W[3][var1 + 3]))), mg.a(field_W[5][var1 + 5], 16711680L))));
+        }
+        field_P = "Log in";
     }
 }

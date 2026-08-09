@@ -33,14 +33,13 @@ final class eb {
 
     final void a(boolean param0, long param1, q param2) {
         q var5 = null;
-        q discarded$0 = null;
         try {
             if (!(param2.field_h == null)) {
                 param2.f(0);
             }
             var5 = this.field_b[(int)(param1 & (long)(this.field_d + -1))];
             if (param0) {
-                discarded$0 = this.b((byte) -2);
+                this.b((byte) -2);
             }
             param2.field_e = var5;
             param2.field_h = var5.field_h;
@@ -53,9 +52,9 @@ final class eb {
     }
 
     final q a(long param0, byte param1) {
-        q var4 = null;
-        q var5 = null;
-        int var6 = 0;
+        q var4;
+        q var5;
+        int var6;
         var6 = Torquing.field_u;
         if (param1 > 80) {
           var4 = this.field_b[(int)((long)(-1 + this.field_d) & param0)];
@@ -98,21 +97,21 @@ final class eb {
     }
 
     final q b(byte param0) {
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        q var2_ref_q = null;
-        int var2 = 0;
-        int var4 = 0;
-        q var5 = null;
-        q var6 = null;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        q var2_ref_q;
+        int var2;
+        int var4;
+        q var5;
+        q var6;
         var4 = Torquing.field_u;
         if (0 >= this.field_e) {
           var2 = 33 % ((-56 - param0) / 49);
           L0: while (true) {
             if (this.field_d > this.field_e) {
-              fieldTemp$7 = this.field_e;
+              fieldTemp$2 = this.field_e;
               this.field_e = this.field_e + 1;
-              var6 = this.field_b[fieldTemp$7].field_e;
+              var6 = this.field_b[fieldTemp$2].field_e;
               if (this.field_b[-1 + this.field_e] != var6) {
                 this.field_a = var6.field_e;
                 return var6;
@@ -128,9 +127,9 @@ final class eb {
             var2 = 33 % ((-56 - param0) / 49);
             L1: while (true) {
               if (this.field_d > this.field_e) {
-                fieldTemp$8 = this.field_e;
+                fieldTemp$3 = this.field_e;
                 this.field_e = this.field_e + 1;
-                var5 = this.field_b[fieldTemp$8].field_e;
+                var5 = this.field_b[fieldTemp$3].field_e;
                 if (this.field_b[-1 + this.field_e] != var5) {
                   this.field_a = var5.field_e;
                   return var5;

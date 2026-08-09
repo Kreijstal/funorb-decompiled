@@ -19,12 +19,10 @@ final class ij implements wb {
         if (rf.field_g.field_o) {
             be.field_a = true;
             r.field_A = true;
-            if (null != rf.field_g.field_i) {
-                if (null != rf.field_g.field_i[1][0]) {
-                    r.field_A = false;
-                    be.field_a = false;
-                    return true;
-                }
+            if (null != rf.field_g.field_i && null != rf.field_g.field_i[1][0]) {
+                r.field_A = false;
+                be.field_a = false;
+                return true;
             }
             return true;
         }
@@ -85,8 +83,6 @@ final class ij implements wb {
 
     public final boolean a(int param0) {
         int stackIn_15_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_14_0 = 0;
         L0: {
           if (hb.field_y) {
             break L0;
@@ -130,24 +126,22 @@ final class ij implements wb {
                 if (!th.field_b) {
                   break L5;
                 } else {
-                  stackOut_13_0 = 1;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = 1;
                   break L4;
                 }
               }
             }
           }
-          stackOut_14_0 = 0;
-          stackIn_15_0 = stackOut_14_0;
+          stackIn_15_0 = 0;
           break L4;
         }
         return stackIn_15_0 != 0;
     }
 
     private final boolean b(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var4 = BrickABrac.field_J ? 1 : 0;
           if (null != fp.field_y) {
@@ -218,103 +212,44 @@ final class ij implements wb {
     }
 
     public final void b(boolean param0) {
-        int stackIn_5_0 = 0;
-        s stackIn_7_0 = null;
-        mf stackIn_7_1 = null;
-        s stackIn_8_0 = null;
-        mf stackIn_8_1 = null;
-        s stackIn_9_0 = null;
-        mf stackIn_9_1 = null;
-        int stackIn_9_2 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        s stackOut_6_0 = null;
-        mf stackOut_6_1 = null;
-        s stackOut_8_0 = null;
-        mf stackOut_8_1 = null;
-        int stackOut_8_2 = 0;
-        s stackOut_7_0 = null;
-        mf stackOut_7_1 = null;
-        int stackOut_7_2 = 0;
-        L0: {
-          if (null != qc.field_k) {
-            L1: {
-              if (param0) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L1;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L1;
-              }
-            }
-            og.a(stackIn_5_0 != 0, qc.field_k);
+        if (!(null == qc.field_k)) {
+            og.a(!param0 ? true : false, qc.field_k);
             qc.field_k = null;
             hc.b(2);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        L2: {
-          uf.field_a = aj.a(3, true);
-          ki.field_f = bq.a(-6, 0, false, 5, true);
-          ul.field_l = aj.a(6, true);
-          qb.field_r = aj.a(7, true);
-          i.field_s = aj.a(8, param0);
-          uj.field_o = aj.a(9, true);
-          kh.field_i = aj.a(10, true);
-          nl.field_a = aj.a(11, true);
-          hp.field_i = aj.a(12, true);
-          wd.field_C = aj.a(13, true);
-          wn.a(gq.field_Rb, wn.field_c, 0);
-          bh.field_tb = new s(82);
-          bh.field_tb.a(tm.field_e, "basic", 125, ib.field_F, gq.field_Rb);
-          bh.field_tb.a(tm.field_e, "lobby", 126, ib.field_F, gq.field_Rb);
-          bh.field_tb.a(tm.field_e, "lobby", 124, ib.field_F, wn.field_c);
-          bh.field_tb.a(tm.field_e, "kartika13", 125, ib.field_F, gq.field_Rb);
-          bh.field_tb.a(tm.field_e, "basic", 126, ib.field_F, ki.field_f);
-          bh.field_tb.a(vh.field_P, "basic", -126, m.field_k, ul.field_l);
-          bh.field_tb.a(vh.field_P, "kartika13", 127, m.field_k, wn.field_c);
-          bh.field_tb.a(qb.field_r, false, vi.field_n, wl.field_Q);
-          bh.field_tb.a(i.field_s, false, vi.field_n, wl.field_Q);
-          bh.field_tb.a(uj.field_o, false, kc.field_i, sg.field_m);
-          bh.field_tb.a(kh.field_i, false, cm.field_n, bb.field_a);
-          bh.field_tb.a(nl.field_a, false, fa.field_j, uo.field_a);
-          bh.field_tb.a(hp.field_i, false, fa.field_j, uo.field_a);
-          stackOut_6_0 = bh.field_tb;
-          stackOut_6_1 = wd.field_C;
-          stackIn_8_0 = stackOut_6_0;
-          stackIn_8_1 = stackOut_6_1;
-          stackIn_7_0 = stackOut_6_0;
-          stackIn_7_1 = stackOut_6_1;
-          if (param0) {
-            stackOut_8_0 = (s) ((Object) stackIn_8_0);
-            stackOut_8_1 = (mf) ((Object) stackIn_8_1);
-            stackOut_8_2 = 0;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            stackIn_9_2 = stackOut_8_2;
-            break L2;
-          } else {
-            stackOut_7_0 = (s) ((Object) stackIn_7_0);
-            stackOut_7_1 = (mf) ((Object) stackIn_7_1);
-            stackOut_7_2 = 1;
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_9_2 = stackOut_7_2;
-            break L2;
-          }
-        }
-        ((s) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_9_2 != 0, hp.field_k, qm.field_e);
+        uf.field_a = aj.a(3, true);
+        ki.field_f = bq.a(-6, 0, false, 5, true);
+        ul.field_l = aj.a(6, true);
+        qb.field_r = aj.a(7, true);
+        i.field_s = aj.a(8, param0);
+        uj.field_o = aj.a(9, true);
+        kh.field_i = aj.a(10, true);
+        nl.field_a = aj.a(11, true);
+        hp.field_i = aj.a(12, true);
+        wd.field_C = aj.a(13, true);
+        wn.a(gq.field_Rb, wn.field_c, 0);
+        bh.field_tb = new s(82);
+        bh.field_tb.a(tm.field_e, "basic", 125, ib.field_F, gq.field_Rb);
+        bh.field_tb.a(tm.field_e, "lobby", 126, ib.field_F, gq.field_Rb);
+        bh.field_tb.a(tm.field_e, "lobby", 124, ib.field_F, wn.field_c);
+        bh.field_tb.a(tm.field_e, "kartika13", 125, ib.field_F, gq.field_Rb);
+        bh.field_tb.a(tm.field_e, "basic", 126, ib.field_F, ki.field_f);
+        bh.field_tb.a(vh.field_P, "basic", -126, m.field_k, ul.field_l);
+        bh.field_tb.a(vh.field_P, "kartika13", 127, m.field_k, wn.field_c);
+        bh.field_tb.a(qb.field_r, false, vi.field_n, wl.field_Q);
+        bh.field_tb.a(i.field_s, false, vi.field_n, wl.field_Q);
+        bh.field_tb.a(uj.field_o, false, kc.field_i, sg.field_m);
+        bh.field_tb.a(kh.field_i, false, cm.field_n, bb.field_a);
+        bh.field_tb.a(nl.field_a, false, fa.field_j, uo.field_a);
+        bh.field_tb.a(hp.field_i, false, fa.field_j, uo.field_a);
+        bh.field_tb.a(wd.field_C, !param0 ? true : false, hp.field_k, qm.field_e);
         bh.field_tb.a(uf.field_a, false, hp.field_k, qm.field_e);
     }
 
     public final boolean a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var4 = BrickABrac.field_J ? 1 : 0;
           var2 = 1;

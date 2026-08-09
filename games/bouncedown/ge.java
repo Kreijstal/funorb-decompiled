@@ -15,9 +15,8 @@ final class ge {
     }
 
     final static eh[] a(boolean param0) {
-        eh[] discarded$1 = null;
         if (!param0) {
-          discarded$1 = ge.a(true);
+          ge.a(true);
           return new eh[]{ig.field_c, qh.field_c, fb.field_pb, mj.field_f, bh.field_e, jk.field_M, ji.field_d, il.field_c, va.field_e, ig.field_b, hg.field_j, bf.field_p, wh.field_b, fh.field_C};
         } else {
           return new eh[]{ig.field_c, qh.field_c, fb.field_pb, mj.field_f, bh.field_e, jk.field_M, ji.field_d, il.field_c, va.field_e, ig.field_b, hg.field_j, bf.field_p, wh.field_b, fh.field_C};

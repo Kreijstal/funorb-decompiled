@@ -36,27 +36,16 @@ final class hi implements Runnable {
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
-        RuntimeException var5 = null;
-        Object var5_ref = null;
-        int var6 = 0;
-        Throwable var7 = null;
-        int var8 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        Object var5 = null;
+        RuntimeException var5_ref = null;
+        int var6 = 0;
+        int var8 = 0;
         var8 = wizardrun.field_H;
         try {
           L0: {
@@ -78,8 +67,8 @@ final class hi implements Runnable {
                     break L2;
                   }
                 }
-                var5_ref = this;
-                synchronized (var5_ref) {
+                var5 = this;
+                synchronized (var5) {
                   L3: {
                     var6 = 0;
                     L4: while (true) {
@@ -119,28 +108,20 @@ final class hi implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var5 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var5);
-            stackOut_24_1 = new StringBuilder().append("hi.G(").append(param0).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_26_0 = (RuntimeException) (var5_ref);
+
+            stackIn_26_1 = new StringBuilder().append("hi.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L6;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L6;
             }
           }
@@ -174,20 +155,14 @@ final class hi implements Runnable {
     final static java.awt.Canvas d(byte param0) {
         Object stackIn_4_0 = null;
         Object stackIn_8_0 = null;
-        ui stackOut_7_0 = null;
-        java.awt.Canvas stackOut_6_0 = null;
-        ui stackOut_3_0 = null;
-        java.awt.Canvas stackOut_2_0 = null;
         if (param0 <= 66) {
           L0: {
             field_c = 115;
             if (null != ki.field_E) {
-              stackOut_7_0 = ki.field_E;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = ki.field_E;
               break L0;
             } else {
-              stackOut_6_0 = wizardrun.field_G;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = wizardrun.field_G;
               break L0;
             }
           }
@@ -195,12 +170,10 @@ final class hi implements Runnable {
         } else {
           L1: {
             if (null != ki.field_E) {
-              stackOut_3_0 = ki.field_E;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = ki.field_E;
               break L1;
             } else {
-              stackOut_2_0 = wizardrun.field_G;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = wizardrun.field_G;
               break L1;
             }
           }
@@ -210,13 +183,11 @@ final class hi implements Runnable {
 
     final void b(byte param0) {
         try {
-            java.awt.Canvas discarded$3 = null;
             InterruptedException var2 = null;
-            Object var2_ref = null;
-            Throwable var3 = null;
             int var4 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            Object var2_ref = null;
             var4 = wizardrun.field_H;
             if (this.field_g) {
               return;
@@ -228,7 +199,7 @@ final class hi implements Runnable {
                     if (param0 == 76) {
                       break L1;
                     } else {
-                      discarded$3 = hi.d((byte) 8);
+                      hi.d((byte) 8);
                       break L1;
                     }
                   }
@@ -305,11 +276,8 @@ final class hi implements Runnable {
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -317,14 +285,7 @@ final class hi implements Runnable {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var5 = null;
         var7 = wizardrun.field_H;
         try {
           L0: {
@@ -354,27 +315,19 @@ final class hi implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var5);
-            stackOut_9_1 = new StringBuilder().append("hi.C(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var5);
+
+            stackIn_11_1 = new StringBuilder().append("hi.C(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -400,24 +353,23 @@ final class hi implements Runnable {
 
     public final void run() {
         try {
-            IOException var1 = null;
-            Exception var1_ref = null;
-            int var1_int = 0;
-            int var2 = 0;
-            IOException var3 = null;
-            Object var3_ref = null;
-            InterruptedException var4 = null;
-            Throwable var5 = null;
-            int var6 = 0;
-            String var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            int var1_int = 0;
+            IOException var1 = null;
+            Exception var1_ref = null;
+            int var2 = 0;
+            Object var3 = null;
+            IOException var3_ref = null;
+            InterruptedException var4 = null;
+            int var6 = 0;
+            String var7 = null;
             var6 = wizardrun.field_H;
             try {
               L0: {
                 L1: while (true) {
-                  var3_ref = this;
-                  synchronized (var3_ref) {
+                  var3 = this;
+                  synchronized (var3) {
                     L2: {
                       L3: {
                         if (this.field_b != this.field_d) {
@@ -507,7 +459,7 @@ final class hi implements Runnable {
                       } catch (java.io.IOException decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         L13: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_f = true;
                           break L13;
                         }
@@ -528,7 +480,7 @@ final class hi implements Runnable {
                       } catch (java.io.IOException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L16: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_f = true;
                           break L16;
                         }

@@ -7,10 +7,10 @@ final class me extends ha {
     private java.awt.Component field_l;
 
     final void a(int param0, java.awt.Component param1, int param2, byte param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
-        java.awt.Component var8 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
+        java.awt.Component var8;
         this.field_e = new int[param0 * param2 - -1];
         this.field_i = param2;
         if (param3 > -51) {
@@ -40,7 +40,7 @@ final class me extends ha {
     }
 
     final void a(java.awt.Graphics param0, boolean param1, int param2, int param3) {
-        boolean discarded$10 = param0.drawImage(this.field_d, param3, param2, (java.awt.image.ImageObserver) ((Object) this.field_l));
+        param0.drawImage(this.field_d, param3, param2, (java.awt.image.ImageObserver) ((Object) this.field_l));
         if (param1) {
             this.field_l = (java.awt.Component) null;
         }

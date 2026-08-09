@@ -19,8 +19,8 @@ final class ng {
     }
 
     final kd a(byte param0) {
-        kd var2 = null;
-        int var3 = 0;
+        kd var2;
+        int var3;
         var3 = -7 / ((param0 - 3) / 33);
         var2 = this.field_b.field_f;
         if (var2 == this.field_b) {
@@ -34,37 +34,15 @@ final class ng {
     private final void a(kd param0, ng param1, byte param2) {
         kd var4 = null;
         RuntimeException var4_ref = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
@@ -92,72 +70,54 @@ final class ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var4_ref);
-            stackOut_6_1 = new StringBuilder().append("ng.I(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var4_ref);
+
+            stackIn_8_1 = new StringBuilder().append("ng.I(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+
+
+            stackIn_11_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_9_0), stackIn_12_2 + ',' + param2 + ')');
         }
     }
 
     final static int a(byte param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        le var5 = null;
         int var6 = 0;
         int var7 = 0;
         int stackIn_14_0 = 0;
         int stackIn_16_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_13_0 = 0;
+        RuntimeException var3 = null;
+        le var5 = null;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
@@ -207,13 +167,11 @@ final class ng {
                 break L2;
               }
               if (param1 != 1) {
-                stackOut_15_0 = var3_int;
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_0 = var3_int;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                stackOut_13_0 = var3_int * param2;
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_0 = var3_int * param2;
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -232,7 +190,7 @@ final class ng {
     }
 
     final kd d(int param0) {
-        kd var2 = null;
+        kd var2;
         var2 = this.field_a;
         if (var2 == this.field_b) {
           this.field_a = null;
@@ -259,50 +217,98 @@ final class ng {
     final void g(int param0) {
         kd var2 = null;
         int var3 = 0;
+        int statePc = 0;
         ng var4 = null;
-        var3 = Lexicominos.field_L ? 1 : 0;
-        L0: while (true) {
-          var2 = this.field_b.field_f;
-          if (this.field_b == var2) {
-            this.field_a = null;
-            if (param0 <= -74) {
-              return;
-            } else {
-              var4 = (ng) null;
-              this.a((ng) null, 9);
-              return;
-            }
-          } else {
-            var2.b((byte) -117);
-            if (var3 != 0) {
-              if (param0 <= -74) {
-                return;
-              } else {
-                var4 = (ng) null;
-                this.a((ng) null, 9);
-                return;
-              }
-            } else {
-              if (var3 == 0) {
-                continue L0;
-              } else {
-                this.field_a = null;
-                if (param0 <= -74) {
-                  return;
-                } else {
-                  var4 = (ng) null;
-                  this.a((ng) null, 9);
-                  return;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var3 = Lexicominos.field_L ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
+                case 1: {
+                    var2 = this.field_b.field_f;
+                    if (this.field_b == var2) {
+                        statePc = 5;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
+                }
+                case 2: {
+                    var2.b((byte) -117);
+                    if (var3 != 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (var3 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    this.field_a = null;
+                    if (param0 <= -74) {
+                        statePc = 7;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    var4 = (ng) null;
+                    this.a((ng) null, 9);
+                    return;
+                }
+                case 7: {
+                    return;
+                }
+                case 9: {
+                    this.field_a = null;
+                    if (param0 <= -74) {
+                        statePc = 11;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    var4 = (ng) null;
+                    this.a((ng) null, 9);
+                    return;
+                }
+                case 11: {
+                    return;
+                }
+                case 13: {
+                    if (param0 <= -74) {
+                        statePc = 15;
+                    } else {
+                        statePc = 14;
+                    }
+                    continue stateLoop;
+                }
+                case 14: {
+                    var4 = (ng) null;
+                    this.a((ng) null, 9);
+                    return;
+                }
+                case 15: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
         }
     }
 
     final kd a(int param0) {
-        kd discarded$2 = null;
-        kd var2 = null;
+        kd var2;
         if (param0 == 31334) {
           var2 = this.field_b.field_c;
           if (var2 == this.field_b) {
@@ -312,7 +318,7 @@ final class ng {
             return var2;
           }
         } else {
-          discarded$2 = this.f(-3);
+          this.f(-3);
           var2 = this.field_b.field_c;
           if (var2 == this.field_b) {
             return null;
@@ -342,22 +348,12 @@ final class ng {
 
     final void a(int param0, kd param1) {
         RuntimeException var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -383,27 +379,19 @@ final class ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("ng.H(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("ng.H(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -412,7 +400,7 @@ final class ng {
     }
 
     final kd c(int param0) {
-        kd var2 = null;
+        kd var2;
         var2 = this.field_b.field_c;
         if (param0 == 2) {
           if (this.field_b == var2) {
@@ -435,7 +423,7 @@ final class ng {
     }
 
     final kd f(int param0) {
-        kd var2 = null;
+        kd var2;
         if (param0 == 2) {
           var2 = this.field_a;
           if (this.field_b == var2) {
@@ -464,7 +452,7 @@ final class ng {
     }
 
     final kd a(boolean param0) {
-        kd var2 = null;
+        kd var2;
         var2 = this.field_b.field_f;
         if (param0) {
           if (this.field_b == var2) {
@@ -487,9 +475,9 @@ final class ng {
     }
 
     final int b(int param0) {
-        int var2 = 0;
-        kd var3 = null;
-        int var4 = 0;
+        int var2;
+        kd var3;
+        int var4;
         var4 = Lexicominos.field_L ? 1 : 0;
         var2 = 0;
         var3 = this.field_b.field_f;

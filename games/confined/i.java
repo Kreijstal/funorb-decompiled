@@ -40,8 +40,7 @@ abstract class i extends te {
     }
 
     final int l(int param0) {
-        int discarded$2 = 0;
-        int var2 = 0;
+        int var2;
         if (this.field_e) {
           return -1;
         } else {
@@ -55,7 +54,7 @@ abstract class i extends te {
                 if (param0 == -215) {
                   break L0;
                 } else {
-                  discarded$2 = this.l(63);
+                  this.l(63);
                   break L0;
                 }
               }
@@ -106,25 +105,15 @@ abstract class i extends te {
     }
 
     final void c(byte param0) {
-        int discarded$9 = 0;
-        int discarded$10 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        Object stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
+        int discarded$5 = 0;
+        int discarded$6 = 0;
+        int var2;
+        int var3;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         int stackIn_4_2 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
         L0: {
           L1: {
             var3 = Confined.field_J ? 1 : 0;
@@ -132,7 +121,7 @@ abstract class i extends te {
               if (-11 >= (we.field_c ^ -1)) {
                 if (hl.a((byte) 27)) {
                   if (rk.field_e == 0) {
-                    discarded$9 = this.a(false, false, (byte) -106);
+                    discarded$5 = this.a(false, false, (byte) -106);
                     break L1;
                   } else {
                     ca.a(il.field_cb, -1856653215);
@@ -148,31 +137,23 @@ abstract class i extends te {
               }
             } else {
               L2: {
-                stackOut_1_0 = this;
-                stackOut_1_1 = 0;
-                stackIn_3_0 = stackOut_1_0;
-                stackIn_3_1 = stackOut_1_1;
-                stackIn_2_0 = stackOut_1_0;
-                stackIn_2_1 = stackOut_1_1;
+                stackIn_3_0 = this;
+
+                stackIn_3_1 = 0;
+
                 if (dn.field_d == null) {
-                  stackOut_3_0 = this;
-                  stackOut_3_1 = stackIn_3_1;
-                  stackOut_3_2 = 0;
-                  stackIn_4_0 = stackOut_3_0;
-                  stackIn_4_1 = stackOut_3_1;
-                  stackIn_4_2 = stackOut_3_2;
+                  stackIn_4_0 = this;
+                  stackIn_4_1 = stackIn_3_1;
+                  stackIn_4_2 = 0;
                   break L2;
                 } else {
-                  stackOut_2_0 = this;
-                  stackOut_2_1 = stackIn_2_1;
-                  stackOut_2_2 = 1;
-                  stackIn_4_0 = stackOut_2_0;
-                  stackIn_4_1 = stackOut_2_1;
-                  stackIn_4_2 = stackOut_2_2;
+                  stackIn_4_0 = this;
+                  stackIn_4_1 = stackIn_3_1;
+                  stackIn_4_2 = 1;
                   break L2;
                 }
               }
-              discarded$10 = this.a(stackIn_4_1 != 0, stackIn_4_2 != 0, (byte) -122);
+              discarded$6 = this.a(stackIn_4_1 != 0, stackIn_4_2 != 0, (byte) -122);
               break L1;
             }
           }
@@ -182,40 +163,18 @@ abstract class i extends te {
     }
 
     final void b(int param0, boolean param1) {
-        int var3 = 0;
-        java.awt.Dimension var4 = null;
-        int var5 = 0;
-        java.awt.Container var6 = null;
         int stackIn_25_0 = 0;
         int stackIn_100_0 = 0;
-        int stackIn_101_0 = 0;
-        String stackIn_101_1 = null;
-        int stackIn_101_2 = 0;
-        int stackIn_102_0 = 0;
         String stackIn_102_1 = null;
         int stackIn_102_2 = 0;
-        int stackIn_103_0 = 0;
-        String stackIn_103_1 = null;
-        int stackIn_103_2 = 0;
-        int stackIn_103_3 = 0;
+        String stackIn_103_1;
+        int stackIn_103_2;
+        int stackIn_103_3;
         int stackIn_131_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_99_0 = 0;
-        int stackOut_98_0 = 0;
-        int stackOut_100_0 = 0;
-        String stackOut_100_1 = null;
-        int stackOut_100_2 = 0;
-        int stackOut_102_0 = 0;
-        String stackOut_102_1 = null;
-        int stackOut_102_2 = 0;
-        int stackOut_102_3 = 0;
-        int stackOut_101_0 = 0;
-        String stackOut_101_1 = null;
-        int stackOut_101_2 = 0;
-        int stackOut_101_3 = 0;
-        int stackOut_130_0 = 0;
-        int stackOut_129_0 = 0;
+        int var3;
+        java.awt.Dimension var4;
+        int var5;
+        java.awt.Container var6;
         L0: {
           var5 = Confined.field_J ? 1 : 0;
           if (null != gg.field_m) {
@@ -302,12 +261,10 @@ abstract class i extends te {
             }
             L8: {
               if (-1 != ch.field_c) {
-                stackOut_24_0 = 0;
-                stackIn_25_0 = stackOut_24_0;
+                stackIn_25_0 = 0;
                 break L8;
               } else {
-                stackOut_23_0 = 1;
-                stackIn_25_0 = stackOut_23_0;
+                stackIn_25_0 = 1;
                 break L8;
               }
             }
@@ -552,48 +509,35 @@ abstract class i extends te {
                     }
                     L24: {
                       if (ad.field_d) {
-                        stackOut_99_0 = 0;
-                        stackIn_100_0 = stackOut_99_0;
+                        stackIn_100_0 = 0;
                         break L24;
                       } else {
-                        stackOut_98_0 = 1;
-                        stackIn_100_0 = stackOut_98_0;
+                        stackIn_100_0 = 1;
                         break L24;
                       }
                     }
                     L25: {
-                      stackOut_100_0 = stackIn_100_0;
-                      stackOut_100_1 = je.field_v;
-                      stackOut_100_2 = -120;
-                      stackIn_102_0 = stackOut_100_0;
-                      stackIn_102_1 = stackOut_100_1;
-                      stackIn_102_2 = stackOut_100_2;
-                      stackIn_101_0 = stackOut_100_0;
-                      stackIn_101_1 = stackOut_100_1;
-                      stackIn_101_2 = stackOut_100_2;
+
+
+                      stackIn_102_1 = je.field_v;
+
+                      stackIn_102_2 = -120;
+
                       if (ad.field_d) {
-                        stackOut_102_0 = stackIn_102_0;
-                        stackOut_102_1 = (String) ((Object) stackIn_102_1);
-                        stackOut_102_2 = stackIn_102_2;
-                        stackOut_102_3 = 0;
-                        stackIn_103_0 = stackOut_102_0;
-                        stackIn_103_1 = stackOut_102_1;
-                        stackIn_103_2 = stackOut_102_2;
-                        stackIn_103_3 = stackOut_102_3;
+
+                        stackIn_103_1 = (String) ((Object) stackIn_102_1);
+                        stackIn_103_2 = stackIn_102_2;
+                        stackIn_103_3 = 0;
                         break L25;
                       } else {
-                        stackOut_101_0 = stackIn_101_0;
-                        stackOut_101_1 = (String) ((Object) stackIn_101_1);
-                        stackOut_101_2 = stackIn_101_2;
-                        stackOut_101_3 = 1;
-                        stackIn_103_0 = stackOut_101_0;
-                        stackIn_103_1 = stackOut_101_1;
-                        stackIn_103_2 = stackOut_101_2;
-                        stackIn_103_3 = stackOut_101_3;
+
+                        stackIn_103_1 = (String) ((Object) stackIn_102_1);
+                        stackIn_103_2 = stackIn_102_2;
+                        stackIn_103_3 = 1;
                         break L25;
                       }
                     }
-                    gk.a(stackIn_103_0 != 0, stackIn_103_1, (byte) stackIn_103_2, stackIn_103_3 != 0);
+                    gk.a(stackIn_100_0 != 0, stackIn_103_1, (byte) stackIn_103_2, stackIn_103_3 != 0);
                     break L22;
                   }
                   L26: {
@@ -692,12 +636,10 @@ abstract class i extends te {
                 } else {
                   L36: {
                     if (!dg.field_n.a(-1)) {
-                      stackOut_130_0 = 0;
-                      stackIn_131_0 = stackOut_130_0;
+                      stackIn_131_0 = 0;
                       break L36;
                     } else {
-                      stackOut_129_0 = 1;
-                      stackIn_131_0 = stackOut_129_0;
+                      stackIn_131_0 = 1;
                       break L36;
                     }
                   }
@@ -753,18 +695,12 @@ abstract class i extends te {
     }
 
     final void i(int param0) {
-        int var2 = 0;
-        oc var3 = null;
-        int var4 = 0;
-        int stackIn_27_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_29_1 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_28_1 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_27_1 = 0;
+        int var2;
+        oc var3;
+        int var4;
         L0: {
           var4 = Confined.field_J ? 1 : 0;
           var2 = Confined.field_F;
@@ -834,20 +770,15 @@ abstract class i extends te {
                                       }
                                     }
                                     L3: {
-                                      stackOut_26_0 = 1;
-                                      stackIn_28_0 = stackOut_26_0;
-                                      stackIn_27_0 = stackOut_26_0;
+                                      stackIn_28_0 = 1;
+
                                       if (-13 != (var2 ^ -1)) {
-                                        stackOut_28_0 = stackIn_28_0;
-                                        stackOut_28_1 = 0;
-                                        stackIn_29_0 = stackOut_28_0;
-                                        stackIn_29_1 = stackOut_28_1;
+                                        stackIn_29_0 = stackIn_28_0;
+                                        stackIn_29_1 = 0;
                                         break L3;
                                       } else {
-                                        stackOut_27_0 = stackIn_27_0;
-                                        stackOut_27_1 = 1;
-                                        stackIn_29_0 = stackOut_27_0;
-                                        stackIn_29_1 = stackOut_27_1;
+                                        stackIn_29_0 = stackIn_28_0;
+                                        stackIn_29_1 = 1;
                                         break L3;
                                       }
                                     }
@@ -914,21 +845,10 @@ abstract class i extends te {
     }
 
     private final void a(int param0, int param1, String param2, byte param3, int param4) {
-        Exception var6 = null;
-        RuntimeException var6_ref = null;
-        String var6_ref2 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
-        Object stackIn_6_0 = null;
-        Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
         int stackIn_10_1 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -937,21 +857,13 @@ abstract class i extends te {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_5_0 = null;
-        Object stackOut_6_0 = null;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        Object stackOut_7_0 = null;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        String var6 = null;
+        Exception var6_ref = null;
+        RuntimeException var6_ref2 = null;
+        String var7 = null;
+        String var8 = null;
+        String var9 = null;
+        String var10 = null;
         try {
           L0: {
             try {
@@ -964,33 +876,26 @@ abstract class i extends te {
                   if (param3 <= -16) {
                     L2: {
                       L3: {
-                        var6_ref2 = this.field_y.toLowerCase();
-                        stackOut_5_0 = this;
-                        stackIn_8_0 = stackOut_5_0;
-                        stackIn_6_0 = stackOut_5_0;
-                        if (var6_ref2.equals("jagex.com")) {
+                        var6 = this.field_y.toLowerCase();
+                        stackIn_8_0 = this;
+
+                        if (var6.equals("jagex.com")) {
                           break L3;
                         } else {
-                          stackOut_6_0 = this;
-                          stackIn_9_0 = stackOut_6_0;
-                          stackIn_7_0 = stackOut_6_0;
-                          if (!var6_ref2.endsWith(".jagex.com")) {
-                            stackOut_9_0 = this;
-                            stackOut_9_1 = 0;
-                            stackIn_10_0 = stackOut_9_0;
-                            stackIn_10_1 = stackOut_9_1;
+                          stackIn_9_0 = this;
+
+                          if (!var6.endsWith(".jagex.com")) {
+                            stackIn_10_0 = this;
+                            stackIn_10_1 = 0;
                             break L2;
                           } else {
-                            stackOut_7_0 = this;
-                            stackIn_8_0 = stackOut_7_0;
+                            stackIn_8_0 = this;
                             break L3;
                           }
                         }
                       }
-                      stackOut_8_0 = this;
-                      stackOut_8_1 = 1;
-                      stackIn_10_0 = stackOut_8_0;
-                      stackIn_10_1 = stackOut_8_1;
+                      stackIn_10_0 = this;
+                      stackIn_10_1 = 1;
                       break L2;
                     }
                     L4: {
@@ -1047,9 +952,9 @@ abstract class i extends te {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L8: {
-                var6 = (Exception) (Object) decompiledCaughtException;
+                var6_ref = (Exception) (Object) decompiledCaughtException;
                 var10 = (String) null;
-                mb.a((String) null, true, (Throwable) ((Object) var6));
+                mb.a((String) null, true, (Throwable) ((Object) var6_ref));
                 this.a("crash", false);
                 decompiledRegionSelector0 = 2;
                 break L8;
@@ -1071,28 +976,20 @@ abstract class i extends te {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           L9: {
-            var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var6_ref);
-            stackOut_23_1 = new StringBuilder().append("i.CA(").append(param0).append(',').append(param1).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_25_0 = (RuntimeException) (var6_ref2);
+
+            stackIn_25_1 = new StringBuilder().append("i.CA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L9;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L9;
             }
           }
@@ -1129,11 +1026,10 @@ abstract class i extends te {
     }
 
     public static void b(byte param0) {
-        char discarded$0 = 0;
         field_u = null;
         field_q = null;
         if (param0 <= 24) {
-            discarded$0 = i.a('￁', (byte) 35);
+            i.a('￁', (byte) 35);
         }
         field_r = null;
     }
@@ -1178,8 +1074,8 @@ abstract class i extends te {
     }
 
     final static char a(char param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Confined.field_J ? 1 : 0;
         if (param1 <= -7) {
           var2 = param0;
@@ -1442,17 +1338,16 @@ abstract class i extends te {
 
     private final int a(boolean param0, boolean param1, byte param2) {
         try {
-            char discarded$1 = 0;
+            Throwable decompiledCaughtException = null;
             int var4 = 0;
-            Exception var5 = null;
             int var5_int = 0;
+            Exception var5 = null;
             String var7 = null;
             int var8 = 0;
             String var9 = null;
             String var10 = null;
             Boolean var11 = null;
             kg var12 = null;
-            Throwable decompiledCaughtException = null;
             var8 = Confined.field_J ? 1 : 0;
             var4 = cc.a(param1, (byte) -111, hc.field_m, il.field_cb);
             if (-1 != (var4 ^ -1)) {
@@ -1553,7 +1448,7 @@ abstract class i extends te {
                 if (param2 < -76) {
                   break L6;
                 } else {
-                  discarded$1 = i.a('ﾵ', (byte) -116);
+                  i.a('ﾵ', (byte) -116);
                   break L6;
                 }
               }

@@ -24,16 +24,7 @@ final class db implements ci {
     static int[] field_l;
 
     public final void a(int param0, lk param1, int param2, int param3, boolean param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        ua var11 = null;
         lk stackIn_3_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -41,26 +32,20 @@ final class db implements ci {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        lk stackOut_2_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        ua var11 = null;
         try {
           L0: {
             L1: {
               if (param1 instanceof ua) {
-                stackOut_2_0 = (lk) (param1);
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (lk) (param1);
                 break L1;
               } else {
-                stackOut_1_0 = null;
-                stackIn_3_0 = (lk) ((Object) stackOut_1_0);
+                stackIn_3_0 = null;
                 break L1;
               }
             }
@@ -100,7 +85,7 @@ final class db implements ci {
               L5: {
                 if (null != this.field_n) {
                   var10 = this.field_d + (this.field_q - -this.field_j);
-                  discarded$1 = this.field_n.a(param1.field_r, var10 + param0 + param1.field_o, param1.field_i + (param3 - -this.field_e), -this.field_j + (-var10 + param1.field_h), param1.field_q - (this.field_j << -1604369407), this.field_r, this.field_h, this.field_k, this.field_s, 0);
+                  this.field_n.a(param1.field_r, var10 + param0 + param1.field_o, param1.field_i + (param3 - -this.field_e), -this.field_j + (-var10 + param1.field_h), param1.field_q - (this.field_j << -1604369407), this.field_r, this.field_h, this.field_k, this.field_s, 0);
                   break L5;
                 } else {
                   break L5;
@@ -117,27 +102,19 @@ final class db implements ci {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var6);
-            stackOut_15_1 = new StringBuilder().append("db.C(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var6);
+
+            stackIn_17_1 = new StringBuilder().append("db.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L6;
             }
           }
@@ -151,8 +128,22 @@ final class db implements ci {
     }
 
     final static void a(boolean param0, byte[] param1) {
-        byte dupTemp$2 = 0;
-        byte dupTemp$3 = 0;
+        byte dupTemp$0 = 0;
+        byte dupTemp$1 = 0;
+        int stackIn_37_0 = 0;
+        int stackIn_38_0 = 0;
+        int stackIn_38_1 = 0;
+        int stackIn_43_0 = 0;
+        int stackIn_43_1 = 0;
+        int stackIn_51_0 = 0;
+        int stackIn_52_0 = 0;
+        int stackIn_52_1 = 0;
+        RuntimeException stackIn_57_0 = null;
+        StringBuilder stackIn_57_1 = null;
+        RuntimeException stackIn_58_0 = null;
+        StringBuilder stackIn_58_1 = null;
+        String stackIn_58_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -174,40 +165,6 @@ final class db implements ci {
         byte[] var20 = null;
         byte[] var21 = null;
         byte[] var22 = null;
-        int stackIn_36_0 = 0;
-        int stackIn_37_0 = 0;
-        int stackIn_38_0 = 0;
-        int stackIn_38_1 = 0;
-        int stackIn_48_0 = 0;
-        int stackIn_49_0 = 0;
-        int stackIn_50_0 = 0;
-        int stackIn_50_1 = 0;
-        RuntimeException stackIn_54_0 = null;
-        StringBuilder stackIn_54_1 = null;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
-        RuntimeException stackIn_56_0 = null;
-        StringBuilder stackIn_56_1 = null;
-        String stackIn_56_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_47_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_49_1 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_48_1 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_37_1 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        RuntimeException stackOut_55_0 = null;
-        StringBuilder stackOut_55_1 = null;
-        String stackOut_55_2 = null;
-        RuntimeException stackOut_54_0 = null;
-        StringBuilder stackOut_54_1 = null;
-        String stackOut_54_2 = null;
         var15 = Main.field_T;
         try {
           L0: {
@@ -275,7 +232,9 @@ final class db implements ci {
                                       if ((var11 & 1) == 0) {
                                         var12 = 0;
                                         L9: while (true) {
-                                          if (var12 >= var7) {
+                                          stackIn_43_0 = var12 ^ -1;
+                                          stackIn_43_1 = var7 ^ -1;
+                                          if (stackIn_43_0 <= stackIn_43_1) {
                                             if ((2 & var11) != 0) {
                                               var12 = 0;
                                               L10: while (true) {
@@ -283,27 +242,22 @@ final class db implements ci {
                                                   break L8;
                                                 } else {
                                                   L11: {
-                                                    dupTemp$2 = var18.a(true);
-                                                    var9[var12] = dupTemp$2;
-                                                    var13 = dupTemp$2;
-                                                    stackOut_47_0 = var10;
-                                                    stackIn_49_0 = stackOut_47_0;
-                                                    stackIn_48_0 = stackOut_47_0;
+                                                    dupTemp$0 = var18.a(true);
+                                                    var9[var12] = dupTemp$0;
+                                                    var13 = dupTemp$0;
+                                                    stackIn_51_0 = var10;
+
                                                     if (0 == (var13 ^ -1)) {
-                                                      stackOut_49_0 = stackIn_49_0;
-                                                      stackOut_49_1 = 0;
-                                                      stackIn_50_0 = stackOut_49_0;
-                                                      stackIn_50_1 = stackOut_49_1;
+                                                      stackIn_52_0 = stackIn_51_0;
+                                                      stackIn_52_1 = 0;
                                                       break L11;
                                                     } else {
-                                                      stackOut_48_0 = stackIn_48_0;
-                                                      stackOut_48_1 = 1;
-                                                      stackIn_50_0 = stackOut_48_0;
-                                                      stackIn_50_1 = stackOut_48_1;
+                                                      stackIn_52_0 = stackIn_51_0;
+                                                      stackIn_52_1 = 1;
                                                       break L11;
                                                     }
                                                   }
-                                                  var10 = stackIn_50_0 | stackIn_50_1;
+                                                  var10 = stackIn_52_0 | stackIn_52_1;
                                                   var12++;
                                                   continue L10;
                                                 }
@@ -334,23 +288,18 @@ final class db implements ci {
                                                       continue L13;
                                                     } else {
                                                       L15: {
-                                                        dupTemp$3 = var18.a(true);
-                                                        var9[var5 * var13 + var12] = dupTemp$3;
-                                                        var14 = dupTemp$3;
-                                                        stackOut_35_0 = var10;
-                                                        stackIn_37_0 = stackOut_35_0;
-                                                        stackIn_36_0 = stackOut_35_0;
+                                                        dupTemp$1 = var18.a(true);
+                                                        var9[var5 * var13 + var12] = dupTemp$1;
+                                                        var14 = dupTemp$1;
+                                                        stackIn_37_0 = var10;
+
                                                         if (-1 == var14) {
-                                                          stackOut_37_0 = stackIn_37_0;
-                                                          stackOut_37_1 = 0;
-                                                          stackIn_38_0 = stackOut_37_0;
-                                                          stackIn_38_1 = stackOut_37_1;
+                                                          stackIn_38_0 = stackIn_37_0;
+                                                          stackIn_38_1 = 0;
                                                           break L15;
                                                         } else {
-                                                          stackOut_36_0 = stackIn_36_0;
-                                                          stackOut_36_1 = 1;
-                                                          stackIn_38_0 = stackOut_36_0;
-                                                          stackIn_38_1 = stackOut_36_1;
+                                                          stackIn_38_0 = stackIn_37_0;
+                                                          stackIn_38_1 = 1;
                                                           break L15;
                                                         }
                                                       }
@@ -428,31 +377,23 @@ final class db implements ci {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var2 = decompiledCaughtException;
-            stackOut_53_0 = (RuntimeException) (var2);
-            stackOut_53_1 = new StringBuilder().append("db.A(").append(param0).append(',');
-            stackIn_55_0 = stackOut_53_0;
-            stackIn_55_1 = stackOut_53_1;
-            stackIn_54_0 = stackOut_53_0;
-            stackIn_54_1 = stackOut_53_1;
+            stackIn_57_0 = (RuntimeException) (var2);
+
+            stackIn_57_1 = new StringBuilder().append("db.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_55_0 = (RuntimeException) ((Object) stackIn_55_0);
-              stackOut_55_1 = (StringBuilder) ((Object) stackIn_55_1);
-              stackOut_55_2 = "null";
-              stackIn_56_0 = stackOut_55_0;
-              stackIn_56_1 = stackOut_55_1;
-              stackIn_56_2 = stackOut_55_2;
+              stackIn_58_0 = (RuntimeException) ((Object) stackIn_57_0);
+              stackIn_58_1 = (StringBuilder) ((Object) stackIn_57_1);
+              stackIn_58_2 = "null";
               break L18;
             } else {
-              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
-              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
-              stackOut_54_2 = "{...}";
-              stackIn_56_0 = stackOut_54_0;
-              stackIn_56_1 = stackOut_54_1;
-              stackIn_56_2 = stackOut_54_2;
+              stackIn_58_0 = (RuntimeException) ((Object) stackIn_57_0);
+              stackIn_58_1 = (StringBuilder) ((Object) stackIn_57_1);
+              stackIn_58_2 = "{...}";
               break L18;
             }
           }
-          throw ma.a((Throwable) ((Object) stackIn_56_0), stackIn_56_2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_58_0), stackIn_58_2 + ')');
         }
     }
 

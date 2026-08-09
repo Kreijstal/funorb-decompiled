@@ -49,7 +49,7 @@ final class nl {
     }
 
     final static boolean a(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = -65 % ((-26 - param0) / 59);
         if (-11 >= (bh.field_t ^ -1)) {
           if ((ib.field_k ^ -1) > -14) {

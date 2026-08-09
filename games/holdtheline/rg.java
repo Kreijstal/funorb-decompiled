@@ -54,9 +54,9 @@ final class rg {
     }
 
     final ln a(int param0, long param1) {
-        ln var4 = null;
-        ln var5 = null;
-        int var6 = 0;
+        ln var4;
+        ln var5;
+        int var6;
         var6 = HoldTheLine.field_D;
         this.field_a = param1;
         var4 = this.field_c[(int)((long)(this.field_g - 1) & param1)];
@@ -83,17 +83,17 @@ final class rg {
     }
 
     rg(int param0) {
-        ln dupTemp$2 = null;
-        int var2 = 0;
-        ln var3 = null;
+        ln dupTemp$1 = null;
+        int var2;
+        ln var3;
         this.field_c = new ln[param0];
         this.field_g = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new ln();
-            var3 = dupTemp$2;
-            this.field_c[var2] = dupTemp$2;
+            dupTemp$1 = new ln();
+            var3 = dupTemp$1;
+            this.field_c[var2] = dupTemp$1;
             var3.field_n = var3;
             var3.field_l = var3;
             var2++;
@@ -105,9 +105,9 @@ final class rg {
     }
 
     final ln a(int param0) {
-        ln var2 = null;
-        ln var3 = null;
-        int var4 = 0;
+        ln var2;
+        ln var3;
+        int var4;
         var4 = HoldTheLine.field_D;
         if (null != this.field_i) {
           if (param0 == 20240) {

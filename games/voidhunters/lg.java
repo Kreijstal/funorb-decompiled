@@ -12,9 +12,8 @@ final class lg extends uj {
     }
 
     final boolean a(boolean param0) {
-        int discarded$0 = 0;
         if (param0) {
-            discarded$0 = this.a(-39);
+            this.a(-39);
             return false;
         }
         return false;

@@ -13,16 +13,16 @@ final class jo extends qk {
     static vn[][] field_Tb;
 
     final void l(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        kk var3_ref_kk = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        qh var10 = null;
+        int var2;
+        kk var3_ref_kk;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        qh var10;
         L0: {
           var9 = ZombieDawn.field_J;
           if (-24 == (this.field_F ^ -1)) {
@@ -199,30 +199,19 @@ final class jo extends qk {
     }
 
     final void g(int param0) {
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if ((this.field_F ^ -1) != -24) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -325,10 +314,6 @@ final class jo extends qk {
 
     final static int w(int param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            de var2_ref_de = null;
-            int var2 = 0;
             int stackIn_14_0 = 0;
             int stackIn_25_0 = 0;
             int stackIn_30_0 = 0;
@@ -336,11 +321,10 @@ final class jo extends qk {
             int stackIn_35_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_13_0 = 0;
-            int stackOut_29_0 = 0;
-            int stackOut_24_0 = 0;
-            int stackOut_34_0 = 0;
-            int stackOut_32_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            de var2_ref_de = null;
+            int var2 = 0;
             if ((tf.field_c.field_h ^ -1) > -5) {
               try {
                 L0: {
@@ -359,8 +343,7 @@ final class jo extends qk {
                       break L2;
                     } else {
                       if (-3 == (hi.field_O.field_f ^ -1)) {
-                        stackOut_13_0 = k.a(-1, 50);
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = k.a(-1, 50);
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
@@ -394,8 +377,7 @@ final class jo extends qk {
                     } else {
                       if (sb.field_a.b((byte) -80) <= 0) {
                         if ((pd.a(-22826) ^ -1L) < (ul.field_e ^ -1L)) {
-                          stackOut_29_0 = k.a(-2, 50);
-                          stackIn_30_0 = stackOut_29_0;
+                          stackIn_30_0 = k.a(-2, 50);
                           decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
@@ -404,8 +386,7 @@ final class jo extends qk {
                       } else {
                         var2 = sb.field_a.a(false);
                         if (var2 != 0) {
-                          stackOut_24_0 = k.a(var2, 50);
-                          stackIn_25_0 = stackOut_24_0;
+                          stackIn_25_0 = k.a(var2, 50);
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -416,8 +397,7 @@ final class jo extends qk {
                     }
                   }
                   if (4 != jd.field_a) {
-                    stackOut_34_0 = -1;
-                    stackIn_35_0 = stackOut_34_0;
+                    stackIn_35_0 = -1;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
@@ -425,8 +405,7 @@ final class jo extends qk {
                     sb.field_a = null;
                     jd.field_a = 0;
                     hi.field_O = null;
-                    stackOut_32_0 = 0;
-                    stackIn_33_0 = stackOut_32_0;
+                    stackIn_33_0 = 0;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
@@ -472,8 +451,15 @@ final class jo extends qk {
     }
 
     final void a(wk param0, int param1) {
-        RuntimeException var3 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5_int = 0;
         String var5 = null;
@@ -482,23 +468,6 @@ final class jo extends qk {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         var9 = ZombieDawn.field_J;
         try {
           L0: {
@@ -553,27 +522,19 @@ final class jo extends qk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3);
-            stackOut_13_1 = new StringBuilder().append("jo.L(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3);
+
+            stackIn_15_1 = new StringBuilder().append("jo.L(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }

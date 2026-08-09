@@ -10,128 +10,89 @@ final class ic {
     static hl field_e;
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        var4 = Chess.field_G;
+        int var4 = Chess.field_G;
         vm.field_k = 0;
         jj.field_a = null;
         dm.field_b = null;
-        var2 = of.field_g;
+        int var2 = of.field_g;
         of.field_g = lg.field_f;
-        var3 = 30 / ((73 - param0) / 38);
-        if ((param1 ^ -1) != -52) {
-          if ((param1 ^ -1) != -51) {
-            L0: {
-              qh.field_c.field_c = 1;
-              qh.field_c.field_g = qh.field_c.field_g + 1;
-              lg.field_f = var2;
-              if (-3 < (qh.field_c.field_g ^ -1)) {
-                break L0;
-              } else {
-                if ((param1 ^ -1) != -52) {
-                  break L0;
-                } else {
-                  return 2;
-                }
-              }
-            }
-            if (qh.field_c.field_g < 2) {
-              if ((qh.field_c.field_g ^ -1) <= -5) {
-                return 1;
-              } else {
-                return -1;
-              }
-            } else {
-              if (-51 != (param1 ^ -1)) {
-                if ((qh.field_c.field_g ^ -1) <= -5) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              } else {
-                return 5;
-              }
-            }
-          } else {
-            L1: {
-              qh.field_c.field_c = 5;
-              qh.field_c.field_g = qh.field_c.field_g + 1;
-              lg.field_f = var2;
-              if (-3 < (qh.field_c.field_g ^ -1)) {
-                break L1;
-              } else {
-                if ((param1 ^ -1) != -52) {
-                  break L1;
-                } else {
-                  return 2;
-                }
-              }
-            }
-            if (qh.field_c.field_g < 2) {
-              if ((qh.field_c.field_g ^ -1) <= -5) {
-                return 1;
-              } else {
-                return -1;
-              }
-            } else {
-              if (-51 != (param1 ^ -1)) {
-                if ((qh.field_c.field_g ^ -1) <= -5) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              } else {
-                return 5;
-              }
-            }
-          }
-        } else {
-          qh.field_c.field_c = 2;
-          qh.field_c.field_g = qh.field_c.field_g + 1;
-          lg.field_f = var2;
-          if (-3 >= (qh.field_c.field_g ^ -1)) {
-            if ((param1 ^ -1) != -52) {
-              if (qh.field_c.field_g < 2) {
-                if ((qh.field_c.field_g ^ -1) <= -5) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              } else {
-                if (-51 != (param1 ^ -1)) {
-                  if ((qh.field_c.field_g ^ -1) <= -5) {
-                    return 1;
-                  } else {
+        int var3 = 30 / ((73 - param0) / 38);
+        if ((param1 ^ -1) == -52) {
+            qh.field_c.field_c = 2;
+            qh.field_c.field_g = qh.field_c.field_g + 1;
+            lg.field_f = var2;
+            if (-3 < (qh.field_c.field_g ^ -1)) {
+                if (qh.field_c.field_g >= 2) {
+                    if (-51 == (param1 ^ -1)) {
+                        return 5;
+                    }
+                    if (!((qh.field_c.field_g ^ -1) > -5)) {
+                        return 1;
+                    }
                     return -1;
-                  }
-                } else {
-                  return 5;
                 }
-              }
-            } else {
-              return 2;
-            }
-          } else {
-            if (qh.field_c.field_g < 2) {
-              if ((qh.field_c.field_g ^ -1) <= -5) {
-                return 1;
-              } else {
+                if (!((qh.field_c.field_g ^ -1) > -5)) {
+                    return 1;
+                }
                 return -1;
-              }
-            } else {
-              if (-51 != (param1 ^ -1)) {
-                if ((qh.field_c.field_g ^ -1) <= -5) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              } else {
-                return 5;
-              }
             }
-          }
+            if ((param1 ^ -1) == -52) {
+                return 2;
+            }
+            if (qh.field_c.field_g >= 2) {
+                if (-51 == (param1 ^ -1)) {
+                    return 5;
+                }
+                if (!((qh.field_c.field_g ^ -1) > -5)) {
+                    return 1;
+                }
+                return -1;
+            }
+            if (!((qh.field_c.field_g ^ -1) > -5)) {
+                return 1;
+            }
+            return -1;
         }
+        if ((param1 ^ -1) == -51) {
+            qh.field_c.field_c = 5;
+            qh.field_c.field_g = qh.field_c.field_g + 1;
+            lg.field_f = var2;
+            if (-3 >= (qh.field_c.field_g ^ -1) && (param1 ^ -1) == -52) {
+                return 2;
+            }
+            if (qh.field_c.field_g >= 2) {
+                if (-51 == (param1 ^ -1)) {
+                    return 5;
+                }
+                if (!((qh.field_c.field_g ^ -1) > -5)) {
+                    return 1;
+                }
+                return -1;
+            }
+            if (!((qh.field_c.field_g ^ -1) > -5)) {
+                return 1;
+            }
+            return -1;
+        }
+        qh.field_c.field_c = 1;
+        qh.field_c.field_g = qh.field_c.field_g + 1;
+        lg.field_f = var2;
+        if (-3 >= (qh.field_c.field_g ^ -1) && (param1 ^ -1) == -52) {
+            return 2;
+        }
+        if (qh.field_c.field_g >= 2) {
+            if (-51 == (param1 ^ -1)) {
+                return 5;
+            }
+            if (!((qh.field_c.field_g ^ -1) > -5)) {
+                return 1;
+            }
+            return -1;
+        }
+        if (!((qh.field_c.field_g ^ -1) > -5)) {
+            return 1;
+        }
+        return -1;
     }
 
     final static void a(boolean param0, boolean param1, boolean param2, int param3, boolean param4, int param5, int param6, boolean param7, int param8, int param9, boolean param10, int param11, int param12, int param13) {

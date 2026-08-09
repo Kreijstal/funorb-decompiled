@@ -21,32 +21,25 @@ final class on extends pm implements kh {
     }
 
     public static void l(int param0) {
-        jh discarded$0 = null;
         field_bb = null;
         field_cb = null;
         field_Z = null;
         if (param0 != 29829) {
-            discarded$0 = on.c(true, 18);
+            on.c(true, 18);
         }
     }
 
     final static jh c(boolean param0, int param1) {
         qa stackIn_4_0 = null;
         qa stackIn_8_0 = null;
-        qa stackOut_7_0 = null;
-        Object stackOut_6_0 = null;
-        qa stackOut_3_0 = null;
-        Object stackOut_2_0 = null;
         if (param0) {
           L0: {
             on.l(47);
             if (null != af.field_h) {
-              stackOut_7_0 = af.field_h.a((long)param1, -22877);
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = af.field_h.a((long)param1, -22877);
               break L0;
             } else {
-              stackOut_6_0 = null;
-              stackIn_8_0 = (qa) ((Object) stackOut_6_0);
+              stackIn_8_0 = null;
               break L0;
             }
           }
@@ -54,12 +47,10 @@ final class on extends pm implements kh {
         } else {
           L1: {
             if (null != af.field_h) {
-              stackOut_3_0 = af.field_h.a((long)param1, -22877);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = af.field_h.a((long)param1, -22877);
               break L1;
             } else {
-              stackOut_2_0 = null;
-              stackIn_4_0 = (qa) ((Object) stackOut_2_0);
+              stackIn_4_0 = null;
               break L1;
             }
           }
@@ -68,7 +59,7 @@ final class on extends pm implements kh {
     }
 
     final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         var4 = 0;
         if (!param1) {
           if (!param2) {
@@ -158,24 +149,13 @@ final class on extends pm implements kh {
     }
 
     final void a(byte param0, j param1) {
-        j discarded$2 = null;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -183,7 +163,7 @@ final class on extends pm implements kh {
               if (param0 == -27) {
                 break L1;
               } else {
-                discarded$2 = this.a((byte) -17);
+                this.a((byte) -17);
                 break L1;
               }
             }
@@ -193,27 +173,19 @@ final class on extends pm implements kh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("on.F(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("on.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -226,25 +198,15 @@ final class on extends pm implements kh {
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param1 == -18924) {
           param0 = param0 & 8191;
           if (-4097 >= (param0 ^ -1)) {
             L0: {
               if (6144 <= param0) {
-                stackOut_18_0 = -h.field_K[8192 - param0];
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = -h.field_K[8192 - param0];
                 break L0;
               } else {
-                stackOut_17_0 = -h.field_K[-4096 + param0];
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = -h.field_K[-4096 + param0];
                 break L0;
               }
             }
@@ -252,12 +214,10 @@ final class on extends pm implements kh {
           } else {
             L1: {
               if ((param0 ^ -1) <= -2049) {
-                stackOut_14_0 = h.field_K[4096 + -param0];
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = h.field_K[4096 + -param0];
                 break L1;
               } else {
-                stackOut_13_0 = h.field_K[param0];
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = h.field_K[param0];
                 break L1;
               }
             }
@@ -269,12 +229,10 @@ final class on extends pm implements kh {
           if (-4097 >= (param0 ^ -1)) {
             L2: {
               if (6144 <= param0) {
-                stackOut_8_0 = -h.field_K[8192 - param0];
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = -h.field_K[8192 - param0];
                 break L2;
               } else {
-                stackOut_7_0 = -h.field_K[-4096 + param0];
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = -h.field_K[-4096 + param0];
                 break L2;
               }
             }
@@ -282,12 +240,10 @@ final class on extends pm implements kh {
           } else {
             L3: {
               if ((param0 ^ -1) <= -2049) {
-                stackOut_4_0 = h.field_K[4096 + -param0];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = h.field_K[4096 + -param0];
                 break L3;
               } else {
-                stackOut_3_0 = h.field_K[param0];
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = h.field_K[param0];
                 break L3;
               }
             }
@@ -304,7 +260,7 @@ final class on extends pm implements kh {
     }
 
     final String d(byte param0) {
-        int var2 = 0;
+        int var2;
         if (this.field_l) {
           if (this.field_x == null) {
             return null;
@@ -319,10 +275,9 @@ final class on extends pm implements kh {
     }
 
     final static void j(byte param0) {
-        String discarded$2 = null;
         ai.field_b = -1;
         if (param0 <= 43) {
-          discarded$2 = on.a(true, true, false, true);
+          on.a(true, true, false, true);
           se.field_E = 0;
           io.field_g = false;
           w.field_m = 0;

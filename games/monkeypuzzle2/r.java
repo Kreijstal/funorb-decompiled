@@ -35,30 +35,19 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static int a(byte param0, int param1) {
-        int discarded$1 = 0;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         param1 = param1 & 8191;
         if (param0 == 71) {
           if (-4097 >= (param1 ^ -1)) {
             L0: {
               if (6144 > param1) {
-                stackOut_18_0 = -tj.field_b[6144 + -param1];
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = -tj.field_b[6144 + -param1];
                 break L0;
               } else {
-                stackOut_17_0 = tj.field_b[-6144 + param1];
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = tj.field_b[-6144 + param1];
                 break L0;
               }
             }
@@ -66,28 +55,24 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
           } else {
             L1: {
               if (2048 > param1) {
-                stackOut_14_0 = tj.field_b[2048 - param1];
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = tj.field_b[2048 - param1];
                 break L1;
               } else {
-                stackOut_13_0 = -tj.field_b[param1 - 2048];
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = -tj.field_b[param1 - 2048];
                 break L1;
               }
             }
             return stackIn_15_0;
           }
         } else {
-          discarded$1 = r.a((byte) -100, 80);
+          r.a((byte) -100, 80);
           if (-4097 >= (param1 ^ -1)) {
             L2: {
               if (6144 > param1) {
-                stackOut_8_0 = -tj.field_b[6144 + -param1];
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = -tj.field_b[6144 + -param1];
                 break L2;
               } else {
-                stackOut_7_0 = tj.field_b[-6144 + param1];
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = tj.field_b[-6144 + param1];
                 break L2;
               }
             }
@@ -95,12 +80,10 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
           } else {
             L3: {
               if (2048 > param1) {
-                stackOut_4_0 = tj.field_b[2048 - param1];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = tj.field_b[2048 - param1];
                 break L3;
               } else {
-                stackOut_3_0 = -tj.field_b[param1 - 2048];
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = -tj.field_b[param1 - 2048];
                 break L3;
               }
             }

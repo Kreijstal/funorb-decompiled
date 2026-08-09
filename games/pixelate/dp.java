@@ -17,22 +17,18 @@ final class dp extends de {
     }
 
     final void a(int param0, boolean param1, boolean param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6_int = 0;
-        ha var6 = null;
+        int var4;
+        int var5;
+        int var6_int;
+        ha var6;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
         L0: {
           var4 = param0 * 2;
           if (param0 < 128) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (param0 - 128) * 2;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = (param0 - 128) * 2;
             break L0;
           }
         }
@@ -78,14 +74,10 @@ final class dp extends de {
     }
 
     final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_14_0 = 0;
         int stackIn_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
+        int var2;
+        int var3;
         L0: {
           if (-2 == (this.field_l ^ -1)) {
             gj.field_W[2].b(0, 45);
@@ -123,12 +115,10 @@ final class dp extends de {
           }
           L4: {
             if ((this.field_g.field_h ^ -1) < -8) {
-              stackOut_24_0 = -210 + 30 * this.field_g.field_h;
-              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_0 = -210 + 30 * this.field_g.field_h;
               break L4;
             } else {
-              stackOut_23_0 = 0;
-              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_0 = 0;
               break L4;
             }
           }
@@ -164,12 +154,10 @@ final class dp extends de {
           }
           L8: {
             if ((this.field_g.field_h ^ -1) < -8) {
-              stackOut_13_0 = -210 + 30 * this.field_g.field_h;
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_0 = -210 + 30 * this.field_g.field_h;
               break L8;
             } else {
-              stackOut_12_0 = 0;
-              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_0 = 0;
               break L8;
             }
           }
@@ -221,7 +209,6 @@ final class dp extends de {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int discarded$0 = 0;
         try {
             var2_int = uf.field_d;
             var3 = bg.field_k;
@@ -232,7 +219,7 @@ final class dp extends de {
             var8 = pj.a(var6, var3, 20, (byte) 112);
             t.a(var7, var8, var5, var6, 0);
             t.d(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
-            discarded$0 = mg.field_h.field_Db.a(param0, 3 + var7, nc.field_d + (1 + (var8 + -mg.field_h.field_Db.field_w)), 500, 1000, 0, -1, 0, 0, fq.field_q);
+            mg.field_h.field_Db.a(param0, 3 + var7, nc.field_d + (1 + (var8 + -mg.field_h.field_Db.field_w)), 500, 1000, 0, -1, 0, 0, fq.field_q);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) ((Object) runtimeException), "dp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -246,10 +233,10 @@ final class dp extends de {
     }
 
     final void c(int param0) {
-        Object var2 = null;
-        ii var3 = null;
-        ii var4 = null;
-        ii var5 = null;
+        Object var2;
+        ii var3;
+        ii var4;
+        ii var5;
         var2 = null;
         if ((this.field_l ^ -1) == -2) {
           var4 = ro.field_e;

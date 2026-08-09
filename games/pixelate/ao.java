@@ -16,11 +16,18 @@ final class ao implements Runnable {
 
     final static void a(pc param0, int param1) {
         try {
-            int discarded$1 = 0;
+            RuntimeException stackIn_66_0 = null;
+            StringBuilder stackIn_66_1 = null;
+            RuntimeException stackIn_67_0 = null;
+            StringBuilder stackIn_67_1 = null;
+            String stackIn_67_2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
             int var5 = 0;
+            int var6_int = 0;
             ClassNotFoundException var6 = null;
             InvalidClassException var6_ref = null;
             StreamCorruptedException var6_ref2 = null;
@@ -33,7 +40,6 @@ final class ao implements Runnable {
             NullPointerException var6_ref9 = null;
             Exception var6_ref10 = null;
             Throwable var6_ref11 = null;
-            int var6_int = 0;
             int var8 = 0;
             Object[] var9 = null;
             int var10_int = 0;
@@ -52,23 +58,6 @@ final class ao implements Runnable {
             java.lang.reflect.Field var25 = null;
             java.lang.reflect.Method var26 = null;
             java.lang.reflect.Method var27 = null;
-            RuntimeException stackIn_65_0 = null;
-            StringBuilder stackIn_65_1 = null;
-            RuntimeException stackIn_66_0 = null;
-            StringBuilder stackIn_66_1 = null;
-            RuntimeException stackIn_67_0 = null;
-            StringBuilder stackIn_67_1 = null;
-            String stackIn_67_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_64_0 = null;
-            StringBuilder stackOut_64_1 = null;
-            RuntimeException stackOut_66_0 = null;
-            StringBuilder stackOut_66_1 = null;
-            String stackOut_66_2 = null;
-            RuntimeException stackOut_65_0 = null;
-            StringBuilder stackOut_65_1 = null;
-            String stackOut_65_2 = null;
             var16 = null;
             var17 = null;
             var20 = null;
@@ -102,7 +91,7 @@ final class ao implements Runnable {
                         var5 = 0;
                         L3: while (true) {
                           if (var16_ref.field_s <= var5) {
-                            discarded$1 = param0.b(var4, (byte) 111);
+                            param0.b(var4, (byte) 111);
                             var16_ref.c(2779);
                             decompiledRegionSelector0 = 2;
                             break L0;
@@ -336,27 +325,19 @@ final class ao implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter12;
               L25: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_64_0 = (RuntimeException) (var2);
-                stackOut_64_1 = new StringBuilder().append("ao.C(");
-                stackIn_66_0 = stackOut_64_0;
-                stackIn_66_1 = stackOut_64_1;
-                stackIn_65_0 = stackOut_64_0;
-                stackIn_65_1 = stackOut_64_1;
+                stackIn_66_0 = (RuntimeException) (var2);
+
+                stackIn_66_1 = new StringBuilder().append("ao.C(");
+
                 if (param0 == null) {
-                  stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
-                  stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
-                  stackOut_66_2 = "null";
-                  stackIn_67_0 = stackOut_66_0;
-                  stackIn_67_1 = stackOut_66_1;
-                  stackIn_67_2 = stackOut_66_2;
+                  stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+                  stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+                  stackIn_67_2 = "null";
                   break L25;
                 } else {
-                  stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
-                  stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
-                  stackOut_65_2 = "{...}";
-                  stackIn_67_0 = stackOut_65_0;
-                  stackIn_67_1 = stackOut_65_1;
-                  stackIn_67_2 = stackOut_65_2;
+                  stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+                  stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+                  stackIn_67_2 = "{...}";
                   break L25;
                 }
               }

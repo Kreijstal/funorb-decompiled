@@ -19,9 +19,9 @@ abstract class pj extends nb {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = ZombieDawn.field_J;
         if (param0 == 0) {
           return 0;
@@ -124,22 +124,18 @@ abstract class pj extends nb {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3;
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param1 < 30) {
           return -120;
         } else {
           L0: {
             var3 = 1024 - so.b((param0 + -240) * (-240 + param0) + (param2 - 320) * (-320 + param2));
             if (-1 < (var3 ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = var3 >> 1829753090;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = var3 >> 1829753090;
               break L0;
             }
           }

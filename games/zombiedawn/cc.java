@@ -43,28 +43,18 @@ final class cc {
     final static void a(de param0, int param1) {
         try {
             byte[] var2 = null;
-            RuntimeException var2_ref = null;
             int var3_int = 0;
             Exception var3 = null;
             int var4 = 0;
             int var5 = 0;
             byte[] var6 = null;
-            RuntimeException stackIn_19_0 = null;
-            StringBuilder stackIn_19_1 = null;
             RuntimeException stackIn_20_0 = null;
             StringBuilder stackIn_20_1 = null;
             RuntimeException stackIn_21_0 = null;
             StringBuilder stackIn_21_1 = null;
             String stackIn_21_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            String stackOut_20_2 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
+            RuntimeException var2_ref = null;
             var5 = ZombieDawn.field_J;
             try {
               L0: {
@@ -134,27 +124,19 @@ final class cc {
               decompiledCaughtException = decompiledCaughtParameter1;
               L8: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_18_0 = (RuntimeException) (var2_ref);
-                stackOut_18_1 = new StringBuilder().append("cc.E(");
-                stackIn_20_0 = stackOut_18_0;
-                stackIn_20_1 = stackOut_18_1;
-                stackIn_19_0 = stackOut_18_0;
-                stackIn_19_1 = stackOut_18_1;
+                stackIn_20_0 = (RuntimeException) (var2_ref);
+
+                stackIn_20_1 = new StringBuilder().append("cc.E(");
+
                 if (param0 == null) {
-                  stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackOut_20_2 = "null";
-                  stackIn_21_0 = stackOut_20_0;
-                  stackIn_21_1 = stackOut_20_1;
-                  stackIn_21_2 = stackOut_20_2;
+                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+                  stackIn_21_2 = "null";
                   break L8;
                 } else {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "{...}";
-                  stackIn_21_0 = stackOut_19_0;
-                  stackIn_21_1 = stackOut_19_1;
-                  stackIn_21_2 = stackOut_19_2;
+                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+                  stackIn_21_2 = "{...}";
                   break L8;
                 }
               }
@@ -169,8 +151,6 @@ final class cc {
 
     final int a(int param0, byte param1) {
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
         if (param1 <= -127) {
           L0: {
             L1: {
@@ -181,8 +161,7 @@ final class cc {
                   break L1;
                 } else {
                   if ((param0 - this.field_l ^ -1) > -41) {
-                    stackOut_7_0 = this.field_f;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = this.field_f;
                     break L0;
                   } else {
                     break L1;
@@ -190,8 +169,7 @@ final class cc {
                 }
               }
             }
-            stackOut_6_0 = -1;
-            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_0 = -1;
             break L0;
           }
           return stackIn_8_0;
@@ -244,8 +222,6 @@ final class cc {
 
     final boolean a(boolean param0, int param1, int param2) {
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
         L0: {
           if (!param0) {
             break L0;
@@ -265,15 +241,13 @@ final class cc {
                 if (-this.field_l + param2 >= 40) {
                   break L2;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L1;
                 }
               }
             }
           }
-          stackOut_6_0 = 0;
-          stackIn_7_0 = stackOut_6_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0 != 0;
@@ -287,17 +261,15 @@ final class cc {
     }
 
     final void a(byte param0, int param1, int param2) {
-        int fieldTemp$1 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int fieldTemp$0 = 0;
         int stackIn_37_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_35_0 = 0;
+        int var4;
+        int var5;
         L0: {
           var5 = ZombieDawn.field_J;
-          fieldTemp$1 = this.field_j + 1;
+          fieldTemp$0 = this.field_j + 1;
           this.field_j = this.field_j + 1;
-          if (50 == fieldTemp$1) {
+          if (50 == fieldTemp$0) {
             this.field_j = 0;
             break L0;
           } else {
@@ -326,12 +298,10 @@ final class cc {
               } else {
                 L3: {
                   if (param1 < 390) {
-                    stackOut_36_0 = 0;
-                    stackIn_37_0 = stackOut_36_0;
+                    stackIn_37_0 = 0;
                     break L3;
                   } else {
-                    stackOut_35_0 = this.a(param2, false, param1);
-                    stackIn_37_0 = stackOut_35_0;
+                    stackIn_37_0 = this.a(param2, false, param1);
                     break L3;
                   }
                 }
@@ -474,12 +444,10 @@ final class cc {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
-        vn var3 = null;
-        int var4 = 0;
         vn stackIn_8_0 = null;
-        vn stackOut_7_0 = null;
-        vn stackOut_6_0 = null;
+        int var2;
+        vn var3;
+        int var4;
         var4 = ZombieDawn.field_J;
         if ((this.field_o ^ -1) >= -1) {
           return;
@@ -495,12 +463,10 @@ final class cc {
           }
           L1: {
             if (!this.field_g) {
-              stackOut_7_0 = kb.field_i[this.field_f];
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = kb.field_i[this.field_f];
               break L1;
             } else {
-              stackOut_6_0 = jb.field_a[1 + this.field_f];
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = jb.field_a[1 + this.field_f];
               break L1;
             }
           }

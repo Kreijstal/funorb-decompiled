@@ -54,21 +54,11 @@ final class bj {
     }
 
     final static boolean a(int[] param0, int param1, boolean param2, byte param3) {
-        boolean discarded$1 = false;
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_27_0 = 0;
         int stackIn_40_0 = 0;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         RuntimeException stackIn_44_0 = null;
@@ -76,21 +66,13 @@ final class bj {
         String stackIn_44_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_8_0 = 0;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int[] var9 = null;
         var8 = SteelSentinels.field_G;
         try {
           L0: {
@@ -99,14 +81,13 @@ final class bj {
                 break L1;
               } else {
                 var9 = (int[]) null;
-                discarded$1 = bj.a((int[]) null, 21, true, (byte) -121);
+                bj.a((int[]) null, 21, true, (byte) -121);
                 break L1;
               }
             }
             var4_int = ul.a((byte) 71, param1);
             if ((var4_int ^ -1) > -1) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -116,8 +97,7 @@ final class bj {
                     break L2;
                   } else {
                     if (!param2) {
-                      stackOut_13_0 = 0;
-                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_14_0 = 0;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -132,12 +112,10 @@ final class bj {
                     if (6 > var4_int) {
                       L4: {
                         if (var4_int >= var5 + 2) {
-                          stackOut_26_0 = 0;
-                          stackIn_27_0 = stackOut_26_0;
+                          stackIn_27_0 = 0;
                           break L4;
                         } else {
-                          stackOut_25_0 = 1;
-                          stackIn_27_0 = stackOut_25_0;
+                          stackIn_27_0 = 1;
                           break L4;
                         }
                       }
@@ -159,12 +137,10 @@ final class bj {
                           }
                           L7: {
                             if (var4_int >= var7) {
-                              stackOut_39_0 = 0;
-                              stackIn_40_0 = stackOut_39_0;
+                              stackIn_40_0 = 0;
                               break L7;
                             } else {
-                              stackOut_38_0 = 1;
-                              stackIn_40_0 = stackOut_38_0;
+                              stackIn_40_0 = 1;
                               break L7;
                             }
                           }
@@ -198,8 +174,7 @@ final class bj {
                   }
                 }
               } else {
-                stackOut_8_0 = 1;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -209,27 +184,19 @@ final class bj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var4 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) (var4);
-            stackOut_41_1 = new StringBuilder().append("bj.C(");
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackIn_43_0 = (RuntimeException) (var4);
+
+            stackIn_43_1 = new StringBuilder().append("bj.C(");
+
             if (param0 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "null";
               break L10;
             } else {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "{...}";
               break L10;
             }
           }

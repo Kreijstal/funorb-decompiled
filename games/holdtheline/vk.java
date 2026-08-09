@@ -149,7 +149,7 @@ final class vk {
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
-        int var3 = 0;
+        int var3;
         var3 = 77 / ((-38 - param2) / 56);
         if (!param1) {
           tc.c();

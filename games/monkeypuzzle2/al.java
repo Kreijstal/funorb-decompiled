@@ -11,8 +11,6 @@ abstract class al {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -20,26 +18,14 @@ abstract class al {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 > 19) {
-              stackOut_3_0 = param0.b(0);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = param0.b(0);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -48,27 +34,19 @@ abstract class al {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("al.G(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("al.G(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -84,10 +62,10 @@ abstract class al {
     abstract java.net.Socket a(int param0) throws IOException;
 
     final static void a(int param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         var2 = -50 / ((param1 - -40) / 48);
         var4 = aa.field_a;
@@ -177,10 +155,10 @@ abstract class al {
     }
 
     final static String a(char param0, int param1, int param2) {
-        char[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        char[] var6 = null;
+        char[] var3;
+        int var4;
+        int var5;
+        char[] var6;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (param2 != 12663) {
           return (String) null;
@@ -209,14 +187,13 @@ abstract class al {
 
     final static void a(byte param0, int param1) {
         try {
-            String discarded$2 = null;
             IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
               if (param0 == -71) {
                 break L0;
               } else {
-                discarded$2 = al.a('ﾑ', -120, -100);
+                al.a('ﾑ', -120, -100);
                 break L0;
               }
             }
@@ -307,7 +284,6 @@ abstract class al {
 
     final static int a(int param0, int param1, boolean param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -316,9 +292,7 @@ abstract class al {
         int stackIn_17_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_2_0 = 0;
+        RuntimeException var3 = null;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
@@ -364,19 +338,16 @@ abstract class al {
                       break L3;
                     }
                   }
-                  stackOut_14_0 = param0 * var3_int;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = param0 * var3_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
-                stackOut_16_0 = var3_int;
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_0 = var3_int;
                 decompiledRegionSelector0 = 2;
                 break L0;
               }
             } else {
-              stackOut_2_0 = -124;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = -124;
               decompiledRegionSelector0 = 0;
               break L0;
             }

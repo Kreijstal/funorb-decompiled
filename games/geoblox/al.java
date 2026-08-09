@@ -3,18 +3,18 @@
  */
 final class al {
     final static void a(int param0) {
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         wc var4_ref_wc = null;
-        int var4 = 0;
-        Object var5 = null;
         int var6 = 0;
-        ca var8 = null;
         pk var9 = null;
-        byte[] var13 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        int var4 = 0;
+        Object var5 = null;
+        ca var8 = null;
+        byte[] var13 = null;
         var6 = Geoblox.field_C;
         try {
           L0: {
@@ -115,9 +115,9 @@ final class al {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = Geoblox.field_C;
         var2 = qi.b(3, param0 ^ 9667);
         if (param0 == 9666) {
@@ -168,51 +168,36 @@ final class al {
 
     final static boolean a(byte param0, java.applet.Applet param1) {
         try {
-            String var2 = null;
-            RuntimeException var2_ref = null;
-            Throwable var2_ref2 = null;
+            RuntimeException var2 = null;
             String var3 = null;
             String[] var4 = null;
             int var5 = 0;
             int var6 = 0;
             int var7 = 0;
+            String var8 = null;
             int stackIn_4_0 = 0;
-            int stackIn_10_0 = 0;
-            int stackIn_19_0 = 0;
-            RuntimeException stackIn_21_0 = null;
-            StringBuilder stackIn_21_1 = null;
-            RuntimeException stackIn_22_0 = null;
-            StringBuilder stackIn_22_1 = null;
-            RuntimeException stackIn_23_0 = null;
-            StringBuilder stackIn_23_1 = null;
-            String stackIn_23_2 = null;
+            int stackIn_12_0 = 0;
+            int stackIn_21_0 = 0;
+            RuntimeException stackIn_24_0 = null;
+            StringBuilder stackIn_24_1 = null;
+            RuntimeException stackIn_25_0 = null;
+            StringBuilder stackIn_25_1 = null;
+            String stackIn_25_2 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_3_0 = 0;
-            int stackOut_9_0 = 0;
-            int stackOut_18_0 = 0;
-            int stackOut_17_0 = 0;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            RuntimeException stackOut_22_0 = null;
-            StringBuilder stackOut_22_1 = null;
-            String stackOut_22_2 = null;
-            RuntimeException stackOut_21_0 = null;
-            StringBuilder stackOut_21_1 = null;
-            String stackOut_21_2 = null;
+            Throwable var2_ref = null;
             var7 = Geoblox.field_C;
             try {
               L0: {
                 if (td.field_H) {
-                  stackOut_3_0 = 1;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = 1;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 } else {
                   try {
                     L1: {
-                      var2 = "tuhstatbut";
+                      var8 = "tuhstatbut";
                       var3 = (String) (wk.a((byte) -6, param1, "getcookies"));
                       var4 = uj.a(';', true, var3);
                       var5 = 0;
@@ -234,11 +219,10 @@ final class al {
                             if (-1 < (var6 ^ -1)) {
                               break L4;
                             } else {
-                              if (!var4[var5].substring(0, var6).trim().equals(var2)) {
+                              if (!var4[var5].substring(0, var6).trim().equals(var8)) {
                                 break L4;
                               } else {
-                                stackOut_9_0 = 1;
-                                stackIn_10_0 = stackOut_9_0;
+                                stackIn_12_0 = 1;
                                 decompiledRegionSelector0 = 0;
                                 break L1;
                               }
@@ -252,7 +236,7 @@ final class al {
                   } catch (java.lang.Throwable decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     L5: {
-                      var2_ref2 = decompiledCaughtException;
+                      var2_ref = decompiledCaughtException;
                       decompiledRegionSelector0 = 1;
                       break L5;
                     }
@@ -263,12 +247,10 @@ final class al {
                   } else {
                     L6: {
                       if (null == param1.getParameter("tuhstatbut")) {
-                        stackOut_18_0 = 0;
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_21_0 = 0;
                         break L6;
                       } else {
-                        stackOut_17_0 = 1;
-                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_21_0 = 1;
                         break L6;
                       }
                     }
@@ -280,40 +262,32 @@ final class al {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L7: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_20_0 = (RuntimeException) (var2_ref);
-                stackOut_20_1 = new StringBuilder().append("al.A(").append(param0).append(',');
-                stackIn_22_0 = stackOut_20_0;
-                stackIn_22_1 = stackOut_20_1;
-                stackIn_21_0 = stackOut_20_0;
-                stackIn_21_1 = stackOut_20_1;
+                var2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_24_0 = (RuntimeException) (var2);
+
+                stackIn_24_1 = new StringBuilder().append("al.A(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-                  stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-                  stackOut_22_2 = "null";
-                  stackIn_23_0 = stackOut_22_0;
-                  stackIn_23_1 = stackOut_22_1;
-                  stackIn_23_2 = stackOut_22_2;
+                  stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+                  stackIn_25_2 = "null";
                   break L7;
                 } else {
-                  stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-                  stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-                  stackOut_21_2 = "{...}";
-                  stackIn_23_0 = stackOut_21_0;
-                  stackIn_23_1 = stackOut_21_1;
-                  stackIn_23_2 = stackOut_21_2;
+                  stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+                  stackIn_25_2 = "{...}";
                   break L7;
                 }
               }
-              throw t.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
+              throw t.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
             }
             if (decompiledRegionSelector1 == 0) {
               return stackIn_4_0 != 0;
             } else {
               if (decompiledRegionSelector1 == 1) {
-                return stackIn_19_0 != 0;
+                return stackIn_21_0 != 0;
               } else {
-                return stackIn_10_0 != 0;
+                return stackIn_12_0 != 0;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -328,7 +302,6 @@ final class al {
     }
 
     final static String b(int param0) {
-        String discarded$0 = null;
         if (!(tf.field_d != kd.field_b)) {
             return oc.field_a;
         }
@@ -336,7 +309,7 @@ final class al {
             return cg.field_k;
         }
         if (param0 != 0) {
-            discarded$0 = al.b(66);
+            al.b(66);
         }
         if (!ih.field_c.a(-91)) {
             return cg.field_k;

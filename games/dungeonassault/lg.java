@@ -34,9 +34,9 @@ final class lg {
     static String field_h;
 
     final void a(int param0, boolean param1) {
-        int var3 = 0;
-        int var4 = 0;
-        cn var5 = null;
+        int var3;
+        int var4;
+        cn var5;
         var4 = DungeonAssault.field_K;
         var3 = -1 + this.field_g.length;
         L0: while (true) {
@@ -101,17 +101,17 @@ final class lg {
     }
 
     final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        byte[] var11 = null;
-        byte[] var12 = null;
+        int var2;
+        int var3;
+        byte[] var4;
+        int var5;
+        int var10;
+        byte[] var11;
+        byte[] var12;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         L0: {
           var10 = DungeonAssault.field_K;
           var2 = this.field_v.field_h;
@@ -183,10 +183,10 @@ final class lg {
             return;
         }
         wj var2 = ra.field_c;
-        int discarded$0 = var2.h(-125);
-        int discarded$1 = var2.h(-122);
-        int discarded$2 = var2.h(-38);
-        int discarded$3 = var2.h(-39);
+        var2.h(-125);
+        var2.h(-122);
+        var2.h(-38);
+        var2.h(-39);
         int var3 = 71 / ((33 - param0) / 33);
         var1.a(false);
     }
@@ -209,28 +209,34 @@ final class lg {
     }
 
     final static void a(int param0, int param1, String param2, int param3) {
-        char discarded$0 = 0;
-        cf dupTemp$1 = null;
+        cf dupTemp$0 = null;
         if (param0 != 63) {
-            discarded$0 = lg.a((byte) 23, 52);
+            lg.a((byte) 23, 52);
         }
         ac var4 = gh.field_i[param3];
         if (var4 == null) {
             return;
         }
         try {
-            dupTemp$1 = hd.a(false, param1, "da_trap_" + param2);
-            var4.field_a = dupTemp$1;
-            var4.field_x = dupTemp$1;
+            dupTemp$0 = hd.a(false, param1, "da_trap_" + param2);
+            var4.field_a = dupTemp$0;
+            var4.field_x = dupTemp$0;
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) ((Object) runtimeException), "lg.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, cn param5) {
-        int incrementValue$1 = 0;
-        RuntimeException var6 = null;
+        int incrementValue$0 = 0;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        String stackIn_35_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -245,23 +251,6 @@ final class lg {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
         var20 = DungeonAssault.field_K;
         try {
           L0: {
@@ -357,9 +346,9 @@ final class lg {
                             var14 = var14 + var6_int;
                             if (-1 >= (var15 ^ -1)) {
                               L10: {
-                                incrementValue$1 = var9;
+                                incrementValue$0 = var9;
                                 var9++;
-                                var17 = param5.field_B[incrementValue$1];
+                                var17 = param5.field_B[incrementValue$0];
                                 if (var17 == 0) {
                                   break L10;
                                 } else {
@@ -398,27 +387,19 @@ final class lg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var6 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) (var6);
-            stackOut_32_1 = new StringBuilder().append("lg.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackIn_34_0 = (RuntimeException) (var6);
+
+            stackIn_34_1 = new StringBuilder().append("lg.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L11;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L11;
             }
           }

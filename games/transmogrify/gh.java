@@ -11,30 +11,23 @@ final class gh extends wf {
     static boolean field_i;
 
     final static void d(int param0) {
-        int discarded$18 = 0;
-        int discarded$19 = 0;
-        int discarded$20 = 0;
-        int discarded$21 = 0;
-        int discarded$22 = 0;
-        int discarded$23 = 0;
-        int discarded$24 = 0;
-        cf var1 = null;
-        hj var2 = null;
+        cf var1;
+        hj var2;
         var1 = (cf) ((Object) mh.field_e.a((byte) -95));
         if (var1 != null) {
           var2 = nf.field_l;
-          discarded$18 = var2.c((byte) -126);
+          var2.c((byte) -126);
           if (param0 != 0) {
             gh.e(38);
-            discarded$19 = var2.c((byte) -108);
-            discarded$20 = var2.c((byte) -105);
-            discarded$21 = var2.c((byte) -119);
+            var2.c((byte) -108);
+            var2.c((byte) -105);
+            var2.c((byte) -119);
             var1.c(param0 + 5);
             return;
           } else {
-            discarded$22 = var2.c((byte) -108);
-            discarded$23 = var2.c((byte) -105);
-            discarded$24 = var2.c((byte) -119);
+            var2.c((byte) -108);
+            var2.c((byte) -105);
+            var2.c((byte) -119);
             var1.c(param0 + 5);
             return;
           }
@@ -63,8 +56,6 @@ final class gh extends wf {
         RuntimeException runtimeException = null;
         String var2 = null;
         CharSequence var3 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -72,14 +63,6 @@ final class gh extends wf {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -111,27 +94,19 @@ final class gh extends wf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (runtimeException);
-            stackOut_7_1 = new StringBuilder().append("gh.B(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (runtimeException);
+
+            stackIn_9_1 = new StringBuilder().append("gh.B(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }

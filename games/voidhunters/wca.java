@@ -78,9 +78,8 @@ final class wca extends mfb {
     }
 
     final int b(boolean param0) {
-        int discarded$0 = 0;
         if (param0) {
-            discarded$0 = this.g(-21);
+            this.g(-21);
             return fj.field_b;
         }
         return fj.field_b;

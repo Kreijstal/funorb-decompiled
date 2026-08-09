@@ -26,7 +26,7 @@ final class rc {
     }
 
     public static void a(int param0) {
-        nl var2 = null;
+        nl var2;
         field_c = null;
         field_i = null;
         if (param0 != 2) {

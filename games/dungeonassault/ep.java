@@ -9,15 +9,13 @@ final class ep extends un {
     private java.nio.ByteBuffer field_h;
 
     final void a(byte[] param0, int param1) {
-        java.nio.Buffer discarded$0 = null;
-        java.nio.ByteBuffer discarded$1 = null;
         try {
             if (param1 < 30) {
                 ep.a((byte) -76, 4);
             }
             this.field_h = java.nio.ByteBuffer.allocateDirect(param0.length);
-            discarded$0 = this.field_h.position(0);
-            discarded$1 = this.field_h.put(param0);
+            this.field_h.position(0);
+            this.field_h.put(param0);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) ((Object) runtimeException), "ep.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -35,8 +33,8 @@ final class ep extends un {
         int var3 = 23 % ((-67 - param0) / 39);
         byte[] var4 = new byte[this.field_h.capacity()];
         byte[] var2 = var4;
-        java.nio.Buffer discarded$0 = this.field_h.position(0);
-        java.nio.ByteBuffer discarded$1 = this.field_h.get(var4);
+        this.field_h.position(0);
+        this.field_h.get(var4);
         return var4;
     }
 
@@ -46,8 +44,6 @@ final class ep extends un {
         hb var4 = null;
         Object stackIn_3_0 = null;
         hb stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -55,22 +51,12 @@ final class ep extends un {
         String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        hb stackOut_4_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             var3_int = param2.c(true);
             if (param1 == (var3_int ^ -1)) {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              param2.b((byte) 80);
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -82,8 +68,7 @@ final class ep extends un {
               var4.field_o = param2.c(true);
               var4.field_d = param2.c(true);
               var4.field_p = param2.c(true);
-              stackOut_4_0 = (hb) (var4);
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = (hb) (var4);
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -92,27 +77,19 @@ final class ep extends un {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("ep.F(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("ep.F(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L1;
             }
           }
@@ -127,11 +104,11 @@ final class ep extends un {
 
     final static void a(byte param0, int param1) {
         ne var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         ak var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var4 = DungeonAssault.field_K;
         try {
           L0: {

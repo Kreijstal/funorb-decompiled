@@ -18,9 +18,9 @@ final class gh {
     }
 
     final p a(int param0, int param1) {
-        p var3 = null;
-        byte[] var4 = null;
-        p var7 = null;
+        p var3;
+        byte[] var4;
+        p var7;
         var3 = (p) (this.field_c.a(param1 + -32891, (long)param0));
         if (param1 == 32767) {
           if (var3 == null) {

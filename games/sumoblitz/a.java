@@ -8,7 +8,7 @@ final class a implements e {
     private final native void E(long param0, boolean param1);
 
     final void a() {
-        Thread discarded$0 = Thread.currentThread();
+        Thread.currentThread();
         this.b();
     }
 

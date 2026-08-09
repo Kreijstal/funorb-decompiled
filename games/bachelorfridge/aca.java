@@ -12,53 +12,31 @@ final class aca extends kj {
     private eaa field_h;
 
     final boolean b(int param0) {
-        int fieldTemp$6 = 0;
-        boolean discarded$7 = false;
-        int fieldTemp$8 = 0;
-        boolean discarded$9 = false;
-        int fieldTemp$10 = 0;
-        boolean discarded$11 = false;
-        Object var2 = null;
-        bma var2_ref = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int stackIn_5_0 = 0;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        Object var2;
+        bma var2_ref;
+        int var2_int;
+        int var3;
+        int var4;
         int stackIn_10_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
-        int stackIn_24_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_33_0 = 0;
-        int stackIn_38_0 = 0;
         int stackIn_43_0 = 0;
         int stackIn_47_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_13_0 = 0;
         var2 = null;
         var4 = BachelorFridge.field_y;
         this.field_f = this.field_f - 1;
         if ((this.field_f ^ -1) <= -1) {
           L0: {
             if (!this.field_j) {
-              stackOut_18_0 = 3;
-              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_0 = 3;
               break L0;
             } else {
-              stackOut_17_0 = 7;
-              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_0 = 7;
               break L0;
             }
           }
@@ -75,21 +53,20 @@ final class aca extends kj {
                     if (var2_ref == null) {
                       break L3;
                     } else {
-                      fieldTemp$6 = var2_ref.field_r + 1;
+                      fieldTemp$3 = var2_ref.field_r + 1;
                       var2_ref.field_r = var2_ref.field_r + 1;
-                      var3 = 8191 & 8192 * fieldTemp$6 / var2_ref.field_s;
+                      var3 = 8191 & 8192 * fieldTemp$3 / var2_ref.field_s;
                       var2_ref.field_p = via.a(var3, (byte) 125) >> -1275181268;
                       var2_ref.field_k = -((via.a(var3, (byte) 109) >> -392579572) + 20);
                       var2_ref.field_g = ft.a(var3, (byte) -128) >> 2109534796;
-                      discarded$7 = var2_ref.b(true);
-                      stackOut_37_0 = var2_ref.field_h;
-                      stackIn_43_0 = stackOut_37_0;
-                      stackIn_38_0 = stackOut_37_0;
+                      var2_ref.b(true);
+                      stackIn_43_0 = var2_ref.field_h;
+
                       if (var4 != 0) {
                         break L2;
                       } else {
                         L4: {
-                          if (stackIn_38_0 < 0) {
+                          if (stackIn_43_0 < 0) {
                             var2_ref.a(false);
                             break L4;
                           } else {
@@ -105,8 +82,7 @@ final class aca extends kj {
                       }
                     }
                   }
-                  stackOut_42_0 = this.field_f;
-                  stackIn_43_0 = stackOut_42_0;
+                  stackIn_43_0 = this.field_f;
                   break L2;
                 }
                 L5: {
@@ -117,14 +93,12 @@ final class aca extends kj {
                       if (!this.field_h.e(12917)) {
                         break L6;
                       } else {
-                        stackOut_45_0 = 1;
-                        stackIn_47_0 = stackOut_45_0;
+                        stackIn_47_0 = 1;
                         break L5;
                       }
                     }
                   }
-                  stackOut_46_0 = 0;
-                  stackIn_47_0 = stackOut_46_0;
+                  stackIn_47_0 = 0;
                   break L5;
                 }
                 return stackIn_47_0 != 0;
@@ -139,21 +113,20 @@ final class aca extends kj {
                     if (var2_ref == null) {
                       break L9;
                     } else {
-                      fieldTemp$8 = var2_ref.field_r + 1;
+                      fieldTemp$4 = var2_ref.field_r + 1;
                       var2_ref.field_r = var2_ref.field_r + 1;
-                      var3 = 8191 & 8192 * fieldTemp$8 / var2_ref.field_s;
+                      var3 = 8191 & 8192 * fieldTemp$4 / var2_ref.field_s;
                       var2_ref.field_p = via.a(var3, (byte) 125) >> -1275181268;
                       var2_ref.field_k = -((via.a(var3, (byte) 109) >> -392579572) + 20);
                       var2_ref.field_g = ft.a(var3, (byte) -128) >> 2109534796;
-                      discarded$9 = var2_ref.b(true);
-                      stackOut_23_0 = var2_ref.field_h;
-                      stackIn_29_0 = stackOut_23_0;
-                      stackIn_24_0 = stackOut_23_0;
+                      var2_ref.b(true);
+                      stackIn_29_0 = var2_ref.field_h;
+
                       if (var4 != 0) {
                         break L8;
                       } else {
                         L10: {
-                          if (stackIn_24_0 < 0) {
+                          if (stackIn_29_0 < 0) {
                             var2_ref.a(false);
                             break L10;
                           } else {
@@ -169,8 +142,7 @@ final class aca extends kj {
                       }
                     }
                   }
-                  stackOut_28_0 = this.field_f;
-                  stackIn_29_0 = stackOut_28_0;
+                  stackIn_29_0 = this.field_f;
                   break L8;
                 }
                 L11: {
@@ -181,14 +153,12 @@ final class aca extends kj {
                       if (!this.field_h.e(12917)) {
                         break L12;
                       } else {
-                        stackOut_31_0 = 1;
-                        stackIn_33_0 = stackOut_31_0;
+                        stackIn_33_0 = 1;
                         break L11;
                       }
                     }
                   }
-                  stackOut_32_0 = 0;
-                  stackIn_33_0 = stackOut_32_0;
+                  stackIn_33_0 = 0;
                   break L11;
                 }
                 return stackIn_33_0 != 0;
@@ -206,21 +176,20 @@ final class aca extends kj {
                   if (var2_ref == null) {
                     break L15;
                   } else {
-                    fieldTemp$10 = var2_ref.field_r + 1;
+                    fieldTemp$5 = var2_ref.field_r + 1;
                     var2_ref.field_r = var2_ref.field_r + 1;
-                    var3 = 8191 & 8192 * fieldTemp$10 / var2_ref.field_s;
+                    var3 = 8191 & 8192 * fieldTemp$5 / var2_ref.field_s;
                     var2_ref.field_p = via.a(var3, (byte) 125) >> -1275181268;
                     var2_ref.field_k = -((via.a(var3, (byte) 109) >> -392579572) + 20);
                     var2_ref.field_g = ft.a(var3, (byte) -128) >> 2109534796;
-                    discarded$11 = var2_ref.b(true);
-                    stackOut_4_0 = var2_ref.field_h;
-                    stackIn_10_0 = stackOut_4_0;
-                    stackIn_5_0 = stackOut_4_0;
+                    var2_ref.b(true);
+                    stackIn_10_0 = var2_ref.field_h;
+
                     if (var4 != 0) {
                       break L14;
                     } else {
                       L16: {
-                        if (stackIn_5_0 < 0) {
+                        if (stackIn_10_0 < 0) {
                           var2_ref.a(false);
                           break L16;
                         } else {
@@ -236,8 +205,7 @@ final class aca extends kj {
                     }
                   }
                 }
-                stackOut_9_0 = this.field_f;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = this.field_f;
                 break L14;
               }
               L17: {
@@ -248,14 +216,12 @@ final class aca extends kj {
                     if (!this.field_h.e(12917)) {
                       break L18;
                     } else {
-                      stackOut_12_0 = 1;
-                      stackIn_14_0 = stackOut_12_0;
+                      stackIn_14_0 = 1;
                       break L17;
                     }
                   }
                 }
-                stackOut_13_0 = 0;
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_0 = 0;
                 break L17;
               }
               return stackIn_14_0 != 0;
@@ -267,27 +233,23 @@ final class aca extends kj {
     }
 
     private final void c(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        bma var7 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        bma var7;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
         L0: {
           var2 = kla.a(1024, sma.field_I, -2147483648);
           var3 = kla.a(1024, sma.field_I, -2147483648);
           var4 = var3 + var2;
           var5 = var2 - var3;
           if (this.field_j) {
-            stackOut_2_0 = 60;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 60;
             break L0;
           } else {
-            stackOut_1_0 = 200;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 200;
             break L0;
           }
         }
@@ -302,12 +264,8 @@ final class aca extends kj {
     }
 
     final static byte a(char param0, int param1) {
-        byte discarded$4 = 0;
-        byte discarded$5 = 0;
-        byte discarded$6 = 0;
-        byte discarded$7 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = BachelorFridge.field_y;
         if (param0 <= 0) {
           L0: {
@@ -981,7 +939,7 @@ final class aca extends kj {
                     }
                   }
                   if (param1 != 8220) {
-                    discarded$4 = aca.a('ﾵ', 108);
+                    aca.a('ﾵ', 108);
                     return (byte) var2;
                   } else {
                     return (byte) var2;
@@ -993,7 +951,7 @@ final class aca extends kj {
             break L0;
           }
           if (param1 != 8220) {
-            discarded$5 = aca.a('ﾵ', 108);
+            aca.a('ﾵ', 108);
             return (byte) var2;
           } else {
             return (byte) var2;
@@ -1350,13 +1308,13 @@ final class aca extends kj {
             if (param1 == 8220) {
               return (byte) var2;
             } else {
-              discarded$6 = aca.a('ﾵ', 108);
+              aca.a('ﾵ', 108);
               return (byte) var2;
             }
           } else {
             var2 = (byte)param0;
             if (param1 != 8220) {
-              discarded$7 = aca.a('ﾵ', 108);
+              aca.a('ﾵ', 108);
               return (byte) var2;
             } else {
               return (byte) var2;
@@ -1367,50 +1325,29 @@ final class aca extends kj {
 
     aca(gj param0, int param1, int param2, boolean param3) {
         super(param0, param1, param2);
-        RuntimeException var5 = null;
-        Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
               this.field_h = new eaa();
-              stackOut_1_0 = this;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_3_0 = this;
+
               if (!param3) {
-                stackOut_3_0 = this;
-                stackOut_3_1 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 1;
                 break L1;
               }
             }
@@ -1437,27 +1374,19 @@ final class aca extends kj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var5);
-            stackOut_8_1 = new StringBuilder().append("aca.<init>(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var5);
+
+            stackIn_10_1 = new StringBuilder().append("aca.<init>(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }
@@ -1470,26 +1399,61 @@ final class aca extends kj {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var7 = BachelorFridge.field_y;
-        var4 = (bma) ((Object) this.field_h.b((byte) 90));
-        if (param1) {
-          L0: while (true) {
-            if (var4 != null) {
-              var5 = (var4.field_i >> 197807620) + param2;
-              var6 = (var4.field_q >> -1867103964) + param0 - (var4.field_h >> -1554850748);
-              mla.field_b[var4.field_v].e(var5, var6);
-              var4 = (bma) ((Object) this.field_h.c(0));
-              if (var7 == 0) {
-                continue L0;
-              } else {
-                return;
-              }
-            } else {
-              return;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var7 = BachelorFridge.field_y;
+                    var4 = (bma) ((Object) this.field_h.b((byte) 90));
+                    if (param1) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    return;
+                }
+                case 2: {
+                    if (var4 != null) {
+                        statePc = 4;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    return;
+                }
+                case 4: {
+                    var5 = (var4.field_i >> 197807620) + param2;
+                    var6 = (var4.field_q >> -1867103964) + param0 - (var4.field_h >> -1554850748);
+                    mla.field_b[var4.field_v].e(var5, var6);
+                    var4 = (bma) ((Object) this.field_h.c(0));
+                    if (var7 == 0) {
+                        statePc = 6;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    return;
+                }
+                case 6: {
+                    if (var7 == 0) {
+                        statePc = 2;
+                    } else {
+                        statePc = 7;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } else {
-          return;
         }
     }
 
@@ -1509,11 +1473,11 @@ final class aca extends kj {
     }
 
     final static void a(byte param0, int param1) {
-        int discarded$5 = fda.b(param0 ^ -117);
+        fda.b(param0 ^ -117);
         if (param0 == -118) {
             return;
         }
-        byte discarded$6 = aca.a('q', -54);
+        aca.a('q', -54);
     }
 
     final static hs a(byte param0, int param1, int param2) {

@@ -7,10 +7,10 @@ final class sh extends dk {
     private java.awt.Component field_n;
 
     final void a(int param0, java.awt.Component param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
-        java.awt.Graphics var8 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
+        java.awt.Graphics var8;
         this.field_e = param3;
         this.field_m = param0;
         this.field_l = new int[1 + param3 * param0];
@@ -36,14 +36,12 @@ final class sh extends dk {
     }
 
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
         if (param2 != 0) {
           this.field_n = (java.awt.Component) null;
-          discarded$4 = param1.drawImage(this.field_j, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_n));
+          param1.drawImage(this.field_j, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_n));
           return;
         } else {
-          discarded$5 = param1.drawImage(this.field_j, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_n));
+          param1.drawImage(this.field_j, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_n));
           return;
         }
     }

@@ -5,7 +5,7 @@ final class wo {
     private static eb field_a;
 
     private final static void c(eb param0) {
-        int var1 = 0;
+        int var1;
         param0.field_x = 0;
         var1 = 0;
         L0: while (true) {
@@ -26,10 +26,11 @@ final class wo {
     }
 
     private final static void a(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int dupTemp$0 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         var7 = 0;
         var8 = param4;
         L0: while (true) {
@@ -81,7 +82,8 @@ final class wo {
                       }
                     }
                   } else {
-                    param1[param3[var8] + 1] = param1[param3[var8] + 1] + 1;
+                    dupTemp$0 = param3[var8] + 1;
+                    param1[dupTemp$0] = param1[dupTemp$0] + 1;
                     var8++;
                     continue L2;
                   }
@@ -119,44 +121,46 @@ final class wo {
     }
 
     private final static void d(eb param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        Object var23 = null;
-        Object var24 = null;
-        Object var25 = null;
-        int var26 = 0;
-        byte[] var27_ref_byte__ = null;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        byte[] var36 = null;
-        byte[] var37 = null;
+        int dupTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        Object var23;
+        Object var24;
+        Object var25;
+        int var26;
+        byte[] var27_ref_byte__;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        byte[] var36;
+        byte[] var37;
         L0: {
           var4 = 0;
           var5 = 0;
@@ -374,7 +378,8 @@ final class wo {
                                                                       }
                                                                     }
                                                                     L24: {
-                                                                      param0.field_m[param0.field_C[var1 & 255] & 255] = param0.field_m[param0.field_C[var1 & 255] & 255] + 1;
+                                                                      dupTemp$0 = param0.field_C[var1 & 255] & 255;
+                                                                      param0.field_m[dupTemp$0] = param0.field_m[dupTemp$0] + 1;
                                                                       wl.field_k[var14] = param0.field_C[var1 & 255] & 255;
                                                                       var14++;
                                                                       if (var12 != 0) {
@@ -512,7 +517,8 @@ final class wo {
                                                                           continue L1;
                                                                         } else {
                                                                           var1 = (byte)(wl.field_k[var4] & 255);
-                                                                          wl.field_k[param0.field_G[var1 & 255]] = wl.field_k[param0.field_G[var1 & 255]] | var4 << 8;
+                                                                          dupTemp$1 = param0.field_G[var1 & 255];
+                                                                          wl.field_k[dupTemp$1] = wl.field_k[dupTemp$1] | var4 << 8;
                                                                           param0.field_G[var1 & 255] = param0.field_G[var1 & 255] + 1;
                                                                           var4++;
                                                                           continue L33;
@@ -706,21 +712,21 @@ final class wo {
     }
 
     private final static void e(eb param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int[] var6 = null;
-        int var7 = 0;
-        byte[] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int[] var14 = null;
-        int[] var15 = null;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int[] var6;
+        int var7;
+        byte[] var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int[] var14;
+        int[] var15;
         var2 = param0.field_j;
         var3 = param0.field_f;
         var4 = param0.field_u;
@@ -887,11 +893,9 @@ final class wo {
     }
 
     final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
-        Object var5 = null;
-        Throwable var6 = null;
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_1_0 = 0;
+        Object var5 = null;
         var5 = field_a;
         synchronized (var5) {
           L0: {
@@ -908,8 +912,7 @@ final class wo {
             param1 = param1 - field_a.field_K;
             field_a.field_r = null;
             field_a.field_k = null;
-            stackOut_1_0 = param1;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_2_0 = param1;
             break L0;
           }
         }
@@ -921,7 +924,7 @@ final class wo {
     }
 
     private final static int a(int param0, eb param1) {
-        int var2 = 0;
+        int var2;
         L0: while (true) {
           if (param1.field_q < param0) {
             param1.field_o = param1.field_o << 8 | param1.field_r[param1.field_D] & 255;

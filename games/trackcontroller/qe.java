@@ -47,20 +47,9 @@ final class qe extends wh {
     }
 
     final void a(int[] param0, int param1, int param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_33_0 = 0;
         int stackIn_46_0 = 0;
         int stackIn_60_0 = 0;
-        RuntimeException stackIn_65_0 = null;
-        StringBuilder stackIn_65_1 = null;
         RuntimeException stackIn_66_0 = null;
         StringBuilder stackIn_66_1 = null;
         RuntimeException stackIn_67_0 = null;
@@ -68,20 +57,15 @@ final class qe extends wh {
         String stackIn_67_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_58_0 = 0;
-        RuntimeException stackOut_64_0 = null;
-        StringBuilder stackOut_64_1 = null;
-        RuntimeException stackOut_66_0 = null;
-        StringBuilder stackOut_66_1 = null;
-        String stackOut_66_2 = null;
-        RuntimeException stackOut_65_0 = null;
-        StringBuilder stackOut_65_1 = null;
-        String stackOut_65_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         var11 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -180,12 +164,10 @@ final class qe extends wh {
               }
               L6: {
                 if (!oa.field_k) {
-                  stackOut_32_0 = param2;
-                  stackIn_33_0 = stackOut_32_0;
+                  stackIn_33_0 = param2;
                   break L6;
                 } else {
-                  stackOut_31_0 = param2 << 1371599041;
-                  stackIn_33_0 = stackOut_31_0;
+                  stackIn_33_0 = param2 << 1371599041;
                   break L6;
                 }
               }
@@ -235,13 +217,11 @@ final class qe extends wh {
                         this.field_w.a(this.field_B, 0, param2);
                         this.field_r.a(this.field_s, 0, param2);
                         if (!oa.field_k) {
-                          stackOut_45_0 = param1;
-                          stackIn_46_0 = stackOut_45_0;
+                          stackIn_46_0 = param1;
                           break L11;
                         } else {
                           param1 = param1 << 1;
-                          stackOut_44_0 = param1 << 1;
-                          stackIn_46_0 = stackOut_44_0;
+                          stackIn_46_0 = param1 << 1;
                           break L11;
                         }
                       }
@@ -287,13 +267,11 @@ final class qe extends wh {
                     L16: {
                       this.field_A.a(this.field_B, 0, param2);
                       if (!oa.field_k) {
-                        stackOut_59_0 = param1;
-                        stackIn_60_0 = stackOut_59_0;
+                        stackIn_60_0 = param1;
                         break L16;
                       } else {
                         param1 = param1 << 1;
-                        stackOut_58_0 = param1 << 1;
-                        stackIn_60_0 = stackOut_58_0;
+                        stackIn_60_0 = param1 << 1;
                         break L16;
                       }
                     }
@@ -321,27 +299,19 @@ final class qe extends wh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var4 = decompiledCaughtException;
-            stackOut_64_0 = (RuntimeException) (var4);
-            stackOut_64_1 = new StringBuilder().append("qe.HA(");
-            stackIn_66_0 = stackOut_64_0;
-            stackIn_66_1 = stackOut_64_1;
-            stackIn_65_0 = stackOut_64_0;
-            stackIn_65_1 = stackOut_64_1;
+            stackIn_66_0 = (RuntimeException) (var4);
+
+            stackIn_66_1 = new StringBuilder().append("qe.HA(");
+
             if (param0 == null) {
-              stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
-              stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
-              stackOut_66_2 = "null";
-              stackIn_67_0 = stackOut_66_0;
-              stackIn_67_1 = stackOut_66_1;
-              stackIn_67_2 = stackOut_66_2;
+              stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+              stackIn_67_2 = "null";
               break L18;
             } else {
-              stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
-              stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
-              stackOut_65_2 = "{...}";
-              stackIn_67_0 = stackOut_65_0;
-              stackIn_67_1 = stackOut_65_1;
-              stackIn_67_2 = stackOut_65_2;
+              stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+              stackIn_67_2 = "{...}";
               break L18;
             }
           }
@@ -355,7 +325,7 @@ final class qe extends wh {
     }
 
     final synchronized void d(int param0) {
-        int var3 = 0;
+        int var3;
         L0: {
           var3 = TrackController.field_F ? 1 : 0;
           if (-1 <= (this.field_m ^ -1)) {
@@ -517,36 +487,24 @@ final class qe extends wh {
     }
 
     final synchronized void a(boolean param0, int param1, boolean param2, int param3, wb param4, int param5) {
-        RuntimeException var7 = null;
-        int var7_int = 0;
-        int var8 = 0;
-        Object stackIn_19_0 = null;
         Object stackIn_20_0 = null;
         Object stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_35_0 = 0;
-        nb stackIn_44_0 = null;
-        wb stackIn_44_1 = null;
-        int stackIn_44_2 = 0;
         nb stackIn_45_0 = null;
         wb stackIn_45_1 = null;
         int stackIn_45_2 = 0;
-        nb stackIn_46_0 = null;
-        wb stackIn_46_1 = null;
-        int stackIn_46_2 = 0;
-        int stackIn_46_3 = 0;
-        nb stackIn_53_0 = null;
-        wb stackIn_53_1 = null;
-        int stackIn_53_2 = 0;
+        nb stackIn_46_0;
+        wb stackIn_46_1;
+        int stackIn_46_2;
+        int stackIn_46_3;
         nb stackIn_54_0 = null;
         wb stackIn_54_1 = null;
         int stackIn_54_2 = 0;
-        nb stackIn_55_0 = null;
-        wb stackIn_55_1 = null;
-        int stackIn_55_2 = 0;
-        int stackIn_55_3 = 0;
-        RuntimeException stackIn_59_0 = null;
-        StringBuilder stackIn_59_1 = null;
+        nb stackIn_55_0;
+        wb stackIn_55_1;
+        int stackIn_55_2;
+        int stackIn_55_3;
         RuntimeException stackIn_60_0 = null;
         StringBuilder stackIn_60_1 = null;
         RuntimeException stackIn_61_0 = null;
@@ -554,43 +512,9 @@ final class qe extends wh {
         String stackIn_61_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_18_0 = null;
-        Object stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        Object stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_33_0 = 0;
-        nb stackOut_52_0 = null;
-        wb stackOut_52_1 = null;
-        int stackOut_52_2 = 0;
-        nb stackOut_54_0 = null;
-        wb stackOut_54_1 = null;
-        int stackOut_54_2 = 0;
-        int stackOut_54_3 = 0;
-        nb stackOut_53_0 = null;
-        wb stackOut_53_1 = null;
-        int stackOut_53_2 = 0;
-        int stackOut_53_3 = 0;
-        nb stackOut_43_0 = null;
-        wb stackOut_43_1 = null;
-        int stackOut_43_2 = 0;
-        nb stackOut_45_0 = null;
-        wb stackOut_45_1 = null;
-        int stackOut_45_2 = 0;
-        int stackOut_45_3 = 0;
-        nb stackOut_44_0 = null;
-        wb stackOut_44_1 = null;
-        int stackOut_44_2 = 0;
-        int stackOut_44_3 = 0;
-        RuntimeException stackOut_58_0 = null;
-        StringBuilder stackOut_58_1 = null;
-        RuntimeException stackOut_60_0 = null;
-        StringBuilder stackOut_60_1 = null;
-        String stackOut_60_2 = null;
-        RuntimeException stackOut_59_0 = null;
-        StringBuilder stackOut_59_1 = null;
-        String stackOut_59_2 = null;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8 = 0;
         var8 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -644,20 +568,15 @@ final class qe extends wh {
               }
             }
             L5: {
-              stackOut_18_0 = this;
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_19_0 = stackOut_18_0;
+              stackIn_20_0 = this;
+
               if (!param0) {
-                stackOut_20_0 = this;
-                stackOut_20_1 = 0;
-                stackIn_21_0 = stackOut_20_0;
-                stackIn_21_1 = stackOut_20_1;
+                stackIn_21_0 = this;
+                stackIn_21_1 = 0;
                 break L5;
               } else {
-                stackOut_19_0 = this;
-                stackOut_19_1 = 1;
-                stackIn_21_0 = stackOut_19_0;
-                stackIn_21_1 = stackOut_19_1;
+                stackIn_21_0 = this;
+                stackIn_21_1 = 1;
                 break L5;
               }
             }
@@ -679,12 +598,10 @@ final class qe extends wh {
                     if (null != this.field_y) {
                       L7: {
                         if ((this.field_m ^ -1) <= -524289) {
-                          stackOut_34_0 = 0;
-                          stackIn_35_0 = stackOut_34_0;
+                          stackIn_35_0 = 0;
                           break L7;
                         } else {
-                          stackOut_33_0 = 1;
-                          stackIn_35_0 = stackOut_33_0;
+                          stackIn_35_0 = 1;
                           break L7;
                         }
                       }
@@ -721,34 +638,23 @@ final class qe extends wh {
                       this.field_y = param4;
                       if (param4 != null) {
                         L12: {
-                          stackOut_52_0 = this.field_r;
-                          stackOut_52_1 = (wb) (param4);
-                          stackOut_52_2 = 14526;
-                          stackIn_54_0 = stackOut_52_0;
-                          stackIn_54_1 = stackOut_52_1;
-                          stackIn_54_2 = stackOut_52_2;
-                          stackIn_53_0 = stackOut_52_0;
-                          stackIn_53_1 = stackOut_52_1;
-                          stackIn_53_2 = stackOut_52_2;
+                          stackIn_54_0 = this.field_r;
+
+                          stackIn_54_1 = (wb) (param4);
+
+                          stackIn_54_2 = 14526;
+
                           if (param0) {
-                            stackOut_54_0 = (nb) ((Object) stackIn_54_0);
-                            stackOut_54_1 = (wb) ((Object) stackIn_54_1);
-                            stackOut_54_2 = stackIn_54_2;
-                            stackOut_54_3 = 0;
-                            stackIn_55_0 = stackOut_54_0;
-                            stackIn_55_1 = stackOut_54_1;
-                            stackIn_55_2 = stackOut_54_2;
-                            stackIn_55_3 = stackOut_54_3;
+                            stackIn_55_0 = (nb) ((Object) stackIn_54_0);
+                            stackIn_55_1 = (wb) ((Object) stackIn_54_1);
+                            stackIn_55_2 = stackIn_54_2;
+                            stackIn_55_3 = 0;
                             break L12;
                           } else {
-                            stackOut_53_0 = (nb) ((Object) stackIn_53_0);
-                            stackOut_53_1 = (wb) ((Object) stackIn_53_1);
-                            stackOut_53_2 = stackIn_53_2;
-                            stackOut_53_3 = 1;
-                            stackIn_55_0 = stackOut_53_0;
-                            stackIn_55_1 = stackOut_53_1;
-                            stackIn_55_2 = stackOut_53_2;
-                            stackIn_55_3 = stackOut_53_3;
+                            stackIn_55_0 = (nb) ((Object) stackIn_54_0);
+                            stackIn_55_1 = (wb) ((Object) stackIn_54_1);
+                            stackIn_55_2 = stackIn_54_2;
+                            stackIn_55_3 = 1;
                             break L12;
                           }
                         }
@@ -774,34 +680,23 @@ final class qe extends wh {
                       this.field_x = param4;
                       if (param4 != null) {
                         L15: {
-                          stackOut_43_0 = this.field_w;
-                          stackOut_43_1 = (wb) (param4);
-                          stackOut_43_2 = 14526;
-                          stackIn_45_0 = stackOut_43_0;
-                          stackIn_45_1 = stackOut_43_1;
-                          stackIn_45_2 = stackOut_43_2;
-                          stackIn_44_0 = stackOut_43_0;
-                          stackIn_44_1 = stackOut_43_1;
-                          stackIn_44_2 = stackOut_43_2;
+                          stackIn_45_0 = this.field_w;
+
+                          stackIn_45_1 = (wb) (param4);
+
+                          stackIn_45_2 = 14526;
+
                           if (param0) {
-                            stackOut_45_0 = (nb) ((Object) stackIn_45_0);
-                            stackOut_45_1 = (wb) ((Object) stackIn_45_1);
-                            stackOut_45_2 = stackIn_45_2;
-                            stackOut_45_3 = 0;
-                            stackIn_46_0 = stackOut_45_0;
-                            stackIn_46_1 = stackOut_45_1;
-                            stackIn_46_2 = stackOut_45_2;
-                            stackIn_46_3 = stackOut_45_3;
+                            stackIn_46_0 = (nb) ((Object) stackIn_45_0);
+                            stackIn_46_1 = (wb) ((Object) stackIn_45_1);
+                            stackIn_46_2 = stackIn_45_2;
+                            stackIn_46_3 = 0;
                             break L15;
                           } else {
-                            stackOut_44_0 = (nb) ((Object) stackIn_44_0);
-                            stackOut_44_1 = (wb) ((Object) stackIn_44_1);
-                            stackOut_44_2 = stackIn_44_2;
-                            stackOut_44_3 = 1;
-                            stackIn_46_0 = stackOut_44_0;
-                            stackIn_46_1 = stackOut_44_1;
-                            stackIn_46_2 = stackOut_44_2;
-                            stackIn_46_3 = stackOut_44_3;
+                            stackIn_46_0 = (nb) ((Object) stackIn_45_0);
+                            stackIn_46_1 = (wb) ((Object) stackIn_45_1);
+                            stackIn_46_2 = stackIn_45_2;
+                            stackIn_46_3 = 1;
                             break L15;
                           }
                         }
@@ -825,27 +720,19 @@ final class qe extends wh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var7 = decompiledCaughtException;
-            stackOut_58_0 = (RuntimeException) (var7);
-            stackOut_58_1 = new StringBuilder().append("qe.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_60_0 = stackOut_58_0;
-            stackIn_60_1 = stackOut_58_1;
-            stackIn_59_0 = stackOut_58_0;
-            stackIn_59_1 = stackOut_58_1;
+            stackIn_60_0 = (RuntimeException) (var7);
+
+            stackIn_60_1 = new StringBuilder().append("qe.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_60_0 = (RuntimeException) ((Object) stackIn_60_0);
-              stackOut_60_1 = (StringBuilder) ((Object) stackIn_60_1);
-              stackOut_60_2 = "null";
-              stackIn_61_0 = stackOut_60_0;
-              stackIn_61_1 = stackOut_60_1;
-              stackIn_61_2 = stackOut_60_2;
+              stackIn_61_0 = (RuntimeException) ((Object) stackIn_60_0);
+              stackIn_61_1 = (StringBuilder) ((Object) stackIn_60_1);
+              stackIn_61_2 = "null";
               break L16;
             } else {
-              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
-              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
-              stackOut_59_2 = "{...}";
-              stackIn_61_0 = stackOut_59_0;
-              stackIn_61_1 = stackOut_59_1;
-              stackIn_61_2 = stackOut_59_2;
+              stackIn_61_0 = (RuntimeException) ((Object) stackIn_60_0);
+              stackIn_61_1 = (StringBuilder) ((Object) stackIn_60_1);
+              stackIn_61_2 = "{...}";
               break L16;
             }
           }

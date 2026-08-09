@@ -26,8 +26,8 @@ final class wj extends v implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int b(boolean param0) {
-        int var2 = 0;
-        java.awt.Component var3 = null;
+        int var2;
+        java.awt.Component var3;
         var2 = this.field_f;
         this.field_f = 0;
         if (!param0) {

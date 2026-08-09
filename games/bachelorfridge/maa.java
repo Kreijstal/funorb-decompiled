@@ -7,22 +7,20 @@ final class maa extends ana {
     static int field_v;
 
     private final void b(boolean param0) {
-        oha discarded$2 = null;
-        boolean discarded$3 = false;
-        aga var2 = null;
-        iv var3 = null;
-        int var5 = 0;
-        ad var6 = null;
-        ad var7 = null;
+        aga var2;
+        iv var3;
+        int var5;
+        ad var6;
+        ad var7;
         var5 = BachelorFridge.field_y;
         var2 = this.field_w.field_l.a(62, this.field_q.field_h);
         if (var2.i(-114)) {
           return;
         } else {
           var3 = (iv) ((Object) this.field_w.field_o.b((byte) 90));
-          discarded$2 = al.a(-84, this.field_w.field_k);
+          al.a(-84, this.field_w.field_k);
           if (param0) {
-            discarded$3 = this.c((byte) -57);
+            this.c((byte) -57);
             L0: while (true) {
               if (var3 != null) {
                 var3.a(var2, this.field_q.field_h, 12);

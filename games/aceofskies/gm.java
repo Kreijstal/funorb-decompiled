@@ -37,10 +37,8 @@ abstract class gm extends ab {
     }
 
     boolean i(int param0) {
-        int var2 = 0;
+        int var2;
         int stackIn_4_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_3_0 = 0;
         L0: {
           L1: {
             this.field_t = this.d((byte) 76);
@@ -51,14 +49,12 @@ abstract class gm extends ab {
               if (this.field_z) {
                 break L1;
               } else {
-                stackOut_2_0 = 1;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = 1;
                 break L0;
               }
             }
           }
-          stackOut_3_0 = 0;
-          stackIn_4_0 = stackOut_3_0;
+          stackIn_4_0 = 0;
           break L0;
         }
         return stackIn_4_0 != 0;
@@ -134,11 +130,9 @@ abstract class gm extends ab {
     }
 
     boolean h(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_12_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_11_0 = 0;
         L0: {
           var2 = this.d((byte) 76);
           var3 = -this.field_t + var2;
@@ -169,15 +163,13 @@ abstract class gm extends ab {
                   if (this.field_z) {
                     break L3;
                   } else {
-                    stackOut_10_0 = 1;
-                    stackIn_12_0 = stackOut_10_0;
+                    stackIn_12_0 = 1;
                     break L2;
                   }
                 }
               }
             }
-            stackOut_11_0 = 0;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = 0;
             break L2;
           }
           return stackIn_12_0 != 0;

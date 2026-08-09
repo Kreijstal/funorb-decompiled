@@ -26,32 +26,21 @@ final class fa extends go implements ki {
     }
 
     final String c(boolean param0) {
-        int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
         if (this.field_k) {
           if (this.field_v != null) {
             L0: {
-              stackOut_4_0 = bb.field_b;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_6_0 = bb.field_b;
+
               if (param0) {
-                stackOut_6_0 = stackIn_6_0;
-                stackOut_6_1 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = stackIn_6_0;
+                stackIn_7_1 = 0;
                 break L0;
               } else {
-                stackOut_5_0 = stackIn_5_0;
-                stackOut_5_1 = 1;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+                stackIn_7_0 = stackIn_6_0;
+                stackIn_7_1 = 1;
                 break L0;
               }
             }
@@ -88,17 +77,16 @@ final class fa extends go implements ki {
     }
 
     public final gk a(byte param0) {
-        gk discarded$0 = null;
         if (param0 <= 58) {
-            discarded$0 = this.a((byte) -52);
+            this.a((byte) -52);
             return this.field_V;
         }
         return this.field_V;
     }
 
     final static void a(int param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           fl.field_f = param0;
           if (pg.field_J == ed.field_f) {

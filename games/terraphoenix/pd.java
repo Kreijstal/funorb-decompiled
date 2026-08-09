@@ -47,16 +47,6 @@ final class pd {
         int stackIn_50_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_67_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_21_0 = 0;
         if (param0 > 11) {
           if (48 > param1) {
             if (param1 < 65) {
@@ -71,8 +61,7 @@ final class pd {
               }
             } else {
               if (param1 <= 90) {
-                stackOut_65_0 = 1;
-                stackIn_67_0 = stackOut_65_0;
+                stackIn_67_0 = 1;
                 return stackIn_67_0 != 0;
               } else {
                 L0: {
@@ -83,14 +72,12 @@ final class pd {
                       if (param1 > 122) {
                         break L1;
                       } else {
-                        stackOut_62_0 = 1;
-                        stackIn_64_0 = stackOut_62_0;
+                        stackIn_64_0 = 1;
                         break L0;
                       }
                     }
                   }
-                  stackOut_63_0 = 0;
-                  stackIn_64_0 = stackOut_63_0;
+                  stackIn_64_0 = 0;
                   break L0;
                 }
                 return stackIn_64_0 != 0;
@@ -118,26 +105,22 @@ final class pd {
                         if (param1 > 122) {
                           break L3;
                         } else {
-                          stackOut_48_0 = 1;
-                          stackIn_50_0 = stackOut_48_0;
+                          stackIn_50_0 = 1;
                           break L2;
                         }
                       }
                     }
-                    stackOut_49_0 = 0;
-                    stackIn_50_0 = stackOut_49_0;
+                    stackIn_50_0 = 0;
                     break L2;
                   }
                   return stackIn_50_0 != 0;
                 } else {
-                  stackOut_43_0 = 1;
-                  stackIn_45_0 = stackOut_43_0;
+                  stackIn_45_0 = 1;
                   return stackIn_45_0 != 0;
                 }
               }
             } else {
-              stackOut_38_0 = 1;
-              stackIn_40_0 = stackOut_38_0;
+              stackIn_40_0 = 1;
               return stackIn_40_0 != 0;
             }
           }
@@ -165,20 +148,17 @@ final class pd {
                         if (param1 > 122) {
                           break L5;
                         } else {
-                          stackOut_26_0 = 1;
-                          stackIn_28_0 = stackOut_26_0;
+                          stackIn_28_0 = 1;
                           break L4;
                         }
                       }
                     }
-                    stackOut_27_0 = 0;
-                    stackIn_28_0 = stackOut_27_0;
+                    stackIn_28_0 = 0;
                     break L4;
                   }
                   return stackIn_28_0 != 0;
                 } else {
-                  stackOut_21_0 = 1;
-                  stackIn_23_0 = stackOut_21_0;
+                  stackIn_23_0 = 1;
                   return stackIn_23_0 != 0;
                 }
               }
@@ -216,16 +196,15 @@ final class pd {
     }
 
     final static int a(boolean param0) {
-        RuntimeException var1 = null;
+        int stackIn_31_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_31_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_30_0 = 0;
         var7 = Terraphoenix.field_V;
         try {
           L0: {
@@ -315,8 +294,7 @@ final class pd {
                     }
                   }
                 }
-                stackOut_30_0 = var3;
-                stackIn_31_0 = stackOut_30_0;
+                stackIn_31_0 = var3;
                 break L0;
               } else {
                 L7: {

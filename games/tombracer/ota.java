@@ -7,7 +7,6 @@ abstract class ota {
     static int field_c;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        RuntimeException var8 = null;
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
@@ -45,16 +44,14 @@ abstract class ota {
         int var42 = 0;
         int var43 = 0;
         int var44 = 0;
-        int var45 = 0;
-        int var46 = 0;
         int var47 = 0;
         int[] var48 = null;
         int[] var49 = null;
-        int stackIn_9_0 = 0;
-        int decompiledRegionSelector0 = 0;
+        int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
+        RuntimeException var8 = null;
+        int var45 = 0;
+        int var46 = 0;
         var47 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -105,151 +102,111 @@ abstract class ota {
             nra.a((byte) -55, param3, param2 + param4, var49, param4 + var11);
             L2: while (true) {
               if (-1 <= (var9 ^ -1)) {
-                decompiledRegionSelector0 = 0;
                 break L0;
               } else {
-                if (var47 != 0) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L3: {
-                    if (var12 < var9) {
-                      stackOut_8_0 = 0;
-                      stackIn_9_0 = stackOut_8_0;
-                      break L3;
-                    } else {
-                      stackOut_7_0 = 1;
-                      stackIn_9_0 = stackOut_7_0;
-                      break L3;
+                L3: {
+                  if (var12 < var9) {
+                    stackIn_8_0 = 0;
+                    break L3;
+                  } else {
+                    stackIn_8_0 = 1;
+                    break L3;
+                  }
+                }
+                L4: {
+                  var40 = stackIn_8_0;
+                  if (0 <= var23) {
+                    break L4;
+                  } else {
+                    L5: while (true) {
+                      if (0 <= var23) {
+                        break L4;
+                      } else {
+                        var24 = var24 + var35;
+                        var23 = var23 + var31;
+                        var35 = var35 + var28;
+                        var8_int++;
+                        var31 = var31 + var28;
+                        continue L5;
+                      }
                     }
                   }
-                  L4: {
-                    L5: {
-                      L6: {
-                        var40 = stackIn_9_0;
-                        if (0 <= var23) {
-                          break L6;
-                        } else {
-                          L7: while (true) {
-                            if (0 <= var23) {
-                              break L6;
-                            } else {
-                              var24 = var24 + var35;
-                              var23 = var23 + var31;
-                              var35 = var35 + var28;
-                              var8_int++;
-                              var31 = var31 + var28;
-                              if (var47 != 0) {
-                                break L5;
-                              } else {
-                                if (var47 == 0) {
-                                  continue L7;
-                                } else {
-                                  break L6;
-                                }
-                              }
-                            }
+                }
+                L6: {
+                  if (var40 != 0) {
+                    L7: {
+                      if (-1 < (var25 ^ -1)) {
+                        L8: while (true) {
+                          if (var25 >= 0) {
+                            break L7;
+                          } else {
+                            var26 = var26 + var37;
+                            var25 = var25 + var33;
+                            var33 = var33 + var30;
+                            var37 = var37 + var30;
+                            var10++;
+                            continue L8;
                           }
                         }
-                      }
-                      if (var40 != 0) {
-                        break L5;
                       } else {
-                        break L4;
+                        break L7;
                       }
                     }
-                    L8: {
-                      L9: {
-                        L10: {
-                          if (-1 < (var25 ^ -1)) {
-                            L11: while (true) {
-                              if (var25 >= 0) {
-                                break L10;
-                              } else {
-                                var26 = var26 + var37;
-                                var25 = var25 + var33;
-                                var33 = var33 + var30;
-                                var37 = var37 + var30;
-                                var10++;
-                                if (var47 != 0) {
-                                  break L9;
-                                } else {
-                                  if (var47 == 0) {
-                                    continue L11;
-                                  } else {
-                                    break L10;
-                                  }
-                                }
-                              }
-                            }
-                          } else {
-                            break L10;
-                          }
-                        }
-                        if (-1 < (var26 ^ -1)) {
-                          var26 = var26 + var37;
-                          var25 = var25 + var33;
-                          var10++;
-                          var37 = var37 + var30;
-                          break L9;
-                        } else {
-                          break L8;
-                        }
+                    L9: {
+                      if (-1 < (var26 ^ -1)) {
+                        var26 = var26 + var37;
+                        var25 = var25 + var33;
+                        var10++;
+                        var37 = var37 + var30;
+                        var33 = var33 + var30;
+                        break L9;
+                      } else {
+                        break L9;
                       }
-                      var33 = var33 + var30;
-                      break L8;
                     }
                     var25 = var25 + -var38;
                     var26 = var26 + -var34;
                     var38 = var38 - var29;
                     var34 = var34 - var29;
-                    break L4;
+                    break L6;
+                  } else {
+                    break L6;
                   }
-                  L12: {
-                    if ((var24 ^ -1) > -1) {
-                      var23 = var23 + var31;
-                      var24 = var24 + var35;
-                      var31 = var31 + var28;
-                      var35 = var35 + var28;
-                      var8_int++;
-                      break L12;
-                    } else {
-                      break L12;
-                    }
+                }
+                L10: {
+                  if ((var24 ^ -1) > -1) {
+                    var23 = var23 + var31;
+                    var24 = var24 + var35;
+                    var31 = var31 + var28;
+                    var35 = var35 + var28;
+                    var8_int++;
+                    break L10;
+                  } else {
+                    break L10;
                   }
-                  L13: {
-                    L14: {
-                      var24 = var24 + -var32;
-                      var23 = var23 + -var36;
-                      var9--;
-                      var32 = var32 - var27;
-                      var36 = var36 - var27;
-                      var41 = -var9 + param7;
-                      var42 = var9 + param7;
-                      var43 = param4 + var8_int;
-                      var44 = -var8_int + param4;
-                      if (var40 != 0) {
-                        break L14;
-                      } else {
-                        nra.a((byte) -55, param3, var43, vaa.field_a[var41], var44);
-                        nra.a((byte) -55, param3, var43, vaa.field_a[var42], var44);
-                        if (var47 == 0) {
-                          break L13;
-                        } else {
-                          break L14;
-                        }
-                      }
-                    }
-                    var45 = param4 + var10;
-                    var46 = param4 + -var10;
-                    nra.a((byte) -55, param3, var46, vaa.field_a[var41], var44);
-                    nra.a((byte) -55, param6, var45, vaa.field_a[var41], var46);
-                    nra.a((byte) -55, param3, var43, vaa.field_a[var41], var45);
-                    nra.a((byte) -55, param3, var46, vaa.field_a[var42], var44);
-                    nra.a((byte) -55, param6, var45, vaa.field_a[var42], var46);
-                    nra.a((byte) -55, param3, var43, vaa.field_a[var42], var45);
-                    break L13;
-                  }
+                }
+                var24 = var24 + -var32;
+                var23 = var23 + -var36;
+                var9--;
+                var32 = var32 - var27;
+                var36 = var36 - var27;
+                var41 = -var9 + param7;
+                var42 = var9 + param7;
+                var43 = param4 + var8_int;
+                var44 = -var8_int + param4;
+                if (var40 != 0) {
+                  var45 = param4 + var10;
+                  var46 = param4 + -var10;
+                  nra.a((byte) -55, param3, var46, vaa.field_a[var41], var44);
+                  nra.a((byte) -55, param6, var45, vaa.field_a[var41], var46);
+                  nra.a((byte) -55, param3, var43, vaa.field_a[var41], var45);
+                  nra.a((byte) -55, param3, var46, vaa.field_a[var42], var44);
+                  nra.a((byte) -55, param6, var45, vaa.field_a[var42], var46);
+                  nra.a((byte) -55, param3, var43, vaa.field_a[var42], var45);
+                  continue L2;
+                } else {
+                  nra.a((byte) -55, param3, var43, vaa.field_a[var41], var44);
+                  nra.a((byte) -55, param3, var43, vaa.field_a[var42], var44);
                   continue L2;
                 }
               }
@@ -259,11 +216,6 @@ abstract class ota {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           throw tba.a((Throwable) ((Object) var8), "ota.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -276,8 +228,6 @@ abstract class ota {
         RuntimeException var4_ref = null;
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -285,17 +235,6 @@ abstract class ota {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_10_0 = 0;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             L1: {
@@ -312,8 +251,7 @@ abstract class ota {
                 break L2;
               } else {
                 if (null != var4.field_Cb) {
-                  stackOut_5_0 = 1;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -329,14 +267,12 @@ abstract class ota {
                   if (null == vba.a((byte) -40, param0)) {
                     break L4;
                   } else {
-                    stackOut_9_0 = 1;
-                    stackIn_11_0 = stackOut_9_0;
+                    stackIn_11_0 = 1;
                     break L3;
                   }
                 }
               }
-              stackOut_10_0 = 0;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = 0;
               break L3;
             }
             decompiledRegionSelector0 = 1;
@@ -346,27 +282,19 @@ abstract class ota {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var4_ref);
-            stackOut_12_1 = new StringBuilder().append("ota.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var4_ref);
+
+            stackIn_14_1 = new StringBuilder().append("ota.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L5;
             }
           }
@@ -383,6 +311,8 @@ abstract class ota {
         field_b = null;
         if (param0 != 0) {
             ota.a(1);
+            field_a = null;
+            return;
         }
         field_a = null;
     }

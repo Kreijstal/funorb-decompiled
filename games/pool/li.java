@@ -45,16 +45,16 @@ final class li {
     }
 
     private final void a(boolean param0) {
-        int fieldTemp$3 = 0;
-        int dupTemp$4 = 0;
-        int dupTemp$5 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int fieldTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int dupTemp$2 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
-          fieldTemp$3 = this.field_i + 1;
+          fieldTemp$0 = this.field_i + 1;
           this.field_i = this.field_i + 1;
-          this.field_k = this.field_k + fieldTemp$3;
+          this.field_k = this.field_k + fieldTemp$0;
           var2 = 0;
           if (param0) {
             break L0;
@@ -88,12 +88,12 @@ final class li {
               }
             }
             this.field_m = this.field_m + this.field_a[255 & var2 + 128];
-            dupTemp$4 = this.field_k + (this.field_a[rb.b(var3 >> -108857086, 255)] + this.field_m);
-            var4 = dupTemp$4;
-            this.field_a[var2] = dupTemp$4;
-            dupTemp$5 = this.field_a[rb.b(var4, 261279) >> -1635328984 >> -1893269758] - -var3;
-            this.field_k = dupTemp$5;
-            this.field_j[var2] = dupTemp$5;
+            dupTemp$1 = this.field_k + (this.field_a[rb.b(var3 >> -108857086, 255)] + this.field_m);
+            var4 = dupTemp$1;
+            this.field_a[var2] = dupTemp$1;
+            dupTemp$2 = this.field_a[rb.b(var4, 261279) >> -1635328984 >> -1893269758] - -var3;
+            this.field_k = dupTemp$2;
+            this.field_j[var2] = dupTemp$2;
             var2++;
             continue L1;
           }
@@ -102,133 +102,18 @@ final class li {
 
     private final void b(int param0) {
         int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        L0: {
-          if (param0 == 2) {
-            break L0;
-          } else {
+        if (param0 != 2) {
             this.field_j = (int[]) null;
-            break L0;
-          }
         }
-        var4 = -1640531527;
-        var10 = -1640531527;
-        var5 = -1640531527;
-        var6 = -1640531527;
-        var3 = -1640531527;
-        var9 = -1640531527;
-        var7 = -1640531527;
-        var8 = -1640531527;
-        var2 = 0;
-        L1: while (true) {
-          if (-5 >= (var2 ^ -1)) {
-            var2 = 0;
-            L2: while (true) {
-              if (256 <= var2) {
-                var2 = 0;
-                L3: while (true) {
-                  if (-257 >= (var2 ^ -1)) {
-                    this.a(true);
-                    this.field_c = 256;
-                    return;
-                  } else {
-                    var10 = var10 + this.field_a[7 + var2];
-                    var9 = var9 + this.field_a[6 + var2];
-                    var3 = var3 + this.field_a[var2];
-                    var8 = var8 + this.field_a[5 + var2];
-                    var6 = var6 + this.field_a[3 + var2];
-                    var4 = var4 + this.field_a[1 + var2];
-                    var5 = var5 + this.field_a[var2 - -2];
-                    var7 = var7 + this.field_a[4 + var2];
-                    var3 = var3 ^ var4 << -1651270229;
-                    var6 = var6 + var3;
-                    var4 = var4 + var5;
-                    var4 = var4 ^ var5 >>> 544412994;
-                    var7 = var7 + var4;
-                    var5 = var5 + var6;
-                    var5 = var5 ^ var6 << -1057855992;
-                    var6 = var6 + var7;
-                    var8 = var8 + var5;
-                    var6 = var6 ^ var7 >>> -964862896;
-                    var7 = var7 + var8;
-                    var9 = var9 + var6;
-                    var7 = var7 ^ var8 << -1646857430;
-                    var8 = var8 + var9;
-                    var10 = var10 + var7;
-                    var8 = var8 ^ var9 >>> -852077756;
-                    var3 = var3 + var8;
-                    var9 = var9 + var10;
-                    var9 = var9 ^ var10 << 652486728;
-                    var10 = var10 + var3;
-                    var4 = var4 + var9;
-                    var10 = var10 ^ var3 >>> -680524951;
-                    var5 = var5 + var10;
-                    var3 = var3 + var4;
-                    this.field_a[var2] = var3;
-                    this.field_a[var2 - -1] = var4;
-                    this.field_a[var2 - -2] = var5;
-                    this.field_a[var2 - -3] = var6;
-                    this.field_a[var2 - -4] = var7;
-                    this.field_a[5 + var2] = var8;
-                    this.field_a[6 + var2] = var9;
-                    this.field_a[var2 - -7] = var10;
-                    var2 += 8;
-                    continue L3;
-                  }
-                }
-              } else {
-                var5 = var5 + this.field_j[var2 - -2];
-                var4 = var4 + this.field_j[1 + var2];
-                var6 = var6 + this.field_j[3 + var2];
-                var7 = var7 + this.field_j[4 + var2];
-                var9 = var9 + this.field_j[var2 - -6];
-                var3 = var3 + this.field_j[var2];
-                var8 = var8 + this.field_j[5 + var2];
-                var10 = var10 + this.field_j[var2 - -7];
-                var3 = var3 ^ var4 << -959907445;
-                var4 = var4 + var5;
-                var6 = var6 + var3;
-                var4 = var4 ^ var5 >>> -1554675550;
-                var5 = var5 + var6;
-                var7 = var7 + var4;
-                var5 = var5 ^ var6 << -223549816;
-                var6 = var6 + var7;
-                var8 = var8 + var5;
-                var6 = var6 ^ var7 >>> -1140678608;
-                var9 = var9 + var6;
-                var7 = var7 + var8;
-                var7 = var7 ^ var8 << 668514250;
-                var10 = var10 + var7;
-                var8 = var8 + var9;
-                var8 = var8 ^ var9 >>> 28744068;
-                var9 = var9 + var10;
-                var3 = var3 + var8;
-                var9 = var9 ^ var10 << -1689625752;
-                var4 = var4 + var9;
-                var10 = var10 + var3;
-                var10 = var10 ^ var3 >>> 1087558313;
-                var3 = var3 + var4;
-                var5 = var5 + var10;
-                this.field_a[var2] = var3;
-                this.field_a[1 + var2] = var4;
-                this.field_a[var2 + 2] = var5;
-                this.field_a[3 + var2] = var6;
-                this.field_a[var2 - -4] = var7;
-                this.field_a[5 + var2] = var8;
-                this.field_a[var2 - -6] = var9;
-                this.field_a[7 + var2] = var10;
-                var2 += 8;
-                continue L2;
-              }
-            }
-          } else {
+        int var4 = -1640531527;
+        int var10 = -1640531527;
+        int var5 = -1640531527;
+        int var6 = -1640531527;
+        int var3 = -1640531527;
+        int var9 = -1640531527;
+        int var7 = -1640531527;
+        int var8 = -1640531527;
+        for (var2 = 0; -5 < (var2 ^ -1); var2++) {
             var3 = var3 ^ var4 << 1779179979;
             var6 = var6 + var3;
             var4 = var4 + var5;
@@ -253,54 +138,126 @@ final class li {
             var10 = var10 ^ var3 >>> -1697672855;
             var5 = var5 + var10;
             var3 = var3 + var4;
-            var2++;
-            continue L1;
-          }
         }
+        for (var2 = 0; 256 > var2; var2 += 8) {
+            var5 = var5 + this.field_j[var2 - -2];
+            var4 = var4 + this.field_j[1 + var2];
+            var6 = var6 + this.field_j[3 + var2];
+            var7 = var7 + this.field_j[4 + var2];
+            var9 = var9 + this.field_j[var2 - -6];
+            var3 = var3 + this.field_j[var2];
+            var8 = var8 + this.field_j[5 + var2];
+            var10 = var10 + this.field_j[var2 - -7];
+            var3 = var3 ^ var4 << -959907445;
+            var4 = var4 + var5;
+            var6 = var6 + var3;
+            var4 = var4 ^ var5 >>> -1554675550;
+            var5 = var5 + var6;
+            var7 = var7 + var4;
+            var5 = var5 ^ var6 << -223549816;
+            var6 = var6 + var7;
+            var8 = var8 + var5;
+            var6 = var6 ^ var7 >>> -1140678608;
+            var9 = var9 + var6;
+            var7 = var7 + var8;
+            var7 = var7 ^ var8 << 668514250;
+            var10 = var10 + var7;
+            var8 = var8 + var9;
+            var8 = var8 ^ var9 >>> 28744068;
+            var9 = var9 + var10;
+            var3 = var3 + var8;
+            var9 = var9 ^ var10 << -1689625752;
+            var4 = var4 + var9;
+            var10 = var10 + var3;
+            var10 = var10 ^ var3 >>> 1087558313;
+            var3 = var3 + var4;
+            var5 = var5 + var10;
+            this.field_a[var2] = var3;
+            this.field_a[1 + var2] = var4;
+            this.field_a[var2 + 2] = var5;
+            this.field_a[3 + var2] = var6;
+            this.field_a[var2 - -4] = var7;
+            this.field_a[5 + var2] = var8;
+            this.field_a[var2 - -6] = var9;
+            this.field_a[7 + var2] = var10;
+        }
+        for (var2 = 0; -257 < (var2 ^ -1); var2 += 8) {
+            var10 = var10 + this.field_a[7 + var2];
+            var9 = var9 + this.field_a[6 + var2];
+            var3 = var3 + this.field_a[var2];
+            var8 = var8 + this.field_a[5 + var2];
+            var6 = var6 + this.field_a[3 + var2];
+            var4 = var4 + this.field_a[1 + var2];
+            var5 = var5 + this.field_a[var2 - -2];
+            var7 = var7 + this.field_a[4 + var2];
+            var3 = var3 ^ var4 << -1651270229;
+            var6 = var6 + var3;
+            var4 = var4 + var5;
+            var4 = var4 ^ var5 >>> 544412994;
+            var7 = var7 + var4;
+            var5 = var5 + var6;
+            var5 = var5 ^ var6 << -1057855992;
+            var6 = var6 + var7;
+            var8 = var8 + var5;
+            var6 = var6 ^ var7 >>> -964862896;
+            var7 = var7 + var8;
+            var9 = var9 + var6;
+            var7 = var7 ^ var8 << -1646857430;
+            var8 = var8 + var9;
+            var10 = var10 + var7;
+            var8 = var8 ^ var9 >>> -852077756;
+            var3 = var3 + var8;
+            var9 = var9 + var10;
+            var9 = var9 ^ var10 << 652486728;
+            var10 = var10 + var3;
+            var4 = var4 + var9;
+            var10 = var10 ^ var3 >>> -680524951;
+            var5 = var5 + var10;
+            var3 = var3 + var4;
+            this.field_a[var2] = var3;
+            this.field_a[var2 - -1] = var4;
+            this.field_a[var2 - -2] = var5;
+            this.field_a[var2 - -3] = var6;
+            this.field_a[var2 - -4] = var7;
+            this.field_a[5 + var2] = var8;
+            this.field_a[6 + var2] = var9;
+            this.field_a[var2 - -7] = var10;
+        }
+        this.a(true);
+        this.field_c = 256;
     }
 
     final static void a(eg param0, int param1) {
-        RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
-        int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int[] var11 = null;
         int var12 = 0;
-        int var13 = 0;
-        int[] var15 = null;
-        int[] var16 = null;
-        int[] var18 = null;
-        int[] var19 = null;
-        int[] var20 = null;
-        int[] var21 = null;
-        int[] var23 = null;
-        int[] var24 = null;
-        int[] var26 = null;
-        int[] var27 = null;
-        int[] var28 = null;
-        int[] var29 = null;
-        float[] var32 = null;
-        float[] var33 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var2 = null;
+        int[] var6 = null;
+        int[] var7 = null;
+        int[] var8 = null;
+        int[] var9 = null;
+        int[] var10 = null;
+        int[] var11 = null;
+        int[] var14 = null;
+        int[] var15 = null;
+        int[] var17 = null;
+        int[] var18 = null;
+        int[] var19 = null;
+        int[] var20 = null;
+        int[] var22 = null;
+        int[] var23 = null;
+        int[] var25 = null;
+        int[] var26 = null;
+        int[] var27 = null;
+        int[] var28 = null;
+        float[] var31 = null;
+        float[] var32 = null;
         var12 = Pool.field_O;
         try {
           L0: {
@@ -315,43 +272,42 @@ final class li {
                 param0.field_g = jh.a(var2_int * 3, (byte) 108, param0.field_g);
                 param0.field_Y = jh.a(3 * var2_int, (byte) 108, param0.field_Y);
                 param0.field_q = jh.a(var2_int * 3, (byte) 108, param0.field_q);
-                var13 = 0;
-                var2_int = var13;
+                var2_int = 0;
                 L2: while (true) {
-                  if (param0.field_K <= var13) {
+                  if (param0.field_K <= var2_int) {
                     break L0;
                   } else {
-                    if (param0.field_L[var13] != -1) {
-                      var3 = param0.field_k[var13];
+                    if (param0.field_L[var2_int] != -1) {
+                      var3 = param0.field_k[var2_int];
+                      var31 = new float[3];
                       var32 = new float[3];
-                      var33 = new float[3];
-                      var27 = new int[3];
-                      var19 = var27;
-                      var6 = var19;
-                      var29 = new int[3];
-                      var21 = var29;
-                      var7 = var21;
-                      var24 = new int[3];
-                      var16 = var24;
-                      var8 = var16;
                       var26 = new int[3];
                       var18 = var26;
-                      var9 = var18;
+                      var6 = var18;
                       var28 = new int[3];
                       var20 = var28;
-                      var10 = var20;
+                      var7 = var20;
                       var23 = new int[3];
                       var15 = var23;
-                      var11 = var15;
-                      var6[0] = param0.field_g[param0.field_N[var13]];
-                      var6[1] = param0.field_g[param0.field_v[var13]];
-                      var6[2] = param0.field_g[param0.field_X[var13]];
-                      var7[0] = param0.field_Y[param0.field_N[var13]];
-                      var7[1] = param0.field_Y[param0.field_v[var13]];
-                      var7[2] = param0.field_Y[param0.field_X[var13]];
-                      var8[0] = param0.field_q[param0.field_N[var13]];
-                      var8[1] = param0.field_q[param0.field_v[var13]];
-                      var8[2] = param0.field_q[param0.field_X[var13]];
+                      var8 = var15;
+                      var25 = new int[3];
+                      var17 = var25;
+                      var9 = var17;
+                      var27 = new int[3];
+                      var19 = var27;
+                      var10 = var19;
+                      var22 = new int[3];
+                      var14 = var22;
+                      var11 = var14;
+                      var6[0] = param0.field_g[param0.field_N[var2_int]];
+                      var6[1] = param0.field_g[param0.field_v[var2_int]];
+                      var6[2] = param0.field_g[param0.field_X[var2_int]];
+                      var7[0] = param0.field_Y[param0.field_N[var2_int]];
+                      var7[1] = param0.field_Y[param0.field_v[var2_int]];
+                      var7[2] = param0.field_Y[param0.field_X[var2_int]];
+                      var8[0] = param0.field_q[param0.field_N[var2_int]];
+                      var8[1] = param0.field_q[param0.field_v[var2_int]];
+                      var8[2] = param0.field_q[param0.field_X[var2_int]];
                       var9[0] = param0.field_g[param0.field_p[var3]];
                       var9[1] = param0.field_g[param0.field_H[var3]];
                       var9[2] = param0.field_g[param0.field_C[var3]];
@@ -361,13 +317,13 @@ final class li {
                       var11[0] = param0.field_q[param0.field_p[var3]];
                       var11[1] = param0.field_q[param0.field_H[var3]];
                       var11[2] = param0.field_q[param0.field_C[var3]];
-                      ge.a(var32, var23, var24, var33, var26, var27, var28, (byte) 111, var29);
-                      ob.a(var23, var28, var24, var29, var32, var27, var33, 0, var26);
-                      param0.field_k[var13] = param0.a((short)param0.a(jo.c(0, -54264319, var26[0]), jo.c(0, -54264319, var28[0]), jo.c(0, -54264319, var23[0])), (short)param0.a(jo.c(0, cq.a(param1, -54264319), var26[1]), jo.c(0, -54264319, var28[1]), jo.c(0, -54264319, var23[1])), (short)param0.a(jo.c(0, -54264319, var26[2]), jo.c(0, -54264319, var28[2]), jo.c(0, -54264319, var23[2])));
-                      var13++;
+                      ge.a(var31, var22, var23, var32, var25, var26, var27, (byte) 111, var28);
+                      ob.a(var22, var27, var23, var28, var31, var26, var32, 0, var25);
+                      param0.field_k[var2_int] = param0.a((short)param0.a(jo.c(0, -54264319, var25[0]), jo.c(0, -54264319, var27[0]), jo.c(0, -54264319, var22[0])), (short)param0.a(jo.c(0, cq.a(param1, -54264319), var25[1]), jo.c(0, -54264319, var27[1]), jo.c(0, -54264319, var22[1])), (short)param0.a(jo.c(0, -54264319, var25[2]), jo.c(0, -54264319, var27[2]), jo.c(0, -54264319, var22[2])));
+                      var2_int++;
                       continue L2;
                     } else {
-                      var13++;
+                      var2_int++;
                       continue L2;
                     }
                   }
@@ -388,27 +344,19 @@ final class li {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var2);
-            stackOut_12_1 = new StringBuilder().append("li.C(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var2);
+
+            stackIn_14_1 = new StringBuilder().append("li.C(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }
@@ -444,26 +392,16 @@ final class li {
     }
 
     final static void a(int param0, al param1) {
-        RuntimeException var2 = null;
-        aa var3 = null;
-        qe var4 = null;
-        oq var5 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        RuntimeException var2 = null;
+        aa var3 = null;
+        qe var4 = null;
+        oq var5 = null;
         try {
           L0: {
             L1: {
@@ -549,27 +487,19 @@ final class li {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2);
-            stackOut_22_1 = new StringBuilder().append("li.D(").append(param0).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2);
+
+            stackIn_24_1 = new StringBuilder().append("li.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L6;
             }
           }

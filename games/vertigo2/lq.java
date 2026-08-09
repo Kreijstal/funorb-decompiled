@@ -10,10 +10,8 @@ final class lq {
     static bh field_b;
 
     final int a(int param0) {
-        er var3 = null;
+        er var3;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == 6586) {
             break L0;
@@ -29,16 +27,14 @@ final class lq {
               break L2;
             } else {
               if (this.field_c.length != 0) {
-                stackOut_6_0 = this.field_c[-1 + this.field_c.length];
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = this.field_c[-1 + this.field_c.length];
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0;
@@ -46,37 +42,19 @@ final class lq {
 
     final int a(int param0, boolean param1) {
         int var3 = 0;
-        int var4 = 0;
-        var4 = Vertigo2.field_L ? 1 : 0;
-        if (null == this.field_c) {
-          return 0;
-        } else {
-          if (0 != this.field_c.length) {
-            L0: {
-              if (!param1) {
-                break L0;
-              } else {
-                this.field_f = 59;
-                break L0;
-              }
-            }
-            var3 = 1;
-            L1: while (true) {
-              if (var3 >= this.field_c.length) {
-                return this.field_c.length + -1;
-              } else {
-                if (this.field_c[var3] + this.field_c[var3 + -1] >> 501033697 <= param0) {
-                  var3++;
-                  continue L1;
-                } else {
-                  return -1 + var3;
-                }
-              }
-            }
-          } else {
+        int var4 = Vertigo2.field_L ? 1 : 0;
+        if (null == this.field_c || 0 == this.field_c.length) {
             return 0;
-          }
         }
+        if (param1) {
+            this.field_f = 59;
+        }
+        for (var3 = 1; var3 < this.field_c.length; var3++) {
+            if (this.field_c[var3] + this.field_c[var3 + -1] >> 501033697 > param0) {
+                return -1 + var3;
+            }
+        }
+        return this.field_c.length + -1;
     }
 
     public static void a(boolean param0) {

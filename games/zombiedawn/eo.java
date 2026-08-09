@@ -32,114 +32,77 @@ final class eo {
     }
 
     final static ah a(int param0, int param1, int param2, int param3) {
-        if (param0 >= 49) {
-          if (-10 < (param2 ^ -1)) {
-            return (ah) ((Object) new wo(param1, param3, param2));
-          } else {
-            if ((param2 ^ -1) <= -12) {
-              L0: {
-                if (-18 < (param2 ^ -1)) {
-                  break L0;
-                } else {
-                  if (28 == param2) {
-                    break L0;
-                  } else {
-                    if (param2 != 23) {
-                      if (-19 != (param2 ^ -1)) {
-                        if (-20 != (param2 ^ -1)) {
-                          if (-21 != (param2 ^ -1)) {
-                            if (27 != param2) {
-                              return (ah) ((Object) new wo(param1, param3, param2));
-                            } else {
-                              return (ah) ((Object) new dk(param1, param3));
-                            }
-                          } else {
-                            return (ah) ((Object) new fc(param1, param3, param2));
-                          }
-                        } else {
-                          return (ah) ((Object) new we(param1, param3, param2));
-                        }
-                      } else {
-                        return (ah) ((Object) new wc(param1, param3, param2));
-                      }
-                    } else {
-                      return (ah) ((Object) new si(param1, param3, param2));
-                    }
-                  }
-                }
-              }
-              L1: {
+        if (param0 < 49) {
+            eo.a(false);
+            if (-10 < (param2 ^ -1)) {
+                return (ah) ((Object) new wo(param1, param3, param2));
+            }
+            if ((param2 ^ -1) > -12) {
+                return (ah) ((Object) new po(param1, param3, param2));
+            }
+            if (-18 < (param2 ^ -1)) {
                 if (ng.field_e) {
-                  break L1;
-                } else {
-                  if (-8 != (dj.field_e.field_q ^ -1)) {
-                    break L1;
-                  } else {
-                    return (ah) ((Object) new jo(param1, param3, param2));
-                  }
-                }
-              }
-              return (ah) ((Object) new qk(param1, param3, param2));
-            } else {
-              return (ah) ((Object) new po(param1, param3, param2));
-            }
-          }
-        } else {
-          eo.a(false);
-          if (-10 >= (param2 ^ -1)) {
-            if ((param2 ^ -1) <= -12) {
-              if (-18 >= (param2 ^ -1)) {
-                if (28 != param2) {
-                  if (param2 != 23) {
-                    if (-19 != (param2 ^ -1)) {
-                      if (-20 != (param2 ^ -1)) {
-                        if (-21 != (param2 ^ -1)) {
-                          if (27 != param2) {
-                            return (ah) ((Object) new wo(param1, param3, param2));
-                          } else {
-                            return (ah) ((Object) new dk(param1, param3));
-                          }
-                        } else {
-                          return (ah) ((Object) new fc(param1, param3, param2));
-                        }
-                      } else {
-                        return (ah) ((Object) new we(param1, param3, param2));
-                      }
-                    } else {
-                      return (ah) ((Object) new wc(param1, param3, param2));
-                    }
-                  } else {
-                    return (ah) ((Object) new si(param1, param3, param2));
-                  }
-                } else {
-                  if (!ng.field_e) {
-                    if (-8 == (dj.field_e.field_q ^ -1)) {
-                      return (ah) ((Object) new jo(param1, param3, param2));
-                    } else {
-                      return (ah) ((Object) new qk(param1, param3, param2));
-                    }
-                  } else {
                     return (ah) ((Object) new qk(param1, param3, param2));
-                  }
                 }
-              } else {
-                if (!ng.field_e) {
-                  if (-8 != (dj.field_e.field_q ^ -1)) {
-                    return (ah) ((Object) new qk(param1, param3, param2));
-                  } else {
+                if (-8 == (dj.field_e.field_q ^ -1)) {
                     return (ah) ((Object) new jo(param1, param3, param2));
-                  }
-                } else {
-                  return (ah) ((Object) new qk(param1, param3, param2));
                 }
-              }
-            } else {
-              return (ah) ((Object) new po(param1, param3, param2));
+                return (ah) ((Object) new qk(param1, param3, param2));
             }
-          } else {
+            if (28 == param2) {
+                if (ng.field_e) {
+                    return (ah) ((Object) new qk(param1, param3, param2));
+                }
+                if (-8 != (dj.field_e.field_q ^ -1)) {
+                    return (ah) ((Object) new qk(param1, param3, param2));
+                }
+                return (ah) ((Object) new jo(param1, param3, param2));
+            }
+            if (param2 == 23) {
+                return (ah) ((Object) new si(param1, param3, param2));
+            }
+            if (-19 == (param2 ^ -1)) {
+                return (ah) ((Object) new wc(param1, param3, param2));
+            }
+            if (-20 == (param2 ^ -1)) {
+                return (ah) ((Object) new we(param1, param3, param2));
+            }
+            if (-21 == (param2 ^ -1)) {
+                return (ah) ((Object) new fc(param1, param3, param2));
+            }
+            if (27 == param2) {
+                return (ah) ((Object) new dk(param1, param3));
+            }
             return (ah) ((Object) new wo(param1, param3, param2));
-          }
         }
+        if (-10 >= (param2 ^ -1)) {
+            if ((param2 ^ -1) > -12) {
+                return (ah) ((Object) new po(param1, param3, param2));
+            }
+            if (-18 >= (param2 ^ -1) && 28 != param2) {
+                if (param2 == 23) {
+                    return (ah) ((Object) new si(param1, param3, param2));
+                }
+                if (-19 == (param2 ^ -1)) {
+                    return (ah) ((Object) new wc(param1, param3, param2));
+                }
+                if (-20 == (param2 ^ -1)) {
+                    return (ah) ((Object) new we(param1, param3, param2));
+                }
+                if (-21 == (param2 ^ -1)) {
+                    return (ah) ((Object) new fc(param1, param3, param2));
+                }
+                if (27 == param2) {
+                    return (ah) ((Object) new dk(param1, param3));
+                }
+                return (ah) ((Object) new wo(param1, param3, param2));
+            }
+            if (!ng.field_e && -8 == (dj.field_e.field_q ^ -1)) {
+                return (ah) ((Object) new jo(param1, param3, param2));
+            }
+            return (ah) ((Object) new qk(param1, param3, param2));
+        }
+        return (ah) ((Object) new wo(param1, param3, param2));
     }
 
     final static boolean b(int param0) {

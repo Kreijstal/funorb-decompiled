@@ -54,20 +54,20 @@ abstract class pf extends nh {
     abstract void a(int param0, int param1, int param2, int param3, int param4);
 
     private final boolean a(float param0, float param1, float param2, float param3, float param4, float param5) {
-        int var7 = 0;
-        int var8 = 0;
-        float var9 = 0.0f;
-        float var10 = 0.0f;
-        float var11 = 0.0f;
-        float var12 = 0.0f;
-        float var13 = 0.0f;
-        float var14 = 0.0f;
-        float var15 = 0.0f;
-        float var16 = 0.0f;
-        float var17 = 0.0f;
-        float var18 = 0.0f;
-        float var19 = 0.0f;
-        float var20 = 0.0f;
+        int var7;
+        int var8;
+        float var9;
+        float var10;
+        float var11;
+        float var12;
+        float var13;
+        float var14;
+        float var15;
+        float var16;
+        float var17;
+        float var18;
+        float var19;
+        float var20;
         L0: {
           var7 = this.field_l + this.field_a + this.field_g;
           var8 = this.field_o + this.field_f + this.field_v;
@@ -426,8 +426,8 @@ abstract class pf extends nh {
     }
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
-        int var11 = 0;
-        int var12 = 0;
+        int var11;
+        int var12;
         if (!this.field_b.n()) {
           if (this.a(param0, param1, param2, param3, param4, param5)) {
             field_B = param7;

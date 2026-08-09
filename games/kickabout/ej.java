@@ -8,7 +8,7 @@ final class ej extends hd {
     static String field_yb;
 
     final void a(boolean param0, int param1) {
-        java.awt.Component var4 = null;
+        java.awt.Component var4;
         if (-2 == (this.field_sb ^ -1)) {
           if (pt.field_e == this.field_Bb) {
             pt.field_e = -1;
@@ -103,7 +103,7 @@ final class ej extends hd {
     }
 
     final void c(boolean param0) {
-        int var3 = 0;
+        int var3;
         var3 = Kickabout.field_G;
         if (pt.field_e == this.field_Bb) {
           on.a(-4 + this.field_F, this.field_T + -4, 40, 40, 2, 65793, 128);

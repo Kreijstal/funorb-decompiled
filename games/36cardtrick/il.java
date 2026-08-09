@@ -13,32 +13,21 @@ final class il implements Iterator {
     static char[] field_f;
 
     final static nk a(int param0, boolean param1) {
-        nk var2 = null;
-        nk stackIn_1_0 = null;
+        nk var2;
         nk stackIn_2_0 = null;
         nk stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        nk stackOut_0_0 = null;
-        nk stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        nk stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           var2 = new nk(true);
-          stackOut_0_0 = (nk) (var2);
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = (nk) (var2);
+
           if (!param1) {
-            stackOut_2_0 = (nk) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (nk) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (nk) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (nk) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -52,9 +41,8 @@ final class il implements Iterator {
     }
 
     private final void a(byte param0) {
-        nk discarded$2 = null;
         if (param0 != 64) {
-          discarded$2 = il.a(-8, false);
+          il.a(-8, false);
           this.field_b = 1;
           this.field_c = this.field_g.field_b[0].field_d;
           this.field_d = null;
@@ -68,9 +56,9 @@ final class il implements Iterator {
     }
 
     final static uh a(int param0, int param1, int param2, int param3, int param4) {
-        uh var5 = null;
-        int var6 = 0;
-        uh var7 = null;
+        uh var5;
+        int var6;
+        uh var7;
         var6 = Main.field_T;
         var5 = (uh) ((Object) tl.field_a.a((byte) 74));
         L0: while (true) {
@@ -91,11 +79,11 @@ final class il implements Iterator {
               return var5;
             }
           } else {
-            if (var5.field_g == param3) {
-              return var5;
-            } else {
+            if (var5.field_g != param3) {
               var5 = (uh) ((Object) tl.field_a.b((byte) -123));
               continue L0;
+            } else {
+              return var5;
             }
           }
         }
@@ -104,7 +92,7 @@ final class il implements Iterator {
     public final boolean hasNext() {
         qb[] fieldTemp$2 = null;
         int fieldTemp$3 = 0;
-        int var2 = 0;
+        int var2;
         var2 = Main.field_T;
         if (this.field_g.field_b[this.field_b - 1] == this.field_c) {
           L0: while (true) {
@@ -129,20 +117,20 @@ final class il implements Iterator {
     }
 
     public final Object next() {
-        qb[] fieldTemp$4 = null;
-        int fieldTemp$5 = 0;
-        int var2 = 0;
-        Object var3 = null;
-        qb var3_ref = null;
-        qb var4 = null;
+        qb[] fieldTemp$2 = null;
+        int fieldTemp$3 = 0;
+        int var2;
+        Object var3;
+        qb var3_ref;
+        qb var4;
         var2 = Main.field_T;
         if (this.field_g.field_b[-1 + this.field_b] == this.field_c) {
           L0: while (true) {
             if (this.field_g.field_a > this.field_b) {
-              fieldTemp$4 = this.field_g.field_b;
-              fieldTemp$5 = this.field_b;
+              fieldTemp$2 = this.field_g.field_b;
+              fieldTemp$3 = this.field_b;
               this.field_b = this.field_b + 1;
-              var3_ref = fieldTemp$4[fieldTemp$5].field_d;
+              var3_ref = fieldTemp$2[fieldTemp$3].field_d;
               if (this.field_g.field_b[this.field_b + -1] == var3_ref) {
                 continue L0;
               } else {
@@ -169,7 +157,7 @@ final class il implements Iterator {
         if (param0 == 38) {
             return;
         }
-        uh discarded$0 = il.a(103, 62, -72, -123, -10);
+        il.a(103, 62, -72, -123, -10);
     }
 
     public final void remove() {

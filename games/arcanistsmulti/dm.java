@@ -16,9 +16,8 @@ final class dm extends wn {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        boolean discarded$1 = false;
-        qb var7 = null;
-        qb var8 = null;
+        qb var7;
+        qb var8;
         if (0 != param2) {
           return;
         } else {
@@ -31,7 +30,7 @@ final class dm extends wn {
                 return;
               } else {
                 if (param0 >= -52) {
-                  discarded$1 = dm.h((byte) -53);
+                  dm.h((byte) -53);
                   var7 = new qb(this.field_B.field_v, this.field_B.field_k);
                   fk.a(var7, -23095);
                   this.field_B.a((byte) -128, 0, param2, 0);
@@ -55,8 +54,8 @@ final class dm extends wn {
     }
 
     final static boolean h(byte param0) {
-        rb var1 = null;
-        int var2 = 0;
+        rb var1;
+        int var2;
         var1 = (rb) ((Object) pb.field_m.b(12623));
         if (var1 != null) {
           if (var1.field_i) {
@@ -88,10 +87,9 @@ final class dm extends wn {
     }
 
     final static Boolean f(int param0) {
-        boolean discarded$0 = false;
         Boolean var1 = kj.field_e;
         if (param0 != 18727) {
-            discarded$0 = dm.h((byte) 104);
+            dm.h((byte) 104);
             kj.field_e = null;
             return var1;
         }

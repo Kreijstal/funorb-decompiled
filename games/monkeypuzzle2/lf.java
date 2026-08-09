@@ -34,19 +34,15 @@ final class lf {
 
     final static int a(int param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            gk var2 = null;
             int stackIn_14_0 = 0;
             int stackIn_26_0 = 0;
             int stackIn_31_0 = 0;
             int stackIn_35_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_13_0 = 0;
-            int stackOut_25_0 = 0;
-            int stackOut_30_0 = 0;
-            int stackOut_34_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            gk var2 = null;
             if (4 <= lg.field_n.field_b) {
               if (-1 != lg.field_n.field_a) {
                 if (1 == (lg.field_n.field_a ^ -1)) {
@@ -74,8 +70,7 @@ final class lf {
                       break L2;
                     } else {
                       if (2 == kd.field_a.field_g) {
-                        stackOut_13_0 = dh.a(true, -1);
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = dh.a(true, -1);
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
@@ -111,8 +106,7 @@ final class lf {
                         } else {
                           var1_int = pg.field_a.a(-16840);
                           if (0 != var1_int) {
-                            stackOut_25_0 = dh.a(true, var1_int);
-                            stackIn_26_0 = stackOut_25_0;
+                            stackIn_26_0 = dh.a(true, var1_int);
                             decompiledRegionSelector0 = 1;
                             break L0;
                           } else {
@@ -126,8 +120,7 @@ final class lf {
                         }
                       }
                       if (wi.field_f < pf.a(param0 ^ 3)) {
-                        stackOut_30_0 = dh.a(true, -2);
-                        stackIn_31_0 = stackOut_30_0;
+                        stackIn_31_0 = dh.a(true, -2);
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -142,8 +135,7 @@ final class lf {
                     kd.field_a = null;
                     pg.field_a = null;
                     ii.field_T = 0;
-                    stackOut_34_0 = 0;
-                    stackIn_35_0 = stackOut_34_0;
+                    stackIn_35_0 = 0;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
@@ -177,7 +169,7 @@ final class lf {
     }
 
     final static void a(int param0, int param1) {
-        hb var2 = null;
+        hb var2;
         var2 = gf.field_c;
         var2.b(true, param1);
         var2.b(1, -49152);

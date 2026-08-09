@@ -5,13 +5,13 @@ final class tb extends ta {
     private byte[][] field_G;
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         var9 = -param6;
         L0: while (true) {
           if (var9 >= 0) {
@@ -25,9 +25,9 @@ final class tb extends ta {
                 var9++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                var11 = 255 & param1[incrementValue$66];
+                var11 = 255 & param1[incrementValue$11];
                 if (var11 == 0) {
                   param4++;
                   var10++;
@@ -36,9 +36,9 @@ final class tb extends ta {
                   var12 = ((param2 & 16711935) * var11 & -16711936) + ((param2 & 65280) * var11 & 16711680) >> 8;
                   var11 = 256 - var11;
                   var13 = param0[param4];
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = (((var13 & 16711935) * var11 & -16711936) + ((var13 & 65280) * var11 & 16711680) >> 8) + var12;
+                  param0[incrementValue$12] = (((var13 & 16711935) * var11 & -16711936) + ((var13 & 65280) * var11 & 16711680) >> 8) + var12;
                   var10++;
                   continue L1;
                 }
@@ -49,13 +49,13 @@ final class tb extends ta {
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var10 = -param6;
         L0: while (true) {
           if (var10 >= 0) {
@@ -69,9 +69,9 @@ final class tb extends ta {
                 var10++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                var12 = (255 & param1[incrementValue$66]) * param9 >> 8;
+                var12 = (255 & param1[incrementValue$11]) * param9 >> 8;
                 if (var12 == 0) {
                   param4++;
                   var11++;
@@ -80,9 +80,9 @@ final class tb extends ta {
                   var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
                   var12 = 256 - var12;
                   var14 = param0[param4];
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
+                  param0[incrementValue$12] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
                   var11++;
                   continue L1;
                 }
@@ -93,11 +93,11 @@ final class tb extends ta {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         L0: {
           var8 = param1 + param2 * ge.field_h;
           var9 = ge.field_h - param3;
@@ -170,13 +170,13 @@ final class tb extends ta {
     }
 
     private final static byte[][] a(int[] param0, byte[][] param1) {
-        int var2_int = 0;
-        byte[][] var2 = null;
-        int var3 = 0;
-        int var4_int = 0;
-        byte[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
+        int var2_int;
+        byte[][] var2;
+        int var3;
+        int var4_int;
+        byte[] var4;
+        int var5;
+        int var6;
         var2_int = 0;
         L0: while (true) {
           if (var2_int >= param0.length) {
@@ -223,11 +223,11 @@ final class tb extends ta {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         L0: {
           var9 = param1 + param2 * ge.field_h;
           var10 = ge.field_h - param3;

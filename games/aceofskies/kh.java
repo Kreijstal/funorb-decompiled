@@ -6,7 +6,7 @@ final class kh {
     private static String field_z;
 
     final synchronized static long a(int param0) {
-        long var1 = 0L;
+        long var1;
         L0: {
           var1 = System.currentTimeMillis();
           if (sn.field_c > var1) {

@@ -7,9 +7,9 @@ final class ka extends uc {
     private java.awt.Component field_i;
 
     final void a(java.awt.Component param0, int param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         if (param3 > -72) {
           this.field_i = (java.awt.Component) null;
           this.field_h = param1;
@@ -40,14 +40,12 @@ final class ka extends uc {
     }
 
     final void a(java.awt.Graphics param0, int param1, int param2, byte param3) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
         if (param3 < 19) {
           this.field_i = (java.awt.Component) null;
-          discarded$4 = param0.drawImage(this.field_b, param2, param1, (java.awt.image.ImageObserver) ((Object) this.field_i));
+          param0.drawImage(this.field_b, param2, param1, (java.awt.image.ImageObserver) ((Object) this.field_i));
           return;
         } else {
-          discarded$5 = param0.drawImage(this.field_b, param2, param1, (java.awt.image.ImageObserver) ((Object) this.field_i));
+          param0.drawImage(this.field_b, param2, param1, (java.awt.image.ImageObserver) ((Object) this.field_i));
           return;
         }
     }

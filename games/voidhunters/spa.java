@@ -10,7 +10,7 @@ final class spa implements dja {
     }
 
     final static void b(byte param0) {
-        int var1 = 0;
+        int var1;
         if (32 >= kt.field_l) {
           nl.a(0, -13205);
           if (param0 == 64) {
@@ -48,24 +48,24 @@ final class spa implements dja {
     }
 
     final static void a(int param0, boolean param1) {
-        int var2 = 0;
-        String var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        float var11 = 0.0f;
-        float var12 = 0.0f;
-        String var15 = null;
-        sg var16 = null;
-        lta var18 = null;
-        sg var19 = null;
-        lta var21 = null;
-        sg var22 = null;
-        lta var24 = null;
-        int[] var25 = null;
-        int[] var26 = null;
-        int[] var27 = null;
+        int var2;
+        String var3;
+        int var4;
+        int var5;
+        int var9;
+        int var10;
+        float var11;
+        float var12;
+        String var15;
+        sg var16;
+        lta var18;
+        sg var19;
+        lta var21;
+        sg var22;
+        lta var24;
+        int[] var25;
+        int[] var26;
+        int[] var27;
         if (ck.b(false)) {
           L0: {
             L1: {

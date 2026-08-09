@@ -20,8 +20,7 @@ final class sg {
     static int[] field_a;
 
     final int a(boolean param0) {
-        int discarded$1 = 0;
-        byte[] var3 = null;
+        byte[] var3;
         if (param0) {
           if (!this.field_g) {
             L0: {
@@ -53,7 +52,7 @@ final class sg {
           }
         } else {
           var3 = (byte[]) null;
-          discarded$1 = sg.a(97, (byte) 55, 108, (byte[]) null);
+          sg.a(97, (byte) 55, 108, (byte[]) null);
           if (!this.field_g) {
             if (-3 == (this.field_i ^ -1)) {
               if (-1 <= (this.field_b ^ -1)) {
@@ -108,83 +107,149 @@ final class sg {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        var7 = Transmogrify.field_A ? 1 : 0;
-        try {
-          L0: {
-            var4_int = -1;
-            var5 = param0;
-            var6 = 36 / ((36 - param1) / 45);
-            L1: while (true) {
-              L2: {
-                if (param2 <= var5) {
-                  var4_int = var4_int ^ -1;
-                  break L2;
-                } else {
-                  var4_int = var4_int >>> 1447584872 ^ hi.field_f[255 & (param3[var5] ^ var4_int)];
-                  var5++;
-                  if (var7 != 0) {
-                    break L2;
-                  } else {
-                    continue L1;
-                  }
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var7 = Transmogrify.field_A ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
-              stackOut_7_0 = var4_int;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
+                case 1: {
+                    try {
+                        var4_int = -1;
+                        var5 = param0;
+                        var6 = 36 / ((36 - param1) / 45);
+                        statePc = 2;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        if (param2 <= var5) {
+                            statePc = 6;
+                        } else {
+                            statePc = 3;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        var4_int = var4_int >>> 1447584872 ^ hi.field_f[255 & (param3[var5] ^ var4_int)];
+                        var5++;
+                        if (var7 != 0) {
+                            statePc = 7;
+                        } else {
+                            statePc = 4;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        if (var7 == 0) {
+                            statePc = 2;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        statePc = 6;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        var4_int = var4_int ^ -1;
+                        statePc = 7;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        stackIn_8_0 = var4_int;
+                        statePc = 8;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    return stackIn_8_0;
+                }
+                case 9: {
+                    var4 = (RuntimeException) ((Object) caughtException);
+                    stackIn_11_0 = (RuntimeException) (var4);
+                    stackIn_10_0 = stackIn_11_0;
+                    stackIn_11_1 = new StringBuilder().append("sg.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+                    stackIn_10_1 = stackIn_11_1;
+                    if (param3 == null) {
+                        statePc = 11;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    stackIn_12_0 = (RuntimeException) ((Object) stackIn_10_0);
+                    stackIn_12_1 = (StringBuilder) ((Object) stackIn_10_1);
+                    stackIn_12_2 = "{...}";
+                    statePc = 12;
+                    continue stateLoop;
+                }
+                case 11: {
+                    stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+                    stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+                    stackIn_12_2 = "null";
+                    statePc = 12;
+                    continue stateLoop;
+                }
+                case 12: {
+                    throw ch.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var4);
-            stackOut_9_1 = new StringBuilder().append("sg.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
-            if (param3 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L3;
-            } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L3;
-            }
-          }
-          throw ch.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
-        return stackIn_8_0;
     }
 
     public static void a(byte param0) {
-        int discarded$2 = 0;
-        byte[] var2 = null;
+        byte[] var2;
         field_p = null;
         field_o = null;
         if (param0 > -87) {
           var2 = (byte[]) null;
-          discarded$2 = sg.a(27, (byte) 105, -29, (byte[]) null);
+          sg.a(27, (byte) 105, -29, (byte[]) null);
           field_k = null;
           field_a = null;
           field_d = null;

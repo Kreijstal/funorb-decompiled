@@ -9,12 +9,10 @@ final class hm extends jc {
     private ta field_K;
 
     final static void d(byte param0) {
-        boolean discarded$15 = false;
-        boolean discarded$16 = false;
-        RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -27,14 +25,14 @@ final class hm extends jc {
               }
             }
             if (tk.b(127)) {
-              discarded$15 = ll.field_a.a(true, ql.field_c, cl.field_T, 0);
+              ll.field_a.a(true, ql.field_c, cl.field_T, 0);
               ll.field_a.o(-256);
               L2: while (true) {
                 if (!mm.b((byte) 118)) {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  discarded$16 = ll.field_a.a((byte) -65, lj.field_t, ud.field_c);
+                  ll.field_a.a((byte) -65, lj.field_t, ud.field_c);
                   continue L2;
                 }
               }
@@ -70,7 +68,6 @@ final class hm extends jc {
 
     final void b(int param0, fe param1) {
         cc var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param1 instanceof cc)) {
                 throw new IllegalArgumentException();
@@ -81,7 +78,7 @@ final class hm extends jc {
             var3 = (cc) ((Object) param1);
             this.field_K.a(var3, 27862);
             var3.field_K = true;
-            discarded$0 = var3.a((fe) (this), 127);
+            var3.a((fe) (this), 127);
         } catch (RuntimeException runtimeException) {
             throw lj.a((Throwable) ((Object) runtimeException), "hm.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -156,9 +153,9 @@ final class hm extends jc {
     }
 
     final fe m(int param0) {
-        hh var2 = null;
-        cc var3 = null;
-        int var4 = 0;
+        hh var2;
+        cc var3;
+        int var4;
         L0: {
           var4 = MinerDisturbance.field_ab;
           if (param0 == -21923) {
@@ -200,9 +197,9 @@ final class hm extends jc {
     }
 
     final cc e(byte param0) {
-        hh var2 = null;
-        cc var3 = null;
-        int var4 = 0;
+        hh var2;
+        cc var3;
+        int var4;
         L0: {
           var4 = MinerDisturbance.field_ab;
           var2 = new hh(this.field_K);
@@ -242,8 +239,6 @@ final class hm extends jc {
         gj stackIn_9_0 = null;
         gj stackIn_16_0 = null;
         gj stackIn_19_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -251,19 +246,6 @@ final class hm extends jc {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        gj stackOut_18_0 = null;
-        gj stackOut_15_0 = null;
-        gj stackOut_8_0 = null;
-        gj stackOut_5_0 = null;
-        gj stackOut_2_0 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
         var8 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -284,8 +266,7 @@ final class hm extends jc {
                   var5 = 0;
                   L2: while (true) {
                     if (var4.length <= var5) {
-                      stackOut_18_0 = ql.a(param1, var3[var3.length - 1]);
-                      stackIn_19_0 = stackOut_18_0;
+                      stackIn_19_0 = ql.a(param1, var3[var3.length - 1]);
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
@@ -295,28 +276,24 @@ final class hm extends jc {
                         var5++;
                         continue L2;
                       } else {
-                        stackOut_15_0 = (gj) (var7);
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = (gj) (var7);
                         decompiledRegionSelector0 = 3;
                         break L0;
                       }
                     }
                   }
                 } else {
-                  stackOut_8_0 = dh.field_d;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = dh.field_d;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_5_0 = ec.field_d;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = ec.field_d;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = dh.field_d;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = dh.field_d;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -325,27 +302,19 @@ final class hm extends jc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var2);
-            stackOut_20_1 = new StringBuilder().append("hm.L(");
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var2);
+
+            stackIn_22_1 = new StringBuilder().append("hm.L(");
+
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L3;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L3;
             }
           }
@@ -381,8 +350,6 @@ final class hm extends jc {
         sj stackIn_4_0 = null;
         sj stackIn_9_0 = null;
         sj stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -390,24 +357,12 @@ final class hm extends jc {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        sj stackOut_3_0 = null;
-        sj stackOut_11_0 = null;
-        sj stackOut_8_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         var7 = MinerDisturbance.field_ab;
         try {
           L0: {
             var2 = kn.a("jagex-last-login-method", (byte) 114, param1);
             if (var2 == null) {
-              stackOut_3_0 = li.field_d;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = li.field_d;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -416,8 +371,7 @@ final class hm extends jc {
               var5 = 0;
               L1: while (true) {
                 if (var5 >= var4.length) {
-                  stackOut_11_0 = li.field_d;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = li.field_d;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -426,8 +380,7 @@ final class hm extends jc {
                     var5++;
                     continue L1;
                   } else {
-                    stackOut_8_0 = (sj) (var6);
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = (sj) (var6);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -439,27 +392,19 @@ final class hm extends jc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var2_ref);
-            stackOut_13_1 = new StringBuilder().append("hm.N(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var2_ref);
+
+            stackIn_15_1 = new StringBuilder().append("hm.N(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L2;
             }
           }

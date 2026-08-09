@@ -35,7 +35,7 @@ final class fd extends o {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        um var5 = null;
+        um var5;
         if (param1 != 7) {
           var5 = (um) null;
           fd.a((byte) 74, (um) null);
@@ -59,12 +59,11 @@ final class fd extends o {
 
     final static void a(byte param0, um param1) {
         hi var2 = null;
-        lm discarded$0 = null;
         try {
             hi.b(param1.a("headers.packvorbis", 30045, ""));
             int var3 = -89 / ((-60 - param0) / 43);
             var2 = hi.a(param1, "jagex logo2.packvorbis", "");
-            discarded$0 = var2.a();
+            var2.a();
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) ((Object) runtimeException), "fd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -75,8 +74,8 @@ final class fd extends o {
     }
 
     final static void a(int param0, int param1, long param2) {
-        nk var4 = null;
-        int var5 = 0;
+        nk var4;
+        int var5;
         var4 = qn.field_U;
         var4.f(param0, -87);
         var4.field_l = var4.field_l + 1;

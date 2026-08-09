@@ -23,10 +23,6 @@ abstract class cga extends eo {
         int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_10_0 = 0;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -35,8 +31,7 @@ abstract class cga extends eo {
                 break L1;
               } else {
                 if (param1 < 128) {
-                  stackOut_7_0 = 1;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -69,8 +64,7 @@ abstract class cga extends eo {
                     } else {
                       var4 = var6[var3];
                       if (param1 == var4) {
-                        stackOut_17_0 = 1;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = 1;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -81,13 +75,11 @@ abstract class cga extends eo {
                   }
                 }
               }
-              stackOut_20_0 = 0;
-              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_0 = 0;
               decompiledRegionSelector0 = 3;
               break L0;
             } else {
-              stackOut_10_0 = 1;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = 1;
               decompiledRegionSelector0 = 1;
               break L0;
             }

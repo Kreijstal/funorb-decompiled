@@ -13,19 +13,19 @@ final class uwa {
     anb field_e;
 
     final static phb[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        phb var9 = null;
-        phb var10 = null;
-        phb var11 = null;
-        phb var12 = null;
-        phb var13 = null;
-        Object var14 = null;
-        int[] var15 = null;
-        phb var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
+        int[] var6;
+        int var7;
+        int var8;
+        phb var9;
+        phb var10;
+        phb var11;
+        phb var12;
+        phb var13;
+        Object var14;
+        int[] var15;
+        phb var16;
+        int[] var17;
+        int[] var18;
         var18 = dma.field_i;
         var17 = var18;
         var15 = var17;
@@ -90,8 +90,6 @@ final class uwa {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -99,26 +97,14 @@ final class uwa {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param2 == 20) {
-              stackOut_3_0 = (param1.i(0, param0) ^ 1 << -1 + param0) - (1 << -1 + param0);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (param1.i(0, param0) ^ 1 << -1 + param0) - (1 << -1 + param0);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = -29;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = -29;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -127,27 +113,19 @@ final class uwa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("uwa.B(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("uwa.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }

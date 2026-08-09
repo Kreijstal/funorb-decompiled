@@ -7,9 +7,9 @@ final class sd {
     static qk field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7, int param8, int param9) {
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var10;
+        int var11;
+        int var12;
         L0: {
           if (param3 <= 0) {
             param3 = 0;

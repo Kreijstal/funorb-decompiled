@@ -13,54 +13,32 @@ final class dc extends ic {
     static qj field_p;
 
     public final void a(int param0, al param1, int param2, boolean param3, int param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
         try {
           L0: {
             L1: {
               if (!param1.field_q) {
                 if (param1.h(-87)) {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L1;
                 } else {
-                  stackOut_3_0 = 0;
-                  stackIn_6_0 = stackOut_3_0;
+                  stackIn_6_0 = 0;
                   break L1;
                 }
               } else {
-                stackOut_1_0 = 1;
-                stackIn_6_0 = stackOut_1_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
@@ -83,17 +61,14 @@ final class dc extends ic {
             }
             L4: {
               if (!param3) {
-                stackOut_14_0 = this.field_q;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = this.field_q;
                 break L4;
               } else {
                 if (var6_int != 0) {
-                  stackOut_13_0 = this.field_u;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = this.field_u;
                   break L4;
                 } else {
-                  stackOut_12_0 = this.field_v;
-                  stackIn_15_0 = stackOut_12_0;
+                  stackIn_15_0 = this.field_v;
                   break L4;
                 }
               }
@@ -102,44 +77,34 @@ final class dc extends ic {
               var7 = stackIn_15_0;
               cb.a(param2 + param1.field_m + (param1.field_u - this.field_t[0].field_v >> 1581360577), (byte) -128, var7, param1.field_x, this.field_t, param1.field_p + param4);
               if (!param3) {
-                stackOut_17_0 = 7105644;
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_0 = 7105644;
                 break L5;
               } else {
-                stackOut_16_0 = 16777215;
-                stackIn_18_0 = stackOut_16_0;
+                stackIn_18_0 = 16777215;
                 break L5;
               }
             }
             var8 = stackIn_18_0;
-            discarded$1 = this.field_k.a(param1.field_s, param4 - -param1.field_p, param1.field_m + param2 - 2, param1.field_x, param1.field_u, var8, -1, 1, 1, this.field_k.field_G);
+            this.field_k.a(param1.field_s, param4 - -param1.field_p, param1.field_m + param2 - 2, param1.field_x, param1.field_u, var8, -1, 1, 1, this.field_k.field_G);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var6);
-            stackOut_20_1 = new StringBuilder().append("dc.L(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var6);
+
+            stackIn_22_1 = new StringBuilder().append("dc.L(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L6;
             }
           }
@@ -166,7 +131,7 @@ final class dc extends ic {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
-        int var17 = 0;
+        int var17;
         var17 = TrackController.field_F ? 1 : 0;
         if (param1 == 1581360577) {
           if (param3 >= param15) {

@@ -12,9 +12,6 @@ final class ph extends fa {
 
     final static int e(int param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            we var2 = null;
             int stackIn_14_0 = 0;
             int stackIn_26_0 = 0;
             int stackIn_30_0 = 0;
@@ -22,11 +19,9 @@ final class ph extends fa {
             int stackIn_37_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_13_0 = 0;
-            int stackOut_29_0 = 0;
-            int stackOut_25_0 = 0;
-            int stackOut_36_0 = 0;
-            int stackOut_32_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            we var2 = null;
             if (pm.field_h.field_h < 4) {
               try {
                 L0: {
@@ -44,8 +39,7 @@ final class ph extends fa {
                       break L2;
                     } else {
                       if ((se.field_o.field_b ^ -1) == -3) {
-                        stackOut_13_0 = ce.a((byte) -124, -1);
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = ce.a((byte) -124, -1);
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
@@ -79,8 +73,7 @@ final class ph extends fa {
                         if ((co.field_a ^ -1L) <= (hm.a(64) ^ -1L)) {
                           break L4;
                         } else {
-                          stackOut_29_0 = ce.a((byte) -124, -2);
-                          stackIn_30_0 = stackOut_29_0;
+                          stackIn_30_0 = ce.a((byte) -124, -2);
                           decompiledRegionSelector0 = 2;
                           break L0;
                         }
@@ -90,8 +83,7 @@ final class ph extends fa {
                           rb.field_q = rb.field_q + 1;
                           break L4;
                         } else {
-                          stackOut_25_0 = ce.a((byte) -124, var1_int);
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = ce.a((byte) -124, var1_int);
                           decompiledRegionSelector0 = 1;
                           break L0;
                         }
@@ -106,16 +98,14 @@ final class ph extends fa {
                       sc.field_d = null;
                       se.field_o = null;
                       rb.field_q = 0;
-                      stackOut_36_0 = 0;
-                      stackIn_37_0 = stackOut_36_0;
+                      stackIn_37_0 = 0;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       return -1;
                     }
                   } else {
-                    stackOut_32_0 = -28;
-                    stackIn_33_0 = stackOut_32_0;
+                    stackIn_33_0 = -28;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
@@ -174,22 +164,12 @@ final class ph extends fa {
         ak var3 = null;
         ak var5 = null;
         ak var6 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             dk.field_e = bi.a("basic", "display_name_changed", param0, (byte) -25);
@@ -226,27 +206,19 @@ final class ph extends fa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (var2);
-            stackOut_3_1 = new StringBuilder().append("ph.B(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (var2);
+
+            stackIn_5_1 = new StringBuilder().append("ph.B(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L1;
             }
           }

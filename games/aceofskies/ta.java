@@ -24,8 +24,8 @@ final class ta extends sk {
     }
 
     final void a(boolean param0, byte param1) {
-        go var3 = null;
-        ec var4 = null;
+        go var3;
+        ec var4;
         if (param1 > 2) {
           var3 = this.field_b.O(29190);
           if (var3 != null) {
@@ -57,23 +57,16 @@ final class ta extends sk {
     }
 
     final static boolean a(int param0, int param1, byte param2) {
-        boolean discarded$13 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param2 < 21) {
           L0: {
-            discarded$13 = ta.a(88, -119, (byte) -114);
+            ta.a(88, -119, (byte) -114);
             if ((2048 & param0) == 0) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -81,12 +74,10 @@ final class ta extends sk {
         } else {
           L1: {
             if ((2048 & param0) == 0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -109,44 +100,26 @@ final class ta extends sk {
     }
 
     final void a(boolean param0, boolean param1) {
-        jj var4 = null;
-        bf stackIn_1_0 = null;
-        as stackIn_1_1 = null;
+        jj var4;
         bf stackIn_2_0 = null;
         as stackIn_2_1 = null;
         bf stackIn_3_0 = null;
         as stackIn_3_1 = null;
         int stackIn_3_2 = 0;
-        bf stackOut_0_0 = null;
-        as stackOut_0_1 = null;
-        bf stackOut_2_0 = null;
-        as stackOut_2_1 = null;
-        int stackOut_2_2 = 0;
-        bf stackOut_1_0 = null;
-        as stackOut_1_1 = null;
-        int stackOut_1_2 = 0;
         L0: {
-          stackOut_0_0 = this.field_b;
-          stackOut_0_1 = ru.field_a;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_2_1 = stackOut_0_1;
-          stackIn_1_0 = stackOut_0_0;
-          stackIn_1_1 = stackOut_0_1;
+          stackIn_2_0 = this.field_b;
+
+          stackIn_2_1 = ru.field_a;
+
           if (param0) {
-            stackOut_2_0 = (bf) ((Object) stackIn_2_0);
-            stackOut_2_1 = (as) ((Object) stackIn_2_1);
-            stackOut_2_2 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            stackIn_3_2 = stackOut_2_2;
+            stackIn_3_0 = (bf) ((Object) stackIn_2_0);
+            stackIn_3_1 = (as) ((Object) stackIn_2_1);
+            stackIn_3_2 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (bf) ((Object) stackIn_1_0);
-            stackOut_1_1 = (as) ((Object) stackIn_1_1);
-            stackOut_1_2 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
+            stackIn_3_0 = (bf) ((Object) stackIn_2_0);
+            stackIn_3_1 = (as) ((Object) stackIn_2_1);
+            stackIn_3_2 = 1;
             break L0;
           }
         }

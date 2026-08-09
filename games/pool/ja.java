@@ -22,28 +22,29 @@ final class ja {
     }
 
     public static void a(int param0) {
-        byte[] discarded$0 = null;
         if (param0 != 726237729) {
-            discarded$0 = ja.a(50, -94);
+            ja.a(50, -94);
         }
         field_d = null;
     }
 
     final synchronized static byte[] a(int param0, int param1) {
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int dupTemp$6 = 0;
+        byte[][] arrayValue$7 = null;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
         L0: {
           if (100 != param0) {
             break L0;
           } else {
             if ((to.field_p ^ -1) < -1) {
-              fieldTemp$6 = to.field_p - 1;
+              fieldTemp$3 = to.field_p - 1;
               to.field_p = to.field_p - 1;
-              var2_ref_byte__ = uf.field_y[fieldTemp$6];
+              var2_ref_byte__ = uf.field_y[fieldTemp$3];
               uf.field_y[to.field_p] = null;
               return var2_ref_byte__;
             } else {
@@ -56,9 +57,9 @@ final class ja {
             break L1;
           } else {
             if (-1 > (em.field_I ^ -1)) {
-              fieldTemp$7 = em.field_I - 1;
+              fieldTemp$4 = em.field_I - 1;
               em.field_I = em.field_I - 1;
-              var2_ref_byte__ = th.field_j[fieldTemp$7];
+              var2_ref_byte__ = th.field_j[fieldTemp$4];
               th.field_j[em.field_I] = null;
               return var2_ref_byte__;
             } else {
@@ -73,9 +74,9 @@ final class ja {
             if (ii.field_a <= 0) {
               break L2;
             } else {
-              fieldTemp$8 = ii.field_a - 1;
+              fieldTemp$5 = ii.field_a - 1;
               ii.field_a = ii.field_a - 1;
-              var2_ref_byte__ = ec.field_g[fieldTemp$8];
+              var2_ref_byte__ = ec.field_g[fieldTemp$5];
               ec.field_g[ii.field_a] = null;
               return var2_ref_byte__;
             }
@@ -98,8 +99,10 @@ final class ja {
               } else {
                 if (s.field_f[var2] == param0) {
                   if ((ho.field_l[var2] ^ -1) < -1) {
-                    ho.field_l[var2] = ho.field_l[var2] - 1;
-                    var3 = nk.field_l[var2][ho.field_l[var2] - 1];
+                    dupTemp$6 = ho.field_l[var2] - 1;
+                    arrayValue$7 = nk.field_l[var2];
+                    ho.field_l[var2] = dupTemp$6;
+                    var3 = arrayValue$7[dupTemp$6];
                     nk.field_l[var2][ho.field_l[var2]] = null;
                     return var3;
                   } else {

@@ -39,9 +39,8 @@ final class lta {
     }
 
     final int b(boolean param0, int param1) {
-        float discarded$2 = 0.0f;
         if (!param0) {
-          discarded$2 = this.c(-13, 119);
+          this.c(-13, 119);
           return (int)(this.field_a * ((float)param1 - this.field_b) + (float)this.field_e);
         } else {
           return (int)(this.field_a * ((float)param1 - this.field_b) + (float)this.field_e);

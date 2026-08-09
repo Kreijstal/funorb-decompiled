@@ -12,10 +12,10 @@ final class sa {
     private static int field_f;
 
     private final static void a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: while (true) {
           L1: {
             if (param1 < param0 + 8) {
@@ -136,13 +136,13 @@ final class sa {
     }
 
     private final static void b(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         if (param1 > param0 + 4) {
           var2 = param0;
           var3 = field_d[var2];
@@ -185,10 +185,8 @@ final class sa {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int[] param5, int[] param6) {
-        if (param5 != null) {
-            if (dma.field_f - dma.field_c != param5.length) {
-                throw new IllegalStateException();
-            }
+        if (param5 != null && dma.field_f - dma.field_c != param5.length) {
+            throw new IllegalStateException();
         }
         sa.c();
         sa.a(param0, param1, param2);
@@ -196,17 +194,17 @@ final class sa {
     }
 
     private final static boolean d() {
-        int var0 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         var0 = field_b;
         var1 = field_f;
         var2 = field_c;
@@ -284,21 +282,21 @@ final class sa {
     }
 
     private final static void a(int[] param0, int param1, int param2) {
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        int fieldTemp$11 = 0;
-        int fieldTemp$12 = 0;
-        int fieldTemp$13 = 0;
-        int fieldTemp$14 = 0;
-        int fieldTemp$15 = 0;
-        int var3 = 0;
-        int[] var4_ref_int__ = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
+        int var3;
+        int[] var4_ref_int__;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         L0: {
           L1: {
             var3 = field_a + (param2 << 1);
@@ -340,33 +338,33 @@ final class sa {
                 if (var7 >= var6) {
                   break L4;
                 } else {
-                  fieldTemp$8 = field_a;
+                  fieldTemp$0 = field_a;
                   field_a = field_a + 1;
-                  field_d[fieldTemp$8] = param0[var8];
-                  fieldTemp$9 = field_a;
+                  field_d[fieldTemp$0] = param0[var8];
+                  fieldTemp$1 = field_a;
                   field_a = field_a + 1;
-                  field_d[fieldTemp$9] = var7;
-                  fieldTemp$10 = field_a;
+                  field_d[fieldTemp$1] = var7;
+                  fieldTemp$2 = field_a;
                   field_a = field_a + 1;
-                  field_d[fieldTemp$10] = param0[var4];
-                  fieldTemp$11 = field_a;
+                  field_d[fieldTemp$2] = param0[var4];
+                  fieldTemp$3 = field_a;
                   field_a = field_a + 1;
-                  field_d[fieldTemp$11] = var6;
+                  field_d[fieldTemp$3] = var6;
                   break L4;
                 }
               } else {
-                fieldTemp$12 = field_a;
+                fieldTemp$4 = field_a;
                 field_a = field_a + 1;
-                field_d[fieldTemp$12] = param0[var4];
-                fieldTemp$13 = field_a;
+                field_d[fieldTemp$4] = param0[var4];
+                fieldTemp$5 = field_a;
                 field_a = field_a + 1;
-                field_d[fieldTemp$13] = var6;
-                fieldTemp$14 = field_a;
+                field_d[fieldTemp$5] = var6;
+                fieldTemp$6 = field_a;
                 field_a = field_a + 1;
-                field_d[fieldTemp$14] = param0[var8];
-                fieldTemp$15 = field_a;
+                field_d[fieldTemp$6] = param0[var8];
+                fieldTemp$7 = field_a;
                 field_a = field_a + 1;
-                field_d[fieldTemp$15] = var7;
+                field_d[fieldTemp$7] = var7;
                 break L4;
               }
             }

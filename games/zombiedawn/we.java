@@ -29,6 +29,12 @@ final class we extends qk {
     }
 
     final void a(wk param0, int param1) {
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -36,22 +42,6 @@ final class we extends qk {
         String var5 = null;
         int var6 = 0;
         le var7 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
@@ -95,27 +85,19 @@ final class we extends qk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3);
-            stackOut_9_1 = new StringBuilder().append("we.L(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("we.L(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -227,11 +209,11 @@ final class we extends qk {
     }
 
     final void g(int param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int var3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int var3;
         var3 = ZombieDawn.field_J;
         super.g(103);
         if (param0 > 95) {
@@ -244,12 +226,12 @@ final class we extends qk {
                 return;
               }
             } else {
-              fieldTemp$4 = this.field_Ob;
+              fieldTemp$0 = this.field_Ob;
               this.field_Ob = this.field_Ob + 1;
-              if (-51 < (fieldTemp$4 ^ -1)) {
-                fieldTemp$5 = this.field_Pb;
+              if (-51 < (fieldTemp$0 ^ -1)) {
+                fieldTemp$1 = this.field_Pb;
                 this.field_Pb = this.field_Pb + 1;
-                if (fieldTemp$5 < 4) {
+                if (fieldTemp$1 < 4) {
                   return;
                 } else {
                   this.l((byte) 52);
@@ -259,9 +241,9 @@ final class we extends qk {
               } else {
                 this.b(false);
                 this.field_Ob = 0;
-                fieldTemp$6 = this.field_Pb;
+                fieldTemp$2 = this.field_Pb;
                 this.field_Pb = this.field_Pb + 1;
-                if (fieldTemp$6 < 4) {
+                if (fieldTemp$2 < 4) {
                   return;
                 } else {
                   this.l((byte) 52);
@@ -272,9 +254,9 @@ final class we extends qk {
             }
           } else {
             if (null == this.field_Qb) {
-              fieldTemp$7 = this.field_Ob;
+              fieldTemp$3 = this.field_Ob;
               this.field_Ob = this.field_Ob + 1;
-              if (fieldTemp$7 < 50) {
+              if (fieldTemp$3 < 50) {
                 return;
               } else {
                 this.y(3);
@@ -336,7 +318,7 @@ final class we extends qk {
     }
 
     private final void b(boolean param0) {
-        nc var3 = null;
+        nc var3;
         if (this.field_Qb == null) {
           return;
         } else {
@@ -361,22 +343,12 @@ final class we extends qk {
     final void a(nc param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var3_int = -92 % ((-53 - param1) / 54);
@@ -386,27 +358,19 @@ final class we extends qk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var3);
-            stackOut_2_1 = new StringBuilder().append("we.O(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var3);
+
+            stackIn_4_1 = new StringBuilder().append("we.O(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -415,22 +379,20 @@ final class we extends qk {
     }
 
     private final void y(int param0) {
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        Object var2 = null;
-        Object var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        Object var6 = null;
-        kd var6_ref = null;
-        int var8 = 0;
-        qh var9 = null;
-        qh var10 = null;
-        qh var17 = null;
+        Object var2;
+        Object var3;
+        int var4;
+        int var5;
+        Object var6;
+        kd var6_ref;
+        int var8;
+        qh var9;
+        qh var10;
+        qh var17;
         var6 = null;
         var8 = ZombieDawn.field_J;
-        int discarded$4 = this.a(true);
-        int discarded$5 = this.f(237239984);
+        this.a(true);
+        this.f(237239984);
         if (this.field_yb == null) {
           L0: {
             if (this.field_Qb != null) {
@@ -630,8 +592,8 @@ final class we extends qk {
           }
         } else {
           L17: {
-            discarded$6 = this.field_yb.a(true);
-            discarded$7 = this.field_yb.f(237239984);
+            this.field_yb.a(true);
+            this.field_yb.f(237239984);
             this.field_yb = null;
             if (this.field_Qb != null) {
               this.z(param0 + 12448);

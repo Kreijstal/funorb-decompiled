@@ -31,9 +31,8 @@ final class ad extends vh {
     }
 
     final boolean f(int param0) {
-        boolean discarded$0 = false;
         if (param0 != -19429) {
-            discarded$0 = this.f(26);
+            this.f(26);
             return false;
         }
         return false;

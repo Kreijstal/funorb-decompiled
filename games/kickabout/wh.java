@@ -68,8 +68,6 @@ final class wh extends gn {
     }
 
     private final void a(byte param0) {
-        ag discarded$1 = null;
-        ag discarded$2 = null;
         int var2 = this.field_i * mn.field_a >> -341429720;
         if (param0 != 99) {
             this.e(81);
@@ -79,9 +77,9 @@ final class wh extends gn {
             this.field_m.i();
         }
         if (!this.field_r) {
-            discarded$1 = ga.a(this.field_m, 114);
+            ga.a(this.field_m, 114);
         } else {
-            discarded$2 = w.a(this.field_m, param0 ^ 14);
+            w.a(this.field_m, param0 ^ 14);
         }
         this.field_k = this.field_k - 1;
         this.field_o = false;

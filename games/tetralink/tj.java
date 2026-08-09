@@ -13,10 +13,9 @@ final class tj extends se implements java.awt.event.MouseWheelListener {
     }
 
     final void b(int param0, java.awt.Component param1) {
-        int discarded$0 = 0;
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 >= -112) {
-            discarded$0 = this.a(12);
+            this.a(12);
         }
     }
 
@@ -30,7 +29,7 @@ final class tj extends se implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int a(int param0) {
-        int var2 = 0;
+        int var2;
         if (param0 != 12224) {
           this.field_d = -111;
           var2 = this.field_d;

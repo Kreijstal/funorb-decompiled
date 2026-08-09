@@ -33,7 +33,7 @@ class ml extends va {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
+        int var6;
         L0: {
           L1: {
             var6 = 44 / ((param5 - -43) / 56);
@@ -73,40 +73,23 @@ class ml extends va {
     }
 
     final static er[] a(byte param0, int param1, boolean param2, int param3, int param4, boolean param5) {
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        er var9 = null;
-        Object var10 = null;
-        Object var11 = null;
-        int[] var12 = null;
         er var13 = null;
         er var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        L0: {
-          if (param0 == -13) {
-            break L0;
-          } else {
+        if (param0 != -13) {
             ml.a(34, -51, 103, 63, -22, 15);
-            break L0;
-          }
         }
-        L1: {
-          var16 = bi.field_l;
-          var15 = var16;
-          var12 = var15;
-          var6 = var12;
-          var7 = bi.field_e;
-          var8 = bi.field_j;
-          var9 = new er(16, param4);
-          var9.d();
-          bi.e(0, 0, 16, param4, param1, param3);
-          var10 = null;
-          var11 = null;
-          if (!param2) {
-            break L1;
-          } else {
+        int[] var16 = bi.field_l;
+        int[] var15 = var16;
+        int[] var12 = var15;
+        int[] var6 = var12;
+        int var7 = bi.field_e;
+        int var8 = bi.field_j;
+        er var9 = new er(16, param4);
+        var9.d();
+        bi.e(0, 0, 16, param4, param1, param3);
+        Object var10 = null;
+        Object var11 = null;
+        if (param2) {
             var13 = var9.c();
             var10 = var13;
             var13.d();
@@ -115,13 +98,8 @@ class ml extends va {
             bi.b(0, 2, 2, 0);
             bi.b(0, 3, 1, 0);
             bi.b(0, 4, 1, 0);
-            break L1;
-          }
         }
-        L2: {
-          if (!param5) {
-            break L2;
-          } else {
+        if (param5) {
             var14 = var9.c();
             var11 = var14;
             var14.d();
@@ -130,8 +108,6 @@ class ml extends va {
             bi.b(14, 2, 2, 0);
             bi.b(15, 3, 1, 0);
             bi.b(15, 4, 1, 0);
-            break L2;
-          }
         }
         bi.a(var16, var7, var8);
         return new er[]{null, null, null, (er) (var10), var9, (er) (var11), null, null, null};
@@ -139,11 +115,18 @@ class ml extends va {
 
     final static void a(mi param0, byte param1) {
         try {
-            int discarded$1 = 0;
+            RuntimeException stackIn_68_0 = null;
+            StringBuilder stackIn_68_1 = null;
+            RuntimeException stackIn_69_0 = null;
+            StringBuilder stackIn_69_1 = null;
+            String stackIn_69_2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
             int var5 = 0;
+            int var6_int = 0;
             ClassNotFoundException var6 = null;
             InvalidClassException var6_ref = null;
             StreamCorruptedException var6_ref2 = null;
@@ -156,7 +139,6 @@ class ml extends va {
             NullPointerException var6_ref9 = null;
             Exception var6_ref10 = null;
             Throwable var6_ref11 = null;
-            int var6_int = 0;
             int var8 = 0;
             Object[] var9 = null;
             int var10_int = 0;
@@ -176,23 +158,6 @@ class ml extends va {
             java.lang.reflect.Field var26 = null;
             java.lang.reflect.Method var27 = null;
             java.lang.reflect.Method var28 = null;
-            RuntimeException stackIn_67_0 = null;
-            StringBuilder stackIn_67_1 = null;
-            RuntimeException stackIn_68_0 = null;
-            StringBuilder stackIn_68_1 = null;
-            RuntimeException stackIn_69_0 = null;
-            StringBuilder stackIn_69_1 = null;
-            String stackIn_69_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_66_0 = null;
-            StringBuilder stackOut_66_1 = null;
-            RuntimeException stackOut_68_0 = null;
-            StringBuilder stackOut_68_1 = null;
-            String stackOut_68_2 = null;
-            RuntimeException stackOut_67_0 = null;
-            StringBuilder stackOut_67_1 = null;
-            String stackOut_67_2 = null;
             var18 = null;
             var16 = null;
             var21 = null;
@@ -220,7 +185,7 @@ class ml extends va {
                           var5 = 0;
                           L2: while (true) {
                             if (var5 >= var17.field_n) {
-                              discarded$1 = param0.c(var4, -123);
+                              param0.c(var4, -123);
                               var17.c(2);
                               decompiledRegionSelector0 = 3;
                               break L0;
@@ -456,27 +421,19 @@ class ml extends va {
               decompiledCaughtException = decompiledCaughtParameter12;
               L23: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_66_0 = (RuntimeException) (var2);
-                stackOut_66_1 = new StringBuilder().append("ml.D(");
-                stackIn_68_0 = stackOut_66_0;
-                stackIn_68_1 = stackOut_66_1;
-                stackIn_67_0 = stackOut_66_0;
-                stackIn_67_1 = stackOut_66_1;
+                stackIn_68_0 = (RuntimeException) (var2);
+
+                stackIn_68_1 = new StringBuilder().append("ml.D(");
+
                 if (param0 == null) {
-                  stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
-                  stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
-                  stackOut_68_2 = "null";
-                  stackIn_69_0 = stackOut_68_0;
-                  stackIn_69_1 = stackOut_68_1;
-                  stackIn_69_2 = stackOut_68_2;
+                  stackIn_69_0 = (RuntimeException) ((Object) stackIn_68_0);
+                  stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
+                  stackIn_69_2 = "null";
                   break L23;
                 } else {
-                  stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
-                  stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
-                  stackOut_67_2 = "{...}";
-                  stackIn_69_0 = stackOut_67_0;
-                  stackIn_69_1 = stackOut_67_1;
-                  stackIn_69_2 = stackOut_67_2;
+                  stackIn_69_0 = (RuntimeException) ((Object) stackIn_68_0);
+                  stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
+                  stackIn_69_2 = "{...}";
                   break L23;
                 }
               }

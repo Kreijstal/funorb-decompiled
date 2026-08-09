@@ -11,9 +11,8 @@ final class gm extends ci {
     }
 
     final int[] c(int param0, int param1) {
-        int[] discarded$2 = null;
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         if (param0 == 1) {
           var4 = this.field_i.a((byte) -108, param1);
           var3 = var4;
@@ -24,7 +23,7 @@ final class gm extends ci {
             return var4;
           }
         } else {
-          discarded$2 = this.c(-83, -24);
+          this.c(-83, -24);
           var4 = this.field_i.a((byte) -108, param1);
           var3 = var4;
           if (!this.field_i.field_d) {

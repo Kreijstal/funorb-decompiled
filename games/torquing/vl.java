@@ -31,10 +31,10 @@ final class vl implements Iterable {
     }
 
     final q a(long param0, int param1) {
-        q var4 = null;
-        int var5 = 0;
-        q var6 = null;
-        int var7 = 0;
+        q var4;
+        int var5;
+        q var6;
+        int var7;
         var7 = Torquing.field_u;
         var4 = this.field_a[(int)((long)(this.field_e - 1) & param0)];
         this.field_b = var4.field_e;

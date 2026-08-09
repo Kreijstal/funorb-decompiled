@@ -35,27 +35,15 @@ final class vkb extends rqa {
     }
 
     final nc a(nc[] param0, int param1) {
-        nc discarded$2 = null;
         RuntimeException var3 = null;
         nc[] var4 = null;
         nc stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -63,40 +51,31 @@ final class vkb extends rqa {
                 break L1;
               } else {
                 var4 = (nc[]) null;
-                discarded$2 = this.a((nc[]) null, -72);
+                this.a((nc[]) null, -72);
                 break L1;
               }
             }
             tcb.field_q = param0[0].a(41);
-            stackOut_2_0 = new nc("void");
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new nc("void");
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("vkb.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("vkb.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -106,9 +85,10 @@ final class vkb extends rqa {
     }
 
     final static void a(int param0) {
-        int discarded$1 = 0;
-        RuntimeException var1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         double var1_double = 0.0;
+        RuntimeException var1 = null;
         int var3 = 0;
         double var4 = 0.0;
         double var6 = 0.0;
@@ -116,18 +96,16 @@ final class vkb extends rqa {
         double var10 = 0.0;
         double var12 = 0.0;
         double var14 = 0.0;
-        int var16 = 0;
         double var16_double = 0.0;
+        int var16 = 0;
         int var17 = 0;
-        int var18 = 0;
         double var18_double = 0.0;
+        int var18 = 0;
         int var19 = 0;
         double var20 = 0.0;
         double var22 = 0.0;
         double var24 = 0.0;
         int var26 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = VoidHunters.field_G;
         try {
           L0: {
@@ -137,7 +115,7 @@ final class vkb extends rqa {
                 if (param0 == -10693) {
                   break L1;
                 } else {
-                  discarded$1 = vkb.a(43, 19);
+                  vkb.a(43, 19);
                   break L1;
                 }
               }

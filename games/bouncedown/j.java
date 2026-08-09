@@ -16,7 +16,6 @@ final class j extends ai {
             ce var8 = null;
             gk stackIn_16_0 = null;
             Throwable decompiledCaughtException = null;
-            gk stackOut_15_0 = null;
             try {
               L0: {
                 L1: {
@@ -73,8 +72,7 @@ final class j extends ai {
                     break L6;
                   }
                 }
-                stackOut_15_0 = new gk(var8, param4, param5);
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_0 = new gk(var8, param4, param5);
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {

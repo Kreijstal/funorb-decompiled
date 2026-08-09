@@ -22,23 +22,12 @@ final class vb {
         int var5 = 0;
         int var6 = 0;
         long stackIn_5_0 = 0L;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        long stackOut_4_0 = 0L;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         var6 = Kickabout.field_G;
         try {
           L0: {
@@ -47,8 +36,7 @@ final class vb {
             var5 = param0;
             L1: while (true) {
               if (var2_int <= var5) {
-                stackOut_4_0 = var3;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = var3;
                 break L0;
               } else {
                 var3 = -var3 + ((var3 << 1347056389) + (long)param1.charAt(var5));
@@ -61,27 +49,19 @@ final class vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("vb.D(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("vb.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -110,18 +90,17 @@ final class vb {
     }
 
     final static void a(boolean param0) {
-        boolean discarded$1 = false;
-        RuntimeException var1 = null;
+        int stackIn_11_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_21_1 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int stackIn_9_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         var6 = Kickabout.field_G;
         try {
           L0: {
@@ -170,8 +149,12 @@ final class vb {
                             }
                           }
                         } else {
+                          stackIn_21_0 = p.a((byte) -24, 3) ^ -1;
+
+                          stackIn_21_1 = -1;
+
                           L4: {
-                            if (p.a((byte) -24, 3) != 0) {
+                            if (stackIn_21_0 != stackIn_21_1) {
                               var3 = -170;
                               var4 = p.a((byte) -24, 5);
                               var5 = p.a((byte) -24, 100);
@@ -190,49 +173,47 @@ final class vb {
                   } else {
                     bv.field_l = new rk[30];
                     var1_int = 0;
-                    L5: while (true) {
+                    L7: while (true) {
                       if (var1_int >= bv.field_l.length) {
                         break L1;
                       } else {
-                        L6: {
+                        L8: {
                           if (ih.field_c != 2) {
-                            stackOut_8_0 = -60;
-                            stackIn_9_0 = stackOut_8_0;
-                            break L6;
+                            stackIn_11_0 = -60;
+                            break L8;
                           } else {
-                            stackOut_7_0 = -120;
-                            stackIn_9_0 = stackOut_7_0;
-                            break L6;
+                            stackIn_11_0 = -120;
+                            break L8;
                           }
                         }
-                        L7: {
-                          var2 = stackIn_9_0;
+                        L9: {
+                          var2 = stackIn_11_0;
                           var2 = el.a(29430, 15, var2);
                           var3 = 20 + var1_int * 45;
                           var4 = 6;
                           if (0 == p.a((byte) -24, 2)) {
                             var4 = 2;
                             var2 = 896 + -var2;
-                            break L7;
+                            break L9;
                           } else {
-                            break L7;
+                            break L9;
                           }
                         }
                         bv.field_l[var1_int] = new rk(var2, var3, var4);
                         var1_int++;
-                        continue L5;
+                        continue L7;
                       }
                     }
                   }
                 }
               }
             }
-            L8: {
+            L10: {
               if (param0) {
-                break L8;
+                break L10;
               } else {
-                discarded$1 = vb.b(-46);
-                break L8;
+                vb.b(-46);
+                break L10;
               }
             }
             break L0;

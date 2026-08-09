@@ -9,9 +9,8 @@ final class ska extends is {
     static bc field_o;
 
     final Object a(int param0) {
-        Object discarded$0 = null;
         if (param0 < 85) {
-            discarded$0 = this.a(-70);
+            this.a(-70);
             return this.field_l;
         }
         return this.field_l;
@@ -36,9 +35,8 @@ final class ska extends is {
     }
 
     final boolean e(byte param0) {
-        Object discarded$0 = null;
         if (param0 < 29) {
-            discarded$0 = this.a(-56);
+            this.a(-56);
             return false;
         }
         return false;

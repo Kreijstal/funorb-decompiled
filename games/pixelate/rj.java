@@ -63,8 +63,8 @@ final class rj extends gn {
     }
 
     final static void i(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = 16777215;
         gb.field_b = new tf(108, 100);
         var2 = 65793;

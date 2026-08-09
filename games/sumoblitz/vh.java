@@ -21,14 +21,10 @@ final class vh extends rq {
     }
 
     final void a(int param0, int param1, int param2) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        int var5 = 0;
-        float var5_float = 0.0f;
-        jagdx.IDirect3DDevice var6 = null;
-        jagdx.IDirect3DDevice var7 = null;
+        float var5_float;
+        int var5;
+        jagdx.IDirect3DDevice var6;
+        jagdx.IDirect3DDevice var7;
         if (param0 != 34023) {
           L0: {
             this.field_f = (ir) null;
@@ -36,12 +32,12 @@ final class vh extends rq {
             if (!this.field_h.field_g) {
               var5 = 16 * (this.field_b.field_kc % 4000) / 4000;
               this.field_b.a(this.field_h.field_d[var5], param0 ^ 33939);
-              discarded$4 = var6.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
+              var6.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
               break L0;
             } else {
               var5_float = (float)(this.field_b.field_kc % 4000) / 4000.0f;
               this.field_b.a(this.field_h.field_f, 114);
-              discarded$5 = var6.b(11, var5_float, 0.0f, 0.0f, 0.0f);
+              var6.b(11, var5_float, 0.0f, 0.0f, 0.0f);
               break L0;
             }
           }
@@ -52,12 +48,12 @@ final class vh extends rq {
             if (!this.field_h.field_g) {
               var5 = 16 * (this.field_b.field_kc % 4000) / 4000;
               this.field_b.a(this.field_h.field_d[var5], param0 ^ 33939);
-              discarded$6 = var7.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
+              var7.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
               break L1;
             } else {
               var5_float = (float)(this.field_b.field_kc % 4000) / 4000.0f;
               this.field_b.a(this.field_h.field_f, 114);
-              discarded$7 = var7.b(11, var5_float, 0.0f, 0.0f, 0.0f);
+              var7.b(11, var5_float, 0.0f, 0.0f, 0.0f);
               break L1;
             }
           }
@@ -68,20 +64,14 @@ final class vh extends rq {
     final boolean b(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 > -8) {
           L0: {
             this.c(false);
             if (null == this.field_e) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -89,12 +79,10 @@ final class vh extends rq {
         } else {
           L1: {
             if (null == this.field_e) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -110,16 +98,15 @@ final class vh extends rq {
     }
 
     final void c(byte param0) {
-        int discarded$2 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        ut var3 = null;
+        jagdx.IDirect3DDevice var2;
+        ut var3;
         L0: {
           if (this.field_e == null) {
             break L0;
           } else {
             var2 = this.field_f.field_Cc;
             var3 = this.field_f.k((byte) 126);
-            discarded$2 = var2.a(0, var3.a(0, field_g));
+            var2.a(0, var3.a(0, field_g));
             break L0;
           }
         }
@@ -132,21 +119,17 @@ final class vh extends rq {
     }
 
     final void a(byte param0) {
-        float[] discarded$4 = null;
-        int discarded$5 = 0;
-        float[] discarded$6 = null;
-        int discarded$7 = 0;
-        ut var4 = null;
-        jagdx.IDirect3DDevice var5 = null;
-        ut var6 = null;
-        jagdx.IDirect3DDevice var7 = null;
+        ut var4;
+        jagdx.IDirect3DDevice var5;
+        ut var6;
+        jagdx.IDirect3DDevice var7;
         if (param0 >= -47) {
           L0: {
             this.c(false);
             if (this.field_e != null) {
               var5 = this.field_f.field_Cc;
               var4 = this.field_b.H(26453);
-              discarded$4 = var4.a(field_g, (byte) -37);
+              var4.a(field_g, (byte) -37);
               field_g[2] = field_g[2] * 0.25f;
               field_g[3] = field_g[3] * 0.25f;
               field_g[5] = field_g[5] * 0.25f;
@@ -155,7 +138,7 @@ final class vh extends rq {
               field_g[1] = field_g[1] * 0.25f;
               field_g[0] = field_g[0] * 0.25f;
               field_g[6] = field_g[6] * 0.25f;
-              discarded$5 = var5.SetVertexShaderConstantF(8, field_g, 2);
+              var5.SetVertexShaderConstantF(8, field_g, 2);
               break L0;
             } else {
               break L0;
@@ -167,7 +150,7 @@ final class vh extends rq {
             if (this.field_e != null) {
               var7 = this.field_f.field_Cc;
               var6 = this.field_b.H(26453);
-              discarded$6 = var6.a(field_g, (byte) -37);
+              var6.a(field_g, (byte) -37);
               field_g[2] = field_g[2] * 0.25f;
               field_g[3] = field_g[3] * 0.25f;
               field_g[5] = field_g[5] * 0.25f;
@@ -176,7 +159,7 @@ final class vh extends rq {
               field_g[1] = field_g[1] * 0.25f;
               field_g[0] = field_g[0] * 0.25f;
               field_g[6] = field_g[6] * 0.25f;
-              discarded$7 = var7.SetVertexShaderConstantF(8, field_g, 2);
+              var7.SetVertexShaderConstantF(8, field_g, 2);
               break L1;
             } else {
               break L1;
@@ -219,20 +202,18 @@ final class vh extends rq {
     }
 
     final void b(boolean param0) {
-        int discarded$4 = 0;
-        boolean discarded$5 = false;
-        jagdx.IDirect3DDevice var2 = null;
+        jagdx.IDirect3DDevice var2;
         L0: {
           if (this.field_e != null) {
             var2 = this.field_f.field_Cc;
-            discarded$4 = var2.a(4, this.field_b.a(-105, field_g));
+            var2.a(4, this.field_b.a(-105, field_g));
             break L0;
           } else {
             break L0;
           }
         }
         if (param0) {
-          discarded$5 = this.b((byte) -103);
+          this.b((byte) -103);
           return;
         } else {
           return;
@@ -242,11 +223,10 @@ final class vh extends rq {
     final void b(int param0) {
         jagdx.IDirect3DDevice var2_ref_jagdx_IDirect3DDevice = null;
         ut var3 = null;
-        int discarded$0 = 0;
         if (!(this.field_e == null)) {
             var2_ref_jagdx_IDirect3DDevice = this.field_f.field_Cc;
             var3 = this.field_f.k((byte) 69);
-            discarded$0 = var2_ref_jagdx_IDirect3DDevice.a(0, var3.a(0, field_g));
+            var2_ref_jagdx_IDirect3DDevice.a(0, var3.a(0, field_g));
         }
         int var2 = 67 % ((41 - param0) / 46);
     }
@@ -275,12 +255,10 @@ final class vh extends rq {
     }
 
     final void a(int param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        float var3 = 0.0f;
-        float var4 = 0.0f;
-        float var5 = 0.0f;
+        jagdx.IDirect3DDevice var2;
+        float var3;
+        float var4;
+        float var5;
         L0: {
           if (null == this.field_e) {
             break L0;
@@ -288,13 +266,13 @@ final class vh extends rq {
             L1: {
               var2 = this.field_f.field_Cc;
               if (-1 <= (this.field_b.field_Kb ^ -1)) {
-                discarded$4 = var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
+                var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
                 break L1;
               } else {
                 var3 = this.field_b.field_Tb;
                 var4 = this.field_b.field_E;
                 var5 = -512.0f + var4;
-                discarded$5 = var2.b(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (var3 - var4));
+                var2.b(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (var3 - var4));
                 break L1;
               }
             }

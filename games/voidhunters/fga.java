@@ -138,15 +138,15 @@ final class fga extends f {
     }
 
     final synchronized void a(int param0) {
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        gd var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        gd var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         L0: {
           if (this.field_p <= 0) {
             break L0;
@@ -267,9 +267,9 @@ final class fga extends f {
                     if (this.field_i < var3) {
                       this.field_i = var3 + var3 - 1 - this.field_i;
                       this.field_j = -this.field_j;
-                      fieldTemp$3 = this.field_r - 1;
+                      fieldTemp$0 = this.field_r - 1;
                       this.field_r = this.field_r - 1;
-                      if (fieldTemp$3 != 0) {
+                      if (fieldTemp$0 != 0) {
                         break L7;
                       } else {
                         break L5;
@@ -283,15 +283,15 @@ final class fga extends f {
                   if (this.field_i >= var4) {
                     this.field_i = var4 + var4 - 1 - this.field_i;
                     this.field_j = -this.field_j;
-                    fieldTemp$4 = this.field_r - 1;
+                    fieldTemp$1 = this.field_r - 1;
                     this.field_r = this.field_r - 1;
-                    if (fieldTemp$4 != 0) {
+                    if (fieldTemp$1 != 0) {
                       if (this.field_i < var3) {
                         this.field_i = var3 + var3 - 1 - this.field_i;
                         this.field_j = -this.field_j;
-                        fieldTemp$5 = this.field_r - 1;
+                        fieldTemp$2 = this.field_r - 1;
                         this.field_r = this.field_r - 1;
-                        if (fieldTemp$5 != 0) {
+                        if (fieldTemp$2 != 0) {
                           continue L8;
                         } else {
                           break L5;
@@ -543,8 +543,8 @@ final class fga extends f {
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, fga param10, int param11, int param12) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         L0: {
           L1: {
             if (param11 == 0) {
@@ -586,9 +586,9 @@ final class fga extends f {
                 return param5;
               } else {
                 param0 = param2[param4 >> 8];
-                incrementValue$4 = param5;
+                incrementValue$2 = param5;
                 param5++;
-                param3[incrementValue$4] = param3[incrementValue$4] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
+                param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
                 param4 = param4 + param11;
                 continue L5;
               }
@@ -596,9 +596,9 @@ final class fga extends f {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1];
-            incrementValue$5 = param5;
+            incrementValue$3 = param5;
             param5++;
-            param3[incrementValue$5] = param3[incrementValue$5] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
+            param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
             param4 = param4 + param11;
             continue L2;
           }
@@ -676,10 +676,8 @@ final class fga extends f {
     }
 
     final int d() {
-        if (this.field_q == 0) {
-            if (this.field_p == 0) {
-                return 0;
-            }
+        if (this.field_q == 0 && this.field_p == 0) {
+            return 0;
         }
         return 1;
     }
@@ -691,7 +689,7 @@ final class fga extends f {
     }
 
     final synchronized void f(int param0) {
-        int var2 = 0;
+        int var2;
         if (param0 != 0) {
           if (this.field_l == 0) {
             if (this.field_v == 0) {
@@ -822,83 +820,70 @@ final class fga extends f {
     }
 
     private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, fga param9) {
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        L0: {
-          param2 = param2 >> 8;
-          param8 = param8 >> 8;
-          param4 = param4 << 2;
-          param5 = param5 << 2;
-          param6 = param3 + param8 - param2;
-          if (param3 + param8 - param2 <= param7) {
-            break L0;
-          } else {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        param2 = param2 >> 8;
+        param8 = param8 >> 8;
+        param4 = param4 << 2;
+        param5 = param5 << 2;
+        param6 = param3 + param8 - param2;
+        if (param3 + param8 - param2 > param7) {
             param6 = param7;
-            break L0;
-          }
         }
         param9.field_l = param9.field_l + param9.field_h * (param6 - param3);
         param9.field_v = param9.field_v + param9.field_t * (param6 - param3);
         param6 -= 3;
-        L1: while (true) {
-          if (param3 >= param6) {
-            param6 += 3;
-            L2: while (true) {
-              if (param3 >= param6) {
-                param9.field_u = param4 >> 2;
-                param9.field_i = param2 << 8;
-                return param3;
-              } else {
-                incrementValue$10 = param3;
-                param3++;
-                incrementValue$11 = param2;
-                param2++;
-                param1[incrementValue$10] = param1[incrementValue$10] + param0[incrementValue$11] * param4;
-                param4 = param4 + param5;
-                continue L2;
-              }
-            }
-          } else {
-            incrementValue$12 = param3;
+        while (param3 < param6) {
+            incrementValue$0 = param3;
             param3++;
-            incrementValue$13 = param2;
+            incrementValue$1 = param2;
             param2++;
-            param1[incrementValue$12] = param1[incrementValue$12] + param0[incrementValue$13] * param4;
+            param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
             param4 = param4 + param5;
-            incrementValue$14 = param3;
+            incrementValue$2 = param3;
             param3++;
-            incrementValue$15 = param2;
+            incrementValue$3 = param2;
             param2++;
-            param1[incrementValue$14] = param1[incrementValue$14] + param0[incrementValue$15] * param4;
+            param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
             param4 = param4 + param5;
-            incrementValue$16 = param3;
+            incrementValue$4 = param3;
             param3++;
-            incrementValue$17 = param2;
+            incrementValue$5 = param2;
             param2++;
-            param1[incrementValue$16] = param1[incrementValue$16] + param0[incrementValue$17] * param4;
+            param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
             param4 = param4 + param5;
-            incrementValue$18 = param3;
+            incrementValue$6 = param3;
             param3++;
-            incrementValue$19 = param2;
+            incrementValue$7 = param2;
             param2++;
-            param1[incrementValue$18] = param1[incrementValue$18] + param0[incrementValue$19] * param4;
+            param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
             param4 = param4 + param5;
-            continue L1;
-          }
         }
+        param6 += 3;
+        while (param3 < param6) {
+            incrementValue$8 = param3;
+            param3++;
+            incrementValue$9 = param2;
+            param2++;
+            param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
+            param4 = param4 + param5;
+        }
+        param9.field_u = param4 >> 2;
+        param9.field_i = param2 << 8;
+        return param3;
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, fga param10, int param11, int param12) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         L0: {
           L1: {
             if (param11 == 0) {
@@ -940,9 +925,9 @@ final class fga extends f {
                 param10.field_i = param4;
                 return param5;
               } else {
-                incrementValue$4 = param5;
+                incrementValue$2 = param5;
                 param5++;
-                param3[incrementValue$4] = param3[incrementValue$4] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
+                param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
                 param4 = param4 + param1;
                 continue L5;
               }
@@ -950,9 +935,9 @@ final class fga extends f {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
-            incrementValue$5 = param5;
+            incrementValue$3 = param5;
             param5++;
-            param3[incrementValue$5] = param3[incrementValue$5] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
+            param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
             param4 = param4 + param11;
             continue L2;
           }
@@ -960,7 +945,7 @@ final class fga extends f {
     }
 
     private final int b(int[] param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
+        int var6;
         L0: while (true) {
           if (this.field_p <= 0) {
             L1: {
@@ -1035,187 +1020,161 @@ final class fga extends f {
     }
 
     private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, fga param9) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        param2 = param2 >> 8;
+        param8 = param8 >> 8;
+        param4 = param4 << 2;
+        param5 = param5 << 2;
+        param6 = param3 + param2 - (param8 - 1);
+        if (param3 + param2 - (param8 - 1) > param7) {
+            param6 = param7;
+        }
+        param9.field_l = param9.field_l + param9.field_h * (param6 - param3);
+        param9.field_v = param9.field_v + param9.field_t * (param6 - param3);
+        param6 -= 3;
+        while (param3 < param6) {
+            incrementValue$0 = param3;
+            param3++;
+            incrementValue$1 = param2;
+            param2--;
+            param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
+            param4 = param4 + param5;
+            incrementValue$2 = param3;
+            param3++;
+            incrementValue$3 = param2;
+            param2--;
+            param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
+            param4 = param4 + param5;
+            incrementValue$4 = param3;
+            param3++;
+            incrementValue$5 = param2;
+            param2--;
+            param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
+            param4 = param4 + param5;
+            incrementValue$6 = param3;
+            param3++;
+            incrementValue$7 = param2;
+            param2--;
+            param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
+            param4 = param4 + param5;
+        }
+        param6 += 3;
+        while (param3 < param6) {
+            incrementValue$8 = param3;
+            param3++;
+            incrementValue$9 = param2;
+            param2--;
+            param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
+            param4 = param4 + param5;
+        }
+        param9.field_u = param4 >> 2;
+        param9.field_i = param2 << 8;
+        return param3;
+    }
+
+    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, fga param12) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         int incrementValue$10 = 0;
         int incrementValue$11 = 0;
         int incrementValue$12 = 0;
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        L0: {
-          param2 = param2 >> 8;
-          param8 = param8 >> 8;
-          param4 = param4 << 2;
-          param5 = param5 << 2;
-          param6 = param3 + param2 - (param8 - 1);
-          if (param3 + param2 - (param8 - 1) <= param7) {
-            break L0;
-          } else {
-            param6 = param7;
-            break L0;
-          }
-        }
-        param9.field_l = param9.field_l + param9.field_h * (param6 - param3);
-        param9.field_v = param9.field_v + param9.field_t * (param6 - param3);
-        param6 -= 3;
-        L1: while (true) {
-          if (param3 >= param6) {
-            param6 += 3;
-            L2: while (true) {
-              if (param3 >= param6) {
-                param9.field_u = param4 >> 2;
-                param9.field_i = param2 << 8;
-                return param3;
-              } else {
-                incrementValue$10 = param3;
-                param3++;
-                incrementValue$11 = param2;
-                param2--;
-                param1[incrementValue$10] = param1[incrementValue$10] + param0[incrementValue$11] * param4;
-                param4 = param4 + param5;
-                continue L2;
-              }
-            }
-          } else {
-            incrementValue$12 = param3;
-            param3++;
-            incrementValue$13 = param2;
-            param2--;
-            param1[incrementValue$12] = param1[incrementValue$12] + param0[incrementValue$13] * param4;
-            param4 = param4 + param5;
-            incrementValue$14 = param3;
-            param3++;
-            incrementValue$15 = param2;
-            param2--;
-            param1[incrementValue$14] = param1[incrementValue$14] + param0[incrementValue$15] * param4;
-            param4 = param4 + param5;
-            incrementValue$16 = param3;
-            param3++;
-            incrementValue$17 = param2;
-            param2--;
-            param1[incrementValue$16] = param1[incrementValue$16] + param0[incrementValue$17] * param4;
-            param4 = param4 + param5;
-            incrementValue$18 = param3;
-            param3++;
-            incrementValue$19 = param2;
-            param2--;
-            param1[incrementValue$18] = param1[incrementValue$18] + param0[incrementValue$19] * param4;
-            param4 = param4 + param5;
-            continue L1;
-          }
-        }
-    }
-
-    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, fga param12) {
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
-        int incrementValue$24 = 0;
-        int incrementValue$25 = 0;
-        int incrementValue$26 = 0;
-        int incrementValue$27 = 0;
-        int incrementValue$28 = 0;
-        int incrementValue$29 = 0;
-        L0: {
-          param3 = param3 >> 8;
-          param11 = param11 >> 8;
-          param5 = param5 << 2;
-          param6 = param6 << 2;
-          param7 = param7 << 2;
-          param8 = param8 << 2;
-          param9 = param4 + param11 - param3;
-          if (param4 + param11 - param3 <= param10) {
-            break L0;
-          } else {
+        param3 = param3 >> 8;
+        param11 = param11 >> 8;
+        param5 = param5 << 2;
+        param6 = param6 << 2;
+        param7 = param7 << 2;
+        param8 = param8 << 2;
+        param9 = param4 + param11 - param3;
+        if (param4 + param11 - param3 > param10) {
             param9 = param10;
-            break L0;
-          }
         }
         param12.field_u = param12.field_u + param12.field_m * (param9 - param4);
         param4 = param4 << 1;
         param9 = param9 << 1;
         param9 -= 6;
-        L1: while (true) {
-          if (param4 >= param9) {
-            param9 += 6;
-            L2: while (true) {
-              if (param4 >= param9) {
-                param12.field_l = param5 >> 2;
-                param12.field_v = param6 >> 2;
-                param12.field_i = param3 << 8;
-                return param4 >> 1;
-              } else {
-                incrementValue$15 = param3;
-                param3++;
-                param0 = param1[incrementValue$15];
-                incrementValue$16 = param4;
-                param4++;
-                param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
-                param5 = param5 + param7;
-                incrementValue$17 = param4;
-                param4++;
-                param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
-                param6 = param6 + param8;
-                continue L2;
-              }
-            }
-          } else {
-            incrementValue$18 = param3;
+        while (param4 < param9) {
+            incrementValue$0 = param3;
             param3++;
-            param0 = param1[incrementValue$18];
-            incrementValue$19 = param4;
+            param0 = param1[incrementValue$0];
+            incrementValue$1 = param4;
             param4++;
-            param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
+            param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
             param5 = param5 + param7;
-            incrementValue$20 = param4;
+            incrementValue$2 = param4;
             param4++;
-            param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
+            param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
             param6 = param6 + param8;
-            incrementValue$21 = param3;
+            incrementValue$3 = param3;
             param3++;
-            param0 = param1[incrementValue$21];
-            incrementValue$22 = param4;
+            param0 = param1[incrementValue$3];
+            incrementValue$4 = param4;
             param4++;
-            param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
+            param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
             param5 = param5 + param7;
-            incrementValue$23 = param4;
+            incrementValue$5 = param4;
             param4++;
-            param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
+            param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
             param6 = param6 + param8;
-            incrementValue$24 = param3;
+            incrementValue$6 = param3;
             param3++;
-            param0 = param1[incrementValue$24];
-            incrementValue$25 = param4;
+            param0 = param1[incrementValue$6];
+            incrementValue$7 = param4;
             param4++;
-            param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
+            param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
             param5 = param5 + param7;
-            incrementValue$26 = param4;
+            incrementValue$8 = param4;
             param4++;
-            param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
+            param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
             param6 = param6 + param8;
-            incrementValue$27 = param3;
+            incrementValue$9 = param3;
             param3++;
-            param0 = param1[incrementValue$27];
-            incrementValue$28 = param4;
+            param0 = param1[incrementValue$9];
+            incrementValue$10 = param4;
             param4++;
-            param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
+            param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
             param5 = param5 + param7;
-            incrementValue$29 = param4;
+            incrementValue$11 = param4;
             param4++;
-            param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
+            param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
             param6 = param6 + param8;
-            continue L1;
-          }
         }
+        param9 += 6;
+        while (param4 < param9) {
+            incrementValue$12 = param3;
+            param3++;
+            param0 = param1[incrementValue$12];
+            incrementValue$13 = param4;
+            param4++;
+            param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
+            param5 = param5 + param7;
+            incrementValue$14 = param4;
+            param4++;
+            param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
+            param6 = param6 + param8;
+        }
+        param12.field_l = param5 >> 2;
+        param12.field_v = param6 >> 2;
+        param12.field_i = param3 << 8;
+        return param4 >> 1;
     }
 
     final synchronized boolean i() {
@@ -1299,97 +1258,84 @@ final class fga extends f {
     }
 
     private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, fga param10) {
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
-        int incrementValue$24 = 0;
-        int incrementValue$25 = 0;
-        int incrementValue$26 = 0;
-        int incrementValue$27 = 0;
-        int incrementValue$28 = 0;
-        int incrementValue$29 = 0;
-        L0: {
-          param3 = param3 >> 8;
-          param9 = param9 >> 8;
-          param5 = param5 << 2;
-          param6 = param6 << 2;
-          param7 = param4 + param3 - (param9 - 1);
-          if (param4 + param3 - (param9 - 1) <= param8) {
-            break L0;
-          } else {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        param3 = param3 >> 8;
+        param9 = param9 >> 8;
+        param5 = param5 << 2;
+        param6 = param6 << 2;
+        param7 = param4 + param3 - (param9 - 1);
+        if (param4 + param3 - (param9 - 1) > param8) {
             param7 = param8;
-            break L0;
-          }
         }
         param4 = param4 << 1;
         param7 = param7 << 1;
         param7 -= 6;
-        L1: while (true) {
-          if (param4 >= param7) {
-            param7 += 6;
-            L2: while (true) {
-              if (param4 >= param7) {
-                param10.field_i = param3 << 8;
-                return param4 >> 1;
-              } else {
-                incrementValue$15 = param3;
-                param3--;
-                param0 = param1[incrementValue$15];
-                incrementValue$16 = param4;
-                param4++;
-                param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
-                incrementValue$17 = param4;
-                param4++;
-                param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
-                continue L2;
-              }
-            }
-          } else {
-            incrementValue$18 = param3;
+        while (param4 < param7) {
+            incrementValue$0 = param3;
             param3--;
-            param0 = param1[incrementValue$18];
-            incrementValue$19 = param4;
+            param0 = param1[incrementValue$0];
+            incrementValue$1 = param4;
             param4++;
-            param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
-            incrementValue$20 = param4;
+            param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
+            incrementValue$2 = param4;
             param4++;
-            param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
-            incrementValue$21 = param3;
+            param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
+            incrementValue$3 = param3;
             param3--;
-            param0 = param1[incrementValue$21];
-            incrementValue$22 = param4;
+            param0 = param1[incrementValue$3];
+            incrementValue$4 = param4;
             param4++;
-            param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
-            incrementValue$23 = param4;
+            param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
+            incrementValue$5 = param4;
             param4++;
-            param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
-            incrementValue$24 = param3;
+            param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
+            incrementValue$6 = param3;
             param3--;
-            param0 = param1[incrementValue$24];
-            incrementValue$25 = param4;
+            param0 = param1[incrementValue$6];
+            incrementValue$7 = param4;
             param4++;
-            param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
-            incrementValue$26 = param4;
+            param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
+            incrementValue$8 = param4;
             param4++;
-            param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
-            incrementValue$27 = param3;
+            param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
+            incrementValue$9 = param3;
             param3--;
-            param0 = param1[incrementValue$27];
-            incrementValue$28 = param4;
+            param0 = param1[incrementValue$9];
+            incrementValue$10 = param4;
             param4++;
-            param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
-            incrementValue$29 = param4;
+            param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
+            incrementValue$11 = param4;
             param4++;
-            param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
-            continue L1;
-          }
+            param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
         }
+        param7 += 6;
+        while (param4 < param7) {
+            incrementValue$12 = param3;
+            param3--;
+            param0 = param1[incrementValue$12];
+            incrementValue$13 = param4;
+            param4++;
+            param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
+            incrementValue$14 = param4;
+            param4++;
+            param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
+        }
+        param10.field_i = param3 << 8;
+        return param4 >> 1;
     }
 
     final synchronized int f() {
@@ -1397,112 +1343,99 @@ final class fga extends f {
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, fga param10) {
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
-        int incrementValue$24 = 0;
-        int incrementValue$25 = 0;
-        int incrementValue$26 = 0;
-        int incrementValue$27 = 0;
-        int incrementValue$28 = 0;
-        int incrementValue$29 = 0;
-        L0: {
-          param3 = param3 >> 8;
-          param9 = param9 >> 8;
-          param5 = param5 << 2;
-          param6 = param6 << 2;
-          param7 = param4 + param9 - param3;
-          if (param4 + param9 - param3 <= param8) {
-            break L0;
-          } else {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        param3 = param3 >> 8;
+        param9 = param9 >> 8;
+        param5 = param5 << 2;
+        param6 = param6 << 2;
+        param7 = param4 + param9 - param3;
+        if (param4 + param9 - param3 > param8) {
             param7 = param8;
-            break L0;
-          }
         }
         param4 = param4 << 1;
         param7 = param7 << 1;
         param7 -= 6;
-        L1: while (true) {
-          if (param4 >= param7) {
-            param7 += 6;
-            L2: while (true) {
-              if (param4 >= param7) {
-                param10.field_i = param3 << 8;
-                return param4 >> 1;
-              } else {
-                incrementValue$15 = param3;
-                param3++;
-                param0 = param1[incrementValue$15];
-                incrementValue$16 = param4;
-                param4++;
-                param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
-                incrementValue$17 = param4;
-                param4++;
-                param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
-                continue L2;
-              }
-            }
-          } else {
-            incrementValue$18 = param3;
+        while (param4 < param7) {
+            incrementValue$0 = param3;
             param3++;
-            param0 = param1[incrementValue$18];
-            incrementValue$19 = param4;
+            param0 = param1[incrementValue$0];
+            incrementValue$1 = param4;
             param4++;
-            param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
-            incrementValue$20 = param4;
+            param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
+            incrementValue$2 = param4;
             param4++;
-            param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
-            incrementValue$21 = param3;
+            param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
+            incrementValue$3 = param3;
             param3++;
-            param0 = param1[incrementValue$21];
-            incrementValue$22 = param4;
+            param0 = param1[incrementValue$3];
+            incrementValue$4 = param4;
             param4++;
-            param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
-            incrementValue$23 = param4;
+            param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
+            incrementValue$5 = param4;
             param4++;
-            param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
-            incrementValue$24 = param3;
+            param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
+            incrementValue$6 = param3;
             param3++;
-            param0 = param1[incrementValue$24];
-            incrementValue$25 = param4;
+            param0 = param1[incrementValue$6];
+            incrementValue$7 = param4;
             param4++;
-            param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
-            incrementValue$26 = param4;
+            param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
+            incrementValue$8 = param4;
             param4++;
-            param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
-            incrementValue$27 = param3;
+            param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
+            incrementValue$9 = param3;
             param3++;
-            param0 = param1[incrementValue$27];
-            incrementValue$28 = param4;
+            param0 = param1[incrementValue$9];
+            incrementValue$10 = param4;
             param4++;
-            param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
-            incrementValue$29 = param4;
+            param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
+            incrementValue$11 = param4;
             param4++;
-            param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
-            continue L1;
-          }
+            param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
         }
+        param7 += 6;
+        while (param4 < param7) {
+            incrementValue$12 = param3;
+            param3++;
+            param0 = param1[incrementValue$12];
+            incrementValue$13 = param4;
+            param4++;
+            param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
+            incrementValue$14 = param4;
+            param4++;
+            param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
+        }
+        param10.field_i = param3 << 8;
+        return param4 >> 1;
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
-        int fieldTemp$5 = 0;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int discarded$8 = 0;
-        int discarded$9 = 0;
-        gd var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        gd var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           if (this.field_q != 0) {
             break L0;
@@ -1610,9 +1543,9 @@ final class fga extends f {
                     if (this.field_i < var5) {
                       this.field_i = var5 + var5 - 1 - this.field_i;
                       this.field_j = -this.field_j;
-                      fieldTemp$5 = this.field_r - 1;
+                      fieldTemp$0 = this.field_r - 1;
                       this.field_r = this.field_r - 1;
-                      if (fieldTemp$5 != 0) {
+                      if (fieldTemp$0 != 0) {
                         break L7;
                       } else {
                         break L4;
@@ -1627,16 +1560,16 @@ final class fga extends f {
                   if (this.field_i >= var6) {
                     this.field_i = var6 + var6 - 1 - this.field_i;
                     this.field_j = -this.field_j;
-                    fieldTemp$6 = this.field_r - 1;
+                    fieldTemp$1 = this.field_r - 1;
                     this.field_r = this.field_r - 1;
-                    if (fieldTemp$6 != 0) {
+                    if (fieldTemp$1 != 0) {
                       var9 = this.a(param0, var9, var5, param2, (int) var4.field_i[this.field_n]);
                       if (this.field_i < var5) {
                         this.field_i = var5 + var5 - 1 - this.field_i;
                         this.field_j = -this.field_j;
-                        fieldTemp$7 = this.field_r - 1;
+                        fieldTemp$2 = this.field_r - 1;
                         this.field_r = this.field_r - 1;
-                        if (fieldTemp$7 != 0) {
+                        if (fieldTemp$2 != 0) {
                           continue L8;
                         } else {
                           break L4;
@@ -1655,7 +1588,7 @@ final class fga extends f {
             }
           }
           if (this.field_j < 0) {
-            discarded$8 = this.a(param0, var9, 0, param2, 0);
+            discarded$3 = this.a(param0, var9, 0, param2, 0);
             if (this.field_i < 0) {
               this.field_i = -1;
               this.l();
@@ -1666,7 +1599,7 @@ final class fga extends f {
             }
           } else {
             L9: {
-              discarded$9 = this.b(param0, var9, var7, param2, 0);
+              discarded$4 = this.b(param0, var9, var7, param2, 0);
               if (this.field_i < var7) {
                 break L9;
               } else {
@@ -1751,9 +1684,9 @@ final class fga extends f {
     }
 
     private final boolean j() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var1;
+        int var2;
+        int var3;
         L0: {
           var1 = this.field_q;
           if (var1 != -2147483648) {
@@ -1898,9 +1831,9 @@ final class fga extends f {
     }
 
     final synchronized void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var4;
+        int var5;
+        int var6;
         if (param0 != 0) {
           var4 = fga.b(param1, param2);
           var5 = fga.a(param1, param2);
@@ -2128,7 +2061,7 @@ final class fga extends f {
     }
 
     private final int a(int[] param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
+        int var6;
         L0: while (true) {
           if (this.field_p <= 0) {
             L1: {
@@ -2231,112 +2164,99 @@ final class fga extends f {
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, fga param12) {
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
-        int incrementValue$24 = 0;
-        int incrementValue$25 = 0;
-        int incrementValue$26 = 0;
-        int incrementValue$27 = 0;
-        int incrementValue$28 = 0;
-        int incrementValue$29 = 0;
-        L0: {
-          param3 = param3 >> 8;
-          param11 = param11 >> 8;
-          param5 = param5 << 2;
-          param6 = param6 << 2;
-          param7 = param7 << 2;
-          param8 = param8 << 2;
-          param9 = param4 + param3 - (param11 - 1);
-          if (param4 + param3 - (param11 - 1) <= param10) {
-            break L0;
-          } else {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        param3 = param3 >> 8;
+        param11 = param11 >> 8;
+        param5 = param5 << 2;
+        param6 = param6 << 2;
+        param7 = param7 << 2;
+        param8 = param8 << 2;
+        param9 = param4 + param3 - (param11 - 1);
+        if (param4 + param3 - (param11 - 1) > param10) {
             param9 = param10;
-            break L0;
-          }
         }
         param12.field_u = param12.field_u + param12.field_m * (param9 - param4);
         param4 = param4 << 1;
         param9 = param9 << 1;
         param9 -= 6;
-        L1: while (true) {
-          if (param4 >= param9) {
-            param9 += 6;
-            L2: while (true) {
-              if (param4 >= param9) {
-                param12.field_l = param5 >> 2;
-                param12.field_v = param6 >> 2;
-                param12.field_i = param3 << 8;
-                return param4 >> 1;
-              } else {
-                incrementValue$15 = param3;
-                param3--;
-                param0 = param1[incrementValue$15];
-                incrementValue$16 = param4;
-                param4++;
-                param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
-                param5 = param5 + param7;
-                incrementValue$17 = param4;
-                param4++;
-                param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
-                param6 = param6 + param8;
-                continue L2;
-              }
-            }
-          } else {
-            incrementValue$18 = param3;
+        while (param4 < param9) {
+            incrementValue$0 = param3;
             param3--;
-            param0 = param1[incrementValue$18];
-            incrementValue$19 = param4;
+            param0 = param1[incrementValue$0];
+            incrementValue$1 = param4;
             param4++;
-            param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
+            param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
             param5 = param5 + param7;
-            incrementValue$20 = param4;
+            incrementValue$2 = param4;
             param4++;
-            param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
+            param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
             param6 = param6 + param8;
-            incrementValue$21 = param3;
+            incrementValue$3 = param3;
             param3--;
-            param0 = param1[incrementValue$21];
-            incrementValue$22 = param4;
+            param0 = param1[incrementValue$3];
+            incrementValue$4 = param4;
             param4++;
-            param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
+            param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
             param5 = param5 + param7;
-            incrementValue$23 = param4;
+            incrementValue$5 = param4;
             param4++;
-            param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
+            param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
             param6 = param6 + param8;
-            incrementValue$24 = param3;
+            incrementValue$6 = param3;
             param3--;
-            param0 = param1[incrementValue$24];
-            incrementValue$25 = param4;
+            param0 = param1[incrementValue$6];
+            incrementValue$7 = param4;
             param4++;
-            param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
+            param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
             param5 = param5 + param7;
-            incrementValue$26 = param4;
+            incrementValue$8 = param4;
             param4++;
-            param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
+            param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
             param6 = param6 + param8;
-            incrementValue$27 = param3;
+            incrementValue$9 = param3;
             param3--;
-            param0 = param1[incrementValue$27];
-            incrementValue$28 = param4;
+            param0 = param1[incrementValue$9];
+            incrementValue$10 = param4;
             param4++;
-            param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
+            param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
             param5 = param5 + param7;
-            incrementValue$29 = param4;
+            incrementValue$11 = param4;
             param4++;
-            param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
+            param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
             param6 = param6 + param8;
-            continue L1;
-          }
         }
+        param9 += 6;
+        while (param4 < param9) {
+            incrementValue$12 = param3;
+            param3--;
+            param0 = param1[incrementValue$12];
+            incrementValue$13 = param4;
+            param4++;
+            param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
+            param5 = param5 + param7;
+            incrementValue$14 = param4;
+            param4++;
+            param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
+            param6 = param6 + param8;
+        }
+        param12.field_l = param5 >> 2;
+        param12.field_v = param6 >> 2;
+        param12.field_i = param3 << 8;
+        return param4 >> 1;
     }
 
     private fga(gd param0, int param1, int param2, int param3) {

@@ -5,16 +5,9 @@ final class lhb implements dja {
     static no field_a;
 
     final static tsa a(byte param0, ipb param1) throws ojb {
-        RuntimeException var2 = null;
-        int var4 = 0;
-        tsa var5 = null;
-        tsa var6 = null;
-        tsa var7 = null;
         tsa stackIn_9_0 = null;
         tsa stackIn_25_0 = null;
         tsa stackIn_31_0 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         RuntimeException stackIn_39_0 = null;
@@ -22,17 +15,11 @@ final class lhb implements dja {
         String stackIn_39_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        tsa stackOut_24_0 = null;
-        tsa stackOut_30_0 = null;
-        tsa stackOut_8_0 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
+        RuntimeException var2 = null;
+        int var4 = 0;
+        tsa var5 = null;
+        tsa var6 = null;
+        tsa var7 = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -70,8 +57,7 @@ final class lhb implements dja {
                                 throw new ojb(var5.field_g);
                               } else {
                                 if (param1.a((byte) -27).field_e == ua.field_o) {
-                                  stackOut_24_0 = (tsa) (var5);
-                                  stackIn_25_0 = stackOut_24_0;
+                                  stackIn_25_0 = (tsa) (var5);
                                   decompiledRegionSelector0 = 1;
                                   break L0;
                                 } else {
@@ -80,8 +66,7 @@ final class lhb implements dja {
                                   if (!param1.a(35)) {
                                     var7 = param1.a((byte) -28);
                                     if (var7.field_e == ua.field_o) {
-                                      stackOut_30_0 = (tsa) (var5);
-                                      stackIn_31_0 = stackOut_30_0;
+                                      stackIn_31_0 = (tsa) (var5);
                                       decompiledRegionSelector0 = 2;
                                       break L0;
                                     } else {
@@ -109,8 +94,7 @@ final class lhb implements dja {
                 }
               }
             }
-            stackOut_8_0 = (tsa) (var5);
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = (tsa) (var5);
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -118,27 +102,19 @@ final class lhb implements dja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) (var2);
-            stackOut_36_1 = new StringBuilder().append("lhb.D(").append(param0).append(',');
-            stackIn_38_0 = stackOut_36_0;
-            stackIn_38_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+            stackIn_38_0 = (RuntimeException) (var2);
+
+            stackIn_38_1 = new StringBuilder().append("lhb.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "null";
               break L4;
             } else {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "{...}";
-              stackIn_39_0 = stackOut_37_0;
-              stackIn_39_1 = stackOut_37_1;
-              stackIn_39_2 = stackOut_37_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "{...}";
               break L4;
             }
           }
@@ -156,30 +132,11 @@ final class lhb implements dja {
     }
 
     final static void a(byte param0, ml param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
         ml var4 = null;
         ml var5 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
-          L0: {
             param1.a(1, 7, new ml(35));
-            var2_int = -57 / ((param0 - 24) / 51);
+            int var2_int = -57 / ((param0 - 24) / 51);
             param1.a(1, 15, new ml(35));
             param1.a(1, 3, new ml(13));
             param1.a(1, 11, new ml(13));
@@ -195,44 +152,14 @@ final class lhb implements dja {
             var5 = new ml(33);
             var5.a(1, 2, new ml(13));
             param1.a(1, 13, var5);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var2);
-            stackOut_2_1 = new StringBuilder().append("lhb.C(").append(param0).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
-            } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "lhb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final tv[] a(int param0, int param1) {
-        tv discarded$0 = null;
         if (param0 != 11995) {
-            discarded$0 = this.a((byte) -4);
+            this.a((byte) -4);
             return (tv[]) ((Object) new mqb[param1]);
         }
         return (tv[]) ((Object) new mqb[param1]);

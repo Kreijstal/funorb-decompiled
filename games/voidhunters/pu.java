@@ -12,7 +12,6 @@ final class pu implements dja {
     }
 
     final static int a(byte param0, int param1) {
-        int discarded$2 = 0;
         if ((param1 ^ -1) != -6407) {
           if (-6410 != (param1 ^ -1)) {
             if (32841 != param1) {
@@ -22,7 +21,7 @@ final class pu implements dja {
                     return 4;
                   } else {
                     if (param0 >= -92) {
-                      discarded$2 = pu.a((byte) -64, -74);
+                      pu.a((byte) -64, -74);
                       throw new IllegalArgumentException("");
                     } else {
                       throw new IllegalArgumentException("");

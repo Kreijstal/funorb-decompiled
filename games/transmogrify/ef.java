@@ -21,103 +21,209 @@ final class ef implements Runnable {
         Exception exception = null;
         int var1_int = 0;
         qh var2 = null;
-        Throwable var3 = null;
         int var4 = 0;
         Object var5 = null;
         String var6 = null;
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
-        Throwable decompiledCaughtException = null;
-        var4 = Transmogrify.field_A ? 1 : 0;
-        this.field_d = true;
-        try {
-          L0: {
-            try {
-              L1: {
-                L2: while (true) {
-                  L3: {
-                    if (this.field_a) {
-                      break L3;
-                    } else {
-                      if (var4 != 0) {
-                        decompiledRegionSelector0 = 1;
-                        break L1;
-                      } else {
-                        var1_int = 0;
-                        L4: while (true) {
-                          L5: {
-                            L6: {
-                              if ((var1_int ^ -1) <= -3) {
-                                break L6;
-                              } else {
-                                var2 = this.field_f[var1_int];
-                                if (var4 != 0) {
-                                  break L5;
-                                } else {
-                                  L7: {
-                                    if (var2 != null) {
-                                      var2.a();
-                                      break L7;
-                                    } else {
-                                      break L7;
-                                    }
-                                  }
-                                  var1_int++;
-                                  if (var4 == 0) {
-                                    continue L4;
-                                  } else {
-                                    break L6;
-                                  }
-                                }
-                              }
-                            }
-                            pg.a(10L, -108);
-                            var5 = (Object) null;
-                            db.a(this.field_b, (Object) null, -125);
-                            break L5;
-                          }
-                          if (var4 == 0) {
-                            continue L2;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  decompiledRegionSelector0 = 0;
-                  break L1;
+        int statePc = 0;
+        Throwable caughtException = null;
+        Throwable var3 = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = Transmogrify.field_A ? 1 : 0;
+                    this.field_d = true;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              exception = (Exception) (Object) decompiledCaughtException;
-              var6 = (String) null;
-              d.a((Throwable) ((Object) exception), -14, (String) null);
-              this.field_d = false;
-              return;
+                case 1: {
+                    try {
+                        if (this.field_a) {
+                            statePc = 12;
+                        } else {
+                            statePc = 2;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = ((Object) stateCaught_1 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        if (var4 != 0) {
+                            statePc = 17;
+                        } else {
+                            statePc = 3;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = ((Object) stateCaught_2 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        var1_int = 0;
+                        statePc = 4;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = ((Object) stateCaught_3 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        if ((var1_int ^ -1) <= -3) {
+                            statePc = 10;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = ((Object) stateCaught_4 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        var2 = this.field_f[var1_int];
+                        if (var4 != 0) {
+                            statePc = 11;
+                        } else {
+                            statePc = 6;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = ((Object) stateCaught_5 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        if (var2 != null) {
+                            statePc = 8;
+                        } else {
+                            statePc = 7;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = ((Object) stateCaught_6 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        statePc = 9;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = ((Object) stateCaught_7 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        var2.a();
+                        statePc = 9;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = ((Object) stateCaught_8 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 9: {
+                    try {
+                        var1_int++;
+                        if (var4 == 0) {
+                            statePc = 4;
+                        } else {
+                            statePc = 10;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_9) {
+                        caughtException = stateCaught_9;
+                        statePc = ((Object) stateCaught_9 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    try {
+                        pg.a(10L, -108);
+                        var5 = (Object) null;
+                        db.a(this.field_b, (Object) null, -125);
+                        statePc = 11;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_10) {
+                        caughtException = stateCaught_10;
+                        statePc = ((Object) stateCaught_10 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    try {
+                        if (var4 == 0) {
+                            statePc = 1;
+                        } else {
+                            statePc = 12;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_11) {
+                        caughtException = stateCaught_11;
+                        statePc = ((Object) stateCaught_11 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 12: {
+                    this.field_d = false;
+                    statePc = 17;
+                    continue stateLoop;
+                }
+                case 13: {
+                    try {
+                        exception = (Exception) ((Object) caughtException);
+                        var6 = (String) null;
+                        d.a((Throwable) ((Object) exception), -14, (String) null);
+                        statePc = 14;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_13) {
+                        caughtException = stateCaught_13;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 14: {
+                    this.field_d = false;
+                    return;
+                }
+                case 15: {
+                    try {
+                        var3 = caughtException;
+                        statePc = 16;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_15) {
+                        caughtException = stateCaught_15;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 16: {
+                    this.field_d = false;
+                    throw ef.<RuntimeException>$cfr$sneakyThrow(var3);
+                }
+                case 17: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            if (decompiledRegionSelector0 == 0) {
-              decompiledRegionSelector1 = 0;
-              break L0;
-            } else {
-              decompiledRegionSelector1 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.Throwable decompiledCaughtParameter1) {
-          decompiledCaughtException = decompiledCaughtParameter1;
-          var3 = decompiledCaughtException;
-          this.field_d = false;
-          throw ef.<RuntimeException>$cfr$sneakyThrow(var3);
-        }
-        L8: {
-          if (decompiledRegionSelector1 == 0) {
-            this.field_d = false;
-            break L8;
-          } else {
-            break L8;
-          }
         }
     }
 

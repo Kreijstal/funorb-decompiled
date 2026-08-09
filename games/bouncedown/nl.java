@@ -15,7 +15,7 @@ final class nl {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1;
         if (!pg.field_c) {
           throw new IllegalStateException();
         } else {

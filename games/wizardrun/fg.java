@@ -9,17 +9,19 @@ final class fg {
     static int field_c;
 
     final static void a(byte param0) {
-        String[][] dupTemp$6 = null;
-        long[][] dupTemp$7 = null;
-        int[][] dupTemp$8 = null;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
+        String[][] dupTemp$0 = null;
+        long[][] dupTemp$1 = null;
+        int[][] dupTemp$2 = null;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        nj var4_ref_nj = null;
         long var4 = 0L;
+        nj var4_ref_nj = null;
         int var5 = 0;
         ai var6 = null;
         int var6_int = 0;
@@ -44,8 +46,6 @@ final class fg {
         int var25 = 0;
         int var26 = 0;
         mg var27 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = wizardrun.field_H;
         try {
           L0: {
@@ -125,16 +125,16 @@ final class fg {
                         var8_int = 1;
                         L8: while (true) {
                           if (var5 <= var8_int) {
-                            dupTemp$6 = new String[3][var6_int];
-                            var4_ref_nj.field_n = dupTemp$6;
-                            var8 = dupTemp$6;
+                            dupTemp$0 = new String[3][var6_int];
+                            var4_ref_nj.field_n = dupTemp$0;
+                            var8 = dupTemp$0;
                             var9 = new String[3][var6_int];
-                            dupTemp$7 = new long[3][var6_int];
-                            var4_ref_nj.field_q = dupTemp$7;
-                            var10 = dupTemp$7;
-                            dupTemp$8 = new int[3][var6_int * var7];
-                            var4_ref_nj.field_i = dupTemp$8;
-                            var11 = dupTemp$8;
+                            dupTemp$1 = new long[3][var6_int];
+                            var4_ref_nj.field_q = dupTemp$1;
+                            var10 = dupTemp$1;
+                            dupTemp$2 = new int[3][var6_int * var7];
+                            var4_ref_nj.field_i = dupTemp$2;
+                            var11 = dupTemp$2;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -167,9 +167,9 @@ final class fg {
                                         if (var7 <= var25) {
                                           break L10;
                                         } else {
-                                          incrementValue$9 = var15;
+                                          incrementValue$3 = var15;
                                           var15++;
-                                          var11[0][incrementValue$9] = var27.i(255);
+                                          var11[0][incrementValue$3] = var27.i(255);
                                           var25++;
                                           continue L11;
                                         }
@@ -193,9 +193,9 @@ final class fg {
                                           if (var7 <= var25) {
                                             break L12;
                                           } else {
-                                            incrementValue$10 = var16;
+                                            incrementValue$4 = var16;
                                             var16++;
-                                            var11[1][incrementValue$10] = var27.i(255);
+                                            var11[1][incrementValue$4] = var27.i(255);
                                             var25++;
                                             continue L13;
                                           }
@@ -219,9 +219,9 @@ final class fg {
                                           if (var7 <= var25) {
                                             break L14;
                                           } else {
-                                            incrementValue$11 = var17;
+                                            incrementValue$5 = var17;
                                             var17++;
-                                            var11[2][incrementValue$11] = var27.i(255);
+                                            var11[2][incrementValue$5] = var27.i(255);
                                             var25++;
                                             continue L15;
                                           }
@@ -291,8 +291,6 @@ final class fg {
 
     final int a(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == 0) {
             break L0;
@@ -309,14 +307,12 @@ final class fg {
               if (-1 == (this.field_e.length ^ -1)) {
                 break L2;
               } else {
-                stackOut_4_0 = this.field_e[-1 + this.field_e.length];
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = this.field_e[-1 + this.field_e.length];
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0;
@@ -329,8 +325,6 @@ final class fg {
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        char[] var7 = null;
-        int var8 = 0;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
@@ -338,18 +332,12 @@ final class fg {
         int stackIn_22_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_2_0 = 0;
         var5 = wizardrun.field_H;
         try {
           L0: {
             if (!Character.isISOControl(param0)) {
               if (kl.a(param0, true)) {
-                stackOut_6_0 = 1;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -358,37 +346,32 @@ final class fg {
                 var3 = param1;
                 L1: while (true) {
                   if (var6.length <= var3) {
-                    var7 = pf.field_e;
-                    var2 = var7;
-                    var8 = 0;
-                    var3 = var8;
+                    var2 = pf.field_e;
+                    var3 = 0;
                     L2: while (true) {
-                      if (var8 >= var7.length) {
-                        stackOut_21_0 = 0;
-                        stackIn_22_0 = stackOut_21_0;
+                      if (var3 >= var2.length) {
+                        stackIn_22_0 = 0;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
-                        var4 = var7[var8];
+                        var4 = var2[var3];
                         if (param0 == var4) {
-                          stackOut_18_0 = 1;
-                          stackIn_19_0 = stackOut_18_0;
+                          stackIn_19_0 = 1;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
-                          var8++;
+                          var3++;
                           continue L2;
                         }
                       }
                     }
                   } else {
                     var4 = var6[var3];
-                    if (var4 != param0) {
+                    if ((var4 ^ -1) != (param0 ^ -1)) {
                       var3++;
                       continue L1;
                     } else {
-                      stackOut_11_0 = 1;
-                      stackIn_12_0 = stackOut_11_0;
+                      stackIn_12_0 = 1;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
@@ -396,8 +379,7 @@ final class fg {
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -434,37 +416,19 @@ final class fg {
 
     final int a(int param0, int param1) {
         int var3 = 0;
-        int var4 = 0;
-        var4 = wizardrun.field_H;
-        if (null == this.field_e) {
-          return 0;
-        } else {
-          if (0 != this.field_e.length) {
-            L0: {
-              if (param0 == -1) {
-                break L0;
-              } else {
-                fg.a((byte) -28);
-                break L0;
-              }
-            }
-            var3 = 1;
-            L1: while (true) {
-              if (var3 >= this.field_e.length) {
-                return -1 + this.field_e.length;
-              } else {
-                if (param1 < this.field_e[var3 - 1] + this.field_e[var3] >> -1327339679) {
-                  return var3 - 1;
-                } else {
-                  var3++;
-                  continue L1;
-                }
-              }
-            }
-          } else {
+        int var4 = wizardrun.field_H;
+        if (null == this.field_e || 0 == this.field_e.length) {
             return 0;
-          }
         }
+        if (param0 != -1) {
+            fg.a((byte) -28);
+        }
+        for (var3 = 1; var3 < this.field_e.length; var3++) {
+            if (!((param1 ^ -1) <= (this.field_e[var3 - 1] + this.field_e[var3] >> -1327339679 ^ -1))) {
+                return var3 - 1;
+            }
+        }
+        return -1 + this.field_e.length;
     }
 
     static {

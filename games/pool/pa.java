@@ -10,8 +10,6 @@ final class pa extends ob {
     static int[] field_L;
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
         if (null != vl.field_m) {
           if (!vl.field_m.b((byte) 111)) {
             if (!param0) {
@@ -43,7 +41,7 @@ final class pa extends ob {
                 }
               }
             } else {
-              discarded$2 = pa.f(118);
+              pa.f(118);
               if (null == fc.field_b) {
                 if (sn.h(-3)) {
                   return true;
@@ -106,7 +104,7 @@ final class pa extends ob {
               }
             }
           } else {
-            discarded$3 = pa.f(118);
+            pa.f(118);
             if (null == fc.field_b) {
               if (sn.h(-3)) {
                 return true;
@@ -143,23 +141,16 @@ final class pa extends ob {
     }
 
     final static int f(int param0) {
-        boolean discarded$14 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -1) {
           L0: {
-            discarded$14 = pa.a(false, 38, 98, -101);
+            pa.a(false, 38, 98, -101);
             if (pq.field_B == null) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = pq.field_B.length;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = pq.field_B.length;
               break L0;
             }
           }
@@ -167,12 +158,10 @@ final class pa extends ob {
         } else {
           L1: {
             if (pq.field_B == null) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = pq.field_B.length;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = pq.field_B.length;
               break L1;
             }
           }
@@ -193,19 +182,15 @@ final class pa extends ob {
 
     final int b(byte param0, int param1) {
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 6) {
           return 103;
         } else {
           L0: {
             if (-1 + this.field_h.length == param1) {
-              stackOut_3_0 = 20;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 20;
               break L0;
             } else {
-              stackOut_2_0 = 0;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 0;
               break L0;
             }
           }

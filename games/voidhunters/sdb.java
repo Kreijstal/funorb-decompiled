@@ -6,6 +6,9 @@ final class sdb extends rqa {
     static llb field_p;
 
     final static String a(int param0) {
+        String stackIn_56_0 = null;
+        Object stackIn_94_0 = null;
+        RuntimeException decompiledCaughtException = null;
         Object var1 = null;
         Object var2 = null;
         String var3 = null;
@@ -16,12 +19,6 @@ final class sdb extends rqa {
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
-        String stackIn_56_0 = null;
-        Object stackIn_94_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_55_0 = null;
-        String stackOut_53_0 = null;
-        Object stackOut_93_0 = null;
         var10 = VoidHunters.field_G;
         try {
           L0: {
@@ -173,12 +170,10 @@ final class sdb extends rqa {
                   }
                   L14: {
                     if (tob.g(0)) {
-                      stackOut_55_0 = ": ";
-                      stackIn_56_0 = stackOut_55_0;
+                      stackIn_56_0 = ": ";
                       break L14;
                     } else {
-                      stackOut_53_0 = "<img=3>: ";
-                      stackIn_56_0 = stackOut_53_0;
+                      stackIn_56_0 = "<img=3>: ";
                       break L14;
                     }
                   }
@@ -263,8 +258,7 @@ final class sdb extends rqa {
                 break L7;
               }
             }
-            stackOut_93_0 = var1;
-            stackIn_94_0 = stackOut_93_0;
+            stackIn_94_0 = var1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -278,23 +272,12 @@ final class sdb extends rqa {
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
         nc stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_3_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             L1: {
@@ -305,35 +288,26 @@ final class sdb extends rqa {
                 break L1;
               }
             }
-            stackOut_3_0 = new nc(frb.a(48, 117));
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = new nc(frb.a(48, 117));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("sdb.A(");
-            stackIn_8_0 = stackOut_5_0;
-            stackIn_8_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("sdb.A(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_9_0 = stackOut_6_0;
-              stackIn_9_1 = stackOut_6_1;
-              stackIn_9_2 = stackOut_6_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }

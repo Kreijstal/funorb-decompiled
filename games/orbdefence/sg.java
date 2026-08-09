@@ -12,27 +12,18 @@ abstract class sg extends ta {
     private final int e(boolean param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0) {
           L0: {
             this.field_A = false;
             if (!this.field_A) {
-              stackOut_11_0 = 0;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_0 = 0;
               break L0;
             } else {
               if (this == this.field_C.k(3469)) {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 256;
                 break L0;
               } else {
-                stackOut_9_0 = 0;
-                stackIn_12_0 = stackOut_9_0;
+                stackIn_12_0 = 0;
                 break L0;
               }
             }
@@ -41,17 +32,14 @@ abstract class sg extends ta {
         } else {
           L1: {
             if (!this.field_A) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               break L1;
             } else {
               if (this == this.field_C.k(3469)) {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L1;
               } else {
-                stackOut_3_0 = 0;
-                stackIn_6_0 = stackOut_3_0;
+                stackIn_6_0 = 0;
                 break L1;
               }
             }
@@ -68,7 +56,7 @@ abstract class sg extends ta {
     }
 
     boolean l(int param0) {
-        int discarded$2 = 0;
+        int discarded$1 = 0;
         if (param0 == 194) {
           this.field_D = this.e(false);
           if (this.field_D == 0) {
@@ -81,7 +69,7 @@ abstract class sg extends ta {
             return false;
           }
         } else {
-          discarded$2 = this.e(true);
+          discarded$1 = this.e(true);
           this.field_D = this.e(false);
           if (this.field_D == 0) {
             if (this.field_A) {
@@ -96,20 +84,12 @@ abstract class sg extends ta {
     }
 
     boolean d(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_8_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_27_0 = 0;
         int stackIn_33_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
+        int var2;
+        int var3;
         var2 = this.e(param0);
         var3 = var2 + -this.field_D;
         if (var3 <= 0) {
@@ -126,15 +106,13 @@ abstract class sg extends ta {
                     if (this.field_A) {
                       break L1;
                     } else {
-                      stackOut_31_0 = 1;
-                      stackIn_33_0 = stackOut_31_0;
+                      stackIn_33_0 = 1;
                       break L0;
                     }
                   }
                 }
               }
-              stackOut_32_0 = 0;
-              stackIn_33_0 = stackOut_32_0;
+              stackIn_33_0 = 0;
               break L0;
             }
             return stackIn_33_0 != 0;
@@ -150,15 +128,13 @@ abstract class sg extends ta {
                     if (this.field_A) {
                       break L3;
                     } else {
-                      stackOut_25_0 = 1;
-                      stackIn_27_0 = stackOut_25_0;
+                      stackIn_27_0 = 1;
                       break L2;
                     }
                   }
                 }
               }
-              stackOut_26_0 = 0;
-              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_0 = 0;
               break L2;
             }
             return stackIn_27_0 != 0;
@@ -173,12 +149,10 @@ abstract class sg extends ta {
               } else {
                 L4: {
                   if (this.field_A) {
-                    stackOut_17_0 = 0;
-                    stackIn_18_0 = stackOut_17_0;
+                    stackIn_18_0 = 0;
                     break L4;
                   } else {
-                    stackOut_16_0 = 1;
-                    stackIn_18_0 = stackOut_16_0;
+                    stackIn_18_0 = 1;
                     break L4;
                   }
                 }
@@ -194,12 +168,10 @@ abstract class sg extends ta {
               } else {
                 L5: {
                   if (this.field_A) {
-                    stackOut_7_0 = 0;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = 0;
                     break L5;
                   } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = 1;
                     break L5;
                   }
                 }
@@ -295,8 +267,6 @@ abstract class sg extends ta {
 
     final static boolean c(boolean param0) {
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
         if (param0) {
           if (hi.field_k >= 10) {
             if (d.field_k) {
@@ -304,12 +274,10 @@ abstract class sg extends ta {
             } else {
               L0: {
                 if (p.a(23236)) {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 0;
                   break L0;
                 } else {
-                  stackOut_6_0 = 1;
-                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_0 = 1;
                   break L0;
                 }
               }
@@ -335,11 +303,8 @@ abstract class sg extends ta {
         e stackIn_4_0 = null;
         e stackIn_8_0 = null;
         e stackIn_13_0 = null;
-        e stackIn_17_0 = null;
         e stackIn_19_0 = null;
         e stackIn_22_0 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -347,33 +312,17 @@ abstract class sg extends ta {
         String stackIn_26_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        e stackOut_3_0 = null;
-        e stackOut_7_0 = null;
-        e stackOut_16_0 = null;
-        e stackOut_18_0 = null;
-        e stackOut_21_0 = null;
-        e stackOut_12_0 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
             var2_int = param1.length();
             if (var2_int == 0) {
-              stackOut_3_0 = oc.field_M;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = oc.field_M;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if ((var2_int ^ -1) < -256) {
-                stackOut_7_0 = vj.field_c;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = vj.field_c;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -397,13 +346,12 @@ abstract class sg extends ta {
                         } else {
                           var6 = var4[var5];
                           var7 = eg.b(0, var6);
-                          stackOut_16_0 = (e) (var7);
-                          stackIn_22_0 = stackOut_16_0;
-                          stackIn_17_0 = stackOut_16_0;
+                          stackIn_22_0 = (e) (var7);
+
                           if (var8 != 0) {
                             break L3;
                           } else {
-                            if (stackIn_17_0 == null) {
+                            if (stackIn_22_0 == null) {
                               var5++;
                               if (var8 == 0) {
                                 continue L2;
@@ -411,24 +359,21 @@ abstract class sg extends ta {
                                 break L4;
                               }
                             } else {
-                              stackOut_18_0 = (e) (var7);
-                              stackIn_19_0 = stackOut_18_0;
+                              stackIn_19_0 = (e) (var7);
                               decompiledRegionSelector0 = 4;
                               break L0;
                             }
                           }
                         }
                       }
-                      stackOut_21_0 = dh.a(var3[-1 + var3.length], (byte) 118);
-                      stackIn_22_0 = stackOut_21_0;
+                      stackIn_22_0 = dh.a(var3[-1 + var3.length], (byte) 118);
                       break L3;
                     }
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
-                  stackOut_12_0 = oc.field_M;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = oc.field_M;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -439,27 +384,19 @@ abstract class sg extends ta {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var2);
-            stackOut_23_1 = new StringBuilder().append("sg.QB(").append(param0).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var2);
+
+            stackIn_25_1 = new StringBuilder().append("sg.QB(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L5;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L5;
             }
           }

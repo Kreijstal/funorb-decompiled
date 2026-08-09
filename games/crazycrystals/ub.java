@@ -28,8 +28,6 @@ final class ub extends RuntimeException {
     }
 
     final static void b(int param0) {
-        int discarded$7 = 0;
-        int discarded$8 = 0;
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -45,7 +43,7 @@ final class ub extends RuntimeException {
             if (param0 == 0) {
               break L1;
             } else {
-              discarded$7 = ub.a(-12);
+              ub.a(-12);
               break L1;
             }
           }
@@ -55,7 +53,7 @@ final class ub extends RuntimeException {
             if (param0 == 0) {
               break L2;
             } else {
-              discarded$8 = ub.a(-12);
+              ub.a(-12);
               break L2;
             }
           }

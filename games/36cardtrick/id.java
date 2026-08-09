@@ -12,6 +12,7 @@ final class id {
     public static void a(boolean param0) {
         field_c = null;
         if (!param0) {
+          id.a(8);
           field_e = null;
           field_a = null;
           field_f = null;
@@ -32,6 +33,7 @@ final class id {
           if (param0 > 96) {
             return;
           } else {
+            id.a(78);
             return;
           }
         } else {
@@ -39,13 +41,14 @@ final class id {
           if (param0 > 96) {
             return;
           } else {
+            id.a(78);
             return;
           }
         }
     }
 
     final synchronized static long a(int param0) {
-        long var1 = 0L;
+        long var1;
         if (param0 < 21) {
           L0: {
             id.a((byte) -72);

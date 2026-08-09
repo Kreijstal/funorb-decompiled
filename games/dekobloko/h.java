@@ -11,7 +11,7 @@ final class h {
     static ke field_d;
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = -63 % ((param0 - -6) / 38);
         kk.field_n = kk.field_n + 1;
         if (-141 < (kk.field_n ^ -1)) {
@@ -43,91 +43,47 @@ final class h {
     }
 
     final static void a(int param0, boolean param1) {
-        int discarded$3 = 0;
-        int var2 = 0;
+        int var2;
         int stackIn_3_0 = 0;
-        int stackIn_4_0 = 0;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_7_1 = 0;
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
         int stackIn_9_0 = 0;
         int stackIn_9_1 = 0;
         int stackIn_9_2 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_10_1 = 0;
-        int stackIn_10_2 = 0;
-        int stackIn_10_3 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_11_1 = 0;
-        int stackIn_11_2 = 0;
-        int stackIn_11_3 = 0;
+        int stackIn_11_0;
+        int stackIn_11_1;
+        int stackIn_11_2;
+        int stackIn_11_3;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
         int stackIn_12_2 = 0;
         int stackIn_12_3 = 0;
         int stackIn_12_4 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_4_1 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        int stackOut_9_3 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        int stackOut_11_3 = 0;
-        int stackOut_11_4 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
-        int stackOut_10_2 = 0;
-        int stackOut_10_3 = 0;
-        int stackOut_10_4 = 0;
         L0: {
           fl.a(130, 256, 16694016, bj.field_c, param0 + 82, w.field_kb);
           if (1 != kd.field_p) {
-            stackOut_2_0 = 145;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 145;
             break L0;
           } else {
-            stackOut_1_0 = 140;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 140;
             break L0;
           }
         }
         L1: {
           var2 = stackIn_3_0;
           fb.field_c[0][1].c(82 + param0, var2, 18, 18);
-          stackOut_3_0 = var2;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_4_0 = stackOut_3_0;
+          stackIn_5_0 = var2;
+
           if (-2 == (kd.field_p ^ -1)) {
-            stackOut_5_0 = stackIn_5_0;
-            stackOut_5_1 = 8;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_6_0 = stackIn_5_0;
+            stackIn_6_1 = 8;
             break L1;
           } else {
-            stackOut_4_0 = stackIn_4_0;
-            stackOut_4_1 = 16;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
+            stackIn_6_0 = stackIn_5_0;
+            stackIn_6_1 = 16;
             break L1;
           }
         }
@@ -142,27 +98,19 @@ final class h {
           cg.a(0, 2, 12, param0 + 230, var2 - -18, 3, -1);
           cg.a(0, 2, 8, param0 + 230, var2, 3, -1);
           cg.a(0, 2, 1, param0 + 248, var2 + 36, 2, -2);
-          stackOut_6_0 = var2;
-          stackOut_6_1 = 54;
-          stackIn_8_0 = stackOut_6_0;
-          stackIn_8_1 = stackOut_6_1;
-          stackIn_7_0 = stackOut_6_0;
-          stackIn_7_1 = stackOut_6_1;
+          stackIn_8_0 = var2;
+
+          stackIn_8_1 = 54;
+
           if (kd.field_p != 1) {
-            stackOut_8_0 = stackIn_8_0;
-            stackOut_8_1 = stackIn_8_1;
-            stackOut_8_2 = 16;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            stackIn_9_2 = stackOut_8_2;
+            stackIn_9_0 = stackIn_8_0;
+            stackIn_9_1 = stackIn_8_1;
+            stackIn_9_2 = 16;
             break L2;
           } else {
-            stackOut_7_0 = stackIn_7_0;
-            stackOut_7_1 = stackIn_7_1;
-            stackOut_7_2 = 8;
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_9_2 = stackOut_7_2;
+            stackIn_9_0 = stackIn_8_0;
+            stackIn_9_1 = stackIn_8_1;
+            stackIn_9_2 = 8;
             break L2;
           }
         }
@@ -170,41 +118,27 @@ final class h {
           var2 = stackIn_9_0 + (stackIn_9_1 - -stackIn_9_2);
           fb.field_c[3][1].c(82 + param0, var2, 18, 18);
           var2 = var2 + ga.a(140, 0, var2, rk.field_N, 16, 64, 16777215, se.field_S, (byte) -127, 0, 110 - -param0) * 16;
-          stackOut_9_0 = gi.field_c;
-          stackOut_9_1 = nf.field_e;
-          stackOut_9_2 = var2;
-          stackOut_9_3 = 90;
-          stackIn_11_0 = stackOut_9_0;
-          stackIn_11_1 = stackOut_9_1;
-          stackIn_11_2 = stackOut_9_2;
-          stackIn_11_3 = stackOut_9_3;
-          stackIn_10_0 = stackOut_9_0;
-          stackIn_10_1 = stackOut_9_1;
-          stackIn_10_2 = stackOut_9_2;
-          stackIn_10_3 = stackOut_9_3;
+          stackIn_11_0 = gi.field_c;
+
+          stackIn_11_1 = nf.field_e;
+
+          stackIn_11_2 = var2;
+
+          stackIn_11_3 = 90;
+
           if (-2 == (kd.field_p ^ -1)) {
-            stackOut_11_0 = stackIn_11_0;
-            stackOut_11_1 = stackIn_11_1;
-            stackOut_11_2 = stackIn_11_2;
-            stackOut_11_3 = stackIn_11_3;
-            stackOut_11_4 = 16;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
-            stackIn_12_2 = stackOut_11_2;
-            stackIn_12_3 = stackOut_11_3;
-            stackIn_12_4 = stackOut_11_4;
+            stackIn_12_0 = stackIn_11_0;
+            stackIn_12_1 = stackIn_11_1;
+            stackIn_12_2 = stackIn_11_2;
+            stackIn_12_3 = stackIn_11_3;
+            stackIn_12_4 = 16;
             break L3;
           } else {
-            stackOut_10_0 = stackIn_10_0;
-            stackOut_10_1 = stackIn_10_1;
-            stackOut_10_2 = stackIn_10_2;
-            stackOut_10_3 = stackIn_10_3;
-            stackOut_10_4 = 0;
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_12_2 = stackOut_10_2;
-            stackIn_12_3 = stackOut_10_3;
-            stackIn_12_4 = stackOut_10_4;
+            stackIn_12_0 = stackIn_11_0;
+            stackIn_12_1 = stackIn_11_1;
+            stackIn_12_2 = stackIn_11_2;
+            stackIn_12_3 = stackIn_11_3;
+            stackIn_12_4 = 0;
             break L3;
           }
         }
@@ -212,13 +146,13 @@ final class h {
         hk.g(309 - -param0, 117, 242, 263172);
         hk.g(param0 + 310, 117, 242, 6316128);
         fl.a(130, 256, 16694016, kc.field_q, 322 + param0, w.field_kb);
-        int discarded$2 = ga.a(120, 0, 145, di.field_D, 16, 64, 16777215, se.field_S, (byte) -127, 0, param0 + 320);
+        ga.a(120, 0, 145, di.field_D, 16, 64, 16777215, se.field_S, (byte) -127, 0, param0 + 320);
         aj.field_c.c(455 + param0, 123);
         if (param1) {
           return;
         } else {
           fl.a(240, 256, 16694016, fm.field_c, 322 - -param0, w.field_kb);
-          discarded$3 = ga.a(120, 0, 255, ah.field_g, 16, 64, 16777215, se.field_S, (byte) -127, 0, 320 + param0);
+          ga.a(120, 0, 255, ah.field_g, 16, 64, 16777215, se.field_S, (byte) -127, 0, 320 + param0);
           li.field_i.c(465 + param0, 235);
           return;
         }
@@ -249,18 +183,14 @@ final class h {
 
     final static boolean a(boolean param0) {
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
         if (!param0) {
           L0: {
             if (ph.n(-30146)) {
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = 1;
               break L0;
             } else {
               if (eh.field_a > 0) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L0;
               } else {
                 return true;
@@ -274,9 +204,6 @@ final class h {
     }
 
     final static void a(ke param0, byte param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_84_0 = null;
-        StringBuilder stackIn_84_1 = null;
         RuntimeException stackIn_85_0 = null;
         StringBuilder stackIn_85_1 = null;
         RuntimeException stackIn_86_0 = null;
@@ -284,14 +211,7 @@ final class h {
         String stackIn_86_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_83_0 = null;
-        StringBuilder stackOut_83_1 = null;
-        RuntimeException stackOut_85_0 = null;
-        StringBuilder stackOut_85_1 = null;
-        String stackOut_85_2 = null;
-        RuntimeException stackOut_84_0 = null;
-        StringBuilder stackOut_84_1 = null;
-        String stackOut_84_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -588,27 +508,19 @@ final class h {
           decompiledCaughtException = decompiledCaughtParameter0;
           L22: {
             var2 = decompiledCaughtException;
-            stackOut_83_0 = (RuntimeException) (var2);
-            stackOut_83_1 = new StringBuilder().append("h.H(");
-            stackIn_85_0 = stackOut_83_0;
-            stackIn_85_1 = stackOut_83_1;
-            stackIn_84_0 = stackOut_83_0;
-            stackIn_84_1 = stackOut_83_1;
+            stackIn_85_0 = (RuntimeException) (var2);
+
+            stackIn_85_1 = new StringBuilder().append("h.H(");
+
             if (param0 == null) {
-              stackOut_85_0 = (RuntimeException) ((Object) stackIn_85_0);
-              stackOut_85_1 = (StringBuilder) ((Object) stackIn_85_1);
-              stackOut_85_2 = "null";
-              stackIn_86_0 = stackOut_85_0;
-              stackIn_86_1 = stackOut_85_1;
-              stackIn_86_2 = stackOut_85_2;
+              stackIn_86_0 = (RuntimeException) ((Object) stackIn_85_0);
+              stackIn_86_1 = (StringBuilder) ((Object) stackIn_85_1);
+              stackIn_86_2 = "null";
               break L22;
             } else {
-              stackOut_84_0 = (RuntimeException) ((Object) stackIn_84_0);
-              stackOut_84_1 = (StringBuilder) ((Object) stackIn_84_1);
-              stackOut_84_2 = "{...}";
-              stackIn_86_0 = stackOut_84_0;
-              stackIn_86_1 = stackOut_84_1;
-              stackIn_86_2 = stackOut_84_2;
+              stackIn_86_0 = (RuntimeException) ((Object) stackIn_85_0);
+              stackIn_86_1 = (StringBuilder) ((Object) stackIn_85_1);
+              stackIn_86_2 = "{...}";
               break L22;
             }
           }

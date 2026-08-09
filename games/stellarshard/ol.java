@@ -58,8 +58,8 @@ final class ol {
     }
 
     private final int a(boolean param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = stellarshard.field_B;
         if (!param0) {
           this.field_b = 105;
@@ -106,8 +106,8 @@ final class ol {
     }
 
     private final void a(int param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         if (param1 < 54) {
           ol.a(false);
           var4 = new int[this.a(true, param0)];
@@ -171,7 +171,6 @@ final class ol {
     }
 
     final int a(byte param0, int param1) {
-        int discarded$6 = 0;
         if (param0 == -117) {
           if (param1 > this.field_e) {
             throw new ArrayIndexOutOfBoundsException(param1);
@@ -179,7 +178,7 @@ final class ol {
             return this.field_f[param1];
           }
         } else {
-          discarded$6 = this.a(-72);
+          this.a(-72);
           if (param1 > this.field_e) {
             throw new ArrayIndexOutOfBoundsException(param1);
           } else {
@@ -201,9 +200,8 @@ final class ol {
     }
 
     final int a(int param0) {
-        int discarded$0 = 0;
         if (param0 != 19692) {
-            discarded$0 = this.a((byte) 67, 47);
+            this.a((byte) 67, 47);
             return 1 + this.field_e;
         }
         return 1 + this.field_e;

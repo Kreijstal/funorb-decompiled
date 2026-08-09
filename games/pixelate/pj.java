@@ -14,7 +14,7 @@ final class pj {
     private int field_c;
 
     final static void a(byte param0, boolean param1) {
-        int var3 = 0;
+        int var3;
         var3 = Pixelate.field_H ? 1 : 0;
         if (param0 <= 87) {
           field_i = (ak) null;
@@ -471,7 +471,7 @@ final class pj {
     }
 
     final void a(byte param0) {
-        int var3 = 0;
+        int var3;
         var3 = Pixelate.field_H ? 1 : 0;
         if (param0 <= -22) {
           if (this.field_f) {
@@ -520,11 +520,7 @@ final class pj {
     }
 
     final void a(int param0) {
-        int discarded$0 = 0;
         int var2 = 0;
-        int discarded$1 = 0;
-        int discarded$2 = 0;
-        int discarded$3 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
         if (!(!this.field_f)) {
             return;
@@ -535,7 +531,7 @@ final class pj {
                 if (param0 <= -55) {
                     return;
                 }
-                discarded$0 = pj.a(31, 2, 48, (byte) 8);
+                pj.a(31, 2, 48, (byte) 8);
                 return;
             }
             if (-77 < (this.field_h ^ -1)) {
@@ -546,12 +542,12 @@ final class pj {
                 if (param0 <= -55) {
                     return;
                 }
-                discarded$1 = pj.a(31, 2, 48, (byte) 8);
+                pj.a(31, 2, 48, (byte) 8);
                 return;
             }
             this.field_f = true;
             if (param0 > -55) {
-                discarded$2 = pj.a(31, 2, 48, (byte) 8);
+                pj.a(31, 2, 48, (byte) 8);
                 return;
             }
             return;
@@ -559,7 +555,7 @@ final class pj {
         this.field_g = this.field_h * this.field_e.field_B / 8;
         this.field_j = this.field_h * this.field_e.field_A / 8;
         if (param0 > -55) {
-            discarded$3 = pj.a(31, 2, 48, (byte) 8);
+            pj.a(31, 2, 48, (byte) 8);
             return;
         }
     }

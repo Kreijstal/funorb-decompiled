@@ -7,48 +7,36 @@ final class fpb extends mfb {
     static byte[][] field_d;
 
     final int k(int param0) {
-        int discarded$0 = 0;
         if (param0 != 0) {
-            discarded$0 = this.f((byte) -51);
+            this.f((byte) -51);
             return 0;
         }
         return 0;
     }
 
     final int a(int param0) {
-        int discarded$0 = 0;
         if (param0 != 0) {
-            discarded$0 = this.b(true);
+            this.b(true);
         }
         return sbb.field_p;
     }
 
     final static void a(pgb param0, int param1) {
-        int dupTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int incrementValue$6 = 0;
-        int dupTemp$7 = 0;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
+        int dupTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int dupTemp$3 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -58,16 +46,16 @@ final class fpb extends mfb {
                 var2_int = 0;
                 L2: while (true) {
                   if (var2_int >= ou.field_q) {
-                    dupTemp$4 = param0.a(1);
-                    dca.field_q[dupTemp$4] = dca.field_q[dupTemp$4] + 1;
+                    dupTemp$0 = param0.a(1);
+                    dca.field_q[dupTemp$0] = dca.field_q[dupTemp$0] + 1;
                     var2_int = 0;
                     var3 = 0;
                     L3: while (true) {
                       if (ou.field_q <= var3) {
                         ou.field_q = var2_int;
-                        fieldTemp$5 = ou.field_q;
+                        fieldTemp$1 = ou.field_q;
                         ou.field_q = ou.field_q + 1;
-                        nrb.field_b[fieldTemp$5] = param0;
+                        nrb.field_b[fieldTemp$1] = param0;
                         break L0;
                       } else {
                         L4: {
@@ -84,9 +72,9 @@ final class fpb extends mfb {
                               break L5;
                             }
                           }
-                          incrementValue$6 = var2_int;
+                          incrementValue$2 = var2_int;
                           var2_int++;
-                          nrb.field_b[incrementValue$6] = nrb.field_b[var3];
+                          nrb.field_b[incrementValue$2] = nrb.field_b[var3];
                           break L4;
                         }
                         var3++;
@@ -96,8 +84,8 @@ final class fpb extends mfb {
                   } else {
                     L6: {
                       if (param0.field_a == nrb.field_b[var2_int].field_a) {
-                        dupTemp$7 = nrb.field_b[var2_int].a(param1 ^ 1);
-                        dca.field_q[dupTemp$7] = dca.field_q[dupTemp$7] + 1;
+                        dupTemp$3 = nrb.field_b[var2_int].a(param1 ^ 1);
+                        dca.field_q[dupTemp$3] = dca.field_q[dupTemp$3] + 1;
                         break L6;
                       } else {
                         break L6;
@@ -118,27 +106,19 @@ final class fpb extends mfb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var2);
-            stackOut_20_1 = new StringBuilder().append("fpb.P(");
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var2);
+
+            stackIn_22_1 = new StringBuilder().append("fpb.P(");
+
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L7;
             }
           }
@@ -171,9 +151,8 @@ final class fpb extends mfb {
     }
 
     final int a(boolean param0) {
-        int discarded$0 = 0;
         if (param0) {
-            discarded$0 = this.k(-51);
+            this.k(-51);
         }
         return 35;
     }
@@ -203,9 +182,8 @@ final class fpb extends mfb {
     }
 
     final int f(byte param0) {
-        int discarded$0 = 0;
         if (param0 < 0) {
-            discarded$0 = this.d((byte) -39);
+            this.d((byte) -39);
         }
         return ujb.field_h;
     }

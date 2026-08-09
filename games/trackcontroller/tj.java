@@ -16,15 +16,9 @@ public class tj {
     }
 
     public static void a(int param0, String param1, byte param2) {
-        File discarded$6 = null;
-        File discarded$7 = null;
-        File discarded$8 = null;
-        File discarded$9 = null;
-        File discarded$10 = null;
-        File discarded$11 = null;
+        Throwable decompiledCaughtException = null;
         Exception var3 = null;
         String var4 = null;
-        Throwable decompiledCaughtException = null;
         field_a = param1;
         field_b = param0;
         try {
@@ -40,14 +34,14 @@ public class tj {
                   return;
                 } else {
                   var4 = (String) null;
-                  discarded$6 = tj.a((byte) 98, (String) null);
+                  tj.a((byte) 98, (String) null);
                   return;
                 }
               } else {
                 field_e = "~/";
                 if (param2 != -119) {
                   var4 = (String) null;
-                  discarded$7 = tj.a((byte) 98, (String) null);
+                  tj.a((byte) 98, (String) null);
                   return;
                 } else {
                   return;
@@ -62,7 +56,7 @@ public class tj {
           if (field_e != null) {
             if (param2 != -119) {
               var4 = (String) null;
-              discarded$8 = tj.a((byte) 98, (String) null);
+              tj.a((byte) 98, (String) null);
               return;
             } else {
               return;
@@ -73,7 +67,7 @@ public class tj {
               return;
             } else {
               var4 = (String) null;
-              discarded$9 = tj.a((byte) 98, (String) null);
+              tj.a((byte) 98, (String) null);
               return;
             }
           }
@@ -82,7 +76,7 @@ public class tj {
         if (field_e != null) {
           if (param2 != -119) {
             var4 = (String) null;
-            discarded$10 = tj.a((byte) 98, (String) null);
+            tj.a((byte) 98, (String) null);
             return;
           } else {
             return;
@@ -93,18 +87,17 @@ public class tj {
             return;
           } else {
             var4 = (String) null;
-            discarded$11 = tj.a((byte) 98, (String) null);
+            tj.a((byte) 98, (String) null);
             return;
           }
         }
     }
 
     public static File a(byte param0, String param1) {
-        File discarded$2 = null;
-        String var3 = null;
+        String var3;
         if (param0 != -61) {
           var3 = (String) null;
-          discarded$2 = tj.a((byte) 5, (String) null);
+          tj.a((byte) 5, (String) null);
           return tj.a(field_b, (byte) 83, field_a, param1);
         } else {
           return tj.a(field_b, (byte) 83, field_a, param1);

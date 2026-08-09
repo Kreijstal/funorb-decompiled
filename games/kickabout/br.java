@@ -6,9 +6,9 @@ final class br {
     static String field_b;
 
     final static void a(byte param0, int param1) {
-        String var2 = null;
-        String var3 = null;
-        String var4 = null;
+        String var2;
+        String var3;
+        String var4;
         var2 = pb.field_G[35];
         var4 = var2;
         var4 = var2;

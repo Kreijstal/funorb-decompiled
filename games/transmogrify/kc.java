@@ -35,14 +35,13 @@ final class kc extends wf {
 
     final static void a(int param0, int param1) {
         try {
-            Object discarded$1 = null;
-            Throwable var2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            Throwable var2 = null;
             try {
               L0: {
                 if (param0 == -14226) {
-                  discarded$1 = kj.a(param0 + 36328, "resizing", new Object[]{new Integer(param1)}, ha.b(param0 + 14293));
+                  kj.a(param0 + 36328, "resizing", new Object[]{new Integer(param1)}, ha.b(param0 + 14293));
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {

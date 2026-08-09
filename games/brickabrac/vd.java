@@ -19,8 +19,6 @@ final class vd {
             int stackIn_14_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_13_0 = 0;
-            int stackOut_11_0 = 0;
             L0: {
               if (param0 == 20) {
                 break L0;
@@ -61,13 +59,11 @@ final class vd {
                       jl.field_e.field_l = jl.field_e.field_l + var2_int;
                       if (param1 <= jl.field_e.field_l) {
                         jl.field_e.field_l = 0;
-                        stackOut_13_0 = 1;
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = 1;
                         decompiledRegionSelector0 = 1;
                         break L1;
                       } else {
-                        stackOut_11_0 = 0;
-                        stackIn_12_0 = stackOut_11_0;
+                        stackIn_12_0 = 0;
                         decompiledRegionSelector0 = 0;
                         break L1;
                       }

@@ -8,9 +8,8 @@ final class cpb extends ora implements gf {
     private jagdx.IDirect3DVolumeTexture field_i;
 
     final jagdx.IDirect3DBaseTexture c(int param0) {
-        jagdx.IDirect3DBaseTexture discarded$0 = null;
         if (param0 != 24971) {
-            discarded$0 = this.c(-11);
+            this.c(-11);
         }
         return (jagdx.IDirect3DBaseTexture) ((Object) this.field_i);
     }
@@ -28,15 +27,14 @@ final class cpb extends ora implements gf {
 
     cpb(nla param0, kb param1, int param2, int param3, int param4, byte[] param5) {
         super(param0, param1, mj.field_f, false, param4 * param3 * param2);
-        boolean discarded$1 = false;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        jagdx.PixelBuffer var15 = null;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        jagdx.PixelBuffer var15;
         L0: {
           this.field_h = param4;
           this.field_g = param3;
@@ -89,7 +87,7 @@ final class cpb extends ora implements gf {
                 }
               }
             }
-            discarded$1 = this.field_i.UnlockBox(0);
+            this.field_i.UnlockBox(0);
             break L0;
           }
         }

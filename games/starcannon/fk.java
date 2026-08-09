@@ -39,10 +39,10 @@ final class fk {
     int field_h;
 
     final static int a(int param0, int param1, byte param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         if (param2 > -38) {
           fk.a(-8);
           var3 = param0 >> 1121386704;

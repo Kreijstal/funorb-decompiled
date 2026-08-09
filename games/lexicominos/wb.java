@@ -42,8 +42,8 @@ abstract class wb {
     }
 
     final static void b(byte param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         L0: {
           var2 = Lexicominos.field_L ? 1 : 0;
           jj.field_d = null;
@@ -166,9 +166,8 @@ abstract class wb {
     }
 
     final int a(boolean param0) {
-        dc discarded$2 = null;
         if (!param0) {
-          discarded$2 = this.a(-12, 71, 119, (byte) 102, true);
+          this.a(-12, 71, 119, (byte) 102, true);
           return this.field_d.b(97) + this.field_f.b(111);
         } else {
           return this.field_d.b(97) + this.field_f.b(111);
@@ -176,23 +175,16 @@ abstract class wb {
     }
 
     final boolean e(int param0) {
-        boolean discarded$10 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 20) {
           L0: {
-            discarded$10 = this.e(-75);
+            this.e(-75);
             if (20 > this.c((byte) 67)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -200,12 +192,10 @@ abstract class wb {
         } else {
           L1: {
             if (20 > this.c((byte) 67)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

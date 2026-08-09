@@ -16,8 +16,6 @@ final class waa {
         int stackIn_16_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_20_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -25,20 +23,6 @@ final class waa {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         try {
           L0: {
             L1: {
@@ -50,44 +34,38 @@ final class waa {
               }
             }
             if (param0 == it.field_b) {
-              stackOut_19_0 = 6407;
-              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_0 = 6407;
               decompiledRegionSelector0 = 5;
               break L0;
             } else {
               if (gpa.field_a != param0) {
                 if (rp.field_g != param0) {
                   if (param0 == qr.field_w) {
-                    stackOut_17_0 = 6409;
-                    stackIn_18_0 = stackOut_17_0;
+                    stackIn_18_0 = 6409;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
                     if (wo.field_i != param0) {
                       if (param0 == js.field_g) {
-                        stackOut_15_0 = 6145;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = 6145;
                         decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
                         throw new IllegalStateException();
                       }
                     } else {
-                      stackOut_11_0 = 6410;
-                      stackIn_12_0 = stackOut_11_0;
+                      stackIn_12_0 = 6410;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
                   }
                 } else {
-                  stackOut_7_0 = 6406;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 6406;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
               } else {
-                stackOut_4_0 = 6408;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 6408;
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -97,27 +75,19 @@ final class waa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2);
-            stackOut_22_1 = new StringBuilder().append("waa.B(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2);
+
+            stackIn_24_1 = new StringBuilder().append("waa.B(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L2;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L2;
             }
           }
@@ -173,11 +143,10 @@ final class waa {
     }
 
     final void b(int param0) {
-        int discarded$2 = 0;
-        ft var3 = null;
+        ft var3;
         if (param0 != -9310) {
           var3 = (ft) null;
-          discarded$2 = waa.a((ft) null, 19);
+          waa.a((ft) null, 19);
           this.field_d.a(0);
           return;
         } else {

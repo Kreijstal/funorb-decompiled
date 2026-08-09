@@ -5,11 +5,11 @@ class o extends db {
     int[] field_v;
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        int incrementValue$403 = 0;
-        int incrementValue$404 = 0;
-        int incrementValue$405 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int var12;
+        int var13;
         var12 = param11 & 16711935;
         var13 = param11 >> 8 & 255;
         param6 = -param8;
@@ -25,25 +25,25 @@ class o extends db {
                 param6++;
                 continue L0;
               } else {
-                incrementValue$403 = param3;
+                incrementValue$12 = param3;
                 param3++;
-                param2 = param1[incrementValue$403];
+                param2 = param1[incrementValue$12];
                 if (param2 == 0) {
                   param4++;
                   param5++;
                   continue L1;
                 } else {
                   if (param2 >> 8 != (param2 & 65535)) {
-                    incrementValue$404 = param4;
+                    incrementValue$13 = param4;
                     param4++;
-                    param0[incrementValue$404] = param2;
+                    param0[incrementValue$13] = param2;
                     param5++;
                     continue L1;
                   } else {
                     param2 = param2 & 255;
-                    incrementValue$405 = param4;
+                    incrementValue$14 = param4;
                     param4++;
-                    param0[incrementValue$405] = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
+                    param0[incrementValue$14] = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
                     param5++;
                     continue L1;
                   }
@@ -105,45 +105,26 @@ class o extends db {
     }
 
     void c(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_n;
-          var4 = param0 + param1 * mi.field_a;
-          var5 = 0;
-          var6 = this.field_t;
-          var7 = this.field_p;
-          var8 = mi.field_a - var7;
-          var9 = 0;
-          if (param1 >= mi.field_l) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_n;
+        int var4 = param0 + param1 * mi.field_a;
+        int var5 = 0;
+        int var6 = this.field_t;
+        int var7 = this.field_p;
+        int var8 = mi.field_a - var7;
+        int var9 = 0;
+        if (param1 < mi.field_l) {
             var10 = mi.field_l - param1;
             var6 = var6 - var10;
             param1 = mi.field_l;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * mi.field_a;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= mi.field_e) {
-            break L1;
-          } else {
+        if (param1 + var6 > mi.field_e) {
             var6 = var6 - (param1 + var6 - mi.field_e);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= mi.field_b) {
-            break L2;
-          } else {
+        if (param0 < mi.field_b) {
             var10 = mi.field_b - param0;
             var7 = var7 - var10;
             param0 = mi.field_b;
@@ -151,39 +132,29 @@ class o extends db {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= mi.field_k) {
-            break L3;
-          } else {
+        if (param0 + var7 > mi.field_k) {
             var10 = param0 + var7 - mi.field_k;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
             o.b(mi.field_f, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         var10 = 256 - param9;
         var11 = -param6;
         L0: while (true) {
@@ -198,18 +169,18 @@ class o extends db {
                 var11++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 if (param2 == 0) {
                   param4++;
                   var12++;
                   continue L1;
                 } else {
                   var13 = param0[param4];
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
+                  param0[incrementValue$12] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
                   var12++;
                   continue L1;
                 }
@@ -220,19 +191,19 @@ class o extends db {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$218 = 0;
-        int incrementValue$219 = 0;
-        int incrementValue$220 = 0;
-        int incrementValue$221 = 0;
-        int incrementValue$222 = 0;
-        int incrementValue$223 = 0;
-        int incrementValue$224 = 0;
-        int incrementValue$225 = 0;
-        int incrementValue$226 = 0;
-        int incrementValue$227 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
+        int incrementValue$48 = 0;
+        int incrementValue$49 = 0;
+        int incrementValue$50 = 0;
+        int incrementValue$51 = 0;
+        int incrementValue$52 = 0;
+        int incrementValue$53 = 0;
+        int var9;
+        int var10;
+        int var11;
         var9 = -(param5 >> 2);
         param5 = -(param5 & 3);
         var10 = -param6;
@@ -251,17 +222,17 @@ class o extends db {
                     var10++;
                     continue L0;
                   } else {
-                    incrementValue$218 = param3;
+                    incrementValue$44 = param3;
                     param3++;
-                    param2 = param1[incrementValue$218];
+                    param2 = param1[incrementValue$44];
                     if (param2 == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      incrementValue$219 = param4;
+                      incrementValue$45 = param4;
                       param4++;
-                      param0[incrementValue$219] = param2;
+                      param0[incrementValue$45] = param2;
                       var11++;
                       continue L2;
                     }
@@ -269,58 +240,58 @@ class o extends db {
                 }
               } else {
                 L3: {
-                  incrementValue$220 = param3;
+                  incrementValue$46 = param3;
                   param3++;
-                  param2 = param1[incrementValue$220];
+                  param2 = param1[incrementValue$46];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
-                    incrementValue$221 = param4;
+                    incrementValue$47 = param4;
                     param4++;
-                    param0[incrementValue$221] = param2;
+                    param0[incrementValue$47] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  incrementValue$222 = param3;
+                  incrementValue$48 = param3;
                   param3++;
-                  param2 = param1[incrementValue$222];
+                  param2 = param1[incrementValue$48];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
-                    incrementValue$223 = param4;
+                    incrementValue$49 = param4;
                     param4++;
-                    param0[incrementValue$223] = param2;
+                    param0[incrementValue$49] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  incrementValue$224 = param3;
+                  incrementValue$50 = param3;
                   param3++;
-                  param2 = param1[incrementValue$224];
+                  param2 = param1[incrementValue$50];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
-                    incrementValue$225 = param4;
+                    incrementValue$51 = param4;
                     param4++;
-                    param0[incrementValue$225] = param2;
+                    param0[incrementValue$51] = param2;
                     break L5;
                   }
                 }
-                incrementValue$226 = param3;
+                incrementValue$52 = param3;
                 param3++;
-                param2 = param1[incrementValue$226];
+                param2 = param1[incrementValue$52];
                 if (param2 == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  incrementValue$227 = param4;
+                  incrementValue$53 = param4;
                   param4++;
-                  param0[incrementValue$227] = param2;
+                  param0[incrementValue$53] = param2;
                   var11++;
                   continue L1;
                 }
@@ -331,45 +302,26 @@ class o extends db {
     }
 
     final void d(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_n;
-          var4 = param0 + param1 * mi.field_a;
-          var5 = 0;
-          var6 = this.field_t;
-          var7 = this.field_p;
-          var8 = mi.field_a - var7;
-          var9 = 0;
-          if (param1 >= mi.field_l) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_n;
+        int var4 = param0 + param1 * mi.field_a;
+        int var5 = 0;
+        int var6 = this.field_t;
+        int var7 = this.field_p;
+        int var8 = mi.field_a - var7;
+        int var9 = 0;
+        if (param1 < mi.field_l) {
             var10 = mi.field_l - param1;
             var6 = var6 - var10;
             param1 = mi.field_l;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * mi.field_a;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= mi.field_e) {
-            break L1;
-          } else {
+        if (param1 + var6 > mi.field_e) {
             var6 = var6 - (param1 + var6 - mi.field_e);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= mi.field_b) {
-            break L2;
-          } else {
+        if (param0 < mi.field_b) {
             var10 = mi.field_b - param0;
             var7 = var7 - var10;
             param0 = mi.field_b;
@@ -377,65 +329,55 @@ class o extends db {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= mi.field_k) {
-            break L3;
-          } else {
+        if (param0 + var7 > mi.field_k) {
             var10 = param0 + var7 - mi.field_k;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
             o.b(mi.field_f, this.field_v, param2, var5, var4, var7, var6, var8, var9);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        double var7 = 0.0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        double var25 = 0.0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
+        double var7;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        double var25;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
         if (param5 != 0) {
           L0: {
             param0 = param0 - (this.field_s << 4);
@@ -989,45 +931,26 @@ class o extends db {
     }
 
     void e(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_n;
-          var4 = param0 + param1 * mi.field_a;
-          var5 = 0;
-          var6 = this.field_t;
-          var7 = this.field_p;
-          var8 = mi.field_a - var7;
-          var9 = 0;
-          if (param1 >= mi.field_l) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_n;
+        int var4 = param0 + param1 * mi.field_a;
+        int var5 = 0;
+        int var6 = this.field_t;
+        int var7 = this.field_p;
+        int var8 = mi.field_a - var7;
+        int var9 = 0;
+        if (param1 < mi.field_l) {
             var10 = mi.field_l - param1;
             var6 = var6 - var10;
             param1 = mi.field_l;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * mi.field_a;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= mi.field_e) {
-            break L1;
-          } else {
+        if (param1 + var6 > mi.field_e) {
             var6 = var6 - (param1 + var6 - mi.field_e);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= mi.field_b) {
-            break L2;
-          } else {
+        if (param0 < mi.field_b) {
             var10 = mi.field_b - param0;
             var7 = var7 - var10;
             param0 = mi.field_b;
@@ -1035,39 +958,27 @@ class o extends db {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= mi.field_k) {
-            break L3;
-          } else {
+        if (param0 + var7 > mi.field_k) {
             var10 = param0 + var7 - mi.field_k;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
             o.b(mi.field_f, this.field_v, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final void d() {
         int var2 = 0;
         int var3 = 0;
-        if (this.field_p == this.field_q) {
-            if (this.field_t == this.field_r) {
-                return;
-            }
+        if (this.field_p == this.field_q && this.field_t == this.field_r) {
+            return;
         }
         int[] var1 = new int[this.field_q * this.field_r];
         for (var2 = 0; var2 < this.field_t; var2++) {
@@ -1083,34 +994,34 @@ class o extends db {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
         L0: {
           if (param2 > this.field_q) {
             break L0;
@@ -1322,14 +1233,18 @@ class o extends db {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int incrementValue$1 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int dupTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int dupTemp$2 = 0;
+        int dupTemp$3 = 0;
+        int incrementValue$4 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var8 = 0;
         L0: while (true) {
           if (var8 >= param7) {
@@ -1348,8 +1263,9 @@ class o extends db {
                   var12 = mi.field_f[param2] & 65280;
                   var13 = 0;
                   var14 = 0;
-                  var10 = param0[param1];
-                  if (param0[param1] != 0) {
+                  dupTemp$0 = param0[param1];
+                  var10 = dupTemp$0;
+                  if (dupTemp$0 != 0) {
                     var13 = var13 + (var10 & 16711935);
                     var14 = var14 + (var10 & 65280);
                     break L2;
@@ -1360,8 +1276,9 @@ class o extends db {
                   }
                 }
                 L3: {
-                  var10 = param0[param1 + 1];
-                  if (param0[param1 + 1] != 0) {
+                  dupTemp$1 = param0[param1 + 1];
+                  var10 = dupTemp$1;
+                  if (dupTemp$1 != 0) {
                     var13 = var13 + (var10 & 16711935);
                     var14 = var14 + (var10 & 65280);
                     break L3;
@@ -1372,8 +1289,9 @@ class o extends db {
                   }
                 }
                 L4: {
-                  var10 = param0[param1 + param5];
-                  if (param0[param1 + param5] != 0) {
+                  dupTemp$2 = param0[param1 + param5];
+                  var10 = dupTemp$2;
+                  if (dupTemp$2 != 0) {
                     var13 = var13 + (var10 & 16711935);
                     var14 = var14 + (var10 & 65280);
                     break L4;
@@ -1384,8 +1302,9 @@ class o extends db {
                   }
                 }
                 L5: {
-                  var10 = param0[param1 + param5 + 1];
-                  if (param0[param1 + param5 + 1] != 0) {
+                  dupTemp$3 = param0[param1 + param5 + 1];
+                  var10 = dupTemp$3;
+                  if (dupTemp$3 != 0) {
                     var13 = var13 + (var10 & 16711935);
                     var14 = var14 + (var10 & 65280);
                     break L5;
@@ -1395,9 +1314,9 @@ class o extends db {
                     break L5;
                   }
                 }
-                incrementValue$1 = param2;
+                incrementValue$4 = param2;
                 param2++;
-                mi.field_f[incrementValue$1] = (var13 & 66847740 | var14 & 261120) >> 2;
+                mi.field_f[incrementValue$4] = (var13 & 66847740 | var14 & 261120) >> 2;
                 var9++;
                 param1 += 2;
                 continue L1;
@@ -1485,45 +1404,26 @@ class o extends db {
     }
 
     void d(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_n;
-          var3 = param0 + param1 * mi.field_a;
-          var4 = 0;
-          var5 = this.field_t;
-          var6 = this.field_p;
-          var7 = mi.field_a - var6;
-          var8 = 0;
-          if (param1 >= mi.field_l) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_n;
+        int var3 = param0 + param1 * mi.field_a;
+        int var4 = 0;
+        int var5 = this.field_t;
+        int var6 = this.field_p;
+        int var7 = mi.field_a - var6;
+        int var8 = 0;
+        if (param1 < mi.field_l) {
             var9 = mi.field_l - param1;
             var5 = var5 - var9;
             param1 = mi.field_l;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * mi.field_a;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= mi.field_e) {
-            break L1;
-          } else {
+        if (param1 + var5 > mi.field_e) {
             var5 = var5 - (param1 + var5 - mi.field_e);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= mi.field_b) {
-            break L2;
-          } else {
+        if (param0 < mi.field_b) {
             var9 = mi.field_b - param0;
             var6 = var6 - var9;
             param0 = mi.field_b;
@@ -1531,58 +1431,40 @@ class o extends db {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= mi.field_k) {
-            break L3;
-          } else {
+        if (param0 + var6 > mi.field_k) {
             var9 = param0 + var6 - mi.field_k;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
             o.a(mi.field_f, this.field_v, 0, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     private final void b(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_25_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
         L0: {
           var6 = param2 * this.field_p + param1;
           param3 = param3 & 4095;
@@ -1603,12 +1485,10 @@ class o extends db {
                 L2: {
                   var7 = this.field_v[var6];
                   if (var7 == 0) {
-                    stackOut_4_0 = 0;
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = 0;
                     break L2;
                   } else {
-                    stackOut_3_0 = (4096 - param3) * (4096 - param4);
-                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_0 = (4096 - param3) * (4096 - param4);
                     break L2;
                   }
                 }
@@ -1624,12 +1504,10 @@ class o extends db {
               L3: {
                 var8 = this.field_v[var6 + 1];
                 if (var8 == 0) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = 0;
                   break L3;
                 } else {
-                  stackOut_9_0 = param3 * (4096 - param4);
-                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_11_0 = param3 * (4096 - param4);
                   break L3;
                 }
               }
@@ -1655,12 +1533,10 @@ class o extends db {
                 L6: {
                   var9 = this.field_v[var6 + this.field_p];
                   if (var9 == 0) {
-                    stackOut_18_0 = 0;
-                    stackIn_19_0 = stackOut_18_0;
+                    stackIn_19_0 = 0;
                     break L6;
                   } else {
-                    stackOut_17_0 = (4096 - param3) * param4;
-                    stackIn_19_0 = stackOut_17_0;
+                    stackIn_19_0 = (4096 - param3) * param4;
                     break L6;
                   }
                 }
@@ -1676,12 +1552,10 @@ class o extends db {
               L7: {
                 var10 = this.field_v[var6 + this.field_p + 1];
                 if (var10 == 0) {
-                  stackOut_24_0 = 0;
-                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_25_0 = 0;
                   break L7;
                 } else {
-                  stackOut_23_0 = param3 * param4;
-                  stackIn_25_0 = stackOut_23_0;
+                  stackIn_25_0 = param3 * param4;
                   break L7;
                 }
               }
@@ -1745,156 +1619,90 @@ class o extends db {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int var14 = 0;
         int var15 = 0;
+        int var14 = 0;
         int var16 = 0;
-        if (param2 <= 0) {
-          return;
-        } else {
-          if (param3 > 0) {
-            L0: {
-              var6 = this.field_p;
-              var7 = this.field_t;
-              var8 = 0;
-              var9 = 0;
-              var10 = this.field_q;
-              var11 = this.field_r;
-              var12 = (var10 << 16) / param2;
-              var13 = (var11 << 16) / param3;
-              if (this.field_s <= 0) {
-                break L0;
-              } else {
+        if (param2 > 0) {
+            if (param3 <= 0) {
+                return;
+            }
+            var6 = this.field_p;
+            var7 = this.field_t;
+            var8 = 0;
+            var9 = 0;
+            var10 = this.field_q;
+            var11 = this.field_r;
+            var12 = (var10 << 16) / param2;
+            var13 = (var11 << 16) / param3;
+            if (this.field_s > 0) {
                 var14 = ((this.field_s << 16) + var12 - 1) / var12;
                 param0 = param0 + var14;
                 var8 = var8 + (var14 * var12 - (this.field_s << 16));
-                break L0;
-              }
             }
-            L1: {
-              if (this.field_n <= 0) {
-                break L1;
-              } else {
+            if (this.field_n > 0) {
                 var14 = ((this.field_n << 16) + var13 - 1) / var13;
                 param1 = param1 + var14;
                 var9 = var9 + (var14 * var13 - (this.field_n << 16));
-                break L1;
-              }
             }
-            L2: {
-              if (var6 >= var10) {
-                break L2;
-              } else {
+            if (var6 < var10) {
                 param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
-                break L2;
-              }
             }
-            L3: {
-              if (var7 >= var11) {
-                break L3;
-              } else {
+            if (var7 < var11) {
                 param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
-                break L3;
-              }
             }
-            L4: {
-              var14 = param0 + param1 * mi.field_a;
-              var15 = mi.field_a - param2;
-              if (param1 + param3 <= mi.field_e) {
-                break L4;
-              } else {
+            var14 = param0 + param1 * mi.field_a;
+            var15 = mi.field_a - param2;
+            if (param1 + param3 > mi.field_e) {
                 param3 = param3 - (param1 + param3 - mi.field_e);
-                break L4;
-              }
             }
-            L5: {
-              if (param1 >= mi.field_l) {
-                break L5;
-              } else {
+            if (param1 < mi.field_l) {
                 var16 = mi.field_l - param1;
                 param3 = param3 - var16;
                 var14 = var14 + var16 * mi.field_a;
                 var9 = var9 + var13 * var16;
-                break L5;
-              }
             }
-            L6: {
-              if (param0 + param2 <= mi.field_k) {
-                break L6;
-              } else {
+            if (param0 + param2 > mi.field_k) {
                 var16 = param0 + param2 - mi.field_k;
                 param2 = param2 - var16;
                 var15 = var15 + var16;
-                break L6;
-              }
             }
-            L7: {
-              if (param0 >= mi.field_b) {
-                break L7;
-              } else {
+            if (param0 < mi.field_b) {
                 var16 = mi.field_b - param0;
                 param2 = param2 - var16;
                 var14 = var14 + var16;
                 var8 = var8 + var12 * var16;
                 var15 = var15 + var16;
-                break L7;
-              }
             }
-            L8: {
-              if (param4 != 256) {
-                o.a(0, 0, 0, var8, this.field_v, mi.field_f, 0, 0, -param3, var9, var14, var15, param2, var12, var13, var6, param4);
-                break L8;
-              } else {
+            if (param4 == 256) {
                 o.a(0, 0, 0, var8, this.field_v, mi.field_f, 0, 0, -param3, var9, var14, var15, param2, var12, var13, var6);
-                break L8;
-              }
+            } else {
+                o.a(0, 0, 0, var8, this.field_v, mi.field_f, 0, 0, -param3, var9, var14, var15, param2, var12, var13, var6, param4);
             }
             return;
-          } else {
-            return;
-          }
         }
     }
 
     void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_n;
-          var4 = param0 + param1 * mi.field_a;
-          var5 = 0;
-          var6 = this.field_t;
-          var7 = this.field_p;
-          var8 = mi.field_a - var7;
-          var9 = 0;
-          if (param1 >= mi.field_l) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_n;
+        int var4 = param0 + param1 * mi.field_a;
+        int var5 = 0;
+        int var6 = this.field_t;
+        int var7 = this.field_p;
+        int var8 = mi.field_a - var7;
+        int var9 = 0;
+        if (param1 < mi.field_l) {
             var10 = mi.field_l - param1;
             var6 = var6 - var10;
             param1 = mi.field_l;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * mi.field_a;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= mi.field_e) {
-            break L1;
-          } else {
+        if (param1 + var6 > mi.field_e) {
             var6 = var6 - (param1 + var6 - mi.field_e);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= mi.field_b) {
-            break L2;
-          } else {
+        if (param0 < mi.field_b) {
             var10 = mi.field_b - param0;
             var7 = var7 - var10;
             param0 = mi.field_b;
@@ -1902,47 +1710,37 @@ class o extends db {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= mi.field_k) {
-            break L3;
-          } else {
+        if (param0 + var7 > mi.field_k) {
             var10 = param0 + var7 - mi.field_k;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
             o.a(mi.field_f, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
         var10 = param9 >> 16 & 255;
         var11 = param9 >> 8 & 255;
         var12 = param9 & 255;
@@ -1962,9 +1760,9 @@ class o extends db {
                 var15++;
                 continue L0;
               } else {
-                incrementValue$4 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                param2 = param1[incrementValue$4];
+                param2 = param1[incrementValue$0];
                 if (param2 == 0) {
                   param4++;
                   var16++;
@@ -1981,24 +1779,24 @@ class o extends db {
                         break L2;
                       } else {
                         if (var17 > 128) {
-                          incrementValue$5 = param4;
+                          incrementValue$1 = param4;
                           param4++;
-                          param0[incrementValue$5] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
+                          param0[incrementValue$1] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
                           var16++;
                           continue L1;
                         } else {
-                          incrementValue$6 = param4;
+                          incrementValue$2 = param4;
                           param4++;
-                          param0[incrementValue$6] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
+                          param0[incrementValue$2] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
                           var16++;
                           continue L1;
                         }
                       }
                     }
                   }
-                  incrementValue$7 = param4;
+                  incrementValue$3 = param4;
                   param4++;
-                  param0[incrementValue$7] = param2;
+                  param0[incrementValue$3] = param2;
                   var16++;
                   continue L1;
                 }
@@ -2009,19 +1807,19 @@ class o extends db {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$218 = 0;
-        int incrementValue$219 = 0;
-        int incrementValue$220 = 0;
-        int incrementValue$221 = 0;
-        int incrementValue$222 = 0;
-        int incrementValue$223 = 0;
-        int incrementValue$224 = 0;
-        int incrementValue$225 = 0;
-        int incrementValue$226 = 0;
-        int incrementValue$227 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
+        int incrementValue$48 = 0;
+        int incrementValue$49 = 0;
+        int incrementValue$50 = 0;
+        int incrementValue$51 = 0;
+        int incrementValue$52 = 0;
+        int incrementValue$53 = 0;
+        int var9;
+        int var10;
+        int var11;
         var9 = -(param5 >> 2);
         param5 = -(param5 & 3);
         var10 = -param6;
@@ -2040,16 +1838,16 @@ class o extends db {
                     var10++;
                     continue L0;
                   } else {
-                    incrementValue$218 = param3;
+                    incrementValue$44 = param3;
                     param3++;
-                    if (param1[incrementValue$218] == 0) {
+                    if (param1[incrementValue$44] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      incrementValue$219 = param4;
+                      incrementValue$45 = param4;
                       param4++;
-                      param0[incrementValue$219] = param2;
+                      param0[incrementValue$45] = param2;
                       var11++;
                       continue L2;
                     }
@@ -2057,54 +1855,54 @@ class o extends db {
                 }
               } else {
                 L3: {
-                  incrementValue$220 = param3;
+                  incrementValue$46 = param3;
                   param3++;
-                  if (param1[incrementValue$220] == 0) {
+                  if (param1[incrementValue$46] == 0) {
                     param4++;
                     break L3;
                   } else {
-                    incrementValue$221 = param4;
+                    incrementValue$47 = param4;
                     param4++;
-                    param0[incrementValue$221] = param2;
+                    param0[incrementValue$47] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  incrementValue$222 = param3;
+                  incrementValue$48 = param3;
                   param3++;
-                  if (param1[incrementValue$222] == 0) {
+                  if (param1[incrementValue$48] == 0) {
                     param4++;
                     break L4;
                   } else {
-                    incrementValue$223 = param4;
+                    incrementValue$49 = param4;
                     param4++;
-                    param0[incrementValue$223] = param2;
+                    param0[incrementValue$49] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  incrementValue$224 = param3;
+                  incrementValue$50 = param3;
                   param3++;
-                  if (param1[incrementValue$224] == 0) {
+                  if (param1[incrementValue$50] == 0) {
                     param4++;
                     break L5;
                   } else {
-                    incrementValue$225 = param4;
+                    incrementValue$51 = param4;
                     param4++;
-                    param0[incrementValue$225] = param2;
+                    param0[incrementValue$51] = param2;
                     break L5;
                   }
                 }
-                incrementValue$226 = param3;
+                incrementValue$52 = param3;
                 param3++;
-                if (param1[incrementValue$226] == 0) {
+                if (param1[incrementValue$52] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  incrementValue$227 = param4;
+                  incrementValue$53 = param4;
                   param4++;
-                  param0[incrementValue$227] = param2;
+                  param0[incrementValue$53] = param2;
                   var11++;
                   continue L1;
                 }
@@ -2294,105 +2092,62 @@ class o extends db {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int var14 = 0;
         int var15 = 0;
+        int var14 = 0;
         int var16 = 0;
-        if (param2 <= 0) {
-          return;
-        } else {
-          if (param3 > 0) {
-            L0: {
-              var6 = this.field_p;
-              var7 = this.field_t;
-              var8 = 0;
-              var9 = 0;
-              var10 = this.field_q;
-              var11 = this.field_r;
-              var12 = (var10 << 16) / param2;
-              var13 = (var11 << 16) / param3;
-              if (this.field_s <= 0) {
-                break L0;
-              } else {
+        if (param2 > 0) {
+            if (param3 <= 0) {
+                return;
+            }
+            var6 = this.field_p;
+            var7 = this.field_t;
+            var8 = 0;
+            var9 = 0;
+            var10 = this.field_q;
+            var11 = this.field_r;
+            var12 = (var10 << 16) / param2;
+            var13 = (var11 << 16) / param3;
+            if (this.field_s > 0) {
                 var14 = ((this.field_s << 16) + var12 - 1) / var12;
                 param0 = param0 + var14;
                 var8 = var8 + (var14 * var12 - (this.field_s << 16));
-                break L0;
-              }
             }
-            L1: {
-              if (this.field_n <= 0) {
-                break L1;
-              } else {
+            if (this.field_n > 0) {
                 var14 = ((this.field_n << 16) + var13 - 1) / var13;
                 param1 = param1 + var14;
                 var9 = var9 + (var14 * var13 - (this.field_n << 16));
-                break L1;
-              }
             }
-            L2: {
-              if (var6 >= var10) {
-                break L2;
-              } else {
+            if (var6 < var10) {
                 param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
-                break L2;
-              }
             }
-            L3: {
-              if (var7 >= var11) {
-                break L3;
-              } else {
+            if (var7 < var11) {
                 param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
-                break L3;
-              }
             }
-            L4: {
-              var14 = param0 + param1 * mi.field_a;
-              var15 = mi.field_a - param2;
-              if (param1 + param3 <= mi.field_e) {
-                break L4;
-              } else {
+            var14 = param0 + param1 * mi.field_a;
+            var15 = mi.field_a - param2;
+            if (param1 + param3 > mi.field_e) {
                 param3 = param3 - (param1 + param3 - mi.field_e);
-                break L4;
-              }
             }
-            L5: {
-              if (param1 >= mi.field_l) {
-                break L5;
-              } else {
+            if (param1 < mi.field_l) {
                 var16 = mi.field_l - param1;
                 param3 = param3 - var16;
                 var14 = var14 + var16 * mi.field_a;
                 var9 = var9 + var13 * var16;
-                break L5;
-              }
             }
-            L6: {
-              if (param0 + param2 <= mi.field_k) {
-                break L6;
-              } else {
+            if (param0 + param2 > mi.field_k) {
                 var16 = param0 + param2 - mi.field_k;
                 param2 = param2 - var16;
                 var15 = var15 + var16;
-                break L6;
-              }
             }
-            L7: {
-              if (param0 >= mi.field_b) {
-                break L7;
-              } else {
+            if (param0 < mi.field_b) {
                 var16 = mi.field_b - param0;
                 param2 = param2 - var16;
                 var14 = var14 + var16;
                 var8 = var8 + var12 * var16;
                 var15 = var15 + var16;
-                break L7;
-              }
             }
             o.a(mi.field_f, this.field_v, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
             return;
-          } else {
-            return;
-          }
         }
     }
 
@@ -2405,13 +2160,13 @@ class o extends db {
     }
 
     private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var10 = -param7;
         L0: while (true) {
           if (var10 >= 0) {
@@ -2425,18 +2180,18 @@ class o extends db {
                 var10++;
                 continue L0;
               } else {
-                incrementValue$14 = param4;
+                incrementValue$4 = param4;
                 param4++;
-                param3 = param2[incrementValue$14];
+                param3 = param2[incrementValue$4];
                 if (param3 != 0) {
                   param0 = param1[param5];
                   if (param0 != 0) {
                     var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
                     var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
                     var14 = (param3 & 255) * (param0 & 255) >>> 8;
-                    incrementValue$15 = param5;
+                    incrementValue$5 = param5;
                     param5++;
-                    param1[incrementValue$15] = (var12 << 16) + (var13 << 8) + var14;
+                    param1[incrementValue$5] = (var12 << 16) + (var13 << 8) + var14;
                     var11++;
                     continue L1;
                   } else {
@@ -2456,45 +2211,26 @@ class o extends db {
     }
 
     final void g(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_n;
-          var3 = param0 + param1 * mi.field_a;
-          var4 = 0;
-          var5 = this.field_t;
-          var6 = this.field_p;
-          var7 = mi.field_a - var6;
-          var8 = 0;
-          if (param1 >= mi.field_l) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_n;
+        int var3 = param0 + param1 * mi.field_a;
+        int var4 = 0;
+        int var5 = this.field_t;
+        int var6 = this.field_p;
+        int var7 = mi.field_a - var6;
+        int var8 = 0;
+        if (param1 < mi.field_l) {
             var9 = mi.field_l - param1;
             var5 = var5 - var9;
             param1 = mi.field_l;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * mi.field_a;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= mi.field_e) {
-            break L1;
-          } else {
+        if (param1 + var5 > mi.field_e) {
             var5 = var5 - (param1 + var5 - mi.field_e);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= mi.field_b) {
-            break L2;
-          } else {
+        if (param0 < mi.field_b) {
             var9 = mi.field_b - param0;
             var6 = var6 - var9;
             param0 = mi.field_b;
@@ -2502,35 +2238,25 @@ class o extends db {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= mi.field_k) {
-            break L3;
-          } else {
+        if (param0 + var6 > mi.field_k) {
             var9 = param0 + var6 - mi.field_k;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
             o.a(0, mi.field_f, this.field_v, 0, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -2544,9 +2270,9 @@ class o extends db {
                 param8++;
                 continue L0;
               } else {
-                incrementValue$66 = param5;
+                incrementValue$11 = param5;
                 param5++;
-                param0 = param4[incrementValue$66];
+                param0 = param4[incrementValue$11];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -2558,9 +2284,9 @@ class o extends db {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  incrementValue$67 = param7;
+                  incrementValue$12 = param7;
                   param7++;
-                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -2571,8 +2297,8 @@ class o extends db {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -2586,9 +2312,9 @@ class o extends db {
                 param8++;
                 continue L0;
               } else {
-                incrementValue$66 = param5;
+                incrementValue$11 = param5;
                 param5++;
-                param0 = param4[incrementValue$66];
+                param0 = param4[incrementValue$11];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -2598,9 +2324,9 @@ class o extends db {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  incrementValue$67 = param7;
+                  incrementValue$12 = param7;
                   param7++;
-                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -2611,15 +2337,15 @@ class o extends db {
     }
 
     final void f() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int[] var7;
+        int var8;
+        int var9;
         var1 = this.field_t - 1;
         L0: while (true) {
           L1: {
@@ -2762,45 +2488,26 @@ class o extends db {
     }
 
     void c(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_n;
-          var3 = param0 + param1 * mi.field_a;
-          var4 = 0;
-          var5 = this.field_t;
-          var6 = this.field_p;
-          var7 = mi.field_a - var6;
-          var8 = 0;
-          if (param1 >= mi.field_l) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_n;
+        int var3 = param0 + param1 * mi.field_a;
+        int var4 = 0;
+        int var5 = this.field_t;
+        int var6 = this.field_p;
+        int var7 = mi.field_a - var6;
+        int var8 = 0;
+        if (param1 < mi.field_l) {
             var9 = mi.field_l - param1;
             var5 = var5 - var9;
             param1 = mi.field_l;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * mi.field_a;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= mi.field_e) {
-            break L1;
-          } else {
+        if (param1 + var5 > mi.field_e) {
             var5 = var5 - (param1 + var5 - mi.field_e);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= mi.field_b) {
-            break L2;
-          } else {
+        if (param0 < mi.field_b) {
             var9 = mi.field_b - param0;
             var6 = var6 - var9;
             param0 = mi.field_b;
@@ -2808,29 +2515,19 @@ class o extends db {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= mi.field_k) {
-            break L3;
-          } else {
+        if (param0 + var6 > mi.field_k) {
             var9 = param0 + var6 - mi.field_k;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
             o.a(mi.field_f, this.field_v, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
@@ -2864,45 +2561,45 @@ class o extends db {
     }
 
     void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        double var7 = 0.0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        double var24 = 0.0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        double var7;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        double var24;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
         if (param5 != 0) {
           L0: {
             param0 = param0 - (this.field_s << 4);
@@ -3129,9 +2826,9 @@ class o extends db {
                                     var34++;
                                     break L21;
                                   } else {
-                                    incrementValue$9 = var34;
+                                    incrementValue$0 = var34;
                                     var34++;
-                                    mi.field_f[incrementValue$9] = var38;
+                                    mi.field_f[incrementValue$0] = var38;
                                     break L21;
                                   }
                                 }
@@ -3210,9 +2907,9 @@ class o extends db {
                                     var34++;
                                     break L28;
                                   } else {
-                                    incrementValue$10 = var34;
+                                    incrementValue$1 = var34;
                                     var34++;
-                                    mi.field_f[incrementValue$10] = var38;
+                                    mi.field_f[incrementValue$1] = var38;
                                     break L28;
                                   }
                                 }
@@ -3268,9 +2965,9 @@ class o extends db {
                                         var34++;
                                         break L34;
                                       } else {
-                                        incrementValue$11 = var34;
+                                        incrementValue$2 = var34;
                                         var34++;
-                                        mi.field_f[incrementValue$11] = var38;
+                                        mi.field_f[incrementValue$2] = var38;
                                         break L34;
                                       }
                                     }
@@ -3362,9 +3059,9 @@ class o extends db {
                                     var34++;
                                     break L41;
                                   } else {
-                                    incrementValue$12 = var34;
+                                    incrementValue$3 = var34;
                                     var34++;
-                                    mi.field_f[incrementValue$12] = var38;
+                                    mi.field_f[incrementValue$3] = var38;
                                     break L41;
                                   }
                                 }
@@ -3444,9 +3141,9 @@ class o extends db {
                                     var34++;
                                     break L48;
                                   } else {
-                                    incrementValue$13 = var34;
+                                    incrementValue$4 = var34;
                                     var34++;
-                                    mi.field_f[incrementValue$13] = var38;
+                                    mi.field_f[incrementValue$4] = var38;
                                     break L48;
                                   }
                                 }
@@ -3503,9 +3200,9 @@ class o extends db {
                                         var34++;
                                         break L54;
                                       } else {
-                                        incrementValue$14 = var34;
+                                        incrementValue$5 = var34;
                                         var34++;
-                                        mi.field_f[incrementValue$14] = var38;
+                                        mi.field_f[incrementValue$5] = var38;
                                         break L54;
                                       }
                                     }
@@ -3574,9 +3271,9 @@ class o extends db {
                                         var34++;
                                         break L60;
                                       } else {
-                                        incrementValue$15 = var34;
+                                        incrementValue$6 = var34;
                                         var34++;
-                                        mi.field_f[incrementValue$15] = var38;
+                                        mi.field_f[incrementValue$6] = var38;
                                         break L60;
                                       }
                                     }
@@ -3642,9 +3339,9 @@ class o extends db {
                                         var34++;
                                         break L66;
                                       } else {
-                                        incrementValue$16 = var34;
+                                        incrementValue$7 = var34;
                                         var34++;
-                                        mi.field_f[incrementValue$16] = var38;
+                                        mi.field_f[incrementValue$7] = var38;
                                         break L66;
                                       }
                                     }
@@ -3695,9 +3392,9 @@ class o extends db {
                                         var37++;
                                         continue L69;
                                       } else {
-                                        incrementValue$17 = var34;
+                                        incrementValue$8 = var34;
                                         var34++;
-                                        mi.field_f[incrementValue$17] = var38;
+                                        mi.field_f[incrementValue$8] = var38;
                                         var37++;
                                         continue L69;
                                       }
@@ -3739,45 +3436,26 @@ class o extends db {
     }
 
     void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_n;
-          var4 = param0 + param1 * mi.field_a;
-          var5 = 0;
-          var6 = this.field_t;
-          var7 = this.field_p;
-          var8 = mi.field_a - var7;
-          var9 = 0;
-          if (param1 >= mi.field_l) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_n;
+        int var4 = param0 + param1 * mi.field_a;
+        int var5 = 0;
+        int var6 = this.field_t;
+        int var7 = this.field_p;
+        int var8 = mi.field_a - var7;
+        int var9 = 0;
+        if (param1 < mi.field_l) {
             var10 = mi.field_l - param1;
             var6 = var6 - var10;
             param1 = mi.field_l;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * mi.field_a;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= mi.field_e) {
-            break L1;
-          } else {
+        if (param1 + var6 > mi.field_e) {
             var6 = var6 - (param1 + var6 - mi.field_e);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= mi.field_b) {
-            break L2;
-          } else {
+        if (param0 < mi.field_b) {
             var10 = mi.field_b - param0;
             var7 = var7 - var10;
             param0 = mi.field_b;
@@ -3785,116 +3463,86 @@ class o extends db {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= mi.field_k) {
-            break L3;
-          } else {
+        if (param0 + var7 > mi.field_k) {
             var10 = param0 + var7 - mi.field_k;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
-            L4: {
-              if (param2 != 256) {
-                o.a(0, 0, 0, mi.field_f, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
-                break L4;
-              } else {
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
+            if (param2 == 256) {
                 o.a(0, 0, 0, mi.field_f, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9);
-                break L4;
-              }
+            } else {
+                o.a(0, 0, 0, mi.field_f, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
             }
             return;
-          } else {
-            return;
-          }
         }
     }
 
     void e(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         L0: {
           var3 = this.field_p >> 2;
           var4 = this.field_t >> 2;
           param0 = param0 + this.field_s / 4;
           param1 = param1 + this.field_n / 4;
           if (param0 >= mi.field_b) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = mi.field_b - param0 << 2;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = mi.field_b - param0 << 2;
             break L0;
           }
         }
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= mi.field_k) {
-            stackOut_5_0 = this.field_p - 4;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = this.field_p - 4;
             break L1;
           } else {
-            stackOut_4_0 = (mi.field_k - param0 << 2) - 4;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = (mi.field_k - param0 << 2) - 4;
             break L1;
           }
         }
         L2: {
           var6 = stackIn_6_0;
           if (param1 >= mi.field_l) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = mi.field_l - param1 << 2;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = mi.field_l - param1 << 2;
             break L2;
           }
         }
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= mi.field_e) {
-            stackOut_11_0 = this.field_t - 4;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = this.field_t - 4;
             break L3;
           } else {
-            stackOut_10_0 = (mi.field_e - param1 << 2) - 4;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = (mi.field_e - param1 << 2) - 4;
             break L3;
           }
         }
@@ -3964,33 +3612,32 @@ class o extends db {
     }
 
     o(byte[] param0, java.awt.Component param1) {
-        boolean discarded$1 = false;
-        InterruptedException var3 = null;
-        java.awt.Image var3_ref = null;
+        Throwable decompiledCaughtException = null;
+        java.awt.Image var3 = null;
+        InterruptedException var3_ref = null;
         java.awt.MediaTracker var4 = null;
         java.awt.image.PixelGrabber var5 = null;
-        Throwable decompiledCaughtException = null;
         try {
           L0: {
-            var3_ref = java.awt.Toolkit.getDefaultToolkit().createImage(param0);
+            var3 = java.awt.Toolkit.getDefaultToolkit().createImage(param0);
             var4 = new java.awt.MediaTracker(param1);
-            var4.addImage(var3_ref, 0);
+            var4.addImage(var3, 0);
             var4.waitForAll();
-            this.field_p = var3_ref.getWidth((java.awt.image.ImageObserver) ((Object) param1));
-            this.field_t = var3_ref.getHeight((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_p = var3.getWidth((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_t = var3.getHeight((java.awt.image.ImageObserver) ((Object) param1));
             this.field_q = this.field_p;
             this.field_r = this.field_t;
             this.field_s = 0;
             this.field_n = 0;
             this.field_v = new int[this.field_p * this.field_t];
-            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, this.field_p, this.field_t, this.field_v, 0, this.field_p);
-            discarded$1 = var5.grabPixels();
+            var5 = new java.awt.image.PixelGrabber(var3, 0, 0, this.field_p, this.field_t, this.field_v, 0, this.field_p);
+            var5.grabPixels();
             break L0;
           }
         } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
-            var3 = (InterruptedException) (Object) decompiledCaughtException;
+            var3_ref = (InterruptedException) (Object) decompiledCaughtException;
             break L1;
           }
         }
@@ -4009,105 +3656,62 @@ class o extends db {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
         int var14 = 0;
+        int var13 = 0;
         int var15 = 0;
-        if (param2 <= 0) {
-          return;
-        } else {
-          if (param3 > 0) {
-            L0: {
-              var5 = this.field_p;
-              var6 = this.field_t;
-              var7 = 0;
-              var8 = 0;
-              var9 = this.field_q;
-              var10 = this.field_r;
-              var11 = (var9 << 16) / param2;
-              var12 = (var10 << 16) / param3;
-              if (this.field_s <= 0) {
-                break L0;
-              } else {
+        if (param2 > 0) {
+            if (param3 <= 0) {
+                return;
+            }
+            var5 = this.field_p;
+            var6 = this.field_t;
+            var7 = 0;
+            var8 = 0;
+            var9 = this.field_q;
+            var10 = this.field_r;
+            var11 = (var9 << 16) / param2;
+            var12 = (var10 << 16) / param3;
+            if (this.field_s > 0) {
                 var13 = ((this.field_s << 16) + var11 - 1) / var11;
                 param0 = param0 + var13;
                 var7 = var7 + (var13 * var11 - (this.field_s << 16));
-                break L0;
-              }
             }
-            L1: {
-              if (this.field_n <= 0) {
-                break L1;
-              } else {
+            if (this.field_n > 0) {
                 var13 = ((this.field_n << 16) + var12 - 1) / var12;
                 param1 = param1 + var13;
                 var8 = var8 + (var13 * var12 - (this.field_n << 16));
-                break L1;
-              }
             }
-            L2: {
-              if (var5 >= var9) {
-                break L2;
-              } else {
+            if (var5 < var9) {
                 param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
-                break L2;
-              }
             }
-            L3: {
-              if (var6 >= var10) {
-                break L3;
-              } else {
+            if (var6 < var10) {
                 param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
-                break L3;
-              }
             }
-            L4: {
-              var13 = param0 + param1 * mi.field_a;
-              var14 = mi.field_a - param2;
-              if (param1 + param3 <= mi.field_e) {
-                break L4;
-              } else {
+            var13 = param0 + param1 * mi.field_a;
+            var14 = mi.field_a - param2;
+            if (param1 + param3 > mi.field_e) {
                 param3 = param3 - (param1 + param3 - mi.field_e);
-                break L4;
-              }
             }
-            L5: {
-              if (param1 >= mi.field_l) {
-                break L5;
-              } else {
+            if (param1 < mi.field_l) {
                 var15 = mi.field_l - param1;
                 param3 = param3 - var15;
                 var13 = var13 + var15 * mi.field_a;
                 var8 = var8 + var12 * var15;
-                break L5;
-              }
             }
-            L6: {
-              if (param0 + param2 <= mi.field_k) {
-                break L6;
-              } else {
+            if (param0 + param2 > mi.field_k) {
                 var15 = param0 + param2 - mi.field_k;
                 param2 = param2 - var15;
                 var14 = var14 + var15;
-                break L6;
-              }
             }
-            L7: {
-              if (param0 >= mi.field_b) {
-                break L7;
-              } else {
+            if (param0 < mi.field_b) {
                 var15 = mi.field_b - param0;
                 param2 = param2 - var15;
                 var13 = var13 + var15;
                 var7 = var7 + var11 * var15;
                 var14 = var14 + var15;
-                break L7;
-              }
             }
             o.a(mi.field_f, this.field_v, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
             return;
-          } else {
-            return;
-          }
         }
     }
 }

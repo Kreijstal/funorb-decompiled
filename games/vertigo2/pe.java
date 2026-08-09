@@ -30,7 +30,6 @@ final class pe extends li {
 
     final static wp a(String param0, boolean param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -39,8 +38,6 @@ final class pe extends li {
         wp stackIn_6_0 = null;
         wp stackIn_18_0 = null;
         wp stackIn_21_0 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -48,18 +45,7 @@ final class pe extends li {
         String stackIn_27_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        wp stackOut_17_0 = null;
-        wp stackOut_20_0 = null;
-        wp stackOut_5_0 = null;
-        wp stackOut_2_0 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        RuntimeException var2 = null;
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -92,16 +78,14 @@ final class pe extends li {
                             }
                           }
                         }
-                        stackOut_17_0 = bp.field_A;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = bp.field_A;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         if (ke.field_d.indexOf(var4) != -1) {
                           break L3;
                         } else {
-                          stackOut_20_0 = bp.field_A;
-                          stackIn_21_0 = stackOut_20_0;
+                          stackIn_21_0 = bp.field_A;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         }
@@ -114,14 +98,12 @@ final class pe extends li {
                   }
                 }
               } else {
-                stackOut_5_0 = cg.field_a;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = cg.field_a;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = ab.field_a;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = ab.field_a;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -130,27 +112,19 @@ final class pe extends li {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var2);
-            stackOut_24_1 = new StringBuilder().append("pe.E(");
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var2);
+
+            stackIn_26_1 = new StringBuilder().append("pe.E(");
+
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L5;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L5;
             }
           }
@@ -204,8 +178,6 @@ final class pe extends li {
 
     final static boolean a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           if (param4 > 10) {
             break L0;
@@ -228,16 +200,14 @@ final class pe extends li {
                   if (param2 >= param0 + param1) {
                     break L2;
                   } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = 1;
                     break L1;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 0;
-          stackIn_8_0 = stackOut_7_0;
+          stackIn_8_0 = 0;
           break L1;
         }
         return stackIn_8_0 != 0;

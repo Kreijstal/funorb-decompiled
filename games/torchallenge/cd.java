@@ -32,7 +32,6 @@ final class cd {
 
     final static String a(int param0, CharSequence param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -40,23 +39,13 @@ final class cd {
         char[] var7 = null;
         char[] var8 = null;
         String stackIn_21_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_20_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        RuntimeException var2 = null;
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -83,8 +72,7 @@ final class cd {
             var4 = 0;
             L3: while (true) {
               if (var2_int <= var4) {
-                stackOut_20_0 = new String(var8);
-                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_0 = new String(var8);
                 break L0;
               } else {
                 L4: {
@@ -139,27 +127,19 @@ final class cd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2);
-            stackOut_22_1 = new StringBuilder().append("cd.I(").append(param0).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2);
+
+            stackIn_24_1 = new StringBuilder().append("cd.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L9;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L9;
             }
           }
@@ -169,12 +149,10 @@ final class cd {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, boolean param4) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
+        int var5;
+        int var6;
+        int var7;
         L0: {
           var5 = -42 % ((param3 - 70) / 47);
           if (be.field_b) {
@@ -202,12 +180,10 @@ final class cd {
           } else {
             L3: {
               if (!ub.field_i) {
-                stackOut_8_0 = 0;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 0;
                 break L3;
               } else {
-                stackOut_7_0 = 1;
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = 1;
                 break L3;
               }
             }
@@ -359,7 +335,7 @@ final class cd {
     }
 
     final ad a(byte param0) {
-        ad var2 = null;
+        ad var2;
         this.field_y = sd.field_c;
         this.field_r = fl.field_v;
         this.field_t.a(this.field_A, -77, this.field_u);
@@ -381,10 +357,10 @@ final class cd {
     }
 
     private final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = TorChallenge.field_F ? 1 : 0;
         var2 = this.field_i;
         var3 = this.field_l;
@@ -722,17 +698,17 @@ final class cd {
     }
 
     final void a(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         if (gi.field_d != null) {
           return;
         } else {
           if (ee.field_o <= 0) {
             this.field_k = false;
             if (this.field_k) {
-              fieldTemp$2 = this.field_w - 1;
+              fieldTemp$0 = this.field_w - 1;
               this.field_w = this.field_w - 1;
-              if (fieldTemp$2 <= 0) {
+              if (fieldTemp$0 <= 0) {
                 this.field_w = this.field_g;
                 if (this.field_m <= ul.field_l) {
                   if (param0 != 2) {
@@ -798,9 +774,9 @@ final class cd {
             }
           } else {
             if (this.field_k) {
-              fieldTemp$3 = this.field_w - 1;
+              fieldTemp$1 = this.field_w - 1;
               this.field_w = this.field_w - 1;
-              if (fieldTemp$3 <= 0) {
+              if (fieldTemp$1 <= 0) {
                 this.field_w = this.field_g;
                 if (this.field_m <= ul.field_l) {
                   if (param0 != 2) {

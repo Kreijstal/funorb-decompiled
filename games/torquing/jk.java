@@ -6,13 +6,13 @@ final class jk {
     static String field_b;
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         String var4 = null;
         mh var5 = null;
-        RuntimeException decompiledCaughtException = null;
         var3 = Torquing.field_u;
         try {
           L0: {

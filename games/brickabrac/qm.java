@@ -22,14 +22,13 @@ final class qm {
 
     final static void a(int param0, int param1) {
         try {
-            Object discarded$1 = null;
+            Throwable decompiledCaughtException = null;
             int var2 = 0;
             Throwable var3 = null;
-            Throwable decompiledCaughtException = null;
             var2 = 25 / ((42 - param0) / 40);
             try {
               L0: {
-                discarded$1 = ne.a(new Object[]{new Integer(param1)}, 78, uc.e((byte) -82), "resizing");
+                ne.a(new Object[]{new Integer(param1)}, 78, uc.e((byte) -82), "resizing");
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

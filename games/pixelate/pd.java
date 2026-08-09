@@ -29,8 +29,8 @@ final class pd extends ak {
     }
 
     final void a(int param0, boolean param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         var5 = (param2 + this.field_K) / 2;
         var6 = -param0 + this.field_nb;
         if (!param1) {
@@ -72,9 +72,8 @@ final class pd extends ak {
     }
 
     final static boolean k(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 0) {
-            discarded$0 = pd.k(-125);
+            pd.k(-125);
             return oc.field_J;
         }
         return oc.field_J;

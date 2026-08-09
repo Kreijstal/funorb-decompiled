@@ -11,8 +11,6 @@ final class vd {
         RuntimeException var2 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -20,26 +18,14 @@ final class vd {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_3_0 = null;
-        byte[] stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 == 0) {
-              stackOut_3_0 = fl.field_b.a((byte) 24, param0, "");
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = fl.field_b.a((byte) 24, param0, "");
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (byte[]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (byte[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -48,27 +34,19 @@ final class vd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("vd.E(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("vd.E(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -82,17 +60,10 @@ final class vd {
     }
 
     final static void a(boolean param0, aa param1) {
-        int dupTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int incrementValue$6 = 0;
-        int dupTemp$7 = 0;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
+        int dupTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int dupTemp$3 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -100,14 +71,11 @@ final class vd {
         String stackIn_24_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -117,17 +85,17 @@ final class vd {
                 var2_int = 0;
                 L2: while (true) {
                   if (var2_int >= sd.field_L) {
-                    dupTemp$4 = param1.a((byte) -87);
-                    tm.field_O[dupTemp$4] = tm.field_O[dupTemp$4] + 1;
+                    dupTemp$0 = param1.a((byte) -87);
+                    tm.field_O[dupTemp$0] = tm.field_O[dupTemp$0] + 1;
                     var2_int = 0;
                     var3 = 0;
                     L3: while (true) {
                       if (var3 >= sd.field_L) {
                         sd.field_L = var2_int;
                         if (!param0) {
-                          fieldTemp$5 = sd.field_L;
+                          fieldTemp$1 = sd.field_L;
                           sd.field_L = sd.field_L + 1;
-                          de.field_e[fieldTemp$5] = param1;
+                          de.field_e[fieldTemp$1] = param1;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -149,9 +117,9 @@ final class vd {
                               }
                             }
                           }
-                          incrementValue$6 = var2_int;
+                          incrementValue$2 = var2_int;
                           var2_int++;
-                          de.field_e[incrementValue$6] = de.field_e[var3];
+                          de.field_e[incrementValue$2] = de.field_e[var3];
                           break L4;
                         }
                         var3++;
@@ -163,8 +131,8 @@ final class vd {
                       if (param1.field_j != de.field_e[var2_int].field_j) {
                         break L6;
                       } else {
-                        dupTemp$7 = de.field_e[var2_int].a((byte) 123);
-                        tm.field_O[dupTemp$7] = tm.field_O[dupTemp$7] + 1;
+                        dupTemp$3 = de.field_e[var2_int].a((byte) 123);
+                        tm.field_O[dupTemp$3] = tm.field_O[dupTemp$3] + 1;
                         break L6;
                       }
                     }
@@ -183,27 +151,19 @@ final class vd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var2);
-            stackOut_21_1 = new StringBuilder().append("vd.D(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var2);
+
+            stackIn_23_1 = new StringBuilder().append("vd.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L7;
             }
           }
@@ -233,12 +193,11 @@ final class vd {
     }
 
     final static void a(boolean param0) {
-        byte[] discarded$2 = null;
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         String var3 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -250,7 +209,7 @@ final class vd {
                     break L2;
                   } else {
                     var3 = (String) null;
-                    discarded$2 = vd.a((String) null, 91);
+                    vd.a((String) null, 91);
                     break L2;
                   }
                 }

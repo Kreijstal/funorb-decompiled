@@ -23,27 +23,15 @@ abstract class ka extends ud {
     }
 
     final static ak a(int param0, int param1, int param2, jl param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
-        int discarded$2 = 0;
         ak var13 = null;
         RuntimeException var13_ref = null;
         ak stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ak stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -51,7 +39,7 @@ abstract class ka extends ud {
               if (param8 == 21) {
                 break L1;
               } else {
-                discarded$2 = ka.m(40);
+                ka.m(40);
                 break L1;
               }
             }
@@ -62,35 +50,26 @@ abstract class ka extends ud {
             var13.field_M = wk.a(param2, param7, 1);
             var13.field_Db = param3;
             var13.field_N = param5;
-            stackOut_2_0 = (ak) (var13);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (ak) (var13);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var13_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var13_ref);
-            stackOut_4_1 = new StringBuilder().append("ka.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var13_ref);
+
+            stackIn_6_1 = new StringBuilder().append("ka.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -129,9 +108,8 @@ abstract class ka extends ud {
     }
 
     public static void l(int param0) {
-        int discarded$0 = 0;
         if (param0 != 127) {
-            discarded$0 = ka.m(55);
+            ka.m(55);
         }
         field_R = null;
         field_P = null;
@@ -157,9 +135,8 @@ abstract class ka extends ud {
     }
 
     final static int m(int param0) {
-        ak discarded$0 = null;
         if (param0 != 22) {
-            discarded$0 = ka.a(-69, 82, -115, (jl) null, -110, 125, 40, -83, 9, 8, -58, 81, 44);
+            ka.a(-69, 82, -115, (jl) null, -110, 125, 40, -83, 9, 8, -58, 81, 44);
         }
         return -qn.field_o + ia.field_e;
     }
@@ -181,19 +158,19 @@ abstract class ka extends ud {
     }
 
     void a(int param0, int param1, boolean param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = Pixelate.field_H ? 1 : 0;
         t.g(param0 + 6, 35 + param1, -12 + this.field_E, -40 + this.field_C, 2105376, 0);
         var5 = 211;
@@ -250,7 +227,7 @@ abstract class ka extends ud {
               }
             }
           } else {
-            if (t.field_f <= var8) {
+            if ((t.field_f ^ -1) >= (var8 ^ -1)) {
               if (t.field_a > var8) {
                 L4: {
                   var9 = var5 + var7 * (var6 - var5) / var4;
@@ -339,9 +316,8 @@ abstract class ka extends ud {
     }
 
     void f(boolean param0) {
-        int discarded$0 = 0;
         if (!param0) {
-            discarded$0 = ka.m(-1);
+            ka.m(-1);
         }
     }
 

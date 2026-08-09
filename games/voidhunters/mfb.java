@@ -25,9 +25,8 @@ class mfb {
     }
 
     boolean h(int param0) {
-        int discarded$0 = 0;
         if (param0 != -2291) {
-            discarded$0 = this.d(62);
+            this.d(62);
             return false;
         }
         return false;
@@ -47,9 +46,8 @@ class mfb {
     }
 
     int f(int param0) {
-        int discarded$0 = 0;
         if (param0 != 1024) {
-            discarded$0 = this.f((byte) 1);
+            this.f((byte) 1);
             return 0;
         }
         return 0;
@@ -83,9 +81,8 @@ class mfb {
     }
 
     int k(int param0) {
-        int discarded$0 = 0;
         if (param0 != 0) {
-            discarded$0 = this.f(-94);
+            this.f(-94);
             return 0;
         }
         return 0;
@@ -93,22 +90,12 @@ class mfb {
 
     final static void a(String[] args, int param1) {
         RuntimeException var2 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
@@ -138,27 +125,19 @@ class mfb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2);
-            stackOut_8_1 = new StringBuilder().append("mfb.U(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2);
+
+            stackIn_10_1 = new StringBuilder().append("mfb.U(");
+
             if (args == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -167,9 +146,8 @@ class mfb {
     }
 
     final int d(int param0) {
-        int discarded$0 = 0;
         if (param0 != 27918) {
-            discarded$0 = this.c(84);
+            this.c(84);
             return lob.field_b;
         }
         return lob.field_b;
@@ -220,9 +198,8 @@ class mfb {
     }
 
     int d(byte param0) {
-        int discarded$0 = 0;
         if (param0 >= -52) {
-            discarded$0 = this.c((byte) 118);
+            this.c((byte) 118);
             return 256;
         }
         return 256;

@@ -9,13 +9,11 @@ final class kh extends dj {
     static long field_g;
 
     final void a(byte[] param0, int param1) {
-        java.nio.Buffer discarded$0 = null;
-        java.nio.ByteBuffer discarded$1 = null;
         try {
             this.field_i = java.nio.ByteBuffer.allocateDirect(param0.length);
-            discarded$0 = this.field_i.position(0);
+            this.field_i.position(0);
             int var3_int = -117 % ((param1 - 75) / 38);
-            discarded$1 = this.field_i.put(param0);
+            this.field_i.put(param0);
         } catch (RuntimeException runtimeException) {
             throw bd.a((Throwable) ((Object) runtimeException), "kh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -34,8 +32,8 @@ final class kh extends dj {
     final byte[] a(int param0) {
         int var2 = -11 / ((param0 - -78) / 47);
         byte[] var3 = new byte[this.field_i.capacity()];
-        java.nio.Buffer discarded$0 = this.field_i.position(0);
-        java.nio.ByteBuffer discarded$1 = this.field_i.get(var3);
+        this.field_i.position(0);
+        this.field_i.get(var3);
         return var3;
     }
 

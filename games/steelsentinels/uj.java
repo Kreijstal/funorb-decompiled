@@ -31,6 +31,13 @@ final class uj {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, wk param6, int param7) {
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        String stackIn_44_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
         int var10 = 0;
         int var11 = 0;
@@ -47,23 +54,6 @@ final class uj {
         int[] var26 = null;
         int[] var30 = null;
         int[] var31 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
         var19 = SteelSentinels.field_G;
         try {
           L0: {
@@ -216,27 +206,19 @@ final class uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L14: {
             var8 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) (var8);
-            stackOut_41_1 = new StringBuilder().append("uj.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackIn_43_0 = (RuntimeException) (var8);
+
+            stackIn_43_1 = new StringBuilder().append("uj.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+
             if (param6 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "null";
               break L14;
             } else {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "{...}";
               break L14;
             }
           }
@@ -267,11 +249,18 @@ final class uj {
 
     final static void a(boolean param0, kj param1) {
         try {
-            int discarded$1 = 0;
+            RuntimeException stackIn_65_0 = null;
+            StringBuilder stackIn_65_1 = null;
+            RuntimeException stackIn_66_0 = null;
+            StringBuilder stackIn_66_1 = null;
+            String stackIn_66_2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
             int var5 = 0;
+            int var6_int = 0;
             ClassNotFoundException var6 = null;
             InvalidClassException var6_ref = null;
             StreamCorruptedException var6_ref2 = null;
@@ -284,7 +273,6 @@ final class uj {
             NullPointerException var6_ref9 = null;
             Exception var6_ref10 = null;
             Throwable var6_ref11 = null;
-            int var6_int = 0;
             int var8 = 0;
             Object[] var9 = null;
             int var10_int = 0;
@@ -304,23 +292,6 @@ final class uj {
             java.lang.reflect.Field var26 = null;
             java.lang.reflect.Method var27 = null;
             java.lang.reflect.Method var28 = null;
-            RuntimeException stackIn_64_0 = null;
-            StringBuilder stackIn_64_1 = null;
-            RuntimeException stackIn_65_0 = null;
-            StringBuilder stackIn_65_1 = null;
-            RuntimeException stackIn_66_0 = null;
-            StringBuilder stackIn_66_1 = null;
-            String stackIn_66_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_63_0 = null;
-            StringBuilder stackOut_63_1 = null;
-            RuntimeException stackOut_65_0 = null;
-            StringBuilder stackOut_65_1 = null;
-            String stackOut_65_2 = null;
-            RuntimeException stackOut_64_0 = null;
-            StringBuilder stackOut_64_1 = null;
-            String stackOut_64_2 = null;
             var18 = null;
             var16 = null;
             var21 = null;
@@ -347,7 +318,7 @@ final class uj {
                         var5 = 0;
                         L2: while (true) {
                           if (var17.field_B <= var5) {
-                            discarded$1 = param1.f(-127, var4);
+                            param1.f(-127, var4);
                             var17.b(4);
                             decompiledRegionSelector0 = 2;
                             break L0;
@@ -579,27 +550,19 @@ final class uj {
               decompiledCaughtException = decompiledCaughtParameter12;
               L23: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_63_0 = (RuntimeException) (var2);
-                stackOut_63_1 = new StringBuilder().append("uj.C(").append(param0).append(',');
-                stackIn_65_0 = stackOut_63_0;
-                stackIn_65_1 = stackOut_63_1;
-                stackIn_64_0 = stackOut_63_0;
-                stackIn_64_1 = stackOut_63_1;
+                stackIn_65_0 = (RuntimeException) (var2);
+
+                stackIn_65_1 = new StringBuilder().append("uj.C(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
-                  stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
-                  stackOut_65_2 = "null";
-                  stackIn_66_0 = stackOut_65_0;
-                  stackIn_66_1 = stackOut_65_1;
-                  stackIn_66_2 = stackOut_65_2;
+                  stackIn_66_0 = (RuntimeException) ((Object) stackIn_65_0);
+                  stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+                  stackIn_66_2 = "null";
                   break L23;
                 } else {
-                  stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-                  stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-                  stackOut_64_2 = "{...}";
-                  stackIn_66_0 = stackOut_64_0;
-                  stackIn_66_1 = stackOut_64_1;
-                  stackIn_66_2 = stackOut_64_2;
+                  stackIn_66_0 = (RuntimeException) ((Object) stackIn_65_0);
+                  stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+                  stackIn_66_2 = "{...}";
                   break L23;
                 }
               }
@@ -622,9 +585,7 @@ final class uj {
     }
 
     final static void b(int param0) {
-        if (vn.field_h != 0 + -vc.field_c) {
-            if (250 + -vc.field_c != vn.field_h) {
-            }
+        if (vn.field_h != 0 + -vc.field_c && 250 + -vc.field_c != vn.field_h) {
         }
         if (param0 != 29) {
             wk var2 = (wk) null;

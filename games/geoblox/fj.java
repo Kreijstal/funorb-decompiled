@@ -42,10 +42,9 @@ abstract class fj extends rc {
     }
 
     public static void e(int param0) {
-        boolean discarded$0 = false;
         field_p = null;
         if (param0 > -92) {
-            discarded$0 = fj.f(64);
+            fj.f(64);
             field_q = null;
             return;
         }

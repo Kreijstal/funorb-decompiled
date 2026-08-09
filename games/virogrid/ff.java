@@ -9,20 +9,20 @@ final class ff {
     }
 
     final static void a(int param0, int param1, int[] param2) {
-        int incrementValue$81 = 0;
-        int var3 = 0;
-        int[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
+        int incrementValue$6 = 0;
+        int var3;
+        int[] var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
         if (param0 < param2.length) {
           var3 = param2[param0];
           if (var3 != 0) {
@@ -54,9 +54,9 @@ final class ff {
                       var14++;
                       continue L1;
                     } else {
-                      incrementValue$81 = var10;
+                      incrementValue$6 = var10;
                       var10++;
-                      var4[incrementValue$81] = param1;
+                      var4[incrementValue$6] = param1;
                       var14++;
                       continue L1;
                     }

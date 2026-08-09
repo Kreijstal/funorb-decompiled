@@ -48,7 +48,7 @@ final class ep extends pu {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        pf var3 = null;
+        pf var3;
         var3 = sja.field_fb;
         var3.c(param1, (byte) 107);
         var3.d(3, 0);

@@ -59,9 +59,9 @@ final class ta {
     }
 
     final static void b(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        java.applet.Applet var3 = null;
+        int var1;
+        int var2;
+        java.applet.Applet var3;
         L0: {
           var2 = Bounce.field_N;
           ej.field_c = null;
@@ -104,25 +104,9 @@ final class ta {
     }
 
     final static byte[] a(int param0, byte[] param1) {
-        int discarded$1 = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        byte[] var5_ref_byte__ = null;
-        byte[] var6 = null;
-        Object var7 = null;
-        Throwable var8 = null;
-        wi var9 = null;
-        byte[] var10 = null;
-        byte[] var11 = null;
-        byte[] var12 = null;
-        byte[] var13 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_10_0 = null;
         byte[] stackIn_24_0 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
@@ -130,17 +114,18 @@ final class ta {
         String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        byte[] stackOut_23_0 = null;
-        byte[] stackOut_9_0 = null;
-        byte[] stackOut_1_0 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        byte[] var5_ref_byte__ = null;
+        byte[] var6 = null;
+        Object var7 = null;
+        wi var9 = null;
+        byte[] var10 = null;
+        byte[] var11 = null;
+        byte[] var12 = null;
+        byte[] var13 = null;
         try {
           L0: {
             var9 = new wi(param1);
@@ -193,12 +178,11 @@ final class ta {
                             }
                             break L5;
                           } else {
-                            discarded$1 = ad.a(var13, var5, param1, var4, 9);
+                            ad.a(var13, var5, param1, var4, 9);
                             break L5;
                           }
                         }
-                        stackOut_23_0 = (byte[]) (var6);
-                        stackIn_24_0 = stackOut_23_0;
+                        stackIn_24_0 = (byte[]) (var6);
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
@@ -209,8 +193,7 @@ final class ta {
                     var10 = var12;
                     var5_ref_byte__ = var10;
                     var9.a((byte) 126, var4, var12, 0);
-                    stackOut_9_0 = (byte[]) (var5_ref_byte__);
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = (byte[]) (var5_ref_byte__);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -218,8 +201,7 @@ final class ta {
               }
               throw new RuntimeException();
             } else {
-              stackOut_1_0 = (byte[]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (byte[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -228,27 +210,19 @@ final class ta {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var2);
-            stackOut_25_1 = new StringBuilder().append("ta.D(").append(param0).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var2);
+
+            stackIn_27_1 = new StringBuilder().append("ta.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L7;
             }
           }

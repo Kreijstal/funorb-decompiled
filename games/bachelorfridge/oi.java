@@ -12,24 +12,13 @@ final class oi extends ana {
     }
 
     final static void a(int param0, kv[] param1) {
-        int discarded$2 = 0;
-        RuntimeException var2 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -48,7 +37,7 @@ final class oi extends ana {
               if (param0 == 3) {
                 break L2;
               } else {
-                discarded$2 = oi.a(-85, -83, -101, -96);
+                oi.a(-85, -83, -101, -96);
                 break L2;
               }
             }
@@ -58,27 +47,19 @@ final class oi extends ana {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("oi.C(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("oi.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -102,11 +83,11 @@ final class oi extends ana {
     }
 
     private final void e(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        wia var4 = null;
-        int var5 = 0;
-        kv[] var6 = null;
+        int var2;
+        int var3;
+        wia var4;
+        int var5;
+        kv[] var6;
         var5 = BachelorFridge.field_y;
         var2 = 0;
         L0: while (true) {
@@ -153,7 +134,6 @@ final class oi extends ana {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        int discarded$0 = 0;
         if (!(dg.field_i < param1 + param2)) {
             return param2;
         }
@@ -161,7 +141,7 @@ final class oi extends ana {
             return -param1 + (param0 + param2);
         }
         if (param3 != -21264) {
-            discarded$0 = oi.a(-72, -7, -102, 104);
+            oi.a(-72, -7, -102, 104);
         }
         return dg.field_i - param1;
     }

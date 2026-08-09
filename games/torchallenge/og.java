@@ -15,7 +15,6 @@ abstract class og {
         int var7 = 0;
         int stackIn_24_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_23_0 = 0;
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -88,8 +87,7 @@ abstract class og {
                     }
                   }
                 }
-                stackOut_23_0 = var3;
-                stackIn_24_0 = stackOut_23_0;
+                stackIn_24_0 = var3;
                 break L0;
               } else {
                 L7: {
@@ -129,7 +127,6 @@ abstract class og {
         int var5 = 0;
         int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -137,8 +134,7 @@ abstract class og {
             L1: while (true) {
               if ((param2 ^ -1) >= -1) {
                 var4 = 75 % ((-57 - param1) / 42);
-                stackOut_4_0 = var3_int;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = var3_int;
                 break L0;
               } else {
                 var3_int = var3_int << 133341953 | 1 & param0;
@@ -160,8 +156,6 @@ abstract class og {
         RuntimeException var2 = null;
         vh stackIn_2_0 = null;
         vh stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -169,26 +163,14 @@ abstract class og {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        vh stackOut_3_0 = null;
-        vh stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1) {
-              stackOut_3_0 = new vh(param0);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = new vh(param0);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (vh) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (vh) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -197,27 +179,19 @@ abstract class og {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("og.D(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("og.D(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -233,17 +207,16 @@ abstract class og {
     abstract int a(byte param0);
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_b = null;
         if (param0 > -102) {
-            discarded$0 = og.a(-26, (byte) 90, -68);
+            og.a(-26, (byte) 90, -68);
         }
     }
 
     final static void a(int param0, int param1, int param2) {
-        int discarded$1 = 0;
-        RuntimeException var3 = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -268,7 +241,6 @@ abstract class og {
         int var25 = 0;
         int var26 = 0;
         int var27 = 0;
-        RuntimeException decompiledCaughtException = null;
         var27 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -294,7 +266,7 @@ abstract class og {
               if (param2 == -15516) {
                 break L1;
               } else {
-                discarded$1 = og.a(-113, (byte) -23, -27);
+                og.a(-113, (byte) -23, -27);
                 break L1;
               }
             }
@@ -366,7 +338,7 @@ abstract class og {
                             var13 = wc.field_e[var25][var26][0];
                             var16 = var18 + var15;
                             var14 = var17 + var13;
-                            if (var16 >= var11) {
+                            if ((var16 ^ -1) <= (var11 ^ -1)) {
                               L7: {
                                 if (var15 < var12) {
                                   if (var9 <= var14) {

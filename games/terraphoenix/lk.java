@@ -35,7 +35,7 @@ final class lk {
     }
 
     final static String c(int param0) {
-        String var1 = null;
+        String var1;
         if (param0 > -30) {
           L0: {
             lk.b(-99);
@@ -95,9 +95,8 @@ final class lk {
     }
 
     final static void d(int param0) {
-        String discarded$0 = null;
         if (param0 < 79) {
-            discarded$0 = lk.c(-88);
+            lk.c(-88);
         }
     }
 

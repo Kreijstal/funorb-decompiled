@@ -18,20 +18,19 @@ abstract class iw extends bl {
     }
 
     void b(int param0, int param1, int param2) {
-        boolean discarded$1 = false;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = VoidHunters.field_G;
         dma.c(6 + param2, param0 - -35, this.field_h + -12, -40 + this.field_f, 2105376, 0);
         var4 = 35;
@@ -54,7 +53,7 @@ abstract class iw extends bl {
                   if (param1 == 1630174241) {
                     break L2;
                   } else {
-                    discarded$1 = this.a(59);
+                    this.a(59);
                     break L2;
                   }
                 }
@@ -88,7 +87,7 @@ abstract class iw extends bl {
               }
             }
           } else {
-            if (dma.field_c <= var8) {
+            if ((dma.field_c ^ -1) >= (var8 ^ -1)) {
               if (var8 < dma.field_f) {
                 L4: {
                   var9 = var5 - -((-var5 + var6) * var7 / var4);
@@ -220,6 +219,8 @@ abstract class iw extends bl {
     }
 
     final static void k(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         fa var3 = null;
@@ -233,23 +234,20 @@ abstract class iw extends bl {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int var14 = 0;
-        faa var15 = null;
-        int[][] var19 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
+        faa var14 = null;
+        int[][] var18 = null;
         var12 = VoidHunters.field_G;
         try {
           L0: {
-            var15 = qga.field_b;
-            var2 = var15.e((byte) -87);
+            var14 = qga.field_b;
+            var2 = var14.e((byte) -87);
             var3 = (fa) ((Object) gm.field_H.d(param0 + 38));
             L1: while (true) {
               L2: {
                 if (var3 == null) {
                   break L2;
                 } else {
-                  if (var3.field_f != var2) {
+                  if ((var3.field_f ^ -1) != (var2 ^ -1)) {
                     var3 = (fa) ((Object) gm.field_H.a((byte) 95));
                     continue L1;
                   } else {
@@ -271,7 +269,7 @@ abstract class iw extends bl {
                   }
                 }
                 L4: {
-                  var4 = var15.e((byte) -118);
+                  var4 = var14.e((byte) -118);
                   if (-1 != (var4 ^ -1)) {
                     tsb.field_o[0] = kca.field_a;
                     var5 = var3.field_g;
@@ -284,40 +282,39 @@ abstract class iw extends bl {
                           if (var4 <= var6_int) {
                             qea.a((byte) -29, var5);
                             var6 = new String[2][var5];
-                            var19 = new int[2][var5 * 4];
+                            var18 = new int[2][var5 * 4];
                             var8 = bea.field_e;
                             var9 = 0;
                             var10 = 0;
                             L7: while (true) {
                               if (var9 >= var8) {
+                                var9 = 0;
                                 var13 = 0;
-                                var9 = var13;
-                                var14 = 0;
-                                var10 = var14;
+                                var10 = var13;
                                 L8: while (true) {
-                                  if (var13 < var8) {
-                                    var11 = sv.field_f[var5 + var13];
-                                    var6[1][var14] = tsb.field_o[var11];
-                                    var19[1][var14 * 4] = fmb.field_o[var11];
-                                    var19[1][1 + var14 * 4] = emb.field_o[var11];
-                                    var19[1][var14 * 4 + 2] = hma.field_d[var11];
-                                    var19[1][3 + var14 * 4] = fv.field_o[var11];
+                                  if (var9 < var8) {
+                                    var11 = sv.field_f[var5 + var9];
+                                    var6[1][var13] = tsb.field_o[var11];
+                                    var18[1][var13 * 4] = fmb.field_o[var11];
+                                    var18[1][1 + var13 * 4] = emb.field_o[var11];
+                                    var18[1][var13 * 4 + 2] = hma.field_d[var11];
+                                    var18[1][3 + var13 * 4] = fv.field_o[var11];
                                     if (qja.a((byte) -75, tsb.field_o[var11])) {
                                       L9: {
                                         if (0 == fv.field_o[var11] + (hma.field_d[var11] + emb.field_o[var11])) {
-                                          var6[1][var14] = null;
-                                          var14--;
+                                          var6[1][var13] = null;
+                                          var13--;
                                           break L9;
                                         } else {
                                           break L9;
                                         }
                                       }
-                                      var14++;
                                       var13++;
+                                      var9++;
                                       continue L8;
                                     } else {
-                                      var14++;
                                       var13++;
+                                      var9++;
                                       continue L8;
                                     }
                                   } else {
@@ -329,10 +326,10 @@ abstract class iw extends bl {
                                 L10: {
                                   var11 = sv.field_f[var9];
                                   var6[0][var10] = tsb.field_o[var11];
-                                  var19[0][var10 * 4] = fmb.field_o[var11];
-                                  var19[0][var10 * 4 - -1] = emb.field_o[var11];
-                                  var19[0][2 + var10 * 4] = hma.field_d[var11];
-                                  var19[0][3 + 4 * var10] = fv.field_o[var11];
+                                  var18[0][var10 * 4] = fmb.field_o[var11];
+                                  var18[0][var10 * 4 - -1] = emb.field_o[var11];
+                                  var18[0][2 + var10 * 4] = hma.field_d[var11];
+                                  var18[0][3 + 4 * var10] = fv.field_o[var11];
                                   if (qja.a((byte) -75, tsb.field_o[var11])) {
                                     if (0 == emb.field_o[var11] - -hma.field_d[var11] + fv.field_o[var11]) {
                                       var6[0][var10] = null;
@@ -352,8 +349,8 @@ abstract class iw extends bl {
                             }
                           } else {
                             L11: {
-                              bb.a(var15, true);
-                              if (var6_int != 0) {
+                              bb.a(var14, true);
+                              if ((var6_int ^ -1) != -1) {
                                 ujb.a(wl.field_q, qfb.field_o, vga.field_d, 13336, var6_int, jv.field_b);
                                 break L11;
                               } else {
@@ -366,7 +363,7 @@ abstract class iw extends bl {
                           }
                         }
                       } else {
-                        tsb.field_o[var6_int] = var15.a(param0 + 37);
+                        tsb.field_o[var6_int] = var14.a(param0 + 37);
                         var6_int++;
                         continue L5;
                       }

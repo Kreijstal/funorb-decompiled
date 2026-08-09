@@ -23,7 +23,7 @@ final class dc extends ca {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1;
         var1 = 114 % ((-46 - param0) / 61);
         if (null != oj.field_q) {
           oj.field_q.q(4210752);

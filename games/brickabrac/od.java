@@ -23,12 +23,12 @@ final class od extends java.awt.Canvas {
     }
 
     final static void a(byte param0) {
-        int fieldTemp$5 = 0;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int var2 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int var2;
         L0: {
           var2 = BrickABrac.field_J ? 1 : 0;
           if (13 != pp.field_a) {
@@ -36,9 +36,9 @@ final class od extends java.awt.Canvas {
               if (0 >= jl.field_a) {
                 break L0;
               } else {
-                fieldTemp$5 = jl.field_a - 1;
+                fieldTemp$0 = jl.field_a - 1;
                 jl.field_a = jl.field_a - 1;
-                if (0 == fieldTemp$5) {
+                if (0 == fieldTemp$0) {
                   mn.field_v = de.field_x;
                   tb.field_eb = hq.field_y;
                   pp.field_a = -1;
@@ -55,9 +55,9 @@ final class od extends java.awt.Canvas {
                 if (0 >= jl.field_a) {
                   break L0;
                 } else {
-                  fieldTemp$6 = jl.field_a - 1;
+                  fieldTemp$1 = jl.field_a - 1;
                   jl.field_a = jl.field_a - 1;
-                  if (0 == fieldTemp$6) {
+                  if (0 == fieldTemp$1) {
                     pp.field_a = -1;
                     ga.field_i = 1;
                     jl.field_a = 250;
@@ -77,9 +77,9 @@ final class od extends java.awt.Canvas {
                     if (0 >= jl.field_a) {
                       break L0;
                     } else {
-                      fieldTemp$7 = jl.field_a - 1;
+                      fieldTemp$2 = jl.field_a - 1;
                       jl.field_a = jl.field_a - 1;
-                      if (0 != fieldTemp$7) {
+                      if (0 != fieldTemp$2) {
                         break L0;
                       } else {
                         tb.field_eb = op.field_b;
@@ -127,9 +127,9 @@ final class od extends java.awt.Canvas {
                             if ((jl.field_a ^ -1) >= -1) {
                               break L0;
                             } else {
-                              fieldTemp$8 = jl.field_a - 1;
+                              fieldTemp$3 = jl.field_a - 1;
                               jl.field_a = jl.field_a - 1;
-                              if (fieldTemp$8 != 0) {
+                              if (fieldTemp$3 != 0) {
                                 break L0;
                               } else {
                                 ga.field_i = 11;
@@ -155,9 +155,9 @@ final class od extends java.awt.Canvas {
             if (0 >= jl.field_a) {
               break L0;
             } else {
-              fieldTemp$9 = jl.field_a - 1;
+              fieldTemp$4 = jl.field_a - 1;
               jl.field_a = jl.field_a - 1;
-              if (0 != fieldTemp$9) {
+              if (0 != fieldTemp$4) {
                 break L0;
               } else {
                 mn.field_v = de.field_x;
@@ -197,13 +197,10 @@ final class od extends java.awt.Canvas {
         int var5 = 0;
         char[] var6 = null;
         int stackIn_8_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_20_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_22_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_19_0 = 0;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -212,8 +209,7 @@ final class od extends java.awt.Canvas {
                 break L1;
               } else {
                 if (param0 < 128) {
-                  stackOut_7_0 = 1;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -246,8 +242,7 @@ final class od extends java.awt.Canvas {
                       var3++;
                       continue L4;
                     } else {
-                      stackOut_14_0 = 1;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_17_0 = 1;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -265,8 +260,7 @@ final class od extends java.awt.Canvas {
                 break L5;
               }
             }
-            stackOut_19_0 = 0;
-            stackIn_20_0 = stackOut_19_0;
+            stackIn_22_0 = 0;
             decompiledRegionSelector0 = 2;
             break L0;
           }
@@ -279,9 +273,9 @@ final class od extends java.awt.Canvas {
           return stackIn_8_0 != 0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_15_0 != 0;
+            return stackIn_17_0 != 0;
           } else {
-            return stackIn_20_0 != 0;
+            return stackIn_22_0 != 0;
           }
         }
     }
@@ -294,33 +288,21 @@ final class od extends java.awt.Canvas {
     }
 
     final static void a(int param0, long param1, StringBuilder param2) {
-        StringBuilder discarded$11 = null;
-        StringBuilder discarded$12 = null;
-        StringBuilder discarded$13 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var4 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -335,19 +317,17 @@ final class od extends java.awt.Canvas {
             }
             L2: {
               if (param1 >= 0L) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L2;
               }
             }
             var4_int = stackIn_6_0;
             var5 = 0;
             L3: while (true) {
-              discarded$11 = gh.field_e.append((char)(48 + (int)(param1 % 10L)));
+              discarded$4 = gh.field_e.append((char)(48 + (int)(param1 % 10L)));
               param1 = param1 / 10L;
               var5++;
               if (0L != param1) {
@@ -357,7 +337,7 @@ final class od extends java.awt.Canvas {
                   if (var4_int == 0) {
                     break L4;
                   } else {
-                    discarded$12 = gh.field_e.append('-');
+                    discarded$5 = gh.field_e.append('-');
                     break L4;
                   }
                 }
@@ -366,7 +346,7 @@ final class od extends java.awt.Canvas {
                   if ((var6 ^ -1) > -1) {
                     break L0;
                   } else {
-                    discarded$13 = param2.append(gh.field_e.charAt(var6));
+                    discarded$6 = param2.append(gh.field_e.charAt(var6));
                     var6--;
                     continue L5;
                   }
@@ -378,27 +358,19 @@ final class od extends java.awt.Canvas {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var4);
-            stackOut_14_1 = new StringBuilder().append("od.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var4);
+
+            stackIn_16_1 = new StringBuilder().append("od.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L6;
             }
           }

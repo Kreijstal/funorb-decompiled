@@ -10,9 +10,9 @@ final class n extends wf {
     }
 
     final void a(int param0, int param1, byte param2, java.awt.Component param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         this.field_c = param1;
         this.field_l = new int[param0 * param1 - -1];
         this.field_b = param0;
@@ -32,14 +32,12 @@ final class n extends wf {
     }
 
     final void a(byte param0, int param1, java.awt.Graphics param2, int param3) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
         if (param0 < 6) {
           this.field_n = (java.awt.Component) null;
-          discarded$4 = param2.drawImage(this.field_h, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_n));
+          param2.drawImage(this.field_h, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_n));
           return;
         } else {
-          discarded$5 = param2.drawImage(this.field_h, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_n));
+          param2.drawImage(this.field_h, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_n));
           return;
         }
     }

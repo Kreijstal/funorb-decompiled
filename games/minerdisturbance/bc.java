@@ -54,14 +54,14 @@ final class bc implements Iterator {
     }
 
     public final Object next() {
-        al var1 = this.field_c;
+        Object var1 = this.field_c;
         if (this.field_f.field_e == var1) {
             var1 = null;
             this.field_c = null;
         } else {
-            this.field_c = var1.field_t;
+            this.field_c = ((al) (var1)).field_t;
         }
-        this.field_e = var1;
+        this.field_e = (al) (var1);
         return var1;
     }
 

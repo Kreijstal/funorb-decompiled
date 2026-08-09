@@ -22,11 +22,11 @@ final class di {
     final pg c(int param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var3 = 0;
-        pg var4 = null;
-        pg var5 = null;
-        pg var6 = null;
-        pg var9 = null;
+        int var3;
+        pg var4;
+        pg var5;
+        pg var6;
+        pg var9;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 < -51) {
           if ((this.field_e ^ -1) < -1) {
@@ -151,18 +151,18 @@ final class di {
     }
 
     di(int param0) {
-        pg dupTemp$2 = null;
-        int var2 = 0;
-        pg var3 = null;
+        pg dupTemp$1 = null;
+        int var2;
+        pg var3;
         this.field_e = 0;
         this.field_k = param0;
         this.field_f = new pg[param0];
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            dupTemp$2 = new pg();
-            var3 = dupTemp$2;
-            this.field_f[var2] = dupTemp$2;
+            dupTemp$1 = new pg();
+            var3 = dupTemp$1;
+            this.field_f[var2] = dupTemp$1;
             var3.field_b = var3;
             var3.field_a = var3;
             var2++;

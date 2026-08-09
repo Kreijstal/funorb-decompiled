@@ -18,25 +18,12 @@ final class tl {
         int var4 = 0;
         ng var5 = null;
         kd stackIn_3_0 = null;
-        kd stackIn_5_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kd stackOut_2_0 = null;
-        kd stackOut_4_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
@@ -45,19 +32,17 @@ final class tl {
               var3 = var2.field_f;
               var2.field_c = var3;
               var2 = var3;
-              stackOut_2_0 = (kd) (var2);
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (kd) (var2);
               L2: while (true) {
                 if (stackIn_3_0 != param1.field_b) {
                   continue L1;
                 } else {
-                  stackOut_4_0 = param1.field_b;
-                  stackIn_3_0 = stackOut_4_0;
-                  stackIn_5_0 = stackOut_4_0;
+                  stackIn_3_0 = param1.field_b;
+
                   if (var4 != 0) {
                     continue L2;
                   } else {
-                    var2 = stackIn_5_0;
+                    var2 = stackIn_3_0;
                     L3: while (true) {
                       var3 = var2.field_c;
                       var3.field_f = var2;
@@ -89,27 +74,19 @@ final class tl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var2_ref);
-            stackOut_12_1 = new StringBuilder().append("tl.A(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var2_ref);
+
+            stackIn_14_1 = new StringBuilder().append("tl.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L5;
             }
           }
@@ -126,29 +103,21 @@ final class tl {
     }
 
     final int a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
         int stackIn_6_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_36_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
+        int var3;
+        int var4;
         var4 = Lexicominos.field_L ? 1 : 0;
         if (this.field_e != rf.a(param1, 47)) {
           L0: {
             this.field_e = rf.a(param1, 47);
             this.field_d = 1;
             if (20 < this.field_d) {
-              stackOut_5_0 = 3;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 3;
               break L0;
             } else {
-              stackOut_4_0 = 1;
-              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_0 = 1;
               break L0;
             }
           }
@@ -189,12 +158,10 @@ final class tl {
           if (var4 == 0) {
             L3: {
               if (20 < this.field_d) {
-                stackOut_35_0 = 3;
-                stackIn_36_0 = stackOut_35_0;
+                stackIn_36_0 = 3;
                 break L3;
               } else {
-                stackOut_34_0 = 1;
-                stackIn_36_0 = stackOut_34_0;
+                stackIn_36_0 = 1;
                 break L3;
               }
             }
@@ -235,12 +202,10 @@ final class tl {
               this.field_e = rf.a(param1, 47);
               this.field_d = 1;
               if (20 < this.field_d) {
-                stackOut_20_0 = 3;
-                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_0 = 3;
                 break L6;
               } else {
-                stackOut_19_0 = 1;
-                stackIn_21_0 = stackOut_19_0;
+                stackIn_21_0 = 1;
                 break L6;
               }
             }

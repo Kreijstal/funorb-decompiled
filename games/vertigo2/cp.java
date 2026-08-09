@@ -7,7 +7,7 @@ final class cp {
     static int field_c;
 
     final static boolean a(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = -123 / ((param0 - 52) / 44);
         if (-21 >= (qc.field_A ^ -1)) {
           if (tk.c((byte) -38)) {
@@ -44,17 +44,10 @@ final class cp {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_23_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_24_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_2_0 = 0;
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -70,9 +63,8 @@ final class cp {
                       var3 = 0;
                       L2: while (true) {
                         if (var2.length <= var3) {
-                          stackOut_22_0 = 0;
-                          stackIn_23_0 = stackOut_22_0;
-                          decompiledRegionSelector0 = 5;
+                          stackIn_24_0 = 0;
+                          decompiledRegionSelector0 = 4;
                           break L0;
                         } else {
                           var4 = var2[var3];
@@ -80,41 +72,34 @@ final class cp {
                             var3++;
                             continue L2;
                           } else {
-                            stackOut_19_0 = 1;
-                            stackIn_20_0 = stackOut_19_0;
-                            decompiledRegionSelector0 = 4;
+                            stackIn_21_0 = 1;
+                            decompiledRegionSelector0 = 3;
                             break L0;
                           }
                         }
                       }
                     } else {
                       var4 = var6[var3];
-                      if (var4 != param1) {
+                      if ((var4 ^ -1) != (param1 ^ -1)) {
                         var3++;
                         continue L1;
                       } else {
-                        stackOut_13_0 = 1;
-                        stackIn_14_0 = stackOut_13_0;
-                        decompiledRegionSelector0 = 3;
-                        break L0;
+                        return true;
                       }
                     }
                   }
                 } else {
-                  stackOut_8_0 = 0;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = 0;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_5_0 = 1;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -134,13 +119,9 @@ final class cp {
               return stackIn_9_0 != 0;
             } else {
               if (decompiledRegionSelector0 == 3) {
-                return stackIn_14_0 != 0;
+                return stackIn_21_0 != 0;
               } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_20_0 != 0;
-                } else {
-                  return stackIn_23_0 != 0;
-                }
+                return stackIn_24_0 != 0;
               }
             }
           }

@@ -10,8 +10,8 @@ final class sl {
     private da field_c;
 
     final da a(byte param0) {
-        int var2 = 0;
-        da var3 = null;
+        int var2;
+        da var3;
         var2 = 46 / ((param0 - -1) / 60);
         var3 = this.field_e.field_f;
         if (var3 == this.field_e) {
@@ -23,7 +23,7 @@ final class sl {
     }
 
     final da c(int param0) {
-        da var2 = null;
+        da var2;
         var2 = this.field_c;
         if (var2 == this.field_e) {
           this.field_c = null;
@@ -68,8 +68,8 @@ final class sl {
     }
 
     final da c(byte param0) {
-        da var2 = null;
-        int var3 = 0;
+        da var2;
+        int var3;
         var3 = 29 / ((52 - param0) / 51);
         var2 = this.field_e.field_f;
         if (var2 == this.field_e) {
@@ -82,11 +82,7 @@ final class sl {
     }
 
     final static void a(boolean param0) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        RuntimeException var1 = null;
-        ka var1_ref = null;
+        ka var1 = null;
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -107,9 +103,6 @@ final class sl {
         int[] var29 = null;
         int[] var30 = null;
         int[] var31 = null;
-        int stackIn_51_0 = 0;
-        int stackIn_51_1 = 0;
-        int stackIn_51_2 = 0;
         int stackIn_52_0 = 0;
         int stackIn_52_1 = 0;
         int stackIn_52_2 = 0;
@@ -122,21 +115,7 @@ final class sl {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_50_0 = 0;
-        int stackOut_50_1 = 0;
-        int stackOut_50_2 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_52_1 = 0;
-        int stackOut_52_2 = 0;
-        int stackOut_52_3 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_51_1 = 0;
-        int stackOut_51_2 = 0;
-        int stackOut_51_3 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_66_0 = 0;
+        RuntimeException var1_ref = null;
         var10 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -213,7 +192,7 @@ final class sl {
                               break L2;
                             } else {
                               ak.field_i[var7].d();
-                              discarded$3 = ek.field_G.a(hb.field_g[var7], 3, 3, ak.field_i[var7].field_u - 6, ak.field_i[var7].field_x - 6, vh.field_h, -1, 1, 1, ek.field_G.field_x + ek.field_G.field_K);
+                              ek.field_G.a(hb.field_g[var7], 3, 3, ak.field_i[var7].field_u - 6, ak.field_i[var7].field_x - 6, vh.field_h, -1, 1, 1, ek.field_G.field_x + ek.field_G.field_K);
                               ih.a(ak.field_i[var7].field_u, 0, 4, ak.field_i[var7].field_x, 3, ak.field_i[var7], 0, 1);
                               var7++;
                               continue L3;
@@ -306,7 +285,7 @@ final class sl {
                     vk.field_d.g();
                     var9 = new ka(vk.field_d.field_q, vk.field_d.field_v);
                     var9.d();
-                    discarded$4 = tk.field_R.a(var14, si.field_J, vk.field_k, fd.field_f, pi.field_b, 16777215, -1, 1, 1, tk.field_R.field_x + tk.field_R.field_K);
+                    tk.field_R.a(var14, si.field_J, vk.field_k, fd.field_f, pi.field_b, 16777215, -1, 1, 1, tk.field_R.field_x + tk.field_R.field_K);
                     ih.a(var9.field_q, 0, 4, var9.field_v, 3, var9, 0, 1);
                     vk.field_d.d();
                     var9.g(0, 0);
@@ -338,7 +317,7 @@ final class sl {
                     var17 = ni.a(new String[]{ia.field_l}, 0, w.field_n);
                     ia.field_l = null;
                     var16.d();
-                    discarded$5 = ek.field_G.a(var17, 3, 3, var16.field_u + -6, var16.field_x - 6, 16777215, -1, 0, 1, ek.field_G.field_K + ek.field_G.field_x);
+                    ek.field_G.a(var17, 3, 3, var16.field_u + -6, var16.field_x - 6, 16777215, -1, 0, 1, ek.field_G.field_K + ek.field_G.field_x);
                     ih.a(var16.field_u, 0, 4, var16.field_x, 3, var16, 0, 1);
                     lj.field_f.d();
                     var16.g(199 - lj.field_f.field_s, 83 - lj.field_f.field_p);
@@ -410,44 +389,33 @@ final class sl {
                   if (null != ub.field_e) {
                     L15: {
                       md.field_b.g(231, 390);
-                      var1_ref = hd.field_b;
+                      var1 = hd.field_b;
                       if (0 == of.field_c.field_j) {
-                        var1_ref = dg.field_R;
+                        var1 = dg.field_R;
                         break L15;
                       } else {
                         break L15;
                       }
                     }
                     L16: {
-                      var1_ref.g(0, 0);
-                      stackOut_50_0 = 40;
-                      stackOut_50_1 = 124;
-                      stackOut_50_2 = ub.field_h;
-                      stackIn_52_0 = stackOut_50_0;
-                      stackIn_52_1 = stackOut_50_1;
-                      stackIn_52_2 = stackOut_50_2;
-                      stackIn_51_0 = stackOut_50_0;
-                      stackIn_51_1 = stackOut_50_1;
-                      stackIn_51_2 = stackOut_50_2;
+                      var1.g(0, 0);
+                      stackIn_52_0 = 40;
+
+                      stackIn_52_1 = 124;
+
+                      stackIn_52_2 = ub.field_h;
+
                       if (of.field_c.field_j != 0) {
-                        stackOut_52_0 = stackIn_52_0;
-                        stackOut_52_1 = stackIn_52_1;
-                        stackOut_52_2 = stackIn_52_2;
-                        stackOut_52_3 = 3;
-                        stackIn_53_0 = stackOut_52_0;
-                        stackIn_53_1 = stackOut_52_1;
-                        stackIn_53_2 = stackOut_52_2;
-                        stackIn_53_3 = stackOut_52_3;
+                        stackIn_53_0 = stackIn_52_0;
+                        stackIn_53_1 = stackIn_52_1;
+                        stackIn_53_2 = stackIn_52_2;
+                        stackIn_53_3 = 3;
                         break L16;
                       } else {
-                        stackOut_51_0 = stackIn_51_0;
-                        stackOut_51_1 = stackIn_51_1;
-                        stackOut_51_2 = stackIn_51_2;
-                        stackOut_51_3 = 4;
-                        stackIn_53_0 = stackOut_51_0;
-                        stackIn_53_1 = stackOut_51_1;
-                        stackIn_53_2 = stackOut_51_2;
-                        stackIn_53_3 = stackOut_51_3;
+                        stackIn_53_0 = stackIn_52_0;
+                        stackIn_53_1 = stackIn_52_1;
+                        stackIn_53_2 = stackIn_52_2;
+                        stackIn_53_3 = 4;
                         break L16;
                       }
                     }
@@ -458,10 +426,10 @@ final class sl {
                         md.field_b.b(232, 389, var2);
                         md.field_b.b(232, 391, var2);
                         md.field_b.b(230, 391, var2);
-                        var1_ref.b(1, 1, var2);
-                        var1_ref.b(-1, 1, var2);
-                        var1_ref.b(1, -1, var2);
-                        var1_ref.b(-1, -1, var2);
+                        var1.b(1, 1, var2);
+                        var1.b(-1, 1, var2);
+                        var1.b(1, -1, var2);
+                        var1.b(-1, -1, var2);
                         break L17;
                       } else {
                         break L17;
@@ -469,12 +437,10 @@ final class sl {
                     }
                     L18: {
                       if (-1 != (of.field_c.field_j ^ -1)) {
-                        stackOut_58_0 = 0;
-                        stackIn_59_0 = stackOut_58_0;
+                        stackIn_59_0 = 0;
                         break L18;
                       } else {
-                        stackOut_57_0 = 1;
-                        stackIn_59_0 = stackOut_57_0;
+                        stackIn_59_0 = 1;
                         break L18;
                       }
                     }
@@ -502,12 +468,10 @@ final class sl {
                     }
                     L21: {
                       if (1 != of.field_c.field_j) {
-                        stackOut_67_0 = 0;
-                        stackIn_68_0 = stackOut_67_0;
+                        stackIn_68_0 = 0;
                         break L21;
                       } else {
-                        stackOut_66_0 = 1;
-                        stackIn_68_0 = stackOut_66_0;
+                        stackIn_68_0 = 1;
                         break L21;
                       }
                     }
@@ -584,8 +548,8 @@ final class sl {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "sl.F(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw oj.a((Throwable) ((Object) var1_ref), "sl.F(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -602,13 +566,12 @@ final class sl {
     }
 
     final da b(byte param0) {
-        da discarded$2 = null;
-        da var2 = null;
+        da var2;
         L0: {
           if (param0 == 65) {
             break L0;
           } else {
-            discarded$2 = this.d((byte) 1);
+            this.d((byte) 1);
             break L0;
           }
         }
@@ -623,8 +586,8 @@ final class sl {
     }
 
     final void a(int param0) {
-        da var2 = null;
-        int var3 = 0;
+        da var2;
+        int var3;
         var3 = TorChallenge.field_F ? 1 : 0;
         L0: while (true) {
           var2 = this.field_e.field_f;
@@ -654,19 +617,11 @@ final class sl {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var4;
+        int var5;
+        int var6;
         int stackIn_13_0 = 0;
         int stackIn_22_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_17_0 = 0;
         if (0 == (param2 ^ -1)) {
           return false;
         } else {
@@ -677,27 +632,22 @@ final class sl {
               if ((var4 ^ -1) >= -2) {
                 if (param2 >= 0) {
                   if (param2 < 3) {
-                    stackOut_11_0 = 1;
-                    stackIn_13_0 = stackOut_11_0;
+                    stackIn_13_0 = 1;
                     break L0;
                   } else {
-                    stackOut_10_0 = 0;
-                    stackIn_13_0 = stackOut_10_0;
+                    stackIn_13_0 = 0;
                     break L0;
                   }
                 } else {
-                  stackOut_8_0 = 0;
-                  stackIn_13_0 = stackOut_8_0;
+                  stackIn_13_0 = 0;
                   break L0;
                 }
               } else {
-                stackOut_6_0 = 0;
-                stackIn_13_0 = stackOut_6_0;
+                stackIn_13_0 = 0;
                 break L0;
               }
             } else {
-              stackOut_4_0 = 0;
-              stackIn_13_0 = stackOut_4_0;
+              stackIn_13_0 = 0;
               break L0;
             }
           }
@@ -716,17 +666,14 @@ final class sl {
             L2: {
               if (param1 == var4) {
                 if (param2 > param0) {
-                  stackOut_20_0 = 1;
-                  stackIn_22_0 = stackOut_20_0;
+                  stackIn_22_0 = 1;
                   break L2;
                 } else {
-                  stackOut_19_0 = 0;
-                  stackIn_22_0 = stackOut_19_0;
+                  stackIn_22_0 = 0;
                   break L2;
                 }
               } else {
-                stackOut_17_0 = 0;
-                stackIn_22_0 = stackOut_17_0;
+                stackIn_22_0 = 0;
                 break L2;
               }
             }
@@ -737,7 +684,7 @@ final class sl {
     }
 
     final da d(byte param0) {
-        da var2 = null;
+        da var2;
         var2 = this.field_e.field_h;
         if (var2 == this.field_e) {
           return null;
@@ -764,10 +711,9 @@ final class sl {
     }
 
     final void a(byte param0, da param1) {
-        da discarded$0 = null;
         try {
             if (param0 < 76) {
-                discarded$0 = this.b((byte) 15);
+                this.b((byte) 15);
             }
             if (param1.field_h != null) {
                 param1.a(true);

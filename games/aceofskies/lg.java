@@ -71,60 +71,31 @@ class lg extends gg {
     }
 
     final void a(int param0, int param1, byte param2) {
-        int var5 = 0;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        Object stackIn_11_0 = null;
         Object stackIn_12_0 = null;
         Object stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        Object stackIn_18_0 = null;
         Object stackIn_19_0 = null;
         Object stackIn_20_0 = null;
         int stackIn_20_1 = 0;
-        Object stackIn_25_0 = null;
         Object stackIn_26_0 = null;
         Object stackIn_27_0 = null;
         int stackIn_27_1 = 0;
-        Object stackOut_24_0 = null;
-        Object stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
-        Object stackOut_25_0 = null;
-        int stackOut_25_1 = 0;
-        Object stackOut_17_0 = null;
-        Object stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        Object stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        Object stackOut_10_0 = null;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
+        int var5;
         var5 = AceOfSkies.field_G ? 1 : 0;
         if (param0 == 0) {
           L0: {
-            stackOut_24_0 = this;
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_25_0 = stackOut_24_0;
+            stackIn_26_0 = this;
+
             if (param1 >= 0) {
-              stackOut_26_0 = this;
-              stackOut_26_1 = param1;
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_0 = this;
+              stackIn_27_1 = param1;
               break L0;
             } else {
-              stackOut_25_0 = this;
-              stackOut_25_1 = -param1;
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_0 = this;
+              stackIn_27_1 = -param1;
               break L0;
             }
           }
@@ -143,20 +114,15 @@ class lg extends gg {
           if ((this.field_q ^ -1) > -1) {
             L1: {
               this.field_q = 0;
-              stackOut_17_0 = this;
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_18_0 = stackOut_17_0;
+              stackIn_19_0 = this;
+
               if ((param1 ^ -1) <= -1) {
-                stackOut_19_0 = this;
-                stackOut_19_1 = param1;
-                stackIn_20_0 = stackOut_19_0;
-                stackIn_20_1 = stackOut_19_1;
+                stackIn_20_0 = this;
+                stackIn_20_1 = param1;
                 break L1;
               } else {
-                stackOut_18_0 = this;
-                stackOut_18_1 = -param1;
-                stackIn_20_0 = stackOut_18_0;
-                stackIn_20_1 = stackOut_18_1;
+                stackIn_20_0 = this;
+                stackIn_20_1 = -param1;
                 break L1;
               }
             }
@@ -175,20 +141,15 @@ class lg extends gg {
             if (-4097 > (this.field_q ^ -1)) {
               L2: {
                 this.field_q = 4096;
-                stackOut_10_0 = this;
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_12_0 = this;
+
                 if ((param1 ^ -1) <= -1) {
-                  stackOut_12_0 = this;
-                  stackOut_12_1 = param1;
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
+                  stackIn_13_0 = this;
+                  stackIn_13_1 = param1;
                   break L2;
                 } else {
-                  stackOut_11_0 = this;
-                  stackOut_11_1 = -param1;
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
+                  stackIn_13_0 = this;
+                  stackIn_13_1 = -param1;
                   break L2;
                 }
               }
@@ -205,20 +166,15 @@ class lg extends gg {
               }
             } else {
               L3: {
-                stackOut_3_0 = this;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_5_0 = this;
+
                 if ((param1 ^ -1) <= -1) {
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = param1;
-                  stackIn_6_0 = stackOut_5_0;
-                  stackIn_6_1 = stackOut_5_1;
+                  stackIn_6_0 = this;
+                  stackIn_6_1 = param1;
                   break L3;
                 } else {
-                  stackOut_4_0 = this;
-                  stackOut_4_1 = -param1;
-                  stackIn_6_0 = stackOut_4_0;
-                  stackIn_6_1 = stackOut_4_1;
+                  stackIn_6_0 = this;
+                  stackIn_6_1 = -param1;
                   break L3;
                 }
               }

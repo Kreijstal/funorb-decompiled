@@ -41,7 +41,7 @@ final class nb extends ci {
     }
 
     private final boolean a(int param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6) {
-        int var8 = 0;
+        int var8;
         if (param3 == -1) {
           if (!param5) {
             if (this.field_F) {
@@ -83,16 +83,16 @@ final class nb extends ci {
     }
 
     final static void b(int param0, int param1) {
-        Object var3 = null;
-        qe var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
-        String var11 = null;
-        String var12 = null;
+        Object var3;
+        qe var4;
+        int var5;
+        int var6;
+        int var7;
+        String var8;
+        String var9;
+        String var10;
+        String var11;
+        String var12;
         var7 = Chess.field_G;
         if (null != uh.i(23156)) {
           L0: {
@@ -261,6 +261,8 @@ final class nb extends ci {
     }
 
     final static void a(boolean param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -277,8 +279,6 @@ final class nb extends ci {
         int[] var14 = null;
         bk var15 = null;
         int[] var16 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = Chess.field_G;
         try {
           L0: {
@@ -401,7 +401,7 @@ final class nb extends ci {
     }
 
     private final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
+        int var6;
         L0: {
           if (this.field_Eb.k(3384)) {
             this.field_Kb.field_vb = this.field_Kb.field_vb + param2;

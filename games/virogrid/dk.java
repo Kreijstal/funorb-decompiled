@@ -29,9 +29,6 @@ abstract class dk {
 
     final static int b(byte param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            jc var2 = null;
             int stackIn_9_0 = 0;
             int stackIn_15_0 = 0;
             int stackIn_24_0 = 0;
@@ -39,11 +36,9 @@ abstract class dk {
             int stackIn_33_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_14_0 = 0;
-            int stackOut_27_0 = 0;
-            int stackOut_23_0 = 0;
-            int stackOut_32_0 = 0;
-            int stackOut_8_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            jc var2 = null;
             if (-5 < (ji.field_e.field_l ^ -1)) {
               try {
                 L0: {
@@ -69,8 +64,7 @@ abstract class dk {
                             break L2;
                           }
                         } else {
-                          stackOut_14_0 = bk.a(-1, 1);
-                          stackIn_15_0 = stackOut_14_0;
+                          stackIn_15_0 = bk.a(-1, 1);
                           decompiledRegionSelector0 = 1;
                           break L0;
                         }
@@ -98,8 +92,7 @@ abstract class dk {
                         if (0 < ng.field_N.f(31479)) {
                           var1_int = ng.field_N.a(param0 + -109);
                           if (0 != var1_int) {
-                            stackOut_27_0 = bk.a(var1_int, 1);
-                            stackIn_28_0 = stackOut_27_0;
+                            stackIn_28_0 = bk.a(var1_int, 1);
                             decompiledRegionSelector0 = 3;
                             break L0;
                           } else {
@@ -110,8 +103,7 @@ abstract class dk {
                           if ((hc.a(-9986) ^ -1L) >= (sg.field_l ^ -1L)) {
                             break L4;
                           } else {
-                            stackOut_23_0 = bk.a(-2, 1);
-                            stackIn_24_0 = stackOut_23_0;
+                            stackIn_24_0 = bk.a(-2, 1);
                             decompiledRegionSelector0 = 2;
                             break L0;
                           }
@@ -123,16 +115,14 @@ abstract class dk {
                       ng.field_N = null;
                       vm.field_b = null;
                       ij.field_q = 0;
-                      stackOut_32_0 = 0;
-                      stackIn_33_0 = stackOut_32_0;
+                      stackIn_33_0 = 0;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       return -1;
                     }
                   } else {
-                    stackOut_8_0 = -123;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = -123;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -213,20 +203,14 @@ abstract class dk {
     final boolean c(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 20) {
           L0: {
             this.b(3);
             if (this.e(108) < 20) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -234,12 +218,10 @@ abstract class dk {
         } else {
           L1: {
             if (this.e(108) < 20) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -250,20 +232,14 @@ abstract class dk {
     final boolean c(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 113) {
           L0: {
             this.field_k = -48;
             if ((this.a((byte) -11) ^ -1) > -21) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -271,12 +247,10 @@ abstract class dk {
         } else {
           L1: {
             if ((this.a((byte) -11) ^ -1) > -21) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -301,9 +275,8 @@ abstract class dk {
     abstract boolean d(int param0);
 
     final int e(int param0) {
-        int discarded$2 = 0;
         if (param0 <= 79) {
-          discarded$2 = this.e(-30);
+          this.e(-30);
           return this.field_p.b(0) - -this.field_h.b(0);
         } else {
           return this.field_p.b(0) - -this.field_h.b(0);
@@ -311,7 +284,6 @@ abstract class dk {
     }
 
     final static void f(int param0) {
-        int discarded$5 = 0;
         if (param0 == 389) {
           tm.field_l.a((byte) 76);
           if (null == md.field_i) {
@@ -323,7 +295,7 @@ abstract class dk {
             return;
           }
         } else {
-          discarded$5 = dk.b((byte) 100);
+          dk.b((byte) 100);
           tm.field_l.a((byte) 76);
           if (null != md.field_i) {
             tm.field_l.a(param0 + -389, md.field_i);

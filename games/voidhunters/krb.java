@@ -19,24 +19,23 @@ final class krb extends gna {
     }
 
     final void a(int param0, int param1, byte param2) {
-        byte[] discarded$3 = null;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int var4 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int var4;
         var4 = 2 * param1;
         if (param0 != 1111320769) {
-          discarded$3 = this.b(48, (byte) 90, -105, 110);
+          this.b(48, (byte) 90, -105, 110);
           param2 = (byte)((127 & param2 >> 1182254049) + 127);
-          incrementValue$4 = var4;
+          incrementValue$2 = var4;
           var4++;
-          this.field_n[incrementValue$4] = (byte)param2;
+          this.field_n[incrementValue$2] = (byte)param2;
           this.field_n[var4] = (byte)param2;
           return;
         } else {
           param2 = (byte)((127 & param2 >> 1182254049) + 127);
-          incrementValue$5 = var4;
+          incrementValue$3 = var4;
           var4++;
-          this.field_n[incrementValue$5] = (byte)param2;
+          this.field_n[incrementValue$3] = (byte)param2;
           this.field_n[var4] = (byte)param2;
           return;
         }

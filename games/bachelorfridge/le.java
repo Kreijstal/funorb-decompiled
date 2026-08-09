@@ -39,71 +39,67 @@ final class le extends iaa {
     private short[] field_j;
 
     private final void a(byte[] param0) {
-        byte dupTemp$1 = 0;
-        lu var2 = null;
-        lu var3 = null;
-        lu var4 = null;
-        lu var5 = null;
-        lu var6 = null;
-        lu var7 = null;
-        lu var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
-        int var42 = 0;
-        int var43 = 0;
-        int var44 = 0;
-        int var45 = 0;
-        int var46 = 0;
-        int var47 = 0;
-        int var48 = 0;
-        int var49 = 0;
-        int var50 = 0;
-        int var51 = 0;
-        int var52 = 0;
-        int var53 = 0;
-        int var54 = 0;
-        int var55 = 0;
-        int var56 = 0;
-        int var57 = 0;
-        int var58 = 0;
-        int var59 = 0;
+        byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
+        lu var2;
+        lu var3;
+        lu var4;
+        lu var5;
+        lu var6;
+        lu var7;
+        lu var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var41;
+        int var42;
+        int var43;
+        int var44;
+        int var45;
+        int var46;
+        int var47;
+        int var48;
+        int var49;
+        int var50;
+        int var51;
+        int var52;
+        int var53;
+        int var54;
+        int var55;
+        int var56;
+        int var57;
+        int var58;
+        int var59;
         L0: {
           var2 = new lu(param0);
           var3 = new lu(param0);
@@ -118,24 +114,20 @@ final class le extends iaa {
           var11 = var2.b(16711935);
           var12 = var2.b(16711935);
           if ((var12 & 1) != 1) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
         L1: {
           var13 = stackIn_3_0;
           if ((var12 & 2) != 2) {
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L1;
           } else {
-            stackOut_4_0 = 1;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = 1;
             break L1;
           }
         }
@@ -165,9 +157,9 @@ final class le extends iaa {
                 break L2;
               } else {
                 L4: {
-                  dupTemp$1 = var2.b(true);
-                  this.field_e[var28] = dupTemp$1;
-                  var29 = dupTemp$1;
+                  dupTemp$0 = var2.b(true);
+                  this.field_e[var28] = dupTemp$0;
+                  var29 = dupTemp$0;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -715,26 +707,26 @@ final class le extends iaa {
     }
 
     final void b() {
-        jea dupTemp$1 = null;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        jea var16 = null;
-        sr var17 = null;
-        sr var18 = null;
-        sr var19 = null;
+        jea dupTemp$0 = null;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        jea var16;
+        sr var17;
+        sr var18;
+        sr var19;
         if (this.field_D == null) {
           this.field_D = new sr[this.field_F];
           var1 = 0;
@@ -806,9 +798,9 @@ final class le extends iaa {
                                           break L6;
                                         }
                                       }
-                                      dupTemp$1 = new jea();
-                                      this.field_B[var1] = dupTemp$1;
-                                      var16 = dupTemp$1;
+                                      dupTemp$0 = new jea();
+                                      this.field_B[var1] = dupTemp$0;
+                                      var16 = dupTemp$0;
                                       var16.field_b = var11;
                                       var16.field_e = var12;
                                       var16.field_a = var13;
@@ -877,50 +869,50 @@ final class le extends iaa {
     }
 
     private final void b(byte[] param0) {
-        int var2 = 0;
-        int var3 = 0;
-        lu var4 = null;
-        lu var5 = null;
-        lu var6 = null;
-        lu var7 = null;
-        lu var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
-        int var42 = 0;
-        int var43 = 0;
-        int var44 = 0;
-        int var45 = 0;
+        int var2;
+        int var3;
+        lu var4;
+        lu var5;
+        lu var6;
+        lu var7;
+        lu var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var41;
+        int var42;
+        int var43;
+        int var44;
+        int var45;
         L0: {
           var2 = 0;
           var3 = 0;
@@ -1378,13 +1370,17 @@ final class le extends iaa {
     }
 
     final void a() {
+        int dupTemp$0 = 0;
+        int[] arrayValue$1 = null;
         int[] array$2 = null;
-        int[] array$3 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        int[] var6 = null;
+        int dupTemp$3 = 0;
+        int[] arrayValue$4 = null;
+        int[] array$5 = null;
+        int var2;
+        int var3;
+        int var4;
+        int[] var5;
+        int[] var6;
         L0: {
           if (this.field_o == null) {
             break L0;
@@ -1405,8 +1401,10 @@ final class le extends iaa {
                         break L0;
                       } else {
                         var4 = this.field_o[var3];
-                        var5[var4] = var5[var4] + 1;
-                        this.field_G[var4][var5[var4]] = var3;
+                        dupTemp$0 = var5[var4];
+                        arrayValue$1 = this.field_G[var4];
+                        var5[var4] = dupTemp$0 + 1;
+                        arrayValue$1[dupTemp$0] = var3;
                         var3++;
                         continue L3;
                       }
@@ -1454,15 +1452,17 @@ final class le extends iaa {
                         break L4;
                       } else {
                         var4 = this.field_t[var3];
-                        var6[var4] = var6[var4] + 1;
-                        this.field_n[var4][var6[var4]] = var3;
+                        dupTemp$3 = var6[var4];
+                        arrayValue$4 = this.field_n[var4];
+                        var6[var4] = dupTemp$3 + 1;
+                        arrayValue$4[dupTemp$3] = var3;
                         var3++;
                         continue L7;
                       }
                     }
                   } else {
-                    array$3 = new int[var6[var3]];
-                    this.field_n[var3] = array$3;
+                    array$5 = new int[var6[var3]];
+                    this.field_n[var3] = array$5;
                     var6[var3] = 0;
                     var3++;
                     continue L6;

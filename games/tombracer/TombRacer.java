@@ -11,16 +11,9 @@ public final class TombRacer extends rfa implements ls {
     public static boolean field_G;
 
     public final boolean a(byte param0, char param1, int param2) {
-        boolean discarded$1 = false;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (!rda.d(20125)) {
             break L0;
@@ -86,12 +79,10 @@ public final class TombRacer extends rfa implements ls {
                   } else {
                     L1: {
                       if (ara.field_wb) {
-                        stackOut_16_0 = 0;
-                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_0 = 0;
                         break L1;
                       } else {
-                        stackOut_15_0 = 1;
-                        stackIn_17_0 = stackOut_15_0;
+                        stackIn_17_0 = 1;
                         break L1;
                       }
                     }
@@ -101,12 +92,10 @@ public final class TombRacer extends rfa implements ls {
                 } else {
                   L2: {
                     if (rsa.field_s) {
-                      stackOut_11_0 = 0;
-                      stackIn_12_0 = stackOut_11_0;
+                      stackIn_12_0 = 0;
                       break L2;
                     } else {
-                      stackOut_10_0 = 1;
-                      stackIn_12_0 = stackOut_10_0;
+                      stackIn_12_0 = 1;
                       break L2;
                     }
                   }
@@ -116,12 +105,10 @@ public final class TombRacer extends rfa implements ls {
               } else {
                 L3: {
                   if (jc.field_M) {
-                    stackOut_6_0 = 0;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = 0;
                     break L3;
                   } else {
-                    stackOut_5_0 = 1;
-                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_0 = 1;
                     break L3;
                   }
                 }
@@ -136,9 +123,7 @@ public final class TombRacer extends rfa implements ls {
         }
         if (!iqa.field_c.a(param2, param0 ^ 71, param1)) {
           if (this.field_D == null) {
-            if (hb.field_t.a(param2, param1, param0 ^ -71)) {
-              return true;
-            } else {
+            if (!hb.field_t.a(param2, param1, param0 ^ -71)) {
               L4: {
                 if (param0 == -72) {
                   break L4;
@@ -148,9 +133,11 @@ public final class TombRacer extends rfa implements ls {
                 }
               }
               return false;
+            } else {
+              return true;
             }
           } else {
-            discarded$1 = this.field_D.a(fna.field_h, kda.field_td, (byte) 126);
+            this.field_D.a(fna.field_h, kda.field_td, (byte) 126);
             return true;
           }
         } else {
@@ -159,8 +146,18 @@ public final class TombRacer extends rfa implements ls {
     }
 
     private final void a(boolean param0, rqa param1, byte param2) {
-        RuntimeException var4 = null;
+        int stackIn_19_0 = 0;
+        int stackIn_33_0 = 0;
+        int stackIn_47_0 = 0;
+        RuntimeException stackIn_57_0 = null;
+        StringBuilder stackIn_57_1 = null;
+        RuntimeException stackIn_58_0 = null;
+        StringBuilder stackIn_58_1 = null;
+        String stackIn_58_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         ssa var5_ref_ssa = null;
         int var5 = 0;
         int var6 = 0;
@@ -168,32 +165,6 @@ public final class TombRacer extends rfa implements ls {
         int var8 = 0;
         ssa var9 = null;
         int var10 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_49_0 = 0;
-        RuntimeException stackIn_59_0 = null;
-        StringBuilder stackIn_59_1 = null;
-        RuntimeException stackIn_60_0 = null;
-        StringBuilder stackIn_60_1 = null;
-        RuntimeException stackIn_61_0 = null;
-        StringBuilder stackIn_61_1 = null;
-        String stackIn_61_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_33_0 = 0;
-        boolean stackOut_48_0 = false;
-        int stackOut_47_0 = 0;
-        RuntimeException stackOut_58_0 = null;
-        StringBuilder stackOut_58_1 = null;
-        RuntimeException stackOut_60_0 = null;
-        StringBuilder stackOut_60_1 = null;
-        String stackOut_60_2 = null;
-        RuntimeException stackOut_59_0 = null;
-        StringBuilder stackOut_59_1 = null;
-        String stackOut_59_2 = null;
         var10 = field_G ? 1 : 0;
         try {
           L0: {
@@ -232,156 +203,134 @@ public final class TombRacer extends rfa implements ls {
               }
               L3: {
                 if (null != wm.field_a) {
-                  L4: {
-                    if (!wm.field_a.b(31923)) {
-                      break L4;
+                  if (!wm.field_a.b(31923)) {
+                    wm.field_a.a((byte) -28, false);
+                    break L3;
+                  } else {
+                    if (param1 != null) {
+                      break L3;
                     } else {
-                      if (param1 != null) {
-                        break L3;
-                      } else {
-                        L5: {
-                          if (wm.field_a instanceof ala) {
-                            stackOut_18_0 = 0;
-                            stackIn_19_0 = stackOut_18_0;
-                            break L5;
-                          } else {
-                            stackOut_17_0 = 1;
-                            stackIn_19_0 = stackOut_17_0;
-                            break L5;
-                          }
-                        }
-                        L6: {
-                          var4_int = stackIn_19_0;
-                          if (var4_int != 0) {
-                            wm.field_a.a((byte) -28, false);
-                            tga.field_a.SA(0, 0, aaa.a(false), koa.b(param2 ^ 17), bea.field_l, 0, aaa.a(false));
-                            break L6;
-                          } else {
-                            break L6;
-                          }
-                        }
-                        if (var10 == 0) {
-                          break L3;
+                      L4: {
+                        if (wm.field_a instanceof ala) {
+                          stackIn_19_0 = 0;
+                          break L4;
                         } else {
+                          stackIn_19_0 = 1;
                           break L4;
                         }
                       }
-                    }
-                  }
-                  wm.field_a.a((byte) -28, false);
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L7: {
-                var4_int = 0;
-                if (hb.field_t == null) {
-                  break L7;
-                } else {
-                  L8: {
-                    if (hb.field_t.b(31923)) {
-                      break L8;
-                    } else {
-                      hb.field_t.a((byte) -28, true);
-                      if (var10 == 0) {
-                        break L7;
+                      var4_int = stackIn_19_0;
+                      if (var4_int != 0) {
+                        wm.field_a.a((byte) -28, false);
+                        tga.field_a.SA(0, 0, aaa.a(false), koa.b(param2 ^ 17), bea.field_l, 0, aaa.a(false));
+                        break L3;
                       } else {
-                        break L8;
+                        break L3;
                       }
                     }
                   }
-                  bea.a();
-                  var4_int = 1;
-                  hb.field_t.a((byte) -28, true);
-                  break L7;
+                } else {
+                  break L3;
                 }
               }
-              L9: {
+              L5: {
+                var4_int = 0;
+                if (hb.field_t == null) {
+                  break L5;
+                } else {
+                  if (hb.field_t.b(31923)) {
+                    bea.a();
+                    var4_int = 1;
+                    hb.field_t.a((byte) -28, true);
+                    break L5;
+                  } else {
+                    hb.field_t.a((byte) -28, true);
+                    break L5;
+                  }
+                }
+              }
+              L6: {
                 if (param0) {
                   iqa.field_c.d(true);
                   if (!iqa.field_c.e(-8832)) {
-                    break L9;
+                    break L6;
                   } else {
-                    L10: {
+                    L7: {
                       bea.a();
                       if ((this.field_E & 8) != 0) {
-                        stackOut_34_0 = 0;
-                        stackIn_35_0 = stackOut_34_0;
-                        break L10;
+                        stackIn_33_0 = 0;
+                        break L7;
                       } else {
-                        stackOut_33_0 = 1;
-                        stackIn_35_0 = stackOut_33_0;
-                        break L10;
+                        stackIn_33_0 = 1;
+                        break L7;
                       }
                     }
-                    wma.a(stackIn_35_0 != 0, 0);
+                    wma.a(stackIn_33_0 != 0, 0);
                     bi.a(tga.field_a, param2 ^ 17);
-                    break L9;
+                    break L6;
                   }
                 } else {
+                  break L6;
+                }
+              }
+              L8: {
+                if (this.field_D != null) {
+                  this.field_D.b((byte) -65);
+                  break L8;
+                } else {
+                  break L8;
+                }
+              }
+              L9: {
+                this.field_H.a((byte) -90);
+                if (param2 == 17) {
+                  break L9;
+                } else {
+                  field_F = (String) null;
                   break L9;
                 }
               }
-              L11: {
-                if (this.field_D != null) {
-                  this.field_D.b((byte) -65);
-                  break L11;
-                } else {
-                  break L11;
-                }
-              }
-              L12: {
-                this.field_H.a((byte) -90);
-                if (param2 == 17) {
-                  break L12;
-                } else {
-                  field_F = (String) null;
-                  break L12;
-                }
-              }
-              L13: {
+              L10: {
                 if (lca.a(false)) {
                   var4_int = 1;
                   bka.a((byte) 126);
-                  break L13;
+                  break L10;
                 } else {
-                  break L13;
+                  break L10;
                 }
               }
-              L14: {
+              L11: {
                 if (!fja.h(param2 ^ 110)) {
-                  break L14;
+                  break L11;
                 } else {
                   if (lca.a(false)) {
-                    break L14;
+                    break L11;
                   } else {
-                    L15: {
+                    L12: {
                       tga.field_a.c(-1073741824, 0, aaa.a(false), 0, param2 ^ -22956, koa.b(0));
                       var5_ref_ssa = uja.a((byte) 65, tga.field_a);
                       var5_ref_ssa.a(aaa.a(false) + mp.a((byte) -112) >> 392059489, koa.b(0) + -qra.a(96) >> -1253084863, (byte) -12, koa.b(0) + qra.a(96) >> 1911206177, aaa.a(false) - mp.a((byte) -125) >> 451852449);
                       if (dq.field_f == null) {
-                        stackOut_48_0 = bn.field_n;
-                        stackIn_49_0 = stackOut_48_0 ? 1 : 0;
-                        break L15;
+                        stackIn_47_0 = bn.field_n ? 1 : 0;
+                        break L12;
                       } else {
-                        stackOut_47_0 = 1;
-                        stackIn_49_0 = stackOut_47_0;
-                        break L15;
+                        stackIn_47_0 = 1;
+                        break L12;
                       }
                     }
-                    bqa.a(stackIn_49_0 != 0, 106);
+                    bqa.a(stackIn_47_0 != 0, 106);
                     tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
                     var5_ref_ssa.a(param2 + 84);
-                    break L14;
+                    break L11;
                   }
                 }
               }
-              L16: {
+              L13: {
                 if (var4_int != 0) {
-                  L17: {
+                  L14: {
                     if (!lca.a(false)) {
-                      break L17;
+                      tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
+                      break L14;
                     } else {
                       tga.field_a.c(-1073741824, 0, aaa.a(false), 0, -22971, koa.b(0));
                       var5 = f.a(false);
@@ -392,20 +341,14 @@ public final class TombRacer extends rfa implements ls {
                       var9.a(var5 + var7, var6, (byte) -12, var6 + var8, var5);
                       tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
                       var9.a(99);
-                      if (var10 != 0) {
-                        break L17;
-                      } else {
-                        this.x(-28581);
-                        break L16;
-                      }
+                      break L14;
                     }
                   }
-                  tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
                   this.x(-28581);
-                  break L16;
+                  break L13;
                 } else {
                   this.x(-28581);
-                  break L16;
+                  break L13;
                 }
               }
               decompiledRegionSelector0 = 1;
@@ -414,33 +357,25 @@ public final class TombRacer extends rfa implements ls {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L18: {
+          L15: {
             var4 = decompiledCaughtException;
-            stackOut_58_0 = (RuntimeException) (var4);
-            stackOut_58_1 = new StringBuilder().append("TombRacer.FB(").append(param0).append(',');
-            stackIn_60_0 = stackOut_58_0;
-            stackIn_60_1 = stackOut_58_1;
-            stackIn_59_0 = stackOut_58_0;
-            stackIn_59_1 = stackOut_58_1;
+            stackIn_57_0 = (RuntimeException) (var4);
+
+            stackIn_57_1 = new StringBuilder().append("TombRacer.FB(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_60_0 = (RuntimeException) ((Object) stackIn_60_0);
-              stackOut_60_1 = (StringBuilder) ((Object) stackIn_60_1);
-              stackOut_60_2 = "null";
-              stackIn_61_0 = stackOut_60_0;
-              stackIn_61_1 = stackOut_60_1;
-              stackIn_61_2 = stackOut_60_2;
-              break L18;
+              stackIn_58_0 = (RuntimeException) ((Object) stackIn_57_0);
+              stackIn_58_1 = (StringBuilder) ((Object) stackIn_57_1);
+              stackIn_58_2 = "null";
+              break L15;
             } else {
-              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
-              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
-              stackOut_59_2 = "{...}";
-              stackIn_61_0 = stackOut_59_0;
-              stackIn_61_1 = stackOut_59_1;
-              stackIn_61_2 = stackOut_59_2;
-              break L18;
+              stackIn_58_0 = (RuntimeException) ((Object) stackIn_57_0);
+              stackIn_58_1 = (StringBuilder) ((Object) stackIn_57_1);
+              stackIn_58_2 = "{...}";
+              break L15;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_61_0), stackIn_61_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_58_0), stackIn_58_2 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -1225,11 +1160,10 @@ public final class TombRacer extends rfa implements ls {
     }
 
     private final void z(int param0) {
-        boolean discarded$4 = false;
         int var2 = aaa.a(false);
         int var3 = koa.b(0);
         if (mba.e(-22766)) {
-            discarded$4 = tga.field_a.h();
+            tga.field_a.h();
             tga.field_a.a(0.8999999761581421f, 1.0f, 1.0f);
             if (tga.field_a.f()) {
                 tga.field_a.a(0, 0, var2, var3);
@@ -1247,8 +1181,6 @@ public final class TombRacer extends rfa implements ls {
 
     final boolean h(byte param0) {
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
         L0: {
           if (param0 == 84) {
             break L0;
@@ -1266,8 +1198,7 @@ public final class TombRacer extends rfa implements ls {
                 break L2;
               } else {
                 if (!vda.field_q) {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 0;
                   break L1;
                 } else {
                   break L2;
@@ -1275,8 +1206,7 @@ public final class TombRacer extends rfa implements ls {
               }
             }
           }
-          stackOut_6_0 = 1;
-          stackIn_8_0 = stackOut_6_0;
+          stackIn_8_0 = 1;
           break L1;
         }
         return stackIn_8_0 != 0;
@@ -1289,77 +1219,33 @@ public final class TombRacer extends rfa implements ls {
     }
 
     final void v(int param0) {
-        L0: {
-          kga.i(98);
-          if (param0 == 24230) {
-            break L0;
-          } else {
+        kga.i(98);
+        if (param0 != 24230) {
             this.h(-10);
-            break L0;
-          }
         }
-        L1: {
-          if (2147483647 != jm.field_n) {
-            L2: {
-              L3: {
-                if (1 != (jm.field_n ^ -1)) {
-                  break L3;
-                } else {
-                  uv.d(30785);
-                  if (!field_G) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              ira.a(false, jm.field_n, (byte) -46);
-              break L2;
+        if (2147483647 == jm.field_n) {
+        } else {
+            if (1 == (jm.field_n ^ -1)) {
+                uv.d(30785);
+            } else {
+                ira.a(false, jm.field_n, (byte) -46);
             }
             jm.field_n = 2147483647;
-            break L1;
-          } else {
-            break L1;
-          }
         }
-        L4: {
-          if (!uma.field_c) {
-            break L4;
-          } else {
-            if (rba.field_a == null) {
-              break L4;
-            } else {
-              rba.field_a.o(-18570);
-              break L4;
-            }
-          }
+        if (uma.field_c && rba.field_a != null) {
+            rba.field_a.o(-18570);
         }
     }
 
     public final void a(boolean param0, boolean param1) {
-        taa var4 = null;
         int stackIn_10_0 = 0;
-        ila stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
-        ila stackIn_16_0 = null;
-        int stackIn_16_1 = 0;
         ila stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         ila stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         int stackIn_18_2 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        ila stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        ila stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        ila stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        int stackOut_16_2 = 0;
-        ila stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        int stackOut_17_2 = 0;
+        int stackIn_27_0 = 0;
+        taa var4;
         L0: {
           this.field_E = this.field_E + 1;
           if (null != mq.field_e) {
@@ -1389,17 +1275,15 @@ public final class TombRacer extends rfa implements ls {
                   L2: {
                     var4 = mq.field_e.c(43);
                     if (param0) {
-                      stackOut_9_0 = 0;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_0 = 0;
                       break L2;
                     } else {
-                      stackOut_8_0 = 1;
-                      stackIn_10_0 = stackOut_8_0;
+                      stackIn_10_0 = 1;
                       break L2;
                     }
                   }
                   L3: {
-                    if (rd.b(stackIn_10_0 == 0)) {
+                    if (!rd.b(stackIn_10_0 != 0)) {
                       break L3;
                     } else {
                       if (var4.b(1)) {
@@ -1418,40 +1302,28 @@ public final class TombRacer extends rfa implements ls {
         }
         L4: {
           L5: {
-            stackOut_14_0 = iqa.field_c;
-            stackOut_14_1 = -91;
-            stackIn_17_0 = stackOut_14_0;
-            stackIn_17_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_17_0 = iqa.field_c;
+
+            stackIn_17_1 = -91;
+
             if (null == rba.field_a) {
               break L5;
             } else {
-              stackOut_15_0 = (ila) ((Object) stackIn_15_0);
-              stackOut_15_1 = stackIn_15_1;
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
+              stackIn_17_0 = (ila) ((Object) stackIn_17_0);
+
               if (hb.field_t != rba.field_a) {
                 break L5;
               } else {
-                stackOut_16_0 = (ila) ((Object) stackIn_16_0);
-                stackOut_16_1 = stackIn_16_1;
-                stackOut_16_2 = 1;
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_18_1 = stackOut_16_1;
-                stackIn_18_2 = stackOut_16_2;
+                stackIn_18_0 = (ila) ((Object) stackIn_17_0);
+                stackIn_18_1 = stackIn_17_1;
+                stackIn_18_2 = 1;
                 break L4;
               }
             }
           }
-          stackOut_17_0 = (ila) ((Object) stackIn_17_0);
-          stackOut_17_1 = stackIn_17_1;
-          stackOut_17_2 = 0;
-          stackIn_18_0 = stackOut_17_0;
-          stackIn_18_1 = stackOut_17_1;
-          stackIn_18_2 = stackOut_17_2;
+          stackIn_18_0 = (ila) ((Object) stackIn_17_0);
+          stackIn_18_1 = stackIn_17_1;
+          stackIn_18_2 = 0;
           break L4;
         }
         L6: {
@@ -1465,71 +1337,76 @@ public final class TombRacer extends rfa implements ls {
         }
         L7: {
           if (this.field_D == null) {
-            if (wm.field_a == null) {
+            L8: {
+              if (wm.field_a == null) {
+                break L8;
+              } else {
+                if (wm.field_a instanceof ala) {
+                  break L8;
+                } else {
+                  wm.field_a.a(false, false, 15283);
+                  break L8;
+                }
+              }
+            }
+            hb.field_t.a(true, param1, 15283);
+            if (cs.field_c == null) {
               break L7;
             } else {
-              if (wm.field_a instanceof ala) {
+              if (wka.field_d) {
+                cs.field_c.a(false, false, 15283);
                 break L7;
               } else {
-                wm.field_a.a(false, false, 15283);
                 break L7;
               }
             }
           } else {
-            if (wm.field_a == null) {
-              break L7;
-            } else {
-              if (wm.field_a instanceof ala) {
-                break L7;
-              } else {
-                wm.field_a.a(false, false, 15283);
-                break L7;
-              }
-            }
-          }
-        }
-        L8: {
-          hb.field_t.a(true, param1, 15283);
-          if (cs.field_c == null) {
-            break L8;
-          } else {
-            if (wka.field_d) {
-              cs.field_c.a(false, false, 15283);
-              break L8;
-            } else {
-              break L8;
-            }
-          }
-        }
-        L9: {
-          L10: {
-            if (!vd.field_n) {
-              break L10;
-            } else {
-              if (rba.field_a != hb.field_t) {
+            L9: {
+              this.field_D.a((byte) -109);
+              if (this.field_D.d((byte) -75)) {
+                this.field_D = null;
                 break L9;
               } else {
+                break L9;
+              }
+            }
+            L10: {
+              if (null != this.field_D) {
+                stackIn_27_0 = 0;
                 break L10;
+              } else {
+                stackIn_27_0 = 1;
+                break L10;
+              }
+            }
+            param1 = stackIn_27_0 != 0;
+            break L7;
+          }
+        }
+        L11: {
+          L12: {
+            if (!vd.field_n) {
+              break L12;
+            } else {
+              if (rba.field_a != hb.field_t) {
+                break L11;
+              } else {
+                break L12;
               }
             }
           }
           rp.a(8824);
-          break L9;
+          break L11;
         }
         this.field_H.b((byte) -66);
         ipa.s((byte) 49);
     }
 
     final void h(int param0) {
-        L0: {
-          this.a(82, 81);
-          this.a(new sra(), 119);
-          if (param0 <= -15) {
-            break L0;
-          } else {
+        this.a(82, 81);
+        this.a(new sra(), 119);
+        if (param0 > -15) {
             this.z(125);
-            break L0;
-          }
         }
         foa.field_b = false;
         ce.j(32454);
@@ -1571,10 +1448,37 @@ public final class TombRacer extends rfa implements ls {
     }
 
     final boolean a(int param0, kh param1, byte param2) {
-        String discarded$1 = null;
-        RuntimeException var4 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_32_0 = 0;
+        int stackIn_38_0 = 0;
+        int stackIn_45_0 = 0;
+        int stackIn_52_0 = 0;
+        int stackIn_65_0 = 0;
+        int stackIn_70_0 = 0;
+        int stackIn_76_0 = 0;
+        int stackIn_86_0 = 0;
+        int stackIn_92_0 = 0;
+        int stackIn_94_0 = 0;
+        int stackIn_97_0 = 0;
+        int stackIn_101_0 = 0;
+        int stackIn_105_0 = 0;
+        int stackIn_114_0 = 0;
+        boolean stackIn_116_0 = false;
+        RuntimeException stackIn_119_0 = null;
+        StringBuilder stackIn_119_1 = null;
+        RuntimeException stackIn_120_0 = null;
+        StringBuilder stackIn_120_1 = null;
+        String stackIn_120_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
-        int[] var4_array = null;
+        int[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5_int = 0;
         int[] var5 = null;
         int var6 = 0;
@@ -1606,75 +1510,6 @@ public final class TombRacer extends rfa implements ls {
         int[] var33 = null;
         int[] var38 = null;
         int[] var39 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_38_0 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_52_0 = 0;
-        String[] stackIn_55_0 = null;
-        String[] stackIn_58_0 = null;
-        int stackIn_60_0 = 0;
-        int stackIn_62_0 = 0;
-        int stackIn_67_0 = 0;
-        int stackIn_72_0 = 0;
-        int stackIn_78_0 = 0;
-        int stackIn_88_0 = 0;
-        int stackIn_94_0 = 0;
-        int stackIn_96_0 = 0;
-        int stackIn_99_0 = 0;
-        int stackIn_103_0 = 0;
-        int stackIn_107_0 = 0;
-        int stackIn_119_0 = 0;
-        boolean stackIn_121_0 = false;
-        RuntimeException stackIn_123_0 = null;
-        StringBuilder stackIn_123_1 = null;
-        RuntimeException stackIn_124_0 = null;
-        StringBuilder stackIn_124_1 = null;
-        RuntimeException stackIn_125_0 = null;
-        StringBuilder stackIn_125_1 = null;
-        String stackIn_125_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_77_0 = 0;
-        int stackOut_87_0 = 0;
-        int stackOut_93_0 = 0;
-        int stackOut_95_0 = 0;
-        int stackOut_102_0 = 0;
-        int stackOut_106_0 = 0;
-        boolean stackOut_120_0 = false;
-        int stackOut_118_0 = 0;
-        int stackOut_98_0 = 0;
-        int stackOut_71_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_50_0 = 0;
-        String[] stackOut_54_0 = null;
-        String[] stackOut_57_0 = null;
-        int stackOut_59_0 = 0;
-        int stackOut_61_0 = 0;
-        boolean stackOut_63_0 = false;
-        int stackOut_66_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_122_0 = null;
-        StringBuilder stackOut_122_1 = null;
-        RuntimeException stackOut_124_0 = null;
-        StringBuilder stackOut_124_1 = null;
-        String stackOut_124_2 = null;
-        RuntimeException stackOut_123_0 = null;
-        StringBuilder stackOut_123_1 = null;
-        String stackOut_123_2 = null;
         var16 = field_G ? 1 : 0;
         try {
           L0: {
@@ -1690,8 +1525,7 @@ public final class TombRacer extends rfa implements ls {
                           break L1;
                         } else {
                           qt.a(-64);
-                          stackOut_20_0 = 1;
-                          stackIn_21_0 = stackOut_20_0;
+                          stackIn_21_0 = 1;
                           decompiledRegionSelector0 = 4;
                           break L0;
                         }
@@ -1714,8 +1548,7 @@ public final class TombRacer extends rfa implements ls {
                           }
                         }
                       }
-                      stackOut_28_0 = 1;
-                      stackIn_29_0 = stackOut_28_0;
+                      stackIn_29_0 = 1;
                       decompiledRegionSelector0 = 5;
                       break L0;
                     } else {
@@ -1725,39 +1558,30 @@ public final class TombRacer extends rfa implements ls {
                             var4_int = param1.h(255);
                             var5_int = 0;
                             L3: while (true) {
-                              L4: {
-                                if (var4_int <= var5_int) {
-                                  break L4;
-                                } else {
-                                  discarded$1 = param1.e((byte) -76);
-                                  var5_int++;
-                                  if (var16 == 0) {
-                                    continue L3;
-                                  } else {
-                                    break L4;
-                                  }
-                                }
+                              if (var4_int <= var5_int) {
+                                stackIn_45_0 = 1;
+                                decompiledRegionSelector0 = 8;
+                                break L0;
+                              } else {
+                                param1.e((byte) -76);
+                                var5_int++;
+                                continue L3;
                               }
-                              stackOut_44_0 = 1;
-                              stackIn_45_0 = stackOut_44_0;
-                              decompiledRegionSelector0 = 8;
-                              break L0;
                             }
                           } else {
-                            L5: {
+                            L4: {
                               if (64 == param0) {
-                                break L5;
+                                break L4;
                               } else {
                                 if ((param0 ^ -1) != -66) {
                                   if (param0 != 66) {
                                     if (param0 == 86) {
                                       if (toa.field_j) {
-                                        stackOut_77_0 = 1;
-                                        stackIn_78_0 = stackOut_77_0;
+                                        stackIn_76_0 = 1;
                                         decompiledRegionSelector0 = 11;
                                         break L0;
                                       } else {
-                                        L6: {
+                                        L5: {
                                           var26 = new aoa();
                                           var26.a(param1, (byte) -19);
                                           mq.field_e = var26.a(false);
@@ -1765,50 +1589,47 @@ public final class TombRacer extends rfa implements ls {
                                           mp.a(2, mq.field_e.field_h);
                                           cf.a(mq.field_e.field_k, -114);
                                           if (null == baa.field_d) {
-                                            break L6;
+                                            break L5;
                                           } else {
                                             if (baa.field_d.field_i != null) {
                                               eda.a(mq.field_e.field_g, true);
-                                              break L6;
+                                              break L5;
                                             } else {
-                                              break L6;
+                                              break L5;
                                             }
                                           }
                                         }
-                                        L7: {
+                                        L6: {
                                           if (!wka.field_d) {
-                                            break L7;
+                                            break L6;
                                           } else {
                                             if (mq.field_e.field_l) {
-                                              break L7;
+                                              break L6;
                                             } else {
                                               if (bh.field_p) {
-                                                break L7;
+                                                break L6;
                                               } else {
                                                 caa.a((byte) 101);
-                                                break L7;
+                                                break L6;
                                               }
                                             }
                                           }
                                         }
-                                        stackOut_87_0 = 1;
-                                        stackIn_88_0 = stackOut_87_0;
+                                        stackIn_86_0 = 1;
                                         decompiledRegionSelector0 = 12;
                                         break L0;
                                       }
                                     } else {
                                       if (param0 == 85) {
                                         if (null == mq.field_e) {
-                                          stackOut_93_0 = 1;
-                                          stackIn_94_0 = stackOut_93_0;
+                                          stackIn_92_0 = 1;
                                           decompiledRegionSelector0 = 13;
                                           break L0;
                                         } else {
                                           var27 = new bga();
                                           var27.a(param1, (byte) -19);
                                           var27.a(mq.field_e, (byte) -128);
-                                          stackOut_95_0 = 1;
-                                          stackIn_96_0 = stackOut_95_0;
+                                          stackIn_94_0 = 1;
                                           decompiledRegionSelector0 = 14;
                                           break L0;
                                         }
@@ -1816,70 +1637,52 @@ public final class TombRacer extends rfa implements ls {
                                         if (87 != param0) {
                                           if (88 == param0) {
                                             dea.a(60);
-                                            stackOut_102_0 = 1;
-                                            stackIn_103_0 = stackOut_102_0;
+                                            stackIn_101_0 = 1;
                                             decompiledRegionSelector0 = 16;
                                             break L0;
                                           } else {
                                             if (param0 == 89) {
                                               uca.field_a = param1.c((byte) 71);
                                               ea.field_j = param1.c((byte) 48);
-                                              stackOut_106_0 = 1;
-                                              stackIn_107_0 = stackOut_106_0;
+                                              stackIn_105_0 = 1;
                                               decompiledRegionSelector0 = 17;
                                               break L0;
                                             } else {
                                               if (param0 != 72) {
-                                                stackOut_120_0 = this.a(param1, param0, (byte) 111);
-                                                stackIn_121_0 = stackOut_120_0;
+                                                stackIn_116_0 = this.a(param1, param0, (byte) 111);
                                                 decompiledRegionSelector0 = 19;
                                                 break L0;
                                               } else {
                                                 var33 = fqa.e(true);
                                                 var29 = var33;
-                                                var4_array = var29;
-                                                var17 = var4_array;
+                                                var4 = var29;
+                                                var17 = var4;
                                                 var5 = var17;
                                                 var28 = param1;
                                                 var7 = ((uia) ((Object) var28)).h(255);
                                                 var8 = 0;
-                                                L8: while (true) {
-                                                  L9: {
-                                                    if (var7 <= var8) {
-                                                      var38 = sb.a(0, var33);
-                                                      this.field_H.a((byte) 6, var38);
-                                                      break L9;
-                                                    } else {
-                                                      var17[var8] = ((uia) ((Object) var28)).e(-41);
-                                                      var8++;
-                                                      if (var16 != 0) {
-                                                        break L9;
-                                                      } else {
-                                                        continue L8;
-                                                      }
-                                                    }
-                                                  }
-                                                  var18 = rb.field_o;
-                                                  var39 = var4_array;
-                                                  var8 = 0;
-                                                  L10: while (true) {
-                                                    L11: {
+                                                L7: while (true) {
+                                                  if (var7 <= var8) {
+                                                    var38 = sb.a(0, var33);
+                                                    this.field_H.a((byte) 6, var38);
+                                                    var18 = rb.field_o;
+                                                    var39 = var4;
+                                                    var8 = 0;
+                                                    L8: while (true) {
                                                       if ((var8 ^ -1) <= -9) {
-                                                        break L11;
+                                                        stackIn_114_0 = 1;
+                                                        decompiledRegionSelector0 = 18;
+                                                        break L0;
                                                       } else {
                                                         var18[var8] = fh.a(var18[var8], var39[var8]);
                                                         var8++;
-                                                        if (var16 == 0) {
-                                                          continue L10;
-                                                        } else {
-                                                          break L11;
-                                                        }
+                                                        continue L8;
                                                       }
                                                     }
-                                                    stackOut_118_0 = 1;
-                                                    stackIn_119_0 = stackOut_118_0;
-                                                    decompiledRegionSelector0 = 18;
-                                                    break L0;
+                                                  } else {
+                                                    var17[var8] = ((uia) ((Object) var28)).e(-41);
+                                                    var8++;
+                                                    continue L7;
                                                   }
                                                 }
                                               }
@@ -1887,45 +1690,41 @@ public final class TombRacer extends rfa implements ls {
                                           }
                                         } else {
                                           gh.a(param1, (byte) -79);
-                                          stackOut_98_0 = 1;
-                                          stackIn_99_0 = stackOut_98_0;
+                                          stackIn_97_0 = 1;
                                           decompiledRegionSelector0 = 15;
                                           break L0;
                                         }
                                       }
                                     }
                                   } else {
-                                    L12: {
+                                    L9: {
                                       if (rba.field_a == null) {
-                                        break L12;
+                                        break L9;
                                       } else {
                                         rba.field_a.b(false, true, 0);
                                         ira.a(false, -2, (byte) -33);
                                         iqa.field_c.d(96);
-                                        break L12;
+                                        break L9;
                                       }
                                     }
                                     vda.field_q = false;
-                                    stackOut_71_0 = 1;
-                                    stackIn_72_0 = stackOut_71_0;
+                                    stackIn_70_0 = 1;
                                     decompiledRegionSelector0 = 10;
                                     break L0;
                                   }
                                 } else {
-                                  break L5;
+                                  break L4;
                                 }
                               }
                             }
-                            L13: {
+                            L10: {
                               var4_int = param1.e(-108);
                               if (0 == param1.h(255)) {
-                                stackOut_51_0 = 0;
-                                stackIn_52_0 = stackOut_51_0;
-                                break L13;
+                                stackIn_52_0 = 0;
+                                break L10;
                               } else {
-                                stackOut_50_0 = 1;
-                                stackIn_52_0 = stackOut_50_0;
-                                break L13;
+                                stackIn_52_0 = 1;
+                                break L10;
                               }
                             }
                             var5_int = stackIn_52_0;
@@ -1935,72 +1734,16 @@ public final class TombRacer extends rfa implements ls {
                             var9 = new String[param1.h(255)];
                             var10 = param1.c((byte) 94);
                             var11_int = 0;
-                            L14: while (true) {
-                              L15: {
-                                L16: {
-                                  if (var11_int >= var9.length) {
-                                    break L16;
-                                  } else {
-                                    stackOut_54_0 = (String[]) (var9);
-                                    stackIn_58_0 = stackOut_54_0;
-                                    stackIn_55_0 = stackOut_54_0;
-                                    if (var16 != 0) {
-                                      break L15;
-                                    } else {
-                                      stackIn_55_0[var11_int] = param1.e((byte) -76);
-                                      var11_int++;
-                                      if (var16 == 0) {
-                                        continue L14;
-                                      } else {
-                                        break L16;
-                                      }
-                                    }
-                                  }
-                                }
-                                stackOut_57_0 = (String[]) (var9);
-                                stackIn_58_0 = stackOut_57_0;
-                                break L15;
-                              }
-                              var11 = new BitSet[stackIn_58_0.length];
-                              param1.h((byte) -96);
-                              var32 = new boolean[var9.length];
-                              var25 = var32;
-                              var12 = var25;
-                              var13 = 0;
-                              L17: while (true) {
-                                stackOut_59_0 = var11.length ^ -1;
-                                stackIn_60_0 = stackOut_59_0;
-                                L18: while (true) {
-                                  L19: {
-                                    L20: {
-                                      if (stackIn_60_0 >= (var13 ^ -1)) {
-                                        break L20;
-                                      } else {
-                                        var12[var13] = uha.a(5907, param1);
-                                        var14 = pa.b((byte) 121);
-                                        var11[var13] = new BitSet(var14);
-                                        stackOut_61_0 = 0;
-                                        stackIn_67_0 = stackOut_61_0;
-                                        stackIn_62_0 = stackOut_61_0;
-                                        if (var16 != 0) {
-                                          break L19;
-                                        } else {
-                                          var15 = stackIn_62_0;
-                                          if (var14 <= var15) {
-                                            var13++;
-                                            if (var16 == 0) {
-                                              continue L17;
-                                            } else {
-                                              break L20;
-                                            }
-                                          } else {
-                                            stackOut_63_0 = uha.a(5907, param1);
-                                            stackIn_60_0 = stackOut_63_0 ? 1 : 0;
-                                            continue L18;
-                                          }
-                                        }
-                                      }
-                                    }
+                            L11: while (true) {
+                              if (var11_int >= var9.length) {
+                                var11 = new BitSet[var9.length];
+                                param1.h((byte) -96);
+                                var32 = new boolean[var9.length];
+                                var25 = var32;
+                                var12 = var25;
+                                var13 = 0;
+                                L12: while (true) {
+                                  if (var11.length <= var13) {
                                     param1.i((byte) 98);
                                     qv.field_o = null;
                                     rba.field_a = new qh(true, var4_int, var9, var10, var5_int != 0, var6, -1 + var6, var7, var8, 0, var11, var32, (ou) null);
@@ -2009,47 +1752,70 @@ public final class TombRacer extends rfa implements ls {
                                     iqa.field_c.a(-68);
                                     ira.a(false, -1, (byte) 83);
                                     vda.field_q = false;
-                                    stackOut_66_0 = 1;
-                                    stackIn_67_0 = stackOut_66_0;
-                                    break L19;
+                                    stackIn_65_0 = 1;
+                                    decompiledRegionSelector0 = 9;
+                                    break L0;
+                                  } else {
+                                    var12[var13] = uha.a(5907, param1);
+                                    var14 = pa.b((byte) 121);
+                                    var11[var13] = new BitSet(var14);
+                                    var15 = 0;
+                                    L13: while (true) {
+                                      if (var14 <= var15) {
+                                        var13++;
+                                        continue L12;
+                                      } else {
+                                        L14: {
+                                          if (uha.a(5907, param1)) {
+                                            var11[var13].set(var15);
+                                            break L14;
+                                          } else {
+                                            break L14;
+                                          }
+                                        }
+                                        var11[var13].get(var15);
+                                        var15++;
+                                        continue L13;
+                                      }
+                                    }
                                   }
-                                  decompiledRegionSelector0 = 9;
-                                  break L0;
                                 }
+                              } else {
+                                var9[var11_int] = param1.e((byte) -76);
+                                var11_int++;
+                                continue L11;
                               }
                             }
                           }
                         } else {
-                          L21: {
+                          L15: {
                             var22 = ila.a(-18787, true);
                             k.a((byte) 114, var22);
                             if (rba.field_a == null) {
-                              break L21;
+                              break L15;
                             } else {
                               if (var22.field_m) {
-                                break L21;
+                                break L15;
                               } else {
                                 var23 = var22.field_g;
                                 var24 = im.a(var22.field_d, var22.field_f, -87, rba.field_a.a(false, var23), var23);
                                 iqa.field_c.a(0, var24);
-                                break L21;
+                                break L15;
                               }
                             }
                           }
-                          stackOut_37_0 = 1;
-                          stackIn_38_0 = stackOut_37_0;
+                          stackIn_38_0 = 1;
                           decompiledRegionSelector0 = 7;
                           break L0;
                         }
                       } else {
-                        stackOut_31_0 = 0;
-                        stackIn_32_0 = stackOut_31_0;
+                        stackIn_32_0 = 0;
                         decompiledRegionSelector0 = 6;
                         break L0;
                       }
                     }
                   } else {
-                    L22: {
+                    L16: {
                       if (vd.field_n) {
                         cv.o((byte) -108);
                         ik.a(5);
@@ -2057,15 +1823,14 @@ public final class TombRacer extends rfa implements ls {
                         vd.field_n = false;
                         iqa.field_c.c(88);
                         ira.a(false, 0, (byte) 111);
-                        break L22;
+                        break L16;
                       } else {
-                        break L22;
+                        break L16;
                       }
                     }
                     rpa.field_d = false;
                     vda.field_q = false;
-                    stackOut_16_0 = 1;
-                    stackIn_17_0 = stackOut_16_0;
+                    stackIn_17_0 = 1;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
@@ -2075,8 +1840,7 @@ public final class TombRacer extends rfa implements ls {
                   vd.field_n = true;
                   rpa.field_d = false;
                   ira.a(false, -2, (byte) 90);
-                  stackOut_10_0 = 1;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = 1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -2084,58 +1848,48 @@ public final class TombRacer extends rfa implements ls {
                 rpa.field_d = false;
                 ira.a(false, 1, (byte) -77);
                 vj.a(param1.e((byte) -76), -79);
-                stackOut_7_0 = 1;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              L23: {
+              L17: {
                 if (null == rba.field_a) {
-                  break L23;
+                  break L17;
                 } else {
                   var4_int = param1.e(113);
                   ql.field_k.k(69, -2988);
                   ql.field_k.a(var4_int, (byte) 125);
                   rba.field_a.b(106, param1);
-                  break L23;
+                  break L17;
                 }
               }
-              stackOut_4_0 = 1;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L24: {
-            var4 = decompiledCaughtException;
-            stackOut_122_0 = (RuntimeException) (var4);
-            stackOut_122_1 = new StringBuilder().append("TombRacer.CB(").append(param0).append(',');
-            stackIn_124_0 = stackOut_122_0;
-            stackIn_124_1 = stackOut_122_1;
-            stackIn_123_0 = stackOut_122_0;
-            stackIn_123_1 = stackOut_122_1;
+          L18: {
+            var4_ref = decompiledCaughtException;
+            stackIn_119_0 = (RuntimeException) (var4_ref);
+
+            stackIn_119_1 = new StringBuilder().append("TombRacer.CB(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_124_0 = (RuntimeException) ((Object) stackIn_124_0);
-              stackOut_124_1 = (StringBuilder) ((Object) stackIn_124_1);
-              stackOut_124_2 = "null";
-              stackIn_125_0 = stackOut_124_0;
-              stackIn_125_1 = stackOut_124_1;
-              stackIn_125_2 = stackOut_124_2;
-              break L24;
+              stackIn_120_0 = (RuntimeException) ((Object) stackIn_119_0);
+              stackIn_120_1 = (StringBuilder) ((Object) stackIn_119_1);
+              stackIn_120_2 = "null";
+              break L18;
             } else {
-              stackOut_123_0 = (RuntimeException) ((Object) stackIn_123_0);
-              stackOut_123_1 = (StringBuilder) ((Object) stackIn_123_1);
-              stackOut_123_2 = "{...}";
-              stackIn_125_0 = stackOut_123_0;
-              stackIn_125_1 = stackOut_123_1;
-              stackIn_125_2 = stackOut_123_2;
-              break L24;
+              stackIn_120_0 = (RuntimeException) ((Object) stackIn_119_0);
+              stackIn_120_1 = (StringBuilder) ((Object) stackIn_119_1);
+              stackIn_120_2 = "{...}";
+              break L18;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_125_0), stackIn_125_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_120_0), stackIn_120_2 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_5_0 != 0;
@@ -2165,36 +1919,36 @@ public final class TombRacer extends rfa implements ls {
                           return stackIn_45_0 != 0;
                         } else {
                           if (decompiledRegionSelector0 == 9) {
-                            return stackIn_67_0 != 0;
+                            return stackIn_65_0 != 0;
                           } else {
                             if (decompiledRegionSelector0 == 10) {
-                              return stackIn_72_0 != 0;
+                              return stackIn_70_0 != 0;
                             } else {
                               if (decompiledRegionSelector0 == 11) {
-                                return stackIn_78_0 != 0;
+                                return stackIn_76_0 != 0;
                               } else {
                                 if (decompiledRegionSelector0 == 12) {
-                                  return stackIn_88_0 != 0;
+                                  return stackIn_86_0 != 0;
                                 } else {
                                   if (decompiledRegionSelector0 == 13) {
-                                    return stackIn_94_0 != 0;
+                                    return stackIn_92_0 != 0;
                                   } else {
                                     if (decompiledRegionSelector0 == 14) {
-                                      return stackIn_96_0 != 0;
+                                      return stackIn_94_0 != 0;
                                     } else {
                                       if (decompiledRegionSelector0 == 15) {
-                                        return stackIn_99_0 != 0;
+                                        return stackIn_97_0 != 0;
                                       } else {
                                         if (decompiledRegionSelector0 == 16) {
-                                          return stackIn_103_0 != 0;
+                                          return stackIn_101_0 != 0;
                                         } else {
                                           if (decompiledRegionSelector0 == 17) {
-                                            return stackIn_107_0 != 0;
+                                            return stackIn_105_0 != 0;
                                           } else {
                                             if (decompiledRegionSelector0 == 18) {
-                                              return stackIn_119_0 != 0;
+                                              return stackIn_114_0 != 0;
                                             } else {
-                                              return stackIn_121_0;
+                                              return stackIn_116_0;
                                             }
                                           }
                                         }
@@ -2234,10 +1988,18 @@ public final class TombRacer extends rfa implements ls {
 
     private final void x(int param0) {
         try {
-            qva var2 = null;
+            qva qva = null;
             Throwable decompiledCaughtException = null;
             L0: {
-              if (!mba.e(-22766)) {
+              if (mba.e(-22766)) {
+                L1: {
+                  if (tga.field_a.f()) {
+                    tga.field_a.c();
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
                 tga.field_a.a(0, (ob[]) null);
                 if (dia.field_o == null) {
                   break L0;
@@ -2265,16 +2027,16 @@ public final class TombRacer extends rfa implements ls {
             }
             if (param0 == -28581) {
               try {
-                L1: {
+                L2: {
                   tga.field_a.e(param0 + 28581);
-                  break L1;
+                  break L2;
                 }
               } catch (qva decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                L2: {
-                  var2 = (qva) (Object) decompiledCaughtException;
-                  System.out.println(var2);
-                  break L2;
+                L3: {
+                  qva = (qva) (Object) decompiledCaughtException;
+                  System.out.println(qva);
+                  break L3;
                 }
               }
               return;
@@ -2289,51 +2051,30 @@ public final class TombRacer extends rfa implements ls {
     }
 
     private final boolean a(kh param0, int param1, byte param2) {
-        RuntimeException var4 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_26_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_34_0 = 0;
+        int stackIn_39_0 = 0;
+        int stackIn_41_0 = 0;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         jha var9 = null;
         int var10 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_40_0 = 0;
-        int stackIn_42_0 = 0;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        String stackIn_46_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
         var10 = field_G ? 1 : 0;
         try {
           L0: {
@@ -2342,8 +2083,7 @@ public final class TombRacer extends rfa implements ls {
                 if ((param1 ^ -1) == -68) {
                   var4_int = param0.c((byte) 102);
                   rba.field_a.a((byte) -54, var4_int);
-                  stackOut_9_0 = 1;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = 1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -2351,90 +2091,67 @@ public final class TombRacer extends rfa implements ls {
                     var4_int = param0.h(255);
                     var5 = 0;
                     L1: while (true) {
-                      L2: {
-                        L3: {
-                          if (var5 >= rba.field_a.field_k.field_k) {
-                            break L3;
-                          } else {
-                            var6 = 1 & var4_int >> var5;
-                            var7 = 1 & rba.field_a.field_k.field_b >> var5;
-                            stackOut_15_0 = var6;
-                            stackIn_23_0 = stackOut_15_0;
-                            stackIn_16_0 = stackOut_15_0;
-                            if (var10 != 0) {
+                      if (var5 >= rba.field_a.field_k.field_k) {
+                        rba.field_a.field_k.field_b = var4_int;
+                        stackIn_22_0 = 1;
+                        decompiledRegionSelector0 = 3;
+                        break L0;
+                      } else {
+                        L2: {
+                          var6 = 1 & var4_int >> var5;
+                          var7 = 1 & rba.field_a.field_k.field_b >> var5;
+                          if (var6 != var7) {
+                            if (1 == var6) {
+                              var8 = rba.field_a.field_k.c(var5, 0);
+                              var9 = im.a(1, gl.a((byte) 107, ad.field_h, new String[]{var8}), 111, var5, var8);
+                              iqa.field_c.a(0, var9);
                               break L2;
                             } else {
-                              L4: {
-                                if (stackIn_16_0 != var7) {
-                                  if (1 == var6) {
-                                    var8 = rba.field_a.field_k.c(var5, 0);
-                                    var9 = im.a(1, gl.a((byte) 107, ad.field_h, new String[]{var8}), 111, var5, var8);
-                                    iqa.field_c.a(0, var9);
-                                    break L4;
-                                  } else {
-                                    break L4;
-                                  }
-                                } else {
-                                  break L4;
-                                }
-                              }
-                              var5++;
-                              if (var10 == 0) {
-                                continue L1;
-                              } else {
-                                break L3;
-                              }
+                              break L2;
                             }
+                          } else {
+                            break L2;
                           }
                         }
-                        rba.field_a.field_k.field_b = var4_int;
-                        stackOut_22_0 = 1;
-                        stackIn_23_0 = stackOut_22_0;
-                        break L2;
+                        var5++;
+                        continue L1;
                       }
-                      decompiledRegionSelector0 = 3;
-                      break L0;
                     }
                   } else {
                     if (param1 == 69) {
                       var4_int = param0.h(255);
                       rba.field_a.d(5, var4_int);
-                      stackOut_26_0 = 1;
-                      stackIn_27_0 = stackOut_26_0;
+                      stackIn_26_0 = 1;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       if (param1 == 70) {
                         rba.field_a.field_k.field_t = param0.h(255);
-                        stackOut_30_0 = 1;
-                        stackIn_31_0 = stackOut_30_0;
+                        stackIn_30_0 = 1;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       } else {
                         if ((param1 ^ -1) == -72) {
                           var4_int = param0.h(255);
                           rba.field_a.a(var4_int, (byte) -23);
-                          stackOut_34_0 = 1;
-                          stackIn_35_0 = stackOut_34_0;
+                          stackIn_34_0 = 1;
                           decompiledRegionSelector0 = 6;
                           break L0;
                         } else {
-                          L5: {
+                          L3: {
                             if (param2 > 108) {
-                              break L5;
+                              break L3;
                             } else {
                               field_F = (String) null;
-                              break L5;
+                              break L3;
                             }
                           }
                           if (!rba.field_a.a(param1, -4, param0)) {
-                            stackOut_41_0 = 0;
-                            stackIn_42_0 = stackOut_41_0;
+                            stackIn_41_0 = 0;
                             decompiledRegionSelector0 = 8;
                             break L0;
                           } else {
-                            stackOut_39_0 = 1;
-                            stackIn_40_0 = stackOut_39_0;
+                            stackIn_39_0 = 1;
                             decompiledRegionSelector0 = 7;
                             break L0;
                           }
@@ -2444,47 +2161,37 @@ public final class TombRacer extends rfa implements ls {
                   }
                 }
               } else {
-                stackOut_5_0 = 1;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L4: {
             var4 = decompiledCaughtException;
-            stackOut_43_0 = (RuntimeException) (var4);
-            stackOut_43_1 = new StringBuilder().append("TombRacer.VA(");
-            stackIn_45_0 = stackOut_43_0;
-            stackIn_45_1 = stackOut_43_1;
-            stackIn_44_0 = stackOut_43_0;
-            stackIn_44_1 = stackOut_43_1;
+            stackIn_44_0 = (RuntimeException) (var4);
+
+            stackIn_44_1 = new StringBuilder().append("TombRacer.VA(");
+
             if (param0 == null) {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "null";
-              stackIn_46_0 = stackOut_45_0;
-              stackIn_46_1 = stackOut_45_1;
-              stackIn_46_2 = stackOut_45_2;
-              break L6;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "null";
+              break L4;
             } else {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "{...}";
-              stackIn_46_0 = stackOut_44_0;
-              stackIn_46_1 = stackOut_44_1;
-              stackIn_46_2 = stackOut_44_2;
-              break L6;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "{...}";
+              break L4;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_46_0), stackIn_46_2 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0 != 0;
@@ -2496,21 +2203,21 @@ public final class TombRacer extends rfa implements ls {
               return stackIn_10_0 != 0;
             } else {
               if (decompiledRegionSelector0 == 3) {
-                return stackIn_23_0 != 0;
+                return stackIn_22_0 != 0;
               } else {
                 if (decompiledRegionSelector0 == 4) {
-                  return stackIn_27_0 != 0;
+                  return stackIn_26_0 != 0;
                 } else {
                   if (decompiledRegionSelector0 == 5) {
-                    return stackIn_31_0 != 0;
+                    return stackIn_30_0 != 0;
                   } else {
                     if (decompiledRegionSelector0 == 6) {
-                      return stackIn_35_0 != 0;
+                      return stackIn_34_0 != 0;
                     } else {
                       if (decompiledRegionSelector0 == 7) {
-                        return stackIn_40_0 != 0;
+                        return stackIn_39_0 != 0;
                       } else {
-                        return stackIn_42_0 != 0;
+                        return stackIn_41_0 != 0;
                       }
                     }
                   }
@@ -2522,7 +2229,7 @@ public final class TombRacer extends rfa implements ls {
     }
 
     final void b(int param0, int param1) {
-        int var4 = 0;
+        int var4;
         L0: {
           var4 = field_G ? 1 : 0;
           ql.a(2, -28521);
@@ -2534,84 +2241,65 @@ public final class TombRacer extends rfa implements ls {
           }
         }
         L1: {
-          L2: {
-            ki.b(false, 3);
-            ua.b(4, 2);
-            gw.b(-104, 6);
-            mda.b(7, (byte) -120);
-            if ((param0 ^ -1) != -2) {
-              break L2;
-            } else {
-              vda.field_q = true;
-              rpa.field_d = true;
-              if (var4 == 0) {
-                break L1;
-              } else {
+          ki.b(false, 3);
+          ua.b(4, 2);
+          gw.b(-104, 6);
+          mda.b(7, (byte) -120);
+          if ((param0 ^ -1) != -2) {
+            L2: {
+              if (!vd.field_n) {
                 break L2;
-              }
-            }
-          }
-          L3: {
-            if (!vd.field_n) {
-              break L3;
-            } else {
-              L4: {
-                L5: {
-                  era.field_c = true;
-                  if (null == rba.field_a) {
-                    break L5;
-                  } else {
-                    if (rba.field_a.d((byte) 79)) {
-                      break L5;
+              } else {
+                L3: {
+                  L4: {
+                    era.field_c = true;
+                    if (null == rba.field_a) {
+                      break L4;
                     } else {
-                      vj.a(ph.field_k, -114);
-                      rba.field_a = null;
-                      ira.a(false, 1, (byte) 122);
-                      if (var4 == 0) {
+                      if (rba.field_a.d((byte) 79)) {
                         break L4;
                       } else {
-                        break L5;
+                        vj.a(ph.field_k, -114);
+                        rba.field_a = null;
+                        ira.a(false, 1, (byte) 122);
+                        break L3;
                       }
                     }
                   }
+                  wm.field_a = null;
+                  rba.field_a = null;
+                  fp.a(-82);
+                  ira.a(false, 0, (byte) 124);
+                  break L3;
                 }
-                wm.field_a = null;
-                rba.field_a = null;
-                fp.a(-82);
-                ira.a(false, 0, (byte) 124);
-                break L4;
+                ((wv) ((Object) hb.field_t)).a(0, 0, false);
+                vd.field_n = false;
+                iqa.field_c.c(-89);
+                break L2;
               }
-              ((wv) ((Object) hb.field_t)).a(0, 0, false);
-              vd.field_n = false;
-              iqa.field_c.c(-89);
-              break L3;
             }
+            vda.field_q = false;
+            rpa.field_d = false;
+            break L1;
+          } else {
+            vda.field_q = true;
+            rpa.field_d = true;
+            break L1;
           }
-          vda.field_q = false;
-          rpa.field_d = false;
-          break L1;
         }
     }
 
     public final void b(int param0) {
-        rqa var3 = null;
-        L0: {
-          if (param0 == 1) {
-            break L0;
-          } else {
-            var3 = (rqa) null;
+        if (param0 != 1) {
+            rqa var3 = (rqa) null;
             this.a(false, (rqa) null, (byte) 51);
-            break L0;
-          }
         }
         ih.D(17229);
         cna.field_a = false;
         if (oq.a((byte) 124).a(param0 ^ -1)) {
-          return;
-        } else {
-          this.a(true, rba.field_a, (byte) 17);
-          return;
+            return;
         }
+        this.a(true, rba.field_a, (byte) 17);
     }
 
     static {

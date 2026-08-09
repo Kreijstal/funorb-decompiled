@@ -9,7 +9,7 @@ final class ip extends ki {
     static String[] field_u;
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var7 = null;
+        pb var7;
         L0: {
           if (param0) {
             break L0;
@@ -19,28 +19,31 @@ final class ip extends ki {
           }
         }
         L1: {
-          if (this.b((byte) -99)) {
-            break L1;
-          } else {
-            lb.g(param4, param2, 640, 480, ro.field_x[param3], 16777215);
-            if (BrickABrac.field_J) {
-              break L1;
+          L2: {
+            if (this.b((byte) -99)) {
+              break L2;
             } else {
-              return;
+              lb.g(param4, param2, 640, 480, ro.field_x[param3], 16777215);
+              if (!BrickABrac.field_J) {
+                break L1;
+              } else {
+                break L2;
+              }
             }
           }
-        }
-        L2: {
-          var7 = ge.a(this.field_m, param3, -20777);
-          if (!var7.a((byte) -84, param3, this.field_m)) {
-            ih.a(var7, np.field_d, param3, 1, 0, true);
-            var7.a(this.field_m, param3, (byte) 78);
-            break L2;
-          } else {
-            break L2;
+          L3: {
+            var7 = ge.a(this.field_m, param3, -20777);
+            if (!var7.a((byte) -84, param3, this.field_m)) {
+              ih.a(var7, np.field_d, param3, 1, 0, true);
+              var7.a(this.field_m, param3, (byte) 78);
+              break L3;
+            } else {
+              break L3;
+            }
           }
+          ef.a(var7.field_p, dg.field_g, param4, false, param1, param2, 0, param3, 1, 640, ch.field_f);
+          break L1;
         }
-        ef.a(var7.field_p, dg.field_g, param4, false, param1, param2, 0, param3, 1, 640, ch.field_f);
     }
 
     final jp[] a(byte param0, int param1) {
@@ -49,50 +52,15 @@ final class ip extends ki {
     }
 
     final jp a(boolean param0, int param1) {
-        boolean discarded$0 = false;
         if (!param0) {
-            discarded$0 = this.b((byte) -1);
+            this.b((byte) -1);
         }
         return up.field_A[param1 + -1];
     }
 
     final static void a(int param0, om param1, boolean param2, boolean param3) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8_int = 0;
-        rk[] var8 = null;
-        String var8_ref = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        rk var17 = null;
-        int var17_int = 0;
-        int var18 = 0;
-        Object var18_ref = null;
-        Object var19 = null;
-        String var19_ref = null;
-        Object var20 = null;
-        Object var21 = null;
-        int var22_int = 0;
-        Object var22 = null;
-        String var22_ref = null;
-        int var23 = 0;
-        int var24 = 0;
-        String var25 = null;
-        int var26 = 0;
-        rk[] var27 = null;
-        rk var28 = null;
-        rk var29 = null;
-        String var30 = null;
-        String var31 = null;
+        rk dupTemp$0 = null;
+        rk[] dupTemp$1 = null;
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_20_0 = 0;
@@ -217,157 +185,45 @@ final class ip extends ki {
         StringBuilder stackIn_416_1 = null;
         String stackIn_416_2 = null;
         Throwable caughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_19_0 = 0;
-        rk stackOut_26_0 = null;
-        rk stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        rk stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        rk stackOut_34_0 = null;
-        rk stackOut_35_0 = null;
-        int stackOut_35_1 = 0;
-        rk stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        boolean stackOut_39_0 = false;
-        int stackOut_49_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_70_0 = 0;
-        rk stackOut_89_0 = null;
-        rk stackOut_90_0 = null;
-        int stackOut_90_1 = 0;
-        rk stackOut_92_0 = null;
-        int stackOut_92_1 = 0;
-        rk stackOut_97_0 = null;
-        boolean stackOut_97_1 = false;
-        int stackOut_97_2 = 0;
-        int stackOut_97_3 = 0;
-        rk stackOut_98_0 = null;
-        boolean stackOut_98_1 = false;
-        rk stackOut_99_0 = null;
-        boolean stackOut_99_1 = false;
-        int stackOut_99_2 = 0;
-        rk stackOut_101_0 = null;
-        boolean stackOut_101_1 = false;
-        int stackOut_101_2 = 0;
-        rk stackOut_104_0 = null;
-        int stackOut_104_1 = 0;
-        byte stackOut_104_2 = 0;
-        int stackOut_104_3 = 0;
-        rk stackOut_105_0 = null;
-        rk stackOut_106_0 = null;
-        int stackOut_106_1 = 0;
-        rk stackOut_108_0 = null;
-        int stackOut_108_1 = 0;
-        rk stackOut_110_0 = null;
-        rk stackOut_111_0 = null;
-        rk stackOut_112_0 = null;
-        int stackOut_112_1 = 0;
-        rk stackOut_114_0 = null;
-        int stackOut_114_1 = 0;
-        boolean stackOut_116_0 = false;
-        int stackOut_118_0 = 0;
-        int stackOut_120_0 = 0;
-        int stackOut_123_0 = 0;
-        rk stackOut_135_0 = null;
-        rk stackOut_136_0 = null;
-        int stackOut_136_1 = 0;
-        rk stackOut_137_0 = null;
-        int stackOut_137_1 = 0;
-        rk stackOut_139_0 = null;
-        rk stackOut_140_0 = null;
-        int stackOut_140_1 = 0;
-        rk stackOut_142_0 = null;
-        int stackOut_142_1 = 0;
-        rk stackOut_145_0 = null;
-        rk stackOut_146_0 = null;
-        int stackOut_146_1 = 0;
-        rk stackOut_148_0 = null;
-        int stackOut_148_1 = 0;
-        rk stackOut_150_0 = null;
-        rk stackOut_151_0 = null;
-        int stackOut_151_1 = 0;
-        rk stackOut_153_0 = null;
-        int stackOut_153_1 = 0;
-        boolean stackOut_156_0 = false;
-        int stackOut_163_0 = 0;
-        Object stackOut_170_0 = null;
-        String stackOut_172_0 = null;
-        rk stackOut_175_0 = null;
-        rk stackOut_176_0 = null;
-        int stackOut_176_1 = 0;
-        rk stackOut_178_0 = null;
-        int stackOut_178_1 = 0;
-        rk stackOut_179_0 = null;
-        rk stackOut_180_0 = null;
-        int stackOut_180_1 = 0;
-        rk stackOut_181_0 = null;
-        int stackOut_181_1 = 0;
-        int stackOut_183_0 = 0;
-        boolean stackOut_186_0 = false;
-        int stackOut_188_0 = 0;
-        int stackOut_190_0 = 0;
-        int stackOut_193_0 = 0;
-        int stackOut_245_0 = 0;
-        int stackOut_247_0 = 0;
-        int stackOut_258_0 = 0;
-        int stackOut_260_0 = 0;
-        boolean stackOut_357_0 = false;
-        int stackOut_363_0 = 0;
-        rk stackOut_375_0 = null;
-        int stackOut_375_1 = 0;
-        int stackOut_375_2 = 0;
-        rk stackOut_376_0 = null;
-        boolean stackOut_376_1 = false;
-        int stackOut_376_2 = 0;
-        rk stackOut_377_0 = null;
-        rk stackOut_378_0 = null;
-        int stackOut_378_1 = 0;
-        rk stackOut_380_0 = null;
-        int stackOut_380_1 = 0;
-        rk stackOut_384_0 = null;
-        boolean stackOut_384_1 = false;
-        int stackOut_384_2 = 0;
-        int stackOut_384_3 = 0;
-        rk stackOut_385_0 = null;
-        boolean stackOut_385_1 = false;
-        rk stackOut_386_0 = null;
-        boolean stackOut_386_1 = false;
-        int stackOut_386_2 = 0;
-        rk stackOut_388_0 = null;
-        boolean stackOut_388_1 = false;
-        int stackOut_388_2 = 0;
-        rk stackOut_391_0 = null;
-        rk stackOut_392_0 = null;
-        rk stackOut_393_0 = null;
-        int stackOut_393_1 = 0;
-        rk stackOut_395_0 = null;
-        int stackOut_395_1 = 0;
-        rk stackOut_397_0 = null;
-        rk stackOut_398_0 = null;
-        rk stackOut_399_0 = null;
-        int stackOut_399_1 = 0;
-        rk stackOut_401_0 = null;
-        int stackOut_401_1 = 0;
-        int stackOut_403_0 = 0;
-        int stackOut_405_0 = 0;
-        RuntimeException stackOut_412_0 = null;
-        StringBuilder stackOut_412_1 = null;
-        RuntimeException stackOut_413_0 = null;
-        StringBuilder stackOut_413_1 = null;
-        String stackOut_413_2 = null;
-        RuntimeException stackOut_415_0 = null;
-        StringBuilder stackOut_415_1 = null;
-        String stackOut_415_2 = null;
+        boolean stackOut_97_1;
+        boolean stackOut_186_0;
+        boolean stackOut_357_0;
         int statePc = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8_int = 0;
+        String var8 = null;
+        rk[] var8_array = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17_int = 0;
+        rk var17 = null;
+        int var18 = 0;
+        Object var18_ref = null;
+        Object var19 = null;
+        Object var20 = null;
+        Object var21 = null;
+        int var22_int = 0;
+        Object var22 = null;
+        int var23 = 0;
+        int var24 = 0;
+        Object var25 = null;
+        String var25_ref = null;
+        int var26 = 0;
+        rk[] var27 = null;
+        rk var28 = null;
+        rk var29 = null;
+        String var30 = null;
+        String var31 = null;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -392,14 +248,12 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 3: {
-                    stackOut_3_0 = 0;
-                    stackIn_6_0 = stackOut_3_0;
+                    stackIn_6_0 = 0;
                     statePc = 6;
                     continue stateLoop;
                 }
                 case 4: {
-                    stackOut_4_0 = 1;
-                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_6_0 = 1;
                     statePc = 6;
                     continue stateLoop;
                 }
@@ -429,20 +283,17 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 9: {
-                    stackOut_9_0 = 0;
-                    stackIn_13_0 = stackOut_9_0;
+                    stackIn_13_0 = 0;
                     statePc = 13;
                     continue stateLoop;
                 }
                 case 10: {
-                    stackOut_10_0 = 1;
-                    stackIn_13_0 = stackOut_10_0;
+                    stackIn_13_0 = 1;
                     statePc = 13;
                     continue stateLoop;
                 }
                 case 12: {
-                    stackOut_12_0 = 0;
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = 0;
                     statePc = 13;
                     continue stateLoop;
                 }
@@ -474,9 +325,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 19: {
-                    stackOut_19_0 = var4_int;
-                    stackIn_40_0 = stackOut_19_0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_40_0 = var4_int;
+                    stackIn_20_0 = stackIn_40_0;
                     if (var26 != 0) {
                         statePc = 40;
                     } else {
@@ -515,9 +365,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 26: {
-                    stackOut_26_0 = ab.field_A[0][var6 - -1];
-                    stackIn_28_0 = stackOut_26_0;
-                    stackIn_27_0 = stackOut_26_0;
+                    stackIn_28_0 = ab.field_A[0][var6 - -1];
+                    stackIn_27_0 = stackIn_28_0;
                     if (var4_int == 0) {
                         statePc = 28;
                     } else {
@@ -526,18 +375,14 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 27: {
-                    stackOut_27_0 = (rk) ((Object) stackIn_27_0);
-                    stackOut_27_1 = 1;
-                    stackIn_29_0 = stackOut_27_0;
-                    stackIn_29_1 = stackOut_27_1;
+                    stackIn_29_0 = (rk) ((Object) stackIn_27_0);
+                    stackIn_29_1 = 1;
                     statePc = 29;
                     continue stateLoop;
                 }
                 case 28: {
-                    stackOut_28_0 = (rk) ((Object) stackIn_28_0);
-                    stackOut_28_1 = 0;
-                    stackIn_29_0 = stackOut_28_0;
-                    stackIn_29_1 = stackOut_28_1;
+                    stackIn_29_0 = (rk) ((Object) stackIn_28_0);
+                    stackIn_29_1 = 0;
                     statePc = 29;
                     continue stateLoop;
                 }
@@ -564,9 +409,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 34: {
-                    stackOut_34_0 = ab.field_A[0][var6 - -1];
-                    stackIn_37_0 = stackOut_34_0;
-                    stackIn_35_0 = stackOut_34_0;
+                    stackIn_37_0 = ab.field_A[0][var6 - -1];
+                    stackIn_35_0 = stackIn_37_0;
                     if (var6 != param1.field_kc) {
                         statePc = 37;
                     } else {
@@ -575,30 +419,29 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 35: {
-                    stackOut_35_0 = (rk) ((Object) stackIn_35_0);
-                    stackOut_35_1 = 1;
-                    stackIn_38_0 = stackOut_35_0;
-                    stackIn_38_1 = stackOut_35_1;
+                    stackIn_38_0 = (rk) ((Object) stackIn_35_0);
+                    stackIn_38_1 = 1;
                     statePc = 38;
                     continue stateLoop;
                 }
                 case 37: {
-                    stackOut_37_0 = (rk) ((Object) stackIn_37_0);
-                    stackOut_37_1 = 0;
-                    stackIn_38_0 = stackOut_37_0;
-                    stackIn_38_1 = stackOut_37_1;
+                    stackIn_38_0 = (rk) ((Object) stackIn_37_0);
+                    stackIn_38_1 = 0;
                     statePc = 38;
                     continue stateLoop;
                 }
                 case 38: {
                     stackIn_38_0.field_Nb = stackIn_38_1 != 0;
                     var6++;
-                    statePc = 18;
+                    if (var26 == 0) {
+                        statePc = 18;
+                    } else {
+                        statePc = 39;
+                    }
                     continue stateLoop;
                 }
                 case 39: {
-                    stackOut_39_0 = ab.field_A[0][2].field_G;
-                    stackIn_40_0 = stackOut_39_0 ? 1 : 0;
+                    stackIn_40_0 = ab.field_A[0][2].field_G ? 1 : 0;
                     statePc = 40;
                     continue stateLoop;
                 }
@@ -657,14 +500,12 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 49: {
-                    stackOut_49_0 = 1;
-                    stackIn_52_0 = stackOut_49_0;
+                    stackIn_52_0 = 1;
                     statePc = 52;
                     continue stateLoop;
                 }
                 case 51: {
-                    stackOut_51_0 = 0;
-                    stackIn_52_0 = stackOut_51_0;
+                    stackIn_52_0 = 0;
                     statePc = 52;
                     continue stateLoop;
                 }
@@ -723,14 +564,12 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 60: {
-                    stackOut_60_0 = 0;
-                    stackIn_63_0 = stackOut_60_0;
+                    stackIn_63_0 = 0;
                     statePc = 63;
                     continue stateLoop;
                 }
                 case 62: {
-                    stackOut_62_0 = -1;
-                    stackIn_63_0 = stackOut_62_0;
+                    stackIn_63_0 = -1;
                     statePc = 63;
                     continue stateLoop;
                 }
@@ -748,9 +587,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 65: {
-                    stackOut_65_0 = var6;
-                    stackIn_117_0 = stackOut_65_0;
-                    stackIn_66_0 = stackOut_65_0;
+                    stackIn_117_0 = var6;
+                    stackIn_66_0 = stackIn_117_0;
                     if (var26 != 0) {
                         statePc = 117;
                     } else {
@@ -775,14 +613,12 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 68: {
-                    stackOut_68_0 = 1;
-                    stackIn_71_0 = stackOut_68_0;
+                    stackIn_71_0 = 1;
                     statePc = 71;
                     continue stateLoop;
                 }
                 case 70: {
-                    stackOut_70_0 = 0;
-                    stackIn_71_0 = stackOut_70_0;
+                    stackIn_71_0 = 0;
                     statePc = 71;
                     continue stateLoop;
                 }
@@ -900,9 +736,8 @@ final class ip extends ki {
                 }
                 case 89: {
                     var9 = w.field_n[var7];
-                    stackOut_89_0 = ab.field_A[1][1 + var7];
-                    stackIn_92_0 = stackOut_89_0;
-                    stackIn_90_0 = stackOut_89_0;
+                    stackIn_92_0 = ab.field_A[1][1 + var7];
+                    stackIn_90_0 = stackIn_92_0;
                     if (var9 != param1.field_jc) {
                         statePc = 92;
                     } else {
@@ -911,18 +746,14 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 90: {
-                    stackOut_90_0 = (rk) ((Object) stackIn_90_0);
-                    stackOut_90_1 = 1;
-                    stackIn_93_0 = stackOut_90_0;
-                    stackIn_93_1 = stackOut_90_1;
+                    stackIn_93_0 = (rk) ((Object) stackIn_90_0);
+                    stackIn_93_1 = 1;
                     statePc = 93;
                     continue stateLoop;
                 }
                 case 92: {
-                    stackOut_92_0 = (rk) ((Object) stackIn_92_0);
-                    stackOut_92_1 = 0;
-                    stackIn_93_0 = stackOut_92_0;
-                    stackIn_93_1 = stackOut_92_1;
+                    stackIn_93_0 = (rk) ((Object) stackIn_92_0);
+                    stackIn_93_1 = 0;
                     statePc = 93;
                     continue stateLoop;
                 }
@@ -958,18 +789,16 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 97: {
-                    stackOut_97_0 = ab.field_A[1][var7 + 1];
-                    stackOut_97_1 = ab.field_A[1][var7 + 1].field_Nb;
-                    stackOut_97_2 = rh.field_d[var9 / 8] & 1 << (var9 & 7) ^ -1;
-                    stackOut_97_3 = -1;
-                    stackIn_105_0 = stackOut_97_0;
+                    dupTemp$0 = ab.field_A[1][var7 + 1];
+                    stackIn_105_0 = (rk) (dupTemp$0);
+                    stackIn_98_0 = stackIn_105_0;
+                    stackOut_97_1 = dupTemp$0.field_Nb;
                     stackIn_105_1 = stackOut_97_1 ? 1 : 0;
-                    stackIn_105_2 = stackOut_97_2;
-                    stackIn_105_3 = stackOut_97_3;
-                    stackIn_98_0 = stackOut_97_0;
                     stackIn_98_1 = stackOut_97_1;
-                    stackIn_98_2 = stackOut_97_2;
-                    stackIn_98_3 = stackOut_97_3;
+                    stackIn_105_2 = rh.field_d[var9 / 8] & 1 << (var9 & 7) ^ -1;
+                    stackIn_98_2 = stackIn_105_2;
+                    stackIn_105_3 = -1;
+                    stackIn_98_3 = stackIn_105_3;
                     if (var26 != 0) {
                         statePc = 105;
                     } else {
@@ -978,12 +807,10 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 98: {
-                    stackOut_98_0 = (rk) ((Object) stackIn_98_0);
-                    stackOut_98_1 = stackIn_98_1;
-                    stackIn_101_0 = stackOut_98_0;
-                    stackIn_101_1 = stackOut_98_1;
-                    stackIn_99_0 = stackOut_98_0;
-                    stackIn_99_1 = stackOut_98_1;
+                    stackIn_101_0 = (rk) ((Object) stackIn_98_0);
+                    stackIn_99_0 = stackIn_101_0;
+                    stackIn_101_1 = stackIn_98_1;
+                    stackIn_99_1 = stackIn_101_1;
                     if (stackIn_98_2 != stackIn_98_3) {
                         statePc = 101;
                     } else {
@@ -992,22 +819,16 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 99: {
-                    stackOut_99_0 = (rk) ((Object) stackIn_99_0);
-                    stackOut_99_1 = stackIn_99_1;
-                    stackOut_99_2 = 1;
-                    stackIn_102_0 = stackOut_99_0;
-                    stackIn_102_1 = stackOut_99_1;
-                    stackIn_102_2 = stackOut_99_2;
+                    stackIn_102_0 = (rk) ((Object) stackIn_99_0);
+                    stackIn_102_1 = stackIn_99_1;
+                    stackIn_102_2 = 1;
                     statePc = 102;
                     continue stateLoop;
                 }
                 case 101: {
-                    stackOut_101_0 = (rk) ((Object) stackIn_101_0);
-                    stackOut_101_1 = stackIn_101_1;
-                    stackOut_101_2 = 0;
-                    stackIn_102_0 = stackOut_101_0;
-                    stackIn_102_1 = stackOut_101_1;
-                    stackIn_102_2 = stackOut_101_2;
+                    stackIn_102_0 = (rk) ((Object) stackIn_101_0);
+                    stackIn_102_1 = stackIn_101_1;
+                    stackIn_102_2 = 0;
                     statePc = 102;
                     continue stateLoop;
                 }
@@ -1030,21 +851,16 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 104: {
-                    stackOut_104_0 = ab.field_A[1][1 + var7];
-                    stackOut_104_1 = 0;
-                    stackOut_104_2 = rh.field_d[var7 / 8];
-                    stackOut_104_3 = 1 << (var7 & 7);
-                    stackIn_105_0 = stackOut_104_0;
-                    stackIn_105_1 = stackOut_104_1;
-                    stackIn_105_2 = stackOut_104_2;
-                    stackIn_105_3 = stackOut_104_3;
+                    stackIn_105_0 = ab.field_A[1][1 + var7];
+                    stackIn_105_1 = 0;
+                    stackIn_105_2 = rh.field_d[var7 / 8];
+                    stackIn_105_3 = 1 << (var7 & 7);
                     statePc = 105;
                     continue stateLoop;
                 }
                 case 105: {
-                    stackOut_105_0 = (rk) ((Object) stackIn_105_0);
-                    stackIn_108_0 = stackOut_105_0;
-                    stackIn_106_0 = stackOut_105_0;
+                    stackIn_108_0 = (rk) ((Object) stackIn_105_0);
+                    stackIn_106_0 = stackIn_108_0;
                     if (stackIn_105_1 == (stackIn_105_2 & stackIn_105_3)) {
                         statePc = 108;
                     } else {
@@ -1053,18 +869,14 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 106: {
-                    stackOut_106_0 = (rk) ((Object) stackIn_106_0);
-                    stackOut_106_1 = 1;
-                    stackIn_109_0 = stackOut_106_0;
-                    stackIn_109_1 = stackOut_106_1;
+                    stackIn_109_0 = (rk) ((Object) stackIn_106_0);
+                    stackIn_109_1 = 1;
                     statePc = 109;
                     continue stateLoop;
                 }
                 case 108: {
-                    stackOut_108_0 = (rk) ((Object) stackIn_108_0);
-                    stackOut_108_1 = 0;
-                    stackIn_109_0 = stackOut_108_0;
-                    stackIn_109_1 = stackOut_108_1;
+                    stackIn_109_0 = (rk) ((Object) stackIn_108_0);
+                    stackIn_109_1 = 0;
                     statePc = 109;
                     continue stateLoop;
                 }
@@ -1074,9 +886,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 110: {
-                    stackOut_110_0 = ab.field_A[1][var7 - -1];
-                    stackIn_114_0 = stackOut_110_0;
-                    stackIn_111_0 = stackOut_110_0;
+                    stackIn_114_0 = ab.field_A[1][var7 - -1];
+                    stackIn_111_0 = stackIn_114_0;
                     if (var4_int == 0) {
                         statePc = 114;
                     } else {
@@ -1085,9 +896,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 111: {
-                    stackOut_111_0 = (rk) ((Object) stackIn_111_0);
-                    stackIn_114_0 = stackOut_111_0;
-                    stackIn_112_0 = stackOut_111_0;
+                    stackIn_114_0 = (rk) ((Object) stackIn_111_0);
+                    stackIn_112_0 = stackIn_114_0;
                     if (var8_int != 0) {
                         statePc = 114;
                     } else {
@@ -1096,18 +906,14 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 112: {
-                    stackOut_112_0 = (rk) ((Object) stackIn_112_0);
-                    stackOut_112_1 = 1;
-                    stackIn_115_0 = stackOut_112_0;
-                    stackIn_115_1 = stackOut_112_1;
+                    stackIn_115_0 = (rk) ((Object) stackIn_112_0);
+                    stackIn_115_1 = 1;
                     statePc = 115;
                     continue stateLoop;
                 }
                 case 114: {
-                    stackOut_114_0 = (rk) ((Object) stackIn_114_0);
-                    stackOut_114_1 = 0;
-                    stackIn_115_0 = stackOut_114_0;
-                    stackIn_115_1 = stackOut_114_1;
+                    stackIn_115_0 = (rk) ((Object) stackIn_114_0);
+                    stackIn_115_1 = 0;
                     statePc = 115;
                     continue stateLoop;
                 }
@@ -1122,8 +928,7 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 116: {
-                    stackOut_116_0 = param2;
-                    stackIn_117_0 = stackOut_116_0 ? 1 : 0;
+                    stackIn_117_0 = param2 ? 1 : 0;
                     statePc = 117;
                     continue stateLoop;
                 }
@@ -1136,14 +941,12 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 118: {
-                    stackOut_118_0 = 0;
-                    stackIn_121_0 = stackOut_118_0;
+                    stackIn_121_0 = 0;
                     statePc = 121;
                     continue stateLoop;
                 }
                 case 120: {
-                    stackOut_120_0 = 1;
-                    stackIn_121_0 = stackOut_120_0;
+                    stackIn_121_0 = 1;
                     statePc = 121;
                     continue stateLoop;
                 }
@@ -1162,9 +965,8 @@ final class ip extends ki {
                 }
                 case 123: {
                     var28 = ab.field_A[2][var6];
-                    stackOut_123_0 = var4_int;
-                    stackIn_157_0 = stackOut_123_0;
-                    stackIn_124_0 = stackOut_123_0;
+                    stackIn_157_0 = var4_int;
+                    stackIn_124_0 = stackIn_157_0;
                     if (var26 != 0) {
                         statePc = 157;
                     } else {
@@ -1237,9 +1039,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 135: {
-                    stackOut_135_0 = (rk) (var28);
-                    stackIn_137_0 = stackOut_135_0;
-                    stackIn_136_0 = stackOut_135_0;
+                    stackIn_137_0 = (rk) (var28);
+                    stackIn_136_0 = stackIn_137_0;
                     if (var4_int == 0) {
                         statePc = 137;
                     } else {
@@ -1248,18 +1049,14 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 136: {
-                    stackOut_136_0 = (rk) ((Object) stackIn_136_0);
-                    stackOut_136_1 = 1;
-                    stackIn_138_0 = stackOut_136_0;
-                    stackIn_138_1 = stackOut_136_1;
+                    stackIn_138_0 = (rk) ((Object) stackIn_136_0);
+                    stackIn_138_1 = 1;
                     statePc = 138;
                     continue stateLoop;
                 }
                 case 137: {
-                    stackOut_137_0 = (rk) ((Object) stackIn_137_0);
-                    stackOut_137_1 = 0;
-                    stackIn_138_0 = stackOut_137_0;
-                    stackIn_138_1 = stackOut_137_1;
+                    stackIn_138_0 = (rk) ((Object) stackIn_137_0);
+                    stackIn_138_1 = 0;
                     statePc = 138;
                     continue stateLoop;
                 }
@@ -1273,9 +1070,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 139: {
-                    stackOut_139_0 = (rk) (var28);
-                    stackIn_142_0 = stackOut_139_0;
-                    stackIn_140_0 = stackOut_139_0;
+                    stackIn_142_0 = (rk) (var28);
+                    stackIn_140_0 = stackIn_142_0;
                     if ((param1.field_wc & var6) == 0) {
                         statePc = 142;
                     } else {
@@ -1284,18 +1080,14 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 140: {
-                    stackOut_140_0 = (rk) ((Object) stackIn_140_0);
-                    stackOut_140_1 = 1;
-                    stackIn_143_0 = stackOut_140_0;
-                    stackIn_143_1 = stackOut_140_1;
+                    stackIn_143_0 = (rk) ((Object) stackIn_140_0);
+                    stackIn_143_1 = 1;
                     statePc = 143;
                     continue stateLoop;
                 }
                 case 142: {
-                    stackOut_142_0 = (rk) ((Object) stackIn_142_0);
-                    stackOut_142_1 = 0;
-                    stackIn_143_0 = stackOut_142_0;
-                    stackIn_143_1 = stackOut_142_1;
+                    stackIn_143_0 = (rk) ((Object) stackIn_142_0);
+                    stackIn_143_1 = 0;
                     statePc = 143;
                     continue stateLoop;
                 }
@@ -1317,9 +1109,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 145: {
-                    stackOut_145_0 = (rk) (var28);
-                    stackIn_148_0 = stackOut_145_0;
-                    stackIn_146_0 = stackOut_145_0;
+                    stackIn_148_0 = (rk) (var28);
+                    stackIn_146_0 = stackIn_148_0;
                     if (-1 != (mf.field_c ^ -1)) {
                         statePc = 148;
                     } else {
@@ -1328,18 +1119,14 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 146: {
-                    stackOut_146_0 = (rk) ((Object) stackIn_146_0);
-                    stackOut_146_1 = 1;
-                    stackIn_149_0 = stackOut_146_0;
-                    stackIn_149_1 = stackOut_146_1;
+                    stackIn_149_0 = (rk) ((Object) stackIn_146_0);
+                    stackIn_149_1 = 1;
                     statePc = 149;
                     continue stateLoop;
                 }
                 case 148: {
-                    stackOut_148_0 = (rk) ((Object) stackIn_148_0);
-                    stackOut_148_1 = 0;
-                    stackIn_149_0 = stackOut_148_0;
-                    stackIn_149_1 = stackOut_148_1;
+                    stackIn_149_0 = (rk) ((Object) stackIn_148_0);
+                    stackIn_149_1 = 0;
                     statePc = 149;
                     continue stateLoop;
                 }
@@ -1353,9 +1140,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 150: {
-                    stackOut_150_0 = (rk) (var28);
-                    stackIn_153_0 = stackOut_150_0;
-                    stackIn_151_0 = stackOut_150_0;
+                    stackIn_153_0 = (rk) (var28);
+                    stackIn_151_0 = stackIn_153_0;
                     if (0 == (mf.field_c & var6)) {
                         statePc = 153;
                     } else {
@@ -1364,18 +1150,14 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 151: {
-                    stackOut_151_0 = (rk) ((Object) stackIn_151_0);
-                    stackOut_151_1 = 1;
-                    stackIn_154_0 = stackOut_151_0;
-                    stackIn_154_1 = stackOut_151_1;
+                    stackIn_154_0 = (rk) ((Object) stackIn_151_0);
+                    stackIn_154_1 = 1;
                     statePc = 154;
                     continue stateLoop;
                 }
                 case 153: {
-                    stackOut_153_0 = (rk) ((Object) stackIn_153_0);
-                    stackOut_153_1 = 0;
-                    stackIn_154_0 = stackOut_153_0;
-                    stackIn_154_1 = stackOut_153_1;
+                    stackIn_154_0 = (rk) ((Object) stackIn_153_0);
+                    stackIn_154_1 = 0;
                     statePc = 154;
                     continue stateLoop;
                 }
@@ -1386,12 +1168,15 @@ final class ip extends ki {
                 }
                 case 155: {
                     var6++;
-                    statePc = 122;
+                    if (var26 == 0) {
+                        statePc = 122;
+                    } else {
+                        statePc = 156;
+                    }
                     continue stateLoop;
                 }
                 case 156: {
-                    stackOut_156_0 = param2;
-                    stackIn_157_0 = stackOut_156_0 ? 1 : 0;
+                    stackIn_157_0 = param2 ? 1 : 0;
                     statePc = 157;
                     continue stateLoop;
                 }
@@ -1426,9 +1211,8 @@ final class ip extends ki {
                 }
                 case 163: {
                     var29 = ab.field_A[3][var6];
-                    stackOut_163_0 = var4_int;
-                    stackIn_184_0 = stackOut_163_0;
-                    stackIn_164_0 = stackOut_163_0;
+                    stackIn_184_0 = var4_int;
+                    stackIn_164_0 = stackIn_184_0;
                     if (var26 != 0) {
                         statePc = 184;
                     } else {
@@ -1482,20 +1266,18 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 170: {
-                    stackOut_170_0 = null;
-                    stackIn_173_0 = (String) ((Object) stackOut_170_0);
+                    stackIn_173_0 = null;
                     statePc = 173;
                     continue stateLoop;
                 }
                 case 172: {
-                    stackOut_172_0 = th.field_a[-1 + var6];
-                    stackIn_173_0 = stackOut_172_0;
+                    stackIn_173_0 = th.field_a[-1 + var6];
                     statePc = 173;
                     continue stateLoop;
                 }
                 case 173: {
-                    var8_ref = stackIn_173_0;
-                    if (var8_ref == null) {
+                    var8 = stackIn_173_0;
+                    if (var8 == null) {
                         statePc = 175;
                     } else {
                         statePc = 174;
@@ -1503,14 +1285,13 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 174: {
-                    ep.field_e = var8_ref;
+                    ep.field_e = var8;
                     statePc = 175;
                     continue stateLoop;
                 }
                 case 175: {
-                    stackOut_175_0 = (rk) (var29);
-                    stackIn_178_0 = stackOut_175_0;
-                    stackIn_176_0 = stackOut_175_0;
+                    stackIn_178_0 = (rk) (var29);
+                    stackIn_176_0 = stackIn_178_0;
                     if (bb.field_e != var6) {
                         statePc = 178;
                     } else {
@@ -1519,26 +1300,21 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 176: {
-                    stackOut_176_0 = (rk) ((Object) stackIn_176_0);
-                    stackOut_176_1 = 1;
-                    stackIn_179_0 = stackOut_176_0;
-                    stackIn_179_1 = stackOut_176_1;
+                    stackIn_179_0 = (rk) ((Object) stackIn_176_0);
+                    stackIn_179_1 = 1;
                     statePc = 179;
                     continue stateLoop;
                 }
                 case 178: {
-                    stackOut_178_0 = (rk) ((Object) stackIn_178_0);
-                    stackOut_178_1 = 0;
-                    stackIn_179_0 = stackOut_178_0;
-                    stackIn_179_1 = stackOut_178_1;
+                    stackIn_179_0 = (rk) ((Object) stackIn_178_0);
+                    stackIn_179_1 = 0;
                     statePc = 179;
                     continue stateLoop;
                 }
                 case 179: {
                     stackIn_179_0.field_Nb = stackIn_179_1 != 0;
-                    stackOut_179_0 = (rk) (var29);
-                    stackIn_181_0 = stackOut_179_0;
-                    stackIn_180_0 = stackOut_179_0;
+                    stackIn_181_0 = (rk) (var29);
+                    stackIn_180_0 = stackIn_181_0;
                     if (var4_int == 0) {
                         statePc = 181;
                     } else {
@@ -1547,18 +1323,14 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 180: {
-                    stackOut_180_0 = (rk) ((Object) stackIn_180_0);
-                    stackOut_180_1 = 1;
-                    stackIn_182_0 = stackOut_180_0;
-                    stackIn_182_1 = stackOut_180_1;
+                    stackIn_182_0 = (rk) ((Object) stackIn_180_0);
+                    stackIn_182_1 = 1;
                     statePc = 182;
                     continue stateLoop;
                 }
                 case 181: {
-                    stackOut_181_0 = (rk) ((Object) stackIn_181_0);
-                    stackOut_181_1 = 0;
-                    stackIn_182_0 = stackOut_181_0;
-                    stackIn_182_1 = stackOut_181_1;
+                    stackIn_182_0 = (rk) ((Object) stackIn_181_0);
+                    stackIn_182_1 = 0;
                     statePc = 182;
                     continue stateLoop;
                 }
@@ -1574,8 +1346,7 @@ final class ip extends ki {
                 }
                 case 183: {
                     var6 = 0;
-                    stackOut_183_0 = 0;
-                    stackIn_184_0 = stackOut_183_0;
+                    stackIn_184_0 = 0;
                     statePc = 184;
                     continue stateLoop;
                 }
@@ -1593,8 +1364,9 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 186: {
-                    var27 = ab.field_A[var7 + 4];
-                    var8 = ab.field_A[var7 + 4];
+                    dupTemp$1 = ab.field_A[var7 + 4];
+                    var27 = dupTemp$1;
+                    var8_array = dupTemp$1;
                     stackOut_186_0 = param2;
                     stackIn_406_0 = stackOut_186_0 ? 1 : 0;
                     stackIn_187_0 = stackOut_186_0;
@@ -1614,14 +1386,12 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 188: {
-                    stackOut_188_0 = 0;
-                    stackIn_191_0 = stackOut_188_0;
+                    stackIn_191_0 = 0;
                     statePc = 191;
                     continue stateLoop;
                 }
                 case 190: {
-                    stackOut_190_0 = -1;
-                    stackIn_191_0 = stackOut_190_0;
+                    stackIn_191_0 = -1;
                     statePc = 191;
                     continue stateLoop;
                 }
@@ -1645,9 +1415,8 @@ final class ip extends ki {
                     var13 = 0;
                     var14 = 0;
                     var15 = 0;
-                    stackOut_193_0 = var4_int;
-                    stackIn_404_0 = stackOut_193_0;
-                    stackIn_194_0 = stackOut_193_0;
+                    stackIn_404_0 = var4_int;
+                    stackIn_194_0 = stackIn_404_0;
                     if (var26 != 0) {
                         statePc = 404;
                     } else {
@@ -1905,14 +1674,12 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 245: {
-                    stackOut_245_0 = 1;
-                    stackIn_248_0 = stackOut_245_0;
+                    stackIn_248_0 = 1;
                     statePc = 248;
                     continue stateLoop;
                 }
                 case 247: {
-                    stackOut_247_0 = 0;
-                    stackIn_248_0 = stackOut_247_0;
+                    stackIn_248_0 = 0;
                     statePc = 248;
                     continue stateLoop;
                 }
@@ -1987,14 +1754,12 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 258: {
-                    stackOut_258_0 = 1;
-                    stackIn_261_0 = stackOut_258_0;
+                    stackIn_261_0 = 1;
                     statePc = 261;
                     continue stateLoop;
                 }
                 case 260: {
-                    stackOut_260_0 = 0;
-                    stackIn_261_0 = stackOut_260_0;
+                    stackIn_261_0 = 0;
                     statePc = 261;
                     continue stateLoop;
                 }
@@ -2075,7 +1840,15 @@ final class ip extends ki {
                     if (var26 != 0) {
                         statePc = 276;
                     } else {
+                        statePc = 273;
+                    }
+                    continue stateLoop;
+                }
+                case 273: {
+                    if (var26 == 0) {
                         statePc = 271;
+                    } else {
+                        statePc = 275;
                     }
                     continue stateLoop;
                 }
@@ -2306,23 +2079,23 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 315: {
-                    var19_ref = ff.field_i[var7][var9];
+                    var19 = ff.field_i[var7][var9];
                     statePc = 319;
                     continue stateLoop;
                 }
                 case 317: {
-                    var19_ref = null;
+                    var19 = null;
                     statePc = 319;
                     continue stateLoop;
                 }
                 case 318: {
-                    var19_ref = null;
+                    var19 = null;
                     statePc = 319;
                     continue stateLoop;
                 }
                 case 319: {
                     var20 = null;
-                    if (var19_ref == null) {
+                    if (var19 == null) {
                         statePc = 324;
                     } else {
                         statePc = 320;
@@ -2330,7 +2103,7 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 320: {
-                    if (!var19_ref.equals(var18_ref)) {
+                    if (!((String) (var19)).equals(var18_ref)) {
                         statePc = 323;
                     } else {
                         statePc = 324;
@@ -2338,7 +2111,7 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 323: {
-                    var20 = var19_ref;
+                    var20 = var19;
                     statePc = 324;
                     continue stateLoop;
                 }
@@ -2438,7 +2211,7 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 341: {
-                    var22_ref = md.field_t;
+                    var22 = md.field_t;
                     if (-1 <= (var15 ^ -1)) {
                         statePc = 346;
                     } else {
@@ -2471,7 +2244,7 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 345: {
-                    var22_ref = eb.field_p[-1 + var15][0];
+                    var22 = eb.field_p[-1 + var15][0];
                     statePc = 346;
                     continue stateLoop;
                 }
@@ -2484,7 +2257,7 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 347: {
-                    var21 = var22_ref;
+                    var21 = var22;
                     if (var26 == 0) {
                         statePc = 349;
                     } else {
@@ -2493,17 +2266,17 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 348: {
-                    var21 = (String) (var21) + "<br>" + var22_ref;
-                    var22_ref = (String) (var21);
-                    var25 = var22_ref;
-                    var22_ref = var25;
-                    var21 = var22_ref;
-                    var25 = (String) (var21);
-                    var22_ref = var25;
-                    var25 = var22_ref;
-                    var22_ref = var25;
-                    var21 = var22_ref;
-                    var22_ref = var25;
+                    var21 = (String) (var21) + "<br>" + (String) (var22);
+                    var22 = var21;
+                    var25 = var22;
+                    var22 = var25;
+                    var21 = var22;
+                    var25 = var21;
+                    var22 = var25;
+                    var25 = var22;
+                    var22 = var25;
+                    var21 = var22;
+                    var22 = var25;
                     statePc = 349;
                     continue stateLoop;
                 }
@@ -2524,7 +2297,7 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 351: {
-                    var22_ref = null;
+                    var22 = null;
                     var23 = 0;
                     if (lk.field_s) {
                         statePc = 354;
@@ -2534,12 +2307,12 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 354: {
-                    var22_ref = "</col>" + og.field_ac + "<col=A00000>";
-                    var25 = var22_ref;
-                    var22_ref = var25;
-                    var25 = var22_ref;
-                    var22_ref = var25;
-                    var21 = var22_ref;
+                    var22 = "</col>" + og.field_ac + "<col=A00000>";
+                    var25 = var22;
+                    var22 = var25;
+                    var25 = var22;
+                    var22 = var25;
+                    var21 = var22;
                     statePc = 355;
                     continue stateLoop;
                 }
@@ -2576,10 +2349,10 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 359: {
-                    var25 = "</col>" + rg.field_b[var24] + "<col=A00000>";
-                    var22_ref = var25;
-                    var22_ref = var25;
-                    if (null != var22_ref) {
+                    var25_ref = "</col>" + rg.field_b[var24] + "<col=A00000>";
+                    var22 = var25_ref;
+                    var22 = var25_ref;
+                    if (null != var22) {
                         statePc = 361;
                     } else {
                         statePc = 360;
@@ -2587,7 +2360,7 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 360: {
-                    var22_ref = var25;
+                    var22 = var25_ref;
                     if (var26 == 0) {
                         statePc = 362;
                     } else {
@@ -2596,21 +2369,24 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 361: {
-                    var22_ref = var22_ref + ", " + var25;
-                    var21 = var22_ref;
-                    var21 = var22_ref;
+                    var22 = (String) (var22) + ", " + var25_ref;
+                    var21 = var22;
+                    var21 = var22;
                     var23 = 1;
                     statePc = 362;
                     continue stateLoop;
                 }
                 case 362: {
                     var24++;
-                    statePc = 356;
+                    if (var26 == 0) {
+                        statePc = 356;
+                    } else {
+                        statePc = 363;
+                    }
                     continue stateLoop;
                 }
                 case 363: {
-                    stackOut_363_0 = var23;
-                    stackIn_364_0 = stackOut_363_0;
+                    stackIn_364_0 = var23;
                     statePc = 364;
                     continue stateLoop;
                 }
@@ -2623,7 +2399,7 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 365: {
-                    var21 = ve.field_e + var22_ref;
+                    var21 = ve.field_e + (String) (var22);
                     if (var26 == 0) {
                         statePc = 367;
                     } else {
@@ -2632,7 +2408,7 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 366: {
-                    var21 = rd.a(fh.field_b, new String[]{var22_ref}, (byte) 103);
+                    var21 = rd.a(fh.field_b, new String[]{(String) (var22)}, (byte) 103);
                     statePc = 367;
                     continue stateLoop;
                 }
@@ -2698,29 +2474,22 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 375: {
-                    stackOut_375_0 = (rk) (var17);
-                    stackOut_375_1 = 0;
-                    stackOut_375_2 = lj.field_p[(var9 + var6) / 8] & 1 << (var9 + var6 & 7);
-                    stackIn_377_0 = stackOut_375_0;
-                    stackIn_377_1 = stackOut_375_1;
-                    stackIn_377_2 = stackOut_375_2;
+                    stackIn_377_0 = (rk) (var17);
+                    stackIn_377_1 = 0;
+                    stackIn_377_2 = lj.field_p[(var9 + var6) / 8] & 1 << (var9 + var6 & 7);
                     statePc = 377;
                     continue stateLoop;
                 }
                 case 376: {
-                    stackOut_376_0 = (rk) ((Object) stackIn_376_0);
-                    stackOut_376_1 = stackIn_376_1;
-                    stackOut_376_2 = stackIn_376_2 & stackIn_376_3;
-                    stackIn_377_0 = stackOut_376_0;
-                    stackIn_377_1 = stackOut_376_1 ? 1 : 0;
-                    stackIn_377_2 = stackOut_376_2;
+                    stackIn_377_0 = (rk) ((Object) stackIn_376_0);
+                    stackIn_377_1 = stackIn_376_1 ? 1 : 0;
+                    stackIn_377_2 = stackIn_376_2 & stackIn_376_3;
                     statePc = 377;
                     continue stateLoop;
                 }
                 case 377: {
-                    stackOut_377_0 = (rk) ((Object) stackIn_377_0);
-                    stackIn_380_0 = stackOut_377_0;
-                    stackIn_378_0 = stackOut_377_0;
+                    stackIn_380_0 = (rk) ((Object) stackIn_377_0);
+                    stackIn_378_0 = stackIn_380_0;
                     if (stackIn_377_1 == stackIn_377_2) {
                         statePc = 380;
                     } else {
@@ -2729,18 +2498,14 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 378: {
-                    stackOut_378_0 = (rk) ((Object) stackIn_378_0);
-                    stackOut_378_1 = 1;
-                    stackIn_381_0 = stackOut_378_0;
-                    stackIn_381_1 = stackOut_378_1;
+                    stackIn_381_0 = (rk) ((Object) stackIn_378_0);
+                    stackIn_381_1 = 1;
                     statePc = 381;
                     continue stateLoop;
                 }
                 case 380: {
-                    stackOut_380_0 = (rk) ((Object) stackIn_380_0);
-                    stackOut_380_1 = 0;
-                    stackIn_381_0 = stackOut_380_0;
-                    stackIn_381_1 = stackOut_380_1;
+                    stackIn_381_0 = (rk) ((Object) stackIn_380_0);
+                    stackIn_381_1 = 0;
                     statePc = 381;
                     continue stateLoop;
                 }
@@ -2768,18 +2533,14 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 384: {
-                    stackOut_384_0 = (rk) (var17);
-                    stackOut_384_1 = var17.field_Nb;
-                    stackOut_384_2 = 0;
-                    stackOut_384_3 = lj.field_p[var18 / 8] & 1 << (7 & var18);
-                    stackIn_376_0 = stackOut_384_0;
-                    stackIn_376_1 = stackOut_384_1;
-                    stackIn_376_2 = stackOut_384_2;
-                    stackIn_376_3 = stackOut_384_3;
-                    stackIn_385_0 = stackOut_384_0;
-                    stackIn_385_1 = stackOut_384_1;
-                    stackIn_385_2 = stackOut_384_2;
-                    stackIn_385_3 = stackOut_384_3;
+                    stackIn_376_0 = (rk) (var17);
+                    stackIn_385_0 = stackIn_376_0;
+                    stackIn_376_1 = var17.field_Nb;
+                    stackIn_385_1 = stackIn_376_1;
+                    stackIn_376_2 = 0;
+                    stackIn_385_2 = stackIn_376_2;
+                    stackIn_376_3 = lj.field_p[var18 / 8] & 1 << (7 & var18);
+                    stackIn_385_3 = stackIn_376_3;
                     if (var26 != 0) {
                         statePc = 376;
                     } else {
@@ -2788,12 +2549,10 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 385: {
-                    stackOut_385_0 = (rk) ((Object) stackIn_385_0);
-                    stackOut_385_1 = stackIn_385_1;
-                    stackIn_388_0 = stackOut_385_0;
-                    stackIn_388_1 = stackOut_385_1;
-                    stackIn_386_0 = stackOut_385_0;
-                    stackIn_386_1 = stackOut_385_1;
+                    stackIn_388_0 = (rk) ((Object) stackIn_385_0);
+                    stackIn_386_0 = stackIn_388_0;
+                    stackIn_388_1 = stackIn_385_1;
+                    stackIn_386_1 = stackIn_388_1;
                     if (stackIn_385_2 != stackIn_385_3) {
                         statePc = 388;
                     } else {
@@ -2802,22 +2561,16 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 386: {
-                    stackOut_386_0 = (rk) ((Object) stackIn_386_0);
-                    stackOut_386_1 = stackIn_386_1;
-                    stackOut_386_2 = 1;
-                    stackIn_389_0 = stackOut_386_0;
-                    stackIn_389_1 = stackOut_386_1;
-                    stackIn_389_2 = stackOut_386_2;
+                    stackIn_389_0 = (rk) ((Object) stackIn_386_0);
+                    stackIn_389_1 = stackIn_386_1;
+                    stackIn_389_2 = 1;
                     statePc = 389;
                     continue stateLoop;
                 }
                 case 388: {
-                    stackOut_388_0 = (rk) ((Object) stackIn_388_0);
-                    stackOut_388_1 = stackIn_388_1;
-                    stackOut_388_2 = 0;
-                    stackIn_389_0 = stackOut_388_0;
-                    stackIn_389_1 = stackOut_388_1;
-                    stackIn_389_2 = stackOut_388_2;
+                    stackIn_389_0 = (rk) ((Object) stackIn_388_0);
+                    stackIn_389_1 = stackIn_388_1;
+                    stackIn_389_2 = 0;
                     statePc = 389;
                     continue stateLoop;
                 }
@@ -2840,9 +2593,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 391: {
-                    stackOut_391_0 = (rk) (var17);
-                    stackIn_395_0 = stackOut_391_0;
-                    stackIn_392_0 = stackOut_391_0;
+                    stackIn_395_0 = (rk) (var17);
+                    stackIn_392_0 = stackIn_395_0;
                     if (!dc.field_g) {
                         statePc = 395;
                     } else {
@@ -2851,9 +2603,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 392: {
-                    stackOut_392_0 = (rk) ((Object) stackIn_392_0);
-                    stackIn_395_0 = stackOut_392_0;
-                    stackIn_393_0 = stackOut_392_0;
+                    stackIn_395_0 = (rk) ((Object) stackIn_392_0);
+                    stackIn_393_0 = stackIn_395_0;
                     if ((byte)var9 != param1.field_Tb[var7]) {
                         statePc = 395;
                     } else {
@@ -2862,18 +2613,14 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 393: {
-                    stackOut_393_0 = (rk) ((Object) stackIn_393_0);
-                    stackOut_393_1 = 1;
-                    stackIn_396_0 = stackOut_393_0;
-                    stackIn_396_1 = stackOut_393_1;
+                    stackIn_396_0 = (rk) ((Object) stackIn_393_0);
+                    stackIn_396_1 = 1;
                     statePc = 396;
                     continue stateLoop;
                 }
                 case 395: {
-                    stackOut_395_0 = (rk) ((Object) stackIn_395_0);
-                    stackOut_395_1 = 0;
-                    stackIn_396_0 = stackOut_395_0;
-                    stackIn_396_1 = stackOut_395_1;
+                    stackIn_396_0 = (rk) ((Object) stackIn_395_0);
+                    stackIn_396_1 = 0;
                     statePc = 396;
                     continue stateLoop;
                 }
@@ -2883,9 +2630,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 397: {
-                    stackOut_397_0 = (rk) (var17);
-                    stackIn_401_0 = stackOut_397_0;
-                    stackIn_398_0 = stackOut_397_0;
+                    stackIn_401_0 = (rk) (var17);
+                    stackIn_398_0 = stackIn_401_0;
                     if (var4_int == 0) {
                         statePc = 401;
                     } else {
@@ -2894,9 +2640,8 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 398: {
-                    stackOut_398_0 = (rk) ((Object) stackIn_398_0);
-                    stackIn_401_0 = stackOut_398_0;
-                    stackIn_399_0 = stackOut_398_0;
+                    stackIn_401_0 = (rk) ((Object) stackIn_398_0);
+                    stackIn_399_0 = stackIn_401_0;
                     if (var16 != 0) {
                         statePc = 401;
                     } else {
@@ -2905,18 +2650,14 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 399: {
-                    stackOut_399_0 = (rk) ((Object) stackIn_399_0);
-                    stackOut_399_1 = 1;
-                    stackIn_402_0 = stackOut_399_0;
-                    stackIn_402_1 = stackOut_399_1;
+                    stackIn_402_0 = (rk) ((Object) stackIn_399_0);
+                    stackIn_402_1 = 1;
                     statePc = 402;
                     continue stateLoop;
                 }
                 case 401: {
-                    stackOut_401_0 = (rk) ((Object) stackIn_401_0);
-                    stackOut_401_1 = 0;
-                    stackIn_402_0 = stackOut_401_0;
-                    stackIn_402_1 = stackOut_401_1;
+                    stackIn_402_0 = (rk) ((Object) stackIn_401_0);
+                    stackIn_402_1 = 0;
                     statePc = 402;
                     continue stateLoop;
                 }
@@ -2931,8 +2672,7 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 403: {
-                    stackOut_403_0 = var6 + (255 & jg.field_c[var7]);
-                    stackIn_404_0 = stackOut_403_0;
+                    stackIn_404_0 = var6 + (255 & jg.field_c[var7]);
                     statePc = 404;
                     continue stateLoop;
                 }
@@ -2947,8 +2687,7 @@ final class ip extends ki {
                     continue stateLoop;
                 }
                 case 405: {
-                    stackOut_405_0 = var5;
-                    stackIn_406_0 = stackOut_405_0;
+                    stackIn_406_0 = var5;
                     statePc = 406;
                     continue stateLoop;
                 }
@@ -2982,10 +2721,8 @@ final class ip extends ki {
     }
 
     final boolean b(byte param0) {
-        om var3 = null;
+        om var3;
         int stackIn_13_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_12_0 = 0;
         L0: {
           if (param0 < -91) {
             break L0;
@@ -3021,8 +2758,7 @@ final class ip extends ki {
                           if (null == up.field_A) {
                             break L2;
                           } else {
-                            stackOut_10_0 = 1;
-                            stackIn_13_0 = stackOut_10_0;
+                            stackIn_13_0 = 1;
                             break L1;
                           }
                         }
@@ -3033,8 +2769,7 @@ final class ip extends ki {
               }
             }
           }
-          stackOut_12_0 = 0;
-          stackIn_13_0 = stackOut_12_0;
+          stackIn_13_0 = 0;
           break L1;
         }
         return stackIn_13_0 != 0;
@@ -3043,37 +2778,17 @@ final class ip extends ki {
     ip(int param0, String param1, String param2, int param3) {
         super(param0, param1, param2, param3);
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             tk.field_l = new jp[2][];
@@ -3085,52 +2800,36 @@ final class ip extends ki {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("ip.<init>(").append(param0).append(',');
-            stackIn_6_0 = stackOut_3_0;
-            stackIn_6_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("ip.<init>(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_7_0 = stackOut_4_0;
-              stackIn_7_1 = stackOut_4_1;
-              stackIn_7_2 = stackOut_4_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }
           L2: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-            stackIn_10_0 = stackOut_7_0;
-            stackIn_10_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_10_0 = (RuntimeException) ((Object) stackIn_7_0);
+
+            stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_11_0 = stackOut_8_0;
-              stackIn_11_1 = stackOut_8_1;
-              stackIn_11_2 = stackOut_8_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }
@@ -3146,7 +2845,7 @@ final class ip extends ki {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        int var5;
         L0: {
           L1: {
             if ((param1 ^ -1) >= 0) {
@@ -3175,9 +2874,8 @@ final class ip extends ki {
     }
 
     final jp c(byte param0) {
-        boolean discarded$0 = false;
         if (param0 > -74) {
-            discarded$0 = this.b((byte) -112);
+            this.b((byte) -112);
         }
         return ep.field_h;
     }
@@ -3194,7 +2892,7 @@ final class ip extends ki {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var7 = null;
+        pb var7;
         L0: {
           L1: {
             if (this.b((byte) -95)) {

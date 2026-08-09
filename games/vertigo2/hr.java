@@ -25,11 +25,11 @@ final class hr extends ji {
     }
 
     final static void a(int param0, boolean param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         vi var4 = null;
         s var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -85,9 +85,8 @@ final class hr extends ji {
     }
 
     final static int i(int param0) {
-        int discarded$0 = 0;
         if (param0 <= 25) {
-            discarded$0 = hr.i(55);
+            hr.i(55);
         }
         return mf.field_b + ((rm.field_B << 214119524) + (oa.field_p << -248092638));
     }
@@ -141,10 +140,7 @@ final class hr extends ji {
 
     final void a(byte param0, int param1, ed param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -152,14 +148,7 @@ final class hr extends ji {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var4 = null;
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -194,27 +183,19 @@ final class hr extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var4);
-            stackOut_9_1 = new StringBuilder().append("hr.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var4);
+
+            stackIn_11_1 = new StringBuilder().append("hr.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -238,30 +219,30 @@ final class hr extends ji {
     }
 
     private final void g(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int[] var22 = null;
-        int[] var24 = null;
-        int[] var26 = null;
-        int[] var34 = null;
-        int[] var35 = null;
-        int[] var36 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int[] var22;
+        int[] var24;
+        int[] var26;
+        int[] var34;
+        int[] var35;
+        int[] var36;
         var21 = Vertigo2.field_L ? 1 : 0;
         if (param0 == 1) {
           L0: {
@@ -279,7 +260,7 @@ final class hr extends ji {
                       if (this.field_B.length + -1 <= var3) {
                         break L3;
                       } else {
-                        if (var4 < this.field_B[var3][0]) {
+                        if ((var4 ^ -1) > (this.field_B[var3][0] ^ -1)) {
                           break L3;
                         } else {
                           var3++;
@@ -387,7 +368,7 @@ final class hr extends ji {
                         if (var3 >= -1 + this.field_B.length) {
                           break L13;
                         } else {
-                          if (var4 < this.field_B[var3][0]) {
+                          if ((var4 ^ -1) > (this.field_B[var3][0] ^ -1)) {
                             break L13;
                           } else {
                             var3++;
@@ -433,7 +414,6 @@ final class hr extends ji {
     }
 
     final void a(int param0) {
-        String discarded$0 = null;
         if (this.field_B == null) {
             this.field_B = new int[][]{new int[]{0, 0}, new int[]{4096, 4096}};
         }
@@ -446,7 +426,7 @@ final class hr extends ji {
         uk.d((byte) 66);
         this.g(1);
         if (param0 > -98) {
-            discarded$0 = hr.h(104);
+            hr.h(104);
         }
     }
 

@@ -75,16 +75,14 @@ final class ln extends jh {
     }
 
     public static void h(byte param0) {
-        int discarded$0 = 0;
         field_H = null;
         if (param0 < 81) {
-            discarded$0 = ln.a(3, -20, 23, 107);
+            ln.a(3, -20, 23, 107);
         }
     }
 
     final void a(gm param0, byte param1) {
         bb var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param0 instanceof bb)) {
                 throw new IllegalArgumentException();
@@ -93,7 +91,7 @@ final class ln extends jh {
             this.field_E.b((byte) 68, var3);
             var3.field_D = true;
             int var4 = 107 % ((param1 - 18) / 61);
-            discarded$0 = var3.a((gm) (this), false);
+            var3.a((gm) (this), false);
         } catch (RuntimeException runtimeException) {
             throw rb.a((Throwable) ((Object) runtimeException), "ln.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -142,9 +140,9 @@ final class ln extends jh {
     }
 
     final gm a(boolean param0) {
-        re var2 = null;
-        bb var3 = null;
-        int var4 = 0;
+        re var2;
+        bb var3;
+        int var4;
         L0: {
           var4 = Torquing.field_u;
           if (param0) {

@@ -19,22 +19,13 @@ final class uk extends km {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        StringBuilder discarded$1 = null;
-        int var6 = 0;
-        int var7 = 0;
-        StringBuilder var8 = null;
         int stackIn_8_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_39_0 = 0;
         int stackIn_54_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
+        int var6;
+        int var7;
+        StringBuilder var8;
         if (param3 == -19824) {
           cf.field_c[wi.field_m] = param2;
           fj.field_Pb[wi.field_m] = wi.field_m;
@@ -54,12 +45,10 @@ final class uk extends km {
               ib.field_D[wi.field_m] = param4;
               var6 = param1 + param5 + param4;
               if (0 != var6) {
-                stackOut_53_0 = 1000 * param5 / var6;
-                stackIn_54_0 = stackOut_53_0;
+                stackIn_54_0 = 1000 * param5 / var6;
                 break L1;
               } else {
-                stackOut_52_0 = 0;
-                stackIn_54_0 = stackOut_52_0;
+                stackIn_54_0 = 0;
                 break L1;
               }
             }
@@ -101,12 +90,10 @@ final class uk extends km {
               ib.field_D[wi.field_m] = param4;
               var6 = param1 + param5 + param4;
               if (0 != var6) {
-                stackOut_38_0 = 1000 * param5 / var6;
-                stackIn_39_0 = stackOut_38_0;
+                stackIn_39_0 = 1000 * param5 / var6;
                 break L3;
               } else {
-                stackOut_37_0 = 0;
-                stackIn_39_0 = stackOut_37_0;
+                stackIn_39_0 = 0;
                 break L3;
               }
             }
@@ -135,7 +122,7 @@ final class uk extends km {
           }
         } else {
           var8 = (StringBuilder) null;
-          discarded$1 = uk.a('￰', (StringBuilder) null, -124, false);
+          uk.a('￰', (StringBuilder) null, -124, false);
           cf.field_c[wi.field_m] = param2;
           fj.field_Pb[wi.field_m] = wi.field_m;
           ec.field_N[wi.field_m] = param0;
@@ -155,12 +142,10 @@ final class uk extends km {
               ib.field_D[wi.field_m] = param4;
               var6 = param1 + param5 + param4;
               if (0 != var6) {
-                stackOut_22_0 = 1000 * param5 / var6;
-                stackIn_23_0 = stackOut_22_0;
+                stackIn_23_0 = 1000 * param5 / var6;
                 break L5;
               } else {
-                stackOut_21_0 = 0;
-                stackIn_23_0 = stackOut_21_0;
+                stackIn_23_0 = 0;
                 break L5;
               }
             }
@@ -201,12 +186,10 @@ final class uk extends km {
               ib.field_D[wi.field_m] = param4;
               var6 = param1 + param5 + param4;
               if (0 != var6) {
-                stackOut_7_0 = 1000 * param5 / var6;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 1000 * param5 / var6;
                 break L7;
               } else {
-                stackOut_6_0 = 0;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 0;
                 break L7;
               }
             }
@@ -257,11 +240,10 @@ final class uk extends km {
     }
 
     final void a(boolean param0, int param1, int param2) {
-        StringBuilder discarded$2 = null;
-        StringBuilder var5 = null;
+        StringBuilder var5;
         if (param2 < 96) {
           var5 = (StringBuilder) null;
-          discarded$2 = uk.a('3', (StringBuilder) null, 57, true);
+          uk.a('3', (StringBuilder) null, 57, true);
           super.a(param0, param1, 103);
           return;
         } else {
@@ -277,8 +259,6 @@ final class uk extends km {
         int var6 = 0;
         StringBuilder stackIn_3_0 = null;
         StringBuilder stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -286,16 +266,6 @@ final class uk extends km {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        StringBuilder stackOut_6_0 = null;
-        StringBuilder stackOut_2_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -305,8 +275,7 @@ final class uk extends km {
             if (!param3) {
               L1: while (true) {
                 if (param2 <= var5) {
-                  stackOut_6_0 = (StringBuilder) (param1);
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = (StringBuilder) (param1);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -316,8 +285,7 @@ final class uk extends km {
                 }
               }
             } else {
-              stackOut_2_0 = (StringBuilder) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (StringBuilder) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -326,27 +294,19 @@ final class uk extends km {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("uk.C(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("uk.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }
@@ -362,7 +322,7 @@ final class uk extends km {
     final void b(byte param0) {
         super.b((byte) -50);
         im.a(550, 5, 243, 5, 140, (byte) -107, 45);
-        int discarded$23 = nn.field_g.a(qn.field_p, 54, 149, 532, 225, 2, -1, 1, 1, 22);
+        nn.field_g.a(qn.field_p, 54, 149, 532, 225, 2, -1, 1, 1, 22);
         if (param0 >= -14) {
           return;
         } else {

@@ -7,7 +7,6 @@ final class bc {
     static int field_a;
 
     final ai a(byte param0) {
-        boolean discarded$0 = false;
         ai var2 = this.field_b.field_c;
         if (!(var2 != this.field_b)) {
             this.field_c = null;
@@ -15,7 +14,7 @@ final class bc {
         }
         this.field_c = var2.field_c;
         if (param0 > -44) {
-            discarded$0 = this.f((byte) 90);
+            this.f((byte) 90);
         }
         return var2;
     }
@@ -57,9 +56,8 @@ final class bc {
     }
 
     final boolean f(byte param0) {
-        ai discarded$0 = null;
         if (param0 != -93) {
-            discarded$0 = this.c((byte) 40);
+            this.c((byte) 40);
         }
         return this.field_b == this.field_b.field_c ? true : false;
     }
@@ -151,23 +149,12 @@ final class bc {
         int var5 = 0;
         int var6 = 0;
         String stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_4_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         var6 = Bounce.field_N;
         try {
           L0: {
@@ -177,8 +164,7 @@ final class bc {
             var5 = 0;
             L1: while (true) {
               if (var5 >= var2_int) {
-                stackOut_4_0 = new String(var4);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = new String(var4);
                 break L0;
               } else {
                 var4[var2_int - 1 + -var5] = param0.charAt(var5);
@@ -191,27 +177,19 @@ final class bc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("bc.F(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("bc.F(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }

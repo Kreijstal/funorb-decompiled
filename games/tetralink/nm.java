@@ -34,7 +34,7 @@ final class nm extends mc {
     }
 
     final static void b(byte param0) {
-        dl var1 = null;
+        dl var1;
         if (param0 <= 27) {
           return;
         } else {

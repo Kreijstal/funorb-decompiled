@@ -59,11 +59,10 @@ public class nd {
     }
 
     public static File a(String param0, int param1) {
-        File discarded$2 = null;
-        String var3 = null;
+        String var3;
         if (param1 != 0) {
           var3 = (String) null;
-          discarded$2 = nd.a((String) null, -93);
+          nd.a((String) null, -93);
           return nd.a(param0, -25157, field_b, field_e);
         } else {
           return nd.a(param0, -25157, field_b, field_e);

@@ -60,8 +60,6 @@ final class ie {
         int stackIn_7_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_2_0 = 0;
         var4 = Chess.field_G;
         try {
           L0: {
@@ -69,8 +67,7 @@ final class ie {
             if (param1 == -1) {
               L1: while (true) {
                 if (-1 <= (param0 ^ -1)) {
-                  stackOut_6_0 = var3_int;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = var3_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -81,8 +78,7 @@ final class ie {
                 }
               }
             } else {
-              stackOut_2_0 = 77;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 77;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -101,7 +97,6 @@ final class ie {
 
     final static sa a(String param0, byte param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -110,8 +105,6 @@ final class ie {
         sa stackIn_10_0 = null;
         sa stackIn_20_0 = null;
         sa stackIn_23_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
@@ -119,27 +112,14 @@ final class ie {
         String stackIn_29_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        sa stackOut_6_0 = null;
-        sa stackOut_19_0 = null;
-        sa stackOut_22_0 = null;
-        sa stackOut_9_0 = null;
-        sa stackOut_2_0 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
+        RuntimeException var2 = null;
         var5 = Chess.field_G;
         try {
           L0: {
             if (param1 == -55) {
               var2_int = param0.length();
               if (var2_int == 0) {
-                stackOut_6_0 = ef.field_j;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = ef.field_j;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -161,16 +141,14 @@ final class ie {
                               }
                             }
                           }
-                          stackOut_19_0 = wh.field_b;
-                          stackIn_20_0 = stackOut_19_0;
+                          stackIn_20_0 = wh.field_b;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
                           if (-1 != oc.field_m.indexOf(var4)) {
                             break L2;
                           } else {
-                            stackOut_22_0 = wh.field_b;
-                            stackIn_23_0 = stackOut_22_0;
+                            stackIn_23_0 = wh.field_b;
                             decompiledRegionSelector0 = 4;
                             break L0;
                           }
@@ -183,15 +161,13 @@ final class ie {
                     }
                   }
                 } else {
-                  stackOut_9_0 = ok.field_Ob;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = ok.field_Ob;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               }
             } else {
-              stackOut_2_0 = (sa) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (sa) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -200,27 +176,19 @@ final class ie {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var2);
-            stackOut_26_1 = new StringBuilder().append("ie.D(");
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_28_0 = (RuntimeException) (var2);
+
+            stackIn_28_1 = new StringBuilder().append("ie.D(");
+
             if (param0 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L4;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L4;
             }
           }

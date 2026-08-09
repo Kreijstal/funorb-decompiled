@@ -9,15 +9,15 @@ final class hk {
     static boolean field_d;
 
     final static void a(int param0) {
-        RuntimeException var1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         fe var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {

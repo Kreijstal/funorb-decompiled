@@ -10,9 +10,8 @@ final class nfb implements dja {
     }
 
     public final tv[] a(int param0, int param1) {
-        tv[] discarded$0 = null;
         if (param0 != 11995) {
-            discarded$0 = this.a(114, 88);
+            this.a(114, 88);
             return (tv[]) ((Object) new lja[param1]);
         }
         return (tv[]) ((Object) new lja[param1]);

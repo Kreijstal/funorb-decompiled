@@ -9,8 +9,8 @@ abstract class tf {
     abstract long a(boolean param0);
 
     final int a(long param0, byte param1) {
-        long var4 = 0L;
-        int var6 = 0;
+        long var4;
+        int var6;
         var4 = this.a(false);
         var6 = -1 % ((param1 - -69) / 33);
         if (0L < var4) {

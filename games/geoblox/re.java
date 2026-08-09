@@ -30,12 +30,11 @@ final class re extends hf {
 
     final static void b(boolean param0) {
         Object var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
-        Throwable var3 = null;
         int var4 = 0;
-        int var5 = 0;
         Throwable decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
+        int var5 = 0;
         var4 = Geoblox.field_C;
         try {
           L0: {

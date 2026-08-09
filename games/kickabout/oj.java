@@ -14,13 +14,9 @@ final class oj extends cm {
     private ou field_Y;
 
     final void a(String param0, float param1, int param2, boolean param3) {
-        RuntimeException var5 = null;
-        Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -28,19 +24,7 @@ final class oj extends cm {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -48,20 +32,15 @@ final class oj extends cm {
                 break L1;
               } else {
                 L2: {
-                  stackOut_1_0 = this;
-                  stackIn_3_0 = stackOut_1_0;
-                  stackIn_2_0 = stackOut_1_0;
+                  stackIn_3_0 = this;
+
                   if (!param3) {
-                    stackOut_3_0 = this;
-                    stackOut_3_1 = 0;
-                    stackIn_4_0 = stackOut_3_0;
-                    stackIn_4_1 = stackOut_3_1;
+                    stackIn_4_0 = this;
+                    stackIn_4_1 = 0;
                     break L2;
                   } else {
-                    stackOut_2_0 = this;
-                    stackOut_2_1 = 1;
-                    stackIn_4_0 = stackOut_2_0;
-                    stackIn_4_1 = stackOut_2_1;
+                    stackIn_4_0 = this;
+                    stackIn_4_1 = 1;
                     break L2;
                   }
                 }
@@ -95,27 +74,19 @@ final class oj extends cm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var5);
-            stackOut_13_1 = new StringBuilder().append("oj.A(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var5);
+
+            stackIn_15_1 = new StringBuilder().append("oj.A(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }
@@ -146,14 +117,13 @@ final class oj extends cm {
     }
 
     final void a(int param0, byte param1, int param2) {
-        int discarded$2 = 0;
-        int var4 = 0;
+        int var4;
         super.a(param0, (byte) -128, param2);
         fj.field_b.d(this.field_U, (this.field_n >> 1646799425) + param0, param2 - -103, 16777215, -1);
         var4 = 80 / ((-55 - param1) / 45);
         if (this.field_S != null) {
           on.f(param0 + 20, -7 + (param2 - -120), 260, 8421504);
-          discarded$2 = fj.field_b.a(this.field_S, param0 - -20, 120 + (param2 - -8), 260, 100, 16777215, -1, 1, 0, fj.field_b.field_G);
+          fj.field_b.a(this.field_S, param0 - -20, 120 + (param2 - -8), 260, 100, 16777215, -1, 1, 0, fj.field_b.field_G);
           return;
         } else {
           return;

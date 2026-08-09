@@ -25,7 +25,7 @@ final class wn extends at {
     }
 
     final boolean c(byte param0) {
-        int var2 = 0;
+        int var2;
         L0: {
           if (this.field_n == 0) {
             this.field_o.a(this.field_m, 97, this.field_k);
@@ -35,9 +35,9 @@ final class wn extends at {
           }
         }
         var2 = 122 % ((param0 - 71) / 47);
-        int fieldTemp$2 = this.field_n + 1;
+        int fieldTemp$1 = this.field_n + 1;
         this.field_n = this.field_n + 1;
-        if (fieldTemp$2 >= this.e(-12304)) {
+        if (fieldTemp$1 >= this.e(-12304)) {
           this.f(7);
           return true;
         } else {
@@ -46,9 +46,8 @@ final class wn extends at {
     }
 
     private final int e(int param0) {
-        boolean discarded$0 = false;
         if (param0 != -12304) {
-            discarded$0 = this.c((byte) 38);
+            this.c((byte) 38);
             return 10;
         }
         return 10;

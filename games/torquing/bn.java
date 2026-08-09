@@ -18,35 +18,35 @@ abstract class bn {
     abstract void a(int param0, int param1, int param2);
 
     final static bm a(int param0, int param1, int param2, byte param3, int param4) {
-        boolean discarded$1 = false;
-        bm var5 = null;
-        int var6 = 0;
-        String var7 = null;
-        bm var8 = null;
+        bm var5;
+        int var6;
+        String var7;
+        bm var8;
+        bm var9;
         var6 = Torquing.field_u;
         var5 = (bm) ((Object) gl.field_d.b(0));
         L0: while (true) {
           if (var5 == null) {
             var8 = new bm();
-            var5 = var8;
+            var9 = var8;
             var8.field_q = param4;
             if (param3 != 44) {
               var7 = (String) null;
-              discarded$1 = bn.a((String) null, 73);
-              var5.field_o = param2;
-              var5.field_s = param0;
-              gl.field_d.a((byte) 54, var5);
-              mc.a((byte) 85, param1, var5);
-              return var5;
+              bn.a((String) null, 73);
+              var9.field_o = param2;
+              var9.field_s = param0;
+              gl.field_d.a((byte) 54, var9);
+              mc.a((byte) 85, param1, var9);
+              return var9;
             } else {
-              var5.field_o = param2;
-              var5.field_s = param0;
-              gl.field_d.a((byte) 54, var5);
-              mc.a((byte) 85, param1, var5);
-              return var5;
+              var9.field_o = param2;
+              var9.field_s = param0;
+              gl.field_d.a((byte) 54, var9);
+              mc.a((byte) 85, param1, var9);
+              return var9;
             }
           } else {
-            if (param0 != var5.field_s) {
+            if ((param0 ^ -1) != (var5.field_s ^ -1)) {
               var5 = (bm) ((Object) gl.field_d.f(-24059));
               continue L0;
             } else {
@@ -67,23 +67,12 @@ abstract class bn {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -95,35 +84,26 @@ abstract class bn {
               }
             }
             var3 = (CharSequence) ((Object) param0);
-            stackOut_2_0 = tj.field_j.equals(hf.a(var3, 116));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = tj.field_j.equals(hf.a(var3, 116));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("bn.B(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("bn.B(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }

@@ -60,15 +60,13 @@ final class bp extends ana {
     }
 
     private final void f(int param0) {
-        oha discarded$2 = null;
-        oha discarded$3 = null;
-        Object var3 = null;
-        iv var3_ref = null;
-        int var5 = 0;
-        aga var7 = null;
-        ad var8 = null;
-        aga var9 = null;
-        ad var10 = null;
+        Object var3;
+        iv var3_ref;
+        int var5;
+        aga var7;
+        ad var8;
+        aga var9;
+        ad var10;
         var3 = null;
         var5 = BachelorFridge.field_y;
         if (param0 == -2602) {
@@ -77,7 +75,7 @@ final class bp extends ana {
             return;
           } else {
             var3_ref = (iv) ((Object) this.field_v.field_o.b((byte) 90));
-            discarded$2 = al.a(106, this.field_v.field_k);
+            al.a(106, this.field_v.field_k);
             L0: while (true) {
               if (var3_ref == null) {
                 return;
@@ -107,7 +105,7 @@ final class bp extends ana {
             return;
           } else {
             var3_ref = (iv) ((Object) this.field_v.field_o.b((byte) 90));
-            discarded$3 = al.a(106, this.field_v.field_k);
+            al.a(106, this.field_v.field_k);
             L2: while (true) {
               if (var3_ref == null) {
                 return;

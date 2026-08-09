@@ -16,7 +16,6 @@ final class sn extends pu {
     }
 
     final static boolean c(int param0) {
-        boolean discarded$5 = false;
         if (param0 > 44) {
           if (20 <= lk.field_r) {
             if (gw.a((byte) 110)) {
@@ -36,7 +35,7 @@ final class sn extends pu {
             return true;
           }
         } else {
-          discarded$5 = sn.c(-66);
+          sn.c(-66);
           if (20 <= lk.field_r) {
             if (gw.a((byte) 110)) {
               if ((rja.field_o ^ -1) < -1) {

@@ -46,19 +46,13 @@ final class ck {
         int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_14_0 = 0;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
             var4 = (lc) ((Object) g.field_t.h(-11151));
             var1 = var4;
             if (var1 == null) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -66,13 +60,11 @@ final class ck {
               L1: while (true) {
                 if (var2 >= var1.field_r) {
                   if (param0 >= 4) {
-                    stackOut_20_0 = 1;
-                    stackIn_21_0 = stackOut_20_0;
+                    stackIn_21_0 = 1;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
-                    stackOut_18_0 = 1;
-                    stackIn_19_0 = stackOut_18_0;
+                    stackIn_19_0 = 1;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
@@ -84,8 +76,7 @@ final class ck {
                       if (var4.field_n[var2].field_b != 0) {
                         break L2;
                       } else {
-                        stackOut_9_0 = 0;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -96,8 +87,7 @@ final class ck {
                       break L3;
                     } else {
                       if (-1 == (var4.field_o[var2].field_b ^ -1)) {
-                        stackOut_14_0 = 0;
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -136,9 +126,9 @@ final class ck {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var7;
+        int var8;
+        int var9;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var7 = 98 % ((53 - param3) / 48);
         var8 = 0;
@@ -192,11 +182,11 @@ final class ck {
     }
 
     final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var6;
+        int var5;
         L0: {
           var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (param0 == -1) {

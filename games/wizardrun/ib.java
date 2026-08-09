@@ -22,37 +22,23 @@ abstract class ib {
         try {
             String var2 = null;
             RuntimeException var2_ref = null;
-            Throwable var2_ref2 = null;
             String var3 = null;
             String[] var4 = null;
             int var5 = 0;
             int var6 = 0;
             int var7 = 0;
             int stackIn_3_0 = 0;
-            int stackIn_10_0 = 0;
-            int stackIn_19_0 = 0;
-            RuntimeException stackIn_21_0 = null;
-            StringBuilder stackIn_21_1 = null;
-            RuntimeException stackIn_22_0 = null;
-            StringBuilder stackIn_22_1 = null;
-            RuntimeException stackIn_23_0 = null;
-            StringBuilder stackIn_23_1 = null;
-            String stackIn_23_2 = null;
+            int stackIn_12_0 = 0;
+            int stackIn_21_0 = 0;
+            RuntimeException stackIn_24_0 = null;
+            StringBuilder stackIn_24_1 = null;
+            RuntimeException stackIn_25_0 = null;
+            StringBuilder stackIn_25_1 = null;
+            String stackIn_25_2 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_9_0 = 0;
-            int stackOut_18_0 = 0;
-            int stackOut_17_0 = 0;
-            int stackOut_2_0 = 0;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            RuntimeException stackOut_22_0 = null;
-            StringBuilder stackOut_22_1 = null;
-            String stackOut_22_2 = null;
-            RuntimeException stackOut_21_0 = null;
-            StringBuilder stackOut_21_1 = null;
-            String stackOut_21_2 = null;
+            Throwable var2_ref2 = null;
             var7 = wizardrun.field_H;
             try {
               L0: {
@@ -82,8 +68,7 @@ abstract class ib {
                               break L4;
                             } else {
                               if (var4[var5].substring(0, var6).trim().equals(var2)) {
-                                stackOut_9_0 = 1;
-                                stackIn_10_0 = stackOut_9_0;
+                                stackIn_12_0 = 1;
                                 decompiledRegionSelector0 = 0;
                                 break L1;
                               } else {
@@ -110,12 +95,10 @@ abstract class ib {
                   } else {
                     L6: {
                       if (param1.getParameter("tuhstatbut") == null) {
-                        stackOut_18_0 = 0;
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_21_0 = 0;
                         break L6;
                       } else {
-                        stackOut_17_0 = 1;
-                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_21_0 = 1;
                         break L6;
                       }
                     }
@@ -123,8 +106,7 @@ abstract class ib {
                     break L0;
                   }
                 } else {
-                  stackOut_2_0 = 1;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = 1;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 }
@@ -133,39 +115,31 @@ abstract class ib {
               decompiledCaughtException = decompiledCaughtParameter1;
               L7: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_20_0 = (RuntimeException) (var2_ref);
-                stackOut_20_1 = new StringBuilder().append("ib.C(").append(param0).append(',');
-                stackIn_22_0 = stackOut_20_0;
-                stackIn_22_1 = stackOut_20_1;
-                stackIn_21_0 = stackOut_20_0;
-                stackIn_21_1 = stackOut_20_1;
+                stackIn_24_0 = (RuntimeException) (var2_ref);
+
+                stackIn_24_1 = new StringBuilder().append("ib.C(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-                  stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-                  stackOut_22_2 = "null";
-                  stackIn_23_0 = stackOut_22_0;
-                  stackIn_23_1 = stackOut_22_1;
-                  stackIn_23_2 = stackOut_22_2;
+                  stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+                  stackIn_25_2 = "null";
                   break L7;
                 } else {
-                  stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-                  stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-                  stackOut_21_2 = "{...}";
-                  stackIn_23_0 = stackOut_21_0;
-                  stackIn_23_1 = stackOut_21_1;
-                  stackIn_23_2 = stackOut_21_2;
+                  stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+                  stackIn_25_2 = "{...}";
                   break L7;
                 }
               }
-              throw bd.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
+              throw bd.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
             }
             if (decompiledRegionSelector1 == 0) {
               return stackIn_3_0 != 0;
             } else {
               if (decompiledRegionSelector1 == 1) {
-                return stackIn_19_0 != 0;
+                return stackIn_21_0 != 0;
               } else {
-                return stackIn_10_0 != 0;
+                return stackIn_12_0 != 0;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -176,12 +150,11 @@ abstract class ib {
     }
 
     public static void b(byte param0) {
-        boolean discarded$0 = false;
         field_d = null;
         field_b = null;
         if (param0 != -64) {
             java.applet.Applet var2 = (java.applet.Applet) null;
-            discarded$0 = ib.a((byte) -62, (java.applet.Applet) null);
+            ib.a((byte) -62, (java.applet.Applet) null);
         }
     }
 

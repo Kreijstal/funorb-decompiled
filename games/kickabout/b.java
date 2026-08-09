@@ -90,15 +90,15 @@ final class b extends ta {
     }
 
     final void a(byte param0, boolean param1) {
-        kq var3 = null;
-        up var4_ref_up = null;
-        int var4 = 0;
-        pu[] var5_ref_pu__ = null;
-        int var5 = 0;
-        int var6_int = 0;
-        fn var6 = null;
-        pu var7 = null;
-        int var8 = 0;
+        kq var3;
+        up var4_ref_up;
+        int var4;
+        pu[] var5_ref_pu__;
+        int var5;
+        int var6_int;
+        fn var6;
+        pu var7;
+        int var8;
         L0: {
           var8 = Kickabout.field_G;
           super.a((byte) -55, param1);
@@ -164,91 +164,50 @@ final class b extends ta {
     }
 
     final void a(int param0, boolean param1) {
-        int discarded$7 = 0;
-        int discarded$8 = 0;
-        int discarded$9 = 0;
-        int discarded$10 = 0;
-        int discarded$11 = 0;
-        int discarded$12 = 0;
-        int discarded$13 = 0;
-        hd var3 = null;
-        kq var4 = null;
-        uo var5 = null;
-        String var6 = null;
-        ot var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15_int = 0;
-        pu[] var15 = null;
-        vc var15_ref = null;
-        int var16 = 0;
-        String var17 = null;
-        int var17_int = 0;
-        int var18 = 0;
-        int var19 = 0;
-        String var20 = null;
-        int var21 = 0;
-        int var22 = 0;
-        pu[] var23 = null;
-        pu var24 = null;
-        hd var25 = null;
-        up var26 = null;
-        pu var27 = null;
-        vc var28 = null;
-        up stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        up stackIn_5_2 = null;
-        int stackIn_5_3 = 0;
-        up stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        up stackIn_6_2 = null;
-        int stackIn_6_3 = 0;
+        up stackIn_6_0;
+        int stackIn_6_1;
+        up stackIn_6_2;
+        int stackIn_6_3;
         up stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         up stackIn_7_2 = null;
         int stackIn_7_3 = 0;
         int stackIn_7_4 = 0;
-        up stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        up stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        up stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
         up stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
         String stackIn_22_0 = null;
-        up stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        up stackOut_4_2 = null;
-        int stackOut_4_3 = 0;
-        up stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        up stackOut_6_2 = null;
-        int stackOut_6_3 = 0;
-        int stackOut_6_4 = 0;
-        up stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        up stackOut_5_2 = null;
-        int stackOut_5_3 = 0;
-        int stackOut_5_4 = 0;
-        up stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        up stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        up stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        up stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        int stackOut_10_2 = 0;
-        String stackOut_21_0 = null;
-        String stackOut_20_0 = null;
+        int stackIn_61_0 = 0;
+        int stackIn_61_1 = 0;
+        hd var3;
+        kq var4;
+        uo var5;
+        String var6;
+        ot var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15_int;
+        pu[] var15;
+        vc var15_ref;
+        int var16;
+        String var17;
+        int var17_int;
+        int var18;
+        int var19;
+        String var20;
+        int var21;
+        int var22;
+        pu[] var23;
+        pu var24;
+        hd var25;
+        up var26;
+        pu var27;
+        vc var28;
         var22 = Kickabout.field_G;
         super.a(param0, param1);
         var25 = this.field_Y;
@@ -263,85 +222,57 @@ final class b extends ta {
               var4 = this.field_L.j((byte) 21);
               var5 = pb.field_C;
               if (var4 == null) {
-                discarded$7 = var5.a(gu.field_Db, 20 + this.field_I.field_F, this.field_I.field_T + 10, this.field_I.field_q - 40, -10 + this.field_I.field_mb, 14540253, -1, 1, 1, 16);
+                var5.a(gu.field_Db, 20 + this.field_I.field_F, this.field_I.field_T + 10, this.field_I.field_q - 40, -10 + this.field_I.field_mb, 14540253, -1, 1, 1, 16);
                 break L1;
               } else {
                 L2: {
                   var26 = this.field_L.j((byte) 21).field_Eb;
-                  stackOut_4_0 = (up) (var26);
-                  stackOut_4_1 = 0;
-                  stackOut_4_2 = (up) (var26);
-                  stackOut_4_3 = -107;
-                  stackIn_6_0 = stackOut_4_0;
-                  stackIn_6_1 = stackOut_4_1;
-                  stackIn_6_2 = stackOut_4_2;
-                  stackIn_6_3 = stackOut_4_3;
-                  stackIn_5_0 = stackOut_4_0;
-                  stackIn_5_1 = stackOut_4_1;
-                  stackIn_5_2 = stackOut_4_2;
-                  stackIn_5_3 = stackOut_4_3;
+                  stackIn_6_0 = (up) (var26);
+
+                  stackIn_6_1 = 0;
+
+                  stackIn_6_2 = (up) (var26);
+
+                  stackIn_6_3 = -107;
+
                   if (jd.f(param0 ^ 4)) {
-                    stackOut_6_0 = (up) ((Object) stackIn_6_0);
-                    stackOut_6_1 = stackIn_6_1;
-                    stackOut_6_2 = (up) ((Object) stackIn_6_2);
-                    stackOut_6_3 = stackIn_6_3;
-                    stackOut_6_4 = 0;
-                    stackIn_7_0 = stackOut_6_0;
-                    stackIn_7_1 = stackOut_6_1;
-                    stackIn_7_2 = stackOut_6_2;
-                    stackIn_7_3 = stackOut_6_3;
-                    stackIn_7_4 = stackOut_6_4;
+                    stackIn_7_0 = (up) ((Object) stackIn_6_0);
+                    stackIn_7_1 = stackIn_6_1;
+                    stackIn_7_2 = (up) ((Object) stackIn_6_2);
+                    stackIn_7_3 = stackIn_6_3;
+                    stackIn_7_4 = 0;
                     break L2;
                   } else {
-                    stackOut_5_0 = (up) ((Object) stackIn_5_0);
-                    stackOut_5_1 = stackIn_5_1;
-                    stackOut_5_2 = (up) ((Object) stackIn_5_2);
-                    stackOut_5_3 = stackIn_5_3;
-                    stackOut_5_4 = 1;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_7_1 = stackOut_5_1;
-                    stackIn_7_2 = stackOut_5_2;
-                    stackIn_7_3 = stackOut_5_3;
-                    stackIn_7_4 = stackOut_5_4;
+                    stackIn_7_0 = (up) ((Object) stackIn_6_0);
+                    stackIn_7_1 = stackIn_6_1;
+                    stackIn_7_2 = (up) ((Object) stackIn_6_2);
+                    stackIn_7_3 = stackIn_6_3;
+                    stackIn_7_4 = 1;
                     break L2;
                   }
                 }
                 L3: {
                   L4: {
-                    stackOut_7_0 = (up) ((Object) stackIn_7_0);
-                    stackOut_7_1 = stackIn_7_1;
-                    stackIn_10_0 = stackOut_7_0;
-                    stackIn_10_1 = stackOut_7_1;
-                    stackIn_8_0 = stackOut_7_0;
-                    stackIn_8_1 = stackOut_7_1;
-                    if (((up) (Object) stackIn_7_2).c((byte) stackIn_7_3, stackIn_7_4 == 0)) {
+                    stackIn_7_0 = (up) ((Object) stackIn_7_0);
+
+                    if (!((up) (Object) stackIn_7_2).c((byte) stackIn_7_3, stackIn_7_4 != 0)) {
                       break L4;
                     } else {
-                      stackOut_8_0 = (up) ((Object) stackIn_8_0);
-                      stackOut_8_1 = stackIn_8_1;
-                      stackIn_10_0 = stackOut_8_0;
-                      stackIn_10_1 = stackOut_8_1;
-                      stackIn_9_0 = stackOut_8_0;
-                      stackIn_9_1 = stackOut_8_1;
+                      stackIn_7_0 = (up) ((Object) stackIn_7_0);
+
                       if (!wn.a((byte) 47)) {
                         break L4;
                       } else {
-                        stackOut_9_0 = (up) ((Object) stackIn_9_0);
-                        stackOut_9_1 = stackIn_9_1;
-                        stackOut_9_2 = 1;
-                        stackIn_11_0 = stackOut_9_0;
-                        stackIn_11_1 = stackOut_9_1;
-                        stackIn_11_2 = stackOut_9_2;
+                        stackIn_11_0 = (up) ((Object) stackIn_7_0);
+                        stackIn_11_1 = stackIn_7_1;
+                        stackIn_11_2 = 1;
                         break L3;
                       }
                     }
                   }
-                  stackOut_10_0 = (up) ((Object) stackIn_10_0);
-                  stackOut_10_1 = stackIn_10_1;
-                  stackOut_10_2 = 0;
-                  stackIn_11_0 = stackOut_10_0;
-                  stackIn_11_1 = stackOut_10_1;
-                  stackIn_11_2 = stackOut_10_2;
+                  stackIn_11_0 = (up) ((Object) stackIn_7_0);
+                  stackIn_11_1 = stackIn_7_1;
+                  stackIn_11_2 = 0;
                   break L3;
                 }
                 L5: {
@@ -381,7 +312,7 @@ final class b extends ta {
                         break L7;
                       } else {
                         if ((var26.field_g ^ -1) == -101) {
-                          discarded$8 = var5.a(ae.field_M, this.field_P.field_F - -10, this.field_P.field_T - -31, -20 + this.field_P.field_q, -60 + this.field_P.field_mb, 11184810, -1, 0, 1, 16);
+                          var5.a(ae.field_M, this.field_P.field_F - -10, this.field_P.field_T - -31, -20 + this.field_P.field_q, -60 + this.field_P.field_mb, 11184810, -1, 0, 1, 16);
                           break L6;
                         } else {
                           break L7;
@@ -397,17 +328,15 @@ final class b extends ta {
                   } else {
                     L8: {
                       if (!this.field_L.j((byte) 21).field_Gb) {
-                        stackOut_21_0 = qr.field_a;
-                        stackIn_22_0 = stackOut_21_0;
+                        stackIn_22_0 = qr.field_a;
                         break L8;
                       } else {
-                        stackOut_20_0 = nq.field_H;
-                        stackIn_22_0 = stackOut_20_0;
+                        stackIn_22_0 = nq.field_H;
                         break L8;
                       }
                     }
                     var17 = stackIn_22_0;
-                    discarded$9 = var5.a(var17, this.field_P.field_F - -10, 51 + this.field_P.field_T, -20 + this.field_P.field_q, this.field_P.field_mb - 60, 11184810, -1, 0, 1, 16);
+                    var5.a(var17, this.field_P.field_F - -10, 51 + this.field_P.field_T, -20 + this.field_P.field_q, this.field_P.field_mb - 60, 11184810, -1, 0, 1, 16);
                     break L6;
                   }
                 }
@@ -420,7 +349,7 @@ final class b extends ta {
                       if (jd.f(param0 + 4)) {
                         break L10;
                       } else {
-                        discarded$10 = var5.a(io.field_o, this.field_X.field_F, this.field_X.field_T, this.field_X.field_q, this.field_X.field_mb, 16777215, -1, 1, 1, 0);
+                        var5.a(io.field_o, this.field_X.field_F, this.field_X.field_T, this.field_X.field_q, this.field_X.field_mb, 16777215, -1, 1, 1, 0);
                         break L9;
                       }
                     }
@@ -464,7 +393,7 @@ final class b extends ta {
                                   break L14;
                                 }
                               }
-                              discarded$11 = var5.a(var17, 10 + this.field_G.field_F, 75 + this.field_G.field_T, -20 + this.field_G.field_q, 50, var18, -1, 1, 1, 0);
+                              var5.a(var17, 10 + this.field_G.field_F, 75 + this.field_G.field_T, -20 + this.field_G.field_q, 50, var18, -1, 1, 1, 0);
                               break L1;
                             } else {
                               L15: {
@@ -511,10 +440,10 @@ final class b extends ta {
                       }
                     }
                   }
-                  discarded$12 = var5.a(na.field_Eb, 10 + this.field_G.field_F, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
+                  var5.a(na.field_Eb, 10 + this.field_G.field_F, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
                   break L1;
                 } else {
-                  discarded$13 = var5.a(ew.field_d, this.field_G.field_F + 10, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
+                  var5.a(ew.field_d, this.field_G.field_F + 10, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
                   break L1;
                 }
               }
@@ -525,8 +454,10 @@ final class b extends ta {
                 break L16;
               } else {
                 if (jd.f(-1)) {
+                  stackIn_61_0 = -1;
+                  stackIn_61_1 = this.field_L.j((byte) 21).field_Eb.field_h.length ^ -1;
                   L17: {
-                    if (-1 <= (this.field_L.j((byte) 21).field_Eb.field_h.length ^ -1)) {
+                    if (stackIn_61_0 <= stackIn_61_1) {
                       break L17;
                     } else {
                       eo.d(this.field_X.field_F, this.field_X.field_T, this.field_X.field_q, this.field_X.field_mb);
@@ -558,29 +489,21 @@ final class b extends ta {
     }
 
     private final void g(int param0) {
-        int var3 = 0;
-        up var4 = null;
-        up var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        fn var8 = null;
-        pu var9 = null;
-        String var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        kq var13 = null;
-        hd stackIn_7_0 = null;
         hd stackIn_8_0 = null;
         hd stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         String stackIn_15_0 = null;
-        hd stackOut_6_0 = null;
-        hd stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        hd stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        String stackOut_14_0 = null;
-        String stackOut_13_0 = null;
+        int var3;
+        up var4;
+        up var5;
+        int var6;
+        int var7;
+        fn var8;
+        pu var9;
+        String var10;
+        int var11;
+        int var12;
+        kq var13;
         L0: {
           var12 = Kickabout.field_G;
           var13 = this.field_L.j((byte) 21);
@@ -611,20 +534,15 @@ final class b extends ta {
                   }
                 }
                 L3: {
-                  stackOut_6_0 = this.field_Q;
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_8_0 = this.field_Q;
+
                   if (var13.field_Gb) {
-                    stackOut_8_0 = (hd) ((Object) stackIn_8_0);
-                    stackOut_8_1 = 0;
-                    stackIn_9_0 = stackOut_8_0;
-                    stackIn_9_1 = stackOut_8_1;
+                    stackIn_9_0 = (hd) ((Object) stackIn_8_0);
+                    stackIn_9_1 = 0;
                     break L3;
                   } else {
-                    stackOut_7_0 = (hd) ((Object) stackIn_7_0);
-                    stackOut_7_1 = 1;
-                    stackIn_9_0 = stackOut_7_0;
-                    stackIn_9_1 = stackOut_7_1;
+                    stackIn_9_0 = (hd) ((Object) stackIn_8_0);
+                    stackIn_9_1 = 1;
                     break L3;
                   }
                 }
@@ -646,12 +564,10 @@ final class b extends ta {
                   var8 = pa.field_g[var5.field_h[var7]];
                   var9 = new pu(var8, false);
                   if (var8.j(256)) {
-                    stackOut_14_0 = mc.field_f;
-                    stackIn_15_0 = stackOut_14_0;
+                    stackIn_15_0 = mc.field_f;
                     break L5;
                   } else {
-                    stackOut_13_0 = cj.field_E;
-                    stackIn_15_0 = stackOut_13_0;
+                    stackIn_15_0 = cj.field_E;
                     break L5;
                   }
                 }
@@ -686,26 +602,21 @@ final class b extends ta {
     }
 
     final void b(int param0) {
-        L0: {
-          this.field_V = new hd();
-          this.field_Y = new hd();
-          this.field_Y.a(true, 452, 180, 60, 358);
-          this.field_I = new hd();
-          this.field_I.a(true, 234, 6, 6, 84);
-          this.field_G = new hd();
-          this.field_G.a(true, 234, 6, 96, 124);
-          this.field_W = new hd();
-          this.field_W.a(true, 200, 246, 6, 100);
-          this.field_P = new hd();
-          this.field_P.a(true, 200, 246, 112, 108);
-          this.field_X = new hd();
-          this.field_X.a(true, 440, 6, 226, 126);
-          if (param0 == -38) {
-            break L0;
-          } else {
+        this.field_V = new hd();
+        this.field_Y = new hd();
+        this.field_Y.a(true, 452, 180, 60, 358);
+        this.field_I = new hd();
+        this.field_I.a(true, 234, 6, 6, 84);
+        this.field_G = new hd();
+        this.field_G.a(true, 234, 6, 96, 124);
+        this.field_W = new hd();
+        this.field_W.a(true, 200, 246, 6, 100);
+        this.field_P = new hd();
+        this.field_P.a(true, 200, 246, 112, 108);
+        this.field_X = new hd();
+        this.field_X.a(true, 440, 6, 226, 126);
+        if (param0 != -38) {
             this.field_L = (mf) null;
-            break L0;
-          }
         }
         this.field_I.field_E = tr.field_g.toLowerCase();
         this.field_W.field_E = q.field_f.toLowerCase();

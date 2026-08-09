@@ -35,9 +35,8 @@ abstract class oga extends vg {
     }
 
     int b(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 13727) {
-            discarded$0 = this.a((byte) 63);
+            this.a((byte) 63);
             return 0;
         }
         return 0;

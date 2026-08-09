@@ -26,9 +26,9 @@ final class vi {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var1;
+        int var2;
+        int var3;
         var1 = mj.field_c * mj.field_c;
         var2 = -(sj.field_d * sj.field_d) + var1;
         var3 = sh.field_l + var2 * (-sh.field_l + gb.field_y) / var1;

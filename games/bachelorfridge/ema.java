@@ -26,16 +26,11 @@ final class ema extends sna {
     final boolean a(int param0, ema param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
         boolean stackIn_9_0 = false;
         int stackIn_15_0 = 0;
         boolean stackIn_18_0 = false;
         int stackIn_22_0 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -43,61 +38,32 @@ final class ema extends sna {
         String stackIn_26_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_4_1 = 0;
-        boolean stackOut_8_0 = false;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        boolean stackOut_17_0 = false;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
         try {
           L0: {
             L1: {
               if (param1.field_Ob) {
-                stackOut_2_0 = 0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = 1;
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = 1;
                 break L1;
               }
             }
             L2: {
-              stackOut_3_0 = stackIn_3_0;
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_4_0 = stackOut_3_0;
+
+
               if (this.field_Ob) {
-                stackOut_5_0 = stackIn_5_0;
-                stackOut_5_1 = 0;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
+
+                stackIn_6_1 = 0;
                 break L2;
               } else {
-                stackOut_4_0 = stackIn_4_0;
-                stackOut_4_1 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_6_1 = stackOut_4_1;
+
+                stackIn_6_1 = 1;
                 break L2;
               }
             }
-            if (stackIn_6_0 != stackIn_6_1) {
-              stackOut_8_0 = this.field_Ob;
-              stackIn_9_0 = stackOut_8_0;
+            if (stackIn_3_0 != stackIn_6_1) {
+              stackIn_9_0 = this.field_Ob;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -111,29 +77,24 @@ final class ema extends sna {
               }
               L4: {
                 if (param1.field_wb) {
-                  stackOut_14_0 = 0;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = 0;
                   break L4;
                 } else {
-                  stackOut_13_0 = 1;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = 1;
                   break L4;
                 }
               }
               if (stackIn_15_0 == (this.field_wb ? 1 : 0)) {
-                stackOut_17_0 = this.field_wb;
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_0 = this.field_wb;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 L5: {
                   if ((this.field_Cb ^ -1L) <= (param1.field_Cb ^ -1L)) {
-                    stackOut_21_0 = 0;
-                    stackIn_22_0 = stackOut_21_0;
+                    stackIn_22_0 = 0;
                     break L5;
                   } else {
-                    stackOut_20_0 = 1;
-                    stackIn_22_0 = stackOut_20_0;
+                    stackIn_22_0 = 1;
                     break L5;
                   }
                 }
@@ -146,27 +107,19 @@ final class ema extends sna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var3);
-            stackOut_23_1 = new StringBuilder().append("ema.B(").append(param0).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var3);
+
+            stackIn_25_1 = new StringBuilder().append("ema.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L6;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L6;
             }
           }
@@ -186,20 +139,14 @@ final class ema extends sna {
     final boolean f(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 21) {
           L0: {
             this.field_Eb = 8L;
             if (this.a(0)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -207,12 +154,10 @@ final class ema extends sna {
         } else {
           L1: {
             if (this.a(0)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -234,13 +179,12 @@ final class ema extends sna {
     ema(String param0, String param1, long param2) {
         super(0L, (sna) null);
         CharSequence var6 = null;
-        String discarded$0 = null;
         try {
             this.field_Eb = param2;
             this.field_Hb = param0;
             this.field_Nb = param1;
             var6 = (CharSequence) ((Object) this.field_Hb);
-            discarded$0 = fq.a(0, var6);
+            fq.a(0, var6);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) ((Object) runtimeException), "ema.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -248,12 +192,11 @@ final class ema extends sna {
 
     final void a(String param0, int param1, String param2) {
         CharSequence var5 = null;
-        String discarded$0 = null;
         try {
             this.field_Nb = param2;
             this.field_Hb = param0;
             var5 = (CharSequence) ((Object) this.field_Hb);
-            discarded$0 = fq.a(param1 + param1, var5);
+            fq.a(param1 + param1, var5);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) ((Object) runtimeException), "ema.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

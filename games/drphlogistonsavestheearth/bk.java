@@ -32,15 +32,11 @@ final class bk extends m {
     }
 
     private final long c(boolean param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        long var2 = 0L;
-        long var4 = 0L;
-        long var6 = 0L;
-        int var8 = 0;
-        int var9 = 0;
+        long var2;
+        long var4;
+        long var6;
+        int var8;
+        int var9;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var2 = System.nanoTime();
         var4 = -this.field_g + var2;
@@ -52,7 +48,7 @@ final class bk extends m {
             if ((this.field_i ^ -1) <= -2) {
               var6 = 0L;
               if (param0) {
-                discarded$4 = this.a(-62L, 63);
+                this.a(-62L, 63);
                 var8 = 1;
                 L0: while (true) {
                   if (this.field_i < var8) {
@@ -79,7 +75,7 @@ final class bk extends m {
               this.field_i = this.field_i + 1;
               var6 = 0L;
               if (param0) {
-                discarded$5 = this.a(-62L, 63);
+                this.a(-62L, 63);
                 var8 = 1;
                 L2: while (true) {
                   if (this.field_i < var8) {
@@ -117,7 +113,7 @@ final class bk extends m {
                 }
               }
             } else {
-              discarded$6 = this.a(-62L, 63);
+              this.a(-62L, 63);
               var8 = 1;
               L5: while (true) {
                 if (this.field_i < var8) {
@@ -133,7 +129,7 @@ final class bk extends m {
         } else {
           var6 = 0L;
           if (param0) {
-            discarded$7 = this.a(-62L, 63);
+            this.a(-62L, 63);
             var8 = 1;
             L6: while (true) {
               if (this.field_i < var8) {
@@ -187,8 +183,8 @@ final class bk extends m {
     }
 
     final int a(long param0, int param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param1 < -92) {
           if (this.field_f <= this.field_h) {

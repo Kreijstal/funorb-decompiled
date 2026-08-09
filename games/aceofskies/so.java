@@ -9,10 +9,10 @@ final class so {
 
     final static void a(int param0, byte param1) {
         wf var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         oc var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {

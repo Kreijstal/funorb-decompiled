@@ -7,34 +7,21 @@ final class pi extends mi {
     private int field_y;
 
     final boolean a(ea param0, byte param1) {
-        String discarded$2 = null;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             if (param1 == -42) {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               break L0;
             } else {
-              discarded$2 = this.c((byte) 100);
+              this.c((byte) 100);
               return false;
             }
           }
@@ -42,27 +29,19 @@ final class pi extends mi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("pi.U(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("pi.U(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }
@@ -79,17 +58,16 @@ final class pi extends mi {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        boolean discarded$1 = false;
-        int var5 = 0;
-        int var6 = 0;
-        pt var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        ea var12 = null;
-        ll var13 = null;
-        ll var14 = null;
-        ll var15 = null;
+        int var5;
+        int var6;
+        pt var8;
+        int var9;
+        int var10;
+        int var11;
+        ea var12;
+        ll var13;
+        ll var14;
+        ll var15;
         var11 = AceOfSkies.field_G ? 1 : 0;
         super.a((byte) 125, param1, param2, param3);
         if (-1 != (param1 ^ -1)) {
@@ -103,7 +81,7 @@ final class pi extends mi {
               break L0;
             } else {
               var12 = (ea) null;
-              discarded$1 = this.a((ea) null, (byte) -125);
+              this.a((ea) null, (byte) -125);
               break L0;
             }
           }
@@ -167,22 +145,12 @@ final class pi extends mi {
 
     final void a(byte param0, ea param1, int param2, int param3) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -201,27 +169,19 @@ final class pi extends mi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("pi.S(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("pi.S(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -242,21 +202,6 @@ final class pi extends mi {
 
     final static int a(int param0, String param1, int param2, boolean param3, String param4, boolean param5) {
         try {
-            int discarded$6 = 0;
-            int discarded$7 = 0;
-            int discarded$8 = 0;
-            int discarded$9 = 0;
-            Object discarded$10 = null;
-            Object discarded$11 = null;
-            RuntimeException var6 = null;
-            int var6_int = 0;
-            int var7 = 0;
-            Throwable var8_ref_Throwable = null;
-            int var8 = 0;
-            int var9 = 0;
-            String var10 = null;
-            String var11 = null;
-            CharSequence var12 = null;
             int stackIn_5_0 = 0;
             int stackIn_29_0 = 0;
             int stackIn_41_0 = 0;
@@ -266,49 +211,25 @@ final class pi extends mi {
             int stackIn_84_0 = 0;
             int stackIn_93_0 = 0;
             int stackIn_95_0 = 0;
-            RuntimeException stackIn_97_0 = null;
-            StringBuilder stackIn_97_1 = null;
             RuntimeException stackIn_98_0 = null;
             StringBuilder stackIn_98_1 = null;
             RuntimeException stackIn_99_0 = null;
             StringBuilder stackIn_99_1 = null;
             String stackIn_99_2 = null;
-            RuntimeException stackIn_100_0 = null;
-            StringBuilder stackIn_100_1 = null;
-            RuntimeException stackIn_101_0 = null;
             StringBuilder stackIn_101_1 = null;
-            RuntimeException stackIn_102_0 = null;
             StringBuilder stackIn_102_1 = null;
             String stackIn_102_2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_4_0 = 0;
-            int stackOut_28_0 = 0;
-            int stackOut_40_0 = 0;
-            int stackOut_39_0 = 0;
-            int stackOut_43_0 = 0;
-            int stackOut_42_0 = 0;
-            int stackOut_69_0 = 0;
-            int stackOut_83_0 = 0;
-            int stackOut_81_0 = 0;
-            int stackOut_92_0 = 0;
-            int stackOut_94_0 = 0;
-            RuntimeException stackOut_96_0 = null;
-            StringBuilder stackOut_96_1 = null;
-            RuntimeException stackOut_98_0 = null;
-            StringBuilder stackOut_98_1 = null;
-            String stackOut_98_2 = null;
-            RuntimeException stackOut_97_0 = null;
-            StringBuilder stackOut_97_1 = null;
-            String stackOut_97_2 = null;
-            RuntimeException stackOut_99_0 = null;
-            StringBuilder stackOut_99_1 = null;
-            RuntimeException stackOut_101_0 = null;
-            StringBuilder stackOut_101_1 = null;
-            String stackOut_101_2 = null;
-            RuntimeException stackOut_100_0 = null;
-            StringBuilder stackOut_100_1 = null;
-            String stackOut_100_2 = null;
+            int var6_int = 0;
+            RuntimeException var6 = null;
+            int var7 = 0;
+            int var8 = 0;
+            Throwable var8_ref_Throwable = null;
+            int var9 = 0;
+            String var10 = null;
+            String var11 = null;
+            CharSequence var12 = null;
             var9 = AceOfSkies.field_G ? 1 : 0;
             try {
               L0: {
@@ -317,8 +238,7 @@ final class pi extends mi {
                     break L1;
                   } else {
                     if (!fp.a((byte) 82, param5)) {
-                      stackOut_4_0 = -1;
-                      stackIn_5_0 = stackOut_4_0;
+                      stackIn_5_0 = -1;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     } else {
@@ -410,8 +330,7 @@ final class pi extends mi {
                             } else {
                               te.b(true);
                               ld.field_d = false;
-                              stackOut_28_0 = var6_int;
-                              stackIn_29_0 = stackOut_28_0;
+                              stackIn_29_0 = var6_int;
                               decompiledRegionSelector0 = 1;
                               break L0;
                             }
@@ -436,7 +355,7 @@ final class pi extends mi {
                       L10: {
                         as.field_b = nm.field_c.h((byte) -87);
                         ln.field_d = nm.field_c.g(37);
-                        discarded$6 = nm.field_c.g(param2 ^ 103);
+                        nm.field_c.g(param2 ^ 103);
                         qr.field_a = nm.field_c.i((byte) 0);
                         var11 = nm.field_c.e((byte) -122);
                         var7 = nm.field_c.g(118);
@@ -453,24 +372,20 @@ final class pi extends mi {
                         } else {
                           L12: {
                             if ((var7 & 8) == 0) {
-                              stackOut_40_0 = 0;
-                              stackIn_41_0 = stackOut_40_0;
+                              stackIn_41_0 = 0;
                               break L12;
                             } else {
-                              stackOut_39_0 = 1;
-                              stackIn_41_0 = stackOut_39_0;
+                              stackIn_41_0 = 1;
                               break L12;
                             }
                           }
                           L13: {
                             um.field_j = stackIn_41_0 != 0;
                             if ((var7 & 4) == 0) {
-                              stackOut_43_0 = 0;
-                              stackIn_44_0 = stackOut_43_0;
+                              stackIn_44_0 = 0;
                               break L13;
                             } else {
-                              stackOut_42_0 = 1;
-                              stackIn_44_0 = stackOut_42_0;
+                              stackIn_44_0 = 1;
                               break L13;
                             }
                           }
@@ -486,9 +401,9 @@ final class pi extends mi {
                         if (!gl.field_a) {
                           break L14;
                         } else {
-                          discarded$7 = nm.field_c.g(-83);
-                          discarded$8 = nm.field_c.g(105);
-                          discarded$9 = nm.field_c.a((byte) 123);
+                          nm.field_c.g(-83);
+                          nm.field_c.g(105);
+                          nm.field_c.a((byte) 123);
                           ag.field_r = nm.field_c.i((byte) 0);
                           nc.field_c = new byte[ag.field_r];
                           var8 = 0;
@@ -540,7 +455,7 @@ final class pi extends mi {
                             } else {
                               try {
                                 L20: {
-                                  discarded$10 = fe.a("unzap", (byte) -108, bm.m(115));
+                                  fe.a("unzap", (byte) -108, bm.m(115));
                                   break L20;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -556,7 +471,7 @@ final class pi extends mi {
                         }
                         try {
                           L22: {
-                            discarded$11 = fe.a("zap", -15201, new Object[]{vf.a(as.field_b, 28304)}, bm.m(119));
+                            fe.a("zap", -15201, new Object[]{vf.a(as.field_b, 28304)}, bm.m(119));
                             break L22;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -581,8 +496,7 @@ final class pi extends mi {
                       L25: while (true) {
                         if (-5 >= (var8 ^ -1)) {
                           nm.field_c.a(true, bm.field_w);
-                          stackOut_69_0 = qs.field_b;
-                          stackIn_70_0 = stackOut_69_0;
+                          stackIn_70_0 = qs.field_b;
                           decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
@@ -616,8 +530,7 @@ final class pi extends mi {
                         } else {
                           if (!ld.field_d) {
                             ld.field_d = true;
-                            stackOut_83_0 = -1;
-                            stackIn_84_0 = stackOut_83_0;
+                            stackIn_84_0 = -1;
                             decompiledRegionSelector0 = 4;
                             break L0;
                           } else {
@@ -635,8 +548,7 @@ final class pi extends mi {
                       }
                       rp.field_m = nm.field_c.h(-17883);
                       ld.field_d = false;
-                      stackOut_81_0 = qs.field_b;
-                      stackIn_82_0 = stackOut_81_0;
+                      stackIn_82_0 = qs.field_b;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }
@@ -655,8 +567,7 @@ final class pi extends mi {
                         }
                       }
                       ld.field_d = false;
-                      stackOut_92_0 = 3;
-                      stackIn_93_0 = stackOut_92_0;
+                      stackIn_93_0 = 3;
                       decompiledRegionSelector0 = 5;
                       break L0;
                     } else {
@@ -670,8 +581,7 @@ final class pi extends mi {
                     break L30;
                   }
                 }
-                stackOut_94_0 = -1;
-                stackIn_95_0 = stackOut_94_0;
+                stackIn_95_0 = -1;
                 decompiledRegionSelector0 = 6;
                 break L0;
               }
@@ -679,56 +589,40 @@ final class pi extends mi {
               decompiledCaughtException = decompiledCaughtParameter2;
               L32: {
                 var6 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_96_0 = (RuntimeException) (var6);
-                stackOut_96_1 = new StringBuilder().append("pi.V(").append(param0).append(',');
-                stackIn_98_0 = stackOut_96_0;
-                stackIn_98_1 = stackOut_96_1;
-                stackIn_97_0 = stackOut_96_0;
-                stackIn_97_1 = stackOut_96_1;
+                stackIn_98_0 = (RuntimeException) (var6);
+
+                stackIn_98_1 = new StringBuilder().append("pi.V(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_98_0 = (RuntimeException) ((Object) stackIn_98_0);
-                  stackOut_98_1 = (StringBuilder) ((Object) stackIn_98_1);
-                  stackOut_98_2 = "null";
-                  stackIn_99_0 = stackOut_98_0;
-                  stackIn_99_1 = stackOut_98_1;
-                  stackIn_99_2 = stackOut_98_2;
+                  stackIn_99_0 = (RuntimeException) ((Object) stackIn_98_0);
+                  stackIn_99_1 = (StringBuilder) ((Object) stackIn_98_1);
+                  stackIn_99_2 = "null";
                   break L32;
                 } else {
-                  stackOut_97_0 = (RuntimeException) ((Object) stackIn_97_0);
-                  stackOut_97_1 = (StringBuilder) ((Object) stackIn_97_1);
-                  stackOut_97_2 = "{...}";
-                  stackIn_99_0 = stackOut_97_0;
-                  stackIn_99_1 = stackOut_97_1;
-                  stackIn_99_2 = stackOut_97_2;
+                  stackIn_99_0 = (RuntimeException) ((Object) stackIn_98_0);
+                  stackIn_99_1 = (StringBuilder) ((Object) stackIn_98_1);
+                  stackIn_99_2 = "{...}";
                   break L32;
                 }
               }
               L33: {
-                stackOut_99_0 = (RuntimeException) ((Object) stackIn_99_0);
-                stackOut_99_1 = ((StringBuilder) (Object) stackIn_99_1).append(stackIn_99_2).append(',').append(param2).append(',').append(param3).append(',');
-                stackIn_101_0 = stackOut_99_0;
-                stackIn_101_1 = stackOut_99_1;
-                stackIn_100_0 = stackOut_99_0;
-                stackIn_100_1 = stackOut_99_1;
+
+
+                stackIn_101_1 = ((StringBuilder) (Object) stackIn_99_1).append(stackIn_99_2).append(',').append(param2).append(',').append(param3).append(',');
+
                 if (param4 == null) {
-                  stackOut_101_0 = (RuntimeException) ((Object) stackIn_101_0);
-                  stackOut_101_1 = (StringBuilder) ((Object) stackIn_101_1);
-                  stackOut_101_2 = "null";
-                  stackIn_102_0 = stackOut_101_0;
-                  stackIn_102_1 = stackOut_101_1;
-                  stackIn_102_2 = stackOut_101_2;
+                  stackIn_99_0 = (RuntimeException) ((Object) stackIn_99_0);
+                  stackIn_102_1 = (StringBuilder) ((Object) stackIn_101_1);
+                  stackIn_102_2 = "null";
                   break L33;
                 } else {
-                  stackOut_100_0 = (RuntimeException) ((Object) stackIn_100_0);
-                  stackOut_100_1 = (StringBuilder) ((Object) stackIn_100_1);
-                  stackOut_100_2 = "{...}";
-                  stackIn_102_0 = stackOut_100_0;
-                  stackIn_102_1 = stackOut_100_1;
-                  stackIn_102_2 = stackOut_100_2;
+                  stackIn_99_0 = (RuntimeException) ((Object) stackIn_99_0);
+                  stackIn_102_1 = (StringBuilder) ((Object) stackIn_101_1);
+                  stackIn_102_2 = "{...}";
                   break L33;
                 }
               }
-              throw pn.a((Throwable) ((Object) stackIn_102_0), stackIn_102_2 + ',' + param5 + ')');
+              throw pn.a((Throwable) ((Object) stackIn_99_0), stackIn_102_2 + ',' + param5 + ')');
             }
             if (decompiledRegionSelector0 == 0) {
               return stackIn_5_0;

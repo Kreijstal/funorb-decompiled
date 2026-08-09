@@ -8,32 +8,21 @@ abstract class bq {
     fr field_b;
 
     final static an a(boolean param0, int param1) {
-        an var2 = null;
-        an stackIn_1_0 = null;
+        an var2;
         an stackIn_2_0 = null;
         an stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        an stackOut_0_0 = null;
-        an stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        an stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           var2 = new an(true);
-          stackOut_0_0 = (an) (var2);
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = (an) (var2);
+
           if (!param0) {
-            stackOut_2_0 = (an) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (an) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (an) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (an) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -47,16 +36,14 @@ abstract class bq {
     }
 
     final static void a(int param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
         if (param0 != 8192) {
           field_d = (int[]) null;
           cb.field_b = false;
-          discarded$4 = ig.field_a.e(param0 ^ -23110);
+          ig.field_a.e(param0 ^ -23110);
           return;
         } else {
           cb.field_b = false;
-          discarded$5 = ig.field_a.e(param0 ^ -23110);
+          ig.field_a.e(param0 ^ -23110);
           return;
         }
     }

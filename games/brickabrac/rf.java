@@ -11,8 +11,8 @@ final class rf {
     static n field_b;
 
     final static void a(int param0, long param1, boolean param2) {
-        pi var4 = null;
-        int var5 = 0;
+        pi var4;
+        int var5;
         var4 = k.field_h;
         var4.e(-13413, param0);
         var4.field_l = var4.field_l + 1;

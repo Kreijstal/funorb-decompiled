@@ -19,9 +19,8 @@ final class ve {
     }
 
     final int a(boolean param0) {
-        int discarded$0 = 0;
         if (!param0) {
-            discarded$0 = this.a(99, -59);
+            this.a(99, -59);
             return this.field_c - -1;
         }
         return this.field_c - -1;
@@ -83,8 +82,8 @@ final class ve {
     }
 
     private final int a(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = StarCannon.field_A;
         if (param1 != -77) {
           return -123;
@@ -112,7 +111,7 @@ final class ve {
     }
 
     final void c(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         if (-1 >= (param1 ^ -1)) {
           if (param1 > this.field_c) {
             throw new ArrayIndexOutOfBoundsException(param1);

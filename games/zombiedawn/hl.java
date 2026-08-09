@@ -23,16 +23,16 @@ final class hl implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        le var1 = null;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        le var1;
+        int var2;
         var2 = ZombieDawn.field_J;
         if (this.field_a.field_c[-1 + this.field_i] == this.field_e) {
           L0: while (true) {
             if (this.field_i < this.field_a.field_f) {
-              fieldTemp$2 = this.field_i;
+              fieldTemp$1 = this.field_i;
               this.field_i = this.field_i + 1;
-              var1 = this.field_a.field_c[fieldTemp$2].field_b;
+              var1 = this.field_a.field_c[fieldTemp$1].field_b;
               if (this.field_a.field_c[-1 + this.field_i] != var1) {
                 this.field_e = var1.field_b;
                 this.field_c = var1;
@@ -65,42 +65,26 @@ final class hl implements Iterator {
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
-            Object discarded$6 = null;
-            Object discarded$7 = null;
-            Object discarded$8 = null;
-            Object discarded$9 = null;
-            Object discarded$10 = null;
-            Object discarded$11 = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            String var3 = null;
-            java.net.URL var4 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
+            String var3 = null;
+            java.net.URL var4 = null;
             try {
               try {
                 L0: {
                   L1: {
                     var4 = param0.getCodeBase();
                     var3 = rc.a(-1, param0, var4).getFile();
-                    discarded$6 = qe.a(new Object[]{"home", var3 + "home.ws"}, "updatelinks", 29674, param0);
-                    discarded$7 = qe.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", param1 ^ 29675, param0);
-                    discarded$8 = qe.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", 29674, param0);
-                    discarded$9 = qe.a(new Object[]{"options", var3 + "options.ws"}, "updatelinks", 29674, param0);
+                    qe.a(new Object[]{"home", var3 + "home.ws"}, "updatelinks", 29674, param0);
+                    qe.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", param1 ^ 29675, param0);
+                    qe.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", 29674, param0);
+                    qe.a(new Object[]{"options", var3 + "options.ws"}, "updatelinks", 29674, param0);
                     if (param1 == 1) {
                       break L1;
                     } else {
@@ -108,8 +92,8 @@ final class hl implements Iterator {
                       break L1;
                     }
                   }
-                  discarded$10 = qe.a(new Object[]{"terms", var3 + "terms.ws"}, "updatelinks", 29674, param0);
-                  discarded$11 = qe.a(new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks", 29674, param0);
+                  qe.a(new Object[]{"terms", var3 + "terms.ws"}, "updatelinks", 29674, param0);
+                  qe.a(new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks", 29674, param0);
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -122,27 +106,19 @@ final class hl implements Iterator {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var2_ref);
-                stackOut_6_1 = new StringBuilder().append("hl.D(");
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var2_ref);
+
+                stackIn_8_1 = new StringBuilder().append("hl.D(");
+
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L2;
                 }
               }
@@ -158,8 +134,6 @@ final class hl implements Iterator {
     final static boolean a(int param0, java.applet.Applet param1) {
         try {
             String var2 = null;
-            Throwable var2_ref = null;
-            RuntimeException var2_ref2 = null;
             String var3 = null;
             String[] var4 = null;
             int var5 = 0;
@@ -168,8 +142,6 @@ final class hl implements Iterator {
             int stackIn_3_0 = 0;
             int stackIn_12_0 = 0;
             int stackIn_19_0 = 0;
-            RuntimeException stackIn_21_0 = null;
-            StringBuilder stackIn_21_1 = null;
             RuntimeException stackIn_22_0 = null;
             StringBuilder stackIn_22_1 = null;
             RuntimeException stackIn_23_0 = null;
@@ -178,18 +150,8 @@ final class hl implements Iterator {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_11_0 = 0;
-            int stackOut_18_0 = 0;
-            int stackOut_17_0 = 0;
-            int stackOut_2_0 = 0;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            RuntimeException stackOut_22_0 = null;
-            StringBuilder stackOut_22_1 = null;
-            String stackOut_22_2 = null;
-            RuntimeException stackOut_21_0 = null;
-            StringBuilder stackOut_21_1 = null;
-            String stackOut_21_2 = null;
+            Throwable var2_ref = null;
+            RuntimeException var2_ref2 = null;
             var7 = ZombieDawn.field_J;
             try {
               L0: {
@@ -219,8 +181,7 @@ final class hl implements Iterator {
                               break L4;
                             } else {
                               if (var4[var5].substring(0, var6).trim().equals(var2)) {
-                                stackOut_11_0 = 1;
-                                stackIn_12_0 = stackOut_11_0;
+                                stackIn_12_0 = 1;
                                 decompiledRegionSelector0 = 1;
                                 break L1;
                               } else {
@@ -244,12 +205,10 @@ final class hl implements Iterator {
                   if (decompiledRegionSelector0 == 0) {
                     L6: {
                       if (null == param1.getParameter("tuhstatbut")) {
-                        stackOut_18_0 = 0;
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_0 = 0;
                         break L6;
                       } else {
-                        stackOut_17_0 = 1;
-                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_19_0 = 1;
                         break L6;
                       }
                     }
@@ -260,8 +219,7 @@ final class hl implements Iterator {
                     break L0;
                   }
                 } else {
-                  stackOut_2_0 = 1;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = 1;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 }
@@ -270,27 +228,19 @@ final class hl implements Iterator {
               decompiledCaughtException = decompiledCaughtParameter1;
               L7: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_20_0 = (RuntimeException) (var2_ref2);
-                stackOut_20_1 = new StringBuilder().append("hl.B(").append(param0).append(',');
-                stackIn_22_0 = stackOut_20_0;
-                stackIn_22_1 = stackOut_20_1;
-                stackIn_21_0 = stackOut_20_0;
-                stackIn_21_1 = stackOut_20_1;
+                stackIn_22_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_22_1 = new StringBuilder().append("hl.B(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-                  stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-                  stackOut_22_2 = "null";
-                  stackIn_23_0 = stackOut_22_0;
-                  stackIn_23_1 = stackOut_22_1;
-                  stackIn_23_2 = stackOut_22_2;
+                  stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+                  stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+                  stackIn_23_2 = "null";
                   break L7;
                 } else {
-                  stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-                  stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-                  stackOut_21_2 = "{...}";
-                  stackIn_23_0 = stackOut_21_0;
-                  stackIn_23_1 = stackOut_21_1;
-                  stackIn_23_2 = stackOut_21_2;
+                  stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+                  stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+                  stackIn_23_2 = "{...}";
                   break L7;
                 }
               }
@@ -314,7 +264,7 @@ final class hl implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = ZombieDawn.field_J;
         if (this.field_e == this.field_a.field_c[this.field_i - 1]) {
           L0: while (true) {

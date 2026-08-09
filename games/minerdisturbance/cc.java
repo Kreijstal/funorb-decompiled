@@ -76,7 +76,7 @@ abstract class cc extends kn {
           }
         }
         gl.field_u[dk.field_e] = rc.a(re.field_a[17], 100, oc.field_f);
-        sa discarded$2 = mg.a(1963987425, gl.field_u[dk.field_e]);
+        mg.a(1963987425, gl.field_u[dk.field_e]);
         sd.field_c[dk.field_e] = param0;
         if (param1 != 136989569) {
           cc.a(25, 120);
@@ -96,7 +96,7 @@ abstract class cc extends kn {
     }
 
     final fe m(int param0) {
-        fe var2 = null;
+        fe var2;
         var2 = super.m(123);
         if (param0 > 107) {
           if (var2 != null) {
@@ -115,12 +115,12 @@ abstract class cc extends kn {
     }
 
     final static void a(byte param0) {
-        cm var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        cm var6 = null;
+        cm var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        cm var6;
         L0: {
           var5 = MinerDisturbance.field_ab;
           var6 = (cm) ((Object) ce.field_a.b(94));
@@ -187,14 +187,10 @@ abstract class cc extends kn {
     }
 
     boolean n(int param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_12_0 = 0;
         int stackIn_24_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var2;
+        int var3;
         var2 = this.f((byte) 116);
         var3 = -this.field_J + var2;
         if (0 >= var3) {
@@ -220,15 +216,13 @@ abstract class cc extends kn {
                     if (this.field_K) {
                       break L2;
                     } else {
-                      stackOut_22_0 = 1;
-                      stackIn_24_0 = stackOut_22_0;
+                      stackIn_24_0 = 1;
                       break L1;
                     }
                   }
                 }
               }
-              stackOut_23_0 = 0;
-              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_0 = 0;
               break L1;
             }
             return stackIn_24_0 != 0;
@@ -250,12 +244,10 @@ abstract class cc extends kn {
               } else {
                 L4: {
                   if (this.field_K) {
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = 0;
                     break L4;
                   } else {
-                    stackOut_10_0 = 1;
-                    stackIn_12_0 = stackOut_10_0;
+                    stackIn_12_0 = 1;
                     break L4;
                   }
                 }

@@ -30,8 +30,6 @@ final class dg {
         gj stackIn_4_0 = null;
         gj stackIn_8_0 = null;
         gj stackIn_14_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -39,17 +37,6 @@ final class dg {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        gj stackOut_7_0 = null;
-        gj stackOut_13_0 = null;
-        gj stackOut_3_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         try {
           L0: {
             L1: {
@@ -59,8 +46,7 @@ final class dg {
                 if (-1 != (param0.length() ^ -1)) {
                   var2_int = param0.indexOf('@');
                   if (var2_int == -1) {
-                    stackOut_7_0 = dh.field_d;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = dh.field_d;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -76,8 +62,7 @@ final class dg {
                     var4 = param0.substring(1 + var2_int);
                     var5 = ha.a(92, var3);
                     if (var5 != null) {
-                      stackOut_13_0 = (gj) (var5);
-                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_14_0 = (gj) (var5);
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -89,8 +74,7 @@ final class dg {
                 }
               }
             }
-            stackOut_3_0 = bj.field_h;
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = bj.field_h;
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -98,27 +82,19 @@ final class dg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var2);
-            stackOut_15_1 = new StringBuilder().append("dg.C(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var2);
+
+            stackIn_17_1 = new StringBuilder().append("dg.C(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L3;
             }
           }

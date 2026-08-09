@@ -9,33 +9,27 @@ final class djb extends qc {
     static ima[][] field_s;
 
     final void a(int param0) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        int var3 = 0;
-        tsa[] var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        int var8_int = 0;
-        StringBuilder var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        rqa var12_ref_rqa = null;
-        int var12 = 0;
-        rqa var13 = null;
-        int var14 = 0;
-        String var15 = null;
-        tsa var16 = null;
-        vga var17 = null;
-        int stackIn_19_0 = 0;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
         int stackIn_20_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_21_1 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_20_1 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_19_1 = 0;
+        int var3;
+        tsa[] var4;
+        int var5;
+        String var6;
+        int var8_int;
+        StringBuilder var8;
+        int var9;
+        int var10;
+        int var11;
+        rqa var12_ref_rqa;
+        int var12;
+        rqa var13;
+        int var14;
+        String var15;
+        tsa var16;
+        vga var17;
         L0: {
           var14 = VoidHunters.field_G;
           var15 = this.field_p.l(-14453);
@@ -80,7 +74,7 @@ final class djb extends qc {
                   if (var10 == 0) {
                     break L3;
                   } else {
-                    if (var9 >= var11) {
+                    if ((var9 ^ -1) <= (var11 ^ -1)) {
                       break L3;
                     } else {
                       var12 = ((rqa) ((Object) var17.a((byte) -54))).field_k.charAt(var9);
@@ -88,7 +82,7 @@ final class djb extends qc {
                       L4: while (true) {
                         if (var13 == null) {
                           if (var10 != 0) {
-                            discarded$2 = var8.append((char) var12);
+                            discarded$0 = var8.append((char) var12);
                             var9++;
                             continue L2;
                           } else {
@@ -97,20 +91,15 @@ final class djb extends qc {
                           }
                         } else {
                           L5: {
-                            stackOut_18_0 = var10;
-                            stackIn_20_0 = stackOut_18_0;
-                            stackIn_19_0 = stackOut_18_0;
+                            stackIn_20_0 = var10;
+
                             if (var13.field_k.charAt(var9) != var12) {
-                              stackOut_20_0 = stackIn_20_0;
-                              stackOut_20_1 = 0;
-                              stackIn_21_0 = stackOut_20_0;
-                              stackIn_21_1 = stackOut_20_1;
+                              stackIn_21_0 = stackIn_20_0;
+                              stackIn_21_1 = 0;
                               break L5;
                             } else {
-                              stackOut_19_0 = stackIn_19_0;
-                              stackOut_19_1 = 1;
-                              stackIn_21_0 = stackOut_19_0;
-                              stackIn_21_1 = stackOut_19_1;
+                              stackIn_21_0 = stackIn_20_0;
+                              stackIn_21_1 = 1;
                               break L5;
                             }
                           }
@@ -128,7 +117,7 @@ final class djb extends qc {
                     break L6;
                   } else {
                     var12++;
-                    discarded$3 = var8.append("()");
+                    discarded$1 = var8.append("()");
                     if ((var17.c(0) ^ -1) != -2) {
                       break L6;
                     } else {
@@ -172,20 +161,20 @@ final class djb extends qc {
     }
 
     final String[] d(int param0) {
-        int incrementValue$1 = 0;
-        int var3 = 0;
-        tsa[] var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        String[] var8 = null;
-        int var8_int = 0;
-        int var9 = 0;
-        rqa var10 = null;
-        int var10_int = 0;
-        int var11 = 0;
-        String var12 = null;
-        tsa var13 = null;
-        vga var14 = null;
+        int incrementValue$0 = 0;
+        int var3;
+        tsa[] var4;
+        int var5;
+        String var6;
+        int var8_int;
+        String[] var8;
+        int var9;
+        int var10_int;
+        rqa var10;
+        int var11;
+        String var12;
+        tsa var13;
+        vga var14;
         L0: {
           var11 = VoidHunters.field_G;
           if (param0 < -4) {
@@ -276,9 +265,9 @@ final class djb extends qc {
           if (var10 == null) {
             return var8;
           } else {
-            incrementValue$1 = var9;
+            incrementValue$0 = var9;
             var9++;
-            var8[incrementValue$1] = var10.field_l;
+            var8[incrementValue$0] = var10.field_l;
             var10 = (rqa) ((Object) var14.a(1900));
             continue L7;
           }
@@ -317,24 +306,12 @@ final class djb extends qc {
             ipb var7 = null;
             int stackIn_6_0 = 0;
             int stackIn_9_0 = 0;
-            RuntimeException stackIn_11_0 = null;
-            StringBuilder stackIn_11_1 = null;
             RuntimeException stackIn_12_0 = null;
             StringBuilder stackIn_12_1 = null;
             RuntimeException stackIn_13_0 = null;
             StringBuilder stackIn_13_1 = null;
             String stackIn_13_2 = null;
             Throwable decompiledCaughtException = null;
-            int stackOut_5_0 = 0;
-            int stackOut_8_0 = 0;
-            RuntimeException stackOut_10_0 = null;
-            StringBuilder stackOut_10_1 = null;
-            RuntimeException stackOut_12_0 = null;
-            StringBuilder stackOut_12_1 = null;
-            String stackOut_12_2 = null;
-            RuntimeException stackOut_11_0 = null;
-            StringBuilder stackOut_11_1 = null;
-            String stackOut_11_2 = null;
             try {
               L0: {
                 try {
@@ -354,8 +331,7 @@ final class djb extends qc {
                       throw new ojb(var7.a((byte) -69).field_g);
                     } else {
                       this.a(var5.a((byte) 114, this.field_t), -110);
-                      stackOut_5_0 = 1;
-                      stackIn_6_0 = stackOut_5_0;
+                      stackIn_6_0 = 1;
                       break L1;
                     }
                   }
@@ -370,8 +346,7 @@ final class djb extends qc {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var3_ref = (gva) (Object) decompiledCaughtException;
                   this.a((byte) 89, var3_ref.field_b);
-                  stackOut_8_0 = 0;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = 0;
                   return stackIn_9_0 != 0;
                 }
                 break L0;
@@ -380,27 +355,19 @@ final class djb extends qc {
               decompiledCaughtException = decompiledCaughtParameter2;
               L3: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_10_0 = (RuntimeException) (var3_ref2);
-                stackOut_10_1 = new StringBuilder().append("djb.G(").append(param0).append(',');
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_12_1 = stackOut_10_1;
-                stackIn_11_0 = stackOut_10_0;
-                stackIn_11_1 = stackOut_10_1;
+                stackIn_12_0 = (RuntimeException) (var3_ref2);
+
+                stackIn_12_1 = new StringBuilder().append("djb.G(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-                  stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-                  stackOut_12_2 = "null";
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
-                  stackIn_13_2 = stackOut_12_2;
+                  stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+                  stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+                  stackIn_13_2 = "null";
                   break L3;
                 } else {
-                  stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-                  stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackOut_11_2 = "{...}";
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
-                  stackIn_13_2 = stackOut_11_2;
+                  stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+                  stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+                  stackIn_13_2 = "{...}";
                   break L3;
                 }
               }
@@ -420,53 +387,25 @@ final class djb extends qc {
     }
 
     final boolean a(int param0, char param1, int param2) {
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        String var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        String var12 = null;
+        boolean discarded$0 = false;
         int stackIn_17_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_19_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_21_1 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_23_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
         int stackIn_29_0 = 0;
         int stackIn_32_0 = 0;
-        int stackOut_28_0 = 0;
-        char stackOut_27_0 = 0;
-        char stackOut_31_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_19_1 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_20_1 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_23_1 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_24_1 = 0;
+        String var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        String var12;
         var11 = VoidHunters.field_G;
         if (this.c(13462)) {
           L0: {
@@ -487,24 +426,20 @@ final class djb extends qc {
             if (var9 >= var5) {
               L2: {
                 if (-1 <= (var5 ^ -1)) {
-                  stackOut_28_0 = 65535;
-                  stackIn_29_0 = stackOut_28_0;
+                  stackIn_29_0 = 65535;
                   break L2;
                 } else {
-                  stackOut_27_0 = var12.charAt(var5 + -1);
-                  stackIn_29_0 = stackOut_27_0;
+                  stackIn_29_0 = var12.charAt(var5 + -1);
                   break L2;
                 }
               }
               L3: {
                 var9 = stackIn_29_0;
                 if (var12.length() > var5) {
-                  stackOut_31_0 = var12.charAt(var5);
-                  stackIn_32_0 = stackOut_31_0;
+                  stackIn_32_0 = var12.charAt(var5);
                   break L3;
                 } else {
-                  stackOut_30_0 = 65535;
-                  stackIn_32_0 = stackOut_30_0;
+                  stackIn_32_0 = 65535;
                   break L3;
                 }
               }
@@ -613,12 +548,12 @@ final class djb extends qc {
                           }
                         }
                       }
-                      discarded$6 = this.field_p.a(101, -1, '￿');
+                      this.field_p.a(101, -1, '￿');
                       break L9;
                     }
                   }
                   L13: {
-                    discarded$7 = super.a(param0, param1, -40);
+                    discarded$0 = super.a(param0, param1, -40);
                     var4 = this.field_p.l(-14453);
                     var5 = this.field_p.j(0);
                     if (var6 == 0) {
@@ -629,7 +564,7 @@ final class djb extends qc {
                           if (param1 != 34) {
                             break L13;
                           } else {
-                            discarded$8 = this.field_p.a(-1, param2 + 39, '"');
+                            this.field_p.a(-1, param2 + 39, '"');
                             this.field_p.a(var5, 31401, var5);
                             break L13;
                           }
@@ -644,7 +579,7 @@ final class djb extends qc {
                             if (param1 != 34) {
                               break L13;
                             } else {
-                              discarded$9 = this.field_p.a(-1, param2 + 39, '"');
+                              this.field_p.a(-1, param2 + 39, '"');
                               this.field_p.a(var5, 31401, var5);
                               break L13;
                             }
@@ -661,7 +596,7 @@ final class djb extends qc {
                           if (param1 != 34) {
                             break L13;
                           } else {
-                            discarded$10 = this.field_p.a(-1, param2 + 39, '"');
+                            this.field_p.a(-1, param2 + 39, '"');
                             this.field_p.a(var5, 31401, var5);
                             break L13;
                           }
@@ -678,7 +613,7 @@ final class djb extends qc {
                       if (param1 != 39) {
                         break L4;
                       } else {
-                        discarded$11 = this.field_p.a(-1, -1, '\'');
+                        this.field_p.a(-1, -1, '\'');
                         this.field_p.a(var5, 31401, var5);
                         break L4;
                       }
@@ -705,78 +640,61 @@ final class djb extends qc {
                       if (var7 != 0) {
                         break L15;
                       } else {
-                        stackOut_11_0 = 0;
-                        stackIn_17_0 = stackOut_11_0;
+                        stackIn_17_0 = 0;
                         break L14;
                       }
                     }
                   }
                   if (92 == var10) {
-                    stackOut_15_0 = 1;
-                    stackIn_17_0 = stackOut_15_0;
+                    stackIn_17_0 = 1;
                     break L14;
                   } else {
-                    stackOut_14_0 = 0;
-                    stackIn_17_0 = stackOut_14_0;
+                    stackIn_17_0 = 0;
                     break L14;
                   }
                 }
                 L16: {
                   L17: {
                     var8 = stackIn_17_0;
-                    stackOut_17_0 = var6;
-                    stackIn_20_0 = stackOut_17_0;
-                    stackIn_18_0 = stackOut_17_0;
+                    stackIn_20_0 = var6;
+
                     if (var7 != 0) {
                       break L17;
                     } else {
-                      stackOut_18_0 = stackIn_18_0;
-                      stackIn_20_0 = stackOut_18_0;
-                      stackIn_19_0 = stackOut_18_0;
+
                       if (var10 != 34) {
                         break L17;
                       } else {
-                        stackOut_19_0 = stackIn_19_0;
-                        stackOut_19_1 = 1;
-                        stackIn_21_0 = stackOut_19_0;
-                        stackIn_21_1 = stackOut_19_1;
+                        stackIn_21_0 = stackIn_20_0;
+                        stackIn_21_1 = 1;
                         break L16;
                       }
                     }
                   }
-                  stackOut_20_0 = stackIn_20_0;
-                  stackOut_20_1 = 0;
-                  stackIn_21_0 = stackOut_20_0;
-                  stackIn_21_1 = stackOut_20_1;
+                  stackIn_21_0 = stackIn_20_0;
+                  stackIn_21_1 = 0;
                   break L16;
                 }
                 L18: {
                   L19: {
                     var6 = stackIn_21_0 ^ stackIn_21_1;
-                    stackOut_21_0 = var7;
-                    stackIn_24_0 = stackOut_21_0;
-                    stackIn_22_0 = stackOut_21_0;
+                    stackIn_24_0 = var7;
+
                     if (var6 != 0) {
                       break L19;
                     } else {
-                      stackOut_22_0 = stackIn_22_0;
-                      stackIn_24_0 = stackOut_22_0;
-                      stackIn_23_0 = stackOut_22_0;
+
                       if (var10 != 39) {
                         break L19;
                       } else {
-                        stackOut_23_0 = stackIn_23_0;
-                        stackOut_23_1 = 1;
-                        stackIn_25_0 = stackOut_23_0;
-                        stackIn_25_1 = stackOut_23_1;
+                        stackIn_25_0 = stackIn_24_0;
+                        stackIn_25_1 = 1;
                         break L18;
                       }
                     }
                   }
-                  stackOut_24_0 = stackIn_24_0;
-                  stackOut_24_1 = 0;
-                  stackIn_25_0 = stackOut_24_0;
-                  stackIn_25_1 = stackOut_24_1;
+                  stackIn_25_0 = stackIn_24_0;
+                  stackIn_25_1 = 0;
                   break L18;
                 }
                 var7 = stackIn_25_0 ^ stackIn_25_1;
@@ -798,8 +716,6 @@ final class djb extends qc {
         vga var6 = null;
         vga stackIn_9_0 = null;
         vga stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -807,16 +723,6 @@ final class djb extends qc {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        vga stackOut_10_0 = null;
-        vga stackOut_8_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -826,13 +732,11 @@ final class djb extends qc {
             L1: while (true) {
               if (var4 >= this.field_t.length) {
                 if (param1 == 28) {
-                  stackOut_10_0 = (vga) (var3);
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = (vga) (var3);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_8_0 = (vga) null;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = (vga) null;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -855,27 +759,19 @@ final class djb extends qc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var3_ref);
-            stackOut_12_1 = new StringBuilder().append("djb.D(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var3_ref);
+
+            stackIn_14_1 = new StringBuilder().append("djb.D(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }

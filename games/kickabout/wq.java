@@ -34,8 +34,12 @@ final class wq {
     }
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
+        int stackIn_42_0 = 0;
+        String stackIn_70_0 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         long var3_long = 0L;
         int var3 = 0;
@@ -54,14 +58,6 @@ final class wq {
         String var14 = null;
         String var15 = null;
         String var16 = null;
-        int stackIn_42_0 = 0;
-        String stackIn_70_0 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_41_0 = 0;
-        int stackOut_40_0 = 0;
-        String stackOut_69_0 = null;
-        String stackOut_68_0 = null;
         var8 = Kickabout.field_G;
         try {
           L0: {
@@ -183,13 +179,11 @@ final class wq {
                           break L12;
                         } else {
                           L14: {
-                            if (var3 == um.field_e.field_h) {
-                              stackOut_41_0 = 16777215;
-                              stackIn_42_0 = stackOut_41_0;
+                            if ((var3 ^ -1) == (um.field_e.field_h ^ -1)) {
+                              stackIn_42_0 = 16777215;
                               break L14;
                             } else {
-                              stackOut_40_0 = 11184812;
-                              stackIn_42_0 = stackOut_40_0;
+                              stackIn_42_0 = 11184812;
                               break L14;
                             }
                           }
@@ -287,12 +281,10 @@ final class wq {
                       var3 = pq.field_J / 5;
                       var4 = pq.field_J % 5;
                       if (var4 != 0) {
-                        stackOut_69_0 = Integer.toString(var4);
-                        stackIn_70_0 = stackOut_69_0;
+                        stackIn_70_0 = Integer.toString(var4);
                         break L24;
                       } else {
-                        stackOut_68_0 = "all";
-                        stackIn_70_0 = stackOut_68_0;
+                        stackIn_70_0 = "all";
                         break L24;
                       }
                     }

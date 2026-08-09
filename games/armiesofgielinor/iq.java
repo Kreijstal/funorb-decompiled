@@ -20,8 +20,6 @@ final class iq {
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_10_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -29,22 +27,10 @@ final class iq {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_7_0 = 0;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             if (-2 != (param1.length() ^ -1)) {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -58,13 +44,11 @@ final class iq {
               }
               var2_int = param1.charAt(0);
               if (!Character.isLowerCase((char) var2_int)) {
-                stackOut_9_0 = 0;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = 0;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_7_0 = 1;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -74,27 +58,19 @@ final class iq {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var2);
-            stackOut_11_1 = new StringBuilder().append("iq.C(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var2);
+
+            stackIn_13_1 = new StringBuilder().append("iq.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L2;
             }
           }
@@ -114,14 +90,8 @@ final class iq {
     final void a(int param0) {
         if (wg.a(-33, db.a(true, this.field_f), db.a(true, this.field_f + this.field_i), u.a(this.field_c, (byte) 94), u.a(30 + this.field_c, (byte) 94))) {
           fe.a(db.a(true, this.field_f), u.a(this.field_c, (byte) 94), this.field_i, 30, il.field_s, ci.field_e, 0, 0);
-          if (ArmiesOfGielinor.field_M) {
-            fe.a(db.a(true, this.field_f), u.a(this.field_c, (byte) 94), this.field_i, 30, il.field_s, nd.field_b, 0, 0);
-            fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), u.a(this.field_c - -30, (byte) 94), param0, true);
-            return;
-          } else {
-            fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), u.a(this.field_c - -30, (byte) 94), param0, true);
-            return;
-          }
+          fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), u.a(this.field_c - -30, (byte) 94), param0, true);
+          return;
         } else {
           fe.a(db.a(true, this.field_f), u.a(this.field_c, (byte) 94), this.field_i, 30, il.field_s, nd.field_b, 0, 0);
           fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), u.a(this.field_c - -30, (byte) 94), param0, true);

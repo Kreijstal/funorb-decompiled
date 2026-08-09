@@ -18,12 +18,10 @@ final class lia implements qm {
     }
 
     public final void a(int param0) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
         if (null == this.field_e) {
           this.field_a = 0;
           if (param0 != 12574) {
-            discarded$4 = this.a(51, -94, true);
+            this.a(51, -94, true);
             this.field_b = 0;
             return;
           } else {
@@ -31,13 +29,14 @@ final class lia implements qm {
             return;
           }
         } else {
+          this.field_e.a(false);
           this.field_e = null;
           this.field_a = 0;
           if (param0 == 12574) {
             this.field_b = 0;
             return;
           } else {
-            discarded$5 = this.a(51, -94, true);
+            this.a(51, -94, true);
             this.field_b = 0;
             return;
           }
@@ -45,17 +44,11 @@ final class lia implements qm {
     }
 
     public final boolean a(int param0, int param1, boolean param2) {
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_11_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
+        int var4;
+        int var5;
         this.field_d = (byte)param1;
         if (param2) {
           this.field_a = param0;
@@ -73,15 +66,14 @@ final class lia implements qm {
             }
             if (this.field_e != null) {
               L1: {
+                this.field_e.a(false);
                 this.field_e = this.field_c.field_jd.a(this.field_a, var5, 0, var4, this.field_e);
                 this.field_b = this.field_a;
                 if (null == this.field_e) {
-                  stackOut_14_0 = 0;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = 0;
                   break L1;
                 } else {
-                  stackOut_13_0 = 1;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = 1;
                   break L1;
                 }
               }
@@ -91,12 +83,10 @@ final class lia implements qm {
                 this.field_e = this.field_c.field_jd.a(this.field_a, var5, 0, var4, this.field_e);
                 this.field_b = this.field_a;
                 if (null == this.field_e) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = 0;
                   break L2;
                 } else {
-                  stackOut_9_0 = 1;
-                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_11_0 = 1;
                   break L2;
                 }
               }
@@ -105,12 +95,10 @@ final class lia implements qm {
           } else {
             L3: {
               if (null == this.field_e) {
-                stackOut_19_0 = 0;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = 0;
                 break L3;
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 1;
                 break L3;
               }
             }
@@ -122,13 +110,12 @@ final class lia implements qm {
     }
 
     public final jaclib.memory.Buffer a(int param0, boolean param1) {
-        boolean discarded$7 = false;
         if (null == this.field_e) {
             return null;
         }
         param1 = param1 & this.field_f;
         if (param0 != -15730) {
-            discarded$7 = this.a(52, 89, false);
+            this.a(52, 89, false);
             if (this.field_g) {
                 return null;
             }
@@ -149,7 +136,6 @@ final class lia implements qm {
     }
 
     public final boolean a(boolean param0) {
-        boolean discarded$8 = false;
         if (param0) {
           if (this.field_g) {
             if (!jagdx.ah.a(this.field_e.Unlock(), (byte) -109)) {
@@ -162,7 +148,7 @@ final class lia implements qm {
             return false;
           }
         } else {
-          discarded$8 = this.a(-68, -25, false);
+          this.a(-68, -25, false);
           if (this.field_g) {
             if (!jagdx.ah.a(this.field_e.Unlock(), (byte) -109)) {
               return false;

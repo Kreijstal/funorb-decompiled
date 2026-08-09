@@ -22,23 +22,12 @@ final class wk extends java.awt.Canvas {
         wg var2 = null;
         RuntimeException var2_ref = null;
         wg stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        wg stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -51,35 +40,26 @@ final class wk extends java.awt.Canvas {
             }
             var2 = new wg(false);
             var2.field_a = param1;
-            stackOut_2_0 = (wg) (var2);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (wg) (var2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2_ref);
-            stackOut_4_1 = new StringBuilder().append("wk.A(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2_ref);
+
+            stackIn_6_1 = new StringBuilder().append("wk.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -97,7 +77,6 @@ final class wk extends java.awt.Canvas {
     }
 
     final static boolean a(byte param0) {
-        wg discarded$3 = null;
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
@@ -105,8 +84,6 @@ final class wk extends java.awt.Canvas {
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_2_0 = 0;
         var1_ref = i.field_J;
         synchronized (var1_ref) {
           L0: {
@@ -117,18 +94,16 @@ final class wk extends java.awt.Canvas {
                   break L1;
                 } else {
                   var3 = (String[]) null;
-                  discarded$3 = wk.a((byte) -108, (String[]) null);
+                  wk.a((byte) -108, (String[]) null);
                   break L1;
                 }
               }
               ta.field_d = r.field_g[pf.field_a];
               pf.field_a = pf.field_a + 1 & 127;
-              stackOut_6_0 = 1;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               return stackIn_3_0 != 0;
             }
           }

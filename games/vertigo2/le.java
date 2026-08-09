@@ -37,21 +37,21 @@ final class le {
     }
 
     final static void b(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         be var4 = null;
         int var4_int = 0;
-        ub var5_ref_ub = null;
         int var5 = 0;
+        ub var5_ref_ub = null;
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
         mi var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {

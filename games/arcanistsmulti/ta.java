@@ -14,7 +14,7 @@ final class ta {
     static boolean field_d;
 
     final static int a(boolean param0, int param1) {
-        int var2 = 0;
+        int var2;
         var2 = 7 & 6 + param1;
         if (param0) {
           if (0 != var2) {

@@ -20,8 +20,6 @@ class uc extends re implements jk {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         boolean stackIn_5_0 = false;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -29,28 +27,16 @@ class uc extends re implements jk {
         String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        boolean stackOut_4_0 = false;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             if (13 == param1) {
               this.g(true);
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               var5_int = 23 % ((param3 - -13) / 55);
-              stackOut_4_0 = super.a(param0, param1, param2, (byte) 114);
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = super.a(param0, param1, param2, (byte) 114);
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -59,27 +45,19 @@ class uc extends re implements jk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5);
-            stackOut_6_1 = new StringBuilder().append("uc.P(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5);
+
+            stackIn_8_1 = new StringBuilder().append("uc.P(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L1;
             }
           }
@@ -93,22 +71,12 @@ class uc extends re implements jk {
     }
 
     final void a(int param0, int param1, String param2) {
-        kf discarded$2 = null;
-        kf discarded$3 = null;
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        vc var5 = null;
-        int var6 = 0;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        vc stackIn_11_0 = null;
         vc stackIn_12_0 = null;
         vc stackIn_13_0 = null;
         String stackIn_13_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
@@ -116,24 +84,10 @@ class uc extends re implements jk {
         String stackIn_31_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        vc stackOut_10_0 = null;
-        vc stackOut_12_0 = null;
-        String stackOut_12_1 = null;
-        vc stackOut_11_0 = null;
-        String stackOut_11_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        vc var5 = null;
+        int var6 = 0;
         var6 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
@@ -141,20 +95,15 @@ class uc extends re implements jk {
               L1: {
                 this.field_lb = true;
                 var4_int = -97 / ((param0 - 31) / 49);
-                stackOut_3_0 = this;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_5_0 = this;
+
                 if (-257 != (param1 ^ -1)) {
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = 0;
-                  stackIn_6_0 = stackOut_5_0;
-                  stackIn_6_1 = stackOut_5_1;
+                  stackIn_6_0 = this;
+                  stackIn_6_1 = 0;
                   break L1;
                 } else {
-                  stackOut_4_0 = this;
-                  stackOut_4_1 = 1;
-                  stackIn_6_0 = stackOut_4_0;
-                  stackIn_6_1 = stackOut_4_1;
+                  stackIn_6_0 = this;
+                  stackIn_6_1 = 1;
                   break L1;
                 }
               }
@@ -170,7 +119,7 @@ class uc extends re implements jk {
                       if ((param1 ^ -1) != -257) {
                         break L4;
                       } else {
-                        discarded$2 = var5.a(-1, og.field_j, (vd) (this));
+                        var5.a(-1, og.field_j, (vd) (this));
                         if (var6 == 0) {
                           break L2;
                         } else {
@@ -179,20 +128,15 @@ class uc extends re implements jk {
                       }
                     }
                     L5: {
-                      stackOut_10_0 = (vc) (var5);
-                      stackIn_12_0 = stackOut_10_0;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_12_0 = (vc) (var5);
+
                       if (!this.field_ib) {
-                        stackOut_12_0 = (vc) ((Object) stackIn_12_0);
-                        stackOut_12_1 = a.field_e;
-                        stackIn_13_0 = stackOut_12_0;
-                        stackIn_13_1 = stackOut_12_1;
+                        stackIn_13_0 = (vc) ((Object) stackIn_12_0);
+                        stackIn_13_1 = a.field_e;
                         break L5;
                       } else {
-                        stackOut_11_0 = (vc) ((Object) stackIn_11_0);
-                        stackOut_11_1 = og.field_j;
-                        stackIn_13_0 = stackOut_11_0;
-                        stackIn_13_1 = stackOut_11_1;
+                        stackIn_13_0 = (vc) ((Object) stackIn_12_0);
+                        stackIn_13_1 = og.field_j;
                         break L5;
                       }
                     }
@@ -238,7 +182,7 @@ class uc extends re implements jk {
                       }
                     }
                     if (9 == param1) {
-                      discarded$3 = var5.a(-1, qj.field_eb, (vd) (this));
+                      var5.a(-1, qj.field_eb, (vd) (this));
                       if (var6 == 0) {
                         break L6;
                       } else {
@@ -265,27 +209,19 @@ class uc extends re implements jk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var4 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var4);
-            stackOut_28_1 = new StringBuilder().append("uc.J(").append(param0).append(',').append(param1).append(',');
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackIn_30_0 = (RuntimeException) (var4);
+
+            stackIn_30_1 = new StringBuilder().append("uc.J(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L10;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L10;
             }
           }
@@ -301,10 +237,6 @@ class uc extends re implements jk {
     final void g(boolean param0) {
         int stackIn_12_0 = 0;
         int stackIn_26_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
         if (!this.field_D) {
           return;
         } else {
@@ -313,12 +245,10 @@ class uc extends re implements jk {
             if (this.field_ib) {
               L0: {
                 if (param0) {
-                  stackOut_25_0 = 0;
-                  stackIn_26_0 = stackOut_25_0;
+                  stackIn_26_0 = 0;
                   break L0;
                 } else {
-                  stackOut_24_0 = 1;
-                  stackIn_26_0 = stackOut_24_0;
+                  stackIn_26_0 = 1;
                   break L0;
                 }
               }
@@ -346,12 +276,10 @@ class uc extends re implements jk {
             if (this.field_ib) {
               L1: {
                 if (param0) {
-                  stackOut_11_0 = 0;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = 0;
                   break L1;
                 } else {
-                  stackOut_10_0 = 1;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = 1;
                   break L1;
                 }
               }
@@ -380,22 +308,12 @@ class uc extends re implements jk {
 
     public void a(int param0, int param1, int param2, int param3, kf param4) {
         RuntimeException var6 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -426,27 +344,19 @@ class uc extends re implements jk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var6);
-            stackOut_7_1 = new StringBuilder().append("uc.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var6);
+
+            stackIn_9_1 = new StringBuilder().append("uc.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }

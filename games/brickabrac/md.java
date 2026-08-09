@@ -11,17 +11,16 @@ final class md extends km {
     static String field_w;
 
     final static int f(byte param0) {
-        RuntimeException var1 = null;
+        int stackIn_32_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
         java.awt.Component var8 = null;
-        int stackIn_32_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_31_0 = 0;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -101,8 +100,7 @@ final class md extends km {
                     }
                   }
                 }
-                stackOut_31_0 = var3;
-                stackIn_32_0 = stackOut_31_0;
+                stackIn_32_0 = var3;
                 break L0;
               } else {
                 L7: {
@@ -138,40 +136,16 @@ final class md extends km {
         CharSequence var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             var3_int = param2.field_l;
@@ -180,13 +154,11 @@ final class md extends km {
             param2.b(-1, var4.length);
             param2.field_l = param2.field_l + so.field_d.a((byte) -119, var4.length, 0, param2.field_k, param2.field_l, var4);
             if (param0 == 26152) {
-              stackOut_3_0 = param2.field_l - var3_int;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = param2.field_l - var3_int;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = -117;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = -117;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -195,56 +167,40 @@ final class md extends km {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("md.B(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("md.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
           L2: {
-            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+
+
+            stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }
-          throw qb.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_8_0), stackIn_11_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_2_0;
@@ -261,16 +217,10 @@ final class md extends km {
     }
 
     final boolean a(byte param0, int param1) {
-        int var3 = 0;
+        int var3;
         int stackIn_10_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         if (-1 < (param1 ^ -1)) {
           return false;
         } else {
@@ -286,12 +236,10 @@ final class md extends km {
           if (-26 == (var3 ^ -1)) {
             L1: {
               if (0 >= this.field_u) {
-                stackOut_19_0 = 0;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = 0;
                 break L1;
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 1;
                 break L1;
               }
             }
@@ -309,14 +257,12 @@ final class md extends km {
                       if (lm.a((byte) -10)) {
                         break L3;
                       } else {
-                        stackOut_14_0 = 1;
-                        stackIn_16_0 = stackOut_14_0;
+                        stackIn_16_0 = 1;
                         break L2;
                       }
                     }
                   }
-                  stackOut_15_0 = 0;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_0 = 0;
                   break L2;
                 }
                 return stackIn_16_0 != 0;
@@ -324,12 +270,10 @@ final class md extends km {
             } else {
               L4: {
                 if (gh.field_b.length - 1 <= this.field_u) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = 0;
                   break L4;
                 } else {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_0 = 1;
                   break L4;
                 }
               }
@@ -340,52 +284,40 @@ final class md extends km {
     }
 
     final void a(int param0, int param1, char param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         L0: {
           var7 = BrickABrac.field_J ? 1 : 0;
           if (!this.a((byte) 113, 0)) {
-            stackOut_2_0 = 1;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 1;
             break L0;
           } else {
-            stackOut_1_0 = 0;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 0;
             break L0;
           }
         }
         L1: {
           var4 = stackIn_3_0;
           if (this.a((byte) 104, 2)) {
-            stackOut_5_0 = 2;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 2;
             break L1;
           } else {
-            stackOut_4_0 = 1;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = 1;
             break L1;
           }
         }
         L2: {
           var5 = stackIn_6_0;
           if (this.a((byte) 111, 3)) {
-            stackOut_8_0 = 3;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 3;
             break L2;
           } else {
-            stackOut_7_0 = var5;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = var5;
             break L2;
           }
         }
@@ -460,18 +392,16 @@ final class md extends km {
     }
 
     final void a(boolean param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        q var6_ref_q = null;
-        int var6 = 0;
-        String var7_ref_String = null;
-        int var7 = 0;
-        int var8_int = 0;
-        q var8 = null;
-        int var9 = 0;
+        int var4;
+        int var5;
+        q var6_ref_q;
+        String var7_ref_String;
+        int var8_int;
+        int var9;
         String stackIn_5_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_3_0 = null;
+        int var6;
+        int var7;
+        q var8;
         var9 = BrickABrac.field_J ? 1 : 0;
         super.a(param0, 2, 98);
         this.field_u = 0;
@@ -513,12 +443,10 @@ final class md extends km {
             L3: {
               var6_ref_q = this.field_m[var5];
               if (-9 != (var6_ref_q.field_f ^ -1)) {
-                stackOut_4_0 = ag.field_D[var6_ref_q.field_f];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = ag.field_D[var6_ref_q.field_f];
                 break L3;
               } else {
-                stackOut_3_0 = this.e((byte) 112);
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = this.e((byte) 112);
                 break L3;
               }
             }
@@ -546,14 +474,14 @@ final class md extends km {
     }
 
     final void b(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        bi var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var2;
+        int var3;
+        int var4;
+        bi var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         L0: {
           var9 = BrickABrac.field_J ? 1 : 0;
           super.b((byte) -27);
@@ -657,20 +585,19 @@ final class md extends km {
     }
 
     final boolean a(int param0, boolean param1, byte param2) {
-        int discarded$7 = 0;
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int var4 = 0;
-        q var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int var4;
+        q var5;
+        int var6;
+        int var7;
+        int var8;
         L0: {
           var8 = BrickABrac.field_J ? 1 : 0;
           if (param2 == 123) {
             break L0;
           } else {
-            discarded$7 = this.b(117, -99);
+            this.b(117, -99);
             break L0;
           }
         }
@@ -687,9 +614,9 @@ final class md extends km {
                 break L1;
               } else {
                 L2: {
-                  fieldTemp$8 = this.field_u + 1;
+                  fieldTemp$2 = this.field_u + 1;
                   this.field_u = this.field_u + 1;
-                  if (fieldTemp$8 >= gh.field_b.length) {
+                  if (fieldTemp$2 >= gh.field_b.length) {
                     this.field_u = gh.field_b.length - 1;
                     break L2;
                   } else {
@@ -724,9 +651,9 @@ final class md extends km {
                   break L1;
                 } else {
                   L4: {
-                    fieldTemp$9 = this.field_u - 1;
+                    fieldTemp$3 = this.field_u - 1;
                     this.field_u = this.field_u - 1;
-                    if (0 <= fieldTemp$9) {
+                    if (0 <= fieldTemp$3) {
                       break L4;
                     } else {
                       this.field_u = 0;
@@ -756,23 +683,13 @@ final class md extends km {
     }
 
     final static void a(String[] args, boolean param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -805,27 +722,19 @@ final class md extends km {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2);
-            stackOut_8_1 = new StringBuilder().append("md.D(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2);
+
+            stackIn_10_1 = new StringBuilder().append("md.D(");
+
             if (args == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }

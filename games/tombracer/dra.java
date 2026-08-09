@@ -14,12 +14,12 @@ final class dra {
     }
 
     final static void a(boolean param0) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         kh var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -37,16 +37,12 @@ final class dra {
                 break L0;
               } else {
                 var1.k(8, -2988);
-                fieldTemp$5 = var1.field_h + 1;
+                fieldTemp$2 = var1.field_h + 1;
                 var1.field_h = var1.field_h + 1;
-                var2 = fieldTemp$5;
+                var2 = fieldTemp$2;
                 hk.a(true, var1);
                 ql.field_k.d(var1.field_h - var2, (byte) -17);
-                if (var3 == 0) {
-                  continue L2;
-                } else {
-                  return;
-                }
+                continue L2;
               }
             }
           }

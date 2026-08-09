@@ -11,61 +11,33 @@ abstract class pib implements mda {
     private boolean field_e;
 
     private final void d(int param0) {
-        int stackIn_2_0 = 0;
-        int stackIn_2_1 = 0;
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
         int stackIn_4_0 = 0;
         int stackIn_4_1 = 0;
         int stackIn_4_2 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_6_1 = 0;
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
         int stackIn_8_2 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_1_1 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
         L0: {
           this.field_g.a(117, (pib) (this));
           if (this.field_f) {
             L1: {
-              stackOut_5_0 = this.field_b;
-              stackOut_5_1 = 10241;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
+              stackIn_7_0 = this.field_b;
+
+              stackIn_7_1 = 10241;
+
               if (!this.field_e) {
-                stackOut_7_0 = stackIn_7_0;
-                stackOut_7_1 = stackIn_7_1;
-                stackOut_7_2 = 9729;
-                stackIn_8_0 = stackOut_7_0;
-                stackIn_8_1 = stackOut_7_1;
-                stackIn_8_2 = stackOut_7_2;
+                stackIn_8_0 = stackIn_7_0;
+                stackIn_8_1 = stackIn_7_1;
+                stackIn_8_2 = 9729;
                 break L1;
               } else {
-                stackOut_6_0 = stackIn_6_0;
-                stackOut_6_1 = stackIn_6_1;
-                stackOut_6_2 = 9987;
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_8_2 = stackOut_6_2;
+                stackIn_8_0 = stackIn_7_0;
+                stackIn_8_1 = stackIn_7_1;
+                stackIn_8_2 = 9987;
                 break L1;
               }
             }
@@ -74,27 +46,19 @@ abstract class pib implements mda {
             break L0;
           } else {
             L2: {
-              stackOut_1_0 = this.field_b;
-              stackOut_1_1 = 10241;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
+              stackIn_3_0 = this.field_b;
+
+              stackIn_3_1 = 10241;
+
               if (!this.field_e) {
-                stackOut_3_0 = stackIn_3_0;
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = 9728;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
+                stackIn_4_0 = stackIn_3_0;
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = 9728;
                 break L2;
               } else {
-                stackOut_2_0 = stackIn_2_0;
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = 9984;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
+                stackIn_4_0 = stackIn_3_0;
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = 9984;
                 break L2;
               }
             }
@@ -136,23 +100,12 @@ abstract class pib implements mda {
     final static phb[] a(asb param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         phb[] stackIn_2_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        phb[] stackOut_1_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (param3 == 0) {
@@ -162,8 +115,7 @@ abstract class pib implements mda {
                 return null;
               }
             } else {
-              stackOut_1_0 = (phb[]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (phb[]) null;
               break L0;
             }
           }
@@ -171,27 +123,19 @@ abstract class pib implements mda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var4);
-            stackOut_7_1 = new StringBuilder().append("pib.C(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("pib.C(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L1;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L1;
             }
           }
@@ -208,7 +152,7 @@ abstract class pib implements mda {
     }
 
     final boolean c(int param0) {
-        int var2 = 0;
+        int var2;
         if (this.field_g.field_U) {
           var2 = this.a((byte) 98);
           this.field_g.a(69, (pib) (this));
@@ -235,24 +179,18 @@ abstract class pib implements mda {
     }
 
     private final int a(byte param0) {
-        int var2 = 0;
+        int var2;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 < 93) {
           L0: {
             this.field_g = (qfa) null;
             var2 = this.field_g.e(this.field_d, 2) * this.field_a;
             if (this.field_e) {
-              stackOut_7_0 = var2 * 4 / 3;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = var2 * 4 / 3;
               break L0;
             } else {
-              stackOut_6_0 = var2;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = var2;
               break L0;
             }
           }
@@ -261,12 +199,10 @@ abstract class pib implements mda {
           L1: {
             var2 = this.field_g.e(this.field_d, 2) * this.field_a;
             if (this.field_e) {
-              stackOut_3_0 = var2 * 4 / 3;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = var2 * 4 / 3;
               break L1;
             } else {
-              stackOut_2_0 = var2;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = var2;
               break L1;
             }
           }
@@ -283,7 +219,7 @@ abstract class pib implements mda {
     }
 
     final void a(byte param0, boolean param1) {
-        int var3 = 0;
+        int var3;
         L0: {
           if (param1 != this.field_e) {
             var3 = this.a((byte) 99);

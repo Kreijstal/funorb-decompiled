@@ -11,20 +11,14 @@ final class am {
     final static boolean a(byte param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -56) {
           L0: {
             field_d = (String) null;
             if (param1 != (-param1 & param1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -32,12 +26,10 @@ final class am {
         } else {
           L1: {
             if (param1 != (-param1 & param1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -46,7 +38,6 @@ final class am {
     }
 
     final static void a(byte param0) {
-        boolean discarded$2 = false;
         if (ih.field_b == null) {
           return;
         } else {
@@ -63,7 +54,7 @@ final class am {
           }
           fi.field_v.requestFocus();
           if (param0 != -16) {
-            discarded$2 = am.a((byte) -28, 121);
+            am.a((byte) -28, 121);
             return;
           } else {
             return;

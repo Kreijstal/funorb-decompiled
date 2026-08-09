@@ -24,9 +24,8 @@ abstract class df {
     }
 
     final static ob b(byte param0) {
-        ob discarded$0 = null;
         if (param0 <= 11) {
-            discarded$0 = df.b((byte) 74);
+            df.b((byte) 74);
             return uf.field_e;
         }
         return uf.field_e;

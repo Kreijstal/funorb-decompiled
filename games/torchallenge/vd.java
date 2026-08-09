@@ -17,7 +17,6 @@ final class vd {
     }
 
     final static void b(int param0) {
-        int discarded$2 = 0;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -45,7 +44,7 @@ final class vd {
               if (param0 == 0) {
                 break L3;
               } else {
-                discarded$2 = vd.c(-60);
+                vd.c(-60);
                 break L3;
               }
             }

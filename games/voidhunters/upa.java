@@ -5,9 +5,8 @@ final class upa implements dja {
     static boolean field_a;
 
     final static String a(int param0) {
-        String discarded$0 = null;
         if (param0 != -8225) {
-            discarded$0 = upa.a(59);
+            upa.a(59);
             return "Lo!";
         }
         return "Lo!";

@@ -32,7 +32,6 @@ final class go {
             jq var8 = null;
             mf stackIn_14_0 = null;
             Throwable decompiledCaughtException = null;
-            mf stackOut_13_0 = null;
             try {
               L0: {
                 L1: {
@@ -89,8 +88,7 @@ final class go {
                     break L6;
                   }
                 }
-                stackOut_13_0 = new mf(var8, param4, param3);
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_0 = new mf(var8, param4, param3);
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {

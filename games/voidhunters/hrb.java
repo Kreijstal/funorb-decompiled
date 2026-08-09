@@ -7,7 +7,7 @@ abstract class hrb {
     private static String field_z;
 
     final int a(boolean param0, long param1) {
-        long var4 = 0L;
+        long var4;
         if (param0) {
           return 36;
         } else {

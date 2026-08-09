@@ -89,9 +89,8 @@ final class ik extends cq implements qi {
     }
 
     public final void a(boolean param0, boolean param1, byte param2) {
-        int discarded$0 = 0;
         if (param2 != -127) {
-            discarded$0 = this.b((byte) 16);
+            this.b((byte) 16);
         }
     }
 

@@ -64,7 +64,6 @@ final class jm {
         int var3 = 0;
         int var4 = 0;
         String var8 = null;
-        String discarded$0 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
         String var6 = "(" + oj.field_G + " " + gb.field_d + " " + tm.field_U + ") " + mn.field_e;
         String var1 = var6;
@@ -73,6 +72,7 @@ final class jm {
             var1 = var6 + ":";
             for (var2 = 0; var2 < jj.field_b; var2++) {
                 var7 = var1 + ' ';
+                var1 = var7;
                 var3 = 255 & vi.field_o.field_k[var2];
                 var4 = var3 >> -1773592156;
                 if (10 > var4) {
@@ -91,7 +91,7 @@ final class jm {
             }
         }
         if (param0 >= -4) {
-            discarded$0 = jm.b(-28);
+            jm.b(-28);
         }
         return var1;
     }

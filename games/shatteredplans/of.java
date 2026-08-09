@@ -30,7 +30,6 @@ final class of {
     }
 
     final static String a(byte param0) {
-        String discarded$5 = null;
         if (ee.field_l != ue.field_a) {
           if (param0 == 42) {
             if (wh.field_a.b(14)) {
@@ -43,7 +42,7 @@ final class of {
               return wh.field_a.a(98);
             }
           } else {
-            discarded$5 = of.a((byte) 108);
+            of.a((byte) 108);
             if (wh.field_a.b(14)) {
               if (ue.field_a == fj.field_s) {
                 return wh.field_a.a(-45);
@@ -60,7 +59,7 @@ final class of {
     }
 
     final static e a(int param0) {
-        String var1 = null;
+        String var1;
         var1 = bh.d(-77);
         if (param0 != 64) {
           return (e) null;

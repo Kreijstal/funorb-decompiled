@@ -24,9 +24,8 @@ final class gf {
     }
 
     final static void a(boolean param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         var1 = rc.field_d;
         synchronized (var1) {
           L0: {

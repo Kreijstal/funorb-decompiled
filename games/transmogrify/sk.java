@@ -18,8 +18,8 @@ final class sk extends rj implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int a(int param0) {
-        int var2 = 0;
-        java.awt.event.MouseWheelEvent var3 = null;
+        int var2;
+        java.awt.event.MouseWheelEvent var3;
         var2 = this.field_c;
         this.field_c = 0;
         if (param0 > -52) {

@@ -10,7 +10,6 @@ final class df extends fe {
     byte[] field_L;
 
     final byte[] d(byte param0) {
-        int discarded$5 = 0;
         if (param0 < -49) {
           if (this.field_z) {
             throw new RuntimeException();
@@ -18,7 +17,7 @@ final class df extends fe {
             return this.field_L;
           }
         } else {
-          discarded$5 = df.h(-48);
+          df.h(-48);
           if (this.field_z) {
             throw new RuntimeException();
           } else {
@@ -28,25 +27,15 @@ final class df extends fe {
     }
 
     final static void a(int param0, java.awt.Canvas param1, boolean param2) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
         int var4 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         var4 = SteelSentinels.field_G;
         try {
           L0: {
@@ -89,27 +78,19 @@ final class df extends fe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3);
-            stackOut_13_1 = new StringBuilder().append("df.B(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3);
+
+            stackIn_15_1 = new StringBuilder().append("df.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }
@@ -156,7 +137,6 @@ final class df extends fe {
     }
 
     final int g(int param0) {
-        int discarded$6 = 0;
         if (param0 == 16) {
           if (this.field_z) {
             return 0;
@@ -164,7 +144,7 @@ final class df extends fe {
             return 100;
           }
         } else {
-          discarded$6 = this.g(65);
+          this.g(65);
           if (this.field_z) {
             return 0;
           } else {

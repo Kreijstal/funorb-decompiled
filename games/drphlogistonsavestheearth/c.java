@@ -13,14 +13,13 @@ final class c {
 
     final static void a(boolean param0, vj param1) {
         tk var2 = null;
-        vk discarded$0 = null;
         tk.b(param1.a("headers.packvorbis", "", 24874));
         if (param0) {
             return;
         }
         try {
             var2 = tk.a(param1, "jagex logo2.packvorbis", "");
-            discarded$0 = var2.c();
+            var2.c();
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) ((Object) runtimeException), "c.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

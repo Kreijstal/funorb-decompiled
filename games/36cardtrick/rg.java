@@ -19,14 +19,14 @@ final class rg implements Iterator {
     }
 
     public final Object next() {
-        he var1 = this.field_b;
+        Object var1 = this.field_b;
         if (var1 == this.field_d.field_a) {
             this.field_b = null;
             var1 = null;
         } else {
-            this.field_b = var1.field_h;
+            this.field_b = ((he) (var1)).field_h;
         }
-        this.field_c = var1;
+        this.field_c = (he) (var1);
         return var1;
     }
 

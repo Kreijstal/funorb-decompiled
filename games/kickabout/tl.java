@@ -23,13 +23,16 @@ final class tl {
     }
 
     final static void b(int param0) {
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         ni var4 = null;
+        sm var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -50,22 +53,15 @@ final class tl {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        Object var28 = null;
-        ml var29 = null;
-        Object var30 = null;
-        sm var30_ref = null;
-        long[][] var37 = null;
-        int[][] var38 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var30 = null;
-        var28 = null;
+        ml var28 = null;
+        long[][] var35 = null;
+        int[][] var36 = null;
         var26 = Kickabout.field_G;
         try {
           L0: {
             L1: {
-              var29 = un.field_e;
-              var2 = var29.h((byte) -120);
+              var28 = un.field_e;
+              var2 = var28.h((byte) -120);
               if (param0 == 2) {
                 break L1;
               } else {
@@ -75,7 +71,7 @@ final class tl {
             }
             L2: {
               if (var2 == 0) {
-                var3 = var29.a((byte) 81);
+                var3 = var28.a((byte) 81);
                 var4 = (ni) ((Object) lw.field_g.g(24009));
                 L3: while (true) {
                   L4: {
@@ -95,7 +91,7 @@ final class tl {
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    var5 = var29.h((byte) -128);
+                    var5 = var28.h((byte) -128);
                     if (-1 != (var5 ^ -1)) {
                       var6 = var4.field_g;
                       sc.field_F[0].field_d = null;
@@ -107,37 +103,37 @@ final class tl {
                         if (var8_int >= var5) {
                           var8 = new String[3][var6];
                           var9 = new String[3][var6];
-                          var37 = new long[3][var6];
-                          var38 = new int[3][var6 * var7];
+                          var35 = new long[3][var6];
+                          var36 = new int[3][var6 * var7];
                           var12 = 0;
                           var13 = 0;
                           var14 = 0;
                           var15 = 0;
                           var16 = 0;
                           var17 = 0;
-                          var18 = var29.h((byte) -106);
+                          var18 = var28.h((byte) -106);
                           if (0 < var18) {
                             var19 = 0;
                             L6: while (true) {
                               if (var18 > var19) {
                                 L7: {
-                                  var20 = var29.h((byte) -118);
+                                  var20 = var28.h((byte) -118);
                                   var21 = sc.field_F[var20].field_b;
-                                  var22 = var29.i((byte) -124);
-                                  var24 = var29.field_n;
+                                  var22 = var28.i((byte) -124);
+                                  var24 = var28.field_n;
                                   if (var19 < var6) {
                                     var8[0][var12] = var21;
                                     var9[0][var12] = sc.field_F[var20].field_d;
-                                    var37[0][var12] = var22;
+                                    var35[0][var12] = var22;
                                     var12++;
                                     var25 = 0;
                                     L8: while (true) {
                                       if (var25 >= var7) {
                                         break L7;
                                       } else {
-                                        incrementValue$3 = var15;
+                                        incrementValue$0 = var15;
                                         var15++;
-                                        var38[0][incrementValue$3] = var29.k(4);
+                                        var36[0][incrementValue$0] = var28.k(4);
                                         var25++;
                                         continue L8;
                                       }
@@ -155,17 +151,17 @@ final class tl {
                                     } else {
                                       var8[1][var13] = ow.field_e;
                                       var9[1][var13] = null;
-                                      var37[1][var13] = var22;
+                                      var35[1][var13] = var22;
                                       var13++;
-                                      var29.field_n = var24;
+                                      var28.field_n = var24;
                                       var25 = 0;
                                       L10: while (true) {
                                         if (var25 >= var7) {
                                           break L9;
                                         } else {
-                                          incrementValue$4 = var16;
+                                          incrementValue$1 = var16;
                                           var16++;
-                                          var38[1][incrementValue$4] = var29.k(4);
+                                          var36[1][incrementValue$1] = var28.k(4);
                                           var25++;
                                           continue L10;
                                         }
@@ -183,17 +179,17 @@ final class tl {
                                       sc.field_F[var20].field_g = true;
                                       var8[2][var14] = var21;
                                       var9[2][var14] = sc.field_F[var20].field_d;
-                                      var37[2][var14] = var22;
-                                      var29.field_n = var24;
+                                      var35[2][var14] = var22;
+                                      var28.field_n = var24;
                                       var14++;
                                       var25 = 0;
                                       L12: while (true) {
                                         if (var25 >= var7) {
                                           break L11;
                                         } else {
-                                          incrementValue$5 = var17;
+                                          incrementValue$2 = var17;
                                           var17++;
-                                          var38[2][incrementValue$5] = var29.k(4);
+                                          var36[2][incrementValue$2] = var28.k(4);
                                           var25++;
                                           continue L12;
                                         }
@@ -214,10 +210,10 @@ final class tl {
                           }
                         } else {
                           L13: {
-                            sc.field_F[var8_int].field_b = var29.a(param0 ^ 34);
+                            sc.field_F[var8_int].field_b = var28.a(param0 ^ 34);
                             sc.field_F[var8_int].field_g = false;
-                            if (1 == var29.h((byte) -127)) {
-                              sc.field_F[var8_int].field_d = var29.a(-108);
+                            if (1 == var28.h((byte) -127)) {
+                              sc.field_F[var8_int].field_d = var28.a(-108);
                               break L13;
                             } else {
                               sc.field_F[var8_int].field_d = null;
@@ -236,27 +232,28 @@ final class tl {
                 }
               } else {
                 if (var2 == 1) {
-                  var3 = var29.a((byte) 81);
-                  var30_ref = (sm) ((Object) ia.field_d.g(24009));
+                  var3 = var28.a((byte) 81);
+                  var28.i((byte) -124);
+                  var4_ref = (sm) ((Object) ia.field_d.g(24009));
                   L14: while (true) {
                     L15: {
-                      if (var30_ref == null) {
+                      if (var4_ref == null) {
                         break L15;
                       } else {
-                        if (var3 != var30_ref.field_k) {
-                          var28 = (sm) ((Object) ia.field_d.c(param0 + 31));
+                        if (var3 != var4_ref.field_k) {
+                          var4_ref = (sm) ((Object) ia.field_d.c(param0 + 31));
                           continue L14;
                         } else {
                           break L15;
                         }
                       }
                     }
-                    if (var28 == null) {
+                    if (var4_ref == null) {
                       lr.b((byte) -116);
                       decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
-                      ((sm) (var28)).c((byte) -109);
+                      var4_ref.c((byte) -109);
                       break L2;
                     }
                   }
@@ -287,18 +284,15 @@ final class tl {
     }
 
     final static lk a(sb param0, boolean param1) {
-        int fieldTemp$4 = 0;
-        StringBuilder discarded$5 = null;
+        int fieldTemp$2 = 0;
+        StringBuilder discarded$3 = null;
         int var2_int = 0;
-        RuntimeException var2 = null;
         StringBuilder var3 = null;
         int var4 = 0;
         String var5 = null;
         int var6 = 0;
         lk stackIn_3_0 = null;
         lk stackIn_21_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -306,23 +300,14 @@ final class tl {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        lk stackOut_20_0 = null;
-        lk stackOut_2_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        RuntimeException var2 = null;
         var6 = Kickabout.field_G;
         try {
           L0: {
             if (!param1) {
-              fieldTemp$4 = param0.field_c - 1;
+              fieldTemp$2 = param0.field_c - 1;
               param0.field_c = param0.field_c - 1;
-              var2_int = fieldTemp$4;
+              var2_int = fieldTemp$2;
               var3 = new StringBuilder();
               L1: while (true) {
                 L2: {
@@ -341,7 +326,7 @@ final class tl {
                             break L3;
                           } else {
                             if (var4 != 41) {
-                              discarded$5 = var3.append((char) var4);
+                              discarded$3 = var3.append((char) var4);
                               continue L1;
                             } else {
                               break L3;
@@ -383,14 +368,12 @@ final class tl {
                   var4 = ra.field_N;
                   break L4;
                 }
-                stackOut_20_0 = new lk(var4, var2_int, var5);
-                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_0 = new lk(var4, var2_int, var5);
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = (lk) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (lk) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -399,27 +382,19 @@ final class tl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2);
-            stackOut_22_1 = new StringBuilder().append("tl.B(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2);
+
+            stackIn_24_1 = new StringBuilder().append("tl.B(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L7;
             }
           }

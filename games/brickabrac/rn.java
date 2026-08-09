@@ -30,23 +30,12 @@ final class rn {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -66,35 +55,26 @@ final class rn {
                 break L2;
               }
             }
-            stackOut_5_0 = var5_int;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = var5_int;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var5);
-            stackOut_7_1 = new StringBuilder().append("rn.A(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var5);
+
+            stackIn_9_1 = new StringBuilder().append("rn.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -176,7 +156,7 @@ final class rn {
     }
 
     final void c(int param0) throws IOException {
-        int var2 = 0;
+        int var2;
         if (null != this.field_f) {
           this.field_f.close();
           this.field_f = null;
@@ -189,24 +169,21 @@ final class rn {
     }
 
     rn(File param0, String param1, long param2) throws IOException {
-        boolean discarded$0 = false;
         int var5_int = 0;
         try {
             if (param2 == -1L) {
                 param2 = 9223372036854775807L;
             }
             if ((param2 ^ -1L) > (param0.length() ^ -1L)) {
-                discarded$0 = param0.delete();
+                param0.delete();
             }
             this.field_f = new RandomAccessFile(param0, param1);
             this.field_j = 0L;
             this.field_k = param2;
             var5_int = this.field_f.read();
-            if (-1 != var5_int) {
-                if (!param1.equals("r")) {
-                    this.field_f.seek(0L);
-                    this.field_f.write(var5_int);
-                }
+            if (-1 != var5_int && !param1.equals("r")) {
+                this.field_f.seek(0L);
+                this.field_f.write(var5_int);
             }
             this.field_f.seek(0L);
         } catch (RuntimeException runtimeException) {

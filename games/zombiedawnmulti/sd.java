@@ -14,7 +14,6 @@ final class sd extends rg {
     }
 
     final static boolean a(int param0, byte param1, int param2, int param3) {
-        int discarded$2 = 0;
         if (!nh.field_m) {
           if (!ee.field_b) {
             if (eo.a(param3, true, param2)) {
@@ -22,7 +21,7 @@ final class sd extends rg {
             } else {
               if (!sh.field_L) {
                 if (param1 <= 67) {
-                  discarded$2 = sd.a((byte) 79, 66, 86);
+                  sd.a((byte) 79, 66, 86);
                   return wl.a(param0, 59, param2);
                 } else {
                   return wl.a(param0, 59, param2);
@@ -40,9 +39,8 @@ final class sd extends rg {
     }
 
     final static boolean h(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 3853) {
-            discarded$0 = sd.h(-41);
+            sd.h(-41);
             return ho.a(jl.b(0), 61);
         }
         return ho.a(jl.b(0), 61);
@@ -71,22 +69,12 @@ final class sd extends rg {
     final void a(int param0, cf param1, int param2, int param3, boolean param4, int param5) {
         RuntimeException runtimeException = null;
         ua var7 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
@@ -127,27 +115,19 @@ final class sd extends rg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (runtimeException);
-            stackOut_9_1 = new StringBuilder().append("sd.NA(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (runtimeException);
+
+            stackIn_11_1 = new StringBuilder().append("sd.NA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }

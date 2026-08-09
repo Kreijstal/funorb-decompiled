@@ -22,43 +22,26 @@ final class oc extends fc {
     }
 
     final static nj a(boolean param0, int param1) {
-        nj var2 = null;
-        nj stackIn_2_0 = null;
+        nj var2;
         nj stackIn_3_0 = null;
         nj stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        nj stackIn_6_0 = null;
         nj stackIn_7_0 = null;
         nj stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        nj stackOut_5_0 = null;
-        nj stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        nj stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        nj stackOut_1_0 = null;
-        nj stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        nj stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
         if (param1 != -21017) {
           L0: {
             oc.a((byte) -68);
             var2 = new nj(true);
-            stackOut_5_0 = (nj) (var2);
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_7_0 = (nj) (var2);
+
             if (!param0) {
-              stackOut_7_0 = (nj) ((Object) stackIn_7_0);
-              stackOut_7_1 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_0 = (nj) ((Object) stackIn_7_0);
+              stackIn_8_1 = 0;
               break L0;
             } else {
-              stackOut_6_0 = (nj) ((Object) stackIn_6_0);
-              stackOut_6_1 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_0 = (nj) ((Object) stackIn_7_0);
+              stackIn_8_1 = 1;
               break L0;
             }
           }
@@ -67,20 +50,15 @@ final class oc extends fc {
         } else {
           L1: {
             var2 = new nj(true);
-            stackOut_1_0 = (nj) (var2);
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_3_0 = (nj) (var2);
+
             if (!param0) {
-              stackOut_3_0 = (nj) ((Object) stackIn_3_0);
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_0 = (nj) ((Object) stackIn_3_0);
+              stackIn_4_1 = 0;
               break L1;
             } else {
-              stackOut_2_0 = (nj) ((Object) stackIn_2_0);
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_0 = (nj) ((Object) stackIn_3_0);
+              stackIn_4_1 = 1;
               break L1;
             }
           }

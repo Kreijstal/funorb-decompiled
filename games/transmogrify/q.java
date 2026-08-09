@@ -13,14 +13,13 @@ final class q {
     static String field_c;
 
     public static void a(int param0) {
-        boolean discarded$2 = false;
         field_e = null;
         field_f = null;
         field_g = null;
         field_i = null;
         field_c = null;
         if (param0 != 4) {
-          discarded$2 = q.a(125, (byte) -14, -93, -34, -5, -28, 57);
+          q.a(125, (byte) -14, -93, -34, -5, -28, 57);
           field_h = null;
           return;
         } else {
@@ -41,8 +40,6 @@ final class q {
         boolean stackIn_9_0 = false;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -50,18 +47,7 @@ final class q {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_8_0 = false;
-        int stackOut_10_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        boolean stackOut_8_0;
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -95,24 +81,21 @@ final class q {
                             break L4;
                           }
                         } else {
-                          stackOut_10_0 = 0;
-                          stackIn_11_0 = stackOut_10_0;
+                          stackIn_11_0 = 0;
                           decompiledRegionSelector0 = 2;
                           break L0;
                         }
                       }
                     }
                   }
-                  stackOut_13_0 = 1;
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_0 = 1;
                   break L3;
                 }
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -121,27 +104,19 @@ final class q {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var3);
-            stackOut_15_1 = new StringBuilder().append("q.C(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var3);
+
+            stackIn_17_1 = new StringBuilder().append("q.C(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L5;
             }
           }

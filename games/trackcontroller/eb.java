@@ -11,7 +11,6 @@ final class eb extends wj {
     private long field_d;
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        boolean discarded$11 = false;
         if (param2 == 10) {
           if (param5 >= param0) {
             if (param0 - -param3 > param5) {
@@ -31,7 +30,7 @@ final class eb extends wj {
             return false;
           }
         } else {
-          discarded$11 = eb.a(74, -120, 53, -42, -35, 107, -25);
+          eb.a(74, -120, 53, -42, -35, 107, -25);
           if (param5 >= param0) {
             if (param0 - -param3 > param5) {
               if (param4 <= param1) {
@@ -70,12 +69,11 @@ final class eb extends wj {
     }
 
     private final long d(int param0) {
-        boolean discarded$1 = false;
-        long var2 = 0L;
-        long var4 = 0L;
-        long var6 = 0L;
-        int var8 = 0;
-        int var9 = 0;
+        long var2;
+        long var4;
+        long var6;
+        int var8;
+        int var9;
         var9 = TrackController.field_F ? 1 : 0;
         var2 = System.nanoTime();
         if (param0 == -14942) {
@@ -131,7 +129,7 @@ final class eb extends wj {
             }
           }
         } else {
-          discarded$1 = eb.a(-86, 37, 79, 90, 127, -32, 104);
+          eb.a(-86, 37, 79, 90, 127, -32, 104);
           var4 = var2 - this.field_c;
           this.field_c = var2;
           if (var4 <= -5000000000L) {
@@ -180,8 +178,8 @@ final class eb extends wj {
     }
 
     final int a(int param0, long param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = TrackController.field_F ? 1 : 0;
         if (param0 > 103) {
           if (this.field_d <= this.field_e) {

@@ -28,17 +28,16 @@ final class goa extends iw {
     }
 
     final void b(int param0, int param1, int param2) {
-        int discarded$0 = 0;
         super.b(param0, param1, param2);
         vob.field_r.a(this.field_J, (this.field_h >> 1630174241) + param2, 103 + param0, 16777215, -1);
         if (null != this.field_K) {
             dma.h(param2 + 20, 113 + param0, 260, 8421504);
-            discarded$0 = vob.field_r.a(this.field_K, 20 + param2, 120 + param0 - -8, 260, 100, 16777215, -1, 1, 0, vob.field_r.field_k);
+            vob.field_r.a(this.field_K, 20 + param2, 120 + param0 - -8, 260, 100, 16777215, -1, 1, 0, vob.field_r.field_k);
         }
     }
 
     final void g(int param0) {
-        String var3 = null;
+        String var3;
         if (param0 != 25880) {
           var3 = (String) null;
           this.a(false, (String) null, -1.248936414718628f, (byte) -121);
@@ -55,63 +54,38 @@ final class goa extends iw {
     final void a(boolean param0, String param1, float param2, byte param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
-        Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        Object stackOut_5_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         try {
           L0: {
             L1: {
               if (this.field_M) {
-                stackOut_2_0 = 0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = 1;
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = 1;
                 break L1;
               }
             }
             L2: {
               if (stackIn_3_0 == (param0 ? 1 : 0)) {
                 L3: {
-                  stackOut_5_0 = this;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_7_0 = this;
+
                   if (!param0) {
-                    stackOut_7_0 = this;
-                    stackOut_7_1 = 0;
-                    stackIn_8_0 = stackOut_7_0;
-                    stackIn_8_1 = stackOut_7_1;
+                    stackIn_8_0 = this;
+                    stackIn_8_1 = 0;
                     break L3;
                   } else {
-                    stackOut_6_0 = this;
-                    stackOut_6_1 = 1;
-                    stackIn_8_0 = stackOut_6_0;
-                    stackIn_8_1 = stackOut_6_1;
+                    stackIn_8_0 = this;
+                    stackIn_8_1 = 1;
                     break L3;
                   }
                 }
@@ -146,27 +120,19 @@ final class goa extends iw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var5);
-            stackOut_15_1 = new StringBuilder().append("goa.D(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var5);
+
+            stackIn_17_1 = new StringBuilder().append("goa.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L4;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L4;
             }
           }

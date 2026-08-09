@@ -66,28 +66,19 @@ abstract class oe extends ga {
     private final int b(boolean param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0) {
           L0: {
             oe.k(-60);
             if (this.field_H) {
               if (this.field_L.h(0) != this) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = 0;
                 break L0;
               } else {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 256;
                 break L0;
               }
             } else {
-              stackOut_8_0 = 0;
-              stackIn_12_0 = stackOut_8_0;
+              stackIn_12_0 = 0;
               break L0;
             }
           }
@@ -96,17 +87,14 @@ abstract class oe extends ga {
           L1: {
             if (this.field_H) {
               if (this.field_L.h(0) != this) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L1;
               } else {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L1;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L1;
             }
           }
@@ -137,20 +125,12 @@ abstract class oe extends ga {
     }
 
     boolean l(int param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_10_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_41_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_9_0 = 0;
+        int var2;
+        int var3;
         if (param0 == -6) {
           var2 = this.b(false);
           var3 = var2 + -this.field_V;
@@ -175,15 +155,13 @@ abstract class oe extends ga {
                     if (this.field_H) {
                       break L2;
                     } else {
-                      stackOut_39_0 = 1;
-                      stackIn_41_0 = stackOut_39_0;
+                      stackIn_41_0 = 1;
                       break L1;
                     }
                   }
                 }
               }
-              stackOut_40_0 = 0;
-              stackIn_41_0 = stackOut_40_0;
+              stackIn_41_0 = 0;
               break L1;
             }
             return stackIn_41_0 != 0;
@@ -207,15 +185,13 @@ abstract class oe extends ga {
                     if (this.field_H) {
                       break L5;
                     } else {
-                      stackOut_30_0 = 1;
-                      stackIn_32_0 = stackOut_30_0;
+                      stackIn_32_0 = 1;
                       break L4;
                     }
                   }
                 }
               }
-              stackOut_31_0 = 0;
-              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_0 = 0;
               break L4;
             }
             return stackIn_32_0 != 0;
@@ -239,12 +215,10 @@ abstract class oe extends ga {
               } else {
                 L7: {
                   if (this.field_H) {
-                    stackOut_19_0 = 0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_20_0 = 0;
                     break L7;
                   } else {
-                    stackOut_18_0 = 1;
-                    stackIn_20_0 = stackOut_18_0;
+                    stackIn_20_0 = 1;
                     break L7;
                   }
                 }
@@ -274,15 +248,13 @@ abstract class oe extends ga {
                     if (this.field_H) {
                       break L10;
                     } else {
-                      stackOut_8_0 = 1;
-                      stackIn_10_0 = stackOut_8_0;
+                      stackIn_10_0 = 1;
                       break L9;
                     }
                   }
                 }
               }
-              stackOut_9_0 = 0;
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = 0;
               break L9;
             }
             return stackIn_10_0 != 0;

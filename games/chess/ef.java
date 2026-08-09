@@ -30,7 +30,7 @@ final class ef extends o {
     }
 
     public static void a(int param0) {
-        pf var2 = null;
+        pf var2;
         field_n = null;
         field_j = null;
         if (param0 != 27706) {

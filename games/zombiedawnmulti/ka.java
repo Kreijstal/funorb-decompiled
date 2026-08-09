@@ -24,61 +24,43 @@ final class ka {
     String field_d;
 
     final int a(boolean param0) {
-        if (!this.field_k) {
-          if (-3 != (this.field_l ^ -1)) {
-            if (this.field_a == ie.field_sb) {
-              return 1;
-            } else {
-              L0: {
-                if (ge.field_zb != 2) {
-                  break L0;
-                } else {
-                  if (!kj.a((byte) -94, this.field_e)) {
-                    break L0;
-                  } else {
-                    return 1;
-                  }
+        if (this.field_k) {
+            return 2;
+        }
+        if (-3 == (this.field_l ^ -1)) {
+            if (-1 > (this.field_h ^ -1)) {
+                return 2;
+            }
+            if (!(this.field_a != ie.field_sb)) {
+                return 1;
+            }
+            if (ge.field_zb != 2) {
+                if (param0) {
+                    return 0;
                 }
-              }
-              if (param0) {
-                return 0;
-              } else {
                 field_c = (String) null;
                 return 0;
-              }
             }
-          } else {
-            if (-1 <= (this.field_h ^ -1)) {
-              if (this.field_a == ie.field_sb) {
+            if (kj.a((byte) -94, this.field_e)) {
                 return 1;
-              } else {
-                if (ge.field_zb == 2) {
-                  if (!kj.a((byte) -94, this.field_e)) {
-                    if (!param0) {
-                      field_c = (String) null;
-                      return 0;
-                    } else {
-                      return 0;
-                    }
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  if (!param0) {
-                    field_c = (String) null;
-                    return 0;
-                  } else {
-                    return 0;
-                  }
-                }
-              }
-            } else {
-              return 2;
             }
-          }
-        } else {
-          return 2;
+            if (param0) {
+                return 0;
+            }
+            field_c = (String) null;
+            return 0;
         }
+        if (!(this.field_a != ie.field_sb)) {
+            return 1;
+        }
+        if (ge.field_zb == 2 && kj.a((byte) -94, this.field_e)) {
+            return 1;
+        }
+        if (!param0) {
+            field_c = (String) null;
+            return 0;
+        }
+        return 0;
     }
 
     final static void a(int param0, byte param1) {
@@ -101,27 +83,15 @@ final class ka {
     }
 
     final static ri a(int param0, int param1, int param2, ul param3) {
-        ri discarded$2 = null;
         RuntimeException var4 = null;
         ul var5 = null;
         ri stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ri stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (ud.a(param2, param3, param1, (byte) -42)) {
@@ -130,12 +100,11 @@ final class ka {
                   break L1;
                 } else {
                   var5 = (ul) null;
-                  discarded$2 = ka.a(-91, -49, -2, (ul) null);
+                  ka.a(-91, -49, -2, (ul) null);
                   break L1;
                 }
               }
-              stackOut_5_0 = lc.c((byte) 89);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = lc.c((byte) 89);
               break L0;
             } else {
               return null;
@@ -145,27 +114,19 @@ final class ka {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var4);
-            stackOut_7_1 = new StringBuilder().append("ka.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("ka.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }

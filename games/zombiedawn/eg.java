@@ -55,13 +55,10 @@ final class eg extends le {
     }
 
     final static void d(int param0) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
         if (!df.field_h) {
           if ((ma.field_r ^ -1) != 1) {
             if (ma.field_r == -3) {
@@ -90,7 +87,7 @@ final class eg extends le {
                   vo.field_a[1].b(-5 + var3 + var4, var1 + -te.field_bb);
                   vo.field_a[2].b(var3, -5 + var1);
                   vo.field_a[3].b(var3 + var4 + -5, -5 + var1);
-                  discarded$3 = bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb + -4, 16777215, 0, 0, 2, 0);
+                  bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb + -4, 16777215, 0, 0, 2, 0);
                   bj.field_q.a(ip.field_o, 300 + var2, var1 + -14, 10066329, 0);
                   bi.c();
                   break L1;
@@ -128,7 +125,7 @@ final class eg extends le {
                 vo.field_a[1].b(-5 + var3 + var4, var1 + -te.field_bb);
                 vo.field_a[2].b(var3, -5 + var1);
                 vo.field_a[3].b(var3 + var4 + -5, -5 + var1);
-                discarded$4 = bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb + -4, 16777215, 0, 0, 2, 0);
+                bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb + -4, 16777215, 0, 0, 2, 0);
                 bj.field_q.a(ip.field_o, 300 + var2, var1 + -14, 10066329, 0);
                 bi.c();
                 break L3;
@@ -164,7 +161,7 @@ final class eg extends le {
               vo.field_a[1].b(-5 + var3 + var4, var1 + -te.field_bb);
               vo.field_a[2].b(var3, -5 + var1);
               vo.field_a[3].b(var3 + var4 + -5, -5 + var1);
-              discarded$5 = bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb + -4, 16777215, 0, 0, 2, 0);
+              bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb + -4, 16777215, 0, 0, 2, 0);
               bj.field_q.a(ip.field_o, 300 + var2, var1 + -14, 10066329, 0);
               bi.c();
               break L5;

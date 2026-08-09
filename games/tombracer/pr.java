@@ -36,10 +36,9 @@ final class pr {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_b = null;
         if (param0 != 28122) {
-            discarded$0 = pr.a(-61, 4, -35);
+            pr.a(-61, 4, -35);
         }
     }
 

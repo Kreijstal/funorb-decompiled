@@ -83,19 +83,15 @@ final class me {
     }
 
     final static cn a(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
-        cn var6 = null;
+        int var5;
+        cn var6;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
         L0: {
           if (gl.field_Lb) {
-            stackOut_2_0 = 36;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 36;
             break L0;
           } else {
-            stackOut_1_0 = 32;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 32;
             break L0;
           }
         }

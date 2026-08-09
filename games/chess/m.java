@@ -9,17 +9,14 @@ final class m {
     static String field_c;
 
     final static boolean a(int param0) {
-        String discarded$2 = null;
-        java.applet.Applet var2 = null;
+        java.applet.Applet var2;
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 <= -40) {
             break L0;
           } else {
             var2 = (java.applet.Applet) null;
-            discarded$2 = m.a((java.applet.Applet) null, (byte) 61);
+            m.a((java.applet.Applet) null, (byte) 61);
             break L0;
           }
         }
@@ -31,14 +28,12 @@ final class m {
               if (!tb.field_f.a((byte) -121)) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
@@ -46,8 +41,6 @@ final class m {
 
     final static String a(java.applet.Applet param0, byte param1) {
         try {
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -58,8 +51,6 @@ final class m {
             String stackIn_3_0 = null;
             String stackIn_10_0 = null;
             String stackIn_17_0 = null;
-            RuntimeException stackIn_19_0 = null;
-            StringBuilder stackIn_19_1 = null;
             RuntimeException stackIn_20_0 = null;
             StringBuilder stackIn_20_1 = null;
             RuntimeException stackIn_21_0 = null;
@@ -68,17 +59,8 @@ final class m {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            String stackOut_9_0 = null;
-            String stackOut_2_0 = null;
-            String stackOut_16_0 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            String stackOut_20_2 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
             var8 = Chess.field_G;
             try {
               L0: {
@@ -101,8 +83,7 @@ final class m {
                               break L3;
                             } else {
                               if (var5[var6].substring(0, var7).trim().equals(var3)) {
-                                stackOut_9_0 = var5[var6].substring(1 + var7).trim();
-                                stackIn_10_0 = stackOut_9_0;
+                                stackIn_10_0 = var5[var6].substring(1 + var7).trim();
                                 decompiledRegionSelector0 = 2;
                                 break L1;
                               } else {
@@ -115,8 +96,7 @@ final class m {
                         }
                       }
                     } else {
-                      stackOut_2_0 = (String) null;
-                      stackIn_3_0 = stackOut_2_0;
+                      stackIn_3_0 = (String) null;
                       decompiledRegionSelector0 = 0;
                       break L1;
                     }
@@ -135,8 +115,7 @@ final class m {
                 } else {
                   if (decompiledRegionSelector0 == 1) {
                     if (wg.field_p != null) {
-                      stackOut_16_0 = wg.field_p;
-                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_0 = wg.field_p;
                       decompiledRegionSelector1 = 0;
                       break L0;
                     } else {
@@ -152,27 +131,19 @@ final class m {
               decompiledCaughtException = decompiledCaughtParameter1;
               L5: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_18_0 = (RuntimeException) (var2_ref);
-                stackOut_18_1 = new StringBuilder().append("m.C(");
-                stackIn_20_0 = stackOut_18_0;
-                stackIn_20_1 = stackOut_18_1;
-                stackIn_19_0 = stackOut_18_0;
-                stackIn_19_1 = stackOut_18_1;
+                stackIn_20_0 = (RuntimeException) (var2_ref);
+
+                stackIn_20_1 = new StringBuilder().append("m.C(");
+
                 if (param0 == null) {
-                  stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackOut_20_2 = "null";
-                  stackIn_21_0 = stackOut_20_0;
-                  stackIn_21_1 = stackOut_20_1;
-                  stackIn_21_2 = stackOut_20_2;
+                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+                  stackIn_21_2 = "null";
                   break L5;
                 } else {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "{...}";
-                  stackIn_21_0 = stackOut_19_0;
-                  stackIn_21_1 = stackOut_19_1;
-                  stackIn_21_2 = stackOut_19_2;
+                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+                  stackIn_21_2 = "{...}";
                   break L5;
                 }
               }
@@ -204,11 +175,11 @@ final class m {
     }
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         dc var4 = null;
         pa var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = Chess.field_G;
         try {
           L0: {

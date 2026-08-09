@@ -37,6 +37,7 @@ final class sf {
             if (param0 == 0) {
               break L0;
             } else {
+              this.a(-64);
               break L0;
             }
           }
@@ -60,19 +61,7 @@ final class sf {
     }
 
     final void a(int param0, boolean param1, int param2, byte[] param3) throws IOException {
-        int incrementValue$1 = 0;
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        long var5_long = 0L;
-        int var7 = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        long var9 = 0L;
-        long var11 = 0L;
-        int var13 = 0;
-        int var14 = 0;
-        RuntimeException stackIn_59_0 = null;
-        StringBuilder stackIn_59_1 = null;
+        int incrementValue$0 = 0;
         RuntimeException stackIn_60_0 = null;
         StringBuilder stackIn_60_1 = null;
         RuntimeException stackIn_61_0 = null;
@@ -81,14 +70,16 @@ final class sf {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_58_0 = null;
-        StringBuilder stackOut_58_1 = null;
-        RuntimeException stackOut_60_0 = null;
-        StringBuilder stackOut_60_1 = null;
-        String stackOut_60_2 = null;
-        RuntimeException stackOut_59_0 = null;
-        StringBuilder stackOut_59_1 = null;
-        String stackOut_59_2 = null;
+        long var5_long = 0L;
+        IOException var5 = null;
+        RuntimeException var5_ref = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9_int = 0;
+        long var9 = 0L;
+        long var11 = 0L;
+        int var13 = 0;
+        int var14 = 0;
         var14 = ZombieDawn.field_J;
         try {
           L0: {
@@ -121,6 +112,7 @@ final class sf {
                     if (!param1) {
                       break L3;
                     } else {
+                      this.a(105);
                       break L3;
                     }
                   }
@@ -213,9 +205,9 @@ final class sf {
                               if (param2 >= var9_int) {
                                 break L10;
                               } else {
-                                incrementValue$1 = param2;
+                                incrementValue$0 = param2;
                                 param2++;
-                                param3[incrementValue$1] = (byte) 0;
+                                param3[incrementValue$0] = (byte) 0;
                                 param0--;
                                 this.field_e = this.field_e + 1L;
                                 continue L12;
@@ -321,27 +313,19 @@ final class sf {
           decompiledCaughtException = decompiledCaughtParameter1;
           L17: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_58_0 = (RuntimeException) (var5_ref);
-            stackOut_58_1 = new StringBuilder().append("sf.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_60_0 = stackOut_58_0;
-            stackIn_60_1 = stackOut_58_1;
-            stackIn_59_0 = stackOut_58_0;
-            stackIn_59_1 = stackOut_58_1;
+            stackIn_60_0 = (RuntimeException) (var5_ref);
+
+            stackIn_60_1 = new StringBuilder().append("sf.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_60_0 = (RuntimeException) ((Object) stackIn_60_0);
-              stackOut_60_1 = (StringBuilder) ((Object) stackIn_60_1);
-              stackOut_60_2 = "null";
-              stackIn_61_0 = stackOut_60_0;
-              stackIn_61_1 = stackOut_60_1;
-              stackIn_61_2 = stackOut_60_2;
+              stackIn_61_0 = (RuntimeException) ((Object) stackIn_60_0);
+              stackIn_61_1 = (StringBuilder) ((Object) stackIn_60_1);
+              stackIn_61_2 = "null";
               break L17;
             } else {
-              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
-              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
-              stackOut_59_2 = "{...}";
-              stackIn_61_0 = stackOut_59_0;
-              stackIn_61_1 = stackOut_59_1;
-              stackIn_61_2 = stackOut_59_2;
+              stackIn_61_0 = (RuntimeException) ((Object) stackIn_60_0);
+              stackIn_61_1 = (StringBuilder) ((Object) stackIn_60_1);
+              stackIn_61_2 = "{...}";
               break L17;
             }
           }
@@ -364,15 +348,6 @@ final class sf {
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        int var5_int = 0;
-        long var5_long = 0L;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_52_0 = null;
-        StringBuilder stackIn_52_1 = null;
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         RuntimeException stackIn_54_0 = null;
@@ -381,14 +356,13 @@ final class sf {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_51_0 = null;
-        StringBuilder stackOut_51_1 = null;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        String stackOut_53_2 = null;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        String stackOut_52_2 = null;
+        int var5_int = 0;
+        long var5_long = 0L;
+        IOException var5 = null;
+        RuntimeException var5_ref = null;
+        long var7 = 0L;
+        int var9 = 0;
+        int var10 = 0;
         var10 = ZombieDawn.field_J;
         try {
           L0: {
@@ -584,27 +558,19 @@ final class sf {
           decompiledCaughtException = decompiledCaughtParameter1;
           L16: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_51_0 = (RuntimeException) (var5_ref);
-            stackOut_51_1 = new StringBuilder().append("sf.G(").append(param0).append(',');
-            stackIn_53_0 = stackOut_51_0;
-            stackIn_53_1 = stackOut_51_1;
-            stackIn_52_0 = stackOut_51_0;
-            stackIn_52_1 = stackOut_51_1;
+            stackIn_53_0 = (RuntimeException) (var5_ref);
+
+            stackIn_53_1 = new StringBuilder().append("sf.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
-              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
-              stackOut_53_2 = "null";
-              stackIn_54_0 = stackOut_53_0;
-              stackIn_54_1 = stackOut_53_1;
-              stackIn_54_2 = stackOut_53_2;
+              stackIn_54_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackIn_54_1 = (StringBuilder) ((Object) stackIn_53_1);
+              stackIn_54_2 = "null";
               break L16;
             } else {
-              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
-              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
-              stackOut_52_2 = "{...}";
-              stackIn_54_0 = stackOut_52_0;
-              stackIn_54_1 = stackOut_52_1;
-              stackIn_54_2 = stackOut_52_2;
+              stackIn_54_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackIn_54_1 = (StringBuilder) ((Object) stackIn_53_1);
+              stackIn_54_2 = "{...}";
               break L16;
             }
           }
@@ -622,10 +588,10 @@ final class sf {
     }
 
     private final void a(byte param0) throws IOException {
-        long var2 = 0L;
-        long var4 = 0L;
-        int var6 = 0;
-        int var7 = 0;
+        long var2;
+        long var4;
+        int var6;
+        int var7;
         var7 = ZombieDawn.field_J;
         if (param0 == -115) {
           L0: {
@@ -748,6 +714,7 @@ final class sf {
             this.field_c = this.field_c + (long)var3;
         }
         if (!param0) {
+            this.a(-87);
         }
     }
 

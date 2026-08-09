@@ -7,9 +7,9 @@ final class ve extends sc {
     private java.awt.Component field_g;
 
     final void a(int param0, java.awt.Component param1, int param2, byte param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         this.field_a = param2;
         if (param3 <= 116) {
           this.field_g = (java.awt.Component) null;
@@ -36,14 +36,12 @@ final class ve extends sc {
     }
 
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
         if (param3 != 0) {
           this.field_g = (java.awt.Component) null;
-          discarded$4 = param1.drawImage(this.field_e, param2, param0, (java.awt.image.ImageObserver) ((Object) this.field_g));
+          param1.drawImage(this.field_e, param2, param0, (java.awt.image.ImageObserver) ((Object) this.field_g));
           return;
         } else {
-          discarded$5 = param1.drawImage(this.field_e, param2, param0, (java.awt.image.ImageObserver) ((Object) this.field_g));
+          param1.drawImage(this.field_e, param2, param0, (java.awt.image.ImageObserver) ((Object) this.field_g));
           return;
         }
     }

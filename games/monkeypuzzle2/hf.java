@@ -55,7 +55,7 @@ abstract class hf implements kf {
     abstract na c(int param0);
 
     public final String b(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = -15 / ((param0 - 20) / 44);
         if (!this.a(true)) {
           if ((pf.a(0) ^ -1L) > (350L + this.field_e ^ -1L)) {

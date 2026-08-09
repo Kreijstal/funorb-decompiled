@@ -12,15 +12,15 @@ abstract class qea {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         if (-1 >= (param0 ^ -1)) {
           if (dg.field_i > param0) {
             if (param1 >= 0) {

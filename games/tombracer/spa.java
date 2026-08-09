@@ -64,9 +64,8 @@ final class spa extends wda {
     }
 
     final int c(int param0) {
-        int discarded$0 = 0;
         if (param0 != 1) {
-            discarded$0 = this.a(40, 31);
+            this.a(40, 31);
             return 6;
         }
         return 6;

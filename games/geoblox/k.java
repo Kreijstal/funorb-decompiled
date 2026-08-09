@@ -36,8 +36,8 @@ final class k implements Iterator {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         param0 += 2;
         param1 += 2;
         if (param3 != -27085) {
@@ -59,18 +59,18 @@ final class k implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        int var2 = 0;
-        Object var3 = null;
-        hf var3_ref = null;
-        hf var4 = null;
+        int fieldTemp$1 = 0;
+        int var2;
+        Object var3;
+        hf var3_ref;
+        hf var4;
         var2 = Geoblox.field_C;
         if (this.field_d.field_a[this.field_j + -1] == this.field_h) {
           L0: while (true) {
             if (this.field_j < this.field_d.field_c) {
-              fieldTemp$2 = this.field_j;
+              fieldTemp$1 = this.field_j;
               this.field_j = this.field_j + 1;
-              var3_ref = this.field_d.field_a[fieldTemp$2].field_b;
+              var3_ref = this.field_d.field_a[fieldTemp$1].field_b;
               if (var3_ref == this.field_d.field_a[this.field_j - 1]) {
                 continue L0;
               } else {
@@ -114,7 +114,7 @@ final class k implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = Geoblox.field_C;
         if (this.field_d.field_a[this.field_j - 1] == this.field_h) {
           L0: while (true) {

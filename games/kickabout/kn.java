@@ -55,67 +55,39 @@ final class kn extends i {
     }
 
     final static int a(int param0, int param1, boolean param2, int param3) {
-        int discarded$2 = 0;
-        L0: {
-          if (param1 > 40) {
-            break L0;
-          } else {
-            discarded$2 = kn.a(-66, -60, false, 126);
-            break L0;
-          }
+        if (param1 <= 40) {
+            kn.a(-66, -60, false, 126);
         }
-        L1: {
-          L2: {
-            if (param3 == 0) {
-              break L2;
-            } else {
-              if ((param3 ^ -1) == -2) {
-                break L2;
-              } else {
-                if (param2) {
-                  break L1;
-                } else {
-                  break L2;
-                }
-              }
+        if (param3 == 0 || (param3 ^ -1) == -2 || !param2) {
+            if (0 == param0) {
+                return 2;
             }
-          }
-          if (0 != param0) {
-            if ((param0 ^ -1) != -2) {
-              if (2 == param0) {
+            if ((param0 ^ -1) == -2) {
+                return 1;
+            }
+            if (!(2 != param0)) {
                 return 3;
-              } else {
-                break L1;
-              }
-            } else {
-              return 1;
             }
-          } else {
-            return 2;
-          }
         }
-        if (param3 == 2) {
-          return 4;
-        } else {
-          if (param3 == 3) {
-            return 6;
-          } else {
+        if (!(param3 != 2)) {
+            return 4;
+        }
+        if (param3 != 3) {
             return 0;
-          }
         }
+        return 6;
     }
 
     final void a(byte param0, int param1, int param2) {
-        int discarded$1 = 0;
-        int var5 = 0;
-        dn var6 = null;
-        String[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        dn[] var13 = null;
+        int var5;
+        dn var6;
+        int var12;
+        dn[] var13;
+        String[] var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         var12 = Kickabout.field_G;
         super.a((byte) -68, param1, param2);
         var13 = this.field_I;
@@ -149,7 +121,7 @@ final class kn extends i {
                 var11 = 0;
                 L2: while (true) {
                   if (var11 < var8) {
-                    discarded$1 = un.field_d.a(var7[var11].toLowerCase(), -20 + param1, var9 + 162 + param2, 300, 100, 11184810, -1, 1, 1, 0);
+                    un.field_d.a(var7[var11].toLowerCase(), -20 + param1, var9 + 162 + param2, 300, 100, 11184810, -1, 1, 1, 0);
                     var9 = var9 + var10;
                     var11++;
                     continue L2;

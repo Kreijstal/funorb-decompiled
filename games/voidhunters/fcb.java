@@ -17,72 +17,60 @@ final class fcb implements oob {
     static String field_g;
 
     final void b(byte param0) {
-        asb var3 = null;
-        asb var4 = null;
-        L0: {
-          fka.a("Very start of requestdata", (byte) -56);
-          if (esb.field_j == null) {
-            break L0;
-          } else {
+        fka.a("Very start of requestdata", (byte) -56);
+        if (esb.field_j != null) {
             aib.a((byte) -100, esb.field_j);
             esb.field_j = null;
             fkb.a(param0 + 2095);
-            break L0;
-          }
         }
-        L1: {
-          sl.field_b = true;
-          fka.a("common wordpackj", (byte) -102);
-          this.field_f = bea.a(param0 + 0, gn.field_k.field_a);
-          fka.a("graphicsj", (byte) -103);
-          this.field_i = bea.a(param0 + 0, 16);
-          fka.a("fontmetricsj", (byte) -66);
-          this.field_e = bea.a(1, 17);
-          fka.a("jagfxj", (byte) -93);
-          this.field_l = bea.a(param0 + 0, 18);
-          fka.a("vorbisj", (byte) -64);
-          this.field_k = bea.a(1, 19);
-          fka.a("patchesj", (byte) -106);
-          this.field_j = bea.a(param0 + 0, 20);
-          fka.a("midij", (byte) -100);
-          this.field_h = bea.a(1, 21);
-          fka.a("common quickchatj", (byte) -64);
-          this.field_b = bea.a(1, eva.field_o.field_a);
-          fka.a("texturemetricsj", (byte) -108);
-          this.field_m = bea.a(param0 ^ 0, 24);
-          fka.a("texturesj", (byte) -91);
-          this.field_a = bea.a(1, 25);
-          fka.a("jpegj", (byte) -52);
-          this.field_d = bea.a(param0 ^ 0, 26);
-          var4 = kwa.field_o;
-          var3 = jta.field_r;
-          fka.a("creating request queue", (byte) -84);
-          rab.field_m = new wsb(82);
-          fka.a("requesting basic common graphics group", (byte) -68);
-          rab.field_m.a(var4, drb.field_k, false, "basic", wea.field_o);
-          fka.a("requesting common arialish12", (byte) -66);
-          rab.field_m.a(var4, am.field_p, false, "arialish12", wqb.field_b);
-          fka.a("requesting common arialish12 fontmetric", (byte) -59);
-          rab.field_m.a(var3, am.field_p, false, "arialish12", wqb.field_b);
-          fka.a("requesting common lobbyfont", (byte) -79);
-          rab.field_m.a(var4, am.field_p, false, "lobby", wqb.field_b);
-          fka.a("requesting common lobbyfont metric", (byte) -72);
-          rab.field_m.a(var3, am.field_p, false, "lobby", wqb.field_b);
-          fka.a("requesting jfx sounds", (byte) -66);
-          rab.field_m.a(wnb.field_r, -1, ou.field_p, this.field_l);
-          fka.a("requesting vorbis sounds", (byte) -53);
-          rab.field_m.a(wnb.field_r, -1, ou.field_p, this.field_k);
-          fka.a("requesting patches", (byte) -112);
-          rab.field_m.a(ttb.field_z, param0 ^ -2, jca.field_p, this.field_j);
-          fka.a("requesting midis", (byte) -113);
-          rab.field_m.a(jmb.field_o, -1, vfb.field_a, this.field_h);
-          fka.a("requesting basic graphics", (byte) -108);
-          if (param0 == 1) {
-            break L1;
-          } else {
+        sl.field_b = true;
+        fka.a("common wordpackj", (byte) -102);
+        this.field_f = bea.a(param0 + 0, gn.field_k.field_a);
+        fka.a("graphicsj", (byte) -103);
+        this.field_i = bea.a(param0 + 0, 16);
+        fka.a("fontmetricsj", (byte) -66);
+        this.field_e = bea.a(1, 17);
+        fka.a("jagfxj", (byte) -93);
+        this.field_l = bea.a(param0 + 0, 18);
+        fka.a("vorbisj", (byte) -64);
+        this.field_k = bea.a(1, 19);
+        fka.a("patchesj", (byte) -106);
+        this.field_j = bea.a(param0 + 0, 20);
+        fka.a("midij", (byte) -100);
+        this.field_h = bea.a(1, 21);
+        fka.a("common quickchatj", (byte) -64);
+        this.field_b = bea.a(1, eva.field_o.field_a);
+        fka.a("texturemetricsj", (byte) -108);
+        this.field_m = bea.a(param0 ^ 0, 24);
+        fka.a("texturesj", (byte) -91);
+        this.field_a = bea.a(1, 25);
+        fka.a("jpegj", (byte) -52);
+        this.field_d = bea.a(param0 ^ 0, 26);
+        asb var4 = kwa.field_o;
+        asb var3 = jta.field_r;
+        fka.a("creating request queue", (byte) -84);
+        rab.field_m = new wsb(82);
+        fka.a("requesting basic common graphics group", (byte) -68);
+        rab.field_m.a(var4, drb.field_k, false, "basic", wea.field_o);
+        fka.a("requesting common arialish12", (byte) -66);
+        rab.field_m.a(var4, am.field_p, false, "arialish12", wqb.field_b);
+        fka.a("requesting common arialish12 fontmetric", (byte) -59);
+        rab.field_m.a(var3, am.field_p, false, "arialish12", wqb.field_b);
+        fka.a("requesting common lobbyfont", (byte) -79);
+        rab.field_m.a(var4, am.field_p, false, "lobby", wqb.field_b);
+        fka.a("requesting common lobbyfont metric", (byte) -72);
+        rab.field_m.a(var3, am.field_p, false, "lobby", wqb.field_b);
+        fka.a("requesting jfx sounds", (byte) -66);
+        rab.field_m.a(wnb.field_r, -1, ou.field_p, this.field_l);
+        fka.a("requesting vorbis sounds", (byte) -53);
+        rab.field_m.a(wnb.field_r, -1, ou.field_p, this.field_k);
+        fka.a("requesting patches", (byte) -112);
+        rab.field_m.a(ttb.field_z, param0 ^ -2, jca.field_p, this.field_j);
+        fka.a("requesting midis", (byte) -113);
+        rab.field_m.a(jmb.field_o, -1, vfb.field_a, this.field_h);
+        fka.a("requesting basic graphics", (byte) -108);
+        if (param0 != 1) {
             this.field_a = (asb) null;
-            break L1;
-          }
         }
         rab.field_m.a(this.field_i, drb.field_k, false, "basic", wea.field_o);
         fka.a("requesting jpeg graphics", (byte) -87);
@@ -101,21 +89,20 @@ final class fcb implements oob {
     }
 
     final boolean a(byte param0) {
-        phb[] discarded$1 = null;
-        Object var3 = null;
-        int var4_int = 0;
-        ii var4 = null;
-        int var5 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        phb[][] var9 = null;
-        caa[] var10 = null;
-        asb var11 = null;
-        asb var12 = null;
-        phb[][] var14 = null;
-        caa[] var15 = null;
-        int[] var16 = null;
-        int[] var19 = null;
+        int var4_int;
+        int var8;
+        asb var11;
+        asb var12;
+        Object var3;
+        ii var4;
+        int var5;
+        int var7;
+        phb[][] var9;
+        caa[] var10;
+        phb[][] var14;
+        caa[] var15;
+        int[] var16;
+        int[] var19;
         L0: {
           var8 = VoidHunters.field_G;
           fka.a("Inside unpack", (byte) -111);
@@ -301,7 +288,7 @@ final class fcb implements oob {
                   vfa.field_d = ucb.a("frame_filled", 52, "basic", this.field_i);
                   dra.field_v = ucb.a("button_frame", param0 ^ 21, "basic", this.field_i);
                   ck.field_o = ucb.a("button_raised", -95, "basic", this.field_i);
-                  discarded$1 = ucb.a("button_depressed", 80, "basic", this.field_i);
+                  ucb.a("button_depressed", 80, "basic", this.field_i);
                   lo.field_c = wjb.a(this.field_i, true, "basic", "achievements_large");
                   ubb.field_j = gra.a(var11, "unachieved", "basic", true);
                   wu.field_h = gra.a(var11, "orbcoin", "basic", true);

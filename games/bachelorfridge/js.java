@@ -9,12 +9,11 @@ final class js {
     private bw field_d;
 
     final bw c(int param0) {
+        int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
-        bw discarded$5 = null;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        bw var2 = null;
-        int var3 = 0;
+        int fieldTemp$5 = 0;
+        bw var2;
+        int var3;
         var3 = BachelorFridge.field_y;
         if (param0 == -21446) {
           L0: {
@@ -32,9 +31,9 @@ final class js {
           }
           L1: while (true) {
             if (this.field_a < this.field_e) {
-              fieldTemp$4 = this.field_a;
+              fieldTemp$3 = this.field_a;
               this.field_a = this.field_a + 1;
-              var2 = this.field_b[fieldTemp$4].field_b;
+              var2 = this.field_b[fieldTemp$3].field_b;
               if (this.field_b[this.field_a - 1] != var2) {
                 this.field_d = var2.field_b;
                 return var2;
@@ -46,14 +45,14 @@ final class js {
             }
           }
         } else {
-          discarded$5 = this.a(false, -79L);
+          this.a(false, -79L);
           if (this.field_a > 0) {
             if (this.field_d == this.field_b[-1 + this.field_a]) {
               L2: while (true) {
                 if (this.field_a < this.field_e) {
-                  fieldTemp$6 = this.field_a;
+                  fieldTemp$4 = this.field_a;
                   this.field_a = this.field_a + 1;
-                  var2 = this.field_b[fieldTemp$6].field_b;
+                  var2 = this.field_b[fieldTemp$4].field_b;
                   if (this.field_b[this.field_a - 1] != var2) {
                     this.field_d = var2.field_b;
                     return var2;
@@ -72,9 +71,9 @@ final class js {
           } else {
             L3: while (true) {
               if (this.field_a < this.field_e) {
-                fieldTemp$7 = this.field_a;
+                fieldTemp$5 = this.field_a;
                 this.field_a = this.field_a + 1;
-                var2 = this.field_b[fieldTemp$7].field_b;
+                var2 = this.field_b[fieldTemp$5].field_b;
                 if (this.field_b[this.field_a - 1] != var2) {
                   this.field_d = var2.field_b;
                   return var2;
@@ -108,9 +107,9 @@ final class js {
     }
 
     final bw a(boolean param0, long param1) {
-        bw var4 = null;
-        bw var5 = null;
-        int var6 = 0;
+        bw var4;
+        bw var5;
+        int var6;
         var6 = BachelorFridge.field_y;
         if (param0) {
           var4 = this.field_b[(int)(param1 & (long)(this.field_e + -1))];
@@ -153,10 +152,9 @@ final class js {
     }
 
     final bw b(int param0) {
-        bw discarded$0 = null;
         this.field_a = 0;
         if (param0 != -13023) {
-            discarded$0 = this.b(45);
+            this.b(45);
             return this.c(-21446);
         }
         return this.c(-21446);

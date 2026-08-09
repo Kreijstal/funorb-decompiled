@@ -19,10 +19,9 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
     }
 
     private final synchronized void e(byte param0) {
-        boolean discarded$4 = false;
         if (param0 != 105) {
             java.awt.image.ImageConsumer var3 = (java.awt.image.ImageConsumer) null;
-            discarded$4 = this.isConsumer((java.awt.image.ImageConsumer) null);
+            this.isConsumer((java.awt.image.ImageConsumer) null);
             if (!(this.field_g != null)) {
                 return;
             }
@@ -39,7 +38,6 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
 
     final void a(java.awt.Graphics param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         java.awt.Shape var9 = null;
-        boolean discarded$0 = false;
         try {
             this.a(param2, param4, (byte) 31, param1, param7);
             var9 = param0.getClip();
@@ -47,7 +45,7 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
             if (param3 != 32255) {
                 this.field_j = (java.awt.Image) null;
             }
-            discarded$0 = param0.drawImage(this.field_j, -param4 + param6, param5 - param2, (java.awt.image.ImageObserver) ((Object) this.field_k));
+            param0.drawImage(this.field_j, -param4 + param6, param5 - param2, (java.awt.image.ImageObserver) ((Object) this.field_k));
             param0.setClip(var9);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) ((Object) runtimeException), "hq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
@@ -123,8 +121,6 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
     }
 
     final void a(int param0, int param1, int param2, java.awt.Canvas param3) {
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
         this.field_k = param3;
         this.field_e = param1;
         this.field_d = param2;
@@ -132,15 +128,15 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
         this.field_h = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
         this.field_j = this.field_k.createImage((java.awt.image.ImageProducer) (this));
         this.e((byte) 105);
-        boolean discarded$9 = this.field_k.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_k));
+        this.field_k.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_k));
         if (param0 != 4904) {
             return;
         }
         try {
             this.e((byte) 105);
-            discarded$10 = this.field_k.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_k));
+            this.field_k.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_k));
             this.e((byte) 105);
-            discarded$11 = this.field_k.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_k));
+            this.field_k.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_k));
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) ((Object) runtimeException), "hq.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -152,7 +148,7 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
     }
 
     private final synchronized void a(int param0, int param1, byte param2, int param3, int param4) {
-        java.awt.Canvas var7 = null;
+        java.awt.Canvas var7;
         if (this.field_g == null) {
           return;
         } else {
@@ -173,22 +169,12 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -205,27 +191,19 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("hq.removeConsumer(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("hq.removeConsumer(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

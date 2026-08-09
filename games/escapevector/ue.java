@@ -11,10 +11,8 @@ class ue extends hc {
         int var5 = param2 + -this.field_k;
         int var6 = param1 + -this.field_j;
         bl var7 = this.a(var6, (byte) -110, var5);
-        if (var7 != null) {
-            if (null != this.field_q) {
-                ((sg) ((Object) this.field_q)).a(param0 ^ 18321, (ue) (this), var7.field_m, param3);
-            }
+        if (var7 != null && null != this.field_q) {
+            ((sg) ((Object) this.field_q)).a(param0 ^ 18321, (ue) (this), var7.field_m, param3);
         }
     }
 
@@ -48,22 +46,12 @@ class ue extends hc {
         int var6 = 0;
         String[] var7 = null;
         String[] var8 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var6 = EscapeVector.field_A;
         try {
           L0: {
@@ -116,27 +104,19 @@ class ue extends hc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             runtimeException = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (runtimeException);
-            stackOut_14_1 = new StringBuilder().append("ue.I(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (runtimeException);
+
+            stackIn_16_1 = new StringBuilder().append("ue.I(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L6;
             }
           }
@@ -145,28 +125,23 @@ class ue extends hc {
     }
 
     final void k(int param0) {
-        int var2 = 0;
-        ao var3 = null;
-        pg var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        Object var10 = null;
-        int var11 = 0;
-        vl var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        bl var15 = null;
-        int var16 = 0;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int var2;
+        ao var3;
+        pg var4;
+        int var5;
+        String var6;
+        int var7;
+        int var8;
+        int var9;
+        Object var10;
+        int var11;
+        vl var12;
+        int var13;
+        int var14;
+        bl var15;
+        int var16;
         var16 = EscapeVector.field_A;
         this.field_D = new cn();
         var2 = param0;
@@ -192,29 +167,24 @@ class ue extends hc {
                 L2: {
                   var12 = var4.field_a[var11];
                   if (var8 == var11) {
-                    stackOut_6_0 = var4.a((byte) 122, var5);
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = var4.a((byte) 122, var5);
                     break L2;
                   } else {
-                    stackOut_5_0 = var12.field_b[0];
-                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_0 = var12.field_b[0];
                     break L2;
                   }
                 }
                 L3: {
                   var13 = stackIn_7_0;
                   if (var11 == var9) {
-                    stackOut_11_0 = var4.a((byte) 125, var2);
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = var4.a((byte) 125, var2);
                     break L3;
                   } else {
                     if (var12 == null) {
-                      stackOut_10_0 = 0;
-                      stackIn_12_0 = stackOut_10_0;
+                      stackIn_12_0 = 0;
                       break L3;
                     } else {
-                      stackOut_9_0 = var12.field_b[-1 + var12.field_b.length];
-                      stackIn_12_0 = stackOut_9_0;
+                      stackIn_12_0 = var12.field_b[-1 + var12.field_b.length];
                       break L3;
                     }
                   }
@@ -258,9 +228,9 @@ class ue extends hc {
     }
 
     private final bl a(int param0, byte param1, int param2) {
-        bl var4 = null;
-        bl var5 = null;
-        int var6 = 0;
+        bl var4;
+        bl var5;
+        int var6;
         var6 = EscapeVector.field_A;
         var4 = (bl) ((Object) this.field_D.a(false));
         if (param1 <= -83) {
@@ -306,9 +276,8 @@ class ue extends hc {
 
     final static void b(int param0, byte param1) {
         try {
-            Object discarded$0 = null;
             try {
-                discarded$0 = sd.a((byte) 106, oc.d((byte) -62), new Object[]{new Integer(param0)}, "resizing");
+                sd.a((byte) 106, oc.d((byte) -62), new Object[]{new Integer(param0)}, "resizing");
             } catch (Throwable throwable) {
             }
             if (param1 <= 93) {
@@ -331,28 +300,16 @@ class ue extends hc {
     boolean a(int param0, hm param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             if (param0 == -4659) {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               break L0;
             } else {
               this.field_E = (bl) null;
@@ -363,27 +320,19 @@ class ue extends hc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("ue.M(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("ue.M(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }
@@ -396,22 +345,12 @@ class ue extends hc {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -432,27 +371,19 @@ class ue extends hc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("ue.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("ue.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

@@ -32,8 +32,7 @@ final class kf extends pj implements ft {
     }
 
     final void g(int param0) {
-        String discarded$5 = null;
-        CharSequence var3 = null;
+        CharSequence var3;
         if (param0 <= -124) {
           if ((this.field_y ^ -1) < -1) {
             this.field_C.b(this.field_y, 97, this.field_s);
@@ -44,7 +43,7 @@ final class kf extends pj implements ft {
           }
         } else {
           var3 = (CharSequence) null;
-          discarded$5 = kf.a((CharSequence) null, (byte) -99);
+          kf.a((CharSequence) null, (byte) -99);
           if ((this.field_y ^ -1) >= -1) {
             return;
           } else {
@@ -66,59 +65,37 @@ final class kf extends pj implements ft {
     }
 
     final static void a(byte param0) {
+        boolean[] stackIn_16_0 = null;
+        int stackIn_16_1 = 0;
+        boolean[] stackIn_17_0 = null;
+        int stackIn_17_1 = 0;
+        int stackIn_17_2 = 0;
+        boolean[] stackIn_19_0 = null;
+        int stackIn_19_1 = 0;
+        boolean[] stackIn_20_0 = null;
+        int stackIn_20_1 = 0;
+        int stackIn_20_2 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         fs var6 = null;
-        fs var7 = null;
-        boolean[] stackIn_18_0 = null;
-        int stackIn_18_1 = 0;
-        boolean[] stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
-        boolean[] stackIn_20_0 = null;
-        int stackIn_20_1 = 0;
-        int stackIn_20_2 = 0;
-        boolean[] stackIn_21_0 = null;
-        int stackIn_21_1 = 0;
-        boolean[] stackIn_22_0 = null;
-        int stackIn_22_1 = 0;
-        boolean[] stackIn_23_0 = null;
-        int stackIn_23_1 = 0;
-        int stackIn_23_2 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        boolean[] stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        boolean[] stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_19_2 = 0;
-        boolean[] stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int stackOut_18_2 = 0;
-        boolean[] stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        boolean[] stackOut_22_0 = null;
-        int stackOut_22_1 = 0;
-        int stackOut_22_2 = 0;
-        boolean[] stackOut_21_0 = null;
-        int stackOut_21_1 = 0;
-        int stackOut_21_2 = 0;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
             var6 = new fs(ah.field_g);
-            var7 = var6;
-            var2 = var7.e(-31302);
+            var2 = var6.e(-31302);
             if ((var2 ^ -1) > -2) {
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
-              bl.field_e = var7.e(-31302);
-              ki.field_f = var7.e(-31302);
-              iv.field_i = var7.e(-31302);
-              hc.field_f = var7.e(-31302);
+              bl.field_e = var6.e(-31302);
+              ki.field_f = var6.e(-31302);
+              iv.field_i = var6.e(-31302);
+              hc.field_f = var6.e(-31302);
               if (param0 > 92) {
                 var3 = 0;
                 L1: while (true) {
@@ -126,84 +103,57 @@ final class kf extends pj implements ft {
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    if (var5 == 0) {
-                      L2: {
+                    L2: {
+                      if (25 > var3) {
                         L3: {
-                          if (25 > var3) {
-                            break L3;
-                          } else {
-                            if (var5 == 0) {
-                              break L2;
-                            } else {
-                              break L3;
-                            }
-                          }
-                        }
-                        L4: {
                           go.field_j[var3] = var6.c((byte) 122);
                           ql.field_z[var3] = var6.a(255);
                           if ((var2 ^ -1) <= -3) {
-                            var4 = var7.e(-31302);
+                            var4 = var6.e(-31302);
                             ql.field_A[var3] = -1 + eb.a(4, var4);
                             if (-4 >= (var2 ^ -1)) {
-                              L5: {
-                                stackOut_17_0 = up.field_g;
-                                stackOut_17_1 = var3;
-                                stackIn_19_0 = stackOut_17_0;
-                                stackIn_19_1 = stackOut_17_1;
-                                stackIn_18_0 = stackOut_17_0;
-                                stackIn_18_1 = stackOut_17_1;
+                              L4: {
+                                stackIn_16_0 = up.field_g;
+
+                                stackIn_16_1 = var3;
+
                                 if ((eb.a(1, var4 >> 110881382) ^ -1) != -2) {
-                                  stackOut_19_0 = (boolean[]) ((Object) stackIn_19_0);
-                                  stackOut_19_1 = stackIn_19_1;
-                                  stackOut_19_2 = 0;
-                                  stackIn_20_0 = stackOut_19_0;
-                                  stackIn_20_1 = stackOut_19_1;
-                                  stackIn_20_2 = stackOut_19_2;
-                                  break L5;
+                                  stackIn_17_0 = (boolean[]) ((Object) stackIn_16_0);
+                                  stackIn_17_1 = stackIn_16_1;
+                                  stackIn_17_2 = 0;
+                                  break L4;
                                 } else {
-                                  stackOut_18_0 = (boolean[]) ((Object) stackIn_18_0);
-                                  stackOut_18_1 = stackIn_18_1;
-                                  stackOut_18_2 = 1;
-                                  stackIn_20_0 = stackOut_18_0;
-                                  stackIn_20_1 = stackOut_18_1;
-                                  stackIn_20_2 = stackOut_18_2;
-                                  break L5;
+                                  stackIn_17_0 = (boolean[]) ((Object) stackIn_16_0);
+                                  stackIn_17_1 = stackIn_16_1;
+                                  stackIn_17_2 = 1;
+                                  break L4;
                                 }
                               }
-                              L6: {
-                                stackIn_20_0[stackIn_20_1] = stackIn_20_2 != 0;
-                                stackOut_20_0 = qn.field_d;
-                                stackOut_20_1 = var3;
-                                stackIn_22_0 = stackOut_20_0;
-                                stackIn_22_1 = stackOut_20_1;
-                                stackIn_21_0 = stackOut_20_0;
-                                stackIn_21_1 = stackOut_20_1;
+                              L5: {
+                                stackIn_17_0[stackIn_17_1] = stackIn_17_2 != 0;
+                                stackIn_19_0 = qn.field_d;
+
+                                stackIn_19_1 = var3;
+
                                 if ((eb.a(1, var4 >> -509514585) ^ -1) != -2) {
-                                  stackOut_22_0 = (boolean[]) ((Object) stackIn_22_0);
-                                  stackOut_22_1 = stackIn_22_1;
-                                  stackOut_22_2 = 0;
-                                  stackIn_23_0 = stackOut_22_0;
-                                  stackIn_23_1 = stackOut_22_1;
-                                  stackIn_23_2 = stackOut_22_2;
-                                  break L6;
+                                  stackIn_20_0 = (boolean[]) ((Object) stackIn_19_0);
+                                  stackIn_20_1 = stackIn_19_1;
+                                  stackIn_20_2 = 0;
+                                  break L5;
                                 } else {
-                                  stackOut_21_0 = (boolean[]) ((Object) stackIn_21_0);
-                                  stackOut_21_1 = stackIn_21_1;
-                                  stackOut_21_2 = 1;
-                                  stackIn_23_0 = stackOut_21_0;
-                                  stackIn_23_1 = stackOut_21_1;
-                                  stackIn_23_2 = stackOut_21_2;
-                                  break L6;
+                                  stackIn_20_0 = (boolean[]) ((Object) stackIn_19_0);
+                                  stackIn_20_1 = stackIn_19_1;
+                                  stackIn_20_2 = 1;
+                                  break L5;
                                 }
                               }
-                              stackIn_23_0[stackIn_23_1] = stackIn_23_2 != 0;
-                              break L4;
+                              stackIn_20_0[stackIn_20_1] = stackIn_20_2 != 0;
+                              break L3;
                             } else {
-                              break L4;
+                              break L3;
                             }
                           } else {
-                            break L4;
+                            break L3;
                           }
                         }
                         if (go.field_j[var3] == 0) {
@@ -213,12 +163,12 @@ final class kf extends pj implements ft {
                           bl.field_e = var3;
                           break L2;
                         }
+                      } else {
+                        break L2;
                       }
-                      var3++;
-                      continue L1;
-                    } else {
-                      return;
                     }
+                    var3++;
+                    continue L1;
                   }
                 }
               } else {
@@ -273,28 +223,16 @@ final class kf extends pj implements ft {
     }
 
     final static String a(CharSequence param0, byte param1) {
-        String discarded$2 = null;
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
         String stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_4_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -302,7 +240,7 @@ final class kf extends pj implements ft {
                 break L1;
               } else {
                 var3 = (CharSequence) null;
-                discarded$2 = kf.a((CharSequence) null, (byte) -40);
+                kf.a((CharSequence) null, (byte) -40);
                 break L1;
               }
             }
@@ -315,35 +253,26 @@ final class kf extends pj implements ft {
                 break L2;
               }
             }
-            stackOut_4_0 = (String) (var2);
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = (String) (var2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2_ref);
-            stackOut_6_1 = new StringBuilder().append("kf.C(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2_ref);
+
+            stackIn_8_1 = new StringBuilder().append("kf.C(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }

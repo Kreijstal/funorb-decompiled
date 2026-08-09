@@ -31,9 +31,8 @@ final class mi {
     }
 
     final String a(int param0) {
-        boolean discarded$0 = false;
         if (param0 >= -51) {
-            discarded$0 = this.b((byte) -51);
+            this.b((byte) -51);
             return this.field_c;
         }
         return this.field_c;

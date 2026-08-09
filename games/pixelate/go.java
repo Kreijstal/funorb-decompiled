@@ -22,40 +22,34 @@ class go extends rg {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        StringBuilder discarded$7 = null;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
-        StringBuilder discarded$10 = null;
-        StringBuilder discarded$11 = null;
-        StringBuilder discarded$12 = null;
-        StringBuilder discarded$13 = null;
-        int var3 = 0;
-        int var4 = 0;
-        String var5_ref_String = null;
-        int var5 = 0;
-        int var6 = 0;
-        String var8 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        String var13 = null;
-        String var14 = null;
-        String var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var32 = null;
-        String var33 = null;
-        String var34 = null;
-        String var35 = null;
-        String var36 = null;
-        String var37 = null;
-        String var38 = null;
-        String var39 = null;
-        String var40 = null;
-        String var41 = null;
-        Object var42 = null;
-        Object var43 = null;
-        CharSequence var44 = null;
+        StringBuilder discarded$0 = null;
+        int var3;
+        int var4;
+        String var5_ref_String;
+        int var5;
+        int var6;
+        String var8;
+        int var10;
+        int var11;
+        int var12;
+        String var13;
+        String var14;
+        String var15;
+        String var16;
+        String var17;
+        String var32;
+        String var33;
+        String var34;
+        String var35;
+        String var36;
+        String var37;
+        String var38;
+        String var39;
+        String var40;
+        String var41;
+        Object var42;
+        Object var43;
+        CharSequence var44;
         L0: {
           var42 = null;
           var43 = null;
@@ -158,7 +152,7 @@ class go extends rg {
               if ((mp.field_a.length() ^ -1) >= -1) {
                 return true;
               } else {
-                discarded$7 = nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
+                nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
                 return true;
               }
             } else {
@@ -170,7 +164,7 @@ class go extends rg {
               if (var3 != 0) {
                 if (-81 < (mp.field_a.length() ^ -1)) {
                   L5: {
-                    discarded$8 = mp.field_a.append((char) var5);
+                    discarded$0 = mp.field_a.append((char) var5);
                     var6 = 485;
                     var32 = kn.field_J;
                     var8 = var32;
@@ -193,7 +187,7 @@ class go extends rg {
                       } else {
                         var6 = var6 - var11;
                         if (vl.field_Q.c(mp.field_a.toString()) > var6) {
-                          discarded$9 = nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
+                          nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
                           return true;
                         } else {
                           return true;
@@ -223,7 +217,7 @@ class go extends rg {
                               var38 = var37 + var33 + ": ";
                               var6 = var6 - vl.field_Q.c(var38);
                               if (vl.field_Q.c(mp.field_a.toString()) > var6) {
-                                discarded$10 = nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
+                                nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
                                 return true;
                               } else {
                                 return true;
@@ -239,7 +233,7 @@ class go extends rg {
                                 if (vl.field_Q.c(mp.field_a.toString()) <= var6) {
                                   return true;
                                 } else {
-                                  discarded$11 = nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
+                                  nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
                                   return true;
                                 }
                               }
@@ -254,7 +248,7 @@ class go extends rg {
                       var39 = var8 + var33 + ": ";
                       var6 = var6 - vl.field_Q.c(var39);
                       if (vl.field_Q.c(mp.field_a.toString()) > var6) {
-                        discarded$12 = nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
+                        nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
                         return true;
                       } else {
                         return true;
@@ -262,7 +256,7 @@ class go extends rg {
                     }
                   }
                   if (vl.field_Q.c(mp.field_a.toString()) > var6) {
-                    discarded$13 = nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
+                    nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
                     return true;
                   } else {
                     return true;
@@ -301,10 +295,10 @@ class go extends rg {
     }
 
     final static wm a(int param0, int param1) {
-        wm[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        wm[] var5 = null;
+        wm[] var2;
+        int var3;
+        int var4;
+        wm[] var5;
         var4 = Pixelate.field_H ? 1 : 0;
         if (param1 <= -50) {
           var5 = dd.b((byte) 62);

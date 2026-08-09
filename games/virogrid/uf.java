@@ -130,9 +130,9 @@ final class uf {
     }
 
     final int a(int param0, int param1, byte param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
-        jc var8 = null;
+        int var6;
+        int var7;
+        jc var8;
         L0: {
           if (param2 == 99) {
             break L0;
@@ -231,15 +231,15 @@ final class uf {
     }
 
     private final int a(boolean param0, int param1, byte param2, int param3, int param4, boolean param5, int param6, int param7) {
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         L0: {
           L1: {
             L2: {
@@ -526,20 +526,18 @@ final class uf {
     }
 
     private final boolean a(int param0, int param1) {
-        int[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        jc var13 = null;
-        int[] var14 = null;
         int stackIn_38_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_36_0 = 0;
+        int[] var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        jc var13;
+        int[] var14;
         L0: {
           var12 = Virogrid.field_F ? 1 : 0;
           if (param1 <= -22) {
@@ -583,12 +581,10 @@ final class uf {
               if (var9 >= this.field_C.length) {
                 L5: {
                   if (var8 <= 0) {
-                    stackOut_37_0 = 0;
-                    stackIn_38_0 = stackOut_37_0;
+                    stackIn_38_0 = 0;
                     break L5;
                   } else {
-                    stackOut_36_0 = 1;
-                    stackIn_38_0 = stackOut_36_0;
+                    stackIn_38_0 = 1;
                     break L5;
                   }
                 }
@@ -600,7 +596,7 @@ final class uf {
                     var9++;
                     continue L4;
                   } else {
-                    if (param0 == this.field_C[var9][var10]) {
+                    if ((param0 ^ -1) == (this.field_C[var9][var10] ^ -1)) {
                       var8++;
                       var11 = 0;
                       L7: while (true) {
@@ -653,14 +649,14 @@ final class uf {
     }
 
     private final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var7 = 0;
-        int[] var7_ref_int__ = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int[] var13 = null;
+        int[] var7_ref_int__;
+        int var7;
+        int[] var8;
+        int[] var9;
+        int[] var10;
+        int var11;
+        int var12;
+        int[] var13;
         L0: {
           var12 = Virogrid.field_F ? 1 : 0;
           if (-1 > (this.field_f ^ -1)) {
@@ -729,7 +725,7 @@ final class uf {
     }
 
     final void c(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         L0: {
           this.field_n = false;
           this.field_x = false;
@@ -757,19 +753,14 @@ final class uf {
     }
 
     final boolean c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        Object stackIn_18_0 = null;
+        byte dupTemp$0 = 0;
         Object stackIn_19_0 = null;
         Object stackIn_20_0 = null;
         int stackIn_20_1 = 0;
-        Object stackOut_17_0 = null;
-        Object stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        Object stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = Virogrid.field_F ? 1 : 0;
         if (this.field_E) {
           throw new IllegalStateException();
@@ -790,20 +781,15 @@ final class uf {
               L2: while (true) {
                 if (this.field_C.length <= var3) {
                   L3: {
-                    stackOut_17_0 = this;
-                    stackIn_19_0 = stackOut_17_0;
-                    stackIn_18_0 = stackOut_17_0;
+                    stackIn_19_0 = this;
+
                     if (var2 == 0) {
-                      stackOut_19_0 = this;
-                      stackOut_19_1 = 0;
-                      stackIn_20_0 = stackOut_19_0;
-                      stackIn_20_1 = stackOut_19_1;
+                      stackIn_20_0 = this;
+                      stackIn_20_1 = 0;
                       break L3;
                     } else {
-                      stackOut_18_0 = this;
-                      stackOut_18_1 = 1;
-                      stackIn_20_0 = stackOut_18_0;
-                      stackIn_20_1 = stackOut_18_1;
+                      stackIn_20_0 = this;
+                      stackIn_20_1 = 1;
                       break L3;
                     }
                   }
@@ -847,7 +833,8 @@ final class uf {
                       continue L2;
                     } else {
                       if (this.field_C[var3][var4] != -1) {
-                        this.field_z[this.field_C[var3][var4]] = this.field_z[this.field_C[var3][var4]] + 1;
+                        dupTemp$0 = this.field_C[var3][var4];
+                        this.field_z[dupTemp$0] = this.field_z[dupTemp$0] + 1;
                         var4++;
                         continue L5;
                       } else {
@@ -870,26 +857,16 @@ final class uf {
 
     final void a(jc param0, byte param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var3 = null;
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -932,27 +909,19 @@ final class uf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var3);
-            stackOut_12_1 = new StringBuilder().append("uf.S(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var3);
+
+            stackIn_14_1 = new StringBuilder().append("uf.S(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L5;
             }
           }
@@ -961,19 +930,14 @@ final class uf {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        Object stackIn_13_0 = null;
+        byte dupTemp$0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
         int stackIn_15_1 = 0;
-        Object stackOut_12_0 = null;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
         var5 = Virogrid.field_F ? 1 : 0;
         var2 = 0;
         L0: while (true) {
@@ -983,20 +947,15 @@ final class uf {
             L1: while (true) {
               if (var3 >= this.field_C.length) {
                 L2: {
-                  stackOut_12_0 = this;
-                  stackIn_14_0 = stackOut_12_0;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_14_0 = this;
+
                   if (var2 == 0) {
-                    stackOut_14_0 = this;
-                    stackOut_14_1 = 0;
-                    stackIn_15_0 = stackOut_14_0;
-                    stackIn_15_1 = stackOut_14_1;
+                    stackIn_15_0 = this;
+                    stackIn_15_1 = 0;
                     break L2;
                   } else {
-                    stackOut_13_0 = this;
-                    stackOut_13_1 = 1;
-                    stackIn_15_0 = stackOut_13_0;
-                    stackIn_15_1 = stackOut_13_1;
+                    stackIn_15_0 = this;
+                    stackIn_15_1 = 1;
                     break L2;
                   }
                 }
@@ -1032,7 +991,8 @@ final class uf {
                     continue L1;
                   } else {
                     if (0 != (this.field_C[var3][var4] ^ -1)) {
-                      this.field_z[this.field_C[var3][var4]] = this.field_z[this.field_C[var3][var4]] + 1;
+                      dupTemp$0 = this.field_C[var3][var4];
+                      this.field_z[dupTemp$0] = this.field_z[dupTemp$0] + 1;
                       var4++;
                       continue L5;
                     } else {
@@ -1053,19 +1013,20 @@ final class uf {
     }
 
     final int a(int param0, int param1, byte param2, int param3, int param4, int param5) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13_int = 0;
-        int[] var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int[] var17 = null;
-        int[] var18 = null;
+        byte dupTemp$0 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13_int;
+        int[] var13;
+        int var14;
+        int var15;
+        int var16;
+        int[] var17;
+        int[] var18;
         var16 = Virogrid.field_F ? 1 : 0;
         if (!this.field_E) {
           L0: {
@@ -1152,7 +1113,8 @@ final class uf {
                                 continue L8;
                               } else {
                                 if (-1 >= (this.field_C[var14][var15] ^ -1)) {
-                                  var13[this.field_C[var14][var15]] = var13[this.field_C[var14][var15]] + 1;
+                                  dupTemp$0 = this.field_C[var14][var15];
+                                  var13[dupTemp$0] = var13[dupTemp$0] + 1;
                                   var15++;
                                   continue L9;
                                 } else {
@@ -1197,7 +1159,7 @@ final class uf {
                     var13_int++;
                     continue L5;
                   } else {
-                    if (-param3 + 1 == this.field_C[var13_int][var14]) {
+                    if ((-param3 + 1 ^ -1) == (this.field_C[var13_int][var14] ^ -1)) {
                       var12++;
                       this.field_C[var13_int][var14] = (byte)param3;
                       var14++;
@@ -1257,7 +1219,12 @@ final class uf {
     }
 
     final void a(boolean[][] param0, int param1, byte param2) {
-        boolean discarded$1 = false;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int[] var5 = null;
         int var6 = 0;
@@ -1267,22 +1234,6 @@ final class uf {
         int var10 = 0;
         int var11 = 0;
         int[] var12 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         var11 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -1292,7 +1243,7 @@ final class uf {
               if (param2 == 14) {
                 break L1;
               } else {
-                discarded$1 = this.a(59, 84, 4, 79, -14, 66);
+                this.a(59, 84, 4, 79, -14, 66);
                 break L1;
               }
             }
@@ -1309,7 +1260,7 @@ final class uf {
                   } else {
                     L4: {
                       param0[var8][var9] = false;
-                      if (param1 == this.field_C[var8][var9]) {
+                      if ((param1 ^ -1) == (this.field_C[var8][var9] ^ -1)) {
                         var10 = 0;
                         L5: while (true) {
                           if (var12.length <= var10) {
@@ -1360,27 +1311,19 @@ final class uf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var4 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var4);
-            stackOut_22_1 = new StringBuilder().append("uf.P(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var4);
+
+            stackIn_24_1 = new StringBuilder().append("uf.P(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L7;
             }
           }
@@ -1389,27 +1332,27 @@ final class uf {
     }
 
     final void b(int param0, int param1) {
-        int[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int[] var21 = null;
-        int var22 = 0;
-        int[] var24 = null;
-        byte[][] var27 = null;
+        int[] var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int[] var21;
+        int var22;
+        int[] var24;
+        byte[][] var27;
         L0: {
           var20 = Virogrid.field_F ? 1 : 0;
           var21 = new int[]{-1, -1, -1, 0, 0, 1, 1, 1, 2, 2, 2, 0, 0, -2, -2, -2};
@@ -1481,7 +1424,7 @@ final class uf {
                                             var14++;
                                             continue L5;
                                           } else {
-                                            if (1 - var5 == this.field_C[var14][var15]) {
+                                            if ((1 - var5 ^ -1) == (this.field_C[var14][var15] ^ -1)) {
                                               var18 = 0;
                                               L9: while (true) {
                                                 if (var18 < var24.length) {
@@ -1601,7 +1544,7 @@ final class uf {
                     var6++;
                     continue L14;
                   } else {
-                    if (this.field_C[var6][var7] == var5) {
+                    if ((this.field_C[var6][var7] ^ -1) == (var5 ^ -1)) {
                       var21 = var24;
                       var10 = 0;
                       L16: while (true) {

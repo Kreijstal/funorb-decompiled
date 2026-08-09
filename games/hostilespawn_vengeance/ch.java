@@ -21,28 +21,28 @@ class ch {
     static String field_k;
 
     void b(int param0) {
-        long var2 = 0L;
-        double var4 = 0.0;
+        long var2;
+        double var4;
         if (param0 == -24) {
           var2 = hn.a((byte) 80);
-          var4 = ((ch) this).field_i * (double)(-((ch) this).field_c + var2);
-          ((ch) this).field_c = var2;
+          var4 = this.field_i * (double)(-this.field_c + var2);
+          this.field_c = var2;
           if (0.0 != var4) {
-            ((ch) this).field_l = ((ch) this).field_l + var4;
+            this.field_l = this.field_l + var4;
             if (var4 > 0.0) {
-              if ((double)((ch) this).field_m > ((ch) this).field_l) {
+              if ((double)this.field_m > this.field_l) {
                 return;
               } else {
-                ((ch) this).field_l = (double)((ch) this).field_m;
-                ((ch) this).field_i = 0.0;
+                this.field_l = (double)this.field_m;
+                this.field_i = 0.0;
                 return;
               }
             } else {
-              if ((double)((ch) this).field_m < ((ch) this).field_l) {
+              if ((double)this.field_m < this.field_l) {
                 return;
               } else {
-                ((ch) this).field_l = (double)((ch) this).field_m;
-                ((ch) this).field_i = 0.0;
+                this.field_l = (double)this.field_m;
+                this.field_i = 0.0;
                 return;
               }
             }
@@ -60,22 +60,25 @@ class ch {
         field_h = null;
         field_b = null;
         field_p = null;
+        if (param0) {
+            return;
+        }
         field_k = null;
     }
 
     final void a(int param0, int param1) {
-        if (0.0 == ((ch) this).field_l) {
-          if (((ch) this).field_m != 0) {
+        if (0.0 == this.field_l) {
+          if (-1 != (this.field_m ^ -1)) {
             if (param1 != 8000) {
-              ((ch) this).a(97);
-              ((ch) this).field_m = 0;
-              ((ch) this).field_n.a(this.a(0, (byte) 55), param0, -1702);
-              ((ch) this).field_i = -((ch) this).field_l / (double)param0;
+              this.a(97);
+              this.field_m = 0;
+              this.field_n.a(this.a(0, (byte) 55), param0, -1702);
+              this.field_i = -this.field_l / (double)param0;
               return;
             } else {
-              ((ch) this).field_m = 0;
-              ((ch) this).field_n.a(this.a(0, (byte) 55), param0, -1702);
-              ((ch) this).field_i = -((ch) this).field_l / (double)param0;
+              this.field_m = 0;
+              this.field_n.a(this.a(0, (byte) 55), param0, -1702);
+              this.field_i = -this.field_l / (double)param0;
               return;
             }
           } else {
@@ -83,15 +86,15 @@ class ch {
           }
         } else {
           if (param1 != 8000) {
-            ((ch) this).a(97);
-            ((ch) this).field_m = 0;
-            ((ch) this).field_n.a(this.a(0, (byte) 55), param0, -1702);
-            ((ch) this).field_i = -((ch) this).field_l / (double)param0;
+            this.a(97);
+            this.field_m = 0;
+            this.field_n.a(this.a(0, (byte) 55), param0, -1702);
+            this.field_i = -this.field_l / (double)param0;
             return;
           } else {
-            ((ch) this).field_m = 0;
-            ((ch) this).field_n.a(this.a(0, (byte) 55), param0, -1702);
-            ((ch) this).field_i = -((ch) this).field_l / (double)param0;
+            this.field_m = 0;
+            this.field_n.a(this.a(0, (byte) 55), param0, -1702);
+            this.field_i = -this.field_l / (double)param0;
             return;
           }
         }
@@ -101,81 +104,80 @@ class ch {
         if (param0 != 256) {
             return;
         }
-        ((ch) this).field_l = 0.0;
-        ((ch) this).field_m = 0;
-        ((ch) this).field_i = 0.0;
+        this.field_l = 0.0;
+        this.field_m = 0;
+        this.field_i = 0.0;
     }
 
     final static void a(byte param0) {
         re.field_k = false;
         qh.field_q = -1;
         eb.field_d = null;
+        if (param0 < 84) {
+            return;
+        }
         l.field_d = -1;
         fb.field_l = 0;
     }
 
     private final mn a(int param0, byte param1) {
-        return ((ch) this).field_g[param0];
+        if (param1 != 55) {
+            field_d = (String) null;
+            return this.field_g[param0];
+        }
+        return this.field_g[param0];
     }
 
     ch(kh param0, mn[] param1) {
-        ((ch) this).field_o = 8000;
-        ((ch) this).field_c = 0L;
-        ((ch) this).field_j = 100;
+        this.field_o = 8000;
+        this.field_c = 0L;
+        this.field_j = 100;
         try {
-            ((ch) this).field_n = param0;
-            ((ch) this).field_g = param1;
+            this.field_n = param0;
+            this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "ch.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw wg.a((Throwable) ((Object) runtimeException), "ch.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean b(int param0, byte param1) {
-        double var3 = 0.0;
-        int var5 = 0;
+        double var3;
+        int var5;
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        if (param0 != ((ch) this).field_m) {
+        if (param0 != this.field_m) {
           if (param1 < 86) {
             L0: {
-              ((ch) this).a(65, 114);
-              ((ch) this).field_m = param0;
-              var3 = (double)((ch) this).field_m - ((ch) this).field_l;
+              this.a(65, 114);
+              this.field_m = param0;
+              var3 = (double)this.field_m - this.field_l;
               if (var3 >= 0.0) {
-                stackOut_9_0 = ((ch) this).field_j;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = this.field_j;
                 break L0;
               } else {
-                stackOut_8_0 = ((ch) this).field_o;
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = this.field_o;
                 break L0;
               }
             }
             var5 = stackIn_10_0;
-            ((ch) this).field_n.a(this.a(((ch) this).field_m, (byte) 55), var5, -1702);
-            ((ch) this).field_i = var3 / (double)var5;
+            this.field_n.a(this.a(this.field_m, (byte) 55), var5, -1702);
+            this.field_i = var3 / (double)var5;
             return true;
           } else {
             L1: {
-              ((ch) this).field_m = param0;
-              var3 = (double)((ch) this).field_m - ((ch) this).field_l;
+              this.field_m = param0;
+              var3 = (double)this.field_m - this.field_l;
               if (var3 >= 0.0) {
-                stackOut_5_0 = ((ch) this).field_j;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = this.field_j;
                 break L1;
               } else {
-                stackOut_4_0 = ((ch) this).field_o;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = this.field_o;
                 break L1;
               }
             }
             var5 = stackIn_6_0;
-            ((ch) this).field_n.a(this.a(((ch) this).field_m, (byte) 55), var5, -1702);
-            ((ch) this).field_i = var3 / (double)var5;
+            this.field_n.a(this.a(this.field_m, (byte) 55), var5, -1702);
+            this.field_i = var3 / (double)var5;
             return true;
           }
         } else {
@@ -184,10 +186,6 @@ class ch {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 500;
         field_p = new vl();
         field_d = "Discard";

@@ -40,8 +40,6 @@ final class gj {
         bl stackIn_10_0 = null;
         bl stackIn_14_0 = null;
         bl stackIn_16_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -49,25 +47,12 @@ final class gj {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        bl stackOut_3_0 = null;
-        bl stackOut_15_0 = null;
-        bl stackOut_13_0 = null;
-        bl stackOut_9_0 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
         var6 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
             var2 = kh.a("jagex-last-login-method", 66, param1);
             if (var2 == null) {
-              stackOut_3_0 = oi.field_a;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = oi.field_a;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -76,21 +61,18 @@ final class gj {
               L1: while (true) {
                 if (var4 >= var3.length) {
                   if (param0 >= 96) {
-                    stackOut_15_0 = oi.field_a;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = oi.field_a;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
-                    stackOut_13_0 = (bl) null;
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = (bl) null;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 } else {
                   var5 = var3[var4];
                   if (var5.a(var2, false)) {
-                    stackOut_9_0 = (bl) (var5);
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = (bl) (var5);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -105,27 +87,19 @@ final class gj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var2_ref);
-            stackOut_17_1 = new StringBuilder().append("gj.B(").append(param0).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var2_ref);
+
+            stackIn_19_1 = new StringBuilder().append("gj.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L2;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L2;
             }
           }
@@ -156,11 +130,10 @@ final class gj {
     }
 
     final static int a(int param0, int param1, int param2) {
-        bl discarded$0 = null;
         int var3 = param2 >> -133681633 & -1 + param1;
         if (param0 != 2) {
             java.applet.Applet var4 = (java.applet.Applet) null;
-            discarded$0 = gj.a(107, (java.applet.Applet) null);
+            gj.a(107, (java.applet.Applet) null);
         }
         return var3 + (param2 - -(param2 >>> -270751457)) % param1;
     }

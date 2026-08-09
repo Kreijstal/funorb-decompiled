@@ -31,9 +31,8 @@ final class ao extends km {
     }
 
     final static km d(boolean param0) {
-        km discarded$0 = null;
         if (!param0) {
-            discarded$0 = ao.d(false);
+            ao.d(false);
             return uf.field_j.field_Jb;
         }
         return uf.field_j.field_Jb;

@@ -10,8 +10,8 @@ final class vma extends pv {
     }
 
     final static void a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = BachelorFridge.field_y;
           jfa.field_q[param1] = new qc(param1);

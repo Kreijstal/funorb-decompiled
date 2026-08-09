@@ -15,26 +15,26 @@ final class ql extends am {
     }
 
     final int[][] a(int param0, int param1) {
-        int[][] var3 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int[][] var20 = null;
-        int[][] var21 = null;
-        int[][] var31 = null;
-        int[][] var50 = null;
-        int[][] var51 = null;
-        int[] var52 = null;
-        int[] var53 = null;
-        int[] var54 = null;
-        int[] var55 = null;
-        int[] var56 = null;
-        int[] var57 = null;
-        int[] var58 = null;
+        int[][] var3;
+        int[] var7;
+        int[] var8;
+        int[] var9;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int[][] var20;
+        int[][] var21;
+        int[][] var31;
+        int[][] var50;
+        int[][] var51;
+        int[] var52;
+        int[] var53;
+        int[] var54;
+        int[] var55;
+        int[] var56;
+        int[] var57;
+        int[] var58;
         L0: {
           var19 = Torquing.field_u;
           var31 = this.field_r.a(15142, param1);
@@ -63,13 +63,40 @@ final class ql extends am {
               } else {
                 var17 = var52[var16];
                 if ((var17 ^ -1) == -4097) {
+                  var7 = var31[0];
+                  var8 = var31[1];
+                  var9 = var31[2];
+                  var53 = var50[0];
+                  var54 = var51[0];
+                  var55 = var51[1];
+                  var56 = var50[1];
+                  var57 = var50[2];
+                  var58 = var51[2];
                   var7[var16] = var53[var16];
                   var8[var16] = var56[var16];
                   var9[var16] = var57[var16];
                   var16++;
                   continue L1;
                 } else {
+                  var7 = var31[0];
+                  var8 = var31[1];
+                  var9 = var31[2];
+                  var53 = var50[0];
+                  var54 = var51[0];
+                  var55 = var51[1];
+                  var56 = var50[1];
+                  var57 = var50[2];
+                  var58 = var51[2];
                   if (0 == var17) {
+                    var7 = var31[0];
+                    var8 = var31[1];
+                    var9 = var31[2];
+                    var53 = var50[0];
+                    var54 = var51[0];
+                    var55 = var51[1];
+                    var56 = var50[1];
+                    var57 = var50[2];
+                    var58 = var51[2];
                     var7[var16] = var54[var16];
                     var8[var16] = var55[var16];
                     var9[var16] = var58[var16];
@@ -100,51 +127,30 @@ final class ql extends am {
     }
 
     final void a(fj param0, int param1, int param2) {
-        RuntimeException var4 = null;
-        Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         int stackIn_5_1 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
               if (param2 == 0) {
                 L2: {
-                  stackOut_2_0 = this;
-                  stackIn_4_0 = stackOut_2_0;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_4_0 = this;
+
                   if (-2 != (param0.i((byte) -101) ^ -1)) {
-                    stackOut_4_0 = this;
-                    stackOut_4_1 = 0;
-                    stackIn_5_0 = stackOut_4_0;
-                    stackIn_5_1 = stackOut_4_1;
+                    stackIn_5_0 = this;
+                    stackIn_5_1 = 0;
                     break L2;
                   } else {
-                    stackOut_3_0 = this;
-                    stackOut_3_1 = 1;
-                    stackIn_5_0 = stackOut_3_0;
-                    stackIn_5_1 = stackOut_3_1;
+                    stackIn_5_0 = this;
+                    stackIn_5_1 = 1;
                     break L2;
                   }
                 }
@@ -168,27 +174,19 @@ final class ql extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var4);
-            stackOut_9_1 = new StringBuilder().append("ql.H(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var4);
+
+            stackIn_11_1 = new StringBuilder().append("ql.H(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -210,9 +208,16 @@ final class ql extends am {
     }
 
     final static void a(int param0, int param1, t param2, int param3, int param4, byte param5) {
-        int incrementValue$1 = 0;
-        RuntimeException var6 = null;
+        int incrementValue$0 = 0;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -227,23 +232,6 @@ final class ql extends am {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_34_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
         var20 = Torquing.field_u;
         try {
           L0: {
@@ -332,9 +320,9 @@ final class ql extends am {
                               var16 = -var15 + 256;
                               if (0 <= var15) {
                                 L9: {
-                                  incrementValue$1 = var9;
+                                  incrementValue$0 = var9;
                                   var9++;
-                                  var17 = param2.field_y[incrementValue$1];
+                                  var17 = param2.field_y[incrementValue$0];
                                   if (var17 != 0) {
                                     if (var15 <= 255) {
                                       var18 = ph.field_e[var8];
@@ -377,27 +365,19 @@ final class ql extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var6 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var6);
-            stackOut_31_1 = new StringBuilder().append("ql.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackIn_33_0 = (RuntimeException) (var6);
+
+            stackIn_33_1 = new StringBuilder().append("ql.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L10;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L10;
             }
           }
@@ -419,13 +399,13 @@ final class ql extends am {
     }
 
     final int[] a(byte param0, int param1) {
-        int[] var3 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int[] var13 = null;
-        int[] var14 = null;
-        int[] var15 = null;
+        int[] var3;
+        int var7;
+        int var8;
+        int var9;
+        int[] var13;
+        int[] var14;
+        int[] var15;
         L0: {
           var9 = Torquing.field_u;
           var3 = this.field_l.a(param1, 25657);

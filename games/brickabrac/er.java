@@ -9,7 +9,7 @@ final class er {
     static String field_a;
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3;
         var3 = param2 >> 342261439 & -1 + param1;
         if (param0 != -1560508993) {
           field_e = (String) null;
@@ -20,12 +20,11 @@ final class er {
     }
 
     public static void a(byte param0) {
-        int discarded$2 = 0;
         field_a = null;
         field_b = null;
         field_d = null;
         if (param0 != -121) {
-          discarded$2 = er.a(-124, 122, -66);
+          er.a(-124, 122, -66);
           field_e = null;
           return;
         } else {

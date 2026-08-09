@@ -6,7 +6,7 @@ final class u {
         if (param0 != -81) {
             return;
         }
-        Object discarded$0 = netscape.javascript.JSObject.getWindow(param2).eval(param1);
+        netscape.javascript.JSObject.getWindow(param2).eval(param1);
     }
 
     final static Object a(java.applet.Applet param0, boolean param1, Object[] param2, String param3) throws Throwable {

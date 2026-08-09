@@ -9,14 +9,10 @@ abstract class iha extends at {
     }
 
     final boolean b(int param0) {
-        int var3 = 0;
-        at var4 = null;
+        int var3;
+        at var4;
         int stackIn_34_0 = 0;
         int stackIn_50_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_33_0 = 0;
         var3 = BachelorFridge.field_y;
         if (!this.field_f) {
           if (this.c((byte) 122)) {
@@ -34,14 +30,12 @@ abstract class iha extends at {
                           if (!this.field_h.e(12917)) {
                             break L2;
                           } else {
-                            stackOut_48_0 = 1;
-                            stackIn_50_0 = stackOut_48_0;
+                            stackIn_50_0 = 1;
                             break L1;
                           }
                         }
                       }
-                      stackOut_49_0 = 0;
-                      stackIn_50_0 = stackOut_49_0;
+                      stackIn_50_0 = 0;
                       break L1;
                     }
                     return stackIn_50_0 != 0;
@@ -78,14 +72,12 @@ abstract class iha extends at {
                           if (!this.field_h.e(12917)) {
                             break L6;
                           } else {
-                            stackOut_32_0 = 1;
-                            stackIn_34_0 = stackOut_32_0;
+                            stackIn_34_0 = 1;
                             break L5;
                           }
                         }
                       }
-                      stackOut_33_0 = 0;
-                      stackIn_34_0 = stackOut_33_0;
+                      stackIn_34_0 = 0;
                       break L5;
                     }
                     return stackIn_34_0 != 0;

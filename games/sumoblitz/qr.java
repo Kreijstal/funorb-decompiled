@@ -12,23 +12,12 @@ final class qr {
         an var2 = null;
         RuntimeException var2_ref = null;
         an stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        an stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -41,35 +30,26 @@ final class qr {
                 break L1;
               }
             }
-            stackOut_2_0 = (an) (var2);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (an) (var2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2_ref);
-            stackOut_4_1 = new StringBuilder().append("qr.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2_ref);
+
+            stackIn_6_1 = new StringBuilder().append("qr.A(");
+
             if (args == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -84,9 +64,9 @@ final class qr {
 
     final static void a(int param0, int param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
@@ -101,32 +81,21 @@ final class qr {
             }
             var2_int = 0;
             L2: while (true) {
-              L3: {
-                L4: {
-                  if (var2_int >= se.field_d) {
-                    break L4;
+              if (var2_int >= se.field_d) {
+                L3: {
+                  vk.a(ab.field_c, oc.field_f, (byte) -107, param1 + se.field_d, param1 + param1, param1, false);
+                  if (se.field_d <= param1) {
+                    break L3;
                   } else {
-                    pd.field_q[param1 + var2_int] = var2_int;
-                    var2_int++;
-                    if (var3 != 0) {
-                      break L3;
-                    } else {
-                      if (var3 == 0) {
-                        continue L2;
-                      } else {
-                        break L4;
-                      }
-                    }
+                    se.field_d = param1;
+                    break L3;
                   }
                 }
-                vk.a(ab.field_c, oc.field_f, (byte) -107, param1 + se.field_d, param1 + param1, param1, false);
-                break L3;
-              }
-              if (se.field_d <= param1) {
                 break L0;
               } else {
-                se.field_d = param1;
-                return;
+                pd.field_q[param1 + var2_int] = var2_int;
+                var2_int++;
+                continue L2;
               }
             }
           }
@@ -138,20 +107,29 @@ final class qr {
     }
 
     final boolean a(int param0) {
+        int stackIn_8_0 = 0;
         if (param0 == 17704) {
-          if (jj.field_f != this) {
-            if (uu.field_l != this) {
-              if (this == ga.field_j) {
-                return true;
+          L0: {
+            L1: {
+              if (jj.field_f == this) {
+                break L1;
               } else {
-                return false;
+                if (uu.field_l == this) {
+                  break L1;
+                } else {
+                  if (this != ga.field_j) {
+                    stackIn_8_0 = 0;
+                    break L0;
+                  } else {
+                    break L1;
+                  }
+                }
               }
-            } else {
-              return true;
             }
-          } else {
-            return true;
+            stackIn_8_0 = 1;
+            break L0;
           }
+          return stackIn_8_0 != 0;
         } else {
           return false;
         }
@@ -163,13 +141,9 @@ final class qr {
         field_a = null;
         field_b = null;
         if (param0 != 119) {
-          field_e = (gf) null;
-          field_d = null;
-          return;
-        } else {
-          field_d = null;
-          return;
+            field_e = (gf) null;
         }
+        field_d = null;
     }
 
     static {

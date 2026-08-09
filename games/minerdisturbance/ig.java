@@ -36,7 +36,6 @@ final class ig {
     final static void a(int param0, int param1, il param2) {
         ld var3 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var3 = sn.field_c;
             var3.d((byte) -77, param0);
@@ -49,7 +48,7 @@ final class ig {
             var3.a((byte) 82, param2.field_q);
             var3.a((byte) 106, param2.field_u);
             var3.a((byte) 121, param2.field_w);
-            discarded$0 = var3.e(-128, var4);
+            var3.e(-128, var4);
             var3.g(-1, var3.field_o - var4);
         } catch (RuntimeException runtimeException) {
             throw lj.a((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -57,7 +56,7 @@ final class ig {
     }
 
     public static void b(int param0) {
-        il var2 = null;
+        il var2;
         field_c = null;
         field_d = null;
         if (param0 < 44) {

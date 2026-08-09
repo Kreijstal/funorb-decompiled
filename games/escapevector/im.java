@@ -12,7 +12,6 @@ final class im extends IOException {
         int var4 = 0;
         int stackIn_6_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
         var4 = EscapeVector.field_A;
         try {
           L0: {
@@ -29,8 +28,7 @@ final class im extends IOException {
             L2: while (true) {
               if (param0 == 0) {
                 var3_int = 59 % ((-4 - param2) / 49);
-                stackOut_5_0 = param1;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = param1;
                 break L0;
               } else {
                 var3_int = param1 % param0;
@@ -49,11 +47,11 @@ final class im extends IOException {
     }
 
     final static void a(byte param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         cc var4 = null;
         dc var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = EscapeVector.field_A;
         try {
           L0: {

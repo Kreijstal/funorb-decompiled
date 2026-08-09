@@ -33,26 +33,26 @@ final class nj {
     }
 
     private final void a(int param0, int param1) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        String var7_ref_String = null;
-        int var7 = 0;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        wm var13 = null;
-        String var14 = null;
-        String var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
-        String var20 = null;
-        String var21 = null;
-        String var22 = null;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        String var7_ref_String;
+        String var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        wm var13;
+        String var14;
+        String var15;
+        String var16;
+        String var17;
+        String var18;
+        String var19;
+        String var20;
+        String var21;
+        String var22;
         var11 = CrazyCrystals.field_B;
         var13 = jf.a(72 + (param1 - -4), 486, 0, 534, param1 + 4);
         var4 = -126 % ((71 - param0) / 38);
@@ -296,17 +296,11 @@ final class nj {
     }
 
     private final boolean a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        Object stackIn_15_0 = null;
         Object stackIn_16_0 = null;
         Object stackIn_17_0 = null;
         int stackIn_17_1 = 0;
-        Object stackOut_14_0 = null;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        Object stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = CrazyCrystals.field_B;
           this.field_m = 1 + this.field_m & 15;
@@ -335,20 +329,15 @@ final class nj {
               if (this.field_h < this.field_b.length()) {
                 L2: {
                   this.field_h = this.field_h + 1;
-                  stackOut_14_0 = this;
-                  stackIn_16_0 = stackOut_14_0;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_16_0 = this;
+
                   if (this.field_h != this.field_b.length()) {
-                    stackOut_16_0 = this;
-                    stackOut_16_1 = 4;
-                    stackIn_17_0 = stackOut_16_0;
-                    stackIn_17_1 = stackOut_16_1;
+                    stackIn_17_0 = this;
+                    stackIn_17_1 = 4;
                     break L2;
                   } else {
-                    stackOut_15_0 = this;
-                    stackOut_15_1 = 30;
-                    stackIn_17_0 = stackOut_15_0;
-                    stackIn_17_1 = stackOut_15_1;
+                    stackIn_17_0 = this;
+                    stackIn_17_1 = 30;
                     break L2;
                   }
                 }
@@ -390,15 +379,12 @@ final class nj {
     }
 
     final nj b(byte param0) {
-        nj discarded$0 = null;
-        if (0 < this.field_g) {
-            if (!this.field_i) {
-                this.field_i = true;
-                if (null != this.field_n) {
-                    discarded$0 = this.field_n.b((byte) -112);
-                }
-                return (nj) (this);
+        if (0 < this.field_g && !this.field_i) {
+            this.field_i = true;
+            if (null != this.field_n) {
+                this.field_n.b((byte) -112);
             }
+            return (nj) (this);
         }
         if (param0 > -91) {
             this.field_i = true;

@@ -5,7 +5,7 @@ final class nd extends ta implements java.awt.event.MouseWheelListener {
     private int field_g;
 
     final synchronized int a(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = this.field_g;
         if (param0 != -1) {
           this.field_g = -82;
@@ -35,9 +35,8 @@ final class nd extends ta implements java.awt.event.MouseWheelListener {
     }
 
     final void b(java.awt.Component param0, int param1) {
-        int discarded$0 = 0;
         if (param1 != -1) {
-            discarded$0 = this.a(53);
+            this.a(53);
             param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
             return;
         }

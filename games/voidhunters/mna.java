@@ -31,18 +31,16 @@ final class mna extends mfb {
     }
 
     final int f(byte param0) {
-        int discarded$0 = 0;
         if (param0 < 0) {
-            discarded$0 = this.b(true);
+            this.b(true);
             return tta.field_p;
         }
         return tta.field_p;
     }
 
     final int g(byte param0) {
-        int discarded$0 = 0;
         if (param0 > -12) {
-            discarded$0 = this.b(true);
+            this.b(true);
             return ww.field_o;
         }
         return ww.field_o;
@@ -54,9 +52,8 @@ final class mna extends mfb {
     }
 
     final int k(int param0) {
-        int discarded$0 = 0;
         if (param0 != 0) {
-            discarded$0 = this.g(34);
+            this.g(34);
             return 2;
         }
         return 2;
@@ -85,9 +82,8 @@ final class mna extends mfb {
     }
 
     final int g(int param0) {
-        int discarded$0 = 0;
         if (param0 != 2769) {
-            discarded$0 = this.a(71);
+            this.a(71);
             return mtb.field_o;
         }
         return mtb.field_o;

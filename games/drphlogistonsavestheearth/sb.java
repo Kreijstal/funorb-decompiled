@@ -15,8 +15,6 @@ final class sb {
 
     final static boolean b(int param0) {
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
         if (param0 == -11) {
           if (-11 >= (af.field_b ^ -1)) {
             if (gf.field_G) {
@@ -24,12 +22,10 @@ final class sb {
             } else {
               L0: {
                 if (n.a(param0 + 75)) {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 0;
                   break L0;
                 } else {
-                  stackOut_6_0 = 1;
-                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_0 = 1;
                   break L0;
                 }
               }
@@ -44,9 +40,9 @@ final class sb {
     }
 
     final boolean a(int param0) {
-        uf var2 = null;
-        int var3 = 0;
-        uf var4 = null;
+        uf var2;
+        int var3;
+        uf var4;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param0 == -11255) {
           L0: while (true) {
@@ -116,22 +112,12 @@ final class sb {
     private final void a(uf param0, int param1, byte param2) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -156,27 +142,19 @@ final class sb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var4);
-            stackOut_6_1 = new StringBuilder().append("sb.C(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var4);
+
+            stackIn_8_1 = new StringBuilder().append("sb.C(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -185,10 +163,9 @@ final class sb {
     }
 
     public static void a(byte param0) {
-        boolean discarded$2 = false;
         field_d = null;
         if (param0 != 33) {
-          discarded$2 = sb.b(-116);
+          sb.b(-116);
           field_g = null;
           field_i = null;
           field_c = null;
@@ -273,9 +250,9 @@ final class sb {
 
     static {
         $cfr$clinit: {
-            long var0 = 0L;
-            int var2 = 0;
-            int var3 = 0;
+            long var0;
+            int var2;
+            int var3;
             field_c = new long[256];
             var2 = 0;
             L0: while (true) {

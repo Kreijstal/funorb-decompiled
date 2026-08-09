@@ -15,21 +15,19 @@ final class dl {
     static String field_e;
 
     final static boolean a(boolean param0) {
-        int[] discarded$0 = null;
         if (param0) {
-            discarded$0 = dl.a(-127, -88, 106);
+            dl.a(-127, -88, 106);
             return ic.field_U;
         }
         return ic.field_U;
     }
 
     public static void a(int param0) {
-        int[] discarded$2 = null;
         field_e = null;
         field_b = null;
         field_a = null;
         if (param0 != -974314864) {
-          discarded$2 = dl.a(-16, -82, 52);
+          dl.a(-16, -82, 52);
           field_h = null;
           return;
         } else {
@@ -41,22 +39,12 @@ final class dl {
     final void a(int param0, long param1, le param2) {
         le var5 = null;
         RuntimeException var5_ref = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -84,27 +72,19 @@ final class dl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5_ref);
-            stackOut_6_1 = new StringBuilder().append("dl.G(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5_ref);
+
+            stackIn_8_1 = new StringBuilder().append("dl.G(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -115,11 +95,13 @@ final class dl {
     final le b(byte param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        le var4 = null;
-        le var8 = null;
-        le var11 = null;
+        int var2;
+        int var3;
+        Object var4;
+        le var4_ref;
+        Object var8;
+        le var8_ref;
+        le var11;
         var3 = ZombieDawn.field_J;
         if (0 < this.field_k) {
           if (this.field_d[this.field_k + -1] == this.field_j) {
@@ -127,12 +109,12 @@ final class dl {
               if (this.field_k < this.field_i) {
                 fieldTemp$2 = this.field_k;
                 this.field_k = this.field_k + 1;
-                var8 = this.field_d[fieldTemp$2].field_b;
-                if (this.field_d[this.field_k + -1] == var8) {
+                var8_ref = this.field_d[fieldTemp$2].field_b;
+                if (this.field_d[this.field_k + -1] == var8_ref) {
                   continue L0;
                 } else {
-                  this.field_j = var8.field_b;
-                  return var8;
+                  this.field_j = var8_ref.field_b;
+                  return var8_ref;
                 }
               } else {
                 var2 = -85 % ((param0 - 65) / 34);
@@ -149,12 +131,12 @@ final class dl {
             if (this.field_k < this.field_i) {
               fieldTemp$3 = this.field_k;
               this.field_k = this.field_k + 1;
-              var4 = this.field_d[fieldTemp$3].field_b;
-              if (this.field_d[this.field_k + -1] == var4) {
+              var4_ref = this.field_d[fieldTemp$3].field_b;
+              if (this.field_d[this.field_k + -1] == var4_ref) {
                 continue L1;
               } else {
-                this.field_j = var4.field_b;
-                return var4;
+                this.field_j = var4_ref.field_b;
+                return var4_ref;
               }
             } else {
               var2 = -85 % ((param0 - 65) / 34);
@@ -165,14 +147,14 @@ final class dl {
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         var3 = rd.a(true, param2);
         var4 = fb.a(1311979239, param2);
         if (param0 != 0) {
@@ -189,9 +171,9 @@ final class dl {
     }
 
     final le a(long param0, int param1) {
-        le var4 = null;
-        le var5 = null;
-        int var6 = 0;
+        le var4;
+        le var5;
+        int var6;
         var6 = ZombieDawn.field_J;
         var4 = this.field_d[(int)((long)(this.field_i - 1) & param0)];
         if (param1 >= 41) {
@@ -228,18 +210,18 @@ final class dl {
     }
 
     dl(int param0) {
-        le dupTemp$2 = null;
-        int var2 = 0;
-        le var3 = null;
+        le dupTemp$1 = null;
+        int var2;
+        le var3;
         this.field_k = 0;
         this.field_i = param0;
         this.field_d = new le[param0];
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new le();
-            var3 = dupTemp$2;
-            this.field_d[var2] = dupTemp$2;
+            dupTemp$1 = new le();
+            var3 = dupTemp$1;
+            this.field_d[var2] = dupTemp$1;
             var3.field_b = var3;
             var3.field_d = var3;
             var2++;

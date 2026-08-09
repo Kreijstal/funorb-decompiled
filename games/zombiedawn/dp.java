@@ -12,11 +12,11 @@ final class dp implements io {
     private int field_c;
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         rc var4 = null;
         jc var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = ZombieDawn.field_J;
         try {
           L0: {
@@ -56,7 +56,7 @@ final class dp implements io {
     }
 
     final static int a(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = 67 % ((4 - param0) / 37);
         if ((ld.field_j ^ -1) <= -3) {
           if (jp.field_a == 0) {
@@ -158,33 +158,20 @@ final class dp implements io {
     }
 
     public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         var11 = ZombieDawn.field_J;
         try {
           L0: {
@@ -204,19 +191,17 @@ final class dp implements io {
                   if (param3.e(-17741)) {
                     break L3;
                   } else {
-                    stackOut_5_0 = 2188450;
-                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_0 = 2188450;
                     break L2;
                   }
                 }
               }
-              stackOut_6_0 = 3249872;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = 3249872;
               break L2;
             }
             L4: {
               var6_int = stackIn_7_0;
-              discarded$1 = this.field_f.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_o + "</u>", param3.field_k + param4, param2 - -param3.field_j, param3.field_i, param3.field_n, var6_int, -1, this.field_c, this.field_d, this.field_f.field_I - -this.field_f.field_x);
+              this.field_f.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_o + "</u>", param3.field_k + param4, param2 - -param3.field_j, param3.field_i, param3.field_n, var6_int, -1, this.field_c, this.field_d, this.field_f.field_I - -this.field_f.field_x);
               if (param3.e(param0 ^ -16759476)) {
                 L5: {
                   var7 = this.field_f.b(param3.field_o);
@@ -260,27 +245,19 @@ final class dp implements io {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var6);
-            stackOut_19_1 = new StringBuilder().append("dp.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var6);
+
+            stackIn_21_1 = new StringBuilder().append("dp.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L7;
             }
           }
@@ -301,12 +278,12 @@ final class dp implements io {
     }
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         var8 = ZombieDawn.field_J;
         if ((ej.field_x ^ -1) <= -1) {
           L0: {

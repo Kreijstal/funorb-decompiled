@@ -77,10 +77,10 @@ final class qe {
     }
 
     private final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var5;
+        int var4;
         var5 = BachelorFridge.field_y;
         var2 = this.field_i;
         var3 = this.field_e;
@@ -400,8 +400,7 @@ final class qe {
     }
 
     final void b(byte param0) {
-        int fieldTemp$2 = 0;
-        boolean discarded$3 = false;
+        int fieldTemp$0 = 0;
         if (null == kga.field_c) {
           L0: {
             if (-1 <= (dm.field_f ^ -1)) {
@@ -412,16 +411,16 @@ final class qe {
             }
           }
           if (this.field_k) {
-            fieldTemp$2 = this.field_p - 1;
+            fieldTemp$0 = this.field_p - 1;
             this.field_p = this.field_p - 1;
-            if (0 >= fieldTemp$2) {
+            if (0 >= fieldTemp$0) {
               this.field_p = this.field_a;
               if (aja.field_o < this.field_g) {
                 this.field_k = false;
                 return;
               } else {
                 if (param0 != 106) {
-                  discarded$3 = this.b(70);
+                  this.b(70);
                   this.a(param0 + -73);
                   return;
                 } else {

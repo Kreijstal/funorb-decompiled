@@ -17,7 +17,6 @@ public class ub {
     }
 
     public static void a(String param0, int param1, int param2) {
-        File discarded$2 = null;
         Exception var3 = null;
         String var4 = null;
         Throwable decompiledCaughtException = null;
@@ -39,7 +38,7 @@ public class ub {
             } else {
               L2: {
                 var4 = (String) null;
-                discarded$2 = ub.a((String) null, (byte) 19);
+                ub.a((String) null, (byte) 19);
                 field_b = true;
                 if (null == field_e) {
                   field_e = "~/";

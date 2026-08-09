@@ -46,171 +46,63 @@ final class a implements e {
     private final native void UA(long param0, long param1, long param2, int[] param3, int param4);
 
     final ka a(i param0, byte param1, int param2, boolean param3) {
-        i dupTemp$1 = null;
-        i var5 = null;
-        i var6 = null;
-        i stackIn_2_0 = null;
-        i stackIn_2_1 = null;
-        i stackIn_2_2 = null;
-        int stackIn_2_3 = 0;
-        i stackIn_3_0 = null;
-        i stackIn_3_1 = null;
-        i stackIn_3_2 = null;
-        int stackIn_3_3 = 0;
+        i dupTemp$0 = null;
+        i stackIn_3_0;
+        i stackIn_3_1;
+        i stackIn_3_2;
+        int stackIn_3_3;
         i stackIn_4_0 = null;
         i stackIn_4_1 = null;
         i stackIn_4_2 = null;
         int stackIn_4_3 = 0;
         int stackIn_4_4 = 0;
-        i stackIn_7_0 = null;
-        i stackIn_7_1 = null;
-        i stackIn_7_2 = null;
-        int stackIn_7_3 = 0;
-        i stackIn_8_0 = null;
-        i stackIn_8_1 = null;
-        i stackIn_8_2 = null;
-        int stackIn_8_3 = 0;
+        i stackIn_8_0;
+        i stackIn_8_1;
+        i stackIn_8_2;
+        int stackIn_8_3;
         i stackIn_9_0 = null;
         i stackIn_9_1 = null;
         i stackIn_9_2 = null;
         int stackIn_9_3 = 0;
         int stackIn_9_4 = 0;
-        i stackIn_12_0 = null;
-        i stackIn_12_1 = null;
-        i stackIn_12_2 = null;
-        int stackIn_12_3 = 0;
-        i stackIn_13_0 = null;
-        i stackIn_13_1 = null;
-        i stackIn_13_2 = null;
-        int stackIn_13_3 = 0;
+        i stackIn_13_0;
+        i stackIn_13_1;
+        i stackIn_13_2;
+        int stackIn_13_3;
         i stackIn_14_0 = null;
         i stackIn_14_1 = null;
         i stackIn_14_2 = null;
         int stackIn_14_3 = 0;
         int stackIn_14_4 = 0;
-        i stackIn_17_0 = null;
-        i stackIn_17_1 = null;
-        i stackIn_17_2 = null;
-        int stackIn_17_3 = 0;
-        i stackIn_18_0 = null;
-        i stackIn_18_1 = null;
-        i stackIn_18_2 = null;
-        int stackIn_18_3 = 0;
+        i stackIn_18_0;
+        i stackIn_18_1;
+        i stackIn_18_2;
+        int stackIn_18_3;
         i stackIn_19_0 = null;
         i stackIn_19_1 = null;
         i stackIn_19_2 = null;
         int stackIn_19_3 = 0;
         int stackIn_19_4 = 0;
-        i stackIn_22_0 = null;
-        i stackIn_22_1 = null;
-        i stackIn_22_2 = null;
-        int stackIn_22_3 = 0;
-        i stackIn_23_0 = null;
-        i stackIn_23_1 = null;
-        i stackIn_23_2 = null;
-        int stackIn_23_3 = 0;
+        i stackIn_23_0;
+        i stackIn_23_1;
+        i stackIn_23_2;
+        int stackIn_23_3;
         i stackIn_24_0 = null;
         i stackIn_24_1 = null;
         i stackIn_24_2 = null;
         int stackIn_24_3 = 0;
         int stackIn_24_4 = 0;
-        i stackIn_26_0 = null;
-        i stackIn_26_1 = null;
-        i stackIn_26_2 = null;
-        int stackIn_26_3 = 0;
-        i stackIn_27_0 = null;
-        i stackIn_27_1 = null;
-        i stackIn_27_2 = null;
-        int stackIn_27_3 = 0;
+        i stackIn_27_0;
+        i stackIn_27_1;
+        i stackIn_27_2;
+        int stackIn_27_3;
         i stackIn_28_0 = null;
         i stackIn_28_1 = null;
         i stackIn_28_2 = null;
         int stackIn_28_3 = 0;
         int stackIn_28_4 = 0;
-        i stackOut_25_0 = null;
-        i stackOut_25_1 = null;
-        i stackOut_25_2 = null;
-        int stackOut_25_3 = 0;
-        i stackOut_27_0 = null;
-        i stackOut_27_1 = null;
-        i stackOut_27_2 = null;
-        int stackOut_27_3 = 0;
-        int stackOut_27_4 = 0;
-        i stackOut_26_0 = null;
-        i stackOut_26_1 = null;
-        i stackOut_26_2 = null;
-        int stackOut_26_3 = 0;
-        int stackOut_26_4 = 0;
-        i stackOut_21_0 = null;
-        i stackOut_21_1 = null;
-        i stackOut_21_2 = null;
-        int stackOut_21_3 = 0;
-        i stackOut_23_0 = null;
-        i stackOut_23_1 = null;
-        i stackOut_23_2 = null;
-        int stackOut_23_3 = 0;
-        int stackOut_23_4 = 0;
-        i stackOut_22_0 = null;
-        i stackOut_22_1 = null;
-        i stackOut_22_2 = null;
-        int stackOut_22_3 = 0;
-        int stackOut_22_4 = 0;
-        i stackOut_16_0 = null;
-        i stackOut_16_1 = null;
-        i stackOut_16_2 = null;
-        int stackOut_16_3 = 0;
-        i stackOut_18_0 = null;
-        i stackOut_18_1 = null;
-        i stackOut_18_2 = null;
-        int stackOut_18_3 = 0;
-        int stackOut_18_4 = 0;
-        i stackOut_17_0 = null;
-        i stackOut_17_1 = null;
-        i stackOut_17_2 = null;
-        int stackOut_17_3 = 0;
-        int stackOut_17_4 = 0;
-        i stackOut_11_0 = null;
-        i stackOut_11_1 = null;
-        i stackOut_11_2 = null;
-        int stackOut_11_3 = 0;
-        i stackOut_13_0 = null;
-        i stackOut_13_1 = null;
-        i stackOut_13_2 = null;
-        int stackOut_13_3 = 0;
-        int stackOut_13_4 = 0;
-        i stackOut_12_0 = null;
-        i stackOut_12_1 = null;
-        i stackOut_12_2 = null;
-        int stackOut_12_3 = 0;
-        int stackOut_12_4 = 0;
-        i stackOut_6_0 = null;
-        i stackOut_6_1 = null;
-        i stackOut_6_2 = null;
-        int stackOut_6_3 = 0;
-        i stackOut_8_0 = null;
-        i stackOut_8_1 = null;
-        i stackOut_8_2 = null;
-        int stackOut_8_3 = 0;
-        int stackOut_8_4 = 0;
-        i stackOut_7_0 = null;
-        i stackOut_7_1 = null;
-        i stackOut_7_2 = null;
-        int stackOut_7_3 = 0;
-        int stackOut_7_4 = 0;
-        i stackOut_1_0 = null;
-        i stackOut_1_1 = null;
-        i stackOut_1_2 = null;
-        int stackOut_1_3 = 0;
-        i stackOut_3_0 = null;
-        i stackOut_3_1 = null;
-        i stackOut_3_2 = null;
-        int stackOut_3_3 = 0;
-        int stackOut_3_4 = 0;
-        i stackOut_2_0 = null;
-        i stackOut_2_1 = null;
-        i stackOut_2_2 = null;
-        int stackOut_2_3 = 0;
-        int stackOut_2_4 = 0;
+        i var5;
+        i var6;
         if (param1 != 1) {
           if (param1 != 2) {
             if (param1 != 3) {
@@ -219,41 +111,27 @@ final class a implements e {
                   L0: {
                     var6 = this.field_d;
                     var5 = this.field_l;
-                    stackOut_25_0 = (i) (param0);
-                    stackOut_25_1 = (i) (var5);
-                    stackOut_25_2 = (i) (var6);
-                    stackOut_25_3 = param2;
-                    stackIn_27_0 = stackOut_25_0;
-                    stackIn_27_1 = stackOut_25_1;
-                    stackIn_27_2 = stackOut_25_2;
-                    stackIn_27_3 = stackOut_25_3;
-                    stackIn_26_0 = stackOut_25_0;
-                    stackIn_26_1 = stackOut_25_1;
-                    stackIn_26_2 = stackOut_25_2;
-                    stackIn_26_3 = stackOut_25_3;
+                    stackIn_27_0 = (i) (param0);
+
+                    stackIn_27_1 = (i) (var5);
+
+                    stackIn_27_2 = (i) (var6);
+
+                    stackIn_27_3 = param2;
+
                     if (param1 == 0) {
-                      stackOut_27_0 = (i) ((Object) stackIn_27_0);
-                      stackOut_27_1 = (i) ((Object) stackIn_27_1);
-                      stackOut_27_2 = (i) ((Object) stackIn_27_2);
-                      stackOut_27_3 = stackIn_27_3;
-                      stackOut_27_4 = 0;
-                      stackIn_28_0 = stackOut_27_0;
-                      stackIn_28_1 = stackOut_27_1;
-                      stackIn_28_2 = stackOut_27_2;
-                      stackIn_28_3 = stackOut_27_3;
-                      stackIn_28_4 = stackOut_27_4;
+                      stackIn_28_0 = (i) ((Object) stackIn_27_0);
+                      stackIn_28_1 = (i) ((Object) stackIn_27_1);
+                      stackIn_28_2 = (i) ((Object) stackIn_27_2);
+                      stackIn_28_3 = stackIn_27_3;
+                      stackIn_28_4 = 0;
                       break L0;
                     } else {
-                      stackOut_26_0 = (i) ((Object) stackIn_26_0);
-                      stackOut_26_1 = (i) ((Object) stackIn_26_1);
-                      stackOut_26_2 = (i) ((Object) stackIn_26_2);
-                      stackOut_26_3 = stackIn_26_3;
-                      stackOut_26_4 = 1;
-                      stackIn_28_0 = stackOut_26_0;
-                      stackIn_28_1 = stackOut_26_1;
-                      stackIn_28_2 = stackOut_26_2;
-                      stackIn_28_3 = stackOut_26_3;
-                      stackIn_28_4 = stackOut_26_4;
+                      stackIn_28_0 = (i) ((Object) stackIn_27_0);
+                      stackIn_28_1 = (i) ((Object) stackIn_27_1);
+                      stackIn_28_2 = (i) ((Object) stackIn_27_2);
+                      stackIn_28_3 = stackIn_27_3;
+                      stackIn_28_4 = 1;
                       break L0;
                     }
                   }
@@ -263,44 +141,30 @@ final class a implements e {
                   return (ka) ((Object) var5);
                 } else {
                   L1: {
-                    dupTemp$1 = new i(this.field_e);
-                    var6 = dupTemp$1;
-                    var5 = dupTemp$1;
-                    stackOut_21_0 = (i) (param0);
-                    stackOut_21_1 = (i) (var5);
-                    stackOut_21_2 = (i) (var6);
-                    stackOut_21_3 = param2;
-                    stackIn_23_0 = stackOut_21_0;
-                    stackIn_23_1 = stackOut_21_1;
-                    stackIn_23_2 = stackOut_21_2;
-                    stackIn_23_3 = stackOut_21_3;
-                    stackIn_22_0 = stackOut_21_0;
-                    stackIn_22_1 = stackOut_21_1;
-                    stackIn_22_2 = stackOut_21_2;
-                    stackIn_22_3 = stackOut_21_3;
+                    dupTemp$0 = new i(this.field_e);
+                    var6 = dupTemp$0;
+                    var5 = dupTemp$0;
+                    stackIn_23_0 = (i) (param0);
+
+                    stackIn_23_1 = (i) (var5);
+
+                    stackIn_23_2 = (i) (var6);
+
+                    stackIn_23_3 = param2;
+
                     if (param1 == 0) {
-                      stackOut_23_0 = (i) ((Object) stackIn_23_0);
-                      stackOut_23_1 = (i) ((Object) stackIn_23_1);
-                      stackOut_23_2 = (i) ((Object) stackIn_23_2);
-                      stackOut_23_3 = stackIn_23_3;
-                      stackOut_23_4 = 0;
-                      stackIn_24_0 = stackOut_23_0;
-                      stackIn_24_1 = stackOut_23_1;
-                      stackIn_24_2 = stackOut_23_2;
-                      stackIn_24_3 = stackOut_23_3;
-                      stackIn_24_4 = stackOut_23_4;
+                      stackIn_24_0 = (i) ((Object) stackIn_23_0);
+                      stackIn_24_1 = (i) ((Object) stackIn_23_1);
+                      stackIn_24_2 = (i) ((Object) stackIn_23_2);
+                      stackIn_24_3 = stackIn_23_3;
+                      stackIn_24_4 = 0;
                       break L1;
                     } else {
-                      stackOut_22_0 = (i) ((Object) stackIn_22_0);
-                      stackOut_22_1 = (i) ((Object) stackIn_22_1);
-                      stackOut_22_2 = (i) ((Object) stackIn_22_2);
-                      stackOut_22_3 = stackIn_22_3;
-                      stackOut_22_4 = 1;
-                      stackIn_24_0 = stackOut_22_0;
-                      stackIn_24_1 = stackOut_22_1;
-                      stackIn_24_2 = stackOut_22_2;
-                      stackIn_24_3 = stackOut_22_3;
-                      stackIn_24_4 = stackOut_22_4;
+                      stackIn_24_0 = (i) ((Object) stackIn_23_0);
+                      stackIn_24_1 = (i) ((Object) stackIn_23_1);
+                      stackIn_24_2 = (i) ((Object) stackIn_23_2);
+                      stackIn_24_3 = stackIn_23_3;
+                      stackIn_24_4 = 1;
                       break L1;
                     }
                   }
@@ -313,41 +177,27 @@ final class a implements e {
                 L2: {
                   var6 = this.field_j;
                   var5 = this.field_b;
-                  stackOut_16_0 = (i) (param0);
-                  stackOut_16_1 = (i) (var5);
-                  stackOut_16_2 = (i) (var6);
-                  stackOut_16_3 = param2;
-                  stackIn_18_0 = stackOut_16_0;
-                  stackIn_18_1 = stackOut_16_1;
-                  stackIn_18_2 = stackOut_16_2;
-                  stackIn_18_3 = stackOut_16_3;
-                  stackIn_17_0 = stackOut_16_0;
-                  stackIn_17_1 = stackOut_16_1;
-                  stackIn_17_2 = stackOut_16_2;
-                  stackIn_17_3 = stackOut_16_3;
+                  stackIn_18_0 = (i) (param0);
+
+                  stackIn_18_1 = (i) (var5);
+
+                  stackIn_18_2 = (i) (var6);
+
+                  stackIn_18_3 = param2;
+
                   if (param1 == 0) {
-                    stackOut_18_0 = (i) ((Object) stackIn_18_0);
-                    stackOut_18_1 = (i) ((Object) stackIn_18_1);
-                    stackOut_18_2 = (i) ((Object) stackIn_18_2);
-                    stackOut_18_3 = stackIn_18_3;
-                    stackOut_18_4 = 0;
-                    stackIn_19_0 = stackOut_18_0;
-                    stackIn_19_1 = stackOut_18_1;
-                    stackIn_19_2 = stackOut_18_2;
-                    stackIn_19_3 = stackOut_18_3;
-                    stackIn_19_4 = stackOut_18_4;
+                    stackIn_19_0 = (i) ((Object) stackIn_18_0);
+                    stackIn_19_1 = (i) ((Object) stackIn_18_1);
+                    stackIn_19_2 = (i) ((Object) stackIn_18_2);
+                    stackIn_19_3 = stackIn_18_3;
+                    stackIn_19_4 = 0;
                     break L2;
                   } else {
-                    stackOut_17_0 = (i) ((Object) stackIn_17_0);
-                    stackOut_17_1 = (i) ((Object) stackIn_17_1);
-                    stackOut_17_2 = (i) ((Object) stackIn_17_2);
-                    stackOut_17_3 = stackIn_17_3;
-                    stackOut_17_4 = 1;
-                    stackIn_19_0 = stackOut_17_0;
-                    stackIn_19_1 = stackOut_17_1;
-                    stackIn_19_2 = stackOut_17_2;
-                    stackIn_19_3 = stackOut_17_3;
-                    stackIn_19_4 = stackOut_17_4;
+                    stackIn_19_0 = (i) ((Object) stackIn_18_0);
+                    stackIn_19_1 = (i) ((Object) stackIn_18_1);
+                    stackIn_19_2 = (i) ((Object) stackIn_18_2);
+                    stackIn_19_3 = stackIn_18_3;
+                    stackIn_19_4 = 1;
                     break L2;
                   }
                 }
@@ -360,41 +210,27 @@ final class a implements e {
               L3: {
                 var6 = this.field_g;
                 var5 = this.field_a;
-                stackOut_11_0 = (i) (param0);
-                stackOut_11_1 = (i) (var5);
-                stackOut_11_2 = (i) (var6);
-                stackOut_11_3 = param2;
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_13_1 = stackOut_11_1;
-                stackIn_13_2 = stackOut_11_2;
-                stackIn_13_3 = stackOut_11_3;
-                stackIn_12_0 = stackOut_11_0;
-                stackIn_12_1 = stackOut_11_1;
-                stackIn_12_2 = stackOut_11_2;
-                stackIn_12_3 = stackOut_11_3;
+                stackIn_13_0 = (i) (param0);
+
+                stackIn_13_1 = (i) (var5);
+
+                stackIn_13_2 = (i) (var6);
+
+                stackIn_13_3 = param2;
+
                 if (param1 == 0) {
-                  stackOut_13_0 = (i) ((Object) stackIn_13_0);
-                  stackOut_13_1 = (i) ((Object) stackIn_13_1);
-                  stackOut_13_2 = (i) ((Object) stackIn_13_2);
-                  stackOut_13_3 = stackIn_13_3;
-                  stackOut_13_4 = 0;
-                  stackIn_14_0 = stackOut_13_0;
-                  stackIn_14_1 = stackOut_13_1;
-                  stackIn_14_2 = stackOut_13_2;
-                  stackIn_14_3 = stackOut_13_3;
-                  stackIn_14_4 = stackOut_13_4;
+                  stackIn_14_0 = (i) ((Object) stackIn_13_0);
+                  stackIn_14_1 = (i) ((Object) stackIn_13_1);
+                  stackIn_14_2 = (i) ((Object) stackIn_13_2);
+                  stackIn_14_3 = stackIn_13_3;
+                  stackIn_14_4 = 0;
                   break L3;
                 } else {
-                  stackOut_12_0 = (i) ((Object) stackIn_12_0);
-                  stackOut_12_1 = (i) ((Object) stackIn_12_1);
-                  stackOut_12_2 = (i) ((Object) stackIn_12_2);
-                  stackOut_12_3 = stackIn_12_3;
-                  stackOut_12_4 = 1;
-                  stackIn_14_0 = stackOut_12_0;
-                  stackIn_14_1 = stackOut_12_1;
-                  stackIn_14_2 = stackOut_12_2;
-                  stackIn_14_3 = stackOut_12_3;
-                  stackIn_14_4 = stackOut_12_4;
+                  stackIn_14_0 = (i) ((Object) stackIn_13_0);
+                  stackIn_14_1 = (i) ((Object) stackIn_13_1);
+                  stackIn_14_2 = (i) ((Object) stackIn_13_2);
+                  stackIn_14_3 = stackIn_13_3;
+                  stackIn_14_4 = 1;
                   break L3;
                 }
               }
@@ -407,41 +243,27 @@ final class a implements e {
             L4: {
               var6 = this.field_f;
               var5 = this.field_i;
-              stackOut_6_0 = (i) (param0);
-              stackOut_6_1 = (i) (var5);
-              stackOut_6_2 = (i) (var6);
-              stackOut_6_3 = param2;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
-              stackIn_8_3 = stackOut_6_3;
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              stackIn_7_3 = stackOut_6_3;
+              stackIn_8_0 = (i) (param0);
+
+              stackIn_8_1 = (i) (var5);
+
+              stackIn_8_2 = (i) (var6);
+
+              stackIn_8_3 = param2;
+
               if (param1 == 0) {
-                stackOut_8_0 = (i) ((Object) stackIn_8_0);
-                stackOut_8_1 = (i) ((Object) stackIn_8_1);
-                stackOut_8_2 = (i) ((Object) stackIn_8_2);
-                stackOut_8_3 = stackIn_8_3;
-                stackOut_8_4 = 0;
-                stackIn_9_0 = stackOut_8_0;
-                stackIn_9_1 = stackOut_8_1;
-                stackIn_9_2 = stackOut_8_2;
-                stackIn_9_3 = stackOut_8_3;
-                stackIn_9_4 = stackOut_8_4;
+                stackIn_9_0 = (i) ((Object) stackIn_8_0);
+                stackIn_9_1 = (i) ((Object) stackIn_8_1);
+                stackIn_9_2 = (i) ((Object) stackIn_8_2);
+                stackIn_9_3 = stackIn_8_3;
+                stackIn_9_4 = 0;
                 break L4;
               } else {
-                stackOut_7_0 = (i) ((Object) stackIn_7_0);
-                stackOut_7_1 = (i) ((Object) stackIn_7_1);
-                stackOut_7_2 = (i) ((Object) stackIn_7_2);
-                stackOut_7_3 = stackIn_7_3;
-                stackOut_7_4 = 1;
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_9_1 = stackOut_7_1;
-                stackIn_9_2 = stackOut_7_2;
-                stackIn_9_3 = stackOut_7_3;
-                stackIn_9_4 = stackOut_7_4;
+                stackIn_9_0 = (i) ((Object) stackIn_8_0);
+                stackIn_9_1 = (i) ((Object) stackIn_8_1);
+                stackIn_9_2 = (i) ((Object) stackIn_8_2);
+                stackIn_9_3 = stackIn_8_3;
+                stackIn_9_4 = 1;
                 break L4;
               }
             }
@@ -454,41 +276,27 @@ final class a implements e {
           L5: {
             var6 = this.field_k;
             var5 = this.field_c;
-            stackOut_1_0 = (i) (param0);
-            stackOut_1_1 = (i) (var5);
-            stackOut_1_2 = (i) (var6);
-            stackOut_1_3 = param2;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
-            stackIn_3_3 = stackOut_1_3;
-            stackIn_2_0 = stackOut_1_0;
-            stackIn_2_1 = stackOut_1_1;
-            stackIn_2_2 = stackOut_1_2;
-            stackIn_2_3 = stackOut_1_3;
+            stackIn_3_0 = (i) (param0);
+
+            stackIn_3_1 = (i) (var5);
+
+            stackIn_3_2 = (i) (var6);
+
+            stackIn_3_3 = param2;
+
             if (param1 == 0) {
-              stackOut_3_0 = (i) ((Object) stackIn_3_0);
-              stackOut_3_1 = (i) ((Object) stackIn_3_1);
-              stackOut_3_2 = (i) ((Object) stackIn_3_2);
-              stackOut_3_3 = stackIn_3_3;
-              stackOut_3_4 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              stackIn_4_2 = stackOut_3_2;
-              stackIn_4_3 = stackOut_3_3;
-              stackIn_4_4 = stackOut_3_4;
+              stackIn_4_0 = (i) ((Object) stackIn_3_0);
+              stackIn_4_1 = (i) ((Object) stackIn_3_1);
+              stackIn_4_2 = (i) ((Object) stackIn_3_2);
+              stackIn_4_3 = stackIn_3_3;
+              stackIn_4_4 = 0;
               break L5;
             } else {
-              stackOut_2_0 = (i) ((Object) stackIn_2_0);
-              stackOut_2_1 = (i) ((Object) stackIn_2_1);
-              stackOut_2_2 = (i) ((Object) stackIn_2_2);
-              stackOut_2_3 = stackIn_2_3;
-              stackOut_2_4 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              stackIn_4_2 = stackOut_2_2;
-              stackIn_4_3 = stackOut_2_3;
-              stackIn_4_4 = stackOut_2_4;
+              stackIn_4_0 = (i) ((Object) stackIn_3_0);
+              stackIn_4_1 = (i) ((Object) stackIn_3_1);
+              stackIn_4_2 = (i) ((Object) stackIn_3_2);
+              stackIn_4_3 = stackIn_3_3;
+              stackIn_4_4 = 1;
               break L5;
             }
           }

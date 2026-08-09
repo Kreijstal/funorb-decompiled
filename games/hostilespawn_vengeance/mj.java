@@ -7,13 +7,12 @@ final class mj {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 <= 71) {
+            field_a = (bd) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mj.A(";
     }
 }

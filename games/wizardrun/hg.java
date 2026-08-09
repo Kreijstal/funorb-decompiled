@@ -8,21 +8,12 @@ final class hg {
     static int field_a;
 
     final static String a(CharSequence param0, byte param1, boolean param2) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        String var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         String stackIn_4_0 = null;
         String stackIn_9_0 = null;
         String stackIn_16_0 = null;
         String stackIn_21_0 = null;
         String stackIn_30_0 = null;
         String stackIn_35_0 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
@@ -30,26 +21,18 @@ final class hg {
         String stackIn_40_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        String stackOut_34_0 = null;
-        String stackOut_29_0 = null;
-        String stackOut_20_0 = null;
-        String stackOut_15_0 = null;
-        String stackOut_8_0 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        String var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var8 = wizardrun.field_H;
         try {
           L0: {
             if (param0 == null) {
-              stackOut_3_0 = kc.field_J;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = kc.field_J;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -87,8 +70,7 @@ final class hg {
                                 L5: while (true) {
                                   if (var6 >= param0.length()) {
                                     if ((var5 ^ -1) < -1) {
-                                      stackOut_34_0 = lg.field_c;
-                                      stackIn_35_0 = stackOut_34_0;
+                                      stackIn_35_0 = lg.field_c;
                                       decompiledRegionSelector0 = 5;
                                       break L0;
                                     } else {
@@ -112,8 +94,7 @@ final class hg {
                                         if (param2) {
                                           break L7;
                                         } else {
-                                          stackOut_29_0 = ll.field_g;
-                                          stackIn_30_0 = stackOut_29_0;
+                                          stackIn_30_0 = ll.field_g;
                                           decompiledRegionSelector0 = 4;
                                           break L0;
                                         }
@@ -126,15 +107,13 @@ final class hg {
                               }
                             }
                           }
-                          stackOut_20_0 = lg.field_c;
-                          stackIn_21_0 = stackOut_20_0;
+                          stackIn_21_0 = lg.field_c;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         }
                       }
                     }
-                    stackOut_15_0 = kc.field_J;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = kc.field_J;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
@@ -142,8 +121,7 @@ final class hg {
                   }
                 }
               }
-              stackOut_8_0 = kc.field_J;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = kc.field_J;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -152,27 +130,19 @@ final class hg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) (var3);
-            stackOut_37_1 = new StringBuilder().append("hg.C(");
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            stackIn_39_0 = (RuntimeException) (var3);
+
+            stackIn_39_1 = new StringBuilder().append("hg.C(");
+
             if (param0 == null) {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "null";
               break L8;
             } else {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "{...}";
               break L8;
             }
           }

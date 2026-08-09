@@ -17,7 +17,6 @@ final class lc extends ro {
 
     final static bp a(boolean param0, String param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -25,8 +24,6 @@ final class lc extends ro {
         bp stackIn_8_0 = null;
         bp stackIn_19_0 = null;
         bp stackIn_22_0 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
@@ -34,31 +31,18 @@ final class lc extends ro {
         String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        bp stackOut_3_0 = null;
-        bp stackOut_7_0 = null;
-        bp stackOut_21_0 = null;
-        bp stackOut_18_0 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        RuntimeException var2 = null;
         var5 = Torquing.field_u;
         try {
           L0: {
             var2_int = param1.length();
             if (0 == var2_int) {
-              stackOut_3_0 = oj.field_l;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = oj.field_l;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if ((var2_int ^ -1) < -64) {
-                stackOut_7_0 = wn.field_s;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = wn.field_s;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -79,8 +63,7 @@ final class lc extends ro {
                         if (0 != (kl.field_t.indexOf(var4) ^ -1)) {
                           break L3;
                         } else {
-                          stackOut_21_0 = va.field_H;
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_22_0 = va.field_H;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         }
@@ -96,8 +79,7 @@ final class lc extends ro {
                             }
                           }
                         }
-                        stackOut_18_0 = va.field_H;
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_0 = va.field_H;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
@@ -115,27 +97,19 @@ final class lc extends ro {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var2);
-            stackOut_25_1 = new StringBuilder().append("lc.C(").append(param0).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var2);
+
+            stackIn_27_1 = new StringBuilder().append("lc.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L5;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L5;
             }
           }
@@ -164,7 +138,7 @@ final class lc extends ro {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var7 = 0;
+        int var7;
         L0: {
           L1: {
             if (-param5 + param1 < kn.field_e) {
@@ -225,9 +199,8 @@ final class lc extends ro {
     }
 
     final static void g(int param0) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2_int = 0;
         Object var2 = null;
@@ -237,8 +210,6 @@ final class lc extends ro {
         t var6 = null;
         t var7 = null;
         t var8 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var4 = Torquing.field_u;
         try {
           L0: {
@@ -247,7 +218,7 @@ final class lc extends ro {
             if (null == nc.field_d) {
               L1: {
                 if (null != kl.field_o) {
-                  discarded$3 = kl.field_o.a(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                  kl.field_o.a(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                   break L1;
                 } else {
                   break L1;
@@ -260,7 +231,7 @@ final class lc extends ro {
                 var6 = nc.field_d[da.field_a];
                 if (var6 == null) {
                   if (kl.field_o != null) {
-                    discarded$4 = kl.field_o.a(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                    kl.field_o.a(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                     break L2;
                   } else {
                     break L2;
@@ -308,7 +279,7 @@ final class lc extends ro {
                   L6: while (true) {
                     if (var5 >= nc.field_d.length) {
                       if (var2 != null) {
-                        discarded$5 = kl.field_o.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        kl.field_o.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L5;
                       } else {
                         break L5;
@@ -371,12 +342,7 @@ final class lc extends ro {
     }
 
     final static void d(int param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        RuntimeException var1 = null;
-        uf[] var1_array = null;
+        uf[] var1 = null;
         int[] var2 = null;
         short[] var3 = null;
         t var4 = null;
@@ -384,29 +350,15 @@ final class lc extends ro {
         int var7 = 0;
         int var9 = 0;
         int var10 = 0;
-        sg var11 = null;
         int var11_int = 0;
         int var12 = 0;
-        int var13 = 0;
         rm var13_ref_rm = null;
         int var14 = 0;
         int var15_int = 0;
-        t var15 = null;
         int var16 = 0;
-        t var16_ref_t = null;
         int var17 = 0;
-        kh var17_ref_kh = null;
-        sg var18 = null;
         int var18_int = 0;
-        int[] var19 = null;
         int var19_int = 0;
-        int[] var20 = null;
-        int[] var21_ref_int__ = null;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        long var24 = 0L;
-        int var26 = 0;
         int var27 = 0;
         uf[] var28 = null;
         uf[] var29 = null;
@@ -415,6 +367,24 @@ final class lc extends ro {
         uf[] var32 = null;
         uf[] var33 = null;
         int[] var34 = null;
+        int[] var45 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
+        sg var11 = null;
+        int var13 = 0;
+        t var15 = null;
+        t var16_ref_t = null;
+        kh var17_ref_kh = null;
+        sg var18 = null;
+        int[] var19 = null;
+        int[] var20 = null;
+        int[] var21_ref_int__ = null;
+        int var21 = 0;
+        int var22 = 0;
+        int var23 = 0;
+        long var24 = 0L;
+        int var26 = 0;
         t var35 = null;
         t var36 = null;
         t var37 = null;
@@ -422,9 +392,6 @@ final class lc extends ro {
         uf[] var39 = null;
         kh var40 = null;
         uf[] var41 = null;
-        int[] var45 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
         var27 = Torquing.field_u;
         try {
           L0: {
@@ -437,7 +404,7 @@ final class lc extends ro {
               var6 = ph.field_j;
               var7 = ph.field_d;
               var29 = rh.a((byte) -101, var28, var4, vd.field_a);
-              var1_array = var29;
+              var1 = var29;
               ln.a(1, 0, var29, (byte) -58);
               if (param0 == -1339942685) {
                 break L1;
@@ -446,17 +413,17 @@ final class lc extends ro {
                 break L1;
               }
             }
-            var30 = rh.a((byte) 114, var1_array, kl.field_p, "");
+            var30 = rh.a((byte) 114, var1, kl.field_p, "");
             var30[0].a((byte) -15, 2);
             var31 = rh.a((byte) 116, var30, var4, hl.field_c);
             var31[0].a((byte) 101, 1);
             var32 = rh.a((byte) 125, var31, var4, q.field_i);
-            var1_array = var32;
+            var1 = var32;
             ln.a(1, 0, var32, (byte) -58);
-            var1_array[-1 + var32.length].c(0);
-            var1_array[var32.length + -1].d(102);
+            var1[-1 + var32.length].c(0);
+            var1[var32.length + -1].d(102);
             var33 = rh.a((byte) -122, var32, var4, eq.field_c);
-            var1_array = var33;
+            var1 = var33;
             ln.a(0, dd.field_c.field_x, var33, (byte) -58);
             hh.field_e = new t[m.field_n.length];
             be.field_g = 30;
@@ -464,16 +431,16 @@ final class lc extends ro {
             var9 = 0;
             L2: while (true) {
               if (var34.length <= var9) {
-                var1_array[-1 + var1_array.length].d(param0 ^ -1339942758);
-                var39 = rh.a((byte) -110, var1_array, var4, vp.field_G);
-                var1_array = var39;
+                var1[-1 + var1.length].d(param0 ^ -1339942758);
+                var39 = rh.a((byte) -110, var1, var4, vp.field_G);
+                var1 = var39;
                 ln.a(0, dd.field_c.field_x, var39, (byte) -58);
                 var40 = new kh(new rm(8, 2, 2));
                 var40.field_q = new mp(2);
-                discarded$4 = var40.field_l.a(-60, -60, 0);
-                discarded$5 = var40.field_l.a(60, -60, 0);
-                discarded$6 = var40.field_l.a(-60, 60, 0);
-                discarded$7 = var40.field_l.a(60, 60, 0);
+                var40.field_l.a(-60, -60, 0);
+                var40.field_l.a(60, -60, 0);
+                var40.field_l.a(-60, 60, 0);
+                var40.field_l.a(60, 60, 0);
                 oj.a(3, (short) 0, 0, false, true, 1, 0, (short) -1, 2, var40);
                 oj.a(1, (short) 0, 3, false, true, 2, 3, (short) -1, 1, var40);
                 var9 = be.field_l[1664];
@@ -490,8 +457,8 @@ final class lc extends ro {
                     var14 = 0;
                     L4: while (true) {
                       if (ga.field_d.length <= var14) {
-                        var1_array[var1_array.length + -1].c(0);
-                        hg.field_b = var1_array;
+                        var1[var1.length + -1].c(0);
+                        hg.field_b = var1;
                         ph.a(var45, var6, var7);
                         be.a();
                         break L0;
@@ -506,8 +473,8 @@ final class lc extends ro {
                         var11.a(0, 80, 1365, 0, -1, 0);
                         be.field_b = -var12;
                         var11.a(new int[]{0, 0, -1024, 65535, 0, 0, 0, 65535, 0, 0, 0, 65535});
-                        var41 = rh.a((byte) 120, var1_array, var15, ga.field_d[var3[var14]]);
-                        var1_array = var41;
+                        var41 = rh.a((byte) 120, var1, var15, ga.field_d[var3[var14]]);
+                        var1 = var41;
                         ln.a(0, dd.field_c.field_x, var41, (byte) -58);
                         var14++;
                         continue L4;
@@ -520,7 +487,7 @@ final class lc extends ro {
                       var17 = var10 * var15_int + -(var16 * var9) >> -1836488944;
                       var16 = var16 * var10 + var9 * var15_int >> -848667088;
                       var15_int = (var17 << -1478939895) / (var16 + 1024);
-                      if (var12 <= var15_int) {
+                      if ((var12 ^ -1) >= (var15_int ^ -1)) {
                         break L5;
                       } else {
                         var12 = var15_int;
@@ -616,8 +583,8 @@ final class lc extends ro {
                             break L12;
                           }
                         }
-                        var38 = rh.a((byte) 111, var1_array, var16_ref_t, m.field_n[var10]);
-                        var1_array = var38;
+                        var38 = rh.a((byte) 111, var1, var16_ref_t, m.field_n[var10]);
+                        var1 = var38;
                         ln.a(0, dd.field_c.field_x, var38, (byte) -58);
                         break L6;
                       } else {
@@ -655,8 +622,8 @@ final class lc extends ro {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "lc.A(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw rb.a((Throwable) ((Object) var1_ref), "lc.A(" + param0 + ')');
         }
     }
 

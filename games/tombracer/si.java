@@ -18,66 +18,41 @@ final class si extends kna {
         int var14 = 0;
         fsa var15 = null;
         fsa stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fsa stackOut_7_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var14 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                var15 = new fsa(param2, param0);
-                var15.b((byte) -11, this.field_k, this.field_l);
-                if (this.field_m == 49) {
-                  break L2;
-                } else {
-                  L3: {
-                    L4: {
-                      if (this.field_m == 0) {
-                        break L4;
-                      } else {
-                        var8 = 1;
-                        var6 = 5;
-                        var7 = 1;
-                        if (var14 == 0) {
-                          break L3;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
+              var15 = new fsa(param2, param0);
+              var15.b((byte) -11, this.field_k, this.field_l);
+              if (this.field_m == 49) {
+                var7 = 10;
+                var5 = 8;
+                var8 = 50;
+                var6 = 50;
+                break L1;
+              } else {
+                L2: {
+                  if (this.field_m == 0) {
                     var6 = 25;
                     var7 = 0;
                     var8 = 50;
-                    break L3;
-                  }
-                  var5 = 4;
-                  if (var14 == 0) {
-                    break L1;
+                    break L2;
                   } else {
+                    var8 = 1;
+                    var6 = 5;
+                    var7 = 1;
                     break L2;
                   }
                 }
+                var5 = 4;
+                break L1;
               }
-              var7 = 10;
-              var5 = 8;
-              var8 = 50;
-              var6 = 50;
-              break L1;
             }
             var15.a((byte) -3, var5);
             var15.h(param1, 0);
@@ -98,36 +73,27 @@ final class si extends kna {
             var13 = (boa) ((Object) var12.a(7, 92));
             var13.b(107, var7);
             var15.a((gr) null, (byte) 124, var13);
-            stackOut_7_0 = (fsa) (var15);
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = (fsa) (var15);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L3: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var4);
-            stackOut_9_1 = new StringBuilder().append("si.AC(").append(param0).append(',').append(param1).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var4);
+
+            stackIn_11_1 = new StringBuilder().append("si.AC(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L5;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
+              break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L5;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
+              break L3;
             }
           }
           throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
@@ -136,9 +102,8 @@ final class si extends kna {
     }
 
     final boolean v(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 555277520) {
-            discarded$0 = this.v(16);
+            this.v(16);
             return false;
         }
         return false;
@@ -170,10 +135,9 @@ final class si extends kna {
     }
 
     final boolean z(int param0) {
-        fsa discarded$0 = null;
         if (param0 != 0) {
             la var3 = (la) null;
-            discarded$0 = this.a(false, -29, (la) null);
+            this.a(false, -29, (la) null);
             return false;
         }
         return false;
@@ -192,7 +156,6 @@ final class si extends kna {
     }
 
     final static int A(int param0) {
-        int discarded$6 = 0;
         if (param0 > 12) {
           uja.field_a.a(-121);
           if (!wg.field_l.c(81)) {
@@ -201,7 +164,7 @@ final class si extends kna {
             return 0;
           }
         } else {
-          discarded$6 = si.A(-47);
+          si.A(-47);
           uja.field_a.a(-121);
           if (!wg.field_l.c(81)) {
             return qda.b((byte) -66);
@@ -235,12 +198,7 @@ final class si extends kna {
         super.q(param0);
         if (this.field_m == 49) {
           this.b(param0 ^ -82, 4194304, 4194304);
-          if (TombRacer.field_G) {
-            this.b(-78, 2097152, 2097152);
-            return;
-          } else {
-            return;
-          }
+          return;
         } else {
           this.b(-78, 2097152, 2097152);
           return;

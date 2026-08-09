@@ -24,21 +24,21 @@ final class qc {
     }
 
     final static void b(int param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -50,30 +50,30 @@ final class qc {
               if (var3 <= var2) {
                 break L0;
               } else {
-                incrementValue$40 = var2;
+                incrementValue$16 = var2;
                 var2++;
-                var5[incrementValue$40] = 0;
-                incrementValue$41 = var2;
+                var5[incrementValue$16] = 0;
+                incrementValue$17 = var2;
                 var2++;
-                var5[incrementValue$41] = 0;
-                incrementValue$42 = var2;
+                var5[incrementValue$17] = 0;
+                incrementValue$18 = var2;
                 var2++;
-                var5[incrementValue$42] = 0;
-                incrementValue$43 = var2;
+                var5[incrementValue$18] = 0;
+                incrementValue$19 = var2;
                 var2++;
-                var5[incrementValue$43] = 0;
-                incrementValue$44 = var2;
+                var5[incrementValue$19] = 0;
+                incrementValue$20 = var2;
                 var2++;
-                var5[incrementValue$44] = 0;
-                incrementValue$45 = var2;
+                var5[incrementValue$20] = 0;
+                incrementValue$21 = var2;
                 var2++;
-                var5[incrementValue$45] = 0;
-                incrementValue$46 = var2;
+                var5[incrementValue$21] = 0;
+                incrementValue$22 = var2;
                 var2++;
-                var5[incrementValue$46] = 0;
-                incrementValue$47 = var2;
+                var5[incrementValue$22] = 0;
+                incrementValue$23 = var2;
                 var2++;
-                var5[incrementValue$47] = 0;
+                var5[incrementValue$23] = 0;
                 continue L1;
               }
             }
@@ -117,30 +117,19 @@ final class qc {
 
     final static byte[] a(byte[] param0, int param1, byte param2, int param3) {
         byte[] var4 = null;
-        RuntimeException var4_ref = null;
         int var5_int = 0;
-        td var5 = null;
-        byte[] var6 = null;
         int var7 = 0;
         byte[] var8 = null;
         byte[] stackIn_9_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_8_0 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var4_ref = null;
+        td var5 = null;
+        byte[] var6 = null;
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -176,35 +165,26 @@ final class qc {
             var5.a((long)(param1 * 8), 19668, var4);
             var6 = new byte[64];
             var5.a(var6, -6, 0);
-            stackOut_8_0 = (byte[]) (var6);
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = (byte[]) (var6);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var4_ref);
-            stackOut_10_1 = new StringBuilder().append("qc.D(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var4_ref);
+
+            stackIn_12_1 = new StringBuilder().append("qc.D(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }

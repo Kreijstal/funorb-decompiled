@@ -35,9 +35,9 @@ final class dn extends pa {
     }
 
     final ei c(boolean param0) {
-        cj var2 = null;
-        ei var3 = null;
-        int var4 = 0;
+        cj var2;
+        ei var3;
+        int var4;
         L0: {
           var4 = ZombieDawn.field_J;
           var2 = new cj(this.field_H);
@@ -76,12 +76,18 @@ final class dn extends pa {
 
     final static void a(am param0, int param1) {
         try {
-            boolean discarded$2 = false;
-            int discarded$3 = 0;
+            RuntimeException stackIn_67_0 = null;
+            StringBuilder stackIn_67_1 = null;
+            RuntimeException stackIn_68_0 = null;
+            StringBuilder stackIn_68_1 = null;
+            String stackIn_68_2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
             int var5 = 0;
+            int var6_int = 0;
             ClassNotFoundException var6 = null;
             InvalidClassException var6_ref = null;
             StreamCorruptedException var6_ref2 = null;
@@ -94,7 +100,6 @@ final class dn extends pa {
             NullPointerException var6_ref9 = null;
             Exception var6_ref10 = null;
             Throwable var6_ref11 = null;
-            int var6_int = 0;
             int var8 = 0;
             Object[] var9 = null;
             int var10_int = 0;
@@ -114,23 +119,6 @@ final class dn extends pa {
             java.lang.reflect.Field var26 = null;
             java.lang.reflect.Method var27 = null;
             java.lang.reflect.Method var28 = null;
-            RuntimeException stackIn_66_0 = null;
-            StringBuilder stackIn_66_1 = null;
-            RuntimeException stackIn_67_0 = null;
-            StringBuilder stackIn_67_1 = null;
-            RuntimeException stackIn_68_0 = null;
-            StringBuilder stackIn_68_1 = null;
-            String stackIn_68_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_65_0 = null;
-            StringBuilder stackOut_65_1 = null;
-            RuntimeException stackOut_67_0 = null;
-            StringBuilder stackOut_67_1 = null;
-            String stackOut_67_2 = null;
-            RuntimeException stackOut_66_0 = null;
-            StringBuilder stackOut_66_1 = null;
-            String stackOut_66_2 = null;
             var18 = null;
             var16 = null;
             var20 = null;
@@ -145,7 +133,7 @@ final class dn extends pa {
                     if (param1 >= 57) {
                       break L1;
                     } else {
-                      discarded$2 = dn.i(-44);
+                      dn.i(-44);
                       break L1;
                     }
                   }
@@ -162,7 +150,7 @@ final class dn extends pa {
                         var5 = 0;
                         L3: while (true) {
                           if (var17.field_l <= var5) {
-                            discarded$3 = param0.e(-120, var4);
+                            param0.e(-120, var4);
                             var17.b(-27598);
                             decompiledRegionSelector0 = 2;
                             break L0;
@@ -398,27 +386,19 @@ final class dn extends pa {
               decompiledCaughtException = decompiledCaughtParameter12;
               L25: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_65_0 = (RuntimeException) (var2);
-                stackOut_65_1 = new StringBuilder().append("dn.R(");
-                stackIn_67_0 = stackOut_65_0;
-                stackIn_67_1 = stackOut_65_1;
-                stackIn_66_0 = stackOut_65_0;
-                stackIn_66_1 = stackOut_65_1;
+                stackIn_67_0 = (RuntimeException) (var2);
+
+                stackIn_67_1 = new StringBuilder().append("dn.R(");
+
                 if (param0 == null) {
-                  stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
-                  stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
-                  stackOut_67_2 = "null";
-                  stackIn_68_0 = stackOut_67_0;
-                  stackIn_68_1 = stackOut_67_1;
-                  stackIn_68_2 = stackOut_67_2;
+                  stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
+                  stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
+                  stackIn_68_2 = "null";
                   break L25;
                 } else {
-                  stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
-                  stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
-                  stackOut_66_2 = "{...}";
-                  stackIn_68_0 = stackOut_66_0;
-                  stackIn_68_1 = stackOut_66_1;
-                  stackIn_68_2 = stackOut_66_2;
+                  stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
+                  stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
+                  stackIn_68_2 = "{...}";
                   break L25;
                 }
               }
@@ -441,19 +421,19 @@ final class dn extends pa {
     }
 
     final static vn[] f(byte param0) {
-        vn[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int[] var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int[] var13 = null;
-        int[] var16 = null;
-        byte[] var20 = null;
-        int[] var21 = null;
-        byte[] var22 = null;
+        vn[] var1;
+        int var2;
+        int var3;
+        int[] var6;
+        int var6_int;
+        int var7;
+        int var8;
+        int[] var9;
+        int[] var13;
+        int[] var16;
+        byte[] var20;
+        int[] var21;
+        byte[] var22;
         var8 = ZombieDawn.field_J;
         var1 = new vn[t.field_h];
         if (param0 == 43) {
@@ -506,16 +486,15 @@ final class dn extends pa {
     }
 
     final ga f(int param0) {
-        ga discarded$2 = null;
-        cj var2 = null;
-        ei var3 = null;
-        int var4 = 0;
+        cj var2;
+        ei var3;
+        int var4;
         L0: {
           var4 = ZombieDawn.field_J;
           if (param0 <= -2) {
             break L0;
           } else {
-            discarded$2 = this.f(-10);
+            this.f(-10);
             break L0;
           }
         }
@@ -553,7 +532,6 @@ final class dn extends pa {
 
     final void a(ga param0, boolean param1) {
         ei var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param0 instanceof ei)) {
                 throw new IllegalArgumentException();
@@ -561,7 +539,7 @@ final class dn extends pa {
             var3 = (ei) ((Object) param0);
             this.field_H.a(var3, -112);
             var3.field_H = param1 ? true : false;
-            discarded$0 = var3.a((byte) 107, (ga) (this));
+            var3.a((byte) 107, (ga) (this));
         } catch (RuntimeException runtimeException) {
             throw sh.a((Throwable) ((Object) runtimeException), "dn.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -583,8 +561,6 @@ final class dn extends pa {
 
     final static boolean i(int param0) {
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
         L0: {
           if (param0 == -19301) {
             break L0;
@@ -604,15 +580,13 @@ final class dn extends pa {
                 if (ng.a((byte) -64)) {
                   break L2;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L1;
                 }
               }
             }
           }
-          stackOut_6_0 = 0;
-          stackIn_7_0 = stackOut_6_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0 != 0;
@@ -651,9 +625,6 @@ final class dn extends pa {
         int stackIn_15_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_2_0 = 0;
         var8 = ZombieDawn.field_J;
         try {
           L0: {
@@ -662,8 +633,7 @@ final class dn extends pa {
               var4 = el.field_k;
               L1: while (true) {
                 if (n.field_r.length <= var3_int) {
-                  stackOut_14_0 = -1;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = -1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -674,8 +644,7 @@ final class dn extends pa {
                       var7 = im.field_d - (var6 >> -829750783);
                       var4 = var4 + qb.field_i;
                       if (bf.a(var7 + -nb.field_m, 0, param2, var4, var6 + (nb.field_m << -2141274143), (lb.field_Y << -636330975) + ma.field_k, param0)) {
-                        stackOut_10_0 = var5;
-                        stackIn_11_0 = stackOut_10_0;
+                        stackIn_11_0 = var5;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       } else {
@@ -692,8 +661,7 @@ final class dn extends pa {
                 }
               }
             } else {
-              stackOut_2_0 = 57;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 57;
               decompiledRegionSelector0 = 0;
               break L0;
             }

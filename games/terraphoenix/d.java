@@ -59,10 +59,10 @@ final class d extends jc {
     }
 
     final kh c(boolean param0) {
-        k var2 = null;
-        kh var3 = null;
-        int var4 = 0;
-        gl var5 = null;
+        k var2;
+        kh var3;
+        int var4;
+        gl var5;
         L0: {
           var4 = Terraphoenix.field_V;
           var2 = new k(this.field_A);
@@ -108,9 +108,9 @@ final class d extends jc {
     }
 
     final gl e(byte param0) {
-        k var2 = null;
-        kh var3 = null;
-        int var4 = 0;
+        k var2;
+        kh var3;
+        int var4;
         L0: {
           var4 = Terraphoenix.field_V;
           if (param0 == 82) {
@@ -148,7 +148,6 @@ final class d extends jc {
 
     final void a(gl param0, byte param1) {
         kh var3 = null;
-        boolean discarded$0 = false;
         if (!(param0 instanceof kh)) {
             throw new IllegalArgumentException();
         }
@@ -159,7 +158,7 @@ final class d extends jc {
             var3 = (kh) ((Object) param0);
             this.field_A.a((uf) (var3), (byte) 0);
             var3.field_J = true;
-            discarded$0 = var3.a((byte) 14, (gl) (this));
+            var3.a((byte) 14, (gl) (this));
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) ((Object) runtimeException), "d.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

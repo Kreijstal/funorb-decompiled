@@ -21,6 +21,7 @@ final class tgb extends abb {
     }
 
     tgb() {
+        System.nanoTime();
     }
 
     static {

@@ -7,11 +7,9 @@ final class bi {
     int field_a;
 
     final static boolean a(int param0, int param1, boolean param2) {
-        int var3 = 0;
-        String var4 = null;
+        int var3;
+        String var4;
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         L0: {
           if (param2) {
             break L0;
@@ -22,12 +20,10 @@ final class bi {
         }
         L1: {
           if (null == la.field_h) {
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 0;
             break L1;
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             break L1;
           }
         }

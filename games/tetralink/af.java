@@ -13,7 +13,6 @@ final class af {
     static String field_i;
 
     final static String a(byte param0, int param1, String param2) {
-        RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
         String stackIn_8_0 = null;
@@ -25,8 +24,6 @@ final class af {
         String stackIn_32_0 = null;
         String stackIn_35_0 = null;
         String stackIn_39_0 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
         RuntimeException stackIn_43_0 = null;
@@ -34,25 +31,7 @@ final class af {
         String stackIn_43_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_14_0 = null;
-        String stackOut_21_0 = null;
-        String stackOut_25_0 = null;
-        String stackOut_31_0 = null;
-        String stackOut_38_0 = null;
-        String stackOut_34_0 = null;
-        String stackOut_17_0 = null;
-        String stackOut_10_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             if (1 != param1) {
@@ -60,21 +39,18 @@ final class af {
                 if (-4 != (param1 ^ -1)) {
                   if (param1 != 4) {
                     if (param1 == 5) {
-                      stackOut_14_0 = sk.a(new String[]{param2}, sn.field_f, 120);
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = sk.a(new String[]{param2}, sn.field_f, 120);
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       if (param1 != 6) {
                         if (-8 == (param1 ^ -1)) {
-                          stackOut_21_0 = sk.a(new String[]{param2}, hm.field_c, 119);
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_22_0 = sk.a(new String[]{param2}, hm.field_c, 119);
                           decompiledRegionSelector0 = 6;
                           break L0;
                         } else {
                           if (-9 == (param1 ^ -1)) {
-                            stackOut_25_0 = sk.a(new String[]{param2}, field_i, 121);
-                            stackIn_26_0 = stackOut_25_0;
+                            stackIn_26_0 = sk.a(new String[]{param2}, field_i, 121);
                             decompiledRegionSelector0 = 7;
                             break L0;
                           } else {
@@ -87,23 +63,20 @@ final class af {
                               }
                             }
                             if (param1 == 11) {
-                              stackOut_31_0 = sk.a(new String[]{param2}, pm.field_d, 123);
-                              stackIn_32_0 = stackOut_31_0;
+                              stackIn_32_0 = sk.a(new String[]{param2}, pm.field_d, 123);
                               decompiledRegionSelector0 = 8;
                               break L0;
                             } else {
                               if (param1 != 12) {
                                 if (param1 == 13) {
-                                  stackOut_38_0 = sk.a(new String[]{param2}, hb.field_e, 120);
-                                  stackIn_39_0 = stackOut_38_0;
+                                  stackIn_39_0 = sk.a(new String[]{param2}, hb.field_e, 120);
                                   decompiledRegionSelector0 = 10;
                                   break L0;
                                 } else {
                                   return null;
                                 }
                               } else {
-                                stackOut_34_0 = sk.a(new String[]{param2}, im.field_a, 126);
-                                stackIn_35_0 = stackOut_34_0;
+                                stackIn_35_0 = sk.a(new String[]{param2}, im.field_a, 126);
                                 decompiledRegionSelector0 = 9;
                                 break L0;
                               }
@@ -111,33 +84,28 @@ final class af {
                           }
                         }
                       } else {
-                        stackOut_17_0 = sk.a(new String[]{param2}, eo.field_d, 124);
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = sk.a(new String[]{param2}, eo.field_d, 124);
                         decompiledRegionSelector0 = 5;
                         break L0;
                       }
                     }
                   } else {
-                    stackOut_10_0 = sk.a(new String[]{param2}, jg.field_d, 125);
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = sk.a(new String[]{param2}, jg.field_d, 125);
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
-                  stackOut_7_0 = sk.a(new String[]{param2}, hd.field_z, 124);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = sk.a(new String[]{param2}, hd.field_z, 124);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_4_0 = sk.a(new String[]{param2}, mi.field_Mb, 127);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = sk.a(new String[]{param2}, mi.field_Mb, 127);
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = sk.a(new String[]{param2}, kd.field_k, 121);
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = sk.a(new String[]{param2}, kd.field_k, 121);
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -146,27 +114,19 @@ final class af {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_40_0 = (RuntimeException) (var3);
-            stackOut_40_1 = new StringBuilder().append("af.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_42_0 = stackOut_40_0;
-            stackIn_42_1 = stackOut_40_1;
-            stackIn_41_0 = stackOut_40_0;
-            stackIn_41_1 = stackOut_40_1;
+            stackIn_42_0 = (RuntimeException) (var3);
+
+            stackIn_42_1 = new StringBuilder().append("af.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "null";
-              stackIn_43_0 = stackOut_42_0;
-              stackIn_43_1 = stackOut_42_1;
-              stackIn_43_2 = stackOut_42_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "null";
               break L2;
             } else {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "{...}";
-              stackIn_43_0 = stackOut_41_0;
-              stackIn_43_1 = stackOut_41_1;
-              stackIn_43_2 = stackOut_41_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "{...}";
               break L2;
             }
           }
@@ -220,9 +180,9 @@ final class af {
     }
 
     final static v a(int param0, byte param1, int param2, int param3) {
-        v var4 = null;
-        int var5 = 0;
-        int var6 = 0;
+        v var4;
+        int var5;
+        int var6;
         var6 = TetraLink.field_J;
         var4 = (v) ((Object) tc.field_p.c(false));
         var5 = 90 / ((-53 - param1) / 40);

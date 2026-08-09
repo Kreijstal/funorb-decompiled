@@ -10,15 +10,13 @@ final class oua {
             java.lang.reflect.Method var6 = null;
             ha stackIn_5_0 = null;
             Throwable decompiledCaughtException = null;
-            ha stackOut_4_0 = null;
             try {
               L0: {
                 if (mja.a(param2)) {
                   if (in.a("jagdx", 480)) {
                     var5 = Class.forName("cta");
                     var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("d"), Class.forName("cn"), Class.forName("java.lang.Integer")});
-                    stackOut_4_0 = (ha) (var6.invoke((Object) null, new Object[]{param4, param0, param3, new Integer(param1)}));
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = (ha) (var6.invoke((Object) null, new Object[]{param4, param0, param3, new Integer(param1)}));
                     break L0;
                   } else {
                     throw new RuntimeException("");

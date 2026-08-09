@@ -29,40 +29,28 @@ final class p extends uc {
     }
 
     private final void a(int param0, int param1, int param2, boolean param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
-        uj stackIn_24_0 = null;
         uj stackIn_25_0 = null;
         uj stackIn_26_0 = null;
         String stackIn_26_1 = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        uj stackOut_23_0 = null;
-        uj stackOut_25_0 = null;
-        String stackOut_25_1 = null;
-        uj stackOut_24_0 = null;
-        String stackOut_24_1 = null;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         L0: {
           var14 = CrazyCrystals.field_B;
           if (!param3) {
-            stackOut_2_0 = 12640511;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 12640511;
             break L0;
           } else {
-            stackOut_1_0 = 16777215;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 16777215;
             break L0;
           }
         }
@@ -74,12 +62,10 @@ final class p extends uc {
             var8 = 26;
             il.a(var8, param3, param1, var6, var7, false);
             if (param3) {
-              stackOut_7_0 = 1;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 1;
               break L1;
             } else {
-              stackOut_6_0 = 0;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 0;
               break L1;
             }
           }
@@ -109,20 +95,15 @@ final class p extends uc {
                         L4: {
                           var13 = 240 + (var10 + -var11) / 2;
                           gj.field_m.b(q.field_d, var13, 17 + param1, var9, -1);
-                          stackOut_23_0 = gj.field_m;
-                          stackIn_25_0 = stackOut_23_0;
-                          stackIn_24_0 = stackOut_23_0;
+                          stackIn_25_0 = gj.field_m;
+
                           if (jm.field_j) {
-                            stackOut_25_0 = (uj) ((Object) stackIn_25_0);
-                            stackOut_25_1 = fk.field_t;
-                            stackIn_26_0 = stackOut_25_0;
-                            stackIn_26_1 = stackOut_25_1;
+                            stackIn_26_0 = (uj) ((Object) stackIn_25_0);
+                            stackIn_26_1 = fk.field_t;
                             break L4;
                           } else {
-                            stackOut_24_0 = (uj) ((Object) stackIn_24_0);
-                            stackOut_24_1 = vk.field_D;
-                            stackIn_26_0 = stackOut_24_0;
-                            stackIn_26_1 = stackOut_24_1;
+                            stackIn_26_0 = (uj) ((Object) stackIn_25_0);
+                            stackIn_26_1 = vk.field_D;
                             break L4;
                           }
                         }
@@ -162,11 +143,9 @@ final class p extends uc {
     }
 
     private final boolean c(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_74_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_72_0 = 0;
+        int var2;
+        int var3;
         var3 = CrazyCrystals.field_B;
         if (param0 == 69) {
           L0: {
@@ -407,12 +386,10 @@ final class p extends uc {
               } else {
                 L17: {
                   if (jm.field_j) {
-                    stackOut_73_0 = 0;
-                    stackIn_74_0 = stackOut_73_0;
+                    stackIn_74_0 = 0;
                     break L17;
                   } else {
-                    stackOut_72_0 = 1;
-                    stackIn_74_0 = stackOut_72_0;
+                    stackIn_74_0 = 1;
                     break L17;
                   }
                 }

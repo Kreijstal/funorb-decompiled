@@ -7,9 +7,9 @@ final class ac implements com.ms.directX.IEnumModesCallback {
     private static int field_c;
 
     final int[] a(int param0) {
-        int[] var2 = null;
-        java.awt.Frame var3 = null;
-        int[] var4 = null;
+        int[] var2;
+        java.awt.Frame var3;
+        int[] var4;
         this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         if (param0 != -7581) {
           var3 = (java.awt.Frame) null;
@@ -74,8 +74,8 @@ final class ac implements com.ms.directX.IEnumModesCallback {
         param2.setVisible(param4);
         com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
         int var8 = var7.getHwnd();
-        int discarded$0 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-        int discarded$1 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+        com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+        com.ms.win32.User32.SetWindowLong(var8, -20, 8);
         this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param2), 17);
         this.field_b.setDisplayMode(param0, param1, param5, param3, 0);
         param2.setBounds(0, 0, param0, param1);

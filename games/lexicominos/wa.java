@@ -34,8 +34,8 @@ final class wa extends kd {
         try {
             IOException iOException = null;
             IOException var2_ref = null;
+            RuntimeException runtimeException = null;
             int var1_int = 0;
-            RuntimeException var1 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
             var3 = Lexicominos.field_L ? 1 : 0;
@@ -114,7 +114,11 @@ final class wa extends kd {
                             }
                           }
                           var1_int++;
-                          continue L8;
+                          if (var3 == 0) {
+                            continue L8;
+                          } else {
+                            break L7;
+                          }
                         } else {
                           return;
                         }
@@ -126,8 +130,8 @@ final class wa extends kd {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw ld.a((Throwable) ((Object) var1), "wa.C(" + param0 + ')');
+              runtimeException = (RuntimeException) (Object) decompiledCaughtException;
+              throw ld.a((Throwable) ((Object) runtimeException), "wa.C(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

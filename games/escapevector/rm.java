@@ -61,14 +61,14 @@ final class rm implements Iterator {
     }
 
     public final Object next() {
-        fl var1 = this.field_b;
+        Object var1 = this.field_b;
         if (this.field_f.field_c != var1) {
-            this.field_b = var1.field_j;
+            this.field_b = ((fl) (var1)).field_j;
         } else {
             this.field_b = null;
             var1 = null;
         }
-        this.field_d = var1;
+        this.field_d = (fl) (var1);
         return var1;
     }
 

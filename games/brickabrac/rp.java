@@ -24,13 +24,13 @@ final class rp extends km {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$1 = 0;
-        RuntimeException var6 = null;
+        int incrementValue$0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        RuntimeException decompiledCaughtException = null;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -91,9 +91,9 @@ final class rp extends km {
                     continue L5;
                   } else {
                     var8 = lb.field_l[var7];
-                    incrementValue$1 = var7;
+                    incrementValue$0 = var7;
                     var7++;
-                    lb.field_l[incrementValue$1] = ik.a(-16711936, ik.a(var8, 16711935) * param3) + ik.a(16711680, param3 * ik.a(65280, var8)) >>> 1844834056;
+                    lb.field_l[incrementValue$0] = ik.a(-16711936, ik.a(var8, 16711935) * param3) + ik.a(16711680, param3 * ik.a(65280, var8)) >>> 1844834056;
                     param0++;
                     continue L7;
                   }
@@ -140,29 +140,26 @@ final class rp extends km {
     }
 
     final void a(boolean param0, boolean param1, int param2) {
-        int discarded$0 = 0;
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         nq var6 = null;
         int var5 = BrickABrac.field_J ? 1 : 0;
         super.a(param0, param1, -95);
         if (param2 > -52) {
-            discarded$0 = this.b((byte) 59, 93);
+            this.b((byte) 59, 93);
         }
-        if (param1) {
-            if (-1 > (c.field_g ^ -1)) {
-                fieldTemp$1 = c.field_g - 1;
-                c.field_g = c.field_g - 1;
-                if (0 == fieldTemp$1) {
-                    fc.a(-59, field_s);
-                    pa.a(true);
-                    sc.b(-96);
-                    if (si.field_k != null) {
-                        pe.field_n = si.field_k.field_m;
-                    }
-                    si.field_k = rd.a(0, (byte) 19);
-                    hc.field_h = 2 * hi.field_w.a(-37880252, 2);
-                    im.field_e = 50;
+        if (param1 && -1 > (c.field_g ^ -1)) {
+            fieldTemp$0 = c.field_g - 1;
+            c.field_g = c.field_g - 1;
+            if (0 == fieldTemp$0) {
+                fc.a(-59, field_s);
+                pa.a(true);
+                sc.b(-96);
+                if (si.field_k != null) {
+                    pe.field_n = si.field_k.field_m;
                 }
+                si.field_k = rd.a(0, (byte) 19);
+                hc.field_h = 2 * hi.field_w.a(-37880252, 2);
+                im.field_e = 50;
             }
         }
         if (!pg.c(112)) {
@@ -175,7 +172,7 @@ final class rp extends km {
     }
 
     final void a(int param0, int param1, char param2) {
-        int var5 = 0;
+        int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
         if (param0 == -120) {
           L0: {
@@ -287,7 +284,6 @@ final class rp extends km {
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9) {
         int[] var10 = null;
-        RuntimeException var10_ref = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -295,22 +291,13 @@ final class rp extends km {
         int var15 = 0;
         int var16 = 0;
         int[] var17 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var10_ref = null;
         var16 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -347,27 +334,19 @@ final class rp extends km {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var10_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var10_ref);
-            stackOut_6_1 = new StringBuilder().append("rp.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var10_ref);
+
+            stackIn_8_1 = new StringBuilder().append("rp.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
+
             if (param8 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }

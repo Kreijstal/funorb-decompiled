@@ -46,31 +46,21 @@ final class ic {
     }
 
     final static void a(int param0, ij param1) {
-        int dupTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int incrementValue$6 = 0;
-        int dupTemp$7 = 0;
-        RuntimeException var2 = null;
+        int dupTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int dupTemp$3 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
         var5 = HoldTheLine.field_D;
         try {
           L0: {
@@ -80,17 +70,17 @@ final class ic {
                 var2_int = 0;
                 L2: while (true) {
                   if (var2_int >= in.field_e) {
-                    dupTemp$4 = param1.a(-65);
-                    ek.field_n[dupTemp$4] = ek.field_n[dupTemp$4] + 1;
+                    dupTemp$0 = param1.a(-65);
+                    ek.field_n[dupTemp$0] = ek.field_n[dupTemp$0] + 1;
                     var2_int = 0;
                     var3 = 0;
                     L3: while (true) {
                       if (in.field_e <= var3) {
                         L4: {
                           in.field_e = var2_int;
-                          fieldTemp$5 = in.field_e;
+                          fieldTemp$1 = in.field_e;
                           in.field_e = in.field_e + 1;
-                          lj.field_a[fieldTemp$5] = param1;
+                          lj.field_a[fieldTemp$1] = param1;
                           if (param0 == 21325) {
                             break L4;
                           } else {
@@ -102,7 +92,7 @@ final class ic {
                       } else {
                         L5: {
                           L6: {
-                            if (lj.field_a[var3].field_h != param1.field_h) {
+                            if ((lj.field_a[var3].field_h ^ -1) != (param1.field_h ^ -1)) {
                               break L6;
                             } else {
                               var4 = lj.field_a[var3].a(param0 ^ -21258);
@@ -114,9 +104,9 @@ final class ic {
                               }
                             }
                           }
-                          incrementValue$6 = var2_int;
+                          incrementValue$2 = var2_int;
                           var2_int++;
-                          lj.field_a[incrementValue$6] = lj.field_a[var3];
+                          lj.field_a[incrementValue$2] = lj.field_a[var3];
                           break L5;
                         }
                         var3++;
@@ -126,8 +116,8 @@ final class ic {
                   } else {
                     L7: {
                       if (param1.field_h == lj.field_a[var2_int].field_h) {
-                        dupTemp$7 = lj.field_a[var2_int].a(-90);
-                        ek.field_n[dupTemp$7] = ek.field_n[dupTemp$7] + 1;
+                        dupTemp$3 = lj.field_a[var2_int].a(-90);
+                        ek.field_n[dupTemp$3] = ek.field_n[dupTemp$3] + 1;
                         break L7;
                       } else {
                         break L7;
@@ -148,31 +138,23 @@ final class ic {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var2);
-            stackOut_21_1 = new StringBuilder().append("ic.C(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_25_0 = (RuntimeException) (var2);
+
+            stackIn_25_1 = new StringBuilder().append("ic.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L8;
             }
           }
-          throw kk.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
     }
 

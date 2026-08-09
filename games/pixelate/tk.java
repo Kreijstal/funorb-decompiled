@@ -62,25 +62,21 @@ final class tk extends fa {
     }
 
     final static boolean a(byte param0, int param1) {
-        tf[] discarded$0 = null;
         if (param0 != -104) {
-            discarded$0 = tk.a(103, 85, false, -53);
+            tk.a(103, 85, false, -53);
         }
         return 0 <= param1 ? true : false;
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 7) {
-            discarded$0 = tk.a((byte) -48, 5);
+            tk.a((byte) -48, 5);
         }
         field_q = null;
     }
 
     final static boolean a(int param0, char param1) {
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         if (param0 == -66) {
           L0: {
             L1: {
@@ -106,12 +102,10 @@ final class tk extends fa {
                   }
                 }
               }
-              stackOut_9_0 = 0;
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = 0;
               break L0;
             }
-            stackOut_8_0 = 1;
-            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_0 = 1;
             break L0;
           }
           return stackIn_10_0 != 0;

@@ -54,41 +54,24 @@ final class bf extends d {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        Object stackOut_5_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
         if (param2 > -8) {
           L0: {
             field_L = (jp) null;
-            stackOut_5_0 = this;
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_7_0 = this;
+
             if (this.field_F) {
-              stackOut_7_0 = this;
-              stackOut_7_1 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_0 = this;
+              stackIn_8_1 = 0;
               break L0;
             } else {
-              stackOut_6_0 = this;
-              stackOut_6_1 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_0 = this;
+              stackIn_8_1 = 1;
               break L0;
             }
           }
@@ -97,20 +80,15 @@ final class bf extends d {
           return;
         } else {
           L1: {
-            stackOut_1_0 = this;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_3_0 = this;
+
             if (this.field_F) {
-              stackOut_3_0 = this;
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_0 = this;
+              stackIn_4_1 = 0;
               break L1;
             } else {
-              stackOut_2_0 = this;
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_0 = this;
+              stackIn_4_1 = 1;
               break L1;
             }
           }
@@ -145,81 +123,40 @@ final class bf extends d {
     }
 
     final static void a(byte param0) {
-        RuntimeException runtimeException = null;
-        int var2 = 0;
         id var3 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var2 = BrickABrac.field_J ? 1 : 0;
-        try {
-          L0: {
-            L1: {
-              o.field_e = null;
-              fh.field_d = false;
-              nl.field_f = null;
-              if (ua.field_c == null) {
-                break L1;
-              } else {
-                ua.field_c.c((byte) -57);
-                ua.field_c = null;
-                break L1;
-              }
-            }
-            if (param0 >= 29) {
-              L2: {
-                eq.field_m = null;
-                if (rq.field_a != null) {
-                  rq.field_a.c((byte) -91);
-                  rq.field_a = null;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                pn.field_i = null;
-                if (null == mp.field_Tb) {
-                  break L3;
-                } else {
-                  mp.field_Tb.c((byte) -84);
-                  mp.field_Tb = null;
-                  break L3;
-                }
-              }
-              L4: {
-                BrickABrac.field_F = null;
-                if (eq.field_m == null) {
-                  break L4;
-                } else {
-                  var3 = (id) ((Object) eq.field_m.b((byte) 120));
-                  L5: while (true) {
-                    if (var3 == null) {
-                      eq.field_m = null;
-                      break L4;
-                    } else {
-                      var3.d(3);
-                      var3 = (id) ((Object) eq.field_m.a(false));
-                      continue L5;
-                    }
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) runtimeException), "bf.A(" + param0 + ')');
+        int var2 = BrickABrac.field_J ? 1 : 0;
+        o.field_e = null;
+        fh.field_d = false;
+        nl.field_f = null;
+        if (ua.field_c != null) {
+            ua.field_c.c((byte) -57);
+            ua.field_c = null;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        if (param0 < 29) {
+            return;
+        }
+        try {
+            eq.field_m = null;
+            if (!(rq.field_a == null)) {
+                rq.field_a.c((byte) -91);
+                rq.field_a = null;
+            }
+            pn.field_i = null;
+            if (null != mp.field_Tb) {
+                mp.field_Tb.c((byte) -84);
+                mp.field_Tb = null;
+            }
+            BrickABrac.field_F = null;
+            if (eq.field_m != null) {
+                var3 = (id) ((Object) eq.field_m.b((byte) 120));
+                while (var3 != null) {
+                    var3.d(3);
+                    var3 = (id) ((Object) eq.field_m.a(false));
+                }
+                eq.field_m = null;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) ((Object) runtimeException), "bf.A(" + param0 + ')');
         }
     }
 

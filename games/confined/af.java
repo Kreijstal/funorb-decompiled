@@ -42,43 +42,27 @@ final class af extends sa {
     }
 
     final static java.awt.Frame a(int param0, int param1, int param2, int param3, df param4, int param5) {
-        RuntimeException var6 = null;
-        tl[] var6_array = null;
+        Object stackIn_3_0 = null;
+        Object stackIn_8_0 = null;
+        Object stackIn_26_0 = null;
+        java.awt.Frame stackIn_29_0 = null;
+        Object stackIn_35_0 = null;
+        Object stackIn_39_0 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_43_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        tl[] var6 = null;
+        RuntimeException var6_ref = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var8 = 0;
         int var9 = 0;
         tl[] var10 = null;
         bc var11 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_8_0 = null;
-        Object stackIn_25_0 = null;
-        java.awt.Frame stackIn_28_0 = null;
-        Object stackIn_34_0 = null;
-        Object stackIn_38_0 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        String stackIn_42_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_24_0 = null;
-        Object stackOut_7_0 = null;
-        Object stackOut_37_0 = null;
-        Object stackOut_33_0 = null;
-        java.awt.Frame stackOut_27_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
         var9 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -86,8 +70,8 @@ final class af extends sa {
               L1: {
                 if (-1 == (param0 ^ -1)) {
                   var10 = hh.a(param4, 94);
-                  var6_array = var10;
-                  if (var6_array != null) {
+                  var6 = var10;
+                  if (var6 != null) {
                     var7_int = 0;
                     var8 = 0;
                     L2: while (true) {
@@ -95,13 +79,12 @@ final class af extends sa {
                         if (var7_int != 0) {
                           break L1;
                         } else {
-                          stackOut_24_0 = null;
-                          stackIn_25_0 = stackOut_24_0;
+                          stackIn_26_0 = null;
                           decompiledRegionSelector0 = 2;
                           break L0;
                         }
                       } else {
-                        if (param3 == var10[var8].field_j) {
+                        if ((param3 ^ -1) == (var10[var8].field_j ^ -1)) {
                           L3: {
                             if (var10[var8].field_c == param1) {
                               L4: {
@@ -142,8 +125,7 @@ final class af extends sa {
                       }
                     }
                   } else {
-                    stackOut_7_0 = null;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = null;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -159,16 +141,14 @@ final class af extends sa {
                     if (var7 != null) {
                       if ((var11.field_g ^ -1) == -3) {
                         si.a(var7, param4, true);
-                        stackOut_37_0 = null;
-                        stackIn_38_0 = stackOut_37_0;
+                        stackIn_39_0 = null;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       } else {
                         return var7;
                       }
                     } else {
-                      stackOut_33_0 = null;
-                      stackIn_34_0 = stackOut_33_0;
+                      stackIn_35_0 = null;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     }
@@ -178,14 +158,12 @@ final class af extends sa {
                   }
                 }
               } else {
-                stackOut_27_0 = (java.awt.Frame) null;
-                stackIn_28_0 = stackOut_27_0;
+                stackIn_29_0 = (java.awt.Frame) null;
                 decompiledRegionSelector0 = 3;
                 break L0;
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -193,32 +171,24 @@ final class af extends sa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
-            var6 = decompiledCaughtException;
-            stackOut_39_0 = (RuntimeException) (var6);
-            stackOut_39_1 = new StringBuilder().append("af.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_41_0 = stackOut_39_0;
-            stackIn_41_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            var6_ref = decompiledCaughtException;
+            stackIn_42_0 = (RuntimeException) (var6_ref);
+
+            stackIn_42_1 = new StringBuilder().append("af.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "null";
               break L7;
             } else {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "{...}";
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_42_1 = stackOut_40_1;
-              stackIn_42_2 = stackOut_40_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "{...}";
               break L7;
             }
           }
-          throw sd.a((Throwable) ((Object) stackIn_42_0), stackIn_42_2 + ',' + param5 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_43_0), stackIn_43_2 + ',' + param5 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return (java.awt.Frame) ((Object) stackIn_3_0);
@@ -227,15 +197,15 @@ final class af extends sa {
             return (java.awt.Frame) ((Object) stackIn_8_0);
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return (java.awt.Frame) ((Object) stackIn_25_0);
+              return (java.awt.Frame) ((Object) stackIn_26_0);
             } else {
               if (decompiledRegionSelector0 == 3) {
-                return stackIn_28_0;
+                return stackIn_29_0;
               } else {
                 if (decompiledRegionSelector0 == 4) {
-                  return (java.awt.Frame) ((Object) stackIn_34_0);
+                  return (java.awt.Frame) ((Object) stackIn_35_0);
                 } else {
-                  return (java.awt.Frame) ((Object) stackIn_38_0);
+                  return (java.awt.Frame) ((Object) stackIn_39_0);
                 }
               }
             }
@@ -244,7 +214,7 @@ final class af extends sa {
     }
 
     final void g(int param0) {
-        ka discarded$7 = this.a((byte) -123, da.field_g, 1.5);
+        this.a((byte) -123, da.field_g, 1.5);
         if (param0 != 26402) {
             this.g(55);
         }

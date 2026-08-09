@@ -21,18 +21,16 @@ final class pg extends fb {
     }
 
     final dj a(byte param0) {
-        dj discarded$0 = null;
         if (param0 <= 47) {
-            discarded$0 = this.a((byte) 26);
+            this.a((byte) 26);
             return qd.field_h;
         }
         return qd.field_h;
     }
 
     final static void d(int param0) {
-        boolean discarded$2 = false;
         if (param0 <= 40) {
-          discarded$2 = pg.a(-52, 18, 84, 62, 58, -55, -37);
+          pg.a(-52, 18, 84, 62, 58, -55, -37);
           tf.field_g.setLength(0);
           ib.field_b = 0;
           return;
@@ -44,10 +42,9 @@ final class pg extends fb {
     }
 
     public static void c(int param0) {
-        boolean discarded$2 = false;
         field_v = null;
         if (param0 != 28873) {
-          discarded$2 = pg.a(-89, 67, 9, -70, 59, 127, 12);
+          pg.a(-89, 67, 9, -70, 59, 127, 12);
           field_t = null;
           field_s = null;
           field_x = null;
@@ -69,10 +66,7 @@ final class pg extends fb {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        boolean discarded$11 = false;
         int stackIn_18_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_17_0 = 0;
         if (param4 == 0) {
           if (param3 <= param6) {
             if (param6 >= param1 + param3) {
@@ -86,14 +80,12 @@ final class pg extends fb {
                     if (param2 >= param5 - -param0) {
                       break L1;
                     } else {
-                      stackOut_16_0 = 1;
-                      stackIn_18_0 = stackOut_16_0;
+                      stackIn_18_0 = 1;
                       break L0;
                     }
                   }
                 }
-                stackOut_17_0 = 0;
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_0 = 0;
                 break L0;
               }
               return stackIn_18_0 != 0;
@@ -102,7 +94,7 @@ final class pg extends fb {
             return false;
           }
         } else {
-          discarded$11 = pg.a(-66, 110, -27, 62, 105, 97, 42);
+          pg.a(-66, 110, -27, 62, 105, 97, 42);
           if (param3 <= param6) {
             if (param6 < param1 + param3) {
               if (param2 >= param5) {
@@ -124,34 +116,34 @@ final class pg extends fb {
     }
 
     final static String a(byte param0, Throwable param1) throws IOException {
-        String var2 = null;
-        PrintWriter var4 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        od var14 = null;
-        StringWriter var15 = null;
-        String var20 = null;
-        BufferedReader var21 = null;
-        String var22 = null;
-        String var23 = null;
-        String var24 = null;
-        String var25 = null;
-        String var26 = null;
-        String var27 = null;
-        String var28 = null;
-        BufferedReader var29 = null;
-        String var30 = null;
-        String var31 = null;
-        String var32 = null;
-        String var33 = null;
-        String var34 = null;
-        String var35 = null;
-        String var39 = null;
+        String var2;
+        PrintWriter var4;
+        int var9;
+        int var10;
+        String var11;
+        int var12;
+        int var13;
+        od var14;
+        StringWriter var15;
+        String var20;
+        BufferedReader var21;
+        String var22;
+        String var23;
+        String var24;
+        String var25;
+        String var26;
+        String var27;
+        BufferedReader var6;
+        String var7;
+        String var28;
+        BufferedReader var29;
+        String var30;
+        String var31;
+        String var32;
+        String var33;
+        String var34;
+        String var35;
+        String var39;
         L0: {
           var13 = SteelSentinels.field_G;
           if (param1 instanceof od) {

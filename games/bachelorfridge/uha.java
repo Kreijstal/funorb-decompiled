@@ -59,25 +59,12 @@ final class uha extends sna {
         int var3 = 0;
         int stackIn_5_0 = 0;
         mh stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        mh stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -91,45 +78,34 @@ final class uha extends sna {
             }
             L2: {
               if (-2 == (param0.b(16711935) ^ -1)) {
-                stackOut_4_0 = 1;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 1;
                 break L2;
               } else {
-                stackOut_3_0 = 0;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 0;
                 break L2;
               }
             }
             var3 = stackIn_5_0;
-            stackOut_5_0 = new mh(var2, var3 != 0);
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = new mh(var2, var3 != 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2_ref);
-            stackOut_7_1 = new StringBuilder().append("uha.BA(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2_ref);
+
+            stackIn_9_1 = new StringBuilder().append("uha.BA(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -139,16 +115,8 @@ final class uha extends sna {
     }
 
     final boolean a(int param0, uha param1) {
-        pp discarded$1 = null;
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        lu var7 = null;
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackIn_13_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_15_1 = 0;
@@ -156,22 +124,16 @@ final class uha extends sna {
         boolean stackIn_23_0 = false;
         int stackIn_29_0 = 0;
         int stackIn_33_0 = 0;
-        int stackIn_34_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_36_0 = 0;
         int stackIn_36_1 = 0;
         int stackIn_41_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_55_0 = 0;
         int stackIn_61_0 = 0;
-        int stackIn_62_0 = 0;
         int stackIn_63_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_64_1 = 0;
         int stackIn_66_0 = 0;
         int stackIn_70_0 = 0;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         RuntimeException stackIn_74_0 = null;
@@ -179,70 +141,25 @@ final class uha extends sna {
         String stackIn_74_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_14_1 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_13_1 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_27_0 = 0;
-        boolean stackOut_22_0 = false;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_35_1 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_34_1 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_63_1 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_62_1 = 0;
-        int stackOut_69_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_46_0 = 0;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        RuntimeException stackOut_73_0 = null;
-        StringBuilder stackOut_73_1 = null;
-        String stackOut_73_2 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        lu var7 = null;
         try {
           L0: {
             L1: {
               if (!this.field_Wb) {
                 if (-7 == (this.field_ec ^ -1)) {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L1;
                 } else {
-                  stackOut_3_0 = 0;
-                  stackIn_6_0 = stackOut_3_0;
+                  stackIn_6_0 = 0;
                   break L1;
                 }
               } else {
-                stackOut_1_0 = 1;
-                stackIn_6_0 = stackOut_1_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
@@ -250,42 +167,33 @@ final class uha extends sna {
               var3_int = stackIn_6_0;
               if (!param1.field_Wb) {
                 if (-7 == (param1.field_ec ^ -1)) {
-                  stackOut_10_0 = 1;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = 1;
                   break L2;
                 } else {
-                  stackOut_9_0 = 0;
-                  stackIn_12_0 = stackOut_9_0;
+                  stackIn_12_0 = 0;
                   break L2;
                 }
               } else {
-                stackOut_7_0 = 1;
-                stackIn_12_0 = stackOut_7_0;
+                stackIn_12_0 = 1;
                 break L2;
               }
             }
             L3: {
               var4 = stackIn_12_0;
-              stackOut_12_0 = var4;
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_13_0 = stackOut_12_0;
+              stackIn_14_0 = var4;
+
               if (var3_int != 0) {
-                stackOut_14_0 = stackIn_14_0;
-                stackOut_14_1 = 0;
-                stackIn_15_0 = stackOut_14_0;
-                stackIn_15_1 = stackOut_14_1;
+                stackIn_15_0 = stackIn_14_0;
+                stackIn_15_1 = 0;
                 break L3;
               } else {
-                stackOut_13_0 = stackIn_13_0;
-                stackOut_13_1 = 1;
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_15_1 = stackOut_13_1;
+                stackIn_15_0 = stackIn_14_0;
+                stackIn_15_1 = 1;
                 break L3;
               }
             }
             if (stackIn_15_0 == stackIn_15_1) {
-              stackOut_17_0 = var3_int;
-              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_0 = var3_int;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -300,12 +208,10 @@ final class uha extends sna {
                       } else {
                         L5: {
                           if (this.field_Kb >= param1.field_Kb) {
-                            stackOut_28_0 = 0;
-                            stackIn_29_0 = stackOut_28_0;
+                            stackIn_29_0 = 0;
                             break L5;
                           } else {
-                            stackOut_27_0 = 1;
-                            stackIn_29_0 = stackOut_27_0;
+                            stackIn_29_0 = 1;
                             break L5;
                           }
                         }
@@ -314,8 +220,7 @@ final class uha extends sna {
                       }
                     }
                   } else {
-                    stackOut_22_0 = this.field_zb;
-                    stackIn_23_0 = stackOut_22_0;
+                    stackIn_23_0 = this.field_zb;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -325,42 +230,33 @@ final class uha extends sna {
               }
               L6: {
                 if (param1.field_Zb) {
-                  stackOut_32_0 = 0;
-                  stackIn_33_0 = stackOut_32_0;
+                  stackIn_33_0 = 0;
                   break L6;
                 } else {
-                  stackOut_31_0 = 1;
-                  stackIn_33_0 = stackOut_31_0;
+                  stackIn_33_0 = 1;
                   break L6;
                 }
               }
               L7: {
-                stackOut_33_0 = stackIn_33_0;
-                stackIn_35_0 = stackOut_33_0;
-                stackIn_34_0 = stackOut_33_0;
+
+
                 if (this.field_Zb) {
-                  stackOut_35_0 = stackIn_35_0;
-                  stackOut_35_1 = 0;
-                  stackIn_36_0 = stackOut_35_0;
-                  stackIn_36_1 = stackOut_35_1;
+
+                  stackIn_36_1 = 0;
                   break L7;
                 } else {
-                  stackOut_34_0 = stackIn_34_0;
-                  stackOut_34_1 = 1;
-                  stackIn_36_0 = stackOut_34_0;
-                  stackIn_36_1 = stackOut_34_1;
+
+                  stackIn_36_1 = 1;
                   break L7;
                 }
               }
-              if (stackIn_36_0 != stackIn_36_1) {
+              if (stackIn_33_0 != stackIn_36_1) {
                 L8: {
                   if (this.field_Zb) {
-                    stackOut_40_0 = 0;
-                    stackIn_41_0 = stackOut_40_0;
+                    stackIn_41_0 = 0;
                     break L8;
                   } else {
-                    stackOut_39_0 = 1;
-                    stackIn_41_0 = stackOut_39_0;
+                    stackIn_41_0 = 1;
                     break L8;
                   }
                 }
@@ -372,24 +268,21 @@ final class uha extends sna {
                     break L9;
                   } else {
                     var7 = (lu) null;
-                    discarded$1 = uha.b((lu) null, -6);
+                    uha.b((lu) null, -6);
                     break L9;
                   }
                 }
                 if (this.field_Zb) {
                   L10: {
                     if (this.field_Fb) {
-                      stackOut_53_0 = 1;
-                      stackIn_55_0 = stackOut_53_0;
+                      stackIn_55_0 = 1;
                       break L10;
                     } else {
                       if (2 == this.field_Lb) {
-                        stackOut_52_0 = 1;
-                        stackIn_55_0 = stackOut_52_0;
+                        stackIn_55_0 = 1;
                         break L10;
                       } else {
-                        stackOut_51_0 = 0;
-                        stackIn_55_0 = stackOut_51_0;
+                        stackIn_55_0 = 0;
                         break L10;
                       }
                     }
@@ -398,68 +291,55 @@ final class uha extends sna {
                     var5 = stackIn_55_0;
                     if (!param1.field_Fb) {
                       if (2 == param1.field_Lb) {
-                        stackOut_59_0 = 1;
-                        stackIn_61_0 = stackOut_59_0;
+                        stackIn_61_0 = 1;
                         break L11;
                       } else {
-                        stackOut_58_0 = 0;
-                        stackIn_61_0 = stackOut_58_0;
+                        stackIn_61_0 = 0;
                         break L11;
                       }
                     } else {
-                      stackOut_56_0 = 1;
-                      stackIn_61_0 = stackOut_56_0;
+                      stackIn_61_0 = 1;
                       break L11;
                     }
                   }
                   L12: {
                     var6 = stackIn_61_0;
-                    stackOut_61_0 = var5;
-                    stackIn_63_0 = stackOut_61_0;
-                    stackIn_62_0 = stackOut_61_0;
+                    stackIn_63_0 = var5;
+
                     if (var6 != 0) {
-                      stackOut_63_0 = stackIn_63_0;
-                      stackOut_63_1 = 0;
-                      stackIn_64_0 = stackOut_63_0;
-                      stackIn_64_1 = stackOut_63_1;
+                      stackIn_64_0 = stackIn_63_0;
+                      stackIn_64_1 = 0;
                       break L12;
                     } else {
-                      stackOut_62_0 = stackIn_62_0;
-                      stackOut_62_1 = 1;
-                      stackIn_64_0 = stackOut_62_0;
-                      stackIn_64_1 = stackOut_62_1;
+                      stackIn_64_0 = stackIn_63_0;
+                      stackIn_64_1 = 1;
                       break L12;
                     }
                   }
                   if (stackIn_64_0 != stackIn_64_1) {
                     L13: {
                       if (this.field_Ob <= param1.field_Ob) {
-                        stackOut_69_0 = 0;
-                        stackIn_70_0 = stackOut_69_0;
+                        stackIn_70_0 = 0;
                         break L13;
                       } else {
-                        stackOut_68_0 = 1;
-                        stackIn_70_0 = stackOut_68_0;
+                        stackIn_70_0 = 1;
                         break L13;
                       }
                     }
                     decompiledRegionSelector0 = 6;
                     break L0;
                   } else {
-                    stackOut_65_0 = var5;
-                    stackIn_66_0 = stackOut_65_0;
+                    stackIn_66_0 = var5;
                     decompiledRegionSelector0 = 5;
                     break L0;
                   }
                 } else {
                   L14: {
                     if (this.field_Ob >= param1.field_Ob) {
-                      stackOut_47_0 = 0;
-                      stackIn_48_0 = stackOut_47_0;
+                      stackIn_48_0 = 0;
                       break L14;
                     } else {
-                      stackOut_46_0 = 1;
-                      stackIn_48_0 = stackOut_46_0;
+                      stackIn_48_0 = 1;
                       break L14;
                     }
                   }
@@ -473,27 +353,19 @@ final class uha extends sna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var3 = decompiledCaughtException;
-            stackOut_71_0 = (RuntimeException) (var3);
-            stackOut_71_1 = new StringBuilder().append("uha.AA(").append(param0).append(',');
-            stackIn_73_0 = stackOut_71_0;
-            stackIn_73_1 = stackOut_71_1;
-            stackIn_72_0 = stackOut_71_0;
-            stackIn_72_1 = stackOut_71_1;
+            stackIn_73_0 = (RuntimeException) (var3);
+
+            stackIn_73_1 = new StringBuilder().append("uha.AA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
-              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
-              stackOut_73_2 = "null";
-              stackIn_74_0 = stackOut_73_0;
-              stackIn_74_1 = stackOut_73_1;
-              stackIn_74_2 = stackOut_73_2;
+              stackIn_74_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
+              stackIn_74_2 = "null";
               break L15;
             } else {
-              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
-              stackOut_72_2 = "{...}";
-              stackIn_74_0 = stackOut_72_0;
-              stackIn_74_1 = stackOut_72_1;
-              stackIn_74_2 = stackOut_72_2;
+              stackIn_74_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
+              stackIn_74_2 = "{...}";
               break L15;
             }
           }
@@ -541,20 +413,14 @@ final class uha extends sna {
     final boolean f(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 < 24) {
           L0: {
             this.field_Zb = true;
             if (this.a(0)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -562,12 +428,10 @@ final class uha extends sna {
         } else {
           L1: {
             if (this.a(0)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

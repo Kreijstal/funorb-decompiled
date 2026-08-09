@@ -32,9 +32,9 @@ final class oe {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
+            int var0;
+            int var1;
+            int var2;
             field_b = new int[256];
             var1 = 0;
             L0: while (true) {

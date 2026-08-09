@@ -29,10 +29,10 @@ final class tka extends vpa {
 
     final static void b(byte param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -66,11 +66,7 @@ final class tka extends vpa {
                 ou.field_e[var1_int] = (int)(Math.sin(var2) * 4096.0);
                 lm.field_r[var1_int] = (int)(4096.0 * Math.cos(var2));
                 var1_int++;
-                if (var4 == 0) {
-                  continue L3;
-                } else {
-                  return;
-                }
+                continue L3;
               }
             }
           }
@@ -82,8 +78,17 @@ final class tka extends vpa {
     }
 
     public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
-        RuntimeException var6 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -91,50 +96,20 @@ final class tka extends vpa {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         try {
           L0: {
             L1: {
               bea.f(param1 - -param0.field_i, param3 - -param0.field_n, param0.field_m, param0.field_p, 10197915);
               if (param4) {
                 if (((rj) ((Object) param0)).field_w) {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L1;
                 } else {
-                  stackOut_3_0 = 0;
-                  stackIn_6_0 = stackOut_3_0;
+                  stackIn_6_0 = 0;
                   break L1;
                 }
               } else {
-                stackOut_1_0 = 0;
-                stackIn_6_0 = stackOut_1_0;
+                stackIn_6_0 = 0;
                 break L1;
               }
             }
@@ -142,17 +117,14 @@ final class tka extends vpa {
               var6_int = stackIn_6_0;
               if (param4) {
                 if (param0.b((byte) -34)) {
-                  stackOut_10_0 = 1;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = 1;
                   break L2;
                 } else {
-                  stackOut_9_0 = 0;
-                  stackIn_12_0 = stackOut_9_0;
+                  stackIn_12_0 = 0;
                   break L2;
                 }
               } else {
-                stackOut_7_0 = 0;
-                stackIn_12_0 = stackOut_7_0;
+                stackIn_12_0 = 0;
                 break L2;
               }
             }
@@ -160,12 +132,10 @@ final class tka extends vpa {
               var7 = stackIn_12_0;
               var8 = 0;
               if (var6_int == 0) {
-                stackOut_14_0 = 16777215;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = 16777215;
                 break L3;
               } else {
-                stackOut_13_0 = 2394342;
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = 2394342;
                 break L3;
               }
             }
@@ -203,27 +173,19 @@ final class tka extends vpa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var6);
-            stackOut_22_1 = new StringBuilder().append("tka.B(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var6);
+
+            stackIn_24_1 = new StringBuilder().append("tka.B(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L6;
             }
           }

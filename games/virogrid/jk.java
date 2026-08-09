@@ -10,13 +10,12 @@ final class jk {
     static String field_f;
 
     final static int a(int param0, int param1) {
-        int discarded$2 = 0;
         param0 = ((-1431655766 & param0) >>> 317486369) + (1431655765 & param0);
         param0 = (param0 & 858993459) + ((-858993460 & param0) >>> -258336638);
         param0 = 252645135 & (param0 >>> 578831364) + param0;
         param0 = param0 + (param0 >>> 522894888);
         if (param1 != 522894888) {
-          discarded$2 = jk.a(-59, -15);
+          jk.a(-59, -15);
           param0 = param0 + (param0 >>> -1048541392);
           return 255 & param0;
         } else {

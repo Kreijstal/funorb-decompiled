@@ -3,12 +3,10 @@
  */
 final class csb implements dja {
     final static void a(boolean param0) {
-        boolean discarded$15 = false;
-        boolean discarded$16 = false;
-        RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = VoidHunters.field_G;
         try {
           L0: {
@@ -29,14 +27,14 @@ final class csb implements dja {
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
-              discarded$15 = qn.field_h.a((byte) -5, ata.field_H, uo.field_o, param0);
+              qn.field_h.a((byte) -5, ata.field_H, uo.field_o, param0);
               qn.field_h.h(19976);
               L2: while (true) {
                 if (!ata.e(127)) {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  discarded$16 = qn.field_h.a(-9445, pma.field_o, jl.field_r);
+                  qn.field_h.a(-9445, pma.field_o, jl.field_r);
                   continue L2;
                 }
               }

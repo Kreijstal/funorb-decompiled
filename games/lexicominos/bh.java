@@ -9,39 +9,106 @@ final class bh extends nl {
         RuntimeException var2 = null;
         cg var3 = null;
         int var4 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var4 = Lexicominos.field_L ? 1 : 0;
-        try {
-          L0: {
-            var2_int = -95 % ((25 - param0) / 50);
-            var3 = (cg) ((Object) ca.field_n.a(true));
-            L1: while (true) {
-              if (var3 == null) {
-                break L0;
-              } else {
-                Lexicominos.a(-17800, var3, param1);
-                var3 = (cg) ((Object) ca.field_n.f(2));
-                if (var4 == 0) {
-                  continue L1;
-                } else {
-                  return;
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = Lexicominos.field_L ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
+                case 1: {
+                    try {
+                        var2_int = -95 % ((25 - param0) / 50);
+                        var3 = (cg) ((Object) ca.field_n.a(true));
+                        statePc = 2;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 8;
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        if (var3 == null) {
+                            statePc = 9;
+                        } else {
+                            statePc = 3;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 8;
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        Lexicominos.a(-17800, var3, param1);
+                        var3 = (cg) ((Object) ca.field_n.f(2));
+                        if (var4 == 0) {
+                            statePc = 5;
+                        } else {
+                            statePc = 4;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 8;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        return;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 8;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        if (var4 == 0) {
+                            statePc = 2;
+                        } else {
+                            statePc = 6;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 8;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        return;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 8;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    var2 = (RuntimeException) ((Object) caughtException);
+                    throw ld.a((Throwable) ((Object) var2), "bh.E(" + param0 + ',' + param1 + ')');
+                }
+                case 9: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2), "bh.E(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, boolean param1) {
-        boolean discarded$2 = false;
-        CharSequence var3 = null;
+        CharSequence var3;
         if (param0 != 0) {
           var3 = (CharSequence) null;
-          discarded$2 = bh.a(true, (CharSequence) null, -76);
+          bh.a(true, (CharSequence) null, -76);
           tg.a(param1, true, 114);
           return;
         } else {
@@ -51,15 +118,13 @@ final class bh extends nl {
     }
 
     final void a(byte[] param0, boolean param1) {
-        java.nio.Buffer discarded$0 = null;
-        java.nio.ByteBuffer discarded$1 = null;
         try {
             if (!param1) {
                 this.field_d = (java.nio.ByteBuffer) null;
             }
             this.field_d = java.nio.ByteBuffer.allocateDirect(param0.length);
-            discarded$0 = this.field_d.position(0);
-            discarded$1 = this.field_d.put(param0);
+            this.field_d.position(0);
+            this.field_d.put(param0);
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) ((Object) runtimeException), "bh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -70,57 +135,152 @@ final class bh extends nl {
         RuntimeException var2 = null;
         int var3 = 0;
         int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var3 = Lexicominos.field_L ? 1 : 0;
-        try {
-          L0: {
-            nl.a(param1, 0, true, -123, rb.field_a, r.field_D, pf.field_o);
-            if (param0 == 83) {
-              var2_int = 0;
-              L1: while (true) {
-                L2: {
-                  L3: {
-                    if (var2_int >= pf.field_o) {
-                      break L3;
-                    } else {
-                      ff.field_a[var2_int - -param1] = var2_int;
-                      var2_int++;
-                      if (var3 != 0) {
-                        break L2;
-                      } else {
-                        if (var3 == 0) {
-                          continue L1;
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var3 = Lexicominos.field_L ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    try {
+                        nl.a(param1, 0, true, -123, rb.field_a, r.field_D, pf.field_o);
+                        if (param0 == 83) {
+                            statePc = 3;
                         } else {
-                          break L3;
+                            statePc = 2;
                         }
-                      }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 13;
+                        continue stateLoop;
                     }
-                  }
-                  nl.a(param1 + param1, param1, false, -93, l.field_G, ve.field_d, pf.field_o - -param1);
-                  break L2;
                 }
-                if (param1 < pf.field_o) {
-                  pf.field_o = param1;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  return;
+                case 2: {
+                    return;
                 }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+                case 3: {
+                    try {
+                        var2_int = 0;
+                        statePc = 4;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        if (var2_int >= pf.field_o) {
+                            statePc = 8;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        ff.field_a[var2_int - -param1] = var2_int;
+                        var2_int++;
+                        if (var3 != 0) {
+                            statePc = 9;
+                        } else {
+                            statePc = 6;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        if (var3 == 0) {
+                            statePc = 4;
+                        } else {
+                            statePc = 7;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        statePc = 8;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        nl.a(param1 + param1, param1, false, -93, l.field_G, ve.field_d, pf.field_o - -param1);
+                        statePc = 9;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 9: {
+                    try {
+                        if (param1 < pf.field_o) {
+                            statePc = 11;
+                        } else {
+                            statePc = 10;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_9) {
+                        caughtException = stateCaught_9;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    try {
+                        return;
+                    } catch (Throwable stateCaught_10) {
+                        caughtException = stateCaught_10;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    try {
+                        pf.field_o = param1;
+                        statePc = 12;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_11) {
+                        caughtException = stateCaught_11;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 12: {
+                    return;
+                }
+                case 13: {
+                    var2 = (RuntimeException) ((Object) caughtException);
+                    throw ld.a((Throwable) ((Object) var2), "bh.C(" + param0 + ',' + param1 + ')');
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var2), "bh.C(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -133,8 +293,6 @@ final class bh extends nl {
         boolean stackIn_11_0 = false;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -142,26 +300,13 @@ final class bh extends nl {
         String stackIn_21_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        boolean stackOut_10_0 = false;
-        int stackOut_13_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        boolean stackOut_10_0;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
             if (param2 <= -68) {
               if (!bb.a(param1, param0, -1)) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -179,8 +324,7 @@ final class bh extends nl {
                           break L2;
                         } else {
                           if (!stackIn_11_0) {
-                            stackOut_13_0 = 0;
-                            stackIn_14_0 = stackOut_13_0;
+                            stackIn_14_0 = 0;
                             decompiledRegionSelector0 = 3;
                             break L0;
                           } else {
@@ -194,8 +338,7 @@ final class bh extends nl {
                         }
                       }
                     }
-                    stackOut_16_0 = 1;
-                    stackIn_17_0 = stackOut_16_0;
+                    stackIn_17_0 = 1;
                     break L2;
                   }
                   decompiledRegionSelector0 = 2;
@@ -203,8 +346,7 @@ final class bh extends nl {
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -213,27 +355,19 @@ final class bh extends nl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var3);
-            stackOut_18_1 = new StringBuilder().append("bh.B(").append(param0).append(',');
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var3);
+
+            stackIn_20_1 = new StringBuilder().append("bh.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L4;
             }
           }
@@ -255,17 +389,15 @@ final class bh extends nl {
     }
 
     final byte[] a(byte param0) {
-        java.nio.Buffer discarded$4 = null;
-        java.nio.ByteBuffer discarded$5 = null;
-        byte[] var2 = null;
-        byte[] var3 = null;
+        byte[] var2;
+        byte[] var3;
         var3 = new byte[this.field_d.capacity()];
         var2 = var3;
         if (param0 != -121) {
           return (byte[]) null;
         } else {
-          discarded$4 = this.field_d.position(0);
-          discarded$5 = this.field_d.get(var3);
+          this.field_d.position(0);
+          this.field_d.get(var3);
           return var3;
         }
     }

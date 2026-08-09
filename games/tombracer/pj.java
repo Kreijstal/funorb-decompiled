@@ -7,15 +7,15 @@ final class pj {
 
     private final void a(java.awt.Frame param0, int param1) {
         try {
-            int var3 = 0;
-            Throwable var4 = null;
-            java.lang.reflect.Field var4_ref = null;
-            Throwable var6 = null;
-            Throwable var7 = null;
-            java.lang.reflect.Field var7_ref = null;
-            java.awt.Frame var8 = null;
             int statePc = 0;
             Throwable caughtException = null;
+            int var3 = 0;
+            java.lang.reflect.Field var4 = null;
+            Throwable var4_ref = null;
+            Throwable var6 = null;
+            java.lang.reflect.Field var7 = null;
+            Throwable var7_ref = null;
+            java.awt.Frame var8 = null;
             stateLoop: while (true) {
                 switch (statePc) {
                     case 0: {
@@ -25,9 +25,9 @@ final class pj {
                     }
                     case 1: {
                         try {
-                            var4_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var4_ref.setAccessible(true);
-                            if (!((Boolean) (var4_ref.get(this.field_b))).booleanValue()) {
+                            var4 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+                            var4.setAccessible(true);
+                            if (!((Boolean) (var4.get(this.field_b))).booleanValue()) {
                                 statePc = 5;
                             } else {
                                 statePc = 2;
@@ -42,7 +42,7 @@ final class pj {
                     case 2: {
                         try {
                             var3 = 1;
-                            var4_ref.set(this.field_b, Boolean.FALSE);
+                            var4.set(this.field_b, Boolean.FALSE);
                             statePc = 5;
                             continue stateLoop;
                         } catch (Throwable stateCaught_2) {
@@ -52,7 +52,7 @@ final class pj {
                         }
                     }
                     case 4: {
-                        var4 = caughtException;
+                        var4_ref = caughtException;
                         statePc = 5;
                         continue stateLoop;
                     }
@@ -91,8 +91,8 @@ final class pj {
                     }
                     case 10: {
                         try {
-                            var4_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var4_ref.set(this.field_b, Boolean.TRUE);
+                            var4 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+                            var4.set(this.field_b, Boolean.TRUE);
                             statePc = 20;
                             continue stateLoop;
                         } catch (Throwable stateCaught_10) {
@@ -102,7 +102,7 @@ final class pj {
                         }
                     }
                     case 12: {
-                        var4 = caughtException;
+                        var4_ref = caughtException;
                         statePc = 20;
                         continue stateLoop;
                     }
@@ -127,8 +127,8 @@ final class pj {
                     }
                     case 16: {
                         try {
-                            var7_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var7_ref.set(this.field_b, Boolean.TRUE);
+                            var7 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+                            var7.set(this.field_b, Boolean.TRUE);
                             statePc = 19;
                             continue stateLoop;
                         } catch (Throwable stateCaught_16) {
@@ -138,7 +138,7 @@ final class pj {
                         }
                     }
                     case 18: {
-                        var7 = caughtException;
+                        var7_ref = caughtException;
                         statePc = 19;
                         continue stateLoop;
                     }
@@ -159,11 +159,11 @@ final class pj {
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        java.awt.DisplayMode[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var6;
+        java.awt.DisplayMode[] var7;
+        int var8;
+        int var9;
+        int var10;
         this.field_a = this.field_b.getDisplayMode();
         if (null != this.field_a) {
           L0: {
@@ -241,11 +241,11 @@ final class pj {
     }
 
     public pj() throws Exception {
-        java.awt.GraphicsEnvironment var1 = null;
-        java.awt.GraphicsDevice[] var2 = null;
-        java.awt.GraphicsDevice[] var3 = null;
-        int var4 = 0;
-        java.awt.GraphicsDevice var5 = null;
+        java.awt.GraphicsEnvironment var1;
+        java.awt.GraphicsDevice[] var2;
+        java.awt.GraphicsDevice[] var3;
+        int var4;
+        java.awt.GraphicsDevice var5;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
         this.field_b = var1.getDefaultScreenDevice();
         if (this.field_b.isFullScreenSupported()) {

@@ -24,10 +24,8 @@ final class kf {
     }
 
     final static boolean b(int param0) {
-        int var1 = 0;
+        int var1;
         int stackIn_4_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_3_0 = 0;
         L0: {
           L1: {
             var1 = -84 / ((-37 - param0) / 38);
@@ -37,14 +35,12 @@ final class kf {
               if ((eq.field_j ^ -1) > -14) {
                 break L1;
               } else {
-                stackOut_2_0 = 1;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = 1;
                 break L0;
               }
             }
           }
-          stackOut_3_0 = 0;
-          stackIn_4_0 = stackOut_3_0;
+          stackIn_4_0 = 0;
           break L0;
         }
         return stackIn_4_0 != 0;

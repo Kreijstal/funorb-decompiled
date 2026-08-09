@@ -41,10 +41,9 @@ final class wg extends da {
 
     final static wg a(lj param0, String param1, String param2) {
         try {
-            boolean discarded$0 = false;
             wg var4_ref = null;
             if (!wg.a(param0)) {
-                discarded$0 = param0.b(-120, param1, param2);
+                param0.b(-120, param1, param2);
                 return null;
             }
             byte[] var3 = param0.a(-2, param2, param1);
@@ -67,10 +66,9 @@ final class wg extends da {
 
     final static wg a(lj param0, int param1, int param2) {
         try {
-            boolean discarded$0 = false;
             wg var4_ref = null;
             if (!wg.a(param0)) {
-                discarded$0 = param0.a(param2, 76, param1);
+                param0.a(param2, 76, param1);
                 return null;
             }
             byte[] var3 = param0.c(param1, param2, 0);
@@ -168,14 +166,14 @@ final class wg extends da {
     }
 
     final fe c() {
-        int incrementValue$1 = 0;
-        byte[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        float[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int incrementValue$0 = 0;
+        byte[] var1;
+        int var2;
+        int var3;
+        float[] var4;
+        int var5;
+        int var6;
+        int var7;
         this.field_K = 0;
         this.field_J = new float[field_F];
         var1 = new byte[this.field_u];
@@ -209,9 +207,9 @@ final class wg extends da {
                       break L3;
                     }
                   }
-                  incrementValue$1 = var2;
+                  incrementValue$0 = var2;
                   var2++;
-                  var1[incrementValue$1] = (byte)(var7 - 128);
+                  var1[incrementValue$0] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -228,42 +226,27 @@ final class wg extends da {
     }
 
     final static void b(byte[] param0) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        float[] var6_ref_float__ = null;
-        int var6 = 0;
-        int var7_int = 0;
-        float[] var7 = null;
-        int var8_int = 0;
-        float[] var8 = null;
-        int var9_int = 0;
-        int[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_5_0 = 0;
-        boolean[] stackIn_38_0 = null;
-        int stackIn_38_1 = 0;
         boolean[] stackIn_39_0 = null;
         int stackIn_39_1 = 0;
         boolean[] stackIn_40_0 = null;
         int stackIn_40_1 = 0;
         int stackIn_40_2 = 0;
-        boolean[] stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        boolean[] stackOut_39_0 = null;
-        int stackOut_39_1 = 0;
-        int stackOut_39_2 = 0;
-        boolean[] stackOut_38_0 = null;
-        int stackOut_38_1 = 0;
-        int stackOut_38_2 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        float[] var6_ref_float__;
+        int var7_int;
+        float[] var7;
+        int var8_int;
+        float[] var8;
+        int var9_int;
+        int[] var9;
+        int var10;
+        int var11;
         wg.a(param0, 0);
         field_w = 1 << wg.d(4);
         field_F = 1 << wg.d(4);
@@ -305,33 +288,25 @@ final class wg extends da {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) (field_D);
-                                      stackOut_37_1 = var6;
-                                      stackIn_39_0 = stackOut_37_0;
-                                      stackIn_39_1 = stackOut_37_1;
-                                      stackIn_38_0 = stackOut_37_0;
-                                      stackIn_38_1 = stackOut_37_1;
+                                      stackIn_39_0 = (boolean[]) (field_D);
+
+                                      stackIn_39_1 = var6;
+
                                       if (wg.a() == 0) {
-                                        stackOut_39_0 = (boolean[]) ((Object) stackIn_39_0);
-                                        stackOut_39_1 = stackIn_39_1;
-                                        stackOut_39_2 = 0;
-                                        stackIn_40_0 = stackOut_39_0;
-                                        stackIn_40_1 = stackOut_39_1;
-                                        stackIn_40_2 = stackOut_39_2;
+                                        stackIn_40_0 = (boolean[]) ((Object) stackIn_39_0);
+                                        stackIn_40_1 = stackIn_39_1;
+                                        stackIn_40_2 = 0;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) ((Object) stackIn_38_0);
-                                        stackOut_38_1 = stackIn_38_1;
-                                        stackOut_38_2 = 1;
-                                        stackIn_40_0 = stackOut_38_0;
-                                        stackIn_40_1 = stackOut_38_1;
-                                        stackIn_40_2 = stackOut_38_2;
+                                        stackIn_40_0 = (boolean[]) ((Object) stackIn_39_0);
+                                        stackIn_40_1 = stackIn_39_1;
+                                        stackIn_40_2 = 1;
                                         break L7;
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    discarded$3 = wg.d(16);
-                                    discarded$4 = wg.d(16);
+                                    wg.d(16);
+                                    wg.d(16);
                                     field_o[var6] = wg.d(8);
                                     var6++;
                                     continue L6;
@@ -356,7 +331,7 @@ final class wg extends da {
                       }
                     }
                   } else {
-                    discarded$5 = wg.d(16);
+                    wg.d(16);
                     var3++;
                     continue L2;
                   }
@@ -370,12 +345,10 @@ final class wg extends da {
           } else {
             L8: {
               if (var1 == 0) {
-                stackOut_4_0 = field_w;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = field_w;
                 break L8;
               } else {
-                stackOut_3_0 = field_F;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = field_F;
                 break L8;
               }
             }
@@ -469,13 +442,13 @@ final class wg extends da {
     }
 
     final fe a(int[] param0) {
-        int incrementValue$1 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        float[] var7 = null;
-        byte[] var12 = null;
+        int incrementValue$0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        float[] var7;
+        byte[] var12;
         L0: {
           if (param0 == null) {
             break L0;
@@ -555,9 +528,9 @@ final class wg extends da {
                         break L8;
                       }
                     }
-                    incrementValue$1 = var3;
+                    incrementValue$0 = var3;
                     var3++;
-                    this.field_k[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_k[incrementValue$0] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -581,67 +554,6 @@ final class wg extends da {
     }
 
     private final float[] c(int param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        ig var14 = null;
-        int var15 = 0;
-        int var16 = 0;
-        int var17_int = 0;
-        Object var17 = null;
-        int var18_int = 0;
-        float[] var18 = null;
-        int var19 = 0;
-        float[] var20_ref_float__ = null;
-        int var20 = 0;
-        int var21_int = 0;
-        float[] var21 = null;
-        float[] var22 = null;
-        float[] var23 = null;
-        int[] var24 = null;
-        int var25 = 0;
-        float var26_float = 0.0f;
-        int var26 = 0;
-        float var27 = 0.0f;
-        int var27_int = 0;
-        float var28 = 0.0f;
-        int var28_int = 0;
-        float var29 = 0.0f;
-        int var29_int = 0;
-        float var30 = 0.0f;
-        int var30_int = 0;
-        float var31 = 0.0f;
-        int var31_int = 0;
-        int var32_int = 0;
-        float var32 = 0.0f;
-        int var33_int = 0;
-        float var33 = 0.0f;
-        float var34 = 0.0f;
-        float var35 = 0.0f;
-        float var36 = 0.0f;
-        float var37 = 0.0f;
-        float var38 = 0.0f;
-        float var39 = 0.0f;
-        float[] var40 = null;
-        int var41 = 0;
-        lf var42 = null;
-        int[] var44 = null;
-        float[] var45 = null;
-        float[] var46 = null;
-        int[] var48 = null;
-        float[] var49 = null;
-        float[] var50 = null;
-        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -650,43 +562,79 @@ final class wg extends da {
         float[] stackIn_43_0 = null;
         float[] stackIn_46_0 = null;
         int[] stackIn_49_0 = null;
-        Object stackIn_109_0 = null;
         Object stackIn_110_0 = null;
         Object stackIn_111_0 = null;
         int stackIn_111_1 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        float[] stackOut_39_0 = null;
-        float[] stackOut_38_0 = null;
-        float[] stackOut_42_0 = null;
-        float[] stackOut_41_0 = null;
-        float[] stackOut_45_0 = null;
-        float[] stackOut_44_0 = null;
-        int[] stackOut_48_0 = null;
-        int[] stackOut_47_0 = null;
-        Object stackOut_108_0 = null;
-        Object stackOut_110_0 = null;
-        int stackOut_110_1 = 0;
-        Object stackOut_109_0 = null;
-        int stackOut_109_1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        ig var14;
+        int var15;
+        int var16;
+        int var17_int;
+        Object var17;
+        int var18_int;
+        float[] var18;
+        int var19;
+        float[] var20_ref_float__;
+        int var20;
+        int var21_int;
+        float[] var21;
+        float[] var22;
+        float[] var23;
+        int[] var24;
+        int var25;
+        int var26;
+        float var26_float;
+        float var27;
+        int var27_int;
+        float var28;
+        int var28_int;
+        float var29;
+        int var29_int;
+        float var30;
+        int var30_int;
+        float var31;
+        int var31_int;
+        float var32;
+        int var32_int;
+        float var33;
+        int var33_int;
+        float var34;
+        float var35;
+        float var36;
+        float var37;
+        float var38;
+        float var39;
+        float[] var40;
+        int var41;
+        lf var42;
+        int[] var44;
+        float[] var45;
+        float[] var46;
+        int[] var48;
+        float[] var49;
+        float[] var50;
+        float[] var52;
         L0: {
           wg.a(this.field_x[param0], 0);
-          discarded$1 = wg.a();
+          wg.a();
           var2 = wg.d(sa.a((byte) 65, field_o.length - 1));
           var3 = field_D[var2] ? 1 : 0;
           if (var3 == 0) {
-            stackOut_2_0 = field_w;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = field_w;
             break L0;
           } else {
-            stackOut_1_0 = field_F;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = field_F;
             break L0;
           }
         }
@@ -699,24 +647,20 @@ final class wg extends da {
           } else {
             L2: {
               if (wg.a() == 0) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L2;
               } else {
-                stackOut_5_0 = 1;
-                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_0 = 1;
                 break L2;
               }
             }
             L3: {
               var5 = stackIn_7_0;
               if (wg.a() == 0) {
-                stackOut_9_0 = 0;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = 0;
                 break L3;
               } else {
-                stackOut_8_0 = 1;
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = 1;
                 break L3;
               }
             }
@@ -770,12 +714,10 @@ final class wg extends da {
           var16 = var14.field_a;
           var17_int = var14.field_d[var16];
           if (field_v[var17_int].a()) {
-            stackOut_21_0 = 0;
-            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_0 = 0;
             break L8;
           } else {
-            stackOut_20_0 = 1;
-            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_0 = 1;
             break L8;
           }
         }
@@ -811,48 +753,40 @@ final class wg extends da {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) (field_E);
-                            stackIn_40_0 = stackOut_39_0;
+                            stackIn_40_0 = (float[]) (field_E);
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) (field_l);
-                            stackIn_40_0 = stackOut_38_0;
+                            stackIn_40_0 = (float[]) (field_l);
                             break L14;
                           }
                         }
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) (field_p);
-                            stackIn_43_0 = stackOut_42_0;
+                            stackIn_43_0 = (float[]) (field_p);
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) (field_M);
-                            stackIn_43_0 = stackOut_41_0;
+                            stackIn_43_0 = (float[]) (field_M);
                             break L15;
                           }
                         }
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) (field_z);
-                            stackIn_46_0 = stackOut_45_0;
+                            stackIn_46_0 = (float[]) (field_z);
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) (field_C);
-                            stackIn_46_0 = stackOut_44_0;
+                            stackIn_46_0 = (float[]) (field_C);
                             break L16;
                           }
                         }
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) (field_L);
-                            stackIn_49_0 = stackOut_48_0;
+                            stackIn_49_0 = (int[]) (field_L);
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) (field_y);
-                            stackIn_49_0 = stackOut_47_0;
+                            stackIn_49_0 = (int[]) (field_y);
                             break L17;
                           }
                         }
@@ -1142,20 +1076,15 @@ final class wg extends da {
               field_B = var18;
               this.field_K = var4;
               this.field_s = var12 - (var4 >> 1);
-              stackOut_108_0 = this;
-              stackIn_110_0 = stackOut_108_0;
-              stackIn_109_0 = stackOut_108_0;
+              stackIn_110_0 = this;
+
               if (var15 == 0) {
-                stackOut_110_0 = this;
-                stackOut_110_1 = 0;
-                stackIn_111_0 = stackOut_110_0;
-                stackIn_111_1 = stackOut_110_1;
+                stackIn_111_0 = this;
+                stackIn_111_1 = 0;
                 break L39;
               } else {
-                stackOut_109_0 = this;
-                stackOut_109_1 = 1;
-                stackIn_111_0 = stackOut_109_0;
-                stackIn_111_1 = stackOut_109_1;
+                stackIn_111_0 = this;
+                stackIn_111_1 = 1;
                 break L39;
               }
             }

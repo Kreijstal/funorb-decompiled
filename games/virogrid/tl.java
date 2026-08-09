@@ -119,36 +119,23 @@ final class tl extends wh {
     }
 
     final void a(byte[] param0, byte param1) {
-        java.nio.Buffer discarded$9 = null;
-        java.nio.ByteBuffer discarded$10 = null;
-        byte[] discarded$11 = null;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
               this.field_g = java.nio.ByteBuffer.allocateDirect(param0.length);
-              discarded$9 = this.field_g.position(0);
-              discarded$10 = this.field_g.put(param0);
+              this.field_g.position(0);
+              this.field_g.put(param0);
               if (param1 == -4) {
                 break L1;
               } else {
-                discarded$11 = this.b(105);
+                this.b(105);
                 break L1;
               }
             }
@@ -158,27 +145,19 @@ final class tl extends wh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("tl.E(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("tl.E(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -187,24 +166,20 @@ final class tl extends wh {
     }
 
     final byte[] b(int param0) {
-        java.nio.Buffer discarded$8 = null;
-        java.nio.ByteBuffer discarded$9 = null;
-        java.nio.Buffer discarded$10 = null;
-        java.nio.ByteBuffer discarded$11 = null;
-        byte[] var2 = null;
-        byte[] var3 = null;
+        byte[] var2;
+        byte[] var3;
         if (param0 < 73) {
           this.field_g = (java.nio.ByteBuffer) null;
           var3 = new byte[this.field_g.capacity()];
           var2 = var3;
-          discarded$8 = this.field_g.position(0);
-          discarded$9 = this.field_g.get(var3);
+          this.field_g.position(0);
+          this.field_g.get(var3);
           return var3;
         } else {
           var3 = new byte[this.field_g.capacity()];
           var2 = var3;
-          discarded$10 = this.field_g.position(0);
-          discarded$11 = this.field_g.get(var3);
+          this.field_g.position(0);
+          this.field_g.get(var3);
           return var3;
         }
     }

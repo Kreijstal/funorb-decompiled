@@ -41,7 +41,7 @@ final class dm implements ti {
     }
 
     public final boolean a(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = 31 % ((-61 - param0) / 59);
         if (this.field_d) {
           if (!jagdx.gf.a((byte) 72, this.field_g.Unlock())) {
@@ -56,62 +56,26 @@ final class dm implements ti {
     }
 
     public final void a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        Object stackIn_7_0 = null;
-        jagdx.IDirect3DDevice stackIn_7_1 = null;
-        int stackIn_7_2 = 0;
-        int stackIn_7_3 = 0;
-        Object stackIn_8_0 = null;
-        jagdx.IDirect3DDevice stackIn_8_1 = null;
-        int stackIn_8_2 = 0;
-        int stackIn_8_3 = 0;
+        int var3;
+        int var4;
+        Object stackIn_8_0;
+        jagdx.IDirect3DDevice stackIn_8_1;
+        int stackIn_8_2;
+        int stackIn_8_3;
         Object stackIn_9_0 = null;
         jagdx.IDirect3DDevice stackIn_9_1 = null;
         int stackIn_9_2 = 0;
         int stackIn_9_3 = 0;
         int stackIn_9_4 = 0;
-        Object stackIn_14_0 = null;
-        jagdx.IDirect3DDevice stackIn_14_1 = null;
-        int stackIn_14_2 = 0;
-        int stackIn_14_3 = 0;
-        Object stackIn_15_0 = null;
-        jagdx.IDirect3DDevice stackIn_15_1 = null;
-        int stackIn_15_2 = 0;
-        int stackIn_15_3 = 0;
-        Object stackIn_16_0 = null;
-        jagdx.IDirect3DDevice stackIn_16_1 = null;
-        int stackIn_16_2 = 0;
-        int stackIn_16_3 = 0;
-        int stackIn_16_4 = 0;
-        Object stackOut_13_0 = null;
-        jagdx.IDirect3DDevice stackOut_13_1 = null;
-        int stackOut_13_2 = 0;
-        int stackOut_13_3 = 0;
-        Object stackOut_15_0 = null;
-        jagdx.IDirect3DDevice stackOut_15_1 = null;
-        int stackOut_15_2 = 0;
-        int stackOut_15_3 = 0;
-        int stackOut_15_4 = 0;
-        Object stackOut_14_0 = null;
-        jagdx.IDirect3DDevice stackOut_14_1 = null;
-        int stackOut_14_2 = 0;
-        int stackOut_14_3 = 0;
-        int stackOut_14_4 = 0;
-        Object stackOut_6_0 = null;
-        jagdx.IDirect3DDevice stackOut_6_1 = null;
-        int stackOut_6_2 = 0;
-        int stackOut_6_3 = 0;
-        Object stackOut_8_0 = null;
-        jagdx.IDirect3DDevice stackOut_8_1 = null;
-        int stackOut_8_2 = 0;
-        int stackOut_8_3 = 0;
-        int stackOut_8_4 = 0;
-        Object stackOut_7_0 = null;
-        jagdx.IDirect3DDevice stackOut_7_1 = null;
-        int stackOut_7_2 = 0;
-        int stackOut_7_3 = 0;
-        int stackOut_7_4 = 0;
+        Object stackIn_15_0;
+        jagdx.IDirect3DDevice stackIn_15_1;
+        int stackIn_15_2;
+        int stackIn_15_3;
+        Object stackIn_16_0;
+        jagdx.IDirect3DDevice stackIn_16_1;
+        int stackIn_16_2;
+        int stackIn_16_3;
+        int stackIn_16_4;
         L0: {
           this.field_a = this.field_e.field_c * param1;
           if (this.field_a > this.field_b) {
@@ -128,41 +92,27 @@ final class dm implements ti {
             }
             if (this.field_g == null) {
               L2: {
-                stackOut_13_0 = this;
-                stackOut_13_1 = this.field_f.field_Rc;
-                stackOut_13_2 = this.field_a;
-                stackOut_13_3 = var4;
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_15_1 = stackOut_13_1;
-                stackIn_15_2 = stackOut_13_2;
-                stackIn_15_3 = stackOut_13_3;
-                stackIn_14_0 = stackOut_13_0;
-                stackIn_14_1 = stackOut_13_1;
-                stackIn_14_2 = stackOut_13_2;
-                stackIn_14_3 = stackOut_13_3;
+                stackIn_15_0 = this;
+
+                stackIn_15_1 = this.field_f.field_Rc;
+
+                stackIn_15_2 = this.field_a;
+
+                stackIn_15_3 = var4;
+
                 if (this.field_e == la.field_b) {
-                  stackOut_15_0 = this;
-                  stackOut_15_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_15_1);
-                  stackOut_15_2 = stackIn_15_2;
-                  stackOut_15_3 = stackIn_15_3;
-                  stackOut_15_4 = 101;
-                  stackIn_16_0 = stackOut_15_0;
-                  stackIn_16_1 = stackOut_15_1;
-                  stackIn_16_2 = stackOut_15_2;
-                  stackIn_16_3 = stackOut_15_3;
-                  stackIn_16_4 = stackOut_15_4;
+                  stackIn_16_0 = this;
+                  stackIn_16_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_15_1);
+                  stackIn_16_2 = stackIn_15_2;
+                  stackIn_16_3 = stackIn_15_3;
+                  stackIn_16_4 = 101;
                   break L2;
                 } else {
-                  stackOut_14_0 = this;
-                  stackOut_14_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_14_1);
-                  stackOut_14_2 = stackIn_14_2;
-                  stackOut_14_3 = stackIn_14_3;
-                  stackOut_14_4 = 102;
-                  stackIn_16_0 = stackOut_14_0;
-                  stackIn_16_1 = stackOut_14_1;
-                  stackIn_16_2 = stackOut_14_2;
-                  stackIn_16_3 = stackOut_14_3;
-                  stackIn_16_4 = stackOut_14_4;
+                  stackIn_16_0 = this;
+                  stackIn_16_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_15_1);
+                  stackIn_16_2 = stackIn_15_2;
+                  stackIn_16_3 = stackIn_15_3;
+                  stackIn_16_4 = 102;
                   break L2;
                 }
               }
@@ -171,41 +121,28 @@ final class dm implements ti {
               break L0;
             } else {
               L3: {
-                stackOut_6_0 = this;
-                stackOut_6_1 = this.field_f.field_Rc;
-                stackOut_6_2 = this.field_a;
-                stackOut_6_3 = var4;
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_8_2 = stackOut_6_2;
-                stackIn_8_3 = stackOut_6_3;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
-                stackIn_7_2 = stackOut_6_2;
-                stackIn_7_3 = stackOut_6_3;
+                this.field_g.a(1618);
+                stackIn_8_0 = this;
+
+                stackIn_8_1 = this.field_f.field_Rc;
+
+                stackIn_8_2 = this.field_a;
+
+                stackIn_8_3 = var4;
+
                 if (this.field_e == la.field_b) {
-                  stackOut_8_0 = this;
-                  stackOut_8_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_8_1);
-                  stackOut_8_2 = stackIn_8_2;
-                  stackOut_8_3 = stackIn_8_3;
-                  stackOut_8_4 = 101;
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
-                  stackIn_9_3 = stackOut_8_3;
-                  stackIn_9_4 = stackOut_8_4;
+                  stackIn_9_0 = this;
+                  stackIn_9_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_8_1);
+                  stackIn_9_2 = stackIn_8_2;
+                  stackIn_9_3 = stackIn_8_3;
+                  stackIn_9_4 = 101;
                   break L3;
                 } else {
-                  stackOut_7_0 = this;
-                  stackOut_7_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_7_1);
-                  stackOut_7_2 = stackIn_7_2;
-                  stackOut_7_3 = stackIn_7_3;
-                  stackOut_7_4 = 102;
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
-                  stackIn_9_3 = stackOut_7_3;
-                  stackIn_9_4 = stackOut_7_4;
+                  stackIn_9_0 = this;
+                  stackIn_9_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_8_1);
+                  stackIn_9_2 = stackIn_8_2;
+                  stackIn_9_3 = stackIn_8_3;
+                  stackIn_9_4 = 102;
                   break L3;
                 }
               }
@@ -231,25 +168,24 @@ final class dm implements ti {
     }
 
     public final void a(int param0) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
         if (null == this.field_g) {
           this.field_b = 0;
           this.field_a = 0;
           if (param0 != 4665) {
-            discarded$4 = this.a((byte) 35);
+            this.a((byte) 35);
             return;
           } else {
             return;
           }
         } else {
+          this.field_g.a(1618);
           this.field_g = null;
           this.field_b = 0;
           this.field_a = 0;
           if (param0 == 4665) {
             return;
           } else {
-            discarded$5 = this.a((byte) 35);
+            this.a((byte) 35);
             return;
           }
         }

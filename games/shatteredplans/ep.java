@@ -8,12 +8,8 @@ final class ep {
     static String field_c;
 
     final static boolean a(int param0) {
-        boolean discarded$5 = false;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == 640) {
           if (null == bq.field_h) {
             if (dp.field_t) {
@@ -22,23 +18,20 @@ final class ep {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
-          discarded$5 = ep.a(78);
+          ep.a(78);
           if (null != bq.field_h) {
             return true;
           } else {
             L0: {
               if (!dp.field_t) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }

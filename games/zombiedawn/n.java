@@ -30,7 +30,6 @@ final class n extends le {
             Throwable var1 = null;
             uc stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            uc stackOut_2_0 = null;
             try {
               L0: {
                 L1: {
@@ -41,8 +40,7 @@ final class n extends le {
                     break L1;
                   }
                 }
-                stackOut_2_0 = (uc) (Class.forName("ol").newInstance());
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (uc) (Class.forName("ol").newInstance());
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

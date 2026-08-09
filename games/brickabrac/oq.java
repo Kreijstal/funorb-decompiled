@@ -25,8 +25,8 @@ class oq extends lh {
     }
 
     final int b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var3 = (this.field_q * 2 * this.field_h.field_r - -this.field_q) / 2;
         var4 = (480 - var3) / 2;
         if (param0 == this.field_h.field_r - param1) {

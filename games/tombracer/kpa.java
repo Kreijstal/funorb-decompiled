@@ -9,27 +9,17 @@ final class kpa {
 
     final void a(int[] param0, int param1) {
         int[] var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int[] var7 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var3_ref = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -43,11 +33,7 @@ final class kpa {
                 var5 = var7[var4];
                 this.field_a[var5] = true;
                 var4++;
-                if (var6 == 0) {
-                  continue L1;
-                } else {
-                  return;
-                }
+                continue L1;
               }
             }
           }
@@ -55,57 +41,37 @@ final class kpa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3_ref);
-            stackOut_8_1 = new StringBuilder().append("kpa.C(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_7_0 = (RuntimeException) (var3_ref);
+
+            stackIn_7_1 = new StringBuilder().append("kpa.C(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
     kpa(int param0, int param1, kh param2) {
         this(param0);
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        int var6 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        var6 = TombRacer.field_G ? 1 : 0;
+        RuntimeException var4 = null;
         try {
           L0: {
             var4_int = param2.b((byte) 44, param0);
@@ -114,22 +80,18 @@ final class kpa {
               if (0 > var5) {
                 break L0;
               } else {
-                if (var6 == 0) {
-                  L2: {
-                    if (-1 <= (1 & var4_int ^ -1)) {
-                      break L2;
-                    } else {
-                      this.field_a[var5] = true;
-                      var4_int--;
-                      break L2;
-                    }
+                L2: {
+                  if (-1 <= (1 & var4_int ^ -1)) {
+                    break L2;
+                  } else {
+                    this.field_a[var5] = true;
+                    var4_int--;
+                    break L2;
                   }
-                  var4_int = var4_int >> 1;
-                  var5--;
-                  continue L1;
-                } else {
-                  return;
                 }
+                var4_int = var4_int >> 1;
+                var5--;
+                continue L1;
               }
             }
           }
@@ -137,31 +99,23 @@ final class kpa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var4);
-            stackOut_9_1 = new StringBuilder().append("kpa.<init>(").append(param0).append(',').append(param1).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("kpa.<init>(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
     }
 
@@ -174,141 +128,47 @@ final class kpa {
 
     final void a(boolean param0, int param1) {
         int var3 = 0;
-        int var4 = 0;
-        var4 = TombRacer.field_G ? 1 : 0;
-        var3 = 0;
-        L0: while (true) {
-          if (this.field_a.length <= var3) {
-            if (param1 < 62) {
-              this.field_a = (boolean[]) null;
-              return;
-            } else {
-              return;
-            }
-          } else {
+        int var4 = TombRacer.field_G ? 1 : 0;
+        for (var3 = 0; this.field_a.length > var3; var3++) {
             this.field_a[var3] = param0;
-            var3++;
-            if (var4 == 0) {
-              continue L0;
-            } else {
-              return;
-            }
-          }
+        }
+        if (param1 < 62) {
+            this.field_a = (boolean[]) null;
         }
     }
 
     final boolean a(int param0, int param1) {
         if (param0 != 0) {
             kpa.a(116);
-            return this.field_a[param1];
         }
         return this.field_a[param1];
     }
 
     final void a(kh param0, byte param1) {
-        String discarded$2 = null;
-        RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
-        int var5 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        var5 = TombRacer.field_G ? 1 : 0;
+        int var5 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -113) {
-                break L1;
-              } else {
-                discarded$2 = this.toString();
-                break L1;
-              }
+            if (param1 > -113) {
+                this.toString();
             }
             var3_int = 0;
-            var4 = 0;
-            L2: while (true) {
-              L3: {
-                L4: {
-                  if (this.field_a.length <= var4) {
-                    break L4;
-                  } else {
-                    var3_int = var3_int << 1;
-                    if (var5 != 0) {
-                      break L3;
-                    } else {
-                      L5: {
-                        if (!this.field_a[var4]) {
-                          break L5;
-                        } else {
-                          var3_int++;
-                          break L5;
-                        }
-                      }
-                      var4++;
-                      if (var5 == 0) {
-                        continue L2;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
+            for (var4 = 0; this.field_a.length > var4; var4++) {
+                var3_int = var3_int << 1;
+                if (this.field_a[var4]) {
+                    var3_int++;
                 }
-                param0.a((byte) 112, var3_int, this.field_a.length);
-                break L3;
-              }
-              break L0;
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            runtimeException = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (runtimeException);
-            stackOut_11_1 = new StringBuilder().append("kpa.B(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
-            if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L6;
-            } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L6;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
+            param0.a((byte) 112, var3_int, this.field_a.length);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "kpa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final String toString() {
-        String var1 = null;
-        int var2 = 0;
-        int var3 = 0;
+        String var1;
+        int var2;
+        int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         var1 = "flags:";
         var2 = 0;
@@ -316,24 +176,15 @@ final class kpa {
           if (var2 >= this.field_a.length) {
             return var1;
           } else {
-            L1: {
-              L2: {
-                if (!this.field_a[var2]) {
-                  break L2;
-                } else {
-                  var1 = var1 + "1";
-                  if (var3 == 0) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
+            if (!this.field_a[var2]) {
               var1 = var1 + "0";
-              break L1;
+              var2++;
+              continue L0;
+            } else {
+              var1 = var1 + "1";
+              var2++;
+              continue L0;
             }
-            var2++;
-            continue L0;
           }
         }
     }
@@ -341,9 +192,6 @@ final class kpa {
     public static void a(int param0) {
         if (param0 <= 57) {
             field_b = (String) null;
-            field_d = null;
-            field_b = null;
-            return;
         }
         field_d = null;
         field_b = null;

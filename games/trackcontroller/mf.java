@@ -13,9 +13,8 @@ final class mf {
     static int field_g;
 
     final static void c(byte param0) {
-        kk discarded$0 = null;
         if (param0 <= 111) {
-            discarded$0 = mf.a(45, (byte) -128);
+            mf.a(45, (byte) -128);
             p.a((byte) 25);
             return;
         }
@@ -34,12 +33,14 @@ final class mf {
     }
 
     final static void a(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        nk var5_ref_nk = null;
         int var5 = 0;
+        nk var5_ref_nk = null;
         dh var6 = null;
         int var6_int = 0;
         int[] var7 = null;
@@ -48,8 +49,6 @@ final class mf {
         la var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var9 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -167,7 +166,7 @@ final class mf {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3;
         if (param1 != 14) {
           field_b = (int[]) null;
           var3 = param2 >>> 366769791;
@@ -209,28 +208,28 @@ final class mf {
 
     static {
         $cfr$clinit: {
-            boolean[] var0 = null;
-            boolean[] var1 = null;
-            boolean[] var2 = null;
-            boolean[] var3 = null;
-            int var4 = 0;
-            int[] var72 = null;
-            int[] var73 = null;
-            int[] var74 = null;
-            int[] var75 = null;
-            int[] var76 = null;
-            int[] var77 = null;
-            int[] var78 = null;
-            int[] var79 = null;
-            int[] var80 = null;
-            int[] var81 = null;
-            int[] var82 = null;
-            int[] var83 = null;
-            int[] var84 = null;
-            int[] var85 = null;
-            int[] var86 = null;
-            int[] var87 = null;
-            int[] var88 = null;
+            boolean[] var0;
+            boolean[] var1;
+            boolean[] var2;
+            boolean[] var3;
+            int var4;
+            int[] var72;
+            int[] var73;
+            int[] var74;
+            int[] var75;
+            int[] var76;
+            int[] var77;
+            int[] var78;
+            int[] var79;
+            int[] var80;
+            int[] var81;
+            int[] var82;
+            int[] var83;
+            int[] var84;
+            int[] var85;
+            int[] var86;
+            int[] var87;
+            int[] var88;
             field_e = new int[17];
             field_i = new boolean[17];
             field_h = new int[17];

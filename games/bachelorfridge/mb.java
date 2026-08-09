@@ -8,9 +8,9 @@ final class mb {
     private int field_a;
 
     private final int b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var4;
+        int var5;
         var5 = BachelorFridge.field_y;
         var3 = this.field_d.length;
         var4 = 103 % ((41 - param0) / 45);
@@ -120,8 +120,8 @@ final class mb {
     }
 
     private final void a(int param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         var4 = new int[this.b(param0 ^ 118, param1)];
         var3 = var4;
         bl.a(this.field_d, 0, var4, 0, this.field_d.length);

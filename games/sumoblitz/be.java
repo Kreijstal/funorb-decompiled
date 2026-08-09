@@ -8,93 +8,28 @@ final class be extends nt {
     static da field_t;
 
     final void a(ha param0, int param1) {
-        RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
-        ha var5 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
-          L0: {
-            L1: {
-              var3_int = (int)((double)this.field_p / 100.0 * 255.0);
-              if (param1 <= -121) {
-                break L1;
-              } else {
-                var5 = (ha) null;
+            var3_int = (int)((double)this.field_p / 100.0 * 255.0);
+            if (param1 > -121) {
+                ha var5 = (ha) null;
                 this.a((ha) null, 95);
-                break L1;
-              }
             }
-            L2: {
-              L3: {
-                var3_int += 20;
-                var4 = 0;
-                if (!this.field_u) {
-                  break L3;
-                } else {
-                  var4 = (int)((double)(100 + -this.field_p) / 100.0 * 4096.0);
-                  if (!Sumoblitz.field_L) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              var4 = (int)(4096.0 * ((double)this.field_p / 100.0));
-              break L2;
+            var3_int += 20;
+            var4 = 0;
+            if (this.field_u) {
+                var4 = (int)((double)(100 + -this.field_p) / 100.0 * 4096.0);
+            } else {
+                var4 = (int)(4096.0 * ((double)this.field_p / 100.0));
             }
             vl.field_c.a((float)this.field_k, (float)this.field_o, var4, 0, 0, (var3_int << -1521415720) + this.field_q, 1);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (runtimeException);
-            stackOut_7_1 = new StringBuilder().append("be.C(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
-            if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L4;
-            } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L4;
-            }
-          }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) ((Object) runtimeException), "be.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static int a(boolean param0, int param1) {
-        int discarded$2 = 0;
         L0: {
           if (6407 == param1) {
             break L0;
@@ -109,7 +44,7 @@ final class be extends nt {
                   if (!param0) {
                     break L1;
                   } else {
-                    discarded$2 = be.a(true, -56);
+                    be.a(true, -56);
                     break L1;
                   }
                 }
@@ -189,9 +124,9 @@ final class be extends nt {
 
     static {
         $cfr$clinit: {
-            long var0 = 0L;
-            int var2 = 0;
-            int var3 = 0;
+            long var0;
+            int var2;
+            int var3;
             field_v = new long[256];
             var2 = 0;
             L0: while (true) {

@@ -6,20 +6,14 @@ abstract class ah extends lm {
     static String field_u;
 
     final static aa a(byte param0, int param1, int param2, int param3) {
-        Object var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        aa var8_ref_aa = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10_int = 0;
-        String var10 = null;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        aa var14 = null;
-        aa var16 = null;
+        Object var4;
+        int var5;
+        int var6;
+        int var7;
+        aa var8_ref_aa;
+        int var9;
+        int var10_int;
+        int var13;
         int stackIn_39_0 = 0;
         int stackIn_43_0 = 0;
         int stackIn_62_0 = 0;
@@ -31,28 +25,12 @@ abstract class ah extends lm {
         int stackIn_98_0 = 0;
         int stackIn_104_0 = 0;
         int stackIn_108_0 = 0;
-        int stackOut_97_0 = 0;
-        int stackOut_96_0 = 0;
-        int stackOut_93_0 = 0;
-        int stackOut_92_0 = 0;
-        int stackOut_107_0 = 0;
-        int stackOut_106_0 = 0;
-        int stackOut_103_0 = 0;
-        int stackOut_102_0 = 0;
-        int stackOut_82_0 = 0;
-        int stackOut_81_0 = 0;
-        int stackOut_78_0 = 0;
-        int stackOut_77_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_37_0 = 0;
+        int var8;
+        String var10;
+        String var11;
+        int var12;
+        aa var14;
+        aa var16;
         var13 = Pixelate.field_H ? 1 : 0;
         l.field_p.field_Fb.field_L.e(33);
         var4 = null;
@@ -96,12 +74,10 @@ abstract class ah extends lm {
                               l.field_p.field_Fb.field_wb = -l.field_p.field_Fb.field_S + var9;
                               l.field_p.a(-100, param1, true, param2 * 2 * param1);
                               if (var9 != l.field_p.field_Fb.field_S - -l.field_p.field_Fb.field_wb) {
-                                stackOut_97_0 = 0;
-                                stackIn_98_0 = stackOut_97_0;
+                                stackIn_98_0 = 0;
                                 break L4;
                               } else {
-                                stackOut_96_0 = 1;
-                                stackIn_98_0 = stackOut_96_0;
+                                stackIn_98_0 = 1;
                                 break L4;
                               }
                             }
@@ -111,12 +87,10 @@ abstract class ah extends lm {
                             L5: {
                               l.field_p.a(-100, param1, true, param2 * 2 * param1);
                               if (var9 != l.field_p.field_Fb.field_S - -l.field_p.field_Fb.field_wb) {
-                                stackOut_93_0 = 0;
-                                stackIn_94_0 = stackOut_93_0;
+                                stackIn_94_0 = 0;
                                 break L5;
                               } else {
-                                stackOut_92_0 = 1;
-                                stackIn_94_0 = stackOut_92_0;
+                                stackIn_94_0 = 1;
                                 break L5;
                               }
                             }
@@ -132,12 +106,10 @@ abstract class ah extends lm {
                         l.field_p.field_Fb.field_wb = -l.field_p.field_Fb.field_S + var9;
                         l.field_p.a(-100, param1, true, param2 * 2 * param1);
                         if (var9 != l.field_p.field_Fb.field_S - -l.field_p.field_Fb.field_wb) {
-                          stackOut_107_0 = 0;
-                          stackIn_108_0 = stackOut_107_0;
+                          stackIn_108_0 = 0;
                           break L6;
                         } else {
-                          stackOut_106_0 = 1;
-                          stackIn_108_0 = stackOut_106_0;
+                          stackIn_108_0 = 1;
                           break L6;
                         }
                       }
@@ -147,12 +119,10 @@ abstract class ah extends lm {
                       L7: {
                         l.field_p.a(-100, param1, true, param2 * 2 * param1);
                         if (var9 != l.field_p.field_Fb.field_S - -l.field_p.field_Fb.field_wb) {
-                          stackOut_103_0 = 0;
-                          stackIn_104_0 = stackOut_103_0;
+                          stackIn_104_0 = 0;
                           break L7;
                         } else {
-                          stackOut_102_0 = 1;
-                          stackIn_104_0 = stackOut_102_0;
+                          stackIn_104_0 = 1;
                           break L7;
                         }
                       }
@@ -181,12 +151,10 @@ abstract class ah extends lm {
                             l.field_p.field_Fb.field_wb = -l.field_p.field_Fb.field_S + var9;
                             l.field_p.a(-100, param1, true, param2 * 2 * param1);
                             if (var9 != l.field_p.field_Fb.field_S - -l.field_p.field_Fb.field_wb) {
-                              stackOut_82_0 = 0;
-                              stackIn_83_0 = stackOut_82_0;
+                              stackIn_83_0 = 0;
                               break L9;
                             } else {
-                              stackOut_81_0 = 1;
-                              stackIn_83_0 = stackOut_81_0;
+                              stackIn_83_0 = 1;
                               break L9;
                             }
                           }
@@ -196,12 +164,10 @@ abstract class ah extends lm {
                           L10: {
                             l.field_p.a(-100, param1, true, param2 * 2 * param1);
                             if (var9 != l.field_p.field_Fb.field_S - -l.field_p.field_Fb.field_wb) {
-                              stackOut_78_0 = 0;
-                              stackIn_79_0 = stackOut_78_0;
+                              stackIn_79_0 = 0;
                               break L10;
                             } else {
-                              stackOut_77_0 = 1;
-                              stackIn_79_0 = stackOut_77_0;
+                              stackIn_79_0 = 1;
                               break L10;
                             }
                           }
@@ -222,12 +188,10 @@ abstract class ah extends lm {
                         L12: {
                           l.field_p.a(-100, param1, true, param2 * 2 * param1);
                           if (var9 != l.field_p.field_Fb.field_S - -l.field_p.field_Fb.field_wb) {
-                            stackOut_73_0 = 0;
-                            stackIn_74_0 = stackOut_73_0;
+                            stackIn_74_0 = 0;
                             break L12;
                           } else {
-                            stackOut_72_0 = 1;
-                            stackIn_74_0 = stackOut_72_0;
+                            stackIn_74_0 = 1;
                             break L12;
                           }
                         }
@@ -241,12 +205,10 @@ abstract class ah extends lm {
                           l.field_p.field_Fb.field_wb = -l.field_p.field_Fb.field_S + var9;
                           l.field_p.a(-100, param1, true, param2 * 2 * param1);
                           if (var9 != l.field_p.field_Fb.field_S - -l.field_p.field_Fb.field_wb) {
-                            stackOut_65_0 = 0;
-                            stackIn_66_0 = stackOut_65_0;
+                            stackIn_66_0 = 0;
                             break L13;
                           } else {
-                            stackOut_64_0 = 1;
-                            stackIn_66_0 = stackOut_64_0;
+                            stackIn_66_0 = 1;
                             break L13;
                           }
                         }
@@ -256,12 +218,10 @@ abstract class ah extends lm {
                         L14: {
                           l.field_p.a(-100, param1, true, param2 * 2 * param1);
                           if (var9 != l.field_p.field_Fb.field_S - -l.field_p.field_Fb.field_wb) {
-                            stackOut_61_0 = 0;
-                            stackIn_62_0 = stackOut_61_0;
+                            stackIn_62_0 = 0;
                             break L14;
                           } else {
-                            stackOut_60_0 = 1;
-                            stackIn_62_0 = stackOut_60_0;
+                            stackIn_62_0 = 1;
                             break L14;
                           }
                         }
@@ -337,12 +297,10 @@ abstract class ah extends lm {
                     L20: {
                       l.field_p.a(-100, param1, true, param2 * 2 * param1);
                       if (var9 != l.field_p.field_Fb.field_S - -l.field_p.field_Fb.field_wb) {
-                        stackOut_42_0 = 0;
-                        stackIn_43_0 = stackOut_42_0;
+                        stackIn_43_0 = 0;
                         break L20;
                       } else {
-                        stackOut_41_0 = 1;
-                        stackIn_43_0 = stackOut_41_0;
+                        stackIn_43_0 = 1;
                         break L20;
                       }
                     }
@@ -353,12 +311,10 @@ abstract class ah extends lm {
                       l.field_p.field_Fb.field_wb = -l.field_p.field_Fb.field_S + var9;
                       l.field_p.a(-100, param1, true, param2 * 2 * param1);
                       if (var9 != l.field_p.field_Fb.field_S - -l.field_p.field_Fb.field_wb) {
-                        stackOut_38_0 = 0;
-                        stackIn_39_0 = stackOut_38_0;
+                        stackIn_39_0 = 0;
                         break L21;
                       } else {
-                        stackOut_37_0 = 1;
-                        stackIn_39_0 = stackOut_37_0;
+                        stackIn_39_0 = 1;
                         break L21;
                       }
                     }
@@ -462,12 +418,11 @@ abstract class ah extends lm {
 
     final static void a(int param0, byte param1) {
         try {
-            Object discarded$2 = null;
             Throwable throwable = null;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                discarded$2 = cq.a(ao.a(13867), (byte) -64, new Object[]{new Integer(param0)}, "resizing");
+                cq.a(ao.a(13867), (byte) -64, new Object[]{new Integer(param0)}, "resizing");
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

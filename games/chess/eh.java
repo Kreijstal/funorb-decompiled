@@ -16,8 +16,6 @@ abstract class eh extends ma {
     abstract void b(int param0, int param1, int param2);
 
     boolean g(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_8_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_24_0 = 0;
@@ -26,22 +24,8 @@ abstract class eh extends ma {
         int stackIn_45_0 = 0;
         int stackIn_53_0 = 0;
         int stackIn_59_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
+        int var2;
+        int var3;
         if (param0 <= -4) {
           var2 = this.h(0);
           var3 = var2 - this.field_N;
@@ -59,15 +43,13 @@ abstract class eh extends ma {
                       if (this.field_P) {
                         break L1;
                       } else {
-                        stackOut_57_0 = 1;
-                        stackIn_59_0 = stackOut_57_0;
+                        stackIn_59_0 = 1;
                         break L0;
                       }
                     }
                   }
                 }
-                stackOut_58_0 = 0;
-                stackIn_59_0 = stackOut_58_0;
+                stackIn_59_0 = 0;
                 break L0;
               }
               return stackIn_59_0 != 0;
@@ -83,15 +65,13 @@ abstract class eh extends ma {
                       if (this.field_P) {
                         break L3;
                       } else {
-                        stackOut_51_0 = 1;
-                        stackIn_53_0 = stackOut_51_0;
+                        stackIn_53_0 = 1;
                         break L2;
                       }
                     }
                   }
                 }
-                stackOut_52_0 = 0;
-                stackIn_53_0 = stackOut_52_0;
+                stackIn_53_0 = 0;
                 break L2;
               }
               return stackIn_53_0 != 0;
@@ -111,15 +91,13 @@ abstract class eh extends ma {
                       if (this.field_P) {
                         break L5;
                       } else {
-                        stackOut_43_0 = 1;
-                        stackIn_45_0 = stackOut_43_0;
+                        stackIn_45_0 = 1;
                         break L4;
                       }
                     }
                   }
                 }
-                stackOut_44_0 = 0;
-                stackIn_45_0 = stackOut_44_0;
+                stackIn_45_0 = 0;
                 break L4;
               }
               return stackIn_45_0 != 0;
@@ -135,15 +113,13 @@ abstract class eh extends ma {
                       if (this.field_P) {
                         break L7;
                       } else {
-                        stackOut_37_0 = 1;
-                        stackIn_39_0 = stackOut_37_0;
+                        stackIn_39_0 = 1;
                         break L6;
                       }
                     }
                   }
                 }
-                stackOut_38_0 = 0;
-                stackIn_39_0 = stackOut_38_0;
+                stackIn_39_0 = 0;
                 break L6;
               }
               return stackIn_39_0 != 0;
@@ -167,15 +143,13 @@ abstract class eh extends ma {
                       if (this.field_P) {
                         break L9;
                       } else {
-                        stackOut_28_0 = 1;
-                        stackIn_30_0 = stackOut_28_0;
+                        stackIn_30_0 = 1;
                         break L8;
                       }
                     }
                   }
                 }
-                stackOut_29_0 = 0;
-                stackIn_30_0 = stackOut_29_0;
+                stackIn_30_0 = 0;
                 break L8;
               }
               return stackIn_30_0 != 0;
@@ -192,15 +166,13 @@ abstract class eh extends ma {
                       if (this.field_P) {
                         break L11;
                       } else {
-                        stackOut_22_0 = 1;
-                        stackIn_24_0 = stackOut_22_0;
+                        stackIn_24_0 = 1;
                         break L10;
                       }
                     }
                   }
                 }
-                stackOut_23_0 = 0;
-                stackIn_24_0 = stackOut_23_0;
+                stackIn_24_0 = 0;
                 break L10;
               }
               return stackIn_24_0 != 0;
@@ -214,12 +186,10 @@ abstract class eh extends ma {
                 } else {
                   L12: {
                     if (this.field_P) {
-                      stackOut_14_0 = 0;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 0;
                       break L12;
                     } else {
-                      stackOut_13_0 = 1;
-                      stackIn_15_0 = stackOut_13_0;
+                      stackIn_15_0 = 1;
                       break L12;
                     }
                   }
@@ -240,15 +210,13 @@ abstract class eh extends ma {
                       if (this.field_P) {
                         break L14;
                       } else {
-                        stackOut_6_0 = 1;
-                        stackIn_8_0 = stackOut_6_0;
+                        stackIn_8_0 = 1;
                         break L13;
                       }
                     }
                   }
                 }
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 0;
                 break L13;
               }
               return stackIn_8_0 != 0;
@@ -411,8 +379,6 @@ abstract class eh extends ma {
         int var4 = 0;
         int stackIn_5_0 = 0;
         int stackIn_12_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -420,22 +386,11 @@ abstract class eh extends ma {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_11_0 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             if (0 < param2) {
               if (ua.a(param2, 14)) {
-                stackOut_4_0 = (int)((long)param2 * ((long)param1.nextInt() & 4294967295L) >> -2098730976);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (int)((long)param2 * ((long)param1.nextInt() & 4294967295L) >> -2098730976);
                 decompiledRegionSelector0 = 0;
                 break L0;
               } else {
@@ -451,8 +406,7 @@ abstract class eh extends ma {
                 L2: while (true) {
                   var4 = param1.nextInt();
                   if (var3_int > var4) {
-                    stackOut_11_0 = am.a(var4, param2, (byte) -40);
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = am.a(var4, param2, (byte) -40);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -468,27 +422,19 @@ abstract class eh extends ma {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3);
-            stackOut_13_1 = new StringBuilder().append("eh.MA(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3);
+
+            stackIn_15_1 = new StringBuilder().append("eh.MA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }
@@ -512,28 +458,19 @@ abstract class eh extends ma {
     private final int h(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 0) {
           L0: {
             field_M = (ci) null;
             if (this.field_P) {
               if (this != this.field_Q.k(-127)) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = 0;
                 break L0;
               } else {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 256;
                 break L0;
               }
             } else {
-              stackOut_8_0 = 0;
-              stackIn_12_0 = stackOut_8_0;
+              stackIn_12_0 = 0;
               break L0;
             }
           }
@@ -542,17 +479,14 @@ abstract class eh extends ma {
           L1: {
             if (this.field_P) {
               if (this != this.field_Q.k(-127)) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L1;
               } else {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L1;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L1;
             }
           }

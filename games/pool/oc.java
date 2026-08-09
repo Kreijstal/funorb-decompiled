@@ -54,8 +54,6 @@ final class oc {
 
     final static boolean b(byte param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == 84) {
             break L0;
@@ -72,14 +70,12 @@ final class oc {
               if (!tl.field_J.b(719)) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
@@ -112,9 +108,8 @@ final class oc {
     }
 
     public static void c(int param0) {
-        boolean discarded$0 = false;
         if (param0 >= -11) {
-            discarded$0 = oc.b((byte) 45);
+            oc.b((byte) 45);
         }
         field_t = null;
         field_h = null;
@@ -144,16 +139,16 @@ final class oc {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         if (!this.field_G) {
           L0: {
             this.field_G = true;

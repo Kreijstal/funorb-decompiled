@@ -15,20 +15,17 @@ final class kc {
     }
 
     final static void a(int param0) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        Object var2 = null;
         int var2_int = 0;
+        Object var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         pb var6 = null;
         pb var7 = null;
         pb var8 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var4 = stellarshard.field_B;
         try {
           L0: {
@@ -41,7 +38,7 @@ final class kc {
                 var7 = var6;
                 if (var6 == null) {
                   if (fj.field_f != null) {
-                    discarded$3 = fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                    fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                     break L1;
                   } else {
                     break L1;
@@ -82,7 +79,7 @@ final class kc {
                         if (var2 == null) {
                           break L3;
                         } else {
-                          discarded$4 = fj.field_f.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                          fj.field_f.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                           break L3;
                         }
                       } else {
@@ -130,7 +127,7 @@ final class kc {
             } else {
               L7: {
                 if (fj.field_f != null) {
-                  discarded$5 = fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                  fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                   break L7;
                 } else {
                   break L7;

@@ -18,9 +18,8 @@ final class wc {
     }
 
     final static int d(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 20) {
-            discarded$0 = wc.a(-3, 'E');
+            wc.a(-3, 'E');
             return ef.field_b;
         }
         return ef.field_b;
@@ -65,23 +64,20 @@ final class wc {
 
     final static gj b(int param0) {
         try {
-            boolean discarded$2 = false;
             Throwable var1 = null;
             gj stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            gj stackOut_2_0 = null;
             try {
               L0: {
                 L1: {
                   if (param0 == 5220) {
                     break L1;
                   } else {
-                    discarded$2 = wc.a(14, '￉');
+                    wc.a(14, '￉');
                     break L1;
                   }
                 }
-                stackOut_2_0 = (gj) (Class.forName("me").newInstance());
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (gj) (Class.forName("me").newInstance());
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

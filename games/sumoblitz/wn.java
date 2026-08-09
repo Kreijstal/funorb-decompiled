@@ -6,10 +6,9 @@ final class wn {
     static mp field_b;
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_b = null;
         if (param0 != 0) {
-            discarded$0 = wn.a(71, -52, 50);
+            wn.a(71, -52, 50);
         }
     }
 

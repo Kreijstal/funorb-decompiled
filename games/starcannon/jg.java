@@ -24,11 +24,10 @@ final class jg extends dk {
     }
 
     final void a(int param0, int param1, uj param2, int param3) {
-        boolean discarded$0 = false;
         try {
             if (param0 < 27) {
                 uj var6 = (uj) null;
-                discarded$0 = this.a(64, (uj) null);
+                this.a(64, (uj) null);
             }
             this.field_G = this.field_G + 1;
             super.a(40, param1, param2, param3);
@@ -38,16 +37,16 @@ final class jg extends dk {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        p var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        hl var13 = null;
-        hl var14 = null;
-        hl var15 = null;
-        hl var16 = null;
+        int var5;
+        int var6;
+        p var8;
+        int var9;
+        int var10;
+        int var11;
+        hl var13;
+        hl var14;
+        hl var15;
+        hl var16;
         var11 = StarCannon.field_A;
         super.a(param0, param1, param2, param3);
         if (-1 != (param0 ^ -1)) {
@@ -153,28 +152,16 @@ final class jg extends dk {
     final boolean a(int param0, uj param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             if (param0 == 0) {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               break L0;
             } else {
               field_A = -109;
@@ -185,27 +172,19 @@ final class jg extends dk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("jg.PA(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("jg.PA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }

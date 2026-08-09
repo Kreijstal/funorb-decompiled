@@ -34,11 +34,10 @@ class pp extends ic {
     }
 
     final void a(k param0, int param1) {
-        pi discarded$0 = null;
         try {
             param0.a(this.field_p, true);
             if (param1 != -1) {
-                discarded$0 = this.b(-111);
+                this.b(-111);
             }
             param0.a(13066, this.field_m);
         } catch (RuntimeException runtimeException) {

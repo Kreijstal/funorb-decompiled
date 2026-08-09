@@ -13,7 +13,7 @@ final class vf {
     }
 
     final static void a(byte param0) {
-        jf var1 = null;
+        jf var1;
         L0: {
           var1 = (jf) ((Object) de.field_n.c((byte) -66));
           if (var1 == null) {

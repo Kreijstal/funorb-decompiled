@@ -19,12 +19,11 @@ final class ue {
     }
 
     public static void a(byte param0) {
-        int discarded$2 = 0;
         field_b = (int[][]) null;
         field_c = null;
         field_d = null;
         if (param0 != 62) {
-          discarded$2 = ue.b((byte) -12);
+          ue.b((byte) -12);
           field_a = null;
           return;
         } else {

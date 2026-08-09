@@ -27,9 +27,8 @@ final class tf extends ne implements in {
     }
 
     final boolean i(int param0) {
-        we discarded$5 = null;
-        gh var2 = null;
-        uj var3 = null;
+        gh var2;
+        uj var3;
         if (param0 == -27388) {
           if (this.field_R) {
             if (!this.field_Fb) {
@@ -48,7 +47,7 @@ final class tf extends ne implements in {
           }
         } else {
           var3 = (uj) null;
-          discarded$5 = tf.a((uj) null, (byte) -100);
+          tf.a((uj) null, (byte) -100);
           if (this.field_R) {
             if (!this.field_Fb) {
               var2 = of.d(param0 ^ -27388);
@@ -68,14 +67,6 @@ final class tf extends ne implements in {
     }
 
     private final void a(int param0, boolean param1, gh param2) {
-        gn discarded$2 = null;
-        gn discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        wd var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         RuntimeException stackIn_39_0 = null;
@@ -83,14 +74,10 @@ final class tf extends ne implements in {
         String stackIn_39_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        wd var5 = null;
+        int var6 = 0;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -108,7 +95,7 @@ final class tf extends ne implements in {
                 if (!param2.field_d) {
                   break L3;
                 } else {
-                  var4_ref = qa.field_g;
+                  var4 = qa.field_g;
                   if (var6 == 0) {
                     break L2;
                   } else {
@@ -120,7 +107,7 @@ final class tf extends ne implements in {
                 if (param2.field_b != null) {
                   break L4;
                 } else {
-                  var4_ref = param2.field_h;
+                  var4 = param2.field_h;
                   if ((param2.field_c ^ -1) != -249) {
                     break L2;
                   } else {
@@ -132,7 +119,7 @@ final class tf extends ne implements in {
                         break L5;
                       }
                     }
-                    var4_ref = ba.field_p;
+                    var4 = ba.field_p;
                     this.field_Ib = true;
                     if (var6 == 0) {
                       break L2;
@@ -142,7 +129,7 @@ final class tf extends ne implements in {
                   }
                 }
               }
-              var4_ref = wg.field_d;
+              var4 = wg.field_d;
               if (this.field_Gb != null) {
                 this.field_Gb.a(496);
                 break L2;
@@ -152,7 +139,7 @@ final class tf extends ne implements in {
             }
             L6: {
               L7: {
-                var5 = new wd((ne) (this), ci.field_d, var4_ref);
+                var5 = new wd((ne) (this), ci.field_d, var4);
                 if (!param2.field_d) {
                   break L7;
                 } else {
@@ -161,7 +148,7 @@ final class tf extends ne implements in {
                     decompiledRegionSelector0 = 0;
                     break L0;
                   } else {
-                    discarded$2 = var5.a(ub.field_xb, -112, (bj) (this));
+                    var5.a(ub.field_xb, -112, (bj) (this));
                     if (var6 == 0) {
                       break L6;
                     } else {
@@ -175,7 +162,7 @@ final class tf extends ne implements in {
                   if (!this.field_Ib) {
                     break L9;
                   } else {
-                    discarded$3 = var5.a(ub.field_xb, param0 ^ 58, (bj) (this));
+                    var5.a(ub.field_xb, param0 ^ 58, (bj) (this));
                     if (var6 == 0) {
                       break L8;
                     } else {
@@ -221,28 +208,20 @@ final class tf extends ne implements in {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
-            var4 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) (var4);
-            stackOut_36_1 = new StringBuilder().append("tf.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_38_0 = stackOut_36_0;
-            stackIn_38_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_38_0 = (RuntimeException) (var4_ref);
+
+            stackIn_38_1 = new StringBuilder().append("tf.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "null";
               break L10;
             } else {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "{...}";
-              stackIn_39_0 = stackOut_37_0;
-              stackIn_39_1 = stackOut_37_1;
-              stackIn_39_2 = stackOut_37_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "{...}";
               break L10;
             }
           }
@@ -256,28 +235,16 @@ final class tf extends ne implements in {
     }
 
     final static we a(uj param0, byte param1) {
-        we discarded$2 = null;
         we var2 = null;
         RuntimeException var2_ref = null;
         uj var3 = null;
         we stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        we stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -285,42 +252,33 @@ final class tf extends ne implements in {
                 break L1;
               } else {
                 var3 = (uj) null;
-                discarded$2 = tf.a((uj) null, (byte) 86);
+                tf.a((uj) null, (byte) 86);
                 break L1;
               }
             }
             var2 = new we(param0, param0);
             gb.field_e.a(var2, false);
             bh.field_a.b(param0);
-            stackOut_2_0 = (we) (var2);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (we) (var2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2_ref);
-            stackOut_4_1 = new StringBuilder().append("tf.D(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2_ref);
+
+            stackIn_6_1 = new StringBuilder().append("tf.D(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }

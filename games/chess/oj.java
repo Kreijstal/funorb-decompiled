@@ -86,8 +86,6 @@ final class oj {
         sa stackIn_13_0 = null;
         sa stackIn_18_0 = null;
         sa stackIn_21_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -95,19 +93,6 @@ final class oj {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        sa stackOut_5_0 = null;
-        sa stackOut_9_0 = null;
-        sa stackOut_20_0 = null;
-        sa stackOut_17_0 = null;
-        sa stackOut_12_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         var8 = Chess.field_G;
         try {
           L0: {
@@ -121,14 +106,12 @@ final class oj {
               }
             }
             if (var2_int == 0) {
-              stackOut_5_0 = ef.field_j;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = ef.field_j;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (255 < var2_int) {
-                stackOut_9_0 = ok.field_Ob;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = ok.field_Ob;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -138,8 +121,7 @@ final class oj {
                   var5 = 0;
                   L2: while (true) {
                     if (var5 >= var4.length) {
-                      stackOut_20_0 = ib.a(var3[var3.length + -1], false);
-                      stackIn_21_0 = stackOut_20_0;
+                      stackIn_21_0 = ib.a(var3[var3.length + -1], false);
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
@@ -149,16 +131,14 @@ final class oj {
                         var5++;
                         continue L2;
                       } else {
-                        stackOut_17_0 = (sa) (var7);
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = (sa) (var7);
                         decompiledRegionSelector0 = 3;
                         break L0;
                       }
                     }
                   }
                 } else {
-                  stackOut_12_0 = ef.field_j;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = ef.field_j;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -169,27 +149,19 @@ final class oj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2);
-            stackOut_22_1 = new StringBuilder().append("oj.D(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2);
+
+            stackIn_24_1 = new StringBuilder().append("oj.D(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L3;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L3;
             }
           }

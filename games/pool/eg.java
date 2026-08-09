@@ -66,21 +66,21 @@ final class eg extends um {
     }
 
     final void a(um param0, int param1, int param2, int param3, boolean param4) {
-        ah dupTemp$2 = null;
-        ah dupTemp$3 = null;
-        eg var6 = null;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        ah var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        ah var16 = null;
-        ah var17 = null;
-        ah var18 = null;
-        int[] var22 = null;
+        ah dupTemp$0 = null;
+        ah dupTemp$1 = null;
+        eg var6;
+        int var7;
+        int var9;
+        int var10;
+        ah var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        ah var16;
+        ah var17;
+        ah var18;
+        int[] var22;
         var6 = (eg) ((Object) param0);
         var6.e();
         var6.d();
@@ -210,9 +210,9 @@ final class eg extends um {
                                         if (var17 != null) {
                                           break L9;
                                         } else {
-                                          dupTemp$2 = new ah(var11);
-                                          this.field_m[var10] = dupTemp$2;
-                                          var17 = dupTemp$2;
+                                          dupTemp$0 = new ah(var11);
+                                          this.field_m[var10] = dupTemp$0;
+                                          var17 = dupTemp$0;
                                           break L9;
                                         }
                                       }
@@ -221,9 +221,9 @@ final class eg extends um {
                                         if (var18 != null) {
                                           break L10;
                                         } else {
-                                          dupTemp$3 = new ah(var16);
-                                          var6.field_m[var15] = dupTemp$3;
-                                          var18 = dupTemp$3;
+                                          dupTemp$1 = new ah(var16);
+                                          var6.field_m[var15] = dupTemp$1;
+                                          var18 = dupTemp$1;
                                           break L10;
                                         }
                                       }
@@ -327,17 +327,17 @@ final class eg extends um {
     }
 
     final int a(int param0, int param1, int param2) {
-        int fieldTemp$1 = 0;
-        int var4 = 0;
+        int fieldTemp$0 = 0;
+        int var4;
         var4 = 0;
         L0: while (true) {
           if (var4 >= this.field_B) {
             this.field_g[this.field_B] = param0;
             this.field_Y[this.field_B] = param1;
             this.field_q[this.field_B] = param2;
-            fieldTemp$1 = this.field_B + 1;
+            fieldTemp$0 = this.field_B + 1;
             this.field_B = this.field_B + 1;
-            this.field_M = fieldTemp$1;
+            this.field_M = fieldTemp$0;
             return this.field_B - 1;
           } else {
             if (this.field_g[var4] == param0) {
@@ -361,16 +361,16 @@ final class eg extends um {
     }
 
     final void e() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         if (!this.field_r) {
           this.field_r = true;
           var1 = 32767;
@@ -456,11 +456,11 @@ final class eg extends um {
     }
 
     private final int a(eg param0, int param1, short param2) {
-        int fieldTemp$1 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int fieldTemp$0 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var4 = param0.field_g[param1];
         var5 = param0.field_Y[param1];
         var6 = param0.field_q[param1];
@@ -479,9 +479,9 @@ final class eg extends um {
                 break L1;
               }
             }
-            fieldTemp$1 = this.field_B;
+            fieldTemp$0 = this.field_B;
             this.field_B = this.field_B + 1;
-            return fieldTemp$1;
+            return fieldTemp$0;
           } else {
             if (var4 == this.field_g[var7]) {
               if (var5 == this.field_Y[var7]) {
@@ -526,26 +526,26 @@ final class eg extends um {
     }
 
     final void d() {
-        ef dupTemp$1 = null;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        ef var16 = null;
-        ah var17 = null;
-        ah var18 = null;
-        ah var19 = null;
+        ef dupTemp$0 = null;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        ef var16;
+        ah var17;
+        ah var18;
+        ah var19;
         if (this.field_Z == null) {
           this.field_Z = new ah[this.field_M];
           var1 = 0;
@@ -617,9 +617,9 @@ final class eg extends um {
                                           break L6;
                                         }
                                       }
-                                      dupTemp$1 = new ef();
-                                      this.field_J[var1] = dupTemp$1;
-                                      var16 = dupTemp$1;
+                                      dupTemp$0 = new ef();
+                                      this.field_J[var1] = dupTemp$0;
+                                      var16 = dupTemp$0;
                                       var16.field_b = var11;
                                       var16.field_a = var12;
                                       var16.field_d = var13;
@@ -676,50 +676,50 @@ final class eg extends um {
     }
 
     private final void b(byte[] param0) {
-        int var2 = 0;
-        int var3 = 0;
-        ge var4 = null;
-        ge var5 = null;
-        ge var6 = null;
-        ge var7 = null;
-        ge var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
-        int var42 = 0;
-        int var43 = 0;
-        int var44 = 0;
-        int var45 = 0;
+        int var2;
+        int var3;
+        ge var4;
+        ge var5;
+        ge var6;
+        ge var7;
+        ge var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var41;
+        int var42;
+        int var43;
+        int var44;
+        int var45;
         L0: {
           var2 = 0;
           var3 = 0;
@@ -1178,13 +1178,17 @@ final class eg extends um {
     }
 
     final void b() {
+        int dupTemp$0 = 0;
+        int[] arrayValue$1 = null;
         int[] array$2 = null;
-        int[] array$3 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        int[] var6 = null;
+        int dupTemp$3 = 0;
+        int[] arrayValue$4 = null;
+        int[] array$5 = null;
+        int var2;
+        int var3;
+        int var4;
+        int[] var5;
+        int[] var6;
         L0: {
           if (this.field_A == null) {
             break L0;
@@ -1205,8 +1209,10 @@ final class eg extends um {
                         break L0;
                       } else {
                         var4 = this.field_A[var3];
-                        var5[var4] = var5[var4] + 1;
-                        this.field_U[var4][var5[var4]] = var3;
+                        dupTemp$0 = var5[var4];
+                        arrayValue$1 = this.field_U[var4];
+                        var5[var4] = dupTemp$0 + 1;
+                        arrayValue$1[dupTemp$0] = var3;
                         var3++;
                         continue L3;
                       }
@@ -1254,15 +1260,17 @@ final class eg extends um {
                         break L4;
                       } else {
                         var4 = this.field_ab[var3];
-                        var6[var4] = var6[var4] + 1;
-                        this.field_s[var4][var6[var4]] = var3;
+                        dupTemp$3 = var6[var4];
+                        arrayValue$4 = this.field_s[var4];
+                        var6[var4] = dupTemp$3 + 1;
+                        arrayValue$4[dupTemp$3] = var3;
                         var3++;
                         continue L7;
                       }
                     }
                   } else {
-                    array$3 = new int[var6[var3]];
-                    this.field_s[var3] = array$3;
+                    array$5 = new int[var6[var3]];
+                    this.field_s[var3] = array$5;
                     var6[var3] = 0;
                     var3++;
                     continue L6;
@@ -1286,71 +1294,67 @@ final class eg extends um {
     }
 
     private final void a(byte[] param0) {
-        byte dupTemp$1 = 0;
-        ge var2 = null;
-        ge var3 = null;
-        ge var4 = null;
-        ge var5 = null;
-        ge var6 = null;
-        ge var7 = null;
-        ge var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
-        int var42 = 0;
-        int var43 = 0;
-        int var44 = 0;
-        int var45 = 0;
-        int var46 = 0;
-        int var47 = 0;
-        int var48 = 0;
-        int var49 = 0;
-        int var50 = 0;
-        int var51 = 0;
-        int var52 = 0;
-        int var53 = 0;
-        int var54 = 0;
-        int var55 = 0;
-        int var56 = 0;
-        int var57 = 0;
-        int var58 = 0;
-        int var59 = 0;
+        byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
+        ge var2;
+        ge var3;
+        ge var4;
+        ge var5;
+        ge var6;
+        ge var7;
+        ge var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var41;
+        int var42;
+        int var43;
+        int var44;
+        int var45;
+        int var46;
+        int var47;
+        int var48;
+        int var49;
+        int var50;
+        int var51;
+        int var52;
+        int var53;
+        int var54;
+        int var55;
+        int var56;
+        int var57;
+        int var58;
+        int var59;
         L0: {
           var2 = new ge(param0);
           var3 = new ge(param0);
@@ -1365,24 +1369,20 @@ final class eg extends um {
           var11 = var2.g(-110);
           var12 = var2.g(-87);
           if ((var12 & 1) != 1) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
         L1: {
           var13 = stackIn_3_0;
           if ((var12 & 2) != 2) {
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L1;
           } else {
-            stackOut_4_0 = 1;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = 1;
             break L1;
           }
         }
@@ -1412,9 +1412,9 @@ final class eg extends um {
                 break L2;
               } else {
                 L4: {
-                  dupTemp$1 = var2.e((byte) 105);
-                  this.field_o[var28] = dupTemp$1;
-                  var29 = dupTemp$1;
+                  dupTemp$0 = var2.e((byte) 105);
+                  this.field_o[var28] = dupTemp$0;
+                  var29 = dupTemp$0;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -2036,89 +2036,46 @@ final class eg extends um {
     }
 
     eg(eg[] param0, int param1) {
+        byte dupTemp$0 = 0;
         int incrementValue$1 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        eg var10_ref_eg = null;
-        int var10 = 0;
-        eg var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        eg var15 = null;
-        eg var16 = null;
-        int var17 = 0;
-        eg var18 = null;
-        eg var19 = null;
-        int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_13_1 = 0;
-        int stackIn_14_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_16_1 = 0;
-        int stackIn_17_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_19_1 = 0;
-        int stackIn_20_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_22_1 = 0;
-        int stackIn_23_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
-        byte[] stackIn_75_0 = null;
-        int stackIn_75_1 = 0;
-        byte[] stackIn_76_0 = null;
-        int stackIn_76_1 = 0;
         byte[] stackIn_77_0 = null;
         int stackIn_77_1 = 0;
         byte[] stackIn_78_0 = null;
         int stackIn_78_1 = 0;
         int stackIn_78_2 = 0;
-        byte[] stackOut_74_0 = null;
-        int stackOut_74_1 = 0;
-        byte[] stackOut_75_0 = null;
-        int stackOut_75_1 = 0;
-        byte[] stackOut_76_0 = null;
-        int stackOut_76_1 = 0;
-        int stackOut_76_2 = 0;
-        byte[] stackOut_77_0 = null;
-        int stackOut_77_1 = 0;
-        int stackOut_77_2 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_12_1 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_14_1 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_18_1 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_17_1 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_21_1 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_20_1 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_24_1 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_23_1 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        eg var10_ref_eg;
+        eg var11;
+        int var12;
+        int var13;
+        int var14;
+        eg var15;
+        eg var16;
+        int var17;
+        eg var18;
+        eg var19;
         this.field_M = 0;
         this.field_B = 0;
         this.field_r = false;
@@ -2240,8 +2197,9 @@ final class eg extends um {
                           L11: while (true) {
                             if (var17 < var19.field_l) {
                               L12: {
-                                this.field_o[this.field_l] = var16.field_o[var17];
-                                var14 = var16.field_o[var17];
+                                dupTemp$0 = var16.field_o[var17];
+                                this.field_o[this.field_l] = dupTemp$0;
+                                var14 = dupTemp$0;
                                 if (var14 != 0) {
                                   break L12;
                                 } else {
@@ -2294,40 +2252,28 @@ final class eg extends um {
                               L16: {
                                 incrementValue$1 = var9;
                                 var9++;
-                                stackOut_74_0 = this.field_k;
-                                stackOut_74_1 = incrementValue$1;
-                                stackIn_77_0 = stackOut_74_0;
-                                stackIn_77_1 = stackOut_74_1;
-                                stackIn_75_0 = stackOut_74_0;
-                                stackIn_75_1 = stackOut_74_1;
+                                stackIn_77_0 = this.field_k;
+
+                                stackIn_77_1 = incrementValue$1;
+
                                 if (var19.field_k == null) {
                                   break L16;
                                 } else {
-                                  stackOut_75_0 = (byte[]) ((Object) stackIn_75_0);
-                                  stackOut_75_1 = stackIn_75_1;
-                                  stackIn_77_0 = stackOut_75_0;
-                                  stackIn_77_1 = stackOut_75_1;
-                                  stackIn_76_0 = stackOut_75_0;
-                                  stackIn_76_1 = stackOut_75_1;
+                                  stackIn_77_0 = (byte[]) ((Object) stackIn_77_0);
+
                                   if (var16.field_k[var13] == -1) {
                                     break L16;
                                   } else {
-                                    stackOut_76_0 = (byte[]) ((Object) stackIn_76_0);
-                                    stackOut_76_1 = stackIn_76_1;
-                                    stackOut_76_2 = var16.field_k[var13] + this.field_l;
-                                    stackIn_78_0 = stackOut_76_0;
-                                    stackIn_78_1 = stackOut_76_1;
-                                    stackIn_78_2 = stackOut_76_2;
+                                    stackIn_78_0 = (byte[]) ((Object) stackIn_77_0);
+                                    stackIn_78_1 = stackIn_77_1;
+                                    stackIn_78_2 = var16.field_k[var13] + this.field_l;
                                     break L15;
                                   }
                                 }
                               }
-                              stackOut_77_0 = (byte[]) ((Object) stackIn_77_0);
-                              stackOut_77_1 = stackIn_77_1;
-                              stackOut_77_2 = -1;
-                              stackIn_78_0 = stackOut_77_0;
-                              stackIn_78_1 = stackOut_77_1;
-                              stackIn_78_2 = stackOut_77_2;
+                              stackIn_78_0 = (byte[]) ((Object) stackIn_77_0);
+                              stackIn_78_1 = stackIn_77_1;
+                              stackIn_78_2 = -1;
                               break L15;
                             }
                             stackIn_78_0[stackIn_78_1] = (byte)stackIn_78_2;
@@ -2463,96 +2409,71 @@ final class eg extends um {
                 }
               }
               L25: {
-                stackOut_10_0 = var3;
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_12_0 = var3;
+
                 if (var10_ref_eg.field_Q == null) {
-                  stackOut_12_0 = stackIn_12_0;
-                  stackOut_12_1 = 0;
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
+                  stackIn_13_0 = stackIn_12_0;
+                  stackIn_13_1 = 0;
                   break L25;
                 } else {
-                  stackOut_11_0 = stackIn_11_0;
-                  stackOut_11_1 = 1;
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
+                  stackIn_13_0 = stackIn_12_0;
+                  stackIn_13_1 = 1;
                   break L25;
                 }
               }
               L26: {
                 var3 = stackIn_13_0 | stackIn_13_1;
-                stackOut_13_0 = var5;
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_15_0 = var5;
+
                 if (var10_ref_eg.field_f == null) {
-                  stackOut_15_0 = stackIn_15_0;
-                  stackOut_15_1 = 0;
-                  stackIn_16_0 = stackOut_15_0;
-                  stackIn_16_1 = stackOut_15_1;
+                  stackIn_16_0 = stackIn_15_0;
+                  stackIn_16_1 = 0;
                   break L26;
                 } else {
-                  stackOut_14_0 = stackIn_14_0;
-                  stackOut_14_1 = 1;
-                  stackIn_16_0 = stackOut_14_0;
-                  stackIn_16_1 = stackOut_14_1;
+                  stackIn_16_0 = stackIn_15_0;
+                  stackIn_16_1 = 1;
                   break L26;
                 }
               }
               L27: {
                 var5 = stackIn_16_0 | stackIn_16_1;
-                stackOut_16_0 = var6;
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_18_0 = var6;
+
                 if (var10_ref_eg.field_ab == null) {
-                  stackOut_18_0 = stackIn_18_0;
-                  stackOut_18_1 = 0;
-                  stackIn_19_0 = stackOut_18_0;
-                  stackIn_19_1 = stackOut_18_1;
+                  stackIn_19_0 = stackIn_18_0;
+                  stackIn_19_1 = 0;
                   break L27;
                 } else {
-                  stackOut_17_0 = stackIn_17_0;
-                  stackOut_17_1 = 1;
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_19_1 = stackOut_17_1;
+                  stackIn_19_0 = stackIn_18_0;
+                  stackIn_19_1 = 1;
                   break L27;
                 }
               }
               L28: {
                 var6 = stackIn_19_0 | stackIn_19_1;
-                stackOut_19_0 = var7;
-                stackIn_21_0 = stackOut_19_0;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_21_0 = var7;
+
                 if (var10_ref_eg.field_L == null) {
-                  stackOut_21_0 = stackIn_21_0;
-                  stackOut_21_1 = 0;
-                  stackIn_22_0 = stackOut_21_0;
-                  stackIn_22_1 = stackOut_21_1;
+                  stackIn_22_0 = stackIn_21_0;
+                  stackIn_22_1 = 0;
                   break L28;
                 } else {
-                  stackOut_20_0 = stackIn_20_0;
-                  stackOut_20_1 = 1;
-                  stackIn_22_0 = stackOut_20_0;
-                  stackIn_22_1 = stackOut_20_1;
+                  stackIn_22_0 = stackIn_21_0;
+                  stackIn_22_1 = 1;
                   break L28;
                 }
               }
               L29: {
                 var7 = stackIn_22_0 | stackIn_22_1;
-                stackOut_22_0 = var8;
-                stackIn_24_0 = stackOut_22_0;
-                stackIn_23_0 = stackOut_22_0;
+                stackIn_24_0 = var8;
+
                 if (var10_ref_eg.field_k == null) {
-                  stackOut_24_0 = stackIn_24_0;
-                  stackOut_24_1 = 0;
-                  stackIn_25_0 = stackOut_24_0;
-                  stackIn_25_1 = stackOut_24_1;
+                  stackIn_25_0 = stackIn_24_0;
+                  stackIn_25_1 = 0;
                   break L29;
                 } else {
-                  stackOut_23_0 = stackIn_23_0;
-                  stackOut_23_1 = 1;
-                  stackIn_25_0 = stackOut_23_0;
-                  stackIn_25_1 = stackOut_23_1;
+                  stackIn_25_0 = stackIn_24_0;
+                  stackIn_25_1 = 1;
                   break L29;
                 }
               }
@@ -2568,7 +2489,7 @@ final class eg extends um {
     }
 
     eg(eg param0, boolean param1, boolean param2, boolean param3, boolean param4) {
-        int var6 = 0;
+        int var6;
         L0: {
           this.field_M = 0;
           this.field_B = 0;

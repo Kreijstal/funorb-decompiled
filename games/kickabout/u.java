@@ -28,14 +28,11 @@ final class u implements Runnable {
     }
 
     final synchronized boolean a(byte param0) {
-        String discarded$3 = null;
-        String discarded$4 = null;
-        String discarded$5 = null;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        Throwable decompiledCaughtException = null;
         if (-3 >= (this.field_b ^ -1)) {
           return true;
         } else {
@@ -147,7 +144,7 @@ final class u implements Runnable {
                 }
               } else {
                 L9: {
-                  discarded$3 = u.a(false);
+                  u.a(false);
                   if (null == this.field_i) {
                     this.field_i = this.field_a.a(5, (byte) 125, (Runnable) (this));
                     break L9;
@@ -175,7 +172,7 @@ final class u implements Runnable {
               if (param0 > 45) {
                 break L11;
               } else {
-                discarded$4 = u.a(false);
+                u.a(false);
                 break L11;
               }
             }
@@ -206,7 +203,7 @@ final class u implements Runnable {
               if (param0 > 45) {
                 break L14;
               } else {
-                discarded$5 = u.a(false);
+                u.a(false);
                 break L14;
               }
             }

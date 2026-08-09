@@ -18,14 +18,13 @@ final class ah extends gh {
     gh field_ec;
 
     public static void b(boolean param0) {
-        Object discarded$2 = null;
-        byte[] var2 = null;
+        byte[] var2;
         field_Yb = null;
         field_Zb = null;
         field_Xb = null;
         if (param0) {
           var2 = (byte[]) null;
-          discarded$2 = ah.a(false, (byte[]) null, 18);
+          ah.a(false, (byte[]) null, 18);
           field_fc = null;
           field_Sb = null;
           return;
@@ -71,8 +70,6 @@ final class ah extends gh {
         ge stackIn_5_0 = null;
         byte[] stackIn_10_0 = null;
         byte[] stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -80,17 +77,6 @@ final class ah extends gh {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_11_0 = null;
-        byte[] stackOut_9_0 = null;
-        ge stackOut_4_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             if (param1 != null) {
@@ -104,21 +90,18 @@ final class ah extends gh {
                   }
                 }
                 if (param0) {
-                  stackOut_11_0 = ff.a((byte) 89, param1);
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = ff.a((byte) 89, param1);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  stackOut_9_0 = (byte[]) (param1);
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = (byte[]) (param1);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
               } else {
                 var3 = new ge();
                 ((gb) ((Object) var3)).a((byte) -62, param1);
-                stackOut_4_0 = (ge) (var3);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (ge) (var3);
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -130,27 +113,19 @@ final class ah extends gh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3_ref);
-            stackOut_13_1 = new StringBuilder().append("ah.D(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3_ref);
+
+            stackIn_15_1 = new StringBuilder().append("ah.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L2;
             }
           }
@@ -168,7 +143,7 @@ final class ah extends gh {
     }
 
     final static void a(boolean param0, int param1) {
-        cm var3 = null;
+        cm var3;
         if (je.field_t > 0) {
           if (im.field_b) {
             L0: {

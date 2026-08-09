@@ -64,19 +64,15 @@ final class co extends qm {
 
     final static int i(int param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            ng var2 = null;
             int stackIn_16_0 = 0;
             int stackIn_26_0 = 0;
             int stackIn_30_0 = 0;
             int stackIn_35_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_15_0 = 0;
-            int stackOut_29_0 = 0;
-            int stackOut_25_0 = 0;
-            int stackOut_34_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            ng var2 = null;
             if (param0 == 1) {
               if ((oi.field_d.field_j ^ -1) <= -5) {
                 if (0 != (oi.field_d.field_p ^ -1)) {
@@ -103,8 +99,7 @@ final class co extends qm {
                     L2: {
                       if ((jh.field_e ^ -1) == -2) {
                         if (ci.field_k.field_a == 2) {
-                          stackOut_15_0 = se.a(-1, (byte) -114);
-                          stackIn_16_0 = stackOut_15_0;
+                          stackIn_16_0 = se.a(-1, (byte) -114);
                           decompiledRegionSelector0 = 0;
                           break L0;
                         } else {
@@ -141,8 +136,7 @@ final class co extends qm {
                         if (-1 > (so.field_c.c(0) ^ -1)) {
                           var1_int = so.field_c.b(param0 + 4);
                           if (-1 != (var1_int ^ -1)) {
-                            stackOut_29_0 = se.a(var1_int, (byte) -105);
-                            stackIn_30_0 = stackOut_29_0;
+                            stackIn_30_0 = se.a(var1_int, (byte) -105);
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
@@ -153,8 +147,7 @@ final class co extends qm {
                           if ((lo.a((byte) -49) ^ -1L) >= (se.field_f ^ -1L)) {
                             break L4;
                           } else {
-                            stackOut_25_0 = se.a(-2, (byte) -103);
-                            stackIn_26_0 = stackOut_25_0;
+                            stackIn_26_0 = se.a(-2, (byte) -103);
                             decompiledRegionSelector0 = 1;
                             break L0;
                           }
@@ -166,8 +159,7 @@ final class co extends qm {
                       jh.field_e = 0;
                       so.field_c = null;
                       ci.field_k = null;
-                      stackOut_34_0 = 0;
-                      stackIn_35_0 = stackOut_34_0;
+                      stackIn_35_0 = 0;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
@@ -222,7 +214,6 @@ final class co extends qm {
     }
 
     private final dl a(int param0, int param1, int param2) {
-        int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -230,87 +221,41 @@ final class co extends qm {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        dl var14 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        var13 = CrazyCrystals.field_B;
-        var14 = new dl(param2 * this.field_v, this.field_f);
+        int var13 = CrazyCrystals.field_B;
+        dl var14 = new dl(param2 * this.field_v, this.field_f);
         em.a((byte) 38, var14);
-        var5 = this.field_f >> -532707999;
-        var6 = 0;
-        L0: while (true) {
-          if (var6 >= this.field_f) {
-            lg.a(1);
-            return var14;
-          } else {
-            L1: {
-              var7 = (var6 >> 1335492129) * (-1 + 2 * this.field_v) % (this.field_v * 2);
-              var8 = 16711935 & param0;
-              var9 = param0 & 65280;
-              var10 = -var5 + var6;
-              var11 = 128 - -(int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5));
-              if (var11 < 256) {
-                stackOut_4_0 = (var11 * var9 & 16711680 | var11 * var8 & -16711936) >>> 2063061512;
-                stackIn_5_0 = stackOut_4_0;
-                break L1;
-              } else {
-                stackOut_3_0 = var8 | var9;
-                stackIn_5_0 = stackOut_3_0;
-                break L1;
-              }
-            }
-            L2: {
-              var12 = stackIn_5_0;
-              kh.f(var7, var6, this.field_v, var12);
-              kh.f(-(this.field_v * 2) + var7, var6, this.field_v, var12);
-              var9 = param1 & 65280;
-              var8 = param1 & 16711935;
-              if (256 <= var11) {
-                stackOut_7_0 = var9 | var8;
-                stackIn_8_0 = stackOut_7_0;
-                break L2;
-              } else {
-                stackOut_6_0 = (16711680 & var9 * var11 | var8 * var11 & -16711936) >>> -793446712;
-                stackIn_8_0 = stackOut_6_0;
-                break L2;
-              }
-            }
-            var12 = stackIn_8_0;
+        int var5 = this.field_f >> -532707999;
+        for (var6 = 0; var6 < this.field_f; var6++) {
+            var7 = (var6 >> 1335492129) * (-1 + 2 * this.field_v) % (this.field_v * 2);
+            var8 = 16711935 & param0;
+            var9 = param0 & 65280;
+            var10 = -var5 + var6;
+            var11 = 128 - -(int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5));
+            var12 = var11 >= 256 ? var8 | var9 : (var11 * var9 & 16711680 | var11 * var8 & -16711936) >>> 2063061512;
+            kh.f(var7, var6, this.field_v, var12);
+            kh.f(-(this.field_v * 2) + var7, var6, this.field_v, var12);
+            var9 = param1 & 65280;
+            var8 = param1 & 16711935;
+            var12 = 256 > var11 ? (16711680 & var9 * var11 | var8 * var11 & -16711936) >>> -793446712 : var9 | var8;
             kh.f(this.field_v + var7, var6, this.field_v, var12);
             kh.f(-this.field_v + var7, var6, this.field_v, var12);
-            var6++;
-            continue L0;
-          }
         }
+        lg.a(1);
+        return var14;
     }
 
     private final void a(byte param0, dl param1, int param2, int param3) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var8 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -374,27 +319,19 @@ final class co extends qm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var5);
-            stackOut_16_1 = new StringBuilder().append("co.A(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var5);
+
+            stackIn_18_1 = new StringBuilder().append("co.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L6;
             }
           }
@@ -436,11 +373,11 @@ final class co extends qm {
     }
 
     final static void d(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        fq var6 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        fq var6;
         L0: {
           var5 = CrazyCrystals.field_B;
           if (param0 <= -50) {

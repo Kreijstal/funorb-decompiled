@@ -21,12 +21,11 @@ final class df {
     }
 
     public static void a(byte param0) {
-        int discarded$0 = 0;
         field_a = null;
         field_c = null;
         field_b = null;
         if (param0 > -106) {
-            discarded$0 = df.a(true);
+            df.a(true);
         }
     }
 

@@ -45,7 +45,6 @@ final class ou extends fd {
     }
 
     final static void a(byte param0, sj param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         kk var5 = null;
@@ -54,22 +53,13 @@ final class ou extends fd {
         ml var8 = null;
         int var9 = 0;
         ml var10 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var2 = null;
         var7 = Kickabout.field_G;
         try {
           L0: {
@@ -119,27 +109,19 @@ final class ou extends fd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var2);
-            stackOut_10_1 = new StringBuilder().append("ou.H(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var2);
+
+            stackIn_12_1 = new StringBuilder().append("ou.H(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -148,13 +130,6 @@ final class ou extends fd {
     }
 
     private final void a(ut param0, int param1, byte param2, int param3) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -162,14 +137,11 @@ final class ou extends fd {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var8 = Kickabout.field_G;
         try {
           L0: {
@@ -231,27 +203,19 @@ final class ou extends fd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var5);
-            stackOut_14_1 = new StringBuilder().append("ou.F(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var5);
+
+            stackIn_16_1 = new StringBuilder().append("ou.F(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L5;
             }
           }
@@ -293,7 +257,6 @@ final class ou extends fd {
     }
 
     private final ut a(int param0, int param1, int param2) {
-        int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -301,67 +264,30 @@ final class ou extends fd {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        ut var14 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        var13 = Kickabout.field_G;
-        var14 = new ut(this.field_G * 2, this.field_i);
+        int var13 = Kickabout.field_G;
+        ut var14 = new ut(this.field_G * 2, this.field_i);
         iw.a(-66, var14);
-        if (param0 == -257) {
-          var5 = this.field_i >> 1602903777;
-          var6 = 0;
-          L0: while (true) {
-            if (this.field_i <= var6) {
-              ta.e(122);
-              return var14;
-            } else {
-              L1: {
-                var7 = (2 * this.field_G + -1) * (var6 >> -102644607) % (this.field_G * 2);
-                var8 = param2 & 16711935;
-                var9 = param2 & 65280;
-                var10 = var6 - var5;
-                var11 = (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0) + 128;
-                if (-257 < (var11 ^ -1)) {
-                  stackOut_6_0 = (var11 * var8 & -16711936 | 16711680 & var9 * var11) >>> -924534296;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = var8 | var9;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              L2: {
-                var12 = stackIn_7_0;
-                on.f(var7, var6, this.field_G, var12);
-                var9 = 65280 & param1;
-                on.f(-(this.field_G * 2) + var7, var6, this.field_G, var12);
-                var8 = param1 & 16711935;
-                if (256 <= var11) {
-                  stackOut_9_0 = var8 | var9;
-                  stackIn_10_0 = stackOut_9_0;
-                  break L2;
-                } else {
-                  stackOut_8_0 = (-16711936 & var11 * var8 | var11 * var9 & 16711680) >>> 773111592;
-                  stackIn_10_0 = stackOut_8_0;
-                  break L2;
-                }
-              }
-              var12 = stackIn_10_0;
-              on.f(var7 - -this.field_G, var6, this.field_G, var12);
-              on.f(-this.field_G + var7, var6, this.field_G, var12);
-              var6++;
-              continue L0;
-            }
-          }
-        } else {
-          return (ut) null;
+        if (param0 != -257) {
+            return (ut) null;
         }
+        int var5 = this.field_i >> 1602903777;
+        for (var6 = 0; this.field_i > var6; var6++) {
+            var7 = (2 * this.field_G + -1) * (var6 >> -102644607) % (this.field_G * 2);
+            var8 = param2 & 16711935;
+            var9 = param2 & 65280;
+            var10 = var6 - var5;
+            var11 = (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0) + 128;
+            var12 = -257 >= (var11 ^ -1) ? var8 | var9 : (var11 * var8 & -16711936 | 16711680 & var9 * var11) >>> -924534296;
+            on.f(var7, var6, this.field_G, var12);
+            var9 = 65280 & param1;
+            on.f(-(this.field_G * 2) + var7, var6, this.field_G, var12);
+            var8 = param1 & 16711935;
+            var12 = 256 > var11 ? (-16711936 & var11 * var8 | var11 * var9 & 16711680) >>> 773111592 : var8 | var9;
+            on.f(var7 - -this.field_G, var6, this.field_G, var12);
+            on.f(-this.field_G + var7, var6, this.field_G, var12);
+        }
+        ta.e(122);
+        return var14;
     }
 
     ou(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -369,7 +295,6 @@ final class ou extends fd {
     }
 
     final static int b(int param0, int param1, int param2, int param3) {
-        int discarded$0 = 0;
         if (!(on.field_g < param1 + param0)) {
             return param1;
         }
@@ -377,7 +302,7 @@ final class ou extends fd {
             return -param0 + (param1 - -param2);
         }
         if (param3 < 126) {
-            discarded$0 = ou.b(80, 123, -76, -16);
+            ou.b(80, 123, -76, -16);
         }
         return -param0 + on.field_g;
     }
@@ -400,23 +325,13 @@ final class ou extends fd {
     }
 
     final void a(byte param0, fd param1, int param2, int param3) {
-        RuntimeException var5 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -428,46 +343,41 @@ final class ou extends fd {
               }
             }
             L2: {
-              if (!this.field_w) {
-                break L2;
-              } else {
-                this.field_H = this.field_H + 1;
-                if (this.field_H > this.field_G * 2) {
-                  this.field_H = this.field_H - this.field_G * 2;
-                  break L2;
+              L3: {
+                if (!this.field_w) {
+                  break L3;
                 } else {
-                  break L2;
+                  this.field_H = this.field_H + 1;
+                  if (this.field_H > this.field_G * 2) {
+                    this.field_H = this.field_H - this.field_G * 2;
+                    break L3;
+                  } else {
+                    break L2;
+                  }
                 }
               }
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var5);
-            stackOut_7_1 = new StringBuilder().append("ou.P(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var5);
+
+            stackIn_9_1 = new StringBuilder().append("ou.P(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
+              break L4;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L3;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
+              break L4;
             }
           }
           throw nb.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');

@@ -14,10 +14,11 @@ final class cb {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
+        int var2;
         L0: {
           var2 = 96 / ((param0 - -21) / 54);
           if (null != this.field_a) {
+            this.field_a.a(1618);
             this.field_a = null;
             break L0;
           } else {
@@ -26,6 +27,7 @@ final class cb {
         }
         L1: {
           if (this.field_c != null) {
+            this.field_c.a(1618);
             this.field_c = null;
             break L1;
           } else {
@@ -33,6 +35,7 @@ final class cb {
           }
         }
         if (this.field_b != null) {
+          this.field_b.a(1618);
           this.field_b = null;
           return;
         } else {

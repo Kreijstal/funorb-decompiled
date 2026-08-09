@@ -74,14 +74,14 @@ final class gb extends ug {
     }
 
     final void c(byte param0) {
-        float[] var2 = null;
-        float var3 = 0.0f;
-        float[] var4 = null;
-        float[] var5 = null;
-        float[] var6 = null;
-        float[] var7 = null;
-        float[] var8 = null;
-        float[] var9 = null;
+        float[] var2;
+        float var3;
+        float[] var4;
+        float[] var5;
+        float[] var6;
+        float[] var7;
+        float[] var8;
+        float[] var9;
         if (param0 != 122) {
           L0: {
             L1: {

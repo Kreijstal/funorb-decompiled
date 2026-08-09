@@ -5,9 +5,8 @@ import java.io.*;
 
 final class dg {
     final static String a(boolean param0) {
-        String discarded$3 = null;
         if (param0) {
-            discarded$3 = dg.a(false);
+            dg.a(false);
             if (bk.field_c == ca.field_i) {
                 return ce.field_d;
             }
@@ -41,14 +40,12 @@ final class dg {
 
     final static boolean a(boolean param0, boolean param1) {
         try {
-            long dupTemp$2 = 0L;
+            long dupTemp$1 = 0L;
             IOException var2 = null;
             th var4 = null;
             th var5 = null;
             int stackIn_11_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_10_0 = 0;
-            int stackOut_9_0 = 0;
             if (param1) {
               L0: {
                 if (null != al.field_H) {
@@ -61,9 +58,9 @@ final class dg {
               if (0 == al.field_H.field_b) {
                 return false;
               } else {
-                dupTemp$2 = rf.c(0);
-                p.field_c = dupTemp$2;
-                ta.field_e = dupTemp$2;
+                dupTemp$1 = rf.c(0);
+                p.field_c = dupTemp$1;
+                ta.field_e = dupTemp$1;
                 if ((al.field_H.field_b ^ -1) != -2) {
                   uf.field_m = rh.field_r;
                   al.field_H = null;
@@ -77,12 +74,10 @@ final class dg {
                         var5 = var4;
                         ed.field_q.field_h = 0;
                         if (!param0) {
-                          stackOut_10_0 = -1;
-                          stackIn_11_0 = stackOut_10_0;
+                          stackIn_11_0 = -1;
                           break L2;
                         } else {
-                          stackOut_9_0 = -2;
-                          stackIn_11_0 = stackOut_9_0;
+                          stackIn_11_0 = -2;
                           break L2;
                         }
                       }
@@ -123,60 +118,143 @@ final class dg {
     }
 
     final static void a(int param0) {
+        RuntimeException runtimeException = null;
         db var1 = null;
-        RuntimeException var1_ref = null;
         db var2 = null;
         int var3 = 0;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var4 = Lexicominos.field_L ? 1 : 0;
-        try {
-          L0: {
-            var1 = new db(540, 140);
-            de.a(var1, 6);
-            k.b();
-            lf.a();
-            mc.field_k = 0;
-            rg.b(0);
-            var2 = var1.c();
-            var3 = 0;
-            L1: while (true) {
-              L2: {
-                if (var3 >= 15) {
-                  t.field_a.b();
-                  var1.f(0, 0);
-                  break L2;
-                } else {
-                  var2.c(-2, -2, 16777215);
-                  lf.d(4, 4, 0, 0, 540, 140);
-                  var3++;
-                  if (var4 != 0) {
-                    break L2;
-                  } else {
-                    continue L1;
-                  }
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = Lexicominos.field_L ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
-              if (param0 == 19681) {
-                pd.a(-22949);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
+                case 1: {
+                    try {
+                        var1 = new db(540, 140);
+                        de.a(var1, 6);
+                        k.b();
+                        lf.a();
+                        mc.field_k = 0;
+                        rg.b(0);
+                        var2 = var1.c();
+                        var3 = 0;
+                        statePc = 2;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        if (var3 >= 15) {
+                            statePc = 6;
+                        } else {
+                            statePc = 3;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        var2.c(-2, -2, 16777215);
+                        lf.d(4, 4, 0, 0, 540, 140);
+                        var3++;
+                        if (var4 != 0) {
+                            statePc = 7;
+                        } else {
+                            statePc = 4;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        if (var4 == 0) {
+                            statePc = 2;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        statePc = 6;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        t.field_a.b();
+                        var1.f(0, 0);
+                        statePc = 7;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        if (param0 == 19681) {
+                            statePc = 9;
+                        } else {
+                            statePc = 8;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    return;
+                }
+                case 9: {
+                    try {
+                        pd.a(-22949);
+                        statePc = 12;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_9) {
+                        caughtException = stateCaught_9;
+                        statePc = 11;
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    runtimeException = (RuntimeException) ((Object) caughtException);
+                    throw ld.a((Throwable) ((Object) runtimeException), "dg.C(" + param0 + ')');
+                }
+                case 12: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw ld.a((Throwable) ((Object) var1_ref), "dg.C(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

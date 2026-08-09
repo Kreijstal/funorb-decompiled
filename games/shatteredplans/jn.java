@@ -11,7 +11,7 @@ final class jn extends Exception {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1;
         if (param0 == 11615) {
           if (wm.field_b < 224) {
             var1 = wm.field_b % 32;

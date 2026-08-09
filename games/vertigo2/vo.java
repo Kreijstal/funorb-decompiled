@@ -16,14 +16,12 @@ final class vo extends va {
 
     final static r a(boolean param0, int param1, int param2, int param3, boolean param4, boolean param5) {
         try {
-            tp discarded$2 = null;
             Object var6 = null;
             Object var7 = null;
             uk var8 = null;
             String var9 = null;
             r stackIn_17_0 = null;
             Throwable decompiledCaughtException = null;
-            r stackOut_16_0 = null;
             try {
               L0: {
                 L1: {
@@ -77,12 +75,11 @@ final class vo extends va {
                     break L6;
                   } else {
                     var9 = (String) null;
-                    discarded$2 = vo.a((String) null, 52);
+                    vo.a((String) null, 52);
                     break L6;
                   }
                 }
-                stackOut_16_0 = new r(var8, param5, param2);
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_0 = new r(var8, param5, param2);
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -113,7 +110,6 @@ final class vo extends va {
 
     final static tp a(String param0, int param1) {
         String var2 = null;
-        RuntimeException var2_ref = null;
         tp var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -121,8 +117,6 @@ final class vo extends va {
         CharSequence var7 = null;
         Object stackIn_12_0 = null;
         tp stackIn_19_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -130,16 +124,7 @@ final class vo extends va {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        tp stackOut_18_0 = null;
-        Object stackOut_11_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        RuntimeException var2_ref = null;
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -163,8 +148,7 @@ final class vo extends va {
                         var7 = (CharSequence) ((Object) var3.field_Mb);
                         var4 = rc.a(var7, param1 + 320);
                         if (var4.equals(var2)) {
-                          stackOut_18_0 = (tp) (var3);
-                          stackIn_19_0 = stackOut_18_0;
+                          stackIn_19_0 = (tp) (var3);
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -176,8 +160,7 @@ final class vo extends va {
                       }
                     }
                   } else {
-                    stackOut_11_0 = null;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = null;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -195,27 +178,19 @@ final class vo extends va {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2_ref);
-            stackOut_22_1 = new StringBuilder().append("vo.E(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2_ref);
+
+            stackIn_24_1 = new StringBuilder().append("vo.E(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L3;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L3;
             }
           }
@@ -237,8 +212,8 @@ final class vo extends va {
     }
 
     final static void c(byte param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var2 = Vertigo2.field_L ? 1 : 0;
         eg.field_t = null;
         if (param0 == 117) {
@@ -274,16 +249,9 @@ final class vo extends va {
     }
 
     public final void a(boolean param0, int param1, boolean param2, iq param3, int param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
         int stackIn_8_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -291,39 +259,24 @@ final class vo extends va {
         String stackIn_24_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
         try {
           L0: {
             if (param2) {
               L1: {
                 if (!param3.field_p) {
                   if (param3.f(110)) {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = 1;
                     break L1;
                   } else {
-                    stackOut_5_0 = 0;
-                    stackIn_8_0 = stackOut_5_0;
+                    stackIn_8_0 = 0;
                     break L1;
                   }
                 } else {
-                  stackOut_3_0 = 1;
-                  stackIn_8_0 = stackOut_3_0;
+                  stackIn_8_0 = 1;
                   break L1;
                 }
               }
@@ -339,35 +292,30 @@ final class vo extends va {
               L3: {
                 if (param0) {
                   if (var6_int != 0) {
-                    stackOut_15_0 = this.field_z;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = this.field_z;
                     break L3;
                   } else {
-                    stackOut_14_0 = this.field_t;
-                    stackIn_16_0 = stackOut_14_0;
+                    stackIn_16_0 = this.field_t;
                     break L3;
                   }
                 } else {
-                  stackOut_12_0 = this.field_B;
-                  stackIn_16_0 = stackOut_12_0;
+                  stackIn_16_0 = this.field_B;
                   break L3;
                 }
               }
               L4: {
                 var7 = stackIn_16_0;
                 if (param0) {
-                  stackOut_18_0 = 16777215;
-                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_0 = 16777215;
                   break L4;
                 } else {
-                  stackOut_17_0 = 7105644;
-                  stackIn_19_0 = stackOut_17_0;
+                  stackIn_19_0 = 7105644;
                   break L4;
                 }
               }
               var8 = stackIn_19_0;
               s.a((byte) 49, this.field_w, (param3.field_s + -this.field_w[0].field_B >> -120277663) + param4 - -param3.field_t, param3.field_n, param3.field_o + param1, var7);
-              discarded$1 = this.field_l.a(param3.field_w, param1 - -param3.field_o, -2 + (param4 - -param3.field_t), param3.field_n, param3.field_s, var8, -1, 1, 1, this.field_l.field_z);
+              this.field_l.a(param3.field_w, param1 - -param3.field_o, -2 + (param4 - -param3.field_t), param3.field_n, param3.field_s, var8, -1, 1, 1, this.field_l.field_z);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
@@ -379,27 +327,19 @@ final class vo extends va {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var6);
-            stackOut_21_1 = new StringBuilder().append("vo.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var6);
+
+            stackIn_23_1 = new StringBuilder().append("vo.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L5;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L5;
             }
           }

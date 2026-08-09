@@ -53,8 +53,8 @@ final class oe {
     }
 
     final void b(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         if (null == ba.field_f) {
           if ((af.field_c ^ -1) < -1) {
             if (!this.field_n) {
@@ -116,9 +116,9 @@ final class oe {
               }
             } else {
               if (param0 < -40) {
-                fieldTemp$2 = this.field_k - 1;
+                fieldTemp$0 = this.field_k - 1;
                 this.field_k = this.field_k - 1;
-                if (fieldTemp$2 <= 0) {
+                if (fieldTemp$0 <= 0) {
                   this.field_k = this.field_c;
                   if (this.field_h > gb.field_i) {
                     this.field_n = false;
@@ -201,9 +201,9 @@ final class oe {
               }
             } else {
               if (param0 < -40) {
-                fieldTemp$3 = this.field_k - 1;
+                fieldTemp$1 = this.field_k - 1;
                 this.field_k = this.field_k - 1;
-                if (fieldTemp$3 <= 0) {
+                if (fieldTemp$1 <= 0) {
                   this.field_k = this.field_c;
                   if (this.field_h > gb.field_i) {
                     this.field_n = false;
@@ -242,65 +242,194 @@ final class oe {
     }
 
     final static void a(byte param0) {
+        RuntimeException runtimeException = null;
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var2 = MonkeyPuzzle2.field_F ? 1 : 0;
-        try {
-          L0: {
-            ne.field_c.a(true);
-            var1_int = 0;
-            L1: while (true) {
-              L2: {
-                L3: {
-                  if ((var1_int ^ -1) <= -33) {
-                    break L3;
-                  } else {
-                    dl.field_a[var1_int] = 0L;
-                    var1_int++;
-                    if (var2 != 0) {
-                      break L2;
-                    } else {
-                      if (var2 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var2 = MonkeyPuzzle2.field_F ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    try {
+                        ne.field_c.a(true);
+                        var1_int = 0;
+                        statePc = 2;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 15;
+                        continue stateLoop;
                     }
-                  }
                 }
-                if (param0 > 100) {
-                  break L2;
-                } else {
-                  oe.d(-61);
-                  break L2;
-                }
-              }
-              var1_int = 0;
-              L4: while (true) {
-                L5: {
-                  if (var1_int >= 32) {
-                    bg.field_E = 0;
-                    break L5;
-                  } else {
-                    ve.field_w[var1_int] = 0L;
-                    var1_int++;
-                    if (var2 != 0) {
-                      break L5;
-                    } else {
-                      continue L4;
+                case 2: {
+                    try {
+                        if ((var1_int ^ -1) <= -33) {
+                            statePc = 6;
+                        } else {
+                            statePc = 3;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 15;
+                        continue stateLoop;
                     }
-                  }
                 }
-                break L0;
-              }
+                case 3: {
+                    try {
+                        dl.field_a[var1_int] = 0L;
+                        var1_int++;
+                        if (var2 != 0) {
+                            statePc = 8;
+                        } else {
+                            statePc = 4;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        if (var2 == 0) {
+                            statePc = 2;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        statePc = 6;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        if (param0 > 100) {
+                            statePc = 8;
+                        } else {
+                            statePc = 7;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        oe.d(-61);
+                        statePc = 8;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        var1_int = 0;
+                        statePc = 9;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 9: {
+                    try {
+                        if (var1_int >= 32) {
+                            statePc = 13;
+                        } else {
+                            statePc = 10;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_9) {
+                        caughtException = stateCaught_9;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    try {
+                        ve.field_w[var1_int] = 0L;
+                        var1_int++;
+                        if (var2 != 0) {
+                            statePc = 16;
+                        } else {
+                            statePc = 11;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_10) {
+                        caughtException = stateCaught_10;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    try {
+                        if (var2 == 0) {
+                            statePc = 9;
+                        } else {
+                            statePc = 12;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_11) {
+                        caughtException = stateCaught_11;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 12: {
+                    try {
+                        statePc = 13;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_12) {
+                        caughtException = stateCaught_12;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 13: {
+                    try {
+                        bg.field_E = 0;
+                        statePc = 16;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_13) {
+                        caughtException = stateCaught_13;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 15: {
+                    runtimeException = (RuntimeException) ((Object) caughtException);
+                    throw la.a((Throwable) ((Object) runtimeException), "oe.F(" + param0 + ')');
+                }
+                case 16: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw la.a((Throwable) ((Object) var1), "oe.F(" + param0 + ')');
         }
     }
 
@@ -316,10 +445,10 @@ final class oe {
     }
 
     private final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         var2 = this.field_j;
         var3 = this.field_f;

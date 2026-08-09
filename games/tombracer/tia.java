@@ -104,24 +104,24 @@ final class tia {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var6_int = 0;
-        RuntimeException var6 = null;
         int[] var7 = null;
         int var8 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             if (!param5) {
-              incrementValue$4 = param1;
+              incrementValue$2 = param1;
               param1++;
-              nra.a((byte) -55, param3, param2, vaa.field_a[incrementValue$4], param4);
-              incrementValue$5 = param0;
+              nra.a((byte) -55, param3, param2, vaa.field_a[incrementValue$2], param4);
+              incrementValue$3 = param0;
               param0--;
-              nra.a((byte) -55, param3, param2, vaa.field_a[incrementValue$5], param4);
+              nra.a((byte) -55, param3, param2, vaa.field_a[incrementValue$3], param4);
               var6_int = param1;
               L1: while (true) {
                 if (param0 < var6_int) {
@@ -132,11 +132,7 @@ final class tia {
                   var7[param2] = param3;
                   var7[param4] = param3;
                   var6_int++;
-                  if (var8 == 0) {
-                    continue L1;
-                  } else {
-                    return;
-                  }
+                  continue L1;
                 }
               }
             } else {

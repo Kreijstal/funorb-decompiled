@@ -6,29 +6,10 @@ final class aa {
     static String field_a;
 
     final static void a(boolean param0) {
-        int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        L0: {
-          if (null != fj.field_u) {
-            L1: {
-              if (param0) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L1;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L1;
-              }
-            }
-            c.a(stackIn_5_0 != 0, fj.field_u);
+        if (!(null == fj.field_u)) {
+            c.a(!param0 ? true : false, fj.field_u);
             fj.field_u = null;
             am.g(-4258);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         ka.field_N = cc.a(1, -14245);
         gj.field_a = cc.a(2, -14245);

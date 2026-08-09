@@ -13,6 +13,7 @@ final class lra extends ora implements va {
         try {
             this.a(param3, param1);
             if (param2 > -109) {
+                this.b(-37);
             }
             this.field_h = param0;
         } catch (RuntimeException runtimeException) {
@@ -35,9 +36,8 @@ final class lra extends ora implements va {
     }
 
     public final int a(boolean param0) {
-        int discarded$0 = 0;
         if (!param0) {
-            discarded$0 = this.a(-89);
+            this.a(-89);
             return 0;
         }
         return 0;

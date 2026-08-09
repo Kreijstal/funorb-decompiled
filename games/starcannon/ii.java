@@ -24,10 +24,9 @@ final class ii extends RuntimeException {
     }
 
     public static void b(byte param0) {
-        int discarded$0 = 0;
         field_c = null;
         if (param0 <= 40) {
-            discarded$0 = ii.a(78);
+            ii.a(78);
         }
     }
 

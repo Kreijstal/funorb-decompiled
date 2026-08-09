@@ -9,9 +9,9 @@ final class og {
     private hl field_b;
 
     final hl a(byte param0, long param1) {
-        hl var4 = null;
-        hl var5 = null;
-        int var6 = 0;
+        hl var4;
+        hl var5;
+        int var6;
         var6 = HoldTheLine.field_D;
         if (param0 >= 111) {
           var4 = this.field_a[(int)(param1 & (long)(this.field_d + -1))];
@@ -69,13 +69,13 @@ final class og {
     }
 
     final hl b(int param0) {
-        int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var3 = 0;
-        hl var4 = null;
-        hl var5 = null;
-        hl var6 = null;
-        hl var9 = null;
+        int fieldTemp$4 = 0;
+        int var3;
+        hl var4;
+        hl var5;
+        hl var6;
+        hl var9;
         var3 = HoldTheLine.field_D;
         if (0 < this.field_e) {
           if (this.field_a[-1 + this.field_e] == this.field_c) {
@@ -88,9 +88,9 @@ final class og {
                   return null;
                 }
               } else {
-                fieldTemp$2 = this.field_e;
+                fieldTemp$3 = this.field_e;
                 this.field_e = this.field_e + 1;
-                var4 = this.field_a[fieldTemp$2].field_h;
+                var4 = this.field_a[fieldTemp$3].field_h;
                 var6 = var4;
                 if (var4 != this.field_a[-1 + this.field_e]) {
                   this.field_c = var6.field_h;
@@ -115,9 +115,9 @@ final class og {
                 return null;
               }
             } else {
-              fieldTemp$3 = this.field_e;
+              fieldTemp$4 = this.field_e;
               this.field_e = this.field_e + 1;
-              var4 = this.field_a[fieldTemp$3].field_h;
+              var4 = this.field_a[fieldTemp$4].field_h;
               var5 = var4;
               if (var4 != this.field_a[-1 + this.field_e]) {
                 this.field_c = var5.field_h;
@@ -131,18 +131,18 @@ final class og {
     }
 
     og(int param0) {
-        hl dupTemp$2 = null;
-        int var2 = 0;
-        hl var3 = null;
+        hl dupTemp$1 = null;
+        int var2;
+        hl var3;
         this.field_e = 0;
         this.field_a = new hl[param0];
         this.field_d = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new hl();
-            var3 = dupTemp$2;
-            this.field_a[var2] = dupTemp$2;
+            dupTemp$1 = new hl();
+            var3 = dupTemp$1;
+            this.field_a[var2] = dupTemp$1;
             var3.field_h = var3;
             var3.field_a = var3;
             var2++;

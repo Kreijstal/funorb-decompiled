@@ -16,10 +16,10 @@ final class qo extends rra {
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var4 = this.field_h * param1 >> -399666100;
         var5 = param1 * this.field_g >> -1930645236;
         var6 = param2 * this.field_j >> 1835988012;

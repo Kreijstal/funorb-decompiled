@@ -15,8 +15,6 @@ final class kra {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         if (!li.field_i) {
           L0: {
             if (-2 <= (param4 ^ -1)) {
@@ -24,12 +22,10 @@ final class kra {
             } else {
               L1: {
                 if (param4 < 255) {
-                  stackOut_8_0 = -param4 + 255;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = -param4 + 255;
                   break L1;
                 } else {
-                  stackOut_7_0 = 0;
-                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_0 = 0;
                   break L1;
                 }
               }

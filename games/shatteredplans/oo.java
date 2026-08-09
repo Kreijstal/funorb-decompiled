@@ -10,9 +10,8 @@ final class oo {
     static String field_d;
 
     final static void a(byte param0) {
-        boolean discarded$2 = false;
         if (param0 > -49) {
-          discarded$2 = oo.a(-77, 49, 26, true, 104);
+          oo.a(-77, 49, 26, true, 104);
           ig.a(7655);
           qj.a((byte) -127, 4);
           return;
@@ -33,7 +32,7 @@ final class oo {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
-        int var9 = 0;
+        int var9;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 >= param3) {
           if (param0 >= param2) {
@@ -95,11 +94,9 @@ final class oo {
     }
 
     final static boolean a(int param0, int param1, int param2, boolean param3, int param4) {
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         var5 = param0 * param0 - -(param1 * param1);
         if (!param3) {
           return true;
@@ -107,12 +104,10 @@ final class oo {
           L0: {
             var6 = param2 * param2 - -(param4 * param4);
             if (var6 <= var5) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L0;
             }
           }

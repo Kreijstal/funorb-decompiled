@@ -8,16 +8,14 @@ final class ud {
     static km field_c;
 
     final synchronized static long a(int param0) {
-        tm[] discarded$4 = null;
-        tm[] discarded$5 = null;
-        long var1 = 0L;
-        jk var3 = null;
+        long var1;
+        jk var3;
         var1 = System.currentTimeMillis();
         if (v.field_a <= var1) {
           v.field_a = var1;
           if (param0 != 2) {
             var3 = (jk) null;
-            discarded$4 = ud.a(-100, (jk) null);
+            ud.a(-100, (jk) null);
             return var1 + cl.field_b;
           } else {
             return var1 + cl.field_b;
@@ -29,7 +27,7 @@ final class ud {
             return var1 + cl.field_b;
           } else {
             var3 = (jk) null;
-            discarded$5 = ud.a(-100, (jk) null);
+            ud.a(-100, (jk) null);
             return var1 + cl.field_b;
           }
         }
@@ -44,7 +42,16 @@ final class ud {
     }
 
     final static tm[] a(int param0, jk param1) {
-        tm[] discarded$1 = null;
+        tm[] stackIn_4_0 = null;
+        tm[] stackIn_10_0 = null;
+        tm[] stackIn_17_0 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
         tm[] var4 = null;
@@ -55,35 +62,11 @@ final class ud {
         nl var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        tm[] stackIn_4_0 = null;
-        tm[] stackIn_10_0 = null;
-        tm[] stackIn_17_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        tm[] stackOut_3_0 = null;
-        tm[] stackOut_16_0 = null;
-        tm[] stackOut_9_0 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
         var7 = Chess.field_G;
         try {
           L0: {
             if (!param1.a(true)) {
-              stackOut_3_0 = new tm[]{};
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = new tm[]{};
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -96,7 +79,7 @@ final class ud {
                         break L2;
                       } else {
                         var8 = (jk) null;
-                        discarded$1 = ud.a(42, (jk) null);
+                        ud.a(42, (jk) null);
                         break L2;
                       }
                     }
@@ -107,8 +90,7 @@ final class ud {
                     var5 = 0;
                     L3: while (true) {
                       if (var4.length <= var5) {
-                        stackOut_16_0 = (tm[]) (var4);
-                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_0 = (tm[]) (var4);
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -123,8 +105,7 @@ final class ud {
                       }
                     }
                   } else {
-                    stackOut_9_0 = new tm[]{};
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = new tm[]{};
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -139,27 +120,19 @@ final class ud {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var2);
-            stackOut_18_1 = new StringBuilder().append("ud.C(").append(param0).append(',');
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var2);
+
+            stackIn_20_1 = new StringBuilder().append("ud.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L4;
             }
           }

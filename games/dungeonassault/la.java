@@ -32,16 +32,12 @@ final class la {
     }
 
     final int b(byte param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
         if (!this.field_k) {
           if (this.field_n != 2) {
             if ((this.field_a ^ -1L) != (rk.field_l ^ -1L)) {
               if (ke.field_d != 2) {
                 if (param0 < 94) {
-                  discarded$4 = this.b((byte) -110);
+                  this.b((byte) -110);
                   return 0;
                 } else {
                   return 0;
@@ -49,7 +45,7 @@ final class la {
               } else {
                 if (!mj.a(this.field_e, (byte) -17)) {
                   if (param0 < 94) {
-                    discarded$5 = this.b((byte) -110);
+                    this.b((byte) -110);
                     return 0;
                   } else {
                     return 0;
@@ -66,7 +62,7 @@ final class la {
               if ((this.field_a ^ -1L) != (rk.field_l ^ -1L)) {
                 if (ke.field_d != 2) {
                   if (param0 < 94) {
-                    discarded$6 = this.b((byte) -110);
+                    this.b((byte) -110);
                     return 0;
                   } else {
                     return 0;
@@ -74,7 +70,7 @@ final class la {
                 } else {
                   if (!mj.a(this.field_e, (byte) -17)) {
                     if (param0 < 94) {
-                      discarded$7 = this.b((byte) -110);
+                      this.b((byte) -110);
                       return 0;
                     } else {
                       return 0;

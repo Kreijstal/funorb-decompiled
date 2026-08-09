@@ -19,9 +19,12 @@ final class laa extends pv {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_23_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -29,11 +32,6 @@ final class laa extends pv {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_23_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
         var14 = BachelorFridge.field_y;
         try {
           L0: {
@@ -61,12 +59,10 @@ final class laa extends pv {
                           L3: {
                             var12 = fn.field_k[var11];
                             if (!param3) {
-                              stackOut_22_0 = uc.field_k[var12];
-                              stackIn_23_0 = stackOut_22_0;
+                              stackIn_23_0 = uc.field_k[var12];
                               break L3;
                             } else {
-                              stackOut_21_0 = gk.field_a[var12];
-                              stackIn_23_0 = stackOut_21_0;
+                              stackIn_23_0 = gk.field_a[var12];
                               break L3;
                             }
                           }
@@ -82,9 +78,9 @@ final class laa extends pv {
                               }
                             } else {
                               fn.field_k[var11] = fn.field_k[var8];
-                              incrementValue$1 = var8;
+                              incrementValue$0 = var8;
                               var8++;
-                              fn.field_k[incrementValue$1] = var12;
+                              fn.field_k[incrementValue$0] = var12;
                               if (var13 < var9) {
                                 var9 = var13;
                                 break L4;
@@ -168,11 +164,11 @@ final class laa extends pv {
     }
 
     final boolean b(boolean param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         L0: {
-          fieldTemp$2 = this.field_g + 1;
+          fieldTemp$1 = this.field_g + 1;
           this.field_g = this.field_g + 1;
-          if (fieldTemp$2 > this.c((byte) 68)) {
+          if (fieldTemp$1 > this.c((byte) 68)) {
             break L0;
           } else {
             if (-1 == (this.field_o ^ -1)) {
@@ -226,9 +222,9 @@ final class laa extends pv {
     }
 
     final static void b(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var1;
+        int var2;
+        int var3;
         L0: {
           var3 = BachelorFridge.field_y;
           eea.field_b = false;

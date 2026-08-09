@@ -23,15 +23,6 @@ final class gh {
     }
 
     final static void a(int param0, int param1, int param2, oh[] param3, int param4) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -39,14 +30,13 @@ final class gh {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
         var10 = TetraLink.field_J;
         try {
           L0: {
@@ -96,27 +86,19 @@ final class gh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var5);
-            stackOut_12_1 = new StringBuilder().append("gh.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var5);
+
+            stackIn_14_1 = new StringBuilder().append("gh.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
@@ -141,8 +123,8 @@ final class gh {
     }
 
     final static String a(CharSequence[] param0, int param1, int param2, int param3) {
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -158,8 +140,6 @@ final class gh {
         String stackIn_9_0 = null;
         String stackIn_11_0 = null;
         String stackIn_25_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
@@ -167,24 +147,11 @@ final class gh {
         String stackIn_29_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        String stackOut_10_0 = null;
-        String stackOut_8_0 = null;
-        String stackOut_24_0 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
         var9 = TetraLink.field_J;
         try {
           L0: {
             if (-1 == (param2 ^ -1)) {
-              stackOut_3_0 = "";
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = "";
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -192,13 +159,11 @@ final class gh {
                 var10 = param0[param1];
                 var4 = var10;
                 if (var4 != null) {
-                  stackOut_10_0 = var10.toString();
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = var10.toString();
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  stackOut_8_0 = "null";
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = "null";
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
@@ -212,18 +177,17 @@ final class gh {
                     var7 = param1;
                     L2: while (true) {
                       if (var7 >= var4_int) {
-                        stackOut_24_0 = var6.toString();
-                        stackIn_25_0 = stackOut_24_0;
+                        stackIn_25_0 = var6.toString();
                         decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
                         L3: {
                           var8 = param0[var7];
                           if (var8 == null) {
-                            discarded$5 = var6.append("null");
+                            discarded$3 = var6.append("null");
                             break L3;
                           } else {
-                            discarded$6 = var6.append(var8);
+                            discarded$4 = var6.append(var8);
                             break L3;
                           }
                         }
@@ -253,27 +217,19 @@ final class gh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var4_ref);
-            stackOut_26_1 = new StringBuilder().append("gh.C(");
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_28_0 = (RuntimeException) (var4_ref);
+
+            stackIn_28_1 = new StringBuilder().append("gh.C(");
+
             if (param0 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L5;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L5;
             }
           }

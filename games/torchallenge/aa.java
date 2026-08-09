@@ -15,9 +15,9 @@ final class aa {
     static int field_g;
 
     final w a(boolean param0, long param1) {
-        w var4 = null;
-        w var5 = null;
-        int var6 = 0;
+        w var4;
+        w var5;
+        int var6;
         var6 = TorChallenge.field_F ? 1 : 0;
         this.field_e = param1;
         var4 = this.field_i[(int)((long)(this.field_d - 1) & param1)];
@@ -55,7 +55,7 @@ final class aa {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var9 = 0;
+        int var9;
         var9 = TorChallenge.field_F ? 1 : 0;
         if (param5 != 0) {
           field_a = 117;
@@ -118,9 +118,9 @@ final class aa {
     }
 
     final w a(byte param0) {
-        w var2 = null;
-        w var3 = null;
-        int var4 = 0;
+        w var2;
+        w var3;
+        int var4;
         var4 = TorChallenge.field_F ? 1 : 0;
         if (null != this.field_j) {
           if (param0 > 122) {

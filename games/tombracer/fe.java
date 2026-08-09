@@ -35,21 +35,14 @@ final class fe extends paa {
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
+        int var6;
         super.a((byte) -31, param1, param2, param3, param4);
         var6 = -130 + param1 >> -556902431;
         if (this.field_G) {
           this.field_E.a((byte) -31, 25, param2, var6, 0);
           this.field_B.a((byte) -31, 25, param2, var6 + 45, 0);
-          if (TombRacer.field_G) {
-            this.field_B.a((byte) -31, 25, param2, var6, 0);
-            this.field_E.a((byte) -31, 25, param2, var6 + 45, 0);
-            this.field_D.a(param0, 40, param2, 90 + var6, 0);
-            return;
-          } else {
-            this.field_D.a(param0, 40, param2, 90 + var6, 0);
-            return;
-          }
+          this.field_D.a(param0, 40, param2, 90 + var6, 0);
+          return;
         } else {
           this.field_B.a((byte) -31, 25, param2, var6, 0);
           this.field_E.a((byte) -31, 25, param2, var6 + 45, 0);
@@ -60,109 +53,24 @@ final class fe extends paa {
 
     private fe(isa param0, boolean param1) {
         super(0, 0, 0, 0, (isa) null);
-        RuntimeException runtimeException = null;
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
-          L0: {
-            L1: {
-              this.field_B = (tra) ((Object) new so("", (qc) null, 2));
-              this.field_E = (tra) ((Object) new so("", (qc) null, 2));
-              this.field_D = (tra) ((Object) new so("", (qc) null, 4));
-              stackOut_1_0 = this;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
-              if (!param1) {
-                stackOut_3_0 = this;
-                stackOut_3_1 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                break L1;
-              } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
-                ((fe) (this)).field_G = stackIn_4_1 != 0;
-                this.field_D.field_r = param0;
-                this.field_E.field_r = param0;
-                this.field_B.field_r = param0;
-                if (this.field_G) {
-                  break L3;
-                } else {
-                  this.a(this.field_B, -1);
-                  this.a(this.field_E, -1);
-                  if (!TombRacer.field_G) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              this.a(this.field_E, -1);
-              this.a(this.field_B, -1);
-              break L2;
+            this.field_B = (tra) ((Object) new so("", (qc) null, 2));
+            this.field_E = (tra) ((Object) new so("", (qc) null, 2));
+            this.field_D = (tra) ((Object) new so("", (qc) null, 4));
+            this.field_G = param1 ? true : false;
+            this.field_D.field_r = param0;
+            this.field_E.field_r = param0;
+            this.field_B.field_r = param0;
+            if (!this.field_G) {
+                this.a(this.field_B, -1);
+                this.a(this.field_E, -1);
+            } else {
+                this.a(this.field_E, -1);
+                this.a(this.field_B, -1);
             }
             this.a(this.field_D, -1);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (runtimeException);
-            stackOut_9_1 = new StringBuilder().append("fe.<init>(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
-            if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L4;
-            } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L4;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "fe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -184,7 +92,6 @@ final class fe extends paa {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         L0: {
           if (param0 == 110) {
             break L0;
@@ -195,8 +102,7 @@ final class fe extends paa {
         }
         try {
           L1: {
-            stackOut_2_0 = Integer.parseInt(this.field_D.field_o);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = Integer.parseInt(this.field_D.field_o);
             break L1;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -236,18 +142,14 @@ final class fe extends paa {
         int stackIn_4_0 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
         try {
           L0: {
             if (param0 > 103) {
-              stackOut_3_0 = Integer.parseInt(this.field_B.field_o);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = Integer.parseInt(this.field_B.field_o);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = -6;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = -6;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -265,7 +167,7 @@ final class fe extends paa {
     }
 
     final boolean i(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = 39 / ((31 - param0) / 33);
         if (this.field_B.field_o != null) {
           if (this.field_B.field_o.length() != 0) {
@@ -310,12 +212,10 @@ final class fe extends paa {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         if (param0 == 22829) {
           try {
             L0: {
-              stackOut_2_0 = Integer.parseInt(this.field_E.field_o) + -1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = Integer.parseInt(this.field_E.field_o) + -1;
               break L0;
             }
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

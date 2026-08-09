@@ -18,11 +18,7 @@ final class aia extends bw {
     }
 
     final static void d(byte param0) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        RuntimeException var1 = null;
-        kv var1_ref = null;
+        kv var1 = null;
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -43,66 +39,29 @@ final class aia extends bw {
         int[] var28 = null;
         int[] var29 = null;
         int[] var30 = null;
-        int stackIn_49_0 = 0;
-        int stackIn_49_1 = 0;
         int stackIn_50_0 = 0;
         int stackIn_50_1 = 0;
         int stackIn_51_0 = 0;
         int stackIn_51_1 = 0;
         int stackIn_51_2 = 0;
-        int stackIn_55_0 = 0;
-        int stackIn_55_1 = 0;
-        int stackIn_55_2 = 0;
         int stackIn_56_0 = 0;
         int stackIn_56_1 = 0;
         int stackIn_56_2 = 0;
-        int stackIn_57_0 = 0;
-        int stackIn_57_1 = 0;
-        int stackIn_57_2 = 0;
-        int stackIn_57_3 = 0;
-        int stackIn_65_0 = 0;
-        int stackIn_65_1 = 0;
-        int stackIn_65_2 = 0;
+        int stackIn_57_0;
+        int stackIn_57_1;
+        int stackIn_57_2;
+        int stackIn_57_3;
         int stackIn_66_0 = 0;
         int stackIn_66_1 = 0;
         int stackIn_66_2 = 0;
-        int stackIn_67_0 = 0;
-        int stackIn_67_1 = 0;
-        int stackIn_67_2 = 0;
-        int stackIn_67_3 = 0;
+        int stackIn_67_0;
+        int stackIn_67_1;
+        int stackIn_67_2;
+        int stackIn_67_3;
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_48_0 = 0;
-        int stackOut_48_1 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_50_1 = 0;
-        int stackOut_50_2 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_49_1 = 0;
-        int stackOut_49_2 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_54_1 = 0;
-        int stackOut_54_2 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_56_1 = 0;
-        int stackOut_56_2 = 0;
-        int stackOut_56_3 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_55_1 = 0;
-        int stackOut_55_2 = 0;
-        int stackOut_55_3 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_64_1 = 0;
-        int stackOut_64_2 = 0;
-        int stackOut_66_0 = 0;
-        int stackOut_66_1 = 0;
-        int stackOut_66_2 = 0;
-        int stackOut_66_3 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_65_1 = 0;
-        int stackOut_65_2 = 0;
-        int stackOut_65_3 = 0;
+        RuntimeException var1_ref = null;
         var10 = BachelorFridge.field_y;
         try {
           L0: {
@@ -173,7 +132,7 @@ final class aia extends bw {
                               break L1;
                             } else {
                               taa.field_m[var7].b();
-                              discarded$3 = g.field_f.a(iaa.field_b[var7], 3, 3, taa.field_m[var7].field_q - 6, -6 + taa.field_m[var7].field_p, bha.field_o, -1, 1, 1, g.field_f.field_B + g.field_f.field_u);
+                              g.field_f.a(iaa.field_b[var7], 3, 3, taa.field_m[var7].field_q - 6, -6 + taa.field_m[var7].field_p, bha.field_o, -1, 1, 1, g.field_f.field_B + g.field_f.field_u);
                               sb.a(0, 3, taa.field_m[var7], taa.field_m[var7].field_p, 0, taa.field_m[var7].field_q, 1, 88);
                               var7++;
                               continue L2;
@@ -264,7 +223,7 @@ final class aia extends bw {
                     od.field_B.g();
                     var9 = new kv(od.field_B.field_n, od.field_B.field_o);
                     var9.b();
-                    discarded$4 = fna.field_q.a(var14, rs.field_c, vc.field_c, ima.field_r, kt.field_j, 16777215, -1, 1, 1, fna.field_q.field_B + fna.field_q.field_u);
+                    fna.field_q.a(var14, rs.field_c, vc.field_c, ima.field_r, kt.field_j, 16777215, -1, 1, 1, fna.field_q.field_B + fna.field_q.field_u);
                     sb.a(0, 3, var9, var9.field_o, 0, var9.field_n, 1, 89);
                     od.field_B.b();
                     var9.e(0, 0);
@@ -296,7 +255,7 @@ final class aia extends bw {
                     var5_ref_String = lga.a(true, new String[]{rr.field_r}, kr.field_wb);
                     rr.field_r = null;
                     var16.b();
-                    discarded$5 = g.field_f.a(var5_ref_String, 3, 3, -6 + var16.field_q, var16.field_p - 6, 16777215, -1, 0, 1, g.field_f.field_u - -g.field_f.field_B);
+                    g.field_f.a(var5_ref_String, 3, 3, -6 + var16.field_q, var16.field_p - 6, 16777215, -1, 0, 1, g.field_f.field_u - -g.field_f.field_B);
                     sb.a(0, 3, var16, var16.field_p, 0, var16.field_q, 1, 120);
                     vh.field_x.b();
                     var16.e(-vh.field_x.field_t + 199, 83 - vh.field_x.field_u);
@@ -376,37 +335,29 @@ final class aia extends bw {
                   if (null != ug.field_o) {
                     L15: {
                       aka.field_E.e(231, 390);
-                      var1_ref = ai.field_a;
+                      var1 = ai.field_a;
                       if (ic.field_i.field_g != 0) {
                         break L15;
                       } else {
-                        var1_ref = baa.field_y;
+                        var1 = baa.field_y;
                         break L15;
                       }
                     }
                     L16: {
-                      var1_ref.e(0, 0);
-                      stackOut_48_0 = 40;
-                      stackOut_48_1 = wga.field_s;
-                      stackIn_50_0 = stackOut_48_0;
-                      stackIn_50_1 = stackOut_48_1;
-                      stackIn_49_0 = stackOut_48_0;
-                      stackIn_49_1 = stackOut_48_1;
+                      var1.e(0, 0);
+                      stackIn_50_0 = 40;
+
+                      stackIn_50_1 = wga.field_s;
+
                       if (ic.field_i.field_g == 0) {
-                        stackOut_50_0 = stackIn_50_0;
-                        stackOut_50_1 = stackIn_50_1;
-                        stackOut_50_2 = 4;
-                        stackIn_51_0 = stackOut_50_0;
-                        stackIn_51_1 = stackOut_50_1;
-                        stackIn_51_2 = stackOut_50_2;
+                        stackIn_51_0 = stackIn_50_0;
+                        stackIn_51_1 = stackIn_50_1;
+                        stackIn_51_2 = 4;
                         break L16;
                       } else {
-                        stackOut_49_0 = stackIn_49_0;
-                        stackOut_49_1 = stackIn_49_1;
-                        stackOut_49_2 = 3;
-                        stackIn_51_0 = stackOut_49_0;
-                        stackIn_51_1 = stackOut_49_1;
-                        stackIn_51_2 = stackOut_49_2;
+                        stackIn_51_0 = stackIn_50_0;
+                        stackIn_51_1 = stackIn_50_1;
+                        stackIn_51_2 = 3;
                         break L16;
                       }
                     }
@@ -417,44 +368,33 @@ final class aia extends bw {
                         aka.field_E.d(232, 389, var2);
                         aka.field_E.d(232, 391, var2);
                         aka.field_E.d(230, 391, var2);
-                        var1_ref.d(1, 1, var2);
-                        var1_ref.d(-1, 1, var2);
-                        var1_ref.d(1, -1, var2);
-                        var1_ref.d(-1, -1, var2);
+                        var1.d(1, 1, var2);
+                        var1.d(-1, 1, var2);
+                        var1.d(1, -1, var2);
+                        var1.d(-1, -1, var2);
                         break L17;
                       } else {
                         break L17;
                       }
                     }
                     L18: {
-                      stackOut_54_0 = qs.field_o;
-                      stackOut_54_1 = et.field_l;
-                      stackOut_54_2 = 91;
-                      stackIn_56_0 = stackOut_54_0;
-                      stackIn_56_1 = stackOut_54_1;
-                      stackIn_56_2 = stackOut_54_2;
-                      stackIn_55_0 = stackOut_54_0;
-                      stackIn_55_1 = stackOut_54_1;
-                      stackIn_55_2 = stackOut_54_2;
+                      stackIn_56_0 = qs.field_o;
+
+                      stackIn_56_1 = et.field_l;
+
+                      stackIn_56_2 = 91;
+
                       if (ic.field_i.field_g != 0) {
-                        stackOut_56_0 = stackIn_56_0;
-                        stackOut_56_1 = stackIn_56_1;
-                        stackOut_56_2 = stackIn_56_2;
-                        stackOut_56_3 = 0;
-                        stackIn_57_0 = stackOut_56_0;
-                        stackIn_57_1 = stackOut_56_1;
-                        stackIn_57_2 = stackOut_56_2;
-                        stackIn_57_3 = stackOut_56_3;
+                        stackIn_57_0 = stackIn_56_0;
+                        stackIn_57_1 = stackIn_56_1;
+                        stackIn_57_2 = stackIn_56_2;
+                        stackIn_57_3 = 0;
                         break L18;
                       } else {
-                        stackOut_55_0 = stackIn_55_0;
-                        stackOut_55_1 = stackIn_55_1;
-                        stackOut_55_2 = stackIn_55_2;
-                        stackOut_55_3 = 1;
-                        stackIn_57_0 = stackOut_55_0;
-                        stackIn_57_1 = stackOut_55_1;
-                        stackIn_57_2 = stackOut_55_2;
-                        stackIn_57_3 = stackOut_55_3;
+                        stackIn_57_0 = stackIn_56_0;
+                        stackIn_57_1 = stackIn_56_1;
+                        stackIn_57_2 = stackIn_56_2;
+                        stackIn_57_3 = 1;
                         break L18;
                       }
                     }
@@ -481,34 +421,23 @@ final class aia extends bw {
                       }
                     }
                     L21: {
-                      stackOut_64_0 = ak.field_u;
-                      stackOut_64_1 = hka.field_h;
-                      stackOut_64_2 = -112;
-                      stackIn_66_0 = stackOut_64_0;
-                      stackIn_66_1 = stackOut_64_1;
-                      stackIn_66_2 = stackOut_64_2;
-                      stackIn_65_0 = stackOut_64_0;
-                      stackIn_65_1 = stackOut_64_1;
-                      stackIn_65_2 = stackOut_64_2;
+                      stackIn_66_0 = ak.field_u;
+
+                      stackIn_66_1 = hka.field_h;
+
+                      stackIn_66_2 = -112;
+
                       if (ic.field_i.field_g != 1) {
-                        stackOut_66_0 = stackIn_66_0;
-                        stackOut_66_1 = stackIn_66_1;
-                        stackOut_66_2 = stackIn_66_2;
-                        stackOut_66_3 = 0;
-                        stackIn_67_0 = stackOut_66_0;
-                        stackIn_67_1 = stackOut_66_1;
-                        stackIn_67_2 = stackOut_66_2;
-                        stackIn_67_3 = stackOut_66_3;
+                        stackIn_67_0 = stackIn_66_0;
+                        stackIn_67_1 = stackIn_66_1;
+                        stackIn_67_2 = stackIn_66_2;
+                        stackIn_67_3 = 0;
                         break L21;
                       } else {
-                        stackOut_65_0 = stackIn_65_0;
-                        stackOut_65_1 = stackIn_65_1;
-                        stackOut_65_2 = stackIn_65_2;
-                        stackOut_65_3 = 1;
-                        stackIn_67_0 = stackOut_65_0;
-                        stackIn_67_1 = stackOut_65_1;
-                        stackIn_67_2 = stackOut_65_2;
-                        stackIn_67_3 = stackOut_65_3;
+                        stackIn_67_0 = stackIn_66_0;
+                        stackIn_67_1 = stackIn_66_1;
+                        stackIn_67_2 = stackIn_66_2;
+                        stackIn_67_3 = 1;
                         break L21;
                       }
                     }
@@ -580,8 +509,8 @@ final class aia extends bw {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "aia.B(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw pe.a((Throwable) ((Object) var1_ref), "aia.B(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

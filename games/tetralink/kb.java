@@ -55,9 +55,9 @@ final class kb extends mc {
     }
 
     final static char a(char param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = TetraLink.field_J;
         var2 = 88 % ((65 - param1) / 58);
         var3 = param0;

@@ -21,9 +21,9 @@ final class kb {
 
     final static void a(int param0, byte param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = stellarshard.field_B;
         try {
           L0: {
@@ -67,23 +67,12 @@ final class kb {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -103,35 +92,26 @@ final class kb {
                 break L2;
               }
             }
-            stackOut_4_0 = var5_int;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = var5_int;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5);
-            stackOut_6_1 = new StringBuilder().append("kb.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5);
+
+            stackIn_8_1 = new StringBuilder().append("kb.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -156,7 +136,6 @@ final class kb {
     }
 
     final void a(byte[] param0, boolean param1, int param2, int param3) throws IOException {
-        int discarded$0 = 0;
         try {
             if (!(this.field_b >= this.field_a + (long)param3)) {
                 this.field_d.seek(this.field_b);
@@ -165,7 +144,7 @@ final class kb {
             }
             this.field_d.write(param0, param2, param3);
             if (param1) {
-                discarded$0 = kb.b((byte) -71);
+                kb.b((byte) -71);
             }
             this.field_a = this.field_a + (long)param3;
         } catch (RuntimeException runtimeException) {
@@ -188,12 +167,12 @@ final class kb {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         L0: {
           var7 = stellarshard.field_B;
           var2 = 0;
@@ -333,24 +312,21 @@ final class kb {
     }
 
     kb(File param0, String param1, long param2) throws IOException {
-        boolean discarded$0 = false;
         int var5_int = 0;
         try {
             if (param2 == -1L) {
                 param2 = 9223372036854775807L;
             }
             if ((param0.length() ^ -1L) < (param2 ^ -1L)) {
-                discarded$0 = param0.delete();
+                param0.delete();
             }
             this.field_d = new RandomAccessFile(param0, param1);
             this.field_a = 0L;
             this.field_b = param2;
             var5_int = this.field_d.read();
-            if ((var5_int ^ -1) != 0) {
-                if (!param1.equals("r")) {
-                    this.field_d.seek(0L);
-                    this.field_d.write(var5_int);
-                }
+            if ((var5_int ^ -1) != 0 && !param1.equals("r")) {
+                this.field_d.seek(0L);
+                this.field_d.write(var5_int);
             }
             this.field_d.seek(0L);
         } catch (RuntimeException runtimeException) {

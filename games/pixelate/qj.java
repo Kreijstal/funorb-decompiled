@@ -26,7 +26,7 @@ final class qj {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        pc var3 = null;
+        pc var3;
         if (param0) {
           qj.a(false);
           var3 = aa.field_f;

@@ -9,7 +9,7 @@ final class nk extends fc {
     static String field_j;
 
     final static void b(boolean param0) {
-        vg var1 = null;
+        vg var1;
         var1 = (vg) ((Object) gd.field_q.c((byte) -123));
         if (param0) {
           L0: {
@@ -40,7 +40,7 @@ final class nk extends fc {
     }
 
     final static void a(int param0, int param1) {
-        la var2 = null;
+        la var2;
         var2 = ra.field_C;
         var2.c(param0, 7);
         var2.a(1, (byte) -70);

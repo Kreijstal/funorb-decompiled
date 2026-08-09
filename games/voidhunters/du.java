@@ -10,14 +10,14 @@ final class du extends gpb {
     private java.awt.Image field_h;
 
     final void a(java.awt.Graphics param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        java.awt.Graphics var10 = null;
+        java.awt.Graphics var10;
         this.field_j = param0.getClip();
         this.field_g.x = param6;
         this.field_g.width = param1;
         this.field_g.height = param7;
         this.field_g.y = param5;
         param0.setClip((java.awt.Shape) ((Object) this.field_g));
-        boolean discarded$21 = param0.drawImage(this.field_h, param6 + -param4, -param2 + param5, (java.awt.image.ImageObserver) ((Object) this.field_i));
+        param0.drawImage(this.field_h, param6 + -param4, -param2 + param5, (java.awt.image.ImageObserver) ((Object) this.field_i));
         if (param3 != 32255) {
           var10 = (java.awt.Graphics) null;
           this.a((java.awt.Graphics) null, -3, 82, 99, 101, 54, -103, -62);
@@ -30,9 +30,9 @@ final class du extends gpb {
     }
 
     final void a(int param0, int param1, int param2, java.awt.Canvas param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         this.field_i = param3;
         this.field_g = new java.awt.Rectangle();
         this.field_d = param2;

@@ -5,8 +5,8 @@ final class eca extends bi {
     private po field_k;
 
     final int b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = BachelorFridge.field_y;
         if (param1 == 40) {
           var3 = param0;
@@ -51,8 +51,8 @@ final class eca extends bi {
     }
 
     final int a(int param0, boolean param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = BachelorFridge.field_y;
         if (param1) {
           var3 = param0;
@@ -102,97 +102,47 @@ final class eca extends bi {
     }
 
     final void b(boolean param0, int param1, int param2) {
+        kv var12 = null;
+        String var13 = null;
         int var5 = 0;
-        String var6 = null;
         pia var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        kv var11 = null;
-        kv var12 = null;
-        String var13 = null;
-        kv var14 = null;
-        String var15 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        if (param2 == 0) {
-          L0: {
-            var14 = this.b(param1, (byte) 81);
-            var5 = this.d(param1, 26891) ? 1 : 0;
-            var15 = this.d(false, pj.field_b[this.field_b][param1]);
-            var7 = fn.field_n;
-            if (var5 == 0) {
-              stackOut_13_0 = 8;
-              stackIn_14_0 = stackOut_13_0;
-              break L0;
-            } else {
-              if (!param0) {
-                stackOut_12_0 = 9;
-                stackIn_14_0 = stackOut_12_0;
-                break L0;
-              } else {
-                stackOut_11_0 = 10;
-                stackIn_14_0 = stackOut_11_0;
-                break L0;
-              }
-            }
-          }
-          var8 = stackIn_14_0;
-          var9 = this.a(param1, true) - -this.b(param1, 40) >> -606668991;
-          var10 = this.a(param1, (byte) -74) + (this.a(param2 + -119, param1) >> -1171338815);
-          if (var5 != 0) {
-            var14.e(-(var14.field_n >> -690511071) + var9, var10 + -22);
-            ((po) ((Object) var7)).a(var15, var9, var10 + 6, var8, -1);
-            return;
-          } else {
-            var14.b(var9 - (var14.field_n >> -482973823), var10 + -22, 128);
-            ((po) ((Object) var7)).a(var15, var9, var10 + 6, var8, -1);
-            return;
-          }
-        } else {
-          L1: {
+        if (param2 != 0) {
             this.field_k = (po) null;
             var12 = this.b(param1, (byte) 81);
-            var11 = var12;
+            kv var11 = var12;
             var5 = this.d(param1, 26891) ? 1 : 0;
             var13 = this.d(false, pj.field_b[this.field_b][param1]);
-            var6 = var13;
+            String var6 = var13;
             var7 = fn.field_n;
+            var8 = var5 != 0 ? param0 ? 10 : 9 : 8;
+            var9 = this.a(param1, true) - -this.b(param1, 40) >> -606668991;
+            var10 = this.a(param1, (byte) -74) + (this.a(param2 + -119, param1) >> -1171338815);
             if (var5 == 0) {
-              stackOut_5_0 = 8;
-              stackIn_6_0 = stackOut_5_0;
-              break L1;
-            } else {
-              if (!param0) {
-                stackOut_4_0 = 9;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              } else {
-                stackOut_3_0 = 10;
-                stackIn_6_0 = stackOut_3_0;
-                break L1;
-              }
+                var12.b(var9 - (var12.field_n >> -482973823), var10 + -22, 128);
+                ((po) ((Object) var7)).a(var13, var9, var10 + 6, var8, -1);
+                return;
             }
-          }
-          var8 = stackIn_6_0;
-          var9 = this.a(param1, true) - -this.b(param1, 40) >> -606668991;
-          var10 = this.a(param1, (byte) -74) + (this.a(param2 + -119, param1) >> -1171338815);
-          if (var5 != 0) {
             var12.e(-(var12.field_n >> -690511071) + var9, var10 + -22);
             ((po) ((Object) var7)).a(var13, var9, var10 + 6, var8, -1);
             return;
-          } else {
-            var12.b(var9 - (var12.field_n >> -482973823), var10 + -22, 128);
-            ((po) ((Object) var7)).a(var13, var9, var10 + 6, var8, -1);
-            return;
-          }
         }
+        kv var14 = this.b(param1, (byte) 81);
+        var5 = this.d(param1, 26891) ? 1 : 0;
+        String var15 = this.d(false, pj.field_b[this.field_b][param1]);
+        var7 = fn.field_n;
+        var8 = var5 != 0 ? param0 ? 10 : 9 : 8;
+        var9 = this.a(param1, true) - -this.b(param1, 40) >> -606668991;
+        var10 = this.a(param1, (byte) -74) + (this.a(param2 + -119, param1) >> -1171338815);
+        if (var5 == 0) {
+            var14.b(var9 - (var14.field_n >> -482973823), var10 + -22, 128);
+            ((po) ((Object) var7)).a(var15, var9, var10 + 6, var8, -1);
+            return;
+        }
+        var14.e(-(var14.field_n >> -690511071) + var9, var10 + -22);
+        ((po) ((Object) var7)).a(var15, var9, var10 + 6, var8, -1);
     }
 
     private final void a(int param0, int param1, int param2, String param3, byte param4) {
@@ -209,31 +159,21 @@ final class eca extends bi {
     }
 
     private final String e(byte param0) {
-        int var2 = 0;
-        String[] var3 = null;
-        int[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var10 = 0;
-        String var11 = null;
-        String var28 = null;
+        int var2;
+        String[] var3;
+        int[] var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var10;
+        String var11;
         String stackIn_15_0 = null;
         String stackIn_21_0 = null;
         String stackIn_30_0 = null;
         String stackIn_48_0 = null;
         String stackIn_53_0 = null;
-        String stackOut_47_0 = null;
-        String stackOut_46_0 = null;
-        String stackOut_52_0 = null;
-        String stackOut_51_0 = null;
-        String stackOut_29_0 = null;
-        String stackOut_28_0 = null;
-        String stackOut_20_0 = null;
-        String stackOut_19_0 = null;
-        String stackOut_14_0 = null;
-        String stackOut_13_0 = null;
+        String var28;
         var10 = BachelorFridge.field_y;
         var2 = 0;
         var3 = ri.field_b.field_k[ks.field_i];
@@ -266,12 +206,10 @@ final class eca extends bi {
                         } else {
                           L3: {
                             if (var2 == 0) {
-                              stackOut_47_0 = gea.field_g;
-                              stackIn_48_0 = stackOut_47_0;
+                              stackIn_48_0 = gea.field_g;
                               break L3;
                             } else {
-                              stackOut_46_0 = "";
-                              stackIn_48_0 = stackOut_46_0;
+                              stackIn_48_0 = "";
                               break L3;
                             }
                           }
@@ -288,12 +226,10 @@ final class eca extends bi {
               }
               L4: {
                 if (var2 == 0) {
-                  stackOut_52_0 = gea.field_g;
-                  stackIn_53_0 = stackOut_52_0;
+                  stackIn_53_0 = gea.field_g;
                   break L4;
                 } else {
-                  stackOut_51_0 = "";
-                  stackIn_53_0 = stackOut_51_0;
+                  stackIn_53_0 = "";
                   break L4;
                 }
               }
@@ -359,12 +295,10 @@ final class eca extends bi {
                   }
                   L9: {
                     if (var2 == 0) {
-                      stackOut_29_0 = gea.field_g;
-                      stackIn_30_0 = stackOut_29_0;
+                      stackIn_30_0 = gea.field_g;
                       break L9;
                     } else {
-                      stackOut_28_0 = "";
-                      stackIn_30_0 = stackOut_28_0;
+                      stackIn_30_0 = "";
                       break L9;
                     }
                   }
@@ -375,12 +309,10 @@ final class eca extends bi {
                     this.a(cha.field_l, var5, ri.field_b.field_l, 22442, ri.field_b.field_j, ri.field_b.field_f, ri.field_b.field_h, var7, -1);
                     var2 = 1;
                     if (var2 == 0) {
-                      stackOut_20_0 = gea.field_g;
-                      stackIn_21_0 = stackOut_20_0;
+                      stackIn_21_0 = gea.field_g;
                       break L10;
                     } else {
-                      stackOut_19_0 = "";
-                      stackIn_21_0 = stackOut_19_0;
+                      stackIn_21_0 = "";
                       break L10;
                     }
                   }
@@ -389,12 +321,10 @@ final class eca extends bi {
               } else {
                 L11: {
                   if (var2 == 0) {
-                    stackOut_14_0 = gea.field_g;
-                    stackIn_15_0 = stackOut_14_0;
+                    stackIn_15_0 = gea.field_g;
                     break L11;
                   } else {
-                    stackOut_13_0 = "";
-                    stackIn_15_0 = stackOut_13_0;
+                    stackIn_15_0 = "";
                     break L11;
                   }
                 }
@@ -435,63 +365,50 @@ final class eca extends bi {
     }
 
     private final void q(int param0) {
-        int var3 = 0;
-        int var4 = 0;
         String var5 = null;
         String var6 = null;
         String var7 = null;
         String var8 = null;
         String var9 = null;
-        String var10 = null;
-        L0: {
-          var4 = BachelorFridge.field_y;
-          if (ri.field_b == null) {
+        int var3 = 0;
+        int var4 = BachelorFridge.field_y;
+        if (!(ri.field_b != null)) {
             ri.field_b = au.a(7, 16757, 0, 10);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (param0 == 1) {
-          if (ri.field_b.field_p) {
-            if (null == ri.field_b.field_k) {
-              var10 = qe.field_d;
-              var3 = 95 - -this.field_k.field_u - -253;
-              this.field_k.a(var10, 320, var3, 3518976, -1);
-              return;
-            } else {
-              var9 = this.e((byte) 9);
-              var3 = 95 - -this.field_k.field_u - -253;
-              this.field_k.a(var9, 320, var3, 3518976, -1);
-              return;
+        if (param0 != 1) {
+            this.field_k = (po) null;
+            if (!ri.field_b.field_p) {
+                var5 = fo.field_b;
+                var3 = 95 - -this.field_k.field_u - -253;
+                this.field_k.a(var5, 320, var3, 3518976, -1);
+                return;
             }
-          } else {
+            if (null != ri.field_b.field_k) {
+                var6 = this.e((byte) 9);
+                var3 = 95 - -this.field_k.field_u - -253;
+                this.field_k.a(var6, 320, var3, 3518976, -1);
+                return;
+            }
+            var7 = qe.field_d;
+            var3 = 95 - -this.field_k.field_u - -253;
+            this.field_k.a(var7, 320, var3, 3518976, -1);
+            return;
+        }
+        if (!ri.field_b.field_p) {
             var8 = fo.field_b;
             var3 = 95 - -this.field_k.field_u - -253;
             this.field_k.a(var8, 320, var3, 3518976, -1);
             return;
-          }
-        } else {
-          this.field_k = (po) null;
-          if (ri.field_b.field_p) {
-            if (null == ri.field_b.field_k) {
-              var7 = qe.field_d;
-              var3 = 95 - -this.field_k.field_u - -253;
-              this.field_k.a(var7, 320, var3, 3518976, -1);
-              return;
-            } else {
-              var6 = this.e((byte) 9);
-              var3 = 95 - -this.field_k.field_u - -253;
-              this.field_k.a(var6, 320, var3, 3518976, -1);
-              return;
-            }
-          } else {
-            var5 = fo.field_b;
-            var3 = 95 - -this.field_k.field_u - -253;
-            this.field_k.a(var5, 320, var3, 3518976, -1);
-            return;
-          }
         }
+        if (null != ri.field_b.field_k) {
+            var9 = this.e((byte) 9);
+            var3 = 95 - -this.field_k.field_u - -253;
+            this.field_k.a(var9, 320, var3, 3518976, -1);
+            return;
+        }
+        String var10 = qe.field_d;
+        var3 = 95 - -this.field_k.field_u - -253;
+        this.field_k.a(var10, 320, var3, 3518976, -1);
     }
 
     final void l(int param0) {
@@ -519,7 +436,7 @@ final class eca extends bi {
     }
 
     final kv b(int param0, byte param1) {
-        int var3 = 0;
+        int var3;
         if (param1 >= 62) {
           var3 = param0;
           if (-4 == (var3 ^ -1)) {
@@ -537,28 +454,16 @@ final class eca extends bi {
     }
 
     private final void a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var10_int = 0;
-        RuntimeException var10 = null;
-        String var11 = null;
         String stackIn_11_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_10_0 = null;
-        String stackOut_9_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        int var10_int = 0;
+        RuntimeException var10 = null;
+        String var11 = null;
         try {
           L0: {
             L1: {
@@ -591,12 +496,10 @@ final class eca extends bi {
             L4: {
               this.field_k.c(param0, 80, param1, param7, -1);
               if (-51 >= (var10_int ^ -1)) {
-                stackOut_10_0 = "50+";
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = "50+";
                 break L4;
               } else {
-                stackOut_9_0 = Integer.toString(var10_int);
-                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_0 = Integer.toString(var10_int);
                 break L4;
               }
             }
@@ -612,27 +515,19 @@ final class eca extends bi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var10 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var10);
-            stackOut_13_1 = new StringBuilder().append("eca.L(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var10);
+
+            stackIn_15_1 = new StringBuilder().append("eca.L(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }

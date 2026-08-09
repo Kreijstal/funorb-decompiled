@@ -21,8 +21,6 @@ abstract class k extends bw {
         int var3 = 0;
         pp stackIn_2_0 = null;
         kt stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -30,28 +28,16 @@ abstract class k extends bw {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        kt stackOut_3_0 = null;
-        pp stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (!param0) {
               var2 = qi.a(param1, (byte) 60);
               var3 = param1.b(16711935);
-              stackOut_3_0 = new kt(var2, var3);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = new kt(var2, var3);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (pp) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (pp) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -60,27 +46,19 @@ abstract class k extends bw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2_ref);
-            stackOut_5_1 = new StringBuilder().append("k.S(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2_ref);
+
+            stackIn_7_1 = new StringBuilder().append("k.S(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -156,9 +134,8 @@ abstract class k extends bw {
     }
 
     int[][] a(boolean param0, int param1) {
-        int[][] discarded$0 = null;
         if (param0) {
-            discarded$0 = this.a((byte) 115, -14, 40);
+            this.a((byte) 115, -14, 40);
             throw new IllegalStateException("This operation does not have a colour output");
         }
         throw new IllegalStateException("This operation does not have a colour output");
@@ -170,9 +147,9 @@ abstract class k extends bw {
     }
 
     final int[][] a(byte param0, int param1, int param2) {
-        int[] var4 = null;
-        int[][] var5 = null;
-        int[] var6 = null;
+        int[] var4;
+        int[][] var5;
+        int[] var6;
         if (param0 < -57) {
           if (!this.field_g[param1].field_f) {
             return this.field_g[param1].a(false, param2);
@@ -191,25 +168,14 @@ abstract class k extends bw {
     }
 
     void a(byte param0, lu param1, int param2) {
-        pp discarded$2 = null;
         RuntimeException runtimeException = null;
         lu var5 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -217,7 +183,7 @@ abstract class k extends bw {
                 break L1;
               } else {
                 var5 = (lu) null;
-                discarded$2 = k.a(false, (lu) null);
+                k.a(false, (lu) null);
                 break L1;
               }
             }
@@ -227,27 +193,19 @@ abstract class k extends bw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("k.E(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("k.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -256,19 +214,15 @@ abstract class k extends bw {
     }
 
     void a(int param0, byte param1, int param2) {
-        int var4 = 0;
+        int var4;
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param1 < -9) {
           L0: {
             if ((this.field_i ^ -1) != -256) {
-              stackOut_4_0 = this.field_i;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = this.field_i;
               break L0;
             } else {
-              stackOut_3_0 = param0;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = param0;
               break L0;
             }
           }

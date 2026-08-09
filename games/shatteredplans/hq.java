@@ -23,7 +23,6 @@ final class hq {
     }
 
     final static boolean a(int param0, char param1) {
-        boolean discarded$6 = false;
         if (param0 < -17) {
           if (param1 < 65) {
             if (97 <= param1) {
@@ -51,7 +50,7 @@ final class hq {
             }
           }
         } else {
-          discarded$6 = hq.a(75, 'ﾥ');
+          hq.a(75, 'ﾥ');
           if (param1 >= 65) {
             if (param1 > 90) {
               if (97 <= param1) {

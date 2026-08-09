@@ -6,6 +6,7 @@ final class ma {
 
     public static void a(byte param0) {
         if (param0 >= -36) {
+            ma.a(1.5420202648877515, 77);
             field_a = null;
             return;
         }
@@ -15,7 +16,6 @@ final class ma {
     final static boolean a(int param0, java.applet.Applet param1) {
         try {
             RuntimeException var2 = null;
-            Throwable var2_ref = null;
             String var3 = null;
             String[] var4 = null;
             int var5 = 0;
@@ -23,14 +23,10 @@ final class ma {
             int var7 = 0;
             String var8 = null;
             int stackIn_3_0 = 0;
-            int stackIn_7_0 = 0;
-            int stackIn_7_1 = 0;
             int stackIn_11_0 = 0;
             int stackIn_14_0 = 0;
             int stackIn_14_1 = 0;
             int stackIn_20_0 = 0;
-            RuntimeException stackIn_22_0 = null;
-            StringBuilder stackIn_22_1 = null;
             RuntimeException stackIn_23_0 = null;
             StringBuilder stackIn_23_1 = null;
             RuntimeException stackIn_24_0 = null;
@@ -39,22 +35,7 @@ final class ma {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_6_0 = 0;
-            int stackOut_6_1 = 0;
-            int stackOut_10_0 = 0;
-            int stackOut_13_0 = 0;
-            int stackOut_13_1 = 0;
-            int stackOut_19_0 = 0;
-            int stackOut_18_0 = 0;
-            int stackOut_2_0 = 0;
-            RuntimeException stackOut_21_0 = null;
-            StringBuilder stackOut_21_1 = null;
-            RuntimeException stackOut_23_0 = null;
-            StringBuilder stackOut_23_1 = null;
-            String stackOut_23_2 = null;
-            RuntimeException stackOut_22_0 = null;
-            StringBuilder stackOut_22_1 = null;
-            String stackOut_22_2 = null;
+            Throwable var2_ref = null;
             var7 = fleas.field_A ? 1 : 0;
             try {
               L0: {
@@ -72,22 +53,19 @@ final class ma {
                               break L4;
                             } else {
                               var6 = var4[var5].indexOf('=');
-                              stackOut_6_0 = -1;
-                              stackOut_6_1 = var6 ^ -1;
-                              stackIn_14_0 = stackOut_6_0;
-                              stackIn_14_1 = stackOut_6_1;
-                              stackIn_7_0 = stackOut_6_0;
-                              stackIn_7_1 = stackOut_6_1;
+                              stackIn_14_0 = -1;
+
+                              stackIn_14_1 = var6 ^ -1;
+
                               if (var7 != 0) {
                                 break L3;
                               } else {
                                 L5: {
-                                  if (stackIn_7_0 < stackIn_7_1) {
+                                  if (stackIn_14_0 < stackIn_14_1) {
                                     break L5;
                                   } else {
                                     if (var4[var5].substring(0, var6).trim().equals(var8)) {
-                                      stackOut_10_0 = 1;
-                                      stackIn_11_0 = stackOut_10_0;
+                                      stackIn_11_0 = 1;
                                       decompiledRegionSelector0 = 0;
                                       break L1;
                                     } else {
@@ -104,10 +82,8 @@ final class ma {
                               }
                             }
                           }
-                          stackOut_13_0 = 127;
-                          stackOut_13_1 = (-23 - param0) / 36;
-                          stackIn_14_0 = stackOut_13_0;
-                          stackIn_14_1 = stackOut_13_1;
+                          stackIn_14_0 = 127;
+                          stackIn_14_1 = (-23 - param0) / 36;
                           break L3;
                         }
                         var5 = stackIn_14_0 / stackIn_14_1;
@@ -129,12 +105,10 @@ final class ma {
                   } else {
                     L7: {
                       if (null == param1.getParameter("tuhstatbut")) {
-                        stackOut_19_0 = 0;
-                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_0 = 0;
                         break L7;
                       } else {
-                        stackOut_18_0 = 1;
-                        stackIn_20_0 = stackOut_18_0;
+                        stackIn_20_0 = 1;
                         break L7;
                       }
                     }
@@ -142,8 +116,7 @@ final class ma {
                     break L0;
                   }
                 } else {
-                  stackOut_2_0 = 1;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = 1;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 }
@@ -152,27 +125,19 @@ final class ma {
               decompiledCaughtException = decompiledCaughtParameter1;
               L8: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_21_0 = (RuntimeException) (var2);
-                stackOut_21_1 = new StringBuilder().append("ma.B(").append(param0).append(',');
-                stackIn_23_0 = stackOut_21_0;
-                stackIn_23_1 = stackOut_21_1;
-                stackIn_22_0 = stackOut_21_0;
-                stackIn_22_1 = stackOut_21_1;
+                stackIn_23_0 = (RuntimeException) (var2);
+
+                stackIn_23_1 = new StringBuilder().append("ma.B(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-                  stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-                  stackOut_23_2 = "null";
-                  stackIn_24_0 = stackOut_23_0;
-                  stackIn_24_1 = stackOut_23_1;
-                  stackIn_24_2 = stackOut_23_2;
+                  stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+                  stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+                  stackIn_24_2 = "null";
                   break L8;
                 } else {
-                  stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-                  stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-                  stackOut_22_2 = "{...}";
-                  stackIn_24_0 = stackOut_22_0;
-                  stackIn_24_1 = stackOut_22_1;
-                  stackIn_24_2 = stackOut_22_2;
+                  stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+                  stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+                  stackIn_24_2 = "{...}";
                   break L8;
                 }
               }
@@ -196,6 +161,7 @@ final class ma {
 
     final static double a(double param0, int param1) {
         if (param1 <= 54) {
+          ma.a(-0.36173003999453074, 40);
           return tg.field_b[65535 & (int)(param0 * 32768.0 / 3.141592653589793)];
         } else {
           return tg.field_b[65535 & (int)(param0 * 32768.0 / 3.141592653589793)];

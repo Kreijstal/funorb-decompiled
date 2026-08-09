@@ -7,9 +7,10 @@ final class f {
     static v field_a;
 
     final synchronized static long b(byte param0) {
-        long var1 = 0L;
+        long var1;
         if (param0 != 73) {
           L0: {
+            f.b((byte) 126);
             var1 = System.currentTimeMillis();
             if ((var1 ^ -1L) > (fw.field_l ^ -1L)) {
               oia.field_f = oia.field_f + (fw.field_l - var1);
@@ -45,6 +46,7 @@ final class f {
     public static void a(boolean param0) {
         field_a = null;
         if (!param0) {
+            f.b((byte) -90);
             field_c = null;
             return;
         }

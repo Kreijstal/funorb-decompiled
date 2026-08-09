@@ -18,7 +18,7 @@ final class nd implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = TombRacer.field_G ? 1 : 0;
         if (this.field_c.field_e[-1 + this.field_b] == this.field_a) {
           L0: while (true) {
@@ -27,11 +27,7 @@ final class nd implements Iterator {
               this.field_b = this.field_b + 1;
               if (this.field_c.field_e[fieldTemp$1].field_a == this.field_c.field_e[this.field_b - 1]) {
                 this.field_a = this.field_c.field_e[-1 + this.field_b];
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  return false;
-                }
+                continue L0;
               } else {
                 this.field_a = this.field_c.field_e[-1 + this.field_b].field_a;
                 return true;
@@ -70,8 +66,6 @@ final class nd implements Iterator {
 
     final static void a(String param0, int param1) {
         RuntimeException var2 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -79,14 +73,6 @@ final class nd implements Iterator {
         String stackIn_5_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             if (param1 == -1) {
@@ -101,27 +87,19 @@ final class nd implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var2);
-            stackOut_2_1 = new StringBuilder().append("nd.B(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var2);
+
+            stackIn_4_1 = new StringBuilder().append("nd.B(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -152,9 +130,9 @@ final class nd implements Iterator {
 
     public final Object next() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
-        vg var3 = null;
-        vg var4 = null;
+        int var2;
+        vg var3;
+        vg var4;
         var2 = TombRacer.field_G ? 1 : 0;
         if (this.field_a == this.field_c.field_e[this.field_b - 1]) {
           L0: while (true) {
@@ -167,11 +145,7 @@ final class nd implements Iterator {
                 this.field_d = var3;
                 return var3;
               } else {
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  return null;
-                }
+                continue L0;
               }
             } else {
               return null;

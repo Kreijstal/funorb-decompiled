@@ -35,9 +35,8 @@ abstract class al {
     }
 
     final static wk[] a(int param0, byte param1, int param2, int param3) {
-        int discarded$0 = 0;
         if (param1 <= 72) {
-            discarded$0 = al.a(-2);
+            al.a(-2);
         }
         return SteelSentinels.a(param0, param3, (byte) -62, 1, param2);
     }
@@ -53,66 +52,42 @@ abstract class al {
 
     final static void a(pn param0, boolean param1, gi param2, int param3) {
         try {
-            wk[] discarded$3 = null;
-            byte[] array$4 = null;
-            String dupTemp$5 = null;
-            RuntimeException var4 = null;
-            int var5 = 0;
-            ClassNotFoundException var6 = null;
-            SecurityException var6_ref = null;
-            NullPointerException var6_ref2 = null;
-            Exception var6_ref3 = null;
-            Throwable var6_ref4 = null;
-            int var6_int = 0;
-            String var8 = null;
-            int var9 = 0;
-            String[] var10 = null;
-            int var11_int = 0;
-            byte[][] var11 = null;
-            Class[] var12 = null;
-            int var12_int = 0;
-            int var13 = 0;
-            int var14 = 0;
-            String var15 = null;
-            String var16 = null;
-            int var17 = 0;
-            Object var18 = null;
-            ua var18_ref = null;
-            byte[][] var19 = null;
-            String var20 = null;
-            byte[][] var21 = null;
-            RuntimeException stackIn_37_0 = null;
-            StringBuilder stackIn_37_1 = null;
+            byte[] array$0 = null;
+            String dupTemp$1 = null;
             RuntimeException stackIn_38_0 = null;
             StringBuilder stackIn_38_1 = null;
             RuntimeException stackIn_39_0 = null;
             StringBuilder stackIn_39_1 = null;
             String stackIn_39_2 = null;
-            RuntimeException stackIn_40_0 = null;
-            StringBuilder stackIn_40_1 = null;
-            RuntimeException stackIn_41_0 = null;
             StringBuilder stackIn_41_1 = null;
-            RuntimeException stackIn_42_0 = null;
             StringBuilder stackIn_42_1 = null;
             String stackIn_42_2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_36_0 = null;
-            StringBuilder stackOut_36_1 = null;
-            RuntimeException stackOut_38_0 = null;
-            StringBuilder stackOut_38_1 = null;
-            String stackOut_38_2 = null;
-            RuntimeException stackOut_37_0 = null;
-            StringBuilder stackOut_37_1 = null;
-            String stackOut_37_2 = null;
-            RuntimeException stackOut_39_0 = null;
-            StringBuilder stackOut_39_1 = null;
-            RuntimeException stackOut_41_0 = null;
-            StringBuilder stackOut_41_1 = null;
-            String stackOut_41_2 = null;
-            RuntimeException stackOut_40_0 = null;
-            StringBuilder stackOut_40_1 = null;
-            String stackOut_40_2 = null;
+            RuntimeException var4 = null;
+            int var5 = 0;
+            int var6_int = 0;
+            ClassNotFoundException var6 = null;
+            SecurityException var6_ref = null;
+            NullPointerException var6_ref2 = null;
+            Exception var6_ref3 = null;
+            Throwable var6_ref4 = null;
+            String var8 = null;
+            int var9 = 0;
+            String[] var10 = null;
+            int var11_int = 0;
+            byte[][] var11 = null;
+            int var12_int = 0;
+            Class[] var12 = null;
+            int var13 = 0;
+            int var14 = 0;
+            String var15 = null;
+            String var16 = null;
+            int var17 = 0;
+            ua var18 = null;
+            byte[][] var19 = null;
+            String var20 = null;
+            byte[][] var21 = null;
             var14 = SteelSentinels.field_G;
             try {
               L0: {
@@ -120,23 +95,23 @@ abstract class al {
                   if (!param1) {
                     break L1;
                   } else {
-                    discarded$3 = al.a(-105, (byte) -107, 76, 3);
+                    al.a(-105, (byte) -107, 76, 3);
                     break L1;
                   }
                 }
-                var18_ref = new ua();
-                var18_ref.field_B = param2.f((byte) -80);
-                var18_ref.field_q = param2.i(0);
-                var18_ref.field_w = new int[var18_ref.field_B];
-                var18_ref.field_F = new byte[var18_ref.field_B][][];
-                var18_ref.field_K = new wj[var18_ref.field_B];
-                var18_ref.field_A = new int[var18_ref.field_B];
-                var18_ref.field_y = new wj[var18_ref.field_B];
-                var18_ref.field_s = new int[var18_ref.field_B];
+                var18 = new ua();
+                var18.field_B = param2.f((byte) -80);
+                var18.field_q = param2.i(0);
+                var18.field_w = new int[var18.field_B];
+                var18.field_F = new byte[var18.field_B][][];
+                var18.field_K = new wj[var18.field_B];
+                var18.field_A = new int[var18.field_B];
+                var18.field_y = new wj[var18.field_B];
+                var18.field_s = new int[var18.field_B];
                 var5 = 0;
                 L2: while (true) {
-                  if (var18_ref.field_B <= var5) {
-                    rg.field_d.a(3, var18_ref);
+                  if (var18.field_B <= var5) {
+                    rg.field_d.a(3, var18);
                     break L0;
                   } else {
                     try {
@@ -186,8 +161,8 @@ abstract class al {
                                               break L8;
                                             } else {
                                               var13 = param2.i(0);
-                                              array$4 = new byte[var13];
-                                              var11[var12_int] = array$4;
+                                              array$0 = new byte[var13];
+                                              var11[var12_int] = array$0;
                                               param2.a(0, var21[var12_int], 28, var13);
                                               var12_int++;
                                               continue L9;
@@ -195,14 +170,14 @@ abstract class al {
                                           }
                                         }
                                       }
-                                      var18_ref.field_s[var5] = var6_int;
+                                      var18.field_s[var5] = var6_int;
                                       var12 = new Class[var9];
                                       var17 = 0;
                                       var13 = var17;
                                       L10: while (true) {
                                         if (var17 >= var9) {
-                                          var18_ref.field_K[var5] = param0.a(var8, (byte) 52, ea.a(10126, var20), var12);
-                                          var18_ref.field_F[var5] = var21;
+                                          var18.field_K[var5] = param0.a(var8, (byte) 52, ea.a(10126, var20), var12);
+                                          var18.field_F[var5] = var21;
                                           break L4;
                                         } else {
                                           var12[var17] = ea.a(10126, var10[var17]);
@@ -222,9 +197,9 @@ abstract class al {
                           }
                           L11: {
                             var15 = param2.h(1);
-                            dupTemp$5 = param2.h(1);
-                            var16 = dupTemp$5;
-                            var8 = dupTemp$5;
+                            dupTemp$1 = param2.h(1);
+                            var16 = dupTemp$1;
+                            var8 = dupTemp$1;
                             var9 = 0;
                             if (1 == var6_int) {
                               var9 = param2.i(0);
@@ -233,9 +208,9 @@ abstract class al {
                               break L11;
                             }
                           }
-                          var18_ref.field_s[var5] = var6_int;
-                          var18_ref.field_w[var5] = var9;
-                          var18_ref.field_y[var5] = param0.a(9, ea.a(10126, var15), var16);
+                          var18.field_s[var5] = var6_int;
+                          var18.field_w[var5] = var9;
+                          var18.field_y[var5] = param0.a(9, ea.a(10126, var15), var16);
                           break L4;
                         }
                         decompiledRegionSelector0 = 1;
@@ -245,7 +220,7 @@ abstract class al {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L12: {
                         var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                        var18_ref.field_A[var5] = -1;
+                        var18.field_A[var5] = -1;
                         decompiledRegionSelector0 = 1;
                         break L12;
                       }
@@ -253,7 +228,7 @@ abstract class al {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       L13: {
                         var6_ref = (SecurityException) (Object) decompiledCaughtException;
-                        var18_ref.field_A[var5] = -2;
+                        var18.field_A[var5] = -2;
                         decompiledRegionSelector0 = 1;
                         break L13;
                       }
@@ -261,7 +236,7 @@ abstract class al {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       L14: {
                         var6_ref2 = (NullPointerException) (Object) decompiledCaughtException;
-                        var18_ref.field_A[var5] = -3;
+                        var18.field_A[var5] = -3;
                         decompiledRegionSelector0 = 1;
                         break L14;
                       }
@@ -269,7 +244,7 @@ abstract class al {
                       decompiledCaughtException = decompiledCaughtParameter3;
                       L15: {
                         var6_ref3 = (Exception) (Object) decompiledCaughtException;
-                        var18_ref.field_A[var5] = -4;
+                        var18.field_A[var5] = -4;
                         decompiledRegionSelector0 = 1;
                         break L15;
                       }
@@ -277,7 +252,7 @@ abstract class al {
                       decompiledCaughtException = decompiledCaughtParameter4;
                       L16: {
                         var6_ref4 = decompiledCaughtException;
-                        var18_ref.field_A[var5] = -5;
+                        var18.field_A[var5] = -5;
                         decompiledRegionSelector0 = 1;
                         break L16;
                       }
@@ -295,56 +270,40 @@ abstract class al {
               decompiledCaughtException = decompiledCaughtParameter5;
               L17: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_36_0 = (RuntimeException) (var4);
-                stackOut_36_1 = new StringBuilder().append("al.A(");
-                stackIn_38_0 = stackOut_36_0;
-                stackIn_38_1 = stackOut_36_1;
-                stackIn_37_0 = stackOut_36_0;
-                stackIn_37_1 = stackOut_36_1;
+                stackIn_38_0 = (RuntimeException) (var4);
+
+                stackIn_38_1 = new StringBuilder().append("al.A(");
+
                 if (param0 == null) {
-                  stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-                  stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-                  stackOut_38_2 = "null";
-                  stackIn_39_0 = stackOut_38_0;
-                  stackIn_39_1 = stackOut_38_1;
-                  stackIn_39_2 = stackOut_38_2;
+                  stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+                  stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+                  stackIn_39_2 = "null";
                   break L17;
                 } else {
-                  stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-                  stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-                  stackOut_37_2 = "{...}";
-                  stackIn_39_0 = stackOut_37_0;
-                  stackIn_39_1 = stackOut_37_1;
-                  stackIn_39_2 = stackOut_37_2;
+                  stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+                  stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+                  stackIn_39_2 = "{...}";
                   break L17;
                 }
               }
               L18: {
-                stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-                stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',').append(param1).append(',');
-                stackIn_41_0 = stackOut_39_0;
-                stackIn_41_1 = stackOut_39_1;
-                stackIn_40_0 = stackOut_39_0;
-                stackIn_40_1 = stackOut_39_1;
+
+
+                stackIn_41_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',').append(param1).append(',');
+
                 if (param2 == null) {
-                  stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-                  stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-                  stackOut_41_2 = "null";
-                  stackIn_42_0 = stackOut_41_0;
-                  stackIn_42_1 = stackOut_41_1;
-                  stackIn_42_2 = stackOut_41_2;
+                  stackIn_39_0 = (RuntimeException) ((Object) stackIn_39_0);
+                  stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+                  stackIn_42_2 = "null";
                   break L18;
                 } else {
-                  stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-                  stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-                  stackOut_40_2 = "{...}";
-                  stackIn_42_0 = stackOut_40_0;
-                  stackIn_42_1 = stackOut_40_1;
-                  stackIn_42_2 = stackOut_40_2;
+                  stackIn_39_0 = (RuntimeException) ((Object) stackIn_39_0);
+                  stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+                  stackIn_42_2 = "{...}";
                   break L18;
                 }
               }
-              throw ci.a((Throwable) ((Object) stackIn_42_0), stackIn_42_2 + ',' + param3 + ')');
+              throw ci.a((Throwable) ((Object) stackIn_39_0), stackIn_42_2 + ',' + param3 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -393,9 +352,8 @@ abstract class al {
     abstract int a(long param0, byte param1);
 
     public static void b(int param0) {
-        int discarded$0 = 0;
         if (param0 != 30) {
-            discarded$0 = al.a(-15);
+            al.a(-15);
         }
         field_c = null;
         field_b = null;

@@ -12,26 +12,20 @@ final class wg implements Iterator {
     private ri field_b;
 
     final static void b(int param0) {
-        RuntimeException var1 = null;
-        int var2 = 0;
-        he var3_ref_he = null;
-        int var3 = 0;
-        gh var4 = null;
-        int var4_int = 0;
-        Object var5 = null;
-        int var6 = 0;
-        hj var8 = null;
-        byte[] var12 = null;
-        int stackIn_19_0 = 0;
-        int stackIn_19_1 = 0;
         int stackIn_26_0 = 0;
         int stackIn_26_1 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_18_1 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_25_1 = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        he var3_ref_he = null;
+        int var3 = 0;
+        int var4_int = 0;
+        gh var4 = null;
+        Object var5 = null;
+        int var6 = 0;
+        hj var8 = null;
+        byte[] var12 = null;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -103,17 +97,15 @@ final class wg implements Iterator {
                     if (var4 == null) {
                       break L8;
                     } else {
-                      stackOut_18_0 = var4.field_j;
-                      stackOut_18_1 = var3;
-                      stackIn_26_0 = stackOut_18_0;
-                      stackIn_26_1 = stackOut_18_1;
-                      stackIn_19_0 = stackOut_18_0;
-                      stackIn_19_1 = stackOut_18_1;
+                      stackIn_26_0 = var4.field_j;
+
+                      stackIn_26_1 = var3;
+
                       if (var6 != 0) {
                         break L7;
                       } else {
                         L9: {
-                          if (stackIn_19_0 != stackIn_19_1) {
+                          if (stackIn_26_0 != stackIn_26_1) {
                             break L9;
                           } else {
                             if (var6 == 0) {
@@ -124,15 +116,17 @@ final class wg implements Iterator {
                           }
                         }
                         var4 = (gh) ((Object) mf.field_b.a(true));
-                        continue L6;
+                        if (var6 == 0) {
+                          continue L6;
+                        } else {
+                          break L8;
+                        }
                       }
                     }
                   }
                   if (var4 == null) {
-                    stackOut_25_0 = param0;
-                    stackOut_25_1 = -3;
-                    stackIn_26_0 = stackOut_25_0;
-                    stackIn_26_1 = stackOut_25_1;
+                    stackIn_26_0 = param0;
+                    stackIn_26_1 = -3;
                     break L7;
                   } else {
                     var4.c(5);
@@ -181,23 +175,23 @@ final class wg implements Iterator {
     }
 
     public final Object next() {
-        ri var1 = null;
+        Object var1;
         var1 = this.field_b;
         if (var1 != this.field_c.field_e) {
-          this.field_b = var1.field_h;
+          this.field_b = ((ri) (var1)).field_h;
           if (Transmogrify.field_A) {
             this.field_b = null;
             var1 = null;
-            this.field_a = var1;
+            this.field_a = (ri) (var1);
             return var1;
           } else {
-            this.field_a = var1;
+            this.field_a = (ri) (var1);
             return var1;
           }
         } else {
           this.field_b = null;
           var1 = null;
-          this.field_a = var1;
+          this.field_a = (ri) (var1);
           return var1;
         }
     }

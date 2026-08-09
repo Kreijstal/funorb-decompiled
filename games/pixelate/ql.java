@@ -83,9 +83,9 @@ final class ql extends jj {
     }
 
     final static void d(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var1;
+        int var2;
+        int var3;
         var3 = Pixelate.field_H ? 1 : 0;
         dk.field_c = false;
         wp.field_a = null;

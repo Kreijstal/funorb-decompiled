@@ -20,12 +20,11 @@ final class dd extends rj {
     }
 
     final static int a(int param0, boolean param1) {
-        int discarded$1 = 0;
         L0: {
           if (!param1) {
             break L0;
           } else {
-            discarded$1 = dd.a(44, true);
+            dd.a(44, true);
             break L0;
           }
         }
@@ -113,13 +112,11 @@ final class dd extends rj {
     }
 
     final void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var7 = DungeonAssault.field_K;
         var4 = param0 + this.field_t;
         var5 = this.field_i + param2;
@@ -136,12 +133,10 @@ final class dd extends rj {
                   if (this.field_D + -1 <= var6) {
                     L3: {
                       if (this.field_G != 0) {
-                        stackOut_11_0 = (this.field_D - 46) * this.field_F / this.field_G;
-                        stackIn_12_0 = stackOut_11_0;
+                        stackIn_12_0 = (this.field_D - 46) * this.field_F / this.field_G;
                         break L3;
                       } else {
-                        stackOut_10_0 = 0;
-                        stackIn_12_0 = stackOut_10_0;
+                        stackIn_12_0 = 0;
                         break L3;
                       }
                     }
@@ -200,8 +195,6 @@ final class dd extends rj {
         cn var6 = null;
         cn stackIn_6_0 = null;
         cn stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -209,16 +202,6 @@ final class dd extends rj {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        cn stackOut_7_0 = null;
-        cn stackOut_5_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var5 = DungeonAssault.field_K;
         try {
           L0: {
@@ -234,13 +217,11 @@ final class dd extends rj {
                 if (param0 == -112) {
                   var6.field_w = param2.field_w + -param1;
                   var6.field_A = param2.field_A - param1;
-                  stackOut_7_0 = (cn) (var6);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = (cn) (var6);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_5_0 = (cn) null;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = (cn) null;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -256,27 +237,19 @@ final class dd extends rj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3);
-            stackOut_9_1 = new StringBuilder().append("dd.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("dd.B(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }

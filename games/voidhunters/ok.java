@@ -6,8 +6,21 @@ final class ok implements dja {
     static String field_a;
 
     final static void a(byte param0, boolean param1) {
-        RuntimeException var2 = null;
+        llb dupTemp$0 = null;
+        int stackIn_4_0 = 0;
+        llb stackIn_6_0;
+        int stackIn_6_1;
+        int stackIn_6_2;
+        int stackIn_6_3;
+        llb stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
+        int stackIn_7_2 = 0;
+        int stackIn_7_3 = 0;
+        int stackIn_7_4 = 0;
+        int stackIn_56_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -16,51 +29,14 @@ final class ok implements dja {
         int var7 = 0;
         int var8 = 0;
         llb var8_ref_llb = null;
-        int var9 = 0;
         cna var9_ref_cna = null;
+        int var9 = 0;
         int var10 = 0;
         cna var10_ref_cna = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         llb var14 = null;
-        int stackIn_4_0 = 0;
-        llb stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        int stackIn_5_2 = 0;
-        int stackIn_5_3 = 0;
-        llb stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        int stackIn_6_2 = 0;
-        int stackIn_6_3 = 0;
-        llb stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        int stackIn_7_2 = 0;
-        int stackIn_7_3 = 0;
-        int stackIn_7_4 = 0;
-        int stackIn_56_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        llb stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        int stackOut_4_3 = 0;
-        llb stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
-        int stackOut_6_3 = 0;
-        int stackOut_6_4 = 0;
-        llb stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        int stackOut_5_3 = 0;
-        int stackOut_5_4 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_47_0 = 0;
         var13 = VoidHunters.field_G;
         try {
           L0: {
@@ -68,12 +44,10 @@ final class ok implements dja {
               gp.field_p = dma.field_g;
               wjb.field_p = dma.field_j;
               if (param1) {
-                stackOut_3_0 = nf.field_a;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = nf.field_a;
                 break L1;
               } else {
-                stackOut_2_0 = tba.field_p;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = tba.field_p;
                 break L1;
               }
             }
@@ -81,41 +55,27 @@ final class ok implements dja {
               lkb.a(stackIn_4_0, (byte) -106);
               hra.field_o.a(0, -92, -2 + rga.field_g.field_G + -40, 0, rga.field_g.field_hb);
               ukb.field_o.a(0, -11, rsa.field_o.field_hb, 0, nna.field_w);
-              stackOut_4_0 = jn.field_a;
-              stackOut_4_1 = 0;
-              stackOut_4_2 = param0 + 25;
-              stackOut_4_3 = rsa.field_o.field_hb;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              stackIn_6_3 = stackOut_4_3;
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              stackIn_5_3 = stackOut_4_3;
+              stackIn_6_0 = jn.field_a;
+
+              stackIn_6_1 = 0;
+
+              stackIn_6_2 = param0 + 25;
+
+              stackIn_6_3 = rsa.field_o.field_hb;
+
               if (ll.field_o) {
-                stackOut_6_0 = (llb) ((Object) stackIn_6_0);
-                stackOut_6_1 = stackIn_6_1;
-                stackOut_6_2 = stackIn_6_2;
-                stackOut_6_3 = stackIn_6_3;
-                stackOut_6_4 = 2 + (40 + rba.field_a - -2);
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
-                stackIn_7_2 = stackOut_6_2;
-                stackIn_7_3 = stackOut_6_3;
-                stackIn_7_4 = stackOut_6_4;
+                stackIn_7_0 = (llb) ((Object) stackIn_6_0);
+                stackIn_7_1 = stackIn_6_1;
+                stackIn_7_2 = stackIn_6_2;
+                stackIn_7_3 = stackIn_6_3;
+                stackIn_7_4 = 2 + (40 + rba.field_a - -2);
                 break L2;
               } else {
-                stackOut_5_0 = (llb) ((Object) stackIn_5_0);
-                stackOut_5_1 = stackIn_5_1;
-                stackOut_5_2 = stackIn_5_2;
-                stackOut_5_3 = stackIn_5_3;
-                stackOut_5_4 = 0;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
-                stackIn_7_2 = stackOut_5_2;
-                stackIn_7_3 = stackOut_5_3;
-                stackIn_7_4 = stackOut_5_4;
+                stackIn_7_0 = (llb) ((Object) stackIn_6_0);
+                stackIn_7_1 = stackIn_6_1;
+                stackIn_7_2 = stackIn_6_2;
+                stackIn_7_3 = stackIn_6_3;
+                stackIn_7_4 = 0;
                 break L2;
               }
             }
@@ -245,8 +205,9 @@ final class ok implements dja {
                       if (0 != var6) {
                         break L15;
                       } else {
-                        var14 = ceb.field_o[var6];
-                        var7_ref_llb = ceb.field_o[var6];
+                        dupTemp$0 = ceb.field_o[var6];
+                        var14 = dupTemp$0;
+                        var7_ref_llb = dupTemp$0;
                         ceb.field_o[var6].field_G = 0;
                         var14.field_hb = 0;
                         var8 = 0;
@@ -277,27 +238,22 @@ final class ok implements dja {
                       if ((var6 ^ -1) <= -5) {
                         if (jra.field_d != null) {
                           if (jra.field_d[-4 + var6]) {
-                            stackOut_54_0 = 1;
-                            stackIn_56_0 = stackOut_54_0;
+                            stackIn_56_0 = 1;
                             break L18;
                           } else {
-                            stackOut_53_0 = 0;
-                            stackIn_56_0 = stackOut_53_0;
+                            stackIn_56_0 = 0;
                             break L18;
                           }
                         } else {
-                          stackOut_51_0 = 0;
-                          stackIn_56_0 = stackOut_51_0;
+                          stackIn_56_0 = 0;
                           break L18;
                         }
                       } else {
-                        stackOut_49_0 = 0;
-                        stackIn_56_0 = stackOut_49_0;
+                        stackIn_56_0 = 0;
                         break L18;
                       }
                     } else {
-                      stackOut_47_0 = 0;
-                      stackIn_56_0 = stackOut_47_0;
+                      stackIn_56_0 = 0;
                       break L18;
                     }
                   }

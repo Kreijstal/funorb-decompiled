@@ -12,22 +12,12 @@ final class nc {
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        ik stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        ik stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        ik stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        int stackIn_9_2 = 0;
+        ik stackIn_10_0 = null;
+        int stackIn_10_1 = 0;
+        ik stackIn_11_0 = null;
+        int stackIn_11_1 = 0;
+        int stackIn_11_2 = 0;
         RuntimeException decompiledCaughtException = null;
-        ik stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        ik stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
-        ik stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
         var4 = Torquing.field_u;
         try {
           L0: {
@@ -50,35 +40,27 @@ final class nc {
                 }
               } else {
                 L3: {
-                  if (var2.field_p == param0) {
+                  if ((var2.field_p ^ -1) == (param0 ^ -1)) {
                     break L3;
                   } else {
                     L4: {
-                      stackOut_6_0 = (ik) (var2);
-                      stackOut_6_1 = param0;
-                      stackIn_8_0 = stackOut_6_0;
-                      stackIn_8_1 = stackOut_6_1;
-                      stackIn_7_0 = stackOut_6_0;
-                      stackIn_7_1 = stackOut_6_1;
+                      stackIn_10_0 = (ik) (var2);
+
+                      stackIn_10_1 = param0;
+
                       if (param1) {
-                        stackOut_8_0 = (ik) ((Object) stackIn_8_0);
-                        stackOut_8_1 = stackIn_8_1;
-                        stackOut_8_2 = 0;
-                        stackIn_9_0 = stackOut_8_0;
-                        stackIn_9_1 = stackOut_8_1;
-                        stackIn_9_2 = stackOut_8_2;
+                        stackIn_11_0 = (ik) ((Object) stackIn_10_0);
+                        stackIn_11_1 = stackIn_10_1;
+                        stackIn_11_2 = 0;
                         break L4;
                       } else {
-                        stackOut_7_0 = (ik) ((Object) stackIn_7_0);
-                        stackOut_7_1 = stackIn_7_1;
-                        stackOut_7_2 = 1;
-                        stackIn_9_0 = stackOut_7_0;
-                        stackIn_9_1 = stackOut_7_1;
-                        stackIn_9_2 = stackOut_7_2;
+                        stackIn_11_0 = (ik) ((Object) stackIn_10_0);
+                        stackIn_11_1 = stackIn_10_1;
+                        stackIn_11_2 = 1;
                         break L4;
                       }
                     }
-                    ((ik) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_9_2 != 0);
+                    ((ik) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2 != 0);
                     break L3;
                   }
                 }

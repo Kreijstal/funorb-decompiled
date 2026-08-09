@@ -20,12 +20,12 @@ final class sma extends ana {
     static kv[] field_H;
 
     final boolean c(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        ob var6 = null;
-        int var7 = 0;
+        int var2;
+        int var3;
+        int var7;
+        int var4;
+        int var5;
+        ob var6;
         L0: {
           var7 = BachelorFridge.field_y;
           if (-101 != (this.field_l ^ -1)) {
@@ -80,9 +80,9 @@ final class sma extends ana {
             }
           }
         }
-        int fieldTemp$1 = this.field_l - 1;
+        int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
-        if (0 > fieldTemp$1) {
+        if (0 > fieldTemp$0) {
           var2 = -32 / ((param0 - 71) / 47);
           this.d(69);
           return true;
@@ -107,23 +107,23 @@ final class sma extends ana {
     }
 
     final static String a(int param0, Throwable param1) throws IOException {
-        String var2 = null;
-        PrintWriter var4 = null;
-        String var5 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        gi var14 = null;
-        StringWriter var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
+        String var2;
+        PrintWriter var4;
+        String var5;
+        BufferedReader var6;
+        String var7;
+        String var8;
+        int var9;
+        int var10;
+        String var11;
+        int var12;
+        int var13;
+        gi var14;
+        StringWriter var15;
+        String var16;
+        String var17;
+        String var18;
+        String var19;
         L0: {
           var13 = BachelorFridge.field_y;
           if (!(param1 instanceof gi)) {
@@ -219,12 +219,56 @@ final class sma extends ana {
     }
 
     final static void a(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
+        sna dupTemp$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        RuntimeException var7 = null;
+        sga stackIn_3_0;
+        int stackIn_3_1;
+        int stackIn_3_2;
+        int stackIn_3_3;
+        sga stackIn_4_0;
+        int stackIn_4_1;
+        int stackIn_4_2;
+        int stackIn_4_3;
+        int stackIn_4_4;
+        int stackIn_8_0 = 0;
+        int stackIn_8_1 = 0;
+        uha stackIn_10_0;
+        sna stackIn_10_1;
+        sna stackIn_10_2;
+        long stackIn_10_3;
+        uha stackIn_11_0 = null;
+        sna stackIn_11_1 = null;
+        sna stackIn_11_2 = null;
+        long stackIn_11_3 = 0L;
+        sna stackIn_11_4 = null;
+        uha stackIn_30_0;
+        sna stackIn_30_1;
+        sna stackIn_30_2;
+        long stackIn_30_3;
+        uha stackIn_31_0;
+        sna stackIn_31_1;
+        sna stackIn_31_2;
+        long stackIn_31_3;
+        sna stackIn_31_4;
+        int stackIn_35_0 = 0;
+        int stackIn_70_0 = 0;
+        int stackIn_79_0 = 0;
+        kv[] stackIn_81_0 = null;
+        kv[] stackIn_82_0 = null;
+        int stackIn_82_1 = 0;
+        kv[] stackIn_89_0 = null;
+        kv[] stackIn_90_0 = null;
+        int stackIn_90_1 = 0;
+        String stackIn_153_0 = null;
+        String stackIn_162_0 = null;
+        String stackIn_168_0 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         eaa var9 = null;
         long var10 = 0L;
@@ -232,8 +276,8 @@ final class sma extends ana {
         uha var13 = null;
         int var14 = 0;
         int var15 = 0;
-        sna var19 = null;
         int var19_int = 0;
+        sna var19 = null;
         sna var20 = null;
         sna var21 = null;
         sna var22 = null;
@@ -249,8 +293,8 @@ final class sma extends ana {
         sna var31 = null;
         int var32 = 0;
         String var33 = null;
-        String var34 = null;
         int var34_int = 0;
+        String var34 = null;
         int var35_int = 0;
         String var35 = null;
         Object var36 = null;
@@ -279,127 +323,6 @@ final class sma extends ana {
         Object var54 = null;
         kv var54_ref = null;
         kv var55 = null;
-        sga stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
-        int stackIn_2_2 = 0;
-        int stackIn_2_3 = 0;
-        sga stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        int stackIn_3_2 = 0;
-        int stackIn_3_3 = 0;
-        sga stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        int stackIn_4_3 = 0;
-        int stackIn_4_4 = 0;
-        uha stackIn_8_0 = null;
-        sna stackIn_8_1 = null;
-        sna stackIn_8_2 = null;
-        long stackIn_8_3 = 0L;
-        uha stackIn_9_0 = null;
-        sna stackIn_9_1 = null;
-        sna stackIn_9_2 = null;
-        long stackIn_9_3 = 0L;
-        uha stackIn_10_0 = null;
-        sna stackIn_10_1 = null;
-        sna stackIn_10_2 = null;
-        long stackIn_10_3 = 0L;
-        sna stackIn_10_4 = null;
-        uha stackIn_28_0 = null;
-        sna stackIn_28_1 = null;
-        sna stackIn_28_2 = null;
-        long stackIn_28_3 = 0L;
-        uha stackIn_29_0 = null;
-        sna stackIn_29_1 = null;
-        sna stackIn_29_2 = null;
-        long stackIn_29_3 = 0L;
-        uha stackIn_30_0 = null;
-        sna stackIn_30_1 = null;
-        sna stackIn_30_2 = null;
-        long stackIn_30_3 = 0L;
-        sna stackIn_30_4 = null;
-        int stackIn_34_0 = 0;
-        int stackIn_69_0 = 0;
-        int stackIn_78_0 = 0;
-        kv[] stackIn_79_0 = null;
-        kv[] stackIn_80_0 = null;
-        kv[] stackIn_81_0 = null;
-        int stackIn_81_1 = 0;
-        kv[] stackIn_87_0 = null;
-        kv[] stackIn_88_0 = null;
-        kv[] stackIn_89_0 = null;
-        int stackIn_89_1 = 0;
-        String stackIn_152_0 = null;
-        String stackIn_161_0 = null;
-        String stackIn_167_0 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        sga stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        int stackOut_1_3 = 0;
-        sga stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        int stackOut_3_3 = 0;
-        int stackOut_3_4 = 0;
-        sga stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        int stackOut_2_3 = 0;
-        int stackOut_2_4 = 0;
-        uha stackOut_7_0 = null;
-        sna stackOut_7_1 = null;
-        sna stackOut_7_2 = null;
-        long stackOut_7_3 = 0L;
-        uha stackOut_9_0 = null;
-        sna stackOut_9_1 = null;
-        sna stackOut_9_2 = null;
-        long stackOut_9_3 = 0L;
-        sna stackOut_9_4 = null;
-        uha stackOut_8_0 = null;
-        sna stackOut_8_1 = null;
-        sna stackOut_8_2 = null;
-        long stackOut_8_3 = 0L;
-        sna stackOut_8_4 = null;
-        uha stackOut_27_0 = null;
-        sna stackOut_27_1 = null;
-        sna stackOut_27_2 = null;
-        long stackOut_27_3 = 0L;
-        uha stackOut_29_0 = null;
-        sna stackOut_29_1 = null;
-        sna stackOut_29_2 = null;
-        long stackOut_29_3 = 0L;
-        sna stackOut_29_4 = null;
-        uha stackOut_28_0 = null;
-        sna stackOut_28_1 = null;
-        sna stackOut_28_2 = null;
-        long stackOut_28_3 = 0L;
-        sna stackOut_28_4 = null;
-        int stackOut_33_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_75_0 = 0;
-        int stackOut_73_0 = 0;
-        kv[] stackOut_78_0 = null;
-        kv[] stackOut_80_0 = null;
-        int stackOut_80_1 = 0;
-        kv[] stackOut_79_0 = null;
-        int stackOut_79_1 = 0;
-        kv[] stackOut_86_0 = null;
-        kv[] stackOut_88_0 = null;
-        int stackOut_88_1 = 0;
-        kv[] stackOut_87_0 = null;
-        int stackOut_87_1 = 0;
-        String stackOut_151_0 = null;
-        String stackOut_150_0 = null;
-        String stackOut_159_0 = null;
-        String stackOut_158_0 = null;
-        String stackOut_160_0 = null;
-        String stackOut_166_0 = null;
-        String stackOut_165_0 = null;
         var51 = null;
         var52 = null;
         var53 = null;
@@ -409,41 +332,27 @@ final class sma extends ana {
           L0: {
             L1: {
               var8 = -121 % ((51 - param2) / 45);
-              stackOut_1_0 = p.field_n;
-              stackOut_1_1 = 2 * (rg.field_h + 2);
-              stackOut_1_2 = 2;
-              stackOut_1_3 = param3 * (rg.field_h * 4 - -8);
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_3_2 = stackOut_1_2;
-              stackIn_3_3 = stackOut_1_3;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              stackIn_2_2 = stackOut_1_2;
-              stackIn_2_3 = stackOut_1_3;
+              stackIn_3_0 = p.field_n;
+
+              stackIn_3_1 = 2 * (rg.field_h + 2);
+
+              stackIn_3_2 = 2;
+
+              stackIn_3_3 = param3 * (rg.field_h * 4 - -8);
+
               if (bga.field_m != p.field_n) {
-                stackOut_3_0 = (sga) ((Object) stackIn_3_0);
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = stackIn_3_2;
-                stackOut_3_3 = stackIn_3_3;
-                stackOut_3_4 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
-                stackIn_4_3 = stackOut_3_3;
-                stackIn_4_4 = stackOut_3_4;
+                stackIn_4_0 = (sga) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = stackIn_3_2;
+                stackIn_4_3 = stackIn_3_3;
+                stackIn_4_4 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = (sga) ((Object) stackIn_2_0);
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = stackIn_2_2;
-                stackOut_2_3 = stackIn_2_3;
-                stackOut_2_4 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                stackIn_4_3 = stackOut_2_3;
-                stackIn_4_4 = stackOut_2_4;
+                stackIn_4_0 = (sga) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = stackIn_3_2;
+                stackIn_4_3 = stackIn_3_3;
+                stackIn_4_4 = 1;
                 break L1;
               }
             }
@@ -461,8 +370,10 @@ final class sma extends ana {
                   if (var13.field_z != null) {
                     break L3;
                   } else {
+                    stackIn_8_0 = param6;
+                    stackIn_8_1 = param4;
                     L4: {
-                      var15 = param6 | param4;
+                      var15 = stackIn_8_0 | stackIn_8_1;
                       var13.field_hc = new sna(0L, wv.field_l);
                       var13.a(-1, var13.field_hc);
                       var13.field_hc.field_N = 1;
@@ -477,46 +388,32 @@ final class sma extends ana {
                       var13.field_vb = new sna(0L, gi.field_c);
                       var13.a(-1, var13.field_vb);
                       var13.field_vb.field_N = 2;
-                      stackOut_7_0 = (uha) (var13);
-                      stackOut_7_1 = null;
-                      stackOut_7_2 = null;
-                      stackOut_7_3 = 0L;
-                      stackIn_9_0 = stackOut_7_0;
-                      stackIn_9_1 = stackOut_7_1;
-                      stackIn_9_2 = stackOut_7_2;
-                      stackIn_9_3 = stackOut_7_3;
-                      stackIn_8_0 = stackOut_7_0;
-                      stackIn_8_1 = stackOut_7_1;
-                      stackIn_8_2 = stackOut_7_2;
-                      stackIn_8_3 = stackOut_7_3;
+                      stackIn_10_0 = (uha) (var13);
+
+                      stackIn_10_1 = null;
+
+                      stackIn_10_2 = null;
+
+                      stackIn_10_3 = 0L;
+
                       if (eaa.field_c) {
-                        stackOut_9_0 = (uha) ((Object) stackIn_9_0);
-                        stackOut_9_1 = null;
-                        stackOut_9_2 = null;
-                        stackOut_9_3 = stackIn_9_3;
-                        stackOut_9_4 = wv.field_l;
-                        stackIn_10_0 = stackOut_9_0;
-                        stackIn_10_1 = stackOut_9_1;
-                        stackIn_10_2 = stackOut_9_2;
-                        stackIn_10_3 = stackOut_9_3;
-                        stackIn_10_4 = stackOut_9_4;
+                        stackIn_11_0 = (uha) ((Object) stackIn_10_0);
+                        stackIn_11_1 = null;
+                        stackIn_11_2 = null;
+                        stackIn_11_3 = stackIn_10_3;
+                        stackIn_11_4 = wv.field_l;
                         break L4;
                       } else {
-                        stackOut_8_0 = (uha) ((Object) stackIn_8_0);
-                        stackOut_8_1 = null;
-                        stackOut_8_2 = null;
-                        stackOut_8_3 = stackIn_8_3;
-                        stackOut_8_4 = gi.field_c;
-                        stackIn_10_0 = stackOut_8_0;
-                        stackIn_10_1 = stackOut_8_1;
-                        stackIn_10_2 = stackOut_8_2;
-                        stackIn_10_3 = stackOut_8_3;
-                        stackIn_10_4 = stackOut_8_4;
+                        stackIn_11_0 = (uha) ((Object) stackIn_10_0);
+                        stackIn_11_1 = null;
+                        stackIn_11_2 = null;
+                        stackIn_11_3 = stackIn_10_3;
+                        stackIn_11_4 = gi.field_c;
                         break L4;
                       }
                     }
                     L5: {
-                      stackIn_10_0.field_Db = new sna(stackIn_10_3, stackIn_10_4);
+                      stackIn_11_0.field_Db = new sna(stackIn_11_3, stackIn_11_4);
                       var13.a(-1, var13.field_Db);
                       var13.field_Ab = new sna[ld.field_q];
                       var13.field_xb = new sna(0L, (sna) null);
@@ -565,45 +462,31 @@ final class sma extends ana {
                     L9: while (true) {
                       if (var19_int >= ld.field_q) {
                         L10: {
-                          stackOut_27_0 = (uha) (var13);
-                          stackOut_27_1 = null;
-                          stackOut_27_2 = null;
-                          stackOut_27_3 = 0L;
-                          stackIn_29_0 = stackOut_27_0;
-                          stackIn_29_1 = stackOut_27_1;
-                          stackIn_29_2 = stackOut_27_2;
-                          stackIn_29_3 = stackOut_27_3;
-                          stackIn_28_0 = stackOut_27_0;
-                          stackIn_28_1 = stackOut_27_1;
-                          stackIn_28_2 = stackOut_27_2;
-                          stackIn_28_3 = stackOut_27_3;
+                          stackIn_30_0 = (uha) (var13);
+
+                          stackIn_30_1 = null;
+
+                          stackIn_30_2 = null;
+
+                          stackIn_30_3 = 0L;
+
                           if (eaa.field_c) {
-                            stackOut_29_0 = (uha) ((Object) stackIn_29_0);
-                            stackOut_29_1 = null;
-                            stackOut_29_2 = null;
-                            stackOut_29_3 = stackIn_29_3;
-                            stackOut_29_4 = gi.field_c;
-                            stackIn_30_0 = stackOut_29_0;
-                            stackIn_30_1 = stackOut_29_1;
-                            stackIn_30_2 = stackOut_29_2;
-                            stackIn_30_3 = stackOut_29_3;
-                            stackIn_30_4 = stackOut_29_4;
+                            stackIn_31_0 = (uha) ((Object) stackIn_30_0);
+                            stackIn_31_1 = null;
+                            stackIn_31_2 = null;
+                            stackIn_31_3 = stackIn_30_3;
+                            stackIn_31_4 = gi.field_c;
                             break L10;
                           } else {
-                            stackOut_28_0 = (uha) ((Object) stackIn_28_0);
-                            stackOut_28_1 = null;
-                            stackOut_28_2 = null;
-                            stackOut_28_3 = stackIn_28_3;
-                            stackOut_28_4 = wv.field_l;
-                            stackIn_30_0 = stackOut_28_0;
-                            stackIn_30_1 = stackOut_28_1;
-                            stackIn_30_2 = stackOut_28_2;
-                            stackIn_30_3 = stackOut_28_3;
-                            stackIn_30_4 = stackOut_28_4;
+                            stackIn_31_0 = (uha) ((Object) stackIn_30_0);
+                            stackIn_31_1 = null;
+                            stackIn_31_2 = null;
+                            stackIn_31_3 = stackIn_30_3;
+                            stackIn_31_4 = wv.field_l;
                             break L10;
                           }
                         }
-                        stackIn_30_0.field_Gb = new sna(stackIn_30_3, stackIn_30_4);
+                        stackIn_31_0.field_Gb = new sna(stackIn_31_3, stackIn_31_4);
                         var13.a(-1, var13.field_Gb);
                         var13.field_Gb.field_N = 2;
                         var13.field_cc = new sna(0L, gi.field_c);
@@ -639,16 +522,14 @@ final class sma extends ana {
                 L12: {
                   var13.field_hc.field_Z = null;
                   if (var13.field_Zb) {
-                    stackOut_33_0 = param6;
-                    stackIn_34_0 = stackOut_33_0;
+                    stackIn_35_0 = param6;
                     break L12;
                   } else {
-                    stackOut_32_0 = param4;
-                    stackIn_34_0 = stackOut_32_0;
+                    stackIn_35_0 = param4;
                     break L12;
                   }
                 }
-                var15 = stackIn_34_0;
+                var15 = stackIn_35_0;
                 var47 = var13.field_hc;
                 var13.field_hc.field_p = 0;
                 var13.field_Ub.field_Z = null;
@@ -817,17 +698,15 @@ final class sma extends ana {
                           var13.field_vb.field_Z = Integer.toString(var13.field_bc);
                           var13.field_vb.a(rg.field_h, 31407, 48, 200, var32);
                           if (eaa.field_c) {
-                            stackOut_68_0 = 250;
-                            stackIn_69_0 = stackOut_68_0;
+                            stackIn_70_0 = 250;
                             break L22;
                           } else {
-                            stackOut_67_0 = 200;
-                            stackIn_69_0 = stackOut_67_0;
+                            stackIn_70_0 = 200;
                             break L22;
                           }
                         }
                         L23: {
-                          var34_int = stackIn_69_0;
+                          var34_int = stackIn_70_0;
                           var13.field_Db.a(rg.field_h, 31407, -var34_int + 363, var34_int, var32);
                           var35_int = lm.field_d;
                           if (-1 == (1 << wba.field_c & var15 ^ -1)) {
@@ -847,40 +726,32 @@ final class sma extends ana {
                             L25: {
                               if (!var13.field_zb) {
                                 if (var13.field_Wb) {
-                                  stackOut_76_0 = 1;
-                                  stackIn_78_0 = stackOut_76_0;
+                                  stackIn_79_0 = 1;
                                   break L25;
                                 } else {
-                                  stackOut_75_0 = 0;
-                                  stackIn_78_0 = stackOut_75_0;
+                                  stackIn_79_0 = 0;
                                   break L25;
                                 }
                               } else {
-                                stackOut_73_0 = 1;
-                                stackIn_78_0 = stackOut_73_0;
+                                stackIn_79_0 = 1;
                                 break L25;
                               }
                             }
                             L26: {
-                              var37 = stackIn_78_0;
-                              stackOut_78_0 = (kv[]) (field_H);
-                              stackIn_80_0 = stackOut_78_0;
-                              stackIn_79_0 = stackOut_78_0;
+                              var37 = stackIn_79_0;
+                              stackIn_81_0 = (kv[]) (field_H);
+
                               if (var37 != 0) {
-                                stackOut_80_0 = (kv[]) ((Object) stackIn_80_0);
-                                stackOut_80_1 = 1;
-                                stackIn_81_0 = stackOut_80_0;
-                                stackIn_81_1 = stackOut_80_1;
+                                stackIn_82_0 = (kv[]) ((Object) stackIn_81_0);
+                                stackIn_82_1 = 1;
                                 break L26;
                               } else {
-                                stackOut_79_0 = (kv[]) ((Object) stackIn_79_0);
-                                stackOut_79_1 = 0;
-                                stackIn_81_0 = stackOut_79_0;
-                                stackIn_81_1 = stackOut_79_1;
+                                stackIn_82_0 = (kv[]) ((Object) stackIn_81_0);
+                                stackIn_82_1 = 0;
                                 break L26;
                               }
                             }
-                            var52_ref = stackIn_81_0[stackIn_81_1];
+                            var52_ref = stackIn_82_0[stackIn_82_1];
                             var13.field_wb.field_v = var52_ref;
                             var13.field_wb.a(var13.field_Db.field_p, 31407, var52_ref.field_n, var35_int, 0);
                             var35_int = var35_int + (lm.field_d + var52_ref.field_n);
@@ -901,24 +772,19 @@ final class sma extends ana {
                         L28: {
                           if (-1 != (var15 & 1 << lga.field_r ^ -1)) {
                             L29: {
-                              stackOut_86_0 = gba.field_Db;
-                              stackIn_88_0 = stackOut_86_0;
-                              stackIn_87_0 = stackOut_86_0;
+                              stackIn_89_0 = gba.field_Db;
+
                               if (!var13.field_dc) {
-                                stackOut_88_0 = (kv[]) ((Object) stackIn_88_0);
-                                stackOut_88_1 = 0;
-                                stackIn_89_0 = stackOut_88_0;
-                                stackIn_89_1 = stackOut_88_1;
+                                stackIn_90_0 = (kv[]) ((Object) stackIn_89_0);
+                                stackIn_90_1 = 0;
                                 break L29;
                               } else {
-                                stackOut_87_0 = (kv[]) ((Object) stackIn_87_0);
-                                stackOut_87_1 = 1;
-                                stackIn_89_0 = stackOut_87_0;
-                                stackIn_89_1 = stackOut_87_1;
+                                stackIn_90_0 = (kv[]) ((Object) stackIn_89_0);
+                                stackIn_90_1 = 1;
                                 break L29;
                               }
                             }
-                            var54_ref = stackIn_89_0[stackIn_89_1];
+                            var54_ref = stackIn_90_0[stackIn_90_1];
                             var13.field_fc.field_v = var54_ref;
                             var13.field_fc.a(var13.field_Db.field_p, 31407, var54_ref.field_n, var35_int, 0);
                             var35_int = var35_int + (var54_ref.field_n - -lm.field_d);
@@ -971,7 +837,8 @@ final class sma extends ana {
                               if (var38_int >= ld.field_q) {
                                 break L33;
                               } else {
-                                var13.field_Ab[var38_int].field_kb = var13.field_Ab[var38_int].field_kb + var37;
+                                dupTemp$0 = var13.field_Ab[var38_int];
+                                dupTemp$0.field_kb = dupTemp$0.field_kb + var37;
                                 var38_int++;
                                 continue L34;
                               }
@@ -1013,8 +880,8 @@ final class sma extends ana {
                           if (var13.field_Cb != null) {
                             var32 += 2;
                             var38 = new StringBuilder(64);
-                            discarded$4 = var38.append(gfa.field_k);
-                            discarded$5 = var38.append(var13.field_Cb[0]);
+                            discarded$1 = var38.append(gfa.field_k);
+                            discarded$2 = var38.append(var13.field_Cb[0]);
                             var39_int = 1;
                             L38: while (true) {
                               if (var39_int >= var13.field_Rb) {
@@ -1025,8 +892,8 @@ final class sma extends ana {
                                 var32 = var32 + var40 * rg.field_h;
                                 break L37;
                               } else {
-                                discarded$6 = var38.append(", ");
-                                discarded$7 = var38.append(var13.field_Cb[var39_int]);
+                                discarded$3 = var38.append(", ");
+                                discarded$4 = var38.append(var13.field_Cb[var39_int]);
                                 var39_int++;
                                 continue L38;
                               }
@@ -1110,16 +977,14 @@ final class sma extends ana {
                           if (var13.field_fc.field_T) {
                             L47: {
                               if (var13.field_dc) {
-                                stackOut_151_0 = tw.field_d;
-                                stackIn_152_0 = stackOut_151_0;
+                                stackIn_153_0 = tw.field_d;
                                 break L47;
                               } else {
-                                stackOut_150_0 = uf.field_a;
-                                stackIn_152_0 = stackOut_150_0;
+                                stackIn_153_0 = uf.field_a;
                                 break L47;
                               }
                             }
-                            jja.field_m = stackIn_152_0;
+                            jja.field_m = stackIn_153_0;
                             break L46;
                           } else {
                             break L46;
@@ -1136,22 +1001,19 @@ final class sma extends ana {
                                     break L50;
                                   } else {
                                     if (var13.field_Fb) {
-                                      stackOut_159_0 = dp.field_m;
-                                      stackIn_161_0 = stackOut_159_0;
+                                      stackIn_162_0 = dp.field_m;
                                       break L49;
                                     } else {
-                                      stackOut_158_0 = bja.field_p;
-                                      stackIn_161_0 = stackOut_158_0;
+                                      stackIn_162_0 = bja.field_p;
                                       break L49;
                                     }
                                   }
                                 }
                               }
-                              stackOut_160_0 = lm.field_c;
-                              stackIn_161_0 = stackOut_160_0;
+                              stackIn_162_0 = lm.field_c;
                               break L49;
                             }
-                            jja.field_m = stackIn_161_0;
+                            jja.field_m = stackIn_162_0;
                             break L48;
                           } else {
                             break L48;
@@ -1161,16 +1023,14 @@ final class sma extends ana {
                           if (var13.field_Qb.field_T) {
                             L52: {
                               if (-3 != (var13.field_Lb ^ -1)) {
-                                stackOut_166_0 = aa.field_n;
-                                stackIn_167_0 = stackOut_166_0;
+                                stackIn_168_0 = aa.field_n;
                                 break L52;
                               } else {
-                                stackOut_165_0 = rs.field_h;
-                                stackIn_167_0 = stackOut_165_0;
+                                stackIn_168_0 = rs.field_h;
                                 break L52;
                               }
                             }
-                            jja.field_m = stackIn_167_0;
+                            jja.field_m = stackIn_168_0;
                             break L51;
                           } else {
                             break L51;
@@ -1299,15 +1159,38 @@ final class sma extends ana {
     }
 
     final static void a(int param0, ee[] param1, vr param2, vr param3, int[] param4) {
-        kv[] dupTemp$4 = null;
-        kv[] dupTemp$5 = null;
-        kv[] dupTemp$6 = null;
-        kv[] dupTemp$7 = null;
-        RuntimeException var5 = null;
-        ee[] var5_array = null;
-        int[] var6 = null;
-        ee[] var6_array = null;
+        kv[] dupTemp$0 = null;
+        kv[] dupTemp$1 = null;
+        kv[] dupTemp$2 = null;
+        kv[] dupTemp$3 = null;
+        ee[] var5 = null;
+        ee[] var6 = null;
+        int[] var6_array = null;
         int var7_int = 0;
+        int var18 = 0;
+        int[] var20 = null;
+        ee[] var21 = null;
+        int[] var22 = null;
+        int[] var23 = null;
+        int[] var24 = null;
+        int[] var25 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        StringBuilder stackIn_29_1 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
+        StringBuilder stackIn_32_1 = null;
+        StringBuilder stackIn_33_1 = null;
+        String stackIn_33_2 = null;
+        StringBuilder stackIn_35_1 = null;
+        StringBuilder stackIn_36_1 = null;
+        String stackIn_36_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5_ref = null;
         fea var7 = null;
         sna var8 = null;
         sna var9 = null;
@@ -1319,115 +1202,46 @@ final class sma extends ana {
         sna var15 = null;
         kv[] var16 = null;
         kv[] var17 = null;
-        int var18 = 0;
         int[] var19 = null;
-        int[] var20 = null;
-        ee[] var21 = null;
-        int[] var22 = null;
-        int[] var23 = null;
-        int[] var24 = null;
-        int[] var25 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        String stackIn_36_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
         var18 = BachelorFridge.field_y;
         try {
           L0: {
             L1: {
               var21 = bla.a(29611, "lobby", "crowns", param2);
-              var5_array = var21;
+              var5 = var21;
               re.field_E = var21.length;
               if (param1 == null) {
                 break L1;
               } else {
-                var6_array = new ee[re.field_E - -param1.length];
+                var6 = new ee[re.field_E - -param1.length];
                 var7_int = 0;
                 L2: while (true) {
                   if (re.field_E <= var7_int) {
-                    var5_array = var6_array;
+                    var5 = var6;
                     var7_int = 0;
                     L3: while (true) {
                       if (var7_int >= param1.length) {
                         break L1;
                       } else {
-                        var6_array[var7_int + re.field_E] = param1[var7_int];
+                        var6[var7_int + re.field_E] = param1[var7_int];
                         var7_int++;
                         continue L3;
                       }
                     }
                   } else {
-                    var6_array[var7_int] = var21[var7_int];
+                    var6[var7_int] = var21[var7_int];
                     var7_int++;
                     continue L2;
                   }
                 }
               }
             }
-            var24 = new int[var5_array.length];
+            var24 = new int[var5.length];
             var22 = var24;
             var20 = var22;
             var25 = var20;
             var23 = var25;
-            var6 = var23;
+            var6_array = var23;
             var7_int = 0;
             L4: while (true) {
               if (var7_int >= re.field_E) {
@@ -1439,7 +1253,7 @@ final class sma extends ana {
                         if (param1.length <= var7_int) {
                           break L5;
                         } else {
-                          var6[var7_int + re.field_E] = param4[var7_int];
+                          var6_array[var7_int + re.field_E] = param4[var7_int];
                           var7_int++;
                           continue L6;
                         }
@@ -1450,7 +1264,7 @@ final class sma extends ana {
                         if (param1.length <= var7_int) {
                           break L5;
                         } else {
-                          var6[re.field_E - -var7_int] = param1[var7_int].field_b;
+                          var6_array[re.field_E - -var7_int] = param1[var7_int].field_b;
                           var7_int++;
                           continue L7;
                         }
@@ -1469,9 +1283,9 @@ final class sma extends ana {
                   var7 = vfa.a("largefont", param2, 76, "lobby", param3);
                   ds.field_l = vfa.a("generalfont", param2, -15, "lobby", param3);
                   hl.field_H = vfa.a("chatfont", param2, -62, "lobby", param3);
-                  var7.a(var5_array, var25);
-                  ds.field_l.a(var5_array, var25);
-                  hl.field_H.a(var5_array, var25);
+                  var7.a(var5, var25);
+                  ds.field_l.a(var5, var25);
+                  hl.field_H.a(var5, var25);
                   var8 = new sna(0L, (sna) null);
                   var8.field_gb = 16777215;
                   var8.field_B = rg.field_h;
@@ -1589,9 +1403,9 @@ final class sma extends ana {
                 uj.field_r = new sna(0L, ria.field_k);
                 ria.field_k.field_eb = tj.a(gw.a("lobby", "smallbutton", param2, -111), (byte) -65);
                 ria.field_k.field_A = tj.a(gw.a("lobby", "smallbutton_mouseover", param2, -76), (byte) -1);
-                dupTemp$4 = tj.a(gw.a("lobby", "smallbutton_active", param2, -67), (byte) -9);
-                ria.field_k.field_K = dupTemp$4;
-                ria.field_k.field_db = dupTemp$4;
+                dupTemp$0 = tj.a(gw.a("lobby", "smallbutton_active", param2, -67), (byte) -9);
+                ria.field_k.field_K = dupTemp$0;
+                ria.field_k.field_db = dupTemp$0;
                 ria.field_k.field_X = tj.a(gw.a("lobby", "smallbutton_disabled", param2, -85), (byte) 114);
                 sn.field_l.field_eb = tj.a(gw.a("lobby", "mediumbutton", param2, -34), (byte) 107);
                 sn.field_l.field_A = tj.a(gw.a("lobby", "mediumbutton_mouseover", param2, param0 ^ -30959), (byte) 126);
@@ -1612,20 +1426,20 @@ final class sma extends ana {
                 iw.field_a.field_X = tj.a(gw.a("lobby", "backbutton_disabled", param2, -38), (byte) -92);
                 uj.field_r.field_eb = tj.a(gw.a("lobby", "gameoptionbutton", param2, -67), (byte) -26);
                 uj.field_r.field_A = tj.a(gw.a("lobby", "gameoptionbutton_mouseover", param2, -50), (byte) -61);
-                dupTemp$5 = tj.a(gw.a("lobby", "gameoptionbutton_active", param2, param0 ^ -30958), (byte) 109);
-                uj.field_r.field_K = dupTemp$5;
-                uj.field_r.field_db = dupTemp$5;
+                dupTemp$1 = tj.a(gw.a("lobby", "gameoptionbutton_active", param2, param0 ^ -30958), (byte) 109);
+                uj.field_r.field_K = dupTemp$1;
+                uj.field_r.field_db = dupTemp$1;
                 uj.field_r.field_X = tj.a(gw.a("lobby", "gameoptionbutton_disabled", param2, -68), (byte) -34);
                 gfa.field_f.field_eb = tj.a(gw.a("lobby", "chatbutton", param2, -83), (byte) 114);
                 gfa.field_f.field_A = tj.a(gw.a("lobby", "chatbutton_mouseover", param2, -107), (byte) 118);
-                dupTemp$6 = tj.a(gw.a("lobby", "chatbutton_active", param2, -64), (byte) -127);
-                gfa.field_f.field_K = dupTemp$6;
-                gfa.field_f.field_db = dupTemp$6;
+                dupTemp$2 = tj.a(gw.a("lobby", "chatbutton_active", param2, -64), (byte) -127);
+                gfa.field_f.field_K = dupTemp$2;
+                gfa.field_f.field_db = dupTemp$2;
                 uaa.field_i.field_eb = tj.a(gw.a("lobby", "chatfilterbutton", param2, -74), (byte) 122);
                 uaa.field_i.field_A = tj.a(gw.a("lobby", "chatfilterbutton_mouseover", param2, -69), (byte) -79);
-                dupTemp$7 = tj.a(gw.a("lobby", "chatfilterbutton_active", param2, -125), (byte) 107);
-                uaa.field_i.field_K = dupTemp$7;
-                uaa.field_i.field_db = dupTemp$7;
+                dupTemp$3 = tj.a(gw.a("lobby", "chatfilterbutton_active", param2, -125), (byte) 107);
+                uaa.field_i.field_K = dupTemp$3;
+                uaa.field_i.field_db = dupTemp$3;
                 var17 = gw.a("lobby", "checkbox", param2, -76);
                 nr.field_v = new daa(0L, var17[1], var17[0], 1, dla.field_k, (String) null);
                 cd.field_n = new sna(0L, (sna) null);
@@ -1661,107 +1475,75 @@ final class sma extends ana {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
-            var5 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var5);
-            stackOut_24_1 = new StringBuilder().append("sma.D(").append(param0).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            var5_ref = decompiledCaughtException;
+            stackIn_26_0 = (RuntimeException) (var5_ref);
+
+            stackIn_26_1 = new StringBuilder().append("sma.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L9;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L9;
             }
           }
           L10: {
-            stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+
+
+            stackIn_29_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
+
             if (param2 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L10;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L10;
             }
           }
           L11: {
-            stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',');
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+
+
+            stackIn_32_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',');
+
             if (param3 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L11;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L11;
             }
           }
           L12: {
-            stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-            stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',');
-            stackIn_35_0 = stackOut_33_0;
-            stackIn_35_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+
+
+            stackIn_35_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',');
+
             if (param4 == null) {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "null";
               break L12;
             } else {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "{...}";
-              stackIn_36_0 = stackOut_34_0;
-              stackIn_36_1 = stackOut_34_1;
-              stackIn_36_2 = stackOut_34_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "{...}";
               break L12;
             }
           }
-          throw pe.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_27_0), stackIn_36_2 + ')');
         }
     }
 

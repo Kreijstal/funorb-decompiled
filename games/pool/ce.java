@@ -7,15 +7,14 @@ final class ce implements com.ms.directX.IEnumModesCallback {
     private static int[] field_c;
 
     final int[] a(boolean param0) {
-        int[] discarded$2 = null;
-        int[] var2 = null;
-        int[] var3 = null;
+        int[] var2;
+        int[] var3;
         this.field_a.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_c = new int[field_b];
         field_b = 0;
         this.field_a.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         if (!param0) {
-          discarded$2 = this.a(false);
+          this.a(false);
           var3 = field_c;
           var2 = var3;
           field_b = 0;
@@ -31,21 +30,17 @@ final class ce implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(java.awt.Frame param0, int param1, int param2, int param3, int param4, int param5) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        com.ms.awt.WComponentPeer var7 = null;
-        int var8 = 0;
-        com.ms.com.IUnknown var9 = null;
+        com.ms.awt.WComponentPeer var7;
+        int var8;
+        com.ms.com.IUnknown var9;
         param0.setVisible(true);
         if (param2 <= 59) {
           var9 = (com.ms.com.IUnknown) null;
           this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
-          discarded$4 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$5 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param0), 17);
           this.field_a.setDisplayMode(param3, param1, param4, param5, 0);
           param0.setBounds(0, 0, param3, param1);
@@ -55,8 +50,8 @@ final class ce implements com.ms.directX.IEnumModesCallback {
         } else {
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
-          discarded$6 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$7 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param0), 17);
           this.field_a.setDisplayMode(param3, param1, param4, param5, 0);
           param0.setBounds(0, 0, param3, param1);
@@ -67,11 +62,10 @@ final class ce implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(int param0, java.awt.Frame param1) {
-        int[] discarded$0 = null;
         this.field_a.restoreDisplayMode();
         this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
         if (param0 != 0) {
-            discarded$0 = this.a(true);
+            this.a(true);
         }
     }
 

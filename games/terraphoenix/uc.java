@@ -44,7 +44,7 @@ final class uc extends dh {
     }
 
     final static void l(int param0, int param1) {
-        int discarded$4 = m.a(1);
+        m.a(1);
         if (param0 != 3795) {
             field_q = (String) null;
         }
@@ -80,22 +80,22 @@ final class uc extends dh {
     }
 
     final static ci[] l(int param0) {
-        ci[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var5 = null;
-        int var6 = 0;
-        int[] var6_ref_int__ = null;
-        int var7 = 0;
-        int var8 = 0;
-        byte[] var9 = null;
-        int[] var10 = null;
-        byte[] var12 = null;
-        int[] var13 = null;
-        byte[] var16 = null;
-        int[] var17 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
+        ci[] var1;
+        int var2;
+        int var3;
+        byte[] var5;
+        int var6;
+        int[] var6_ref_int__;
+        int var7;
+        int var8;
+        byte[] var9;
+        int[] var10;
+        byte[] var12;
+        int[] var13;
+        byte[] var16;
+        int[] var17;
+        byte[] var21;
+        int[] var22;
         var8 = Terraphoenix.field_V;
         var1 = new ci[kf.field_b];
         var2 = param0;
@@ -156,26 +156,16 @@ final class uc extends dh {
     }
 
     final void b(int param0, byte[] param1, int param2, int param3) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var5 = null;
         var6 = Terraphoenix.field_V;
         try {
           L0: {
@@ -184,9 +174,9 @@ final class uc extends dh {
               if (var5_int >= param2) {
                 break L0;
               } else {
-                fieldTemp$5 = this.field_k;
+                fieldTemp$2 = this.field_k;
                 this.field_k = this.field_k + 1;
-                param1[param3 + var5_int] = (byte)(this.field_i[fieldTemp$5] + -this.field_m.a(112));
+                param1[param3 + var5_int] = (byte)(this.field_i[fieldTemp$2] + -this.field_m.a(112));
                 var5_int++;
                 continue L1;
               }
@@ -196,27 +186,19 @@ final class uc extends dh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var5);
-            stackOut_5_1 = new StringBuilder().append("uc.UA(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var5);
+
+            stackIn_7_1 = new StringBuilder().append("uc.UA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }

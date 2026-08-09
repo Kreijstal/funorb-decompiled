@@ -66,8 +66,13 @@ final class ki extends am {
     }
 
     final static void a(boolean param0) {
-        String[][] dupTemp$2 = null;
-        int[][] dupTemp$3 = null;
+        String[][] dupTemp$0 = null;
+        int[][] dupTemp$1 = null;
+        wd stackIn_35_0 = null;
+        wd stackIn_36_0 = null;
+        int stackIn_36_1 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         wd var3 = null;
@@ -82,24 +87,12 @@ final class ki extends am {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int var14 = 0;
-        ml var15 = null;
-        wd stackIn_34_0 = null;
-        wd stackIn_35_0 = null;
-        wd stackIn_36_0 = null;
-        int stackIn_36_1 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        wd stackOut_33_0 = null;
-        wd stackOut_35_0 = null;
-        int stackOut_35_1 = 0;
-        wd stackOut_34_0 = null;
-        int stackOut_34_1 = 0;
+        ml var14 = null;
         var12 = Kickabout.field_G;
         try {
           L0: {
-            var15 = un.field_e;
-            var2 = var15.h((byte) -109);
+            var14 = un.field_e;
+            var2 = var14.h((byte) -109);
             var3 = (wd) ((Object) ak.field_i.g(24009));
             L1: while (true) {
               L2: {
@@ -116,7 +109,7 @@ final class ki extends am {
               }
               if (var3 != null) {
                 L3: {
-                  var4 = var15.h((byte) -127);
+                  var4 = var14.h((byte) -127);
                   if (0 != var4) {
                     sc.field_B[0] = ow.field_e;
                     var5 = var3.field_p;
@@ -128,46 +121,45 @@ final class ki extends am {
                         L5: while (true) {
                           if (var6_int >= var4) {
                             kf.a(var5, (byte) 63);
-                            dupTemp$2 = new String[2][var5];
-                            var3.field_i = dupTemp$2;
-                            var6 = dupTemp$2;
-                            dupTemp$3 = new int[2][4 * var5];
-                            var3.field_o = dupTemp$3;
-                            var7 = dupTemp$3;
+                            dupTemp$0 = new String[2][var5];
+                            var3.field_i = dupTemp$0;
+                            var6 = dupTemp$0;
+                            dupTemp$1 = new int[2][4 * var5];
+                            var3.field_o = dupTemp$1;
+                            var7 = dupTemp$1;
                             var8 = wf.field_O;
                             var9 = 0;
                             var10 = 0;
                             L6: while (true) {
                               if (var9 >= var8) {
+                                var9 = 0;
                                 var13 = 0;
-                                var9 = var13;
-                                var14 = 0;
-                                var10 = var14;
+                                var10 = var13;
                                 L7: while (true) {
-                                  if (var13 >= var8) {
+                                  if (var9 >= var8) {
                                     break L3;
                                   } else {
                                     L8: {
-                                      var11 = pf.field_d[var5 + var13];
-                                      var6[1][var14] = sc.field_B[var11];
-                                      var7[1][4 * var14] = bl.field_m[var11];
-                                      var7[1][1 + var14 * 4] = qp.field_G[var11];
-                                      var7[1][var14 * 4 - -2] = fo.field_j[var11];
-                                      var7[1][4 * var14 + 3] = ln.field_B[var11];
+                                      var11 = pf.field_d[var5 + var9];
+                                      var6[1][var13] = sc.field_B[var11];
+                                      var7[1][4 * var13] = bl.field_m[var11];
+                                      var7[1][1 + var13 * 4] = qp.field_G[var11];
+                                      var7[1][var13 * 4 - -2] = fo.field_j[var11];
+                                      var7[1][4 * var13 + 3] = ln.field_B[var11];
                                       if (hm.a((byte) 52, sc.field_B[var11])) {
                                         if (-1 != (qp.field_G[var11] + fo.field_j[var11] + ln.field_B[var11] ^ -1)) {
                                           break L8;
                                         } else {
-                                          var6[1][var14] = null;
-                                          var14--;
+                                          var6[1][var13] = null;
+                                          var13--;
                                           break L8;
                                         }
                                       } else {
                                         break L8;
                                       }
                                     }
+                                    var9++;
                                     var13++;
-                                    var14++;
                                     continue L7;
                                   }
                                 }
@@ -198,8 +190,8 @@ final class ki extends am {
                             }
                           } else {
                             L10: {
-                              pf.a(var15, 542439655);
-                              if (var6_int == 0) {
+                              pf.a(var14, 542439655);
+                              if ((var6_int ^ -1) == -1) {
                                 var3.field_f = lr.field_r;
                                 var3.field_m = pl.field_d;
                                 var3.field_j = io.field_j;
@@ -216,7 +208,7 @@ final class ki extends am {
                           }
                         }
                       } else {
-                        sc.field_B[var6_int] = var15.a(124);
+                        sc.field_B[var6_int] = var14.a(124);
                         var6_int++;
                         continue L4;
                       }
@@ -226,20 +218,15 @@ final class ki extends am {
                   }
                 }
                 L11: {
-                  stackOut_33_0 = (wd) (var3);
-                  stackIn_35_0 = stackOut_33_0;
-                  stackIn_34_0 = stackOut_33_0;
+                  stackIn_35_0 = (wd) (var3);
+
                   if (!param0) {
-                    stackOut_35_0 = (wd) ((Object) stackIn_35_0);
-                    stackOut_35_1 = 0;
-                    stackIn_36_0 = stackOut_35_0;
-                    stackIn_36_1 = stackOut_35_1;
+                    stackIn_36_0 = (wd) ((Object) stackIn_35_0);
+                    stackIn_36_1 = 0;
                     break L11;
                   } else {
-                    stackOut_34_0 = (wd) ((Object) stackIn_34_0);
-                    stackOut_34_1 = 1;
-                    stackIn_36_0 = stackOut_34_0;
-                    stackIn_36_1 = stackOut_34_1;
+                    stackIn_36_0 = (wd) ((Object) stackIn_35_0);
+                    stackIn_36_1 = 1;
                     break L11;
                   }
                 }
@@ -273,70 +260,46 @@ final class ki extends am {
         int var4 = 0;
         int stackIn_3_0 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             L1: {
               var2_int = param0.h((byte) -121);
               var4 = 4 % ((param1 - 15) / 62);
               if (-2 != (var2_int ^ -1)) {
-                stackOut_2_0 = 0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = 1;
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = 1;
                 break L1;
               }
             }
             var3 = stackIn_3_0;
-            stackOut_3_0 = var3;
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = var3;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("ki.E(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("ki.E(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -354,10 +317,10 @@ final class ki extends am {
     }
 
     public final String toString() {
-        Object var1 = null;
-        String var2 = null;
-        int var3 = 0;
-        int var4 = 0;
+        Object var1;
+        Object var2;
+        int var3;
+        int var4;
         L0: {
           var4 = Kickabout.field_G;
           var1 = null;
@@ -500,8 +463,8 @@ final class ki extends am {
               }
             }
             var1 = "meta";
-            var2 = (String) (var1);
-            var2 = (String) (var1);
+            var2 = var1;
+            var2 = var1;
             break L7;
           } else {
             break L7;
@@ -534,7 +497,7 @@ final class ki extends am {
             break L9;
           }
         }
-        return new String("{Move" + (String) (var1) + var2 + "}");
+        return new String("{Move" + (String) (var1) + (String) (var2) + "}");
     }
 
     static {

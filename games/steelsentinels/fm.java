@@ -16,10 +16,9 @@ final class fm {
     static int[] field_e;
 
     public static void a(int param0) {
-        gh discarded$0 = null;
         if (param0 != 4314) {
             mi var2 = (mi) null;
-            discarded$0 = fm.a(-42, true, 120, 16, -64, 89, -116, -30, -115, 59, 77, (mi) null, -85);
+            fm.a(-42, true, 120, 16, -64, 89, -116, -30, -115, 59, 77, (mi) null, -85);
         }
         field_j = null;
         field_b = null;
@@ -36,23 +35,12 @@ final class fm {
         gh var13 = null;
         RuntimeException var13_ref = null;
         gh stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gh stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -71,35 +59,26 @@ final class fm {
             var13.field_H = ul.a((byte) 0, param4, param0);
             var13.field_nb = param7;
             var13.field_L = param11;
-            stackOut_2_0 = (gh) (var13);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (gh) (var13);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var13_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var13_ref);
-            stackOut_4_1 = new StringBuilder().append("fm.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var13_ref);
+
+            stackIn_6_1 = new StringBuilder().append("fm.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
+
             if (param11 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -175,11 +154,11 @@ final class fm {
 
     static {
         $cfr$clinit: {
-            int incrementValue$1 = 0;
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
-            int var3 = 0;
+            int incrementValue$0 = 0;
+            int var0;
+            int var1;
+            int var2;
+            int var3;
             field_d = 33;
             field_h = "Camera follows sentinel: Off";
             field_j = new gk(192, 192, 256);
@@ -218,9 +197,9 @@ final class fm {
                       }
                     }
                     L4: {
-                      incrementValue$1 = var0;
+                      incrementValue$0 = var0;
                       var0++;
-                      field_j.field_p[incrementValue$1] = (byte)var1;
+                      field_j.field_p[incrementValue$0] = (byte)var1;
                       if ((var3 * var3 + var2 * var2 ^ -1) <= -6725) {
                         break L4;
                       } else {

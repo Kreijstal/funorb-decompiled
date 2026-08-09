@@ -10,34 +10,22 @@ final class ml {
     private RandomAccessFile field_a;
 
     final int a(byte param0, byte[] param1, int param2, int param3) throws IOException {
-        int discarded$2 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
               if (param0 >= 22) {
                 break L1;
               } else {
-                discarded$2 = ml.a(80);
+                ml.a(80);
                 break L1;
               }
             }
@@ -50,35 +38,26 @@ final class ml {
                 break L2;
               }
             }
-            stackOut_4_0 = var5_int;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = var5_int;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5);
-            stackOut_6_1 = new StringBuilder().append("ml.E(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5);
+
+            stackIn_8_1 = new StringBuilder().append("ml.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -112,11 +91,9 @@ final class ml {
     }
 
     final void b(byte param0) throws IOException {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
         if (this.field_a == null) {
           if (param0 > -62) {
-            discarded$4 = ml.a(-10);
+            ml.a(-10);
             return;
           } else {
             return;
@@ -127,7 +104,7 @@ final class ml {
           if (param0 <= -62) {
             return;
           } else {
-            discarded$5 = ml.a(-10);
+            ml.a(-10);
             return;
           }
         }
@@ -141,10 +118,9 @@ final class ml {
     }
 
     public static void a(byte param0) {
-        int discarded$0 = 0;
         field_c = null;
         if (param0 != -7) {
-            discarded$0 = ml.a(-107);
+            ml.a(-107);
         }
     }
 
@@ -170,24 +146,21 @@ final class ml {
     }
 
     ml(File param0, String param1, long param2) throws IOException {
-        boolean discarded$0 = false;
         int var5_int = 0;
         try {
             if ((param2 ^ -1L) == 0L) {
                 param2 = 9223372036854775807L;
             }
             if ((param0.length() ^ -1L) < (param2 ^ -1L)) {
-                discarded$0 = param0.delete();
+                param0.delete();
             }
             this.field_a = new RandomAccessFile(param0, param1);
             this.field_d = 0L;
             this.field_b = param2;
             var5_int = this.field_a.read();
-            if (var5_int != -1) {
-                if (!param1.equals("r")) {
-                    this.field_a.seek(0L);
-                    this.field_a.write(var5_int);
-                }
+            if (var5_int != -1 && !param1.equals("r")) {
+                this.field_a.seek(0L);
+                this.field_a.write(var5_int);
             }
             this.field_a.seek(0L);
         } catch (RuntimeException runtimeException) {

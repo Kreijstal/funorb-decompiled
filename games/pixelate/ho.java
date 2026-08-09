@@ -11,11 +11,11 @@ final class ho {
     static String field_d;
 
     final static void a(int param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {

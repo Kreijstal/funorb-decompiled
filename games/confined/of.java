@@ -16,15 +16,14 @@ final class of {
 
     final static int a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
-        int var3 = 0;
-        long var4 = 0L;
-        int var6 = 0;
         int var7 = 0;
         int stackIn_26_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_25_0 = 0;
+        RuntimeException var1 = null;
+        int var3 = 0;
+        long var4 = 0L;
+        int var6 = 0;
         var7 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -97,8 +96,7 @@ final class of {
                     }
                   }
                 }
-                stackOut_25_0 = var3;
-                stackIn_26_0 = stackOut_25_0;
+                stackIn_26_0 = var3;
                 break L0;
               } else {
                 L7: {
@@ -128,7 +126,6 @@ final class of {
     }
 
     final static void a(boolean param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
@@ -154,6 +151,7 @@ final class of {
         int[] var20 = null;
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var19 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -232,7 +230,7 @@ final class of {
                         }
                       } else {
                         L7: {
-                          if (var21[var16] < var21[var17_int]) {
+                          if ((var21[var16] ^ -1) > (var21[var17_int] ^ -1)) {
                             var16 = var17_int;
                             break L7;
                           } else {

@@ -38,8 +38,20 @@ final class hc {
     }
 
     final void a(double param0, double[] param1, byte param2, double param3) {
-        RuntimeException var7 = null;
+        double dupTemp$0 = 0.0;
+        double dupTemp$1 = 0.0;
+        double dupTemp$2 = 0.0;
+        double dupTemp$3 = 0.0;
+        RuntimeException stackIn_78_0 = null;
+        StringBuilder stackIn_78_1 = null;
+        RuntimeException stackIn_79_0 = null;
+        StringBuilder stackIn_79_1 = null;
+        String stackIn_79_2 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         double var7_double = 0.0;
+        RuntimeException var7 = null;
         double var9 = 0.0;
         double var11 = 0.0;
         double var13 = 0.0;
@@ -69,8 +81,8 @@ final class hc {
         double var42 = 0.0;
         int var42_int = 0;
         int var43 = 0;
-        int var44_int = 0;
         double[] var44 = null;
+        int var44_int = 0;
         double[] var45 = null;
         double var46 = 0.0;
         int var48 = 0;
@@ -102,24 +114,6 @@ final class hc {
         int[] var92 = null;
         int[] var93 = null;
         int[] var94 = null;
-        RuntimeException stackIn_77_0 = null;
-        StringBuilder stackIn_77_1 = null;
-        RuntimeException stackIn_78_0 = null;
-        StringBuilder stackIn_78_1 = null;
-        RuntimeException stackIn_79_0 = null;
-        StringBuilder stackIn_79_1 = null;
-        String stackIn_79_2 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_76_0 = null;
-        StringBuilder stackOut_76_1 = null;
-        RuntimeException stackOut_78_0 = null;
-        StringBuilder stackOut_78_1 = null;
-        String stackOut_78_2 = null;
-        RuntimeException stackOut_77_0 = null;
-        StringBuilder stackOut_77_1 = null;
-        String stackOut_77_2 = null;
         var48 = Torquing.field_u;
         try {
           L0: {
@@ -199,10 +193,12 @@ final class hc {
                                       var46 = Math.sqrt(ap.a(var82, 9, var82, 9));
                                       if (0.0 != var46) {
                                         if (1.0 + param0 >= var46 - var42) {
-                                          var44[11] = var82[11] / var46;
-                                          var44[8] = var82[11] / var46;
-                                          var44[9] = var82[9] / var46;
-                                          var44[6] = var82[9] / var46;
+                                          dupTemp$0 = var82[11] / var46;
+                                          var44[11] = dupTemp$0;
+                                          var44[8] = dupTemp$0;
+                                          dupTemp$1 = var82[9] / var46;
+                                          var44[9] = dupTemp$1;
+                                          var44[6] = dupTemp$1;
                                           var44[0] = (double)(var41[0] + var38) + var82[9] * var42;
                                           var44[3] = -var42 + var46;
                                           var44[4] = 0.1;
@@ -277,10 +273,12 @@ final class hc {
                             }
                           }
                           L10: {
-                            var26[5] = param3 + mo.field_D[this.field_o[var21_int][var22]];
-                            var25_ref_double__[5] = param3 + mo.field_D[this.field_o[var21_int][var22]];
-                            var26[4] = mo.field_x[this.field_o[var21_int][var22]];
-                            var25_ref_double__[4] = mo.field_x[this.field_o[var21_int][var22]];
+                            dupTemp$2 = param3 + mo.field_D[this.field_o[var21_int][var22]];
+                            var26[5] = dupTemp$2;
+                            var25_ref_double__[5] = dupTemp$2;
+                            dupTemp$3 = mo.field_x[this.field_o[var21_int][var22]];
+                            var26[4] = dupTemp$3;
+                            var25_ref_double__[4] = dupTemp$3;
                             if (param1[3] <= param0 + 1.0) {
                               ol.a(var25_ref_double__, (byte) 89);
                               break L10;
@@ -470,27 +468,19 @@ final class hc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var7 = decompiledCaughtException;
-            stackOut_76_0 = (RuntimeException) (var7);
-            stackOut_76_1 = new StringBuilder().append("hc.K(").append(param0).append(',');
-            stackIn_78_0 = stackOut_76_0;
-            stackIn_78_1 = stackOut_76_1;
-            stackIn_77_0 = stackOut_76_0;
-            stackIn_77_1 = stackOut_76_1;
+            stackIn_78_0 = (RuntimeException) (var7);
+
+            stackIn_78_1 = new StringBuilder().append("hc.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_78_0 = (RuntimeException) ((Object) stackIn_78_0);
-              stackOut_78_1 = (StringBuilder) ((Object) stackIn_78_1);
-              stackOut_78_2 = "null";
-              stackIn_79_0 = stackOut_78_0;
-              stackIn_79_1 = stackOut_78_1;
-              stackIn_79_2 = stackOut_78_2;
+              stackIn_79_0 = (RuntimeException) ((Object) stackIn_78_0);
+              stackIn_79_1 = (StringBuilder) ((Object) stackIn_78_1);
+              stackIn_79_2 = "null";
               break L18;
             } else {
-              stackOut_77_0 = (RuntimeException) ((Object) stackIn_77_0);
-              stackOut_77_1 = (StringBuilder) ((Object) stackIn_77_1);
-              stackOut_77_2 = "{...}";
-              stackIn_79_0 = stackOut_77_0;
-              stackIn_79_1 = stackOut_77_1;
-              stackIn_79_2 = stackOut_77_2;
+              stackIn_79_0 = (RuntimeException) ((Object) stackIn_78_0);
+              stackIn_79_1 = (StringBuilder) ((Object) stackIn_78_1);
+              stackIn_79_2 = "{...}";
               break L18;
             }
           }
@@ -516,11 +506,11 @@ final class hc {
     }
 
     final boolean g(int param0) {
-        long var2 = 0L;
-        lm var4 = null;
-        int var4_int = 0;
-        ti var5 = null;
-        int var6 = 0;
+        long var2;
+        lm var4;
+        int var4_int;
+        ti var5;
+        int var6;
         L0: {
           var6 = Torquing.field_u;
           if (param0 == 1) {
@@ -619,68 +609,68 @@ final class hc {
     }
 
     final boolean e(int param0) {
-        int incrementValue$36 = 0;
-        int incrementValue$37 = 0;
-        int incrementValue$38 = 0;
-        int incrementValue$39 = 0;
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
-        int incrementValue$48 = 0;
-        int incrementValue$49 = 0;
-        int incrementValue$50 = 0;
-        int incrementValue$51 = 0;
-        int incrementValue$52 = 0;
-        int incrementValue$53 = 0;
-        int incrementValue$54 = 0;
-        int incrementValue$55 = 0;
-        int incrementValue$56 = 0;
-        int incrementValue$57 = 0;
-        int incrementValue$58 = 0;
-        int incrementValue$59 = 0;
-        int incrementValue$60 = 0;
-        int incrementValue$61 = 0;
-        int incrementValue$62 = 0;
-        int incrementValue$63 = 0;
-        int incrementValue$64 = 0;
-        int incrementValue$65 = 0;
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int incrementValue$68 = 0;
-        int incrementValue$69 = 0;
-        int incrementValue$70 = 0;
-        kh discarded$71 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int[] var6_ref_int__ = null;
-        int var7 = 0;
-        int[] var7_ref_int__ = null;
-        int var8 = 0;
-        int[] var8_ref_int__ = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int[] var19 = null;
-        int[] var20 = null;
-        int[] var21 = null;
-        int[] var22 = null;
-        int[] var23 = null;
-        int[] var24 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
+        int incrementValue$30 = 0;
+        int incrementValue$31 = 0;
+        int incrementValue$32 = 0;
+        int incrementValue$33 = 0;
+        int incrementValue$34 = 0;
+        byte[] dupTemp$35 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int[] var6_ref_int__;
+        int var6;
+        int[] var7_ref_int__;
+        int var7;
+        int[] var8_ref_int__;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int[] var19;
+        int[] var20;
+        int[] var21;
+        int[] var22;
+        int[] var23;
+        int[] var24;
         var18 = Torquing.field_u;
         if (this.field_i != null) {
           if (null == this.field_o) {
@@ -702,12 +692,12 @@ final class hc {
                 }
               }
             }
-            incrementValue$36 = var2;
+            incrementValue$0 = var2;
             var2++;
-            this.field_r = 1 + lk.a(this.field_i.charAt(incrementValue$36), 97);
-            incrementValue$37 = var2;
+            this.field_r = 1 + lk.a(this.field_i.charAt(incrementValue$0), 97);
+            incrementValue$1 = var2;
             var2++;
-            this.field_v = lk.a(this.field_i.charAt(incrementValue$37), 97) + 1;
+            this.field_v = lk.a(this.field_i.charAt(incrementValue$1), 97) + 1;
             this.field_o = new byte[this.field_r][this.field_v];
             this.field_h = new boolean[this.field_r][this.field_v];
             this.field_x = new int[1 + this.field_r][this.field_v - -1];
@@ -717,18 +707,18 @@ final class hc {
                 var3 = 0;
                 L3: while (true) {
                   if (var3 > this.field_r) {
-                    incrementValue$38 = var2;
+                    incrementValue$2 = var2;
                     var2++;
-                    this.field_q = new tl[lk.a(this.field_i.charAt(incrementValue$38), 97)];
+                    this.field_q = new tl[lk.a(this.field_i.charAt(incrementValue$2), 97)];
                     var3 = 0;
                     L4: while (true) {
                       if (var3 >= this.field_q.length) {
                         L5: {
-                          incrementValue$39 = var2;
+                          incrementValue$3 = var2;
                           var2++;
-                          incrementValue$40 = var2;
+                          incrementValue$4 = var2;
                           var2++;
-                          var3 = lk.a(this.field_i.charAt(incrementValue$39), 97) * 64 - -lk.a(this.field_i.charAt(incrementValue$40), 97);
+                          var3 = lk.a(this.field_i.charAt(incrementValue$3), 97) * 64 - -lk.a(this.field_i.charAt(incrementValue$4), 97);
                           if (-4096 < (var3 ^ -1)) {
                             this.field_a = new ei();
                             var4 = 0;
@@ -736,9 +726,9 @@ final class hc {
                               if (var4 >= var3) {
                                 break L5;
                               } else {
-                                incrementValue$41 = var2;
+                                incrementValue$5 = var2;
                                 var2++;
-                                var5 = lk.a(this.field_i.charAt(incrementValue$41), 97);
+                                var5 = lk.a(this.field_i.charAt(incrementValue$5), 97);
                                 var23 = new int[var5];
                                 var20 = var23;
                                 var6_ref_int__ = var20;
@@ -756,27 +746,27 @@ final class hc {
                                     continue L6;
                                   } else {
                                     L8: {
-                                      incrementValue$42 = var2;
+                                      incrementValue$6 = var2;
                                       var2++;
-                                      var10 = lk.a(this.field_i.charAt(incrementValue$42), 97);
-                                      incrementValue$43 = var2;
+                                      var10 = lk.a(this.field_i.charAt(incrementValue$6), 97);
+                                      incrementValue$7 = var2;
                                       var2++;
-                                      var11 = lk.a(this.field_i.charAt(incrementValue$43), 97);
-                                      incrementValue$44 = var2;
+                                      var11 = lk.a(this.field_i.charAt(incrementValue$7), 97);
+                                      incrementValue$8 = var2;
                                       var2++;
-                                      var12 = lk.a(this.field_i.charAt(incrementValue$44), 97);
-                                      incrementValue$45 = var2;
+                                      var12 = lk.a(this.field_i.charAt(incrementValue$8), 97);
+                                      incrementValue$9 = var2;
                                       var2++;
-                                      var13 = lk.a(this.field_i.charAt(incrementValue$45), 97);
-                                      incrementValue$46 = var2;
+                                      var13 = lk.a(this.field_i.charAt(incrementValue$9), 97);
+                                      incrementValue$10 = var2;
                                       var2++;
-                                      var14 = lk.a(this.field_i.charAt(incrementValue$46), 97);
-                                      incrementValue$47 = var2;
+                                      var14 = lk.a(this.field_i.charAt(incrementValue$10), 97);
+                                      incrementValue$11 = var2;
                                       var2++;
-                                      var15 = lk.a(this.field_i.charAt(incrementValue$47), 97);
-                                      incrementValue$48 = var2;
+                                      var15 = lk.a(this.field_i.charAt(incrementValue$11), 97);
+                                      incrementValue$12 = var2;
                                       var2++;
-                                      var16 = lk.a(this.field_i.charAt(incrementValue$48), 97);
+                                      var16 = lk.a(this.field_i.charAt(incrementValue$12), 97);
                                       var6_ref_int__[var9] = (var10 << -2132525305) + ((var11 << 108472097) - -(var12 >> 1623403269));
                                       var7_ref_int__[var9] = -((ie.a(31, var12) << -1634134552) + ((var13 << -2139806686) + (var14 >> -275148444)));
                                       if (-8172 == var22[var9]) {
@@ -797,69 +787,69 @@ final class hc {
                             break L5;
                           }
                         }
-                        incrementValue$49 = var2;
+                        incrementValue$13 = var2;
                         var2++;
-                        this.field_j = 5000 * lk.a(this.field_i.charAt(incrementValue$49), 97);
-                        incrementValue$50 = var2;
+                        this.field_j = 5000 * lk.a(this.field_i.charAt(incrementValue$13), 97);
+                        incrementValue$14 = var2;
                         var2++;
-                        var4 = lk.a(this.field_i.charAt(incrementValue$50), 97);
-                        incrementValue$51 = var2;
+                        var4 = lk.a(this.field_i.charAt(incrementValue$14), 97);
+                        incrementValue$15 = var2;
                         var2++;
-                        var5 = lk.a(this.field_i.charAt(incrementValue$51), 97);
-                        incrementValue$52 = var2;
+                        var5 = lk.a(this.field_i.charAt(incrementValue$15), 97);
+                        incrementValue$16 = var2;
                         var2++;
-                        var6 = lk.a(this.field_i.charAt(incrementValue$52), 97);
-                        incrementValue$53 = var2;
+                        var6 = lk.a(this.field_i.charAt(incrementValue$16), 97);
+                        incrementValue$17 = var2;
                         var2++;
-                        var7 = lk.a(this.field_i.charAt(incrementValue$53), 97);
-                        incrementValue$54 = var2;
+                        var7 = lk.a(this.field_i.charAt(incrementValue$17), 97);
+                        incrementValue$18 = var2;
                         var2++;
-                        var8 = lk.a(this.field_i.charAt(incrementValue$54), 97);
-                        incrementValue$55 = var2;
+                        var8 = lk.a(this.field_i.charAt(incrementValue$18), 97);
+                        incrementValue$19 = var2;
                         var2++;
-                        var9 = lk.a(this.field_i.charAt(incrementValue$55), 97);
-                        incrementValue$56 = var2;
+                        var9 = lk.a(this.field_i.charAt(incrementValue$19), 97);
+                        incrementValue$20 = var2;
                         var2++;
-                        var10 = lk.a(this.field_i.charAt(incrementValue$56), 97);
+                        var10 = lk.a(this.field_i.charAt(incrementValue$20), 97);
                         var11 = (var6 >> -1188238779) + (var5 << -1379660927) + (var4 << -1235256729);
                         var12 = -((var8 >> 1931006084) + (var7 << 1797883778) + (var6 << -116337464 & 7936));
                         var13 = (var9 << 174965251) + (var8 << 98442313 & 7680) + (var10 >> 1990149475);
                         this.field_p = new double[]{(double)var11, (double)var12, (double)var13, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0};
-                        incrementValue$57 = var2;
+                        incrementValue$21 = var2;
                         var2++;
-                        this.field_f = lk.a(this.field_i.charAt(incrementValue$57), 97);
-                        incrementValue$58 = var2;
+                        this.field_f = lk.a(this.field_i.charAt(incrementValue$21), 97);
+                        incrementValue$22 = var2;
                         var2++;
-                        this.field_b = lk.a(this.field_i.charAt(incrementValue$58), 97);
+                        this.field_b = lk.a(this.field_i.charAt(incrementValue$22), 97);
                         return false;
                       } else {
-                        incrementValue$59 = var2;
+                        incrementValue$23 = var2;
                         var2++;
-                        var4 = lk.a(this.field_i.charAt(incrementValue$59), 97);
-                        incrementValue$60 = var2;
+                        var4 = lk.a(this.field_i.charAt(incrementValue$23), 97);
+                        incrementValue$24 = var2;
                         var2++;
-                        var5 = lk.a(this.field_i.charAt(incrementValue$60), 97);
-                        incrementValue$61 = var2;
+                        var5 = lk.a(this.field_i.charAt(incrementValue$24), 97);
+                        incrementValue$25 = var2;
                         var2++;
-                        var6 = lk.a(this.field_i.charAt(incrementValue$61), 97);
-                        incrementValue$62 = var2;
+                        var6 = lk.a(this.field_i.charAt(incrementValue$25), 97);
+                        incrementValue$26 = var2;
                         var2++;
-                        var7 = lk.a(this.field_i.charAt(incrementValue$62), 97);
-                        incrementValue$63 = var2;
+                        var7 = lk.a(this.field_i.charAt(incrementValue$26), 97);
+                        incrementValue$27 = var2;
                         var2++;
-                        var8 = lk.a(this.field_i.charAt(incrementValue$63), 97);
-                        incrementValue$64 = var2;
+                        var8 = lk.a(this.field_i.charAt(incrementValue$27), 97);
+                        incrementValue$28 = var2;
                         var2++;
-                        var9 = lk.a(this.field_i.charAt(incrementValue$64), 97);
-                        incrementValue$65 = var2;
+                        var9 = lk.a(this.field_i.charAt(incrementValue$28), 97);
+                        incrementValue$29 = var2;
                         var2++;
-                        var10 = lk.a(this.field_i.charAt(incrementValue$65), 97);
-                        incrementValue$66 = var2;
+                        var10 = lk.a(this.field_i.charAt(incrementValue$29), 97);
+                        incrementValue$30 = var2;
                         var2++;
-                        var11 = lk.a(this.field_i.charAt(incrementValue$66), 97);
-                        incrementValue$67 = var2;
+                        var11 = lk.a(this.field_i.charAt(incrementValue$30), 97);
+                        incrementValue$31 = var2;
                         var2++;
-                        var12 = lk.a(this.field_i.charAt(incrementValue$67), 97);
+                        var12 = lk.a(this.field_i.charAt(incrementValue$31), 97);
                         var13 = (var6 >> 1906370533) + (var5 << 152611841) + (var4 << 218607527);
                         var14 = -((var8 >> -1930061852) + (var7 << -542288062) + ((31 & var6) << -1047703704));
                         var15 = (var10 >> -1259790973) + ((15 & var8) << 865295881) + (var9 << -808104669);
@@ -905,11 +895,11 @@ final class hc {
                         var3++;
                         continue L3;
                       } else {
-                        incrementValue$68 = var2;
+                        incrementValue$32 = var2;
                         var2++;
-                        incrementValue$69 = var2;
+                        incrementValue$33 = var2;
                         var2++;
-                        this.field_x[var3][var4] = -((lk.a(this.field_i.charAt(incrementValue$68), 97) << -98849690) + lk.a(this.field_i.charAt(incrementValue$69), 97));
+                        this.field_x[var3][var4] = -((lk.a(this.field_i.charAt(incrementValue$32), 97) << -98849690) + lk.a(this.field_i.charAt(incrementValue$33), 97));
                         var4++;
                         continue L10;
                       }
@@ -923,9 +913,9 @@ final class hc {
                     var3++;
                     continue L2;
                   } else {
-                    incrementValue$70 = var2;
+                    incrementValue$34 = var2;
                     var2++;
-                    this.field_o[var3][var4] = (byte)lk.a(this.field_i.charAt(incrementValue$70), 97);
+                    this.field_o[var3][var4] = (byte)lk.a(this.field_i.charAt(incrementValue$34), 97);
                     if (-64 == (this.field_o[var3][var4] ^ -1)) {
                       this.field_o[var3][var4] = (byte)-1;
                       var4++;
@@ -933,7 +923,8 @@ final class hc {
                     } else {
                       if (-1 != (this.field_o[var3][var4] & 32 ^ -1)) {
                         this.field_h[var3][var4] = true;
-                        this.field_o[var3][var4] = (byte)(this.field_o[var3][var4] - 32);
+                        dupTemp$35 = this.field_o[var3];
+                        dupTemp$35[var4] = (byte)(dupTemp$35[var4] - 32);
                         var4++;
                         continue L11;
                       } else {
@@ -955,7 +946,7 @@ final class hc {
               }
             }
             if (param0 == 0) {
-              discarded$71 = this.a(param0 + -100, true);
+              this.a(param0 + -100, true);
               this.field_i = null;
               return false;
             } else {
@@ -968,8 +959,7 @@ final class hc {
     }
 
     private final double[] a(int param0, int param1, int param2, int param3, double[] param4, int param5, int param6, int param7) {
-        RuntimeException var9 = null;
-        double[] var9_array = null;
+        double[] var9 = null;
         double[] var10 = null;
         double var11 = 0.0;
         double var13 = 0.0;
@@ -985,23 +975,13 @@ final class hc {
         double[] var27 = null;
         double[] var28 = null;
         double[] stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        double[] stackOut_10_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var9_ref = null;
         var21 = Torquing.field_u;
         try {
           L0: {
@@ -1011,7 +991,7 @@ final class hc {
               var22 = var24;
               var28 = var22;
               var25 = var28;
-              var9_array = var25;
+              var9 = var25;
               var26 = new double[9];
               var23 = var26;
               var10 = var23;
@@ -1053,13 +1033,13 @@ final class hc {
                     break L3;
                   } else {
                     if (1.0 >= var15 + var13) {
-                      var9_array[0] = var26[3];
-                      var9_array[2] = var26[5];
-                      var9_array[1] = var26[4];
-                      var9_array[7] = var28[10];
+                      var9[0] = var26[3];
+                      var9[2] = var26[5];
+                      var9[1] = var26[4];
+                      var9[7] = var28[10];
                       var28[3] = var11;
-                      var9_array[6] = var28[9];
-                      var9_array[8] = var28[11];
+                      var9[6] = var28[9];
+                      var9[8] = var28[11];
                       break L2;
                     } else {
                       break L3;
@@ -1074,35 +1054,26 @@ final class hc {
               ap.a(var27, 6);
               break L2;
             }
-            stackOut_10_0 = (double[]) (var9_array);
-            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_0 = (double[]) (var9);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var9 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var9);
-            stackOut_12_1 = new StringBuilder().append("hc.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            var9_ref = decompiledCaughtException;
+            stackIn_14_0 = (RuntimeException) (var9_ref);
+
+            stackIn_14_1 = new StringBuilder().append("hc.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
@@ -1112,44 +1083,53 @@ final class hc {
     }
 
     final kh c(int param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        kh var3 = null;
-        rm var4 = null;
-        kh var5 = null;
-        pj var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var10_int = 0;
-        int[] var10 = null;
-        int var11 = 0;
-        int var12_int = 0;
-        int[] var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int[] var28 = null;
-        rm var29 = null;
-        int[] var31 = null;
-        int[] var32 = null;
-        int[] var35 = null;
-        int[] var36 = null;
-        int[][] var40 = null;
-        int[] var41 = null;
+        int dupTemp$0 = 0;
+        int[] arrayValue$1 = null;
+        int dupTemp$2 = 0;
+        int[] arrayValue$3 = null;
+        int dupTemp$4 = 0;
+        int[] arrayValue$5 = null;
+        int dupTemp$6 = 0;
+        int[] arrayValue$7 = null;
+        int dupTemp$8 = 0;
+        int[] arrayValue$9 = null;
+        int dupTemp$10 = 0;
+        int[] arrayValue$11 = null;
+        int stackIn_69_0 = 0;
+        int stackIn_69_1 = 0;
+        kh var3;
+        rm var4;
+        kh var5;
+        pj var6;
+        int var7;
+        int var8;
+        int var10_int;
+        int[] var10;
+        int var11;
+        int[] var12;
+        int var12_int;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int[] var28;
+        rm var29;
+        int[] var31;
+        int[] var32;
+        int[] var34;
+        int[] var35;
+        int[][] var37;
         var27 = Torquing.field_u;
         if (param0 == -20561) {
           L0: {
@@ -1164,12 +1144,12 @@ final class hc {
               var6 = var5.field_k;
               var7 = var6.field_k;
               var8 = var6.field_x;
-              var40 = new int[var7][32];
+              var37 = new int[var7][32];
               var10_int = 0;
               L1: while (true) {
                 if (var7 <= var10_int) {
-                  var35 = new int[var7];
-                  var31 = var35;
+                  var34 = new int[var7];
+                  var31 = var34;
                   var10 = var31;
                   var11 = 0;
                   L2: while (true) {
@@ -1192,24 +1172,24 @@ final class hc {
                           this.field_t.field_q = var3.field_q;
                           break L0;
                         } else {
-                          dk.a(var35, 0, var7);
-                          var36 = var40[var11];
-                          var32 = var36;
+                          dk.a(var34, 0, var7);
+                          var35 = var37[var11];
+                          var32 = var35;
                           var28 = var32;
                           var12 = var28;
                           var13 = 0;
                           L5: while (true) {
-                            if (var13 >= var36.length) {
-                              var41 = var40[var11];
+                            if (var13 >= var35.length) {
+                              var12 = var37[var11];
                               var13 = 0;
                               L6: while (true) {
-                                if (var13 >= var41.length) {
+                                if (var13 >= var12.length) {
                                   var11++;
                                   continue L3;
                                 } else {
-                                  var14 = var41[var13];
+                                  var14 = var12[var13];
                                   if ((var14 ^ -1) != 0) {
-                                    if ((var35[var14] ^ -1) == -2) {
+                                    if ((var34[var14] ^ -1) == -2) {
                                       var15 = var6.field_y[var11];
                                       var16 = var6.field_y[var14];
                                       var17 = var6.field_j[var11];
@@ -1325,7 +1305,7 @@ final class hc {
                                             if (var15 < var21) {
                                               break L14;
                                             } else {
-                                              if (var16 < var22) {
+                                              if ((var16 ^ -1) > (var22 ^ -1)) {
                                                 break L14;
                                               } else {
                                                 var13++;
@@ -1333,8 +1313,10 @@ final class hc {
                                               }
                                             }
                                           }
+                                          stackIn_69_0 = var21;
+                                          stackIn_69_1 = var15;
                                           L15: {
-                                            if (var21 > var15) {
+                                            if (stackIn_69_0 > stackIn_69_1) {
                                               L16: {
                                                 var21 -= 100;
                                                 if (var15 > var21) {
@@ -1378,8 +1360,8 @@ final class hc {
                                               } else {
                                                 if (var24 != var26) {
                                                   pm.a(var3, -27226, 2);
-                                                  discarded$4 = var29.a(var25, var23, var24, (byte) 1, (byte) -1, (short) 17493, (short) -1);
-                                                  discarded$5 = var29.a(var24, var26, var25, (byte) 1, (byte) -1, (short) 17493, (short) -1);
+                                                  var29.a(var25, var23, var24, (byte) 1, (byte) -1, (short) 17493, (short) -1);
+                                                  var29.a(var24, var26, var25, (byte) 1, (byte) -1, (short) 17493, (short) -1);
                                                   break L19;
                                                 } else {
                                                   break L20;
@@ -1388,12 +1370,12 @@ final class hc {
                                             }
                                             if (var25 != var23) {
                                               pm.a(var3, -27226, 1);
-                                              discarded$6 = var29.a(var25, var23, var24, (byte) 1, (byte) -1, (short) 17493, (short) -1);
+                                              var29.a(var25, var23, var24, (byte) 1, (byte) -1, (short) 17493, (short) -1);
                                               break L19;
                                             } else {
                                               if (var24 != var26) {
                                                 pm.a(var3, -27226, 1);
-                                                discarded$7 = var29.a(var23, var24, var26, (byte) 1, (byte) -1, (short) 17493, (short) -1);
+                                                var29.a(var23, var24, var26, (byte) 1, (byte) -1, (short) 17493, (short) -1);
                                                 break L19;
                                               } else {
                                                 var24 = var26;
@@ -1421,7 +1403,7 @@ final class hc {
                                 }
                               }
                             } else {
-                              var14 = var36[var13];
+                              var14 = var35[var13];
                               if (0 != (var14 ^ -1)) {
                                 var10[var14] = var10[var14] + 1;
                                 var13++;
@@ -1439,19 +1421,31 @@ final class hc {
                         var12_int = var6.field_p[var11];
                         var13 = var6.field_u[var11];
                         var14 = var6.field_t[var11];
-                        var10[var12_int] = var10[var12_int] + 1;
-                        var40[var12_int][var10[var12_int]] = var13;
-                        var10[var12_int] = var10[var12_int] + 1;
-                        var40[var12_int][var10[var12_int]] = var14;
-                        var10[var13] = var10[var13] + 1;
-                        var40[var13][var10[var13]] = var12_int;
-                        var10[var13] = var10[var13] + 1;
-                        var40[var13][var10[var13]] = var14;
-                        var10[var14] = var10[var14] + 1;
-                        var40[var14][var10[var14]] = var12_int;
-                        var10[var14] = var10[var14] + 1;
-                        var40[var14][var10[var14]] = var13;
-                        if (this.field_w < var6.field_y[var12_int]) {
+                        dupTemp$0 = var10[var12_int];
+                        arrayValue$1 = var37[var12_int];
+                        var10[var12_int] = dupTemp$0 + 1;
+                        arrayValue$1[dupTemp$0] = var13;
+                        dupTemp$2 = var10[var12_int];
+                        arrayValue$3 = var37[var12_int];
+                        var10[var12_int] = dupTemp$2 + 1;
+                        arrayValue$3[dupTemp$2] = var14;
+                        dupTemp$4 = var10[var13];
+                        arrayValue$5 = var37[var13];
+                        var10[var13] = dupTemp$4 + 1;
+                        arrayValue$5[dupTemp$4] = var12_int;
+                        dupTemp$6 = var10[var13];
+                        arrayValue$7 = var37[var13];
+                        var10[var13] = dupTemp$6 + 1;
+                        arrayValue$7[dupTemp$6] = var14;
+                        dupTemp$8 = var10[var14];
+                        arrayValue$9 = var37[var14];
+                        var10[var14] = dupTemp$8 + 1;
+                        arrayValue$9[dupTemp$8] = var12_int;
+                        dupTemp$10 = var10[var14];
+                        arrayValue$11 = var37[var14];
+                        var10[var14] = dupTemp$10 + 1;
+                        arrayValue$11[dupTemp$10] = var13;
+                        if ((this.field_w ^ -1) > (var6.field_y[var12_int] ^ -1)) {
                           this.field_w = var6.field_y[var12_int];
                           break L21;
                         } else {
@@ -1477,7 +1471,7 @@ final class hc {
                     }
                   }
                 } else {
-                  dk.a(var40[var10_int], 0, 32, -1);
+                  dk.a(var37[var10_int], 0, 32, -1);
                   var10_int++;
                   continue L1;
                 }
@@ -1495,7 +1489,7 @@ final class hc {
     final boolean b(int param0) {
         int var2 = this.field_t != null ? 1 : 0;
         int var3 = 96 % ((param0 - 0) / 61);
-        kh discarded$0 = this.c(-20561);
+        this.c(-20561);
         return var2 != 0;
     }
 
@@ -1513,7 +1507,6 @@ final class hc {
             gl var8 = null;
             la stackIn_14_0 = null;
             Throwable decompiledCaughtException = null;
-            la stackOut_13_0 = null;
             try {
               L0: {
                 L1: {
@@ -1570,8 +1563,7 @@ final class hc {
                     break L6;
                   }
                 }
-                stackOut_13_0 = new la(var8, param1, param5);
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_0 = new la(var8, param1, param5);
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -1588,9 +1580,8 @@ final class hc {
     }
 
     public static void a(byte param0) {
-        la discarded$0 = null;
         if (param0 > -29) {
-            discarded$0 = hc.a(true, true, -54, 24, true, 101);
+            hc.a(true, true, -54, 24, true, 101);
         }
         field_u = null;
         field_c = null;
@@ -1598,19 +1589,19 @@ final class hc {
     }
 
     final kh a(int param0, boolean param1) {
-        kh var4 = null;
-        mp var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        rm var16 = null;
+        kh var4;
+        mp var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var15;
+        rm var16;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         L0: {
           var15 = Torquing.field_u;
           if (param0 == -100) {

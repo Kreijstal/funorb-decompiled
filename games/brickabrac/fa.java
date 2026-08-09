@@ -7,7 +7,7 @@ final class fa extends nm {
     static String field_j;
 
     final static pe a(int param0, byte param1, int param2, int param3) {
-        pe var4 = null;
+        pe var4;
         var4 = new pe();
         var4.field_w = param2;
         if (param1 > -68) {

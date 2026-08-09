@@ -13,15 +13,17 @@ final class ca extends re {
 
     public static void b(int param0) {
         if (param0 != 17518) {
-            ca.b(8);
-            field_j = (boolean[][]) null;
-            field_m = null;
-            field_g = null;
-            return;
+          ca.b(8);
+          field_j = (boolean[][]) null;
+          field_m = null;
+          field_g = null;
+          return;
+        } else {
+          field_j = (boolean[][]) null;
+          field_m = null;
+          field_g = null;
+          return;
         }
-        field_j = (boolean[][]) null;
-        field_m = null;
-        field_g = null;
     }
 
     final tf b(byte param0) {

@@ -38,9 +38,8 @@ abstract class rma {
     }
 
     final java.net.Socket a(int param0) throws IOException {
-        int discarded$2 = 0;
         if (param0 != 3332) {
-          discarded$2 = rma.b(-5);
+          rma.b(-5);
           return new java.net.Socket(this.field_a, this.field_b);
         } else {
           return new java.net.Socket(this.field_a, this.field_b);

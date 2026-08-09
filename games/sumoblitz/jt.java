@@ -27,22 +27,12 @@ abstract class jt extends pj {
     final static void a(int param0) {
         int var1 = 0;
         if ((tt.field_l ^ -1) <= -225) {
-          lf.a(0, 256);
-          if (Sumoblitz.field_L) {
+            lf.a(0, 256);
+        } else {
             var1 = tt.field_l % 32;
             lf.a(0, tt.field_l + (32 - var1));
-            var1 = -44 % ((param0 - 35) / 40);
-            return;
-          } else {
-            var1 = -44 % ((param0 - 35) / 40);
-            return;
-          }
-        } else {
-          var1 = tt.field_l % 32;
-          lf.a(0, tt.field_l + (32 - var1));
-          var1 = -44 % ((param0 - 35) / 40);
-          return;
         }
+        var1 = -44 % ((param0 - 35) / 40);
     }
 
     abstract Object c(byte param0);
@@ -50,7 +40,7 @@ abstract class jt extends pj {
     abstract boolean e(int param0);
 
     final static boolean a(byte param0) {
-        int var1 = 0;
+        int var1;
         var1 = 102 / ((param0 - -27) / 59);
         if (vv.field_b != null) {
           if (!vv.field_b.c(-1)) {

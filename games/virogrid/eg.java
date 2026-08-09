@@ -55,24 +55,13 @@ final class eg extends in {
     }
 
     private final void a(int param0, byte param1, int param2, i param3) {
-        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -81,7 +70,7 @@ final class eg extends in {
               if (param1 <= -85) {
                 break L1;
               } else {
-                discarded$2 = eg.b((byte) -72);
+                eg.b((byte) -72);
                 break L1;
               }
             }
@@ -91,27 +80,19 @@ final class eg extends in {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("eg.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("eg.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -127,10 +108,10 @@ final class eg extends in {
     }
 
     final static mg a(int param0, byte param1, int param2) {
-        mg var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        mg var6 = null;
+        mg var3;
+        int var4;
+        int var5;
+        mg var6;
         var5 = Virogrid.field_F ? 1 : 0;
         var6 = new mg(param0, param0);
         var3 = var6;
@@ -151,20 +132,9 @@ final class eg extends in {
     }
 
     final void b(int[] param0, int param1, int param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_32_0 = 0;
         int stackIn_47_0 = 0;
         int stackIn_60_0 = 0;
-        RuntimeException stackIn_65_0 = null;
-        StringBuilder stackIn_65_1 = null;
         RuntimeException stackIn_66_0 = null;
         StringBuilder stackIn_66_1 = null;
         RuntimeException stackIn_67_0 = null;
@@ -172,20 +142,15 @@ final class eg extends in {
         String stackIn_67_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_31_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_58_0 = 0;
-        RuntimeException stackOut_64_0 = null;
-        StringBuilder stackOut_64_1 = null;
-        RuntimeException stackOut_66_0 = null;
-        StringBuilder stackOut_66_1 = null;
-        String stackOut_66_2 = null;
-        RuntimeException stackOut_65_0 = null;
-        StringBuilder stackOut_65_1 = null;
-        String stackOut_65_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         var11 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -284,12 +249,10 @@ final class eg extends in {
               }
               L6: {
                 if (!ua.field_q) {
-                  stackOut_31_0 = param2;
-                  stackIn_32_0 = stackOut_31_0;
+                  stackIn_32_0 = param2;
                   break L6;
                 } else {
-                  stackOut_30_0 = param2 << 789208193;
-                  stackIn_32_0 = stackOut_30_0;
+                  stackIn_32_0 = param2 << 789208193;
                   break L6;
                 }
               }
@@ -333,13 +296,11 @@ final class eg extends in {
                         this.field_A.b(this.field_w, 0, param2);
                         this.field_x.b(this.field_q, 0, param2);
                         if (!ua.field_q) {
-                          stackOut_46_0 = param1;
-                          stackIn_47_0 = stackOut_46_0;
+                          stackIn_47_0 = param1;
                           break L11;
                         } else {
                           param1 = param1 << 1;
-                          stackOut_45_0 = param1 << 1;
-                          stackIn_47_0 = stackOut_45_0;
+                          stackIn_47_0 = param1 << 1;
                           break L11;
                         }
                       }
@@ -391,13 +352,11 @@ final class eg extends in {
                     L16: {
                       this.field_m.b(this.field_w, 0, param2);
                       if (!ua.field_q) {
-                        stackOut_59_0 = param1;
-                        stackIn_60_0 = stackOut_59_0;
+                        stackIn_60_0 = param1;
                         break L16;
                       } else {
                         param1 = param1 << 1;
-                        stackOut_58_0 = param1 << 1;
-                        stackIn_60_0 = stackOut_58_0;
+                        stackIn_60_0 = param1 << 1;
                         break L16;
                       }
                     }
@@ -425,27 +384,19 @@ final class eg extends in {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var4 = decompiledCaughtException;
-            stackOut_64_0 = (RuntimeException) (var4);
-            stackOut_64_1 = new StringBuilder().append("eg.A(");
-            stackIn_66_0 = stackOut_64_0;
-            stackIn_66_1 = stackOut_64_1;
-            stackIn_65_0 = stackOut_64_0;
-            stackIn_65_1 = stackOut_64_1;
+            stackIn_66_0 = (RuntimeException) (var4);
+
+            stackIn_66_1 = new StringBuilder().append("eg.A(");
+
             if (param0 == null) {
-              stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
-              stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
-              stackOut_66_2 = "null";
-              stackIn_67_0 = stackOut_66_0;
-              stackIn_67_1 = stackOut_66_1;
-              stackIn_67_2 = stackOut_66_2;
+              stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+              stackIn_67_2 = "null";
               break L18;
             } else {
-              stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
-              stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
-              stackOut_65_2 = "{...}";
-              stackIn_67_0 = stackOut_65_0;
-              stackIn_67_1 = stackOut_65_1;
-              stackIn_67_2 = stackOut_65_2;
+              stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+              stackIn_67_2 = "{...}";
               break L18;
             }
           }
@@ -487,24 +438,12 @@ final class eg extends in {
             gd var6_ref = null;
             wf stackIn_2_0 = null;
             gd stackIn_4_0 = null;
-            RuntimeException stackIn_6_0 = null;
-            StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             String stackIn_8_2 = null;
             Throwable decompiledCaughtException = null;
-            wf stackOut_1_0 = null;
-            gd stackOut_3_0 = null;
-            RuntimeException stackOut_5_0 = null;
-            StringBuilder stackOut_5_1 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            String stackOut_6_2 = null;
             try {
               L0: {
                 var4_int = -32 % ((param3 - -6) / 37);
@@ -513,8 +452,7 @@ final class eg extends in {
                     var5 = Class.forName("n");
                     var6 = (wf) (var5.newInstance());
                     var6.a(param2, param1, (byte) -56, param0);
-                    stackOut_1_0 = (wf) (var6);
-                    stackIn_2_0 = stackOut_1_0;
+                    stackIn_2_0 = (wf) (var6);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -522,8 +460,7 @@ final class eg extends in {
                   var5_ref = decompiledCaughtException;
                   var6_ref = new gd();
                   ((wf) ((Object) var6_ref)).a(param2, param1, (byte) -66, param0);
-                  stackOut_3_0 = (gd) (var6_ref);
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = (gd) (var6_ref);
                   return (wf) ((Object) stackIn_4_0);
                 }
                 break L0;
@@ -532,27 +469,19 @@ final class eg extends in {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_5_0 = (RuntimeException) (var4);
-                stackOut_5_1 = new StringBuilder().append("eg.F(");
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
+                stackIn_7_0 = (RuntimeException) (var4);
+
+                stackIn_7_1 = new StringBuilder().append("eg.F(");
+
                 if (param0 == null) {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "null";
-                  stackIn_8_0 = stackOut_7_0;
-                  stackIn_8_1 = stackOut_7_1;
-                  stackIn_8_2 = stackOut_7_2;
+                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+                  stackIn_8_2 = "null";
                   break L2;
                 } else {
-                  stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-                  stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-                  stackOut_6_2 = "{...}";
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_8_1 = stackOut_6_1;
-                  stackIn_8_2 = stackOut_6_2;
+                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+                  stackIn_8_2 = "{...}";
                   break L2;
                 }
               }
@@ -579,24 +508,16 @@ final class eg extends in {
     }
 
     final synchronized void a(sc param0, int param1, int param2, boolean param3, int param4, int param5) {
-        RuntimeException var7 = null;
-        int var7_int = 0;
-        int var8 = 0;
-        Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         Object stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         int stackIn_33_0 = 0;
-        i stackIn_40_0 = null;
         i stackIn_41_0 = null;
         i stackIn_42_0 = null;
         int stackIn_42_1 = 0;
-        i stackIn_50_0 = null;
         i stackIn_51_0 = null;
         i stackIn_52_0 = null;
         int stackIn_52_1 = 0;
-        RuntimeException stackIn_56_0 = null;
-        StringBuilder stackIn_56_1 = null;
         RuntimeException stackIn_57_0 = null;
         StringBuilder stackIn_57_1 = null;
         RuntimeException stackIn_58_0 = null;
@@ -604,31 +525,9 @@ final class eg extends in {
         String stackIn_58_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_16_0 = null;
-        Object stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
-        i stackOut_49_0 = null;
-        i stackOut_51_0 = null;
-        int stackOut_51_1 = 0;
-        i stackOut_50_0 = null;
-        int stackOut_50_1 = 0;
-        i stackOut_39_0 = null;
-        i stackOut_41_0 = null;
-        int stackOut_41_1 = 0;
-        i stackOut_40_0 = null;
-        int stackOut_40_1 = 0;
-        RuntimeException stackOut_55_0 = null;
-        StringBuilder stackOut_55_1 = null;
-        RuntimeException stackOut_57_0 = null;
-        StringBuilder stackOut_57_1 = null;
-        String stackOut_57_2 = null;
-        RuntimeException stackOut_56_0 = null;
-        StringBuilder stackOut_56_1 = null;
-        String stackOut_56_2 = null;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8 = 0;
         var8 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -682,20 +581,15 @@ final class eg extends in {
               }
             }
             L5: {
-              stackOut_16_0 = this;
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_17_0 = stackOut_16_0;
+              stackIn_18_0 = this;
+
               if (!param3) {
-                stackOut_18_0 = this;
-                stackOut_18_1 = 0;
-                stackIn_19_0 = stackOut_18_0;
-                stackIn_19_1 = stackOut_18_1;
+                stackIn_19_0 = this;
+                stackIn_19_1 = 0;
                 break L5;
               } else {
-                stackOut_17_0 = this;
-                stackOut_17_1 = 1;
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
+                stackIn_19_0 = this;
+                stackIn_19_1 = 1;
                 break L5;
               }
             }
@@ -716,12 +610,10 @@ final class eg extends in {
                       } else {
                         L7: {
                           if ((this.field_k ^ -1) <= -524289) {
-                            stackOut_32_0 = 0;
-                            stackIn_33_0 = stackOut_32_0;
+                            stackIn_33_0 = 0;
                             break L7;
                           } else {
-                            stackOut_31_0 = 1;
-                            stackIn_33_0 = stackOut_31_0;
+                            stackIn_33_0 = 1;
                             break L7;
                           }
                         }
@@ -747,20 +639,15 @@ final class eg extends in {
                         this.field_B = param0;
                         if (param0 != null) {
                           L11: {
-                            stackOut_49_0 = this.field_A;
-                            stackIn_51_0 = stackOut_49_0;
-                            stackIn_50_0 = stackOut_49_0;
+                            stackIn_51_0 = this.field_A;
+
                             if (param3) {
-                              stackOut_51_0 = (i) ((Object) stackIn_51_0);
-                              stackOut_51_1 = 0;
-                              stackIn_52_0 = stackOut_51_0;
-                              stackIn_52_1 = stackOut_51_1;
+                              stackIn_52_0 = (i) ((Object) stackIn_51_0);
+                              stackIn_52_1 = 0;
                               break L11;
                             } else {
-                              stackOut_50_0 = (i) ((Object) stackIn_50_0);
-                              stackOut_50_1 = 1;
-                              stackIn_52_0 = stackOut_50_0;
-                              stackIn_52_1 = stackOut_50_1;
+                              stackIn_52_0 = (i) ((Object) stackIn_51_0);
+                              stackIn_52_1 = 1;
                               break L11;
                             }
                           }
@@ -788,20 +675,15 @@ final class eg extends in {
                           break L13;
                         } else {
                           L14: {
-                            stackOut_39_0 = this.field_x;
-                            stackIn_41_0 = stackOut_39_0;
-                            stackIn_40_0 = stackOut_39_0;
+                            stackIn_41_0 = this.field_x;
+
                             if (param3) {
-                              stackOut_41_0 = (i) ((Object) stackIn_41_0);
-                              stackOut_41_1 = 0;
-                              stackIn_42_0 = stackOut_41_0;
-                              stackIn_42_1 = stackOut_41_1;
+                              stackIn_42_0 = (i) ((Object) stackIn_41_0);
+                              stackIn_42_1 = 0;
                               break L14;
                             } else {
-                              stackOut_40_0 = (i) ((Object) stackIn_40_0);
-                              stackOut_40_1 = 1;
-                              stackIn_42_0 = stackOut_40_0;
-                              stackIn_42_1 = stackOut_40_1;
+                              stackIn_42_0 = (i) ((Object) stackIn_41_0);
+                              stackIn_42_1 = 1;
                               break L14;
                             }
                           }
@@ -832,27 +714,19 @@ final class eg extends in {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var7 = decompiledCaughtException;
-            stackOut_55_0 = (RuntimeException) (var7);
-            stackOut_55_1 = new StringBuilder().append("eg.Q(");
-            stackIn_57_0 = stackOut_55_0;
-            stackIn_57_1 = stackOut_55_1;
-            stackIn_56_0 = stackOut_55_0;
-            stackIn_56_1 = stackOut_55_1;
+            stackIn_57_0 = (RuntimeException) (var7);
+
+            stackIn_57_1 = new StringBuilder().append("eg.Q(");
+
             if (param0 == null) {
-              stackOut_57_0 = (RuntimeException) ((Object) stackIn_57_0);
-              stackOut_57_1 = (StringBuilder) ((Object) stackIn_57_1);
-              stackOut_57_2 = "null";
-              stackIn_58_0 = stackOut_57_0;
-              stackIn_58_1 = stackOut_57_1;
-              stackIn_58_2 = stackOut_57_2;
+              stackIn_58_0 = (RuntimeException) ((Object) stackIn_57_0);
+              stackIn_58_1 = (StringBuilder) ((Object) stackIn_57_1);
+              stackIn_58_2 = "null";
               break L15;
             } else {
-              stackOut_56_0 = (RuntimeException) ((Object) stackIn_56_0);
-              stackOut_56_1 = (StringBuilder) ((Object) stackIn_56_1);
-              stackOut_56_2 = "{...}";
-              stackIn_58_0 = stackOut_56_0;
-              stackIn_58_1 = stackOut_56_1;
-              stackIn_58_2 = stackOut_56_2;
+              stackIn_58_0 = (RuntimeException) ((Object) stackIn_57_0);
+              stackIn_58_1 = (StringBuilder) ((Object) stackIn_57_1);
+              stackIn_58_2 = "{...}";
               break L15;
             }
           }
@@ -879,8 +753,6 @@ final class eg extends in {
 
     final static boolean b(byte param0) {
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
         L0: {
           if (param0 <= -53) {
             break L0;
@@ -900,22 +772,20 @@ final class eg extends in {
                 if (wl.b((byte) -119)) {
                   break L2;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L1;
                 }
               }
             }
           }
-          stackOut_6_0 = 0;
-          stackIn_7_0 = stackOut_6_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0 != 0;
     }
 
     final synchronized void a(int param0) {
-        int var3 = 0;
+        int var3;
         L0: {
           var3 = Virogrid.field_F ? 1 : 0;
           if (-1 <= (this.field_k ^ -1)) {

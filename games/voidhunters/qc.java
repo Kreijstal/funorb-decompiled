@@ -24,58 +24,38 @@ abstract class qc implements kd {
         llb var4 = null;
         RuntimeException var4_ref = null;
         llb stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        llb stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var4 = new llb((long)param1, (llb) null, param2);
             var4.field_eb = this.field_n;
             var4.field_Y = param0;
             var4.a(5, param1 + 124, this.field_n.b(var4.field_R), 0, this.field_e);
-            stackOut_0_0 = (llb) (var4);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = (llb) (var4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var4_ref);
-            stackOut_2_1 = new StringBuilder().append("qc.U(").append(param0).append(',').append(param1).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var4_ref);
+
+            stackIn_4_1 = new StringBuilder().append("qc.U(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -85,14 +65,13 @@ abstract class qc implements kd {
     }
 
     private final void a(int param0, int param1, String param2) {
-        ksa discarded$0 = null;
         int var4_int = 0;
         llb var5 = null;
         int var6 = VoidHunters.field_G;
         try {
             this.field_h.field_wb.b(-561, this.b(param1, 0, param2));
             if (!(param0 <= (this.field_h.field_wb.field_lb.c(3) ^ -1))) {
-                discarded$0 = this.field_h.field_wb.field_lb.a(true);
+                this.field_h.field_wb.field_lb.a(true);
             }
             var4_int = 5;
             var5 = (llb) ((Object) this.field_h.field_wb.field_lb.d(0));
@@ -118,22 +97,12 @@ abstract class qc implements kd {
     final void a(byte param0, String param1) {
         RuntimeException runtimeException = null;
         String var4 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -152,27 +121,19 @@ abstract class qc implements kd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("qc.S(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("qc.S(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -181,42 +142,30 @@ abstract class qc implements kd {
     }
 
     private final ij a(int param0, byte param1, String param2) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        RuntimeException var4 = null;
-        ij var4_ref = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        ij stackIn_20_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ij var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         String var7 = null;
         int var8 = 0;
         int var9 = 0;
-        ij stackIn_18_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        ij stackOut_17_0 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
         var9 = VoidHunters.field_G;
         try {
           L0: {
             var5 = -120 / ((-80 - param1) / 41);
-            var4_ref = new ij();
+            var4 = new ij();
             L1: while (true) {
               if (param2 == null) {
-                stackOut_17_0 = (ij) (var4_ref);
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_20_0 = (ij) (var4);
                 break L0;
               } else {
                 L2: {
@@ -230,7 +179,7 @@ abstract class qc implements kd {
                           break L4;
                         } else {
                           L5: {
-                            if (var6 > param0) {
+                            if ((var6 ^ -1) < (param0 ^ -1)) {
                               break L5;
                             } else {
                               if (param2.charAt(var8) == 32) {
@@ -240,9 +189,9 @@ abstract class qc implements kd {
                               }
                             }
                           }
-                          incrementValue$2 = var8;
+                          incrementValue$0 = var8;
                           var8--;
-                          var6 = var6 - this.field_n.a(param2.charAt(incrementValue$2));
+                          var6 = var6 - this.field_n.a(param2.charAt(incrementValue$0));
                           continue L3;
                         }
                       }
@@ -256,9 +205,9 @@ abstract class qc implements kd {
                             if (param0 >= var6) {
                               break L6;
                             } else {
-                              incrementValue$3 = var8;
+                              incrementValue$1 = var8;
                               var8--;
-                              var6 = var6 - this.field_n.a(param2.charAt(incrementValue$3));
+                              var6 = var6 - this.field_n.a(param2.charAt(incrementValue$1));
                               continue L7;
                             }
                           }
@@ -273,7 +222,7 @@ abstract class qc implements kd {
                     break L2;
                   }
                 }
-                var4_ref.b(-10258, new ila(var7));
+                var4.b(-10258, new ila(var7));
                 continue L1;
               }
             }
@@ -281,34 +230,26 @@ abstract class qc implements kd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
-            var4 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var4);
-            stackOut_19_1 = new StringBuilder().append("qc.R(").append(param0).append(',').append(param1).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_23_0 = (RuntimeException) (var4_ref);
+
+            stackIn_23_1 = new StringBuilder().append("qc.R(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L8;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L8;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
         }
-        return stackIn_18_0;
+        return stackIn_20_0;
     }
 
     public static void a(byte param0) {
@@ -322,26 +263,15 @@ abstract class qc implements kd {
     abstract String[] d(int param0);
 
     private final void a(String param0, int param1) {
-        ksa discarded$2 = null;
         ila var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var3_ref = null;
         try {
           L0: {
             L1: {
@@ -363,7 +293,7 @@ abstract class qc implements kd {
             }
             L3: {
               if (this.field_i.c(3) > 30) {
-                discarded$2 = this.field_i.c((byte) -115);
+                this.field_i.c((byte) -115);
                 break L3;
               } else {
                 break L3;
@@ -375,27 +305,19 @@ abstract class qc implements kd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3_ref);
-            stackOut_8_1 = new StringBuilder().append("qc.O(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3_ref);
+
+            stackIn_10_1 = new StringBuilder().append("qc.O(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }
@@ -429,16 +351,14 @@ abstract class qc implements kd {
             }
             this.field_m.b(-1 == (8 & this.field_b ^ -1) ? true : false, 111);
         }
-        if (this.field_d != null) {
-            if (this.field_j) {
-                var3 = this.field_m.field_G + this.field_m.field_K;
-                this.field_o.field_K = var3;
-                this.field_o.b(false, 43);
-                var3 = var3 + (this.field_e - -5);
-                for (var4 = 0; this.field_d.length > var4; var4++) {
-                    this.field_n.c(this.field_d[var4], this.field_o.field_M + 10, var3, 13421772, -1);
-                    var3 = var3 + this.field_e;
-                }
+        if (this.field_d != null && this.field_j) {
+            var3 = this.field_m.field_G + this.field_m.field_K;
+            this.field_o.field_K = var3;
+            this.field_o.b(false, 43);
+            var3 = var3 + (this.field_e - -5);
+            for (var4 = 0; this.field_d.length > var4; var4++) {
+                this.field_n.c(this.field_d[var4], this.field_o.field_M + 10, var3, 13421772, -1);
+                var3 = var3 + this.field_e;
             }
         }
     }
@@ -473,10 +393,10 @@ abstract class qc implements kd {
     }
 
     final void a(boolean param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = VoidHunters.field_G;
         if (param1 > 73) {
           L0: {
@@ -576,7 +496,6 @@ abstract class qc implements kd {
 
     private final void a(String param0, boolean param1, int param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         String[] var5 = null;
         String[] var6 = null;
         int var7 = 0;
@@ -584,8 +503,6 @@ abstract class qc implements kd {
         ij var9 = null;
         ila var10 = null;
         int var11 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -593,14 +510,7 @@ abstract class qc implements kd {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var4 = null;
         var11 = VoidHunters.field_G;
         try {
           L0: {
@@ -646,27 +556,19 @@ abstract class qc implements kd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var4);
-            stackOut_12_1 = new StringBuilder().append("qc.T(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var4);
+
+            stackIn_14_1 = new StringBuilder().append("qc.T(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
@@ -687,83 +589,32 @@ abstract class qc implements kd {
     }
 
     private final void a(boolean param0) {
-        Object stackIn_1_0 = null;
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        L0: {
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
-          if (this.field_j) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            break L0;
-          } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            break L0;
-          }
-        }
-        L1: {
-          ((qc) (this)).field_j = stackIn_3_1 != 0;
-          if (this.field_j) {
+        this.field_j = !this.field_j ? true : false;
+        if (this.field_j || null != this.field_m) {
             this.field_f = 15;
-            if (null != this.field_m) {
-              this.field_m.a(false, this.field_p);
-              break L1;
-            } else {
-              break L1;
+            if (!(null == this.field_m)) {
+                this.field_m.a(false, this.field_p);
             }
-          } else {
-            if (null == this.field_m) {
-              break L1;
-            } else {
-              this.field_m.a(false, (llb) null);
-              break L1;
-            }
-          }
         }
-        L2: {
-          if (param0) {
-            break L2;
-          } else {
+        if (!param0) {
             field_g = (ri) null;
-            break L2;
-          }
         }
     }
 
     boolean a(int param0, char param1, int param2) {
-        llb discarded$2 = null;
-        boolean discarded$3 = false;
-        llb var5 = null;
-        int var6 = 0;
-        String var7 = null;
-        Object stackIn_16_0 = null;
+        llb discarded$0 = null;
         Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         ksa stackIn_18_1 = null;
-        Object stackOut_15_0 = null;
-        Object stackOut_17_0 = null;
-        ksa stackOut_17_1 = null;
-        Object stackOut_16_0 = null;
-        ksa stackOut_16_1 = null;
+        llb var5;
+        int var6;
+        String var7;
         L0: {
           var6 = VoidHunters.field_G;
           if (param2 == -40) {
             break L0;
           } else {
-            discarded$2 = this.a(77, (byte) 52);
+            discarded$0 = this.a(77, (byte) 52);
             break L0;
           }
         }
@@ -779,7 +630,7 @@ abstract class qc implements kd {
                 if (param0 != 98) {
                   if (99 != param0) {
                     if (param0 != 80) {
-                      discarded$3 = this.field_p.a(param0, -1, param1);
+                      this.field_p.a(param0, -1, param1);
                       break L1;
                     } else {
                       this.a(-35);
@@ -811,20 +662,15 @@ abstract class qc implements kd {
                     }
                   }
                   L3: {
-                    stackOut_15_0 = this;
-                    stackIn_17_0 = stackOut_15_0;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_17_0 = this;
+
                     if (null != this.field_k) {
-                      stackOut_17_0 = this;
-                      stackOut_17_1 = this.field_k.field_c;
-                      stackIn_18_0 = stackOut_17_0;
-                      stackIn_18_1 = stackOut_17_1;
+                      stackIn_18_0 = this;
+                      stackIn_18_1 = this.field_k.field_c;
                       break L3;
                     } else {
-                      stackOut_16_0 = this;
-                      stackOut_16_1 = this.field_i.d(param2 + 40);
-                      stackIn_18_0 = stackOut_16_0;
-                      stackIn_18_1 = stackOut_16_1;
+                      stackIn_18_0 = this;
+                      stackIn_18_1 = this.field_i.d(param2 + 40);
                       break L3;
                     }
                   }
@@ -875,7 +721,6 @@ abstract class qc implements kd {
     }
 
     qc(no param0, eab param1) {
-        RuntimeException var3 = null;
         int var3_int = 0;
         llb var4 = null;
         llb var5 = null;
@@ -889,37 +734,6 @@ abstract class qc implements kd {
         pjb var13 = null;
         llb var14 = null;
         llb var15 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         this.field_c = "# ";
         this.field_i = new ij();
         this.field_d = null;
@@ -927,7 +741,6 @@ abstract class qc implements kd {
         this.field_j = false;
         this.field_b = 0;
         try {
-          L0: {
             this.field_n = param0;
             this.field_e = this.field_n.field_k + this.field_n.field_A;
             var3_int = this.field_e + 4;
@@ -960,62 +773,8 @@ abstract class qc implements kd {
             this.field_m.b(-561, this.field_p);
             this.field_o = new llb(0L, var12);
             this.field_o.field_L = 0;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (var3);
-            stackOut_3_1 = new StringBuilder().append("qc.<init>(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L1;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L1;
-            }
-          }
-          L2: {
-            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
-            if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L2;
-            } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L2;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "qc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -16,8 +16,6 @@ final class dd {
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -25,18 +23,6 @@ final class dd {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             if (qc.field_h) {
@@ -52,13 +38,11 @@ final class dd {
                       break L1;
                     } else {
                       if (!param1) {
-                        stackOut_12_0 = 1;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = 1;
                         decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
-                        stackOut_10_0 = 1;
-                        stackIn_11_0 = stackOut_10_0;
+                        stackIn_11_0 = 1;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
@@ -66,13 +50,11 @@ final class dd {
                   }
                 }
               }
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -81,27 +63,19 @@ final class dd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2);
-            stackOut_14_1 = new StringBuilder().append("dd.B(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2);
+
+            stackIn_16_1 = new StringBuilder().append("dd.B(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L2;
             }
           }
@@ -123,21 +97,20 @@ final class dd {
     }
 
     final static mg[] a(byte param0) {
-        boolean discarded$1 = false;
-        mg[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int[] var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        String var9 = null;
-        int[] var10 = null;
-        int[] var14 = null;
-        int[] var17 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
-        byte[] var23 = null;
+        mg[] var1;
+        int var2;
+        int var3;
+        int[] var6;
+        int var6_int;
+        int var7;
+        int var8;
+        String var9;
+        int[] var10;
+        int[] var14;
+        int[] var17;
+        byte[] var21;
+        int[] var22;
+        byte[] var23;
         var8 = Virogrid.field_F ? 1 : 0;
         var1 = new mg[rj.field_h];
         var2 = 0;
@@ -148,7 +121,7 @@ final class dd {
                 break L1;
               } else {
                 var9 = (String) null;
-                discarded$1 = dd.a((String) null, true);
+                dd.a((String) null, true);
                 break L1;
               }
             }

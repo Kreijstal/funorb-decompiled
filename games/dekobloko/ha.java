@@ -67,9 +67,8 @@ final class ha extends w {
     }
 
     final static int a(int param0, byte param1) {
-        int discarded$2 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var2 = 0;
           if (0 != (7 & param0)) {
@@ -80,7 +79,7 @@ final class ha extends w {
           }
         }
         if (param1 != -126) {
-          discarded$2 = ha.a(-69, (byte) 62);
+          ha.a(-69, (byte) 62);
           var3 = param0 - -var2;
           return var3;
         } else {

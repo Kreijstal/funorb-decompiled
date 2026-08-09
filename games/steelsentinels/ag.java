@@ -36,7 +36,7 @@ class ag extends cn {
     }
 
     final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         var4 = 0;
         if (param1) {
           if (!param0) {
@@ -109,8 +109,8 @@ class ag extends cn {
     }
 
     final static void a(int param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = SteelSentinels.field_G;
         if ((rd.field_b ^ -1) < -1) {
           if (null != ve.field_a) {

@@ -23,8 +23,8 @@ final class ue {
     }
 
     final static void a(byte param0) {
-        CharSequence var2 = null;
-        CharSequence var3 = null;
+        CharSequence var2;
+        CharSequence var3;
         if (param0 > -119) {
           field_c = (oj) null;
           wf.field_b = ae.field_N.e((byte) 95);

@@ -16,16 +16,15 @@ final class bd {
     }
 
     final static void a(byte param0, boolean param1, int param2, int param3) {
-        boolean discarded$1 = false;
-        RuntimeException var4 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         ak var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         aa var9 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -58,7 +57,7 @@ final class bd {
                       td.field_b = null;
                       break L3;
                     } else {
-                      discarded$1 = td.field_b.a(ui.field_i.field_gb, param1, (byte) 99, ui.field_i.field_tb);
+                      td.field_b.a(ui.field_i.field_gb, param1, (byte) 99, ui.field_i.field_tb);
                       break L3;
                     }
                   }

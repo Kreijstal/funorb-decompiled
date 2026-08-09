@@ -16,11 +16,6 @@ public final class AceOfSkies extends ct {
     }
 
     private final boolean a(byte param0, boolean param1) {
-        boolean discarded$1 = false;
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_18_0 = 0;
@@ -44,27 +39,10 @@ public final class AceOfSkies extends ct {
         int stackIn_128_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_71_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_111_0 = 0;
-        int stackOut_125_0 = 0;
-        int stackOut_127_0 = 0;
-        int stackOut_106_0 = 0;
-        Object stackOut_95_0 = null;
-        int stackOut_103_0 = 0;
-        int stackOut_90_0 = 0;
-        int stackOut_77_0 = 0;
-        int stackOut_74_0 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
         var5 = field_G ? 1 : 0;
         try {
           L0: {
@@ -130,8 +108,7 @@ public final class AceOfSkies extends ct {
                                                                           if (param1) {
                                                                             break L1;
                                                                           } else {
-                                                                            stackOut_71_0 = 0;
-                                                                            stackIn_72_0 = stackOut_71_0;
+                                                                            stackIn_72_0 = 0;
                                                                             decompiledRegionSelector0 = 11;
                                                                             break L0;
                                                                           }
@@ -139,16 +116,14 @@ public final class AceOfSkies extends ct {
                                                                       }
                                                                     }
                                                                     fh.a(-117, 55.0f, qo.a(bk.field_g, "", iq.field_e, 13525, ks.field_c));
-                                                                    stackOut_68_0 = 0;
-                                                                    stackIn_69_0 = stackOut_68_0;
+                                                                    stackIn_69_0 = 0;
                                                                     decompiledRegionSelector0 = 10;
                                                                     break L0;
                                                                   }
                                                                 }
                                                               }
                                                               fh.a(-91, 45.0f, qo.a(co.field_j, "", wi.field_a, 13525, lm.field_b));
-                                                              stackOut_60_0 = 0;
-                                                              stackIn_61_0 = stackOut_60_0;
+                                                              stackIn_61_0 = 0;
                                                               decompiledRegionSelector0 = 9;
                                                               break L0;
                                                             } else {
@@ -157,16 +132,14 @@ public final class AceOfSkies extends ct {
                                                           }
                                                         }
                                                         fh.a(-65, 40.0f, qo.a(rq.field_a, "", od.field_x, 13525, ei.field_c));
-                                                        stackOut_52_0 = 0;
-                                                        stackIn_53_0 = stackOut_52_0;
+                                                        stackIn_53_0 = 0;
                                                         decompiledRegionSelector0 = 8;
                                                         break L0;
                                                       }
                                                     }
                                                   }
                                                   fh.a(-117, 30.0f, qf.a(ff.field_a, 0, fn.field_b, ot.field_b, 81));
-                                                  stackOut_46_0 = 0;
-                                                  stackIn_47_0 = stackOut_46_0;
+                                                  stackIn_47_0 = 0;
                                                   decompiledRegionSelector0 = 7;
                                                   break L0;
                                                 } else {
@@ -175,8 +148,7 @@ public final class AceOfSkies extends ct {
                                               }
                                             }
                                             fh.a(-99, 20.0f, qo.a(pr.field_a, "", ub.field_f, 13525, gk.field_c));
-                                            stackOut_38_0 = 0;
-                                            stackIn_39_0 = stackOut_38_0;
+                                            stackIn_39_0 = 0;
                                             decompiledRegionSelector0 = 6;
                                             break L0;
                                           } else {
@@ -185,8 +157,7 @@ public final class AceOfSkies extends ct {
                                         }
                                       }
                                       fh.a(-86, 10.0f, qo.a(pr.field_a, "", jk.field_b, 13525, gk.field_c));
-                                      stackOut_32_0 = 0;
-                                      stackIn_33_0 = stackOut_32_0;
+                                      stackIn_33_0 = 0;
                                       decompiledRegionSelector0 = 5;
                                       break L0;
                                     } else {
@@ -195,14 +166,12 @@ public final class AceOfSkies extends ct {
                                   }
                                 }
                                 fh.a(-46, 5.0f, qo.a(bk.field_g, "arial13", fg.field_t, 13525, ks.field_c));
-                                stackOut_26_0 = 0;
-                                stackIn_27_0 = stackOut_26_0;
+                                stackIn_27_0 = 0;
                                 decompiledRegionSelector0 = 4;
                                 break L0;
                               } else {
                                 fh.a(-65, 4.0f, qo.a(bk.field_g, "arial13", hg.field_x, 13525, ks.field_c));
-                                stackOut_20_0 = 0;
-                                stackIn_21_0 = stackOut_20_0;
+                                stackIn_21_0 = 0;
                                 decompiledRegionSelector0 = 3;
                                 break L0;
                               }
@@ -212,14 +181,12 @@ public final class AceOfSkies extends ct {
                           }
                         }
                         fh.a(-86, 5.0f, qo.a(bk.field_g, "arialbold14", fg.field_t, 13525, ks.field_c));
-                        stackOut_17_0 = 0;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         fh.a(-124, 4.0f, qo.a(bk.field_g, "arialbold14", hg.field_x, 13525, ks.field_c));
-                        stackOut_11_0 = 0;
-                        stackIn_12_0 = stackOut_11_0;
+                        stackIn_12_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -229,8 +196,7 @@ public final class AceOfSkies extends ct {
                   }
                 }
                 fh.a(-110, 3.0f, qo.a(co.field_j, "basic", hg.field_x, 13525, lm.field_b));
-                stackOut_8_0 = 0;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 0;
                 decompiledRegionSelector0 = 0;
                 break L0;
               } else {
@@ -248,8 +214,7 @@ public final class AceOfSkies extends ct {
                     wi.field_a = null;
                     ec.a(10, 10, ka.field_a, 40, hn.field_a, bo.field_a, so.field_b, rg.field_F, wt.field_h, sh.field_u >> -2087266335, gp.field_w >> -98127519, 92, nl.field_t, 10, 20);
                     te.a(62);
-                    stackOut_111_0 = 0;
-                    stackIn_112_0 = stackOut_111_0;
+                    stackIn_112_0 = 0;
                     decompiledRegionSelector0 = 17;
                     break L0;
                   } else {
@@ -273,17 +238,15 @@ public final class AceOfSkies extends ct {
                       }
                     }
                     if (pk.field_wb.a((byte) 113) == null) {
-                      discarded$1 = pk.field_wb.a(-23);
-                      stackOut_125_0 = 0;
-                      stackIn_126_0 = stackOut_125_0;
+                      pk.field_wb.a(-23);
+                      stackIn_126_0 = 0;
                       decompiledRegionSelector0 = 18;
                       break L0;
                     } else {
                       ga.a(118);
                       sg.field_c = new pk();
                       m.a(tg.field_a[0], 27966, true);
-                      stackOut_127_0 = 1;
-                      stackIn_128_0 = stackOut_127_0;
+                      stackIn_128_0 = 1;
                       decompiledRegionSelector0 = 19;
                       break L0;
                     }
@@ -300,13 +263,11 @@ public final class AceOfSkies extends ct {
                           qn.field_c = null;
                           ot.field_b = null;
                           te.a(77);
-                          stackOut_106_0 = 0;
-                          stackIn_107_0 = stackOut_106_0;
+                          stackIn_107_0 = 0;
                           decompiledRegionSelector0 = 16;
                           break L0;
                         } else {
-                          stackOut_95_0 = null;
-                          stackIn_97_0 = stackOut_95_0;
+                          stackIn_97_0 = null;
                           L15: {
                             if (stackIn_97_0 == tg.field_a[var4]) {
                               break L15;
@@ -315,8 +276,7 @@ public final class AceOfSkies extends ct {
                                 break L15;
                               } else {
                                 te.a(120);
-                                stackOut_103_0 = 0;
-                                stackIn_104_0 = stackOut_103_0;
+                                stackIn_104_0 = 0;
                                 decompiledRegionSelector0 = 15;
                                 break L0;
                               }
@@ -333,8 +293,7 @@ public final class AceOfSkies extends ct {
                         } else {
                           if (!wt.field_e.field_n.a(-1, 176400, tg.field_a[var4], ot.field_b, qn.field_c)) {
                             te.a(74);
-                            stackOut_90_0 = 0;
-                            stackIn_91_0 = stackOut_90_0;
+                            stackIn_91_0 = 0;
                             decompiledRegionSelector0 = 14;
                             break L0;
                           } else {
@@ -354,8 +313,7 @@ public final class AceOfSkies extends ct {
                 tg.field_a[2] = ap.a(od.field_x, "", "aos boss level");
                 od.field_x = null;
                 te.a(102);
-                stackOut_77_0 = 0;
-                stackIn_78_0 = stackOut_77_0;
+                stackIn_78_0 = 0;
                 decompiledRegionSelector0 = 13;
                 break L0;
               }
@@ -366,8 +324,7 @@ public final class AceOfSkies extends ct {
               jk.field_b = null;
               ub.field_f = null;
               te.a(34);
-              stackOut_74_0 = 0;
-              stackIn_75_0 = stackOut_74_0;
+              stackIn_75_0 = 0;
               decompiledRegionSelector0 = 12;
               break L0;
             }
@@ -457,12 +414,6 @@ public final class AceOfSkies extends ct {
     }
 
     final static void a(int param0, boolean param1, fn param2, boolean param3, int param4) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        String var7 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
@@ -470,14 +421,10 @@ public final class AceOfSkies extends ct {
         String stackIn_32_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        String var7 = null;
         try {
           L0: {
             if (param4 == -12209) {
@@ -573,27 +520,19 @@ public final class AceOfSkies extends ct {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var5);
-            stackOut_28_1 = new StringBuilder().append("AceOfSkies.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_31_0 = stackOut_28_0;
-            stackIn_31_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackIn_31_0 = (RuntimeException) (var5);
+
+            stackIn_31_1 = new StringBuilder().append("AceOfSkies.B(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L8;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_32_0 = stackOut_29_0;
-              stackIn_32_1 = stackOut_29_1;
-              stackIn_32_2 = stackOut_29_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L8;
             }
           }
@@ -607,30 +546,15 @@ public final class AceOfSkies extends ct {
     }
 
     private final void q(int param0) {
-        int fieldTemp$2 = 0;
-        wf discarded$3 = null;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        pk stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
-        pk stackIn_21_0 = null;
-        int stackIn_21_1 = 0;
+        int fieldTemp$0 = 0;
         pk stackIn_23_0 = null;
         int stackIn_23_1 = 0;
         pk stackIn_24_0 = null;
         int stackIn_24_1 = 0;
         int stackIn_24_2 = 0;
         RuntimeException decompiledCaughtException = null;
-        pk stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        pk stackOut_23_0 = null;
-        int stackOut_23_1 = 0;
-        int stackOut_23_2 = 0;
-        pk stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        pk stackOut_21_0 = null;
-        int stackOut_21_1 = 0;
-        int stackOut_21_2 = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
         var3 = field_G ? 1 : 0;
         try {
           L0: {
@@ -659,11 +583,11 @@ public final class AceOfSkies extends ct {
               if (nk.field_g.d(param0 + 268426409) == null) {
                 break L3;
               } else {
-                fieldTemp$2 = hp.field_h + 1;
+                fieldTemp$0 = hp.field_h + 1;
                 hp.field_h = hp.field_h + 1;
-                if ((fieldTemp$2 ^ -1) == -257) {
+                if ((fieldTemp$0 ^ -1) == -257) {
                   hp.field_h = 0;
-                  discarded$3 = nk.field_g.e(param0 ^ 9001);
+                  nk.field_g.e(param0 ^ 9001);
                   break L3;
                 } else {
                   break L3;
@@ -731,31 +655,21 @@ public final class AceOfSkies extends ct {
                 }
               } else {
                 L8: {
-                  stackOut_18_0 = sg.field_c;
-                  stackOut_18_1 = 1;
-                  stackIn_23_0 = stackOut_18_0;
-                  stackIn_23_1 = stackOut_18_1;
-                  stackIn_19_0 = stackOut_18_0;
-                  stackIn_19_1 = stackOut_18_1;
+                  stackIn_23_0 = sg.field_c;
+
+                  stackIn_23_1 = 1;
+
                   if (po.field_h != -1) {
-                    stackOut_23_0 = (pk) ((Object) stackIn_23_0);
-                    stackOut_23_1 = stackIn_23_1;
-                    stackOut_23_2 = 0;
-                    stackIn_24_0 = stackOut_23_0;
-                    stackIn_24_1 = stackOut_23_1;
-                    stackIn_24_2 = stackOut_23_2;
+                    stackIn_24_0 = (pk) ((Object) stackIn_23_0);
+                    stackIn_24_1 = stackIn_23_1;
+                    stackIn_24_2 = 0;
                     break L8;
                   } else {
-                    stackOut_19_0 = (pk) ((Object) stackIn_19_0);
-                    stackOut_19_1 = stackIn_19_1;
-                    stackIn_21_0 = stackOut_19_0;
-                    stackIn_21_1 = stackOut_19_1;
-                    stackOut_21_0 = (pk) ((Object) stackIn_21_0);
-                    stackOut_21_1 = stackIn_21_1;
-                    stackOut_21_2 = 1;
-                    stackIn_24_0 = stackOut_21_0;
-                    stackIn_24_1 = stackOut_21_1;
-                    stackIn_24_2 = stackOut_21_2;
+
+
+                    stackIn_24_0 = (pk) ((Object) stackIn_23_0);
+                    stackIn_24_1 = stackIn_23_1;
+                    stackIn_24_2 = 1;
                     break L8;
                   }
                 }
@@ -831,7 +745,7 @@ public final class AceOfSkies extends ct {
     }
 
     final void d(int param0) {
-        RuntimeException var2 = null;
+        RuntimeException runtimeException = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = field_G ? 1 : 0;
@@ -1177,8 +1091,8 @@ public final class AceOfSkies extends ct {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "AceOfSkies.C(" + param0 + ')');
+          runtimeException = decompiledCaughtException;
+          throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.C(" + param0 + ')');
         }
     }
 
@@ -1228,32 +1142,20 @@ public final class AceOfSkies extends ct {
     }
 
     final static long a(CharSequence param0, int param1) {
-        RuntimeException var2 = null;
-        long var2_long = 0L;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
         long stackIn_39_0 = 0L;
         long stackIn_44_0 = 0L;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
         RuntimeException stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
         String stackIn_49_2 = null;
         RuntimeException decompiledCaughtException = null;
-        long stackOut_37_0 = 0L;
-        long stackOut_43_0 = 0L;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        RuntimeException stackOut_48_0 = null;
-        StringBuilder stackOut_48_1 = null;
-        String stackOut_48_2 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
         var7 = field_G ? 1 : 0;
         try {
           L0: {
@@ -1261,6 +1163,7 @@ public final class AceOfSkies extends ct {
               if (param1 <= -12) {
                 break L1;
               } else {
+                AceOfSkies.a((CharSequence) null, -113);
                 break L1;
               }
             }
@@ -1323,8 +1226,7 @@ public final class AceOfSkies extends ct {
                   if (0L != var2_long % 37L) {
                     break L8;
                   } else {
-                    stackOut_37_0 = var2_long;
-                    stackIn_39_0 = stackOut_37_0;
+                    stackIn_39_0 = var2_long;
                     if (stackIn_39_0 == 0L) {
                       break L8;
                     } else {
@@ -1333,8 +1235,7 @@ public final class AceOfSkies extends ct {
                     }
                   }
                 }
-                stackOut_43_0 = var2_long;
-                stackIn_44_0 = stackOut_43_0;
+                stackIn_44_0 = var2_long;
                 break L0;
               }
             }
@@ -1343,27 +1244,19 @@ public final class AceOfSkies extends ct {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_45_0 = (RuntimeException) (var2);
-            stackOut_45_1 = new StringBuilder().append("AceOfSkies.D(");
-            stackIn_48_0 = stackOut_45_0;
-            stackIn_48_1 = stackOut_45_1;
-            stackIn_46_0 = stackOut_45_0;
-            stackIn_46_1 = stackOut_45_1;
+            stackIn_48_0 = (RuntimeException) (var2);
+
+            stackIn_48_1 = new StringBuilder().append("AceOfSkies.D(");
+
             if (param0 == null) {
-              stackOut_48_0 = (RuntimeException) ((Object) stackIn_48_0);
-              stackOut_48_1 = (StringBuilder) ((Object) stackIn_48_1);
-              stackOut_48_2 = "null";
-              stackIn_49_0 = stackOut_48_0;
-              stackIn_49_1 = stackOut_48_1;
-              stackIn_49_2 = stackOut_48_2;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "null";
               break L9;
             } else {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "{...}";
-              stackIn_49_0 = stackOut_46_0;
-              stackIn_49_1 = stackOut_46_1;
-              stackIn_49_2 = stackOut_46_2;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "{...}";
               break L9;
             }
           }
@@ -1374,42 +1267,37 @@ public final class AceOfSkies extends ct {
 
     final void e(int param0) {
         try {
-            int discarded$3 = 0;
-            int discarded$4 = 0;
-            int discarded$5 = 0;
-            RuntimeException var2 = null;
-            java.awt.Canvas var2_ref = null;
+            int stackIn_54_0 = 0;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            java.awt.Canvas var2 = null;
+            RuntimeException var2_ref = null;
             int var3 = 0;
             ha var4 = null;
             int var5_int = 0;
             iq var5 = null;
-            lp var6 = null;
             int var6_int = 0;
-            String var6_ref = null;
+            String var6 = null;
+            lp var6_ref = null;
             int var7 = 0;
             int var8 = 0;
             String var9 = null;
             int var10 = 0;
-            int stackIn_54_0 = 0;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            int stackOut_53_0 = 0;
-            boolean stackOut_51_0 = false;
             var10 = field_G ? 1 : 0;
             try {
               L0: {
-                var2_ref = fa.a(-8213);
+                var2 = fa.a(-8213);
                 vp.a();
                 var3 = 0;
                 if (im.a(true)) {
-                  pu.a((byte) 21, var2_ref, lh.a((byte) -94));
+                  pu.a((byte) 21, var2, lh.a((byte) -94));
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
                   if (gq.field_f) {
                     if (!b.b((byte) -94)) {
                       fh.a(-42, 100.0f, bd.field_I);
-                      hj.a(var2_ref, -12);
+                      hj.a(var2, -12);
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -1492,12 +1380,10 @@ public final class AceOfSkies extends ct {
                             L7: {
                               var3 = 1;
                               if (jf.field_a != null) {
-                                stackOut_53_0 = 1;
-                                stackIn_54_0 = stackOut_53_0;
+                                stackIn_54_0 = 1;
                                 break L7;
                               } else {
-                                stackOut_51_0 = im.field_e;
-                                stackIn_54_0 = stackOut_51_0 ? 1 : 0;
+                                stackIn_54_0 = im.field_e ? 1 : 0;
                                 break L7;
                               }
                             }
@@ -1552,9 +1438,9 @@ public final class AceOfSkies extends ct {
                               break L11;
                             }
                           }
-                          discarded$3 = rb.field_j.a(0, -180 + sh.field_u, var6_int << 213394136, true, var6_int << -1136833480, 1, var8 - 1, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
-                          discarded$4 = rb.field_j.a(0, -180 + sh.field_u, var6_int << -43885544, true, var6_int << 1952001656, 1, 1 + var8, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
-                          discarded$5 = rb.field_j.a(0, sh.field_u + -180, 16777215 | var6_int << -338092744, true, -1, 1, var8, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
+                          rb.field_j.a(0, -180 + sh.field_u, var6_int << 213394136, true, var6_int << -1136833480, 1, var8 - 1, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
+                          rb.field_j.a(0, -180 + sh.field_u, var6_int << -43885544, true, var6_int << 1952001656, 1, 1 + var8, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
+                          rb.field_j.a(0, sh.field_u + -180, 16777215 | var6_int << -338092744, true, -1, 1, var8, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
                           break L9;
                         }
                       }
@@ -1590,8 +1476,8 @@ public final class AceOfSkies extends ct {
                           break L15;
                         } else {
                           if (ln.field_d >= 2) {
-                            var6_ref = (Runtime.getRuntime().totalMemory() + -Runtime.getRuntime().freeMemory()) / 1024L + "kb/" + Runtime.getRuntime().totalMemory() / 1024L + "kb";
-                            rb.field_j.a(var6_ref, -1, -16777216, sh.field_u - 10, 45, (byte) 92);
+                            var6 = (Runtime.getRuntime().totalMemory() + -Runtime.getRuntime().freeMemory()) / 1024L + "kb/" + Runtime.getRuntime().totalMemory() / 1024L + "kb";
+                            rb.field_j.a(var6, -1, -16777216, sh.field_u - 10, 45, (byte) 92);
                             rb.field_j.a(Integer.toString(wk.field_f), -1, -16777216, sh.field_u + -10, 60, (byte) 92);
                             break L15;
                           } else {
@@ -1615,7 +1501,7 @@ public final class AceOfSkies extends ct {
                       } catch (lp decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
                         L18: {
-                          var6 = (lp) (Object) decompiledCaughtException;
+                          var6_ref = (lp) (Object) decompiledCaughtException;
                           break L18;
                         }
                       }
@@ -1623,7 +1509,7 @@ public final class AceOfSkies extends ct {
                       break L0;
                     }
                   } else {
-                    hj.a(var2_ref, -12);
+                    hj.a(var2, -12);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -1631,8 +1517,8 @@ public final class AceOfSkies extends ct {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              var2 = (RuntimeException) (Object) decompiledCaughtException;
-              throw pn.a((Throwable) ((Object) var2), "AceOfSkies.A(" + param0 + ')');
+              var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+              throw pn.a((Throwable) ((Object) var2_ref), "AceOfSkies.A(" + param0 + ')');
             }
             if (decompiledRegionSelector0 == 0) {
               return;
@@ -1655,33 +1541,20 @@ public final class AceOfSkies extends ct {
     }
 
     final void c(int param0) {
-        boolean discarded$1 = false;
-        RuntimeException var2 = null;
-        oc var2_ref = null;
-        int var2_int = 0;
-        int var3 = 0;
-        Object stackIn_12_0 = null;
+        boolean discarded$0 = false;
         Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
         int stackIn_15_1 = 0;
-        Object stackIn_73_0 = null;
         Object stackIn_75_0 = null;
         Object stackIn_77_0 = null;
         Object stackIn_78_0 = null;
         int stackIn_78_1 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_11_0 = null;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        Object stackOut_72_0 = null;
-        Object stackOut_77_0 = null;
-        int stackOut_77_1 = 0;
-        Object stackOut_73_0 = null;
-        Object stackOut_75_0 = null;
-        int stackOut_75_1 = 0;
+        int var2_int = 0;
+        oc var2 = null;
+        RuntimeException var2_ref = null;
+        int var3 = 0;
         var3 = field_G ? 1 : 0;
         try {
           L0: {
@@ -1690,6 +1563,7 @@ public final class AceOfSkies extends ct {
               if (param0 == 5883) {
                 break L1;
               } else {
+                AceOfSkies.a((CharSequence) null, -79);
                 break L1;
               }
             }
@@ -1707,20 +1581,15 @@ public final class AceOfSkies extends ct {
               }
             }
             L3: {
-              stackOut_11_0 = this;
-              stackIn_14_0 = stackOut_11_0;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_14_0 = this;
+
               if (jf.field_a == null) {
-                stackOut_14_0 = this;
-                stackOut_14_1 = 0;
-                stackIn_15_0 = stackOut_14_0;
-                stackIn_15_1 = stackOut_14_1;
+                stackIn_15_0 = this;
+                stackIn_15_1 = 0;
                 break L3;
               } else {
-                stackOut_12_0 = this;
-                stackOut_12_1 = 1;
-                stackIn_15_0 = stackOut_12_0;
-                stackIn_15_1 = stackOut_12_1;
+                stackIn_15_0 = this;
+                stackIn_15_1 = 1;
                 break L3;
               }
             }
@@ -1744,7 +1613,7 @@ public final class AceOfSkies extends ct {
                     if (!jr.a((byte) 32)) {
                       break L6;
                     } else {
-                      discarded$1 = this.a((byte) 59, false);
+                      discarded$0 = this.a((byte) 59, false);
                       break L6;
                     }
                   }
@@ -1788,22 +1657,16 @@ public final class AceOfSkies extends ct {
                   if (!gi.a(true)) {
                     if (jf.a(param0 + 9117)) {
                       L9: {
-                        stackOut_72_0 = this;
-                        stackIn_77_0 = stackOut_72_0;
-                        stackIn_73_0 = stackOut_72_0;
+                        stackIn_77_0 = this;
+
                         if (null == jf.field_a) {
-                          stackOut_77_0 = this;
-                          stackOut_77_1 = 0;
-                          stackIn_78_0 = stackOut_77_0;
-                          stackIn_78_1 = stackOut_77_1;
+                          stackIn_78_0 = this;
+                          stackIn_78_1 = 0;
                           break L9;
                         } else {
-                          stackOut_73_0 = this;
-                          stackIn_75_0 = stackOut_73_0;
-                          stackOut_75_0 = this;
-                          stackOut_75_1 = 1;
-                          stackIn_78_0 = stackOut_75_0;
-                          stackIn_78_1 = stackOut_75_1;
+                          stackIn_75_0 = this;
+                          stackIn_78_0 = this;
+                          stackIn_78_1 = 1;
                           break L9;
                         }
                       }
@@ -1891,9 +1754,9 @@ public final class AceOfSkies extends ct {
                 break L15;
               } else {
                 L16: while (true) {
-                  var2_ref = (oc) ((Object) sb.field_c.e(121));
-                  if (null != var2_ref) {
-                    pn.a(var2_ref, (byte) -117, 4);
+                  var2 = (oc) ((Object) sb.field_c.e(121));
+                  if (null != var2) {
+                    pn.a(var2, (byte) -117, 4);
                     continue L16;
                   } else {
                     break L15;
@@ -1927,8 +1790,8 @@ public final class AceOfSkies extends ct {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "AceOfSkies.H(" + param0 + ')');
+          var2_ref = decompiledCaughtException;
+          throw pn.a((Throwable) ((Object) var2_ref), "AceOfSkies.H(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -1941,8 +1804,8 @@ public final class AceOfSkies extends ct {
     }
 
     final void f(int param0) {
-        RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {

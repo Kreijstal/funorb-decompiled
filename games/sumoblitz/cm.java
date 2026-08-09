@@ -40,28 +40,7 @@ final class cm extends hr {
           jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
           jaggl.OpenGL.glVertex2i(this.field_g.field_u + param0, param1);
           jaggl.OpenGL.glEnd();
-          if (Sumoblitz.field_L) {
-            this.b(6344, param2);
-            this.field_d.a(false, 0);
-            jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_g.field_v);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-            jaggl.OpenGL.glVertex2i(param0, param1);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
-            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0, param1 - -this.field_g.field_p);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_g.field_q, 0.0f);
-            jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0 + this.field_g.field_u, this.field_g.field_p + param1);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_g.field_q, this.field_g.field_v);
-            jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-            jaggl.OpenGL.glVertex2i(this.field_g.field_u + param0, param1);
-            jaggl.OpenGL.glEnd();
-            this.a(0);
-            return;
-          } else {
-            return;
-          }
+          return;
         } else {
           this.b(6344, param2);
           this.field_d.a(false, 0);
@@ -93,65 +72,31 @@ final class cm extends hr {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int[] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
-        L0: {
-          var10 = Sumoblitz.field_L ? 1 : 0;
-          if (!this.field_j.field_W) {
-            break L0;
+        int var9;
+        int var10;
+        int[] var11;
+        int[] var12;
+        int[] var14;
+        int[] var17;
+        var10 = Sumoblitz.field_L ? 1 : 0;
+        if (!this.field_j.field_W) {
+          this.field_g.a((byte) 125, param3, param0, param4, param1, param2, param5);
+          if (param6 == -3773) {
+            return;
           } else {
-            var13 = this.field_j.b(param3, param5, 1, param2, param1);
-            var12 = var13;
-            var11 = var12;
-            var8 = var11;
-            if (var11 != null) {
-              var11 = var8;
-              var9 = 0;
-              L1: while (true) {
-                if (var13.length <= var9) {
-                  this.a(param1, param0, (byte) -76, param5, var13, param4, 0, param5);
-                  if (var10 == 0) {
-                    if (param6 == -3773) {
-                      return;
-                    } else {
-                      this.b(3, -68, -66, -16, -63, 102, -72);
-                      return;
-                    }
-                  } else {
-                    this.field_g.a((byte) 125, param3, param0, param4, param1, param2, param5);
-                    if (param6 == -3773) {
-                      return;
-                    } else {
-                      this.b(3, -68, -66, -16, -63, 102, -72);
-                      return;
-                    }
-                  }
-                } else {
-                  var11[var9] = ic.a(var13[var9], -16777216);
-                  var9++;
-                  if (var10 != 0) {
-                    if (var10 == 0) {
-                      if (param6 == -3773) {
-                        return;
-                      } else {
-                        this.b(3, -68, -66, -16, -63, 102, -72);
-                        return;
-                      }
-                    } else {
-                      break L0;
-                    }
-                  } else {
-                    continue L1;
-                  }
-                }
-              }
-            } else {
-              if (var10 != 0) {
-                this.field_g.a((byte) 125, param3, param0, param4, param1, param2, param5);
+            this.b(3, -68, -66, -16, -63, 102, -72);
+            return;
+          }
+        } else {
+          var14 = this.field_j.b(param3, param5, 1, param2, param1);
+          var12 = var14;
+          var11 = var12;
+          var17 = var11;
+          if (var11 != null) {
+            var9 = 0;
+            L0: while (true) {
+              if (var14.length <= var9) {
+                this.a(param1, param0, (byte) -76, param5, var17, param4, 0, param5);
                 if (param6 == -3773) {
                   return;
                 } else {
@@ -159,61 +104,44 @@ final class cm extends hr {
                   return;
                 }
               } else {
-                L2: {
-                  if (param6 == -3773) {
-                    break L2;
-                  } else {
-                    this.b(3, -68, -66, -16, -63, 102, -72);
-                    break L2;
-                  }
-                }
-                return;
+                var11[var9] = ic.a(var14[var9], -16777216);
+                var9++;
+                continue L0;
               }
             }
+          } else {
+            if (param6 != -3773) {
+              this.b(3, -68, -66, -16, -63, 102, -72);
+              return;
+            } else {
+              return;
+            }
           }
-        }
-        this.field_g.a((byte) 125, param3, param0, param4, param1, param2, param5);
-        if (param6 == -3773) {
-          return;
-        } else {
-          this.b(3, -68, -66, -16, -63, 102, -72);
-          return;
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        float var9 = 0.0f;
-        float var10 = 0.0f;
-        float var11 = 0.0f;
-        float var12 = 0.0f;
-        float var13 = 0.0f;
-        float var14 = 0.0f;
-        int var15 = 0;
-        f stackIn_1_0 = null;
+        float var9;
+        float var10;
+        float var11;
+        float var12;
+        float var13;
+        float var14;
+        int var15;
         f stackIn_2_0 = null;
         f stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        f stackOut_0_0 = null;
-        f stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        f stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           var15 = Sumoblitz.field_L ? 1 : 0;
-          stackOut_0_0 = this.field_g;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this.field_g;
+
           if (-1 == (param7 & 1 ^ -1)) {
-            stackOut_2_0 = (f) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (f) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (f) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (f) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -246,23 +174,7 @@ final class cm extends hr {
             jaggl.OpenGL.glVertex2f(var13, var12);
             jaggl.OpenGL.glEnd();
             this.a(0);
-            if (var15 == 0) {
-              return;
-            } else {
-              this.field_j.a(39, this.field_g);
-              this.field_j.c(param4, true);
-              jaggl.OpenGL.glBegin(7);
-              jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-              jaggl.OpenGL.glVertex2f(var11, var12);
-              jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-              jaggl.OpenGL.glVertex2f(var11, var14);
-              jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-              jaggl.OpenGL.glVertex2f(var13, var14);
-              jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-              jaggl.OpenGL.glVertex2f(var13, var12);
-              jaggl.OpenGL.glEnd();
-              return;
-            }
+            return;
           } else {
             this.field_j.a(39, this.field_g);
             this.field_j.c(param4, true);
@@ -279,80 +191,7 @@ final class cm extends hr {
             return;
           }
         } else {
-          if (this.field_d == null) {
-            this.field_j.a(127, this.field_g);
-            this.field_j.c(param4, true);
-            jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-            jaggl.OpenGL.glVertex2i(param0, param1);
-            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0, param3 + param1);
-            jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0 + param2, param3 + param1);
-            jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-            jaggl.OpenGL.glVertex2i(param2 + param0, param1);
-            jaggl.OpenGL.glEnd();
-            if (var15 != 0) {
-              var9 = (float)param2 / (float)this.b();
-              var10 = (float)param3 / (float)this.d();
-              var11 = (float)param0 + var9 * (float)this.field_i;
-              var12 = (float)param1 + var10 * (float)this.field_f;
-              var13 = var11 + (float)this.field_g.field_u * var9;
-              var14 = (float)this.field_g.field_p * var10 + var12;
-              if (null != this.field_d) {
-                this.b(6344, param4);
-                this.field_d.a(true, 0);
-                jaggl.OpenGL.glBegin(7);
-                jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_g.field_v);
-                jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-                jaggl.OpenGL.glVertex2f(var11, var12);
-                jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
-                jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                jaggl.OpenGL.glVertex2f(var11, var14);
-                jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_g.field_q, 0.0f);
-                jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-                jaggl.OpenGL.glVertex2f(var13, var14);
-                jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_g.field_q, this.field_g.field_v);
-                jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-                jaggl.OpenGL.glVertex2f(var13, var12);
-                jaggl.OpenGL.glEnd();
-                this.a(0);
-                if (var15 != 0) {
-                  this.field_j.a(39, this.field_g);
-                  this.field_j.c(param4, true);
-                  jaggl.OpenGL.glBegin(7);
-                  jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-                  jaggl.OpenGL.glVertex2f(var11, var12);
-                  jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                  jaggl.OpenGL.glVertex2f(var11, var14);
-                  jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-                  jaggl.OpenGL.glVertex2f(var13, var14);
-                  jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-                  jaggl.OpenGL.glVertex2f(var13, var12);
-                  jaggl.OpenGL.glEnd();
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                this.field_j.a(39, this.field_g);
-                this.field_j.c(param4, true);
-                jaggl.OpenGL.glBegin(7);
-                jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-                jaggl.OpenGL.glVertex2f(var11, var12);
-                jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                jaggl.OpenGL.glVertex2f(var11, var14);
-                jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-                jaggl.OpenGL.glVertex2f(var13, var14);
-                jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-                jaggl.OpenGL.glVertex2f(var13, var12);
-                jaggl.OpenGL.glEnd();
-                return;
-              }
-            } else {
-              return;
-            }
-          } else {
+          if (this.field_d != null) {
             this.b(6344, param4);
             this.field_d.a(true, 0);
             jaggl.OpenGL.glBegin(7);
@@ -370,82 +209,21 @@ final class cm extends hr {
             jaggl.OpenGL.glVertex2i(param0 + param2, param1);
             jaggl.OpenGL.glEnd();
             this.a(0);
-            if (var15 != 0) {
-              this.field_j.a(127, this.field_g);
-              this.field_j.c(param4, true);
-              jaggl.OpenGL.glBegin(7);
-              jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-              jaggl.OpenGL.glVertex2i(param0, param1);
-              jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-              jaggl.OpenGL.glVertex2i(param0, param3 + param1);
-              jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-              jaggl.OpenGL.glVertex2i(param0 + param2, param3 + param1);
-              jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-              jaggl.OpenGL.glVertex2i(param2 + param0, param1);
-              jaggl.OpenGL.glEnd();
-              if (var15 != 0) {
-                var9 = (float)param2 / (float)this.b();
-                var10 = (float)param3 / (float)this.d();
-                var11 = (float)param0 + var9 * (float)this.field_i;
-                var12 = (float)param1 + var10 * (float)this.field_f;
-                var13 = var11 + (float)this.field_g.field_u * var9;
-                var14 = (float)this.field_g.field_p * var10 + var12;
-                if (null != this.field_d) {
-                  this.b(6344, param4);
-                  this.field_d.a(true, 0);
-                  jaggl.OpenGL.glBegin(7);
-                  jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_g.field_v);
-                  jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-                  jaggl.OpenGL.glVertex2f(var11, var12);
-                  jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
-                  jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                  jaggl.OpenGL.glVertex2f(var11, var14);
-                  jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_g.field_q, 0.0f);
-                  jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-                  jaggl.OpenGL.glVertex2f(var13, var14);
-                  jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_g.field_q, this.field_g.field_v);
-                  jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-                  jaggl.OpenGL.glVertex2f(var13, var12);
-                  jaggl.OpenGL.glEnd();
-                  this.a(0);
-                  if (var15 != 0) {
-                    this.field_j.a(39, this.field_g);
-                    this.field_j.c(param4, true);
-                    jaggl.OpenGL.glBegin(7);
-                    jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-                    jaggl.OpenGL.glVertex2f(var11, var12);
-                    jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                    jaggl.OpenGL.glVertex2f(var11, var14);
-                    jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-                    jaggl.OpenGL.glVertex2f(var13, var14);
-                    jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-                    jaggl.OpenGL.glVertex2f(var13, var12);
-                    jaggl.OpenGL.glEnd();
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  this.field_j.a(39, this.field_g);
-                  this.field_j.c(param4, true);
-                  jaggl.OpenGL.glBegin(7);
-                  jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
-                  jaggl.OpenGL.glVertex2f(var11, var12);
-                  jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                  jaggl.OpenGL.glVertex2f(var11, var14);
-                  jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
-                  jaggl.OpenGL.glVertex2f(var13, var14);
-                  jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
-                  jaggl.OpenGL.glVertex2f(var13, var12);
-                  jaggl.OpenGL.glEnd();
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
+            return;
+          } else {
+            this.field_j.a(127, this.field_g);
+            this.field_j.c(param4, true);
+            jaggl.OpenGL.glBegin(7);
+            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_g.field_v);
+            jaggl.OpenGL.glVertex2i(param0, param1);
+            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
+            jaggl.OpenGL.glVertex2i(param0, param3 + param1);
+            jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, 0.0f);
+            jaggl.OpenGL.glVertex2i(param0 + param2, param3 + param1);
+            jaggl.OpenGL.glTexCoord2f(this.field_g.field_q, this.field_g.field_v);
+            jaggl.OpenGL.glVertex2i(param2 + param0, param1);
+            jaggl.OpenGL.glEnd();
+            return;
           }
         }
     }
@@ -459,41 +237,27 @@ final class cm extends hr {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
-        Object stackIn_5_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         Object stackIn_8_0 = null;
-        Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_8_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
         this.field_h = param3;
         this.field_i = param0;
         this.field_f = param1;
         this.field_a = param2;
-        stackOut_0_0 = this;
-        stackIn_2_0 = stackOut_0_0;
-        stackIn_1_0 = stackOut_0_0;
+        stackIn_2_0 = this;
+
         if (-1 == (this.field_i ^ -1)) {
-          stackOut_2_0 = this;
-          stackIn_4_0 = stackOut_2_0;
-          stackIn_3_0 = stackOut_2_0;
+          stackIn_4_0 = this;
+
           if (0 == this.field_f) {
-            stackOut_4_0 = this;
-            stackIn_8_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_8_0 = this;
+
             if (-1 == (this.field_a ^ -1)) {
-              stackOut_8_0 = this;
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_10_0 = this;
+
               if (-1 != (this.field_h ^ -1)) {
                 ((cm) (this)).field_e = true;
                 return;
@@ -502,10 +266,8 @@ final class cm extends hr {
                 return;
               }
             } else {
-              stackOut_5_0 = this;
-              stackOut_5_1 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_0 = this;
+              stackIn_7_1 = 1;
               ((cm) (this)).field_e = stackIn_7_1 != 0;
               return;
             }
@@ -530,8 +292,6 @@ final class cm extends hr {
     }
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
-        float var11 = 0.0f;
-        float var12 = 0.0f;
         float var13 = 0.0f;
         float var14 = 0.0f;
         float var15 = 0.0f;
@@ -544,17 +304,9 @@ final class cm extends hr {
         float var22 = 0.0f;
         float var23 = 0.0f;
         float var24 = 0.0f;
-        f stackIn_4_0 = null;
-        f stackIn_5_0 = null;
-        f stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        f stackOut_3_0 = null;
-        f stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        f stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        L0: {
-          if (this.field_e) {
+        float var11 = 0.0f;
+        float var12 = 0.0f;
+        if (!(!this.field_e)) {
             var11 = (float)this.b();
             var12 = (float)this.d();
             var13 = (param2 - param0) / var11;
@@ -575,32 +327,10 @@ final class cm extends hr {
             param3 = param3 + var22 + var18;
             param2 = var17 + (param2 + var21);
             param5 = var24 + (param5 + var20);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        L1: {
-          var11 = param4 + (param2 - param0);
-          var12 = param3 + (-param1 + param5);
-          stackOut_3_0 = this.field_g;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_4_0 = stackOut_3_0;
-          if ((param9 & 1) == 0) {
-            stackOut_5_0 = (f) ((Object) stackIn_5_0);
-            stackOut_5_1 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            break L1;
-          } else {
-            stackOut_4_0 = (f) ((Object) stackIn_4_0);
-            stackOut_4_1 = 1;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            break L1;
-          }
-        }
-        ((f) (Object) stackIn_6_0).a(stackIn_6_1 != 0, 0);
+        var11 = param4 + (param2 - param0);
+        var12 = param3 + (-param1 + param5);
+        this.field_g.a((param9 & 1) != 0 ? true : false, 0);
         this.field_j.q(-70);
         this.field_j.a(110, this.field_g);
         this.field_j.c(25189, param8);
@@ -634,7 +364,7 @@ final class cm extends hr {
     }
 
     private final void b(int param0, int param1) {
-        int var4 = 0;
+        int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
         this.field_j.g(1, 115);
         this.field_j.a(74, this.field_g);
@@ -647,47 +377,20 @@ final class cm extends hr {
           this.field_j.a(20685, 7681, 34479);
           this.field_j.b(34166, 768, 1, param0 + -6465);
           if (this.field_c != 0) {
-            L0: {
-              if (-2 == (this.field_c ^ -1)) {
-                break L0;
-              } else {
-                if ((this.field_c ^ -1) != -3) {
-                  if ((this.field_c ^ -1) == -4) {
-                    this.field_j.a(31322, 128.5f, 128.5f, 128.5f, 0.0f);
-                    if (var4 != 0) {
-                      break L0;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
+            if (-2 != (this.field_c ^ -1)) {
+              if ((this.field_c ^ -1) != -3) {
+                if ((this.field_c ^ -1) != -4) {
+                  return;
                 } else {
-                  this.field_j.a(31322, 0.5f, 1.0f, 0.5f, 0.0f);
-                  if (var4 != 0) {
-                    if ((this.field_c ^ -1) == -4) {
-                      this.field_j.a(31322, 128.5f, 128.5f, 128.5f, 0.0f);
-                      if (var4 != 0) {
-                        this.field_j.a(param0 + 24978, 1.0f, 0.5f, 0.5f, 0.0f);
-                        this.field_j.a(31322, 0.5f, 0.5f, 1.0f, 0.0f);
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
+                  this.field_j.a(31322, 128.5f, 128.5f, 128.5f, 0.0f);
+                  return;
                 }
+              } else {
+                this.field_j.a(31322, 0.5f, 1.0f, 0.5f, 0.0f);
+                return;
               }
-            }
-            this.field_j.a(param0 + 24978, 1.0f, 0.5f, 0.5f, 0.0f);
-            if (var4 != 0) {
-              this.field_j.a(31322, 0.5f, 0.5f, 1.0f, 0.0f);
-              return;
             } else {
+              this.field_j.a(param0 + 24978, 1.0f, 0.5f, 0.5f, 0.0f);
               return;
             }
           } else {
@@ -700,50 +403,20 @@ final class cm extends hr {
           this.field_j.a(20685, 7681, 34479);
           this.field_j.b(34166, 768, 1, param0 + -6465);
           if (this.field_c != 0) {
-            L1: {
-              if (-2 == (this.field_c ^ -1)) {
-                break L1;
-              } else {
-                if ((this.field_c ^ -1) == -3) {
-                  this.field_j.a(31322, 0.5f, 1.0f, 0.5f, 0.0f);
-                  if (var4 != 0) {
-                    if ((this.field_c ^ -1) == -4) {
-                      this.field_j.a(31322, 128.5f, 128.5f, 128.5f, 0.0f);
-                      if (var4 != 0) {
-                        break L1;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
+            if (-2 != (this.field_c ^ -1)) {
+              if ((this.field_c ^ -1) != -3) {
+                if ((this.field_c ^ -1) != -4) {
+                  return;
                 } else {
-                  L2: {
-                    if ((this.field_c ^ -1) == -4) {
-                      this.field_j.a(31322, 128.5f, 128.5f, 128.5f, 0.0f);
-                      if (var4 == 0) {
-                        break L2;
-                      } else {
-                        this.field_j.a(param0 + 24978, 1.0f, 0.5f, 0.5f, 0.0f);
-                        this.field_j.a(31322, 0.5f, 0.5f, 1.0f, 0.0f);
-                        break L2;
-                      }
-                    } else {
-                      break L2;
-                    }
-                  }
+                  this.field_j.a(31322, 128.5f, 128.5f, 128.5f, 0.0f);
                   return;
                 }
+              } else {
+                this.field_j.a(31322, 0.5f, 1.0f, 0.5f, 0.0f);
+                return;
               }
-            }
-            this.field_j.a(param0 + 24978, 1.0f, 0.5f, 0.5f, 0.0f);
-            if (var4 == 0) {
-              return;
             } else {
-              this.field_j.a(31322, 0.5f, 0.5f, 1.0f, 0.0f);
+              this.field_j.a(param0 + 24978, 1.0f, 0.5f, 0.5f, 0.0f);
               return;
             }
           } else {

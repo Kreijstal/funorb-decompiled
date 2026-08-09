@@ -32,9 +32,9 @@ final class ht implements Iterable {
     }
 
     final gn a(long param0, byte param1) {
-        gn var4 = null;
-        gn var5 = null;
-        int var6 = 0;
+        gn var4;
+        gn var5;
+        int var6;
         var6 = Kickabout.field_G;
         if (param1 >= 1) {
           var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_d))];
@@ -64,20 +64,6 @@ final class ht implements Iterable {
     }
 
     final static void a(boolean param0, byte param1) {
-        double var2 = 0.0;
-        double var4 = 0.0;
-        double var6 = 0.0;
-        double var8 = 0.0;
-        double var10 = 0.0;
-        double var12_double = 0.0;
-        int var12 = 0;
-        double var14 = 0.0;
-        double var16 = 0.0;
-        double var18 = 0.0;
-        double var20 = 0.0;
-        double var22 = 0.0;
-        double var24 = 0.0;
-        double var26 = 0.0;
         double stackIn_5_0 = 0.0;
         int stackIn_17_0 = 0;
         int stackIn_28_0 = 0;
@@ -99,48 +85,20 @@ final class ht implements Iterable {
         int stackIn_251_0 = 0;
         int stackIn_267_0 = 0;
         int stackIn_285_0 = 0;
-        double stackOut_4_0 = 0.0;
-        double stackOut_3_0 = 0.0;
-        int stackOut_58_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_241_0 = 0;
-        int stackOut_240_0 = 0;
-        int stackOut_266_0 = 0;
-        int stackOut_265_0 = 0;
-        int stackOut_250_0 = 0;
-        int stackOut_249_0 = 0;
-        int stackOut_284_0 = 0;
-        int stackOut_283_0 = 0;
-        int stackOut_217_0 = 0;
-        int stackOut_216_0 = 0;
-        int stackOut_227_0 = 0;
-        int stackOut_226_0 = 0;
-        int stackOut_146_0 = 0;
-        int stackOut_145_0 = 0;
-        int stackOut_173_0 = 0;
-        int stackOut_172_0 = 0;
-        int stackOut_156_0 = 0;
-        int stackOut_155_0 = 0;
-        int stackOut_190_0 = 0;
-        int stackOut_189_0 = 0;
-        int stackOut_90_0 = 0;
-        int stackOut_89_0 = 0;
-        int stackOut_130_0 = 0;
-        int stackOut_129_0 = 0;
-        int stackOut_116_0 = 0;
-        int stackOut_115_0 = 0;
-        int stackOut_97_0 = 0;
-        int stackOut_96_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_38_0 = 0;
+        double var2;
+        double var4;
+        double var6;
+        double var8;
+        double var10;
+        double var12_double;
+        int var12;
+        double var14;
+        double var16;
+        double var18;
+        double var20;
+        double var22;
+        double var24;
+        double var26;
         L0: {
           if (848.0 <= la.field_d) {
             break L0;
@@ -151,12 +109,10 @@ final class ht implements Iterable {
         }
         L1: {
           if (param0) {
-            stackOut_4_0 = 1.4;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 1.4;
             break L1;
           } else {
-            stackOut_3_0 = 0.013999999999999999;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 0.013999999999999999;
             break L1;
           }
         }
@@ -204,12 +160,10 @@ final class ht implements Iterable {
           }
           L5: {
             if (hd.field_K >= wm.field_C) {
-              stackOut_58_0 = 0;
-              stackIn_59_0 = stackOut_58_0;
+              stackIn_59_0 = 0;
               break L5;
             } else {
-              stackOut_57_0 = 1;
-              stackIn_59_0 = stackOut_57_0;
+              stackIn_59_0 = 1;
               break L5;
             }
           }
@@ -220,12 +174,10 @@ final class ht implements Iterable {
               if (hd.field_K >= wm.field_C) {
                 L6: {
                   if (cq.field_f <= jr.field_Gb) {
-                    stackOut_241_0 = 0;
-                    stackIn_242_0 = stackOut_241_0;
+                    stackIn_242_0 = 0;
                     break L6;
                   } else {
-                    stackOut_240_0 = 1;
-                    stackIn_242_0 = stackOut_240_0;
+                    stackIn_242_0 = 1;
                     break L6;
                   }
                 }
@@ -242,12 +194,10 @@ final class ht implements Iterable {
                         } else {
                           L9: {
                             if (la.field_d <= hw.field_f) {
-                              stackOut_266_0 = 0;
-                              stackIn_267_0 = stackOut_266_0;
+                              stackIn_267_0 = 0;
                               break L9;
                             } else {
-                              stackOut_265_0 = 1;
-                              stackIn_267_0 = stackOut_265_0;
+                              stackIn_267_0 = 1;
                               break L9;
                             }
                           }
@@ -316,12 +266,10 @@ final class ht implements Iterable {
                         }
                         L14: {
                           if (la.field_d <= hw.field_f) {
-                            stackOut_250_0 = 0;
-                            stackIn_251_0 = stackOut_250_0;
+                            stackIn_251_0 = 0;
                             break L14;
                           } else {
-                            stackOut_249_0 = 1;
-                            stackIn_251_0 = stackOut_249_0;
+                            stackIn_251_0 = 1;
                             break L14;
                           }
                         }
@@ -370,12 +318,10 @@ final class ht implements Iterable {
                 }
                 L18: {
                   if (la.field_d <= hw.field_f) {
-                    stackOut_284_0 = 0;
-                    stackIn_285_0 = stackOut_284_0;
+                    stackIn_285_0 = 0;
                     break L18;
                   } else {
-                    stackOut_283_0 = 1;
-                    stackIn_285_0 = stackOut_283_0;
+                    stackIn_285_0 = 1;
                     break L18;
                   }
                 }
@@ -457,12 +403,10 @@ final class ht implements Iterable {
                 L24: {
                   hd.field_K = wm.field_C;
                   if (cq.field_f <= jr.field_Gb) {
-                    stackOut_217_0 = 0;
-                    stackIn_218_0 = stackOut_217_0;
+                    stackIn_218_0 = 0;
                     break L24;
                   } else {
-                    stackOut_216_0 = 1;
-                    stackIn_218_0 = stackOut_216_0;
+                    stackIn_218_0 = 1;
                     break L24;
                   }
                 }
@@ -496,12 +440,10 @@ final class ht implements Iterable {
                 }
                 L28: {
                   if (la.field_d <= hw.field_f) {
-                    stackOut_227_0 = 0;
-                    stackIn_228_0 = stackOut_227_0;
+                    stackIn_228_0 = 0;
                     break L28;
                   } else {
-                    stackOut_226_0 = 1;
-                    stackIn_228_0 = stackOut_226_0;
+                    stackIn_228_0 = 1;
                     break L28;
                   }
                 }
@@ -546,12 +488,10 @@ final class ht implements Iterable {
             } else {
               L32: {
                 if (cq.field_f <= jr.field_Gb) {
-                  stackOut_146_0 = 0;
-                  stackIn_147_0 = stackOut_146_0;
+                  stackIn_147_0 = 0;
                   break L32;
                 } else {
-                  stackOut_145_0 = 1;
-                  stackIn_147_0 = stackOut_145_0;
+                  stackIn_147_0 = 1;
                   break L32;
                 }
               }
@@ -565,12 +505,10 @@ final class ht implements Iterable {
                     if (cq.field_f <= jr.field_Gb) {
                       L34: {
                         if (la.field_d <= hw.field_f) {
-                          stackOut_173_0 = 0;
-                          stackIn_174_0 = stackOut_173_0;
+                          stackIn_174_0 = 0;
                           break L34;
                         } else {
-                          stackOut_172_0 = 1;
-                          stackIn_174_0 = stackOut_172_0;
+                          stackIn_174_0 = 1;
                           break L34;
                         }
                       }
@@ -640,12 +578,10 @@ final class ht implements Iterable {
                     }
                     L39: {
                       if (la.field_d <= hw.field_f) {
-                        stackOut_156_0 = 0;
-                        stackIn_157_0 = stackOut_156_0;
+                        stackIn_157_0 = 0;
                         break L39;
                       } else {
-                        stackOut_155_0 = 1;
-                        stackIn_157_0 = stackOut_155_0;
+                        stackIn_157_0 = 1;
                         break L39;
                       }
                     }
@@ -694,12 +630,10 @@ final class ht implements Iterable {
               }
               L43: {
                 if (la.field_d <= hw.field_f) {
-                  stackOut_190_0 = 0;
-                  stackIn_191_0 = stackOut_190_0;
+                  stackIn_191_0 = 0;
                   break L43;
                 } else {
-                  stackOut_189_0 = 1;
-                  stackIn_191_0 = stackOut_189_0;
+                  stackIn_191_0 = 1;
                   break L43;
                 }
               }
@@ -794,12 +728,10 @@ final class ht implements Iterable {
               }
               L50: {
                 if (cq.field_f <= jr.field_Gb) {
-                  stackOut_90_0 = 0;
-                  stackIn_91_0 = stackOut_90_0;
+                  stackIn_91_0 = 0;
                   break L50;
                 } else {
-                  stackOut_89_0 = 1;
-                  stackIn_91_0 = stackOut_89_0;
+                  stackIn_91_0 = 1;
                   break L50;
                 }
               }
@@ -810,12 +742,10 @@ final class ht implements Iterable {
                   L51: {
                     jr.field_Gb = cq.field_f;
                     if (la.field_d <= hw.field_f) {
-                      stackOut_130_0 = 0;
-                      stackIn_131_0 = stackOut_130_0;
+                      stackIn_131_0 = 0;
                       break L51;
                     } else {
-                      stackOut_129_0 = 1;
-                      stackIn_131_0 = stackOut_129_0;
+                      stackIn_131_0 = 1;
                       break L51;
                     }
                   }
@@ -871,12 +801,10 @@ final class ht implements Iterable {
                   }
                   L56: {
                     if (la.field_d <= hw.field_f) {
-                      stackOut_116_0 = 0;
-                      stackIn_117_0 = stackOut_116_0;
+                      stackIn_117_0 = 0;
                       break L56;
                     } else {
-                      stackOut_115_0 = 1;
-                      stackIn_117_0 = stackOut_115_0;
+                      stackIn_117_0 = 1;
                       break L56;
                     }
                   }
@@ -929,12 +857,10 @@ final class ht implements Iterable {
                 }
                 L61: {
                   if (la.field_d <= hw.field_f) {
-                    stackOut_97_0 = 0;
-                    stackIn_98_0 = stackOut_97_0;
+                    stackIn_98_0 = 0;
                     break L61;
                   } else {
-                    stackOut_96_0 = 1;
-                    stackIn_98_0 = stackOut_96_0;
+                    stackIn_98_0 = 1;
                     break L61;
                   }
                 }
@@ -980,12 +906,10 @@ final class ht implements Iterable {
               L65: {
                 hd.field_K = wm.field_C;
                 if (cq.field_f <= jr.field_Gb) {
-                  stackOut_63_0 = 0;
-                  stackIn_64_0 = stackOut_63_0;
+                  stackIn_64_0 = 0;
                   break L65;
                 } else {
-                  stackOut_62_0 = 1;
-                  stackIn_64_0 = stackOut_62_0;
+                  stackIn_64_0 = 1;
                   break L65;
                 }
               }
@@ -1019,12 +943,10 @@ final class ht implements Iterable {
               }
               L69: {
                 if (la.field_d <= hw.field_f) {
-                  stackOut_73_0 = 0;
-                  stackIn_74_0 = stackOut_73_0;
+                  stackIn_74_0 = 0;
                   break L69;
                 } else {
-                  stackOut_72_0 = 1;
-                  stackIn_74_0 = stackOut_72_0;
+                  stackIn_74_0 = 1;
                   break L69;
                 }
               }
@@ -1101,12 +1023,10 @@ final class ht implements Iterable {
           }
           L75: {
             if (hd.field_K >= wm.field_C) {
-              stackOut_16_0 = 0;
-              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_0 = 0;
               break L75;
             } else {
-              stackOut_15_0 = 1;
-              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_0 = 1;
               break L75;
             }
           }
@@ -1138,12 +1058,10 @@ final class ht implements Iterable {
           }
           L78: {
             if (cq.field_f <= jr.field_Gb) {
-              stackOut_27_0 = 0;
-              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_0 = 0;
               break L78;
             } else {
-              stackOut_26_0 = 1;
-              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_0 = 1;
               break L78;
             }
           }
@@ -1183,12 +1101,10 @@ final class ht implements Iterable {
           }
           L81: {
             if (la.field_d <= hw.field_f) {
-              stackOut_39_0 = 0;
-              stackIn_40_0 = stackOut_39_0;
+              stackIn_40_0 = 0;
               break L81;
             } else {
-              stackOut_38_0 = 1;
-              stackIn_40_0 = stackOut_38_0;
+              stackIn_40_0 = 1;
               break L81;
             }
           }

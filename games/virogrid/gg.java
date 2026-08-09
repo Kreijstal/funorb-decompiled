@@ -58,10 +58,8 @@ abstract class gg extends fd {
     }
 
     boolean a(byte param0) {
-        int var2 = 0;
+        int var2;
         int stackIn_4_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_3_0 = 0;
         L0: {
           L1: {
             var2 = -67 / ((50 - param0) / 33);
@@ -72,21 +70,18 @@ abstract class gg extends fd {
               if (this.field_G) {
                 break L1;
               } else {
-                stackOut_2_0 = 1;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = 1;
                 break L0;
               }
             }
           }
-          stackOut_3_0 = 0;
-          stackIn_4_0 = stackOut_3_0;
+          stackIn_4_0 = 0;
           break L0;
         }
         return stackIn_4_0 != 0;
     }
 
     public static void g(int param0) {
-        int discarded$0 = 0;
         field_K = null;
         field_F = null;
         field_I = null;
@@ -95,7 +90,7 @@ abstract class gg extends fd {
         field_E = (int[][]) null;
         if (param0 != -1) {
             CharSequence var2 = (CharSequence) null;
-            discarded$0 = gg.a((CharSequence) null, 'ﾙ', 7);
+            gg.a((CharSequence) null, 'ﾙ', 7);
         }
         field_N = null;
         field_M = null;
@@ -117,11 +112,9 @@ abstract class gg extends fd {
     }
 
     boolean f(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_10_0 = 0;
         L0: {
           if (param0 == 3) {
             break L0;
@@ -159,15 +152,13 @@ abstract class gg extends fd {
                 if (this.field_G) {
                   break L4;
                 } else {
-                  stackOut_9_0 = 1;
-                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_11_0 = 1;
                   break L3;
                 }
               }
             }
           }
-          stackOut_10_0 = 0;
-          stackIn_11_0 = stackOut_10_0;
+          stackIn_11_0 = 0;
           break L3;
         }
         return stackIn_11_0 != 0;
@@ -181,7 +172,6 @@ abstract class gg extends fd {
     }
 
     final static int a(CharSequence param0, char param1, int param2) {
-        int discarded$2 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -189,23 +179,12 @@ abstract class gg extends fd {
         int var6 = 0;
         CharSequence var7 = null;
         int stackIn_8_0 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -217,14 +196,13 @@ abstract class gg extends fd {
                 break L1;
               } else {
                 var7 = (CharSequence) null;
-                discarded$2 = gg.a((CharSequence) null, '`', -91);
+                gg.a((CharSequence) null, '`', -91);
                 break L1;
               }
             }
             L2: while (true) {
               if (var5 >= var4) {
-                stackOut_7_0 = var3_int;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = var3_int;
                 break L0;
               } else {
                 L3: {
@@ -244,27 +222,19 @@ abstract class gg extends fd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3);
-            stackOut_9_1 = new StringBuilder().append("gg.EA(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("gg.EA(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }

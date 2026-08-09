@@ -6,7 +6,6 @@ final class mia extends cia {
     int field_r;
 
     final static void b(int param0) {
-        sna discarded$0 = null;
         int var1_int = 0;
         int var2 = BachelorFridge.field_y;
         try {
@@ -15,7 +14,7 @@ final class mia extends cia {
                 ta.field_d[var1_int] = 0L;
             }
             if (param0 != 32) {
-                discarded$0 = mia.d((byte) 3);
+                mia.d((byte) 3);
             }
             for (var1_int = 0; var1_int < 32; var1_int++) {
                 baa.field_C[var1_int] = 0L;

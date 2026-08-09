@@ -33,9 +33,8 @@ final class pl {
     }
 
     final static ah a(int param0, boolean param1, boolean param2, int param3, byte param4) {
-        cf discarded$2 = null;
         if (param4 >= -47) {
-          discarded$2 = pl.a(-52, (byte) 50);
+          pl.a(-52, (byte) 50);
           return ai.a(param2, param0, false, param3, (byte) 122, param1);
         } else {
           return ai.a(param2, param0, false, param3, (byte) 122, param1);

@@ -25,9 +25,8 @@ final class qd {
     }
 
     final static void b(int param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         L0: {
           if (ef.field_b != null) {
             var1 = ef.field_b;
@@ -64,8 +63,6 @@ final class qd {
         int stackIn_13_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_8_0 = 0;
         var8 = Torquing.field_u;
         try {
           L0: {
@@ -81,8 +78,7 @@ final class qd {
             }
             L2: while (true) {
               if (var3_int >= wh.field_z.length) {
-                stackOut_12_0 = -1;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -93,8 +89,7 @@ final class qd {
                     var4 = var4 + hn.field_z;
                     var7 = -(var6 >> -1377499807) + vk.field_A;
                     if (l.a((ln.field_D << -1610520607) + kp.field_d, param2, param0 + 6821, param1, (aq.field_b << -919387679) + var6, var7 - aq.field_b, var4)) {
-                      stackOut_8_0 = var5;
-                      stackIn_9_0 = stackOut_8_0;
+                      stackIn_9_0 = var5;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     } else {

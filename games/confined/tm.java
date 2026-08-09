@@ -11,7 +11,15 @@ final class tm implements Iterator {
     static String field_e;
 
     final static byte[] a(int param0, byte[] param1) {
-        int discarded$1 = 0;
+        byte[] stackIn_7_0 = null;
+        byte[] stackIn_21_0 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -20,33 +28,11 @@ final class tm implements Iterator {
         byte[] var6_ref_byte__ = null;
         byte[] var7 = null;
         Object var8 = null;
-        Throwable var9 = null;
         kg var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         byte[] var14 = null;
-        byte[] stackIn_7_0 = null;
-        byte[] stackIn_21_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
-        byte[] stackOut_20_0 = null;
-        byte[] stackOut_6_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         try {
           L0: {
             L1: {
@@ -99,12 +85,11 @@ final class tm implements Iterator {
                           }
                           break L5;
                         } else {
-                          discarded$1 = oa.a(var14, var6, param1, var5, 9);
+                          oa.a(var14, var6, param1, var5, 9);
                           break L5;
                         }
                       }
-                      stackOut_20_0 = (byte[]) (var7);
-                      stackIn_21_0 = stackOut_20_0;
+                      stackIn_21_0 = (byte[]) (var7);
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -115,8 +100,7 @@ final class tm implements Iterator {
                   var11 = var13;
                   var6_ref_byte__ = var11;
                   var10.a(0, (byte) 122, var5, var13);
-                  stackOut_6_0 = (byte[]) (var6_ref_byte__);
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = (byte[]) (var6_ref_byte__);
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -128,27 +112,19 @@ final class tm implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2);
-            stackOut_22_1 = new StringBuilder().append("tm.C(").append(param0).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2);
+
+            stackIn_24_1 = new StringBuilder().append("tm.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L7;
             }
           }
@@ -162,14 +138,14 @@ final class tm implements Iterator {
     }
 
     public final Object next() {
-        jl var1 = this.field_c;
+        Object var1 = this.field_c;
         if (var1 != this.field_d.field_b) {
-            this.field_c = var1.field_o;
+            this.field_c = ((jl) (var1)).field_o;
         } else {
             this.field_c = null;
             var1 = null;
         }
-        this.field_b = var1;
+        this.field_b = (jl) (var1);
         return var1;
     }
 
@@ -183,8 +159,6 @@ final class tm implements Iterator {
         al stackIn_3_0 = null;
         al stackIn_9_0 = null;
         al stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -192,17 +166,6 @@ final class tm implements Iterator {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        al stackOut_11_0 = null;
-        al stackOut_8_0 = null;
-        al stackOut_2_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         var6 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -220,8 +183,7 @@ final class tm implements Iterator {
               }
               L2: while (true) {
                 if (var4 >= var3.length) {
-                  stackOut_11_0 = tk.field_f;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = tk.field_f;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -230,16 +192,14 @@ final class tm implements Iterator {
                     var4++;
                     continue L2;
                   } else {
-                    stackOut_8_0 = (al) (var5);
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = (al) (var5);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 }
               }
             } else {
-              stackOut_2_0 = tk.field_f;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = tk.field_f;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -248,27 +208,19 @@ final class tm implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var2_ref);
-            stackOut_13_1 = new StringBuilder().append("tm.D(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var2_ref);
+
+            stackIn_15_1 = new StringBuilder().append("tm.D(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }

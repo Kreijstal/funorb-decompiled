@@ -9,8 +9,15 @@ final class jb extends pi {
     static int field_p;
 
     final static boolean a(boolean param0, byte param1, boolean param2, int param3, boolean param4) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
+        int[] stackIn_4_0 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_27_0 = 0;
+        int stackIn_31_0 = 0;
+        int stackIn_158_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -31,29 +38,13 @@ final class jb extends pi {
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
-        int var25 = 0;
         Object var25_ref = null;
+        int var25 = 0;
         int var26 = 0;
         int[] var27 = null;
         int[] var28 = null;
         int[] var30 = null;
         int[] var33 = null;
-        int[] stackIn_4_0 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_155_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        int[] stackOut_3_0 = null;
-        int[] stackOut_2_0 = null;
-        int stackOut_23_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_154_0 = 0;
-        int stackOut_153_0 = 0;
-        int stackOut_5_0 = 0;
         var26 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -62,12 +53,10 @@ final class jb extends pi {
               ol.field_c.f(param3 + (320 - (ol.field_c.field_x >> 524666401)), 15);
               var6 = -33 % ((-13 - param1) / 33);
               if (!param0) {
-                stackOut_3_0 = sj.field_d;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = sj.field_d;
                 break L1;
               } else {
-                stackOut_2_0 = di.field_x;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = di.field_x;
                 break L1;
               }
             }
@@ -105,8 +94,7 @@ final class jb extends pi {
                         break L4;
                       } else {
                         pk.field_b.a(cn.field_K, 110 + param3 - -60, 166, 16610816, -1);
-                        stackOut_23_0 = 0;
-                        stackIn_24_0 = stackOut_23_0;
+                        stackIn_27_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -114,16 +102,14 @@ final class jb extends pi {
                   }
                   L5: {
                     if (-2 != (cm.field_o ^ -1)) {
-                      stackOut_27_0 = 0;
-                      stackIn_28_0 = stackOut_27_0;
+                      stackIn_31_0 = 0;
                       break L5;
                     } else {
-                      stackOut_26_0 = 1;
-                      stackIn_28_0 = stackOut_26_0;
+                      stackIn_31_0 = 1;
                       break L5;
                     }
                   }
-                  var16 = stackIn_28_0;
+                  var16 = stackIn_31_0;
                   var17 = 0;
                   var18 = 0;
                   L6: while (true) {
@@ -168,7 +154,7 @@ final class jb extends pi {
                                 if (var22 != 0) {
                                   break L11;
                                 } else {
-                                  discarded$2 = ce.field_d.a(ge.field_b, 290 - -param3, var21 + -var20, 215, 480, 1, -1, 0, 0, var20);
+                                  ce.field_d.a(ge.field_b, 290 - -param3, var21 + -var20, 215, 480, 1, -1, 0, 0, var20);
                                   break L10;
                                 }
                               }
@@ -414,7 +400,7 @@ final class jb extends pi {
                                   }
                                 }
                                 if (var25_ref != null) {
-                                  discarded$3 = ce.field_d.a((String) (var25_ref), 290 - -param3, -var20 + var24, 215, 480, 8947848, -1, 0, 0, var20);
+                                  ce.field_d.a((String) (var25_ref), 290 - -param3, -var20 + var24, 215, 480, 8947848, -1, 0, 0, var20);
                                   break L10;
                                 } else {
                                   break L10;
@@ -443,12 +429,10 @@ final class jb extends pi {
                       }
                       L35: {
                         if (0 > var15) {
-                          stackOut_154_0 = 0;
-                          stackIn_155_0 = stackOut_154_0;
+                          stackIn_158_0 = 0;
                           break L35;
                         } else {
-                          stackOut_153_0 = 1;
-                          stackIn_155_0 = stackOut_153_0;
+                          stackIn_158_0 = 1;
                           break L35;
                         }
                       }
@@ -565,19 +549,29 @@ final class jb extends pi {
                   }
                 } else {
                   L42: {
-                    L43: {
-                      if (nm.a(var9, var30, -827843803)) {
-                        break L43;
+                    if (!nm.a(var9, var30, -827843803)) {
+                      stackIn_12_0 = 0;
+                      break L42;
+                    } else {
+                      stackIn_12_0 = 1;
+                      break L42;
+                    }
+                  }
+                  L43: {
+                    L44: {
+                      var10 = stackIn_12_0;
+                      if (var10 != 0) {
+                        break L44;
                       } else {
                         if (!param0) {
                           if (!pi.field_k[var9]) {
                             if (!pi.field_e[var9]) {
-                              break L43;
+                              break L44;
                             } else {
                               if (pj.field_a > 0) {
-                                break L43;
+                                break L44;
                               } else {
-                                break L42;
+                                break L43;
                               }
                             }
                           } else {
@@ -591,7 +585,7 @@ final class jb extends pi {
                       }
                     }
                     var8++;
-                    break L42;
+                    break L43;
                   }
                   var9--;
                   continue L2;
@@ -599,8 +593,7 @@ final class jb extends pi {
               }
             } else {
               g.a(80, 326, param3 + (640 + -var7) / 2, var7, (byte) 121, hd.field_d);
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -614,9 +607,9 @@ final class jb extends pi {
           return stackIn_6_0 != 0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_24_0 != 0;
+            return stackIn_27_0 != 0;
           } else {
-            return stackIn_155_0 != 0;
+            return stackIn_158_0 != 0;
           }
         }
     }

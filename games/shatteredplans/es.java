@@ -23,8 +23,6 @@ final class es extends oh {
             int stackIn_12_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_11_0 = 0;
-            int stackOut_9_0 = 0;
             if (sa.field_a.field_j < param1) {
               if (null != wg.field_f) {
                 try {
@@ -45,13 +43,11 @@ final class es extends oh {
                       sa.field_a.field_j = sa.field_a.field_j + var2_int;
                       if (sa.field_a.field_j >= param1) {
                         sa.field_a.field_j = 0;
-                        stackOut_11_0 = 1;
-                        stackIn_12_0 = stackOut_11_0;
+                        stackIn_12_0 = 1;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       } else {
-                        stackOut_9_0 = 0;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = 0;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
@@ -99,109 +95,82 @@ final class es extends oh {
     }
 
     final static String a(Throwable param0, byte param1) throws IOException {
-        String var2 = null;
-        PrintWriter var4 = null;
-        String var5 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
-        int var8 = 0;
+        rg var15 = null;
         String var9 = null;
         int var10 = 0;
         int var11 = 0;
-        String var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        rg var15 = null;
-        StringWriter var16 = null;
         String var17 = null;
         String var18 = null;
         String var19 = null;
         String var20 = null;
-        L0: {
-          var14 = ShatteredPlansClient.field_F ? 1 : 0;
-          if (param0 instanceof rg) {
+        int var13 = 0;
+        String var2 = null;
+        String var12 = null;
+        int var14 = ShatteredPlansClient.field_F ? 1 : 0;
+        if (!(param0 instanceof rg)) {
+            var2 = "";
+        } else {
             var15 = (rg) ((Object) param0);
             param0 = var15.field_e;
             var2 = var15.field_b + " | ";
             var12 = var2;
             var2 = var12;
             var12 = var2;
-            break L0;
-          } else {
-            var2 = "";
-            break L0;
-          }
         }
-        var16 = new StringWriter();
-        var4 = new PrintWriter((Writer) ((Object) var16));
+        StringWriter var16 = new StringWriter();
+        PrintWriter var4 = new PrintWriter((Writer) ((Object) var16));
         param0.printStackTrace(var4);
         var4.close();
-        var5 = var16.toString();
+        String var5 = var16.toString();
         var12 = var5;
         var2 = var12;
         var12 = var5;
-        var8 = 30 % ((-57 - param1) / 33);
-        var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
-        var7 = var6.readLine();
+        int var8 = 30 % ((-57 - param1) / 33);
+        BufferedReader var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
+        String var7 = var6.readLine();
         var12 = var7;
         var2 = var12;
         var12 = var7;
-        L1: while (true) {
-          var9 = var6.readLine();
-          var12 = var9;
-          var2 = var12;
-          var12 = var9;
-          if (var9 == null) {
-            var2 = var2 + "| " + var7;
-            return var2;
-          } else {
-            L2: {
-              var10 = var9.indexOf('(');
-              var11 = var9.indexOf(')', var10 - -1);
-              if ((var10 ^ -1) == 0) {
+        while (true) {
+            var9 = var6.readLine();
+            var12 = var9;
+            var2 = var12;
+            var12 = var9;
+            if (var9 == null) {
+                break;
+            }
+            var10 = var9.indexOf('(');
+            var11 = var9.indexOf(')', var10 - -1);
+            if ((var10 ^ -1) != 0) {
+                var12 = var9.substring(0, var10);
+            } else {
                 var12 = var9;
                 var2 = var12;
                 var2 = var12;
-                break L2;
-              } else {
-                var12 = var9.substring(0, var10);
-                break L2;
-              }
             }
-            L3: {
-              var17 = var12.trim();
-              var2 = var17;
-              var2 = var17;
-              var18 = var17.substring(var17.lastIndexOf(' ') - -1);
-              var2 = var18;
-              var2 = var18;
-              var19 = var18.substring(var18.lastIndexOf('\t') + 1);
-              var2 = var19;
-              var2 = var19;
-              var20 = var2 + var19;
-              var2 = var20;
-              var2 = var20;
-              var2 = var20;
-              if (0 == (var10 ^ -1)) {
-                break L3;
-              } else {
-                if (var11 == -1) {
-                  break L3;
-                } else {
-                  var13 = var9.indexOf(".java:", var10);
-                  if ((var13 ^ -1) > -1) {
-                    break L3;
-                  } else {
+            var17 = var12.trim();
+            var2 = var17;
+            var2 = var17;
+            var18 = var17.substring(var17.lastIndexOf(' ') - -1);
+            var2 = var18;
+            var2 = var18;
+            var19 = var18.substring(var18.lastIndexOf('\t') + 1);
+            var2 = var19;
+            var2 = var19;
+            var20 = var2 + var19;
+            var2 = var20;
+            var2 = var20;
+            var2 = var20;
+            if (0 != (var10 ^ -1) && var11 != -1) {
+                var13 = var9.indexOf(".java:", var10);
+                if ((var13 ^ -1) <= -1) {
                     var2 = var20 + var9.substring(var13 - -5, var11);
-                    break L3;
-                  }
                 }
-              }
             }
             var2 = var2 + ' ';
-            continue L1;
-          }
         }
+        var2 = var2 + "| " + var7;
+        return var2;
     }
 
     public static void a(int param0) {

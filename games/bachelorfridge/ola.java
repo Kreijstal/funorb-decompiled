@@ -25,11 +25,11 @@ final class ola {
     private String field_b;
 
     final void a(boolean param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        jfa var5 = null;
+        int discarded$0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        jfa var5;
         L0: {
           L1: {
             var4 = BachelorFridge.field_y;
@@ -45,7 +45,7 @@ final class ola {
                   if (this.a(mk.field_p, gd.field_m, false)) {
                     var5 = this.a(mk.field_p, -4456, gd.field_m);
                     if (var5 != null) {
-                      discarded$1 = this.b(-1, gd.field_m);
+                      discarded$0 = this.b(-1, gd.field_m);
                       var5.a(false);
                       var5.g(0);
                       this.field_j = new ula(mk.field_p, gd.field_m, var5, var5.field_u, var5.field_l);
@@ -202,7 +202,7 @@ final class ola {
     }
 
     private final boolean e(int param0) {
-        int var2 = 0;
+        int var2;
         if (!iaa.field_a) {
           return false;
         } else {
@@ -242,21 +242,15 @@ final class ola {
     }
 
     final void a(int param0, int param1) {
-        int var4_int = 0;
-        jfa var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        es var8 = null;
-        kv[] stackIn_4_0 = null;
         kv[] stackIn_5_0 = null;
         kv[] stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        kv[] stackOut_3_0 = null;
-        kv[] stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        kv[] stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
+        int var4_int;
+        jfa var4;
+        int var5;
+        int var6;
+        int var7;
+        es var8;
         var7 = BachelorFridge.field_y;
         var8 = (es) ((Object) this.field_q.b((byte) 90));
         L0: while (true) {
@@ -264,20 +258,15 @@ final class ola {
             L1: {
               gba.field_xb.e(10 - -param1, 75);
               ln.field_v.e(param1 + 14, 79);
-              stackOut_3_0 = pja.field_b;
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_5_0 = pja.field_b;
+
               if ((-1 + this.field_m.g(0) ^ -1) == 0) {
-                stackOut_5_0 = (kv[]) ((Object) stackIn_5_0);
-                stackOut_5_1 = 9;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
+                stackIn_6_0 = (kv[]) ((Object) stackIn_5_0);
+                stackIn_6_1 = 9;
                 break L1;
               } else {
-                stackOut_4_0 = (kv[]) ((Object) stackIn_4_0);
-                stackOut_4_1 = -1 + this.field_m.g(0);
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_6_1 = stackOut_4_1;
+                stackIn_6_0 = (kv[]) ((Object) stackIn_5_0);
+                stackIn_6_1 = -1 + this.field_m.g(0);
                 break L1;
               }
             }
@@ -508,14 +497,16 @@ final class ola {
     }
 
     final static void c(byte param0) {
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        mha var4 = null;
-        nc var4_ref = null;
+        nc var4 = null;
+        mha var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -539,8 +530,6 @@ final class ola {
         pf var28 = null;
         long[][] var35 = null;
         int[][] var36 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = BachelorFridge.field_y;
         try {
           L0: {
@@ -562,22 +551,23 @@ final class ola {
                   break L2;
                 } else {
                   var3 = var28.e((byte) 46);
-                  var4_ref = (nc) ((Object) tb.field_c.b((byte) 90));
+                  var28.c(-109);
+                  var4 = (nc) ((Object) tb.field_c.b((byte) 90));
                   L3: while (true) {
                     L4: {
-                      if (var4_ref == null) {
+                      if (var4 == null) {
                         break L4;
                       } else {
-                        if (var4_ref.field_j == var3) {
+                        if (var4.field_j == var3) {
                           break L4;
                         } else {
-                          var4_ref = (nc) ((Object) tb.field_c.c(0));
+                          var4 = (nc) ((Object) tb.field_c.c(0));
                           continue L3;
                         }
                       }
                     }
-                    if (var4_ref != null) {
-                      var4_ref.a(false);
+                    if (var4 != null) {
+                      var4.a(false);
                       break L2;
                     } else {
                       vc.a((byte) -99);
@@ -588,31 +578,31 @@ final class ola {
                 }
               } else {
                 var3 = var28.e((byte) 70);
-                var4 = (mha) ((Object) wba.field_g.b((byte) 90));
+                var4_ref = (mha) ((Object) wba.field_g.b((byte) 90));
                 L5: while (true) {
                   L6: {
-                    if (var4 == null) {
+                    if (var4_ref == null) {
                       break L6;
                     } else {
-                      if (var4.field_f == var3) {
+                      if (var4_ref.field_f == var3) {
                         break L6;
                       } else {
-                        var4 = (mha) ((Object) wba.field_g.c(0));
+                        var4_ref = (mha) ((Object) wba.field_g.c(0));
                         continue L5;
                       }
                     }
                   }
-                  if (var4 == null) {
+                  if (var4_ref == null) {
                     vc.a((byte) -73);
                     decompiledRegionSelector0 = 0;
                     break L0;
                   } else {
                     var5 = var28.b(16711935);
                     if (0 != var5) {
-                      var6 = var4.field_h;
+                      var6 = var4_ref.field_h;
                       mi.field_l[0].field_e = cha.field_l;
                       mi.field_l[0].field_b = null;
-                      var7 = var4.field_i;
+                      var7 = var4_ref.field_i;
                       mi.field_l[0].field_c = false;
                       var8_int = 1;
                       L7: while (true) {
@@ -649,9 +639,9 @@ final class ola {
                                         var12++;
                                         break L9;
                                       } else {
-                                        incrementValue$3 = var15;
+                                        incrementValue$0 = var15;
                                         var15++;
-                                        var36[0][incrementValue$3] = var28.f(81);
+                                        var36[0][incrementValue$0] = var28.f(81);
                                         var25++;
                                         continue L10;
                                       }
@@ -673,9 +663,9 @@ final class ola {
                                         if (var7 <= var25) {
                                           break L11;
                                         } else {
-                                          incrementValue$4 = var16;
+                                          incrementValue$1 = var16;
                                           var16++;
-                                          var36[1][incrementValue$4] = var28.f(-101);
+                                          var36[1][incrementValue$1] = var28.f(-101);
                                           var25++;
                                           continue L12;
                                         }
@@ -703,9 +693,9 @@ final class ola {
                                         if (var25 >= var7) {
                                           break L13;
                                         } else {
-                                          incrementValue$5 = var17;
+                                          incrementValue$2 = var17;
                                           var17++;
-                                          var36[2][incrementValue$5] = var28.f(-127);
+                                          var36[2][incrementValue$2] = var28.f(-127);
                                           var25++;
                                           continue L14;
                                         }
@@ -716,12 +706,12 @@ final class ola {
                                 var19++;
                                 continue L8;
                               } else {
-                                var4.a(false);
+                                var4_ref.a(false);
                                 break L2;
                               }
                             }
                           } else {
-                            var4.a(false);
+                            var4_ref.a(false);
                             break L2;
                           }
                         } else {
@@ -741,7 +731,7 @@ final class ola {
                         }
                       }
                     } else {
-                      var4.a(false);
+                      var4_ref.a(false);
                       break L2;
                     }
                   }
@@ -788,10 +778,10 @@ final class ola {
     }
 
     final void e(byte param0) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        jfa var6 = null;
+        int var3;
+        int var4;
+        int var5;
+        jfa var6;
         var5 = BachelorFridge.field_y;
         if (null != this.field_f) {
           L0: {
@@ -946,20 +936,14 @@ final class ola {
             return false;
         }
         int var2 = -24 / ((param0 - -54) / 43);
-        if (d.field_H.field_kb <= mk.field_p) {
-            if (d.field_H.field_sb + d.field_H.field_kb >= mk.field_p) {
-                if (d.field_H.field_rb <= gd.field_m) {
-                    if (gd.field_m <= d.field_H.field_p + d.field_H.field_rb) {
-                        return true;
-                    }
-                }
-            }
+        if (d.field_H.field_kb <= mk.field_p && d.field_H.field_sb + d.field_H.field_kb >= mk.field_p && d.field_H.field_rb <= gd.field_m && gd.field_m <= d.field_H.field_p + d.field_H.field_rb) {
+            return true;
         }
         return false;
     }
 
     private final void a(int param0) {
-        int var3 = 0;
+        int var3;
         L0: {
           var3 = BachelorFridge.field_y;
           this.field_s.a(param0 ^ -19849, true);
@@ -1075,8 +1059,6 @@ final class ola {
 
     private final boolean a(int param0, int param1, boolean param2) {
         int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           if (!param2) {
             break L0;
@@ -1099,16 +1081,14 @@ final class ola {
                   if (param1 >= 480) {
                     break L2;
                   } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = 1;
                     break L1;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 0;
-          stackIn_8_0 = stackOut_7_0;
+          stackIn_8_0 = 0;
           break L1;
         }
         return stackIn_8_0 != 0;
@@ -1126,10 +1106,8 @@ final class ola {
                     return 1;
                 }
             }
-            if ((param1 ^ -1) < -235) {
-                if (param1 < 334) {
-                    return 2;
-                }
+            if ((param1 ^ -1) < -235 && param1 < 334) {
+                return 2;
             }
             if (param1 > 330) {
                 if (!(430 <= param1)) {
@@ -1142,14 +1120,11 @@ final class ola {
 
     final void a(byte param0, lu param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         it var5_ref_it = null;
         int var5 = 0;
         rk var6 = null;
         int var7 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -1157,14 +1132,7 @@ final class ola {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var3 = null;
         var7 = BachelorFridge.field_y;
         try {
           L0: {
@@ -1220,27 +1188,19 @@ final class ola {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var3);
-            stackOut_16_1 = new StringBuilder().append("ola.T(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var3);
+
+            stackIn_18_1 = new StringBuilder().append("ola.T(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }
@@ -1267,10 +1227,8 @@ final class ola {
                 return true;
             }
         }
-        if (this.field_k.field_p != null) {
-            if (this.field_k.field_p.field_e) {
-                return true;
-            }
+        if (this.field_k.field_p != null && this.field_k.field_p.field_e) {
+            return true;
         }
         return false;
     }
@@ -1302,7 +1260,7 @@ final class ola {
     }
 
     final boolean a(jfa param0, int param1, int param2, int param3) {
-        int discarded$2 = 0;
+        int discarded$1 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -1312,8 +1270,6 @@ final class ola {
         int stackIn_15_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_21_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -1321,25 +1277,10 @@ final class ola {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         try {
           L0: {
             if ((this.field_m.g(0) ^ -1) == -9) {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -1347,20 +1288,17 @@ final class ola {
               var6 = (-84 + param1) / 39;
               if ((var5_int ^ -1) <= -1) {
                 if (-7 >= (var5_int ^ -1)) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = 0;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (var6 < 0) {
-                    stackOut_16_0 = 0;
-                    stackIn_17_0 = stackOut_16_0;
+                    stackIn_17_0 = 0;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
                     if ((var6 ^ -1) <= -11) {
-                      stackOut_14_0 = 0;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 0;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
@@ -1372,21 +1310,19 @@ final class ola {
                         if (param2 == -19906) {
                           break L1;
                         } else {
-                          discarded$2 = this.b(70, -107);
+                          discarded$1 = this.b(70, -107);
                           break L1;
                         }
                       }
                       param0.field_k = param0.b(true);
-                      stackOut_20_0 = 1;
-                      stackIn_21_0 = stackOut_20_0;
+                      stackIn_21_0 = 1;
                       decompiledRegionSelector0 = 5;
                       break L0;
                     }
                   }
                 }
               } else {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -1396,27 +1332,19 @@ final class ola {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var5);
-            stackOut_22_1 = new StringBuilder().append("ola.N(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var5);
+
+            stackIn_24_1 = new StringBuilder().append("ola.N(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L2;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L2;
             }
           }
@@ -1448,11 +1376,8 @@ final class ola {
     final void a(byte param0, ola param1) {
         int var3_int = 0;
         rk var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -1460,14 +1385,7 @@ final class ola {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException var3_ref = null;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -1518,27 +1436,19 @@ final class ola {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var3_ref);
-            stackOut_15_1 = new StringBuilder().append("ola.U(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var3_ref);
+
+            stackIn_17_1 = new StringBuilder().append("ola.U(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L5;
             }
           }
@@ -1561,11 +1471,11 @@ final class ola {
     }
 
     final boolean a(byte param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        it var7 = null;
-        int var8 = 0;
-        saa var9 = null;
+        int var5;
+        int var6;
+        it var7;
+        int var8;
+        saa var9;
         L0: {
           var8 = BachelorFridge.field_y;
           var5 = (param2 + -10) / 56;
@@ -1654,7 +1564,7 @@ final class ola {
         if (param1 == -4456) {
             return null;
         }
-        jfa discarded$0 = this.a(-48, -94, 71);
+        this.a(-48, -94, 71);
         return null;
     }
 

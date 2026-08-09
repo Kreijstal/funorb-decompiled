@@ -25,7 +25,6 @@ public class ai {
     }
 
     public static void a(String param0, int param1, int param2) {
-        File discarded$2 = null;
         Exception var3 = null;
         String var4 = null;
         Throwable decompiledCaughtException = null;
@@ -38,7 +37,7 @@ public class ai {
                 break L1;
               } else {
                 var4 = (String) null;
-                discarded$2 = ai.a((String) null, 107, 50, (String) null);
+                ai.a((String) null, 107, 50, (String) null);
                 break L1;
               }
             }

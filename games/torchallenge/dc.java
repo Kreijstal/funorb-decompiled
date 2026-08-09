@@ -31,23 +31,21 @@ final class dc {
     private int[] field_j;
 
     final int[] a(int param0, int param1) {
-        double var3 = 0.0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
         int stackIn_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
+        double var3;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         he.a(field_r, 0, param0);
         if (param1 >= 10) {
           L0: {
@@ -120,12 +118,10 @@ final class dc {
                               L8: {
                                 var11 = 0;
                                 if (var13 != 0) {
-                                  stackOut_35_0 = 0;
-                                  stackIn_36_0 = stackOut_35_0;
+                                  stackIn_36_0 = 0;
                                   break L8;
                                 } else {
-                                  stackOut_34_0 = 1;
-                                  stackIn_36_0 = stackOut_34_0;
+                                  stackIn_36_0 = 1;
                                   break L8;
                                 }
                               }
@@ -413,79 +409,52 @@ final class dc {
     }
 
     final void a(uf param0) {
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        L0: {
-          this.field_m = new bm();
-          this.field_m.a(param0);
-          this.field_o = new bm();
-          this.field_o.a(param0);
-          var2 = param0.j(-88);
-          if (var2 == 0) {
-            break L0;
-          } else {
+        this.field_m = new bm();
+        this.field_m.a(param0);
+        this.field_o = new bm();
+        this.field_o.a(param0);
+        int var2 = param0.j(-88);
+        if (var2 != 0) {
             param0.field_q = param0.field_q - 1;
             this.field_b = new bm();
             this.field_b.a(param0);
             this.field_v = new bm();
             this.field_v.a(param0);
-            break L0;
-          }
         }
-        L1: {
-          var2 = param0.j(-115);
-          if (var2 == 0) {
-            break L1;
-          } else {
+        var2 = param0.j(-115);
+        if (var2 != 0) {
             param0.field_q = param0.field_q - 1;
             this.field_i = new bm();
             this.field_i.a(param0);
             this.field_q = new bm();
             this.field_q.a(param0);
-            break L1;
-          }
         }
-        L2: {
-          var2 = param0.j(-121);
-          if (var2 == 0) {
-            break L2;
-          } else {
+        var2 = param0.j(-121);
+        if (var2 != 0) {
             param0.field_q = param0.field_q - 1;
             this.field_e = new bm();
             this.field_e.a(param0);
             this.field_d = new bm();
             this.field_d.a(param0);
-            break L2;
-          }
         }
-        var3 = 0;
-        L3: while (true) {
-          L4: {
-            if (var3 >= 10) {
-              break L4;
-            } else {
-              var4 = param0.b((byte) 24);
-              if (var4 != 0) {
-                this.field_l[var3] = var4;
-                this.field_j[var3] = param0.e((byte) -95);
-                this.field_u[var3] = param0.b((byte) 24);
-                var3++;
-                continue L3;
-              } else {
-                break L4;
-              }
+        for (var3 = 0; var3 < 10; var3++) {
+            var4 = param0.b((byte) 24);
+            if (var4 == 0) {
+                break;
             }
-          }
-          this.field_s = param0.b((byte) 24);
-          this.field_k = param0.b((byte) 24);
-          this.field_h = param0.c(false);
-          this.field_t = param0.c(false);
-          this.field_c = new ce();
-          this.field_n = new bm();
-          this.field_c.a(param0, this.field_n);
-          return;
+            this.field_l[var3] = var4;
+            this.field_j[var3] = param0.e((byte) -95);
+            this.field_u[var3] = param0.b((byte) 24);
         }
+        this.field_s = param0.b((byte) 24);
+        this.field_k = param0.b((byte) 24);
+        this.field_h = param0.c(false);
+        this.field_t = param0.c(false);
+        this.field_c = new ce();
+        this.field_n = new bm();
+        this.field_c.a(param0, this.field_n);
     }
 
     public static void a() {

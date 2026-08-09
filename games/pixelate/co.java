@@ -28,7 +28,7 @@ final class co {
     static String field_e;
 
     final boolean a(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = -88 / ((param0 - -5) / 36);
         if (ri.field_h >= this.field_j) {
           if (0 >= uo.field_j) {
@@ -50,11 +50,11 @@ final class co {
     }
 
     private final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = Pixelate.field_H ? 1 : 0;
         var2 = 110 / ((-76 - param0) / 34);
         var3 = this.field_n;
@@ -494,8 +494,8 @@ final class co {
     }
 
     final void c(int param0) {
-        int fieldTemp$1 = 0;
-        int var2 = 0;
+        int fieldTemp$0 = 0;
+        int var2;
         if (ib.field_f != null) {
           return;
         } else {
@@ -508,9 +508,9 @@ final class co {
             }
           }
           if (this.field_c) {
-            fieldTemp$1 = this.field_m - 1;
+            fieldTemp$0 = this.field_m - 1;
             this.field_m = this.field_m - 1;
-            if (fieldTemp$1 <= 0) {
+            if (fieldTemp$0 <= 0) {
               this.field_m = this.field_o;
               if (ri.field_h < this.field_j) {
                 this.field_c = false;

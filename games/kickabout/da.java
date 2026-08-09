@@ -175,10 +175,10 @@ final class da extends gn {
     }
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         fa var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = Kickabout.field_G;
         try {
           L0: {

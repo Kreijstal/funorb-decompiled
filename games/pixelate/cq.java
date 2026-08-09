@@ -15,7 +15,7 @@ final class cq {
     }
 
     final static void a(java.applet.Applet param0, byte param1, String param2) throws Throwable {
-        Object discarded$5 = netscape.javascript.JSObject.getWindow(param0).eval(param2);
+        netscape.javascript.JSObject.getWindow(param0).eval(param2);
         if (param1 > -111) {
             return;
         }

@@ -10,12 +10,11 @@ final class fp {
     static am field_c;
 
     public static void a(byte param0) {
-        String discarded$2 = null;
         field_d = null;
         field_f = null;
         field_c = null;
         if (param0 < 80) {
-          discarded$2 = fp.a(true, false, false, (byte) 3);
+          fp.a(true, false, false, (byte) 3);
           field_b = null;
           field_e = null;
           return;
@@ -31,7 +30,7 @@ final class fp {
     }
 
     final static String a(boolean param0, boolean param1, boolean param2, byte param3) {
-        int var4 = 0;
+        int var4;
         L0: {
           var4 = 0;
           if (param0) {

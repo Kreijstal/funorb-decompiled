@@ -20,8 +20,18 @@ final class qr extends uda {
 
     qr(pf param0) {
         super(param0);
-        RuntimeException var2 = null;
+        Object stackIn_4_0 = null;
+        Object stackIn_5_0 = null;
+        int stackIn_5_1 = 0;
+        int stackIn_8_0 = 0;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
+        String stackIn_36_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -36,34 +46,6 @@ final class qr extends uda {
         int[][] var27 = null;
         int[][] var28 = null;
         int[][] var29 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
-        Object stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        int stackIn_8_0 = 0;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        String stackIn_36_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
         this.field_e = false;
         try {
           L0: {
@@ -72,32 +54,25 @@ final class qr extends uda {
                 break L1;
               } else {
                 L2: {
-                  stackOut_2_0 = this;
-                  stackIn_4_0 = stackOut_2_0;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_4_0 = this;
+
                   if (-4 >= (param0.field_L ^ -1)) {
-                    stackOut_4_0 = this;
-                    stackOut_4_1 = 0;
-                    stackIn_5_0 = stackOut_4_0;
-                    stackIn_5_1 = stackOut_4_1;
+                    stackIn_5_0 = this;
+                    stackIn_5_1 = 0;
                     break L2;
                   } else {
-                    stackOut_3_0 = this;
-                    stackOut_3_1 = 1;
-                    stackIn_5_0 = stackOut_3_0;
-                    stackIn_5_1 = stackOut_3_1;
+                    stackIn_5_0 = this;
+                    stackIn_5_1 = 1;
                     break L2;
                   }
                 }
                 L3: {
                   ((qr) (this)).field_h = stackIn_5_1 != 0;
                   if (!this.field_h) {
-                    stackOut_7_0 = 127;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = 127;
                     break L3;
                   } else {
-                    stackOut_6_0 = 48;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = 48;
                     break L3;
                   }
                 }
@@ -194,27 +169,19 @@ final class qr extends uda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) (var2);
-            stackOut_33_1 = new StringBuilder().append("qr.<init>(");
-            stackIn_35_0 = stackOut_33_0;
-            stackIn_35_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+            stackIn_35_0 = (RuntimeException) (var2);
+
+            stackIn_35_1 = new StringBuilder().append("qr.<init>(");
+
             if (param0 == null) {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "null";
               break L9;
             } else {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "{...}";
-              stackIn_36_0 = stackOut_34_0;
-              stackIn_36_1 = stackOut_34_1;
-              stackIn_36_2 = stackOut_34_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "{...}";
               break L9;
             }
           }
@@ -231,8 +198,8 @@ final class qr extends uda {
     }
 
     final void a(int param0, boolean param1) {
-        int var4 = 0;
-        oj var5 = null;
+        int var4;
+        oj var5;
         var4 = VoidHunters.field_G;
         if (param0 == 5) {
           L0: {
@@ -291,7 +258,7 @@ final class qr extends uda {
     }
 
     final void a(int param0) {
-        int var3 = 0;
+        int var3;
         L0: {
           var3 = VoidHunters.field_G;
           if (!this.field_e) {

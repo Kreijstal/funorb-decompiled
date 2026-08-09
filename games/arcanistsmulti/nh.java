@@ -14,22 +14,12 @@ final class nh extends nn {
     nh(Object param0, int param1) {
         super(param1);
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             this.field_A = param0;
@@ -39,27 +29,19 @@ final class nh extends nn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("nh.<init>(");
-            stackIn_6_0 = stackOut_3_0;
-            stackIn_6_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("nh.<init>(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_7_0 = stackOut_4_0;
-              stackIn_7_1 = stackOut_4_1;
-              stackIn_7_2 = stackOut_4_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }
@@ -86,18 +68,14 @@ final class nh extends nn {
         int stackIn_4_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
         try {
           L0: {
             if (param0 == 96) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -129,7 +107,6 @@ final class nh extends nn {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
         try {
           L0: {
             L1: {
@@ -140,8 +117,7 @@ final class nh extends nn {
                 break L1;
               }
             }
-            stackOut_3_0 = this.field_A;
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = this.field_A;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -153,8 +129,8 @@ final class nh extends nn {
     }
 
     public static void h(byte param0) {
-        RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         try {
           L0: {
             L1: {
@@ -182,31 +158,29 @@ final class nh extends nn {
     }
 
     final static void i(byte param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        RuntimeException var1 = null;
-        ab var1_ref = null;
-        int var2 = 0;
-        String var3 = null;
-        int var3_int = 0;
-        String var4_ref_String = null;
-        int var4 = 0;
-        String var5 = null;
-        wa var6 = null;
-        String var7 = null;
-        wa var7_ref = null;
-        String var8 = null;
-        int var9 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         int stackIn_12_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_9_0 = 0;
+        ab var1 = null;
+        RuntimeException var1_ref = null;
+        int var2 = 0;
+        Object var3 = null;
+        int var3_int = 0;
+        int var4 = 0;
+        String var4_ref_String = null;
+        String var5 = null;
+        wa var6 = null;
+        wa var7 = null;
+        String var7_ref = null;
+        String var8 = null;
+        int var9 = 0;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            var1_ref = df.field_z;
-            var2 = var1_ref.e((byte) -107);
+            var1 = df.field_z;
+            var2 = var1.e((byte) -107);
             if (0 != var2) {
               if (1 != var2) {
                 if (2 == var2) {
@@ -248,9 +222,9 @@ final class nh extends nn {
                       break L0;
                     } else {
                       jb.field_t = 1;
-                      var3 = var1_ref.l(-1);
-                      ie.field_Nb = var3.intern();
-                      var4 = var1_ref.e((byte) 110);
+                      var3 = var1.l(-1);
+                      ie.field_Nb = ((String) (var3)).intern();
+                      var4 = var1.e((byte) 110);
                       qo.a(2, var4);
                       decompiledRegionSelector0 = 4;
                       break L0;
@@ -268,8 +242,8 @@ final class nh extends nn {
                   }
                 }
                 L5: {
-                  var3 = var1_ref.l(-1);
-                  if (!var3.equals("")) {
+                  var3 = var1.l(-1);
+                  if (!((String) (var3)).equals("")) {
                     break L5;
                   } else {
                     var3 = null;
@@ -277,8 +251,8 @@ final class nh extends nn {
                   }
                 }
                 L6: {
-                  var4_ref_String = var1_ref.l(-1);
-                  var5 = var1_ref.l(-1);
+                  var4_ref_String = var1.l(-1);
+                  var5 = var1.l(-1);
                   var6 = im.a(0, var4_ref_String);
                   if (var6 == null) {
                     var6 = im.a(0, var5);
@@ -296,9 +270,9 @@ final class nh extends nn {
                   if (null == var6) {
                     var6 = new wa();
                     ie.field_Qb.a(var6, (long)gk.a((CharSequence) ((Object) var4_ref_String), -13).hashCode(), (byte) 110);
-                    fieldTemp$2 = rc.field_m;
+                    fieldTemp$0 = rc.field_m;
                     rc.field_m = rc.field_m + 1;
-                    var6.field_Bb = fieldTemp$2;
+                    var6.field_Bb = fieldTemp$0;
                     vd.field_d.b(var6, -1);
                     break L7;
                   } else {
@@ -307,7 +281,7 @@ final class nh extends nn {
                 }
                 L8: {
                   if (var3 != null) {
-                    var3 = var3.intern();
+                    var3 = ((String) (var3)).intern();
                     break L8;
                   } else {
                     break L8;
@@ -315,18 +289,18 @@ final class nh extends nn {
                 }
                 var6.field_Gb = var5;
                 var6.field_Cb = var4_ref_String;
-                var6.field_Lb = var3;
+                var6.field_Lb = (String) (var3);
                 var6.a(true);
-                var7_ref = (wa) ((Object) vd.field_d.b(12623));
+                var7 = (wa) ((Object) vd.field_d.b(12623));
                 L9: while (true) {
                   L10: {
-                    if (null == var7_ref) {
+                    if (null == var7) {
                       break L10;
                     } else {
-                      if (!qa.a(false, var6, var7_ref)) {
+                      if (!qa.a(false, var6, var7)) {
                         break L10;
                       } else {
-                        var7_ref = (wa) ((Object) vd.field_d.a(0));
+                        var7 = (wa) ((Object) vd.field_d.a(0));
                         if (var9 == 0) {
                           continue L9;
                         } else {
@@ -337,10 +311,10 @@ final class nh extends nn {
                   }
                   L11: {
                     L12: {
-                      if (var7_ref == null) {
+                      if (var7 == null) {
                         break L12;
                       } else {
-                        da.a(var7_ref, 20, var6);
+                        da.a(var7, 20, var6);
                         if (var9 == 0) {
                           break L11;
                         } else {
@@ -366,20 +340,18 @@ final class nh extends nn {
                 }
               }
               L14: {
-                if ((var1_ref.e((byte) -125) ^ -1) != -2) {
-                  stackOut_11_0 = 0;
-                  stackIn_12_0 = stackOut_11_0;
+                if ((var1.e((byte) -125) ^ -1) != -2) {
+                  stackIn_12_0 = 0;
                   break L14;
                 } else {
-                  stackOut_9_0 = 1;
-                  stackIn_12_0 = stackOut_9_0;
+                  stackIn_12_0 = 1;
                   break L14;
                 }
               }
               L15: {
                 L16: {
                   var3_int = stackIn_12_0;
-                  var4_ref_String = var1_ref.l(-1);
+                  var4_ref_String = var1.l(-1);
                   if (var3_int != 0) {
                     break L16;
                   } else {
@@ -391,12 +363,12 @@ final class nh extends nn {
                     }
                   }
                 }
-                var5 = var1_ref.l(-1);
+                var5 = var1.l(-1);
                 break L15;
               }
               L17: {
                 var6 = mf.a(-1, var4_ref_String);
-                var7 = var1_ref.l(-1);
+                var7_ref = var1.l(-1);
                 var8 = gk.a((CharSequence) ((Object) var4_ref_String), -13);
                 if (null != var8) {
                   break L17;
@@ -409,7 +381,7 @@ final class nh extends nn {
                 if (var6 != null) {
                   break L18;
                 } else {
-                  var6 = mf.a(-1, var7);
+                  var6 = mf.a(-1, var7_ref);
                   if (var6 == null) {
                     break L18;
                   } else {
@@ -424,15 +396,15 @@ final class nh extends nn {
                 } else {
                   var6 = new wa();
                   uc.field_c.a(var6, (long)var8.hashCode(), (byte) 126);
-                  fieldTemp$3 = pc.field_b;
+                  fieldTemp$1 = pc.field_b;
                   pc.field_b = pc.field_b + 1;
-                  var6.field_Bb = fieldTemp$3;
+                  var6.field_Bb = fieldTemp$1;
                   oo.field_B.b(var6, -1);
                   break L19;
                 }
               }
               var6.field_Cb = var4_ref_String;
-              var6.field_Gb = var7;
+              var6.field_Gb = var7_ref;
               var6.field_Ib = var5;
               decompiledRegionSelector0 = 0;
               break L0;
@@ -440,8 +412,8 @@ final class nh extends nn {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "nh.I(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw aa.a((Throwable) ((Object) var1_ref), "nh.I(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

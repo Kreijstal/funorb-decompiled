@@ -18,8 +18,6 @@ final class dh {
         am stackIn_19_0 = null;
         am stackIn_23_0 = null;
         Object stackIn_26_0 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
@@ -27,19 +25,6 @@ final class dh {
         String stackIn_30_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        am stackOut_8_0 = null;
-        am stackOut_18_0 = null;
-        am stackOut_22_0 = null;
-        Object stackOut_25_0 = null;
-        am stackOut_4_0 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
@@ -54,8 +39,7 @@ final class dh {
             }
             if (var2_int != 0) {
               if ((var2_int ^ -1) < -64) {
-                stackOut_8_0 = wk.field_f;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = wk.field_f;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -76,14 +60,12 @@ final class dh {
                             }
                           }
                         }
-                        stackOut_18_0 = lh.field_c;
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_0 = lh.field_c;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         if ((fb.field_i.indexOf(var4) ^ -1) == 0) {
-                          stackOut_22_0 = lh.field_c;
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_23_0 = lh.field_c;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
@@ -95,8 +77,7 @@ final class dh {
                     if (var5 == 0) {
                       continue L2;
                     } else {
-                      stackOut_25_0 = null;
-                      stackIn_26_0 = stackOut_25_0;
+                      stackIn_26_0 = null;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     }
@@ -106,8 +87,7 @@ final class dh {
                 }
               }
             } else {
-              stackOut_4_0 = si.field_s;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = si.field_s;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -116,27 +96,19 @@ final class dh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var2);
-            stackOut_27_1 = new StringBuilder().append("dh.C(");
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackIn_29_0 = (RuntimeException) (var2);
+
+            stackIn_29_1 = new StringBuilder().append("dh.C(");
+
             if (param0 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L5;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L5;
             }
           }
@@ -162,8 +134,8 @@ final class dh {
     }
 
     final static int a(boolean param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         kd.field_a = null;
         ii.field_T = 0;

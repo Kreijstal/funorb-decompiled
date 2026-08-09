@@ -28,20 +28,14 @@ final class f {
     final static boolean a(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 >= -19) {
           L0: {
             field_c = (String) null;
             if (im.field_b.b(36)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -49,12 +43,10 @@ final class f {
         } else {
           L1: {
             if (im.field_b.b(36)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -211,10 +203,10 @@ final class f {
 
     final static void a(int param0, byte param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         jd var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var4 = DungeonAssault.field_K;
         try {
           L0: {

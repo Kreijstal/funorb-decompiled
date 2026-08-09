@@ -12,15 +12,12 @@ final class kj extends ne {
     static wh field_o;
 
     final static Object a(boolean param0, boolean param1, byte[] param2) {
-        Object discarded$2 = null;
         ep var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         ep stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -28,17 +25,6 @@ final class kj extends ne {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ep stackOut_7_0 = null;
-        byte[] stackOut_12_0 = null;
-        byte[] stackOut_10_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             if (param2 != null) {
@@ -47,26 +33,23 @@ final class kj extends ne {
                   break L1;
                 } else {
                   var4 = (byte[]) null;
-                  discarded$2 = kj.a(false, true, (byte[]) null);
+                  kj.a(false, true, (byte[]) null);
                   break L1;
                 }
               }
               if (136 < param2.length) {
                 var3 = new ep();
                 ((un) ((Object) var3)).a(param2, 105);
-                stackOut_7_0 = (ep) (var3);
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = (ep) (var3);
                 decompiledRegionSelector0 = 0;
                 break L0;
               } else {
                 if (param1) {
-                  stackOut_12_0 = gg.a((byte) 49, param2);
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = gg.a((byte) 49, param2);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  stackOut_10_0 = (byte[]) (param2);
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = (byte[]) (param2);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
@@ -79,27 +62,19 @@ final class kj extends ne {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3_ref);
-            stackOut_14_1 = new StringBuilder().append("kj.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3_ref);
+
+            stackIn_16_1 = new StringBuilder().append("kj.B(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L2;
             }
           }
@@ -118,9 +93,9 @@ final class kj extends ne {
 
     final static void a(int param0, int param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = DungeonAssault.field_K;
         try {
           L0: {

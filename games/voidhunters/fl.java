@@ -3,9 +3,8 @@
  */
 final class fl implements dja {
     public final tv[] a(int param0, int param1) {
-        tv discarded$0 = null;
         if (param0 != 11995) {
-            discarded$0 = this.a((byte) 35);
+            this.a((byte) 35);
             return (tv[]) ((Object) new via[param1]);
         }
         return (tv[]) ((Object) new via[param1]);

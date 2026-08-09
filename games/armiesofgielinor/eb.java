@@ -10,10 +10,10 @@ final class eb {
 
     final static void a(boolean param0, int param1, boolean param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -63,11 +63,7 @@ final class eb {
                   } else {
                     mn.field_k[param1][var3_int] = null;
                     var3_int++;
-                    if (var4 == 0) {
-                      continue L5;
-                    } else {
-                      return;
-                    }
+                    continue L5;
                   }
                 }
               } else {
@@ -99,15 +95,13 @@ final class eb {
         field_c = null;
         field_e = null;
         if (param0 != 1) {
-          field_c = (je) null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
-          field_a = null;
-          field_d = null;
-          return;
+            field_c = (je) null;
+            field_a = null;
+            field_d = null;
+            return;
         }
+        field_a = null;
+        field_d = null;
     }
 
     final static int a(byte param0, int param1) {
@@ -115,15 +109,14 @@ final class eb {
         param1 = (param1 & 858993459) - -((param1 & -858993458) >>> -799002878);
         param1 = 252645135 & (param1 >>> 539582692) + param1;
         if (param0 >= -70) {
-          field_e = (String) null;
-          param1 = param1 + (param1 >>> 1897789992);
-          param1 = param1 + (param1 >>> 261794928);
-          return param1 & 255;
-        } else {
-          param1 = param1 + (param1 >>> 1897789992);
-          param1 = param1 + (param1 >>> 261794928);
-          return param1 & 255;
+            field_e = (String) null;
+            param1 = param1 + (param1 >>> 1897789992);
+            param1 = param1 + (param1 >>> 261794928);
+            return param1 & 255;
         }
+        param1 = param1 + (param1 >>> 1897789992);
+        param1 = param1 + (param1 >>> 261794928);
+        return param1 & 255;
     }
 
     static {

@@ -31,15 +31,15 @@ final class dh implements Iterator {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var10 = Bounce.field_N;
         try {
           L0: {
@@ -96,9 +96,9 @@ final class dh implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        ai var1 = null;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        ai var1;
+        int var2;
         var2 = Bounce.field_N;
         if (this.field_h != this.field_c.field_b[-1 + this.field_f]) {
           var1 = this.field_h;
@@ -108,9 +108,9 @@ final class dh implements Iterator {
         } else {
           L0: while (true) {
             if (this.field_c.field_d > this.field_f) {
-              fieldTemp$2 = this.field_f;
+              fieldTemp$1 = this.field_f;
               this.field_f = this.field_f + 1;
-              var1 = this.field_c.field_b[fieldTemp$2].field_c;
+              var1 = this.field_c.field_b[fieldTemp$1].field_c;
               if (this.field_c.field_b[this.field_f - 1] != var1) {
                 this.field_g = var1;
                 this.field_h = var1.field_c;

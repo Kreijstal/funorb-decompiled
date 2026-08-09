@@ -15,7 +15,7 @@ final class gb {
     static long field_j;
 
     final al a(byte param0) {
-        int var2 = 0;
+        int var2;
         if (gh.field_j != this) {
           if (this == kk.field_N) {
             return lj.field_c[1];
@@ -60,7 +60,6 @@ final class gb {
     }
 
     final pa[] b(int param0) {
-        String discarded$3 = null;
         if (!(gh.field_j != this)) {
             return hr.field_d[0];
         }
@@ -71,7 +70,7 @@ final class gb {
             return hr.field_d[2];
         }
         if (param0 != -32275) {
-            discarded$3 = this.toString();
+            this.toString();
             if (gm.field_y == this) {
                 return hr.field_d[3];
             }

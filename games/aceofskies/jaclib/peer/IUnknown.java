@@ -13,11 +13,12 @@ public class IUnknown extends jaclib.peer.Peer {
     }
 
     public final long a(int param0) {
-        RuntimeException var2 = null;
+        RuntimeException var2;
         L0: {
           if (param0 == 1618) {
             break L0;
           } else {
+            this.a(-78);
             break L0;
           }
         }

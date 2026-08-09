@@ -14,15 +14,18 @@ final class cm extends cj {
     private long field_c;
 
     final static void c(int param0) {
-        String[][] dupTemp$5 = null;
-        int[][] dupTemp$6 = null;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
+        String[][] dupTemp$0 = null;
+        int[][] dupTemp$1 = null;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         mg var4 = null;
+        ai var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -44,15 +47,8 @@ final class cm extends cj {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        Object var27 = null;
-        pk var28 = null;
-        Object var29 = null;
-        ai var29_ref = null;
-        long[][] var33 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var29 = null;
-        var27 = null;
+        pk var27 = null;
+        long[][] var31 = null;
         var26 = Geoblox.field_C;
         try {
           L0: {
@@ -65,10 +61,10 @@ final class cm extends cj {
               }
             }
             L2: {
-              var28 = eh.field_d;
-              var2 = var28.c((byte) 34);
+              var27 = eh.field_d;
+              var2 = var27.c((byte) 34);
               if (-1 == (var2 ^ -1)) {
-                var3 = var28.b(true);
+                var3 = var27.b(true);
                 var4 = (mg) ((Object) rh.field_d.g(0));
                 L3: while (true) {
                   L4: {
@@ -85,7 +81,7 @@ final class cm extends cj {
                   }
                   if (var4 != null) {
                     L5: {
-                      var5 = var28.c((byte) 34);
+                      var5 = var27.c((byte) 34);
                       if (var5 == 0) {
                         break L5;
                       } else {
@@ -97,21 +93,21 @@ final class cm extends cj {
                         var8_int = 1;
                         L6: while (true) {
                           if (var5 <= var8_int) {
-                            dupTemp$5 = new String[3][var6];
-                            var4.field_k = dupTemp$5;
-                            var8 = dupTemp$5;
+                            dupTemp$0 = new String[3][var6];
+                            var4.field_k = dupTemp$0;
+                            var8 = dupTemp$0;
                             var9 = new String[3][var6];
-                            var33 = new long[3][var6];
-                            dupTemp$6 = new int[3][var6 * var7];
-                            var4.field_h = dupTemp$6;
-                            var11 = dupTemp$6;
+                            var31 = new long[3][var6];
+                            dupTemp$1 = new int[3][var6 * var7];
+                            var4.field_h = dupTemp$1;
+                            var11 = dupTemp$1;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
                             var15 = 0;
                             var16 = 0;
                             var17 = 0;
-                            var18 = var28.c((byte) 34);
+                            var18 = var27.c((byte) 34);
                             if (0 >= var18) {
                               break L5;
                             } else {
@@ -121,23 +117,23 @@ final class cm extends cj {
                                   break L5;
                                 } else {
                                   L8: {
-                                    var20 = var28.c((byte) 34);
+                                    var20 = var27.c((byte) 34);
                                     var21 = id.field_b[var20].field_d;
-                                    var22 = var28.b(2901);
-                                    var24 = var28.field_f;
+                                    var22 = var27.b(2901);
+                                    var24 = var27.field_f;
                                     if (var6 > var19) {
                                       var8[0][var12] = var21;
                                       var9[0][var12] = id.field_b[var20].field_a;
-                                      var33[0][var12] = var22;
+                                      var31[0][var12] = var22;
                                       var25 = 0;
                                       L9: while (true) {
                                         if (var25 >= var7) {
                                           var12++;
                                           break L8;
                                         } else {
-                                          incrementValue$7 = var15;
+                                          incrementValue$2 = var15;
                                           var15++;
-                                          var11[0][incrementValue$7] = var28.a((byte) -76);
+                                          var11[0][incrementValue$2] = var27.a((byte) -76);
                                           var25++;
                                           continue L9;
                                         }
@@ -153,17 +149,17 @@ final class cm extends cj {
                                       if (ge.a(var21, (byte) 12)) {
                                         var8[1][var13] = wd.field_f;
                                         var9[1][var13] = null;
-                                        var33[1][var13] = var22;
+                                        var31[1][var13] = var22;
                                         var13++;
-                                        var28.field_f = var24;
+                                        var27.field_f = var24;
                                         var25 = 0;
                                         L11: while (true) {
                                           if (var25 >= var7) {
                                             break L10;
                                           } else {
-                                            incrementValue$8 = var16;
+                                            incrementValue$3 = var16;
                                             var16++;
-                                            var11[1][incrementValue$8] = var28.a((byte) -122);
+                                            var11[1][incrementValue$3] = var27.a((byte) -122);
                                             var25++;
                                             continue L11;
                                           }
@@ -181,17 +177,17 @@ final class cm extends cj {
                                         id.field_b[var20].field_c = true;
                                         var8[2][var14] = var21;
                                         var9[2][var14] = id.field_b[var20].field_a;
-                                        var33[2][var14] = var22;
+                                        var31[2][var14] = var22;
                                         var14++;
-                                        var28.field_f = var24;
+                                        var27.field_f = var24;
                                         var25 = 0;
                                         L13: while (true) {
                                           if (var7 <= var25) {
                                             break L12;
                                           } else {
-                                            incrementValue$9 = var17;
+                                            incrementValue$4 = var17;
                                             var17++;
-                                            var11[2][incrementValue$9] = var28.a((byte) -101);
+                                            var11[2][incrementValue$4] = var27.a((byte) -101);
                                             var25++;
                                             continue L13;
                                           }
@@ -208,10 +204,10 @@ final class cm extends cj {
                             }
                           } else {
                             L14: {
-                              id.field_b[var8_int].field_d = var28.e((byte) 104);
+                              id.field_b[var8_int].field_d = var27.e((byte) 104);
                               id.field_b[var8_int].field_c = false;
-                              if ((var28.c((byte) 34) ^ -1) == -2) {
-                                id.field_b[var8_int].field_a = var28.e((byte) 122);
+                              if ((var27.c((byte) 34) ^ -1) == -2) {
+                                id.field_b[var8_int].field_a = var27.e((byte) 122);
                                 break L14;
                               } else {
                                 id.field_b[var8_int].field_a = null;
@@ -235,23 +231,24 @@ final class cm extends cj {
                 }
               } else {
                 if (1 == var2) {
-                  var3 = var28.b(true);
-                  var29_ref = (ai) ((Object) nf.field_j.g(0));
+                  var3 = var27.b(true);
+                  var27.b(param0 + 27740);
+                  var4_ref = (ai) ((Object) nf.field_j.g(0));
                   L15: while (true) {
                     L16: {
-                      if (var29_ref == null) {
+                      if (var4_ref == null) {
                         break L16;
                       } else {
-                        if (var3 != var29_ref.field_q) {
-                          var27 = (ai) ((Object) nf.field_j.d(1));
+                        if (var3 != var4_ref.field_q) {
+                          var4_ref = (ai) ((Object) nf.field_j.d(1));
                           continue L15;
                         } else {
                           break L16;
                         }
                       }
                     }
-                    if (var27 != null) {
-                      ((ai) (var27)).a(false);
+                    if (var4_ref != null) {
+                      var4_ref.a(false);
                       break L2;
                     } else {
                       jl.a((byte) -117);
@@ -368,8 +365,8 @@ final class cm extends cj {
     }
 
     final int a(boolean param0, long param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         L0: {
           var5 = Geoblox.field_C;
           if (param0) {
@@ -436,10 +433,9 @@ final class cm extends cj {
     }
 
     final long a(byte param0) {
-        int discarded$0 = 0;
         this.field_e = this.field_e + this.d(0);
         if (param0 != -49) {
-            discarded$0 = this.a(false, 97L);
+            this.a(false, 97L);
         }
         if ((this.field_c ^ -1L) < (this.field_e ^ -1L)) {
             return (this.field_c + -this.field_e) / 1000000L;

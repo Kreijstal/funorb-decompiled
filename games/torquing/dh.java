@@ -23,30 +23,16 @@ final class dh implements Iterator {
     }
 
     final static void a(String param0, int param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
         int stackIn_16_0 = 0;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_41_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_9_0 = 0;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
         var3 = Torquing.field_u;
         try {
           L0: {
@@ -84,22 +70,18 @@ final class dh implements Iterator {
                 if (!jd.field_E) {
                   if (lp.field_b >= um.field_l) {
                     if (lp.field_b < uf.field_g + um.field_l) {
-                      stackOut_14_0 = 1;
-                      stackIn_16_0 = stackOut_14_0;
+                      stackIn_16_0 = 1;
                       break L4;
                     } else {
-                      stackOut_13_0 = 0;
-                      stackIn_16_0 = stackOut_13_0;
+                      stackIn_16_0 = 0;
                       break L4;
                     }
                   } else {
-                    stackOut_11_0 = 0;
-                    stackIn_16_0 = stackOut_11_0;
+                    stackIn_16_0 = 0;
                     break L4;
                   }
                 } else {
-                  stackOut_9_0 = 0;
-                  stackIn_16_0 = stackOut_9_0;
+                  stackIn_16_0 = 0;
                   break L4;
                 }
               }
@@ -177,27 +159,19 @@ final class dh implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_38_0 = (RuntimeException) (var2);
-            stackOut_38_1 = new StringBuilder().append("dh.C(");
-            stackIn_40_0 = stackOut_38_0;
-            stackIn_40_1 = stackOut_38_1;
-            stackIn_39_0 = stackOut_38_0;
-            stackIn_39_1 = stackOut_38_1;
+            stackIn_40_0 = (RuntimeException) (var2);
+
+            stackIn_40_1 = new StringBuilder().append("dh.C(");
+
             if (param0 == null) {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "null";
-              stackIn_41_0 = stackOut_40_0;
-              stackIn_41_1 = stackOut_40_1;
-              stackIn_41_2 = stackOut_40_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "null";
               break L8;
             } else {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "{...}";
-              stackIn_41_0 = stackOut_39_0;
-              stackIn_41_1 = stackOut_39_1;
-              stackIn_41_2 = stackOut_39_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "{...}";
               break L8;
             }
           }
@@ -206,16 +180,16 @@ final class dh implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        q var1 = null;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        q var1;
+        int var2;
         var2 = Torquing.field_u;
         if (this.field_b == this.field_e.field_a[-1 + this.field_c]) {
           L0: while (true) {
             if (this.field_c < this.field_e.field_e) {
-              fieldTemp$2 = this.field_c;
+              fieldTemp$1 = this.field_c;
               this.field_c = this.field_c + 1;
-              var1 = this.field_e.field_a[fieldTemp$2].field_e;
+              var1 = this.field_e.field_a[fieldTemp$1].field_e;
               if (this.field_e.field_a[-1 + this.field_c] != var1) {
                 this.field_b = var1.field_e;
                 this.field_f = var1;
@@ -237,7 +211,7 @@ final class dh implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = Torquing.field_u;
         if (this.field_e.field_a[-1 + this.field_c] == this.field_b) {
           L0: while (true) {

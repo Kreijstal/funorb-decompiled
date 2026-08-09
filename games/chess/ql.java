@@ -20,20 +20,28 @@ final class ql {
     }
 
     final synchronized static byte[] a(byte param0, int param1) {
-        int fieldTemp$30 = 0;
-        int fieldTemp$31 = 0;
-        int fieldTemp$32 = 0;
-        int fieldTemp$33 = 0;
-        int fieldTemp$34 = 0;
-        int fieldTemp$35 = 0;
-        byte[] var2 = null;
-        int var2_int = 0;
-        byte[] var3 = null;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int dupTemp$4 = 0;
+        byte[][] arrayValue$5 = null;
+        int fieldTemp$6 = 0;
+        int dupTemp$7 = 0;
+        byte[][] arrayValue$8 = null;
+        int dupTemp$9 = 0;
+        byte[][] arrayValue$10 = null;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int dupTemp$13 = 0;
+        byte[][] arrayValue$14 = null;
+        byte[] var2;
+        int var2_int;
+        byte[] var3;
         if ((param1 ^ -1) == -101) {
           if (g.field_h > 0) {
-            fieldTemp$30 = g.field_h - 1;
+            fieldTemp$1 = g.field_h - 1;
             g.field_h = g.field_h - 1;
-            var2 = hk.field_K[fieldTemp$30];
+            var2 = hk.field_K[fieldTemp$1];
             hk.field_K[g.field_h] = null;
             return var2;
           } else {
@@ -44,9 +52,9 @@ final class ql {
                 if (wm.field_q <= 0) {
                   break L0;
                 } else {
-                  fieldTemp$31 = wm.field_q - 1;
+                  fieldTemp$2 = wm.field_q - 1;
                   wm.field_q = wm.field_q - 1;
-                  var2 = di.field_Ib[fieldTemp$31];
+                  var2 = di.field_Ib[fieldTemp$2];
                   di.field_Ib[wm.field_q] = null;
                   return var2;
                 }
@@ -59,9 +67,9 @@ final class ql {
                 if (hn.field_t <= 0) {
                   break L1;
                 } else {
-                  fieldTemp$32 = hn.field_t - 1;
+                  fieldTemp$3 = hn.field_t - 1;
                   hn.field_t = hn.field_t - 1;
-                  var2 = cg.field_b[fieldTemp$32];
+                  var2 = cg.field_b[fieldTemp$3];
                   cg.field_b[hn.field_t] = null;
                   return var2;
                 }
@@ -78,8 +86,10 @@ final class ql {
                   } else {
                     if (he.field_Fb[var2_int] == param1) {
                       if (-1 > (sg.field_g[var2_int] ^ -1)) {
-                        sg.field_g[var2_int] = sg.field_g[var2_int] - 1;
-                        var3 = se.field_Y[var2_int][sg.field_g[var2_int] - 1];
+                        dupTemp$4 = sg.field_g[var2_int] - 1;
+                        arrayValue$5 = se.field_Y[var2_int];
+                        sg.field_g[var2_int] = dupTemp$4;
+                        var3 = arrayValue$5[dupTemp$4];
                         se.field_Y[var2_int][sg.field_g[var2_int]] = null;
                         return var3;
                       } else {
@@ -106,9 +116,9 @@ final class ql {
             if (wm.field_q <= 0) {
               if (param1 == 30000) {
                 if (hn.field_t > 0) {
-                  fieldTemp$33 = hn.field_t - 1;
+                  fieldTemp$6 = hn.field_t - 1;
                   hn.field_t = hn.field_t - 1;
-                  var2 = cg.field_b[fieldTemp$33];
+                  var2 = cg.field_b[fieldTemp$6];
                   cg.field_b[hn.field_t] = null;
                   return var2;
                 } else {
@@ -123,8 +133,10 @@ final class ql {
                         } else {
                           if (he.field_Fb[var2_int] == param1) {
                             if (-1 > (sg.field_g[var2_int] ^ -1)) {
-                              sg.field_g[var2_int] = sg.field_g[var2_int] - 1;
-                              var3 = se.field_Y[var2_int][sg.field_g[var2_int] - 1];
+                              dupTemp$7 = sg.field_g[var2_int] - 1;
+                              arrayValue$8 = se.field_Y[var2_int];
+                              sg.field_g[var2_int] = dupTemp$7;
+                              var3 = arrayValue$8[dupTemp$7];
                               se.field_Y[var2_int][sg.field_g[var2_int]] = null;
                               return var3;
                             } else {
@@ -158,8 +170,10 @@ final class ql {
                       } else {
                         if (he.field_Fb[var2_int] == param1) {
                           if (-1 > (sg.field_g[var2_int] ^ -1)) {
-                            sg.field_g[var2_int] = sg.field_g[var2_int] - 1;
-                            var3 = se.field_Y[var2_int][sg.field_g[var2_int] - 1];
+                            dupTemp$9 = sg.field_g[var2_int] - 1;
+                            arrayValue$10 = se.field_Y[var2_int];
+                            sg.field_g[var2_int] = dupTemp$9;
+                            var3 = arrayValue$10[dupTemp$9];
                             se.field_Y[var2_int][sg.field_g[var2_int]] = null;
                             return var3;
                           } else {
@@ -182,9 +196,9 @@ final class ql {
                 }
               }
             } else {
-              fieldTemp$34 = wm.field_q - 1;
+              fieldTemp$11 = wm.field_q - 1;
               wm.field_q = wm.field_q - 1;
-              var2 = di.field_Ib[fieldTemp$34];
+              var2 = di.field_Ib[fieldTemp$11];
               di.field_Ib[wm.field_q] = null;
               return var2;
             }
@@ -196,9 +210,9 @@ final class ql {
                 if (hn.field_t <= 0) {
                   break L8;
                 } else {
-                  fieldTemp$35 = hn.field_t - 1;
+                  fieldTemp$12 = hn.field_t - 1;
                   hn.field_t = hn.field_t - 1;
-                  var2 = cg.field_b[fieldTemp$35];
+                  var2 = cg.field_b[fieldTemp$12];
                   cg.field_b[hn.field_t] = null;
                   return var2;
                 }
@@ -215,8 +229,10 @@ final class ql {
                   } else {
                     if (he.field_Fb[var2_int] == param1) {
                       if (-1 > (sg.field_g[var2_int] ^ -1)) {
-                        sg.field_g[var2_int] = sg.field_g[var2_int] - 1;
-                        var3 = se.field_Y[var2_int][sg.field_g[var2_int] - 1];
+                        dupTemp$13 = sg.field_g[var2_int] - 1;
+                        arrayValue$14 = se.field_Y[var2_int];
+                        sg.field_g[var2_int] = dupTemp$13;
+                        var3 = arrayValue$14[dupTemp$13];
                         se.field_Y[var2_int][sg.field_g[var2_int]] = null;
                         return var3;
                       } else {
@@ -252,10 +268,7 @@ final class ql {
     }
 
     final static int a(int param0, int param1) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int var2 = 0;
+        int var2;
         var2 = 0;
         if (0 <= param1) {
           if (65536 > param1) {
@@ -288,7 +301,7 @@ final class ql {
             }
             if (param0 >= -109) {
               L3: {
-                discarded$3 = ql.a(99, -61);
+                ql.a(99, -61);
                 if (-2 < (param1 ^ -1)) {
                   break L3;
                 } else {
@@ -342,7 +355,7 @@ final class ql {
             }
             if (param0 >= -109) {
               L8: {
-                discarded$4 = ql.a(99, -61);
+                ql.a(99, -61);
                 if (-2 < (param1 ^ -1)) {
                   break L8;
                 } else {
@@ -397,7 +410,7 @@ final class ql {
           }
           if (param0 >= -109) {
             L13: {
-              discarded$5 = ql.a(99, -61);
+              ql.a(99, -61);
               if (-2 < (param1 ^ -1)) {
                 break L13;
               } else {

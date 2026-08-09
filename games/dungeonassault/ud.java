@@ -18,23 +18,12 @@ final class ud extends qe {
         int var5 = 0;
         int[] var6 = null;
         int[] stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int[] stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var5 = DungeonAssault.field_K;
         try {
           L0: {
@@ -51,8 +40,7 @@ final class ud extends qe {
             var4 = 0;
             L2: while (true) {
               if (param0.length <= var4) {
-                stackOut_6_0 = (int[]) (var3);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (int[]) (var3);
                 break L0;
               } else {
                 var6[var4] = -(param0[var4] / 4) + 320 << 938106500;
@@ -65,27 +53,19 @@ final class ud extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3_ref);
-            stackOut_8_1 = new StringBuilder().append("ud.A(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3_ref);
+
+            stackIn_10_1 = new StringBuilder().append("ud.A(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -129,8 +109,6 @@ final class ud extends qe {
         int[] var6 = null;
         int[] stackIn_3_0 = null;
         int[] stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -138,16 +116,6 @@ final class ud extends qe {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int[] stackOut_7_0 = null;
-        int[] stackOut_2_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var5 = DungeonAssault.field_K;
         try {
           L0: {
@@ -157,8 +125,7 @@ final class ud extends qe {
               var4 = 0;
               L1: while (true) {
                 if (param1.length <= var4) {
-                  stackOut_7_0 = (int[]) (var3);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = (int[]) (var3);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -168,8 +135,7 @@ final class ud extends qe {
                 }
               }
             } else {
-              stackOut_2_0 = (int[]) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (int[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -178,27 +144,19 @@ final class ud extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3_ref);
-            stackOut_9_1 = new StringBuilder().append("ud.G(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3_ref);
+
+            stackIn_11_1 = new StringBuilder().append("ud.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -260,10 +218,9 @@ final class ud extends qe {
     }
 
     final void c(boolean param0) {
-        o discarded$2 = null;
-        int fieldTemp$3 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int fieldTemp$0 = 0;
+        int var2;
+        int var3;
         var3 = DungeonAssault.field_K;
         if (param0) {
           rf.field_O.a(-2, true);
@@ -295,7 +252,7 @@ final class ud extends qe {
                     } else {
                       if (sj.field_db[var2] == ia.field_K.field_w) {
                         if (var2 < u.field_T.length) {
-                          discarded$2 = gd.a(64, u.field_T[var2]);
+                          gd.a(64, u.field_T[var2]);
                           var2++;
                           continue L2;
                         } else {
@@ -310,9 +267,9 @@ final class ud extends qe {
                   }
                 } else {
                   L3: {
-                    fieldTemp$3 = ub.field_p + 1;
+                    fieldTemp$0 = ub.field_p + 1;
                     ub.field_p = ub.field_p + 1;
-                    if ((fieldTemp$3 ^ -1) <= -151) {
+                    if ((fieldTemp$0 ^ -1) <= -151) {
                       sf.field_g = sf.field_g + 8;
                       if ((sf.field_g ^ -1) <= -257) {
                         cm.a(0.0f, 0.0f, -7788, 0.10000000149011612f, 0.0f);

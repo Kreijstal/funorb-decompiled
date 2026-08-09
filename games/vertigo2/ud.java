@@ -15,27 +15,16 @@ final class ud extends gp {
     char[] field_v;
 
     private final void a(int param0, int param1, ed param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        char[] stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
         char[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         char[] stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         char stackIn_14_2 = 0;
-        char[] stackIn_18_0 = null;
-        int stackIn_18_1 = 0;
         char[] stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         char[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         int stackIn_20_2 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -43,30 +32,11 @@ final class ud extends gp {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        char[] stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        char[] stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        char stackOut_19_2 = 0;
-        char[] stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int stackOut_18_2 = 0;
-        char[] stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        char[] stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        char stackOut_13_2 = 0;
-        char[] stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        char stackOut_12_2 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -85,27 +55,19 @@ final class ud extends gp {
                         L3: {
                           this.field_C[var5] = param2.a((byte) -11);
                           var6 = param2.g(88);
-                          stackOut_17_0 = this.field_v;
-                          stackOut_17_1 = var5;
-                          stackIn_19_0 = stackOut_17_0;
-                          stackIn_19_1 = stackOut_17_1;
-                          stackIn_18_0 = stackOut_17_0;
-                          stackIn_18_1 = stackOut_17_1;
+                          stackIn_19_0 = this.field_v;
+
+                          stackIn_19_1 = var5;
+
                           if (var6 != 0) {
-                            stackOut_19_0 = (char[]) ((Object) stackIn_19_0);
-                            stackOut_19_1 = stackIn_19_1;
-                            stackOut_19_2 = mn.a((byte) var6, 93);
-                            stackIn_20_0 = stackOut_19_0;
-                            stackIn_20_1 = stackOut_19_1;
-                            stackIn_20_2 = stackOut_19_2;
+                            stackIn_20_0 = (char[]) ((Object) stackIn_19_0);
+                            stackIn_20_1 = stackIn_19_1;
+                            stackIn_20_2 = mn.a((byte) var6, 93);
                             break L3;
                           } else {
-                            stackOut_18_0 = (char[]) ((Object) stackIn_18_0);
-                            stackOut_18_1 = stackIn_18_1;
-                            stackOut_18_2 = 0;
-                            stackIn_20_0 = stackOut_18_0;
-                            stackIn_20_1 = stackOut_18_1;
-                            stackIn_20_2 = stackOut_18_2;
+                            stackIn_20_0 = (char[]) ((Object) stackIn_19_0);
+                            stackIn_20_1 = stackIn_19_1;
+                            stackIn_20_2 = 0;
                             break L3;
                           }
                         }
@@ -127,27 +89,19 @@ final class ud extends gp {
                           L5: {
                             this.field_z[var5] = param2.a((byte) -11);
                             var6 = param2.g(112);
-                            stackOut_11_0 = this.field_u;
-                            stackOut_11_1 = var5;
-                            stackIn_13_0 = stackOut_11_0;
-                            stackIn_13_1 = stackOut_11_1;
-                            stackIn_12_0 = stackOut_11_0;
-                            stackIn_12_1 = stackOut_11_1;
+                            stackIn_13_0 = this.field_u;
+
+                            stackIn_13_1 = var5;
+
                             if (var6 == 0) {
-                              stackOut_13_0 = (char[]) ((Object) stackIn_13_0);
-                              stackOut_13_1 = stackIn_13_1;
-                              stackOut_13_2 = (char)0;
-                              stackIn_14_0 = stackOut_13_0;
-                              stackIn_14_1 = stackOut_13_1;
-                              stackIn_14_2 = stackOut_13_2;
+                              stackIn_14_0 = (char[]) ((Object) stackIn_13_0);
+                              stackIn_14_1 = stackIn_13_1;
+                              stackIn_14_2 = (char)0;
                               break L5;
                             } else {
-                              stackOut_12_0 = (char[]) ((Object) stackIn_12_0);
-                              stackOut_12_1 = stackIn_12_1;
-                              stackOut_12_2 = mn.a((byte) var6, -48);
-                              stackIn_14_0 = stackOut_12_0;
-                              stackIn_14_1 = stackOut_12_1;
-                              stackIn_14_2 = stackOut_12_2;
+                              stackIn_14_0 = (char[]) ((Object) stackIn_13_0);
+                              stackIn_14_1 = stackIn_13_1;
+                              stackIn_14_2 = mn.a((byte) var6, -48);
                               break L5;
                             }
                           }
@@ -181,27 +135,19 @@ final class ud extends gp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var4);
-            stackOut_22_1 = new StringBuilder().append("ud.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var4);
+
+            stackIn_24_1 = new StringBuilder().append("ud.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L6;
             }
           }
@@ -216,24 +162,14 @@ final class ud extends gp {
 
     final void a(ed param0, int param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var3 = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -259,27 +195,19 @@ final class ud extends gp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("ud.A(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("ud.A(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }

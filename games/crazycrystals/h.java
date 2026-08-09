@@ -8,9 +8,20 @@ final class h {
     static dl[] field_d;
 
     final static void a(byte[] param0, boolean param1) {
-        byte[] discarded$3 = null;
-        byte dupTemp$4 = 0;
-        byte dupTemp$5 = 0;
+        byte dupTemp$0 = 0;
+        byte dupTemp$1 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_37_0 = 0;
+        int stackIn_37_1 = 0;
+        int stackIn_48_0 = 0;
+        int stackIn_49_0 = 0;
+        int stackIn_49_1 = 0;
+        RuntimeException stackIn_54_0 = null;
+        StringBuilder stackIn_54_1 = null;
+        RuntimeException stackIn_55_0 = null;
+        StringBuilder stackIn_55_1 = null;
+        String stackIn_55_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -31,40 +42,6 @@ final class h {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        int stackIn_35_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_37_0 = 0;
-        int stackIn_37_1 = 0;
-        int stackIn_47_0 = 0;
-        int stackIn_48_0 = 0;
-        int stackIn_49_0 = 0;
-        int stackIn_49_1 = 0;
-        RuntimeException stackIn_53_0 = null;
-        StringBuilder stackIn_53_1 = null;
-        RuntimeException stackIn_54_0 = null;
-        StringBuilder stackIn_54_1 = null;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
-        String stackIn_55_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_46_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_48_1 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_47_1 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_35_1 = 0;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        RuntimeException stackOut_54_0 = null;
-        StringBuilder stackOut_54_1 = null;
-        String stackOut_54_2 = null;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        String stackOut_53_2 = null;
         var15 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -85,7 +62,7 @@ final class h {
               if (param1) {
                 break L1;
               } else {
-                discarded$3 = h.a((byte) 24, 15);
+                h.a((byte) 24, 15);
                 break L1;
               }
             }
@@ -139,23 +116,18 @@ final class h {
                                                   break L8;
                                                 } else {
                                                   L11: {
-                                                    dupTemp$4 = var17.d((byte) -113);
-                                                    var9[var12] = dupTemp$4;
-                                                    var13 = dupTemp$4;
-                                                    stackOut_46_0 = var10;
-                                                    stackIn_48_0 = stackOut_46_0;
-                                                    stackIn_47_0 = stackOut_46_0;
+                                                    dupTemp$0 = var17.d((byte) -113);
+                                                    var9[var12] = dupTemp$0;
+                                                    var13 = dupTemp$0;
+                                                    stackIn_48_0 = var10;
+
                                                     if (0 == (var13 ^ -1)) {
-                                                      stackOut_48_0 = stackIn_48_0;
-                                                      stackOut_48_1 = 0;
-                                                      stackIn_49_0 = stackOut_48_0;
-                                                      stackIn_49_1 = stackOut_48_1;
+                                                      stackIn_49_0 = stackIn_48_0;
+                                                      stackIn_49_1 = 0;
                                                       break L11;
                                                     } else {
-                                                      stackOut_47_0 = stackIn_47_0;
-                                                      stackOut_47_1 = 1;
-                                                      stackIn_49_0 = stackOut_47_0;
-                                                      stackIn_49_1 = stackOut_47_1;
+                                                      stackIn_49_0 = stackIn_48_0;
+                                                      stackIn_49_1 = 1;
                                                       break L11;
                                                     }
                                                   }
@@ -192,23 +164,18 @@ final class h {
                                                       continue L13;
                                                     } else {
                                                       L15: {
-                                                        dupTemp$5 = var17.d((byte) 119);
-                                                        var9[var13 * var5 + var12] = dupTemp$5;
-                                                        var14 = dupTemp$5;
-                                                        stackOut_34_0 = var10;
-                                                        stackIn_36_0 = stackOut_34_0;
-                                                        stackIn_35_0 = stackOut_34_0;
+                                                        dupTemp$1 = var17.d((byte) 119);
+                                                        var9[var13 * var5 + var12] = dupTemp$1;
+                                                        var14 = dupTemp$1;
+                                                        stackIn_36_0 = var10;
+
                                                         if (var14 == -1) {
-                                                          stackOut_36_0 = stackIn_36_0;
-                                                          stackOut_36_1 = 0;
-                                                          stackIn_37_0 = stackOut_36_0;
-                                                          stackIn_37_1 = stackOut_36_1;
+                                                          stackIn_37_0 = stackIn_36_0;
+                                                          stackIn_37_1 = 0;
                                                           break L15;
                                                         } else {
-                                                          stackOut_35_0 = stackIn_35_0;
-                                                          stackOut_35_1 = 1;
-                                                          stackIn_37_0 = stackOut_35_0;
-                                                          stackIn_37_1 = stackOut_35_1;
+                                                          stackIn_37_0 = stackIn_36_0;
+                                                          stackIn_37_1 = 1;
                                                           break L15;
                                                         }
                                                       }
@@ -244,7 +211,7 @@ final class h {
                               } else {
                                 L17: {
                                   gh.field_z[var4] = var17.b(false);
-                                  if (gh.field_z[var4] != 0) {
+                                  if ((gh.field_z[var4] ^ -1) != -1) {
                                     break L17;
                                   } else {
                                     gh.field_z[var4] = 1;
@@ -284,27 +251,19 @@ final class h {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var2 = decompiledCaughtException;
-            stackOut_52_0 = (RuntimeException) (var2);
-            stackOut_52_1 = new StringBuilder().append("h.C(");
-            stackIn_54_0 = stackOut_52_0;
-            stackIn_54_1 = stackOut_52_1;
-            stackIn_53_0 = stackOut_52_0;
-            stackIn_53_1 = stackOut_52_1;
+            stackIn_54_0 = (RuntimeException) (var2);
+
+            stackIn_54_1 = new StringBuilder().append("h.C(");
+
             if (param0 == null) {
-              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
-              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
-              stackOut_54_2 = "null";
-              stackIn_55_0 = stackOut_54_0;
-              stackIn_55_1 = stackOut_54_1;
-              stackIn_55_2 = stackOut_54_2;
+              stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
+              stackIn_55_2 = "null";
               break L18;
             } else {
-              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
-              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
-              stackOut_53_2 = "{...}";
-              stackIn_55_0 = stackOut_53_0;
-              stackIn_55_1 = stackOut_53_1;
-              stackIn_55_2 = stackOut_53_2;
+              stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
+              stackIn_55_2 = "{...}";
               break L18;
             }
           }
@@ -320,13 +279,15 @@ final class h {
     }
 
     final synchronized static byte[] a(byte param0, int param1) {
-        int fieldTemp$4 = 0;
-        byte[][] fieldTemp$5 = null;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        int fieldTemp$0 = 0;
+        byte[][] fieldTemp$1 = null;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int dupTemp$4 = 0;
+        byte[][] arrayValue$5 = null;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
         L0: {
           if (-101 != (param1 ^ -1)) {
             break L0;
@@ -334,9 +295,9 @@ final class h {
             if (-1 <= (so.field_e ^ -1)) {
               break L0;
             } else {
-              fieldTemp$4 = so.field_e - 1;
+              fieldTemp$0 = so.field_e - 1;
               so.field_e = so.field_e - 1;
-              var2_ref_byte__ = mn.field_i[fieldTemp$4];
+              var2_ref_byte__ = mn.field_i[fieldTemp$0];
               mn.field_i[so.field_e] = null;
               return var2_ref_byte__;
             }
@@ -349,10 +310,10 @@ final class h {
             if ((je.field_e ^ -1) >= -1) {
               break L1;
             } else {
-              fieldTemp$5 = tg.field_e;
-              fieldTemp$6 = je.field_e - 1;
+              fieldTemp$1 = tg.field_e;
+              fieldTemp$2 = je.field_e - 1;
               je.field_e = je.field_e - 1;
-              var2_ref_byte__ = fieldTemp$5[fieldTemp$6];
+              var2_ref_byte__ = fieldTemp$1[fieldTemp$2];
               tg.field_e[je.field_e] = null;
               return var2_ref_byte__;
             }
@@ -371,9 +332,9 @@ final class h {
             break L3;
           } else {
             if (-1 > (ed.field_z ^ -1)) {
-              fieldTemp$7 = ed.field_z - 1;
+              fieldTemp$3 = ed.field_z - 1;
               ed.field_z = ed.field_z - 1;
-              var2_ref_byte__ = oc.field_a[fieldTemp$7];
+              var2_ref_byte__ = oc.field_a[fieldTemp$3];
               oc.field_a[ed.field_z] = null;
               return var2_ref_byte__;
             } else {
@@ -392,8 +353,10 @@ final class h {
               } else {
                 if (kk.field_e[var2] == param1) {
                   if ((jd.field_K[var2] ^ -1) < -1) {
-                    jd.field_K[var2] = jd.field_K[var2] - 1;
-                    var3 = lp.field_a[var2][jd.field_K[var2] - 1];
+                    dupTemp$4 = jd.field_K[var2] - 1;
+                    arrayValue$5 = lp.field_a[var2];
+                    jd.field_K[var2] = dupTemp$4;
+                    var3 = arrayValue$5[dupTemp$4];
                     lp.field_a[var2][jd.field_K[var2]] = null;
                     return var3;
                   } else {

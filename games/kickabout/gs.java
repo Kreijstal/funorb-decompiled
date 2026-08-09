@@ -78,9 +78,9 @@ final class gs {
 
     final static void b(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = Kickabout.field_G;
         try {
           L0: {
@@ -104,17 +104,13 @@ final class gs {
 
     final static void c(int param0) {
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
         L0: {
           iw.field_l = false;
           if (-1 != (un.field_e.h((byte) -111) ^ -1)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }

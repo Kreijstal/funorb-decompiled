@@ -290,7 +290,7 @@ class o {
     }
 
     final void b(double param0, int param1) {
-        double var4 = 0.0;
+        double var4;
         var4 = 3.141592653589793 * ((double)this.field_f + this.field_e) / (double)param1;
         this.field_d.field_a = this.field_d.field_a - Math.sin(var4) * param0;
         this.field_d.field_b = this.field_d.field_b - Math.cos(var4) * param0;
@@ -313,7 +313,7 @@ class o {
     }
 
     final void a(byte param0, double param1) {
-        double var4 = 0.0;
+        double var4;
         if (param0 <= 104) {
           return;
         } else {
@@ -325,14 +325,10 @@ class o {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_10_0 = 0;
         int stackIn_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+        int var6;
+        int var7;
         L0: {
           vs.field_b[os.field_w] = param1;
           uf.field_d[os.field_w] = os.field_w;
@@ -359,12 +355,10 @@ class o {
             dd.field_c[os.field_w] = param3;
             var6 = param0 + param4 - -param3;
             if (0 == var6) {
-              stackOut_24_0 = 0;
-              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_0 = 0;
               break L2;
             } else {
-              stackOut_23_0 = param4 * 1000 / var6;
-              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_0 = param4 * 1000 / var6;
               break L2;
             }
           }
@@ -404,12 +398,10 @@ class o {
             dd.field_c[os.field_w] = param3;
             var6 = param0 + param4 - -param3;
             if (0 == var6) {
-              stackOut_9_0 = 0;
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = 0;
               break L4;
             } else {
-              stackOut_8_0 = param4 * 1000 / var6;
-              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_0 = param4 * 1000 / var6;
               break L4;
             }
           }

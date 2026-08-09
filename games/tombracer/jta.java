@@ -15,115 +15,85 @@ final class jta extends qr {
     }
 
     final void g(byte param0) {
-        uja var2 = null;
-        gn var3 = null;
-        int var4 = 0;
+        uja var2;
+        gn var3;
+        int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         var2 = new uja(this.field_y);
         var3 = (gn) ((Object) var2.a(true));
-        if (param0 >= -105) {
-          this.g((byte) 58);
+        if (param0 < -105) {
           L0: while (true) {
-            if (var3 != null) {
-              if (var4 == 0) {
-                L1: {
-                  if (!var3.a(127)) {
-                    break L1;
-                  } else {
-                    var3.p(71);
-                    break L1;
-                  }
-                }
-                var3 = (gn) ((Object) var2.a(-1));
-                continue L0;
-              } else {
-                return;
-              }
-            } else {
+            if (var3 == null) {
               this.field_x = (ae) ((Object) this.a((byte) -58));
               return;
+            } else {
+              L1: {
+                if (!var3.a(127)) {
+                  break L1;
+                } else {
+                  var3.p(71);
+                  break L1;
+                }
+              }
+              var3 = (gn) ((Object) var2.a(-1));
+              continue L0;
             }
           }
         } else {
+          this.g((byte) 58);
           L2: while (true) {
-            if (var3 != null) {
-              if (var4 == 0) {
-                L3: {
-                  if (!var3.a(127)) {
-                    break L3;
-                  } else {
-                    var3.p(71);
-                    break L3;
-                  }
-                }
-                var3 = (gn) ((Object) var2.a(-1));
-                continue L2;
-              } else {
-                return;
-              }
-            } else {
+            if (var3 == null) {
               this.field_x = (ae) ((Object) this.a((byte) -58));
               return;
+            } else {
+              L3: {
+                if (!var3.a(127)) {
+                  break L3;
+                } else {
+                  var3.p(71);
+                  break L3;
+                }
+              }
+              var3 = (gn) ((Object) var2.a(-1));
+              continue L2;
             }
           }
         }
     }
 
     final int g(int param0) {
-        uja var2 = null;
-        int var3 = 0;
-        gn var4 = null;
-        int var5 = 0;
-        boolean stackIn_3_0 = false;
-        int stackIn_9_0 = 0;
-        boolean stackOut_2_0 = false;
-        int stackOut_8_0 = 0;
+        uja var2;
+        int var3;
+        gn var4;
+        int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         var2 = new uja(this.field_y);
         var3 = -2147483648;
         var4 = (gn) ((Object) var2.a(true));
         L0: while (true) {
-          L1: {
-            L2: {
-              if (var4 == null) {
-                break L2;
+          if (var4 == null) {
+            if (param0 >= -72) {
+              field_z = (int[]) null;
+              return var3;
+            } else {
+              return var3;
+            }
+          } else {
+            L1: {
+              if (!var4.field_B) {
+                break L1;
               } else {
-                stackOut_2_0 = var4.field_B;
-                stackIn_9_0 = stackOut_2_0 ? 1 : 0;
-                stackIn_3_0 = stackOut_2_0;
-                if (var5 != 0) {
+                if (var3 < var4.field_m) {
+                  var3 = var4.field_m;
                   break L1;
                 } else {
-                  L3: {
-                    if (!stackIn_3_0) {
-                      break L3;
-                    } else {
-                      if (var3 < var4.field_m) {
-                        var3 = var4.field_m;
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
                   var4 = (gn) ((Object) var2.a(-1));
-                  if (var5 == 0) {
-                    continue L0;
-                  } else {
-                    break L2;
-                  }
+                  continue L0;
                 }
               }
             }
-            stackOut_8_0 = param0;
-            stackIn_9_0 = stackOut_8_0;
-            break L1;
-          }
-          if (stackIn_9_0 >= -72) {
-            field_z = (int[]) null;
-            return var3;
-          } else {
-            return var3;
+            var4 = (gn) ((Object) var2.a(-1));
+            continue L0;
           }
         }
     }
@@ -157,31 +127,26 @@ final class jta extends qr {
     }
 
     final void h(int param0) {
-        int discarded$1 = 0;
-        uja var2 = null;
-        gn var3 = null;
-        int var4 = 0;
+        uja var2;
+        gn var3;
+        int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         var2 = new uja(this.field_y);
         var3 = (gn) ((Object) var2.a(true));
         if (param0 != -1) {
-          discarded$1 = this.d(true);
+          this.d(true);
           L0: while (true) {
             if (var3 != null) {
-              if (var4 == 0) {
-                L1: {
-                  if (var3.a((byte) -115)) {
-                    var3.p(param0 ^ -111);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
+              L1: {
+                if (var3.a((byte) -115)) {
+                  var3.p(param0 ^ -111);
+                  break L1;
+                } else {
+                  break L1;
                 }
-                var3 = (gn) ((Object) var2.a(-1));
-                continue L0;
-              } else {
-                return;
               }
+              var3 = (gn) ((Object) var2.a(-1));
+              continue L0;
             } else {
               return;
             }
@@ -189,20 +154,16 @@ final class jta extends qr {
         } else {
           L2: while (true) {
             if (var3 != null) {
-              if (var4 == 0) {
-                L3: {
-                  if (var3.a((byte) -115)) {
-                    var3.p(param0 ^ -111);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
+              L3: {
+                if (var3.a((byte) -115)) {
+                  var3.p(param0 ^ -111);
+                  break L3;
+                } else {
+                  break L3;
                 }
-                var3 = (gn) ((Object) var2.a(-1));
-                continue L2;
-              } else {
-                return;
               }
+              var3 = (gn) ((Object) var2.a(-1));
+              continue L2;
             } else {
               return;
             }
@@ -211,26 +172,32 @@ final class jta extends qr {
     }
 
     final gn a(byte param0) {
-        int var5 = TombRacer.field_G ? 1 : 0;
-        int var2 = -31 % ((6 - param0) / 61);
-        uja var3 = new uja(this.field_y);
-        gn var4 = (gn) ((Object) var3.a(true));
-        do {
-            if (var4 == null) {
-                return null;
+        int var2;
+        uja var3;
+        gn var4;
+        int var5;
+        var5 = TombRacer.field_G ? 1 : 0;
+        var2 = -31 % ((6 - param0) / 61);
+        var3 = new uja(this.field_y);
+        var4 = (gn) ((Object) var3.a(true));
+        L0: while (true) {
+          if (var4 != null) {
+            if (!var4.field_B) {
+              var4 = (gn) ((Object) var3.a(-1));
+              continue L0;
+            } else {
+              return var4;
             }
-            if (var4.field_B) {
-                return var4;
-            }
-            var4 = (gn) ((Object) var3.a(-1));
-        } while (var5 == 0);
-        return null;
+          } else {
+            return null;
+          }
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        uja var5 = null;
-        ae var6 = null;
-        int var7 = 0;
+        uja var5;
+        ae var6;
+        int var7;
         L0: {
           var7 = TombRacer.field_G ? 1 : 0;
           if (this.field_r != null) {
@@ -253,89 +220,114 @@ final class jta extends qr {
           } else {
             var6.a(param0 + this.field_i, this.field_n + param1, 0, param3);
             var6 = (ae) ((Object) var5.c(param2 + 42));
-            if (var7 == 0) {
-              continue L1;
-            } else {
-              return;
-            }
+            continue L1;
           }
         }
     }
 
     final int f(int param0) {
-        uja var2 = null;
-        int var3 = 0;
-        gn var4 = null;
-        int var5 = 0;
-        boolean stackIn_4_0 = false;
-        boolean stackIn_5_0 = false;
-        boolean stackOut_3_0 = false;
+        uja var2;
+        int var3;
+        gn var4;
+        int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         var2 = new uja(this.field_y);
         var3 = param0;
         var4 = (gn) ((Object) var2.a(true));
         L0: while (true) {
-          if (var4 != null) {
-            stackOut_3_0 = var4.field_B;
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_4_0 = stackOut_3_0;
-            if (var5 == 0) {
-              L1: {
-                if (!stackIn_5_0) {
+          if (var4 == null) {
+            return var3;
+          } else {
+            L1: {
+              if (!var4.field_B) {
+                break L1;
+              } else {
+                if (var4.field_p > var3) {
+                  var3 = var4.field_p;
                   break L1;
                 } else {
-                  if (var4.field_p > var3) {
-                    var3 = var4.field_p;
-                    break L1;
-                  } else {
-                    break L1;
-                  }
+                  var4 = (gn) ((Object) var2.a(-1));
+                  continue L0;
                 }
               }
-              var4 = (gn) ((Object) var2.a(-1));
-              continue L0;
-            } else {
-              return stackIn_4_0 ? 1 : 0;
             }
-          } else {
-            return var3;
+            var4 = (gn) ((Object) var2.a(-1));
+            continue L0;
           }
         }
     }
 
     final ae b(boolean param0) {
-        int discarded$0 = 0;
-        uja var2 = null;
-        gn var3_ref = null;
-        Object var3 = null;
-        int var4 = TombRacer.field_G ? 1 : 0;
-        if (param0) {
-            discarded$0 = this.d(false);
+        uja var2;
+        Object var3;
+        gn var3_ref;
+        int var4;
+        uja stackIn_3_0 = null;
+        uja stackIn_4_0 = null;
+        int stackIn_4_1 = 0;
+        uja stackIn_13_0 = null;
+        uja stackIn_14_0 = null;
+        int stackIn_14_1 = 0;
+        var3 = null;
+        var4 = TombRacer.field_G ? 1 : 0;
+        if (!param0) {
+          L0: {
             var2 = new uja(this.field_y);
-            var3_ref = (gn) ((Object) var2.a(!param0 ? true : false));
-            do {
-                if (var3_ref == null) {
-                    return null;
-                }
-                if (!(!var3_ref.field_B)) {
-                    return var3_ref.g((byte) 52);
-                }
-                var3_ref = (gn) ((Object) var2.a(-1));
-            } while (var4 == 0);
-            return null;
-        }
-        var2 = new uja(this.field_y);
-        var3_ref = (gn) ((Object) var2.a(!param0 ? true : false));
-        do {
-            if (var3_ref == null) {
-                return null;
+            stackIn_13_0 = (uja) (var2);
+
+            if (param0) {
+              stackIn_14_0 = (uja) ((Object) stackIn_13_0);
+              stackIn_14_1 = 0;
+              break L0;
+            } else {
+              stackIn_14_0 = (uja) ((Object) stackIn_13_0);
+              stackIn_14_1 = 1;
+              break L0;
             }
-            if (!(!var3_ref.field_B)) {
+          }
+          var3_ref = (gn) ((Object) ((uja) (Object) stackIn_14_0).a(stackIn_14_1 != 0));
+          L1: while (true) {
+            if (var3_ref != null) {
+              if (var3_ref.field_B) {
                 return var3_ref.g((byte) 52);
+              } else {
+                var3_ref = (gn) ((Object) var2.a(-1));
+                continue L1;
+              }
+            } else {
+              return null;
             }
-            var3_ref = (gn) ((Object) var2.a(-1));
-        } while (var4 == 0);
-        return null;
+          }
+        } else {
+          L2: {
+            this.d(false);
+            var2 = new uja(this.field_y);
+            stackIn_3_0 = (uja) (var2);
+
+            if (param0) {
+              stackIn_4_0 = (uja) ((Object) stackIn_3_0);
+              stackIn_4_1 = 0;
+              break L2;
+            } else {
+              stackIn_4_0 = (uja) ((Object) stackIn_3_0);
+              stackIn_4_1 = 1;
+              break L2;
+            }
+          }
+          var3_ref = (gn) ((Object) ((uja) (Object) stackIn_4_0).a(stackIn_4_1 != 0));
+          L3: while (true) {
+            if (var3_ref != null) {
+              if (var3_ref.field_B) {
+                return var3_ref.g((byte) 52);
+              } else {
+                var3_ref = (gn) ((Object) var2.a(-1));
+                continue L3;
+              }
+            } else {
+              return null;
+            }
+          }
+        }
     }
 
     final static hea a(byte param0, String param1, cn param2, String param3, cn param4) {
@@ -343,68 +335,21 @@ final class jta extends qr {
         RuntimeException var5 = null;
         int var6 = 0;
         hea stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hea stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             L1: {
@@ -417,121 +362,87 @@ final class jta extends qr {
                 break L1;
               }
             }
-            stackOut_2_0 = aca.a(param4, var5_int, param2, (byte) -110, var6);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = aca.a(param4, var5_int, param2, (byte) -110, var6);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var5);
-            stackOut_4_1 = new StringBuilder().append("jta.MA(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var5);
+
+            stackIn_6_1 = new StringBuilder().append("jta.MA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+
+
+            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+
+
+            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
+
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
           L5: {
-            stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
+
             if (param4 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_16_2 + ')');
         }
         return stackIn_3_0;
     }
 
     final void c(ae param0, int param1) {
         gn var3 = null;
-        boolean discarded$0 = false;
         if (!(param0 instanceof gn)) {
             throw new IllegalArgumentException();
         }
@@ -542,16 +453,16 @@ final class jta extends qr {
             var3 = (gn) ((Object) param0);
             this.field_y.a((byte) 125, (vg) (var3));
             var3.field_B = true;
-            discarded$0 = var3.a((ae) (this), false);
+            var3.a((ae) (this), false);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) ((Object) runtimeException), "jta.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void e(boolean param0) {
-        uja var2 = null;
-        gn var3 = null;
-        int var4 = 0;
+        uja var2;
+        gn var3;
+        int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         var2 = new uja(this.field_y);
         var3 = (gn) ((Object) var2.a(param0));
@@ -566,18 +477,14 @@ final class jta extends qr {
           } else {
             var3.field_B = false;
             var3 = (gn) ((Object) var2.a(-1));
-            if (var4 == 0) {
-              continue L0;
-            } else {
-              return;
-            }
+            continue L0;
           }
         }
     }
 
     final int d(boolean param0) {
-        int var2 = 0;
-        gn var3 = null;
+        int var2;
+        gn var3;
         if (!param0) {
           L0: {
             this.field_y = (vna) null;

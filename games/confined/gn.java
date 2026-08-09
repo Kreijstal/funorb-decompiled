@@ -7,9 +7,9 @@ final class gn extends rb {
     private java.awt.Component field_j;
 
     final void a(java.awt.Component param0, int param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         this.field_c = param3;
         this.field_f = new int[param3 * param1 - -1];
         this.field_b = param1;
@@ -27,7 +27,7 @@ final class gn extends rb {
     }
 
     final void a(byte param0, java.awt.Graphics param1, int param2, int param3) {
-        boolean discarded$0 = param1.drawImage(this.field_e, param3, param2, (java.awt.image.ImageObserver) ((Object) this.field_j));
+        param1.drawImage(this.field_e, param3, param2, (java.awt.image.ImageObserver) ((Object) this.field_j));
         int var5 = 44 % ((param0 - 36) / 52);
     }
 

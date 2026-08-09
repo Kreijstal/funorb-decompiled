@@ -15,8 +15,6 @@ final class ua extends vi {
         RuntimeException var2_ref = null;
         String stackIn_2_0 = null;
         String stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -24,16 +22,6 @@ final class ua extends vi {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_6_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             var2 = cf.a(0, ab.a(117, param0));
@@ -46,13 +34,11 @@ final class ua extends vi {
                   break L1;
                 }
               }
-              stackOut_6_0 = (String) (var2);
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = (String) (var2);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (String) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (String) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -61,27 +47,19 @@ final class ua extends vi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2_ref);
-            stackOut_8_1 = new StringBuilder().append("ua.A(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2_ref);
+
+            stackIn_10_1 = new StringBuilder().append("ua.A(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }
@@ -103,7 +81,7 @@ final class ua extends vi {
     }
 
     final static void h(byte param0) {
-        ji var2 = null;
+        ji var2;
         if (gd.field_e != 0 - sh.field_i) {
           if (gd.field_e == -sh.field_i + 250) {
             gd.field_e = gd.field_e + 1;
@@ -201,10 +179,10 @@ final class ua extends vi {
             return;
         }
         uf var3 = de.field_V;
-        int discarded$0 = var3.i(7553);
-        int discarded$1 = var3.i(7553);
-        int discarded$2 = var3.i(7553);
-        int discarded$3 = var3.i(7553);
+        var3.i(7553);
+        var3.i(7553);
+        var3.i(7553);
+        var3.i(7553);
         var1.b((byte) 124);
     }
 

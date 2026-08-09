@@ -83,7 +83,7 @@ final class wo implements Iterator {
     }
 
     final static void a(int param0) {
-        String var1 = null;
+        String var1;
         if (!ff.field_a) {
           throw new IllegalStateException();
         } else {
@@ -111,36 +111,36 @@ final class wo implements Iterator {
     }
 
     public final Object next() {
-        ta var1 = this.field_c;
+        Object var1 = this.field_c;
         if (var1 == this.field_a.field_a) {
             var1 = null;
             this.field_c = null;
         } else {
-            this.field_c = var1.field_p;
+            this.field_c = ((ta) (var1)).field_p;
         }
-        this.field_b = var1;
+        this.field_b = (ta) (var1);
         return var1;
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var6_int = 0;
-        RuntimeException var6 = null;
         int[] var7 = null;
         int var8 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         var8 = Torquing.field_u;
         try {
           L0: {
-            incrementValue$4 = param5;
+            incrementValue$2 = param5;
             param5++;
-            di.a(param0, (byte) -118, param1, qd.field_a[incrementValue$4], param3);
+            di.a(param0, (byte) -118, param1, qd.field_a[incrementValue$2], param3);
             if (param4) {
-              incrementValue$5 = param2;
+              incrementValue$3 = param2;
               param2--;
-              di.a(param0, (byte) -122, param1, qd.field_a[incrementValue$5], param3);
+              di.a(param0, (byte) -122, param1, qd.field_a[incrementValue$3], param3);
               var6_int = param5;
               L1: while (true) {
                 if (param2 < var6_int) {

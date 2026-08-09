@@ -9,101 +9,31 @@ final class ik {
     private bk field_c;
 
     private final void a(nj[] param0, int param1) {
-        RuntimeException runtimeException = null;
-        java.awt.Canvas var4 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
-          L0: {
-            L1: {
-              if (param1 >= 89) {
-                break L1;
-              } else {
-                var4 = (java.awt.Canvas) null;
+            if (param1 < 89) {
+                java.awt.Canvas var4 = (java.awt.Canvas) null;
                 this.a(127, (java.awt.Canvas) null);
-                break L1;
-              }
             }
-            L2: {
-              if (param0 == this.field_a) {
-                break L2;
-              } else {
-                if (-1 != (param0.length ^ -1)) {
-                  this.field_a = param0;
-                  this.field_b = false;
-                  break L2;
-                } else {
-                  throw new IllegalArgumentException();
+            if (param0 != this.field_a) {
+                if (-1 == (param0.length ^ -1)) {
+                    throw new IllegalArgumentException();
                 }
-              }
+                this.field_a = param0;
+                this.field_b = false;
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (runtimeException);
-            stackOut_7_1 = new StringBuilder().append("ik.G(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
-            if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
-            } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L3;
-            }
-          }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) ((Object) runtimeException), "ik.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static int c(int param0) {
-        int discarded$2 = 0;
-        L0: {
-          if (param0 == -10517) {
-            break L0;
-          } else {
-            discarded$2 = ik.c(113);
-            break L0;
-          }
+        if (param0 != -10517) {
+            ik.c(113);
         }
-        if (oj.a(false)) {
-          if (null == pu.field_e.e((byte) 54)) {
+        if (!oj.a(false) || null == pu.field_e.e((byte) 54)) {
             return -1;
-          } else {
-            return pu.field_e.e((byte) 54).field_r;
-          }
-        } else {
-          return -1;
         }
+        return pu.field_e.e((byte) 54).field_r;
     }
 
     final boolean a(boolean param0) {
@@ -125,24 +55,12 @@ final class ik {
         RuntimeException var3_ref = null;
         int var4 = 0;
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_12_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
@@ -190,13 +108,11 @@ final class ik {
                       }
                     }
                   }
-                  stackOut_11_0 = 1;
-                  stackIn_13_0 = stackOut_11_0;
+                  stackIn_13_0 = 1;
                   break L4;
                 }
               }
-              stackOut_12_0 = 0;
-              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_0 = 0;
               break L4;
             }
             break L0;
@@ -205,27 +121,19 @@ final class ik {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3_ref);
-            stackOut_14_1 = new StringBuilder().append("ik.A(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3_ref);
+
+            stackIn_16_1 = new StringBuilder().append("ik.A(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L7;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L7;
             }
           }
@@ -235,37 +143,25 @@ final class ik {
     }
 
     private final void a(int param0, java.awt.Canvas param1) {
-        ha discarded$1 = null;
-        Object var3 = null;
-        nj[] var4 = null;
-        int var5 = 0;
-        Object var6 = null;
-        nj var6_ref = null;
-        RuntimeException var7 = null;
-        int var7_int = 0;
-        bk var8 = null;
-        int var8_int = 0;
-        int var9 = 0;
-        int var10 = 0;
-        ha var11 = null;
-        Object stackIn_127_0 = null;
-        StringBuilder stackIn_127_1 = null;
-        Object stackIn_128_0 = null;
-        StringBuilder stackIn_128_1 = null;
-        Object stackIn_129_0 = null;
-        StringBuilder stackIn_129_1 = null;
-        String stackIn_129_2 = null;
+        Object stackIn_115_0 = null;
+        StringBuilder stackIn_115_1 = null;
+        Object stackIn_116_0 = null;
+        StringBuilder stackIn_116_1 = null;
+        String stackIn_116_2 = null;
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_126_0 = null;
-        StringBuilder stackOut_126_1 = null;
-        Object stackOut_128_0 = null;
-        StringBuilder stackOut_128_1 = null;
-        String stackOut_128_2 = null;
-        Object stackOut_127_0 = null;
-        StringBuilder stackOut_127_1 = null;
-        String stackOut_127_2 = null;
+        Object var3 = null;
+        nj[] var4 = null;
+        int var5 = 0;
+        nj var6 = null;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8_int = 0;
+        bk var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        ha var11 = null;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
@@ -274,452 +170,325 @@ final class ik {
               if (param0 == -101) {
                 break L1;
               } else {
-                discarded$1 = this.a(-39);
+                this.a(-39);
                 break L1;
               }
             }
             var4 = this.field_a;
             var5 = 0;
             L2: while (true) {
-              L3: {
-                L4: {
-                  if (var5 >= var4.length) {
-                    break L4;
-                  } else {
-                    var6_ref = var4[var5];
-                    if (var10 != 0) {
-                      break L3;
-                    } else {
-                      L5: {
-                        L6: {
-                          if (var6_ref.field_f) {
-                            break L6;
+              if (var5 >= var4.length) {
+                decompiledRegionSelector1 = 0;
+                break L0;
+              } else {
+                L3: {
+                  var6 = var4[var5];
+                  if (var6.field_f) {
+                    L4: {
+                      var7_int = var6.field_c;
+                      if ((var7_int ^ -1) != -1) {
+                        if (var7_int == 5) {
+                          if (!sn.field_d.b((byte) 127)) {
+                            decompiledRegionSelector1 = 1;
+                            break L0;
                           } else {
-                            if (var10 == 0) {
-                              break L5;
-                            } else {
-                              break L6;
-                            }
-                          }
-                        }
-                        L7: {
-                          L8: {
-                            var7_int = var6_ref.field_c;
-                            if ((var7_int ^ -1) != -1) {
-                              break L8;
-                            } else {
-                              if (var10 == 0) {
-                                break L7;
-                              } else {
-                                break L8;
-                              }
-                            }
-                          }
-                          L9: {
-                            if (var7_int == 5) {
-                              break L9;
-                            } else {
-                              L10: {
-                                if (1 != var7_int) {
-                                  break L10;
-                                } else {
-                                  if (var10 == 0) {
-                                    if (!sn.field_d.b((byte) 127)) {
-                                      decompiledRegionSelector1 = 5;
-                                      break L0;
-                                    } else {
-                                      L11: {
-                                        var7_int = ig.a("jaclib", true);
-                                        if (-1 != var7_int) {
-                                          break L11;
-                                        } else {
-                                          var6_ref.field_f = false;
-                                          if (var10 == 0) {
-                                            break L5;
-                                          } else {
-                                            break L11;
-                                          }
-                                        }
-                                      }
-                                      if (100 <= var7_int) {
-                                        L12: {
-                                          var8_int = ig.a("jaggl", true);
-                                          if (var8_int == -1) {
-                                            var6_ref.field_f = false;
-                                            if (var10 == 0) {
-                                              break L5;
-                                            } else {
-                                              break L12;
-                                            }
-                                          } else {
-                                            break L12;
-                                          }
-                                        }
-                                        if (-101 < (var8_int ^ -1)) {
-                                          decompiledRegionSelector1 = 7;
-                                          break L0;
-                                        } else {
-                                          break L7;
-                                        }
+                            var7_int = ig.a("hw3d", true);
+                            if (0 != (var7_int ^ -1)) {
+                              if (100 <= var7_int) {
+                                var8_int = ig.a("jaclib", true);
+                                if (0 != (var8_int ^ -1)) {
+                                  if (-101 >= (var8_int ^ -1)) {
+                                    var9 = ig.a("jaggl", true);
+                                    if (var9 != -1) {
+                                      if ((var9 ^ -1) <= -101) {
+                                        break L4;
                                       } else {
-                                        decompiledRegionSelector1 = 6;
+                                        decompiledRegionSelector1 = 4;
                                         break L0;
                                       }
+                                    } else {
+                                      var6.field_f = false;
+                                      break L3;
                                     }
                                   } else {
-                                    break L10;
+                                    decompiledRegionSelector1 = 3;
+                                    break L0;
                                   }
+                                } else {
+                                  var6.field_f = false;
+                                  break L3;
                                 }
+                              } else {
+                                decompiledRegionSelector1 = 2;
+                                break L0;
                               }
-                              if (var7_int == 3) {
-                                if (sn.field_d.b((byte) 127)) {
-                                  L13: {
-                                    var7_int = ig.a("jaclib", true);
-                                    if (var7_int == -1) {
-                                      var6_ref.field_f = false;
-                                      if (var10 == 0) {
-                                        break L5;
-                                      } else {
-                                        break L13;
-                                      }
-                                    } else {
-                                      break L13;
-                                    }
-                                  }
+                            } else {
+                              var6.field_f = false;
+                              break L3;
+                            }
+                          }
+                        } else {
+                          if (1 != var7_int) {
+                            if (var7_int == 3) {
+                              if (sn.field_d.b((byte) 127)) {
+                                var7_int = ig.a("jaclib", true);
+                                if (var7_int == -1) {
+                                  var6.field_f = false;
+                                  break L3;
+                                } else {
                                   if (var7_int < 100) {
                                     decompiledRegionSelector1 = 9;
                                     break L0;
                                   } else {
-                                    L14: {
-                                      var8_int = ig.a("jagdx", true);
-                                      if ((var8_int ^ -1) != 0) {
-                                        break L14;
-                                      } else {
-                                        var6_ref.field_f = false;
-                                        if (var10 == 0) {
-                                          break L5;
-                                        } else {
-                                          break L14;
-                                        }
-                                      }
-                                    }
-                                    if (-101 >= (var8_int ^ -1)) {
-                                      L15: {
+                                    var8_int = ig.a("jagdx", true);
+                                    if ((var8_int ^ -1) != 0) {
+                                      if (-101 >= (var8_int ^ -1)) {
                                         var9 = ig.a("hw3d", true);
                                         if (0 == (var9 ^ -1)) {
-                                          var6_ref.field_f = false;
-                                          if (var10 == 0) {
-                                            break L5;
-                                          } else {
-                                            break L15;
-                                          }
+                                          var6.field_f = false;
+                                          break L3;
                                         } else {
-                                          break L15;
+                                          if (100 <= var9) {
+                                            break L4;
+                                          } else {
+                                            decompiledRegionSelector1 = 11;
+                                            break L0;
+                                          }
                                         }
-                                      }
-                                      if (100 <= var9) {
-                                        break L7;
                                       } else {
-                                        decompiledRegionSelector1 = 11;
+                                        decompiledRegionSelector1 = 10;
                                         break L0;
                                       }
                                     } else {
-                                      decompiledRegionSelector1 = 10;
-                                      break L0;
+                                      var6.field_f = false;
+                                      break L3;
                                     }
                                   }
-                                } else {
-                                  decompiledRegionSelector1 = 8;
-                                  break L0;
                                 }
                               } else {
-                                if ((var7_int ^ -1) != -3) {
-                                  throw new IllegalStateException("UT" + var6_ref.field_c);
-                                } else {
-                                  if (var10 == 0) {
-                                    if (sn.field_d.b((byte) 127)) {
-                                      L16: {
-                                        var7_int = ig.a("jaclib", true);
-                                        if (var7_int != -1) {
-                                          break L16;
-                                        } else {
-                                          var6_ref.field_f = false;
-                                          if (var10 == 0) {
-                                            break L5;
-                                          } else {
-                                            break L16;
-                                          }
-                                        }
-                                      }
-                                      if (100 <= var7_int) {
-                                        L17: {
-                                          var8_int = ig.a("sw3d", true);
-                                          if (0 != (var8_int ^ -1)) {
-                                            break L17;
-                                          } else {
-                                            var6_ref.field_f = false;
-                                            if (var10 == 0) {
-                                              break L5;
-                                            } else {
-                                              break L17;
-                                            }
-                                          }
-                                        }
+                                decompiledRegionSelector1 = 8;
+                                break L0;
+                              }
+                            } else {
+                              if ((var7_int ^ -1) != -3) {
+                                throw new IllegalStateException("UT" + var6.field_c);
+                              } else {
+                                if (sn.field_d.b((byte) 127)) {
+                                  var7_int = ig.a("jaclib", true);
+                                  if (var7_int != -1) {
+                                    if (100 <= var7_int) {
+                                      var8_int = ig.a("sw3d", true);
+                                      if (0 != (var8_int ^ -1)) {
                                         if (100 <= var8_int) {
-                                          break L7;
+                                          break L4;
                                         } else {
                                           decompiledRegionSelector1 = 14;
                                           break L0;
                                         }
                                       } else {
-                                        decompiledRegionSelector1 = 13;
-                                        break L0;
+                                        var6.field_f = false;
+                                        break L3;
                                       }
                                     } else {
-                                      decompiledRegionSelector1 = 12;
+                                      decompiledRegionSelector1 = 13;
                                       break L0;
                                     }
                                   } else {
-                                    break L9;
+                                    var6.field_f = false;
+                                    break L3;
                                   }
+                                } else {
+                                  decompiledRegionSelector1 = 12;
+                                  break L0;
                                 }
                               }
                             }
-                          }
-                          if (!sn.field_d.b((byte) 127)) {
-                            decompiledRegionSelector1 = 1;
-                            break L0;
                           } else {
-                            L18: {
-                              var7_int = ig.a("hw3d", true);
-                              if (0 != (var7_int ^ -1)) {
-                                break L18;
-                              } else {
-                                var6_ref.field_f = false;
-                                if (var10 == 0) {
-                                  break L5;
-                                } else {
-                                  break L18;
-                                }
-                              }
-                            }
-                            if (100 <= var7_int) {
-                              L19: {
-                                var8_int = ig.a("jaclib", true);
-                                if (0 != (var8_int ^ -1)) {
-                                  break L19;
-                                } else {
-                                  var6_ref.field_f = false;
-                                  if (var10 == 0) {
-                                    break L5;
+                            if (!sn.field_d.b((byte) 127)) {
+                              decompiledRegionSelector1 = 5;
+                              break L0;
+                            } else {
+                              var7_int = ig.a("jaclib", true);
+                              if (-1 != var7_int) {
+                                if (100 <= var7_int) {
+                                  var8_int = ig.a("jaggl", true);
+                                  if (var8_int == -1) {
+                                    var6.field_f = false;
+                                    break L3;
                                   } else {
-                                    break L19;
-                                  }
-                                }
-                              }
-                              if (-101 >= (var8_int ^ -1)) {
-                                L20: {
-                                  var9 = ig.a("jaggl", true);
-                                  if (var9 != -1) {
-                                    break L20;
-                                  } else {
-                                    var6_ref.field_f = false;
-                                    if (var10 == 0) {
-                                      break L5;
+                                    if (-101 < (var8_int ^ -1)) {
+                                      decompiledRegionSelector1 = 7;
+                                      break L0;
                                     } else {
-                                      break L20;
+                                      break L4;
                                     }
                                   }
-                                }
-                                if ((var9 ^ -1) <= -101) {
-                                  break L7;
                                 } else {
-                                  decompiledRegionSelector1 = 4;
+                                  decompiledRegionSelector1 = 6;
                                   break L0;
                                 }
                               } else {
-                                decompiledRegionSelector1 = 3;
-                                break L0;
-                              }
-                            } else {
-                              decompiledRegionSelector1 = 2;
-                              break L0;
-                            }
-                          }
-                        }
-                        L21: {
-                          if (null == this.field_c) {
-                            break L21;
-                          } else {
-                            L22: {
-                              if (!this.field_c.field_d.a(var6_ref, (byte) 95)) {
-                                break L22;
-                              } else {
-                                if (null == this.field_c.field_g) {
-                                  break L22;
-                                } else {
-                                  if (this.field_c.field_c != param1) {
-                                    break L22;
-                                  } else {
-                                    if (!var6_ref.a(this.field_c, (byte) -123)) {
-                                      break L22;
-                                    } else {
-                                      this.field_b = true;
-                                      decompiledRegionSelector1 = 15;
-                                      break L0;
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                            if ((this.field_c.field_d.field_c ^ -1) != (var6_ref.field_c ^ -1)) {
-                              break L21;
-                            } else {
-                              if (this.field_c.field_g != null) {
-                                var3 = this.field_c.b(-43);
-                                this.field_c.field_g.a((byte) -94);
-                                this.field_c = null;
-                                break L21;
-                              } else {
-                                break L21;
+                                var6.field_f = false;
+                                break L3;
                               }
                             }
                           }
                         }
-                        try {
-                          L23: {
-                            L24: {
-                              var11 = ks.a(var6_ref.field_c, param1, this.field_e, true, var6_ref.field_g, ha.field_g);
-                              if (var11 != null) {
-                                var8 = new bk(var11, var6_ref, param1);
-                                if (!var6_ref.a(var8, (byte) -36)) {
-                                  break L24;
-                                } else {
-                                  L25: {
-                                    if (this.field_c == null) {
-                                      break L25;
-                                    } else {
-                                      L26: {
-                                        if (var8.field_g != this.field_c.field_g) {
-                                          break L26;
-                                        } else {
-                                          if (var8.field_c == this.field_c.field_c) {
-                                            this.field_c = var8;
-                                            this.field_b = true;
-                                            decompiledRegionSelector0 = 1;
-                                            break L23;
-                                          } else {
-                                            break L26;
-                                          }
-                                        }
-                                      }
-                                      var3 = this.field_c.b(79);
-                                      this.field_c.field_g.a((byte) -109);
-                                      break L25;
-                                    }
-                                  }
-                                  L27: {
-                                    if (var8.field_g.c()) {
-                                      var8.field_g.a(var8.field_g.c(100663296));
-                                      break L27;
-                                    } else {
-                                      break L27;
-                                    }
-                                  }
-                                  L28: {
-                                    L29: {
-                                      if (var3 == null) {
-                                        break L29;
-                                      } else {
-                                        ((cj) (var3)).a(var8, 3);
-                                        if (var10 == 0) {
-                                          break L28;
-                                        } else {
-                                          break L29;
-                                        }
-                                      }
-                                    }
-                                    var8.field_f = wq.a(param0 + 59);
-                                    break L28;
-                                  }
-                                  this.field_b = true;
-                                  this.field_c = var8;
-                                  decompiledRegionSelector0 = 2;
-                                  break L23;
-                                }
-                              } else {
-                                break L24;
-                              }
-                            }
-                            decompiledRegionSelector0 = 0;
-                            break L23;
-                          }
-                        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-                          decompiledCaughtException = decompiledCaughtParameter0;
-                          L30: {
-                            var7 = decompiledCaughtException;
-                            var7.printStackTrace();
-                            decompiledRegionSelector0 = 0;
-                            break L30;
-                          }
-                        }
-                        if (decompiledRegionSelector0 == 0) {
-                          var6_ref.field_f = false;
-                          break L5;
-                        } else {
-                          if (decompiledRegionSelector0 == 1) {
-                            decompiledRegionSelector1 = 16;
-                            break L0;
-                          } else {
-                            decompiledRegionSelector1 = 17;
-                            break L0;
-                          }
-                        }
-                      }
-                      var5++;
-                      if (var10 == 0) {
-                        continue L2;
                       } else {
                         break L4;
                       }
                     }
+                    L5: {
+                      if (null == this.field_c) {
+                        break L5;
+                      } else {
+                        L6: {
+                          if (!this.field_c.field_d.a(var6, (byte) 95)) {
+                            break L6;
+                          } else {
+                            if (null == this.field_c.field_g) {
+                              break L6;
+                            } else {
+                              if (this.field_c.field_c != param1) {
+                                break L6;
+                              } else {
+                                if (!var6.a(this.field_c, (byte) -123)) {
+                                  break L6;
+                                } else {
+                                  this.field_b = true;
+                                  decompiledRegionSelector1 = 15;
+                                  break L0;
+                                }
+                              }
+                            }
+                          }
+                        }
+                        if ((this.field_c.field_d.field_c ^ -1) != (var6.field_c ^ -1)) {
+                          break L5;
+                        } else {
+                          if (this.field_c.field_g != null) {
+                            var3 = this.field_c.b(-43);
+                            this.field_c.field_g.a((byte) -94);
+                            this.field_c = null;
+                            break L5;
+                          } else {
+                            break L5;
+                          }
+                        }
+                      }
+                    }
+                    try {
+                      L7: {
+                        L8: {
+                          var11 = ks.a(var6.field_c, param1, this.field_e, true, var6.field_g, ha.field_g);
+                          if (var11 != null) {
+                            var8 = new bk(var11, var6, param1);
+                            if (!var6.a(var8, (byte) -36)) {
+                              break L8;
+                            } else {
+                              L9: {
+                                if (this.field_c == null) {
+                                  break L9;
+                                } else {
+                                  L10: {
+                                    if (var8.field_g != this.field_c.field_g) {
+                                      break L10;
+                                    } else {
+                                      if (var8.field_c == this.field_c.field_c) {
+                                        this.field_c = var8;
+                                        this.field_b = true;
+                                        decompiledRegionSelector0 = 1;
+                                        break L7;
+                                      } else {
+                                        break L10;
+                                      }
+                                    }
+                                  }
+                                  var3 = this.field_c.b(79);
+                                  this.field_c.field_g.a((byte) -109);
+                                  break L9;
+                                }
+                              }
+                              L11: {
+                                if (var8.field_g.c()) {
+                                  var8.field_g.a(var8.field_g.c(100663296));
+                                  break L11;
+                                } else {
+                                  break L11;
+                                }
+                              }
+                              L12: {
+                                if (var3 == null) {
+                                  var8.field_f = wq.a(param0 + 59);
+                                  break L12;
+                                } else {
+                                  ((cj) (var3)).a(var8, 3);
+                                  break L12;
+                                }
+                              }
+                              this.field_b = true;
+                              this.field_c = var8;
+                              decompiledRegionSelector0 = 2;
+                              break L7;
+                            }
+                          } else {
+                            break L8;
+                          }
+                        }
+                        decompiledRegionSelector0 = 0;
+                        break L7;
+                      }
+                    } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L13: {
+                        var7 = decompiledCaughtException;
+                        var7.printStackTrace();
+                        decompiledRegionSelector0 = 0;
+                        break L13;
+                      }
+                    }
+                    if (decompiledRegionSelector0 == 0) {
+                      var6.field_f = false;
+                      break L3;
+                    } else {
+                      if (decompiledRegionSelector0 == 1) {
+                        decompiledRegionSelector1 = 16;
+                        break L0;
+                      } else {
+                        decompiledRegionSelector1 = 17;
+                        break L0;
+                      }
+                    }
+                  } else {
+                    break L3;
                   }
                 }
-                break L3;
+                var5++;
+                continue L2;
               }
-              decompiledRegionSelector1 = 0;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L31: {
+          L14: {
             var3 = decompiledCaughtException;
-            stackOut_126_0 = var3;
-            stackOut_126_1 = new StringBuilder().append("ik.B(").append(param0).append(',');
-            stackIn_128_0 = stackOut_126_0;
-            stackIn_128_1 = stackOut_126_1;
-            stackIn_127_0 = stackOut_126_0;
-            stackIn_127_1 = stackOut_126_1;
+            stackIn_115_0 = var3;
+
+            stackIn_115_1 = new StringBuilder().append("ik.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_128_0 = stackIn_128_0;
-              stackOut_128_1 = (StringBuilder) ((Object) stackIn_128_1);
-              stackOut_128_2 = "null";
-              stackIn_129_0 = stackOut_128_0;
-              stackIn_129_1 = stackOut_128_1;
-              stackIn_129_2 = stackOut_128_2;
-              break L31;
+              stackIn_116_0 = stackIn_115_0;
+              stackIn_116_1 = (StringBuilder) ((Object) stackIn_115_1);
+              stackIn_116_2 = "null";
+              break L14;
             } else {
-              stackOut_127_0 = stackIn_127_0;
-              stackOut_127_1 = (StringBuilder) ((Object) stackIn_127_1);
-              stackOut_127_2 = "{...}";
-              stackIn_129_0 = stackOut_127_0;
-              stackIn_129_1 = stackOut_127_1;
-              stackIn_129_2 = stackOut_127_2;
-              break L31;
+              stackIn_116_0 = stackIn_115_0;
+              stackIn_116_1 = (StringBuilder) ((Object) stackIn_115_1);
+              stackIn_116_2 = "{...}";
+              break L14;
             }
           }
-          throw qo.a((Throwable) ((Object) stackIn_129_0), stackIn_129_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_116_0), stackIn_116_2 + ')');
         }
         if (decompiledRegionSelector1 == 0) {
           return;

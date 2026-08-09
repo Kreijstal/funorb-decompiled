@@ -51,27 +51,15 @@ final class we implements Runnable {
     }
 
     final static e a(nc param0, int param1) {
-        boolean discarded$2 = false;
         e var2 = null;
         RuntimeException var2_ref = null;
         e stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        e stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -80,40 +68,31 @@ final class we implements Runnable {
               if (param1 == 6222) {
                 break L1;
               } else {
-                discarded$2 = we.b(false);
+                we.b(false);
                 break L1;
               }
             }
             mj.field_a.a(param0);
-            stackOut_2_0 = (e) (var2);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (e) (var2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2_ref);
-            stackOut_4_1 = new StringBuilder().append("we.B(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2_ref);
+
+            stackIn_6_1 = new StringBuilder().append("we.B(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -123,12 +102,12 @@ final class we implements Runnable {
     }
 
     final synchronized boolean a(boolean param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         if ((this.field_p ^ -1) > -3) {
           L0: {
             if (0 != this.field_p) {
@@ -345,7 +324,6 @@ final class we implements Runnable {
     }
 
     final static boolean b(boolean param0) {
-        boolean discarded$5 = false;
         if (!param0) {
           if (TorChallenge.field_H != null) {
             if (TorChallenge.field_H.f((byte) 123) == null) {
@@ -357,7 +335,7 @@ final class we implements Runnable {
             return false;
           }
         } else {
-          discarded$5 = we.b(false);
+          we.b(false);
           if (TorChallenge.field_H != null) {
             if (TorChallenge.field_H.f((byte) 123) == null) {
               return false;
@@ -396,11 +374,10 @@ final class we implements Runnable {
     }
 
     public static void a(int param0) {
-        boolean discarded$2 = false;
         field_l = null;
         field_m = null;
         if (param0 != 25910) {
-          discarded$2 = we.b(true);
+          we.b(true);
           field_e = (ka[][]) null;
           field_i = null;
           field_c = (String[][]) null;

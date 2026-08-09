@@ -39,56 +39,60 @@ final class gt extends k {
     }
 
     final int[] a(int param0, int param1) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int[] var3 = null;
-        int[][] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int[][] var19 = null;
-        int[][] var20 = null;
-        Random var21 = null;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26_int = 0;
-        int[] var26 = null;
-        int[][] var27 = null;
-        int var28 = 0;
-        int var29_int = 0;
-        int[] var29 = null;
-        int var30 = 0;
-        int var31 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int[][] var40 = null;
-        int[] var42 = null;
-        int[] var43 = null;
-        int[] var44 = null;
-        int[] var45 = null;
-        int[][] var46 = null;
-        int[][] var47 = null;
-        int[][] var48 = null;
-        int[] var53 = null;
-        int[] var54 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_20_1 = 0;
+        int stackIn_60_0 = 0;
+        int stackIn_60_1 = 0;
+        int[] var3;
+        int[][] var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int[][] var19;
+        int[][] var20;
+        Random var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26_int;
+        int[] var26;
+        int[][] var27;
+        int var28;
+        int var29_int;
+        int[] var29;
+        int var30;
+        int var31;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int[][] var40;
+        int[] var42;
+        int[] var43;
+        int[] var44;
+        int[] var45;
+        int[][] var46;
+        int[][] var47;
+        int[][] var48;
+        int[] var53;
+        int[] var54;
         L0: {
           var38 = BachelorFridge.field_y;
           if (param1 == 0) {
@@ -170,7 +174,7 @@ final class gt extends k {
                         if (var53[0] > var29_int) {
                           break L8;
                         } else {
-                          if (var29_int <= var53[1]) {
+                          if ((var29_int ^ -1) >= (var53[1] ^ -1)) {
                             L9: {
                               var22 = var54[2];
                               if (var26_int != var9) {
@@ -251,7 +255,9 @@ final class gt extends k {
                       }
                       var28++;
                       var26_int++;
-                      if (var12 > var26_int) {
+                      stackIn_20_0 = var12;
+                      stackIn_20_1 = var26_int;
+                      if (stackIn_20_0 > stackIn_20_1) {
                         continue L7;
                       } else {
                         var26_int = 0;
@@ -276,9 +282,9 @@ final class gt extends k {
                   } else {
                     L16: {
                       var10 = 1;
-                      incrementValue$2 = var13;
+                      incrementValue$0 = var13;
                       var13++;
-                      var45 = var19[incrementValue$2];
+                      var45 = var19[incrementValue$0];
                       var26 = var45;
                       var45[1] = var25;
                       var45[0] = var8;
@@ -319,13 +325,14 @@ final class gt extends k {
                           if (var28 > var29[1]) {
                             break L19;
                           } else {
-                            var9 = var9;
                             continue L2;
                           }
                         }
                       }
                       var9++;
-                      if (var9 >= var12) {
+                      stackIn_60_0 = var9 ^ -1;
+                      stackIn_60_1 = var12 ^ -1;
+                      if (stackIn_60_0 <= stackIn_60_1) {
                         var9 = 0;
                         continue L18;
                       } else {
@@ -334,9 +341,9 @@ final class gt extends k {
                     }
                   }
                 } else {
-                  incrementValue$3 = var13;
+                  incrementValue$1 = var13;
                   var13++;
-                  var44 = var19[incrementValue$3];
+                  var44 = var19[incrementValue$1];
                   var26 = var44;
                   var44[0] = var8;
                   var26[2] = var24 + var22;
@@ -355,11 +362,49 @@ final class gt extends k {
     }
 
     private final void a(int[][] param0, int param1, int param2, Random param3, int param4, int param5, int param6) {
-        int dupTemp$5 = 0;
-        int dupTemp$6 = 0;
-        int dupTemp$7 = 0;
-        RuntimeException var8 = null;
+        int dupTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_7_1 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_20_0 = 0;
+        int[] stackIn_29_0;
+        int stackIn_29_1;
+        int[] stackIn_29_2;
+        int stackIn_29_3;
+        int[] stackIn_30_0;
+        int stackIn_30_1;
+        int[] stackIn_30_2;
+        int stackIn_30_3;
+        int stackIn_30_4;
+        int[] stackIn_35_0;
+        int stackIn_35_1;
+        int[] stackIn_35_2;
+        int stackIn_35_3;
+        int stackIn_35_4;
+        int[] stackIn_45_0;
+        int stackIn_45_1;
+        int[] stackIn_45_2;
+        int stackIn_45_3;
+        int[] stackIn_46_0;
+        int stackIn_46_1;
+        int[] stackIn_46_2;
+        int stackIn_46_3;
+        int stackIn_46_4;
+        RuntimeException stackIn_70_0 = null;
+        StringBuilder stackIn_70_1 = null;
+        RuntimeException stackIn_71_0 = null;
+        StringBuilder stackIn_71_1 = null;
+        String stackIn_71_2 = null;
+        StringBuilder stackIn_73_1 = null;
+        StringBuilder stackIn_74_1 = null;
+        String stackIn_74_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -376,141 +421,30 @@ final class gt extends k {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_7_1 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_20_0 = 0;
-        int[] stackIn_28_0 = null;
-        int stackIn_28_1 = 0;
-        int[] stackIn_28_2 = null;
-        int stackIn_28_3 = 0;
-        int[] stackIn_29_0 = null;
-        int stackIn_29_1 = 0;
-        int[] stackIn_29_2 = null;
-        int stackIn_29_3 = 0;
-        int[] stackIn_30_0 = null;
-        int stackIn_30_1 = 0;
-        int[] stackIn_30_2 = null;
-        int stackIn_30_3 = 0;
-        int stackIn_30_4 = 0;
-        int[] stackIn_42_0 = null;
-        int stackIn_42_1 = 0;
-        int[] stackIn_42_2 = null;
-        int stackIn_42_3 = 0;
-        int[] stackIn_43_0 = null;
-        int stackIn_43_1 = 0;
-        int[] stackIn_43_2 = null;
-        int stackIn_43_3 = 0;
-        int[] stackIn_44_0 = null;
-        int stackIn_44_1 = 0;
-        int[] stackIn_44_2 = null;
-        int stackIn_44_3 = 0;
-        int stackIn_44_4 = 0;
-        RuntimeException stackIn_67_0 = null;
-        StringBuilder stackIn_67_1 = null;
-        RuntimeException stackIn_68_0 = null;
-        StringBuilder stackIn_68_1 = null;
-        RuntimeException stackIn_69_0 = null;
-        StringBuilder stackIn_69_1 = null;
-        String stackIn_69_2 = null;
-        RuntimeException stackIn_70_0 = null;
-        StringBuilder stackIn_70_1 = null;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
-        String stackIn_72_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int[] stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        int[] stackOut_27_2 = null;
-        int stackOut_27_3 = 0;
-        int[] stackOut_29_0 = null;
-        int stackOut_29_1 = 0;
-        int[] stackOut_29_2 = null;
-        int stackOut_29_3 = 0;
-        int stackOut_29_4 = 0;
-        int[] stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        int[] stackOut_28_2 = null;
-        int stackOut_28_3 = 0;
-        int stackOut_28_4 = 0;
-        int[] stackOut_41_0 = null;
-        int stackOut_41_1 = 0;
-        int[] stackOut_41_2 = null;
-        int stackOut_41_3 = 0;
-        int[] stackOut_43_0 = null;
-        int stackOut_43_1 = 0;
-        int[] stackOut_43_2 = null;
-        int stackOut_43_3 = 0;
-        int stackOut_43_4 = 0;
-        int[] stackOut_42_0 = null;
-        int stackOut_42_1 = 0;
-        int[] stackOut_42_2 = null;
-        int stackOut_42_3 = 0;
-        int stackOut_42_4 = 0;
-        RuntimeException stackOut_66_0 = null;
-        StringBuilder stackOut_66_1 = null;
-        RuntimeException stackOut_68_0 = null;
-        StringBuilder stackOut_68_1 = null;
-        String stackOut_68_2 = null;
-        RuntimeException stackOut_67_0 = null;
-        StringBuilder stackOut_67_1 = null;
-        String stackOut_67_2 = null;
-        RuntimeException stackOut_69_0 = null;
-        StringBuilder stackOut_69_1 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        String stackOut_71_2 = null;
-        RuntimeException stackOut_70_0 = null;
-        StringBuilder stackOut_70_1 = null;
-        String stackOut_70_2 = null;
         var23 = BachelorFridge.field_y;
         try {
           L0: {
             L1: {
               if ((this.field_u ^ -1) < param2) {
-                stackOut_3_0 = 4096 - kla.a(this.field_u, param3, -2147483648);
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = 4096 - kla.a(this.field_u, param3, -2147483648);
                 break L1;
               } else {
-                stackOut_2_0 = 4096;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = 4096;
                 break L1;
               }
             }
             L2: {
               var8_int = stackIn_4_0;
               var9 = this.field_q * this.field_o >> 276144460;
-              stackOut_4_0 = this.field_q;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_6_0 = this.field_q;
+
               if (0 >= var9) {
-                stackOut_6_0 = stackIn_6_0;
-                stackOut_6_1 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = stackIn_6_0;
+                stackIn_7_1 = 0;
                 break L2;
               } else {
-                stackOut_5_0 = stackIn_5_0;
-                stackOut_5_1 = kla.a(var9, param3, -2147483648);
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+                stackIn_7_0 = stackIn_6_0;
+                stackIn_7_1 = kla.a(var9, param3, -2147483648);
                 break L2;
               }
             }
@@ -561,24 +495,20 @@ final class gt extends k {
                         var11 = param4 / 2;
                         var12 = param5 / 2;
                         if (var11 < var10) {
-                          stackOut_16_0 = var11;
-                          stackIn_17_0 = stackOut_16_0;
+                          stackIn_17_0 = var11;
                           break L8;
                         } else {
-                          stackOut_15_0 = var10;
-                          stackIn_17_0 = stackOut_15_0;
+                          stackIn_17_0 = var10;
                           break L8;
                         }
                       }
                       L9: {
                         var13_int = stackIn_17_0;
                         if (var12 >= var10) {
-                          stackOut_19_0 = var10;
-                          stackIn_20_0 = stackOut_19_0;
+                          stackIn_20_0 = var10;
                           break L9;
                         } else {
-                          stackOut_18_0 = var12;
-                          stackIn_20_0 = stackOut_18_0;
+                          stackIn_20_0 = var12;
                           break L9;
                         }
                       }
@@ -602,9 +532,13 @@ final class gt extends k {
                                       break L12;
                                     } else {
                                       var21 = var8_int * var20 / var13_int;
-                                      dupTemp$5 = dda.a(wp.field_r, -1 + param4 + (param1 - var20));
-                                      var18[dupTemp$5] = var19 * var21 >> -1711849748;
-                                      var18[dda.a(wp.field_r, param1 - -var20)] = var19 * var21 >> -1711849748;
+                                      stackIn_35_0 = (int[]) (var18);
+                                      stackIn_35_1 = dda.a(wp.field_r, param1 - -var20);
+                                      stackIn_35_2 = (int[]) (var18);
+                                      stackIn_35_3 = dda.a(wp.field_r, -1 + param4 + (param1 - var20));
+                                      stackIn_35_4 = var19 * var21 >> -1711849748;
+                                      stackIn_35_2[stackIn_35_3] = stackIn_35_4;
+                                      stackIn_35_0[stackIn_35_1] = stackIn_35_4;
                                       var20++;
                                       continue L13;
                                     }
@@ -617,41 +551,27 @@ final class gt extends k {
                                     } else {
                                       L15: {
                                         var21 = var20 * var8_int / var13_int;
-                                        stackOut_27_0 = (int[]) (var18);
-                                        stackOut_27_1 = dda.a(var20 + param1, wp.field_r);
-                                        stackOut_27_2 = (int[]) (var18);
-                                        stackOut_27_3 = dda.a(-1 + -var20 + (param4 + param1), wp.field_r);
-                                        stackIn_29_0 = stackOut_27_0;
-                                        stackIn_29_1 = stackOut_27_1;
-                                        stackIn_29_2 = stackOut_27_2;
-                                        stackIn_29_3 = stackOut_27_3;
-                                        stackIn_28_0 = stackOut_27_0;
-                                        stackIn_28_1 = stackOut_27_1;
-                                        stackIn_28_2 = stackOut_27_2;
-                                        stackIn_28_3 = stackOut_27_3;
+                                        stackIn_29_0 = (int[]) (var18);
+
+                                        stackIn_29_1 = dda.a(var20 + param1, wp.field_r);
+
+                                        stackIn_29_2 = (int[]) (var18);
+
+                                        stackIn_29_3 = dda.a(-1 + -var20 + (param4 + param1), wp.field_r);
+
                                         if (var21 >= var19) {
-                                          stackOut_29_0 = (int[]) ((Object) stackIn_29_0);
-                                          stackOut_29_1 = stackIn_29_1;
-                                          stackOut_29_2 = (int[]) ((Object) stackIn_29_2);
-                                          stackOut_29_3 = stackIn_29_3;
-                                          stackOut_29_4 = var19;
-                                          stackIn_30_0 = stackOut_29_0;
-                                          stackIn_30_1 = stackOut_29_1;
-                                          stackIn_30_2 = stackOut_29_2;
-                                          stackIn_30_3 = stackOut_29_3;
-                                          stackIn_30_4 = stackOut_29_4;
+                                          stackIn_30_0 = (int[]) ((Object) stackIn_29_0);
+                                          stackIn_30_1 = stackIn_29_1;
+                                          stackIn_30_2 = (int[]) ((Object) stackIn_29_2);
+                                          stackIn_30_3 = stackIn_29_3;
+                                          stackIn_30_4 = var19;
                                           break L15;
                                         } else {
-                                          stackOut_28_0 = (int[]) ((Object) stackIn_28_0);
-                                          stackOut_28_1 = stackIn_28_1;
-                                          stackOut_28_2 = (int[]) ((Object) stackIn_28_2);
-                                          stackOut_28_3 = stackIn_28_3;
-                                          stackOut_28_4 = var21;
-                                          stackIn_30_0 = stackOut_28_0;
-                                          stackIn_30_1 = stackOut_28_1;
-                                          stackIn_30_2 = stackOut_28_2;
-                                          stackIn_30_3 = stackOut_28_3;
-                                          stackIn_30_4 = stackOut_28_4;
+                                          stackIn_30_0 = (int[]) ((Object) stackIn_29_0);
+                                          stackIn_30_1 = stackIn_29_1;
+                                          stackIn_30_2 = (int[]) ((Object) stackIn_29_2);
+                                          stackIn_30_3 = stackIn_29_3;
+                                          stackIn_30_4 = var21;
                                           break L15;
                                         }
                                       }
@@ -688,8 +608,8 @@ final class gt extends k {
                                       break L11;
                                     }
                                   } else {
-                                    dupTemp$6 = dda.a(-var20 + param1 - (-param4 - -1), wp.field_r);
-                                    var18[dupTemp$6] = var8_int * var20 / var13_int;
+                                    dupTemp$0 = dda.a(-var20 + param1 - (-param4 - -1), wp.field_r);
+                                    var18[dupTemp$0] = var8_int * var20 / var13_int;
                                     var18[dda.a(var20 + param1, wp.field_r)] = var8_int * var20 / var13_int;
                                     var20++;
                                     continue L16;
@@ -705,8 +625,8 @@ final class gt extends k {
                                         break L17;
                                       } else {
                                         var22 = var21 * var8_int / var13_int;
-                                        dupTemp$7 = dda.a(wp.field_r, -var21 + param1 - -param4 - 1);
-                                        var18[dupTemp$7] = var22 * var20 >> 569316140;
+                                        dupTemp$1 = dda.a(wp.field_r, -var21 + param1 - -param4 - 1);
+                                        var18[dupTemp$1] = var22 * var20 >> 569316140;
                                         var18[dda.a(wp.field_r, param1 - -var21)] = var22 * var20 >> 569316140;
                                         var21++;
                                         continue L18;
@@ -720,46 +640,32 @@ final class gt extends k {
                                       } else {
                                         L20: {
                                           var22 = var21 * var8_int / var13_int;
-                                          stackOut_41_0 = (int[]) (var18);
-                                          stackOut_41_1 = dda.a(wp.field_r, param1 + var21);
-                                          stackOut_41_2 = (int[]) (var18);
-                                          stackOut_41_3 = dda.a(wp.field_r, -1 + param4 + (param1 - var21));
-                                          stackIn_43_0 = stackOut_41_0;
-                                          stackIn_43_1 = stackOut_41_1;
-                                          stackIn_43_2 = stackOut_41_2;
-                                          stackIn_43_3 = stackOut_41_3;
-                                          stackIn_42_0 = stackOut_41_0;
-                                          stackIn_42_1 = stackOut_41_1;
-                                          stackIn_42_2 = stackOut_41_2;
-                                          stackIn_42_3 = stackOut_41_3;
+                                          stackIn_45_0 = (int[]) (var18);
+
+                                          stackIn_45_1 = dda.a(wp.field_r, param1 + var21);
+
+                                          stackIn_45_2 = (int[]) (var18);
+
+                                          stackIn_45_3 = dda.a(wp.field_r, -1 + param4 + (param1 - var21));
+
                                           if (var22 >= var20) {
-                                            stackOut_43_0 = (int[]) ((Object) stackIn_43_0);
-                                            stackOut_43_1 = stackIn_43_1;
-                                            stackOut_43_2 = (int[]) ((Object) stackIn_43_2);
-                                            stackOut_43_3 = stackIn_43_3;
-                                            stackOut_43_4 = var20;
-                                            stackIn_44_0 = stackOut_43_0;
-                                            stackIn_44_1 = stackOut_43_1;
-                                            stackIn_44_2 = stackOut_43_2;
-                                            stackIn_44_3 = stackOut_43_3;
-                                            stackIn_44_4 = stackOut_43_4;
+                                            stackIn_46_0 = (int[]) ((Object) stackIn_45_0);
+                                            stackIn_46_1 = stackIn_45_1;
+                                            stackIn_46_2 = (int[]) ((Object) stackIn_45_2);
+                                            stackIn_46_3 = stackIn_45_3;
+                                            stackIn_46_4 = var20;
                                             break L20;
                                           } else {
-                                            stackOut_42_0 = (int[]) ((Object) stackIn_42_0);
-                                            stackOut_42_1 = stackIn_42_1;
-                                            stackOut_42_2 = (int[]) ((Object) stackIn_42_2);
-                                            stackOut_42_3 = stackIn_42_3;
-                                            stackOut_42_4 = var22;
-                                            stackIn_44_0 = stackOut_42_0;
-                                            stackIn_44_1 = stackOut_42_1;
-                                            stackIn_44_2 = stackOut_42_2;
-                                            stackIn_44_3 = stackOut_42_3;
-                                            stackIn_44_4 = stackOut_42_4;
+                                            stackIn_46_0 = (int[]) ((Object) stackIn_45_0);
+                                            stackIn_46_1 = stackIn_45_1;
+                                            stackIn_46_2 = (int[]) ((Object) stackIn_45_2);
+                                            stackIn_46_3 = stackIn_45_3;
+                                            stackIn_46_4 = var22;
                                             break L20;
                                           }
                                         }
-                                        stackIn_44_2[stackIn_44_3] = stackIn_44_4;
-                                        stackIn_44_0[stackIn_44_1] = stackIn_44_4;
+                                        stackIn_46_2[stackIn_46_3] = stackIn_46_4;
+                                        stackIn_46_0[stackIn_46_1] = stackIn_46_4;
                                         var21++;
                                         continue L19;
                                       }
@@ -798,56 +704,40 @@ final class gt extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L21: {
             var8 = decompiledCaughtException;
-            stackOut_66_0 = (RuntimeException) (var8);
-            stackOut_66_1 = new StringBuilder().append("gt.F(");
-            stackIn_68_0 = stackOut_66_0;
-            stackIn_68_1 = stackOut_66_1;
-            stackIn_67_0 = stackOut_66_0;
-            stackIn_67_1 = stackOut_66_1;
+            stackIn_70_0 = (RuntimeException) (var8);
+
+            stackIn_70_1 = new StringBuilder().append("gt.F(");
+
             if (param0 == null) {
-              stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
-              stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
-              stackOut_68_2 = "null";
-              stackIn_69_0 = stackOut_68_0;
-              stackIn_69_1 = stackOut_68_1;
-              stackIn_69_2 = stackOut_68_2;
+              stackIn_71_0 = (RuntimeException) ((Object) stackIn_70_0);
+              stackIn_71_1 = (StringBuilder) ((Object) stackIn_70_1);
+              stackIn_71_2 = "null";
               break L21;
             } else {
-              stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
-              stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
-              stackOut_67_2 = "{...}";
-              stackIn_69_0 = stackOut_67_0;
-              stackIn_69_1 = stackOut_67_1;
-              stackIn_69_2 = stackOut_67_2;
+              stackIn_71_0 = (RuntimeException) ((Object) stackIn_70_0);
+              stackIn_71_1 = (StringBuilder) ((Object) stackIn_70_1);
+              stackIn_71_2 = "{...}";
               break L21;
             }
           }
           L22: {
-            stackOut_69_0 = (RuntimeException) ((Object) stackIn_69_0);
-            stackOut_69_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_69_2).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_71_0 = stackOut_69_0;
-            stackIn_71_1 = stackOut_69_1;
-            stackIn_70_0 = stackOut_69_0;
-            stackIn_70_1 = stackOut_69_1;
+
+
+            stackIn_73_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
-              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackOut_71_2 = "null";
-              stackIn_72_0 = stackOut_71_0;
-              stackIn_72_1 = stackOut_71_1;
-              stackIn_72_2 = stackOut_71_2;
+              stackIn_71_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
+              stackIn_74_2 = "null";
               break L22;
             } else {
-              stackOut_70_0 = (RuntimeException) ((Object) stackIn_70_0);
-              stackOut_70_1 = (StringBuilder) ((Object) stackIn_70_1);
-              stackOut_70_2 = "{...}";
-              stackIn_72_0 = stackOut_70_0;
-              stackIn_72_1 = stackOut_70_1;
-              stackIn_72_2 = stackOut_70_2;
+              stackIn_71_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
+              stackIn_74_2 = "{...}";
               break L22;
             }
           }
-          throw pe.a((Throwable) ((Object) stackIn_72_0), stackIn_72_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_71_0), stackIn_74_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -857,25 +747,15 @@ final class gt extends k {
     }
 
     final void a(byte param0, lu param1, int param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -942,27 +822,19 @@ final class gt extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var4);
-            stackOut_27_1 = new StringBuilder().append("gt.E(").append(param0).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackIn_29_0 = (RuntimeException) (var4);
+
+            stackIn_29_1 = new StringBuilder().append("gt.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L3;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L3;
             }
           }
@@ -971,8 +843,7 @@ final class gt extends k {
     }
 
     final static String a(int param0, byte[] param1, byte param2, int param3) {
-        String discarded$4 = null;
-        int incrementValue$5 = 0;
+        int incrementValue$1 = 0;
         char[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -984,23 +855,12 @@ final class gt extends k {
         char[] var11 = null;
         char[] var12 = null;
         String stackIn_17_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_16_0 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
         var9 = BachelorFridge.field_y;
         try {
           L0: {
@@ -1013,15 +873,14 @@ final class gt extends k {
                 break L1;
               } else {
                 var10 = (byte[]) null;
-                discarded$4 = gt.a(15, (byte[]) null, (byte) 43, 15);
+                gt.a(15, (byte[]) null, (byte) 43, 15);
                 break L1;
               }
             }
             var6 = 0;
             L2: while (true) {
               if (var6 >= param3) {
-                stackOut_16_0 = new String(var12, 0, var5);
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_0 = new String(var12, 0, var5);
                 break L0;
               } else {
                 L3: {
@@ -1048,9 +907,9 @@ final class gt extends k {
                         }
                       }
                     }
-                    incrementValue$5 = var5;
+                    incrementValue$1 = var5;
                     var5++;
-                    var4[incrementValue$5] = (char)var7;
+                    var4[incrementValue$1] = (char)var7;
                     break L3;
                   } else {
                     break L3;
@@ -1065,27 +924,19 @@ final class gt extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4_ref = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var4_ref);
-            stackOut_18_1 = new StringBuilder().append("gt.C(").append(param0).append(',');
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var4_ref);
+
+            stackIn_20_1 = new StringBuilder().append("gt.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L6;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L6;
             }
           }

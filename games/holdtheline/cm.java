@@ -8,15 +8,12 @@ final class cm {
     static int field_a;
 
     final static boolean a(int param0) {
-        boolean discarded$2 = false;
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == -2043140287) {
             break L0;
           } else {
-            discarded$2 = cm.a(-80);
+            cm.a(-80);
             break L0;
           }
         }
@@ -28,14 +25,12 @@ final class cm {
               if (!d.field_f.a(-1)) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
@@ -53,8 +48,6 @@ final class cm {
         int stackIn_13_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_8_0 = 0;
         var8 = HoldTheLine.field_D;
         try {
           L0: {
@@ -70,8 +63,7 @@ final class cm {
             var4 = ie.field_j;
             L2: while (true) {
               if (var3_int >= ii.field_b.length) {
-                stackOut_12_0 = -1;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -85,8 +77,7 @@ final class cm {
                       var4 = var4 + ((vf.field_w << -1855829503) + dc.field_bb - -w.field_b);
                       break L3;
                     } else {
-                      stackOut_8_0 = var5;
-                      stackIn_9_0 = stackOut_8_0;
+                      stackIn_9_0 = var5;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     }

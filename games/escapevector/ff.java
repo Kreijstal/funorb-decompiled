@@ -41,8 +41,8 @@ final class ff {
     }
 
     final si a(int param0, byte param1) {
-        si var3 = null;
-        byte[] var4 = null;
+        si var3;
+        byte[] var4;
         var3 = (si) (this.field_c.a((long)param0, (byte) -54));
         if (var3 == null) {
           L0: {

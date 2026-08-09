@@ -25,8 +25,8 @@ final class ef extends ma {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        ck var7 = null;
-        ck var8 = null;
+        ck var7;
+        ck var8;
         if (param1 <= -103) {
           if (0 == param2) {
             if (null == this.field_L) {

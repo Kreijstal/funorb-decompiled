@@ -7,10 +7,9 @@ final class cd {
     static int field_a;
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_b = null;
         if (param0 <= 63) {
-            discarded$0 = cd.b(44);
+            cd.b(44);
             field_c = null;
             return;
         }

@@ -37,10 +37,9 @@ final class lr {
     }
 
     final static void a(tv param0, byte param1) {
-        int[] discarded$0 = null;
         try {
             if (param1 < 15) {
-                discarded$0 = lr.a(-61);
+                lr.a(-61);
             }
             jd.a(param0, (byte) 109, true);
         } catch (RuntimeException runtimeException) {
@@ -52,7 +51,7 @@ final class lr {
     }
 
     final void b(int param0) {
-        String var3 = null;
+        String var3;
         if (param0 != 16711680) {
           L0: {
             var3 = (String) null;

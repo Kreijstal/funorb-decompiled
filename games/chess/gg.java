@@ -55,10 +55,10 @@ final class gg {
     }
 
     private final void d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = Chess.field_G;
         var2 = this.field_p;
         var3 = this.field_h;
@@ -480,7 +480,7 @@ final class gg {
     }
 
     final void a(int param0) {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         if (null != rm.field_R) {
           return;
         } else {
@@ -535,9 +535,9 @@ final class gg {
               }
             }
           } else {
-            fieldTemp$1 = this.field_u - 1;
+            fieldTemp$0 = this.field_u - 1;
             this.field_u = this.field_u - 1;
-            if (-1 <= (fieldTemp$1 ^ -1)) {
+            if (-1 <= (fieldTemp$0 ^ -1)) {
               this.field_u = this.field_b;
               if (this.field_j > jg.field_K) {
                 this.field_c = false;
@@ -559,7 +559,7 @@ final class gg {
     }
 
     final a a(byte param0) {
-        a var2 = null;
+        a var2;
         this.field_A = em.field_O;
         this.field_t = tm.field_c;
         this.field_f.a(this.field_x, this.field_w, (byte) -101);
@@ -581,6 +581,8 @@ final class gg {
     }
 
     final static void b(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -591,8 +593,6 @@ final class gg {
         uj var8 = null;
         nk var9 = null;
         byte[] var13 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var6 = Chess.field_G;
         try {
           L0: {

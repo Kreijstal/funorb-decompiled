@@ -23,10 +23,9 @@ final class bh extends vj {
     }
 
     final void a(n param0, byte param1) {
-        String discarded$0 = null;
         try {
             if (param1 >= -15) {
-                discarded$0 = bh.a(29, -33L);
+                bh.a(29, -33L);
             }
             param0.a((byte) 100, this.field_g);
             param0.a(this.field_f, (byte) 111);
@@ -51,13 +50,13 @@ final class bh extends vj {
     }
 
     final static String a(int param0, long param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         if (param0 >= -73) {
           return (String) null;
         } else {

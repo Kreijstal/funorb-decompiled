@@ -19,8 +19,8 @@ final class mb implements com.ms.directX.IEnumModesCallback {
         param5.setVisible(true);
         com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
         int var8 = var7.getHwnd();
-        int discarded$0 = com.ms.win32.User32.SetWindowLong(var8, param3, -2147483648);
-        int discarded$1 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+        com.ms.win32.User32.SetWindowLong(var8, param3, -2147483648);
+        com.ms.win32.User32.SetWindowLong(var8, -20, 8);
         this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param5), 17);
         this.field_a.setDisplayMode(param1, param4, param2, param0, 0);
         param5.setBounds(0, 0, param1, param4);

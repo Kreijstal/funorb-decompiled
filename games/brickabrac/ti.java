@@ -5,9 +5,12 @@ final class ti {
     private static String field_z;
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_25_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -15,11 +18,6 @@ final class ti {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_25_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
         var14 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -49,12 +47,10 @@ final class ti {
                             L3: {
                               var12 = fj.field_Pb[var11];
                               if (param3) {
-                                stackOut_24_0 = ec.field_N[var12];
-                                stackIn_25_0 = stackOut_24_0;
+                                stackIn_25_0 = ec.field_N[var12];
                                 break L3;
                               } else {
-                                stackOut_23_0 = pj.field_b[var12];
-                                stackIn_25_0 = stackOut_23_0;
+                                stackIn_25_0 = pj.field_b[var12];
                                 break L3;
                               }
                             }
@@ -70,9 +66,9 @@ final class ti {
                                     break L5;
                                   }
                                 }
-                                incrementValue$1 = var8;
+                                incrementValue$0 = var8;
                                 var8++;
-                                fj.field_Pb[incrementValue$1] = var12;
+                                fj.field_Pb[incrementValue$0] = var12;
                                 break L4;
                               } else {
                                 if (var10 < var13) {

@@ -43,14 +43,8 @@ final class tf {
     }
 
     final static void a(int param0, int param1) {
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = Geoblox.field_C;
           if (null == kf.field_c) {
@@ -65,12 +59,12 @@ final class tf {
                       if (6 != var2) {
                         if (5 == var2) {
                           k.field_f = rf.a(kf.field_c, "", "sport");
-                          discarded$6 = uh.field_y.a(te.field_c, 0, -1, k.field_f, sl.field_l);
+                          uh.field_y.a(te.field_c, 0, -1, k.field_f, sl.field_l);
                           break L1;
                         } else {
                           if (2 == var2) {
                             j.field_ib = rf.a(kf.field_c, "", "sweets");
-                            discarded$7 = uh.field_y.a(te.field_c, 0, -1, j.field_ib, sl.field_l);
+                            uh.field_y.a(te.field_c, 0, -1, j.field_ib, sl.field_l);
                             break L1;
                           } else {
                             break L1;
@@ -78,22 +72,22 @@ final class tf {
                         }
                       } else {
                         wf.field_o = rf.a(kf.field_c, "", "space");
-                        discarded$8 = uh.field_y.a(te.field_c, 0, -1, wf.field_o, sl.field_l);
+                        uh.field_y.a(te.field_c, 0, -1, wf.field_o, sl.field_l);
                         break L1;
                       }
                     } else {
                       ej.field_d = rf.a(kf.field_c, "", "jewellery");
-                      discarded$9 = uh.field_y.a(te.field_c, 0, -1, ej.field_d, sl.field_l);
+                      uh.field_y.a(te.field_c, 0, -1, ej.field_d, sl.field_l);
                       break L1;
                     }
                   } else {
                     te.field_b = rf.a(kf.field_c, "", "germs");
-                    discarded$10 = uh.field_y.a(te.field_c, 0, -1, te.field_b, sl.field_l);
+                    uh.field_y.a(te.field_c, 0, -1, te.field_b, sl.field_l);
                     break L1;
                   }
                 } else {
                   qb.field_M = rf.a(kf.field_c, "", "baking");
-                  discarded$11 = uh.field_y.a(te.field_c, 0, -1, qb.field_M, sl.field_l);
+                  uh.field_y.a(te.field_c, 0, -1, qb.field_M, sl.field_l);
                   break L1;
                 }
               }
@@ -116,8 +110,6 @@ final class tf {
 
     final static boolean a(byte param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 > 65) {
           L0: {
             L1: {
@@ -127,14 +119,12 @@ final class tf {
                 if (oh.field_b.j(75) == null) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0 != 0;
@@ -144,10 +134,9 @@ final class tf {
     }
 
     public static void f(int param0) {
-        dm[] discarded$0 = null;
         field_b = null;
         if (param0 != 51) {
-            discarded$0 = tf.a(-67, 123, -7, 36, 22);
+            tf.a(-67, 123, -7, 36, 22);
         }
         field_d = null;
         field_e = null;
@@ -167,10 +156,9 @@ final class tf {
     }
 
     final hf b(byte param0) {
-        hf discarded$0 = null;
         hf var2 = this.field_a.field_b;
         if (param0 >= -94) {
-            discarded$0 = this.b((byte) 113);
+            this.b((byte) 113);
         }
         if (this.field_a == var2) {
             return null;
@@ -199,22 +187,12 @@ final class tf {
     final void a(tf param0, byte param1) {
         RuntimeException runtimeException = null;
         hf var4 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -233,27 +211,19 @@ final class tf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("tf.I(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("tf.I(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -322,40 +292,17 @@ final class tf {
     }
 
     private final void a(tf param0, int param1, hf param2) {
-        hf discarded$2 = null;
         hf var4 = null;
-        RuntimeException var4_ref = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var4_ref = null;
         try {
           L0: {
             L1: {
@@ -376,7 +323,7 @@ final class tf {
               if (param1 == 2541) {
                 break L2;
               } else {
-                discarded$2 = this.e(-82);
+                this.e(-82);
                 break L2;
               }
             }
@@ -386,56 +333,40 @@ final class tf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var4_ref);
-            stackOut_5_1 = new StringBuilder().append("tf.J(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var4_ref);
+
+            stackIn_7_1 = new StringBuilder().append("tf.J(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+
+
+            stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_11_2 + ')');
         }
     }
 
@@ -464,8 +395,8 @@ final class tf {
 
     static {
         $cfr$clinit: {
-            tf discarded$1 = null;
-            int var0 = 0;
+            tf discarded$0 = null;
+            int var0;
             field_f = 5;
             field_d = new al();
             field_e = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
@@ -473,7 +404,7 @@ final class tf {
             var0 = 0;
             L0: while (true) {
               if (var0 >= field_b.length) {
-                discarded$1 = new tf();
+                discarded$0 = new tf();
                 break $cfr$clinit;
               } else {
                 L1: {

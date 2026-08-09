@@ -27,8 +27,8 @@ final class t {
     }
 
     final void a(int param0) {
-        boolean discarded$2 = false;
-        int var3 = 0;
+        boolean discarded$1 = false;
+        int var3;
         var3 = EscapeVector.field_A;
         L0: while (true) {
           if (pn.p(-111)) {
@@ -40,29 +40,23 @@ final class t {
             }
           } else {
             this.field_b.a(param0 + -400, 240, 192, 24, param0);
-            discarded$2 = this.a(-13169, true);
+            discarded$1 = this.a(-13169, true);
             return;
           }
         }
     }
 
     private final void a(int param0, int param1, byte param2, boolean param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_6_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_31_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         var11 = EscapeVector.field_A;
         if (5 * param0 > mj.field_d) {
           return;
@@ -71,12 +65,10 @@ final class t {
             mj.field_b.g();
             em.d();
             if (!param3) {
-              stackOut_5_0 = 6340704;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 6340704;
               break L0;
             } else {
-              stackOut_4_0 = 16777215;
-              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_0 = 16777215;
               break L0;
             }
           }
@@ -103,12 +95,10 @@ final class t {
                         var7 = fh.field_g.b(oi.field_N);
                         var8 = fh.field_g.b(ee.field_d);
                         if (var8 >= var7) {
-                          stackOut_30_0 = var8;
-                          stackIn_31_0 = stackOut_30_0;
+                          stackIn_31_0 = var8;
                           break L3;
                         } else {
-                          stackOut_29_0 = var7;
-                          stackIn_31_0 = stackOut_29_0;
+                          stackIn_31_0 = var7;
                           break L3;
                         }
                       }
@@ -145,12 +135,10 @@ final class t {
                       var7 = fh.field_g.b(oi.field_N);
                       var8 = fh.field_g.b(ee.field_d);
                       if (var8 < var7) {
-                        stackOut_16_0 = var7;
-                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_0 = var7;
                         break L4;
                       } else {
-                        stackOut_15_0 = var8;
-                        stackIn_17_0 = stackOut_15_0;
+                        stackIn_17_0 = var8;
                         break L4;
                       }
                     }
@@ -242,43 +230,21 @@ final class t {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
-        Object stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
-        int stackIn_12_2 = 0;
-        int stackIn_12_3 = 0;
-        Object stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
-        int stackIn_13_2 = 0;
-        int stackIn_13_3 = 0;
-        Object stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
-        int stackIn_14_2 = 0;
-        int stackIn_14_3 = 0;
-        int stackIn_14_4 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        int stackOut_11_3 = 0;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        int stackOut_13_3 = 0;
-        int stackOut_13_4 = 0;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        int stackOut_12_3 = 0;
-        int stackOut_12_4 = 0;
+        Object stackIn_13_0;
+        int stackIn_13_1;
+        int stackIn_13_2;
+        int stackIn_13_3;
+        Object stackIn_14_0;
+        int stackIn_14_1;
+        int stackIn_14_2;
+        int stackIn_14_3;
+        int stackIn_14_4;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = EscapeVector.field_A;
         em.d();
         od.b(2);
@@ -287,12 +253,10 @@ final class t {
             var2 = dn.a(0) / 2 - -20;
             var3 = 15 + ea.d((byte) -122) / 2;
             if (mj.field_d >= 40) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               break L0;
             } else {
-              stackOut_3_0 = -mj.field_d + 40;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = -mj.field_d + 40;
               break L0;
             }
           }
@@ -303,12 +267,10 @@ final class t {
         } else {
           L1: {
             if (-41 >= (mj.field_d ^ -1)) {
-              stackOut_8_0 = 0;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = 0;
               break L1;
             } else {
-              stackOut_7_0 = -mj.field_d + 40;
-              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_0 = -mj.field_d + 40;
               break L1;
             }
           }
@@ -330,41 +292,27 @@ final class t {
             } else {
               L4: {
                 var4 = this.a(192, var2);
-                stackOut_11_0 = this;
-                stackOut_11_1 = var4;
-                stackOut_11_2 = var3;
-                stackOut_11_3 = -34;
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_13_1 = stackOut_11_1;
-                stackIn_13_2 = stackOut_11_2;
-                stackIn_13_3 = stackOut_11_3;
-                stackIn_12_0 = stackOut_11_0;
-                stackIn_12_1 = stackOut_11_1;
-                stackIn_12_2 = stackOut_11_2;
-                stackIn_12_3 = stackOut_11_3;
+                stackIn_13_0 = this;
+
+                stackIn_13_1 = var4;
+
+                stackIn_13_2 = var3;
+
+                stackIn_13_3 = -34;
+
                 if (var4 != this.b(69)) {
-                  stackOut_13_0 = this;
-                  stackOut_13_1 = stackIn_13_1;
-                  stackOut_13_2 = stackIn_13_2;
-                  stackOut_13_3 = stackIn_13_3;
-                  stackOut_13_4 = 0;
-                  stackIn_14_0 = stackOut_13_0;
-                  stackIn_14_1 = stackOut_13_1;
-                  stackIn_14_2 = stackOut_13_2;
-                  stackIn_14_3 = stackOut_13_3;
-                  stackIn_14_4 = stackOut_13_4;
+                  stackIn_14_0 = this;
+                  stackIn_14_1 = stackIn_13_1;
+                  stackIn_14_2 = stackIn_13_2;
+                  stackIn_14_3 = stackIn_13_3;
+                  stackIn_14_4 = 0;
                   break L4;
                 } else {
-                  stackOut_12_0 = this;
-                  stackOut_12_1 = stackIn_12_1;
-                  stackOut_12_2 = stackIn_12_2;
-                  stackOut_12_3 = stackIn_12_3;
-                  stackOut_12_4 = 1;
-                  stackIn_14_0 = stackOut_12_0;
-                  stackIn_14_1 = stackOut_12_1;
-                  stackIn_14_2 = stackOut_12_2;
-                  stackIn_14_3 = stackOut_12_3;
-                  stackIn_14_4 = stackOut_12_4;
+                  stackIn_14_0 = this;
+                  stackIn_14_1 = stackIn_13_1;
+                  stackIn_14_2 = stackIn_13_2;
+                  stackIn_14_3 = stackIn_13_3;
+                  stackIn_14_4 = 1;
                   break L4;
                 }
               }
@@ -398,24 +346,20 @@ final class t {
     }
 
     private final boolean a(int param0, boolean param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        o var9 = null;
-        int var10 = 0;
-        o var11 = null;
-        o var12 = null;
-        o var13 = null;
-        o var14 = null;
         int stackIn_44_0 = 0;
         int stackIn_83_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_82_0 = 0;
-        int stackOut_81_0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        o var9;
+        int var10;
+        o var11;
+        o var12;
+        o var13;
+        o var14;
         L0: {
           var10 = EscapeVector.field_A;
           if (!this.field_b.field_e) {
@@ -545,12 +489,10 @@ final class t {
                 var4 = fh.field_g.b(oi.field_N);
                 var5 = fh.field_g.b(ee.field_d);
                 if (var4 <= var5) {
-                  stackOut_43_0 = var5;
-                  stackIn_44_0 = stackOut_43_0;
+                  stackIn_44_0 = var5;
                   break L10;
                 } else {
-                  stackOut_42_0 = var4;
-                  stackIn_44_0 = stackOut_42_0;
+                  stackIn_44_0 = var4;
                   break L10;
                 }
               }
@@ -683,12 +625,10 @@ final class t {
                 var4 = fh.field_g.b(oi.field_N);
                 var5 = fh.field_g.b(ee.field_d);
                 if (var4 <= var5) {
-                  stackOut_82_0 = var5;
-                  stackIn_83_0 = stackOut_82_0;
+                  stackIn_83_0 = var5;
                   break L20;
                 } else {
-                  stackOut_81_0 = var4;
-                  stackIn_83_0 = stackOut_81_0;
+                  stackIn_83_0 = var4;
                   break L20;
                 }
               }

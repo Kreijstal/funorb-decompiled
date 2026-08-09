@@ -34,23 +34,13 @@ class pja extends le {
     }
 
     final void a(int param0, int param1, ds param2) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
@@ -75,27 +65,19 @@ class pja extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var4);
-            stackOut_5_1 = new StringBuilder().append("pja.F(").append(param0).append(',').append(param1).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var4);
+
+            stackIn_7_1 = new StringBuilder().append("pja.F(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L3;
             }
           }
@@ -112,10 +94,9 @@ class pja extends le {
     }
 
     final void c(int param0) {
-        int discarded$0 = 0;
         super.c(-75);
         if (param0 >= -23) {
-            discarded$0 = this.a(52);
+            this.a(52);
             this.field_k = null;
             return;
         }
@@ -128,11 +109,11 @@ class pja extends le {
     }
 
     final static int b(byte param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var3 = (int)(-kba.field_a.field_c + (float)param1);
         var4 = (int)((float)param2 - kba.field_a.field_b);
         if (param0 <= 83) {
@@ -164,22 +145,18 @@ class pja extends le {
     }
 
     final boolean f(int param0) {
-        ima var2 = null;
+        ima var2;
         ima stackIn_8_0 = null;
-        ima stackOut_7_0 = null;
-        ima stackOut_6_0 = null;
         if (null != this.field_k) {
           return true;
         } else {
           if (this.field_m >= param0) {
             L0: {
               if (-1 >= (dbb.field_o ^ -1)) {
-                stackOut_7_0 = ima.a(qnb.field_o, dbb.field_o, this.field_m);
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = ima.a(qnb.field_o, dbb.field_o, this.field_m);
                 break L0;
               } else {
-                stackOut_6_0 = ima.a(qnb.field_o, this.field_m);
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = ima.a(qnb.field_o, this.field_m);
                 break L0;
               }
             }
@@ -196,39 +173,26 @@ class pja extends le {
     }
 
     int[][] a(int param0, int param1) {
-        int incrementValue$3 = 0;
-        int discarded$4 = 0;
-        int incrementValue$5 = 0;
-        int[][] var3 = null;
-        int[] var4 = null;
-        int[] var5 = null;
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int[][] var12 = null;
-        int[][] var13 = null;
-        int[][] var14 = null;
-        int stackIn_8_0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int[][] var3;
+        int[] var4;
+        int[] var5;
+        int[] var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int[][] var12;
+        int[][] var13;
+        int[][] var14;
         int stackIn_9_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_10_1 = 0;
-        int stackIn_25_0 = 0;
         int stackIn_26_0 = 0;
         int stackIn_27_0 = 0;
         int stackIn_27_1 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_26_1 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_25_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
         var11 = VoidHunters.field_G;
         if (param0 == 255) {
           var14 = this.field_d.a(param1, (byte) -110);
@@ -243,20 +207,15 @@ class pja extends le {
                 var4 = var14[0];
                 var5 = var14[1];
                 var6 = var14[2];
-                stackOut_24_0 = this.field_j;
-                stackIn_26_0 = stackOut_24_0;
-                stackIn_25_0 = stackOut_24_0;
+                stackIn_26_0 = this.field_j;
+
                 if (noa.field_o != this.field_p) {
-                  stackOut_26_0 = stackIn_26_0;
-                  stackOut_26_1 = param1 * this.field_p / noa.field_o;
-                  stackIn_27_0 = stackOut_26_0;
-                  stackIn_27_1 = stackOut_26_1;
+                  stackIn_27_0 = stackIn_26_0;
+                  stackIn_27_1 = param1 * this.field_p / noa.field_o;
                   break L0;
                 } else {
-                  stackOut_25_0 = stackIn_25_0;
-                  stackOut_25_1 = param1;
-                  stackIn_27_0 = stackOut_25_0;
-                  stackIn_27_1 = stackOut_25_1;
+                  stackIn_27_0 = stackIn_26_0;
+                  stackIn_27_1 = param1;
                   break L0;
                 }
               }
@@ -268,9 +227,9 @@ class pja extends le {
                     if (hob.field_d <= var8) {
                       break L1;
                     } else {
-                      incrementValue$3 = var7;
+                      incrementValue$1 = var7;
                       var7++;
-                      var9 = this.field_k[incrementValue$3];
+                      var9 = this.field_k[incrementValue$1];
                       var6[var8] = dla.a(255, var9) << -1216890460;
                       var5[var8] = dla.a(4080, var9 >> 637544292);
                       var4[var8] = dla.a(4080, var9 >> -184761556);
@@ -301,7 +260,7 @@ class pja extends le {
             return var3;
           }
         } else {
-          discarded$4 = this.a(53);
+          this.a(53);
           var14 = this.field_d.a(param1, (byte) -110);
           var13 = var14;
           var12 = var13;
@@ -312,20 +271,15 @@ class pja extends le {
                 var4 = var14[0];
                 var5 = var14[1];
                 var6 = var14[2];
-                stackOut_7_0 = this.field_j;
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_9_0 = this.field_j;
+
                 if (noa.field_o != this.field_p) {
-                  stackOut_9_0 = stackIn_9_0;
-                  stackOut_9_1 = param1 * this.field_p / noa.field_o;
-                  stackIn_10_0 = stackOut_9_0;
-                  stackIn_10_1 = stackOut_9_1;
+                  stackIn_10_0 = stackIn_9_0;
+                  stackIn_10_1 = param1 * this.field_p / noa.field_o;
                   break L4;
                 } else {
-                  stackOut_8_0 = stackIn_8_0;
-                  stackOut_8_1 = param1;
-                  stackIn_10_0 = stackOut_8_0;
-                  stackIn_10_1 = stackOut_8_1;
+                  stackIn_10_0 = stackIn_9_0;
+                  stackIn_10_1 = param1;
                   break L4;
                 }
               }
@@ -351,9 +305,9 @@ class pja extends le {
                   if (hob.field_d <= var8) {
                     return var3;
                   } else {
-                    incrementValue$5 = var7;
+                    incrementValue$2 = var7;
                     var7++;
-                    var9 = this.field_k[incrementValue$5];
+                    var9 = this.field_k[incrementValue$2];
                     var6[var8] = dla.a(255, var9) << -1216890460;
                     var5[var8] = dla.a(4080, var9 >> 637544292);
                     var4[var8] = dla.a(4080, var9 >> -184761556);

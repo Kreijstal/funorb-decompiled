@@ -19,7 +19,7 @@ final class ie extends ee implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int c(int param0) {
-        int var2 = 0;
+        int var2;
         if (param0 <= 28) {
           this.field_h = -34;
           var2 = this.field_h;

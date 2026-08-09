@@ -10,26 +10,15 @@ final class wq extends k {
     private int field_l;
 
     final void a(byte param0, lu param1, int param2) {
-        int[][] discarded$1 = null;
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var4 = null;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -56,7 +45,7 @@ final class wq extends k {
               if (param0 == -71) {
                 break L2;
               } else {
-                discarded$1 = this.a(true, 44);
+                this.a(true, 44);
                 break L2;
               }
             }
@@ -66,27 +55,19 @@ final class wq extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var4);
-            stackOut_12_1 = new StringBuilder().append("wq.E(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var4);
+
+            stackIn_14_1 = new StringBuilder().append("wq.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }
@@ -95,14 +76,12 @@ final class wq extends k {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, String param8, int param9, int param10) {
-        int discarded$0 = 0;
-        int discarded$1 = 0;
         try {
             if (!param7) {
                 wq.d(51);
             }
-            discarded$0 = hfa.field_z.a(param8, param10, param4, param5, param2, param6, -1, param0, param9, param1);
-            discarded$1 = jha.field_g.a(param8, param10, 20 + param4, param5, param2, param3, -1, param0, param9, param1);
+            hfa.field_z.a(param8, param10, param4, param5, param2, param6, -1, param0, param9, param1);
+            jha.field_g.a(param8, param10, 20 + param4, param5, param2, param3, -1, param0, param9, param1);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) ((Object) runtimeException), "wq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
         }
@@ -122,22 +101,22 @@ final class wq extends k {
     }
 
     final int[][] a(boolean param0, int param1) {
-        int[][] var3 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int[][] var16 = null;
-        int[][] var18 = null;
-        int[][] var23 = null;
-        int[][] var31 = null;
-        int[] var32 = null;
-        int[] var33 = null;
-        int[] var34 = null;
+        int[][] var3;
+        int[] var8;
+        int[] var9;
+        int[] var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int[][] var16;
+        int[][] var18;
+        int[][] var23;
+        int[][] var31;
+        int[] var32;
+        int[] var33;
+        int[] var34;
         L0: {
           var15 = BachelorFridge.field_y;
           var23 = this.field_h.a(param1, -858);

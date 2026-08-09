@@ -25,21 +25,21 @@ final class nm extends w {
     }
 
     final static int a(float param0, float param1, boolean param2, float param3) {
-        float var4 = 0.0f;
-        float var5 = 0.0f;
-        float var6 = 0.0f;
-        float var7 = 0.0f;
-        int var8 = 0;
-        float var9 = 0.0f;
-        float var10 = 0.0f;
-        float var11 = 0.0f;
-        float var12 = 0.0f;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
+        float var4;
+        float var5;
+        float var6;
+        float var7;
+        int var8;
+        float var9;
+        float var10;
+        float var11;
+        float var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
         L0: {
           L1: {
             L2: {
@@ -368,7 +368,7 @@ final class nm extends w {
     }
 
     private final boolean a(boolean param0, int param1, byte param2, int param3, int param4, int param5, boolean param6) {
-        int var8 = 0;
+        int var8;
         L0: {
           if (param2 == 43) {
             break L0;
@@ -419,80 +419,112 @@ final class nm extends w {
         ck var5 = null;
         int var6 = 0;
         byte[] var8 = null;
-        var6 = client.field_A ? 1 : 0;
-        var1 = tm.field_a[0] * hc.field_c[0];
-        var8 = tc.field_Nb[0];
-        var3 = new int[var1];
-        var4 = 0;
-        L0: while (true) {
-          if (var4 < var1) {
-            var3[var4] = mb.field_d[lb.a(255, (int) var8[var4])];
-            var4++;
-            if (var6 == 0) {
-              continue L0;
-            } else {
-              var5 = new ck(ed.field_f, i.field_d, sg.field_d[0], fh.field_a[0], tm.field_a[0], hc.field_c[0], var3);
-              oa.a(127);
-              return var5;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var6 = client.field_A ? 1 : 0;
+                    var1 = tm.field_a[0] * hc.field_c[0];
+                    var8 = tc.field_Nb[0];
+                    var3 = new int[var1];
+                    var4 = 0;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    if (var4 < var1) {
+                        statePc = 3;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
+                }
+                case 2: {
+                    var4 = -8 % ((param0 - -40) / 42);
+                    var5 = new ck(ed.field_f, i.field_d, sg.field_d[0], fh.field_a[0], tm.field_a[0], hc.field_c[0], var3);
+                    oa.a(127);
+                    return var5;
+                }
+                case 3: {
+                    var3[var4] = mb.field_d[lb.a(255, (int) var8[var4])];
+                    var4++;
+                    if (var6 == 0) {
+                        statePc = 5;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    var5 = new ck(ed.field_f, i.field_d, sg.field_d[0], fh.field_a[0], tm.field_a[0], hc.field_c[0], var3);
+                    oa.a(127);
+                    return var5;
+                }
+                case 5: {
+                    if (var6 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    var4 = -8 % ((param0 - -40) / 42);
+                    var5 = new ck(ed.field_f, i.field_d, sg.field_d[0], fh.field_a[0], tm.field_a[0], hc.field_c[0], var3);
+                    oa.a(127);
+                    return var5;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          } else {
-            var4 = -8 % ((param0 - -40) / 42);
-            var5 = new ck(ed.field_f, i.field_d, sg.field_d[0], fh.field_a[0], tm.field_a[0], hc.field_c[0], var3);
-            oa.a(127);
-            return var5;
-          }
         }
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        int var3 = 0;
-        int var4 = 0;
-        String var4_ref_String = null;
-        int var5 = 0;
-        String var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        String var12 = null;
-        String var13 = null;
-        String var14 = null;
-        String var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
-        String var20 = null;
-        Object var21 = null;
-        Object var22 = null;
-        Object var23 = null;
-        Object var24 = null;
-        Object var25 = null;
-        Object var26 = null;
-        Object var27 = null;
-        Object var28 = null;
-        Object var29 = null;
-        Object var30 = null;
-        Object var31 = null;
-        Object var32 = null;
-        Object var33 = null;
-        Object var34 = null;
-        Object var35 = null;
-        Object var36 = null;
-        Object var37 = null;
-        Object var38 = null;
-        Object var39 = null;
-        Object var40 = null;
-        Object var41 = null;
-        Object var42 = null;
-        Object var43 = null;
-        Object var44 = null;
-        CharSequence var45 = null;
-        CharSequence var46 = null;
+        StringBuilder discarded$0 = null;
+        int var3;
+        int var4;
+        String var4_ref_String;
+        int var5;
+        String var7;
+        String var8;
+        int var9;
+        int var10;
+        int var11;
+        String var12;
+        String var13;
+        String var14;
+        String var15;
+        String var16;
+        String var17;
+        String var18;
+        String var19;
+        String var20;
+        Object var21;
+        Object var22;
+        Object var23;
+        Object var24;
+        Object var25;
+        Object var26;
+        Object var27;
+        Object var28;
+        Object var29;
+        Object var30;
+        Object var31;
+        Object var32;
+        Object var33;
+        Object var34;
+        Object var35;
+        Object var36;
+        Object var37;
+        Object var38;
+        Object var39;
+        Object var40;
+        Object var41;
+        Object var42;
+        Object var43;
+        Object var44;
+        CharSequence var45;
+        CharSequence var46;
         L0: {
           var21 = null;
           var22 = null;
@@ -571,7 +603,7 @@ final class nm extends w {
                 if (80 > dj.field_ab.length()) {
                   L4: {
                     L5: {
-                      discarded$4 = dj.field_ab.append((char) var4);
+                      discarded$0 = dj.field_ab.append((char) var4);
                       var5 = 485;
                       var17 = oa.field_f;
                       var16 = b.a(param1 + 82, var17);
@@ -645,7 +677,7 @@ final class nm extends w {
                                     }
                                     L12: {
                                       if (ff.field_o.a(dj.field_ab.toString()) > var5) {
-                                        discarded$5 = vf.a(dj.field_ab, -23510, dj.field_ab.length() + -1, ' ');
+                                        vf.a(dj.field_ab, -23510, dj.field_ab.length() + -1, ' ');
                                         break L12;
                                       } else {
                                         break L12;
@@ -692,7 +724,7 @@ final class nm extends w {
                   if (ff.field_o.a(dj.field_ab.toString()) <= var5) {
                     return true;
                   } else {
-                    discarded$6 = vf.a(dj.field_ab, -23510, dj.field_ab.length() + -1, ' ');
+                    vf.a(dj.field_ab, -23510, dj.field_ab.length() + -1, ' ');
                     return true;
                   }
                 } else {
@@ -707,7 +739,7 @@ final class nm extends w {
           } else {
             if (var3 != 0) {
               if (0 < dj.field_ab.length()) {
-                discarded$7 = vf.a(dj.field_ab, -23510, dj.field_ab.length() - 1, ' ');
+                vf.a(dj.field_ab, -23510, dj.field_ab.length() - 1, ' ');
                 return true;
               } else {
                 return true;

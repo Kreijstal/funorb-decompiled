@@ -8,9 +8,16 @@ final class c {
     static ka[][][] field_c;
 
     final static void a(int param0, int param1, int param2, int param3, ka param4, int param5) {
-        int incrementValue$1 = 0;
-        RuntimeException var6 = null;
+        int incrementValue$0 = 0;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        String stackIn_35_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -25,23 +32,6 @@ final class c {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
         var20 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -135,9 +125,9 @@ final class c {
                             var16 = 256 + -var15;
                             if (-1 >= (var15 ^ -1)) {
                               L10: {
-                                incrementValue$1 = var9;
+                                incrementValue$0 = var9;
                                 var9++;
-                                var17 = param4.field_y[incrementValue$1];
+                                var17 = param4.field_y[incrementValue$0];
                                 if (var17 == 0) {
                                   break L10;
                                 } else {
@@ -178,27 +168,19 @@ final class c {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var6 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) (var6);
-            stackOut_32_1 = new StringBuilder().append("c.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackIn_34_0 = (RuntimeException) (var6);
+
+            stackIn_34_1 = new StringBuilder().append("c.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L11;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L11;
             }
           }
@@ -230,17 +212,14 @@ final class c {
     }
 
     final static void a(int param0) {
-        RuntimeException var1 = null;
+        int stackIn_7_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int stackIn_7_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -248,17 +227,14 @@ final class c {
               var1_int = 5;
               if (!d.p(-88)) {
                 if (ee.field_o <= 0) {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L1;
                 } else {
-                  stackOut_4_0 = 0;
-                  stackIn_7_0 = stackOut_4_0;
+                  stackIn_7_0 = 0;
                   break L1;
                 }
               } else {
-                stackOut_2_0 = 1;
-                stackIn_7_0 = stackOut_2_0;
+                stackIn_7_0 = 1;
                 break L1;
               }
             }
@@ -317,42 +293,41 @@ final class c {
                     var4 = 0;
                     L8: while (true) {
                       if (var4 >= var1_int) {
-                        if (var3 != 5) {
-                          L9: {
-                            if ((1 << var3 & k.field_b[ok.field_b]) <= 0) {
-                              pa.field_s[ok.field_b][1 + var3] = false;
-                              break L9;
-                            } else {
-                              pa.field_s[ok.field_b][1 + var3] = true;
-                              break L9;
-                            }
-                          }
-                          L10: {
-                            if (var2 == 0) {
-                              break L10;
-                            } else {
-                              if (-1 > (var3 ^ -1)) {
+                        L9: {
+                          if (var3 != 5) {
+                            L10: {
+                              if ((1 << var3 & k.field_b[ok.field_b]) <= 0) {
                                 pa.field_s[ok.field_b][1 + var3] = false;
                                 break L10;
                               } else {
+                                pa.field_s[ok.field_b][1 + var3] = true;
                                 break L10;
                               }
                             }
-                          }
-                          L11: {
+                            L11: {
+                              if (var2 == 0) {
+                                break L11;
+                              } else {
+                                if (-1 > (var3 ^ -1)) {
+                                  pa.field_s[ok.field_b][1 + var3] = false;
+                                  break L11;
+                                } else {
+                                  break L11;
+                                }
+                              }
+                            }
                             if (!aj.field_h) {
-                              break L11;
+                              break L9;
                             } else {
                               pa.field_s[ok.field_b][var3 - -1] = true;
-                              break L11;
+                              break L9;
                             }
+                          } else {
+                            break L9;
                           }
-                          var3++;
-                          continue L4;
-                        } else {
-                          var3++;
-                          continue L4;
                         }
+                        var3++;
+                        continue L4;
                       } else {
                         L12: {
                           L13: {

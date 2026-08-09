@@ -5,7 +5,7 @@ class ni extends h {
     static sh field_o;
 
     final static int a(byte param0) {
-        StringBuilder discarded$2 = null;
+        StringBuilder discarded$1 = null;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -23,27 +23,19 @@ class ni extends h {
         int stackIn_27_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_26_0 = 0;
-        int stackOut_24_0 = 0;
-        boolean stackOut_14_0 = false;
-        int stackOut_16_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_2_0 = 0;
+        boolean stackOut_14_0;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
             of.field_e.setLength(0);
             if (param0 < -107) {
               if (null == od.field_g.field_e[0]) {
-                stackOut_26_0 = 0;
-                stackIn_27_0 = stackOut_26_0;
+                stackIn_27_0 = 0;
                 decompiledRegionSelector0 = 4;
                 break L0;
               } else {
                 if (!qi.field_c.a(-1, od.field_g.field_e)) {
-                  stackOut_24_0 = -1;
-                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_25_0 = -1;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
@@ -68,7 +60,7 @@ class ni extends h {
                             }
                           }
                         }
-                        discarded$2 = of.field_e.append((char)(255 & var5.field_i));
+                        discarded$1 = of.field_e.append((char)(255 & var5.field_i));
                         var2 = var2 != 0 | var5.field_x ? 1 : 0;
                         var1_int = var1_int + (var5.field_v + (var5.field_h << -207909247));
                         var4++;
@@ -101,21 +93,18 @@ class ni extends h {
                                   break L6;
                                 }
                               } else {
-                                stackOut_16_0 = -1;
-                                stackIn_17_0 = stackOut_16_0;
+                                stackIn_17_0 = -1;
                                 decompiledRegionSelector0 = 1;
                                 break L0;
                               }
                             }
                           }
                         }
-                        stackOut_19_0 = var2;
-                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_0 = var2;
                         break L5;
                       }
                       if (stackIn_20_0 != 0) {
-                        stackOut_22_0 = var1_int << 1366194081;
-                        stackIn_23_0 = stackOut_22_0;
+                        stackIn_23_0 = var1_int << 1366194081;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -126,8 +115,7 @@ class ni extends h {
                 }
               }
             } else {
-              stackOut_2_0 = 87;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 87;
               decompiledRegionSelector0 = 0;
               break L0;
             }

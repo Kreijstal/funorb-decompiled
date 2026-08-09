@@ -37,6 +37,16 @@ final class mn {
     }
 
     final static nl[] a(ie param0, int param1) {
+        nl[] stackIn_3_0 = null;
+        nl[] stackIn_10_0 = null;
+        nl[] stackIn_17_0 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
         nl[] var4 = null;
@@ -46,29 +56,6 @@ final class mn {
         vl var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        nl[] stackIn_3_0 = null;
-        nl[] stackIn_10_0 = null;
-        nl[] stackIn_17_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        nl[] stackOut_9_0 = null;
-        nl[] stackOut_16_0 = null;
-        nl[] stackOut_2_0 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
         var7 = TetraLink.field_J;
         try {
           L0: {
@@ -77,8 +64,7 @@ final class mn {
               L1: while (true) {
                 if (var8.field_d != 0) {
                   if (-3 == (var8.field_d ^ -1)) {
-                    stackOut_9_0 = new nl[]{};
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = new nl[]{};
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -97,8 +83,7 @@ final class mn {
                     var5 = 0;
                     L3: while (true) {
                       if (var5 >= var4.length) {
-                        stackOut_16_0 = (nl[]) (var4);
-                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_0 = (nl[]) (var4);
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -119,8 +104,7 @@ final class mn {
                 }
               }
             } else {
-              stackOut_2_0 = new nl[]{};
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = new nl[]{};
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -129,27 +113,19 @@ final class mn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var2);
-            stackOut_18_1 = new StringBuilder().append("mn.C(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var2);
+
+            stackIn_20_1 = new StringBuilder().append("mn.C(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L4;
             }
           }
@@ -180,7 +156,6 @@ final class mn {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -192,6 +167,7 @@ final class mn {
         int var14 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         var14 = TetraLink.field_J;
         try {
           L0: {

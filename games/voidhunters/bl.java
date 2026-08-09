@@ -12,27 +12,18 @@ abstract class bl extends dqa {
     private final int c(boolean param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0) {
           L0: {
             this.c(-88, 94, 112);
             if (!this.field_z) {
-              stackOut_11_0 = 0;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_0 = 0;
               break L0;
             } else {
               if (this.field_v.g(0) == this) {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 256;
                 break L0;
               } else {
-                stackOut_9_0 = 0;
-                stackIn_12_0 = stackOut_9_0;
+                stackIn_12_0 = 0;
                 break L0;
               }
             }
@@ -41,17 +32,14 @@ abstract class bl extends dqa {
         } else {
           L1: {
             if (!this.field_z) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               break L1;
             } else {
               if (this.field_v.g(0) == this) {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L1;
               } else {
-                stackOut_3_0 = 0;
-                stackIn_6_0 = stackOut_3_0;
+                stackIn_6_0 = 0;
                 break L1;
               }
             }
@@ -72,14 +60,10 @@ abstract class bl extends dqa {
     }
 
     boolean a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_12_0 = 0;
         int stackIn_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
         L0: {
           if (param0 == 248) {
             break L0;
@@ -106,12 +90,10 @@ abstract class bl extends dqa {
             } else {
               L2: {
                 if (this.field_z) {
-                  stackOut_20_0 = 0;
-                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_0 = 0;
                   break L2;
                 } else {
-                  stackOut_19_0 = 1;
-                  stackIn_21_0 = stackOut_19_0;
+                  stackIn_21_0 = 1;
                   break L2;
                 }
               }
@@ -127,12 +109,10 @@ abstract class bl extends dqa {
             } else {
               L3: {
                 if (this.field_z) {
-                  stackOut_11_0 = 0;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = 0;
                   break L3;
                 } else {
-                  stackOut_10_0 = 1;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = 1;
                   break L3;
                 }
               }
@@ -145,10 +125,6 @@ abstract class bl extends dqa {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
         if (this.field_w != 0) {
           if (-257 >= (this.field_w ^ -1)) {
             if (param1 != 0) {
@@ -167,7 +143,7 @@ abstract class bl extends dqa {
                   this.b(0, 1630174241, 0);
                   super.b(-param0 + -this.field_g, param1, 127, -this.field_r + -param3);
                   if (param2 <= 47) {
-                    discarded$4 = this.j((byte) 123);
+                    this.j((byte) 123);
                     bia.a((byte) 124);
                     vib.field_b.d(param0 - -this.field_g, this.field_r + param3, this.field_w);
                     return;
@@ -183,7 +159,7 @@ abstract class bl extends dqa {
                   this.b(0, 1630174241, 0);
                   super.b(-param0 + -this.field_g, param1, 127, -this.field_r + -param3);
                   if (param2 <= 47) {
-                    discarded$5 = this.j((byte) 123);
+                    this.j((byte) 123);
                     bia.a((byte) 124);
                     vib.field_b.d(param0 - -this.field_g, this.field_r + param3, this.field_w);
                     return;
@@ -200,7 +176,7 @@ abstract class bl extends dqa {
                 this.b(0, 1630174241, 0);
                 super.b(-param0 + -this.field_g, param1, 127, -this.field_r + -param3);
                 if (param2 <= 47) {
-                  discarded$6 = this.j((byte) 123);
+                  this.j((byte) 123);
                   bia.a((byte) 124);
                   vib.field_b.d(param0 - -this.field_g, this.field_r + param3, this.field_w);
                   return;
@@ -217,7 +193,7 @@ abstract class bl extends dqa {
               this.b(0, 1630174241, 0);
               super.b(-param0 + -this.field_g, param1, 127, -this.field_r + -param3);
               if (param2 <= 47) {
-                discarded$7 = this.j((byte) 123);
+                this.j((byte) 123);
                 bia.a((byte) 124);
                 vib.field_b.d(param0 - -this.field_g, this.field_r + param3, this.field_w);
                 return;
@@ -270,21 +246,21 @@ abstract class bl extends dqa {
     }
 
     final static void d(boolean param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -304,30 +280,30 @@ abstract class bl extends dqa {
               if (var2 >= var3) {
                 break L0;
               } else {
-                incrementValue$40 = var2;
+                incrementValue$16 = var2;
                 var2++;
-                var5[incrementValue$40] = 0;
-                incrementValue$41 = var2;
+                var5[incrementValue$16] = 0;
+                incrementValue$17 = var2;
                 var2++;
-                var5[incrementValue$41] = 0;
-                incrementValue$42 = var2;
+                var5[incrementValue$17] = 0;
+                incrementValue$18 = var2;
                 var2++;
-                var5[incrementValue$42] = 0;
-                incrementValue$43 = var2;
+                var5[incrementValue$18] = 0;
+                incrementValue$19 = var2;
                 var2++;
-                var5[incrementValue$43] = 0;
-                incrementValue$44 = var2;
+                var5[incrementValue$19] = 0;
+                incrementValue$20 = var2;
                 var2++;
-                var5[incrementValue$44] = 0;
-                incrementValue$45 = var2;
+                var5[incrementValue$20] = 0;
+                incrementValue$21 = var2;
                 var2++;
-                var5[incrementValue$45] = 0;
-                incrementValue$46 = var2;
+                var5[incrementValue$21] = 0;
+                incrementValue$22 = var2;
                 var2++;
-                var5[incrementValue$46] = 0;
-                incrementValue$47 = var2;
+                var5[incrementValue$22] = 0;
+                incrementValue$23 = var2;
                 var2++;
-                var5[incrementValue$47] = 0;
+                var5[incrementValue$23] = 0;
                 continue L2;
               }
             }

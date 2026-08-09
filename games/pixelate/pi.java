@@ -18,8 +18,8 @@ final class pi extends ak {
     private int field_Hb;
 
     final static String a(CharSequence[] param0, int param1, int param2, int param3) {
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -36,8 +36,6 @@ final class pi extends ak {
         String stackIn_10_0 = null;
         String stackIn_13_0 = null;
         String stackIn_27_0 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
@@ -45,19 +43,6 @@ final class pi extends ak {
         String stackIn_31_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_9_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_26_0 = null;
-        String stackOut_12_0 = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -66,13 +51,11 @@ final class pi extends ak {
                 var10 = param0[param1];
                 var4 = var10;
                 if (var4 != null) {
-                  stackOut_9_0 = var10.toString();
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = var10.toString();
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  stackOut_7_0 = "null";
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = "null";
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
@@ -87,18 +70,17 @@ final class pi extends ak {
                       var7 = param1;
                       L2: while (true) {
                         if (var7 >= var4_int) {
-                          stackOut_26_0 = var6.toString();
-                          stackIn_27_0 = stackOut_26_0;
+                          stackIn_27_0 = var6.toString();
                           decompiledRegionSelector0 = 4;
                           break L0;
                         } else {
                           L3: {
                             var8 = param0[var7];
                             if (var8 == null) {
-                              discarded$5 = var6.append("null");
+                              discarded$3 = var6.append("null");
                               break L3;
                             } else {
-                              discarded$6 = var6.append(var8);
+                              discarded$4 = var6.append(var8);
                               break L3;
                             }
                           }
@@ -122,15 +104,13 @@ final class pi extends ak {
                     }
                   }
                 } else {
-                  stackOut_12_0 = (String) null;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = (String) null;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 }
               }
             } else {
-              stackOut_2_0 = "";
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = "";
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -139,27 +119,19 @@ final class pi extends ak {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var4_ref);
-            stackOut_28_1 = new StringBuilder().append("pi.A(");
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackIn_30_0 = (RuntimeException) (var4_ref);
+
+            stackIn_30_1 = new StringBuilder().append("pi.A(");
+
             if (param0 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L5;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L5;
             }
           }
@@ -185,11 +157,10 @@ final class pi extends ak {
     }
 
     public static void b(byte param0) {
-        String discarded$0 = null;
         field_Rb = null;
         if (param0 < 121) {
             CharSequence[] var2 = (CharSequence[]) null;
-            discarded$0 = pi.a((CharSequence[]) null, -85, 35, 38);
+            pi.a((CharSequence[]) null, -85, 35, 38);
         }
     }
 
@@ -215,11 +186,10 @@ final class pi extends ak {
     }
 
     final static Boolean c(byte param0) {
-        String discarded$0 = null;
         Boolean var1 = kj.field_j;
         if (param0 != 104) {
             CharSequence[] var2 = (CharSequence[]) null;
-            discarded$0 = pi.a((CharSequence[]) null, 88, -25, -27);
+            pi.a((CharSequence[]) null, 88, -25, -27);
         }
         kj.field_j = null;
         return var1;
@@ -292,12 +262,12 @@ final class pi extends ak {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         L0: {
           var11 = Pixelate.field_H ? 1 : 0;
           if (this.field_Hb != 0) {

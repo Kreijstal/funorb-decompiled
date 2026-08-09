@@ -10,9 +10,8 @@ final class b extends am {
     static double[] field_t;
 
     final static int g(byte param0) {
-        int discarded$0 = 0;
         if (param0 <= 108) {
-            discarded$0 = b.g((byte) 51);
+            b.g((byte) 51);
         }
         return ii.field_k;
     }

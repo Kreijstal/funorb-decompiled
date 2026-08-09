@@ -16,23 +16,12 @@ final class kla extends ana {
         int var4 = 0;
         int var5 = 0;
         kv[] stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kv[] stackOut_7_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -42,8 +31,7 @@ final class kla extends ana {
             L1: while (true) {
               if (var3 >= param0.length) {
                 hga.field_U.a((byte) 119);
-                stackOut_7_0 = (kv[]) (var2);
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = (kv[]) (var2);
                 break L0;
               } else {
                 L2: {
@@ -65,27 +53,19 @@ final class kla extends ana {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2_ref);
-            stackOut_9_1 = new StringBuilder().append("kla.I(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var2_ref);
+
+            stackIn_11_1 = new StringBuilder().append("kla.I(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -95,12 +75,12 @@ final class kla extends ana {
     }
 
     private final void e(byte param0) {
-        oha discarded$0 = al.a(109, this.field_v.field_k);
+        al.a(109, this.field_v.field_k);
         aga var2 = this.field_v.field_l.a(36, this.field_q.field_h);
         if (param0 != -60) {
             return;
         }
-        int[][] discarded$1 = this.field_v.d((byte) 27);
+        this.field_v.d((byte) 27);
         gv var3 = new gv(this.field_q, var2.field_x, var2.field_J);
         ((kj) ((Object) var3)).a(0);
     }
@@ -112,8 +92,6 @@ final class kla extends ana {
         int var5 = 0;
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -121,16 +99,6 @@ final class kla extends ana {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -144,15 +112,13 @@ final class kla extends ana {
                   if (var3_int <= var4) {
                     continue L1;
                   } else {
-                    stackOut_9_0 = sg.a(param0, 1816304479, var4);
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = sg.a(param0, 1816304479, var4);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 }
               } else {
-                stackOut_5_0 = (int)((long)param0 * ((long)param1.nextInt() & 4294967295L) >> -705194656);
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (int)((long)param0 * ((long)param1.nextInt() & 4294967295L) >> -705194656);
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -162,27 +128,19 @@ final class kla extends ana {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("kla.C(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("kla.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L2;
             }
           }
@@ -209,18 +167,14 @@ final class kla extends ana {
     }
 
     final static void b(boolean param0) {
-        if (!o.d((byte) 54)) {
-            if (bf.field_h[wca.field_n] != null) {
-                bf.field_h[wca.field_n].a((byte) 106);
-            }
+        if (!o.d((byte) 54) && bf.field_h[wca.field_n] != null) {
+            bf.field_h[wca.field_n].a((byte) 106);
         }
         if (!param0) {
             field_x = 109;
         }
-        if (null != mn.field_l) {
-            if (ua.field_b) {
-                mn.field_l.a((byte) 19);
-            }
+        if (null != mn.field_l && ua.field_b) {
+            mn.field_l.a((byte) 19);
         }
         if (!o.d((byte) 81)) {
             if (!bf.field_h[wca.field_n].field_i) {
@@ -326,7 +280,7 @@ final class kla extends ana {
         if (param0 <= 110) {
             return;
         }
-        oha discarded$6 = al.a(89, this.field_v.field_k);
+        al.a(89, this.field_v.field_k);
         while (var3 != null) {
             var4 = var3.field_h.a(-27449, this.field_q);
             var4.b(-1, 6);

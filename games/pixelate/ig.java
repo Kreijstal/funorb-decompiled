@@ -20,8 +20,6 @@ final class ig {
         Object stackIn_4_0 = null;
         id stackIn_8_0 = null;
         Object stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -29,17 +27,6 @@ final class ig {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        id stackOut_7_0 = null;
-        Object stackOut_9_0 = null;
-        Object stackOut_3_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             L1: {
@@ -59,8 +46,7 @@ final class ig {
                     break L2;
                   } else {
                     qo.field_n = wm.field_a;
-                    stackOut_7_0 = jc.field_f;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = jc.field_f;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -69,13 +55,11 @@ final class ig {
               qo.field_n = rj.field_F;
               uh.field_m = param1;
               jc.field_f = null;
-              stackOut_9_0 = null;
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = null;
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_3_0 = null;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -84,27 +68,19 @@ final class ig {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var2);
-            stackOut_11_1 = new StringBuilder().append("ig.A(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var2);
+
+            stackIn_13_1 = new StringBuilder().append("ig.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -132,10 +108,11 @@ final class ig {
 
     final static void a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         cm var2 = null;
         int var3 = 0;
+        boolean stackIn_18_0 = false;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -191,7 +168,8 @@ final class ig {
               if (null == to.field_q) {
                 break L6;
               } else {
-                if (to.field_q.a((byte) -123)) {
+                stackIn_18_0 = to.field_q.a((byte) -123);
+                if (stackIn_18_0) {
                   break L6;
                 } else {
                   break L6;

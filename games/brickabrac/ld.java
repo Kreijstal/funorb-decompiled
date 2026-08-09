@@ -12,14 +12,14 @@ abstract class ld extends km {
     abstract int f(int param0);
 
     final void b(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        q var8 = null;
-        int var9 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        q var8;
+        int var9;
         var9 = BrickABrac.field_J ? 1 : 0;
         if (sj.field_c == null) {
           return;
@@ -35,7 +35,7 @@ abstract class ld extends km {
                   break L0;
                 } else {
                   var5 = nn.field_g.c(sj.field_c[var4]);
-                  if (var5 > var3) {
+                  if ((var5 ^ -1) < (var3 ^ -1)) {
                     var3 = var5;
                     var4++;
                     continue L1;
@@ -87,21 +87,19 @@ abstract class ld extends km {
     }
 
     final void b(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        tp var5_ref_tp = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        jp var10 = null;
-        int var11 = 0;
-        jp var12 = null;
         jp[] stackIn_26_0 = null;
-        jp[] stackOut_25_0 = null;
-        jp[] stackOut_24_0 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        tp var5_ref_tp;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        jp var10;
+        int var11;
+        jp var12;
         L0: {
           var11 = BrickABrac.field_J ? 1 : 0;
           if (null == ec.field_Q) {
@@ -182,12 +180,10 @@ abstract class ld extends km {
                     }
                     L7: {
                       if (var5 != 0) {
-                        stackOut_25_0 = e.field_q;
-                        stackIn_26_0 = stackOut_25_0;
+                        stackIn_26_0 = e.field_q;
                         break L7;
                       } else {
-                        stackOut_24_0 = cl.field_r;
-                        stackIn_26_0 = stackOut_24_0;
+                        stackIn_26_0 = cl.field_r;
                         break L7;
                       }
                     }
@@ -225,9 +221,8 @@ abstract class ld extends km {
     }
 
     final void a(boolean param0, int param1, int param2) {
-        int discarded$0 = 0;
         if (param2 < 96) {
-            discarded$0 = this.f(66);
+            this.f(66);
         }
         super.a(param0, param1, 100);
         this.b(true);

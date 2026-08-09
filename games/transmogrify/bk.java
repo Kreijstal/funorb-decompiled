@@ -9,7 +9,7 @@ final class bk {
     static int field_a;
 
     final ri d(int param0) {
-        ri var2 = null;
+        ri var2;
         var2 = this.field_b.field_h;
         if (var2 != this.field_b) {
           if (param0 != -31914) {
@@ -39,7 +39,7 @@ final class bk {
     }
 
     final ri b(byte param0) {
-        ri var2 = null;
+        ri var2;
         if (param0 > 107) {
           var2 = this.field_b.field_h;
           if (this.field_b == var2) {
@@ -63,9 +63,9 @@ final class bk {
     }
 
     final int a(byte param0) {
-        int var2 = 0;
-        ri var3 = null;
-        int var4 = 0;
+        int var2;
+        ri var3;
+        int var4;
         var4 = Transmogrify.field_A ? 1 : 0;
         if (param0 != 16) {
           this.field_b = (ri) null;

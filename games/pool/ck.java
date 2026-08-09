@@ -15,55 +15,35 @@ final class ck extends mh {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_0_0 = 0;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var3_int = 103 % ((param1 - -43) / 47);
-            stackOut_0_0 = 0;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = 0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var3);
-            stackOut_2_1 = new StringBuilder().append("ck.M(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var3);
+
+            stackIn_4_1 = new StringBuilder().append("ck.M(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -93,34 +73,34 @@ final class ck extends mh {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        String var5 = null;
-        na var6 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        String var18 = null;
-        Object var19 = null;
-        dd var20 = null;
-        dd var21 = null;
-        dd var22 = null;
-        dd var23 = null;
-        String var24 = null;
-        Object var25 = null;
-        dd var26 = null;
-        dd var27 = null;
-        dd var28 = null;
-        dd var29 = null;
-        Object var30 = null;
-        dd var31 = null;
-        dd var32 = null;
-        dd var33 = null;
-        dd var34 = null;
-        io var35 = null;
-        io var36 = null;
-        io var37 = null;
+        String var5;
+        na var6;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        String var18;
+        Object var19;
+        dd var20;
+        dd var21;
+        dd var22;
+        dd var23;
+        String var24;
+        Object var25;
+        dd var26;
+        dd var27;
+        dd var28;
+        dd var29;
+        Object var30;
+        dd var31;
+        dd var32;
+        dd var33;
+        dd var34;
+        io var35;
+        io var36;
+        io var37;
         var19 = null;
         var25 = null;
         var30 = null;
@@ -466,7 +446,7 @@ final class ck extends mh {
             return null;
         }
         ei var3 = (ei) null;
-        boolean discarded$0 = this.a((ei) null, (byte) -51);
+        this.a((ei) null, (byte) -51);
         return null;
     }
 

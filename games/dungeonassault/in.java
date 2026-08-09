@@ -21,21 +21,10 @@ abstract class in extends kg {
     static String field_t;
 
     private final void a(String param0, int param1, boolean param2, int param3, int param4) {
-        Exception var6 = null;
-        RuntimeException var6_ref = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
-        String var11 = null;
-        Object stackIn_6_0 = null;
-        Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
         int stackIn_10_1 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
@@ -44,21 +33,13 @@ abstract class in extends kg {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_5_0 = null;
-        Object stackOut_6_0 = null;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        Object stackOut_7_0 = null;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        Exception var6 = null;
+        RuntimeException var6_ref = null;
+        String var7 = null;
+        String var8 = null;
+        String var9 = null;
+        String var10 = null;
+        String var11 = null;
         try {
           L0: {
             try {
@@ -72,32 +53,25 @@ abstract class in extends kg {
                   if (param2) {
                     L2: {
                       L3: {
-                        stackOut_5_0 = this;
-                        stackIn_8_0 = stackOut_5_0;
-                        stackIn_6_0 = stackOut_5_0;
+                        stackIn_8_0 = this;
+
                         if (var11.equals("jagex.com")) {
                           break L3;
                         } else {
-                          stackOut_6_0 = this;
-                          stackIn_9_0 = stackOut_6_0;
-                          stackIn_7_0 = stackOut_6_0;
+                          stackIn_9_0 = this;
+
                           if (!var11.endsWith(".jagex.com")) {
-                            stackOut_9_0 = this;
-                            stackOut_9_1 = 0;
-                            stackIn_10_0 = stackOut_9_0;
-                            stackIn_10_1 = stackOut_9_1;
+                            stackIn_10_0 = this;
+                            stackIn_10_1 = 0;
                             break L2;
                           } else {
-                            stackOut_7_0 = this;
-                            stackIn_8_0 = stackOut_7_0;
+                            stackIn_8_0 = this;
                             break L3;
                           }
                         }
                       }
-                      stackOut_8_0 = this;
-                      stackOut_8_1 = 1;
-                      stackIn_10_0 = stackOut_8_0;
-                      stackIn_10_1 = stackOut_8_1;
+                      stackIn_10_0 = this;
+                      stackIn_10_1 = 1;
                       break L2;
                     }
                     L4: {
@@ -179,27 +153,19 @@ abstract class in extends kg {
           decompiledCaughtException = decompiledCaughtParameter1;
           L9: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var6_ref);
-            stackOut_25_1 = new StringBuilder().append("in.Q(");
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var6_ref);
+
+            stackIn_27_1 = new StringBuilder().append("in.Q(");
+
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L9;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L9;
             }
           }
@@ -217,24 +183,14 @@ abstract class in extends kg {
     }
 
     final void g(byte param0) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        int var3 = 0;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
+        int discarded$0 = 0;
+        int discarded$1 = 0;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         Object stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_5_2 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
+        int var3;
         var3 = DungeonAssault.field_K;
         if (param0 != 2) {
           return;
@@ -252,38 +208,30 @@ abstract class in extends kg {
                     td.a(pj.field_r, param0 + 119);
                     break L0;
                   } else {
-                    discarded$2 = this.a(false, false, false);
+                    discarded$0 = this.a(false, false, false);
                     break L0;
                   }
                 }
               }
             } else {
               L1: {
-                stackOut_2_0 = this;
-                stackOut_2_1 = 0;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
+                stackIn_4_0 = this;
+
+                stackIn_4_1 = 0;
+
                 if (null == cm.field_R) {
-                  stackOut_4_0 = this;
-                  stackOut_4_1 = stackIn_4_1;
-                  stackOut_4_2 = 0;
-                  stackIn_5_0 = stackOut_4_0;
-                  stackIn_5_1 = stackOut_4_1;
-                  stackIn_5_2 = stackOut_4_2;
+                  stackIn_5_0 = this;
+                  stackIn_5_1 = stackIn_4_1;
+                  stackIn_5_2 = 0;
                   break L1;
                 } else {
-                  stackOut_3_0 = this;
-                  stackOut_3_1 = stackIn_3_1;
-                  stackOut_3_2 = 1;
-                  stackIn_5_0 = stackOut_3_0;
-                  stackIn_5_1 = stackOut_3_1;
-                  stackIn_5_2 = stackOut_3_2;
+                  stackIn_5_0 = this;
+                  stackIn_5_1 = stackIn_4_1;
+                  stackIn_5_2 = 1;
                   break L1;
                 }
               }
-              discarded$3 = this.a(stackIn_5_1 != 0, stackIn_5_2 != 0, false);
+              discarded$1 = this.a(stackIn_5_1 != 0, stackIn_5_2 != 0, false);
               break L0;
             }
           }
@@ -344,83 +292,33 @@ abstract class in extends kg {
     }
 
     final int f(byte param0) {
-        int discarded$2 = 0;
-        int var2 = 0;
-        L0: {
-          var2 = this.g(11);
-          if (param0 >= 86) {
-            break L0;
-          } else {
-            discarded$2 = this.g(-68);
-            break L0;
-          }
+        int discarded$0 = 0;
+        int var2 = this.g(11);
+        if (param0 < 86) {
+            discarded$0 = this.g(-68);
         }
-        L1: {
-          L2: {
-            if (-1 == (var2 ^ -1)) {
-              break L2;
-            } else {
-              if ((var2 ^ -1) != -2) {
-                break L1;
-              } else {
-                break L2;
-              }
+        if (-1 == (var2 ^ -1) || (var2 ^ -1) == -2) {
+            if (!(!pj.field_w[1])) {
+                f.a(2, (byte) -50);
             }
-          }
-          L3: {
-            if (pj.field_w[1]) {
-              f.a(2, (byte) -50);
-              break L3;
-            } else {
-              break L3;
+            if (!(!pj.field_w[2])) {
+                fl.a((byte) -93, 3);
             }
-          }
-          L4: {
-            if (pj.field_w[2]) {
-              fl.a((byte) -93, 3);
-              break L4;
-            } else {
-              break L4;
+            if (pj.field_w[3]) {
+                ep.a((byte) 127, 4);
             }
-          }
-          L5: {
-            if (!pj.field_w[3]) {
-              break L5;
-            } else {
-              ep.a((byte) 127, 4);
-              break L5;
+            if (!(!pj.field_w[4])) {
+                ko.a(true, 5);
             }
-          }
-          L6: {
-            if (pj.field_w[4]) {
-              ko.a(true, 5);
-              break L6;
-            } else {
-              break L6;
+            if (!(!pj.field_w[5])) {
+                ol.a(8, 6);
             }
-          }
-          L7: {
-            if (pj.field_w[5]) {
-              ol.a(8, 6);
-              break L7;
-            } else {
-              break L7;
+            if (!(!pj.field_w[6])) {
+                tc.a(7, (byte) -112);
             }
-          }
-          L8: {
-            if (pj.field_w[6]) {
-              tc.a(7, (byte) -112);
-              break L8;
-            } else {
-              break L8;
+            if (pj.field_w[8]) {
+                hj.g(-59);
             }
-          }
-          if (!pj.field_w[8]) {
-            break L1;
-          } else {
-            hj.g(-59);
-            break L1;
-          }
         }
         return var2;
     }
@@ -448,8 +346,14 @@ abstract class in extends kg {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_13_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -458,20 +362,6 @@ abstract class in extends kg {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
         var13 = DungeonAssault.field_K;
         try {
           L0: {
@@ -479,48 +369,40 @@ abstract class in extends kg {
               var5_int = param2 + param0;
               var6 = param3 + param1;
               if (gf.field_j >= param0) {
-                stackOut_3_0 = gf.field_j;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = gf.field_j;
                 break L1;
               } else {
-                stackOut_2_0 = param0;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = param0;
                 break L1;
               }
             }
             L2: {
               var7 = stackIn_4_0;
               if (param3 > gf.field_f) {
-                stackOut_6_0 = param3;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = param3;
                 break L2;
               } else {
-                stackOut_5_0 = gf.field_f;
-                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_0 = gf.field_f;
                 break L2;
               }
             }
             L3: {
               var8 = stackIn_7_0;
               if (gf.field_h > var5_int) {
-                stackOut_9_0 = var5_int;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = var5_int;
                 break L3;
               } else {
-                stackOut_8_0 = gf.field_h;
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = gf.field_h;
                 break L3;
               }
             }
             L4: {
               var9 = stackIn_10_0;
               if (var6 >= gf.field_e) {
-                stackOut_12_0 = gf.field_e;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = gf.field_e;
                 break L4;
               } else {
-                stackOut_11_0 = var6;
-                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_0 = var6;
                 break L4;
               }
             }
@@ -634,15 +516,11 @@ abstract class in extends kg {
     }
 
     final void d(boolean param0) {
-        int var2 = 0;
-        la var3 = null;
-        int var4 = 0;
         int stackIn_16_0 = 0;
         int stackIn_32_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
+        int var2;
+        la var3;
+        int var4;
         L0: {
           var4 = DungeonAssault.field_K;
           var2 = hc.field_c;
@@ -707,12 +585,10 @@ abstract class in extends kg {
                                     }
                                     L4: {
                                       if (var2 != 12) {
-                                        stackOut_31_0 = 0;
-                                        stackIn_32_0 = stackOut_31_0;
+                                        stackIn_32_0 = 0;
                                         break L4;
                                       } else {
-                                        stackOut_30_0 = 1;
-                                        stackIn_32_0 = stackOut_30_0;
+                                        stackIn_32_0 = 1;
                                         break L4;
                                       }
                                     }
@@ -739,12 +615,10 @@ abstract class in extends kg {
                         } else {
                           L5: {
                             if (param0) {
-                              stackOut_15_0 = 0;
-                              stackIn_16_0 = stackOut_15_0;
+                              stackIn_16_0 = 0;
                               break L5;
                             } else {
-                              stackOut_14_0 = 1;
-                              stackIn_16_0 = stackOut_14_0;
+                              stackIn_16_0 = 1;
                               break L5;
                             }
                           }
@@ -773,9 +647,8 @@ abstract class in extends kg {
     }
 
     private final void d(int param0) {
-        int discarded$0 = 0;
         if (param0 != -28859) {
-            discarded$0 = this.f((byte) 39);
+            this.f((byte) 39);
         }
         int var2 = ra.field_c.c(true);
         int var3 = -1 != (var2 & 1 ^ -1) ? 1 : 0;
@@ -787,47 +660,31 @@ abstract class in extends kg {
 
     private final int a(boolean param0, boolean param1, boolean param2) {
         try {
-            int discarded$1 = 0;
+            int discarded$0 = 0;
+            boolean stackIn_7_0 = false;
+            cd stackIn_7_1 = null;
+            boolean stackIn_8_0 = false;
+            cd stackIn_8_1 = null;
+            int stackIn_8_2 = 0;
+            int stackIn_47_0 = 0;
+            int stackIn_48_0 = 0;
+            int stackIn_48_1 = 0;
+            Throwable decompiledCaughtException = null;
             int var4 = 0;
-            Exception var5 = null;
             int var5_int = 0;
+            Exception var5 = null;
             String var7 = null;
             int var8 = 0;
             String var9 = null;
             String var10 = null;
             Boolean var11 = null;
             ec var12 = null;
-            boolean stackIn_6_0 = false;
-            cd stackIn_6_1 = null;
-            boolean stackIn_7_0 = false;
-            cd stackIn_7_1 = null;
-            boolean stackIn_8_0 = false;
-            cd stackIn_8_1 = null;
-            int stackIn_8_2 = 0;
-            int stackIn_46_0 = 0;
-            int stackIn_47_0 = 0;
-            int stackIn_48_0 = 0;
-            int stackIn_48_1 = 0;
-            Throwable decompiledCaughtException = null;
-            boolean stackOut_5_0 = false;
-            cd stackOut_5_1 = null;
-            boolean stackOut_7_0 = false;
-            cd stackOut_7_1 = null;
-            int stackOut_7_2 = 0;
-            boolean stackOut_6_0 = false;
-            cd stackOut_6_1 = null;
-            int stackOut_6_2 = 0;
-            int stackOut_45_0 = 0;
-            int stackOut_47_0 = 0;
-            int stackOut_47_1 = 0;
-            int stackOut_46_0 = 0;
-            int stackOut_46_1 = 0;
             L0: {
               var8 = DungeonAssault.field_K;
               if (!param0) {
                 break L0;
               } else {
-                discarded$1 = this.a(false, false, false);
+                discarded$0 = this.a(false, false, false);
                 break L0;
               }
             }
@@ -838,27 +695,19 @@ abstract class in extends kg {
                   break L1;
                 } else {
                   L2: {
-                    stackOut_5_0 = param0;
-                    stackOut_5_1 = ln.a((byte) -120);
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_7_1 = stackOut_5_1;
-                    stackIn_6_0 = stackOut_5_0;
-                    stackIn_6_1 = stackOut_5_1;
+                    stackIn_7_0 = param0;
+
+                    stackIn_7_1 = ln.a((byte) -120);
+
                     if (param0) {
-                      stackOut_7_0 = stackIn_7_0;
-                      stackOut_7_1 = (cd) ((Object) stackIn_7_1);
-                      stackOut_7_2 = 0;
-                      stackIn_8_0 = stackOut_7_0;
-                      stackIn_8_1 = stackOut_7_1;
-                      stackIn_8_2 = stackOut_7_2;
+                      stackIn_8_0 = stackIn_7_0;
+                      stackIn_8_1 = (cd) ((Object) stackIn_7_1);
+                      stackIn_8_2 = 0;
                       break L2;
                     } else {
-                      stackOut_6_0 = stackIn_6_0;
-                      stackOut_6_1 = (cd) ((Object) stackIn_6_1);
-                      stackOut_6_2 = 1;
-                      stackIn_8_0 = stackOut_6_0;
-                      stackIn_8_1 = stackOut_6_1;
-                      stackIn_8_2 = stackOut_6_2;
+                      stackIn_8_0 = stackIn_7_0;
+                      stackIn_8_1 = (cd) ((Object) stackIn_7_1);
+                      stackIn_8_2 = 1;
                       break L2;
                     }
                   }
@@ -982,20 +831,15 @@ abstract class in extends kg {
               L11: {
                 if (8 == var4) {
                   L12: {
-                    stackOut_45_0 = 5189;
-                    stackIn_47_0 = stackOut_45_0;
-                    stackIn_46_0 = stackOut_45_0;
+                    stackIn_47_0 = 5189;
+
                     if (param0) {
-                      stackOut_47_0 = stackIn_47_0;
-                      stackOut_47_1 = 0;
-                      stackIn_48_0 = stackOut_47_0;
-                      stackIn_48_1 = stackOut_47_1;
+                      stackIn_48_0 = stackIn_47_0;
+                      stackIn_48_1 = 0;
                       break L12;
                     } else {
-                      stackOut_46_0 = stackIn_46_0;
-                      stackOut_46_1 = 1;
-                      stackIn_48_0 = stackOut_46_0;
-                      stackIn_48_1 = stackOut_46_1;
+                      stackIn_48_0 = stackIn_47_0;
+                      stackIn_48_1 = 1;
                       break L12;
                     }
                   }
@@ -1137,46 +981,18 @@ abstract class in extends kg {
     }
 
     final void a(boolean param0, byte param1) {
-        int var3 = 0;
-        java.awt.Dimension var4 = null;
-        int var5 = 0;
-        java.awt.Container var6 = null;
         int stackIn_26_0 = 0;
-        int stackIn_101_0 = 0;
         int stackIn_102_0 = 0;
         int stackIn_103_0 = 0;
         int stackIn_103_1 = 0;
-        int stackIn_104_0 = 0;
-        int stackIn_104_1 = 0;
-        String stackIn_104_2 = null;
-        int stackIn_105_0 = 0;
-        int stackIn_105_1 = 0;
         String stackIn_105_2 = null;
-        int stackIn_106_0 = 0;
-        int stackIn_106_1 = 0;
-        String stackIn_106_2 = null;
-        int stackIn_106_3 = 0;
+        String stackIn_106_2;
+        int stackIn_106_3;
         int stackIn_135_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_100_0 = 0;
-        int stackOut_102_0 = 0;
-        int stackOut_102_1 = 0;
-        int stackOut_101_0 = 0;
-        int stackOut_101_1 = 0;
-        int stackOut_103_0 = 0;
-        int stackOut_103_1 = 0;
-        String stackOut_103_2 = null;
-        int stackOut_105_0 = 0;
-        int stackOut_105_1 = 0;
-        String stackOut_105_2 = null;
-        int stackOut_105_3 = 0;
-        int stackOut_104_0 = 0;
-        int stackOut_104_1 = 0;
-        String stackOut_104_2 = null;
-        int stackOut_104_3 = 0;
-        int stackOut_134_0 = 0;
-        int stackOut_133_0 = 0;
+        int var3;
+        java.awt.Dimension var4;
+        int var5;
+        java.awt.Container var6;
         L0: {
           var5 = DungeonAssault.field_K;
           if (null != il.field_c) {
@@ -1270,12 +1086,10 @@ abstract class in extends kg {
           }
           L9: {
             if ((gm.field_c ^ -1) != 0) {
-              stackOut_25_0 = 0;
-              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_0 = 0;
               break L9;
             } else {
-              stackOut_24_0 = 1;
-              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_0 = 1;
               break L9;
             }
           }
@@ -1518,56 +1332,40 @@ abstract class in extends kg {
                     }
                   }
                   L25: {
-                    stackOut_100_0 = 8192;
-                    stackIn_102_0 = stackOut_100_0;
-                    stackIn_101_0 = stackOut_100_0;
+                    stackIn_102_0 = 8192;
+
                     if (np.field_D) {
-                      stackOut_102_0 = stackIn_102_0;
-                      stackOut_102_1 = 0;
-                      stackIn_103_0 = stackOut_102_0;
-                      stackIn_103_1 = stackOut_102_1;
+                      stackIn_103_0 = stackIn_102_0;
+                      stackIn_103_1 = 0;
                       break L25;
                     } else {
-                      stackOut_101_0 = stackIn_101_0;
-                      stackOut_101_1 = 1;
-                      stackIn_103_0 = stackOut_101_0;
-                      stackIn_103_1 = stackOut_101_1;
+                      stackIn_103_0 = stackIn_102_0;
+                      stackIn_103_1 = 1;
                       break L25;
                     }
                   }
                   L26: {
-                    stackOut_103_0 = stackIn_103_0;
-                    stackOut_103_1 = stackIn_103_1;
-                    stackOut_103_2 = mi.field_d;
-                    stackIn_105_0 = stackOut_103_0;
-                    stackIn_105_1 = stackOut_103_1;
-                    stackIn_105_2 = stackOut_103_2;
-                    stackIn_104_0 = stackOut_103_0;
-                    stackIn_104_1 = stackOut_103_1;
-                    stackIn_104_2 = stackOut_103_2;
+
+
+
+
+                    stackIn_105_2 = mi.field_d;
+
                     if (np.field_D) {
-                      stackOut_105_0 = stackIn_105_0;
-                      stackOut_105_1 = stackIn_105_1;
-                      stackOut_105_2 = (String) ((Object) stackIn_105_2);
-                      stackOut_105_3 = 0;
-                      stackIn_106_0 = stackOut_105_0;
-                      stackIn_106_1 = stackOut_105_1;
-                      stackIn_106_2 = stackOut_105_2;
-                      stackIn_106_3 = stackOut_105_3;
+
+
+                      stackIn_106_2 = (String) ((Object) stackIn_105_2);
+                      stackIn_106_3 = 0;
                       break L26;
                     } else {
-                      stackOut_104_0 = stackIn_104_0;
-                      stackOut_104_1 = stackIn_104_1;
-                      stackOut_104_2 = (String) ((Object) stackIn_104_2);
-                      stackOut_104_3 = 1;
-                      stackIn_106_0 = stackOut_104_0;
-                      stackIn_106_1 = stackOut_104_1;
-                      stackIn_106_2 = stackOut_104_2;
-                      stackIn_106_3 = stackOut_104_3;
+
+
+                      stackIn_106_2 = (String) ((Object) stackIn_105_2);
+                      stackIn_106_3 = 1;
                       break L26;
                     }
                   }
-                  hd.a(stackIn_106_0, stackIn_106_1 != 0, stackIn_106_2, stackIn_106_3 != 0);
+                  hd.a(stackIn_103_0, stackIn_103_1 != 0, stackIn_106_2, stackIn_106_3 != 0);
                   break L23;
                 }
                 L27: {
@@ -1666,12 +1464,10 @@ abstract class in extends kg {
               if (be.field_s != null) {
                 L37: {
                   if (!be.field_s.a(false)) {
-                    stackOut_134_0 = 0;
-                    stackIn_135_0 = stackOut_134_0;
+                    stackIn_135_0 = 0;
                     break L37;
                   } else {
-                    stackOut_133_0 = 1;
-                    stackIn_135_0 = stackOut_133_0;
+                    stackIn_135_0 = 1;
                     break L37;
                   }
                 }
@@ -1717,7 +1513,7 @@ abstract class in extends kg {
     }
 
     private final int g(int param0) {
-        int var2 = 0;
+        int var2;
         if (param0 == 11) {
           if (!this.field_i) {
             if (!dm.c(-118)) {

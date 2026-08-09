@@ -70,27 +70,18 @@ abstract class ui extends g {
     private final int a(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 != 0) {
           L0: {
             this.b(-18, -2, -61);
             if (!this.field_G) {
-              stackOut_11_0 = 0;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_0 = 0;
               break L0;
             } else {
               if (this.field_H.d((byte) -120) == this) {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 256;
                 break L0;
               } else {
-                stackOut_9_0 = 0;
-                stackIn_12_0 = stackOut_9_0;
+                stackIn_12_0 = 0;
                 break L0;
               }
             }
@@ -99,17 +90,14 @@ abstract class ui extends g {
         } else {
           L1: {
             if (!this.field_G) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               break L1;
             } else {
               if (this.field_H.d((byte) -120) == this) {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L1;
               } else {
-                stackOut_3_0 = 0;
-                stackIn_6_0 = stackOut_3_0;
+                stackIn_6_0 = 0;
                 break L1;
               }
             }
@@ -131,20 +119,12 @@ abstract class ui extends g {
     abstract void b(int param0, int param1, int param2);
 
     boolean d(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_11_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_38_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int var2;
+        int var3;
         if (param0) {
           L0: {
             var2 = this.a(0);
@@ -169,15 +149,13 @@ abstract class ui extends g {
                     if (this.field_G) {
                       break L2;
                     } else {
-                      stackOut_36_0 = 1;
-                      stackIn_38_0 = stackOut_36_0;
+                      stackIn_38_0 = 1;
                       break L1;
                     }
                   }
                 }
               }
-              stackOut_37_0 = 0;
-              stackIn_38_0 = stackOut_37_0;
+              stackIn_38_0 = 0;
               break L1;
             }
             return stackIn_38_0 != 0;
@@ -193,15 +171,13 @@ abstract class ui extends g {
                     if (this.field_G) {
                       break L4;
                     } else {
-                      stackOut_30_0 = 1;
-                      stackIn_32_0 = stackOut_30_0;
+                      stackIn_32_0 = 1;
                       break L3;
                     }
                   }
                 }
               }
-              stackOut_31_0 = 0;
-              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_0 = 0;
               break L3;
             }
             return stackIn_32_0 != 0;
@@ -226,12 +202,10 @@ abstract class ui extends g {
               } else {
                 L6: {
                   if (this.field_G) {
-                    stackOut_19_0 = 0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_20_0 = 0;
                     break L6;
                   } else {
-                    stackOut_18_0 = 1;
-                    stackIn_20_0 = stackOut_18_0;
+                    stackIn_20_0 = 1;
                     break L6;
                   }
                 }
@@ -247,12 +221,10 @@ abstract class ui extends g {
               } else {
                 L7: {
                   if (this.field_G) {
-                    stackOut_10_0 = 0;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = 0;
                     break L7;
                   } else {
-                    stackOut_9_0 = 1;
-                    stackIn_11_0 = stackOut_9_0;
+                    stackIn_11_0 = 1;
                     break L7;
                   }
                 }

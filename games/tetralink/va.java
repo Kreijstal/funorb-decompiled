@@ -17,9 +17,8 @@ final class va extends mc {
     static boolean field_u;
 
     final static int a(int param0) {
-        int discarded$0 = 0;
         if (param0 != -1) {
-            discarded$0 = va.a(56);
+            va.a(56);
             return (int)(1000000000L / mb.field_B);
         }
         return (int)(1000000000L / mb.field_B);

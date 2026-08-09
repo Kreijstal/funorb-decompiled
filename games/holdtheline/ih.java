@@ -37,23 +37,23 @@ final class ih extends hl {
     }
 
     final static String a(Throwable param0, int param1) throws IOException {
-        String var2 = null;
-        PrintWriter var4 = null;
-        String var5 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        ii var14 = null;
-        StringWriter var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
+        String var2;
+        PrintWriter var4;
+        String var5;
+        BufferedReader var6;
+        String var7;
+        String var8;
+        int var9;
+        int var10;
+        String var11;
+        int var12;
+        int var13;
+        ii var14;
+        StringWriter var15;
+        String var16;
+        String var17;
+        String var18;
+        String var19;
         L0: {
           var13 = HoldTheLine.field_D;
           if (param1 == -12895) {

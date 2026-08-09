@@ -16,22 +16,18 @@ final class da {
     }
 
     final static boolean a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (0 == (param0 ^ -1)) {
           return true;
         } else {
           L0: {
             var2 = 43 / ((24 - param1) / 50);
             if ((field_a & 1 << param0) == 0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L0;
             }
           }

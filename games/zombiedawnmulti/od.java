@@ -14,58 +14,27 @@ final class od extends lm {
 
     od(int param0, int param1, int param2) {
         super(param0, param1, param2, 100352);
-        L0: {
-          L1: {
-            this.field_yb = false;
-            if (-3 == (this.field_D ^ -1)) {
-              break L1;
-            } else {
-              if ((this.field_D ^ -1) == -5) {
-                break L1;
-              } else {
-                if ((this.field_D ^ -1) != -7) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-          }
-          this.field_lb = 17;
-          this.field_cb = 71680;
-          break L0;
+        this.field_yb = false;
+        if (-3 == (this.field_D ^ -1) || (this.field_D ^ -1) == -5 || (this.field_D ^ -1) == -7) {
+            this.field_lb = 17;
+            this.field_cb = 71680;
         }
     }
 
     final void l(byte param0) {
-        boolean discarded$11 = false;
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
-        boolean discarded$14 = false;
-        boolean discarded$15 = false;
-        boolean discarded$16 = false;
-        boolean discarded$17 = false;
-        boolean discarded$18 = false;
-        boolean discarded$19 = false;
-        boolean discarded$20 = false;
-        boolean discarded$21 = false;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = ZombieDawnMulti.field_E ? 1 : 0;
           if (this.field_yb) {
-            stackOut_2_0 = 2;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 2;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -80,11 +49,11 @@ final class od extends lm {
                 if (var4 * var4 - -(var5 * var5) <= 125000) {
                   L1: {
                     if (0 != (this.field_A.field_b.a(this.g(param0 ^ 1829947583), this.e((byte) -112), -17201, this.field_nb.e((byte) -112), this.field_nb.g(1829947600), false, false) ^ -1)) {
-                      discarded$11 = this.a(false, this.field_nb);
+                      this.a(false, this.field_nb);
                       break L1;
                     } else {
                       if (0 != (this.field_A.field_b.a(this.g(1829947600) + -48, this.e((byte) -112), -17201, this.field_nb.e((byte) -112), this.field_nb.g(1829947600) + -48, false, false) ^ -1)) {
-                        discarded$12 = this.a(false, this.field_nb);
+                        this.a(false, this.field_nb);
                         break L1;
                       } else {
                         this.field_nb = null;
@@ -95,7 +64,7 @@ final class od extends lm {
                         if (var6 == 0) {
                           break L1;
                         } else {
-                          discarded$13 = this.a(false, this.field_nb);
+                          this.a(false, this.field_nb);
                           break L1;
                         }
                       }
@@ -112,7 +81,7 @@ final class od extends lm {
                     if (var6 == 0) {
                       break L2;
                     } else {
-                      discarded$14 = this.a(false, this.field_nb);
+                      this.a(false, this.field_nb);
                       break L2;
                     }
                   }
@@ -128,7 +97,7 @@ final class od extends lm {
                   if (var6 == 0) {
                     break L3;
                   } else {
-                    discarded$15 = this.a(false, this.field_nb);
+                    this.a(false, this.field_nb);
                     break L3;
                   }
                 }
@@ -313,11 +282,11 @@ final class od extends lm {
                       break L13;
                     } else {
                       if (0 != (this.field_A.field_b.a(this.g(param0 ^ 1829947583), this.e((byte) -112), -17201, this.field_nb.e((byte) -112), this.field_nb.g(1829947600), false, false) ^ -1)) {
-                        discarded$16 = this.a(false, this.field_nb);
+                        this.a(false, this.field_nb);
                         break L12;
                       } else {
                         if (0 != (this.field_A.field_b.a(this.g(1829947600) + -48, this.e((byte) -112), -17201, this.field_nb.e((byte) -112), this.field_nb.g(1829947600) + -48, false, false) ^ -1)) {
-                          discarded$17 = this.a(false, this.field_nb);
+                          this.a(false, this.field_nb);
                           break L12;
                         } else {
                           break L13;
@@ -334,7 +303,7 @@ final class od extends lm {
                 if (var6 == 0) {
                   break L12;
                 } else {
-                  discarded$18 = this.a(false, this.field_nb);
+                  this.a(false, this.field_nb);
                   break L12;
                 }
               }
@@ -511,11 +480,11 @@ final class od extends lm {
                     break L27;
                   } else {
                     if (0 != (this.field_A.field_b.a(this.g(param0 ^ 1829947583), this.e((byte) -112), -17201, this.field_nb.e((byte) -112), this.field_nb.g(1829947600), false, false) ^ -1)) {
-                      discarded$19 = this.a(false, this.field_nb);
+                      this.a(false, this.field_nb);
                       break L26;
                     } else {
                       if (0 != (this.field_A.field_b.a(this.g(1829947600) + -48, this.e((byte) -112), -17201, this.field_nb.e((byte) -112), this.field_nb.g(1829947600) + -48, false, false) ^ -1)) {
-                        discarded$20 = this.a(false, this.field_nb);
+                        this.a(false, this.field_nb);
                         break L26;
                       } else {
                         break L27;
@@ -532,7 +501,7 @@ final class od extends lm {
               if (var6 == 0) {
                 break L26;
               } else {
-                discarded$21 = this.a(false, this.field_nb);
+                this.a(false, this.field_nb);
                 break L26;
               }
             }

@@ -18,11 +18,9 @@ abstract class g extends gb {
         if (param0 != 1) {
             g.f(-106);
         }
-        if (!re.field_k) {
-            if (fe.field_L >= bc.field_o) {
-                if (!(bc.field_o + cl.field_a <= fe.field_L)) {
-                    return field_y;
-                }
+        if (!re.field_k && fe.field_L >= bc.field_o) {
+            if (!(bc.field_o + cl.field_a <= fe.field_L)) {
+                return field_y;
             }
         }
         return -1;
@@ -43,14 +41,14 @@ abstract class g extends gb {
     }
 
     final static qj[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9 = 0;
-        qj[] var10 = null;
-        qj[] var11_ref_qj__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        qj var13 = null;
-        int var14 = 0;
-        int var15 = 0;
+        int var9;
+        qj[] var10;
+        qj[] var11_ref_qj__;
+        int var11;
+        int var12;
+        qj var13;
+        int var14;
+        int var15;
         var15 = TrackController.field_F ? 1 : 0;
         var9 = param6 - -param1 - -param2;
         var10 = new qj[]{new qj(var9, var9), new qj(param7, var9), new qj(var9, var9), new qj(var9, param7), new qj(64, 64), new qj(var9, param7), new qj(var9, var9), new qj(param7, var9), new qj(var9, var9)};

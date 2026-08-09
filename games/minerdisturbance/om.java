@@ -49,9 +49,9 @@ final class om {
     }
 
     final al a(int param0, long param1) {
-        al var4 = null;
-        al var5 = null;
-        int var6 = 0;
+        al var4;
+        al var5;
+        int var6;
         var6 = MinerDisturbance.field_ab;
         this.field_h = param1;
         var4 = this.field_a[(int)((long)(this.field_e + -1) & param1)];
@@ -78,7 +78,7 @@ final class om {
     }
 
     final static void a(byte param0) {
-        tm var2 = null;
+        tm var2;
         if (param0 > -89) {
           L0: {
             field_d = (String) null;
@@ -124,9 +124,9 @@ final class om {
     }
 
     final al c(int param0) {
-        al var2 = null;
-        al var3 = null;
-        int var4 = 0;
+        al var2;
+        al var3;
+        int var4;
         var4 = MinerDisturbance.field_ab;
         if (this.field_b != null) {
           var2 = this.field_a[(int)(this.field_h & (long)(this.field_e - param0))];
@@ -161,17 +161,17 @@ final class om {
     }
 
     om(int param0) {
-        al dupTemp$2 = null;
-        int var2 = 0;
-        al var3 = null;
+        al dupTemp$1 = null;
+        int var2;
+        al var3;
         this.field_a = new al[param0];
         this.field_e = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new al();
-            var3 = dupTemp$2;
-            this.field_a[var2] = dupTemp$2;
+            dupTemp$1 = new al();
+            var3 = dupTemp$1;
+            this.field_a[var2] = dupTemp$1;
             var3.field_t = var3;
             var3.field_q = var3;
             var2++;

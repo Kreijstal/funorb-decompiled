@@ -9,9 +9,8 @@ final class hs implements Iterable {
     static int[] field_a;
 
     final static boolean a(boolean param0, int param1, int param2) {
-        boolean discarded$2 = false;
         if (!param0) {
-          discarded$2 = hs.a(true, -18, 122);
+          hs.a(true, -18, 122);
           return to.b(-7493, param1, param2) & la.a(param2, param1, (byte) 70);
         } else {
           return to.b(-7493, param1, param2) & la.a(param2, param1, (byte) 70);
@@ -45,7 +44,7 @@ final class hs implements Iterable {
     }
 
     final wt a(boolean param0) {
-        wt var2 = null;
+        wt var2;
         var2 = this.field_b;
         if (var2 == this.field_c) {
           this.field_b = null;
@@ -65,8 +64,6 @@ final class hs implements Iterable {
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
         wt stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -74,16 +71,6 @@ final class hs implements Iterable {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_7_0 = null;
-        wt stackOut_9_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             L1: {
@@ -105,14 +92,12 @@ final class hs implements Iterable {
             }
             if (this.field_c == var3) {
               this.field_b = null;
-              stackOut_7_0 = null;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               this.field_b = var3.field_j;
-              stackOut_9_0 = (wt) (var3);
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = (wt) (var3);
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -121,27 +106,19 @@ final class hs implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3_ref);
-            stackOut_11_1 = new StringBuilder().append("hs.B(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3_ref);
+
+            stackIn_13_1 = new StringBuilder().append("hs.B(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -160,7 +137,7 @@ final class hs implements Iterable {
     }
 
     final wt b(boolean param0) {
-        wt var2 = null;
+        wt var2;
         var2 = this.field_c.field_j;
         if (var2 != this.field_c) {
           var2.d(-119);

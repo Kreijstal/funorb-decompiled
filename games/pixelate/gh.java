@@ -22,12 +22,12 @@ class gh extends uc {
     }
 
     final static void d(int param0) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         pc var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -45,9 +45,9 @@ class gh extends uc {
                 break L0;
               } else {
                 var1.g(8, 15514);
-                fieldTemp$5 = var1.field_m + 1;
+                fieldTemp$2 = var1.field_m + 1;
                 var1.field_m = var1.field_m + 1;
-                var2 = fieldTemp$5;
+                var2 = fieldTemp$2;
                 ao.a(var1, -20);
                 aa.field_f.f(var1.field_m + -var2, param0 ^ -9);
                 continue L2;
@@ -74,14 +74,14 @@ class gh extends uc {
 
     final static void a(byte param0) {
         try {
-            java.lang.reflect.Method var1 = null;
-            Exception var1_ref = null;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
-            Long var3 = null;
-            Object[] var4 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            java.lang.reflect.Method var1 = null;
+            Exception var1_ref = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
+            Long var3 = null;
+            Object[] var4 = null;
             try {
               L0: {
                 L1: {
@@ -91,9 +91,9 @@ class gh extends uc {
                   } else {
                     try {
                       L2: {
-                        var2_ref = Runtime.getRuntime();
+                        var2 = Runtime.getRuntime();
                         var4 = (Object[]) null;
-                        var3 = (Long) (var1.invoke((Object) (var2_ref), (Object[]) null));
+                        var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
                         ri.field_h = (int)(var3.longValue() / 1048576L) + 1;
                         decompiledRegionSelector0 = 0;
                         break L2;
@@ -101,7 +101,7 @@ class gh extends uc {
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L3: {
-                        var2 = decompiledCaughtException;
+                        var2_ref = decompiledCaughtException;
                         decompiledRegionSelector0 = 1;
                         break L3;
                       }

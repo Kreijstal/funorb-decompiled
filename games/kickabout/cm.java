@@ -18,8 +18,7 @@ abstract class cm extends ub {
     }
 
     final static int a(boolean param0, int param1) {
-        byte discarded$2 = 0;
-        int var2 = 0;
+        int var2;
         L0: {
           L1: {
             var2 = 0;
@@ -41,7 +40,7 @@ abstract class cm extends ub {
           if (param0) {
             break L2;
           } else {
-            discarded$2 = cm.b(122, (byte) 64);
+            cm.b(122, (byte) 64);
             break L2;
           }
         }
@@ -118,7 +117,6 @@ abstract class cm extends ub {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        boolean discarded$0 = false;
         if (param1 <= 0) {
             this.a((byte) 99, param2, param3);
             return;
@@ -129,7 +127,7 @@ abstract class cm extends ub {
         this.field_L = 0;
         this.field_K = param2;
         if (param0 > 0) {
-            discarded$0 = this.k(-115);
+            this.k(-115);
         }
         this.field_I = this.field_n;
     }
@@ -143,13 +141,13 @@ abstract class cm extends ub {
 
     final static void l(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var6 = Kickabout.field_G;
         try {
           L0: {
@@ -180,20 +178,20 @@ abstract class cm extends ub {
     }
 
     void a(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         var17 = Kickabout.field_G;
         on.g(param0 + 6, 35 + param2, this.field_n + -12, -40 + this.field_i, 2105376, 0);
         var5 = 211;
@@ -243,7 +241,7 @@ abstract class cm extends ub {
               }
             }
           } else {
-            if (var9 >= on.field_e) {
+            if ((var9 ^ -1) <= (on.field_e ^ -1)) {
               if (var9 < on.field_h) {
                 L3: {
                   var10 = var8 * (var6 - var5) / var4 + var5;

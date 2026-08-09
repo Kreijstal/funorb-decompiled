@@ -34,7 +34,7 @@ final class bc {
     }
 
     final static void a(int param0, int param1, byte param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         if (param2 == -59) {
           L0: {
             er.field_j.g(param0, param1);
@@ -118,7 +118,7 @@ final class bc {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1;
         L0: {
           iq.a((byte) -78);
           ok.field_l = ah.field_e.a(we.field_g[12]);
@@ -143,26 +143,62 @@ final class bc {
         ri[] var1 = null;
         int var2 = 0;
         int var3 = 0;
-        var3 = ZombieDawnMulti.field_E ? 1 : 0;
-        var1 = new ri[qc.field_v];
-        var2 = 0;
-        if (param0 == 2) {
-          L0: while (true) {
-            if (var2 < qc.field_v) {
-              var1[var2] = new ri(ie.field_nb, hj.field_a, k.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], qp.field_t[var2], tp.field_t);
-              var2++;
-              if (var3 == 0) {
-                continue L0;
-              } else {
-                return var1;
-              }
-            } else {
-              fd.h((byte) 125);
-              return var1;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var3 = ZombieDawnMulti.field_E ? 1 : 0;
+                    var1 = new ri[qc.field_v];
+                    var2 = 0;
+                    if (param0 == 2) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    return (ri[]) null;
+                }
+                case 2: {
+                    if (var2 < qc.field_v) {
+                        statePc = 4;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    fd.h((byte) 125);
+                    return var1;
+                }
+                case 4: {
+                    var1[var2] = new ri(ie.field_nb, hj.field_a, k.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], qp.field_t[var2], tp.field_t);
+                    var2++;
+                    if (var3 == 0) {
+                        statePc = 6;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    return var1;
+                }
+                case 6: {
+                    if (var3 == 0) {
+                        statePc = 2;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    fd.h((byte) 125);
+                    return var1;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } else {
-          return (ri[]) null;
         }
     }
 

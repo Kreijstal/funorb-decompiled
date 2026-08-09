@@ -25,9 +25,8 @@ final class qr {
     }
 
     final boolean a(int param0) {
-        boolean discarded$0 = false;
         if (param0 <= 74) {
-            discarded$0 = this.b((byte) 103);
+            this.b((byte) 103);
             return this.field_f;
         }
         return this.field_f;
@@ -65,8 +64,8 @@ final class qr {
     }
 
     final static void a(int param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Pool.field_O;
         if ((mp.field_V ^ -1) < -1) {
           if (fk.field_gb == null) {

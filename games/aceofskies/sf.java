@@ -16,8 +16,6 @@ abstract class sf extends wf {
         ku stackIn_5_0 = null;
         byte[] stackIn_8_0 = null;
         byte[] stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -25,44 +23,28 @@ abstract class sf extends wf {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_9_0 = null;
-        byte[] stackOut_7_0 = null;
-        ku stackOut_4_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             if (param2 != null) {
               if ((param2.length ^ -1) >= param1) {
                 if (param0) {
-                  stackOut_9_0 = fg.a(param2, (byte) 121);
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = fg.a(param2, (byte) 121);
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_7_0 = (byte[]) (param2);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = (byte[]) (param2);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
                 var3 = new ku();
                 ((af) ((Object) var3)).a((byte) 56, param2);
-                stackOut_4_0 = (ku) (var3);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (ku) (var3);
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -71,27 +53,19 @@ abstract class sf extends wf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3_ref);
-            stackOut_11_1 = new StringBuilder().append("sf.G(").append(param0).append(',').append(param1).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3_ref);
+
+            stackIn_13_1 = new StringBuilder().append("sf.G(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L1;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L1;
             }
           }
@@ -113,9 +87,8 @@ abstract class sf extends wf {
     }
 
     final int a(int param0) {
-        float discarded$0 = 0.0f;
         if (param0 <= 53) {
-            discarded$0 = this.a(true);
+            this.a(true);
             return this.field_g;
         }
         return this.field_g;

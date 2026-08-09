@@ -22,9 +22,8 @@ final class gk {
     }
 
     final static hl a(int param0) {
-        hl discarded$0 = null;
         if (param0 != 21) {
-            discarded$0 = gk.a(47);
+            gk.a(47);
             return hn.field_Q.field_Pb;
         }
         return hn.field_Q.field_Pb;

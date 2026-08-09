@@ -5,7 +5,7 @@ final class di extends pu {
     static String field_l;
 
     final static void c(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = -52 % ((-35 - param0) / 52);
         if (null != ms.field_u) {
           if (null == ms.field_u.field_g) {
@@ -26,7 +26,6 @@ final class di extends pu {
     }
 
     final static nea a(String param0, int param1) {
-        boolean discarded$2 = false;
         String var2 = null;
         RuntimeException var2_ref = null;
         nea var3 = null;
@@ -37,8 +36,6 @@ final class di extends pu {
         Object stackIn_3_0 = null;
         nea stackIn_13_0 = null;
         Object stackIn_18_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -46,17 +43,6 @@ final class di extends pu {
         String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_17_0 = null;
-        nea stackOut_12_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -75,9 +61,8 @@ final class di extends pu {
               L2: while (true) {
                 if (var3 == null) {
                   if (param1 >= -110) {
-                    discarded$2 = di.b(-9);
-                    stackOut_17_0 = null;
-                    stackIn_18_0 = stackOut_17_0;
+                    di.b(-9);
+                    stackIn_18_0 = null;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
@@ -98,16 +83,14 @@ final class di extends pu {
                     var3 = (nea) ((Object) fq.field_s.a((byte) -31));
                     continue L2;
                   } else {
-                    stackOut_12_0 = (nea) (var3);
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = (nea) (var3);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 }
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -116,27 +99,19 @@ final class di extends pu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2_ref = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2_ref);
-            stackOut_19_1 = new StringBuilder().append("di.B(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2_ref);
+
+            stackIn_21_1 = new StringBuilder().append("di.B(");
+
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L4;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L4;
             }
           }
@@ -175,10 +150,11 @@ final class di extends pu {
 
     final static void a(boolean param0, int param1) {
         cq var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
+        boolean stackIn_14_0 = false;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = BachelorFridge.field_y;
         try {
           L0: {
@@ -196,8 +172,9 @@ final class di extends pu {
                         if (var2 == null) {
                           break L2;
                         } else {
+                          stackIn_14_0 = var2.field_h.a((byte) -106);
                           L4: {
-                            if (var2.field_h.a((byte) -106)) {
+                            if (stackIn_14_0) {
                               var2.field_i.f(var2.field_f * b.field_u - -128 >> -580263736);
                               break L4;
                             } else {

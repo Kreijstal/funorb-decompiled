@@ -62,19 +62,19 @@ abstract class nb extends ld {
     }
 
     void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = TetraLink.field_J;
         ra.b(param2 + 6, param0 + 35, -12 + this.field_F, this.field_u - 40, 2105376, 0);
         var4 = 35;
@@ -131,7 +131,7 @@ abstract class nb extends ld {
               }
             }
           } else {
-            if (ra.field_i <= var8) {
+            if ((ra.field_i ^ -1) >= (var8 ^ -1)) {
               if (var8 < ra.field_g) {
                 L4: {
                   var9 = var7 * (-var5 + var6) / var4 + var5;
@@ -229,10 +229,9 @@ abstract class nb extends ld {
     }
 
     boolean h(int param0) {
-        boolean discarded$0 = false;
         this.a(true);
         if (param0 != 652390224) {
-            discarded$0 = this.h(37);
+            this.h(37);
         }
         return super.h(param0 + 0);
     }

@@ -10,13 +10,13 @@ final class ctb extends da {
     private int[] field_f;
 
     private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var10 = -param6;
         L0: while (true) {
           if (var10 >= 0) {
@@ -30,9 +30,9 @@ final class ctb extends da {
                 var10++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                var12 = param0[incrementValue$66] & 255;
+                var12 = param0[incrementValue$11] & 255;
                 if (var12 == 0) {
                   param4++;
                   var11++;
@@ -41,9 +41,9 @@ final class ctb extends da {
                   var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
                   var12 = 256 - var12;
                   var14 = param1[param4];
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param1[incrementValue$67] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
+                  param1[incrementValue$12] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
                   var11++;
                   continue L1;
                 }
@@ -54,112 +54,73 @@ final class ctb extends da {
     }
 
     final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var16 = 0;
+        if (param5 == null) {
+            this.fa(param0, param1, param2, param3, param4);
+            return;
+        }
+        param1 = param1 + this.field_e[param0];
+        param2 = param2 + this.field_d[param0];
+        int var9 = this.field_h[param0];
+        int var10 = this.field_f[param0];
+        int var11 = this.field_g.field_i;
+        int var12 = param1 + param2 * var11;
+        int var13 = var11 - var9;
         int var14 = 0;
         int var15 = 0;
-        int var16 = 0;
-        if (param5 != null) {
-          L0: {
-            param1 = param1 + this.field_e[param0];
-            param2 = param2 + this.field_d[param0];
-            var9 = this.field_h[param0];
-            var10 = this.field_f[param0];
-            var11 = this.field_g.field_i;
-            var12 = param1 + param2 * var11;
-            var13 = var11 - var9;
-            var14 = 0;
-            var15 = 0;
-            if (param2 >= this.field_g.field_n) {
-              break L0;
-            } else {
-              var16 = this.field_g.field_n - param2;
-              var10 = var10 - var16;
-              param2 = this.field_g.field_n;
-              var15 = var15 + var16 * var9;
-              var12 = var12 + var16 * var11;
-              break L0;
-            }
-          }
-          L1: {
-            if (param2 + var10 <= this.field_g.field_p) {
-              break L1;
-            } else {
-              var10 = var10 - (param2 + var10 - this.field_g.field_p);
-              break L1;
-            }
-          }
-          L2: {
-            if (param1 >= this.field_g.field_H) {
-              break L2;
-            } else {
-              var16 = this.field_g.field_H - param1;
-              var9 = var9 - var16;
-              param1 = this.field_g.field_H;
-              var15 = var15 + var16;
-              var12 = var12 + var16;
-              var14 = var14 + var16;
-              var13 = var13 + var16;
-              break L2;
-            }
-          }
-          L3: {
-            if (param1 + var9 <= this.field_g.field_A) {
-              break L3;
-            } else {
-              var16 = param1 + var9 - this.field_g.field_A;
-              var9 = var9 - var16;
-              var14 = var14 + var16;
-              var13 = var13 + var16;
-              break L3;
-            }
-          }
-          L4: {
-            if (var9 <= 0) {
-              break L4;
-            } else {
-              if (var10 > 0) {
-                this.a(this.field_c[param0], this.field_g.field_k, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_h[param0], param5, param6, param7);
-                return;
-              } else {
-                break L4;
-              }
-            }
-          }
-          return;
-        } else {
-          this.fa(param0, param1, param2, param3, param4);
-          return;
+        if (param2 < this.field_g.field_n) {
+            var16 = this.field_g.field_n - param2;
+            var10 = var10 - var16;
+            param2 = this.field_g.field_n;
+            var15 = var15 + var16 * var9;
+            var12 = var12 + var16 * var11;
         }
+        if (param2 + var10 > this.field_g.field_p) {
+            var10 = var10 - (param2 + var10 - this.field_g.field_p);
+        }
+        if (param1 < this.field_g.field_H) {
+            var16 = this.field_g.field_H - param1;
+            var9 = var9 - var16;
+            param1 = this.field_g.field_H;
+            var15 = var15 + var16;
+            var12 = var12 + var16;
+            var14 = var14 + var16;
+            var13 = var13 + var16;
+        }
+        if (param1 + var9 > this.field_g.field_A) {
+            var16 = param1 + var9 - this.field_g.field_A;
+            var9 = var9 - var16;
+            var14 = var14 + var16;
+            var13 = var13 + var16;
+        }
+        if (var9 <= 0 || var10 <= 0) {
+            return;
+        }
+        this.a(this.field_c[param0], this.field_g.field_k, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_h[param0], param5, param6, param7);
     }
 
     private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        Object var16 = null;
-        tka var16_ref = null;
-        int[] var17 = null;
-        int[] var18 = null;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int[] var31 = null;
-        int[] var32 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
+        Object var16;
+        tka var16_ref;
+        int[] var17;
+        int[] var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int[] var31;
+        int[] var32;
         L0: {
           var16 = null;
           var16_ref = (tka) ((Object) param12);
@@ -180,12 +141,10 @@ final class ctb extends da {
         }
         L1: {
           if (param14 + var32.length >= param10 + param6) {
-            stackOut_4_0 = param10 + param6;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = param10 + param6;
             break L1;
           } else {
-            stackOut_3_0 = param14 + var32.length;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = param14 + var32.length;
             break L1;
           }
         }
@@ -243,9 +202,9 @@ final class ctb extends da {
                 var22++;
                 continue L2;
               } else {
-                incrementValue$2 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                var28 = param0[incrementValue$2] & 255;
+                var28 = param0[incrementValue$0] & 255;
                 if (var28 == 0) {
                   param4++;
                   var27++;
@@ -254,9 +213,9 @@ final class ctb extends da {
                   var29 = ((param2 & 16711935) * var28 & -16711936) + ((param2 & 65280) * var28 & 16711680) >> 8;
                   var28 = 256 - var28;
                   var30 = param1[param4];
-                  incrementValue$3 = param4;
+                  incrementValue$1 = param4;
                   param4++;
-                  param1[incrementValue$3] = (((var30 & 16711935) * var28 & -16711936) + ((var30 & 65280) * var28 & 16711680) >> 8) + var29;
+                  param1[incrementValue$1] = (((var30 & 16711935) * var28 & -16711936) + ((var30 & 65280) * var28 & 16711680) >> 8) + var29;
                   var27++;
                   continue L5;
                 }
@@ -300,47 +259,27 @@ final class ctb extends da {
     }
 
     final void fa(char param0, int param1, int param2, int param3, boolean param4) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var13 = 0;
+        param1 = param1 + this.field_e[param0];
+        param2 = param2 + this.field_d[param0];
+        int var6 = this.field_h[param0];
+        int var7 = this.field_f[param0];
+        int var8 = this.field_g.field_i;
+        int var9 = param1 + param2 * var8;
+        int var10 = var8 - var6;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        L0: {
-          param1 = param1 + this.field_e[param0];
-          param2 = param2 + this.field_d[param0];
-          var6 = this.field_h[param0];
-          var7 = this.field_f[param0];
-          var8 = this.field_g.field_i;
-          var9 = param1 + param2 * var8;
-          var10 = var8 - var6;
-          var11 = 0;
-          var12 = 0;
-          if (param2 >= this.field_g.field_n) {
-            break L0;
-          } else {
+        if (param2 < this.field_g.field_n) {
             var13 = this.field_g.field_n - param2;
             var7 = var7 - var13;
             param2 = this.field_g.field_n;
             var12 = var12 + var13 * var6;
             var9 = var9 + var13 * var8;
-            break L0;
-          }
         }
-        L1: {
-          if (param2 + var7 <= this.field_g.field_p) {
-            break L1;
-          } else {
+        if (param2 + var7 > this.field_g.field_p) {
             var7 = var7 - (param2 + var7 - this.field_g.field_p);
-            break L1;
-          }
         }
-        L2: {
-          if (param1 >= this.field_g.field_H) {
-            break L2;
-          } else {
+        if (param1 < this.field_g.field_H) {
             var13 = this.field_g.field_H - param1;
             var6 = var6 - var13;
             param1 = this.field_g.field_H;
@@ -348,31 +287,16 @@ final class ctb extends da {
             var9 = var9 + var13;
             var11 = var11 + var13;
             var10 = var10 + var13;
-            break L2;
-          }
         }
-        L3: {
-          if (param1 + var6 <= this.field_g.field_A) {
-            break L3;
-          } else {
+        if (param1 + var6 > this.field_g.field_A) {
             var13 = param1 + var6 - this.field_g.field_A;
             var6 = var6 - var13;
             var11 = var11 + var13;
             var10 = var10 + var13;
-            break L3;
-          }
         }
-        L4: {
-          if (var6 <= 0) {
-            break L4;
-          } else {
-            if (var7 > 0) {
-              this.a(this.field_c[param0], this.field_g.field_k, param3, var12, var9, var6, var7, var10, var11);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var6 <= 0 || var7 <= 0) {
+            return;
         }
+        this.a(this.field_c[param0], this.field_g.field_k, param3, var12, var9, var6, var7, var10, var11);
     }
 }

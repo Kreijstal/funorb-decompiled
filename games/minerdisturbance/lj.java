@@ -42,10 +42,15 @@ final class lj extends pi {
     }
 
     final static pb a(ld param0, byte param1) {
-        pb discarded$2 = null;
-        int discarded$3 = 0;
-        RuntimeException var2 = null;
+        pb stackIn_25_0 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         pb var5 = null;
@@ -53,24 +58,6 @@ final class lj extends pi {
         int var7 = 0;
         int var8 = 0;
         ld var9 = null;
-        pb stackIn_24_0 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        pb stackOut_23_0 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
         var8 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -83,7 +70,7 @@ final class lj extends pi {
                   break L1;
                 } else {
                   var9 = (ld) null;
-                  discarded$2 = lj.a((ld) null, (byte) 35);
+                  lj.a((ld) null, (byte) 35);
                   break L1;
                 }
               }
@@ -116,7 +103,7 @@ final class lj extends pi {
                 if (var4 == 0) {
                   break L3;
                 } else {
-                  discarded$3 = param0.c((byte) -67, 16);
+                  param0.c((byte) -67, 16);
                   var5.field_s = gd.a(param0, 16, -66, var5.field_s);
                   var5.field_u = gd.a(param0, 16, -62, var5.field_u);
                   var5.field_i = gd.a(param0, 16, -84, var5.field_i);
@@ -164,8 +151,7 @@ final class lj extends pi {
                   }
                 }
               }
-              stackOut_23_0 = (pb) (var5);
-              stackIn_24_0 = stackOut_23_0;
+              stackIn_25_0 = (pb) (var5);
               break L0;
             }
           }
@@ -173,33 +159,25 @@ final class lj extends pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var2);
-            stackOut_25_1 = new StringBuilder().append("lj.A(");
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_28_0 = (RuntimeException) (var2);
+
+            stackIn_28_1 = new StringBuilder().append("lj.A(");
+
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L8;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L8;
             }
           }
-          throw lj.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param1 + ')');
         }
-        return stackIn_24_0;
+        return stackIn_25_0;
     }
 
     static {

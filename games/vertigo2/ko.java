@@ -13,7 +13,7 @@ final class ko extends af {
     static ke field_M;
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
+        int var6;
         super.a(param0, param1, param2, param3, param4);
         var6 = -130 + param4 >> -1014539679;
         if (!this.field_Q) {
@@ -33,12 +33,10 @@ final class ko extends af {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         if (param0 == -32410) {
           try {
             L0: {
-              stackOut_2_0 = Integer.parseInt(this.field_N.field_w);
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = Integer.parseInt(this.field_N.field_w);
               break L0;
             }
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -53,7 +51,6 @@ final class ko extends af {
     }
 
     final boolean e(boolean param0) {
-        boolean discarded$6 = false;
         if (null != this.field_N.field_w) {
           if (0 != this.field_N.field_w.length()) {
             if (null != this.field_T.field_w) {
@@ -69,7 +66,7 @@ final class ko extends af {
                     return true;
                   }
                 } else {
-                  discarded$6 = this.e(false);
+                  this.e(false);
                   if (null != this.field_R.field_w) {
                     if (this.field_R.field_w.length() == 0) {
                       return true;
@@ -95,11 +92,10 @@ final class ko extends af {
     }
 
     final void a(int param0, df param1) {
-        boolean discarded$0 = false;
         try {
             super.a(param0 + 0, param1);
             if (param0 != -11808) {
-                discarded$0 = this.e(true);
+                this.e(true);
             }
             this.field_N.field_v = (uf) ((Object) param1);
             this.field_T.field_v = (uf) ((Object) param1);
@@ -120,20 +116,14 @@ final class ko extends af {
     final static boolean b(byte param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 > -27) {
           L0: {
             field_P = 61;
             if (param1 != (-param1 & param1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -141,12 +131,10 @@ final class ko extends af {
         } else {
           L1: {
             if (param1 != (-param1 & param1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -155,23 +143,20 @@ final class ko extends af {
     }
 
     final int c(boolean param0) {
-        boolean discarded$2 = false;
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         L0: {
           if (!param0) {
             break L0;
           } else {
-            discarded$2 = ko.b((byte) 90, -57);
+            ko.b((byte) 90, -57);
             break L0;
           }
         }
         try {
           L1: {
-            stackOut_2_0 = Integer.parseInt(this.field_R.field_w);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = Integer.parseInt(this.field_R.field_w);
             break L1;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -195,16 +180,15 @@ final class ko extends af {
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3) {
-        boolean discarded$1 = false;
-        RuntimeException var4 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         cr var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         tn var9 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -233,7 +217,7 @@ final class ko extends af {
                   break L3;
                 } else {
                   if (pe.field_r) {
-                    discarded$1 = lq.field_a.a(td.field_c.field_C, param0, (byte) 82, td.field_c.field_ob);
+                    lq.field_a.a(td.field_c.field_C, param0, (byte) 82, td.field_c.field_ob);
                     break L3;
                   } else {
                     lq.field_a = null;
@@ -368,7 +352,6 @@ final class ko extends af {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         L0: {
           if (param0 == 0) {
             break L0;
@@ -379,8 +362,7 @@ final class ko extends af {
         }
         try {
           L1: {
-            stackOut_2_0 = -1 + Integer.parseInt(this.field_T.field_w);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = -1 + Integer.parseInt(this.field_T.field_w);
             break L1;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

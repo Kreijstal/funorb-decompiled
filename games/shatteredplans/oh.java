@@ -11,24 +11,18 @@ class oh {
     oh field_e;
 
     final static int b(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         var2 = 94 % ((-61 - param1) / 58);
         param0 = param0 & 8191;
         if (param0 >= 4096) {
           L0: {
             if (6144 > param0) {
-              stackOut_7_0 = -br.field_o[-param0 + 6144];
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = -br.field_o[-param0 + 6144];
               break L0;
             } else {
-              stackOut_6_0 = br.field_o[-6144 + param0];
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = br.field_o[-6144 + param0];
               break L0;
             }
           }
@@ -36,12 +30,10 @@ class oh {
         } else {
           L1: {
             if ((param0 ^ -1) > -2049) {
-              stackOut_3_0 = br.field_o[2048 + -param0];
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = br.field_o[2048 + -param0];
               break L1;
             } else {
-              stackOut_2_0 = -br.field_o[param0 - 2048];
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = -br.field_o[param0 - 2048];
               break L1;
             }
           }
@@ -78,11 +70,10 @@ class oh {
     }
 
     final void b(byte param0) {
-        boolean discarded$2 = false;
         if (this.field_e != null) {
           this.field_e.field_f = this.field_f;
           if (param0 >= -57) {
-            discarded$2 = this.c(32);
+            this.c(32);
             this.field_f.field_e = this.field_e;
             this.field_e = null;
             this.field_f = null;
@@ -99,9 +90,8 @@ class oh {
     }
 
     public static void a(boolean param0) {
-        boolean discarded$2 = false;
         if (!param0) {
-          discarded$2 = oh.b(true);
+          oh.b(true);
           field_g = null;
           field_d = null;
           field_c = null;

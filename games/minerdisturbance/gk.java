@@ -16,10 +16,9 @@ class gk extends eg {
     }
 
     final static ki b(int param0, int param1) {
-        ki discarded$2 = null;
-        ki var2 = null;
+        ki var2;
         if (param1 != 1) {
-          discarded$2 = gk.b(-117, -125);
+          gk.b(-117, -125);
           var2 = new ki();
           on.field_v.a((byte) 103, var2);
           tc.a(param1 + 0, param0);
@@ -50,14 +49,14 @@ class gk extends eg {
     }
 
     final static lc a(int param0, int param1, int param2, int param3, int param4) {
-        lc var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        lc var5;
+        int var6;
+        int var7;
         var7 = MinerDisturbance.field_ab;
         var5 = (lc) ((Object) sj.field_g.b(107));
         L0: while (true) {
           if (var5 != null) {
-            if (param2 != var5.field_q) {
+            if ((param2 ^ -1) != (var5.field_q ^ -1)) {
               var5 = (lc) ((Object) sj.field_g.b((byte) 56));
               continue L0;
             } else {

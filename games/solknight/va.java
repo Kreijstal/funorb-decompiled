@@ -64,36 +64,24 @@ abstract class va {
     abstract boolean d(byte param0);
 
     final ic a(int param0, boolean param1, int param2, int param3, byte param4) {
-        boolean discarded$1 = false;
-        long var6 = 0L;
-        ic var8 = null;
-        ic stackIn_1_0 = null;
         ic stackIn_2_0 = null;
         ic stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        ic stackOut_0_0 = null;
-        ic stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        ic stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
+        long var6;
+        ic var8;
         L0: {
           var6 = (long)param2 + ((long)param0 << 437409504);
           var8 = new ic();
           var8.field_l = var6;
-          stackOut_0_0 = (ic) (var8);
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = (ic) (var8);
+
           if (!param1) {
-            stackOut_2_0 = (ic) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (ic) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (ic) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (ic) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -124,7 +112,7 @@ abstract class va {
           }
         } else {
           L2: {
-            discarded$1 = this.d((byte) -77);
+            this.d((byte) -77);
             if (!param1) {
               break L2;
             } else {
@@ -169,20 +157,14 @@ abstract class va {
     final boolean b(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -21) {
           L0: {
             this.field_m = (hl) null;
             if (20 > this.b(false)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -190,12 +172,10 @@ abstract class va {
         } else {
           L1: {
             if (20 > this.b(false)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

@@ -24,13 +24,13 @@ final class bf {
     }
 
     final static void b(byte param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var1 = 256;
         uh.field_t[0] = (var1 >> -1787850847) - ml.field_l[0];
         uh.field_t[1] = -ml.field_l[1];
@@ -158,9 +158,8 @@ final class bf {
     }
 
     final int a(int param0) {
-        int discarded$2 = 0;
         if (param0 <= 82) {
-          discarded$2 = this.a((byte) -110);
+          this.a((byte) -110);
           return (this.field_f + this.field_a) / 2;
         } else {
           return (this.field_f + this.field_a) / 2;

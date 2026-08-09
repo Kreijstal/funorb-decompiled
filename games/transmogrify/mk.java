@@ -30,14 +30,10 @@ abstract class mk extends aj {
     }
 
     boolean m(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_10_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         L0: {
           var2 = this.l(-18555);
           var3 = -this.field_D + var2;
@@ -55,12 +51,10 @@ abstract class mk extends aj {
             } else {
               L1: {
                 if (this.field_A) {
-                  stackOut_18_0 = 0;
-                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_0 = 0;
                   break L1;
                 } else {
-                  stackOut_17_0 = 1;
-                  stackIn_19_0 = stackOut_17_0;
+                  stackIn_19_0 = 1;
                   break L1;
                 }
               }
@@ -77,12 +71,10 @@ abstract class mk extends aj {
             } else {
               L2: {
                 if (this.field_A) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = 0;
                   break L2;
                 } else {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_0 = 1;
                   break L2;
                 }
               }
@@ -97,28 +89,19 @@ abstract class mk extends aj {
     private final int l(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -18555) {
           L0: {
             field_y = (ti) null;
             if (this.field_A) {
               if (this.field_z.e((byte) 14) != this) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = 0;
                 break L0;
               } else {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 256;
                 break L0;
               }
             } else {
-              stackOut_8_0 = 0;
-              stackIn_12_0 = stackOut_8_0;
+              stackIn_12_0 = 0;
               break L0;
             }
           }
@@ -127,17 +110,14 @@ abstract class mk extends aj {
           L1: {
             if (this.field_A) {
               if (this.field_z.e((byte) 14) != this) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L1;
               } else {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L1;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L1;
             }
           }
@@ -156,8 +136,6 @@ abstract class mk extends aj {
         CharSequence var8 = null;
         uk stackIn_17_0 = null;
         Object stackIn_20_0 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -165,16 +143,6 @@ abstract class mk extends aj {
         String stackIn_24_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        uk stackOut_16_0 = null;
-        Object stackOut_19_0 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -191,8 +159,7 @@ abstract class mk extends aj {
                         var8 = (CharSequence) ((Object) var4.field_eb);
                         var5 = hj.a((byte) -128, var8);
                         if (var5.equals(var3)) {
-                          stackOut_16_0 = (uk) (var4);
-                          stackIn_17_0 = stackOut_16_0;
+                          stackIn_17_0 = (uk) (var4);
                           decompiledRegionSelector0 = 0;
                           break L0;
                         } else {
@@ -200,8 +167,7 @@ abstract class mk extends aj {
                           if (var6 == 0) {
                             continue L1;
                           } else {
-                            stackOut_19_0 = null;
-                            stackIn_20_0 = stackOut_19_0;
+                            stackIn_20_0 = null;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           }
@@ -227,27 +193,19 @@ abstract class mk extends aj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var2);
-            stackOut_21_1 = new StringBuilder().append("mk.P(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var2);
+
+            stackIn_23_1 = new StringBuilder().append("mk.P(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L2;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L2;
             }
           }
@@ -264,23 +222,12 @@ abstract class mk extends aj {
         uj var3 = null;
         RuntimeException var3_ref = null;
         uj stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        uj stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -294,35 +241,26 @@ abstract class mk extends aj {
             var3 = new uj(false);
             var3.field_g = param2;
             var3.field_b = param1;
-            stackOut_2_0 = (uj) (var3);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (uj) (var3);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3_ref);
-            stackOut_4_1 = new StringBuilder().append("mk.I(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3_ref);
+
+            stackIn_6_1 = new StringBuilder().append("mk.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -350,7 +288,7 @@ abstract class mk extends aj {
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
-        int var5 = 0;
+        int var5;
         var5 = -122 % ((param3 - 77) / 34);
         if (this.field_D != 0) {
           if (-257 < (this.field_D ^ -1)) {
@@ -411,7 +349,7 @@ abstract class mk extends aj {
     abstract void a(int param0, byte param1, int param2);
 
     final qg i(int param0) {
-        qg var2 = null;
+        qg var2;
         var2 = super.i(-120);
         if (var2 != null) {
           return var2;

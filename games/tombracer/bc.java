@@ -20,11 +20,10 @@ final class bc {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_b = null;
         field_a = null;
         if (param0 <= 71) {
-            discarded$0 = bc.a(true);
+            bc.a(true);
             field_c = null;
             return;
         }

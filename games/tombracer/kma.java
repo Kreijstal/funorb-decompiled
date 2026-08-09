@@ -9,10 +9,9 @@ abstract class kma implements nua {
     static String field_a;
 
     public final void c(int param0) {
-        String discarded$0 = null;
         this.field_b = bva.b((byte) -107);
         if (param0 > -63) {
-            discarded$0 = this.a(109);
+            this.a(109);
         }
     }
 
@@ -54,9 +53,9 @@ abstract class kma implements nua {
     abstract it d(int param0);
 
     final static void a(boolean param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var4;
+        int var5;
         var3 = 32 % ((43 - param1) / 57);
         if (null != fj.field_c) {
           var4 = fj.field_c.d(-1, param0);
@@ -82,9 +81,8 @@ abstract class kma implements nua {
     }
 
     public final it b(int param0) {
-        String discarded$5 = null;
         if (param0 != -4666) {
-            discarded$5 = this.a(82);
+            this.a(82);
             if (this.a(true)) {
                 return fk.field_d;
             }

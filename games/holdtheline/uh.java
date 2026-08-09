@@ -90,9 +90,9 @@ final class uh {
     }
 
     private final int c(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var5;
+        int var4;
         var5 = HoldTheLine.field_D;
         var3 = this.field_a.length;
         L0: while (true) {
@@ -117,8 +117,8 @@ final class uh {
     }
 
     final int[] a(int param0) {
-        int[] var2 = null;
-        int[] var3 = null;
+        int[] var2;
+        int[] var3;
         var3 = new int[this.field_b - -1];
         var2 = var3;
         if (param0 > -33) {
@@ -137,9 +137,8 @@ final class uh {
     }
 
     final void a(int param0, byte param1) {
-        int discarded$2 = 0;
         if (param1 < 61) {
-          discarded$2 = this.b(-32);
+          this.b(-32);
           this.a(1 + this.field_b, param0, (byte) -119);
           return;
         } else {
@@ -174,9 +173,8 @@ final class uh {
     }
 
     final int b(int param0) {
-        int[] discarded$0 = null;
         if (param0 >= -110) {
-            discarded$0 = this.a(-118);
+            this.a(-118);
             return 1 + this.field_b;
         }
         return 1 + this.field_b;

@@ -34,33 +34,21 @@ final class cia {
     }
 
     final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackIn_39_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackIn_32_0 = 0;
+        int var2;
+        int var3;
         L0: {
           if (oj.field_tb[kda.field_hd]) {
-            stackOut_4_0 = -1;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = -1;
             break L0;
           } else {
             if (!oj.field_tb[mf.field_a]) {
-              stackOut_3_0 = 0;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_5_0 = stackOut_2_0;
+              stackIn_5_0 = 1;
               break L0;
             }
           }
@@ -70,23 +58,46 @@ final class cia {
           L1: {
             if (!oj.field_tb[mi.field_k]) {
               if (!oj.field_tb[fp.field_a]) {
-                stackOut_38_0 = 0;
-                stackIn_39_0 = stackOut_38_0;
+                stackIn_32_0 = 0;
                 break L1;
               } else {
-                stackOut_37_0 = 1;
-                stackIn_39_0 = stackOut_37_0;
+                stackIn_32_0 = 1;
                 break L1;
               }
             } else {
-              stackOut_35_0 = -1;
-              stackIn_39_0 = stackOut_35_0;
+              stackIn_32_0 = -1;
               break L1;
             }
           }
-          L2: {
-            var3 = stackIn_39_0;
-            if (var2 != 0) {
+          var3 = stackIn_32_0;
+          if (var2 != 0) {
+            L2: {
+              if (!this.field_d) {
+                this.field_c.a(0, false, 0, 1, true);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            this.field_e = this.field_e + (var3 << 1836710161);
+            this.field_b = this.field_b + (var2 << -382754959);
+            this.field_d = true;
+            this.field_f = (tia.a(var3 << -1336954328, var2 << 117113064, -29543) >> 454184994) - 512;
+            this.field_c.a(0);
+            return;
+          } else {
+            if (var3 == 0) {
+              if (this.field_d) {
+                this.field_c.a(0, false, 0, 0, true);
+                this.field_d = false;
+                this.field_f = 0;
+                this.field_c.a(0);
+                return;
+              } else {
+                this.field_c.a(0);
+                return;
+              }
+            } else {
               L3: {
                 if (!this.field_d) {
                   this.field_c.a(0, false, 0, 1, true);
@@ -99,139 +110,70 @@ final class cia {
               this.field_b = this.field_b + (var2 << -382754959);
               this.field_d = true;
               this.field_f = (tia.a(var3 << -1336954328, var2 << 117113064, -29543) >> 454184994) - 512;
-              if (TombRacer.field_G) {
-                break L2;
+              this.field_c.a(0);
+              return;
+            }
+          }
+        } else {
+          L4: {
+            this.field_e = 123;
+            if (!oj.field_tb[mi.field_k]) {
+              if (!oj.field_tb[fp.field_a]) {
+                stackIn_11_0 = 0;
+                break L4;
+              } else {
+                stackIn_11_0 = 1;
+                break L4;
+              }
+            } else {
+              stackIn_11_0 = -1;
+              break L4;
+            }
+          }
+          var3 = stackIn_11_0;
+          if (var2 != 0) {
+            L5: {
+              if (!this.field_d) {
+                this.field_c.a(0, false, 0, 1, true);
+                break L5;
+              } else {
+                break L5;
+              }
+            }
+            this.field_e = this.field_e + (var3 << 1836710161);
+            this.field_b = this.field_b + (var2 << -382754959);
+            this.field_d = true;
+            this.field_f = (tia.a(var3 << -1336954328, var2 << 117113064, -29543) >> 454184994) - 512;
+            this.field_c.a(0);
+            return;
+          } else {
+            if (var3 == 0) {
+              if (this.field_d) {
+                this.field_c.a(0, false, 0, 0, true);
+                this.field_d = false;
+                this.field_f = 0;
+                this.field_c.a(0);
+                return;
               } else {
                 this.field_c.a(0);
                 return;
               }
             } else {
-              if (var3 == 0) {
-                break L2;
-              } else {
-                L4: {
-                  if (!this.field_d) {
-                    this.field_c.a(0, false, 0, 1, true);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                this.field_e = this.field_e + (var3 << 1836710161);
-                this.field_b = this.field_b + (var2 << -382754959);
-                this.field_d = true;
-                this.field_f = (tia.a(var3 << -1336954328, var2 << 117113064, -29543) >> 454184994) - 512;
-                if (TombRacer.field_G) {
-                  if (this.field_d) {
-                    this.field_c.a(0, false, 0, 0, true);
-                    this.field_d = false;
-                    this.field_f = 0;
-                    this.field_c.a(0);
-                    return;
-                  } else {
-                    this.field_c.a(0);
-                    return;
-                  }
-                } else {
-                  this.field_c.a(0);
-                  return;
-                }
-              }
-            }
-          }
-          if (this.field_d) {
-            this.field_c.a(0, false, 0, 0, true);
-            this.field_d = false;
-            this.field_f = 0;
-            this.field_c.a(0);
-            return;
-          } else {
-            this.field_c.a(0);
-            return;
-          }
-        } else {
-          L5: {
-            this.field_e = 123;
-            if (!oj.field_tb[mi.field_k]) {
-              if (!oj.field_tb[fp.field_a]) {
-                stackOut_10_0 = 0;
-                stackIn_11_0 = stackOut_10_0;
-                break L5;
-              } else {
-                stackOut_9_0 = 1;
-                stackIn_11_0 = stackOut_9_0;
-                break L5;
-              }
-            } else {
-              stackOut_7_0 = -1;
-              stackIn_11_0 = stackOut_7_0;
-              break L5;
-            }
-          }
-          L6: {
-            var3 = stackIn_11_0;
-            if (var2 != 0) {
-              L7: {
+              L6: {
                 if (!this.field_d) {
                   this.field_c.a(0, false, 0, 1, true);
-                  break L7;
+                  break L6;
                 } else {
-                  break L7;
+                  break L6;
                 }
               }
               this.field_e = this.field_e + (var3 << 1836710161);
               this.field_b = this.field_b + (var2 << -382754959);
               this.field_d = true;
               this.field_f = (tia.a(var3 << -1336954328, var2 << 117113064, -29543) >> 454184994) - 512;
-              if (TombRacer.field_G) {
-                break L6;
-              } else {
-                this.field_c.a(0);
-                return;
-              }
-            } else {
-              if (var3 == 0) {
-                break L6;
-              } else {
-                L8: {
-                  if (!this.field_d) {
-                    this.field_c.a(0, false, 0, 1, true);
-                    break L8;
-                  } else {
-                    break L8;
-                  }
-                }
-                this.field_e = this.field_e + (var3 << 1836710161);
-                this.field_b = this.field_b + (var2 << -382754959);
-                this.field_d = true;
-                this.field_f = (tia.a(var3 << -1336954328, var2 << 117113064, -29543) >> 454184994) - 512;
-                if (TombRacer.field_G) {
-                  if (this.field_d) {
-                    this.field_c.a(0, false, 0, 0, true);
-                    this.field_d = false;
-                    this.field_f = 0;
-                    this.field_c.a(0);
-                    return;
-                  } else {
-                    this.field_c.a(0);
-                    return;
-                  }
-                } else {
-                  this.field_c.a(0);
-                  return;
-                }
-              }
+              this.field_c.a(0);
+              return;
             }
-          }
-          if (this.field_d) {
-            this.field_c.a(0, false, 0, 0, true);
-            this.field_d = false;
-            this.field_f = 0;
-            this.field_c.a(0);
-            return;
-          } else {
-            this.field_c.a(0);
-            return;
           }
         }
     }

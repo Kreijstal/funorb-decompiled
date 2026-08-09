@@ -7,16 +7,14 @@ final class am {
     static String field_a;
 
     public static void b(int param0) {
-        ja discarded$0 = null;
         field_a = null;
         if (param0 != -7) {
-            discarded$0 = am.a(102, 53, -113, 106, 29);
+            am.a(102, 53, -113, 106, 29);
         }
     }
 
     final static boolean a(char param0, byte param1) {
         char[] var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -28,9 +26,7 @@ final class am {
         int stackIn_23_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_22_0 = 0;
+        RuntimeException var2_ref = null;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -39,8 +35,7 @@ final class am {
                 break L1;
               } else {
                 if (128 > param0) {
-                  stackOut_7_0 = 1;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -90,8 +85,7 @@ final class am {
                               break L5;
                             }
                           } else {
-                            stackOut_17_0 = 1;
-                            stackIn_18_0 = stackOut_17_0;
+                            stackIn_18_0 = 1;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           }
@@ -109,8 +103,7 @@ final class am {
               field_b = 89;
               break L3;
             }
-            stackOut_22_0 = 0;
-            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_0 = 0;
             decompiledRegionSelector0 = 2;
             break L0;
           }
@@ -151,9 +144,8 @@ final class am {
     }
 
     final static ja a(int param0, int param1, int param2, int param3, int param4) {
-        boolean discarded$2 = false;
         if (param3 != 1) {
-          discarded$2 = am.a('ﾘ', (byte) -57);
+          am.a('ﾘ', (byte) -57);
           return nk.a(no.field_Hb[param2][param0], param1, 255, param4);
         } else {
           return nk.a(no.field_Hb[param2][param0], param1, 255, param4);

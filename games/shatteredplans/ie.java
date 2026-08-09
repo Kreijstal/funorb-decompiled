@@ -3,45 +3,26 @@
  */
 final class ie {
     final static void a(bi param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param1 = param1 + param0.field_t;
-          param2 = param2 + param0.field_x;
-          var3 = param1 + param2 * gf.field_b;
-          var4 = 0;
-          var5 = param0.field_w;
-          var6 = param0.field_z;
-          var7 = gf.field_b - var6;
-          var8 = 0;
-          if (param2 >= gf.field_a) {
-            break L0;
-          } else {
+        param1 = param1 + param0.field_t;
+        param2 = param2 + param0.field_x;
+        int var3 = param1 + param2 * gf.field_b;
+        int var4 = 0;
+        int var5 = param0.field_w;
+        int var6 = param0.field_z;
+        int var7 = gf.field_b - var6;
+        int var8 = 0;
+        if (param2 < gf.field_a) {
             var9 = gf.field_a - param2;
             var5 = var5 - var9;
             param2 = gf.field_a;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * gf.field_b;
-            break L0;
-          }
         }
-        L1: {
-          if (param2 + var5 <= gf.field_f) {
-            break L1;
-          } else {
+        if (param2 + var5 > gf.field_f) {
             var5 = var5 - (param2 + var5 - gf.field_f);
-            break L1;
-          }
         }
-        L2: {
-          if (param1 >= gf.field_i) {
-            break L2;
-          } else {
+        if (param1 < gf.field_i) {
             var9 = gf.field_i - param1;
             var6 = var6 - var9;
             param1 = gf.field_i;
@@ -49,65 +30,55 @@ final class ie {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param1 + var6 <= gf.field_l) {
-            break L3;
-          } else {
+        if (param1 + var6 > gf.field_l) {
             var9 = param1 + var6 - gf.field_l;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
             ie.a(gf.field_h, param0.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final static void a(om param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        double var7 = 0.0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        double var25 = 0.0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
+        double var7;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        double var25;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
         if (param6 != 0) {
           L0: {
             param1 = param1 - (param0.field_t << 4);
@@ -661,12 +632,12 @@ final class ie {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var11 = -param6;
         L0: while (true) {
           if (var11 >= 0) {
@@ -680,9 +651,9 @@ final class ie {
                 var11++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 if (param2 == 0) {
                   param4++;
                   var12++;
@@ -690,9 +661,9 @@ final class ie {
                 } else {
                   var9 = param0[param4];
                   var10 = 256 - (param2 & 255);
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((var9 & 16711935) * var10 & -16711936 | (var9 & 65280) * var10 & 16711680) >> 8;
+                  param0[incrementValue$12] = ((var9 & 16711935) * var10 & -16711936 | (var9 & 65280) * var10 & 16711680) >> 8;
                   var12++;
                   continue L1;
                 }
@@ -703,33 +674,25 @@ final class ie {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_25_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
         L0: {
           var8 = param5 * param1 + param4;
           param6 = param6 & 4095;
@@ -750,12 +713,10 @@ final class ie {
                 L2: {
                   var9 = param0[var8];
                   if ((var9 & -16777216) == 0) {
-                    stackOut_4_0 = 0;
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = 0;
                     break L2;
                   } else {
-                    stackOut_3_0 = (4096 - param6) * (4096 - param7);
-                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_0 = (4096 - param6) * (4096 - param7);
                     break L2;
                   }
                 }
@@ -771,12 +732,10 @@ final class ie {
               L3: {
                 var10 = param0[var8 + 1];
                 if ((var10 & -16777216) == 0) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = 0;
                   break L3;
                 } else {
-                  stackOut_9_0 = param6 * (4096 - param7);
-                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_11_0 = param6 * (4096 - param7);
                   break L3;
                 }
               }
@@ -802,12 +761,10 @@ final class ie {
                 L6: {
                   var11 = param0[var8 + param1];
                   if ((var11 & -16777216) == 0) {
-                    stackOut_18_0 = 0;
-                    stackIn_19_0 = stackOut_18_0;
+                    stackIn_19_0 = 0;
                     break L6;
                   } else {
-                    stackOut_17_0 = (4096 - param6) * param7;
-                    stackIn_19_0 = stackOut_17_0;
+                    stackIn_19_0 = (4096 - param6) * param7;
                     break L6;
                   }
                 }
@@ -823,12 +780,10 @@ final class ie {
               L7: {
                 var12 = param0[var8 + param1 + 1];
                 if ((var12 & -16777216) == 0) {
-                  stackOut_24_0 = 0;
-                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_25_0 = 0;
                   break L7;
                 } else {
-                  stackOut_23_0 = param6 * param7;
-                  stackIn_25_0 = stackOut_23_0;
+                  stackIn_25_0 = param6 * param7;
                   break L7;
                 }
               }

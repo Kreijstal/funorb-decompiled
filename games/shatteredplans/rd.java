@@ -12,17 +12,17 @@ final class rd implements fo {
     private int field_c;
 
     public final l a(byte param0) throws jn {
-        hs var3 = null;
-        ln[] var4_ref_ln__ = null;
-        int var4 = 0;
-        int var5 = 0;
-        ln var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        ln var10 = null;
-        int var11 = 0;
-        l var12 = null;
+        hs var3;
+        ln[] var4_ref_ln__;
+        int var4;
+        int var5;
+        ln var6;
+        int var7;
+        int var8;
+        int var9;
+        ln var10;
+        int var11;
+        l var12;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         var12 = new l(pe.a((byte) 34, this.field_f), ls.a(this.field_c, 2), this.field_a, this.field_b);
         var3 = new hs(this.field_f, this.field_c, this.field_a, this.field_b, 1);
@@ -113,8 +113,6 @@ final class rd implements fo {
         RuntimeException var13_ref = null;
         qr stackIn_2_0 = null;
         qr stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -122,16 +120,6 @@ final class rd implements fo {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        qr stackOut_3_0 = null;
-        qr stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             var13 = new qr(0L, (qr) null);
@@ -143,13 +131,11 @@ final class rd implements fo {
             var13.field_nb = param8;
             if (param5 == 99) {
               var13.field_x = param9;
-              stackOut_3_0 = (qr) (var13);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (qr) (var13);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (qr) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (qr) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -158,27 +144,19 @@ final class rd implements fo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var13_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var13_ref);
-            stackOut_5_1 = new StringBuilder().append("rd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var13_ref);
+
+            stackIn_7_1 = new StringBuilder().append("rd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
+
             if (param8 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }

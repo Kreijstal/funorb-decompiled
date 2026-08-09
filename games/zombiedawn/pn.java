@@ -27,19 +27,19 @@ abstract class pn extends ei {
     }
 
     void a(int param0, int param1, byte param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var16;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
         var16 = ZombieDawn.field_J;
         bi.f(6 + param0, param1 + 35, -12 + this.field_i, this.field_n - 40, 2105376, 0);
         var4 = 35;
@@ -185,7 +185,7 @@ abstract class pn extends ei {
     }
 
     final static void a(boolean param0, byte param1, boolean param2) {
-        String var4 = null;
+        String var4;
         if (param1 >= -32) {
           pn.k(-15);
           var4 = (String) null;
@@ -201,10 +201,10 @@ abstract class pn extends ei {
     boolean j(int param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         if (param0 == 2634) {
           if (-1 > (this.field_Q ^ -1)) {
             var2 = this.field_N;
@@ -288,44 +288,21 @@ abstract class pn extends ei {
     }
 
     final static void a(wk param0, int param1, ub param2) {
-        fn discarded$1 = null;
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        RuntimeException stackIn_61_0 = null;
-        StringBuilder stackIn_61_1 = null;
         RuntimeException stackIn_62_0 = null;
         StringBuilder stackIn_62_1 = null;
         RuntimeException stackIn_63_0 = null;
         StringBuilder stackIn_63_1 = null;
         String stackIn_63_2 = null;
-        RuntimeException stackIn_64_0 = null;
-        StringBuilder stackIn_64_1 = null;
-        RuntimeException stackIn_65_0 = null;
         StringBuilder stackIn_65_1 = null;
-        RuntimeException stackIn_66_0 = null;
         StringBuilder stackIn_66_1 = null;
         String stackIn_66_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_60_0 = null;
-        StringBuilder stackOut_60_1 = null;
-        RuntimeException stackOut_62_0 = null;
-        StringBuilder stackOut_62_1 = null;
-        String stackOut_62_2 = null;
-        RuntimeException stackOut_61_0 = null;
-        StringBuilder stackOut_61_1 = null;
-        String stackOut_61_2 = null;
-        RuntimeException stackOut_63_0 = null;
-        StringBuilder stackOut_63_1 = null;
-        RuntimeException stackOut_65_0 = null;
-        StringBuilder stackOut_65_1 = null;
-        String stackOut_65_2 = null;
-        RuntimeException stackOut_64_0 = null;
-        StringBuilder stackOut_64_1 = null;
-        String stackOut_64_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
         var6 = ZombieDawn.field_J;
         try {
           L0: {
@@ -423,7 +400,7 @@ abstract class pn extends ei {
                 L8: {
                   if ((ac.field_m ^ -1) == -801) {
                     og.field_A = true;
-                    discarded$1 = kh.a(64, false);
+                    kh.a(64, false);
                     vf.field_c = kh.a(150, false);
                     dj.field_e.field_R.a(0, ne.field_c);
                     var5 = 0;
@@ -520,56 +497,40 @@ abstract class pn extends ei {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
             var3 = decompiledCaughtException;
-            stackOut_60_0 = (RuntimeException) (var3);
-            stackOut_60_1 = new StringBuilder().append("pn.T(");
-            stackIn_62_0 = stackOut_60_0;
-            stackIn_62_1 = stackOut_60_1;
-            stackIn_61_0 = stackOut_60_0;
-            stackIn_61_1 = stackOut_60_1;
+            stackIn_62_0 = (RuntimeException) (var3);
+
+            stackIn_62_1 = new StringBuilder().append("pn.T(");
+
             if (param0 == null) {
-              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
-              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
-              stackOut_62_2 = "null";
-              stackIn_63_0 = stackOut_62_0;
-              stackIn_63_1 = stackOut_62_1;
-              stackIn_63_2 = stackOut_62_2;
+              stackIn_63_0 = (RuntimeException) ((Object) stackIn_62_0);
+              stackIn_63_1 = (StringBuilder) ((Object) stackIn_62_1);
+              stackIn_63_2 = "null";
               break L13;
             } else {
-              stackOut_61_0 = (RuntimeException) ((Object) stackIn_61_0);
-              stackOut_61_1 = (StringBuilder) ((Object) stackIn_61_1);
-              stackOut_61_2 = "{...}";
-              stackIn_63_0 = stackOut_61_0;
-              stackIn_63_1 = stackOut_61_1;
-              stackIn_63_2 = stackOut_61_2;
+              stackIn_63_0 = (RuntimeException) ((Object) stackIn_62_0);
+              stackIn_63_1 = (StringBuilder) ((Object) stackIn_62_1);
+              stackIn_63_2 = "{...}";
               break L13;
             }
           }
           L14: {
-            stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
-            stackOut_63_1 = ((StringBuilder) (Object) stackIn_63_1).append(stackIn_63_2).append(',').append(param1).append(',');
-            stackIn_65_0 = stackOut_63_0;
-            stackIn_65_1 = stackOut_63_1;
-            stackIn_64_0 = stackOut_63_0;
-            stackIn_64_1 = stackOut_63_1;
+
+
+            stackIn_65_1 = ((StringBuilder) (Object) stackIn_63_1).append(stackIn_63_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
-              stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
-              stackOut_65_2 = "null";
-              stackIn_66_0 = stackOut_65_0;
-              stackIn_66_1 = stackOut_65_1;
-              stackIn_66_2 = stackOut_65_2;
+              stackIn_63_0 = (RuntimeException) ((Object) stackIn_63_0);
+              stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+              stackIn_66_2 = "null";
               break L14;
             } else {
-              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-              stackOut_64_2 = "{...}";
-              stackIn_66_0 = stackOut_64_0;
-              stackIn_66_1 = stackOut_64_1;
-              stackIn_66_2 = stackOut_64_2;
+              stackIn_63_0 = (RuntimeException) ((Object) stackIn_63_0);
+              stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+              stackIn_66_2 = "{...}";
               break L14;
             }
           }
-          throw sh.a((Throwable) ((Object) stackIn_66_0), stackIn_66_2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_63_0), stackIn_66_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

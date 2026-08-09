@@ -102,33 +102,25 @@ final class um extends km {
     }
 
     private final boolean a(int param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6) {
-        int var8 = 0;
-        int var9 = 0;
+        int var8;
+        int var9;
         int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
         L0: {
           if (!param2) {
             if (this.field_S) {
               if (!param4) {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 1;
                 break L0;
               } else {
-                stackOut_5_0 = 0;
-                stackIn_8_0 = stackOut_5_0;
+                stackIn_8_0 = 0;
                 break L0;
               }
             } else {
-              stackOut_3_0 = 0;
-              stackIn_8_0 = stackOut_3_0;
+              stackIn_8_0 = 0;
               break L0;
             }
           } else {
-            stackOut_1_0 = 1;
-            stackIn_8_0 = stackOut_1_0;
+            stackIn_8_0 = 1;
             break L0;
           }
         }
@@ -151,10 +143,9 @@ final class um extends km {
     }
 
     private final void a(byte param0, int param1, int param2) {
-        rm[] discarded$0 = null;
         this.field_Eb.field_ub = this.field_ub;
         if (param0 != 64) {
-            discarded$0 = um.e((byte) -121);
+            um.e((byte) -121);
         }
         this.field_Jb.field_tb = 0;
         this.field_Eb.field_K = this.field_K - (param2 - -param1);
@@ -196,17 +187,15 @@ final class um extends km {
     }
 
     final boolean a(int param0, boolean param1, boolean param2, int param3, int param4, boolean param5) {
-        boolean discarded$0 = false;
         if (param2) {
-            discarded$0 = this.a(-108, false, true, 15, -127, false);
+            this.a(-108, false, true, 15, -127, false);
         }
         return this.a(param4, 110, param5, param0, param1, this.field_Eb.field_ub, param3);
     }
 
     public static void g(int param0) {
-        rm[] discarded$0 = null;
         if (param0 != 0) {
-            discarded$0 = um.e((byte) 120);
+            um.e((byte) 120);
         }
         field_Ib = null;
         field_Kb = null;

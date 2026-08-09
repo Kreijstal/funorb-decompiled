@@ -12,7 +12,7 @@ final class dj extends ms {
     static Object field_m;
 
     final static boolean a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         var2 = 90 / ((30 - param0) / 44);
         if (-2 != (param1 ^ -1)) {
           if (param1 == 7) {
@@ -26,10 +26,9 @@ final class dj extends ms {
     }
 
     public static void a(int param0) {
-        boolean discarded$2 = false;
         field_l = null;
         if (param0 != 1022768328) {
-          discarded$2 = dj.a(-56, -102);
+          dj.a(-56, -102);
           field_o = null;
           field_m = null;
           field_r = null;

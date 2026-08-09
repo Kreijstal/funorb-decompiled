@@ -45,12 +45,12 @@ final class hn implements Runnable {
     }
 
     final synchronized boolean c(int param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         if (-3 < (this.field_b ^ -1)) {
           L0: {
             if (-1 != (this.field_b ^ -1)) {
@@ -215,7 +215,6 @@ final class hn implements Runnable {
     }
 
     final static boolean a(char param0, int param1) {
-        boolean discarded$1 = false;
         int stackIn_23_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_40_0 = 0;
@@ -223,16 +222,6 @@ final class hn implements Runnable {
         int stackIn_50_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_67_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_21_0 = 0;
         if (param1 == 17769) {
           if (param0 < 48) {
             if (param0 < 65) {
@@ -247,8 +236,7 @@ final class hn implements Runnable {
               }
             } else {
               if (param0 <= 90) {
-                stackOut_65_0 = 1;
-                stackIn_67_0 = stackOut_65_0;
+                stackIn_67_0 = 1;
                 return stackIn_67_0 != 0;
               } else {
                 L0: {
@@ -259,14 +247,12 @@ final class hn implements Runnable {
                       if (param0 > 122) {
                         break L1;
                       } else {
-                        stackOut_62_0 = 1;
-                        stackIn_64_0 = stackOut_62_0;
+                        stackIn_64_0 = 1;
                         break L0;
                       }
                     }
                   }
-                  stackOut_63_0 = 0;
-                  stackIn_64_0 = stackOut_63_0;
+                  stackIn_64_0 = 0;
                   break L0;
                 }
                 return stackIn_64_0 != 0;
@@ -294,31 +280,27 @@ final class hn implements Runnable {
                         if (param0 > 122) {
                           break L3;
                         } else {
-                          stackOut_48_0 = 1;
-                          stackIn_50_0 = stackOut_48_0;
+                          stackIn_50_0 = 1;
                           break L2;
                         }
                       }
                     }
-                    stackOut_49_0 = 0;
-                    stackIn_50_0 = stackOut_49_0;
+                    stackIn_50_0 = 0;
                     break L2;
                   }
                   return stackIn_50_0 != 0;
                 } else {
-                  stackOut_43_0 = 1;
-                  stackIn_45_0 = stackOut_43_0;
+                  stackIn_45_0 = 1;
                   return stackIn_45_0 != 0;
                 }
               }
             } else {
-              stackOut_38_0 = 1;
-              stackIn_40_0 = stackOut_38_0;
+              stackIn_40_0 = 1;
               return stackIn_40_0 != 0;
             }
           }
         } else {
-          discarded$1 = hn.a('f', 28);
+          hn.a('f', 28);
           if (param0 >= 48) {
             if (57 < param0) {
               if (param0 < 65) {
@@ -341,20 +323,17 @@ final class hn implements Runnable {
                         if (param0 > 122) {
                           break L5;
                         } else {
-                          stackOut_26_0 = 1;
-                          stackIn_28_0 = stackOut_26_0;
+                          stackIn_28_0 = 1;
                           break L4;
                         }
                       }
                     }
-                    stackOut_27_0 = 0;
-                    stackIn_28_0 = stackOut_27_0;
+                    stackIn_28_0 = 0;
                     break L4;
                   }
                   return stackIn_28_0 != 0;
                 } else {
-                  stackOut_21_0 = 1;
-                  stackIn_23_0 = stackOut_21_0;
+                  stackIn_23_0 = 1;
                   return stackIn_23_0 != 0;
                 }
               }
@@ -450,12 +429,9 @@ final class hn implements Runnable {
     }
 
     final static boolean a(byte param0) {
-        int var1 = 0;
+        int var1;
         int stackIn_14_0 = 0;
         int stackIn_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_12_0 = 0;
         var1 = 85 % ((param0 - 10) / 60);
         if (jf.field_e) {
           if (pe.field_Jb) {
@@ -469,19 +445,16 @@ final class hn implements Runnable {
               if (!kg.field_a) {
                 L0: {
                   if (!lc.a((byte) 112)) {
-                    stackOut_17_0 = 0;
-                    stackIn_18_0 = stackOut_17_0;
+                    stackIn_18_0 = 0;
                     break L0;
                   } else {
-                    stackOut_16_0 = 1;
-                    stackIn_18_0 = stackOut_16_0;
+                    stackIn_18_0 = 1;
                     break L0;
                   }
                 }
                 return stackIn_18_0 != 0;
               } else {
-                stackOut_12_0 = 1;
-                stackIn_14_0 = stackOut_12_0;
+                stackIn_14_0 = 1;
                 return stackIn_14_0 != 0;
               }
             }

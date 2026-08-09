@@ -26,8 +26,6 @@ final class ri {
             ue stackIn_15_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            ue stackOut_14_0 = null;
-            ue stackOut_10_0 = null;
             try {
               L0: {
                 L1: {
@@ -77,13 +75,11 @@ final class ri {
                       break L5;
                     }
                   }
-                  stackOut_14_0 = new ue(var8, param5, param2);
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = new ue(var8, param5, param2);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_10_0 = (ue) null;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = (ue) null;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -106,8 +102,8 @@ final class ri {
     }
 
     final static void b(int param0) {
-        CharSequence var2 = null;
-        CharSequence var3 = null;
+        CharSequence var2;
+        CharSequence var3;
         we.field_i = se.field_p.a(-104);
         if (param0 != 12000) {
           field_b = (String[]) null;

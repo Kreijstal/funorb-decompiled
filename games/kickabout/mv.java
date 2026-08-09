@@ -6,8 +6,8 @@ final class mv {
     static int field_b;
 
     final static up b(boolean param0) {
-        up var1 = null;
-        up var2 = null;
+        up var1;
+        up var2;
         if (param0) {
           return (up) null;
         } else {

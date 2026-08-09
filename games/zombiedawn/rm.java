@@ -27,100 +27,33 @@ final class rm extends java.awt.Canvas {
     }
 
     final static void a(byte param0, int param1, rc param2) {
-        int discarded$1 = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
         int var5 = 0;
-        int var6 = 0;
-        am var7 = null;
-        am var8 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        var6 = ZombieDawn.field_J;
-        try {
-          L0: {
-            var7 = dp.field_e;
-            var8 = var7;
-            var8.j(11, param1);
-            var8.field_j = var8.field_j + 1;
-            var4 = var8.field_j;
-            var8.i(1, 100);
-            var8.a(param2.field_i, (byte) 105);
-            var8.a(param2.field_o, (byte) 105);
-            var8.a(param2.field_n, (byte) 105);
-            var8.h(104, param2.field_q);
-            var8.h(-124, param2.field_m);
-            var8.h(-118, param2.field_l);
-            if (param0 < -47) {
-              var8.h(40, param2.field_t);
-              var8.i(param2.field_k.length, 87);
-              var5 = 0;
-              L1: while (true) {
-                if (var5 >= param2.field_k.length) {
-                  discarded$1 = var8.e(-123, var4);
-                  var8.d(50, -var4 + var8.field_j);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var7.h(30, param2.field_k[var5]);
-                  var5++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("rm.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L2;
-            } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L2;
-            }
-          }
-          throw sh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+        int var6 = ZombieDawn.field_J;
+        am var7 = dp.field_e;
+        am var8 = var7;
+        var8.j(11, param1);
+        var8.field_j = var8.field_j + 1;
+        int var4 = var8.field_j;
+        var8.i(1, 100);
+        var8.a(param2.field_i, (byte) 105);
+        var8.a(param2.field_o, (byte) 105);
+        var8.a(param2.field_n, (byte) 105);
+        var8.h(104, param2.field_q);
+        var8.h(-124, param2.field_m);
+        var8.h(-118, param2.field_l);
+        if (param0 >= -47) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            var8.h(40, param2.field_t);
+            var8.i(param2.field_k.length, 87);
+            for (var5 = 0; var5 < param2.field_k.length; var5++) {
+                var7.h(30, param2.field_k[var5]);
+            }
+            var8.e(-123, var4);
+            var8.d(50, -var4 + var8.field_j);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) ((Object) runtimeException), "rm.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -142,18 +75,12 @@ final class rm extends java.awt.Canvas {
     }
 
     final static boolean a(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int stackIn_10_0 = 0;
+        int var1;
+        int var3;
         int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
-        int stackOut_10_0 = 0;
-        boolean stackOut_10_1 = false;
+        int var2;
         L0: {
           var3 = ZombieDawn.field_J;
           var1 = param0 ? 1 : 0;
@@ -186,20 +113,15 @@ final class rm extends java.awt.Canvas {
               break L1;
             } else {
               L2: {
-                stackOut_9_0 = 80;
-                stackIn_11_0 = stackOut_9_0;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_11_0 = 80;
+
                 if (cn.field_b != null) {
-                  stackOut_11_0 = stackIn_11_0;
-                  stackOut_11_1 = 1;
-                  stackIn_12_0 = stackOut_11_0;
-                  stackIn_12_1 = stackOut_11_1;
+                  stackIn_12_0 = stackIn_11_0;
+                  stackIn_12_1 = 1;
                   break L2;
                 } else {
-                  stackOut_10_0 = stackIn_10_0;
-                  stackOut_10_1 = mp.field_c;
-                  stackIn_12_0 = stackOut_10_0;
-                  stackIn_12_1 = stackOut_10_1 ? 1 : 0;
+                  stackIn_12_0 = stackIn_11_0;
+                  stackIn_12_1 = mp.field_c ? 1 : 0;
                   break L2;
                 }
               }

@@ -28,8 +28,6 @@ final class up implements noa {
 
     final static boolean a(char param0, boolean param1) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param1) {
           if (param0 != 32) {
             if (40 != param0) {
@@ -52,12 +50,10 @@ final class up implements noa {
             } else {
               L0: {
                 if (41 != param0) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }
@@ -124,8 +120,8 @@ final class up implements noa {
     }
 
     final int c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var2 = 77 % ((-68 - param0) / 55);
         var3 = this.field_f;
         if (0 != var3) {
@@ -137,15 +133,7 @@ final class up implements noa {
                 return 2;
               }
             } else {
-              if (TombRacer.field_G) {
-                if ((var3 ^ -1) != -6) {
-                  return 0;
-                } else {
-                  return 2;
-                }
-              } else {
-                return 1;
-              }
+              return 1;
             }
           } else {
             return 1;
@@ -156,7 +144,7 @@ final class up implements noa {
     }
 
     private final int a(boolean param0) {
-        int var2 = 0;
+        int var2;
         if (param0) {
           var2 = this.field_f;
           if (var2 != 0) {
@@ -226,9 +214,6 @@ final class up implements noa {
     final boolean d(int param0) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == 6734) {
           if (this.field_j != 1) {
             if (this.field_j == 2) {
@@ -237,8 +222,7 @@ final class up implements noa {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
@@ -248,12 +232,10 @@ final class up implements noa {
           } else {
             L0: {
               if (this.field_j != 2) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }

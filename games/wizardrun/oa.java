@@ -26,16 +26,15 @@ final class oa {
     }
 
     final static String a(byte param0, char param1, int param2) {
-        boolean discarded$2 = false;
-        char[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        char[] var6 = null;
+        char[] var3;
+        int var4;
+        int var5;
+        char[] var6;
         var5 = wizardrun.field_H;
         var6 = new char[param2];
         var3 = var6;
         if (param0 != -95) {
-          discarded$2 = oa.a(-22);
+          oa.a(-22);
           var4 = 0;
           L0: while (true) {
             if (param2 <= var4) {

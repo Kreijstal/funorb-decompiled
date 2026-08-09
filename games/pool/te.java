@@ -27,14 +27,13 @@ final class te extends ma {
     }
 
     final static void b(int param0, int param1) {
-        int discarded$2 = 0;
-        oq var2 = null;
+        oq var2;
         var2 = ej.field_j;
         var2.b(false, param0);
         var2.a(1, false);
         var2.a(1, false);
         if (param1 > -1) {
-          discarded$2 = te.a(45, 53);
+          te.a(45, 53);
           return;
         } else {
           return;

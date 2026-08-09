@@ -31,26 +31,26 @@ final class bb extends pj {
     short[] field_i;
 
     final void b() {
-        e dupTemp$1 = null;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        e var16 = null;
-        dj var17 = null;
-        dj var18 = null;
-        dj var19 = null;
+        e dupTemp$0 = null;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        e var16;
+        dj var17;
+        dj var18;
+        dj var19;
         if (this.field_j == null) {
           this.field_j = new dj[this.field_b];
           var1 = 0;
@@ -122,9 +122,9 @@ final class bb extends pj {
                                           break L6;
                                         }
                                       }
-                                      dupTemp$1 = new e();
-                                      this.field_n[var1] = dupTemp$1;
-                                      var16 = dupTemp$1;
+                                      dupTemp$0 = new e();
+                                      this.field_n[var1] = dupTemp$0;
+                                      var16 = dupTemp$0;
                                       var16.field_g = var11;
                                       var16.field_h = var12;
                                       var16.field_d = var13;
@@ -198,13 +198,17 @@ final class bb extends pj {
     }
 
     final void a() {
+        int dupTemp$0 = 0;
+        int[] arrayValue$1 = null;
         int[] array$2 = null;
-        int[] array$3 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        int[] var6 = null;
+        int dupTemp$3 = 0;
+        int[] arrayValue$4 = null;
+        int[] array$5 = null;
+        int var2;
+        int var3;
+        int var4;
+        int[] var5;
+        int[] var6;
         L0: {
           if (this.field_g == null) {
             break L0;
@@ -225,8 +229,10 @@ final class bb extends pj {
                         break L0;
                       } else {
                         var4 = this.field_g[var3];
-                        var5[var4] = var5[var4] + 1;
-                        this.field_m[var4][var5[var4]] = var3;
+                        dupTemp$0 = var5[var4];
+                        arrayValue$1 = this.field_m[var4];
+                        var5[var4] = dupTemp$0 + 1;
+                        arrayValue$1[dupTemp$0] = var3;
                         var3++;
                         continue L3;
                       }
@@ -274,15 +280,17 @@ final class bb extends pj {
                         break L4;
                       } else {
                         var4 = this.field_s[var3];
-                        var6[var4] = var6[var4] + 1;
-                        this.field_A[var4][var6[var4]] = var3;
+                        dupTemp$3 = var6[var4];
+                        arrayValue$4 = this.field_A[var4];
+                        var6[var4] = dupTemp$3 + 1;
+                        arrayValue$4[dupTemp$3] = var3;
                         var3++;
                         continue L7;
                       }
                     }
                   } else {
-                    array$3 = new int[var6[var3]];
-                    this.field_A[var3] = array$3;
+                    array$5 = new int[var6[var3]];
+                    this.field_A[var3] = array$5;
                     var6[var3] = 0;
                     var3++;
                     continue L6;
@@ -319,17 +327,17 @@ final class bb extends pj {
     }
 
     final int a(int param0, int param1, int param2) {
-        int fieldTemp$1 = 0;
-        int var4 = 0;
+        int fieldTemp$0 = 0;
+        int var4;
         var4 = 0;
         L0: while (true) {
           if (var4 >= this.field_r) {
             this.field_w[this.field_r] = param0;
             this.field_e[this.field_r] = param1;
             this.field_u[this.field_r] = param2;
-            fieldTemp$1 = this.field_r + 1;
+            fieldTemp$0 = this.field_r + 1;
             this.field_r = this.field_r + 1;
-            this.field_b = fieldTemp$1;
+            this.field_b = fieldTemp$0;
             return this.field_r - 1;
           } else {
             if (this.field_w[var4] == param0) {

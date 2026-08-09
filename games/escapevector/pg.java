@@ -25,8 +25,6 @@ abstract class pg {
 
     final int c(int param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == 0) {
           L0: {
             L1: {
@@ -34,16 +32,14 @@ abstract class pg {
                 break L1;
               } else {
                 if ((this.field_a.length ^ -1) < -1) {
-                  stackOut_6_0 = this.field_a[-1 + this.field_a.length].field_a + -this.field_a[0].field_d;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = this.field_a[-1 + this.field_a.length].field_a + -this.field_a[0].field_d;
                   break L0;
                 } else {
                   break L1;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_0 = 0;
             break L0;
           }
           return stackIn_7_0;
@@ -53,19 +49,18 @@ abstract class pg {
     }
 
     final int a(byte param0) {
-        java.awt.Container discarded$2 = null;
-        int var2 = 0;
-        vl[] var3 = null;
-        int var4 = 0;
-        vl var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        vl[] var3;
+        int var4;
+        vl var5;
+        int var7;
+        int var6;
         L0: {
           var7 = EscapeVector.field_A;
           if (param0 == -112) {
             break L0;
           } else {
-            discarded$2 = pg.a(72);
+            pg.a(72);
             break L0;
           }
         }
@@ -104,30 +99,19 @@ abstract class pg {
 
     final int a(int param0, int param1, String param2, int param3) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int stackIn_18_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException var5 = null;
         var10 = EscapeVector.field_A;
         try {
           L0: {
@@ -146,8 +130,7 @@ abstract class pg {
             L2: while (true) {
               if (var7 <= var8) {
                 if (var5_int > 0) {
-                  stackOut_17_0 = (param3 + -param1 << -389338296) / var5_int;
-                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_18_0 = (param3 + -param1 << -389338296) / var5_int;
                   break L0;
                 } else {
                   return 0;
@@ -187,27 +170,19 @@ abstract class pg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var5);
-            stackOut_19_1 = new StringBuilder().append("pg.K(").append(param0).append(',').append(param1).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var5);
+
+            stackIn_21_1 = new StringBuilder().append("pg.K(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L4;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L4;
             }
           }
@@ -253,12 +228,11 @@ abstract class pg {
     }
 
     final int a(byte param0, int param1, int param2) {
-        int discarded$2 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        vl var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+        int var4;
+        int var5;
+        vl var6;
+        int var7;
+        int var8;
         L0: {
           var8 = EscapeVector.field_A;
           if (null == this.field_a) {
@@ -281,7 +255,7 @@ abstract class pg {
                       if (param0 >= 8) {
                         break L1;
                       } else {
-                        discarded$2 = this.a((byte) 53, -122, 65);
+                        this.a((byte) 53, -122, 65);
                         break L1;
                       }
                     }

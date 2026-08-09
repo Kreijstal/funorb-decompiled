@@ -21,7 +21,6 @@ final class be implements Iterable {
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -31,8 +30,7 @@ final class be implements Iterable {
         int stackIn_15_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_9_0 = 0;
+        RuntimeException var3 = null;
         var8 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -48,8 +46,7 @@ final class be implements Iterable {
             var4 = pf.field_n;
             L2: while (true) {
               if (je.field_i.length <= var3_int) {
-                stackOut_14_0 = -1;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -60,8 +57,7 @@ final class be implements Iterable {
                     var4 = var4 + a.field_a;
                     var7 = -(var6 >> 394322305) + oa.field_b;
                     if (wn.a(var6 - -(to.field_d << -1013410975), param1, param2, var7 - to.field_d, (byte) -30, gh.field_w + (bn.field_c << 833702561), var4)) {
-                      stackOut_9_0 = var5;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_0 = var5;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     } else {
@@ -116,8 +112,8 @@ final class be implements Iterable {
     }
 
     final ij a(int param0) {
-        ij var2 = null;
-        ij var3 = null;
+        ij var2;
+        ij var3;
         var2 = this.field_f.field_j;
         if (var2 != this.field_f) {
           if (param0 != 30244) {

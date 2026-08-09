@@ -30,26 +30,20 @@ final class jl {
         int stackIn_19_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_15_0 = 0;
         var3 = TetraLink.field_J;
         try {
           L0: {
             var4 = (nm) ((Object) bo.field_C.c(param0));
             var1 = var4;
             if (var1 == null) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               var2 = 0;
               L1: while (true) {
                 if (var2 >= var1.field_r) {
-                  stackOut_18_0 = 1;
-                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_0 = 1;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
@@ -58,8 +52,7 @@ final class jl {
                       if (-1 != (var4.field_x[var2].field_d ^ -1)) {
                         break L2;
                       } else {
-                        stackOut_10_0 = 0;
-                        stackIn_11_0 = stackOut_10_0;
+                        stackIn_11_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -72,8 +65,7 @@ final class jl {
                       if (var4.field_u[var2].field_d != 0) {
                         break L3;
                       } else {
-                        stackOut_15_0 = 0;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
@@ -108,9 +100,8 @@ final class jl {
     }
 
     final static void a(int param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         L0: {
           if (param0 >= 108) {
             break L0;
@@ -136,13 +127,13 @@ final class jl {
     }
 
     final static void a(int param0, int param1, int param2) {
-        int incrementValue$7 = 0;
+        int incrementValue$1 = 0;
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
         var6 = TetraLink.field_J;
         try {
           L0: {
@@ -160,9 +151,9 @@ final class jl {
                     var3_int += 2;
                     continue L1;
                   } else {
-                    incrementValue$7 = var4;
+                    incrementValue$1 = var4;
                     var4++;
-                    ra.field_b[incrementValue$7] = 11513855;
+                    ra.field_b[incrementValue$1] = 11513855;
                     continue L2;
                   }
                 }

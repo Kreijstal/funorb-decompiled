@@ -22,14 +22,13 @@ final class up implements Iterable {
     }
 
     final void a(df param0, int param1) {
-        df discarded$0 = null;
         try {
             if (null != param0.field_j) {
                 param0.a(param1 ^ 22);
             }
             param0.field_j = this.field_a.field_j;
             if (param1 != 6) {
-                discarded$0 = this.a((byte) 95);
+                this.a((byte) 95);
             }
             param0.field_h = this.field_a;
             param0.field_j.field_h = param0;
@@ -40,8 +39,8 @@ final class up implements Iterable {
     }
 
     final df a(byte param0) {
-        df var2 = null;
-        df var3 = null;
+        df var2;
+        df var3;
         var2 = this.field_a.field_h;
         if (param0 == -20) {
           if (this.field_a == var2) {

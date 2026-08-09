@@ -7,9 +7,8 @@ final class il {
     static String field_b;
 
     final static int b(byte param0) {
-        int discarded$0 = 0;
         if (param0 != -20) {
-            discarded$0 = il.b((byte) 61);
+            il.b((byte) 61);
             return vd.field_a;
         }
         return vd.field_a;

@@ -42,7 +42,7 @@ final class hh {
     }
 
     final static void a(int param0, byte param1) {
-        da var2 = null;
+        da var2;
         var2 = da.field_p;
         var2.c((byte) 33, param0);
         var2.f(111, 1);

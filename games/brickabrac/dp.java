@@ -12,7 +12,7 @@ final class dp extends ki {
     static co field_v;
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        int var5;
         if ((param1 ^ -1) < 0) {
           L0: {
             lb.g(param2, param3, 153, 238, kg.field_d[param1], 22953);
@@ -41,9 +41,8 @@ final class dp extends ki {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        jp[] discarded$1 = null;
-        pb var7 = null;
-        pb var8 = null;
+        pb var7;
+        pb var8;
         if (param0) {
           if (this.b((byte) -106)) {
             L0: {
@@ -63,7 +62,7 @@ final class dp extends ki {
             return;
           }
         } else {
-          discarded$1 = this.a(-127, false);
+          this.a(-127, false);
           if (this.b((byte) -106)) {
             L1: {
               var7 = ge.a(this.field_m, param3, -20777);
@@ -138,13 +137,9 @@ final class dp extends ki {
     }
 
     final boolean b(byte param0) {
-        pb var3 = null;
         int stackIn_19_0 = 0;
         int stackIn_40_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
+        pb var3;
         if (param0 <= -91) {
           if (nf.field_U != null) {
             if (null != ni.field_Ub) {
@@ -158,12 +153,10 @@ final class dp extends ki {
                         } else {
                           L0: {
                             if (ap.field_c == null) {
-                              stackOut_39_0 = 0;
-                              stackIn_40_0 = stackOut_39_0;
+                              stackIn_40_0 = 0;
                               break L0;
                             } else {
-                              stackOut_38_0 = 1;
-                              stackIn_40_0 = stackOut_38_0;
+                              stackIn_40_0 = 1;
                               break L0;
                             }
                           }
@@ -205,12 +198,10 @@ final class dp extends ki {
                         } else {
                           L1: {
                             if (ap.field_c == null) {
-                              stackOut_18_0 = 0;
-                              stackIn_19_0 = stackOut_18_0;
+                              stackIn_19_0 = 0;
                               break L1;
                             } else {
-                              stackOut_17_0 = 1;
-                              stackIn_19_0 = stackOut_17_0;
+                              stackIn_19_0 = 1;
                               break L1;
                             }
                           }
@@ -252,9 +243,8 @@ final class dp extends ki {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        boolean discarded$1 = false;
-        pb var7 = null;
-        pb var8 = null;
+        pb var7;
+        pb var8;
         if (param1 < -84) {
           if (this.b((byte) -126)) {
             var8 = kd.a(this.field_m, param3, (byte) 116);
@@ -272,7 +262,7 @@ final class dp extends ki {
             return;
           }
         } else {
-          discarded$1 = this.a(true);
+          this.a(true);
           if (this.b((byte) -126)) {
             var7 = kd.a(this.field_m, param3, (byte) 116);
             if (var7.a((byte) -84, param3, this.field_m)) {

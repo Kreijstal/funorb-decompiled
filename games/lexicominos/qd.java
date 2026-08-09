@@ -14,21 +14,18 @@ final class qd {
 
     final static gb a(boolean param0) {
         String var1 = dg.a(param0);
-        if (var1 != null) {
-            if (0 <= var1.indexOf('@')) {
-                var1 = "";
-            }
+        if (var1 != null && 0 <= var1.indexOf('@')) {
+            var1 = "";
         }
         return new gb(dg.a(false), ca.a((byte) 81));
     }
 
     final static vb a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        gb discarded$2 = null;
-        vb var8 = null;
+        vb var8;
         var8 = new vb(param5, param4, param7, param3, param2, param0);
         jl.field_a.b(param1 + -11680, var8);
         if (param1 != 11803) {
-          discarded$2 = qd.a(false);
+          qd.a(false);
           vi.a(param6, var8, 1);
           return var8;
         } else {
@@ -38,10 +35,10 @@ final class qd {
     }
 
     final static df a(int param0, boolean param1) {
-        int discarded$4 = 0;
-        String discarded$5 = null;
-        int discarded$6 = 0;
-        String discarded$7 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_11_0 = 0;
+        int[] stackIn_26_0 = null;
+        Throwable decompiledCaughtException = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -49,27 +46,15 @@ final class qd {
         int var7 = 0;
         th var8 = null;
         me var9 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
-        int[] stackIn_26_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        Object stackOut_25_0 = null;
-        int[] stackOut_24_0 = null;
         L0: {
           var7 = Lexicominos.field_L ? 1 : 0;
           var8 = ig.field_a;
           var3 = var8.d(true);
           if ((128 & var3) == param0) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -96,12 +81,10 @@ final class qd {
         }
         L2: {
           if (1 != var8.d(true)) {
-            stackOut_10_0 = 0;
-            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_0 = 0;
             break L2;
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             break L2;
           }
         }
@@ -123,13 +106,13 @@ final class qd {
         }
         L4: {
           if (1 == kb.field_a) {
-            discarded$4 = var8.b(-1698573656);
-            discarded$5 = var8.c(false);
+            var8.b(-1698573656);
+            var8.c(false);
             break L4;
           } else {
             if ((kb.field_a ^ -1) == -5) {
-              discarded$6 = var8.b(-1698573656);
-              discarded$7 = var8.c(false);
+              var8.b(-1698573656);
+              var8.c(false);
               break L4;
             } else {
               break L4;
@@ -148,12 +131,10 @@ final class qd {
                 var9 = hi.field_d.a(param0 + 27467, var5);
                 oe.field_b = var9.c(-97);
                 if (gk.field_c.equals(og.field_c)) {
-                  stackOut_25_0 = null;
-                  stackIn_26_0 = (int[]) ((Object) stackOut_25_0);
+                  stackIn_26_0 = null;
                   break L6;
                 } else {
-                  stackOut_24_0 = var9.field_r;
-                  stackIn_26_0 = stackOut_24_0;
+                  stackIn_26_0 = var9.field_r;
                   break L6;
                 }
               }

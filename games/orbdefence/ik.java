@@ -15,23 +15,12 @@ final class ik extends ca {
         hf var2 = null;
         RuntimeException var2_ref = null;
         hf stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hf stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -45,35 +34,26 @@ final class ik extends ca {
             var2 = new hf(param0, param0);
             ba.field_b.a(-85, var2);
             vb.field_f.a(param0);
-            stackOut_2_0 = (hf) (var2);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (hf) (var2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2_ref);
-            stackOut_4_1 = new StringBuilder().append("ik.E(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2_ref);
+
+            stackIn_6_1 = new StringBuilder().append("ik.E(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -83,31 +63,21 @@ final class ik extends ca {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8, int param9) {
-        RuntimeException var10 = null;
-        int[] var10_array = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
         int var16 = 0;
-        int[] var17 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        int[] var10 = null;
+        RuntimeException var10_ref = null;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int[] var17 = null;
         var16 = OrbDefence.field_D ? 1 : 0;
         if (param4 <= -42) {
           param0--;
@@ -118,50 +88,42 @@ final class ik extends ca {
               try {
                 L1: {
                   var17 = param7;
-                  var10_array = var17;
+                  var10 = var17;
                   var11 = param1;
                   var12 = param6;
                   var13 = param2;
                   var14 = param8;
                   var15 = var17[var11] >> -1813504223 & 8355711;
-                  var10_array[var11] = var15 + (vi.a(33423360, var12) >> 468276225) + ((vi.a(33423821, var13) >> 1959991273) + (vi.a(33541693, var14) >> 36187537));
+                  var10[var11] = var15 + (vi.a(33423360, var12) >> 468276225) + ((vi.a(33423821, var13) >> 1959991273) + (vi.a(33541693, var14) >> 36187537));
                   param1++;
                   param2 = param2 + param3;
                   param6 = param6 + param5;
                   param8 = param8 + param9;
-                  param0--;
                   break L1;
                 }
               } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 L2: {
-                  var10 = decompiledCaughtException;
-                  stackOut_8_0 = (RuntimeException) (var10);
-                  stackOut_8_1 = new StringBuilder().append("ik.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-                  stackIn_10_0 = stackOut_8_0;
-                  stackIn_10_1 = stackOut_8_1;
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
+                  var10_ref = decompiledCaughtException;
+                  stackIn_10_0 = (RuntimeException) (var10_ref);
+
+                  stackIn_10_1 = new StringBuilder().append("ik.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
+
                   if (param7 == null) {
-                    stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-                    stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-                    stackOut_10_2 = "null";
-                    stackIn_11_0 = stackOut_10_0;
-                    stackIn_11_1 = stackOut_10_1;
-                    stackIn_11_2 = stackOut_10_2;
+                    stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+                    stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+                    stackIn_11_2 = "null";
                     break L2;
                   } else {
-                    stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-                    stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-                    stackOut_9_2 = "{...}";
-                    stackIn_11_0 = stackOut_9_0;
-                    stackIn_11_1 = stackOut_9_1;
-                    stackIn_11_2 = stackOut_9_2;
+                    stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+                    stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+                    stackIn_11_2 = "{...}";
                     break L2;
                   }
                 }
                 throw dd.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param8 + ',' + param9 + ')');
               }
+              param0--;
               continue L0;
             }
           }
@@ -173,10 +135,10 @@ final class ik extends ca {
     final static void a(byte param0, int param1) {
         int var2_int = 0;
         ca var2 = null;
-        RuntimeException var2_ref = null;
         ef var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -212,38 +174,15 @@ final class ik extends ca {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -255,64 +194,47 @@ final class ik extends ca {
               }
             }
             var4 = (String) null;
-            stackOut_2_0 = jk.a(0, 0, param0, (String) null, param1, false, -23739);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = jk.a(0, 0, param0, (String) null, param1, false, -23739);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("ik.C(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("ik.C(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+
+
+            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
@@ -326,7 +248,6 @@ final class ik extends ca {
 
     final boolean a(int param0, vd param1, int[] param2, byte[] param3) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         Object var7 = null;
         int var8 = 0;
@@ -334,53 +255,19 @@ final class ik extends ca {
         int var10 = 0;
         int var11 = 0;
         int stackIn_20_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        RuntimeException var5 = null;
         var11 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -391,8 +278,7 @@ final class ik extends ca {
             var9 = 0;
             L1: while (true) {
               if (var9 >= 128) {
-                stackOut_19_0 = var5_int;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = var5_int;
                 break L0;
               } else {
                 L2: {
@@ -453,95 +339,80 @@ final class ik extends ca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var5);
-            stackOut_21_1 = new StringBuilder().append("ik.A(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var5);
+
+            stackIn_23_1 = new StringBuilder().append("ik.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+
+
+            stackIn_26_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
+
             if (param2 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L7;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+
+
+            stackIn_29_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
+
             if (param3 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L8;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L8;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_24_0), stackIn_30_2 + ')');
         }
         return stackIn_20_0 != 0;
     }
 
     ik(byte[] param0) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        rc dupTemp$17 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        rc dupTemp$8 = null;
+        byte[] stackIn_39_0 = null;
+        byte[] stackIn_42_0 = null;
+        RuntimeException stackIn_206_0 = null;
+        StringBuilder stackIn_206_1 = null;
+        RuntimeException stackIn_207_0 = null;
+        StringBuilder stackIn_207_1 = null;
+        String stackIn_207_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         byte[] var4 = null;
@@ -558,10 +429,10 @@ final class ik extends ca {
         rc[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
-        rc var15 = null;
-        byte[] var15_array = null;
-        int var16_int = 0;
+        byte[] var15 = null;
+        rc var15_ref = null;
         byte[] var16 = null;
+        int var16_int = 0;
         int var17 = 0;
         byte[] var18 = null;
         int var19 = 0;
@@ -604,29 +475,6 @@ final class ik extends ca {
         byte[] var56 = null;
         byte[] var57 = null;
         byte[] var58 = null;
-        byte[] stackIn_39_0 = null;
-        byte[] stackIn_42_0 = null;
-        RuntimeException stackIn_205_0 = null;
-        StringBuilder stackIn_205_1 = null;
-        RuntimeException stackIn_206_0 = null;
-        StringBuilder stackIn_206_1 = null;
-        RuntimeException stackIn_207_0 = null;
-        StringBuilder stackIn_207_1 = null;
-        String stackIn_207_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_38_0 = null;
-        Object stackOut_37_0 = null;
-        Object stackOut_41_0 = null;
-        byte[] stackOut_40_0 = null;
-        RuntimeException stackOut_204_0 = null;
-        StringBuilder stackOut_204_1 = null;
-        RuntimeException stackOut_206_0 = null;
-        StringBuilder stackOut_206_1 = null;
-        String stackOut_206_2 = null;
-        RuntimeException stackOut_205_0 = null;
-        StringBuilder stackOut_205_1 = null;
-        String stackOut_205_2 = null;
         try {
           L0: {
             this.field_k = new byte[128];
@@ -704,9 +552,9 @@ final class ik extends ca {
                                                 var13_int = var15_int;
                                                 break L9;
                                               } else {
-                                                incrementValue$9 = var12;
+                                                incrementValue$0 = var12;
                                                 var12++;
-                                                var13_int = incrementValue$9;
+                                                var13_int = incrementValue$0;
                                                 break L9;
                                               }
                                             }
@@ -724,27 +572,23 @@ final class ik extends ca {
                                         L12: {
                                           var14 = var38.b((byte) 90);
                                           if ((var14 ^ -1) < -1) {
-                                            stackOut_38_0 = new byte[var14 * 2];
-                                            stackIn_39_0 = stackOut_38_0;
+                                            stackIn_39_0 = new byte[var14 * 2];
                                             break L12;
                                           } else {
-                                            stackOut_37_0 = null;
-                                            stackIn_39_0 = (byte[]) ((Object) stackOut_37_0);
+                                            stackIn_39_0 = null;
                                             break L12;
                                           }
                                         }
                                         L13: {
                                           var58 = stackIn_39_0;
                                           var46 = var58;
-                                          var15_array = var46;
+                                          var15 = var46;
                                           var14 = var38.b((byte) 90);
                                           if (-1 <= (var14 ^ -1)) {
-                                            stackOut_41_0 = null;
-                                            stackIn_42_0 = (byte[]) ((Object) stackOut_41_0);
+                                            stackIn_42_0 = null;
                                             break L13;
                                           } else {
-                                            stackOut_40_0 = new byte[2 * var14];
-                                            stackIn_42_0 = stackOut_40_0;
+                                            stackIn_42_0 = new byte[2 * var14];
                                             break L13;
                                           }
                                         }
@@ -804,7 +648,7 @@ final class ik extends ca {
                                                                             L23: while (true) {
                                                                               if (var12 <= var27) {
                                                                                 L24: {
-                                                                                  if (var15_array == null) {
+                                                                                  if (var15 == null) {
                                                                                     break L24;
                                                                                   } else {
                                                                                     var27 = 1;
@@ -812,7 +656,7 @@ final class ik extends ca {
                                                                                       if (var27 >= var58.length) {
                                                                                         break L24;
                                                                                       } else {
-                                                                                        var15_array[var27] = var38.d(-20398);
+                                                                                        var15[var27] = var38.d(-20398);
                                                                                         var27 += 2;
                                                                                         continue L25;
                                                                                       }
@@ -842,11 +686,11 @@ final class ik extends ca {
                                                                                     L29: while (true) {
                                                                                       if (var12 <= var27) {
                                                                                         L30: {
-                                                                                          if (var15_array == null) {
+                                                                                          if (null == var15) {
                                                                                             break L30;
                                                                                           } else {
                                                                                             var19 = var38.b((byte) 90);
-                                                                                            var15_array[0] = (byte)var19;
+                                                                                            var15[0] = (byte)var19;
                                                                                             var27 = 2;
                                                                                             L31: while (true) {
                                                                                               if (var27 >= var58.length) {
@@ -861,7 +705,7 @@ final class ik extends ca {
                                                                                                         var30 = var27;
                                                                                                         L34: while (true) {
                                                                                                           if (var30 >= 128) {
-                                                                                                            var15_array = null;
+                                                                                                            var15 = null;
                                                                                                             break L30;
                                                                                                           } else {
                                                                                                             this.field_j[var30] = (byte)(this.field_j[var30] * var28 - -32 >> -479869146);
@@ -871,7 +715,7 @@ final class ik extends ca {
                                                                                                         }
                                                                                                       } else {
                                                                                                         var30 = var58[var29];
-                                                                                                        var31 = var15_array[1 + var29];
+                                                                                                        var31 = var15[1 + var29];
                                                                                                         var32 = var28 * (-var27 + var30) + (var30 - var27) / 2;
                                                                                                         var33 = var27;
                                                                                                         L35: while (true) {
@@ -898,7 +742,7 @@ final class ik extends ca {
                                                                                                 }
                                                                                               } else {
                                                                                                 var19 = var38.b((byte) 90) + (1 + var19);
-                                                                                                var15_array[var27] = (byte)var19;
+                                                                                                var15[var27] = (byte)var19;
                                                                                                 var27 += 2;
                                                                                                 continue L31;
                                                                                               }
@@ -1200,9 +1044,9 @@ final class ik extends ca {
                                                                               } else {
                                                                                 L67: {
                                                                                   if (var21 < var54.length) {
-                                                                                    incrementValue$10 = var21;
+                                                                                    incrementValue$1 = var21;
                                                                                     var21++;
-                                                                                    var20 = var18[incrementValue$10];
+                                                                                    var20 = var18[incrementValue$1];
                                                                                     break L67;
                                                                                   } else {
                                                                                     var20 = -1;
@@ -1237,9 +1081,9 @@ final class ik extends ca {
                                                                                   var20 = -1;
                                                                                   break L69;
                                                                                 } else {
-                                                                                  incrementValue$11 = var21;
+                                                                                  incrementValue$2 = var21;
                                                                                   var21++;
-                                                                                  var20 = var10[incrementValue$11];
+                                                                                  var20 = var10[incrementValue$2];
                                                                                   break L69;
                                                                                 }
                                                                               }
@@ -1262,13 +1106,13 @@ final class ik extends ca {
                                                                           if (var20 != 0) {
                                                                             break L71;
                                                                           } else {
-                                                                            incrementValue$12 = var8;
+                                                                            incrementValue$3 = var8;
                                                                             var8++;
-                                                                            var24 = var38.field_j[incrementValue$12] - -16 << -1312191294;
+                                                                            var24 = var38.field_j[incrementValue$3] - -16 << -1312191294;
                                                                             if (var21 < var56.length) {
-                                                                              incrementValue$13 = var21;
+                                                                              incrementValue$4 = var21;
                                                                               var21++;
-                                                                              var20 = var7[incrementValue$13];
+                                                                              var20 = var7[incrementValue$4];
                                                                               break L71;
                                                                             } else {
                                                                               var20 = -1;
@@ -1296,18 +1140,18 @@ final class ik extends ca {
                                                                       } else {
                                                                         L74: {
                                                                           if (var21 < var55.length) {
-                                                                            incrementValue$14 = var21;
+                                                                            incrementValue$5 = var21;
                                                                             var21++;
-                                                                            var20 = var4[incrementValue$14];
+                                                                            var20 = var4[incrementValue$5];
                                                                             break L74;
                                                                           } else {
                                                                             var20 = -1;
                                                                             break L74;
                                                                           }
                                                                         }
-                                                                        incrementValue$15 = var5;
+                                                                        incrementValue$6 = var5;
                                                                         var5++;
-                                                                        var23 = -1 + var38.field_j[incrementValue$15];
+                                                                        var23 = -1 + var38.field_j[incrementValue$6];
                                                                         break L73;
                                                                       }
                                                                     }
@@ -1327,9 +1171,9 @@ final class ik extends ca {
                                                               } else {
                                                                 L76: {
                                                                   if (var54.length > var21) {
-                                                                    incrementValue$16 = var21;
+                                                                    incrementValue$7 = var21;
                                                                     var21++;
-                                                                    var20 = var18[incrementValue$16];
+                                                                    var20 = var18[incrementValue$7];
                                                                     break L76;
                                                                   } else {
                                                                     var20 = -1;
@@ -1374,15 +1218,15 @@ final class ik extends ca {
                                         }
                                       } else {
                                         L77: {
-                                          dupTemp$17 = new rc();
-                                          var13[var14] = dupTemp$17;
-                                          var40 = dupTemp$17;
-                                          var15 = var40;
+                                          dupTemp$8 = new rc();
+                                          var13[var14] = dupTemp$8;
+                                          var40 = dupTemp$8;
+                                          var15_ref = var40;
                                           var16_int = var38.b((byte) 90);
                                           if (0 >= var16_int) {
                                             break L77;
                                           } else {
-                                            var15.field_l = new byte[2 * var16_int];
+                                            var15_ref.field_l = new byte[2 * var16_int];
                                             break L77;
                                           }
                                         }
@@ -1391,7 +1235,7 @@ final class ik extends ca {
                                           if (0 >= var16_int) {
                                             break L78;
                                           } else {
-                                            var15.field_e = new byte[2 + 2 * var16_int];
+                                            var15_ref.field_e = new byte[2 + 2 * var16_int];
                                             var40.field_e[1] = (byte)64;
                                             break L78;
                                           }
@@ -1438,27 +1282,19 @@ final class ik extends ca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L79: {
             var2 = decompiledCaughtException;
-            stackOut_204_0 = (RuntimeException) (var2);
-            stackOut_204_1 = new StringBuilder().append("ik.<init>(");
-            stackIn_206_0 = stackOut_204_0;
-            stackIn_206_1 = stackOut_204_1;
-            stackIn_205_0 = stackOut_204_0;
-            stackIn_205_1 = stackOut_204_1;
+            stackIn_206_0 = (RuntimeException) (var2);
+
+            stackIn_206_1 = new StringBuilder().append("ik.<init>(");
+
             if (param0 == null) {
-              stackOut_206_0 = (RuntimeException) ((Object) stackIn_206_0);
-              stackOut_206_1 = (StringBuilder) ((Object) stackIn_206_1);
-              stackOut_206_2 = "null";
-              stackIn_207_0 = stackOut_206_0;
-              stackIn_207_1 = stackOut_206_1;
-              stackIn_207_2 = stackOut_206_2;
+              stackIn_207_0 = (RuntimeException) ((Object) stackIn_206_0);
+              stackIn_207_1 = (StringBuilder) ((Object) stackIn_206_1);
+              stackIn_207_2 = "null";
               break L79;
             } else {
-              stackOut_205_0 = (RuntimeException) ((Object) stackIn_205_0);
-              stackOut_205_1 = (StringBuilder) ((Object) stackIn_205_1);
-              stackOut_205_2 = "{...}";
-              stackIn_207_0 = stackOut_205_0;
-              stackIn_207_1 = stackOut_205_1;
-              stackIn_207_2 = stackOut_205_2;
+              stackIn_207_0 = (RuntimeException) ((Object) stackIn_206_0);
+              stackIn_207_1 = (StringBuilder) ((Object) stackIn_206_1);
+              stackIn_207_2 = "{...}";
               break L79;
             }
           }

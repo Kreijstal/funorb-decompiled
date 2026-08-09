@@ -27,8 +27,24 @@ final class ko extends mc {
     }
 
     final static void a(int param0, boolean param1, byte param2) {
-        RuntimeException var3 = null;
+        rb stackIn_3_0;
+        int stackIn_3_1;
+        int stackIn_3_2;
+        int stackIn_3_3;
+        boolean stackIn_3_4;
+        rb stackIn_4_0 = null;
+        int stackIn_4_1 = 0;
+        int stackIn_4_2 = 0;
+        int stackIn_4_3 = 0;
+        boolean stackIn_4_4 = false;
+        int stackIn_4_5 = 0;
+        hl stackIn_23_0 = null;
+        hl stackIn_24_0 = null;
+        String stackIn_24_1 = null;
+        int stackIn_27_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         je var4 = null;
         Object var5 = null;
         ud var6 = null;
@@ -43,98 +59,35 @@ final class ko extends mc {
         int var15 = 0;
         pf var16 = null;
         pf var17 = null;
-        rb stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
-        int stackIn_2_2 = 0;
-        int stackIn_2_3 = 0;
-        boolean stackIn_2_4 = false;
-        rb stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        int stackIn_3_2 = 0;
-        int stackIn_3_3 = 0;
-        boolean stackIn_3_4 = false;
-        rb stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        int stackIn_4_3 = 0;
-        boolean stackIn_4_4 = false;
-        int stackIn_4_5 = 0;
-        hl stackIn_22_0 = null;
-        hl stackIn_23_0 = null;
-        hl stackIn_24_0 = null;
-        String stackIn_24_1 = null;
-        int stackIn_27_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        rb stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        int stackOut_1_3 = 0;
-        boolean stackOut_1_4 = false;
-        rb stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        int stackOut_3_3 = 0;
-        boolean stackOut_3_4 = false;
-        int stackOut_3_5 = 0;
-        rb stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        int stackOut_2_3 = 0;
-        boolean stackOut_2_4 = false;
-        int stackOut_2_5 = 0;
-        hl stackOut_21_0 = null;
-        hl stackOut_23_0 = null;
-        String stackOut_23_1 = null;
-        hl stackOut_22_0 = null;
-        String stackOut_22_1 = null;
-        int stackOut_26_0 = 0;
-        int stackOut_25_0 = 0;
         var15 = TetraLink.field_J;
         try {
           L0: {
             L1: {
-              stackOut_1_0 = fl.field_n.field_Rb;
-              stackOut_1_1 = 2;
-              stackOut_1_2 = 2 + qe.field_d;
-              stackOut_1_3 = 123;
-              stackOut_1_4 = param1;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_3_2 = stackOut_1_2;
-              stackIn_3_3 = stackOut_1_3;
-              stackIn_3_4 = stackOut_1_4;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              stackIn_2_2 = stackOut_1_2;
-              stackIn_2_3 = stackOut_1_3;
-              stackIn_2_4 = stackOut_1_4;
+              stackIn_3_0 = fl.field_n.field_Rb;
+
+              stackIn_3_1 = 2;
+
+              stackIn_3_2 = 2 + qe.field_d;
+
+              stackIn_3_3 = 123;
+
+              stackIn_3_4 = param1;
+
               if (fl.field_n.field_Rb != bi.field_d) {
-                stackOut_3_0 = (rb) ((Object) stackIn_3_0);
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = stackIn_3_2;
-                stackOut_3_3 = stackIn_3_3;
-                stackOut_3_4 = stackIn_3_4;
-                stackOut_3_5 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
-                stackIn_4_3 = stackOut_3_3;
-                stackIn_4_4 = stackOut_3_4;
-                stackIn_4_5 = stackOut_3_5;
+                stackIn_4_0 = (rb) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = stackIn_3_2;
+                stackIn_4_3 = stackIn_3_3;
+                stackIn_4_4 = stackIn_3_4;
+                stackIn_4_5 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = (rb) ((Object) stackIn_2_0);
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = stackIn_2_2;
-                stackOut_2_3 = stackIn_2_3;
-                stackOut_2_4 = stackIn_2_4;
-                stackOut_2_5 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                stackIn_4_3 = stackOut_2_3;
-                stackIn_4_4 = stackOut_2_4;
-                stackIn_4_5 = stackOut_2_5;
+                stackIn_4_0 = (rb) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = stackIn_3_2;
+                stackIn_4_3 = stackIn_3_3;
+                stackIn_4_4 = stackIn_3_4;
+                stackIn_4_5 = 1;
                 break L1;
               }
             }
@@ -230,32 +183,25 @@ final class ko extends mc {
                     }
                   }
                   L10: {
-                    stackOut_21_0 = var6.field_Tb;
-                    stackIn_23_0 = stackOut_21_0;
-                    stackIn_22_0 = stackOut_21_0;
+                    stackIn_23_0 = var6.field_Tb;
+
                     if (-1 > (var10 ^ -1)) {
-                      stackOut_23_0 = (hl) ((Object) stackIn_23_0);
-                      stackOut_23_1 = jb.a(var6.field_Tb.field_Ib, var6.field_Mb, var10);
-                      stackIn_24_0 = stackOut_23_0;
-                      stackIn_24_1 = stackOut_23_1;
+                      stackIn_24_0 = (hl) ((Object) stackIn_23_0);
+                      stackIn_24_1 = jb.a(var6.field_Tb.field_Ib, var6.field_Mb, var10);
                       break L10;
                     } else {
-                      stackOut_22_0 = (hl) ((Object) stackIn_22_0);
-                      stackOut_22_1 = var6.field_Mb;
-                      stackIn_24_0 = stackOut_22_0;
-                      stackIn_24_1 = stackOut_22_1;
+                      stackIn_24_0 = (hl) ((Object) stackIn_23_0);
+                      stackIn_24_1 = var6.field_Mb;
                       break L10;
                     }
                   }
                   L11: {
                     stackIn_24_0.field_jb = stackIn_24_1;
                     if (var6.field_Tb.field_jb.equals(var6.field_Mb)) {
-                      stackOut_26_0 = 0;
-                      stackIn_27_0 = stackOut_26_0;
+                      stackIn_27_0 = 0;
                       break L11;
                     } else {
-                      stackOut_25_0 = 1;
-                      stackIn_27_0 = stackOut_25_0;
+                      stackIn_27_0 = 1;
                       break L11;
                     }
                   }

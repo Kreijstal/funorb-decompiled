@@ -3,11 +3,11 @@
  */
 final class oj {
     final static void a(byte param0) {
-        vi dupTemp$2 = null;
-        int fieldTemp$3 = 0;
-        vi var1 = null;
-        int var2 = 0;
-        vi var3 = null;
+        vi dupTemp$0 = null;
+        int fieldTemp$1 = 0;
+        vi var1;
+        int var2;
+        vi var3;
         var2 = HoldTheLine.field_D;
         if (param0 >= 78) {
           if (null != bd.field_Q) {
@@ -17,10 +17,10 @@ final class oj {
                 if (var1 != null) {
                   break L0;
                 } else {
-                  dupTemp$2 = vi.a(bd.field_Q, em.field_m[ab.field_jb], "");
-                  var3 = dupTemp$2;
+                  dupTemp$0 = vi.a(bd.field_Q, em.field_m[ab.field_jb], "");
+                  var3 = dupTemp$0;
                   var1 = var3;
-                  if (dupTemp$2 != null) {
+                  if (dupTemp$0 != null) {
                     gh.field_n[ab.field_jb] = var3;
                     break L0;
                   } else {
@@ -31,9 +31,9 @@ final class oj {
               if (vl.field_d.field_q.a(22050, jh.field_a, var1, false, pd.field_f)) {
                 i.field_k[ab.field_jb] = var1;
                 ab.field_jb = -1;
-                fieldTemp$3 = oc.field_a - 1;
+                fieldTemp$1 = oc.field_a - 1;
                 oc.field_a = oc.field_a - 1;
-                if (-1 != (fieldTemp$3 ^ -1)) {
+                if (-1 != (fieldTemp$1 ^ -1)) {
                   if (bi.field_e != 2) {
                     if (1 == bi.field_e) {
                       if (lc.field_d != null) {
@@ -105,15 +105,6 @@ final class oj {
     }
 
     final static void a(hj[] param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -121,14 +112,13 @@ final class oj {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         var11 = HoldTheLine.field_D;
         try {
           L0: {
@@ -175,27 +165,19 @@ final class oj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var6);
-            stackOut_12_1 = new StringBuilder().append("oj.A(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var6);
+
+            stackIn_14_1 = new StringBuilder().append("oj.A(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }

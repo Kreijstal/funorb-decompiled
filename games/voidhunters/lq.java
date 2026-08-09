@@ -23,12 +23,11 @@ final class lq extends le {
     }
 
     final int[] a(int param0, boolean param1) {
-        int[] discarded$0 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         if (!param1) {
-            discarded$0 = this.a(-57, false);
+            this.a(-57, false);
         }
         int[] var7 = this.field_f.a((byte) -21, param0);
         int[] var3 = var7;

@@ -33,24 +33,18 @@ final class d {
     }
 
     final d a(byte param0) {
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        Object var8 = null;
-        Object var9 = null;
-        Object var10 = null;
-        Object var11 = null;
-        Object var12 = null;
-        Object var13 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        Object var8;
+        Object var9;
+        Object var10;
+        Object var11;
+        Object var12;
+        Object var13;
         L0: {
           var7 = StarCannon.field_A;
           var2 = 61 % ((param0 - 15) / 43);
@@ -184,7 +178,7 @@ final class d {
                                                       this.field_d = this.field_d - 1;
                                                       this.field_a = this.field_a - 1;
                                                       var9 = this;
-                                                      discarded$6 = v.a(new d((d) (var9), 14), -4001);
+                                                      v.a(new d((d) (var9), 14), -4001);
                                                       this.field_d = this.field_d + 1;
                                                       this.field_a = this.field_a + 1;
                                                       break L12;
@@ -193,7 +187,7 @@ final class d {
                                                     }
                                                   }
                                                   var10 = this;
-                                                  discarded$7 = v.a(new d((d) (var10), 14), -4001);
+                                                  v.a(new d((d) (var10), 14), -4001);
                                                   this.field_d = this.field_d + 1;
                                                   this.field_a = this.field_a + 1;
                                                   break L11;
@@ -201,7 +195,7 @@ final class d {
                                               }
                                               L13: {
                                                 var11 = this;
-                                                discarded$8 = v.a(new d((d) (var11), 14), -4001);
+                                                v.a(new d((d) (var11), 14), -4001);
                                                 if ((this.field_i ^ -1) < -2) {
                                                   L14: {
                                                     this.field_a = this.field_a + 1;
@@ -212,14 +206,14 @@ final class d {
                                                       this.field_a = this.field_a + 1;
                                                       this.field_d = this.field_d + 1;
                                                       var12 = this;
-                                                      discarded$9 = v.a(new d((d) (var12), 14), -4001);
+                                                      v.a(new d((d) (var12), 14), -4001);
                                                       this.field_a = this.field_a - 1;
                                                       this.field_d = this.field_d - 1;
                                                       break L14;
                                                     }
                                                   }
                                                   var13 = this;
-                                                  discarded$10 = v.a(new d((d) (var13), 14), -4001);
+                                                  v.a(new d((d) (var13), 14), -4001);
                                                   this.field_d = this.field_d - 1;
                                                   this.field_a = this.field_a - 1;
                                                   break L13;
@@ -269,7 +263,7 @@ final class d {
                                       } else {
                                         L17: {
                                           var8 = this;
-                                          discarded$11 = v.a(new d((d) (var8), 13), -4001);
+                                          v.a(new d((d) (var8), 13), -4001);
                                           var4 = -16;
                                           var3 = -this.field_d + this.field_a;
                                           var5 = (int)Math.sqrt((double)(var3 * var3 - -(var4 * var4)));
@@ -534,22 +528,14 @@ final class d {
 
     d(int param0, int param1, int param2, int param3, int param4, int param5) {
         this(param0, param1, param2, param3, param4, param5, 1, -1 == (param5 ^ -1) ? 256 : 0);
-        Object stackIn_1_0 = null;
-        int stackIn_1_1 = 0;
-        int stackIn_1_2 = 0;
-        int stackIn_1_3 = 0;
-        int stackIn_1_4 = 0;
-        int stackIn_1_5 = 0;
-        int stackIn_1_6 = 0;
-        int stackIn_1_7 = 0;
-        Object stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
-        int stackIn_2_2 = 0;
-        int stackIn_2_3 = 0;
-        int stackIn_2_4 = 0;
-        int stackIn_2_5 = 0;
-        int stackIn_2_6 = 0;
-        int stackIn_2_7 = 0;
+        Object stackIn_2_0;
+        int stackIn_2_1;
+        int stackIn_2_2;
+        int stackIn_2_3;
+        int stackIn_2_4;
+        int stackIn_2_5;
+        int stackIn_2_6;
+        int stackIn_2_7;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
@@ -559,96 +545,44 @@ final class d {
         int stackIn_3_6 = 0;
         int stackIn_3_7 = 0;
         int stackIn_3_8 = 0;
-        Object stackOut_0_0 = null;
-        int stackOut_0_1 = 0;
-        int stackOut_0_2 = 0;
-        int stackOut_0_3 = 0;
-        int stackOut_0_4 = 0;
-        int stackOut_0_5 = 0;
-        int stackOut_0_6 = 0;
-        int stackOut_0_7 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        int stackOut_2_3 = 0;
-        int stackOut_2_4 = 0;
-        int stackOut_2_5 = 0;
-        int stackOut_2_6 = 0;
-        int stackOut_2_7 = 0;
-        int stackOut_2_8 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        int stackOut_1_3 = 0;
-        int stackOut_1_4 = 0;
-        int stackOut_1_5 = 0;
-        int stackOut_1_6 = 0;
-        int stackOut_1_7 = 0;
-        int stackOut_1_8 = 0;
         L0: {
-          stackOut_0_0 = this;
-          stackOut_0_1 = param0;
-          stackOut_0_2 = param1;
-          stackOut_0_3 = param2;
-          stackOut_0_4 = param3;
-          stackOut_0_5 = param4;
-          stackOut_0_6 = param5;
-          stackOut_0_7 = 1;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_2_1 = stackOut_0_1;
-          stackIn_2_2 = stackOut_0_2;
-          stackIn_2_3 = stackOut_0_3;
-          stackIn_2_4 = stackOut_0_4;
-          stackIn_2_5 = stackOut_0_5;
-          stackIn_2_6 = stackOut_0_6;
-          stackIn_2_7 = stackOut_0_7;
-          stackIn_1_0 = stackOut_0_0;
-          stackIn_1_1 = stackOut_0_1;
-          stackIn_1_2 = stackOut_0_2;
-          stackIn_1_3 = stackOut_0_3;
-          stackIn_1_4 = stackOut_0_4;
-          stackIn_1_5 = stackOut_0_5;
-          stackIn_1_6 = stackOut_0_6;
-          stackIn_1_7 = stackOut_0_7;
+          stackIn_2_0 = this;
+
+          stackIn_2_1 = param0;
+
+          stackIn_2_2 = param1;
+
+          stackIn_2_3 = param2;
+
+          stackIn_2_4 = param3;
+
+          stackIn_2_5 = param4;
+
+          stackIn_2_6 = param5;
+
+          stackIn_2_7 = 1;
+
           if (-1 != (param5 ^ -1)) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = stackIn_2_1;
-            stackOut_2_2 = stackIn_2_2;
-            stackOut_2_3 = stackIn_2_3;
-            stackOut_2_4 = stackIn_2_4;
-            stackOut_2_5 = stackIn_2_5;
-            stackOut_2_6 = stackIn_2_6;
-            stackOut_2_7 = stackIn_2_7;
-            stackOut_2_8 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            stackIn_3_2 = stackOut_2_2;
-            stackIn_3_3 = stackOut_2_3;
-            stackIn_3_4 = stackOut_2_4;
-            stackIn_3_5 = stackOut_2_5;
-            stackIn_3_6 = stackOut_2_6;
-            stackIn_3_7 = stackOut_2_7;
-            stackIn_3_8 = stackOut_2_8;
+            stackIn_3_0 = this;
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = stackIn_2_2;
+            stackIn_3_3 = stackIn_2_3;
+            stackIn_3_4 = stackIn_2_4;
+            stackIn_3_5 = stackIn_2_5;
+            stackIn_3_6 = stackIn_2_6;
+            stackIn_3_7 = stackIn_2_7;
+            stackIn_3_8 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = stackIn_1_1;
-            stackOut_1_2 = stackIn_1_2;
-            stackOut_1_3 = stackIn_1_3;
-            stackOut_1_4 = stackIn_1_4;
-            stackOut_1_5 = stackIn_1_5;
-            stackOut_1_6 = stackIn_1_6;
-            stackOut_1_7 = stackIn_1_7;
-            stackOut_1_8 = 256;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
-            stackIn_3_3 = stackOut_1_3;
-            stackIn_3_4 = stackOut_1_4;
-            stackIn_3_5 = stackOut_1_5;
-            stackIn_3_6 = stackOut_1_6;
-            stackIn_3_7 = stackOut_1_7;
-            stackIn_3_8 = stackOut_1_8;
+            stackIn_3_0 = this;
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = stackIn_2_2;
+            stackIn_3_3 = stackIn_2_3;
+            stackIn_3_4 = stackIn_2_4;
+            stackIn_3_5 = stackIn_2_5;
+            stackIn_3_6 = stackIn_2_6;
+            stackIn_3_7 = stackIn_2_7;
+            stackIn_3_8 = 256;
             break L0;
           }
         }
@@ -659,11 +593,11 @@ final class d {
     }
 
     final void a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         L0: {
           var7 = StarCannon.field_A;
           var3 = 32 % ((87 - param1) / 32);
@@ -917,8 +851,6 @@ final class d {
         ij stackIn_6_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -926,17 +858,6 @@ final class d {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ij stackOut_5_0 = null;
-        byte[] stackOut_10_0 = null;
-        byte[] stackOut_8_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             if (param2 != null) {
@@ -944,19 +865,16 @@ final class d {
               if (-137 > (param2.length ^ -1)) {
                 var4 = new ij();
                 ((kk) ((Object) var4)).a(-5361, param2);
-                stackOut_5_0 = (ij) (var4);
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (ij) (var4);
                 decompiledRegionSelector0 = 0;
                 break L0;
               } else {
                 if (param0) {
-                  stackOut_10_0 = rg.a((byte) 10, param2);
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = rg.a((byte) 10, param2);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  stackOut_8_0 = (byte[]) (param2);
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = (byte[]) (param2);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
@@ -969,27 +887,19 @@ final class d {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var3);
-            stackOut_12_1 = new StringBuilder().append("d.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var3);
+
+            stackIn_14_1 = new StringBuilder().append("d.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L1;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L1;
             }
           }
@@ -1007,7 +917,6 @@ final class d {
     }
 
     public static void a(int param0) {
-        Object discarded$0 = null;
         field_b = null;
         field_n = null;
         field_m = null;
@@ -1015,7 +924,7 @@ final class d {
         field_l = null;
         if (param0 != 32) {
             byte[] var2 = (byte[]) null;
-            discarded$0 = d.a(false, (byte) -38, (byte[]) null);
+            d.a(false, (byte) -38, (byte[]) null);
         }
     }
 

@@ -103,7 +103,7 @@ abstract class ca {
     abstract java.net.Socket a(byte param0) throws IOException;
 
     final static void a(boolean param0, byte param1) {
-        int var3 = 0;
+        int var3;
         var3 = TetraLink.field_J;
         if (param0) {
           lg.field_S = false;

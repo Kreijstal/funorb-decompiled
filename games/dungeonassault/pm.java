@@ -26,7 +26,6 @@ final class pm extends ne {
             Throwable var1 = null;
             nl stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            nl stackOut_2_0 = null;
             L0: {
               if (param0 > 83) {
                 break L0;
@@ -37,8 +36,7 @@ final class pm extends ne {
             }
             try {
               L1: {
-                stackOut_2_0 = (nl) (Class.forName("sk").newInstance());
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (nl) (Class.forName("sk").newInstance());
                 break L1;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

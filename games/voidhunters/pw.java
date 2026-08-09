@@ -8,7 +8,6 @@ abstract class pw {
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
@@ -34,6 +33,7 @@ abstract class pw {
         int[] var20 = null;
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var19 = VoidHunters.field_G;
         try {
           L0: {

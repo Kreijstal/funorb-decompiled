@@ -75,9 +75,6 @@ final class k {
         int stackIn_13_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_7_0 = 0;
         var4 = Torquing.field_u;
         try {
           L0: {
@@ -86,19 +83,16 @@ final class k {
               if (param2 <= 1) {
                 if (param0 == 25518) {
                   if (param2 != 1) {
-                    stackOut_12_0 = var3_int;
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = var3_int;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    stackOut_10_0 = param1 * var3_int;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = param1 * var3_int;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 } else {
-                  stackOut_7_0 = 43;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 43;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }

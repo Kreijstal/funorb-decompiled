@@ -16,7 +16,7 @@ final class wh implements Iterator {
     static int field_d;
 
     final static void a(boolean param0) {
-        int var1 = 0;
+        int var1;
         if (null != g.field_c) {
           L0: {
             if (!g.field_c.g()) {
@@ -83,14 +83,14 @@ final class wh implements Iterator {
     }
 
     public final Object next() {
-        kd var1 = this.field_g;
+        Object var1 = this.field_g;
         if (this.field_c.field_a == var1) {
             this.field_g = null;
             var1 = null;
         } else {
-            this.field_g = var1.field_o;
+            this.field_g = ((kd) (var1)).field_o;
         }
-        this.field_f = var1;
+        this.field_f = (kd) (var1);
         return var1;
     }
 
@@ -124,7 +124,7 @@ final class wh implements Iterator {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
-        int var17 = 0;
+        int var17;
         var17 = SteelSentinels.field_G;
         if (param12 <= 14) {
           field_a = (String) null;
@@ -203,23 +203,12 @@ final class wh implements Iterator {
         int var3 = 0;
         nk var4 = null;
         nk stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nk stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var2_int = param1.field_G;
@@ -228,35 +217,26 @@ final class wh implements Iterator {
             var4 = new nk(na.field_a, 1, var2_int, var3, 0, param0, new qd[]{new qd(var2_int, -64 + var3, 0, 0, param1, false)});
             var4.field_N = param1.field_N;
             param1.field_N = -1;
-            stackOut_0_0 = (nk) (var4);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = (nk) (var4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var2);
-            stackOut_2_1 = new StringBuilder().append("wh.C(").append(param0).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var2);
+
+            stackIn_4_1 = new StringBuilder().append("wh.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }

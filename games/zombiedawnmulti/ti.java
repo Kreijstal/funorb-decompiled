@@ -33,8 +33,8 @@ abstract class ti extends id {
     }
 
     final boolean a(int param0, boolean param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var4 = this.field_z >> 53387440;
         if (param1) {
           var5 = this.field_E >> -1306012816;
@@ -92,7 +92,7 @@ abstract class ti extends id {
     }
 
     final void e(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         if (param1 != 2) {
           return;
         } else {
@@ -114,55 +114,35 @@ abstract class ti extends id {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_0_0 = false;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var2_int = -115 / ((param0 - -53) / 59);
-            stackOut_0_0 = ng.a(-49, true, param1, 10);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = ng.a(-49, true, param1, 10);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var2);
-            stackOut_2_1 = new StringBuilder().append("ti.MA(").append(param0).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var2);
+
+            stackIn_4_1 = new StringBuilder().append("ti.MA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -254,10 +234,6 @@ abstract class ti extends id {
     }
 
     final boolean k(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_16_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_63_0 = 0;
@@ -268,46 +244,10 @@ abstract class ti extends id {
         int stackIn_234_0 = 0;
         int stackIn_270_0 = 0;
         int stackIn_369_0 = 0;
-        int stackOut_262_0 = 0;
-        int stackOut_268_0 = 0;
-        int stackOut_267_0 = 0;
-        int stackOut_265_0 = 0;
-        int stackOut_259_0 = 0;
-        int stackOut_368_0 = 0;
-        int stackOut_367_0 = 0;
-        int stackOut_365_0 = 0;
-        int stackOut_221_0 = 0;
-        int stackOut_220_0 = 0;
-        int stackOut_218_0 = 0;
-        int stackOut_226_0 = 0;
-        int stackOut_232_0 = 0;
-        int stackOut_231_0 = 0;
-        int stackOut_229_0 = 0;
-        int stackOut_223_0 = 0;
-        int stackOut_171_0 = 0;
-        int stackOut_169_0 = 0;
-        int stackOut_145_0 = 0;
-        int stackOut_144_0 = 0;
-        int stackOut_142_0 = 0;
-        int stackOut_140_0 = 0;
-        int stackOut_137_0 = 0;
-        int stackOut_88_0 = 0;
-        int stackOut_86_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_17_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         if (param0 < -69) {
           L0: {
             var2 = this.field_O << -143654544;
@@ -341,30 +281,25 @@ abstract class ti extends id {
                             if (this.field_E <= var3) {
                               break L3;
                             } else {
-                              stackOut_262_0 = 1;
-                              stackIn_270_0 = stackOut_262_0;
+                              stackIn_270_0 = 1;
                               break L2;
                             }
                           }
                         }
                         if (this.field_S < 0) {
                           if (var3 > this.field_E) {
-                            stackOut_268_0 = 1;
-                            stackIn_270_0 = stackOut_268_0;
+                            stackIn_270_0 = 1;
                             break L2;
                           } else {
-                            stackOut_267_0 = 0;
-                            stackIn_270_0 = stackOut_267_0;
+                            stackIn_270_0 = 0;
                             break L2;
                           }
                         } else {
-                          stackOut_265_0 = 0;
-                          stackIn_270_0 = stackOut_265_0;
+                          stackIn_270_0 = 0;
                           break L2;
                         }
                       } else {
-                        stackOut_259_0 = 1;
-                        stackIn_270_0 = stackOut_259_0;
+                        stackIn_270_0 = 1;
                         break L2;
                       }
                     }
@@ -698,17 +633,14 @@ abstract class ti extends id {
                     L20: {
                       if (this.field_S < 0) {
                         if (var3 <= this.field_E) {
-                          stackOut_368_0 = 0;
-                          stackIn_369_0 = stackOut_368_0;
+                          stackIn_369_0 = 0;
                           break L20;
                         } else {
-                          stackOut_367_0 = 1;
-                          stackIn_369_0 = stackOut_367_0;
+                          stackIn_369_0 = 1;
                           break L20;
                         }
                       } else {
-                        stackOut_365_0 = 0;
-                        stackIn_369_0 = stackOut_365_0;
+                        stackIn_369_0 = 0;
                         break L20;
                       }
                     }
@@ -1016,17 +948,14 @@ abstract class ti extends id {
                 L37: {
                   if ((this.field_X ^ -1) > -1) {
                     if (this.field_z >= var2) {
-                      stackOut_221_0 = 0;
-                      stackIn_222_0 = stackOut_221_0;
+                      stackIn_222_0 = 0;
                       break L37;
                     } else {
-                      stackOut_220_0 = 1;
-                      stackIn_222_0 = stackOut_220_0;
+                      stackIn_222_0 = 1;
                       break L37;
                     }
                   } else {
-                    stackOut_218_0 = 0;
-                    stackIn_222_0 = stackOut_218_0;
+                    stackIn_222_0 = 0;
                     break L37;
                   }
                 }
@@ -1040,30 +969,25 @@ abstract class ti extends id {
                         if (this.field_E <= var3) {
                           break L39;
                         } else {
-                          stackOut_226_0 = 1;
-                          stackIn_234_0 = stackOut_226_0;
+                          stackIn_234_0 = 1;
                           break L38;
                         }
                       }
                     }
                     if (this.field_S < 0) {
                       if (var3 > this.field_E) {
-                        stackOut_232_0 = 1;
-                        stackIn_234_0 = stackOut_232_0;
+                        stackIn_234_0 = 1;
                         break L38;
                       } else {
-                        stackOut_231_0 = 0;
-                        stackIn_234_0 = stackOut_231_0;
+                        stackIn_234_0 = 0;
                         break L38;
                       }
                     } else {
-                      stackOut_229_0 = 0;
-                      stackIn_234_0 = stackOut_229_0;
+                      stackIn_234_0 = 0;
                       break L38;
                     }
                   } else {
-                    stackOut_223_0 = 1;
-                    stackIn_234_0 = stackOut_223_0;
+                    stackIn_234_0 = 1;
                     break L38;
                   }
                 }
@@ -1197,13 +1121,11 @@ abstract class ti extends id {
                             return false;
                           }
                         } else {
-                          stackOut_171_0 = 0;
-                          stackIn_195_0 = stackOut_171_0;
+                          stackIn_195_0 = 0;
                           break L43;
                         }
                       } else {
-                        stackOut_169_0 = 0;
-                        stackIn_195_0 = stackOut_169_0;
+                        stackIn_195_0 = 0;
                         break L43;
                       }
                     } else {
@@ -1211,17 +1133,14 @@ abstract class ti extends id {
                         L47: {
                           if (this.field_S < 0) {
                             if (var3 <= this.field_E) {
-                              stackOut_145_0 = 0;
-                              stackIn_146_0 = stackOut_145_0;
+                              stackIn_146_0 = 0;
                               break L47;
                             } else {
-                              stackOut_144_0 = 1;
-                              stackIn_146_0 = stackOut_144_0;
+                              stackIn_146_0 = 1;
                               break L47;
                             }
                           } else {
-                            stackOut_142_0 = 0;
-                            stackIn_146_0 = stackOut_142_0;
+                            stackIn_146_0 = 0;
                             break L47;
                           }
                         }
@@ -1287,14 +1206,12 @@ abstract class ti extends id {
                           return false;
                         }
                       } else {
-                        stackOut_140_0 = 1;
-                        stackIn_195_0 = stackOut_140_0;
+                        stackIn_195_0 = 1;
                         break L43;
                       }
                     }
                   } else {
-                    stackOut_137_0 = 1;
-                    stackIn_195_0 = stackOut_137_0;
+                    stackIn_195_0 = 1;
                     break L43;
                   }
                 }
@@ -1430,13 +1347,11 @@ abstract class ti extends id {
                         return false;
                       }
                     } else {
-                      stackOut_88_0 = 0;
-                      stackIn_112_0 = stackOut_88_0;
+                      stackIn_112_0 = 0;
                       break L54;
                     }
                   } else {
-                    stackOut_86_0 = 0;
-                    stackIn_112_0 = stackOut_86_0;
+                    stackIn_112_0 = 0;
                     break L54;
                   }
                 } else {
@@ -1444,17 +1359,14 @@ abstract class ti extends id {
                     L58: {
                       if (this.field_S < 0) {
                         if (var3 <= this.field_E) {
-                          stackOut_62_0 = 0;
-                          stackIn_63_0 = stackOut_62_0;
+                          stackIn_63_0 = 0;
                           break L58;
                         } else {
-                          stackOut_61_0 = 1;
-                          stackIn_63_0 = stackOut_61_0;
+                          stackIn_63_0 = 1;
                           break L58;
                         }
                       } else {
-                        stackOut_59_0 = 0;
-                        stackIn_63_0 = stackOut_59_0;
+                        stackIn_63_0 = 0;
                         break L58;
                       }
                     }
@@ -1520,14 +1432,12 @@ abstract class ti extends id {
                       return false;
                     }
                   } else {
-                    stackOut_57_0 = 1;
-                    stackIn_112_0 = stackOut_57_0;
+                    stackIn_112_0 = 1;
                     break L54;
                   }
                 }
               } else {
-                stackOut_54_0 = 1;
-                stackIn_112_0 = stackOut_54_0;
+                stackIn_112_0 = 1;
                 break L54;
               }
             }
@@ -1617,30 +1527,25 @@ abstract class ti extends id {
                   if (this.field_z <= var2) {
                     break L67;
                   } else {
-                    stackOut_8_0 = 1;
-                    stackIn_16_0 = stackOut_8_0;
+                    stackIn_16_0 = 1;
                     break L66;
                   }
                 }
               }
               if ((this.field_X ^ -1) > -1) {
                 if (this.field_z < var2) {
-                  stackOut_14_0 = 1;
-                  stackIn_16_0 = stackOut_14_0;
+                  stackIn_16_0 = 1;
                   break L66;
                 } else {
-                  stackOut_13_0 = 0;
-                  stackIn_16_0 = stackOut_13_0;
+                  stackIn_16_0 = 0;
                   break L66;
                 }
               } else {
-                stackOut_11_0 = 0;
-                stackIn_16_0 = stackOut_11_0;
+                stackIn_16_0 = 0;
                 break L66;
               }
             } else {
-              stackOut_5_0 = 1;
-              stackIn_16_0 = stackOut_5_0;
+              stackIn_16_0 = 1;
               break L66;
             }
           }
@@ -1654,30 +1559,25 @@ abstract class ti extends id {
                   if (this.field_E <= var3) {
                     break L69;
                   } else {
-                    stackOut_20_0 = 1;
-                    stackIn_28_0 = stackOut_20_0;
+                    stackIn_28_0 = 1;
                     break L68;
                   }
                 }
               }
               if (this.field_S < 0) {
                 if (var3 > this.field_E) {
-                  stackOut_26_0 = 1;
-                  stackIn_28_0 = stackOut_26_0;
+                  stackIn_28_0 = 1;
                   break L68;
                 } else {
-                  stackOut_25_0 = 0;
-                  stackIn_28_0 = stackOut_25_0;
+                  stackIn_28_0 = 0;
                   break L68;
                 }
               } else {
-                stackOut_23_0 = 0;
-                stackIn_28_0 = stackOut_23_0;
+                stackIn_28_0 = 0;
                 break L68;
               }
             } else {
-              stackOut_17_0 = 1;
-              stackIn_28_0 = stackOut_17_0;
+              stackIn_28_0 = 1;
               break L68;
             }
           }
@@ -1755,46 +1655,22 @@ abstract class ti extends id {
     }
 
     final void d(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        Object stackIn_6_0 = null;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        Object stackIn_13_0 = null;
         Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
         int stackIn_15_1 = 0;
-        Object stackIn_20_0 = null;
         Object stackIn_21_0 = null;
         Object stackIn_22_0 = null;
         int stackIn_22_1 = 0;
-        Object stackIn_28_0 = null;
         Object stackIn_29_0 = null;
         Object stackIn_30_0 = null;
         int stackIn_30_1 = 0;
-        Object stackOut_27_0 = null;
-        Object stackOut_29_0 = null;
-        int stackOut_29_1 = 0;
-        Object stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        Object stackOut_19_0 = null;
-        Object stackOut_21_0 = null;
-        int stackOut_21_1 = 0;
-        Object stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        Object stackOut_12_0 = null;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        Object stackOut_5_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
         L0: {
           var3 = this.field_O - this.g(param0 + 68);
           var4 = this.field_P + -this.h(-80);
@@ -1812,20 +1688,15 @@ abstract class ti extends id {
               if (6 != this.field_K) {
                 if (this.field_K == 7) {
                   L1: {
-                    stackOut_27_0 = this;
-                    stackIn_29_0 = stackOut_27_0;
-                    stackIn_28_0 = stackOut_27_0;
+                    stackIn_29_0 = this;
+
                     if (!(this instanceof gm)) {
-                      stackOut_29_0 = this;
-                      stackOut_29_1 = 4;
-                      stackIn_30_0 = stackOut_29_0;
-                      stackIn_30_1 = stackOut_29_1;
+                      stackIn_30_0 = this;
+                      stackIn_30_1 = 4;
                       break L1;
                     } else {
-                      stackOut_28_0 = this;
-                      stackOut_28_1 = 0;
-                      stackIn_30_0 = stackOut_28_0;
-                      stackIn_30_1 = stackOut_28_1;
+                      stackIn_30_0 = this;
+                      stackIn_30_1 = 0;
                       break L1;
                     }
                   }
@@ -1845,20 +1716,15 @@ abstract class ti extends id {
                 }
               } else {
                 L3: {
-                  stackOut_19_0 = this;
-                  stackIn_21_0 = stackOut_19_0;
-                  stackIn_20_0 = stackOut_19_0;
+                  stackIn_21_0 = this;
+
                   if (!(this instanceof gm)) {
-                    stackOut_21_0 = this;
-                    stackOut_21_1 = 4;
-                    stackIn_22_0 = stackOut_21_0;
-                    stackIn_22_1 = stackOut_21_1;
+                    stackIn_22_0 = this;
+                    stackIn_22_1 = 4;
                     break L3;
                   } else {
-                    stackOut_20_0 = this;
-                    stackOut_20_1 = 0;
-                    stackIn_22_0 = stackOut_20_0;
-                    stackIn_22_1 = stackOut_20_1;
+                    stackIn_22_0 = this;
+                    stackIn_22_1 = 0;
                     break L3;
                   }
                 }
@@ -1876,20 +1742,15 @@ abstract class ti extends id {
               }
             } else {
               L5: {
-                stackOut_12_0 = this;
-                stackIn_14_0 = stackOut_12_0;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_14_0 = this;
+
                 if (!(this instanceof gm)) {
-                  stackOut_14_0 = this;
-                  stackOut_14_1 = 4;
-                  stackIn_15_0 = stackOut_14_0;
-                  stackIn_15_1 = stackOut_14_1;
+                  stackIn_15_0 = this;
+                  stackIn_15_1 = 4;
                   break L5;
                 } else {
-                  stackOut_13_0 = this;
-                  stackOut_13_1 = 0;
-                  stackIn_15_0 = stackOut_13_0;
-                  stackIn_15_1 = stackOut_13_1;
+                  stackIn_15_0 = this;
+                  stackIn_15_1 = 0;
                   break L5;
                 }
               }
@@ -1907,20 +1768,15 @@ abstract class ti extends id {
             }
           } else {
             L7: {
-              stackOut_5_0 = this;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_7_0 = this;
+
               if (!(this instanceof gm)) {
-                stackOut_7_0 = this;
-                stackOut_7_1 = 4;
-                stackIn_8_0 = stackOut_7_0;
-                stackIn_8_1 = stackOut_7_1;
+                stackIn_8_0 = this;
+                stackIn_8_1 = 4;
                 break L7;
               } else {
-                stackOut_6_0 = this;
-                stackOut_6_1 = 0;
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
+                stackIn_8_0 = this;
+                stackIn_8_1 = 0;
                 break L7;
               }
             }
@@ -1944,43 +1800,26 @@ abstract class ti extends id {
     }
 
     private final void a(int param0, int param1, byte param2) {
-        Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        Object stackOut_5_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
         if (param2 > -120) {
           L0: {
             this.field_bb = -7;
             this.field_S = param0;
             this.field_X = param1;
-            stackOut_5_0 = this;
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_7_0 = this;
+
             if (0 >= param1) {
-              stackOut_7_0 = this;
-              stackOut_7_1 = 3;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_0 = this;
+              stackIn_8_1 = 3;
               break L0;
             } else {
-              stackOut_6_0 = this;
-              stackOut_6_1 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_0 = this;
+              stackIn_8_1 = 1;
               break L0;
             }
           }
@@ -1990,20 +1829,15 @@ abstract class ti extends id {
           L1: {
             this.field_S = param0;
             this.field_X = param1;
-            stackOut_1_0 = this;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_3_0 = this;
+
             if (0 >= param1) {
-              stackOut_3_0 = this;
-              stackOut_3_1 = 3;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_0 = this;
+              stackIn_4_1 = 3;
               break L1;
             } else {
-              stackOut_2_0 = this;
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_0 = this;
+              stackIn_4_1 = 1;
               break L1;
             }
           }
@@ -2013,15 +1847,15 @@ abstract class ti extends id {
     }
 
     final void c(int param0, int param1) {
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        int fieldTemp$11 = 0;
-        int fieldTemp$12 = 0;
-        int fieldTemp$13 = 0;
-        int fieldTemp$14 = 0;
-        int fieldTemp$15 = 0;
-        int var3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
+        int var3;
         if (gg.field_j[param1] > this.field_ab) {
           if (param0 != 30818) {
             L0: {
@@ -2035,13 +1869,13 @@ abstract class ti extends id {
               }
             }
             L1: {
-              fieldTemp$8 = this.field_Q + 1;
+              fieldTemp$0 = this.field_Q + 1;
               this.field_Q = this.field_Q + 1;
-              if (var3 < fieldTemp$8) {
+              if (var3 < fieldTemp$0) {
                 L2: {
-                  fieldTemp$9 = this.field_ab + 1;
+                  fieldTemp$1 = this.field_ab + 1;
                   this.field_ab = this.field_ab + 1;
-                  if (fieldTemp$9 == gg.field_j[param1]) {
+                  if (fieldTemp$1 == gg.field_j[param1]) {
                     this.field_ab = 0;
                     break L2;
                   } else {
@@ -2066,13 +1900,13 @@ abstract class ti extends id {
               }
             }
             L4: {
-              fieldTemp$10 = this.field_Q + 1;
+              fieldTemp$2 = this.field_Q + 1;
               this.field_Q = this.field_Q + 1;
-              if (var3 < fieldTemp$10) {
+              if (var3 < fieldTemp$2) {
                 L5: {
-                  fieldTemp$11 = this.field_ab + 1;
+                  fieldTemp$3 = this.field_ab + 1;
                   this.field_ab = this.field_ab + 1;
-                  if (fieldTemp$11 == gg.field_j[param1]) {
+                  if (fieldTemp$3 == gg.field_j[param1]) {
                     this.field_ab = 0;
                     break L5;
                   } else {
@@ -2100,13 +1934,13 @@ abstract class ti extends id {
               }
             }
             L7: {
-              fieldTemp$12 = this.field_Q + 1;
+              fieldTemp$4 = this.field_Q + 1;
               this.field_Q = this.field_Q + 1;
-              if (var3 < fieldTemp$12) {
+              if (var3 < fieldTemp$4) {
                 L8: {
-                  fieldTemp$13 = this.field_ab + 1;
+                  fieldTemp$5 = this.field_ab + 1;
                   this.field_ab = this.field_ab + 1;
-                  if (fieldTemp$13 == gg.field_j[param1]) {
+                  if (fieldTemp$5 == gg.field_j[param1]) {
                     this.field_ab = 0;
                     break L8;
                   } else {
@@ -2132,13 +1966,13 @@ abstract class ti extends id {
               }
             }
             L10: {
-              fieldTemp$14 = this.field_Q + 1;
+              fieldTemp$6 = this.field_Q + 1;
               this.field_Q = this.field_Q + 1;
-              if (var3 < fieldTemp$14) {
+              if (var3 < fieldTemp$6) {
                 L11: {
-                  fieldTemp$15 = this.field_ab + 1;
+                  fieldTemp$7 = this.field_ab + 1;
                   this.field_ab = this.field_ab + 1;
-                  if (fieldTemp$15 == gg.field_j[param1]) {
+                  if (fieldTemp$7 == gg.field_j[param1]) {
                     this.field_ab = 0;
                     break L11;
                   } else {

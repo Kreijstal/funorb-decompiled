@@ -13,7 +13,7 @@ final class sc extends wl {
     static String field_l;
 
     public static void a(byte param0) {
-        wc var2 = null;
+        wc var2;
         if (param0 != -76) {
           var2 = (wc) null;
           sc.a((wc) null, false);
@@ -33,20 +33,18 @@ final class sc extends wl {
 
     final static kl a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
-            String discarded$2 = null;
             Object var6 = null;
             Object var7 = null;
             fh var8 = null;
             kl stackIn_14_0 = null;
             Throwable decompiledCaughtException = null;
-            kl stackOut_13_0 = null;
             try {
               L0: {
                 L1: {
                   if (param1 == 12000) {
                     break L1;
                   } else {
-                    discarded$2 = sc.a((byte) -101, 's');
+                    sc.a((byte) -101, 's');
                     break L1;
                   }
                 }
@@ -96,8 +94,7 @@ final class sc extends wl {
                     break L6;
                   }
                 }
-                stackOut_13_0 = new kl(var8, param5, param2);
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_0 = new kl(var8, param5, param2);
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -123,11 +120,8 @@ final class sc extends wl {
 
     final static void a(wc param0, boolean param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         wc var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -135,14 +129,7 @@ final class sc extends wl {
         String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException var2 = null;
         var4 = wizardrun.field_H;
         try {
           L0: {
@@ -210,27 +197,19 @@ final class sc extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2);
-            stackOut_19_1 = new StringBuilder().append("sc.A(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2);
+
+            stackIn_21_1 = new StringBuilder().append("sc.A(");
+
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L6;
             }
           }

@@ -24,7 +24,7 @@ final class er {
     }
 
     final wt b(int param0) {
-        wt var2 = null;
+        wt var2;
         if (param0 == -18520) {
           var2 = this.field_a.field_j;
           if (var2 == this.field_a) {
@@ -39,8 +39,10 @@ final class er {
     }
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         double var1_double = 0.0;
+        RuntimeException var1 = null;
         int var3 = 0;
         double var4 = 0.0;
         double var6 = 0.0;
@@ -48,18 +50,16 @@ final class er {
         double var10 = 0.0;
         double var12 = 0.0;
         double var14 = 0.0;
-        int var16 = 0;
         double var16_double = 0.0;
+        int var16 = 0;
         int var17 = 0;
-        int var18 = 0;
         double var18_double = 0.0;
+        int var18 = 0;
         int var19 = 0;
         double var20 = 0.0;
         double var22 = 0.0;
         double var24 = 0.0;
         int var26 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -226,7 +226,6 @@ final class er {
     }
 
     final void a(int param0, wt param1) {
-        wt discarded$0 = null;
         try {
             if (param1.field_f != null) {
                 param1.d(-124);
@@ -235,7 +234,7 @@ final class er {
             param1.field_j = this.field_a;
             param1.field_f.field_j = param1;
             if (param0 != 2) {
-                discarded$0 = this.a(-73);
+                this.a(-73);
             }
             param1.field_j.field_f = param1;
         } catch (RuntimeException runtimeException) {
@@ -244,7 +243,7 @@ final class er {
     }
 
     final wt e(int param0) {
-        wt var2 = null;
+        wt var2;
         var2 = this.field_b;
         if (var2 != this.field_a) {
           this.field_b = var2.field_j;
@@ -265,7 +264,7 @@ final class er {
     }
 
     final wt a(int param0) {
-        wt var2 = null;
+        wt var2;
         if (param0 == 3) {
           var2 = this.field_a.field_f;
           if (var2 == this.field_a) {
@@ -293,7 +292,7 @@ final class er {
     }
 
     final wt b(byte param0) {
-        wt var2 = null;
+        wt var2;
         var2 = this.field_a.field_j;
         if (this.field_a == var2) {
           this.field_b = null;

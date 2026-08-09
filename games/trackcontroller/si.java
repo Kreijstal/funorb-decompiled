@@ -8,14 +8,12 @@ final class si {
     static kk field_c;
 
     final static void a(byte param0, int param1) {
-        li discarded$4 = null;
-        li discarded$5 = null;
         if (param0 != -68) {
           field_a = (ja) null;
-          discarded$4 = da.a(va.field_d[param1], nd.field_G[param1], (byte) -110);
+          da.a(va.field_d[param1], nd.field_G[param1], (byte) -110);
           return;
         } else {
-          discarded$5 = da.a(va.field_d[param1], nd.field_G[param1], (byte) -110);
+          da.a(va.field_d[param1], nd.field_G[param1], (byte) -110);
           return;
         }
     }

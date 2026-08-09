@@ -10,7 +10,7 @@ final class tg {
     static qr field_c;
 
     final static boolean a(int param0, int param1, byte param2, int param3) {
-        bi var5 = null;
+        bi var5;
         if (param2 < -91) {
           if (-1 >= (param1 ^ -1)) {
             if ((param1 ^ -1) >= -12) {
@@ -60,10 +60,16 @@ final class tg {
     }
 
     final static void a(int param0, bi param1, byte param2, int param3) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        RuntimeException var4 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -76,22 +82,6 @@ final class tg {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -156,9 +146,9 @@ final class tg {
                     continue L5;
                   } else {
                     L7: {
-                      incrementValue$2 = var9;
+                      incrementValue$0 = var9;
                       var9++;
-                      var13 = 255 & param1.field_B[incrementValue$2];
+                      var13 = 255 & param1.field_B[incrementValue$0];
                       if (var13 != 0) {
                         L8: {
                           var14 = gf.field_h[var11];
@@ -178,9 +168,9 @@ final class tg {
                             break L8;
                           }
                         }
-                        incrementValue$3 = var11;
+                        incrementValue$1 = var11;
                         var11++;
-                        gf.field_h[incrementValue$3] = var14;
+                        gf.field_h[incrementValue$1] = var14;
                         break L7;
                       } else {
                         var11++;
@@ -198,27 +188,19 @@ final class tg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var4 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var4);
-            stackOut_25_1 = new StringBuilder().append("tg.A(").append(param0).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var4);
+
+            stackIn_27_1 = new StringBuilder().append("tg.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L9;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L9;
             }
           }

@@ -19,9 +19,8 @@ abstract class nc {
     abstract int a(boolean param0, long param1);
 
     final static ak b(int param0) {
-        ak discarded$0 = null;
         if (param0 <= 101) {
-            discarded$0 = nc.b(47);
+            nc.b(47);
             return fb.c((byte) 123);
         }
         return fb.c((byte) 123);
@@ -30,8 +29,8 @@ abstract class nc {
     abstract void a(boolean param0);
 
     final int a(byte param0, long param1) {
-        int var4 = 0;
-        long var5 = 0L;
+        int var4;
+        long var5;
         var4 = -125 % ((param0 - -64) / 46);
         var5 = this.a(-23239);
         if (var5 > 0L) {

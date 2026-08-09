@@ -9,9 +9,16 @@ final class gj {
     static wk field_a;
 
     final static void a(int param0, gk param1, byte param2, int param3, int param4, int param5) {
-        int incrementValue$1 = 0;
-        RuntimeException var6 = null;
+        int incrementValue$0 = 0;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -26,23 +33,6 @@ final class gj {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_34_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
         var20 = SteelSentinels.field_G;
         try {
           L0: {
@@ -136,9 +126,9 @@ final class gj {
                             var14 = var14 + var6_int;
                             if (-1 >= (var15 ^ -1)) {
                               L10: {
-                                incrementValue$1 = var9;
+                                incrementValue$0 = var9;
                                 var9++;
-                                var17 = param1.field_o[param1.field_p[incrementValue$1] & 255];
+                                var17 = param1.field_o[param1.field_p[incrementValue$0] & 255];
                                 if (-1 == (var17 ^ -1)) {
                                   break L10;
                                 } else {
@@ -179,27 +169,19 @@ final class gj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var6 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var6);
-            stackOut_31_1 = new StringBuilder().append("gj.B(").append(param0).append(',');
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackIn_33_0 = (RuntimeException) (var6);
+
+            stackIn_33_1 = new StringBuilder().append("gj.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L11;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L11;
             }
           }
@@ -213,22 +195,22 @@ final class gj {
     }
 
     final static wk[] b(int param0) {
-        wk[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var5 = null;
-        int var6 = 0;
-        int[] var6_ref_int__ = null;
-        int var7 = 0;
-        int var8 = 0;
-        byte[] var9 = null;
-        int[] var10 = null;
-        byte[] var12 = null;
-        int[] var13 = null;
-        byte[] var16 = null;
-        int[] var17 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
+        wk[] var1;
+        int var2;
+        int var3;
+        byte[] var5;
+        int var6;
+        int[] var6_ref_int__;
+        int var7;
+        int var8;
+        byte[] var9;
+        int[] var10;
+        byte[] var12;
+        int[] var13;
+        byte[] var16;
+        int[] var17;
+        byte[] var21;
+        int[] var22;
         var8 = SteelSentinels.field_G;
         var1 = new wk[rl.field_d];
         var2 = param0;
@@ -281,8 +263,8 @@ final class gj {
 
     final static void a(int param0, int param1) {
         try {
-            IOException var2 = null;
             Throwable decompiledCaughtException = null;
+            IOException var2 = null;
             L0: {
               if (null == rb.field_h) {
                 break L0;

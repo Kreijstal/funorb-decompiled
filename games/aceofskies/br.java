@@ -30,23 +30,13 @@ final class br extends oe implements java.awt.image.ImageProducer {
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -63,27 +53,19 @@ final class br extends oe implements java.awt.image.ImageProducer {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("br.removeConsumer(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("br.removeConsumer(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -103,10 +85,6 @@ final class br extends oe implements java.awt.image.ImageProducer {
     }
 
     final void a(int param0, int param1, java.awt.Canvas param2, int param3) {
-        in discarded$0 = null;
-        boolean discarded$1 = false;
-        boolean discarded$2 = false;
-        boolean discarded$3 = false;
         try {
             this.field_i = param2;
             this.field_h = param3;
@@ -116,63 +94,39 @@ final class br extends oe implements java.awt.image.ImageProducer {
             this.field_j = this.field_i.createImage((java.awt.image.ImageProducer) (this));
             if (param0 != -12189) {
                 aq[] var6 = (aq[]) null;
-                discarded$0 = br.a((wl) null, (aq[]) null, (byte) -2);
+                br.a((wl) null, (aq[]) null, (byte) -2);
             }
             this.e(param0 + 12078);
-            discarded$1 = this.field_i.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_i));
+            this.field_i.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_i));
             this.e(-113);
-            discarded$2 = this.field_i.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_i));
+            this.field_i.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_i));
             this.e(-115);
-            discarded$3 = this.field_i.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_i));
+            this.field_i.prepareImage(this.field_j, (java.awt.image.ImageObserver) ((Object) this.field_i));
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) ((Object) runtimeException), "br.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final static in a(wl param0, aq[] param1, byte param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        long var3_long = 0L;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        byte[] var11 = null;
         Object stackIn_23_0 = null;
         in stackIn_25_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_22_0 = null;
-        in stackOut_24_0 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        int var3_int = 0;
+        long var3_long = 0L;
+        RuntimeException var3 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        byte[] var11 = null;
         try {
           L0: {
             var3_int = 0;
@@ -214,8 +168,7 @@ final class br extends oe implements java.awt.image.ImageProducer {
                           L6: while (true) {
                             if (param1.length <= var7) {
                               jaggl.OpenGL.glDeleteObjectARB(var3_long);
-                              stackOut_22_0 = null;
-                              stackIn_23_0 = stackOut_22_0;
+                              stackIn_23_0 = null;
                               decompiledRegionSelector0 = 0;
                               break L0;
                             } else {
@@ -229,8 +182,7 @@ final class br extends oe implements java.awt.image.ImageProducer {
                         }
                       }
                     }
-                    stackOut_24_0 = new in(param0, var3_long, param1);
-                    stackIn_25_0 = stackOut_24_0;
+                    stackIn_25_0 = new in(param0, var3_long, param1);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -257,56 +209,40 @@ final class br extends oe implements java.awt.image.ImageProducer {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var3);
-            stackOut_26_1 = new StringBuilder().append("br.G(");
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_28_0 = (RuntimeException) (var3);
+
+            stackIn_28_1 = new StringBuilder().append("br.G(");
+
             if (param0 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L7;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',');
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+
+
+            stackIn_31_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',');
+
             if (param1 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L8;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L8;
             }
           }
-          throw pn.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_29_0), stackIn_32_2 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return (in) ((Object) stackIn_23_0);
@@ -320,13 +256,12 @@ final class br extends oe implements java.awt.image.ImageProducer {
 
     final void a(int param0, int param1, int param2, int param3, int param4, java.awt.Graphics param5, int param6, int param7) {
         java.awt.Shape var9 = null;
-        boolean discarded$0 = false;
         try {
             int var10 = -117 / ((param4 - 65) / 59);
             this.a(param3, param6, param0, param1, false);
             var9 = param5.getClip();
             param5.clipRect(param2, param7, param0, param3);
-            discarded$0 = param5.drawImage(this.field_j, param2 - param6, -param1 + param7, (java.awt.image.ImageObserver) ((Object) this.field_i));
+            param5.drawImage(this.field_j, param2 - param6, -param1 + param7, (java.awt.image.ImageObserver) ((Object) this.field_i));
             param5.setClip(var9);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) ((Object) runtimeException), "br.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
@@ -338,23 +273,23 @@ final class br extends oe implements java.awt.image.ImageProducer {
     }
 
     final static String a(Throwable param0, byte param1) throws IOException {
-        String var2 = null;
-        PrintWriter var4 = null;
-        String var5 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        ak var14 = null;
-        StringWriter var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
+        String var2;
+        PrintWriter var4;
+        String var5;
+        BufferedReader var6;
+        String var7;
+        String var8;
+        int var9;
+        int var10;
+        String var11;
+        int var12;
+        int var13;
+        ak var14;
+        StringWriter var15;
+        String var16;
+        String var17;
+        String var18;
+        String var19;
         L0: {
           var13 = AceOfSkies.field_G ? 1 : 0;
           if (param0 instanceof ak) {
@@ -456,10 +391,10 @@ final class br extends oe implements java.awt.image.ImageProducer {
             return;
         }
         dl var2 = nm.field_c;
-        int discarded$0 = var2.a((byte) 115);
-        int discarded$1 = var2.a((byte) 107);
-        int discarded$2 = var2.a((byte) 113);
-        int discarded$3 = var2.a((byte) 109);
+        var2.a((byte) 115);
+        var2.a((byte) 107);
+        var2.a((byte) 113);
+        var2.a((byte) 109);
         var1.c(-125);
     }
 

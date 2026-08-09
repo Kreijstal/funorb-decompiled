@@ -16,7 +16,7 @@ final class bd extends jl {
     static String field_n;
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         L0: {
           var2 = -81 % ((param0 - 24) / 63);
           mg.field_b = param1 >> 60057860 & 3;
@@ -54,7 +54,7 @@ final class bd extends jl {
     }
 
     final long c(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = 24 / ((55 - param0) / 61);
         this.field_i = this.field_i + this.f(122);
         if (this.field_p > this.field_i) {
@@ -83,11 +83,11 @@ final class bd extends jl {
     }
 
     private final long f(int param0) {
-        long var2 = 0L;
-        long var4 = 0L;
-        long var6 = 0L;
-        int var8 = 0;
-        int var9 = 0;
+        long var2;
+        long var4;
+        long var6;
+        int var8;
+        int var9;
         var9 = TorChallenge.field_F ? 1 : 0;
         if (param0 > 108) {
           var2 = System.nanoTime();
@@ -148,8 +148,8 @@ final class bd extends jl {
     }
 
     final int a(long param0, int param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = TorChallenge.field_F ? 1 : 0;
         if (param1 == 28) {
           if (this.field_i < this.field_p) {
@@ -190,9 +190,8 @@ final class bd extends jl {
     }
 
     final static int e(int param0) {
-        int discarded$3 = 0;
         if (param0 != 0) {
-            discarded$3 = bd.e(0);
+            bd.e(0);
             wf.field_i.a((byte) -120);
             if (!gb.field_d.b(-59)) {
                 return df.c((byte) 35);

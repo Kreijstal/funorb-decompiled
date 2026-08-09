@@ -11,8 +11,6 @@ final class nk extends dg {
         int stackIn_6_0 = 0;
         int stackIn_8_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_7_0 = 0;
         var1 = nr.field_q;
         synchronized (var1) {
           L0: {
@@ -25,15 +23,13 @@ final class nk extends dg {
               }
             }
             if (vb.field_b == wl.field_n) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               return stackIn_6_0 != 0;
             } else {
               cc.field_e = bt.field_a[wl.field_n];
               il.field_c = up.field_a[wl.field_n];
               wl.field_n = 127 & 1 + wl.field_n;
-              stackOut_7_0 = 1;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -49,13 +45,12 @@ final class nk extends dg {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        boolean discarded$1 = false;
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int[] var10 = null;
-        int[] var11 = null;
+        int[] var6;
+        int var7;
+        int var8;
+        int[] var9;
+        int[] var10;
+        int[] var11;
         var8 = Kickabout.field_G;
         eo.a(mk.field_a, param0, param2, param3, param1, 256, mk.field_a.field_v - param1);
         var11 = new int[4];
@@ -78,7 +73,7 @@ final class nk extends dg {
             }
           }
         } else {
-          discarded$1 = nk.b((byte) 94);
+          nk.b((byte) 94);
           on.e(param0, param2, param3 + param0, param2 + param1);
           cq.field_j.c(-40 + param0, param2 - 290, 32);
           on.b(var11);
@@ -99,10 +94,9 @@ final class nk extends dg {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_g = null;
         if (param0 != -15207) {
-            discarded$0 = nk.b((byte) 110);
+            nk.b((byte) 110);
         }
     }
 

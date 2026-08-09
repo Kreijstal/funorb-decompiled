@@ -8,30 +8,29 @@ final class kk {
     static volatile boolean field_d;
 
     final static ea[] a(int param0) {
-        ea[] discarded$1 = null;
-        ea[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var5 = null;
-        int var6 = 0;
-        int[] var6_ref_int__ = null;
-        int var7 = 0;
-        int var8 = 0;
-        byte[] var9 = null;
-        int[] var10 = null;
-        byte[] var12 = null;
-        int[] var13 = null;
-        byte[] var16 = null;
-        int[] var17 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
+        ea[] var1;
+        int var2;
+        int var3;
+        byte[] var5;
+        int var6;
+        int[] var6_ref_int__;
+        int var7;
+        int var8;
+        byte[] var9;
+        int[] var10;
+        byte[] var12;
+        int[] var13;
+        byte[] var16;
+        int[] var17;
+        byte[] var21;
+        int[] var22;
         L0: {
           var8 = MinerDisturbance.field_ab;
           var1 = new ea[sc.field_d];
           if (param0 >= 83) {
             break L0;
           } else {
-            discarded$1 = kk.a(45);
+            kk.a(45);
             break L0;
           }
         }
@@ -84,12 +83,11 @@ final class kk {
     }
 
     public static void a(byte param0) {
-        ea[] discarded$0 = null;
         field_a = null;
         field_b = null;
         field_c = null;
         if (param0 < 40) {
-            discarded$0 = kk.a(103);
+            kk.a(103);
         }
     }
 

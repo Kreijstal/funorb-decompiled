@@ -39,10 +39,10 @@ final class ph implements jk {
 
     final static void a(int param0) {
         hd var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {

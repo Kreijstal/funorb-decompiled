@@ -243,7 +243,7 @@ final class kp extends nc {
         int var6 = 240 + -(var4 / 2);
         var4 = ((fm) ((Object) var2)).a(vh.field_Fb, var3, 0);
         s.a(var6 + -10, 0, cc.field_b, -10 + var5, var4 - -20, 20 + var3);
-        int discarded$0 = ((fm) ((Object) var2)).a(vh.field_Fb, var5, var6, var3, var4, this.field_m, this.field_p, 1, 1, 0);
+        ((fm) ((Object) var2)).a(vh.field_Fb, var5, var6, var3, var4, this.field_m, this.field_p, 1, 1, 0);
     }
 
     public static void e(int param0) {

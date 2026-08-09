@@ -50,30 +50,19 @@ final class wh implements Iterator {
     }
 
     final static byte[] a(byte param0, CharSequence param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        byte[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         byte[] stackIn_69_0 = null;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
         RuntimeException stackIn_72_0 = null;
         StringBuilder stackIn_72_1 = null;
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_73_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_68_0 = null;
-        RuntimeException stackOut_70_0 = null;
-        StringBuilder stackOut_70_1 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        String stackOut_71_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        byte[] var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
         var6 = wizardrun.field_H;
         try {
           L0: {
@@ -90,8 +79,7 @@ final class wh implements Iterator {
                     break L2;
                   }
                 }
-                stackOut_68_0 = (byte[]) (var3);
-                stackIn_69_0 = stackOut_68_0;
+                stackIn_69_0 = (byte[]) (var3);
                 break L0;
               } else {
                 L3: {
@@ -269,27 +257,19 @@ final class wh implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_70_0 = (RuntimeException) (var2);
-            stackOut_70_1 = new StringBuilder().append("wh.D(").append(param0).append(',');
-            stackIn_72_0 = stackOut_70_0;
-            stackIn_72_1 = stackOut_70_1;
-            stackIn_71_0 = stackOut_70_0;
-            stackIn_71_1 = stackOut_70_1;
+            stackIn_72_0 = (RuntimeException) (var2);
+
+            stackIn_72_1 = new StringBuilder().append("wh.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
-              stackOut_72_2 = "null";
-              stackIn_73_0 = stackOut_72_0;
-              stackIn_73_1 = stackOut_72_1;
-              stackIn_73_2 = stackOut_72_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "null";
               break L7;
             } else {
-              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
-              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackOut_71_2 = "{...}";
-              stackIn_73_0 = stackOut_71_0;
-              stackIn_73_1 = stackOut_71_1;
-              stackIn_73_2 = stackOut_71_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "{...}";
               break L7;
             }
           }
@@ -299,9 +279,8 @@ final class wh implements Iterator {
     }
 
     final static void b(byte param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         L0: {
           if (param0 < -28) {
             break L0;
@@ -350,17 +329,17 @@ final class wh implements Iterator {
     }
 
     public final boolean hasNext() {
-        int fieldTemp$8 = 0;
-        int var2 = 0;
+        int fieldTemp$2 = 0;
+        int var2;
         var2 = wizardrun.field_H;
         if (this.field_a == this.field_i.field_c[-1 + this.field_f]) {
           L0: while (true) {
             if (this.field_i.field_d <= this.field_f) {
               return false;
             } else {
-              fieldTemp$8 = this.field_f;
+              fieldTemp$2 = this.field_f;
               this.field_f = this.field_f + 1;
-              if (this.field_i.field_c[fieldTemp$8].field_b != this.field_i.field_c[this.field_f - 1]) {
+              if (this.field_i.field_c[fieldTemp$2].field_b != this.field_i.field_c[this.field_f - 1]) {
                 this.field_a = this.field_i.field_c[this.field_f - 1].field_b;
                 return true;
               } else {

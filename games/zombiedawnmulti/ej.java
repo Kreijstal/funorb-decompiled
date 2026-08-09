@@ -61,28 +61,26 @@ final class ej implements Runnable {
 
     public final void run() {
         try {
-            IOException var1 = null;
-            Exception var1_ref = null;
-            int var1_int = 0;
-            int var2 = 0;
-            IOException var3 = null;
-            Object var3_ref = null;
-            InterruptedException var4 = null;
-            Throwable var5 = null;
-            int var6 = 0;
-            String var7 = null;
             boolean stackIn_4_0 = false;
             int stackIn_11_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            boolean stackOut_3_0 = false;
-            int stackOut_10_0 = 0;
+            boolean stackOut_3_0;
+            int var1_int = 0;
+            IOException var1 = null;
+            Exception var1_ref = null;
+            int var2 = 0;
+            Object var3 = null;
+            IOException var3_ref = null;
+            InterruptedException var4 = null;
+            int var6 = 0;
+            String var7 = null;
             var6 = ZombieDawnMulti.field_E ? 1 : 0;
             try {
               L0: {
                 L1: while (true) {
-                  var3_ref = this;
-                  synchronized (var3_ref) {
+                  var3 = this;
+                  synchronized (var3) {
                     L2: {
                       L3: {
                         L4: {
@@ -123,8 +121,7 @@ final class ej implements Runnable {
                             }
                           }
                         }
-                        stackOut_10_0 = this.field_a;
-                        stackIn_11_0 = stackOut_10_0;
+                        stackIn_11_0 = this.field_a;
                         break L3;
                       }
                       L8: {
@@ -196,7 +193,7 @@ final class ej implements Runnable {
                       } catch (java.io.IOException decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         L16: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_i = true;
                           break L16;
                         }
@@ -217,7 +214,7 @@ final class ej implements Runnable {
                       } catch (java.io.IOException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L19: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_i = true;
                           break L19;
                         }
@@ -246,7 +243,7 @@ final class ej implements Runnable {
     }
 
     final static cr a(byte param0, int param1) {
-        cr var2 = null;
+        cr var2;
         if (param0 >= -32) {
           ej.b((byte) 24);
           var2 = new cr();
@@ -266,136 +263,40 @@ final class ej implements Runnable {
     }
 
     final static void a(ja param0, byte param1, ja param2) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        try {
-          L0: {
-            jj.field_F = new ja[7];
-            rb.field_e = new ja[7];
-            eg.field_D = new ja(300, 200);
-            rb.field_e[0] = param2;
-            jj.field_F[0] = new ja(param2.field_x - -20, param2.field_w - -10);
-            rb.field_e[1] = param0;
-            jj.field_F[1] = new ja(param0.field_x + 10, 10 + param0.field_w);
-            rb.field_e[2] = new ja(150, 100);
-            jj.field_F[2] = new ja(150, 100);
-            rb.field_e[3] = new ja(120, 50);
-            jj.field_F[3] = new ja(120, 50);
-            rb.field_e[4] = new ja(300, 50);
-            jj.field_F[4] = new ja(300, 50);
-            rb.field_e[5] = new ja(200, 90);
-            jj.field_F[5] = new ja(200, 90);
-            rb.field_e[6] = new ja(200, 50);
-            if (param1 < -4) {
-              jj.field_F[6] = new ja(200, 50);
-              g.c();
-              jj.field_F[0].a();
-              rb.field_e[0].f(5, 5, 16777215);
-              jm.d((byte) -18);
-              rb.field_e[0].f(5, 5, 0);
-              jj.field_F[1].a();
-              rb.field_e[1].f(-35, 5, 16777215);
-              g.a(16777215);
-              jm.d((byte) -18);
-              rb.field_e[1].f(-35, 5, 0);
-              g.b();
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("ej.H(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
-            if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L1;
-            } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L1;
-            }
-          }
-          L2: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
-            if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L2;
-            } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L2;
-            }
-          }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+        jj.field_F = new ja[7];
+        rb.field_e = new ja[7];
+        eg.field_D = new ja(300, 200);
+        rb.field_e[0] = param2;
+        jj.field_F[0] = new ja(param2.field_x - -20, param2.field_w - -10);
+        rb.field_e[1] = param0;
+        jj.field_F[1] = new ja(param0.field_x + 10, 10 + param0.field_w);
+        rb.field_e[2] = new ja(150, 100);
+        jj.field_F[2] = new ja(150, 100);
+        rb.field_e[3] = new ja(120, 50);
+        jj.field_F[3] = new ja(120, 50);
+        rb.field_e[4] = new ja(300, 50);
+        jj.field_F[4] = new ja(300, 50);
+        rb.field_e[5] = new ja(200, 90);
+        jj.field_F[5] = new ja(200, 90);
+        rb.field_e[6] = new ja(200, 50);
+        if (param1 >= -4) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            jj.field_F[6] = new ja(200, 50);
+            g.c();
+            jj.field_F[0].a();
+            rb.field_e[0].f(5, 5, 16777215);
+            jm.d((byte) -18);
+            rb.field_e[0].f(5, 5, 0);
+            jj.field_F[1].a();
+            rb.field_e[1].f(-35, 5, 16777215);
+            g.a(16777215);
+            jm.d((byte) -18);
+            rb.field_e[1].f(-35, 5, 0);
+            g.b();
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) ((Object) runtimeException), "ej.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -423,92 +324,189 @@ final class ej implements Runnable {
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         long stackIn_13_0 = 0L;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_2_1 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        long stackOut_12_0 = 0L;
-        var6 = ZombieDawnMulti.field_E ? 1 : 0;
-        try {
-          L0: {
-            var1_long = 0L;
-            var3 = -15 / ((35 - param0) / 62);
-            var4 = 0;
-            L1: while (true) {
-              stackOut_2_0 = var4;
-              stackOut_2_1 = em.field_Y.length;
-              stackIn_3_0 = stackOut_2_0;
-              stackIn_3_1 = stackOut_2_1;
-              L2: while (true) {
-                L3: {
-                  if (stackIn_3_0 >= stackIn_3_1) {
-                    break L3;
-                  } else {
-                    var5 = 0;
-                    L4: while (true) {
-                      L5: {
-                        if (var5 >= em.field_Y[var4][0].length) {
-                          break L5;
-                        } else {
-                          stackOut_6_0 = em.field_Y[var4][0][var5] ^ -1;
-                          stackOut_6_1 = -256;
-                          stackIn_3_0 = stackOut_6_0;
-                          stackIn_3_1 = stackOut_6_1;
-                          stackIn_7_0 = stackOut_6_0;
-                          stackIn_7_1 = stackOut_6_1;
-                          if (var6 != 0) {
-                            continue L2;
-                          } else {
-                            L6: {
-                              if (stackIn_7_0 != stackIn_7_1) {
-                                var1_long = var1_long | 1L << em.field_Y[var4][0][var5];
-                                break L6;
-                              } else {
-                                break L6;
-                              }
-                            }
-                            var5++;
-                            if (var6 == 0) {
-                              continue L4;
-                            } else {
-                              break L5;
-                            }
-                          }
-                        }
-                      }
-                      var4++;
-                      if (var6 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var6 = ZombieDawnMulti.field_E ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-                stackOut_12_0 = var1_long;
-                stackIn_13_0 = stackOut_12_0;
-                break L0;
-              }
+                case 1: {
+                    try {
+                        var1_long = 0L;
+                        var3 = -15 / ((35 - param0) / 62);
+                        var4 = 0;
+                        statePc = 2;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 14;
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        stackIn_3_0 = var4;
+                        stackIn_3_1 = em.field_Y.length;
+                        statePc = 3;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 14;
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        if (stackIn_3_0 >= stackIn_3_1) {
+                            statePc = 12;
+                        } else {
+                            statePc = 4;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 14;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        var5 = 0;
+                        statePc = 5;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 14;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        if (var5 >= em.field_Y[var4][0].length) {
+                            statePc = 11;
+                        } else {
+                            statePc = 6;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 14;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        stackIn_3_0 = em.field_Y[var4][0][var5] ^ -1;
+                        stackIn_7_0 = stackIn_3_0;
+                        stackIn_3_1 = -256;
+                        stackIn_7_1 = stackIn_3_1;
+                        if (var6 != 0) {
+                            statePc = 3;
+                        } else {
+                            statePc = 7;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 14;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        if (stackIn_7_0 != stackIn_7_1) {
+                            statePc = 9;
+                        } else {
+                            statePc = 8;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 14;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        statePc = 10;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = 14;
+                        continue stateLoop;
+                    }
+                }
+                case 9: {
+                    try {
+                        var1_long = var1_long | 1L << em.field_Y[var4][0][var5];
+                        statePc = 10;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_9) {
+                        caughtException = stateCaught_9;
+                        statePc = 14;
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    try {
+                        var5++;
+                        if (var6 == 0) {
+                            statePc = 5;
+                        } else {
+                            statePc = 11;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_10) {
+                        caughtException = stateCaught_10;
+                        statePc = 14;
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    try {
+                        var4++;
+                        if (var6 == 0) {
+                            statePc = 2;
+                        } else {
+                            statePc = 12;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_11) {
+                        caughtException = stateCaught_11;
+                        statePc = 14;
+                        continue stateLoop;
+                    }
+                }
+                case 12: {
+                    try {
+                        stackIn_13_0 = var1_long;
+                        statePc = 13;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_12) {
+                        caughtException = stateCaught_12;
+                        statePc = 14;
+                        continue stateLoop;
+                    }
+                }
+                case 13: {
+                    return stackIn_13_0;
+                }
+                case 14: {
+                    var1 = (RuntimeException) ((Object) caughtException);
+                    throw fa.a((Throwable) ((Object) var1), "ej.C(" + param0 + ')');
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "ej.C(" + param0 + ')');
         }
-        return stackIn_13_0;
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
-        RuntimeException var5 = null;
-        int var5_int = 0;
         int var6 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_8_0 = 0;
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -516,18 +514,8 @@ final class ej implements Runnable {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_12_0 = 0;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -535,8 +523,7 @@ final class ej implements Runnable {
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
-              stackOut_4_0 = 0;
-              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_0 = 0;
               L1: while (true) {
                 L2: {
                   L3: {
@@ -544,20 +531,18 @@ final class ej implements Runnable {
                       break L3;
                     } else {
                       var5_int = this.field_d.read(param2, param1, param0);
-                      stackOut_7_0 = var5_int;
-                      stackIn_13_0 = stackOut_7_0;
-                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_13_0 = var5_int;
+
                       if (var6 != 0) {
                         break L2;
                       } else {
-                        if (stackIn_8_0 <= 0) {
+                        if (stackIn_13_0 <= 0) {
                           throw new EOFException();
                         } else {
                           param1 = param1 + var5_int;
                           param0 = param0 - var5_int;
                           if (var6 == 0) {
-                            stackOut_5_0 = 0;
-                            stackIn_6_0 = stackOut_5_0;
+                            stackIn_6_0 = 0;
                             continue L1;
                           } else {
                             break L3;
@@ -566,8 +551,7 @@ final class ej implements Runnable {
                       }
                     }
                   }
-                  stackOut_12_0 = param3;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = param3;
                   break L2;
                 }
                 if (stackIn_13_0 > 96) {
@@ -584,27 +568,19 @@ final class ej implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var5);
-            stackOut_16_1 = new StringBuilder().append("ej.J(").append(param0).append(',').append(param1).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var5);
+
+            stackIn_18_1 = new StringBuilder().append("ej.J(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L4;
             }
           }
@@ -619,12 +595,11 @@ final class ej implements Runnable {
 
     final void c(int param0) {
         try {
+            Throwable decompiledCaughtException = null;
             Object var2_ref_Object = null;
             int var2 = 0;
-            Throwable var3 = null;
-            InterruptedException var3_ref = null;
+            InterruptedException var3 = null;
             int var4 = 0;
-            Throwable decompiledCaughtException = null;
             var4 = ZombieDawnMulti.field_E ? 1 : 0;
             if (!this.field_r) {
               var2_ref_Object = this;
@@ -638,32 +613,39 @@ final class ej implements Runnable {
               var2 = 61 / ((param0 - 20) / 58);
               if (this.field_c != null) {
                 L1: while (true) {
-                  if (this.field_c.field_f != 0) {
-                    if (this.field_c.field_f != 1) {
-                      this.field_c = null;
-                      return;
+                  L2: {
+                    if (this.field_c.field_f != 0) {
+                      break L2;
                     } else {
-                      try {
-                        L2: {
-                          ((Thread) (this.field_c.field_d)).join();
+                      vd.a(false, 1L);
+                      if (var4 == 0) {
+                        if (var4 == 0) {
+                          continue L1;
+                        } else {
                           break L2;
                         }
-                      } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                        decompiledCaughtException = decompiledCaughtParameter0;
-                        var3_ref = (InterruptedException) (Object) decompiledCaughtException;
-                        this.field_c = null;
+                      } else {
                         return;
                       }
+                    }
+                  }
+                  if (this.field_c.field_f != 1) {
+                    this.field_c = null;
+                    return;
+                  } else {
+                    try {
+                      L3: {
+                        ((Thread) (this.field_c.field_d)).join();
+                        break L3;
+                      }
+                    } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      var3 = (InterruptedException) (Object) decompiledCaughtException;
                       this.field_c = null;
                       return;
                     }
-                  } else {
-                    vd.a(false, 1L);
-                    if (var4 == 0) {
-                      continue L1;
-                    } else {
-                      return;
-                    }
+                    this.field_c = null;
+                    return;
                   }
                 }
               } else {
@@ -681,32 +663,18 @@ final class ej implements Runnable {
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
-        RuntimeException var5 = null;
-        Object var5_ref = null;
-        int var6 = 0;
-        Throwable var7 = null;
-        int var8 = 0;
-        ja var9 = null;
-        Object stackIn_14_0 = null;
         Object stackIn_21_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
         Throwable decompiledCaughtException = null;
-        Object stackOut_20_0 = null;
-        Object stackOut_13_0 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
+        Object var5 = null;
+        RuntimeException var5_ref = null;
+        int var6 = 0;
+        int var8 = 0;
+        ja var9 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -722,8 +690,8 @@ final class ej implements Runnable {
                     break L1;
                   }
                 }
-                var5_ref = this;
-                synchronized (var5_ref) {
+                var5 = this;
+                synchronized (var5) {
                   L2: {
                     L3: {
                       if (param1 == -100) {
@@ -737,36 +705,41 @@ final class ej implements Runnable {
                     var6 = 0;
                     L4: while (true) {
                       L5: {
-                        if (param2 <= var6) {
-                          L6: {
-                            if (null != this.field_c) {
-                              break L6;
-                            } else {
-                              this.field_c = this.field_s.a(47, (Runnable) (this), 3);
-                              break L6;
-                            }
-                          }
-                          this.notifyAll();
-                          stackOut_20_0 = var5_ref;
-                          stackIn_21_0 = stackOut_20_0;
-                          break L5;
-                        } else {
-                          this.field_b[this.field_a] = param3[param0 + var6];
-                          this.field_a = (this.field_a - -1) % this.field_m;
-                          stackOut_13_0 = this;
-                          stackIn_21_0 = stackOut_13_0;
-                          stackIn_14_0 = stackOut_13_0;
-                          if (var8 != 0) {
-                            break L5;
+                        L6: {
+                          if (param2 <= var6) {
+                            break L6;
                           } else {
-                            if (((ej) (this)).field_a == (-100 + (this.field_m + this.field_h)) % this.field_m) {
-                              throw new IOException();
+                            this.field_b[this.field_a] = param3[param0 + var6];
+                            this.field_a = (this.field_a - -1) % this.field_m;
+                            stackIn_21_0 = this;
+
+                            if (var8 != 0) {
+                              break L5;
                             } else {
-                              var6++;
-                              continue L4;
+                              if (((ej) (this)).field_a == (-100 + (this.field_m + this.field_h)) % this.field_m) {
+                                throw new IOException();
+                              } else {
+                                var6++;
+                                if (var8 == 0) {
+                                  continue L4;
+                                } else {
+                                  break L6;
+                                }
+                              }
                             }
                           }
                         }
+                        L7: {
+                          if (null != this.field_c) {
+                            break L7;
+                          } else {
+                            this.field_c = this.field_s.a(47, (Runnable) (this), 3);
+                            break L7;
+                          }
+                        }
+                        this.notifyAll();
+                        stackIn_21_0 = var5;
+                        break L5;
                       }
                       break L2;
                     }
@@ -781,30 +754,22 @@ final class ej implements Runnable {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var5 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var5);
-            stackOut_26_1 = new StringBuilder().append("ej.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+          L8: {
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_28_0 = (RuntimeException) (var5_ref);
+
+            stackIn_28_1 = new StringBuilder().append("ej.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
-              break L7;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
+              break L8;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
-              break L7;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
+              break L8;
             }
           }
           throw fa.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');

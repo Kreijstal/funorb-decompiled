@@ -13,28 +13,27 @@ final class gi extends me {
     }
 
     final boolean a(boolean param0) {
-        boolean discarded$0 = false;
         if (!param0) {
-            discarded$0 = this.a(true);
+            this.a(true);
             return false;
         }
         return false;
     }
 
     final void b(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var14;
+        int var13;
         var14 = TombRacer.field_G ? 1 : 0;
         var2 = (aaa.a(false) - koa.b(0) / 2) / 2;
         if (param0 < -13) {
@@ -52,74 +51,40 @@ final class gi extends me {
           L0: while (true) {
             if (this.field_g.field_c.field_e.length > var11) {
               var12 = this.field_g.field_c.field_e[var11];
-              if (var14 == 0) {
+              if (0 != (var12 ^ -1)) {
                 L1: {
-                  L2: {
-                    if (0 != (var12 ^ -1)) {
-                      break L2;
-                    } else {
-                      if (var14 == 0) {
-                        break L1;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  L3: {
-                    L4: {
-                      if (var12 == var4) {
-                        break L4;
-                      } else {
-                        var13 = var6;
-                        if (var14 == 0) {
-                          break L3;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
+                  if (var12 == var4) {
                     var13 = var5;
-                    break L3;
+                    break L1;
+                  } else {
+                    var13 = var6;
+                    break L1;
                   }
-                  L5: {
-                    if (this.field_g.field_G[var12].b(0)) {
-                      break L5;
-                    } else {
-                      L6: {
-                        if (this.field_g.field_G[var12].e(-31170)) {
-                          break L6;
-                        } else {
-                          if (this.field_i.field_k.e(2) >= 0) {
-                            break L6;
-                          } else {
-                            oka.a((dta.field_b[var11] + "  ...").toUpperCase(), 16777215, qf.field_j, -1, var11 * var7 + var10, var2, 0);
-                            if (var14 != 0) {
-                              break L6;
-                            } else {
-                              return;
-                            }
-                          }
-                        }
-                      }
-                      oka.a((re.field_b + "  " + this.field_i.a(var12, false)).toUpperCase(), var13, qf.field_j, -1, var10 - -(var11 * var7), var2, 0);
-                      if (var14 == 0) {
-                        break L1;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                  oka.a((dta.field_b[var11] + "  " + this.field_i.a(var12, false) + "  " + dea.a(this.field_g.field_G[var12].field_c, (byte) -8)).toUpperCase(), var13, qf.field_j, -1, var7 * var11 + var10, var2, 0);
-                  break L1;
                 }
-                var11++;
-                if (var14 == 0) {
+                if (this.field_g.field_G[var12].b(0)) {
+                  oka.a((dta.field_b[var11] + "  " + this.field_i.a(var12, false) + "  " + dea.a(this.field_g.field_G[var12].field_c, (byte) -8)).toUpperCase(), var13, qf.field_j, -1, var7 * var11 + var10, var2, 0);
+                  var11++;
                   continue L0;
                 } else {
-                  return;
+                  L2: {
+                    if (this.field_g.field_G[var12].e(-31170)) {
+                      break L2;
+                    } else {
+                      if (this.field_i.field_k.e(2) >= 0) {
+                        break L2;
+                      } else {
+                        oka.a((dta.field_b[var11] + "  ...").toUpperCase(), 16777215, qf.field_j, -1, var11 * var7 + var10, var2, 0);
+                        return;
+                      }
+                    }
+                  }
+                  oka.a((re.field_b + "  " + this.field_i.a(var12, false)).toUpperCase(), var13, qf.field_j, -1, var10 - -(var11 * var7), var2, 0);
+                  var11++;
+                  continue L0;
                 }
               } else {
-                return;
+                var11++;
+                continue L0;
               }
             } else {
               return;

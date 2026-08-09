@@ -20,24 +20,14 @@ final class rr {
     final static void a(byte param0, java.applet.Applet param1) {
         try {
             java.net.URL var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             try {
               L0: {
                 try {
@@ -68,27 +58,19 @@ final class rr {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var2_ref2);
-                stackOut_6_1 = new StringBuilder().append("rr.C(").append(param0).append(',');
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_8_1 = new StringBuilder().append("rr.C(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L4;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L4;
                 }
               }
@@ -102,8 +84,8 @@ final class rr {
     }
 
     final static char a(char param0, byte param1) {
-        int var2 = 0;
-        java.applet.Applet var3 = null;
+        int var2;
+        java.applet.Applet var3;
         if (param1 != -70) {
           var3 = (java.applet.Applet) null;
           rr.a((byte) 58, (java.applet.Applet) null);
@@ -645,13 +627,13 @@ final class rr {
             var0 = System.getProperty("java.vendor").toLowerCase();
         } catch (Exception exception) {
         }
-        String discarded$0 = var0.toLowerCase();
+        var0.toLowerCase();
         var0 = "Unknown";
         try {
             var0 = System.getProperty("java.version").toLowerCase();
         } catch (Exception exception) {
         }
-        String discarded$1 = var0.toLowerCase();
+        var0.toLowerCase();
         var0 = "Unknown";
         try {
             var0 = System.getProperty("os.name").toLowerCase();
@@ -669,12 +651,12 @@ final class rr {
             var0 = System.getProperty("os.version").toLowerCase();
         } catch (Exception exception) {
         }
-        String discarded$2 = var0.toLowerCase();
+        var0.toLowerCase();
         var0 = "~/";
         try {
             var0 = System.getProperty("user.home").toLowerCase();
         } catch (Exception exception) {
         }
-        File discarded$3 = new File(var0);
+        File discarded$0 = new File(var0);
     }
 }

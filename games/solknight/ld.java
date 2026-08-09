@@ -35,7 +35,6 @@ abstract class ld extends kf {
             Throwable var1 = null;
             lf stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            lf stackOut_2_0 = null;
             L0: {
               if (param0 == 0) {
                 break L0;
@@ -46,8 +45,7 @@ abstract class ld extends kf {
             }
             try {
               L1: {
-                stackOut_2_0 = (lf) (Class.forName("sc").newInstance());
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (lf) (Class.forName("sc").newInstance());
                 break L1;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -70,20 +68,20 @@ abstract class ld extends kf {
     }
 
     void a(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         var17 = SolKnight.field_L ? 1 : 0;
         mi.e(param0 + 6, 35 + param2, -12 + this.field_t, this.field_x + -40, 2105376, 0);
         var5 = 211;
@@ -133,7 +131,7 @@ abstract class ld extends kf {
               }
             }
           } else {
-            if (mi.field_l <= var9) {
+            if ((mi.field_l ^ -1) >= (var9 ^ -1)) {
               if (var9 < mi.field_e) {
                 L3: {
                   var10 = (-var5 + var7) * var8 / var4 + var5;
@@ -384,9 +382,8 @@ abstract class ld extends kf {
     }
 
     void e(boolean param0) {
-        lf discarded$0 = null;
         if (!param0) {
-            discarded$0 = ld.j(31);
+            ld.j(31);
         }
         if (-1 <= (this.field_L ^ -1)) {
             return;
@@ -397,9 +394,8 @@ abstract class ld extends kf {
     }
 
     boolean e(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != 124) {
-            discarded$0 = this.e((byte) 24);
+            this.e((byte) 24);
         }
         this.e(true);
         return super.e((byte) 124);

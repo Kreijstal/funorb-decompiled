@@ -36,7 +36,7 @@ final class ft extends bw {
     }
 
     final static void c(byte param0) {
-        int var1 = 0;
+        int var1;
         if (!qo.field_c) {
           throw new IllegalStateException();
         } else {
@@ -49,51 +49,29 @@ final class ft extends bw {
     }
 
     private final void a(lu param0, int param1) {
-        int discarded$2 = 0;
         RuntimeException var3 = null;
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
               this.field_g = param0.f(-95);
-              stackOut_0_0 = this;
-              stackIn_2_0 = stackOut_0_0;
-              stackIn_1_0 = stackOut_0_0;
+              stackIn_2_0 = this;
+
               if (-1 == (param0.b(16711935) ^ -1)) {
-                stackOut_2_0 = this;
-                stackOut_2_1 = 0;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
+                stackIn_3_0 = this;
+                stackIn_3_1 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = this;
-                stackOut_1_1 = 1;
-                stackIn_3_0 = stackOut_1_0;
-                stackIn_3_1 = stackOut_1_1;
+                stackIn_3_0 = this;
+                stackIn_3_1 = 1;
                 break L1;
               }
             }
@@ -101,7 +79,7 @@ final class ft extends bw {
             if (param1 == -26011) {
               break L0;
             } else {
-              discarded$2 = ft.a(-71, (byte) 7);
+              ft.a(-71, (byte) 7);
               return;
             }
           }
@@ -109,27 +87,19 @@ final class ft extends bw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("ft.D(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("ft.D(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -145,21 +115,15 @@ final class ft extends bw {
     final static int a(int param0, byte param1) {
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
         if (param1 <= -127) {
           param0 = param0 & 8191;
           if (4096 > param0) {
             L0: {
               if (2048 <= param0) {
-                stackOut_9_0 = -ed.field_b[-2048 + param0];
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = -ed.field_b[-2048 + param0];
                 break L0;
               } else {
-                stackOut_8_0 = ed.field_b[2048 - param0];
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = ed.field_b[2048 - param0];
                 break L0;
               }
             }
@@ -167,12 +131,10 @@ final class ft extends bw {
           } else {
             L1: {
               if (param0 < 6144) {
-                stackOut_5_0 = -ed.field_b[6144 + -param0];
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = -ed.field_b[6144 + -param0];
                 break L1;
               } else {
-                stackOut_4_0 = ed.field_b[param0 - 6144];
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = ed.field_b[param0 - 6144];
                 break L1;
               }
             }

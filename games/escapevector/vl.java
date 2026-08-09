@@ -18,10 +18,8 @@ final class vl {
     }
 
     final int b(int param0) {
-        int var2 = 0;
+        int var2;
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         L0: {
           L1: {
             var2 = -117 % ((param0 - 60) / 52);
@@ -29,16 +27,14 @@ final class vl {
               break L1;
             } else {
               if (this.field_b.length != 0) {
-                stackOut_4_0 = this.field_b[-1 + this.field_b.length];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = this.field_b[-1 + this.field_b.length];
                 break L0;
               } else {
                 break L1;
               }
             }
           }
-          stackOut_3_0 = 0;
-          stackIn_5_0 = stackOut_3_0;
+          stackIn_5_0 = 0;
           break L0;
         }
         return stackIn_5_0;
@@ -52,8 +48,11 @@ final class vl {
     }
 
     final static void b(int param0, int param1) {
-        RuntimeException var2 = null;
+        int stackIn_4_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         ed[] var3 = null;
         ed[] var4 = null;
         int var5 = 0;
@@ -62,22 +61,15 @@ final class vl {
         ed[] var8 = null;
         ed var9 = null;
         int var10 = 0;
-        int stackIn_4_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         var10 = EscapeVector.field_A;
         try {
           L0: {
             L1: {
               if (param1 != 4) {
-                stackOut_3_0 = 0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = 1;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = 1;
                 break L1;
               }
             }
@@ -193,39 +185,21 @@ final class vl {
     }
 
     final int a(byte param0, int param1) {
-        int discarded$2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        var4 = EscapeVector.field_A;
-        if (this.field_b == null) {
-          return 0;
-        } else {
-          if (0 != this.field_b.length) {
-            L0: {
-              var3 = 1;
-              if (param0 == 52) {
-                break L0;
-              } else {
-                discarded$2 = this.a((byte) -102, -12);
-                break L0;
-              }
-            }
-            L1: while (true) {
-              if (this.field_b.length <= var3) {
-                return this.field_b.length - 1;
-              } else {
-                if (this.field_b[var3] + this.field_b[-1 + var3] >> 1601182817 <= param1) {
-                  var3++;
-                  continue L1;
-                } else {
-                  return -1 + var3;
-                }
-              }
-            }
-          } else {
+        int var4 = EscapeVector.field_A;
+        if (this.field_b == null || 0 == this.field_b.length) {
             return 0;
-          }
         }
+        int var3 = 1;
+        if (param0 != 52) {
+            this.a((byte) -102, -12);
+        }
+        while (this.field_b.length > var3) {
+            if (this.field_b[var3] + this.field_b[-1 + var3] >> 1601182817 > param1) {
+                return -1 + var3;
+            }
+            var3++;
+        }
+        return this.field_b.length - 1;
     }
 
     vl(int param0, int param1, int param2) {

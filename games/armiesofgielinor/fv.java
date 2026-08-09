@@ -19,18 +19,16 @@ final class fv implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(int param0, int param1, java.awt.Frame param2, int param3, int param4, boolean param5) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        com.ms.awt.WComponentPeer var7 = null;
-        int var8 = 0;
+        com.ms.awt.WComponentPeer var7;
+        int var8;
         if (param5) {
           return;
         } else {
           param2.setVisible(true);
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
-          discarded$2 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$3 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param2), 17);
           this.field_c.setDisplayMode(param4, param0, param3, param1, 0);
           param2.setBounds(0, 0, param4, param0);

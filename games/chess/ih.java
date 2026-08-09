@@ -123,18 +123,14 @@ final class ih extends bf {
         int stackIn_4_0 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
         try {
           L0: {
             if (!param0) {
-              stackOut_3_0 = Integer.parseInt(this.field_R.field_v);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = Integer.parseInt(this.field_R.field_v);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = -32;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = -32;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -163,7 +159,7 @@ final class ih extends bf {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
+        int var6;
         super.a(param0, 34, param2, param3, param4);
         var6 = -130 + param3 >> -1117338143;
         if (this.field_X) {
@@ -183,12 +179,10 @@ final class ih extends bf {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         if (param0 >= 75) {
           try {
             L0: {
-              stackOut_2_0 = Integer.parseInt(this.field_W.field_v);
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = Integer.parseInt(this.field_W.field_v);
               break L0;
             }
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -242,18 +236,14 @@ final class ih extends bf {
         int stackIn_4_0 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
         try {
           L0: {
             if (param0 == -1) {
-              stackOut_3_0 = -1 + Integer.parseInt(this.field_P.field_v);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = -1 + Integer.parseInt(this.field_P.field_v);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = -6;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = -6;
               decompiledRegionSelector0 = 0;
               break L0;
             }

@@ -12,11 +12,11 @@ final class fl {
     final wf a(int param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        wf var4 = null;
-        wf var5 = null;
-        wf var8 = null;
+        int var2;
+        int var3;
+        wf var4;
+        wf var5;
+        wf var8;
         var3 = Transmogrify.field_A ? 1 : 0;
         if (-1 > (this.field_f ^ -1)) {
           if (this.field_a == this.field_e[this.field_f - 1]) {
@@ -72,14 +72,11 @@ final class fl {
     }
 
     final wf a(long param0, int param1) {
-        wf var4 = null;
-        wf var5 = null;
-        int var6 = 0;
-        wf var7 = null;
-        int stackIn_3_0 = 0;
+        wf var4;
+        wf var5;
+        int var6;
+        wf var7;
         int stackIn_7_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_6_0 = 0;
         var6 = Transmogrify.field_A ? 1 : 0;
         var4 = this.field_e[(int)((long)(-1 + this.field_d) & param0)];
         this.field_b = var4.field_b;
@@ -89,13 +86,12 @@ final class fl {
               if (this.field_b == var4) {
                 break L2;
               } else {
-                stackOut_2_0 = ((this.field_b.field_c ^ -1L) < (param0 ^ -1L) ? -1 : ((this.field_b.field_c ^ -1L) == (param0 ^ -1L) ? 0 : 1));
-                stackIn_7_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_7_0 = ((this.field_b.field_c ^ -1L) < (param0 ^ -1L) ? -1 : ((this.field_b.field_c ^ -1L) == (param0 ^ -1L) ? 0 : 1));
+
                 if (var6 != 0) {
                   break L1;
                 } else {
-                  if (stackIn_3_0 != 0) {
+                  if (stackIn_7_0 != 0) {
                     this.field_b = this.field_b.field_b;
                     if (var6 == 0) {
                       continue L0;
@@ -111,8 +107,7 @@ final class fl {
               }
             }
             this.field_b = null;
-            stackOut_6_0 = param1;
-            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_0 = param1;
             break L1;
           }
           if (stackIn_7_0 == 0) {
@@ -126,11 +121,10 @@ final class fl {
     }
 
     final wf b(int param0) {
-        nd discarded$2 = null;
-        ag var3 = null;
+        ag var3;
         if (param0 != 1000) {
           var3 = (ag) null;
-          discarded$2 = fl.a((ag) null, 122, -2);
+          fl.a((ag) null, 122, -2);
           this.field_f = 0;
           return this.a(71);
         } else {
@@ -160,23 +154,12 @@ final class fl {
     final static nd a(ag param0, int param1, int param2) {
         RuntimeException var3 = null;
         nd stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nd stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -187,35 +170,26 @@ final class fl {
                 break L1;
               }
             }
-            stackOut_2_0 = new nd(param0, param2 * qh.field_p / 1000);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new nd(param0, param2 * qh.field_p / 1000);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("fl.C(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("fl.C(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -225,32 +199,27 @@ final class fl {
     }
 
     fl(int param0) {
-        wf dupTemp$2 = null;
-        int var2 = 0;
+        wf dupTemp$0 = null;
         wf var3 = null;
-        int var4 = 0;
-        var4 = Transmogrify.field_A ? 1 : 0;
+        int var4 = Transmogrify.field_A ? 1 : 0;
         this.field_f = 0;
         this.field_e = new wf[param0];
         this.field_d = param0;
-        var2 = 0;
-        L0: while (true) {
-          if (param0 > var2) {
-            dupTemp$2 = new wf();
-            var3 = dupTemp$2;
-            this.field_e[var2] = dupTemp$2;
+        int var2 = 0;
+        do {
+            if (param0 <= var2) {
+                return;
+            }
+            dupTemp$0 = new wf();
+            var3 = dupTemp$0;
+            this.field_e[var2] = dupTemp$0;
             var3.field_b = var3;
             var3.field_f = var3;
             var2++;
-            if (var4 == 0) {
-              continue L0;
-            } else {
-              return;
+            if (var4 != 0) {
+                return;
             }
-          } else {
-            return;
-          }
-        }
+        } while (var4 == 0);
     }
 
     static {

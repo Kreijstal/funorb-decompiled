@@ -9,12 +9,6 @@ final class ona extends sna {
     static String field_xb;
 
     final static rga a(String param0, int param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         rga stackIn_4_0 = null;
         rga stackIn_7_0 = null;
         rga stackIn_13_0 = null;
@@ -22,8 +16,6 @@ final class ona extends sna {
         rga stackIn_27_0 = null;
         rga stackIn_42_0 = null;
         rga stackIn_46_0 = null;
-        RuntimeException stackIn_51_0 = null;
-        StringBuilder stackIn_51_1 = null;
         RuntimeException stackIn_52_0 = null;
         StringBuilder stackIn_52_1 = null;
         RuntimeException stackIn_53_0 = null;
@@ -31,37 +23,25 @@ final class ona extends sna {
         String stackIn_53_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        rga stackOut_3_0 = null;
-        rga stackOut_12_0 = null;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        rga stackOut_26_0 = null;
-        rga stackOut_45_0 = null;
-        rga stackOut_41_0 = null;
-        rga stackOut_6_0 = null;
-        RuntimeException stackOut_50_0 = null;
-        StringBuilder stackOut_50_1 = null;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        String stackOut_52_2 = null;
-        RuntimeException stackOut_51_0 = null;
-        StringBuilder stackOut_51_1 = null;
-        String stackOut_51_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
         var6 = BachelorFridge.field_y;
         try {
           L0: {
             var2_int = param0.length();
             if (var2_int == 0) {
-              stackOut_3_0 = uc.field_j;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = uc.field_j;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (var2_int <= 64) {
                 if (param0.charAt(0) == 34) {
                   if (param0.charAt(var2_int + -1) != 34) {
-                    stackOut_12_0 = cha.field_m;
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = cha.field_m;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
@@ -74,12 +54,10 @@ final class ona extends sna {
                           if (var5 == 92) {
                             L3: {
                               if (var3 != 0) {
-                                stackOut_21_0 = 0;
-                                stackIn_22_0 = stackOut_21_0;
+                                stackIn_22_0 = 0;
                                 break L3;
                               } else {
-                                stackOut_20_0 = 1;
-                                stackIn_22_0 = stackOut_20_0;
+                                stackIn_22_0 = 1;
                                 break L3;
                               }
                             }
@@ -91,8 +69,7 @@ final class ona extends sna {
                                 break L4;
                               } else {
                                 if (var3 == 0) {
-                                  stackOut_26_0 = cha.field_m;
-                                  stackIn_27_0 = stackOut_26_0;
+                                  stackIn_27_0 = cha.field_m;
                                   decompiledRegionSelector0 = 3;
                                   break L0;
                                 } else {
@@ -131,8 +108,7 @@ final class ona extends sna {
                             var3 = 0;
                             break L7;
                           } else {
-                            stackOut_45_0 = cha.field_m;
-                            stackIn_46_0 = stackOut_45_0;
+                            stackIn_46_0 = cha.field_m;
                             decompiledRegionSelector0 = 5;
                             break L0;
                           }
@@ -153,8 +129,7 @@ final class ona extends sna {
                               }
                             }
                           }
-                          stackOut_41_0 = cha.field_m;
-                          stackIn_42_0 = stackOut_41_0;
+                          stackIn_42_0 = cha.field_m;
                           decompiledRegionSelector0 = 4;
                           break L0;
                         }
@@ -167,8 +142,7 @@ final class ona extends sna {
                   }
                 }
               } else {
-                stackOut_6_0 = rm.field_c;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = rm.field_c;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -178,27 +152,19 @@ final class ona extends sna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_50_0 = (RuntimeException) (var2);
-            stackOut_50_1 = new StringBuilder().append("ona.B(");
-            stackIn_52_0 = stackOut_50_0;
-            stackIn_52_1 = stackOut_50_1;
-            stackIn_51_0 = stackOut_50_0;
-            stackIn_51_1 = stackOut_50_1;
+            stackIn_52_0 = (RuntimeException) (var2);
+
+            stackIn_52_1 = new StringBuilder().append("ona.B(");
+
             if (param0 == null) {
-              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
-              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
-              stackOut_52_2 = "null";
-              stackIn_53_0 = stackOut_52_0;
-              stackIn_53_1 = stackOut_52_1;
-              stackIn_53_2 = stackOut_52_2;
+              stackIn_53_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
+              stackIn_53_2 = "null";
               break L9;
             } else {
-              stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
-              stackOut_51_1 = (StringBuilder) ((Object) stackIn_51_1);
-              stackOut_51_2 = "{...}";
-              stackIn_53_0 = stackOut_51_0;
-              stackIn_53_1 = stackOut_51_1;
-              stackIn_53_2 = stackOut_51_2;
+              stackIn_53_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
+              stackIn_53_2 = "{...}";
               break L9;
             }
           }

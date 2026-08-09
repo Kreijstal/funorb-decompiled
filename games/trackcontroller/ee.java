@@ -14,7 +14,7 @@ final class ee implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = TrackController.field_F ? 1 : 0;
         if (this.field_g == this.field_a.field_c[this.field_b - 1]) {
           L0: while (true) {
@@ -61,18 +61,18 @@ final class ee implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        int var2 = 0;
-        Object var3 = null;
-        fc var3_ref = null;
-        fc var4 = null;
+        int fieldTemp$1 = 0;
+        int var2;
+        Object var3;
+        fc var3_ref;
+        fc var4;
         var2 = TrackController.field_F ? 1 : 0;
         if (this.field_g == this.field_a.field_c[-1 + this.field_b]) {
           L0: while (true) {
             if (this.field_b < this.field_a.field_a) {
-              fieldTemp$2 = this.field_b;
+              fieldTemp$1 = this.field_b;
               this.field_b = this.field_b + 1;
-              var3_ref = this.field_a.field_c[fieldTemp$2].field_h;
+              var3_ref = this.field_a.field_c[fieldTemp$1].field_h;
               if (var3_ref == this.field_a.field_c[-1 + this.field_b]) {
                 continue L0;
               } else {
@@ -116,7 +116,7 @@ final class ee implements Iterator {
     }
 
     public static void a(int param0) {
-        be var2 = null;
+        be var2;
         if (param0 != 31399) {
           var2 = (be) null;
           ee.a((java.math.BigInteger) null, (be) null, (java.math.BigInteger) null, -9, (be) null);

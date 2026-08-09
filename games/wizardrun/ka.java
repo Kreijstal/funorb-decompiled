@@ -10,24 +10,13 @@ final class ka extends uh {
     private String field_j;
 
     final static void a(java.awt.Canvas param0, int param1) {
-        String discarded$2 = null;
         RuntimeException var2 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             L1: {
@@ -43,7 +32,7 @@ final class ka extends uh {
             if (param1 == 8053) {
               break L0;
             } else {
-              discarded$2 = ka.a(false, -94, false, true);
+              ka.a(false, -94, false, true);
               return;
             }
           }
@@ -51,27 +40,19 @@ final class ka extends uh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("ka.D(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("ka.D(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -80,7 +61,7 @@ final class ka extends uh {
     }
 
     final static String a(boolean param0, int param1, boolean param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         var4 = 0;
         if (!param0) {
           L0: {
@@ -149,9 +130,8 @@ final class ka extends uh {
     }
 
     public static void b(int param0) {
-        String discarded$2 = null;
         if (param0 > -24) {
-          discarded$2 = ka.a(false, 106, false, false);
+          ka.a(false, 106, false, false);
           field_h = null;
           field_l = null;
           field_g = null;
@@ -165,9 +145,8 @@ final class ka extends uh {
     }
 
     final sd a(boolean param0) {
-        sd discarded$0 = null;
         if (!param0) {
-            discarded$0 = this.a(true);
+            this.a(true);
             return pc.field_v;
         }
         return pc.field_v;

@@ -7,9 +7,8 @@ final class ol extends de {
     static int field_q;
 
     final void c(byte param0) {
-        boolean discarded$0 = false;
         if (param0 >= -13) {
-            discarded$0 = ol.b(false);
+            ol.b(false);
         }
     }
 
@@ -42,7 +41,6 @@ final class ol extends de {
     }
 
     final static void e(int param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -52,8 +50,7 @@ final class ol extends de {
         int stackIn_7_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
+        RuntimeException var1 = null;
         try {
           L0: {
             am.field_b = new int[4];
@@ -72,12 +69,10 @@ final class ol extends de {
                   L2: {
                     var2 = var1_int * 4 / am.field_i.length;
                     if (-4 != (var2 ^ -1)) {
-                      stackOut_6_0 = var2 - -1;
-                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_7_0 = var2 - -1;
                       break L2;
                     } else {
-                      stackOut_5_0 = 0;
-                      stackIn_7_0 = stackOut_5_0;
+                      stackIn_7_0 = 0;
                       break L2;
                     }
                   }
@@ -122,8 +117,6 @@ final class ol extends de {
 
     final static boolean b(boolean param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0) {
             break L0;
@@ -140,14 +133,12 @@ final class ol extends de {
               if (Pixelate.field_G != uk.field_s) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;

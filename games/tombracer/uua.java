@@ -13,11 +13,10 @@ final class uua {
 
     final void a(int param0, int param1, boolean param2, boolean param3, int param4, int param5) {
         param2 = param2 & this.field_b.i(7085);
-        if (param0 > 34) {
-          L0: {
-            if (param2) {
-              break L0;
-            } else {
+        if (param0 <= 34) {
+          uua.a((byte) -63);
+          if (!param2) {
+            L0: {
               L1: {
                 if (param5 == 4) {
                   break L1;
@@ -51,7 +50,26 @@ final class uua {
                       }
                       L4: {
                         if (param5 == this.field_e) {
-                          break L4;
+                          if (0 != this.field_e) {
+                            this.field_c[2147483647 & this.field_e].b(param3, 100);
+                            if (this.field_f == param4) {
+                              if (param1 != this.field_g) {
+                                this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
+                                this.field_f = param4;
+                                this.field_g = param1;
+                                return;
+                              } else {
+                                return;
+                              }
+                            } else {
+                              this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
+                              this.field_f = param4;
+                              this.field_g = param1;
+                              return;
+                            }
+                          } else {
+                            break L4;
+                          }
                         } else {
                           L5: {
                             if (-1 != (this.field_e ^ -1)) {
@@ -74,33 +92,10 @@ final class uua {
                           this.field_e = param5;
                           this.field_g = param1;
                           this.field_f = param4;
-                          if (TombRacer.field_G) {
-                            break L4;
-                          } else {
-                            return;
-                          }
+                          break L4;
                         }
                       }
-                      if (0 != this.field_e) {
-                        this.field_c[2147483647 & this.field_e].b(param3, 100);
-                        if (this.field_f == param4) {
-                          if (param1 != this.field_g) {
-                            this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
-                            this.field_f = param4;
-                            this.field_g = param1;
-                            return;
-                          } else {
-                            return;
-                          }
-                        } else {
-                          this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
-                          this.field_f = param4;
-                          this.field_g = param1;
-                          return;
-                        }
-                      } else {
-                        return;
-                      }
+                      return;
                     }
                   }
                 }
@@ -116,58 +111,68 @@ final class uua {
               param5 = 2;
               break L0;
             }
-          }
-          L8: {
-            if (param5 == 0) {
-              break L8;
-            } else {
-              if (param3) {
-                param5 = param5 | -2147483648;
+            L8: {
+              if (param5 == 0) {
                 break L8;
               } else {
-                L9: {
+                if (param3) {
+                  param5 = param5 | -2147483648;
+                  break L8;
+                } else {
                   if (param5 == this.field_e) {
-                    break L9;
+                    if (0 != this.field_e) {
+                      this.field_c[2147483647 & this.field_e].b(param3, 100);
+                      if (this.field_f == param4) {
+                        if (param1 != this.field_g) {
+                          this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
+                          this.field_f = param4;
+                          this.field_g = param1;
+                          return;
+                        } else {
+                          return;
+                        }
+                      } else {
+                        this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
+                        this.field_f = param4;
+                        this.field_g = param1;
+                        return;
+                      }
+                    } else {
+                      return;
+                    }
                   } else {
-                    L10: {
+                    L9: {
                       if (-1 != (this.field_e ^ -1)) {
                         this.field_c[this.field_e & 2147483647].a(false);
-                        break L10;
+                        break L9;
                       } else {
-                        break L10;
+                        break L9;
                       }
                     }
-                    L11: {
+                    L10: {
                       if (0 != param5) {
                         this.field_c[2147483647 & param5].a(param3, 123);
                         this.field_c[2147483647 & param5].b(param3, 110);
                         this.field_c[param5 & 2147483647].a(param4, param1, 126);
-                        break L11;
+                        break L10;
                       } else {
-                        break L11;
+                        break L10;
                       }
                     }
                     this.field_e = param5;
                     this.field_g = param1;
                     this.field_f = param4;
-                    if (TombRacer.field_G) {
-                      break L9;
-                    } else {
-                      return;
-                    }
+                    return;
                   }
                 }
-                if (0 != this.field_e) {
-                  this.field_c[2147483647 & this.field_e].b(param3, 100);
-                  if (this.field_f == param4) {
-                    if (param1 != this.field_g) {
-                      this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
-                      this.field_f = param4;
-                      this.field_g = param1;
-                      return;
-                    } else {
-                      return;
-                    }
+              }
+            }
+            if (param5 == this.field_e) {
+              if (0 != this.field_e) {
+                this.field_c[2147483647 & this.field_e].b(param3, 100);
+                if (this.field_f == param4) {
+                  if (param1 == this.field_g) {
+                    return;
                   } else {
                     this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
                     this.field_f = param4;
@@ -175,48 +180,315 @@ final class uua {
                     return;
                   }
                 } else {
+                  this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
+                  this.field_f = param4;
+                  this.field_g = param1;
                   return;
                 }
+              } else {
+                return;
               }
-            }
-          }
-          L12: {
-            if (param5 == this.field_e) {
-              break L12;
             } else {
-              L13: {
+              L11: {
                 if (-1 != (this.field_e ^ -1)) {
                   this.field_c[this.field_e & 2147483647].a(false);
-                  break L13;
+                  break L11;
                 } else {
-                  break L13;
+                  break L11;
                 }
               }
-              L14: {
+              L12: {
                 if (0 != param5) {
                   this.field_c[2147483647 & param5].a(param3, 123);
                   this.field_c[2147483647 & param5].b(param3, 110);
                   this.field_c[param5 & 2147483647].a(param4, param1, 126);
-                  break L14;
+                  break L12;
                 } else {
-                  break L14;
+                  break L12;
                 }
               }
               this.field_e = param5;
               this.field_g = param1;
               this.field_f = param4;
-              if (TombRacer.field_G) {
-                break L12;
+              return;
+            }
+          } else {
+            L13: {
+              if (param5 == 0) {
+                break L13;
               } else {
+                if (param3) {
+                  param5 = param5 | -2147483648;
+                  break L13;
+                } else {
+                  L14: {
+                    if (param5 == this.field_e) {
+                      if (0 != this.field_e) {
+                        L15: {
+                          this.field_c[2147483647 & this.field_e].b(param3, 100);
+                          if (this.field_f != param4) {
+                            break L15;
+                          } else {
+                            if (param1 == this.field_g) {
+                              break L14;
+                            } else {
+                              break L15;
+                            }
+                          }
+                        }
+                        this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
+                        this.field_f = param4;
+                        this.field_g = param1;
+                        break L14;
+                      } else {
+                        break L14;
+                      }
+                    } else {
+                      L16: {
+                        if (-1 != (this.field_e ^ -1)) {
+                          this.field_c[this.field_e & 2147483647].a(false);
+                          break L16;
+                        } else {
+                          break L16;
+                        }
+                      }
+                      L17: {
+                        if (0 != param5) {
+                          this.field_c[2147483647 & param5].a(param3, 123);
+                          this.field_c[2147483647 & param5].b(param3, 110);
+                          this.field_c[param5 & 2147483647].a(param4, param1, 126);
+                          break L17;
+                        } else {
+                          break L17;
+                        }
+                      }
+                      this.field_e = param5;
+                      this.field_g = param1;
+                      this.field_f = param4;
+                      break L14;
+                    }
+                  }
+                  return;
+                }
+              }
+            }
+            if (param5 == this.field_e) {
+              if (0 != this.field_e) {
+                this.field_c[2147483647 & this.field_e].b(param3, 100);
+                if (this.field_f == param4) {
+                  if (param1 != this.field_g) {
+                    this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
+                    this.field_f = param4;
+                    this.field_g = param1;
+                    return;
+                  } else {
+                    return;
+                  }
+                } else {
+                  this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
+                  this.field_f = param4;
+                  this.field_g = param1;
+                  return;
+                }
+              } else {
+                return;
+              }
+            } else {
+              L18: {
+                if (-1 != (this.field_e ^ -1)) {
+                  this.field_c[this.field_e & 2147483647].a(false);
+                  break L18;
+                } else {
+                  break L18;
+                }
+              }
+              L19: {
+                if (0 != param5) {
+                  this.field_c[2147483647 & param5].a(param3, 123);
+                  this.field_c[2147483647 & param5].b(param3, 110);
+                  this.field_c[param5 & 2147483647].a(param4, param1, 126);
+                  break L19;
+                } else {
+                  break L19;
+                }
+              }
+              this.field_e = param5;
+              this.field_g = param1;
+              this.field_f = param4;
+              return;
+            }
+          }
+        } else {
+          L20: {
+            if (param2) {
+              break L20;
+            } else {
+              L21: {
+                if (param5 == 4) {
+                  break L21;
+                } else {
+                  if ((param5 ^ -1) == -9) {
+                    break L21;
+                  } else {
+                    if (9 != param5) {
+                      break L20;
+                    } else {
+                      L22: {
+                        if (-5 != (param5 ^ -1)) {
+                          break L22;
+                        } else {
+                          param1 = param4;
+                          break L22;
+                        }
+                      }
+                      L23: {
+                        param5 = 2;
+                        if (param5 == 0) {
+                          break L23;
+                        } else {
+                          if (param3) {
+                            param5 = param5 | -2147483648;
+                            break L23;
+                          } else {
+                            break L23;
+                          }
+                        }
+                      }
+                      L24: {
+                        if (param5 == this.field_e) {
+                          if (0 != this.field_e) {
+                            L25: {
+                              this.field_c[2147483647 & this.field_e].b(param3, 100);
+                              if (this.field_f != param4) {
+                                break L25;
+                              } else {
+                                if (param1 == this.field_g) {
+                                  break L24;
+                                } else {
+                                  break L25;
+                                }
+                              }
+                            }
+                            this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
+                            this.field_f = param4;
+                            this.field_g = param1;
+                            break L24;
+                          } else {
+                            break L24;
+                          }
+                        } else {
+                          L26: {
+                            if (-1 != (this.field_e ^ -1)) {
+                              this.field_c[this.field_e & 2147483647].a(false);
+                              break L26;
+                            } else {
+                              break L26;
+                            }
+                          }
+                          L27: {
+                            if (0 != param5) {
+                              this.field_c[2147483647 & param5].a(param3, 123);
+                              this.field_c[2147483647 & param5].b(param3, 110);
+                              this.field_c[param5 & 2147483647].a(param4, param1, 126);
+                              break L27;
+                            } else {
+                              break L27;
+                            }
+                          }
+                          this.field_e = param5;
+                          this.field_g = param1;
+                          this.field_f = param4;
+                          break L24;
+                        }
+                      }
+                      return;
+                    }
+                  }
+                }
+              }
+              L28: {
+                if (-5 != (param5 ^ -1)) {
+                  break L28;
+                } else {
+                  param1 = param4;
+                  break L28;
+                }
+              }
+              param5 = 2;
+              break L20;
+            }
+          }
+          L29: {
+            if (param5 == 0) {
+              break L29;
+            } else {
+              if (param3) {
+                param5 = param5 | -2147483648;
+                break L29;
+              } else {
+                L30: {
+                  if (param5 == this.field_e) {
+                    if (0 != this.field_e) {
+                      L31: {
+                        this.field_c[2147483647 & this.field_e].b(param3, 100);
+                        if (this.field_f != param4) {
+                          break L31;
+                        } else {
+                          if (param1 == this.field_g) {
+                            break L30;
+                          } else {
+                            break L31;
+                          }
+                        }
+                      }
+                      this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
+                      this.field_f = param4;
+                      this.field_g = param1;
+                      break L30;
+                    } else {
+                      break L30;
+                    }
+                  } else {
+                    L32: {
+                      if (-1 != (this.field_e ^ -1)) {
+                        this.field_c[this.field_e & 2147483647].a(false);
+                        break L32;
+                      } else {
+                        break L32;
+                      }
+                    }
+                    L33: {
+                      if (0 != param5) {
+                        this.field_c[2147483647 & param5].a(param3, 123);
+                        this.field_c[2147483647 & param5].b(param3, 110);
+                        this.field_c[param5 & 2147483647].a(param4, param1, 126);
+                        break L33;
+                      } else {
+                        break L33;
+                      }
+                    }
+                    this.field_e = param5;
+                    this.field_g = param1;
+                    this.field_f = param4;
+                    break L30;
+                  }
+                }
                 return;
               }
             }
           }
-          if (0 != this.field_e) {
-            this.field_c[2147483647 & this.field_e].b(param3, 100);
-            if (this.field_f == param4) {
-              if (param1 == this.field_g) {
-                return;
+          if (param5 == this.field_e) {
+            if (0 != this.field_e) {
+              this.field_c[2147483647 & this.field_e].b(param3, 100);
+              if (this.field_f == param4) {
+                if (param1 != this.field_g) {
+                  this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
+                  this.field_f = param4;
+                  this.field_g = param1;
+                  return;
+                } else {
+                  return;
+                }
               } else {
                 this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
                 this.field_f = param4;
@@ -224,112 +496,30 @@ final class uua {
                 return;
               }
             } else {
-              this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
-              this.field_f = param4;
-              this.field_g = param1;
               return;
             }
           } else {
-            return;
-          }
-        } else {
-          L15: {
-            uua.a((byte) -63);
-            if (param2) {
-              break L15;
-            } else {
-              L16: {
-                if (param5 == 4) {
-                  break L16;
-                } else {
-                  if ((param5 ^ -1) == -9) {
-                    break L16;
-                  } else {
-                    if (9 != param5) {
-                      break L15;
-                    } else {
-                      break L16;
-                    }
-                  }
-                }
-              }
-              L17: {
-                if (-5 != (param5 ^ -1)) {
-                  break L17;
-                } else {
-                  param1 = param4;
-                  break L17;
-                }
-              }
-              param5 = 2;
-              break L15;
-            }
-          }
-          L18: {
-            if (param5 == 0) {
-              break L18;
-            } else {
-              if (param3) {
-                param5 = param5 | -2147483648;
-                break L18;
+            L34: {
+              if (-1 != (this.field_e ^ -1)) {
+                this.field_c[this.field_e & 2147483647].a(false);
+                break L34;
               } else {
-                break L18;
+                break L34;
               }
             }
-          }
-          L19: {
-            if (param5 == this.field_e) {
-              break L19;
-            } else {
-              L20: {
-                if (-1 != (this.field_e ^ -1)) {
-                  this.field_c[this.field_e & 2147483647].a(false);
-                  break L20;
-                } else {
-                  break L20;
-                }
-              }
-              L21: {
-                if (0 != param5) {
-                  this.field_c[2147483647 & param5].a(param3, 123);
-                  this.field_c[2147483647 & param5].b(param3, 110);
-                  this.field_c[param5 & 2147483647].a(param4, param1, 126);
-                  break L21;
-                } else {
-                  break L21;
-                }
-              }
-              this.field_e = param5;
-              this.field_g = param1;
-              this.field_f = param4;
-              if (TombRacer.field_G) {
-                break L19;
+            L35: {
+              if (0 != param5) {
+                this.field_c[2147483647 & param5].a(param3, 123);
+                this.field_c[2147483647 & param5].b(param3, 110);
+                this.field_c[param5 & 2147483647].a(param4, param1, 126);
+                break L35;
               } else {
-                return;
+                break L35;
               }
             }
-          }
-          if (0 != this.field_e) {
-            this.field_c[2147483647 & this.field_e].b(param3, 100);
-            if (this.field_f != param4) {
-              this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
-              this.field_f = param4;
-              this.field_g = param1;
-              return;
-            } else {
-              L22: {
-                if (param1 == this.field_g) {
-                  break L22;
-                } else {
-                  this.field_c[2147483647 & this.field_e].a(param4, param1, 127);
-                  this.field_f = param4;
-                  this.field_g = param1;
-                  break L22;
-                }
-              }
-              return;
-            }
-          } else {
+            this.field_e = param5;
+            this.field_g = param1;
+            this.field_f = param4;
             return;
           }
         }
@@ -345,12 +535,9 @@ final class uua {
     }
 
     final boolean a(int param0, int param1, kl param2) {
-        boolean discarded$2 = false;
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -358,32 +545,20 @@ final class uua {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (this.field_e != 0) {
               this.field_c[this.field_e & 2147483647].a(param0, 32221, param2);
               if (param1 == 9) {
-                stackOut_5_0 = 1;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                discarded$2 = this.a(57, 53);
+                this.a(57, 53);
                 return true;
               }
             } else {
-              stackOut_1_0 = 0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -392,27 +567,19 @@ final class uua {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var4);
-            stackOut_7_1 = new StringBuilder().append("uua.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("uua.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L1;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L1;
             }
           }
@@ -432,23 +599,13 @@ final class uua {
 
     uua(cka param0) {
         ku dupTemp$1 = null;
-        RuntimeException var2 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var2 = null;
         this.field_e = 0;
         this.field_g = 0;
         this.field_f = 0;
@@ -490,27 +647,19 @@ final class uua {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("uua.<init>(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("uua.<init>(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }

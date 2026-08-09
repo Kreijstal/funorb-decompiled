@@ -23,18 +23,18 @@ final class ik implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        int var2 = 0;
-        Object var3 = null;
-        o var3_ref = null;
-        o var4 = null;
+        int fieldTemp$1 = 0;
+        int var2;
+        Object var3;
+        o var3_ref;
+        o var4;
         var2 = Chess.field_G;
         if (this.field_j.field_e[this.field_h + -1] == this.field_c) {
           L0: while (true) {
             if (this.field_j.field_f > this.field_h) {
-              fieldTemp$2 = this.field_h;
+              fieldTemp$1 = this.field_h;
               this.field_h = this.field_h + 1;
-              var3_ref = this.field_j.field_e[fieldTemp$2].field_h;
+              var3_ref = this.field_j.field_e[fieldTemp$1].field_h;
               if (var3_ref == this.field_j.field_e[-1 + this.field_h]) {
                 continue L0;
               } else {
@@ -75,7 +75,7 @@ final class ik implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = Chess.field_G;
         if (this.field_j.field_e[-1 + this.field_h] == this.field_c) {
           L0: while (true) {

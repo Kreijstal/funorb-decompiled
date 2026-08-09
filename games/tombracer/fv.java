@@ -25,15 +25,15 @@ final class fv {
     }
 
     final void a(int param0) {
-        int var2 = 0;
-        ha var3_ref_ha = null;
-        int var3 = 0;
-        int var4_int = 0;
-        nh var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        nh[] var8 = null;
+        int var2;
+        ha var3_ref_ha;
+        int var3;
+        int var4_int;
+        nh var4;
+        int var5;
+        int var6;
+        int var7;
+        nh[] var8;
         L0: {
           var2 = this.field_h.b((byte) -75).a(param0 ^ 28, this.field_f);
           var3_ref_ha = tga.field_a;

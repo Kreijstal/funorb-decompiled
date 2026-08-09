@@ -7,8 +7,8 @@ final class fa {
     static boolean field_a;
 
     final synchronized static long a(int param0) {
-        long var1 = 0L;
-        int var3 = 0;
+        long var1;
+        int var3;
         var1 = System.currentTimeMillis();
         if (var1 < jl.field_g) {
           tb.field_n = tb.field_n + (-var1 + jl.field_g);
@@ -25,6 +25,7 @@ final class fa {
     final static Boolean b(int param0) {
         Boolean var1 = null;
         if (param0 != 1) {
+            fa.a(-89);
             var1 = lk.field_p;
             lk.field_p = null;
             return var1;

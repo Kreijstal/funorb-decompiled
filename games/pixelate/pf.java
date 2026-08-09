@@ -50,12 +50,6 @@ final class pf {
     }
 
     final void a(byte param0) {
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
         L0: {
           this.field_g = 0;
           this.field_k = 0;
@@ -89,7 +83,7 @@ final class pf {
                   this.field_c = false;
                   if (this.field_h > this.field_j) {
                     if (param0 != -48) {
-                      discarded$6 = this.c(64);
+                      this.c(64);
                       return;
                     } else {
                       return;
@@ -97,7 +91,7 @@ final class pf {
                   } else {
                     this.field_j = 0;
                     if (param0 != -48) {
-                      discarded$7 = this.c(64);
+                      this.c(64);
                       return;
                     } else {
                       return;
@@ -105,7 +99,7 @@ final class pf {
                   }
                 } else {
                   if (param0 != -48) {
-                    discarded$8 = this.c(64);
+                    this.c(64);
                     return;
                   } else {
                     return;
@@ -116,7 +110,7 @@ final class pf {
                   if (param0 == -48) {
                     break L3;
                   } else {
-                    discarded$9 = this.c(64);
+                    this.c(64);
                     break L3;
                   }
                 }
@@ -147,7 +141,7 @@ final class pf {
               } else {
                 this.field_j = 0;
                 if (param0 != -48) {
-                  discarded$10 = this.c(64);
+                  this.c(64);
                   return;
                 } else {
                   return;
@@ -157,7 +151,7 @@ final class pf {
           }
         }
         if (param0 != -48) {
-          discarded$11 = this.c(64);
+          this.c(64);
           return;
         } else {
           return;
@@ -176,9 +170,8 @@ final class pf {
     }
 
     final void a(int param0, int param1) {
-        boolean discarded$1 = false;
         if (param0 < 46) {
-          discarded$1 = this.a(6);
+          this.a(6);
           this.field_k = 0;
           this.field_g = 0;
           if (0 == this.field_i) {
@@ -719,20 +712,14 @@ final class pf {
     final boolean c(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 35) {
           L0: {
             pf.b(116, 24);
             if (0 == this.field_i) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -740,12 +727,10 @@ final class pf {
         } else {
           L1: {
             if (0 == this.field_i) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -779,12 +764,6 @@ final class pf {
     }
 
     final static jk[] a(pc param0, byte param1) {
-        int discarded$12 = 0;
-        int discarded$13 = 0;
-        int discarded$14 = 0;
-        int discarded$15 = 0;
-        int discarded$16 = 0;
-        int discarded$17 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -796,8 +775,6 @@ final class pf {
         Object stackIn_3_0 = null;
         jk[] stackIn_6_0 = null;
         jk[] stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -805,17 +782,6 @@ final class pf {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        jk[] stackOut_12_0 = null;
-        jk[] stackOut_5_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -827,8 +793,7 @@ final class pf {
               if (param1 == 77) {
                 L1: while (true) {
                   if (var3 <= var5) {
-                    stackOut_12_0 = (jk[]) (var4);
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = (jk[]) (var4);
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
@@ -839,13 +804,13 @@ final class pf {
                         break L2;
                       } else {
                         var6_ref_jk = new jk();
-                        discarded$12 = param0.c(24, (byte) -34);
-                        discarded$13 = param0.c(24, (byte) -34);
+                        param0.c(24, (byte) -34);
+                        param0.c(24, (byte) -34);
                         var6_ref_jk.field_b = param0.c(24, (byte) -34);
-                        discarded$14 = param0.c(9, (byte) -34);
-                        discarded$15 = param0.c(12, (byte) -34);
-                        discarded$16 = param0.c(12, (byte) -34);
-                        discarded$17 = param0.c(12, (byte) -34);
+                        param0.c(9, (byte) -34);
+                        param0.c(12, (byte) -34);
+                        param0.c(12, (byte) -34);
+                        param0.c(12, (byte) -34);
                         var4[var5] = var6_ref_jk;
                         break L2;
                       }
@@ -855,14 +820,12 @@ final class pf {
                   }
                 }
               } else {
-                stackOut_5_0 = (jk[]) null;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (jk[]) null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -871,27 +834,19 @@ final class pf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2);
-            stackOut_14_1 = new StringBuilder().append("pf.O(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2);
+
+            stackIn_16_1 = new StringBuilder().append("pf.O(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L3;
             }
           }
@@ -1209,8 +1164,8 @@ final class pf {
     }
 
     final static byte a(byte param0, char param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Pixelate.field_H ? 1 : 0;
         if (param0 != -118) {
           field_l = (String) null;
@@ -1833,20 +1788,14 @@ final class pf {
     final boolean c(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 102) {
           L0: {
             this.a(-122, 90, 40);
             if (97 != this.field_g) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -1854,12 +1803,10 @@ final class pf {
         } else {
           L1: {
             if (97 != this.field_g) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -1868,23 +1815,13 @@ final class pf {
     }
 
     final static void a(java.awt.Canvas param0, int param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -1911,27 +1848,19 @@ final class pf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("pf.K(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("pf.K(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -1940,32 +1869,21 @@ final class pf {
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
-        Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         int stackIn_5_1 = 0;
-        Object stackOut_2_0 = null;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
         this.field_i = 0;
         if (param2 == 17068) {
           L0: {
-            stackOut_2_0 = this;
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_4_0 = this;
+
             if (!param0) {
-              stackOut_4_0 = this;
-              stackOut_4_1 = 0;
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_0 = this;
+              stackIn_5_1 = 0;
               break L0;
             } else {
-              stackOut_3_0 = this;
-              stackOut_3_1 = 1;
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_0 = this;
+              stackIn_5_1 = 1;
               break L0;
             }
           }
@@ -1991,20 +1909,14 @@ final class pf {
     final boolean d(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 > -75) {
           L0: {
             this.field_k = 25;
             if (102 != this.field_g) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -2012,12 +1924,10 @@ final class pf {
         } else {
           L1: {
             if (102 != this.field_g) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -2026,10 +1936,7 @@ final class pf {
     }
 
     final boolean a(int param0) {
-        int discarded$6 = 0;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 >= 4) {
           if (this.field_k == 0) {
             if (this.field_g != 84) {
@@ -2045,19 +1952,17 @@ final class pf {
             return true;
           }
         } else {
-          discarded$6 = pf.a(true);
+          pf.a(true);
           if (this.field_k == 0) {
             if (this.field_g == 84) {
               return true;
             } else {
               L0: {
                 if (this.field_g != 83) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }

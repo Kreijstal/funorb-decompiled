@@ -24,22 +24,28 @@ final class msa extends rqa {
     }
 
     final static String a(CharSequence param0, int param1) {
-        String discarded$14 = null;
-        StringBuilder discarded$15 = null;
-        StringBuilder discarded$16 = null;
-        StringBuilder discarded$17 = null;
-        StringBuilder discarded$18 = null;
-        StringBuilder discarded$19 = null;
-        StringBuilder discarded$20 = null;
-        StringBuilder discarded$21 = null;
-        StringBuilder discarded$22 = null;
-        StringBuilder discarded$23 = null;
-        StringBuilder discarded$24 = null;
-        StringBuilder discarded$25 = null;
-        StringBuilder discarded$26 = null;
-        StringBuilder discarded$27 = null;
-        RuntimeException var2 = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
+        StringBuilder discarded$8 = null;
+        StringBuilder discarded$9 = null;
+        StringBuilder discarded$10 = null;
+        StringBuilder discarded$11 = null;
+        StringBuilder discarded$12 = null;
+        String stackIn_36_0 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_40_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         StringBuilder var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -47,24 +53,6 @@ final class msa extends rqa {
         int var7 = 0;
         int var8 = 0;
         CharSequence var9 = null;
-        String stackIn_36_0 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_40_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_35_0 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
         var8 = VoidHunters.field_G;
         try {
           L0: {
@@ -73,7 +61,7 @@ final class msa extends rqa {
                 break L1;
               } else {
                 var9 = (CharSequence) null;
-                discarded$14 = msa.a((CharSequence) null, -104);
+                msa.a((CharSequence) null, -104);
                 break L1;
               }
             }
@@ -82,8 +70,7 @@ final class msa extends rqa {
             var4 = 0;
             L2: while (true) {
               if (var2_int <= var4) {
-                stackOut_35_0 = var3.toString();
-                stackIn_36_0 = stackOut_35_0;
+                stackIn_36_0 = var3.toString();
                 break L0;
               } else {
                 L3: {
@@ -93,7 +80,7 @@ final class msa extends rqa {
                       break L4;
                     } else {
                       if (var5 <= 122) {
-                        discarded$15 = var3.append((char) var5);
+                        discarded$0 = var3.append((char) var5);
                         break L3;
                       } else {
                         break L4;
@@ -105,7 +92,7 @@ final class msa extends rqa {
                       break L5;
                     } else {
                       if (var5 <= 90) {
-                        discarded$16 = var3.append((char) var5);
+                        discarded$1 = var3.append((char) var5);
                         break L3;
                       } else {
                         break L5;
@@ -117,7 +104,7 @@ final class msa extends rqa {
                       break L6;
                     } else {
                       if (57 >= var5) {
-                        discarded$17 = var3.append((char) var5);
+                        discarded$2 = var3.append((char) var5);
                         break L3;
                       } else {
                         break L6;
@@ -125,45 +112,45 @@ final class msa extends rqa {
                     }
                   }
                   if (var5 == 46) {
-                    discarded$18 = var3.append((char) var5);
+                    discarded$3 = var3.append((char) var5);
                     break L3;
                   } else {
                     if (var5 == 45) {
-                      discarded$19 = var3.append((char) var5);
+                      discarded$4 = var3.append((char) var5);
                       break L3;
                     } else {
                       if (var5 == 42) {
-                        discarded$20 = var3.append((char) var5);
+                        discarded$5 = var3.append((char) var5);
                         break L3;
                       } else {
                         if (var5 != 95) {
                           if (var5 != 32) {
                             L7: {
                               var6 = aea.a(param1 ^ -90, (char) var5);
-                              discarded$21 = var3.append('%');
+                              discarded$6 = var3.append('%');
                               var7 = (var6 & 244) >> -581017148;
                               if ((var7 ^ -1) > -11) {
-                                discarded$22 = var3.append((char)(48 - -var7));
+                                discarded$7 = var3.append((char)(48 - -var7));
                                 break L7;
                               } else {
-                                discarded$23 = var3.append((char)(55 - -var7));
+                                discarded$8 = var3.append((char)(55 - -var7));
                                 break L7;
                               }
                             }
                             var7 = var6 & 15;
                             if (var7 < 10) {
-                              discarded$24 = var3.append((char)(48 - -var7));
+                              discarded$9 = var3.append((char)(48 - -var7));
                               break L3;
                             } else {
-                              discarded$25 = var3.append((char)(55 - -var7));
+                              discarded$10 = var3.append((char)(55 - -var7));
                               break L3;
                             }
                           } else {
-                            discarded$26 = var3.append('+');
+                            discarded$11 = var3.append('+');
                             break L3;
                           }
                         } else {
-                          discarded$27 = var3.append((char) var5);
+                          discarded$12 = var3.append((char) var5);
                           break L3;
                         }
                       }
@@ -179,27 +166,19 @@ final class msa extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) (var2);
-            stackOut_37_1 = new StringBuilder().append("msa.B(");
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            stackIn_39_0 = (RuntimeException) (var2);
+
+            stackIn_39_1 = new StringBuilder().append("msa.B(");
+
             if (param0 == null) {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "null";
               break L8;
             } else {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "{...}";
               break L8;
             }
           }
@@ -211,23 +190,12 @@ final class msa extends rqa {
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
         nc stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -238,35 +206,26 @@ final class msa extends rqa {
                 break L1;
               }
             }
-            stackOut_2_0 = new nc(frb.a(56, 108));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new nc(frb.a(56, 108));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("msa.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("msa.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }

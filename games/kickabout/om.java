@@ -11,7 +11,7 @@ final class om extends hd {
     static String field_zb;
 
     private final void a(int param0, byte param1) {
-        int var3 = 0;
+        int var3;
         if (param1 != 14) {
           this.a(-123, (byte) 90);
           this.field_Cb.a(true, this.field_Cb.g((byte) -2), 0, 0, this.field_mb);
@@ -67,18 +67,18 @@ final class om extends hd {
     }
 
     final static void a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        k var3_ref_k = null;
         int var3 = 0;
+        k var3_ref_k = null;
         mp var4 = null;
         int var4_int = 0;
         Object var5 = null;
         int var6 = 0;
         ml var8 = null;
         byte[] var12 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var6 = Kickabout.field_G;
         try {
           L0: {

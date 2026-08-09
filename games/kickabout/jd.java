@@ -10,6 +10,10 @@ abstract class jd extends lg implements sv {
     private ga field_f;
 
     final static tv a(byte param0, boolean param1) {
+        int stackIn_3_0 = 0;
+        int stackIn_9_0 = 0;
+        int[] stackIn_22_0 = null;
+        Throwable decompiledCaughtException = null;
         ml var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -18,28 +22,16 @@ abstract class jd extends lg implements sv {
         int var7 = 0;
         ml var8 = null;
         bg var9 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
-        int[] stackIn_22_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        Object stackOut_21_0 = null;
-        int[] stackOut_20_0 = null;
         L0: {
           var7 = Kickabout.field_G;
           var8 = un.field_e;
           var2 = var8;
           var3 = var8.h((byte) -112);
           if (-1 == (128 & var3 ^ -1)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -60,12 +52,10 @@ abstract class jd extends lg implements sv {
         }
         L2: {
           if (-2 != (var8.h((byte) -116) ^ -1)) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = 1;
             break L2;
           }
         }
@@ -114,12 +104,10 @@ abstract class jd extends lg implements sv {
                 var9 = lm.field_j.a(-39, var5);
                 ee.field_a = var9.g((byte) -98);
                 if (hr.field_f.equals(ow.field_e)) {
-                  stackOut_21_0 = null;
-                  stackIn_22_0 = (int[]) ((Object) stackOut_21_0);
+                  stackIn_22_0 = null;
                   break L6;
                 } else {
-                  stackOut_20_0 = var9.field_n;
-                  stackIn_22_0 = stackOut_20_0;
+                  stackIn_22_0 = var9.field_n;
                   break L6;
                 }
               }
@@ -153,9 +141,6 @@ abstract class jd extends lg implements sv {
     public final boolean a(byte param0) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == -28) {
           if (this.field_f.field_q != null) {
             if (this.field_f.field_q.length() == 0) {
@@ -164,8 +149,7 @@ abstract class jd extends lg implements sv {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
@@ -175,12 +159,10 @@ abstract class jd extends lg implements sv {
           } else {
             L0: {
               if (this.field_f.field_q.length() != 0) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }
@@ -190,9 +172,8 @@ abstract class jd extends lg implements sv {
     }
 
     final rv a(boolean param0) {
-        rv discarded$2 = null;
         if (param0) {
-          discarded$2 = this.a(true);
+          this.a(true);
           return this.a(this.field_f.field_q, -5);
         } else {
           return this.a(this.field_f.field_q, -5);
@@ -254,7 +235,6 @@ abstract class jd extends lg implements sv {
 
     final static boolean f(int param0) {
         int stackIn_5_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == -1) {
           if (!la.a(100)) {
             if ((eq.field_d ^ -1) >= -1) {
@@ -263,8 +243,7 @@ abstract class jd extends lg implements sv {
               return false;
             }
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             return stackIn_5_0 != 0;
           }
         } else {

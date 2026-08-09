@@ -14,11 +14,10 @@ final class sb extends ora implements eb {
     }
 
     public final void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, byte param7) {
-        boolean discarded$1 = false;
-        jagdx.PixelBuffer var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        jagdx.PixelBuffer var9;
+        int var10;
+        int var11;
+        int var12;
         L0: {
           if (param7 < -78) {
             break L0;
@@ -65,7 +64,7 @@ final class sb extends ora implements eb {
                       }
                     }
                   }
-                  discarded$1 = this.field_h.UnlockRect(0);
+                  this.field_h.UnlockRect(0);
                   break L2;
                 }
               }
@@ -81,103 +80,58 @@ final class sb extends ora implements eb {
     }
 
     sb(nla param0, kb param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
-        super(param0, param1, mj.field_f, false, param2 * param3);
-        boolean discarded$1 = false;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        jagdx.PixelBuffer var13 = null;
-        Object stackIn_1_0 = null;
-        nla stackIn_1_1 = null;
-        kb stackIn_1_2 = null;
-        mj stackIn_1_3 = null;
-        Object stackIn_2_0 = null;
-        nla stackIn_2_1 = null;
-        kb stackIn_2_2 = null;
-        mj stackIn_2_3 = null;
-        Object stackIn_3_0 = null;
-        nla stackIn_3_1 = null;
-        kb stackIn_3_2 = null;
-        mj stackIn_3_3 = null;
+        super(null, null, null, false, param2 * param3);
+        Object stackIn_3_0;
+        nla stackIn_3_1;
+        kb stackIn_3_2;
+        mj stackIn_3_3;
         Object stackIn_4_0 = null;
         nla stackIn_4_1 = null;
         kb stackIn_4_2 = null;
         mj stackIn_4_3 = null;
         int stackIn_4_4 = 0;
-        Object stackOut_0_0 = null;
-        nla stackOut_0_1 = null;
-        kb stackOut_0_2 = null;
-        mj stackOut_0_3 = null;
-        Object stackOut_1_0 = null;
-        nla stackOut_1_1 = null;
-        kb stackOut_1_2 = null;
-        mj stackOut_1_3 = null;
-        Object stackOut_2_0 = null;
-        nla stackOut_2_1 = null;
-        kb stackOut_2_2 = null;
-        mj stackOut_2_3 = null;
-        int stackOut_2_4 = 0;
-        Object stackOut_3_0 = null;
-        nla stackOut_3_1 = null;
-        kb stackOut_3_2 = null;
-        mj stackOut_3_3 = null;
-        int stackOut_3_4 = 0;
+        int var10;
+        int var11;
+        int var12;
+        jagdx.PixelBuffer var13;
         L0: {
           L1: {
-            stackOut_0_0 = this;
-            stackOut_0_1 = (nla) (param0);
-            stackOut_0_2 = (kb) (param1);
-            stackOut_0_3 = mj.field_f;
-            stackIn_3_0 = stackOut_0_0;
-            stackIn_3_1 = stackOut_0_1;
-            stackIn_3_2 = stackOut_0_2;
-            stackIn_3_3 = stackOut_0_3;
-            stackIn_1_0 = stackOut_0_0;
-            stackIn_1_1 = stackOut_0_1;
-            stackIn_1_2 = stackOut_0_2;
-            stackIn_1_3 = stackOut_0_3;
+            stackIn_3_0 = this;
+
+            stackIn_3_1 = (nla) (param0);
+
+            stackIn_3_2 = (kb) (param1);
+
+            stackIn_3_3 = mj.field_f;
+
             if (!param4) {
               break L1;
             } else {
-              stackOut_1_0 = this;
-              stackOut_1_1 = (nla) ((Object) stackIn_1_1);
-              stackOut_1_2 = (kb) ((Object) stackIn_1_2);
-              stackOut_1_3 = (mj) ((Object) stackIn_1_3);
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_3_2 = stackOut_1_2;
-              stackIn_3_3 = stackOut_1_3;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              stackIn_2_2 = stackOut_1_2;
-              stackIn_2_3 = stackOut_1_3;
+              stackIn_3_0 = this;
+
+              stackIn_3_1 = (nla) ((Object) stackIn_3_1);
+
+              stackIn_3_2 = (kb) ((Object) stackIn_3_2);
+
+              stackIn_3_3 = (mj) ((Object) stackIn_3_3);
+
               if (!param0.field_Zc) {
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = (nla) ((Object) stackIn_2_1);
-                stackOut_2_2 = (kb) ((Object) stackIn_2_2);
-                stackOut_2_3 = (mj) ((Object) stackIn_2_3);
-                stackOut_2_4 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                stackIn_4_3 = stackOut_2_3;
-                stackIn_4_4 = stackOut_2_4;
+                stackIn_4_0 = this;
+                stackIn_4_1 = (nla) ((Object) stackIn_3_1);
+                stackIn_4_2 = (kb) ((Object) stackIn_3_2);
+                stackIn_4_3 = (mj) ((Object) stackIn_3_3);
+                stackIn_4_4 = 1;
                 break L0;
               }
             }
           }
-          stackOut_3_0 = this;
-          stackOut_3_1 = (nla) ((Object) stackIn_3_1);
-          stackOut_3_2 = (kb) ((Object) stackIn_3_2);
-          stackOut_3_3 = (mj) ((Object) stackIn_3_3);
-          stackOut_3_4 = 0;
-          stackIn_4_0 = stackOut_3_0;
-          stackIn_4_1 = stackOut_3_1;
-          stackIn_4_2 = stackOut_3_2;
-          stackIn_4_3 = stackOut_3_3;
-          stackIn_4_4 = stackOut_3_4;
+          stackIn_4_0 = this;
+          stackIn_4_1 = (nla) ((Object) stackIn_3_1);
+          stackIn_4_2 = (kb) ((Object) stackIn_3_2);
+          stackIn_4_3 = (mj) ((Object) stackIn_3_3);
+          stackIn_4_4 = 0;
           break L0;
         }
         L2: {
@@ -241,7 +195,7 @@ final class sb extends ora implements eb {
                 }
               }
             }
-            discarded$1 = this.field_h.UnlockRect(0);
+            this.field_h.UnlockRect(0);
             break L4;
           }
         }
@@ -304,103 +258,58 @@ final class sb extends ora implements eb {
     }
 
     sb(nla param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
-        super(param0, qua.field_d, mj.field_f, false, param2 * param1);
-        boolean discarded$1 = false;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        jagdx.PixelBuffer var12 = null;
-        Object stackIn_1_0 = null;
-        nla stackIn_1_1 = null;
-        kb stackIn_1_2 = null;
-        mj stackIn_1_3 = null;
-        Object stackIn_2_0 = null;
-        nla stackIn_2_1 = null;
-        kb stackIn_2_2 = null;
-        mj stackIn_2_3 = null;
-        Object stackIn_3_0 = null;
-        nla stackIn_3_1 = null;
-        kb stackIn_3_2 = null;
-        mj stackIn_3_3 = null;
+        super(null, null, null, false, param2 * param1);
+        Object stackIn_3_0;
+        nla stackIn_3_1;
+        kb stackIn_3_2;
+        mj stackIn_3_3;
         Object stackIn_4_0 = null;
         nla stackIn_4_1 = null;
         kb stackIn_4_2 = null;
         mj stackIn_4_3 = null;
         int stackIn_4_4 = 0;
-        Object stackOut_0_0 = null;
-        nla stackOut_0_1 = null;
-        kb stackOut_0_2 = null;
-        mj stackOut_0_3 = null;
-        Object stackOut_1_0 = null;
-        nla stackOut_1_1 = null;
-        kb stackOut_1_2 = null;
-        mj stackOut_1_3 = null;
-        Object stackOut_2_0 = null;
-        nla stackOut_2_1 = null;
-        kb stackOut_2_2 = null;
-        mj stackOut_2_3 = null;
-        int stackOut_2_4 = 0;
-        Object stackOut_3_0 = null;
-        nla stackOut_3_1 = null;
-        kb stackOut_3_2 = null;
-        mj stackOut_3_3 = null;
-        int stackOut_3_4 = 0;
+        int var9;
+        int var10;
+        int var11;
+        jagdx.PixelBuffer var12;
         L0: {
           L1: {
-            stackOut_0_0 = this;
-            stackOut_0_1 = (nla) (param0);
-            stackOut_0_2 = qua.field_d;
-            stackOut_0_3 = mj.field_f;
-            stackIn_3_0 = stackOut_0_0;
-            stackIn_3_1 = stackOut_0_1;
-            stackIn_3_2 = stackOut_0_2;
-            stackIn_3_3 = stackOut_0_3;
-            stackIn_1_0 = stackOut_0_0;
-            stackIn_1_1 = stackOut_0_1;
-            stackIn_1_2 = stackOut_0_2;
-            stackIn_1_3 = stackOut_0_3;
+            stackIn_3_0 = this;
+
+            stackIn_3_1 = (nla) (param0);
+
+            stackIn_3_2 = qua.field_d;
+
+            stackIn_3_3 = mj.field_f;
+
             if (!param3) {
               break L1;
             } else {
-              stackOut_1_0 = this;
-              stackOut_1_1 = (nla) ((Object) stackIn_1_1);
-              stackOut_1_2 = (kb) ((Object) stackIn_1_2);
-              stackOut_1_3 = (mj) ((Object) stackIn_1_3);
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_3_2 = stackOut_1_2;
-              stackIn_3_3 = stackOut_1_3;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              stackIn_2_2 = stackOut_1_2;
-              stackIn_2_3 = stackOut_1_3;
+              stackIn_3_0 = this;
+
+              stackIn_3_1 = (nla) ((Object) stackIn_3_1);
+
+              stackIn_3_2 = (kb) ((Object) stackIn_3_2);
+
+              stackIn_3_3 = (mj) ((Object) stackIn_3_3);
+
               if (!param0.field_Zc) {
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = (nla) ((Object) stackIn_2_1);
-                stackOut_2_2 = (kb) ((Object) stackIn_2_2);
-                stackOut_2_3 = (mj) ((Object) stackIn_2_3);
-                stackOut_2_4 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                stackIn_4_3 = stackOut_2_3;
-                stackIn_4_4 = stackOut_2_4;
+                stackIn_4_0 = this;
+                stackIn_4_1 = (nla) ((Object) stackIn_3_1);
+                stackIn_4_2 = (kb) ((Object) stackIn_3_2);
+                stackIn_4_3 = (mj) ((Object) stackIn_3_3);
+                stackIn_4_4 = 1;
                 break L0;
               }
             }
           }
-          stackOut_3_0 = this;
-          stackOut_3_1 = (nla) ((Object) stackIn_3_1);
-          stackOut_3_2 = (kb) ((Object) stackIn_3_2);
-          stackOut_3_3 = (mj) ((Object) stackIn_3_3);
-          stackOut_3_4 = 0;
-          stackIn_4_0 = stackOut_3_0;
-          stackIn_4_1 = stackOut_3_1;
-          stackIn_4_2 = stackOut_3_2;
-          stackIn_4_3 = stackOut_3_3;
-          stackIn_4_4 = stackOut_3_4;
+          stackIn_4_0 = this;
+          stackIn_4_1 = (nla) ((Object) stackIn_3_1);
+          stackIn_4_2 = (kb) ((Object) stackIn_3_2);
+          stackIn_4_3 = (mj) ((Object) stackIn_3_3);
+          stackIn_4_4 = 0;
           break L0;
         }
         L2: {
@@ -462,16 +371,15 @@ final class sb extends ora implements eb {
                 }
               }
             }
-            discarded$1 = this.field_h.UnlockRect(0);
+            this.field_h.UnlockRect(0);
             break L4;
           }
         }
     }
 
     public final float a(float param0, int param1) {
-        int discarded$0 = 0;
         if (param1 != -1080) {
-            discarded$0 = this.a((byte) -126);
+            this.a((byte) -126);
         }
         return param0 / (float)this.field_i;
     }

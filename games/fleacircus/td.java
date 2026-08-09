@@ -44,8 +44,8 @@ final class td implements Runnable {
     }
 
     final static void b(int param0) {
-        int var2 = 0;
-        ql var3 = null;
+        int var2;
+        ql var3;
         L0: {
           L1: {
             L2: {
@@ -207,24 +207,23 @@ final class td implements Runnable {
 
     public final void run() {
         try {
-            IOException var1 = null;
-            Exception var1_ref = null;
-            int var1_int = 0;
-            int var2 = 0;
-            IOException var3 = null;
-            Object var3_ref = null;
-            InterruptedException var4 = null;
-            Throwable var5 = null;
-            int var6 = 0;
-            String var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            int var1_int = 0;
+            IOException var1 = null;
+            Exception var1_ref = null;
+            int var2 = 0;
+            Object var3 = null;
+            IOException var3_ref = null;
+            InterruptedException var4 = null;
+            int var6 = 0;
+            String var7 = null;
             var6 = fleas.field_A ? 1 : 0;
             try {
               L0: {
                 L1: while (true) {
-                  var3_ref = this;
-                  synchronized (var3_ref) {
+                  var3 = this;
+                  synchronized (var3) {
                     L2: {
                       L3: {
                         if (this.field_e == this.field_b) {
@@ -326,7 +325,7 @@ final class td implements Runnable {
                       } catch (java.io.IOException decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         L15: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_a = true;
                           break L15;
                         }
@@ -347,7 +346,7 @@ final class td implements Runnable {
                       } catch (java.io.IOException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L18: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_a = true;
                           break L18;
                         }
@@ -378,10 +377,9 @@ final class td implements Runnable {
     final void h(int param0) {
         try {
             InterruptedException interruptedException = null;
-            Object var2 = null;
-            Throwable var3 = null;
             int var4 = 0;
             Throwable decompiledCaughtException = null;
+            Object var2 = null;
             var4 = fleas.field_A ? 1 : 0;
             if (!this.field_l) {
               var2 = this;
@@ -451,8 +449,6 @@ final class td implements Runnable {
 
     final static boolean d(int param0) {
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           if (param0 < -79) {
             break L0;
@@ -475,15 +471,13 @@ final class td implements Runnable {
               }
             }
             if (!qh.c((byte) 33)) {
-              stackOut_8_0 = 0;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = 0;
               break L1;
             } else {
               break L2;
             }
           }
-          stackOut_7_0 = 1;
-          stackIn_9_0 = stackOut_7_0;
+          stackIn_9_0 = 1;
           break L1;
         }
         return stackIn_9_0 != 0;
@@ -495,23 +489,13 @@ final class td implements Runnable {
 
     final static void a(byte param0, ni param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -541,27 +525,19 @@ final class td implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (var2);
-            stackOut_3_1 = new StringBuilder().append("td.M(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (var2);
+
+            stackIn_5_1 = new StringBuilder().append("td.M(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -574,13 +550,6 @@ final class td implements Runnable {
     }
 
     final void a(byte param0, int param1, int param2, byte[] param3) throws IOException {
-        RuntimeException var5 = null;
-        Object var5_ref = null;
-        int var6 = 0;
-        Throwable var7 = null;
-        int var8 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -588,14 +557,10 @@ final class td implements Runnable {
         String stackIn_27_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        Object var5 = null;
+        RuntimeException var5_ref = null;
+        int var6 = 0;
+        int var8 = 0;
         var8 = fleas.field_A ? 1 : 0;
         try {
           L0: {
@@ -610,37 +575,44 @@ final class td implements Runnable {
                       break L1;
                     }
                   }
-                  var5_ref = this;
-                  synchronized (var5_ref) {
+                  var5 = this;
+                  synchronized (var5) {
                     L2: {
                       var6 = 0;
                       L3: while (true) {
                         L4: {
-                          if (var6 >= param1) {
-                            L5: {
-                              if (null != this.field_q) {
-                                break L5;
-                              } else {
-                                this.field_q = this.field_p.a(4532, (Runnable) (this), 3);
-                                break L5;
-                              }
-                            }
-                            this.notifyAll();
-                            break L4;
-                          } else {
-                            this.field_h[this.field_b] = param3[param2 + var6];
-                            this.field_b = (1 + this.field_b) % this.field_r;
-                            if (var8 != 0) {
-                              break L4;
+                          L5: {
+                            if (var6 >= param1) {
+                              break L5;
                             } else {
-                              if ((-100 + this.field_r + this.field_e) % this.field_r != this.field_b) {
-                                var6++;
-                                continue L3;
+                              this.field_h[this.field_b] = param3[param2 + var6];
+                              this.field_b = (1 + this.field_b) % this.field_r;
+                              if (var8 != 0) {
+                                break L4;
                               } else {
-                                throw new IOException();
+                                if ((-100 + this.field_r + this.field_e) % this.field_r != this.field_b) {
+                                  var6++;
+                                  if (var8 == 0) {
+                                    continue L3;
+                                  } else {
+                                    break L5;
+                                  }
+                                } else {
+                                  throw new IOException();
+                                }
                               }
                             }
                           }
+                          L6: {
+                            if (null != this.field_q) {
+                              break L6;
+                            } else {
+                              this.field_q = this.field_p.a(4532, (Runnable) (this), 3);
+                              break L6;
+                            }
+                          }
+                          this.notifyAll();
+                          break L4;
                         }
                         break L2;
                       }
@@ -663,30 +635,22 @@ final class td implements Runnable {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var5 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var5);
-            stackOut_24_1 = new StringBuilder().append("td.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+          L7: {
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_26_0 = (RuntimeException) (var5_ref);
+
+            stackIn_26_1 = new StringBuilder().append("td.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
-              break L6;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
+              break L7;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
-              break L6;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
+              break L7;
             }
           }
           throw pf.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
@@ -716,8 +680,6 @@ final class td implements Runnable {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -725,14 +687,6 @@ final class td implements Runnable {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         var6 = fleas.field_A ? 1 : 0;
         try {
           L0: {
@@ -781,27 +735,19 @@ final class td implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             runtimeException = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (runtimeException);
-            stackOut_12_1 = new StringBuilder().append("td.L(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (runtimeException);
+
+            stackIn_14_1 = new StringBuilder().append("td.L(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
@@ -820,87 +766,183 @@ final class td implements Runnable {
 
     final static void a(int param0, int param1) {
         ql var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         fi var4 = null;
         ql stackIn_4_0 = null;
         Object stackIn_6_0 = null;
         int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        ql stackOut_3_0 = null;
-        lh stackOut_5_0 = null;
-        var3 = fleas.field_A ? 1 : 0;
-        try {
-          L0: {
-            var2 = (ql) ((Object) sd.field_d.c((byte) 47));
-            L1: while (true) {
-              L2: {
-                L3: {
-                  if (var2 == null) {
-                    break L3;
-                  } else {
-                    qb.a(param0, (byte) 90, var2);
-                    stackOut_3_0 = (ql) ((Object) sd.field_d.b((byte) -105));
-                    stackIn_6_0 = stackOut_3_0;
-                    stackIn_4_0 = stackOut_3_0;
-                    if (var3 != 0) {
-                      break L2;
-                    } else {
-                      var2 = stackIn_4_0;
-                      if (var3 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
+        ql stackOut_3_0;
+        int statePc = 0;
+        Throwable caughtException = null;
+        RuntimeException var2_ref = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var3 = fleas.field_A ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    try {
+                        var2 = (ql) ((Object) sd.field_d.c((byte) 47));
+                        statePc = 2;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 13;
+                        continue stateLoop;
                     }
-                  }
                 }
-                stackOut_5_0 = lk.field_O.c((byte) 47);
-                stackIn_6_0 = stackOut_5_0;
-                break L2;
-              }
-              L4: {
-                var4 = (fi) ((Object) stackIn_6_0);
-                if (param1 == -1115925337) {
-                  break L4;
-                } else {
-                  td.g(-22);
-                  break L4;
-                }
-              }
-              L5: while (true) {
-                L6: {
-                  if (var4 == null) {
-                    break L6;
-                  } else {
-                    rd.a(param0, var4, (byte) -118);
-                    var4 = (fi) ((Object) lk.field_O.b((byte) -105));
-                    if (var3 != 0) {
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      if (var3 == 0) {
-                        continue L5;
-                      } else {
-                        break L6;
-                      }
+                case 2: {
+                    try {
+                        if (var2 == null) {
+                            statePc = 5;
+                        } else {
+                            statePc = 3;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 13;
+                        continue stateLoop;
                     }
-                  }
                 }
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
+                case 3: {
+                    try {
+                        qb.a(param0, (byte) 90, var2);
+                        stackOut_3_0 = (ql) ((Object) sd.field_d.b((byte) -105));
+                        stackIn_6_0 = stackOut_3_0;
+                        stackIn_4_0 = stackOut_3_0;
+                        if (var3 != 0) {
+                            statePc = 6;
+                        } else {
+                            statePc = 4;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        var2 = stackIn_4_0;
+                        if (var3 == 0) {
+                            statePc = 2;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        stackIn_6_0 = lk.field_O.c((byte) 47);
+                        statePc = 6;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        var4 = (fi) ((Object) stackIn_6_0);
+                        if (param1 == -1115925337) {
+                            statePc = 8;
+                        } else {
+                            statePc = 7;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        td.g(-22);
+                        statePc = 8;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        if (var4 == null) {
+                            statePc = 14;
+                        } else {
+                            statePc = 9;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 9: {
+                    try {
+                        rd.a(param0, var4, (byte) -118);
+                        var4 = (fi) ((Object) lk.field_O.b((byte) -105));
+                        if (var3 != 0) {
+                            statePc = 15;
+                        } else {
+                            statePc = 10;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_9) {
+                        caughtException = stateCaught_9;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    try {
+                        if (var3 == 0) {
+                            statePc = 8;
+                        } else {
+                            statePc = 11;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_10) {
+                        caughtException = stateCaught_10;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    try {
+                        statePc = 14;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_11) {
+                        caughtException = stateCaught_11;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 13: {
+                    var2_ref = (RuntimeException) ((Object) caughtException);
+                    throw pf.a((Throwable) ((Object) var2_ref), "td.C(" + param0 + ',' + param1 + ')');
+                }
+                case 14: {
+                    return;
+                }
+                case 15: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var2_ref), "td.C(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -932,19 +974,17 @@ final class td implements Runnable {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            long var2 = 0L;
-            long var4 = 0L;
-            long var6 = 0L;
-            long var8 = 0L;
-            long var10 = 0L;
-            long var12 = 0L;
-            int var14 = 0;
-            int var15 = 0;
             long stackIn_5_0 = 0L;
-            long stackOut_4_0 = 0L;
-            long stackOut_3_0 = 0L;
+            int var0;
+            int var1;
+            long var2;
+            long var4;
+            long var6;
+            long var8;
+            long var10;
+            long var12;
+            int var14;
+            int var15;
             field_f = new long[8][256];
             field_c = new long[11];
             var0 = 0;
@@ -967,12 +1007,10 @@ final class td implements Runnable {
                 L2: {
                   var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
                   if ((var0 & 1) == 0) {
-                    stackOut_4_0 = (long)(var1 >>> -717312504);
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = (long)(var1 >>> -717312504);
                     break L2;
                   } else {
-                    stackOut_3_0 = (long)(var1 & 255);
-                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_0 = (long)(var1 & 255);
                     break L2;
                   }
                 }

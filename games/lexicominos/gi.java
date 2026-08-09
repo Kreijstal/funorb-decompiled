@@ -12,79 +12,52 @@ final class gi {
     private static float[][] field_f;
 
     final int a(int param0, float param1) {
-        float var3 = 0.0f;
-        int var4 = 0;
         float var5 = 0.0f;
         float var6 = 0.0f;
         int var7 = 0;
-        L0: {
-          if (param0 != 0) {
-            break L0;
-          } else {
+        float[] dupTemp$0 = null;
+        float[] dupTemp$1 = null;
+        float[] dupTemp$2 = null;
+        float[] dupTemp$3 = null;
+        float var3 = 0.0f;
+        int var4 = 0;
+        if (param0 == 0) {
             var3 = (float)this.field_b[0] + (float)(this.field_b[1] - this.field_b[0]) * param1;
             var3 = var3 * 0.0030517578125f;
             field_h = (float)Math.pow(0.1, (double)(var3 / 20.0f));
             field_a = (int)(field_h * 65536.0f);
-            break L0;
-          }
         }
-        if (this.field_c[param0] != 0) {
-          var3 = this.b(param0, 0, param1);
-          field_f[param0][0] = -2.0f * var3 * (float)Math.cos((double)this.a(param0, 0, param1));
-          field_f[param0][1] = var3 * var3;
-          var4 = 1;
-          L1: while (true) {
-            if (var4 >= this.field_c[param0]) {
-              L2: {
-                if (param0 != 0) {
-                  break L2;
-                } else {
-                  var4 = 0;
-                  L3: while (true) {
-                    if (var4 >= this.field_c[0] * 2) {
-                      break L2;
-                    } else {
-                      field_f[0][var4] = field_f[0][var4] * field_h;
-                      var4++;
-                      continue L3;
-                    }
-                  }
-                }
-              }
-              var4 = 0;
-              L4: while (true) {
-                if (var4 >= this.field_c[param0] * 2) {
-                  return this.field_c[param0] * 2;
-                } else {
-                  field_g[param0][var4] = (int)(field_f[param0][var4] * 65536.0f);
-                  var4++;
-                  continue L4;
-                }
-              }
-            } else {
-              var3 = this.b(param0, var4, param1);
-              var5 = -2.0f * var3 * (float)Math.cos((double)this.a(param0, var4, param1));
-              var6 = var3 * var3;
-              field_f[param0][var4 * 2 + 1] = field_f[param0][var4 * 2 - 1] * var6;
-              field_f[param0][var4 * 2] = field_f[param0][var4 * 2 - 1] * var5 + field_f[param0][var4 * 2 - 2] * var6;
-              var7 = var4 * 2 - 1;
-              L5: while (true) {
-                if (var7 < 2) {
-                  field_f[param0][1] = field_f[param0][1] + (field_f[param0][0] * var5 + var6);
-                  field_f[param0][0] = field_f[param0][0] + var5;
-                  var4++;
-                  continue L1;
-                } else {
-                  field_f[param0][var7] = field_f[param0][var7] + (field_f[param0][var7 - 1] * var5 + field_f[param0][var7 - 2] * var6);
-                  var7--;
-                  continue L5;
-                }
-              }
+        if (this.field_c[param0] == 0) {
+            return 0;
+        }
+        var3 = this.b(param0, 0, param1);
+        field_f[param0][0] = -2.0f * var3 * (float)Math.cos((double)this.a(param0, 0, param1));
+        field_f[param0][1] = var3 * var3;
+        for (var4 = 1; var4 < this.field_c[param0]; var4++) {
+            var3 = this.b(param0, var4, param1);
+            var5 = -2.0f * var3 * (float)Math.cos((double)this.a(param0, var4, param1));
+            var6 = var3 * var3;
+            field_f[param0][var4 * 2 + 1] = field_f[param0][var4 * 2 - 1] * var6;
+            field_f[param0][var4 * 2] = field_f[param0][var4 * 2 - 1] * var5 + field_f[param0][var4 * 2 - 2] * var6;
+            for (var7 = var4 * 2 - 1; var7 >= 2; var7--) {
+                dupTemp$0 = field_f[param0];
+                dupTemp$0[var7] = dupTemp$0[var7] + (field_f[param0][var7 - 1] * var5 + field_f[param0][var7 - 2] * var6);
             }
-          }
-        } else {
-          return 0;
+            dupTemp$1 = field_f[param0];
+            dupTemp$1[1] = dupTemp$1[1] + (field_f[param0][0] * var5 + var6);
+            dupTemp$2 = field_f[param0];
+            dupTemp$2[0] = dupTemp$2[0] + var5;
         }
+        if (param0 == 0) {
+            for (var4 = 0; var4 < this.field_c[0] * 2; var4++) {
+                dupTemp$3 = field_f[0];
+                dupTemp$3[var4] = dupTemp$3[var4] * field_h;
+            }
+        }
+        for (var4 = 0; var4 < this.field_c[param0] * 2; var4++) {
+            field_g[param0][var4] = (int)(field_f[param0][var4] * 65536.0f);
+        }
+        return this.field_c[param0] * 2;
     }
 
     private final float a(int param0, int param1, float param2) {
@@ -99,12 +72,12 @@ final class gi {
     }
 
     final void a(wf param0, se param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int[] var11 = null;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int[] var11;
         L0: {
           var3 = param0.d(true);
           this.field_c[0] = var3 >> 4;

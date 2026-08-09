@@ -65,28 +65,19 @@ abstract class bb extends hn {
     private final int i(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 256) {
           L0: {
             this.field_C = (ln) null;
             if (this.field_D) {
               if (this.field_C.a(0) != this) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = 0;
                 break L0;
               } else {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 256;
                 break L0;
               }
             } else {
-              stackOut_8_0 = 0;
-              stackIn_12_0 = stackOut_8_0;
+              stackIn_12_0 = 0;
               break L0;
             }
           }
@@ -95,17 +86,14 @@ abstract class bb extends hn {
           L1: {
             if (this.field_D) {
               if (this.field_C.a(0) != this) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L1;
               } else {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L1;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L1;
             }
           }
@@ -114,20 +102,12 @@ abstract class bb extends hn {
     }
 
     boolean h(int param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_11_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_38_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int var2;
+        int var3;
         var2 = this.i(256);
         var3 = var2 - this.field_B;
         if (-1 <= (var3 ^ -1)) {
@@ -152,15 +132,13 @@ abstract class bb extends hn {
                     if (this.field_D) {
                       break L2;
                     } else {
-                      stackOut_36_0 = 1;
-                      stackIn_38_0 = stackOut_36_0;
+                      stackIn_38_0 = 1;
                       break L1;
                     }
                   }
                 }
               }
-              stackOut_37_0 = 0;
-              stackIn_38_0 = stackOut_37_0;
+              stackIn_38_0 = 0;
               break L1;
             }
             return stackIn_38_0 != 0;
@@ -176,15 +154,13 @@ abstract class bb extends hn {
                     if (this.field_D) {
                       break L4;
                     } else {
-                      stackOut_30_0 = 1;
-                      stackIn_32_0 = stackOut_30_0;
+                      stackIn_32_0 = 1;
                       break L3;
                     }
                   }
                 }
               }
-              stackOut_31_0 = 0;
-              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_0 = 0;
               break L3;
             }
             return stackIn_32_0 != 0;
@@ -207,12 +183,10 @@ abstract class bb extends hn {
               } else {
                 L6: {
                   if (this.field_D) {
-                    stackOut_19_0 = 0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_20_0 = 0;
                     break L6;
                   } else {
-                    stackOut_18_0 = 1;
-                    stackIn_20_0 = stackOut_18_0;
+                    stackIn_20_0 = 1;
                     break L6;
                   }
                 }
@@ -228,12 +202,10 @@ abstract class bb extends hn {
               } else {
                 L7: {
                   if (this.field_D) {
-                    stackOut_10_0 = 0;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = 0;
                     break L7;
                   } else {
-                    stackOut_9_0 = 1;
-                    stackIn_11_0 = stackOut_9_0;
+                    stackIn_11_0 = 1;
                     break L7;
                   }
                 }
@@ -247,10 +219,6 @@ abstract class bb extends hn {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
         if (this.field_B != 0) {
           if (this.field_B >= 256) {
             if (param0 != 0) {
@@ -265,7 +233,7 @@ abstract class bb extends hn {
               if (this.field_p <= ue.field_b.field_s) {
                 if (this.field_o <= ue.field_b.field_t) {
                   if (param1 > -7) {
-                    discarded$4 = this.a((byte) -26);
+                    this.a((byte) -26);
                     tm.a((byte) -109, ue.field_b);
                     ph.b();
                     this.b(0, 0, (byte) -127);
@@ -285,7 +253,7 @@ abstract class bb extends hn {
                 } else {
                   ue.field_b = new t(this.field_p, this.field_o);
                   if (param1 > -7) {
-                    discarded$5 = this.a((byte) -26);
+                    this.a((byte) -26);
                     tm.a((byte) -109, ue.field_b);
                     ph.b();
                     this.b(0, 0, (byte) -127);
@@ -306,7 +274,7 @@ abstract class bb extends hn {
               } else {
                 ue.field_b = new t(this.field_p, this.field_o);
                 if (param1 > -7) {
-                  discarded$6 = this.a((byte) -26);
+                  this.a((byte) -26);
                   tm.a((byte) -109, ue.field_b);
                   ph.b();
                   this.b(0, 0, (byte) -127);
@@ -327,7 +295,7 @@ abstract class bb extends hn {
             } else {
               ue.field_b = new t(this.field_p, this.field_o);
               if (param1 > -7) {
-                discarded$7 = this.a((byte) -26);
+                this.a((byte) -26);
                 tm.a((byte) -109, ue.field_b);
                 ph.b();
                 this.b(0, 0, (byte) -127);

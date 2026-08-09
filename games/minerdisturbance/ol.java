@@ -8,7 +8,7 @@ final class ol {
     static String field_d;
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1;
         if (param0 != -94) {
           L0: {
             field_d = (String) null;
@@ -55,14 +55,12 @@ final class ol {
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_14_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_10_0 = 0;
+        RuntimeException var3 = null;
         var4 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -78,13 +76,11 @@ final class ol {
             L2: while (true) {
               if ((param1 ^ -1) >= -2) {
                 if (param1 != 1) {
-                  stackOut_12_0 = var3_int;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_14_0 = var3_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_10_0 = var3_int * param0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_12_0 = var3_int * param0;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -109,14 +105,14 @@ final class ol {
           throw lj.a((Throwable) ((Object) var3), "ol.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_11_0;
+          return stackIn_12_0;
         } else {
-          return stackIn_13_0;
+          return stackIn_14_0;
         }
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         if (0 != param0) {
           if (0 >= param0) {
             L0: {

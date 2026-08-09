@@ -8,7 +8,7 @@ final class jd {
     static int field_d;
 
     final static qj a(boolean param0) {
-        String var1 = null;
+        String var1;
         if (param0) {
           L0: {
             jd.a(13);

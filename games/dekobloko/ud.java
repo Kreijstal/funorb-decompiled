@@ -9,13 +9,13 @@ final class ud extends ti {
     int field_s;
 
     final ud a(je param0) {
-        int dupTemp$2 = 0;
+        int dupTemp$1 = 0;
         this.field_o = param0.a(14, this.field_o);
         this.field_p = param0.a(false, this.field_p);
         if (this.field_q == this.field_s) {
-          dupTemp$2 = param0.b(this.field_q, 114);
-          this.field_s = dupTemp$2;
-          this.field_q = dupTemp$2;
+          dupTemp$1 = param0.b(this.field_q, 114);
+          this.field_s = dupTemp$1;
+          this.field_q = dupTemp$1;
           return (ud) (this);
         } else {
           L0: {

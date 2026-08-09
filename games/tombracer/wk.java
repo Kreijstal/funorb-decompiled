@@ -14,28 +14,28 @@ final class wk extends vg {
 
     final static void a(byte param0) {
         try {
-            Exception var1 = null;
-            java.lang.reflect.Method var1_ref = null;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
-            Long var3 = null;
-            Object[] var4 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
+            java.lang.reflect.Method var1 = null;
+            Exception var1_ref = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
+            Long var3 = null;
+            Object[] var4 = null;
             try {
               L0: {
                 if (param0 == -84) {
                   L1: {
-                    var1_ref = Runtime.class.getMethod("maxMemory", new Class[]{});
-                    if (var1_ref == null) {
+                    var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+                    if (var1 == null) {
                       break L1;
                     } else {
                       try {
                         L2: {
-                          var2_ref = Runtime.getRuntime();
+                          var2 = Runtime.getRuntime();
                           var4 = (Object[]) null;
-                          var3 = (Long) (var1_ref.invoke((Object) (var2_ref), (Object[]) null));
+                          var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
                           cba.field_d = 1 + (int)(var3.longValue() / 1048576L);
                           decompiledRegionSelector0 = 0;
                           break L2;
@@ -43,7 +43,7 @@ final class wk extends vg {
                       } catch (java.lang.Throwable decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
                         L3: {
-                          var2 = decompiledCaughtException;
+                          var2_ref = decompiledCaughtException;
                           decompiledRegionSelector0 = 1;
                           break L3;
                         }
@@ -65,7 +65,7 @@ final class wk extends vg {
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
-                var1 = (Exception) (Object) decompiledCaughtException;
+                var1_ref = (Exception) (Object) decompiledCaughtException;
                 decompiledRegionSelector1 = 1;
                 break L4;
               }
@@ -112,8 +112,8 @@ final class wk extends vg {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var4 = -param1 + this.field_g;
         if (param0 != 0) {
           return;

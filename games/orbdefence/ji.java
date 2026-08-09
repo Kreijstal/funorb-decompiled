@@ -8,8 +8,8 @@ final class ji {
     static volatile int field_c;
 
     final synchronized static long b(int param0) {
-        long var1 = 0L;
-        int var3 = 0;
+        long var1;
+        int var3;
         var1 = System.currentTimeMillis();
         var3 = 127 % ((43 - param0) / 60);
         if ((ck.field_e ^ -1L) < (var1 ^ -1L)) {

@@ -7,8 +7,8 @@ final class pc {
     static String field_b;
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         ak.field_e = a.field_b.a(mj.field_c[12]);
         var1 = a.field_b.a(mj.field_c[13]);
         if (var1 <= ak.field_e) {

@@ -20,7 +20,7 @@ final class ie extends ed implements vb {
     static mo field_Qb;
 
     final static boolean a(int param0, boolean param1) {
-        long dupTemp$3 = 0L;
+        long dupTemp$2 = 0L;
         L0: {
           if (nn.field_o == null) {
             nn.field_o = qg.field_b.a(ng.field_G, true, ka.field_q);
@@ -41,9 +41,9 @@ final class ie extends ed implements vb {
           return false;
         } else {
           L2: {
-            dupTemp$3 = qj.b(-26572);
-            fo.field_d = dupTemp$3;
-            hi.field_d = dupTemp$3;
+            dupTemp$2 = qj.b(-26572);
+            fo.field_d = dupTemp$2;
+            hi.field_d = dupTemp$2;
             if (-2 != (nn.field_o.field_e ^ -1)) {
               break L2;
             } else {
@@ -86,19 +86,16 @@ final class ie extends ed implements vb {
         if (param0 <= 19) {
             return false;
         }
-        if (this.field_G) {
-            if (!this.field_Ob) {
-                var2 = pe.e(false);
-                if (var2 != null) {
-                    this.a(var2, (byte) 119, false);
-                }
+        if (this.field_G && !this.field_Ob) {
+            var2 = pe.e(false);
+            if (var2 != null) {
+                this.a(var2, (byte) 119, false);
             }
         }
         return super.a((byte) 83);
     }
 
     final static boolean b(byte param0, String param1) {
-        Process discarded$2 = null;
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -110,8 +107,6 @@ final class ie extends ed implements vb {
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -120,19 +115,6 @@ final class ie extends ed implements vb {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_18_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -144,8 +126,7 @@ final class ie extends ed implements vb {
                       break L2;
                     } else {
                       if (!param1.startsWith("https://")) {
-                        stackOut_7_0 = 0;
-                        stackIn_8_0 = stackOut_7_0;
+                        stackIn_8_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L1;
                       } else {
@@ -158,15 +139,13 @@ final class ie extends ed implements vb {
                   L3: while (true) {
                     if (var3 >= param1.length()) {
                       var4 = -39 / ((param0 - 77) / 37);
-                      discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
-                      stackOut_16_0 = 1;
-                      stackIn_17_0 = stackOut_16_0;
+                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
+                      stackIn_17_0 = 1;
                       decompiledRegionSelector0 = 3;
                       break L1;
                     } else {
                       if (var2.indexOf((int) param1.charAt(var3)) == -1) {
-                        stackOut_13_0 = 0;
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L1;
                       } else {
@@ -176,8 +155,7 @@ final class ie extends ed implements vb {
                     }
                   }
                 } else {
-                  stackOut_2_0 = 0;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L1;
                 }
@@ -185,8 +163,7 @@ final class ie extends ed implements vb {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackOut_18_0 = 0;
-              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_0 = 0;
               return stackIn_19_0 != 0;
             }
             if (decompiledRegionSelector0 == 0) {
@@ -211,27 +188,19 @@ final class ie extends ed implements vb {
           decompiledCaughtException = decompiledCaughtParameter1;
           L4: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var2_ref2);
-            stackOut_20_1 = new StringBuilder().append("ie.VA(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var2_ref2);
+
+            stackIn_22_1 = new StringBuilder().append("ie.VA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L4;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L4;
             }
           }
@@ -271,14 +240,6 @@ final class ie extends ed implements vb {
     }
 
     private final void a(ho param0, byte param1, boolean param2) {
-        ag discarded$2 = null;
-        ag discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        me var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         RuntimeException stackIn_35_0 = null;
@@ -286,14 +247,10 @@ final class ie extends ed implements vb {
         String stackIn_35_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        me var5 = null;
+        int var6 = 0;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -309,7 +266,7 @@ final class ie extends ed implements vb {
             L2: {
               if (!param0.field_f) {
                 if (param0.field_b == null) {
-                  var4_ref = param0.field_e;
+                  var4 = param0.field_e;
                   if ((param0.field_a ^ -1) == -249) {
                     L3: {
                       if (!param2) {
@@ -319,14 +276,14 @@ final class ie extends ed implements vb {
                         break L3;
                       }
                     }
-                    var4_ref = g.field_c;
+                    var4 = g.field_c;
                     this.field_Wb = true;
                     break L2;
                   } else {
                     break L2;
                   }
                 } else {
-                  var4_ref = ec.field_e;
+                  var4 = ec.field_e;
                   if (this.field_Kb != null) {
                     this.field_Kb.a((byte) -7);
                     break L2;
@@ -335,19 +292,19 @@ final class ie extends ed implements vb {
                   }
                 }
               } else {
-                var4_ref = aa.field_h;
+                var4 = aa.field_h;
                 break L2;
               }
             }
             L4: {
-              var5 = new me((ed) (this), go.field_k, var4_ref);
+              var5 = new me((ed) (this), go.field_k, var4);
               if (param0.field_f) {
                 if (param0.field_h) {
                   this.a((byte) -92, (qm) (new ng((ie) (this))));
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  discarded$2 = var5.a(73, qn.field_lb, (wc) (this));
+                  var5.a(73, qn.field_lb, (wc) (this));
                   break L4;
                 }
               } else {
@@ -362,7 +319,7 @@ final class ie extends ed implements vb {
                       break L5;
                     }
                   } else {
-                    discarded$3 = var5.a(116, qn.field_lb, (wc) (this));
+                    var5.a(116, qn.field_lb, (wc) (this));
                     break L5;
                   }
                 }
@@ -386,28 +343,20 @@ final class ie extends ed implements vb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var4 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) (var4);
-            stackOut_32_1 = new StringBuilder().append("ie.WA(");
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_34_0 = (RuntimeException) (var4_ref);
+
+            stackIn_34_1 = new StringBuilder().append("ie.WA(");
+
             if (param0 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L6;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L6;
             }
           }

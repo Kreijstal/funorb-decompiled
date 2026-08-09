@@ -40,26 +40,16 @@ final class kj extends gi {
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var5 = null;
         var6 = SteelSentinels.field_G;
         try {
           L0: {
@@ -76,9 +66,9 @@ final class kj extends gi {
               if (var5_int >= param1) {
                 break L0;
               } else {
-                fieldTemp$5 = this.field_p;
+                fieldTemp$2 = this.field_p;
                 this.field_p = this.field_p + 1;
-                param2[param0 + var5_int] = (byte)(this.field_t[fieldTemp$5] + -this.field_A.c(-93));
+                param2[param0 + var5_int] = (byte)(this.field_t[fieldTemp$2] + -this.field_A.c(-93));
                 var5_int++;
                 continue L2;
               }
@@ -88,27 +78,19 @@ final class kj extends gi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var5);
-            stackOut_7_1 = new StringBuilder().append("kj.EB(").append(param0).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var5);
+
+            stackIn_9_1 = new StringBuilder().append("kj.EB(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -117,22 +99,20 @@ final class kj extends gi {
     }
 
     final static int j(int param0) {
-        int discarded$0 = 0;
         gb.field_c.a(false);
         if (!ne.field_N.d((byte) 125)) {
             return qh.d((byte) -107);
         }
         if (param0 <= 9) {
-            discarded$0 = kj.j(-98);
+            kj.j(-98);
             return 0;
         }
         return 0;
     }
 
     final void i(byte param0) {
-        int discarded$0 = 0;
         if (param0 != -3) {
-            discarded$0 = kj.j(53);
+            kj.j(53);
             this.field_p = (7 + this.field_F) / 8;
             return;
         }
@@ -151,10 +131,9 @@ final class kj extends gi {
     }
 
     final void d(boolean param0) {
-        int discarded$0 = 0;
         this.field_F = this.field_p * 8;
         if (param0) {
-            discarded$0 = kj.j(-27);
+            kj.j(-27);
         }
     }
 

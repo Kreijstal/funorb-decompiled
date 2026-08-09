@@ -7,10 +7,9 @@ final class upb implements dja {
     static String field_b;
 
     public static void b(int param0) {
-        int[] discarded$0 = null;
         field_b = null;
         if (param0 != 50) {
-            discarded$0 = upb.a(-69);
+            upb.a(-69);
         }
     }
 
@@ -23,12 +22,11 @@ final class upb implements dja {
     }
 
     final static int[] a(int param0) {
-        int[] discarded$2 = null;
-        int[] var1 = null;
-        int[] var2 = null;
+        int[] var1;
+        int[] var2;
         if (mgb.field_o) {
           if (param0 < 97) {
-            discarded$2 = upb.a(-101);
+            upb.a(-101);
             var2 = wba.field_o;
             var1 = var2;
             wba.field_o = null;

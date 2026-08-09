@@ -29,12 +29,11 @@ abstract class un {
     }
 
     public static void d(int param0) {
-        int discarded$0 = 0;
         field_f = null;
         field_i = null;
         field_q = null;
         if (param0 != 6) {
-            discarded$0 = un.e(26);
+            un.e(26);
             field_o = null;
             return;
         }
@@ -57,34 +56,23 @@ abstract class un {
     }
 
     final gp a(int param0, int param1, int param2, boolean param3, byte param4) {
-        long var6 = 0L;
-        gp var8 = null;
-        gp stackIn_1_0 = null;
         gp stackIn_2_0 = null;
         gp stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        gp stackOut_0_0 = null;
-        gp stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        gp stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
+        long var6;
+        gp var8;
         L0: {
           var6 = (long)param1 + ((long)param0 << -1048142560);
           var8 = new gp();
-          stackOut_0_0 = (gp) (var8);
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = (gp) (var8);
+
           if (!param3) {
-            stackOut_2_0 = (gp) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (gp) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (gp) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (gp) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -128,23 +116,16 @@ abstract class un {
     }
 
     final boolean a(boolean param0) {
-        int discarded$10 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0) {
           L0: {
-            discarded$10 = this.c(53);
+            this.c(53);
             if (-21 < (this.b(-1048142560) ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -152,12 +133,10 @@ abstract class un {
         } else {
           L1: {
             if (-21 < (this.b(-1048142560) ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -168,8 +147,8 @@ abstract class un {
     abstract void c(byte param0);
 
     final static void a(int param0) {
-        String var2 = null;
-        String var3 = null;
+        String var2;
+        String var3;
         if (!nf.field_a) {
           throw new IllegalStateException();
         } else {

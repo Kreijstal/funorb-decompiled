@@ -70,10 +70,11 @@ final class pfb {
     }
 
     final Object a(byte param0) {
-        is var2 = null;
-        Object var3 = null;
-        is var4 = null;
-        int var5 = 0;
+        is var2;
+        Object var3;
+        is var4;
+        int var5;
+        Object stackIn_7_0 = null;
         var5 = VoidHunters.field_G;
         var2 = (is) ((Object) this.field_c.a(param0 ^ 33));
         L0: while (true) {
@@ -81,7 +82,8 @@ final class pfb {
             if (param0 == 67) {
               return null;
             } else {
-              return (Object) null;
+              stackIn_7_0 = (Object) null;
+              return stackIn_7_0;
             }
           } else {
             var3 = var2.a(120);
@@ -100,12 +102,12 @@ final class pfb {
     }
 
     final void a(boolean param0, int param1) {
-        long fieldTemp$2 = 0L;
-        long fieldTemp$3 = 0L;
-        Object var3 = null;
-        is var3_ref = null;
-        bna var4 = null;
-        int var5 = 0;
+        long fieldTemp$0 = 0L;
+        long fieldTemp$1 = 0L;
+        Object var3;
+        is var3_ref;
+        bna var4;
+        int var5;
         var3 = null;
         var5 = VoidHunters.field_G;
         if (param0) {
@@ -116,9 +118,9 @@ final class pfb {
             } else {
               L1: {
                 if (!var3_ref.e((byte) 74)) {
-                  fieldTemp$2 = var3_ref.field_i + 1L;
+                  fieldTemp$0 = var3_ref.field_i + 1L;
                   var3_ref.field_i = var3_ref.field_i + 1L;
-                  if ((long)param1 < fieldTemp$2) {
+                  if ((long)param1 < fieldTemp$0) {
                     var4 = new bna(var3_ref.a(122), var3_ref.field_k);
                     this.field_c.a(var4, 0, var3_ref.field_b);
                     gbb.a(var4, var3_ref, (byte) -68);
@@ -152,9 +154,9 @@ final class pfb {
             } else {
               L3: {
                 if (!var3_ref.e((byte) 74)) {
-                  fieldTemp$3 = var3_ref.field_i + 1L;
+                  fieldTemp$1 = var3_ref.field_i + 1L;
                   var3_ref.field_i = var3_ref.field_i + 1L;
-                  if ((long)param1 < fieldTemp$3) {
+                  if ((long)param1 < fieldTemp$1) {
                     var4 = new bna(var3_ref.a(122), var3_ref.field_k);
                     this.field_c.a(var4, 0, var3_ref.field_b);
                     gbb.a(var4, var3_ref, (byte) -68);
@@ -183,11 +185,11 @@ final class pfb {
     }
 
     final Object a(boolean param0) {
-        is var2 = null;
-        Object var3 = null;
-        int var5 = 0;
-        is var6 = null;
-        is var7 = null;
+        is var2;
+        Object var3;
+        int var5;
+        is var6;
+        is var7;
         var5 = VoidHunters.field_G;
         if (!param0) {
           var2 = (is) ((Object) this.field_c.a((byte) 44));
@@ -232,9 +234,9 @@ final class pfb {
     }
 
     final Object b(int param0, long param1) {
-        Object var5 = null;
-        ska var6 = null;
-        is var7 = null;
+        Object var5;
+        ska var6;
+        is var7;
         var7 = (is) ((Object) this.field_c.a((byte) -124, param1));
         if (var7 != null) {
           var5 = var7.a(param0 ^ 94);
@@ -275,8 +277,6 @@ final class pfb {
 
     private final void a(is param0, int param1) {
         RuntimeException var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -284,14 +284,6 @@ final class pfb {
         String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             if (param1 == -17173) {
@@ -313,27 +305,19 @@ final class pfb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("pfb.H(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("pfb.H(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L1;
             }
           }
@@ -347,7 +331,7 @@ final class pfb {
     }
 
     private final void a(int param0, long param1) {
-        is var4 = null;
+        is var4;
         if (param0 >= -66) {
           this.a((Object) null, 32L, (byte) 24);
           var4 = (is) ((Object) this.field_c.a((byte) -112, param1));
@@ -361,7 +345,7 @@ final class pfb {
     }
 
     private pfb(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         this.field_b = new vh();
         this.field_d = param0;
         this.field_e = param0;

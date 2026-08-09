@@ -29,8 +29,8 @@ final class vd {
     }
 
     final void g(int param0) {
-        gi var2 = null;
-        int var3 = 0;
+        gi var2;
+        int var3;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         L0: while (true) {
           var2 = this.field_c.field_e;
@@ -137,10 +137,9 @@ final class vd {
     }
 
     final void a(gi param0, int param1) {
-        nh[] discarded$0 = null;
         try {
             if (param1 != 255) {
-                discarded$0 = vd.b((byte) 99);
+                vd.b((byte) 99);
             }
             if (null != param0.field_b) {
                 param0.a(-16175);
@@ -175,22 +174,22 @@ final class vd {
     }
 
     final static nh[] b(byte param0) {
-        nh[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var5 = null;
-        int var6 = 0;
-        int[] var6_ref_int__ = null;
-        int var7 = 0;
-        int var8 = 0;
-        byte[] var9 = null;
-        int[] var10 = null;
-        byte[] var11 = null;
-        int[] var13 = null;
-        byte[] var15 = null;
-        int[] var17 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
+        nh[] var1;
+        int var2;
+        int var3;
+        byte[] var5;
+        int var6;
+        int[] var6_ref_int__;
+        int var7;
+        int var8;
+        byte[] var9;
+        int[] var10;
+        byte[] var11;
+        int[] var13;
+        byte[] var15;
+        int[] var17;
+        byte[] var21;
+        int[] var22;
         L0: {
           var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           var1 = new nh[bd.field_M];
@@ -272,23 +271,12 @@ final class vd {
         int var5 = 0;
         int var6 = 0;
         StringBuilder stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        StringBuilder stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -305,8 +293,7 @@ final class vd {
             var5 = var4_int;
             L2: while (true) {
               if (param2 <= var5) {
-                stackOut_6_0 = (StringBuilder) (param1);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (StringBuilder) (param1);
                 break L0;
               } else {
                 param1.setCharAt(var5, param0);
@@ -319,27 +306,19 @@ final class vd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("vd.J(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("vd.J(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }

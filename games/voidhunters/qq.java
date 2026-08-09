@@ -32,13 +32,11 @@ abstract class qq implements nib {
     }
 
     final void a(byte param0) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        jaggl.MapBuffer var3 = null;
+        jaggl.MapBuffer var3;
         if (!this.field_d.field_Hc) {
           if (param0 != 54) {
             var3 = (jaggl.MapBuffer) null;
-            discarded$4 = this.a((byte) 60, (jaggl.MapBuffer) null);
+            this.a((byte) 60, (jaggl.MapBuffer) null);
             return;
           } else {
             return;
@@ -49,7 +47,7 @@ abstract class qq implements nib {
             return;
           } else {
             var3 = (jaggl.MapBuffer) null;
-            discarded$5 = this.a((byte) 60, (jaggl.MapBuffer) null);
+            this.a((byte) 60, (jaggl.MapBuffer) null);
             return;
           }
         }
@@ -60,25 +58,12 @@ abstract class qq implements nib {
         RuntimeException var3 = null;
         int stackIn_10_0 = 0;
         int stackIn_14_0 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_13_0 = 0;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         try {
           L0: {
             L1: {
@@ -101,12 +86,10 @@ abstract class qq implements nib {
                     } else {
                       L4: {
                         if (!param1.a()) {
-                          stackOut_9_0 = 0;
-                          stackIn_10_0 = stackOut_9_0;
+                          stackIn_10_0 = 0;
                           break L4;
                         } else {
-                          stackOut_8_0 = 1;
-                          stackIn_10_0 = stackOut_8_0;
+                          stackIn_10_0 = 1;
                           break L4;
                         }
                       }
@@ -123,35 +106,26 @@ abstract class qq implements nib {
                 break L2;
               }
             }
-            stackOut_13_0 = var3_int;
-            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_0 = var3_int;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var3);
-            stackOut_15_1 = new StringBuilder().append("qq.I(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var3);
+
+            stackIn_17_1 = new StringBuilder().append("qq.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L5;
             }
           }
@@ -168,23 +142,16 @@ abstract class qq implements nib {
     }
 
     final long c(int param0) {
-        boolean discarded$10 = false;
         long stackIn_4_0 = 0L;
         long stackIn_8_0 = 0L;
-        long stackOut_7_0 = 0L;
-        long stackOut_6_0 = 0L;
-        long stackOut_3_0 = 0L;
-        long stackOut_2_0 = 0L;
         if (param0 != 2) {
           L0: {
-            discarded$10 = qq.a(127, true);
+            qq.a(127, true);
             if (0 != this.field_a) {
-              stackOut_7_0 = 0L;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0L;
               break L0;
             } else {
-              stackOut_6_0 = this.field_h.b();
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = this.field_h.b();
               break L0;
             }
           }
@@ -192,12 +159,10 @@ abstract class qq implements nib {
         } else {
           L1: {
             if (0 != this.field_a) {
-              stackOut_3_0 = 0L;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0L;
               break L1;
             } else {
-              stackOut_2_0 = this.field_h.b();
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = this.field_h.b();
               break L1;
             }
           }
@@ -212,7 +177,6 @@ abstract class qq implements nib {
 
     final static int a(boolean param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int stackIn_3_0 = 0;
@@ -220,9 +184,7 @@ abstract class qq implements nib {
         int stackIn_16_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_2_0 = 0;
+        RuntimeException var3 = null;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -242,8 +204,7 @@ abstract class qq implements nib {
                           break L3;
                         } else {
                           if (param2 <= var3_int) {
-                            stackOut_10_0 = var4;
-                            stackIn_11_0 = stackOut_10_0;
+                            stackIn_11_0 = var4;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           } else {
@@ -258,13 +219,11 @@ abstract class qq implements nib {
                   }
                 }
               }
-              stackOut_15_0 = param1 - -param2;
-              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_0 = param1 - -param2;
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_2_0 = 55;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 55;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -288,6 +247,7 @@ abstract class qq implements nib {
     void a(int param0) {
         if ((this.field_a ^ -1) >= -1) {
           if (param0 >= -84) {
+            this.c(126);
             return;
           } else {
             return;
@@ -298,66 +258,31 @@ abstract class qq implements nib {
           if (param0 < -84) {
             return;
           } else {
+            this.c(126);
             return;
           }
         }
     }
 
     void a(int param0, int param1) {
-        int stackIn_6_0 = 0;
-        int stackIn_6_1 = 0;
-        Object stackIn_6_2 = null;
-        int stackIn_6_3 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_7_1 = 0;
-        Object stackIn_7_2 = null;
-        int stackIn_7_3 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_8_1 = 0;
-        Object stackIn_8_2 = null;
-        int stackIn_8_3 = 0;
-        int stackIn_8_4 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_16_1 = 0;
-        Object stackIn_16_2 = null;
-        int stackIn_16_3 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_17_1 = 0;
-        Object stackIn_17_2 = null;
-        int stackIn_17_3 = 0;
+        int stackIn_7_0;
+        int stackIn_7_1;
+        Object stackIn_7_2;
+        int stackIn_7_3;
+        int stackIn_8_0;
+        int stackIn_8_1;
+        Object stackIn_8_2;
+        int stackIn_8_3;
+        int stackIn_8_4;
+        int stackIn_17_0;
+        int stackIn_17_1;
+        Object stackIn_17_2;
+        int stackIn_17_3;
         int stackIn_18_0 = 0;
         int stackIn_18_1 = 0;
         Object stackIn_18_2 = null;
         int stackIn_18_3 = 0;
         int stackIn_18_4 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
-        Object stackOut_15_2 = null;
-        int stackOut_15_3 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_17_1 = 0;
-        Object stackOut_17_2 = null;
-        int stackOut_17_3 = 0;
-        int stackOut_17_4 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_16_1 = 0;
-        Object stackOut_16_2 = null;
-        int stackOut_16_3 = 0;
-        int stackOut_16_4 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        Object stackOut_5_2 = null;
-        int stackOut_5_3 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        Object stackOut_7_2 = null;
-        int stackOut_7_3 = 0;
-        int stackOut_7_4 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        Object stackOut_6_2 = null;
-        int stackOut_6_3 = 0;
-        int stackOut_6_4 = 0;
         if (param0 != 25427) {
           this.d(-59);
           if (this.field_f < param1) {
@@ -365,41 +290,27 @@ abstract class qq implements nib {
             if (-1 > (this.field_a ^ -1)) {
               L0: {
                 jaggl.OpenGL.glBindBufferARB(this.field_b, this.field_a);
-                stackOut_15_0 = this.field_b;
-                stackOut_15_1 = param1;
-                stackOut_15_2 = null;
-                stackOut_15_3 = 0;
-                stackIn_17_0 = stackOut_15_0;
-                stackIn_17_1 = stackOut_15_1;
-                stackIn_17_2 = stackOut_15_2;
-                stackIn_17_3 = stackOut_15_3;
-                stackIn_16_0 = stackOut_15_0;
-                stackIn_16_1 = stackOut_15_1;
-                stackIn_16_2 = stackOut_15_2;
-                stackIn_16_3 = stackOut_15_3;
+                stackIn_17_0 = this.field_b;
+
+                stackIn_17_1 = param1;
+
+                stackIn_17_2 = null;
+
+                stackIn_17_3 = 0;
+
                 if (this.field_g) {
-                  stackOut_17_0 = stackIn_17_0;
-                  stackOut_17_1 = stackIn_17_1;
-                  stackOut_17_2 = stackIn_17_2;
-                  stackOut_17_3 = stackIn_17_3;
-                  stackOut_17_4 = 35040;
-                  stackIn_18_0 = stackOut_17_0;
-                  stackIn_18_1 = stackOut_17_1;
-                  stackIn_18_2 = stackOut_17_2;
-                  stackIn_18_3 = stackOut_17_3;
-                  stackIn_18_4 = stackOut_17_4;
+                  stackIn_18_0 = stackIn_17_0;
+                  stackIn_18_1 = stackIn_17_1;
+                  stackIn_18_2 = stackIn_17_2;
+                  stackIn_18_3 = stackIn_17_3;
+                  stackIn_18_4 = 35040;
                   break L0;
                 } else {
-                  stackOut_16_0 = stackIn_16_0;
-                  stackOut_16_1 = stackIn_16_1;
-                  stackOut_16_2 = stackIn_16_2;
-                  stackOut_16_3 = stackIn_16_3;
-                  stackOut_16_4 = 35044;
-                  stackIn_18_0 = stackOut_16_0;
-                  stackIn_18_1 = stackOut_16_1;
-                  stackIn_18_2 = stackOut_16_2;
-                  stackIn_18_3 = stackOut_16_3;
-                  stackIn_18_4 = stackOut_16_4;
+                  stackIn_18_0 = stackIn_17_0;
+                  stackIn_18_1 = stackIn_17_1;
+                  stackIn_18_2 = stackIn_17_2;
+                  stackIn_18_3 = stackIn_17_3;
+                  stackIn_18_4 = 35044;
                   break L0;
                 }
               }
@@ -426,41 +337,27 @@ abstract class qq implements nib {
                 if (-1 > (this.field_a ^ -1)) {
                   L3: {
                     jaggl.OpenGL.glBindBufferARB(this.field_b, this.field_a);
-                    stackOut_5_0 = this.field_b;
-                    stackOut_5_1 = param1;
-                    stackOut_5_2 = null;
-                    stackOut_5_3 = 0;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_7_1 = stackOut_5_1;
-                    stackIn_7_2 = stackOut_5_2;
-                    stackIn_7_3 = stackOut_5_3;
-                    stackIn_6_0 = stackOut_5_0;
-                    stackIn_6_1 = stackOut_5_1;
-                    stackIn_6_2 = stackOut_5_2;
-                    stackIn_6_3 = stackOut_5_3;
+                    stackIn_7_0 = this.field_b;
+
+                    stackIn_7_1 = param1;
+
+                    stackIn_7_2 = null;
+
+                    stackIn_7_3 = 0;
+
                     if (this.field_g) {
-                      stackOut_7_0 = stackIn_7_0;
-                      stackOut_7_1 = stackIn_7_1;
-                      stackOut_7_2 = stackIn_7_2;
-                      stackOut_7_3 = stackIn_7_3;
-                      stackOut_7_4 = 35040;
-                      stackIn_8_0 = stackOut_7_0;
-                      stackIn_8_1 = stackOut_7_1;
-                      stackIn_8_2 = stackOut_7_2;
-                      stackIn_8_3 = stackOut_7_3;
-                      stackIn_8_4 = stackOut_7_4;
+                      stackIn_8_0 = stackIn_7_0;
+                      stackIn_8_1 = stackIn_7_1;
+                      stackIn_8_2 = stackIn_7_2;
+                      stackIn_8_3 = stackIn_7_3;
+                      stackIn_8_4 = 35040;
                       break L3;
                     } else {
-                      stackOut_6_0 = stackIn_6_0;
-                      stackOut_6_1 = stackIn_6_1;
-                      stackOut_6_2 = stackIn_6_2;
-                      stackOut_6_3 = stackIn_6_3;
-                      stackOut_6_4 = 35044;
-                      stackIn_8_0 = stackOut_6_0;
-                      stackIn_8_1 = stackOut_6_1;
-                      stackIn_8_2 = stackOut_6_2;
-                      stackIn_8_3 = stackOut_6_3;
-                      stackIn_8_4 = stackOut_6_4;
+                      stackIn_8_0 = stackIn_7_0;
+                      stackIn_8_1 = stackIn_7_1;
+                      stackIn_8_2 = stackIn_7_2;
+                      stackIn_8_3 = stackIn_7_3;
+                      stackIn_8_4 = 35044;
                       break L3;
                     }
                   }
@@ -484,16 +381,11 @@ abstract class qq implements nib {
     }
 
     final jaclib.memory.Buffer a(boolean param0, boolean param1, jaggl.MapBuffer param2) {
-        boolean discarded$2 = false;
         RuntimeException var4 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_5_1 = 0;
-        Object stackIn_5_2 = null;
-        int stackIn_5_3 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_6_1 = 0;
-        Object stackIn_6_2 = null;
-        int stackIn_6_3 = 0;
+        int stackIn_6_0;
+        int stackIn_6_1;
+        Object stackIn_6_2;
+        int stackIn_6_3;
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         Object stackIn_7_2 = null;
@@ -503,8 +395,6 @@ abstract class qq implements nib {
         jaggl.MapBuffer stackIn_14_0 = null;
         jaclib.memory.heap.NativeHeapBuffer stackIn_16_0 = null;
         Object stackIn_20_0 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -512,32 +402,6 @@ abstract class qq implements nib {
         String stackIn_24_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        jaclib.memory.heap.NativeHeapBuffer stackOut_15_0 = null;
-        int stackOut_4_0 = 0;
-        int stackOut_4_1 = 0;
-        Object stackOut_4_2 = null;
-        int stackOut_4_3 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        Object stackOut_6_2 = null;
-        int stackOut_6_3 = 0;
-        int stackOut_6_4 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        Object stackOut_5_2 = null;
-        int stackOut_5_3 = 0;
-        int stackOut_5_4 = 0;
-        jaclib.memory.heap.NativeHeapBuffer stackOut_8_0 = null;
-        jaggl.MapBuffer stackOut_13_0 = null;
-        Object stackOut_19_0 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
         try {
           L0: {
             L1: {
@@ -547,8 +411,7 @@ abstract class qq implements nib {
                 this.d(0);
                 if (-1 <= (this.field_a ^ -1)) {
                   this.field_e = 2;
-                  stackOut_15_0 = this.field_h;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_0 = this.field_h;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -556,41 +419,27 @@ abstract class qq implements nib {
                     jaggl.OpenGL.glBindBufferARB(this.field_b, this.field_a);
                     if (param1) {
                       L3: {
-                        stackOut_4_0 = this.field_b;
-                        stackOut_4_1 = this.field_f;
-                        stackOut_4_2 = null;
-                        stackOut_4_3 = 0;
-                        stackIn_6_0 = stackOut_4_0;
-                        stackIn_6_1 = stackOut_4_1;
-                        stackIn_6_2 = stackOut_4_2;
-                        stackIn_6_3 = stackOut_4_3;
-                        stackIn_5_0 = stackOut_4_0;
-                        stackIn_5_1 = stackOut_4_1;
-                        stackIn_5_2 = stackOut_4_2;
-                        stackIn_5_3 = stackOut_4_3;
+                        stackIn_6_0 = this.field_b;
+
+                        stackIn_6_1 = this.field_f;
+
+                        stackIn_6_2 = null;
+
+                        stackIn_6_3 = 0;
+
                         if (!this.field_g) {
-                          stackOut_6_0 = stackIn_6_0;
-                          stackOut_6_1 = stackIn_6_1;
-                          stackOut_6_2 = stackIn_6_2;
-                          stackOut_6_3 = stackIn_6_3;
-                          stackOut_6_4 = 35044;
-                          stackIn_7_0 = stackOut_6_0;
-                          stackIn_7_1 = stackOut_6_1;
-                          stackIn_7_2 = stackOut_6_2;
-                          stackIn_7_3 = stackOut_6_3;
-                          stackIn_7_4 = stackOut_6_4;
+                          stackIn_7_0 = stackIn_6_0;
+                          stackIn_7_1 = stackIn_6_1;
+                          stackIn_7_2 = stackIn_6_2;
+                          stackIn_7_3 = stackIn_6_3;
+                          stackIn_7_4 = 35044;
                           break L3;
                         } else {
-                          stackOut_5_0 = stackIn_5_0;
-                          stackOut_5_1 = stackIn_5_1;
-                          stackOut_5_2 = stackIn_5_2;
-                          stackOut_5_3 = stackIn_5_3;
-                          stackOut_5_4 = 35040;
-                          stackIn_7_0 = stackOut_5_0;
-                          stackIn_7_1 = stackOut_5_1;
-                          stackIn_7_2 = stackOut_5_2;
-                          stackIn_7_3 = stackOut_5_3;
-                          stackIn_7_4 = stackOut_5_4;
+                          stackIn_7_0 = stackIn_6_0;
+                          stackIn_7_1 = stackIn_6_1;
+                          stackIn_7_2 = stackIn_6_2;
+                          stackIn_7_3 = stackIn_6_3;
+                          stackIn_7_4 = 35040;
                           break L3;
                         }
                       }
@@ -599,8 +448,7 @@ abstract class qq implements nib {
                         break L2;
                       } else {
                         this.field_e = 1;
-                        stackOut_8_0 = this.field_d.field_m;
-                        stackIn_9_0 = stackOut_8_0;
+                        stackIn_9_0 = this.field_d.field_m;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
@@ -613,8 +461,7 @@ abstract class qq implements nib {
                   } else {
                     if (param2.a(this.field_b, this.field_c, 35001)) {
                       this.field_e = 2;
-                      stackOut_13_0 = (jaggl.MapBuffer) (param2);
-                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_14_0 = (jaggl.MapBuffer) (param2);
                       decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
@@ -625,9 +472,8 @@ abstract class qq implements nib {
               }
             }
             if (param0) {
-              discarded$2 = qq.a(7, true);
-              stackOut_19_0 = null;
-              stackIn_20_0 = stackOut_19_0;
+              qq.a(7, true);
+              stackIn_20_0 = null;
               decompiledRegionSelector0 = 3;
               break L0;
             } else {
@@ -638,27 +484,19 @@ abstract class qq implements nib {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var4);
-            stackOut_21_1 = new StringBuilder().append("qq.N(").append(param0).append(',').append(param1).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var4);
+
+            stackIn_23_1 = new StringBuilder().append("qq.N(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L4;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L4;
             }
           }

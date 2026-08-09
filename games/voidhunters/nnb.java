@@ -26,9 +26,8 @@ final class nnb extends uj {
     }
 
     final int b(byte param0) {
-        int discarded$0 = 0;
         if (param0 < 79) {
-            discarded$0 = this.d((byte) 75);
+            this.d((byte) 75);
             return 112;
         }
         return 112;
@@ -53,9 +52,8 @@ final class nnb extends uj {
     }
 
     final boolean a(boolean param0) {
-        boolean discarded$0 = false;
         if (param0) {
-            discarded$0 = this.a(true);
+            this.a(true);
             return false;
         }
         return false;

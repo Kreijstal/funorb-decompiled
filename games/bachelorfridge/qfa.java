@@ -10,7 +10,6 @@ final class qfa extends cga {
 
     final static String a(int param0, CharSequence param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -18,23 +17,13 @@ final class qfa extends cga {
         char[] var7 = null;
         char[] var8 = null;
         String stackIn_23_0 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_22_0 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        RuntimeException var2 = null;
         var6 = BachelorFridge.field_y;
         try {
           L0: {
@@ -61,8 +50,7 @@ final class qfa extends cga {
             var4 = 0;
             L3: while (true) {
               if (var2_int <= var4) {
-                stackOut_22_0 = new String(var8);
-                stackIn_23_0 = stackOut_22_0;
+                stackIn_23_0 = new String(var8);
                 break L0;
               } else {
                 L4: {
@@ -117,27 +105,19 @@ final class qfa extends cga {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var2);
-            stackOut_24_1 = new StringBuilder().append("qfa.S(").append(param0).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var2);
+
+            stackIn_26_1 = new StringBuilder().append("qfa.S(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L9;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L9;
             }
           }
@@ -160,93 +140,37 @@ final class qfa extends cga {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, String param5, int param6, int param7, int param8) {
-        RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
-          L0: {
-            L1: {
-              qc.field_b.field_Z = param5;
-              if (2 != gk.field_d) {
-                qq.field_k.field_Z = ro.field_k;
-                break L1;
-              } else {
+            qc.field_b.field_Z = param5;
+            if (2 == gk.field_d) {
                 qq.field_k.field_Z = ru.field_l;
-                break L1;
-              }
+            } else {
+                qq.field_k.field_Z = ro.field_k;
             }
-            L2: {
-              var9_int = 495;
-              var10 = 5;
-              aja.field_p.a(param4, 31407, -10 + var9_int, 5, var10);
-              jba.field_A.a(param4, 31407, aja.field_p.field_sb - ts.field_r.field_sb, 0, 0);
-              var10 = var10 + (param4 - -param0);
-              ts.field_r.a(param4, 31407, ts.field_r.field_sb, jba.field_A.field_sb, 0);
-              ub.field_k.a(param1, 31407, ub.field_k.e(-1), 5, var10);
-              var11 = qq.field_k.e(-1);
-              qq.field_k.a(param1, 31407, var11, -var11 + (var9_int - 5), var10);
-              var12 = param1 + (var10 - -5);
-              qc.field_b.a(param8, 31407, var9_int, 0, 0);
-              tga.field_m.a(var12, 31407, var9_int, 0, param8);
-              if (param3 <= -114) {
-                break L2;
-              } else {
+            var9_int = 495;
+            var10 = 5;
+            aja.field_p.a(param4, 31407, -10 + var9_int, 5, var10);
+            jba.field_A.a(param4, 31407, aja.field_p.field_sb - ts.field_r.field_sb, 0, 0);
+            var10 = var10 + (param4 - -param0);
+            ts.field_r.a(param4, 31407, ts.field_r.field_sb, jba.field_A.field_sb, 0);
+            ub.field_k.a(param1, 31407, ub.field_k.e(-1), 5, var10);
+            var11 = qq.field_k.e(-1);
+            qq.field_k.a(param1, 31407, var11, -var11 + (var9_int - 5), var10);
+            var12 = param1 + (var10 - -5);
+            qc.field_b.a(param8, 31407, var9_int, 0, 0);
+            tga.field_m.a(var12, 31407, var9_int, 0, param8);
+            if (param3 > -114) {
                 field_w = (String) null;
-                break L2;
-              }
             }
             tga.field_m.field_eb = mu.a(11579568, 3, tga.field_m.field_p, 8421504, 2105376, (byte) 17);
             var12 = var12 + param8;
             bi.field_h.a(var12, 31407, var9_int, param2 + -(var9_int / 2), -(var12 / 2) + param6);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var9 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var9);
-            stackOut_7_1 = new StringBuilder().append("qfa.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
-            if (param5 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
-            } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L3;
-            }
-          }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) ((Object) runtimeException), "qfa.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -258,22 +182,12 @@ final class qfa extends cga {
             int var3 = 0;
             String var4 = null;
             java.net.URL var5 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
             RuntimeException stackIn_10_0 = null;
             StringBuilder stackIn_10_1 = null;
             RuntimeException stackIn_11_0 = null;
             StringBuilder stackIn_11_1 = null;
             String stackIn_11_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            RuntimeException stackOut_10_0 = null;
-            StringBuilder stackOut_10_1 = null;
-            String stackOut_10_2 = null;
-            RuntimeException stackOut_9_0 = null;
-            StringBuilder stackOut_9_1 = null;
-            String stackOut_9_2 = null;
             try {
               try {
                 L0: {
@@ -313,27 +227,19 @@ final class qfa extends cga {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_8_0 = (RuntimeException) (var2_ref2);
-                stackOut_8_1 = new StringBuilder().append("qfa.N(");
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_10_1 = stackOut_8_1;
-                stackIn_9_0 = stackOut_8_0;
-                stackIn_9_1 = stackOut_8_1;
+                stackIn_10_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_10_1 = new StringBuilder().append("qfa.N(");
+
                 if (param0 == null) {
-                  stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-                  stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-                  stackOut_10_2 = "null";
-                  stackIn_11_0 = stackOut_10_0;
-                  stackIn_11_1 = stackOut_10_1;
-                  stackIn_11_2 = stackOut_10_2;
+                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+                  stackIn_11_2 = "null";
                   break L3;
                 } else {
-                  stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-                  stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-                  stackOut_9_2 = "{...}";
-                  stackIn_11_0 = stackOut_9_0;
-                  stackIn_11_1 = stackOut_9_1;
-                  stackIn_11_2 = stackOut_9_2;
+                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+                  stackIn_11_2 = "{...}";
                   break L3;
                 }
               }
@@ -360,8 +266,6 @@ final class qfa extends cga {
         String stackIn_23_0 = null;
         String stackIn_26_0 = null;
         String stackIn_30_0 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         RuntimeException stackIn_35_0 = null;
@@ -369,27 +273,10 @@ final class qfa extends cga {
         String stackIn_35_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        String stackOut_8_0 = null;
-        String stackOut_15_0 = null;
-        String stackOut_22_0 = null;
-        String stackOut_29_0 = null;
-        String stackOut_25_0 = null;
-        String stackOut_18_0 = null;
-        String stackOut_11_0 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
         try {
           L0: {
             if (param0 == 3) {
-              stackOut_2_0 = lda.field_d;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = lda.field_d;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -403,51 +290,44 @@ final class qfa extends cga {
                 }
               }
               if ((param0 ^ -1) == -7) {
-                stackOut_8_0 = ed.field_c;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = ed.field_c;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (-8 != (param0 ^ -1)) {
                   if (-9 == (param0 ^ -1)) {
-                    stackOut_15_0 = hr.field_e;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = hr.field_e;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
                     if (-10 != (param0 ^ -1)) {
                       if (-11 == (param0 ^ -1)) {
-                        stackOut_22_0 = wm.field_l;
-                        stackIn_23_0 = stackOut_22_0;
+                        stackIn_23_0 = wm.field_l;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       } else {
                         if (-12 != (param0 ^ -1)) {
                           if (param0 == 14) {
-                            stackOut_29_0 = lga.a(true, new String[]{param1}, vfa.field_r);
-                            stackIn_30_0 = stackOut_29_0;
+                            stackIn_30_0 = lga.a(true, new String[]{param1}, vfa.field_r);
                             decompiledRegionSelector0 = 7;
                             break L0;
                           } else {
                             return null;
                           }
                         } else {
-                          stackOut_25_0 = nla.field_e;
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = nla.field_e;
                           decompiledRegionSelector0 = 6;
                           break L0;
                         }
                       }
                     } else {
-                      stackOut_18_0 = bm.field_m;
-                      stackIn_19_0 = stackOut_18_0;
+                      stackIn_19_0 = bm.field_m;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     }
                   }
                 } else {
-                  stackOut_11_0 = vc.field_b;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = vc.field_b;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -458,27 +338,19 @@ final class qfa extends cga {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) (var3);
-            stackOut_32_1 = new StringBuilder().append("qfa.O(").append(param0).append(',');
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackIn_34_0 = (RuntimeException) (var3);
+
+            stackIn_34_1 = new StringBuilder().append("qfa.O(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L2;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L2;
             }
           }
@@ -524,18 +396,18 @@ final class qfa extends cga {
     }
 
     final static void h(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        bga var4_ref_bga = null;
         int var4 = 0;
+        bga var4_ref_bga = null;
         Object var5 = null;
         int var6 = 0;
         fm var9 = null;
         pf var10 = null;
         byte[] var14 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var6 = BachelorFridge.field_y;
         try {
           L0: {
@@ -633,12 +505,12 @@ final class qfa extends cga {
     }
 
     final static void i(int param0) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         pf var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var3 = BachelorFridge.field_y;
         try {
           L0: {
@@ -656,9 +528,9 @@ final class qfa extends cga {
                 break L0;
               } else {
                 var1.c(8, (byte) 119);
-                fieldTemp$5 = var1.field_g + 1;
+                fieldTemp$2 = var1.field_g + 1;
                 var1.field_g = var1.field_g + 1;
-                var2 = fieldTemp$5;
+                var2 = fieldTemp$2;
                 sia.a(var1, 108);
                 sja.field_fb.b((byte) -68, var1.field_g - var2);
                 continue L2;

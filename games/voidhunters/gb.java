@@ -17,9 +17,8 @@ final class gb extends uj {
     }
 
     final int b(int param0) {
-        int discarded$0 = 0;
         if (param0 != -25131) {
-            discarded$0 = this.b(-64);
+            this.b(-64);
             return 256;
         }
         return 256;
@@ -33,9 +32,8 @@ final class gb extends uj {
     }
 
     final boolean c(int param0) {
-        int discarded$0 = 0;
         if (param0 <= 63) {
-            discarded$0 = this.d((byte) 110);
+            this.d((byte) 110);
             return true;
         }
         return true;
@@ -52,9 +50,8 @@ final class gb extends uj {
     }
 
     final int d(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != 64) {
-            discarded$0 = this.c(42);
+            this.c(42);
             return 1;
         }
         return 1;

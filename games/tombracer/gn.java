@@ -12,25 +12,19 @@ abstract class gn extends b {
 
     private final int b(boolean param0) {
         int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0) {
           return 84;
         } else {
           L0: {
             if (!this.field_B) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               break L0;
             } else {
               if (this != this.field_z.a((byte) -76)) {
-                stackOut_4_0 = 0;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 256;
-                stackIn_6_0 = stackOut_3_0;
+                stackIn_6_0 = 256;
                 break L0;
               }
             }
@@ -64,14 +58,10 @@ abstract class gn extends b {
     }
 
     boolean a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_11_0 = 0;
         int stackIn_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_10_0 = 0;
         L0: {
           if (param0 >= 126) {
             break L0;
@@ -97,12 +87,10 @@ abstract class gn extends b {
             } else {
               L2: {
                 if (this.field_B) {
-                  stackOut_20_0 = 0;
-                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_0 = 0;
                   break L2;
                 } else {
-                  stackOut_19_0 = 1;
-                  stackIn_21_0 = stackOut_19_0;
+                  stackIn_21_0 = 1;
                   break L2;
                 }
               }
@@ -132,15 +120,13 @@ abstract class gn extends b {
                   if (this.field_B) {
                     break L5;
                   } else {
-                    stackOut_9_0 = 1;
-                    stackIn_11_0 = stackOut_9_0;
+                    stackIn_11_0 = 1;
                     break L4;
                   }
                 }
               }
             }
-            stackOut_10_0 = 0;
-            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_0 = 0;
             break L4;
           }
           return stackIn_11_0 != 0;

@@ -19,268 +19,125 @@ final class ea extends ve {
     static qb[] field_u;
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        int stackIn_25_0 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_27_1 = 0;
-        int stackIn_53_0 = 0;
-        int stackIn_54_0 = 0;
-        int stackIn_55_0 = 0;
-        int stackIn_55_1 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_54_1 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_53_1 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_26_1 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_25_1 = 0;
-        if (param2) {
-          L0: {
-            if (0 != param3) {
-              break L0;
-            } else {
-              if (param1 != on.field_h) {
-                L1: {
-                  ui.field_s = true;
-                  on.field_h = param1;
-                  stackOut_52_0 = param0;
-                  stackIn_54_0 = stackOut_52_0;
-                  stackIn_53_0 = stackOut_52_0;
-                  if (param2) {
-                    stackOut_54_0 = stackIn_54_0;
-                    stackOut_54_1 = 0;
-                    stackIn_55_0 = stackOut_54_0;
-                    stackIn_55_1 = stackOut_54_1;
-                    break L1;
-                  } else {
-                    stackOut_53_0 = stackIn_53_0;
-                    stackOut_53_1 = 1;
-                    stackIn_55_0 = stackOut_53_0;
-                    stackIn_55_1 = stackOut_53_1;
-                    break L1;
-                  }
-                }
-                ub.a(stackIn_55_0, stackIn_55_1 != 0);
-                break L0;
-              } else {
-                L2: {
-                  if ((param3 ^ -1) != -2) {
-                    break L2;
-                  } else {
-                    if (ra.field_m == param1) {
-                      break L2;
-                    } else {
-                      L3: {
-                        ui.field_s = true;
-                        ra.field_m = param1;
-                        ub.a(param0, false);
+        if (!param2) {
+            ea.f((byte) 111);
+            if (0 == param3) {
+                if (param1 == on.field_h) {
+                    if ((param3 ^ -1) != -2) {
                         if (2 != param3) {
-                          break L3;
-                        } else {
-                          if (param1 == hd.field_b) {
-                            break L3;
-                          } else {
-                            hd.field_b = param1;
-                            ui.field_s = true;
-                            ub.a(param0, false);
                             return;
-                          }
                         }
-                      }
-                      return;
+                        if (param1 == hd.field_b) {
+                            return;
+                        }
+                        hd.field_b = param1;
+                        ui.field_s = true;
+                        ub.a(param0, false);
+                        return;
                     }
-                  }
+                    if (ra.field_m == param1) {
+                        if (2 != param3) {
+                            return;
+                        }
+                        if (param1 == hd.field_b) {
+                            return;
+                        }
+                        hd.field_b = param1;
+                        ui.field_s = true;
+                        ub.a(param0, false);
+                        return;
+                    }
+                    ui.field_s = true;
+                    ra.field_m = param1;
+                    ub.a(param0, false);
+                    if (2 != param3) {
+                        return;
+                    }
+                    if (param1 != hd.field_b) {
+                        hd.field_b = param1;
+                        ui.field_s = true;
+                        ub.a(param0, false);
+                        return;
+                    }
+                    return;
                 }
-                L4: {
-                  if (2 != param3) {
-                    break L4;
-                  } else {
-                    if (param1 == hd.field_b) {
-                      break L4;
-                    } else {
-                      hd.field_b = param1;
-                      ui.field_s = true;
-                      ub.a(param0, false);
-                      return;
-                    }
-                  }
+                ui.field_s = true;
+                on.field_h = param1;
+                ub.a(param0, !param2 ? true : false);
+            }
+            if ((param3 ^ -1) == -2 && ra.field_m != param1) {
+                ui.field_s = true;
+                ra.field_m = param1;
+                ub.a(param0, false);
+                if (2 == param3 && param1 != hd.field_b) {
+                    hd.field_b = param1;
+                    ui.field_s = true;
+                    ub.a(param0, false);
+                    return;
                 }
                 return;
-              }
             }
-          }
-          L5: {
-            if ((param3 ^ -1) != -2) {
-              break L5;
-            } else {
-              if (ra.field_m == param1) {
-                break L5;
-              } else {
-                L6: {
-                  ui.field_s = true;
-                  ra.field_m = param1;
-                  ub.a(param0, false);
-                  if (2 != param3) {
-                    break L6;
-                  } else {
-                    if (param1 == hd.field_b) {
-                      break L6;
-                    } else {
-                      hd.field_b = param1;
-                      ui.field_s = true;
-                      ub.a(param0, false);
-                      return;
-                    }
-                  }
-                }
-                return;
-              }
-            }
-          }
-          L7: {
             if (2 != param3) {
-              break L7;
-            } else {
-              if (param1 == hd.field_b) {
-                break L7;
-              } else {
+                return;
+            }
+            if (param1 == hd.field_b) {
+                return;
+            }
+            hd.field_b = param1;
+            ui.field_s = true;
+            ub.a(param0, false);
+            return;
+        }
+        if (0 == param3) {
+            if (param1 == on.field_h) {
+                if ((param3 ^ -1) == -2 && ra.field_m != param1) {
+                    ui.field_s = true;
+                    ra.field_m = param1;
+                    ub.a(param0, false);
+                    if (2 == param3 && param1 != hd.field_b) {
+                        hd.field_b = param1;
+                        ui.field_s = true;
+                        ub.a(param0, false);
+                        return;
+                    }
+                    return;
+                }
+                if (2 == param3 && param1 != hd.field_b) {
+                    hd.field_b = param1;
+                    ui.field_s = true;
+                    ub.a(param0, false);
+                    return;
+                }
+                return;
+            }
+            ui.field_s = true;
+            on.field_h = param1;
+            ub.a(param0, !param2 ? true : false);
+        }
+        if ((param3 ^ -1) == -2 && ra.field_m != param1) {
+            ui.field_s = true;
+            ra.field_m = param1;
+            ub.a(param0, false);
+            if (2 == param3 && param1 != hd.field_b) {
                 hd.field_b = param1;
                 ui.field_s = true;
                 ub.a(param0, false);
                 return;
-              }
             }
-          }
-          return;
-        } else {
-          L8: {
-            ea.f((byte) 111);
-            if (0 != param3) {
-              break L8;
-            } else {
-              if (param1 != on.field_h) {
-                L9: {
-                  ui.field_s = true;
-                  on.field_h = param1;
-                  stackOut_24_0 = param0;
-                  stackIn_26_0 = stackOut_24_0;
-                  stackIn_25_0 = stackOut_24_0;
-                  if (param2) {
-                    stackOut_26_0 = stackIn_26_0;
-                    stackOut_26_1 = 0;
-                    stackIn_27_0 = stackOut_26_0;
-                    stackIn_27_1 = stackOut_26_1;
-                    break L9;
-                  } else {
-                    stackOut_25_0 = stackIn_25_0;
-                    stackOut_25_1 = 1;
-                    stackIn_27_0 = stackOut_25_0;
-                    stackIn_27_1 = stackOut_25_1;
-                    break L9;
-                  }
-                }
-                ub.a(stackIn_27_0, stackIn_27_1 != 0);
-                break L8;
-              } else {
-                if ((param3 ^ -1) == -2) {
-                  if (ra.field_m != param1) {
-                    ui.field_s = true;
-                    ra.field_m = param1;
-                    ub.a(param0, false);
-                    if (2 == param3) {
-                      if (param1 == hd.field_b) {
-                        return;
-                      } else {
-                        hd.field_b = param1;
-                        ui.field_s = true;
-                        ub.a(param0, false);
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  } else {
-                    if (2 == param3) {
-                      if (param1 != hd.field_b) {
-                        hd.field_b = param1;
-                        ui.field_s = true;
-                        ub.a(param0, false);
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  }
-                } else {
-                  if (2 == param3) {
-                    if (param1 != hd.field_b) {
-                      hd.field_b = param1;
-                      ui.field_s = true;
-                      ub.a(param0, false);
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              }
-            }
-          }
-          L10: {
-            if ((param3 ^ -1) != -2) {
-              break L10;
-            } else {
-              if (ra.field_m == param1) {
-                break L10;
-              } else {
-                L11: {
-                  ui.field_s = true;
-                  ra.field_m = param1;
-                  ub.a(param0, false);
-                  if (2 != param3) {
-                    break L11;
-                  } else {
-                    if (param1 == hd.field_b) {
-                      break L11;
-                    } else {
-                      hd.field_b = param1;
-                      ui.field_s = true;
-                      ub.a(param0, false);
-                      return;
-                    }
-                  }
-                }
-                return;
-              }
-            }
-          }
-          if (2 == param3) {
-            if (param1 != hd.field_b) {
-              hd.field_b = param1;
-              ui.field_s = true;
-              ub.a(param0, false);
-              return;
-            } else {
-              return;
-            }
-          } else {
             return;
-          }
+        }
+        if (2 == param3 && param1 != hd.field_b) {
+            hd.field_b = param1;
+            ui.field_s = true;
+            ub.a(param0, false);
+            return;
         }
     }
 
     final byte[] c(int param0) {
-        byte[] discarded$2 = null;
         if (!this.field_p) {
           if (param0 > -11) {
-            discarded$2 = this.c(-122);
+            this.c(-122);
             return this.field_z;
           } else {
             return this.field_z;

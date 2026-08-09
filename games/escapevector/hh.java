@@ -9,13 +9,13 @@ final class hh extends nh {
     byte[] field_h;
 
     final hh a(dd param0) {
-        int dupTemp$2 = 0;
+        int dupTemp$1 = 0;
         this.field_h = param0.a(-128, this.field_h);
         this.field_j = param0.a(this.field_j, (byte) -87);
         if (this.field_k == this.field_l) {
-          dupTemp$2 = param0.a(false, this.field_k);
-          this.field_l = dupTemp$2;
-          this.field_k = dupTemp$2;
+          dupTemp$1 = param0.a(false, this.field_k);
+          this.field_l = dupTemp$1;
+          this.field_k = dupTemp$1;
           return (hh) (this);
         } else {
           L0: {

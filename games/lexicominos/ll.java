@@ -11,10 +11,9 @@ final class ll {
     static String[] field_e;
 
     final me a(int param0, int param1) {
-        me discarded$1 = null;
-        me var3 = null;
-        byte[] var4 = null;
-        me var5 = null;
+        me var3;
+        byte[] var4;
+        me var5;
         var3 = (me) (this.field_g.a((long)param1, 0));
         if (var3 != null) {
           return var3;
@@ -62,7 +61,7 @@ final class ll {
               return var5;
             }
           } else {
-            discarded$1 = this.a(-98, 88);
+            this.a(-98, 88);
             if (var4 == null) {
               L4: {
                 if ((param1 ^ -1) <= -32769) {

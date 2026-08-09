@@ -13,7 +13,7 @@ final class sq extends tc {
     private String field_r;
 
     final static boolean c(byte param0) {
-        int var1 = 0;
+        int var1;
         var1 = 52 / ((-9 - param0) / 42);
         if (fs.a(false)) {
           if (-1 != (uk.field_n & 8 ^ -1)) {
@@ -27,8 +27,8 @@ final class sq extends tc {
     }
 
     final static String a(int param0, byte param1, int param2, int param3) {
-        int var4 = 0;
-        ic var5 = null;
+        int var4;
+        ic var5;
         var4 = -110 / ((param1 - -76) / 36);
         var5 = rd.field_j;
         if (var5 == null) {
@@ -51,7 +51,7 @@ final class sq extends tc {
     }
 
     final void b(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         L0: {
           if (0 >= this.field_m) {
             break L0;
@@ -134,12 +134,11 @@ final class sq extends tc {
     }
 
     public static void a(boolean param0) {
-        String discarded$0 = null;
         field_o = null;
         field_n = null;
         field_s = null;
         if (param0) {
-            discarded$0 = sq.a(24, (byte) 101, 43, 1);
+            sq.a(24, (byte) 101, 43, 1);
         }
     }
 
@@ -156,10 +155,6 @@ final class sq extends tc {
     }
 
     final void a(byte param0) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
         this.field_m = this.field_m + 1;
         if (this.field_m >= 16) {
           if (null != this.field_b) {
@@ -172,7 +167,7 @@ final class sq extends tc {
                   return;
                 }
               } else {
-                discarded$4 = sq.c((byte) -116);
+                sq.c((byte) -116);
                 if (this.field_l <= this.field_m) {
                   this.d(-122);
                   return;
@@ -190,7 +185,7 @@ final class sq extends tc {
                   return;
                 }
               } else {
-                discarded$5 = sq.c((byte) -116);
+                sq.c((byte) -116);
                 if (this.field_l <= this.field_m) {
                   this.d(-122);
                   return;
@@ -208,7 +203,7 @@ final class sq extends tc {
                 return;
               }
             } else {
-              discarded$6 = sq.c((byte) -116);
+              sq.c((byte) -116);
               if (this.field_l <= this.field_m) {
                 this.d(-122);
                 return;
@@ -226,7 +221,7 @@ final class sq extends tc {
               return;
             }
           } else {
-            discarded$7 = sq.c((byte) -116);
+            sq.c((byte) -116);
             if (this.field_l <= this.field_m) {
               this.d(-122);
               return;

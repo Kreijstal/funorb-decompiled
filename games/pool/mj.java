@@ -29,9 +29,8 @@ final class mj {
     }
 
     final static void a(boolean param0) {
-        int[] discarded$0 = null;
         if (!param0) {
-            discarded$0 = mj.a(-35);
+            mj.a(-35);
             ld.a((byte) -120);
             ia.h(-13953);
             return;
@@ -113,7 +112,7 @@ final class mj {
     }
 
     final static void a(int param0, int param1) {
-        oq var2 = null;
+        oq var2;
         var2 = ej.field_j;
         if (param1 != 27712) {
           mj.a(true);

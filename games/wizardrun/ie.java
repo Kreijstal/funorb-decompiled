@@ -8,8 +8,8 @@ final class ie extends wl {
     static int field_j;
 
     final static char a(byte param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var2 = 255 & param1;
         if (param0 < -11) {
           if (var2 == 0) {
@@ -93,10 +93,9 @@ final class ie extends wl {
     }
 
     public static void c(int param0) {
-        ca[] discarded$0 = null;
         if (param0 != -1) {
             mg var2 = (mg) null;
-            discarded$0 = ie.a(35, (mg) null);
+            ie.a(35, (mg) null);
             field_l = null;
             return;
         }
@@ -104,14 +103,7 @@ final class ie extends wl {
     }
 
     final static ca[] a(int param0, mg param1) {
-        int discarded$30 = 0;
-        int discarded$31 = 0;
-        int discarded$32 = 0;
-        int discarded$33 = 0;
-        int discarded$34 = 0;
-        int discarded$35 = 0;
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         ca[] var4 = null;
         int var5 = 0;
@@ -120,8 +112,6 @@ final class ie extends wl {
         int var7 = 0;
         Object stackIn_3_0 = null;
         ca[] stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -129,16 +119,7 @@ final class ie extends wl {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ca[] stackOut_11_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var2 = null;
         var7 = wizardrun.field_H;
         try {
           L0: {
@@ -149,8 +130,7 @@ final class ie extends wl {
               var5 = 0;
               L1: while (true) {
                 if (var3 <= var5) {
-                  stackOut_11_0 = (ca[]) (var4);
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = (ca[]) (var4);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -161,13 +141,13 @@ final class ie extends wl {
                       break L2;
                     } else {
                       var6_ref_ca = new ca();
-                      discarded$30 = param1.g(24, -11719);
-                      discarded$31 = param1.g(24, -11719);
+                      param1.g(24, -11719);
+                      param1.g(24, -11719);
                       var6_ref_ca.field_b = param1.g(24, param0 + -11731);
-                      discarded$32 = param1.g(9, -11719);
-                      discarded$33 = param1.g(12, -11719);
-                      discarded$34 = param1.g(12, param0 ^ -11723);
-                      discarded$35 = param1.g(12, -11719);
+                      param1.g(9, -11719);
+                      param1.g(12, -11719);
+                      param1.g(12, param0 ^ -11723);
+                      param1.g(12, -11719);
                       var4[var5] = var6_ref_ca;
                       break L2;
                     }
@@ -177,8 +157,7 @@ final class ie extends wl {
                 }
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -187,27 +166,19 @@ final class ie extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var2);
-            stackOut_13_1 = new StringBuilder().append("ie.A(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var2);
+
+            stackIn_15_1 = new StringBuilder().append("ie.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }

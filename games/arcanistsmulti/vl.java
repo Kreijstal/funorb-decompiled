@@ -13,14 +13,14 @@ final class vl extends pg {
     static ll[] field_i;
 
     final static void d(byte param0) {
-        int incrementValue$6 = 0;
-        f discarded$7 = null;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        RuntimeException var1 = null;
-        byte[] var1_array = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        RuntimeException decompiledCaughtException = null;
+        byte[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int[][] var4 = null;
@@ -30,18 +30,17 @@ final class vl extends pg {
         byte[] var8 = null;
         byte[] var9 = null;
         byte[] var10 = null;
-        RuntimeException decompiledCaughtException = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
             var8 = new byte[27];
             var10 = var8;
             var9 = var10;
-            var1_array = var9;
+            var1 = var9;
             var2 = 0;
-            incrementValue$6 = var2;
+            incrementValue$0 = var2;
             var2++;
-            var8[incrementValue$6] = (byte) 0;
+            var8[incrementValue$0] = (byte) 0;
             var3 = 0;
             L1: while (true) {
               if (4 <= var3) {
@@ -63,23 +62,23 @@ final class vl extends pg {
                           if (lc.a((byte) 112)) {
                             break L5;
                           } else {
-                            discarded$7 = tf.a(6, -25866, var10);
+                            tf.a(6, -25866, var10);
                             break L5;
                           }
                         }
                         break L0;
                       } else {
-                        incrementValue$8 = var2;
+                        incrementValue$1 = var2;
                         var2++;
-                        var1_array[incrementValue$8] = (byte)b.field_f[var3];
+                        var1[incrementValue$1] = (byte)b.field_f[var3];
                         var3++;
                         continue L4;
                       }
                     }
                   } else {
-                    incrementValue$9 = var2;
+                    incrementValue$2 = var2;
                     var2++;
-                    var1_array[incrementValue$9] = (byte)so.field_c[var3];
+                    var1[incrementValue$2] = (byte)so.field_c[var3];
                     var3++;
                     continue L2;
                   }
@@ -87,7 +86,7 @@ final class vl extends pg {
               } else {
                 L6: {
                   var4 = (int[][]) null;
-                  if (var3 == 0) {
+                  if ((var3 ^ -1) == -1) {
                     var4 = ld.field_n;
                     break L6;
                   } else {
@@ -124,21 +123,21 @@ final class vl extends pg {
                   if (var6 >= var4.length) {
                     L11: {
                       if ((var5 ^ -1) != 0) {
-                        incrementValue$10 = var2;
+                        incrementValue$3 = var2;
                         var2++;
-                        var1_array[incrementValue$10] = (byte)var5;
+                        var1[incrementValue$3] = (byte)var5;
                         break L11;
                       } else {
-                        incrementValue$11 = var2;
+                        incrementValue$4 = var2;
                         var2++;
-                        var1_array[incrementValue$11] = (byte) 0;
+                        var1[incrementValue$4] = (byte) 0;
                         break L11;
                       }
                     }
                     var3++;
                     continue L1;
                   } else {
-                    if (var4[var6][0] == kg.field_d[var3][0]) {
+                    if ((var4[var6][0] ^ -1) == (kg.field_d[var3][0] ^ -1)) {
                       if (var4[var6][1] == kg.field_d[var3][1]) {
                         if (kg.field_d[var3][2] == var4[var6][2]) {
                           var5 = (byte)var6;
@@ -163,8 +162,8 @@ final class vl extends pg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "vl.C(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw aa.a((Throwable) ((Object) var1_ref), "vl.C(" + param0 + ')');
         }
     }
 
@@ -188,7 +187,6 @@ final class vl extends pg {
 
     final static String a(byte param0, CharSequence param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         char[] var4 = null;
         int var5 = 0;
@@ -197,23 +195,13 @@ final class vl extends pg {
         char[] var8 = null;
         char[] var9 = null;
         String stackIn_19_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_18_0 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var2 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -233,8 +221,7 @@ final class vl extends pg {
             var5 = 0;
             L2: while (true) {
               if (var2_int <= var5) {
-                stackOut_18_0 = new String(var9);
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = new String(var9);
                 break L0;
               } else {
                 L3: {
@@ -289,27 +276,19 @@ final class vl extends pg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var2);
-            stackOut_20_1 = new StringBuilder().append("vl.B(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var2);
+
+            stackIn_22_1 = new StringBuilder().append("vl.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L8;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L8;
             }
           }

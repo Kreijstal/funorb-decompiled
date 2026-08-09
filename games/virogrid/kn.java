@@ -13,20 +13,18 @@ final class kn extends ec {
     static String field_J;
 
     final static void g(int param0) {
-        u discarded$0 = null;
         la.field_g = 0;
         if (param0 != 20128) {
-            discarded$0 = kn.f(-95);
+            kn.f(-95);
         }
     }
 
     public static void h(int param0) {
-        boolean discarded$0 = false;
         field_E = null;
         field_F = null;
         field_J = null;
         if (param0 != 0) {
-            discarded$0 = kn.a('ﾬ', (byte) 74);
+            kn.a('ﾬ', (byte) 74);
         }
         field_L = null;
         field_G = null;
@@ -60,10 +58,22 @@ final class kn extends ec {
     }
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, he param7) {
-        boolean discarded$1 = false;
-        RuntimeException var8 = null;
+        hk[][] stackIn_4_0 = null;
+        hk[][] stackIn_5_0 = null;
+        int stackIn_5_1 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_38_0 = 0;
+        int stackIn_46_0 = 0;
+        RuntimeException stackIn_97_0 = null;
+        StringBuilder stackIn_97_1 = null;
+        RuntimeException stackIn_98_0 = null;
+        StringBuilder stackIn_98_1 = null;
+        String stackIn_98_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
-        hk[] var8_array = null;
+        hk[] var8 = null;
+        RuntimeException var8_ref = null;
         int var9 = 0;
         int[] var10 = null;
         int var10_int = 0;
@@ -77,45 +87,6 @@ final class kn extends ec {
         hk[] var17 = null;
         int[] var18 = null;
         int[] var19 = null;
-        hk[][] stackIn_3_0 = null;
-        hk[][] stackIn_4_0 = null;
-        hk[][] stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_38_0 = 0;
-        int stackIn_46_0 = 0;
-        RuntimeException stackIn_96_0 = null;
-        StringBuilder stackIn_96_1 = null;
-        RuntimeException stackIn_97_0 = null;
-        StringBuilder stackIn_97_1 = null;
-        RuntimeException stackIn_98_0 = null;
-        StringBuilder stackIn_98_1 = null;
-        String stackIn_98_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        hk[][] stackOut_2_0 = null;
-        hk[][] stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        hk[][] stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_31_0 = 0;
-        RuntimeException stackOut_95_0 = null;
-        StringBuilder stackOut_95_1 = null;
-        RuntimeException stackOut_97_0 = null;
-        StringBuilder stackOut_97_1 = null;
-        String stackOut_97_2 = null;
-        RuntimeException stackOut_96_0 = null;
-        StringBuilder stackOut_96_1 = null;
-        String stackOut_96_2 = null;
         var15 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -220,27 +191,22 @@ final class kn extends ec {
                 }
               } else {
                 L10: {
-                  stackOut_2_0 = oe.field_b;
-                  stackIn_4_0 = stackOut_2_0;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_4_0 = oe.field_b;
+
                   if (0 != (param6 ^ -1)) {
-                    stackOut_4_0 = (hk[][]) ((Object) stackIn_4_0);
-                    stackOut_4_1 = param6 + 4;
-                    stackIn_5_0 = stackOut_4_0;
-                    stackIn_5_1 = stackOut_4_1;
+                    stackIn_5_0 = (hk[][]) ((Object) stackIn_4_0);
+                    stackIn_5_1 = param6 + 4;
                     break L10;
                   } else {
-                    stackOut_3_0 = (hk[][]) ((Object) stackIn_3_0);
-                    stackOut_3_1 = 1;
-                    stackIn_5_0 = stackOut_3_0;
-                    stackIn_5_1 = stackOut_3_1;
+                    stackIn_5_0 = (hk[][]) ((Object) stackIn_4_0);
+                    stackIn_5_1 = 1;
                     break L10;
                   }
                 }
                 L11: {
                   var16 = stackIn_5_0[stackIn_5_1];
                   var17 = var16;
-                  var8_array = var17;
+                  var8 = var17;
                   var9 = 1;
                   if (!param0) {
                     break L11;
@@ -270,7 +236,7 @@ final class kn extends ec {
                         if (vj.field_b.length <= var10_int) {
                           break L11;
                         } else {
-                          if ((field_E[var10_int / 8] & 1 << (7 & var10_int)) == 0) {
+                          if ((field_E[var10_int / 8] & 1 << (7 & var10_int) ^ -1) == -1) {
                             var10_int++;
                             continue L14;
                           } else {
@@ -287,12 +253,10 @@ final class kn extends ec {
                 L15: while (true) {
                   L16: {
                     if (-1 != param6) {
-                      stackOut_21_0 = var17.length + -1;
-                      stackIn_22_0 = stackOut_21_0;
+                      stackIn_22_0 = var17.length + -1;
                       break L16;
                     } else {
-                      stackOut_20_0 = vj.field_b.length;
-                      stackIn_22_0 = stackOut_20_0;
+                      stackIn_22_0 = vj.field_b.length;
                       break L16;
                     }
                   }
@@ -348,27 +312,23 @@ final class kn extends ec {
                           }
                         }
                       }
-                      var13_ref_hk = var8_array[var11 + 1];
+                      var13_ref_hk = var8[var11 + 1];
                       if (!param0) {
                         L22: {
                           if (0 == (param6 ^ -1)) {
                             if (wl.field_d.field_vc != vj.field_b[var11]) {
-                              stackOut_45_0 = 0;
-                              stackIn_46_0 = stackOut_45_0;
+                              stackIn_46_0 = 0;
                               break L22;
                             } else {
-                              stackOut_44_0 = 1;
-                              stackIn_46_0 = stackOut_44_0;
+                              stackIn_46_0 = 1;
                               break L22;
                             }
                           } else {
                             if ((255 & wl.field_d.field_Pb[param6]) != var11) {
-                              stackOut_42_0 = 0;
-                              stackIn_46_0 = stackOut_42_0;
+                              stackIn_46_0 = 0;
                               break L22;
                             } else {
-                              stackOut_41_0 = 1;
-                              stackIn_46_0 = stackOut_41_0;
+                              stackIn_46_0 = 1;
                               break L22;
                             }
                           }
@@ -380,22 +340,18 @@ final class kn extends ec {
                           if (!var13_ref_hk.field_xb) {
                             if (var9 != 0) {
                               if (var13_ref_hk.field_Y) {
-                                stackOut_36_0 = 1;
-                                stackIn_38_0 = stackOut_36_0;
+                                stackIn_38_0 = 1;
                                 break L23;
                               } else {
-                                stackOut_35_0 = 0;
-                                stackIn_38_0 = stackOut_35_0;
+                                stackIn_38_0 = 0;
                                 break L23;
                               }
                             } else {
-                              stackOut_33_0 = 0;
-                              stackIn_38_0 = stackOut_33_0;
+                              stackIn_38_0 = 0;
                               break L23;
                             }
                           } else {
-                            stackOut_31_0 = 1;
-                            stackIn_38_0 = stackOut_31_0;
+                            stackIn_38_0 = 1;
                             break L23;
                           }
                         }
@@ -427,7 +383,7 @@ final class kn extends ec {
               if (param5 == 8) {
                 break L25;
               } else {
-                discarded$1 = kn.a('', (byte) -102);
+                kn.a('', (byte) -102);
                 break L25;
               }
             }
@@ -437,28 +393,20 @@ final class kn extends ec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L26: {
-            var8 = decompiledCaughtException;
-            stackOut_95_0 = (RuntimeException) (var8);
-            stackOut_95_1 = new StringBuilder().append("kn.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-            stackIn_97_0 = stackOut_95_0;
-            stackIn_97_1 = stackOut_95_1;
-            stackIn_96_0 = stackOut_95_0;
-            stackIn_96_1 = stackOut_95_1;
+            var8_ref = decompiledCaughtException;
+            stackIn_97_0 = (RuntimeException) (var8_ref);
+
+            stackIn_97_1 = new StringBuilder().append("kn.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
+
             if (param7 == null) {
-              stackOut_97_0 = (RuntimeException) ((Object) stackIn_97_0);
-              stackOut_97_1 = (StringBuilder) ((Object) stackIn_97_1);
-              stackOut_97_2 = "null";
-              stackIn_98_0 = stackOut_97_0;
-              stackIn_98_1 = stackOut_97_1;
-              stackIn_98_2 = stackOut_97_2;
+              stackIn_98_0 = (RuntimeException) ((Object) stackIn_97_0);
+              stackIn_98_1 = (StringBuilder) ((Object) stackIn_97_1);
+              stackIn_98_2 = "null";
               break L26;
             } else {
-              stackOut_96_0 = (RuntimeException) ((Object) stackIn_96_0);
-              stackOut_96_1 = (StringBuilder) ((Object) stackIn_96_1);
-              stackOut_96_2 = "{...}";
-              stackIn_98_0 = stackOut_96_0;
-              stackIn_98_1 = stackOut_96_1;
-              stackIn_98_2 = stackOut_96_2;
+              stackIn_98_0 = (RuntimeException) ((Object) stackIn_97_0);
+              stackIn_98_1 = (StringBuilder) ((Object) stackIn_97_1);
+              stackIn_98_2 = "{...}";
               break L26;
             }
           }
@@ -490,8 +438,6 @@ final class kn extends ec {
 
     final static boolean a(char param0, byte param1) {
         int stackIn_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
         L0: {
           if (param1 == -69) {
             break L0;
@@ -535,12 +481,10 @@ final class kn extends ec {
                 }
               }
             }
-            stackOut_12_0 = 0;
-            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_0 = 0;
             break L1;
           }
-          stackOut_11_0 = 1;
-          stackIn_13_0 = stackOut_11_0;
+          stackIn_13_0 = 1;
           break L1;
         }
         return stackIn_13_0 != 0;
@@ -548,11 +492,10 @@ final class kn extends ec {
 
     final static u f(int param0) {
         int var1_int = 0;
-        IllegalArgumentException var1 = null;
         u var2 = null;
         u stackIn_5_0 = null;
         Throwable decompiledCaughtException = null;
-        u stackOut_4_0 = null;
+        IllegalArgumentException var1 = null;
         try {
           L0: {
             L1: {
@@ -567,8 +510,7 @@ final class kn extends ec {
             L2: while (true) {
               var2 = dm.field_v.a(var1_int, (byte) 35);
               if (var2.field_o) {
-                stackOut_4_0 = (u) (var2);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (u) (var2);
                 break L0;
               } else {
                 var1_int++;

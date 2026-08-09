@@ -11,45 +11,45 @@ public final class Stream {
     private byte[] e;
 
     public final void a(float param0) {
-        int fieldTemp$16 = 0;
-        int fieldTemp$17 = 0;
-        int fieldTemp$18 = 0;
-        int fieldTemp$19 = 0;
-        int fieldTemp$20 = 0;
-        int fieldTemp$21 = 0;
-        int fieldTemp$22 = 0;
-        int fieldTemp$23 = 0;
-        int var2 = 0;
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
+        int fieldTemp$15 = 0;
+        int var2;
         if (3 + this.b >= this.e.length) {
           this.a();
           var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
-          fieldTemp$16 = this.b;
+          fieldTemp$8 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$16] = (byte)var2;
-          fieldTemp$17 = this.b;
+          this.e[fieldTemp$8] = (byte)var2;
+          fieldTemp$9 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$17] = (byte)(var2 >> 1618928616);
-          fieldTemp$18 = this.b;
+          this.e[fieldTemp$9] = (byte)(var2 >> 1618928616);
+          fieldTemp$10 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$18] = (byte)(var2 >> -654575952);
-          fieldTemp$19 = this.b;
+          this.e[fieldTemp$10] = (byte)(var2 >> -654575952);
+          fieldTemp$11 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$19] = (byte)(var2 >> -1580217352);
+          this.e[fieldTemp$11] = (byte)(var2 >> -1580217352);
           return;
         } else {
           var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
-          fieldTemp$20 = this.b;
+          fieldTemp$12 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$20] = (byte)var2;
-          fieldTemp$21 = this.b;
+          this.e[fieldTemp$12] = (byte)var2;
+          fieldTemp$13 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$21] = (byte)(var2 >> 1618928616);
-          fieldTemp$22 = this.b;
+          this.e[fieldTemp$13] = (byte)(var2 >> 1618928616);
+          fieldTemp$14 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$22] = (byte)(var2 >> -654575952);
-          fieldTemp$23 = this.b;
+          this.e[fieldTemp$14] = (byte)(var2 >> -654575952);
+          fieldTemp$15 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$23] = (byte)(var2 >> -1580217352);
+          this.e[fieldTemp$15] = (byte)(var2 >> -1580217352);
           return;
         }
     }
@@ -76,70 +76,70 @@ public final class Stream {
     }
 
     public final void b(float param0) {
-        int fieldTemp$16 = 0;
-        int fieldTemp$17 = 0;
-        int fieldTemp$18 = 0;
-        int fieldTemp$19 = 0;
-        int fieldTemp$20 = 0;
-        int fieldTemp$21 = 0;
-        int fieldTemp$22 = 0;
-        int fieldTemp$23 = 0;
-        int var2 = 0;
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
+        int fieldTemp$15 = 0;
+        int var2;
         if (this.e.length <= 3 + this.b) {
           this.a();
           var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
-          fieldTemp$16 = this.b;
+          fieldTemp$8 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$16] = (byte)(var2 >> 1616824536);
-          fieldTemp$17 = this.b;
+          this.e[fieldTemp$8] = (byte)(var2 >> 1616824536);
+          fieldTemp$9 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$17] = (byte)(var2 >> 1310780240);
-          fieldTemp$18 = this.b;
+          this.e[fieldTemp$9] = (byte)(var2 >> 1310780240);
+          fieldTemp$10 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$18] = (byte)(var2 >> 823797832);
-          fieldTemp$19 = this.b;
+          this.e[fieldTemp$10] = (byte)(var2 >> 823797832);
+          fieldTemp$11 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$19] = (byte)var2;
+          this.e[fieldTemp$11] = (byte)var2;
           return;
         } else {
           var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
-          fieldTemp$20 = this.b;
+          fieldTemp$12 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$20] = (byte)(var2 >> 1616824536);
-          fieldTemp$21 = this.b;
+          this.e[fieldTemp$12] = (byte)(var2 >> 1616824536);
+          fieldTemp$13 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$21] = (byte)(var2 >> 1310780240);
-          fieldTemp$22 = this.b;
+          this.e[fieldTemp$13] = (byte)(var2 >> 1310780240);
+          fieldTemp$14 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$22] = (byte)(var2 >> 823797832);
-          fieldTemp$23 = this.b;
+          this.e[fieldTemp$14] = (byte)(var2 >> 823797832);
+          fieldTemp$15 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$23] = (byte)var2;
+          this.e[fieldTemp$15] = (byte)var2;
           return;
         }
     }
 
     public final void a(int param0) {
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        int fieldTemp$11 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
         if (1 + this.b >= this.e.length) {
           this.a();
-          fieldTemp$8 = this.b;
+          fieldTemp$4 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$8] = (byte)(param0 >> 2025106600);
-          fieldTemp$9 = this.b;
+          this.e[fieldTemp$4] = (byte)(param0 >> 2025106600);
+          fieldTemp$5 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$9] = (byte)param0;
+          this.e[fieldTemp$5] = (byte)param0;
           return;
         } else {
-          fieldTemp$10 = this.b;
+          fieldTemp$6 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$10] = (byte)(param0 >> 2025106600);
-          fieldTemp$11 = this.b;
+          this.e[fieldTemp$6] = (byte)(param0 >> 2025106600);
+          fieldTemp$7 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$11] = (byte)param0;
+          this.e[fieldTemp$7] = (byte)param0;
           return;
         }
     }
@@ -153,26 +153,26 @@ public final class Stream {
     }
 
     public final void b(int param0) {
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        int fieldTemp$11 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
         if (this.e.length <= this.b + 1) {
           this.a();
-          fieldTemp$8 = this.b;
+          fieldTemp$4 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$8] = (byte)param0;
-          fieldTemp$9 = this.b;
+          this.e[fieldTemp$4] = (byte)param0;
+          fieldTemp$5 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$9] = (byte)(param0 >> -1546484856);
+          this.e[fieldTemp$5] = (byte)(param0 >> -1546484856);
           return;
         } else {
-          fieldTemp$10 = this.b;
+          fieldTemp$6 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$10] = (byte)param0;
-          fieldTemp$11 = this.b;
+          this.e[fieldTemp$6] = (byte)param0;
+          fieldTemp$7 = this.b;
           this.b = this.b + 1;
-          this.e[fieldTemp$11] = (byte)(param0 >> -1546484856);
+          this.e[fieldTemp$7] = (byte)(param0 >> -1546484856);
           return;
         }
     }

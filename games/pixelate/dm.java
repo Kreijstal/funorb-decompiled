@@ -40,20 +40,14 @@ final class dm extends vk implements vo {
     final static boolean q(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 22452) {
           L0: {
             dm.r(-8);
             if (ga.field_f <= 250) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -61,12 +55,10 @@ final class dm extends vk implements vo {
         } else {
           L1: {
             if (ga.field_f <= 250) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -75,7 +67,7 @@ final class dm extends vk implements vo {
     }
 
     final boolean c(boolean param0) {
-        id var2 = null;
+        id var2;
         if (!param0) {
           if (this.field_N) {
             if (!this.field_xb) {
@@ -120,14 +112,6 @@ final class dm extends vk implements vo {
     }
 
     private final void a(id param0, int param1, boolean param2) {
-        qm discarded$2 = null;
-        qm discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        vl var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
@@ -135,14 +119,10 @@ final class dm extends vk implements vo {
         String stackIn_34_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        vl var5 = null;
+        int var6 = 0;
         var6 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -158,7 +138,7 @@ final class dm extends vk implements vo {
             L2: {
               if (!param0.field_g) {
                 if (null == param0.field_f) {
-                  var4_ref = param0.field_c;
+                  var4 = param0.field_c;
                   if ((param0.field_a ^ -1) == -249) {
                     L3: {
                       if (param2) {
@@ -169,13 +149,13 @@ final class dm extends vk implements vo {
                       }
                     }
                     this.field_yb = true;
-                    var4_ref = ao.field_b;
+                    var4 = ao.field_b;
                     break L2;
                   } else {
                     break L2;
                   }
                 } else {
-                  var4_ref = ek.field_e;
+                  var4 = ek.field_e;
                   if (this.field_Ab != null) {
                     this.field_Ab.a((byte) 103);
                     break L2;
@@ -184,12 +164,12 @@ final class dm extends vk implements vo {
                   }
                 }
               } else {
-                var4_ref = gk.field_jb;
+                var4 = gk.field_jb;
                 break L2;
               }
             }
             L4: {
-              var5 = new vl((vk) (this), ba.field_d, var4_ref);
+              var5 = new vl((vk) (this), ba.field_d, var4);
               if (!param0.field_g) {
                 L5: {
                   if (!this.field_yb) {
@@ -202,7 +182,7 @@ final class dm extends vk implements vo {
                       break L5;
                     }
                   } else {
-                    discarded$2 = var5.a(1707, (fn) (this), vi.field_J);
+                    var5.a(1707, (fn) (this), vi.field_J);
                     break L5;
                   }
                 }
@@ -223,7 +203,7 @@ final class dm extends vk implements vo {
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  discarded$3 = var5.a(1707, (fn) (this), vi.field_J);
+                  var5.a(1707, (fn) (this), vi.field_J);
                   break L4;
                 }
               }
@@ -235,28 +215,20 @@ final class dm extends vk implements vo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var4);
-            stackOut_31_1 = new StringBuilder().append("dm.OB(");
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_33_0 = (RuntimeException) (var4_ref);
+
+            stackIn_33_1 = new StringBuilder().append("dm.OB(");
+
             if (param0 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L6;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L6;
             }
           }
@@ -322,9 +294,9 @@ final class dm extends vk implements vo {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
+            int var0;
+            int var1;
+            int var2;
             field_zb = new int[256];
             var1 = 0;
             L0: while (true) {

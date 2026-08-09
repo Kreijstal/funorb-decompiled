@@ -26,7 +26,7 @@ final class td {
     }
 
     final synchronized static long b(int param0) {
-        long var1 = 0L;
+        long var1;
         var1 = System.currentTimeMillis();
         if (param0 == 128) {
           if (cd.field_t > var1) {

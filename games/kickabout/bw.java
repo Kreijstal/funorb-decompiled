@@ -10,9 +10,8 @@ final class bw {
     static int[] field_f;
 
     final static int a(long param0, int param1, long param2) {
-        ak discarded$0 = null;
         if (param1 != 249299984) {
-            discarded$0 = bw.a(32, -61, false, -3, 30, true);
+            bw.a(32, -61, false, -3, 30, true);
         }
         return (int)((param2 << 249299984) / param0);
     }

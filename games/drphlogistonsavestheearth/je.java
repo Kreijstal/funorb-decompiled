@@ -13,10 +13,9 @@ final class je extends gi {
     int field_o;
 
     public static void a(byte param0) {
-        boolean discarded$0 = false;
         field_k = null;
         if (param0 <= 9) {
-            discarded$0 = je.a('3', 12);
+            je.a('3', 12);
             field_i = null;
             return;
         }
@@ -25,7 +24,6 @@ final class je extends gi {
 
     final static boolean a(char param0, int param1) {
         int stackIn_9_0 = 0;
-        int stackOut_7_0 = 0;
         if (param1 > 79) {
           if (param0 != 160) {
             if (param0 != 32) {
@@ -36,8 +34,7 @@ final class je extends gi {
                   return false;
                 }
               } else {
-                stackOut_7_0 = 1;
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = 1;
                 return stackIn_9_0 != 0;
               }
             } else {

@@ -18,7 +18,7 @@ final class bva {
     }
 
     final synchronized static long b(byte param0) {
-        long var1 = 0L;
+        long var1;
         if (param0 == -107) {
           var1 = System.currentTimeMillis();
           if (var1 < dca.field_o) {

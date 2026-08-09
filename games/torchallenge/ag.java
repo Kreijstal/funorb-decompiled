@@ -24,14 +24,14 @@ final class ag implements Iterator {
     }
 
     public final Object next() {
-        w var1 = this.field_f;
+        Object var1 = this.field_f;
         if (this.field_b.field_f == var1) {
             var1 = null;
             this.field_f = null;
         } else {
-            this.field_f = var1.field_k;
+            this.field_f = ((w) (var1)).field_k;
         }
-        this.field_a = var1;
+        this.field_a = (w) (var1);
         return var1;
     }
 
@@ -44,10 +44,10 @@ final class ag implements Iterator {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
         var1 = 0;
         var2 = 0;
         var3 = ii.field_h[0].field_q;

@@ -5,7 +5,7 @@ final class qi {
     static String[] field_a;
 
     final static void a(int param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         pl var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -16,36 +16,22 @@ final class qi {
           L0: {
             var1 = as.field_v;
             L1: while (true) {
-              L2: {
-                L3: {
-                  if (!gd.b((byte) 125)) {
-                    break L3;
-                  } else {
-                    var1.g(8, param0 ^ 0);
-                    fieldTemp$2 = var1.field_p + 1;
-                    var1.field_p = var1.field_p + 1;
-                    var2 = fieldTemp$2;
-                    sd.a(var1, param0 + 119);
-                    as.field_v.c(var1.field_p + -var2, -13745);
-                    if (var3 != 0) {
-                      break L2;
-                    } else {
-                      if (var3 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                }
+              if (!gd.b((byte) 125)) {
                 if (param0 == 8) {
-                  break L2;
+                  break L0;
                 } else {
                   field_a = (String[]) null;
                   return;
                 }
+              } else {
+                var1.g(8, param0 ^ 0);
+                fieldTemp$1 = var1.field_p + 1;
+                var1.field_p = var1.field_p + 1;
+                var2 = fieldTemp$1;
+                sd.a(var1, param0 + 119);
+                as.field_v.c(var1.field_p + -var2, -13745);
+                continue L1;
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

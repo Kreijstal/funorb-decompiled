@@ -111,9 +111,9 @@ final class qi {
     }
 
     private final int e(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var2 = this.field_e.field_j[this.field_e.field_i];
           if (var2 >= 0) {
@@ -229,10 +229,10 @@ final class qi {
     }
 
     final int d() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
         var1 = this.field_d.length;
         var2 = -1;
         var3 = 2147483647;

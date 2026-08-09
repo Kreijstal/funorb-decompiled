@@ -12,41 +12,34 @@ final class sva extends le {
     private int field_n;
 
     final int[] a(int param0, boolean param1) {
-        boolean discarded$1 = false;
-        int[] var3 = null;
-        int var4 = 0;
-        Random var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int[][] var31 = null;
         int stackIn_7_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_26_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
+        int[] var3;
+        int var4;
+        Random var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int[][] var31;
         L0: {
           var27 = VoidHunters.field_G;
           var3 = this.field_f.a((byte) 117, param0);
@@ -61,12 +54,10 @@ final class sva extends le {
               } else {
                 L2: {
                   if (this.field_j <= 0) {
-                    stackOut_6_0 = this.field_i;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = this.field_i;
                     break L2;
                   } else {
-                    stackOut_5_0 = this.field_i + (-var4 + hob.a(var6, this.field_j, 124));
-                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_0 = this.field_i + (-var4 + hob.a(var6, this.field_j, 124));
                     break L2;
                   }
                 }
@@ -108,12 +99,10 @@ final class sva extends le {
                 }
                 L6: {
                   if (var14 >= var13) {
-                    stackOut_18_0 = 0;
-                    stackIn_19_0 = stackOut_18_0;
+                    stackIn_19_0 = 0;
                     break L6;
                   } else {
-                    stackOut_17_0 = 1;
-                    stackIn_19_0 = stackOut_17_0;
+                    stackIn_19_0 = 1;
                     break L6;
                   }
                 }
@@ -152,12 +141,10 @@ final class sva extends le {
                   var20 = 2048 / var17;
                   var21 = 1024 + -(hob.a(var6, 4096, 127) >> -1241200286);
                   if (var12 > var10) {
-                    stackOut_25_0 = 1;
-                    stackIn_26_0 = stackOut_25_0;
+                    stackIn_26_0 = 1;
                     break L9;
                   } else {
-                    stackOut_24_0 = -1;
-                    stackIn_26_0 = stackOut_24_0;
+                    stackIn_26_0 = -1;
                     break L9;
                   }
                 }
@@ -210,7 +197,7 @@ final class sva extends le {
           if (param1) {
             break L13;
           } else {
-            discarded$1 = sva.e((byte) 3);
+            sva.e((byte) 3);
             break L13;
           }
         }
@@ -227,26 +214,15 @@ final class sva extends le {
     }
 
     final void a(int param0, int param1, ds param2) {
-        int[] discarded$2 = null;
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var4 = null;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -254,7 +230,7 @@ final class sva extends le {
               if (param1 < -60) {
                 break L1;
               } else {
-                discarded$2 = this.a(66, true);
+                this.a(66, true);
                 break L1;
               }
             }
@@ -293,27 +269,19 @@ final class sva extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var4);
-            stackOut_16_1 = new StringBuilder().append("sva.F(").append(param0).append(',').append(param1).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var4);
+
+            stackIn_18_1 = new StringBuilder().append("sva.F(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L3;
             }
           }
@@ -322,17 +290,15 @@ final class sva extends le {
     }
 
     final void c(byte param0) {
-        boolean discarded$0 = false;
         if (param0 >= -35) {
-            discarded$0 = sva.e((byte) -123);
+            sva.e((byte) -123);
         }
         taa.e((byte) -120);
     }
 
     final static boolean e(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != -34) {
-            discarded$0 = sva.e((byte) 68);
+            sva.e((byte) 68);
         }
         return !wba.field_p.a(4) ? true : false;
     }

@@ -24,24 +24,18 @@ abstract class kh {
     abstract void a(java.awt.Component param0, int param1, byte param2, int param3);
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         var2 = -73 / ((param0 - -36) / 39);
         param1 = param1 & 8191;
         if (-4097 < (param1 ^ -1)) {
           L0: {
             if (-2049 < (param1 ^ -1)) {
-              stackOut_7_0 = ad.field_g[2048 + -param1];
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = ad.field_g[2048 + -param1];
               break L0;
             } else {
-              stackOut_6_0 = -ad.field_g[-2048 + param1];
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = -ad.field_g[-2048 + param1];
               break L0;
             }
           }
@@ -49,12 +43,10 @@ abstract class kh {
         } else {
           L1: {
             if ((param1 ^ -1) <= -6145) {
-              stackOut_3_0 = ad.field_g[param1 + -6144];
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = ad.field_g[param1 + -6144];
               break L1;
             } else {
-              stackOut_2_0 = -ad.field_g[6144 - param1];
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = -ad.field_g[6144 - param1];
               break L1;
             }
           }

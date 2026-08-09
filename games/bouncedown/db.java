@@ -14,7 +14,6 @@ final class db extends wk {
     private String field_W;
 
     final void b(int param0, int param1, int param2) {
-        int discarded$1 = 0;
         super.b(param0, -57, param2);
         if (param1 >= -6) {
           return;
@@ -23,7 +22,7 @@ final class db extends wk {
             ne.field_v.a(this.field_W, param2 + (this.field_k >> 763654849), 103 + param0, 16777215, -1);
             if (null != this.field_P) {
               na.a(20 + param2, -7 + param0 - -120, 260, 8421504);
-              discarded$1 = ne.field_v.a(this.field_P, 20 + param2, param0 + 120 - -8, 260, 100, 16777215, -1, 1, 0, ne.field_v.field_s);
+              ne.field_v.a(this.field_P, 20 + param2, param0 + 120 - -8, 260, 100, 16777215, -1, 1, 0, ne.field_v.field_s);
               break L0;
             } else {
               break L0;
@@ -86,23 +85,12 @@ final class db extends wk {
     final static String a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -113,35 +101,26 @@ final class db extends wk {
                 break L1;
               }
             }
-            stackOut_2_0 = vd.a((byte) 88, param0, false);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = vd.a((byte) 88, param0, false);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("db.B(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("db.B(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -151,12 +130,11 @@ final class db extends wk {
     }
 
     public static void n(int param0) {
-        String discarded$0 = null;
         field_T = null;
         field_O = null;
         if (param0 != 260) {
             CharSequence var2 = (CharSequence) null;
-            discarded$0 = db.a((CharSequence) null, -82);
+            db.a((CharSequence) null, -82);
         }
     }
 

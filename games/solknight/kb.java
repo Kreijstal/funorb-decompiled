@@ -10,7 +10,7 @@ final class kb {
     static int field_b;
 
     final static ib a(int param0, byte param1) {
-        ib var2 = null;
+        ib var2;
         var2 = new ib();
         kh.field_a.a(var2, -7044);
         if (param1 < 66) {
@@ -24,7 +24,7 @@ final class kb {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        int var4 = 0;
+        int var4;
         if (param0 < -5) {
           dh.field_j.d(param1, param3);
           if (param2) {

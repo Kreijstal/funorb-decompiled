@@ -13,8 +13,10 @@ final class ne {
     static boolean field_d;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -22,8 +24,6 @@ final class ne {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var13 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -83,7 +83,7 @@ final class ne {
                           continue L6;
                         } else {
                           var9 = kh.field_i[var7];
-                          if ((65280 & var9) >> -1085804632 > param3) {
+                          if (((65280 & var9) >> -1085804632 ^ -1) < (param3 ^ -1)) {
                             if ((var9 & 65280) >> 1925298792 >= (var9 & 16711680) >> -665233648) {
                               L8: {
                                 var10 = -60 + ((16711680 & var9) >> -1722393361);

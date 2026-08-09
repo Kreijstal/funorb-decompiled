@@ -16,11 +16,11 @@ final class in {
     static bi field_f;
 
     final df b(byte param0) {
-        int fieldTemp$2 = 0;
-        df var2 = null;
-        int var3 = 0;
-        Object var4 = null;
-        df var4_ref = null;
+        int fieldTemp$1 = 0;
+        df var2;
+        int var3;
+        Object var4;
+        df var4_ref;
         L0: {
           var3 = ShatteredPlansClient.field_F ? 1 : 0;
           if (this.field_c <= 0) {
@@ -43,9 +43,9 @@ final class in {
               return (df) null;
             }
           } else {
-            fieldTemp$2 = this.field_c;
+            fieldTemp$1 = this.field_c;
             this.field_c = this.field_c + 1;
-            var4_ref = this.field_b[fieldTemp$2].field_h;
+            var4_ref = this.field_b[fieldTemp$1].field_h;
             var2 = var4_ref;
             if (var4_ref == this.field_b[this.field_c - 1]) {
               continue L1;
@@ -61,23 +61,12 @@ final class in {
         th var2 = null;
         RuntimeException var2_ref = null;
         th stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        th stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (param1 != null) {
@@ -91,8 +80,7 @@ final class in {
               }
               var2 = new th(param1, cf.field_H, sj.field_a, mc.field_s, cm.field_g, eo.field_fb, hd.field_q);
               pd.a(param0 + -15);
-              stackOut_5_0 = (th) (var2);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = (th) (var2);
               break L0;
             } else {
               return null;
@@ -102,27 +90,19 @@ final class in {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2_ref);
-            stackOut_7_1 = new StringBuilder().append("in.D(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2_ref);
+
+            stackIn_9_1 = new StringBuilder().append("in.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -132,8 +112,11 @@ final class in {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -152,9 +135,6 @@ final class in {
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
         var24 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -643,8 +623,8 @@ final class in {
     }
 
     final static qh a(int param0, boolean param1) {
-        fe var2 = null;
-        lp var3 = null;
+        fe var2;
+        lp var3;
         tq.field_j = new qh(320, -param0 + 479 - 28, 200, param0 - -28, ih.field_a.toUpperCase());
         if (!param1) {
           return (qh) null;
@@ -661,23 +641,13 @@ final class in {
 
     final void a(long param0, df param1, boolean param2) {
         df var5 = null;
-        RuntimeException var5_ref = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var5_ref = null;
         try {
           L0: {
             L1: {
@@ -708,27 +678,19 @@ final class in {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5_ref);
-            stackOut_6_1 = new StringBuilder().append("in.I(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5_ref);
+
+            stackIn_8_1 = new StringBuilder().append("in.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -746,8 +708,6 @@ final class in {
             qd stackIn_2_0 = null;
             qd stackIn_4_0 = null;
             ge stackIn_6_0 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             RuntimeException stackIn_10_0 = null;
@@ -756,17 +716,6 @@ final class in {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            qd stackOut_3_0 = null;
-            qd stackOut_1_0 = null;
-            ge stackOut_5_0 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            RuntimeException stackOut_9_0 = null;
-            StringBuilder stackOut_9_1 = null;
-            String stackOut_9_2 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
             try {
               L0: {
                 try {
@@ -775,13 +724,11 @@ final class in {
                     if (param1 == 16) {
                       var5 = (qd) (var4.newInstance());
                       var5.a(param3, param0, (byte) -111, param2);
-                      stackOut_3_0 = (qd) (var5);
-                      stackIn_4_0 = stackOut_3_0;
+                      stackIn_4_0 = (qd) (var5);
                       decompiledRegionSelector0 = 1;
                       break L1;
                     } else {
-                      stackOut_1_0 = (qd) null;
-                      stackIn_2_0 = stackOut_1_0;
+                      stackIn_2_0 = (qd) null;
                       decompiledRegionSelector0 = 0;
                       break L1;
                     }
@@ -791,8 +738,7 @@ final class in {
                   var4_ref = decompiledCaughtException;
                   var5_ref = new ge();
                   ((qd) ((Object) var5_ref)).a(param3, param0, (byte) -99, param2);
-                  stackOut_5_0 = (ge) (var5_ref);
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = (ge) (var5_ref);
                   return (qd) ((Object) stackIn_6_0);
                 }
                 if (decompiledRegionSelector0 == 0) {
@@ -807,27 +753,19 @@ final class in {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_7_0 = (RuntimeException) (var4_ref2);
-                stackOut_7_1 = new StringBuilder().append("in.K(");
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_9_1 = stackOut_7_1;
-                stackIn_8_0 = stackOut_7_0;
-                stackIn_8_1 = stackOut_7_1;
+                stackIn_9_0 = (RuntimeException) (var4_ref2);
+
+                stackIn_9_1 = new StringBuilder().append("in.K(");
+
                 if (param0 == null) {
-                  stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-                  stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-                  stackOut_9_2 = "null";
-                  stackIn_10_0 = stackOut_9_0;
-                  stackIn_10_1 = stackOut_9_1;
-                  stackIn_10_2 = stackOut_9_2;
+                  stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+                  stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+                  stackIn_10_2 = "null";
                   break L2;
                 } else {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "{...}";
-                  stackIn_10_0 = stackOut_8_0;
-                  stackIn_10_1 = stackOut_8_1;
-                  stackIn_10_2 = stackOut_8_2;
+                  stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+                  stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+                  stackIn_10_2 = "{...}";
                   break L2;
                 }
               }
@@ -846,10 +784,10 @@ final class in {
     }
 
     final df d(byte param0) {
-        int var2 = 0;
-        df var3 = null;
-        df var4 = null;
-        int var5 = 0;
+        int var2;
+        df var3;
+        df var4;
+        int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = 24 / ((-73 - param0) / 35);
         if (this.field_j != null) {
@@ -899,9 +837,9 @@ final class in {
     }
 
     final df a(int param0, long param1) {
-        df var4 = null;
-        df var5 = null;
-        int var6 = 0;
+        df var4;
+        df var5;
+        int var6;
         L0: {
           var6 = ShatteredPlansClient.field_F ? 1 : 0;
           this.field_d = param1;

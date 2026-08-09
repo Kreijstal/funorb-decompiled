@@ -19,8 +19,10 @@ class wk implements si {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        RuntimeException var8 = null;
+        int stackIn_8_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -62,10 +64,6 @@ class wk implements si {
         int[] var57 = null;
         int[] var58 = null;
         int[] var59 = null;
-        int stackIn_8_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
         var47 = Torquing.field_u;
         try {
           L0: {
@@ -125,12 +123,10 @@ class wk implements si {
               } else {
                 L3: {
                   if (var9 > var12) {
-                    stackOut_7_0 = 0;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = 0;
                     break L3;
                   } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = 1;
                     break L3;
                   }
                 }
@@ -286,10 +282,8 @@ class wk implements si {
     }
 
     public final boolean a(int param0, int param1) {
-        wd var3 = null;
+        wd var3;
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (param1 == 3) {
           L0: {
             L1: {
@@ -300,14 +294,12 @@ class wk implements si {
                 if (!var3.a(param1 + 43, this.field_c, (si) (this))) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0 != 0;
@@ -332,14 +324,13 @@ class wk implements si {
     }
 
     wd a(byte param0, int param1) {
-        un discarded$0 = null;
         ta var3 = this.field_e.a((long)param1, 4604);
         if (var3 != null) {
             return (wd) ((Object) var3);
         }
         byte[] var4 = this.field_f.b(param1, (byte) 89);
         if (param0 < 19) {
-            discarded$0 = this.a(60, (byte) 74);
+            this.a(60, (byte) 74);
         }
         if (var4 == null) {
             return null;
@@ -350,96 +341,30 @@ class wk implements si {
     }
 
     wk(la param0, la param1, la param2) {
-        int discarded$14 = 0;
-        int discarded$15 = 0;
-        int discarded$16 = 0;
-        int discarded$17 = 0;
-        int discarded$18 = 0;
-        byte discarded$19 = 0;
-        int discarded$20 = 0;
-        byte discarded$21 = 0;
-        byte discarded$22 = 0;
-        byte discarded$23 = 0;
-        byte discarded$24 = 0;
-        byte discarded$25 = 0;
-        byte discarded$26 = 0;
-        int discarded$27 = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        fj var7 = null;
-        un stackIn_10_0 = null;
         un stackIn_11_0 = null;
         un stackIn_12_0 = null;
         int stackIn_12_1 = 0;
-        un stackIn_18_0 = null;
         un stackIn_19_0 = null;
         un stackIn_20_0 = null;
         int stackIn_20_1 = 0;
-        un stackIn_71_0 = null;
         un stackIn_72_0 = null;
         un stackIn_73_0 = null;
         int stackIn_73_1 = 0;
-        RuntimeException stackIn_112_0 = null;
-        StringBuilder stackIn_112_1 = null;
         RuntimeException stackIn_113_0 = null;
         StringBuilder stackIn_113_1 = null;
         RuntimeException stackIn_114_0 = null;
         StringBuilder stackIn_114_1 = null;
         String stackIn_114_2 = null;
-        RuntimeException stackIn_115_0 = null;
-        StringBuilder stackIn_115_1 = null;
-        RuntimeException stackIn_116_0 = null;
         StringBuilder stackIn_116_1 = null;
-        RuntimeException stackIn_117_0 = null;
         StringBuilder stackIn_117_1 = null;
         String stackIn_117_2 = null;
-        RuntimeException stackIn_118_0 = null;
-        StringBuilder stackIn_118_1 = null;
-        RuntimeException stackIn_119_0 = null;
         StringBuilder stackIn_119_1 = null;
-        RuntimeException stackIn_120_0 = null;
         StringBuilder stackIn_120_1 = null;
         String stackIn_120_2 = null;
         RuntimeException decompiledCaughtException = null;
-        un stackOut_70_0 = null;
-        un stackOut_72_0 = null;
-        int stackOut_72_1 = 0;
-        un stackOut_71_0 = null;
-        int stackOut_71_1 = 0;
-        un stackOut_17_0 = null;
-        un stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        un stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        un stackOut_9_0 = null;
-        un stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        un stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        RuntimeException stackOut_111_0 = null;
-        StringBuilder stackOut_111_1 = null;
-        RuntimeException stackOut_113_0 = null;
-        StringBuilder stackOut_113_1 = null;
-        String stackOut_113_2 = null;
-        RuntimeException stackOut_112_0 = null;
-        StringBuilder stackOut_112_1 = null;
-        String stackOut_112_2 = null;
-        RuntimeException stackOut_114_0 = null;
-        StringBuilder stackOut_114_1 = null;
-        RuntimeException stackOut_116_0 = null;
-        StringBuilder stackOut_116_1 = null;
-        String stackOut_116_2 = null;
-        RuntimeException stackOut_115_0 = null;
-        StringBuilder stackOut_115_1 = null;
-        String stackOut_115_2 = null;
-        RuntimeException stackOut_117_0 = null;
-        StringBuilder stackOut_117_1 = null;
-        RuntimeException stackOut_119_0 = null;
-        StringBuilder stackOut_119_1 = null;
-        String stackOut_119_2 = null;
-        RuntimeException stackOut_118_0 = null;
-        StringBuilder stackOut_118_1 = null;
-        String stackOut_118_2 = null;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        fj var7 = null;
         this.field_e = new cf(256);
         try {
           L0: {
@@ -527,7 +452,7 @@ class wk implements si {
                                                                                           if (null == this.field_b[var5]) {
                                                                                             break L22;
                                                                                           } else {
-                                                                                            discarded$14 = var7.c((byte) -56);
+                                                                                            var7.c((byte) -56);
                                                                                             break L22;
                                                                                           }
                                                                                         }
@@ -540,7 +465,7 @@ class wk implements si {
                                                                                       if (null == this.field_b[var5]) {
                                                                                         break L23;
                                                                                       } else {
-                                                                                        discarded$15 = var7.i((byte) -101);
+                                                                                        var7.i((byte) -101);
                                                                                         break L23;
                                                                                       }
                                                                                     }
@@ -553,7 +478,7 @@ class wk implements si {
                                                                                   if (null == this.field_b[var5]) {
                                                                                     break L24;
                                                                                   } else {
-                                                                                    discarded$16 = var7.i((byte) -101);
+                                                                                    var7.i((byte) -101);
                                                                                     break L24;
                                                                                   }
                                                                                 }
@@ -566,7 +491,7 @@ class wk implements si {
                                                                               if (null == this.field_b[var5]) {
                                                                                 break L25;
                                                                               } else {
-                                                                                discarded$17 = var7.i((byte) -101);
+                                                                                var7.i((byte) -101);
                                                                                 break L25;
                                                                               }
                                                                             }
@@ -579,7 +504,7 @@ class wk implements si {
                                                                           if (this.field_b[var5] == null) {
                                                                             break L26;
                                                                           } else {
-                                                                            discarded$18 = var7.i((byte) -101);
+                                                                            var7.i((byte) -101);
                                                                             break L26;
                                                                           }
                                                                         }
@@ -592,7 +517,7 @@ class wk implements si {
                                                                       if (this.field_b[var5] == null) {
                                                                         break L27;
                                                                       } else {
-                                                                        discarded$19 = var7.f((byte) 104);
+                                                                        var7.f((byte) 104);
                                                                         break L27;
                                                                       }
                                                                     }
@@ -606,20 +531,15 @@ class wk implements si {
                                                                     break L28;
                                                                   } else {
                                                                     L29: {
-                                                                      stackOut_70_0 = this.field_b[var5];
-                                                                      stackIn_72_0 = stackOut_70_0;
-                                                                      stackIn_71_0 = stackOut_70_0;
+                                                                      stackIn_72_0 = this.field_b[var5];
+
                                                                       if (-2 != (var7.i((byte) -101) ^ -1)) {
-                                                                        stackOut_72_0 = (un) ((Object) stackIn_72_0);
-                                                                        stackOut_72_1 = 0;
-                                                                        stackIn_73_0 = stackOut_72_0;
-                                                                        stackIn_73_1 = stackOut_72_1;
+                                                                        stackIn_73_0 = (un) ((Object) stackIn_72_0);
+                                                                        stackIn_73_1 = 0;
                                                                         break L29;
                                                                       } else {
-                                                                        stackOut_71_0 = (un) ((Object) stackIn_71_0);
-                                                                        stackOut_71_1 = 1;
-                                                                        stackIn_73_0 = stackOut_71_0;
-                                                                        stackIn_73_1 = stackOut_71_1;
+                                                                        stackIn_73_0 = (un) ((Object) stackIn_72_0);
+                                                                        stackIn_73_1 = 1;
                                                                         break L29;
                                                                       }
                                                                     }
@@ -636,7 +556,7 @@ class wk implements si {
                                                               if (null == this.field_b[var5]) {
                                                                 break L30;
                                                               } else {
-                                                                discarded$20 = var7.i((byte) -101);
+                                                                var7.i((byte) -101);
                                                                 break L30;
                                                               }
                                                             }
@@ -649,7 +569,7 @@ class wk implements si {
                                                           if (null == this.field_b[var5]) {
                                                             break L31;
                                                           } else {
-                                                            discarded$21 = var7.f((byte) 30);
+                                                            var7.f((byte) 30);
                                                             break L31;
                                                           }
                                                         }
@@ -662,7 +582,7 @@ class wk implements si {
                                                       if (null == this.field_b[var5]) {
                                                         break L32;
                                                       } else {
-                                                        discarded$22 = var7.f((byte) 93);
+                                                        var7.f((byte) 93);
                                                         break L32;
                                                       }
                                                     }
@@ -688,7 +608,7 @@ class wk implements si {
                                               if (null == this.field_b[var5]) {
                                                 break L34;
                                               } else {
-                                                discarded$23 = var7.f((byte) 73);
+                                                var7.f((byte) 73);
                                                 break L34;
                                               }
                                             }
@@ -701,7 +621,7 @@ class wk implements si {
                                           if (null == this.field_b[var5]) {
                                             break L35;
                                           } else {
-                                            discarded$24 = var7.f((byte) 80);
+                                            var7.f((byte) 80);
                                             break L35;
                                           }
                                         }
@@ -714,7 +634,7 @@ class wk implements si {
                                       if (null == this.field_b[var5]) {
                                         break L36;
                                       } else {
-                                        discarded$25 = var7.f((byte) 106);
+                                        var7.f((byte) 106);
                                         break L36;
                                       }
                                     }
@@ -727,7 +647,7 @@ class wk implements si {
                                   if (null == this.field_b[var5]) {
                                     break L37;
                                   } else {
-                                    discarded$26 = var7.f((byte) 113);
+                                    var7.f((byte) 113);
                                     break L37;
                                   }
                                 }
@@ -740,7 +660,7 @@ class wk implements si {
                               if (this.field_b[var5] == null) {
                                 break L38;
                               } else {
-                                discarded$27 = var7.i((byte) -101);
+                                var7.i((byte) -101);
                                 break L38;
                               }
                             }
@@ -754,20 +674,15 @@ class wk implements si {
                             break L39;
                           } else {
                             L40: {
-                              stackOut_17_0 = this.field_b[var5];
-                              stackIn_19_0 = stackOut_17_0;
-                              stackIn_18_0 = stackOut_17_0;
+                              stackIn_19_0 = this.field_b[var5];
+
                               if (1 != var7.i((byte) -101)) {
-                                stackOut_19_0 = (un) ((Object) stackIn_19_0);
-                                stackOut_19_1 = 0;
-                                stackIn_20_0 = stackOut_19_0;
-                                stackIn_20_1 = stackOut_19_1;
+                                stackIn_20_0 = (un) ((Object) stackIn_19_0);
+                                stackIn_20_1 = 0;
                                 break L40;
                               } else {
-                                stackOut_18_0 = (un) ((Object) stackIn_18_0);
-                                stackOut_18_1 = 1;
-                                stackIn_20_0 = stackOut_18_0;
-                                stackIn_20_1 = stackOut_18_1;
+                                stackIn_20_0 = (un) ((Object) stackIn_19_0);
+                                stackIn_20_1 = 1;
                                 break L40;
                               }
                             }
@@ -785,20 +700,15 @@ class wk implements si {
                         break L41;
                       } else {
                         L42: {
-                          stackOut_9_0 = this.field_b[var5];
-                          stackIn_11_0 = stackOut_9_0;
-                          stackIn_10_0 = stackOut_9_0;
+                          stackIn_11_0 = this.field_b[var5];
+
                           if (-1 != (var7.i((byte) -101) ^ -1)) {
-                            stackOut_11_0 = (un) ((Object) stackIn_11_0);
-                            stackOut_11_1 = 0;
-                            stackIn_12_0 = stackOut_11_0;
-                            stackIn_12_1 = stackOut_11_1;
+                            stackIn_12_0 = (un) ((Object) stackIn_11_0);
+                            stackIn_12_1 = 0;
                             break L42;
                           } else {
-                            stackOut_10_0 = (un) ((Object) stackIn_10_0);
-                            stackOut_10_1 = 1;
-                            stackIn_12_0 = stackOut_10_0;
-                            stackIn_12_1 = stackOut_10_1;
+                            stackIn_12_0 = (un) ((Object) stackIn_11_0);
+                            stackIn_12_1 = 1;
                             break L42;
                           }
                         }
@@ -828,81 +738,57 @@ class wk implements si {
           decompiledCaughtException = decompiledCaughtParameter0;
           L44: {
             var4 = decompiledCaughtException;
-            stackOut_111_0 = (RuntimeException) (var4);
-            stackOut_111_1 = new StringBuilder().append("wk.<init>(");
-            stackIn_113_0 = stackOut_111_0;
-            stackIn_113_1 = stackOut_111_1;
-            stackIn_112_0 = stackOut_111_0;
-            stackIn_112_1 = stackOut_111_1;
+            stackIn_113_0 = (RuntimeException) (var4);
+
+            stackIn_113_1 = new StringBuilder().append("wk.<init>(");
+
             if (param0 == null) {
-              stackOut_113_0 = (RuntimeException) ((Object) stackIn_113_0);
-              stackOut_113_1 = (StringBuilder) ((Object) stackIn_113_1);
-              stackOut_113_2 = "null";
-              stackIn_114_0 = stackOut_113_0;
-              stackIn_114_1 = stackOut_113_1;
-              stackIn_114_2 = stackOut_113_2;
+              stackIn_114_0 = (RuntimeException) ((Object) stackIn_113_0);
+              stackIn_114_1 = (StringBuilder) ((Object) stackIn_113_1);
+              stackIn_114_2 = "null";
               break L44;
             } else {
-              stackOut_112_0 = (RuntimeException) ((Object) stackIn_112_0);
-              stackOut_112_1 = (StringBuilder) ((Object) stackIn_112_1);
-              stackOut_112_2 = "{...}";
-              stackIn_114_0 = stackOut_112_0;
-              stackIn_114_1 = stackOut_112_1;
-              stackIn_114_2 = stackOut_112_2;
+              stackIn_114_0 = (RuntimeException) ((Object) stackIn_113_0);
+              stackIn_114_1 = (StringBuilder) ((Object) stackIn_113_1);
+              stackIn_114_2 = "{...}";
               break L44;
             }
           }
           L45: {
-            stackOut_114_0 = (RuntimeException) ((Object) stackIn_114_0);
-            stackOut_114_1 = ((StringBuilder) (Object) stackIn_114_1).append(stackIn_114_2).append(',');
-            stackIn_116_0 = stackOut_114_0;
-            stackIn_116_1 = stackOut_114_1;
-            stackIn_115_0 = stackOut_114_0;
-            stackIn_115_1 = stackOut_114_1;
+
+
+            stackIn_116_1 = ((StringBuilder) (Object) stackIn_114_1).append(stackIn_114_2).append(',');
+
             if (param1 == null) {
-              stackOut_116_0 = (RuntimeException) ((Object) stackIn_116_0);
-              stackOut_116_1 = (StringBuilder) ((Object) stackIn_116_1);
-              stackOut_116_2 = "null";
-              stackIn_117_0 = stackOut_116_0;
-              stackIn_117_1 = stackOut_116_1;
-              stackIn_117_2 = stackOut_116_2;
+              stackIn_114_0 = (RuntimeException) ((Object) stackIn_114_0);
+              stackIn_117_1 = (StringBuilder) ((Object) stackIn_116_1);
+              stackIn_117_2 = "null";
               break L45;
             } else {
-              stackOut_115_0 = (RuntimeException) ((Object) stackIn_115_0);
-              stackOut_115_1 = (StringBuilder) ((Object) stackIn_115_1);
-              stackOut_115_2 = "{...}";
-              stackIn_117_0 = stackOut_115_0;
-              stackIn_117_1 = stackOut_115_1;
-              stackIn_117_2 = stackOut_115_2;
+              stackIn_114_0 = (RuntimeException) ((Object) stackIn_114_0);
+              stackIn_117_1 = (StringBuilder) ((Object) stackIn_116_1);
+              stackIn_117_2 = "{...}";
               break L45;
             }
           }
           L46: {
-            stackOut_117_0 = (RuntimeException) ((Object) stackIn_117_0);
-            stackOut_117_1 = ((StringBuilder) (Object) stackIn_117_1).append(stackIn_117_2).append(',');
-            stackIn_119_0 = stackOut_117_0;
-            stackIn_119_1 = stackOut_117_1;
-            stackIn_118_0 = stackOut_117_0;
-            stackIn_118_1 = stackOut_117_1;
+
+
+            stackIn_119_1 = ((StringBuilder) (Object) stackIn_117_1).append(stackIn_117_2).append(',');
+
             if (param2 == null) {
-              stackOut_119_0 = (RuntimeException) ((Object) stackIn_119_0);
-              stackOut_119_1 = (StringBuilder) ((Object) stackIn_119_1);
-              stackOut_119_2 = "null";
-              stackIn_120_0 = stackOut_119_0;
-              stackIn_120_1 = stackOut_119_1;
-              stackIn_120_2 = stackOut_119_2;
+              stackIn_114_0 = (RuntimeException) ((Object) stackIn_114_0);
+              stackIn_120_1 = (StringBuilder) ((Object) stackIn_119_1);
+              stackIn_120_2 = "null";
               break L46;
             } else {
-              stackOut_118_0 = (RuntimeException) ((Object) stackIn_118_0);
-              stackOut_118_1 = (StringBuilder) ((Object) stackIn_118_1);
-              stackOut_118_2 = "{...}";
-              stackIn_120_0 = stackOut_118_0;
-              stackIn_120_1 = stackOut_118_1;
-              stackIn_120_2 = stackOut_118_2;
+              stackIn_114_0 = (RuntimeException) ((Object) stackIn_114_0);
+              stackIn_120_1 = (StringBuilder) ((Object) stackIn_119_1);
+              stackIn_120_2 = "{...}";
               break L46;
             }
           }
-          throw rb.a((Throwable) ((Object) stackIn_120_0), stackIn_120_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_114_0), stackIn_120_2 + ')');
         }
     }
 

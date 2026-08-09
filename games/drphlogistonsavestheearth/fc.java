@@ -11,8 +11,19 @@ final class fc {
     }
 
     final static boolean a(boolean param0, int param1, CharSequence param2, int param3) {
-        RuntimeException var4 = null;
+        int stackIn_26_0 = 0;
+        int stackIn_31_0 = 0;
+        int stackIn_38_0 = 0;
+        int stackIn_43_0 = 0;
+        RuntimeException stackIn_46_0 = null;
+        StringBuilder stackIn_46_1 = null;
+        RuntimeException stackIn_47_0 = null;
+        StringBuilder stackIn_47_1 = null;
+        String stackIn_47_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -21,31 +32,6 @@ final class fc {
         int var10 = 0;
         int var11 = 0;
         nl var12 = null;
-        int stackIn_26_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_38_0 = 0;
-        int stackIn_43_0 = 0;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        String stackIn_47_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_42_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_37_0 = 0;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
         var11 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -72,8 +58,7 @@ final class fc {
                   var8 = 0;
                   L3: while (true) {
                     if (var7 <= var8) {
-                      stackOut_42_0 = var5;
-                      stackIn_43_0 = stackOut_42_0;
+                      stackIn_43_0 = var5;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
@@ -136,14 +121,12 @@ final class fc {
                               }
                             }
                           }
-                          stackOut_25_0 = 0;
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = 0;
                           decompiledRegionSelector0 = 0;
                           break L0;
                         }
                         if (var9 >= param3) {
-                          stackOut_30_0 = 0;
-                          stackIn_31_0 = stackOut_30_0;
+                          stackIn_31_0 = 0;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -157,8 +140,7 @@ final class fc {
                           }
                           var10 = var6 * param3 - -var9;
                           if (var6 != var10 / param3) {
-                            stackOut_37_0 = 0;
-                            stackIn_38_0 = stackOut_37_0;
+                            stackIn_38_0 = 0;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
@@ -181,27 +163,19 @@ final class fc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var4 = decompiledCaughtException;
-            stackOut_44_0 = (RuntimeException) (var4);
-            stackOut_44_1 = new StringBuilder().append("fc.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_46_0 = stackOut_44_0;
-            stackIn_46_1 = stackOut_44_1;
-            stackIn_45_0 = stackOut_44_0;
-            stackIn_45_1 = stackOut_44_1;
+            stackIn_46_0 = (RuntimeException) (var4);
+
+            stackIn_46_1 = new StringBuilder().append("fc.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "null";
-              stackIn_47_0 = stackOut_46_0;
-              stackIn_47_1 = stackOut_46_1;
-              stackIn_47_2 = stackOut_46_2;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "null";
               break L11;
             } else {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "{...}";
-              stackIn_47_0 = stackOut_45_0;
-              stackIn_47_1 = stackOut_45_1;
-              stackIn_47_2 = stackOut_45_2;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "{...}";
               break L11;
             }
           }
@@ -225,7 +199,6 @@ final class fc {
     final static void a(int param0, nl param1, int param2) {
         lh var5 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var5 = nj.field_p;
             var5.d(param2, -18392);
@@ -241,7 +214,7 @@ final class fc {
             }
             var5.a(param1.field_q, (byte) -117);
             var5.a(param1.field_k, (byte) 104);
-            discarded$0 = var5.d(var4, (byte) 9);
+            var5.d(var4, (byte) 9);
             var5.b(var5.field_j + -var4, (byte) 87);
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) ((Object) runtimeException), "fc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

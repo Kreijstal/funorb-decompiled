@@ -3,14 +3,8 @@
  */
 final class dpb {
     final static String a(boolean param0, pgb param1) {
-        Object var2 = null;
-        String var3 = null;
-        int var4 = 0;
-        String var5 = null;
         String stackIn_3_0 = null;
         String stackIn_35_0 = null;
-        Object stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
         Object stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         Object stackIn_39_0 = null;
@@ -18,16 +12,11 @@ final class dpb {
         String stackIn_39_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_34_0 = null;
-        String stackOut_2_0 = null;
-        Object stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        Object stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        Object stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
+        Object var2 = null;
+        String var3 = null;
+        Object var3_ref = null;
+        int var4 = 0;
+        String var5 = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -49,8 +38,8 @@ final class dpb {
                   }
                   if (-3 == (param1.field_c ^ -1)) {
                     var2 = "<img=1>" + (String) (var2);
-                    var3 = (String) (var2);
-                    var3 = (String) (var2);
+                    var3_ref = var2;
+                    var3_ref = var2;
                     break L1;
                   } else {
                     break L1;
@@ -129,13 +118,11 @@ final class dpb {
                   }
                 }
               }
-              stackOut_34_0 = (String) (var3);
-              stackIn_35_0 = stackOut_34_0;
+              stackIn_35_0 = (String) (var3);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = (String) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (String) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -144,27 +131,19 @@ final class dpb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_36_0 = var2;
-            stackOut_36_1 = new StringBuilder().append("dpb.A(").append(param0).append(',');
-            stackIn_38_0 = stackOut_36_0;
-            stackIn_38_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+            stackIn_38_0 = var2;
+
+            stackIn_38_1 = new StringBuilder().append("dpb.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_38_0 = stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
+              stackIn_39_0 = stackIn_38_0;
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "null";
               break L9;
             } else {
-              stackOut_37_0 = stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "{...}";
-              stackIn_39_0 = stackOut_37_0;
-              stackIn_39_1 = stackOut_37_1;
-              stackIn_39_2 = stackOut_37_2;
+              stackIn_39_0 = stackIn_38_0;
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "{...}";
               break L9;
             }
           }

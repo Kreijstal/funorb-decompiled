@@ -16,7 +16,7 @@ abstract class r extends wt {
     }
 
     final static void e(int param0) {
-        int var1 = 0;
+        int var1;
         if (param0 == -14598) {
           if (32 < gn.field_a) {
             L0: {

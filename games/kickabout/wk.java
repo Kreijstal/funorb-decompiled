@@ -13,8 +13,13 @@ final class wk {
     static up field_c;
 
     final static short a(int param0, int param1) {
-        RuntimeException var2 = null;
+        float stackIn_8_0 = 0.0f;
+        float stackIn_15_0 = 0.0f;
+        float stackIn_33_0 = 0.0f;
+        short stackIn_34_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         float var2_float = 0.0f;
+        RuntimeException var2 = null;
         float var3 = 0.0f;
         float var4 = 0.0f;
         float var5 = 0.0f;
@@ -26,23 +31,6 @@ final class wk {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        float stackIn_8_0 = 0.0f;
-        float stackIn_15_0 = 0.0f;
-        float stackIn_33_0 = 0.0f;
-        short stackIn_34_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        float stackOut_7_0 = 0.0f;
-        float stackOut_6_0 = 0.0f;
-        float stackOut_4_0 = 0.0f;
-        float stackOut_3_0 = 0.0f;
-        float stackOut_14_0 = 0.0f;
-        float stackOut_13_0 = 0.0f;
-        float stackOut_11_0 = 0.0f;
-        float stackOut_10_0 = 0.0f;
-        float stackOut_31_0 = 0.0f;
-        float stackOut_30_0 = 0.0f;
-        float stackOut_32_0 = 0.0f;
-        short stackOut_33_0 = 0;
         var13 = Kickabout.field_G;
         try {
           L0: {
@@ -52,22 +40,18 @@ final class wk {
               var4 = (float)(param0 & 255) / 255.0f;
               if (var2_float > var3) {
                 if (var2_float <= var4) {
-                  stackOut_7_0 = var4;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = var4;
                   break L1;
                 } else {
-                  stackOut_6_0 = var2_float;
-                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_0 = var2_float;
                   break L1;
                 }
               } else {
                 if (var3 > var4) {
-                  stackOut_4_0 = var3;
-                  stackIn_8_0 = stackOut_4_0;
+                  stackIn_8_0 = var3;
                   break L1;
                 } else {
-                  stackOut_3_0 = var4;
-                  stackIn_8_0 = stackOut_3_0;
+                  stackIn_8_0 = var4;
                   break L1;
                 }
               }
@@ -76,22 +60,18 @@ final class wk {
               var5 = stackIn_8_0;
               if (var2_float < var3) {
                 if (var2_float < var4) {
-                  stackOut_14_0 = var2_float;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = var2_float;
                   break L2;
                 } else {
-                  stackOut_13_0 = var4;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = var4;
                   break L2;
                 }
               } else {
                 if (var3 >= var4) {
-                  stackOut_11_0 = var4;
-                  stackIn_15_0 = stackOut_11_0;
+                  stackIn_15_0 = var4;
                   break L2;
                 } else {
-                  stackOut_10_0 = var3;
-                  stackIn_15_0 = stackOut_10_0;
+                  stackIn_15_0 = var3;
                   break L2;
                 }
               }
@@ -131,27 +111,23 @@ final class wk {
                             break L7;
                           } else {
                             if (0.5f <= var9) {
-                              stackOut_31_0 = (var5 - var6) / (-(2.0f * var9) + 2.0f);
-                              stackIn_33_0 = stackOut_31_0;
+                              stackIn_33_0 = (var5 - var6) / (-(2.0f * var9) + 2.0f);
                               break L6;
                             } else {
-                              stackOut_30_0 = (var5 - var6) / (var9 * 2.0f);
-                              stackIn_33_0 = stackOut_30_0;
+                              stackIn_33_0 = (var5 - var6) / (var9 * 2.0f);
                               break L6;
                             }
                           }
                         }
                       }
-                      stackOut_32_0 = 0.0f;
-                      stackIn_33_0 = stackOut_32_0;
+                      stackIn_33_0 = 0.0f;
                       break L6;
                     }
                     var8 = stackIn_33_0;
                     var10 = (int)(0.5f + var7 * (float)param1);
                     var11 = (int)(7.0f * var8 + 0.5f);
                     var12 = (int)(0.5f + var9 * 127.0f);
-                    stackOut_33_0 = ks.a(var12, var10, -87, var11);
-                    stackIn_34_0 = stackOut_33_0;
+                    stackIn_34_0 = ks.a(var12, var10, -87, var11);
                     break L0;
                   } else {
                     var7 = var7 - 1.0f;
@@ -202,15 +178,15 @@ final class wk {
     }
 
     final static gr a(boolean param0, boolean param1) {
-        Random var3 = null;
-        int var4 = 0;
-        up var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        gr var11 = null;
+        Random var3;
+        int var4;
+        up var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        gr var11;
         L0: {
           var10 = Kickabout.field_G;
           var11 = new gr();

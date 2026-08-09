@@ -38,7 +38,6 @@ final class pd extends rj {
     }
 
     final void d(int param0, int param1, int param2) {
-        boolean discarded$0 = false;
         if (0 == this.field_F) {
             return;
         }
@@ -51,23 +50,20 @@ final class pd extends rj {
         }
         this.field_z = var4;
         if (param1 != 128) {
-            discarded$0 = pd.c(57, 88, (byte) -82);
+            pd.c(57, 88, (byte) -82);
         }
     }
 
     final void b(int param0, int param1) {
-        boolean discarded$0 = false;
         if (param0 != 4973) {
-            discarded$0 = pd.c(-62, 37, (byte) -14);
+            pd.c(-62, 37, (byte) -14);
         }
         this.a(param1 >> -1887960315, -18566, param1, param1 >> 1910039748);
     }
 
     final static boolean c(int param0, int param1, byte param2) {
-        int var3 = 0;
+        int var3;
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           L1: {
             var3 = -8 / ((param2 - 14) / 43);
@@ -83,16 +79,14 @@ final class pd extends rj {
                   if (32 + (wi.field_kb + qc.field_w) <= param0) {
                     break L1;
                   } else {
-                    stackOut_4_0 = 1;
-                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_6_0 = 1;
                     break L0;
                   }
                 }
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L0;
         }
         return stackIn_6_0 != 0;
@@ -108,23 +102,13 @@ final class pd extends rj {
     }
 
     final static void a(java.awt.Canvas param0, int param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -151,27 +135,19 @@ final class pd extends rj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("pd.R(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("pd.R(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -180,11 +156,10 @@ final class pd extends rj {
     }
 
     final static void a(int param0, java.applet.Applet param1) {
-        boolean discarded$0 = false;
         try {
             sm.a(param1, 31500, "");
             if (param0 != 5189) {
-                discarded$0 = pd.c(66, -39, (byte) -110);
+                pd.c(66, -39, (byte) -110);
             }
             fk.a(param0 ^ 5137, param1);
         } catch (RuntimeException runtimeException) {
@@ -201,16 +176,12 @@ final class pd extends rj {
     }
 
     final void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var7 = DungeonAssault.field_K;
         var4 = param0 + this.field_t;
         var5 = this.field_i + param2;
@@ -232,12 +203,10 @@ final class pd extends rj {
                         if (this.field_F < 2 * qh.field_q.field_v) {
                           L4: {
                             if (0 == this.field_C) {
-                              stackOut_18_0 = 0;
-                              stackIn_19_0 = stackOut_18_0;
+                              stackIn_19_0 = 0;
                               break L4;
                             } else {
-                              stackOut_17_0 = this.field_z * (-23 + this.field_F) / this.field_C;
-                              stackIn_19_0 = stackOut_17_0;
+                              stackIn_19_0 = this.field_z * (-23 + this.field_F) / this.field_C;
                               break L4;
                             }
                           }
@@ -251,12 +220,10 @@ final class pd extends rj {
                         } else {
                           L5: {
                             if (-1 == (this.field_C ^ -1)) {
-                              stackOut_14_0 = 0;
-                              stackIn_15_0 = stackOut_14_0;
+                              stackIn_15_0 = 0;
                               break L5;
                             } else {
-                              stackOut_13_0 = this.field_z * (this.field_F - 46) / this.field_C;
-                              stackIn_15_0 = stackOut_13_0;
+                              stackIn_15_0 = this.field_z * (this.field_F - 46) / this.field_C;
                               break L5;
                             }
                           }
@@ -299,45 +266,21 @@ final class pd extends rj {
     }
 
     final void a(int param0, byte param1, int param2) {
-        int var4 = 0;
-        if (param1 <= -59) {
-          if (this.field_F == 0) {
+        if (param1 > -59) {
             return;
-          } else {
-            L0: {
-              var4 = this.a(param0, true);
-              if (var4 > this.field_z) {
-                this.field_z = this.field_z + this.field_D;
-                break L0;
-              } else {
-                if (var4 >= this.field_z) {
-                  break L0;
-                } else {
-                  this.field_z = this.field_z - this.field_D;
-                  break L0;
-                }
-              }
-            }
-            L1: {
-              if (this.field_C >= this.field_z) {
-                break L1;
-              } else {
-                this.field_z = this.field_C;
-                break L1;
-              }
-            }
-            L2: {
-              if (this.field_z >= 0) {
-                break L2;
-              } else {
-                this.field_z = 0;
-                break L2;
-              }
-            }
+        }
+        if (!(this.field_F != 0)) {
             return;
-          }
-        } else {
-          return;
+        }
+        int var4 = this.a(param0, true);
+        if (var4 > this.field_z || var4 < this.field_z) {
+            this.field_z = this.field_z + this.field_D;
+        }
+        if (this.field_C < this.field_z) {
+            this.field_z = this.field_C;
+        }
+        if (this.field_z < 0) {
+            this.field_z = 0;
         }
     }
 

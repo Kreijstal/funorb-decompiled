@@ -12,78 +12,68 @@ final class ig extends da {
 
     ig(bf param0, vs param1, vd[] param2, boolean param3) {
         super(param0, param1);
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        boolean discarded$15 = false;
-        int var5 = 0;
-        int var6 = 0;
-        int[] var7_ref_int__ = null;
-        byte[] var7_ref_byte__ = null;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var8_ref_int__ = null;
-        int var9 = 0;
-        int[] var10_ref_int__ = null;
-        int var10_int = 0;
-        float var10 = 0.0f;
-        byte[] var11_ref_byte__ = null;
-        int var11_int = 0;
-        float var11 = 0.0f;
-        byte[] var12_ref_byte__ = null;
-        int var12 = 0;
-        int var13_int = 0;
-        vd var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        byte[] var16_ref_byte__ = null;
-        int var17 = 0;
-        int var18_int = 0;
-        float var18 = 0.0f;
-        int var19_int = 0;
-        float var19 = 0.0f;
-        int var20_int = 0;
-        float var20 = 0.0f;
-        int var21_int = 0;
-        float var21 = 0.0f;
-        float var22 = 0.0f;
-        float var23 = 0.0f;
-        int var24 = 0;
-        vd var25 = null;
-        vd var26 = null;
-        byte[] var27 = null;
-        int[] var28 = null;
-        vd var29 = null;
-        byte[] var30 = null;
-        byte[] var31 = null;
-        int[] var32 = null;
-        jaclib.memory.Buffer var33 = null;
-        jaclib.memory.Stream var34 = null;
-        byte[] var35 = null;
-        int[] var36 = null;
-        byte[] var37 = null;
-        byte[] var38 = null;
-        int[] var39 = null;
-        byte[] stackIn_17_0 = null;
-        int stackIn_17_1 = 0;
+        int incrementValue$0 = 0;
+        byte dupTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         byte[] stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         byte[] stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         int stackIn_19_2 = 0;
-        byte[] stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        byte[] stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int stackOut_18_2 = 0;
-        byte[] stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        int stackOut_17_2 = 0;
+        int var5;
+        int var6;
+        int[] var7_ref_int__;
+        byte[] var7_ref_byte__;
+        int var7;
+        int var8;
+        int[] var8_ref_int__;
+        int var9;
+        int[] var10_ref_int__;
+        int var10_int;
+        float var10;
+        byte[] var11_ref_byte__;
+        int var11_int;
+        float var11;
+        byte[] var12_ref_byte__;
+        int var12;
+        int var13_int;
+        vd var13;
+        int var14;
+        int var15;
+        int var16;
+        byte[] var16_ref_byte__;
+        int var17;
+        int var18_int;
+        float var18;
+        int var19_int;
+        float var19;
+        int var20_int;
+        float var20;
+        int var21_int;
+        float var21;
+        float var22;
+        float var23;
+        int var24;
+        vd var25;
+        vd var26;
+        byte[] var27;
+        int[] var28;
+        vd var29;
+        byte[] var30;
+        byte[] var31;
+        int[] var32;
+        jaclib.memory.Buffer var33;
+        jaclib.memory.Stream var34;
+        byte[] var35;
+        int[] var36;
+        byte[] var37;
+        byte[] var38;
+        int[] var39;
         this.field_f = param0;
         var5 = 0;
         var6 = 0;
@@ -127,17 +117,18 @@ final class ig extends da {
                               var19_int++;
                               continue L3;
                             } else {
-                              incrementValue$8 = var18_int;
+                              incrementValue$0 = var18_int;
                               var18_int++;
-                              var21_int = var12_ref_byte__[incrementValue$8];
-                              if (var12_ref_byte__[incrementValue$8] == 0) {
+                              dupTemp$1 = var12_ref_byte__[incrementValue$0];
+                              var21_int = dupTemp$1;
+                              if (dupTemp$1 == 0) {
                                 var17++;
                                 var20_int++;
                                 continue L4;
                               } else {
-                                incrementValue$9 = var17;
+                                incrementValue$2 = var17;
                                 var17++;
-                                var7_ref_int__[incrementValue$9] = -16777216 | var10_ref_int__[var21_int & 255];
+                                var7_ref_int__[incrementValue$2] = -16777216 | var10_ref_int__[var21_int & 255];
                                 var20_int++;
                                 continue L4;
                               }
@@ -159,9 +150,9 @@ final class ig extends da {
                               var19_int++;
                               continue L5;
                             } else {
-                              incrementValue$10 = var17;
+                              incrementValue$3 = var17;
                               var17++;
-                              var7_ref_int__[incrementValue$10] = var37[var18_int] << 24 | var10_ref_int__[var38[var18_int] & 255];
+                              var7_ref_int__[incrementValue$3] = var37[var18_int] << 24 | var10_ref_int__[var38[var18_int] & 255];
                               var18_int++;
                               var20_int++;
                               continue L6;
@@ -225,11 +216,11 @@ final class ig extends da {
                               var17++;
                               continue L10;
                             } else {
-                              incrementValue$11 = var14;
+                              incrementValue$4 = var14;
                               var14++;
-                              incrementValue$12 = var15;
+                              incrementValue$5 = var15;
                               var15++;
-                              var7_ref_byte__[incrementValue$11] = var16_ref_byte__[incrementValue$12];
+                              var7_ref_byte__[incrementValue$4] = var16_ref_byte__[incrementValue$5];
                               var18_int++;
                               continue L11;
                             }
@@ -252,31 +243,23 @@ final class ig extends da {
                               continue L12;
                             } else {
                               L14: {
-                                incrementValue$13 = var14;
+                                incrementValue$6 = var14;
                                 var14++;
-                                incrementValue$14 = var15;
+                                incrementValue$7 = var15;
                                 var15++;
-                                stackOut_16_0 = (byte[]) (var7_ref_byte__);
-                                stackOut_16_1 = incrementValue$13;
-                                stackIn_18_0 = stackOut_16_0;
-                                stackIn_18_1 = stackOut_16_1;
-                                stackIn_17_0 = stackOut_16_0;
-                                stackIn_17_1 = stackOut_16_1;
-                                if (var16_ref_byte__[incrementValue$14] != 0) {
-                                  stackOut_18_0 = (byte[]) ((Object) stackIn_18_0);
-                                  stackOut_18_1 = stackIn_18_1;
-                                  stackOut_18_2 = -1;
-                                  stackIn_19_0 = stackOut_18_0;
-                                  stackIn_19_1 = stackOut_18_1;
-                                  stackIn_19_2 = stackOut_18_2;
+                                stackIn_18_0 = (byte[]) (var7_ref_byte__);
+
+                                stackIn_18_1 = incrementValue$6;
+
+                                if (var16_ref_byte__[incrementValue$7] != 0) {
+                                  stackIn_19_0 = (byte[]) ((Object) stackIn_18_0);
+                                  stackIn_19_1 = stackIn_18_1;
+                                  stackIn_19_2 = -1;
                                   break L14;
                                 } else {
-                                  stackOut_17_0 = (byte[]) ((Object) stackIn_17_0);
-                                  stackOut_17_1 = stackIn_17_1;
-                                  stackOut_17_2 = 0;
-                                  stackIn_19_0 = stackOut_17_0;
-                                  stackIn_19_1 = stackOut_17_1;
-                                  stackIn_19_2 = stackOut_17_2;
+                                  stackIn_19_0 = (byte[]) ((Object) stackIn_18_0);
+                                  stackIn_19_1 = stackIn_18_1;
+                                  stackIn_19_2 = 0;
                                   break L14;
                                 }
                               }
@@ -297,7 +280,7 @@ final class ig extends da {
             }
             this.field_e.a(jp.field_a, -31662);
             this.field_h = param0.a(false, (byte) 126);
-            discarded$15 = this.field_h.a(20, -121, 20480);
+            this.field_h.a(20, -121, 20480);
             var7 = 0;
             L15: while (true) {
               L16: {
@@ -412,7 +395,7 @@ final class ig extends da {
     }
 
     final void fa(char param0, int param1, int param2, int param3, boolean param4) {
-        ec var6 = null;
+        ec var6;
         L0: {
           L1: {
             this.field_f.x(-23608);

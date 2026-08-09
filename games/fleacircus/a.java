@@ -21,9 +21,8 @@ final class a {
     }
 
     public static void a(byte param0) {
-        int discarded$2 = 0;
         if (param0 < 118) {
-          discarded$2 = a.a(1, -121, (byte) -67);
+          a.a(1, -121, (byte) -67);
           field_d = null;
           field_e = null;
           field_b = null;

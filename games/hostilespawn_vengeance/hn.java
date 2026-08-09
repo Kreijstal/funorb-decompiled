@@ -9,9 +9,9 @@ final class hn {
     static int field_b;
 
     final synchronized static long a(byte param0) {
-        long var1 = 0L;
+        long var1;
         var1 = System.currentTimeMillis();
-        if (~gb.field_e >= ~var1) {
+        if ((gb.field_e ^ -1L) >= (var1 ^ -1L)) {
           gb.field_e = var1;
           if (param0 != 80) {
             return 95L;
@@ -33,13 +33,12 @@ final class hn {
         field_c = null;
         field_d = null;
         field_e = null;
+        if (param0) {
+            hn.a((byte) 43);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Waiting for sound effects";
         field_d = "Resume Game";
         field_b = -1;

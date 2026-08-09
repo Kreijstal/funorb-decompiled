@@ -10,9 +10,7 @@ final class ha {
     private int field_a;
 
     final static int a(int param0, int param1, int param2) {
-        int discarded$2 = 0;
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -22,8 +20,7 @@ final class ha {
         int stackIn_15_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_8_0 = 0;
+        RuntimeException var3 = null;
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -31,7 +28,7 @@ final class ha {
               if (param2 <= -21) {
                 break L1;
               } else {
-                discarded$2 = ha.a(-128, -24, 80);
+                ha.a(-128, -24, 80);
                 break L1;
               }
             }
@@ -39,8 +36,7 @@ final class ha {
             var4 = jl.field_e;
             L2: while (true) {
               if (gf.field_s.length <= var3_int) {
-                stackOut_14_0 = -1;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -54,8 +50,7 @@ final class ha {
                     var7 = -(var6 >> -1485722847) + dg.field_ab;
                     var4 = var4 + uc.field_Y;
                     if (kg.a((byte) -121, var4, var6 - -(ni.field_i << -369282527), var7 + -ni.field_i, param1, param0, (ai.field_a << -540477311) + sl.field_f)) {
-                      stackOut_8_0 = var5;
-                      stackIn_9_0 = stackOut_8_0;
+                      stackIn_9_0 = var5;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     } else {
@@ -82,15 +77,14 @@ final class ha {
     }
 
     final da a(int param0) {
-        int discarded$4 = 0;
-        int fieldTemp$5 = 0;
-        int discarded$6 = 0;
-        int fieldTemp$7 = 0;
-        int var3 = 0;
-        da var4 = null;
-        da var5 = null;
-        da var6 = null;
-        da var9 = null;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int var3;
+        Object var4;
+        da var4_ref;
+        da var5;
+        da var6;
+        da var9;
         var3 = TorChallenge.field_F ? 1 : 0;
         if (0 < this.field_a) {
           if (this.field_e[this.field_a - 1] == this.field_c) {
@@ -99,15 +93,15 @@ final class ha {
                 if (param0 == -27377) {
                   return null;
                 } else {
-                  discarded$4 = ha.a(-111, 26, -58);
+                  ha.a(-111, 26, -58);
                   return null;
                 }
               } else {
-                fieldTemp$5 = this.field_a;
+                fieldTemp$2 = this.field_a;
                 this.field_a = this.field_a + 1;
-                var4 = this.field_e[fieldTemp$5].field_f;
-                var6 = var4;
-                if (var4 == this.field_e[-1 + this.field_a]) {
+                var4_ref = this.field_e[fieldTemp$2].field_f;
+                var6 = var4_ref;
+                if (var4_ref == this.field_e[-1 + this.field_a]) {
                   continue L0;
                 } else {
                   this.field_c = var6.field_f;
@@ -126,15 +120,15 @@ final class ha {
               if (param0 == -27377) {
                 return null;
               } else {
-                discarded$6 = ha.a(-111, 26, -58);
+                ha.a(-111, 26, -58);
                 return null;
               }
             } else {
-              fieldTemp$7 = this.field_a;
+              fieldTemp$3 = this.field_a;
               this.field_a = this.field_a + 1;
-              var4 = this.field_e[fieldTemp$7].field_f;
-              var5 = var4;
-              if (var4 == this.field_e[-1 + this.field_a]) {
+              var4_ref = this.field_e[fieldTemp$3].field_f;
+              var5 = var4_ref;
+              if (var4_ref == this.field_e[-1 + this.field_a]) {
                 continue L1;
               } else {
                 this.field_c = var5.field_f;
@@ -146,18 +140,18 @@ final class ha {
     }
 
     ha(int param0) {
-        da dupTemp$2 = null;
-        int var2 = 0;
-        da var3 = null;
+        da dupTemp$1 = null;
+        int var2;
+        da var3;
         this.field_a = 0;
         this.field_b = param0;
         this.field_e = new da[param0];
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new da();
-            var3 = dupTemp$2;
-            this.field_e[var2] = dupTemp$2;
+            dupTemp$1 = new da();
+            var3 = dupTemp$1;
+            this.field_e[var2] = dupTemp$1;
             var3.field_f = var3;
             var3.field_h = var3;
             var2++;
@@ -177,9 +171,9 @@ final class ha {
     }
 
     final da a(byte param0, long param1) {
-        da var4 = null;
-        da var5 = null;
-        int var6 = 0;
+        da var4;
+        da var5;
+        int var6;
         var6 = TorChallenge.field_F ? 1 : 0;
         var4 = this.field_e[(int)(param1 & (long)(-1 + this.field_b))];
         this.field_f = var4.field_f;

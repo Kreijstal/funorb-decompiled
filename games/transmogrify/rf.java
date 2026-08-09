@@ -11,15 +11,13 @@ final class rf extends a {
     }
 
     final static int[] c(boolean param0) {
-        int[] discarded$0 = null;
         if (param0) {
-            discarded$0 = rf.c(false);
+            rf.c(false);
         }
         return new int[8];
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
-        RuntimeException var17 = null;
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -46,12 +44,8 @@ final class rf extends a {
         int var40 = 0;
         int var41 = 0;
         int var42 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_35_1 = 0;
         int stackIn_52_0 = 0;
         int stackIn_52_1 = 0;
-        RuntimeException stackIn_82_0 = null;
-        StringBuilder stackIn_82_1 = null;
         RuntimeException stackIn_83_0 = null;
         StringBuilder stackIn_83_1 = null;
         RuntimeException stackIn_84_0 = null;
@@ -60,18 +54,7 @@ final class rf extends a {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_34_0 = 0;
-        int stackOut_34_1 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_51_1 = 0;
-        RuntimeException stackOut_81_0 = null;
-        StringBuilder stackOut_81_1 = null;
-        RuntimeException stackOut_83_0 = null;
-        StringBuilder stackOut_83_1 = null;
-        String stackOut_83_2 = null;
-        RuntimeException stackOut_82_0 = null;
-        StringBuilder stackOut_82_1 = null;
-        String stackOut_82_2 = null;
+        RuntimeException var17 = null;
         var42 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -307,17 +290,15 @@ final class rf extends a {
                             break L13;
                           } else {
                             var37 = var17_int >> 493861264;
-                            stackOut_34_0 = var37;
-                            stackOut_34_1 = ka.field_i;
-                            stackIn_52_0 = stackOut_34_0;
-                            stackIn_52_1 = stackOut_34_1;
-                            stackIn_35_0 = stackOut_34_0;
-                            stackIn_35_1 = stackOut_34_1;
+                            stackIn_52_0 = var37;
+
+                            stackIn_52_1 = ka.field_i;
+
                             if (var42 != 0) {
                               break L12;
                             } else {
                               L17: {
-                                if (stackIn_35_0 >= stackIn_35_1) {
+                                if (stackIn_52_0 >= stackIn_52_1) {
                                   break L17;
                                 } else {
                                   L18: {
@@ -393,10 +374,8 @@ final class rf extends a {
                         }
                       }
                       var36 = -param12 + param5;
-                      stackOut_51_0 = -1;
-                      stackOut_51_1 = var36 ^ -1;
-                      stackIn_52_0 = stackOut_51_0;
-                      stackIn_52_1 = stackOut_51_1;
+                      stackIn_52_0 = -1;
+                      stackIn_52_1 = var36 ^ -1;
                       break L12;
                     }
                     L21: {
@@ -572,27 +551,19 @@ final class rf extends a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L32: {
             var17 = decompiledCaughtException;
-            stackOut_81_0 = (RuntimeException) (var17);
-            stackOut_81_1 = new StringBuilder().append("rf.OA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-            stackIn_83_0 = stackOut_81_0;
-            stackIn_83_1 = stackOut_81_1;
-            stackIn_82_0 = stackOut_81_0;
-            stackIn_82_1 = stackOut_81_1;
+            stackIn_83_0 = (RuntimeException) (var17);
+
+            stackIn_83_1 = new StringBuilder().append("rf.OA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
+
             if (param7 == null) {
-              stackOut_83_0 = (RuntimeException) ((Object) stackIn_83_0);
-              stackOut_83_1 = (StringBuilder) ((Object) stackIn_83_1);
-              stackOut_83_2 = "null";
-              stackIn_84_0 = stackOut_83_0;
-              stackIn_84_1 = stackOut_83_1;
-              stackIn_84_2 = stackOut_83_2;
+              stackIn_84_0 = (RuntimeException) ((Object) stackIn_83_0);
+              stackIn_84_1 = (StringBuilder) ((Object) stackIn_83_1);
+              stackIn_84_2 = "null";
               break L32;
             } else {
-              stackOut_82_0 = (RuntimeException) ((Object) stackIn_82_0);
-              stackOut_82_1 = (StringBuilder) ((Object) stackIn_82_1);
-              stackOut_82_2 = "{...}";
-              stackIn_84_0 = stackOut_82_0;
-              stackIn_84_1 = stackOut_82_1;
-              stackIn_84_2 = stackOut_82_2;
+              stackIn_84_0 = (RuntimeException) ((Object) stackIn_83_0);
+              stackIn_84_1 = (StringBuilder) ((Object) stackIn_83_1);
+              stackIn_84_2 = "{...}";
               break L32;
             }
           }

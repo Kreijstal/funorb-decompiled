@@ -29,8 +29,12 @@ final class fa extends l {
     }
 
     final static void a(int param0) {
-        RuntimeException var1 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_11_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3_int = 0;
         String var3 = null;
@@ -41,31 +45,19 @@ final class fa extends l {
         Object var8 = null;
         Object var9 = null;
         int var10 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_11_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        boolean stackOut_5_0 = false;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
         var10 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
             L1: {
               if (vg.field_I != null) {
-                stackOut_5_0 = vg.field_I.field_g;
-                stackIn_6_0 = stackOut_5_0 ? 1 : 0;
+                stackIn_6_0 = vg.field_I.field_g ? 1 : 0;
                 break L1;
               } else {
                 if (ei.field_b == null) {
-                  stackOut_4_0 = 0;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 0;
                   break L1;
                 } else {
-                  stackOut_3_0 = 1;
-                  stackIn_6_0 = stackOut_3_0;
+                  stackIn_6_0 = 1;
                   break L1;
                 }
               }
@@ -81,12 +73,10 @@ final class fa extends l {
             }
             L3: {
               if (var1_int != 0) {
-                stackOut_10_0 = we.field_c.field_J;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = we.field_c.field_J;
                 break L3;
               } else {
-                stackOut_9_0 = 480;
-                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_0 = 480;
                 break L3;
               }
             }
@@ -257,7 +247,7 @@ final class fa extends l {
                   } else {
                     L22: {
                       var5 = 1141646;
-                      if (qa.field_e != 1 + var4) {
+                      if ((qa.field_e ^ -1) != (1 + var4 ^ -1)) {
                         break L22;
                       } else {
                         var5 = 16777215;

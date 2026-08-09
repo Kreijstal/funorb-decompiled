@@ -43,6 +43,9 @@ final class sj {
     }
 
     final static void a(int param0) {
+        int stackIn_18_0 = 0;
+        int stackIn_18_1 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         lo var2 = null;
         boolean[] var3 = null;
@@ -52,15 +55,13 @@ final class sj {
         int var6 = 0;
         Object var6_ref = null;
         int var7_int = 0;
-        String var7 = null;
+        Object var7 = null;
+        String var7_ref = null;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
         int var11 = 0;
         fs var12 = null;
-        String var13 = null;
-        RuntimeException decompiledCaughtException = null;
-        Object var7_ref = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -89,59 +90,68 @@ final class sj {
                       var5_int = 0;
                       var7_int = 0;
                       L4: while (true) {
-                        if (var7_int >= 4) {
-                          L5: {
-                            var13 = re.a(qj.field_d, 4371, new String[]{(String) (var6_ref)});
-                            var6_ref = var13;
-                            if (1 == var5_int) {
-                              var6_ref = var13 + aq.field_n;
-                              var7_ref = var6_ref;
-                              var5 = var7_ref;
-                              break L5;
-                            } else {
-                              var6_ref = var13 + oo.field_f;
-                              break L5;
-                            }
-                          }
-                          uq.field_m.a((String) (var6_ref), param0 + 58835, "generateshortfall");
-                          break L2;
-                        } else {
+                        L5: {
                           L6: {
-                            var8 = ((sd) ((Object) var2)).field_w[var7_int];
-                            if (-1 == (((sd) ((Object) var2)).field_u[var8] ^ -1)) {
-                              L7: {
-                                var9 = re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(gm.field_k[var8], 16), h.field_x[var8]});
-                                var6_ref = var9;
-                                if (var5_int != 0) {
-                                  if (var5_int == 1) {
-                                    var6_ref = var9 + qn.field_d + (String) (var6_ref);
-                                    break L7;
-                                  } else {
-                                    var6_ref = var9 + ef.field_d + (String) (var6_ref);
-                                    break L7;
-                                  }
+                            L7: {
+                              if (var7_int >= 4) {
+                                var6_ref = re.a(qj.field_d, 4371, new String[]{(String) (var6_ref)});
+                                if (1 == var5_int) {
+                                  break L6;
                                 } else {
-                                  var6_ref = var9;
                                   break L7;
                                 }
+                              } else {
+                                var8 = ((sd) ((Object) var2)).field_w[var7_int];
+                                stackIn_18_0 = -1;
+
+                                stackIn_18_1 = ((sd) ((Object) var2)).field_u[var8] ^ -1;
+
+                                L8: {
+                                  if (stackIn_18_0 == stackIn_18_1) {
+                                    L9: {
+                                      var9 = re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(gm.field_k[var8], 16), h.field_x[var8]});
+                                      var6_ref = var9;
+                                      if (var5_int != 0) {
+                                        if (var5_int == 1) {
+                                          var6_ref = var9 + qn.field_d + (String) (var6_ref);
+                                          break L9;
+                                        } else {
+                                          var6_ref = var9 + ef.field_d + (String) (var6_ref);
+                                          break L9;
+                                        }
+                                      } else {
+                                        var6_ref = var9;
+                                        break L9;
+                                      }
+                                    }
+                                    var5_int++;
+                                    break L8;
+                                  } else {
+                                    break L8;
+                                  }
+                                }
+                                var7_int++;
+                                continue L4;
                               }
-                              var5_int++;
-                              break L6;
-                            } else {
-                              break L6;
                             }
+                            var6_ref = (String) (var6_ref) + oo.field_f;
+                            break L5;
                           }
-                          var7_int++;
-                          continue L4;
+                          var6_ref = (String) (var6_ref) + aq.field_n;
+                          var7 = var6_ref;
+                          var5 = var7;
+                          break L5;
                         }
+                        uq.field_m.a((String) (var6_ref), param0 + 58835, "generateshortfall");
+                        break L2;
                       }
                     } else {
-                      L8: {
+                      L10: {
                         if (0 == ((sd) ((Object) var2)).field_u[((sd) ((Object) var2)).field_w[var6]]) {
                           var5_int++;
-                          break L8;
+                          break L10;
                         } else {
-                          break L8;
+                          break L10;
                         }
                       }
                       var6++;
@@ -156,61 +166,61 @@ final class sj {
             }
             var4 = 0;
             var5_int = 0;
-            L9: while (true) {
+            L11: while (true) {
               if ((var5_int ^ -1) <= -5) {
                 var5 = null;
                 var4 = 0;
                 var11 = 0;
                 var6 = var11;
-                L10: while (true) {
+                L12: while (true) {
                   if ((var11 ^ -1) <= -5) {
                     uq.field_m.a((String) (var5), 27275, "generateprojectprogress");
                     break L0;
                   } else {
                     if (var12.field_u[var11] > 0) {
-                      L11: {
+                      L13: {
                         if (var3[var11]) {
-                          L12: {
-                            var7 = re.a("<col=<%0>><%1></col>", param0 ^ -27221, new String[]{Integer.toString(bg.field_e[var11], 16), or.field_d[var11]});
-                            var5 = var7;
+                          L14: {
+                            var7_ref = re.a("<col=<%0>><%1></col>", param0 ^ -27221, new String[]{Integer.toString(bg.field_e[var11], 16), or.field_d[var11]});
+                            var5 = var7_ref;
                             if (var4 == 0) {
-                              var5 = var7;
-                              break L12;
+                              var5 = var7_ref;
+                              break L14;
                             } else {
                               if (-2 != (var4 ^ -1)) {
-                                var5 = var7 + ef.field_d + (String) (var5);
-                                break L12;
+                                var5 = var7_ref + ef.field_d + (String) (var5);
+                                break L14;
                               } else {
-                                var5 = var7 + qn.field_d + (String) (var5);
-                                break L12;
+                                var5 = var7_ref + qn.field_d + (String) (var5);
+                                break L14;
                               }
                             }
                           }
                           var4++;
-                          break L11;
+                          break L13;
                         } else {
-                          break L11;
+                          break L13;
                         }
                       }
                       var11++;
-                      continue L10;
+                      continue L12;
                     } else {
                       var11++;
-                      continue L10;
+                      continue L12;
                     }
                   }
                 }
               } else {
-                L13: {
+                L15: {
                   if (var12.field_u[var5_int] <= 0) {
-                    break L13;
+                    break L15;
                   } else {
                     var4++;
-                    break L13;
+                    break L15;
                   }
                 }
                 var5_int++;
-                continue L9;
+                continue L11;
               }
             }
           }

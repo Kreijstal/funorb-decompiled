@@ -11,14 +11,10 @@ final class mga implements mkb {
     private int field_a;
 
     public final boolean a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_12_0 = 0;
         int stackIn_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var4;
+        int var5;
         this.field_c = param1;
         if (param2 <= 81) {
           L0: {
@@ -40,6 +36,7 @@ final class mga implements mkb {
               }
               L2: {
                 if (this.field_f != null) {
+                  this.field_f.a(false);
                   break L2;
                 } else {
                   break L2;
@@ -52,12 +49,10 @@ final class mga implements mkb {
           }
           L3: {
             if (this.field_f == null) {
-              stackOut_23_0 = 0;
-              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_0 = 0;
               break L3;
             } else {
-              stackOut_22_0 = 1;
-              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_0 = 1;
               break L3;
             }
           }
@@ -81,6 +76,7 @@ final class mga implements mkb {
               }
               L6: {
                 if (this.field_f != null) {
+                  this.field_f.a(false);
                   break L6;
                 } else {
                   break L6;
@@ -93,12 +89,10 @@ final class mga implements mkb {
           }
           L7: {
             if (this.field_f == null) {
-              stackOut_11_0 = 0;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_0 = 0;
               break L7;
             } else {
-              stackOut_10_0 = 1;
-              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_0 = 1;
               break L7;
             }
           }
@@ -116,6 +110,7 @@ final class mga implements mkb {
           L0: {
             this.field_d = false;
             if (this.field_f != null) {
+              this.field_f.a(false);
               this.field_f = null;
               break L0;
             } else {
@@ -128,6 +123,7 @@ final class mga implements mkb {
         } else {
           L1: {
             if (this.field_f != null) {
+              this.field_f.a(false);
               this.field_f = null;
               break L1;
             } else {

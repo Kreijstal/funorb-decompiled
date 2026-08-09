@@ -18,9 +18,8 @@ final class gd {
     }
 
     final static String a(boolean param0, int param1, int param2, int param3) {
-        String discarded$1 = null;
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         if (param3 > 0) {
           if (!param0) {
             if (-1 == (param1 ^ -1)) {
@@ -92,7 +91,7 @@ final class gd {
               }
             }
           } else {
-            discarded$1 = gd.a(false, 12, -120, -73);
+            gd.a(false, 12, -120, -73);
             if (-1 == (param1 ^ -1)) {
               var4 = param3 % 100;
               if (-12 >= (var4 ^ -1)) {
@@ -168,10 +167,9 @@ final class gd {
     }
 
     public static void a(byte param0) {
-        boolean discarded$2 = false;
         field_c = null;
         if (param0 != -118) {
-          discarded$2 = gd.a(90, -20, -14, (byte) 115);
+          gd.a(90, -20, -14, (byte) 115);
           field_i = null;
           field_g = null;
           field_d = null;

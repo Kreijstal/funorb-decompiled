@@ -26,84 +26,61 @@ class um implements ub, qe {
 
     final static void a(int param0, wq param1, byte param2, tg param3) {
         try {
-            byte[] array$1 = null;
+            byte[] array$0 = null;
+            RuntimeException stackIn_36_0 = null;
+            StringBuilder stackIn_36_1 = null;
+            RuntimeException stackIn_37_0 = null;
+            StringBuilder stackIn_37_1 = null;
+            String stackIn_37_2 = null;
+            StringBuilder stackIn_39_1 = null;
+            StringBuilder stackIn_40_1 = null;
+            String stackIn_40_2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             RuntimeException var4 = null;
             int var5 = 0;
             int var6 = 0;
+            int var7_int = 0;
             ClassNotFoundException var7 = null;
             SecurityException var7_ref = null;
             NullPointerException var7_ref2 = null;
             Exception var7_ref3 = null;
             Throwable var7_ref4 = null;
-            int var7_int = 0;
             String var8 = null;
             String var9 = null;
             int var10 = 0;
             String[] var11 = null;
             int var12_int = 0;
             byte[][] var12 = null;
-            Class[] var13 = null;
             int var13_int = 0;
+            Class[] var13 = null;
             int var14 = 0;
             int var15 = 0;
             String var16 = null;
             String var17 = null;
             int var18 = 0;
-            Object var19 = null;
-            bg var19_ref = null;
+            bg var19 = null;
             byte[][] var20 = null;
             String var21 = null;
             String var22 = null;
             byte[][] var23 = null;
-            RuntimeException stackIn_35_0 = null;
-            StringBuilder stackIn_35_1 = null;
-            RuntimeException stackIn_36_0 = null;
-            StringBuilder stackIn_36_1 = null;
-            RuntimeException stackIn_37_0 = null;
-            StringBuilder stackIn_37_1 = null;
-            String stackIn_37_2 = null;
-            RuntimeException stackIn_38_0 = null;
-            StringBuilder stackIn_38_1 = null;
-            RuntimeException stackIn_39_0 = null;
-            StringBuilder stackIn_39_1 = null;
-            RuntimeException stackIn_40_0 = null;
-            StringBuilder stackIn_40_1 = null;
-            String stackIn_40_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_34_0 = null;
-            StringBuilder stackOut_34_1 = null;
-            RuntimeException stackOut_36_0 = null;
-            StringBuilder stackOut_36_1 = null;
-            String stackOut_36_2 = null;
-            RuntimeException stackOut_35_0 = null;
-            StringBuilder stackOut_35_1 = null;
-            String stackOut_35_2 = null;
-            RuntimeException stackOut_37_0 = null;
-            StringBuilder stackOut_37_1 = null;
-            RuntimeException stackOut_39_0 = null;
-            StringBuilder stackOut_39_1 = null;
-            String stackOut_39_2 = null;
-            RuntimeException stackOut_38_0 = null;
-            StringBuilder stackOut_38_1 = null;
-            String stackOut_38_2 = null;
             var15 = BrickABrac.field_J ? 1 : 0;
             try {
               L0: {
-                var19_ref = new bg();
-                var19_ref.field_s = param1.l(255);
-                var19_ref.field_i = param1.e(255);
-                var19_ref.field_q = new int[var19_ref.field_s];
-                var19_ref.field_k = new int[var19_ref.field_s];
-                var19_ref.field_t = new int[var19_ref.field_s];
+                var19 = new bg();
+                var19.field_s = param1.l(255);
+                var19.field_i = param1.e(255);
+                var19.field_q = new int[var19.field_s];
+                var19.field_k = new int[var19.field_s];
+                var19.field_t = new int[var19.field_s];
                 var5 = 24 / ((-6 - param2) / 53);
-                var19_ref.field_l = new ql[var19_ref.field_s];
-                var19_ref.field_m = new byte[var19_ref.field_s][][];
-                var19_ref.field_j = new ql[var19_ref.field_s];
+                var19.field_l = new ql[var19.field_s];
+                var19.field_m = new byte[var19.field_s][][];
+                var19.field_j = new ql[var19.field_s];
                 var6 = 0;
                 L1: while (true) {
-                  if (var19_ref.field_s <= var6) {
-                    mf.field_i.a(var19_ref, (byte) 3);
+                  if (var19.field_s <= var6) {
+                    mf.field_i.a(var19, (byte) 3);
                     break L0;
                   } else {
                     try {
@@ -151,8 +128,8 @@ class um implements ub, qe {
                                               break L7;
                                             } else {
                                               var14 = param1.e(255);
-                                              array$1 = new byte[var14];
-                                              var12[var13_int] = array$1;
+                                              array$0 = new byte[var14];
+                                              var12[var13_int] = array$0;
                                               param1.a(0, var23[var13_int], 115, var14);
                                               var13_int++;
                                               continue L8;
@@ -160,14 +137,14 @@ class um implements ub, qe {
                                           }
                                         }
                                       }
-                                      var19_ref.field_t[var6] = var7_int;
+                                      var19.field_t[var6] = var7_int;
                                       var13 = new Class[var10];
                                       var18 = 0;
                                       var14 = var18;
                                       L9: while (true) {
                                         if (var10 <= var18) {
-                                          var19_ref.field_l[var6] = param3.a(23311, pj.a(var21, true), var13, var22);
-                                          var19_ref.field_m[var6] = var23;
+                                          var19.field_l[var6] = param3.a(23311, pj.a(var21, true), var13, var22);
+                                          var19.field_m[var6] = var23;
                                           break L3;
                                         } else {
                                           var13[var18] = pj.a(var11[var18], true);
@@ -200,9 +177,9 @@ class um implements ub, qe {
                               break L10;
                             }
                           }
-                          var19_ref.field_t[var6] = var7_int;
-                          var19_ref.field_q[var6] = var10;
-                          var19_ref.field_j[var6] = param3.a(124, pj.a(var16, true), var17);
+                          var19.field_t[var6] = var7_int;
+                          var19.field_q[var6] = var10;
+                          var19.field_j[var6] = param3.a(124, pj.a(var16, true), var17);
                           break L3;
                         }
                         decompiledRegionSelector0 = 0;
@@ -212,7 +189,7 @@ class um implements ub, qe {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L11: {
                         var7 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                        var19_ref.field_k[var6] = -1;
+                        var19.field_k[var6] = -1;
                         decompiledRegionSelector0 = 0;
                         break L11;
                       }
@@ -220,7 +197,7 @@ class um implements ub, qe {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       L12: {
                         var7_ref = (SecurityException) (Object) decompiledCaughtException;
-                        var19_ref.field_k[var6] = -2;
+                        var19.field_k[var6] = -2;
                         decompiledRegionSelector0 = 0;
                         break L12;
                       }
@@ -228,7 +205,7 @@ class um implements ub, qe {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       L13: {
                         var7_ref2 = (NullPointerException) (Object) decompiledCaughtException;
-                        var19_ref.field_k[var6] = -3;
+                        var19.field_k[var6] = -3;
                         decompiledRegionSelector0 = 0;
                         break L13;
                       }
@@ -236,7 +213,7 @@ class um implements ub, qe {
                       decompiledCaughtException = decompiledCaughtParameter3;
                       L14: {
                         var7_ref3 = (Exception) (Object) decompiledCaughtException;
-                        var19_ref.field_k[var6] = -4;
+                        var19.field_k[var6] = -4;
                         decompiledRegionSelector0 = 0;
                         break L14;
                       }
@@ -244,7 +221,7 @@ class um implements ub, qe {
                       decompiledCaughtException = decompiledCaughtParameter4;
                       L15: {
                         var7_ref4 = decompiledCaughtException;
-                        var19_ref.field_k[var6] = -5;
+                        var19.field_k[var6] = -5;
                         decompiledRegionSelector0 = 0;
                         break L15;
                       }
@@ -262,56 +239,40 @@ class um implements ub, qe {
               decompiledCaughtException = decompiledCaughtParameter5;
               L16: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_34_0 = (RuntimeException) (var4);
-                stackOut_34_1 = new StringBuilder().append("um.BA(").append(param0).append(',');
-                stackIn_36_0 = stackOut_34_0;
-                stackIn_36_1 = stackOut_34_1;
-                stackIn_35_0 = stackOut_34_0;
-                stackIn_35_1 = stackOut_34_1;
+                stackIn_36_0 = (RuntimeException) (var4);
+
+                stackIn_36_1 = new StringBuilder().append("um.BA(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-                  stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-                  stackOut_36_2 = "null";
-                  stackIn_37_0 = stackOut_36_0;
-                  stackIn_37_1 = stackOut_36_1;
-                  stackIn_37_2 = stackOut_36_2;
+                  stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+                  stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+                  stackIn_37_2 = "null";
                   break L16;
                 } else {
-                  stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-                  stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-                  stackOut_35_2 = "{...}";
-                  stackIn_37_0 = stackOut_35_0;
-                  stackIn_37_1 = stackOut_35_1;
-                  stackIn_37_2 = stackOut_35_2;
+                  stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+                  stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+                  stackIn_37_2 = "{...}";
                   break L16;
                 }
               }
               L17: {
-                stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-                stackOut_37_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_37_2).append(',').append(param2).append(',');
-                stackIn_39_0 = stackOut_37_0;
-                stackIn_39_1 = stackOut_37_1;
-                stackIn_38_0 = stackOut_37_0;
-                stackIn_38_1 = stackOut_37_1;
+
+
+                stackIn_39_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_37_2).append(',').append(param2).append(',');
+
                 if (param3 == null) {
-                  stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-                  stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-                  stackOut_39_2 = "null";
-                  stackIn_40_0 = stackOut_39_0;
-                  stackIn_40_1 = stackOut_39_1;
-                  stackIn_40_2 = stackOut_39_2;
+                  stackIn_37_0 = (RuntimeException) ((Object) stackIn_37_0);
+                  stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+                  stackIn_40_2 = "null";
                   break L17;
                 } else {
-                  stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-                  stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-                  stackOut_38_2 = "{...}";
-                  stackIn_40_0 = stackOut_38_0;
-                  stackIn_40_1 = stackOut_38_1;
-                  stackIn_40_2 = stackOut_38_2;
+                  stackIn_37_0 = (RuntimeException) ((Object) stackIn_37_0);
+                  stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+                  stackIn_40_2 = "{...}";
                   break L17;
                 }
               }
-              throw qb.a((Throwable) ((Object) stackIn_40_0), stackIn_40_2 + ')');
+              throw qb.a((Throwable) ((Object) stackIn_37_0), stackIn_40_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -321,27 +282,15 @@ class um implements ub, qe {
     }
 
     public final int a(oc param0, byte param1, int param2) {
-        int discarded$2 = 0;
         RuntimeException var4 = null;
         oc var5 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -349,39 +298,30 @@ class um implements ub, qe {
                 break L1;
               } else {
                 var5 = (oc) null;
-                discarded$2 = this.a((oc) null, (byte) -5, -108);
+                this.a((oc) null, (byte) -5, -108);
                 break L1;
               }
             }
-            stackOut_2_0 = this.a(0, param0, 65263, param2);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = this.a(0, param0, 65263, param2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var4);
-            stackOut_4_1 = new StringBuilder().append("um.T(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var4);
+
+            stackIn_6_1 = new StringBuilder().append("um.T(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -404,27 +344,15 @@ class um implements ub, qe {
     }
 
     public final int a(int param0, oc param1) {
-        jp discarded$2 = null;
         RuntimeException var3 = null;
         mf var4 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -432,39 +360,30 @@ class um implements ub, qe {
                 break L1;
               } else {
                 var4 = (mf) null;
-                discarded$2 = um.a((String) null, (String) null, -49, (mf) null);
+                um.a((String) null, (String) null, -49, (mf) null);
                 break L1;
               }
             }
-            stackOut_2_0 = -this.field_d + (param1.field_t + -this.field_i);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = -this.field_d + (param1.field_t + -this.field_i);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("um.C(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("um.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -474,7 +393,6 @@ class um implements ub, qe {
     }
 
     public final void a(oc param0, int param1, int param2, int param3, byte param4) {
-        RuntimeException var6 = null;
         int var7 = 0;
         ml var8 = null;
         int var9 = 0;
@@ -483,43 +401,20 @@ class um implements ub, qe {
         int var12 = 0;
         ep var13 = null;
         ep var14 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_3_1 = 0;
-        int stackIn_3_2 = 0;
         int stackIn_4_0 = 0;
         int stackIn_4_1 = 0;
         int stackIn_4_2 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_5_1 = 0;
-        int stackIn_5_2 = 0;
-        int stackIn_5_3 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
+        int stackIn_5_0;
+        int stackIn_5_1;
+        int stackIn_5_2;
+        int stackIn_5_3;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        int stackOut_4_3 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        int stackOut_3_3 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var6 = null;
         try {
           L0: {
             L1: {
@@ -532,34 +427,23 @@ class um implements ub, qe {
                   var9 = var14.a(param2, (byte) -72);
                   var10 = this.a(var9, param0, 65263, param1);
                   var11 = this.a(param3, (byte) -116, param0) + Math.max(0, var8.field_d);
-                  stackOut_2_0 = this.a(param3, (byte) -96, param0);
-                  stackOut_2_1 = this.b(16265, param0);
-                  stackOut_2_2 = var8.field_a;
-                  stackIn_4_0 = stackOut_2_0;
-                  stackIn_4_1 = stackOut_2_1;
-                  stackIn_4_2 = stackOut_2_2;
-                  stackIn_3_0 = stackOut_2_0;
-                  stackIn_3_1 = stackOut_2_1;
-                  stackIn_3_2 = stackOut_2_2;
+                  stackIn_4_0 = this.a(param3, (byte) -96, param0);
+
+                  stackIn_4_1 = this.b(16265, param0);
+
+                  stackIn_4_2 = var8.field_a;
+
                   if (1 + var7 >= var14.field_c.length) {
-                    stackOut_4_0 = stackIn_4_0;
-                    stackOut_4_1 = stackIn_4_1;
-                    stackOut_4_2 = stackIn_4_2;
-                    stackOut_4_3 = var8.field_a;
-                    stackIn_5_0 = stackOut_4_0;
-                    stackIn_5_1 = stackOut_4_1;
-                    stackIn_5_2 = stackOut_4_2;
-                    stackIn_5_3 = stackOut_4_3;
+                    stackIn_5_0 = stackIn_4_0;
+                    stackIn_5_1 = stackIn_4_1;
+                    stackIn_5_2 = stackIn_4_2;
+                    stackIn_5_3 = var8.field_a;
                     break L2;
                   } else {
-                    stackOut_3_0 = stackIn_3_0;
-                    stackOut_3_1 = stackIn_3_1;
-                    stackOut_3_2 = stackIn_3_2;
-                    stackOut_3_3 = var13.field_c[1 + var7].field_d;
-                    stackIn_5_0 = stackOut_3_0;
-                    stackIn_5_1 = stackOut_3_1;
-                    stackIn_5_2 = stackOut_3_2;
-                    stackIn_5_3 = stackOut_3_3;
+                    stackIn_5_0 = stackIn_4_0;
+                    stackIn_5_1 = stackIn_4_1;
+                    stackIn_5_2 = stackIn_4_2;
+                    stackIn_5_3 = var13.field_c[1 + var7].field_d;
                     break L2;
                   }
                 }
@@ -586,27 +470,19 @@ class um implements ub, qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var6);
-            stackOut_9_1 = new StringBuilder().append("um.B(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var6);
+
+            stackIn_11_1 = new StringBuilder().append("um.B(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -615,27 +491,15 @@ class um implements ub, qe {
     }
 
     private final int a(int param0, oc param1, int param2, int param3) {
-        int discarded$2 = 0;
         RuntimeException var5 = null;
         oc var6 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -643,39 +507,30 @@ class um implements ub, qe {
                 break L1;
               } else {
                 var6 = (oc) null;
-                discarded$2 = this.a(41, (oc) null);
+                this.a(41, (oc) null);
                 break L1;
               }
             }
-            stackOut_2_0 = param0 + param1.field_r + param3 + (param1.field_o + this.field_d);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = param0 + param1.field_r + param3 + (param1.field_o + this.field_d);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var5);
-            stackOut_4_1 = new StringBuilder().append("um.U(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var5);
+
+            stackIn_6_1 = new StringBuilder().append("um.U(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -688,23 +543,12 @@ class um implements ub, qe {
         int var3_int = 0;
         RuntimeException var3 = null;
         ep stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ep stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -725,35 +569,26 @@ class um implements ub, qe {
                 break L2;
               }
             }
-            stackOut_5_0 = param0.field_j;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = param0.field_j;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("um.N(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("um.N(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -763,12 +598,9 @@ class um implements ub, qe {
     }
 
     public final int a(oc param0, int param1, boolean param2, int param3, int param4, int param5) {
-        ep discarded$2 = null;
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -776,27 +608,15 @@ class um implements ub, qe {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param2) {
-              discarded$2 = this.c(param0, 121);
-              stackOut_3_0 = param0.field_j.a(-this.a(param0, (byte) 48, param5) + param1, false, param4 - this.a(param3, (byte) -122, param0));
-              stackIn_4_0 = stackOut_3_0;
+              this.c(param0, 121);
+              stackIn_4_0 = param0.field_j.a(-this.a(param0, (byte) 48, param5) + param1, false, param4 - this.a(param3, (byte) -122, param0));
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 64;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 64;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -805,27 +625,19 @@ class um implements ub, qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var7);
-            stackOut_5_1 = new StringBuilder().append("um.O(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var7);
+
+            stackIn_7_1 = new StringBuilder().append("um.O(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -870,12 +682,9 @@ class um implements ub, qe {
     }
 
     public final int b(oc param0, int param1) {
-        ep discarded$7 = null;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -883,27 +692,15 @@ class um implements ub, qe {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
-            discarded$7 = this.c(param0, -118);
+            this.c(param0, -118);
             if (param1 > 24) {
-              stackOut_3_0 = param0.field_j.b(31458) - (-this.field_d + -this.field_i);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = param0.field_j.b(31458) - (-this.field_d + -this.field_i);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 74;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 74;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -912,27 +709,19 @@ class um implements ub, qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("um.J(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("um.J(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -949,23 +738,12 @@ class um implements ub, qe {
         RuntimeException var5 = null;
         oc var6 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -977,35 +755,26 @@ class um implements ub, qe {
                 break L1;
               }
             }
-            stackOut_2_0 = param3.field_B + param1 - (-param3.field_w + -this.field_q) - -param2;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = param3.field_B + param1 - (-param3.field_w + -this.field_q) - -param2;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var5);
-            stackOut_4_1 = new StringBuilder().append("um.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var5);
+
+            stackIn_6_1 = new StringBuilder().append("um.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -1042,53 +811,18 @@ class um implements ub, qe {
         RuntimeException var4 = null;
         int var5 = 0;
         jp stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        jp stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
@@ -1101,89 +835,64 @@ class um implements ub, qe {
               }
             }
             var5 = param3.a(var4_int, param2 + -1593955846, param1);
-            stackOut_2_0 = ml.a(param3, var4_int, var5, 1);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = ml.a(param3, var4_int, var5, 1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var4);
-            stackOut_4_1 = new StringBuilder().append("um.F(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var4);
+
+            stackIn_6_1 = new StringBuilder().append("um.F(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+
+
+            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+
+
+            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
-          throw qb.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_7_0), stackIn_13_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -1191,23 +900,12 @@ class um implements ub, qe {
     private final int b(int param0, oc param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -1218,35 +916,26 @@ class um implements ub, qe {
                 break L1;
               }
             }
-            stackOut_2_0 = -this.field_a + (param1.field_s + -this.field_q);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = -this.field_a + (param1.field_s + -this.field_q);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("um.D(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("um.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -1256,81 +945,29 @@ class um implements ub, qe {
     }
 
     public void a(boolean param0, int param1, int param2, oc param3, int param4) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        try {
-          L0: {
-            if (null == this.field_k) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                this.a(-94, param2, param4, param3);
-                if (param1 == -20618) {
-                  break L1;
-                } else {
-                  field_j = (int[]) null;
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (runtimeException);
-            stackOut_6_1 = new StringBuilder().append("um.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
-            if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L2;
-            } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L2;
-            }
-          }
-          throw qb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param4 + ')');
+        if (!(null != this.field_k)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            this.a(-94, param2, param4, param3);
+            if (param1 != -20618) {
+                field_j = (int[]) null;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) ((Object) runtimeException), "um.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     public final void a(int param0, int param1, int param2, int param3, int param4, oc param5) {
+        int stackIn_16_0 = 0;
+        int stackIn_21_0 = 0;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -1343,30 +980,6 @@ class um implements ub, qe {
         int var16 = 0;
         ep var17 = null;
         ep var18 = null;
-        int stackIn_16_0 = 0;
-        int stackIn_21_0 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
         var16 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -1402,29 +1015,24 @@ class um implements ub, qe {
                         L4: {
                           var13 = var17.field_c[var12];
                           if (var10 != var12) {
-                            stackOut_15_0 = var13.field_g[0];
-                            stackIn_16_0 = stackOut_15_0;
+                            stackIn_16_0 = var13.field_g[0];
                             break L4;
                           } else {
-                            stackOut_14_0 = var18.a(var8, (byte) -61);
-                            stackIn_16_0 = stackOut_14_0;
+                            stackIn_16_0 = var18.a(var8, (byte) -61);
                             break L4;
                           }
                         }
                         L5: {
                           var14 = stackIn_16_0;
                           if (var12 == var11) {
-                            stackOut_20_0 = var18.a(var9, (byte) -102);
-                            stackIn_21_0 = stackOut_20_0;
+                            stackIn_21_0 = var18.a(var9, (byte) -102);
                             break L5;
                           } else {
                             if (var13 == null) {
-                              stackOut_19_0 = 0;
-                              stackIn_21_0 = stackOut_19_0;
+                              stackIn_21_0 = 0;
                               break L5;
                             } else {
-                              stackOut_18_0 = var13.field_g[var13.field_g.length + -1];
-                              stackIn_21_0 = stackOut_18_0;
+                              stackIn_21_0 = var13.field_g[var13.field_g.length + -1];
                               break L5;
                             }
                           }
@@ -1451,27 +1059,19 @@ class um implements ub, qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var7 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var7);
-            stackOut_24_1 = new StringBuilder().append("um.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var7);
+
+            stackIn_26_1 = new StringBuilder().append("um.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L6;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L6;
             }
           }
@@ -1489,30 +1089,19 @@ class um implements ub, qe {
     }
 
     private final void a(byte param0, oc param1) {
-        int discarded$1 = 0;
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        oc var8 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        oc var8 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -1531,7 +1120,7 @@ class um implements ub, qe {
                 break L2;
               } else {
                 var8 = (oc) null;
-                discarded$1 = this.a((oc) null, (byte) 6, -90);
+                this.a((oc) null, (byte) 6, -90);
                 break L2;
               }
             }
@@ -1563,70 +1152,65 @@ class um implements ub, qe {
             }
             L5: {
               L6: {
-                var6 = this.field_f;
-                if (var6 != 0) {
-                  if ((var6 ^ -1) == -4) {
-                    break L6;
-                  } else {
-                    if (1 != var6) {
-                      if (-3 != (var6 ^ -1)) {
-                        break L5;
+                L7: {
+                  var6 = this.field_f;
+                  if (var6 != 0) {
+                    if ((var6 ^ -1) == -4) {
+                      break L7;
+                    } else {
+                      if (1 != var6) {
+                        if (-3 != (var6 ^ -1)) {
+                          break L6;
+                        } else {
+                          if (!(param1.field_j instanceof oj)) {
+                            break L6;
+                          } else {
+                            ((oj) ((Object) param1.field_j)).a(this.a(param1, true), this.field_k, var3_int, (byte) -115, var5);
+                            break L5;
+                          }
+                        }
                       } else {
-                        if (!(param1.field_j instanceof oj)) {
+                        if (param1.field_j instanceof oj) {
+                          ((oj) ((Object) param1.field_j)).a(this.a(param1, true), var5, this.field_k, var3_int >> -1724541599, 1);
                           break L5;
                         } else {
-                          ((oj) ((Object) param1.field_j)).a(this.a(param1, true), this.field_k, var3_int, (byte) -115, var5);
                           break L5;
                         }
                       }
-                    } else {
-                      if (param1.field_j instanceof oj) {
-                        ((oj) ((Object) param1.field_j)).a(this.a(param1, true), var5, this.field_k, var3_int >> -1724541599, 1);
-                        break L5;
-                      } else {
-                        break L5;
-                      }
                     }
+                  } else {
+                    break L7;
                   }
-                } else {
+                }
+                if (!(param1.field_j instanceof oj)) {
                   break L6;
+                } else {
+                  ((oj) ((Object) param1.field_j)).a(this.field_k, var5, 0, this.a(param1, true), 0);
+                  break L5;
                 }
               }
-              if (!(param1.field_j instanceof oj)) {
-                break L5;
-              } else {
-                ((oj) ((Object) param1.field_j)).a(this.field_k, var5, 0, this.a(param1, true), 0);
-                break L5;
-              }
+              break L5;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var3 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var3);
-            stackOut_31_1 = new StringBuilder().append("um.M(").append(param0).append(',');
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackIn_33_0 = (RuntimeException) (var3);
+
+            stackIn_33_1 = new StringBuilder().append("um.M(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
-              break L7;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
+              break L8;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
-              break L7;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
+              break L8;
             }
           }
           throw qb.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
@@ -1634,12 +1218,60 @@ class um implements ub, qe {
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3, int param4, int param5, byte param6) {
+        mh dupTemp$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        RuntimeException var7 = null;
+        mm stackIn_3_0;
+        int stackIn_3_1;
+        int stackIn_3_2;
+        int stackIn_3_3;
+        int stackIn_3_4;
+        boolean stackIn_3_5;
+        mm stackIn_4_0;
+        int stackIn_4_1;
+        int stackIn_4_2;
+        int stackIn_4_3;
+        int stackIn_4_4;
+        boolean stackIn_4_5;
+        int stackIn_4_6;
+        int stackIn_8_0 = 0;
+        int stackIn_8_1 = 0;
+        om stackIn_10_0;
+        mh stackIn_10_1;
+        mh stackIn_10_2;
+        long stackIn_10_3;
+        om stackIn_11_0 = null;
+        mh stackIn_11_1 = null;
+        mh stackIn_11_2 = null;
+        long stackIn_11_3 = 0L;
+        mh stackIn_11_4 = null;
+        om stackIn_27_0;
+        mh stackIn_27_1;
+        mh stackIn_27_2;
+        long stackIn_27_3;
+        om stackIn_28_0;
+        mh stackIn_28_1;
+        mh stackIn_28_2;
+        long stackIn_28_3;
+        mh stackIn_28_4;
+        int stackIn_32_0 = 0;
+        int stackIn_66_0 = 0;
+        int stackIn_77_0 = 0;
+        jp[] stackIn_79_0 = null;
+        jp[] stackIn_80_0 = null;
+        int stackIn_80_1 = 0;
+        jp[] stackIn_87_0 = null;
+        jp[] stackIn_88_0 = null;
+        int stackIn_88_1 = 0;
+        String stackIn_147_0 = null;
+        String stackIn_157_0 = null;
+        String stackIn_163_0 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         vl var8 = null;
         long var9 = 0L;
         Object var11 = null;
@@ -1647,8 +1279,8 @@ class um implements ub, qe {
         om var13 = null;
         int var14 = 0;
         int var15 = 0;
-        mh var19 = null;
         int var19_int = 0;
+        mh var19 = null;
         mh var20 = null;
         mh var21 = null;
         mh var22 = null;
@@ -1664,10 +1296,10 @@ class um implements ub, qe {
         mh var31 = null;
         int var32 = 0;
         String var33 = null;
-        String var34 = null;
         int var34_int = 0;
-        String var35 = null;
+        String var34 = null;
         int var35_int = 0;
+        String var35 = null;
         Object var36 = null;
         int var37 = 0;
         int var38_int = 0;
@@ -1694,139 +1326,6 @@ class um implements ub, qe {
         Object var54 = null;
         jp var54_ref = null;
         jp var55 = null;
-        mm stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
-        int stackIn_2_2 = 0;
-        int stackIn_2_3 = 0;
-        int stackIn_2_4 = 0;
-        boolean stackIn_2_5 = false;
-        mm stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        int stackIn_3_2 = 0;
-        int stackIn_3_3 = 0;
-        int stackIn_3_4 = 0;
-        boolean stackIn_3_5 = false;
-        mm stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        int stackIn_4_3 = 0;
-        int stackIn_4_4 = 0;
-        boolean stackIn_4_5 = false;
-        int stackIn_4_6 = 0;
-        om stackIn_8_0 = null;
-        mh stackIn_8_1 = null;
-        mh stackIn_8_2 = null;
-        long stackIn_8_3 = 0L;
-        om stackIn_9_0 = null;
-        mh stackIn_9_1 = null;
-        mh stackIn_9_2 = null;
-        long stackIn_9_3 = 0L;
-        om stackIn_10_0 = null;
-        mh stackIn_10_1 = null;
-        mh stackIn_10_2 = null;
-        long stackIn_10_3 = 0L;
-        mh stackIn_10_4 = null;
-        om stackIn_25_0 = null;
-        mh stackIn_25_1 = null;
-        mh stackIn_25_2 = null;
-        long stackIn_25_3 = 0L;
-        om stackIn_26_0 = null;
-        mh stackIn_26_1 = null;
-        mh stackIn_26_2 = null;
-        long stackIn_26_3 = 0L;
-        om stackIn_27_0 = null;
-        mh stackIn_27_1 = null;
-        mh stackIn_27_2 = null;
-        long stackIn_27_3 = 0L;
-        mh stackIn_27_4 = null;
-        int stackIn_31_0 = 0;
-        int stackIn_65_0 = 0;
-        int stackIn_76_0 = 0;
-        jp[] stackIn_77_0 = null;
-        jp[] stackIn_78_0 = null;
-        jp[] stackIn_79_0 = null;
-        int stackIn_79_1 = 0;
-        jp[] stackIn_85_0 = null;
-        jp[] stackIn_86_0 = null;
-        jp[] stackIn_87_0 = null;
-        int stackIn_87_1 = 0;
-        String stackIn_146_0 = null;
-        String stackIn_156_0 = null;
-        String stackIn_162_0 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        mm stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        int stackOut_1_3 = 0;
-        int stackOut_1_4 = 0;
-        boolean stackOut_1_5 = false;
-        mm stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        int stackOut_3_3 = 0;
-        int stackOut_3_4 = 0;
-        boolean stackOut_3_5 = false;
-        int stackOut_3_6 = 0;
-        mm stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        int stackOut_2_3 = 0;
-        int stackOut_2_4 = 0;
-        boolean stackOut_2_5 = false;
-        int stackOut_2_6 = 0;
-        om stackOut_7_0 = null;
-        mh stackOut_7_1 = null;
-        mh stackOut_7_2 = null;
-        long stackOut_7_3 = 0L;
-        om stackOut_9_0 = null;
-        mh stackOut_9_1 = null;
-        mh stackOut_9_2 = null;
-        long stackOut_9_3 = 0L;
-        mh stackOut_9_4 = null;
-        om stackOut_8_0 = null;
-        mh stackOut_8_1 = null;
-        mh stackOut_8_2 = null;
-        long stackOut_8_3 = 0L;
-        mh stackOut_8_4 = null;
-        om stackOut_24_0 = null;
-        mh stackOut_24_1 = null;
-        mh stackOut_24_2 = null;
-        long stackOut_24_3 = 0L;
-        om stackOut_26_0 = null;
-        mh stackOut_26_1 = null;
-        mh stackOut_26_2 = null;
-        long stackOut_26_3 = 0L;
-        mh stackOut_26_4 = null;
-        om stackOut_25_0 = null;
-        mh stackOut_25_1 = null;
-        mh stackOut_25_2 = null;
-        long stackOut_25_3 = 0L;
-        mh stackOut_25_4 = null;
-        int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_71_0 = 0;
-        jp[] stackOut_76_0 = null;
-        jp[] stackOut_78_0 = null;
-        int stackOut_78_1 = 0;
-        jp[] stackOut_77_0 = null;
-        int stackOut_77_1 = 0;
-        jp[] stackOut_84_0 = null;
-        jp[] stackOut_86_0 = null;
-        int stackOut_86_1 = 0;
-        jp[] stackOut_85_0 = null;
-        int stackOut_85_1 = 0;
-        String stackOut_145_0 = null;
-        String stackOut_144_0 = null;
-        String stackOut_155_0 = null;
-        String stackOut_154_0 = null;
-        String stackOut_152_0 = null;
-        String stackOut_161_0 = null;
-        String stackOut_160_0 = null;
         var51 = null;
         var52 = null;
         var53 = null;
@@ -1835,55 +1334,35 @@ class um implements ub, qe {
         try {
           L0: {
             L1: {
-              stackOut_1_0 = rl.field_e;
-              stackOut_1_1 = 2;
-              stackOut_1_2 = (np.field_a * 4 + 8) * param3;
-              stackOut_1_3 = 2 * (2 + np.field_a);
-              stackOut_1_4 = 22676;
-              stackOut_1_5 = param2;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_3_2 = stackOut_1_2;
-              stackIn_3_3 = stackOut_1_3;
-              stackIn_3_4 = stackOut_1_4;
-              stackIn_3_5 = stackOut_1_5;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              stackIn_2_2 = stackOut_1_2;
-              stackIn_2_3 = stackOut_1_3;
-              stackIn_2_4 = stackOut_1_4;
-              stackIn_2_5 = stackOut_1_5;
+              stackIn_3_0 = rl.field_e;
+
+              stackIn_3_1 = 2;
+
+              stackIn_3_2 = (np.field_a * 4 + 8) * param3;
+
+              stackIn_3_3 = 2 * (2 + np.field_a);
+
+              stackIn_3_4 = 22676;
+
+              stackIn_3_5 = param2;
+
               if (rl.field_e != o.field_b) {
-                stackOut_3_0 = (mm) ((Object) stackIn_3_0);
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = stackIn_3_2;
-                stackOut_3_3 = stackIn_3_3;
-                stackOut_3_4 = stackIn_3_4;
-                stackOut_3_5 = stackIn_3_5;
-                stackOut_3_6 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
-                stackIn_4_3 = stackOut_3_3;
-                stackIn_4_4 = stackOut_3_4;
-                stackIn_4_5 = stackOut_3_5;
-                stackIn_4_6 = stackOut_3_6;
+                stackIn_4_0 = (mm) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = stackIn_3_2;
+                stackIn_4_3 = stackIn_3_3;
+                stackIn_4_4 = stackIn_3_4;
+                stackIn_4_5 = stackIn_3_5;
+                stackIn_4_6 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = (mm) ((Object) stackIn_2_0);
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = stackIn_2_2;
-                stackOut_2_3 = stackIn_2_3;
-                stackOut_2_4 = stackIn_2_4;
-                stackOut_2_5 = stackIn_2_5;
-                stackOut_2_6 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                stackIn_4_3 = stackOut_2_3;
-                stackIn_4_4 = stackOut_2_4;
-                stackIn_4_5 = stackOut_2_5;
-                stackIn_4_6 = stackOut_2_6;
+                stackIn_4_0 = (mm) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = stackIn_3_2;
+                stackIn_4_3 = stackIn_3_3;
+                stackIn_4_4 = stackIn_3_4;
+                stackIn_4_5 = stackIn_3_5;
+                stackIn_4_6 = 1;
                 break L1;
               }
             }
@@ -1902,9 +1381,11 @@ class um implements ub, qe {
                   if (null != var13.field_bb) {
                     break L3;
                   } else {
+                    var13.field_Ac = new mh(0L, fp.field_v);
+                    stackIn_8_0 = param1;
+                    stackIn_8_1 = param5;
                     L4: {
-                      var13.field_Ac = new mh(0L, fp.field_v);
-                      var15 = param1 | param5;
+                      var15 = stackIn_8_0 | stackIn_8_1;
                       var13.a(var13.field_Ac, 0);
                       var13.field_Ac.field_S = 1;
                       var13.field_Vb = new mh(0L, vb.field_K);
@@ -1918,46 +1399,32 @@ class um implements ub, qe {
                       var13.field_mc = new mh(0L, vb.field_K);
                       var13.a(var13.field_mc, 0);
                       var13.field_mc.field_S = 2;
-                      stackOut_7_0 = (om) (var13);
-                      stackOut_7_1 = null;
-                      stackOut_7_2 = null;
-                      stackOut_7_3 = 0L;
-                      stackIn_9_0 = stackOut_7_0;
-                      stackIn_9_1 = stackOut_7_1;
-                      stackIn_9_2 = stackOut_7_2;
-                      stackIn_9_3 = stackOut_7_3;
-                      stackIn_8_0 = stackOut_7_0;
-                      stackIn_8_1 = stackOut_7_1;
-                      stackIn_8_2 = stackOut_7_2;
-                      stackIn_8_3 = stackOut_7_3;
+                      stackIn_10_0 = (om) (var13);
+
+                      stackIn_10_1 = null;
+
+                      stackIn_10_2 = null;
+
+                      stackIn_10_3 = 0L;
+
                       if (vd.field_e) {
-                        stackOut_9_0 = (om) ((Object) stackIn_9_0);
-                        stackOut_9_1 = null;
-                        stackOut_9_2 = null;
-                        stackOut_9_3 = stackIn_9_3;
-                        stackOut_9_4 = fp.field_v;
-                        stackIn_10_0 = stackOut_9_0;
-                        stackIn_10_1 = stackOut_9_1;
-                        stackIn_10_2 = stackOut_9_2;
-                        stackIn_10_3 = stackOut_9_3;
-                        stackIn_10_4 = stackOut_9_4;
+                        stackIn_11_0 = (om) ((Object) stackIn_10_0);
+                        stackIn_11_1 = null;
+                        stackIn_11_2 = null;
+                        stackIn_11_3 = stackIn_10_3;
+                        stackIn_11_4 = fp.field_v;
                         break L4;
                       } else {
-                        stackOut_8_0 = (om) ((Object) stackIn_8_0);
-                        stackOut_8_1 = null;
-                        stackOut_8_2 = null;
-                        stackOut_8_3 = stackIn_8_3;
-                        stackOut_8_4 = vb.field_K;
-                        stackIn_10_0 = stackOut_8_0;
-                        stackIn_10_1 = stackOut_8_1;
-                        stackIn_10_2 = stackOut_8_2;
-                        stackIn_10_3 = stackOut_8_3;
-                        stackIn_10_4 = stackOut_8_4;
+                        stackIn_11_0 = (om) ((Object) stackIn_10_0);
+                        stackIn_11_1 = null;
+                        stackIn_11_2 = null;
+                        stackIn_11_3 = stackIn_10_3;
+                        stackIn_11_4 = vb.field_K;
                         break L4;
                       }
                     }
                     L5: {
-                      stackIn_10_0.field_ec = new mh(stackIn_10_3, stackIn_10_4);
+                      stackIn_11_0.field_ec = new mh(stackIn_11_3, stackIn_11_4);
                       var13.a(var13.field_ec, 0);
                       var13.field_Ec = new mh[cq.field_p];
                       var13.field_sc = new mh(0L, (mh) null);
@@ -2006,45 +1473,31 @@ class um implements ub, qe {
                     L9: while (true) {
                       if (cq.field_p <= var19_int) {
                         L10: {
-                          stackOut_24_0 = (om) (var13);
-                          stackOut_24_1 = null;
-                          stackOut_24_2 = null;
-                          stackOut_24_3 = 0L;
-                          stackIn_26_0 = stackOut_24_0;
-                          stackIn_26_1 = stackOut_24_1;
-                          stackIn_26_2 = stackOut_24_2;
-                          stackIn_26_3 = stackOut_24_3;
-                          stackIn_25_0 = stackOut_24_0;
-                          stackIn_25_1 = stackOut_24_1;
-                          stackIn_25_2 = stackOut_24_2;
-                          stackIn_25_3 = stackOut_24_3;
+                          stackIn_27_0 = (om) (var13);
+
+                          stackIn_27_1 = null;
+
+                          stackIn_27_2 = null;
+
+                          stackIn_27_3 = 0L;
+
                           if (vd.field_e) {
-                            stackOut_26_0 = (om) ((Object) stackIn_26_0);
-                            stackOut_26_1 = null;
-                            stackOut_26_2 = null;
-                            stackOut_26_3 = stackIn_26_3;
-                            stackOut_26_4 = vb.field_K;
-                            stackIn_27_0 = stackOut_26_0;
-                            stackIn_27_1 = stackOut_26_1;
-                            stackIn_27_2 = stackOut_26_2;
-                            stackIn_27_3 = stackOut_26_3;
-                            stackIn_27_4 = stackOut_26_4;
+                            stackIn_28_0 = (om) ((Object) stackIn_27_0);
+                            stackIn_28_1 = null;
+                            stackIn_28_2 = null;
+                            stackIn_28_3 = stackIn_27_3;
+                            stackIn_28_4 = vb.field_K;
                             break L10;
                           } else {
-                            stackOut_25_0 = (om) ((Object) stackIn_25_0);
-                            stackOut_25_1 = null;
-                            stackOut_25_2 = null;
-                            stackOut_25_3 = stackIn_25_3;
-                            stackOut_25_4 = fp.field_v;
-                            stackIn_27_0 = stackOut_25_0;
-                            stackIn_27_1 = stackOut_25_1;
-                            stackIn_27_2 = stackOut_25_2;
-                            stackIn_27_3 = stackOut_25_3;
-                            stackIn_27_4 = stackOut_25_4;
+                            stackIn_28_0 = (om) ((Object) stackIn_27_0);
+                            stackIn_28_1 = null;
+                            stackIn_28_2 = null;
+                            stackIn_28_3 = stackIn_27_3;
+                            stackIn_28_4 = fp.field_v;
                             break L10;
                           }
                         }
-                        stackIn_27_0.field_zc = new mh(stackIn_27_3, stackIn_27_4);
+                        stackIn_28_0.field_zc = new mh(stackIn_28_3, stackIn_28_4);
                         var13.a(var13.field_zc, 0);
                         var13.field_zc.field_S = 2;
                         var13.field_Ub = new mh(0L, vb.field_K);
@@ -2080,16 +1533,14 @@ class um implements ub, qe {
                 L12: {
                   var13.field_Ac.field_Mb = null;
                   if (!var13.field_Rb) {
-                    stackOut_30_0 = param5;
-                    stackIn_31_0 = stackOut_30_0;
+                    stackIn_32_0 = param5;
                     break L12;
                   } else {
-                    stackOut_29_0 = param1;
-                    stackIn_31_0 = stackOut_29_0;
+                    stackIn_32_0 = param1;
                     break L12;
                   }
                 }
-                var15 = stackIn_31_0;
+                var15 = stackIn_32_0;
                 var13.field_Ac.field_cb = 0;
                 var47 = var13.field_Ac;
                 var47.field_Ib = 0;
@@ -2260,17 +1711,15 @@ class um implements ub, qe {
                           var13.field_mc.field_Mb = Integer.toString(var13.field_vc);
                           var13.field_mc.a(np.field_a, var32, 200, 48, (byte) 64);
                           if (!vd.field_e) {
-                            stackOut_64_0 = 200;
-                            stackIn_65_0 = stackOut_64_0;
+                            stackIn_66_0 = 200;
                             break L22;
                           } else {
-                            stackOut_63_0 = 250;
-                            stackIn_65_0 = stackOut_63_0;
+                            stackIn_66_0 = 250;
                             break L22;
                           }
                         }
                         L23: {
-                          var34_int = stackIn_65_0;
+                          var34_int = stackIn_66_0;
                           var13.field_ec.a(np.field_a, var32, var34_int, -2 + (365 + -var34_int), (byte) 64);
                           var35_int = kn.field_z;
                           if (-1 != (var15 & 1 << fd.field_c ^ -1)) {
@@ -2288,40 +1737,32 @@ class um implements ub, qe {
                             L25: {
                               if (!var13.field_uc) {
                                 if (var13.field_Pb) {
-                                  stackOut_74_0 = 1;
-                                  stackIn_76_0 = stackOut_74_0;
+                                  stackIn_77_0 = 1;
                                   break L25;
                                 } else {
-                                  stackOut_73_0 = 0;
-                                  stackIn_76_0 = stackOut_73_0;
+                                  stackIn_77_0 = 0;
                                   break L25;
                                 }
                               } else {
-                                stackOut_71_0 = 1;
-                                stackIn_76_0 = stackOut_71_0;
+                                stackIn_77_0 = 1;
                                 break L25;
                               }
                             }
                             L26: {
-                              var37 = stackIn_76_0;
-                              stackOut_76_0 = uo.field_c;
-                              stackIn_78_0 = stackOut_76_0;
-                              stackIn_77_0 = stackOut_76_0;
+                              var37 = stackIn_77_0;
+                              stackIn_79_0 = uo.field_c;
+
                               if (var37 == 0) {
-                                stackOut_78_0 = (jp[]) ((Object) stackIn_78_0);
-                                stackOut_78_1 = 0;
-                                stackIn_79_0 = stackOut_78_0;
-                                stackIn_79_1 = stackOut_78_1;
+                                stackIn_80_0 = (jp[]) ((Object) stackIn_79_0);
+                                stackIn_80_1 = 0;
                                 break L26;
                               } else {
-                                stackOut_77_0 = (jp[]) ((Object) stackIn_77_0);
-                                stackOut_77_1 = 1;
-                                stackIn_79_0 = stackOut_77_0;
-                                stackIn_79_1 = stackOut_77_1;
+                                stackIn_80_0 = (jp[]) ((Object) stackIn_79_0);
+                                stackIn_80_1 = 1;
                                 break L26;
                               }
                             }
-                            var52_ref = stackIn_79_0[stackIn_79_1];
+                            var52_ref = stackIn_80_0[stackIn_80_1];
                             var13.field_Yb.field_wb = var52_ref;
                             var13.field_Yb.a(var13.field_ec.field_cb, 0, var35_int, var52_ref.field_x, (byte) 64);
                             var35_int = var35_int + (var52_ref.field_x - -kn.field_z);
@@ -2344,24 +1785,19 @@ class um implements ub, qe {
                         L28: {
                           if ((var15 & 1 << mm.field_Pb) != 0) {
                             L29: {
-                              stackOut_84_0 = bq.field_c;
-                              stackIn_86_0 = stackOut_84_0;
-                              stackIn_85_0 = stackOut_84_0;
+                              stackIn_87_0 = bq.field_c;
+
                               if (var13.field_ac) {
-                                stackOut_86_0 = (jp[]) ((Object) stackIn_86_0);
-                                stackOut_86_1 = 1;
-                                stackIn_87_0 = stackOut_86_0;
-                                stackIn_87_1 = stackOut_86_1;
+                                stackIn_88_0 = (jp[]) ((Object) stackIn_87_0);
+                                stackIn_88_1 = 1;
                                 break L29;
                               } else {
-                                stackOut_85_0 = (jp[]) ((Object) stackIn_85_0);
-                                stackOut_85_1 = 0;
-                                stackIn_87_0 = stackOut_85_0;
-                                stackIn_87_1 = stackOut_85_1;
+                                stackIn_88_0 = (jp[]) ((Object) stackIn_87_0);
+                                stackIn_88_1 = 0;
                                 break L29;
                               }
                             }
-                            var54_ref = stackIn_87_0[stackIn_87_1];
+                            var54_ref = stackIn_88_0[stackIn_88_1];
                             var13.field_lc.field_wb = var54_ref;
                             var13.field_lc.a(var13.field_ec.field_cb, 0, var35_int, var54_ref.field_x, (byte) 64);
                             var35_int = var35_int + (kn.field_z + var54_ref.field_x);
@@ -2414,7 +1850,8 @@ class um implements ub, qe {
                               if (cq.field_p <= var38_int) {
                                 break L33;
                               } else {
-                                var13.field_Ec[var38_int].field_P = var13.field_Ec[var38_int].field_P + var37;
+                                dupTemp$0 = var13.field_Ec[var38_int];
+                                dupTemp$0.field_P = dupTemp$0.field_P + var37;
                                 var38_int++;
                                 continue L34;
                               }
@@ -2458,8 +1895,8 @@ class um implements ub, qe {
                           } else {
                             var32 += 2;
                             var38 = new StringBuilder(64);
-                            discarded$4 = var38.append(th.field_f);
-                            discarded$5 = var38.append(var13.field_Qb[0]);
+                            discarded$1 = var38.append(th.field_f);
+                            discarded$2 = var38.append(var13.field_Qb[0]);
                             var39_int = 1;
                             L38: while (true) {
                               if (var13.field_cc <= var39_int) {
@@ -2470,8 +1907,8 @@ class um implements ub, qe {
                                 var32 = var32 + np.field_a * var40;
                                 break L37;
                               } else {
-                                discarded$6 = var38.append(", ");
-                                discarded$7 = var38.append(var13.field_Qb[var39_int]);
+                                discarded$3 = var38.append(", ");
+                                discarded$4 = var38.append(var13.field_Qb[var39_int]);
                                 var39_int++;
                                 continue L38;
                               }
@@ -2555,16 +1992,14 @@ class um implements ub, qe {
                           } else {
                             L47: {
                               if (var13.field_ac) {
-                                stackOut_145_0 = pg.field_n;
-                                stackIn_146_0 = stackOut_145_0;
+                                stackIn_147_0 = pg.field_n;
                                 break L47;
                               } else {
-                                stackOut_144_0 = rl.field_b;
-                                stackIn_146_0 = stackOut_144_0;
+                                stackIn_147_0 = rl.field_b;
                                 break L47;
                               }
                             }
-                            ep.field_e = stackIn_146_0;
+                            ep.field_e = stackIn_147_0;
                             break L46;
                           }
                         }
@@ -2577,12 +2012,10 @@ class um implements ub, qe {
                                 } else {
                                   if (!var13.field_Pb) {
                                     if (!var13.field_Dc) {
-                                      stackOut_155_0 = bl.field_K;
-                                      stackIn_156_0 = stackOut_155_0;
+                                      stackIn_157_0 = bl.field_K;
                                       break L49;
                                     } else {
-                                      stackOut_154_0 = be.field_n;
-                                      stackIn_156_0 = stackOut_154_0;
+                                      stackIn_157_0 = be.field_n;
                                       break L49;
                                     }
                                   } else {
@@ -2590,11 +2023,10 @@ class um implements ub, qe {
                                   }
                                 }
                               }
-                              stackOut_152_0 = bc.field_d;
-                              stackIn_156_0 = stackOut_152_0;
+                              stackIn_157_0 = bc.field_d;
                               break L49;
                             }
-                            ep.field_e = stackIn_156_0;
+                            ep.field_e = stackIn_157_0;
                             break L48;
                           } else {
                             break L48;
@@ -2604,16 +2036,14 @@ class um implements ub, qe {
                           if (var13.field_Bc.field_kb) {
                             L52: {
                               if (2 != var13.field_wc) {
-                                stackOut_161_0 = cm.field_q;
-                                stackIn_162_0 = stackOut_161_0;
+                                stackIn_163_0 = cm.field_q;
                                 break L52;
                               } else {
-                                stackOut_160_0 = id.field_jc;
-                                stackIn_162_0 = stackOut_160_0;
+                                stackIn_163_0 = id.field_jc;
                                 break L52;
                               }
                             }
-                            ep.field_e = stackIn_162_0;
+                            ep.field_e = stackIn_163_0;
                             break L51;
                           } else {
                             break L51;
@@ -2717,8 +2147,6 @@ class um implements ub, qe {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -2726,26 +2154,14 @@ class um implements ub, qe {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1) {
-              stackOut_3_0 = param0.field_A;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = param0.field_A;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (String) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (String) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -2754,27 +2170,19 @@ class um implements ub, qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("um.Q(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("um.Q(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -2788,15 +2196,6 @@ class um implements ub, qe {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, oc param7) {
-        int discarded$1 = 0;
-        RuntimeException var9 = null;
-        int var9_int = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
@@ -2804,14 +2203,12 @@ class um implements ub, qe {
         String stackIn_29_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
+        int var9_int = 0;
+        RuntimeException var9 = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -2821,7 +2218,7 @@ class um implements ub, qe {
                 var9_int = this.a(61823, param7);
                 var10 = this.b(16265, param7);
                 if (this.field_n) {
-                  discarded$1 = this.field_k.a(this.a(param7, true), this.a(param0, param7, 65263, param6), this.a((byte) 117, param3, param1, param7), var9_int, var10, param4, param2, this.field_f, this.field_m, this.field_h);
+                  this.field_k.a(this.a(param7, true), this.a(param0, param7, 65263, param6), this.a((byte) 117, param3, param1, param7), var9_int, var10, param4, param2, this.field_f, this.field_m, this.field_h);
                   break L1;
                 } else {
                   L2: {
@@ -2888,27 +2285,19 @@ class um implements ub, qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var9 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var9);
-            stackOut_26_1 = new StringBuilder().append("um.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_28_0 = (RuntimeException) (var9);
+
+            stackIn_28_1 = new StringBuilder().append("um.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
+
             if (param7 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L5;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L5;
             }
           }
@@ -2924,23 +2313,12 @@ class um implements ub, qe {
     public final int a(int param0, byte param1, oc param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -2951,35 +2329,26 @@ class um implements ub, qe {
                 break L1;
               }
             }
-            stackOut_2_0 = this.a((byte) 125, param0, 0, param2);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = this.a((byte) 125, param0, 0, param2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var4);
-            stackOut_4_1 = new StringBuilder().append("um.S(").append(param0).append(',').append(param1).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var4);
+
+            stackIn_6_1 = new StringBuilder().append("um.S(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -2996,12 +2365,9 @@ class um implements ub, qe {
     }
 
     public final int a(oc param0, int param1) {
-        ep discarded$8 = null;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -3009,27 +2375,15 @@ class um implements ub, qe {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
-            discarded$8 = this.c(param0, 109);
+            this.c(param0, 109);
             if (param1 == 46695) {
-              stackOut_3_0 = param0.field_j.a(param1 ^ 46695) + this.field_q - -this.field_a;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = param0.field_j.a(param1 ^ 46695) + this.field_q - -this.field_a;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 99;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 99;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -3038,27 +2392,19 @@ class um implements ub, qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("um.G(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("um.G(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }

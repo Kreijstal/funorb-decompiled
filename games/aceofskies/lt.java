@@ -17,9 +17,9 @@ final class lt extends to {
     }
 
     final gm d(byte param0) {
-        an var2 = null;
-        gm var3 = null;
-        int var4 = 0;
+        an var2;
+        gm var3;
+        int var4;
         var4 = AceOfSkies.field_G ? 1 : 0;
         if (param0 == -112) {
           var2 = new an(this.field_w);
@@ -42,10 +42,9 @@ final class lt extends to {
     }
 
     final void j(int param0) {
-        ea discarded$0 = null;
         int var4 = AceOfSkies.field_G ? 1 : 0;
         if (param0 != 0) {
-            discarded$0 = this.i(92);
+            this.i(92);
         }
         an var2 = new an(this.field_w);
         gm var3 = (gm) ((Object) var2.c(-1372));
@@ -73,7 +72,6 @@ final class lt extends to {
 
     final void a(ea param0, int param1) {
         gm var3 = null;
-        boolean discarded$0 = false;
         try {
             if (param1 != 0) {
                 this.field_w = (kp) null;
@@ -84,7 +82,7 @@ final class lt extends to {
             var3 = (gm) ((Object) param0);
             this.field_w.a(var3, 25611);
             var3.field_z = true;
-            discarded$0 = var3.a((ea) (this), (byte) -42);
+            var3.a((ea) (this), (byte) -42);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) ((Object) runtimeException), "lt.LA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

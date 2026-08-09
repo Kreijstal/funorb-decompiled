@@ -9,12 +9,11 @@ final class ja extends ff {
     static dl[] field_h;
 
     final static void d(byte param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        int var4 = 0;
         jg var4_ref_jg = null;
+        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -29,13 +28,14 @@ final class ja extends ff {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        jg var17 = null;
-        int var18 = 0;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        jg var17 = null;
+        int var18 = 0;
         var19 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -155,10 +155,8 @@ final class ja extends ff {
     }
 
     final static boolean a(char param0, byte param1) {
-        int var2 = 0;
+        int var2;
         int stackIn_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
         L0: {
           L1: {
             L2: {
@@ -195,12 +193,10 @@ final class ja extends ff {
                 }
               }
             }
-            stackOut_10_0 = 0;
-            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_0 = 0;
             break L0;
           }
-          stackOut_9_0 = 1;
-          stackIn_11_0 = stackOut_9_0;
+          stackIn_11_0 = 1;
           break L0;
         }
         return stackIn_11_0 != 0;
@@ -208,22 +204,12 @@ final class ja extends ff {
 
     final static void a(vc param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -241,27 +227,19 @@ final class ja extends ff {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("ja.J(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("ja.J(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -270,26 +248,18 @@ final class ja extends ff {
     }
 
     final void b(int param0) {
-        int var2 = 0;
-        dl var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        ln var6 = null;
-        int var7 = 0;
-        dl var8 = null;
-        kk var9 = null;
         dl stackIn_7_0 = null;
-        ef stackIn_18_0 = null;
         ef stackIn_19_0 = null;
         ef stackIn_20_0 = null;
         String stackIn_20_1 = null;
-        dl stackOut_6_0 = null;
-        dl stackOut_5_0 = null;
-        ef stackOut_17_0 = null;
-        ef stackOut_19_0 = null;
-        String stackOut_19_1 = null;
-        ef stackOut_18_0 = null;
-        String stackOut_18_1 = null;
+        int var2;
+        dl var3;
+        int var4;
+        int var5;
+        ln var6;
+        int var7;
+        dl var8;
+        kk var9;
         L0: {
           var7 = CrazyCrystals.field_B;
           this.a(7.5, true);
@@ -311,12 +281,10 @@ final class ja extends ff {
               } else {
                 L3: {
                   if (q.field_a[ma.field_n[var2]].field_h) {
-                    stackOut_6_0 = jd.field_A;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = jd.field_A;
                     break L3;
                   } else {
-                    stackOut_5_0 = vj.field_a[11][this.field_g >> -755314590];
-                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_0 = vj.field_a[11][this.field_g >> -755314590];
                     break L3;
                   }
                 }
@@ -347,20 +315,15 @@ final class ja extends ff {
                       L7: {
                         var6 = (ln) (vm.field_j[var2].elementAt(var5));
                         an.field_q.a(var6.field_a, -37 - -(m.field_l[var2] * 15), 252 + (jj.field_b - 255) + 15 * (var5 + fo.field_m[var2]), var4, -1);
-                        stackOut_17_0 = an.field_q;
-                        stackIn_19_0 = stackOut_17_0;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_19_0 = an.field_q;
+
                         if (-1 == (var6.field_e ^ -1)) {
-                          stackOut_19_0 = (ef) ((Object) stackIn_19_0);
-                          stackOut_19_1 = "<times>2";
-                          stackIn_20_0 = stackOut_19_0;
-                          stackIn_20_1 = stackOut_19_1;
+                          stackIn_20_0 = (ef) ((Object) stackIn_19_0);
+                          stackIn_20_1 = "<times>2";
                           break L7;
                         } else {
-                          stackOut_18_0 = (ef) ((Object) stackIn_18_0);
-                          stackOut_18_1 = Integer.toString(var6.field_e);
-                          stackIn_20_0 = stackOut_18_0;
-                          stackIn_20_1 = stackOut_18_1;
+                          stackIn_20_0 = (ef) ((Object) stackIn_19_0);
+                          stackIn_20_1 = Integer.toString(var6.field_e);
                           break L7;
                         }
                       }
@@ -394,25 +357,15 @@ final class ja extends ff {
 
     final static void a(int param0, f[][] param1, int param2, boolean param3, int param4) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var5 = null;
         var7 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -454,27 +407,19 @@ final class ja extends ff {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var5);
-            stackOut_13_1 = new StringBuilder().append("ja.G(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var5);
+
+            stackIn_15_1 = new StringBuilder().append("ja.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }
@@ -491,14 +436,14 @@ final class ja extends ff {
     }
 
     ja() {
-        int incrementValue$1 = 0;
-        String[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var8 = 0;
+        int incrementValue$0 = 0;
+        String[] var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var8;
         L0: {
           this.field_g = 0;
           bp.field_b = new Vector();
@@ -577,9 +522,9 @@ final class ja extends ff {
                 }
               } else {
                 if (q.field_a[var5].field_b) {
-                  incrementValue$1 = var4;
+                  incrementValue$0 = var4;
                   var4++;
-                  ma.field_n[incrementValue$1] = var5;
+                  ma.field_n[incrementValue$0] = var5;
                   var5++;
                   continue L2;
                 } else {
@@ -610,114 +555,41 @@ final class ja extends ff {
     }
 
     private final void e(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4_int = 0;
-        ln[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        ln[] stackIn_13_0 = null;
-        ln[] stackIn_13_1 = null;
-        int stackIn_13_2 = 0;
-        ba stackIn_13_3 = null;
-        ba stackIn_13_4 = null;
-        ln[] stackIn_14_0 = null;
-        ln[] stackIn_14_1 = null;
-        int stackIn_14_2 = 0;
-        ba stackIn_14_3 = null;
-        ba stackIn_14_4 = null;
+        ln[] array$0 = null;
+        ln[] stackIn_14_0;
+        ln[] stackIn_14_1;
+        int stackIn_14_2;
+        ba stackIn_14_3;
+        ba stackIn_14_4;
         ln[] stackIn_15_0 = null;
         ln[] stackIn_15_1 = null;
         int stackIn_15_2 = 0;
         ba stackIn_15_3 = null;
         ba stackIn_15_4 = null;
         String stackIn_15_5 = null;
-        ln[] stackIn_16_0 = null;
-        ln[] stackIn_16_1 = null;
-        int stackIn_16_2 = 0;
-        fn stackIn_16_3 = null;
-        fn stackIn_16_4 = null;
-        ln[] stackIn_17_0 = null;
-        ln[] stackIn_17_1 = null;
-        int stackIn_17_2 = 0;
-        fn stackIn_17_3 = null;
-        fn stackIn_17_4 = null;
-        ln[] stackIn_18_0 = null;
-        ln[] stackIn_18_1 = null;
+        int stackIn_17_2;
+        fn stackIn_17_3;
+        fn stackIn_17_4;
         int stackIn_18_2 = 0;
         fn stackIn_18_3 = null;
         fn stackIn_18_4 = null;
         String stackIn_18_5 = null;
-        ln[] stackIn_19_0 = null;
-        ln[] stackIn_19_1 = null;
-        int stackIn_19_2 = 0;
-        fh stackIn_19_3 = null;
-        fh stackIn_19_4 = null;
-        ln[] stackIn_20_0 = null;
-        ln[] stackIn_20_1 = null;
-        int stackIn_20_2 = 0;
-        fh stackIn_20_3 = null;
-        fh stackIn_20_4 = null;
-        ln[] stackIn_21_0 = null;
-        ln[] stackIn_21_1 = null;
-        int stackIn_21_2 = 0;
-        fh stackIn_21_3 = null;
-        fh stackIn_21_4 = null;
-        String stackIn_21_5 = null;
-        ln[] stackOut_12_0 = null;
-        ln[] stackOut_12_1 = null;
-        int stackOut_12_2 = 0;
-        ba stackOut_12_3 = null;
-        ba stackOut_12_4 = null;
-        ln[] stackOut_14_0 = null;
-        ln[] stackOut_14_1 = null;
-        int stackOut_14_2 = 0;
-        ba stackOut_14_3 = null;
-        ba stackOut_14_4 = null;
-        String stackOut_14_5 = null;
-        ln[] stackOut_13_0 = null;
-        ln[] stackOut_13_1 = null;
-        int stackOut_13_2 = 0;
-        ba stackOut_13_3 = null;
-        ba stackOut_13_4 = null;
-        String stackOut_13_5 = null;
-        ln[] stackOut_15_0 = null;
-        ln[] stackOut_15_1 = null;
-        int stackOut_15_2 = 0;
-        fn stackOut_15_3 = null;
-        fn stackOut_15_4 = null;
-        ln[] stackOut_17_0 = null;
-        ln[] stackOut_17_1 = null;
-        int stackOut_17_2 = 0;
-        fn stackOut_17_3 = null;
-        fn stackOut_17_4 = null;
-        String stackOut_17_5 = null;
-        ln[] stackOut_16_0 = null;
-        ln[] stackOut_16_1 = null;
-        int stackOut_16_2 = 0;
-        fn stackOut_16_3 = null;
-        fn stackOut_16_4 = null;
-        String stackOut_16_5 = null;
-        ln[] stackOut_18_0 = null;
-        ln[] stackOut_18_1 = null;
-        int stackOut_18_2 = 0;
-        fh stackOut_18_3 = null;
-        fh stackOut_18_4 = null;
-        ln[] stackOut_20_0 = null;
-        ln[] stackOut_20_1 = null;
-        int stackOut_20_2 = 0;
-        fh stackOut_20_3 = null;
-        fh stackOut_20_4 = null;
-        String stackOut_20_5 = null;
-        ln[] stackOut_19_0 = null;
-        ln[] stackOut_19_1 = null;
-        int stackOut_19_2 = 0;
-        fh stackOut_19_3 = null;
-        fh stackOut_19_4 = null;
-        String stackOut_19_5 = null;
+        int stackIn_20_2;
+        fh stackIn_20_3;
+        fh stackIn_20_4;
+        int stackIn_21_2;
+        fh stackIn_21_3;
+        fh stackIn_21_4;
+        String stackIn_21_5;
+        int var2;
+        int var3;
+        int var4_int;
+        ln[] var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         var9 = CrazyCrystals.field_B;
         var2 = 0;
         var3 = 0;
@@ -733,149 +605,99 @@ final class ja extends ff {
               }
             }
             L2: {
-              stackOut_12_0 = new ln[8];
-              stackOut_12_1 = new ln[8];
-              stackOut_12_2 = 3;
-              stackOut_12_3 = null;
-              stackOut_12_4 = null;
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              stackIn_14_3 = stackOut_12_3;
-              stackIn_14_4 = stackOut_12_4;
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              stackIn_13_3 = stackOut_12_3;
-              stackIn_13_4 = stackOut_12_4;
+              array$0 = new ln[8];
+              stackIn_14_0 = (ln[]) (array$0);
+
+              stackIn_14_1 = (ln[]) (array$0);
+
+              stackIn_14_2 = 3;
+
+              stackIn_14_3 = null;
+
+              stackIn_14_4 = null;
+
               if (-2 == (var2 ^ -1)) {
-                stackOut_14_0 = (ln[]) ((Object) stackIn_14_0);
-                stackOut_14_1 = (ln[]) ((Object) stackIn_14_1);
-                stackOut_14_2 = stackIn_14_2;
-                stackOut_14_3 = null;
-                stackOut_14_4 = null;
-                stackOut_14_5 = og.field_y;
-                stackIn_15_0 = stackOut_14_0;
-                stackIn_15_1 = stackOut_14_1;
-                stackIn_15_2 = stackOut_14_2;
-                stackIn_15_3 = stackOut_14_3;
-                stackIn_15_4 = stackOut_14_4;
-                stackIn_15_5 = stackOut_14_5;
+                stackIn_15_0 = (ln[]) ((Object) stackIn_14_0);
+                stackIn_15_1 = (ln[]) ((Object) stackIn_14_1);
+                stackIn_15_2 = stackIn_14_2;
+                stackIn_15_3 = null;
+                stackIn_15_4 = null;
+                stackIn_15_5 = og.field_y;
                 break L2;
               } else {
-                stackOut_13_0 = (ln[]) ((Object) stackIn_13_0);
-                stackOut_13_1 = (ln[]) ((Object) stackIn_13_1);
-                stackOut_13_2 = stackIn_13_2;
-                stackOut_13_3 = null;
-                stackOut_13_4 = null;
-                stackOut_13_5 = ra.field_a;
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_15_1 = stackOut_13_1;
-                stackIn_15_2 = stackOut_13_2;
-                stackIn_15_3 = stackOut_13_3;
-                stackIn_15_4 = stackOut_13_4;
-                stackIn_15_5 = stackOut_13_5;
+                stackIn_15_0 = (ln[]) ((Object) stackIn_14_0);
+                stackIn_15_1 = (ln[]) ((Object) stackIn_14_1);
+                stackIn_15_2 = stackIn_14_2;
+                stackIn_15_3 = null;
+                stackIn_15_4 = null;
+                stackIn_15_5 = ra.field_a;
                 break L2;
               }
             }
             L3: {
               stackIn_15_1[stackIn_15_2] = (ln) ((Object) new ba(stackIn_15_5, 50, var2, var3));
-              stackOut_15_0 = (ln[]) ((Object) stackIn_15_0);
-              stackOut_15_1 = (ln[]) ((Object) stackIn_15_0);
-              stackOut_15_2 = 4;
-              stackOut_15_3 = null;
-              stackOut_15_4 = null;
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              stackIn_17_3 = stackOut_15_3;
-              stackIn_17_4 = stackOut_15_4;
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              stackIn_16_3 = stackOut_15_3;
-              stackIn_16_4 = stackOut_15_4;
+
+
+
+
+              stackIn_17_2 = 4;
+
+              stackIn_17_3 = null;
+
+              stackIn_17_4 = null;
+
               if (var2 != 1) {
-                stackOut_17_0 = (ln[]) ((Object) stackIn_17_0);
-                stackOut_17_1 = (ln[]) ((Object) stackIn_17_1);
-                stackOut_17_2 = stackIn_17_2;
-                stackOut_17_3 = null;
-                stackOut_17_4 = null;
-                stackOut_17_5 = je.field_h;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
-                stackIn_18_2 = stackOut_17_2;
-                stackIn_18_3 = stackOut_17_3;
-                stackIn_18_4 = stackOut_17_4;
-                stackIn_18_5 = stackOut_17_5;
+                stackIn_15_0 = (ln[]) ((Object) stackIn_15_0);
+                stackIn_15_0 = (ln[]) ((Object) stackIn_15_0);
+                stackIn_18_2 = stackIn_17_2;
+                stackIn_18_3 = null;
+                stackIn_18_4 = null;
+                stackIn_18_5 = je.field_h;
                 break L3;
               } else {
-                stackOut_16_0 = (ln[]) ((Object) stackIn_16_0);
-                stackOut_16_1 = (ln[]) ((Object) stackIn_16_1);
-                stackOut_16_2 = stackIn_16_2;
-                stackOut_16_3 = null;
-                stackOut_16_4 = null;
-                stackOut_16_5 = og.field_u;
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_18_1 = stackOut_16_1;
-                stackIn_18_2 = stackOut_16_2;
-                stackIn_18_3 = stackOut_16_3;
-                stackIn_18_4 = stackOut_16_4;
-                stackIn_18_5 = stackOut_16_5;
+                stackIn_15_0 = (ln[]) ((Object) stackIn_15_0);
+                stackIn_15_0 = (ln[]) ((Object) stackIn_15_0);
+                stackIn_18_2 = stackIn_17_2;
+                stackIn_18_3 = null;
+                stackIn_18_4 = null;
+                stackIn_18_5 = og.field_u;
                 break L3;
               }
             }
             L4: {
-              stackIn_18_1[stackIn_18_2] = (ln) ((Object) new fn(stackIn_18_5, 50, var2, var3));
-              stackOut_18_0 = (ln[]) ((Object) stackIn_18_0);
-              stackOut_18_1 = (ln[]) ((Object) stackIn_18_0);
-              stackOut_18_2 = 5;
-              stackOut_18_3 = null;
-              stackOut_18_4 = null;
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
-              stackIn_20_3 = stackOut_18_3;
-              stackIn_20_4 = stackOut_18_4;
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
-              stackIn_19_3 = stackOut_18_3;
-              stackIn_19_4 = stackOut_18_4;
+              stackIn_15_0[stackIn_18_2] = (ln) ((Object) new fn(stackIn_18_5, 50, var2, var3));
+
+
+
+
+              stackIn_20_2 = 5;
+
+              stackIn_20_3 = null;
+
+              stackIn_20_4 = null;
+
               if ((var2 ^ -1) != -2) {
-                stackOut_20_0 = (ln[]) ((Object) stackIn_20_0);
-                stackOut_20_1 = (ln[]) ((Object) stackIn_20_1);
-                stackOut_20_2 = stackIn_20_2;
-                stackOut_20_3 = null;
-                stackOut_20_4 = null;
-                stackOut_20_5 = tf.field_b;
-                stackIn_21_0 = stackOut_20_0;
-                stackIn_21_1 = stackOut_20_1;
-                stackIn_21_2 = stackOut_20_2;
-                stackIn_21_3 = stackOut_20_3;
-                stackIn_21_4 = stackOut_20_4;
-                stackIn_21_5 = stackOut_20_5;
+                stackIn_15_0 = (ln[]) ((Object) stackIn_15_0);
+                stackIn_15_0 = (ln[]) ((Object) stackIn_15_0);
+                stackIn_21_2 = stackIn_20_2;
+                stackIn_21_3 = null;
+                stackIn_21_4 = null;
+                stackIn_21_5 = tf.field_b;
                 break L4;
               } else {
-                stackOut_19_0 = (ln[]) ((Object) stackIn_19_0);
-                stackOut_19_1 = (ln[]) ((Object) stackIn_19_1);
-                stackOut_19_2 = stackIn_19_2;
-                stackOut_19_3 = null;
-                stackOut_19_4 = null;
-                stackOut_19_5 = mn.field_m;
-                stackIn_21_0 = stackOut_19_0;
-                stackIn_21_1 = stackOut_19_1;
-                stackIn_21_2 = stackOut_19_2;
-                stackIn_21_3 = stackOut_19_3;
-                stackIn_21_4 = stackOut_19_4;
-                stackIn_21_5 = stackOut_19_5;
+                stackIn_15_0 = (ln[]) ((Object) stackIn_15_0);
+                stackIn_15_0 = (ln[]) ((Object) stackIn_15_0);
+                stackIn_21_2 = stackIn_20_2;
+                stackIn_21_3 = null;
+                stackIn_21_4 = null;
+                stackIn_21_5 = mn.field_m;
                 break L4;
               }
             }
-            stackIn_21_1[stackIn_21_2] = (ln) ((Object) new fh(stackIn_21_5, 50, var2, var3));
-            stackIn_21_0[6] = (ln) ((Object) new le(jn.field_l, 0, var2, var3));
-            stackIn_21_0[7] = (ln) ((Object) new go(kp.field_l, -100, var2, var3));
-            var4 = stackIn_21_0;
+            stackIn_15_0[stackIn_21_2] = (ln) ((Object) new fh(stackIn_21_5, 50, var2, var3));
+            stackIn_15_0[6] = (ln) ((Object) new le(jn.field_l, 0, var2, var3));
+            stackIn_15_0[7] = (ln) ((Object) new go(kp.field_l, -100, var2, var3));
+            var4 = stackIn_15_0;
             vm.field_j = new Vector[ma.field_n.length];
             fo.field_m = new int[ma.field_n.length];
             ib.field_l = new int[ma.field_n.length];
@@ -938,9 +760,9 @@ final class ja extends ff {
     }
 
     final te b(byte param0) {
-        int var2 = 0;
-        kk var3 = null;
-        int var4 = 0;
+        int var2;
+        kk var3;
+        int var4;
         L0: {
           var4 = CrazyCrystals.field_B;
           if (param0 == -39) {

@@ -6,13 +6,9 @@ final class jf implements ir {
     static String field_b;
 
     final static boolean a(int param0) {
-        gk var2 = null;
+        gk var2;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 15000) {
           L0: {
             var2 = (gk) null;
@@ -20,12 +16,10 @@ final class jf implements ir {
             v.field_a = true;
             wg.field_b = kh.a(param0 + -15076) - -15000L;
             if ((ob.field_d ^ -1) != -12) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -35,12 +29,10 @@ final class jf implements ir {
             v.field_a = true;
             wg.field_b = kh.a(param0 + -15076) - -15000L;
             if ((ob.field_d ^ -1) != -12) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -49,7 +41,6 @@ final class jf implements ir {
     }
 
     final static void a(int param0, gk param1, gk param2) {
-        al discarded$0 = null;
         lj.field_c = nc.a(param1, param0 ^ 102, param2, jb.field_a, (boolean[]) null);
         boolean[] var5 = (boolean[]) null;
         kn.field_c = nc.a(param1, -107, param2, s.field_d, (boolean[]) null);
@@ -65,33 +56,23 @@ final class jf implements ir {
             mh.field_o = bj.a(param2, "", wg.field_c).a();
             gg.field_a = bj.a(param2, "", rg.field_C).a();
             kq.field_b = bj.a(param2, "", np.field_e).a();
-            discarded$0 = bj.a(param2, "", un.field_q).a();
+            bj.a(param2, "", un.field_q).a();
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) ((Object) runtimeException), "jf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        ll var8 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        ll var8 = null;
         try {
           L0: {
             L1: {
@@ -129,27 +110,19 @@ final class jf implements ir {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var6);
-            stackOut_10_1 = new StringBuilder().append("jf.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var6);
+
+            stackIn_12_1 = new StringBuilder().append("jf.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L3;
             }
           }
@@ -162,38 +135,15 @@ final class jf implements ir {
         int var4 = 0;
         Object var5 = null;
         java.net.URL stackIn_7_0 = null;
-        Object stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         Object stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         Object stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        Object stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        Object stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        Object stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        java.net.URL stackOut_6_0 = null;
-        Object stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        Object stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        Object stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        Object stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        Object stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        Object stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             L1: {
@@ -225,64 +175,47 @@ final class jf implements ir {
                 }
               }
             }
-            stackOut_6_0 = vj.a(param1, (String) (var3), (String) (var5), 122, -1);
-            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_0 = vj.a(param1, (String) (var3), (String) (var5), 122, -1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = var3;
-            stackOut_8_1 = new StringBuilder().append("jf.F(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = var3;
+
+            stackIn_10_1 = new StringBuilder().append("jf.F(");
+
             if (param0 == null) {
-              stackOut_10_0 = stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = stackIn_10_0;
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = stackIn_10_0;
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_11_0 = stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+
+
+            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L4;
             } else {
-              stackOut_12_0 = stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L4;
             }
           }
-          throw pn.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_11_0), stackIn_14_2 + ',' + param2 + ')');
         }
         return stackIn_7_0;
     }
@@ -296,19 +229,11 @@ final class jf implements ir {
     }
 
     final static boolean a(int param0, boolean param1, byte param2, int param3) {
-        boolean discarded$2 = false;
-        boolean discarded$3 = false;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_28_0 = 0;
         int stackIn_47_0 = 0;
         int stackIn_56_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_45_0 = 0;
+        int var4;
+        int var5;
         if (!param1) {
           if (ai.field_a[param3] >= ai.field_a[param0]) {
             if (ai.field_a[param3] <= ai.field_a[param0]) {
@@ -316,7 +241,7 @@ final class jf implements ir {
                 if (js.field_c[param3] <= js.field_c[param0]) {
                   var4 = dd.field_c[param3] + qd.field_p[param3] + hg.field_C[param3];
                   if (param2 != 67) {
-                    discarded$2 = jf.a(121, false, (byte) -23, -25);
+                    jf.a(121, false, (byte) -23, -25);
                     var5 = qd.field_p[param0] + hg.field_C[param0] + dd.field_c[param0];
                     if (var5 <= var4) {
                       if (var4 > var5) {
@@ -339,12 +264,10 @@ final class jf implements ir {
                       } else {
                         L0: {
                           if (param3 >= param0) {
-                            stackOut_27_0 = 0;
-                            stackIn_28_0 = stackOut_27_0;
+                            stackIn_28_0 = 0;
                             break L0;
                           } else {
-                            stackOut_26_0 = 1;
-                            stackIn_28_0 = stackOut_26_0;
+                            stackIn_28_0 = 1;
                             break L0;
                           }
                         }
@@ -384,12 +307,10 @@ final class jf implements ir {
                       } else {
                         L1: {
                           if (param3 >= param0) {
-                            stackOut_55_0 = 0;
-                            stackIn_56_0 = stackOut_55_0;
+                            stackIn_56_0 = 0;
                             break L1;
                           } else {
-                            stackOut_54_0 = 1;
-                            stackIn_56_0 = stackOut_54_0;
+                            stackIn_56_0 = 1;
                             break L1;
                           }
                         }
@@ -399,7 +320,7 @@ final class jf implements ir {
                       return true;
                     }
                   } else {
-                    discarded$3 = jf.a(121, false, (byte) -23, -25);
+                    jf.a(121, false, (byte) -23, -25);
                     var5 = qd.field_p[param0] + hg.field_C[param0] + dd.field_c[param0];
                     if (var5 <= var4) {
                       if (var4 > var5) {
@@ -407,12 +328,10 @@ final class jf implements ir {
                       } else {
                         L2: {
                           if (param3 >= param0) {
-                            stackOut_46_0 = 0;
-                            stackIn_47_0 = stackOut_46_0;
+                            stackIn_47_0 = 0;
                             break L2;
                           } else {
-                            stackOut_45_0 = 1;
-                            stackIn_47_0 = stackOut_45_0;
+                            stackIn_47_0 = 1;
                             break L2;
                           }
                         }

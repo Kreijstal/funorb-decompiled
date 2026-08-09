@@ -6,13 +6,11 @@ abstract class tn {
     static String field_b;
 
     final int a(byte param0, long param1) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        long var4 = 0L;
+        long var4;
         var4 = this.a((byte) 63);
         if (-1L <= (var4 ^ -1L)) {
           if (param0 != 109) {
-            discarded$4 = this.a(-82L, 55);
+            this.a(-82L, 55);
             return this.a(param1, 0);
           } else {
             return this.a(param1, 0);
@@ -22,7 +20,7 @@ abstract class tn {
           if (param0 == 109) {
             return this.a(param1, 0);
           } else {
-            discarded$5 = this.a(-82L, 55);
+            this.a(-82L, 55);
             return this.a(param1, 0);
           }
         }
@@ -37,23 +35,16 @@ abstract class tn {
     }
 
     final static boolean a(int param0, int param1) {
-        boolean discarded$10 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param1 <= 116) {
           L0: {
-            discarded$10 = tn.a(-33, 0);
+            tn.a(-33, 0);
             if (param0 < 0) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -61,12 +52,10 @@ abstract class tn {
         } else {
           L1: {
             if (param0 < 0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

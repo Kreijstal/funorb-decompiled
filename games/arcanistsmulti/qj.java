@@ -20,8 +20,6 @@ final class qj {
         int var6 = 0;
         StringBuilder stackIn_3_0 = null;
         StringBuilder stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -29,16 +27,6 @@ final class qj {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        StringBuilder stackOut_6_0 = null;
-        StringBuilder stackOut_2_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -48,8 +36,7 @@ final class qj {
             if (!param3) {
               L1: while (true) {
                 if (var5 >= param0) {
-                  stackOut_6_0 = (StringBuilder) (param1);
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = (StringBuilder) (param1);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -59,8 +46,7 @@ final class qj {
                 }
               }
             } else {
-              stackOut_2_0 = (StringBuilder) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (StringBuilder) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -69,27 +55,19 @@ final class qj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("qj.D(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("qj.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }
@@ -104,16 +82,14 @@ final class qj {
 
     final static hh a(byte param0) {
         try {
-            int var1_int = 0;
-            Throwable var1 = null;
             hh stackIn_1_0 = null;
             Throwable decompiledCaughtException = null;
-            hh stackOut_0_0 = null;
+            int var1_int = 0;
+            Throwable var1 = null;
             try {
               L0: {
                 var1_int = -52 % ((param0 - 15) / 60);
-                stackOut_0_0 = (hh) (Class.forName("po").newInstance());
-                stackIn_1_0 = stackOut_0_0;
+                stackIn_1_0 = (hh) (Class.forName("po").newInstance());
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -143,6 +119,7 @@ final class qj {
 
     final static String a(int param0) {
         if (param0 != 10040319) {
+            qj.b(-91);
         }
         return df.field_z.l(-1);
     }

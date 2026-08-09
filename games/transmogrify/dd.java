@@ -7,7 +7,7 @@ final class dd extends cj {
     private java.awt.Component field_h;
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
-        boolean discarded$10 = param2.drawImage(this.field_f, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_h));
+        param2.drawImage(this.field_f, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_h));
         if (param0 != -32299) {
             this.field_h = (java.awt.Component) null;
         }

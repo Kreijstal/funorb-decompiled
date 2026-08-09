@@ -16,23 +16,12 @@ final class qs extends pu {
         int var6 = 0;
         int var7 = 0;
         String[][] stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[][] stackOut_9_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var7 = BachelorFridge.field_y;
         try {
           L0: {
@@ -50,8 +39,7 @@ final class qs extends pu {
             var5 = 0;
             L2: while (true) {
               if (var5 >= var2_int) {
-                stackOut_9_0 = (String[][]) (var4);
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = (String[][]) (var4);
                 break L0;
               } else {
                 var6 = 0;
@@ -72,27 +60,19 @@ final class qs extends pu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var2);
-            stackOut_11_1 = new StringBuilder().append("qs.D(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var2);
+
+            stackIn_13_1 = new StringBuilder().append("qs.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L4;
             }
           }
@@ -103,9 +83,9 @@ final class qs extends pu {
 
     final static void b(boolean param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
           L0: {
@@ -145,7 +125,6 @@ final class qs extends pu {
     }
 
     final static void c(int param0) {
-        String[][] discarded$0 = null;
         int var2 = BachelorFridge.field_y;
         if ((lfa.field_q ^ -1) < -1) {
             lfa.field_q = lfa.field_q - 1;
@@ -169,7 +148,7 @@ final class qs extends pu {
         }
         if (param0 != -10901) {
             lu var3 = (lu) null;
-            discarded$0 = qs.a(false, (lu) null);
+            qs.a(false, (lu) null);
         }
     }
 

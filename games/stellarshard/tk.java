@@ -7,8 +7,8 @@ final class tk {
     static int field_b;
 
     final static void a(int param0) {
-        String var1 = null;
-        int var2 = 0;
+        String var1;
+        int var2;
         if (!gk.field_a) {
           throw new IllegalStateException();
         } else {
@@ -31,7 +31,7 @@ final class tk {
     }
 
     final static void a(boolean param0, int param1, int param2, int param3) {
-        int var4 = 0;
+        int var4;
         if (param3 <= -101) {
           ui.field_F.e(param1, param2);
           if (param0) {

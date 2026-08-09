@@ -25,41 +25,18 @@ final class wha extends kna {
         nq var8 = null;
         fsa var9 = null;
         int stackIn_3_0 = 0;
-        hia stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
         hia stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         hia stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_6_2 = 0;
         fsa stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        hia stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        hia stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        hia stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        fsa stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
@@ -73,39 +50,29 @@ final class wha extends kna {
               var9.a((byte) 83, (nv) (new eq(param2, param0)));
               var5 = new hia(param2, param0);
               if (34 != this.r(12)) {
-                stackOut_2_0 = 0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = 1;
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = 1;
                 break L1;
               }
             }
             L2: {
               var6 = stackIn_3_0;
               var5.b(11050, var6 != 0);
-              stackOut_3_0 = (hia) (var5);
-              stackOut_3_1 = param1 + -3;
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_5_0 = (hia) (var5);
+
+              stackIn_5_1 = param1 + -3;
+
               if (var6 != 0) {
-                stackOut_5_0 = (hia) ((Object) stackIn_5_0);
-                stackOut_5_1 = stackIn_5_1;
-                stackOut_5_2 = 0;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
-                stackIn_6_2 = stackOut_5_2;
+                stackIn_6_0 = (hia) ((Object) stackIn_5_0);
+                stackIn_6_1 = stackIn_5_1;
+                stackIn_6_2 = 0;
                 break L2;
               } else {
-                stackOut_4_0 = (hia) ((Object) stackIn_4_0);
-                stackOut_4_1 = stackIn_4_1;
-                stackOut_4_2 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_6_1 = stackOut_4_1;
-                stackIn_6_2 = stackOut_4_2;
+                stackIn_6_0 = (hia) ((Object) stackIn_5_0);
+                stackIn_6_1 = stackIn_5_1;
+                stackIn_6_2 = 1;
                 break L2;
               }
             }
@@ -116,35 +83,26 @@ final class wha extends kna {
             var8 = (nq) ((Object) var7.a(16, param1 + 119));
             var8.b(param1 ^ 8021, 0);
             var9.a(var5, (byte) 124, var8);
-            stackOut_6_0 = (fsa) (var9);
-            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_0 = (fsa) (var9);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("wha.AC(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("wha.AC(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -186,9 +144,8 @@ final class wha extends kna {
     }
 
     final boolean z(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 0) {
-            discarded$0 = this.v(-48);
+            this.v(-48);
             return false;
         }
         return false;

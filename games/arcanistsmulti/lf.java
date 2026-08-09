@@ -13,12 +13,12 @@ final class lf {
     static int field_g;
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
-        int var1_int = 0;
-        int var2 = 0;
-        int var3 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {

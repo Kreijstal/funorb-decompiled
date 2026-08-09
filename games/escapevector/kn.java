@@ -12,8 +12,6 @@ final class kn {
     private int field_g;
 
     private final void a(int param0, int param1, boolean param2) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
         if (param0 <= this.field_g) {
           L0: {
             if (this.field_a.length <= param0) {
@@ -24,7 +22,7 @@ final class kn {
             }
           }
           if (param2) {
-            discarded$4 = this.a(-30, 101);
+            this.a(-30, 101);
             this.field_a[param0] = param1;
             return;
           } else {
@@ -45,7 +43,7 @@ final class kn {
             this.field_a[param0] = param1;
             return;
           } else {
-            discarded$5 = this.a(-30, 101);
+            this.a(-30, 101);
             this.field_a[param0] = param1;
             return;
           }
@@ -83,10 +81,9 @@ final class kn {
     }
 
     final void a(int param0, byte param1) {
-        int discarded$0 = 0;
         this.a(this.field_g + 1, param0, false);
         if (param1 != -51) {
-            discarded$0 = this.a(false);
+            this.a(false);
         }
     }
 
@@ -107,12 +104,11 @@ final class kn {
     }
 
     final int a(int param0, int param1) {
-        sn discarded$2 = null;
         if (this.field_g < param1) {
           throw new ArrayIndexOutOfBoundsException(param1);
         } else {
           if (param0 >= -5) {
-            discarded$2 = kn.b(false);
+            kn.b(false);
             return this.field_a[param1];
           } else {
             return this.field_a[param1];
@@ -121,8 +117,8 @@ final class kn {
     }
 
     private final int d(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = EscapeVector.field_A;
         if (param0 != 0) {
           return 34;
@@ -161,9 +157,8 @@ final class kn {
     }
 
     final int a(boolean param0) {
-        int discarded$0 = 0;
         if (!param0) {
-            discarded$0 = this.a(106, 72);
+            this.a(106, 72);
             return this.field_g + 1;
         }
         return this.field_g + 1;

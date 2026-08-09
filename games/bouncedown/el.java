@@ -12,9 +12,9 @@ final class el extends sg {
     static int field_k;
 
     final int a(int param0, long param1) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var4;
+        int var5;
+        int var6;
         var6 = Bounce.field_N;
         var4 = -123 % ((-65 - param0) / 37);
         if ((this.field_j ^ -1L) < (this.field_d ^ -1L)) {
@@ -52,11 +52,11 @@ final class el extends sg {
     }
 
     private final long b(int param0) {
-        long var2 = 0L;
-        long var4 = 0L;
-        long var6 = 0L;
-        int var8 = 0;
-        int var9 = 0;
+        long var2;
+        long var4;
+        long var6;
+        int var8;
+        int var9;
         var9 = Bounce.field_N;
         var2 = System.nanoTime();
         var4 = var2 - this.field_g;
@@ -131,7 +131,6 @@ final class el extends sg {
     }
 
     final long a(int param0) {
-        int discarded$2 = 0;
         if (param0 == -32578) {
           this.field_d = this.field_d + this.b(0);
           if ((this.field_d ^ -1L) > (this.field_j ^ -1L)) {
@@ -140,7 +139,7 @@ final class el extends sg {
             return 0L;
           }
         } else {
-          discarded$2 = this.a(20, -52L);
+          this.a(20, -52L);
           this.field_d = this.field_d + this.b(0);
           if ((this.field_d ^ -1L) > (this.field_j ^ -1L)) {
             return (-this.field_d + this.field_j) / 1000000L;

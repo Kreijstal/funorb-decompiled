@@ -21,10 +21,9 @@ abstract class ti {
     }
 
     public static void a(byte param0) {
-        int discarded$2 = 0;
         field_f = null;
         if (param0 != 13) {
-          discarded$2 = ti.b(-127, 29);
+          ti.b(-127, 29);
           field_b = null;
           field_g = null;
           field_a = null;

@@ -36,7 +36,6 @@ final class co {
         int var4 = 0;
         int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -53,8 +52,7 @@ final class co {
             }
             L2: while (true) {
               if (var3 == null) {
-                stackOut_7_0 = var2;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = var2;
                 break L0;
               } else {
                 L3: {
@@ -83,15 +81,15 @@ final class co {
     }
 
     final static void c(int param0) {
-        RuntimeException var1 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         ml var6 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {

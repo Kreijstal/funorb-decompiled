@@ -14,14 +14,14 @@ final class vl implements Iterator {
     static String field_g;
 
     public final Object next() {
-        ln var1 = this.field_b;
+        Object var1 = this.field_b;
         if (this.field_e.field_i != var1) {
-            this.field_b = var1.field_n;
+            this.field_b = ((ln) (var1)).field_n;
         } else {
             this.field_b = null;
             var1 = null;
         }
-        this.field_f = var1;
+        this.field_f = (ln) (var1);
         return var1;
     }
 

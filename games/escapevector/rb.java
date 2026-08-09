@@ -44,7 +44,6 @@ final class rb extends hg {
 
     final static void a(dk[] param0, int param1, int param2, byte param3) {
         dk[] var4 = null;
-        RuntimeException var4_ref = null;
         int var5 = 0;
         dk var6 = null;
         int var7 = 0;
@@ -54,8 +53,6 @@ final class rb extends hg {
         dk[] var11 = null;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -63,18 +60,7 @@ final class rb extends hg {
         String stackIn_21_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException var4_ref = null;
         var10 = EscapeVector.field_A;
         try {
           L0: {
@@ -103,24 +89,20 @@ final class rb extends hg {
                       L4: {
                         var7 = var6.field_c;
                         if (param2 != var7) {
-                          stackOut_8_0 = 0;
-                          stackIn_9_0 = stackOut_8_0;
+                          stackIn_9_0 = 0;
                           break L4;
                         } else {
-                          stackOut_7_0 = 1;
-                          stackIn_9_0 = stackOut_7_0;
+                          stackIn_9_0 = 1;
                           break L4;
                         }
                       }
                       L5: {
                         var8 = stackIn_9_0;
                         if (var7 != param1) {
-                          stackOut_11_0 = 0;
-                          stackIn_12_0 = stackOut_11_0;
+                          stackIn_12_0 = 0;
                           break L5;
                         } else {
-                          stackOut_10_0 = 1;
-                          stackIn_12_0 = stackOut_10_0;
+                          stackIn_12_0 = 1;
                           break L5;
                         }
                       }
@@ -142,27 +124,19 @@ final class rb extends hg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4_ref = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var4_ref);
-            stackOut_18_1 = new StringBuilder().append("rb.A(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var4_ref);
+
+            stackIn_20_1 = new StringBuilder().append("rb.A(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L6;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L6;
             }
           }

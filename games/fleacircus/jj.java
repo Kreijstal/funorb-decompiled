@@ -62,50 +62,47 @@ abstract class jj extends db {
     }
 
     boolean a(int param0) {
-        int fieldTemp$1 = 0;
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
+        int fieldTemp$0 = 0;
         int var5 = 0;
         int var6 = 0;
-        var2 = 35 % ((param0 - 38) / 49);
-        if (this.field_U > 0) {
-          var3 = this.field_O;
-          var4 = this.field_W;
-          fieldTemp$1 = this.field_Q + 1;
-          this.field_Q = this.field_Q + 1;
-          if (fieldTemp$1 < this.field_U) {
+        int var2 = 35 % ((param0 - 38) / 49);
+        if (!(this.field_U <= 0)) {
+            var3 = this.field_O;
+            var4 = this.field_W;
+            fieldTemp$0 = this.field_Q + 1;
+            this.field_Q = this.field_Q + 1;
+            if (fieldTemp$0 >= this.field_U) {
+                this.field_U = 0;
+                this.m(-120);
+                this.a(var4, (byte) -127, var3);
+                return super.a(89);
+            }
             var5 = (this.field_U * 2 + -this.field_Q) * this.field_Q;
             var6 = this.field_U * this.field_U;
             var3 = (this.field_O + -this.field_T) * var5 / var6 + this.field_T;
             var4 = this.field_N + var5 * (-this.field_N + this.field_W) / var6;
             this.a(var4, (byte) -127, var3);
             return super.a(89);
-          } else {
-            this.field_U = 0;
-            this.m(-120);
-            this.a(var4, (byte) -127, var3);
-            return super.a(89);
-          }
-        } else {
-          return super.a(89);
         }
+        return super.a(89);
     }
 
     void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = fleas.field_A ? 1 : 0;
         if (param2 == 17344) {
           gb.a(6 + param1, param0 + 35, this.field_u - 12, this.field_j - 40, 2105376, 0);
@@ -155,7 +152,7 @@ abstract class jj extends db {
                 }
               }
             } else {
-              if (var8 >= gb.field_b) {
+              if ((var8 ^ -1) <= (gb.field_b ^ -1)) {
                 if (var8 < gb.field_i) {
                   L3: {
                     var9 = (-var5 + var6) * var7 / var4 + var5;
@@ -260,7 +257,7 @@ abstract class jj extends db {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        int var5;
         var5 = -119 / ((25 - param3) / 42);
         if ((param0 ^ -1) >= -1) {
           this.a(param2, (byte) -127, param1);

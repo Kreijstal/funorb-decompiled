@@ -32,8 +32,8 @@ final class hb {
 
     final static void a(byte param0, int param1) {
         try {
-            IOException var2 = null;
             Throwable decompiledCaughtException = null;
+            IOException var2 = null;
             L0: {
               if (null == am.field_z) {
                 break L0;

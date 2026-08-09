@@ -9,10 +9,10 @@ final class ve {
 
     final static void a(byte param0, int param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
@@ -21,7 +21,7 @@ final class ve {
             L1: while (true) {
               if (var2_int >= fc.field_z) {
                 L2: {
-                  var3 = -3;
+                  var3 = -108 % ((param0 - 73) / 39);
                   uf.a(kl.field_a, param1 + fc.field_z, 1512033985, false, param1 + param1, param1, bh.field_e);
                   if (fc.field_z > param1) {
                     fc.field_z = param1;
@@ -41,21 +41,20 @@ final class ve {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "ve.B(" + -125 + ',' + param1 + ')');
+          throw wg.a((Throwable) ((Object) var2), "ve.B(" + param0 + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
         field_d = null;
+        if (param0 != 0) {
+            return;
+        }
         field_b = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new vl();
         field_d = "to keep fullscreen or";
     }

@@ -9,13 +9,13 @@ final class sf extends jf {
     int field_m;
 
     final sf a(ci param0) {
-        int dupTemp$2 = 0;
+        int dupTemp$1 = 0;
         this.field_l = param0.a(this.field_l, -108);
         this.field_k = param0.b(this.field_k, 14698);
         if (this.field_m == this.field_j) {
-          dupTemp$2 = param0.a(this.field_m, 18308);
-          this.field_j = dupTemp$2;
-          this.field_m = dupTemp$2;
+          dupTemp$1 = param0.a(this.field_m, 18308);
+          this.field_j = dupTemp$1;
+          this.field_m = dupTemp$1;
           return (sf) (this);
         } else {
           L0: {

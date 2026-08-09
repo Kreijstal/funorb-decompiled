@@ -10,122 +10,135 @@ final class moa extends le {
     private int field_l;
 
     final int[] a(int param0, boolean param1) {
-        int[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int[] var12 = null;
-        int[] var13 = null;
+        int stackIn_19_0 = 0;
+        int stackIn_19_1 = 0;
+        int[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int[] var12;
+        int[] var13;
         L0: {
-          var10 = VoidHunters.field_G;
-          var13 = this.field_f.a((byte) 121, param0);
-          var12 = var13;
-          var3 = var12;
-          if (this.field_f.field_e) {
-            var4 = sj.field_p[param0];
-            if (-1 != (this.field_k ^ -1)) {
-              var5 = 0;
-              L1: while (true) {
-                if (hob.field_d <= var5) {
-                  break L0;
-                } else {
-                  L2: {
-                    var6 = 0;
-                    var7 = 0;
-                    var8 = grb.field_l[var5];
-                    var9 = this.field_k;
-                    if (var9 != 1) {
-                      if (2 != var9) {
-                        if (var9 != 3) {
-                          break L2;
-                        } else {
-                          var6 = 2048 - -(-var4 + var8 >> -1920400863);
-                          break L2;
-                        }
-                      } else {
-                        var6 = 2048 + (var8 - (4096 + -var4) >> -341085791);
-                        break L2;
-                      }
-                    } else {
-                      var6 = var8;
-                      break L2;
-                    }
-                  }
-                  var11 = 0;
-                  var9 = var11;
+          L1: {
+            L2: {
+              var10 = VoidHunters.field_G;
+              var13 = this.field_f.a((byte) 121, param0);
+              var12 = var13;
+              var3 = var12;
+              if (this.field_f.field_e) {
+                var4 = sj.field_p[param0];
+                if (-1 != (this.field_k ^ -1)) {
+                  var5 = 0;
                   L3: while (true) {
-                    L4: {
-                      if (var11 >= this.field_m) {
-                        break L4;
-                      } else {
-                        if (var6 >= this.field_j[var11]) {
-                          if (this.field_j[var11 - -1] > var6) {
-                            if (this.field_i[var11] <= var6) {
+                    if (hob.field_d <= var5) {
+                      break L2;
+                    } else {
+                      var6 = 0;
+                      var7 = 0;
+                      var8 = grb.field_l[var5];
+                      var9 = this.field_k;
+                      stackIn_19_0 = var9;
+
+                      stackIn_19_1 = 1;
+
+                      L4: {
+                        if (stackIn_19_0 != stackIn_19_1) {
+                          if (2 != var9) {
+                            if (var9 != 3) {
                               break L4;
                             } else {
-                              var7 = 4096;
+                              var6 = 2048 - -(-var4 + var8 >> -1920400863);
                               break L4;
                             }
                           } else {
-                            var11++;
-                            continue L3;
+                            var6 = 2048 + (var8 - (4096 + -var4) >> -341085791);
+                            break L4;
                           }
                         } else {
-                          var11++;
-                          continue L3;
+                          var6 = var8;
+                          break L4;
                         }
                       }
-                    }
-                    var13[var5] = var7;
-                    var5++;
-                    continue L1;
-                  }
-                }
-              }
-            } else {
-              var5 = 0;
-              var6 = 0;
-              L5: while (true) {
-                L6: {
-                  if (var6 >= this.field_m) {
-                    break L6;
-                  } else {
-                    if (var4 >= this.field_j[var6]) {
-                      if (var4 < this.field_j[1 + var6]) {
-                        if (var4 >= this.field_i[var6]) {
-                          break L6;
-                        } else {
-                          var5 = 4096;
-                          break L6;
+                      var11 = 0;
+                      var9 = var11;
+                      L5: while (true) {
+                        L6: {
+                          if (var11 >= this.field_m) {
+                            break L6;
+                          } else {
+                            if (var6 >= this.field_j[var11]) {
+                              if (this.field_j[var11 - -1] > var6) {
+                                if (this.field_i[var11] <= var6) {
+                                  break L6;
+                                } else {
+                                  var7 = 4096;
+                                  break L6;
+                                }
+                              } else {
+                                var11++;
+                                continue L5;
+                              }
+                            } else {
+                              var11++;
+                              continue L5;
+                            }
+                          }
                         }
+                        var13 = var12;
+                        var13[var5] = var7;
+                        var5++;
+                        continue L3;
+                      }
+                    }
+                  }
+                } else {
+                  var5 = 0;
+                  var6 = 0;
+                  L7: while (true) {
+                    L8: {
+                      if (var6 >= this.field_m) {
+                        break L8;
                       } else {
-                        var6++;
-                        continue L5;
+                        if ((var4 ^ -1) <= (this.field_j[var6] ^ -1)) {
+                          if (var4 < this.field_j[1 + var6]) {
+                            if (var4 >= this.field_i[var6]) {
+                              break L8;
+                            } else {
+                              var5 = 4096;
+                              break L8;
+                            }
+                          } else {
+                            var6++;
+                            continue L7;
+                          }
+                        } else {
+                          var6++;
+                          continue L7;
+                        }
                       }
-                    } else {
-                      var6++;
-                      continue L5;
                     }
+                    cua.a(var13, 0, hob.field_d, var5);
+                    break L2;
                   }
                 }
-                cua.a(var13, 0, hob.field_d, var5);
-                break L0;
+              } else {
+                break L2;
               }
             }
-          } else {
-            break L0;
+            if (param1) {
+              break L0;
+            } else {
+              break L1;
+            }
           }
-        }
-        if (param1) {
-          return var3;
-        } else {
           return (int[]) null;
         }
+        return var3;
     }
 
     private final void e(int param0) {
@@ -157,25 +170,15 @@ final class moa extends le {
 
     final void a(int param0, int param1, ds param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        ds var6 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var4 = null;
+        ds var6 = null;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -213,27 +216,19 @@ final class moa extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var4);
-            stackOut_12_1 = new StringBuilder().append("moa.F(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var4);
+
+            stackIn_14_1 = new StringBuilder().append("moa.F(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }

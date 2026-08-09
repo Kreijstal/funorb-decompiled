@@ -18,11 +18,10 @@ final class hn {
     }
 
     final static jp[] a(int param0, int param1, int param2, int param3) {
-        jp[] discarded$3 = null;
-        jp[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        jp[] var7 = null;
+        jp[] var4;
+        int var5;
+        int var6;
+        jp[] var7;
         var6 = BrickABrac.field_J ? 1 : 0;
         if (param3 == -10) {
           var7 = new jp[9];
@@ -40,7 +39,7 @@ final class hn {
             }
           }
         } else {
-          discarded$3 = hn.a(22, -77, 60, 46);
+          hn.a(22, -77, 60, 46);
           var7 = new jp[9];
           var4 = var7;
           var7[0] = hd.a(param0, param2, (byte) -6);

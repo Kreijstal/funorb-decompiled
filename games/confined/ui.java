@@ -9,17 +9,17 @@ final class ui {
     static String field_b;
 
     final static String a(int param0) {
-        String var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        String var9 = null;
-        String var13 = null;
-        String var14 = null;
-        String var15 = null;
-        String var16 = null;
-        String var17 = null;
+        String var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        String var9;
+        String var13;
+        String var14;
+        String var15;
+        String var16;
+        String var17;
         var5 = Confined.field_J ? 1 : 0;
         if (param0 == 10) {
           var15 = "(" + kk.field_c + " " + pk.field_c + " " + qm.field_y + ") " + Confined.field_F;
@@ -108,12 +108,11 @@ final class ui {
     }
 
     public static void a(byte param0) {
-        String discarded$2 = null;
         field_e = null;
         field_a = null;
         field_c = null;
         if (param0 != 110) {
-          discarded$2 = ui.a(43);
+          ui.a(43);
           field_b = null;
           field_d = null;
           return;

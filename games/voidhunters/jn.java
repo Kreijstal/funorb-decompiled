@@ -74,14 +74,14 @@ final class jn implements Iterator {
     }
 
     public final Object next() {
-        fh var1 = this.field_d;
+        Object var1 = this.field_d;
         if (var1 == this.field_e.field_a) {
             this.field_d = null;
             var1 = null;
         } else {
-            this.field_d = var1.field_e;
+            this.field_d = ((fh) (var1)).field_e;
         }
-        this.field_b = var1;
+        this.field_b = (fh) (var1);
         return var1;
     }
 

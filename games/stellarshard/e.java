@@ -11,7 +11,6 @@ final class e {
     static int field_e;
 
     final static String b(int param0) {
-        String discarded$6 = null;
         if (param0 == -1) {
           if (!wk.field_c) {
             if (pc.field_g <= ki.field_v) {
@@ -27,7 +26,7 @@ final class e {
             return null;
           }
         } else {
-          discarded$6 = e.b(31);
+          e.b(31);
           if (!wk.field_c) {
             if (pc.field_g <= ki.field_v) {
               if (pc.field_g + ul.field_D <= ki.field_v) {

@@ -50,23 +50,21 @@ final class fe {
     }
 
     final int[] a(int param0, int param1) {
-        double var3 = 0.0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
         int stackIn_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
+        double var3;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         fk.a(field_t, 0, param0);
         if (param1 >= 10) {
           L0: {
@@ -139,12 +137,10 @@ final class fe {
                               L8: {
                                 var11 = 0;
                                 if (var13 != 0) {
-                                  stackOut_35_0 = 0;
-                                  stackIn_36_0 = stackOut_35_0;
+                                  stackIn_36_0 = 0;
                                   break L8;
                                 } else {
-                                  stackOut_34_0 = 1;
-                                  stackIn_36_0 = stackOut_34_0;
+                                  stackIn_36_0 = 1;
                                   break L8;
                                 }
                               }
@@ -413,79 +409,52 @@ final class fe {
     }
 
     final void a(gb param0) {
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        L0: {
-          this.field_a = new vi();
-          this.field_a.b(param0);
-          this.field_o = new vi();
-          this.field_o.b(param0);
-          var2 = param0.j(255);
-          if (var2 == 0) {
-            break L0;
-          } else {
+        this.field_a = new vi();
+        this.field_a.b(param0);
+        this.field_o = new vi();
+        this.field_o.b(param0);
+        int var2 = param0.j(255);
+        if (var2 != 0) {
             param0.field_m = param0.field_m - 1;
             this.field_b = new vi();
             this.field_b.b(param0);
             this.field_e = new vi();
             this.field_e.b(param0);
-            break L0;
-          }
         }
-        L1: {
-          var2 = param0.j(255);
-          if (var2 == 0) {
-            break L1;
-          } else {
+        var2 = param0.j(255);
+        if (var2 != 0) {
             param0.field_m = param0.field_m - 1;
             this.field_x = new vi();
             this.field_x.b(param0);
             this.field_h = new vi();
             this.field_h.b(param0);
-            break L1;
-          }
         }
-        L2: {
-          var2 = param0.j(255);
-          if (var2 == 0) {
-            break L2;
-          } else {
+        var2 = param0.j(255);
+        if (var2 != 0) {
             param0.field_m = param0.field_m - 1;
             this.field_u = new vi();
             this.field_u.b(param0);
             this.field_f = new vi();
             this.field_f.b(param0);
-            break L2;
-          }
         }
-        var3 = 0;
-        L3: while (true) {
-          L4: {
-            if (var3 >= 10) {
-              break L4;
-            } else {
-              var4 = param0.c(false);
-              if (var4 != 0) {
-                this.field_w[var3] = var4;
-                this.field_l[var3] = param0.d(-95);
-                this.field_r[var3] = param0.c(false);
-                var3++;
-                continue L3;
-              } else {
-                break L4;
-              }
+        for (var3 = 0; var3 < 10; var3++) {
+            var4 = param0.c(false);
+            if (var4 == 0) {
+                break;
             }
-          }
-          this.field_j = param0.c(false);
-          this.field_s = param0.c(false);
-          this.field_n = param0.i(127);
-          this.field_m = param0.i(-105);
-          this.field_k = new tj();
-          this.field_i = new vi();
-          this.field_k.a(param0, this.field_i);
-          return;
+            this.field_w[var3] = var4;
+            this.field_l[var3] = param0.d(-95);
+            this.field_r[var3] = param0.c(false);
         }
+        this.field_j = param0.c(false);
+        this.field_s = param0.c(false);
+        this.field_n = param0.i(127);
+        this.field_m = param0.i(-105);
+        this.field_k = new tj();
+        this.field_i = new vi();
+        this.field_k.a(param0, this.field_i);
     }
 
     public static void a() {

@@ -20,8 +20,6 @@ class uf {
 
     final boolean a(byte param0) {
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 > -21) {
           uf.a(55, -98);
           if (null != this.field_a) {
@@ -32,12 +30,10 @@ class uf {
         } else {
           L0: {
             if (null == this.field_a) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L0;
             }
           }
@@ -47,10 +43,10 @@ class uf {
 
     final static void a(int param0, int param1) {
         uf var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         eg var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = Terraphoenix.field_V;
         try {
           L0: {

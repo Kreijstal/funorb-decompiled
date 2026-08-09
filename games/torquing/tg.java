@@ -40,11 +40,10 @@ abstract class tg extends hk {
 
     private final static void m(int param0) {
         Object var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
-        Throwable var3 = null;
         int var4 = 0;
         Throwable decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = Torquing.field_u;
         try {
           L0: {
@@ -106,34 +105,16 @@ abstract class tg extends hk {
     }
 
     final void a(byte param0, boolean param1) {
-        int var3 = 0;
-        java.awt.Dimension var4 = null;
-        int var5 = 0;
-        java.awt.Container var6 = null;
         int stackIn_22_0 = 0;
         int stackIn_100_0 = 0;
-        int stackIn_101_0 = 0;
-        String stackIn_101_1 = null;
-        int stackIn_102_0 = 0;
         String stackIn_102_1 = null;
-        int stackIn_103_0 = 0;
         String stackIn_103_1 = null;
         int stackIn_103_2 = 0;
         int stackIn_133_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_99_0 = 0;
-        int stackOut_98_0 = 0;
-        int stackOut_100_0 = 0;
-        String stackOut_100_1 = null;
-        int stackOut_102_0 = 0;
-        String stackOut_102_1 = null;
-        int stackOut_102_2 = 0;
-        int stackOut_101_0 = 0;
-        String stackOut_101_1 = null;
-        int stackOut_101_2 = 0;
-        int stackOut_132_0 = 0;
-        int stackOut_131_0 = 0;
+        int var3;
+        java.awt.Dimension var4;
+        int var5;
+        java.awt.Container var6;
         L0: {
           var5 = Torquing.field_u;
           if (ki.field_D == null) {
@@ -219,12 +200,10 @@ abstract class tg extends hk {
           }
           L8: {
             if ((aj.field_J ^ -1) != 0) {
-              stackOut_21_0 = 0;
-              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_0 = 0;
               break L8;
             } else {
-              stackOut_20_0 = 1;
-              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_0 = 1;
               break L8;
             }
           }
@@ -470,41 +449,31 @@ abstract class tg extends hk {
                   }
                   L24: {
                     if (ra.field_a) {
-                      stackOut_99_0 = 0;
-                      stackIn_100_0 = stackOut_99_0;
+                      stackIn_100_0 = 0;
                       break L24;
                     } else {
-                      stackOut_98_0 = 1;
-                      stackIn_100_0 = stackOut_98_0;
+                      stackIn_100_0 = 1;
                       break L24;
                     }
                   }
                   L25: {
-                    stackOut_100_0 = stackIn_100_0;
-                    stackOut_100_1 = vo.field_c;
-                    stackIn_102_0 = stackOut_100_0;
-                    stackIn_102_1 = stackOut_100_1;
-                    stackIn_101_0 = stackOut_100_0;
-                    stackIn_101_1 = stackOut_100_1;
+
+
+                    stackIn_102_1 = vo.field_c;
+
                     if (ra.field_a) {
-                      stackOut_102_0 = stackIn_102_0;
-                      stackOut_102_1 = (String) ((Object) stackIn_102_1);
-                      stackOut_102_2 = 0;
-                      stackIn_103_0 = stackOut_102_0;
-                      stackIn_103_1 = stackOut_102_1;
-                      stackIn_103_2 = stackOut_102_2;
+
+                      stackIn_103_1 = (String) ((Object) stackIn_102_1);
+                      stackIn_103_2 = 0;
                       break L25;
                     } else {
-                      stackOut_101_0 = stackIn_101_0;
-                      stackOut_101_1 = (String) ((Object) stackIn_101_1);
-                      stackOut_101_2 = 1;
-                      stackIn_103_0 = stackOut_101_0;
-                      stackIn_103_1 = stackOut_101_1;
-                      stackIn_103_2 = stackOut_101_2;
+
+                      stackIn_103_1 = (String) ((Object) stackIn_102_1);
+                      stackIn_103_2 = 1;
                       break L25;
                     }
                   }
-                  vb.a(stackIn_103_0 != 0, stackIn_103_1, stackIn_103_2 != 0, param0 ^ 4818);
+                  vb.a(stackIn_100_0 != 0, stackIn_103_1, stackIn_103_2 != 0, param0 ^ 4818);
                   break L22;
                 }
                 L26: {
@@ -601,12 +570,10 @@ abstract class tg extends hk {
               if (null != a.field_c) {
                 L36: {
                   if (!a.field_c.b(param0 ^ 23)) {
-                    stackOut_132_0 = 0;
-                    stackIn_133_0 = stackOut_132_0;
+                    stackIn_133_0 = 0;
                     break L36;
                   } else {
-                    stackOut_131_0 = 1;
-                    stackIn_133_0 = stackOut_131_0;
+                    stackIn_133_0 = 1;
                     break L36;
                   }
                 }
@@ -695,19 +662,13 @@ abstract class tg extends hk {
     }
 
     final void e(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        hi var4 = null;
-        int var5 = 0;
-        int stackIn_28_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_30_1 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_29_1 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_28_1 = 0;
+        int var2;
+        int var3;
+        hi var4;
+        int var5;
         L0: {
           var5 = Torquing.field_u;
           var2 = fa.field_e;
@@ -773,20 +734,15 @@ abstract class tg extends hk {
                                       }
                                     }
                                     L3: {
-                                      stackOut_27_0 = -11936;
-                                      stackIn_29_0 = stackOut_27_0;
-                                      stackIn_28_0 = stackOut_27_0;
+                                      stackIn_29_0 = -11936;
+
                                       if ((var2 ^ -1) != -13) {
-                                        stackOut_29_0 = stackIn_29_0;
-                                        stackOut_29_1 = 0;
-                                        stackIn_30_0 = stackOut_29_0;
-                                        stackIn_30_1 = stackOut_29_1;
+                                        stackIn_30_0 = stackIn_29_0;
+                                        stackIn_30_1 = 0;
                                         break L3;
                                       } else {
-                                        stackOut_28_0 = stackIn_28_0;
-                                        stackOut_28_1 = 1;
-                                        stackIn_30_0 = stackOut_28_0;
-                                        stackIn_30_1 = stackOut_28_1;
+                                        stackIn_30_0 = stackIn_29_0;
+                                        stackIn_30_1 = 1;
                                         break L3;
                                       }
                                     }
@@ -827,10 +783,9 @@ abstract class tg extends hk {
     }
 
     private final void i(int param0) {
-        int discarded$0 = 0;
         hh.field_d[2] = true;
         if (param0 != 24500) {
-            discarded$0 = this.b(false, 7);
+            this.b(false, 7);
         }
     }
 
@@ -848,8 +803,8 @@ abstract class tg extends hk {
     }
 
     final int g(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           L1: {
             var2 = -125 / ((param0 - 70) / 47);
@@ -955,64 +910,38 @@ abstract class tg extends hk {
     }
 
     private final int j(int param0) {
-        int var2 = 0;
-        if (!this.field_e) {
-          if (!mk.a((byte) 38)) {
+        if (this.field_e) {
             return -1;
-          } else {
-            if (param0 <= -68) {
-              if (gk.field_a) {
-                return -1;
-              } else {
-                var2 = vb.a(fo.i(17543), ki.i(20), (byte) 27, true, this.field_j, this.field_q);
-                if (var2 != -1) {
-                  L0: {
-                    if (var2 == 0) {
-                      break L0;
-                    } else {
-                      if (var2 != 1) {
-                        L1: {
-                          if (hg.field_c) {
-                            break L1;
-                          } else {
-                            this.a(10, "reconnect");
-                            break L1;
-                          }
-                        }
-                        lg.h(-128);
-                        dc.a(var2, pl.field_u, 2);
-                        gk.field_a = true;
-                        ta.field_k = 15000L + km.b(-1);
-                        return var2;
-                      } else {
-                        break L0;
-                      }
-                    }
-                  }
-                  L2: {
-                    if (op.field_i != 11) {
-                      break L2;
-                    } else {
-                      if (aj.field_J == 0) {
-                        qa.a((byte) -95);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  return var2;
-                } else {
-                  return -1;
-                }
-              }
-            } else {
-              return 107;
-            }
-          }
-        } else {
-          return -1;
         }
+        if (!(mk.a((byte) 38))) {
+            return -1;
+        }
+        if (param0 > -68) {
+            return 107;
+        }
+        if (!(!gk.field_a)) {
+            return -1;
+        }
+        int var2 = vb.a(fo.i(17543), ki.i(20), (byte) 27, true, this.field_j, this.field_q);
+        if (var2 == -1) {
+            return -1;
+        }
+        if (var2 == 0 || var2 == 1) {
+            if (op.field_i == 11) {
+                if (!(aj.field_J != 0)) {
+                    qa.a((byte) -95);
+                }
+            }
+            return var2;
+        }
+        if (!hg.field_c) {
+            this.a(10, "reconnect");
+        }
+        lg.h(-128);
+        dc.a(var2, pl.field_u, 2);
+        gk.field_a = true;
+        ta.field_k = 15000L + km.b(-1);
+        return var2;
     }
 
     private final void f(int param0) {
@@ -1020,40 +949,29 @@ abstract class tg extends hk {
     }
 
     final void n(int param0) {
-        int discarded$77 = 0;
-        int discarded$78 = 0;
-        int var3 = 0;
-        Object stackIn_9_0 = null;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
+        int var3;
         Object stackIn_10_0 = null;
         Object stackIn_11_0 = null;
         int stackIn_11_1 = 0;
-        Object stackOut_8_0 = null;
-        Object stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
         L0: {
           var3 = Torquing.field_u;
           if (la.a(true)) {
             L1: {
-              stackOut_8_0 = this;
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_10_0 = this;
+
               if (dg.field_i == null) {
-                stackOut_10_0 = this;
-                stackOut_10_1 = 0;
-                stackIn_11_0 = stackOut_10_0;
-                stackIn_11_1 = stackOut_10_1;
+                stackIn_11_0 = this;
+                stackIn_11_1 = 0;
                 break L1;
               } else {
-                stackOut_9_0 = this;
-                stackOut_9_1 = 1;
-                stackIn_11_0 = stackOut_9_0;
-                stackIn_11_1 = stackOut_9_1;
+                stackIn_11_0 = this;
+                stackIn_11_1 = 1;
                 break L1;
               }
             }
-            discarded$77 = this.a(stackIn_11_1 != 0, false, true);
+            discarded$4 = this.a(stackIn_11_1 != 0, false, true);
             break L0;
           } else {
             if (-11 >= (b.field_x ^ -1)) {
@@ -1062,7 +980,7 @@ abstract class tg extends hk {
                   ue.a(-16513, da.field_g);
                   break L0;
                 } else {
-                  discarded$78 = this.a(false, false, true);
+                  discarded$5 = this.a(false, false, true);
                   break L0;
                 }
               } else {
@@ -1101,21 +1019,10 @@ abstract class tg extends hk {
     }
 
     private final void a(byte param0, int param1, int param2, int param3, String param4) {
-        Exception var6 = null;
-        RuntimeException var6_ref = null;
-        String var6_ref2 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
-        Object stackIn_5_0 = null;
-        Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
         int stackIn_9_1 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -1124,21 +1031,13 @@ abstract class tg extends hk {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_5_0 = null;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        Object stackOut_6_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        String var6 = null;
+        Exception var6_ref = null;
+        RuntimeException var6_ref2 = null;
+        String var7 = null;
+        String var8 = null;
+        String var9 = null;
+        String var10 = null;
         try {
           L0: {
             L1: {
@@ -1155,33 +1054,26 @@ abstract class tg extends hk {
                   L3: {
                     L4: {
                       this.field_i = this.getCodeBase().getHost();
-                      var6_ref2 = this.field_i.toLowerCase();
-                      stackOut_4_0 = this;
-                      stackIn_7_0 = stackOut_4_0;
-                      stackIn_5_0 = stackOut_4_0;
-                      if (var6_ref2.equals("jagex.com")) {
+                      var6 = this.field_i.toLowerCase();
+                      stackIn_7_0 = this;
+
+                      if (var6.equals("jagex.com")) {
                         break L4;
                       } else {
-                        stackOut_5_0 = this;
-                        stackIn_8_0 = stackOut_5_0;
-                        stackIn_6_0 = stackOut_5_0;
-                        if (!var6_ref2.endsWith(".jagex.com")) {
-                          stackOut_8_0 = this;
-                          stackOut_8_1 = 0;
-                          stackIn_9_0 = stackOut_8_0;
-                          stackIn_9_1 = stackOut_8_1;
+                        stackIn_8_0 = this;
+
+                        if (!var6.endsWith(".jagex.com")) {
+                          stackIn_9_0 = this;
+                          stackIn_9_1 = 0;
                           break L3;
                         } else {
-                          stackOut_6_0 = this;
-                          stackIn_7_0 = stackOut_6_0;
+                          stackIn_7_0 = this;
                           break L4;
                         }
                       }
                     }
-                    stackOut_7_0 = this;
-                    stackOut_7_1 = 1;
-                    stackIn_9_0 = stackOut_7_0;
-                    stackIn_9_1 = stackOut_7_1;
+                    stackIn_9_0 = this;
+                    stackIn_9_1 = 1;
                     break L3;
                   }
                   L5: {
@@ -1237,9 +1129,9 @@ abstract class tg extends hk {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L9: {
-                var6 = (Exception) (Object) decompiledCaughtException;
+                var6_ref = (Exception) (Object) decompiledCaughtException;
                 var10 = (String) null;
-                nn.a((String) null, (Throwable) ((Object) var6), -9958);
+                nn.a((String) null, (Throwable) ((Object) var6_ref), -9958);
                 this.a(10, "crash");
                 decompiledRegionSelector0 = 1;
                 break L9;
@@ -1256,28 +1148,20 @@ abstract class tg extends hk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           L10: {
-            var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var6_ref);
-            stackOut_22_1 = new StringBuilder().append("tg.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_24_0 = (RuntimeException) (var6_ref2);
+
+            stackIn_24_1 = new StringBuilder().append("tg.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L10;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L10;
             }
           }
@@ -1292,19 +1176,17 @@ abstract class tg extends hk {
 
     private final int a(boolean param0, boolean param1, boolean param2) {
         try {
+            int stackIn_6_0 = 0;
+            Throwable decompiledCaughtException = null;
             int var4 = 0;
-            Exception var5 = null;
             int var5_int = 0;
+            Exception var5 = null;
             String var7 = null;
             int var8 = 0;
             String var9 = null;
             String var10 = null;
             Boolean var11 = null;
             fj var12 = null;
-            int stackIn_6_0 = 0;
-            Throwable decompiledCaughtException = null;
-            int stackOut_5_0 = 0;
-            int stackOut_4_0 = 0;
             var8 = Torquing.field_u;
             var4 = vb.a(da.field_g, sn.field_i, param0, 32);
             if (-1 != (var4 ^ -1)) {
@@ -1314,12 +1196,10 @@ abstract class tg extends hk {
                 } else {
                   L1: {
                     if (param2) {
-                      stackOut_5_0 = 0;
-                      stackIn_6_0 = stackOut_5_0;
+                      stackIn_6_0 = 0;
                       break L1;
                     } else {
-                      stackOut_4_0 = 1;
-                      stackIn_6_0 = stackOut_4_0;
+                      stackIn_6_0 = 1;
                       break L1;
                     }
                   }

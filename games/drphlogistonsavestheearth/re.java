@@ -36,7 +36,7 @@ final class re implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (this.field_b.field_h[this.field_k + -1] == this.field_a) {
           L0: while (true) {
@@ -60,18 +60,18 @@ final class re implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        int var2 = 0;
-        Object var3 = null;
-        gi var3_ref = null;
-        gi var4 = null;
+        int fieldTemp$1 = 0;
+        int var2;
+        Object var3;
+        gi var3_ref;
+        gi var4;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (this.field_b.field_h[-1 + this.field_k] == this.field_a) {
           L0: while (true) {
             if (this.field_b.field_c > this.field_k) {
-              fieldTemp$2 = this.field_k;
+              fieldTemp$1 = this.field_k;
               this.field_k = this.field_k + 1;
-              var3_ref = this.field_b.field_h[fieldTemp$2].field_e;
+              var3_ref = this.field_b.field_h[fieldTemp$1].field_e;
               if (this.field_b.field_h[this.field_k - 1] == var3_ref) {
                 continue L0;
               } else {
@@ -110,23 +110,12 @@ final class re implements Iterator {
     final static byte[] a(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -137,35 +126,26 @@ final class re implements Iterator {
                 break L1;
               }
             }
-            stackOut_2_0 = o.field_l.a("", param0, 24874);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = o.field_l.a("", param0, 24874);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("re.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("re.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }

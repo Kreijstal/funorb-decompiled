@@ -48,14 +48,12 @@ final class ad implements Runnable {
 
     final static boolean a(boolean param0, int param1) {
         try {
-            long dupTemp$2 = 0L;
+            long dupTemp$1 = 0L;
             IOException var2 = null;
             pi var4 = null;
             pi var5 = null;
             int stackIn_11_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_10_0 = 0;
-            int stackOut_9_0 = 0;
             L0: {
               if (param1 == 10000) {
                 break L0;
@@ -73,9 +71,9 @@ final class ad implements Runnable {
               }
             }
             if (-1 != (qm.field_d.field_f ^ -1)) {
-              dupTemp$2 = ue.a(false);
-              cl.field_q = dupTemp$2;
-              oj.field_t = dupTemp$2;
+              dupTemp$1 = ue.a(false);
+              cl.field_q = dupTemp$1;
+              oj.field_t = dupTemp$1;
               if (-2 == (qm.field_d.field_f ^ -1)) {
                 try {
                   L2: {
@@ -85,12 +83,10 @@ final class ad implements Runnable {
                       var4 = jl.field_e;
                       var5 = var4;
                       if (!param0) {
-                        stackOut_10_0 = -1;
-                        stackIn_11_0 = stackOut_10_0;
+                        stackIn_11_0 = -1;
                         break L3;
                       } else {
-                        stackOut_9_0 = -2;
-                        stackIn_11_0 = stackOut_9_0;
+                        stackIn_11_0 = -2;
                         break L3;
                       }
                     }
@@ -186,12 +182,12 @@ final class ad implements Runnable {
     }
 
     final synchronized boolean a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         if (this.field_c >= 2) {
           return true;
         } else {
@@ -338,17 +334,15 @@ final class ad implements Runnable {
     }
 
     public static void b(int param0) {
-        boolean discarded$0 = false;
         field_e = null;
         field_l = null;
         field_b = null;
         if (param0 != -16637) {
-            discarded$0 = ad.a(true, 13);
+            ad.a(true, 13);
         }
     }
 
     final wq a(byte param0) {
-        boolean discarded$6 = false;
         if (param0 >= 95) {
           if ((this.field_c ^ -1) != -4) {
             return null;
@@ -356,7 +350,7 @@ final class ad implements Runnable {
             return this.field_f;
           }
         } else {
-          discarded$6 = this.a(-111);
+          this.a(-111);
           if ((this.field_c ^ -1) != -4) {
             return null;
           } else {

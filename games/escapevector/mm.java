@@ -14,8 +14,6 @@ final class mm {
         int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        int stackOut_16_0 = 0;
         var2 = EscapeVector.field_A;
         try {
           L0: {
@@ -66,8 +64,7 @@ final class mm {
                 di.field_d.a(gb.a(sf.field_c, ng.field_ob, 8158), (byte) 126, gb.a(dh.field_d, bj.field_y, 8158));
                 if (fn.a(true, 0)) {
                   var1_int = 1;
-                  stackOut_20_0 = var1_int;
-                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_0 = var1_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -79,8 +76,7 @@ final class mm {
                   continue L6;
                 } else {
                   var1_int = 1;
-                  stackOut_16_0 = var1_int;
-                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_0 = var1_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -116,8 +112,8 @@ final class mm {
     }
 
     final static boolean a(int param0, int param1) {
-        int var3 = 0;
-        mf var4 = null;
+        int var3;
+        mf var4;
         var3 = EscapeVector.field_A;
         if (param0 == 4) {
           if (!fa.field_c[param1]) {
@@ -162,7 +158,6 @@ final class mm {
 
     final static String a(int param0, CharSequence param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -170,23 +165,13 @@ final class mm {
         char[] var7 = null;
         char[] var8 = null;
         String stackIn_19_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_18_0 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var2 = null;
         var6 = EscapeVector.field_A;
         try {
           L0: {
@@ -205,8 +190,7 @@ final class mm {
             var4 = param0;
             L2: while (true) {
               if (var2_int <= var4) {
-                stackOut_18_0 = new String(var8);
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = new String(var8);
                 break L0;
               } else {
                 L3: {
@@ -261,27 +245,19 @@ final class mm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var2);
-            stackOut_20_1 = new StringBuilder().append("mm.B(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var2);
+
+            stackIn_22_1 = new StringBuilder().append("mm.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L8;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L8;
             }
           }

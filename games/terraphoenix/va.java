@@ -38,9 +38,8 @@ final class va {
     }
 
     final static fa a(int param0, int param1) {
-        fa discarded$2 = null;
         if (param1 >= -114) {
-          discarded$2 = va.a(32, 78);
+          va.a(32, 78);
           return jg.a(30, 1, false, false, param0, true);
         } else {
           return jg.a(30, 1, false, false, param0, true);

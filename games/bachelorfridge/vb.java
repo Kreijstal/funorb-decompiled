@@ -41,10 +41,10 @@ final class vb extends vo {
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         if (param0 > -70) {
           return;
         } else {
@@ -58,10 +58,10 @@ final class vb extends vo {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var4 = param0 * this.field_m >> 1804630796;
         var5 = this.field_i * param0 >> 328140012;
         var6 = this.field_k * param2 >> -352612180;
@@ -76,30 +76,30 @@ final class vb extends vo {
 
     static {
         $cfr$clinit: {
-            ClassNotFoundException var0 = null;
-            NoSuchMethodException var0_ref = null;
-            Class var0_ref2 = null;
+            Throwable decompiledCaughtException = null;
+            Class var0 = null;
+            ClassNotFoundException var0_ref = null;
+            NoSuchMethodException var0_ref2 = null;
             Class[] var1 = null;
             Class var2 = null;
-            Throwable decompiledCaughtException = null;
             field_h = new int[24];
             try {
               L0: {
                 var2 = Class.forName("java.lang.ref.SoftReference");
-                var0_ref2 = var2;
+                var0 = var2;
                 field_g = var2.getConstructor(new Class[]{Object.class});
                 var1 = (Class[]) null;
-                field_n = var0_ref2.getMethod("get", (Class[]) null);
+                field_n = var0.getMethod("get", (Class[]) null);
                 break L0;
               }
             } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var0 = (ClassNotFoundException) (Object) decompiledCaughtException;
+              var0_ref = (ClassNotFoundException) (Object) decompiledCaughtException;
               field_g = null;
               break $cfr$clinit;
             } catch (java.lang.NoSuchMethodException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              var0_ref = (NoSuchMethodException) (Object) decompiledCaughtException;
+              var0_ref2 = (NoSuchMethodException) (Object) decompiledCaughtException;
               field_g = null;
               break $cfr$clinit;
             }

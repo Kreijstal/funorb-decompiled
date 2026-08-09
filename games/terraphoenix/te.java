@@ -11,6 +11,8 @@ abstract class te {
     static kf field_g;
 
     final static void a(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -27,8 +29,6 @@ abstract class te {
         int[] var14 = null;
         ok var15 = null;
         int[] var16 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = Terraphoenix.field_V;
         try {
           L0: {
@@ -149,8 +149,6 @@ abstract class te {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -158,26 +156,14 @@ abstract class te {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1) {
-              stackOut_3_0 = bk.a((byte) 120, true, 10, param0);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = bk.a((byte) 120, true, 10, param0);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -186,27 +172,19 @@ abstract class te {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("te.D(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("te.D(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -220,15 +198,16 @@ abstract class te {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
-        boolean discarded$7 = false;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -247,8 +226,6 @@ abstract class te {
         int var23 = 0;
         CharSequence var24 = null;
         int var25 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var23 = Terraphoenix.field_V;
         try {
           L0: {
@@ -309,7 +286,7 @@ abstract class te {
                       break L6;
                     } else {
                       var24 = (CharSequence) null;
-                      discarded$7 = te.a((CharSequence) null, false);
+                      te.a((CharSequence) null, false);
                       break L6;
                     }
                   }
@@ -329,9 +306,9 @@ abstract class te {
                             if (var14 >= var17) {
                               break L9;
                             } else {
-                              incrementValue$8 = var15;
+                              incrementValue$0 = var15;
                               var15--;
-                              var18 = var18 - (incrementValue$8 + var15);
+                              var18 = var18 - (incrementValue$0 + var15);
                               var17 = var17 - (var15 + var15);
                               continue L8;
                             }
@@ -364,14 +341,14 @@ abstract class te {
                             var18 = var18 + (var16 + var16);
                             var13++;
                             var8++;
-                            incrementValue$9 = var16;
+                            incrementValue$1 = var16;
                             var16++;
-                            var17 = var17 + (incrementValue$9 + var16);
+                            var17 = var17 + (incrementValue$1 + var16);
                             continue L7;
                           } else {
                             L13: {
                               var10 = (int)(Math.sqrt((double)(-((-param2 + var25) * (var25 - param2)) + -((-param3 + var8) * (-param3 + var8)) + param1 * param1)) + (double)var9);
-                              if (gd.field_a[var25][var8] <= var10) {
+                              if ((gd.field_a[var25][var8] ^ -1) >= (var10 ^ -1)) {
                                 L14: {
                                   if (param6) {
                                     gd.field_a[var25][var8] = var10;
@@ -380,9 +357,9 @@ abstract class te {
                                     break L14;
                                   }
                                 }
-                                incrementValue$10 = var21;
+                                incrementValue$2 = var21;
                                 var21++;
-                                l.field_i[incrementValue$10] = param5;
+                                l.field_i[incrementValue$2] = param5;
                                 break L13;
                               } else {
                                 var21++;
@@ -429,9 +406,9 @@ abstract class te {
                             if (var20 <= var22) {
                               var13++;
                               var8++;
-                              incrementValue$11 = var16;
+                              incrementValue$3 = var16;
                               var16--;
-                              var17 = var17 - (incrementValue$11 - -var16);
+                              var17 = var17 - (incrementValue$3 - -var16);
                               var18 = var18 - (var16 + var16);
                               continue L5;
                             } else {
@@ -446,9 +423,9 @@ abstract class te {
                                       break L21;
                                     }
                                   }
-                                  incrementValue$12 = var21;
+                                  incrementValue$4 = var21;
                                   var21++;
-                                  l.field_i[incrementValue$12] = param5;
+                                  l.field_i[incrementValue$4] = param5;
                                   break L20;
                                 } else {
                                   var21++;
@@ -466,9 +443,9 @@ abstract class te {
                       }
                     }
                     var17 = var17 + (var15 + var15);
-                    incrementValue$13 = var15;
+                    incrementValue$5 = var15;
                     var15++;
-                    var18 = var18 + (incrementValue$13 + var15);
+                    var18 = var18 + (incrementValue$5 + var15);
                     continue L15;
                   }
                 }

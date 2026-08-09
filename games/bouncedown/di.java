@@ -34,14 +34,14 @@ final class di implements Iterator {
     }
 
     public final Object next() {
-        ug var1 = this.field_d;
+        Object var1 = this.field_d;
         if (this.field_e.field_a == var1) {
             var1 = null;
             this.field_d = null;
         } else {
-            this.field_d = var1.field_l;
+            this.field_d = ((ug) (var1)).field_l;
         }
-        this.field_c = var1;
+        this.field_c = (ug) (var1);
         return var1;
     }
 
@@ -61,7 +61,7 @@ final class di implements Iterator {
     }
 
     final static String[] a(int param0, char param1, String param2) {
-        int incrementValue$2 = 0;
+        int incrementValue$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
@@ -72,23 +72,12 @@ final class di implements Iterator {
         int var9 = 0;
         CharSequence var10 = null;
         String[] stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[] stackOut_9_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var9 = Bounce.field_N;
         try {
           L0: {
@@ -109,16 +98,15 @@ final class di implements Iterator {
                   }
                 }
                 var4[var3_int] = param2.substring(var6);
-                stackOut_9_0 = (String[]) (var4);
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = (String[]) (var4);
                 break L0;
               } else {
                 var8 = var6;
                 L3: while (true) {
                   if (param1 == param2.charAt(var8)) {
-                    incrementValue$2 = var5;
+                    incrementValue$1 = var5;
                     var5++;
-                    var4[incrementValue$2] = param2.substring(var6, var8);
+                    var4[incrementValue$1] = param2.substring(var6, var8);
                     var6 = 1 + var8;
                     var7++;
                     continue L1;
@@ -134,27 +122,19 @@ final class di implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("di.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("di.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L4;
             }
           }

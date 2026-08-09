@@ -19,27 +19,6 @@ final class amb implements dja {
     }
 
     final static void a(int param0, boolean param1) {
-        int var2 = 0;
-        kla var3 = null;
-        int var4_int = 0;
-        String var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        String var13 = null;
-        kla var14 = null;
-        String var15 = null;
-        kla var16 = null;
-        String var17 = null;
-        kla var18 = null;
-        String var19 = null;
-        String var20 = null;
-        String var21 = null;
         int stackIn_20_0 = 0;
         int stackIn_25_0 = 0;
         String stackIn_38_0 = null;
@@ -58,49 +37,27 @@ final class amb implements dja {
         int stackIn_162_0 = 0;
         String stackIn_177_0 = null;
         int stackIn_181_0 = 0;
-        int stackOut_106_0 = 0;
-        int stackOut_105_0 = 0;
-        int stackOut_103_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_71_0 = 0;
-        int stackOut_69_0 = 0;
-        int stackOut_77_0 = 0;
-        int stackOut_78_0 = 0;
-        String stackOut_91_0 = null;
-        String stackOut_90_0 = null;
-        int stackOut_94_0 = 0;
-        int stackOut_95_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_111_0 = 0;
-        int stackOut_112_0 = 0;
-        String stackOut_157_0 = null;
-        String stackOut_156_0 = null;
-        int stackOut_160_0 = 0;
-        int stackOut_161_0 = 0;
-        String stackOut_139_0 = null;
-        String stackOut_138_0 = null;
-        int stackOut_142_0 = 0;
-        int stackOut_143_0 = 0;
-        String stackOut_121_0 = null;
-        String stackOut_120_0 = null;
-        int stackOut_124_0 = 0;
-        int stackOut_125_0 = 0;
-        String stackOut_176_0 = null;
-        String stackOut_175_0 = null;
-        int stackOut_179_0 = 0;
-        int stackOut_180_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_24_0 = 0;
-        String stackOut_37_0 = null;
-        String stackOut_36_0 = null;
-        int stackOut_40_0 = 0;
-        int stackOut_41_0 = 0;
+        int var2;
+        kla var3;
+        int var4_int;
+        String var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        String var13;
+        kla var14;
+        String var15;
+        kla var16;
+        String var17;
+        kla var18;
+        String var19;
+        String var20;
+        String var21;
         if (null == vqa.field_g) {
           L0: {
             if (null != ndb.field_a) {
@@ -119,17 +76,14 @@ final class amb implements dja {
                       if (vqa.field_g.field_N) {
                         if (fva.field_p) {
                           if (!tob.g(0)) {
-                            stackOut_106_0 = 0;
-                            stackIn_108_0 = stackOut_106_0;
+                            stackIn_108_0 = 0;
                             break L2;
                           } else {
-                            stackOut_105_0 = 1;
-                            stackIn_108_0 = stackOut_105_0;
+                            stackIn_108_0 = 1;
                             break L2;
                           }
                         } else {
-                          stackOut_103_0 = 0;
-                          stackIn_108_0 = stackOut_103_0;
+                          stackIn_108_0 = 0;
                           break L2;
                         }
                       } else {
@@ -137,17 +91,14 @@ final class amb implements dja {
                           L3: {
                             if (fva.field_p) {
                               if (tob.g(0)) {
-                                stackOut_72_0 = 1;
-                                stackIn_74_0 = stackOut_72_0;
+                                stackIn_74_0 = 1;
                                 break L3;
                               } else {
-                                stackOut_71_0 = 0;
-                                stackIn_74_0 = stackOut_71_0;
+                                stackIn_74_0 = 0;
                                 break L3;
                               }
                             } else {
-                              stackOut_69_0 = 0;
-                              stackIn_74_0 = stackOut_69_0;
+                              stackIn_74_0 = 0;
                               break L3;
                             }
                           }
@@ -163,15 +114,13 @@ final class amb implements dja {
                                   if (var2 != 0) {
                                     break L5;
                                   } else {
-                                    stackOut_77_0 = 1;
-                                    stackIn_79_0 = stackOut_77_0;
+                                    stackIn_79_0 = 1;
                                     break L4;
                                   }
                                 }
                               }
                             }
-                            stackOut_78_0 = 0;
-                            stackIn_79_0 = stackOut_78_0;
+                            stackIn_79_0 = 0;
                             break L4;
                           }
                           L6: {
@@ -212,12 +161,10 @@ final class amb implements dja {
                             } else {
                               L9: {
                                 if (mjb.field_e) {
-                                  stackOut_91_0 = up.field_p;
-                                  stackIn_92_0 = stackOut_91_0;
+                                  stackIn_92_0 = up.field_p;
                                   break L9;
                                 } else {
-                                  stackOut_90_0 = kia.field_b;
-                                  stackIn_92_0 = stackOut_90_0;
+                                  stackIn_92_0 = kia.field_b;
                                   break L9;
                                 }
                               }
@@ -231,14 +178,12 @@ final class amb implements dja {
                                     if (!jnb.e(param0 + 30499)) {
                                       break L11;
                                     } else {
-                                      stackOut_94_0 = 1;
-                                      stackIn_96_0 = stackOut_94_0;
+                                      stackIn_96_0 = 1;
                                       break L10;
                                     }
                                   }
                                 }
-                                stackOut_95_0 = 0;
-                                stackIn_96_0 = stackOut_95_0;
+                                stackIn_96_0 = 0;
                                 break L10;
                               }
                               ida.a(stackIn_96_0 != 0, var15, -73);
@@ -270,14 +215,12 @@ final class amb implements dja {
                           }
                           return;
                         } else {
-                          stackOut_67_0 = 0;
-                          stackIn_108_0 = stackOut_67_0;
+                          stackIn_108_0 = 0;
                           break L2;
                         }
                       }
                     } else {
-                      stackOut_64_0 = 0;
-                      stackIn_108_0 = stackOut_64_0;
+                      stackIn_108_0 = 0;
                       break L2;
                     }
                   }
@@ -293,15 +236,13 @@ final class amb implements dja {
                           if (var2 != 0) {
                             break L14;
                           } else {
-                            stackOut_111_0 = 1;
-                            stackIn_113_0 = stackOut_111_0;
+                            stackIn_113_0 = 1;
                             break L13;
                           }
                         }
                       }
                     }
-                    stackOut_112_0 = 0;
-                    stackIn_113_0 = stackOut_112_0;
+                    stackIn_113_0 = 0;
                     break L13;
                   }
                   L15: {
@@ -328,12 +269,10 @@ final class amb implements dja {
                               } else {
                                 L17: {
                                   if (mjb.field_e) {
-                                    stackOut_157_0 = up.field_p;
-                                    stackIn_158_0 = stackOut_157_0;
+                                    stackIn_158_0 = up.field_p;
                                     break L17;
                                   } else {
-                                    stackOut_156_0 = kia.field_b;
-                                    stackIn_158_0 = stackOut_156_0;
+                                    stackIn_158_0 = kia.field_b;
                                     break L17;
                                   }
                                 }
@@ -347,14 +286,12 @@ final class amb implements dja {
                                       if (!jnb.e(param0 + 30499)) {
                                         break L19;
                                       } else {
-                                        stackOut_160_0 = 1;
-                                        stackIn_162_0 = stackOut_160_0;
+                                        stackIn_162_0 = 1;
                                         break L18;
                                       }
                                     }
                                   }
-                                  stackOut_161_0 = 0;
-                                  stackIn_162_0 = stackOut_161_0;
+                                  stackIn_162_0 = 0;
                                   break L18;
                                 }
                                 ida.a(stackIn_162_0 != 0, var20, -73);
@@ -405,12 +342,10 @@ final class amb implements dja {
                             } else {
                               L22: {
                                 if (mjb.field_e) {
-                                  stackOut_139_0 = up.field_p;
-                                  stackIn_140_0 = stackOut_139_0;
+                                  stackIn_140_0 = up.field_p;
                                   break L22;
                                 } else {
-                                  stackOut_138_0 = kia.field_b;
-                                  stackIn_140_0 = stackOut_138_0;
+                                  stackIn_140_0 = kia.field_b;
                                   break L22;
                                 }
                               }
@@ -424,14 +359,12 @@ final class amb implements dja {
                                     if (!jnb.e(param0 + 30499)) {
                                       break L24;
                                     } else {
-                                      stackOut_142_0 = 1;
-                                      stackIn_144_0 = stackOut_142_0;
+                                      stackIn_144_0 = 1;
                                       break L23;
                                     }
                                   }
                                 }
-                                stackOut_143_0 = 0;
-                                stackIn_144_0 = stackOut_143_0;
+                                stackIn_144_0 = 0;
                                 break L23;
                               }
                               ida.a(stackIn_144_0 != 0, var19, -73);
@@ -487,12 +420,10 @@ final class amb implements dja {
                           } else {
                             L28: {
                               if (mjb.field_e) {
-                                stackOut_121_0 = up.field_p;
-                                stackIn_122_0 = stackOut_121_0;
+                                stackIn_122_0 = up.field_p;
                                 break L28;
                               } else {
-                                stackOut_120_0 = kia.field_b;
-                                stackIn_122_0 = stackOut_120_0;
+                                stackIn_122_0 = kia.field_b;
                                 break L28;
                               }
                             }
@@ -514,14 +445,12 @@ final class amb implements dja {
                                   if (!jnb.e(param0 + 30499)) {
                                     break L30;
                                   } else {
-                                    stackOut_124_0 = 1;
-                                    stackIn_126_0 = stackOut_124_0;
+                                    stackIn_126_0 = 1;
                                     break L29;
                                   }
                                 }
                               }
-                              stackOut_125_0 = 0;
-                              stackIn_126_0 = stackOut_125_0;
+                              stackIn_126_0 = 0;
                               break L29;
                             }
                             ida.a(stackIn_126_0 != 0, var17, -73);
@@ -560,12 +489,10 @@ final class amb implements dja {
                   } else {
                     L32: {
                       if (mjb.field_e) {
-                        stackOut_176_0 = up.field_p;
-                        stackIn_177_0 = stackOut_176_0;
+                        stackIn_177_0 = up.field_p;
                         break L32;
                       } else {
-                        stackOut_175_0 = kia.field_b;
-                        stackIn_177_0 = stackOut_175_0;
+                        stackIn_177_0 = kia.field_b;
                         break L32;
                       }
                     }
@@ -579,14 +506,12 @@ final class amb implements dja {
                           if (!jnb.e(param0 + 30499)) {
                             break L34;
                           } else {
-                            stackOut_179_0 = 1;
-                            stackIn_181_0 = stackOut_179_0;
+                            stackIn_181_0 = 1;
                             break L33;
                           }
                         }
                       }
-                      stackOut_180_0 = 0;
-                      stackIn_181_0 = stackOut_180_0;
+                      stackIn_181_0 = 0;
                       break L33;
                     }
                     ida.a(stackIn_181_0 != 0, var21, -73);
@@ -665,30 +590,25 @@ final class amb implements dja {
                           if (jkb.field_a) {
                             break L38;
                           } else {
-                            stackOut_12_0 = 0;
-                            stackIn_20_0 = stackOut_12_0;
+                            stackIn_20_0 = 0;
                             break L37;
                           }
                         }
                       }
                       if (fva.field_p) {
                         if (tob.g(0)) {
-                          stackOut_18_0 = 1;
-                          stackIn_20_0 = stackOut_18_0;
+                          stackIn_20_0 = 1;
                           break L37;
                         } else {
-                          stackOut_17_0 = 0;
-                          stackIn_20_0 = stackOut_17_0;
+                          stackIn_20_0 = 0;
                           break L37;
                         }
                       } else {
-                        stackOut_15_0 = 0;
-                        stackIn_20_0 = stackOut_15_0;
+                        stackIn_20_0 = 0;
                         break L37;
                       }
                     } else {
-                      stackOut_9_0 = 0;
-                      stackIn_20_0 = stackOut_9_0;
+                      stackIn_20_0 = 0;
                       break L37;
                     }
                   }
@@ -704,15 +624,13 @@ final class amb implements dja {
                           if (var2 != 0) {
                             break L40;
                           } else {
-                            stackOut_23_0 = 1;
-                            stackIn_25_0 = stackOut_23_0;
+                            stackIn_25_0 = 1;
                             break L39;
                           }
                         }
                       }
                     }
-                    stackOut_24_0 = 0;
-                    stackIn_25_0 = stackOut_24_0;
+                    stackIn_25_0 = 0;
                     break L39;
                   }
                   L41: {
@@ -752,12 +670,10 @@ final class amb implements dja {
                   } else {
                     L43: {
                       if (mjb.field_e) {
-                        stackOut_37_0 = up.field_p;
-                        stackIn_38_0 = stackOut_37_0;
+                        stackIn_38_0 = up.field_p;
                         break L43;
                       } else {
-                        stackOut_36_0 = kia.field_b;
-                        stackIn_38_0 = stackOut_36_0;
+                        stackIn_38_0 = kia.field_b;
                         break L43;
                       }
                     }
@@ -771,14 +687,12 @@ final class amb implements dja {
                           if (!jnb.e(param0 + 30499)) {
                             break L45;
                           } else {
-                            stackOut_40_0 = 1;
-                            stackIn_42_0 = stackOut_40_0;
+                            stackIn_42_0 = 1;
                             break L44;
                           }
                         }
                       }
-                      stackOut_41_0 = 0;
-                      stackIn_42_0 = stackOut_41_0;
+                      stackIn_42_0 = 0;
                       break L44;
                     }
                     ida.a(stackIn_42_0 != 0, var13, -73);

@@ -9,9 +9,9 @@ final class nd extends kj {
     private int field_f;
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var4;
+        int var5;
+        int var6;
         var6 = BachelorFridge.field_y;
         var4 = 0;
         var5 = param1;
@@ -36,9 +36,9 @@ final class nd extends kj {
     }
 
     final void a(int param0, boolean param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = BachelorFridge.field_y;
           var4 = 0;
@@ -71,32 +71,27 @@ final class nd extends kj {
     }
 
     final boolean b(int param0) {
-        boolean discarded$6 = false;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 < 21) {
-          discarded$6 = this.b(69);
-          fieldTemp$7 = this.field_f + 1;
+          this.b(69);
+          fieldTemp$2 = this.field_f + 1;
           this.field_f = this.field_f + 1;
-          if (60 > fieldTemp$7) {
+          if (60 > fieldTemp$2) {
             return false;
           } else {
             return true;
           }
         } else {
           L0: {
-            fieldTemp$8 = this.field_f + 1;
+            fieldTemp$3 = this.field_f + 1;
             this.field_f = this.field_f + 1;
-            if (60 <= fieldTemp$8) {
-              stackOut_3_0 = 1;
-              stackIn_4_0 = stackOut_3_0;
+            if (60 <= fieldTemp$3) {
+              stackIn_4_0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = 0;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 0;
               break L0;
             }
           }

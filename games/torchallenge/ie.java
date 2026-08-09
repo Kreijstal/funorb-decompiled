@@ -25,7 +25,6 @@ final class ie {
     }
 
     public static void a(byte param0) {
-        boolean discarded$0 = false;
         field_a = null;
         field_b = (int[][][]) null;
         field_e = null;
@@ -33,13 +32,12 @@ final class ie {
         field_f = (ka[][]) null;
         field_c = null;
         if (param0 != 33) {
-            discarded$0 = ie.a((byte) 0, 'K');
+            ie.a((byte) 0, 'K');
         }
         field_d = null;
     }
 
     final static boolean a(byte param0, char param1) {
-        boolean discarded$2 = false;
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -48,23 +46,16 @@ final class ie {
         char[] var6 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_24_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_2_0 = 0;
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
             if (!Character.isISOControl(param1)) {
               if (ea.a(param1, -124)) {
-                stackOut_6_0 = 1;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -79,15 +70,14 @@ final class ie {
                       if (param0 == 82) {
                         break L2;
                       } else {
-                        discarded$2 = ie.a((byte) 53, '￈');
+                        ie.a((byte) 53, '￈');
                         break L2;
                       }
                     }
                     L3: while (true) {
                       if (var3 >= var2.length) {
-                        stackOut_21_0 = 0;
-                        stackIn_22_0 = stackOut_21_0;
-                        decompiledRegionSelector0 = 4;
+                        stackIn_24_0 = 0;
+                        decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
                         var4 = var2[var3];
@@ -95,30 +85,25 @@ final class ie {
                           var3++;
                           continue L3;
                         } else {
-                          stackOut_18_0 = 1;
-                          stackIn_19_0 = stackOut_18_0;
-                          decompiledRegionSelector0 = 3;
+                          stackIn_21_0 = 1;
+                          decompiledRegionSelector0 = 2;
                           break L0;
                         }
                       }
                     }
                   } else {
                     var4 = var6[var3];
-                    if (var4 != param1) {
+                    if ((var4 ^ -1) != (param1 ^ -1)) {
                       var3++;
                       continue L1;
                     } else {
-                      stackOut_11_0 = 1;
-                      stackIn_12_0 = stackOut_11_0;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
+                      return true;
                     }
                   }
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -135,13 +120,9 @@ final class ie {
             return stackIn_7_0 != 0;
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return stackIn_12_0 != 0;
+              return stackIn_21_0 != 0;
             } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_19_0 != 0;
-              } else {
-                return stackIn_22_0 != 0;
-              }
+              return stackIn_24_0 != 0;
             }
           }
         }

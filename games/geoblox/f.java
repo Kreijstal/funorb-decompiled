@@ -20,25 +20,14 @@ class f extends qf implements pl {
     }
 
     public void a(int param0, byte param1, int param2, int param3, hk param4) {
-        boolean discarded$2 = false;
-        RuntimeException var6 = null;
         CharSequence var7 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var6 = null;
         try {
           L0: {
             L1: {
@@ -46,7 +35,7 @@ class f extends qf implements pl {
                 break L1;
               } else {
                 var7 = (CharSequence) null;
-                discarded$2 = f.b((byte) -98, (CharSequence) null);
+                f.b((byte) -98, (CharSequence) null);
                 break L1;
               }
             }
@@ -66,27 +55,19 @@ class f extends qf implements pl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var6);
-            stackOut_6_1 = new StringBuilder().append("f.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var6);
+
+            stackIn_8_1 = new StringBuilder().append("f.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -188,8 +169,6 @@ class f extends qf implements pl {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -197,27 +176,15 @@ class f extends qf implements pl {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0 != param1) {
-              stackOut_3_0 = super.a(param0, param1 + 0, param2, param3);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = super.a(param0, param1 + 0, param2, param3);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
               this.h((byte) -104);
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -226,27 +193,19 @@ class f extends qf implements pl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var5);
-            stackOut_5_1 = new StringBuilder().append("f.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var5);
+
+            stackIn_7_1 = new StringBuilder().append("f.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -268,51 +227,51 @@ class f extends qf implements pl {
     }
 
     final static void o(int param0) {
-        int fieldTemp$118 = 0;
-        int fieldTemp$119 = 0;
-        int fieldTemp$120 = 0;
-        int fieldTemp$121 = 0;
-        int fieldTemp$122 = 0;
-        int fieldTemp$123 = 0;
-        int fieldTemp$124 = 0;
-        int fieldTemp$125 = 0;
-        int fieldTemp$126 = 0;
-        int fieldTemp$127 = 0;
-        int fieldTemp$128 = 0;
-        int fieldTemp$129 = 0;
-        int fieldTemp$130 = 0;
-        int fieldTemp$131 = 0;
-        int fieldTemp$132 = 0;
-        int fieldTemp$133 = 0;
-        int fieldTemp$134 = 0;
-        int fieldTemp$135 = 0;
-        int fieldTemp$136 = 0;
-        int fieldTemp$137 = 0;
-        int fieldTemp$138 = 0;
-        int fieldTemp$139 = 0;
-        int fieldTemp$140 = 0;
-        int fieldTemp$141 = 0;
-        int fieldTemp$142 = 0;
-        int fieldTemp$143 = 0;
-        int fieldTemp$144 = 0;
-        int fieldTemp$145 = 0;
-        int fieldTemp$146 = 0;
-        int fieldTemp$147 = 0;
-        int fieldTemp$148 = 0;
-        int fieldTemp$149 = 0;
-        int fieldTemp$150 = 0;
-        int fieldTemp$151 = 0;
-        int fieldTemp$152 = 0;
-        int fieldTemp$153 = 0;
-        int fieldTemp$154 = 0;
-        int fieldTemp$155 = 0;
-        float var1 = 0.0f;
-        int var1_int = 0;
-        int var2 = 0;
+        int fieldTemp$24 = 0;
+        int fieldTemp$25 = 0;
+        int fieldTemp$26 = 0;
+        int fieldTemp$27 = 0;
+        int fieldTemp$28 = 0;
+        int fieldTemp$29 = 0;
+        int fieldTemp$30 = 0;
+        int fieldTemp$31 = 0;
+        int fieldTemp$32 = 0;
+        int fieldTemp$33 = 0;
+        int fieldTemp$34 = 0;
+        int fieldTemp$35 = 0;
+        int fieldTemp$36 = 0;
+        int fieldTemp$37 = 0;
+        int fieldTemp$38 = 0;
+        int fieldTemp$39 = 0;
+        int fieldTemp$40 = 0;
+        int fieldTemp$41 = 0;
+        int fieldTemp$42 = 0;
+        int fieldTemp$43 = 0;
+        int fieldTemp$44 = 0;
+        int fieldTemp$45 = 0;
+        int fieldTemp$46 = 0;
+        int fieldTemp$47 = 0;
+        int fieldTemp$48 = 0;
+        int fieldTemp$49 = 0;
+        int fieldTemp$50 = 0;
+        int fieldTemp$51 = 0;
+        int fieldTemp$52 = 0;
+        int fieldTemp$53 = 0;
+        int fieldTemp$54 = 0;
+        int fieldTemp$55 = 0;
+        int fieldTemp$56 = 0;
+        int fieldTemp$57 = 0;
+        int fieldTemp$58 = 0;
+        int fieldTemp$59 = 0;
+        int fieldTemp$60 = 0;
+        int fieldTemp$61 = 0;
+        float var1;
+        int var1_int;
+        int var2;
         var2 = Geoblox.field_C;
-        int fieldTemp$117 = af.field_c;
+        int fieldTemp$23 = af.field_c;
         af.field_c = af.field_c - 1;
-        if (0 > fieldTemp$117) {
+        if (0 > fieldTemp$23) {
           L0: {
             af.field_c = 20;
             if (uf.field_b == ka.field_h + 0) {
@@ -436,9 +395,9 @@ class f extends qf implements pl {
                             fd.a(300, fl.field_c[22], false, j.field_gb);
                             g.field_j = g.field_j + 1;
                             var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                            fieldTemp$118 = wa.field_a;
+                            fieldTemp$24 = wa.field_a;
                             wa.field_a = wa.field_a - 1;
-                            if (-1 <= (fieldTemp$118 ^ -1)) {
+                            if (-1 <= (fieldTemp$24 ^ -1)) {
                               break L8;
                             } else {
                               ha.field_g = wa.field_a % 15 % 2;
@@ -446,9 +405,9 @@ class f extends qf implements pl {
                             }
                           }
                           L9: {
-                            fieldTemp$119 = jf.field_j;
+                            fieldTemp$25 = jf.field_j;
                             jf.field_j = jf.field_j - 1;
-                            if (-1 <= (fieldTemp$119 ^ -1)) {
+                            if (-1 <= (fieldTemp$25 ^ -1)) {
                               break L9;
                             } else {
                               rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -462,9 +421,9 @@ class f extends qf implements pl {
                             ul.field_a = vf.field_H[g.field_j];
                             g.field_j = g.field_j + 1;
                             var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                            fieldTemp$120 = wa.field_a;
+                            fieldTemp$26 = wa.field_a;
                             wa.field_a = wa.field_a - 1;
-                            if (-1 <= (fieldTemp$120 ^ -1)) {
+                            if (-1 <= (fieldTemp$26 ^ -1)) {
                               break L10;
                             } else {
                               ha.field_g = wa.field_a % 15 % 2;
@@ -472,9 +431,9 @@ class f extends qf implements pl {
                             }
                           }
                           L11: {
-                            fieldTemp$121 = jf.field_j;
+                            fieldTemp$27 = jf.field_j;
                             jf.field_j = jf.field_j - 1;
-                            if (-1 <= (fieldTemp$121 ^ -1)) {
+                            if (-1 <= (fieldTemp$27 ^ -1)) {
                               break L11;
                             } else {
                               rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -490,9 +449,9 @@ class f extends qf implements pl {
                               ul.field_a = ok.field_a[g.field_j];
                               g.field_j = g.field_j + 1;
                               var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                              fieldTemp$122 = wa.field_a;
+                              fieldTemp$28 = wa.field_a;
                               wa.field_a = wa.field_a - 1;
-                              if (-1 <= (fieldTemp$122 ^ -1)) {
+                              if (-1 <= (fieldTemp$28 ^ -1)) {
                                 break L12;
                               } else {
                                 ha.field_g = wa.field_a % 15 % 2;
@@ -500,9 +459,9 @@ class f extends qf implements pl {
                               }
                             }
                             L13: {
-                              fieldTemp$123 = jf.field_j;
+                              fieldTemp$29 = jf.field_j;
                               jf.field_j = jf.field_j - 1;
-                              if (-1 <= (fieldTemp$123 ^ -1)) {
+                              if (-1 <= (fieldTemp$29 ^ -1)) {
                                 break L13;
                               } else {
                                 rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -516,9 +475,9 @@ class f extends qf implements pl {
                               pa.field_g = 200;
                               g.field_j = g.field_j + 1;
                               var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                              fieldTemp$124 = wa.field_a;
+                              fieldTemp$30 = wa.field_a;
                               wa.field_a = wa.field_a - 1;
-                              if (-1 <= (fieldTemp$124 ^ -1)) {
+                              if (-1 <= (fieldTemp$30 ^ -1)) {
                                 break L14;
                               } else {
                                 ha.field_g = wa.field_a % 15 % 2;
@@ -526,9 +485,9 @@ class f extends qf implements pl {
                               }
                             }
                             L15: {
-                              fieldTemp$125 = jf.field_j;
+                              fieldTemp$31 = jf.field_j;
                               jf.field_j = jf.field_j - 1;
-                              if (-1 <= (fieldTemp$125 ^ -1)) {
+                              if (-1 <= (fieldTemp$31 ^ -1)) {
                                 break L15;
                               } else {
                                 rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -550,12 +509,12 @@ class f extends qf implements pl {
                   }
                 }
                 var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                fieldTemp$126 = wa.field_a;
+                fieldTemp$32 = wa.field_a;
                 wa.field_a = wa.field_a - 1;
-                if (-1 <= (fieldTemp$126 ^ -1)) {
-                  fieldTemp$127 = jf.field_j;
+                if (-1 <= (fieldTemp$32 ^ -1)) {
+                  fieldTemp$33 = jf.field_j;
                   jf.field_j = jf.field_j - 1;
-                  if (-1 > (fieldTemp$127 ^ -1)) {
+                  if (-1 > (fieldTemp$33 ^ -1)) {
                     rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
                     return;
                   } else {
@@ -564,9 +523,9 @@ class f extends qf implements pl {
                 } else {
                   L16: {
                     ha.field_g = wa.field_a % 15 % 2;
-                    fieldTemp$128 = jf.field_j;
+                    fieldTemp$34 = jf.field_j;
                     jf.field_j = jf.field_j - 1;
-                    if (-1 <= (fieldTemp$128 ^ -1)) {
+                    if (-1 <= (fieldTemp$34 ^ -1)) {
                       break L16;
                     } else {
                       rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -597,12 +556,12 @@ class f extends qf implements pl {
                     ul.field_a = vf.field_H[g.field_j];
                     g.field_j = g.field_j + 1;
                     var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                    fieldTemp$129 = wa.field_a;
+                    fieldTemp$35 = wa.field_a;
                     wa.field_a = wa.field_a - 1;
-                    if (-1 <= (fieldTemp$129 ^ -1)) {
-                      fieldTemp$130 = jf.field_j;
+                    if (-1 <= (fieldTemp$35 ^ -1)) {
+                      fieldTemp$36 = jf.field_j;
                       jf.field_j = jf.field_j - 1;
-                      if (-1 <= (fieldTemp$130 ^ -1)) {
+                      if (-1 <= (fieldTemp$36 ^ -1)) {
                         return;
                       } else {
                         rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -610,9 +569,9 @@ class f extends qf implements pl {
                       }
                     } else {
                       ha.field_g = wa.field_a % 15 % 2;
-                      fieldTemp$131 = jf.field_j;
+                      fieldTemp$37 = jf.field_j;
                       jf.field_j = jf.field_j - 1;
-                      if (-1 <= (fieldTemp$131 ^ -1)) {
+                      if (-1 <= (fieldTemp$37 ^ -1)) {
                         return;
                       } else {
                         rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -625,12 +584,12 @@ class f extends qf implements pl {
                     fd.a(300, fl.field_c[22], false, j.field_gb);
                     g.field_j = g.field_j + 1;
                     var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                    fieldTemp$132 = wa.field_a;
+                    fieldTemp$38 = wa.field_a;
                     wa.field_a = wa.field_a - 1;
-                    if (-1 <= (fieldTemp$132 ^ -1)) {
-                      fieldTemp$133 = jf.field_j;
+                    if (-1 <= (fieldTemp$38 ^ -1)) {
+                      fieldTemp$39 = jf.field_j;
                       jf.field_j = jf.field_j - 1;
-                      if (-1 <= (fieldTemp$133 ^ -1)) {
+                      if (-1 <= (fieldTemp$39 ^ -1)) {
                         return;
                       } else {
                         rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -639,9 +598,9 @@ class f extends qf implements pl {
                     } else {
                       L19: {
                         ha.field_g = wa.field_a % 15 % 2;
-                        fieldTemp$134 = jf.field_j;
+                        fieldTemp$40 = jf.field_j;
                         jf.field_j = jf.field_j - 1;
-                        if (-1 <= (fieldTemp$134 ^ -1)) {
+                        if (-1 <= (fieldTemp$40 ^ -1)) {
                           break L19;
                         } else {
                           rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -659,18 +618,18 @@ class f extends qf implements pl {
                         pa.field_g = 200;
                         g.field_j = g.field_j + 1;
                         var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                        fieldTemp$135 = wa.field_a;
+                        fieldTemp$41 = wa.field_a;
                         wa.field_a = wa.field_a - 1;
-                        if (-1 <= (fieldTemp$135 ^ -1)) {
+                        if (-1 <= (fieldTemp$41 ^ -1)) {
                           break L20;
                         } else {
                           ha.field_g = wa.field_a % 15 % 2;
                           break L20;
                         }
                       }
-                      fieldTemp$136 = jf.field_j;
+                      fieldTemp$42 = jf.field_j;
                       jf.field_j = jf.field_j - 1;
-                      if (-1 <= (fieldTemp$136 ^ -1)) {
+                      if (-1 <= (fieldTemp$42 ^ -1)) {
                         return;
                       } else {
                         rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -681,9 +640,9 @@ class f extends qf implements pl {
                         ul.field_a = ok.field_a[g.field_j];
                         g.field_j = g.field_j + 1;
                         var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                        fieldTemp$137 = wa.field_a;
+                        fieldTemp$43 = wa.field_a;
                         wa.field_a = wa.field_a - 1;
-                        if (-1 <= (fieldTemp$137 ^ -1)) {
+                        if (-1 <= (fieldTemp$43 ^ -1)) {
                           break L21;
                         } else {
                           ha.field_g = wa.field_a % 15 % 2;
@@ -691,9 +650,9 @@ class f extends qf implements pl {
                         }
                       }
                       L22: {
-                        fieldTemp$138 = jf.field_j;
+                        fieldTemp$44 = jf.field_j;
                         jf.field_j = jf.field_j - 1;
-                        if (-1 <= (fieldTemp$138 ^ -1)) {
+                        if (-1 <= (fieldTemp$44 ^ -1)) {
                           break L22;
                         } else {
                           rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -714,12 +673,12 @@ class f extends qf implements pl {
               }
             }
             var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-            fieldTemp$139 = wa.field_a;
+            fieldTemp$45 = wa.field_a;
             wa.field_a = wa.field_a - 1;
-            if (-1 <= (fieldTemp$139 ^ -1)) {
-              fieldTemp$140 = jf.field_j;
+            if (-1 <= (fieldTemp$45 ^ -1)) {
+              fieldTemp$46 = jf.field_j;
               jf.field_j = jf.field_j - 1;
-              if (-1 <= (fieldTemp$140 ^ -1)) {
+              if (-1 <= (fieldTemp$46 ^ -1)) {
                 return;
               } else {
                 rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -727,9 +686,9 @@ class f extends qf implements pl {
               }
             } else {
               ha.field_g = wa.field_a % 15 % 2;
-              fieldTemp$141 = jf.field_j;
+              fieldTemp$47 = jf.field_j;
               jf.field_j = jf.field_j - 1;
-              if (-1 <= (fieldTemp$141 ^ -1)) {
+              if (-1 <= (fieldTemp$47 ^ -1)) {
                 return;
               } else {
                 rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -738,12 +697,12 @@ class f extends qf implements pl {
             }
           } else {
             var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-            fieldTemp$142 = wa.field_a;
+            fieldTemp$48 = wa.field_a;
             wa.field_a = wa.field_a - 1;
-            if (-1 <= (fieldTemp$142 ^ -1)) {
-              fieldTemp$143 = jf.field_j;
+            if (-1 <= (fieldTemp$48 ^ -1)) {
+              fieldTemp$49 = jf.field_j;
               jf.field_j = jf.field_j - 1;
-              if (-1 > (fieldTemp$143 ^ -1)) {
+              if (-1 > (fieldTemp$49 ^ -1)) {
                 rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
                 return;
               } else {
@@ -751,9 +710,9 @@ class f extends qf implements pl {
               }
             } else {
               ha.field_g = wa.field_a % 15 % 2;
-              fieldTemp$144 = jf.field_j;
+              fieldTemp$50 = jf.field_j;
               jf.field_j = jf.field_j - 1;
-              if (-1 > (fieldTemp$144 ^ -1)) {
+              if (-1 > (fieldTemp$50 ^ -1)) {
                 rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
                 return;
               } else {
@@ -785,9 +744,9 @@ class f extends qf implements pl {
                       fd.a(300, fl.field_c[22], false, j.field_gb);
                       g.field_j = g.field_j + 1;
                       var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                      fieldTemp$145 = wa.field_a;
+                      fieldTemp$51 = wa.field_a;
                       wa.field_a = wa.field_a - 1;
-                      if (-1 <= (fieldTemp$145 ^ -1)) {
+                      if (-1 <= (fieldTemp$51 ^ -1)) {
                         break L25;
                       } else {
                         ha.field_g = wa.field_a % 15 % 2;
@@ -795,9 +754,9 @@ class f extends qf implements pl {
                       }
                     }
                     L26: {
-                      fieldTemp$146 = jf.field_j;
+                      fieldTemp$52 = jf.field_j;
                       jf.field_j = jf.field_j - 1;
-                      if (-1 <= (fieldTemp$146 ^ -1)) {
+                      if (-1 <= (fieldTemp$52 ^ -1)) {
                         break L26;
                       } else {
                         rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -811,9 +770,9 @@ class f extends qf implements pl {
                       ul.field_a = vf.field_H[g.field_j];
                       g.field_j = g.field_j + 1;
                       var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                      fieldTemp$147 = wa.field_a;
+                      fieldTemp$53 = wa.field_a;
                       wa.field_a = wa.field_a - 1;
-                      if (-1 <= (fieldTemp$147 ^ -1)) {
+                      if (-1 <= (fieldTemp$53 ^ -1)) {
                         break L27;
                       } else {
                         ha.field_g = wa.field_a % 15 % 2;
@@ -821,9 +780,9 @@ class f extends qf implements pl {
                       }
                     }
                     L28: {
-                      fieldTemp$148 = jf.field_j;
+                      fieldTemp$54 = jf.field_j;
                       jf.field_j = jf.field_j - 1;
-                      if (-1 <= (fieldTemp$148 ^ -1)) {
+                      if (-1 <= (fieldTemp$54 ^ -1)) {
                         break L28;
                       } else {
                         rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -839,9 +798,9 @@ class f extends qf implements pl {
                         ul.field_a = ok.field_a[g.field_j];
                         g.field_j = g.field_j + 1;
                         var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                        fieldTemp$149 = wa.field_a;
+                        fieldTemp$55 = wa.field_a;
                         wa.field_a = wa.field_a - 1;
-                        if (-1 <= (fieldTemp$149 ^ -1)) {
+                        if (-1 <= (fieldTemp$55 ^ -1)) {
                           break L29;
                         } else {
                           ha.field_g = wa.field_a % 15 % 2;
@@ -849,9 +808,9 @@ class f extends qf implements pl {
                         }
                       }
                       L30: {
-                        fieldTemp$150 = jf.field_j;
+                        fieldTemp$56 = jf.field_j;
                         jf.field_j = jf.field_j - 1;
-                        if (-1 <= (fieldTemp$150 ^ -1)) {
+                        if (-1 <= (fieldTemp$56 ^ -1)) {
                           break L30;
                         } else {
                           rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -865,9 +824,9 @@ class f extends qf implements pl {
                         pa.field_g = 200;
                         g.field_j = g.field_j + 1;
                         var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                        fieldTemp$151 = wa.field_a;
+                        fieldTemp$57 = wa.field_a;
                         wa.field_a = wa.field_a - 1;
-                        if (-1 <= (fieldTemp$151 ^ -1)) {
+                        if (-1 <= (fieldTemp$57 ^ -1)) {
                           break L31;
                         } else {
                           ha.field_g = wa.field_a % 15 % 2;
@@ -875,9 +834,9 @@ class f extends qf implements pl {
                         }
                       }
                       L32: {
-                        fieldTemp$152 = jf.field_j;
+                        fieldTemp$58 = jf.field_j;
                         jf.field_j = jf.field_j - 1;
-                        if (-1 <= (fieldTemp$152 ^ -1)) {
+                        if (-1 <= (fieldTemp$58 ^ -1)) {
                           break L32;
                         } else {
                           rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -899,12 +858,12 @@ class f extends qf implements pl {
             }
           }
           var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-          fieldTemp$153 = wa.field_a;
+          fieldTemp$59 = wa.field_a;
           wa.field_a = wa.field_a - 1;
-          if (-1 <= (fieldTemp$153 ^ -1)) {
-            fieldTemp$154 = jf.field_j;
+          if (-1 <= (fieldTemp$59 ^ -1)) {
+            fieldTemp$60 = jf.field_j;
             jf.field_j = jf.field_j - 1;
-            if (-1 > (fieldTemp$154 ^ -1)) {
+            if (-1 > (fieldTemp$60 ^ -1)) {
               rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
               return;
             } else {
@@ -913,9 +872,9 @@ class f extends qf implements pl {
           } else {
             L33: {
               ha.field_g = wa.field_a % 15 % 2;
-              fieldTemp$155 = jf.field_j;
+              fieldTemp$61 = jf.field_j;
               jf.field_j = jf.field_j - 1;
-              if (-1 <= (fieldTemp$155 ^ -1)) {
+              if (-1 <= (fieldTemp$61 ^ -1)) {
                 break L33;
               } else {
                 rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
@@ -954,21 +913,12 @@ class f extends qf implements pl {
     }
 
     final void a(int param0, int param1, String param2) {
-        hk discarded$2 = null;
-        hk discarded$3 = null;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        ni var6 = null;
-        Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
         int stackIn_9_1 = 0;
-        ni stackIn_13_0 = null;
         ni stackIn_14_0 = null;
         ni stackIn_15_0 = null;
         String stackIn_15_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
@@ -976,24 +926,9 @@ class f extends qf implements pl {
         String stackIn_31_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_6_0 = null;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        ni stackOut_12_0 = null;
-        ni stackOut_14_0 = null;
-        String stackOut_14_1 = null;
-        ni stackOut_13_0 = null;
-        String stackOut_13_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        ni var6 = null;
         var5 = Geoblox.field_C;
         try {
           L0: {
@@ -1003,20 +938,15 @@ class f extends qf implements pl {
             } else {
               if (param1 == 19810) {
                 L1: {
-                  stackOut_6_0 = this;
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_8_0 = this;
+
                   if (256 != param0) {
-                    stackOut_8_0 = this;
-                    stackOut_8_1 = 0;
-                    stackIn_9_0 = stackOut_8_0;
-                    stackIn_9_1 = stackOut_8_1;
+                    stackIn_9_0 = this;
+                    stackIn_9_1 = 0;
                     break L1;
                   } else {
-                    stackOut_7_0 = this;
-                    stackOut_7_1 = 1;
-                    stackIn_9_0 = stackOut_7_0;
-                    stackIn_9_1 = stackOut_7_1;
+                    stackIn_9_0 = this;
+                    stackIn_9_1 = 1;
                     break L1;
                   }
                 }
@@ -1032,27 +962,22 @@ class f extends qf implements pl {
                   } else {
                     if (param0 != 256) {
                       L3: {
-                        stackOut_12_0 = (ni) (var6);
-                        stackIn_14_0 = stackOut_12_0;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_14_0 = (ni) (var6);
+
                         if (this.field_mb) {
-                          stackOut_14_0 = (ni) ((Object) stackIn_14_0);
-                          stackOut_14_1 = a.field_b;
-                          stackIn_15_0 = stackOut_14_0;
-                          stackIn_15_1 = stackOut_14_1;
+                          stackIn_15_0 = (ni) ((Object) stackIn_14_0);
+                          stackIn_15_1 = a.field_b;
                           break L3;
                         } else {
-                          stackOut_13_0 = (ni) ((Object) stackIn_13_0);
-                          stackOut_13_1 = ll.field_b;
-                          stackIn_15_0 = stackOut_13_0;
-                          stackIn_15_1 = stackOut_13_1;
+                          stackIn_15_0 = (ni) ((Object) stackIn_14_0);
+                          stackIn_15_1 = ll.field_b;
                           break L3;
                         }
                       }
                       ((ni) (Object) stackIn_15_0).a(stackIn_15_1, 1, -1);
                       break L2;
                     } else {
-                      discarded$2 = var6.a(-2, a.field_b, (bb) (this));
+                      var6.a(-2, a.field_b, (bb) (this));
                       break L2;
                     }
                   }
@@ -1068,7 +993,7 @@ class f extends qf implements pl {
                         break L4;
                       } else {
                         if (-10 == (param0 ^ -1)) {
-                          discarded$3 = var6.a(-2, fi.field_h, (bb) (this));
+                          var6.a(-2, fi.field_h, (bb) (this));
                           break L4;
                         } else {
                           this.b(var6, param1 ^ -19736);
@@ -1094,27 +1019,19 @@ class f extends qf implements pl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var4);
-            stackOut_28_1 = new StringBuilder().append("f.KA(").append(param0).append(',').append(param1).append(',');
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackIn_30_0 = (RuntimeException) (var4);
+
+            stackIn_30_1 = new StringBuilder().append("f.KA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L5;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L5;
             }
           }
@@ -1134,23 +1051,12 @@ class f extends qf implements pl {
     final static boolean b(byte param0, CharSequence param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -1161,35 +1067,26 @@ class f extends qf implements pl {
                 break L1;
               }
             }
-            stackOut_2_0 = pa.a(param1, true, 10, 87);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = pa.a(param1, true, 10, 87);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("f.JA(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("f.JA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -1199,7 +1096,7 @@ class f extends qf implements pl {
     }
 
     final void c(boolean param0) {
-        ni var2 = null;
+        ni var2;
         this.field_pb.a(4210752, 2121792, (byte) -103);
         if (param0) {
           field_kb = (java.awt.Canvas) null;

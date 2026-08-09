@@ -12,25 +12,15 @@ final class ai {
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0) {
           param1 = param1 & 8191;
           if (4096 <= param1) {
             L0: {
               if (-6145 < (param1 ^ -1)) {
-                stackOut_18_0 = -k.field_d[-4096 + param1];
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = -k.field_d[-4096 + param1];
                 break L0;
               } else {
-                stackOut_17_0 = -k.field_d[-param1 + 8192];
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = -k.field_d[-param1 + 8192];
                 break L0;
               }
             }
@@ -38,12 +28,10 @@ final class ai {
           } else {
             L1: {
               if (2048 > param1) {
-                stackOut_14_0 = k.field_d[param1];
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = k.field_d[param1];
                 break L1;
               } else {
-                stackOut_13_0 = k.field_d[4096 + -param1];
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = k.field_d[4096 + -param1];
                 break L1;
               }
             }
@@ -55,12 +43,10 @@ final class ai {
           if (4096 <= param1) {
             L2: {
               if (-6145 < (param1 ^ -1)) {
-                stackOut_8_0 = -k.field_d[-4096 + param1];
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = -k.field_d[-4096 + param1];
                 break L2;
               } else {
-                stackOut_7_0 = -k.field_d[-param1 + 8192];
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = -k.field_d[-param1 + 8192];
                 break L2;
               }
             }
@@ -68,12 +54,10 @@ final class ai {
           } else {
             L3: {
               if (2048 > param1) {
-                stackOut_4_0 = k.field_d[param1];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = k.field_d[param1];
                 break L3;
               } else {
-                stackOut_3_0 = k.field_d[4096 + -param1];
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = k.field_d[4096 + -param1];
                 break L3;
               }
             }
@@ -84,10 +68,10 @@ final class ai {
 
     final static void b(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {

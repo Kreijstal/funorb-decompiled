@@ -20,20 +20,9 @@ final class dra extends f {
     private int field_t;
 
     final void a(int[] param0, int param1, int param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_34_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_63_0 = 0;
-        RuntimeException stackIn_68_0 = null;
-        StringBuilder stackIn_68_1 = null;
         RuntimeException stackIn_69_0 = null;
         StringBuilder stackIn_69_1 = null;
         RuntimeException stackIn_70_0 = null;
@@ -41,20 +30,15 @@ final class dra extends f {
         String stackIn_70_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_33_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_61_0 = 0;
-        RuntimeException stackOut_67_0 = null;
-        StringBuilder stackOut_67_1 = null;
-        RuntimeException stackOut_69_0 = null;
-        StringBuilder stackOut_69_1 = null;
-        String stackOut_69_2 = null;
-        RuntimeException stackOut_68_0 = null;
-        StringBuilder stackOut_68_1 = null;
-        String stackOut_68_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         var11 = VoidHunters.field_G;
         try {
           L0: {
@@ -153,12 +137,10 @@ final class dra extends f {
               }
               L6: {
                 if (vka.field_r) {
-                  stackOut_33_0 = param2 << -261886399;
-                  stackIn_34_0 = stackOut_33_0;
+                  stackIn_34_0 = param2 << -261886399;
                   break L6;
                 } else {
-                  stackOut_32_0 = param2;
-                  stackIn_34_0 = stackOut_32_0;
+                  stackIn_34_0 = param2;
                   break L6;
                 }
               }
@@ -209,12 +191,10 @@ final class dra extends f {
                         this.field_j.a(this.field_p, 0, param2);
                         if (vka.field_r) {
                           param1 = param1 << 1;
-                          stackOut_47_0 = param1 << 1;
-                          stackIn_48_0 = stackOut_47_0;
+                          stackIn_48_0 = param1 << 1;
                           break L11;
                         } else {
-                          stackOut_46_0 = param1;
-                          stackIn_48_0 = stackOut_46_0;
+                          stackIn_48_0 = param1;
                           break L11;
                         }
                       }
@@ -259,12 +239,10 @@ final class dra extends f {
                       this.field_l.a(this.field_r, 0, param2);
                       if (vka.field_r) {
                         param1 = param1 << 1;
-                        stackOut_62_0 = param1 << 1;
-                        stackIn_63_0 = stackOut_62_0;
+                        stackIn_63_0 = param1 << 1;
                         break L16;
                       } else {
-                        stackOut_61_0 = param1;
-                        stackIn_63_0 = stackOut_61_0;
+                        stackIn_63_0 = param1;
                         break L16;
                       }
                     }
@@ -294,27 +272,19 @@ final class dra extends f {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var4 = decompiledCaughtException;
-            stackOut_67_0 = (RuntimeException) (var4);
-            stackOut_67_1 = new StringBuilder().append("dra.E(");
-            stackIn_69_0 = stackOut_67_0;
-            stackIn_69_1 = stackOut_67_1;
-            stackIn_68_0 = stackOut_67_0;
-            stackIn_68_1 = stackOut_67_1;
+            stackIn_69_0 = (RuntimeException) (var4);
+
+            stackIn_69_1 = new StringBuilder().append("dra.E(");
+
             if (param0 == null) {
-              stackOut_69_0 = (RuntimeException) ((Object) stackIn_69_0);
-              stackOut_69_1 = (StringBuilder) ((Object) stackIn_69_1);
-              stackOut_69_2 = "null";
-              stackIn_70_0 = stackOut_69_0;
-              stackIn_70_1 = stackOut_69_1;
-              stackIn_70_2 = stackOut_69_2;
+              stackIn_70_0 = (RuntimeException) ((Object) stackIn_69_0);
+              stackIn_70_1 = (StringBuilder) ((Object) stackIn_69_1);
+              stackIn_70_2 = "null";
               break L18;
             } else {
-              stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
-              stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
-              stackOut_68_2 = "{...}";
-              stackIn_70_0 = stackOut_68_0;
-              stackIn_70_1 = stackOut_68_1;
-              stackIn_70_2 = stackOut_68_2;
+              stackIn_70_0 = (RuntimeException) ((Object) stackIn_69_0);
+              stackIn_70_1 = (StringBuilder) ((Object) stackIn_69_1);
+              stackIn_70_2 = "{...}";
               break L18;
             }
           }
@@ -328,7 +298,7 @@ final class dra extends f {
     }
 
     final synchronized void a(int param0) {
-        int var3 = 0;
+        int var3;
         L0: {
           var3 = VoidHunters.field_G;
           if ((this.field_s ^ -1) >= -1) {
@@ -526,25 +496,16 @@ final class dra extends f {
     }
 
     final synchronized void a(int param0, int param1, boolean param2, kka param3, int param4, int param5) {
-        RuntimeException var7 = null;
-        int var7_int = 0;
-        int var8 = 0;
-        int var9 = 0;
-        Object stackIn_16_0 = null;
         Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         int stackIn_29_0 = 0;
-        hbb stackIn_38_0 = null;
         hbb stackIn_39_0 = null;
         hbb stackIn_40_0 = null;
         int stackIn_40_1 = 0;
-        hbb stackIn_47_0 = null;
         hbb stackIn_48_0 = null;
         hbb stackIn_49_0 = null;
         int stackIn_49_1 = 0;
-        RuntimeException stackIn_53_0 = null;
-        StringBuilder stackIn_53_1 = null;
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
         RuntimeException stackIn_55_0 = null;
@@ -552,31 +513,10 @@ final class dra extends f {
         String stackIn_55_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_15_0 = null;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_27_0 = 0;
-        hbb stackOut_46_0 = null;
-        hbb stackOut_48_0 = null;
-        int stackOut_48_1 = 0;
-        hbb stackOut_47_0 = null;
-        int stackOut_47_1 = 0;
-        hbb stackOut_37_0 = null;
-        hbb stackOut_39_0 = null;
-        int stackOut_39_1 = 0;
-        hbb stackOut_38_0 = null;
-        int stackOut_38_1 = 0;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        RuntimeException stackOut_54_0 = null;
-        StringBuilder stackOut_54_1 = null;
-        String stackOut_54_2 = null;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        String stackOut_53_2 = null;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8 = 0;
+        int var9 = 0;
         var9 = VoidHunters.field_G;
         try {
           L0: {
@@ -630,20 +570,15 @@ final class dra extends f {
               }
             }
             L5: {
-              stackOut_15_0 = this;
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_16_0 = stackOut_15_0;
+              stackIn_17_0 = this;
+
               if (!param2) {
-                stackOut_17_0 = this;
-                stackOut_17_1 = 0;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
+                stackIn_18_0 = this;
+                stackIn_18_1 = 0;
                 break L5;
               } else {
-                stackOut_16_0 = this;
-                stackOut_16_1 = 1;
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_18_1 = stackOut_16_1;
+                stackIn_18_0 = this;
+                stackIn_18_1 = 1;
                 break L5;
               }
             }
@@ -662,12 +597,10 @@ final class dra extends f {
                     } else {
                       L7: {
                         if (524288 <= this.field_s) {
-                          stackOut_28_0 = 0;
-                          stackIn_29_0 = stackOut_28_0;
+                          stackIn_29_0 = 0;
                           break L7;
                         } else {
-                          stackOut_27_0 = 1;
-                          stackIn_29_0 = stackOut_27_0;
+                          stackIn_29_0 = 1;
                           break L7;
                         }
                       }
@@ -690,20 +623,15 @@ final class dra extends f {
                       this.field_o = param3;
                       if (param3 != null) {
                         L11: {
-                          stackOut_46_0 = this.field_k;
-                          stackIn_48_0 = stackOut_46_0;
-                          stackIn_47_0 = stackOut_46_0;
+                          stackIn_48_0 = this.field_k;
+
                           if (param2) {
-                            stackOut_48_0 = (hbb) ((Object) stackIn_48_0);
-                            stackOut_48_1 = 0;
-                            stackIn_49_0 = stackOut_48_0;
-                            stackIn_49_1 = stackOut_48_1;
+                            stackIn_49_0 = (hbb) ((Object) stackIn_48_0);
+                            stackIn_49_1 = 0;
                             break L11;
                           } else {
-                            stackOut_47_0 = (hbb) ((Object) stackIn_47_0);
-                            stackOut_47_1 = 1;
-                            stackIn_49_0 = stackOut_47_0;
-                            stackIn_49_1 = stackOut_47_1;
+                            stackIn_49_0 = (hbb) ((Object) stackIn_48_0);
+                            stackIn_49_1 = 1;
                             break L11;
                           }
                         }
@@ -731,20 +659,15 @@ final class dra extends f {
                         break L13;
                       } else {
                         L14: {
-                          stackOut_37_0 = this.field_j;
-                          stackIn_39_0 = stackOut_37_0;
-                          stackIn_38_0 = stackOut_37_0;
+                          stackIn_39_0 = this.field_j;
+
                           if (param2) {
-                            stackOut_39_0 = (hbb) ((Object) stackIn_39_0);
-                            stackOut_39_1 = 0;
-                            stackIn_40_0 = stackOut_39_0;
-                            stackIn_40_1 = stackOut_39_1;
+                            stackIn_40_0 = (hbb) ((Object) stackIn_39_0);
+                            stackIn_40_1 = 0;
                             break L14;
                           } else {
-                            stackOut_38_0 = (hbb) ((Object) stackIn_38_0);
-                            stackOut_38_1 = 1;
-                            stackIn_40_0 = stackOut_38_0;
-                            stackIn_40_1 = stackOut_38_1;
+                            stackIn_40_0 = (hbb) ((Object) stackIn_39_0);
+                            stackIn_40_1 = 1;
                             break L14;
                           }
                         }
@@ -776,27 +699,19 @@ final class dra extends f {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var7 = decompiledCaughtException;
-            stackOut_52_0 = (RuntimeException) (var7);
-            stackOut_52_1 = new StringBuilder().append("dra.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_54_0 = stackOut_52_0;
-            stackIn_54_1 = stackOut_52_1;
-            stackIn_53_0 = stackOut_52_0;
-            stackIn_53_1 = stackOut_52_1;
+            stackIn_54_0 = (RuntimeException) (var7);
+
+            stackIn_54_1 = new StringBuilder().append("dra.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
-              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
-              stackOut_54_2 = "null";
-              stackIn_55_0 = stackOut_54_0;
-              stackIn_55_1 = stackOut_54_1;
-              stackIn_55_2 = stackOut_54_2;
+              stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
+              stackIn_55_2 = "null";
               break L15;
             } else {
-              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
-              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
-              stackOut_53_2 = "{...}";
-              stackIn_55_0 = stackOut_53_0;
-              stackIn_55_1 = stackOut_53_1;
-              stackIn_55_2 = stackOut_53_2;
+              stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
+              stackIn_55_2 = "{...}";
               break L15;
             }
           }

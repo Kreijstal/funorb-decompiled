@@ -12,11 +12,11 @@ final class rh implements jk {
 
     final static void b(byte param0) {
         nf var1 = null;
-        RuntimeException var1_ref = null;
         tm var2_ref_tm = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {

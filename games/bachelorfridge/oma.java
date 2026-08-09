@@ -17,12 +17,11 @@ final class oma {
 
     final static void a(int param0, Random param1, eaa param2, gw param3, int param4, dha param5) {
         cia var9 = null;
-        boolean discarded$0 = false;
         int var8 = BachelorFridge.field_y;
         try {
             var9 = (cia) ((Object) param2.b((byte) 90));
             while (var9 != null) {
-                discarded$0 = var9.b(true);
+                var9.b(true);
                 var9 = (cia) ((Object) param2.c(0));
             }
             int var7 = -10 / ((param4 - -9) / 53);

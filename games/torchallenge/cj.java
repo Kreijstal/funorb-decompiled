@@ -35,15 +35,13 @@ final class cj {
 
     final static int a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int stackIn_3_0 = 0;
         int stackIn_15_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_2_0 = 0;
+        RuntimeException var1 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -66,8 +64,7 @@ final class cj {
                       }
                     }
                   }
-                  stackOut_14_0 = var1_int;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = var1_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -84,8 +81,7 @@ final class cj {
                 }
               }
             } else {
-              stackOut_2_0 = -73;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = -73;
               decompiledRegionSelector0 = 0;
               break L0;
             }

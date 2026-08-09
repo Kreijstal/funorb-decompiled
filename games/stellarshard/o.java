@@ -20,12 +20,12 @@ abstract class o {
     abstract void a(int param0, int param1, int param2);
 
     final static void b(int param0) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         ha var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var3 = stellarshard.field_B;
         try {
           L0: {
@@ -43,9 +43,9 @@ abstract class o {
                 break L0;
               } else {
                 var1.f(8, param0 + 11784);
-                fieldTemp$5 = var1.field_k + 1;
+                fieldTemp$2 = var1.field_k + 1;
                 var1.field_k = var1.field_k + 1;
-                var2 = fieldTemp$5;
+                var2 = fieldTemp$2;
                 qh.a(124, var1);
                 pg.field_fb.a(var1.field_k + -var2, (byte) -75);
                 continue L2;
@@ -67,9 +67,8 @@ abstract class o {
     }
 
     public static void a(int param0) {
-        pf discarded$0 = null;
         if (param0 != 1) {
-            discarded$0 = o.a(-28, -120, 48, false, false);
+            o.a(-28, -120, 48, false, false);
         }
         field_l = null;
         field_g = null;
@@ -78,23 +77,23 @@ abstract class o {
     }
 
     final static String a(int param0, Throwable param1) throws IOException {
-        String var2 = null;
-        PrintWriter var4 = null;
-        String var5 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        wg var14 = null;
-        StringWriter var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
+        String var2;
+        PrintWriter var4;
+        String var5;
+        BufferedReader var6;
+        String var7;
+        String var8;
+        int var9;
+        int var10;
+        String var11;
+        int var12;
+        int var13;
+        wg var14;
+        StringWriter var15;
+        String var16;
+        String var17;
+        String var18;
+        String var19;
         L0: {
           var13 = stellarshard.field_B;
           if (param1 instanceof wg) {
@@ -189,15 +188,6 @@ abstract class o {
     abstract void a(int param0, int param1);
 
     final static void a(qe param0, boolean param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        vl var6 = null;
-        sd var7 = null;
-        vl var8 = null;
-        RuntimeException stackIn_63_0 = null;
-        StringBuilder stackIn_63_1 = null;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
         RuntimeException stackIn_65_0 = null;
@@ -205,14 +195,13 @@ abstract class o {
         String stackIn_65_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_62_0 = null;
-        StringBuilder stackOut_62_1 = null;
-        RuntimeException stackOut_64_0 = null;
-        StringBuilder stackOut_64_1 = null;
-        String stackOut_64_2 = null;
-        RuntimeException stackOut_63_0 = null;
-        StringBuilder stackOut_63_1 = null;
-        String stackOut_63_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var4 = 0;
+        int var5 = 0;
+        vl var6 = null;
+        sd var7 = null;
+        vl var8 = null;
         var5 = stellarshard.field_B;
         try {
           L0: {
@@ -448,27 +437,19 @@ abstract class o {
           decompiledCaughtException = decompiledCaughtParameter0;
           L19: {
             var2 = decompiledCaughtException;
-            stackOut_62_0 = (RuntimeException) (var2);
-            stackOut_62_1 = new StringBuilder().append("o.G(");
-            stackIn_64_0 = stackOut_62_0;
-            stackIn_64_1 = stackOut_62_1;
-            stackIn_63_0 = stackOut_62_0;
-            stackIn_63_1 = stackOut_62_1;
+            stackIn_64_0 = (RuntimeException) (var2);
+
+            stackIn_64_1 = new StringBuilder().append("o.G(");
+
             if (param0 == null) {
-              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-              stackOut_64_2 = "null";
-              stackIn_65_0 = stackOut_64_0;
-              stackIn_65_1 = stackOut_64_1;
-              stackIn_65_2 = stackOut_64_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "null";
               break L19;
             } else {
-              stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
-              stackOut_63_1 = (StringBuilder) ((Object) stackIn_63_1);
-              stackOut_63_2 = "{...}";
-              stackIn_65_0 = stackOut_63_0;
-              stackIn_65_1 = stackOut_63_1;
-              stackIn_65_2 = stackOut_63_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "{...}";
               break L19;
             }
           }

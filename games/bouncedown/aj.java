@@ -21,54 +21,40 @@ final class aj {
     }
 
     private final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        var4 = Bounce.field_N;
-        var3 = this.field_d.length;
-        if (param1 >= 66) {
-          L0: while (true) {
-            if (param0 < var3) {
-              return var3;
-            } else {
-              if (this.field_c) {
-                if (var3 == 0) {
-                  var3 = 1;
-                  continue L0;
-                } else {
-                  var3 = var3 * this.field_a;
-                  continue L0;
-                }
-              } else {
-                var3 = var3 + this.field_a;
-                continue L0;
-              }
-            }
+        int var3;
+        int var4;
+        L0: {
+          var4 = Bounce.field_N;
+          var3 = this.field_d.length;
+          if (param1 >= 66) {
+            break L0;
+          } else {
+            this.field_b = -94;
+            break L0;
           }
-        } else {
-          this.field_b = -94;
-          L1: while (true) {
-            if (param0 < var3) {
-              return var3;
-            } else {
-              if (this.field_c) {
-                if (var3 == 0) {
-                  var3 = 1;
-                  continue L1;
-                } else {
-                  var3 = var3 * this.field_a;
-                  continue L1;
-                }
+        }
+        L1: while (true) {
+          if (param0 < var3) {
+            return var3;
+          } else {
+            if (this.field_c) {
+              if (var3 == 0) {
+                var3 = 1;
+                continue L1;
               } else {
-                var3 = var3 + this.field_a;
+                var3 = var3 * this.field_a;
                 continue L1;
               }
+            } else {
+              var3 = var3 + this.field_a;
+              continue L1;
             }
           }
         }
     }
 
     final int a(byte param0, int param1) {
-        int var3 = 0;
+        int var3;
         if (param1 > this.field_b) {
           throw new ArrayIndexOutOfBoundsException(param1);
         } else {
@@ -122,8 +108,8 @@ final class aj {
     }
 
     private final void b(int param0, boolean param1) {
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         if (!param1) {
           return;
         } else {

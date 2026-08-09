@@ -37,7 +37,7 @@ final class te implements uj {
     }
 
     final static int a(int param0) {
-        int var1 = 0;
+        int var1;
         if (2 <= af.field_u) {
           var1 = 78 % ((-29 - param0) / 54);
           if (0 == kb.field_c) {

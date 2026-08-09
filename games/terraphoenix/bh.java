@@ -33,7 +33,7 @@ final class bh implements Runnable {
         if (param0 >= -22) {
             return;
         }
-        int discarded$0 = mk.field_j.a(-16384);
+        mk.field_j.a(-16384);
     }
 
     protected final void finalize() {
@@ -76,12 +76,12 @@ final class bh implements Runnable {
     }
 
     final synchronized boolean a(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         L0: {
           if (param0 > 22) {
             break L0;

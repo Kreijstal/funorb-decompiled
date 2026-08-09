@@ -34,18 +34,14 @@ final class vb extends gi {
             oi stackIn_4_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            oi stackOut_3_0 = null;
-            oi stackOut_1_0 = null;
             try {
               L0: {
                 if (param0 == 65) {
-                  stackOut_3_0 = (oi) (Class.forName("mc").newInstance());
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = (oi) (Class.forName("mc").newInstance());
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_1_0 = (oi) null;
-                  stackIn_2_0 = stackOut_1_0;
+                  stackIn_2_0 = (oi) null;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }

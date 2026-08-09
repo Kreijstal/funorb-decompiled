@@ -6,32 +6,21 @@ final class dha {
     boolean field_b;
 
     final static boolean a(int param0, int param1, byte param2, int param3) {
-        boolean discarded$1 = false;
-        int var4 = 0;
+        int var4;
         int stackIn_23_0 = 0;
         int stackIn_61_0 = 0;
         int stackIn_97_0 = 0;
         int stackIn_129_0 = 0;
-        int stackOut_128_0 = 0;
-        int stackOut_127_0 = 0;
-        int stackOut_96_0 = 0;
-        int stackOut_95_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
         if (param2 == -107) {
           if (era.field_d == null) {
             if (ni.field_c) {
               if (ug.q(-1)) {
                 L0: {
                   if (!eqa.a(param1, true, param0)) {
-                    stackOut_128_0 = 0;
-                    stackIn_129_0 = stackOut_128_0;
+                    stackIn_129_0 = 0;
                     break L0;
                   } else {
-                    stackOut_127_0 = 1;
-                    stackIn_129_0 = stackOut_127_0;
+                    stackIn_129_0 = 1;
                     break L0;
                   }
                 }
@@ -112,12 +101,10 @@ final class dha {
                 if (ug.q(-1)) {
                   L4: {
                     if (!eqa.a(param1, true, param0)) {
-                      stackOut_96_0 = 0;
-                      stackIn_97_0 = stackOut_96_0;
+                      stackIn_97_0 = 0;
                       break L4;
                     } else {
-                      stackOut_95_0 = 1;
-                      stackIn_97_0 = stackOut_95_0;
+                      stackIn_97_0 = 1;
                       break L4;
                     }
                   }
@@ -192,19 +179,17 @@ final class dha {
             }
           }
         } else {
-          discarded$1 = dha.a(38, -115, (byte) 27, 44);
+          dha.a(38, -115, (byte) 27, 44);
           if (era.field_d != null) {
             if (13 != fna.field_h) {
               if (ni.field_c) {
                 if (ug.q(-1)) {
                   L8: {
                     if (!eqa.a(param1, true, param0)) {
-                      stackOut_60_0 = 0;
-                      stackIn_61_0 = stackOut_60_0;
+                      stackIn_61_0 = 0;
                       break L8;
                     } else {
-                      stackOut_59_0 = 1;
-                      stackIn_61_0 = stackOut_59_0;
+                      stackIn_61_0 = 1;
                       break L8;
                     }
                   }
@@ -285,12 +270,10 @@ final class dha {
               if (ug.q(-1)) {
                 L12: {
                   if (!eqa.a(param1, true, param0)) {
-                    stackOut_22_0 = 0;
-                    stackIn_23_0 = stackOut_22_0;
+                    stackIn_23_0 = 0;
                     break L12;
                   } else {
-                    stackOut_21_0 = 1;
-                    stackIn_23_0 = stackOut_21_0;
+                    stackIn_23_0 = 1;
                     break L12;
                   }
                 }

@@ -25,7 +25,7 @@ abstract class un {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, boolean param4) {
-        int var5 = 0;
+        int var5;
         var5 = 91 / ((-26 - param1) / 59);
         if (!param4) {
           vd.a(param2, 0, -14561, 0, param0, param3);

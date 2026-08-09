@@ -16,7 +16,6 @@ final class ng {
     }
 
     final static boolean a(byte param0) {
-        boolean discarded$5 = false;
         if (param0 == -64) {
           if (null != sn.field_c) {
             if (df.field_j != ic.field_T) {
@@ -28,7 +27,7 @@ final class ng {
             return false;
           }
         } else {
-          discarded$5 = ng.a((byte) -16);
+          ng.a((byte) -16);
           if (null != sn.field_c) {
             if (df.field_j != ic.field_T) {
               return false;

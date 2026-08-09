@@ -28,7 +28,7 @@ final class mc {
     }
 
     final static boolean b(byte param0) {
-        int var1 = 0;
+        int var1;
         var1 = -121 % ((-69 - param0) / 40);
         if (-21 >= (ib.field_k ^ -1)) {
           if (nl.a(99)) {
@@ -52,20 +52,14 @@ final class mc {
     final static boolean a(int param0, byte param1) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param1 != -124) {
           L0: {
             field_b = -97;
             if ((-param0 & param0) != param0) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -73,12 +67,10 @@ final class mc {
         } else {
           L1: {
             if ((-param0 & param0) != param0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

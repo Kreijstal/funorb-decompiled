@@ -68,8 +68,23 @@ final class ql extends um implements ij {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        RuntimeException var3 = null;
+        od stackIn_3_0;
+        int stackIn_3_1;
+        int stackIn_3_2;
+        boolean stackIn_3_3;
+        od stackIn_4_0 = null;
+        int stackIn_4_1 = 0;
+        int stackIn_4_2 = 0;
+        boolean stackIn_4_3 = false;
+        int stackIn_4_4 = 0;
+        cr stackIn_20_0 = null;
+        cr stackIn_21_0 = null;
+        String stackIn_21_1 = null;
+        int stackIn_24_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         nj var4 = null;
         Object var5 = null;
         tp var6 = null;
@@ -84,86 +99,31 @@ final class ql extends um implements ij {
         int var15 = 0;
         b var16 = null;
         b var17 = null;
-        od stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
-        int stackIn_2_2 = 0;
-        boolean stackIn_2_3 = false;
-        od stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        int stackIn_3_2 = 0;
-        boolean stackIn_3_3 = false;
-        od stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        boolean stackIn_4_3 = false;
-        int stackIn_4_4 = 0;
-        cr stackIn_19_0 = null;
-        cr stackIn_20_0 = null;
-        cr stackIn_21_0 = null;
-        String stackIn_21_1 = null;
-        int stackIn_24_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        od stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        boolean stackOut_1_3 = false;
-        od stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        boolean stackOut_3_3 = false;
-        int stackOut_3_4 = 0;
-        od stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        boolean stackOut_2_3 = false;
-        int stackOut_2_4 = 0;
-        cr stackOut_18_0 = null;
-        cr stackOut_20_0 = null;
-        String stackOut_20_1 = null;
-        cr stackOut_19_0 = null;
-        String stackOut_19_1 = null;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
         var15 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
             L1: {
-              stackOut_1_0 = ao.field_O.field_Lb;
-              stackOut_1_1 = 3 * (r.field_f - -2) * param2;
-              stackOut_1_2 = 2;
-              stackOut_1_3 = param0;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_3_2 = stackOut_1_2;
-              stackIn_3_3 = stackOut_1_3;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              stackIn_2_2 = stackOut_1_2;
-              stackIn_2_3 = stackOut_1_3;
+              stackIn_3_0 = ao.field_O.field_Lb;
+
+              stackIn_3_1 = 3 * (r.field_f - -2) * param2;
+
+              stackIn_3_2 = 2;
+
+              stackIn_3_3 = param0;
+
               if (ao.field_O.field_Lb != wq.field_M) {
-                stackOut_3_0 = (od) ((Object) stackIn_3_0);
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = stackIn_3_2;
-                stackOut_3_3 = stackIn_3_3;
-                stackOut_3_4 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
-                stackIn_4_3 = stackOut_3_3;
-                stackIn_4_4 = stackOut_3_4;
+                stackIn_4_0 = (od) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = stackIn_3_2;
+                stackIn_4_3 = stackIn_3_3;
+                stackIn_4_4 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = (od) ((Object) stackIn_2_0);
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = stackIn_2_2;
-                stackOut_2_3 = stackIn_2_3;
-                stackOut_2_4 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                stackIn_4_3 = stackOut_2_3;
-                stackIn_4_4 = stackOut_2_4;
+                stackIn_4_0 = (od) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = stackIn_3_2;
+                stackIn_4_3 = stackIn_3_3;
+                stackIn_4_4 = 1;
                 break L1;
               }
             }
@@ -252,32 +212,25 @@ final class ql extends um implements ij {
                       }
                     }
                     L9: {
-                      stackOut_18_0 = var6.field_Jb;
-                      stackIn_20_0 = stackOut_18_0;
-                      stackIn_19_0 = stackOut_18_0;
+                      stackIn_20_0 = var6.field_Jb;
+
                       if (0 >= var10) {
-                        stackOut_20_0 = (cr) ((Object) stackIn_20_0);
-                        stackOut_20_1 = var6.field_Mb;
-                        stackIn_21_0 = stackOut_20_0;
-                        stackIn_21_1 = stackOut_20_1;
+                        stackIn_21_0 = (cr) ((Object) stackIn_20_0);
+                        stackIn_21_1 = var6.field_Mb;
                         break L9;
                       } else {
-                        stackOut_19_0 = (cr) ((Object) stackIn_19_0);
-                        stackOut_19_1 = cc.a(var6.field_Jb.field_z, var6.field_Mb, var10);
-                        stackIn_21_0 = stackOut_19_0;
-                        stackIn_21_1 = stackOut_19_1;
+                        stackIn_21_0 = (cr) ((Object) stackIn_20_0);
+                        stackIn_21_1 = cc.a(var6.field_Jb.field_z, var6.field_Mb, var10);
                         break L9;
                       }
                     }
                     L10: {
                       stackIn_21_0.field_S = stackIn_21_1;
                       if (var6.field_Jb.field_S.equals(var6.field_Mb)) {
-                        stackOut_23_0 = 0;
-                        stackIn_24_0 = stackOut_23_0;
+                        stackIn_24_0 = 0;
                         break L10;
                       } else {
-                        stackOut_22_0 = 1;
-                        stackIn_24_0 = stackOut_22_0;
+                        stackIn_24_0 = 1;
                         break L10;
                       }
                     }
@@ -364,50 +317,29 @@ final class ql extends um implements ij {
     }
 
     final void a(byte param0, int param1, int param2, iq param3) {
-        RuntimeException var5 = null;
-        d stackIn_1_0 = null;
         d stackIn_2_0 = null;
         d stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        d stackOut_0_0 = null;
-        d stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        d stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
               super.a((byte) 102, param1, param2, param3);
-              stackOut_0_0 = this.field_J;
-              stackIn_2_0 = stackOut_0_0;
-              stackIn_1_0 = stackOut_0_0;
+              stackIn_2_0 = this.field_J;
+
               if (this.field_I.a((byte) -5).a(-23996) != qm.field_G) {
-                stackOut_2_0 = (d) ((Object) stackIn_2_0);
-                stackOut_2_1 = 0;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
+                stackIn_3_0 = (d) ((Object) stackIn_2_0);
+                stackIn_3_1 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = (d) ((Object) stackIn_1_0);
-                stackOut_1_1 = 1;
-                stackIn_3_0 = stackOut_1_0;
-                stackIn_3_1 = stackOut_1_1;
+                stackIn_3_0 = (d) ((Object) stackIn_2_0);
+                stackIn_3_1 = 1;
                 break L1;
               }
             }
@@ -426,27 +358,19 @@ final class ql extends um implements ij {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5);
-            stackOut_6_1 = new StringBuilder().append("ql.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5);
+
+            stackIn_8_1 = new StringBuilder().append("ql.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }

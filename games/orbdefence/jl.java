@@ -23,17 +23,38 @@ abstract class jl {
     abstract byte[] a(int param0, int param1);
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        RuntimeException var10 = null;
-        int[] var10_array = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int[] stackIn_44_0 = null;
+        int stackIn_44_1 = 0;
+        int[] stackIn_45_0 = null;
+        int stackIn_45_1 = 0;
+        int stackIn_45_2 = 0;
+        int[] stackIn_47_0 = null;
+        int stackIn_47_1 = 0;
+        int[] stackIn_48_0 = null;
+        int stackIn_48_1 = 0;
+        int stackIn_48_2 = 0;
+        int[] stackIn_50_0 = null;
+        int stackIn_50_1 = 0;
+        int[] stackIn_51_0 = null;
+        int stackIn_51_1 = 0;
+        int stackIn_51_2 = 0;
+        RuntimeException stackIn_90_0 = null;
+        StringBuilder stackIn_90_1 = null;
+        RuntimeException stackIn_91_0 = null;
+        StringBuilder stackIn_91_1 = null;
+        String stackIn_91_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int[] var10 = null;
+        RuntimeException var10_ref = null;
         int[] var11 = null;
         int[] var12 = null;
         int var13 = 0;
@@ -58,67 +79,6 @@ abstract class jl {
         int[] var32 = null;
         int[] var33 = null;
         int[] var34 = null;
-        int[] stackIn_43_0 = null;
-        int stackIn_43_1 = 0;
-        int[] stackIn_44_0 = null;
-        int stackIn_44_1 = 0;
-        int[] stackIn_45_0 = null;
-        int stackIn_45_1 = 0;
-        int stackIn_45_2 = 0;
-        int[] stackIn_46_0 = null;
-        int stackIn_46_1 = 0;
-        int[] stackIn_47_0 = null;
-        int stackIn_47_1 = 0;
-        int[] stackIn_48_0 = null;
-        int stackIn_48_1 = 0;
-        int stackIn_48_2 = 0;
-        int[] stackIn_49_0 = null;
-        int stackIn_49_1 = 0;
-        int[] stackIn_50_0 = null;
-        int stackIn_50_1 = 0;
-        int[] stackIn_51_0 = null;
-        int stackIn_51_1 = 0;
-        int stackIn_51_2 = 0;
-        RuntimeException stackIn_89_0 = null;
-        StringBuilder stackIn_89_1 = null;
-        RuntimeException stackIn_90_0 = null;
-        StringBuilder stackIn_90_1 = null;
-        RuntimeException stackIn_91_0 = null;
-        StringBuilder stackIn_91_1 = null;
-        String stackIn_91_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int[] stackOut_42_0 = null;
-        int stackOut_42_1 = 0;
-        int[] stackOut_44_0 = null;
-        int stackOut_44_1 = 0;
-        int stackOut_44_2 = 0;
-        int[] stackOut_43_0 = null;
-        int stackOut_43_1 = 0;
-        int stackOut_43_2 = 0;
-        int[] stackOut_45_0 = null;
-        int stackOut_45_1 = 0;
-        int[] stackOut_47_0 = null;
-        int stackOut_47_1 = 0;
-        int stackOut_47_2 = 0;
-        int[] stackOut_46_0 = null;
-        int stackOut_46_1 = 0;
-        int stackOut_46_2 = 0;
-        int[] stackOut_48_0 = null;
-        int stackOut_48_1 = 0;
-        int[] stackOut_50_0 = null;
-        int stackOut_50_1 = 0;
-        int stackOut_50_2 = 0;
-        int[] stackOut_49_0 = null;
-        int stackOut_49_1 = 0;
-        int stackOut_49_2 = 0;
-        RuntimeException stackOut_88_0 = null;
-        StringBuilder stackOut_88_1 = null;
-        RuntimeException stackOut_90_0 = null;
-        StringBuilder stackOut_90_1 = null;
-        String stackOut_90_2 = null;
-        RuntimeException stackOut_89_0 = null;
-        StringBuilder stackOut_89_1 = null;
-        String stackOut_89_2 = null;
         var25 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -145,7 +105,7 @@ abstract class jl {
               var26 = var27;
               var34 = var26;
               var30 = var34;
-              var10_array = var30;
+              var10 = var30;
               var32 = tl.field_b;
               var28 = var32;
               var11 = var28;
@@ -274,18 +234,18 @@ abstract class jl {
                                             }
                                           }
                                         }
-                                        incrementValue$9 = param3;
+                                        incrementValue$0 = param3;
                                         param3++;
-                                        param8[incrementValue$9] = var24 + ((var23 << 1737482344) + (var22 << 338312624));
+                                        param8[incrementValue$0] = var24 + ((var23 << 1737482344) + (var22 << 338312624));
                                         var21++;
                                         continue L14;
                                       }
                                     }
                                   } else {
-                                    incrementValue$10 = var20;
+                                    incrementValue$1 = var20;
                                     var20++;
-                                    param7 = param8[incrementValue$10];
-                                    var10_array[var21] = var10_array[var21] - (vi.a(param7, 16757155) >> -1198033488);
+                                    param7 = param8[incrementValue$1];
+                                    var10[var21] = var10[var21] - (vi.a(param7, 16757155) >> -1198033488);
                                     var11[var21] = var11[var21] - (vi.a(65471, param7) >> -1861153304);
                                     var12[var21] = var12[var21] - vi.a(param7, 255);
                                     var21++;
@@ -337,18 +297,18 @@ abstract class jl {
                                             break L23;
                                           }
                                         }
-                                        incrementValue$11 = param3;
+                                        incrementValue$2 = param3;
                                         param3++;
-                                        param8[incrementValue$11] = (var22 << 160816272) + ((var23 << 1491744296) + var24);
+                                        param8[incrementValue$2] = (var22 << 160816272) + ((var23 << 1491744296) + var24);
                                         var21++;
                                         continue L20;
                                       }
                                     }
                                   } else {
-                                    incrementValue$12 = var15;
+                                    incrementValue$3 = var15;
                                     var15++;
-                                    param7 = param8[incrementValue$12];
-                                    var10_array[var21] = var10_array[var21] + (vi.a(16758132, param7) >> -169910576);
+                                    param7 = param8[incrementValue$3];
+                                    var10[var21] = var10[var21] + (vi.a(16758132, param7) >> -169910576);
                                     var11[var21] = var11[var21] + vi.a(255, param7 >> 637432648);
                                     var12[var21] = var12[var21] + vi.a(param7, 255);
                                     var21++;
@@ -357,85 +317,61 @@ abstract class jl {
                                 }
                               } else {
                                 L24: {
-                                  incrementValue$13 = var20;
+                                  incrementValue$4 = var20;
                                   var20++;
-                                  param7 = param8[incrementValue$13];
+                                  param7 = param8[incrementValue$4];
                                   var22 = var34[var21] - ((16769585 & param7) >> 961245872);
-                                  stackOut_42_0 = (int[]) (var10_array);
-                                  stackOut_42_1 = var21;
-                                  stackIn_44_0 = stackOut_42_0;
-                                  stackIn_44_1 = stackOut_42_1;
-                                  stackIn_43_0 = stackOut_42_0;
-                                  stackIn_43_1 = stackOut_42_1;
+                                  stackIn_44_0 = (int[]) (var10);
+
+                                  stackIn_44_1 = var21;
+
                                   if (-1 >= (var22 ^ -1)) {
-                                    stackOut_44_0 = (int[]) ((Object) stackIn_44_0);
-                                    stackOut_44_1 = stackIn_44_1;
-                                    stackOut_44_2 = var22;
-                                    stackIn_45_0 = stackOut_44_0;
-                                    stackIn_45_1 = stackOut_44_1;
-                                    stackIn_45_2 = stackOut_44_2;
+                                    stackIn_45_0 = (int[]) ((Object) stackIn_44_0);
+                                    stackIn_45_1 = stackIn_44_1;
+                                    stackIn_45_2 = var22;
                                     break L24;
                                   } else {
-                                    stackOut_43_0 = (int[]) ((Object) stackIn_43_0);
-                                    stackOut_43_1 = stackIn_43_1;
-                                    stackOut_43_2 = 0;
-                                    stackIn_45_0 = stackOut_43_0;
-                                    stackIn_45_1 = stackOut_43_1;
-                                    stackIn_45_2 = stackOut_43_2;
+                                    stackIn_45_0 = (int[]) ((Object) stackIn_44_0);
+                                    stackIn_45_1 = stackIn_44_1;
+                                    stackIn_45_2 = 0;
                                     break L24;
                                   }
                                 }
                                 L25: {
                                   stackIn_45_0[stackIn_45_1] = stackIn_45_2;
                                   var22 = var32[var21] - ((param7 & 65309) >> 497952712);
-                                  stackOut_45_0 = (int[]) (var11);
-                                  stackOut_45_1 = var21;
-                                  stackIn_47_0 = stackOut_45_0;
-                                  stackIn_47_1 = stackOut_45_1;
-                                  stackIn_46_0 = stackOut_45_0;
-                                  stackIn_46_1 = stackOut_45_1;
+                                  stackIn_47_0 = (int[]) (var11);
+
+                                  stackIn_47_1 = var21;
+
                                   if (-1 < (var22 ^ -1)) {
-                                    stackOut_47_0 = (int[]) ((Object) stackIn_47_0);
-                                    stackOut_47_1 = stackIn_47_1;
-                                    stackOut_47_2 = 0;
-                                    stackIn_48_0 = stackOut_47_0;
-                                    stackIn_48_1 = stackOut_47_1;
-                                    stackIn_48_2 = stackOut_47_2;
+                                    stackIn_48_0 = (int[]) ((Object) stackIn_47_0);
+                                    stackIn_48_1 = stackIn_47_1;
+                                    stackIn_48_2 = 0;
                                     break L25;
                                   } else {
-                                    stackOut_46_0 = (int[]) ((Object) stackIn_46_0);
-                                    stackOut_46_1 = stackIn_46_1;
-                                    stackOut_46_2 = var22;
-                                    stackIn_48_0 = stackOut_46_0;
-                                    stackIn_48_1 = stackOut_46_1;
-                                    stackIn_48_2 = stackOut_46_2;
+                                    stackIn_48_0 = (int[]) ((Object) stackIn_47_0);
+                                    stackIn_48_1 = stackIn_47_1;
+                                    stackIn_48_2 = var22;
                                     break L25;
                                   }
                                 }
                                 L26: {
                                   stackIn_48_0[stackIn_48_1] = stackIn_48_2;
                                   var22 = var33[var21] - (param7 & 255);
-                                  stackOut_48_0 = (int[]) (var12);
-                                  stackOut_48_1 = var21;
-                                  stackIn_50_0 = stackOut_48_0;
-                                  stackIn_50_1 = stackOut_48_1;
-                                  stackIn_49_0 = stackOut_48_0;
-                                  stackIn_49_1 = stackOut_48_1;
+                                  stackIn_50_0 = (int[]) (var12);
+
+                                  stackIn_50_1 = var21;
+
                                   if (var22 < 0) {
-                                    stackOut_50_0 = (int[]) ((Object) stackIn_50_0);
-                                    stackOut_50_1 = stackIn_50_1;
-                                    stackOut_50_2 = 0;
-                                    stackIn_51_0 = stackOut_50_0;
-                                    stackIn_51_1 = stackOut_50_1;
-                                    stackIn_51_2 = stackOut_50_2;
+                                    stackIn_51_0 = (int[]) ((Object) stackIn_50_0);
+                                    stackIn_51_1 = stackIn_50_1;
+                                    stackIn_51_2 = 0;
                                     break L26;
                                   } else {
-                                    stackOut_49_0 = (int[]) ((Object) stackIn_49_0);
-                                    stackOut_49_1 = stackIn_49_1;
-                                    stackOut_49_2 = var22;
-                                    stackIn_51_0 = stackOut_49_0;
-                                    stackIn_51_1 = stackOut_49_1;
-                                    stackIn_51_2 = stackOut_49_2;
+                                    stackIn_51_0 = (int[]) ((Object) stackIn_50_0);
+                                    stackIn_51_1 = stackIn_50_1;
+                                    stackIn_51_2 = var22;
                                     break L26;
                                   }
                                 }
@@ -459,10 +395,10 @@ abstract class jl {
                                 var18++;
                                 break L27;
                               } else {
-                                incrementValue$14 = var15;
+                                incrementValue$5 = var15;
                                 var15++;
-                                param7 = param8[incrementValue$14];
-                                var10_array[var21] = var10_array[var21] + (vi.a(16738842, param7) >> -1225171888);
+                                param7 = param8[incrementValue$5];
+                                var10[var21] = var10[var21] + (vi.a(16738842, param7) >> -1225171888);
                                 var11[var21] = var11[var21] + (vi.a(param7, 65525) >> -917385656);
                                 var12[var21] = var12[var21] + vi.a(255, param7);
                                 var21++;
@@ -481,9 +417,9 @@ abstract class jl {
                             var22 = var34[var21] / var18;
                             var23 = var32[var21] / var18;
                             var24 = var33[var21] / var18;
-                            incrementValue$15 = param3;
+                            incrementValue$6 = param3;
                             param3++;
-                            param8[incrementValue$15] = var24 + ((var22 << -368181680) - -(var23 << -1828570712));
+                            param8[incrementValue$6] = var24 + ((var22 << -368181680) - -(var23 << -1828570712));
                             var21++;
                             continue L29;
                           }
@@ -491,9 +427,9 @@ abstract class jl {
                       }
                     }
                   } else {
-                    incrementValue$16 = param3;
+                    incrementValue$7 = param3;
                     param3++;
-                    param8[incrementValue$16] = var33[var19] / var18 + (var32[var19] / var18 << -447711000) + (var34[var19] / var18 << 322921296);
+                    param8[incrementValue$7] = var33[var19] / var18 + (var32[var19] / var18 << -447711000) + (var34[var19] / var18 << 322921296);
                     var19++;
                     continue L6;
                   }
@@ -506,10 +442,10 @@ abstract class jl {
                     var14++;
                     continue L5;
                   } else {
-                    incrementValue$17 = var15;
+                    incrementValue$8 = var15;
                     var15++;
-                    param7 = param8[incrementValue$17];
-                    var10_array[var19] = var10_array[var19] + (vi.a(16771310, param7) >> -658853456);
+                    param7 = param8[incrementValue$8];
+                    var10[var19] = var10[var19] + (vi.a(16771310, param7) >> -658853456);
                     var11[var19] = var11[var19] + (vi.a(65293, param7) >> -1522719576);
                     var12[var19] = var12[var19] + vi.a(255, param7);
                     var19++;
@@ -522,28 +458,20 @@ abstract class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L31: {
-            var10 = decompiledCaughtException;
-            stackOut_88_0 = (RuntimeException) (var10);
-            stackOut_88_1 = new StringBuilder().append("jl.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
-            stackIn_90_0 = stackOut_88_0;
-            stackIn_90_1 = stackOut_88_1;
-            stackIn_89_0 = stackOut_88_0;
-            stackIn_89_1 = stackOut_88_1;
+            var10_ref = decompiledCaughtException;
+            stackIn_90_0 = (RuntimeException) (var10_ref);
+
+            stackIn_90_1 = new StringBuilder().append("jl.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
+
             if (param8 == null) {
-              stackOut_90_0 = (RuntimeException) ((Object) stackIn_90_0);
-              stackOut_90_1 = (StringBuilder) ((Object) stackIn_90_1);
-              stackOut_90_2 = "null";
-              stackIn_91_0 = stackOut_90_0;
-              stackIn_91_1 = stackOut_90_1;
-              stackIn_91_2 = stackOut_90_2;
+              stackIn_91_0 = (RuntimeException) ((Object) stackIn_90_0);
+              stackIn_91_1 = (StringBuilder) ((Object) stackIn_90_1);
+              stackIn_91_2 = "null";
               break L31;
             } else {
-              stackOut_89_0 = (RuntimeException) ((Object) stackIn_89_0);
-              stackOut_89_1 = (StringBuilder) ((Object) stackIn_89_1);
-              stackOut_89_2 = "{...}";
-              stackIn_91_0 = stackOut_89_0;
-              stackIn_91_1 = stackOut_89_1;
-              stackIn_91_2 = stackOut_89_2;
+              stackIn_91_0 = (RuntimeException) ((Object) stackIn_90_0);
+              stackIn_91_1 = (StringBuilder) ((Object) stackIn_90_1);
+              stackIn_91_2 = "{...}";
               break L31;
             }
           }

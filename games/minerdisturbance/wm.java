@@ -22,8 +22,15 @@ final class wm {
     }
 
     final byte[] a(boolean param0, byte[] param1) {
-        RuntimeException var3 = null;
+        byte[] stackIn_20_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int[] var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -35,24 +42,6 @@ final class wm {
         int[] var14 = null;
         int[] var16 = null;
         int[] var18 = null;
-        byte[] stackIn_20_0 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_19_0 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
         var11 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -125,35 +114,26 @@ final class wm {
                 break L2;
               }
             }
-            stackOut_19_0 = (byte[]) (param1);
-            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_0 = (byte[]) (param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var3);
-            stackOut_21_1 = new StringBuilder().append("wm.E(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var3);
+
+            stackIn_23_1 = new StringBuilder().append("wm.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L7;
             }
           }
@@ -174,9 +154,9 @@ final class wm {
 
     final static void a(boolean param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -207,26 +187,25 @@ final class wm {
     }
 
     final int a(int param0, byte param1) {
-        int discarded$0 = 0;
         if (null != this.field_a) {
             param0 = 6 + (int)((long)param0 * (long)this.field_h / (long)this.field_b);
         }
         if (param1 > -98) {
-            discarded$0 = this.b(96, (byte) -119);
+            this.b(96, (byte) -119);
         }
         return param0;
     }
 
     wm(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        double var6 = 0.0;
-        int var8 = 0;
-        int var9 = 0;
-        double var10 = 0.0;
-        double var12 = 0.0;
-        double var14 = 0.0;
+        int var3;
+        int var4;
+        int[] var5;
+        double var6;
+        int var8;
+        int var9;
+        double var10;
+        double var12;
+        double var14;
         if (param0 != param1) {
           var3 = sa.a(param1, param0, 0);
           param0 = param0 / var3;

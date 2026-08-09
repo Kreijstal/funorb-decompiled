@@ -20,23 +20,16 @@ final class meb implements wwa {
     }
 
     final static mm a(int param0, int param1) {
-        mm discarded$10 = null;
         fh stackIn_4_0 = null;
         fh stackIn_8_0 = null;
-        fh stackOut_7_0 = null;
-        Object stackOut_6_0 = null;
-        fh stackOut_3_0 = null;
-        Object stackOut_2_0 = null;
         if (param1 != 1) {
           L0: {
-            discarded$10 = meb.a(-8, 53);
+            meb.a(-8, 53);
             if (ks.field_r != null) {
-              stackOut_7_0 = ks.field_r.a(-1, (long)param0);
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = ks.field_r.a(-1, (long)param0);
               break L0;
             } else {
-              stackOut_6_0 = null;
-              stackIn_8_0 = (fh) ((Object) stackOut_6_0);
+              stackIn_8_0 = null;
               break L0;
             }
           }
@@ -44,12 +37,10 @@ final class meb implements wwa {
         } else {
           L1: {
             if (ks.field_r != null) {
-              stackOut_3_0 = ks.field_r.a(-1, (long)param0);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = ks.field_r.a(-1, (long)param0);
               break L1;
             } else {
-              stackOut_2_0 = null;
-              stackIn_4_0 = (fh) ((Object) stackOut_2_0);
+              stackIn_4_0 = null;
               break L1;
             }
           }
@@ -58,34 +49,21 @@ final class meb implements wwa {
     }
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
         int stackIn_5_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
         var12 = VoidHunters.field_G;
         try {
           L0: {
@@ -97,19 +75,17 @@ final class meb implements wwa {
                   if (param1.e((byte) -120)) {
                     break L2;
                   } else {
-                    stackOut_3_0 = 2188450;
-                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_0 = 2188450;
                     break L1;
                   }
                 }
               }
-              stackOut_4_0 = 3249872;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 3249872;
               break L1;
             }
             var6_int = stackIn_5_0;
             var7 = 122 / ((param0 - -27) / 35);
-            discarded$1 = this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_j + "</u>", param2 + param1.field_g, param3 - -param1.field_r, param1.field_h, param1.field_f, var6_int, -1, this.field_e, this.field_a, this.field_b.field_A + this.field_b.field_k);
+            this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_j + "</u>", param2 + param1.field_g, param3 - -param1.field_r, param1.field_h, param1.field_f, var6_int, -1, this.field_e, this.field_a, this.field_b.field_A + this.field_b.field_k);
             if (param1.e((byte) -120)) {
               L3: {
                 var8 = this.field_b.b(param1.field_j);
@@ -151,27 +127,19 @@ final class meb implements wwa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var6);
-            stackOut_17_1 = new StringBuilder().append("meb.A(").append(param0).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var6);
+
+            stackIn_19_1 = new StringBuilder().append("meb.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L5;
             }
           }

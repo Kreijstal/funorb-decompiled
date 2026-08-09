@@ -11,7 +11,7 @@ final class gj {
     static kc field_d;
 
     final static void a(boolean param0, boolean param1, int param2, int param3) {
-        int var4 = 0;
+        int var4;
         th.field_f = param3;
         if (!param1) {
           L0: {
@@ -135,11 +135,10 @@ final class gj {
 
     final static oo b(int param0) {
         int var1_int = 0;
-        IllegalArgumentException var1 = null;
         oo var2 = null;
         oo stackIn_6_0 = null;
         Throwable decompiledCaughtException = null;
-        oo stackOut_5_0 = null;
+        IllegalArgumentException var1 = null;
         try {
           L0: {
             L1: {
@@ -154,8 +153,7 @@ final class gj {
             L2: while (true) {
               var2 = bg.field_d.a(param0 + 16638, var1_int);
               if (var2.field_A) {
-                stackOut_5_0 = (oo) (var2);
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (oo) (var2);
                 break L0;
               } else {
                 var1_int++;

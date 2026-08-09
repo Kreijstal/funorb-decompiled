@@ -18,12 +18,9 @@ final class dn extends ie {
     private int field_o;
 
     final int a(byte param0, long param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         int stackIn_5_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_7_0 = 0;
         var5 = client.field_A ? 1 : 0;
         if (param0 == 109) {
           if (this.field_g < this.field_m) {
@@ -36,8 +33,7 @@ final class dn extends ie {
             L0: while (true) {
               var4++;
               this.field_m = this.field_m + param1;
-              stackOut_4_0 = var4;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = var4;
               L1: while (true) {
                 L2: {
                   if (stackIn_5_0 >= 10) {
@@ -50,14 +46,13 @@ final class dn extends ie {
                     }
                   }
                 }
-                stackOut_7_0 = (this.field_m < this.field_g ? -1 : (this.field_m == this.field_g ? 0 : 1));
-                stackIn_5_0 = stackOut_7_0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_5_0 = (this.field_m < this.field_g ? -1 : (this.field_m == this.field_g ? 0 : 1));
+
                 if (var5 != 0) {
                   continue L1;
                 } else {
                   L3: {
-                    if (stackIn_8_0 < 0) {
+                    if (stackIn_5_0 < 0) {
                       this.field_m = this.field_g;
                       break L3;
                     } else {
@@ -92,14 +87,13 @@ final class dn extends ie {
     }
 
     public static void d(int param0) {
-        ac discarded$0 = null;
         field_j = null;
         field_q = null;
         field_l = null;
         field_s = null;
         field_p = null;
         if (param0 <= 65) {
-            discarded$0 = dn.b((byte) 101);
+            dn.b((byte) 101);
         }
     }
 
@@ -120,12 +114,11 @@ final class dn extends ie {
 
     final static ac b(byte param0) {
         int var1_int = 0;
-        IllegalArgumentException var1 = null;
         ac var2 = null;
         int var3 = 0;
         ac stackIn_7_0 = null;
         Throwable decompiledCaughtException = null;
-        ac stackOut_6_0 = null;
+        IllegalArgumentException var1 = null;
         var3 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -147,8 +140,7 @@ final class dn extends ie {
                 if (var3 != 0) {
                   continue L2;
                 } else {
-                  stackOut_6_0 = (ac) (var2);
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = (ac) (var2);
                   break L0;
                 }
               }
@@ -172,100 +164,147 @@ final class dn extends ie {
         long stackIn_14_0 = 0L;
         long stackIn_18_0 = 0L;
         long stackIn_20_0 = 0L;
-        long stackOut_17_0 = 0L;
-        long stackOut_19_0 = 0L;
-        long stackOut_11_0 = 0L;
-        long stackOut_13_0 = 0L;
-        L0: {
-          var9 = client.field_A ? 1 : 0;
-          var2 = System.nanoTime();
-          var4 = var2 - this.field_h;
-          if (param0 == -8325) {
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        this.field_h = var2;
-        if (var4 <= -5000000000L) {
-          var6 = 0L;
-          var8 = 1;
-          L1: while (true) {
-            L2: {
-              L3: {
-                if (var8 > this.field_n) {
-                  break L3;
-                } else {
-                  stackOut_17_0 = var6 + this.field_f[(10 + (this.field_o - var8)) % 10];
-                  stackIn_20_0 = stackOut_17_0;
-                  stackIn_18_0 = stackOut_17_0;
-                  if (var9 != 0) {
-                    break L2;
-                  } else {
-                    var6 = stackIn_18_0;
-                    var8++;
-                    if (var9 == 0) {
-                      continue L1;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var9 = client.field_A ? 1 : 0;
+                    var2 = System.nanoTime();
+                    var4 = var2 - this.field_h;
+                    if (param0 == -8325) {
+                        statePc = 2;
                     } else {
-                      break L3;
+                        statePc = 1;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
-              stackOut_19_0 = var6 / (long)this.field_n;
-              stackIn_20_0 = stackOut_19_0;
-              break L2;
-            }
-            return stackIn_20_0;
-          }
-        } else {
-          L4: {
-            if ((var4 ^ -1L) > -5000000001L) {
-              L5: {
-                this.field_f[this.field_o] = var4;
-                if (-2 < (this.field_n ^ -1)) {
-                  this.field_n = this.field_n + 1;
-                  break L5;
-                } else {
-                  break L5;
+                case 1: {
+                    this.a(110);
+                    statePc = 2;
+                    continue stateLoop;
                 }
-              }
-              this.field_o = (1 + this.field_o) % 10;
-              break L4;
-            } else {
-              break L4;
-            }
-          }
-          var6 = 0L;
-          var8 = 1;
-          L6: while (true) {
-            L7: {
-              L8: {
-                if (var8 > this.field_n) {
-                  break L8;
-                } else {
-                  stackOut_11_0 = var6 + this.field_f[(10 + (this.field_o - var8)) % 10];
-                  stackIn_14_0 = stackOut_11_0;
-                  stackIn_12_0 = stackOut_11_0;
-                  if (var9 != 0) {
-                    break L7;
-                  } else {
+                case 2: {
+                    this.field_h = var2;
+                    if (var4 <= -5000000000L) {
+                        statePc = 15;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    if ((var4 ^ -1L) > -5000000001L) {
+                        statePc = 5;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    this.field_f[this.field_o] = var4;
+                    if (-2 < (this.field_n ^ -1)) {
+                        statePc = 7;
+                    } else {
+                        statePc = 8;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    this.field_n = this.field_n + 1;
+                    statePc = 8;
+                    continue stateLoop;
+                }
+                case 8: {
+                    this.field_o = (1 + this.field_o) % 10;
+                    statePc = 9;
+                    continue stateLoop;
+                }
+                case 9: {
+                    var6 = 0L;
+                    var8 = 1;
+                    statePc = 10;
+                    continue stateLoop;
+                }
+                case 10: {
+                    if (var8 > this.field_n) {
+                        statePc = 13;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    stackIn_14_0 = var6 + this.field_f[(10 + (this.field_o - var8)) % 10];
+                    stackIn_12_0 = stackIn_14_0;
+                    if (var9 != 0) {
+                        statePc = 14;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
                     var6 = stackIn_12_0;
                     var8++;
                     if (var9 == 0) {
-                      continue L6;
+                        statePc = 10;
                     } else {
-                      break L8;
+                        statePc = 13;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
-              stackOut_13_0 = var6 / (long)this.field_n;
-              stackIn_14_0 = stackOut_13_0;
-              break L7;
+                case 13: {
+                    stackIn_14_0 = var6 / (long)this.field_n;
+                    statePc = 14;
+                    continue stateLoop;
+                }
+                case 14: {
+                    return stackIn_14_0;
+                }
+                case 15: {
+                    var6 = 0L;
+                    var8 = 1;
+                    statePc = 16;
+                    continue stateLoop;
+                }
+                case 16: {
+                    if (var8 > this.field_n) {
+                        statePc = 19;
+                    } else {
+                        statePc = 17;
+                    }
+                    continue stateLoop;
+                }
+                case 17: {
+                    stackIn_20_0 = var6 + this.field_f[(10 + (this.field_o - var8)) % 10];
+                    stackIn_18_0 = stackIn_20_0;
+                    if (var9 != 0) {
+                        statePc = 20;
+                    } else {
+                        statePc = 18;
+                    }
+                    continue stateLoop;
+                }
+                case 18: {
+                    var6 = stackIn_18_0;
+                    var8++;
+                    if (var9 == 0) {
+                        statePc = 16;
+                    } else {
+                        statePc = 19;
+                    }
+                    continue stateLoop;
+                }
+                case 19: {
+                    stackIn_20_0 = var6 / (long)this.field_n;
+                    statePc = 20;
+                    continue stateLoop;
+                }
+                case 20: {
+                    return stackIn_20_0;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            return stackIn_14_0;
-          }
         }
     }
 

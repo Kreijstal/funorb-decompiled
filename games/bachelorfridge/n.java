@@ -25,7 +25,6 @@ final class n {
     }
 
     final static pp a(lu param0, int param1) {
-        pp discarded$2 = null;
         nq var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -36,25 +35,12 @@ final class n {
         lu var8 = null;
         int stackIn_5_0 = 0;
         iv stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        iv stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -62,7 +48,7 @@ final class n {
                 break L1;
               } else {
                 var8 = (lu) null;
-                discarded$2 = n.a((lu) null, -83);
+                n.a((lu) null, -83);
                 break L1;
               }
             }
@@ -70,12 +56,10 @@ final class n {
               var2 = qi.a(param0, (byte) 123);
               var3 = param0.e((byte) 126);
               if (0 == (var3 & 32768)) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L2;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L2;
               }
             }
@@ -85,35 +69,26 @@ final class n {
             var5 = -16384 + (var5 ^ 16384);
             var6 = var3 >> 1537025605;
             var7 = param0.b(16711935);
-            stackOut_5_0 = new iv(var2, var4 != 0, var6, var5, var7);
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = new iv(var2, var4 != 0, var6, var5, var7);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2_ref);
-            stackOut_7_1 = new StringBuilder().append("n.F(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2_ref);
+
+            stackIn_9_1 = new StringBuilder().append("n.F(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -141,10 +116,9 @@ final class n {
     }
 
     final boolean a(int param0) {
-        pp discarded$0 = null;
         if (param0 != -7750) {
             lu var3 = (lu) null;
-            discarded$0 = n.a((lu) null, 124);
+            n.a((lu) null, 124);
             return this.field_a;
         }
         return this.field_a;

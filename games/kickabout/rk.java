@@ -14,21 +14,21 @@ final class rk {
     static wv field_f;
 
     rk(int param0, int param1, int param2) {
-        int incrementValue$6 = 0;
-        int var5 = 0;
-        nr var6 = null;
-        int var7 = 0;
-        ut var8 = null;
-        ut var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        ut var15 = null;
-        int var16 = 0;
-        int var17 = 0;
-        Random var19 = null;
+        int incrementValue$3 = 0;
+        int var5;
+        nr var6;
+        int var7;
+        ut var8;
+        ut var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        ut var15;
+        int var16;
+        int var17;
+        Random var19;
         this.field_a = param0;
         this.field_c = new ut[4];
         this.field_b = param1;
@@ -57,9 +57,9 @@ final class rk {
             var15 = this.field_c[var14];
             iw.a(-114, var15);
             var9.d(0, 0);
-            incrementValue$6 = var7;
+            incrementValue$3 = var7;
             var7++;
-            var6.a(incrementValue$6 % 4, -2);
+            var6.a(incrementValue$3 % 4, -2);
             ta.e(123);
             var16 = var9.field_y.length;
             var17 = 0;
@@ -68,7 +68,7 @@ final class rk {
                 var14++;
                 continue L0;
               } else {
-                if (var15.field_y[var17] == var9.field_y[var17]) {
+                if ((var15.field_y[var17] ^ -1) == (var9.field_y[var17] ^ -1)) {
                   var15.field_y[var17] = 0;
                   var17++;
                   continue L1;

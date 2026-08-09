@@ -19,27 +19,15 @@ final class lj implements ir {
     private int field_n;
 
     final static int a(int param0, byte[] param1, int param2) {
-        int discarded$2 = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -47,39 +35,30 @@ final class lj implements ir {
                 break L1;
               } else {
                 var4 = (byte[]) null;
-                discarded$2 = lj.a(-124, (byte[]) null, 84);
+                lj.a(-124, (byte[]) null, 84);
                 break L1;
               }
             }
-            stackOut_2_0 = cl.a(0, param1, param2, (byte) -105);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = cl.a(0, param1, param2, (byte) -105);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("lj.C(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("lj.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -89,16 +68,7 @@ final class lj implements ir {
     }
 
     public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        sq var11 = null;
         ea stackIn_5_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -106,27 +76,21 @@ final class lj implements ir {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ea stackOut_4_0 = null;
-        Object stackOut_3_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        sq var11 = null;
         try {
           L0: {
             if (param1 == -7592) {
               L1: {
                 if (param3 instanceof sq) {
-                  stackOut_4_0 = (ea) (param3);
-                  stackIn_5_0 = stackOut_4_0;
+                  stackIn_5_0 = (ea) (param3);
                   break L1;
                 } else {
-                  stackOut_3_0 = null;
-                  stackIn_5_0 = (ea) ((Object) stackOut_3_0);
+                  stackIn_5_0 = null;
                   break L1;
                 }
               }
@@ -167,7 +131,7 @@ final class lj implements ir {
                   break L5;
                 } else {
                   var10 = this.field_m + (this.field_n - -this.field_f);
-                  discarded$1 = this.field_l.a(param3.field_f, param2 + param3.field_p - -var10, param4 + (param3.field_h - -this.field_i), param3.field_q - (this.field_f + var10), param3.field_n - (this.field_f << -709448575), this.field_g, this.field_k, this.field_b, this.field_d, 0);
+                  this.field_l.a(param3.field_f, param2 + param3.field_p - -var10, param4 + (param3.field_h - -this.field_i), param3.field_q - (this.field_f + var10), param3.field_n - (this.field_f << -709448575), this.field_g, this.field_k, this.field_b, this.field_d, 0);
                   break L5;
                 }
               }
@@ -182,27 +146,19 @@ final class lj implements ir {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var6);
-            stackOut_14_1 = new StringBuilder().append("lj.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var6);
+
+            stackIn_16_1 = new StringBuilder().append("lj.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L6;
             }
           }
@@ -225,7 +181,7 @@ final class lj implements ir {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1;
         if (-33 <= (l.field_c ^ -1)) {
           ve.a((byte) 43, 0);
           if (param0 > 97) {

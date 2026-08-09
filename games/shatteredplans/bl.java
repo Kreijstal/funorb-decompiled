@@ -7,7 +7,7 @@ final class bl extends qd {
     private java.awt.Component field_i;
 
     final void a(java.awt.Graphics param0, int param1, byte param2, int param3) {
-        boolean discarded$9 = param0.drawImage(this.field_b, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_i));
+        param0.drawImage(this.field_b, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_i));
         if (param2 >= -56) {
             java.awt.Graphics var6 = (java.awt.Graphics) null;
             this.a((java.awt.Graphics) null, -17, (byte) -63, -24);
@@ -15,10 +15,10 @@ final class bl extends qd {
     }
 
     final void a(int param0, java.awt.Component param1, byte param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
-        java.awt.Component var8 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
+        java.awt.Component var8;
         this.field_g = param3;
         if (param2 >= -91) {
           var8 = (java.awt.Component) null;

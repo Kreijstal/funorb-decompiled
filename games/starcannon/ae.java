@@ -6,22 +6,22 @@ final class ae {
     static String field_a;
 
     final static void a(int param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         String var5 = null;
         int[] var6 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = StarCannon.field_A;
         try {
           L0: {
@@ -42,30 +42,30 @@ final class ae {
               if (var3 <= var2) {
                 break L0;
               } else {
-                incrementValue$40 = var2;
+                incrementValue$16 = var2;
                 var2++;
-                var6[incrementValue$40] = 0;
-                incrementValue$41 = var2;
+                var6[incrementValue$16] = 0;
+                incrementValue$17 = var2;
                 var2++;
-                var6[incrementValue$41] = 0;
-                incrementValue$42 = var2;
+                var6[incrementValue$17] = 0;
+                incrementValue$18 = var2;
                 var2++;
-                var6[incrementValue$42] = 0;
-                incrementValue$43 = var2;
+                var6[incrementValue$18] = 0;
+                incrementValue$19 = var2;
                 var2++;
-                var6[incrementValue$43] = 0;
-                incrementValue$44 = var2;
+                var6[incrementValue$19] = 0;
+                incrementValue$20 = var2;
                 var2++;
-                var6[incrementValue$44] = 0;
-                incrementValue$45 = var2;
+                var6[incrementValue$20] = 0;
+                incrementValue$21 = var2;
                 var2++;
-                var6[incrementValue$45] = 0;
-                incrementValue$46 = var2;
+                var6[incrementValue$21] = 0;
+                incrementValue$22 = var2;
                 var2++;
-                var6[incrementValue$46] = 0;
-                incrementValue$47 = var2;
+                var6[incrementValue$22] = 0;
+                incrementValue$23 = var2;
                 var2++;
-                var6[incrementValue$47] = 0;
+                var6[incrementValue$23] = 0;
                 continue L2;
               }
             }
@@ -79,14 +79,13 @@ final class ae {
 
     final static void a(int param0, byte param1) {
         try {
-            Object discarded$1 = null;
+            Throwable decompiledCaughtException = null;
             int var2_int = 0;
             Throwable var2 = null;
-            Throwable decompiledCaughtException = null;
             try {
               L0: {
                 var2_int = 31 / ((param1 - -46) / 45);
-                discarded$1 = mb.a(new Object[]{new Integer(param0)}, ll.b(105), "resizing", -27504);
+                mb.a(new Object[]{new Integer(param0)}, ll.b(105), "resizing", -27504);
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

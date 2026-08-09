@@ -50,21 +50,22 @@ final class dm extends cr {
     }
 
     final static void k(int param0) {
-        int discarded$7 = 0;
-        String[][] dupTemp$8 = null;
-        long[][] dupTemp$9 = null;
-        int[][] dupTemp$10 = null;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
+        String[][] dupTemp$0 = null;
+        long[][] dupTemp$1 = null;
+        int[][] dupTemp$2 = null;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         s var4 = null;
         long var4_long = 0L;
         int var5 = 0;
-        vi var6_ref_vi = null;
         int var6 = 0;
+        vi var6_ref_vi = null;
         int var7 = 0;
         int var8_int = 0;
         String[][] var8 = null;
@@ -86,8 +87,6 @@ final class dm extends cr {
         int var25 = 0;
         int var26 = 0;
         mi var27 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -95,7 +94,7 @@ final class dm extends cr {
               if (param0 == 0) {
                 break L1;
               } else {
-                discarded$7 = dm.a(-79, 39, -11, -30);
+                dm.a(-79, 39, -11, -30);
                 break L1;
               }
             }
@@ -130,16 +129,16 @@ final class dm extends cr {
                         var8_int = 1;
                         L6: while (true) {
                           if (var8_int >= var5) {
-                            dupTemp$8 = new String[3][var6];
-                            var4.field_x = dupTemp$8;
-                            var8 = dupTemp$8;
+                            dupTemp$0 = new String[3][var6];
+                            var4.field_x = dupTemp$0;
+                            var8 = dupTemp$0;
                             var9 = new String[3][var6];
-                            dupTemp$9 = new long[3][var6];
-                            var4.field_w = dupTemp$9;
-                            var10 = dupTemp$9;
-                            dupTemp$10 = new int[3][var6 * var7];
-                            var4.field_n = dupTemp$10;
-                            var11 = dupTemp$10;
+                            dupTemp$1 = new long[3][var6];
+                            var4.field_w = dupTemp$1;
+                            var10 = dupTemp$1;
+                            dupTemp$2 = new int[3][var6 * var7];
+                            var4.field_n = dupTemp$2;
+                            var11 = dupTemp$2;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -170,9 +169,9 @@ final class dm extends cr {
                                           var12++;
                                           break L8;
                                         } else {
-                                          incrementValue$11 = var15;
+                                          incrementValue$3 = var15;
                                           var15++;
-                                          var11[0][incrementValue$11] = var27.b(true);
+                                          var11[0][incrementValue$3] = var27.b(true);
                                           var25++;
                                           continue L9;
                                         }
@@ -194,9 +193,9 @@ final class dm extends cr {
                                           if (var7 <= var25) {
                                             break L10;
                                           } else {
-                                            incrementValue$12 = var16;
+                                            incrementValue$4 = var16;
                                             var16++;
-                                            var11[1][incrementValue$12] = var27.b(true);
+                                            var11[1][incrementValue$4] = var27.b(true);
                                             var25++;
                                             continue L11;
                                           }
@@ -222,9 +221,9 @@ final class dm extends cr {
                                           if (var25 >= var7) {
                                             break L12;
                                           } else {
-                                            incrementValue$13 = var17;
+                                            incrementValue$5 = var17;
                                             var17++;
-                                            var11[2][incrementValue$13] = var27.b(true);
+                                            var11[2][incrementValue$5] = var27.b(true);
                                             var25++;
                                             continue L13;
                                           }
@@ -325,17 +324,17 @@ final class dm extends cr {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        RuntimeException var6 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
         int var10 = 0;
         int[] var11 = null;
         int[] var12 = null;
-        RuntimeException decompiledCaughtException = null;
         var10 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -378,9 +377,9 @@ final class dm extends cr {
                   }
                   L4: {
                     if (ua.field_e <= param2) {
-                      incrementValue$2 = param2;
+                      incrementValue$0 = param2;
                       param2++;
-                      ki.a(-93, param1, vl.field_e[incrementValue$2], param3, param4);
+                      ki.a(-93, param1, vl.field_e[incrementValue$0], param3, param4);
                       break L4;
                     } else {
                       param2 = ua.field_e;
@@ -389,9 +388,9 @@ final class dm extends cr {
                   }
                   L5: {
                     if (param5 <= cj.field_D) {
-                      incrementValue$3 = param5;
+                      incrementValue$1 = param5;
                       param5--;
-                      ki.a(-116, param1, vl.field_e[incrementValue$3], param3, param4);
+                      ki.a(-116, param1, vl.field_e[incrementValue$1], param3, param4);
                       break L5;
                     } else {
                       param5 = cj.field_D;

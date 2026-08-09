@@ -23,8 +23,8 @@ final class tc extends ck implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int a(int param0) {
-        int var2 = 0;
-        java.awt.Component var3 = null;
+        int var2;
+        java.awt.Component var3;
         if (param0 != 8) {
           var3 = (java.awt.Component) null;
           this.a((java.awt.Component) null, (byte) 25);

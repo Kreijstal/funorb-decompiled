@@ -43,13 +43,13 @@ final class pr {
 
     final static void a(byte param0) {
         try {
+            Throwable decompiledCaughtException = null;
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
             Long var3 = null;
             Object[] var4 = null;
-            Throwable decompiledCaughtException = null;
             try {
               L0: {
                 L1: {
@@ -57,16 +57,16 @@ final class pr {
                   if (var1 != null) {
                     try {
                       L2: {
-                        var2_ref = Runtime.getRuntime();
+                        var2 = Runtime.getRuntime();
                         var4 = (Object[]) null;
-                        var3 = (Long) (var1.invoke((Object) (var2_ref), (Object[]) null));
+                        var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
                         aja.field_o = 1 + (int)(var3.longValue() / 1048576L);
                         break L2;
                       }
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L3: {
-                        var2 = decompiledCaughtException;
+                        var2_ref = decompiledCaughtException;
                         break L3;
                       }
                     }
@@ -100,45 +100,28 @@ final class pr {
     }
 
     final int[] a(int param0, int param1) {
-        rca var3 = null;
-        rca var4 = null;
-        int var5 = 0;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        Object stackIn_16_0 = null;
         Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         int stackIn_18_1 = 0;
-        Object stackOut_15_0 = null;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
+        rca var3;
+        rca var4;
+        int var5;
         var5 = BachelorFridge.field_y;
         if (param1 == -1) {
           if (this.field_l == this.field_b) {
             L0: {
-              stackOut_15_0 = this;
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_16_0 = stackOut_15_0;
+              stackIn_17_0 = this;
+
               if (this.field_k[param0] != null) {
-                stackOut_17_0 = this;
-                stackOut_17_1 = 0;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
+                stackIn_18_0 = this;
+                stackIn_18_1 = 0;
                 break L0;
               } else {
-                stackOut_16_0 = this;
-                stackOut_16_1 = 1;
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_18_1 = stackOut_16_1;
+                stackIn_18_0 = this;
+                stackIn_18_1 = 1;
                 break L0;
               }
             }
@@ -177,20 +160,15 @@ final class pr {
               return this.field_a[var3.field_f];
             } else {
               L3: {
-                stackOut_4_0 = this;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_6_0 = this;
+
                 if (this.field_f == param0) {
-                  stackOut_6_0 = this;
-                  stackOut_6_1 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_7_0 = this;
+                  stackIn_7_1 = 0;
                   break L3;
                 } else {
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
+                  stackIn_7_0 = this;
+                  stackIn_7_1 = 1;
                   break L3;
                 }
               }
@@ -218,12 +196,12 @@ final class pr {
 
     final static void c(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = BachelorFridge.field_y;
         try {
           L0: {

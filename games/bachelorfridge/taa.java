@@ -40,22 +40,12 @@ final class taa extends at {
 
     private final void a(int param0, byte param1, int param2, gj param3) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -75,27 +65,19 @@ final class taa extends at {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("taa.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("taa.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -108,22 +90,18 @@ final class taa extends at {
     }
 
     private final void b(boolean param0) {
-        int var2 = 0;
-        gj var7 = null;
-        dha var8 = null;
-        dha var9 = null;
-        dha var10 = null;
-        dha var11 = null;
-        dha var12 = null;
-        dha var13 = null;
-        dha var14 = null;
-        dha var15 = null;
+        int var2;
+        gj var7;
+        dha var8;
+        dha var9;
+        dha var10;
+        dha var11;
+        dha var12;
+        dha var13;
+        dha var14;
+        dha var15;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         this.field_o = this.field_n.field_s.field_B;
         this.field_t = this.field_n.field_s.field_b;
         this.field_v = this.field_j - this.field_o;
@@ -133,12 +111,10 @@ final class taa extends at {
             var7 = (gj) null;
             this.a(34, (byte) 123, -56, (gj) null);
             if ((kla.a(2, this.field_n.field_h.field_w, -2147483648) ^ -1) != -2) {
-              stackOut_7_0 = 1;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 1;
               break L0;
             } else {
-              stackOut_6_0 = -1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = -1;
               break L0;
             }
           }
@@ -152,12 +128,10 @@ final class taa extends at {
         } else {
           L1: {
             if ((kla.a(2, this.field_n.field_h.field_w, -2147483648) ^ -1) != -2) {
-              stackOut_3_0 = 1;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 1;
               break L1;
             } else {
-              stackOut_2_0 = -1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = -1;
               break L1;
             }
           }
@@ -178,10 +152,10 @@ final class taa extends at {
     }
 
     final boolean c(byte param0) {
-        dha var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        dha var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           if (null == this.field_q) {
             this.b(true);
@@ -195,9 +169,9 @@ final class taa extends at {
         var4 = var2.field_a;
         var5 = 20 % ((71 - param0) / 47);
         this.field_n.field_s.a(var3, var4, this.field_p, (byte) -71);
-        int fieldTemp$2 = this.field_s + 1;
+        int fieldTemp$1 = this.field_s + 1;
         this.field_s = this.field_s + 1;
-        if ((double)fieldTemp$2 > 50.0) {
+        if ((double)fieldTemp$1 > 50.0) {
           this.d(1998707041);
           return true;
         } else {

@@ -23,12 +23,11 @@ final class uab {
     }
 
     final static void a(byte param0, java.awt.Component param1) {
-        boolean discarded$0 = false;
         try {
             param1.removeMouseListener(wj.field_q);
             param1.removeMouseMotionListener(wj.field_q);
             if (param0 != 1) {
-                discarded$0 = uab.a((byte) 73);
+                uab.a((byte) 73);
             }
             param1.removeFocusListener(wj.field_q);
             am.field_q = 0;

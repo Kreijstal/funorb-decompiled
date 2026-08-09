@@ -97,13 +97,11 @@ final class eg extends qc {
     }
 
     private final void c() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        short stackOut_3_0 = 0;
+        int var1;
+        int var2;
         var4 = 0;
         L0: while (true) {
           if (var4 >= this.field_ab) {
@@ -111,12 +109,10 @@ final class eg extends qc {
           } else {
             L1: {
               if (this.field_x == null) {
-                stackOut_4_0 = -1;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = -1;
                 break L1;
               } else {
-                stackOut_3_0 = this.field_x[var4];
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = this.field_x[var4];
                 break L1;
               }
             }
@@ -152,13 +148,13 @@ final class eg extends qc {
     }
 
     private final void e(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         if (!field_ib[param0]) {
           L0: {
             var2 = this.field_gb[param0];
@@ -239,22 +235,22 @@ final class eg extends qc {
     }
 
     final void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int[] var35 = null;
-        int[] var36 = null;
-        int[] var37 = null;
-        int[] var38 = null;
-        int[] var39 = null;
-        int[] var40 = null;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int[] var35;
+        int[] var36;
+        int[] var37;
+        int[] var38;
+        int[] var39;
+        int[] var40;
         var7 = param1.length;
         if (param0 != 0) {
           if (param0 != 1) {
@@ -571,7 +567,6 @@ final class eg extends qc {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -588,16 +583,9 @@ final class eg extends qc {
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (this.field_M) {
-                break L1;
-              } else {
+            if (!this.field_M) {
                 this.e();
-                break L1;
-              }
             }
             var9_int = t.field_p;
             var10 = t.field_e;
@@ -610,75 +598,42 @@ final class eg extends qc {
             var17 = t.field_f[param3];
             var18 = t.field_o[param3];
             var19 = param5 * var17 + param6 * var18 >> 16;
-            var20 = 0;
-            L2: while (true) {
-              if (var20 >= this.field_L) {
-                this.a(false, false, 0L, (int) this.field_lb, this.field_lb << 1);
-                break L0;
-              } else {
-                L3: {
-                  var21 = this.field_N[var20];
-                  var22 = this.field_W[var20];
-                  var23 = this.field_E[var20];
-                  if (param2 == 0) {
-                    break L3;
-                  } else {
+            for (var20 = 0; var20 < this.field_L; var20++) {
+                var21 = this.field_N[var20];
+                var22 = this.field_W[var20];
+                var23 = this.field_E[var20];
+                if (param2 != 0) {
                     var24 = var22 * var15 + var21 * var16 >> 16;
                     var22 = var22 * var16 - var21 * var15 >> 16;
                     var21 = var24;
-                    break L3;
-                  }
                 }
-                L4: {
-                  if (param0 == 0) {
-                    break L4;
-                  } else {
+                if (param0 != 0) {
                     var24 = var22 * var12 - var23 * var11 >> 16;
                     var23 = var22 * var11 + var23 * var12 >> 16;
                     var22 = var24;
-                    break L4;
-                  }
                 }
-                L5: {
-                  if (param1 == 0) {
-                    break L5;
-                  } else {
+                if (param1 != 0) {
                     var24 = var23 * var13 + var21 * var14 >> 16;
                     var23 = var23 * var14 - var21 * var13 >> 16;
                     var21 = var24;
-                    break L5;
-                  }
                 }
-                L6: {
-                  var21 = var21 + param4;
-                  var22 = var22 + param5;
-                  var23 = var23 + param6;
-                  var24 = var22 * var18 - var23 * var17 >> 16;
-                  var23 = var22 * var17 + var23 * var18 >> 16;
-                  var22 = var24;
-                  field_U[var20] = var23 - var19;
-                  field_i[var20] = var9_int + (var21 << 9) / param7;
-                  field_s[var20] = var10 + (var22 << 9) / param7;
-                  if (this.field_eb <= 0) {
-                    break L6;
-                  } else {
+                var21 = var21 + param4;
+                var22 = var22 + param5;
+                var23 = var23 + param6;
+                var24 = var22 * var18 - var23 * var17 >> 16;
+                var23 = var22 * var17 + var23 * var18 >> 16;
+                var22 = var24;
+                field_U[var20] = var23 - var19;
+                field_i[var20] = var9_int + (var21 << 9) / param7;
+                field_s[var20] = var10 + (var22 << 9) / param7;
+                if (this.field_eb > 0) {
                     field_R[var20] = var21;
                     field_B[var20] = var22;
                     field_u[var20] = var23;
-                    break L6;
-                  }
                 }
-                var20++;
-                continue L2;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var9 = decompiledCaughtException;
-            break L7;
-          }
+            this.a(false, false, 0L, (int) this.field_lb, this.field_lb << 1);
+        } catch (RuntimeException runtimeException) {
         }
     }
 
@@ -704,25 +659,25 @@ final class eg extends qc {
         int incrementValue$15 = 0;
         int incrementValue$16 = 0;
         int incrementValue$17 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
         L0: {
           var2 = t.field_p;
           var3 = t.field_e;
@@ -1055,48 +1010,57 @@ final class eg extends qc {
     }
 
     private final void a(boolean param0, boolean param1, long param2, int param3, int param4) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
+        int dupTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int dupTemp$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int fieldTemp$7 = 0;
+        int dupTemp$8 = 0;
+        int[] arrayValue$9 = null;
+        int dupTemp$10 = 0;
+        int[] arrayValue$11 = null;
         int incrementValue$12 = 0;
         int fieldTemp$13 = 0;
-        int incrementValue$14 = 0;
-        int fieldTemp$15 = 0;
-        int fieldTemp$16 = 0;
-        int incrementValue$17 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14_int = 0;
-        int[] var14 = null;
-        int var15_int = 0;
-        int[] var15 = null;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int[] var45 = null;
-        int[] var46 = null;
-        int[] var47 = null;
-        int[] var48 = null;
-        int[] var49 = null;
+        int fieldTemp$14 = 0;
+        int dupTemp$15 = 0;
+        int[] arrayValue$16 = null;
+        int dupTemp$17 = 0;
+        int[] arrayValue$18 = null;
+        int incrementValue$19 = 0;
         int stackIn_76_0 = 0;
-        int stackOut_75_0 = 0;
-        int stackOut_74_0 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14_int;
+        int[] var14;
+        int var15_int;
+        int[] var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int[] var45;
+        int[] var46;
+        int[] var47;
+        int[] var48;
+        int[] var49;
         if (param4 < 1600) {
           L0: {
             var7 = 0;
@@ -1161,8 +1125,9 @@ final class eg extends qc {
                                   } else {
                                     var13 = var47[var12];
                                     var14_int = this.field_w[var13];
-                                    field_q[var14_int] = field_q[var14_int] + 1;
-                                    var15_int = field_q[var14_int];
+                                    dupTemp$0 = field_q[var14_int];
+                                    field_q[var14_int] = dupTemp$0 + 1;
+                                    var15_int = dupTemp$0;
                                     field_Y[var14_int][var15_int] = var13;
                                     if (var14_int >= 10) {
                                       if (var14_int != 10) {
@@ -1191,8 +1156,9 @@ final class eg extends qc {
                                 if (var12 < field_P[var10]) {
                                   var13 = var48[var12];
                                   var14_int = this.field_w[var13];
-                                  field_q[var14_int] = field_q[var14_int] + 1;
-                                  var15_int = field_q[var14_int];
+                                  dupTemp$1 = field_q[var14_int];
+                                  field_q[var14_int] = dupTemp$1 + 1;
+                                  var15_int = dupTemp$1;
                                   field_Y[var14_int][var15_int] = var13;
                                   if (var14_int >= 10) {
                                     if (var14_int != 10) {
@@ -1240,12 +1206,10 @@ final class eg extends qc {
                           } else {
                             L13: {
                               if (var9 <= 64) {
-                                stackOut_75_0 = var9;
-                                stackIn_76_0 = stackOut_75_0;
+                                stackIn_76_0 = var9;
                                 break L13;
                               } else {
-                                stackOut_74_0 = 64;
-                                stackIn_76_0 = stackOut_74_0;
+                                stackIn_76_0 = 64;
                                 break L13;
                               }
                             }
@@ -1298,8 +1262,9 @@ final class eg extends qc {
                             var9 = field_k[var8];
                             var10 = field_J[var8];
                             var11 = this.field_w[var9];
-                            field_q[var11] = field_q[var11] + 1;
-                            var12 = field_q[var11];
+                            dupTemp$2 = field_q[var11];
+                            field_q[var11] = dupTemp$2 + 1;
+                            var12 = dupTemp$2;
                             field_Y[var11][var12] = var9;
                             if (var11 >= 10) {
                               if (var11 != 10) {
@@ -1419,9 +1384,9 @@ final class eg extends qc {
                       return;
                     } else {
                       L29: {
-                        incrementValue$9 = var12;
+                        incrementValue$3 = var12;
                         var12++;
-                        this.e(var14[incrementValue$9]);
+                        this.e(var14[incrementValue$3]);
                         if (var12 != var13) {
                           break L29;
                         } else {
@@ -1455,9 +1420,9 @@ final class eg extends qc {
                           break L31;
                         } else {
                           L32: {
-                            incrementValue$10 = var12;
+                            incrementValue$4 = var12;
                             var12++;
-                            this.e(var14[incrementValue$10]);
+                            this.e(var14[incrementValue$4]);
                             if (var12 != var13) {
                               break L32;
                             } else {
@@ -1491,9 +1456,9 @@ final class eg extends qc {
                             break L34;
                           } else {
                             L35: {
-                              incrementValue$11 = var12;
+                              incrementValue$5 = var12;
                               var12++;
-                              this.e(var14[incrementValue$11]);
+                              this.e(var14[incrementValue$5]);
                               if (var12 != var13) {
                                 break L35;
                               } else {
@@ -1527,9 +1492,9 @@ final class eg extends qc {
                               break L37;
                             } else {
                               L38: {
-                                incrementValue$12 = var12;
+                                incrementValue$6 = var12;
                                 var12++;
-                                this.e(var14[incrementValue$12]);
+                                this.e(var14[incrementValue$6]);
                                 if (var12 != var13) {
                                   break L38;
                                 } else {
@@ -1629,10 +1594,10 @@ final class eg extends qc {
                               break L42;
                             } else {
                               if (field_bb != 512) {
-                                fieldTemp$13 = field_bb;
+                                fieldTemp$7 = field_bb;
                                 field_bb = field_bb + 1;
-                                var28 = 65 + fieldTemp$13;
-                                field_D[var27] = 65 + fieldTemp$13;
+                                var28 = 65 + fieldTemp$7;
+                                field_D[var27] = 65 + fieldTemp$7;
                                 break L42;
                               } else {
                                 var8++;
@@ -1641,21 +1606,25 @@ final class eg extends qc {
                             }
                           }
                           var28 -= 65;
-                          field_P[var28] = field_P[var28] + 1;
-                          field_K[var28][field_P[var28]] = var8;
+                          dupTemp$8 = field_P[var28];
+                          arrayValue$9 = field_K[var28];
+                          field_P[var28] = dupTemp$8 + 1;
+                          arrayValue$9[dupTemp$8] = var8;
                           var8++;
                           continue L3;
                         } else {
-                          field_D[var27] = field_D[var27] + 1;
-                          field_Q[var27][field_D[var27]] = var8;
+                          dupTemp$10 = field_D[var27];
+                          arrayValue$11 = field_Q[var27];
+                          field_D[var27] = dupTemp$10 + 1;
+                          arrayValue$11[dupTemp$10] = var8;
                           var8++;
                           continue L3;
                         }
                       } else {
                         field_J[var7] = (field_U[var9] + field_U[var10] + field_U[var11]) / 3;
-                        incrementValue$14 = var7;
+                        incrementValue$12 = var7;
                         var7++;
-                        field_k[incrementValue$14] = var8;
+                        field_k[incrementValue$12] = var8;
                         var8++;
                         continue L3;
                       }
@@ -1672,9 +1641,9 @@ final class eg extends qc {
                     if (!this.b(bq.field_c + t.field_p, vs.field_i + t.field_e, field_s[var9], field_s[var10], field_s[var11], var12, var13, var14_int)) {
                       break L43;
                     } else {
-                      fieldTemp$15 = jk.field_f;
+                      fieldTemp$13 = jk.field_f;
                       jk.field_f = jk.field_f + 1;
-                      rg.field_c[fieldTemp$15] = param2;
+                      rg.field_c[fieldTemp$13] = param2;
                       param1 = false;
                       break L43;
                     }
@@ -1723,10 +1692,10 @@ final class eg extends qc {
                           break L46;
                         } else {
                           if (field_bb != 512) {
-                            fieldTemp$16 = field_bb;
+                            fieldTemp$14 = field_bb;
                             field_bb = field_bb + 1;
-                            var16 = 65 + fieldTemp$16;
-                            field_D[var15_int] = 65 + fieldTemp$16;
+                            var16 = 65 + fieldTemp$14;
+                            field_D[var15_int] = 65 + fieldTemp$14;
                             break L46;
                           } else {
                             var8++;
@@ -1735,21 +1704,25 @@ final class eg extends qc {
                         }
                       }
                       var16 -= 65;
-                      field_P[var16] = field_P[var16] + 1;
-                      field_K[var16][field_P[var16]] = var8;
+                      dupTemp$15 = field_P[var16];
+                      arrayValue$16 = field_K[var16];
+                      field_P[var16] = dupTemp$15 + 1;
+                      arrayValue$16[dupTemp$15] = var8;
                       var8++;
                       continue L3;
                     } else {
-                      field_D[var15_int] = field_D[var15_int] + 1;
-                      field_Q[var15_int][field_D[var15_int]] = var8;
+                      dupTemp$17 = field_D[var15_int];
+                      arrayValue$18 = field_Q[var15_int];
+                      field_D[var15_int] = dupTemp$17 + 1;
+                      arrayValue$18[dupTemp$17] = var8;
                       var8++;
                       continue L3;
                     }
                   } else {
                     field_J[var7] = (field_U[var9] + field_U[var10] + field_U[var11]) / 3;
-                    incrementValue$17 = var7;
+                    incrementValue$19 = var7;
                     var7++;
-                    field_k[incrementValue$17] = var8;
+                    field_k[incrementValue$19] = var8;
                     var8++;
                     continue L3;
                   }
@@ -1790,7 +1763,7 @@ final class eg extends qc {
     }
 
     private final qc a(boolean param0, boolean param1, eg param2, byte[] param3, short[] param4, int[] param5, int[] param6, int[] param7) {
-        int var9 = 0;
+        int var9;
         L0: {
           L1: {
             param2.field_L = this.field_L;
@@ -1899,63 +1872,63 @@ final class eg extends qc {
     }
 
     final void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int[] var16_ref_int__ = null;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25_int = 0;
-        int[] var25 = null;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29_int = 0;
-        int[] var29 = null;
-        int var30 = 0;
-        int[] var31_ref_int__ = null;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int[] var35 = null;
-        int var35_int = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var42 = 0;
-        int var43 = 0;
-        int var44 = 0;
-        int var45 = 0;
-        int var46 = 0;
-        int[] var47 = null;
-        int[] var50 = null;
-        int[] var52 = null;
-        int[] var55 = null;
-        int[] var61 = null;
-        int[] var63 = null;
-        int[] var66 = null;
-        int[] var78 = null;
-        int[] var79 = null;
-        int[] var80 = null;
-        int[] var81 = null;
-        int[] var82 = null;
-        int[] var83 = null;
-        int[] var84 = null;
-        int[] var85 = null;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int[] var16_ref_int__;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int[] var25;
+        int var25_int;
+        int var26;
+        int var27;
+        int var28;
+        int[] var29;
+        int var29_int;
+        int var30;
+        int var31;
+        int[] var31_ref_int__;
+        int var32;
+        int var33;
+        int var34;
+        int[] var35;
+        int var35_int;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var42;
+        int var43;
+        int var44;
+        int var45;
+        int var46;
+        int[] var47;
+        int[] var50;
+        int[] var52;
+        int[] var55;
+        int[] var61;
+        int[] var63;
+        int[] var66;
+        int[] var78;
+        int[] var79;
+        int[] var80;
+        int[] var81;
+        int[] var82;
+        int[] var83;
+        int[] var84;
+        int[] var85;
         var9 = param1.length;
         if (param0 != 0) {
           if (param0 != 1) {
@@ -2663,6 +2636,9 @@ final class eg extends qc {
     }
 
     final void a(int[] param0, int[] param1) {
+        int stackIn_15_0 = 0;
+        int stackIn_21_0 = 0;
+        Throwable decompiledCaughtException = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -2681,22 +2657,14 @@ final class eg extends qc {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        Exception var21 = null;
         int var21_int = 0;
+        Exception var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
         int var27 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_21_0 = 0;
-        Throwable decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_16_0 = 0;
         L0: {
           if (this.field_M) {
             break L0;
@@ -2737,12 +2705,10 @@ final class eg extends qc {
                 if (var4 <= var5 + var15) {
                   L1: {
                     if (var5 > 50 + this.field_lb) {
-                      stackOut_14_0 = 0;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 0;
                       break L1;
                     } else {
-                      stackOut_13_0 = 1;
-                      stackIn_15_0 = stackOut_13_0;
+                      stackIn_15_0 = 1;
                       break L1;
                     }
                   }
@@ -2750,17 +2716,14 @@ final class eg extends qc {
                     var16 = stackIn_15_0;
                     if (var16 == 0) {
                       if (this.field_eb > 0) {
-                        stackOut_19_0 = 1;
-                        stackIn_21_0 = stackOut_19_0;
+                        stackIn_21_0 = 1;
                         break L2;
                       } else {
-                        stackOut_18_0 = 0;
-                        stackIn_21_0 = stackOut_18_0;
+                        stackIn_21_0 = 0;
                         break L2;
                       }
                     } else {
-                      stackOut_16_0 = 1;
-                      stackIn_21_0 = stackOut_16_0;
+                      stackIn_21_0 = 1;
                       break L2;
                     }
                   }
@@ -2839,51 +2802,35 @@ final class eg extends qc {
     }
 
     private final boolean b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        if (param1 < param2) {
-            if (param1 < param3) {
-                if (param1 < param4) {
-                    return false;
-                }
-            }
+        if (param1 < param2 && param1 < param3 && param1 < param4) {
+            return false;
         }
-        if (param1 > param2) {
-            if (param1 > param3) {
-                if (param1 > param4) {
-                    return false;
-                }
-            }
+        if (param1 > param2 && param1 > param3 && param1 > param4) {
+            return false;
         }
-        if (param0 < param5) {
-            if (param0 < param6) {
-                if (param0 < param7) {
-                    return false;
-                }
-            }
+        if (param0 < param5 && param0 < param6 && param0 < param7) {
+            return false;
         }
-        if (param0 > param5) {
-            if (param0 > param6) {
-                if (param0 > param7) {
-                    return false;
-                }
-            }
+        if (param0 > param5 && param0 > param6 && param0 > param7) {
+            return false;
         }
         return true;
     }
 
     private final void e() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         var1 = 32767;
         var2 = 32767;
         var3 = 32767;
@@ -2895,6 +2842,7 @@ final class eg extends qc {
         var9 = 0;
         L0: while (true) {
           if (var9 >= this.field_T) {
+            Math.sqrt((double)var7);
             this.field_lb = (short)(int)(Math.sqrt((double)var8) + 0.99);
             this.field_M = true;
             return;
@@ -3044,22 +2992,23 @@ final class eg extends qc {
     }
 
     eg(vn param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$1 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int[] var9_ref_int__ = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        rn var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int[] var17 = null;
-        ia var18 = null;
-        ia var19 = null;
-        int[] var20 = null;
+        int incrementValue$0 = 0;
+        int dupTemp$1 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int[] var9_ref_int__;
+        int var10;
+        int var11;
+        int var12;
+        rn var13;
+        int var14;
+        int var15;
+        int var16;
+        int[] var17;
+        ia var18;
+        ia var19;
+        int[] var20;
         L0: {
           this.field_T = 0;
           this.field_M = false;
@@ -3184,9 +3133,9 @@ final class eg extends qc {
                                 this.field_mb[var10] = param0.field_h[var11] & 65535;
                                 this.field_C[var10] = param0.field_B[var11] & 65535;
                                 this.field_qb[var10] = param0.field_y[var11] & 65535;
-                                incrementValue$1 = var10;
+                                incrementValue$0 = var10;
                                 var10++;
-                                var9_ref_int__[var11] = incrementValue$1;
+                                var9_ref_int__[var11] = incrementValue$0;
                                 var11++;
                                 continue L6;
                               }
@@ -3215,7 +3164,8 @@ final class eg extends qc {
                   }
                 } else {
                   if (param0.field_I[var10] != -1) {
-                    var9_ref_int__[param0.field_I[var10] & 255] = var9_ref_int__[param0.field_I[var10] & 255] + 1;
+                    dupTemp$1 = param0.field_I[var10] & 255;
+                    var9_ref_int__[dupTemp$1] = var9_ref_int__[dupTemp$1] + 1;
                     var10++;
                     continue L4;
                   } else {

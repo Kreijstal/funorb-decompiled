@@ -36,42 +36,20 @@ final class uma extends sh {
 
     final static void a(int param0, int param1, int param2, kv param3, int param4, int[] param5) {
         int var6_int = 0;
-        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException var6 = null;
         var10 = BachelorFridge.field_y;
         try {
           L0: {
@@ -118,56 +96,40 @@ final class uma extends sh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var6);
-            stackOut_12_1 = new StringBuilder().append("uma.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var6);
+
+            stackIn_14_1 = new StringBuilder().append("uma.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L5;
             }
           }
           L6: {
-            stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param4).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+
+
+            stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L6;
             }
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_15_0), stackIn_18_2 + ')');
         }
     }
 
@@ -175,7 +137,6 @@ final class uma extends sh {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         try {
           L0: {
             L1: {
@@ -186,8 +147,7 @@ final class uma extends sh {
                 break L1;
               }
             }
-            stackOut_2_0 = Integer.parseInt(this.field_N.field_w) + -1;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = Integer.parseInt(this.field_N.field_w) + -1;
             break L0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -199,14 +159,14 @@ final class uma extends sh {
     }
 
     final static void n(int param0) {
-        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         hw var4 = null;
         int var5 = 0;
         int var6 = 0;
-        RuntimeException decompiledCaughtException = null;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -271,12 +231,10 @@ final class uma extends sh {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         if (param0 == -1) {
           try {
             L0: {
-              stackOut_2_0 = Integer.parseInt(this.field_L.field_w);
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = Integer.parseInt(this.field_L.field_w);
               break L0;
             }
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -359,54 +317,30 @@ final class uma extends sh {
     }
 
     final boolean k(int param0) {
-        if (null == this.field_Q.field_w) {
-          return true;
-        } else {
-          if (0 != this.field_Q.field_w.length()) {
-            if (param0 < -54) {
-              L0: {
-                if (null == this.field_N.field_w) {
-                  break L0;
-                } else {
-                  if (0 != this.field_N.field_w.length()) {
-                    L1: {
-                      if (this.field_L.field_w == null) {
-                        break L1;
-                      } else {
-                        if (0 != this.field_L.field_w.length()) {
-                          return false;
-                        } else {
-                          break L1;
-                        }
-                      }
-                    }
-                    return true;
-                  } else {
-                    break L0;
-                  }
-                }
-              }
-              return true;
-            } else {
-              return true;
-            }
-          } else {
+        if (null == this.field_Q.field_w || 0 == this.field_Q.field_w.length()) {
             return true;
-          }
         }
+        if (param0 >= -54) {
+            return true;
+        }
+        if (null == this.field_N.field_w || 0 == this.field_N.field_w.length()) {
+            return true;
+        }
+        if (this.field_L.field_w == null || 0 == this.field_L.field_w.length()) {
+            return true;
+        }
+        return false;
     }
 
     final int d(byte param0) {
-        int var2_int = 0;
-        NumberFormatException var2 = null;
         int stackIn_1_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_0_0 = 0;
+        int var2_int = 0;
+        NumberFormatException var2 = null;
         try {
           L0: {
             var2_int = -108 % ((-64 - param0) / 56);
-            stackOut_0_0 = Integer.parseInt(this.field_Q.field_w);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = Integer.parseInt(this.field_Q.field_w);
             break L0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

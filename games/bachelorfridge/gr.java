@@ -16,6 +16,9 @@ final class gr {
     }
 
     final static String a(int param0) {
+        String stackIn_58_0 = null;
+        Object stackIn_100_0 = null;
+        RuntimeException decompiledCaughtException = null;
         Object var1 = null;
         Object var2 = null;
         String var3 = null;
@@ -26,12 +29,6 @@ final class gr {
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
-        String stackIn_58_0 = null;
-        Object stackIn_100_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_57_0 = null;
-        String stackOut_55_0 = null;
-        Object stackOut_99_0 = null;
         var10 = BachelorFridge.field_y;
         try {
           L0: {
@@ -175,12 +172,10 @@ final class gr {
                     }
                     L13: {
                       if (ak.e(param0 ^ -1373)) {
-                        stackOut_57_0 = ": ";
-                        stackIn_58_0 = stackOut_57_0;
+                        stackIn_58_0 = ": ";
                         break L13;
                       } else {
-                        stackOut_55_0 = "<img=3>: ";
-                        stackIn_58_0 = stackOut_55_0;
+                        stackIn_58_0 = "<img=3>: ";
                         break L13;
                       }
                     }
@@ -269,8 +264,7 @@ final class gr {
                 break L7;
               }
             }
-            stackOut_99_0 = var1;
-            stackIn_100_0 = stackOut_99_0;
+            stackIn_100_0 = var1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

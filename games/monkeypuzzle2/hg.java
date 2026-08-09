@@ -7,9 +7,9 @@ final class hg extends ba {
     private java.awt.Component field_j;
 
     final void a(int param0, java.awt.Component param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         if (param3 >= -10) {
           this.field_j = (java.awt.Component) null;
           this.field_i = param2;
@@ -37,7 +37,7 @@ final class hg extends ba {
     }
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
-        boolean discarded$10 = param2.drawImage(this.field_b, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_j));
+        param2.drawImage(this.field_b, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_j));
         if (param1 != 7) {
             java.awt.Component var6 = (java.awt.Component) null;
             this.a(-88, (java.awt.Component) null, 65, 59);

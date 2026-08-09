@@ -7,21 +7,20 @@ final class uk {
     static boolean field_c;
 
     final static void a(boolean param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        jh var3_ref_jh = null;
         int var3 = 0;
+        jh var3_ref_jh = null;
         cc var4 = null;
         int var4_int = 0;
         Object var5 = null;
-        byte[] var5_array = null;
         int var6 = 0;
         byte[] var7 = null;
         uc var8 = null;
         byte[] var9 = null;
         byte[] var10 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var6 = Terraphoenix.field_V;
         try {
           L0: {
@@ -65,13 +64,13 @@ final class uk {
                   L4: {
                     var4_int = var8.a(-16384);
                     if (-1 == (var4_int ^ -1)) {
-                      var5_array = null;
+                      var5 = null;
                       break L4;
                     } else {
                       var10 = new byte[var4_int];
                       var9 = var10;
                       var7 = var9;
-                      var5_array = var7;
+                      var5 = var7;
                       var8.a(var4_int, 0, 90, var10);
                       break L4;
                     }
@@ -83,7 +82,7 @@ final class uk {
                     break L0;
                   } else {
                     var3_ref_jh.field_i = true;
-                    var3_ref_jh.field_j = var5_array;
+                    var3_ref_jh.field_j = (byte[]) (var5);
                     var3_ref_jh.b((byte) 12);
                     break L1;
                   }

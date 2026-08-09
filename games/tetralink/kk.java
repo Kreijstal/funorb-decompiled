@@ -23,9 +23,8 @@ final class kk extends ae {
     }
 
     final int a(int param0) {
-        oh[] discarded$0 = null;
         if (param0 != 23329) {
-            discarded$0 = kk.a(113, 9, -96, 50, (byte) -124);
+            kk.a(113, 9, -96, 50, (byte) -124);
         }
         return this.field_S;
     }
@@ -71,32 +70,21 @@ final class kk extends ae {
     }
 
     final boolean a(na param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        RuntimeException var8 = null;
+        int stackIn_22_0 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_21_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         var14 = TetraLink.field_J;
         try {
           L0: {
@@ -134,7 +122,7 @@ final class kk extends ae {
                           this.field_Q.a(0, var11);
                           break L3;
                         } else {
-                          return true;
+                          break L3;
                         }
                       } else {
                         var13 = this.field_Q.a(var12, (byte) 11) - var8_int;
@@ -156,8 +144,7 @@ final class kk extends ae {
                   break L3;
                 }
               }
-              stackOut_20_0 = 1;
-              stackIn_21_0 = stackOut_20_0;
+              stackIn_22_0 = 1;
               break L0;
             } else {
               return false;
@@ -167,33 +154,25 @@ final class kk extends ae {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var8);
-            stackOut_22_1 = new StringBuilder().append("kk.PA(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_25_0 = (RuntimeException) (var8);
+
+            stackIn_25_1 = new StringBuilder().append("kk.PA(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L5;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L5;
             }
           }
-          throw oi.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
-        return stackIn_21_0 != 0;
+        return stackIn_22_0 != 0;
     }
 
     final static int i(int param0) {
@@ -205,8 +184,6 @@ final class kk extends ae {
         int stackIn_14_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_2_0 = 0;
         var3 = TetraLink.field_J;
         try {
           L0: {
@@ -241,8 +218,7 @@ final class kk extends ae {
                       }
                     }
                   }
-                  stackOut_13_0 = var2;
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_0 = var2;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -256,8 +232,7 @@ final class kk extends ae {
                 }
               }
             } else {
-              stackOut_2_0 = -48;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = -48;
               decompiledRegionSelector0 = 0;
               break L0;
             }

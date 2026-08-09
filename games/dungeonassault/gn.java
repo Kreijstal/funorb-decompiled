@@ -37,15 +37,11 @@ final class gn {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        java.awt.Component var4 = null;
+        int var2;
+        int var3;
+        java.awt.Component var4;
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
         this.field_b = rf.field_K.a(this.field_e, (byte) -48);
         this.field_f = rf.field_K.a(this.field_j, (byte) -48);
         var2 = oj.a(this.field_f, -1, new int[]{194}, la.field_b);
@@ -54,12 +50,10 @@ final class gn {
           if (null != this.field_b) {
             L0: {
               if (null == this.field_b) {
-                stackOut_12_0 = 0;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = 0;
                 break L0;
               } else {
-                stackOut_11_0 = oj.a(this.field_b, -1, new int[]{194}, ne.field_c);
-                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_0 = oj.a(this.field_b, -1, new int[]{194}, ne.field_c);
                 break L0;
               }
             }
@@ -77,12 +71,10 @@ final class gn {
           if (null != this.field_b) {
             L1: {
               if (null == this.field_b) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L1;
               } else {
-                stackOut_4_0 = oj.a(this.field_b, -1, new int[]{194}, ne.field_c);
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = oj.a(this.field_b, -1, new int[]{194}, ne.field_c);
                 break L1;
               }
             }

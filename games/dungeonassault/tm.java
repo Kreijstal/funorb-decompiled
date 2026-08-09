@@ -23,13 +23,24 @@ final class tm {
     int field_f;
 
     private final void a(byte[] param0, byte param1) {
-        int dupTemp$7 = 0;
-        int dupTemp$8 = 0;
-        int[] array$9 = null;
-        int dupTemp$10 = 0;
-        int[] array$11 = null;
-        int dupTemp$12 = 0;
-        int[] array$13 = null;
+        int dupTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int[] array$2 = null;
+        int dupTemp$3 = 0;
+        int[] dupTemp$4 = null;
+        int[] array$5 = null;
+        int dupTemp$6 = 0;
+        int[] dupTemp$7 = null;
+        int[] array$8 = null;
+        int stackIn_13_0 = 0;
+        int stackIn_16_0 = 0;
+        RuntimeException stackIn_99_0 = null;
+        StringBuilder stackIn_99_1 = null;
+        RuntimeException stackIn_100_0 = null;
+        StringBuilder stackIn_100_1 = null;
+        String stackIn_100_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -46,29 +57,6 @@ final class tm {
         int var16 = 0;
         ec var17 = null;
         byte[] var21 = null;
-        int stackIn_13_0 = 0;
-        int stackIn_16_0 = 0;
-        RuntimeException stackIn_98_0 = null;
-        StringBuilder stackIn_98_1 = null;
-        RuntimeException stackIn_99_0 = null;
-        StringBuilder stackIn_99_1 = null;
-        RuntimeException stackIn_100_0 = null;
-        StringBuilder stackIn_100_1 = null;
-        String stackIn_100_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        RuntimeException stackOut_97_0 = null;
-        StringBuilder stackOut_97_1 = null;
-        RuntimeException stackOut_99_0 = null;
-        StringBuilder stackOut_99_1 = null;
-        String stackOut_99_2 = null;
-        RuntimeException stackOut_98_0 = null;
-        StringBuilder stackOut_98_1 = null;
-        String stackOut_98_2 = null;
         var16 = DungeonAssault.field_K;
         try {
           L0: {
@@ -92,24 +80,20 @@ final class tm {
                     L3: {
                       var5 = var17.c(true);
                       if ((1 & var5) == 0) {
-                        stackOut_12_0 = 0;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = 0;
                         break L3;
                       } else {
-                        stackOut_11_0 = 1;
-                        stackIn_13_0 = stackOut_11_0;
+                        stackIn_13_0 = 1;
                         break L3;
                       }
                     }
                     L4: {
                       var6 = stackIn_13_0;
                       if (0 == (var5 & 2)) {
-                        stackOut_15_0 = 0;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = 0;
                         break L4;
                       } else {
-                        stackOut_14_0 = 1;
-                        stackIn_16_0 = stackOut_14_0;
+                        stackIn_16_0 = 1;
                         break L4;
                       }
                     }
@@ -133,9 +117,9 @@ final class tm {
                           if (this.field_h <= var10) {
                             break L6;
                           } else {
-                            dupTemp$7 = var8 + var17.k(0);
-                            var8 = dupTemp$7;
-                            this.field_j[var10] = dupTemp$7;
+                            dupTemp$0 = var8 + var17.k(0);
+                            var8 = dupTemp$0;
+                            this.field_j[var10] = dupTemp$0;
                             if (this.field_j[var10] > var9) {
                               var9 = this.field_j[var10];
                               var10++;
@@ -152,10 +136,10 @@ final class tm {
                           if (this.field_h <= var10) {
                             break L6;
                           } else {
-                            dupTemp$8 = var8 + var17.j(1);
-                            var8 = dupTemp$8;
-                            this.field_j[var10] = dupTemp$8;
-                            if (var9 < this.field_j[var10]) {
+                            dupTemp$1 = var8 + var17.j(1);
+                            var8 = dupTemp$1;
+                            this.field_j[var10] = dupTemp$1;
+                            if ((var9 ^ -1) > (this.field_j[var10] ^ -1)) {
                               var9 = this.field_j[var10];
                               var10++;
                               continue L8;
@@ -246,8 +230,8 @@ final class tm {
                                         var8 = 0;
                                         var12 = this.field_k[var11];
                                         var13 = -1;
-                                        array$9 = new int[var12];
-                                        this.field_m[var11] = array$9;
+                                        array$2 = new int[var12];
+                                        this.field_m[var11] = array$2;
                                         var14 = 0;
                                         L20: while (true) {
                                           if (var12 <= var14) {
@@ -264,10 +248,11 @@ final class tm {
                                             continue L19;
                                           } else {
                                             L22: {
-                                              dupTemp$10 = var8 + var17.j(1);
-                                              var8 = dupTemp$10;
-                                              this.field_m[var11][var14] = dupTemp$10;
-                                              var15 = dupTemp$10;
+                                              dupTemp$3 = var8 + var17.j(1);
+                                              var8 = dupTemp$3;
+                                              dupTemp$4 = this.field_m[var11];
+                                              dupTemp$4[var14] = dupTemp$3;
+                                              var15 = dupTemp$3;
                                               if (var13 < var15) {
                                                 var13 = var15;
                                                 break L22;
@@ -299,8 +284,8 @@ final class tm {
                                         var11 = this.field_j[var10];
                                         var8 = 0;
                                         var12 = this.field_k[var11];
-                                        array$11 = new int[var12];
-                                        this.field_m[var11] = array$11;
+                                        array$5 = new int[var12];
+                                        this.field_m[var11] = array$5;
                                         var13 = -1;
                                         var14 = 0;
                                         L25: while (true) {
@@ -318,11 +303,12 @@ final class tm {
                                             continue L24;
                                           } else {
                                             L27: {
-                                              dupTemp$12 = var8 + var17.k(0);
-                                              var8 = dupTemp$12;
-                                              this.field_m[var11][var14] = dupTemp$12;
-                                              var15 = dupTemp$12;
-                                              if (var13 < var15) {
+                                              dupTemp$6 = var8 + var17.k(0);
+                                              var8 = dupTemp$6;
+                                              dupTemp$7 = this.field_m[var11];
+                                              dupTemp$7[var14] = dupTemp$6;
+                                              var15 = dupTemp$6;
+                                              if ((var13 ^ -1) > (var15 ^ -1)) {
                                                 var13 = var15;
                                                 break L27;
                                               } else {
@@ -356,8 +342,8 @@ final class tm {
                                   } else {
                                     var11 = this.field_j[var10];
                                     var12 = this.field_k[var11];
-                                    array$13 = new int[this.field_i[var11]];
-                                    this.field_d[var11] = array$13;
+                                    array$8 = new int[this.field_i[var11]];
+                                    this.field_d[var11] = array$8;
                                     var13 = 0;
                                     L30: while (true) {
                                       if (this.field_i[var11] <= var13) {
@@ -421,27 +407,19 @@ final class tm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L33: {
             var3 = decompiledCaughtException;
-            stackOut_97_0 = (RuntimeException) (var3);
-            stackOut_97_1 = new StringBuilder().append("tm.A(");
-            stackIn_99_0 = stackOut_97_0;
-            stackIn_99_1 = stackOut_97_1;
-            stackIn_98_0 = stackOut_97_0;
-            stackIn_98_1 = stackOut_97_1;
+            stackIn_99_0 = (RuntimeException) (var3);
+
+            stackIn_99_1 = new StringBuilder().append("tm.A(");
+
             if (param0 == null) {
-              stackOut_99_0 = (RuntimeException) ((Object) stackIn_99_0);
-              stackOut_99_1 = (StringBuilder) ((Object) stackIn_99_1);
-              stackOut_99_2 = "null";
-              stackIn_100_0 = stackOut_99_0;
-              stackIn_100_1 = stackOut_99_1;
-              stackIn_100_2 = stackOut_99_2;
+              stackIn_100_0 = (RuntimeException) ((Object) stackIn_99_0);
+              stackIn_100_1 = (StringBuilder) ((Object) stackIn_99_1);
+              stackIn_100_2 = "null";
               break L33;
             } else {
-              stackOut_98_0 = (RuntimeException) ((Object) stackIn_98_0);
-              stackOut_98_1 = (StringBuilder) ((Object) stackIn_98_1);
-              stackOut_98_2 = "{...}";
-              stackIn_100_0 = stackOut_98_0;
-              stackIn_100_1 = stackOut_98_1;
-              stackIn_100_2 = stackOut_98_2;
+              stackIn_100_0 = (RuntimeException) ((Object) stackIn_99_0);
+              stackIn_100_1 = (StringBuilder) ((Object) stackIn_99_1);
+              stackIn_100_2 = "{...}";
               break L33;
             }
           }

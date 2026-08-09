@@ -13,17 +13,17 @@ abstract class fnb {
     abstract byte[] a(int param0, int param1);
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
-        RuntimeException var6 = null;
-        qw var6_ref = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        qw var6 = null;
         int var6_int = 0;
+        RuntimeException var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         ana var9 = null;
         int var9_int = 0;
         qw var10 = null;
         int var11 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var11 = VoidHunters.field_G;
         try {
           L0: {
@@ -42,9 +42,9 @@ abstract class fnb {
                 if (null == kba.field_a) {
                   break L2;
                 } else {
-                  var6_ref = (qw) ((Object) ms.field_y.d(0));
+                  var6 = (qw) ((Object) ms.field_y.d(0));
                   L3: while (true) {
-                    if (var6_ref == null) {
+                    if (var6 == null) {
                       L4: {
                         var6_int = uv.a(128, param2);
                         var7 = pja.b((byte) 95, param2, param1);
@@ -76,21 +76,21 @@ abstract class fnb {
                       break L2;
                     } else {
                       L6: {
-                        if (var6_ref.field_f != param4) {
+                        if (var6.field_f != param4) {
                           break L6;
                         } else {
-                          if (!var6_ref.field_m) {
+                          if (!var6.field_m) {
                             break L6;
                           } else {
-                            if (Math.abs(-jia.field_o + var6_ref.field_i) >= param0) {
+                            if (Math.abs(-jia.field_o + var6.field_i) >= param0) {
                               break L6;
                             } else {
-                              if (var6_ref.field_i != jia.field_o) {
-                                var7 = -param2 + var6_ref.field_d;
-                                var8 = var6_ref.field_h + -param1;
+                              if (var6.field_i != jia.field_o) {
+                                var7 = -param2 + var6.field_d;
+                                var8 = var6.field_h + -param1;
                                 var9_int = ar.a(var7, (byte) 109, var8);
                                 if (var9_int < tj.field_q) {
-                                  cqb.a(var6_ref.field_d + 65536, var6_ref.field_h, var6_ref.field_h, var6_ref.field_d, (byte) -54);
+                                  cqb.a(var6.field_d + 65536, var6.field_h, var6.field_h, var6.field_d, (byte) -54);
                                   decompiledRegionSelector0 = 2;
                                   break L0;
                                 } else {
@@ -104,7 +104,7 @@ abstract class fnb {
                           }
                         }
                       }
-                      var6_ref = (qw) ((Object) ms.field_y.a((byte) 127));
+                      var6 = (qw) ((Object) ms.field_y.a((byte) 127));
                       continue L3;
                     }
                   }
@@ -116,8 +116,8 @@ abstract class fnb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var6), "fnb.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          var6_ref = decompiledCaughtException;
+          throw rta.a((Throwable) ((Object) var6_ref), "fnb.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

@@ -9,22 +9,16 @@ final class rl {
     final static boolean b(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         rf.field_r = true;
         if (param0 != 0) {
           L0: {
             rl.a(-78);
             ah.field_z = 15000L + ll.a(param0 + 1000);
             if (-12 != (q.field_Jb ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -33,12 +27,10 @@ final class rl {
           L1: {
             ah.field_z = 15000L + ll.a(param0 + 1000);
             if (-12 != (q.field_Jb ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -59,12 +51,10 @@ final class rl {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_10_0 = 0;
         int stackIn_12_0 = 0;
+        int stackIn_14_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_9_0 = 0;
         var4 = Terraphoenix.field_V;
         try {
           L0: {
@@ -80,13 +70,11 @@ final class rl {
             L2: while (true) {
               if (-2 <= (param1 ^ -1)) {
                 if (1 != param1) {
-                  stackOut_11_0 = var3_int;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_14_0 = var3_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_9_0 = param0 * var3_int;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_12_0 = param0 * var3_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -111,9 +99,9 @@ final class rl {
           throw qk.a((Throwable) ((Object) var3), "rl.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_10_0;
-        } else {
           return stackIn_12_0;
+        } else {
+          return stackIn_14_0;
         }
     }
 

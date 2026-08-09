@@ -14,8 +14,8 @@ final class an implements Runnable {
     volatile boolean field_f;
 
     final static void a(int param0, boolean param1, boolean param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = SteelSentinels.field_G;
         var4 = 83 % ((param3 - 35) / 50);
         if (param0 != -1) {
@@ -42,12 +42,12 @@ final class an implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        Exception var1 = null;
         tb var2 = null;
-        Throwable var3 = null;
         int var4 = 0;
-        String var5 = null;
         Throwable decompiledCaughtException = null;
+        Exception var1 = null;
+        Throwable var3 = null;
+        String var5 = null;
         var4 = SteelSentinels.field_G;
         this.field_f = true;
         try {

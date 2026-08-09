@@ -37,8 +37,12 @@ final class oe implements so {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        int stackIn_20_0 = 0;
+        int stackIn_28_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -49,14 +53,6 @@ final class oe implements so {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_28_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
         var15 = BachelorFridge.field_y;
         try {
           L0: {
@@ -94,12 +90,10 @@ final class oe implements so {
                   }
                   L4: {
                     if (var6_int <= var7) {
-                      stackOut_19_0 = 0;
-                      stackIn_20_0 = stackOut_19_0;
+                      stackIn_20_0 = 0;
                       break L4;
                     } else {
-                      stackOut_18_0 = 1;
-                      stackIn_20_0 = stackOut_18_0;
+                      stackIn_20_0 = 1;
                       break L4;
                     }
                   }
@@ -136,12 +130,10 @@ final class oe implements so {
                     var11 = -param0 + param4;
                     var12 = -(var10 >> 1707955873);
                     if (param0 < param4) {
-                      stackOut_27_0 = 1;
-                      stackIn_28_0 = stackOut_27_0;
+                      stackIn_28_0 = 1;
                       break L7;
                     } else {
-                      stackOut_26_0 = -1;
-                      stackIn_28_0 = stackOut_26_0;
+                      stackIn_28_0 = -1;
                       break L7;
                     }
                   }

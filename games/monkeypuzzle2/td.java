@@ -9,13 +9,13 @@ final class td extends jl {
     byte[] field_j;
 
     final td a(o param0) {
-        int dupTemp$2 = 0;
+        int dupTemp$1 = 0;
         this.field_j = param0.a(false, this.field_j);
         this.field_f = param0.a(this.field_f, -98);
         if (this.field_i == this.field_g) {
-          dupTemp$2 = param0.a(this.field_i, (byte) 44);
-          this.field_g = dupTemp$2;
-          this.field_i = dupTemp$2;
+          dupTemp$1 = param0.a(this.field_i, (byte) 44);
+          this.field_g = dupTemp$1;
+          this.field_i = dupTemp$1;
           return (td) (this);
         } else {
           L0: {

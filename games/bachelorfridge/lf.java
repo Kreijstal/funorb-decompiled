@@ -19,8 +19,8 @@ final class lf {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var2 = BachelorFridge.field_y;
         mda.field_b = new sna();
         if (param0 < 57) {

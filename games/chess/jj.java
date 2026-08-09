@@ -10,12 +10,12 @@ final class jj {
     static hn field_a;
 
     final static void c(int param0) {
-        int fieldTemp$7 = 0;
+        int fieldTemp$2 = 0;
         nk var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var3 = Chess.field_G;
         try {
           L0: {
@@ -33,9 +33,9 @@ final class jj {
                 break L0;
               } else {
                 var1.f(8, -65);
-                fieldTemp$7 = var1.field_l + 1;
+                fieldTemp$2 = var1.field_l + 1;
                 var1.field_l = var1.field_l + 1;
-                var2 = fieldTemp$7;
+                var2 = fieldTemp$2;
                 de.a(var1, (byte) 67);
                 qn.field_U.a(var1.field_l + -var2, -1);
                 continue L2;
@@ -64,9 +64,6 @@ final class jj {
     final static boolean b(int param0) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == 7) {
           if (cd.field_x == null) {
             if (an.field_c) {
@@ -75,8 +72,7 @@ final class jj {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
@@ -86,12 +82,10 @@ final class jj {
           } else {
             L0: {
               if (!an.field_c) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }
@@ -101,7 +95,7 @@ final class jj {
     }
 
     final static boolean d(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = -103 / ((75 - param0) / 42);
         if (ch.field_gb != null) {
           if (!ch.field_gb.b(-1)) {

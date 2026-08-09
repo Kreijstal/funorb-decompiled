@@ -12,12 +12,12 @@ final class te extends kj {
 
     final static void c(byte param0) {
         try {
+            Throwable decompiledCaughtException = null;
             IOException var1 = null;
-            RuntimeException var1_ref = null;
             int var1_int = 0;
+            RuntimeException var1_ref = null;
             IOException var2 = null;
             int var3 = 0;
-            Throwable decompiledCaughtException = null;
             var3 = BachelorFridge.field_y;
             try {
               L0: {
@@ -119,8 +119,8 @@ final class te extends kj {
     }
 
     final static int a(int param0, byte param1) {
-        String var2 = null;
-        int var3 = 0;
+        String var2;
+        int var3;
         var3 = 70 % ((18 - param1) / 42);
         var2 = lka.field_E[param0][7];
         var2 = var2.trim();
@@ -133,7 +133,6 @@ final class te extends kj {
     }
 
     final boolean b(int param0) {
-        boolean discarded$5 = false;
         L0: {
           if ((this.field_g ^ -1) == -61) {
             jja.a(192, -1, 25);
@@ -142,15 +141,15 @@ final class te extends kj {
             break L0;
           }
         }
-        int fieldTemp$4 = this.field_g - 1;
+        int fieldTemp$1 = this.field_g - 1;
         this.field_g = this.field_g - 1;
-        if (fieldTemp$4 < 0) {
+        if (fieldTemp$1 < 0) {
           this.field_e.field_h.b((byte) 106, 35, this.field_d, this.field_c);
           jja.a(128, -1, 24);
           return true;
         } else {
           if (param0 <= 21) {
-            discarded$5 = this.b(1);
+            this.b(1);
             return false;
           } else {
             return false;
@@ -167,10 +166,10 @@ final class te extends kj {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        ee var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        ee var5;
+        int var6;
+        int var7;
         var4 = this.field_g * ((-(this.field_g * 655360) + 52428800 >> -1986239376) + 400) / 80;
         if (param1 != 0) {
           this.field_h = -112;

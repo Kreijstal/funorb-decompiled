@@ -83,20 +83,12 @@ abstract class df extends se {
     }
 
     boolean i(int param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_11_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_38_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int var2;
+        int var3;
         var2 = this.a((byte) -55);
         var3 = -this.field_K + var2;
         if (param0 == -27388) {
@@ -121,15 +113,13 @@ abstract class df extends se {
                     if (this.field_R) {
                       break L2;
                     } else {
-                      stackOut_36_0 = 1;
-                      stackIn_38_0 = stackOut_36_0;
+                      stackIn_38_0 = 1;
                       break L1;
                     }
                   }
                 }
               }
-              stackOut_37_0 = 0;
-              stackIn_38_0 = stackOut_37_0;
+              stackIn_38_0 = 0;
               break L1;
             }
             return stackIn_38_0 != 0;
@@ -145,15 +135,13 @@ abstract class df extends se {
                     if (this.field_R) {
                       break L4;
                     } else {
-                      stackOut_30_0 = 1;
-                      stackIn_32_0 = stackOut_30_0;
+                      stackIn_32_0 = 1;
                       break L3;
                     }
                   }
                 }
               }
-              stackOut_31_0 = 0;
-              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_0 = 0;
               break L3;
             }
             return stackIn_32_0 != 0;
@@ -176,12 +164,10 @@ abstract class df extends se {
               } else {
                 L6: {
                   if (this.field_R) {
-                    stackOut_19_0 = 0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_20_0 = 0;
                     break L6;
                   } else {
-                    stackOut_18_0 = 1;
-                    stackIn_20_0 = stackOut_18_0;
+                    stackIn_20_0 = 1;
                     break L6;
                   }
                 }
@@ -197,12 +183,10 @@ abstract class df extends se {
               } else {
                 L7: {
                   if (this.field_R) {
-                    stackOut_10_0 = 0;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = 0;
                     break L7;
                   } else {
-                    stackOut_9_0 = 1;
-                    stackIn_11_0 = stackOut_9_0;
+                    stackIn_11_0 = 1;
                     break L7;
                   }
                 }
@@ -232,10 +216,6 @@ abstract class df extends se {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        cf discarded$4 = null;
-        cf discarded$5 = null;
-        cf discarded$6 = null;
-        cf discarded$7 = null;
         if (-1 != (this.field_K ^ -1)) {
           if (-257 >= (this.field_K ^ -1)) {
             if (param2 != 0) {
@@ -256,7 +236,7 @@ abstract class df extends se {
                   ql.a(true);
                   ej.field_g.c(param3 + this.field_y, param1 - -this.field_i, this.field_K);
                   if (param0 != -2) {
-                    discarded$4 = this.g(76);
+                    this.g(76);
                     return;
                   } else {
                     return;
@@ -270,7 +250,7 @@ abstract class df extends se {
                   ql.a(true);
                   ej.field_g.c(param3 + this.field_y, param1 - -this.field_i, this.field_K);
                   if (param0 != -2) {
-                    discarded$5 = this.g(76);
+                    this.g(76);
                     return;
                   } else {
                     return;
@@ -285,7 +265,7 @@ abstract class df extends se {
                 ql.a(true);
                 ej.field_g.c(param3 + this.field_y, param1 - -this.field_i, this.field_K);
                 if (param0 != -2) {
-                  discarded$6 = this.g(76);
+                  this.g(76);
                   return;
                 } else {
                   return;
@@ -300,7 +280,7 @@ abstract class df extends se {
               ql.a(true);
               ej.field_g.c(param3 + this.field_y, param1 - -this.field_i, this.field_K);
               if (param0 != -2) {
-                discarded$7 = this.g(76);
+                this.g(76);
                 return;
               } else {
                 return;

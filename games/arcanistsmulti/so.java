@@ -543,7 +543,7 @@ final class so {
     }
 
     final void a(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         L0: {
           var3 = -55 % ((-18 - param0) / 61);
           this.field_o = 0;
@@ -1074,33 +1074,20 @@ final class so {
     }
 
     final void a(boolean param0, int param1, boolean param2, int param3) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           this.field_m = 0;
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param0) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -1110,7 +1097,7 @@ final class so {
           if (!param2) {
             return;
           } else {
-            discarded$4 = this.c((byte) 42);
+            this.c((byte) 42);
             return;
           }
         } else {
@@ -1118,7 +1105,7 @@ final class so {
           if (!param2) {
             return;
           } else {
-            discarded$5 = this.c((byte) 42);
+            this.c((byte) 42);
             return;
           }
         }
@@ -1175,7 +1162,7 @@ final class so {
     }
 
     final void d(int param0) {
-        int var2 = 0;
+        int var2;
         this.field_o = 0;
         var2 = 30 % ((-43 - param0) / 55);
         this.field_a = 0;
@@ -1188,7 +1175,7 @@ final class so {
     }
 
     public static void a(boolean param0) {
-        java.awt.Component var2 = null;
+        java.awt.Component var2;
         if (!param0) {
           var2 = (java.awt.Component) null;
           so.a((java.awt.Component) null, 80);
@@ -1215,20 +1202,14 @@ final class so {
     final boolean a(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -13722) {
           L0: {
             this.a(-52, 68, 71);
             if (102 != this.field_a) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -1236,12 +1217,10 @@ final class so {
         } else {
           L1: {
             if (102 != this.field_a) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -1259,20 +1238,14 @@ final class so {
     final boolean b(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -40) {
           L0: {
             this.field_e = -77;
             if (96 != this.field_a) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -1280,12 +1253,10 @@ final class so {
         } else {
           L1: {
             if (96 != this.field_a) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

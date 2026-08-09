@@ -7,34 +7,22 @@ final class gla extends nu {
     static boolean field_k;
 
     public static void a(byte param0) {
-        cj discarded$0 = null;
         field_j = null;
         if (param0 != -62) {
             lu var2 = (lu) null;
-            discarded$0 = gla.a((lu) null, (byte) -126);
+            gla.a((lu) null, (byte) -126);
         }
     }
 
     final static cj a(lu param0, byte param1) {
         RuntimeException var2 = null;
         vg stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vg stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -45,35 +33,26 @@ final class gla extends nu {
                 break L1;
               }
             }
-            stackOut_2_0 = new vg(param0);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new vg(param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("gla.B(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("gla.B(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -83,32 +62,27 @@ final class gla extends nu {
     }
 
     final byte[] a(boolean param0) {
-        java.nio.Buffer discarded$8 = null;
-        java.nio.ByteBuffer discarded$9 = null;
-        java.nio.Buffer discarded$10 = null;
-        java.nio.ByteBuffer discarded$11 = null;
-        byte[] var2 = null;
-        byte[] var3 = null;
+        byte[] var2;
+        byte[] var3;
         var3 = new byte[this.field_i.capacity()];
         var2 = var3;
         if (param0) {
           this.field_i = (java.nio.ByteBuffer) null;
-          discarded$8 = this.field_i.position(0);
-          discarded$9 = this.field_i.get(var3);
+          this.field_i.position(0);
+          this.field_i.get(var3);
           return var3;
         } else {
-          discarded$10 = this.field_i.position(0);
-          discarded$11 = this.field_i.get(var3);
+          this.field_i.position(0);
+          this.field_i.get(var3);
           return var3;
         }
     }
 
     final static void a(int param0, int param1, int param2, kv[] param3) {
-        cj discarded$0 = null;
         try {
             if (param0 > -97) {
                 lu var5 = (lu) null;
-                discarded$0 = gla.a((lu) null, (byte) 47);
+                gla.a((lu) null, (byte) 47);
             }
             it.field_s = new lda(param3);
             fh.field_v = param2;
@@ -123,38 +97,25 @@ final class gla extends nu {
     }
 
     final void a(byte param0, byte[] param1) {
-        java.nio.Buffer discarded$6 = null;
-        java.nio.ByteBuffer discarded$7 = null;
-        cj discarded$8 = null;
         RuntimeException runtimeException = null;
         lu var4 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
               this.field_i = java.nio.ByteBuffer.allocateDirect(param1.length);
-              discarded$6 = this.field_i.position(0);
-              discarded$7 = this.field_i.put(param1);
+              this.field_i.position(0);
+              this.field_i.put(param1);
               if (param0 >= 14) {
                 break L1;
               } else {
                 var4 = (lu) null;
-                discarded$8 = gla.a((lu) null, (byte) 36);
+                gla.a((lu) null, (byte) 36);
                 break L1;
               }
             }
@@ -164,27 +125,19 @@ final class gla extends nu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("gla.A(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("gla.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

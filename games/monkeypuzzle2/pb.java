@@ -40,7 +40,6 @@ final class pb implements ml {
     }
 
     public final void a(boolean param0, we param1, int param2, int param3, int param4) {
-        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -48,8 +47,6 @@ final class pb implements ml {
         int var10 = 0;
         em var11 = null;
         we stackIn_3_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -57,26 +54,14 @@ final class pb implements ml {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        we stackOut_1_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         try {
           L0: {
             L1: {
               if (!(param1 instanceof em)) {
-                stackOut_2_0 = null;
-                stackIn_3_0 = (we) ((Object) stackOut_2_0);
+                stackIn_3_0 = null;
                 break L1;
               } else {
-                stackOut_1_0 = (we) (param1);
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = (we) (param1);
                 break L1;
               }
             }
@@ -115,7 +100,7 @@ final class pb implements ml {
             if (param4 >= 19) {
               if (this.field_l != null) {
                 var10 = this.field_k + (this.field_o + this.field_a);
-                discarded$1 = this.field_l.a(param1.field_s, var10 + param1.field_r + param3, param1.field_e + (param2 - -this.field_h), param1.field_l + -this.field_a + -var10, param1.field_p + -(this.field_a << 378045761), this.field_j, this.field_f, this.field_c, this.field_e, 0);
+                this.field_l.a(param1.field_s, var10 + param1.field_r + param3, param1.field_e + (param2 - -this.field_h), param1.field_l + -this.field_a + -var10, param1.field_p + -(this.field_a << 378045761), this.field_j, this.field_f, this.field_c, this.field_e, 0);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -130,27 +115,19 @@ final class pb implements ml {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var6);
-            stackOut_16_1 = new StringBuilder().append("pb.C(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var6);
+
+            stackIn_18_1 = new StringBuilder().append("pb.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }

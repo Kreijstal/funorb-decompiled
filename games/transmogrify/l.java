@@ -8,11 +8,11 @@ final class l {
     static ci field_a;
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = Transmogrify.field_A ? 1 : 0;
           if (param1 <= -72) {
@@ -253,7 +253,7 @@ final class l {
     }
 
     final static oh a(byte param0, int param1) {
-        oh var2 = null;
+        oh var2;
         var2 = new oh();
         if (param0 != 12) {
           field_a = (ci) null;
@@ -268,12 +268,11 @@ final class l {
     }
 
     public static void a(byte param0) {
-        oh discarded$2 = null;
         field_b = null;
         field_a = null;
         field_d = null;
         if (param0 != 108) {
-          discarded$2 = l.a((byte) -80, 25);
+          l.a((byte) -80, 25);
           field_c = null;
           return;
         } else {

@@ -30,13 +30,11 @@ final class np extends ha {
             return -4L;
         }
         this.field_g = var2;
-        if (-5000000000L < var4) {
-            if (5000000000L > var4) {
-                this.field_f[this.field_j] = var4;
-                this.field_j = (this.field_j + 1) % 10;
-                if ((this.field_l ^ -1) > -2) {
-                    this.field_l = this.field_l + 1;
-                }
+        if (-5000000000L < var4 && 5000000000L > var4) {
+            this.field_f[this.field_j] = var4;
+            this.field_j = (this.field_j + 1) % 10;
+            if ((this.field_l ^ -1) > -2) {
+                this.field_l = this.field_l + 1;
             }
         }
         long var6 = 0L;
@@ -47,8 +45,8 @@ final class np extends ha {
     }
 
     final int a(long param0, boolean param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = Torquing.field_u;
         if (param1) {
           if (this.field_i >= this.field_h) {
@@ -89,103 +87,25 @@ final class np extends ha {
     }
 
     final static void a(wl param0, boolean param1, int param2) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        try {
-          L0: {
-            L1: {
-              if (param0 == null) {
-                break L1;
-              } else {
-                if (param0 != vd.field_c) {
-                  L2: {
-                    param0.a(of.field_m * 64 / 160);
-                    if (!param1) {
-                      break L2;
-                    } else {
-                      param0.g();
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    if (null == vd.field_c) {
-                      break L3;
-                    } else {
-                      ti.field_e.c(vd.field_c);
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    vd.field_c = param0;
-                    qd.field_b.e();
-                    if (param2 > 117) {
-                      break L4;
-                    } else {
-                      np.d(61);
-                      break L4;
-                    }
-                  }
-                  ti.field_e.a(vd.field_c);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            decompiledRegionSelector0 = 0;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (runtimeException);
-            stackOut_11_1 = new StringBuilder().append("np.G(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
-            if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L5;
-            } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L5;
-            }
-          }
-          throw rb.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ')');
+        if (param0 == null || param0 == vd.field_c) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            param0.a(of.field_m * 64 / 160);
+            if (param1) {
+                param0.g();
+            }
+            if (null != vd.field_c) {
+                ti.field_e.c(vd.field_c);
+            }
+            vd.field_c = param0;
+            qd.field_b.e();
+            if (param2 <= 117) {
+                np.d(61);
+            }
+            ti.field_e.a(vd.field_c);
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) ((Object) runtimeException), "np.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -195,8 +115,6 @@ final class np extends ha {
         int stackIn_6_0 = 0;
         int stackIn_8_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_7_0 = 0;
         var1 = ha.field_b;
         synchronized (var1) {
           L0: {
@@ -209,15 +127,13 @@ final class np extends ha {
               }
             }
             if (q.field_g == mj.field_d) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               return stackIn_6_0 != 0;
             } else {
               e.field_f = ol.field_c[q.field_g];
               m.field_t = pe.field_H[q.field_g];
               q.field_g = 127 & 1 + q.field_g;
-              stackOut_7_0 = 1;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -234,23 +150,12 @@ final class np extends ha {
         int var7 = 0;
         byte[] var8 = null;
         byte[] stackIn_9_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_8_0 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         var7 = Torquing.field_u;
         try {
           L0: {
@@ -286,35 +191,26 @@ final class np extends ha {
             var5.a(var4, (long)(param2 * 8), (byte) 95);
             var6 = new byte[64];
             var5.a(0, var6, 128);
-            stackOut_8_0 = (byte[]) (var6);
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = (byte[]) (var6);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var4_ref);
-            stackOut_10_1 = new StringBuilder().append("np.A(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var4_ref);
+
+            stackIn_12_1 = new StringBuilder().append("np.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -324,7 +220,7 @@ final class np extends ha {
     }
 
     final static void a(int param0, int param1, int param2) {
-        int var4 = 0;
+        int var4;
         L0: {
           var4 = Torquing.field_u;
           if (0 == (param0 ^ -1)) {

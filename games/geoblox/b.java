@@ -22,9 +22,9 @@ final class b {
     }
 
     final static ck a(boolean param0, int param1) {
-        ck[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
+        ck[] var2;
+        int var3;
+        int var4;
         L0: {
           var4 = Geoblox.field_C;
           var2 = fe.a(-1);

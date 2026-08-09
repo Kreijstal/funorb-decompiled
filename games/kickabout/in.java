@@ -55,12 +55,8 @@ final class in {
     }
 
     final static boolean a(byte param0) {
-        boolean discarded$5 = false;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 >= 64) {
           if (null == fb.field_J) {
             if (kd.field_s) {
@@ -69,23 +65,20 @@ final class in {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
-          discarded$5 = in.a((byte) 24);
+          in.a((byte) 24);
           if (null != fb.field_J) {
             return true;
           } else {
             L0: {
               if (!kd.field_s) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }

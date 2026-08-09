@@ -14,7 +14,7 @@ final class rg extends IOException {
     static int field_f;
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3;
         var3 = param1 >> 2028909343 & -1 + param2;
         if (param0 < 32) {
           field_a = true;

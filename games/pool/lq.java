@@ -18,13 +18,11 @@ final class lq extends ud {
     final static boolean b(byte param0, int param1) {
         try {
             int var2_int = 0;
-            IOException var2 = null;
             int stackIn_14_0 = 0;
             int stackIn_16_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_15_0 = 0;
-            int stackOut_13_0 = 0;
+            IOException var2 = null;
             if (param1 <= kn.field_e.field_v) {
               return true;
             } else {
@@ -73,13 +71,11 @@ final class lq extends ud {
                       kn.field_e.field_v = kn.field_e.field_v + var2_int;
                       if (param1 <= kn.field_e.field_v) {
                         kn.field_e.field_v = 0;
-                        stackOut_15_0 = 1;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = 1;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       } else {
-                        stackOut_13_0 = 0;
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = 0;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
@@ -136,16 +132,15 @@ final class lq extends ud {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
-        boolean discarded$1 = false;
-        RuntimeException var4 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         vh var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         pn var9 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var7 = Pool.field_O;
         try {
           L0: {
@@ -180,7 +175,7 @@ final class lq extends ud {
                     sg.field_J = null;
                     break L3;
                   } else {
-                    discarded$1 = sg.field_J.a(-125, fl.field_q.field_sb, param1, fl.field_q.field_ib);
+                    sg.field_J.a(-125, fl.field_q.field_sb, param1, fl.field_q.field_ib);
                     break L3;
                   }
                 }
@@ -269,24 +264,12 @@ final class lq extends ud {
     final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -299,12 +282,10 @@ final class lq extends ud {
             }
             L2: {
               if (gf.a(param1 ^ 88, param0) == null) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L2;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L2;
               }
             }
@@ -314,27 +295,19 @@ final class lq extends ud {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("lq.T(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("lq.T(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -428,8 +401,8 @@ final class lq extends ud {
     }
 
     final oe j(int param0) {
-        aa var2 = null;
-        oe var3 = null;
+        aa var2;
+        oe var3;
         L0: {
           if (param0 >= 101) {
             break L0;
@@ -482,7 +455,6 @@ final class lq extends ud {
 
     final void b(ei param0, int param1) {
         oe var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param0 instanceof oe)) {
                 throw new IllegalArgumentException();
@@ -493,7 +465,7 @@ final class lq extends ud {
             }
             this.field_P.a((byte) -84, var3);
             var3.field_R = true;
-            discarded$0 = var3.a((ei) (this), (byte) 66);
+            var3.a((ei) (this), (byte) 66);
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) ((Object) runtimeException), "lq.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

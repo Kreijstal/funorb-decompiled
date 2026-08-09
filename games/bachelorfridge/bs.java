@@ -13,23 +13,12 @@ final class bs extends bw {
         kv var2 = null;
         RuntimeException var2_ref = null;
         kv stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kv stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -44,35 +33,26 @@ final class bs extends bw {
             var2.b();
             param0.c(0, 0, 65793);
             hga.field_U.a((byte) 14);
-            stackOut_2_0 = (kv) (var2);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (kv) (var2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2_ref);
-            stackOut_4_1 = new StringBuilder().append("bs.C(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2_ref);
+
+            stackIn_6_1 = new StringBuilder().append("bs.C(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -82,19 +62,19 @@ final class bs extends bw {
     }
 
     public static void a(int param0) {
-        kv discarded$0 = null;
         field_j = null;
         field_g = null;
         if (param0 < 88) {
             kv var2 = (kv) null;
-            discarded$0 = bs.a((kv) null, (byte) -55);
+            bs.a((kv) null, (byte) -55);
         }
     }
 
     final static void c(byte param0) {
-        kv discarded$1 = null;
-        RuntimeException var1 = null;
-        int[] var1_array = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var3 = 0;
         int var4 = 0;
         kv var5 = null;
@@ -107,8 +87,6 @@ final class bs extends bw {
         int[] var14 = null;
         int[] var17 = null;
         int[] var18 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var4 = BachelorFridge.field_y;
         try {
           L0: {
@@ -133,7 +111,7 @@ final class bs extends bw {
                     var13 = sg.field_q;
                     var11 = var13;
                     var6 = var11;
-                    var1_array = var6;
+                    var1 = var6;
                     var17 = vla.field_x.field_m;
                     var3 = 0;
                     L3: while (true) {
@@ -141,7 +119,7 @@ final class bs extends bw {
                         var14 = nga.field_i;
                         var12 = var14;
                         var8 = var12;
-                        var1_array = var8;
+                        var1 = var8;
                         var18 = vla.field_x.field_m;
                         var10 = 0;
                         var3 = var10;
@@ -172,7 +150,7 @@ final class bs extends bw {
                   break L5;
                 } else {
                   var5 = (kv) null;
-                  discarded$1 = bs.a((kv) null, (byte) 34);
+                  bs.a((kv) null, (byte) 34);
                   break L5;
                 }
               }
@@ -203,8 +181,8 @@ final class bs extends bw {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "bs.A(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw pe.a((Throwable) ((Object) var1_ref), "bs.A(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

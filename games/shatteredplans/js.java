@@ -14,11 +14,11 @@ final class js {
     static int field_e;
 
     final static void a(int param0, int param1) {
-        qr discarded$2 = null;
         gm var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
+        boolean stackIn_13_0 = false;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -27,7 +27,7 @@ final class js {
               if (param1 == 197126152) {
                 break L1;
               } else {
-                discarded$2 = js.b((byte) -92);
+                js.b((byte) -92);
                 break L1;
               }
             }
@@ -43,8 +43,9 @@ final class js {
                       if (var2 == null) {
                         break L3;
                       } else {
+                        stackIn_13_0 = var2.field_n.c(param1 + -197124104);
                         L5: {
-                          if (var2.field_n.c(param1 + -197124104)) {
+                          if (stackIn_13_0) {
                             var2.field_p.e(128 + tf.field_p * var2.field_h >> 1830650120);
                             break L5;
                           } else {
@@ -88,7 +89,6 @@ final class js {
         fb var5 = null;
         int stackIn_6_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -104,8 +104,7 @@ final class js {
             }
             L2: while (true) {
               if (-1 <= (param1 ^ -1)) {
-                stackOut_5_0 = var3_int;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = var3_int;
                 break L0;
               } else {
                 var3_int = var3_int << -1078106911 | 1 & param0;
@@ -126,9 +125,7 @@ final class js {
     final static boolean a(int param0, java.applet.Applet param1) {
         try {
             int var2_int = 0;
-            RuntimeException var2 = null;
             String var3 = null;
-            Throwable var3_ref = null;
             String var4 = null;
             String[] var5 = null;
             int var6 = 0;
@@ -137,8 +134,6 @@ final class js {
             int stackIn_3_0 = 0;
             int stackIn_9_0 = 0;
             int stackIn_16_0 = 0;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
             RuntimeException stackIn_20_0 = null;
@@ -147,18 +142,8 @@ final class js {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_8_0 = 0;
-            int stackOut_15_0 = 0;
-            int stackOut_14_0 = 0;
-            int stackOut_2_0 = 0;
-            RuntimeException stackOut_17_0 = null;
-            StringBuilder stackOut_17_1 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            String stackOut_18_2 = null;
+            RuntimeException var2 = null;
+            Throwable var3_ref = null;
             var8 = ShatteredPlansClient.field_F ? 1 : 0;
             try {
               L0: {
@@ -183,8 +168,7 @@ final class js {
                               if (!var5[var6].substring(0, var7).trim().equals(var3)) {
                                 break L3;
                               } else {
-                                stackOut_8_0 = 1;
-                                stackIn_9_0 = stackOut_8_0;
+                                stackIn_9_0 = 1;
                                 decompiledRegionSelector0 = 1;
                                 break L1;
                               }
@@ -206,12 +190,10 @@ final class js {
                   if (decompiledRegionSelector0 == 0) {
                     L5: {
                       if (param1.getParameter("tuhstatbut") == null) {
-                        stackOut_15_0 = 0;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = 0;
                         break L5;
                       } else {
-                        stackOut_14_0 = 1;
-                        stackIn_16_0 = stackOut_14_0;
+                        stackIn_16_0 = 1;
                         break L5;
                       }
                     }
@@ -222,8 +204,7 @@ final class js {
                     break L0;
                   }
                 } else {
-                  stackOut_2_0 = 1;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = 1;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 }
@@ -232,27 +213,19 @@ final class js {
               decompiledCaughtException = decompiledCaughtParameter1;
               L6: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_17_0 = (RuntimeException) (var2);
-                stackOut_17_1 = new StringBuilder().append("js.G(").append(param0).append(',');
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
+                stackIn_19_0 = (RuntimeException) (var2);
+
+                stackIn_19_1 = new StringBuilder().append("js.G(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "null";
-                  stackIn_20_0 = stackOut_19_0;
-                  stackIn_20_1 = stackOut_19_1;
-                  stackIn_20_2 = stackOut_19_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "null";
                   break L6;
                 } else {
-                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackOut_18_2 = "{...}";
-                  stackIn_20_0 = stackOut_18_0;
-                  stackIn_20_1 = stackOut_18_1;
-                  stackIn_20_2 = stackOut_18_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "{...}";
                   break L6;
                 }
               }
@@ -307,9 +280,22 @@ final class js {
     }
 
     final static void a(int param0, int param1, fb param2, int param3, int param4, boolean param5, int param6, int param7) {
-        RuntimeException var8 = null;
+        sg[][] stackIn_6_0 = null;
+        sg[][] stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_41_0 = 0;
+        int stackIn_49_0 = 0;
+        RuntimeException stackIn_104_0 = null;
+        StringBuilder stackIn_104_1 = null;
+        RuntimeException stackIn_105_0 = null;
+        StringBuilder stackIn_105_1 = null;
+        String stackIn_105_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
-        sg[] var8_array = null;
+        sg[] var8 = null;
+        RuntimeException var8_ref = null;
         int var9 = 0;
         int[] var10 = null;
         int var10_int = 0;
@@ -323,45 +309,6 @@ final class js {
         sg[] var17 = null;
         int[] var18 = null;
         int[] var19 = null;
-        sg[][] stackIn_5_0 = null;
-        sg[][] stackIn_6_0 = null;
-        sg[][] stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_41_0 = 0;
-        int stackIn_49_0 = 0;
-        RuntimeException stackIn_103_0 = null;
-        StringBuilder stackIn_103_1 = null;
-        RuntimeException stackIn_104_0 = null;
-        StringBuilder stackIn_104_1 = null;
-        RuntimeException stackIn_105_0 = null;
-        StringBuilder stackIn_105_1 = null;
-        String stackIn_105_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        sg[][] stackOut_4_0 = null;
-        sg[][] stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        sg[][] stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_34_0 = 0;
-        RuntimeException stackOut_102_0 = null;
-        StringBuilder stackOut_102_1 = null;
-        RuntimeException stackOut_104_0 = null;
-        StringBuilder stackOut_104_1 = null;
-        String stackOut_104_2 = null;
-        RuntimeException stackOut_103_0 = null;
-        StringBuilder stackOut_103_1 = null;
-        String stackOut_103_2 = null;
         var15 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -477,27 +424,22 @@ final class js {
                 }
               } else {
                 L11: {
-                  stackOut_4_0 = fk.field_p;
-                  stackIn_6_0 = stackOut_4_0;
-                  stackIn_5_0 = stackOut_4_0;
+                  stackIn_6_0 = fk.field_p;
+
                   if (-1 == param0) {
-                    stackOut_6_0 = (sg[][]) ((Object) stackIn_6_0);
-                    stackOut_6_1 = 1;
-                    stackIn_7_0 = stackOut_6_0;
-                    stackIn_7_1 = stackOut_6_1;
+                    stackIn_7_0 = (sg[][]) ((Object) stackIn_6_0);
+                    stackIn_7_1 = 1;
                     break L11;
                   } else {
-                    stackOut_5_0 = (sg[][]) ((Object) stackIn_5_0);
-                    stackOut_5_1 = 4 - -param0;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_7_1 = stackOut_5_1;
+                    stackIn_7_0 = (sg[][]) ((Object) stackIn_6_0);
+                    stackIn_7_1 = 4 - -param0;
                     break L11;
                   }
                 }
                 L12: {
                   var16 = stackIn_7_0[stackIn_7_1];
                   var17 = var16;
-                  var8_array = var17;
+                  var8 = var17;
                   var9 = 1;
                   if (!param5) {
                     break L12;
@@ -509,7 +451,7 @@ final class js {
                           if (var16.length + -1 <= var10_int) {
                             break L14;
                           } else {
-                            if ((qj.field_f[(var10_int + param4) / 8] & 1 << (7 & param4 - -var10_int)) == 0) {
+                            if ((qj.field_f[(var10_int + param4) / 8] & 1 << (7 & param4 - -var10_int) ^ -1) == -1) {
                               var10_int++;
                               continue L13;
                             } else {
@@ -544,12 +486,10 @@ final class js {
                 L16: while (true) {
                   L17: {
                     if (-1 != param0) {
-                      stackOut_24_0 = var17.length + -1;
-                      stackIn_25_0 = stackOut_24_0;
+                      stackIn_25_0 = var17.length + -1;
                       break L17;
                     } else {
-                      stackOut_23_0 = nl.field_a.length;
-                      stackIn_25_0 = stackOut_23_0;
+                      stackIn_25_0 = nl.field_a.length;
                       break L17;
                     }
                   }
@@ -605,27 +545,23 @@ final class js {
                           }
                         }
                       }
-                      var13_ref_sg = var8_array[1 + var11];
+                      var13_ref_sg = var8[1 + var11];
                       if (!param5) {
                         L23: {
                           if (0 == (param0 ^ -1)) {
                             if (nl.field_a[var11] != np.field_a.field_Eb) {
-                              stackOut_48_0 = 0;
-                              stackIn_49_0 = stackOut_48_0;
+                              stackIn_49_0 = 0;
                               break L23;
                             } else {
-                              stackOut_47_0 = 1;
-                              stackIn_49_0 = stackOut_47_0;
+                              stackIn_49_0 = 1;
                               break L23;
                             }
                           } else {
                             if ((255 & np.field_a.field_dc[param0]) != var11) {
-                              stackOut_45_0 = 0;
-                              stackIn_49_0 = stackOut_45_0;
+                              stackIn_49_0 = 0;
                               break L23;
                             } else {
-                              stackOut_44_0 = 1;
-                              stackIn_49_0 = stackOut_44_0;
+                              stackIn_49_0 = 1;
                               break L23;
                             }
                           }
@@ -637,22 +573,18 @@ final class js {
                           if (!var13_ref_sg.field_bb) {
                             if (var9 != 0) {
                               if (var13_ref_sg.field_s) {
-                                stackOut_39_0 = 1;
-                                stackIn_41_0 = stackOut_39_0;
+                                stackIn_41_0 = 1;
                                 break L24;
                               } else {
-                                stackOut_38_0 = 0;
-                                stackIn_41_0 = stackOut_38_0;
+                                stackIn_41_0 = 0;
                                 break L24;
                               }
                             } else {
-                              stackOut_36_0 = 0;
-                              stackIn_41_0 = stackOut_36_0;
+                              stackIn_41_0 = 0;
                               break L24;
                             }
                           } else {
-                            stackOut_34_0 = 1;
-                            stackIn_41_0 = stackOut_34_0;
+                            stackIn_41_0 = 1;
                             break L24;
                           }
                         }
@@ -686,28 +618,20 @@ final class js {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L26: {
-            var8 = decompiledCaughtException;
-            stackOut_102_0 = (RuntimeException) (var8);
-            stackOut_102_1 = new StringBuilder().append("js.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_104_0 = stackOut_102_0;
-            stackIn_104_1 = stackOut_102_1;
-            stackIn_103_0 = stackOut_102_0;
-            stackIn_103_1 = stackOut_102_1;
+            var8_ref = decompiledCaughtException;
+            stackIn_104_0 = (RuntimeException) (var8_ref);
+
+            stackIn_104_1 = new StringBuilder().append("js.E(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_104_0 = (RuntimeException) ((Object) stackIn_104_0);
-              stackOut_104_1 = (StringBuilder) ((Object) stackIn_104_1);
-              stackOut_104_2 = "null";
-              stackIn_105_0 = stackOut_104_0;
-              stackIn_105_1 = stackOut_104_1;
-              stackIn_105_2 = stackOut_104_2;
+              stackIn_105_0 = (RuntimeException) ((Object) stackIn_104_0);
+              stackIn_105_1 = (StringBuilder) ((Object) stackIn_104_1);
+              stackIn_105_2 = "null";
               break L26;
             } else {
-              stackOut_103_0 = (RuntimeException) ((Object) stackIn_103_0);
-              stackOut_103_1 = (StringBuilder) ((Object) stackIn_103_1);
-              stackOut_103_2 = "{...}";
-              stackIn_105_0 = stackOut_103_0;
-              stackIn_105_1 = stackOut_103_1;
-              stackIn_105_2 = stackOut_103_2;
+              stackIn_105_0 = (RuntimeException) ((Object) stackIn_104_0);
+              stackIn_105_1 = (StringBuilder) ((Object) stackIn_104_1);
+              stackIn_105_2 = "{...}";
               break L26;
             }
           }
@@ -726,12 +650,12 @@ final class js {
 
     final static void a(byte param0) {
         String[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         String var3 = null;
         int var4 = 0;
         String[] var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {

@@ -8,9 +8,8 @@ final class ju extends ua implements cr {
     private io field_o;
 
     public final void b(int param0) {
-        boolean discarded$2 = false;
         if (param0 != 12001) {
-          discarded$2 = this.a(-31);
+          this.a(-31);
           super.b(param0 + 0);
           return;
         } else {
@@ -36,13 +35,12 @@ final class ju extends ua implements cr {
     }
 
     final static void g(int param0) {
-        boolean discarded$0 = false;
         wt.field_h[1] = iv.field_i;
         wt.field_h[0] = ki.field_f;
         wt.field_h[2] = hc.field_f;
         pl.field_u = wt.field_h[1] + wt.field_h[0] - 2 + (wt.field_h[2] + -1);
         if (param0 < 100) {
-            discarded$0 = ju.b(46, -94);
+            ju.b(46, -94);
         }
     }
 
@@ -54,8 +52,6 @@ final class ju extends ua implements cr {
             int stackIn_15_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_12_0 = 0;
-            int stackOut_14_0 = 0;
             if (ig.field_a.field_p < param1) {
               if (null == qk.field_O) {
                 return false;
@@ -76,14 +72,12 @@ final class ju extends ua implements cr {
                       jt.field_x = wq.a(-47);
                       ig.field_a.field_p = ig.field_a.field_p + var2_int;
                       if (ig.field_a.field_p < param1) {
-                        stackOut_12_0 = 0;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = 0;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
                         ig.field_a.field_p = 0;
-                        stackOut_14_0 = 1;
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = 1;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -129,9 +123,8 @@ final class ju extends ua implements cr {
     }
 
     public final void a(byte param0, int param1) {
-        boolean discarded$2 = false;
         if (param0 >= -67) {
-          discarded$2 = this.a(61);
+          this.a(61);
           super.a((byte) -87, this.field_o.field_j * param1);
           return;
         } else {

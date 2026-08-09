@@ -46,11 +46,11 @@ final class lb {
 
     final static void a(boolean param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         hb var2 = null;
         int var3 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var3 = DungeonAssault.field_K;
         try {
           L0: {
@@ -92,22 +92,10 @@ final class lb {
     }
 
     private final void a(ec param0, int param1, int param2) {
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        ai dupTemp$8 = null;
-        int discarded$9 = 0;
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        Object stackIn_2_0 = null;
+        ai dupTemp$0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        RuntimeException stackIn_91_0 = null;
-        StringBuilder stackIn_91_1 = null;
         RuntimeException stackIn_92_0 = null;
         StringBuilder stackIn_92_1 = null;
         RuntimeException stackIn_93_0 = null;
@@ -115,38 +103,25 @@ final class lb {
         String stackIn_93_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        RuntimeException stackOut_90_0 = null;
-        StringBuilder stackOut_90_1 = null;
-        RuntimeException stackOut_92_0 = null;
-        StringBuilder stackOut_92_1 = null;
-        String stackOut_92_2 = null;
-        RuntimeException stackOut_91_0 = null;
-        StringBuilder stackOut_91_1 = null;
-        String stackOut_91_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
         var7 = DungeonAssault.field_K;
         try {
           L0: {
             L1: {
               var4_int = param0.c(true);
-              stackOut_1_0 = this;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_3_0 = this;
+
               if ((var4_int & 1) == 0) {
-                stackOut_3_0 = this;
-                stackOut_3_1 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 1;
                 break L1;
               }
             }
@@ -162,7 +137,7 @@ final class lb {
             }
             L3: {
               if (param2 < 1) {
-                discarded$5 = param0.f(-127);
+                param0.f(-127);
                 this.field_s = param0.f(-106);
                 this.field_m = this.field_N;
                 this.field_l = this.field_N;
@@ -193,7 +168,7 @@ final class lb {
             }
             L5: {
               if (param2 >= 6) {
-                discarded$6 = param0.h(-78);
+                param0.h(-78);
                 this.field_q = param0.h(param1 + 13099);
                 break L5;
               } else {
@@ -229,7 +204,7 @@ final class lb {
               if (-5 < (param2 ^ -1)) {
                 break L8;
               } else {
-                discarded$7 = param0.c(true);
+                param0.c(true);
                 break L8;
               }
             }
@@ -238,11 +213,11 @@ final class lb {
               if (var5 >= this.field_k.field_f.length) {
                 this.field_L = new ai[49];
                 this.field_L[24] = new ai(2);
-                dupTemp$8 = new ai(3);
-                this.field_L[48] = dupTemp$8;
-                this.field_L[42] = dupTemp$8;
-                this.field_L[6] = dupTemp$8;
-                this.field_L[0] = dupTemp$8;
+                dupTemp$0 = new ai(3);
+                this.field_L[48] = dupTemp$0;
+                this.field_L[42] = dupTemp$0;
+                this.field_L[6] = dupTemp$0;
+                this.field_L[0] = dupTemp$0;
                 var5 = 0;
                 L10: while (true) {
                   if (-50 >= (var5 ^ -1)) {
@@ -354,7 +329,7 @@ final class lb {
                                           break L24;
                                         } else {
                                           this.field_u = param0.c(true);
-                                          discarded$9 = param0.k(0);
+                                          param0.k(0);
                                           this.field_g = param0.h(-125);
                                           this.field_i = param0.h(-76);
                                           this.field_p = param0.h(param1 ^ 13114);
@@ -466,27 +441,19 @@ final class lb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L30: {
             var4 = decompiledCaughtException;
-            stackOut_90_0 = (RuntimeException) (var4);
-            stackOut_90_1 = new StringBuilder().append("lb.D(");
-            stackIn_92_0 = stackOut_90_0;
-            stackIn_92_1 = stackOut_90_1;
-            stackIn_91_0 = stackOut_90_0;
-            stackIn_91_1 = stackOut_90_1;
+            stackIn_92_0 = (RuntimeException) (var4);
+
+            stackIn_92_1 = new StringBuilder().append("lb.D(");
+
             if (param0 == null) {
-              stackOut_92_0 = (RuntimeException) ((Object) stackIn_92_0);
-              stackOut_92_1 = (StringBuilder) ((Object) stackIn_92_1);
-              stackOut_92_2 = "null";
-              stackIn_93_0 = stackOut_92_0;
-              stackIn_93_1 = stackOut_92_1;
-              stackIn_93_2 = stackOut_92_2;
+              stackIn_93_0 = (RuntimeException) ((Object) stackIn_92_0);
+              stackIn_93_1 = (StringBuilder) ((Object) stackIn_92_1);
+              stackIn_93_2 = "null";
               break L30;
             } else {
-              stackOut_91_0 = (RuntimeException) ((Object) stackIn_91_0);
-              stackOut_91_1 = (StringBuilder) ((Object) stackIn_91_1);
-              stackOut_91_2 = "{...}";
-              stackIn_93_0 = stackOut_91_0;
-              stackIn_93_1 = stackOut_91_1;
-              stackIn_93_2 = stackOut_91_2;
+              stackIn_93_0 = (RuntimeException) ((Object) stackIn_92_0);
+              stackIn_93_1 = (StringBuilder) ((Object) stackIn_92_1);
+              stackIn_93_2 = "{...}";
               break L30;
             }
           }
@@ -534,7 +501,6 @@ final class lb {
     }
 
     final static char a(char param0, int param1) {
-        char discarded$2 = 0;
         L0: {
           if (param0 == 181) {
             break L0;
@@ -546,7 +512,7 @@ final class lb {
                 if (param1 >= 44) {
                   break L1;
                 } else {
-                  discarded$2 = lb.a('ﾞ', 95);
+                  lb.a('ﾞ', 95);
                   break L1;
                 }
               }
@@ -558,9 +524,9 @@ final class lb {
     }
 
     lb() {
-        int var1 = 0;
-        long[] var2 = null;
-        int var3 = 0;
+        int var1;
+        long[] var2;
+        int var3;
         this.field_n = new int[10];
         this.field_M = new int[10];
         this.field_G = new int[10];

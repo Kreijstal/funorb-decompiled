@@ -22,11 +22,12 @@ final class mo {
     final tf a(int param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var3 = 0;
-        tf var4 = null;
-        tf var5 = null;
-        tf var9 = null;
-        tf var12 = null;
+        int var3;
+        Object var4;
+        tf var4_ref;
+        tf var5;
+        tf var9;
+        tf var12;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 > (this.field_i ^ -1)) {
           if (this.field_k != this.field_n[this.field_i + -1]) {
@@ -38,9 +39,9 @@ final class mo {
               if (this.field_i < this.field_e) {
                 fieldTemp$2 = this.field_i;
                 this.field_i = this.field_i + 1;
-                var4 = this.field_n[fieldTemp$2].field_l;
-                var9 = var4;
-                if (var4 == this.field_n[-1 + this.field_i]) {
+                var4_ref = this.field_n[fieldTemp$2].field_l;
+                var9 = var4_ref;
+                if (var4_ref == this.field_n[-1 + this.field_i]) {
                   continue L0;
                 } else {
                   this.field_k = var9.field_l;
@@ -56,9 +57,9 @@ final class mo {
             if (this.field_i < this.field_e) {
               fieldTemp$3 = this.field_i;
               this.field_i = this.field_i + 1;
-              var4 = this.field_n[fieldTemp$3].field_l;
-              var5 = var4;
-              if (var4 == this.field_n[-1 + this.field_i]) {
+              var4_ref = this.field_n[fieldTemp$3].field_l;
+              var5 = var4_ref;
+              if (var4_ref == this.field_n[-1 + this.field_i]) {
                 continue L1;
               } else {
                 this.field_k = var5.field_l;
@@ -83,8 +84,6 @@ final class mo {
         byte[] var4 = null;
         Object stackIn_4_0 = null;
         fg stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -92,16 +91,6 @@ final class mo {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        fg stackOut_5_0 = null;
-        Object stackOut_3_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -115,13 +104,11 @@ final class mo {
             var4 = param1.d(param2, 31662);
             var3 = var4;
             if (var4 != null) {
-              stackOut_5_0 = new fg(var4);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = new fg(var4);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_3_0 = null;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -130,27 +117,19 @@ final class mo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3_ref);
-            stackOut_7_1 = new StringBuilder().append("mo.C(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3_ref);
+
+            stackIn_9_1 = new StringBuilder().append("mo.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -241,7 +220,6 @@ final class mo {
 
     final static ri a(String param0, int param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -250,8 +228,6 @@ final class mo {
         ri stackIn_11_0 = null;
         ri stackIn_21_0 = null;
         ri stackIn_25_0 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
@@ -259,33 +235,19 @@ final class mo {
         String stackIn_31_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ri stackOut_6_0 = null;
-        ri stackOut_10_0 = null;
-        ri stackOut_20_0 = null;
-        ri stackOut_24_0 = null;
-        ri stackOut_2_0 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
+        RuntimeException var2 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
             var2_int = param0.length();
             if (param1 == 45) {
               if (var2_int == 0) {
-                stackOut_6_0 = uh.field_i;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = uh.field_i;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if ((var2_int ^ -1) < -64) {
-                  stackOut_10_0 = b.field_e;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = b.field_e;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -306,14 +268,12 @@ final class mo {
                               }
                             }
                           }
-                          stackOut_20_0 = n.field_b;
-                          stackIn_21_0 = stackOut_20_0;
+                          stackIn_21_0 = n.field_b;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
                           if (-1 == rj.field_e.indexOf(var4)) {
-                            stackOut_24_0 = n.field_b;
-                            stackIn_25_0 = stackOut_24_0;
+                            stackIn_25_0 = n.field_b;
                             decompiledRegionSelector0 = 4;
                             break L0;
                           } else {
@@ -330,8 +290,7 @@ final class mo {
                 }
               }
             } else {
-              stackOut_2_0 = (ri) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (ri) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -340,27 +299,19 @@ final class mo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var2);
-            stackOut_28_1 = new StringBuilder().append("mo.K(");
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackIn_30_0 = (RuntimeException) (var2);
+
+            stackIn_30_1 = new StringBuilder().append("mo.K(");
+
             if (param0 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L4;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L4;
             }
           }
@@ -386,10 +337,9 @@ final class mo {
     }
 
     public static void c(int param0) {
-        int discarded$0 = 0;
         field_l = null;
         if (param0 != 0) {
-            discarded$0 = mo.b(31);
+            mo.b(31);
             field_d = null;
             field_j = null;
             field_a = null;
@@ -450,18 +400,18 @@ final class mo {
     }
 
     mo(int param0) {
-        tf dupTemp$2 = null;
-        int var2 = 0;
-        tf var3 = null;
+        tf dupTemp$1 = null;
+        int var2;
+        tf var3;
         this.field_i = 0;
         this.field_e = param0;
         this.field_n = new tf[param0];
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            dupTemp$2 = new tf();
-            var3 = dupTemp$2;
-            this.field_n[var2] = dupTemp$2;
+            dupTemp$1 = new tf();
+            var3 = dupTemp$1;
+            this.field_n[var2] = dupTemp$1;
             var3.field_l = var3;
             var3.field_i = var3;
             var2++;
@@ -474,9 +424,10 @@ final class mo {
 
     final static void e(int param0) {
         fk var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
+        boolean stackIn_19_0 = false;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -539,7 +490,8 @@ final class mo {
               if (null == jl.field_h) {
                 break L7;
               } else {
-                if (jl.field_h.e((byte) -8)) {
+                stackIn_19_0 = jl.field_h.e((byte) -8);
+                if (stackIn_19_0) {
                   break L7;
                 } else {
                   f.field_g = null;

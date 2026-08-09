@@ -27,15 +27,6 @@ final class pf {
     }
 
     final void a(int param0, byte param1, int param2, byte[] param3) throws IOException {
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        int var5_int = 0;
-        long var5_long = 0L;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
         RuntimeException stackIn_56_0 = null;
         StringBuilder stackIn_56_1 = null;
         RuntimeException stackIn_57_0 = null;
@@ -44,14 +35,13 @@ final class pf {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_54_0 = null;
-        StringBuilder stackOut_54_1 = null;
-        RuntimeException stackOut_56_0 = null;
-        StringBuilder stackOut_56_1 = null;
-        String stackOut_56_2 = null;
-        RuntimeException stackOut_55_0 = null;
-        StringBuilder stackOut_55_1 = null;
-        String stackOut_55_2 = null;
+        int var5_int = 0;
+        long var5_long = 0L;
+        IOException var5 = null;
+        RuntimeException var5_ref = null;
+        long var7 = 0L;
+        int var9 = 0;
+        int var10 = 0;
         var10 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -242,27 +232,19 @@ final class pf {
           decompiledCaughtException = decompiledCaughtParameter1;
           L14: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_54_0 = (RuntimeException) (var5_ref);
-            stackOut_54_1 = new StringBuilder().append("pf.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_56_0 = stackOut_54_0;
-            stackIn_56_1 = stackOut_54_1;
-            stackIn_55_0 = stackOut_54_0;
-            stackIn_55_1 = stackOut_54_1;
+            stackIn_56_0 = (RuntimeException) (var5_ref);
+
+            stackIn_56_1 = new StringBuilder().append("pf.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_56_0 = (RuntimeException) ((Object) stackIn_56_0);
-              stackOut_56_1 = (StringBuilder) ((Object) stackIn_56_1);
-              stackOut_56_2 = "null";
-              stackIn_57_0 = stackOut_56_0;
-              stackIn_57_1 = stackOut_56_1;
-              stackIn_57_2 = stackOut_56_2;
+              stackIn_57_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackIn_57_1 = (StringBuilder) ((Object) stackIn_56_1);
+              stackIn_57_2 = "null";
               break L14;
             } else {
-              stackOut_55_0 = (RuntimeException) ((Object) stackIn_55_0);
-              stackOut_55_1 = (StringBuilder) ((Object) stackIn_55_1);
-              stackOut_55_2 = "{...}";
-              stackIn_57_0 = stackOut_55_0;
-              stackIn_57_1 = stackOut_55_1;
-              stackIn_57_2 = stackOut_55_2;
+              stackIn_57_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackIn_57_1 = (StringBuilder) ((Object) stackIn_56_1);
+              stackIn_57_2 = "{...}";
               break L14;
             }
           }
@@ -284,8 +266,7 @@ final class pf {
     }
 
     final void a(byte param0, long param1) throws IOException {
-        String discarded$2 = null;
-        CharSequence[] var5 = null;
+        CharSequence[] var5;
         if (0L > param1) {
           throw new IOException();
         } else {
@@ -294,7 +275,7 @@ final class pf {
               break L0;
             } else {
               var5 = (CharSequence[]) null;
-              discarded$2 = pf.a(-121, (CharSequence[]) null);
+              pf.a(-121, (CharSequence[]) null);
               break L0;
             }
           }
@@ -304,27 +285,15 @@ final class pf {
     }
 
     final static String a(int param0, CharSequence[] param1) {
-        String discarded$2 = null;
         RuntimeException var2 = null;
         CharSequence[] var3 = null;
         String stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -332,39 +301,30 @@ final class pf {
                 break L1;
               } else {
                 var3 = (CharSequence[]) null;
-                discarded$2 = pf.a(-18, (CharSequence[]) null);
+                pf.a(-18, (CharSequence[]) null);
                 break L1;
               }
             }
-            stackOut_2_0 = fc.a(param1, -2, 0, param1.length);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = fc.a(param1, -2, 0, param1.length);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("pf.E(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("pf.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -374,28 +334,15 @@ final class pf {
     }
 
     final long b(byte param0) {
-        String discarded$0 = null;
         if (param0 < 95) {
             CharSequence[] var3 = (CharSequence[]) null;
-            discarded$0 = pf.a(-91, (CharSequence[]) null);
+            pf.a(-91, (CharSequence[]) null);
         }
         return this.field_m;
     }
 
     final void a(int param0, byte[] param1, byte param2, int param3) throws IOException {
-        int incrementValue$1 = 0;
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        long var5_long = 0L;
-        int var7 = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        long var9 = 0L;
-        long var11 = 0L;
-        int var13 = 0;
-        int var14 = 0;
-        RuntimeException stackIn_64_0 = null;
-        StringBuilder stackIn_64_1 = null;
+        int incrementValue$0 = 0;
         RuntimeException stackIn_65_0 = null;
         StringBuilder stackIn_65_1 = null;
         RuntimeException stackIn_66_0 = null;
@@ -404,14 +351,16 @@ final class pf {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_63_0 = null;
-        StringBuilder stackOut_63_1 = null;
-        RuntimeException stackOut_65_0 = null;
-        StringBuilder stackOut_65_1 = null;
-        String stackOut_65_2 = null;
-        RuntimeException stackOut_64_0 = null;
-        StringBuilder stackOut_64_1 = null;
-        String stackOut_64_2 = null;
+        long var5_long = 0L;
+        IOException var5 = null;
+        RuntimeException var5_ref = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9_int = 0;
+        long var9 = 0L;
+        long var11 = 0L;
+        int var13 = 0;
+        int var14 = 0;
         var14 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -533,9 +482,9 @@ final class pf {
                               if (param0 >= var9_int) {
                                 break L10;
                               } else {
-                                incrementValue$1 = param0;
+                                incrementValue$0 = param0;
                                 param0++;
-                                param1[incrementValue$1] = (byte) 0;
+                                param1[incrementValue$0] = (byte) 0;
                                 param3--;
                                 this.field_c = this.field_c + 1L;
                                 continue L12;
@@ -645,27 +594,19 @@ final class pf {
           decompiledCaughtException = decompiledCaughtParameter1;
           L17: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_63_0 = (RuntimeException) (var5_ref);
-            stackOut_63_1 = new StringBuilder().append("pf.J(").append(param0).append(',');
-            stackIn_65_0 = stackOut_63_0;
-            stackIn_65_1 = stackOut_63_1;
-            stackIn_64_0 = stackOut_63_0;
-            stackIn_64_1 = stackOut_63_1;
+            stackIn_65_0 = (RuntimeException) (var5_ref);
+
+            stackIn_65_1 = new StringBuilder().append("pf.J(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
-              stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
-              stackOut_65_2 = "null";
-              stackIn_66_0 = stackOut_65_0;
-              stackIn_66_1 = stackOut_65_1;
-              stackIn_66_2 = stackOut_65_2;
+              stackIn_66_0 = (RuntimeException) ((Object) stackIn_65_0);
+              stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+              stackIn_66_2 = "null";
               break L17;
             } else {
-              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-              stackOut_64_2 = "{...}";
-              stackIn_66_0 = stackOut_64_0;
-              stackIn_66_1 = stackOut_64_1;
-              stackIn_66_2 = stackOut_64_2;
+              stackIn_66_0 = (RuntimeException) ((Object) stackIn_65_0);
+              stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+              stackIn_66_2 = "{...}";
               break L17;
             }
           }
@@ -717,10 +658,10 @@ final class pf {
     }
 
     private final void a(int param0) throws IOException {
-        long var2 = 0L;
-        long var4 = 0L;
-        int var6 = 0;
-        int var7 = 0;
+        long var2;
+        long var4;
+        int var6;
+        int var7;
         L0: {
           var7 = Confined.field_J ? 1 : 0;
           if (-1L != this.field_a) {

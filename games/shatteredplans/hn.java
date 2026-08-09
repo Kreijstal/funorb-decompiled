@@ -102,8 +102,8 @@ final class hn {
     }
 
     private final int b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 != 0) {
           field_j = (int[]) null;
@@ -176,7 +176,7 @@ final class hn {
     }
 
     final int a(byte param0, int param1) {
-        int var3 = 0;
+        int var3;
         if (this.field_b < param1) {
           throw new ArrayIndexOutOfBoundsException(param1);
         } else {
@@ -186,8 +186,8 @@ final class hn {
     }
 
     private final void b(byte param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         var4 = new int[this.b(param1, 0)];
         var3 = var4;
         ps.a(this.field_e, 0, var4, 0, this.field_e.length);

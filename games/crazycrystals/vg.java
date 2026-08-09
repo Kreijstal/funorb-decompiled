@@ -34,9 +34,8 @@ final class vg {
     }
 
     final static String b(byte param0) {
-        String discarded$3 = null;
         if (param0 != -29) {
-            discarded$3 = vg.b((byte) 15);
+            vg.b((byte) 15);
             if (lc.field_c == l.field_b) {
                 return ji.field_x;
             }

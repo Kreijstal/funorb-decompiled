@@ -11,7 +11,6 @@ final class ql extends rw {
     static int field_v;
 
     final byte[] d(boolean param0) {
-        byte[] discarded$6 = null;
         if (!param0) {
           if (this.field_u) {
             throw new RuntimeException();
@@ -19,7 +18,7 @@ final class ql extends rw {
             return this.field_x;
           }
         } else {
-          discarded$6 = this.d(false);
+          this.d(false);
           if (this.field_u) {
             throw new RuntimeException();
           } else {

@@ -26,10 +26,6 @@ abstract class rg extends sp {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        pk discarded$4 = null;
-        pk discarded$5 = null;
-        pk discarded$6 = null;
-        pk discarded$7 = null;
         if (this.field_B != 0) {
           if (-257 < (this.field_B ^ -1)) {
             if (null != uw.field_a) {
@@ -39,7 +35,7 @@ abstract class rg extends sp {
                   lk.b();
                   this.b(113, 0, 0);
                   if (param2 >= -35) {
-                    discarded$4 = this.f(-77);
+                    this.f(-77);
                     super.a(-param0 + -this.field_r, -param1 + -this.field_v, (byte) -114, param3);
                     su.a((byte) 114);
                     uw.field_a.a(param0 - -this.field_r, param1 - -this.field_v, this.field_B);
@@ -56,7 +52,7 @@ abstract class rg extends sp {
                   lk.b();
                   this.b(113, 0, 0);
                   if (param2 >= -35) {
-                    discarded$5 = this.f(-77);
+                    this.f(-77);
                     super.a(-param0 + -this.field_r, -param1 + -this.field_v, (byte) -114, param3);
                     su.a((byte) 114);
                     uw.field_a.a(param0 - -this.field_r, param1 - -this.field_v, this.field_B);
@@ -74,7 +70,7 @@ abstract class rg extends sp {
                 lk.b();
                 this.b(113, 0, 0);
                 if (param2 >= -35) {
-                  discarded$6 = this.f(-77);
+                  this.f(-77);
                   super.a(-param0 + -this.field_r, -param1 + -this.field_v, (byte) -114, param3);
                   su.a((byte) 114);
                   uw.field_a.a(param0 - -this.field_r, param1 - -this.field_v, this.field_B);
@@ -92,7 +88,7 @@ abstract class rg extends sp {
               lk.b();
               this.b(113, 0, 0);
               if (param2 >= -35) {
-                discarded$7 = this.f(-77);
+                this.f(-77);
                 super.a(-param0 + -this.field_r, -param1 + -this.field_v, (byte) -114, param3);
                 su.a((byte) 114);
                 uw.field_a.a(param0 - -this.field_r, param1 - -this.field_v, this.field_B);
@@ -119,8 +115,6 @@ abstract class rg extends sp {
     }
 
     boolean g(int param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_8_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_24_0 = 0;
@@ -129,22 +123,8 @@ abstract class rg extends sp {
         int stackIn_45_0 = 0;
         int stackIn_53_0 = 0;
         int stackIn_59_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
+        int var2;
+        int var3;
         if (param0 == -28778) {
           var2 = this.a((byte) -100);
           var3 = var2 + -this.field_B;
@@ -162,15 +142,13 @@ abstract class rg extends sp {
                       if (this.field_D) {
                         break L1;
                       } else {
-                        stackOut_57_0 = 1;
-                        stackIn_59_0 = stackOut_57_0;
+                        stackIn_59_0 = 1;
                         break L0;
                       }
                     }
                   }
                 }
-                stackOut_58_0 = 0;
-                stackIn_59_0 = stackOut_58_0;
+                stackIn_59_0 = 0;
                 break L0;
               }
               return stackIn_59_0 != 0;
@@ -186,15 +164,13 @@ abstract class rg extends sp {
                       if (this.field_D) {
                         break L3;
                       } else {
-                        stackOut_51_0 = 1;
-                        stackIn_53_0 = stackOut_51_0;
+                        stackIn_53_0 = 1;
                         break L2;
                       }
                     }
                   }
                 }
-                stackOut_52_0 = 0;
-                stackIn_53_0 = stackOut_52_0;
+                stackIn_53_0 = 0;
                 break L2;
               }
               return stackIn_53_0 != 0;
@@ -214,15 +190,13 @@ abstract class rg extends sp {
                       if (this.field_D) {
                         break L5;
                       } else {
-                        stackOut_43_0 = 1;
-                        stackIn_45_0 = stackOut_43_0;
+                        stackIn_45_0 = 1;
                         break L4;
                       }
                     }
                   }
                 }
-                stackOut_44_0 = 0;
-                stackIn_45_0 = stackOut_44_0;
+                stackIn_45_0 = 0;
                 break L4;
               }
               return stackIn_45_0 != 0;
@@ -238,15 +212,13 @@ abstract class rg extends sp {
                       if (this.field_D) {
                         break L7;
                       } else {
-                        stackOut_37_0 = 1;
-                        stackIn_39_0 = stackOut_37_0;
+                        stackIn_39_0 = 1;
                         break L6;
                       }
                     }
                   }
                 }
-                stackOut_38_0 = 0;
-                stackIn_39_0 = stackOut_38_0;
+                stackIn_39_0 = 0;
                 break L6;
               }
               return stackIn_39_0 != 0;
@@ -270,15 +242,13 @@ abstract class rg extends sp {
                       if (this.field_D) {
                         break L9;
                       } else {
-                        stackOut_28_0 = 1;
-                        stackIn_30_0 = stackOut_28_0;
+                        stackIn_30_0 = 1;
                         break L8;
                       }
                     }
                   }
                 }
-                stackOut_29_0 = 0;
-                stackIn_30_0 = stackOut_29_0;
+                stackIn_30_0 = 0;
                 break L8;
               }
               return stackIn_30_0 != 0;
@@ -295,15 +265,13 @@ abstract class rg extends sp {
                       if (this.field_D) {
                         break L11;
                       } else {
-                        stackOut_22_0 = 1;
-                        stackIn_24_0 = stackOut_22_0;
+                        stackIn_24_0 = 1;
                         break L10;
                       }
                     }
                   }
                 }
-                stackOut_23_0 = 0;
-                stackIn_24_0 = stackOut_23_0;
+                stackIn_24_0 = 0;
                 break L10;
               }
               return stackIn_24_0 != 0;
@@ -317,12 +285,10 @@ abstract class rg extends sp {
                 } else {
                   L12: {
                     if (this.field_D) {
-                      stackOut_14_0 = 0;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 0;
                       break L12;
                     } else {
-                      stackOut_13_0 = 1;
-                      stackIn_15_0 = stackOut_13_0;
+                      stackIn_15_0 = 1;
                       break L12;
                     }
                   }
@@ -343,15 +309,13 @@ abstract class rg extends sp {
                       if (this.field_D) {
                         break L14;
                       } else {
-                        stackOut_6_0 = 1;
-                        stackIn_8_0 = stackOut_6_0;
+                        stackIn_8_0 = 1;
                         break L13;
                       }
                     }
                   }
                 }
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 0;
                 break L13;
               }
               return stackIn_8_0 != 0;
@@ -361,7 +325,7 @@ abstract class rg extends sp {
     }
 
     final static boolean a(int param0, char param1) {
-        int var2 = 0;
+        int var2;
         var2 = -62 % ((-58 - param0) / 63);
         if (65 > param1) {
           if (param1 >= 97) {
@@ -430,35 +394,28 @@ abstract class rg extends sp {
     }
 
     final static void a(byte param0, int param1) {
-        boolean discarded$5 = false;
-        int discarded$4 = se.a(19886);
+        se.a(19886);
         if (param0 != 55) {
-            discarded$5 = rg.a(124, 'r');
+            rg.a(124, 'r');
         }
     }
 
     private final int a(byte param0) {
         int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -100) {
           return -55;
         } else {
           L0: {
             if (this.field_D) {
               if (this.field_E.e((byte) 54) == this) {
-                stackOut_5_0 = 256;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 256;
                 break L0;
               } else {
-                stackOut_4_0 = 0;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 0;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L0;
             }
           }

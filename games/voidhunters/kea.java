@@ -9,70 +9,37 @@ final class kea {
 
     final static boolean a(boolean param0, Class param1, String param2) {
         try {
-            Object discarded$5 = null;
-            Object discarded$6 = null;
-            Object discarded$7 = null;
-            Object discarded$8 = null;
-            Object discarded$9 = null;
-            Class var3 = null;
-            RuntimeException var3_ref = null;
-            Object var4 = null;
-            NoSuchMethodException var5 = null;
-            Throwable var5_ref = null;
-            Class var5_ref2 = null;
-            Class var6 = null;
-            java.lang.reflect.Method var7 = null;
-            java.lang.reflect.Method var8 = null;
-            File var9 = null;
             int stackIn_5_0 = 0;
             int stackIn_8_0 = 0;
             int stackIn_14_0 = 0;
             int stackIn_16_0 = 0;
             int stackIn_18_0 = 0;
-            RuntimeException stackIn_20_0 = null;
-            StringBuilder stackIn_20_1 = null;
             RuntimeException stackIn_21_0 = null;
             StringBuilder stackIn_21_1 = null;
             RuntimeException stackIn_22_0 = null;
             StringBuilder stackIn_22_1 = null;
             String stackIn_22_2 = null;
-            RuntimeException stackIn_23_0 = null;
-            StringBuilder stackIn_23_1 = null;
-            RuntimeException stackIn_24_0 = null;
             StringBuilder stackIn_24_1 = null;
-            RuntimeException stackIn_25_0 = null;
             StringBuilder stackIn_25_1 = null;
             String stackIn_25_2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_4_0 = 0;
-            int stackOut_13_0 = 0;
-            int stackOut_15_0 = 0;
-            int stackOut_17_0 = 0;
-            int stackOut_7_0 = 0;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            RuntimeException stackOut_21_0 = null;
-            StringBuilder stackOut_21_1 = null;
-            String stackOut_21_2 = null;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            String stackOut_20_2 = null;
-            RuntimeException stackOut_22_0 = null;
-            StringBuilder stackOut_22_1 = null;
-            RuntimeException stackOut_24_0 = null;
-            StringBuilder stackOut_24_1 = null;
-            String stackOut_24_2 = null;
-            RuntimeException stackOut_23_0 = null;
-            StringBuilder stackOut_23_1 = null;
-            String stackOut_23_2 = null;
+            Class var3 = null;
+            RuntimeException var3_ref = null;
+            Object var4 = null;
+            Class var5 = null;
+            NoSuchMethodException var5_ref = null;
+            Throwable var5_ref2 = null;
+            Class var6 = null;
+            java.lang.reflect.Method var7 = null;
+            java.lang.reflect.Method var8 = null;
+            File var9 = null;
             try {
               L0: {
                 var3 = (Class) (fnb.field_c.get(param2));
                 if (var3 != null) {
                   if (var3.getClassLoader() != param1.getClassLoader()) {
-                    stackOut_4_0 = 0;
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = 0;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   } else {
@@ -94,31 +61,28 @@ final class kea {
                         L2: {
                           var9 = new File(((File) (var4)).getCanonicalPath());
                           var4 = var9;
-                          var5_ref2 = Class.forName("java.lang.Runtime");
+                          var5 = Class.forName("java.lang.Runtime");
                           var6 = Class.forName("java.lang.reflect.AccessibleObject");
                           var7 = var6.getDeclaredMethod("setAccessible", new Class[]{Boolean.TYPE});
-                          var8 = var5_ref2.getDeclaredMethod("load0", new Class[]{Class.forName("java.lang.Class"), Class.forName("java.lang.String")});
-                          discarded$5 = var7.invoke((Object) (var8), new Object[]{Boolean.TRUE});
-                          discarded$6 = var8.invoke((Object) (Runtime.getRuntime()), new Object[]{param1, var9.getPath()});
-                          discarded$7 = var7.invoke((Object) (var8), new Object[]{Boolean.FALSE});
-                          discarded$8 = fnb.field_c.put(param2, param1);
-                          stackOut_13_0 = 1;
-                          stackIn_14_0 = stackOut_13_0;
+                          var8 = var5.getDeclaredMethod("load0", new Class[]{Class.forName("java.lang.Class"), Class.forName("java.lang.String")});
+                          var7.invoke((Object) (var8), new Object[]{Boolean.TRUE});
+                          var8.invoke((Object) (Runtime.getRuntime()), new Object[]{param1, var9.getPath()});
+                          var7.invoke((Object) (var8), new Object[]{Boolean.FALSE});
+                          fnb.field_c.put(param2, param1);
+                          stackIn_14_0 = 1;
                           break L2;
                         }
                       } catch (java.lang.NoSuchMethodException decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
-                        var5 = (NoSuchMethodException) (Object) decompiledCaughtException;
+                        var5_ref = (NoSuchMethodException) (Object) decompiledCaughtException;
                         System.load(((File) (var4)).getPath());
-                        discarded$9 = fnb.field_c.put(param2, cd.class);
-                        stackOut_15_0 = 1;
-                        stackIn_16_0 = stackOut_15_0;
+                        fnb.field_c.put(param2, cd.class);
+                        stackIn_16_0 = 1;
                         return stackIn_16_0 != 0;
                       } catch (java.lang.Throwable decompiledCaughtParameter1) {
                         decompiledCaughtException = decompiledCaughtParameter1;
-                        var5_ref = decompiledCaughtException;
-                        stackOut_17_0 = 0;
-                        stackIn_18_0 = stackOut_17_0;
+                        var5_ref2 = decompiledCaughtException;
+                        stackIn_18_0 = 0;
                         return stackIn_18_0 != 0;
                       }
                       decompiledRegionSelector0 = 2;
@@ -127,8 +91,7 @@ final class kea {
                       return false;
                     }
                   } else {
-                    stackOut_7_0 = 1;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = 1;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -138,56 +101,40 @@ final class kea {
               decompiledCaughtException = decompiledCaughtParameter2;
               L3: {
                 var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_19_0 = (RuntimeException) (var3_ref);
-                stackOut_19_1 = new StringBuilder().append("kea.A(").append(param0).append(',');
-                stackIn_21_0 = stackOut_19_0;
-                stackIn_21_1 = stackOut_19_1;
-                stackIn_20_0 = stackOut_19_0;
-                stackIn_20_1 = stackOut_19_1;
+                stackIn_21_0 = (RuntimeException) (var3_ref);
+
+                stackIn_21_1 = new StringBuilder().append("kea.A(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-                  stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-                  stackOut_21_2 = "null";
-                  stackIn_22_0 = stackOut_21_0;
-                  stackIn_22_1 = stackOut_21_1;
-                  stackIn_22_2 = stackOut_21_2;
+                  stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+                  stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+                  stackIn_22_2 = "null";
                   break L3;
                 } else {
-                  stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackOut_20_2 = "{...}";
-                  stackIn_22_0 = stackOut_20_0;
-                  stackIn_22_1 = stackOut_20_1;
-                  stackIn_22_2 = stackOut_20_2;
+                  stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+                  stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+                  stackIn_22_2 = "{...}";
                   break L3;
                 }
               }
               L4: {
-                stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-                stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
-                stackIn_24_0 = stackOut_22_0;
-                stackIn_24_1 = stackOut_22_1;
-                stackIn_23_0 = stackOut_22_0;
-                stackIn_23_1 = stackOut_22_1;
+
+
+                stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
+
                 if (param2 == null) {
-                  stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-                  stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-                  stackOut_24_2 = "null";
-                  stackIn_25_0 = stackOut_24_0;
-                  stackIn_25_1 = stackOut_24_1;
-                  stackIn_25_2 = stackOut_24_2;
+                  stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+                  stackIn_25_2 = "null";
                   break L4;
                 } else {
-                  stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-                  stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-                  stackOut_23_2 = "{...}";
-                  stackIn_25_0 = stackOut_23_0;
-                  stackIn_25_1 = stackOut_23_1;
-                  stackIn_25_2 = stackOut_23_2;
+                  stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+                  stackIn_25_2 = "{...}";
                   break L4;
                 }
               }
-              throw rta.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
+              throw rta.a((Throwable) ((Object) stackIn_22_0), stackIn_25_2 + ')');
             }
             if (decompiledRegionSelector0 == 0) {
               return stackIn_5_0 != 0;

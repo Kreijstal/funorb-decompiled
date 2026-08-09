@@ -18,8 +18,8 @@ final class ph {
     }
 
     final static void b(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = uc.h((byte) -118);
         var2 = qo.e((byte) 18);
         if (!param0) {

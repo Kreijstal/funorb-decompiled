@@ -29,12 +29,12 @@ final class ig {
     }
 
     final static void b(int param0, int param1) {
-        RuntimeException var2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        RuntimeException decompiledCaughtException = null;
         var5 = Kickabout.field_G;
         try {
           L0: {
@@ -163,10 +163,8 @@ final class ig {
         int var5 = fm.a((byte) -27, param3);
         gm var6 = (gm) ((Object) et.field_d.field_P[param3][param2]);
         int var7 = !param0 ? 80 + qj.a(-6779, 480) : qj.a(-6779, 0) - 50;
-        if (var6.field_w != var5) {
-            if (tc.a(4, (byte) 106, var6.field_M, var6, var7 << -1225474960)) {
-                var6.a(var4, false, 0, var5);
-            }
+        if (var6.field_w != var5 && tc.a(4, (byte) 106, var6.field_M, var6, var7 << -1225474960)) {
+            var6.a(var4, false, 0, var5);
         }
     }
 
@@ -189,10 +187,15 @@ final class ig {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        RuntimeException var3 = null;
-        uo var3_ref = null;
+        String stackIn_15_0 = null;
+        String[] stackIn_18_0 = null;
+        String[] stackIn_21_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        uo var3 = null;
+        RuntimeException var3_ref = null;
         int var4 = 0;
-        String var5 = null;
+        String[] var5 = null;
+        String var5_ref = null;
         int var6_int = 0;
         String[] var6 = null;
         String[] var7 = null;
@@ -206,77 +209,59 @@ final class ig {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        int var16 = 0;
-        String[] var17 = null;
+        String[] var16 = null;
+        String var17 = null;
         String var18 = null;
-        String[] var19 = null;
+        String var19 = null;
         String var20 = null;
-        String var21 = null;
-        String var22 = null;
-        String[] var23 = null;
-        String stackIn_15_0 = null;
-        String[] stackIn_18_0 = null;
-        String[] stackIn_21_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_14_0 = null;
-        String stackOut_13_0 = null;
-        String[] stackOut_17_0 = null;
-        String[] stackOut_16_0 = null;
-        String[] stackOut_20_0 = null;
-        String[] stackOut_19_0 = null;
+        String[] var21 = null;
         var15 = Kickabout.field_G;
         try {
           L0: {
-            var3_ref = pb.field_C;
+            var3 = pb.field_C;
             var4 = 0;
-            var17 = po.field_a;
+            var16 = po.field_a;
+            var5 = var16;
             var6_int = 0;
             L1: while (true) {
-              if (var17.length <= var6_int) {
-                var19 = w.field_g;
-                var16 = 0;
-                var6_int = var16;
+              if (var16.length <= var6_int) {
+                var5 = w.field_g;
+                var6_int = 0;
                 L2: while (true) {
-                  if (var19.length <= var16) {
+                  if (var5.length <= var6_int) {
                     L3: {
                       if (param0) {
-                        stackOut_14_0 = iw.field_k;
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = iw.field_k;
                         break L3;
                       } else {
-                        stackOut_13_0 = qd.field_f;
-                        stackIn_15_0 = stackOut_13_0;
+                        stackIn_15_0 = qd.field_f;
                         break L3;
                       }
                     }
                     L4: {
-                      var21 = stackIn_15_0;
-                      var5 = var21;
+                      var19 = stackIn_15_0;
+                      var5_ref = var19;
                       if (!param0) {
-                        stackOut_17_0 = fn.field_j;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = fn.field_j;
                         break L4;
                       } else {
-                        stackOut_16_0 = cg.field_G;
-                        stackIn_18_0 = stackOut_16_0;
+                        stackIn_18_0 = cg.field_G;
                         break L4;
                       }
                     }
                     L5: {
                       var6 = stackIn_18_0;
-                      var22 = "[" + var21 + "]";
+                      var20 = "[" + var19 + "]";
                       if (param0) {
-                        stackOut_20_0 = po.field_a;
-                        stackIn_21_0 = stackOut_20_0;
+                        stackIn_21_0 = po.field_a;
                         break L5;
                       } else {
-                        stackOut_19_0 = w.field_g;
-                        stackIn_21_0 = stackOut_19_0;
+                        stackIn_21_0 = w.field_g;
                         break L5;
                       }
                     }
-                    var23 = stackIn_21_0;
-                    var7 = var23;
+                    var21 = stackIn_21_0;
+                    var7 = var21;
                     var8 = 0;
                     var9_ref_String__ = var6;
                     var10 = 0;
@@ -288,16 +273,16 @@ final class ig {
                         on.a(-var9 + 644, var11, var9, var10, 2, 0, param2);
                         var12 = 619 - (var4 + 20);
                         var13 = 6 + var11 + rb.field_yb;
-                        ((hu) ((Object) var3_ref)).c(var22, 599, var13, param1, -1);
+                        ((hu) ((Object) var3)).c(var20, 599, var13, param1, -1);
                         var13 = var13 + (rb.field_yb + 6);
                         var14 = 0;
                         L7: while (true) {
                           if (var6.length <= var14) {
                             break L0;
                           } else {
-                            ((hu) ((Object) var3_ref)).a(':', var12, var13, 16777215);
-                            ((hu) ((Object) var3_ref)).c(var6[var14], -20 + var12, var13, 16777215, -1);
-                            ((hu) ((Object) var3_ref)).a(var23[var14], 20 + var12, var13, 16777215, -1);
+                            ((hu) ((Object) var3)).a(':', var12, var13, 16777215);
+                            ((hu) ((Object) var3)).c(var6[var14], -20 + var12, var13, 16777215, -1);
+                            ((hu) ((Object) var3)).a(var21[var14], 20 + var12, var13, 16777215, -1);
                             var13 = var13 + (2 + rb.field_yb);
                             var14++;
                             continue L7;
@@ -306,7 +291,7 @@ final class ig {
                       } else {
                         L8: {
                           var11_ref_String = var9_ref_String__[var10];
-                          var12 = ((hu) ((Object) var3_ref)).a(var11_ref_String);
+                          var12 = ((hu) ((Object) var3)).a(var11_ref_String);
                           if (var12 > var8) {
                             var8 = var12;
                             break L8;
@@ -320,8 +305,8 @@ final class ig {
                     }
                   } else {
                     L9: {
-                      var20 = var19[var16];
-                      var8 = ((hu) ((Object) var3_ref)).a(var20);
+                      var18 = var5[var6_int];
+                      var8 = ((hu) ((Object) var3)).a(var18);
                       if (var4 < var8) {
                         var4 = var8;
                         break L9;
@@ -329,13 +314,13 @@ final class ig {
                         break L9;
                       }
                     }
-                    var16++;
+                    var6_int++;
                     continue L2;
                   }
                 }
               } else {
-                var18 = var17[var6_int];
-                var8 = ((hu) ((Object) var3_ref)).a(var18);
+                var17 = var16[var6_int];
+                var8 = ((hu) ((Object) var3)).a(var17);
                 if (var4 < var8) {
                   var4 = var8;
                   var6_int++;
@@ -349,8 +334,8 @@ final class ig {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw nb.a((Throwable) ((Object) var3), "ig.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          var3_ref = decompiledCaughtException;
+          throw nb.a((Throwable) ((Object) var3_ref), "ig.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

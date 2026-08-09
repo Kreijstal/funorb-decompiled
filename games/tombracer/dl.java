@@ -17,25 +17,15 @@ final class dl extends me {
     private int field_s;
 
     final void b(byte param0) {
-        int discarded$10 = 0;
-        int discarded$11 = 0;
-        int discarded$12 = 0;
-        int discarded$13 = 0;
-        int discarded$14 = 0;
-        int discarded$15 = 0;
-        int discarded$16 = 0;
-        int discarded$17 = 0;
-        int discarded$18 = 0;
-        int discarded$19 = 0;
-        int var2 = 0;
-        nh var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var2;
+        nh var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           var2 = this.field_n.e(-115);
           var3 = gg.field_f;
@@ -62,7 +52,7 @@ final class dl extends me {
                   if (!this.field_n.b(20)) {
                     return;
                   } else {
-                    discarded$10 = kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
+                    kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
                     return;
                   }
                 } else {
@@ -72,7 +62,7 @@ final class dl extends me {
                 this.field_q.a(var2 + this.field_u - this.field_q.a(-8660) / 2, 20726, this.field_s + (-(var4 / 2) - -(this.field_q.a(false) / 2) + -10));
                 if (this.field_k != null) {
                   if (this.field_n.b(20)) {
-                    discarded$11 = kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
+                    kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
                     return;
                   } else {
                     return;
@@ -85,12 +75,12 @@ final class dl extends me {
               return;
             }
           } else {
-            discarded$12 = kn.field_p.a((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), fm.a(false, -1), wca.field_l, 0, fm.a(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l + -(var4 / 2) + this.field_s), 1);
+            kn.field_p.a((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), fm.a(false, -1), wca.field_l, 0, fm.a(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l + -(var4 / 2) + this.field_s), 1);
             if (param0 < -13) {
               if (this.field_q == null) {
                 if (this.field_k != null) {
                   if (this.field_n.b(20)) {
-                    discarded$13 = kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
+                    kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
                     return;
                   } else {
                     return;
@@ -107,7 +97,7 @@ final class dl extends me {
                     if (!this.field_n.b(20)) {
                       break L1;
                     } else {
-                      discarded$14 = kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
+                      kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
                       break L1;
                     }
                   }
@@ -119,15 +109,15 @@ final class dl extends me {
             }
           }
         } else {
-          discarded$15 = be.a(this.field_r.toUpperCase(), 0, eda.field_f, 65793, 20, var10, 1, var2 + (-(var5 / 2) + this.field_u - (-this.field_l + -var8)), this.field_l + (this.field_s - var4 / 2), -1, (byte) 60, var9);
+          be.a(this.field_r.toUpperCase(), 0, eda.field_f, 65793, 20, var10, 1, var2 + (-(var5 / 2) + this.field_u - (-this.field_l + -var8)), this.field_l + (this.field_s - var4 / 2), -1, (byte) 60, var9);
           if (this.field_j != null) {
-            discarded$16 = kn.field_p.a((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), fm.a(false, -1), wca.field_l, 0, fm.a(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l + -(var4 / 2) + this.field_s), 1);
+            kn.field_p.a((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), fm.a(false, -1), wca.field_l, 0, fm.a(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l + -(var4 / 2) + this.field_s), 1);
             if (param0 < -13) {
               if (this.field_q != null) {
                 this.field_q.a(var2 + this.field_u - this.field_q.a(-8660) / 2, 20726, this.field_s + (-(var4 / 2) - -(this.field_q.a(false) / 2) + -10));
                 if (this.field_k != null) {
                   if (this.field_n.b(20)) {
-                    discarded$17 = kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
+                    kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
                     return;
                   } else {
                     return;
@@ -143,7 +133,7 @@ final class dl extends me {
                     if (!this.field_n.b(20)) {
                       break L2;
                     } else {
-                      discarded$18 = kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
+                      kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
                       break L2;
                     }
                   }
@@ -172,7 +162,7 @@ final class dl extends me {
                   if (!this.field_n.b(20)) {
                     break L4;
                   } else {
-                    discarded$19 = kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
+                    kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 + -this.field_l + (-var8 + -var2)), fm.a(false, -1), wca.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l + -(var4 / 2) + (this.field_s - 30), 2);
                     break L4;
                   }
                 }
@@ -408,8 +398,6 @@ final class dl extends me {
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
         String stackIn_9_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -418,17 +406,6 @@ final class dl extends me {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        String stackOut_6_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_8_0 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             try {
@@ -446,13 +423,11 @@ final class dl extends me {
                 param0.field_h = param0.field_h + nma.field_m.a(param0.field_h, (byte) 121, var3_int, param0.field_g, 0, var4);
                 var5 = nia.a(var4, 0, var3_int, 255);
                 if (param2 < -18) {
-                  stackOut_6_0 = (String) (var5);
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = (String) (var5);
                   decompiledRegionSelector0 = 1;
                   break L1;
                 } else {
-                  stackOut_4_0 = (String) null;
-                  stackIn_5_0 = stackOut_4_0;
+                  stackIn_5_0 = (String) null;
                   decompiledRegionSelector0 = 0;
                   break L1;
                 }
@@ -460,8 +435,7 @@ final class dl extends me {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (Exception) (Object) decompiledCaughtException;
-              stackOut_8_0 = "Cabbage";
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = "Cabbage";
               return stackIn_9_0;
             }
             if (decompiledRegionSelector0 == 0) {
@@ -476,27 +450,19 @@ final class dl extends me {
           decompiledCaughtException = decompiledCaughtParameter1;
           L3: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3_ref);
-            stackOut_10_1 = new StringBuilder().append("dl.L(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3_ref);
+
+            stackIn_12_1 = new StringBuilder().append("dl.L(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L3;
             }
           }

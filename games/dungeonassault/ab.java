@@ -8,12 +8,12 @@ final class ab {
     static String[] field_d;
 
     final static void a(int param0) {
-        RuntimeException var1 = null;
-        int var1_int = 0;
-        int var2 = 0;
-        rj var3 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        rj var3 = null;
         var2 = DungeonAssault.field_K;
         try {
           L0: {
@@ -112,7 +112,6 @@ final class ab {
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -122,8 +121,7 @@ final class ab {
         int stackIn_15_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_9_0 = 0;
+        RuntimeException var3 = null;
         var8 = DungeonAssault.field_K;
         try {
           L0: {
@@ -139,8 +137,7 @@ final class ab {
             var4 = jm.field_c;
             L2: while (true) {
               if (go.field_A.length <= var3_int) {
-                stackOut_14_0 = -1;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -151,8 +148,7 @@ final class ab {
                     var4 = var4 + ci.field_j;
                     var7 = vo.field_r + -(var6 >> -776726687);
                     if (ec.a(var4, mj.field_g + (h.field_q << 2012233889), param1, (oh.field_t << -780936863) + var6, -oh.field_t + var7, param2, 100)) {
-                      stackOut_9_0 = var5;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_0 = var5;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     } else {

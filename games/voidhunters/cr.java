@@ -29,46 +29,37 @@ final class cr {
     }
 
     cr() {
-        int discarded$2 = 0;
-        int incrementValue$3 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int var3_int = 0;
-        float var3 = 0.0f;
-        int var4_int = 0;
-        float var4 = 0.0f;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        float var9 = 0.0f;
-        int var10 = 0;
-        int var11 = 0;
-        float var12 = 0.0f;
-        int var12_int = 0;
-        float var13 = 0.0f;
-        int var14 = 0;
+        int incrementValue$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_23_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
+        int var1;
+        int var2;
+        int var3_int;
+        float var3;
+        int var4_int;
+        float var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        float var9;
+        int var10;
+        int var11;
+        float var12;
+        int var12_int;
+        float var13;
+        int var14;
         L0: {
-          discarded$2 = fca.c(24);
+          fca.c(24);
           this.field_f = fca.c(16);
           this.field_e = fca.c(24);
           this.field_c = new int[this.field_e];
           if (fca.c() == 0) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -77,12 +68,10 @@ final class cr {
           if (var1 == 0) {
             L2: {
               if (fca.c() == 0) {
-                stackOut_12_0 = 0;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = 0;
                 break L2;
               } else {
-                stackOut_11_0 = 1;
-                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_0 = 1;
                 break L2;
               }
             }
@@ -125,9 +114,9 @@ final class cr {
                     var3_int++;
                     continue L5;
                   } else {
-                    incrementValue$3 = var2;
+                    incrementValue$0 = var2;
                     var2++;
-                    this.field_c[incrementValue$3] = var3_int;
+                    this.field_c[incrementValue$0] = var3_int;
                     var5++;
                     continue L6;
                   }
@@ -147,12 +136,10 @@ final class cr {
               var4 = fca.a(fca.c(32));
               var5 = fca.c(4) + 1;
               if (fca.c() == 0) {
-                stackOut_22_0 = 0;
-                stackIn_23_0 = stackOut_22_0;
+                stackIn_23_0 = 0;
                 break L8;
               } else {
-                stackOut_21_0 = 1;
-                stackIn_23_0 = stackOut_21_0;
+                stackIn_23_0 = 1;
                 break L8;
               }
             }
@@ -245,21 +232,21 @@ final class cr {
     }
 
     private final void a() {
-        int[] var2_ref_int__ = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        int[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int[] var12 = null;
-        int[] var14 = null;
-        int[] var17 = null;
+        int[] var2_ref_int__;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int[] var9;
+        int var9_int;
+        int var10;
+        int var11;
+        int[] var12;
+        int[] var14;
+        int[] var17;
         var17 = new int[this.field_e];
         var14 = new int[33];
         var12 = var14;

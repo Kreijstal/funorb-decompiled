@@ -18,8 +18,23 @@ final class hg extends ka {
     }
 
     final int a(int param0, int param1, fs param2) {
-        RuntimeException var4 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_13_0 = 0;
+        fs stackIn_17_0 = null;
+        fs stackIn_17_1 = null;
+        int stackIn_32_0 = 0;
+        int stackIn_37_0 = 0;
+        int stackIn_41_0 = 0;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         fs var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -32,36 +47,6 @@ final class hg extends ka {
         int var13 = 0;
         ln var14 = null;
         int var15 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_40_0 = 0;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
         var15 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -74,15 +59,13 @@ final class hg extends ka {
                   break L1;
                 } else {
                   if ((1 << var4_int & this.field_g.field_w) != 0) {
-                    stackOut_8_0 = 0;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = 0;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     var5 = this.field_g.field_v[this.field_g.field_m[-1 + this.field_g.field_r]];
                     if (param2 == var5) {
-                      stackOut_12_0 = 1;
-                      stackIn_13_0 = stackOut_12_0;
+                      stackIn_13_0 = 1;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -93,8 +76,7 @@ final class hg extends ka {
                       L2: while (true) {
                         if (var8_ref_ln__.length <= var9) {
                           if (var7 * 2 < var6) {
-                            stackOut_30_0 = -1;
-                            stackIn_31_0 = stackOut_30_0;
+                            stackIn_32_0 = -1;
                             decompiledRegionSelector0 = 3;
                             break L0;
                           } else {
@@ -104,8 +86,7 @@ final class hg extends ka {
                                 break L3;
                               } else {
                                 if (this.field_g.field_D[this.field_n.field_x] > this.field_g.field_D[var4_int] * var8) {
-                                  stackOut_35_0 = 4;
-                                  stackIn_36_0 = stackOut_35_0;
+                                  stackIn_37_0 = 4;
                                   decompiledRegionSelector0 = 4;
                                   break L0;
                                 } else {
@@ -115,12 +96,10 @@ final class hg extends ka {
                             }
                             L4: {
                               if (var5 != this.field_n) {
-                                stackOut_39_0 = -2;
-                                stackIn_40_0 = stackOut_39_0;
+                                stackIn_41_0 = -2;
                                 break L4;
                               } else {
-                                stackOut_38_0 = -3;
-                                stackIn_40_0 = stackOut_38_0;
+                                stackIn_41_0 = -3;
                                 break L4;
                               }
                             }
@@ -128,9 +107,11 @@ final class hg extends ka {
                             break L0;
                           }
                         } else {
+                          var10 = var8_ref_ln__[var9];
+                          stackIn_17_0 = var10.field_y;
+                          stackIn_17_1 = this.field_n;
                           L5: {
-                            var10 = var8_ref_ln__[var9];
-                            if (var10.field_y == this.field_n) {
+                            if (stackIn_17_0 == stackIn_17_1) {
                               var11 = 0;
                               var12 = var10.field_D;
                               var13 = 0;
@@ -171,8 +152,7 @@ final class hg extends ka {
                 }
               }
             }
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 0;
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -180,31 +160,23 @@ final class hg extends ka {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var4 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) (var4);
-            stackOut_41_1 = new StringBuilder().append("hg.UA(").append(param0).append(',').append(param1).append(',');
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackIn_44_0 = (RuntimeException) (var4);
+
+            stackIn_44_1 = new StringBuilder().append("hg.UA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "null";
               break L8;
             } else {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "{...}";
               break L8;
             }
           }
-          throw r.a((Throwable) ((Object) stackIn_44_0), stackIn_44_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_5_0;
@@ -216,12 +188,12 @@ final class hg extends ka {
               return stackIn_13_0;
             } else {
               if (decompiledRegionSelector0 == 3) {
-                return stackIn_31_0;
+                return stackIn_32_0;
               } else {
                 if (decompiledRegionSelector0 == 4) {
-                  return stackIn_36_0;
+                  return stackIn_37_0;
                 } else {
-                  return stackIn_40_0;
+                  return stackIn_41_0;
                 }
               }
             }
@@ -255,14 +227,8 @@ final class hg extends ka {
     }
 
     final static String a(boolean param0, nf param1) {
-        Object var2 = null;
-        String var3 = null;
-        int var4 = 0;
-        String var5 = null;
         String stackIn_3_0 = null;
         String stackIn_34_0 = null;
-        Object stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
         Object stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         Object stackIn_38_0 = null;
@@ -270,16 +236,10 @@ final class hg extends ka {
         String stackIn_38_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_33_0 = null;
-        String stackOut_2_0 = null;
-        Object stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        Object stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        Object stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
+        Object var2 = null;
+        String var3 = null;
+        int var4 = 0;
+        String var5 = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -379,13 +339,11 @@ final class hg extends ka {
                   }
                 }
               }
-              stackOut_33_0 = (String) (var3);
-              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_0 = (String) (var3);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = (String) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (String) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -394,27 +352,19 @@ final class hg extends ka {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_35_0 = var2;
-            stackOut_35_1 = new StringBuilder().append("hg.C(").append(param0).append(',');
-            stackIn_37_0 = stackOut_35_0;
-            stackIn_37_1 = stackOut_35_1;
-            stackIn_36_0 = stackOut_35_0;
-            stackIn_36_1 = stackOut_35_1;
+            stackIn_37_0 = var2;
+
+            stackIn_37_1 = new StringBuilder().append("hg.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_37_0 = stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "null";
-              stackIn_38_0 = stackOut_37_0;
-              stackIn_38_1 = stackOut_37_1;
-              stackIn_38_2 = stackOut_37_2;
+              stackIn_38_0 = stackIn_37_0;
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "null";
               break L9;
             } else {
-              stackOut_36_0 = stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "{...}";
-              stackIn_38_0 = stackOut_36_0;
-              stackIn_38_1 = stackOut_36_1;
-              stackIn_38_2 = stackOut_36_2;
+              stackIn_38_0 = stackIn_37_0;
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "{...}";
               break L9;
             }
           }
@@ -428,15 +378,15 @@ final class hg extends ka {
     }
 
     public final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        fs var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var2;
+        int var3;
+        int var4;
+        fs var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           var10 = ShatteredPlansClient.field_F ? 1 : 0;
           if (this.field_g.field_o.field_i) {
@@ -542,7 +492,7 @@ final class hg extends ka {
             return;
           } else {
             this.field_c[var4] = this.field_c[var4] - 1;
-            if (var2 != var4) {
+            if ((var2 ^ -1) != (var4 ^ -1)) {
               if (this.field_g.field_D[var4] * 2 < var3) {
                 this.field_i[var4] = 0;
                 var4++;

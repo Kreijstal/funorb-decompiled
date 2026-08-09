@@ -8,91 +8,37 @@ final class fm {
     static int field_a;
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_d = null;
         field_b = null;
         field_c = null;
         if (param0 < 80) {
-            discarded$0 = fm.a(8, 105, 64);
+            fm.a(8, 105, 64);
         }
     }
 
     final static void a(wk[] param0, int param1, int param2, int param3, int param4) {
-        RuntimeException runtimeException = null;
-        wk[] var6 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
-            L1: {
-              param0[0].g(param2, param3);
-              param0[1].c(param0[1].field_y + param2, param3, -(param0[2].field_y << -1742036959) + param1, param0[2].field_v);
-              param0[2].g(param2 + param1 + -param0[2].field_y, param3);
-              if (param4 <= -38) {
-                break L1;
-              } else {
-                var6 = (wk[]) null;
+            param0[0].g(param2, param3);
+            param0[1].c(param0[1].field_y + param2, param3, -(param0[2].field_y << -1742036959) + param1, param0[2].field_v);
+            param0[2].g(param2 + param1 + -param0[2].field_y, param3);
+            if (param4 > -38) {
+                wk[] var6 = (wk[]) null;
                 fm.a((wk[]) null, -67, 44, -43, -95);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("fm.C(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
-            }
-          }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) ((Object) runtimeException), "fm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        wk[] var10 = null;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        wk[] var10;
         var3 = param0 >>> -1699991752 & 255;
         var4 = (-16777216 & param1) >>> -1863405544;
         if (param2 != 789485328) {

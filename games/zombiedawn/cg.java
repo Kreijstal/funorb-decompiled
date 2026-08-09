@@ -18,7 +18,6 @@ final class cg {
         int var3 = 0;
         int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
         var3 = ZombieDawn.field_J;
         try {
           L0: {
@@ -52,8 +51,7 @@ final class cg {
                     }
                   }
                 }
-                stackOut_12_0 = var2;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = var2;
                 break L0;
               } else {
                 kk.field_m.a(21657);

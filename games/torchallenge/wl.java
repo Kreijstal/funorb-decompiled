@@ -16,8 +16,8 @@ final class wl {
     static fe[][] field_c;
 
     final void c(int param0) {
-        int var2 = 0;
-        int var7 = 0;
+        int var2;
+        int var7;
         L0: {
           var7 = TorChallenge.field_F ? 1 : 0;
           if ((bc.field_o ^ -1) == -14) {
@@ -111,18 +111,13 @@ final class wl {
     }
 
     final void c(byte param0) {
-        if (-1 > (tf.field_o ^ -1)) {
-            if (!bh.field_p) {
-                if (null == kf.field_a) {
-                    kf.field_a = wi.a(pd.field_c, pa.field_x, new int[]{tf.field_o}, (byte) 77, 31, ac.field_d, ae.field_z, 65504, 3);
-                }
-            }
+        if (-1 > (tf.field_o ^ -1) && !bh.field_p && null == kf.field_a) {
+            kf.field_a = wi.a(pd.field_c, pa.field_x, new int[]{tf.field_o}, (byte) 77, 31, ac.field_d, ae.field_z, 65504, 3);
         }
         int var2 = 123 % ((param0 - 34) / 54);
     }
 
     final static void a(int param0, lj param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         vg var5 = null;
@@ -131,8 +126,6 @@ final class wl {
         pa var8 = null;
         int var9 = 0;
         pa var10 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -140,14 +133,7 @@ final class wl {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var2 = null;
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -195,27 +181,19 @@ final class wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var2);
-            stackOut_10_1 = new StringBuilder().append("wl.A(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var2);
+
+            stackIn_12_1 = new StringBuilder().append("wl.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L3;
             }
           }
@@ -229,43 +207,26 @@ final class wl {
     }
 
     final void a(int param0) {
-        qe discarded$1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_169_0 = 0;
-        int stackIn_170_0 = 0;
         int stackIn_171_0 = 0;
-        int stackIn_172_0 = 0;
         int stackIn_173_0 = 0;
         int stackIn_173_1 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_168_0 = 0;
-        int stackOut_169_0 = 0;
-        int stackOut_172_0 = 0;
-        int stackOut_172_1 = 0;
-        int stackOut_170_0 = 0;
-        int stackOut_171_0 = 0;
-        int stackOut_171_1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = TorChallenge.field_F ? 1 : 0;
           if (!d.p(-112)) {
             if (ee.field_o <= 0) {
-              stackOut_4_0 = 1;
-              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_0 = 1;
               break L0;
             } else {
-              stackOut_3_0 = 0;
-              stackIn_6_0 = stackOut_3_0;
+              stackIn_6_0 = 0;
               break L0;
             }
           } else {
-            stackOut_1_0 = 1;
-            stackIn_6_0 = stackOut_1_0;
+            stackIn_6_0 = 1;
             break L0;
           }
         }
@@ -657,7 +618,7 @@ final class wl {
               ij.field_z = false;
               rj.field_d = null;
               eb.field_n = false;
-              discarded$1 = wb.field_p.c((byte) 29, aa.field_g);
+              wb.field_p.c((byte) 29, aa.field_g);
               if (0 < wb.field_p.field_db) {
                 L26: {
                   ub.field_i = false;
@@ -765,32 +726,25 @@ final class wl {
               L35: {
                 ed.a((byte) 89, aa.field_g);
                 wb.field_p.b(true, false);
-                stackOut_168_0 = -73;
-                stackIn_171_0 = stackOut_168_0;
-                stackIn_169_0 = stackOut_168_0;
+                stackIn_171_0 = -73;
+
                 if (ui.field_b) {
                   break L35;
                 } else {
-                  stackOut_169_0 = stackIn_169_0;
-                  stackIn_172_0 = stackOut_169_0;
-                  stackIn_170_0 = stackOut_169_0;
+
+
                   if (!ij.field_z) {
-                    stackOut_172_0 = stackIn_172_0;
-                    stackOut_172_1 = 0;
-                    stackIn_173_0 = stackOut_172_0;
-                    stackIn_173_1 = stackOut_172_1;
+                    stackIn_173_0 = stackIn_171_0;
+                    stackIn_173_1 = 0;
                     break L34;
                   } else {
-                    stackOut_170_0 = stackIn_170_0;
-                    stackIn_171_0 = stackOut_170_0;
+
                     break L35;
                   }
                 }
               }
-              stackOut_171_0 = stackIn_171_0;
-              stackOut_171_1 = 1;
-              stackIn_173_0 = stackOut_171_0;
-              stackIn_173_1 = stackOut_171_1;
+              stackIn_173_0 = stackIn_171_0;
+              stackIn_173_1 = 1;
               break L34;
             }
             L36: {
@@ -962,89 +916,67 @@ final class wl {
     }
 
     final void b(byte param0) {
-        ul var2 = null;
-        String var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var18 = 0;
         int var7 = 0;
-        int var8 = 0;
+        int var5 = 0;
         int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        ka[] var14 = null;
-        int var15 = 0;
-        int var16 = 0;
+        int var10 = 0;
+        int var8 = 0;
+        int var6 = 0;
+        String var3 = null;
         int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
         Object var20 = null;
-        ul var20_ref = null;
-        var20 = null;
-        var19 = TorChallenge.field_F ? 1 : 0;
-        var4 = 112 % ((param0 - -31) / 32);
-        var20_ref = (ul) ((Object) db.field_D.c((byte) 106));
-        var2 = var20_ref;
-        var13 = tf.field_j[0].field_x >> 1313206370;
-        var14 = ng.field_L;
-        var15 = var14[0].field_u;
-        var16 = var14[0].field_x;
-        if (var2 == null) {
-          return;
-        } else {
-          L0: {
+        int var19 = TorChallenge.field_F ? 1 : 0;
+        int var4 = 112 % ((param0 - -31) / 32);
+        ul var20_ref = (ul) ((Object) db.field_D.c((byte) 106));
+        ul var2 = var20_ref;
+        int var13 = tf.field_j[0].field_x >> 1313206370;
+        ka[] var14 = ng.field_L;
+        int var15 = var14[0].field_u;
+        int var16 = var14[0].field_x;
+        if (var2 != null) {
             var18 = fk.field_t;
             var7 = 220;
             var5 = tf.field_x.a(wb.field_n[var20_ref.field_i]);
-            if (80 <= var18) {
-              if (-231 >= (var18 ^ -1)) {
-                var17 = 123 + -(var18 / 2);
-                break L0;
-              } else {
-                var17 = 8;
-                break L0;
-              }
+            if (80 > var18) {
+                var17 = -32 + var18 / 2;
             } else {
-              var17 = -32 + var18 / 2;
-              break L0;
+                if (-231 < (var18 ^ -1)) {
+                    var17 = 8;
+                } else {
+                    var17 = 123 + -(var18 / 2);
+                }
             }
-          }
-          L1: {
             var9 = var17;
             var11 = 40 + (2 * (var15 + 1) + var5);
             var12 = var13 - -(var16 << 184493633) + 2;
-            if (var11 >= 200) {
-              break L1;
-            } else {
-              var11 = 200;
-              break L1;
+            if (var11 < 200) {
+                var11 = 200;
             }
-          }
-          var10 = var16 + 1;
-          var8 = var15;
-          hd.a(var14, var12, var11, (byte) -78, var9, var7);
-          tf.field_j[var20_ref.field_i].h(var8 + var7, var10 + var9);
-          var6 = 24;
-          var8 = var15 - -40;
-          var3 = wb.field_n[var20_ref.field_i];
-          var10 = -(var6 >> 755927073) + (1 + (var16 + (var13 >> 1548978593) - -18));
-          tf.field_x.c(var3, var8 + var7, var10 + var9, 0, -1);
-          return;
+            var10 = var16 + 1;
+            var8 = var15;
+            hd.a(var14, var12, var11, (byte) -78, var9, var7);
+            tf.field_j[var20_ref.field_i].h(var8 + var7, var10 + var9);
+            var6 = 24;
+            var8 = var15 - -40;
+            var3 = wb.field_n[var20_ref.field_i];
+            var10 = -(var6 >> 755927073) + (1 + (var16 + (var13 >> 1548978593) - -18));
+            tf.field_x.c(var3, var8 + var7, var10 + var9, 0, -1);
+            return;
         }
     }
 
     final void a(byte param0) {
         int fieldTemp$0 = 0;
-        da discarded$1 = null;
         int var2 = -62 % ((-15 - param0) / 35);
         if (null != db.field_D.c((byte) 124)) {
             fieldTemp$0 = fk.field_t + 1;
             fk.field_t = fk.field_t + 1;
             if (!(fieldTemp$0 != 335)) {
                 fk.field_t = 0;
-                discarded$1 = db.field_D.a((byte) 93);
+                db.field_D.a((byte) 93);
             }
             return;
         }
@@ -1092,42 +1024,28 @@ final class wl {
     }
 
     wl(int param0, int param1, boolean param2) {
-        da discarded$1 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_6_0 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         L0: {
           this.field_g = false;
           this.field_e = 0;
           this.field_a = 0;
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if ((fa.field_g ^ -1) > -3) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -1135,12 +1053,10 @@ final class wl {
           ((wl) (this)).field_f = stackIn_3_1 != 0;
           ae.field_z = 16;
           if (!param2) {
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L1;
           } else {
-            stackOut_4_0 = 1;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = 1;
             break L1;
           }
         }
@@ -1301,7 +1217,7 @@ final class wl {
                         fk.field_t = 0;
                         return;
                       } else {
-                        discarded$1 = db.field_D.a((byte) 101);
+                        db.field_D.a((byte) 101);
                         continue L17;
                       }
                     }

@@ -15,7 +15,7 @@ final class ii {
     }
 
     final static void a(int param0, byte param1) {
-        int discarded$0 = et.a(-3);
+        et.a(-3);
         int var2 = -1 % ((param1 - 16) / 39);
     }
 

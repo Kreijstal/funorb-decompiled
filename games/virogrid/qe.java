@@ -35,9 +35,10 @@ abstract class qe extends mi implements bo {
 
     final static void a(byte param0, int param1) {
         pe var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
+        boolean stackIn_14_0 = false;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -62,8 +63,9 @@ abstract class qe extends mi implements bo {
                       if (var2 == null) {
                         break L3;
                       } else {
+                        stackIn_14_0 = var2.field_h.b(false);
                         L5: {
-                          if (!var2.field_h.b(false)) {
+                          if (!stackIn_14_0) {
                             var2.a(false);
                             break L5;
                           } else {
@@ -103,31 +105,20 @@ abstract class qe extends mi implements bo {
     abstract String a(int param0, String param1);
 
     public final void a(boolean param0, wa param1) {
-        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
               if (!param0) {
                 break L1;
               } else {
-                discarded$2 = this.a(true);
+                this.a(true);
                 break L1;
               }
             }
@@ -137,27 +128,19 @@ abstract class qe extends mi implements bo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("qe.T(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("qe.T(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -295,7 +278,7 @@ abstract class qe extends mi implements bo {
     }
 
     final static int b(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         var2 = param1 >>> 1743078753;
         var2 = var2 | var2 >>> -728240159;
         var2 = var2 | var2 >>> -1224113630;
@@ -313,13 +296,9 @@ abstract class qe extends mi implements bo {
     }
 
     public final boolean a(boolean param0) {
-        wl discarded$5 = null;
-        String var3 = null;
+        String var3;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0) {
           if (null != this.field_g.field_n) {
             if (0 == this.field_g.field_n.length()) {
@@ -328,24 +307,21 @@ abstract class qe extends mi implements bo {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
           var3 = (String) null;
-          discarded$5 = this.a((String) null, false);
+          this.a((String) null, false);
           if (null == this.field_g.field_n) {
             return true;
           } else {
             L0: {
               if (0 != this.field_g.field_n.length()) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }

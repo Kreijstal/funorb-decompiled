@@ -16,21 +16,15 @@ class nt extends ms {
     boolean a(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         this.field_p = this.field_p - 1;
         if (param0 != -2567) {
           L0: {
             this.field_p = -86;
             if (this.field_p != 0) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -38,12 +32,10 @@ class nt extends ms {
         } else {
           L1: {
             if (this.field_p != 0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -63,7 +55,6 @@ class nt extends ms {
     }
 
     final static boolean a(byte param0) {
-        boolean discarded$5 = false;
         if (param0 > 82) {
           if (null != qk.field_O) {
             if (kw.field_c != ga.field_j) {
@@ -75,7 +66,7 @@ class nt extends ms {
             return false;
           }
         } else {
-          discarded$5 = nt.a((byte) 13);
+          nt.a((byte) 13);
           if (null != qk.field_O) {
             if (kw.field_c != ga.field_j) {
               return false;

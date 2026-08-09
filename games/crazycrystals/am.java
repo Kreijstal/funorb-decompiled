@@ -21,22 +21,16 @@ final class am {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        double var11 = 0.0;
-        int var13_int = 0;
-        double var13 = 0.0;
-        int var15 = 0;
-        double stackIn_26_0 = 0.0;
         double stackIn_27_0 = 0.0;
         double stackIn_28_0 = 0.0;
         int stackIn_28_1 = 0;
-        double stackOut_25_0 = 0.0;
-        double stackOut_27_0 = 0.0;
-        int stackOut_27_1 = 0;
-        double stackOut_26_0 = 0.0;
-        int stackOut_26_1 = 0;
+        int var8;
+        int var9;
+        int var10;
+        double var11;
+        int var13_int;
+        double var13;
+        int var15;
         L0: {
           var15 = CrazyCrystals.field_B;
           if (-61 != (param0 ^ -1)) {
@@ -131,20 +125,15 @@ final class am {
           }
         }
         L8: {
-          stackOut_25_0 = (double)var8;
-          stackIn_27_0 = stackOut_25_0;
-          stackIn_26_0 = stackOut_25_0;
+          stackIn_27_0 = (double)var8;
+
           if ((var10 ^ -1) <= -49) {
-            stackOut_27_0 = stackIn_27_0;
-            stackOut_27_1 = var10;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackIn_28_0 = stackIn_27_0;
+            stackIn_28_1 = var10;
             break L8;
           } else {
-            stackOut_26_0 = stackIn_26_0;
-            stackOut_26_1 = 48;
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
+            stackIn_28_0 = stackIn_27_0;
+            stackIn_28_1 = 48;
             break L8;
           }
         }
@@ -153,24 +142,20 @@ final class am {
     }
 
     final void a(byte param0) {
-        double var2 = 0.0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        double var2;
+        int var4;
+        int var5;
+        int var6;
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         var6 = CrazyCrystals.field_B;
         if (param0 < -13) {
           L0: {
             var2 = Math.sqrt(this.field_b) * 64.0;
             if ((double)(64 * this.field_c) <= var2) {
-              stackOut_4_0 = 64 * this.field_c;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 64 * this.field_c;
               break L0;
             } else {
-              stackOut_3_0 = (int)var2;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = (int)var2;
               break L0;
             }
           }
@@ -220,8 +205,6 @@ final class am {
 
     final static boolean a(char param0, byte param1) {
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           if (param1 >= 18) {
             break L0;
@@ -242,8 +225,7 @@ final class am {
                   break L2;
                 } else {
                   if (param0 != 45) {
-                    stackOut_8_0 = 0;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = 0;
                     break L1;
                   } else {
                     break L2;
@@ -252,22 +234,13 @@ final class am {
               }
             }
           }
-          stackOut_7_0 = 1;
-          stackIn_9_0 = stackOut_7_0;
+          stackIn_9_0 = 1;
           break L1;
         }
         return stackIn_9_0 != 0;
     }
 
     final static void a(db param0, db param1, int param2) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5_int = 0;
-        ng var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int[] stackIn_29_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -283,26 +256,16 @@ final class am {
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         String stackIn_38_2 = null;
-        int[] stackOut_27_0 = null;
-        int[] stackOut_28_0 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
         int statePc = 0;
         Throwable caughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5_int = 0;
+        ng var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -426,7 +389,7 @@ final class am {
                 }
                 case 10: {
                     try {
-                        if (ee.field_m.field_t > var5_int) {
+                        if ((ee.field_m.field_t ^ -1) < (var5_int ^ -1)) {
                             statePc = 24;
                         } else {
                             statePc = 11;
@@ -630,15 +593,13 @@ final class am {
                     return;
                 }
                 case 27: {
-                    stackOut_27_0 = mi.field_A;
-                    stackIn_29_0 = stackOut_27_0;
+                    stackIn_29_0 = mi.field_A;
                     statePc = 29;
                     continue stateLoop;
                 }
                 case 28: {
                     try {
-                        stackOut_28_0 = mi.field_A;
-                        stackIn_29_0 = stackOut_28_0;
+                        stackIn_29_0 = mi.field_A;
                         statePc = 29;
                         continue stateLoop;
                     } catch (Throwable stateCaught_28) {
@@ -676,12 +637,10 @@ final class am {
                 }
                 case 32: {
                     var3 = (RuntimeException) ((Object) caughtException);
-                    stackOut_32_0 = (RuntimeException) (var3);
-                    stackOut_32_1 = new StringBuilder().append("am.E(");
-                    stackIn_34_0 = stackOut_32_0;
-                    stackIn_34_1 = stackOut_32_1;
-                    stackIn_33_0 = stackOut_32_0;
-                    stackIn_33_1 = stackOut_32_1;
+                    stackIn_34_0 = (RuntimeException) (var3);
+                    stackIn_33_0 = stackIn_34_0;
+                    stackIn_34_1 = new StringBuilder().append("am.E(");
+                    stackIn_33_1 = stackIn_34_1;
                     if (param0 == null) {
                         statePc = 34;
                     } else {
@@ -690,32 +649,24 @@ final class am {
                     continue stateLoop;
                 }
                 case 33: {
-                    stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-                    stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-                    stackOut_33_2 = "{...}";
-                    stackIn_35_0 = stackOut_33_0;
-                    stackIn_35_1 = stackOut_33_1;
-                    stackIn_35_2 = stackOut_33_2;
+                    stackIn_35_0 = (RuntimeException) ((Object) stackIn_33_0);
+                    stackIn_35_1 = (StringBuilder) ((Object) stackIn_33_1);
+                    stackIn_35_2 = "{...}";
                     statePc = 35;
                     continue stateLoop;
                 }
                 case 34: {
-                    stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-                    stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-                    stackOut_34_2 = "null";
-                    stackIn_35_0 = stackOut_34_0;
-                    stackIn_35_1 = stackOut_34_1;
-                    stackIn_35_2 = stackOut_34_2;
+                    stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+                    stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+                    stackIn_35_2 = "null";
                     statePc = 35;
                     continue stateLoop;
                 }
                 case 35: {
-                    stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-                    stackOut_35_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(',');
-                    stackIn_37_0 = stackOut_35_0;
-                    stackIn_37_1 = stackOut_35_1;
-                    stackIn_36_0 = stackOut_35_0;
-                    stackIn_36_1 = stackOut_35_1;
+                    stackIn_37_0 = (RuntimeException) ((Object) stackIn_35_0);
+                    stackIn_36_0 = stackIn_37_0;
+                    stackIn_37_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(',');
+                    stackIn_36_1 = stackIn_37_1;
                     if (param1 == null) {
                         statePc = 37;
                     } else {
@@ -724,22 +675,16 @@ final class am {
                     continue stateLoop;
                 }
                 case 36: {
-                    stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-                    stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-                    stackOut_36_2 = "{...}";
-                    stackIn_38_0 = stackOut_36_0;
-                    stackIn_38_1 = stackOut_36_1;
-                    stackIn_38_2 = stackOut_36_2;
+                    stackIn_38_0 = (RuntimeException) ((Object) stackIn_36_0);
+                    stackIn_38_1 = (StringBuilder) ((Object) stackIn_36_1);
+                    stackIn_38_2 = "{...}";
                     statePc = 38;
                     continue stateLoop;
                 }
                 case 37: {
-                    stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-                    stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-                    stackOut_37_2 = "null";
-                    stackIn_38_0 = stackOut_37_0;
-                    stackIn_38_1 = stackOut_37_1;
-                    stackIn_38_2 = stackOut_37_2;
+                    stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+                    stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+                    stackIn_38_2 = "null";
                     statePc = 38;
                     continue stateLoop;
                 }
@@ -778,15 +723,15 @@ final class am {
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4) {
-        double var6 = 0.0;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        fq var9_ref_fq = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        double var6;
+        int var6_int;
+        int var7;
+        int var8;
+        int var9;
+        fq var9_ref_fq;
+        int var10;
+        int var11;
+        int var12;
         L0: {
           var12 = CrazyCrystals.field_B;
           if (param0 > this.field_c) {

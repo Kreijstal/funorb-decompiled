@@ -17,24 +17,12 @@ final class ui {
         String var5 = null;
         String stackIn_6_0 = null;
         String stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         Throwable decompiledCaughtException = null;
-        String stackOut_5_0 = null;
-        String stackOut_7_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             try {
@@ -59,15 +47,13 @@ final class ui {
                 var4 = new byte[var3_int];
                 param1.field_k = param1.field_k + bd.field_m.a(-112, var3_int, 0, param1.field_k, var4, param1.field_i);
                 var5 = tc.a((byte) -114, var4, var3_int, 0);
-                stackOut_5_0 = (String) (var5);
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (String) (var5);
                 break L1;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (Exception) (Object) decompiledCaughtException;
-              stackOut_7_0 = "Cabbage";
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = "Cabbage";
               return stackIn_8_0;
             }
             break L0;
@@ -76,27 +62,19 @@ final class ui {
           decompiledCaughtException = decompiledCaughtParameter1;
           L4: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3_ref);
-            stackOut_9_1 = new StringBuilder().append("ui.C(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3_ref);
+
+            stackIn_11_1 = new StringBuilder().append("ui.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -115,26 +93,9 @@ final class ui {
     }
 
     final void a(int param0, int param1, int param2) {
-        int discarded$17 = 0;
-        int discarded$18 = 0;
-        int discarded$19 = 0;
-        int discarded$20 = 0;
-        int discarded$21 = 0;
-        int discarded$22 = 0;
-        int discarded$23 = 0;
-        int discarded$24 = 0;
-        int discarded$25 = 0;
-        int discarded$26 = 0;
-        int discarded$27 = 0;
-        int discarded$28 = 0;
-        int discarded$29 = 0;
-        int discarded$30 = 0;
-        int discarded$31 = 0;
-        int discarded$32 = 0;
-        int discarded$33 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
+        int var4;
         L0: {
           var6 = Terraphoenix.field_V;
           this.field_d = true;
@@ -168,7 +129,7 @@ final class ui {
             og.field_f.b("<col=fcfe7f>5.</col> " + qd.field_h[5], param0, param2, 16777215, 0);
             param2 += 16;
             param2 += 46;
-            discarded$17 = sj.a(65280, 20, param2, 608, 14, 32, qd.field_h[6], 0);
+            sj.a(65280, 20, param2, 608, 14, 32, qd.field_h[6], 0);
             break L1;
           } else {
             if (-2 == (var5 ^ -1)) {
@@ -183,7 +144,7 @@ final class ui {
               L2: while (true) {
                 if (var5 > 14) {
                   param2 += 30;
-                  discarded$18 = sj.a(65280, 20, param2, 592, 14, 48, nd.field_o[15], 0);
+                  sj.a(65280, 20, param2, 592, 14, 48, nd.field_o[15], 0);
                   break L1;
                 } else {
                   if (var5 >= 10) {
@@ -210,13 +171,13 @@ final class ui {
                       param0 = 64;
                       param2 += 64;
                       rh.field_b[5].b(32, param2 + -16);
-                      discarded$19 = sj.a(16777215, 20, param2, 608, 14, param0, oi.field_M[1], 0);
+                      sj.a(16777215, 20, param2, 608, 14, param0, oi.field_M[1], 0);
                       param2 += 64;
                       rh.field_b[7].b(32, -16 + param2);
-                      discarded$20 = sj.a(16777215, 20, param2, 608, 14, param0, oi.field_M[2], 0);
+                      sj.a(16777215, 20, param2, 608, 14, param0, oi.field_M[2], 0);
                       param2 += 64;
                       rh.field_b[8].b(32, param2 + -16);
-                      discarded$21 = sj.a(16777215, param1 + 20, param2, 608, 14, param0, oi.field_M[3], 0);
+                      sj.a(16777215, param1 + 20, param2, 608, 14, param0, oi.field_M[3], 0);
                       break L1;
                     } else {
                       if (var5 != 6) {
@@ -335,25 +296,25 @@ final class ui {
                     vc.field_f.c(ij.field_a[0], 320, 468, 13881286, -1);
                     param0 = 96;
                     param2 += 48;
-                    discarded$22 = sj.a(16777215, 20, param2, 610, 14, param0, ij.field_a[1], 0);
+                    sj.a(16777215, 20, param2, 610, 14, param0, ij.field_a[1], 0);
                     rh.field_b[11].b(32, param2 - 16);
                     param2 += 48;
                     rh.field_b[0].b(32, param2 - 16);
-                    discarded$23 = sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[2], 0);
+                    sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[2], 0);
                     param2 += 48;
                     rh.field_b[1].b(32, param2 - 16);
-                    discarded$24 = sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[3], 0);
+                    sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[3], 0);
                     param2 += 48;
                     rh.field_b[3].b(32, -16 + param2);
-                    discarded$25 = sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[4], 0);
+                    sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[4], 0);
                     param2 += 48;
                     rh.field_b[6].b(32, -16 + param2);
-                    discarded$26 = sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[5], 0);
+                    sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[5], 0);
                     param2 += 48;
                     rh.field_b[9].b(32, -16 + param2);
                     rh.field_b[10].b(32, 4 + param2);
                     param2 += 16;
-                    discarded$27 = sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[6], 0);
+                    sj.a(16777215, 20, param2, 608, 14, param0, ij.field_a[6], 0);
                     break L1;
                   }
                 } else {
@@ -403,21 +364,21 @@ final class ui {
                 param2 -= 32;
                 param2 += 48;
                 og.field_f.b("1.", param0, -9 + param2, 16580223, 0);
-                discarded$28 = sj.a(16777215, 20, param2, 616, 14, 16 + param0, mb.field_p[1], 0);
+                sj.a(16777215, 20, param2, 616, 14, 16 + param0, mb.field_p[1], 0);
                 param2 += 48;
                 og.field_f.b("2.", param0, -9 + param2, 16580223, 0);
-                discarded$29 = sj.a(16777215, 20, param2, 616, 14, param0 + 16, mb.field_p[2], 0);
+                sj.a(16777215, 20, param2, 616, 14, param0 + 16, mb.field_p[2], 0);
                 param2 += 48;
                 og.field_f.b("3.", param0, param2 + -9, 16580223, 0);
-                discarded$30 = sj.a(16777215, param1 + 20, param2, 616, 14, param0 - -16, mb.field_p[3], 0);
+                sj.a(16777215, param1 + 20, param2, 616, 14, param0 - -16, mb.field_p[3], 0);
                 param2 += 48;
                 og.field_f.b("4.", param0, param2 + -9, 16580223, 0);
-                discarded$31 = sj.a(16777215, 20, param2, 616, 14, param0 - -16, mb.field_p[4], 0);
+                sj.a(16777215, 20, param2, 616, 14, param0 - -16, mb.field_p[4], 0);
                 param2 += 48;
                 og.field_f.b("5.", param0, param2 + -9, 16580223, 0);
-                discarded$32 = sj.a(16777215, 20, param2, 616, 14, 16 + param0, mb.field_p[5], 0);
+                sj.a(16777215, 20, param2, 616, 14, 16 + param0, mb.field_p[5], 0);
                 param2 += 48;
-                discarded$33 = sj.a(65280, param1 + 20, param2, 592, 14, 48, mb.field_p[6], 0);
+                sj.a(65280, param1 + 20, param2, 592, 14, 48, mb.field_p[6], 0);
                 break L1;
               }
             }

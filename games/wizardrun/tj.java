@@ -12,26 +12,20 @@ abstract class tj extends pe {
 
     private final int h(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -660264703) {
           return 75;
         } else {
           L0: {
             if (this.field_H) {
               if (this.field_E.f(param0 ^ -660264703) == this) {
-                stackOut_5_0 = 256;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 256;
                 break L0;
               } else {
-                stackOut_4_0 = 0;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 0;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L0;
             }
           }
@@ -59,16 +53,14 @@ abstract class tj extends pe {
     }
 
     final void a(int param0, int param1, int param2) {
-        boolean discarded$0 = false;
         this.a(110, ik.field_K + -param1 >> -1705838399, param1, param2, dh.field_a + -param2 >> -1220694655);
         if (param0 != 6154) {
             String var5 = (String) null;
-            discarded$0 = tj.a(-85, (String) null);
+            tj.a(-85, (String) null);
         }
     }
 
     final static boolean a(int param0, String param1) {
-        Process discarded$2 = null;
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -79,8 +71,6 @@ abstract class tj extends pe {
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_21_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -89,19 +79,6 @@ abstract class tj extends pe {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_20_0 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         var4 = wizardrun.field_H;
         try {
           L0: {
@@ -121,8 +98,7 @@ abstract class tj extends pe {
                       break L3;
                     } else {
                       if (!param1.startsWith("https://")) {
-                        stackOut_9_0 = 0;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L1;
                       } else {
@@ -134,15 +110,13 @@ abstract class tj extends pe {
                   var3 = 0;
                   L4: while (true) {
                     if (param1.length() <= var3) {
-                      discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
-                      stackOut_18_0 = 1;
-                      stackIn_19_0 = stackOut_18_0;
+                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
+                      stackIn_19_0 = 1;
                       decompiledRegionSelector0 = 3;
                       break L1;
                     } else {
                       if (-1 == var2.indexOf((int) param1.charAt(var3))) {
-                        stackOut_15_0 = 0;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L1;
                       } else {
@@ -152,8 +126,7 @@ abstract class tj extends pe {
                     }
                   }
                 } else {
-                  stackOut_2_0 = 0;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L1;
                 }
@@ -161,8 +134,7 @@ abstract class tj extends pe {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackOut_20_0 = 0;
-              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_0 = 0;
               return stackIn_21_0 != 0;
             }
             if (decompiledRegionSelector0 == 0) {
@@ -187,27 +159,19 @@ abstract class tj extends pe {
           decompiledCaughtException = decompiledCaughtParameter1;
           L5: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2_ref2);
-            stackOut_22_1 = new StringBuilder().append("tj.CB(").append(param0).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2_ref2);
+
+            stackIn_24_1 = new StringBuilder().append("tj.CB(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L5;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L5;
             }
           }
@@ -229,11 +193,9 @@ abstract class tj extends pe {
     }
 
     boolean g(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
         if (param0 == 1) {
           L0: {
             var2 = this.h(-660264703);
@@ -259,12 +221,10 @@ abstract class tj extends pe {
             } else {
               L2: {
                 if (this.field_H) {
-                  stackOut_13_0 = 0;
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_0 = 0;
                   break L2;
                 } else {
-                  stackOut_12_0 = 1;
-                  stackIn_14_0 = stackOut_12_0;
+                  stackIn_14_0 = 1;
                   break L2;
                 }
               }
@@ -339,7 +299,6 @@ abstract class tj extends pe {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
-        boolean discarded$0 = false;
         try {
             kk.field_yb = true;
             var2 = "tuhstatbut";
@@ -347,7 +306,7 @@ abstract class tj extends pe {
             var4 = -1L;
             if (param0 != 3088) {
                 String var6 = (String) null;
-                discarded$0 = tj.a(-110, (String) null);
+                tj.a(-110, (String) null);
             }
             fa.a(var4, var2, false, var3, param1);
         } catch (RuntimeException runtimeException) {
@@ -364,7 +323,7 @@ abstract class tj extends pe {
     }
 
     final static String[] a(String param0, int param1, char param2) {
-        int incrementValue$2 = 0;
+        int incrementValue$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
@@ -375,23 +334,12 @@ abstract class tj extends pe {
         int var9 = 0;
         CharSequence var10 = null;
         String[] stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[] stackOut_9_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var9 = wizardrun.field_H;
         try {
           L0: {
@@ -412,16 +360,15 @@ abstract class tj extends pe {
             L2: while (true) {
               if (var3_int <= var7) {
                 var4[var3_int] = param0.substring(var6);
-                stackOut_9_0 = (String[]) (var4);
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = (String[]) (var4);
                 break L0;
               } else {
                 var8 = var6;
                 L3: while (true) {
                   if (param2 == param0.charAt(var8)) {
-                    incrementValue$2 = var5;
+                    incrementValue$1 = var5;
                     var5++;
-                    var4[incrementValue$2] = param0.substring(var6, var8);
+                    var4[incrementValue$1] = param0.substring(var6, var8);
                     var6 = var8 - -1;
                     var7++;
                     continue L2;
@@ -437,27 +384,19 @@ abstract class tj extends pe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("tj.DB(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("tj.DB(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L4;
             }
           }

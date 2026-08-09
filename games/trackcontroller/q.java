@@ -87,12 +87,12 @@ final class q {
     }
 
     final static void a(boolean param0) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         la var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -110,9 +110,9 @@ final class q {
                 break L0;
               } else {
                 var1.c(8, 7);
-                fieldTemp$5 = var1.field_k + 1;
+                fieldTemp$2 = var1.field_k + 1;
                 var1.field_k = var1.field_k + 1;
-                var2 = fieldTemp$5;
+                var2 = fieldTemp$2;
                 rc.a(78, var1);
                 ra.field_C.a(param0, -var2 + var1.field_k);
                 continue L2;
@@ -159,22 +159,12 @@ final class q {
             int var3 = 0;
             String var4 = null;
             java.net.URL var5 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
             RuntimeException stackIn_10_0 = null;
             StringBuilder stackIn_10_1 = null;
             RuntimeException stackIn_11_0 = null;
             StringBuilder stackIn_11_1 = null;
             String stackIn_11_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            RuntimeException stackOut_10_0 = null;
-            StringBuilder stackOut_10_1 = null;
-            String stackOut_10_2 = null;
-            RuntimeException stackOut_9_0 = null;
-            StringBuilder stackOut_9_1 = null;
-            String stackOut_9_2 = null;
             try {
               try {
                 L0: {
@@ -214,27 +204,19 @@ final class q {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_8_0 = (RuntimeException) (var2_ref2);
-                stackOut_8_1 = new StringBuilder().append("q.B(");
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_10_1 = stackOut_8_1;
-                stackIn_9_0 = stackOut_8_0;
-                stackIn_9_1 = stackOut_8_1;
+                stackIn_10_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_10_1 = new StringBuilder().append("q.B(");
+
                 if (param0 == null) {
-                  stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-                  stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-                  stackOut_10_2 = "null";
-                  stackIn_11_0 = stackOut_10_0;
-                  stackIn_11_1 = stackOut_10_1;
-                  stackIn_11_2 = stackOut_10_2;
+                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+                  stackIn_11_2 = "null";
                   break L3;
                 } else {
-                  stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-                  stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-                  stackOut_9_2 = "{...}";
-                  stackIn_11_0 = stackOut_9_0;
-                  stackIn_11_1 = stackOut_9_1;
-                  stackIn_11_2 = stackOut_9_2;
+                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+                  stackIn_11_2 = "{...}";
                   break L3;
                 }
               }

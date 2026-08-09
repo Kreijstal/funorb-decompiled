@@ -14,32 +14,24 @@ final class of extends vh {
     static byte[] field_Lb;
 
     private final boolean a(int param0, boolean param1, int param2, boolean param3, int param4, int param5, int param6) {
-        int var8 = 0;
+        int var8;
         int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
         L0: {
           if (!param3) {
             if (this.field_W) {
               if (!param1) {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 1;
                 break L0;
               } else {
-                stackOut_5_0 = 0;
-                stackIn_8_0 = stackOut_5_0;
+                stackIn_8_0 = 0;
                 break L0;
               }
             } else {
-              stackOut_3_0 = 0;
-              stackIn_8_0 = stackOut_3_0;
+              stackIn_8_0 = 0;
               break L0;
             }
           } else {
-            stackOut_1_0 = 1;
-            stackIn_8_0 = stackOut_1_0;
+            stackIn_8_0 = 1;
             break L0;
           }
         }
@@ -129,10 +121,9 @@ final class of extends vh {
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
-        boolean discarded$0 = false;
         this.a(param1, true, this.field_Sb.field_Db, param3, param2);
         if (param0 != -1207) {
-            discarded$0 = this.a(true, true, -121, (byte) -41, -22, -3);
+            this.a(true, true, -121, (byte) -41, -22, -3);
         }
     }
 
@@ -231,6 +222,8 @@ final class of extends vh {
     }
 
     final static void a(int param0, boolean param1, int param2) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -238,8 +231,6 @@ final class of extends vh {
         lk var7 = null;
         int var8 = 0;
         dd var9 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         try {
           L0: {
             if (ne.field_r.c(0)) {

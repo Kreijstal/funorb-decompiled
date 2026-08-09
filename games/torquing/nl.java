@@ -11,44 +11,42 @@ final class nl extends am {
     private int[] field_v;
 
     final int[] a(byte param0, int param1) {
-        int[] discarded$2 = null;
-        int[] discarded$3 = null;
-        int[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int[] var9 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int[] var18 = null;
-        int[] var21 = null;
-        int[] var22 = null;
+        int[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int[] var9;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int[] var18;
+        int[] var25;
+        int[] var26;
         var17 = Torquing.field_u;
         var18 = this.field_l.a(param1, 25657);
         var3 = var18;
         if (this.field_l.field_b) {
           var7 = ff.field_b * this.field_t >> -1416695892;
-          var22 = this.b(0, 0, vp.field_I & -1 + param1);
+          var26 = this.b(0, 0, vp.field_I & -1 + param1);
           var9 = this.b(0, 0, param1);
-          var21 = this.b(0, 0, param1 + 1 & vp.field_I);
+          var25 = this.b(0, 0, param1 + 1 & vp.field_I);
           var11 = 0;
           L0: while (true) {
             if (ci.field_c <= var11) {
               if (param0 < 86) {
-                discarded$2 = this.a((byte) 107, 117);
-                return var3;
+                this.a((byte) 107, 117);
+                return var18;
               } else {
-                return var3;
+                return var18;
               }
             } else {
               L1: {
-                var12 = var7 * (var21[var11] - var22[var11]) >> 1277135500;
+                var12 = var7 * (var25[var11] - var26[var11]) >> 1277135500;
                 var13 = (-var9[1 + var11 & jh.field_A] + var9[var11 + -1 & jh.field_A]) * var7 >> 992879468;
                 var14 = var13 >> 1539876356;
                 if (-1 >= (var14 ^ -1)) {
@@ -96,12 +94,15 @@ final class nl extends am {
             }
           }
         } else {
-          if (param0 >= 86) {
-            return var3;
-          } else {
-            discarded$3 = this.a((byte) 107, 117);
-            return var3;
+          L5: {
+            if (param0 >= 86) {
+              break L5;
+            } else {
+              this.a((byte) 107, 117);
+              break L5;
+            }
           }
+          return var18;
         }
     }
 
@@ -109,22 +110,12 @@ final class nl extends am {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         var5 = Torquing.field_u;
         try {
           L0: {
@@ -156,27 +147,19 @@ final class nl extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var4);
-            stackOut_12_1 = new StringBuilder().append("nl.H(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var4);
+
+            stackIn_14_1 = new StringBuilder().append("nl.H(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L1;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L1;
             }
           }
@@ -204,11 +187,11 @@ final class nl extends am {
     }
 
     private final void b(int param0) {
-        double var2 = 0.0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        double var2;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var2 = Math.cos((double)((float)this.field_w / 4096.0f));
         this.field_v[0] = (int)(4096.0 * (var2 * Math.sin((double)((float)this.field_x / 4096.0f))));
         this.field_v[1] = (int)(Math.cos((double)((float)this.field_x / 4096.0f)) * var2 * 4096.0);
@@ -235,10 +218,9 @@ final class nl extends am {
     }
 
     final void a(byte param0) {
-        int[] discarded$0 = null;
         this.b(-21978);
         if (param0 <= 123) {
-            discarded$0 = this.a((byte) 74, 123);
+            this.a((byte) 74, 123);
         }
     }
 
@@ -251,12 +233,12 @@ final class nl extends am {
     }
 
     final static t c(int param0) {
-        int var1 = 0;
-        byte[] var2 = null;
-        int[] var3 = null;
-        int var4_int = 0;
-        t var4 = null;
-        int var5 = 0;
+        int var1;
+        byte[] var2;
+        int[] var3;
+        int var4_int;
+        t var4;
+        int var5;
         var5 = Torquing.field_u;
         var1 = ij.field_o[0] * vo.field_b[0];
         var2 = pn.field_b[0];

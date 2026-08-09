@@ -10,14 +10,12 @@ final class fp extends wf {
 
     final static boolean a(byte param0, boolean param1) {
         try {
-            long dupTemp$2 = 0L;
+            long dupTemp$1 = 0L;
             int var2 = 0;
             IOException var3 = null;
             dl var4 = null;
             int stackIn_11_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_10_0 = 0;
-            int stackOut_9_0 = 0;
             L0: {
               if (null == gr.field_b) {
                 gr.field_b = ii.field_j.a(2, ca.field_g, sg.field_b);
@@ -30,9 +28,9 @@ final class fp extends wf {
               return false;
             } else {
               var2 = 72 / ((-10 - param0) / 56);
-              dupTemp$2 = kh.a(-114);
-              co.field_e = dupTemp$2;
-              ff.field_b = dupTemp$2;
+              dupTemp$1 = kh.a(-114);
+              co.field_e = dupTemp$1;
+              ff.field_b = dupTemp$1;
               if ((gr.field_b.field_a ^ -1) == -2) {
                 try {
                   L1: {
@@ -42,12 +40,10 @@ final class fp extends wf {
                       q.field_p.field_g = 0;
                       var4.field_g = 0;
                       if (!param1) {
-                        stackOut_10_0 = -1;
-                        stackIn_11_0 = stackOut_10_0;
+                        stackIn_11_0 = -1;
                         break L2;
                       } else {
-                        stackOut_9_0 = -2;
-                        stackIn_11_0 = stackOut_9_0;
+                        stackIn_11_0 = -2;
                         break L2;
                       }
                     }

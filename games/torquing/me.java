@@ -42,9 +42,8 @@ abstract class me {
     }
 
     public static void a(byte param0) {
-        String discarded$0 = null;
         if (param0 < 1) {
-            discarded$0 = me.a(-64);
+            me.a(-64);
         }
         field_a = null;
     }

@@ -7,11 +7,11 @@ final class vi {
     static String field_b;
 
     final static void a(int param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           L1: {
             var6 = fleas.field_A ? 1 : 0;
@@ -248,8 +248,8 @@ final class vi {
     }
 
     final static String a(int param0, boolean param1, boolean param2, boolean param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var4 = 0;
         if (!param2) {
           if (!param1) {
@@ -294,9 +294,9 @@ final class vi {
     }
 
     final static char a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var3 = 76 / ((63 - param1) / 45);
         var2 = param0 & 255;
         if (-1 == (var2 ^ -1)) {
@@ -353,10 +353,9 @@ final class vi {
     }
 
     final static void c(byte param0) {
-        String discarded$0 = null;
         cg.a((byte) -105, 17);
         if (param0 >= -77) {
-            discarded$0 = vi.b((byte) -17);
+            vi.b((byte) -17);
         }
     }
 

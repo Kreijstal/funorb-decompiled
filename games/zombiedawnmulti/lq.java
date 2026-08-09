@@ -10,9 +10,9 @@ final class lq {
     private qa field_f;
 
     final int a(byte param0) {
-        int var2 = 0;
-        qa var3 = null;
-        int var4 = 0;
+        int var2;
+        qa var3;
+        int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         var2 = 0;
         var3 = this.field_e.field_k;
@@ -44,11 +44,11 @@ final class lq {
         if (param0 >= 74) {
             return;
         }
-        boolean discarded$0 = lq.b(1);
+        lq.b(1);
     }
 
     final qa b(byte param0) {
-        qa var2 = null;
+        qa var2;
         if (param0 >= 82) {
           var2 = this.field_f;
           if (var2 == this.field_e) {
@@ -82,8 +82,6 @@ final class lq {
         ma stackIn_18_0 = null;
         ma stackIn_22_0 = null;
         Object stackIn_25_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
@@ -91,19 +89,6 @@ final class lq {
         String stackIn_29_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ma stackOut_8_0 = null;
-        ma stackOut_21_0 = null;
-        ma stackOut_17_0 = null;
-        Object stackOut_24_0 = null;
-        ma stackOut_4_0 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -118,8 +103,7 @@ final class lq {
             }
             if (0 != var2_int) {
               if ((var2_int ^ -1) < -64) {
-                stackOut_8_0 = er.field_f;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = er.field_f;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -130,8 +114,7 @@ final class lq {
                       var4 = param1.charAt(var3);
                       if (45 != var4) {
                         if (lb.field_e.indexOf(var4) == -1) {
-                          stackOut_21_0 = so.field_t;
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_22_0 = so.field_t;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
@@ -149,8 +132,7 @@ final class lq {
                             }
                           }
                         }
-                        stackOut_17_0 = so.field_t;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = so.field_t;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
@@ -159,8 +141,7 @@ final class lq {
                     if (var5 == 0) {
                       continue L2;
                     } else {
-                      stackOut_24_0 = null;
-                      stackIn_25_0 = stackOut_24_0;
+                      stackIn_25_0 = null;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     }
@@ -170,8 +151,7 @@ final class lq {
                 }
               }
             } else {
-              stackOut_4_0 = jo.field_e;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = jo.field_e;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -180,27 +160,19 @@ final class lq {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var2);
-            stackOut_26_1 = new StringBuilder().append("lq.G(").append(param0).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_28_0 = (RuntimeException) (var2);
+
+            stackIn_28_1 = new StringBuilder().append("lq.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L5;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L5;
             }
           }
@@ -229,38 +201,99 @@ final class lq {
         int var3 = 0;
         qa var4 = null;
         qa var6 = null;
-        var3 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (param0 != -1) {
-          lq.c(-67);
-          L0: while (true) {
-            var6 = this.field_e.field_k;
-            if (this.field_e != var6) {
-              var6.a(-4564);
-              if (var3 == 0) {
-                continue L0;
-              } else {
-                return;
-              }
-            } else {
-              this.field_f = null;
-              return;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var3 = ZombieDawnMulti.field_E ? 1 : 0;
+                    if (param0 != -1) {
+                        statePc = 8;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    var4 = this.field_e.field_k;
+                    if (this.field_e != var4) {
+                        statePc = 3;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
+                }
+                case 2: {
+                    this.field_f = null;
+                    return;
+                }
+                case 3: {
+                    var4.a(-4564);
+                    if (var3 == 0) {
+                        statePc = 5;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    return;
+                }
+                case 5: {
+                    if (var3 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    this.field_f = null;
+                    return;
+                }
+                case 8: {
+                    lq.c(-67);
+                    statePc = 9;
+                    continue stateLoop;
+                }
+                case 9: {
+                    var6 = this.field_e.field_k;
+                    if (this.field_e != var6) {
+                        statePc = 12;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    this.field_f = null;
+                    return;
+                }
+                case 12: {
+                    var6.a(-4564);
+                    if (var3 == 0) {
+                        statePc = 14;
+                    } else {
+                        statePc = 13;
+                    }
+                    continue stateLoop;
+                }
+                case 13: {
+                    return;
+                }
+                case 14: {
+                    if (var3 == 0) {
+                        statePc = 9;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 15: {
+                    this.field_f = null;
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } else {
-          L1: while (true) {
-            var4 = this.field_e.field_k;
-            if (this.field_e != var4) {
-              var4.a(-4564);
-              if (var3 == 0) {
-                continue L1;
-              } else {
-                return;
-              }
-            } else {
-              this.field_f = null;
-              return;
-            }
-          }
         }
     }
 
@@ -294,8 +327,7 @@ final class lq {
     }
 
     final qa a(int param0) {
-        boolean discarded$2 = false;
-        qa var2 = null;
+        qa var2;
         if (param0 == 11356) {
           var2 = this.field_e.field_k;
           if (var2 == this.field_e) {
@@ -305,7 +337,7 @@ final class lq {
             return var2;
           }
         } else {
-          discarded$2 = lq.b(-38);
+          lq.b(-38);
           var2 = this.field_e.field_k;
           if (var2 == this.field_e) {
             return null;
@@ -317,7 +349,6 @@ final class lq {
     }
 
     final void a(int param0, qa param1) {
-        ma discarded$0 = null;
         try {
             if (!(param1.field_p == null)) {
                 param1.a(param0 + -34228);
@@ -326,7 +357,7 @@ final class lq {
             param1.field_p = this.field_e.field_p;
             if (param0 != 29664) {
                 String var4 = (String) null;
-                discarded$0 = lq.a((byte) 122, (String) null);
+                lq.a((byte) 122, (String) null);
             }
             param1.field_p.field_k = param1;
             param1.field_k.field_p = param1;

@@ -18,30 +18,19 @@ final class ln extends ana {
 
     final static byte[] a(int param0, byte[] param1, int param2, int param3) {
         byte[] var4 = null;
-        RuntimeException var4_ref = null;
         int var5_int = 0;
-        ur var5 = null;
-        byte[] var6 = null;
         int var7 = 0;
         byte[] var8 = null;
         byte[] stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var4_ref = null;
+        ur var5 = null;
+        byte[] var6 = null;
         var7 = BachelorFridge.field_y;
         try {
           L0: {
@@ -69,35 +58,26 @@ final class ln extends ana {
             var5.a(var4, (long)(param0 * param3), 0);
             var6 = new byte[64];
             var5.a(65, 0, var6);
-            stackOut_6_0 = (byte[]) (var6);
-            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_0 = (byte[]) (var6);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4_ref);
-            stackOut_8_1 = new StringBuilder().append("ln.E(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4_ref);
+
+            stackIn_10_1 = new StringBuilder().append("ln.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -119,7 +99,7 @@ final class ln extends ana {
             return;
         }
         pp var3 = (pp) ((Object) this.field_A.field_o.b((byte) 90));
-        oha discarded$6 = al.a(-99, this.field_A.field_k);
+        al.a(-99, this.field_A.field_k);
         while (var3 != null) {
             var4 = var3.field_h.a(-27449, this.field_q);
             var4.b(-1, 7);
@@ -175,11 +155,9 @@ final class ln extends ana {
             this.field_n.field_p = 1;
             return false;
         }
-        if (!this.field_w) {
-            if (-49 > (this.field_n.field_p ^ -1)) {
-                this.field_w = true;
-                aba.a((byte) 18, 60);
-            }
+        if (!this.field_w && -49 > (this.field_n.field_p ^ -1)) {
+            this.field_w = true;
+            aba.a((byte) 18, 60);
         }
         this.field_n.field_p = this.field_n.field_p + 2;
         if (!(this.field_n.field_p >= 256)) {

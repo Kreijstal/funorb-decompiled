@@ -37,13 +37,24 @@ final class ci {
     }
 
     private final void a(byte[] param0, byte param1) {
-        int dupTemp$7 = 0;
-        int dupTemp$8 = 0;
-        int[] array$9 = null;
-        int dupTemp$10 = 0;
-        int[] array$11 = null;
-        int dupTemp$12 = 0;
-        int[] array$13 = null;
+        int dupTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int[] array$2 = null;
+        int dupTemp$3 = 0;
+        int[] dupTemp$4 = null;
+        int[] array$5 = null;
+        int dupTemp$6 = 0;
+        int[] dupTemp$7 = null;
+        int[] array$8 = null;
+        int stackIn_11_0 = 0;
+        int stackIn_17_0 = 0;
+        RuntimeException stackIn_104_0 = null;
+        StringBuilder stackIn_104_1 = null;
+        RuntimeException stackIn_105_0 = null;
+        StringBuilder stackIn_105_1 = null;
+        String stackIn_105_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -60,29 +71,6 @@ final class ci {
         int var16 = 0;
         ob var17 = null;
         byte[] var21 = null;
-        int stackIn_11_0 = 0;
-        int stackIn_17_0 = 0;
-        RuntimeException stackIn_103_0 = null;
-        StringBuilder stackIn_103_1 = null;
-        RuntimeException stackIn_104_0 = null;
-        StringBuilder stackIn_104_1 = null;
-        RuntimeException stackIn_105_0 = null;
-        StringBuilder stackIn_105_1 = null;
-        String stackIn_105_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        RuntimeException stackOut_102_0 = null;
-        StringBuilder stackOut_102_1 = null;
-        RuntimeException stackOut_104_0 = null;
-        StringBuilder stackOut_104_1 = null;
-        String stackOut_104_2 = null;
-        RuntimeException stackOut_103_0 = null;
-        StringBuilder stackOut_103_1 = null;
-        String stackOut_103_2 = null;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -107,12 +95,10 @@ final class ci {
                   L3: {
                     var5 = var17.j(-57);
                     if (0 == (1 & var5)) {
-                      stackOut_10_0 = 0;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_11_0 = 0;
                       break L3;
                     } else {
-                      stackOut_9_0 = 1;
-                      stackIn_11_0 = stackOut_9_0;
+                      stackIn_11_0 = 1;
                       break L3;
                     }
                   }
@@ -128,12 +114,10 @@ final class ci {
                   }
                   L5: {
                     if ((2 & var5) == 0) {
-                      stackOut_16_0 = 0;
-                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_0 = 0;
                       break L5;
                     } else {
-                      stackOut_15_0 = 1;
-                      stackIn_17_0 = stackOut_15_0;
+                      stackIn_17_0 = 1;
                       break L5;
                     }
                   }
@@ -149,9 +133,9 @@ final class ci {
                           break L6;
                         } else {
                           L8: {
-                            dupTemp$7 = var8 + var17.f(-20976);
-                            var8 = dupTemp$7;
-                            this.field_q[var10] = dupTemp$7;
+                            dupTemp$0 = var8 + var17.f(-20976);
+                            var8 = dupTemp$0;
+                            this.field_q[var10] = dupTemp$0;
                             if (this.field_q[var10] > var9) {
                               var9 = this.field_q[var10];
                               break L8;
@@ -169,10 +153,10 @@ final class ci {
                         if (this.field_l <= var10) {
                           break L6;
                         } else {
-                          dupTemp$8 = var8 + var17.d(true);
-                          var8 = dupTemp$8;
-                          this.field_q[var10] = dupTemp$8;
-                          if (this.field_q[var10] > var9) {
+                          dupTemp$1 = var8 + var17.d(true);
+                          var8 = dupTemp$1;
+                          this.field_q[var10] = dupTemp$1;
+                          if ((this.field_q[var10] ^ -1) < (var9 ^ -1)) {
                             var9 = this.field_q[var10];
                             var10++;
                             continue L9;
@@ -287,8 +271,8 @@ final class ci {
                                   var8 = 0;
                                   var12 = this.field_n[var11];
                                   var13 = -1;
-                                  array$9 = new int[var12];
-                                  this.field_k[var11] = array$9;
+                                  array$2 = new int[var12];
+                                  this.field_k[var11] = array$2;
                                   var14 = 0;
                                   L22: while (true) {
                                     if (var12 <= var14) {
@@ -305,10 +289,11 @@ final class ci {
                                       continue L21;
                                     } else {
                                       L24: {
-                                        dupTemp$10 = var8 + var17.f(-20976);
-                                        var8 = dupTemp$10;
-                                        this.field_k[var11][var14] = dupTemp$10;
-                                        var15 = dupTemp$10;
+                                        dupTemp$3 = var8 + var17.f(-20976);
+                                        var8 = dupTemp$3;
+                                        dupTemp$4 = this.field_k[var11];
+                                        dupTemp$4[var14] = dupTemp$3;
+                                        var15 = dupTemp$3;
                                         if (var13 < var15) {
                                           var13 = var15;
                                           break L24;
@@ -340,8 +325,8 @@ final class ci {
                                   var11 = this.field_q[var10];
                                   var12 = this.field_n[var11];
                                   var8 = 0;
-                                  array$11 = new int[var12];
-                                  this.field_k[var11] = array$11;
+                                  array$5 = new int[var12];
+                                  this.field_k[var11] = array$5;
                                   var13 = -1;
                                   var14 = 0;
                                   L27: while (true) {
@@ -359,10 +344,11 @@ final class ci {
                                       continue L26;
                                     } else {
                                       L29: {
-                                        dupTemp$12 = var8 + var17.d(true);
-                                        var8 = dupTemp$12;
-                                        this.field_k[var11][var14] = dupTemp$12;
-                                        var15 = dupTemp$12;
+                                        dupTemp$6 = var8 + var17.d(true);
+                                        var8 = dupTemp$6;
+                                        dupTemp$7 = this.field_k[var11];
+                                        dupTemp$7[var14] = dupTemp$6;
+                                        var15 = dupTemp$6;
                                         if (var15 > var13) {
                                           var13 = var15;
                                           break L29;
@@ -397,8 +383,8 @@ final class ci {
                             } else {
                               var11 = this.field_q[var10];
                               var12 = this.field_n[var11];
-                              array$13 = new int[this.field_m[var11]];
-                              this.field_t[var11] = array$13;
+                              array$8 = new int[this.field_m[var11]];
+                              this.field_t[var11] = array$8;
                               var13 = 0;
                               L32: while (true) {
                                 if (this.field_m[var11] <= var13) {
@@ -450,27 +436,19 @@ final class ci {
           decompiledCaughtException = decompiledCaughtParameter0;
           L35: {
             var3 = decompiledCaughtException;
-            stackOut_102_0 = (RuntimeException) (var3);
-            stackOut_102_1 = new StringBuilder().append("ci.B(");
-            stackIn_104_0 = stackOut_102_0;
-            stackIn_104_1 = stackOut_102_1;
-            stackIn_103_0 = stackOut_102_0;
-            stackIn_103_1 = stackOut_102_1;
+            stackIn_104_0 = (RuntimeException) (var3);
+
+            stackIn_104_1 = new StringBuilder().append("ci.B(");
+
             if (param0 == null) {
-              stackOut_104_0 = (RuntimeException) ((Object) stackIn_104_0);
-              stackOut_104_1 = (StringBuilder) ((Object) stackIn_104_1);
-              stackOut_104_2 = "null";
-              stackIn_105_0 = stackOut_104_0;
-              stackIn_105_1 = stackOut_104_1;
-              stackIn_105_2 = stackOut_104_2;
+              stackIn_105_0 = (RuntimeException) ((Object) stackIn_104_0);
+              stackIn_105_1 = (StringBuilder) ((Object) stackIn_104_1);
+              stackIn_105_2 = "null";
               break L35;
             } else {
-              stackOut_103_0 = (RuntimeException) ((Object) stackIn_103_0);
-              stackOut_103_1 = (StringBuilder) ((Object) stackIn_103_1);
-              stackOut_103_2 = "{...}";
-              stackIn_105_0 = stackOut_103_0;
-              stackIn_105_1 = stackOut_103_1;
-              stackIn_105_2 = stackOut_103_2;
+              stackIn_105_0 = (RuntimeException) ((Object) stackIn_104_0);
+              stackIn_105_1 = (StringBuilder) ((Object) stackIn_104_1);
+              stackIn_105_2 = "{...}";
               break L35;
             }
           }

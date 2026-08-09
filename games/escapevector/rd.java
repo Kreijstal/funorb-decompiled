@@ -7,10 +7,9 @@ final class rd {
     static int field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        String discarded$0 = null;
         if (param3 != 19807) {
             String var6 = (String) null;
-            discarded$0 = rd.a((byte) -74, (String) null);
+            rd.a((byte) -74, (String) null);
         }
         hf.a(108);
         em.h(param1, param4, param0, param2);
@@ -30,23 +29,12 @@ final class rd {
         char[] var10 = null;
         char[] var11 = null;
         String stackIn_14_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_13_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         var7 = EscapeVector.field_A;
         try {
           L0: {
@@ -68,7 +56,7 @@ final class rd {
                 if (var4_int >= var10.length) {
                   break L3;
                 } else {
-                  if (var4_int < -var3 + -1 + var10.length) {
+                  if ((var4_int ^ -1) > (-var3 + -1 + var10.length ^ -1)) {
                     L4: {
                       var5 = var10[var4_int];
                       if (Character.isSpaceChar((char) var5)) {
@@ -98,8 +86,7 @@ final class rd {
               var9 = var11;
               var4 = var9;
               qg.a(var2, 0, var4, 0, var11.length);
-              stackOut_13_0 = new String(var11);
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_0 = new String(var11);
               break L0;
             }
           }
@@ -107,27 +94,19 @@ final class rd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var2_ref);
-            stackOut_15_1 = new StringBuilder().append("rd.A(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var2_ref);
+
+            stackIn_17_1 = new StringBuilder().append("rd.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L6;
             }
           }

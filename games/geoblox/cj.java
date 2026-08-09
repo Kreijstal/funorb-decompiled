@@ -18,7 +18,7 @@ abstract class cj {
     }
 
     final int a(byte param0, long param1) {
-        long var4 = 0L;
+        long var4;
         L0: {
           var4 = this.a((byte) -49);
           if (0L < var4) {

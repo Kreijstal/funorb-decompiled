@@ -18,9 +18,8 @@ final class hh {
     }
 
     public static void a(int param0) {
-        short discarded$2 = 0;
         if (param0 != 28882) {
-          discarded$2 = hh.a((byte) -23, -113);
+          hh.a((byte) -23, -113);
           field_b = null;
           field_d = null;
           field_f = null;
@@ -34,6 +33,11 @@ final class hh {
     }
 
     final static short a(byte param0, int param1) {
+        float stackIn_7_0 = 0.0f;
+        float stackIn_14_0 = 0.0f;
+        float stackIn_34_0 = 0.0f;
+        short stackIn_35_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         float var2_float = 0.0f;
         RuntimeException var2 = null;
         float var3 = 0.0f;
@@ -47,23 +51,6 @@ final class hh {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        float stackIn_7_0 = 0.0f;
-        float stackIn_14_0 = 0.0f;
-        float stackIn_34_0 = 0.0f;
-        short stackIn_35_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        float stackOut_6_0 = 0.0f;
-        float stackOut_5_0 = 0.0f;
-        float stackOut_3_0 = 0.0f;
-        float stackOut_2_0 = 0.0f;
-        float stackOut_13_0 = 0.0f;
-        float stackOut_12_0 = 0.0f;
-        float stackOut_10_0 = 0.0f;
-        float stackOut_9_0 = 0.0f;
-        float stackOut_33_0 = 0.0f;
-        float stackOut_32_0 = 0.0f;
-        float stackOut_30_0 = 0.0f;
-        short stackOut_34_0 = 0;
         try {
           L0: {
             L1: {
@@ -72,22 +59,18 @@ final class hh {
               var4 = (float)(255 & param1) / 255.0f;
               if (var3 < var2_float) {
                 if (var4 >= var2_float) {
-                  stackOut_6_0 = var4;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = var4;
                   break L1;
                 } else {
-                  stackOut_5_0 = var2_float;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = var2_float;
                   break L1;
                 }
               } else {
                 if (var3 <= var4) {
-                  stackOut_3_0 = var4;
-                  stackIn_7_0 = stackOut_3_0;
+                  stackIn_7_0 = var4;
                   break L1;
                 } else {
-                  stackOut_2_0 = var3;
-                  stackIn_7_0 = stackOut_2_0;
+                  stackIn_7_0 = var3;
                   break L1;
                 }
               }
@@ -97,22 +80,18 @@ final class hh {
               var7 = 105 % ((param0 - -62) / 40);
               if (var2_float < var3) {
                 if (var2_float >= var4) {
-                  stackOut_13_0 = var4;
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_0 = var4;
                   break L2;
                 } else {
-                  stackOut_12_0 = var2_float;
-                  stackIn_14_0 = stackOut_12_0;
+                  stackIn_14_0 = var2_float;
                   break L2;
                 }
               } else {
                 if (var3 < var4) {
-                  stackOut_10_0 = var3;
-                  stackIn_14_0 = stackOut_10_0;
+                  stackIn_14_0 = var3;
                   break L2;
                 } else {
-                  stackOut_9_0 = var4;
-                  stackIn_14_0 = stackOut_9_0;
+                  stackIn_14_0 = var4;
                   break L2;
                 }
               }
@@ -150,12 +129,10 @@ final class hh {
                         } else {
                           if (var5 != var6) {
                             if (0.5f > var10) {
-                              stackOut_33_0 = (var5 - var6) / (2.0f * var10);
-                              stackIn_34_0 = stackOut_33_0;
+                              stackIn_34_0 = (var5 - var6) / (2.0f * var10);
                               break L6;
                             } else {
-                              stackOut_32_0 = (-var6 + var5) / (-(2.0f * var10) + 2.0f);
-                              stackIn_34_0 = stackOut_32_0;
+                              stackIn_34_0 = (-var6 + var5) / (-(2.0f * var10) + 2.0f);
                               break L6;
                             }
                           } else {
@@ -163,16 +140,14 @@ final class hh {
                           }
                         }
                       }
-                      stackOut_30_0 = 0.0f;
-                      stackIn_34_0 = stackOut_30_0;
+                      stackIn_34_0 = 0.0f;
                       break L6;
                     }
                     var9 = stackIn_34_0;
                     var11 = (int)(var8 * 63.0f + 0.5f);
                     var12 = (int)(0.5f + var9 * 7.0f);
                     var13 = (int)(0.5f + var10 * 127.0f);
-                    stackOut_34_0 = (short)(var12 << 453553511 | var11 << -822924790 | var13);
-                    stackIn_35_0 = stackOut_34_0;
+                    stackIn_35_0 = (short)(var12 << 453553511 | var11 << -822924790 | var13);
                     break L0;
                   } else {
                     var8 = var8 - 1.0f;

@@ -12,9 +12,9 @@ final class jf {
     static String field_a;
 
     final static void a(int param0, int param1) {
-        nb.field_I = (param1 & 63) >> 4;
+        nb.field_I = (param1 & 63) >> 844148836;
         if (2 >= nb.field_I) {
-          dk.field_p = (12 & param1) >> 2;
+          dk.field_p = (12 & param1) >> -1631279870;
           eg.field_h = param1 & 3;
           if (param0 == -1631279870) {
             L0: {
@@ -50,7 +50,7 @@ final class jf {
           }
         } else {
           nb.field_I = 2;
-          dk.field_p = (12 & param1) >> 2;
+          dk.field_p = (12 & param1) >> -1631279870;
           eg.field_h = param1 & 3;
           if (param0 != -1631279870) {
             L2: {
@@ -89,6 +89,9 @@ final class jf {
 
     public static void a(byte param0) {
         field_f = null;
+        if (param0 >= -32) {
+            return;
+        }
         field_h = null;
         field_e = null;
         field_a = null;
@@ -100,14 +103,17 @@ final class jf {
     }
 
     final static void a(String param0, byte param1) {
-        System.out.println("Error: " + re.a(param0, "%0a", "\n", -120));
+        if (param1 != 19) {
+          field_d = 100;
+          System.out.println("Error: " + re.a(param0, "%0a", "\n", param1 + -139));
+          return;
+        } else {
+          System.out.println("Error: " + re.a(param0, "%0a", "\n", param1 + -139));
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 0;
         field_g = 0;
         field_f = "Game play";

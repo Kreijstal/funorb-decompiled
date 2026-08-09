@@ -14,12 +14,12 @@ final class rj implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        Exception var1 = null;
         lb var2 = null;
-        Throwable var3 = null;
         int var4 = 0;
-        String var5 = null;
         Throwable decompiledCaughtException = null;
+        Exception var1 = null;
+        Throwable var3 = null;
+        String var5 = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         this.field_a = true;
         try {

@@ -16,8 +16,6 @@ final class rh {
         int stackIn_14_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
         var8 = BachelorFridge.field_y;
         try {
           L0: {
@@ -33,8 +31,7 @@ final class rh {
             var4 = vka.field_q;
             L2: while (true) {
               if (pt.field_a.length <= var3_int) {
-                stackOut_13_0 = -1;
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -48,8 +45,7 @@ final class rh {
                     var4 = var4 + raa.field_J;
                     var7 = sd.field_a - (var6 >> -36563167);
                     if (hha.a(jo.field_t - -(pba.field_r << 1208946273), param2, var6 + (hna.field_k << -394418175), 1, var7 - hna.field_k, var4, param0)) {
-                      stackOut_8_0 = var5;
-                      stackIn_9_0 = stackOut_8_0;
+                      stackIn_9_0 = var5;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     } else {
@@ -79,8 +75,6 @@ final class rh {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -88,14 +82,6 @@ final class rh {
         String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             if (param0 == 19007) {
@@ -124,27 +110,19 @@ final class rh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2_ref);
-            stackOut_6_1 = new StringBuilder().append("rh.D(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2_ref);
+
+            stackIn_8_1 = new StringBuilder().append("rh.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -169,17 +147,16 @@ final class rh {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        boolean discarded$1 = false;
-        RuntimeException var4 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         sna var5 = null;
         int var6 = 0;
         int var7 = 0;
         eaa var8 = null;
         String var9 = null;
         gs var10 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var7 = BachelorFridge.field_y;
         try {
           L0: {
@@ -217,7 +194,7 @@ final class rh {
                   break L4;
                 } else {
                   if (hl.field_I) {
-                    discarded$1 = ao.field_d.a(param2, i.field_a.field_D, i.field_a.field_M, 6381);
+                    ao.field_d.a(param2, i.field_a.field_D, i.field_a.field_M, 6381);
                     break L4;
                   } else {
                     ao.field_d = null;

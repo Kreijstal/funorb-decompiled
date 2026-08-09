@@ -9,132 +9,33 @@ final class kf {
     static int field_d;
 
     final static void a(int param0, bf param1) {
-        RuntimeException runtimeException = null;
         int var2_int = 0;
         bf var3 = null;
-        int var4 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        var4 = TorChallenge.field_F ? 1 : 0;
-        try {
-          L0: {
-            if (param1.field_n != null) {
-              L1: {
-                L2: {
-                  if (param1.field_k != 0) {
-                    break L2;
-                  } else {
-                    if (param1.field_m == 0) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                var2_int = 0;
-                L3: while (true) {
-                  if (vd.field_f <= var2_int) {
-                    break L1;
-                  } else {
-                    L4: {
-                      var3 = we.field_i[var2_int];
-                      if (-3 != (var3.field_b ^ -1)) {
-                        break L4;
-                      } else {
-                        if (param1.field_k != var3.field_k) {
-                          break L4;
-                        } else {
-                          if (var3.field_m == param1.field_m) {
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          } else {
-                            break L4;
-                          }
-                        }
-                      }
-                    }
-                    var2_int++;
-                    continue L3;
-                  }
-                }
-              }
-              L5: {
-                if (param1.field_j != null) {
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              if (param0 == 1) {
-                ib.a(true, param1);
-                decompiledRegionSelector0 = 3;
-                break L0;
-              } else {
-                decompiledRegionSelector0 = 2;
-                break L0;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            runtimeException = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (runtimeException);
-            stackOut_19_1 = new StringBuilder().append("kf.B(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
-            if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L6;
-            } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
-              break L6;
-            }
-          }
-          throw oj.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
+        int var4 = TorChallenge.field_F ? 1 : 0;
+        if (param1.field_n == null) {
             return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
+        }
+        if (param1.field_k != 0 || param1.field_m != 0) {
+            for (var2_int = 0; vd.field_f > var2_int; var2_int++) {
+                var3 = we.field_i[var2_int];
+                if (-3 == (var3.field_b ^ -1)) {
+                    if (param1.field_k == var3.field_k) {
+                        if (!(var3.field_m != param1.field_m)) {
+                            return;
+                        }
+                    }
+                }
             }
-          }
+        }
+        if (param1.field_j == null) {
+        }
+        if (param0 != 1) {
+            return;
+        }
+        try {
+            ib.a(true, param1);
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) ((Object) runtimeException), "kf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -147,20 +48,12 @@ final class kf {
     }
 
     final static int a(qe param0, int param1, int param2) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_4_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_31_0 = 0;
         int stackIn_33_0 = 0;
         int stackIn_37_0 = 0;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         RuntimeException stackIn_41_0 = null;
@@ -168,20 +61,12 @@ final class kf {
         String stackIn_41_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_36_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -196,8 +81,7 @@ final class kf {
                   break L1;
                 }
               }
-              stackOut_36_0 = -1;
-              stackIn_37_0 = stackOut_36_0;
+              stackIn_37_0 = -1;
               decompiledRegionSelector0 = 5;
               break L0;
             } else {
@@ -215,8 +99,7 @@ final class kf {
                         L3: while (true) {
                           if ((var3_int ^ -1) <= -9) {
                             n.field_kb[param0.field_o][param0.field_H][0] = param1;
-                            stackOut_12_0 = 1;
-                            stackIn_13_0 = stackOut_12_0;
+                            stackIn_13_0 = 1;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           } else {
@@ -247,8 +130,7 @@ final class kf {
                           if (8 <= var7) {
                             if (var4 >= 0) {
                               n.field_kb[param0.field_o][param0.field_H][var4] = param1;
-                              stackOut_30_0 = 1;
-                              stackIn_31_0 = stackOut_30_0;
+                              stackIn_31_0 = 1;
                               decompiledRegionSelector0 = 3;
                               break L0;
                             } else {
@@ -272,8 +154,7 @@ final class kf {
                                 continue L5;
                               }
                             } else {
-                              stackOut_20_0 = 1;
-                              stackIn_21_0 = stackOut_20_0;
+                              stackIn_21_0 = 1;
                               decompiledRegionSelector0 = 2;
                               break L0;
                             }
@@ -283,13 +164,11 @@ final class kf {
                     }
                   }
                 }
-                stackOut_32_0 = -1;
-                stackIn_33_0 = stackOut_32_0;
+                stackIn_33_0 = -1;
                 decompiledRegionSelector0 = 4;
                 break L0;
               } else {
-                stackOut_3_0 = -1;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = -1;
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -299,27 +178,19 @@ final class kf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_38_0 = (RuntimeException) (var3);
-            stackOut_38_1 = new StringBuilder().append("kf.A(");
-            stackIn_40_0 = stackOut_38_0;
-            stackIn_40_1 = stackOut_38_1;
-            stackIn_39_0 = stackOut_38_0;
-            stackIn_39_1 = stackOut_38_1;
+            stackIn_40_0 = (RuntimeException) (var3);
+
+            stackIn_40_1 = new StringBuilder().append("kf.A(");
+
             if (param0 == null) {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "null";
-              stackIn_41_0 = stackOut_40_0;
-              stackIn_41_1 = stackOut_40_1;
-              stackIn_41_2 = stackOut_40_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "null";
               break L7;
             } else {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "{...}";
-              stackIn_41_0 = stackOut_39_0;
-              stackIn_41_1 = stackOut_39_1;
-              stackIn_41_2 = stackOut_39_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "{...}";
               break L7;
             }
           }

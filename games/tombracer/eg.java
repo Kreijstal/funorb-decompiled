@@ -49,10 +49,10 @@ final class eg extends da {
     }
 
     final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
-        au var9 = null;
-        qk var10 = null;
-        float var11 = 0.0f;
-        float var12 = 0.0f;
+        au var9;
+        qk var10;
+        float var11;
+        float var12;
         L0: {
           L1: {
             var9 = (au) ((Object) param5);
@@ -115,70 +115,61 @@ final class eg extends da {
 
     eg(cka param0, qla param1, jpa[] param2, boolean param3) {
         super(param0, param1);
+        int incrementValue$0 = 0;
+        byte dupTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
         int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int[] var7_ref_int__ = null;
-        byte[] var7_ref_byte__ = null;
-        float var7 = 0.0f;
-        int var8_int = 0;
-        float var8 = 0.0f;
-        int var9 = 0;
-        int[] var10 = null;
-        int var10_int = 0;
-        byte[] var11_ref_byte__ = null;
-        int var11 = 0;
-        byte[] var12_ref_byte__ = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15_int = 0;
-        float var15 = 0.0f;
-        int var16_int = 0;
-        byte[] var16_ref_byte__ = null;
-        float var16 = 0.0f;
-        int var17_int = 0;
-        float var17 = 0.0f;
-        int var18_int = 0;
-        float var18 = 0.0f;
-        int var19_int = 0;
-        float var19 = 0.0f;
-        float var20 = 0.0f;
-        int var20_int = 0;
-        int var21 = 0;
-        jpa var22 = null;
-        jpa var23 = null;
-        byte[] var24 = null;
-        jpa var25 = null;
-        byte[] var26 = null;
-        byte[] var27 = null;
-        int[] var28 = null;
-        jpa var29 = null;
-        byte[] var30 = null;
-        byte[] var31 = null;
-        byte[] var32 = null;
-        int[] var33 = null;
-        byte[] stackIn_17_0 = null;
-        int stackIn_17_1 = 0;
         byte[] stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         byte[] stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         int stackIn_19_2 = 0;
-        byte[] stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        byte[] stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int stackOut_18_2 = 0;
-        byte[] stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        int stackOut_17_2 = 0;
+        int var5;
+        int var6;
+        int[] var7_ref_int__;
+        byte[] var7_ref_byte__;
+        float var7;
+        int var8_int;
+        float var8;
+        int var9;
+        int[] var10;
+        int var10_int;
+        byte[] var11_ref_byte__;
+        int var11;
+        byte[] var12_ref_byte__;
+        int var12;
+        int var13;
+        int var14;
+        int var15_int;
+        float var15;
+        int var16_int;
+        byte[] var16_ref_byte__;
+        float var16;
+        int var17_int;
+        float var17;
+        int var18_int;
+        float var18;
+        int var19_int;
+        float var19;
+        int var20_int;
+        float var20;
+        int var21;
+        jpa var22;
+        jpa var23;
+        byte[] var24;
+        jpa var25;
+        byte[] var26;
+        byte[] var27;
+        int[] var28;
+        jpa var29;
+        byte[] var30;
+        byte[] var31;
+        byte[] var32;
+        int[] var33;
         this.field_e = param0;
         var5 = 0;
         var6 = 0;
@@ -222,17 +213,18 @@ final class eg extends da {
                               var19_int++;
                               continue L3;
                             } else {
-                              incrementValue$7 = var18_int;
+                              incrementValue$0 = var18_int;
                               var18_int++;
-                              var21 = var12_ref_byte__[incrementValue$7];
-                              if (var12_ref_byte__[incrementValue$7] == 0) {
+                              dupTemp$1 = var12_ref_byte__[incrementValue$0];
+                              var21 = dupTemp$1;
+                              if (dupTemp$1 == 0) {
                                 var17_int++;
                                 var20_int++;
                                 continue L4;
                               } else {
-                                incrementValue$8 = var17_int;
+                                incrementValue$2 = var17_int;
                                 var17_int++;
-                                var7_ref_int__[incrementValue$8] = -16777216 | var10[var21 & 255];
+                                var7_ref_int__[incrementValue$2] = -16777216 | var10[var21 & 255];
                                 var20_int++;
                                 continue L4;
                               }
@@ -254,9 +246,9 @@ final class eg extends da {
                               var19_int++;
                               continue L5;
                             } else {
-                              incrementValue$9 = var17_int;
+                              incrementValue$3 = var17_int;
                               var17_int++;
-                              var7_ref_int__[incrementValue$9] = var31[var18_int] << 24 | var10[var32[var18_int] & 255];
+                              var7_ref_int__[incrementValue$3] = var31[var18_int] << 24 | var10[var32[var18_int] & 255];
                               var18_int++;
                               var20_int++;
                               continue L6;
@@ -300,11 +292,11 @@ final class eg extends da {
                               var17_int++;
                               continue L8;
                             } else {
-                              incrementValue$10 = var14;
+                              incrementValue$4 = var14;
                               var14++;
-                              incrementValue$11 = var15_int;
+                              incrementValue$5 = var15_int;
                               var15_int++;
-                              var7_ref_byte__[incrementValue$10] = var16_ref_byte__[incrementValue$11];
+                              var7_ref_byte__[incrementValue$4] = var16_ref_byte__[incrementValue$5];
                               var18_int++;
                               continue L9;
                             }
@@ -327,31 +319,23 @@ final class eg extends da {
                               continue L10;
                             } else {
                               L12: {
-                                incrementValue$12 = var14;
+                                incrementValue$6 = var14;
                                 var14++;
-                                incrementValue$13 = var15_int;
+                                incrementValue$7 = var15_int;
                                 var15_int++;
-                                stackOut_16_0 = (byte[]) (var7_ref_byte__);
-                                stackOut_16_1 = incrementValue$12;
-                                stackIn_18_0 = stackOut_16_0;
-                                stackIn_18_1 = stackOut_16_1;
-                                stackIn_17_0 = stackOut_16_0;
-                                stackIn_17_1 = stackOut_16_1;
-                                if (var16_ref_byte__[incrementValue$13] != 0) {
-                                  stackOut_18_0 = (byte[]) ((Object) stackIn_18_0);
-                                  stackOut_18_1 = stackIn_18_1;
-                                  stackOut_18_2 = -1;
-                                  stackIn_19_0 = stackOut_18_0;
-                                  stackIn_19_1 = stackOut_18_1;
-                                  stackIn_19_2 = stackOut_18_2;
+                                stackIn_18_0 = (byte[]) (var7_ref_byte__);
+
+                                stackIn_18_1 = incrementValue$6;
+
+                                if (var16_ref_byte__[incrementValue$7] != 0) {
+                                  stackIn_19_0 = (byte[]) ((Object) stackIn_18_0);
+                                  stackIn_19_1 = stackIn_18_1;
+                                  stackIn_19_2 = -1;
                                   break L12;
                                 } else {
-                                  stackOut_17_0 = (byte[]) ((Object) stackIn_17_0);
-                                  stackOut_17_1 = stackIn_17_1;
-                                  stackOut_17_2 = 0;
-                                  stackIn_19_0 = stackOut_17_0;
-                                  stackIn_19_1 = stackOut_17_1;
-                                  stackIn_19_2 = stackOut_17_2;
+                                  stackIn_19_0 = (byte[]) ((Object) stackIn_18_0);
+                                  stackIn_19_1 = stackIn_18_1;
+                                  stackIn_19_2 = 0;
                                   break L12;
                                 }
                               }

@@ -18,25 +18,15 @@ final class rd {
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         param1 = param1 & 8191;
         if (param0 == -30) {
           if (4096 > param1) {
             L0: {
               if (-2049 >= (param1 ^ -1)) {
-                stackOut_18_0 = -db.field_m[param1 - 2048];
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = -db.field_m[param1 - 2048];
                 break L0;
               } else {
-                stackOut_17_0 = db.field_m[2048 + -param1];
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = db.field_m[2048 + -param1];
                 break L0;
               }
             }
@@ -44,12 +34,10 @@ final class rd {
           } else {
             L1: {
               if (6144 > param1) {
-                stackOut_14_0 = -db.field_m[-param1 + 6144];
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = -db.field_m[-param1 + 6144];
                 break L1;
               } else {
-                stackOut_13_0 = db.field_m[-6144 + param1];
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = db.field_m[-6144 + param1];
                 break L1;
               }
             }
@@ -60,12 +48,10 @@ final class rd {
           if (4096 > param1) {
             L2: {
               if (-2049 >= (param1 ^ -1)) {
-                stackOut_8_0 = -db.field_m[param1 - 2048];
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = -db.field_m[param1 - 2048];
                 break L2;
               } else {
-                stackOut_7_0 = db.field_m[2048 + -param1];
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = db.field_m[2048 + -param1];
                 break L2;
               }
             }
@@ -73,12 +59,10 @@ final class rd {
           } else {
             L3: {
               if (6144 > param1) {
-                stackOut_4_0 = -db.field_m[-param1 + 6144];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = -db.field_m[-param1 + 6144];
                 break L3;
               } else {
-                stackOut_3_0 = db.field_m[-6144 + param1];
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = db.field_m[-6144 + param1];
                 break L3;
               }
             }
@@ -88,10 +72,9 @@ final class rd {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_a = null;
         if (param0 <= 85) {
-            discarded$0 = rd.a((byte) 52, -77);
+            rd.a((byte) 52, -77);
             field_b = null;
             return;
         }

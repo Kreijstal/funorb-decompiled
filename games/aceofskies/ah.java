@@ -7,23 +7,23 @@ final class ah extends qd {
     private byte[] field_q;
 
     final void b(int param0, int param1, byte param2) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int var4 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int var4;
         param2 = (byte)(127 + (127 & param2 >> 1512442177));
         if (param0 != 255) {
           field_r = (String) null;
           var4 = param1 * 2;
-          incrementValue$4 = var4;
+          incrementValue$2 = var4;
           var4++;
-          this.field_q[incrementValue$4] = (byte)param2;
+          this.field_q[incrementValue$2] = (byte)param2;
           this.field_q[var4] = (byte)param2;
           return;
         } else {
           var4 = param1 * 2;
-          incrementValue$5 = var4;
+          incrementValue$3 = var4;
           var4++;
-          this.field_q[incrementValue$5] = (byte)param2;
+          this.field_q[incrementValue$3] = (byte)param2;
           this.field_q[var4] = (byte)param2;
           return;
         }

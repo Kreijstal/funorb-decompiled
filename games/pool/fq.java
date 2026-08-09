@@ -11,23 +11,16 @@ final class fq extends qq implements tb {
     private nf field_Cb;
 
     final static boolean m(int param0) {
-        boolean discarded$8 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        boolean stackOut_6_0 = false;
-        int stackOut_3_0 = 0;
-        boolean stackOut_2_0 = false;
         if (param0 != 0) {
           L0: {
-            discarded$8 = fq.m(71);
+            fq.m(71);
             if (null != ne.field_u) {
-              stackOut_7_0 = 1;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 1;
               break L0;
             } else {
-              stackOut_6_0 = um.field_e;
-              stackIn_8_0 = stackOut_6_0 ? 1 : 0;
+              stackIn_8_0 = um.field_e ? 1 : 0;
               break L0;
             }
           }
@@ -35,12 +28,10 @@ final class fq extends qq implements tb {
         } else {
           L1: {
             if (null != ne.field_u) {
-              stackOut_3_0 = 1;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 1;
               break L1;
             } else {
-              stackOut_2_0 = um.field_e;
-              stackIn_4_0 = stackOut_2_0 ? 1 : 0;
+              stackIn_4_0 = um.field_e ? 1 : 0;
               break L1;
             }
           }
@@ -58,14 +49,6 @@ final class fq extends qq implements tb {
     }
 
     private final void a(wc param0, int param1, boolean param2) {
-        fe discarded$2 = null;
-        fe discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        wk var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
@@ -73,14 +56,10 @@ final class fq extends qq implements tb {
         String stackIn_34_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        wk var5 = null;
+        int var6 = 0;
         var6 = Pool.field_O;
         try {
           L0: {
@@ -96,7 +75,7 @@ final class fq extends qq implements tb {
             L2: {
               if (!param0.field_f) {
                 if (null == param0.field_c) {
-                  var4_ref = param0.field_b;
+                  var4 = param0.field_b;
                   if ((param0.field_g ^ -1) == -249) {
                     L3: {
                       if (param2) {
@@ -106,14 +85,14 @@ final class fq extends qq implements tb {
                         break L3;
                       }
                     }
-                    var4_ref = hb.field_b;
+                    var4 = hb.field_b;
                     this.field_Eb = true;
                     break L2;
                   } else {
                     break L2;
                   }
                 } else {
-                  var4_ref = gi.field_n;
+                  var4 = gi.field_n;
                   if (null != this.field_Cb) {
                     this.field_Cb.a(param1 ^ 16777210);
                     break L2;
@@ -122,15 +101,15 @@ final class fq extends qq implements tb {
                   }
                 }
               } else {
-                var4_ref = ud.field_H;
+                var4 = ud.field_H;
                 break L2;
               }
             }
             L4: {
-              var5 = new wk((qq) (this), bi.field_e, var4_ref);
+              var5 = new wk((qq) (this), bi.field_e, var4);
               if (param0.field_f) {
                 if (!param0.field_e) {
-                  discarded$2 = var5.a(fg.field_c, param1 + -88, (cc) (this));
+                  var5.a(fg.field_c, param1 + -88, (cc) (this));
                   break L4;
                 } else {
                   this.d(new sd((fq) (this)), 30);
@@ -140,7 +119,7 @@ final class fq extends qq implements tb {
               } else {
                 L5: {
                   if (this.field_Eb) {
-                    discarded$3 = var5.a(fg.field_c, -123, (cc) (this));
+                    var5.a(fg.field_c, -123, (cc) (this));
                     break L5;
                   } else {
                     if (param0.field_g == 5) {
@@ -174,28 +153,20 @@ final class fq extends qq implements tb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var4);
-            stackOut_31_1 = new StringBuilder().append("fq.TB(");
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_33_0 = (RuntimeException) (var4_ref);
+
+            stackIn_33_1 = new StringBuilder().append("fq.TB(");
+
             if (param0 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L6;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L6;
             }
           }
@@ -225,7 +196,7 @@ final class fq extends qq implements tb {
     }
 
     final boolean g(byte param0) {
-        wc var2 = null;
+        wc var2;
         if (param0 == -20) {
           if (this.field_R) {
             if (!this.field_Fb) {
@@ -279,35 +250,8 @@ final class fq extends qq implements tb {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        kf discarded$29 = null;
-        kf discarded$30 = null;
-        kf discarded$31 = null;
-        kf discarded$32 = null;
-        kf discarded$33 = null;
-        kf discarded$34 = null;
-        kf discarded$35 = null;
-        kf discarded$36 = null;
-        kf discarded$37 = null;
-        kf discarded$38 = null;
-        kf discarded$39 = null;
-        kf discarded$40 = null;
-        kf discarded$41 = null;
-        kf discarded$42 = null;
-        kf discarded$43 = null;
-        kf discarded$44 = null;
-        kf discarded$45 = null;
-        kf discarded$46 = null;
-        kf discarded$47 = null;
-        kf discarded$48 = null;
-        kf discarded$49 = null;
-        kf discarded$50 = null;
-        kf discarded$51 = null;
-        kf discarded$52 = null;
-        kf discarded$53 = null;
-        kf discarded$54 = null;
-        kf discarded$55 = null;
-        int var4 = 0;
-        le discarded$28 = lg.field_s.a(true, (byte) 106, (java.awt.Component) ((Object) vj.a((byte) -37)));
+        int var4;
+        lg.field_s.a(true, (byte) 106, (java.awt.Component) ((Object) vj.a((byte) -37)));
         sg.field_P = 0;
         sq.field_b = param1;
         if (param0 == -3405) {
@@ -336,7 +280,7 @@ final class fq extends qq implements tb {
                       if (sq.field_b == -4) {
                         break L1;
                       } else {
-                        discarded$29 = vj.a((byte) -27, il.field_c[3]);
+                        vj.a((byte) -27, il.field_c[3]);
                         return;
                       }
                     }
@@ -352,7 +296,7 @@ final class fq extends qq implements tb {
                         if (sq.field_b == -4) {
                           break L2;
                         } else {
-                          discarded$30 = vj.a((byte) -27, il.field_c[3]);
+                          vj.a((byte) -27, il.field_c[3]);
                           return;
                         }
                       }
@@ -368,7 +312,7 @@ final class fq extends qq implements tb {
                           if (sq.field_b == -4) {
                             break L3;
                           } else {
-                            discarded$31 = vj.a((byte) -27, il.field_c[3]);
+                            vj.a((byte) -27, il.field_c[3]);
                             return;
                           }
                         }
@@ -384,7 +328,7 @@ final class fq extends qq implements tb {
                             if (sq.field_b == -4) {
                               break L4;
                             } else {
-                              discarded$32 = vj.a((byte) -27, il.field_c[3]);
+                              vj.a((byte) -27, il.field_c[3]);
                               return;
                             }
                           }
@@ -395,7 +339,7 @@ final class fq extends qq implements tb {
                           if (sq.field_b == -4) {
                             return;
                           } else {
-                            discarded$33 = vj.a((byte) -27, il.field_c[3]);
+                            vj.a((byte) -27, il.field_c[3]);
                             return;
                           }
                         } else {
@@ -415,7 +359,7 @@ final class fq extends qq implements tb {
                       if (sq.field_b == -4) {
                         break L5;
                       } else {
-                        discarded$34 = vj.a((byte) -27, il.field_c[3]);
+                        vj.a((byte) -27, il.field_c[3]);
                         return;
                       }
                     }
@@ -431,7 +375,7 @@ final class fq extends qq implements tb {
                         if (sq.field_b == -4) {
                           break L6;
                         } else {
-                          discarded$35 = vj.a((byte) -27, il.field_c[3]);
+                          vj.a((byte) -27, il.field_c[3]);
                           return;
                         }
                       }
@@ -442,7 +386,7 @@ final class fq extends qq implements tb {
                       ac.a(256, false, true, ul.field_m);
                       if (sq.field_b != -2) {
                         if (sq.field_b != -4) {
-                          discarded$36 = vj.a((byte) -27, il.field_c[3]);
+                          vj.a((byte) -27, il.field_c[3]);
                           return;
                         } else {
                           return;
@@ -453,7 +397,7 @@ final class fq extends qq implements tb {
                     } else {
                       if (sq.field_b != -2) {
                         if (sq.field_b != -4) {
-                          discarded$37 = vj.a((byte) -27, il.field_c[3]);
+                          vj.a((byte) -27, il.field_c[3]);
                           return;
                         } else {
                           return;
@@ -471,7 +415,7 @@ final class fq extends qq implements tb {
                   ac.a(256, false, true, ul.field_m);
                   if (sq.field_b != -2) {
                     if (sq.field_b != -4) {
-                      discarded$38 = vj.a((byte) -27, il.field_c[3]);
+                      vj.a((byte) -27, il.field_c[3]);
                       return;
                     } else {
                       return;
@@ -489,7 +433,7 @@ final class fq extends qq implements tb {
                         if (sq.field_b == -4) {
                           break L7;
                         } else {
-                          discarded$39 = vj.a((byte) -27, il.field_c[3]);
+                          vj.a((byte) -27, il.field_c[3]);
                           return;
                         }
                       }
@@ -505,7 +449,7 @@ final class fq extends qq implements tb {
                           if (sq.field_b == -4) {
                             break L8;
                           } else {
-                            discarded$40 = vj.a((byte) -27, il.field_c[3]);
+                            vj.a((byte) -27, il.field_c[3]);
                             return;
                           }
                         }
@@ -521,7 +465,7 @@ final class fq extends qq implements tb {
                             if (sq.field_b == -4) {
                               break L9;
                             } else {
-                              discarded$41 = vj.a((byte) -27, il.field_c[3]);
+                              vj.a((byte) -27, il.field_c[3]);
                               return;
                             }
                           }
@@ -532,7 +476,7 @@ final class fq extends qq implements tb {
                           if (sq.field_b == -4) {
                             return;
                           } else {
-                            discarded$42 = vj.a((byte) -27, il.field_c[3]);
+                            vj.a((byte) -27, il.field_c[3]);
                             return;
                           }
                         } else {
@@ -552,7 +496,7 @@ final class fq extends qq implements tb {
                       if (sq.field_b == -4) {
                         break L10;
                       } else {
-                        discarded$43 = vj.a((byte) -27, il.field_c[3]);
+                        vj.a((byte) -27, il.field_c[3]);
                         break L10;
                       }
                     }
@@ -568,7 +512,7 @@ final class fq extends qq implements tb {
                         if (sq.field_b == -4) {
                           break L11;
                         } else {
-                          discarded$44 = vj.a((byte) -27, il.field_c[3]);
+                          vj.a((byte) -27, il.field_c[3]);
                           return;
                         }
                       }
@@ -579,7 +523,7 @@ final class fq extends qq implements tb {
                       ac.a(256, false, true, ul.field_m);
                       if (sq.field_b != -2) {
                         if (sq.field_b != -4) {
-                          discarded$45 = vj.a((byte) -27, il.field_c[3]);
+                          vj.a((byte) -27, il.field_c[3]);
                           return;
                         } else {
                           return;
@@ -590,7 +534,7 @@ final class fq extends qq implements tb {
                     } else {
                       if (sq.field_b != -2) {
                         if (sq.field_b != -4) {
-                          discarded$46 = vj.a((byte) -27, il.field_c[3]);
+                          vj.a((byte) -27, il.field_c[3]);
                           return;
                         } else {
                           return;
@@ -609,7 +553,7 @@ final class fq extends qq implements tb {
                 ac.a(256, false, true, ul.field_m);
                 if (sq.field_b != -2) {
                   if (sq.field_b != -4) {
-                    discarded$47 = vj.a((byte) -27, il.field_c[3]);
+                    vj.a((byte) -27, il.field_c[3]);
                     return;
                   } else {
                     return;
@@ -624,7 +568,7 @@ final class fq extends qq implements tb {
                     if (sq.field_b == -4) {
                       return;
                     } else {
-                      discarded$48 = vj.a((byte) -27, il.field_c[3]);
+                      vj.a((byte) -27, il.field_c[3]);
                       return;
                     }
                   } else {
@@ -635,7 +579,7 @@ final class fq extends qq implements tb {
                     ac.a(256, false, true, ul.field_m);
                     if (sq.field_b != -2) {
                       if (sq.field_b != -4) {
-                        discarded$49 = vj.a((byte) -27, il.field_c[3]);
+                        vj.a((byte) -27, il.field_c[3]);
                         return;
                       } else {
                         return;
@@ -650,7 +594,7 @@ final class fq extends qq implements tb {
                         if (sq.field_b == -4) {
                           return;
                         } else {
-                          discarded$50 = vj.a((byte) -27, il.field_c[3]);
+                          vj.a((byte) -27, il.field_c[3]);
                           return;
                         }
                       } else {
@@ -659,7 +603,7 @@ final class fq extends qq implements tb {
                     } else {
                       if (sq.field_b != -2) {
                         if (sq.field_b != -4) {
-                          discarded$51 = vj.a((byte) -27, il.field_c[3]);
+                          vj.a((byte) -27, il.field_c[3]);
                           return;
                         } else {
                           return;
@@ -677,7 +621,7 @@ final class fq extends qq implements tb {
                   ac.a(256, false, true, ul.field_m);
                   if (sq.field_b != -2) {
                     if (sq.field_b != -4) {
-                      discarded$52 = vj.a((byte) -27, il.field_c[3]);
+                      vj.a((byte) -27, il.field_c[3]);
                       return;
                     } else {
                       return;
@@ -692,7 +636,7 @@ final class fq extends qq implements tb {
                       if (sq.field_b == -4) {
                         return;
                       } else {
-                        discarded$53 = vj.a((byte) -27, il.field_c[3]);
+                        vj.a((byte) -27, il.field_c[3]);
                         return;
                       }
                     } else {
@@ -703,7 +647,7 @@ final class fq extends qq implements tb {
                       if (sq.field_b == -4) {
                         return;
                       } else {
-                        discarded$54 = vj.a((byte) -27, il.field_c[3]);
+                        vj.a((byte) -27, il.field_c[3]);
                         return;
                       }
                     } else {
@@ -720,7 +664,7 @@ final class fq extends qq implements tb {
                     if (sq.field_b == -4) {
                       break L12;
                     } else {
-                      discarded$55 = vj.a((byte) -27, il.field_c[3]);
+                      vj.a((byte) -27, il.field_c[3]);
                       break L12;
                     }
                   }

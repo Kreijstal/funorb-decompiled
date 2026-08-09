@@ -22,22 +22,12 @@ final class cm {
         RuntimeException var6_ref = null;
         int var7 = 0;
         int var8 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             L1: {
@@ -69,27 +59,19 @@ final class cm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var6_ref);
-            stackOut_5_1 = new StringBuilder().append("cm.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var6_ref);
+
+            stackIn_7_1 = new StringBuilder().append("cm.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -98,12 +80,6 @@ final class cm {
     }
 
     final static void a(int param0, int param1, cj param2) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         jb var13 = null;
         ja var14 = null;
         String var15 = null;
@@ -123,7 +99,6 @@ final class cm {
         ja var29 = null;
         String var30 = null;
         jb var31 = null;
-        ja var32 = null;
         String var33 = null;
         jb var34 = null;
         ja var35 = null;
@@ -132,29 +107,14 @@ final class cm {
         ja var38 = null;
         String var39 = null;
         jb var40 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        ja var32 = null;
         try {
-          L0: {
-            L1: {
-              ve.a(0L, 196, (String) null, (tq) null, (String) null, param2, param1, (int[]) null, -1);
-              if (-1 != (param1 ^ -1)) {
-                break L1;
-              } else {
+            ve.a(0L, 196, (String) null, (tq) null, (String) null, param2, param1, (int[]) null, -1);
+            if (-1 == (param1 ^ -1)) {
                 var13 = pk.field_b;
                 var14 = wp.field_j[0];
                 var32 = var14;
@@ -173,13 +133,8 @@ final class cm {
                 var32 = var20;
                 var21 = rq.field_g;
                 var19.field_j.a(var20, 13, var21, true);
-                break L1;
-              }
             }
-            L2: {
-              if (-2 != (param1 ^ -1)) {
-                break L2;
-              } else {
+            if (-2 == (param1 ^ -1)) {
                 var22 = pk.field_b;
                 var23 = wp.field_j[0];
                 var24 = io.field_h;
@@ -192,14 +147,9 @@ final class cm {
                 var29 = wp.field_j[2];
                 var30 = jk.field_c;
                 var28.field_j.a(var29, 13, var30, true);
-                break L2;
-              }
             }
-            L3: {
-              var3_int = -34 % ((-60 - param0) / 40);
-              if (2 != param1) {
-                break L3;
-              } else {
+            int var3_int = -34 % ((-60 - param0) / 40);
+            if (2 == param1) {
                 var31 = pk.field_b;
                 var32 = wp.field_j[0];
                 var33 = ao.field_a;
@@ -212,8 +162,6 @@ final class cm {
                 var38 = wp.field_j[2];
                 var39 = gg.field_n;
                 var37.field_j.a(var38, 13, var39, true);
-                break L3;
-              }
             }
             var40 = pk.field_b;
             var5 = param2.field_w;
@@ -221,42 +169,13 @@ final class cm {
             var7 = param2.field_zb;
             var8 = param2.field_z;
             var40.field_j.b(4542, var5, var8, var6, var7);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("cm.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L4;
-            } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L4;
-            }
-          }
-          throw fa.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) ((Object) runtimeException), "cm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int a(int param0, boolean param1) {
-        byte[] var3 = null;
+        byte[] var3;
         param0 = (param0 >>> 23735073 & 1431655765) + (1431655765 & param0);
         if (!param1) {
           var3 = (byte[]) null;

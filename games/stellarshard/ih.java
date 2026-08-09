@@ -16,7 +16,7 @@ final class ih {
     }
 
     final synchronized static long a(byte param0) {
-        long var1 = 0L;
+        long var1;
         if (param0 != -98) {
           L0: {
             ih.a(-100);

@@ -10,26 +10,16 @@ class wo extends ah {
 
     void a(wk param0, int param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var3 = null;
         var6 = ZombieDawn.field_J;
         try {
           L0: {
@@ -60,27 +50,19 @@ class wo extends ah {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("wo.L(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("wo.L(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -97,35 +79,24 @@ class wo extends ah {
     }
 
     void l(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        wk var5 = null;
-        int stackIn_1_0 = 0;
         int stackIn_2_0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
-        int stackOut_0_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_2_1 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_1_1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        wk var5;
         L0: {
           var4 = ZombieDawn.field_J;
-          stackOut_0_0 = 250;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = 250;
+
           if (!this.field_Ab) {
-            stackOut_2_0 = stackIn_2_0;
-            stackOut_2_1 = 1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = stackIn_2_0;
+            stackIn_3_1 = 1;
             break L0;
           } else {
-            stackOut_1_0 = stackIn_1_0;
-            stackOut_1_1 = 2;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = stackIn_2_0;
+            stackIn_3_1 = 2;
             break L0;
           }
         }
@@ -357,26 +328,10 @@ class wo extends ah {
 
     wo(int param0, int param1, int param2) {
         super(param0, param1, param2, 200704);
-        L0: {
-          L1: {
-            this.field_Ab = false;
-            if (this.field_t == 2) {
-              break L1;
-            } else {
-              if (4 == this.field_t) {
-                break L1;
-              } else {
-                if ((this.field_t ^ -1) != -7) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-          }
-          this.field_D = 143360;
-          this.field_ub = 21;
-          break L0;
+        this.field_Ab = false;
+        if (this.field_t == 2 || 4 == this.field_t || (this.field_t ^ -1) == -7) {
+            this.field_D = 143360;
+            this.field_ub = 21;
         }
     }
 

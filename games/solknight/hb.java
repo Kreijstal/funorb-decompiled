@@ -40,19 +40,7 @@ final class hb {
     }
 
     final void b(byte[] param0, int param1, int param2, int param3) throws IOException {
-        int incrementValue$1 = 0;
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        long var5_long = 0L;
-        int var7 = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        long var9 = 0L;
-        long var11 = 0L;
-        int var13 = 0;
-        int var14 = 0;
-        RuntimeException stackIn_63_0 = null;
-        StringBuilder stackIn_63_1 = null;
+        int incrementValue$0 = 0;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
         RuntimeException stackIn_65_0 = null;
@@ -61,14 +49,16 @@ final class hb {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_62_0 = null;
-        StringBuilder stackOut_62_1 = null;
-        RuntimeException stackOut_64_0 = null;
-        StringBuilder stackOut_64_1 = null;
-        String stackOut_64_2 = null;
-        RuntimeException stackOut_63_0 = null;
-        StringBuilder stackOut_63_1 = null;
-        String stackOut_63_2 = null;
+        long var5_long = 0L;
+        IOException var5 = null;
+        RuntimeException var5_ref = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9_int = 0;
+        long var9 = 0L;
+        long var11 = 0L;
+        int var13 = 0;
+        int var14 = 0;
         var14 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
@@ -187,9 +177,9 @@ final class hb {
                                 break L9;
                               } else {
                                 param3--;
-                                incrementValue$1 = param2;
+                                incrementValue$0 = param2;
                                 param2++;
-                                param0[incrementValue$1] = (byte) 0;
+                                param0[incrementValue$0] = (byte) 0;
                                 this.field_e = this.field_e + 1L;
                                 continue L11;
                               }
@@ -302,27 +292,19 @@ final class hb {
           decompiledCaughtException = decompiledCaughtParameter1;
           L17: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_62_0 = (RuntimeException) (var5_ref);
-            stackOut_62_1 = new StringBuilder().append("hb.I(");
-            stackIn_64_0 = stackOut_62_0;
-            stackIn_64_1 = stackOut_62_1;
-            stackIn_63_0 = stackOut_62_0;
-            stackIn_63_1 = stackOut_62_1;
+            stackIn_64_0 = (RuntimeException) (var5_ref);
+
+            stackIn_64_1 = new StringBuilder().append("hb.I(");
+
             if (param0 == null) {
-              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-              stackOut_64_2 = "null";
-              stackIn_65_0 = stackOut_64_0;
-              stackIn_65_1 = stackOut_64_1;
-              stackIn_65_2 = stackOut_64_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "null";
               break L17;
             } else {
-              stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
-              stackOut_63_1 = (StringBuilder) ((Object) stackIn_63_1);
-              stackOut_63_2 = "{...}";
-              stackIn_65_0 = stackOut_63_0;
-              stackIn_65_1 = stackOut_63_1;
-              stackIn_65_2 = stackOut_63_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "{...}";
               break L17;
             }
           }
@@ -363,10 +345,12 @@ final class hb {
     }
 
     final static void a(boolean param0) {
-        rb discarded$2 = null;
-        rb discarded$3 = null;
-        RuntimeException var1 = null;
+        int stackIn_142_0 = 0;
+        int stackIn_219_0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         rb var3_ref_rb = null;
         int var3 = 0;
@@ -378,14 +362,6 @@ final class hb {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_142_0 = 0;
-        int stackIn_219_0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_141_0 = 0;
-        int stackOut_140_0 = 0;
-        int stackOut_218_0 = 0;
-        int stackOut_217_0 = 0;
         var11 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
@@ -818,7 +794,7 @@ final class hb {
                   L40: {
                     of.field_g = of.field_g + 1;
                     if (-51 <= (of.field_g ^ -1)) {
-                      discarded$2 = m.a(10, -ea.field_p[kb.field_b] + (720 + bk.a(128, jb.field_g, (byte) 47)) - 64 << 1226965956, bk.a(128, jb.field_g, (byte) -46) + -64 << -2060847036, (byte) -6, 0, 0);
+                      m.a(10, -ea.field_p[kb.field_b] + (720 + bk.a(128, jb.field_g, (byte) 47)) - 64 << 1226965956, bk.a(128, jb.field_g, (byte) -46) + -64 << -2060847036, (byte) -6, 0, 0);
                       break L40;
                     } else {
                       break L40;
@@ -879,12 +855,10 @@ final class hb {
                     }
                     L45: {
                       if ((ob.field_l ^ -1) >= -1) {
-                        stackOut_141_0 = 9;
-                        stackIn_142_0 = stackOut_141_0;
+                        stackIn_142_0 = 9;
                         break L45;
                       } else {
-                        stackOut_140_0 = 0;
-                        stackIn_142_0 = stackOut_140_0;
+                        stackIn_142_0 = 0;
                         break L45;
                       }
                     }
@@ -1161,12 +1135,10 @@ final class hb {
                     } else {
                       L72: {
                         if (var4 >= 0) {
-                          stackOut_218_0 = var6 / 5 - 5120;
-                          stackIn_219_0 = stackOut_218_0;
+                          stackIn_219_0 = var6 / 5 - 5120;
                           break L72;
                         } else {
-                          stackOut_217_0 = -5120 + var6 / 3;
-                          stackIn_219_0 = stackOut_217_0;
+                          stackIn_219_0 = -5120 + var6 / 3;
                           break L72;
                         }
                       }
@@ -1178,7 +1150,7 @@ final class hb {
                   var8 = var6 + -var4;
                   var9 = var7 - var5;
                   var10 = (int)Math.sqrt((double)(var8 * var8 - -(var9 * var9)));
-                  discarded$3 = m.a(var2 + 25, var5, var4, (byte) -6, var9 * var3 / var10, var3 * var8 / var10);
+                  m.a(var2 + 25, var5, var4, (byte) -6, var9 * var3 / var10, var3 * var8 / var10);
                   break L51;
                 }
               }
@@ -1440,15 +1412,6 @@ final class hb {
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        int var5_int = 0;
-        long var5_long = 0L;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_50_0 = null;
-        StringBuilder stackIn_50_1 = null;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
         RuntimeException stackIn_52_0 = null;
@@ -1457,14 +1420,13 @@ final class hb {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_49_0 = null;
-        StringBuilder stackOut_49_1 = null;
-        RuntimeException stackOut_51_0 = null;
-        StringBuilder stackOut_51_1 = null;
-        String stackOut_51_2 = null;
-        RuntimeException stackOut_50_0 = null;
-        StringBuilder stackOut_50_1 = null;
-        String stackOut_50_2 = null;
+        int var5_int = 0;
+        long var5_long = 0L;
+        IOException var5 = null;
+        RuntimeException var5_ref = null;
+        long var7 = 0L;
+        int var9 = 0;
+        int var10 = 0;
         var10 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
@@ -1660,27 +1622,19 @@ final class hb {
           decompiledCaughtException = decompiledCaughtParameter1;
           L16: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_49_0 = (RuntimeException) (var5_ref);
-            stackOut_49_1 = new StringBuilder().append("hb.F(");
-            stackIn_51_0 = stackOut_49_0;
-            stackIn_51_1 = stackOut_49_1;
-            stackIn_50_0 = stackOut_49_0;
-            stackIn_50_1 = stackOut_49_1;
+            stackIn_51_0 = (RuntimeException) (var5_ref);
+
+            stackIn_51_1 = new StringBuilder().append("hb.F(");
+
             if (param0 == null) {
-              stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
-              stackOut_51_1 = (StringBuilder) ((Object) stackIn_51_1);
-              stackOut_51_2 = "null";
-              stackIn_52_0 = stackOut_51_0;
-              stackIn_52_1 = stackOut_51_1;
-              stackIn_52_2 = stackOut_51_2;
+              stackIn_52_0 = (RuntimeException) ((Object) stackIn_51_0);
+              stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
+              stackIn_52_2 = "null";
               break L16;
             } else {
-              stackOut_50_0 = (RuntimeException) ((Object) stackIn_50_0);
-              stackOut_50_1 = (StringBuilder) ((Object) stackIn_50_1);
-              stackOut_50_2 = "{...}";
-              stackIn_52_0 = stackOut_50_0;
-              stackIn_52_1 = stackOut_50_1;
-              stackIn_52_2 = stackOut_50_2;
+              stackIn_52_0 = (RuntimeException) ((Object) stackIn_51_0);
+              stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
+              stackIn_52_2 = "{...}";
               break L16;
             }
           }
@@ -1700,6 +1654,7 @@ final class hb {
     final void a(byte param0, byte[] param1) throws IOException {
         try {
             if (param0 <= 3) {
+                this.a(-96);
             }
             this.b(param1, -90, 0, param1.length);
         } catch (RuntimeException runtimeException) {
@@ -1715,10 +1670,10 @@ final class hb {
     }
 
     private final void b(int param0) throws IOException {
-        long var2 = 0L;
-        long var4 = 0L;
-        int var6 = 0;
-        int var7 = 0;
+        long var2;
+        long var4;
+        int var6;
+        int var7;
         L0: {
           var7 = SolKnight.field_L ? 1 : 0;
           if ((this.field_d ^ -1L) == 0L) {

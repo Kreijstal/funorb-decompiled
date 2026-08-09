@@ -16,7 +16,6 @@ final class fg {
 
     final static String a(CharSequence param0, int param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -25,23 +24,13 @@ final class fg {
         char[] var8 = null;
         char[] var9 = null;
         String stackIn_18_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_17_0 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException var2 = null;
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -61,8 +50,7 @@ final class fg {
             var5 = 90 % ((param1 - 5) / 48);
             L2: while (true) {
               if (var2_int <= var4) {
-                stackOut_17_0 = new String(var9);
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_0 = new String(var9);
                 break L0;
               } else {
                 L3: {
@@ -117,27 +105,19 @@ final class fg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2);
-            stackOut_19_1 = new StringBuilder().append("fg.A(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2);
+
+            stackIn_21_1 = new StringBuilder().append("fg.A(");
+
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L8;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L8;
             }
           }
@@ -147,12 +127,11 @@ final class fg {
     }
 
     final static sf a(int param0) {
-        String discarded$1 = null;
-        CharSequence var2 = null;
+        CharSequence var2;
         if (param0 != 1) {
           L0: {
             var2 = (CharSequence) null;
-            discarded$1 = fg.a((CharSequence) null, 84);
+            fg.a((CharSequence) null, 84);
             if (null == th.field_c) {
               th.field_c = new sf();
               th.field_c.a(42, uh.field_i);
@@ -209,7 +188,7 @@ final class fg {
     }
 
     final int a(byte param0) {
-        int var2 = 0;
+        int var2;
         if (!this.field_f) {
           if ((this.field_a ^ -1) != -3) {
             if (this.field_c != DrPhlogistonSavesTheEarth.field_I) {

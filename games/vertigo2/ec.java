@@ -11,19 +11,19 @@ final class ec extends ji {
     static int field_C;
 
     final int[] c(int param0, int param1) {
-        int[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        ed var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
-        int[] var15 = null;
+        int[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        ed var12;
+        int[] var13;
+        int[] var14;
+        int[] var15;
         var11 = Vertigo2.field_L ? 1 : 0;
         var15 = this.field_x.a(param0, (byte) 100);
         var14 = var15;
@@ -38,7 +38,7 @@ final class ec extends ji {
               L1: {
                 var8 = rh.field_O[var6];
                 var9 = -2048 + var8 >> 1820967265;
-                if (this.field_y != 0) {
+                if ((this.field_y ^ -1) != -1) {
                   var10 = var5 * var5 + var9 * var9 >> 1507776620;
                   var7 = (int)(Math.sqrt((double)((float)var10 / 4096.0f)) * 4096.0);
                   var7 = (int)((double)(this.field_B * var7) * 3.141592653589793);
@@ -48,11 +48,12 @@ final class ec extends ji {
                   break L1;
                 }
               }
-              var7 = var7 - (var7 & -4096);
-              if (-1 != (this.field_A ^ -1)) {
-                L2: {
+              L2: {
+                var7 = var7 - (var7 & -4096);
+                if (-1 != (this.field_A ^ -1)) {
                   if (2 == this.field_A) {
                     L3: {
+                      var15 = var14;
                       var7 -= 2048;
                       if ((var7 ^ -1) <= -1) {
                         break L3;
@@ -61,28 +62,28 @@ final class ec extends ji {
                         break L3;
                       }
                     }
+                    var15 = var14;
                     var7 = -var7 + 2048 << 1093880449;
                     break L2;
                   } else {
                     break L2;
                   }
+                } else {
+                  var7 = 4096 + eh.field_b[255 & var7 >> 801663396] >> 784473153;
+                  break L2;
                 }
-                var15[var6] = var7;
-                var6++;
-                continue L0;
-              } else {
-                var7 = 4096 + eh.field_b[255 & var7 >> 801663396] >> 784473153;
-                var15[var6] = var7;
-                var6++;
-                continue L0;
               }
+              var15 = var14;
+              var15[var6] = var7;
+              var6++;
+              continue L0;
             } else {
               if (param1 <= 91) {
                 var12 = (ed) null;
                 this.a((byte) 122, -56, (ed) null);
-                return var3;
+                return var13;
               } else {
-                return var3;
+                return var13;
               }
             }
           }
@@ -90,9 +91,9 @@ final class ec extends ji {
           if (param1 <= 91) {
             var12 = (ed) null;
             this.a((byte) 122, -56, (ed) null);
-            return var3;
+            return var13;
           } else {
-            return var3;
+            return var13;
           }
         }
     }
@@ -138,25 +139,15 @@ final class ec extends ji {
 
     final void a(byte param0, int param1, ed param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
         ed var6 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var4 = null;
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -191,27 +182,19 @@ final class ec extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var4);
-            stackOut_12_1 = new StringBuilder().append("ec.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var4);
+
+            stackIn_14_1 = new StringBuilder().append("ec.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L2;
             }
           }

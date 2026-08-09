@@ -27,7 +27,6 @@ final class k {
     }
 
     final static void a(int param0) {
-        Boolean discarded$1 = null;
         nd.field_a[61] = 27;
         nd.field_a[92] = 74;
         nd.field_a[91] = 42;
@@ -35,7 +34,7 @@ final class k {
         nd.field_a[44] = 71;
         nd.field_a[45] = 26;
         if (param0 != 0) {
-          discarded$1 = k.b((byte) 21);
+          k.b((byte) 21);
           nd.field_a[520] = 59;
           nd.field_a[222] = 58;
           nd.field_a[192] = 28;
@@ -71,28 +70,28 @@ final class k {
     }
 
     final o c(byte param0) {
-        o var2 = null;
-        o var3 = null;
-        int var4 = 0;
-        Object stackIn_7_0 = null;
+        o var2;
+        o var3;
+        int var4;
         Object stackIn_8_0 = null;
-        Object stackIn_16_0 = null;
         Object stackIn_17_0 = null;
-        Object stackOut_15_0 = null;
-        Object stackOut_6_0 = null;
         var4 = OrbDefence.field_D ? 1 : 0;
         if (null != this.field_c) {
           if (param0 < -9) {
             var2 = this.field_b[(int)(this.field_f & (long)(-1 + this.field_d))];
             L0: while (true) {
               if (this.field_c != var2) {
-                stackOut_15_0 = this;
-                stackIn_17_0 = stackOut_15_0;
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_17_0 = this;
+
                 if (var4 == 0) {
                   if (((k) (this)).field_c.field_h != this.field_f) {
                     this.field_c = this.field_c.field_f;
-                    continue L0;
+                    if (var4 == 0) {
+                      continue L0;
+                    } else {
+                      this.field_c = null;
+                      return null;
+                    }
                   } else {
                     var3 = this.field_c;
                     this.field_c = this.field_c.field_f;
@@ -112,13 +111,17 @@ final class k {
             var2 = this.field_b[(int)(this.field_f & (long)(-1 + this.field_d))];
             L1: while (true) {
               if (this.field_c != var2) {
-                stackOut_6_0 = this;
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_8_0 = this;
+
                 if (var4 == 0) {
                   if (((k) (this)).field_c.field_h != this.field_f) {
                     this.field_c = this.field_c.field_f;
-                    continue L1;
+                    if (var4 == 0) {
+                      continue L1;
+                    } else {
+                      this.field_c = null;
+                      return null;
+                    }
                   } else {
                     var3 = this.field_c;
                     this.field_c = this.field_c.field_f;
@@ -140,15 +143,11 @@ final class k {
     }
 
     final o a(byte param0, long param1) {
-        o var4 = null;
-        o var5 = null;
-        int var6 = 0;
-        Object stackIn_4_0 = null;
+        o var4;
+        o var5;
+        int var6;
         Object stackIn_5_0 = null;
-        Object stackIn_13_0 = null;
         Object stackIn_14_0 = null;
-        Object stackOut_12_0 = null;
-        Object stackOut_3_0 = null;
         var6 = OrbDefence.field_D ? 1 : 0;
         this.field_f = param1;
         var4 = this.field_b[(int)(param1 & (long)(-1 + this.field_d))];
@@ -157,13 +156,17 @@ final class k {
           field_a = (String) null;
           L0: while (true) {
             if (this.field_c != var4) {
-              stackOut_12_0 = this;
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_13_0 = stackOut_12_0;
+              stackIn_14_0 = this;
+
               if (var6 == 0) {
                 if ((((k) (this)).field_c.field_h ^ -1L) != (param1 ^ -1L)) {
                   this.field_c = this.field_c.field_f;
-                  continue L0;
+                  if (var6 == 0) {
+                    continue L0;
+                  } else {
+                    this.field_c = null;
+                    return null;
+                  }
                 } else {
                   var5 = this.field_c;
                   this.field_c = this.field_c.field_f;
@@ -181,13 +184,17 @@ final class k {
         } else {
           L1: while (true) {
             if (this.field_c != var4) {
-              stackOut_3_0 = this;
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_5_0 = this;
+
               if (var6 == 0) {
                 if ((((k) (this)).field_c.field_h ^ -1L) != (param1 ^ -1L)) {
                   this.field_c = this.field_c.field_f;
-                  continue L1;
+                  if (var6 == 0) {
+                    continue L1;
+                  } else {
+                    this.field_c = null;
+                    return null;
+                  }
                 } else {
                   var5 = this.field_c;
                   this.field_c = this.field_c.field_f;
@@ -206,31 +213,26 @@ final class k {
     }
 
     k(int param0) {
-        o dupTemp$2 = null;
-        int var2 = 0;
+        o dupTemp$0 = null;
         o var3 = null;
-        int var4 = 0;
-        var4 = OrbDefence.field_D ? 1 : 0;
+        int var4 = OrbDefence.field_D ? 1 : 0;
         this.field_b = new o[param0];
         this.field_d = param0;
-        var2 = 0;
-        L0: while (true) {
-          if (var2 < param0) {
-            dupTemp$2 = new o();
-            var3 = dupTemp$2;
-            this.field_b[var2] = dupTemp$2;
+        int var2 = 0;
+        do {
+            if (var2 >= param0) {
+                return;
+            }
+            dupTemp$0 = new o();
+            var3 = dupTemp$0;
+            this.field_b[var2] = dupTemp$0;
             var3.field_g = var3;
             var3.field_f = var3;
             var2++;
-            if (var4 == 0) {
-              continue L0;
-            } else {
-              return;
+            if (var4 != 0) {
+                return;
             }
-          } else {
-            return;
-          }
-        }
+        } while (var4 == 0);
     }
 
     static {

@@ -13,23 +13,12 @@ final class kea extends td {
         fea var2 = null;
         RuntimeException var2_ref = null;
         fea stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fea stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (param1 != null) {
@@ -43,8 +32,7 @@ final class kea extends td {
                   break L1;
                 }
               }
-              stackOut_5_0 = (fea) (var2);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = (fea) (var2);
               break L0;
             } else {
               return null;
@@ -54,27 +42,19 @@ final class kea extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2_ref);
-            stackOut_7_1 = new StringBuilder().append("kea.B(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2_ref);
+
+            stackIn_9_1 = new StringBuilder().append("kea.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -84,43 +64,20 @@ final class kea extends td {
     }
 
     final static void a(int param0, vr param1) {
-        RuntimeException var2 = null;
-        sna var3 = null;
         sna var5 = null;
         sna var6 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        sna var3 = null;
         try {
-          L0: {
-            L1: {
-              ln.field_x = hca.a("basic", param1, param0 + 12213, "display_name_changed");
-              rba.field_a = new ok(0L, ob.field_g, baa.field_A, cd.field_p);
-              nr.field_w = new ok(0L, ob.field_g, lma.field_z, mna.field_r);
-              ov.field_d = new sna(0L, (sna) null);
-              kg.field_d = new sna(0L, qs.field_m);
-              kg.field_d.field_N = 1;
-              eda.field_k = new sna(0L, iia.field_m, bs.field_j);
-              vl.field_d = new sna(0L, vda.field_a, te.field_f);
-              if (param0 == -12238) {
-                break L1;
-              } else {
+            ln.field_x = hca.a("basic", param1, param0 + 12213, "display_name_changed");
+            rba.field_a = new ok(0L, ob.field_g, baa.field_A, cd.field_p);
+            nr.field_w = new ok(0L, ob.field_g, lma.field_z, mna.field_r);
+            ov.field_d = new sna(0L, (sna) null);
+            kg.field_d = new sna(0L, qs.field_m);
+            kg.field_d.field_N = 1;
+            eda.field_k = new sna(0L, iia.field_m, bs.field_j);
+            vl.field_d = new sna(0L, vda.field_a, te.field_f);
+            if (param0 != -12238) {
                 field_s = (int[]) null;
-                break L1;
-              }
             }
             fa.field_k = new sna(0L, dla.field_k);
             ov.field_d.a(param0 ^ 12237, kg.field_d);
@@ -137,37 +94,8 @@ final class kea extends td {
             var3 = nr.field_w.field_xb.field_wb;
             nr.field_w.field_xb.field_wb.field_Y = 1;
             var3.field_N = 1;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("kea.E(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
-            if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
-            } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
-            }
-          }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) ((Object) runtimeException), "kea.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -182,8 +110,15 @@ final class kea extends td {
     }
 
     final ii a(op param0, int param1) {
-        int fieldTemp$2 = 0;
-        int incrementValue$3 = 0;
+        int fieldTemp$0 = 0;
+        int incrementValue$1 = 0;
+        tla stackIn_37_0 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        String stackIn_41_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         tla var4 = null;
         int var6 = 0;
@@ -195,34 +130,16 @@ final class kea extends td {
         aj[] var11 = null;
         int var12 = 0;
         int var13 = 0;
-        int var14 = 0;
         aj var14_ref_aj = null;
-        int var15_int = 0;
+        int var14 = 0;
         wia var15 = null;
+        int var15_int = 0;
         aga var16 = null;
         iv var17 = null;
         bm var17_ref = null;
         int var18 = 0;
         aga var19 = null;
         int[][] var23 = null;
-        tla stackIn_35_0 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        String stackIn_39_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        tla stackOut_34_0 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
         var18 = BachelorFridge.field_y;
         try {
           L0: {
@@ -301,16 +218,15 @@ final class kea extends td {
                                   break L9;
                                 }
                               }
-                              fieldTemp$2 = var4.field_u;
+                              fieldTemp$0 = var4.field_u;
                               var4.field_u = var4.field_u + 1;
-                              var4.field_t[fieldTemp$2] = var11[var12];
+                              var4.field_t[fieldTemp$0] = var11[var12];
                               var12++;
                               continue L7;
                             }
                           }
                         }
-                        stackOut_34_0 = (tla) (var4);
-                        stackIn_35_0 = stackOut_34_0;
+                        stackIn_37_0 = (tla) (var4);
                         break L0;
                       }
                     }
@@ -330,9 +246,9 @@ final class kea extends td {
                             if (!param0.a(var14, var15_int, (byte) -127)) {
                               break L11;
                             } else {
-                              incrementValue$3 = var10;
+                              incrementValue$1 = var10;
                               var10++;
-                              var11[incrementValue$3] = new aj(var14, var15_int);
+                              var11[incrementValue$1] = new aj(var14, var15_int);
                               break L11;
                             }
                           }
@@ -369,46 +285,38 @@ final class kea extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L14: {
             var3 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) (var3);
-            stackOut_36_1 = new StringBuilder().append("kea.A(");
-            stackIn_38_0 = stackOut_36_0;
-            stackIn_38_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+            stackIn_40_0 = (RuntimeException) (var3);
+
+            stackIn_40_1 = new StringBuilder().append("kea.A(");
+
             if (param0 == null) {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "null";
               break L14;
             } else {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "{...}";
-              stackIn_39_0 = stackOut_37_0;
-              stackIn_39_1 = stackOut_37_1;
-              stackIn_39_2 = stackOut_37_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "{...}";
               break L14;
             }
           }
-          throw pe.a((Throwable) ((Object) stackIn_39_0), stackIn_39_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_41_0), stackIn_41_2 + ',' + param1 + ')');
         }
-        return (ii) ((Object) stackIn_35_0);
+        return (ii) ((Object) stackIn_37_0);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var12 = BachelorFridge.field_y;
         try {
           L0: {
@@ -468,7 +376,7 @@ final class kea extends td {
                             continue L6;
                           } else {
                             var8 = dg.field_e[var6_int];
-                            if (param3 < (255 & var8 >> 661686440)) {
+                            if ((param3 ^ -1) > (255 & var8 >> 661686440 ^ -1)) {
                               L8: {
                                 if ((var8 & 16711680) >> -868367696 <= (var8 & 65280) >> 1034858792) {
                                   L9: {

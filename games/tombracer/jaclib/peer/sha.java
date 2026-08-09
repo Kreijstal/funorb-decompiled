@@ -35,9 +35,9 @@ public final class sha {
     }
 
     private final void a(int param0) {
-        java.lang.ref.Reference var2 = null;
-        jaclib.peer.PeerReference var3 = null;
-        jaclib.peer.PeerReference var4 = null;
+        java.lang.ref.Reference var2;
+        jaclib.peer.PeerReference var3;
+        jaclib.peer.PeerReference var4;
         L0: while (true) {
           var2 = this.a.poll();
           if (var2 != null) {
@@ -57,8 +57,9 @@ public final class sha {
     }
 
     private final void b(int param0, jaclib.peer.PeerReference param1) {
-        jaclib.peer.PeerReference var4 = null;
+        jaclib.peer.PeerReference var4;
         L0: {
+          param1.a((byte) 34);
           if (this.c == param1) {
             this.c = param1.b;
             break L0;
@@ -139,7 +140,7 @@ public final class sha {
     }
 
     final void a(int param0, jaclib.peer.PeerReference param1) {
-        jaclib.peer.PeerReference var4 = null;
+        jaclib.peer.PeerReference var4;
         param1.b = null;
         param1.a = this.b;
         if (param0 <= 61) {

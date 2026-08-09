@@ -25,22 +25,10 @@ abstract class ms extends ck {
     }
 
     private final void a(int param0, int param1, int param2, int param3, String param4) {
-        Exception var6 = null;
-        RuntimeException var6_ref = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
-        String var11 = null;
-        String var12 = null;
-        Object stackIn_4_0 = null;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -49,21 +37,14 @@ abstract class ms extends ck {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_5_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        Exception var6 = null;
+        RuntimeException var6_ref = null;
+        String var7 = null;
+        String var8 = null;
+        String var9 = null;
+        String var10 = null;
+        String var11 = null;
+        String var12 = null;
         try {
           L0: {
             try {
@@ -76,32 +57,25 @@ abstract class ms extends ck {
                     L3: {
                       this.field_r = this.getCodeBase().getHost();
                       var12 = this.field_r.toLowerCase();
-                      stackOut_3_0 = this;
-                      stackIn_6_0 = stackOut_3_0;
-                      stackIn_4_0 = stackOut_3_0;
+                      stackIn_6_0 = this;
+
                       if (var12.equals("jagex.com")) {
                         break L3;
                       } else {
-                        stackOut_4_0 = this;
-                        stackIn_7_0 = stackOut_4_0;
-                        stackIn_5_0 = stackOut_4_0;
+                        stackIn_7_0 = this;
+
                         if (!var12.endsWith(".jagex.com")) {
-                          stackOut_7_0 = this;
-                          stackOut_7_1 = 0;
-                          stackIn_8_0 = stackOut_7_0;
-                          stackIn_8_1 = stackOut_7_1;
+                          stackIn_8_0 = this;
+                          stackIn_8_1 = 0;
                           break L2;
                         } else {
-                          stackOut_5_0 = this;
-                          stackIn_6_0 = stackOut_5_0;
+                          stackIn_6_0 = this;
                           break L3;
                         }
                       }
                     }
-                    stackOut_6_0 = this;
-                    stackOut_6_1 = 1;
-                    stackIn_8_0 = stackOut_6_0;
-                    stackIn_8_1 = stackOut_6_1;
+                    stackIn_8_0 = this;
+                    stackIn_8_1 = 1;
                     break L2;
                   }
                   L4: {
@@ -183,27 +157,19 @@ abstract class ms extends ck {
           decompiledCaughtException = decompiledCaughtParameter1;
           L10: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var6_ref);
-            stackOut_23_1 = new StringBuilder().append("ms.MA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var6_ref);
+
+            stackIn_25_1 = new StringBuilder().append("ms.MA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L10;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L10;
             }
           }
@@ -217,8 +183,8 @@ abstract class ms extends ck {
     }
 
     private final int q(int param0) {
-        int var2 = 0;
-        String var3 = null;
+        int var2;
+        String var3;
         if (!this.field_g) {
           L0: {
             if (param0 == 11) {
@@ -293,48 +259,23 @@ abstract class ms extends ck {
     }
 
     private final void e(byte param0) {
-        int discarded$0 = 0;
         if (param0 != 0) {
-            discarded$0 = this.a(true, -29);
+            this.a(true, -29);
         }
         cl.field_p[1] = true;
     }
 
     final void b(int param0, boolean param1) {
-        int var3 = 0;
-        java.awt.Dimension var4 = null;
-        int var5 = 0;
-        java.awt.Container var6 = null;
         int stackIn_24_0 = 0;
-        int stackIn_102_0 = 0;
         int stackIn_103_0 = 0;
         int stackIn_104_0 = 0;
         int stackIn_104_1 = 0;
-        int stackIn_105_0 = 0;
-        int stackIn_105_1 = 0;
-        int stackIn_106_0 = 0;
-        int stackIn_106_1 = 0;
-        int stackIn_107_0 = 0;
-        int stackIn_107_1 = 0;
         int stackIn_107_2 = 0;
         int stackIn_140_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_101_0 = 0;
-        int stackOut_103_0 = 0;
-        int stackOut_103_1 = 0;
-        int stackOut_102_0 = 0;
-        int stackOut_102_1 = 0;
-        int stackOut_104_0 = 0;
-        int stackOut_104_1 = 0;
-        int stackOut_106_0 = 0;
-        int stackOut_106_1 = 0;
-        int stackOut_106_2 = 0;
-        int stackOut_105_0 = 0;
-        int stackOut_105_1 = 0;
-        int stackOut_105_2 = 0;
-        int stackOut_139_0 = 0;
-        int stackOut_138_0 = 0;
+        int var3;
+        java.awt.Dimension var4;
+        int var5;
+        java.awt.Container var6;
         L0: {
           var5 = BachelorFridge.field_y;
           if (null != qt.field_l) {
@@ -420,12 +361,10 @@ abstract class ms extends ck {
           }
           L8: {
             if (-1 != bp.field_x) {
-              stackOut_23_0 = 0;
-              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_0 = 0;
               break L8;
             } else {
-              stackOut_22_0 = 1;
-              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_0 = 1;
               break L8;
             }
           }
@@ -670,49 +609,36 @@ abstract class ms extends ck {
                     }
                   }
                   L24: {
-                    stackOut_101_0 = -6;
-                    stackIn_103_0 = stackOut_101_0;
-                    stackIn_102_0 = stackOut_101_0;
+                    stackIn_103_0 = -6;
+
                     if (ww.field_p) {
-                      stackOut_103_0 = stackIn_103_0;
-                      stackOut_103_1 = 0;
-                      stackIn_104_0 = stackOut_103_0;
-                      stackIn_104_1 = stackOut_103_1;
+                      stackIn_104_0 = stackIn_103_0;
+                      stackIn_104_1 = 0;
                       break L24;
                     } else {
-                      stackOut_102_0 = stackIn_102_0;
-                      stackOut_102_1 = 1;
-                      stackIn_104_0 = stackOut_102_0;
-                      stackIn_104_1 = stackOut_102_1;
+                      stackIn_104_0 = stackIn_103_0;
+                      stackIn_104_1 = 1;
                       break L24;
                     }
                   }
                   L25: {
-                    stackOut_104_0 = stackIn_104_0;
-                    stackOut_104_1 = stackIn_104_1;
-                    stackIn_106_0 = stackOut_104_0;
-                    stackIn_106_1 = stackOut_104_1;
-                    stackIn_105_0 = stackOut_104_0;
-                    stackIn_105_1 = stackOut_104_1;
+
+
+
+
                     if (ww.field_p) {
-                      stackOut_106_0 = stackIn_106_0;
-                      stackOut_106_1 = stackIn_106_1;
-                      stackOut_106_2 = 0;
-                      stackIn_107_0 = stackOut_106_0;
-                      stackIn_107_1 = stackOut_106_1;
-                      stackIn_107_2 = stackOut_106_2;
+
+
+                      stackIn_107_2 = 0;
                       break L25;
                     } else {
-                      stackOut_105_0 = stackIn_105_0;
-                      stackOut_105_1 = stackIn_105_1;
-                      stackOut_105_2 = 1;
-                      stackIn_107_0 = stackOut_105_0;
-                      stackIn_107_1 = stackOut_105_1;
-                      stackIn_107_2 = stackOut_105_2;
+
+
+                      stackIn_107_2 = 1;
                       break L25;
                     }
                   }
-                  vma.a((byte) stackIn_107_0, stackIn_107_1 != 0, stackIn_107_2 != 0, nj.field_i);
+                  vma.a((byte) stackIn_104_0, stackIn_104_1 != 0, stackIn_107_2 != 0, nj.field_i);
                   break L22;
                 }
                 L26: {
@@ -819,12 +745,10 @@ abstract class ms extends ck {
               if (null != ql.field_t) {
                 L37: {
                   if (!ql.field_t.a((byte) 49)) {
-                    stackOut_139_0 = 0;
-                    stackIn_140_0 = stackOut_139_0;
+                    stackIn_140_0 = 0;
                     break L37;
                   } else {
-                    stackOut_138_0 = 1;
-                    stackIn_140_0 = stackOut_138_0;
+                    stackIn_140_0 = 1;
                     break L37;
                   }
                 }
@@ -883,18 +807,12 @@ abstract class ms extends ck {
     }
 
     final void a(boolean param0) {
-        int var2 = 0;
-        gs var3 = null;
-        int var4 = 0;
-        int stackIn_30_0 = 0;
         int stackIn_31_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_32_1 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_31_1 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_30_1 = 0;
+        int var2;
+        gs var3;
+        int var4;
         L0: {
           var4 = BachelorFridge.field_y;
           var2 = ri.field_a;
@@ -953,20 +871,15 @@ abstract class ms extends ck {
                                       }
                                     }
                                     L3: {
-                                      stackOut_29_0 = -10183;
-                                      stackIn_31_0 = stackOut_29_0;
-                                      stackIn_30_0 = stackOut_29_0;
+                                      stackIn_31_0 = -10183;
+
                                       if (var2 != 12) {
-                                        stackOut_31_0 = stackIn_31_0;
-                                        stackOut_31_1 = 0;
-                                        stackIn_32_0 = stackOut_31_0;
-                                        stackIn_32_1 = stackOut_31_1;
+                                        stackIn_32_0 = stackIn_31_0;
+                                        stackIn_32_1 = 0;
                                         break L3;
                                       } else {
-                                        stackOut_30_0 = stackIn_30_0;
-                                        stackOut_30_1 = 1;
-                                        stackIn_32_0 = stackOut_30_0;
-                                        stackIn_32_1 = stackOut_30_1;
+                                        stackIn_32_0 = stackIn_31_0;
+                                        stackIn_32_1 = 1;
                                         break L3;
                                       }
                                     }
@@ -1060,6 +973,7 @@ abstract class ms extends ck {
 
     private final int a(boolean param0, int param1, boolean param2) {
         try {
+            Throwable decompiledCaughtException = null;
             int var4 = 0;
             int var5 = 0;
             Exception var6 = null;
@@ -1069,7 +983,6 @@ abstract class ms extends ck {
             String var10 = null;
             String var11 = null;
             Boolean var12 = null;
-            Throwable decompiledCaughtException = null;
             var9 = BachelorFridge.field_y;
             var4 = vea.a(8192, vc.field_a, kt.field_k, param0);
             if (-1 == (var4 ^ -1)) {
@@ -1320,7 +1233,7 @@ abstract class ms extends ck {
     }
 
     final int g(int param0) {
-        int var2 = 0;
+        int var2;
         L0: {
           L1: {
             var2 = this.q(11);
@@ -1489,41 +1402,30 @@ abstract class ms extends ck {
     }
 
     final void l(int param0) {
-        int discarded$135 = 0;
-        int discarded$136 = 0;
-        int discarded$137 = 0;
-        int var3 = 0;
-        Object stackIn_8_0 = null;
+        int discarded$7 = 0;
+        int discarded$8 = 0;
+        int discarded$9 = 0;
+        int var3;
         Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
         int stackIn_10_1 = 0;
-        Object stackOut_7_0 = null;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
         L0: {
           var3 = BachelorFridge.field_y;
           if (gw.a((byte) 110)) {
             L1: {
-              stackOut_7_0 = this;
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_9_0 = this;
+
               if (kga.field_c == null) {
-                stackOut_9_0 = this;
-                stackOut_9_1 = 0;
-                stackIn_10_0 = stackOut_9_0;
-                stackIn_10_1 = stackOut_9_1;
+                stackIn_10_0 = this;
+                stackIn_10_1 = 0;
                 break L1;
               } else {
-                stackOut_8_0 = this;
-                stackOut_8_1 = 1;
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_10_1 = stackOut_8_1;
+                stackIn_10_0 = this;
+                stackIn_10_1 = 1;
                 break L1;
               }
             }
-            discarded$135 = this.a(stackIn_10_1 != 0, -89, false);
+            discarded$7 = this.a(stackIn_10_1 != 0, -89, false);
             break L0;
           } else {
             if (lk.field_r < 10) {
@@ -1534,7 +1436,7 @@ abstract class ms extends ck {
                   aca.a((byte) -118, vc.field_a);
                   break L0;
                 } else {
-                  discarded$136 = this.a(false, 113, false);
+                  discarded$8 = this.a(false, 113, false);
                   break L0;
                 }
               } else {
@@ -1548,7 +1450,7 @@ abstract class ms extends ck {
           if (param0 == 10) {
             break L2;
           } else {
-            discarded$137 = this.q(18);
+            discarded$9 = this.q(18);
             break L2;
           }
         }

@@ -22,8 +22,6 @@ final class dla {
         sg var6 = null;
         int var7 = 0;
         int var8 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -31,14 +29,6 @@ final class dla {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
@@ -81,27 +71,19 @@ final class dla {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (runtimeException);
-            stackOut_9_1 = new StringBuilder().append("dla.B(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (runtimeException);
+
+            stackIn_11_1 = new StringBuilder().append("dla.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -125,26 +107,27 @@ final class dla {
     }
 
     final void a(boolean param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        nbb[] var7 = null;
-        int var8 = 0;
-        int var9_int = 0;
-        String var9 = null;
-        nbb var10_ref_nbb = null;
-        int var10 = 0;
-        int var11 = 0;
-        ml var11_ref_ml = null;
-        int var12 = 0;
-        String var12_ref_String = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        nbb[] var17 = null;
-        nbb var18 = null;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        nbb[] var7;
+        nbb var7_ref;
+        int var8;
+        int var9_int;
+        String var9;
+        int var10;
+        nbb var10_ref_nbb;
+        int var11;
+        ml var11_ref_ml;
+        int var12;
+        String var12_ref_String;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        nbb[] var17;
+        nbb var18;
         L0: {
           var16 = VoidHunters.field_G;
           var3 = this.field_b.a(true, ip.field_p.width) + -this.field_b.a(true, 0);
@@ -193,6 +176,7 @@ final class dla {
               if (var9_int >= var17.length) {
                 L4: {
                   var18 = this.field_f.a(true, var6, var5, var5, var6);
+                  var7_ref = var18;
                   if (var18 != null) {
                     var8 = var18.g(-71) << 92877506;
                     var9 = me.a(var18.field_k, (byte) 106);
@@ -217,7 +201,9 @@ final class dla {
               } else {
                 var10_ref_nbb = var17[var9_int];
                 var18 = var10_ref_nbb;
+                var7_ref = var18;
                 var18 = var10_ref_nbb;
+                var7_ref = var18;
                 if (var10_ref_nbb != null) {
                   var11_ref_ml = var10_ref_nbb.field_k.a(var6, var5, true);
                   if (var11_ref_ml != null) {
@@ -243,27 +229,26 @@ final class dla {
     }
 
     final void b(int param0) {
-        lbb var3 = null;
-        nwa var4 = null;
-        sg[] var5 = null;
-        nbb[] var5_array = null;
-        int var6 = 0;
-        int var7_int = 0;
-        Object var7 = null;
-        sg[] var8 = null;
-        int var9 = 0;
-        sg var10_ref_sg = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        lta var13 = null;
-        sg[] var14 = null;
-        nbb[] var15 = null;
-        tfa[] var16 = null;
-        Random var17 = null;
-        Random var18 = null;
         int stackIn_15_0 = 0;
-        int stackOut_13_0 = 0;
+        lbb var3;
+        nwa var4;
+        sg[] var5;
+        nbb[] var5_array;
+        int var6;
+        int var7_int;
+        Object var7;
+        sg[] var8;
+        int var9;
+        sg var10_ref_sg;
+        int var10;
+        int var11;
+        int var12;
+        lta var13;
+        sg[] var14;
+        nbb[] var15;
+        tfa[] var16;
+        Random var17;
+        Random var18;
         L0: {
           L1: {
             var12 = VoidHunters.field_G;
@@ -302,8 +287,7 @@ final class dla {
                     var6 = mjb.b(param0 ^ 21957, var10_ref_sg.q((byte) 102));
                     if (1 != var10_ref_sg.field_k.k(0)) {
                       if ((var10_ref_sg.field_k.k(0) ^ -1) != -3) {
-                        stackOut_13_0 = 1;
-                        stackIn_15_0 = stackOut_13_0;
+                        stackIn_15_0 = 1;
                         var7_int = stackIn_15_0;
                         break L3;
                       } else {
@@ -329,9 +313,9 @@ final class dla {
             break L0;
           }
         }
-        nbb[] dupTemp$1 = this.field_f.h((byte) -33);
-        var15 = dupTemp$1;
-        var5_array = dupTemp$1;
+        nbb[] dupTemp$0 = this.field_f.h((byte) -33);
+        var15 = dupTemp$0;
+        var5_array = dupTemp$0;
         var6 = param0;
         var7_int = 0;
         L4: while (true) {
@@ -400,12 +384,10 @@ final class dla {
     }
 
     final static boolean a(int param0, boolean param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         int stackIn_28_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           if (param1) {
             if (fmb.field_o[param3] >= fmb.field_o[param2]) {
@@ -454,12 +436,10 @@ final class dla {
           } else {
             L1: {
               if (param2 <= param3) {
-                stackOut_27_0 = 0;
-                stackIn_28_0 = stackOut_27_0;
+                stackIn_28_0 = 0;
                 break L1;
               } else {
-                stackOut_26_0 = 1;
-                stackIn_28_0 = stackOut_26_0;
+                stackIn_28_0 = 1;
                 break L1;
               }
             }
@@ -471,17 +451,17 @@ final class dla {
     }
 
     dla() {
+        Exception exception = null;
         int var1 = 0;
         int var2 = 0;
         Random var3 = null;
-        Exception var4_ref_Exception = null;
-        int var4 = 0;
-        int var5 = 0;
         sg var5_ref_sg = null;
+        int var5 = 0;
         int var6 = 0;
         crb var9 = null;
         int[] var12 = null;
         Throwable decompiledCaughtException = null;
+        int var4 = 0;
         L0: {
           L1: {
             this.field_f = new pe(0);
@@ -510,10 +490,10 @@ final class dla {
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   L3: {
-                    var4_ref_Exception = (Exception) (Object) decompiledCaughtException;
+                    exception = (Exception) (Object) decompiledCaughtException;
                     es.field_b.field_f = null;
                     eg.e((byte) -111);
-                    gna.a((Throwable) ((Object) var4_ref_Exception), "player_gamedata version " + es.field_b.field_d + " blueprint is corrupted", 0);
+                    gna.a((Throwable) ((Object) exception), "player_gamedata version " + es.field_b.field_d + " blueprint is corrupted", 0);
                     break L3;
                   }
                 }

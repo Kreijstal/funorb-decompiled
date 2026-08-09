@@ -13,20 +13,14 @@ final class vm {
     final static eq a(int param0, byte param1) {
         lm stackIn_4_0 = null;
         lm stackIn_8_0 = null;
-        lm stackOut_7_0 = null;
-        Object stackOut_6_0 = null;
-        lm stackOut_3_0 = null;
-        Object stackOut_2_0 = null;
         if (param1 > -102) {
           L0: {
             vm.b(-99, (byte) 98);
             if (null != dg.field_f) {
-              stackOut_7_0 = dg.field_f.a(-11434, (long)param0);
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = dg.field_f.a(-11434, (long)param0);
               break L0;
             } else {
-              stackOut_6_0 = null;
-              stackIn_8_0 = (lm) ((Object) stackOut_6_0);
+              stackIn_8_0 = null;
               break L0;
             }
           }
@@ -34,12 +28,10 @@ final class vm {
         } else {
           L1: {
             if (null != dg.field_f) {
-              stackOut_3_0 = dg.field_f.a(-11434, (long)param0);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = dg.field_f.a(-11434, (long)param0);
               break L1;
             } else {
-              stackOut_2_0 = null;
-              stackIn_4_0 = (lm) ((Object) stackOut_2_0);
+              stackIn_4_0 = null;
               break L1;
             }
           }
@@ -48,9 +40,8 @@ final class vm {
     }
 
     final static fm a(boolean param0, byte param1, boolean param2, int param3, int param4) {
-        eq discarded$2 = null;
         if (param1 != 22) {
-          discarded$2 = vm.a(-98, (byte) 84);
+          vm.a(-98, (byte) 84);
           return el.a(-107, param0, false, param3, param4, param2);
         } else {
           return el.a(-107, param0, false, param3, param4, param2);

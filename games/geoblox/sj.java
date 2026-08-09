@@ -47,8 +47,8 @@ final class sj {
     }
 
     private final int b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = Geoblox.field_C;
         if (param1 != 1) {
           return 80;
@@ -123,8 +123,8 @@ final class sj {
     }
 
     private final void c(int param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         var4 = new int[this.b(param0, 1)];
         var3 = var4;
         if (param1 != 25177) {

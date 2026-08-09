@@ -26,7 +26,7 @@ final class v {
     private int field_r;
 
     final uk a(int param0) {
-        uk var2 = null;
+        uk var2;
         this.field_j = o.field_r;
         this.field_r = co.field_c;
         this.field_a.a(this.field_m, this.field_c, 120);
@@ -57,9 +57,8 @@ final class v {
     }
 
     final static kc b(byte param0) {
-        eg discarded$0 = null;
         if (param0 <= 112) {
-            discarded$0 = v.a((byte) -59, true, false, -83, -46);
+            v.a((byte) -59, true, false, -83, -46);
             return uc.b(115);
         }
         return uc.b(115);
@@ -68,9 +67,6 @@ final class v {
     final boolean a(int param0, int param1, int param2) {
         int stackIn_13_0 = 0;
         int stackIn_27_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
         if (param2 == -17969) {
           if (param0 >= this.field_f) {
             if (param0 <= this.field_k) {
@@ -83,8 +79,7 @@ final class v {
                       return false;
                     }
                   } else {
-                    stackOut_25_0 = 1;
-                    stackIn_27_0 = stackOut_25_0;
+                    stackIn_27_0 = 1;
                     return stackIn_27_0 != 0;
                   }
                 } else {
@@ -110,12 +105,10 @@ final class v {
                   } else {
                     L0: {
                       if (Math.round((float)param1 * this.field_b) != param0) {
-                        stackOut_12_0 = 0;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = 0;
                         break L0;
                       } else {
-                        stackOut_11_0 = 1;
-                        stackIn_13_0 = stackOut_11_0;
+                        stackIn_13_0 = 1;
                         break L0;
                       }
                     }
@@ -137,10 +130,10 @@ final class v {
     }
 
     private final void c(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         var2 = this.field_d;
         if (param0 <= 82) {
@@ -670,7 +663,7 @@ final class v {
     }
 
     final boolean d(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = 40 % ((32 - param0) / 43);
         if (this.field_q <= wl.field_K) {
           if (ah.field_c <= 0) {
@@ -684,9 +677,8 @@ final class v {
     }
 
     final static eg a(byte param0, boolean param1, boolean param2, int param3, int param4) {
-        eg discarded$2 = null;
         if (param0 != -93) {
-          discarded$2 = v.a((byte) -92, false, true, 53, 6);
+          v.a((byte) -92, false, true, 53, 6);
           return me.a(param3, param2, param0 + 2097245, param1, param4, false);
         } else {
           return me.a(param3, param2, param0 + 2097245, param1, param4, false);
@@ -743,8 +735,8 @@ final class v {
     }
 
     final void a(byte param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         if (param0 == 93) {
           if (ka.field_m == null) {
             L0: {
@@ -756,9 +748,9 @@ final class v {
               }
             }
             if (this.field_l) {
-              fieldTemp$2 = this.field_s - 1;
+              fieldTemp$0 = this.field_s - 1;
               this.field_s = this.field_s - 1;
-              if (fieldTemp$2 <= 0) {
+              if (fieldTemp$0 <= 0) {
                 this.field_s = this.field_i;
                 if (this.field_q > wl.field_K) {
                   this.field_l = false;
@@ -828,9 +820,9 @@ final class v {
               }
             }
             if (this.field_l) {
-              fieldTemp$3 = this.field_s - 1;
+              fieldTemp$1 = this.field_s - 1;
               this.field_s = this.field_s - 1;
-              if (fieldTemp$3 <= 0) {
+              if (fieldTemp$1 <= 0) {
                 this.field_s = this.field_i;
                 if (this.field_q > wl.field_K) {
                   this.field_l = false;

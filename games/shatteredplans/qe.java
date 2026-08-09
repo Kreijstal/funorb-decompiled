@@ -23,10 +23,6 @@ class qe extends oh {
     final static boolean a(byte param0, int param1) {
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
         if (param0 == -65) {
           if (param1 >= 0) {
             if (param1 >= 1582) {
@@ -46,12 +42,10 @@ class qe extends oh {
             } else {
               L0: {
                 if (0 != param1 % 4) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = 0;
                   break L0;
                 } else {
-                  stackOut_9_0 = 1;
-                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_11_0 = 1;
                   break L0;
                 }
               }
@@ -60,12 +54,10 @@ class qe extends oh {
           } else {
             L1: {
               if ((1 + param1) % 4 != 0) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L1;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }

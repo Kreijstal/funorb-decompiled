@@ -24,8 +24,6 @@ final class eg {
         int stackIn_11_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_7_0 = 0;
         var2 = stellarshard.field_B;
         try {
           L0: {
@@ -40,14 +38,12 @@ final class eg {
             var1_int = 0;
             L2: while (true) {
               if ((var1_int ^ -1) <= -3001) {
-                stackOut_10_0 = -1;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (null == wk.field_b[var1_int]) {
-                  stackOut_7_0 = var1_int;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = var1_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {

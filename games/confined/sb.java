@@ -48,9 +48,12 @@ final class sb implements Runnable {
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, boolean param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_23_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -58,11 +61,6 @@ final class sb implements Runnable {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_23_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
         var14 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -91,12 +89,10 @@ final class sb implements Runnable {
                           L3: {
                             var12 = sj.field_rb[var11];
                             if (!param6) {
-                              stackOut_22_0 = ik.field_cb[var12];
-                              stackIn_23_0 = stackOut_22_0;
+                              stackIn_23_0 = ik.field_cb[var12];
                               break L3;
                             } else {
-                              stackOut_21_0 = an.field_n[var12];
-                              stackIn_23_0 = stackOut_21_0;
+                              stackIn_23_0 = an.field_n[var12];
                               break L3;
                             }
                           }
@@ -104,9 +100,9 @@ final class sb implements Runnable {
                             var13 = stackIn_23_0;
                             if (var7_int < var13) {
                               sj.field_rb[var11] = sj.field_rb[var8];
-                              incrementValue$1 = var8;
+                              incrementValue$0 = var8;
                               var8++;
-                              sj.field_rb[incrementValue$1] = var12;
+                              sj.field_rb[incrementValue$0] = var12;
                               if (var9 > var13) {
                                 var9 = var13;
                                 break L4;

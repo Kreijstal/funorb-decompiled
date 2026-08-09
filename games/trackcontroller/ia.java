@@ -14,8 +14,6 @@ final class ia {
     }
 
     final static int b(boolean param0) {
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -28,18 +26,11 @@ final class ia {
         int stackIn_23_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_2_0 = 0;
         var2 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
             if (!param0) {
-              discarded$12 = gl.field_E.a(hf.field_d, true, param0, ra.field_z);
+              gl.field_E.a(hf.field_d, true, param0, ra.field_z);
               gl.field_E.b(true);
               L1: while (true) {
                 if (!mh.e(127)) {
@@ -48,50 +39,43 @@ final class ia {
                       if (rk.field_X != oe.field_b) {
                         if (sa.field_Q.b((byte) 121)) {
                           if (oe.field_b != fd.field_h) {
-                            stackOut_22_0 = -1;
-                            stackIn_23_0 = stackOut_22_0;
+                            stackIn_23_0 = -1;
                             decompiledRegionSelector0 = 6;
                             break L0;
                           } else {
-                            stackOut_20_0 = 2;
-                            stackIn_21_0 = stackOut_20_0;
+                            stackIn_21_0 = 2;
                             decompiledRegionSelector0 = 5;
                             break L0;
                           }
                         } else {
-                          stackOut_17_0 = 1;
-                          stackIn_18_0 = stackOut_17_0;
+                          stackIn_18_0 = 1;
                           decompiledRegionSelector0 = 4;
                           break L0;
                         }
                       } else {
-                        stackOut_14_0 = 1;
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = 1;
                         decompiledRegionSelector0 = 3;
                         break L0;
                       }
                     } else {
-                      stackOut_11_0 = 3;
-                      stackIn_12_0 = stackOut_11_0;
+                      stackIn_12_0 = 3;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
                   } else {
                     var1_int = ra.field_v;
                     qc.b(-1, (byte) -42);
-                    stackOut_8_0 = var1_int;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = var1_int;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 } else {
-                  discarded$13 = gl.field_E.a(md.field_d, 3931, kg.field_d);
+                  gl.field_E.a(md.field_d, 3931, kg.field_d);
                   continue L1;
                 }
               }
             } else {
-              stackOut_2_0 = 79;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 79;
               decompiledRegionSelector0 = 0;
               break L0;
             }

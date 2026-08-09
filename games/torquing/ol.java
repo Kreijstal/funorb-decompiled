@@ -38,17 +38,7 @@ final class ol {
     }
 
     final static void a(double[] param0, byte param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        double[] var8 = null;
-        double[] var12 = null;
         int stackIn_16_0 = 0;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
         RuntimeException stackIn_46_0 = null;
         StringBuilder stackIn_46_1 = null;
         RuntimeException stackIn_47_0 = null;
@@ -56,18 +46,14 @@ final class ol {
         String stackIn_47_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_9_0 = 0;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        double[] var8 = null;
+        double[] var12 = null;
         var7 = Torquing.field_u;
         try {
           L0: {
@@ -86,22 +72,18 @@ final class ol {
                       if (param0[9] == param0[6]) {
                         if (param0[10] == param0[7]) {
                           if (param0[8] != param0[11]) {
-                            stackOut_14_0 = 1;
-                            stackIn_16_0 = stackOut_14_0;
+                            stackIn_16_0 = 1;
                             break L2;
                           } else {
-                            stackOut_13_0 = 0;
-                            stackIn_16_0 = stackOut_13_0;
+                            stackIn_16_0 = 0;
                             break L2;
                           }
                         } else {
-                          stackOut_11_0 = 1;
-                          stackIn_16_0 = stackOut_11_0;
+                          stackIn_16_0 = 1;
                           break L2;
                         }
                       } else {
-                        stackOut_9_0 = 1;
-                        stackIn_16_0 = stackOut_9_0;
+                        stackIn_16_0 = 1;
                         break L2;
                       }
                     }
@@ -200,27 +182,19 @@ final class ol {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_44_0 = (RuntimeException) (var2);
-            stackOut_44_1 = new StringBuilder().append("ol.C(");
-            stackIn_46_0 = stackOut_44_0;
-            stackIn_46_1 = stackOut_44_1;
-            stackIn_45_0 = stackOut_44_0;
-            stackIn_45_1 = stackOut_44_1;
+            stackIn_46_0 = (RuntimeException) (var2);
+
+            stackIn_46_1 = new StringBuilder().append("ol.C(");
+
             if (param0 == null) {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "null";
-              stackIn_47_0 = stackOut_46_0;
-              stackIn_47_1 = stackOut_46_1;
-              stackIn_47_2 = stackOut_46_2;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "null";
               break L7;
             } else {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "{...}";
-              stackIn_47_0 = stackOut_45_0;
-              stackIn_47_1 = stackOut_45_1;
-              stackIn_47_2 = stackOut_45_2;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "{...}";
               break L7;
             }
           }

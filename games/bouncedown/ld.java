@@ -136,7 +136,7 @@ final class ld extends ai {
     }
 
     final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         L0: {
           var4 = 0;
           if (param2) {

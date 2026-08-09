@@ -9,7 +9,7 @@ final class d extends lq implements lja {
     static String field_E;
 
     final void h(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = 250;
         if (param0 != -11409) {
           field_E = (String) null;

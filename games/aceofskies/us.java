@@ -11,16 +11,7 @@ final class us implements ir {
     private int field_c;
 
     public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        pf var12 = null;
         ea stackIn_4_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -28,27 +19,22 @@ final class us implements ir {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        ea stackOut_2_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        pf var12 = null;
         var11 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
             L1: {
               if (!(param3 instanceof pf)) {
-                stackOut_3_0 = null;
-                stackIn_4_0 = (ea) ((Object) stackOut_3_0);
+                stackIn_4_0 = null;
                 break L1;
               } else {
-                stackOut_2_0 = (ea) (param3);
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = (ea) (param3);
                 break L1;
               }
             }
@@ -94,27 +80,19 @@ final class us implements ir {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var6);
-            stackOut_13_1 = new StringBuilder().append("us.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var6);
+
+            stackIn_15_1 = new StringBuilder().append("us.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }
@@ -128,9 +106,11 @@ final class us implements ir {
     }
 
     final static void a(int param0) {
-        int incrementValue$1 = 0;
-        RuntimeException var1 = null;
+        int incrementValue$0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         double var1_double = 0.0;
+        RuntimeException var1 = null;
         int var3 = 0;
         int var4 = 0;
         float var5 = 0.0f;
@@ -152,8 +132,6 @@ final class us implements ir {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var23 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -249,9 +227,9 @@ final class us implements ir {
                       var20 = (int)(var10 * 256.0f);
                       var21 = (int)(var11 * 256.0f);
                       var22 = var21 + (var19 << 2069944240) + (-16777216 + (var20 << 1411247432));
-                      incrementValue$1 = var3;
+                      incrementValue$0 = var3;
                       var3++;
-                      sa.field_h[incrementValue$1] = var22;
+                      sa.field_h[incrementValue$0] = var22;
                       var7++;
                       continue L3;
                     }

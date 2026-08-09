@@ -10,19 +10,17 @@ final class fa extends gg {
     int field_o;
 
     final static boolean a(int param0) {
-        int discarded$0 = 0;
         if (param0 > -10) {
-            discarded$0 = fa.d(-118);
+            fa.d(-118);
             return true;
         }
         return true;
     }
 
     public static void a(boolean param0) {
-        int discarded$0 = 0;
         field_p = null;
         if (param0) {
-            discarded$0 = fa.d(64);
+            fa.d(64);
             field_k = null;
             field_n = null;
             return;
@@ -47,11 +45,11 @@ final class fa extends gg {
     }
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         u var4 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = stellarshard.field_B;
         try {
           L0: {

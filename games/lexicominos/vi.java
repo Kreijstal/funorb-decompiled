@@ -28,71 +28,118 @@ final class vi extends kd {
         byte[] var13 = null;
         int stackIn_3_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_11_0 = 0;
-        var7 = Lexicominos.field_L ? 1 : 0;
-        var1 = new db[th.field_t];
-        var2 = 0;
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (var2 >= th.field_t) {
-                break L2;
-              } else {
-                var3 = pb.field_h[var2] * bd.field_m[var2];
-                var13 = be.field_f[var2];
-                var11 = new int[var3];
-                var9 = var11;
-                var5 = var9;
-                stackOut_2_0 = 0;
-                stackIn_12_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
-                if (var7 != 0) {
-                  break L1;
-                } else {
-                  var6 = stackIn_3_0;
-                  L3: while (true) {
-                    L4: {
-                      if (var6 >= var3) {
-                        var1[var2] = new db(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var11);
-                        var2++;
-                        break L4;
-                      } else {
-                        var5[var6] = ci.field_b[vg.a((int) var13[var6], 255)];
-                        var6++;
-                        if (var7 != 0) {
-                          break L4;
-                        } else {
-                          continue L3;
-                        }
-                      }
-                    }
-                    if (var7 == 0) {
-                      continue L0;
-                    } else {
-                      break L2;
-                    }
-                  }
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var7 = Lexicominos.field_L ? 1 : 0;
+                    var1 = new db[th.field_t];
+                    var2 = 0;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
+                case 1: {
+                    if (var2 >= th.field_t) {
+                        statePc = 11;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
+                }
+                case 2: {
+                    var3 = pb.field_h[var2] * bd.field_m[var2];
+                    var13 = be.field_f[var2];
+                    var11 = new int[var3];
+                    var9 = var11;
+                    var5 = var9;
+                    stackIn_12_0 = 0;
+                    stackIn_3_0 = stackIn_12_0;
+                    if (var7 != 0) {
+                        statePc = 12;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    var6 = stackIn_3_0;
+                    statePc = 4;
+                    continue stateLoop;
+                }
+                case 4: {
+                    if (var6 >= var3) {
+                        statePc = 8;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    var5[var6] = ci.field_b[vg.a((int) var13[var6], 255)];
+                    var6++;
+                    if (var7 != 0) {
+                        statePc = 10;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    if (var7 == 0) {
+                        statePc = 4;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 8: {
+                    var1[var2] = new db(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var11);
+                    var2++;
+                    statePc = 10;
+                    continue stateLoop;
+                }
+                case 9: {
+                    var1[var2] = new db(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var11);
+                    var2++;
+                    statePc = 10;
+                    continue stateLoop;
+                }
+                case 10: {
+                    if (var7 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    gk.a(param0 ^ 27773);
+                    stackIn_12_0 = param0;
+                    statePc = 12;
+                    continue stateLoop;
+                }
+                case 12: {
+                    if (stackIn_12_0 != 23793) {
+                        statePc = 14;
+                    } else {
+                        statePc = 13;
+                    }
+                    continue stateLoop;
+                }
+                case 13: {
+                    return var1;
+                }
+                case 14: {
+                    return (db[]) null;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            gk.a(param0 ^ 27773);
-            stackOut_11_0 = param0;
-            stackIn_12_0 = stackOut_11_0;
-            break L1;
-          }
-          if (stackIn_12_0 != 23793) {
-            return (db[]) null;
-          } else {
-            return var1;
-          }
         }
     }
 
     final static void a(int param0, vb param1, int param2) {
         th var5 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var5 = ed.field_q;
             var5.h(param0, 0);
@@ -105,7 +152,7 @@ final class vi extends kd {
             var5.f(param1.field_q, -32287);
             var5.f(param1.field_h, -32287);
             var5.f(param1.field_o, -32287);
-            discarded$0 = var5.a(var4, (byte) 119);
+            var5.a(var4, (byte) 119);
             var5.d(-var4 + var5.field_h, (byte) -122);
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) ((Object) runtimeException), "vi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -123,8 +170,6 @@ final class vi extends kd {
         Object stackIn_2_0 = null;
         cd stackIn_5_0 = null;
         cd stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -132,36 +177,22 @@ final class vi extends kd {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        cd stackOut_6_0 = null;
-        cd stackOut_4_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if (param0 != null) {
               if (param1 >= 100) {
                 var2 = new cd(param0, mg.field_x, rg.field_c, pb.field_h, bd.field_m, be.field_f);
                 gk.a(12428);
-                stackOut_6_0 = (cd) (var2);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (cd) (var2);
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_4_0 = (cd) null;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (cd) null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -170,27 +201,19 @@ final class vi extends kd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2_ref);
-            stackOut_8_1 = new StringBuilder().append("vi.E(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2_ref);
+
+            stackIn_10_1 = new StringBuilder().append("vi.E(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L1;
             }
           }

@@ -27,9 +27,16 @@ abstract class hg {
     }
 
     final static void a(int param0, boolean param1, boolean param2) {
-        String discarded$1 = null;
-        RuntimeException var3 = null;
+        dn stackIn_5_0 = null;
+        dn stackIn_6_0 = null;
+        int stackIn_6_1 = 0;
+        kc stackIn_21_0 = null;
+        kc stackIn_22_0 = null;
+        String stackIn_22_1 = null;
+        int stackIn_25_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         vn var4 = null;
         Object var5 = null;
         wa var6 = null;
@@ -44,28 +51,6 @@ abstract class hg {
         int var15 = 0;
         ne var16 = null;
         ne var17 = null;
-        dn stackIn_4_0 = null;
-        dn stackIn_5_0 = null;
-        dn stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        kc stackIn_20_0 = null;
-        kc stackIn_21_0 = null;
-        kc stackIn_22_0 = null;
-        String stackIn_22_1 = null;
-        int stackIn_25_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        dn stackOut_3_0 = null;
-        dn stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        dn stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        kc stackOut_19_0 = null;
-        kc stackOut_21_0 = null;
-        String stackOut_21_1 = null;
-        kc stackOut_20_0 = null;
-        String stackOut_20_1 = null;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
         var15 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -73,25 +58,20 @@ abstract class hg {
               if (!param2) {
                 break L1;
               } else {
-                discarded$1 = hg.a(-89, '');
+                hg.a(-89, '');
                 break L1;
               }
             }
             L2: {
-              stackOut_3_0 = dd.field_c.field_Db;
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_5_0 = dd.field_c.field_Db;
+
               if (dd.field_h != dd.field_c.field_Db) {
-                stackOut_5_0 = (dn) ((Object) stackIn_5_0);
-                stackOut_5_1 = 0;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
+                stackIn_6_0 = (dn) ((Object) stackIn_5_0);
+                stackIn_6_1 = 0;
                 break L2;
               } else {
-                stackOut_4_0 = (dn) ((Object) stackIn_4_0);
-                stackOut_4_1 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_6_1 = stackOut_4_1;
+                stackIn_6_0 = (dn) ((Object) stackIn_5_0);
+                stackIn_6_1 = 1;
                 break L2;
               }
             }
@@ -179,32 +159,25 @@ abstract class hg {
                     }
                   }
                   L10: {
-                    stackOut_19_0 = var6.field_Jb;
-                    stackIn_21_0 = stackOut_19_0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_21_0 = var6.field_Jb;
+
                     if (var10 > 0) {
-                      stackOut_21_0 = (kc) ((Object) stackIn_21_0);
-                      stackOut_21_1 = dj.a(var6.field_Jb.field_Z, var6.field_Cb, var10);
-                      stackIn_22_0 = stackOut_21_0;
-                      stackIn_22_1 = stackOut_21_1;
+                      stackIn_22_0 = (kc) ((Object) stackIn_21_0);
+                      stackIn_22_1 = dj.a(var6.field_Jb.field_Z, var6.field_Cb, var10);
                       break L10;
                     } else {
-                      stackOut_20_0 = (kc) ((Object) stackIn_20_0);
-                      stackOut_20_1 = var6.field_Cb;
-                      stackIn_22_0 = stackOut_20_0;
-                      stackIn_22_1 = stackOut_20_1;
+                      stackIn_22_0 = (kc) ((Object) stackIn_21_0);
+                      stackIn_22_1 = var6.field_Cb;
                       break L10;
                     }
                   }
                   L11: {
                     stackIn_22_0.field_rb = stackIn_22_1;
                     if (var6.field_Jb.field_rb.equals(var6.field_Cb)) {
-                      stackOut_24_0 = 0;
-                      stackIn_25_0 = stackOut_24_0;
+                      stackIn_25_0 = 0;
                       break L11;
                     } else {
-                      stackOut_23_0 = 1;
-                      stackIn_25_0 = stackOut_23_0;
+                      stackIn_25_0 = 1;
                       break L11;
                     }
                   }
@@ -285,12 +258,11 @@ abstract class hg {
     abstract int a(long param0, byte param1);
 
     final static void a(int param0, java.awt.Component param1) {
-        int discarded$0 = 0;
         try {
             param1.setFocusTraversalKeysEnabled(false);
             param1.addKeyListener(ch.field_a);
             if (param0 != 1) {
-                discarded$0 = hg.a(36, -123);
+                hg.a(36, -123);
             }
             param1.addFocusListener(ch.field_a);
         } catch (RuntimeException runtimeException) {
@@ -316,15 +288,11 @@ abstract class hg {
         }
         jl.field_c.field_i = jl.field_c.field_i + 1;
         qe.field_h = var2;
-        if (jl.field_c.field_i >= 2) {
-            if (-52 == (param1 ^ -1)) {
-                return 2;
-            }
+        if (jl.field_c.field_i >= 2 && -52 == (param1 ^ -1)) {
+            return 2;
         }
-        if ((jl.field_c.field_i ^ -1) <= -3) {
-            if (param1 == 50) {
-                return 5;
-            }
+        if ((jl.field_c.field_i ^ -1) <= -3 && param1 == 50) {
+            return 5;
         }
         if (!(jl.field_c.field_i < 4)) {
             return 1;
@@ -336,9 +304,8 @@ abstract class hg {
     }
 
     final static int a(int param0, int param1) {
-        String discarded$0 = null;
         if (param1 != -52) {
-            discarded$0 = hg.a(87, '|');
+            hg.a(87, '|');
         }
         return id.field_c[param0 & 2047];
     }

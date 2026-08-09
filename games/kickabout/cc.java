@@ -9,7 +9,7 @@ final class cc {
     private int field_d;
 
     private final void a(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = qo.a(-8905, (long)this.field_a, (long)this.field_a) + qo.a(-8905, (long)this.field_b, (long)this.field_b) - (-qo.a(-8905, (long)this.field_c, (long)this.field_c) - qo.a(-8905, (long)this.field_d, (long)this.field_d));
         if (param0 > 34) {
           if (var2 >= 65535) {
@@ -38,81 +38,29 @@ final class cc {
 
     final void a(cc param0, int param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
-          L0: {
-            L1: {
-              var3_int = qo.a(-8905, (long)param0.field_a, (long)this.field_a) - (qo.a(-8905, (long)param0.field_b, (long)this.field_b) - (-qo.a(-8905, (long)param0.field_c, (long)this.field_c) + -qo.a(-8905, (long)param0.field_d, (long)this.field_d)));
-              var4 = qo.a(-8905, (long)param0.field_a, (long)this.field_b) + (qo.a(-8905, (long)param0.field_b, (long)this.field_a) + (qo.a(-8905, (long)param0.field_c, (long)this.field_d) + -qo.a(-8905, (long)param0.field_d, (long)this.field_c)));
-              var5 = qo.a(-8905, (long)param0.field_a, (long)this.field_c) - (qo.a(-8905, (long)param0.field_b, (long)this.field_d) + -qo.a(-8905, (long)param0.field_c, (long)this.field_a)) + qo.a(-8905, (long)param0.field_d, (long)this.field_b);
-              if (param1 <= -28) {
-                break L1;
-              } else {
+            var3_int = qo.a(-8905, (long)param0.field_a, (long)this.field_a) - (qo.a(-8905, (long)param0.field_b, (long)this.field_b) - (-qo.a(-8905, (long)param0.field_c, (long)this.field_c) + -qo.a(-8905, (long)param0.field_d, (long)this.field_d)));
+            var4 = qo.a(-8905, (long)param0.field_a, (long)this.field_b) + (qo.a(-8905, (long)param0.field_b, (long)this.field_a) + (qo.a(-8905, (long)param0.field_c, (long)this.field_d) + -qo.a(-8905, (long)param0.field_d, (long)this.field_c)));
+            var5 = qo.a(-8905, (long)param0.field_a, (long)this.field_c) - (qo.a(-8905, (long)param0.field_b, (long)this.field_d) + -qo.a(-8905, (long)param0.field_c, (long)this.field_a)) + qo.a(-8905, (long)param0.field_d, (long)this.field_b);
+            if (param1 > -28) {
                 this.a(122);
-                break L1;
-              }
             }
             this.field_d = qo.a(-8905, (long)param0.field_a, (long)this.field_d) - -qo.a(-8905, (long)param0.field_b, (long)this.field_c) - (qo.a(-8905, (long)param0.field_c, (long)this.field_b) + -qo.a(-8905, (long)param0.field_d, (long)this.field_a));
             this.field_a = var3_int;
             this.field_c = var5;
             this.field_b = var4;
             this.a(62);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("cc.B(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
-            if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
-            } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
-            }
-          }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) ((Object) runtimeException), "cc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, boolean param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
-        cc var8 = null;
+        int var6;
+        int var7;
+        cc var8;
         param4 = param4 >> 1;
         if (!param1) {
           var8 = (cc) null;
@@ -137,7 +85,6 @@ final class cc {
 
     final void a(int param0, int[] param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -147,24 +94,7 @@ final class cc {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
-          L0: {
             var3_int = qo.a(-8905, (long)this.field_a, (long)this.field_a);
             var4 = qo.a(-8905, (long)this.field_a, (long)this.field_b);
             var5 = qo.a(-8905, (long)this.field_a, (long)this.field_c);
@@ -184,37 +114,8 @@ final class cc {
             param1[11] = -var7 + -var10 + (var3_int + var12);
             param1[6] = var8 + -var6 + var8 + -var6;
             param1[param0] = var4 + var11 + (var11 - -var4);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var3);
-            stackOut_2_1 = new StringBuilder().append("cc.D(").append(param0).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
-            } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
-            }
-          }
-          throw nb.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) ((Object) runtimeException), "cc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

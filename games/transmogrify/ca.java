@@ -11,8 +11,17 @@ abstract class ca implements wa {
     static int field_e;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, int[] param8) {
-        RuntimeException var9 = null;
+        int stackIn_47_0 = 0;
+        int stackIn_47_1 = 0;
+        RuntimeException stackIn_89_0 = null;
+        StringBuilder stackIn_89_1 = null;
+        RuntimeException stackIn_90_0 = null;
+        StringBuilder stackIn_90_1 = null;
+        String stackIn_90_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var9_int = 0;
+        RuntimeException var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -23,31 +32,6 @@ abstract class ca implements wa {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_29_1 = 0;
-        int stackIn_47_0 = 0;
-        int stackIn_47_1 = 0;
-        RuntimeException stackIn_88_0 = null;
-        StringBuilder stackIn_88_1 = null;
-        RuntimeException stackIn_89_0 = null;
-        StringBuilder stackIn_89_1 = null;
-        RuntimeException stackIn_90_0 = null;
-        StringBuilder stackIn_90_1 = null;
-        String stackIn_90_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_28_0 = 0;
-        int stackOut_28_1 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_46_1 = 0;
-        RuntimeException stackOut_87_0 = null;
-        StringBuilder stackOut_87_1 = null;
-        RuntimeException stackOut_89_0 = null;
-        StringBuilder stackOut_89_1 = null;
-        String stackOut_89_2 = null;
-        RuntimeException stackOut_88_0 = null;
-        StringBuilder stackOut_88_1 = null;
-        String stackOut_88_2 = null;
         var19 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -162,17 +146,15 @@ abstract class ca implements wa {
                                 break L10;
                               } else {
                                 var17 = var9_int >> 1912388592;
-                                stackOut_28_0 = ka.field_i;
-                                stackOut_28_1 = var17;
-                                stackIn_47_0 = stackOut_28_0;
-                                stackIn_47_1 = stackOut_28_1;
-                                stackIn_29_0 = stackOut_28_0;
-                                stackIn_29_1 = stackOut_28_1;
+                                stackIn_47_0 = ka.field_i;
+
+                                stackIn_47_1 = var17;
+
                                 if (var19 != 0) {
                                   break L9;
                                 } else {
                                   L14: {
-                                    if (stackIn_29_0 > stackIn_29_1) {
+                                    if (stackIn_47_0 > stackIn_47_1) {
                                       L15: {
                                         var18 = (var10 >> 1041630928) - (var9_int >> 1171754384);
                                         if (var18 == 0) {
@@ -239,10 +221,8 @@ abstract class ca implements wa {
                             }
                           }
                           var16 = -param1 + param7;
-                          stackOut_46_0 = 0;
-                          stackOut_46_1 = var16;
-                          stackIn_47_0 = stackOut_46_0;
-                          stackIn_47_1 = stackOut_46_1;
+                          stackIn_47_0 = 0;
+                          stackIn_47_1 = var16;
                           break L9;
                         }
                         L18: {
@@ -442,27 +422,19 @@ abstract class ca implements wa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L34: {
             var9 = decompiledCaughtException;
-            stackOut_87_0 = (RuntimeException) (var9);
-            stackOut_87_1 = new StringBuilder().append("ca.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
-            stackIn_89_0 = stackOut_87_0;
-            stackIn_89_1 = stackOut_87_1;
-            stackIn_88_0 = stackOut_87_0;
-            stackIn_88_1 = stackOut_87_1;
+            stackIn_89_0 = (RuntimeException) (var9);
+
+            stackIn_89_1 = new StringBuilder().append("ca.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
+
             if (param8 == null) {
-              stackOut_89_0 = (RuntimeException) ((Object) stackIn_89_0);
-              stackOut_89_1 = (StringBuilder) ((Object) stackIn_89_1);
-              stackOut_89_2 = "null";
-              stackIn_90_0 = stackOut_89_0;
-              stackIn_90_1 = stackOut_89_1;
-              stackIn_90_2 = stackOut_89_2;
+              stackIn_90_0 = (RuntimeException) ((Object) stackIn_89_0);
+              stackIn_90_1 = (StringBuilder) ((Object) stackIn_89_1);
+              stackIn_90_2 = "null";
               break L34;
             } else {
-              stackOut_88_0 = (RuntimeException) ((Object) stackIn_88_0);
-              stackOut_88_1 = (StringBuilder) ((Object) stackIn_88_1);
-              stackOut_88_2 = "{...}";
-              stackIn_90_0 = stackOut_88_0;
-              stackIn_90_1 = stackOut_88_1;
-              stackIn_90_2 = stackOut_88_2;
+              stackIn_90_0 = (RuntimeException) ((Object) stackIn_89_0);
+              stackIn_90_1 = (StringBuilder) ((Object) stackIn_89_1);
+              stackIn_90_2 = "{...}";
               break L34;
             }
           }
@@ -501,7 +473,6 @@ abstract class ca implements wa {
     }
 
     final static boolean a(String param0, int param1) {
-        Process discarded$2 = null;
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -509,12 +480,9 @@ abstract class ca implements wa {
         int var4 = 0;
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
-        int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_23_0 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -523,20 +491,6 @@ abstract class ca implements wa {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_22_0 = 0;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -551,8 +505,7 @@ abstract class ca implements wa {
                   }
                 }
                 if (!fe.field_k.startsWith("win")) {
-                  stackOut_5_0 = 0;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L1;
                 } else {
@@ -561,8 +514,7 @@ abstract class ca implements wa {
                       break L3;
                     } else {
                       if (!param0.startsWith("https://")) {
-                        stackOut_10_0 = 0;
-                        stackIn_11_0 = stackOut_10_0;
+                        stackIn_11_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L1;
                       } else {
@@ -578,15 +530,13 @@ abstract class ca implements wa {
                         if ((param0.length() ^ -1) >= (var3 ^ -1)) {
                           break L6;
                         } else {
-                          stackOut_14_0 = -1;
-                          stackIn_21_0 = stackOut_14_0;
-                          stackIn_15_0 = stackOut_14_0;
+                          stackIn_21_0 = -1;
+
                           if (var4 != 0) {
                             break L5;
                           } else {
-                            if (stackIn_15_0 == var2.indexOf((int) param0.charAt(var3))) {
-                              stackOut_17_0 = 0;
-                              stackIn_18_0 = stackOut_17_0;
+                            if (stackIn_21_0 == var2.indexOf((int) param0.charAt(var3))) {
+                              stackIn_18_0 = 0;
                               decompiledRegionSelector0 = 3;
                               break L1;
                             } else {
@@ -600,9 +550,8 @@ abstract class ca implements wa {
                           }
                         }
                       }
-                      discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                      stackOut_20_0 = 1;
-                      stackIn_21_0 = stackOut_20_0;
+                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+                      stackIn_21_0 = 1;
                       break L5;
                     }
                     decompiledRegionSelector0 = 2;
@@ -613,8 +562,7 @@ abstract class ca implements wa {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackOut_22_0 = 0;
-              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_0 = 0;
               return stackIn_23_0 != 0;
             }
             if (decompiledRegionSelector0 == 0) {
@@ -639,27 +587,19 @@ abstract class ca implements wa {
           decompiledCaughtException = decompiledCaughtParameter1;
           L7: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var2_ref2);
-            stackOut_24_1 = new StringBuilder().append("ca.J(");
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var2_ref2);
+
+            stackIn_26_1 = new StringBuilder().append("ca.J(");
+
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L7;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L7;
             }
           }
@@ -686,23 +626,12 @@ abstract class ca implements wa {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_4_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -722,35 +651,26 @@ abstract class ca implements wa {
                 break L2;
               }
             }
-            stackOut_4_0 = (String) (var2);
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = (String) (var2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2_ref);
-            stackOut_6_1 = new StringBuilder().append("ca.M(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2_ref);
+
+            stackIn_8_1 = new StringBuilder().append("ca.M(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -762,7 +682,6 @@ abstract class ca implements wa {
     public final void a(boolean param0) {
         this.field_d = lk.a(0);
         if (!param0) {
-            int[] var3 = (int[]) null;
             ca.a(-41, -118, 56, -109, 40, false, 51, 94, (int[]) null);
         }
     }
@@ -778,13 +697,11 @@ abstract class ca implements wa {
     }
 
     public final rc a(int param0) {
-        String discarded$0 = null;
         if (this.b(param0 + -43835)) {
             return bc.field_a;
         }
         if (param0 != 27835) {
-            CharSequence var3 = (CharSequence) null;
-            discarded$0 = ca.a((CharSequence) null, false);
+            ca.a((CharSequence) null, false);
         }
         if (lk.a(0) < this.field_d + 350L) {
             return ek.field_a;

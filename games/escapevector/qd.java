@@ -12,8 +12,8 @@ final class qd extends hg {
     static volatile boolean field_l;
 
     final static boolean a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         if (param1 < -85) {
           var2 = dh.field_e.length;
           if (0 <= param0) {
@@ -75,7 +75,7 @@ final class qd extends hg {
     }
 
     final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         var4 = 0;
         if (param2 == -8) {
           L0: {
@@ -132,8 +132,8 @@ final class qd extends hg {
     }
 
     final static void a(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var2 = EscapeVector.field_A;
         dj.field_b = null;
         if (param0) {

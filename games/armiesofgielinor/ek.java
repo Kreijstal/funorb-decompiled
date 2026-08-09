@@ -35,14 +35,14 @@ final class ek {
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         var3 = ae.b(param1, 100);
         var4 = g.a(-1, param1);
         var5 = ae.b(param2, 100);

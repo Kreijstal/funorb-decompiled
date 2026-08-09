@@ -12,7 +12,7 @@ final class hma implements Iterable {
     static jea field_b;
 
     final od c(int param0) {
-        od var3 = null;
+        od var3;
         if (param0 <= 89) {
           var3 = (od) null;
           this.a((od) null, -48);
@@ -27,7 +27,7 @@ final class hma implements Iterable {
     }
 
     final void a(byte param0) {
-        int var3 = 0;
+        int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         L0: while (true) {
           if (this.field_d.field_g == this.field_d) {
@@ -39,11 +39,7 @@ final class hma implements Iterable {
             }
           } else {
             this.field_d.field_g.c(-7975);
-            if (var3 == 0) {
-              continue L0;
-            } else {
-              return;
-            }
+            continue L0;
           }
         }
     }
@@ -58,7 +54,7 @@ final class hma implements Iterable {
     }
 
     final od b(byte param0) {
-        od var2 = null;
+        od var2;
         if (param0 > 44) {
           var2 = this.field_d.field_g;
           if (var2 == this.field_d) {
@@ -78,8 +74,6 @@ final class hma implements Iterable {
         od var4 = null;
         Object stackIn_6_0 = null;
         od stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -87,75 +81,48 @@ final class hma implements Iterable {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_5_0 = null;
-        od stackOut_7_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
-              L2: {
-                var3_int = 77 / ((param0 - 2) / 56);
-                if (param1 != null) {
-                  break L2;
-                } else {
-                  var4 = this.field_d.field_g;
-                  if (!TombRacer.field_G) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
+              var3_int = 77 / ((param0 - 2) / 56);
+              if (param1 != null) {
+                var4 = param1;
+                break L1;
+              } else {
+                var4 = this.field_d.field_g;
+                break L1;
               }
-              var4 = param1;
-              break L1;
             }
             if (var4 == this.field_d) {
               this.field_c = null;
-              stackOut_5_0 = null;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               this.field_c = var4.field_g;
-              stackOut_7_0 = (od) (var4);
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = (od) (var4);
               decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3);
-            stackOut_9_1 = new StringBuilder().append("hma.C(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("hma.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L3;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
+              break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L3;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
+              break L2;
             }
           }
           throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
@@ -191,7 +158,7 @@ final class hma implements Iterable {
     }
 
     final od a(int param0) {
-        od var2 = null;
+        od var2;
         var2 = this.field_c;
         if (var2 == this.field_d) {
           this.field_c = null;

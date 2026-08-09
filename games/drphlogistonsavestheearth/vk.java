@@ -9,13 +9,13 @@ final class vk extends me {
     boolean field_m;
 
     final vk a(ng param0) {
-        int dupTemp$2 = 0;
+        int dupTemp$1 = 0;
         this.field_i = param0.a(this.field_i, (byte) -128);
         this.field_j = param0.a((byte) -128, this.field_j);
         if (this.field_k == this.field_l) {
-          dupTemp$2 = param0.a(this.field_k, (byte) 101);
-          this.field_l = dupTemp$2;
-          this.field_k = dupTemp$2;
+          dupTemp$1 = param0.a(this.field_k, (byte) 101);
+          this.field_l = dupTemp$1;
+          this.field_k = dupTemp$1;
           return (vk) (this);
         } else {
           L0: {

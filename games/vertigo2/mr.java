@@ -6,12 +6,9 @@ final class mr {
     static jj field_b;
 
     final static void b(boolean param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         int stackIn_4_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
+        Object var1 = null;
         var1 = as.field_b;
         synchronized (var1) {
           L0: {
@@ -22,12 +19,10 @@ final class mr {
               gb.field_d = ca.field_c;
               wo.field_s = ej.field_f;
               if (!param0) {
-                stackOut_3_0 = 0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = 1;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = 1;
                 break L1;
               }
             }
@@ -70,8 +65,13 @@ final class mr {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -80,19 +80,6 @@ final class mr {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
         var13 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -108,48 +95,40 @@ final class mr {
             }
             L2: {
               if (param4 > bi.field_d) {
-                stackOut_5_0 = param4;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = param4;
                 break L2;
               } else {
-                stackOut_4_0 = bi.field_d;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = bi.field_d;
                 break L2;
               }
             }
             L3: {
               var7 = stackIn_6_0;
               if (param1 <= bi.field_f) {
-                stackOut_8_0 = bi.field_f;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = bi.field_f;
                 break L3;
               } else {
-                stackOut_7_0 = param1;
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = param1;
                 break L3;
               }
             }
             L4: {
               var8 = stackIn_9_0;
               if (bi.field_i > var5_int) {
-                stackOut_11_0 = var5_int;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = var5_int;
                 break L4;
               } else {
-                stackOut_10_0 = bi.field_i;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = bi.field_i;
                 break L4;
               }
             }
             L5: {
               var9 = stackIn_12_0;
               if (bi.field_c > var6) {
-                stackOut_14_0 = var6;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = var6;
                 break L5;
               } else {
-                stackOut_13_0 = bi.field_c;
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = bi.field_c;
                 break L5;
               }
             }
@@ -259,8 +238,8 @@ final class mr {
     }
 
     final static String a(String param0, byte param1, String param2, String param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = Vertigo2.field_L ? 1 : 0;
         if (param1 != -48) {
           return (String) null;

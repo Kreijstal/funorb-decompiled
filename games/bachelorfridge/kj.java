@@ -42,8 +42,8 @@ abstract class kj {
     abstract boolean b(int param0);
 
     void a(int param0) {
-        kj var2 = null;
-        int var3 = 0;
+        kj var2;
+        int var3;
         L0: {
           var3 = BachelorFridge.field_y;
           if (param0 == 0) {

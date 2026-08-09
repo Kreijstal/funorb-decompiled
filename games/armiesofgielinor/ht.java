@@ -18,7 +18,7 @@ final class ht {
     short[] field_i;
 
     ht(byte[] param0, ig param1) {
-        int discarded$1 = 0;
+        Throwable decompiledCaughtException = null;
         Exception var3 = null;
         vh var4 = null;
         int var5 = 0;
@@ -31,7 +31,6 @@ final class ht {
         int var12 = 0;
         int var13 = 0;
         vh var14 = null;
-        Throwable decompiledCaughtException = null;
         this.field_d = -1;
         this.field_n = null;
         this.field_n = param1;
@@ -39,7 +38,7 @@ final class ht {
           L0: {
             var14 = new vh(param0);
             var4 = new vh(param0);
-            discarded$1 = var14.k(0);
+            var14.k(0);
             var14.field_q = var14.field_q + 2;
             var5 = var14.k(0);
             var6 = 0;

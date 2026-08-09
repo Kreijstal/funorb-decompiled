@@ -34,8 +34,19 @@ class hga extends vpa {
     }
 
     final static void a(boolean param0, byte[] param1) {
+        int incrementValue$0 = 0;
+        int stackIn_43_0 = 0;
+        int stackIn_46_0 = 0;
+        int stackIn_52_0 = 0;
+        int stackIn_55_0 = 0;
+        RuntimeException stackIn_60_0 = null;
+        StringBuilder stackIn_60_1 = null;
+        RuntimeException stackIn_61_0 = null;
+        StringBuilder stackIn_61_1 = null;
+        String stackIn_61_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        String[][] var2_array = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -55,40 +66,26 @@ class hga extends vpa {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
+        int var21 = 0;
+        int var22 = 0;
+        int var23 = 0;
+        int var24 = 0;
+        int var25 = 0;
         int var26 = 0;
         String[][] var27 = null;
+        String var28 = null;
         String var29 = null;
         String var30 = null;
-        int stackIn_32_0 = 0;
-        int stackIn_32_1 = 0;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        String stackIn_46_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_31_0 = 0;
-        int stackOut_31_1 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_39_1 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
+        String[][] var31 = null;
+        String var32 = null;
+        String var33 = null;
+        String var34 = null;
+        String var35 = null;
         var26 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             var27 = sra.a((byte) 43, new uia(param1));
-            var2_array = var27;
+            var31 = var27;
             var3 = -1;
             var4 = -1;
             var5 = -1;
@@ -99,237 +96,209 @@ class hga extends vpa {
             var10 = -1;
             var11_int = 0;
             L1: while (true) {
-              L2: {
-                if (var11_int >= var27[0].length) {
-                  break L2;
-                } else {
-                  L3: {
-                    L4: {
-                      var29 = var27[0][var11_int];
-                      var30 = var29.trim();
-                      if (var30.equals("World")) {
-                        break L4;
-                      } else {
-                        L5: {
-                          if (!var30.equals("File Name")) {
-                            break L5;
-                          } else {
-                            var4 = var11_int;
-                            if (var26 == 0) {
-                              break L3;
-                            } else {
-                              break L5;
-                            }
-                          }
-                        }
-                        L6: {
-                          if (var30.equals("Group Name")) {
-                            break L6;
-                          } else {
-                            L7: {
-                              if (!var30.equals("Room Id")) {
-                                break L7;
-                              } else {
-                                var5 = var11_int;
-                                if (var26 == 0) {
-                                  break L3;
-                                } else {
-                                  break L7;
-                                }
-                              }
-                            }
-                            L8: {
-                              if (!var30.equals("Special")) {
-                                break L8;
-                              } else {
-                                var7 = var11_int;
-                                if (var26 == 0) {
-                                  break L3;
-                                } else {
-                                  break L8;
-                                }
-                              }
-                            }
-                            L9: {
-                              if (!var30.equals("Multiplayer ID")) {
-                                break L9;
-                              } else {
-                                var8 = var11_int;
-                                if (var26 == 0) {
-                                  break L3;
-                                } else {
-                                  break L9;
-                                }
-                              }
-                            }
-                            L10: {
-                              if (var30.equals("MemLev")) {
-                                break L10;
-                              } else {
-                                if (var30.equals("Par Time")) {
-                                  var10 = var11_int;
-                                  if (var26 == 0) {
-                                    break L3;
-                                  } else {
-                                    break L10;
-                                  }
-                                } else {
-                                  break L3;
-                                }
-                              }
-                            }
-                            var9 = var11_int;
-                            if (var26 == 0) {
-                              break L3;
-                            } else {
-                              break L6;
-                            }
-                          }
-                        }
-                        var6 = var11_int;
-                        if (var26 == 0) {
-                          break L3;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                    var3 = var11_int;
-                    break L3;
-                  }
-                  var11_int++;
-                  if (var26 == 0) {
-                    continue L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              var11 = new ji(8);
-              var12 = 0;
-              var13 = 1;
-              L11: while (true) {
-                L12: {
-                  L13: {
-                    if (var27.length <= var13) {
-                      break L13;
-                    } else {
-                      var14 = Integer.parseInt(var27[var13][var3]);
-                      if (var26 != 0) {
-                        break L12;
-                      } else {
-                        L14: {
-                          if (null != var11.a((byte) -100, (long)var14)) {
-                            break L14;
-                          } else {
-                            var11.a((long)var14, 109, new vg());
-                            var12++;
-                            break L14;
-                          }
-                        }
-                        var13++;
-                        if (var26 == 0) {
-                          continue L11;
-                        } else {
-                          break L13;
-                        }
-                      }
-                    }
-                  }
-                  cm.field_a = new qg[var12];
-                  rda.field_n = new int[var12];
-                  break L12;
-                }
-                if (param0) {
-                  var13 = 0;
-                  L15: while (true) {
-                    stackOut_31_0 = var13;
-                    stackOut_31_1 = var12;
-                    stackIn_32_0 = stackOut_31_0;
-                    stackIn_32_1 = stackOut_31_1;
-                    L16: while (true) {
-                      L17: {
-                        if (stackIn_32_0 >= stackIn_32_1) {
-                          break L17;
+              if (var11_int >= var27[0].length) {
+                var11 = new ji(8);
+                var12 = 0;
+                var13 = 1;
+                L2: while (true) {
+                  if (var27.length <= var13) {
+                    cm.field_a = new qg[var12];
+                    rda.field_n = new int[var12];
+                    if (param0) {
+                      var13 = 0;
+                      L3: while (true) {
+                        if (var13 >= var12) {
+                          decompiledRegionSelector0 = 1;
+                          break L0;
                         } else {
                           var14 = 0;
-                          if (var26 == 0) {
-                            var15_int = 1;
-                            if (var27.length <= var15_int) {
+                          var15_int = 1;
+                          L4: while (true) {
+                            if (var31.length <= var15_int) {
                               var15 = new g[var14];
                               rda.field_n[var13] = var14;
                               var16 = 0;
                               var17 = 0;
                               var18 = 1;
-                              if (var27.length <= var18) {
-                                cm.field_a[var13] = new qg(var15, var16 != 0);
-                                var13++;
-                                if (var26 == 0) {
-                                  continue L15;
+                              L5: while (true) {
+                                if (var31.length <= var18) {
+                                  cm.field_a[var13] = new qg(var15, var16 != 0);
+                                  var13++;
+                                  continue L3;
                                 } else {
-                                  break L17;
+                                  var19 = -1 + Integer.parseInt(var31[var18][var3]);
+                                  if (var19 == var13) {
+                                    L6: {
+                                      var32 = var31[var18][var5];
+                                      if (-1 <= (var32.length() ^ -1)) {
+                                        stackIn_43_0 = -1;
+                                        break L6;
+                                      } else {
+                                        stackIn_43_0 = Integer.parseInt(var32) - 1;
+                                        break L6;
+                                      }
+                                    }
+                                    L7: {
+                                      var21 = stackIn_43_0;
+                                      var28 = var31[var18][var8];
+                                      var33 = var28;
+                                      if (0 < var33.length()) {
+                                        stackIn_46_0 = Integer.parseInt(var28) - 1;
+                                        break L7;
+                                      } else {
+                                        stackIn_46_0 = -1;
+                                        break L7;
+                                      }
+                                    }
+                                    L8: {
+                                      var22 = stackIn_46_0;
+                                      var34 = var31[var18][var9];
+                                      if ((var34.length() ^ -1) < -1) {
+                                        if (!var34.equalsIgnoreCase("FALSE")) {
+                                          stackIn_52_0 = 1;
+                                          break L8;
+                                        } else {
+                                          stackIn_52_0 = 0;
+                                          break L8;
+                                        }
+                                      } else {
+                                        stackIn_52_0 = 1;
+                                        break L8;
+                                      }
+                                    }
+                                    L9: {
+                                      var23 = stackIn_52_0;
+                                      var35 = var31[var18][var10];
+                                      if (-1 <= (var35.length() ^ -1)) {
+                                        stackIn_55_0 = 0;
+                                        break L9;
+                                      } else {
+                                        stackIn_55_0 = Integer.parseInt(var35);
+                                        break L9;
+                                      }
+                                    }
+                                    var24 = stackIn_55_0;
+                                    incrementValue$0 = var17;
+                                    var17++;
+                                    var15[incrementValue$0] = new g(var31[var18][var6], var31[var18][var4], var21, var22, var23 != 0, var24);
+                                    var25 = var31[var18][var7].equalsIgnoreCase("Tutorial") ? 1 : 0;
+                                    var16 = var25;
+                                    var31[var18][var7].equalsIgnoreCase("Corridor");
+                                    var18++;
+                                    continue L5;
+                                  } else {
+                                    var18++;
+                                    continue L5;
+                                  }
                                 }
-                              } else {
-                                var19 = -1 + Integer.parseInt(var27[var18][var3]);
-                                stackOut_39_0 = var19;
-                                stackOut_39_1 = var13;
-                                stackIn_32_0 = stackOut_39_0;
-                                stackIn_32_1 = stackOut_39_1;
-                                continue L16;
                               }
                             } else {
-                              var16 = Integer.parseInt(var27[var15_int][var3]) + -1;
-                              stackOut_36_0 = var16;
-                              stackOut_36_1 = var13;
-                              stackIn_32_0 = stackOut_36_0;
-                              stackIn_32_1 = stackOut_36_1;
-                              continue L16;
+                              L10: {
+                                var16 = Integer.parseInt(var31[var15_int][var3]) + -1;
+                                if (var16 == var13) {
+                                  var14++;
+                                  break L10;
+                                } else {
+                                  break L10;
+                                }
+                              }
+                              var15_int++;
+                              continue L4;
                             }
-                          } else {
-                            return;
                           }
                         }
                       }
-                      decompiledRegionSelector0 = 1;
+                    } else {
+                      decompiledRegionSelector0 = 0;
                       break L0;
                     }
+                  } else {
+                    L11: {
+                      var14 = Integer.parseInt(var27[var13][var3]);
+                      if (null != var11.a((byte) -100, (long)var14)) {
+                        break L11;
+                      } else {
+                        var11.a((long)var14, 109, new vg());
+                        var12++;
+                        break L11;
+                      }
+                    }
+                    var13++;
+                    continue L2;
                   }
-                } else {
-                  decompiledRegionSelector0 = 0;
-                  break L0;
                 }
+              } else {
+                L12: {
+                  var29 = var27[0][var11_int];
+                  var30 = var29.trim();
+                  if (var30.equals("World")) {
+                    var3 = var11_int;
+                    break L12;
+                  } else {
+                    if (!var30.equals("File Name")) {
+                      if (var30.equals("Group Name")) {
+                        var6 = var11_int;
+                        break L12;
+                      } else {
+                        if (!var30.equals("Room Id")) {
+                          if (!var30.equals("Special")) {
+                            if (!var30.equals("Multiplayer ID")) {
+                              if (var30.equals("MemLev")) {
+                                var9 = var11_int;
+                                break L12;
+                              } else {
+                                if (var30.equals("Par Time")) {
+                                  var10 = var11_int;
+                                  break L12;
+                                } else {
+                                  break L12;
+                                }
+                              }
+                            } else {
+                              var8 = var11_int;
+                              break L12;
+                            }
+                          } else {
+                            var7 = var11_int;
+                            break L12;
+                          }
+                        } else {
+                          var5 = var11_int;
+                          break L12;
+                        }
+                      }
+                    } else {
+                      var4 = var11_int;
+                      break L12;
+                    }
+                  }
+                }
+                var11_int++;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L18: {
+          L13: {
             var2 = decompiledCaughtException;
-            stackOut_43_0 = (RuntimeException) (var2);
-            stackOut_43_1 = new StringBuilder().append("hga.A(").append(param0).append(',');
-            stackIn_45_0 = stackOut_43_0;
-            stackIn_45_1 = stackOut_43_1;
-            stackIn_44_0 = stackOut_43_0;
-            stackIn_44_1 = stackOut_43_1;
+            stackIn_60_0 = (RuntimeException) (var2);
+
+            stackIn_60_1 = new StringBuilder().append("hga.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "null";
-              stackIn_46_0 = stackOut_45_0;
-              stackIn_46_1 = stackOut_45_1;
-              stackIn_46_2 = stackOut_45_2;
-              break L18;
+              stackIn_61_0 = (RuntimeException) ((Object) stackIn_60_0);
+              stackIn_61_1 = (StringBuilder) ((Object) stackIn_60_1);
+              stackIn_61_2 = "null";
+              break L13;
             } else {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "{...}";
-              stackIn_46_0 = stackOut_44_0;
-              stackIn_46_1 = stackOut_44_1;
-              stackIn_46_2 = stackOut_44_2;
-              break L18;
+              stackIn_61_0 = (RuntimeException) ((Object) stackIn_60_0);
+              stackIn_61_1 = (StringBuilder) ((Object) stackIn_60_1);
+              stackIn_61_2 = "{...}";
+              break L13;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_46_0), stackIn_46_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_61_0), stackIn_61_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

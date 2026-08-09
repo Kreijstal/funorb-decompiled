@@ -12,9 +12,15 @@ final class e {
     }
 
     final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int discarded$1 = 0;
-        RuntimeException var9 = null;
+        RuntimeException stackIn_78_0 = null;
+        StringBuilder stackIn_78_1 = null;
+        RuntimeException stackIn_79_0 = null;
+        StringBuilder stackIn_79_1 = null;
+        String stackIn_79_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var9_int = 0;
+        RuntimeException var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -25,23 +31,6 @@ final class e {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        RuntimeException stackIn_77_0 = null;
-        StringBuilder stackIn_77_1 = null;
-        RuntimeException stackIn_78_0 = null;
-        StringBuilder stackIn_78_1 = null;
-        RuntimeException stackIn_79_0 = null;
-        StringBuilder stackIn_79_1 = null;
-        String stackIn_79_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_76_0 = null;
-        StringBuilder stackOut_76_1 = null;
-        RuntimeException stackOut_78_0 = null;
-        StringBuilder stackOut_78_1 = null;
-        String stackOut_78_2 = null;
-        RuntimeException stackOut_77_0 = null;
-        StringBuilder stackOut_77_1 = null;
-        String stackOut_77_2 = null;
         var19 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -70,7 +59,7 @@ final class e {
                     if (param7 == -26361) {
                       break L3;
                     } else {
-                      discarded$1 = e.a(64, -25, 3);
+                      e.a(64, -25, 3);
                       break L3;
                     }
                   }
@@ -175,7 +164,7 @@ final class e {
                           } else {
                             L12: {
                               var17 = var9_int >> -1065438224;
-                              if (var17 >= ig.field_g) {
+                              if ((var17 ^ -1) <= (ig.field_g ^ -1)) {
                                 break L12;
                               } else {
                                 var18 = (var10 >> 1217462736) - (var9_int >> 285256432);
@@ -321,27 +310,19 @@ final class e {
           decompiledCaughtException = decompiledCaughtParameter0;
           L19: {
             var9 = decompiledCaughtException;
-            stackOut_76_0 = (RuntimeException) (var9);
-            stackOut_76_1 = new StringBuilder().append("e.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_78_0 = stackOut_76_0;
-            stackIn_78_1 = stackOut_76_1;
-            stackIn_77_0 = stackOut_76_0;
-            stackIn_77_1 = stackOut_76_1;
+            stackIn_78_0 = (RuntimeException) (var9);
+
+            stackIn_78_1 = new StringBuilder().append("e.B(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_78_0 = (RuntimeException) ((Object) stackIn_78_0);
-              stackOut_78_1 = (StringBuilder) ((Object) stackIn_78_1);
-              stackOut_78_2 = "null";
-              stackIn_79_0 = stackOut_78_0;
-              stackIn_79_1 = stackOut_78_1;
-              stackIn_79_2 = stackOut_78_2;
+              stackIn_79_0 = (RuntimeException) ((Object) stackIn_78_0);
+              stackIn_79_1 = (StringBuilder) ((Object) stackIn_78_1);
+              stackIn_79_2 = "null";
               break L19;
             } else {
-              stackOut_77_0 = (RuntimeException) ((Object) stackIn_77_0);
-              stackOut_77_1 = (StringBuilder) ((Object) stackIn_77_1);
-              stackOut_77_2 = "{...}";
-              stackIn_79_0 = stackOut_77_0;
-              stackIn_79_1 = stackOut_77_1;
-              stackIn_79_2 = stackOut_77_2;
+              stackIn_79_0 = (RuntimeException) ((Object) stackIn_78_0);
+              stackIn_79_1 = (StringBuilder) ((Object) stackIn_78_1);
+              stackIn_79_2 = "{...}";
               break L19;
             }
           }
@@ -371,14 +352,10 @@ final class e {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         int stackIn_13_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
         var4 = TrackController.field_F ? 1 : 0;
         if (param1 == -1932340400) {
           var3 = param2;
@@ -388,12 +365,10 @@ final class e {
             } else {
               L0: {
                 if ((field_a[param0] & 8) == 0) {
-                  stackOut_12_0 = 16384;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = 16384;
                   break L0;
                 } else {
-                  stackOut_11_0 = 2048;
-                  stackIn_13_0 = stackOut_11_0;
+                  stackIn_13_0 = 2048;
                   break L0;
                 }
               }
@@ -409,12 +384,10 @@ final class e {
             } else {
               L1: {
                 if ((16 & field_a[param0]) != 0) {
-                  stackOut_18_0 = 4096;
-                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_0 = 4096;
                   break L1;
                 } else {
-                  stackOut_17_0 = 2048;
-                  stackIn_19_0 = stackOut_17_0;
+                  stackIn_19_0 = 2048;
                   break L1;
                 }
               }

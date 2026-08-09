@@ -14,7 +14,6 @@ final class rj {
     }
 
     public static void b(int param0) {
-        boolean discarded$0 = false;
         field_f = null;
         field_d = null;
         field_a = null;
@@ -23,26 +22,16 @@ final class rj {
         field_b = null;
         if (param0 != 0) {
             int[] var2 = (int[]) null;
-            discarded$0 = rj.a(26, (int[]) null);
+            rj.a(26, (int[]) null);
         }
     }
 
     final static boolean a(int param0, int[] param1) {
-        RuntimeException var2 = null;
-        long var2_long = 0L;
-        ra var4_ref_ra = null;
-        int var4 = 0;
-        int var5_int = 0;
-        ra var5 = null;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_4_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_26_0 = 0;
         int stackIn_37_0 = 0;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         RuntimeException stackIn_41_0 = null;
@@ -50,25 +39,19 @@ final class rj {
         String stackIn_41_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_36_0 = 0;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
+        ra var4_ref_ra = null;
+        int var4 = 0;
+        int var5_int = 0;
+        ra var5 = null;
+        int var6 = 0;
+        int var7 = 0;
         var7 = Terraphoenix.field_V;
         try {
           L0: {
             if (od.field_g != mh.field_a) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -93,8 +76,7 @@ final class rj {
                             wf.field_n = uc.field_r;
                             uc.field_r = qk.field_b;
                             qk.field_b = var4_ref_ra.field_n;
-                            stackOut_14_0 = 1;
-                            stackIn_15_0 = stackOut_14_0;
+                            stackIn_15_0 = 1;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           } else {
@@ -132,16 +114,14 @@ final class rj {
                       qh.field_d = param1[fg.field_d];
                       break L5;
                     } else {
-                      stackOut_20_0 = 0;
-                      stackIn_21_0 = stackOut_20_0;
+                      stackIn_21_0 = 0;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
                   }
                 }
                 if (!cm.b((byte) -43)) {
-                  stackOut_25_0 = 0;
-                  stackIn_26_0 = stackOut_25_0;
+                  stackIn_26_0 = 0;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
@@ -151,8 +131,7 @@ final class rj {
                     uc.field_r = qk.field_b;
                     qk.field_b = fg.field_d;
                     fg.field_d = -1;
-                    stackOut_36_0 = 1;
-                    stackIn_37_0 = stackOut_36_0;
+                    stackIn_37_0 = 1;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
@@ -192,27 +171,19 @@ final class rj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_38_0 = (RuntimeException) (var2);
-            stackOut_38_1 = new StringBuilder().append("rj.D(").append(param0).append(',');
-            stackIn_40_0 = stackOut_38_0;
-            stackIn_40_1 = stackOut_38_1;
-            stackIn_39_0 = stackOut_38_0;
-            stackIn_39_1 = stackOut_38_1;
+            stackIn_40_0 = (RuntimeException) (var2);
+
+            stackIn_40_1 = new StringBuilder().append("rj.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "null";
-              stackIn_41_0 = stackOut_40_0;
-              stackIn_41_1 = stackOut_40_1;
-              stackIn_41_2 = stackOut_40_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "null";
               break L8;
             } else {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "{...}";
-              stackIn_41_0 = stackOut_39_0;
-              stackIn_41_1 = stackOut_39_1;
-              stackIn_41_2 = stackOut_39_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "{...}";
               break L8;
             }
           }
@@ -238,7 +209,8 @@ final class rj {
     }
 
     final static void a(int param0) {
-        boolean discarded$1 = false;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -253,8 +225,6 @@ final class rj {
         uc var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = Terraphoenix.field_V;
         try {
           L0: {
@@ -266,7 +236,7 @@ final class rj {
                 break L1;
               } else {
                 var9 = (int[]) null;
-                discarded$1 = rj.a(-113, (int[]) null);
+                rj.a(-113, (int[]) null);
                 break L1;
               }
             }

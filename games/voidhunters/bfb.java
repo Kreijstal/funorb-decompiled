@@ -40,24 +40,24 @@ final class bfb {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
-        int incrementValue$24 = 0;
-        int incrementValue$25 = 0;
-        int incrementValue$26 = 0;
-        int incrementValue$27 = 0;
-        int incrementValue$28 = 0;
-        int incrementValue$29 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int var6;
+        int var7;
+        int var8;
         L0: {
           if (!field_d) {
             break L0;
@@ -97,29 +97,29 @@ final class bfb {
                         break L2;
                       } else {
                         var8 = param0[param1];
-                        incrementValue$15 = param1;
+                        incrementValue$0 = param1;
                         param1++;
-                        param0[incrementValue$15] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
+                        param0[incrementValue$0] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                         continue L4;
                       }
                     }
                   } else {
                     var8 = param0[param1];
-                    incrementValue$16 = param1;
+                    incrementValue$1 = param1;
                     param1++;
-                    param0[incrementValue$16] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
+                    param0[incrementValue$1] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                     var8 = param0[param1];
-                    incrementValue$17 = param1;
+                    incrementValue$2 = param1;
                     param1++;
-                    param0[incrementValue$17] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
+                    param0[incrementValue$2] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                     var8 = param0[param1];
-                    incrementValue$18 = param1;
+                    incrementValue$3 = param1;
                     param1++;
-                    param0[incrementValue$18] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
+                    param0[incrementValue$3] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                     var8 = param0[param1];
-                    incrementValue$19 = param1;
+                    incrementValue$4 = param1;
                     param1++;
-                    param0[incrementValue$19] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
+                    param0[incrementValue$4] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                     continue L3;
                   }
                 }
@@ -133,25 +133,25 @@ final class bfb {
                       if (param3 < 0) {
                         break L2;
                       } else {
-                        incrementValue$20 = param1;
+                        incrementValue$5 = param1;
                         param1++;
-                        param0[incrementValue$20] = param0[param1];
+                        param0[incrementValue$5] = param0[param1];
                         continue L6;
                       }
                     }
                   } else {
-                    incrementValue$21 = param1;
+                    incrementValue$6 = param1;
                     param1++;
-                    param0[incrementValue$21] = param0[param1];
-                    incrementValue$22 = param1;
+                    param0[incrementValue$6] = param0[param1];
+                    incrementValue$7 = param1;
                     param1++;
-                    param0[incrementValue$22] = param0[param1];
-                    incrementValue$23 = param1;
+                    param0[incrementValue$7] = param0[param1];
+                    incrementValue$8 = param1;
                     param1++;
-                    param0[incrementValue$23] = param0[param1];
-                    incrementValue$24 = param1;
+                    param0[incrementValue$8] = param0[param1];
+                    incrementValue$9 = param1;
                     param1++;
-                    param0[incrementValue$24] = param0[param1];
+                    param0[incrementValue$9] = param0[param1];
                     continue L5;
                   }
                 }
@@ -168,25 +168,25 @@ final class bfb {
                   if (param3 < 0) {
                     return;
                   } else {
-                    incrementValue$25 = param1;
+                    incrementValue$10 = param1;
                     param1++;
-                    param0[incrementValue$25] = param2;
+                    param0[incrementValue$10] = param2;
                     continue L8;
                   }
                 }
               } else {
-                incrementValue$26 = param1;
+                incrementValue$11 = param1;
                 param1++;
-                param0[incrementValue$26] = param2;
-                incrementValue$27 = param1;
+                param0[incrementValue$11] = param2;
+                incrementValue$12 = param1;
                 param1++;
-                param0[incrementValue$27] = param2;
-                incrementValue$28 = param1;
+                param0[incrementValue$12] = param2;
+                incrementValue$13 = param1;
                 param1++;
-                param0[incrementValue$28] = param2;
-                incrementValue$29 = param1;
+                param0[incrementValue$13] = param2;
+                incrementValue$14 = param1;
                 param1++;
-                param0[incrementValue$29] = param2;
+                param0[incrementValue$14] = param2;
                 continue L7;
               }
             }
@@ -198,8 +198,6 @@ final class bfb {
 
     final static void a(int param0, int param1, int param2) {
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
         L0: {
           L1: {
             if (param0 < 0) {
@@ -218,8 +216,7 @@ final class bfb {
                       break L1;
                     } else {
                       if (param2 <= field_a) {
-                        stackOut_7_0 = 0;
-                        stackIn_8_0 = stackOut_7_0;
+                        stackIn_8_0 = 0;
                         break L0;
                       } else {
                         break L1;
@@ -230,17 +227,16 @@ final class bfb {
               }
             }
           }
-          stackOut_6_0 = 1;
-          stackIn_8_0 = stackOut_6_0;
+          stackIn_8_0 = 1;
           break L0;
         }
         field_d = stackIn_8_0 != 0;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var7;
+        int var8;
+        int var9;
         L0: {
           var7 = 0;
           if (param1 == param0) {

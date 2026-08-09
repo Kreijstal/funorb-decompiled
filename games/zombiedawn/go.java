@@ -15,20 +15,15 @@ final class go implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4, java.awt.Frame param5) {
-        int[] discarded$5 = null;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        int discarded$8 = 0;
-        int discarded$9 = 0;
-        com.ms.awt.WComponentPeer var7 = null;
-        int var8 = 0;
+        com.ms.awt.WComponentPeer var7;
+        int var8;
         if (param4 < 64) {
-          discarded$5 = this.a(-19);
+          this.a(-19);
           param5.setVisible(true);
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
-          discarded$6 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$7 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param5), 17);
           this.field_a.setDisplayMode(param1, param3, param0, param2, 0);
           param5.setBounds(0, 0, param1, param3);
@@ -39,8 +34,8 @@ final class go implements com.ms.directX.IEnumModesCallback {
           param5.setVisible(true);
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
-          discarded$8 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$9 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param5), 17);
           this.field_a.setDisplayMode(param1, param3, param0, param2, 0);
           param5.setBounds(0, 0, param1, param3);
@@ -56,8 +51,8 @@ final class go implements com.ms.directX.IEnumModesCallback {
     }
 
     final int[] a(int param0) {
-        int[] var2 = null;
-        int[] var3 = null;
+        int[] var2;
+        int[] var3;
         this.field_a.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_c = new int[field_b];
         field_b = 0;

@@ -36,22 +36,12 @@ final class se extends jc {
     final void a(int param0, int param1, int param2, int param3, fe param4, int param5) {
         ma var7 = null;
         RuntimeException var7_ref = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
@@ -85,27 +75,19 @@ final class se extends jc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var7_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var7_ref);
-            stackOut_8_1 = new StringBuilder().append("se.LA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var7_ref);
+
+            stackIn_10_1 = new StringBuilder().append("se.LA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }
@@ -114,8 +96,13 @@ final class se extends jc {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -124,19 +111,6 @@ final class se extends jc {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
         var13 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -152,48 +126,40 @@ final class se extends jc {
             }
             L2: {
               if (param0 > eh.field_a) {
-                stackOut_5_0 = param0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = param0;
                 break L2;
               } else {
-                stackOut_4_0 = eh.field_a;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = eh.field_a;
                 break L2;
               }
             }
             L3: {
               var7 = stackIn_6_0;
               if (eh.field_d >= param2) {
-                stackOut_8_0 = eh.field_d;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = eh.field_d;
                 break L3;
               } else {
-                stackOut_7_0 = param2;
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = param2;
                 break L3;
               }
             }
             L4: {
               var8 = stackIn_9_0;
               if (var5_int >= eh.field_k) {
-                stackOut_11_0 = eh.field_k;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = eh.field_k;
                 break L4;
               } else {
-                stackOut_10_0 = var5_int;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = var5_int;
                 break L4;
               }
             }
             L5: {
               var9 = stackIn_12_0;
               if (eh.field_e > var6) {
-                stackOut_14_0 = var6;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = var6;
                 break L5;
               } else {
-                stackOut_13_0 = eh.field_e;
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = eh.field_e;
                 break L5;
               }
             }

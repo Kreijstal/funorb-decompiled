@@ -8,22 +8,21 @@ final class m extends ji {
     static r field_z;
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
-        boolean discarded$1 = false;
-        RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
         int[] var9_ref_int__ = null;
-        int var10 = 0;
+        int var9 = 0;
         int[] var10_ref_int__ = null;
-        int[] var11 = null;
+        int var10 = 0;
         int var11_int = 0;
-        int[] var12 = null;
+        int[] var11 = null;
         int var12_int = 0;
+        int[] var12 = null;
         int var13 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         var13 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -35,7 +34,7 @@ final class m extends ji {
               if (param2 == -78) {
                 break L1;
               } else {
-                discarded$1 = m.h(-101);
+                m.h(-101);
                 break L1;
               }
             }
@@ -91,24 +90,23 @@ final class m extends ji {
     }
 
     public static void g(int param0) {
-        co discarded$0 = null;
         field_y = null;
         field_z = null;
         if (param0 != 2) {
             byte[] var2 = (byte[]) null;
-            discarded$0 = m.a((byte[]) null, 85);
+            m.a((byte[]) null, 85);
         }
     }
 
     final int[] c(int param0, int param1) {
-        int[] var3 = null;
-        int[][] var4 = null;
-        int[] var5 = null;
-        int[] var6 = null;
-        int[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int[] var10 = null;
+        int[] var3;
+        int[][] var4;
+        int[] var5;
+        int[] var6;
+        int[] var7;
+        int var8;
+        int var9;
+        int[] var10;
         var9 = Vertigo2.field_L ? 1 : 0;
         if (param1 > 91) {
           var10 = this.field_x.a(param0, (byte) -45);
@@ -140,23 +138,12 @@ final class m extends ji {
         co var2 = null;
         RuntimeException var2_ref = null;
         co stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        co stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (param0 != null) {
@@ -170,8 +157,7 @@ final class m extends ji {
               }
               var2 = new co(param0, ca.field_a, pc.field_a, mh.field_c, vi.field_w, se.field_y);
               la.a((byte) 113);
-              stackOut_5_0 = (co) (var2);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = (co) (var2);
               break L0;
             } else {
               return null;
@@ -181,27 +167,19 @@ final class m extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2_ref);
-            stackOut_7_1 = new StringBuilder().append("m.B(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2_ref);
+
+            stackIn_9_1 = new StringBuilder().append("m.B(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -211,7 +189,7 @@ final class m extends ji {
     }
 
     final static boolean h(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = 23 % ((-79 - param0) / 37);
         if (sl.b(-24)) {
           if ((8 & rg.field_f) != 0) {

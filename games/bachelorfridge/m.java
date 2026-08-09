@@ -20,12 +20,11 @@ final class m {
     }
 
     public static void a(byte param0) {
-        int discarded$0 = 0;
         field_a = null;
         field_c = null;
         field_b = null;
         if (param0 < 67) {
-            discarded$0 = m.a(65, (byte) -106, 41);
+            m.a(65, (byte) -106, 41);
         }
     }
 

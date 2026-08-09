@@ -21,49 +21,46 @@ final class kw {
     }
 
     final static int c(byte param0) {
-        if (!ju.field_T) {
-          if (bo.field_Cb.a(false, "stadium")) {
-            eb.field_i = new ot[4];
-            ju.field_T = true;
-            eb.field_i[0] = (ot) ((Object) bg.a("stadium", bo.field_Cb, (byte) 74, "top_left_seats"));
-            eb.field_i[1] = (ot) ((Object) bg.a("stadium", bo.field_Cb, (byte) 86, "top_right_seats"));
-            eb.field_i[2] = (ot) ((Object) bg.a("stadium", bo.field_Cb, (byte) 46, "bot_left_seats"));
-            eb.field_i[3] = (ot) ((Object) bg.a("stadium", bo.field_Cb, (byte) 115, "bot_right_seats"));
-            ph.field_e = new kg[4][3];
-            ph.field_e[0][0] = fw.a(bo.field_Cb, "stadium", true, "left_seats_1");
-            ph.field_e[0][1] = fw.a(bo.field_Cb, "stadium", true, "left_seats_2");
-            ph.field_e[0][2] = fw.a(bo.field_Cb, "stadium", true, "left_seats_3");
-            ge.field_k = bg.a("stadium", bo.field_Cb, (byte) 68, "ad_top");
-            da.field_m = bg.a("stadium", bo.field_Cb, (byte) 83, "ad_right");
-            hn.field_f = bg.a("stadium", bo.field_Cb, (byte) 108, "ad_left");
-            ph.field_e[1][0] = fw.a(bo.field_Cb, "stadium", true, "top_seats_1");
-            ph.field_e[1][1] = fw.a(bo.field_Cb, "stadium", true, "top_seats_2");
-            ph.field_e[1][2] = fw.a(bo.field_Cb, "stadium", true, "top_seats_3");
-            ph.field_e[3][0] = fw.a(bo.field_Cb, "stadium", true, "bot_seats_1");
-            if (param0 == 28) {
-              ph.field_e[3][1] = fw.a(bo.field_Cb, "stadium", true, "bot_seats_2");
-              ph.field_e[3][2] = fw.a(bo.field_Cb, "stadium", true, "bot_seats_3");
-              ph.field_e[2][0] = fw.a(bo.field_Cb, "stadium", true, "right_seats_1");
-              ph.field_e[2][1] = fw.a(bo.field_Cb, "stadium", true, "right_seats_2");
-              ph.field_e[2][2] = fw.a(bo.field_Cb, "stadium", true, "right_seats_3");
-              bf.field_s = new kg[3][];
-              bf.field_s[0] = jo.a(bo.field_Cb, ek.b((int) param0, 17349), "stadium", "top_seats_1_mask");
-              bf.field_s[1] = jo.a(bo.field_Cb, 17369, "stadium", "top_seats_2_mask");
-              bf.field_s[2] = jo.a(bo.field_Cb, 17369, "stadium", "top_seats_3_mask");
-              ps.field_c = new kg[3][];
-              ps.field_c[0] = jo.a(bo.field_Cb, 17369, "stadium", "bot_seats_1_mask");
-              ps.field_c[1] = jo.a(bo.field_Cb, 17369, "stadium", "bot_seats_2_mask");
-              ps.field_c[2] = jo.a(bo.field_Cb, 17369, "stadium", "bot_seats_3_mask");
-              return -1;
-            } else {
-              return -11;
-            }
-          } else {
-            return bo.field_Cb.a("stadium", -16248);
-          }
-        } else {
-          return -1;
+        if (ju.field_T) {
+            return -1;
         }
+        if (!bo.field_Cb.a(false, "stadium")) {
+            return bo.field_Cb.a("stadium", -16248);
+        }
+        eb.field_i = new ot[4];
+        ju.field_T = true;
+        eb.field_i[0] = (ot) ((Object) bg.a("stadium", bo.field_Cb, (byte) 74, "top_left_seats"));
+        eb.field_i[1] = (ot) ((Object) bg.a("stadium", bo.field_Cb, (byte) 86, "top_right_seats"));
+        eb.field_i[2] = (ot) ((Object) bg.a("stadium", bo.field_Cb, (byte) 46, "bot_left_seats"));
+        eb.field_i[3] = (ot) ((Object) bg.a("stadium", bo.field_Cb, (byte) 115, "bot_right_seats"));
+        ph.field_e = new kg[4][3];
+        ph.field_e[0][0] = fw.a(bo.field_Cb, "stadium", true, "left_seats_1");
+        ph.field_e[0][1] = fw.a(bo.field_Cb, "stadium", true, "left_seats_2");
+        ph.field_e[0][2] = fw.a(bo.field_Cb, "stadium", true, "left_seats_3");
+        ge.field_k = bg.a("stadium", bo.field_Cb, (byte) 68, "ad_top");
+        da.field_m = bg.a("stadium", bo.field_Cb, (byte) 83, "ad_right");
+        hn.field_f = bg.a("stadium", bo.field_Cb, (byte) 108, "ad_left");
+        ph.field_e[1][0] = fw.a(bo.field_Cb, "stadium", true, "top_seats_1");
+        ph.field_e[1][1] = fw.a(bo.field_Cb, "stadium", true, "top_seats_2");
+        ph.field_e[1][2] = fw.a(bo.field_Cb, "stadium", true, "top_seats_3");
+        ph.field_e[3][0] = fw.a(bo.field_Cb, "stadium", true, "bot_seats_1");
+        if (param0 != 28) {
+            return -11;
+        }
+        ph.field_e[3][1] = fw.a(bo.field_Cb, "stadium", true, "bot_seats_2");
+        ph.field_e[3][2] = fw.a(bo.field_Cb, "stadium", true, "bot_seats_3");
+        ph.field_e[2][0] = fw.a(bo.field_Cb, "stadium", true, "right_seats_1");
+        ph.field_e[2][1] = fw.a(bo.field_Cb, "stadium", true, "right_seats_2");
+        ph.field_e[2][2] = fw.a(bo.field_Cb, "stadium", true, "right_seats_3");
+        bf.field_s = new kg[3][];
+        bf.field_s[0] = jo.a(bo.field_Cb, ek.b((int) param0, 17349), "stadium", "top_seats_1_mask");
+        bf.field_s[1] = jo.a(bo.field_Cb, 17369, "stadium", "top_seats_2_mask");
+        bf.field_s[2] = jo.a(bo.field_Cb, 17369, "stadium", "top_seats_3_mask");
+        ps.field_c = new kg[3][];
+        ps.field_c[0] = jo.a(bo.field_Cb, 17369, "stadium", "bot_seats_1_mask");
+        ps.field_c[1] = jo.a(bo.field_Cb, 17369, "stadium", "bot_seats_2_mask");
+        ps.field_c[2] = jo.a(bo.field_Cb, 17369, "stadium", "bot_seats_3_mask");
+        return -1;
     }
 
     final void a(boolean param0, byte param1) {
@@ -82,9 +79,8 @@ final class kw {
     }
 
     final boolean a(byte param0) {
-        int discarded$0 = 0;
         if (param0 != -80) {
-            discarded$0 = kw.c((byte) -18);
+            kw.c((byte) -18);
             return this.field_j;
         }
         return this.field_j;
@@ -133,15 +129,6 @@ final class kw {
     }
 
     final static void b(boolean param0, byte param1) {
-        wu discarded$12 = null;
-        wu discarded$13 = null;
-        wu discarded$14 = null;
-        wu discarded$15 = null;
-        wu discarded$16 = null;
-        wu discarded$17 = null;
-        int var2 = 0;
-        Object var2_ref = null;
-        int var3 = 0;
         int stackIn_10_0 = 0;
         Object stackIn_20_0 = null;
         int stackIn_26_0 = 0;
@@ -160,42 +147,9 @@ final class kw {
         int stackIn_169_0 = 0;
         int stackIn_182_0 = 0;
         int stackIn_195_0 = 0;
-        java.awt.Canvas stackOut_125_0 = null;
-        vq stackOut_124_0 = null;
-        int stackOut_132_0 = 0;
-        int stackOut_133_0 = 0;
-        java.awt.Canvas stackOut_103_0 = null;
-        vq stackOut_102_0 = null;
-        int stackOut_110_0 = 0;
-        int stackOut_111_0 = 0;
-        int stackOut_193_0 = 0;
-        int stackOut_194_0 = 0;
-        int stackOut_180_0 = 0;
-        int stackOut_181_0 = 0;
-        java.awt.Canvas stackOut_162_0 = null;
-        vq stackOut_161_0 = null;
-        int stackOut_167_0 = 0;
-        int stackOut_168_0 = 0;
-        java.awt.Canvas stackOut_145_0 = null;
-        vq stackOut_144_0 = null;
-        int stackOut_150_0 = 0;
-        int stackOut_151_0 = 0;
-        int stackOut_86_0 = 0;
-        int stackOut_87_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_58_0 = 0;
-        java.awt.Canvas stackOut_68_0 = null;
-        vq stackOut_67_0 = null;
-        int stackOut_73_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_9_0 = 0;
-        java.awt.Canvas stackOut_19_0 = null;
-        vq stackOut_18_0 = null;
-        int stackOut_24_0 = 0;
-        int stackOut_25_0 = 0;
+        Object var2_ref;
+        int var2;
+        int var3;
         var3 = Kickabout.field_G;
         if (qo.c((byte) -42)) {
           L0: {
@@ -227,17 +181,15 @@ final class kw {
                       wt.field_x = Math.max(0, Math.min(639, wt.field_x));
                       us.field_j = Math.max(0, Math.min(479, us.field_j));
                       if (e.field_m == null) {
-                        stackOut_125_0 = ic.field_d;
-                        stackIn_126_0 = stackOut_125_0;
+                        stackIn_126_0 = ic.field_d;
                         break L3;
                       } else {
-                        stackOut_124_0 = e.field_m;
-                        stackIn_126_0 = stackOut_124_0;
+                        stackIn_126_0 = e.field_m;
                         break L3;
                       }
                     }
                     var2_ref = stackIn_126_0;
-                    discarded$12 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
+                    oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                     break L1;
                   }
                 }
@@ -261,14 +213,12 @@ final class kw {
                       if (1 != vd.field_c) {
                         break L6;
                       } else {
-                        stackOut_132_0 = 1;
-                        stackIn_134_0 = stackOut_132_0;
+                        stackIn_134_0 = 1;
                         break L5;
                       }
                     }
                   }
-                  stackOut_133_0 = 0;
-                  stackIn_134_0 = stackOut_133_0;
+                  stackIn_134_0 = 0;
                   break L5;
                 }
                 L7: {
@@ -328,17 +278,15 @@ final class kw {
                     wt.field_x = Math.max(0, Math.min(639, wt.field_x));
                     us.field_j = Math.max(0, Math.min(479, us.field_j));
                     if (e.field_m == null) {
-                      stackOut_103_0 = ic.field_d;
-                      stackIn_104_0 = stackOut_103_0;
+                      stackIn_104_0 = ic.field_d;
                       break L11;
                     } else {
-                      stackOut_102_0 = e.field_m;
-                      stackIn_104_0 = stackOut_102_0;
+                      stackIn_104_0 = e.field_m;
                       break L11;
                     }
                   }
                   var2_ref = stackIn_104_0;
-                  discarded$13 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
+                  oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                   break L9;
                 }
               }
@@ -362,14 +310,12 @@ final class kw {
                     if (1 != vd.field_c) {
                       break L14;
                     } else {
-                      stackOut_110_0 = 1;
-                      stackIn_112_0 = stackOut_110_0;
+                      stackIn_112_0 = 1;
                       break L13;
                     }
                   }
                 }
-                stackOut_111_0 = 0;
-                stackIn_112_0 = stackOut_111_0;
+                stackIn_112_0 = 0;
                 break L13;
               }
               L15: {
@@ -422,14 +368,12 @@ final class kw {
                       if (1 != vd.field_c) {
                         break L19;
                       } else {
-                        stackOut_193_0 = 1;
-                        stackIn_195_0 = stackOut_193_0;
+                        stackIn_195_0 = 1;
                         break L18;
                       }
                     }
                   }
-                  stackOut_194_0 = 0;
-                  stackIn_195_0 = stackOut_194_0;
+                  stackIn_195_0 = 0;
                   break L18;
                 }
                 var2 = stackIn_195_0;
@@ -502,14 +446,12 @@ final class kw {
                           if (1 != vd.field_c) {
                             break L25;
                           } else {
-                            stackOut_180_0 = 1;
-                            stackIn_182_0 = stackOut_180_0;
+                            stackIn_182_0 = 1;
                             break L24;
                           }
                         }
                       }
-                      stackOut_181_0 = 0;
-                      stackIn_182_0 = stackOut_181_0;
+                      stackIn_182_0 = 0;
                       break L24;
                     }
                     L26: {
@@ -545,18 +487,16 @@ final class kw {
                       wt.field_x = Math.max(0, Math.min(639, wt.field_x));
                       us.field_j = Math.max(0, Math.min(479, us.field_j));
                       if (e.field_m == null) {
-                        stackOut_162_0 = ic.field_d;
-                        stackIn_163_0 = stackOut_162_0;
+                        stackIn_163_0 = ic.field_d;
                         break L28;
                       } else {
-                        stackOut_161_0 = e.field_m;
-                        stackIn_163_0 = stackOut_161_0;
+                        stackIn_163_0 = e.field_m;
                         break L28;
                       }
                     }
                     L29: {
                       var2_ref = stackIn_163_0;
-                      discarded$14 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
+                      oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                       if (param1 < -99) {
                         break L29;
                       } else {
@@ -576,14 +516,12 @@ final class kw {
                           if (1 != vd.field_c) {
                             break L31;
                           } else {
-                            stackOut_167_0 = 1;
-                            stackIn_169_0 = stackOut_167_0;
+                            stackIn_169_0 = 1;
                             break L30;
                           }
                         }
                       }
-                      stackOut_168_0 = 0;
-                      stackIn_169_0 = stackOut_168_0;
+                      stackIn_169_0 = 0;
                       break L30;
                     }
                     L32: {
@@ -620,18 +558,16 @@ final class kw {
                     wt.field_x = Math.max(0, Math.min(639, wt.field_x));
                     us.field_j = Math.max(0, Math.min(479, us.field_j));
                     if (e.field_m == null) {
-                      stackOut_145_0 = ic.field_d;
-                      stackIn_146_0 = stackOut_145_0;
+                      stackIn_146_0 = ic.field_d;
                       break L34;
                     } else {
-                      stackOut_144_0 = e.field_m;
-                      stackIn_146_0 = stackOut_144_0;
+                      stackIn_146_0 = e.field_m;
                       break L34;
                     }
                   }
                   L35: {
                     var2_ref = stackIn_146_0;
-                    discarded$15 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
+                    oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                     if (param1 < -99) {
                       break L35;
                     } else {
@@ -651,14 +587,12 @@ final class kw {
                         if (1 != vd.field_c) {
                           break L37;
                         } else {
-                          stackOut_150_0 = 1;
-                          stackIn_152_0 = stackOut_150_0;
+                          stackIn_152_0 = 1;
                           break L36;
                         }
                       }
                     }
-                    stackOut_151_0 = 0;
-                    stackIn_152_0 = stackOut_151_0;
+                    stackIn_152_0 = 0;
                     break L36;
                   }
                   L38: {
@@ -714,14 +648,12 @@ final class kw {
                     if (1 != vd.field_c) {
                       break L42;
                     } else {
-                      stackOut_86_0 = 1;
-                      stackIn_88_0 = stackOut_86_0;
+                      stackIn_88_0 = 1;
                       break L41;
                     }
                   }
                 }
-                stackOut_87_0 = 0;
-                stackIn_88_0 = stackOut_87_0;
+                stackIn_88_0 = 0;
                 break L41;
               }
               L43: {
@@ -778,14 +710,12 @@ final class kw {
                           if (1 != vd.field_c) {
                             break L48;
                           } else {
-                            stackOut_57_0 = 1;
-                            stackIn_59_0 = stackOut_57_0;
+                            stackIn_59_0 = 1;
                             break L47;
                           }
                         }
                       }
-                      stackOut_58_0 = 0;
-                      stackIn_59_0 = stackOut_58_0;
+                      stackIn_59_0 = 0;
                       break L47;
                     }
                     L49: {
@@ -823,18 +753,16 @@ final class kw {
                 wt.field_x = Math.max(0, Math.min(639, wt.field_x));
                 us.field_j = Math.max(0, Math.min(479, us.field_j));
                 if (e.field_m == null) {
-                  stackOut_68_0 = ic.field_d;
-                  stackIn_69_0 = stackOut_68_0;
+                  stackIn_69_0 = ic.field_d;
                   break L51;
                 } else {
-                  stackOut_67_0 = e.field_m;
-                  stackIn_69_0 = stackOut_67_0;
+                  stackIn_69_0 = e.field_m;
                   break L51;
                 }
               }
               L52: {
                 var2_ref = stackIn_69_0;
-                discarded$16 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
+                oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                 if (param1 < -99) {
                   break L52;
                 } else {
@@ -854,14 +782,12 @@ final class kw {
                     if (1 != vd.field_c) {
                       break L54;
                     } else {
-                      stackOut_73_0 = 1;
-                      stackIn_75_0 = stackOut_73_0;
+                      stackIn_75_0 = 1;
                       break L53;
                     }
                   }
                 }
-                stackOut_74_0 = 0;
-                stackIn_75_0 = stackOut_74_0;
+                stackIn_75_0 = 0;
                 break L53;
               }
               L55: {
@@ -916,14 +842,12 @@ final class kw {
                   if (1 != vd.field_c) {
                     break L59;
                   } else {
-                    stackOut_37_0 = 1;
-                    stackIn_39_0 = stackOut_37_0;
+                    stackIn_39_0 = 1;
                     break L58;
                   }
                 }
               }
-              stackOut_38_0 = 0;
-              stackIn_39_0 = stackOut_38_0;
+              stackIn_39_0 = 0;
               break L58;
             }
             L60: {
@@ -980,14 +904,12 @@ final class kw {
                         if (1 != vd.field_c) {
                           break L65;
                         } else {
-                          stackOut_8_0 = 1;
-                          stackIn_10_0 = stackOut_8_0;
+                          stackIn_10_0 = 1;
                           break L64;
                         }
                       }
                     }
-                    stackOut_9_0 = 0;
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = 0;
                     break L64;
                   }
                   L66: {
@@ -1025,18 +947,16 @@ final class kw {
               wt.field_x = Math.max(0, Math.min(639, wt.field_x));
               us.field_j = Math.max(0, Math.min(479, us.field_j));
               if (e.field_m == null) {
-                stackOut_19_0 = ic.field_d;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = ic.field_d;
                 break L68;
               } else {
-                stackOut_18_0 = e.field_m;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = e.field_m;
                 break L68;
               }
             }
             L69: {
               var2_ref = stackIn_20_0;
-              discarded$17 = oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
+              oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
               if (param1 < -99) {
                 break L69;
               } else {
@@ -1056,14 +976,12 @@ final class kw {
                   if (1 != vd.field_c) {
                     break L71;
                   } else {
-                    stackOut_24_0 = 1;
-                    stackIn_26_0 = stackOut_24_0;
+                    stackIn_26_0 = 1;
                     break L70;
                   }
                 }
               }
-              stackOut_25_0 = 0;
-              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_0 = 0;
               break L70;
             }
             L72: {

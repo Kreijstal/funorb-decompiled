@@ -12,28 +12,22 @@ final class oi {
     static sc[] field_c;
 
     private final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
-        int discarded$1 = 0;
-        mg var7 = null;
-        int var8 = 0;
-        mg var9 = null;
-        mg var10 = null;
+        int discarded$0 = 0;
+        mg var7;
+        int var8;
+        mg var9;
+        mg var10;
         mg stackIn_4_0 = null;
         mg stackIn_10_0 = null;
-        mg stackOut_9_0 = null;
-        mg stackOut_8_0 = null;
-        mg stackOut_3_0 = null;
-        mg stackOut_2_0 = null;
         L0: {
           var8 = Virogrid.field_F ? 1 : 0;
           if (-33 == (param4 ^ -1)) {
             L1: {
               if ((1 << param3 & rn.field_c) != 0) {
-                stackOut_9_0 = vd.field_Y[param3];
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = vd.field_Y[param3];
                 break L1;
               } else {
-                stackOut_8_0 = tn.field_b;
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = tn.field_b;
                 break L1;
               }
             }
@@ -44,12 +38,10 @@ final class oi {
           } else {
             L2: {
               if ((1 << param3 & rn.field_c) != 0) {
-                stackOut_3_0 = cb.field_d[param3];
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = cb.field_d[param3];
                 break L2;
               } else {
-                stackOut_2_0 = mj.field_F;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = mj.field_F;
                 break L2;
               }
             }
@@ -84,62 +76,43 @@ final class oi {
           if (param1 == 3624) {
             break L4;
           } else {
-            discarded$1 = this.a(74, (byte) -42, -91);
+            discarded$0 = this.a(74, (byte) -42, -91);
             break L4;
           }
         }
     }
 
     private final void b(byte param0, int param1) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
         int stackIn_22_0 = 0;
         int stackIn_33_0 = 0;
-        v stackIn_79_0 = null;
         v stackIn_80_0 = null;
         v stackIn_81_0 = null;
         String stackIn_81_1 = null;
         int stackIn_94_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_28_0 = 0;
-        v stackOut_78_0 = null;
-        v stackOut_80_0 = null;
-        String stackOut_80_1 = null;
-        v stackOut_79_0 = null;
-        String stackOut_79_1 = null;
-        int stackOut_96_0 = 0;
-        int stackOut_91_0 = 0;
-        int stackOut_90_0 = 0;
-        int stackOut_89_0 = 0;
-        int stackOut_88_0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
         L0: {
           var26 = Virogrid.field_F ? 1 : 0;
           var3 = 10;
@@ -170,12 +143,10 @@ final class oi {
           if (10 <= var6) {
             L3: {
               if ((ll.field_d ^ -1) != 0) {
-                stackOut_21_0 = ll.field_d;
-                stackIn_22_0 = stackOut_21_0;
+                stackIn_22_0 = ll.field_d;
                 break L3;
               } else {
-                stackOut_20_0 = vm.field_c;
-                stackIn_22_0 = stackOut_20_0;
+                stackIn_22_0 = vm.field_c;
                 break L3;
               }
             }
@@ -187,17 +158,14 @@ final class oi {
                 L5: {
                   if (!og.field_j[var6]) {
                     if ((rn.field_c & 1 << var6) != 0) {
-                      stackOut_31_0 = 1;
-                      stackIn_33_0 = stackOut_31_0;
+                      stackIn_33_0 = 1;
                       break L5;
                     } else {
-                      stackOut_30_0 = 0;
-                      stackIn_33_0 = stackOut_30_0;
+                      stackIn_33_0 = 0;
                       break L5;
                     }
                   } else {
-                    stackOut_28_0 = 1;
-                    stackIn_33_0 = stackOut_28_0;
+                    stackIn_33_0 = 1;
                     break L5;
                   }
                 }
@@ -362,24 +330,19 @@ final class oi {
                     vg.field_H.b(Integer.toString(h.field_c[var6]), 420, 158 + var7, 8437759, -1);
                     vg.field_H.b(wb.field_i.toUpperCase(), 320, var7 - -178, 8437759, -1);
                     vg.field_H.b(Integer.toString(vc.field_eb[var6]), 420, var7 + 178, 8437759, -1);
-                    stackOut_78_0 = vg.field_H;
-                    stackIn_80_0 = stackOut_78_0;
-                    stackIn_79_0 = stackOut_78_0;
+                    stackIn_80_0 = vg.field_H;
+
                     if (var8 == 0) {
-                      stackOut_80_0 = (v) ((Object) stackIn_80_0);
-                      stackOut_80_1 = "???";
-                      stackIn_81_0 = stackOut_80_0;
-                      stackIn_81_1 = stackOut_80_1;
+                      stackIn_81_0 = (v) ((Object) stackIn_80_0);
+                      stackIn_81_1 = "???";
                       break L17;
                     } else {
-                      stackOut_79_0 = (v) ((Object) stackIn_79_0);
-                      stackOut_79_1 = ak.field_b[var6].toUpperCase();
-                      stackIn_81_0 = stackOut_79_0;
-                      stackIn_81_1 = stackOut_79_1;
+                      stackIn_81_0 = (v) ((Object) stackIn_80_0);
+                      stackIn_81_1 = ak.field_b[var6].toUpperCase();
                       break L17;
                     }
                   }
-                  discarded$3 = ((v) (Object) stackIn_81_0).a(stackIn_81_1, 320, var7 + 92, 190, 80, 8437759, -1, 0, 0, 20);
+                  ((v) (Object) stackIn_81_0).a(stackIn_81_1, 320, var7 + 92, 190, 80, 8437759, -1, 0, 0, 20);
                   break L4;
                 }
               } else {
@@ -389,10 +352,10 @@ final class oi {
                   if (qm.i(20)) {
                     vg.field_H.c(pc.field_a.toUpperCase(), 320, 270, 8437759, -1);
                     vg.field_H.c(dd.field_f.toUpperCase(), 320, 290, 8437759, -1);
-                    discarded$4 = vg.field_H.a(kn.field_L.toUpperCase(), 160, 210, 320, 80, 8437759, -1, 1, 0, 20);
+                    vg.field_H.a(kn.field_L.toUpperCase(), 160, 210, 320, 80, 8437759, -1, 1, 0, 20);
                     break L4;
                   } else {
-                    discarded$5 = vg.field_H.a(kn.field_L.toUpperCase(), 160, 240, 320, 80, 8437759, -1, 1, 0, 20);
+                    vg.field_H.a(kn.field_L.toUpperCase(), 160, 240, 320, 80, 8437759, -1, 1, 0, 20);
                     break L4;
                   }
                 }
@@ -424,27 +387,22 @@ final class oi {
                 if (0 == (1 << var7 & rn.field_c)) {
                   if (jk.field_d[var7]) {
                     if (db.b((byte) 13, 0)) {
-                      stackOut_96_0 = 1;
-                      stackIn_94_0 = stackOut_96_0;
+                      stackIn_94_0 = 1;
                       break L20;
                     } else {
-                      stackOut_91_0 = 0;
-                      stackIn_94_0 = stackOut_91_0;
+                      stackIn_94_0 = 0;
                       break L20;
                     }
                   } else {
-                    stackOut_90_0 = 0;
-                    stackIn_94_0 = stackOut_90_0;
+                    stackIn_94_0 = 0;
                     break L20;
                   }
                 } else {
-                  stackOut_89_0 = 1;
-                  stackIn_94_0 = stackOut_89_0;
+                  stackIn_94_0 = 1;
                   break L20;
                 }
               } else {
-                stackOut_88_0 = 1;
-                stackIn_94_0 = stackOut_88_0;
+                stackIn_94_0 = 1;
                 break L20;
               }
             }
@@ -464,8 +422,7 @@ final class oi {
     }
 
     private final void a(int param0) {
-        pe discarded$2 = null;
-        int var2 = 0;
+        int var2;
         L0: {
           var2 = this.field_f.field_d;
           if (param0 == 0) {
@@ -497,7 +454,7 @@ final class oi {
         }
         L3: {
           if (this.field_f.field_d != var2) {
-            discarded$2 = vm.a((byte) 30, wc.field_a);
+            vm.a((byte) 30, wc.field_a);
             break L3;
           } else {
             break L3;
@@ -506,92 +463,49 @@ final class oi {
     }
 
     final void b(int param0, int param1, int param2) {
-        int discarded$1 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int stackIn_1_0 = 0;
-        int stackIn_1_1 = 0;
-        int stackIn_1_2 = 0;
-        int stackIn_1_3 = 0;
-        int stackIn_2_0 = 0;
-        int stackIn_2_1 = 0;
-        int stackIn_2_2 = 0;
-        int stackIn_2_3 = 0;
+        int stackIn_2_0;
+        int stackIn_2_1;
+        int stackIn_2_2;
+        int stackIn_2_3;
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
         int stackIn_3_3 = 0;
         int stackIn_3_4 = 0;
-        Object stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
         Object stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         Object stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         int stackIn_17_2 = 0;
-        int stackOut_0_0 = 0;
-        int stackOut_0_1 = 0;
-        int stackOut_0_2 = 0;
-        int stackOut_0_3 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        int stackOut_2_3 = 0;
-        int stackOut_2_4 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        int stackOut_1_3 = 0;
-        int stackOut_1_4 = 0;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        int stackOut_16_2 = 0;
-        Object stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        int stackOut_15_2 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         L0: {
           var7 = Virogrid.field_F ? 1 : 0;
           df.b(100, 0, 10, 400, 0);
           df.b(530, 0, 10, 400, 0);
-          stackOut_0_0 = 110;
-          stackOut_0_1 = 0;
-          stackOut_0_2 = 420;
-          stackOut_0_3 = 400;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_2_1 = stackOut_0_1;
-          stackIn_2_2 = stackOut_0_2;
-          stackIn_2_3 = stackOut_0_3;
-          stackIn_1_0 = stackOut_0_0;
-          stackIn_1_1 = stackOut_0_1;
-          stackIn_1_2 = stackOut_0_2;
-          stackIn_1_3 = stackOut_0_3;
+          stackIn_2_0 = 110;
+
+          stackIn_2_1 = 0;
+
+          stackIn_2_2 = 420;
+
+          stackIn_2_3 = 400;
+
           if ((param1 ^ -1) == -2) {
-            stackOut_2_0 = stackIn_2_0;
-            stackOut_2_1 = stackIn_2_1;
-            stackOut_2_2 = stackIn_2_2;
-            stackOut_2_3 = stackIn_2_3;
-            stackOut_2_4 = 127;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            stackIn_3_2 = stackOut_2_2;
-            stackIn_3_3 = stackOut_2_3;
-            stackIn_3_4 = stackOut_2_4;
+            stackIn_3_0 = stackIn_2_0;
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = stackIn_2_2;
+            stackIn_3_3 = stackIn_2_3;
+            stackIn_3_4 = 127;
             break L0;
           } else {
-            stackOut_1_0 = stackIn_1_0;
-            stackOut_1_1 = stackIn_1_1;
-            stackOut_1_2 = stackIn_1_2;
-            stackOut_1_3 = stackIn_1_3;
-            stackOut_1_4 = 263172;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
-            stackIn_3_3 = stackOut_1_3;
-            stackIn_3_4 = stackOut_1_4;
+            stackIn_3_0 = stackIn_2_0;
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = stackIn_2_2;
+            stackIn_3_3 = stackIn_2_3;
+            stackIn_3_4 = 263172;
             break L0;
           }
         }
@@ -629,7 +543,7 @@ final class oi {
                           if (param1 == 2) {
                             break L3;
                           } else {
-                            discarded$1 = hd.field_b.a(kn.field_J, 135, 78, 370, 180, 8437759, -1, 1, 0, 18);
+                            hd.field_b.a(kn.field_J, 135, 78, 370, 180, 8437759, -1, 1, 0, 18);
                             break L3;
                           }
                         }
@@ -644,27 +558,19 @@ final class oi {
               } else {
                 if (this.b(var6, -115)) {
                   L4: {
-                    stackOut_14_0 = this;
-                    stackOut_14_1 = 64;
-                    stackIn_16_0 = stackOut_14_0;
-                    stackIn_16_1 = stackOut_14_1;
-                    stackIn_15_0 = stackOut_14_0;
-                    stackIn_15_1 = stackOut_14_1;
+                    stackIn_16_0 = this;
+
+                    stackIn_16_1 = 64;
+
                     if (this.field_f.field_d != var6) {
-                      stackOut_16_0 = this;
-                      stackOut_16_1 = stackIn_16_1;
-                      stackOut_16_2 = 0;
-                      stackIn_17_0 = stackOut_16_0;
-                      stackIn_17_1 = stackOut_16_1;
-                      stackIn_17_2 = stackOut_16_2;
+                      stackIn_17_0 = this;
+                      stackIn_17_1 = stackIn_16_1;
+                      stackIn_17_2 = 0;
                       break L4;
                     } else {
-                      stackOut_15_0 = this;
-                      stackOut_15_1 = stackIn_15_1;
-                      stackOut_15_2 = 1;
-                      stackIn_17_0 = stackOut_15_0;
-                      stackIn_17_1 = stackOut_15_1;
-                      stackIn_17_2 = stackOut_15_2;
+                      stackIn_17_0 = this;
+                      stackIn_17_1 = stackIn_16_1;
+                      stackIn_17_2 = 1;
                       break L4;
                     }
                   }
@@ -686,12 +592,21 @@ final class oi {
     }
 
     final static String a(String[] args, String param1, int param2) {
-        String discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        RuntimeException var3 = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        String stackIn_27_0 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        StringBuilder stackIn_33_1 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -703,39 +618,6 @@ final class oi {
         int var10 = 0;
         int var11 = 0;
         String var12 = null;
-        String stackIn_27_0 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_34_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_26_0 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
         var11 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -747,7 +629,7 @@ final class oi {
                 break L1;
               } else {
                 var12 = (String) null;
-                discarded$4 = oi.a((String[]) null, (String) null, -50);
+                oi.a((String[]) null, (String) null, -50);
                 break L1;
               }
             }
@@ -782,9 +664,9 @@ final class oi {
                           if (param1.charAt(var5) == 62) {
                             var5++;
                             var10 = fm.a((CharSequence) ((Object) var9), false);
-                            discarded$5 = var6.append(param1.substring(var7, var8));
+                            discarded$0 = var6.append(param1.substring(var7, var8));
                             var7 = var5;
-                            discarded$6 = var6.append(args[var10]);
+                            discarded$1 = var6.append(args[var10]);
                             continue L3;
                           } else {
                             continue L3;
@@ -795,9 +677,8 @@ final class oi {
                       }
                     }
                   } else {
-                    discarded$7 = var6.append(param1.substring(var7));
-                    stackOut_26_0 = var6.toString();
-                    stackIn_27_0 = stackOut_26_0;
+                    discarded$2 = var6.append(param1.substring(var7));
+                    stackIn_27_0 = var6.toString();
                     break L0;
                   }
                 }
@@ -841,56 +722,40 @@ final class oi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var3);
-            stackOut_28_1 = new StringBuilder().append("oi.F(");
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackIn_30_0 = (RuntimeException) (var3);
+
+            stackIn_30_1 = new StringBuilder().append("oi.F(");
+
             if (args == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L8;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+
+
+            stackIn_33_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
+
             if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L9;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L9;
             }
           }
-          throw kg.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ',' + param2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_31_0), stackIn_34_2 + ',' + param2 + ')');
         }
         return stackIn_27_0;
     }
@@ -904,11 +769,11 @@ final class oi {
     }
 
     private final int a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         var8 = Virogrid.field_F ? 1 : 0;
         var4 = 0;
         L0: while (true) {
@@ -945,42 +810,24 @@ final class oi {
     }
 
     private final void a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        String[] var7 = null;
-        int[] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_24_1 = 0;
-        int stackIn_24_2 = 0;
-        int stackIn_24_3 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_25_1 = 0;
-        int stackIn_25_2 = 0;
-        int stackIn_25_3 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_26_1 = 0;
-        int stackIn_26_2 = 0;
-        int stackIn_26_3 = 0;
-        int stackIn_26_4 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_23_1 = 0;
-        int stackOut_23_2 = 0;
-        int stackOut_23_3 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_25_1 = 0;
-        int stackOut_25_2 = 0;
-        int stackOut_25_3 = 0;
-        int stackOut_25_4 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_24_1 = 0;
-        int stackOut_24_2 = 0;
-        int stackOut_24_3 = 0;
-        int stackOut_24_4 = 0;
+        int stackIn_25_0;
+        int stackIn_25_1;
+        int stackIn_25_2;
+        int stackIn_25_3;
+        int stackIn_26_0;
+        int stackIn_26_1;
+        int stackIn_26_2;
+        int stackIn_26_3;
+        int stackIn_26_4;
+        int var3;
+        int var4;
+        int var5;
+        String var6;
+        String[] var7;
+        int[] var8;
+        int var9;
+        int var10;
+        int var11;
         var11 = Virogrid.field_F ? 1 : 0;
         if (param0 != 2) {
           if (!qm.i(20)) {
@@ -1051,41 +898,27 @@ final class oi {
                           }
                         }
                         L6: {
-                          stackOut_23_0 = 118;
-                          stackOut_23_1 = -vg.field_H.field_H + -vg.field_H.field_G + var4;
-                          stackOut_23_2 = 400;
-                          stackOut_23_3 = 22;
-                          stackIn_25_0 = stackOut_23_0;
-                          stackIn_25_1 = stackOut_23_1;
-                          stackIn_25_2 = stackOut_23_2;
-                          stackIn_25_3 = stackOut_23_3;
-                          stackIn_24_0 = stackOut_23_0;
-                          stackIn_24_1 = stackOut_23_1;
-                          stackIn_24_2 = stackOut_23_2;
-                          stackIn_24_3 = stackOut_23_3;
+                          stackIn_25_0 = 118;
+
+                          stackIn_25_1 = -vg.field_H.field_H + -vg.field_H.field_G + var4;
+
+                          stackIn_25_2 = 400;
+
+                          stackIn_25_3 = 22;
+
                           if (var10 % 2 != 1) {
-                            stackOut_25_0 = stackIn_25_0;
-                            stackOut_25_1 = stackIn_25_1;
-                            stackOut_25_2 = stackIn_25_2;
-                            stackOut_25_3 = stackIn_25_3;
-                            stackOut_25_4 = 665399;
-                            stackIn_26_0 = stackOut_25_0;
-                            stackIn_26_1 = stackOut_25_1;
-                            stackIn_26_2 = stackOut_25_2;
-                            stackIn_26_3 = stackOut_25_3;
-                            stackIn_26_4 = stackOut_25_4;
+                            stackIn_26_0 = stackIn_25_0;
+                            stackIn_26_1 = stackIn_25_1;
+                            stackIn_26_2 = stackIn_25_2;
+                            stackIn_26_3 = stackIn_25_3;
+                            stackIn_26_4 = 665399;
                             break L6;
                           } else {
-                            stackOut_24_0 = stackIn_24_0;
-                            stackOut_24_1 = stackIn_24_1;
-                            stackOut_24_2 = stackIn_24_2;
-                            stackOut_24_3 = stackIn_24_3;
-                            stackOut_24_4 = 996169;
-                            stackIn_26_0 = stackOut_24_0;
-                            stackIn_26_1 = stackOut_24_1;
-                            stackIn_26_2 = stackOut_24_2;
-                            stackIn_26_3 = stackOut_24_3;
-                            stackIn_26_4 = stackOut_24_4;
+                            stackIn_26_0 = stackIn_25_0;
+                            stackIn_26_1 = stackIn_25_1;
+                            stackIn_26_2 = stackIn_25_2;
+                            stackIn_26_3 = stackIn_25_3;
+                            stackIn_26_4 = 996169;
                             break L6;
                           }
                         }
@@ -1124,160 +957,70 @@ final class oi {
     }
 
     private final void a(int param0, int param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var10_int = 0;
-        RuntimeException var10 = null;
-        String var11 = null;
-        String var12 = null;
-        String var13 = null;
-        String var14 = null;
-        String var15 = null;
-        String var16 = null;
         String var17 = null;
-        String stackIn_8_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_7_0 = null;
-        String stackOut_6_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        try {
-          L0: {
-            L1: {
-              var10_int = param1 + param7 - -param4;
-              if (0 == (param6 ^ -1)) {
-                break L1;
-              } else {
-                vg.field_H.a(param6 + 1 + ". ", 140, param3, param5, -1);
-                break L1;
-              }
-            }
-            L2: {
-              if (var10_int != 0) {
-                param4 = (param4 * 200 - -var10_int) / (var10_int * 2);
-                param1 = (var10_int + param1 * 200) / (2 * var10_int);
-                param7 = (param7 * 200 + var10_int) / (var10_int * 2);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              var12 = param2;
-              vg.field_H.b(var12, 140, param3, param5, -1);
-              var13 = Integer.toString(param8);
-              vg.field_H.c(var13, 310, param3, param5, -1);
-              if (var10_int >= 50) {
-                stackOut_7_0 = "50+";
-                stackIn_8_0 = stackOut_7_0;
-                break L3;
-              } else {
-                stackOut_6_0 = Integer.toString(var10_int);
-                stackIn_8_0 = stackOut_6_0;
-                break L3;
-              }
-            }
-            var14 = stackIn_8_0;
-            var11 = var14;
-            vg.field_H.c(var14, 368, param3, param5, -1);
-            var15 = param7 + "%";
-            vg.field_H.c(var15, 420, param3, param5, -1);
-            var16 = param1 + "%";
-            if (param0 == 178) {
-              vg.field_H.c(var16, 458, param3, param5, -1);
-              var17 = param4 + "%";
-              vg.field_H.c(var17, 500, param3, param5, -1);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var10 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var10);
-            stackOut_12_1 = new StringBuilder().append("oi.CA(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
-            if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L4;
-            } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L4;
-            }
-          }
-          throw kg.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+        int var10_int = param1 + param7 - -param4;
+        if (0 != (param6 ^ -1)) {
+            vg.field_H.a(param6 + 1 + ". ", 140, param3, param5, -1);
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        if (!(var10_int == 0)) {
+            param4 = (param4 * 200 - -var10_int) / (var10_int * 2);
+            param1 = (var10_int + param1 * 200) / (2 * var10_int);
+            param7 = (param7 * 200 + var10_int) / (var10_int * 2);
+        }
+        String var12 = param2;
+        vg.field_H.b(var12, 140, param3, param5, -1);
+        String var13 = Integer.toString(param8);
+        vg.field_H.c(var13, 310, param3, param5, -1);
+        String var14 = var10_int < 50 ? Integer.toString(var10_int) : "50+";
+        String var11 = var14;
+        vg.field_H.c(var14, 368, param3, param5, -1);
+        String var15 = param7 + "%";
+        vg.field_H.c(var15, 420, param3, param5, -1);
+        String var16 = param1 + "%";
+        if (param0 != 178) {
+            return;
+        }
+        try {
+            vg.field_H.c(var16, 458, param3, param5, -1);
+            var17 = param4 + "%";
+            vg.field_H.c(var17, 500, param3, param5, -1);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) ((Object) runtimeException), "oi.CA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     final void a(boolean param0, double param1, double param2, int param3, int param4, int param5) {
         int var9 = 0;
         int var10 = 0;
-        pe discarded$0 = null;
         int var11 = Virogrid.field_F ? 1 : 0;
         if ((param3 ^ -1) == -3) {
             return;
         }
-        if (!qe.field_k) {
-            if (!eh.field_e) {
-                if (this.field_e != 8) {
-                } else {
-                    vm.field_c = param0 ? -1 : this.a((int)param2, -94, (int)param1);
-                    if ((param5 ^ -1) == -2) {
-                        if (ll.field_d == vm.field_c) {
-                            ll.field_d = -1;
-                        } else {
-                            if (-1 != vm.field_c) {
-                                ll.field_d = vm.field_c;
-                            }
+        if (!qe.field_k && !eh.field_e) {
+            if (this.field_e != 8) {
+            } else {
+                vm.field_c = param0 ? -1 : this.a((int)param2, -94, (int)param1);
+                if ((param5 ^ -1) == -2) {
+                    if (ll.field_d == vm.field_c) {
+                        ll.field_d = -1;
+                    } else {
+                        if (-1 != vm.field_c) {
+                            ll.field_d = vm.field_c;
                         }
                     }
                 }
-                if (param0) {
-                    this.field_f.a(-1, false, -1);
-                } else {
-                    var9 = this.field_f.field_d;
-                    var10 = this.a((int)param1, (byte) -128, (int)param2);
-                    this.field_f.a(var10, false, var10);
-                    if (-1 != this.field_f.field_d) {
-                        this.a(this.field_f.field_d, true, param4 ^ -423235729);
-                    }
-                    if (this.field_f.field_d != var9) {
-                        discarded$0 = vm.a((byte) 30, wc.field_a);
-                    }
+            }
+            if (param0) {
+                this.field_f.a(-1, false, -1);
+            } else {
+                var9 = this.field_f.field_d;
+                var10 = this.a((int)param1, (byte) -128, (int)param2);
+                this.field_f.a(var10, false, var10);
+                if (-1 != this.field_f.field_d) {
+                    this.a(this.field_f.field_d, true, param4 ^ -423235729);
+                }
+                if (this.field_f.field_d != var9) {
+                    vm.a((byte) 30, wc.field_a);
                 }
             }
         }
@@ -1287,7 +1030,7 @@ final class oi {
     }
 
     private final void b(int param0) {
-        int var3 = 0;
+        int var3;
         L0: {
           var3 = Virogrid.field_F ? 1 : 0;
           if (96 == um.field_Gb) {
@@ -1375,17 +1118,14 @@ final class oi {
     }
 
     private final void a(int param0, boolean param1, int param2) {
-        pe discarded$0 = null;
         int var4 = ag.field_j[this.field_e][param0];
         this.b(param0, var4, (byte) 124);
         if (param2 != 423239361) {
             field_b = 60L;
         }
         if (this.field_f.b(83)) {
-            if (14 != var4) {
-                if ((var4 ^ -1) != -16) {
-                    discarded$0 = vm.a((byte) 30, bg.field_Lb);
-                }
+            if (14 != var4 && (var4 ^ -1) != -16) {
+                vm.a((byte) 30, bg.field_Lb);
             }
             wh.a(2094, param1, var4);
         }
@@ -1412,13 +1152,11 @@ final class oi {
     }
 
     private final int d(int param0, int param1) {
-        if (6 == this.field_e) {
-            if (!qm.i(param0 ^ 2)) {
-                if (!(-3 >= (param1 ^ -1))) {
-                    return ag.field_f[this.field_e];
-                }
-                return ag.field_f[this.field_e] + ag.field_a[this.field_e];
+        if (6 == this.field_e && !qm.i(param0 ^ 2)) {
+            if (!(-3 >= (param1 ^ -1))) {
+                return ag.field_f[this.field_e];
             }
+            return ag.field_f[this.field_e] + ag.field_a[this.field_e];
         }
         if (param0 != 22) {
             field_h = (StringBuilder) null;
@@ -1427,9 +1165,9 @@ final class oi {
     }
 
     private final int a(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var4;
+        int var5;
+        int var6;
         var6 = Virogrid.field_F ? 1 : 0;
         if (hk.field_Jb > we.field_c.field_J) {
           return -1;
@@ -1480,17 +1218,14 @@ final class oi {
     }
 
     private final void b(int param0, int param1, byte param2) {
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
-        pe discarded$5 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         int stackIn_116_0 = 0;
-        int stackOut_115_0 = 0;
-        int stackOut_114_0 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         L0: {
           var8 = Virogrid.field_F ? 1 : 0;
           if (param2 >= 81) {
@@ -1635,12 +1370,10 @@ final class oi {
                                                                 }
                                                                 L9: {
                                                                   if (b.field_Db) {
-                                                                    stackOut_115_0 = 0;
-                                                                    stackIn_116_0 = stackOut_115_0;
+                                                                    stackIn_116_0 = 0;
                                                                     break L9;
                                                                   } else {
-                                                                    stackOut_114_0 = 1;
-                                                                    stackIn_116_0 = stackOut_114_0;
+                                                                    stackIn_116_0 = 1;
                                                                     break L9;
                                                                   }
                                                                 }
@@ -1702,9 +1435,9 @@ final class oi {
                                                                   break L1;
                                                                 } else {
                                                                   L10: {
-                                                                    fieldTemp$3 = bc.field_c + 1;
+                                                                    fieldTemp$0 = bc.field_c + 1;
                                                                     bc.field_c = bc.field_c + 1;
-                                                                    if (fieldTemp$3 < cc.field_v.length) {
+                                                                    if (fieldTemp$0 < cc.field_v.length) {
                                                                       break L10;
                                                                     } else {
                                                                       bc.field_c = 2;
@@ -1716,9 +1449,9 @@ final class oi {
                                                                   break L1;
                                                                 }
                                                               } else {
-                                                                fieldTemp$4 = bc.field_c - 1;
+                                                                fieldTemp$1 = bc.field_c - 1;
                                                                 bc.field_c = bc.field_c - 1;
-                                                                if (2 > fieldTemp$4) {
+                                                                if (2 > fieldTemp$1) {
                                                                   bc.field_c = cc.field_v.length + -1;
                                                                   co.field_l = bc.field_c;
                                                                   ka.a(true, (byte) 87);
@@ -1824,7 +1557,7 @@ final class oi {
                                                             }
                                                           }
                                                         }
-                                                        discarded$5 = vm.a((byte) 30, bg.field_Lb);
+                                                        vm.a((byte) 30, bg.field_Lb);
                                                         qd.field_c = id.field_r + 20;
                                                         break L1;
                                                       } else {
@@ -1886,14 +1619,11 @@ final class oi {
     }
 
     final void a(byte param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int discarded$0 = 0;
         int stackIn_31_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var4 = Virogrid.field_F ? 1 : 0;
           if (qe.field_k) {
@@ -1975,7 +1705,7 @@ final class oi {
           if (param0 < -45) {
             break L4;
           } else {
-            discarded$1 = this.c(-89, -85);
+            discarded$0 = this.c(-89, -85);
             break L4;
           }
         }
@@ -1990,17 +1720,14 @@ final class oi {
               } else {
                 L7: {
                   if (var2 == ll.field_d) {
-                    stackOut_30_0 = 48;
-                    stackIn_31_0 = stackOut_30_0;
+                    stackIn_31_0 = 48;
                     break L7;
                   } else {
                     if (vm.field_c == var2) {
-                      stackOut_29_0 = 40;
-                      stackIn_31_0 = stackOut_29_0;
+                      stackIn_31_0 = 40;
                       break L7;
                     } else {
-                      stackOut_28_0 = 32;
-                      stackIn_31_0 = stackOut_28_0;
+                      stackIn_31_0 = 32;
                       break L7;
                     }
                   }
@@ -2027,7 +1754,6 @@ final class oi {
     }
 
     private final void a(int param0, int param1, byte param2) {
-        int discarded$0 = 0;
         String var4 = em.field_b[param0];
         int var5 = vg.field_H.b(var4, 370);
         int var7 = 100 % ((-48 - param2) / 63);
@@ -2037,7 +1763,7 @@ final class oi {
         pe.a(73, 1141646, 120, (byte) -122, -1 + var6);
         pe.a(73, 1141646, 519, (byte) -110, -1 + var6);
         if (param1 != 2) {
-            discarded$0 = vg.field_H.a(var4, 135, 78, 370, 180, 8437759, -1, 0, 0, 18);
+            vg.field_H.a(var4, 135, 78, 370, 180, 8437759, -1, 0, 0, 18);
         }
     }
 
@@ -2049,31 +1775,12 @@ final class oi {
     }
 
     private final void a(byte param0, boolean param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        String var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        String var19 = null;
-        String var20 = null;
-        StringBuilder stackIn_5_0 = null;
         StringBuilder stackIn_6_0 = null;
         StringBuilder stackIn_7_0 = null;
         String stackIn_7_1 = null;
-        StringBuilder stackIn_10_0 = null;
         StringBuilder stackIn_11_0 = null;
         StringBuilder stackIn_12_0 = null;
         String stackIn_12_1 = null;
-        StringBuilder stackIn_15_0 = null;
         StringBuilder stackIn_16_0 = null;
         StringBuilder stackIn_17_0 = null;
         String stackIn_17_1 = null;
@@ -2081,29 +1788,22 @@ final class oi {
         int stackIn_52_0 = 0;
         int stackIn_57_0 = 0;
         int stackIn_64_0 = 0;
-        String stackOut_25_0 = null;
-        String stackOut_24_0 = null;
-        StringBuilder stackOut_14_0 = null;
-        StringBuilder stackOut_16_0 = null;
-        String stackOut_16_1 = null;
-        StringBuilder stackOut_15_0 = null;
-        String stackOut_15_1 = null;
-        StringBuilder stackOut_9_0 = null;
-        StringBuilder stackOut_11_0 = null;
-        String stackOut_11_1 = null;
-        StringBuilder stackOut_10_0 = null;
-        String stackOut_10_1 = null;
-        StringBuilder stackOut_4_0 = null;
-        StringBuilder stackOut_6_0 = null;
-        String stackOut_6_1 = null;
-        StringBuilder stackOut_5_0 = null;
-        String stackOut_5_1 = null;
-        int stackOut_51_0 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_62_0 = 0;
+        int var5;
+        int var6;
+        String var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        String var19;
+        String var20;
         var18 = Virogrid.field_F ? 1 : 0;
         if ((param2 ^ -1) != -3) {
           L0: {
@@ -2185,12 +1885,10 @@ final class oi {
                           } else {
                             L4: {
                               if (-1 != (nf.field_g ^ -1)) {
-                                stackOut_25_0 = en.field_Eb;
-                                stackIn_26_0 = stackOut_25_0;
+                                stackIn_26_0 = en.field_Eb;
                                 break L4;
                               } else {
-                                stackOut_24_0 = hk.field_Gb;
-                                stackIn_26_0 = stackOut_24_0;
+                                stackIn_26_0 = hk.field_Gb;
                                 break L4;
                               }
                             }
@@ -2205,20 +1903,15 @@ final class oi {
                     }
                   } else {
                     L5: {
-                      stackOut_14_0 = new StringBuilder().append(var19);
-                      stackIn_16_0 = stackOut_14_0;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_16_0 = new StringBuilder().append(var19);
+
                       if (!b.field_Db) {
-                        stackOut_16_0 = (StringBuilder) ((Object) stackIn_16_0);
-                        stackOut_16_1 = am.field_b;
-                        stackIn_17_0 = stackOut_16_0;
-                        stackIn_17_1 = stackOut_16_1;
+                        stackIn_17_0 = (StringBuilder) ((Object) stackIn_16_0);
+                        stackIn_17_1 = am.field_b;
                         break L5;
                       } else {
-                        stackOut_15_0 = (StringBuilder) ((Object) stackIn_15_0);
-                        stackOut_15_1 = ad.field_f;
-                        stackIn_17_0 = stackOut_15_0;
-                        stackIn_17_1 = stackOut_15_1;
+                        stackIn_17_0 = (StringBuilder) ((Object) stackIn_16_0);
+                        stackIn_17_1 = ad.field_f;
                         break L5;
                       }
                     }
@@ -2227,20 +1920,15 @@ final class oi {
                   }
                 } else {
                   L6: {
-                    stackOut_9_0 = new StringBuilder().append(var19);
-                    stackIn_11_0 = stackOut_9_0;
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_11_0 = new StringBuilder().append(var19);
+
                     if (!gb.field_H.field_g) {
-                      stackOut_11_0 = (StringBuilder) ((Object) stackIn_11_0);
-                      stackOut_11_1 = fn.field_g;
-                      stackIn_12_0 = stackOut_11_0;
-                      stackIn_12_1 = stackOut_11_1;
+                      stackIn_12_0 = (StringBuilder) ((Object) stackIn_11_0);
+                      stackIn_12_1 = fn.field_g;
                       break L6;
                     } else {
-                      stackOut_10_0 = (StringBuilder) ((Object) stackIn_10_0);
-                      stackOut_10_1 = cc.field_v[bc.field_c];
-                      stackIn_12_0 = stackOut_10_0;
-                      stackIn_12_1 = stackOut_10_1;
+                      stackIn_12_0 = (StringBuilder) ((Object) stackIn_11_0);
+                      stackIn_12_1 = cc.field_v[bc.field_c];
                       break L6;
                     }
                   }
@@ -2249,20 +1937,15 @@ final class oi {
                 }
               } else {
                 L7: {
-                  stackOut_4_0 = new StringBuilder().append(var19);
-                  stackIn_6_0 = stackOut_4_0;
-                  stackIn_5_0 = stackOut_4_0;
+                  stackIn_6_0 = new StringBuilder().append(var19);
+
                   if (gb.field_H.field_g) {
-                    stackOut_6_0 = (StringBuilder) ((Object) stackIn_6_0);
-                    stackOut_6_1 = ld.field_f;
-                    stackIn_7_0 = stackOut_6_0;
-                    stackIn_7_1 = stackOut_6_1;
+                    stackIn_7_0 = (StringBuilder) ((Object) stackIn_6_0);
+                    stackIn_7_1 = ld.field_f;
                     break L7;
                   } else {
-                    stackOut_5_0 = (StringBuilder) ((Object) stackIn_5_0);
-                    stackOut_5_1 = sd.field_b;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_7_1 = stackOut_5_1;
+                    stackIn_7_0 = (StringBuilder) ((Object) stackIn_6_0);
+                    stackIn_7_1 = sd.field_b;
                     break L7;
                   }
                 }
@@ -2298,12 +1981,10 @@ final class oi {
             var15 = this.a(param3, (byte) 56);
             fd.a(param2, 6752, var14, var9, param1, var11, var15);
             if (!param1) {
-              stackOut_51_0 = 8437759;
-              stackIn_52_0 = stackOut_51_0;
+              stackIn_52_0 = 8437759;
               break L10;
             } else {
-              stackOut_50_0 = 16777215;
-              stackIn_52_0 = stackOut_50_0;
+              stackIn_52_0 = 16777215;
               break L10;
             }
           }
@@ -2317,12 +1998,10 @@ final class oi {
               } else {
                 L12: {
                   if (param1) {
-                    stackOut_56_0 = 12632256;
-                    stackIn_57_0 = stackOut_56_0;
+                    stackIn_57_0 = 12632256;
                     break L12;
                   } else {
-                    stackOut_55_0 = 7829367;
-                    stackIn_57_0 = stackOut_55_0;
+                    stackIn_57_0 = 7829367;
                     break L12;
                   }
                 }
@@ -2348,12 +2027,10 @@ final class oi {
               var12 = var12 + ok.field_L;
               df.e(var12, -1 + var13 / 2 + var11, 121, 2, var16);
               if (14 == var6) {
-                stackOut_63_0 = 120 * ag.field_c / 256;
-                stackIn_64_0 = stackOut_63_0;
+                stackIn_64_0 = 120 * ag.field_c / 256;
                 break L15;
               } else {
-                stackOut_62_0 = c.field_a * 120 / 256;
-                stackIn_64_0 = stackOut_62_0;
+                stackIn_64_0 = c.field_a * 120 / 256;
                 break L15;
               }
             }
@@ -2381,10 +2058,8 @@ final class oi {
 
     private final int c(int param0, int param1) {
         int var3 = 104 / ((param0 - 9) / 63);
-        if (this.field_e == 6) {
-            if (!qm.i(20)) {
-                return param1 < 2 ? 150 + 180 * param1 : ag.field_b[this.field_e];
-            }
+        if (this.field_e == 6 && !qm.i(20)) {
+            return param1 < 2 ? 150 + 180 * param1 : ag.field_b[this.field_e];
         }
         return ag.field_b[this.field_e];
     }

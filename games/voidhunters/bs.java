@@ -31,8 +31,8 @@ final class bs {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
+        int var6;
+        int var7;
         var6 = 24;
         var7 = 5;
         if (param1 > -71) {

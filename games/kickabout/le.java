@@ -11,24 +11,24 @@ final class le {
     static String field_c;
 
     final static String a(boolean param0, Throwable param1) throws IOException {
-        String var2 = null;
-        PrintWriter var4 = null;
-        String var5 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        Object var14 = null;
-        bs var14_ref = null;
-        StringWriter var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
+        String var2;
+        PrintWriter var4;
+        String var5;
+        BufferedReader var6;
+        String var7;
+        String var8;
+        int var9;
+        int var10;
+        String var11;
+        int var13;
+        Object var14;
+        bs var14_ref;
+        StringWriter var15;
+        String var16;
+        String var17;
+        String var18;
+        String var19;
+        int var12;
         var14 = null;
         var13 = Kickabout.field_G;
         if (!param0) {

@@ -39,11 +39,6 @@ final class wk {
         int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_2_0 = 0;
         var3 = stellarshard.field_B;
         try {
           L0: {
@@ -54,8 +49,7 @@ final class wk {
                 var2 = 0;
                 L1: while (true) {
                   if (var2 >= var1.field_s) {
-                    stackOut_20_0 = 1;
-                    stackIn_21_0 = stackOut_20_0;
+                    stackIn_21_0 = 1;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
@@ -64,8 +58,7 @@ final class wk {
                         break L2;
                       } else {
                         if (0 == var4.field_r[var2].field_f) {
-                          stackOut_12_0 = 0;
-                          stackIn_13_0 = stackOut_12_0;
+                          stackIn_13_0 = 0;
                           decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
@@ -78,8 +71,7 @@ final class wk {
                         break L3;
                       } else {
                         if (-1 == (var4.field_q[var2].field_f ^ -1)) {
-                          stackOut_17_0 = 0;
-                          stackIn_18_0 = stackOut_17_0;
+                          stackIn_18_0 = 0;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
@@ -92,14 +84,12 @@ final class wk {
                   }
                 }
               } else {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }

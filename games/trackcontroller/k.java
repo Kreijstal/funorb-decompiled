@@ -25,10 +25,9 @@ final class k extends wh {
     final synchronized void a(int[] param0, int param1, int param2) {
         int var4 = 0;
         i var5 = null;
-        Object var6 = null;
         int var7 = 0;
-        Throwable var8 = null;
         Throwable decompiledCaughtException = null;
+        Object var6 = null;
         L0: while (true) {
           if (this.field_n >= 0) {
             if (this.field_m + param2 >= this.field_n) {
@@ -121,10 +120,9 @@ final class k extends wh {
     final synchronized void d(int param0) {
         int var2 = 0;
         i var3 = null;
-        Object var4 = null;
         int var5 = 0;
-        Throwable var6 = null;
         Throwable decompiledCaughtException = null;
+        Object var4 = null;
         L0: while (true) {
           if (this.field_n >= 0) {
             if (this.field_m + param0 >= this.field_n) {

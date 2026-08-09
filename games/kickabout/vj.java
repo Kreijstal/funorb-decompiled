@@ -54,20 +54,20 @@ final class vj {
     }
 
     final static void a(int param0) {
-        int[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int[] var13 = null;
-        int[] var14 = null;
+        int[] var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int[] var13;
+        int[] var14;
+        int var12;
         var14 = on.field_a;
         var13 = var14;
         var1 = var13;

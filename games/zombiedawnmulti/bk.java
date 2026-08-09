@@ -11,8 +11,8 @@ final class bk extends t {
     final byte[] a(int param0) {
         int var2 = 82 / ((-69 - param0) / 36);
         byte[] var3 = new byte[this.field_h.capacity()];
-        java.nio.Buffer discarded$0 = this.field_h.position(0);
-        java.nio.ByteBuffer discarded$1 = this.field_h.get(var3);
+        this.field_h.position(0);
+        this.field_h.get(var3);
         return var3;
     }
 
@@ -25,16 +25,13 @@ final class bk extends t {
     }
 
     final void a(byte[] param0, byte param1) {
-        ja[] discarded$0 = null;
-        java.nio.Buffer discarded$1 = null;
-        java.nio.ByteBuffer discarded$2 = null;
         try {
             this.field_h = java.nio.ByteBuffer.allocateDirect(param0.length);
             if (param1 > -68) {
-                discarded$0 = bk.a(112, 60, (byte) -105);
+                bk.a(112, 60, (byte) -105);
             }
-            discarded$1 = this.field_h.position(0);
-            discarded$2 = this.field_h.put(param0);
+            this.field_h.position(0);
+            this.field_h.put(param0);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) ((Object) runtimeException), "bk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -44,8 +41,6 @@ final class bk extends t {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -53,14 +48,6 @@ final class bk extends t {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             var2 = param0.getParameter("username");
@@ -89,27 +76,19 @@ final class bk extends t {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2_ref);
-            stackOut_5_1 = new StringBuilder().append("bk.G(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2_ref);
+
+            stackIn_7_1 = new StringBuilder().append("bk.G(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }

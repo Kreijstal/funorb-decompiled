@@ -50,9 +50,12 @@ final class qk {
     static hj[] field_E;
 
     final static void a(int param0, int param1, boolean param2, boolean param3, int param4, int param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_24_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -60,11 +63,6 @@ final class qk {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_24_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
         var14 = HoldTheLine.field_D;
         try {
           L0: {
@@ -96,12 +94,10 @@ final class qk {
                           L3: {
                             var12 = im.field_h[var11];
                             if (!param3) {
-                              stackOut_23_0 = oh.field_s[var12];
-                              stackIn_24_0 = stackOut_23_0;
+                              stackIn_24_0 = oh.field_s[var12];
                               break L3;
                             } else {
-                              stackOut_22_0 = va.field_j[var12];
-                              stackIn_24_0 = stackOut_22_0;
+                              stackIn_24_0 = va.field_j[var12];
                               break L3;
                             }
                           }
@@ -124,9 +120,9 @@ final class qk {
                                   break L5;
                                 }
                               }
-                              incrementValue$1 = var8;
+                              incrementValue$0 = var8;
                               var8++;
-                              im.field_h[incrementValue$1] = var12;
+                              im.field_h[incrementValue$0] = var12;
                               break L4;
                             }
                           }
@@ -192,9 +188,16 @@ final class qk {
     }
 
     final static int[] a(int[] param0, byte param1) {
-        int incrementValue$1 = 0;
-        RuntimeException var2 = null;
+        int incrementValue$0 = 0;
+        int[] stackIn_35_0 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        String stackIn_39_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -207,24 +210,6 @@ final class qk {
         int[] var12 = null;
         int var13 = 0;
         pf var14 = null;
-        int[] stackIn_33_0 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        String stackIn_37_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int[] stackOut_32_0 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
         var11 = HoldTheLine.field_D;
         try {
           L0: {
@@ -274,8 +259,7 @@ final class qk {
                             var6 = var13;
                             L8: while (true) {
                               if (var5 <= var13) {
-                                stackOut_32_0 = (int[]) (var7);
-                                stackIn_33_0 = stackOut_32_0;
+                                stackIn_35_0 = (int[]) (var7);
                                 break L0;
                               } else {
                                 var12[var13 * 2] = var2_int + qn.field_l[var13].field_a;
@@ -301,9 +285,9 @@ final class qk {
                                 }
                               }
                             }
-                            incrementValue$1 = var5;
+                            incrementValue$0 = var5;
                             var5++;
-                            qn.field_l[incrementValue$1] = var9;
+                            qn.field_l[incrementValue$0] = var9;
                             var6++;
                             continue L7;
                           }
@@ -324,7 +308,7 @@ final class qk {
               } else {
                 L10: {
                   L11: {
-                    if (param0[2 * var5] < var2_int) {
+                    if ((param0[2 * var5] ^ -1) > (var2_int ^ -1)) {
                       break L11;
                     } else {
                       if (var2_int == param0[2 * var5]) {
@@ -352,33 +336,25 @@ final class qk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L12: {
             var2 = decompiledCaughtException;
-            stackOut_34_0 = (RuntimeException) (var2);
-            stackOut_34_1 = new StringBuilder().append("qk.D(");
-            stackIn_36_0 = stackOut_34_0;
-            stackIn_36_1 = stackOut_34_1;
-            stackIn_35_0 = stackOut_34_0;
-            stackIn_35_1 = stackOut_34_1;
+            stackIn_38_0 = (RuntimeException) (var2);
+
+            stackIn_38_1 = new StringBuilder().append("qk.D(");
+
             if (param0 == null) {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "null";
               break L12;
             } else {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "{...}";
-              stackIn_37_0 = stackOut_35_0;
-              stackIn_37_1 = stackOut_35_1;
-              stackIn_37_2 = stackOut_35_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "{...}";
               break L12;
             }
           }
-          throw kk.a((Throwable) ((Object) stackIn_37_0), stackIn_37_2 + ',' + param1 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_39_0), stackIn_39_2 + ',' + param1 + ')');
         }
-        return stackIn_33_0;
+        return stackIn_35_0;
     }
 
     private final void a(byte param0) {
@@ -403,17 +379,17 @@ final class qk {
     }
 
     final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var12 = HoldTheLine.field_D;
         if (!this.field_B) {
           this.field_B = true;
@@ -519,9 +495,6 @@ final class qk {
 
     final static int b(int param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            th var2 = null;
             int stackIn_13_0 = 0;
             int stackIn_24_0 = 0;
             int stackIn_28_0 = 0;
@@ -529,11 +502,9 @@ final class qk {
             int stackIn_34_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_12_0 = 0;
-            int stackOut_27_0 = 0;
-            int stackOut_23_0 = 0;
-            int stackOut_33_0 = 0;
-            int stackOut_31_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            th var2 = null;
             if (ce.field_n.field_c >= 4) {
               if ((ce.field_n.field_f ^ -1) != 0) {
                 if ((ce.field_n.field_f ^ -1) != 1) {
@@ -561,8 +532,7 @@ final class qk {
                       break L2;
                     } else {
                       if (2 == tl.field_y.field_d) {
-                        stackOut_12_0 = bd.a(-1, 8077);
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = bd.a(-1, 8077);
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
@@ -595,8 +565,7 @@ final class qk {
                       if ((oc.field_c.b(false) ^ -1) < -1) {
                         var1_int = oc.field_c.c(-27418);
                         if (-1 != (var1_int ^ -1)) {
-                          stackOut_27_0 = bd.a(var1_int, 8077);
-                          stackIn_28_0 = stackOut_27_0;
+                          stackIn_28_0 = bd.a(var1_int, 8077);
                           decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
@@ -605,8 +574,7 @@ final class qk {
                         }
                       } else {
                         if (aj.field_b < bb.b(param0 ^ -2)) {
-                          stackOut_23_0 = bd.a(-2, param0 + 8076);
-                          stackIn_24_0 = stackOut_23_0;
+                          stackIn_24_0 = bd.a(-2, param0 + 8076);
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -618,8 +586,7 @@ final class qk {
                     }
                   }
                   if (lc.field_g != 4) {
-                    stackOut_33_0 = -1;
-                    stackIn_34_0 = stackOut_33_0;
+                    stackIn_34_0 = -1;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
@@ -627,8 +594,7 @@ final class qk {
                     oc.field_c = null;
                     tl.field_y = null;
                     lc.field_g = 0;
-                    stackOut_31_0 = 0;
-                    stackIn_32_0 = stackOut_31_0;
+                    stackIn_32_0 = 0;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }

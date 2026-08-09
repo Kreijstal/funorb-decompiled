@@ -19,9 +19,8 @@ final class mp extends je {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
-        int discarded$2 = 0;
         if (param7 > -34) {
-          discarded$2 = mp.k(17);
+          mp.k(17);
           this.field_gb = param4;
           this.field_S = param0;
           this.field_ab = param5;
@@ -82,8 +81,8 @@ final class mp extends je {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         var5 = (this.field_gb + param3) / 2;
         var6 = this.field_ob - param2;
         this.field_Kb.a(0, false, this.field_gb, param3, param1, 0, -param3 + var6);

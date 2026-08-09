@@ -27,9 +27,6 @@ abstract class fb extends gp {
     final static boolean i(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_4_0 = 0;
         if (param0 == 11) {
           if (!sp.field_V) {
             if (ag.b(49)) {
@@ -41,19 +38,16 @@ abstract class fb extends gp {
             if (!vj.field_h) {
               L0: {
                 if (!ag.b(49)) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = 0;
                   break L0;
                 } else {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_0 = 1;
                   break L0;
                 }
               }
               return stackIn_10_0 != 0;
             } else {
-              stackOut_4_0 = 1;
-              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_0 = 1;
               return stackIn_6_0 != 0;
             }
           }

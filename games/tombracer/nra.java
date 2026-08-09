@@ -70,25 +70,15 @@ final class nra implements bo {
 
     final static void a(byte param0, int param1, int param2, int[] param3, int param4) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var5 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -97,47 +87,36 @@ final class nra implements bo {
             var5_int = param2 + -7;
             if (param0 == -55) {
               L1: while (true) {
-                L2: {
-                  if (param4 >= var5_int) {
-                    L3: while (true) {
-                      if (param4 >= param2) {
-                        break L2;
-                      } else {
-                        param4++;
-                        param3[param4] = param1;
-                        if (var6 == 0) {
-                          continue L3;
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                  } else {
-                    param4++;
-                    param3[param4] = param1;
-                    param4++;
-                    param3[param4] = param1;
-                    param4++;
-                    param3[param4] = param1;
-                    param4++;
-                    param3[param4] = param1;
-                    param4++;
-                    param3[param4] = param1;
-                    param4++;
-                    param3[param4] = param1;
-                    param4++;
-                    param3[param4] = param1;
-                    param4++;
-                    param3[param4] = param1;
-                    if (var6 != 0) {
-                      break L2;
+                if (param4 >= var5_int) {
+                  L2: while (true) {
+                    if (param4 >= param2) {
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     } else {
-                      continue L1;
+                      param4++;
+                      param3[param4] = param1;
+                      continue L2;
                     }
                   }
+                } else {
+                  param4++;
+                  param3[param4] = param1;
+                  param4++;
+                  param3[param4] = param1;
+                  param4++;
+                  param3[param4] = param1;
+                  param4++;
+                  param3[param4] = param1;
+                  param4++;
+                  param3[param4] = param1;
+                  param4++;
+                  param3[param4] = param1;
+                  param4++;
+                  param3[param4] = param1;
+                  param4++;
+                  param3[param4] = param1;
+                  continue L1;
                 }
-                decompiledRegionSelector0 = 1;
-                break L0;
               }
             } else {
               decompiledRegionSelector0 = 0;
@@ -146,33 +125,25 @@ final class nra implements bo {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var5);
-            stackOut_13_1 = new StringBuilder().append("nra.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_10_0 = (RuntimeException) (var5);
+
+            stackIn_10_1 = new StringBuilder().append("nra.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L4;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
+              break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L4;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
+              break L3;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param4 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -190,7 +161,7 @@ final class nra implements bo {
     }
 
     final void a(long param0, long param1, boolean param2, long param3, long param4) {
-        kh var11 = null;
+        kh var11;
         this.field_e = param3;
         this.field_l = param0;
         if (param2) {

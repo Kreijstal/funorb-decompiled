@@ -18,9 +18,12 @@ final class de {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_23_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -28,11 +31,6 @@ final class de {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_23_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
         var14 = stellarshard.field_B;
         try {
           L0: {
@@ -61,12 +59,10 @@ final class de {
                           L3: {
                             var12 = fj.field_b[var11];
                             if (!param5) {
-                              stackOut_22_0 = vh.field_h[var12];
-                              stackIn_23_0 = stackOut_22_0;
+                              stackIn_23_0 = vh.field_h[var12];
                               break L3;
                             } else {
-                              stackOut_21_0 = se.field_B[var12];
-                              stackIn_23_0 = stackOut_21_0;
+                              stackIn_23_0 = se.field_B[var12];
                               break L3;
                             }
                           }
@@ -89,9 +85,9 @@ final class de {
                                   break L5;
                                 }
                               }
-                              incrementValue$1 = var8;
+                              incrementValue$0 = var8;
                               var8++;
-                              fj.field_b[incrementValue$1] = var12;
+                              fj.field_b[incrementValue$0] = var12;
                               break L4;
                             }
                           }
@@ -160,27 +156,15 @@ final class de {
     }
 
     final static bk a(String param0, int param1) {
-        bk discarded$2 = null;
         RuntimeException var2 = null;
         String var3 = null;
         bk stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        bk stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -188,39 +172,30 @@ final class de {
                 break L1;
               } else {
                 var3 = (String) null;
-                discarded$2 = de.a((String) null, 4);
+                de.a((String) null, 4);
                 break L1;
               }
             }
-            stackOut_2_0 = new bk(param0);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new bk(param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("de.B(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("de.B(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }

@@ -55,14 +55,13 @@ final class bf {
     double field_j;
 
     private final void d(int param0) {
-        bf discarded$1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6_int = 0;
-        bf var6 = null;
-        int var7 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6_int;
+        bf var6;
+        int var7;
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (this.field_o < (double)param0) {
           return;
@@ -157,7 +156,7 @@ final class bf {
                             break L4;
                           }
                         } else {
-                          discarded$1 = sd.field_a.a(hi.a(32, 4, this.field_T) + (var5 + -16), true, var3, hi.a(64, param0 + 4, this.field_T) + (var4 - 32), 0, true);
+                          sd.field_a.a(hi.a(32, 4, this.field_T) + (var5 + -16), true, var3, hi.a(64, param0 + 4, this.field_T) + (var4 - 32), 0, true);
                           var6_int++;
                           continue L6;
                         }
@@ -221,15 +220,15 @@ final class bf {
     }
 
     final boolean d(byte param0) {
-        int fieldTemp$1 = 0;
-        he[] var2 = null;
-        int var3 = 0;
-        he var3_ref_he = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int fieldTemp$0 = 0;
+        he[] var2;
+        int var3;
+        he var3_ref_he;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         L0: {
           var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (this.field_e != 0) {
@@ -267,9 +266,9 @@ final class bf {
           if (this.field_V % qa.field_T[this.field_Q] != 0) {
             break L3;
           } else {
-            fieldTemp$1 = this.field_E + 1;
+            fieldTemp$0 = this.field_E + 1;
             this.field_E = this.field_E + 1;
-            if (fieldTemp$1 != var2.length) {
+            if (fieldTemp$0 != var2.length) {
               break L3;
             } else {
               this.field_E = 0;
@@ -511,23 +510,13 @@ final class bf {
     }
 
     private final void a(byte param0, he param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -607,27 +596,19 @@ final class bf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var3);
-            stackOut_23_1 = new StringBuilder().append("bf.CA(").append(param0).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var3);
+
+            stackIn_25_1 = new StringBuilder().append("bf.CA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L7;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L7;
             }
           }
@@ -653,8 +634,6 @@ final class bf {
 
     final boolean a(boolean param0) {
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         L0: {
           if (!param0) {
             break L0;
@@ -687,12 +666,10 @@ final class bf {
                 }
               }
             }
-            stackOut_9_0 = 0;
-            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_0 = 0;
             break L1;
           }
-          stackOut_8_0 = 1;
-          stackIn_10_0 = stackOut_8_0;
+          stackIn_10_0 = 1;
           break L1;
         }
         return stackIn_10_0 != 0;
@@ -708,21 +685,13 @@ final class bf {
     private final void l(int param0) {
         int var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         int var2 = this.field_Q;
-        if (40 != var2) {
-            if (-42 != (var2 ^ -1)) {
-                if ((var2 ^ -1) != -9) {
-                    if (9 != var2) {
-                        if (!(var2 == 10)) {
-                            if (!((var2 ^ -1) == -16)) {
-                                if (16 != var2) {
-                                    if (0.0 > this.field_N) {
-                                        if (!(cj.field_c[this.field_Q])) {
-                                            this.field_j = 0.0;
-                                            this.field_N = 0.0;
-                                        }
-                                    }
-                                }
-                            }
+        if (40 != var2 && -42 != (var2 ^ -1) && (var2 ^ -1) != -9 && 9 != var2) {
+            if (!(var2 == 10)) {
+                if (!((var2 ^ -1) == -16)) {
+                    if (16 != var2 && 0.0 > this.field_N) {
+                        if (!(cj.field_c[this.field_Q])) {
+                            this.field_j = 0.0;
+                            this.field_N = 0.0;
                         }
                     }
                 }
@@ -742,47 +711,21 @@ final class bf {
     }
 
     private final boolean g(byte param0) {
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        if (param0 < -34) {
-          if (null != sd.field_a) {
-            L0: {
-              if (this.field_Q == 45) {
-                break L0;
-              } else {
-                if (44 != this.field_Q) {
-                  return true;
-                } else {
-                  break L0;
-                }
-              }
-            }
-            L1: {
-              if (200.0 <= dl.a(true, -sd.field_a.field_N + this.field_o, -sd.field_a.field_D + this.field_N)) {
-                stackOut_9_0 = 0;
-                stackIn_10_0 = stackOut_9_0;
-                break L1;
-              } else {
-                stackOut_8_0 = 1;
-                stackIn_10_0 = stackOut_8_0;
-                break L1;
-              }
-            }
-            return stackIn_10_0 != 0;
-          } else {
-            return false;
-          }
-        } else {
-          return true;
+        if (param0 >= -34) {
+            return true;
         }
+        if (null == sd.field_a) {
+            return false;
+        }
+        if (this.field_Q == 45 || 44 == this.field_Q) {
+            return 200.0 > dl.a(true, -sd.field_a.field_N + this.field_o, -sd.field_a.field_D + this.field_N) ? true : false;
+        }
+        return true;
     }
 
     final boolean h(int param0) {
-        int var2 = 0;
+        int var2;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           L1: {
             var2 = 33 / ((-20 - param0) / 37);
@@ -796,8 +739,7 @@ final class bf {
                   break L1;
                 } else {
                   if (18 != this.field_Q) {
-                    stackOut_6_0 = 0;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = 0;
                     break L0;
                   } else {
                     break L1;
@@ -806,18 +748,17 @@ final class bf {
               }
             }
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 1;
           break L0;
         }
         return stackIn_7_0 != 0;
     }
 
     private final void f(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (0 <= this.field_H) {
           L0: {
@@ -1304,41 +1245,33 @@ final class bf {
     }
 
     final void j(int param0) {
-        int var2 = 0;
-        int var3_int = 0;
-        double var3 = 0.0;
-        int var4 = 0;
-        int var5 = 0;
-        double var5_double = 0.0;
-        int var6_int = 0;
-        Random var6 = null;
-        double var7_double = 0.0;
-        int var7 = 0;
-        int var8_int = 0;
-        he[] var8 = null;
-        double var9_double = 0.0;
-        int var9_int = 0;
-        he var9 = null;
-        int[] var10_ref_int__ = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        he var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        Object stackIn_26_0 = null;
         Object stackIn_27_0 = null;
         Object stackIn_28_0 = null;
         he stackIn_28_1 = null;
         int stackIn_80_0 = 0;
-        Object stackOut_25_0 = null;
-        Object stackOut_27_0 = null;
-        he stackOut_27_1 = null;
-        Object stackOut_26_0 = null;
-        he stackOut_26_1 = null;
-        int stackOut_79_0 = 0;
-        int stackOut_78_0 = 0;
+        int var2;
+        int var3_int;
+        double var3;
+        int var4;
+        int var5;
+        double var5_double;
+        int var6_int;
+        Random var6;
+        double var7_double;
+        int var7;
+        int var8_int;
+        he[] var8;
+        double var9_double;
+        int var9_int;
+        he var9;
+        int[] var10_ref_int__;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        he var14;
+        int[] var15;
+        int[] var16;
         L0: {
           var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (sd.field_e == 0) {
@@ -1424,20 +1357,15 @@ final class bf {
                   }
                   L7: {
                     var11 = (12 + var11) % 32;
-                    stackOut_25_0 = this;
-                    stackIn_27_0 = stackOut_25_0;
-                    stackIn_26_0 = stackOut_25_0;
+                    stackIn_27_0 = this;
+
                     if ((this.field_Q ^ -1) == -63) {
-                      stackOut_27_0 = this;
-                      stackOut_27_1 = lc.field_i[var11];
-                      stackIn_28_0 = stackOut_27_0;
-                      stackIn_28_1 = stackOut_27_1;
+                      stackIn_28_0 = this;
+                      stackIn_28_1 = lc.field_i[var11];
                       break L7;
                     } else {
-                      stackOut_26_0 = this;
-                      stackOut_26_1 = jk.field_I[var11];
-                      stackIn_28_0 = stackOut_26_0;
-                      stackIn_28_1 = stackOut_26_1;
+                      stackIn_28_0 = this;
+                      stackIn_28_1 = jk.field_I[var11];
                       break L7;
                     }
                   }
@@ -1617,12 +1545,10 @@ final class bf {
                 L20: {
                   var3 = (double)this.field_H / (double)ql.field_b[this.field_Q];
                   if (this.field_Q == 18) {
-                    stackOut_79_0 = 30;
-                    stackIn_80_0 = stackOut_79_0;
+                    stackIn_80_0 = 30;
                     break L20;
                   } else {
-                    stackOut_78_0 = 10;
-                    stackIn_80_0 = stackOut_78_0;
+                    stackIn_80_0 = 10;
                     break L20;
                   }
                 }
@@ -1660,27 +1586,17 @@ final class bf {
     final static void a(int param0, java.applet.Applet param1) {
         try {
             String var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
             int var3 = 0;
             String var4 = null;
             java.net.URL var5 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             RuntimeException stackIn_10_0 = null;
             StringBuilder stackIn_10_1 = null;
             String stackIn_10_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            RuntimeException stackOut_9_0 = null;
-            StringBuilder stackOut_9_1 = null;
-            String stackOut_9_2 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             try {
               L0: {
                 try {
@@ -1714,27 +1630,19 @@ final class bf {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_7_0 = (RuntimeException) (var2_ref2);
-                stackOut_7_1 = new StringBuilder().append("bf.K(").append(param0).append(',');
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_9_1 = stackOut_7_1;
-                stackIn_8_0 = stackOut_7_0;
-                stackIn_8_1 = stackOut_7_1;
+                stackIn_9_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_9_1 = new StringBuilder().append("bf.K(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-                  stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-                  stackOut_9_2 = "null";
-                  stackIn_10_0 = stackOut_9_0;
-                  stackIn_10_1 = stackOut_9_1;
-                  stackIn_10_2 = stackOut_9_2;
+                  stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+                  stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+                  stackIn_10_2 = "null";
                   break L4;
                 } else {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "{...}";
-                  stackIn_10_0 = stackOut_8_0;
-                  stackIn_10_1 = stackOut_8_1;
-                  stackIn_10_2 = stackOut_8_2;
+                  stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+                  stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+                  stackIn_10_2 = "{...}";
                   break L4;
                 }
               }
@@ -1748,9 +1656,9 @@ final class bf {
     }
 
     final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (param0 == 5) {
@@ -1927,20 +1835,20 @@ final class bf {
     }
 
     private final void k(int param0) {
-        double var2 = 0.0;
-        double var4 = 0.0;
-        double var6 = 0.0;
-        double var8 = 0.0;
-        double var10 = 0.0;
-        double var12 = 0.0;
-        double var14 = 0.0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        double var19 = 0.0;
-        double var21 = 0.0;
-        int var23 = 0;
-        int var24 = 0;
+        double var2;
+        double var4;
+        double var6;
+        double var8;
+        double var14;
+        int var16;
+        int var23;
+        int var24;
+        double var10;
+        double var12;
+        int var17;
+        int var18;
+        double var19;
+        double var21;
         L0: {
           var24 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           var2 = (double)(int)(this.field_o + (double)this.field_I);
@@ -2044,20 +1952,20 @@ final class bf {
     }
 
     private final void e(int param0) {
-        double var2 = 0.0;
-        double var4 = 0.0;
-        double var6 = 0.0;
-        double var8 = 0.0;
-        double var10 = 0.0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        double var15 = 0.0;
-        double var17 = 0.0;
-        double var19 = 0.0;
-        double var21 = 0.0;
-        int var23 = 0;
-        int var24 = 0;
+        double var2;
+        double var4;
+        double var6;
+        double var8;
+        double var10;
+        int var12;
+        int var13;
+        int var14;
+        double var15;
+        double var17;
+        double var19;
+        double var21;
+        int var23;
+        int var24;
         var24 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (0 <= this.field_V) {
           L0: {
@@ -2344,28 +2252,22 @@ final class bf {
     }
 
     final boolean a(int param0, int param1) {
-        int discarded$1 = 0;
-        int var3 = 0;
-        bf var4 = null;
-        double var5 = 0.0;
-        double var7 = 0.0;
-        int var9 = 0;
-        Object stackIn_9_0 = null;
+        int discarded$0 = 0;
         Object stackIn_10_0 = null;
         Object stackIn_11_0 = null;
         int stackIn_11_1 = 0;
-        Object stackOut_8_0 = null;
-        Object stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
+        int var3;
+        bf var4;
+        double var5;
+        double var7;
+        int var9;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (!wh.field_v[this.field_Q]) {
           L0: {
             if (param1 == 10) {
               break L0;
             } else {
-              discarded$1 = this.f((byte) -7);
+              discarded$0 = this.f((byte) -7);
               break L0;
             }
           }
@@ -2383,20 +2285,15 @@ final class bf {
           L2: {
             this.field_A = true;
             this.field_H = this.field_H - param0;
-            stackOut_8_0 = this;
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_10_0 = this;
+
             if ((this.field_H ^ -1) <= -1) {
-              stackOut_10_0 = this;
-              stackOut_10_1 = 0;
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_0 = this;
+              stackIn_11_1 = 0;
               break L2;
             } else {
-              stackOut_9_0 = this;
-              stackOut_9_1 = 1;
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_0 = this;
+              stackIn_11_1 = 1;
               break L2;
             }
           }
@@ -2490,7 +2387,7 @@ final class bf {
     }
 
     final he b(byte param0) {
-        int var2 = 0;
+        int var2;
         L0: {
           if (param0 == 55) {
             break L0;
@@ -2608,11 +2505,9 @@ final class bf {
     }
 
     private final void g(int param0) {
-        bf discarded$2 = null;
-        bf discarded$3 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (0.0 > this.field_o) {
           return;
@@ -2633,7 +2528,7 @@ final class bf {
               if (-12 != (var3 ^ -1)) {
                 if (-19 == (var3 ^ -1)) {
                   var2 = 64;
-                  discarded$2 = sd.field_a.a((int)((double)this.field_t + this.field_N), true, 4, (int)((double)this.field_I + this.field_o), 0, true);
+                  sd.field_a.a((int)((double)this.field_t + this.field_N), true, 4, (int)((double)this.field_I + this.field_o), 0, true);
                   break L1;
                 } else {
                   break L1;
@@ -2651,7 +2546,7 @@ final class bf {
                       }
                     }
                   }
-                  discarded$3 = sd.field_a.a((int)(this.field_N + (double)this.field_t), true, 9, (int)((double)this.field_I + this.field_o), 0, true);
+                  sd.field_a.a((int)(this.field_N + (double)this.field_t), true, 9, (int)((double)this.field_I + this.field_o), 0, true);
                   break L2;
                 }
                 var2 = 36;
@@ -2674,13 +2569,13 @@ final class bf {
     }
 
     private final void a(byte param0) {
-        int var2 = 0;
-        double var3 = 0.0;
-        double var5 = 0.0;
-        double var7 = 0.0;
-        double var9 = 0.0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        double var3;
+        double var5;
+        double var7;
+        double var9;
+        int var11;
+        int var12;
         L0: {
           var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           var2 = 15 % ((param0 - -90) / 33);
@@ -2868,10 +2763,10 @@ final class bf {
     }
 
     bf(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        int var7 = 0;
-        double var8 = 0.0;
-        int var10 = 0;
-        he var12 = null;
+        int var7;
+        double var8;
+        int var10;
+        he var12;
         L0: {
           L1: {
             this.field_s = false;

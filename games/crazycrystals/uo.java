@@ -12,16 +12,16 @@ final class uo extends el {
     static dc field_i;
 
     final void a(boolean param0, int param1, int param2, byte param3, boolean param4, int param5, int param6) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         var17 = CrazyCrystals.field_B;
         var8 = kh.field_c;
         var9 = kh.field_b;
@@ -295,9 +295,9 @@ final class uo extends el {
     }
 
     final fb a(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = -48 / ((36 - param0) / 62);
-        fb discarded$2 = super.a(99);
+        fb discarded$1 = super.a(99);
         this.field_j = this.field_j + 1;
         if (this.field_p) {
           return null;

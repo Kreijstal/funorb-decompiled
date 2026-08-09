@@ -10,13 +10,12 @@ final class il {
 
     final cn a(int param0) {
         try {
-            IllegalAccessException var2 = null;
-            java.lang.reflect.InvocationTargetException var2_ref = null;
-            Object[] var3 = null;
             cn stackIn_6_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            cn stackOut_5_0 = null;
+            IllegalAccessException var2 = null;
+            java.lang.reflect.InvocationTargetException var2_ref = null;
+            Object[] var3 = null;
             if (this.field_e instanceof cn) {
               return (cn) (this.field_e);
             } else {
@@ -31,8 +30,7 @@ final class il {
                     }
                   }
                   var3 = (Object[]) null;
-                  stackOut_5_0 = (cn) (hd.field_e.invoke(this.field_e, (Object[]) null));
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = (cn) (hd.field_e.invoke(this.field_e, (Object[]) null));
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -66,56 +64,50 @@ final class il {
 
     final static boolean a(boolean param0, char param1) {
         char[] var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
+        char[] var7 = null;
+        char[] var8 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_22_0 = 0;
+        int stackIn_20_0 = 0;
         int stackIn_24_0 = 0;
+        int stackIn_26_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_23_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_2_0 = 0;
+        RuntimeException var2_ref = null;
         var5 = DungeonAssault.field_K;
         try {
           L0: {
             if (!Character.isISOControl(param1)) {
               if (!pp.a(-63, param1)) {
-                var6 = wk.field_f;
+                var8 = wk.field_f;
+                var7 = var8;
+                var6 = var7;
                 var2 = var6;
                 var3 = 0;
                 L1: while (true) {
-                  if (var6.length <= var3) {
+                  if (var8.length <= var3) {
                     var2 = ul.field_c;
                     var3 = 0;
                     L2: while (true) {
                       if (var2.length <= var3) {
                         if (param0) {
-                          stackOut_23_0 = 0;
-                          stackIn_24_0 = stackOut_23_0;
-                          decompiledRegionSelector0 = 5;
+                          stackIn_26_0 = 0;
+                          decompiledRegionSelector0 = 4;
                           break L0;
                         } else {
-                          stackOut_21_0 = 1;
-                          stackIn_22_0 = stackOut_21_0;
-                          decompiledRegionSelector0 = 4;
+                          stackIn_24_0 = 1;
+                          decompiledRegionSelector0 = 3;
                           break L0;
                         }
                       } else {
                         var4 = var2[var3];
                         if (param1 == var4) {
-                          stackOut_17_0 = 1;
-                          stackIn_18_0 = stackOut_17_0;
-                          decompiledRegionSelector0 = 3;
+                          stackIn_20_0 = 1;
+                          decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
                           var3++;
@@ -124,27 +116,22 @@ final class il {
                       }
                     }
                   } else {
-                    var4 = var6[var3];
-                    if (param1 != var4) {
+                    var4 = var8[var3];
+                    if ((param1 ^ -1) != (var4 ^ -1)) {
                       var3++;
                       continue L1;
                     } else {
-                      stackOut_10_0 = 1;
-                      stackIn_11_0 = stackOut_10_0;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
+                      return true;
                     }
                   }
                 }
               } else {
-                stackOut_5_0 = 1;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -161,16 +148,12 @@ final class il {
             return stackIn_6_0 != 0;
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return stackIn_11_0 != 0;
+              return stackIn_20_0 != 0;
             } else {
               if (decompiledRegionSelector0 == 3) {
-                return stackIn_18_0 != 0;
+                return stackIn_24_0 != 0;
               } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_22_0 != 0;
-                } else {
-                  return stackIn_24_0 != 0;
-                }
+                return stackIn_26_0 != 0;
               }
             }
           }
@@ -179,12 +162,6 @@ final class il {
 
     il(cn param0) {
         try {
-            IllegalAccessException var2 = null;
-            java.lang.reflect.InvocationTargetException var2_ref = null;
-            InstantiationException var2_ref2 = null;
-            RuntimeException var2_ref3 = null;
-            RuntimeException stackIn_10_0 = null;
-            StringBuilder stackIn_10_1 = null;
             RuntimeException stackIn_11_0 = null;
             StringBuilder stackIn_11_1 = null;
             RuntimeException stackIn_12_0 = null;
@@ -192,14 +169,10 @@ final class il {
             String stackIn_12_2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_9_0 = null;
-            StringBuilder stackOut_9_1 = null;
-            RuntimeException stackOut_11_0 = null;
-            StringBuilder stackOut_11_1 = null;
-            String stackOut_11_2 = null;
-            RuntimeException stackOut_10_0 = null;
-            StringBuilder stackOut_10_1 = null;
-            String stackOut_10_2 = null;
+            IllegalAccessException var2 = null;
+            java.lang.reflect.InvocationTargetException var2_ref = null;
+            InstantiationException var2_ref2 = null;
+            RuntimeException var2_ref3 = null;
             try {
               L0: {
                 L1: {
@@ -243,27 +216,19 @@ final class il {
               decompiledCaughtException = decompiledCaughtParameter3;
               L4: {
                 var2_ref3 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_9_0 = (RuntimeException) (var2_ref3);
-                stackOut_9_1 = new StringBuilder().append("il.<init>(");
-                stackIn_11_0 = stackOut_9_0;
-                stackIn_11_1 = stackOut_9_1;
-                stackIn_10_0 = stackOut_9_0;
-                stackIn_10_1 = stackOut_9_1;
+                stackIn_11_0 = (RuntimeException) (var2_ref3);
+
+                stackIn_11_1 = new StringBuilder().append("il.<init>(");
+
                 if (param0 == null) {
-                  stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-                  stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackOut_11_2 = "null";
-                  stackIn_12_0 = stackOut_11_0;
-                  stackIn_12_1 = stackOut_11_1;
-                  stackIn_12_2 = stackOut_11_2;
+                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+                  stackIn_12_2 = "null";
                   break L4;
                 } else {
-                  stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-                  stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-                  stackOut_10_2 = "{...}";
-                  stackIn_12_0 = stackOut_10_0;
-                  stackIn_12_1 = stackOut_10_1;
-                  stackIn_12_2 = stackOut_10_2;
+                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+                  stackIn_12_2 = "{...}";
                   break L4;
                 }
               }

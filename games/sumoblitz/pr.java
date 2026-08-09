@@ -27,61 +27,33 @@ final class pr extends ht {
     }
 
     final void a(boolean param0, byte param1) {
-        int stackIn_2_0 = 0;
-        int stackIn_2_1 = 0;
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
         int stackIn_4_0 = 0;
         int stackIn_4_1 = 0;
         int stackIn_4_2 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_6_1 = 0;
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
         int stackIn_8_2 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_1_1 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
         if (param1 < 119) {
           L0: {
             field_k = (hr[]) null;
             this.field_d.a(69, (ht) (this));
-            stackOut_5_0 = this.field_c;
-            stackOut_5_1 = 10242;
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = this.field_c;
+
+            stackIn_7_1 = 10242;
+
             if (!param0) {
-              stackOut_7_0 = stackIn_7_0;
-              stackOut_7_1 = stackIn_7_1;
-              stackOut_7_2 = 33071;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = stackIn_7_0;
+              stackIn_8_1 = stackIn_7_1;
+              stackIn_8_2 = 33071;
               break L0;
             } else {
-              stackOut_6_0 = stackIn_6_0;
-              stackOut_6_1 = stackIn_6_1;
-              stackOut_6_2 = 10497;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = stackIn_7_0;
+              stackIn_8_1 = stackIn_7_1;
+              stackIn_8_2 = 10497;
               break L0;
             }
           }
@@ -90,27 +62,19 @@ final class pr extends ht {
         } else {
           L1: {
             this.field_d.a(69, (ht) (this));
-            stackOut_1_0 = this.field_c;
-            stackOut_1_1 = 10242;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_2_0 = stackOut_1_0;
-            stackIn_2_1 = stackOut_1_1;
+            stackIn_3_0 = this.field_c;
+
+            stackIn_3_1 = 10242;
+
             if (!param0) {
-              stackOut_3_0 = stackIn_3_0;
-              stackOut_3_1 = stackIn_3_1;
-              stackOut_3_2 = 33071;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              stackIn_4_2 = stackOut_3_2;
+              stackIn_4_0 = stackIn_3_0;
+              stackIn_4_1 = stackIn_3_1;
+              stackIn_4_2 = 33071;
               break L1;
             } else {
-              stackOut_2_0 = stackIn_2_0;
-              stackOut_2_1 = stackIn_2_1;
-              stackOut_2_2 = 10497;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              stackIn_4_2 = stackOut_2_2;
+              stackIn_4_0 = stackIn_3_0;
+              stackIn_4_1 = stackIn_3_1;
+              stackIn_4_2 = 10497;
               break L1;
             }
           }

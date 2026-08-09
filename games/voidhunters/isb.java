@@ -3,9 +3,8 @@
  */
 final class isb implements dja {
     public final tv[] a(int param0, int param1) {
-        tv[] discarded$0 = null;
         if (param0 != 11995) {
-            discarded$0 = this.a(-57, 110);
+            this.a(-57, 110);
             return (tv[]) ((Object) new om[param1]);
         }
         return (tv[]) ((Object) new om[param1]);

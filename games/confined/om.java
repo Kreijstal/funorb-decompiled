@@ -25,11 +25,11 @@ final class om extends rk {
     }
 
     final static qn a(int param0, int param1, int param2, int param3, byte param4) {
-        Object var5 = null;
-        qn var5_ref = null;
-        int var6 = 0;
-        qn var7 = null;
-        qn var8 = null;
+        Object var5;
+        qn var5_ref;
+        int var6;
+        qn var7;
+        qn var8;
         var5 = null;
         var6 = Confined.field_J ? 1 : 0;
         if (param4 == -30) {

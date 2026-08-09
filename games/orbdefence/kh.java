@@ -31,79 +31,52 @@ final class kh {
     private static int[] field_w;
 
     final void a(mg param0) {
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        L0: {
-          this.field_t = new ah();
-          this.field_t.a(param0);
-          this.field_c = new ah();
-          this.field_c.a(param0);
-          var2 = param0.b((byte) 90);
-          if (var2 == 0) {
-            break L0;
-          } else {
+        this.field_t = new ah();
+        this.field_t.a(param0);
+        this.field_c = new ah();
+        this.field_c.a(param0);
+        int var2 = param0.b((byte) 90);
+        if (var2 != 0) {
             param0.field_i = param0.field_i - 1;
             this.field_y = new ah();
             this.field_y.a(param0);
             this.field_f = new ah();
             this.field_f.a(param0);
-            break L0;
-          }
         }
-        L1: {
-          var2 = param0.b((byte) 90);
-          if (var2 == 0) {
-            break L1;
-          } else {
+        var2 = param0.b((byte) 90);
+        if (var2 != 0) {
             param0.field_i = param0.field_i - 1;
             this.field_r = new ah();
             this.field_r.a(param0);
             this.field_o = new ah();
             this.field_o.a(param0);
-            break L1;
-          }
         }
-        L2: {
-          var2 = param0.b((byte) 90);
-          if (var2 == 0) {
-            break L2;
-          } else {
+        var2 = param0.b((byte) 90);
+        if (var2 != 0) {
             param0.field_i = param0.field_i - 1;
             this.field_q = new ah();
             this.field_q.a(param0);
             this.field_u = new ah();
             this.field_u.a(param0);
-            break L2;
-          }
         }
-        var3 = 0;
-        L3: while (true) {
-          L4: {
-            if (var3 >= 10) {
-              break L4;
-            } else {
-              var4 = param0.e(123);
-              if (var4 != 0) {
-                this.field_v[var3] = var4;
-                this.field_a[var3] = param0.c(true);
-                this.field_k[var3] = param0.e(124);
-                var3++;
-                continue L3;
-              } else {
-                break L4;
-              }
+        for (var3 = 0; var3 < 10; var3++) {
+            var4 = param0.e(123);
+            if (var4 == 0) {
+                break;
             }
-          }
-          this.field_b = param0.e(120);
-          this.field_s = param0.e(119);
-          this.field_i = param0.j(98203176);
-          this.field_p = param0.j(98203176);
-          this.field_n = new lk();
-          this.field_x = new ah();
-          this.field_n.a(param0, this.field_x);
-          return;
+            this.field_v[var3] = var4;
+            this.field_a[var3] = param0.c(true);
+            this.field_k[var3] = param0.e(124);
         }
+        this.field_b = param0.e(120);
+        this.field_s = param0.e(119);
+        this.field_i = param0.j(98203176);
+        this.field_p = param0.j(98203176);
+        this.field_n = new lk();
+        this.field_x = new ah();
+        this.field_n.a(param0, this.field_x);
     }
 
     private final int a(int param0, int param1, int param2) {
@@ -137,23 +110,21 @@ final class kh {
     }
 
     final int[] a(int param0, int param1) {
-        double var3 = 0.0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
         int stackIn_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
+        double var3;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         mk.a(field_e, 0, param0);
         if (param1 >= 10) {
           L0: {
@@ -226,12 +197,10 @@ final class kh {
                               L8: {
                                 var11 = 0;
                                 if (var13 != 0) {
-                                  stackOut_35_0 = 0;
-                                  stackIn_36_0 = stackOut_35_0;
+                                  stackIn_36_0 = 0;
                                   break L8;
                                 } else {
-                                  stackOut_34_0 = 1;
-                                  stackIn_36_0 = stackOut_34_0;
+                                  stackIn_36_0 = 1;
                                   break L8;
                                 }
                               }

@@ -33,15 +33,15 @@ final class gh {
     }
 
     final void b(byte param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         if (cc.field_w == null) {
           if ((fc.field_a ^ -1) >= -1) {
             this.field_h = false;
             if (this.field_h) {
-              fieldTemp$2 = this.field_g - 1;
+              fieldTemp$0 = this.field_g - 1;
               this.field_g = this.field_g - 1;
-              if (0 >= fieldTemp$2) {
+              if (0 >= fieldTemp$0) {
                 this.field_g = this.field_p;
                 if (this.field_s <= d.field_g) {
                   if (param0 == -9) {
@@ -107,9 +107,9 @@ final class gh {
             }
           } else {
             if (this.field_h) {
-              fieldTemp$3 = this.field_g - 1;
+              fieldTemp$1 = this.field_g - 1;
               this.field_g = this.field_g - 1;
-              if (0 >= fieldTemp$3) {
+              if (0 >= fieldTemp$1) {
                 this.field_g = this.field_p;
                 if (this.field_s <= d.field_g) {
                   if (param0 == -9) {
@@ -186,7 +186,7 @@ final class gh {
     }
 
     final void a(int param0, int param1, byte param2) {
-        hj var5 = null;
+        hj var5;
         this.field_j = param0;
         if (param2 >= -45) {
           var5 = (hj) null;
@@ -240,10 +240,10 @@ final class gh {
     }
 
     private final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = HoldTheLine.field_D;
         if (param0 == 124) {
           var2 = this.field_j;

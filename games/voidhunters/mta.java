@@ -37,10 +37,10 @@ final class mta implements dja {
     }
 
     final static void c(byte param0) {
-        ft var1 = null;
-        ola var1_ref = null;
-        byte[] var3 = null;
-        byte[] var4 = null;
+        ft var1;
+        ola var1_ref;
+        byte[] var3;
+        byte[] var4;
         if (param0 < 89) {
           L0: {
             mta.a(false);

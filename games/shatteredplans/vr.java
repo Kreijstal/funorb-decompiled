@@ -21,8 +21,6 @@ final class vr {
         RuntimeException var3_ref = null;
         bi stackIn_2_0 = null;
         bi stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -30,27 +28,15 @@ final class vr {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        bi stackOut_3_0 = null;
-        bi stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param2 == 1) {
               var3 = "turn0" + param1;
-              stackOut_3_0 = mf.a(param0, "", var3, false);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = mf.a(param0, "", var3, false);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (bi) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (bi) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -59,27 +45,19 @@ final class vr {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3_ref);
-            stackOut_5_1 = new StringBuilder().append("vr.C(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3_ref);
+
+            stackIn_7_1 = new StringBuilder().append("vr.C(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -93,325 +71,196 @@ final class vr {
     }
 
     public final String toString() {
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
-        StringBuilder discarded$10 = null;
-        StringBuilder discarded$11 = null;
-        StringBuilder discarded$12 = null;
-        StringBuilder discarded$13 = null;
-        StringBuilder var2 = null;
-        StringBuilder stackIn_1_0 = null;
-        StringBuilder stackIn_1_1 = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
         StringBuilder stackIn_2_0 = null;
         StringBuilder stackIn_2_1 = null;
         StringBuilder stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
         String stackIn_3_2 = null;
-        StringBuilder stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         StringBuilder stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         StringBuilder stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
-        StringBuilder stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         StringBuilder stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         StringBuilder stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        StringBuilder stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         StringBuilder stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         StringBuilder stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        StringBuilder stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         StringBuilder stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         StringBuilder stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        StringBuilder stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         StringBuilder stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         StringBuilder stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        StringBuilder stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         StringBuilder stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         StringBuilder stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
-        StringBuilder stackOut_0_0 = null;
-        StringBuilder stackOut_0_1 = null;
-        StringBuilder stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        String stackOut_2_2 = null;
-        StringBuilder stackOut_1_0 = null;
-        StringBuilder stackOut_1_1 = null;
-        String stackOut_1_2 = null;
-        StringBuilder stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        StringBuilder stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        StringBuilder stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        StringBuilder stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        StringBuilder stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        StringBuilder stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        StringBuilder stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        StringBuilder stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        StringBuilder stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        StringBuilder stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        StringBuilder stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        StringBuilder stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        StringBuilder stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        StringBuilder stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        StringBuilder stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        StringBuilder stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        StringBuilder stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        StringBuilder stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        StringBuilder var2;
         L0: {
           var2 = new StringBuilder();
-          stackOut_0_0 = (StringBuilder) (var2);
-          stackOut_0_1 = new StringBuilder().append("Diplomacy Allowed: ");
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_2_1 = stackOut_0_1;
-          stackIn_1_0 = stackOut_0_0;
-          stackIn_1_1 = stackOut_0_1;
+          stackIn_2_0 = (StringBuilder) (var2);
+
+          stackIn_2_1 = new StringBuilder().append("Diplomacy Allowed: ");
+
           if (!this.field_j) {
-            stackOut_2_0 = (StringBuilder) ((Object) stackIn_2_0);
-            stackOut_2_1 = (StringBuilder) ((Object) stackIn_2_1);
-            stackOut_2_2 = "No";
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            stackIn_3_2 = stackOut_2_2;
+            stackIn_3_0 = (StringBuilder) ((Object) stackIn_2_0);
+            stackIn_3_1 = (StringBuilder) ((Object) stackIn_2_1);
+            stackIn_3_2 = "No";
             break L0;
           } else {
-            stackOut_1_0 = (StringBuilder) ((Object) stackIn_1_0);
-            stackOut_1_1 = (StringBuilder) ((Object) stackIn_1_1);
-            stackOut_1_2 = "Yes";
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
+            stackIn_3_0 = (StringBuilder) ((Object) stackIn_2_0);
+            stackIn_3_1 = (StringBuilder) ((Object) stackIn_2_1);
+            stackIn_3_2 = "Yes";
             break L0;
           }
         }
         L1: {
-          discarded$8 = ((StringBuilder) (Object) stackIn_3_0).append(stackIn_3_2 + "\n");
-          stackOut_3_0 = (StringBuilder) (var2);
-          stackOut_3_1 = new StringBuilder().append("Projects Allowed: ");
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_5_1 = stackOut_3_1;
-          stackIn_4_0 = stackOut_3_0;
-          stackIn_4_1 = stackOut_3_1;
+          discarded$0 = ((StringBuilder) (Object) stackIn_3_0).append(stackIn_3_2 + "\n");
+          stackIn_5_0 = (StringBuilder) (var2);
+
+          stackIn_5_1 = new StringBuilder().append("Projects Allowed: ");
+
           if (!this.field_h) {
-            stackOut_5_0 = (StringBuilder) ((Object) stackIn_5_0);
-            stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-            stackOut_5_2 = "No";
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            stackIn_6_2 = stackOut_5_2;
+            stackIn_6_0 = (StringBuilder) ((Object) stackIn_5_0);
+            stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+            stackIn_6_2 = "No";
             break L1;
           } else {
-            stackOut_4_0 = (StringBuilder) ((Object) stackIn_4_0);
-            stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-            stackOut_4_2 = "Yes";
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_6_2 = stackOut_4_2;
+            stackIn_6_0 = (StringBuilder) ((Object) stackIn_5_0);
+            stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+            stackIn_6_2 = "Yes";
             break L1;
           }
         }
         L2: {
-          discarded$9 = ((StringBuilder) (Object) stackIn_6_0).append(stackIn_6_2 + "\n");
-          stackOut_6_0 = (StringBuilder) (var2);
-          stackOut_6_1 = new StringBuilder().append("Simple Garrisoning: ");
-          stackIn_8_0 = stackOut_6_0;
-          stackIn_8_1 = stackOut_6_1;
-          stackIn_7_0 = stackOut_6_0;
-          stackIn_7_1 = stackOut_6_1;
+          discarded$1 = ((StringBuilder) (Object) stackIn_6_0).append(stackIn_6_2 + "\n");
+          stackIn_8_0 = (StringBuilder) (var2);
+
+          stackIn_8_1 = new StringBuilder().append("Simple Garrisoning: ");
+
           if (!this.field_l) {
-            stackOut_8_0 = (StringBuilder) ((Object) stackIn_8_0);
-            stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-            stackOut_8_2 = "No";
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            stackIn_9_2 = stackOut_8_2;
+            stackIn_9_0 = (StringBuilder) ((Object) stackIn_8_0);
+            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+            stackIn_9_2 = "No";
             break L2;
           } else {
-            stackOut_7_0 = (StringBuilder) ((Object) stackIn_7_0);
-            stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-            stackOut_7_2 = "Yes";
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_9_2 = stackOut_7_2;
+            stackIn_9_0 = (StringBuilder) ((Object) stackIn_8_0);
+            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+            stackIn_9_2 = "Yes";
             break L2;
           }
         }
         L3: {
-          discarded$10 = ((StringBuilder) (Object) stackIn_9_0).append(stackIn_9_2 + "\n");
-          stackOut_9_0 = (StringBuilder) (var2);
-          stackOut_9_1 = new StringBuilder().append("Garrisons Can Be Removed: ");
-          stackIn_11_0 = stackOut_9_0;
-          stackIn_11_1 = stackOut_9_1;
-          stackIn_10_0 = stackOut_9_0;
-          stackIn_10_1 = stackOut_9_1;
+          discarded$2 = ((StringBuilder) (Object) stackIn_9_0).append(stackIn_9_2 + "\n");
+          stackIn_11_0 = (StringBuilder) (var2);
+
+          stackIn_11_1 = new StringBuilder().append("Garrisons Can Be Removed: ");
+
           if (!this.field_e) {
-            stackOut_11_0 = (StringBuilder) ((Object) stackIn_11_0);
-            stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-            stackOut_11_2 = "No";
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
-            stackIn_12_2 = stackOut_11_2;
+            stackIn_12_0 = (StringBuilder) ((Object) stackIn_11_0);
+            stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+            stackIn_12_2 = "No";
             break L3;
           } else {
-            stackOut_10_0 = (StringBuilder) ((Object) stackIn_10_0);
-            stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-            stackOut_10_2 = "Yes";
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_12_2 = stackOut_10_2;
+            stackIn_12_0 = (StringBuilder) ((Object) stackIn_11_0);
+            stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+            stackIn_12_2 = "Yes";
             break L3;
           }
         }
         L4: {
-          discarded$11 = ((StringBuilder) (Object) stackIn_12_0).append(stackIn_12_2 + "\n");
-          stackOut_12_0 = (StringBuilder) (var2);
-          stackOut_12_1 = new StringBuilder().append("Chain Collapsing: ");
-          stackIn_14_0 = stackOut_12_0;
-          stackIn_14_1 = stackOut_12_1;
-          stackIn_13_0 = stackOut_12_0;
-          stackIn_13_1 = stackOut_12_1;
+          discarded$3 = ((StringBuilder) (Object) stackIn_12_0).append(stackIn_12_2 + "\n");
+          stackIn_14_0 = (StringBuilder) (var2);
+
+          stackIn_14_1 = new StringBuilder().append("Chain Collapsing: ");
+
           if (this.field_k) {
-            stackOut_14_0 = (StringBuilder) ((Object) stackIn_14_0);
-            stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-            stackOut_14_2 = "No";
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
-            stackIn_15_2 = stackOut_14_2;
+            stackIn_15_0 = (StringBuilder) ((Object) stackIn_14_0);
+            stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+            stackIn_15_2 = "No";
             break L4;
           } else {
-            stackOut_13_0 = (StringBuilder) ((Object) stackIn_13_0);
-            stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-            stackOut_13_2 = "Yes";
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_15_2 = stackOut_13_2;
+            stackIn_15_0 = (StringBuilder) ((Object) stackIn_14_0);
+            stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+            stackIn_15_2 = "Yes";
             break L4;
           }
         }
         L5: {
-          discarded$12 = ((StringBuilder) (Object) stackIn_15_0).append(stackIn_15_2 + "\n");
-          stackOut_15_0 = (StringBuilder) (var2);
-          stackOut_15_1 = new StringBuilder().append("Unified Territories: ");
-          stackIn_17_0 = stackOut_15_0;
-          stackIn_17_1 = stackOut_15_1;
-          stackIn_16_0 = stackOut_15_0;
-          stackIn_16_1 = stackOut_15_1;
+          discarded$4 = ((StringBuilder) (Object) stackIn_15_0).append(stackIn_15_2 + "\n");
+          stackIn_17_0 = (StringBuilder) (var2);
+
+          stackIn_17_1 = new StringBuilder().append("Unified Territories: ");
+
           if (this.field_i) {
-            stackOut_17_0 = (StringBuilder) ((Object) stackIn_17_0);
-            stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-            stackOut_17_2 = "Yes";
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
-            stackIn_18_2 = stackOut_17_2;
+            stackIn_18_0 = (StringBuilder) ((Object) stackIn_17_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "Yes";
             break L5;
           } else {
-            stackOut_16_0 = (StringBuilder) ((Object) stackIn_16_0);
-            stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-            stackOut_16_2 = "No";
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_18_2 = stackOut_16_2;
+            stackIn_18_0 = (StringBuilder) ((Object) stackIn_17_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "No";
             break L5;
           }
         }
         L6: {
-          discarded$13 = ((StringBuilder) (Object) stackIn_18_0).append(stackIn_18_2 + "\n");
-          stackOut_18_0 = (StringBuilder) (var2);
-          stackOut_18_1 = new StringBuilder().append("Destructable Defence Nets: ");
-          stackIn_20_0 = stackOut_18_0;
-          stackIn_20_1 = stackOut_18_1;
-          stackIn_19_0 = stackOut_18_0;
-          stackIn_19_1 = stackOut_18_1;
+          discarded$5 = ((StringBuilder) (Object) stackIn_18_0).append(stackIn_18_2 + "\n");
+          stackIn_20_0 = (StringBuilder) (var2);
+
+          stackIn_20_1 = new StringBuilder().append("Destructable Defence Nets: ");
+
           if (this.field_f) {
-            stackOut_20_0 = (StringBuilder) ((Object) stackIn_20_0);
-            stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-            stackOut_20_2 = "Yes";
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
-            stackIn_21_2 = stackOut_20_2;
+            stackIn_21_0 = (StringBuilder) ((Object) stackIn_20_0);
+            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+            stackIn_21_2 = "Yes";
             break L6;
           } else {
-            stackOut_19_0 = (StringBuilder) ((Object) stackIn_19_0);
-            stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-            stackOut_19_2 = "No";
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_21_2 = stackOut_19_2;
+            stackIn_21_0 = (StringBuilder) ((Object) stackIn_20_0);
+            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+            stackIn_21_2 = "No";
             break L6;
           }
         }
-        StringBuilder discarded$14 = ((StringBuilder) (Object) stackIn_21_0).append(stackIn_21_2 + "\n");
-        StringBuilder discarded$15 = var2.append("Movement Range: " + this.field_b);
+        StringBuilder discarded$6 = ((StringBuilder) (Object) stackIn_21_0).append(stackIn_21_2 + "\n");
+        StringBuilder discarded$7 = var2.append("Movement Range: " + this.field_b);
         return var2.toString();
     }
 
     public static void a(boolean param0) {
-        bi discarded$0 = null;
         field_a = null;
         field_d = null;
         if (!param0) {
             bc var2 = (bc) null;
-            discarded$0 = vr.a((bc) null, -126, 48);
+            vr.a((bc) null, -126, 48);
         }
     }
 
     final static void a(int param0, int param1) {
         try {
-            Object discarded$4 = null;
-            bi discarded$5 = null;
             Throwable throwable = null;
             bc var3 = null;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                discarded$4 = ll.a(kq.f((byte) 124), "resizing", new Object[]{new Integer(param1)}, param0 + 15355);
+                ll.a(kq.f((byte) 124), "resizing", new Object[]{new Integer(param1)}, param0 + 15355);
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -423,7 +272,7 @@ final class vr {
             }
             if (param0 != -15469) {
               var3 = (bc) null;
-              discarded$5 = vr.a((bc) null, -29, -123);
+              vr.a((bc) null, -29, -123);
               return;
             } else {
               return;

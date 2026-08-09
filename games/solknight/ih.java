@@ -3,7 +3,7 @@
  */
 final class ih {
     final static mb a(boolean param0) {
-        String var1 = null;
+        String var1;
         if (!param0) {
           return (mb) null;
         } else {

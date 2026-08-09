@@ -52,38 +52,37 @@ final class nb {
     }
 
     private final void g(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        L0: {
-          L1: {
-            var2 = 0;
-            var3 = 0;
-            if (-1 != (this.field_l ^ -1)) {
-              break L1;
+        int var2;
+        int var3;
+        var2 = 0;
+        var3 = 0;
+        if (-1 != (this.field_l ^ -1)) {
+          L0: {
+            if (this.field_l != 1) {
+              break L0;
             } else {
-              var2 = this.field_q;
-              var3 = this.field_k[0].field_x;
-              if (!ArmiesOfGielinor.field_M) {
-                break L0;
-              } else {
-                break L1;
-              }
+              var3 = this.field_q;
+              var2 = this.field_k[0].field_A;
+              break L0;
             }
           }
-          if (this.field_l != 1) {
-            break L0;
+          qn.b(this.field_c, this.field_d, var2, var3, this.field_m[0]);
+          if (param0 != 1043) {
+            this.g(61);
+            return;
           } else {
-            var3 = this.field_q;
-            var2 = this.field_k[0].field_A;
-            break L0;
+            return;
           }
-        }
-        qn.b(this.field_c, this.field_d, var2, var3, this.field_m[0]);
-        if (param0 != 1043) {
-          this.g(61);
-          return;
         } else {
-          return;
+          var2 = this.field_q;
+          var3 = this.field_k[0].field_x;
+          qn.b(this.field_c, this.field_d, var2, var3, this.field_m[0]);
+          if (param0 == 1043) {
+            return;
+          } else {
+            this.g(61);
+            return;
+          }
         }
     }
 
@@ -97,67 +96,38 @@ final class nb {
     }
 
     final boolean a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var4;
+        int var5;
+        int var6;
         var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param1 == -2) {
-          L0: {
-            if (this.field_l != 0) {
-              break L0;
-            } else {
-              var4 = this.field_q;
-              var5 = this.field_j;
-              if (var6 != 0) {
-                break L0;
-              } else {
-                return mo.a(param2, this.field_c, this.field_d, param0, var4, (byte) -107, var5);
-              }
-            }
-          }
-          if (-2 == (this.field_l ^ -1)) {
-            var4 = this.field_j;
-            var5 = this.field_q;
-            if (var6 != 0) {
-              return false;
-            } else {
-              return mo.a(param2, this.field_c, this.field_d, param0, var4, (byte) -107, var5);
-            }
-          } else {
-            return false;
-          }
-        } else {
-          this.b(-86, 56, -106);
-          if (this.field_l == 0) {
-            var4 = this.field_q;
-            var5 = this.field_j;
-            if (var6 != 0) {
-              if (-2 == (this.field_l ^ -1)) {
-                var4 = this.field_j;
-                var5 = this.field_q;
-                if (var6 == 0) {
-                  return mo.a(param2, this.field_c, this.field_d, param0, var4, (byte) -107, var5);
-                } else {
-                  return false;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return mo.a(param2, this.field_c, this.field_d, param0, var4, (byte) -107, var5);
-            }
-          } else {
+          if (this.field_l != 0) {
             if (-2 == (this.field_l ^ -1)) {
               var4 = this.field_j;
               var5 = this.field_q;
-              if (var6 != 0) {
-                return false;
-              } else {
-                return mo.a(param2, this.field_c, this.field_d, param0, var4, (byte) -107, var5);
-              }
+              return mo.a(param2, this.field_c, this.field_d, param0, var4, (byte) -107, var5);
             } else {
               return false;
             }
+          } else {
+            var4 = this.field_q;
+            var5 = this.field_j;
+            return mo.a(param2, this.field_c, this.field_d, param0, var4, (byte) -107, var5);
+          }
+        } else {
+          this.b(-86, 56, -106);
+          if (this.field_l != 0) {
+            if (-2 == (this.field_l ^ -1)) {
+              var4 = this.field_j;
+              var5 = this.field_q;
+              return mo.a(param2, this.field_c, this.field_d, param0, var4, (byte) -107, var5);
+            } else {
+              return false;
+            }
+          } else {
+            var4 = this.field_q;
+            var5 = this.field_j;
+            return mo.a(param2, this.field_c, this.field_d, param0, var4, (byte) -107, var5);
           }
         }
     }
@@ -285,67 +255,18 @@ final class nb {
     }
 
     final int c(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 26787) {
-            discarded$0 = this.c(true);
+            this.c(true);
             return this.field_j;
         }
         return this.field_j;
     }
 
     private final int c(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         var3 = 0;
         if (param1 == 1) {
-          L0: {
-            if (param0 != 0) {
-              break L0;
-            } else {
-              if (this.field_a) {
-                var3 = 1;
-                if (ArmiesOfGielinor.field_M) {
-                  break L0;
-                } else {
-                  return var3;
-                }
-              } else {
-                return var3;
-              }
-            }
-          }
-          if (param0 == 1) {
-            if (!this.field_g) {
-              return var3;
-            } else {
-              var3 = 1;
-              return var3;
-            }
-          } else {
-            return var3;
-          }
-        } else {
-          this.field_m = (int[]) null;
-          if (param0 == 0) {
-            if (this.field_a) {
-              var3 = 1;
-              if (ArmiesOfGielinor.field_M) {
-                if (param0 == 1) {
-                  if (!this.field_g) {
-                    return var3;
-                  } else {
-                    var3 = 1;
-                    return var3;
-                  }
-                } else {
-                  return var3;
-                }
-              } else {
-                return var3;
-              }
-            } else {
-              return var3;
-            }
-          } else {
+          if (param0 != 0) {
             if (param0 == 1) {
               if (!this.field_g) {
                 return var3;
@@ -354,6 +275,34 @@ final class nb {
                 return var3;
               }
             } else {
+              return var3;
+            }
+          } else {
+            if (!this.field_a) {
+              return var3;
+            } else {
+              var3 = 1;
+              return var3;
+            }
+          }
+        } else {
+          this.field_m = (int[]) null;
+          if (param0 != 0) {
+            if (param0 == 1) {
+              if (!this.field_g) {
+                return var3;
+              } else {
+                var3 = 1;
+                return var3;
+              }
+            } else {
+              return var3;
+            }
+          } else {
+            if (!this.field_a) {
+              return var3;
+            } else {
+              var3 = 1;
               return var3;
             }
           }
@@ -368,92 +317,36 @@ final class nb {
     }
 
     private final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var4;
+        int var5;
         var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         var3 = param0;
         if (param1 == 0) {
-          L0: {
-            if (this.field_l != 0) {
-              break L0;
+          if (this.field_l != 0) {
+            if (1 != this.field_l) {
+              return var3;
             } else {
-              var3 = this.field_d;
-              if (var5 != 0) {
-                break L0;
-              } else {
-                return var3;
-              }
+              var4 = this.field_k[0].field_x;
+              var3 = this.field_d - (-this.field_q - -var4);
+              return var3;
             }
-          }
-          if (1 != this.field_l) {
-            return var3;
           } else {
-            var4 = this.field_k[0].field_x;
-            var3 = this.field_d - (-this.field_q - -var4);
+            var3 = this.field_d;
             return var3;
           }
         } else {
           if ((param1 ^ -1) == -2) {
-            if (0 == this.field_l) {
-              var3 = this.field_d;
-              if (var5 != 0) {
-                if ((this.field_l ^ -1) == -2) {
-                  var3 = this.field_d;
-                  if (var5 != 0) {
-                    L1: {
-                      if (this.field_l != 0) {
-                        break L1;
-                      } else {
-                        var3 = this.field_d;
-                        break L1;
-                      }
-                    }
-                    if (1 != this.field_l) {
-                      return var3;
-                    } else {
-                      var4 = this.field_k[0].field_x;
-                      var3 = this.field_d - (-this.field_q - -var4);
-                      return var3;
-                    }
-                  } else {
-                    return var3;
-                  }
-                } else {
-                  return var3;
-                }
+            if (0 != this.field_l) {
+              if ((this.field_l ^ -1) == -2) {
+                var3 = this.field_d;
+                return var3;
               } else {
                 return var3;
               }
             } else {
-              if ((this.field_l ^ -1) == -2) {
-                var3 = this.field_d;
-                if (var5 != 0) {
-                  L2: {
-                    if (this.field_l != 0) {
-                      break L2;
-                    } else {
-                      var3 = this.field_d;
-                      if (var5 != 0) {
-                        break L2;
-                      } else {
-                        return var3;
-                      }
-                    }
-                  }
-                  if (1 != this.field_l) {
-                    return var3;
-                  } else {
-                    var4 = this.field_k[0].field_x;
-                    var3 = this.field_d - (-this.field_q - -var4);
-                    return var3;
-                  }
-                } else {
-                  return var3;
-                }
-              } else {
-                return var3;
-              }
+              var3 = this.field_d;
+              return var3;
             }
           } else {
             return var3;
@@ -480,137 +373,57 @@ final class nb {
     }
 
     private final void a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var8 = 0;
-        wk var9 = null;
-        wk var13 = null;
-        wk var14 = null;
-        wk var15 = null;
-        wk var16 = null;
-        wk var17 = null;
-        wk var18 = null;
-        wk var19 = null;
-        wk var20 = null;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var8;
+        wk var9;
+        wk var10;
+        wk var11;
+        wk var12;
         var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         var3 = this.b(0, param1);
         var4 = this.a(0, param1);
         var6 = -12 / ((-44 - param0) / 33);
         var5 = this.c(param1, 1);
-        if (param1 != 0) {
-          if (1 == param1) {
-            if (0 == this.field_l) {
-              var9 = this.field_k[var5];
-              var19 = var9;
-              var19 = var9;
-              var9.d(var3, var4);
-              if (var8 != 0) {
-                if (this.field_l != 1) {
-                  return;
-                } else {
-                  L0: {
-                    var16 = this.field_k[var5];
-                    var19 = var16;
-                    var19 = var16;
-                    var16.c(var3, var4);
-                    if (var8 == 0) {
-                      break L0;
-                    } else {
-                      L1: {
-                        if (-1 == (this.field_l ^ -1)) {
-                          break L1;
-                        } else {
-                          if (1 != this.field_l) {
-                            break L0;
-                          } else {
-                            var17 = this.field_k[var5];
-                            var19 = var17;
-                            var19 = var17;
-                            var17.g(var3, var4);
-                            break L1;
-                          }
-                        }
-                      }
-                      var18 = this.field_k[var5];
-                      var20 = var18;
-                      var20 = var18;
-                      var18.g(var3, var4);
-                      break L0;
-                    }
-                  }
-                  return;
-                }
-              } else {
-                return;
-              }
+        if (param1 == 0) {
+          if (-1 != (this.field_l ^ -1)) {
+            if (1 != this.field_l) {
+              return;
             } else {
+              var11 = this.field_k[var5];
+              var11.g(var3, var4);
+              return;
+            }
+          } else {
+            var12 = this.field_k[var5];
+            var12.g(var3, var4);
+            return;
+          }
+        } else {
+          if (1 == param1) {
+            if (0 != this.field_l) {
               if (this.field_l != 1) {
                 return;
               } else {
-                L2: {
-                  var13 = this.field_k[var5];
-                  var9 = var13;
-                  var19 = var9;
-                  var9 = var13;
-                  var13.c(var3, var4);
-                  if (var8 == 0) {
-                    break L2;
-                  } else {
-                    L3: {
-                      if (-1 == (this.field_l ^ -1)) {
-                        break L3;
-                      } else {
-                        if (1 != this.field_l) {
-                          break L2;
-                        } else {
-                          var14 = this.field_k[var5];
-                          var9 = var14;
-                          var19 = var9;
-                          var9 = var14;
-                          var14.g(var3, var4);
-                          break L3;
-                        }
-                      }
-                    }
-                    var15 = this.field_k[var5];
-                    var19 = var15;
-                    var19 = var15;
-                    var15.g(var3, var4);
-                    break L2;
-                  }
-                }
+                var10 = this.field_k[var5];
+                var12 = var10;
+                var12 = var10;
+                var10.c(var3, var4);
                 return;
               }
+            } else {
+              var9 = this.field_k[var5];
+              var10 = var9;
+              var12 = var10;
+              var10 = var9;
+              var9.d(var3, var4);
+              return;
             }
           } else {
             return;
           }
-        } else {
-          L4: {
-            L5: {
-              if (-1 == (this.field_l ^ -1)) {
-                break L5;
-              } else {
-                if (1 != this.field_l) {
-                  break L4;
-                } else {
-                  var19 = this.field_k[var5];
-                  var19.g(var3, var4);
-                  if (var8 == 0) {
-                    break L4;
-                  } else {
-                    break L5;
-                  }
-                }
-              }
-            }
-            var20 = this.field_k[var5];
-            var20.g(var3, var4);
-            break L4;
-          }
-          return;
         }
     }
 
@@ -623,62 +436,26 @@ final class nb {
     }
 
     final void a(boolean param0, int param1, int param2, boolean param3) {
-        int var5 = 0;
-        int var6 = 0;
-        Object stackIn_11_0 = null;
         Object stackIn_12_0 = null;
         Object stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
         Object stackIn_16_0 = null;
         int stackIn_16_1 = 0;
-        Object stackIn_78_0 = null;
         Object stackIn_79_0 = null;
         Object stackIn_80_0 = null;
         int stackIn_80_1 = 0;
-        Object stackIn_81_0 = null;
         Object stackIn_82_0 = null;
         Object stackIn_83_0 = null;
         int stackIn_83_1 = 0;
-        Object stackIn_119_0 = null;
         Object stackIn_120_0 = null;
         Object stackIn_121_0 = null;
         int stackIn_121_1 = 0;
-        Object stackIn_122_0 = null;
         Object stackIn_123_0 = null;
         Object stackIn_124_0 = null;
         int stackIn_124_1 = 0;
-        Object stackOut_118_0 = null;
-        Object stackOut_120_0 = null;
-        int stackOut_120_1 = 0;
-        Object stackOut_119_0 = null;
-        int stackOut_119_1 = 0;
-        Object stackOut_121_0 = null;
-        Object stackOut_123_0 = null;
-        int stackOut_123_1 = 0;
-        Object stackOut_122_0 = null;
-        int stackOut_122_1 = 0;
-        Object stackOut_77_0 = null;
-        Object stackOut_79_0 = null;
-        int stackOut_79_1 = 0;
-        Object stackOut_78_0 = null;
-        int stackOut_78_1 = 0;
-        Object stackOut_80_0 = null;
-        Object stackOut_82_0 = null;
-        int stackOut_82_1 = 0;
-        Object stackOut_81_0 = null;
-        int stackOut_81_1 = 0;
-        Object stackOut_10_0 = null;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        Object stackOut_13_0 = null;
-        Object stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
+        int var5;
+        int var6;
         this.field_p = false;
         if (!this.field_r) {
           return;
@@ -696,39 +473,29 @@ final class nb {
                       } else {
                         if (!this.field_g) {
                           L1: {
-                            stackOut_118_0 = this;
-                            stackIn_120_0 = stackOut_118_0;
-                            stackIn_119_0 = stackOut_118_0;
+                            stackIn_120_0 = this;
+
                             if (0 >= param1) {
-                              stackOut_120_0 = this;
-                              stackOut_120_1 = 0;
-                              stackIn_121_0 = stackOut_120_0;
-                              stackIn_121_1 = stackOut_120_1;
+                              stackIn_121_0 = this;
+                              stackIn_121_1 = 0;
                               break L1;
                             } else {
-                              stackOut_119_0 = this;
-                              stackOut_119_1 = 1;
-                              stackIn_121_0 = stackOut_119_0;
-                              stackIn_121_1 = stackOut_119_1;
+                              stackIn_121_0 = this;
+                              stackIn_121_1 = 1;
                               break L1;
                             }
                           }
                           L2: {
                             ((nb) (this)).field_a = stackIn_121_1 != 0;
-                            stackOut_121_0 = this;
-                            stackIn_123_0 = stackOut_121_0;
-                            stackIn_122_0 = stackOut_121_0;
+                            stackIn_123_0 = this;
+
                             if (-1 >= (param1 ^ -1)) {
-                              stackOut_123_0 = this;
-                              stackOut_123_1 = 0;
-                              stackIn_124_0 = stackOut_123_0;
-                              stackIn_124_1 = stackOut_123_1;
+                              stackIn_124_0 = this;
+                              stackIn_124_1 = 0;
                               break L2;
                             } else {
-                              stackOut_122_0 = this;
-                              stackOut_122_1 = 1;
-                              stackIn_124_0 = stackOut_122_0;
-                              stackIn_124_1 = stackOut_122_1;
+                              stackIn_124_0 = this;
+                              stackIn_124_1 = 1;
                               break L2;
                             }
                           }
@@ -736,23 +503,16 @@ final class nb {
                           break L0;
                         } else {
                           L3: {
-                            L4: {
-                              if (!this.field_a) {
-                                break L4;
+                            if (!this.field_a) {
+                              if (this.field_g) {
+                                var5 = -1;
+                                break L3;
                               } else {
-                                var5 = 1;
-                                if (!ArmiesOfGielinor.field_M) {
-                                  break L3;
-                                } else {
-                                  break L4;
-                                }
+                                return;
                               }
-                            }
-                            if (this.field_g) {
-                              var5 = -1;
-                              break L3;
                             } else {
-                              return;
+                              var5 = 1;
+                              break L3;
                             }
                           }
                           this.field_b = this.field_b + var5 * this.field_n;
@@ -767,15 +527,15 @@ final class nb {
                                 return;
                               }
                             } else {
-                              L5: {
+                              L4: {
                                 this.field_b = 0;
                                 var6 = this.field_f + this.field_b;
                                 this.field_p = true;
                                 if (var6 <= this.field_o) {
-                                  break L5;
+                                  break L4;
                                 } else {
                                   this.field_b = this.field_o + -this.field_f;
-                                  break L5;
+                                  break L4;
                                 }
                               }
                               return;
@@ -787,24 +547,17 @@ final class nb {
                       }
                     }
                   }
-                  L6: {
-                    L7: {
-                      if (!this.field_a) {
-                        break L7;
+                  L5: {
+                    if (!this.field_a) {
+                      if (this.field_g) {
+                        var5 = -1;
+                        break L5;
                       } else {
-                        var5 = 1;
-                        if (!ArmiesOfGielinor.field_M) {
-                          break L6;
-                        } else {
-                          break L7;
-                        }
+                        return;
                       }
-                    }
-                    if (this.field_g) {
-                      var5 = -1;
-                      break L6;
                     } else {
-                      return;
+                      var5 = 1;
+                      break L5;
                     }
                   }
                   this.field_b = this.field_b + var5 * this.field_n;
@@ -839,62 +592,45 @@ final class nb {
                 if (this.field_l == 1) {
                   if (!this.field_a) {
                     if (!this.field_g) {
-                      L8: {
-                        stackOut_77_0 = this;
-                        stackIn_79_0 = stackOut_77_0;
-                        stackIn_78_0 = stackOut_77_0;
+                      L6: {
+                        stackIn_79_0 = this;
+
                         if (0 >= param1) {
-                          stackOut_79_0 = this;
-                          stackOut_79_1 = 0;
-                          stackIn_80_0 = stackOut_79_0;
-                          stackIn_80_1 = stackOut_79_1;
-                          break L8;
+                          stackIn_80_0 = this;
+                          stackIn_80_1 = 0;
+                          break L6;
                         } else {
-                          stackOut_78_0 = this;
-                          stackOut_78_1 = 1;
-                          stackIn_80_0 = stackOut_78_0;
-                          stackIn_80_1 = stackOut_78_1;
-                          break L8;
+                          stackIn_80_0 = this;
+                          stackIn_80_1 = 1;
+                          break L6;
                         }
                       }
-                      L9: {
+                      L7: {
                         ((nb) (this)).field_a = stackIn_80_1 != 0;
-                        stackOut_80_0 = this;
-                        stackIn_82_0 = stackOut_80_0;
-                        stackIn_81_0 = stackOut_80_0;
+                        stackIn_82_0 = this;
+
                         if (-1 >= (param1 ^ -1)) {
-                          stackOut_82_0 = this;
-                          stackOut_82_1 = 0;
-                          stackIn_83_0 = stackOut_82_0;
-                          stackIn_83_1 = stackOut_82_1;
-                          break L9;
+                          stackIn_83_0 = this;
+                          stackIn_83_1 = 0;
+                          break L7;
                         } else {
-                          stackOut_81_0 = this;
-                          stackOut_81_1 = 1;
-                          stackIn_83_0 = stackOut_81_0;
-                          stackIn_83_1 = stackOut_81_1;
-                          break L9;
+                          stackIn_83_0 = this;
+                          stackIn_83_1 = 1;
+                          break L7;
                         }
                       }
-                      L10: {
-                        L11: {
-                          ((nb) (this)).field_g = stackIn_83_1 != 0;
-                          if (!this.field_a) {
-                            break L11;
+                      L8: {
+                        ((nb) (this)).field_g = stackIn_83_1 != 0;
+                        if (!this.field_a) {
+                          if (this.field_g) {
+                            var5 = -1;
+                            break L8;
                           } else {
-                            var5 = 1;
-                            if (!ArmiesOfGielinor.field_M) {
-                              break L10;
-                            } else {
-                              break L11;
-                            }
+                            return;
                           }
-                        }
-                        if (this.field_g) {
-                          var5 = -1;
-                          break L10;
                         } else {
-                          return;
+                          var5 = 1;
+                          break L8;
                         }
                       }
                       this.field_b = this.field_b + var5 * this.field_n;
@@ -909,15 +645,15 @@ final class nb {
                             return;
                           }
                         } else {
-                          L12: {
+                          L9: {
                             this.field_b = 0;
                             var6 = this.field_f + this.field_b;
                             this.field_p = true;
                             if (var6 <= this.field_o) {
-                              break L12;
+                              break L9;
                             } else {
                               this.field_b = this.field_o + -this.field_f;
-                              break L12;
+                              break L9;
                             }
                           }
                           return;
@@ -926,70 +662,56 @@ final class nb {
                         return;
                       }
                     } else {
-                      L13: {
-                        L14: {
-                          if (!this.field_a) {
-                            break L14;
+                      L10: {
+                        if (!this.field_a) {
+                          if (this.field_g) {
+                            var5 = -1;
+                            break L10;
                           } else {
-                            var5 = 1;
-                            if (!ArmiesOfGielinor.field_M) {
-                              break L13;
-                            } else {
-                              break L14;
-                            }
+                            return;
                           }
-                        }
-                        if (this.field_g) {
-                          var5 = -1;
-                          break L13;
                         } else {
-                          return;
+                          var5 = 1;
+                          break L10;
                         }
                       }
                       this.field_b = this.field_b + var5 * this.field_n;
                       if (param2 != -2) {
                         return;
                       } else {
-                        L15: {
+                        L11: {
                           if (-1 >= (this.field_b ^ -1)) {
-                            break L15;
+                            break L11;
                           } else {
                             this.field_b = 0;
-                            break L15;
+                            break L11;
                           }
                         }
-                        L16: {
+                        L12: {
                           var6 = this.field_f + this.field_b;
                           this.field_p = true;
                           if (var6 <= this.field_o) {
-                            break L16;
+                            break L12;
                           } else {
                             this.field_b = this.field_o + -this.field_f;
-                            break L16;
+                            break L12;
                           }
                         }
                         return;
                       }
                     }
                   } else {
-                    L17: {
-                      L18: {
-                        if (!this.field_a) {
-                          break L18;
+                    L13: {
+                      if (!this.field_a) {
+                        if (this.field_g) {
+                          var5 = -1;
+                          break L13;
                         } else {
-                          var5 = 1;
-                          if (!ArmiesOfGielinor.field_M) {
-                            break L17;
-                          } else {
-                            break L18;
-                          }
+                          return;
                         }
-                      }
-                      if (this.field_g) {
-                        var5 = -1;
-                        break L17;
                       } else {
-                        return;
+                        var5 = 1;
+                        break L13;
                       }
                     }
                     this.field_b = this.field_b + var5 * this.field_n;
@@ -1004,15 +726,15 @@ final class nb {
                           return;
                         }
                       } else {
-                        L19: {
+                        L14: {
                           this.field_b = 0;
                           var6 = this.field_f + this.field_b;
                           this.field_p = true;
                           if (var6 <= this.field_o) {
-                            break L19;
+                            break L14;
                           } else {
                             this.field_b = this.field_o + -this.field_f;
-                            break L19;
+                            break L14;
                           }
                         }
                         return;
@@ -1022,24 +744,17 @@ final class nb {
                     }
                   }
                 } else {
-                  L20: {
-                    L21: {
-                      if (!this.field_a) {
-                        break L21;
+                  L15: {
+                    if (!this.field_a) {
+                      if (this.field_g) {
+                        var5 = -1;
+                        break L15;
                       } else {
-                        var5 = 1;
-                        if (!ArmiesOfGielinor.field_M) {
-                          break L20;
-                        } else {
-                          break L21;
-                        }
+                        return;
                       }
-                    }
-                    if (this.field_g) {
-                      var5 = -1;
-                      break L20;
                     } else {
-                      return;
+                      var5 = 1;
+                      break L15;
                     }
                   }
                   this.field_b = this.field_b + var5 * this.field_n;
@@ -1054,15 +769,15 @@ final class nb {
                         return;
                       }
                     } else {
-                      L22: {
+                      L16: {
                         this.field_b = 0;
                         var6 = this.field_f + this.field_b;
                         this.field_p = true;
                         if (var6 <= this.field_o) {
-                          break L22;
+                          break L16;
                         } else {
                           this.field_b = this.field_o + -this.field_f;
-                          break L22;
+                          break L16;
                         }
                       }
                       return;
@@ -1073,99 +788,82 @@ final class nb {
                 }
               }
             } else {
-              L23: {
+              L17: {
                 if (this.field_l != 1) {
-                  break L23;
+                  break L17;
                 } else {
                   if (this.field_a) {
-                    break L23;
+                    break L17;
                   } else {
                     if (!this.field_g) {
-                      L24: {
-                        stackOut_10_0 = this;
-                        stackIn_12_0 = stackOut_10_0;
-                        stackIn_11_0 = stackOut_10_0;
+                      L18: {
+                        stackIn_12_0 = this;
+
                         if (0 >= param1) {
-                          stackOut_12_0 = this;
-                          stackOut_12_1 = 0;
-                          stackIn_13_0 = stackOut_12_0;
-                          stackIn_13_1 = stackOut_12_1;
-                          break L24;
+                          stackIn_13_0 = this;
+                          stackIn_13_1 = 0;
+                          break L18;
                         } else {
-                          stackOut_11_0 = this;
-                          stackOut_11_1 = 1;
-                          stackIn_13_0 = stackOut_11_0;
-                          stackIn_13_1 = stackOut_11_1;
-                          break L24;
+                          stackIn_13_0 = this;
+                          stackIn_13_1 = 1;
+                          break L18;
                         }
                       }
-                      L25: {
+                      L19: {
                         ((nb) (this)).field_a = stackIn_13_1 != 0;
-                        stackOut_13_0 = this;
-                        stackIn_15_0 = stackOut_13_0;
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_15_0 = this;
+
                         if (-1 >= (param1 ^ -1)) {
-                          stackOut_15_0 = this;
-                          stackOut_15_1 = 0;
-                          stackIn_16_0 = stackOut_15_0;
-                          stackIn_16_1 = stackOut_15_1;
-                          break L25;
+                          stackIn_16_0 = this;
+                          stackIn_16_1 = 0;
+                          break L19;
                         } else {
-                          stackOut_14_0 = this;
-                          stackOut_14_1 = 1;
-                          stackIn_16_0 = stackOut_14_0;
-                          stackIn_16_1 = stackOut_14_1;
-                          break L25;
+                          stackIn_16_0 = this;
+                          stackIn_16_1 = 1;
+                          break L19;
                         }
                       }
                       ((nb) (this)).field_g = stackIn_16_1 != 0;
-                      break L23;
+                      break L17;
                     } else {
-                      break L23;
+                      break L17;
                     }
                   }
                 }
               }
-              L26: {
-                L27: {
-                  if (!this.field_a) {
-                    break L27;
+              L20: {
+                if (!this.field_a) {
+                  if (this.field_g) {
+                    var5 = -1;
+                    break L20;
                   } else {
-                    var5 = 1;
-                    if (!ArmiesOfGielinor.field_M) {
-                      break L26;
-                    } else {
-                      break L27;
-                    }
+                    return;
                   }
-                }
-                if (this.field_g) {
-                  var5 = -1;
-                  break L26;
                 } else {
-                  return;
+                  var5 = 1;
+                  break L20;
                 }
               }
               this.field_b = this.field_b + var5 * this.field_n;
               if (param2 != -2) {
                 return;
               } else {
-                L28: {
+                L21: {
                   if (-1 >= (this.field_b ^ -1)) {
-                    break L28;
+                    break L21;
                   } else {
                     this.field_b = 0;
-                    break L28;
+                    break L21;
                   }
                 }
-                L29: {
+                L22: {
                   var6 = this.field_f + this.field_b;
                   this.field_p = true;
                   if (var6 <= this.field_o) {
-                    break L29;
+                    break L22;
                   } else {
                     this.field_b = this.field_o + -this.field_f;
-                    break L29;
+                    break L22;
                   }
                 }
                 return;
@@ -1192,75 +890,54 @@ final class nb {
     }
 
     private final int b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        L0: {
-          L1: {
-            var5 = ArmiesOfGielinor.field_M ? 1 : 0;
-            var3 = param0;
-            if (-1 == (param1 ^ -1)) {
-              break L1;
-            } else {
-              if ((param1 ^ -1) != -2) {
-                break L0;
-              } else {
-                L2: {
-                  if (this.field_l == 0) {
-                    break L2;
-                  } else {
-                    if (this.field_l != 1) {
-                      break L0;
-                    } else {
-                      var3 = this.field_c;
-                      if (var5 == 0) {
-                        break L0;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                }
-                var3 = this.field_c;
-                if (var5 == 0) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-          }
-          L3: {
-            if (0 != this.field_l) {
-              break L3;
-            } else {
-              var4 = this.field_k[0].field_A;
-              var3 = this.field_c - (-this.field_q - -var4);
-              if (var5 == 0) {
-                break L0;
-              } else {
-                break L3;
-              }
-            }
-          }
-          if (this.field_l != 1) {
-            break L0;
+        int var3;
+        int var4;
+        int var5;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = param0;
+        if (-1 == (param1 ^ -1)) {
+          if (0 == this.field_l) {
+            var4 = this.field_k[0].field_A;
+            var3 = this.field_c - (-this.field_q - -var4);
+            return var3;
           } else {
-            var3 = this.field_c;
-            break L0;
+            L0: {
+              if (this.field_l != 1) {
+                break L0;
+              } else {
+                var3 = this.field_c;
+                break L0;
+              }
+            }
+            return var3;
+          }
+        } else {
+          if ((param1 ^ -1) == -2) {
+            if (this.field_l != 0) {
+              if (this.field_l != 1) {
+                return var3;
+              } else {
+                var3 = this.field_c;
+                return var3;
+              }
+            } else {
+              var3 = this.field_c;
+              return var3;
+            }
+          } else {
+            return var3;
           }
         }
-        return var3;
     }
 
     private final void e(int param0) {
         boolean discarded$1 = false;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         L0: {
           var2 = 0;
           var3 = 0;
@@ -1328,37 +1005,15 @@ final class nb {
 
     nb(wk[] param0, int[] param1, int param2) {
         RuntimeException var4 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             this.field_l = param2;
@@ -1373,56 +1028,40 @@ final class nb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (var4);
-            stackOut_3_1 = new StringBuilder().append("nb.<init>(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (var4);
+
+            stackIn_5_1 = new StringBuilder().append("nb.<init>(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L1;
             }
           }
           L2: {
-            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+
+
+            stackIn_8_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
-          throw ig.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_6_0), stackIn_9_2 + ',' + param2 + ')');
         }
     }
 

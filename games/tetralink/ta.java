@@ -6,29 +6,29 @@ final class ta {
     static int field_a;
 
     final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, oh param5, int param6, int param7, int param8, int param9, boolean param10) {
-        double var17_double = 0.0;
-        int var17 = 0;
-        int var18 = 0;
-        double var19_double = 0.0;
-        int var19 = 0;
-        int var20 = 0;
-        double var21_double = 0.0;
-        int var21 = 0;
-        int var22 = 0;
-        double var23 = 0.0;
-        double var25 = 0.0;
-        double var27 = 0.0;
-        double var29 = 0.0;
-        double var31 = 0.0;
-        double var33 = 0.0;
-        double var35 = 0.0;
-        double var37 = 0.0;
-        double var39 = 0.0;
-        int var41 = 0;
-        double[] var54 = null;
-        double[] var55 = null;
-        double[] var56 = null;
-        double[] var57 = null;
+        double var17_double;
+        double var19_double;
+        double var21_double;
+        double var23;
+        double var25;
+        double var27;
+        double var29;
+        double var31;
+        double[] var54;
+        double[] var55;
+        double[] var56;
+        double[] var57;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        double var33;
+        double var35;
+        double var37;
+        double var39;
+        int var41;
         L0: {
           L1: {
             var54 = new double[3];
@@ -269,20 +269,20 @@ final class ta {
     }
 
     final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, int[] param5, int param6, int param7) {
-        int var14 = 0;
-        double var15_double = 0.0;
-        int var15 = 0;
-        int var16 = 0;
-        double var17_double = 0.0;
-        int var17 = 0;
-        int var18 = 0;
-        double var19_double = 0.0;
-        int var19 = 0;
-        int var20 = 0;
-        double[] var33 = null;
-        double[] var34 = null;
-        double[] var35 = null;
-        double[] var36 = null;
+        int var14;
+        double var15_double;
+        double var17_double;
+        double var19_double;
+        double[] var33;
+        double[] var34;
+        double[] var35;
+        double[] var36;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
         if (param6 >= 4) {
           L0: {
             L1: {
@@ -375,29 +375,29 @@ final class ta {
     }
 
     final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, oh param5, int param6, int param7, int param8, int param9, boolean param10, boolean param11) {
-        double var18_double = 0.0;
-        int var18 = 0;
-        int var19 = 0;
-        double var20_double = 0.0;
-        int var20 = 0;
-        int var21 = 0;
-        double var22_double = 0.0;
-        int var22 = 0;
-        int var23 = 0;
-        double var24 = 0.0;
-        double var26 = 0.0;
-        double var28 = 0.0;
-        double var30 = 0.0;
-        double var32 = 0.0;
-        double var34 = 0.0;
-        double var36 = 0.0;
-        double var38 = 0.0;
-        double var40 = 0.0;
-        int var42 = 0;
-        double[] var55 = null;
-        double[] var56 = null;
-        double[] var57 = null;
-        double[] var58 = null;
+        double var18_double;
+        double var20_double;
+        double var22_double;
+        double[] var55;
+        double[] var56;
+        double[] var57;
+        double[] var58;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        double var24;
+        double var26;
+        double var28;
+        double var30;
+        double var32;
+        double var34;
+        double var36;
+        double var38;
+        double var40;
+        int var42;
         L0: {
           L1: {
             var55 = new double[3];
@@ -581,53 +581,38 @@ final class ta {
     }
 
     final static int a(int param0) {
-        float var1 = 0.0f;
-        float var2 = 0.0f;
-        float var3 = 0.0f;
-        float var4 = 0.0f;
-        float var5 = 0.0f;
-        float var6 = 0.0f;
-        float var7 = 0.0f;
-        float var8 = 0.0f;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         float stackIn_7_0 = 0.0f;
         float stackIn_14_0 = 0.0f;
         float stackIn_32_0 = 0.0f;
-        float stackOut_6_0 = 0.0f;
-        float stackOut_5_0 = 0.0f;
-        float stackOut_3_0 = 0.0f;
-        float stackOut_2_0 = 0.0f;
-        float stackOut_13_0 = 0.0f;
-        float stackOut_12_0 = 0.0f;
-        float stackOut_10_0 = 0.0f;
-        float stackOut_9_0 = 0.0f;
-        float stackOut_31_0 = 0.0f;
-        float stackOut_30_0 = 0.0f;
-        float stackOut_28_0 = 0.0f;
+        float var1;
+        float var2;
+        float var3;
+        float var4;
+        float var5;
+        float var6;
+        float var7;
+        float var8;
+        int var9;
+        int var10;
+        int var11;
         L0: {
           var1 = (float)((param0 & 16711680) >> 16) / 255.0f;
           var2 = (float)((param0 & 65280) >> 8) / 255.0f;
           var3 = (float)(param0 & 255) / 255.0f;
           if (var1 <= var2) {
             if (var2 <= var3) {
-              stackOut_6_0 = var3;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = var3;
               break L0;
             } else {
-              stackOut_5_0 = var2;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = var2;
               break L0;
             }
           } else {
             if (var1 <= var3) {
-              stackOut_3_0 = var3;
-              stackIn_7_0 = stackOut_3_0;
+              stackIn_7_0 = var3;
               break L0;
             } else {
-              stackOut_2_0 = var1;
-              stackIn_7_0 = stackOut_2_0;
+              stackIn_7_0 = var1;
               break L0;
             }
           }
@@ -636,22 +621,18 @@ final class ta {
           var4 = stackIn_7_0;
           if (var1 >= var2) {
             if (var2 >= var3) {
-              stackOut_13_0 = var3;
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_0 = var3;
               break L1;
             } else {
-              stackOut_12_0 = var2;
-              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_0 = var2;
               break L1;
             }
           } else {
             if (var1 >= var3) {
-              stackOut_10_0 = var3;
-              stackIn_14_0 = stackOut_10_0;
+              stackIn_14_0 = var3;
               break L1;
             } else {
-              stackOut_9_0 = var1;
-              stackIn_14_0 = stackOut_9_0;
+              stackIn_14_0 = var1;
               break L1;
             }
           }
@@ -689,12 +670,10 @@ final class ta {
                     } else {
                       if (var4 != var5) {
                         if (var8 >= 0.5f) {
-                          stackOut_31_0 = (var4 - var5) / (2.0f - 2.0f * var8);
-                          stackIn_32_0 = stackOut_31_0;
+                          stackIn_32_0 = (var4 - var5) / (2.0f - 2.0f * var8);
                           break L5;
                         } else {
-                          stackOut_30_0 = (var4 - var5) / (2.0f * var8);
-                          stackIn_32_0 = stackOut_30_0;
+                          stackIn_32_0 = (var4 - var5) / (2.0f * var8);
                           break L5;
                         }
                       } else {
@@ -702,8 +681,7 @@ final class ta {
                       }
                     }
                   }
-                  stackOut_28_0 = 0.0f;
-                  stackIn_32_0 = stackOut_28_0;
+                  stackIn_32_0 = 0.0f;
                   break L5;
                 }
                 var7 = stackIn_32_0;
@@ -756,94 +734,62 @@ final class ta {
     }
 
     private final static void e(int param0, int param1, int param2, oh param3, int param4, int param5, int param6) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        if (param2 != 0) {
-          L0: {
-            var7 = (param6 - param5) / param2;
-            var8 = param5;
-            var9 = param4 >> 16;
-            var10 = param4 >> 8 & 255;
-            var11 = 256 - var10;
-            var12 = param3.field_u;
-            if (param1 >= 0) {
-              break L0;
-            } else {
-              param2 = param2 + param1;
-              var8 = var8 - param1 * var7;
-              param1 = 0;
-              break L0;
-            }
-          }
-          L1: {
-            if (param1 + param2 <= ra.field_e) {
-              break L1;
-            } else {
-              param2 = ra.field_e - param1;
-              break L1;
-            }
-          }
-          var13 = (var8 >> 16) * var12 + var9;
-          var14 = var13 + var12;
-          var15 = ra.field_f * param1 + param0;
-          L2: while (true) {
+        int var18 = 0;
+        int var19 = 0;
+        if (param2 == 0) {
+            return;
+        }
+        int var7 = (param6 - param5) / param2;
+        int var8 = param5;
+        int var9 = param4 >> 16;
+        int var10 = param4 >> 8 & 255;
+        int var11 = 256 - var10;
+        int var12 = param3.field_u;
+        if (param1 < 0) {
+            param2 = param2 + param1;
+            var8 = var8 - param1 * var7;
+            param1 = 0;
+        }
+        if (param1 + param2 > ra.field_e) {
+            param2 = ra.field_e - param1;
+        }
+        int var13 = (var8 >> 16) * var12 + var9;
+        int var14 = var13 + var12;
+        int var15 = ra.field_f * param1 + param0;
+        while (true) {
             param2--;
             if (param2 < 0) {
-              return;
-            } else {
-              L3: {
-                var16 = param3.field_C[var13];
-                if (var16 == 0) {
-                  break L3;
-                } else {
-                  L4: {
-                    var17 = param3.field_C[var13 + 1];
-                    var20 = ((var16 & 16711935) * var11 & -33489408) + ((var17 & 16711935) * var10 & -33489408) >>> 9;
-                    var21 = ((var16 & 65280) * var11 & 16646144) + ((var17 & 65280) * var10 & 16646144) >>> 9;
-                    if (((var8 & 65535) + var7 & -65536) == 0) {
-                      break L4;
-                    } else {
-                      var16 = param3.field_C[var14];
-                      var17 = param3.field_C[var14 + 1];
-                      var22 = ((var16 & 16711935) * var11 & -33489408) + ((var17 & 16711935) * var10 & -33489408) >>> 9;
-                      var23 = ((var16 & 65280) * var11 & 16646144) + ((var17 & 65280) * var10 & 16646144) >>> 9;
-                      var18 = var8 >> 8 & 255;
-                      var19 = 256 - var18;
-                      var20 = (var20 * var19 & -16711936) + (var22 * var18 & -16711936) >>> 8;
-                      var21 = (var21 * var19 & 16711680) + (var23 * var18 & 16711680) >>> 8;
-                      break L4;
-                    }
-                  }
-                  var16 = var20 | var21;
-                  var16 = var16 + ((ra.field_b[var15] & 16711422) >> 1);
-                  ra.field_b[var15] = var16;
-                  break L3;
-                }
-              }
-              var15 = var15 + ra.field_f;
-              var8 = var8 + var7;
-              var13 = (var8 >> 16) * var12 + var9;
-              var14 = var13 + var12;
-              continue L2;
+                break;
             }
-          }
-        } else {
-          return;
+            var16 = param3.field_C[var13];
+            if (var16 != 0) {
+                var17 = param3.field_C[var13 + 1];
+                var20 = ((var16 & 16711935) * var11 & -33489408) + ((var17 & 16711935) * var10 & -33489408) >>> 9;
+                var21 = ((var16 & 65280) * var11 & 16646144) + ((var17 & 65280) * var10 & 16646144) >>> 9;
+                if (((var8 & 65535) + var7 & -65536) != 0) {
+                    var16 = param3.field_C[var14];
+                    var17 = param3.field_C[var14 + 1];
+                    var22 = ((var16 & 16711935) * var11 & -33489408) + ((var17 & 16711935) * var10 & -33489408) >>> 9;
+                    var23 = ((var16 & 65280) * var11 & 16646144) + ((var17 & 65280) * var10 & 16646144) >>> 9;
+                    var18 = var8 >> 8 & 255;
+                    var19 = 256 - var18;
+                    var20 = (var20 * var19 & -16711936) + (var22 * var18 & -16711936) >>> 8;
+                    var21 = (var21 * var19 & 16711680) + (var23 * var18 & 16711680) >>> 8;
+                }
+                var16 = var20 | var21;
+                var16 = var16 + ((ra.field_b[var15] & 16711422) >> 1);
+                ra.field_b[var15] = var16;
+            }
+            var15 = var15 + ra.field_f;
+            var8 = var8 + var7;
+            var13 = (var8 >> 16) * var12 + var9;
+            var14 = var13 + var12;
         }
     }
 
@@ -880,27 +826,27 @@ final class ta {
     }
 
     private final static void c(int param0, int param1, int param2, oh param3, int param4, int param5, int param6) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
         if (param2 != 0) {
           L0: {
             var7 = (param6 - param5) / param2;
@@ -1020,127 +966,100 @@ final class ta {
     }
 
     private final static void f(int param0, int param1, int param2, oh param3, int param4, int param5, int param6) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        int var18 = 0;
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
+        int var18 = 0;
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        if (param2 != 0) {
-          L0: {
-            var7 = (param6 - param5) / param2;
-            var8 = param5;
-            var9 = param4 >> 16;
-            var10 = param4 >> 8 & 255;
-            var11 = 256 - var10;
-            var12 = param3.field_u;
-            if (param1 >= 0) {
-              break L0;
-            } else {
-              param2 = param2 + param1;
-              var8 = var8 - param1 * var7;
-              param1 = 0;
-              break L0;
-            }
-          }
-          L1: {
-            if (param1 + param2 <= ra.field_e) {
-              break L1;
-            } else {
-              param2 = ra.field_e - param1;
-              break L1;
-            }
-          }
-          var13 = (var8 >> 16) * var12 + var9;
-          var14 = var13 + var12;
-          var15 = ra.field_f * param1 + param0;
-          L2: while (true) {
+        if (param2 == 0) {
+            return;
+        }
+        int var7 = (param6 - param5) / param2;
+        int var8 = param5;
+        int var9 = param4 >> 16;
+        int var10 = param4 >> 8 & 255;
+        int var11 = 256 - var10;
+        int var12 = param3.field_u;
+        if (param1 < 0) {
+            param2 = param2 + param1;
+            var8 = var8 - param1 * var7;
+            param1 = 0;
+        }
+        if (param1 + param2 > ra.field_e) {
+            param2 = ra.field_e - param1;
+        }
+        int var13 = (var8 >> 16) * var12 + var9;
+        int var14 = var13 + var12;
+        int var15 = ra.field_f * param1 + param0;
+        while (true) {
             param2--;
             if (param2 < 0) {
-              return;
-            } else {
-              L3: {
-                var16 = param3.field_C[var13];
-                var17 = param3.field_C[var13 + 1];
-                var19 = var16 & 16711935;
-                var20 = var16 & 65280;
-                var19 = var19 * var11;
-                var20 = var20 * var11;
-                var19 = var19 & -16711936;
-                var20 = var20 & 16711680;
+                break;
+            }
+            var16 = param3.field_C[var13];
+            var17 = param3.field_C[var13 + 1];
+            var19 = var16 & 16711935;
+            var20 = var16 & 65280;
+            var19 = var19 * var11;
+            var20 = var20 * var11;
+            var19 = var19 & -16711936;
+            var20 = var20 & 16711680;
+            var21 = var17 & 16711935;
+            var22 = var17 & 65280;
+            var21 = var21 * var10;
+            var22 = var22 * var10;
+            var21 = var21 & -16712192;
+            var22 = var22 & 16711680;
+            var19 = var19 + var21;
+            var20 = var20 + var22;
+            var19 = var19 >>> 8;
+            var20 = var20 >>> 8;
+            if (((var8 & 65535) + var7 & -65536) != 0) {
+                var18 = param3.field_C[var14];
+                var17 = param3.field_C[var14 + 1];
+                var23 = var18 & 16711935;
+                var24 = var18 & 65280;
+                var23 = var23 * var11;
+                var24 = var24 * var11;
+                var23 = var23 & -33489152;
+                var24 = var24 & 16711680;
                 var21 = var17 & 16711935;
                 var22 = var17 & 65280;
                 var21 = var21 * var10;
                 var22 = var22 * var10;
-                var21 = var21 & -16712192;
+                var21 = var21 & -16711936;
                 var22 = var22 & 16711680;
-                var19 = var19 + var21;
-                var20 = var20 + var22;
+                var23 = var23 + var21;
+                var24 = var24 + var22;
+                var23 = var23 >>> 8;
+                var24 = var24 >>> 8;
+                var25 = var8 >> 8 & 255;
+                var26 = 256 - var25;
+                var19 = var19 * var26;
+                var20 = var20 * var26;
+                var19 = var19 & -16711936;
+                var20 = var20 & 16711680;
+                var23 = var23 * var25;
+                var24 = var24 * var25;
+                var23 = var23 & -16711936;
+                var24 = var24 & 16711680;
+                var19 = var19 + var23;
+                var20 = var20 + var24;
                 var19 = var19 >>> 8;
                 var20 = var20 >>> 8;
-                if (((var8 & 65535) + var7 & -65536) == 0) {
-                  break L3;
-                } else {
-                  var18 = param3.field_C[var14];
-                  var17 = param3.field_C[var14 + 1];
-                  var23 = var18 & 16711935;
-                  var24 = var18 & 65280;
-                  var23 = var23 * var11;
-                  var24 = var24 * var11;
-                  var23 = var23 & -33489152;
-                  var24 = var24 & 16711680;
-                  var21 = var17 & 16711935;
-                  var22 = var17 & 65280;
-                  var21 = var21 * var10;
-                  var22 = var22 * var10;
-                  var21 = var21 & -16711936;
-                  var22 = var22 & 16711680;
-                  var23 = var23 + var21;
-                  var24 = var24 + var22;
-                  var23 = var23 >>> 8;
-                  var24 = var24 >>> 8;
-                  var25 = var8 >> 8 & 255;
-                  var26 = 256 - var25;
-                  var19 = var19 * var26;
-                  var20 = var20 * var26;
-                  var19 = var19 & -16711936;
-                  var20 = var20 & 16711680;
-                  var23 = var23 * var25;
-                  var24 = var24 * var25;
-                  var23 = var23 & -16711936;
-                  var24 = var24 & 16711680;
-                  var19 = var19 + var23;
-                  var20 = var20 + var24;
-                  var19 = var19 >>> 8;
-                  var20 = var20 >>> 8;
-                  break L3;
-                }
-              }
-              var16 = var19 | var20;
-              ra.field_b[var15] = var16;
-              var15 = var15 + ra.field_f;
-              var8 = var8 + var7;
-              var13 = (var8 >> 16) * var12 + var9;
-              var14 = var13 + var12;
-              continue L2;
             }
-          }
-        } else {
-          return;
+            var16 = var19 | var20;
+            ra.field_b[var15] = var16;
+            var15 = var15 + ra.field_f;
+            var8 = var8 + var7;
+            var13 = (var8 >> 16) * var12 + var9;
+            var14 = var13 + var12;
         }
     }
 
@@ -1161,11 +1080,7 @@ final class ta {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var4 = 0;
-        L0: while (true) {
-          if (var4 >= 3) {
-            return;
-          } else {
+        for (var4 = 0; var4 < 3; var4++) {
             param1[var4] = param1[var4] - (param0[0] << 4);
             param2[var4] = param2[var4] - (param0[1] << 4);
             param3[var4] = param3[var4] - (param0[2] << 4);
@@ -1175,9 +1090,6 @@ final class ta {
             param1[var4] = var5 >> 20;
             param2[var4] = var6 >> 20;
             param3[var4] = var7 >> 20;
-            var4++;
-            continue L0;
-          }
         }
     }
 }

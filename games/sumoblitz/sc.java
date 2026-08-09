@@ -19,9 +19,8 @@ final class sc extends ua implements pv {
     }
 
     public final jaclib.memory.Buffer a(int param0, boolean param1) {
-        int discarded$2 = 0;
         if (param0 != 7454) {
-          discarded$2 = this.g(127);
+          this.g(127);
           return super.a(param1, 2, this.field_f.field_Bc);
         } else {
           return super.a(param1, 2, this.field_f.field_Bc);

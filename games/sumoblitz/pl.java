@@ -27,75 +27,53 @@ final class pl extends fs {
 
     final int b(int param0, byte param1) {
         int incrementValue$1 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = Sumoblitz.field_L ? 1 : 0;
         var3 = this.field_w >> 1570203171;
         var4 = 8 - (7 & this.field_w);
-        if (param1 < -85) {
+        if (param1 >= -85) {
+          return 116;
+        } else {
           var5 = 0;
           this.field_w = this.field_w + param0;
           L0: while (true) {
-            if (var4 < param0) {
+            if (var4 >= param0) {
+              L1: {
+                if (var4 != param0) {
+                  var5 = var5 + (this.field_n[var3] >> var4 - param0 & am.field_z[param0]);
+                  break L1;
+                } else {
+                  var5 = var5 + (am.field_z[var4] & this.field_n[var3]);
+                  break L1;
+                }
+              }
+              return var5;
+            } else {
               incrementValue$1 = var3;
               var3++;
               var5 = var5 + ((this.field_n[incrementValue$1] & am.field_z[var4]) << param0 + -var4);
               param0 = param0 - var4;
               var4 = 8;
-              if (var6 == 0) {
-                continue L0;
-              } else {
-                var5 = var5 + (this.field_n[var3] >> var4 - param0 & am.field_z[param0]);
-                return var5;
-              }
-            } else {
-              L1: {
-                L2: {
-                  if (var4 != param0) {
-                    break L2;
-                  } else {
-                    var5 = var5 + (am.field_z[var4] & this.field_n[var3]);
-                    if (var6 == 0) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                var5 = var5 + (this.field_n[var3] >> var4 - param0 & am.field_z[param0]);
-                break L1;
-              }
-              return var5;
+              continue L0;
             }
           }
-        } else {
-          return 116;
         }
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var5 = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
@@ -104,15 +82,11 @@ final class pl extends fs {
               if (param3 <= var5_int) {
                 break L0;
               } else {
-                fieldTemp$5 = this.field_p;
+                fieldTemp$2 = this.field_p;
                 this.field_p = this.field_p + 1;
-                param0[var5_int - -param2] = (byte)(this.field_n[fieldTemp$5] + -this.field_t.a(256));
+                param0[var5_int - -param2] = (byte)(this.field_n[fieldTemp$2] + -this.field_t.a(256));
                 var5_int++;
-                if (var6 == 0) {
-                  continue L1;
-                } else {
-                  return;
-                }
+                continue L1;
               }
             }
           }
@@ -120,31 +94,23 @@ final class pl extends fs {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var5);
-            stackOut_8_1 = new StringBuilder().append("pl.I(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_7_0 = (RuntimeException) (var5);
+
+            stackIn_7_1 = new StringBuilder().append("pl.I(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -207,17 +173,17 @@ final class pl extends fs {
     }
 
     final int i(int param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         if (param0 != 255) {
           this.field_w = 51;
-          fieldTemp$4 = this.field_p;
+          fieldTemp$2 = this.field_p;
           this.field_p = this.field_p + 1;
-          return this.field_n[fieldTemp$4] - this.field_t.a(256) & 255;
+          return this.field_n[fieldTemp$2] - this.field_t.a(256) & 255;
         } else {
-          fieldTemp$5 = this.field_p;
+          fieldTemp$3 = this.field_p;
           this.field_p = this.field_p + 1;
-          return this.field_n[fieldTemp$5] - this.field_t.a(256) & 255;
+          return this.field_n[fieldTemp$3] - this.field_t.a(256) & 255;
         }
     }
 

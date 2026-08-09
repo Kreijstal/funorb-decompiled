@@ -48,9 +48,9 @@ final class sd implements Iterable {
     }
 
     final pi a(int param0, long param1) {
-        pi var4 = null;
-        pi var5 = null;
-        int var6 = 0;
+        pi var4;
+        pi var5;
+        int var6;
         var6 = MinerDisturbance.field_ab;
         var4 = this.field_b[(int)((long)(-1 + this.field_f) & param1)];
         this.field_h = var4.field_f;

@@ -39,7 +39,7 @@ final class ao extends ne {
     }
 
     final static boolean a(byte param0) {
-        int var1 = 0;
+        int var1;
         var1 = -108 / ((param0 - 29) / 43);
         if ((dk.field_c ^ -1) <= -21) {
           if (vk.a(22084)) {

@@ -23,7 +23,6 @@ final class ng extends sh {
 
     final void a(boolean param0, el param1) {
         dd var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param1 instanceof dd)) {
                 throw new IllegalArgumentException();
@@ -31,7 +30,7 @@ final class ng extends sh {
             var3 = (dd) ((Object) param1);
             this.field_C.a(var3, param0);
             var3.field_I = true;
-            discarded$0 = var3.a((byte) -37, (el) (this));
+            var3.a((byte) -37, (el) (this));
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ng.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -140,7 +139,7 @@ final class ng extends sh {
         if (param0 >= 57) {
             return null;
         }
-        el discarded$0 = this.e(89);
+        this.e(89);
         return null;
     }
 

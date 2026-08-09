@@ -14,9 +14,8 @@ final class wb {
     static String field_d;
 
     final static int a(int param0, int param1) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = SteelSentinels.field_G;
         if (param0 == 500) {
           if (-1 < (param1 ^ -1)) {
@@ -54,7 +53,7 @@ final class wb {
             }
           }
         } else {
-          discarded$1 = wb.a(-117, 80);
+          wb.a(-117, 80);
           if (-1 < (param1 ^ -1)) {
             return 0;
           } else {

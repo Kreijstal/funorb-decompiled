@@ -22,7 +22,7 @@ final class fg extends eh {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        int var3 = 0;
+        int var3;
         L0: {
           L1: {
             if (null == ci.field_a) {

@@ -13,10 +13,6 @@ final class is {
     final static boolean a(int param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param1 >= 0) {
           if (-1583 >= (param1 ^ -1)) {
             if (0 != param1 % param0) {
@@ -35,12 +31,10 @@ final class is {
           } else {
             L0: {
               if (param1 % 4 != 0) {
-                stackOut_8_0 = 0;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 0;
                 break L0;
               } else {
-                stackOut_7_0 = 1;
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = 1;
                 break L0;
               }
             }
@@ -49,12 +43,10 @@ final class is {
         } else {
           L1: {
             if (-1 != ((param1 + 1) % 4 ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

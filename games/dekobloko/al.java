@@ -40,8 +40,6 @@ final class al implements gl {
     }
 
     public final void a(boolean param0, int param1, int param2, byte param3, ce param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
@@ -50,34 +48,21 @@ final class al implements gl {
         int var13 = 0;
         ai var14 = null;
         ce stackIn_3_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        ce stackOut_1_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var6 = null;
         try {
           L0: {
             L1: {
               if (!(param4 instanceof ai)) {
-                stackOut_2_0 = null;
-                stackIn_3_0 = (ce) ((Object) stackOut_2_0);
+                stackIn_3_0 = null;
                 break L1;
               } else {
-                stackOut_1_0 = (ce) (param4);
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = (ce) (param4);
                 break L1;
               }
             }
@@ -112,7 +97,7 @@ final class al implements gl {
               hk.b(var7, var8, var11 + var7, var8 - -var12, 1);
               if (this.field_g != null) {
                 var13 = this.field_k + (var14.field_K + var14.field_O);
-                discarded$1 = this.field_g.a(param4.field_E, param1 - (-param4.field_u - var13), param4.field_D + (param2 + this.field_b), -this.field_k - (var13 - param4.field_t), param4.field_y + -(this.field_k << -1217244063), this.field_c, this.field_i, 1, 1, 0);
+                this.field_g.a(param4.field_E, param1 - (-param4.field_u - var13), param4.field_D + (param2 + this.field_b), -this.field_k - (var13 - param4.field_t), param4.field_y + -(this.field_k << -1217244063), this.field_c, this.field_i, 1, 1, 0);
                 break L4;
               } else {
                 break L4;
@@ -132,27 +117,19 @@ final class al implements gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var6);
-            stackOut_12_1 = new StringBuilder().append("al.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var6);
+
+            stackIn_14_1 = new StringBuilder().append("al.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L6;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L6;
             }
           }
@@ -161,8 +138,8 @@ final class al implements gl {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = client.field_A ? 1 : 0;
         d.field_f = null;
         hd.field_n = param0;

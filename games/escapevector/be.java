@@ -17,10 +17,10 @@ final class be {
 
     final static void a(int param0, int param1) {
         hg var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         bd var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = EscapeVector.field_A;
         try {
           L0: {

@@ -17,51 +17,50 @@ final class hc {
     final lh b(byte param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var3 = 0;
-        lh var4 = null;
-        lh var5 = null;
-        lh var8 = null;
-        Object stackIn_3_0 = null;
+        int var3;
+        lh var4;
+        lh var5;
+        lh var8;
         Object stackIn_4_0 = null;
         Object stackIn_10_0 = null;
-        Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         Object stackIn_24_0 = null;
-        Object stackOut_23_0 = null;
-        Object stackOut_16_0 = null;
-        Object stackOut_9_0 = null;
-        Object stackOut_2_0 = null;
         var3 = fleas.field_A ? 1 : 0;
         if (-1 > (this.field_e ^ -1)) {
           if (this.field_a == this.field_g[this.field_e + -1]) {
             L0: while (true) {
-              if (this.field_e >= this.field_h) {
-                if (param0 > 89) {
-                  return null;
+              L1: {
+                if (this.field_e >= this.field_h) {
+                  break L1;
                 } else {
-                  stackOut_23_0 = this;
-                  stackIn_24_0 = stackOut_23_0;
-                  ((hc) (this)).field_h = 63;
-                  return null;
-                }
-              } else {
-                fieldTemp$2 = this.field_e;
-                this.field_e = this.field_e + 1;
-                var5 = this.field_g[fieldTemp$2].field_h;
-                stackOut_16_0 = this;
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_17_0 = stackOut_16_0;
-                if (var3 == 0) {
-                  if (((hc) (this)).field_g[-1 + this.field_e] != var5) {
-                    this.field_a = var5.field_h;
-                    return var5;
+                  fieldTemp$2 = this.field_e;
+                  this.field_e = this.field_e + 1;
+                  var5 = this.field_g[fieldTemp$2].field_h;
+                  stackIn_18_0 = this;
+
+                  if (var3 == 0) {
+                    if (((hc) (this)).field_g[-1 + this.field_e] != var5) {
+                      this.field_a = var5.field_h;
+                      return var5;
+                    } else {
+                      if (var3 == 0) {
+                        continue L0;
+                      } else {
+                        break L1;
+                      }
+                    }
                   } else {
-                    continue L0;
+                    ((hc) (this)).field_h = 63;
+                    return null;
                   }
-                } else {
-                  ((hc) (this)).field_h = 63;
-                  return null;
                 }
+              }
+              if (param0 > 89) {
+                return null;
+              } else {
+                stackIn_24_0 = this;
+                ((hc) (this)).field_h = 63;
+                return null;
               }
             }
           } else {
@@ -70,34 +69,39 @@ final class hc {
             return var8;
           }
         } else {
-          L1: while (true) {
-            if (this.field_e >= this.field_h) {
-              if (param0 > 89) {
-                return null;
+          L2: while (true) {
+            L3: {
+              if (this.field_e >= this.field_h) {
+                break L3;
               } else {
-                stackOut_9_0 = this;
-                stackIn_10_0 = stackOut_9_0;
-                ((hc) (this)).field_h = 63;
-                return null;
-              }
-            } else {
-              fieldTemp$3 = this.field_e;
-              this.field_e = this.field_e + 1;
-              var4 = this.field_g[fieldTemp$3].field_h;
-              stackOut_2_0 = this;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_3_0 = stackOut_2_0;
-              if (var3 == 0) {
-                if (((hc) (this)).field_g[-1 + this.field_e] != var4) {
-                  this.field_a = var4.field_h;
-                  return var4;
+                fieldTemp$3 = this.field_e;
+                this.field_e = this.field_e + 1;
+                var4 = this.field_g[fieldTemp$3].field_h;
+                stackIn_4_0 = this;
+
+                if (var3 == 0) {
+                  if (((hc) (this)).field_g[-1 + this.field_e] != var4) {
+                    this.field_a = var4.field_h;
+                    return var4;
+                  } else {
+                    if (var3 == 0) {
+                      continue L2;
+                    } else {
+                      break L3;
+                    }
+                  }
                 } else {
-                  continue L1;
+                  ((hc) (this)).field_h = 63;
+                  return null;
                 }
-              } else {
-                ((hc) (this)).field_h = 63;
-                return null;
               }
+            }
+            if (param0 > 89) {
+              return null;
+            } else {
+              stackIn_10_0 = this;
+              ((hc) (this)).field_h = 63;
+              return null;
             }
           }
         }
@@ -140,28 +144,28 @@ final class hc {
     }
 
     final lh a(long param0, int param1) {
-        lh var4 = null;
-        lh var5 = null;
-        int var6 = 0;
-        Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
-        Object stackIn_15_0 = null;
         Object stackIn_16_0 = null;
-        Object stackOut_5_0 = null;
-        Object stackOut_14_0 = null;
+        lh var4;
+        lh var5;
+        int var6;
         var6 = fleas.field_A ? 1 : 0;
         var4 = this.field_g[(int)((long)(-1 + this.field_h) & param0)];
         if (param1 == -1110) {
           this.field_i = var4.field_h;
           L0: while (true) {
             if (this.field_i != var4) {
-              stackOut_5_0 = this;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_7_0 = this;
+
               if (var6 == 0) {
                 if (((hc) (this)).field_i.field_c != param0) {
                   this.field_i = this.field_i.field_h;
-                  continue L0;
+                  if (var6 == 0) {
+                    continue L0;
+                  } else {
+                    this.field_i = null;
+                    return null;
+                  }
                 } else {
                   var5 = this.field_i;
                   this.field_i = this.field_i.field_h;
@@ -181,13 +185,17 @@ final class hc {
           this.field_i = var4.field_h;
           L1: while (true) {
             if (this.field_i != var4) {
-              stackOut_14_0 = this;
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_15_0 = stackOut_14_0;
+              stackIn_16_0 = this;
+
               if (var6 == 0) {
                 if (((hc) (this)).field_i.field_c != param0) {
                   this.field_i = this.field_i.field_h;
-                  continue L1;
+                  if (var6 == 0) {
+                    continue L1;
+                  } else {
+                    this.field_i = null;
+                    return null;
+                  }
                 } else {
                   var5 = this.field_i;
                   this.field_i = this.field_i.field_h;
@@ -206,32 +214,27 @@ final class hc {
     }
 
     hc(int param0) {
-        lh dupTemp$2 = null;
-        int var2 = 0;
+        lh dupTemp$0 = null;
         lh var3 = null;
-        int var4 = 0;
-        var4 = fleas.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         this.field_e = 0;
         this.field_g = new lh[param0];
         this.field_h = param0;
-        var2 = 0;
-        L0: while (true) {
-          if (param0 > var2) {
-            dupTemp$2 = new lh();
-            var3 = dupTemp$2;
-            this.field_g[var2] = dupTemp$2;
+        int var2 = 0;
+        do {
+            if (param0 <= var2) {
+                return;
+            }
+            dupTemp$0 = new lh();
+            var3 = dupTemp$0;
+            this.field_g[var2] = dupTemp$0;
             var3.field_h = var3;
             var3.field_a = var3;
             var2++;
-            if (var4 == 0) {
-              continue L0;
-            } else {
-              return;
+            if (var4 != 0) {
+                return;
             }
-          } else {
-            return;
-          }
-        }
+        } while (var4 == 0);
     }
 
     final void a(lh param0, boolean param1, long param2) {

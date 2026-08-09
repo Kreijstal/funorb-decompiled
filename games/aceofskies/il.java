@@ -6,11 +6,11 @@ final class il {
     private java.awt.GraphicsDevice field_a;
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        java.awt.DisplayMode[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var6;
+        java.awt.DisplayMode[] var7;
+        int var8;
+        int var9;
+        int var10;
         this.field_b = this.field_a.getDisplayMode();
         if (null != this.field_b) {
           L0: {
@@ -103,15 +103,14 @@ final class il {
 
     private final void a(byte param0, java.awt.Frame param1) {
         try {
-            int[] discarded$1 = null;
-            int var3 = 0;
-            Throwable var4 = null;
-            java.lang.reflect.Field var4_ref = null;
-            Throwable var6 = null;
-            Throwable var7 = null;
-            java.lang.reflect.Field var7_ref = null;
             int statePc = 0;
             Throwable caughtException = null;
+            int var3 = 0;
+            java.lang.reflect.Field var4 = null;
+            Throwable var4_ref = null;
+            Throwable var6 = null;
+            java.lang.reflect.Field var7 = null;
+            Throwable var7_ref = null;
             stateLoop: while (true) {
                 switch (statePc) {
                     case 0: {
@@ -124,15 +123,15 @@ final class il {
                         continue stateLoop;
                     }
                     case 1: {
-                        discarded$1 = this.listmodes();
+                        this.listmodes();
                         statePc = 2;
                         continue stateLoop;
                     }
                     case 2: {
                         try {
-                            var4_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var4_ref.setAccessible(true);
-                            if (!((Boolean) (var4_ref.get(this.field_a))).booleanValue()) {
+                            var4 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+                            var4.setAccessible(true);
+                            if (!((Boolean) (var4.get(this.field_a))).booleanValue()) {
                                 statePc = 6;
                             } else {
                                 statePc = 3;
@@ -146,7 +145,7 @@ final class il {
                     }
                     case 3: {
                         try {
-                            var4_ref.set(this.field_a, Boolean.FALSE);
+                            var4.set(this.field_a, Boolean.FALSE);
                             var3 = 1;
                             statePc = 6;
                             continue stateLoop;
@@ -157,7 +156,7 @@ final class il {
                         }
                     }
                     case 5: {
-                        var4 = caughtException;
+                        var4_ref = caughtException;
                         statePc = 6;
                         continue stateLoop;
                     }
@@ -182,8 +181,8 @@ final class il {
                     }
                     case 9: {
                         try {
-                            var4_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var4_ref.set(this.field_a, Boolean.TRUE);
+                            var4 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+                            var4.set(this.field_a, Boolean.TRUE);
                             statePc = 19;
                             continue stateLoop;
                         } catch (Throwable stateCaught_9) {
@@ -193,7 +192,7 @@ final class il {
                         }
                     }
                     case 11: {
-                        var4 = caughtException;
+                        var4_ref = caughtException;
                         statePc = 19;
                         continue stateLoop;
                     }
@@ -218,8 +217,8 @@ final class il {
                     }
                     case 15: {
                         try {
-                            var7_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var7_ref.set(this.field_a, Boolean.TRUE);
+                            var7 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+                            var7.set(this.field_a, Boolean.TRUE);
                             statePc = 18;
                             continue stateLoop;
                         } catch (Throwable stateCaught_15) {
@@ -229,7 +228,7 @@ final class il {
                         }
                     }
                     case 17: {
-                        var7 = caughtException;
+                        var7_ref = caughtException;
                         statePc = 18;
                         continue stateLoop;
                     }
@@ -250,11 +249,11 @@ final class il {
     }
 
     public il() throws Exception {
-        java.awt.GraphicsEnvironment var1 = null;
-        java.awt.GraphicsDevice[] var2 = null;
-        java.awt.GraphicsDevice[] var3 = null;
-        int var4 = 0;
-        java.awt.GraphicsDevice var5 = null;
+        java.awt.GraphicsEnvironment var1;
+        java.awt.GraphicsDevice[] var2;
+        java.awt.GraphicsDevice[] var3;
+        int var4;
+        java.awt.GraphicsDevice var5;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
         this.field_a = var1.getDefaultScreenDevice();
         if (this.field_a.isFullScreenSupported()) {

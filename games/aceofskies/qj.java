@@ -24,12 +24,10 @@ final class qj extends he {
             Throwable var1 = null;
             qg stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            qg stackOut_2_0 = null;
             if (param0 == 8192) {
               try {
                 L0: {
-                  stackOut_2_0 = (qg) (Class.forName("bq").newInstance());
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = (qg) (Class.forName("bq").newInstance());
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -57,7 +55,7 @@ final class qj extends he {
     }
 
     final static void c(byte param0) {
-        int var1 = 0;
+        int var1;
         if (!ks.field_b) {
           throw new IllegalStateException();
         } else {
@@ -79,9 +77,8 @@ final class qj extends he {
     }
 
     final static void h(int param0) {
-        qg discarded$0 = null;
         if (param0 <= 28) {
-            discarded$0 = qj.g(-8);
+            qj.g(-8);
         }
     }
 

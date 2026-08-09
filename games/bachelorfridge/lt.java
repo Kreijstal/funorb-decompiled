@@ -46,7 +46,7 @@ final class lt {
     }
 
     final static boolean b(int param0, int param1) {
-        String var2 = null;
+        String var2;
         if (param0 == 28427) {
           var2 = lka.field_E[param1][17];
           var2 = var2.trim();

@@ -17,14 +17,14 @@ final class ad {
     }
 
     final static int[] a(boolean param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         var3 = m.a(param1, (byte) -89);
         var4 = nb.a(-117, param1);
         var5 = m.a(param2, (byte) -125);

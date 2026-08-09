@@ -11,9 +11,8 @@ abstract class n {
     int field_c;
 
     final static be a(int param0) {
-        be discarded$0 = null;
         if (param0 != 21146) {
-            discarded$0 = n.a(124);
+            n.a(124);
             return hb.field_r;
         }
         return hb.field_r;

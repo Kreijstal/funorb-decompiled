@@ -41,9 +41,9 @@ final class fq extends de {
     }
 
     final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = Pixelate.field_H ? 1 : 0;
         if (jg.a((byte) 115)) {
           this.field_g.a(53, 0);
@@ -145,29 +145,12 @@ final class fq extends de {
     }
 
     final void a(byte param0, boolean param1, int param2) {
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
         Object stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         Object stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         tf stackIn_7_2 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        tf stackOut_6_2 = null;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        tf stackOut_5_2 = null;
         L0: {
           if (param0 < -116) {
             break L0;
@@ -178,44 +161,30 @@ final class fq extends de {
         }
         L1: {
           L2: {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 35;
-            stackIn_5_0 = stackOut_2_0;
-            stackIn_5_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_5_0 = this;
+
+            stackIn_5_1 = 35;
+
             if (!jg.a((byte) 101)) {
               break L2;
             } else {
-              stackOut_3_0 = this;
-              stackOut_3_1 = stackIn_3_1;
-              stackIn_6_0 = stackOut_3_0;
-              stackIn_6_1 = stackOut_3_1;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_6_0 = this;
+
               if (param2 == 0) {
-                stackOut_6_0 = this;
-                stackOut_6_1 = stackIn_6_1;
-                stackOut_6_2 = oc.field_S;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
-                stackIn_7_2 = stackOut_6_2;
+                stackIn_7_0 = this;
+                stackIn_7_1 = stackIn_5_1;
+                stackIn_7_2 = oc.field_S;
                 break L1;
               } else {
-                stackOut_4_0 = this;
-                stackOut_4_1 = stackIn_4_1;
-                stackIn_5_0 = stackOut_4_0;
-                stackIn_5_1 = stackOut_4_1;
+                stackIn_5_0 = this;
+
                 break L2;
               }
             }
           }
-          stackOut_5_0 = this;
-          stackOut_5_1 = stackIn_5_1;
-          stackOut_5_2 = oc.field_N;
-          stackIn_7_0 = stackOut_5_0;
-          stackIn_7_1 = stackOut_5_1;
-          stackIn_7_2 = stackOut_5_2;
+          stackIn_7_0 = this;
+          stackIn_7_1 = stackIn_5_1;
+          stackIn_7_2 = oc.field_N;
           break L1;
         }
         super.a((byte) stackIn_7_1, stackIn_7_2, param1, param2);
@@ -223,11 +192,8 @@ final class fq extends de {
 
     final static void a(aa param0, byte param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         aa var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -235,14 +201,7 @@ final class fq extends de {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var2 = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -317,27 +276,19 @@ final class fq extends de {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var2);
-            stackOut_20_1 = new StringBuilder().append("fq.I(");
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var2);
+
+            stackIn_22_1 = new StringBuilder().append("fq.I(");
+
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L7;
             }
           }
@@ -383,28 +334,24 @@ final class fq extends de {
     }
 
     final void a(int param0) {
-        String var2 = null;
-        int var3 = 0;
-        ob var3_ref_ob = null;
-        ue var4 = null;
-        String[] var5 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        String var14 = null;
-        int var15 = 0;
-        int var16 = 0;
-        int[] var20 = null;
         int stackIn_14_0 = 0;
         String stackIn_26_0 = null;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        String stackOut_25_0 = null;
-        String stackOut_24_0 = null;
+        String var2;
+        ob var3_ref_ob;
+        int var3;
+        ue var4;
+        String[] var5;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        String var14;
+        int var15;
+        int var16;
+        int[] var20;
         L0: {
           var16 = Pixelate.field_H ? 1 : 0;
           gj.field_W[5].b(0, 45);
@@ -462,12 +409,10 @@ final class fq extends de {
                         var13 = var20[var12];
                         var14 = var5[var12];
                         if (var12 == var7) {
-                          stackOut_13_0 = var10;
-                          stackIn_14_0 = stackOut_13_0;
+                          stackIn_14_0 = var10;
                           break L3;
                         } else {
-                          stackOut_12_0 = var8;
-                          stackIn_14_0 = stackOut_12_0;
+                          stackIn_14_0 = var8;
                           break L3;
                         }
                       }
@@ -505,12 +450,10 @@ final class fq extends de {
           var3 = 225 + rk.field_e.field_w;
           rk.field_e.b(var2, 330, var3, 0, 0);
           if (jg.a((byte) 96)) {
-            stackOut_25_0 = mj.field_h;
-            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_0 = mj.field_h;
             break L5;
           } else {
-            stackOut_24_0 = pf.field_b;
-            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_0 = pf.field_b;
             break L5;
           }
         }

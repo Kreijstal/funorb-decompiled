@@ -50,6 +50,7 @@ final class de extends km {
     final static void a(boolean param0, boolean param1) {
         if (param1) {
           L0: {
+            de.f(-8);
             if (null != tn.field_m) {
               tn.field_m.a(true, param0);
               break L0;
@@ -80,13 +81,9 @@ final class de extends km {
     }
 
     private final boolean c(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
         if (param0 == 460) {
           if (-1 != (param1 ^ -1)) {
             if (3 == param1) {
@@ -94,12 +91,10 @@ final class de extends km {
             } else {
               L0: {
                 if (param1 != 2) {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 0;
                   break L0;
                 } else {
-                  stackOut_6_0 = 1;
-                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_0 = 1;
                   break L0;
                 }
               }
@@ -107,12 +102,10 @@ final class de extends km {
                 var3 = stackIn_8_0;
                 ng.a(var3 != 0, param0 + -386, this.a(true));
                 if (var3 != 0) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = 0;
                   break L1;
                 } else {
-                  stackOut_9_0 = 1;
-                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_11_0 = 1;
                   break L1;
                 }
               }
@@ -136,8 +129,8 @@ final class de extends km {
     }
 
     final void a(boolean param0, boolean param1, int param2) {
-        boolean discarded$2 = false;
-        int var5 = 0;
+        boolean discarded$1 = false;
+        int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
         if (param2 < -52) {
           if (null != this.field_r) {
@@ -145,7 +138,7 @@ final class de extends km {
               ff.field_c = new w(sl.field_C, oc.field_u, this.field_r, false, hq.field_u);
               return;
             } else {
-              discarded$2 = this.c(460, ff.field_c.a(false, param1));
+              discarded$1 = this.c(460, ff.field_c.a(false, param1));
               return;
             }
           } else {

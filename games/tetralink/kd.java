@@ -17,9 +17,9 @@ final class kd {
     static int field_l;
 
     final gb c(int param0) {
-        gb var2 = null;
-        gb var3 = null;
-        int var4 = 0;
+        gb var2;
+        gb var3;
+        int var4;
         var4 = TetraLink.field_J;
         if (null != this.field_b) {
           var2 = this.field_j[(int)(this.field_f & (long)(-1 + this.field_a))];
@@ -88,9 +88,9 @@ final class kd {
     }
 
     final gb a(long param0, int param1) {
-        gb var4 = null;
-        gb var5 = null;
-        int var6 = 0;
+        gb var4;
+        gb var5;
+        int var6;
         var6 = TetraLink.field_J;
         this.field_f = param0;
         var4 = this.field_j[(int)((long)(this.field_a - param1) & param0)];
@@ -121,10 +121,10 @@ final class kd {
     final gb d(int param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var3 = 0;
-        gb var4 = null;
-        gb var5 = null;
-        gb var8 = null;
+        int var3;
+        gb var4;
+        gb var5;
+        gb var8;
         var3 = TetraLink.field_J;
         if (param0 > (this.field_d ^ -1)) {
           if (this.field_c == this.field_j[-1 + this.field_d]) {
@@ -168,18 +168,18 @@ final class kd {
     }
 
     kd(int param0) {
-        gb dupTemp$2 = null;
-        int var2 = 0;
-        gb var3 = null;
+        gb dupTemp$1 = null;
+        int var2;
+        gb var3;
         this.field_d = 0;
         this.field_j = new gb[param0];
         this.field_a = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new gb();
-            var3 = dupTemp$2;
-            this.field_j[var2] = dupTemp$2;
+            dupTemp$1 = new gb();
+            var3 = dupTemp$1;
+            this.field_j[var2] = dupTemp$1;
             var3.field_o = var3;
             var3.field_s = var3;
             var2++;

@@ -26,32 +26,63 @@ abstract class kl {
         int var5 = 0;
         String stackIn_5_0 = null;
         String stackIn_6_0 = null;
-        String stackOut_4_0 = null;
-        L0: {
-          var5 = TorChallenge.field_F ? 1 : 0;
-          var4 = param0.indexOf(param3);
-          if (param2 == 0) {
-            break L0;
-          } else {
-            field_d = (String[]) null;
-            break L0;
-          }
-        }
-        L1: while (true) {
-          if ((var4 ^ -1) != 0) {
-            param0 = param0.substring(0, var4) + param1 + param0.substring(var4 - -param3.length());
-            stackOut_4_0 = (String) (param0);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
-            if (var5 == 0) {
-              var4 = ((String) (Object) stackIn_6_0).indexOf(param3, var4 + param1.length());
-              continue L1;
-            } else {
-              return stackIn_5_0;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var5 = TorChallenge.field_F ? 1 : 0;
+                    var4 = param0.indexOf(param3);
+                    if (param2 == 0) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    field_d = (String[]) null;
+                    statePc = 2;
+                    continue stateLoop;
+                }
+                case 2: {
+                    if ((var4 ^ -1) != 0) {
+                        statePc = 4;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    return param0;
+                }
+                case 4: {
+                    param0 = param0.substring(0, var4) + param1 + param0.substring(var4 - -param3.length());
+                    stackIn_6_0 = (String) (param0);
+                    stackIn_5_0 = stackIn_6_0;
+                    if (var5 == 0) {
+                        statePc = 6;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    return stackIn_5_0;
+                }
+                case 6: {
+                    var4 = ((String) (Object) stackIn_6_0).indexOf(param3, var4 + param1.length());
+                    if (var5 == 0) {
+                        statePc = 2;
+                    } else {
+                        statePc = 7;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    return param0;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          } else {
-            return param0;
-          }
         }
     }
 

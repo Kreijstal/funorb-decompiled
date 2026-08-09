@@ -18,26 +18,14 @@ final class bb {
     }
 
     final static void a(int param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_42_0 = 0;
         int stackIn_48_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         bo.field_y = 50.0f;
         jl.field_e = 262144;
         s.field_c = 52.5f;
@@ -73,12 +61,10 @@ final class bb {
                 if (20 <= tc.field_v) {
                   L2: {
                     if ((tc.field_v ^ -1) > -16) {
-                      stackOut_47_0 = 2;
-                      stackIn_48_0 = stackOut_47_0;
+                      stackIn_48_0 = 2;
                       break L2;
                     } else {
-                      stackOut_46_0 = 4;
-                      stackIn_48_0 = stackOut_46_0;
+                      stackIn_48_0 = 4;
                       break L2;
                     }
                   }
@@ -92,12 +78,10 @@ final class bb {
               } else {
                 L3: {
                   if ((tc.field_v ^ -1) > -16) {
-                    stackOut_41_0 = 2;
-                    stackIn_42_0 = stackOut_41_0;
+                    stackIn_42_0 = 2;
                     break L3;
                   } else {
-                    stackOut_40_0 = 4;
-                    stackIn_42_0 = stackOut_40_0;
+                    stackIn_42_0 = 4;
                     break L3;
                   }
                 }
@@ -117,12 +101,10 @@ final class bb {
                 if (20 <= tc.field_v) {
                   L4: {
                     if ((tc.field_v ^ -1) > -16) {
-                      stackOut_28_0 = 2;
-                      stackIn_29_0 = stackOut_28_0;
+                      stackIn_29_0 = 2;
                       break L4;
                     } else {
-                      stackOut_27_0 = 4;
-                      stackIn_29_0 = stackOut_27_0;
+                      stackIn_29_0 = 4;
                       break L4;
                     }
                   }
@@ -136,12 +118,10 @@ final class bb {
               } else {
                 L5: {
                   if ((tc.field_v ^ -1) > -16) {
-                    stackOut_22_0 = 2;
-                    stackIn_23_0 = stackOut_22_0;
+                    stackIn_23_0 = 2;
                     break L5;
                   } else {
-                    stackOut_21_0 = 4;
-                    stackIn_23_0 = stackOut_21_0;
+                    stackIn_23_0 = 4;
                     break L5;
                   }
                 }
@@ -164,12 +144,10 @@ final class bb {
               } else {
                 L6: {
                   if ((tc.field_v ^ -1) > -16) {
-                    stackOut_11_0 = 2;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = 2;
                     break L6;
                   } else {
-                    stackOut_10_0 = 4;
-                    stackIn_12_0 = stackOut_10_0;
+                    stackIn_12_0 = 4;
                     break L6;
                   }
                 }
@@ -181,12 +159,10 @@ final class bb {
             } else {
               L7: {
                 if ((tc.field_v ^ -1) > -16) {
-                  stackOut_6_0 = 2;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 2;
                   break L7;
                 } else {
-                  stackOut_5_0 = 4;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 4;
                   break L7;
                 }
               }
@@ -202,7 +178,6 @@ final class bb {
     }
 
     public static void b(int param0) {
-        int discarded$0 = 0;
         field_a = null;
         field_g = null;
         field_b = null;
@@ -210,7 +185,7 @@ final class bb {
         field_d = null;
         field_f = null;
         if (param0 != -578) {
-            discarded$0 = bb.a(1);
+            bb.a(1);
         }
     }
 

@@ -12,9 +12,6 @@ final class t {
     final static void a(boolean param0) {
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_4_0 = 0;
         L0: {
           ih.b((byte) 108);
           if (qd.field_j != null) {
@@ -30,12 +27,10 @@ final class t {
           L1: {
             field_d = -85L;
             if (param0) {
-              stackOut_12_0 = 0;
-              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_0 = 0;
               break L1;
             } else {
-              stackOut_11_0 = 1;
-              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_0 = 1;
               break L1;
             }
           }
@@ -52,8 +47,7 @@ final class t {
           oj.c(-2290);
           return;
         } else {
-          stackOut_4_0 = 1;
-          stackIn_6_0 = stackOut_4_0;
+          stackIn_6_0 = 1;
           L3: {
             id.a(stackIn_6_0 != 0);
             if (qb.e((byte) 58)) {

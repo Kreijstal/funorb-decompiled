@@ -34,9 +34,9 @@ final class gg extends hm {
 
     final static void d(byte param0) {
         bf var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var2 = TetraLink.field_J;
         try {
           L0: {
@@ -131,11 +131,11 @@ final class gg extends hm {
 
     final static void b(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = TetraLink.field_J;
         try {
           L0: {
@@ -180,18 +180,16 @@ final class gg extends hm {
     }
 
     final static boolean b(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != 87) {
-            discarded$0 = gg.b((byte) 24);
+            gg.b((byte) 24);
         }
         return al.field_i != null ? true : false;
     }
 
     final void a(int param0, bh param1) {
-        df discarded$0 = null;
         try {
             if (param0 != -22017) {
-                discarded$0 = this.a((byte) 84);
+                this.a((byte) 84);
             }
             param1.a(this.field_g, (byte) 103);
             param1.a((byte) 124, this.field_h);

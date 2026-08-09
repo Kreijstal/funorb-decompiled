@@ -9,22 +9,21 @@ final class rf {
     static fj field_e;
 
     public static void a(int param0) {
-        ji[] discarded$0 = null;
         field_a = null;
         field_d = null;
         field_e = null;
         if (param0 != 0) {
             uf var2 = (uf) null;
-            discarded$0 = rf.a((uf) null, false);
+            rf.a((uf) null, false);
         }
     }
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         aj var4 = null;
         ti var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -64,7 +63,7 @@ final class rf {
     }
 
     final static boolean b(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = 70 / ((param0 - 57) / 63);
         if (null != tk.field_u) {
           if (!tk.field_u.a(32130)) {
@@ -89,7 +88,16 @@ final class rf {
     }
 
     final static ji[] a(uf param0, boolean param1) {
-        ji[] discarded$1 = null;
+        ji[] stackIn_4_0 = null;
+        ji[] stackIn_10_0 = null;
+        ji[] stackIn_17_0 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
         ji[] var4 = null;
@@ -100,35 +108,11 @@ final class rf {
         ce var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        ji[] stackIn_4_0 = null;
-        ji[] stackIn_10_0 = null;
-        ji[] stackIn_17_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        ji[] stackOut_3_0 = null;
-        ji[] stackOut_16_0 = null;
-        ji[] stackOut_9_0 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
         var7 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
             if (!param0.b(-4)) {
-              stackOut_3_0 = new ji[]{};
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = new ji[]{};
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -145,15 +129,14 @@ final class rf {
                         break L2;
                       } else {
                         var8 = (uf) null;
-                        discarded$1 = rf.a((uf) null, false);
+                        rf.a((uf) null, false);
                         break L2;
                       }
                     }
                     var5 = 0;
                     L3: while (true) {
                       if (var4.length <= var5) {
-                        stackOut_16_0 = (ji[]) (var4);
-                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_0 = (ji[]) (var4);
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -168,8 +151,7 @@ final class rf {
                       }
                     }
                   } else {
-                    stackOut_9_0 = new ji[]{};
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = new ji[]{};
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -184,27 +166,19 @@ final class rf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var2);
-            stackOut_18_1 = new StringBuilder().append("rf.A(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var2);
+
+            stackIn_20_1 = new StringBuilder().append("rf.A(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L4;
             }
           }

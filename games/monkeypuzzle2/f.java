@@ -11,17 +11,16 @@ class f extends kc {
     static lk field_i;
 
     final static void a(int param0, byte param1) {
-        boolean discarded$1 = false;
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int var6 = 0;
-        String var7 = null;
         int var8 = 0;
         int var9 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var4 = 0;
+        int var5 = 0;
+        String var7 = null;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
@@ -72,7 +71,7 @@ class f extends kc {
                   }
                 }
                 var7 = (String) null;
-                discarded$1 = f.a(-43, (String) null);
+                f.a(-43, (String) null);
                 return;
               }
               break L0;
@@ -86,28 +85,16 @@ class f extends kc {
     }
 
     final static boolean a(int param0, String param1) {
-        boolean discarded$2 = false;
         RuntimeException var2 = null;
         String var3 = null;
         CharSequence var4 = null;
         boolean stackIn_3_0 = false;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -115,40 +102,31 @@ class f extends kc {
                 break L1;
               } else {
                 var3 = (String) null;
-                discarded$2 = f.a(-28, (String) null);
+                f.a(-28, (String) null);
                 break L1;
               }
             }
             var4 = (CharSequence) ((Object) param1);
-            stackOut_2_0 = uj.field_f.equals(pl.a((byte) 104, var4));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = uj.field_f.equals(pl.a((byte) 104, var4));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("f.J(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("f.J(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -166,15 +144,14 @@ class f extends kc {
     }
 
     public static void b(byte param0) {
-        boolean discarded$2 = false;
-        String var2 = null;
+        String var2;
         field_e = null;
         field_j = null;
         field_g = null;
         field_f = null;
         if (param0 != -77) {
           var2 = (String) null;
-          discarded$2 = f.a(-123, (String) null);
+          f.a(-123, (String) null);
           field_i = null;
           return;
         } else {
@@ -184,7 +161,7 @@ class f extends kc {
     }
 
     final static void a(int param0, int param1) {
-        hb var2 = null;
+        hb var2;
         var2 = gf.field_c;
         var2.b(true, param0);
         if (param1 != 22492) {

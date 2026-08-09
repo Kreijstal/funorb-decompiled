@@ -30,22 +30,22 @@ final class cj {
     }
 
     final static void a(byte param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int[] var6 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var5 = EscapeVector.field_A;
         try {
           L0: {
@@ -58,30 +58,30 @@ final class cj {
               if (var4 <= var3) {
                 break L0;
               } else {
-                incrementValue$40 = var3;
+                incrementValue$16 = var3;
                 var3++;
-                var6[incrementValue$40] = 0;
-                incrementValue$41 = var3;
+                var6[incrementValue$16] = 0;
+                incrementValue$17 = var3;
                 var3++;
-                var6[incrementValue$41] = 0;
-                incrementValue$42 = var3;
+                var6[incrementValue$17] = 0;
+                incrementValue$18 = var3;
                 var3++;
-                var6[incrementValue$42] = 0;
-                incrementValue$43 = var3;
+                var6[incrementValue$18] = 0;
+                incrementValue$19 = var3;
                 var3++;
-                var6[incrementValue$43] = 0;
-                incrementValue$44 = var3;
+                var6[incrementValue$19] = 0;
+                incrementValue$20 = var3;
                 var3++;
-                var6[incrementValue$44] = 0;
-                incrementValue$45 = var3;
+                var6[incrementValue$20] = 0;
+                incrementValue$21 = var3;
                 var3++;
-                var6[incrementValue$45] = 0;
-                incrementValue$46 = var3;
+                var6[incrementValue$21] = 0;
+                incrementValue$22 = var3;
                 var3++;
-                var6[incrementValue$46] = 0;
-                incrementValue$47 = var3;
+                var6[incrementValue$22] = 0;
+                incrementValue$23 = var3;
                 var3++;
-                var6[incrementValue$47] = 0;
+                var6[incrementValue$23] = 0;
                 continue L1;
               }
             }

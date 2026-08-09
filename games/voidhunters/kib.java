@@ -5,9 +5,8 @@ final class kib extends uj {
     static int field_d;
 
     final int b(byte param0) {
-        int discarded$0 = 0;
         if (param0 <= 79) {
-            discarded$0 = this.a(56);
+            this.a(56);
             return 113;
         }
         return 113;
@@ -28,9 +27,8 @@ final class kib extends uj {
     }
 
     final int a(int param0) {
-        int discarded$0 = 0;
         if (param0 != -1) {
-            discarded$0 = this.b((byte) -66);
+            this.b((byte) -66);
             return rrb.field_a;
         }
         return rrb.field_a;

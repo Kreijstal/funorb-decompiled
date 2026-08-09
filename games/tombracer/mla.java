@@ -10,58 +10,41 @@ final class mla {
 
     final boolean a(int param0) {
         int stackIn_4_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
         if (param0 >= -22) {
           return false;
         } else {
           L0: {
             if (coa.field_s != this) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L0;
             }
           }
           L1: {
-            stackOut_4_0 = stackIn_4_0;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
+
+
             if (this != cha.field_d) {
-              stackOut_6_0 = stackIn_6_0;
-              stackOut_6_1 = 0;
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
+
+              stackIn_7_1 = 0;
               break L1;
             } else {
-              stackOut_5_0 = stackIn_5_0;
-              stackOut_5_1 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
+
+              stackIn_7_1 = 1;
               break L1;
             }
           }
-          return (stackIn_7_0 | stackIn_7_1) != 0;
+          return (stackIn_4_0 | stackIn_7_1) != 0;
         }
     }
 
     final static void a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        kh var5 = null;
-        kh var6 = null;
+        int var3;
+        int var4;
+        kh var5;
+        kh var6;
         if (param1 >= -83) {
           mla.a(-5, 33);
           var5 = ql.field_k;

@@ -13,9 +13,9 @@ final class tg {
     static int[] field_i;
 
     final gi a(boolean param0, long param1) {
-        gi var4 = null;
-        gi var5 = null;
-        int var6 = 0;
+        gi var4;
+        gi var5;
+        int var6;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var4 = this.field_d[(int)(param1 & (long)(this.field_f + -1))];
         this.field_e = var4.field_e;
@@ -56,10 +56,10 @@ final class tg {
     final gi a(byte param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var3 = 0;
-        gi var4 = null;
-        gi var7 = null;
-        gi var8 = null;
+        int var3;
+        gi var4;
+        gi var7;
+        gi var8;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (0 >= this.field_h) {
           if (param0 == -114) {
@@ -121,18 +121,18 @@ final class tg {
     }
 
     tg(int param0) {
-        gi dupTemp$2 = null;
-        int var2 = 0;
-        gi var3 = null;
+        gi dupTemp$1 = null;
+        int var2;
+        gi var3;
         this.field_h = 0;
         this.field_d = new gi[param0];
         this.field_f = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new gi();
-            var3 = dupTemp$2;
-            this.field_d[var2] = dupTemp$2;
+            dupTemp$1 = new gi();
+            var3 = dupTemp$1;
+            this.field_d[var2] = dupTemp$1;
             var3.field_b = var3;
             var3.field_e = var3;
             var2++;

@@ -30,10 +30,9 @@ final class oa extends RuntimeException {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         if (param0 != 0) {
             byte[] var2 = (byte[]) null;
-            discarded$0 = oa.a(0, -103, 105, (byte[]) null);
+            oa.a(0, -103, 105, (byte[]) null);
         }
         field_d = null;
         field_a = null;
@@ -42,8 +41,20 @@ final class oa extends RuntimeException {
     }
 
     final static void a(boolean param0, byte[] param1) {
-        byte dupTemp$2 = 0;
-        byte dupTemp$3 = 0;
+        byte dupTemp$0 = 0;
+        byte dupTemp$1 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_37_0 = 0;
+        int stackIn_37_1 = 0;
+        int stackIn_48_0 = 0;
+        int stackIn_49_0 = 0;
+        int stackIn_49_1 = 0;
+        RuntimeException stackIn_54_0 = null;
+        StringBuilder stackIn_54_1 = null;
+        RuntimeException stackIn_55_0 = null;
+        StringBuilder stackIn_55_1 = null;
+        String stackIn_55_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -64,40 +75,6 @@ final class oa extends RuntimeException {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        int stackIn_35_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_37_0 = 0;
-        int stackIn_37_1 = 0;
-        int stackIn_47_0 = 0;
-        int stackIn_48_0 = 0;
-        int stackIn_49_0 = 0;
-        int stackIn_49_1 = 0;
-        RuntimeException stackIn_53_0 = null;
-        StringBuilder stackIn_53_1 = null;
-        RuntimeException stackIn_54_0 = null;
-        StringBuilder stackIn_54_1 = null;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
-        String stackIn_55_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_46_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_48_1 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_47_1 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_35_1 = 0;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        RuntimeException stackOut_54_0 = null;
-        StringBuilder stackOut_54_1 = null;
-        String stackOut_54_2 = null;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        String stackOut_53_2 = null;
         try {
           L0: {
             var16 = new ge(param1);
@@ -172,23 +149,18 @@ final class oa extends RuntimeException {
                                                   break L8;
                                                 } else {
                                                   L11: {
-                                                    dupTemp$2 = var16.e((byte) 105);
-                                                    var9[var12] = dupTemp$2;
-                                                    var13 = dupTemp$2;
-                                                    stackOut_46_0 = var10;
-                                                    stackIn_48_0 = stackOut_46_0;
-                                                    stackIn_47_0 = stackOut_46_0;
+                                                    dupTemp$0 = var16.e((byte) 105);
+                                                    var9[var12] = dupTemp$0;
+                                                    var13 = dupTemp$0;
+                                                    stackIn_48_0 = var10;
+
                                                     if (-1 == var13) {
-                                                      stackOut_48_0 = stackIn_48_0;
-                                                      stackOut_48_1 = 0;
-                                                      stackIn_49_0 = stackOut_48_0;
-                                                      stackIn_49_1 = stackOut_48_1;
+                                                      stackIn_49_0 = stackIn_48_0;
+                                                      stackIn_49_1 = 0;
                                                       break L11;
                                                     } else {
-                                                      stackOut_47_0 = stackIn_47_0;
-                                                      stackOut_47_1 = 1;
-                                                      stackIn_49_0 = stackOut_47_0;
-                                                      stackIn_49_1 = stackOut_47_1;
+                                                      stackIn_49_0 = stackIn_48_0;
+                                                      stackIn_49_1 = 1;
                                                       break L11;
                                                     }
                                                   }
@@ -223,23 +195,18 @@ final class oa extends RuntimeException {
                                                       continue L13;
                                                     } else {
                                                       L15: {
-                                                        dupTemp$3 = var16.e((byte) 105);
-                                                        var9[var12 - -(var13 * var5)] = dupTemp$3;
-                                                        var14 = dupTemp$3;
-                                                        stackOut_34_0 = var10;
-                                                        stackIn_36_0 = stackOut_34_0;
-                                                        stackIn_35_0 = stackOut_34_0;
+                                                        dupTemp$1 = var16.e((byte) 105);
+                                                        var9[var12 - -(var13 * var5)] = dupTemp$1;
+                                                        var14 = dupTemp$1;
+                                                        stackIn_36_0 = var10;
+
                                                         if (var14 == -1) {
-                                                          stackOut_36_0 = stackIn_36_0;
-                                                          stackOut_36_1 = 0;
-                                                          stackIn_37_0 = stackOut_36_0;
-                                                          stackIn_37_1 = stackOut_36_1;
+                                                          stackIn_37_0 = stackIn_36_0;
+                                                          stackIn_37_1 = 0;
                                                           break L15;
                                                         } else {
-                                                          stackOut_35_0 = stackIn_35_0;
-                                                          stackOut_35_1 = 1;
-                                                          stackIn_37_0 = stackOut_35_0;
-                                                          stackIn_37_1 = stackOut_35_1;
+                                                          stackIn_37_0 = stackIn_36_0;
+                                                          stackIn_37_1 = 1;
                                                           break L15;
                                                         }
                                                       }
@@ -317,27 +284,19 @@ final class oa extends RuntimeException {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var2 = decompiledCaughtException;
-            stackOut_52_0 = (RuntimeException) (var2);
-            stackOut_52_1 = new StringBuilder().append("oa.C(").append(param0).append(',');
-            stackIn_54_0 = stackOut_52_0;
-            stackIn_54_1 = stackOut_52_1;
-            stackIn_53_0 = stackOut_52_0;
-            stackIn_53_1 = stackOut_52_1;
+            stackIn_54_0 = (RuntimeException) (var2);
+
+            stackIn_54_1 = new StringBuilder().append("oa.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
-              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
-              stackOut_54_2 = "null";
-              stackIn_55_0 = stackOut_54_0;
-              stackIn_55_1 = stackOut_54_1;
-              stackIn_55_2 = stackOut_54_2;
+              stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
+              stackIn_55_2 = "null";
               break L18;
             } else {
-              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
-              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
-              stackOut_53_2 = "{...}";
-              stackIn_55_0 = stackOut_53_0;
-              stackIn_55_1 = stackOut_53_1;
-              stackIn_55_2 = stackOut_53_2;
+              stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
+              stackIn_55_2 = "{...}";
               break L18;
             }
           }
@@ -350,23 +309,12 @@ final class oa extends RuntimeException {
         RuntimeException var4 = null;
         int var5 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             var4_int = -1;
@@ -374,8 +322,7 @@ final class oa extends RuntimeException {
             L1: while (true) {
               if (var5 >= param1) {
                 var4_int = var4_int ^ param2;
-                stackOut_3_0 = var4_int;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = var4_int;
                 break L0;
               } else {
                 var4_int = var4_int >>> 49336520 ^ fo.field_e[255 & (var4_int ^ param3[var5])];
@@ -388,27 +335,19 @@ final class oa extends RuntimeException {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var4);
-            stackOut_5_1 = new StringBuilder().append("oa.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var4);
+
+            stackIn_7_1 = new StringBuilder().append("oa.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -418,31 +357,21 @@ final class oa extends RuntimeException {
     }
 
     final static void a(int param0, pn param1) {
-        int dupTemp$5 = 0;
-        pn[] fieldTemp$6 = null;
-        int fieldTemp$7 = 0;
-        int incrementValue$8 = 0;
-        int dupTemp$9 = 0;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
+        int dupTemp$0 = 0;
+        pn[] fieldTemp$1 = null;
+        int fieldTemp$2 = 0;
+        int incrementValue$3 = 0;
+        int dupTemp$4 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
         try {
           L0: {
             var2_int = 0;
@@ -459,17 +388,17 @@ final class oa extends RuntimeException {
                 var2_int = 0;
                 L3: while (true) {
                   if (aa.field_e <= var2_int) {
-                    dupTemp$5 = param1.b(14842);
-                    g.field_l[dupTemp$5] = g.field_l[dupTemp$5] + 1;
+                    dupTemp$0 = param1.b(14842);
+                    g.field_l[dupTemp$0] = g.field_l[dupTemp$0] + 1;
                     var2_int = 0;
                     var3 = 0;
                     L4: while (true) {
                       if (var3 >= aa.field_e) {
                         aa.field_e = var2_int;
-                        fieldTemp$6 = wb.field_e;
-                        fieldTemp$7 = aa.field_e;
+                        fieldTemp$1 = wb.field_e;
+                        fieldTemp$2 = aa.field_e;
                         aa.field_e = aa.field_e + 1;
-                        fieldTemp$6[fieldTemp$7] = param1;
+                        fieldTemp$1[fieldTemp$2] = param1;
                         break L0;
                       } else {
                         L5: {
@@ -486,9 +415,9 @@ final class oa extends RuntimeException {
                               break L6;
                             }
                           }
-                          incrementValue$8 = var2_int;
+                          incrementValue$3 = var2_int;
                           var2_int++;
-                          wb.field_e[incrementValue$8] = wb.field_e[var3];
+                          wb.field_e[incrementValue$3] = wb.field_e[var3];
                           break L5;
                         }
                         var3++;
@@ -498,8 +427,8 @@ final class oa extends RuntimeException {
                   } else {
                     L7: {
                       if (param1.field_p == wb.field_e[var2_int].field_p) {
-                        dupTemp$9 = wb.field_e[var2_int].b(14842);
-                        g.field_l[dupTemp$9] = g.field_l[dupTemp$9] + 1;
+                        dupTemp$4 = wb.field_e[var2_int].b(14842);
+                        g.field_l[dupTemp$4] = g.field_l[dupTemp$4] + 1;
                         break L7;
                       } else {
                         break L7;
@@ -520,27 +449,19 @@ final class oa extends RuntimeException {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var2);
-            stackOut_21_1 = new StringBuilder().append("oa.E(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var2);
+
+            stackIn_23_1 = new StringBuilder().append("oa.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L8;
             }
           }

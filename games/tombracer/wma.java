@@ -25,7 +25,7 @@ final class wma extends nv {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        dba var4 = null;
+        dba var4;
         if (ql.field_k != null) {
           var4 = new dba();
           var4.a(param2, (byte) -60);
@@ -93,8 +93,7 @@ final class wma extends nv {
     }
 
     final void k(int param0) {
-        lj discarded$1 = null;
-        int var2 = 0;
+        int var2;
         if (param0 == 5418) {
           if (this.field_q != null) {
             if (this.field_o != null) {
@@ -123,7 +122,7 @@ final class wma extends nv {
             return;
           }
         } else {
-          discarded$1 = this.a(77, -12, true);
+          this.a(77, -12, true);
           if (this.field_q != null) {
             if (this.field_o != null) {
               this.field_o.d(0);

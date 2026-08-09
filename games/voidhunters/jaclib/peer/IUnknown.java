@@ -13,11 +13,12 @@ public class IUnknown extends jaclib.peer.Peer {
     }
 
     public final long a(boolean param0) {
-        RuntimeException var2 = null;
+        RuntimeException var2;
         L0: {
           if (!param0) {
             break L0;
           } else {
+            this.AddRef();
             break L0;
           }
         }

@@ -14,10 +14,9 @@ final class vg extends lj {
     final synchronized void a(int param0) {
         int var2 = 0;
         we var3 = null;
-        Object var4 = null;
         int var5 = 0;
-        Throwable var6 = null;
         Throwable decompiledCaughtException = null;
+        Object var4 = null;
         L0: while (true) {
           if (this.field_l >= 0) {
             if (this.field_n + param0 >= this.field_l) {
@@ -128,10 +127,9 @@ final class vg extends lj {
     final synchronized void a(int[] param0, int param1, int param2) {
         int var4 = 0;
         we var5 = null;
-        Object var6 = null;
         int var7 = 0;
-        Throwable var8 = null;
         Throwable decompiledCaughtException = null;
+        Object var6 = null;
         L0: while (true) {
           if (this.field_l >= 0) {
             if (this.field_n + param2 >= this.field_l) {

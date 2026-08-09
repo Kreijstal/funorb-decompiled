@@ -16,12 +16,11 @@ final class na {
     private int[] field_g;
 
     final static void a(int param0, int param1, int param2, pb[] param3) {
-        pf discarded$0 = null;
         try {
             eh.field_a = new qc(param3);
             sa.field_h = param2;
             if (param1 != 256) {
-                discarded$0 = na.a(67, 84, 117, false, true, true);
+                na.a(67, 84, 117, false, true, true);
             }
             ka.field_q = param0;
             tf.a(0);
@@ -31,18 +30,18 @@ final class na {
     }
 
     private final void d(int param0) {
-        int fieldTemp$3 = 0;
-        int dupTemp$4 = 0;
-        int dupTemp$5 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int fieldTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int dupTemp$2 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = stellarshard.field_B;
-          fieldTemp$3 = this.field_c + 1;
+          fieldTemp$0 = this.field_c + 1;
           this.field_c = this.field_c + 1;
-          this.field_i = this.field_i + fieldTemp$3;
+          this.field_i = this.field_i + fieldTemp$0;
           var2 = 0;
           if (param0 >= 113) {
             break L0;
@@ -76,12 +75,12 @@ final class na {
               }
             }
             this.field_f = this.field_f + this.field_g[128 + var2 & 255];
-            dupTemp$4 = this.field_f + this.field_g[sa.a(var3 >> 937937890, 255)] + this.field_i;
-            var4 = dupTemp$4;
-            this.field_g[var2] = dupTemp$4;
-            dupTemp$5 = var3 + this.field_g[sa.a(1020, var4 >> 415082504) >> -1184775454];
-            this.field_i = dupTemp$5;
-            this.field_h[var2] = dupTemp$5;
+            dupTemp$1 = this.field_f + this.field_g[sa.a(var3 >> 937937890, 255)] + this.field_i;
+            var4 = dupTemp$1;
+            this.field_g[var2] = dupTemp$1;
+            dupTemp$2 = var3 + this.field_g[sa.a(1020, var4 >> 415082504) >> -1184775454];
+            this.field_i = dupTemp$2;
+            this.field_h[var2] = dupTemp$2;
             var2++;
             continue L1;
           }
@@ -90,135 +89,19 @@ final class na {
 
     private final void c(int param0) {
         int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        L0: {
-          var11 = stellarshard.field_B;
-          var4 = -1640531527;
-          var10 = -1640531527;
-          var3 = -1640531527;
-          var5 = -1640531527;
-          var9 = -1640531527;
-          var8 = -1640531527;
-          if (param0 == 1301311304) {
-            break L0;
-          } else {
+        int var11 = stellarshard.field_B;
+        int var4 = -1640531527;
+        int var10 = -1640531527;
+        int var3 = -1640531527;
+        int var5 = -1640531527;
+        int var9 = -1640531527;
+        int var8 = -1640531527;
+        if (param0 != 1301311304) {
             field_a = -6;
-            break L0;
-          }
         }
-        var6 = -1640531527;
-        var7 = -1640531527;
-        var2 = 0;
-        L1: while (true) {
-          if (-5 >= (var2 ^ -1)) {
-            var2 = 0;
-            L2: while (true) {
-              if (-257 >= (var2 ^ -1)) {
-                var2 = 0;
-                L3: while (true) {
-                  if (var2 >= 256) {
-                    this.d(116);
-                    this.field_b = 256;
-                    return;
-                  } else {
-                    var7 = var7 + this.field_g[4 + var2];
-                    var10 = var10 + this.field_g[var2 + 7];
-                    var4 = var4 + this.field_g[var2 + 1];
-                    var8 = var8 + this.field_g[5 + var2];
-                    var3 = var3 + this.field_g[var2];
-                    var9 = var9 + this.field_g[var2 + 6];
-                    var5 = var5 + this.field_g[var2 + 2];
-                    var6 = var6 + this.field_g[3 + var2];
-                    var3 = var3 ^ var4 << -525578229;
-                    var6 = var6 + var3;
-                    var4 = var4 + var5;
-                    var4 = var4 ^ var5 >>> 1569970690;
-                    var7 = var7 + var4;
-                    var5 = var5 + var6;
-                    var5 = var5 ^ var6 << 265629384;
-                    var6 = var6 + var7;
-                    var8 = var8 + var5;
-                    var6 = var6 ^ var7 >>> -1979210352;
-                    var7 = var7 + var8;
-                    var9 = var9 + var6;
-                    var7 = var7 ^ var8 << -174994422;
-                    var10 = var10 + var7;
-                    var8 = var8 + var9;
-                    var8 = var8 ^ var9 >>> -1700292252;
-                    var3 = var3 + var8;
-                    var9 = var9 + var10;
-                    var9 = var9 ^ var10 << 1301311304;
-                    var10 = var10 + var3;
-                    var4 = var4 + var9;
-                    var10 = var10 ^ var3 >>> 1164307913;
-                    var5 = var5 + var10;
-                    var3 = var3 + var4;
-                    this.field_g[var2] = var3;
-                    this.field_g[1 + var2] = var4;
-                    this.field_g[2 + var2] = var5;
-                    this.field_g[3 + var2] = var6;
-                    this.field_g[var2 - -4] = var7;
-                    this.field_g[5 + var2] = var8;
-                    this.field_g[6 + var2] = var9;
-                    this.field_g[var2 - -7] = var10;
-                    var2 += 8;
-                    continue L3;
-                  }
-                }
-              } else {
-                var4 = var4 + this.field_h[var2 - -1];
-                var7 = var7 + this.field_h[var2 + 4];
-                var10 = var10 + this.field_h[var2 + 7];
-                var8 = var8 + this.field_h[5 + var2];
-                var6 = var6 + this.field_h[var2 - -3];
-                var9 = var9 + this.field_h[6 + var2];
-                var5 = var5 + this.field_h[2 + var2];
-                var3 = var3 + this.field_h[var2];
-                var3 = var3 ^ var4 << -228956501;
-                var4 = var4 + var5;
-                var6 = var6 + var3;
-                var4 = var4 ^ var5 >>> -609265118;
-                var5 = var5 + var6;
-                var7 = var7 + var4;
-                var5 = var5 ^ var6 << -1934787544;
-                var6 = var6 + var7;
-                var8 = var8 + var5;
-                var6 = var6 ^ var7 >>> -1479679568;
-                var9 = var9 + var6;
-                var7 = var7 + var8;
-                var7 = var7 ^ var8 << -24668310;
-                var8 = var8 + var9;
-                var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> 111720900;
-                var3 = var3 + var8;
-                var9 = var9 + var10;
-                var9 = var9 ^ var10 << -1927956344;
-                var10 = var10 + var3;
-                var4 = var4 + var9;
-                var10 = var10 ^ var3 >>> -2007241687;
-                var3 = var3 + var4;
-                var5 = var5 + var10;
-                this.field_g[var2] = var3;
-                this.field_g[1 + var2] = var4;
-                this.field_g[var2 + 2] = var5;
-                this.field_g[3 + var2] = var6;
-                this.field_g[4 + var2] = var7;
-                this.field_g[var2 + 5] = var8;
-                this.field_g[6 + var2] = var9;
-                this.field_g[var2 + 7] = var10;
-                var2 += 8;
-                continue L2;
-              }
-            }
-          } else {
+        int var6 = -1640531527;
+        int var7 = -1640531527;
+        for (var2 = 0; -5 < (var2 ^ -1); var2++) {
             var3 = var3 ^ var4 << 687389163;
             var6 = var6 + var3;
             var4 = var4 + var5;
@@ -243,10 +126,93 @@ final class na {
             var10 = var10 ^ var3 >>> -284536311;
             var5 = var5 + var10;
             var3 = var3 + var4;
-            var2++;
-            continue L1;
-          }
         }
+        for (var2 = 0; -257 < (var2 ^ -1); var2 += 8) {
+            var4 = var4 + this.field_h[var2 - -1];
+            var7 = var7 + this.field_h[var2 + 4];
+            var10 = var10 + this.field_h[var2 + 7];
+            var8 = var8 + this.field_h[5 + var2];
+            var6 = var6 + this.field_h[var2 - -3];
+            var9 = var9 + this.field_h[6 + var2];
+            var5 = var5 + this.field_h[2 + var2];
+            var3 = var3 + this.field_h[var2];
+            var3 = var3 ^ var4 << -228956501;
+            var4 = var4 + var5;
+            var6 = var6 + var3;
+            var4 = var4 ^ var5 >>> -609265118;
+            var5 = var5 + var6;
+            var7 = var7 + var4;
+            var5 = var5 ^ var6 << -1934787544;
+            var6 = var6 + var7;
+            var8 = var8 + var5;
+            var6 = var6 ^ var7 >>> -1479679568;
+            var9 = var9 + var6;
+            var7 = var7 + var8;
+            var7 = var7 ^ var8 << -24668310;
+            var8 = var8 + var9;
+            var10 = var10 + var7;
+            var8 = var8 ^ var9 >>> 111720900;
+            var3 = var3 + var8;
+            var9 = var9 + var10;
+            var9 = var9 ^ var10 << -1927956344;
+            var10 = var10 + var3;
+            var4 = var4 + var9;
+            var10 = var10 ^ var3 >>> -2007241687;
+            var3 = var3 + var4;
+            var5 = var5 + var10;
+            this.field_g[var2] = var3;
+            this.field_g[1 + var2] = var4;
+            this.field_g[var2 + 2] = var5;
+            this.field_g[3 + var2] = var6;
+            this.field_g[4 + var2] = var7;
+            this.field_g[var2 + 5] = var8;
+            this.field_g[6 + var2] = var9;
+            this.field_g[var2 + 7] = var10;
+        }
+        for (var2 = 0; var2 < 256; var2 += 8) {
+            var7 = var7 + this.field_g[4 + var2];
+            var10 = var10 + this.field_g[var2 + 7];
+            var4 = var4 + this.field_g[var2 + 1];
+            var8 = var8 + this.field_g[5 + var2];
+            var3 = var3 + this.field_g[var2];
+            var9 = var9 + this.field_g[var2 + 6];
+            var5 = var5 + this.field_g[var2 + 2];
+            var6 = var6 + this.field_g[3 + var2];
+            var3 = var3 ^ var4 << -525578229;
+            var6 = var6 + var3;
+            var4 = var4 + var5;
+            var4 = var4 ^ var5 >>> 1569970690;
+            var7 = var7 + var4;
+            var5 = var5 + var6;
+            var5 = var5 ^ var6 << 265629384;
+            var6 = var6 + var7;
+            var8 = var8 + var5;
+            var6 = var6 ^ var7 >>> -1979210352;
+            var7 = var7 + var8;
+            var9 = var9 + var6;
+            var7 = var7 ^ var8 << -174994422;
+            var10 = var10 + var7;
+            var8 = var8 + var9;
+            var8 = var8 ^ var9 >>> -1700292252;
+            var3 = var3 + var8;
+            var9 = var9 + var10;
+            var9 = var9 ^ var10 << 1301311304;
+            var10 = var10 + var3;
+            var4 = var4 + var9;
+            var10 = var10 ^ var3 >>> 1164307913;
+            var5 = var5 + var10;
+            var3 = var3 + var4;
+            this.field_g[var2] = var3;
+            this.field_g[1 + var2] = var4;
+            this.field_g[2 + var2] = var5;
+            this.field_g[3 + var2] = var6;
+            this.field_g[var2 - -4] = var7;
+            this.field_g[5 + var2] = var8;
+            this.field_g[6 + var2] = var9;
+            this.field_g[var2 - -7] = var10;
+        }
+        this.d(116);
+        this.field_b = 256;
     }
 
     final static pf a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
@@ -256,7 +222,6 @@ final class na {
             wc var8 = null;
             pf stackIn_16_0 = null;
             Throwable decompiledCaughtException = null;
-            pf stackOut_15_0 = null;
             try {
               L0: {
                 L1: {
@@ -313,8 +278,7 @@ final class na {
                     break L6;
                   }
                 }
-                stackOut_15_0 = new pf(var8, param5, param0);
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_0 = new pf(var8, param5, param0);
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {

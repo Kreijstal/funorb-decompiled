@@ -53,9 +53,9 @@ final class ki {
     }
 
     final ob a(int param0, int param1) {
-        ob var3 = null;
-        byte[] var4 = null;
-        ob var5 = null;
+        ob var3;
+        byte[] var4;
+        ob var5;
         var3 = (ob) (this.field_d.a((long)param1, (byte) 102));
         if (var3 != null) {
           return var3;

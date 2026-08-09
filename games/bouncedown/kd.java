@@ -27,12 +27,9 @@ public class kd {
     }
 
     public static void a(int param0, int param1, String param2) {
-        File discarded$3 = null;
-        File discarded$4 = null;
-        File discarded$5 = null;
+        Throwable decompiledCaughtException = null;
         Exception var3 = null;
         String var4 = null;
-        Throwable decompiledCaughtException = null;
         field_d = param2;
         field_a = param1;
         try {
@@ -56,7 +53,7 @@ public class kd {
               } else {
                 L2: {
                   var4 = (String) null;
-                  discarded$3 = kd.a((String) null, (String) null, true, -114);
+                  kd.a((String) null, (String) null, true, -114);
                   if (null == field_e) {
                     field_e = "~/";
                     break L2;
@@ -75,7 +72,7 @@ public class kd {
           if (param0 > -28) {
             L3: {
               var4 = (String) null;
-              discarded$4 = kd.a((String) null, (String) null, true, -114);
+              kd.a((String) null, (String) null, true, -114);
               if (null == field_e) {
                 field_e = "~/";
                 break L3;
@@ -100,7 +97,7 @@ public class kd {
         if (param0 > -28) {
           L5: {
             var4 = (String) null;
-            discarded$5 = kd.a((String) null, (String) null, true, -114);
+            kd.a((String) null, (String) null, true, -114);
             if (null == field_e) {
               field_e = "~/";
               break L5;

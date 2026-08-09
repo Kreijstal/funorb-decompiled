@@ -12,12 +12,14 @@ final class al {
     }
 
     final synchronized static byte[] a(int param0, byte param1) {
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int dupTemp$6 = 0;
+        byte[][] arrayValue$7 = null;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
         L0: {
           if (param0 != 100) {
             break L0;
@@ -25,9 +27,9 @@ final class al {
             if (-1 <= (gd.field_g ^ -1)) {
               break L0;
             } else {
-              fieldTemp$6 = gd.field_g - 1;
+              fieldTemp$3 = gd.field_g - 1;
               gd.field_g = gd.field_g - 1;
-              var2_ref_byte__ = j.field_a[fieldTemp$6];
+              var2_ref_byte__ = j.field_a[fieldTemp$3];
               j.field_a[gd.field_g] = null;
               return var2_ref_byte__;
             }
@@ -38,9 +40,9 @@ final class al {
             break L1;
           } else {
             if (-1 > (in.field_a ^ -1)) {
-              fieldTemp$7 = in.field_a - 1;
+              fieldTemp$4 = in.field_a - 1;
               in.field_a = in.field_a - 1;
-              var2_ref_byte__ = cd.field_e[fieldTemp$7];
+              var2_ref_byte__ = cd.field_e[fieldTemp$4];
               cd.field_e[in.field_a] = null;
               return var2_ref_byte__;
             } else {
@@ -53,9 +55,9 @@ final class al {
             break L2;
           } else {
             if (-1 > (nd.field_g ^ -1)) {
-              fieldTemp$8 = nd.field_g - 1;
+              fieldTemp$5 = nd.field_g - 1;
               nd.field_g = nd.field_g - 1;
-              var2_ref_byte__ = ef.field_h[fieldTemp$8];
+              var2_ref_byte__ = ef.field_h[fieldTemp$5];
               ef.field_h[nd.field_g] = null;
               return var2_ref_byte__;
             } else {
@@ -80,8 +82,10 @@ final class al {
               } else {
                 if (di.field_p[var2] == param0) {
                   if (ic.field_f[var2] > 0) {
-                    ic.field_f[var2] = ic.field_f[var2] - 1;
-                    var3 = ei.field_c[var2][ic.field_f[var2] - 1];
+                    dupTemp$6 = ic.field_f[var2] - 1;
+                    arrayValue$7 = ei.field_c[var2];
+                    ic.field_f[var2] = dupTemp$6;
+                    var3 = arrayValue$7[dupTemp$6];
                     ei.field_c[var2][ic.field_f[var2]] = null;
                     return var3;
                   } else {

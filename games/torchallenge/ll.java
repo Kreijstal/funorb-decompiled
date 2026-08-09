@@ -23,18 +23,18 @@ final class ll {
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, boolean param5, boolean param6, int param7, int param8, int param9, boolean param10, int param11) {
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        ka var16 = null;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        ka var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
         L0: {
           var23 = TorChallenge.field_F ? 1 : 0;
           var12 = kj.field_C[0].field_q;

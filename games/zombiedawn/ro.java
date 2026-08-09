@@ -30,14 +30,14 @@ final class ro {
     }
 
     final static vn[] a(byte param0) {
-        vn[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        byte[] var10 = null;
-        byte[] var11 = null;
+        vn[] var1;
+        int var2;
+        int var3;
+        int[] var5;
+        int var6;
+        int var7;
+        byte[] var10;
+        byte[] var11;
         var7 = ZombieDawn.field_J;
         var1 = new vn[t.field_h];
         if (param0 != 110) {

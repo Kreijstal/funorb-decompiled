@@ -14,8 +14,6 @@ final class sm extends fa {
         CharSequence var3 = null;
         int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -23,27 +21,15 @@ final class sm extends fa {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 == -1) {
               var3 = (CharSequence) ((Object) param0);
-              stackOut_3_0 = eq.field_Hb.equals(dh.a(var3, (byte) 72));
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = eq.field_Hb.equals(dh.a(var3, (byte) 72));
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -52,27 +38,19 @@ final class sm extends fa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("sm.B(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("sm.B(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -86,12 +64,12 @@ final class sm extends fa {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int var3 = 0;
-        String var4 = null;
-        Object var5 = null;
-        String var6 = null;
-        CharSequence var7 = null;
-        CharSequence var8 = null;
+        int var3;
+        Object var4;
+        Object var5;
+        String var6;
+        CharSequence var7;
+        CharSequence var8;
         if (param2 == 0) {
           if (he.field_f != null) {
             var3 = he.field_f.b(-126, param1);
@@ -114,13 +92,13 @@ final class sm extends fa {
                       if (il.field_e != 0) {
                         break L1;
                       } else {
-                        var5 = jf.a(var4, param0, (byte) 108);
+                        var5 = jf.a((String) (var4), param0, (byte) 108);
                         break L1;
                       }
                     }
                     L2: {
                       if (-2 == (il.field_e ^ -1)) {
-                        var5 = ff.a(param0, var4, (byte) -106);
+                        var5 = ff.a(param0, (String) (var4), (byte) -106);
                         break L2;
                       } else {
                         break L2;
@@ -128,7 +106,7 @@ final class sm extends fa {
                     }
                     L3: {
                       if ((il.field_e ^ -1) == -3) {
-                        var5 = mj.a(-34, var4, param0);
+                        var5 = mj.a(-34, (String) (var4), param0);
                         break L3;
                       } else {
                         break L3;
@@ -136,7 +114,7 @@ final class sm extends fa {
                     }
                     L4: {
                       if (il.field_e == 3) {
-                        var5 = aq.a(var4, param0, var4, -20867);
+                        var5 = aq.a((String) (var4), param0, (String) (var4), -20867);
                         break L4;
                       } else {
                         break L4;
@@ -144,7 +122,7 @@ final class sm extends fa {
                     }
                     if (var5 != null) {
                       var6 = (String) null;
-                      ti.a(0, (String) null, var4, (byte) -59, 2, (String) (var5));
+                      ti.a(0, (String) null, (String) (var4), (byte) -59, 2, (String) (var5));
                       he.field_f = null;
                       il.field_e = -1;
                       return;
@@ -198,13 +176,13 @@ final class sm extends fa {
                         if (il.field_e != 0) {
                           break L7;
                         } else {
-                          var5 = jf.a(var4, param0, (byte) 108);
+                          var5 = jf.a((String) (var4), param0, (byte) 108);
                           break L7;
                         }
                       }
                       L8: {
                         if (-2 == (il.field_e ^ -1)) {
-                          var5 = ff.a(param0, var4, (byte) -106);
+                          var5 = ff.a(param0, (String) (var4), (byte) -106);
                           break L8;
                         } else {
                           break L8;
@@ -212,7 +190,7 @@ final class sm extends fa {
                       }
                       L9: {
                         if ((il.field_e ^ -1) == -3) {
-                          var5 = mj.a(-34, var4, param0);
+                          var5 = mj.a(-34, (String) (var4), param0);
                           break L9;
                         } else {
                           break L9;
@@ -220,9 +198,9 @@ final class sm extends fa {
                       }
                       L10: {
                         if (il.field_e == 3) {
-                          var5 = aq.a(var4, param0, var4, -20867);
-                          var4 = (String) (var5);
-                          var4 = (String) (var5);
+                          var5 = aq.a((String) (var4), param0, (String) (var4), -20867);
+                          var4 = var5;
+                          var4 = var5;
                           break L10;
                         } else {
                           break L10;
@@ -230,7 +208,7 @@ final class sm extends fa {
                       }
                       if (var5 != null) {
                         var6 = (String) null;
-                        ti.a(0, (String) null, var4, (byte) -59, 2, (String) (var5));
+                        ti.a(0, (String) null, (String) (var4), (byte) -59, 2, (String) (var5));
                         he.field_f = null;
                         il.field_e = -1;
                         break L5;

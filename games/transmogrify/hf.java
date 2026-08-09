@@ -31,17 +31,15 @@ final class hf extends dj {
     }
 
     final byte[] a(boolean param0) {
-        java.nio.Buffer discarded$4 = null;
-        java.nio.ByteBuffer discarded$5 = null;
-        byte[] var2 = null;
-        byte[] var3 = null;
+        byte[] var2;
+        byte[] var3;
         if (param0) {
           return (byte[]) null;
         } else {
           var3 = new byte[this.field_e.capacity()];
           var2 = var3;
-          discarded$4 = this.field_e.position(0);
-          discarded$5 = this.field_e.get(var3);
+          this.field_e.position(0);
+          this.field_e.get(var3);
           return var3;
         }
     }
@@ -50,13 +48,11 @@ final class hf extends dj {
     }
 
     final void a(byte[] param0, byte param1) {
-        java.nio.Buffer discarded$0 = null;
-        java.nio.ByteBuffer discarded$1 = null;
         try {
             int var3_int = -63 % ((-59 - param1) / 55);
             this.field_e = java.nio.ByteBuffer.allocateDirect(param0.length);
-            discarded$0 = this.field_e.position(0);
-            discarded$1 = this.field_e.put(param0);
+            this.field_e.position(0);
+            this.field_e.put(param0);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) ((Object) runtimeException), "hf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

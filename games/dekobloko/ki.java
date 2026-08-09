@@ -14,6 +14,10 @@ final class ki extends bh {
     int field_o;
 
     final static hl a(int param0, boolean param1) {
+        int stackIn_5_0 = 0;
+        int stackIn_13_0 = 0;
+        int[] stackIn_30_0 = null;
+        Throwable decompiledCaughtException = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -21,16 +25,6 @@ final class ki extends bh {
         int var7 = 0;
         uf var8 = null;
         me var9 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_13_0 = 0;
-        int[] stackIn_30_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        Object stackOut_29_0 = null;
-        int[] stackOut_28_0 = null;
         var7 = client.field_A ? 1 : 0;
         if (param0 == 0) {
           L0: {
@@ -38,12 +32,10 @@ final class ki extends bh {
             var3 = var8.d((byte) -99);
             mf.field_R = 127 & var3;
             if (-1 == (var3 & 128 ^ -1)) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               break L0;
             } else {
-              stackOut_3_0 = 1;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = 1;
               break L0;
             }
           }
@@ -69,12 +61,10 @@ final class ki extends bh {
           }
           L2: {
             if (1 != var8.d((byte) -32)) {
-              stackOut_12_0 = 0;
-              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_0 = 0;
               break L2;
             } else {
-              stackOut_11_0 = 1;
-              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_0 = 1;
               break L2;
             }
           }
@@ -130,12 +120,10 @@ final class ki extends bh {
                   var9 = wj.field_Qb.a(127, var5);
                   ib.field_pb = var9.f((byte) -61);
                   if (sa.field_B.equals(oa.field_f)) {
-                    stackOut_29_0 = null;
-                    stackIn_30_0 = (int[]) ((Object) stackOut_29_0);
+                    stackIn_30_0 = null;
                     break L7;
                   } else {
-                    stackOut_28_0 = var9.field_F;
-                    stackIn_30_0 = stackOut_28_0;
+                    stackIn_30_0 = var9.field_F;
                     break L7;
                   }
                 }
@@ -170,22 +158,12 @@ final class ki extends bh {
             java.net.URL var2 = null;
             Exception var2_ref = null;
             RuntimeException var2_ref2 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
             try {
               try {
                 L0: {
@@ -212,27 +190,19 @@ final class ki extends bh {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var2_ref2);
-                stackOut_6_1 = new StringBuilder().append("ki.C(").append(param0).append(',');
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_8_1 = new StringBuilder().append("ki.C(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L2;
                 }
               }
@@ -246,7 +216,7 @@ final class ki extends bh {
     }
 
     public static void c(byte param0) {
-        java.applet.Applet var2 = null;
+        java.applet.Applet var2;
         field_t = null;
         field_w = null;
         field_u = null;

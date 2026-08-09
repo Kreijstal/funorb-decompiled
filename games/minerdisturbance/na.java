@@ -5,10 +5,9 @@ final class na extends oe implements java.awt.event.MouseWheelListener {
     private int field_h;
 
     final void a(java.awt.Component param0, int param1) {
-        int discarded$0 = 0;
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param1 != 0) {
-            discarded$0 = this.a((byte) -100);
+            this.a((byte) -100);
         }
     }
 

@@ -11,7 +11,7 @@ final class rq extends kj {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var5 = 0;
+        int var5;
         var5 = BachelorFridge.field_y;
         if (15 <= this.field_h) {
           if (this.field_h >= 30) {

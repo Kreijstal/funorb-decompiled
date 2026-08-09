@@ -41,11 +41,10 @@ final class ei extends dg {
     }
 
     final void f(byte param0) {
-        ui discarded$0 = null;
         int var4 = stellarshard.field_B;
         ug var2 = new ug(this.field_C);
         if (param0 >= -126) {
-            discarded$0 = this.d((byte) -45);
+            this.d((byte) -45);
         }
         ui var3 = (ui) ((Object) var2.b((byte) 119));
         while (var3 != null) {
@@ -73,7 +72,6 @@ final class ei extends dg {
 
     final void a(byte param0, rj param1) {
         ui var4 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param1 instanceof ui)) {
                 throw new IllegalArgumentException();
@@ -82,7 +80,7 @@ final class ei extends dg {
             var4 = (ui) ((Object) param1);
             this.field_C.a(-1, var4);
             var4.field_G = true;
-            discarded$0 = var4.a(-2147483648, (rj) (this));
+            var4.a(-2147483648, (rj) (this));
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) ((Object) runtimeException), "ei.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -105,9 +103,9 @@ final class ei extends dg {
     }
 
     final rj a(int param0) {
-        ug var2 = null;
-        ui var3 = null;
-        int var4 = 0;
+        ug var2;
+        ui var3;
+        int var4;
         L0: {
           var4 = stellarshard.field_B;
           if (param0 == 257) {
@@ -147,7 +145,7 @@ final class ei extends dg {
             return null;
         }
         CharSequence[] var5 = (CharSequence[]) null;
-        String discarded$0 = ei.a((CharSequence[]) null, (byte) 55);
+        ei.a((CharSequence[]) null, (byte) 55);
         return null;
     }
 
@@ -155,55 +153,35 @@ final class ei extends dg {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var2_int = 114 % ((param1 - 64) / 58);
-            stackOut_0_0 = ge.a((byte) -50, param0, 0, param0.length);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = ge.a((byte) -50, param0, 0, param0.length);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var2);
-            stackOut_2_1 = new StringBuilder().append("ei.S(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var2);
+
+            stackIn_4_1 = new StringBuilder().append("ei.S(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }

@@ -32,10 +32,10 @@ final class td {
     }
 
     private final void a(byte param0) throws IOException {
-        int var2 = 0;
-        long var3 = 0L;
-        long var5 = 0L;
-        int var7 = 0;
+        int var2;
+        long var3;
+        long var5;
+        int var7;
         L0: {
           var2 = -79 / ((52 - param0) / 50);
           if (0L == (this.field_d ^ -1L)) {
@@ -196,14 +196,6 @@ final class td {
     }
 
     final void a(int param0, int param1, boolean param2, byte[] param3) throws IOException {
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        int var5_int = 0;
-        long var5_long = 0L;
-        long var7 = 0L;
-        int var9 = 0;
-        RuntimeException stackIn_52_0 = null;
-        StringBuilder stackIn_52_1 = null;
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         RuntimeException stackIn_54_0 = null;
@@ -212,14 +204,12 @@ final class td {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_51_0 = null;
-        StringBuilder stackOut_51_1 = null;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        String stackOut_53_2 = null;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        String stackOut_52_2 = null;
+        int var5_int = 0;
+        long var5_long = 0L;
+        IOException var5 = null;
+        RuntimeException var5_ref = null;
+        long var7 = 0L;
+        int var9 = 0;
         try {
           L0: {
             try {
@@ -412,27 +402,19 @@ final class td {
           decompiledCaughtException = decompiledCaughtParameter1;
           L15: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_51_0 = (RuntimeException) (var5_ref);
-            stackOut_51_1 = new StringBuilder().append("td.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_53_0 = stackOut_51_0;
-            stackIn_53_1 = stackOut_51_1;
-            stackIn_52_0 = stackOut_51_0;
-            stackIn_52_1 = stackOut_51_1;
+            stackIn_53_0 = (RuntimeException) (var5_ref);
+
+            stackIn_53_1 = new StringBuilder().append("td.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
-              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
-              stackOut_53_2 = "null";
-              stackIn_54_0 = stackOut_53_0;
-              stackIn_54_1 = stackOut_53_1;
-              stackIn_54_2 = stackOut_53_2;
+              stackIn_54_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackIn_54_1 = (StringBuilder) ((Object) stackIn_53_1);
+              stackIn_54_2 = "null";
               break L15;
             } else {
-              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
-              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
-              stackOut_52_2 = "{...}";
-              stackIn_54_0 = stackOut_52_0;
-              stackIn_54_1 = stackOut_52_1;
-              stackIn_54_2 = stackOut_52_2;
+              stackIn_54_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackIn_54_1 = (StringBuilder) ((Object) stackIn_53_1);
+              stackIn_54_2 = "{...}";
               break L15;
             }
           }
@@ -450,8 +432,8 @@ final class td {
     }
 
     private final void a(boolean param0) throws IOException {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           this.field_a = 0;
           if ((this.field_h ^ -1L) == (this.field_l ^ -1L)) {
@@ -509,28 +491,16 @@ final class td {
     }
 
     final static void b(int param0) {
-        int discarded$0 = 0;
         eh.field_j = oe.c(param0 + -35671);
         ti.field_b = new tc();
         ba.a(true, true, 2);
         if (param0 != 30000) {
-            discarded$0 = td.a(105, -112, false);
+            td.a(105, -112, false);
         }
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
-        int incrementValue$1 = 0;
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        long var5_long = 0L;
-        int var7 = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        long var9 = 0L;
-        long var11 = 0L;
-        int var13 = 0;
-        RuntimeException stackIn_63_0 = null;
-        StringBuilder stackIn_63_1 = null;
+        int incrementValue$0 = 0;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
         RuntimeException stackIn_65_0 = null;
@@ -539,14 +509,15 @@ final class td {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_62_0 = null;
-        StringBuilder stackOut_62_1 = null;
-        RuntimeException stackOut_64_0 = null;
-        StringBuilder stackOut_64_1 = null;
-        String stackOut_64_2 = null;
-        RuntimeException stackOut_63_0 = null;
-        StringBuilder stackOut_63_1 = null;
-        String stackOut_63_2 = null;
+        long var5_long = 0L;
+        IOException var5 = null;
+        RuntimeException var5_ref = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9_int = 0;
+        long var9 = 0L;
+        long var11 = 0L;
+        int var13 = 0;
         try {
           L0: {
             try {
@@ -669,9 +640,9 @@ final class td {
                               if (var9_int <= param2) {
                                 break L10;
                               } else {
-                                incrementValue$1 = param2;
+                                incrementValue$0 = param2;
                                 param2++;
-                                param1[incrementValue$1] = (byte) 0;
+                                param1[incrementValue$0] = (byte) 0;
                                 param3--;
                                 this.field_l = this.field_l + 1L;
                                 continue L12;
@@ -779,27 +750,19 @@ final class td {
           decompiledCaughtException = decompiledCaughtParameter1;
           L17: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_62_0 = (RuntimeException) (var5_ref);
-            stackOut_62_1 = new StringBuilder().append("td.C(").append(param0).append(',');
-            stackIn_64_0 = stackOut_62_0;
-            stackIn_64_1 = stackOut_62_1;
-            stackIn_63_0 = stackOut_62_0;
-            stackIn_63_1 = stackOut_62_1;
+            stackIn_64_0 = (RuntimeException) (var5_ref);
+
+            stackIn_64_1 = new StringBuilder().append("td.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-              stackOut_64_2 = "null";
-              stackIn_65_0 = stackOut_64_0;
-              stackIn_65_1 = stackOut_64_1;
-              stackIn_65_2 = stackOut_64_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "null";
               break L17;
             } else {
-              stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
-              stackOut_63_1 = (StringBuilder) ((Object) stackIn_63_1);
-              stackOut_63_2 = "{...}";
-              stackIn_65_0 = stackOut_63_0;
-              stackIn_65_1 = stackOut_63_1;
-              stackIn_65_2 = stackOut_63_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "{...}";
               break L17;
             }
           }
@@ -813,23 +776,13 @@ final class td {
     }
 
     final void a(byte[] param0, int param1) throws IOException {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -847,27 +800,19 @@ final class td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (var3);
-            stackOut_3_1 = new StringBuilder().append("td.G(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (var3);
+
+            stackIn_5_1 = new StringBuilder().append("td.G(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -877,66 +822,28 @@ final class td {
 
     final static int a(int param0, byte param1) {
         int var2 = 0;
-        L0: {
-          L1: {
-            var2 = 0;
-            if (param0 < 0) {
-              break L1;
-            } else {
-              if (65536 > param0) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          param0 = param0 >>> 16;
-          var2 += 16;
-          break L0;
+        if (param0 < 0 || 65536 <= param0) {
+            param0 = param0 >>> 16;
+            var2 += 16;
         }
-        L2: {
-          if (param0 < 256) {
-            break L2;
-          } else {
+        if (param0 >= 256) {
             param0 = param0 >>> 8;
             var2 += 8;
-            break L2;
-          }
         }
-        L3: {
-          if (-17 < (param0 ^ -1)) {
-            break L3;
-          } else {
+        if (-17 >= (param0 ^ -1)) {
             param0 = param0 >>> 4;
             var2 += 4;
-            break L3;
-          }
         }
-        L4: {
-          if ((param0 ^ -1) > -5) {
-            break L4;
-          } else {
+        if ((param0 ^ -1) <= -5) {
             var2 += 2;
             param0 = param0 >>> 2;
-            break L4;
-          }
         }
-        L5: {
-          if (param1 >= 23) {
-            break L5;
-          } else {
+        if (param1 < 23) {
             field_f = (String[]) null;
-            break L5;
-          }
         }
-        L6: {
-          if (1 > param0) {
-            break L6;
-          } else {
+        if (1 <= param0) {
             var2++;
             param0 = param0 >>> 1;
-            break L6;
-          }
         }
         return var2 + param0;
     }
@@ -949,10 +856,9 @@ final class td {
     }
 
     final void a(int param0) throws IOException {
-        int discarded$0 = 0;
         this.a((byte) -56);
         if (param0 < 36) {
-            discarded$0 = td.a(-31, (byte) 62);
+            td.a(-31, (byte) 62);
         }
         this.field_b.a(1);
     }

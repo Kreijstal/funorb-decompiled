@@ -12,21 +12,21 @@ final class uk implements cg {
     static he field_h;
 
     final static void a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         h var4 = null;
         int var4_int = 0;
-        nl var5_ref_nl = null;
         int var5 = 0;
+        nl var5_ref_nl = null;
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
         lh var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -143,33 +143,20 @@ final class uk implements cg {
     }
 
     public final void a(boolean param0, int param1, vg param2, int param3, int param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_8_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         var11 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -187,21 +174,19 @@ final class uk implements cg {
                   break L3;
                 } else {
                   if (!param2.a(true)) {
-                    stackOut_7_0 = 2188450;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = 2188450;
                     break L2;
                   } else {
                     break L3;
                   }
                 }
               }
-              stackOut_6_0 = 3249872;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 3249872;
               break L2;
             }
             L4: {
               var6_int = stackIn_8_0;
-              discarded$1 = this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_p + "</u>", param4 - -param2.field_o, param2.field_m + param3, param2.field_w, param2.field_k, var6_int, -1, this.field_d, this.field_a, this.field_c.field_S + this.field_c.field_x);
+              this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_p + "</u>", param4 - -param2.field_o, param2.field_m + param3, param2.field_w, param2.field_k, var6_int, -1, this.field_d, this.field_a, this.field_c.field_S + this.field_c.field_x);
               if (param2.a(true)) {
                 L5: {
                   var7 = this.field_c.b(param2.field_p);
@@ -245,27 +230,19 @@ final class uk implements cg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var6);
-            stackOut_21_1 = new StringBuilder().append("uk.J(").append(param0).append(',').append(param1).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var6);
+
+            stackIn_23_1 = new StringBuilder().append("uk.J(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L7;
             }
           }

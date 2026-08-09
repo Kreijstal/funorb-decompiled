@@ -12,10 +12,8 @@ final class ts {
         if (param3 != 448) {
             field_b = (String) null;
         }
-        if (param1 == param2) {
-            if (-4 == (param0 ^ -1)) {
-                var4 = 448;
-            }
+        if (param1 == param2 && -4 == (param0 ^ -1)) {
+            var4 = 448;
         }
         if (-1 == (param2 ^ -1)) {
             var4 = -var4 + 896;
@@ -25,7 +23,6 @@ final class ts {
 
     final static void a(int param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -35,6 +32,7 @@ final class ts {
         int var10 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
         var10 = Kickabout.field_G;
         try {
           L0: {
@@ -100,9 +98,6 @@ final class ts {
         int stackIn_14_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_2_0 = 0;
         var8 = Kickabout.field_G;
         try {
           L0: {
@@ -111,8 +106,7 @@ final class ts {
               var4 = hm.field_I;
               L1: while (true) {
                 if (var3_int >= j.field_a.length) {
-                  stackOut_13_0 = -1;
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_0 = -1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -129,8 +123,7 @@ final class ts {
                         var4 = var4 + (tk.field_zb + (pb.field_H << -831612831) - -of.field_a);
                         break L2;
                       } else {
-                        stackOut_8_0 = var5;
-                        stackIn_9_0 = stackOut_8_0;
+                        stackIn_9_0 = var5;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -141,8 +134,7 @@ final class ts {
                 }
               }
             } else {
-              stackOut_2_0 = 50;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 50;
               decompiledRegionSelector0 = 0;
               break L0;
             }

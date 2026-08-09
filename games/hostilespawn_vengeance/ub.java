@@ -8,25 +8,41 @@ final class ub {
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         ka.field_q = param3;
-        sd.field_s = param2;
-        eh.field_d = param1;
-        kb.field_d = param0;
+        if (param4 != -127) {
+          field_a = (int[][]) null;
+          sd.field_s = param2;
+          eh.field_d = param1;
+          kb.field_d = param0;
+          return;
+        } else {
+          sd.field_s = param2;
+          eh.field_d = param1;
+          kb.field_d = param0;
+          return;
+        }
     }
 
     public static void a(int param0) {
-        field_b = null;
-        field_c = null;
-        field_a = null;
+        if (param0 != 90) {
+          field_b = (fa) null;
+          field_b = null;
+          field_c = null;
+          field_a = (int[][]) null;
+          return;
+        } else {
+          field_b = null;
+          field_c = null;
+          field_a = (int[][]) null;
+          return;
+        }
     }
 
     final boolean a(boolean param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0) {
-          if ((Object) (Object) ej.field_q != this) {
-            if (this != (Object) (Object) wj.field_N) {
-              if (this == (Object) (Object) ci.field_d) {
+          if (ej.field_q != this) {
+            if (this != wj.field_N) {
+              if (this == ci.field_d) {
                 return true;
               } else {
                 return false;
@@ -38,19 +54,17 @@ final class ub {
             return true;
           }
         } else {
-          field_a = null;
-          if ((Object) (Object) ej.field_q != this) {
-            if (this == (Object) (Object) wj.field_N) {
+          field_a = (int[][]) null;
+          if (ej.field_q != this) {
+            if (this == wj.field_N) {
               return true;
             } else {
               L0: {
-                if (this != (Object) (Object) ci.field_d) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                if (this != ci.field_d) {
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }
@@ -67,11 +81,7 @@ final class ub {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new fa("email");
-        field_a = new int[][]{new int[10], new int[10]};
+        field_a = new int[][]{new int[]{25, 40, 45, 45, 95, 70, 35, 90, 90, 60}, new int[]{60, 120, 90, 100, 90, 205, 150, 150, 130, 180}};
     }
 }

@@ -9,37 +9,27 @@ final class lf extends km {
     static mh field_s;
 
     final int b(int param0, int param1) {
-        int var3 = 0;
-        if (param1 == 1) {
-          L0: {
-            var3 = this.field_m[param0].field_f;
-            if (-3 == (this.field_m.length ^ -1)) {
-              break L0;
-            } else {
-              if (8 == var3) {
-                return this.field_q + this.field_p;
-              } else {
-                break L0;
-              }
-            }
-          }
-          return this.field_p;
-        } else {
-          return -54;
+        if (param1 != 1) {
+            return -54;
         }
+        int var3 = this.field_m[param0].field_f;
+        if (-3 == (this.field_m.length ^ -1) || 8 != var3) {
+            return this.field_p;
+        }
+        return this.field_q + this.field_p;
     }
 
     final void b(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        q var4_ref_q = null;
-        int var5_int = 0;
-        q var5 = null;
-        int var6_int = 0;
-        q var6 = null;
-        int var7 = 0;
-        String var8 = null;
+        int var2;
+        int var3;
+        int var4;
+        q var4_ref_q;
+        int var5_int;
+        q var5;
+        q var6;
+        int var6_int;
+        int var7;
+        String var8;
         L0: {
           var7 = BrickABrac.field_J ? 1 : 0;
           if (-3 != (this.field_m.length ^ -1)) {
@@ -75,7 +65,7 @@ final class lf extends km {
                 var4_ref_q = this.field_m[var3];
                 var8 = ag.field_D[var4_ref_q.field_f];
                 var6_int = 30 + nn.field_g.c(var8);
-                if (var6_int > var2) {
+                if ((var6_int ^ -1) < (var2 ^ -1)) {
                   var2 = var6_int;
                   var3++;
                   continue L1;
@@ -151,13 +141,13 @@ final class lf extends km {
 
     lf() {
         super(6, 38, 460, 402, 35, td.field_s);
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        String[] var8 = null;
-        String[] var9 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        String[] var8;
+        String[] var9;
         L0: {
           this.field_v = 0;
           qo.field_N = 10 + ob.field_D.c("10. ");
@@ -223,11 +213,11 @@ final class lf extends km {
     }
 
     final boolean a(int param0, boolean param1, byte param2) {
-        int var4 = 0;
-        q var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var4;
+        q var5;
+        int var6;
+        int var7;
+        int var8;
         L0: {
           var8 = BrickABrac.field_J ? 1 : 0;
           var4 = 0;
@@ -270,15 +260,14 @@ final class lf extends km {
     }
 
     final void b(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        Object var4 = null;
-        String var4_ref = null;
-        String[] var5 = null;
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var2;
+        int var3;
+        Object var4;
+        String[] var5;
+        int[] var6;
+        int var7;
+        int var8;
+        int var9;
         var9 = BrickABrac.field_J ? 1 : 0;
         super.b((byte) -101);
         im.a(550, 5, 243, 5, 140, (byte) -62, 45);
@@ -313,7 +302,7 @@ final class lf extends km {
               } else {
                 if (ch.field_h.field_v) {
                   if (null != ch.field_h.field_r) {
-                    var4_ref = ef.field_f;
+                    var4 = ef.field_f;
                     var5 = ch.field_h.field_r[this.field_v];
                     var6 = ch.field_h.field_u[this.field_v];
                     var7 = 0;
@@ -346,7 +335,7 @@ final class lf extends km {
                               break L5;
                             }
                           }
-                          var4_ref = null;
+                          var4 = null;
                           i.a(var6[4 * var8 + 3], var2, var5[var8], var6[var8 * 4 - -1], var6[4 * var8], var3, -1, var6[var8 * 4 + 2], var8);
                           var2 += 18;
                           var8++;
@@ -359,7 +348,7 @@ final class lf extends km {
                       }
                     }
                   } else {
-                    var4_ref = rn.field_d;
+                    var4 = rn.field_d;
                     break L1;
                   }
                 } else {
@@ -367,12 +356,12 @@ final class lf extends km {
                 }
               }
             }
-            var4_ref = kd.field_a;
+            var4 = kd.field_a;
             break L1;
           }
           L6: {
-            if (var4_ref != null) {
-              bo.a((byte) 119, var4_ref);
+            if (var4 != null) {
+              bo.a((byte) 119, (String) (var4));
               break L6;
             } else {
               break L6;
@@ -391,7 +380,7 @@ final class lf extends km {
     }
 
     final void a(int param0, int param1, char param2) {
-        int var5 = 0;
+        int var5;
         L0: {
           var5 = BrickABrac.field_J ? 1 : 0;
           if (-3 != (this.field_m.length ^ -1)) {

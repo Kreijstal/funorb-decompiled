@@ -19,19 +19,16 @@ final class fa extends rg {
     }
 
     public static void f(int param0) {
-        nf[] discarded$0 = null;
         field_U = null;
         field_T = null;
         field_Q = null;
         if (param0 < 7) {
-            discarded$0 = fa.a(-85, -40, -71, -35, 20, -50, -67, 114, (byte) -55);
+            fa.a(-85, -40, -71, -35, 20, -50, -67, 114, (byte) -55);
         }
     }
 
     final static void g(int param0) {
-        if (param0 - mg.field_g != tg.field_H) {
-            if (tg.field_H != 250 + -mg.field_g) {
-            }
+        if (param0 - mg.field_g != tg.field_H && tg.field_H != 250 + -mg.field_g) {
         }
         tg.field_H = tg.field_H + 1;
     }
@@ -46,14 +43,14 @@ final class fa extends rg {
     }
 
     final static nf[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
-        int var9 = 0;
-        nf[] var10 = null;
-        nf[] var11_ref_nf__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        nf var13 = null;
-        int var14 = 0;
-        int var15 = 0;
+        int var9;
+        nf[] var10;
+        nf[] var11_ref_nf__;
+        int var11;
+        int var12;
+        nf var13;
+        int var14;
+        int var15;
         var15 = Confined.field_J ? 1 : 0;
         var9 = param1 + param7 - -param5;
         var10 = new nf[]{new nf(var9, var9), new nf(param0, var9), new nf(var9, var9), new nf(var9, param0), new nf(64, 64), new nf(var9, param0), new nf(var9, var9), new nf(param0, var9), new nf(var9, var9)};
@@ -125,7 +122,7 @@ final class fa extends rg {
                       } else {
                         var10[0].field_z[var12 + var11 * var9] = param3;
                         var10[0].field_z[var11 + var9 * var12] = param3;
-                        if (-var11 + var9 > var12) {
+                        if ((-var11 + var9 ^ -1) < (var12 ^ -1)) {
                           var10[2].field_z[var12 + var9 * var11] = param3;
                           var10[6].field_z[var9 * var12 + var11] = param3;
                           var12++;
@@ -183,23 +180,13 @@ final class fa extends rg {
 
     final static void a(java.awt.Canvas param0, int param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -219,27 +206,19 @@ final class fa extends rg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("fa.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("fa.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -256,22 +235,12 @@ final class fa extends rg {
 
     final static void a(boolean param0, java.awt.Component param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -291,27 +260,19 @@ final class fa extends rg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("fa.B(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("fa.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

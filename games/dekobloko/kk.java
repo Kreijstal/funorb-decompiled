@@ -23,7 +23,7 @@ final class kk implements gl {
     static byte[] field_l;
 
     final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         if (!param3) {
           L0: {
             field_p = (um) null;
@@ -83,7 +83,6 @@ final class kk implements gl {
     }
 
     final static void a(int param0, int param1, ki param2) {
-        int discarded$0 = 0;
         uf var5 = we.field_b;
         var5.f(param0, -4);
         var5.field_n = var5.field_n + 1;
@@ -99,7 +98,7 @@ final class kk implements gl {
             var5.a(param2.field_r, false);
             var5.a(param2.field_o, false);
             var5.a(param2.field_q, false);
-            discarded$0 = var5.a((byte) -15, var4);
+            var5.a((byte) -15, var4);
             var5.b(var5.field_n - var4, true);
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) ((Object) runtimeException), "kk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -124,32 +123,19 @@ final class kk implements gl {
     }
 
     public final void a(boolean param0, int param1, int param2, byte param3, ce param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        dl var11 = null;
         ce stackIn_5_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_4_0 = null;
-        ce stackOut_3_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        dl var11 = null;
         try {
           L0: {
             L1: {
@@ -162,12 +148,10 @@ final class kk implements gl {
             }
             L2: {
               if (!(param4 instanceof dl)) {
-                stackOut_4_0 = null;
-                stackIn_5_0 = (ce) ((Object) stackOut_4_0);
+                stackIn_5_0 = null;
                 break L2;
               } else {
-                stackOut_3_0 = (ce) (param4);
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = (ce) (param4);
                 break L2;
               }
             }
@@ -205,7 +189,7 @@ final class kk implements gl {
             }
             if (this.field_h != null) {
               var10 = this.field_m - -this.field_s + this.field_g;
-              discarded$1 = this.field_h.a(param4.field_E, param1 + param4.field_u - -var10, this.field_r + param2 + param4.field_D, param4.field_t - (this.field_g + var10), -(this.field_g << 254703425) + param4.field_y, this.field_d, this.field_b, this.field_c, this.field_a, 0);
+              this.field_h.a(param4.field_E, param1 + param4.field_u - -var10, this.field_r + param2 + param4.field_D, param4.field_t - (this.field_g + var10), -(this.field_g << 254703425) + param4.field_y, this.field_d, this.field_b, this.field_c, this.field_a, 0);
               break L0;
             } else {
               return;
@@ -215,27 +199,19 @@ final class kk implements gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var6);
-            stackOut_16_1 = new StringBuilder().append("kk.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var6);
+
+            stackIn_18_1 = new StringBuilder().append("kk.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L6;
             }
           }

@@ -7,7 +7,6 @@ final class vea extends ana {
     private taa field_v;
 
     private final void b(boolean param0) {
-        oha discarded$6 = null;
         ad var6 = null;
         ad var7 = null;
         pp var3_ref = null;
@@ -20,7 +19,7 @@ final class vea extends ana {
                 return;
             }
             var3_ref = (pp) ((Object) this.field_w.field_o.b((byte) 90));
-            discarded$6 = al.a(87, this.field_w.field_k);
+            al.a(87, this.field_w.field_k);
             while (var3_ref != null) {
                 var6 = var3_ref.field_h.a(-27449, this.field_q);
                 var6.b(-1, 19);
@@ -34,7 +33,7 @@ final class vea extends ana {
             return;
         }
         var3_ref = (pp) ((Object) this.field_w.field_o.b((byte) 90));
-        oha discarded$13 = al.a(87, this.field_w.field_k);
+        al.a(87, this.field_w.field_k);
         while (var3_ref != null) {
             var7 = var3_ref.field_h.a(-27449, this.field_q);
             var7.b(-1, 19);
@@ -45,9 +44,8 @@ final class vea extends ana {
     }
 
     final static int a(int param0, int param1, int param2, boolean param3) {
-        int discarded$2 = 0;
         if (param0 != 8192) {
-          discarded$2 = vea.a(-21, 118, 114, true);
+          vea.a(-21, 118, 114, true);
           return fda.b(param0 ^ 8193);
         } else {
           return fda.b(param0 ^ 8193);

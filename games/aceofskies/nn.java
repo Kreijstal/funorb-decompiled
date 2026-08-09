@@ -14,7 +14,7 @@ final class nn {
             var5.b(-1336879960, param0.field_f.length);
             var5.a(true, param0.field_f.length, 0, param0.field_f);
         }
-        int discarded$0 = var5.e(var4, 16);
+        var5.e(var4, 16);
         var5.field_g = var5.field_g - 4;
         param0.field_g = var5.a((byte) 121);
         if (param2 < 27) {
@@ -29,7 +29,6 @@ final class nn {
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -37,6 +36,7 @@ final class nn {
         int var10 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         var10 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {

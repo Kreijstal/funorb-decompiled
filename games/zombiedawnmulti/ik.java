@@ -10,26 +10,19 @@ final class ik {
 
     final static void a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
-        Object var1_ref = null;
         int var2 = 0;
-        Throwable var3 = null;
         int var4 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_13_1 = 0;
         int stackIn_23_0 = 0;
         int stackIn_23_1 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_12_1 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_22_1 = 0;
+        Object var1 = null;
+        RuntimeException var1_ref = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            var1_ref = um.field_c;
-            synchronized (var1_ref) {
+            var1 = um.field_c;
+            synchronized (var1) {
               L1: {
                 L2: {
                   L3: {
@@ -75,19 +68,17 @@ final class ik {
                     } else {
                       var2 = ln.field_f[fh.field_j];
                       fh.field_j = fh.field_j + 1 & 127;
-                      stackOut_12_0 = -1;
-                      stackOut_12_1 = var2 ^ -1;
-                      stackIn_23_0 = stackOut_12_0;
-                      stackIn_23_1 = stackOut_12_1;
-                      stackIn_13_0 = stackOut_12_0;
-                      stackIn_13_1 = stackOut_12_1;
+                      stackIn_23_0 = -1;
+
+                      stackIn_23_1 = var2 ^ -1;
+
                       if (var4 != 0) {
                         decompiledRegionSelector0 = 0;
                         break L1;
                       } else {
                         L8: {
                           L9: {
-                            if (stackIn_13_0 < stackIn_13_1) {
+                            if (stackIn_23_0 < stackIn_23_1) {
                               break L9;
                             } else {
                               lc.field_m[var2] = true;
@@ -119,10 +110,8 @@ final class ik {
               if (decompiledRegionSelector0 == 0) {
                 break L10;
               } else {
-                stackOut_22_0 = -88;
-                stackOut_22_1 = (param0 - -17) / 55;
-                stackIn_23_0 = stackOut_22_0;
-                stackIn_23_1 = stackOut_22_1;
+                stackIn_23_0 = -88;
+                stackIn_23_1 = (param0 - -17) / 55;
                 break L10;
               }
             }
@@ -131,8 +120,8 @@ final class ik {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (RuntimeException) (Object) decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var1), "ik.B(" + param0 + ')');
+          var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+          throw fa.a((Throwable) ((Object) var1_ref), "ik.B(" + param0 + ')');
         }
     }
 

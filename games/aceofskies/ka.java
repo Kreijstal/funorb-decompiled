@@ -7,7 +7,7 @@ abstract class ka {
     static ll[] field_a;
 
     final static String a(int param0) {
-        String var1 = null;
+        String var1;
         if (param0 > -94) {
           L0: {
             field_a = (ll[]) null;
@@ -67,14 +67,6 @@ abstract class ka {
     }
 
     final static boolean a(byte param0, int[] param1) {
-        RuntimeException var2 = null;
-        long var2_long = 0L;
-        m var4_ref_m = null;
-        int var4 = 0;
-        int var5_int = 0;
-        m var5 = null;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_4_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
@@ -88,24 +80,16 @@ abstract class ka {
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
         String stackIn_42_2 = null;
-        int stackOut_3_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_37_0 = 0;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
         int statePc = 0;
         Throwable caughtException = null;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
+        m var4_ref_m = null;
+        int var4 = 0;
+        int var5_int = 0;
+        m var5 = null;
+        int var6 = 0;
+        int var7 = 0;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -139,8 +123,7 @@ abstract class ka {
                 }
                 case 3: {
                     try {
-                        stackOut_3_0 = 0;
-                        stackIn_4_0 = stackOut_3_0;
+                        stackIn_4_0 = 0;
                         statePc = 4;
                         continue stateLoop;
                     } catch (Throwable stateCaught_3) {
@@ -281,8 +264,7 @@ abstract class ka {
                         kg.field_b = hi.field_w;
                         hi.field_w = qs.field_b;
                         qs.field_b = var4_ref_m.field_i;
-                        stackOut_14_0 = 1;
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = 1;
                         statePc = 15;
                         continue stateLoop;
                     } catch (Throwable stateCaught_14) {
@@ -295,21 +277,18 @@ abstract class ka {
                     return stackIn_15_0 != 0;
                 }
                 case 16: {
-                    stackOut_16_0 = ec.field_g;
-                    stackIn_19_0 = stackOut_16_0;
+                    stackIn_19_0 = ec.field_g;
                     statePc = 19;
                     continue stateLoop;
                 }
                 case 17: {
-                    stackOut_17_0 = ec.field_g;
-                    stackIn_19_0 = stackOut_17_0;
+                    stackIn_19_0 = ec.field_g;
                     statePc = 19;
                     continue stateLoop;
                 }
                 case 18: {
                     try {
-                        stackOut_18_0 = ec.field_g;
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_0 = ec.field_g;
                         statePc = 19;
                         continue stateLoop;
                     } catch (Throwable stateCaught_18) {
@@ -369,8 +348,7 @@ abstract class ka {
                 }
                 case 23: {
                     try {
-                        stackOut_23_0 = 0;
-                        stackIn_24_0 = stackOut_23_0;
+                        stackIn_24_0 = 0;
                         statePc = 24;
                         continue stateLoop;
                     } catch (Throwable stateCaught_23) {
@@ -411,8 +389,7 @@ abstract class ka {
                 }
                 case 27: {
                     try {
-                        stackOut_27_0 = 0;
-                        stackIn_28_0 = stackOut_27_0;
+                        stackIn_28_0 = 0;
                         statePc = 28;
                         continue stateLoop;
                     } catch (Throwable stateCaught_27) {
@@ -536,8 +513,7 @@ abstract class ka {
                         hi.field_w = qs.field_b;
                         qs.field_b = ec.field_g;
                         ec.field_g = -1;
-                        stackOut_37_0 = 1;
-                        stackIn_38_0 = stackOut_37_0;
+                        stackIn_38_0 = 1;
                         statePc = 38;
                         continue stateLoop;
                     } catch (Throwable stateCaught_37) {
@@ -551,12 +527,10 @@ abstract class ka {
                 }
                 case 39: {
                     var2 = (RuntimeException) ((Object) caughtException);
-                    stackOut_39_0 = (RuntimeException) (var2);
-                    stackOut_39_1 = new StringBuilder().append("ka.H(").append(param0).append(',');
-                    stackIn_41_0 = stackOut_39_0;
-                    stackIn_41_1 = stackOut_39_1;
-                    stackIn_40_0 = stackOut_39_0;
-                    stackIn_40_1 = stackOut_39_1;
+                    stackIn_41_0 = (RuntimeException) (var2);
+                    stackIn_40_0 = stackIn_41_0;
+                    stackIn_41_1 = new StringBuilder().append("ka.H(").append(param0).append(',');
+                    stackIn_40_1 = stackIn_41_1;
                     if (param1 == null) {
                         statePc = 41;
                     } else {
@@ -565,22 +539,16 @@ abstract class ka {
                     continue stateLoop;
                 }
                 case 40: {
-                    stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-                    stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-                    stackOut_40_2 = "{...}";
-                    stackIn_42_0 = stackOut_40_0;
-                    stackIn_42_1 = stackOut_40_1;
-                    stackIn_42_2 = stackOut_40_2;
+                    stackIn_42_0 = (RuntimeException) ((Object) stackIn_40_0);
+                    stackIn_42_1 = (StringBuilder) ((Object) stackIn_40_1);
+                    stackIn_42_2 = "{...}";
                     statePc = 42;
                     continue stateLoop;
                 }
                 case 41: {
-                    stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-                    stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-                    stackOut_41_2 = "null";
-                    stackIn_42_0 = stackOut_41_0;
-                    stackIn_42_1 = stackOut_41_1;
-                    stackIn_42_2 = stackOut_41_2;
+                    stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+                    stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+                    stackIn_42_2 = "null";
                     statePc = 42;
                     continue stateLoop;
                 }
@@ -594,45 +562,19 @@ abstract class ka {
 
     final static void a(int param0, long param1, String param2, int param3, int param4, boolean param5, boolean param6, int param7, int param8, int param9, int param10, int param11, rk param12, int param13) {
         try {
-            IOException var15 = null;
-            RuntimeException var15_ref = null;
             int stackIn_5_0 = 0;
             int stackIn_8_0 = 0;
-            RuntimeException stackIn_15_0 = null;
-            StringBuilder stackIn_15_1 = null;
             RuntimeException stackIn_16_0 = null;
             StringBuilder stackIn_16_1 = null;
             RuntimeException stackIn_17_0 = null;
             StringBuilder stackIn_17_1 = null;
             String stackIn_17_2 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
-            RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
-            RuntimeException stackIn_20_0 = null;
             StringBuilder stackIn_20_1 = null;
             String stackIn_20_2 = null;
             Throwable decompiledCaughtException = null;
-            int stackOut_4_0 = 0;
-            int stackOut_3_0 = 0;
-            int stackOut_7_0 = 0;
-            int stackOut_6_0 = 0;
-            RuntimeException stackOut_14_0 = null;
-            StringBuilder stackOut_14_1 = null;
-            RuntimeException stackOut_16_0 = null;
-            StringBuilder stackOut_16_1 = null;
-            String stackOut_16_2 = null;
-            RuntimeException stackOut_15_0 = null;
-            StringBuilder stackOut_15_1 = null;
-            String stackOut_15_2 = null;
-            RuntimeException stackOut_17_0 = null;
-            StringBuilder stackOut_17_1 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            String stackOut_18_2 = null;
+            IOException var15 = null;
+            RuntimeException var15_ref = null;
             try {
               L0: {
                 nm.field_c = new dl(param7);
@@ -642,12 +584,10 @@ abstract class ka {
                     ca.field_h = param4;
                     ub.field_g = param11;
                     if (!param5) {
-                      stackOut_4_0 = 0;
-                      stackIn_5_0 = stackOut_4_0;
+                      stackIn_5_0 = 0;
                       break L1;
                     } else {
-                      stackOut_3_0 = 1;
-                      stackIn_5_0 = stackOut_3_0;
+                      stackIn_5_0 = 1;
                       break L1;
                     }
                   }
@@ -660,12 +600,10 @@ abstract class ka {
                     fs.field_a = param1;
                     ko.field_f = param13;
                     if (!param6) {
-                      stackOut_7_0 = 0;
-                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_8_0 = 0;
                       break L2;
                     } else {
-                      stackOut_6_0 = 1;
-                      stackIn_8_0 = stackOut_6_0;
+                      stackIn_8_0 = 1;
                       break L2;
                     }
                   }
@@ -694,56 +632,40 @@ abstract class ka {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 var15_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_14_0 = (RuntimeException) (var15_ref);
-                stackOut_14_1 = new StringBuilder().append("ka.I(").append(param0).append(',').append(param1).append(',');
-                stackIn_16_0 = stackOut_14_0;
-                stackIn_16_1 = stackOut_14_1;
-                stackIn_15_0 = stackOut_14_0;
-                stackIn_15_1 = stackOut_14_1;
+                stackIn_16_0 = (RuntimeException) (var15_ref);
+
+                stackIn_16_1 = new StringBuilder().append("ka.I(").append(param0).append(',').append(param1).append(',');
+
                 if (param2 == null) {
-                  stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-                  stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-                  stackOut_16_2 = "null";
-                  stackIn_17_0 = stackOut_16_0;
-                  stackIn_17_1 = stackOut_16_1;
-                  stackIn_17_2 = stackOut_16_2;
+                  stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+                  stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+                  stackIn_17_2 = "null";
                   break L4;
                 } else {
-                  stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-                  stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-                  stackOut_15_2 = "{...}";
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_17_1 = stackOut_15_1;
-                  stackIn_17_2 = stackOut_15_2;
+                  stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+                  stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+                  stackIn_17_2 = "{...}";
                   break L4;
                 }
               }
               L5: {
-                stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-                stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',');
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
+
+
+                stackIn_19_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',');
+
                 if (param12 == null) {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "null";
-                  stackIn_20_0 = stackOut_19_0;
-                  stackIn_20_1 = stackOut_19_1;
-                  stackIn_20_2 = stackOut_19_2;
+                  stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "null";
                   break L5;
                 } else {
-                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackOut_18_2 = "{...}";
-                  stackIn_20_0 = stackOut_18_0;
-                  stackIn_20_1 = stackOut_18_1;
-                  stackIn_20_2 = stackOut_18_2;
+                  stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "{...}";
                   break L5;
                 }
               }
-              throw pn.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param13 + ')');
+              throw pn.a((Throwable) ((Object) stackIn_17_0), stackIn_20_2 + ',' + param13 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

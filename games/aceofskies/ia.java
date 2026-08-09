@@ -75,9 +75,8 @@ final class ia {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         if (param0 != -6411) {
-            discarded$0 = ia.a(-120, -128);
+            ia.a(-120, -128);
             field_a = (int[][]) null;
             return;
         }

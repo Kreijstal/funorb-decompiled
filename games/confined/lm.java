@@ -48,8 +48,7 @@ final class lm implements Iterable {
     }
 
     final jl a(int param0) {
-        jl discarded$2 = null;
-        jl var2 = null;
+        jl var2;
         if (param0 == -29870) {
           var2 = this.field_b.field_o;
           if (this.field_b == var2) {
@@ -59,7 +58,7 @@ final class lm implements Iterable {
             return var2;
           }
         } else {
-          discarded$2 = this.a(-12);
+          this.a(-12);
           var2 = this.field_b.field_o;
           if (this.field_b == var2) {
             return null;

@@ -9,17 +9,16 @@ final class qd {
     static String field_b;
 
     final static ad a(int param0, int param1) {
-        int discarded$2 = 0;
-        ad[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        ad[] var5 = null;
+        ad[] var2;
+        int var3;
+        int var4;
+        ad[] var5;
         L0: {
           var4 = DungeonAssault.field_K;
           if (param0 > 75) {
             break L0;
           } else {
-            discarded$2 = qd.a(12, 55, 102);
+            qd.a(12, 55, 102);
             break L0;
           }
         }
@@ -48,9 +47,8 @@ final class qd {
     }
 
     public static void a(boolean param0) {
-        int discarded$0 = 0;
         if (!param0) {
-            discarded$0 = qd.a(-11, -87, -69);
+            qd.a(-11, -87, -69);
         }
         field_a = null;
         field_e = null;
@@ -60,10 +58,9 @@ final class qd {
     }
 
     final static int a(int param0, int param1, int param2) {
-        nh discarded$0 = null;
         int var3 = tg.field_f[param2][param0];
         if (param1 != 380) {
-            discarded$0 = qd.a(false, false, 41, (byte) -8, 52);
+            qd.a(false, false, 41, (byte) -8, 52);
         }
         if (!(!ke.a(param1 ^ 280, var3))) {
             return 380;

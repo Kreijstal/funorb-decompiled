@@ -26,8 +26,6 @@ final class ge {
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_2_0 = 0;
         var1_ref = uf.field_c;
         synchronized (var1_ref) {
           L0: {
@@ -43,12 +41,10 @@ final class ge {
               pj.field_q = re.field_o[td.field_d];
               c.field_p = tp.field_i[td.field_d];
               td.field_d = td.field_d - -1 & 127;
-              stackOut_6_0 = 1;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               return stackIn_3_0 != 0;
             }
           }

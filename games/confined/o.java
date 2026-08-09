@@ -37,7 +37,7 @@ final class o implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = Confined.field_J ? 1 : 0;
         if (this.field_e == this.field_a.field_j[-1 + this.field_b]) {
           L0: while (true) {
@@ -77,16 +77,16 @@ final class o implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        rk var1 = null;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        rk var1;
+        int var2;
         var2 = Confined.field_J ? 1 : 0;
         if (this.field_a.field_j[-1 + this.field_b] == this.field_e) {
           L0: while (true) {
             if (this.field_a.field_i > this.field_b) {
-              fieldTemp$2 = this.field_b;
+              fieldTemp$1 = this.field_b;
               this.field_b = this.field_b + 1;
-              var1 = this.field_a.field_j[fieldTemp$2].field_h;
+              var1 = this.field_a.field_j[fieldTemp$1].field_h;
               if (this.field_a.field_j[this.field_b + -1] != var1) {
                 this.field_e = var1.field_h;
                 this.field_c = var1;

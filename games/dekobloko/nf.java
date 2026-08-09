@@ -13,7 +13,6 @@ final class nf {
     int[] field_a;
 
     final int b(int param0) {
-        int discarded$6 = 0;
         if (param0 == -6375) {
           if (null != this.field_a) {
             if (0 == this.field_a.length) {
@@ -25,7 +24,7 @@ final class nf {
             return 0;
           }
         } else {
-          discarded$6 = this.b(75);
+          this.b(75);
           if (null != this.field_a) {
             if (0 == this.field_a.length) {
               return 0;
@@ -40,7 +39,7 @@ final class nf {
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
         fl.a(param3 - -20, 256, 16777215, o.field_c, param1, w.field_kb);
-        int discarded$1 = se.field_S.a(jg.field_k[param0], param1, param3 + 24, 120, 200, 16777215, -1, 0, 0, 16);
+        se.field_S.a(jg.field_k[param0], param1, param3 + 24, 120, 200, 16777215, -1, 0, 0, 16);
         if (-1 != (param0 ^ -1)) {
           if (param2 >= 59) {
             if (-2 == (param0 ^ -1)) {
@@ -106,10 +105,10 @@ final class nf {
     }
 
     final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var4 = client.field_A ? 1 : 0;
         if (this.field_a != null) {
           if (-1 != (this.field_a.length ^ -1)) {

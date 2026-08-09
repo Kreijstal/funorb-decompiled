@@ -8,7 +8,7 @@ final class ja {
     private fc field_b;
 
     final fc a(int param0) {
-        fc var2 = null;
+        fc var2;
         var2 = this.field_b;
         if (var2 != this.field_d) {
           this.field_b = var2.field_h;
@@ -51,13 +51,12 @@ final class ja {
     }
 
     final fc d(int param0) {
-        fc discarded$2 = null;
-        fc var2 = null;
+        fc var2;
         var2 = this.field_b;
         if (this.field_d != var2) {
           this.field_b = var2.field_e;
           if (param0 <= 88) {
-            discarded$2 = this.b((byte) 68);
+            this.b((byte) 68);
             return var2;
           } else {
             return var2;
@@ -84,7 +83,7 @@ final class ja {
     }
 
     final fc c(byte param0) {
-        fc var2 = null;
+        fc var2;
         var2 = this.field_d.field_e;
         if (param0 < -59) {
           if (var2 == this.field_d) {
@@ -99,8 +98,8 @@ final class ja {
     }
 
     final fc b(byte param0) {
-        fc var2 = null;
-        fc var3 = null;
+        fc var2;
+        fc var3;
         var2 = this.field_d.field_h;
         if (var2 != this.field_d) {
           var2.a(-101);
@@ -118,22 +117,12 @@ final class ja {
 
     final void a(byte param0, fc param1) {
         RuntimeException var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -159,27 +148,19 @@ final class ja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("ja.M(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("ja.M(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -188,23 +169,16 @@ final class ja {
     }
 
     final boolean b(boolean param0) {
-        int discarded$10 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0) {
           L0: {
-            discarded$10 = this.a(false);
+            this.a(false);
             if (this.field_d != this.field_d.field_h) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -212,12 +186,10 @@ final class ja {
         } else {
           L1: {
             if (this.field_d != this.field_d.field_h) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -246,14 +218,13 @@ final class ja {
     }
 
     final int a(boolean param0) {
-        int discarded$2 = 0;
-        int var2 = 0;
-        fc var3 = null;
-        int var4 = 0;
+        int var2;
+        fc var3;
+        int var4;
         var4 = TrackController.field_F ? 1 : 0;
         var2 = 0;
         if (!param0) {
-          discarded$2 = this.a(true);
+          this.a(true);
           var3 = this.field_d.field_h;
           L0: while (true) {
             if (this.field_d == var3) {
@@ -285,8 +256,8 @@ final class ja {
     }
 
     final void e(int param0) {
-        fc var2 = null;
-        int var3 = 0;
+        fc var2;
+        int var3;
         var3 = TrackController.field_F ? 1 : 0;
         if (param0 == 1) {
           L0: while (true) {

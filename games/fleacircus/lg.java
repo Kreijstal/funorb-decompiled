@@ -26,20 +26,12 @@ final class lg {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_8_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_36_0 = 0;
         int stackIn_49_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
+        int var6;
+        int var7;
         if (param4 <= -86) {
           rl.field_e[qh.field_D] = param1;
           mh.field_y[qh.field_D] = qh.field_D;
@@ -60,12 +52,10 @@ final class lg {
               vh.field_i[qh.field_D] = param5;
               var6 = param5 + param0 + param3;
               if (var6 == 0) {
-                stackOut_48_0 = 0;
-                stackIn_49_0 = stackOut_48_0;
+                stackIn_49_0 = 0;
                 break L1;
               } else {
-                stackOut_47_0 = param0 * 1000 / var6;
-                stackIn_49_0 = stackOut_47_0;
+                stackIn_49_0 = param0 * 1000 / var6;
                 break L1;
               }
             }
@@ -104,12 +94,10 @@ final class lg {
               vh.field_i[qh.field_D] = param5;
               var6 = param5 + param0 + param3;
               if (var6 == 0) {
-                stackOut_35_0 = 0;
-                stackIn_36_0 = stackOut_35_0;
+                stackIn_36_0 = 0;
                 break L5;
               } else {
-                stackOut_34_0 = param0 * 1000 / var6;
-                stackIn_36_0 = stackOut_34_0;
+                stackIn_36_0 = param0 * 1000 / var6;
                 break L5;
               }
             }
@@ -154,12 +142,10 @@ final class lg {
               vh.field_i[qh.field_D] = param5;
               var6 = param5 + param0 + param3;
               if (var6 == 0) {
-                stackOut_20_0 = 0;
-                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_0 = 0;
                 break L9;
               } else {
-                stackOut_19_0 = param0 * 1000 / var6;
-                stackIn_21_0 = stackOut_19_0;
+                stackIn_21_0 = param0 * 1000 / var6;
                 break L9;
               }
             }
@@ -199,12 +185,10 @@ final class lg {
               vh.field_i[qh.field_D] = param5;
               var6 = param5 + param0 + param3;
               if (var6 == 0) {
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 0;
                 break L13;
               } else {
-                stackOut_6_0 = param0 * 1000 / var6;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = param0 * 1000 / var6;
                 break L13;
               }
             }
@@ -234,11 +218,8 @@ final class lg {
 
     final static void a(sg param0, int param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         sg var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -246,14 +227,7 @@ final class lg {
         String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException var2 = null;
         var4 = fleas.field_A ? 1 : 0;
         try {
           L0: {
@@ -327,27 +301,19 @@ final class lg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2);
-            stackOut_19_1 = new StringBuilder().append("lg.C(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2);
+
+            stackIn_21_1 = new StringBuilder().append("lg.C(");
+
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L7;
             }
           }

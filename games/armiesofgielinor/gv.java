@@ -6,14 +6,13 @@ final class gv {
     static wk[][][] field_a;
 
     final static wk a(int param0) {
-        wk discarded$1 = null;
-        int var1 = 0;
-        byte[] var2 = null;
-        int[] var3 = null;
-        int var4_int = 0;
-        wk var4 = null;
-        int var5 = 0;
-        byte[] var6 = null;
+        int var1;
+        byte[] var2;
+        int[] var3;
+        int var4_int;
+        wk var4;
+        int var5;
+        byte[] var6;
         var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         var1 = c.field_e[0] * qm.field_K[0];
         var6 = vj.field_j[0];
@@ -22,42 +21,28 @@ final class gv {
         var4_int = 0;
         if (param0 == 2809) {
           L0: while (true) {
-            L1: {
-              if (var1 <= var4_int) {
-                break L1;
-              } else {
-                var3[var4_int] = qv.field_j[rn.a(255, (int) var6[var4_int])];
-                var4_int++;
-                if (var5 == 0) {
-                  continue L0;
-                } else {
-                  break L1;
-                }
-              }
+            if (var1 <= var4_int) {
+              var4 = new wk(lg.field_d, wr.field_J, j.field_e[0], iq.field_g[0], qm.field_K[0], c.field_e[0], var3);
+              rj.d((byte) 97);
+              return var4;
+            } else {
+              var3[var4_int] = qv.field_j[rn.a(255, (int) var6[var4_int])];
+              var4_int++;
+              continue L0;
             }
-            var4 = new wk(lg.field_d, wr.field_J, j.field_e[0], iq.field_g[0], qm.field_K[0], c.field_e[0], var3);
-            rj.d((byte) 97);
-            return var4;
           }
         } else {
-          discarded$1 = gv.a(11);
-          L2: while (true) {
-            L3: {
-              if (var1 <= var4_int) {
-                break L3;
-              } else {
-                var3[var4_int] = qv.field_j[rn.a(255, (int) var6[var4_int])];
-                var4_int++;
-                if (var5 == 0) {
-                  continue L2;
-                } else {
-                  break L3;
-                }
-              }
+          gv.a(11);
+          L1: while (true) {
+            if (var1 <= var4_int) {
+              var4 = new wk(lg.field_d, wr.field_J, j.field_e[0], iq.field_g[0], qm.field_K[0], c.field_e[0], var3);
+              rj.d((byte) 97);
+              return var4;
+            } else {
+              var3[var4_int] = qv.field_j[rn.a(255, (int) var6[var4_int])];
+              var4_int++;
+              continue L1;
             }
-            var4 = new wk(lg.field_d, wr.field_J, j.field_e[0], iq.field_g[0], qm.field_K[0], c.field_e[0], var3);
-            rj.d((byte) 97);
-            return var4;
           }
         }
     }
@@ -68,7 +53,7 @@ final class gv {
         if (param0 > 82) {
             return;
         }
-        wk discarded$0 = gv.a(24);
+        gv.a(24);
     }
 
     static {

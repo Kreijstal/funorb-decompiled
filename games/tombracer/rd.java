@@ -37,9 +37,6 @@ final class rd extends wv {
     final static boolean b(boolean param0) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (!param0) {
           if (!vpa.a(47)) {
             if ((wla.field_ub ^ -1) >= -1) {
@@ -48,8 +45,7 @@ final class rd extends wv {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
@@ -59,12 +55,10 @@ final class rd extends wv {
           } else {
             L0: {
               if ((wla.field_ub ^ -1) < -1) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }
@@ -90,14 +84,13 @@ final class rd extends wv {
     }
 
     private final void h(int param0, int param1) {
-        int discarded$1 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        da var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        String var9 = null;
+        int var3;
+        int var4;
+        int var5;
+        da var6;
+        int var7;
+        int var8;
+        String var9;
         if (param1 != 3) {
           return;
         } else {
@@ -109,7 +102,7 @@ final class rd extends wv {
           var7 = kv.field_a.field_h + (kv.field_a.field_g + 4);
           var8 = 3 * var7;
           var9 = aaa.field_e;
-          discarded$1 = be.a(var9, 1, var6, 2431750, var7, var8, 1, gg.field_f.c() / 2 + var5, var4, -1, (byte) 60, var3);
+          be.a(var9, 1, var6, 2431750, var7, var8, 1, gg.field_f.c() / 2 + var5, var4, -1, (byte) 60, var3);
           return;
         }
     }

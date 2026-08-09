@@ -22,31 +22,20 @@ final class wg extends tu {
     }
 
     final static String a(int param0, int[] param1) {
-        StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
         StringBuilder var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         StringBuilder var5 = null;
         String stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_7_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -54,58 +43,42 @@ final class wg extends tu {
             var2 = var5;
             var3 = param0;
             L1: while (true) {
-              L2: {
-                if (var3 >= param1.length) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (var3 != 0) {
-                      discarded$4 = var2.append(',');
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  discarded$5 = var5.append("0x").append(Integer.toHexString(param1[var3]));
-                  var3++;
-                  if (var4 == 0) {
-                    continue L1;
+              if (var3 >= param1.length) {
+                stackIn_8_0 = String.valueOf(']');
+                break L0;
+              } else {
+                L2: {
+                  if (var3 != 0) {
+                    discarded$2 = var2.append(',');
+                    break L2;
                   } else {
                     break L2;
                   }
                 }
+                discarded$3 = var5.append("0x").append(Integer.toHexString(param1[var3]));
+                var3++;
+                continue L1;
               }
-              stackOut_7_0 = String.valueOf(']');
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2_ref);
-            stackOut_9_1 = new StringBuilder().append("wg.R(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var2_ref);
+
+            stackIn_11_1 = new StringBuilder().append("wg.R(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L4;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
+              break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L4;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
+              break L3;
             }
           }
           throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
@@ -157,14 +130,10 @@ final class wg extends tu {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_14_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_13_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -179,52 +148,33 @@ final class wg extends tu {
             var3_int = 0;
             var4 = jua.field_d;
             L2: while (true) {
-              L3: {
-                if (mba.field_g.length <= var3_int) {
-                  stackOut_13_0 = -1;
-                  stackIn_14_0 = stackOut_13_0;
-                  break L3;
-                } else {
+              if (mba.field_g.length <= var3_int) {
+                stackIn_13_0 = -1;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              } else {
+                L3: {
                   var5 = bla.field_H[var3_int];
-                  stackOut_5_0 = var5 ^ -1;
-                  stackIn_14_0 = stackOut_5_0;
-                  stackIn_6_0 = stackOut_5_0;
-                  if (var8 != 0) {
-                    break L3;
-                  } else {
-                    L4: {
-                      L5: {
-                        if (stackIn_6_0 <= -1) {
-                          break L5;
-                        } else {
-                          var4 = var4 + f.field_b;
-                          if (var8 == 0) {
-                            break L4;
-                          } else {
-                            break L5;
-                          }
-                        }
-                      }
-                      var6 = ro.a((byte) -116, mba.field_g[var3_int], true);
-                      var4 = var4 + mha.field_C;
-                      var7 = -(var6 >> -1760797727) + ega.field_c;
-                      if (!rea.a(param2, var6 - -(nja.field_L << 55236289), -nja.field_L + var7, param1, (pqa.field_p << 1541709953) + nt.field_d, false, var4)) {
-                        var4 = var4 + ((pqa.field_p << 951014081) + mha.field_C + nt.field_d);
-                        break L4;
-                      } else {
-                        stackOut_9_0 = var5;
-                        stackIn_10_0 = stackOut_9_0;
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      }
+                  if ((var5 ^ -1) <= -1) {
+                    var6 = ro.a((byte) -116, mba.field_g[var3_int], true);
+                    var4 = var4 + mha.field_C;
+                    var7 = -(var6 >> -1760797727) + ega.field_c;
+                    if (!rea.a(param2, var6 - -(nja.field_L << 55236289), -nja.field_L + var7, param1, (pqa.field_p << 1541709953) + nt.field_d, false, var4)) {
+                      var4 = var4 + ((pqa.field_p << 951014081) + mha.field_C + nt.field_d);
+                      break L3;
+                    } else {
+                      stackIn_9_0 = var5;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
-                    var3_int++;
-                    continue L2;
+                  } else {
+                    var4 = var4 + f.field_b;
+                    break L3;
                   }
                 }
+                var3_int++;
+                continue L2;
               }
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -233,9 +183,9 @@ final class wg extends tu {
           throw tba.a((Throwable) ((Object) var3), "wg.T(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_14_0;
+          return stackIn_9_0;
         } else {
-          return stackIn_10_0;
+          return stackIn_13_0;
         }
     }
 

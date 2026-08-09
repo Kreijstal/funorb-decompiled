@@ -16,88 +16,72 @@ final class bua {
     private int field_d;
 
     final void a(int param0, int param1, int param2, boolean param3, int param4, float param5) {
-        int var8 = 0;
+        int var8;
         var8 = TombRacer.field_G ? 1 : 0;
         this.field_f = param5;
         if ((param4 ^ -1) != param1) {
           if (param0 != -1) {
             if (!param3) {
               if (param4 == this.field_e) {
-                L0: {
-                  if (param2 != this.field_a) {
-                    break L0;
-                  } else {
-                    if (param0 != this.field_j) {
-                      break L0;
+                if (param2 == this.field_a) {
+                  if (param0 != this.field_j) {
+                    this.field_a = param2;
+                    this.field_j = param0;
+                    this.field_e = param4;
+                    if (null == this.field_k) {
+                      if (this.field_l <= 0) {
+                        this.field_k = new cra();
+                        this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+                        return;
+                      } else {
+                        this.field_k = new cra(this.field_l);
+                        this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+                        return;
+                      }
                     } else {
+                      this.field_k.a((byte) -105);
+                      this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
                       return;
                     }
+                  } else {
+                    return;
                   }
-                }
-                this.field_a = param2;
-                this.field_j = param0;
-                this.field_e = param4;
-                if (null != this.field_k) {
-                  this.field_k.a((byte) -105);
-                  this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
-                  return;
                 } else {
-                  L1: {
-                    if (this.field_l <= 0) {
-                      this.field_k = new cra();
-                      if (var8 == 0) {
-                        break L1;
-                      } else {
-                        this.field_k.a((byte) -105);
-                        this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
-                        return;
-                      }
-                    } else {
+                  this.field_a = param2;
+                  this.field_j = param0;
+                  this.field_e = param4;
+                  if (null == this.field_k) {
+                    if (this.field_l > 0) {
                       this.field_k = new cra(this.field_l);
-                      if (var8 == 0) {
-                        break L1;
-                      } else {
-                        this.field_k = new cra();
-                        this.field_k.a((byte) -105);
-                        this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
-                        return;
-                      }
+                      this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+                      return;
+                    } else {
+                      this.field_k = new cra();
+                      this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+                      return;
                     }
+                  } else {
+                    this.field_k.a((byte) -105);
+                    this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+                    return;
                   }
-                  this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
-                  return;
                 }
               } else {
                 this.field_a = param2;
                 this.field_j = param0;
                 this.field_e = param4;
-                if (null != this.field_k) {
-                  this.field_k.a((byte) -105);
-                  this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
-                  return;
-                } else {
-                  L2: {
-                    if (this.field_l <= 0) {
-                      this.field_k = new cra();
-                      if (var8 == 0) {
-                        break L2;
-                      } else {
-                        this.field_k.a((byte) -105);
-                        this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
-                        return;
-                      }
-                    } else {
-                      this.field_k = new cra(this.field_l);
-                      if (var8 == 0) {
-                        break L2;
-                      } else {
-                        this.field_k = new cra();
-                        this.field_k.a((byte) -105);
-                        this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
-                        return;
-                      }
-                    }
+                if (null == this.field_k) {
+                  if (this.field_l > 0) {
+                    this.field_k = new cra(this.field_l);
+                    this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+                    return;
+                  } else {
+                    this.field_k = new cra();
+                    this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+                    return;
                   }
+                } else {
+                  this.field_k.a((byte) -105);
                   this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
                   return;
                 }
@@ -107,32 +91,14 @@ final class bua {
               this.field_j = param0;
               this.field_e = param4;
               if (null == this.field_k) {
-                if (this.field_l <= 0) {
-                  this.field_k = new cra();
-                  if (var8 == 0) {
-                    this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
-                    return;
-                  } else {
-                    this.field_k.a((byte) -105);
-                    this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
-                    return;
-                  }
-                } else {
+                if (this.field_l > 0) {
                   this.field_k = new cra(this.field_l);
-                  if (var8 != 0) {
-                    this.field_k = new cra();
-                    if (var8 != 0) {
-                      this.field_k.a((byte) -105);
-                      this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
-                      return;
-                    } else {
-                      this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
-                      return;
-                    }
-                  } else {
-                    this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
-                    return;
-                  }
+                  this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+                  return;
+                } else {
+                  this.field_k = new cra();
+                  this.field_k.a(tva.a(param1 ^ -2, param0, param2, param4), -30988);
+                  return;
                 }
               } else {
                 this.field_k.a((byte) -105);
@@ -151,48 +117,38 @@ final class bua {
     }
 
     final void a(int param0) {
-        boolean discarded$2 = false;
-        boolean discarded$3 = false;
-        int var3 = 0;
+        int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 == 0) {
-          if (this.field_k != null) {
+          if (this.field_k == null) {
+            return;
+          } else {
             this.field_i = this.field_i + this.field_f;
             L0: while (true) {
-              if (1.0f <= this.field_i) {
-                discarded$2 = this.field_k.b(param0 + 22);
-                this.field_i = this.field_i - 1.0f;
-                if (var3 == 0) {
-                  continue L0;
-                } else {
-                  return;
-                }
-              } else {
+              if (1.0f > this.field_i) {
                 return;
+              } else {
+                this.field_k.b(param0 + 22);
+                this.field_i = this.field_i - 1.0f;
+                continue L0;
               }
             }
-          } else {
-            return;
           }
         } else {
           this.field_f = -0.3097847104072571f;
-          if (this.field_k != null) {
+          if (this.field_k == null) {
+            return;
+          } else {
             this.field_i = this.field_i + this.field_f;
             L1: while (true) {
-              if (1.0f <= this.field_i) {
-                discarded$3 = this.field_k.b(param0 + 22);
-                this.field_i = this.field_i - 1.0f;
-                if (var3 == 0) {
-                  continue L1;
-                } else {
-                  return;
-                }
-              } else {
+              if (1.0f > this.field_i) {
                 return;
+              } else {
+                this.field_k.b(param0 + 22);
+                this.field_i = this.field_i - 1.0f;
+                continue L1;
               }
             }
-          } else {
-            return;
           }
         }
     }
@@ -233,20 +189,14 @@ final class bua {
     final int b(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 0) {
           L0: {
             this.field_b = -41;
             if (null != this.field_k) {
-              stackOut_7_0 = this.field_k.field_f;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = this.field_k.field_f;
               break L0;
             } else {
-              stackOut_6_0 = 0;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 0;
               break L0;
             }
           }
@@ -254,12 +204,10 @@ final class bua {
         } else {
           L1: {
             if (null != this.field_k) {
-              stackOut_3_0 = this.field_k.field_f;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = this.field_k.field_f;
               break L1;
             } else {
-              stackOut_2_0 = 0;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 0;
               break L1;
             }
           }
@@ -272,10 +220,10 @@ final class bua {
     }
 
     final ka a(boolean param0, int param1, boolean param2, byte param3) {
-        ka var5 = null;
-        ka var6 = null;
-        ka var7 = null;
-        ka var8 = null;
+        ka var5;
+        ka var6;
+        ka var7;
+        ka var8;
         var5 = kb.a(this.field_d, param0, param2, param1 + 3, this.field_b);
         if (var5 != null) {
           if (null == this.field_k) {
@@ -371,10 +319,9 @@ final class bua {
     }
 
     public static void a(byte param0) {
-        int discarded$0 = 0;
         field_c = null;
         if (param0 <= 55) {
-            discarded$0 = bua.a(56, 48);
+            bua.a(56, 48);
             field_g = null;
             return;
         }

@@ -9,11 +9,10 @@ final class cr {
     static String field_a;
 
     final static bi[] a(int param0, int param1, int param2, int param3) {
-        bi[] discarded$2 = null;
-        bi[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        bi[] var7 = null;
+        bi[] var4;
+        int var5;
+        int var6;
+        bi[] var7;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         var7 = new bi[9];
         var4 = var7;
@@ -22,7 +21,7 @@ final class cr {
         L0: while (true) {
           if (-10 >= (var5 ^ -1)) {
             if (param2 != -10) {
-              discarded$2 = cr.a(-10, 81, 16, 82);
+              cr.a(-10, 81, 16, 82);
               var4[4] = gr.a((byte) -124, param0, 64);
               return var4;
             } else {

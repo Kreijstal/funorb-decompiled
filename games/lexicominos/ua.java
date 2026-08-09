@@ -5,12 +5,8 @@ final class ua {
     static int field_a;
 
     final static byte a(boolean param0, char param1) {
-        byte discarded$4 = 0;
-        byte discarded$5 = 0;
-        byte discarded$6 = 0;
-        byte discarded$7 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Lexicominos.field_L ? 1 : 0;
         if (0 >= param1) {
           L0: {
@@ -684,7 +680,7 @@ final class ua {
                     }
                   }
                   if (!param0) {
-                    discarded$4 = ua.a(true, 'ﾇ');
+                    ua.a(true, 'ﾇ');
                     return (byte) var2;
                   } else {
                     return (byte) var2;
@@ -696,7 +692,7 @@ final class ua {
             break L0;
           }
           if (!param0) {
-            discarded$5 = ua.a(true, 'ﾇ');
+            ua.a(true, 'ﾇ');
             return (byte) var2;
           } else {
             return (byte) var2;
@@ -1053,13 +1049,13 @@ final class ua {
             if (param0) {
               return (byte) var2;
             } else {
-              discarded$6 = ua.a(true, 'ﾇ');
+              ua.a(true, 'ﾇ');
               return (byte) var2;
             }
           } else {
             var2 = (byte)param1;
             if (!param0) {
-              discarded$7 = ua.a(true, 'ﾇ');
+              ua.a(true, 'ﾇ');
               return (byte) var2;
             } else {
               return (byte) var2;
@@ -1071,23 +1067,12 @@ final class ua {
     final static la a(String param0, int param1) {
         RuntimeException var2 = null;
         la stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        la stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -1110,35 +1095,26 @@ final class ua {
                 break L2;
               }
             }
-            stackOut_5_0 = qa.field_c;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = qa.field_c;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2);
-            stackOut_7_1 = new StringBuilder().append("ua.A(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2);
+
+            stackIn_9_1 = new StringBuilder().append("ua.A(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }

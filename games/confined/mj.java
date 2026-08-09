@@ -10,8 +10,8 @@ final class mj implements com.ms.directX.IEnumModesCallback {
         param1.setVisible(true);
         com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
         int var8 = var7.getHwnd();
-        int discarded$0 = com.ms.win32.User32.SetWindowLong(var8, -16, param5);
-        int discarded$1 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+        com.ms.win32.User32.SetWindowLong(var8, -16, param5);
+        com.ms.win32.User32.SetWindowLong(var8, -20, 8);
         this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param1), 17);
         this.field_c.setDisplayMode(param0, param4, param3, param2, 0);
         param1.setBounds(0, 0, param0, param4);

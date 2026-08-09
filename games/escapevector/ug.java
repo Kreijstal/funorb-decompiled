@@ -17,8 +17,6 @@ final class ug {
         int stackIn_7_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
         try {
           L0: {
             var5 = jb.field_z;
@@ -26,8 +24,7 @@ final class ug {
             var3 = param1;
             L1: while (true) {
               if (var5.length <= var3) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -36,8 +33,7 @@ final class ug {
                   var3++;
                   continue L1;
                 } else {
-                  stackOut_3_0 = 1;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -69,7 +65,6 @@ final class ug {
     final static int[] a(int param0, int param1, int param2) {
         int var10 = 0;
         int var11 = 0;
-        boolean discarded$0 = false;
         int var12 = EscapeVector.field_A;
         int[] var13 = new int[256];
         int[] var3 = var13;
@@ -84,7 +79,7 @@ final class ug {
             var13[var10] = (var6 * var10 >> 2051183240) - (-(var9 * var11 >> -192068856) - ((var4 * var10 >> 603810248) + (var7 * var11 >> 105333576) << 830889200) - ((var5 * var10 >> -216536152) - -(var11 * var8 >> 585960904) << 1715938088));
         }
         if (param0 != 1746055568) {
-            discarded$0 = ug.a(-56, -75);
+            ug.a(-56, -75);
         }
         return var3;
     }

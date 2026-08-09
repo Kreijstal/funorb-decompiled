@@ -14,8 +14,8 @@ final class lw extends IOException {
     static int[] field_b;
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
-        int var8 = 0;
-        int var9 = 0;
+        int var8;
+        int var9;
         var9 = Kickabout.field_G;
         if (param2 <= param0) {
           if (param1 <= param0) {

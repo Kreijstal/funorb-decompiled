@@ -28,223 +28,65 @@ final class qu extends tc {
     }
 
     final static String a(int param0, byte param1) {
-        String discarded$1 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        ic var10 = null;
-        ic var11 = null;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        ic var10;
+        ic var11;
         var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         var10 = rd.field_j;
         var11 = var10;
         if (var11 != null) {
           if (param0 >= 0) {
             if (var11.field_xb.field_W >= param0) {
-              var11.field_xb.b(10001, param0, false);
-              kw.field_R = 2297;
-              cg.field_j = 72584621;
-              wr.field_L = 224;
-              ii.field_b = 4452;
-              var3 = var10.field_xb.field_mb[var10.field_q];
-              var4 = var10.field_xb.field_zb[var10.field_q];
-              hc.field_b = hc.field_b + 1;
-              hc.field_b = hc.field_b + (ko.field_b ^ sm.field_d);
-              if (param1 <= 31) {
-                L0: {
-                  discarded$1 = qu.a(-2, (byte) 45);
-                  hc.field_b = Math.abs(hc.field_b);
-                  var5 = var3 + 0;
-                  var6 = var4 - 0;
-                  var7 = hc.field_b % 4;
-                  var8 = var7;
-                  if (0 == var8) {
-                    kw.field_R = kw.field_R - var6;
-                    ii.field_b = ii.field_b - var5;
-                    if (var9 == 0) {
-                      break L0;
-                    } else {
-                      ii.field_b = ii.field_b + var6;
-                      kw.field_R = kw.field_R + var5;
-                      kw.field_R = kw.field_R + (var5 - var6);
-                      ii.field_b = ii.field_b - (-var6 + var5);
-                      throw new IllegalStateException("");
-                    }
-                  } else {
-                    if (var8 != 1) {
-                      if (-3 == (var8 ^ -1)) {
-                        kw.field_R = kw.field_R + (var5 - var6);
-                        if (var9 == 0) {
-                          break L0;
-                        } else {
-                          ii.field_b = ii.field_b - (-var6 + var5);
-                          throw new IllegalStateException("");
-                        }
-                      } else {
-                        if (var8 != 3) {
-                          throw new IllegalStateException("");
-                        } else {
-                          if (var9 == 0) {
-                            ii.field_b = ii.field_b - (-var6 + var5);
-                            if (var9 == 0) {
-                              break L0;
-                            } else {
-                              throw new IllegalStateException("");
-                            }
-                          } else {
-                            kw.field_R = kw.field_R - var6;
-                            ii.field_b = ii.field_b - var5;
-                            ii.field_b = ii.field_b + var6;
-                            kw.field_R = kw.field_R + var5;
-                            kw.field_R = kw.field_R + (var5 - var6);
-                            ii.field_b = ii.field_b - (-var6 + var5);
-                            throw new IllegalStateException("");
-                          }
-                        }
-                      }
-                    } else {
-                      if (var9 == 0) {
-                        ii.field_b = ii.field_b + var6;
-                        kw.field_R = kw.field_R + var5;
-                        if (var9 == 0) {
-                          break L0;
-                        } else {
-                          kw.field_R = kw.field_R + (var5 - var6);
-                          ii.field_b = ii.field_b - (-var6 + var5);
-                          throw new IllegalStateException("");
-                        }
-                      } else {
-                        if (-3 == (var8 ^ -1)) {
-                          kw.field_R = kw.field_R + (var5 - var6);
-                          if (var9 == 0) {
-                            return "Done.";
-                          } else {
-                            ii.field_b = ii.field_b - (-var6 + var5);
-                            throw new IllegalStateException("");
-                          }
-                        } else {
-                          if (var8 != 3) {
-                            throw new IllegalStateException("");
-                          } else {
-                            kw.field_R = kw.field_R - var6;
-                            ii.field_b = ii.field_b - var5;
-                            ii.field_b = ii.field_b + var6;
-                            kw.field_R = kw.field_R + var5;
-                            kw.field_R = kw.field_R + (var5 - var6);
-                            ii.field_b = ii.field_b - (-var6 + var5);
-                            throw new IllegalStateException("");
-                          }
-                        }
-                      }
-                    }
-                  }
+              L0: {
+                var11.field_xb.b(10001, param0, false);
+                kw.field_R = 2297;
+                cg.field_j = 72584621;
+                wr.field_L = 224;
+                ii.field_b = 4452;
+                var3 = var10.field_xb.field_mb[var10.field_q];
+                var4 = var10.field_xb.field_zb[var10.field_q];
+                hc.field_b = hc.field_b + 1;
+                hc.field_b = hc.field_b + (ko.field_b ^ sm.field_d);
+                if (param1 > 31) {
+                  break L0;
+                } else {
+                  qu.a(-2, (byte) 45);
+                  break L0;
                 }
-                return "Done.";
-              } else {
-                hc.field_b = Math.abs(hc.field_b);
-                var5 = var3 + 0;
-                var6 = var4 - 0;
-                var7 = hc.field_b % 4;
-                var8 = var7;
-                if (0 == var8) {
-                  kw.field_R = kw.field_R - var6;
-                  ii.field_b = ii.field_b - var5;
-                  if (var9 != 0) {
-                    ii.field_b = ii.field_b + var6;
-                    kw.field_R = kw.field_R + var5;
-                    if (var9 != 0) {
-                      kw.field_R = kw.field_R + (var5 - var6);
+              }
+              hc.field_b = Math.abs(hc.field_b);
+              var5 = var3 + 0;
+              var6 = var4 - 0;
+              var7 = hc.field_b % 4;
+              var8 = var7;
+              if (0 != var8) {
+                if (var8 != 1) {
+                  if (-3 != (var8 ^ -1)) {
+                    if (var8 == 3) {
                       ii.field_b = ii.field_b - (-var6 + var5);
-                      throw new IllegalStateException("");
-                    } else {
                       return "Done.";
+                    } else {
+                      throw new IllegalStateException("");
                     }
                   } else {
+                    kw.field_R = kw.field_R + (var5 - var6);
                     return "Done.";
                   }
                 } else {
-                  if (var8 != 1) {
-                    if (-3 == (var8 ^ -1)) {
-                      kw.field_R = kw.field_R + (var5 - var6);
-                      if (var9 != 0) {
-                        ii.field_b = ii.field_b - (-var6 + var5);
-                        if (var9 == 0) {
-                          return "Done.";
-                        } else {
-                          throw new IllegalStateException("");
-                        }
-                      } else {
-                        return "Done.";
-                      }
-                    } else {
-                      if (var8 == 3) {
-                        if (var9 == 0) {
-                          ii.field_b = ii.field_b - (-var6 + var5);
-                          if (var9 == 0) {
-                            return "Done.";
-                          } else {
-                            throw new IllegalStateException("");
-                          }
-                        } else {
-                          kw.field_R = kw.field_R - var6;
-                          ii.field_b = ii.field_b - var5;
-                          ii.field_b = ii.field_b + var6;
-                          kw.field_R = kw.field_R + var5;
-                          kw.field_R = kw.field_R + (var5 - var6);
-                          ii.field_b = ii.field_b - (-var6 + var5);
-                          throw new IllegalStateException("");
-                        }
-                      } else {
-                        throw new IllegalStateException("");
-                      }
-                    }
-                  } else {
-                    if (var9 == 0) {
-                      ii.field_b = ii.field_b + var6;
-                      kw.field_R = kw.field_R + var5;
-                      if (var9 != 0) {
-                        kw.field_R = kw.field_R + (var5 - var6);
-                        if (var9 != 0) {
-                          ii.field_b = ii.field_b - (-var6 + var5);
-                          if (var9 != 0) {
-                            throw new IllegalStateException("");
-                          } else {
-                            return "Done.";
-                          }
-                        } else {
-                          return "Done.";
-                        }
-                      } else {
-                        return "Done.";
-                      }
-                    } else {
-                      if (-3 == (var8 ^ -1)) {
-                        kw.field_R = kw.field_R + (var5 - var6);
-                        if (var9 != 0) {
-                          ii.field_b = ii.field_b - (-var6 + var5);
-                          throw new IllegalStateException("");
-                        } else {
-                          return "Done.";
-                        }
-                      } else {
-                        if (var8 == 3) {
-                          kw.field_R = kw.field_R - var6;
-                          ii.field_b = ii.field_b - var5;
-                          ii.field_b = ii.field_b + var6;
-                          kw.field_R = kw.field_R + var5;
-                          kw.field_R = kw.field_R + (var5 - var6);
-                          ii.field_b = ii.field_b - (-var6 + var5);
-                          throw new IllegalStateException("");
-                        } else {
-                          throw new IllegalStateException("");
-                        }
-                      }
-                    }
-                  }
+                  ii.field_b = ii.field_b + var6;
+                  kw.field_R = kw.field_R + var5;
+                  return "Done.";
                 }
+              } else {
+                kw.field_R = kw.field_R - var6;
+                ii.field_b = ii.field_b - var5;
+                return "Done.";
               }
             } else {
               return "Please choose a player, 0-based.";

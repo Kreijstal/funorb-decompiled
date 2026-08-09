@@ -14,16 +14,15 @@ final class hh {
     static int[] field_c;
 
     final static String a(long param0, byte param1) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        int var3 = 0;
-        int var4 = 0;
-        long var5 = 0L;
-        StringBuilder var7 = null;
-        long var8 = 0L;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        StringBuilder discarded$1 = null;
+        int var3;
+        int var4;
+        long var5;
+        StringBuilder var7;
+        long var8;
+        int var10;
+        int var11;
+        int var12;
         var12 = SteelSentinels.field_G;
         if (param0 > 0L) {
           if ((param0 ^ -1L) > -6582952005840035282L) {
@@ -38,7 +37,7 @@ final class hh {
                   var7 = new StringBuilder(var3);
                   L1: while (true) {
                     if (-1L == (param0 ^ -1L)) {
-                      discarded$2 = var7.reverse();
+                      var7.reverse();
                       var7.setCharAt(0, Character.toUpperCase(var7.charAt(0)));
                       return var7.toString();
                     } else {
@@ -55,7 +54,7 @@ final class hh {
                           break L2;
                         }
                       }
-                      discarded$3 = var7.append((char) var10);
+                      discarded$1 = var7.append((char) var10);
                       continue L1;
                     }
                   }
@@ -95,10 +94,9 @@ final class hh {
     }
 
     final static void a(String param0, String param1, int param2) {
-        int discarded$0 = 0;
         try {
             if (param2 != 50) {
-                discarded$0 = hh.a(28, true, (byte) -92, -82);
+                hh.a(28, true, (byte) -92, -82);
             }
             ma.a(false, (byte) -65, param0, param1);
         } catch (RuntimeException runtimeException) {

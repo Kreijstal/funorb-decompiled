@@ -8,7 +8,6 @@ final class qb {
 
     final static boolean b(byte param0) {
         int stackIn_5_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == 123) {
           if (!n.b((byte) 111)) {
             if (-1 <= (tc.field_b ^ -1)) {
@@ -17,8 +16,7 @@ final class qb {
               return false;
             }
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             return stackIn_5_0 != 0;
           }
         } else {

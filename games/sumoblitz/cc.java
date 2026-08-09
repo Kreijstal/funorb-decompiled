@@ -45,12 +45,12 @@ final class cc implements Runnable {
     }
 
     final synchronized boolean a(byte param0) {
+        Throwable decompiledCaughtException = null;
         int var2 = 0;
         IOException var3 = null;
         OutputStream var4 = null;
         java.net.Socket var5 = null;
         CharSequence var6 = null;
-        Throwable decompiledCaughtException = null;
         if (this.field_g < 2) {
           L0: {
             var2 = 4 / ((param0 - -41) / 43);
@@ -211,52 +211,32 @@ final class cc implements Runnable {
             Object var2 = null;
             Throwable var3 = null;
             int var4 = 0;
-            int stackIn_3_0 = 0;
-            int stackIn_7_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_2_0 = 0;
-            int stackOut_6_0 = 0;
             var4 = Sumoblitz.field_L ? 1 : 0;
             try {
               L0: while (true) {
                 L1: {
-                  L2: {
-                    if (this.field_d.field_p >= this.field_d.field_n.length) {
-                      break L2;
+                  if (this.field_d.field_p >= this.field_d.field_n.length) {
+                    break L1;
+                  } else {
+                    var1_int = this.field_h.read(this.field_d.field_n, this.field_d.field_p, -this.field_d.field_p + this.field_d.field_n.length);
+                    if (var1_int < 0) {
+                      break L1;
                     } else {
-                      var1_int = this.field_h.read(this.field_d.field_n, this.field_d.field_p, -this.field_d.field_p + this.field_d.field_n.length);
-                      stackOut_2_0 = var1_int;
-                      stackIn_7_0 = stackOut_2_0;
-                      stackIn_3_0 = stackOut_2_0;
-                      if (var4 != 0) {
-                        break L1;
-                      } else {
-                        if (stackIn_3_0 < 0) {
-                          break L2;
-                        } else {
-                          this.field_d.field_p = this.field_d.field_p + var1_int;
-                          if (var4 == 0) {
-                            continue L0;
-                          } else {
-                            break L2;
-                          }
-                        }
-                      }
+                      this.field_d.field_p = this.field_d.field_p + var1_int;
+                      continue L0;
                     }
                   }
-                  stackOut_6_0 = this.field_d.field_n.length;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
                 }
-                if (stackIn_7_0 == this.field_d.field_p) {
+                if (this.field_d.field_n.length == this.field_d.field_p) {
                   throw cc.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_d.field_n.length + " " + this.field_a));
                 } else {
                   var1 = this;
                   synchronized (var1) {
-                    L3: {
+                    L2: {
                       this.finalize();
                       this.field_g = 3;
-                      break L3;
+                      break L2;
                     }
                   }
                   return;
@@ -267,10 +247,10 @@ final class cc implements Runnable {
               var1 = (Exception) (Object) decompiledCaughtException;
               var2 = this;
               synchronized (var2) {
-                L4: {
+                L3: {
                   this.finalize();
                   this.field_g = this.field_g + 1;
-                  break L4;
+                  break L3;
                 }
               }
               return;

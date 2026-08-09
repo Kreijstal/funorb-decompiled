@@ -9,9 +9,8 @@ final class uf {
     static int[] field_c;
 
     public static void a(int param0) {
-        String discarded$0 = null;
         if (param0 != 32578) {
-            discarded$0 = uf.a((byte) -121);
+            uf.a((byte) -121);
             field_c = null;
             field_b = null;
             return;
@@ -49,8 +48,6 @@ final class uf {
 
     final boolean b(int param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 <= -15) {
           if (ae.field_g != this) {
             if (dg.field_e != this) {
@@ -73,12 +70,10 @@ final class uf {
             } else {
               L0: {
                 if (b.field_b != this) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }

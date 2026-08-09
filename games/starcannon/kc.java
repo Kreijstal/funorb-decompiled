@@ -53,19 +53,19 @@ abstract class kc extends qd {
     }
 
     void c(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = StarCannon.field_A;
         ki.e(param0 + 6, 35 + param2, -12 + this.field_i, this.field_f - 40, 2105376, 0);
         var5 = 211;
@@ -115,7 +115,7 @@ abstract class kc extends qd {
               }
             }
           } else {
-            if (ki.field_e <= var8) {
+            if ((ki.field_e ^ -1) >= (var8 ^ -1)) {
               if (var8 < ki.field_i) {
                 L3: {
                   var9 = var7 * (-var5 + var6) / var4 + var5;
@@ -226,21 +226,20 @@ abstract class kc extends qd {
     }
 
     boolean g(byte param0) {
-        boolean discarded$0 = false;
         int var2 = 0;
         int var3 = 0;
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var4 = 0;
         int var5 = 0;
         if (param0 != -124) {
-            discarded$0 = this.g((byte) -68);
+            this.g((byte) -68);
         }
         if (-1 > (this.field_K ^ -1)) {
             var2 = this.field_J;
             var3 = this.field_L;
-            fieldTemp$1 = this.field_I + 1;
+            fieldTemp$0 = this.field_I + 1;
             this.field_I = this.field_I + 1;
-            if (this.field_K <= fieldTemp$1) {
+            if (this.field_K <= fieldTemp$0) {
                 this.field_K = 0;
                 this.k(-101);
             } else {

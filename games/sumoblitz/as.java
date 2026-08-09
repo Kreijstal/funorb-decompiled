@@ -40,81 +40,55 @@ final class as extends nt {
     }
 
     final void a(ha param0, int param1) {
-        boolean discarded$2 = false;
-        RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
               if (param1 <= -121) {
                 break L1;
               } else {
-                discarded$2 = this.a(-59);
+                this.a(-59);
                 break L1;
               }
             }
             L2: {
-              L3: {
-                if (0 != this.field_t) {
-                  break L3;
-                } else {
-                  uc.field_a.a((float)(this.field_k >> 1538054664), (float)(this.field_o >> 1016533960), 1024, 0, 0, (this.field_p * (128 / this.field_s) << 1199849944) + this.field_q, 1);
-                  if (!Sumoblitz.field_L) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
+              if (0 != this.field_t) {
+                im.field_a.a((float)(this.field_k >> 1988628584), (float)(this.field_o >> 1218913224), 4096, 0, 0, (this.field_p * (128 / this.field_s) << 677098712) + this.field_q, 1);
+                break L2;
+              } else {
+                uc.field_a.a((float)(this.field_k >> 1538054664), (float)(this.field_o >> 1016533960), 1024, 0, 0, (this.field_p * (128 / this.field_s) << 1199849944) + this.field_q, 1);
+                break L2;
               }
-              im.field_a.a((float)(this.field_k >> 1988628584), (float)(this.field_o >> 1218913224), 4096, 0, 0, (this.field_p * (128 / this.field_s) << 677098712) + this.field_q, 1);
-              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("as.C(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("as.C(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L4;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
+              break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L4;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
+              break L3;
             }
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
     }
 
@@ -127,23 +101,13 @@ final class as extends nt {
     }
 
     final static void a(int param0, String[] param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -176,27 +140,19 @@ final class as extends nt {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2);
-            stackOut_7_1 = new StringBuilder().append("as.E(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2);
+
+            stackIn_9_1 = new StringBuilder().append("as.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L4;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L4;
             }
           }
@@ -205,64 +161,34 @@ final class as extends nt {
     }
 
     final boolean a(int param0) {
-        int var3 = 0;
-        L0: {
-          var3 = Sumoblitz.field_L ? 1 : 0;
-          if (this.field_s <= this.field_p) {
-            break L0;
-          } else {
-            L1: {
-              L2: {
-                this.field_k = this.field_k + this.field_u;
-                this.field_o = this.field_o + this.field_z;
-                this.field_u = this.field_u * 251 / 285;
-                this.field_z = this.field_z * 251 / 285;
-                if (-1 >= (this.field_u ^ -1)) {
-                  break L2;
-                } else {
-                  this.field_u = this.field_u - 1;
-                  if (var3 == 0) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              this.field_u = this.field_u + 1;
-              break L1;
+        int var3 = Sumoblitz.field_L ? 1 : 0;
+        if (this.field_s > this.field_p) {
+            this.field_k = this.field_k + this.field_u;
+            this.field_o = this.field_o + this.field_z;
+            this.field_u = this.field_u * 251 / 285;
+            this.field_z = this.field_z * 251 / 285;
+            if (-1 < (this.field_u ^ -1)) {
+                this.field_u = this.field_u - 1;
+            } else {
+                this.field_u = this.field_u + 1;
             }
-            L3: {
-              if ((this.field_z ^ -1) <= -1) {
-                break L3;
-              } else {
+            if ((this.field_z ^ -1) > -1) {
                 this.field_z = this.field_z - 1;
-                if (var3 == 0) {
-                  break L0;
-                } else {
-                  break L3;
-                }
-              }
+            } else {
+                this.field_z = this.field_z + 1;
             }
-            this.field_z = this.field_z + 1;
-            break L0;
-          }
         }
-        L4: {
-          if (param0 == -2567) {
-            break L4;
-          } else {
+        if (param0 != -2567) {
             as.e(-88);
-            break L4;
-          }
         }
         return super.a(param0 + 0);
     }
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
+            int var0;
+            int var1;
+            int var2;
             field_x = "lives: ";
             field_y = new int[256];
             var1 = 0;

@@ -11,14 +11,14 @@ final class vv implements Iterator {
     static ul field_b;
 
     public final Object next() {
-        pj var1 = this.field_c;
+        Object var1 = this.field_c;
         if (this.field_d.field_c == var1) {
             var1 = null;
             this.field_c = null;
         } else {
-            this.field_c = var1.field_m;
+            this.field_c = ((pj) (var1)).field_m;
         }
-        this.field_e = var1;
+        this.field_e = (pj) (var1);
         return var1;
     }
 
@@ -36,9 +36,10 @@ final class vv implements Iterator {
 
     final static void a(int param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
+        int var5 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
@@ -53,11 +54,7 @@ final class vv implements Iterator {
                   } else {
                     gs.field_b[var3_int] = (var3_int << 719764940) / param1;
                     var3_int++;
-                    if (var4 != 0) {
-                      break L1;
-                    } else {
-                      continue L2;
-                    }
+                    continue L2;
                   }
                 }
               } else {
@@ -72,41 +69,34 @@ final class vv implements Iterator {
                 break L3;
               }
             }
-            if (ts.field_c != param2) {
-              L4: {
+            L4: {
+              if (ts.field_c != param2) {
                 L5: {
                   if (ws.field_b == param2) {
+                    uv.field_o = gs.field_b;
                     break L5;
                   } else {
                     uv.field_o = new int[param2];
-                    var3_int = 0;
+                    var5 = 0;
+                    var3_int = var5;
                     L6: while (true) {
-                      if (param2 <= var3_int) {
-                        if (var4 == 0) {
-                          break L4;
-                        } else {
-                          break L5;
-                        }
+                      if (param2 <= var5) {
+                        break L5;
                       } else {
-                        uv.field_o[var3_int] = (var3_int << -1203350004) / param2;
-                        var3_int++;
-                        if (var4 != 0) {
-                          break L4;
-                        } else {
-                          continue L6;
-                        }
+                        uv.field_o[var5] = (var5 << -1203350004) / param2;
+                        var5++;
+                        continue L6;
                       }
                     }
                   }
                 }
-                uv.field_o = gs.field_b;
+                ts.field_c = param2;
+                break L4;
+              } else {
                 break L4;
               }
-              ts.field_c = param2;
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

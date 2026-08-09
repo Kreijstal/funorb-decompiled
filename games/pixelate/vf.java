@@ -17,22 +17,22 @@ final class vf {
     }
 
     final static void a(byte param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -46,30 +46,30 @@ final class vf {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  incrementValue$40 = var2;
+                  incrementValue$16 = var2;
                   var2++;
-                  var5[incrementValue$40] = 0;
-                  incrementValue$41 = var2;
+                  var5[incrementValue$16] = 0;
+                  incrementValue$17 = var2;
                   var2++;
-                  var5[incrementValue$41] = 0;
-                  incrementValue$42 = var2;
+                  var5[incrementValue$17] = 0;
+                  incrementValue$18 = var2;
                   var2++;
-                  var5[incrementValue$42] = 0;
-                  incrementValue$43 = var2;
+                  var5[incrementValue$18] = 0;
+                  incrementValue$19 = var2;
                   var2++;
-                  var5[incrementValue$43] = 0;
-                  incrementValue$44 = var2;
+                  var5[incrementValue$19] = 0;
+                  incrementValue$20 = var2;
                   var2++;
-                  var5[incrementValue$44] = 0;
-                  incrementValue$45 = var2;
+                  var5[incrementValue$20] = 0;
+                  incrementValue$21 = var2;
                   var2++;
-                  var5[incrementValue$45] = 0;
-                  incrementValue$46 = var2;
+                  var5[incrementValue$21] = 0;
+                  incrementValue$22 = var2;
                   var2++;
-                  var5[incrementValue$46] = 0;
-                  incrementValue$47 = var2;
+                  var5[incrementValue$22] = 0;
+                  incrementValue$23 = var2;
                   var2++;
-                  var5[incrementValue$47] = 0;
+                  var5[incrementValue$23] = 0;
                   continue L1;
                 }
               }
@@ -96,8 +96,6 @@ final class vf {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        char[] var6 = null;
-        int var7 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_15_0 = 0;
@@ -105,23 +103,16 @@ final class vf {
         int stackIn_25_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_14_0 = 0;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
             if (Character.isISOControl(param1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (dd.a(param1, (byte) 122)) {
-                stackOut_7_0 = 1;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -137,34 +128,29 @@ final class vf {
                 }
                 L2: while (true) {
                   if (var3 >= var2.length) {
-                    var6 = uh.field_b;
-                    var2 = var6;
-                    var7 = 0;
-                    var3 = var7;
+                    var2 = uh.field_b;
+                    var3 = 0;
                     L3: while (true) {
-                      if (var7 >= var6.length) {
-                        stackOut_24_0 = 0;
-                        stackIn_25_0 = stackOut_24_0;
+                      if (var3 >= var2.length) {
+                        stackIn_25_0 = 0;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
-                        var4 = var6[var7];
+                        var4 = var2[var3];
                         if (param1 == var4) {
-                          stackOut_21_0 = 1;
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_22_0 = 1;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
-                          var7++;
+                          var3++;
                           continue L3;
                         }
                       }
                     }
                   } else {
                     var4 = var2[var3];
-                    if (var4 == param1) {
-                      stackOut_14_0 = 1;
-                      stackIn_15_0 = stackOut_14_0;
+                    if ((var4 ^ -1) == (param1 ^ -1)) {
+                      stackIn_15_0 = 1;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -201,8 +187,18 @@ final class vf {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        RuntimeException var3 = null;
+        gp stackIn_3_0 = null;
+        boolean stackIn_3_1 = false;
+        gp stackIn_4_0 = null;
+        boolean stackIn_4_1 = false;
+        int stackIn_4_2 = 0;
+        ak stackIn_20_0 = null;
+        ak stackIn_21_0 = null;
+        String stackIn_21_1 = null;
+        int stackIn_24_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         bb var4 = null;
         Object var5 = null;
         im var6 = null;
@@ -217,59 +213,23 @@ final class vf {
         int var15 = 0;
         wi var17 = null;
         wi var18 = null;
-        gp stackIn_2_0 = null;
-        boolean stackIn_2_1 = false;
-        gp stackIn_3_0 = null;
-        boolean stackIn_3_1 = false;
-        gp stackIn_4_0 = null;
-        boolean stackIn_4_1 = false;
-        int stackIn_4_2 = 0;
-        ak stackIn_19_0 = null;
-        ak stackIn_20_0 = null;
-        ak stackIn_21_0 = null;
-        String stackIn_21_1 = null;
-        int stackIn_24_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        gp stackOut_1_0 = null;
-        boolean stackOut_1_1 = false;
-        gp stackOut_3_0 = null;
-        boolean stackOut_3_1 = false;
-        int stackOut_3_2 = 0;
-        gp stackOut_2_0 = null;
-        boolean stackOut_2_1 = false;
-        int stackOut_2_2 = 0;
-        ak stackOut_18_0 = null;
-        ak stackOut_20_0 = null;
-        String stackOut_20_1 = null;
-        ak stackOut_19_0 = null;
-        String stackOut_19_1 = null;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
         var15 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
             L1: {
-              stackOut_1_0 = v.field_e.field_Gb;
-              stackOut_1_1 = param0;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
+              stackIn_3_0 = v.field_e.field_Gb;
+
+              stackIn_3_1 = param0;
+
               if (bj.field_d != v.field_e.field_Gb) {
-                stackOut_3_0 = (gp) ((Object) stackIn_3_0);
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
+                stackIn_4_0 = (gp) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = (gp) ((Object) stackIn_2_0);
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
+                stackIn_4_0 = (gp) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = 1;
                 break L1;
               }
             }
@@ -357,32 +317,25 @@ final class vf {
                     }
                   }
                   L9: {
-                    stackOut_18_0 = var6.field_Pb;
-                    stackIn_20_0 = stackOut_18_0;
-                    stackIn_19_0 = stackOut_18_0;
+                    stackIn_20_0 = var6.field_Pb;
+
                     if (0 >= var10) {
-                      stackOut_20_0 = (ak) ((Object) stackIn_20_0);
-                      stackOut_20_1 = var6.field_Fb;
-                      stackIn_21_0 = stackOut_20_0;
-                      stackIn_21_1 = stackOut_20_1;
+                      stackIn_21_0 = (ak) ((Object) stackIn_20_0);
+                      stackIn_21_1 = var6.field_Fb;
                       break L9;
                     } else {
-                      stackOut_19_0 = (ak) ((Object) stackIn_19_0);
-                      stackOut_19_1 = jl.a(var6.field_Pb.field_Db, var6.field_Fb, var10);
-                      stackIn_21_0 = stackOut_19_0;
-                      stackIn_21_1 = stackOut_19_1;
+                      stackIn_21_0 = (ak) ((Object) stackIn_20_0);
+                      stackIn_21_1 = jl.a(var6.field_Pb.field_Db, var6.field_Fb, var10);
                       break L9;
                     }
                   }
                   L10: {
                     stackIn_21_0.field_cb = stackIn_21_1;
                     if (var6.field_Pb.field_cb.equals(var6.field_Fb)) {
-                      stackOut_23_0 = 0;
-                      stackIn_24_0 = stackOut_23_0;
+                      stackIn_24_0 = 0;
                       break L10;
                     } else {
-                      stackOut_22_0 = 1;
-                      stackIn_24_0 = stackOut_22_0;
+                      stackIn_24_0 = 1;
                       break L10;
                     }
                   }
@@ -461,27 +414,17 @@ final class vf {
     final static void a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
             int var3 = 0;
             String var4 = null;
             java.net.URL var5 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
             RuntimeException stackIn_10_0 = null;
             StringBuilder stackIn_10_1 = null;
             RuntimeException stackIn_11_0 = null;
             StringBuilder stackIn_11_1 = null;
             String stackIn_11_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            RuntimeException stackOut_10_0 = null;
-            StringBuilder stackOut_10_1 = null;
-            String stackOut_10_2 = null;
-            RuntimeException stackOut_9_0 = null;
-            StringBuilder stackOut_9_1 = null;
-            String stackOut_9_2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             try {
               L0: {
                 try {
@@ -525,27 +468,19 @@ final class vf {
               decompiledCaughtException = decompiledCaughtParameter1;
               L5: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_8_0 = (RuntimeException) (var2_ref2);
-                stackOut_8_1 = new StringBuilder().append("vf.D(");
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_10_1 = stackOut_8_1;
-                stackIn_9_0 = stackOut_8_0;
-                stackIn_9_1 = stackOut_8_1;
+                stackIn_10_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_10_1 = new StringBuilder().append("vf.D(");
+
                 if (param0 == null) {
-                  stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-                  stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-                  stackOut_10_2 = "null";
-                  stackIn_11_0 = stackOut_10_0;
-                  stackIn_11_1 = stackOut_10_1;
-                  stackIn_11_2 = stackOut_10_2;
+                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+                  stackIn_11_2 = "null";
                   break L5;
                 } else {
-                  stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-                  stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-                  stackOut_9_2 = "{...}";
-                  stackIn_11_0 = stackOut_9_0;
-                  stackIn_11_1 = stackOut_9_1;
-                  stackIn_11_2 = stackOut_9_2;
+                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+                  stackIn_11_2 = "{...}";
                   break L5;
                 }
               }

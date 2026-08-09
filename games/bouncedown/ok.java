@@ -18,10 +18,9 @@ final class ok {
     }
 
     public static void c(int param0) {
-        int discarded$0 = 0;
         field_c = null;
         if (param0 < 73) {
-            discarded$0 = ok.d(83);
+            ok.d(83);
         }
     }
 
@@ -76,12 +75,9 @@ final class ok {
     }
 
     final static void a(java.applet.Applet param0, int param1) {
-        tg[] discarded$2 = null;
         RuntimeException runtimeException = null;
         String var2 = null;
         CharSequence var3 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -89,14 +85,6 @@ final class ok {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -110,7 +98,7 @@ final class ok {
                     if (param1 < -37) {
                       break L2;
                     } else {
-                      discarded$2 = ok.a(62, 7, 10, -75, 30);
+                      ok.a(62, 7, 10, -75, 30);
                       break L2;
                     }
                   }
@@ -128,27 +116,19 @@ final class ok {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (runtimeException);
-            stackOut_7_1 = new StringBuilder().append("ok.G(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (runtimeException);
+
+            stackIn_9_1 = new StringBuilder().append("ok.G(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -165,23 +145,12 @@ final class ok {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -193,35 +162,26 @@ final class ok {
                 break L1;
               }
             }
-            stackOut_2_0 = var5_int;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = var5_int;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var5);
-            stackOut_4_1 = new StringBuilder().append("ok.E(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var5);
+
+            stackIn_6_1 = new StringBuilder().append("ok.E(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -231,24 +191,21 @@ final class ok {
     }
 
     ok(File param0, String param1, long param2) throws IOException {
-        boolean discarded$0 = false;
         int var5_int = 0;
         try {
             if ((param2 ^ -1L) == 0L) {
                 param2 = 9223372036854775807L;
             }
             if (param0.length() > param2) {
-                discarded$0 = param0.delete();
+                param0.delete();
             }
             this.field_d = new RandomAccessFile(param0, param1);
             this.field_b = 0L;
             this.field_e = param2;
             var5_int = this.field_d.read();
-            if (-1 != var5_int) {
-                if (!param1.equals("r")) {
-                    this.field_d.seek(0L);
-                    this.field_d.write(var5_int);
-                }
+            if (-1 != var5_int && !param1.equals("r")) {
+                this.field_d.seek(0L);
+                this.field_d.write(var5_int);
             }
             this.field_d.seek(0L);
         } catch (RuntimeException runtimeException) {
@@ -257,9 +214,8 @@ final class ok {
     }
 
     final static tg[] a(int param0, int param1, int param2, int param3, int param4) {
-        boolean discarded$2 = false;
         if (param0 != 18938) {
-          discarded$2 = ok.a(false, 11);
+          ok.a(false, 11);
           return jk.a(param1, 1, param3, -7139, param4, 1, 3, param2, 1);
         } else {
           return jk.a(param1, 1, param3, -7139, param4, 1, 3, param2, 1);
@@ -268,17 +224,12 @@ final class ok {
 
     final static boolean a(boolean param0, int param1) {
         try {
-            long dupTemp$8 = 0L;
-            int discarded$9 = 0;
-            int discarded$10 = 0;
-            int discarded$11 = 0;
+            long dupTemp$1 = 0L;
             IOException var2 = null;
             ii var4 = null;
             ii var5 = null;
             int stackIn_13_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_12_0 = 0;
-            int stackOut_11_0 = 0;
             L0: {
               if (null == ec.field_P) {
                 ec.field_P = pj.field_c.a(gk.field_h, td.field_b, 0);
@@ -288,9 +239,9 @@ final class ok {
               }
             }
             if (ec.field_P.field_f != 0) {
-              dupTemp$8 = fa.a(73);
-              wa.field_e = dupTemp$8;
-              qe.field_k = dupTemp$8;
+              dupTemp$1 = fa.a(73);
+              wa.field_e = dupTemp$1;
+              qe.field_k = dupTemp$1;
               if ((ec.field_P.field_f ^ -1) == -2) {
                 try {
                   L1: {
@@ -300,12 +251,10 @@ final class ok {
                       var5 = var4;
                       hh.field_p.field_h = 0;
                       if (!param0) {
-                        stackOut_12_0 = -1;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = -1;
                         break L2;
                       } else {
-                        stackOut_11_0 = -2;
-                        stackIn_13_0 = stackOut_11_0;
+                        stackIn_13_0 = -2;
                         break L2;
                       }
                     }
@@ -324,7 +273,7 @@ final class ok {
                   pj.field_a = ri.field_C;
                   ec.field_P = null;
                   if (param1 <= 117) {
-                    discarded$9 = ok.d(70);
+                    ok.d(70);
                     return true;
                   } else {
                     return true;
@@ -335,7 +284,7 @@ final class ok {
                   if (param1 > 117) {
                     break L3;
                   } else {
-                    discarded$10 = ok.d(70);
+                    ok.d(70);
                     break L3;
                   }
                 }
@@ -344,7 +293,7 @@ final class ok {
                 pj.field_a = ri.field_C;
                 ec.field_P = null;
                 if (param1 <= 117) {
-                  discarded$11 = ok.d(70);
+                  ok.d(70);
                   return true;
                 } else {
                   return true;

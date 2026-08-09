@@ -33,252 +33,135 @@ abstract class se extends li implements ho {
     }
 
     final static int a(int param0, byte param1) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        var3 = CrazyCrystals.field_B;
+        int var3 = CrazyCrystals.field_B;
         ci.field_k = null;
         jh.field_e = 0;
         so.field_c = null;
-        var2 = cb.field_m;
-        if (param1 <= -99) {
-          cb.field_m = CrazyCrystals.field_D;
-          oi.field_d.field_j = oi.field_d.field_j + 1;
-          CrazyCrystals.field_D = var2;
-          if (param0 != 51) {
-            if (50 == param0) {
-              L0: {
-                oi.field_d.field_p = 5;
+        int var2 = cb.field_m;
+        if (param1 > -99) {
+            se.a(-41, (byte) -4);
+            cb.field_m = CrazyCrystals.field_D;
+            oi.field_d.field_j = oi.field_d.field_j + 1;
+            CrazyCrystals.field_D = var2;
+            if (param0 == 51) {
+                oi.field_d.field_p = 2;
                 if ((oi.field_d.field_j ^ -1) > -3) {
-                  break L0;
-                } else {
-                  if (param0 != 51) {
-                    break L0;
-                  } else {
-                    return 2;
-                  }
-                }
-              }
-              L1: {
-                if ((oi.field_d.field_j ^ -1) > -3) {
-                  break L1;
-                } else {
-                  if (-51 != (param0 ^ -1)) {
-                    break L1;
-                  } else {
+                    if ((oi.field_d.field_j ^ -1) > -3) {
+                        if (4 > oi.field_d.field_j) {
+                            return -1;
+                        }
+                        return 1;
+                    }
+                    if (-51 != (param0 ^ -1)) {
+                        if (4 <= oi.field_d.field_j) {
+                            return 1;
+                        }
+                        return -1;
+                    }
                     return 5;
-                  }
                 }
-              }
-              if (4 > oi.field_d.field_j) {
-                return -1;
-              } else {
-                return 1;
-              }
-            } else {
-              L2: {
+                if (param0 != 51) {
+                    if ((oi.field_d.field_j ^ -1) <= -3 && -51 == (param0 ^ -1)) {
+                        return 5;
+                    }
+                    if (4 <= oi.field_d.field_j) {
+                        return 1;
+                    }
+                    return -1;
+                }
+                return 2;
+            }
+            if (50 != param0) {
                 oi.field_d.field_p = 1;
                 if ((oi.field_d.field_j ^ -1) > -3) {
-                  break L2;
-                } else {
-                  if (param0 != 51) {
-                    break L2;
-                  } else {
-                    return 2;
-                  }
+                    if ((oi.field_d.field_j ^ -1) <= -3 && -51 == (param0 ^ -1)) {
+                        return 5;
+                    }
+                    if (4 <= oi.field_d.field_j) {
+                        return 1;
+                    }
+                    return -1;
                 }
-              }
-              L3: {
-                if ((oi.field_d.field_j ^ -1) > -3) {
-                  break L3;
-                } else {
-                  if (-51 != (param0 ^ -1)) {
-                    break L3;
-                  } else {
-                    return 5;
-                  }
-                }
-              }
-              if (4 > oi.field_d.field_j) {
-                return -1;
-              } else {
-                return 1;
-              }
-            }
-          } else {
-            L4: {
-              oi.field_d.field_p = 2;
-              if ((oi.field_d.field_j ^ -1) > -3) {
-                break L4;
-              } else {
                 if (param0 != 51) {
-                  break L4;
-                } else {
-                  return 2;
-                }
-              }
-            }
-            L5: {
-              if ((oi.field_d.field_j ^ -1) > -3) {
-                break L5;
-              } else {
-                if (-51 != (param0 ^ -1)) {
-                  break L5;
-                } else {
-                  return 5;
-                }
-              }
-            }
-            if (4 > oi.field_d.field_j) {
-              return -1;
-            } else {
-              return 1;
-            }
-          }
-        } else {
-          discarded$1 = se.a(-41, (byte) -4);
-          cb.field_m = CrazyCrystals.field_D;
-          oi.field_d.field_j = oi.field_d.field_j + 1;
-          CrazyCrystals.field_D = var2;
-          if (param0 != 51) {
-            if (50 == param0) {
-              oi.field_d.field_p = 5;
-              if ((oi.field_d.field_j ^ -1) <= -3) {
-                if (param0 == 51) {
-                  return 2;
-                } else {
-                  L6: {
-                    if ((oi.field_d.field_j ^ -1) > -3) {
-                      break L6;
-                    } else {
-                      if (-51 != (param0 ^ -1)) {
-                        break L6;
-                      } else {
+                    if ((oi.field_d.field_j ^ -1) <= -3 && -51 == (param0 ^ -1)) {
                         return 5;
-                      }
                     }
-                  }
-                  if (4 > oi.field_d.field_j) {
+                    if (4 <= oi.field_d.field_j) {
+                        return 1;
+                    }
                     return -1;
-                  } else {
-                    return 1;
-                  }
                 }
-              } else {
-                L7: {
-                  if ((oi.field_d.field_j ^ -1) > -3) {
-                    break L7;
-                  } else {
-                    if (-51 != (param0 ^ -1)) {
-                      break L7;
-                    } else {
-                      return 5;
-                    }
-                  }
-                }
-                if (4 > oi.field_d.field_j) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              }
-            } else {
-              oi.field_d.field_p = 1;
-              if ((oi.field_d.field_j ^ -1) <= -3) {
-                if (param0 == 51) {
-                  return 2;
-                } else {
-                  L8: {
-                    if ((oi.field_d.field_j ^ -1) > -3) {
-                      break L8;
-                    } else {
-                      if (-51 != (param0 ^ -1)) {
-                        break L8;
-                      } else {
-                        return 5;
-                      }
-                    }
-                  }
-                  if (4 > oi.field_d.field_j) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                }
-              } else {
-                L9: {
-                  if ((oi.field_d.field_j ^ -1) > -3) {
-                    break L9;
-                  } else {
-                    if (-51 != (param0 ^ -1)) {
-                      break L9;
-                    } else {
-                      return 5;
-                    }
-                  }
-                }
-                if (4 > oi.field_d.field_j) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              }
-            }
-          } else {
-            oi.field_d.field_p = 2;
-            if ((oi.field_d.field_j ^ -1) <= -3) {
-              if (param0 == 51) {
                 return 2;
-              } else {
-                L10: {
-                  if ((oi.field_d.field_j ^ -1) > -3) {
-                    break L10;
-                  } else {
-                    if (-51 != (param0 ^ -1)) {
-                      break L10;
-                    } else {
-                      return 5;
-                    }
-                  }
-                }
-                if (4 > oi.field_d.field_j) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              }
-            } else {
-              if ((oi.field_d.field_j ^ -1) <= -3) {
-                if (-51 == (param0 ^ -1)) {
-                  return 5;
-                } else {
-                  if (4 > oi.field_d.field_j) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                }
-              } else {
-                if (4 <= oi.field_d.field_j) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              }
             }
-          }
+            oi.field_d.field_p = 5;
+            if ((oi.field_d.field_j ^ -1) > -3) {
+                if ((oi.field_d.field_j ^ -1) <= -3 && -51 == (param0 ^ -1)) {
+                    return 5;
+                }
+                if (4 <= oi.field_d.field_j) {
+                    return 1;
+                }
+                return -1;
+            }
+            if (param0 != 51) {
+                if ((oi.field_d.field_j ^ -1) <= -3 && -51 == (param0 ^ -1)) {
+                    return 5;
+                }
+                if (4 <= oi.field_d.field_j) {
+                    return 1;
+                }
+                return -1;
+            }
+            return 2;
         }
+        cb.field_m = CrazyCrystals.field_D;
+        oi.field_d.field_j = oi.field_d.field_j + 1;
+        CrazyCrystals.field_D = var2;
+        if (param0 == 51) {
+            oi.field_d.field_p = 2;
+            if ((oi.field_d.field_j ^ -1) <= -3 && param0 == 51) {
+                return 2;
+            }
+            if ((oi.field_d.field_j ^ -1) <= -3 && -51 == (param0 ^ -1)) {
+                return 5;
+            }
+            if (4 <= oi.field_d.field_j) {
+                return 1;
+            }
+            return -1;
+        }
+        if (50 != param0) {
+            oi.field_d.field_p = 1;
+            if ((oi.field_d.field_j ^ -1) <= -3 && param0 == 51) {
+                return 2;
+            }
+            if ((oi.field_d.field_j ^ -1) <= -3 && -51 == (param0 ^ -1)) {
+                return 5;
+            }
+            if (4 <= oi.field_d.field_j) {
+                return 1;
+            }
+            return -1;
+        }
+        oi.field_d.field_p = 5;
+        if ((oi.field_d.field_j ^ -1) <= -3 && param0 == 51) {
+            return 2;
+        }
+        if ((oi.field_d.field_j ^ -1) <= -3 && -51 == (param0 ^ -1)) {
+            return 5;
+        }
+        if (4 <= oi.field_d.field_j) {
+            return 1;
+        }
+        return -1;
     }
 
     abstract String a(String param0, int param1);
 
     public final boolean a(byte param0) {
-        ga var3 = null;
+        ga var3;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == -41) {
           if (this.field_h.field_o != null) {
             if (0 == this.field_h.field_o.length()) {
@@ -287,8 +170,7 @@ abstract class se extends li implements ho {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
@@ -299,12 +181,10 @@ abstract class se extends li implements ho {
           } else {
             L0: {
               if (0 != this.field_h.field_o.length()) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }
@@ -332,23 +212,13 @@ abstract class se extends li implements ho {
     }
 
     public final void a(ga param0, int param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -367,27 +237,19 @@ abstract class se extends li implements ho {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("se.DA(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("se.DA(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }

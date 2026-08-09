@@ -20,9 +20,9 @@ final class hj {
     }
 
     final static db[] a(int param0) {
-        db[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
+        db[] var1;
+        int var2;
+        int var3;
         var3 = wizardrun.field_H;
         var1 = new db[wb.field_f];
         if (param0 < 48) {

@@ -20,11 +20,11 @@ abstract class dh {
     abstract void a(int param0, int param1, java.awt.Component param2, int param3);
 
     final static void c(int param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int var2 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int var2;
         var2 = ZombieDawn.field_J;
         if (param0 != 256) {
           field_e = (de) null;
@@ -61,9 +61,9 @@ abstract class dh {
               }
             } else {
               if (bb.field_f == rc.field_p) {
-                fieldTemp$4 = ln.field_b;
+                fieldTemp$0 = ln.field_b;
                 ln.field_b = ln.field_b - 1;
-                if (0 < fieldTemp$4) {
+                if (0 < fieldTemp$0) {
                   return;
                 } else {
                   rc.field_p = rc.field_x;
@@ -74,9 +74,9 @@ abstract class dh {
               }
             }
           } else {
-            fieldTemp$5 = ln.field_b;
+            fieldTemp$1 = ln.field_b;
             ln.field_b = ln.field_b + 1;
-            if (fieldTemp$5 >= 16) {
+            if (fieldTemp$1 >= 16) {
               if (sc.field_a) {
                 td.a(112);
                 rc.field_p = bg.field_k;
@@ -124,9 +124,9 @@ abstract class dh {
               }
             } else {
               if (bb.field_f == rc.field_p) {
-                fieldTemp$6 = ln.field_b;
+                fieldTemp$2 = ln.field_b;
                 ln.field_b = ln.field_b - 1;
-                if (0 < fieldTemp$6) {
+                if (0 < fieldTemp$2) {
                   return;
                 } else {
                   rc.field_p = rc.field_x;
@@ -137,9 +137,9 @@ abstract class dh {
               }
             }
           } else {
-            fieldTemp$7 = ln.field_b;
+            fieldTemp$3 = ln.field_b;
             ln.field_b = ln.field_b + 1;
-            if (fieldTemp$7 >= 16) {
+            if (fieldTemp$3 >= 16) {
               if (sc.field_a) {
                 td.a(112);
                 rc.field_p = bg.field_k;

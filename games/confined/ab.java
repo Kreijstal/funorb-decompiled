@@ -17,8 +17,6 @@ final class ab {
         int stackIn_12_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_6_0 = 0;
         var8 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -26,8 +24,7 @@ final class ab {
             var4 = uh.field_c;
             L1: while (true) {
               if (var3_int >= dl.field_c.length) {
-                stackOut_11_0 = -1;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -41,8 +38,7 @@ final class ab {
                     var4 = var4 + kb.field_b;
                     var7 = ef.field_vb - (var6 >> -1278915999);
                     if (qd.a(param1, var4, (jd.field_g << -673564831) + var6, param2, true, -jd.field_g + var7, (n.field_d << -60228671) + af.field_Z)) {
-                      stackOut_6_0 = var5;
-                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_7_0 = var5;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     } else {
@@ -69,21 +65,21 @@ final class ab {
     }
 
     final static void b(byte param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -103,30 +99,30 @@ final class ab {
               if (var3 <= var2) {
                 break L0;
               } else {
-                incrementValue$40 = var2;
+                incrementValue$16 = var2;
                 var2++;
-                var5[incrementValue$40] = 0;
-                incrementValue$41 = var2;
+                var5[incrementValue$16] = 0;
+                incrementValue$17 = var2;
                 var2++;
-                var5[incrementValue$41] = 0;
-                incrementValue$42 = var2;
+                var5[incrementValue$17] = 0;
+                incrementValue$18 = var2;
                 var2++;
-                var5[incrementValue$42] = 0;
-                incrementValue$43 = var2;
+                var5[incrementValue$18] = 0;
+                incrementValue$19 = var2;
                 var2++;
-                var5[incrementValue$43] = 0;
-                incrementValue$44 = var2;
+                var5[incrementValue$19] = 0;
+                incrementValue$20 = var2;
                 var2++;
-                var5[incrementValue$44] = 0;
-                incrementValue$45 = var2;
+                var5[incrementValue$20] = 0;
+                incrementValue$21 = var2;
                 var2++;
-                var5[incrementValue$45] = 0;
-                incrementValue$46 = var2;
+                var5[incrementValue$21] = 0;
+                incrementValue$22 = var2;
                 var2++;
-                var5[incrementValue$46] = 0;
-                incrementValue$47 = var2;
+                var5[incrementValue$22] = 0;
+                incrementValue$23 = var2;
                 var2++;
-                var5[incrementValue$47] = 0;
+                var5[incrementValue$23] = 0;
                 continue L2;
               }
             }

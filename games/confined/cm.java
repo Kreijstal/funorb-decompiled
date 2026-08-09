@@ -27,8 +27,8 @@ final class cm {
     }
 
     final void a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var3 = 0;
         L0: while (true) {
           if (var3 >= this.field_k) {
@@ -57,7 +57,7 @@ final class cm {
     }
 
     cm(byte[] param0, ij param1) {
-        int discarded$1 = 0;
+        Throwable decompiledCaughtException = null;
         Exception var3 = null;
         kg var4 = null;
         int var5 = 0;
@@ -70,7 +70,6 @@ final class cm {
         int var12 = 0;
         int var13 = 0;
         kg var14 = null;
-        Throwable decompiledCaughtException = null;
         this.field_g = null;
         this.field_k = -1;
         this.field_g = param1;
@@ -78,7 +77,7 @@ final class cm {
           L0: {
             var14 = new kg(param0);
             var4 = new kg(param0);
-            discarded$1 = var14.c(32);
+            var14.c(32);
             var14.field_n = var14.field_n + 2;
             var5 = var14.c(32);
             var6 = 0;

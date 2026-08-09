@@ -16,27 +16,19 @@ final class jh extends k {
     }
 
     final int[] a(int param0, int param1) {
-        int[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int[] var10 = null;
-        int[] var11 = null;
         int stackIn_15_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_36_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_27_0 = 0;
+        int[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int[] var9;
+        int[] var10;
+        int[] var11;
         var8 = BachelorFridge.field_y;
         if (param1 == 0) {
           var11 = this.field_j.a(param0, -1);
@@ -63,12 +55,10 @@ final class jh extends k {
                           L2: {
                             var7 = -var6 + 2048;
                             if (-1 >= (var7 ^ -1)) {
-                              stackOut_14_0 = var7;
-                              stackIn_15_0 = stackOut_14_0;
+                              stackIn_15_0 = var7;
                               break L2;
                             } else {
-                              stackOut_13_0 = -var7;
-                              stackIn_15_0 = stackOut_13_0;
+                              stackIn_15_0 = -var7;
                               break L2;
                             }
                           }
@@ -93,12 +83,10 @@ final class jh extends k {
                       L4: {
                         var7 = var4 - 2048;
                         if (-1 >= (var7 ^ -1)) {
-                          stackOut_21_0 = var7;
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_22_0 = var7;
                           break L4;
                         } else {
-                          stackOut_20_0 = -var7;
-                          stackIn_22_0 = stackOut_20_0;
+                          stackIn_22_0 = -var7;
                           break L4;
                         }
                       }
@@ -135,12 +123,10 @@ final class jh extends k {
                       L7: {
                         var7 = -var4 + 2048;
                         if ((var7 ^ -1) > -1) {
-                          stackOut_35_0 = -var7;
-                          stackIn_36_0 = stackOut_35_0;
+                          stackIn_36_0 = -var7;
                           break L7;
                         } else {
-                          stackOut_34_0 = var7;
-                          stackIn_36_0 = stackOut_34_0;
+                          stackIn_36_0 = var7;
                           break L7;
                         }
                       }
@@ -158,12 +144,10 @@ final class jh extends k {
                 L8: {
                   var7 = -2048 + var6;
                   if ((var7 ^ -1) <= -1) {
-                    stackOut_28_0 = var7;
-                    stackIn_29_0 = stackOut_28_0;
+                    stackIn_29_0 = var7;
                     break L8;
                   } else {
-                    stackOut_27_0 = -var7;
-                    stackIn_29_0 = stackOut_27_0;
+                    stackIn_29_0 = -var7;
                     break L8;
                   }
                 }
@@ -188,22 +172,12 @@ final class jh extends k {
     final void a(byte param0, lu param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             L1: {
@@ -226,27 +200,19 @@ final class jh extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var4);
-            stackOut_5_1 = new StringBuilder().append("jh.E(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var4);
+
+            stackIn_7_1 = new StringBuilder().append("jh.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }

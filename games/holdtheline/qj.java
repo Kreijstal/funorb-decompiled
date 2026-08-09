@@ -13,9 +13,9 @@ final class qj extends ub {
     static int field_L;
 
     final n a(byte param0) {
-        tm var2 = null;
-        rl var3 = null;
-        int var4 = 0;
+        tm var2;
+        rl var3;
+        int var4;
         L0: {
           var4 = HoldTheLine.field_D;
           var2 = new tm(this.field_K);
@@ -42,9 +42,9 @@ final class qj extends ub {
     }
 
     final rl i(byte param0) {
-        tm var2 = null;
-        rl var3 = null;
-        int var4 = 0;
+        tm var2;
+        rl var3;
+        int var4;
         L0: {
           var4 = HoldTheLine.field_D;
           var2 = new tm(this.field_K);
@@ -126,7 +126,6 @@ final class qj extends ub {
 
     final void a(n param0, boolean param1) {
         rl var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param0 instanceof rl)) {
                 throw new IllegalArgumentException();
@@ -134,7 +133,7 @@ final class qj extends ub {
             var3 = (rl) ((Object) param0);
             this.field_K.a(var3, param1);
             var3.field_F = true;
-            discarded$0 = var3.a((n) (this), -25823);
+            var3.a((n) (this), -25823);
         } catch (RuntimeException runtimeException) {
             throw kk.a((Throwable) ((Object) runtimeException), "qj.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

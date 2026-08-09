@@ -32,24 +32,14 @@ final class qd extends pv {
     }
 
     final boolean b(boolean param0) {
-        int stackIn_10_0 = 0;
-        Object stackIn_10_1 = null;
         int stackIn_11_0 = 0;
         Object stackIn_11_1 = null;
         int stackIn_12_0 = 0;
         Object stackIn_12_1 = null;
         int stackIn_12_2 = 0;
-        int stackOut_9_0 = 0;
-        Object stackOut_9_1 = null;
-        int stackOut_11_0 = 0;
-        Object stackOut_11_1 = null;
-        int stackOut_11_2 = 0;
-        int stackOut_10_0 = 0;
-        Object stackOut_10_1 = null;
-        int stackOut_10_2 = 0;
-        int fieldTemp$2 = this.field_g + 1;
+        int fieldTemp$1 = this.field_g + 1;
         this.field_g = this.field_g + 1;
-        if (fieldTemp$2 <= this.c(false)) {
+        if (fieldTemp$1 <= this.c(false)) {
           if (this.field_m != 0) {
             L0: {
               if (1 == this.field_g) {
@@ -65,27 +55,19 @@ final class qd extends pv {
                 break L1;
               } else {
                 L2: {
-                  stackOut_9_0 = this.field_g ^ -1;
-                  stackOut_9_1 = this;
-                  stackIn_11_0 = stackOut_9_0;
-                  stackIn_11_1 = stackOut_9_1;
-                  stackIn_10_0 = stackOut_9_0;
-                  stackIn_10_1 = stackOut_9_1;
+                  stackIn_11_0 = this.field_g ^ -1;
+
+                  stackIn_11_1 = this;
+
                   if (param0) {
-                    stackOut_11_0 = stackIn_11_0;
-                    stackOut_11_1 = this;
-                    stackOut_11_2 = 0;
-                    stackIn_12_0 = stackOut_11_0;
-                    stackIn_12_1 = stackOut_11_1;
-                    stackIn_12_2 = stackOut_11_2;
+                    stackIn_12_0 = stackIn_11_0;
+                    stackIn_12_1 = this;
+                    stackIn_12_2 = 0;
                     break L2;
                   } else {
-                    stackOut_10_0 = stackIn_10_0;
-                    stackOut_10_1 = this;
-                    stackOut_10_2 = 1;
-                    stackIn_12_0 = stackOut_10_0;
-                    stackIn_12_1 = stackOut_10_1;
-                    stackIn_12_2 = stackOut_10_2;
+                    stackIn_12_0 = stackIn_11_0;
+                    stackIn_12_1 = this;
+                    stackIn_12_2 = 1;
                     break L2;
                   }
                 }
@@ -126,9 +108,9 @@ final class qd extends pv {
     }
 
     private final int b(int param0) {
-        int discarded$2 = 0;
+        int discarded$1 = 0;
         if (param0 > -101) {
-          discarded$2 = this.c(true);
+          discarded$1 = this.c(true);
           return (int)((double)(this.field_g - 18) * this.field_j) - -this.field_o;
         } else {
           return (int)((double)(this.field_g - 18) * this.field_j) - -this.field_o;
@@ -136,7 +118,6 @@ final class qd extends pv {
     }
 
     final static boolean a(String param0, int param1) {
-        Process discarded$2 = null;
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -147,8 +128,6 @@ final class qd extends pv {
         int stackIn_17_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_22_0 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -157,27 +136,13 @@ final class qd extends pv {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_21_0 = 0;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
         var4 = BachelorFridge.field_y;
         try {
           L0: {
             try {
               L1: {
                 if (!ht.field_i.startsWith("win")) {
-                  stackOut_3_0 = 0;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L1;
                 } else {
@@ -186,8 +151,7 @@ final class qd extends pv {
                       break L2;
                     } else {
                       if (!param0.startsWith("https://")) {
-                        stackOut_8_0 = 0;
-                        stackIn_9_0 = stackOut_8_0;
+                        stackIn_9_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L1;
                       } else {
@@ -207,15 +171,13 @@ final class qd extends pv {
                   var3 = 0;
                   L4: while (true) {
                     if (param0.length() <= var3) {
-                      discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                      stackOut_19_0 = 1;
-                      stackIn_20_0 = stackOut_19_0;
+                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+                      stackIn_20_0 = 1;
                       decompiledRegionSelector0 = 3;
                       break L1;
                     } else {
                       if (0 == (var2.indexOf((int) param0.charAt(var3)) ^ -1)) {
-                        stackOut_16_0 = 0;
-                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L1;
                       } else {
@@ -229,8 +191,7 @@ final class qd extends pv {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackOut_21_0 = 0;
-              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_0 = 0;
               return stackIn_22_0 != 0;
             }
             if (decompiledRegionSelector0 == 0) {
@@ -255,27 +216,19 @@ final class qd extends pv {
           decompiledCaughtException = decompiledCaughtParameter1;
           L5: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var2_ref2);
-            stackOut_23_1 = new StringBuilder().append("qd.I(");
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var2_ref2);
+
+            stackIn_25_1 = new StringBuilder().append("qd.I(");
+
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L5;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L5;
             }
           }

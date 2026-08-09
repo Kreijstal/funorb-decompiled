@@ -32,7 +32,7 @@ final class bb {
     }
 
     final fa d(int param0) {
-        fa var2 = null;
+        fa var2;
         if (param0 == -28918) {
           var2 = this.field_f.field_a;
           if (var2 == this.field_f) {
@@ -58,8 +58,6 @@ final class bb {
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
         fa stackIn_9_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -67,16 +65,6 @@ final class bb {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        fa stackOut_8_0 = null;
-        Object stackOut_4_0 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
@@ -98,14 +86,12 @@ final class bb {
                 }
               }
               this.field_c = var3.field_a;
-              stackOut_8_0 = (fa) (var3);
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = (fa) (var3);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
               this.field_c = null;
-              stackOut_4_0 = null;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -114,27 +100,19 @@ final class bb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3_ref);
-            stackOut_10_1 = new StringBuilder().append("bb.C(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3_ref);
+
+            stackIn_12_1 = new StringBuilder().append("bb.C(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L3;
             }
           }
@@ -164,20 +142,14 @@ final class bb {
     final boolean a(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 0) {
           L0: {
             field_d = (String) null;
             if (this.field_f != this.field_f.field_a) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -185,12 +157,10 @@ final class bb {
         } else {
           L1: {
             if (this.field_f != this.field_f.field_a) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -218,7 +188,7 @@ final class bb {
     }
 
     final fa f(int param0) {
-        fa var2 = null;
+        fa var2;
         var2 = this.field_c;
         if (var2 == this.field_f) {
           this.field_c = null;
@@ -234,8 +204,8 @@ final class bb {
     }
 
     final static void h(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         if (param0 >= -13) {
           return;
         } else {
@@ -248,8 +218,8 @@ final class bb {
     }
 
     final fa b(int param0) {
-        int var2 = 0;
-        fa var3 = null;
+        int var2;
+        fa var3;
         var2 = -96 % ((-6 - param0) / 48);
         var3 = this.field_f.field_h;
         if (var3 == this.field_f) {
@@ -273,7 +243,7 @@ final class bb {
     }
 
     final fa j(int param0) {
-        fa var2 = null;
+        fa var2;
         var2 = this.field_c;
         if (var2 != this.field_f) {
           this.field_c = var2.field_h;

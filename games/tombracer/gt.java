@@ -9,13 +9,13 @@ final class gt implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
-        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -38,11 +38,7 @@ final class gt implements java.awt.event.KeyListener, java.awt.event.FocusListen
               } else {
                 nra.a((byte) -55, param3, var9, vaa.field_a[var10], var8);
                 var10++;
-                if (var11 == 0) {
-                  continue L2;
-                } else {
-                  return;
-                }
+                continue L2;
               }
             }
           }
@@ -54,7 +50,7 @@ final class gt implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1;
         if (ipa.field_P == null) {
           var1 = 1 % ((-17 - param0) / 60);
           if (null != gg.field_b) {
@@ -80,100 +76,83 @@ final class gt implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
         int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
         try {
           L0: {
             if (null != nfa.field_n) {
               L1: {
                 L2: {
-                  L3: {
-                    cda.field_p = 0;
-                    var2_int = param0.getKeyCode();
-                    if (0 > var2_int) {
-                      break L3;
-                    } else {
-                      if (var2_int < bba.field_c.length) {
-                        break L2;
+                  cda.field_p = 0;
+                  var2_int = param0.getKeyCode();
+                  if (0 > var2_int) {
+                    break L2;
+                  } else {
+                    if (var2_int < bba.field_c.length) {
+                      var2_int = bba.field_c[var2_int];
+                      if ((var2_int & 128) == 0) {
+                        break L1;
                       } else {
-                        break L3;
+                        var2_int = -1;
+                        break L1;
                       }
+                    } else {
+                      break L2;
                     }
                   }
-                  var2_int = -1;
-                  if (!TombRacer.field_G) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
                 }
-                var2_int = bba.field_c[var2_int];
-                if ((var2_int & 128) == 0) {
-                  break L1;
-                } else {
-                  var2_int = -1;
-                  break L1;
-                }
+                var2_int = -1;
+                break L1;
               }
-              L4: {
+              L3: {
                 if ((ita.field_f ^ -1) > -1) {
-                  break L4;
+                  break L3;
                 } else {
                   if (-1 < (var2_int ^ -1)) {
-                    break L4;
+                    break L3;
                   } else {
                     cna.field_c[ita.field_f] = var2_int;
                     ita.field_f = 127 & 1 + ita.field_f;
                     if (ita.field_f == hka.field_a) {
                       ita.field_f = -1;
-                      break L4;
+                      break L3;
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
                 }
               }
-              L5: {
+              L4: {
                 if (-1 >= (var2_int ^ -1)) {
                   var3 = rca.field_n - -1 & 127;
                   if (var3 == vha.field_b) {
-                    break L5;
+                    break L4;
                   } else {
                     dl.field_o[rca.field_n] = var2_int;
                     uk.field_O[rca.field_n] = (char)0;
                     rca.field_n = var3;
-                    break L5;
+                    break L4;
                   }
                 } else {
-                  break L5;
+                  break L4;
                 }
               }
-              L6: {
+              L5: {
                 var3 = param0.getModifiers();
                 if (0 != (var3 & 10)) {
-                  break L6;
+                  break L5;
                 } else {
                   if (85 == var2_int) {
-                    break L6;
+                    break L5;
                   } else {
                     if (var2_int == 10) {
-                      break L6;
+                      break L5;
                     } else {
                       return;
                     }
@@ -188,30 +167,22 @@ final class gt implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var2);
-            stackOut_23_1 = new StringBuilder().append("gt.keyPressed(");
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var2);
+
+            stackIn_25_1 = new StringBuilder().append("gt.keyPressed(");
+
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
-              break L7;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
+              break L6;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
-              break L7;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
+              break L6;
             }
           }
           throw tba.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
@@ -220,22 +191,12 @@ final class gt implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         RuntimeException var2 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             if (nfa.field_n != null) {
@@ -249,27 +210,19 @@ final class gt implements java.awt.event.KeyListener, java.awt.event.FocusListen
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("gt.focusLost(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("gt.focusLost(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }
@@ -278,51 +231,34 @@ final class gt implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
-        RuntimeException runtimeException = null;
         int var2_int = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
               if (nfa.field_n != null) {
                 L2: {
                   L3: {
-                    L4: {
-                      cda.field_p = 0;
-                      var2_int = param0.getKeyCode();
-                      if (0 > var2_int) {
-                        break L4;
+                    cda.field_p = 0;
+                    var2_int = param0.getKeyCode();
+                    if (0 > var2_int) {
+                      break L3;
+                    } else {
+                      if (var2_int < bba.field_c.length) {
+                        var2_int = bba.field_c[var2_int] & -129;
+                        break L2;
                       } else {
-                        if (var2_int < bba.field_c.length) {
-                          break L3;
-                        } else {
-                          break L4;
-                        }
+                        break L3;
                       }
                     }
-                    var2_int = -1;
-                    if (!TombRacer.field_G) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
                   }
-                  var2_int = bba.field_c[var2_int] & -129;
+                  var2_int = -1;
                   break L2;
                 }
                 if (0 > ita.field_f) {
@@ -350,30 +286,22 @@ final class gt implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (runtimeException);
-            stackOut_14_1 = new StringBuilder().append("gt.keyReleased(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+          L4: {
+            var2 = decompiledCaughtException;
+            stackIn_16_0 = (RuntimeException) (var2);
+
+            stackIn_16_1 = new StringBuilder().append("gt.keyReleased(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L5;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
+              break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L5;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
+              break L4;
             }
           }
           throw tba.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
@@ -394,16 +322,12 @@ final class gt implements java.awt.event.KeyListener, java.awt.event.FocusListen
         try {
             if (!(nfa.field_n == null)) {
                 var2_int = param0.getKeyChar();
-                if (var2_int != 0) {
-                    if (var2_int != 65535) {
-                        if (msa.a((char) var2_int, (byte) 124)) {
-                            var3 = 1 + rca.field_n & 127;
-                            if (vha.field_b != var3) {
-                                dl.field_o[rca.field_n] = -1;
-                                uk.field_O[rca.field_n] = (char)var2_int;
-                                rca.field_n = var3;
-                            }
-                        }
+                if (var2_int != 0 && var2_int != 65535 && msa.a((char) var2_int, (byte) 124)) {
+                    var3 = 1 + rca.field_n & 127;
+                    if (vha.field_b != var3) {
+                        dl.field_o[rca.field_n] = -1;
+                        uk.field_O[rca.field_n] = (char)var2_int;
+                        rca.field_n = var3;
                     }
                 }
             }

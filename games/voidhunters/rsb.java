@@ -8,108 +8,50 @@ final class rsb extends tja implements ntb, utb {
     nwa field_d;
 
     public final void b(faa param0, int param1) {
-        RuntimeException var3 = null;
-        faa stackIn_1_0 = null;
-        int stackIn_1_1 = 0;
         faa stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         faa stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
-        faa stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
         faa stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         faa stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         int stackIn_9_2 = 0;
-        faa stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
         faa stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         faa stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         int stackIn_15_2 = 0;
-        faa stackIn_20_0 = null;
-        int stackIn_20_1 = 0;
         faa stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         faa stackIn_22_0 = null;
         int stackIn_22_1 = 0;
         int stackIn_22_2 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
-        faa stackOut_0_0 = null;
-        int stackOut_0_1 = 0;
-        faa stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        faa stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        faa stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        faa stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
-        faa stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        faa stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        faa stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        int stackOut_14_2 = 0;
-        faa stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        faa stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        faa stackOut_21_0 = null;
-        int stackOut_21_1 = 0;
-        int stackOut_21_2 = 0;
-        faa stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        int stackOut_20_2 = 0;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
               super.b(param0, -128);
-              stackOut_0_0 = (faa) (param0);
-              stackOut_0_1 = -90;
-              stackIn_2_0 = stackOut_0_0;
-              stackIn_2_1 = stackOut_0_1;
-              stackIn_1_0 = stackOut_0_0;
-              stackIn_1_1 = stackOut_0_1;
+              stackIn_2_0 = (faa) (param0);
+
+              stackIn_2_1 = -90;
+
               if (this.field_g == null) {
-                stackOut_2_0 = (faa) ((Object) stackIn_2_0);
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = 0;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
-                stackIn_3_2 = stackOut_2_2;
+                stackIn_3_0 = (faa) ((Object) stackIn_2_0);
+                stackIn_3_1 = stackIn_2_1;
+                stackIn_3_2 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = (faa) ((Object) stackIn_1_0);
-                stackOut_1_1 = stackIn_1_1;
-                stackOut_1_2 = 1;
-                stackIn_3_0 = stackOut_1_0;
-                stackIn_3_1 = stackOut_1_1;
-                stackIn_3_2 = stackOut_1_2;
+                stackIn_3_0 = (faa) ((Object) stackIn_2_0);
+                stackIn_3_1 = stackIn_2_1;
+                stackIn_3_2 = 1;
                 break L1;
               }
             }
@@ -122,27 +64,19 @@ final class rsb extends tja implements ntb, utb {
               }
             }
             L3: {
-              stackOut_6_0 = (faa) (param0);
-              stackOut_6_1 = 46;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
+              stackIn_8_0 = (faa) (param0);
+
+              stackIn_8_1 = 46;
+
               if (null == this.field_f) {
-                stackOut_8_0 = (faa) ((Object) stackIn_8_0);
-                stackOut_8_1 = stackIn_8_1;
-                stackOut_8_2 = 0;
-                stackIn_9_0 = stackOut_8_0;
-                stackIn_9_1 = stackOut_8_1;
-                stackIn_9_2 = stackOut_8_2;
+                stackIn_9_0 = (faa) ((Object) stackIn_8_0);
+                stackIn_9_1 = stackIn_8_1;
+                stackIn_9_2 = 0;
                 break L3;
               } else {
-                stackOut_7_0 = (faa) ((Object) stackIn_7_0);
-                stackOut_7_1 = stackIn_7_1;
-                stackOut_7_2 = 1;
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_9_1 = stackOut_7_1;
-                stackIn_9_2 = stackOut_7_2;
+                stackIn_9_0 = (faa) ((Object) stackIn_8_0);
+                stackIn_9_1 = stackIn_8_1;
+                stackIn_9_2 = 1;
                 break L3;
               }
             }
@@ -155,32 +89,24 @@ final class rsb extends tja implements ntb, utb {
               }
             }
             L5: {
-              stackOut_12_0 = (faa) (param0);
-              stackOut_12_1 = 62;
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
+              stackIn_14_0 = (faa) (param0);
+
+              stackIn_14_1 = 62;
+
               if (null == this.field_e) {
-                stackOut_14_0 = (faa) ((Object) stackIn_14_0);
-                stackOut_14_1 = stackIn_14_1;
-                stackOut_14_2 = 0;
-                stackIn_15_0 = stackOut_14_0;
-                stackIn_15_1 = stackOut_14_1;
-                stackIn_15_2 = stackOut_14_2;
+                stackIn_15_0 = (faa) ((Object) stackIn_14_0);
+                stackIn_15_1 = stackIn_14_1;
+                stackIn_15_2 = 0;
                 break L5;
               } else {
-                stackOut_13_0 = (faa) ((Object) stackIn_13_0);
-                stackOut_13_1 = stackIn_13_1;
-                stackOut_13_2 = 1;
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_15_1 = stackOut_13_1;
-                stackIn_15_2 = stackOut_13_2;
+                stackIn_15_0 = (faa) ((Object) stackIn_14_0);
+                stackIn_15_1 = stackIn_14_1;
+                stackIn_15_2 = 1;
                 break L5;
               }
             }
             L6: {
-              if (vq.a(stackIn_15_0, stackIn_15_1, stackIn_15_2 == 0)) {
+              if (!vq.a(stackIn_15_0, stackIn_15_1, stackIn_15_2 != 0)) {
                 break L6;
               } else {
                 this.field_e.b(param0, -110);
@@ -196,27 +122,19 @@ final class rsb extends tja implements ntb, utb {
               }
             }
             L8: {
-              stackOut_19_0 = (faa) (param0);
-              stackOut_19_1 = -93;
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
+              stackIn_21_0 = (faa) (param0);
+
+              stackIn_21_1 = -93;
+
               if (this.field_d == null) {
-                stackOut_21_0 = (faa) ((Object) stackIn_21_0);
-                stackOut_21_1 = stackIn_21_1;
-                stackOut_21_2 = 0;
-                stackIn_22_0 = stackOut_21_0;
-                stackIn_22_1 = stackOut_21_1;
-                stackIn_22_2 = stackOut_21_2;
+                stackIn_22_0 = (faa) ((Object) stackIn_21_0);
+                stackIn_22_1 = stackIn_21_1;
+                stackIn_22_2 = 0;
                 break L8;
               } else {
-                stackOut_20_0 = (faa) ((Object) stackIn_20_0);
-                stackOut_20_1 = stackIn_20_1;
-                stackOut_20_2 = 1;
-                stackIn_22_0 = stackOut_20_0;
-                stackIn_22_1 = stackOut_20_1;
-                stackIn_22_2 = stackOut_20_2;
+                stackIn_22_0 = (faa) ((Object) stackIn_21_0);
+                stackIn_22_1 = stackIn_21_1;
+                stackIn_22_2 = 1;
                 break L8;
               }
             }
@@ -234,27 +152,19 @@ final class rsb extends tja implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var3 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var3);
-            stackOut_26_1 = new StringBuilder().append("rsb.B(");
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_28_0 = (RuntimeException) (var3);
+
+            stackIn_28_1 = new StringBuilder().append("rsb.B(");
+
             if (param0 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L10;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L10;
             }
           }
@@ -263,16 +173,14 @@ final class rsb extends tja implements ntb, utb {
     }
 
     final boolean a(int param0, int param1, int param2) {
-        int[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int stackIn_26_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
+        int stackIn_28_0 = 0;
+        int[] var4;
+        int var5;
+        int var6;
+        int var7;
+        int[] var8;
+        int[] var9;
+        int[] var10;
         var7 = VoidHunters.field_G;
         if (-1 < (param0 ^ -1)) {
           return false;
@@ -286,6 +194,8 @@ final class rsb extends tja implements ntb, utb {
             L0: while (true) {
               if (var5 >= this.field_c.length) {
                 L1: {
+                  var10 = var9;
+                  var10 = var9;
                   if (param2 < param1) {
                     break L1;
                   } else {
@@ -302,17 +212,15 @@ final class rsb extends tja implements ntb, utb {
                 L2: while (true) {
                   if (var6 >= var10.length) {
                     L3: {
-                      if (var5 < var10[param0]) {
-                        stackOut_25_0 = 0;
-                        stackIn_26_0 = stackOut_25_0;
+                      if (var5 >= var10[param0]) {
+                        stackIn_28_0 = 1;
                         break L3;
                       } else {
-                        stackOut_24_0 = 1;
-                        stackIn_26_0 = stackOut_24_0;
+                        stackIn_28_0 = 0;
                         break L3;
                       }
                     }
-                    var6 = stackIn_26_0;
+                    var6 = stackIn_28_0;
                     return var6 != 0;
                   } else {
                     if (var5 > var10[var6]) {
@@ -338,6 +246,7 @@ final class rsb extends tja implements ntb, utb {
                     }
                   }
                 }
+                var10 = var9;
                 var6 = ((tfa) ((Object) this.field_c[var5])).field_h;
                 if (0 <= var6) {
                   if (var10.length > var6) {
@@ -361,24 +270,14 @@ final class rsb extends tja implements ntb, utb {
     }
 
     public final void a(faa param0, boolean param1) {
-        RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        RuntimeException var3 = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -457,27 +356,19 @@ final class rsb extends tja implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var3 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var3);
-            stackOut_25_1 = new StringBuilder().append("rsb.H(");
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var3);
+
+            stackIn_27_1 = new StringBuilder().append("rsb.H(");
+
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L9;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L9;
             }
           }
@@ -512,27 +403,17 @@ final class rsb extends tja implements ntb, utb {
     }
 
     public final void b(byte param0, tv param1) {
-        RuntimeException var3 = null;
-        int var4 = 0;
-        faa var5 = null;
-        rsb var6 = null;
-        rsb var7 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        faa var5 = null;
+        rsb var6 = null;
+        rsb var7 = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -622,27 +503,19 @@ final class rsb extends tja implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var3 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var3);
-            stackOut_27_1 = new StringBuilder().append("rsb.D(").append(param0).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackIn_29_0 = (RuntimeException) (var3);
+
+            stackIn_29_1 = new StringBuilder().append("rsb.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L10;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L10;
             }
           }
@@ -651,31 +524,14 @@ final class rsb extends tja implements ntb, utb {
     }
 
     public final void a(tv param0, int param1) {
-        RuntimeException var3 = null;
-        int var4 = 0;
-        rsb var5 = null;
         int stackIn_18_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_21_0 = 0;
         int stackIn_21_1 = 0;
         int stackIn_29_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_32_0 = 0;
         int stackIn_32_1 = 0;
         int stackIn_40_0 = 0;
-        int stackIn_41_0 = 0;
-        int stackIn_42_0 = 0;
-        int stackIn_43_0 = 0;
         int stackIn_43_1 = 0;
         int stackIn_53_0 = 0;
-        int stackIn_54_0 = 0;
-        int stackIn_55_0 = 0;
-        int stackIn_56_0 = 0;
         int stackIn_56_1 = 0;
-        RuntimeException stackIn_66_0 = null;
-        StringBuilder stackIn_66_1 = null;
         RuntimeException stackIn_67_0 = null;
         StringBuilder stackIn_67_1 = null;
         RuntimeException stackIn_68_0 = null;
@@ -683,42 +539,9 @@ final class rsb extends tja implements ntb, utb {
         String stackIn_68_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_20_1 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_19_1 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_31_1 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_30_1 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_42_1 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_41_1 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_55_1 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_54_1 = 0;
-        RuntimeException stackOut_65_0 = null;
-        StringBuilder stackOut_65_1 = null;
-        RuntimeException stackOut_67_0 = null;
-        StringBuilder stackOut_67_1 = null;
-        String stackOut_67_2 = null;
-        RuntimeException stackOut_66_0 = null;
-        StringBuilder stackOut_66_1 = null;
-        String stackOut_66_2 = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        rsb var5 = null;
         try {
           L0: {
             L1: {
@@ -774,36 +597,29 @@ final class rsb extends tja implements ntb, utb {
             L5: {
               var4 = 0;
               if (null != var5.field_g) {
-                stackOut_17_0 = 0;
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_0 = 0;
                 break L5;
               } else {
-                stackOut_16_0 = 1;
-                stackIn_18_0 = stackOut_16_0;
+                stackIn_18_0 = 1;
                 break L5;
               }
             }
             L6: {
-              stackOut_18_0 = stackIn_18_0;
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_19_0 = stackOut_18_0;
+
+
               if (null != this.field_g) {
-                stackOut_20_0 = stackIn_20_0;
-                stackOut_20_1 = 0;
-                stackIn_21_0 = stackOut_20_0;
-                stackIn_21_1 = stackOut_20_1;
+
+                stackIn_21_1 = 0;
                 break L6;
               } else {
-                stackOut_19_0 = stackIn_19_0;
-                stackOut_19_1 = 1;
-                stackIn_21_0 = stackOut_19_0;
-                stackIn_21_1 = stackOut_19_1;
+
+                stackIn_21_1 = 1;
                 break L6;
               }
             }
             L7: {
               L8: {
-                if ((stackIn_21_0 ^ stackIn_21_1) != 0) {
+                if ((stackIn_18_0 ^ stackIn_21_1) != 0) {
                   break L8;
                 } else {
                   if (this.field_g == null) {
@@ -823,36 +639,29 @@ final class rsb extends tja implements ntb, utb {
             }
             L9: {
               if (null != var5.field_f) {
-                stackOut_28_0 = 0;
-                stackIn_29_0 = stackOut_28_0;
+                stackIn_29_0 = 0;
                 break L9;
               } else {
-                stackOut_27_0 = 1;
-                stackIn_29_0 = stackOut_27_0;
+                stackIn_29_0 = 1;
                 break L9;
               }
             }
             L10: {
-              stackOut_29_0 = stackIn_29_0;
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_30_0 = stackOut_29_0;
+
+
               if (this.field_f != null) {
-                stackOut_31_0 = stackIn_31_0;
-                stackOut_31_1 = 0;
-                stackIn_32_0 = stackOut_31_0;
-                stackIn_32_1 = stackOut_31_1;
+
+                stackIn_32_1 = 0;
                 break L10;
               } else {
-                stackOut_30_0 = stackIn_30_0;
-                stackOut_30_1 = 1;
-                stackIn_32_0 = stackOut_30_0;
-                stackIn_32_1 = stackOut_30_1;
+
+                stackIn_32_1 = 1;
                 break L10;
               }
             }
             L11: {
               L12: {
-                if ((stackIn_32_0 ^ stackIn_32_1) != 0) {
+                if ((stackIn_29_0 ^ stackIn_32_1) != 0) {
                   break L12;
                 } else {
                   if (null == this.field_f) {
@@ -872,36 +681,29 @@ final class rsb extends tja implements ntb, utb {
             }
             L13: {
               if (this.field_e != null) {
-                stackOut_39_0 = 0;
-                stackIn_40_0 = stackOut_39_0;
+                stackIn_40_0 = 0;
                 break L13;
               } else {
-                stackOut_38_0 = 1;
-                stackIn_40_0 = stackOut_38_0;
+                stackIn_40_0 = 1;
                 break L13;
               }
             }
             L14: {
-              stackOut_40_0 = stackIn_40_0;
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_41_0 = stackOut_40_0;
+
+
               if (null != var5.field_e) {
-                stackOut_42_0 = stackIn_42_0;
-                stackOut_42_1 = 0;
-                stackIn_43_0 = stackOut_42_0;
-                stackIn_43_1 = stackOut_42_1;
+
+                stackIn_43_1 = 0;
                 break L14;
               } else {
-                stackOut_41_0 = stackIn_41_0;
-                stackOut_41_1 = 1;
-                stackIn_43_0 = stackOut_41_0;
-                stackIn_43_1 = stackOut_41_1;
+
+                stackIn_43_1 = 1;
                 break L14;
               }
             }
             L15: {
               L16: {
-                if ((stackIn_43_0 ^ stackIn_43_1) != 0) {
+                if ((stackIn_40_0 ^ stackIn_43_1) != 0) {
                   break L16;
                 } else {
                   if (null == this.field_e) {
@@ -922,36 +724,29 @@ final class rsb extends tja implements ntb, utb {
             if (param1 < -19) {
               L17: {
                 if (null != this.field_d) {
-                  stackOut_52_0 = 0;
-                  stackIn_53_0 = stackOut_52_0;
+                  stackIn_53_0 = 0;
                   break L17;
                 } else {
-                  stackOut_51_0 = 1;
-                  stackIn_53_0 = stackOut_51_0;
+                  stackIn_53_0 = 1;
                   break L17;
                 }
               }
               L18: {
-                stackOut_53_0 = stackIn_53_0;
-                stackIn_55_0 = stackOut_53_0;
-                stackIn_54_0 = stackOut_53_0;
+
+
                 if (var5.field_d != null) {
-                  stackOut_55_0 = stackIn_55_0;
-                  stackOut_55_1 = 0;
-                  stackIn_56_0 = stackOut_55_0;
-                  stackIn_56_1 = stackOut_55_1;
+
+                  stackIn_56_1 = 0;
                   break L18;
                 } else {
-                  stackOut_54_0 = stackIn_54_0;
-                  stackOut_54_1 = 1;
-                  stackIn_56_0 = stackOut_54_0;
-                  stackIn_56_1 = stackOut_54_1;
+
+                  stackIn_56_1 = 1;
                   break L18;
                 }
               }
               L19: {
                 L20: {
-                  if ((stackIn_56_0 ^ stackIn_56_1) != 0) {
+                  if ((stackIn_53_0 ^ stackIn_56_1) != 0) {
                     break L20;
                   } else {
                     if (null == this.field_d) {
@@ -988,27 +783,19 @@ final class rsb extends tja implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L22: {
             var3 = decompiledCaughtException;
-            stackOut_65_0 = (RuntimeException) (var3);
-            stackOut_65_1 = new StringBuilder().append("rsb.F(");
-            stackIn_67_0 = stackOut_65_0;
-            stackIn_67_1 = stackOut_65_1;
-            stackIn_66_0 = stackOut_65_0;
-            stackIn_66_1 = stackOut_65_1;
+            stackIn_67_0 = (RuntimeException) (var3);
+
+            stackIn_67_1 = new StringBuilder().append("rsb.F(");
+
             if (param0 == null) {
-              stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
-              stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
-              stackOut_67_2 = "null";
-              stackIn_68_0 = stackOut_67_0;
-              stackIn_68_1 = stackOut_67_1;
-              stackIn_68_2 = stackOut_67_2;
+              stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
+              stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
+              stackIn_68_2 = "null";
               break L22;
             } else {
-              stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
-              stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
-              stackOut_66_2 = "{...}";
-              stackIn_68_0 = stackOut_66_0;
-              stackIn_68_1 = stackOut_66_1;
-              stackIn_68_2 = stackOut_66_2;
+              stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
+              stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
+              stackIn_68_2 = "{...}";
               break L22;
             }
           }
@@ -1023,26 +810,16 @@ final class rsb extends tja implements ntb, utb {
 
     final void a(tja param0, int param1, int param2, boolean param3) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         tfa var6 = null;
         int var7 = 0;
         int var8 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var5 = null;
         var7 = VoidHunters.field_G;
         try {
           L0: {
@@ -1097,27 +874,19 @@ final class rsb extends tja implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var5);
-            stackOut_14_1 = new StringBuilder().append("rsb.A(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var5);
+
+            stackIn_16_1 = new StringBuilder().append("rsb.A(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L6;
             }
           }
@@ -1126,10 +895,7 @@ final class rsb extends tja implements ntb, utb {
     }
 
     public final void a(faa param0, int param1) {
-        RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
@@ -1137,14 +903,7 @@ final class rsb extends tja implements ntb, utb {
         String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        RuntimeException var3 = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -1229,27 +988,19 @@ final class rsb extends tja implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var3 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var3);
-            stackOut_25_1 = new StringBuilder().append("rsb.L(");
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var3);
+
+            stackIn_27_1 = new StringBuilder().append("rsb.L(");
+
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L9;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L9;
             }
           }
@@ -1263,37 +1014,26 @@ final class rsb extends tja implements ntb, utb {
     }
 
     public final void a(faa param0, byte param1) {
-        RuntimeException var3 = null;
-        faa stackIn_1_0 = null;
-        int stackIn_1_1 = 0;
         faa stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         faa stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
-        faa stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
         faa stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         faa stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
-        faa stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
         faa stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         faa stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         int stackIn_16_2 = 0;
-        faa stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
         faa stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         faa stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_21_2 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -1301,71 +1041,24 @@ final class rsb extends tja implements ntb, utb {
         String stackIn_27_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        faa stackOut_0_0 = null;
-        int stackOut_0_1 = 0;
-        faa stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        faa stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        faa stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        faa stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        int stackOut_10_2 = 0;
-        faa stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        faa stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        faa stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        int stackOut_15_2 = 0;
-        faa stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        int stackOut_14_2 = 0;
-        faa stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        faa stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        int stackOut_20_2 = 0;
-        faa stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_19_2 = 0;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
               super.b(param0, -118);
-              stackOut_0_0 = (faa) (param0);
-              stackOut_0_1 = -121;
-              stackIn_2_0 = stackOut_0_0;
-              stackIn_2_1 = stackOut_0_1;
-              stackIn_1_0 = stackOut_0_0;
-              stackIn_1_1 = stackOut_0_1;
+              stackIn_2_0 = (faa) (param0);
+
+              stackIn_2_1 = -121;
+
               if (this.field_g == null) {
-                stackOut_2_0 = (faa) ((Object) stackIn_2_0);
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = 0;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
-                stackIn_3_2 = stackOut_2_2;
+                stackIn_3_0 = (faa) ((Object) stackIn_2_0);
+                stackIn_3_1 = stackIn_2_1;
+                stackIn_3_2 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = (faa) ((Object) stackIn_1_0);
-                stackOut_1_1 = stackIn_1_1;
-                stackOut_1_2 = 1;
-                stackIn_3_0 = stackOut_1_0;
-                stackIn_3_1 = stackOut_1_1;
-                stackIn_3_2 = stackOut_1_2;
+                stackIn_3_0 = (faa) ((Object) stackIn_2_0);
+                stackIn_3_1 = stackIn_2_1;
+                stackIn_3_2 = 1;
                 break L1;
               }
             }
@@ -1379,32 +1072,24 @@ final class rsb extends tja implements ntb, utb {
             }
             if (param1 < -91) {
               L3: {
-                stackOut_8_0 = (faa) (param0);
-                stackOut_8_1 = -53;
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_10_1 = stackOut_8_1;
-                stackIn_9_0 = stackOut_8_0;
-                stackIn_9_1 = stackOut_8_1;
+                stackIn_10_0 = (faa) (param0);
+
+                stackIn_10_1 = -53;
+
                 if (null == this.field_f) {
-                  stackOut_10_0 = (faa) ((Object) stackIn_10_0);
-                  stackOut_10_1 = stackIn_10_1;
-                  stackOut_10_2 = 0;
-                  stackIn_11_0 = stackOut_10_0;
-                  stackIn_11_1 = stackOut_10_1;
-                  stackIn_11_2 = stackOut_10_2;
+                  stackIn_11_0 = (faa) ((Object) stackIn_10_0);
+                  stackIn_11_1 = stackIn_10_1;
+                  stackIn_11_2 = 0;
                   break L3;
                 } else {
-                  stackOut_9_0 = (faa) ((Object) stackIn_9_0);
-                  stackOut_9_1 = stackIn_9_1;
-                  stackOut_9_2 = 1;
-                  stackIn_11_0 = stackOut_9_0;
-                  stackIn_11_1 = stackOut_9_1;
-                  stackIn_11_2 = stackOut_9_2;
+                  stackIn_11_0 = (faa) ((Object) stackIn_10_0);
+                  stackIn_11_1 = stackIn_10_1;
+                  stackIn_11_2 = 1;
                   break L3;
                 }
               }
               L4: {
-                if (vq.a(stackIn_11_0, stackIn_11_1, stackIn_11_2 == 0)) {
+                if (!vq.a(stackIn_11_0, stackIn_11_1, stackIn_11_2 != 0)) {
                   break L4;
                 } else {
                   this.field_f.b(param0, -127);
@@ -1412,32 +1097,24 @@ final class rsb extends tja implements ntb, utb {
                 }
               }
               L5: {
-                stackOut_13_0 = (faa) (param0);
-                stackOut_13_1 = -88;
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_15_1 = stackOut_13_1;
-                stackIn_14_0 = stackOut_13_0;
-                stackIn_14_1 = stackOut_13_1;
+                stackIn_15_0 = (faa) (param0);
+
+                stackIn_15_1 = -88;
+
                 if (this.field_e == null) {
-                  stackOut_15_0 = (faa) ((Object) stackIn_15_0);
-                  stackOut_15_1 = stackIn_15_1;
-                  stackOut_15_2 = 0;
-                  stackIn_16_0 = stackOut_15_0;
-                  stackIn_16_1 = stackOut_15_1;
-                  stackIn_16_2 = stackOut_15_2;
+                  stackIn_16_0 = (faa) ((Object) stackIn_15_0);
+                  stackIn_16_1 = stackIn_15_1;
+                  stackIn_16_2 = 0;
                   break L5;
                 } else {
-                  stackOut_14_0 = (faa) ((Object) stackIn_14_0);
-                  stackOut_14_1 = stackIn_14_1;
-                  stackOut_14_2 = 1;
-                  stackIn_16_0 = stackOut_14_0;
-                  stackIn_16_1 = stackOut_14_1;
-                  stackIn_16_2 = stackOut_14_2;
+                  stackIn_16_0 = (faa) ((Object) stackIn_15_0);
+                  stackIn_16_1 = stackIn_15_1;
+                  stackIn_16_2 = 1;
                   break L5;
                 }
               }
               L6: {
-                if (vq.a(stackIn_16_0, stackIn_16_1, stackIn_16_2 == 0)) {
+                if (!vq.a(stackIn_16_0, stackIn_16_1, stackIn_16_2 != 0)) {
                   break L6;
                 } else {
                   this.field_e.b(param0, -127);
@@ -1445,32 +1122,24 @@ final class rsb extends tja implements ntb, utb {
                 }
               }
               L7: {
-                stackOut_18_0 = (faa) (param0);
-                stackOut_18_1 = 91;
-                stackIn_20_0 = stackOut_18_0;
-                stackIn_20_1 = stackOut_18_1;
-                stackIn_19_0 = stackOut_18_0;
-                stackIn_19_1 = stackOut_18_1;
+                stackIn_20_0 = (faa) (param0);
+
+                stackIn_20_1 = 91;
+
                 if (this.field_d == null) {
-                  stackOut_20_0 = (faa) ((Object) stackIn_20_0);
-                  stackOut_20_1 = stackIn_20_1;
-                  stackOut_20_2 = 0;
-                  stackIn_21_0 = stackOut_20_0;
-                  stackIn_21_1 = stackOut_20_1;
-                  stackIn_21_2 = stackOut_20_2;
+                  stackIn_21_0 = (faa) ((Object) stackIn_20_0);
+                  stackIn_21_1 = stackIn_20_1;
+                  stackIn_21_2 = 0;
                   break L7;
                 } else {
-                  stackOut_19_0 = (faa) ((Object) stackIn_19_0);
-                  stackOut_19_1 = stackIn_19_1;
-                  stackOut_19_2 = 1;
-                  stackIn_21_0 = stackOut_19_0;
-                  stackIn_21_1 = stackOut_19_1;
-                  stackIn_21_2 = stackOut_19_2;
+                  stackIn_21_0 = (faa) ((Object) stackIn_20_0);
+                  stackIn_21_1 = stackIn_20_1;
+                  stackIn_21_2 = 1;
                   break L7;
                 }
               }
               L8: {
-                if (vq.a(stackIn_21_0, stackIn_21_1, stackIn_21_2 == 0)) {
+                if (!vq.a(stackIn_21_0, stackIn_21_1, stackIn_21_2 != 0)) {
                   break L8;
                 } else {
                   this.field_d.b(param0, -125);
@@ -1488,27 +1157,19 @@ final class rsb extends tja implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var3 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var3);
-            stackOut_24_1 = new StringBuilder().append("rsb.E(");
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var3);
+
+            stackIn_26_1 = new StringBuilder().append("rsb.E(");
+
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L9;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L9;
             }
           }
@@ -1522,76 +1183,24 @@ final class rsb extends tja implements ntb, utb {
     }
 
     public final boolean a(byte param0, tv param1) {
-        RuntimeException var3 = null;
-        int var4 = 0;
-        rsb var5 = null;
         int stackIn_4_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_14_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_17_0 = 0;
         int stackIn_17_1 = 0;
         int stackIn_24_0 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_27_0 = 0;
         int stackIn_27_1 = 0;
         int stackIn_34_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_37_0 = 0;
         int stackIn_37_1 = 0;
         int stackIn_43_0 = 0;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
         RuntimeException stackIn_46_0 = null;
         StringBuilder stackIn_46_1 = null;
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
         String stackIn_47_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_16_1 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_26_1 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_25_1 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_35_1 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        rsb var5 = null;
         try {
           L0: {
             L1: {
@@ -1603,34 +1212,27 @@ final class rsb extends tja implements ntb, utb {
                 } else {
                   L3: {
                     if (var5.field_g != null) {
-                      stackOut_3_0 = 0;
-                      stackIn_4_0 = stackOut_3_0;
+                      stackIn_4_0 = 0;
                       break L3;
                     } else {
-                      stackOut_2_0 = 1;
-                      stackIn_4_0 = stackOut_2_0;
+                      stackIn_4_0 = 1;
                       break L3;
                     }
                   }
                   L4: {
-                    stackOut_4_0 = stackIn_4_0;
-                    stackIn_6_0 = stackOut_4_0;
-                    stackIn_5_0 = stackOut_4_0;
+
+
                     if (this.field_g != null) {
-                      stackOut_6_0 = stackIn_6_0;
-                      stackOut_6_1 = 0;
-                      stackIn_7_0 = stackOut_6_0;
-                      stackIn_7_1 = stackOut_6_1;
+
+                      stackIn_7_1 = 0;
                       break L4;
                     } else {
-                      stackOut_5_0 = stackIn_5_0;
-                      stackOut_5_1 = 1;
-                      stackIn_7_0 = stackOut_5_0;
-                      stackIn_7_1 = stackOut_5_1;
+
+                      stackIn_7_1 = 1;
                       break L4;
                     }
                   }
-                  if ((stackIn_7_0 ^ stackIn_7_1) != 0) {
+                  if ((stackIn_4_0 ^ stackIn_7_1) != 0) {
                     break L2;
                   } else {
                     L5: {
@@ -1646,34 +1248,27 @@ final class rsb extends tja implements ntb, utb {
                     }
                     L6: {
                       if (this.field_f != null) {
-                        stackOut_13_0 = 0;
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = 0;
                         break L6;
                       } else {
-                        stackOut_12_0 = 1;
-                        stackIn_14_0 = stackOut_12_0;
+                        stackIn_14_0 = 1;
                         break L6;
                       }
                     }
                     L7: {
-                      stackOut_14_0 = stackIn_14_0;
-                      stackIn_16_0 = stackOut_14_0;
-                      stackIn_15_0 = stackOut_14_0;
+
+
                       if (null != var5.field_f) {
-                        stackOut_16_0 = stackIn_16_0;
-                        stackOut_16_1 = 0;
-                        stackIn_17_0 = stackOut_16_0;
-                        stackIn_17_1 = stackOut_16_1;
+
+                        stackIn_17_1 = 0;
                         break L7;
                       } else {
-                        stackOut_15_0 = stackIn_15_0;
-                        stackOut_15_1 = 1;
-                        stackIn_17_0 = stackOut_15_0;
-                        stackIn_17_1 = stackOut_15_1;
+
+                        stackIn_17_1 = 1;
                         break L7;
                       }
                     }
-                    if ((stackIn_17_0 ^ stackIn_17_1) != 0) {
+                    if ((stackIn_14_0 ^ stackIn_17_1) != 0) {
                       break L2;
                     } else {
                       L8: {
@@ -1689,34 +1284,27 @@ final class rsb extends tja implements ntb, utb {
                       }
                       L9: {
                         if (this.field_e != null) {
-                          stackOut_23_0 = 0;
-                          stackIn_24_0 = stackOut_23_0;
+                          stackIn_24_0 = 0;
                           break L9;
                         } else {
-                          stackOut_22_0 = 1;
-                          stackIn_24_0 = stackOut_22_0;
+                          stackIn_24_0 = 1;
                           break L9;
                         }
                       }
                       L10: {
-                        stackOut_24_0 = stackIn_24_0;
-                        stackIn_26_0 = stackOut_24_0;
-                        stackIn_25_0 = stackOut_24_0;
+
+
                         if (null != var5.field_e) {
-                          stackOut_26_0 = stackIn_26_0;
-                          stackOut_26_1 = 0;
-                          stackIn_27_0 = stackOut_26_0;
-                          stackIn_27_1 = stackOut_26_1;
+
+                          stackIn_27_1 = 0;
                           break L10;
                         } else {
-                          stackOut_25_0 = stackIn_25_0;
-                          stackOut_25_1 = 1;
-                          stackIn_27_0 = stackOut_25_0;
-                          stackIn_27_1 = stackOut_25_1;
+
+                          stackIn_27_1 = 1;
                           break L10;
                         }
                       }
-                      if ((stackIn_27_0 ^ stackIn_27_1) != 0) {
+                      if ((stackIn_24_0 ^ stackIn_27_1) != 0) {
                         break L2;
                       } else {
                         L11: {
@@ -1732,34 +1320,27 @@ final class rsb extends tja implements ntb, utb {
                         }
                         L12: {
                           if (null != this.field_d) {
-                            stackOut_33_0 = 0;
-                            stackIn_34_0 = stackOut_33_0;
+                            stackIn_34_0 = 0;
                             break L12;
                           } else {
-                            stackOut_32_0 = 1;
-                            stackIn_34_0 = stackOut_32_0;
+                            stackIn_34_0 = 1;
                             break L12;
                           }
                         }
                         L13: {
-                          stackOut_34_0 = stackIn_34_0;
-                          stackIn_36_0 = stackOut_34_0;
-                          stackIn_35_0 = stackOut_34_0;
+
+
                           if (var5.field_d != null) {
-                            stackOut_36_0 = stackIn_36_0;
-                            stackOut_36_1 = 0;
-                            stackIn_37_0 = stackOut_36_0;
-                            stackIn_37_1 = stackOut_36_1;
+
+                            stackIn_37_1 = 0;
                             break L13;
                           } else {
-                            stackOut_35_0 = stackIn_35_0;
-                            stackOut_35_1 = 1;
-                            stackIn_37_0 = stackOut_35_0;
-                            stackIn_37_1 = stackOut_35_1;
+
+                            stackIn_37_1 = 1;
                             break L13;
                           }
                         }
-                        if ((stackIn_37_0 ^ stackIn_37_1) != 0) {
+                        if ((stackIn_34_0 ^ stackIn_37_1) != 0) {
                           break L2;
                         } else {
                           L14: {
@@ -1773,8 +1354,7 @@ final class rsb extends tja implements ntb, utb {
                               }
                             }
                           }
-                          stackOut_42_0 = 0;
-                          stackIn_43_0 = stackOut_42_0;
+                          stackIn_43_0 = 0;
                           break L1;
                         }
                       }
@@ -1782,8 +1362,7 @@ final class rsb extends tja implements ntb, utb {
                   }
                 }
               }
-              stackOut_41_0 = 1;
-              stackIn_43_0 = stackOut_41_0;
+              stackIn_43_0 = 1;
               break L1;
             }
             break L0;
@@ -1792,27 +1371,19 @@ final class rsb extends tja implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var3 = decompiledCaughtException;
-            stackOut_44_0 = (RuntimeException) (var3);
-            stackOut_44_1 = new StringBuilder().append("rsb.C(").append(param0).append(',');
-            stackIn_46_0 = stackOut_44_0;
-            stackIn_46_1 = stackOut_44_1;
-            stackIn_45_0 = stackOut_44_0;
-            stackIn_45_1 = stackOut_44_1;
+            stackIn_46_0 = (RuntimeException) (var3);
+
+            stackIn_46_1 = new StringBuilder().append("rsb.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "null";
-              stackIn_47_0 = stackOut_46_0;
-              stackIn_47_1 = stackOut_46_1;
-              stackIn_47_2 = stackOut_46_2;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "null";
               break L15;
             } else {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "{...}";
-              stackIn_47_0 = stackOut_45_0;
-              stackIn_47_1 = stackOut_45_1;
-              stackIn_47_2 = stackOut_45_2;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "{...}";
               break L15;
             }
           }

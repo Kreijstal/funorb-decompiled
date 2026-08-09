@@ -13,11 +13,10 @@ class o {
     static rk field_g;
 
     public static void a(byte param0) {
-        ci discarded$2 = null;
         field_g = null;
         field_d = null;
         if (param0 > -85) {
-          discarded$2 = o.b((byte) 36);
+          o.b((byte) 36);
           field_i = null;
           field_a = null;
           return;

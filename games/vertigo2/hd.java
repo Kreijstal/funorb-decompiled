@@ -61,9 +61,9 @@ final class hd {
     }
 
     final void a(boolean param0) {
-        mi var2 = null;
-        bo var3 = null;
-        int var4 = 0;
+        mi var2;
+        bo var3;
+        int var4;
         var4 = Vertigo2.field_L ? 1 : 0;
         var2 = uh.field_Wb;
         if (!param0) {
@@ -122,7 +122,7 @@ final class hd {
                 this.field_e.a(var4, false);
             }
         }
-        boolean discarded$0 = var4.b(param1, param2 + -7829378);
+        var4.b(param1, param2 + -7829378);
     }
 
     final static int b(boolean param0) {
@@ -145,148 +145,94 @@ final class hd {
     }
 
     final int a(int param0, int param1, byte param2, int param3, int param4) {
-        int discarded$1 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        String var13 = null;
-        int var14 = 0;
-        int var15 = 0;
         Object var16 = null;
-        bo var16_ref = null;
-        int var17 = 0;
-        String var18 = null;
-        String var19 = null;
-        String var20 = null;
-        String var21 = null;
-        String var22 = null;
-        String var23 = null;
-        L0: {
-          var16 = null;
-          var17 = Vertigo2.field_L ? 1 : 0;
-          var6 = param4 / 5;
-          var7 = param1 / 4;
-          var8 = (640 - 2 * var6) / (param4 - -var6);
-          var9 = this.field_e.c(true) / var8;
-          var10 = this.field_e.c(true) - var9 * var8;
-          if (-1 != (var9 ^ -1)) {
-            break L0;
-          } else {
-            if (var10 == 0) {
-              return param3;
-            } else {
-              break L0;
+        int var17 = Vertigo2.field_L ? 1 : 0;
+        int var6 = param4 / 5;
+        int var7 = param1 / 4;
+        int var8 = (640 - 2 * var6) / (param4 - -var6);
+        int var9 = this.field_e.c(true) / var8;
+        int var10 = this.field_e.c(true) - var9 * var8;
+        if (-1 == (var9 ^ -1)) {
+            if (!(var10 != 0)) {
+                return param3;
             }
-          }
         }
-        L1: {
-          param3 = param3 - var7;
-          bi.b(var6, param3 + -var7 - 2 * (var7 + param1), 640 - 2 * var6, (param1 - -var7) * 2 - -var7, 1, 200);
-          bi.e(var6, -((var7 + param1) * 2) + (param3 + -var7), 640 - 2 * var6, var7 + (param1 - -var7) * 2, 16777215);
-          param3 = param3 - (param1 - -var7);
-          var11 = var6 * 2;
-          var12 = (param1 - -tk.field_c.field_z + tk.field_c.field_M) / 2;
-          bi.e(var11, param3, param4, param1, 16776960);
-          var11 = var11 + (var6 + param4);
-          var18 = "start <gt>= auth tic";
-          tk.field_c.b(var18, var11, var12 + param3, 16777215, -1);
-          var11 = var11 + (tk.field_c.a(var18, 640) + var6);
-          bi.e(var11, param3, param4, param1, 16711680);
-          var19 = "end <lt>= auth tic";
-          var11 = var11 + (param4 + var6);
-          tk.field_c.b(var19, var11, param3 + var12, 16777215, -1);
-          var11 = var11 + (var6 - -tk.field_c.a(var19, 640));
-          bi.e(var11, param3, param4, param1, 65280);
-          var11 = var11 + (param4 - -var6);
-          var20 = "startTic<lt>=authoritativeTic&&authoritativeTic<lt>endTic";
-          tk.field_c.b(var20, var11, var12 + param3, 16777215, -1);
-          var11 = var11 + (var6 - -tk.field_c.a(var20, 640));
-          param3 = param3 - (var7 + param1);
-          var11 = 2 * var6;
-          bi.b(var11, param3, param4, param1, 34816, 180);
-          var21 = "got ack";
-          var11 = var11 + (param4 - -var6);
-          tk.field_c.b(var21, var11, param3 + var12, 16777215, -1);
-          if (param2 == 51) {
-            break L1;
-          } else {
-            discarded$1 = this.a((byte) -125, 58);
-            break L1;
-          }
+        param3 = param3 - var7;
+        bi.b(var6, param3 + -var7 - 2 * (var7 + param1), 640 - 2 * var6, (param1 - -var7) * 2 - -var7, 1, 200);
+        bi.e(var6, -((var7 + param1) * 2) + (param3 + -var7), 640 - 2 * var6, var7 + (param1 - -var7) * 2, 16777215);
+        param3 = param3 - (param1 - -var7);
+        int var11 = var6 * 2;
+        int var12 = (param1 - -tk.field_c.field_z + tk.field_c.field_M) / 2;
+        bi.e(var11, param3, param4, param1, 16776960);
+        var11 = var11 + (var6 + param4);
+        String var18 = "start <gt>= auth tic";
+        tk.field_c.b(var18, var11, var12 + param3, 16777215, -1);
+        var11 = var11 + (tk.field_c.a(var18, 640) + var6);
+        bi.e(var11, param3, param4, param1, 16711680);
+        String var19 = "end <lt>= auth tic";
+        var11 = var11 + (param4 + var6);
+        tk.field_c.b(var19, var11, param3 + var12, 16777215, -1);
+        var11 = var11 + (var6 - -tk.field_c.a(var19, 640));
+        bi.e(var11, param3, param4, param1, 65280);
+        var11 = var11 + (param4 - -var6);
+        String var20 = "startTic<lt>=authoritativeTic&&authoritativeTic<lt>endTic";
+        tk.field_c.b(var20, var11, var12 + param3, 16777215, -1);
+        var11 = var11 + (var6 - -tk.field_c.a(var20, 640));
+        param3 = param3 - (var7 + param1);
+        var11 = 2 * var6;
+        bi.b(var11, param3, param4, param1, 34816, 180);
+        String var21 = "got ack";
+        var11 = var11 + (param4 - -var6);
+        tk.field_c.b(var21, var11, param3 + var12, 16777215, -1);
+        if (param2 != 51) {
+            this.a((byte) -125, 58);
         }
-        L2: {
-          var11 = var11 + (var6 - -tk.field_c.a(var21, 640));
-          bi.b(var11, param3, param4, param1, 8912896, 180);
-          var11 = var11 + (var6 + param4);
-          var22 = "transmitted";
-          var13 = var22;
-          tk.field_c.b(var13, var11, param3 - -var12, 16777215, -1);
-          var11 = var11 + (var6 + tk.field_c.a(var22, 640));
-          bi.b(var11, param3, param4, param1, 7829367, 180);
-          var23 = "not transmitted";
-          var13 = var23;
-          var11 = var11 + (param4 - -var6);
-          tk.field_c.b(var13, var11, param3 - -var12, 16777215, -1);
-          var11 = var11 + (tk.field_c.a(var23, 640) + var6);
-          param3 = param3 - var7 * 2;
-          if (0 != var10) {
-            break L2;
-          } else {
+        var11 = var11 + (var6 - -tk.field_c.a(var21, 640));
+        bi.b(var11, param3, param4, param1, 8912896, 180);
+        var11 = var11 + (var6 + param4);
+        String var22 = "transmitted";
+        String var13 = var22;
+        tk.field_c.b(var13, var11, param3 - -var12, 16777215, -1);
+        var11 = var11 + (var6 + tk.field_c.a(var22, 640));
+        bi.b(var11, param3, param4, param1, 7829367, 180);
+        String var23 = "not transmitted";
+        var13 = var23;
+        var11 = var11 + (param4 - -var6);
+        tk.field_c.b(var13, var11, param3 - -var12, 16777215, -1);
+        var11 = var11 + (tk.field_c.a(var23, 640) + var6);
+        param3 = param3 - var7 * 2;
+        if (0 == var10) {
             var10 = var8;
-            break L2;
-          }
         }
         param3 = param3 - (var7 + param1);
-        var14 = -((param4 - -var6) * (var8 + -var10)) + -var6 + (640 + -param4);
-        var15 = var10;
-        var16_ref = (bo) ((Object) this.field_e.c((byte) -24));
-        L3: while (true) {
-          if (var16_ref == null) {
-            return param3;
-          } else {
-            L4: {
-              if (!var16_ref.field_n) {
-                bi.b(var14, param3, param4, param1, 7829367, 180);
-                break L4;
-              } else {
+        int var14 = -((param4 - -var6) * (var8 + -var10)) + -var6 + (640 + -param4);
+        int var15 = var10;
+        bo var16_ref = (bo) ((Object) this.field_e.c((byte) -24));
+        while (var16_ref != null) {
+            if (var16_ref.field_n) {
                 bi.b(var14, param3, param4, param1, 8912896, 180);
-                break L4;
-              }
+            } else {
+                bi.b(var14, param3, param4, param1, 7829367, 180);
             }
-            L5: {
-              if (var16_ref.field_s <= param0) {
-                if (var16_ref.field_s - -10 <= param0) {
-                  bi.e(var14, param3, param4, param1, 16711680);
-                  break L5;
-                } else {
-                  bi.e(var14, param3, param4, param1, 65280);
-                  break L5;
-                }
-              } else {
+            if (var16_ref.field_s > param0) {
                 bi.e(var14, param3, param4, param1, 16776960);
-                break L5;
-              }
+            } else {
+                if (var16_ref.field_s - -10 > param0) {
+                    bi.e(var14, param3, param4, param1, 65280);
+                } else {
+                    bi.e(var14, param3, param4, param1, 16711680);
+                }
             }
-            L6: {
-              var15--;
-              var14 = var14 - (param4 + var6);
-              if (-1 == (var15 ^ -1)) {
+            var15--;
+            var14 = var14 - (param4 + var6);
+            if (!(-1 != (var15 ^ -1))) {
                 param3 = param3 - (var7 + param1);
                 var15 = var8;
                 var14 = -param4 + (640 - var6);
-                break L6;
-              } else {
-                break L6;
-              }
             }
             var16_ref = (bo) ((Object) this.field_e.b(false));
-            continue L3;
-          }
         }
+        return param3;
     }
 
     final static void a(byte param0) {

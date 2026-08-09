@@ -11,7 +11,7 @@ final class oi extends gn {
     static hd field_i;
 
     final static boolean b(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = 66 % ((param0 - -43) / 35);
         if (!jd.f(-1)) {
           if (-1 <= (eq.field_d ^ -1)) {

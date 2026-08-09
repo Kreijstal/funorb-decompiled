@@ -40,7 +40,6 @@ final class sa {
     final static void a(p param0, int param1) {
         try {
             byte[] var2 = null;
-            RuntimeException var2_ref = null;
             int var3 = 0;
             int var4_int = 0;
             Exception var4 = null;
@@ -51,22 +50,13 @@ final class sa {
             byte[] var9 = null;
             byte[] var10 = null;
             byte[] var11 = null;
-            RuntimeException stackIn_17_0 = null;
-            StringBuilder stackIn_17_1 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
-            String stackIn_19_2 = null;
+            RuntimeException stackIn_20_0 = null;
+            StringBuilder stackIn_20_1 = null;
+            String stackIn_20_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_16_0 = null;
-            StringBuilder stackOut_16_1 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            String stackOut_18_2 = null;
-            RuntimeException stackOut_17_0 = null;
-            StringBuilder stackOut_17_1 = null;
-            String stackOut_17_2 = null;
+            RuntimeException var2_ref = null;
             var6 = Chess.field_G;
             try {
               L0: {
@@ -133,31 +123,23 @@ final class sa {
               decompiledCaughtException = decompiledCaughtParameter1;
               L7: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_16_0 = (RuntimeException) (var2_ref);
-                stackOut_16_1 = new StringBuilder().append("sa.C(");
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_18_1 = stackOut_16_1;
-                stackIn_17_0 = stackOut_16_0;
-                stackIn_17_1 = stackOut_16_1;
+                stackIn_19_0 = (RuntimeException) (var2_ref);
+
+                stackIn_19_1 = new StringBuilder().append("sa.C(");
+
                 if (param0 == null) {
-                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackOut_18_2 = "null";
-                  stackIn_19_0 = stackOut_18_0;
-                  stackIn_19_1 = stackOut_18_1;
-                  stackIn_19_2 = stackOut_18_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "null";
                   break L7;
                 } else {
-                  stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-                  stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-                  stackOut_17_2 = "{...}";
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_19_1 = stackOut_17_1;
-                  stackIn_19_2 = stackOut_17_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "{...}";
                   break L7;
                 }
               }
-              throw fk.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
+              throw fk.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -168,23 +150,20 @@ final class sa {
 
     final static ek b(int param0) {
         try {
-            ek discarded$2 = null;
             Throwable var1 = null;
             ek stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            ek stackOut_2_0 = null;
             try {
               L0: {
                 L1: {
                   if (param0 == 24) {
                     break L1;
                   } else {
-                    discarded$2 = sa.b(-8);
+                    sa.b(-8);
                     break L1;
                   }
                 }
-                stackOut_2_0 = (ek) (Class.forName("oe").newInstance());
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (ek) (Class.forName("oe").newInstance());
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

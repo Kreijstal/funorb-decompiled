@@ -26,9 +26,9 @@ final class td extends o {
     }
 
     final static km[] a(int param0, int param1) {
-        km[] var2 = null;
-        le var3 = null;
-        km[] var4 = null;
+        km[] var2;
+        le var3;
+        km[] var4;
         var4 = new km[9];
         var2 = var4;
         if (param0 != -31056) {

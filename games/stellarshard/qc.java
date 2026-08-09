@@ -7,11 +7,6 @@ final class qc {
     private pb[] field_c;
 
     final static int a(byte param0, boolean param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_6_0 = 0;
         int stackIn_65_0 = 0;
         int stackIn_69_0 = 0;
@@ -22,15 +17,11 @@ final class qc {
         int stackIn_86_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_68_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_70_0 = 0;
-        int stackOut_85_0 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_80_0 = 0;
-        int stackOut_71_0 = 0;
-        int stackOut_83_0 = 0;
-        int stackOut_5_0 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = stellarshard.field_B;
         try {
           L0: {
@@ -222,27 +213,23 @@ final class qc {
                       } else {
                         if (0 != cd.field_L.field_f) {
                           if (-2 == (cd.field_L.field_f ^ -1)) {
-                            stackOut_68_0 = 2;
-                            stackIn_69_0 = stackOut_68_0;
+                            stackIn_69_0 = 2;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
                             break L13;
                           }
                         } else {
-                          stackOut_64_0 = 3;
-                          stackIn_65_0 = stackOut_64_0;
+                          stackIn_65_0 = 3;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         }
                       }
                     }
-                    stackOut_70_0 = 107;
-                    stackIn_72_0 = stackOut_70_0;
+                    stackIn_72_0 = 107;
                     L14: while (true) {
                       if (!qh.c(stackIn_72_0)) {
-                        stackOut_85_0 = 0;
-                        stackIn_86_0 = stackOut_85_0;
+                        stackIn_86_0 = 0;
                         decompiledRegionSelector0 = 6;
                         break L0;
                       } else {
@@ -252,14 +239,12 @@ final class qc {
                             break L15;
                           } else {
                             if (-1 == (cd.field_L.field_f ^ -1)) {
-                              stackOut_76_0 = 3;
-                              stackIn_77_0 = stackOut_76_0;
+                              stackIn_77_0 = 3;
                               decompiledRegionSelector0 = 3;
                               break L0;
                             } else {
                               if (-2 == (cd.field_L.field_f ^ -1)) {
-                                stackOut_80_0 = 1;
-                                stackIn_81_0 = stackOut_80_0;
+                                stackIn_81_0 = 1;
                                 decompiledRegionSelector0 = 4;
                                 break L0;
                               } else {
@@ -269,12 +254,10 @@ final class qc {
                           }
                         }
                         if (-14 != (gi.field_f ^ -1)) {
-                          stackOut_71_0 = 107;
-                          stackIn_72_0 = stackOut_71_0;
+                          stackIn_72_0 = 107;
                           continue L14;
                         } else {
-                          stackOut_83_0 = 1;
-                          stackIn_84_0 = stackOut_83_0;
+                          stackIn_84_0 = 1;
                           decompiledRegionSelector0 = 5;
                           break L0;
                         }
@@ -284,8 +267,7 @@ final class qc {
                     return 0;
                   }
                 } else {
-                  stackOut_5_0 = -72;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = -72;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -329,79 +311,40 @@ final class qc {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        RuntimeException var3 = null;
+        int stackIn_50_0 = 0;
+        int stackIn_53_0 = 0;
+        String[] stackIn_60_0 = null;
+        int stackIn_60_1 = 0;
+        String[] stackIn_61_0 = null;
+        int stackIn_61_1 = 0;
+        String stackIn_61_2 = null;
+        String[] stackIn_66_0 = null;
+        int stackIn_66_1 = 0;
+        String[] stackIn_67_0 = null;
+        int stackIn_67_1 = 0;
+        String stackIn_67_2 = null;
+        int stackIn_87_0 = 0;
+        String stackIn_87_1 = null;
+        int stackIn_88_0 = 0;
+        String stackIn_88_1 = null;
+        int stackIn_88_2 = 0;
+        int stackIn_108_0 = 0;
+        int stackIn_109_0 = 0;
+        int stackIn_109_1 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        String[] var4_ref_String__ = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         String[] var10 = null;
-        String[] var11 = null;
+        String var11 = null;
         String var12 = null;
-        String var13 = null;
-        int stackIn_50_0 = 0;
-        int stackIn_53_0 = 0;
-        String[] stackIn_59_0 = null;
-        int stackIn_59_1 = 0;
-        String[] stackIn_60_0 = null;
-        int stackIn_60_1 = 0;
-        String[] stackIn_61_0 = null;
-        int stackIn_61_1 = 0;
-        String stackIn_61_2 = null;
-        String[] stackIn_65_0 = null;
-        int stackIn_65_1 = 0;
-        String[] stackIn_66_0 = null;
-        int stackIn_66_1 = 0;
-        String[] stackIn_67_0 = null;
-        int stackIn_67_1 = 0;
-        String stackIn_67_2 = null;
-        int stackIn_86_0 = 0;
-        String stackIn_86_1 = null;
-        int stackIn_87_0 = 0;
-        String stackIn_87_1 = null;
-        int stackIn_88_0 = 0;
-        String stackIn_88_1 = null;
-        int stackIn_88_2 = 0;
-        int stackIn_107_0 = 0;
-        int stackIn_108_0 = 0;
-        int stackIn_109_0 = 0;
-        int stackIn_109_1 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_49_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_51_0 = 0;
-        String[] stackOut_64_0 = null;
-        int stackOut_64_1 = 0;
-        String[] stackOut_66_0 = null;
-        int stackOut_66_1 = 0;
-        String stackOut_66_2 = null;
-        String[] stackOut_65_0 = null;
-        int stackOut_65_1 = 0;
-        String stackOut_65_2 = null;
-        String[] stackOut_58_0 = null;
-        int stackOut_58_1 = 0;
-        String[] stackOut_60_0 = null;
-        int stackOut_60_1 = 0;
-        String stackOut_60_2 = null;
-        String[] stackOut_59_0 = null;
-        int stackOut_59_1 = 0;
-        String stackOut_59_2 = null;
-        int stackOut_106_0 = 0;
-        int stackOut_108_0 = 0;
-        int stackOut_108_1 = 0;
-        int stackOut_107_0 = 0;
-        int stackOut_107_1 = 0;
-        int stackOut_85_0 = 0;
-        String stackOut_85_1 = null;
-        int stackOut_87_0 = 0;
-        String stackOut_87_1 = null;
-        int stackOut_87_2 = 0;
-        int stackOut_86_0 = 0;
-        String stackOut_86_1 = null;
-        int stackOut_86_2 = 0;
         var9 = stellarshard.field_B;
         try {
           L0: {
@@ -518,24 +461,20 @@ final class qc {
                               o.field_g = new String[-var4 + (var3_int + -1)];
                               ri.a(hc.field_m, 1 + var4, o.field_g, 0, -var4 + (var3_int + -1));
                               if (pd.field_g.length < bb.field_k.length) {
-                                stackOut_49_0 = bb.field_k.length;
-                                stackIn_50_0 = stackOut_49_0;
+                                stackIn_50_0 = bb.field_k.length;
                                 break L10;
                               } else {
-                                stackOut_48_0 = pd.field_g.length;
-                                stackIn_50_0 = stackOut_48_0;
+                                stackIn_50_0 = pd.field_g.length;
                                 break L10;
                               }
                             }
                             L11: {
                               var5 = stackIn_50_0;
                               if (o.field_g.length <= fb.field_e.length) {
-                                stackOut_52_0 = fb.field_e.length;
-                                stackIn_53_0 = stackOut_52_0;
+                                stackIn_53_0 = fb.field_e.length;
                                 break L11;
                               } else {
-                                stackOut_51_0 = o.field_g.length;
-                                stackIn_53_0 = stackOut_51_0;
+                                stackIn_53_0 = o.field_g.length;
                                 break L11;
                               }
                             }
@@ -569,27 +508,19 @@ final class qc {
                                         break L1;
                                       } else {
                                         L15: {
-                                          stackOut_64_0 = stellarshard.field_L;
-                                          stackOut_64_1 = var8 + (7 - -var5);
-                                          stackIn_66_0 = stackOut_64_0;
-                                          stackIn_66_1 = stackOut_64_1;
-                                          stackIn_65_0 = stackOut_64_0;
-                                          stackIn_65_1 = stackOut_64_1;
+                                          stackIn_66_0 = stellarshard.field_L;
+
+                                          stackIn_66_1 = var8 + (7 - -var5);
+
                                           if (var8 >= o.field_g.length) {
-                                            stackOut_66_0 = (String[]) ((Object) stackIn_66_0);
-                                            stackOut_66_1 = stackIn_66_1;
-                                            stackOut_66_2 = "";
-                                            stackIn_67_0 = stackOut_66_0;
-                                            stackIn_67_1 = stackOut_66_1;
-                                            stackIn_67_2 = stackOut_66_2;
+                                            stackIn_67_0 = (String[]) ((Object) stackIn_66_0);
+                                            stackIn_67_1 = stackIn_66_1;
+                                            stackIn_67_2 = "";
                                             break L15;
                                           } else {
-                                            stackOut_65_0 = (String[]) ((Object) stackIn_65_0);
-                                            stackOut_65_1 = stackIn_65_1;
-                                            stackOut_65_2 = o.field_g[var8];
-                                            stackIn_67_0 = stackOut_65_0;
-                                            stackIn_67_1 = stackOut_65_1;
-                                            stackIn_67_2 = stackOut_65_2;
+                                            stackIn_67_0 = (String[]) ((Object) stackIn_66_0);
+                                            stackIn_67_1 = stackIn_66_1;
+                                            stackIn_67_2 = o.field_g[var8];
                                             break L15;
                                           }
                                         }
@@ -600,27 +531,19 @@ final class qc {
                                     }
                                   } else {
                                     L16: {
-                                      stackOut_58_0 = stellarshard.field_L;
-                                      stackOut_58_1 = var8 + 6;
-                                      stackIn_60_0 = stackOut_58_0;
-                                      stackIn_60_1 = stackOut_58_1;
-                                      stackIn_59_0 = stackOut_58_0;
-                                      stackIn_59_1 = stackOut_58_1;
+                                      stackIn_60_0 = stellarshard.field_L;
+
+                                      stackIn_60_1 = var8 + 6;
+
                                       if (-var5 + (bb.field_k.length + var8) >= 0) {
-                                        stackOut_60_0 = (String[]) ((Object) stackIn_60_0);
-                                        stackOut_60_1 = stackIn_60_1;
-                                        stackOut_60_2 = bb.field_k[-var5 + bb.field_k.length + var8];
-                                        stackIn_61_0 = stackOut_60_0;
-                                        stackIn_61_1 = stackOut_60_1;
-                                        stackIn_61_2 = stackOut_60_2;
+                                        stackIn_61_0 = (String[]) ((Object) stackIn_60_0);
+                                        stackIn_61_1 = stackIn_60_1;
+                                        stackIn_61_2 = bb.field_k[-var5 + bb.field_k.length + var8];
                                         break L16;
                                       } else {
-                                        stackOut_59_0 = (String[]) ((Object) stackIn_59_0);
-                                        stackOut_59_1 = stackIn_59_1;
-                                        stackOut_59_2 = "";
-                                        stackIn_61_0 = stackOut_59_0;
-                                        stackIn_61_1 = stackOut_59_1;
-                                        stackIn_61_2 = stackOut_59_2;
+                                        stackIn_61_0 = (String[]) ((Object) stackIn_60_0);
+                                        stackIn_61_1 = stackIn_60_1;
+                                        stackIn_61_2 = "";
                                         break L16;
                                       }
                                     }
@@ -763,18 +686,19 @@ final class qc {
                     break L25;
                   } else {
                     var10 = pd.field_g;
+                    var4_ref_String__ = var10;
                     var5 = 0;
                     L26: while (true) {
                       if (var5 >= var10.length) {
-                        var11 = fb.field_e;
+                        var4_ref_String__ = fb.field_e;
                         var5 = 0;
                         L27: while (true) {
-                          if (var5 >= var11.length) {
+                          if (var5 >= var4_ref_String__.length) {
                             break L25;
                           } else {
                             L28: {
-                              var13 = var11[var5];
-                              var7 = qe.a((byte) -40, var13, false);
+                              var12 = var4_ref_String__[var5];
+                              var7 = qe.a((byte) -40, var12, false);
                               if (var7 > var3_int) {
                                 var3_int = var7;
                                 break L28;
@@ -788,8 +712,8 @@ final class qc {
                         }
                       } else {
                         L29: {
-                          var12 = var10[var5];
-                          var7 = qe.a((byte) -33, var12, false);
+                          var11 = var10[var5];
+                          var7 = qe.a((byte) -33, var11, false);
                           if (var7 > var3_int) {
                             var3_int = var7;
                             break L29;
@@ -850,20 +774,15 @@ final class qc {
                     }
                   } else {
                     L34: {
-                      stackOut_106_0 = fl.field_a;
-                      stackIn_108_0 = stackOut_106_0;
-                      stackIn_107_0 = stackOut_106_0;
+                      stackIn_108_0 = fl.field_a;
+
                       if (sj.field_J[var4] >= 0) {
-                        stackOut_108_0 = stackIn_108_0;
-                        stackOut_108_1 = na.field_a;
-                        stackIn_109_0 = stackOut_108_0;
-                        stackIn_109_1 = stackOut_108_1;
+                        stackIn_109_0 = stackIn_108_0;
+                        stackIn_109_1 = na.field_a;
                         break L34;
                       } else {
-                        stackOut_107_0 = stackIn_107_0;
-                        stackOut_107_1 = l.field_e;
-                        stackIn_109_0 = stackOut_107_0;
-                        stackIn_109_1 = stackOut_107_1;
+                        stackIn_109_0 = stackIn_108_0;
+                        stackIn_109_1 = l.field_e;
                         break L34;
                       }
                     }
@@ -874,27 +793,19 @@ final class qc {
                 }
               } else {
                 L35: {
-                  stackOut_85_0 = -39;
-                  stackOut_85_1 = stellarshard.field_L[var4];
-                  stackIn_87_0 = stackOut_85_0;
-                  stackIn_87_1 = stackOut_85_1;
-                  stackIn_86_0 = stackOut_85_0;
-                  stackIn_86_1 = stackOut_85_1;
+                  stackIn_87_0 = -39;
+
+                  stackIn_87_1 = stellarshard.field_L[var4];
+
                   if (sj.field_J[var4] < 0) {
-                    stackOut_87_0 = stackIn_87_0;
-                    stackOut_87_1 = (String) ((Object) stackIn_87_1);
-                    stackOut_87_2 = 0;
-                    stackIn_88_0 = stackOut_87_0;
-                    stackIn_88_1 = stackOut_87_1;
-                    stackIn_88_2 = stackOut_87_2;
+                    stackIn_88_0 = stackIn_87_0;
+                    stackIn_88_1 = (String) ((Object) stackIn_87_1);
+                    stackIn_88_2 = 0;
                     break L35;
                   } else {
-                    stackOut_86_0 = stackIn_86_0;
-                    stackOut_86_1 = (String) ((Object) stackIn_86_1);
-                    stackOut_86_2 = 1;
-                    stackIn_88_0 = stackOut_86_0;
-                    stackIn_88_1 = stackOut_86_1;
-                    stackIn_88_2 = stackOut_86_2;
+                    stackIn_88_0 = stackIn_87_0;
+                    stackIn_88_1 = (String) ((Object) stackIn_87_1);
+                    stackIn_88_2 = 1;
                     break L35;
                   }
                 }
@@ -933,8 +844,6 @@ final class qc {
 
     final static boolean a(int param0, char param1) {
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         L0: {
           if (param0 == -1750942672) {
             break L0;
@@ -967,12 +876,10 @@ final class qc {
                 }
               }
             }
-            stackOut_9_0 = 0;
-            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_0 = 0;
             break L1;
           }
-          stackOut_8_0 = 1;
-          stackIn_10_0 = stackOut_8_0;
+          stackIn_10_0 = 1;
           break L1;
         }
         return stackIn_10_0 != 0;
@@ -987,7 +894,6 @@ final class qc {
     }
 
     final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, byte param12, int param13, int param14, int param15, int param16) {
-        RuntimeException var17 = null;
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -1004,18 +910,9 @@ final class qc {
         int var30 = 0;
         int var31 = 0;
         int var32 = 0;
-        int var33 = 0;
         int var34 = 0;
         int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
         int var42 = 0;
-        RuntimeException stackIn_76_0 = null;
-        StringBuilder stackIn_76_1 = null;
         RuntimeException stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
         RuntimeException stackIn_78_0 = null;
@@ -1024,14 +921,14 @@ final class qc {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_75_0 = null;
-        StringBuilder stackOut_75_1 = null;
-        RuntimeException stackOut_77_0 = null;
-        StringBuilder stackOut_77_1 = null;
-        String stackOut_77_2 = null;
-        RuntimeException stackOut_76_0 = null;
-        StringBuilder stackOut_76_1 = null;
-        String stackOut_76_2 = null;
+        RuntimeException var17 = null;
+        int var33 = 0;
+        int var36 = 0;
+        int var37 = 0;
+        int var38 = 0;
+        int var39 = 0;
+        int var40 = 0;
+        int var41 = 0;
         var42 = stellarshard.field_B;
         try {
           L0: {
@@ -1157,7 +1054,7 @@ final class qc {
                           } else {
                             L10: {
                               var37 = var17_int >> -2075844688;
-                              if (cc.field_m > var37) {
+                              if ((cc.field_m ^ -1) < (var37 ^ -1)) {
                                 var38 = (var18 >> -838533584) + -(var17_int >> -92806160);
                                 if (var38 == 0) {
                                   if (var37 < 0) {
@@ -1425,27 +1322,19 @@ final class qc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var17 = decompiledCaughtException;
-            stackOut_75_0 = (RuntimeException) (var17);
-            stackOut_75_1 = new StringBuilder().append("qc.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_77_0 = stackOut_75_0;
-            stackIn_77_1 = stackOut_75_1;
-            stackIn_76_0 = stackOut_75_0;
-            stackIn_76_1 = stackOut_75_1;
+            stackIn_77_0 = (RuntimeException) (var17);
+
+            stackIn_77_1 = new StringBuilder().append("qc.E(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_77_0 = (RuntimeException) ((Object) stackIn_77_0);
-              stackOut_77_1 = (StringBuilder) ((Object) stackIn_77_1);
-              stackOut_77_2 = "null";
-              stackIn_78_0 = stackOut_77_0;
-              stackIn_78_1 = stackOut_77_1;
-              stackIn_78_2 = stackOut_77_2;
+              stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
+              stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
+              stackIn_78_2 = "null";
               break L18;
             } else {
-              stackOut_76_0 = (RuntimeException) ((Object) stackIn_76_0);
-              stackOut_76_1 = (StringBuilder) ((Object) stackIn_76_1);
-              stackOut_76_2 = "{...}";
-              stackIn_78_0 = stackOut_76_0;
-              stackIn_78_1 = stackOut_76_1;
-              stackIn_78_2 = stackOut_76_2;
+              stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
+              stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
+              stackIn_78_2 = "{...}";
               break L18;
             }
           }

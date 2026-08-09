@@ -24,20 +24,19 @@ abstract class ub {
     }
 
     final int c(byte param0) {
-        int discarded$2 = 0;
-        int var2 = 0;
-        fj[] var3 = null;
-        int var4 = 0;
-        fj var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        fj[] var3;
+        int var4;
+        fj var5;
+        int var7;
+        int var6;
         L0: {
           var7 = Chess.field_G;
           var2 = -1;
           if (param0 == -24) {
             break L0;
           } else {
-            discarded$2 = this.a(87, -122);
+            this.a(87, -122);
             break L0;
           }
         }
@@ -75,8 +74,6 @@ abstract class ub {
 
     final int a(byte param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == 34) {
           L0: {
             L1: {
@@ -86,14 +83,12 @@ abstract class ub {
                 if (-1 <= (this.field_a.length ^ -1)) {
                   break L1;
                 } else {
-                  stackOut_4_0 = -this.field_a[0].field_d + this.field_a[-1 + this.field_a.length].field_e;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = -this.field_a[0].field_d + this.field_a[-1 + this.field_a.length].field_e;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0;
@@ -104,30 +99,21 @@ abstract class ub {
 
     final int a(int param0, boolean param1, String param2, int param3) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int stackIn_18_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_23_2 = null;
+        int stackIn_20_0 = 0;
+        int stackIn_22_0 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var5 = null;
         var10 = Chess.field_G;
         try {
           L0: {
@@ -146,16 +132,18 @@ abstract class ub {
             L2: while (true) {
               if (var8 >= var7) {
                 if (0 < var5_int) {
-                  stackOut_17_0 = (param3 + -param0 << -429191896) / var5_int;
-                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_20_0 = (param3 + -param0 << -429191896) / var5_int;
+                  decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  return 0;
+                  stackIn_22_0 = 0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               } else {
                 L3: {
                   var9 = param2.charAt(var8);
-                  if (var9 != 60) {
+                  if ((var9 ^ -1) != -61) {
                     if (var9 == 62) {
                       var6 = 0;
                       break L3;
@@ -186,39 +174,33 @@ abstract class ub {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var5);
-            stackOut_20_1 = new StringBuilder().append("ub.L(").append(param0).append(',').append(param1).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_25_0 = (RuntimeException) (var5);
+
+            stackIn_25_1 = new StringBuilder().append("ub.L(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L4;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L4;
             }
           }
-          throw fk.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param3 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param3 + ')');
         }
-        return stackIn_18_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_20_0;
+        } else {
+          return stackIn_22_0;
+        }
     }
 
     final static boolean a(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == 21549) {
           L0: {
             L1: {
@@ -228,14 +210,12 @@ abstract class ub {
                 if (tb.field_f != ik.field_e) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0 != 0;
@@ -270,11 +250,11 @@ abstract class ub {
     }
 
     final int a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        fj var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+        int var4;
+        int var5;
+        fj var6;
+        int var7;
+        int var8;
         L0: {
           var8 = Chess.field_G;
           if (this.field_a == null) {

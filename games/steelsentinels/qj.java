@@ -42,28 +42,26 @@ final class qj {
     }
 
     final void b(int param0) {
-        int[] discarded$18 = null;
-        int[] discarded$19 = null;
-        int[] dupTemp$20 = null;
-        int[] dupTemp$21 = null;
-        int[] dupTemp$22 = null;
-        int[] dupTemp$23 = null;
-        int[] dupTemp$24 = null;
-        int[] dupTemp$25 = null;
-        int[] dupTemp$26 = null;
-        int[] dupTemp$27 = null;
-        int[] dupTemp$28 = null;
-        int[] dupTemp$29 = null;
-        int[] dupTemp$30 = null;
-        int[] dupTemp$31 = null;
-        int[] dupTemp$32 = null;
-        int[] dupTemp$33 = null;
-        int[] dupTemp$34 = null;
-        int[] dupTemp$35 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int[] dupTemp$0 = null;
+        int[] dupTemp$1 = null;
+        int[] dupTemp$2 = null;
+        int[] dupTemp$3 = null;
+        int[] dupTemp$4 = null;
+        int[] dupTemp$5 = null;
+        int[] dupTemp$6 = null;
+        int[] dupTemp$7 = null;
+        int[] dupTemp$8 = null;
+        int[] dupTemp$9 = null;
+        int[] dupTemp$10 = null;
+        int[] dupTemp$11 = null;
+        int[] dupTemp$12 = null;
+        int[] dupTemp$13 = null;
+        int[] dupTemp$14 = null;
+        int[] dupTemp$15 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = SteelSentinels.field_G;
           if (-17 == (ei.field_q ^ -1)) {
@@ -139,7 +137,7 @@ final class qj {
                     pb.b();
                     this.field_l.field_r = this.field_b;
                     this.field_l.field_J = this.field_b;
-                    discarded$18 = this.field_l.f(this.field_n, param0 ^ -27248);
+                    this.field_l.f(this.field_n, param0 ^ -27248);
                     this.field_l.a(128, 64, (byte) -116, rf.field_a);
                     sb.field_bb.b((byte) 127);
                     break L6;
@@ -167,7 +165,7 @@ final class qj {
               pb.b();
               this.field_l.field_J = this.field_b;
               this.field_l.field_r = this.field_b;
-              discarded$19 = this.field_l.f(this.field_n, 22742);
+              this.field_l.f(this.field_n, 22742);
               this.field_l.a(128, 64, (byte) -116, rf.field_a);
               sb.field_bb.b((byte) 127);
               break L8;
@@ -366,8 +364,8 @@ final class qj {
             if (this.field_t != wb.field_g) {
               if (lc.field_g == this.field_t) {
                 if (1 < ka.field_G[o.a((byte) 84, this.field_n)][25][4]) {
-                  dupTemp$20 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                  dupTemp$20[4] = dupTemp$20[4] - 1;
+                  dupTemp$0 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                  dupTemp$0[4] = dupTemp$0[4] - 1;
                   break L24;
                 } else {
                   break L24;
@@ -377,8 +375,8 @@ final class qj {
                   if ((ka.field_G[o.a((byte) 84, this.field_n)][25][7] ^ -1) >= -4) {
                     break L24;
                   } else {
-                    dupTemp$21 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                    dupTemp$21[7] = dupTemp$21[7] - 1;
+                    dupTemp$1 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                    dupTemp$1[7] = dupTemp$1[7] - 1;
                     break L24;
                   }
                 } else {
@@ -389,8 +387,8 @@ final class qj {
               if ((ka.field_G[o.a((byte) 84, this.field_n)][25][3] ^ -1) >= -4) {
                 break L24;
               } else {
-                dupTemp$22 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                dupTemp$22[3] = dupTemp$22[3] - 1;
+                dupTemp$2 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                dupTemp$2[3] = dupTemp$2[3] - 1;
                 break L24;
               }
             }
@@ -402,8 +400,8 @@ final class qj {
           if (-28 == (ei.field_q ^ -1)) {
             if (this.field_t == wb.field_g) {
               if (-9 < (ka.field_G[o.a((byte) 84, this.field_n)][25][3] ^ -1)) {
-                dupTemp$23 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                dupTemp$23[3] = dupTemp$23[3] + 1;
+                dupTemp$3 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                dupTemp$3[3] = dupTemp$3[3] + 1;
                 break L25;
               } else {
                 break L25;
@@ -413,8 +411,8 @@ final class qj {
                 if (-6 >= (ka.field_G[o.a((byte) 84, this.field_n)][25][4] ^ -1)) {
                   break L25;
                 } else {
-                  dupTemp$24 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                  dupTemp$24[4] = dupTemp$24[4] + 1;
+                  dupTemp$4 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                  dupTemp$4[4] = dupTemp$4[4] + 1;
                   break L25;
                 }
               } else {
@@ -422,8 +420,8 @@ final class qj {
                   if (ka.field_G[o.a((byte) 84, this.field_n)][25][7] >= 8) {
                     break L25;
                   } else {
-                    dupTemp$25 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                    dupTemp$25[7] = dupTemp$25[7] + 1;
+                    dupTemp$5 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                    dupTemp$5[7] = dupTemp$5[7] + 1;
                     break L25;
                   }
                 } else {
@@ -448,16 +446,16 @@ final class qj {
             if (wb.field_g == this.field_t) {
               if (fc.field_e[81]) {
                 if ((ka.field_G[o.a((byte) 84, this.field_n)][25][1] ^ -1) < -2) {
-                  dupTemp$26 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                  dupTemp$26[1] = dupTemp$26[1] - 1;
+                  dupTemp$6 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                  dupTemp$6[1] = dupTemp$6[1] - 1;
                   break L27;
                 } else {
                   break L27;
                 }
               } else {
                 if (1 < ka.field_G[o.a((byte) 84, this.field_n)][25][0]) {
-                  dupTemp$27 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                  dupTemp$27[0] = dupTemp$27[0] - 1;
+                  dupTemp$7 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                  dupTemp$7[0] = dupTemp$7[0] - 1;
                   break L27;
                 } else {
                   break L27;
@@ -468,8 +466,8 @@ final class qj {
                 if (jh.field_d == this.field_t) {
                   if (!fc.field_e[81]) {
                     if (1 < ka.field_G[o.a((byte) 84, this.field_n)][25][5]) {
-                      dupTemp$28 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                      dupTemp$28[5] = dupTemp$28[5] - 1;
+                      dupTemp$8 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                      dupTemp$8[5] = dupTemp$8[5] - 1;
                       break L27;
                     } else {
                       break L27;
@@ -478,8 +476,8 @@ final class qj {
                     if ((ka.field_G[o.a((byte) 84, this.field_n)][25][6] ^ -1) >= -2) {
                       break L27;
                     } else {
-                      dupTemp$29 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                      dupTemp$29[6] = dupTemp$29[6] - 1;
+                      dupTemp$9 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                      dupTemp$9[6] = dupTemp$9[6] - 1;
                       break L27;
                     }
                   }
@@ -488,8 +486,8 @@ final class qj {
                 }
               } else {
                 if (-2 > (ka.field_G[o.a((byte) 84, this.field_n)][25][2] ^ -1)) {
-                  dupTemp$30 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                  dupTemp$30[2] = dupTemp$30[2] - 1;
+                  dupTemp$10 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                  dupTemp$10[2] = dupTemp$10[2] - 1;
                   break L27;
                 } else {
                   break L27;
@@ -505,8 +503,8 @@ final class qj {
             if (this.field_t != wb.field_g) {
               if (lc.field_g == this.field_t) {
                 if (ka.field_G[o.a((byte) 84, this.field_n)][25][2] < 100) {
-                  dupTemp$31 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                  dupTemp$31[2] = dupTemp$31[2] + 1;
+                  dupTemp$11 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                  dupTemp$11[2] = dupTemp$11[2] + 1;
                   break L28;
                 } else {
                   break L28;
@@ -517,8 +515,8 @@ final class qj {
                 } else {
                   if (!fc.field_e[81]) {
                     if (ka.field_G[o.a((byte) 84, this.field_n)][25][5] < 256) {
-                      dupTemp$32 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                      dupTemp$32[5] = dupTemp$32[5] + 1;
+                      dupTemp$12 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                      dupTemp$12[5] = dupTemp$12[5] + 1;
                       break L28;
                     } else {
                       break L28;
@@ -527,8 +525,8 @@ final class qj {
                     if (-26 >= (ka.field_G[o.a((byte) 84, this.field_n)][25][6] ^ -1)) {
                       break L28;
                     } else {
-                      dupTemp$33 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                      dupTemp$33[6] = dupTemp$33[6] + 1;
+                      dupTemp$13 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                      dupTemp$13[6] = dupTemp$13[6] + 1;
                       break L28;
                     }
                   }
@@ -539,14 +537,14 @@ final class qj {
                 if (ka.field_G[o.a((byte) 84, this.field_n)][25][1] >= 25) {
                   break L28;
                 } else {
-                  dupTemp$34 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                  dupTemp$34[1] = dupTemp$34[1] + 1;
+                  dupTemp$14 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                  dupTemp$14[1] = dupTemp$14[1] + 1;
                   break L28;
                 }
               } else {
                 if ((ka.field_G[o.a((byte) 84, this.field_n)][25][0] ^ -1) > -257) {
-                  dupTemp$35 = ka.field_G[o.a((byte) 84, this.field_n)][25];
-                  dupTemp$35[0] = dupTemp$35[0] + 1;
+                  dupTemp$15 = ka.field_G[o.a((byte) 84, this.field_n)][25];
+                  dupTemp$15[0] = dupTemp$15[0] + 1;
                   break L28;
                 } else {
                   break L28;
@@ -575,9 +573,8 @@ final class qj {
     }
 
     final void a(int param0) {
-        int fieldTemp$2 = 0;
-        int[] discarded$3 = null;
-        int var3 = 0;
+        int fieldTemp$0 = 0;
+        int var3;
         L0: {
           var3 = SteelSentinels.field_G;
           if (this.field_t == jm.field_o) {
@@ -661,9 +658,9 @@ final class qj {
                 }
               } else {
                 L3: {
-                  fieldTemp$2 = this.field_l.field_oc;
+                  fieldTemp$0 = this.field_l.field_oc;
                   this.field_l.field_oc = this.field_l.field_oc + 1;
-                  if (fieldTemp$2 >= ka.field_G[o.a((byte) 84, this.field_n)][25][2]) {
+                  if (fieldTemp$0 >= ka.field_G[o.a((byte) 84, this.field_n)][25][2]) {
                     this.field_l.field_oc = 0;
                     break L3;
                   } else {
@@ -696,7 +693,7 @@ final class qj {
               pb.b();
               this.field_l.field_r = this.field_b;
               this.field_l.field_J = this.field_b;
-              discarded$3 = this.field_l.f(this.field_n, 22742);
+              this.field_l.f(this.field_n, 22742);
               this.field_l.a(128, 64, (byte) -116, rf.field_a);
               sb.field_bb.b((byte) 127);
               break L4;
@@ -716,40 +713,39 @@ final class qj {
     }
 
     final void d(int param0) {
-        int[][] dupTemp$15 = null;
-        int[] array$16 = null;
-        int discarded$17 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5_ref_int__ = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7_int = 0;
-        String var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int[] var12 = null;
-        int[] var13 = null;
-        String var14 = null;
-        String var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
-        String var20 = null;
-        String var21 = null;
-        String var22 = null;
-        String var23 = null;
-        String var24 = null;
-        String var25 = null;
-        String var26 = null;
-        String var27 = null;
-        String var28 = null;
-        String var29 = null;
-        int[] var30 = null;
+        int[][] dupTemp$2 = null;
+        int[] array$3 = null;
+        int var2;
+        int var3;
+        int var4;
+        int[] var5_ref_int__;
+        int var6;
+        int var8;
+        int var11;
+        int[] var12;
+        int[] var13;
+        int[] var30;
+        int var5;
+        int var7_int;
+        String var7;
+        int var9;
+        int var10;
+        String var14;
+        String var15;
+        String var16;
+        String var17;
+        String var18;
+        String var19;
+        String var20;
+        String var21;
+        String var22;
+        String var23;
+        String var24;
+        String var25;
+        String var26;
+        String var27;
+        String var28;
+        String var29;
         L0: {
           var11 = SteelSentinels.field_G;
           if (null == ka.field_G[o.a((byte) 84, this.field_n)]) {
@@ -769,10 +765,10 @@ final class qj {
                     var3 = 32;
                     var5_ref_int__ = ka.field_G[o.a((byte) 84, this.field_n)][this.field_b];
                     if (var5_ref_int__ == null) {
-                      dupTemp$15 = ka.field_G[o.a((byte) 84, this.field_n)];
-                      array$16 = new int[2 + this.field_l.field_Z.length];
-                      dupTemp$15[this.field_b] = array$16;
-                      var5_ref_int__ = array$16;
+                      dupTemp$2 = ka.field_G[o.a((byte) 84, this.field_n)];
+                      array$3 = new int[2 + this.field_l.field_Z.length];
+                      dupTemp$2[this.field_b] = array$3;
+                      var5_ref_int__ = array$3;
                       break L2;
                     } else {
                       break L2;
@@ -801,7 +797,7 @@ final class qj {
                         ka.field_G[o.a((byte) 84, this.field_n)][this.field_b] = var30;
                         break L3;
                       } else {
-                        if (ka.field_G[o.a((byte) 84, this.field_n)][this.field_b].length > var8) {
+                        if ((ka.field_G[o.a((byte) 84, this.field_n)][this.field_b].length ^ -1) < (var8 ^ -1)) {
                           var12[var8] = ka.field_G[o.a((byte) 84, this.field_n)][this.field_b][var8];
                           var8++;
                           continue L5;
@@ -1258,7 +1254,7 @@ final class qj {
                   break L37;
                 }
               }
-              discarded$17 = dk.field_h.a(var7, 8, 8, 624, 100, 43724, 0, 0, 0, 12);
+              dk.field_h.a(var7, 8, 8, 624, 100, 43724, 0, 0, 0, 12);
               return;
             } else {
               break L0;

@@ -14,12 +14,11 @@ final class pa {
     }
 
     final static void a(int param0, byte param1) {
-        boolean discarded$2 = false;
-        RuntimeException var2 = null;
         int var3 = 0;
         dh var4 = null;
         nk var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -30,7 +29,7 @@ final class pa {
                   if (param1 == 40) {
                     break L2;
                   } else {
-                    discarded$2 = pa.b((byte) 41);
+                    pa.b((byte) 41);
                     break L2;
                   }
                 }

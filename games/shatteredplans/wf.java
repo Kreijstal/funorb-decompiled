@@ -11,8 +11,8 @@ class wf extends oh {
     int field_i;
 
     final static void a(int param0) {
-        String var1 = null;
-        String var2 = null;
+        String var1;
+        String var2;
         if (param0 != -15887) {
           return;
         } else {

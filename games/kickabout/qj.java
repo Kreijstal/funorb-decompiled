@@ -11,7 +11,7 @@ final class qj {
     static String field_c;
 
     final int a(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = -121 / ((-14 - param0) / 44);
         if (this.field_b != null) {
           if (this.field_b.length == 0) {
@@ -25,7 +25,7 @@ final class qj {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         L0: {
           var2 = ig.a(param1, param0 ^ -2167);
           if (ia.field_c) {
@@ -44,8 +44,8 @@ final class qj {
     }
 
     final int a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = Kickabout.field_G;
         if (param0 == 101) {
           if (this.field_b != null) {
@@ -100,11 +100,10 @@ final class qj {
     }
 
     public static void b(byte param0) {
-        int discarded$0 = 0;
         field_a = null;
         field_c = null;
         if (param0 >= -25) {
-            discarded$0 = qj.a(75, 93);
+            qj.a(75, 93);
             field_f = null;
             return;
         }

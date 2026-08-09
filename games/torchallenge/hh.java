@@ -7,20 +7,19 @@ final class hh {
     static int[][][] field_c;
 
     final static int[] b(int param0, int param1, int param2) {
-        int[] discarded$1 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           if (param1 == 7429) {
             break L0;
           } else {
-            discarded$1 = hh.b(-62, -101, 108);
+            hh.b(-62, -101, 108);
             break L0;
           }
         }

@@ -50,8 +50,8 @@ final class hab extends uda {
     }
 
     final void a(int param0, boolean param1) {
-        hdb var3 = null;
-        oj var4 = null;
+        hdb var3;
+        oj var4;
         if (param0 == 5) {
           var3 = this.field_d.J(10);
           if (var3 != null) {

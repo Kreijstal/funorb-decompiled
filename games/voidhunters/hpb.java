@@ -7,7 +7,6 @@ final class hpb extends le {
     static volatile long field_k;
 
     final int[][] a(int param0, int param1) {
-        int[] discarded$0 = null;
         int[] var4 = null;
         int[] var5 = null;
         int[] var6 = null;
@@ -15,7 +14,7 @@ final class hpb extends le {
         int[][] var8 = null;
         int var9 = VoidHunters.field_G;
         if (param0 != 255) {
-            discarded$0 = this.a(-39, false);
+            this.a(-39, false);
         }
         int[][] var10 = this.field_d.a(param1, (byte) -126);
         int[][] var3 = var10;
@@ -42,33 +41,16 @@ final class hpb extends le {
     }
 
     final void a(int param0, int param1, ds param2) {
-        int[][] discarded$2 = null;
-        RuntimeException var4 = null;
-        Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
@@ -76,20 +58,15 @@ final class hpb extends le {
                 break L1;
               } else {
                 L2: {
-                  stackOut_1_0 = this;
-                  stackIn_3_0 = stackOut_1_0;
-                  stackIn_2_0 = stackOut_1_0;
+                  stackIn_3_0 = this;
+
                   if (-2 != (param2.e((byte) -97) ^ -1)) {
-                    stackOut_3_0 = this;
-                    stackOut_3_1 = 0;
-                    stackIn_4_0 = stackOut_3_0;
-                    stackIn_4_1 = stackOut_3_1;
+                    stackIn_4_0 = this;
+                    stackIn_4_1 = 0;
                     break L2;
                   } else {
-                    stackOut_2_0 = this;
-                    stackOut_2_1 = 1;
-                    stackIn_4_0 = stackOut_2_0;
-                    stackIn_4_1 = stackOut_2_1;
+                    stackIn_4_0 = this;
+                    stackIn_4_1 = 1;
                     break L2;
                   }
                 }
@@ -101,7 +78,7 @@ final class hpb extends le {
               if (param1 <= -60) {
                 break L3;
               } else {
-                discarded$2 = this.a(-4, 51);
+                this.a(-4, 51);
                 break L3;
               }
             }
@@ -111,27 +88,19 @@ final class hpb extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("hpb.F(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("hpb.F(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }
@@ -159,18 +128,17 @@ final class hpb extends le {
     }
 
     private final void c(int param0, int param1, int param2) {
-        int[] discarded$1 = null;
-        int var4 = 0;
-        int var5 = 0;
-        float var6 = 0.0f;
-        int var7 = 0;
+        int var4;
+        int var5;
+        float var6;
+        int var7;
         L0: {
           var7 = VoidHunters.field_G;
           var4 = grb.field_l[param1];
           if (param0 <= -54) {
             break L0;
           } else {
-            discarded$1 = this.a(-48, true);
+            this.a(-48, true);
             break L0;
           }
         }

@@ -11,9 +11,9 @@ final class wma {
     private eo[] field_g;
 
     final eo a(long param0, byte param1) {
-        eo var4 = null;
-        eo var5 = null;
-        int var6 = 0;
+        eo var4;
+        eo var5;
+        int var6;
         var6 = BachelorFridge.field_y;
         this.field_d = param0;
         var4 = this.field_g[(int)((long)(-1 + this.field_e) & param0)];
@@ -41,7 +41,6 @@ final class wma {
 
     final void a(eo param0, int param1, long param2) {
         eo var5 = null;
-        eo discarded$0 = null;
         try {
             if (!(null == param0.field_i)) {
                 param0.b(0);
@@ -51,7 +50,7 @@ final class wma {
             param0.field_m = var5;
             param0.field_i.field_m = param0;
             if (param1 != 91) {
-                discarded$0 = this.a(47);
+                this.a(47);
             }
             param0.field_m.field_i = param0;
             param0.field_h = param2;
@@ -99,27 +98,26 @@ final class wma {
     }
 
     final eo a(int param0) {
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;
         int fieldTemp$6 = 0;
-        eo discarded$7 = null;
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int var3 = 0;
-        eo var4 = null;
-        eo var35 = null;
-        eo var36 = null;
-        eo var37 = null;
-        eo var38 = null;
-        eo var41 = null;
+        int var3;
+        eo var4;
+        eo var35;
+        eo var36;
+        eo var37;
+        eo var38;
+        eo var41;
         var3 = BachelorFridge.field_y;
         if (param0 == -25177) {
           if ((this.field_a ^ -1) < -1) {
             if (this.field_g[this.field_a - 1] == this.field_f) {
               L0: while (true) {
                 if (this.field_e > this.field_a) {
-                  fieldTemp$5 = this.field_a;
+                  fieldTemp$3 = this.field_a;
                   this.field_a = this.field_a + 1;
-                  var38 = this.field_g[fieldTemp$5].field_m;
+                  var38 = this.field_g[fieldTemp$3].field_m;
                   if (this.field_g[this.field_a + -1] != var38) {
                     this.field_f = var38.field_m;
                     return var38;
@@ -138,9 +136,9 @@ final class wma {
           } else {
             L1: while (true) {
               if (this.field_e > this.field_a) {
-                fieldTemp$6 = this.field_a;
+                fieldTemp$4 = this.field_a;
                 this.field_a = this.field_a + 1;
-                var37 = this.field_g[fieldTemp$6].field_m;
+                var37 = this.field_g[fieldTemp$4].field_m;
                 if (this.field_g[this.field_a + -1] != var37) {
                   this.field_f = var37.field_m;
                   return var37;
@@ -153,7 +151,7 @@ final class wma {
             }
           }
         } else {
-          discarded$7 = this.a(72);
+          this.a(72);
           if ((this.field_a ^ -1) < -1) {
             if (this.field_g[this.field_a - 1] != this.field_f) {
               var35 = this.field_f;
@@ -162,9 +160,9 @@ final class wma {
             } else {
               L2: while (true) {
                 if (this.field_e > this.field_a) {
-                  fieldTemp$8 = this.field_a;
+                  fieldTemp$5 = this.field_a;
                   this.field_a = this.field_a + 1;
-                  var36 = this.field_g[fieldTemp$8].field_m;
+                  var36 = this.field_g[fieldTemp$5].field_m;
                   if (this.field_g[this.field_a + -1] != var36) {
                     this.field_f = var36.field_m;
                     return var36;
@@ -179,9 +177,9 @@ final class wma {
           } else {
             L3: while (true) {
               if (this.field_e > this.field_a) {
-                fieldTemp$9 = this.field_a;
+                fieldTemp$6 = this.field_a;
                 this.field_a = this.field_a + 1;
-                var4 = this.field_g[fieldTemp$9].field_m;
+                var4 = this.field_g[fieldTemp$6].field_m;
                 if (this.field_g[this.field_a + -1] != var4) {
                   this.field_f = var4.field_m;
                   return var4;
@@ -197,17 +195,16 @@ final class wma {
     }
 
     final eo a(byte param0) {
-        eo discarded$2 = null;
-        eo var2 = null;
-        eo var3 = null;
-        int var4 = 0;
+        eo var2;
+        eo var3;
+        int var4;
         var4 = BachelorFridge.field_y;
         if (null != this.field_c) {
           var2 = this.field_g[(int)(this.field_d & (long)(this.field_e - 1))];
           L0: while (true) {
             if (var2 == this.field_c) {
               if (param0 != -31) {
-                discarded$2 = this.a(-83L, (byte) 79);
+                this.a(-83L, (byte) 79);
                 this.field_c = null;
                 return null;
               } else {
@@ -231,18 +228,18 @@ final class wma {
     }
 
     wma(int param0) {
-        eo dupTemp$2 = null;
-        int var2 = 0;
-        eo var3 = null;
+        eo dupTemp$1 = null;
+        int var2;
+        eo var3;
         this.field_a = 0;
         this.field_g = new eo[param0];
         this.field_e = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new eo();
-            var3 = dupTemp$2;
-            this.field_g[var2] = dupTemp$2;
+            dupTemp$1 = new eo();
+            var3 = dupTemp$1;
+            this.field_g[var2] = dupTemp$1;
             var3.field_m = var3;
             var3.field_i = var3;
             var2++;

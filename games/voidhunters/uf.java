@@ -33,30 +33,16 @@ class uf extends htb {
     }
 
     final static void a(String param0, int param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
         int stackIn_17_0 = 0;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_10_0 = 0;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
         var3 = VoidHunters.field_G;
         try {
           L0: {
@@ -94,22 +80,18 @@ class uf extends htb {
                 if (!jib.field_o) {
                   if (fra.field_b <= od.field_a) {
                     if (od.field_a < fra.field_b - -k.field_r) {
-                      stackOut_15_0 = 1;
-                      stackIn_17_0 = stackOut_15_0;
+                      stackIn_17_0 = 1;
                       break L4;
                     } else {
-                      stackOut_14_0 = 0;
-                      stackIn_17_0 = stackOut_14_0;
+                      stackIn_17_0 = 0;
                       break L4;
                     }
                   } else {
-                    stackOut_12_0 = 0;
-                    stackIn_17_0 = stackOut_12_0;
+                    stackIn_17_0 = 0;
                     break L4;
                   }
                 } else {
-                  stackOut_10_0 = 0;
-                  stackIn_17_0 = stackOut_10_0;
+                  stackIn_17_0 = 0;
                   break L4;
                 }
               }
@@ -195,27 +177,19 @@ class uf extends htb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) (var2);
-            stackOut_41_1 = new StringBuilder().append("uf.P(");
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackIn_43_0 = (RuntimeException) (var2);
+
+            stackIn_43_1 = new StringBuilder().append("uf.P(");
+
             if (param0 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "null";
               break L9;
             } else {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "{...}";
               break L9;
             }
           }
@@ -224,9 +198,9 @@ class uf extends htb {
     }
 
     private final int i(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = VoidHunters.field_G;
         var2 = this.field_j.length();
         if (var2 == this.field_K) {
@@ -271,13 +245,13 @@ class uf extends htb {
     }
 
     private final void h(int param0) {
-        ar var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        at var9 = null;
+        ar var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        at var9;
         var8 = VoidHunters.field_G;
         if (!this.field_G) {
           this.field_s = 0;
@@ -349,13 +323,11 @@ class uf extends htb {
     }
 
     final boolean a(int param0, int param1, shb param2, char param3) {
-        int dupTemp$1 = 0;
-        RuntimeException var5 = null;
+        int dupTemp$0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_20_0 = 0;
-        Object stackIn_25_0 = null;
         Object stackIn_26_0 = null;
         Object stackIn_27_0 = null;
         int stackIn_27_1 = 0;
@@ -366,7 +338,6 @@ class uf extends htb {
         int stackIn_47_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_51_0 = 0;
-        Object stackIn_54_0 = null;
         Object stackIn_55_0 = null;
         Object stackIn_56_0 = null;
         int stackIn_56_1 = 0;
@@ -375,8 +346,6 @@ class uf extends htb {
         int stackIn_63_0 = 0;
         int stackIn_74_0 = 0;
         int stackIn_76_0 = 0;
-        RuntimeException stackIn_78_0 = null;
-        StringBuilder stackIn_78_1 = null;
         RuntimeException stackIn_79_0 = null;
         StringBuilder stackIn_79_1 = null;
         RuntimeException stackIn_80_0 = null;
@@ -384,40 +353,7 @@ class uf extends htb {
         String stackIn_80_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_73_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_59_0 = 0;
-        Object stackOut_53_0 = null;
-        Object stackOut_55_0 = null;
-        int stackOut_55_1 = 0;
-        Object stackOut_54_0 = null;
-        int stackOut_54_1 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_30_0 = 0;
-        Object stackOut_24_0 = null;
-        Object stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
-        Object stackOut_25_0 = null;
-        int stackOut_25_1 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_75_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_77_0 = null;
-        StringBuilder stackOut_77_1 = null;
-        RuntimeException stackOut_79_0 = null;
-        StringBuilder stackOut_79_1 = null;
-        String stackOut_79_2 = null;
-        RuntimeException stackOut_78_0 = null;
-        StringBuilder stackOut_78_1 = null;
-        String stackOut_78_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -469,17 +405,16 @@ class uf extends htb {
                               break L7;
                             } else {
                               this.field_j = this.field_j + param3;
-                              dupTemp$1 = this.field_j.length();
-                              this.field_K = dupTemp$1;
-                              this.field_H = dupTemp$1;
+                              dupTemp$0 = this.field_j.length();
+                              this.field_K = dupTemp$0;
+                              this.field_H = dupTemp$0;
                               break L7;
                             }
                           }
                           this.i((byte) -55);
                           break L5;
                         }
-                        stackOut_73_0 = 1;
-                        stackIn_74_0 = stackOut_73_0;
+                        stackIn_74_0 = 1;
                         decompiledRegionSelector0 = 14;
                         break L0;
                       } else {
@@ -495,15 +430,13 @@ class uf extends htb {
                         } else {
                           this.field_H = this.field_K + -1;
                           this.g((byte) 110);
-                          stackOut_62_0 = 1;
-                          stackIn_63_0 = stackOut_62_0;
+                          stackIn_63_0 = 1;
                           decompiledRegionSelector0 = 13;
                           break L0;
                         }
                       } else {
                         this.g((byte) 120);
-                        stackOut_59_0 = 1;
-                        stackIn_60_0 = stackOut_59_0;
+                        stackIn_60_0 = 1;
                         decompiledRegionSelector0 = 12;
                         break L0;
                       }
@@ -515,26 +448,20 @@ class uf extends htb {
                               break L8;
                             } else {
                               L9: {
-                                stackOut_53_0 = this;
-                                stackIn_55_0 = stackOut_53_0;
-                                stackIn_54_0 = stackOut_53_0;
+                                stackIn_55_0 = this;
+
                                 if (si.field_o[82]) {
-                                  stackOut_55_0 = this;
-                                  stackOut_55_1 = this.g(param0 + 15834);
-                                  stackIn_56_0 = stackOut_55_0;
-                                  stackIn_56_1 = stackOut_55_1;
+                                  stackIn_56_0 = this;
+                                  stackIn_56_1 = this.g(param0 + 15834);
                                   break L9;
                                 } else {
-                                  stackOut_54_0 = this;
-                                  stackOut_54_1 = -1 + this.field_K;
-                                  stackIn_56_0 = stackOut_54_0;
-                                  stackIn_56_1 = stackOut_54_1;
+                                  stackIn_56_0 = this;
+                                  stackIn_56_1 = -1 + this.field_K;
                                   break L9;
                                 }
                               }
                               this.a(stackIn_56_1, (byte) -74);
-                              stackOut_56_0 = 1;
-                              stackIn_57_0 = stackOut_56_0;
+                              stackIn_57_0 = 1;
                               decompiledRegionSelector0 = 11;
                               break L0;
                             }
@@ -544,8 +471,7 @@ class uf extends htb {
                                 if (-104 != (param1 ^ -1)) {
                                   if (-85 == (param1 ^ -1)) {
                                     this.k((byte) 68);
-                                    stackOut_50_0 = 1;
-                                    stackIn_51_0 = stackOut_50_0;
+                                    stackIn_51_0 = 1;
                                     decompiledRegionSelector0 = 10;
                                     break L0;
                                   } else {
@@ -557,8 +483,7 @@ class uf extends htb {
                                           break L10;
                                         } else {
                                           this.b(true);
-                                          stackOut_38_0 = 1;
-                                          stackIn_39_0 = stackOut_38_0;
+                                          stackIn_39_0 = 1;
                                           decompiledRegionSelector0 = 7;
                                           break L0;
                                         }
@@ -570,8 +495,7 @@ class uf extends htb {
                                       } else {
                                         if ((param1 ^ -1) == -67) {
                                           this.l((byte) 24);
-                                          stackOut_48_0 = 1;
-                                          stackIn_49_0 = stackOut_48_0;
+                                          stackIn_49_0 = 1;
                                           decompiledRegionSelector0 = 9;
                                           break L0;
                                         } else {
@@ -584,8 +508,7 @@ class uf extends htb {
                                     } else {
                                       if (-68 == (param1 ^ -1)) {
                                         this.f(7328);
-                                        stackOut_46_0 = 1;
-                                        stackIn_47_0 = stackOut_46_0;
+                                        stackIn_47_0 = 1;
                                         decompiledRegionSelector0 = 8;
                                         break L0;
                                       } else {
@@ -595,15 +518,13 @@ class uf extends htb {
                                   }
                                 } else {
                                   this.a(this.field_j.length(), (byte) -100);
-                                  stackOut_33_0 = 1;
-                                  stackIn_34_0 = stackOut_33_0;
+                                  stackIn_34_0 = 1;
                                   decompiledRegionSelector0 = 6;
                                   break L0;
                                 }
                               } else {
                                 this.a(0, (byte) -96);
-                                stackOut_30_0 = 1;
-                                stackIn_31_0 = stackOut_30_0;
+                                stackIn_31_0 = 1;
                                 decompiledRegionSelector0 = 5;
                                 break L0;
                               }
@@ -612,26 +533,20 @@ class uf extends htb {
                                 break L8;
                               } else {
                                 L12: {
-                                  stackOut_24_0 = this;
-                                  stackIn_26_0 = stackOut_24_0;
-                                  stackIn_25_0 = stackOut_24_0;
+                                  stackIn_26_0 = this;
+
                                   if (!si.field_o[82]) {
-                                    stackOut_26_0 = this;
-                                    stackOut_26_1 = this.field_K - -1;
-                                    stackIn_27_0 = stackOut_26_0;
-                                    stackIn_27_1 = stackOut_26_1;
+                                    stackIn_27_0 = this;
+                                    stackIn_27_1 = this.field_K - -1;
                                     break L12;
                                   } else {
-                                    stackOut_25_0 = this;
-                                    stackOut_25_1 = this.i(62);
-                                    stackIn_27_0 = stackOut_25_0;
-                                    stackIn_27_1 = stackOut_25_1;
+                                    stackIn_27_0 = this;
+                                    stackIn_27_1 = this.i(62);
                                     break L12;
                                   }
                                 }
                                 this.a(stackIn_27_1, (byte) -58);
-                                stackOut_27_0 = 1;
-                                stackIn_28_0 = stackOut_27_0;
+                                stackIn_28_0 = 1;
                                 decompiledRegionSelector0 = 4;
                                 break L0;
                               }
@@ -639,16 +554,14 @@ class uf extends htb {
                           }
                         } else {
                           this.e(82);
-                          stackOut_19_0 = 1;
-                          stackIn_20_0 = stackOut_19_0;
+                          stackIn_20_0 = 1;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         }
                       } else {
                         if (this.field_H != this.field_K) {
                           this.g((byte) 112);
-                          stackOut_16_0 = 1;
-                          stackIn_17_0 = stackOut_16_0;
+                          stackIn_17_0 = 1;
                           decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
@@ -657,8 +570,7 @@ class uf extends htb {
                           } else {
                             this.field_H = 1 + this.field_K;
                             this.g((byte) -38);
-                            stackOut_14_0 = 1;
-                            stackIn_15_0 = stackOut_14_0;
+                            stackIn_15_0 = 1;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           }
@@ -666,15 +578,13 @@ class uf extends htb {
                       }
                     }
                   }
-                  stackOut_75_0 = 0;
-                  stackIn_76_0 = stackOut_75_0;
+                  stackIn_76_0 = 0;
                   decompiledRegionSelector0 = 15;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -682,27 +592,19 @@ class uf extends htb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
             var5 = decompiledCaughtException;
-            stackOut_77_0 = (RuntimeException) (var5);
-            stackOut_77_1 = new StringBuilder().append("uf.N(").append(param0).append(',').append(param1).append(',');
-            stackIn_79_0 = stackOut_77_0;
-            stackIn_79_1 = stackOut_77_1;
-            stackIn_78_0 = stackOut_77_0;
-            stackIn_78_1 = stackOut_77_1;
+            stackIn_79_0 = (RuntimeException) (var5);
+
+            stackIn_79_1 = new StringBuilder().append("uf.N(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
-              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
-              stackOut_79_2 = "null";
-              stackIn_80_0 = stackOut_79_0;
-              stackIn_80_1 = stackOut_79_1;
-              stackIn_80_2 = stackOut_79_2;
+              stackIn_80_0 = (RuntimeException) ((Object) stackIn_79_0);
+              stackIn_80_1 = (StringBuilder) ((Object) stackIn_79_1);
+              stackIn_80_2 = "null";
               break L13;
             } else {
-              stackOut_78_0 = (RuntimeException) ((Object) stackIn_78_0);
-              stackOut_78_1 = (StringBuilder) ((Object) stackIn_78_1);
-              stackOut_78_2 = "{...}";
-              stackIn_80_0 = stackOut_78_0;
-              stackIn_80_1 = stackOut_78_1;
-              stackIn_80_2 = stackOut_78_2;
+              stackIn_80_0 = (RuntimeException) ((Object) stackIn_79_0);
+              stackIn_80_1 = (StringBuilder) ((Object) stackIn_79_1);
+              stackIn_80_2 = "{...}";
               break L13;
             }
           }
@@ -772,25 +674,15 @@ class uf extends htb {
     }
 
     final void a(boolean param0, int param1, String param2) {
-        int dupTemp$2 = 0;
+        int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
@@ -815,9 +707,9 @@ class uf extends htb {
                 }
               }
             }
-            dupTemp$2 = this.field_j.length();
-            this.field_H = dupTemp$2;
-            this.field_K = dupTemp$2;
+            dupTemp$1 = this.field_j.length();
+            this.field_H = dupTemp$1;
+            this.field_K = dupTemp$1;
             if (param0) {
               break L0;
             } else {
@@ -829,27 +721,19 @@ class uf extends htb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var4);
-            stackOut_9_1 = new StringBuilder().append("uf.DA(").append(param0).append(',').append(param1).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var4);
+
+            stackIn_11_1 = new StringBuilder().append("uf.DA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -859,9 +743,6 @@ class uf extends htb {
 
     private final void a(int param0, String param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -869,14 +750,7 @@ class uf extends htb {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -913,27 +787,19 @@ class uf extends htb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3);
-            stackOut_10_1 = new StringBuilder().append("uf.AA(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3);
+
+            stackIn_12_1 = new StringBuilder().append("uf.AA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L3;
             }
           }
@@ -947,10 +813,10 @@ class uf extends htb {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        long var6 = 0L;
-        at var8 = null;
-        at var10 = null;
-        at var11 = null;
+        long var6;
+        at var8;
+        at var10;
+        at var11;
         if (param2 > 47) {
           if (this.field_q != null) {
             if (-1 == (param1 ^ -1)) {
@@ -1033,21 +899,14 @@ class uf extends htb {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
-        RuntimeException var8 = null;
-        int var8_int = 0;
-        long var8_long = 0L;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         int stackIn_16_0 = 0;
         int stackIn_20_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -1055,26 +914,9 @@ class uf extends htb {
         String stackIn_24_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        Object stackOut_6_0 = null;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_19_0 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        int var8_int = 0;
+        long var8_long = 0L;
+        RuntimeException var8 = null;
         try {
           L0: {
             L1: {
@@ -1084,40 +926,30 @@ class uf extends htb {
                 if (this.field_q instanceof at) {
                   L2: {
                     var8_int = ((at) ((Object) this.field_q)).a(kc.field_b, uia.field_b, param5, param1, (shb) (this), -1);
-                    stackOut_3_0 = this;
-                    stackIn_5_0 = stackOut_3_0;
-                    stackIn_4_0 = stackOut_3_0;
+                    stackIn_5_0 = this;
+
                     if (0 == (var8_int ^ -1)) {
-                      stackOut_5_0 = this;
-                      stackOut_5_1 = 0;
-                      stackIn_6_0 = stackOut_5_0;
-                      stackIn_6_1 = stackOut_5_1;
+                      stackIn_6_0 = this;
+                      stackIn_6_1 = 0;
                       break L2;
                     } else {
-                      stackOut_4_0 = this;
-                      stackOut_4_1 = var8_int;
-                      stackIn_6_0 = stackOut_4_0;
-                      stackIn_6_1 = stackOut_4_1;
+                      stackIn_6_0 = this;
+                      stackIn_6_1 = var8_int;
                       break L2;
                     }
                   }
                   L3: {
                     this.a(stackIn_6_1, (byte) -84);
                     var8_long = wt.a(false);
-                    stackOut_6_0 = this;
-                    stackIn_8_0 = stackOut_6_0;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_8_0 = this;
+
                     if (-251L >= (var8_long - this.field_D ^ -1L)) {
-                      stackOut_8_0 = this;
-                      stackOut_8_1 = 0;
-                      stackIn_9_0 = stackOut_8_0;
-                      stackIn_9_1 = stackOut_8_1;
+                      stackIn_9_0 = this;
+                      stackIn_9_1 = 0;
                       break L3;
                     } else {
-                      stackOut_7_0 = this;
-                      stackOut_7_1 = 1;
-                      stackIn_9_0 = stackOut_7_0;
-                      stackIn_9_1 = stackOut_7_1;
+                      stackIn_9_0 = this;
+                      stackIn_9_1 = 1;
                       break L3;
                     }
                   }
@@ -1145,8 +977,7 @@ class uf extends htb {
                     }
                   }
                   this.field_D = var8_long;
-                  stackOut_15_0 = 1;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -1162,8 +993,7 @@ class uf extends htb {
                 break L6;
               }
             }
-            stackOut_19_0 = 0;
-            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_0 = 0;
             decompiledRegionSelector0 = 1;
             break L0;
           }
@@ -1171,27 +1001,19 @@ class uf extends htb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var8 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var8);
-            stackOut_21_1 = new StringBuilder().append("uf.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var8);
+
+            stackIn_23_1 = new StringBuilder().append("uf.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L7;
             }
           }
@@ -1205,8 +1027,8 @@ class uf extends htb {
     }
 
     private final int g(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = VoidHunters.field_G;
         if (param0 != this.field_K) {
           var2 = -1 + this.field_K;
@@ -1231,22 +1053,12 @@ class uf extends htb {
         RuntimeException runtimeException = null;
         int var6 = 0;
         at var7 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
@@ -1303,27 +1115,19 @@ class uf extends htb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             runtimeException = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (runtimeException);
-            stackOut_14_1 = new StringBuilder().append("uf.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (runtimeException);
+
+            stackIn_16_1 = new StringBuilder().append("uf.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L5;
             }
           }
@@ -1333,10 +1137,10 @@ class uf extends htb {
 
     private final void f(int param0) {
         try {
-            String var2 = null;
-            Exception var2_ref = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            String var2 = null;
+            Exception var2_ref = null;
             try {
               L0: {
                 var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
@@ -1378,7 +1182,7 @@ class uf extends htb {
 
     private final void l(byte param0) {
         try {
-            String var2 = null;
+            String var2;
             if (param0 == 24) {
               var2 = this.j((byte) -96);
               if (var2.length() > 0) {
@@ -1431,7 +1235,7 @@ class uf extends htb {
     }
 
     final void e(int param0) {
-        String var3 = null;
+        String var3;
         this.field_K = 0;
         if (param0 != 82) {
           var3 = (String) null;
@@ -1449,37 +1253,29 @@ class uf extends htb {
     }
 
     private final String j(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 != -96) {
           return (String) null;
         } else {
           L0: {
             if (this.field_H >= this.field_K) {
-              stackOut_3_0 = this.field_K;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = this.field_K;
               break L0;
             } else {
-              stackOut_2_0 = this.field_H;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = this.field_H;
               break L0;
             }
           }
           L1: {
             var2 = stackIn_4_0;
             if (this.field_H >= this.field_K) {
-              stackOut_6_0 = this.field_H;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = this.field_H;
               break L1;
             } else {
-              stackOut_5_0 = this.field_K;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = this.field_K;
               break L1;
             }
           }

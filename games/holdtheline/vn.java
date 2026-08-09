@@ -23,10 +23,6 @@ class vn {
     }
 
     final static void a(int param0, Object param1, ib param2) {
-        Exception var3 = null;
-        RuntimeException var3_ref = null;
-        int var3_int = 0;
-        int var4 = 0;
         java.awt.EventQueue stackIn_7_0 = null;
         java.awt.EventQueue stackIn_13_0 = null;
         RuntimeException stackIn_18_0 = null;
@@ -43,26 +39,12 @@ class vn {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
-        java.awt.EventQueue stackOut_6_0 = null;
-        java.awt.EventQueue stackOut_12_0 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
         int statePc = 0;
         Throwable caughtException = null;
+        int var3_int = 0;
+        Exception var3 = null;
+        RuntimeException var3_ref = null;
+        int var4 = 0;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -124,9 +106,8 @@ class vn {
                 }
                 case 6: {
                     try {
-                        stackOut_6_0 = param2.field_t;
-                        stackIn_13_0 = stackOut_6_0;
-                        stackIn_7_0 = stackOut_6_0;
+                        stackIn_13_0 = param2.field_t;
+                        stackIn_7_0 = stackIn_13_0;
                         if (var4 != 0) {
                             statePc = 13;
                         } else {
@@ -204,8 +185,7 @@ class vn {
                 }
                 case 12: {
                     try {
-                        stackOut_12_0 = param2.field_t;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = param2.field_t;
                         statePc = 13;
                         continue stateLoop;
                     } catch (Throwable stateCaught_12) {
@@ -250,12 +230,10 @@ class vn {
                 }
                 case 17: {
                     var3_ref = (RuntimeException) ((Object) caughtException);
-                    stackOut_17_0 = (RuntimeException) (var3_ref);
-                    stackOut_17_1 = new StringBuilder().append("vn.I(").append(param0).append(',');
-                    stackIn_19_0 = stackOut_17_0;
-                    stackIn_19_1 = stackOut_17_1;
-                    stackIn_18_0 = stackOut_17_0;
-                    stackIn_18_1 = stackOut_17_1;
+                    stackIn_19_0 = (RuntimeException) (var3_ref);
+                    stackIn_18_0 = stackIn_19_0;
+                    stackIn_19_1 = new StringBuilder().append("vn.I(").append(param0).append(',');
+                    stackIn_18_1 = stackIn_19_1;
                     if (param1 == null) {
                         statePc = 19;
                     } else {
@@ -264,32 +242,24 @@ class vn {
                     continue stateLoop;
                 }
                 case 18: {
-                    stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-                    stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-                    stackOut_18_2 = "{...}";
-                    stackIn_20_0 = stackOut_18_0;
-                    stackIn_20_1 = stackOut_18_1;
-                    stackIn_20_2 = stackOut_18_2;
+                    stackIn_20_0 = (RuntimeException) ((Object) stackIn_18_0);
+                    stackIn_20_1 = (StringBuilder) ((Object) stackIn_18_1);
+                    stackIn_20_2 = "{...}";
                     statePc = 20;
                     continue stateLoop;
                 }
                 case 19: {
-                    stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                    stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                    stackOut_19_2 = "null";
-                    stackIn_20_0 = stackOut_19_0;
-                    stackIn_20_1 = stackOut_19_1;
-                    stackIn_20_2 = stackOut_19_2;
+                    stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                    stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                    stackIn_20_2 = "null";
                     statePc = 20;
                     continue stateLoop;
                 }
                 case 20: {
-                    stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-                    stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
-                    stackIn_22_0 = stackOut_20_0;
-                    stackIn_22_1 = stackOut_20_1;
-                    stackIn_21_0 = stackOut_20_0;
-                    stackIn_21_1 = stackOut_20_1;
+                    stackIn_22_0 = (RuntimeException) ((Object) stackIn_20_0);
+                    stackIn_21_0 = stackIn_22_0;
+                    stackIn_22_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
+                    stackIn_21_1 = stackIn_22_1;
                     if (param2 == null) {
                         statePc = 22;
                     } else {
@@ -298,22 +268,16 @@ class vn {
                     continue stateLoop;
                 }
                 case 21: {
-                    stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-                    stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-                    stackOut_21_2 = "{...}";
-                    stackIn_23_0 = stackOut_21_0;
-                    stackIn_23_1 = stackOut_21_1;
-                    stackIn_23_2 = stackOut_21_2;
+                    stackIn_23_0 = (RuntimeException) ((Object) stackIn_21_0);
+                    stackIn_23_1 = (StringBuilder) ((Object) stackIn_21_1);
+                    stackIn_23_2 = "{...}";
                     statePc = 23;
                     continue stateLoop;
                 }
                 case 22: {
-                    stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-                    stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-                    stackOut_22_2 = "null";
-                    stackIn_23_0 = stackOut_22_0;
-                    stackIn_23_1 = stackOut_22_1;
-                    stackIn_23_2 = stackOut_22_2;
+                    stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+                    stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+                    stackIn_23_2 = "null";
                     statePc = 23;
                     continue stateLoop;
                 }
@@ -339,37 +303,67 @@ class vn {
     }
 
     final static String a(String param0, String param1, int param2, String param3) {
-        String discarded$2 = null;
         int var4 = 0;
         int var5 = 0;
         String stackIn_5_0 = null;
         String stackIn_6_0 = null;
-        String stackOut_4_0 = null;
-        L0: {
-          var5 = HoldTheLine.field_D;
-          var4 = param3.indexOf(param1);
-          if (param2 <= -53) {
-            break L0;
-          } else {
-            discarded$2 = vn.a((String) null, (String) null, 105, (String) null);
-            break L0;
-          }
-        }
-        L1: while (true) {
-          if (var4 != -1) {
-            param3 = param3.substring(0, var4) + param0 + param3.substring(var4 - -param1.length());
-            stackOut_4_0 = (String) (param3);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
-            if (var5 == 0) {
-              var4 = ((String) (Object) stackIn_6_0).indexOf(param1, var4 + param0.length());
-              continue L1;
-            } else {
-              return stackIn_5_0;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var5 = HoldTheLine.field_D;
+                    var4 = param3.indexOf(param1);
+                    if (param2 <= -53) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    vn.a((String) null, (String) null, 105, (String) null);
+                    statePc = 2;
+                    continue stateLoop;
+                }
+                case 2: {
+                    if (var4 != -1) {
+                        statePc = 4;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    return param3;
+                }
+                case 4: {
+                    param3 = param3.substring(0, var4) + param0 + param3.substring(var4 - -param1.length());
+                    stackIn_6_0 = (String) (param3);
+                    stackIn_5_0 = stackIn_6_0;
+                    if (var5 == 0) {
+                        statePc = 6;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    return stackIn_5_0;
+                }
+                case 6: {
+                    var4 = ((String) (Object) stackIn_6_0).indexOf(param1, var4 + param0.length());
+                    if (var5 == 0) {
+                        statePc = 2;
+                    } else {
+                        statePc = 7;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    return param3;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          } else {
-            return param3;
-          }
         }
     }
 

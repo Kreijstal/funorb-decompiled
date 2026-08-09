@@ -12,15 +12,10 @@ final class pl {
         RuntimeException var1 = null;
         int var2 = 0;
         int stackIn_6_0 = 0;
-        boolean stackIn_10_0 = false;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_14_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        boolean stackOut_9_0 = false;
-        int stackOut_11_0 = 0;
-        int stackOut_14_0 = 0;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -33,46 +28,26 @@ final class pl {
               }
             }
             if (cm.field_a == null) {
-              stackOut_5_0 = -1;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = -1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               var1_int = 0;
               L2: while (true) {
-                L3: {
-                  L4: {
-                    if (cm.field_a.length <= var1_int) {
-                      break L4;
-                    } else {
-                      stackOut_9_0 = cm.field_a[var1_int].a((byte) -47);
-                      stackIn_15_0 = stackOut_9_0 ? 1 : 0;
-                      stackIn_10_0 = stackOut_9_0;
-                      if (var2 != 0) {
-                        break L3;
-                      } else {
-                        if (!stackIn_10_0) {
-                          var1_int++;
-                          if (var2 == 0) {
-                            continue L2;
-                          } else {
-                            break L4;
-                          }
-                        } else {
-                          stackOut_11_0 = var1_int;
-                          stackIn_12_0 = stackOut_11_0;
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        }
-                      }
-                    }
+                if (cm.field_a.length <= var1_int) {
+                  stackIn_14_0 = -1;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
+                } else {
+                  if (!cm.field_a[var1_int].a((byte) -47)) {
+                    var1_int++;
+                    continue L2;
+                  } else {
+                    stackIn_11_0 = var1_int;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
-                  stackOut_14_0 = -1;
-                  stackIn_15_0 = stackOut_14_0;
-                  break L3;
                 }
-                decompiledRegionSelector0 = 1;
-                break L0;
               }
             }
           }
@@ -85,9 +60,9 @@ final class pl {
           return stackIn_6_0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_15_0;
+            return stackIn_11_0;
           } else {
-            return stackIn_12_0;
+            return stackIn_14_0;
           }
         }
     }

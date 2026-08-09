@@ -10,40 +10,27 @@ final class jk {
 
     final static String a(byte param0, CharSequence param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        Object var7 = null;
+        CharSequence var7 = null;
         char[] var8 = null;
         char[] var9 = null;
-        char[] var10 = null;
-        char[] var11 = null;
-        String stackIn_24_0 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
+        String stackIn_21_0 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_23_0 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        RuntimeException var2 = null;
         var6 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
             L1: {
               var2_int = param1.length();
-              if (var2_int <= 20) {
+              if (-21 <= (var2_int ^ -1)) {
                 break L1;
               } else {
                 var2_int = 20;
@@ -54,21 +41,18 @@ final class jk {
               if (param0 == 104) {
                 break L2;
               } else {
-                var7 = null;
-                String discarded$2 = jk.a((byte) 61, (CharSequence) null);
+                var7 = (CharSequence) null;
+                jk.a((byte) 61, (CharSequence) null);
                 break L2;
               }
             }
-            var11 = new char[var2_int];
-            var10 = var11;
-            var9 = var10;
+            var9 = new char[var2_int];
             var8 = var9;
             var3 = var8;
             var4 = 0;
             L3: while (true) {
               if (var2_int <= var4) {
-                stackOut_23_0 = new String(var11);
-                stackIn_24_0 = stackOut_23_0;
+                stackIn_21_0 = new String(var9);
                 break L0;
               } else {
                 L4: {
@@ -81,7 +65,6 @@ final class jk {
                         break L5;
                       } else {
                         var3[var4] = (char)(97 + (-65 + var5));
-                        var4++;
                         break L4;
                       }
                     }
@@ -109,12 +92,10 @@ final class jk {
                         }
                       }
                     }
-                    var3[var4] = '_';
-                    var4++;
+                    var3[var4] = (char)95;
                     break L4;
                   }
                   var3[var4] = (char)var5;
-                  var4++;
                   break L4;
                 }
                 var4++;
@@ -126,33 +107,25 @@ final class jk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var2;
-            stackOut_25_1 = new StringBuilder().append("jk.A(").append(param0).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_24_0 = (RuntimeException) (var2);
+
+            stackIn_24_1 = new StringBuilder().append("jk.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L9;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L9;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
+          throw wg.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
-        return stackIn_24_0;
+        return stackIn_21_0;
     }
 
     final static boolean a(int param0) {
@@ -176,10 +149,6 @@ final class jk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new Random();
         field_a = "Reach the bridge's main navigation console and set the station to crash into the planet.";
     }

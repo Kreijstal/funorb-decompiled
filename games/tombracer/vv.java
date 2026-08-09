@@ -7,9 +7,8 @@ final class vv extends wv {
     private dea field_s;
 
     final int a(byte param0, int param1) {
-        int discarded$2 = 0;
         if (param0 <= 111) {
-          discarded$2 = this.g(16, -28);
+          this.g(16, -28);
           return aaa.a(false) / 2 - this.field_m.length * this.field_m[param1].e(-163) / 2 - -(this.field_m[param1].e(-163) * param1);
         } else {
           return aaa.a(false) / 2 - this.field_m.length * this.field_m[param1].e(-163) / 2 - -(this.field_m[param1].e(-163) * param1);
@@ -49,18 +48,16 @@ final class vv extends wv {
     }
 
     private final void h(int param0, int param1) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        da var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        String var9 = null;
-        String var10 = null;
-        String var12 = null;
-        String var13 = null;
+        int var3;
+        int var4;
+        int var5;
+        da var6;
+        int var7;
+        int var8;
+        String var9;
+        String var10;
+        String var12;
+        String var13;
         var3 = 500;
         var4 = -(var3 / 2) + aaa.a(false) / 2;
         var5 = param1 + 100;
@@ -74,7 +71,7 @@ final class vv extends wv {
           var10 = dfa.a('#', "<br>", var12, 0);
           var9 = var10;
           var9 = gl.a((byte) 85, var10, new String[]{wba.field_q[32]});
-          discarded$2 = be.a(var9, 1, var6, 2431750, var7, var8, 1, gg.field_f.c() / 2 + var5, var4, -1, (byte) 60, var3);
+          be.a(var9, 1, var6, 2431750, var7, var8, 1, gg.field_f.c() / 2 + var5, var4, -1, (byte) 60, var3);
           return;
         } else {
           var8 = var7 * 3;
@@ -82,7 +79,7 @@ final class vv extends wv {
           var10 = dfa.a('#', "<br>", var13, 0);
           var9 = var10;
           var9 = gl.a((byte) 85, var10, new String[]{wba.field_q[32]});
-          discarded$3 = be.a(var9, 1, var6, 2431750, var7, var8, 1, gg.field_f.c() / 2 + var5, var4, -1, (byte) 60, var3);
+          be.a(var9, 1, var6, 2431750, var7, var8, 1, gg.field_f.c() / 2 + var5, var4, -1, (byte) 60, var3);
           return;
         }
     }

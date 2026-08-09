@@ -28,39 +28,23 @@ final class fo {
     private int field_i;
 
     final void a(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        double var2 = 0.0;
-        double var4 = 0.0;
-        double var6 = 0.0;
-        int var8 = 0;
-        L0: {
-          fieldTemp$2 = this.field_e + 1;
-          this.field_e = this.field_e + 1;
-          if ((fieldTemp$2 ^ -1) <= -401) {
+        int fieldTemp$0 = this.field_e + 1;
+        this.field_e = this.field_e + 1;
+        if (!((fieldTemp$0 ^ -1) > -401)) {
             this.field_e = 0;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        L1: {
-          fieldTemp$3 = this.field_n + 1;
-          this.field_n = this.field_n + 1;
-          if (param0 >= (fieldTemp$3 ^ -1)) {
+        int fieldTemp$1 = this.field_n + 1;
+        this.field_n = this.field_n + 1;
+        if (!(param0 < (fieldTemp$1 ^ -1))) {
             this.field_n = 0;
-            break L1;
-          } else {
-            break L1;
-          }
         }
         this.field_p = this.field_b[this.field_n] + (this.field_v + this.field_h[this.field_e]);
         this.field_i = this.field_s[this.field_n] + (this.field_f + this.field_c[this.field_e]);
-        var2 = (double)(-this.field_p + this.field_d);
-        var4 = (double)(-this.field_i + this.field_q);
-        var6 = Math.atan(var2 / var4);
+        double var2 = (double)(-this.field_p + this.field_d);
+        double var4 = (double)(-this.field_i + this.field_q);
+        double var6 = Math.atan(var2 / var4);
         this.field_k = (int)(var6 * 32768.0 / 3.141592653589793);
-        var8 = this.field_l * 158 >> 1285262988;
+        int var8 = this.field_l * 158 >> 1285262988;
         this.field_r = this.field_p - -(int)(Math.sin(var6) * (double)var8);
         this.field_o = this.field_i + (int)(Math.cos(var6) * (double)var8);
         this.field_j[0].a(this.field_o, (byte) 48, this.field_r);
@@ -109,28 +93,10 @@ final class fo {
     }
 
     fo(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
+        double var9_double = 0.0;
+        double var10_double = 0.0;
         int var8 = 0;
         int var9 = 0;
-        double var9_double = 0.0;
-        int var10 = 0;
-        double var10_double = 0.0;
-        int[] stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        int[] stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int[] stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        int stackIn_5_2 = 0;
-        int[] stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int[] stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        int[] stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
         this.field_l = param0;
         this.field_v = param1;
         this.field_f = param2;
@@ -140,66 +106,28 @@ final class fo {
         this.field_n = ok.a(ea.field_b, -120, 172);
         this.field_c = new int[400];
         this.field_h = new int[400];
-        var6 = 200 * this.field_l >> 62553644;
-        var7 = this.field_l * 50 >> 1790494828;
-        var8 = 0;
-        L0: while (true) {
-          if (-401 >= (var8 ^ -1)) {
-            this.field_b = new int[172];
-            this.field_s = new int[172];
-            var8 = 50 * this.field_l >> 943383948;
-            var9 = 0;
-            L1: while (true) {
-              if (var9 >= 172) {
-                this.field_j = new ki[3];
-                var9 = this.field_l * 40 >> -2090671124;
-                var10 = 3000 * this.field_l >> -1831705172;
-                this.field_j[0] = new ki(this.field_r, this.field_o, var9, var10);
-                this.field_j[1] = new ki(this.field_r, this.field_o, var9, (int)((double)var10 * 0.9));
-                this.field_j[2] = new ki(this.field_r, this.field_o, var9, (int)((double)var10 * 0.8));
-                return;
-              } else {
-                var10_double = (double)var9 * 3.141592653589793 / 172.0;
-                this.field_b[var9] = (int)((double)var8 * Math.sin(2.0 * var10_double));
-                this.field_s[var9] = (int)(Math.cos(var10_double * 2.0) * (double)var8);
-                var9++;
-                continue L1;
-              }
-            }
-          } else {
-            L2: {
-              stackOut_2_0 = this.field_h;
-              stackOut_2_1 = var8;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              stackIn_3_0 = stackOut_2_0;
-              stackIn_3_1 = stackOut_2_1;
-              if (200 < var8) {
-                stackOut_4_0 = (int[]) ((Object) stackIn_4_0);
-                stackOut_4_1 = stackIn_4_1;
-                stackOut_4_2 = 400 + -var8;
-                stackIn_5_0 = stackOut_4_0;
-                stackIn_5_1 = stackOut_4_1;
-                stackIn_5_2 = stackOut_4_2;
-                break L2;
-              } else {
-                stackOut_3_0 = (int[]) ((Object) stackIn_3_0);
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = var8;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_5_1 = stackOut_3_1;
-                stackIn_5_2 = stackOut_3_2;
-                break L2;
-              }
-            }
-            stackIn_5_0[stackIn_5_1] = stackIn_5_2;
+        int var6 = 200 * this.field_l >> 62553644;
+        int var7 = this.field_l * 50 >> 1790494828;
+        for (var8 = 0; -401 < (var8 ^ -1); var8++) {
+            this.field_h[var8] = 200 >= var8 ? var8 : 400 + -var8;
             var9_double = (double)var8 * 3.141592653589793 / 400.0;
             this.field_h[var8] = (int)(Math.cos(var9_double * 2.0) * (double)var6);
             this.field_c[var8] = (int)((double)var7 * Math.sin(4.0 * var9_double));
-            var8++;
-            continue L0;
-          }
         }
+        this.field_b = new int[172];
+        this.field_s = new int[172];
+        var8 = 50 * this.field_l >> 943383948;
+        for (var9 = 0; var9 < 172; var9++) {
+            var10_double = (double)var9 * 3.141592653589793 / 172.0;
+            this.field_b[var9] = (int)((double)var8 * Math.sin(2.0 * var10_double));
+            this.field_s[var9] = (int)(Math.cos(var10_double * 2.0) * (double)var8);
+        }
+        this.field_j = new ki[3];
+        var9 = this.field_l * 40 >> -2090671124;
+        int var10 = 3000 * this.field_l >> -1831705172;
+        this.field_j[0] = new ki(this.field_r, this.field_o, var9, var10);
+        this.field_j[1] = new ki(this.field_r, this.field_o, var9, (int)((double)var10 * 0.9));
+        this.field_j[2] = new ki(this.field_r, this.field_o, var9, (int)((double)var10 * 0.8));
     }
 
     static {

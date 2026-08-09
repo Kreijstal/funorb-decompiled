@@ -10,8 +10,8 @@ final class ni {
     static vn[] field_b;
 
     final static String a(int param0, int param1, int param2, CharSequence[] param3) {
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -27,8 +27,6 @@ final class ni {
         String stackIn_8_0 = null;
         String stackIn_23_0 = null;
         String stackIn_25_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
@@ -36,18 +34,6 @@ final class ni {
         String stackIn_29_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_24_0 = null;
-        String stackOut_22_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
         var9 = ZombieDawn.field_J;
         try {
           L0: {
@@ -63,13 +49,11 @@ final class ni {
                     L2: while (true) {
                       if (var4_int <= var7) {
                         if (param2 > 25) {
-                          stackOut_24_0 = var6.toString();
-                          stackIn_25_0 = stackOut_24_0;
+                          stackIn_25_0 = var6.toString();
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
-                          stackOut_22_0 = (String) null;
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_23_0 = (String) null;
                           decompiledRegionSelector0 = 2;
                           break L0;
                         }
@@ -77,10 +61,10 @@ final class ni {
                         L3: {
                           var8 = param3[var7];
                           if (var8 != null) {
-                            discarded$5 = var6.append(var8);
+                            discarded$3 = var6.append(var8);
                             break L3;
                           } else {
-                            discarded$6 = var6.append("null");
+                            discarded$4 = var6.append("null");
                             break L3;
                           }
                         }
@@ -107,8 +91,7 @@ final class ni {
                 var10 = param3[param1];
                 var4 = var10;
                 if (var4 == null) {
-                  stackOut_7_0 = "null";
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = "null";
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -116,8 +99,7 @@ final class ni {
                 }
               }
             } else {
-              stackOut_2_0 = "";
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = "";
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -126,27 +108,19 @@ final class ni {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var4_ref);
-            stackOut_26_1 = new StringBuilder().append("ni.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_28_0 = (RuntimeException) (var4_ref);
+
+            stackIn_28_1 = new StringBuilder().append("ni.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L5;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L5;
             }
           }
@@ -177,11 +151,10 @@ final class ni {
     }
 
     final static void a(byte param0) {
-        String discarded$0 = null;
         dj.field_l = new vo();
         if (param0 != -78) {
             CharSequence[] var2 = (CharSequence[]) null;
-            discarded$0 = ni.a(40, 57, -80, (CharSequence[]) null);
+            ni.a(40, 57, -80, (CharSequence[]) null);
         }
     }
 

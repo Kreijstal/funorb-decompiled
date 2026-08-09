@@ -34,9 +34,8 @@ final class bna extends is {
     }
 
     final boolean e(byte param0) {
-        Object discarded$0 = null;
         if (param0 <= 29) {
-            discarded$0 = this.a(-10);
+            this.a(-10);
             return true;
         }
         return true;

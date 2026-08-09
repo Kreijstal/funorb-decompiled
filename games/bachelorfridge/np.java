@@ -10,19 +10,19 @@ final class np implements Iterator {
     private wha field_a;
 
     public final Object next() {
-        bw[] fieldTemp$4 = null;
-        int fieldTemp$5 = 0;
-        int var2 = 0;
-        bw var3 = null;
-        bw var4 = null;
+        bw[] fieldTemp$2 = null;
+        int fieldTemp$3 = 0;
+        int var2;
+        bw var3;
+        bw var4;
         var2 = BachelorFridge.field_y;
         if (this.field_b == this.field_a.field_c[this.field_c + -1]) {
           L0: while (true) {
             if (this.field_a.field_f > this.field_c) {
-              fieldTemp$4 = this.field_a.field_c;
-              fieldTemp$5 = this.field_c;
+              fieldTemp$2 = this.field_a.field_c;
+              fieldTemp$3 = this.field_c;
               this.field_c = this.field_c + 1;
-              var3 = fieldTemp$4[fieldTemp$5].field_b;
+              var3 = fieldTemp$2[fieldTemp$3].field_b;
               if (this.field_a.field_c[this.field_c + -1] != var3) {
                 this.field_d = var3;
                 this.field_b = var3.field_b;
@@ -66,7 +66,7 @@ final class np implements Iterator {
     public final boolean hasNext() {
         bw[] fieldTemp$2 = null;
         int fieldTemp$3 = 0;
-        int var2 = 0;
+        int var2;
         var2 = BachelorFridge.field_y;
         if (this.field_a.field_c[this.field_c + -1] == this.field_b) {
           L0: while (true) {

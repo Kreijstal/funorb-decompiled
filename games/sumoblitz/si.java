@@ -10,9 +10,8 @@ final class si extends nn {
     static hr field_d;
 
     final static int c(int param0, int param1) {
-        byte[] discarded$1 = null;
-        int var2 = 0;
-        File var3 = null;
+        int var2;
+        File var3;
         if (-1 != (param0 ^ -1)) {
           if (-1 > (param0 ^ -1)) {
             L0: {
@@ -114,7 +113,7 @@ final class si extends nn {
             } else {
               L10: {
                 var3 = (File) null;
-                discarded$1 = si.a((File) null, (byte) 38);
+                si.a((File) null, (byte) 38);
                 if (param0 < -256) {
                   param0 = param0 >> 8;
                   var2 += 8;
@@ -159,13 +158,11 @@ final class si extends nn {
     }
 
     final void a(byte[] param0, int param1) {
-        java.nio.Buffer discarded$0 = null;
-        java.nio.ByteBuffer discarded$1 = null;
         try {
             int var3_int = -124 % ((param1 - -47) / 62);
             this.field_b = java.nio.ByteBuffer.allocateDirect(param0.length);
-            discarded$0 = this.field_b.position(0);
-            discarded$1 = this.field_b.put(param0);
+            this.field_b.position(0);
+            this.field_b.put(param0);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) ((Object) runtimeException), "si.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -175,55 +172,35 @@ final class si extends nn {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var2_int = -1 % ((39 - param1) / 49);
-            stackOut_0_0 = kq.a((int)param0.length(), param0, (byte) 103);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = kq.a((int)param0.length(), param0, (byte) 103);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var2);
-            stackOut_2_1 = new StringBuilder().append("si.N(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var2);
+
+            stackIn_4_1 = new StringBuilder().append("si.N(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -236,26 +213,22 @@ final class si extends nn {
     }
 
     final byte[] a(int param0, int param1, int param2) {
-        java.nio.Buffer discarded$8 = null;
-        java.nio.ByteBuffer discarded$9 = null;
-        java.nio.Buffer discarded$10 = null;
-        java.nio.ByteBuffer discarded$11 = null;
-        byte[] var4 = null;
-        java.applet.Applet var5 = null;
-        byte[] var6 = null;
+        byte[] var4;
+        java.applet.Applet var5;
+        byte[] var6;
         if (param2 != 15747) {
           var5 = (java.applet.Applet) null;
           si.a((java.applet.Applet) null, (byte) 104);
           var6 = new byte[param1];
           var4 = var6;
-          discarded$8 = this.field_b.position(param0);
-          discarded$9 = this.field_b.get(var6, 0, param1);
+          this.field_b.position(param0);
+          this.field_b.get(var6, 0, param1);
           return var6;
         } else {
           var6 = new byte[param1];
           var4 = var6;
-          discarded$10 = this.field_b.position(param0);
-          discarded$11 = this.field_b.get(var6, 0, param1);
+          this.field_b.position(param0);
+          this.field_b.get(var6, 0, param1);
           return var6;
         }
     }
@@ -285,8 +258,6 @@ final class si extends nn {
         RuntimeException runtimeException = null;
         String var2 = null;
         CharSequence var3 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -294,14 +265,6 @@ final class si extends nn {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -333,27 +296,19 @@ final class si extends nn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (runtimeException);
-            stackOut_7_1 = new StringBuilder().append("si.M(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (runtimeException);
+
+            stackIn_9_1 = new StringBuilder().append("si.M(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -367,15 +322,14 @@ final class si extends nn {
     }
 
     final byte[] a(boolean param0) {
-        byte[] discarded$23 = null;
-        byte[] var2 = null;
-        byte[] var3 = null;
+        byte[] var2;
+        byte[] var3;
         var3 = new byte[this.field_b.capacity()];
         var2 = var3;
-        java.nio.Buffer discarded$21 = this.field_b.position(0);
-        java.nio.ByteBuffer discarded$22 = this.field_b.get(var3);
+        this.field_b.position(0);
+        this.field_b.get(var3);
         if (param0) {
-          discarded$23 = this.a(false);
+          this.a(false);
           return var3;
         } else {
           return var3;

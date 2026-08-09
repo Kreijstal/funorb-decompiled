@@ -37,7 +37,7 @@ final class pk {
     }
 
     final af a(boolean param0) {
-        af var2 = null;
+        af var2;
         this.field_p = pd.field_b;
         if (param0) {
           this.field_r = ad.field_d;
@@ -66,7 +66,7 @@ final class pk {
     }
 
     final boolean c(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = 71 / ((-20 - param0) / 62);
         if (this.field_s <= ok.field_c) {
           if (-1 <= (s.field_x ^ -1)) {
@@ -80,10 +80,10 @@ final class pk {
     }
 
     private final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = EscapeVector.field_A;
         var2 = this.field_h;
         var3 = this.field_n;
@@ -516,7 +516,7 @@ final class pk {
     }
 
     final void b(int param0) {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         if (null == df.field_d) {
           L0: {
             if (-1 <= (s.field_x ^ -1)) {
@@ -570,9 +570,9 @@ final class pk {
             }
           } else {
             if (param0 == 9477) {
-              fieldTemp$1 = this.field_d - 1;
+              fieldTemp$0 = this.field_d - 1;
               this.field_d = this.field_d - 1;
-              if ((fieldTemp$1 ^ -1) < -1) {
+              if ((fieldTemp$0 ^ -1) < -1) {
                 return;
               } else {
                 this.field_d = this.field_b;

@@ -31,7 +31,7 @@ final class vp {
         if (param0 == 50) {
             return null;
         }
-        ij discarded$0 = this.b(-23);
+        this.b(-23);
         return null;
     }
 

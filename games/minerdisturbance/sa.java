@@ -38,7 +38,6 @@ final class sa extends pi {
         int var4 = 0;
         int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
         var4 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -62,8 +61,7 @@ final class sa extends pi {
             }
             L3: while (true) {
               if (0 == param0) {
-                stackOut_7_0 = param1;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = param1;
                 break L0;
               } else {
                 var3_int = param1 % param0;

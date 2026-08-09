@@ -17,32 +17,19 @@ final class jr implements isa {
     private int field_m;
 
     public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        jla var11 = null;
         ae stackIn_5_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_4_0 = null;
-        ae stackOut_3_0 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        jla var11 = null;
         try {
           L0: {
             L1: {
@@ -55,12 +42,10 @@ final class jr implements isa {
             }
             L2: {
               if (!(param0 instanceof jla)) {
-                stackOut_4_0 = null;
-                stackIn_5_0 = (ae) ((Object) stackOut_4_0);
+                stackIn_5_0 = null;
                 break L2;
               } else {
-                stackOut_3_0 = (ae) (param0);
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = (ae) (param0);
                 break L2;
               }
             }
@@ -98,7 +83,7 @@ final class jr implements isa {
             }
             if (null != this.field_k) {
               var10 = this.field_l + this.field_e + this.field_m;
-              discarded$1 = this.field_k.a(param0.field_o, param0.field_i + (param1 - -var10), param3 + (param0.field_n - -this.field_a), param0.field_m - (this.field_m + var10), param0.field_p - (this.field_m << -1319039231), this.field_f, this.field_i, this.field_g, this.field_h, 0);
+              this.field_k.a(param0.field_o, param0.field_i + (param1 - -var10), param3 + (param0.field_n - -this.field_a), param0.field_m - (this.field_m + var10), param0.field_p - (this.field_m << -1319039231), this.field_f, this.field_i, this.field_g, this.field_h, 0);
               break L0;
             } else {
               return;
@@ -108,27 +93,19 @@ final class jr implements isa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var6);
-            stackOut_17_1 = new StringBuilder().append("jr.B(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var6);
+
+            stackIn_19_1 = new StringBuilder().append("jr.B(");
+
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L6;
             }
           }

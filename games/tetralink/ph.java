@@ -24,21 +24,10 @@ abstract class ph extends bg {
     static String[] field_C;
 
     private final void a(int param0, String param1, int param2, int param3, int param4) {
-        Exception var6 = null;
-        RuntimeException var6_ref = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
-        String var11 = null;
-        Object stackIn_4_0 = null;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -47,21 +36,13 @@ abstract class ph extends bg {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_5_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        Exception var6 = null;
+        RuntimeException var6_ref = null;
+        String var7 = null;
+        String var8 = null;
+        String var9 = null;
+        String var10 = null;
+        String var11 = null;
         try {
           L0: {
             try {
@@ -74,32 +55,25 @@ abstract class ph extends bg {
                     L3: {
                       this.field_y = this.getCodeBase().getHost();
                       var11 = this.field_y.toLowerCase();
-                      stackOut_3_0 = this;
-                      stackIn_6_0 = stackOut_3_0;
-                      stackIn_4_0 = stackOut_3_0;
+                      stackIn_6_0 = this;
+
                       if (var11.equals("jagex.com")) {
                         break L3;
                       } else {
-                        stackOut_4_0 = this;
-                        stackIn_7_0 = stackOut_4_0;
-                        stackIn_5_0 = stackOut_4_0;
+                        stackIn_7_0 = this;
+
                         if (!var11.endsWith(".jagex.com")) {
-                          stackOut_7_0 = this;
-                          stackOut_7_1 = 0;
-                          stackIn_8_0 = stackOut_7_0;
-                          stackIn_8_1 = stackOut_7_1;
+                          stackIn_8_0 = this;
+                          stackIn_8_1 = 0;
                           break L2;
                         } else {
-                          stackOut_5_0 = this;
-                          stackIn_6_0 = stackOut_5_0;
+                          stackIn_6_0 = this;
                           break L3;
                         }
                       }
                     }
-                    stackOut_6_0 = this;
-                    stackOut_6_1 = 1;
-                    stackIn_8_0 = stackOut_6_0;
-                    stackIn_8_1 = stackOut_6_1;
+                    stackIn_8_0 = this;
+                    stackIn_8_1 = 1;
                     break L2;
                   }
                   L4: {
@@ -180,27 +154,19 @@ abstract class ph extends bg {
           decompiledCaughtException = decompiledCaughtParameter1;
           L10: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var6_ref);
-            stackOut_24_1 = new StringBuilder().append("ph.T(").append(param0).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var6_ref);
+
+            stackIn_26_1 = new StringBuilder().append("ph.T(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L10;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L10;
             }
           }
@@ -292,6 +258,7 @@ abstract class ph extends bg {
 
     private final int a(int param0, boolean param1, boolean param2) {
         try {
+            Throwable decompiledCaughtException = null;
             int var4 = 0;
             int var5 = 0;
             Exception var6 = null;
@@ -301,7 +268,6 @@ abstract class ph extends bg {
             String var10 = null;
             String var11 = null;
             Boolean var12 = null;
-            Throwable decompiledCaughtException = null;
             var9 = TetraLink.field_J;
             var4 = wk.a(15658734, param1, hc.field_p, th.field_l);
             if (var4 == 0) {
@@ -558,7 +524,7 @@ abstract class ph extends bg {
     }
 
     final int n(int param0) {
-        int var2 = 0;
+        int var2;
         if (!this.field_b) {
           if (ca.c(-25945)) {
             if (!jm.field_b) {
@@ -639,25 +605,14 @@ abstract class ph extends bg {
     }
 
     final void c(byte param0) {
-        int discarded$34 = 0;
-        int discarded$35 = 0;
-        int discarded$36 = 0;
-        int var3 = 0;
-        Object stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
+        int discarded$6 = 0;
+        int discarded$7 = 0;
+        int var3;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         int stackIn_4_2 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
         L0: {
           var3 = TetraLink.field_J;
           if (!ac.a(-19403)) {
@@ -669,7 +624,7 @@ abstract class ph extends bg {
                 break L0;
               } else {
                 if (fn.field_R == 0) {
-                  discarded$34 = this.a(-37, false, false);
+                  discarded$6 = this.a(-37, false, false);
                   break L0;
                 } else {
                   t.b(hc.field_p, -21901);
@@ -679,31 +634,23 @@ abstract class ph extends bg {
             }
           } else {
             L1: {
-              stackOut_1_0 = this;
-              stackOut_1_1 = 116;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
+              stackIn_3_0 = this;
+
+              stackIn_3_1 = 116;
+
               if (null == hd.field_u) {
-                stackOut_3_0 = this;
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
+                stackIn_4_0 = this;
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
+                stackIn_4_0 = this;
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = 1;
                 break L1;
               }
             }
-            discarded$35 = this.a(stackIn_4_1, stackIn_4_2 != 0, false);
+            discarded$7 = this.a(stackIn_4_1, stackIn_4_2 != 0, false);
             break L0;
           }
         }
@@ -711,7 +658,7 @@ abstract class ph extends bg {
           if (param0 <= -19) {
             break L2;
           } else {
-            discarded$36 = this.n(2);
+            this.n(2);
             break L2;
           }
         }
@@ -749,48 +696,22 @@ abstract class ph extends bg {
     }
 
     final void d(boolean param0) {
-        int var2 = 0;
-        fj var3 = null;
-        int var4 = 0;
-        Object stackIn_24_0 = null;
         Object stackIn_25_0 = null;
         Object stackIn_26_0 = null;
         int stackIn_26_1 = 0;
-        int stackIn_29_0 = 0;
-        Object stackIn_29_1 = null;
-        StringBuilder stackIn_29_2 = null;
         int stackIn_30_0 = 0;
         Object stackIn_30_1 = null;
         StringBuilder stackIn_30_2 = null;
-        int stackIn_31_0 = 0;
-        Object stackIn_31_1 = null;
-        StringBuilder stackIn_31_2 = null;
-        int stackIn_31_3 = 0;
-        int stackIn_35_0 = 0;
+        int stackIn_31_0;
+        Object stackIn_31_1;
+        StringBuilder stackIn_31_2;
+        int stackIn_31_3;
         int stackIn_36_0 = 0;
         int stackIn_37_0 = 0;
         int stackIn_37_1 = 0;
-        int stackOut_28_0 = 0;
-        Object stackOut_28_1 = null;
-        StringBuilder stackOut_28_2 = null;
-        int stackOut_30_0 = 0;
-        Object stackOut_30_1 = null;
-        StringBuilder stackOut_30_2 = null;
-        int stackOut_30_3 = 0;
-        int stackOut_29_0 = 0;
-        Object stackOut_29_1 = null;
-        StringBuilder stackOut_29_2 = null;
-        int stackOut_29_3 = 0;
-        Object stackOut_23_0 = null;
-        Object stackOut_25_0 = null;
-        int stackOut_25_1 = 0;
-        Object stackOut_24_0 = null;
-        int stackOut_24_1 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_35_1 = 0;
+        int var2;
+        fj var3;
+        int var4;
         L0: {
           var4 = TetraLink.field_J;
           var2 = ua.field_c;
@@ -842,34 +763,23 @@ abstract class ph extends bg {
                                                 break L1;
                                               } else {
                                                 L3: {
-                                                  stackOut_28_0 = -111;
-                                                  stackOut_28_1 = null;
-                                                  stackOut_28_2 = new StringBuilder().append("MGS1: ");
-                                                  stackIn_30_0 = stackOut_28_0;
-                                                  stackIn_30_1 = stackOut_28_1;
-                                                  stackIn_30_2 = stackOut_28_2;
-                                                  stackIn_29_0 = stackOut_28_0;
-                                                  stackIn_29_1 = stackOut_28_1;
-                                                  stackIn_29_2 = stackOut_28_2;
+                                                  stackIn_30_0 = -111;
+
+                                                  stackIn_30_1 = null;
+
+                                                  stackIn_30_2 = new StringBuilder().append("MGS1: ");
+
                                                   if (param0) {
-                                                    stackOut_30_0 = stackIn_30_0;
-                                                    stackOut_30_1 = stackIn_30_1;
-                                                    stackOut_30_2 = (StringBuilder) ((Object) stackIn_30_2);
-                                                    stackOut_30_3 = 0;
-                                                    stackIn_31_0 = stackOut_30_0;
-                                                    stackIn_31_1 = stackOut_30_1;
-                                                    stackIn_31_2 = stackOut_30_2;
-                                                    stackIn_31_3 = stackOut_30_3;
+                                                    stackIn_31_0 = stackIn_30_0;
+                                                    stackIn_31_1 = stackIn_30_1;
+                                                    stackIn_31_2 = (StringBuilder) ((Object) stackIn_30_2);
+                                                    stackIn_31_3 = 0;
                                                     break L3;
                                                   } else {
-                                                    stackOut_29_0 = stackIn_29_0;
-                                                    stackOut_29_1 = stackIn_29_1;
-                                                    stackOut_29_2 = (StringBuilder) ((Object) stackIn_29_2);
-                                                    stackOut_29_3 = 1;
-                                                    stackIn_31_0 = stackOut_29_0;
-                                                    stackIn_31_1 = stackOut_29_1;
-                                                    stackIn_31_2 = stackOut_29_2;
-                                                    stackIn_31_3 = stackOut_29_3;
+                                                    stackIn_31_0 = stackIn_30_0;
+                                                    stackIn_31_1 = stackIn_30_1;
+                                                    stackIn_31_2 = (StringBuilder) ((Object) stackIn_30_2);
+                                                    stackIn_31_3 = 1;
                                                     break L3;
                                                   }
                                                 }
@@ -879,20 +789,15 @@ abstract class ph extends bg {
                                               }
                                             } else {
                                               L4: {
-                                                stackOut_23_0 = this;
-                                                stackIn_25_0 = stackOut_23_0;
-                                                stackIn_24_0 = stackOut_23_0;
+                                                stackIn_25_0 = this;
+
                                                 if (param0) {
-                                                  stackOut_25_0 = this;
-                                                  stackOut_25_1 = 0;
-                                                  stackIn_26_0 = stackOut_25_0;
-                                                  stackIn_26_1 = stackOut_25_1;
+                                                  stackIn_26_0 = this;
+                                                  stackIn_26_1 = 0;
                                                   break L4;
                                                 } else {
-                                                  stackOut_24_0 = this;
-                                                  stackOut_24_1 = 1;
-                                                  stackIn_26_0 = stackOut_24_0;
-                                                  stackIn_26_1 = stackOut_24_1;
+                                                  stackIn_26_0 = this;
+                                                  stackIn_26_1 = 1;
                                                   break L4;
                                                 }
                                               }
@@ -904,20 +809,15 @@ abstract class ph extends bg {
                                       }
                                     }
                                     L5: {
-                                      stackOut_34_0 = 85;
-                                      stackIn_36_0 = stackOut_34_0;
-                                      stackIn_35_0 = stackOut_34_0;
+                                      stackIn_36_0 = 85;
+
                                       if (-13 != (var2 ^ -1)) {
-                                        stackOut_36_0 = stackIn_36_0;
-                                        stackOut_36_1 = 0;
-                                        stackIn_37_0 = stackOut_36_0;
-                                        stackIn_37_1 = stackOut_36_1;
+                                        stackIn_37_0 = stackIn_36_0;
+                                        stackIn_37_1 = 0;
                                         break L5;
                                       } else {
-                                        stackOut_35_0 = stackIn_35_0;
-                                        stackOut_35_1 = 1;
-                                        stackIn_37_0 = stackOut_35_0;
-                                        stackIn_37_1 = stackOut_35_1;
+                                        stackIn_37_0 = stackIn_36_0;
+                                        stackIn_37_1 = 1;
                                         break L5;
                                       }
                                     }
@@ -978,41 +878,19 @@ abstract class ph extends bg {
     }
 
     final void b(int param0, boolean param1) {
-        int var3 = 0;
-        java.awt.Dimension var4_ref_java_awt_Dimension = null;
-        int var4 = 0;
-        int var5 = 0;
-        java.awt.Container var6 = null;
         int stackIn_24_0 = 0;
         int stackIn_97_0 = 0;
-        int stackIn_98_0 = 0;
-        String stackIn_98_1 = null;
-        int stackIn_98_2 = 0;
-        int stackIn_99_0 = 0;
         String stackIn_99_1 = null;
         int stackIn_99_2 = 0;
-        int stackIn_100_0 = 0;
-        String stackIn_100_1 = null;
-        int stackIn_100_2 = 0;
-        int stackIn_100_3 = 0;
+        String stackIn_100_1;
+        int stackIn_100_2;
+        int stackIn_100_3;
         int stackIn_131_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_96_0 = 0;
-        int stackOut_95_0 = 0;
-        int stackOut_97_0 = 0;
-        String stackOut_97_1 = null;
-        int stackOut_97_2 = 0;
-        int stackOut_99_0 = 0;
-        String stackOut_99_1 = null;
-        int stackOut_99_2 = 0;
-        int stackOut_99_3 = 0;
-        int stackOut_98_0 = 0;
-        String stackOut_98_1 = null;
-        int stackOut_98_2 = 0;
-        int stackOut_98_3 = 0;
-        int stackOut_130_0 = 0;
-        int stackOut_129_0 = 0;
+        int var3;
+        java.awt.Dimension var4_ref_java_awt_Dimension;
+        int var4;
+        int var5;
+        java.awt.Container var6;
         L0: {
           var5 = TetraLink.field_J;
           if (null == hn.field_M) {
@@ -1099,12 +977,10 @@ abstract class ph extends bg {
           }
           L8: {
             if ((a.field_h ^ -1) != 0) {
-              stackOut_23_0 = 0;
-              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_0 = 0;
               break L8;
             } else {
-              stackOut_22_0 = 1;
-              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_0 = 1;
               break L8;
             }
           }
@@ -1345,48 +1221,35 @@ abstract class ph extends bg {
                   }
                   L23: {
                     if (nl.field_j) {
-                      stackOut_96_0 = 0;
-                      stackIn_97_0 = stackOut_96_0;
+                      stackIn_97_0 = 0;
                       break L23;
                     } else {
-                      stackOut_95_0 = 1;
-                      stackIn_97_0 = stackOut_95_0;
+                      stackIn_97_0 = 1;
                       break L23;
                     }
                   }
                   L24: {
-                    stackOut_97_0 = stackIn_97_0;
-                    stackOut_97_1 = vg.field_Pb;
-                    stackOut_97_2 = 93;
-                    stackIn_99_0 = stackOut_97_0;
-                    stackIn_99_1 = stackOut_97_1;
-                    stackIn_99_2 = stackOut_97_2;
-                    stackIn_98_0 = stackOut_97_0;
-                    stackIn_98_1 = stackOut_97_1;
-                    stackIn_98_2 = stackOut_97_2;
+
+
+                    stackIn_99_1 = vg.field_Pb;
+
+                    stackIn_99_2 = 93;
+
                     if (nl.field_j) {
-                      stackOut_99_0 = stackIn_99_0;
-                      stackOut_99_1 = (String) ((Object) stackIn_99_1);
-                      stackOut_99_2 = stackIn_99_2;
-                      stackOut_99_3 = 0;
-                      stackIn_100_0 = stackOut_99_0;
-                      stackIn_100_1 = stackOut_99_1;
-                      stackIn_100_2 = stackOut_99_2;
-                      stackIn_100_3 = stackOut_99_3;
+
+                      stackIn_100_1 = (String) ((Object) stackIn_99_1);
+                      stackIn_100_2 = stackIn_99_2;
+                      stackIn_100_3 = 0;
                       break L24;
                     } else {
-                      stackOut_98_0 = stackIn_98_0;
-                      stackOut_98_1 = (String) ((Object) stackIn_98_1);
-                      stackOut_98_2 = stackIn_98_2;
-                      stackOut_98_3 = 1;
-                      stackIn_100_0 = stackOut_98_0;
-                      stackIn_100_1 = stackOut_98_1;
-                      stackIn_100_2 = stackOut_98_2;
-                      stackIn_100_3 = stackOut_98_3;
+
+                      stackIn_100_1 = (String) ((Object) stackIn_99_1);
+                      stackIn_100_2 = stackIn_99_2;
+                      stackIn_100_3 = 1;
                       break L24;
                     }
                   }
-                  hn.a(stackIn_100_0 != 0, stackIn_100_1, stackIn_100_2, stackIn_100_3 != 0);
+                  hn.a(stackIn_97_0 != 0, stackIn_100_1, stackIn_100_2, stackIn_100_3 != 0);
                   break L21;
                 }
                 L25: {
@@ -1481,12 +1344,10 @@ abstract class ph extends bg {
               if (en.field_L != null) {
                 L35: {
                   if (!en.field_L.a(-1210)) {
-                    stackOut_130_0 = 0;
-                    stackIn_131_0 = stackOut_130_0;
+                    stackIn_131_0 = 0;
                     break L35;
                   } else {
-                    stackOut_129_0 = 1;
-                    stackIn_131_0 = stackOut_129_0;
+                    stackIn_131_0 = 1;
                     break L35;
                   }
                 }

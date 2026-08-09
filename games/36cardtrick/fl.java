@@ -26,7 +26,6 @@ final class fl {
     }
 
     private final void a(int param0, int param1, int param2) {
-        int discarded$0 = 0;
         if (this.field_g < param0) {
             this.field_g = param0;
         }
@@ -35,7 +34,7 @@ final class fl {
         }
         this.field_f[param0] = param2;
         if (param1 != -11) {
-            discarded$0 = this.a((byte) -34);
+            this.a((byte) -34);
         }
     }
 
@@ -59,11 +58,18 @@ final class fl {
 
     final static void a(w param0, boolean param1) {
         try {
-            int discarded$1 = 0;
+            RuntimeException stackIn_66_0 = null;
+            StringBuilder stackIn_66_1 = null;
+            RuntimeException stackIn_67_0 = null;
+            StringBuilder stackIn_67_1 = null;
+            String stackIn_67_2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
             int var5 = 0;
+            int var6_int = 0;
             ClassNotFoundException var6 = null;
             InvalidClassException var6_ref = null;
             StreamCorruptedException var6_ref2 = null;
@@ -76,7 +82,6 @@ final class fl {
             NullPointerException var6_ref9 = null;
             Exception var6_ref10 = null;
             Throwable var6_ref11 = null;
-            int var6_int = 0;
             int var8 = 0;
             Object[] var9 = null;
             int var10_int = 0;
@@ -96,23 +101,6 @@ final class fl {
             java.lang.reflect.Field var26 = null;
             java.lang.reflect.Method var27 = null;
             java.lang.reflect.Method var28 = null;
-            RuntimeException stackIn_65_0 = null;
-            StringBuilder stackIn_65_1 = null;
-            RuntimeException stackIn_66_0 = null;
-            StringBuilder stackIn_66_1 = null;
-            RuntimeException stackIn_67_0 = null;
-            StringBuilder stackIn_67_1 = null;
-            String stackIn_67_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_64_0 = null;
-            StringBuilder stackOut_64_1 = null;
-            RuntimeException stackOut_66_0 = null;
-            StringBuilder stackOut_66_1 = null;
-            String stackOut_66_2 = null;
-            RuntimeException stackOut_65_0 = null;
-            StringBuilder stackOut_65_1 = null;
-            String stackOut_65_2 = null;
             var18 = null;
             var16 = null;
             var20 = null;
@@ -136,7 +124,7 @@ final class fl {
                         var5 = 0;
                         L2: while (true) {
                           if (var17.field_o <= var5) {
-                            discarded$1 = param0.b(var4, (byte) 5);
+                            param0.b(var4, (byte) 5);
                             var17.c(121);
                             decompiledRegionSelector0 = 2;
                             break L0;
@@ -372,27 +360,19 @@ final class fl {
               decompiledCaughtException = decompiledCaughtParameter12;
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_64_0 = (RuntimeException) (var2);
-                stackOut_64_1 = new StringBuilder().append("fl.F(");
-                stackIn_66_0 = stackOut_64_0;
-                stackIn_66_1 = stackOut_64_1;
-                stackIn_65_0 = stackOut_64_0;
-                stackIn_65_1 = stackOut_64_1;
+                stackIn_66_0 = (RuntimeException) (var2);
+
+                stackIn_66_1 = new StringBuilder().append("fl.F(");
+
                 if (param0 == null) {
-                  stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
-                  stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
-                  stackOut_66_2 = "null";
-                  stackIn_67_0 = stackOut_66_0;
-                  stackIn_67_1 = stackOut_66_1;
-                  stackIn_67_2 = stackOut_66_2;
+                  stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+                  stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+                  stackIn_67_2 = "null";
                   break L24;
                 } else {
-                  stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
-                  stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
-                  stackOut_65_2 = "{...}";
-                  stackIn_67_0 = stackOut_65_0;
-                  stackIn_67_1 = stackOut_65_1;
-                  stackIn_67_2 = stackOut_65_2;
+                  stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+                  stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+                  stackIn_67_2 = "{...}";
                   break L24;
                 }
               }
@@ -415,8 +395,8 @@ final class fl {
     }
 
     private final int d(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = Main.field_T;
         var3 = this.field_f.length;
         L0: while (true) {

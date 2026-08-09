@@ -6,9 +6,8 @@ final class hh extends qb {
     int field_h;
 
     public static void a(int param0) {
-        String discarded$0 = null;
         if (param0 != 20364) {
-            discarded$0 = hh.b((byte) -87);
+            hh.b((byte) -87);
             field_g = null;
             return;
         }
@@ -16,7 +15,7 @@ final class hh extends qb {
     }
 
     final static String b(byte param0) {
-        String var1 = null;
+        String var1;
         if (param0 != 23) {
           L0: {
             field_g = (sc) null;

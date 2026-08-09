@@ -3,12 +3,14 @@
  */
 final class gk extends bd {
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var9 = -param5;
         var10 = -param6;
         L0: while (true) {
@@ -23,9 +25,9 @@ final class gk extends bd {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3--;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -34,9 +36,9 @@ final class gk extends bd {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+                  param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -51,7 +53,9 @@ final class gk extends bd {
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var14;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -65,9 +69,9 @@ final class gk extends bd {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$11 = param5;
                 param5++;
-                param0 = param4[incrementValue$66];
+                param0 = param4[incrementValue$11];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -80,9 +84,9 @@ final class gk extends bd {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$12 = param7;
                   param7++;
-                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -97,54 +101,63 @@ final class gk extends bd {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        double var7 = 0.0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        double var24 = 0.0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        double var7;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        double var24;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var41;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((gk) this).field_w << 4);
-            param1 = param1 - (((gk) this).field_y << 4);
+            param0 = param0 - (this.field_w << 4);
+            param1 = param1 - (this.field_y << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((gk) this).field_z << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((gk) this).field_z << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((gk) this).field_A << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((gk) this).field_A << 4) - param1) * var10;
-            var17 = ((((gk) this).field_z << 4) - param0) * var10 + ((((gk) this).field_A << 4) - param1) * var9;
-            var18 = -((((gk) this).field_z << 4) - param0) * var9 + ((((gk) this).field_A << 4) - param1) * var10;
+            var13 = ((this.field_z << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_z << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_A << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_A << 4) - param1) * var10;
+            var17 = ((this.field_z << 4) - param0) * var10 + ((this.field_A << 4) - param1) * var9;
+            var18 = -((this.field_z << 4) - param0) * var9 + ((this.field_A << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -313,8 +326,8 @@ final class gk extends bd {
                               }
                             }
                             L17: {
-                              var32 = (1 + var35 - (((gk) this).field_z << 12) - var27) / var27;
-                              if ((1 + var35 - (((gk) this).field_z << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_z << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_z << 12) - var27) / var27 <= var37) {
                                 break L17;
                               } else {
                                 var37 = var32;
@@ -334,8 +347,8 @@ final class gk extends bd {
                               }
                             }
                             L19: {
-                              var32 = (1 + var36 - (((gk) this).field_A << 12) - var26) / var26;
-                              if ((1 + var36 - (((gk) this).field_A << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_A << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_A << 12) - var26) / var26 <= var37) {
                                 break L19;
                               } else {
                                 var37 = var32;
@@ -350,13 +363,13 @@ final class gk extends bd {
                                 var23 = var23 + si.field_e;
                                 continue L15;
                               } else {
-                                var38 = ((gk) this).field_D[(var36 >> 12) * ((gk) this).field_z + (var35 >> 12)];
+                                var38 = this.field_D[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                 var39 = si.field_i[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$9 = var34;
+                                incrementValue$0 = var34;
                                 var34++;
-                                si.field_i[incrementValue$9] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                si.field_i[incrementValue$0] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
                                 var36 = var36 + var26;
                                 var37++;
@@ -388,8 +401,8 @@ final class gk extends bd {
                               }
                             }
                             L23: {
-                              var32 = (1 + var35 - (((gk) this).field_z << 12) - var27) / var27;
-                              if ((1 + var35 - (((gk) this).field_z << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_z << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_z << 12) - var27) / var27 <= var37) {
                                 break L23;
                               } else {
                                 var37 = var32;
@@ -397,8 +410,8 @@ final class gk extends bd {
                               }
                             }
                             L24: {
-                              var32 = var36 - (((gk) this).field_A << 12);
-                              if (var36 - (((gk) this).field_A << 12) < 0) {
+                              var32 = var36 - (this.field_A << 12);
+                              if (var36 - (this.field_A << 12) < 0) {
                                 break L24;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -426,13 +439,13 @@ final class gk extends bd {
                                 var23 = var23 + si.field_e;
                                 continue L21;
                               } else {
-                                var38 = ((gk) this).field_D[(var36 >> 12) * ((gk) this).field_z + (var35 >> 12)];
+                                var38 = this.field_D[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                 var39 = si.field_i[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$10 = var34;
+                                incrementValue$1 = var34;
                                 var34++;
-                                si.field_i[incrementValue$10] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                si.field_i[incrementValue$1] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
                                 var36 = var36 + var26;
                                 var37++;
@@ -454,7 +467,7 @@ final class gk extends bd {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((gk) this).field_A << 12) < 0) {
+                              if (var36 - (this.field_A << 12) < 0) {
                                 L29: {
                                   if (var35 >= 0) {
                                     break L29;
@@ -467,8 +480,8 @@ final class gk extends bd {
                                   }
                                 }
                                 L30: {
-                                  var32 = (1 + var35 - (((gk) this).field_z << 12) - var27) / var27;
-                                  if ((1 + var35 - (((gk) this).field_z << 12) - var27) / var27 <= var37) {
+                                  var32 = (1 + var35 - (this.field_z << 12) - var27) / var27;
+                                  if ((1 + var35 - (this.field_z << 12) - var27) / var27 <= var37) {
                                     break L30;
                                   } else {
                                     var37 = var32;
@@ -479,13 +492,13 @@ final class gk extends bd {
                                   if (var37 >= 0) {
                                     break L28;
                                   } else {
-                                    var38 = ((gk) this).field_D[(var36 >> 12) * ((gk) this).field_z + (var35 >> 12)];
+                                    var38 = this.field_D[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                     var39 = si.field_i[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$11 = var34;
+                                    incrementValue$2 = var34;
                                     var34++;
-                                    si.field_i[incrementValue$11] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                    si.field_i[incrementValue$2] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
                                     var37++;
                                     continue L31;
@@ -518,8 +531,8 @@ final class gk extends bd {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((gk) this).field_z << 12);
-                              if (var35 - (((gk) this).field_z << 12) < 0) {
+                              var32 = var35 - (this.field_z << 12);
+                              if (var35 - (this.field_z << 12) < 0) {
                                 break L33;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -552,8 +565,8 @@ final class gk extends bd {
                               }
                             }
                             L36: {
-                              var32 = (1 + var36 - (((gk) this).field_A << 12) - var26) / var26;
-                              if ((1 + var36 - (((gk) this).field_A << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_A << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_A << 12) - var26) / var26 <= var37) {
                                 break L36;
                               } else {
                                 var37 = var32;
@@ -568,13 +581,13 @@ final class gk extends bd {
                                 var23 = var23 + si.field_e;
                                 continue L32;
                               } else {
-                                var38 = ((gk) this).field_D[(var36 >> 12) * ((gk) this).field_z + (var35 >> 12)];
+                                var38 = this.field_D[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                 var39 = si.field_i[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$12 = var34;
+                                incrementValue$3 = var34;
                                 var34++;
-                                si.field_i[incrementValue$12] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                si.field_i[incrementValue$3] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
                                 var36 = var36 + var26;
                                 var37++;
@@ -594,8 +607,8 @@ final class gk extends bd {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((gk) this).field_z << 12);
-                              if (var35 - (((gk) this).field_z << 12) < 0) {
+                              var32 = var35 - (this.field_z << 12);
+                              if (var35 - (this.field_z << 12) < 0) {
                                 break L39;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -616,8 +629,8 @@ final class gk extends bd {
                               }
                             }
                             L41: {
-                              var32 = var36 - (((gk) this).field_A << 12);
-                              if (var36 - (((gk) this).field_A << 12) < 0) {
+                              var32 = var36 - (this.field_A << 12);
+                              if (var36 - (this.field_A << 12) < 0) {
                                 break L41;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -645,13 +658,13 @@ final class gk extends bd {
                                 var23 = var23 + si.field_e;
                                 continue L38;
                               } else {
-                                var38 = ((gk) this).field_D[(var36 >> 12) * ((gk) this).field_z + (var35 >> 12)];
+                                var38 = this.field_D[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                 var39 = si.field_i[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$13 = var34;
+                                incrementValue$4 = var34;
                                 var34++;
-                                si.field_i[incrementValue$13] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                si.field_i[incrementValue$4] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
                                 var36 = var36 + var26;
                                 var37++;
@@ -673,10 +686,10 @@ final class gk extends bd {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((gk) this).field_A << 12) < 0) {
+                              if (var36 - (this.field_A << 12) < 0) {
                                 L46: {
-                                  var32 = var35 - (((gk) this).field_z << 12);
-                                  if (var35 - (((gk) this).field_z << 12) < 0) {
+                                  var32 = var35 - (this.field_z << 12);
+                                  if (var35 - (this.field_z << 12) < 0) {
                                     break L46;
                                   } else {
                                     var32 = (var27 - var32) / var27;
@@ -699,13 +712,13 @@ final class gk extends bd {
                                   if (var37 >= 0) {
                                     break L45;
                                   } else {
-                                    var38 = ((gk) this).field_D[(var36 >> 12) * ((gk) this).field_z + (var35 >> 12)];
+                                    var38 = this.field_D[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                     var39 = si.field_i[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$14 = var34;
+                                    incrementValue$5 = var34;
                                     var34++;
-                                    si.field_i[incrementValue$14] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                    si.field_i[incrementValue$5] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
                                     var37++;
                                     continue L48;
@@ -740,7 +753,7 @@ final class gk extends bd {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((gk) this).field_z << 12) < 0) {
+                              if (var35 - (this.field_z << 12) < 0) {
                                 L51: {
                                   if (var36 >= 0) {
                                     break L51;
@@ -753,8 +766,8 @@ final class gk extends bd {
                                   }
                                 }
                                 L52: {
-                                  var32 = (1 + var36 - (((gk) this).field_A << 12) - var26) / var26;
-                                  if ((1 + var36 - (((gk) this).field_A << 12) - var26) / var26 <= var37) {
+                                  var32 = (1 + var36 - (this.field_A << 12) - var26) / var26;
+                                  if ((1 + var36 - (this.field_A << 12) - var26) / var26 <= var37) {
                                     break L52;
                                   } else {
                                     var37 = var32;
@@ -765,13 +778,13 @@ final class gk extends bd {
                                   if (var37 >= 0) {
                                     break L50;
                                   } else {
-                                    var38 = ((gk) this).field_D[(var36 >> 12) * ((gk) this).field_z + (var35 >> 12)];
+                                    var38 = this.field_D[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                     var39 = si.field_i[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$15 = var34;
+                                    incrementValue$6 = var34;
                                     var34++;
-                                    si.field_i[incrementValue$15] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                    si.field_i[incrementValue$6] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
                                     var37++;
                                     continue L53;
@@ -802,10 +815,10 @@ final class gk extends bd {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((gk) this).field_z << 12) < 0) {
+                              if (var35 - (this.field_z << 12) < 0) {
                                 L56: {
-                                  var32 = var36 - (((gk) this).field_A << 12);
-                                  if (var36 - (((gk) this).field_A << 12) < 0) {
+                                  var32 = var36 - (this.field_A << 12);
+                                  if (var36 - (this.field_A << 12) < 0) {
                                     break L56;
                                   } else {
                                     var32 = (var26 - var32) / var26;
@@ -828,13 +841,13 @@ final class gk extends bd {
                                   if (var37 >= 0) {
                                     break L55;
                                   } else {
-                                    var38 = ((gk) this).field_D[(var36 >> 12) * ((gk) this).field_z + (var35 >> 12)];
+                                    var38 = this.field_D[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                     var39 = si.field_i[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$16 = var34;
+                                    incrementValue$7 = var34;
                                     var34++;
-                                    si.field_i[incrementValue$16] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                    si.field_i[incrementValue$7] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
                                     var37++;
                                     continue L58;
@@ -867,19 +880,19 @@ final class gk extends bd {
                           var37 = var20;
                           if (var35 >= 0) {
                             if (var36 >= 0) {
-                              if (var35 - (((gk) this).field_z << 12) < 0) {
-                                if (var36 - (((gk) this).field_A << 12) < 0) {
+                              if (var35 - (this.field_z << 12) < 0) {
+                                if (var36 - (this.field_A << 12) < 0) {
                                   L61: while (true) {
                                     if (var37 >= 0) {
                                       break L60;
                                     } else {
-                                      var38 = ((gk) this).field_D[(var36 >> 12) * ((gk) this).field_z + (var35 >> 12)];
+                                      var38 = this.field_D[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                       var39 = si.field_i[var34];
                                       var40 = var38 >>> 24;
                                       var41 = 256 - var40;
-                                      int incrementValue$17 = var34;
+                                      incrementValue$8 = var34;
                                       var34++;
-                                      si.field_i[incrementValue$17] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                      si.field_i[incrementValue$8] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                       var37++;
                                       continue L61;
                                     }
@@ -926,148 +939,86 @@ final class gk extends bd {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
         int var14 = 0;
+        int var13 = 0;
         int var15 = 0;
-        if (param2 <= 0) {
-          return;
-        } else {
-          if (param3 > 0) {
-            L0: {
-              var5 = ((gk) this).field_z;
-              var6 = ((gk) this).field_A;
-              var7 = 0;
-              var8 = 0;
-              var9 = ((gk) this).field_u;
-              var10 = ((gk) this).field_r;
-              var11 = (var9 << 16) / param2;
-              var12 = (var10 << 16) / param3;
-              if (((gk) this).field_w <= 0) {
-                break L0;
-              } else {
-                var13 = ((((gk) this).field_w << 16) + var11 - 1) / var11;
+        if (param2 > 0) {
+            if (param3 <= 0) {
+                return;
+            }
+            var5 = this.field_z;
+            var6 = this.field_A;
+            var7 = 0;
+            var8 = 0;
+            var9 = this.field_u;
+            var10 = this.field_r;
+            var11 = (var9 << 16) / param2;
+            var12 = (var10 << 16) / param3;
+            if (this.field_w > 0) {
+                var13 = ((this.field_w << 16) + var11 - 1) / var11;
                 param0 = param0 + var13;
-                var7 = var7 + (var13 * var11 - (((gk) this).field_w << 16));
-                break L0;
-              }
+                var7 = var7 + (var13 * var11 - (this.field_w << 16));
             }
-            L1: {
-              if (((gk) this).field_y <= 0) {
-                break L1;
-              } else {
-                var13 = ((((gk) this).field_y << 16) + var12 - 1) / var12;
+            if (this.field_y > 0) {
+                var13 = ((this.field_y << 16) + var12 - 1) / var12;
                 param1 = param1 + var13;
-                var8 = var8 + (var13 * var12 - (((gk) this).field_y << 16));
-                break L1;
-              }
+                var8 = var8 + (var13 * var12 - (this.field_y << 16));
             }
-            L2: {
-              if (var5 >= var9) {
-                break L2;
-              } else {
+            if (var5 < var9) {
                 param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
-                break L2;
-              }
             }
-            L3: {
-              if (var6 >= var10) {
-                break L3;
-              } else {
+            if (var6 < var10) {
                 param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
-                break L3;
-              }
             }
-            L4: {
-              var13 = param0 + param1 * si.field_e;
-              var14 = si.field_e - param2;
-              if (param1 + param3 <= si.field_a) {
-                break L4;
-              } else {
+            var13 = param0 + param1 * si.field_e;
+            var14 = si.field_e - param2;
+            if (param1 + param3 > si.field_a) {
                 param3 = param3 - (param1 + param3 - si.field_a);
-                break L4;
-              }
             }
-            L5: {
-              if (param1 >= si.field_j) {
-                break L5;
-              } else {
+            if (param1 < si.field_j) {
                 var15 = si.field_j - param1;
                 param3 = param3 - var15;
                 var13 = var13 + var15 * si.field_e;
                 var8 = var8 + var12 * var15;
-                break L5;
-              }
             }
-            L6: {
-              if (param0 + param2 <= si.field_l) {
-                break L6;
-              } else {
+            if (param0 + param2 > si.field_l) {
                 var15 = param0 + param2 - si.field_l;
                 param2 = param2 - var15;
                 var14 = var14 + var15;
-                break L6;
-              }
             }
-            L7: {
-              if (param0 >= si.field_b) {
-                break L7;
-              } else {
+            if (param0 < si.field_b) {
                 var15 = si.field_b - param0;
                 param2 = param2 - var15;
                 var13 = var13 + var15;
                 var7 = var7 + var11 * var15;
                 var14 = var14 + var15;
-                break L7;
-              }
             }
-            gk.b(si.field_i, ((gk) this).field_D, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+            gk.b(si.field_i, this.field_D, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final void e(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + ((gk) this).field_w;
-          param1 = param1 + ((gk) this).field_y;
-          var3 = param0 + param1 * si.field_e;
-          var4 = 0;
-          var5 = ((gk) this).field_A;
-          var6 = ((gk) this).field_z;
-          var7 = si.field_e - var6;
-          var8 = 0;
-          if (param1 >= si.field_j) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_w;
+        param1 = param1 + this.field_y;
+        int var3 = param0 + param1 * si.field_e;
+        int var4 = 0;
+        int var5 = this.field_A;
+        int var6 = this.field_z;
+        int var7 = si.field_e - var6;
+        int var8 = 0;
+        if (param1 < si.field_j) {
             var9 = si.field_j - param1;
             var5 = var5 - var9;
             param1 = si.field_j;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * si.field_e;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= si.field_a) {
-            break L1;
-          } else {
+        if (param1 + var5 > si.field_a) {
             var5 = var5 - (param1 + var5 - si.field_a);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= si.field_b) {
-            break L2;
-          } else {
+        if (param0 < si.field_b) {
             var9 = si.field_b - param0;
             var6 = var6 - var9;
             param0 = si.field_b;
@@ -1075,72 +1026,43 @@ final class gk extends bd {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= si.field_l) {
-            break L3;
-          } else {
+        if (param0 + var6 > si.field_l) {
             var9 = param0 + var6 - si.field_l;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
-            gk.d(si.field_i, ((gk) this).field_D, 0, var4, var3, var6, var5, var7, var8);
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
+            gk.d(si.field_i, this.field_D, 0, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + ((gk) this).field_w;
-          param1 = param1 + ((gk) this).field_y;
-          var4 = param0 + param1 * si.field_e;
-          var5 = 0;
-          var6 = ((gk) this).field_A;
-          var7 = ((gk) this).field_z;
-          var8 = si.field_e - var7;
-          var9 = 0;
-          if (param1 >= si.field_j) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_w;
+        param1 = param1 + this.field_y;
+        int var4 = param0 + param1 * si.field_e;
+        int var5 = 0;
+        int var6 = this.field_A;
+        int var7 = this.field_z;
+        int var8 = si.field_e - var7;
+        int var9 = 0;
+        if (param1 < si.field_j) {
             var10 = si.field_j - param1;
             var6 = var6 - var10;
             param1 = si.field_j;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * si.field_e;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= si.field_a) {
-            break L1;
-          } else {
+        if (param1 + var6 > si.field_a) {
             var6 = var6 - (param1 + var6 - si.field_a);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= si.field_b) {
-            break L2;
-          } else {
+        if (param0 < si.field_b) {
             var10 = si.field_b - param0;
             var7 = var7 - var10;
             param0 = si.field_b;
@@ -1148,29 +1070,19 @@ final class gk extends bd {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= si.field_l) {
-            break L3;
-          } else {
+        if (param0 + var7 > si.field_l) {
             var10 = param0 + var7 - si.field_l;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
-            gk.d(si.field_i, ((gk) this).field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
+            gk.d(si.field_i, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
-          } else {
-            return;
-          }
         }
     }
 
@@ -1183,148 +1095,86 @@ final class gk extends bd {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int var14 = 0;
         int var15 = 0;
+        int var14 = 0;
         int var16 = 0;
-        if (param2 <= 0) {
-          return;
-        } else {
-          if (param3 > 0) {
-            L0: {
-              var6 = ((gk) this).field_z;
-              var7 = ((gk) this).field_A;
-              var8 = 0;
-              var9 = 0;
-              var10 = ((gk) this).field_u;
-              var11 = ((gk) this).field_r;
-              var12 = (var10 << 16) / param2;
-              var13 = (var11 << 16) / param3;
-              if (((gk) this).field_w <= 0) {
-                break L0;
-              } else {
-                var14 = ((((gk) this).field_w << 16) + var12 - 1) / var12;
+        if (param2 > 0) {
+            if (param3 <= 0) {
+                return;
+            }
+            var6 = this.field_z;
+            var7 = this.field_A;
+            var8 = 0;
+            var9 = 0;
+            var10 = this.field_u;
+            var11 = this.field_r;
+            var12 = (var10 << 16) / param2;
+            var13 = (var11 << 16) / param3;
+            if (this.field_w > 0) {
+                var14 = ((this.field_w << 16) + var12 - 1) / var12;
                 param0 = param0 + var14;
-                var8 = var8 + (var14 * var12 - (((gk) this).field_w << 16));
-                break L0;
-              }
+                var8 = var8 + (var14 * var12 - (this.field_w << 16));
             }
-            L1: {
-              if (((gk) this).field_y <= 0) {
-                break L1;
-              } else {
-                var14 = ((((gk) this).field_y << 16) + var13 - 1) / var13;
+            if (this.field_y > 0) {
+                var14 = ((this.field_y << 16) + var13 - 1) / var13;
                 param1 = param1 + var14;
-                var9 = var9 + (var14 * var13 - (((gk) this).field_y << 16));
-                break L1;
-              }
+                var9 = var9 + (var14 * var13 - (this.field_y << 16));
             }
-            L2: {
-              if (var6 >= var10) {
-                break L2;
-              } else {
+            if (var6 < var10) {
                 param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
-                break L2;
-              }
             }
-            L3: {
-              if (var7 >= var11) {
-                break L3;
-              } else {
+            if (var7 < var11) {
                 param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
-                break L3;
-              }
             }
-            L4: {
-              var14 = param0 + param1 * si.field_e;
-              var15 = si.field_e - param2;
-              if (param1 + param3 <= si.field_a) {
-                break L4;
-              } else {
+            var14 = param0 + param1 * si.field_e;
+            var15 = si.field_e - param2;
+            if (param1 + param3 > si.field_a) {
                 param3 = param3 - (param1 + param3 - si.field_a);
-                break L4;
-              }
             }
-            L5: {
-              if (param1 >= si.field_j) {
-                break L5;
-              } else {
+            if (param1 < si.field_j) {
                 var16 = si.field_j - param1;
                 param3 = param3 - var16;
                 var14 = var14 + var16 * si.field_e;
                 var9 = var9 + var13 * var16;
-                break L5;
-              }
             }
-            L6: {
-              if (param0 + param2 <= si.field_l) {
-                break L6;
-              } else {
+            if (param0 + param2 > si.field_l) {
                 var16 = param0 + param2 - si.field_l;
                 param2 = param2 - var16;
                 var15 = var15 + var16;
-                break L6;
-              }
             }
-            L7: {
-              if (param0 >= si.field_b) {
-                break L7;
-              } else {
+            if (param0 < si.field_b) {
                 var16 = si.field_b - param0;
                 param2 = param2 - var16;
                 var14 = var14 + var16;
                 var8 = var8 + var12 * var16;
                 var15 = var15 + var16;
-                break L7;
-              }
             }
-            gk.b(si.field_i, ((gk) this).field_D, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
+            gk.b(si.field_i, this.field_D, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final void d(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + (((gk) this).field_u - ((gk) this).field_z - ((gk) this).field_w);
-          param1 = param1 + ((gk) this).field_y;
-          var3 = param0 + param1 * si.field_e;
-          var4 = ((gk) this).field_z - 1;
-          var5 = ((gk) this).field_A;
-          var6 = ((gk) this).field_z;
-          var7 = si.field_e - var6;
-          var8 = var6 + var6;
-          if (param1 >= si.field_j) {
-            break L0;
-          } else {
+        param0 = param0 + (this.field_u - this.field_z - this.field_w);
+        param1 = param1 + this.field_y;
+        int var3 = param0 + param1 * si.field_e;
+        int var4 = this.field_z - 1;
+        int var5 = this.field_A;
+        int var6 = this.field_z;
+        int var7 = si.field_e - var6;
+        int var8 = var6 + var6;
+        if (param1 < si.field_j) {
             var9 = si.field_j - param1;
             var5 = var5 - var9;
             param1 = si.field_j;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * si.field_e;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= si.field_a) {
-            break L1;
-          } else {
+        if (param1 + var5 > si.field_a) {
             var5 = var5 - (param1 + var5 - si.field_a);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= si.field_b) {
-            break L2;
-          } else {
+        if (param0 < si.field_b) {
             var9 = si.field_b - param0;
             var6 = var6 - var9;
             param0 = si.field_b;
@@ -1332,72 +1182,43 @@ final class gk extends bd {
             var3 = var3 + var9;
             var8 = var8 - var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= si.field_l) {
-            break L3;
-          } else {
+        if (param0 + var6 > si.field_l) {
             var9 = param0 + var6 - si.field_l;
             var6 = var6 - var9;
             var8 = var8 - var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
-            gk.e(si.field_i, ((gk) this).field_D, 0, var4, var3, var6, var5, var7, var8);
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
+            gk.e(si.field_i, this.field_D, 0, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final void d(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + ((gk) this).field_w;
-          param1 = param1 + ((gk) this).field_y;
-          var4 = param0 + param1 * si.field_e;
-          var5 = 0;
-          var6 = ((gk) this).field_A;
-          var7 = ((gk) this).field_z;
-          var8 = si.field_e - var7;
-          var9 = 0;
-          if (param1 >= si.field_j) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_w;
+        param1 = param1 + this.field_y;
+        int var4 = param0 + param1 * si.field_e;
+        int var5 = 0;
+        int var6 = this.field_A;
+        int var7 = this.field_z;
+        int var8 = si.field_e - var7;
+        int var9 = 0;
+        if (param1 < si.field_j) {
             var10 = si.field_j - param1;
             var6 = var6 - var10;
             param1 = si.field_j;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * si.field_e;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= si.field_a) {
-            break L1;
-          } else {
+        if (param1 + var6 > si.field_a) {
             var6 = var6 - (param1 + var6 - si.field_a);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= si.field_b) {
-            break L2;
-          } else {
+        if (param0 < si.field_b) {
             var10 = si.field_b - param0;
             var7 = var7 - var10;
             param0 = si.field_b;
@@ -1405,72 +1226,43 @@ final class gk extends bd {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= si.field_l) {
-            break L3;
-          } else {
+        if (param0 + var7 > si.field_l) {
             var10 = param0 + var7 - si.field_l;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
-            gk.c(si.field_i, ((gk) this).field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
+            gk.c(si.field_i, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     final void c(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + ((gk) this).field_w;
-          param1 = param1 + ((gk) this).field_y;
-          var3 = param0 + param1 * si.field_e;
-          var4 = 0;
-          var5 = ((gk) this).field_A;
-          var6 = ((gk) this).field_z;
-          var7 = si.field_e - var6;
-          var8 = 0;
-          if (param1 >= si.field_j) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_w;
+        param1 = param1 + this.field_y;
+        int var3 = param0 + param1 * si.field_e;
+        int var4 = 0;
+        int var5 = this.field_A;
+        int var6 = this.field_z;
+        int var7 = si.field_e - var6;
+        int var8 = 0;
+        if (param1 < si.field_j) {
             var9 = si.field_j - param1;
             var5 = var5 - var9;
             param1 = si.field_j;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * si.field_e;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= si.field_a) {
-            break L1;
-          } else {
+        if (param1 + var5 > si.field_a) {
             var5 = var5 - (param1 + var5 - si.field_a);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= si.field_b) {
-            break L2;
-          } else {
+        if (param0 < si.field_b) {
             var9 = si.field_b - param0;
             var6 = var6 - var9;
             param0 = si.field_b;
@@ -1478,39 +1270,31 @@ final class gk extends bd {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= si.field_l) {
-            break L3;
-          } else {
+        if (param0 + var6 > si.field_l) {
             var9 = param0 + var6 - si.field_l;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        if (var6 <= 0) {
-          return;
-        } else {
-          if (var5 > 0) {
-            gk.d(si.field_i, ((gk) this).field_D, 0, var4, var3, var6, var5, var7, var8);
+        if (var6 > 0) {
+            if (var5 <= 0) {
+                return;
+            }
+            gk.d(si.field_i, this.field_D, 0, var4, var3, var6, var5, var7, var8);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var9 = -param5;
         var10 = -param6;
         L0: while (true) {
@@ -1525,9 +1309,9 @@ final class gk extends bd {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -1536,9 +1320,9 @@ final class gk extends bd {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+                  param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -1549,96 +1333,76 @@ final class gk extends bd {
     }
 
     final void b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int[] var22 = null;
-        int[] var23 = null;
-        int[] var24 = null;
-        int[] var25 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int[] var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int[] var22;
+        int[] var23;
         L0: {
-          var3 = ((gk) this).field_z >> 2;
-          var4 = ((gk) this).field_A >> 2;
-          param0 = param0 + ((gk) this).field_w / 4;
-          param1 = param1 + ((gk) this).field_y / 4;
+          var3 = this.field_z >> 2;
+          var4 = this.field_A >> 2;
+          param0 = param0 + this.field_w / 4;
+          param1 = param1 + this.field_y / 4;
           if (param0 >= si.field_b) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = si.field_b - param0 << 2;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = si.field_b - param0 << 2;
             break L0;
           }
         }
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= si.field_l) {
-            stackOut_5_0 = ((gk) this).field_z - 4;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = this.field_z - 4;
             break L1;
           } else {
-            stackOut_4_0 = (si.field_l - param0 << 2) - 4;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = (si.field_l - param0 << 2) - 4;
             break L1;
           }
         }
         L2: {
           var6 = stackIn_6_0;
           if (param1 >= si.field_j) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = si.field_j - param1 << 2;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = si.field_j - param1 << 2;
             break L2;
           }
         }
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= si.field_a) {
-            stackOut_11_0 = ((gk) this).field_A - 4;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = this.field_A - 4;
             break L3;
           } else {
-            stackOut_10_0 = (si.field_a - param1 << 2) - 4;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = (si.field_a - param1 << 2) - 4;
             break L3;
           }
         }
         var8 = stackIn_12_0;
-        var25 = new int[16];
-        var24 = var25;
-        var23 = var24;
+        var23 = new int[16];
         var22 = var23;
         var9 = var22;
         var10 = var7;
@@ -1652,12 +1416,12 @@ final class gk extends bd {
                 var10 += 4;
                 continue L4;
               } else {
-                var12 = var10 * ((gk) this).field_z + var11;
+                var12 = var10 * this.field_z + var11;
                 var13 = (param1 + (var10 >> 2)) * si.field_e + (param0 + (var11 >> 2));
                 var14 = 0;
                 L6: while (true) {
                   if (var14 >= 4) {
-                    var25 = var24;
+                    var23 = var22;
                     var14 = 0;
                     var15 = 0;
                     var16 = 0;
@@ -1680,11 +1444,11 @@ final class gk extends bd {
                           continue L5;
                         }
                       } else {
-                        var14 = var25[var19] >>> 24;
+                        var14 = var23[var19] >>> 24;
                         var15 = var15 + var14;
-                        var16 = var16 + var14 * (var25[var19] >> 16 & 255);
-                        var17 = var17 + var14 * (var25[var19] >> 8 & 255);
-                        var18 = var18 + var14 * (var25[var19] & 255);
+                        var16 = var16 + var14 * (var23[var19] >> 16 & 255);
+                        var17 = var17 + var14 * (var23[var19] >> 8 & 255);
+                        var18 = var18 + var14 * (var23[var19] & 255);
                         var19++;
                         continue L7;
                       }
@@ -1696,7 +1460,7 @@ final class gk extends bd {
                         var14++;
                         continue L6;
                       } else {
-                        var9[(var14 << 2) + var15] = ((gk) this).field_D[var12 + var14 * ((gk) this).field_z + var15];
+                        var9[(var14 << 2) + var15] = this.field_D[var12 + var14 * this.field_z + var15];
                         var15++;
                         continue L8;
                       }
@@ -1715,6 +1479,7 @@ final class gk extends bd {
         int var15 = 0;
         int var16 = 0;
         int var18 = 0;
+        int incrementValue$0 = 0;
         int var17 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
@@ -1725,7 +1490,7 @@ final class gk extends bd {
                 if (var16 != 0) {
                     var17 = 256 - var16;
                     var18 = param0[param5];
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
                 } else {
@@ -1740,100 +1505,74 @@ final class gk extends bd {
     }
 
     final void f(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int[] stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
         int[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         int[] stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_21_2 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int[] stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int[] stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        int stackOut_20_2 = 0;
-        int[] stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_19_2 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
         L0: {
-          var3 = ((gk) this).field_z >> 1;
-          var4 = ((gk) this).field_A >> 1;
-          param0 = param0 + ((gk) this).field_w / 2;
-          param1 = param1 + ((gk) this).field_y / 2;
+          var3 = this.field_z >> 1;
+          var4 = this.field_A >> 1;
+          param0 = param0 + this.field_w / 2;
+          param1 = param1 + this.field_y / 2;
           if (param0 >= si.field_b) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = si.field_b - param0 << 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = si.field_b - param0 << 1;
             break L0;
           }
         }
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= si.field_l) {
-            stackOut_5_0 = ((gk) this).field_z - 2;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = this.field_z - 2;
             break L1;
           } else {
-            stackOut_4_0 = (si.field_l - param0 << 1) - 2;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = (si.field_l - param0 << 1) - 2;
             break L1;
           }
         }
         L2: {
           var6 = stackIn_6_0;
           if (param1 >= si.field_j) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = si.field_j - param1 << 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = si.field_j - param1 << 1;
             break L2;
           }
         }
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= si.field_a) {
-            stackOut_11_0 = ((gk) this).field_A - 2;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = this.field_A - 2;
             break L3;
           } else {
-            stackOut_10_0 = (si.field_a - param1 << 1) - 2;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = (si.field_a - param1 << 1) - 2;
             break L3;
           }
         }
@@ -1843,7 +1582,7 @@ final class gk extends bd {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((gk) this).field_z + var5;
+            var10 = var9 * this.field_z + var5;
             var11 = (param1 + (var9 >> 1)) * si.field_e + (param0 + (var5 >> 1));
             var12 = var5;
             L5: while (true) {
@@ -1879,27 +1618,19 @@ final class gk extends bd {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = ((gk) this).field_D;
-                      stackOut_18_1 = var10 + (var19 & 1);
-                      stackIn_20_0 = stackOut_18_0;
-                      stackIn_20_1 = stackOut_18_1;
-                      stackIn_19_0 = stackOut_18_0;
-                      stackIn_19_1 = stackOut_18_1;
+                      stackIn_20_0 = this.field_D;
+
+                      stackIn_20_1 = var10 + (var19 & 1);
+
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) (Object) stackIn_20_0;
-                        stackOut_20_1 = stackIn_20_1;
-                        stackOut_20_2 = 0;
-                        stackIn_21_0 = stackOut_20_0;
-                        stackIn_21_1 = stackOut_20_1;
-                        stackIn_21_2 = stackOut_20_2;
+                        stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
+                        stackIn_21_1 = stackIn_20_1;
+                        stackIn_21_2 = 0;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) (Object) stackIn_19_0;
-                        stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = ((gk) this).field_z;
-                        stackIn_21_0 = stackOut_19_0;
-                        stackIn_21_1 = stackOut_19_1;
-                        stackIn_21_2 = stackOut_19_2;
+                        stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
+                        stackIn_21_1 = stackIn_20_1;
+                        stackIn_21_2 = this.field_z;
                         break L7;
                       }
                     }
@@ -1920,45 +1651,26 @@ final class gk extends bd {
     }
 
     final void c(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + ((gk) this).field_w;
-          param1 = param1 + ((gk) this).field_y;
-          var4 = param0 + param1 * si.field_e;
-          var5 = 0;
-          var6 = ((gk) this).field_A;
-          var7 = ((gk) this).field_z;
-          var8 = si.field_e - var7;
-          var9 = 0;
-          if (param1 >= si.field_j) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_w;
+        param1 = param1 + this.field_y;
+        int var4 = param0 + param1 * si.field_e;
+        int var5 = 0;
+        int var6 = this.field_A;
+        int var7 = this.field_z;
+        int var8 = si.field_e - var7;
+        int var9 = 0;
+        if (param1 < si.field_j) {
             var10 = si.field_j - param1;
             var6 = var6 - var10;
             param1 = si.field_j;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * si.field_e;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= si.field_a) {
-            break L1;
-          } else {
+        if (param1 + var6 > si.field_a) {
             var6 = var6 - (param1 + var6 - si.field_a);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= si.field_b) {
-            break L2;
-          } else {
+        if (param0 < si.field_b) {
             var10 = si.field_b - param0;
             var7 = var7 - var10;
             param0 = si.field_b;
@@ -1966,47 +1678,39 @@ final class gk extends bd {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= si.field_l) {
-            break L3;
-          } else {
+        if (param0 + var7 > si.field_l) {
             var10 = param0 + var7 - si.field_l;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        if (var7 <= 0) {
-          return;
-        } else {
-          if (var6 > 0) {
-            gk.b(0, 0, 0, si.field_i, ((gk) this).field_D, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        if (var7 > 0) {
+            if (var6 <= 0) {
+                return;
+            }
+            gk.b(0, 0, 0, si.field_i, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9, param2);
             return;
-          } else {
-            return;
-          }
         }
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
         var10 = param9 >> 16 & 255;
         var11 = param9 >> 8 & 255;
         var12 = param9 & 255;
@@ -2026,9 +1730,9 @@ final class gk extends bd {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                param2 = param1[incrementValue$2];
+                param2 = param1[incrementValue$0];
                 var17 = param2 >>> 24;
                 if (var17 == 0) {
                   param4++;
@@ -2061,9 +1765,9 @@ final class gk extends bd {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  int incrementValue$3 = param4;
+                  incrementValue$1 = param4;
                   param4++;
-                  param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
+                  param0[incrementValue$1] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
                   continue L1;
                 }
@@ -2081,6 +1785,7 @@ final class gk extends bd {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
+        int incrementValue$0 = 0;
         int var13 = param3;
         for (var14 = -param8; var14 < 0; var14++) {
             var15 = (param4 >> 16) * param11;
@@ -2089,7 +1794,7 @@ final class gk extends bd {
                 var18 = param0[param5];
                 var19 = (var17 >>> 24) * param12 >> 8;
                 var20 = 256 - var19;
-                int incrementValue$0 = param5;
+                incrementValue$0 = param5;
                 param5++;
                 param0[incrementValue$0] = ((var17 & 16711935) * var19 + (var18 & 16711935) * var20 & -16711936) + ((var17 & 65280) * var19 + (var18 & 65280) * var20 & 16711680) >>> 8;
                 param3 = param3 + param9;
@@ -2105,17 +1810,19 @@ final class gk extends bd {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int incrementValue$0 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
                 var14 = param1[incrementValue$0];
                 var15 = param0[param4];
-                int incrementValue$1 = param4;
+                incrementValue$1 = param4;
                 param4++;
                 param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
             }
@@ -2126,14 +1833,14 @@ final class gk extends bd {
 
     final gk i() {
         int var3 = 0;
-        gk var1 = new gk(((gk) this).field_z, ((gk) this).field_A);
-        var1.field_u = ((gk) this).field_u;
-        var1.field_r = ((gk) this).field_r;
-        var1.field_w = ((gk) this).field_w;
-        var1.field_y = ((gk) this).field_y;
-        int var2 = ((gk) this).field_D.length;
+        gk var1 = new gk(this.field_z, this.field_A);
+        var1.field_u = this.field_u;
+        var1.field_r = this.field_r;
+        var1.field_w = this.field_w;
+        var1.field_y = this.field_y;
+        int var2 = this.field_D.length;
         for (var3 = 0; var3 < var2; var3++) {
-            var1.field_D[var3] = ((gk) this).field_D[var3];
+            var1.field_D[var3] = this.field_D[var3];
         }
         return var1;
     }

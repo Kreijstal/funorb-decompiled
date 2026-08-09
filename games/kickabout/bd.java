@@ -17,20 +17,16 @@ final class bd extends qt {
     }
 
     final void a(byte param0, boolean param1) {
-        int var3 = 0;
-        int var4 = 0;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int var3;
+        int var4;
         L0: {
           super.a((byte) 117, param1);
           if (up.a((byte) -3)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -119,10 +115,10 @@ final class bd extends qt {
     }
 
     final static int a(int param0, boolean param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var3 = param2 >> 2141048528;
         var4 = param2 & 65535;
         if (param1) {
@@ -142,8 +138,8 @@ final class bd extends qt {
     }
 
     final static void e(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var2 = Kickabout.field_G;
         st.field_m = null;
         wq.field_g = false;
@@ -180,9 +176,21 @@ final class bd extends qt {
 
     final static void a(String param0, Throwable param1, int param2) {
         try {
-            int discarded$1 = 0;
-            Exception var3 = null;
-            String var3_ref = null;
+            bu stackIn_13_0;
+            java.net.URL stackIn_13_1;
+            java.net.URL stackIn_13_2;
+            java.net.URL stackIn_13_3;
+            StringBuilder stackIn_13_4;
+            bu stackIn_14_0;
+            java.net.URL stackIn_14_1;
+            java.net.URL stackIn_14_2;
+            java.net.URL stackIn_14_3;
+            StringBuilder stackIn_14_4;
+            String stackIn_14_5;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            String var3 = null;
+            Exception var3_ref = null;
             wu var4 = null;
             DataInputStream var5 = null;
             int var6 = 0;
@@ -190,50 +198,15 @@ final class bd extends qt {
             String var8 = null;
             String var9 = null;
             String var10 = null;
-            bu stackIn_12_0 = null;
-            java.net.URL stackIn_12_1 = null;
-            java.net.URL stackIn_12_2 = null;
-            java.net.URL stackIn_12_3 = null;
-            StringBuilder stackIn_12_4 = null;
-            bu stackIn_13_0 = null;
-            java.net.URL stackIn_13_1 = null;
-            java.net.URL stackIn_13_2 = null;
-            java.net.URL stackIn_13_3 = null;
-            StringBuilder stackIn_13_4 = null;
-            bu stackIn_14_0 = null;
-            java.net.URL stackIn_14_1 = null;
-            java.net.URL stackIn_14_2 = null;
-            java.net.URL stackIn_14_3 = null;
-            StringBuilder stackIn_14_4 = null;
-            String stackIn_14_5 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            bu stackOut_11_0 = null;
-            java.net.URL stackOut_11_1 = null;
-            java.net.URL stackOut_11_2 = null;
-            java.net.URL stackOut_11_3 = null;
-            StringBuilder stackOut_11_4 = null;
-            bu stackOut_13_0 = null;
-            java.net.URL stackOut_13_1 = null;
-            java.net.URL stackOut_13_2 = null;
-            java.net.URL stackOut_13_3 = null;
-            StringBuilder stackOut_13_4 = null;
-            String stackOut_13_5 = null;
-            bu stackOut_12_0 = null;
-            java.net.URL stackOut_12_1 = null;
-            java.net.URL stackOut_12_2 = null;
-            java.net.URL stackOut_12_3 = null;
-            StringBuilder stackOut_12_4 = null;
-            String stackOut_12_5 = null;
             var6 = Kickabout.field_G;
             try {
               L0: {
                 L1: {
-                  var3_ref = "";
+                  var3 = "";
                   if (param1 == null) {
                     break L1;
                   } else {
-                    var3_ref = le.a(true, param1);
+                    var3 = le.a(true, param1);
                     break L1;
                   }
                 }
@@ -241,67 +214,50 @@ final class bd extends qt {
                   if (param0 != null) {
                     L3: {
                       if (param1 != null) {
-                        var3_ref = var3_ref + " | ";
+                        var3 = var3 + " | ";
                         break L3;
                       } else {
                         break L3;
                       }
                     }
-                    var3_ref = var3_ref + param0;
+                    var3 = var3 + param0;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                or.a(var3_ref, param2 ^ 0);
-                var7 = aj.a(-1, ":", "%3a", var3_ref);
+                or.a(var3, param2 ^ 0);
+                var7 = aj.a(-1, ":", "%3a", var3);
                 var8 = aj.a(param2 ^ -2, "@", "%40", var7);
                 var9 = aj.a(-1, "&", "%26", var8);
                 var10 = aj.a(-1, "#", "%23", var9);
                 if (null != ug.field_a) {
                   L4: {
-                    stackOut_11_0 = sa.field_a;
-                    stackOut_11_1 = null;
-                    stackOut_11_2 = null;
-                    stackOut_11_3 = ug.field_a.getCodeBase();
-                    stackOut_11_4 = new StringBuilder().append("clienterror.ws?c=").append(ei.field_e).append("&u=");
-                    stackIn_13_0 = stackOut_11_0;
-                    stackIn_13_1 = stackOut_11_1;
-                    stackIn_13_2 = stackOut_11_2;
-                    stackIn_13_3 = stackOut_11_3;
-                    stackIn_13_4 = stackOut_11_4;
-                    stackIn_12_0 = stackOut_11_0;
-                    stackIn_12_1 = stackOut_11_1;
-                    stackIn_12_2 = stackOut_11_2;
-                    stackIn_12_3 = stackOut_11_3;
-                    stackIn_12_4 = stackOut_11_4;
+                    stackIn_13_0 = sa.field_a;
+
+                    stackIn_13_1 = null;
+
+                    stackIn_13_2 = null;
+
+                    stackIn_13_3 = ug.field_a.getCodeBase();
+
+                    stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(ei.field_e).append("&u=");
+
                     if (null == ds.field_b) {
-                      stackOut_13_0 = (bu) ((Object) stackIn_13_0);
-                      stackOut_13_1 = null;
-                      stackOut_13_2 = null;
-                      stackOut_13_3 = (java.net.URL) ((Object) stackIn_13_3);
-                      stackOut_13_4 = (StringBuilder) ((Object) stackIn_13_4);
-                      stackOut_13_5 = "" + tn.field_a;
-                      stackIn_14_0 = stackOut_13_0;
-                      stackIn_14_1 = stackOut_13_1;
-                      stackIn_14_2 = stackOut_13_2;
-                      stackIn_14_3 = stackOut_13_3;
-                      stackIn_14_4 = stackOut_13_4;
-                      stackIn_14_5 = stackOut_13_5;
+                      stackIn_14_0 = (bu) ((Object) stackIn_13_0);
+                      stackIn_14_1 = null;
+                      stackIn_14_2 = null;
+                      stackIn_14_3 = (java.net.URL) ((Object) stackIn_13_3);
+                      stackIn_14_4 = (StringBuilder) ((Object) stackIn_13_4);
+                      stackIn_14_5 = "" + tn.field_a;
                       break L4;
                     } else {
-                      stackOut_12_0 = (bu) ((Object) stackIn_12_0);
-                      stackOut_12_1 = null;
-                      stackOut_12_2 = null;
-                      stackOut_12_3 = (java.net.URL) ((Object) stackIn_12_3);
-                      stackOut_12_4 = (StringBuilder) ((Object) stackIn_12_4);
-                      stackOut_12_5 = ds.field_b;
-                      stackIn_14_0 = stackOut_12_0;
-                      stackIn_14_1 = stackOut_12_1;
-                      stackIn_14_2 = stackOut_12_2;
-                      stackIn_14_3 = stackOut_12_3;
-                      stackIn_14_4 = stackOut_12_4;
-                      stackIn_14_5 = stackOut_12_5;
+                      stackIn_14_0 = (bu) ((Object) stackIn_13_0);
+                      stackIn_14_1 = null;
+                      stackIn_14_2 = null;
+                      stackIn_14_3 = (java.net.URL) ((Object) stackIn_13_3);
+                      stackIn_14_4 = (StringBuilder) ((Object) stackIn_13_4);
+                      stackIn_14_5 = ds.field_b;
                       break L4;
                     }
                   }
@@ -313,7 +269,7 @@ final class bd extends qt {
                           break L6;
                         } else {
                           var5 = (DataInputStream) (var4.field_b);
-                          discarded$1 = var5.read();
+                          var5.read();
                           var5.close();
                           break L6;
                         }
@@ -333,7 +289,7 @@ final class bd extends qt {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L7: {
-                var3 = (Exception) (Object) decompiledCaughtException;
+                var3_ref = (Exception) (Object) decompiledCaughtException;
                 decompiledRegionSelector0 = 1;
                 break L7;
               }

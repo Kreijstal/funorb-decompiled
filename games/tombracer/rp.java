@@ -19,27 +19,18 @@ final class rp extends vg {
     final static int a(int param0, int param1, int param2, int param3) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param1 != -16226) {
           L0: {
             rp.a(false);
             if (param2 > param3) {
-              stackOut_11_0 = param2;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_0 = param2;
               break L0;
             } else {
               if (param3 > param0) {
-                stackOut_10_0 = param0;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = param0;
                 break L0;
               } else {
-                stackOut_9_0 = param3;
-                stackIn_12_0 = stackOut_9_0;
+                stackIn_12_0 = param3;
                 break L0;
               }
             }
@@ -48,17 +39,14 @@ final class rp extends vg {
         } else {
           L1: {
             if (param2 > param3) {
-              stackOut_5_0 = param2;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = param2;
               break L1;
             } else {
               if (param3 > param0) {
-                stackOut_4_0 = param0;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = param0;
                 break L1;
               } else {
-                stackOut_3_0 = param3;
-                stackIn_6_0 = stackOut_3_0;
+                stackIn_6_0 = param3;
                 break L1;
               }
             }

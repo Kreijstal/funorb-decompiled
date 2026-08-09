@@ -26,7 +26,7 @@ final class ek extends fb {
     }
 
     private final void f(byte param0) {
-        wk var3 = null;
+        wk var3;
         this.field_H = pb.a(so.field_a, 127, 1) + 128;
         if (param0 != -8) {
           var3 = (wk) null;
@@ -44,7 +44,7 @@ final class ek extends fb {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        int var5;
         this.field_L = param0;
         this.field_G = false;
         this.field_N = param1;
@@ -64,12 +64,10 @@ final class ek extends fb {
     }
 
     final void a(byte param0, wk param1) {
-        int fieldTemp$3 = 0;
+        int fieldTemp$2 = 0;
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -77,23 +75,15 @@ final class ek extends fb {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
               if (this.field_G) {
                 break L1;
               } else {
-                fieldTemp$3 = this.field_K - 1;
+                fieldTemp$2 = this.field_K - 1;
                 this.field_K = this.field_K - 1;
-                if (fieldTemp$3 > 0) {
+                if (fieldTemp$2 > 0) {
                   break L1;
                 } else {
                   L2: {
@@ -136,27 +126,19 @@ final class ek extends fb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             runtimeException = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (runtimeException);
-            stackOut_14_1 = new StringBuilder().append("ek.B(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (runtimeException);
+
+            stackIn_16_1 = new StringBuilder().append("ek.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }
@@ -185,14 +167,14 @@ final class ek extends fb {
     }
 
     final void g(int param0) {
-        int fieldTemp$3 = 0;
-        int fieldTemp$2 = this.field_D + 1;
+        int fieldTemp$1 = 0;
+        int fieldTemp$0 = this.field_D + 1;
         this.field_D = this.field_D + 1;
-        if (-5 >= (fieldTemp$2 ^ -1)) {
+        if (-5 >= (fieldTemp$0 ^ -1)) {
           this.field_D = 0;
-          fieldTemp$3 = this.field_F + 1;
+          fieldTemp$1 = this.field_F + 1;
           this.field_F = this.field_F + 1;
-          if (fieldTemp$3 < bg.field_o.length) {
+          if (fieldTemp$1 < bg.field_o.length) {
             if (param0 < 95) {
               this.a(-13, -95, -104, 35);
               return;

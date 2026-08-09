@@ -41,8 +41,9 @@ abstract class za extends vg {
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
-        RuntimeException var6 = null;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -63,7 +64,6 @@ abstract class za extends vg {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -98,92 +98,71 @@ abstract class za extends vg {
               }
             }
             L2: while (true) {
-              L3: {
-                if (-1 <= (var7 ^ -1)) {
-                  break L3;
-                } else {
-                  if (var26 == 0) {
-                    L4: {
-                      L5: {
-                        L6: {
-                          if (0 <= var13) {
-                            break L6;
-                          } else {
-                            L7: while (true) {
-                              if ((var13 ^ -1) <= -1) {
-                                break L6;
-                              } else {
-                                var14 = var14 + var20;
-                                var13 = var13 + var18;
-                                var6_int++;
-                                var20 = var20 + var16;
-                                var18 = var18 + var16;
-                                if (var26 != 0) {
-                                  break L5;
-                                } else {
-                                  continue L7;
-                                }
-                              }
-                            }
-                          }
-                        }
-                        if (-1 < (var14 ^ -1)) {
-                          var14 = var14 + var20;
-                          var13 = var13 + var18;
-                          var6_int++;
-                          var18 = var18 + var16;
-                          break L5;
-                        } else {
-                          break L4;
-                        }
-                      }
-                      var20 = var20 + var16;
-                      break L4;
-                    }
-                    L8: {
-                      var14 = var14 + -var19;
-                      var13 = var13 + -var21;
-                      var19 = var19 - var15;
-                      var7--;
-                      var21 = var21 - var15;
-                      var22 = param5 + -var7;
-                      var23 = var7 + param5;
-                      if (var23 < gca.field_d) {
-                        break L8;
+              if (-1 <= (var7 ^ -1)) {
+                break L0;
+              } else {
+                L3: {
+                  if (0 <= var13) {
+                    break L3;
+                  } else {
+                    L4: while (true) {
+                      if ((var13 ^ -1) <= -1) {
+                        break L3;
                       } else {
-                        if (hc.field_h >= var22) {
-                          L9: {
-                            var24 = rp.a(ss.field_c, -16226, pka.field_b, param0 + var6_int);
-                            var25 = rp.a(ss.field_c, -16226, pka.field_b, -var6_int + param0);
-                            if (var22 < gca.field_d) {
-                              break L9;
-                            } else {
-                              nra.a((byte) -55, param3, var24, vaa.field_a[var22], var25);
-                              break L9;
-                            }
-                          }
-                          if (var23 <= hc.field_h) {
-                            nra.a((byte) -55, param3, var24, vaa.field_a[var23], var25);
-                            break L8;
-                          } else {
-                            break L8;
-                          }
-                        } else {
-                          break L8;
-                        }
+                        var14 = var14 + var20;
+                        var13 = var13 + var18;
+                        var6_int++;
+                        var20 = var20 + var16;
+                        var18 = var18 + var16;
+                        continue L4;
                       }
                     }
-                    if (var26 == 0) {
+                  }
+                }
+                L5: {
+                  if (-1 < (var14 ^ -1)) {
+                    var14 = var14 + var20;
+                    var13 = var13 + var18;
+                    var6_int++;
+                    var18 = var18 + var16;
+                    var20 = var20 + var16;
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                var14 = var14 + -var19;
+                var13 = var13 + -var21;
+                var19 = var19 - var15;
+                var7--;
+                var21 = var21 - var15;
+                var22 = param5 + -var7;
+                var23 = var7 + param5;
+                if (var23 < gca.field_d) {
+                  continue L2;
+                } else {
+                  if (hc.field_h >= var22) {
+                    L6: {
+                      var24 = rp.a(ss.field_c, -16226, pka.field_b, param0 + var6_int);
+                      var25 = rp.a(ss.field_c, -16226, pka.field_b, -var6_int + param0);
+                      if (var22 < gca.field_d) {
+                        break L6;
+                      } else {
+                        nra.a((byte) -55, param3, var24, vaa.field_a[var22], var25);
+                        break L6;
+                      }
+                    }
+                    if (var23 <= hc.field_h) {
+                      nra.a((byte) -55, param3, var24, vaa.field_a[var23], var25);
                       continue L2;
                     } else {
-                      break L3;
+                      continue L2;
                     }
                   } else {
-                    return;
+                    continue L2;
                   }
                 }
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

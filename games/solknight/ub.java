@@ -33,21 +33,17 @@ final class ub {
     }
 
     final static String a(int param0, long param1) {
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
-        int var3 = 0;
-        long var4 = 0L;
-        StringBuilder var6 = null;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        mf var12 = null;
-        int var13 = 0;
-        int var14 = 0;
+        StringBuilder discarded$1 = null;
+        int var3;
+        long var4;
+        StringBuilder var6;
+        long var7;
+        int var9;
+        int var10;
+        int var11;
+        mf var12;
+        int var13;
+        int var14;
         var11 = SolKnight.field_L ? 1 : 0;
         if (0L < param1) {
           if (param1 < 6582952005840035281L) {
@@ -83,11 +79,11 @@ final class ub {
                         if (var13 >= var14) {
                           var12 = (mf) null;
                           ub.a((dl) null, true, 99, 116, (java.awt.Component) null, (mf) null, false, 43);
-                          discarded$5 = var6.reverse();
+                          var6.reverse();
                           var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                           return var6.toString();
                         } else {
-                          discarded$6 = var6.reverse();
+                          var6.reverse();
                           var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                           return var6.toString();
                         }
@@ -102,7 +98,7 @@ final class ub {
                             break L4;
                           }
                         }
-                        discarded$7 = var6.append((char) var9);
+                        discarded$1 = var6.append((char) var9);
                         if (var11 == 0) {
                           continue L2;
                         } else {
@@ -114,11 +110,11 @@ final class ub {
                   if (param0 >= -35) {
                     var12 = (mf) null;
                     ub.a((dl) null, true, 99, 116, (java.awt.Component) null, (mf) null, false, 43);
-                    discarded$8 = var6.reverse();
+                    var6.reverse();
                     var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                     return var6.toString();
                   } else {
-                    discarded$9 = var6.reverse();
+                    var6.reverse();
                     var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                     return var6.toString();
                   }

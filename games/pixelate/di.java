@@ -15,18 +15,18 @@ final class di {
     }
 
     final static String a(boolean param0, int param1) {
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
-        StringBuilder discarded$10 = null;
-        StringBuilder discarded$11 = null;
-        String var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        StringBuilder var5 = null;
-        int var6 = 0;
-        String var7 = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
+        String var2;
+        int var3;
+        int var4;
+        StringBuilder var5;
+        int var6;
+        String var7;
         var6 = Pixelate.field_H ? 1 : 0;
         var7 = Integer.toString(param1);
         var3 = var7.length();
@@ -44,28 +44,28 @@ final class di {
           }
           var5 = new StringBuilder((var3 - var4) / 3);
           if (!param0) {
-            discarded$6 = var5.append(var7.substring(0, var4));
+            discarded$0 = var5.append(var7.substring(0, var4));
             var2 = var7.substring(var4);
             L1: while (true) {
               if ((var2.length() ^ -1) >= -1) {
                 return var5.toString();
               } else {
-                discarded$7 = var5.append(wl.field_f);
-                discarded$8 = var5.append(var2.substring(0, 3));
+                discarded$1 = var5.append(wl.field_f);
+                discarded$2 = var5.append(var2.substring(0, 3));
                 var2 = var2.substring(3);
                 continue L1;
               }
             }
           } else {
             field_a = 72;
-            discarded$9 = var5.append(var7.substring(0, var4));
+            discarded$3 = var5.append(var7.substring(0, var4));
             var2 = var7.substring(var4);
             L2: while (true) {
               if ((var2.length() ^ -1) >= -1) {
                 return var5.toString();
               } else {
-                discarded$10 = var5.append(wl.field_f);
-                discarded$11 = var5.append(var2.substring(0, 3));
+                discarded$4 = var5.append(wl.field_f);
+                discarded$5 = var5.append(var2.substring(0, 3));
                 var2 = var2.substring(3);
                 continue L2;
               }

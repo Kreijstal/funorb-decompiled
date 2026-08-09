@@ -8,38 +8,36 @@ final class v extends htb {
     int field_C;
 
     final int a(int param0) {
-        int discarded$0 = 0;
         if (param0 != 0) {
-            discarded$0 = this.a(-12);
+            this.a(-12);
             return this.field_G.a((byte) -118);
         }
         return this.field_G.a((byte) -118);
     }
 
     final static phb[] b(boolean param0) {
-        phb[] discarded$1 = null;
-        phb[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var5 = null;
-        int var6 = 0;
-        int[] var6_ref_int__ = null;
-        int var7 = 0;
-        int var8 = 0;
-        byte[] var9 = null;
-        int[] var10 = null;
-        byte[] var11 = null;
-        int[] var13 = null;
-        byte[] var15 = null;
-        int[] var17 = null;
-        byte[] var23 = null;
-        int[] var24 = null;
-        byte[] var25 = null;
-        int[] var26 = null;
+        phb[] var1;
+        int var2;
+        int var3;
+        byte[] var5;
+        int[] var6_ref_int__;
+        int var7;
+        int var8;
+        byte[] var9;
+        byte[] var11;
+        int[] var13;
+        byte[] var15;
+        int[] var17;
+        byte[] var25;
+        int var6;
+        int[] var10;
+        byte[] var23;
+        int[] var24;
+        int[] var26;
         var8 = VoidHunters.field_G;
         var1 = new phb[mma.field_a];
         if (param0) {
-          discarded$1 = v.b(true);
+          v.b(true);
           var2 = 0;
           L0: while (true) {
             if (mma.field_a <= var2) {
@@ -137,7 +135,6 @@ final class v extends htb {
     }
 
     final int a(int param0, int param1) {
-        phb[] discarded$5 = null;
         if (param0 <= -89) {
           if (0 <= param1) {
             if (param1 >= this.field_G.a((byte) 108)) {
@@ -149,7 +146,7 @@ final class v extends htb {
             return -1;
           }
         } else {
-          discarded$5 = v.b(false);
+          v.b(false);
           if (0 <= param1) {
             if (param1 >= this.field_G.a((byte) 108)) {
               return -1;
@@ -163,36 +160,23 @@ final class v extends htb {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
-        int discarded$1 = 0;
-        RuntimeException var8 = null;
+        int stackIn_24_0 = 0;
+        int stackIn_28_0 = 0;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_26_0 = 0;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_21_0 = 0;
-        int stackOut_25_0 = 0;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
         var14 = VoidHunters.field_G;
         try {
           L0: {
@@ -254,8 +238,7 @@ final class v extends htb {
                   }
                 }
               }
-              stackOut_21_0 = 1;
-              stackIn_22_0 = stackOut_21_0;
+              stackIn_24_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -263,12 +246,11 @@ final class v extends htb {
                 if (param6 < -17) {
                   break L6;
                 } else {
-                  discarded$1 = this.e(-69);
+                  this.e(-69);
                   break L6;
                 }
               }
-              stackOut_25_0 = 0;
-              stackIn_26_0 = stackOut_25_0;
+              stackIn_28_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -277,36 +259,28 @@ final class v extends htb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var8 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var8);
-            stackOut_27_1 = new StringBuilder().append("v.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackIn_31_0 = (RuntimeException) (var8);
+
+            stackIn_31_1 = new StringBuilder().append("v.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L7;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L7;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param5 + ',' + param6 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param5 + ',' + param6 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_22_0 != 0;
+          return stackIn_24_0 != 0;
         } else {
-          return stackIn_26_0 != 0;
+          return stackIn_28_0 != 0;
         }
     }
 

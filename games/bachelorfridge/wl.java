@@ -26,16 +26,12 @@ final class wl extends sna {
     }
 
     private final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
         L0: {
           var7 = BachelorFridge.field_y;
           this.field_Ab.field_rb = 0;
@@ -46,24 +42,20 @@ final class wl extends sna {
           this.field_vb.a(false);
           this.field_zb.a(false);
           if (this.field_Ab.field_sb <= this.field_xb.field_sb) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
         L1: {
           var5 = stackIn_3_0;
           if (this.field_Ab.field_p <= this.field_xb.field_p) {
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L1;
           } else {
-            stackOut_4_0 = 1;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = 1;
             break L1;
           }
         }
@@ -131,7 +123,7 @@ final class wl extends sna {
     }
 
     private final void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5) {
-        int var8 = 0;
+        int var8;
         L0: {
           var8 = BachelorFridge.field_y;
           if (!this.field_vb.g(25910)) {

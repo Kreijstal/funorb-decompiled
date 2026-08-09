@@ -43,9 +43,9 @@ final class bu extends kj {
     }
 
     final boolean b(int param0) {
-        int fieldTemp$2 = this.field_i - 1;
+        int fieldTemp$1 = this.field_i - 1;
         this.field_i = this.field_i - 1;
-        if (0 >= fieldTemp$2) {
+        if (0 >= fieldTemp$1) {
           if (param0 <= 21) {
             this.field_f = (kv) null;
             return true;

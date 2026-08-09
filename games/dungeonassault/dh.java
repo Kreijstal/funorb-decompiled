@@ -42,18 +42,14 @@ final class dh implements Iterable {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        RuntimeException var4 = null;
+        int[] var11 = null;
+        int[] var9 = null;
+        int[] var8 = null;
+        int[] var14 = null;
         int var5 = 0;
         int var6 = 0;
-        int var7 = 0;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var11 = null;
-        int[] var14 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = DungeonAssault.field_K;
+        int var7 = DungeonAssault.field_K;
         try {
-          L0: {
             var11 = new int[4];
             var9 = var11;
             var8 = var9;
@@ -61,36 +57,23 @@ final class dh implements Iterable {
             gf.a(var11);
             gf.e(0, param3 - 16, 640, param2 + (param0 + param3));
             var5 = (200 - bl.field_s.field_E >> 1264614561) + param1;
-            var6 = -16 + param3;
-            L1: while (true) {
-              if (32 + param2 + param3 <= var6) {
-                gf.b(var14);
-                ao.field_n.d(param1 + (-ao.field_n.field_E + 200 >> -1468978431), -(ao.field_n.field_G >> -1404703775) + -16 + param3, 500, 0);
-                rn.field_c.d((200 - rn.field_c.field_E >> 1616180033) + param1, param2 + param3 + (20 - (rn.field_c.field_G >> -1914646463)), 0, 500);
-                break L0;
-              } else {
+            for (var6 = -16 + param3; 32 + param2 + param3 > var6; var6 = var6 + bl.field_s.field_G) {
                 bl.field_s.h(var5, var6);
-                var6 = var6 + bl.field_s.field_G;
-                continue L1;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) var4), "dh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            gf.b(var14);
+            ao.field_n.d(param1 + (-ao.field_n.field_E + 200 >> -1468978431), -(ao.field_n.field_G >> -1404703775) + -16 + param3, 500, 0);
+            rn.field_c.d((200 - rn.field_c.field_E >> 1616180033) + param1, param2 + param3 + (20 - (rn.field_c.field_G >> -1914646463)), 0, 500);
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) ((Object) runtimeException), "dh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static void b(int param0) {
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
         if (0 - hh.field_b != nl.field_d) {
           if (nl.field_d == -hh.field_b + 250) {
             nl.field_d = nl.field_d + 1;
             if (param0 > -123) {
-              discarded$6 = dh.a(true);
+              dh.a(true);
               return;
             } else {
               return;
@@ -98,7 +81,7 @@ final class dh implements Iterable {
           } else {
             nl.field_d = nl.field_d + 1;
             if (param0 > -123) {
-              discarded$7 = dh.a(true);
+              dh.a(true);
               return;
             } else {
               return;
@@ -107,7 +90,7 @@ final class dh implements Iterable {
         } else {
           nl.field_d = nl.field_d + 1;
           if (param0 > -123) {
-            discarded$8 = dh.a(true);
+            dh.a(true);
             return;
           } else {
             return;
@@ -116,8 +99,8 @@ final class dh implements Iterable {
     }
 
     final ll b(boolean param0) {
-        ll var2 = null;
-        ll var3 = null;
+        ll var2;
+        ll var3;
         var2 = this.field_d.field_n;
         if (this.field_d != var2) {
           var2.b((byte) -2);

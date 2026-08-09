@@ -19,10 +19,10 @@ final class fd {
     }
 
     final static void a(int param0) {
-        lr var1 = null;
-        ah var1_ref = null;
-        byte[] var3 = null;
-        byte[] var4 = null;
+        lr var1;
+        ah var1_ref;
+        byte[] var3;
+        byte[] var4;
         L0: {
           if (wl.field_r != null) {
             break L0;
@@ -65,23 +65,12 @@ final class fd {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -93,35 +82,26 @@ final class fd {
               }
             }
             var3 = (CharSequence) ((Object) param0);
-            stackOut_2_0 = cf.field_h.equals(vu.a(127, var3));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = cf.field_h.equals(vu.a(127, var3));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("fd.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("fd.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -132,14 +112,12 @@ final class fd {
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_12_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
+        RuntimeException var3 = null;
         var4 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -147,19 +125,17 @@ final class fd {
             L1: while (true) {
               if (-2 <= (param2 ^ -1)) {
                 if (param2 != param0) {
-                  stackOut_10_0 = var3_int;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_12_0 = var3_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_8_0 = var3_int * param1;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_10_0 = var3_int * param1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
               } else {
                 L2: {
-                  if ((param2 & 1) != 0) {
+                  if ((param2 & 1 ^ -1) != -1) {
                     var3_int = var3_int * param1;
                     break L2;
                   } else {
@@ -178,9 +154,9 @@ final class fd {
           throw pn.a((Throwable) ((Object) var3), "fd.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_9_0;
+          return stackIn_10_0;
         } else {
-          return stackIn_11_0;
+          return stackIn_12_0;
         }
     }
 

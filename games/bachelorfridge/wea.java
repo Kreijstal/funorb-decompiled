@@ -111,22 +111,22 @@ final class wea extends at {
     }
 
     final boolean c(byte param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        bf var2_ref_bf = null;
-        int var2 = 0;
-        int var4 = 0;
-        ad var5 = null;
-        ad var6 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        bf var2_ref_bf;
+        int var2;
+        int var4;
+        ad var5;
+        ad var6;
         var4 = BachelorFridge.field_y;
         if (this.field_k == 25) {
           var2_ref_bf = (bf) ((Object) this.field_l.field_m.b((byte) 90));
           L0: while (true) {
             if (var2_ref_bf == null) {
               var2 = -45 % ((param0 - 71) / 47);
-              fieldTemp$2 = this.field_k - 1;
+              fieldTemp$0 = this.field_k - 1;
               this.field_k = this.field_k - 1;
-              if (-1 == (fieldTemp$2 ^ -1)) {
+              if (-1 == (fieldTemp$0 ^ -1)) {
                 return true;
               } else {
                 return false;
@@ -170,9 +170,9 @@ final class wea extends at {
           }
         } else {
           var2 = -45 % ((param0 - 71) / 47);
-          fieldTemp$3 = this.field_k - 1;
+          fieldTemp$1 = this.field_k - 1;
           this.field_k = this.field_k - 1;
-          if (-1 == (fieldTemp$3 ^ -1)) {
+          if (-1 == (fieldTemp$1 ^ -1)) {
             return true;
           } else {
             return false;

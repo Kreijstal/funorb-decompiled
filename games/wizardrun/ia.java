@@ -34,31 +34,21 @@ final class ia extends md {
     }
 
     final static void a(int param0, wc param1) {
-        int dupTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int incrementValue$6 = 0;
-        int dupTemp$7 = 0;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
+        int dupTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int dupTemp$3 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = wizardrun.field_H;
         try {
           L0: {
@@ -68,16 +58,16 @@ final class ia extends md {
                 var2_int = param0;
                 L2: while (true) {
                   if (var2_int >= ca.field_e) {
-                    dupTemp$4 = param1.a((byte) 102);
-                    hj.field_b[dupTemp$4] = hj.field_b[dupTemp$4] + 1;
+                    dupTemp$0 = param1.a((byte) 102);
+                    hj.field_b[dupTemp$0] = hj.field_b[dupTemp$0] + 1;
                     var2_int = 0;
                     var3 = 0;
                     L3: while (true) {
                       if (ca.field_e <= var3) {
                         ca.field_e = var2_int;
-                        fieldTemp$5 = ca.field_e;
+                        fieldTemp$1 = ca.field_e;
                         ca.field_e = ca.field_e + 1;
-                        mi.field_B[fieldTemp$5] = param1;
+                        mi.field_B[fieldTemp$1] = param1;
                         break L0;
                       } else {
                         L4: {
@@ -94,9 +84,9 @@ final class ia extends md {
                               }
                             }
                           }
-                          incrementValue$6 = var2_int;
+                          incrementValue$2 = var2_int;
                           var2_int++;
-                          mi.field_B[incrementValue$6] = mi.field_B[var3];
+                          mi.field_B[incrementValue$2] = mi.field_B[var3];
                           break L4;
                         }
                         var3++;
@@ -108,8 +98,8 @@ final class ia extends md {
                       if (param1.field_i != mi.field_B[var2_int].field_i) {
                         break L6;
                       } else {
-                        dupTemp$7 = mi.field_B[var2_int].a((byte) 102);
-                        hj.field_b[dupTemp$7] = hj.field_b[dupTemp$7] + 1;
+                        dupTemp$3 = mi.field_B[var2_int].a((byte) 102);
+                        hj.field_b[dupTemp$3] = hj.field_b[dupTemp$3] + 1;
                         break L6;
                       }
                     }
@@ -128,27 +118,19 @@ final class ia extends md {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2);
-            stackOut_19_1 = new StringBuilder().append("ia.I(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2);
+
+            stackIn_21_1 = new StringBuilder().append("ia.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L7;
             }
           }
@@ -169,11 +151,11 @@ final class ia extends md {
 
     final static void b(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = wizardrun.field_H;
         try {
           L0: {
@@ -199,8 +181,8 @@ final class ia extends md {
     }
 
     final int a(long param0, boolean param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         L0: {
           var5 = wizardrun.field_H;
           if (param1) {
@@ -253,13 +235,11 @@ final class ia extends md {
         long var2 = System.nanoTime();
         long var4 = -this.field_g + var2;
         this.field_g = var2;
-        if ((var4 ^ -1L) < 4999999999L) {
-            if (-5000000001L < (var4 ^ -1L)) {
-                this.field_k[this.field_l] = var4;
-                this.field_l = (1 + this.field_l) % 10;
-                if (-2 < (this.field_o ^ -1)) {
-                    this.field_o = this.field_o + 1;
-                }
+        if ((var4 ^ -1L) < 4999999999L && -5000000001L < (var4 ^ -1L)) {
+            this.field_k[this.field_l] = var4;
+            this.field_l = (1 + this.field_l) % 10;
+            if (-2 < (this.field_o ^ -1)) {
+                this.field_o = this.field_o + 1;
             }
         }
         long var6 = 0L;

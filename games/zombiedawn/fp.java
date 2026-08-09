@@ -11,13 +11,7 @@ final class fp extends an {
     int field_G;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        int var9 = 0;
+        int var9;
         var9 = ZombieDawn.field_J;
         if (param5 < param4) {
           if (param1 <= param4) {
@@ -26,7 +20,7 @@ final class fp extends an {
               if (param7 > 51) {
                 return;
               } else {
-                discarded$6 = fp.a(-83, false, -32, -105);
+                fp.a(-83, false, -32, -105);
                 return;
               }
             } else {
@@ -34,7 +28,7 @@ final class fp extends an {
               if (param7 > 51) {
                 return;
               } else {
-                discarded$7 = fp.a(-83, false, -32, -105);
+                fp.a(-83, false, -32, -105);
                 return;
               }
             }
@@ -43,7 +37,7 @@ final class fp extends an {
             if (param7 > 51) {
               return;
             } else {
-              discarded$8 = fp.a(-83, false, -32, -105);
+              fp.a(-83, false, -32, -105);
               return;
             }
           }
@@ -53,7 +47,7 @@ final class fp extends an {
             if (param7 > 51) {
               return;
             } else {
-              discarded$9 = fp.a(-83, false, -32, -105);
+              fp.a(-83, false, -32, -105);
               return;
             }
           } else {
@@ -62,7 +56,7 @@ final class fp extends an {
               if (param7 > 51) {
                 return;
               } else {
-                discarded$10 = fp.a(-83, false, -32, -105);
+                fp.a(-83, false, -32, -105);
                 return;
               }
             } else {
@@ -70,7 +64,7 @@ final class fp extends an {
               if (param7 > 51) {
                 return;
               } else {
-                discarded$11 = fp.a(-83, false, -32, -105);
+                fp.a(-83, false, -32, -105);
                 return;
               }
             }
@@ -79,17 +73,11 @@ final class fp extends an {
     }
 
     final static boolean a(int param0, boolean param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_20_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_57_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
+        int var4;
+        int var5;
         if (!param1) {
           if (qp.field_b[param3] > qp.field_b[param0]) {
             return true;
@@ -107,12 +95,10 @@ final class fp extends an {
                       } else {
                         L0: {
                           if (param0 >= param3) {
-                            stackOut_56_0 = 0;
-                            stackIn_57_0 = stackOut_56_0;
+                            stackIn_57_0 = 0;
                             break L0;
                           } else {
-                            stackOut_55_0 = 1;
-                            stackIn_57_0 = stackOut_55_0;
+                            stackIn_57_0 = 1;
                             break L0;
                           }
                         }
@@ -130,12 +116,10 @@ final class fp extends an {
                       } else {
                         L1: {
                           if (param0 >= param3) {
-                            stackOut_47_0 = 0;
-                            stackIn_48_0 = stackOut_47_0;
+                            stackIn_48_0 = 0;
                             break L1;
                           } else {
-                            stackOut_46_0 = 1;
-                            stackIn_48_0 = stackOut_46_0;
+                            stackIn_48_0 = 1;
                             break L1;
                           }
                         }
@@ -188,12 +172,10 @@ final class fp extends an {
                       } else {
                         L2: {
                           if (param0 >= param3) {
-                            stackOut_19_0 = 0;
-                            stackIn_20_0 = stackOut_19_0;
+                            stackIn_20_0 = 0;
                             break L2;
                           } else {
-                            stackOut_18_0 = 1;
-                            stackIn_20_0 = stackOut_18_0;
+                            stackIn_20_0 = 1;
                             break L2;
                           }
                         }
@@ -217,15 +199,8 @@ final class fp extends an {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
-        RuntimeException var8 = null;
-        int var8_int = 0;
-        int var9 = 0;
-        double var10 = 0.0;
-        int var12 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -233,16 +208,11 @@ final class fp extends an {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_18_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        int var8_int = 0;
+        RuntimeException var8 = null;
+        int var9 = 0;
+        double var10 = 0.0;
+        int var12 = 0;
         var12 = ZombieDawn.field_J;
         try {
           L0: {
@@ -269,8 +239,7 @@ final class fp extends an {
                   if (this.field_J < this.field_L) {
                     L3: while (true) {
                       if (0 <= this.field_J) {
-                        stackOut_14_0 = 1;
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = 1;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
@@ -295,8 +264,7 @@ final class fp extends an {
                   break L4;
                 }
               }
-              stackOut_18_0 = 0;
-              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -305,27 +273,19 @@ final class fp extends an {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var8);
-            stackOut_20_1 = new StringBuilder().append("fp.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var8);
+
+            stackIn_22_1 = new StringBuilder().append("fp.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+
             if (param6 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L5;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L5;
             }
           }

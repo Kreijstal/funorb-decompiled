@@ -10,14 +10,16 @@ final class ejb extends rqa {
     }
 
     final static void a(int param0) {
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        qn var4 = null;
-        ifa var4_ref = null;
+        ifa var4 = null;
+        qn var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -41,8 +43,6 @@ final class ejb extends rqa {
         faa var27 = null;
         long[][] var34 = null;
         int[][] var35 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = VoidHunters.field_G;
         try {
           L0: {
@@ -64,47 +64,48 @@ final class ejb extends rqa {
                   break L2;
                 } else {
                   var3 = var27.e(1869);
-                  var4_ref = (ifa) ((Object) hga.field_p.d(param0 + -1));
+                  var27.k(param0 ^ 254);
+                  var4 = (ifa) ((Object) hga.field_p.d(param0 + -1));
                   L3: while (true) {
                     L4: {
-                      if (var4_ref == null) {
+                      if (var4 == null) {
                         break L4;
                       } else {
-                        if (var3 == var4_ref.field_i) {
+                        if (var3 == var4.field_i) {
                           break L4;
                         } else {
-                          var4_ref = (ifa) ((Object) hga.field_p.a((byte) 10));
+                          var4 = (ifa) ((Object) hga.field_p.a((byte) 10));
                           continue L3;
                         }
                       }
                     }
-                    if (var4_ref == null) {
+                    if (var4 == null) {
                       ifb.l(-126);
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
-                      var4_ref.b(-3846);
+                      var4.b(-3846);
                       break L2;
                     }
                   }
                 }
               } else {
                 var3 = var27.e(param0 + 1868);
-                var4 = (qn) ((Object) md.field_j.d(0));
+                var4_ref = (qn) ((Object) md.field_j.d(0));
                 L5: while (true) {
                   L6: {
-                    if (var4 == null) {
+                    if (var4_ref == null) {
                       break L6;
                     } else {
-                      if (var3 == var4.field_e) {
+                      if (var3 == var4_ref.field_e) {
                         break L6;
                       } else {
-                        var4 = (qn) ((Object) md.field_j.a((byte) 17));
+                        var4_ref = (qn) ((Object) md.field_j.a((byte) 17));
                         continue L5;
                       }
                     }
                   }
-                  if (var4 == null) {
+                  if (var4_ref == null) {
                     ifb.l(-116);
                     decompiledRegionSelector0 = 0;
                     break L0;
@@ -112,10 +113,10 @@ final class ejb extends rqa {
                     L7: {
                       var5 = var27.e((byte) -97);
                       if (0 != var5) {
-                        var6 = var4.field_i;
+                        var6 = var4_ref.field_i;
                         dda.field_d[0].field_b = null;
                         dda.field_d[0].field_a = kca.field_a;
-                        var7 = var4.field_g;
+                        var7 = var4_ref.field_g;
                         dda.field_d[0].field_c = false;
                         var8_int = 1;
                         L8: while (true) {
@@ -152,9 +153,9 @@ final class ejb extends rqa {
                                           var12++;
                                           break L10;
                                         } else {
-                                          incrementValue$3 = var15;
+                                          incrementValue$0 = var15;
                                           var15++;
-                                          var35[0][incrementValue$3] = var27.h(mgb.a(param0, 75));
+                                          var35[0][incrementValue$0] = var27.h(mgb.a(param0, 75));
                                           var25++;
                                           continue L11;
                                         }
@@ -176,9 +177,9 @@ final class ejb extends rqa {
                                           if (var25 >= var7) {
                                             break L12;
                                           } else {
-                                            incrementValue$4 = var16;
+                                            incrementValue$1 = var16;
                                             var16++;
-                                            var35[1][incrementValue$4] = var27.h(param0 + 20);
+                                            var35[1][incrementValue$1] = var27.h(param0 + 20);
                                             var25++;
                                             continue L13;
                                           }
@@ -204,9 +205,9 @@ final class ejb extends rqa {
                                           if (var25 >= var7) {
                                             break L14;
                                           } else {
-                                            incrementValue$5 = var17;
+                                            incrementValue$2 = var17;
                                             var17++;
-                                            var35[2][incrementValue$5] = var27.h(21);
+                                            var35[2][incrementValue$2] = var27.h(21);
                                             var25++;
                                             continue L15;
                                           }
@@ -219,7 +220,7 @@ final class ejb extends rqa {
                                   var19++;
                                   continue L9;
                                 } else {
-                                  var4.b(-3846);
+                                  var4_ref.b(-3846);
                                   break L2;
                                 }
                               }
@@ -246,7 +247,7 @@ final class ejb extends rqa {
                         break L7;
                       }
                     }
-                    var4.b(-3846);
+                    var4_ref.b(-3846);
                     break L2;
                   }
                 }
@@ -275,8 +276,6 @@ final class ejb extends rqa {
         RuntimeException var3 = null;
         nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -284,26 +283,14 @@ final class ejb extends rqa {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_3_0 = null;
-        nc stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 < -119) {
-              stackOut_3_0 = new nc(frb.a(119, 122));
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = new nc(frb.a(119, 122));
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (nc) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (nc) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -312,27 +299,19 @@ final class ejb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("ejb.A(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("ejb.A(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }

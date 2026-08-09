@@ -21,7 +21,7 @@ final class sm extends cr {
     }
 
     private final void a(byte param0, int param1) {
-        int var3 = 0;
+        int var3;
         this.field_Hb.a(79, this.field_Hb.j(-21391), this.field_db, 0, 0);
         if (param0 > -63) {
           field_Kb = (String) null;
@@ -69,7 +69,7 @@ final class sm extends cr {
     }
 
     final static void k(int param0) {
-        String var1 = null;
+        String var1;
         if (!tk.field_e) {
           throw new IllegalStateException();
         } else {

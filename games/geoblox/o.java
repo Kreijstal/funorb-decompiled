@@ -26,7 +26,6 @@ final class o extends pb {
     final static void a(int param0, wc param1, int param2) {
         pk var5 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var5 = fj.field_q;
             pk var3 = var5;
@@ -40,7 +39,7 @@ final class o extends pb {
             } else {
                 var5.d((byte) 121, 0);
             }
-            discarded$0 = var5.d(110, var4);
+            var5.d(110, var4);
             var5.field_f = var5.field_f - param2;
             param1.field_h = var5.a((byte) -54);
             var5.f(param2 ^ 11696, var5.field_f - var4);

@@ -8,12 +8,13 @@ final class ie extends i {
     static int field_G;
 
     final static void g(int param0) {
-        int fieldTemp$4 = 0;
-        gv discarded$5 = null;
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        RuntimeException var1 = null;
+        int fieldTemp$0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_47_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -25,14 +26,6 @@ final class ie extends i {
         int var8 = 0;
         boolean[] var9 = null;
         boolean[] var10 = null;
-        int stackIn_25_0 = 0;
-        int stackIn_47_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_45_0 = 0;
         var8 = Kickabout.field_G;
         try {
           L0: {
@@ -47,12 +40,12 @@ final class ie extends i {
                     break L1;
                   } else {
                     if (0 < je.field_m) {
-                      fieldTemp$4 = je.field_m - 1;
+                      fieldTemp$0 = je.field_m - 1;
                       je.field_m = je.field_m - 1;
-                      if (fieldTemp$4 != 0) {
+                      if (fieldTemp$0 != 0) {
                         break L1;
                       } else {
-                        discarded$5 = gm.a(de.field_a, true, (byte) -118);
+                        gm.a(de.field_a, true, (byte) -118);
                         break L1;
                       }
                     } else {
@@ -94,12 +87,10 @@ final class ie extends i {
                     if (0 == var3) {
                       L5: {
                         if (mc.field_a < var2) {
-                          stackOut_24_0 = 1;
-                          stackIn_25_0 = stackOut_24_0;
+                          stackIn_25_0 = 1;
                           break L5;
                         } else {
-                          stackOut_23_0 = -1;
-                          stackIn_25_0 = stackOut_23_0;
+                          stackIn_25_0 = -1;
                           break L5;
                         }
                       }
@@ -190,12 +181,10 @@ final class ie extends i {
                     } else {
                       L13: {
                         if (cq.field_g >= var3) {
-                          stackOut_46_0 = -1;
-                          stackIn_47_0 = stackOut_46_0;
+                          stackIn_47_0 = -1;
                           break L13;
                         } else {
-                          stackOut_45_0 = 1;
-                          stackIn_47_0 = stackOut_45_0;
+                          stackIn_47_0 = 1;
                           break L13;
                         }
                       }
@@ -249,7 +238,7 @@ final class ie extends i {
                         break L15;
                       } else {
                         if (-1 == (var4_ref_nl.field_u ^ -1)) {
-                          discarded$6 = tc.a(12, (byte) 109, 11796480, var4_ref_nl, 36044800);
+                          tc.a(12, (byte) 109, 11796480, var4_ref_nl, 36044800);
                           if (!sl.field_Eb) {
                             break L15;
                           } else {
@@ -384,7 +373,7 @@ final class ie extends i {
                     L27: {
                       et.field_d.field_X.field_m = 0;
                       if (-1 < (et.field_d.field_P[1][0].field_w ^ -1)) {
-                        discarded$7 = qg.a(2235, 2949120, 4, 29360128);
+                        qg.a(2235, 2949120, 4, 29360128);
                         break L27;
                       } else {
                         break L27;
@@ -406,49 +395,52 @@ final class ie extends i {
                 }
               }
               L29: {
-                if (-15 != (ks.field_e ^ -1)) {
-                  break L29;
-                } else {
-                  if (!ja.field_O) {
-                    break L29;
+                L30: {
+                  if (-15 != (ks.field_e ^ -1)) {
+                    break L30;
                   } else {
-                    if ((et.field_d.field_u ^ -1) != -5) {
-                      break L29;
+                    if (!ja.field_O) {
+                      break L30;
                     } else {
-                      ja.field_O = false;
-                      var10 = tu.field_E.field_J;
-                      var9 = var10;
-                      var5 = var9;
-                      if (var5[0]) {
-                        break L29;
+                      if ((et.field_d.field_u ^ -1) != -5) {
+                        break L30;
                       } else {
-                        var5[0] = true;
-                        if (!la.a(100)) {
-                          var6 = 0;
-                          var7 = 0;
-                          L30: while (true) {
-                            if (var7 >= var10.length) {
-                              or.field_d.b(69, (byte) 78);
-                              or.field_d.b(-78, var6);
-                              break L29;
-                            } else {
-                              if (var5[var7]) {
-                                var6 = var6 | 1 << var7;
-                                var7++;
-                                continue L30;
+                        ja.field_O = false;
+                        var10 = tu.field_E.field_J;
+                        var9 = var10;
+                        var5 = var9;
+                        if (var5[0]) {
+                          break L30;
+                        } else {
+                          var5[0] = true;
+                          if (!la.a(100)) {
+                            var6 = 0;
+                            var7 = 0;
+                            L31: while (true) {
+                              if (var7 >= var10.length) {
+                                or.field_d.b(69, (byte) 78);
+                                or.field_d.b(-78, var6);
+                                break L30;
                               } else {
-                                var7++;
-                                continue L30;
+                                if (var5[var7]) {
+                                  var6 = var6 | 1 << var7;
+                                  var7++;
+                                  continue L31;
+                                } else {
+                                  var7++;
+                                  continue L31;
+                                }
                               }
                             }
+                          } else {
+                            break L29;
                           }
-                        } else {
-                          break L29;
                         }
                       }
                     }
                   }
                 }
+                break L29;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -493,8 +485,6 @@ final class ie extends i {
         ld stackIn_10_0 = null;
         ld stackIn_15_0 = null;
         ld stackIn_18_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -502,27 +492,13 @@ final class ie extends i {
         String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ld stackOut_6_0 = null;
-        ld stackOut_17_0 = null;
-        ld stackOut_14_0 = null;
-        ld stackOut_9_0 = null;
-        ld stackOut_2_0 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
         var8 = Kickabout.field_G;
         try {
           L0: {
             var2_int = param0.length();
             if (var2_int != 0) {
               if ((var2_int ^ -1) < -256) {
-                stackOut_6_0 = st.field_j;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = st.field_j;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -532,8 +508,7 @@ final class ie extends i {
                   var5 = param1;
                   L1: while (true) {
                     if (var5 >= var4.length) {
-                      stackOut_17_0 = mr.a(param1 + 6, var3[var3.length - 1]);
-                      stackIn_18_0 = stackOut_17_0;
+                      stackIn_18_0 = mr.a(param1 + 6, var3[var3.length - 1]);
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
@@ -543,23 +518,20 @@ final class ie extends i {
                         var5++;
                         continue L1;
                       } else {
-                        stackOut_14_0 = (ld) (var7);
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = (ld) (var7);
                         decompiledRegionSelector0 = 3;
                         break L0;
                       }
                     }
                   }
                 } else {
-                  stackOut_9_0 = ld.field_b;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = ld.field_b;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               }
             } else {
-              stackOut_2_0 = ld.field_b;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = ld.field_b;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -568,27 +540,19 @@ final class ie extends i {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2);
-            stackOut_19_1 = new StringBuilder().append("ie.A(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2);
+
+            stackIn_21_1 = new StringBuilder().append("ie.A(");
+
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L2;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L2;
             }
           }

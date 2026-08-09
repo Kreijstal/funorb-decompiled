@@ -35,8 +35,8 @@ abstract class go extends eo {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
+        int var6;
+        int var7;
         if (param3 != -1049413117) {
           this.field_p = -3;
           var6 = this.field_n << -1049413117;

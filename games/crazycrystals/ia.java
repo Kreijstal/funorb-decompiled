@@ -7,13 +7,11 @@ final class ia extends ln {
     static int field_g;
 
     final int a(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         var6 = CrazyCrystals.field_B;
         if (-2 > (this.field_c ^ -1)) {
           if (this.field_b <= 0) {
@@ -26,12 +24,10 @@ final class ia extends ln {
               if (2 <= var5) {
                 L1: {
                   if (var4 == this.field_b) {
-                    stackOut_9_0 = 1;
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = 1;
                     break L1;
                   } else {
-                    stackOut_8_0 = 0;
-                    stackIn_10_0 = stackOut_8_0;
+                    stackIn_10_0 = 0;
                     break L1;
                   }
                 }
@@ -49,30 +45,16 @@ final class ia extends ln {
     }
 
     final static void a(byte param0, String param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
         int stackIn_20_0 = 0;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
         RuntimeException stackIn_46_0 = null;
         StringBuilder stackIn_46_1 = null;
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
         String stackIn_47_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_13_0 = 0;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
         var3 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -118,22 +100,18 @@ final class ia extends ln {
                 if (!co.field_F) {
                   if (cl.field_o >= ih.field_a) {
                     if (cl.field_o < ih.field_a - -u.field_a) {
-                      stackOut_18_0 = 1;
-                      stackIn_20_0 = stackOut_18_0;
+                      stackIn_20_0 = 1;
                       break L5;
                     } else {
-                      stackOut_17_0 = 0;
-                      stackIn_20_0 = stackOut_17_0;
+                      stackIn_20_0 = 0;
                       break L5;
                     }
                   } else {
-                    stackOut_15_0 = 0;
-                    stackIn_20_0 = stackOut_15_0;
+                    stackIn_20_0 = 0;
                     break L5;
                   }
                 } else {
-                  stackOut_13_0 = 0;
-                  stackIn_20_0 = stackOut_13_0;
+                  stackIn_20_0 = 0;
                   break L5;
                 }
               }
@@ -214,27 +192,19 @@ final class ia extends ln {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var2 = decompiledCaughtException;
-            stackOut_44_0 = (RuntimeException) (var2);
-            stackOut_44_1 = new StringBuilder().append("ia.B(").append(param0).append(',');
-            stackIn_46_0 = stackOut_44_0;
-            stackIn_46_1 = stackOut_44_1;
-            stackIn_45_0 = stackOut_44_0;
-            stackIn_45_1 = stackOut_44_1;
+            stackIn_46_0 = (RuntimeException) (var2);
+
+            stackIn_46_1 = new StringBuilder().append("ia.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "null";
-              stackIn_47_0 = stackOut_46_0;
-              stackIn_47_1 = stackOut_46_1;
-              stackIn_47_2 = stackOut_46_2;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "null";
               break L10;
             } else {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "{...}";
-              stackIn_47_0 = stackOut_45_0;
-              stackIn_47_1 = stackOut_45_1;
-              stackIn_47_2 = stackOut_45_2;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "{...}";
               break L10;
             }
           }

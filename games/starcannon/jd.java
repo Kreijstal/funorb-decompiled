@@ -7,9 +7,9 @@ final class jd extends tk {
     private java.awt.Component field_h;
 
     final void a(int param0, int param1, java.awt.Component param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         this.field_g = new int[param1 * param3 + 1];
         this.field_b = param3;
         this.field_d = param1;
@@ -27,14 +27,12 @@ final class jd extends tk {
     }
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
         if (param3 != 19291) {
           this.field_h = (java.awt.Component) null;
-          discarded$4 = param2.drawImage(this.field_c, param0, param1, (java.awt.image.ImageObserver) ((Object) this.field_h));
+          param2.drawImage(this.field_c, param0, param1, (java.awt.image.ImageObserver) ((Object) this.field_h));
           return;
         } else {
-          discarded$5 = param2.drawImage(this.field_c, param0, param1, (java.awt.image.ImageObserver) ((Object) this.field_h));
+          param2.drawImage(this.field_c, param0, param1, (java.awt.image.ImageObserver) ((Object) this.field_h));
           return;
         }
     }

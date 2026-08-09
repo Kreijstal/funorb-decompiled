@@ -13,7 +13,6 @@ final class gj implements Iterable {
 
     final static aa a(byte param0, String param1) {
         String var2 = null;
-        RuntimeException var2_ref = null;
         aa var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -22,8 +21,6 @@ final class gj implements Iterable {
         Object stackIn_7_0 = null;
         Object stackIn_12_0 = null;
         aa stackIn_19_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -31,17 +28,7 @@ final class gj implements Iterable {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        aa stackOut_18_0 = null;
-        Object stackOut_11_0 = null;
-        Object stackOut_6_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        RuntimeException var2_ref = null;
         var5 = wizardrun.field_H;
         try {
           L0: {
@@ -65,8 +52,7 @@ final class gj implements Iterable {
                         var7 = (CharSequence) ((Object) var3.field_mb);
                         var4 = ta.a(-51, var7);
                         if (var4.equals(var2)) {
-                          stackOut_18_0 = (aa) (var3);
-                          stackIn_19_0 = stackOut_18_0;
+                          stackIn_19_0 = (aa) (var3);
                           decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
@@ -78,14 +64,12 @@ final class gj implements Iterable {
                       }
                     }
                   } else {
-                    stackOut_11_0 = null;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = null;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 } else {
-                  stackOut_6_0 = null;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = null;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -100,27 +84,19 @@ final class gj implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2_ref);
-            stackOut_22_1 = new StringBuilder().append("gj.A(").append(param0).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2_ref);
+
+            stackIn_24_1 = new StringBuilder().append("gj.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L3;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L3;
             }
           }
@@ -142,11 +118,11 @@ final class gj implements Iterable {
     }
 
     final static void a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = wizardrun.field_H;
         var2 = 0;
         var3 = jd.field_f;
@@ -915,7 +891,6 @@ final class gj implements Iterable {
 
     final static aa a(String param0, int param1) {
         String var2 = null;
-        RuntimeException var2_ref = null;
         aa var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -924,8 +899,6 @@ final class gj implements Iterable {
         aa stackIn_3_0 = null;
         Object stackIn_6_0 = null;
         aa stackIn_18_0 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -933,17 +906,7 @@ final class gj implements Iterable {
         String stackIn_24_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        aa stackOut_17_0 = null;
-        Object stackOut_5_0 = null;
-        aa stackOut_2_0 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        RuntimeException var2_ref = null;
         var5 = wizardrun.field_H;
         try {
           L0: {
@@ -976,8 +939,7 @@ final class gj implements Iterable {
                       var3 = (aa) ((Object) wl.field_f.a(false));
                       continue L2;
                     } else {
-                      stackOut_17_0 = (aa) (var3);
-                      stackIn_18_0 = stackOut_17_0;
+                      stackIn_18_0 = (aa) (var3);
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
@@ -986,14 +948,12 @@ final class gj implements Iterable {
                   }
                 }
               } else {
-                stackOut_5_0 = null;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = (aa) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (aa) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -1002,27 +962,19 @@ final class gj implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2_ref = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var2_ref);
-            stackOut_21_1 = new StringBuilder().append("gj.B(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var2_ref);
+
+            stackIn_23_1 = new StringBuilder().append("gj.B(");
+
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L4;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L4;
             }
           }
@@ -1045,13 +997,13 @@ final class gj implements Iterable {
             return;
         }
         String var2 = (String) null;
-        aa discarded$0 = gj.a((byte) -10, (String) null);
+        gj.a((byte) -10, (String) null);
     }
 
     final wl a(boolean param0, long param1) {
-        wl var4 = null;
-        wl var5 = null;
-        int var6 = 0;
+        wl var4;
+        wl var5;
+        int var6;
         var6 = wizardrun.field_H;
         var4 = this.field_c[(int)(param1 & (long)(-1 + this.field_d))];
         this.field_e = var4.field_b;

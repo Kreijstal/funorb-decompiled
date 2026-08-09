@@ -21,19 +21,19 @@ final class mo extends am {
     private int field_u;
 
     final int[][] a(int param0, int param1) {
-        int[][] var3 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int[][] var13 = null;
-        int[][] var15 = null;
-        int[][] var20 = null;
-        int[][] var28 = null;
-        int[] var29 = null;
-        int[] var30 = null;
-        int[] var31 = null;
+        int[][] var3;
+        int[] var8;
+        int[] var9;
+        int[] var10;
+        int var11;
+        int var12;
+        int[][] var13;
+        int[][] var15;
+        int[][] var20;
+        int[][] var28;
+        int[] var29;
+        int[] var30;
+        int[] var31;
         L0: {
           var12 = Torquing.field_u;
           if (param0 == -29116) {
@@ -128,7 +128,6 @@ final class mo extends am {
 
     final static boolean a(int param0, boolean param1) {
         try {
-            boolean discarded$0 = false;
             df var4 = null;
             df var5 = null;
             if (!(null != rh.field_b)) {
@@ -138,11 +137,11 @@ final class mo extends am {
                 return false;
             }
             if (param0 != 269) {
-                discarded$0 = mo.a(-117, true);
+                mo.a(-117, true);
             }
-            long dupTemp$1 = km.b(-1);
-            ak.field_k = dupTemp$1;
-            rb.field_C = dupTemp$1;
+            long dupTemp$0 = km.b(-1);
+            ak.field_k = dupTemp$0;
+            rb.field_C = dupTemp$0;
             if (1 != rh.field_b.field_a) {
                 ef.field_a = wj.field_i;
             } else {
@@ -179,11 +178,6 @@ final class mo extends am {
     }
 
     final static int b(int param0, boolean param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_63_0 = 0;
         int stackIn_66_0 = 0;
         int stackIn_72_0 = 0;
@@ -192,12 +186,11 @@ final class mo extends am {
         int stackIn_81_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_62_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_80_0 = 0;
-        int stackOut_71_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_78_0 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = Torquing.field_u;
         try {
           L0: {
@@ -390,16 +383,14 @@ final class mo extends am {
                     sd.field_s.a(true, n.a(n.field_t, false, k.field_e), n.a(wh.field_s, false, re.field_c));
                     if (sd.field_s.f((byte) -60)) {
                       if (sd.field_s.field_g == 0) {
-                        stackOut_62_0 = 3;
-                        stackIn_63_0 = stackOut_62_0;
+                        stackIn_63_0 = 3;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
                         if (sd.field_s.field_g != 1) {
                           break L13;
                         } else {
-                          stackOut_65_0 = 2;
-                          stackIn_66_0 = stackOut_65_0;
+                          stackIn_66_0 = 2;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         }
@@ -410,8 +401,7 @@ final class mo extends am {
                   }
                   L14: while (true) {
                     if (!np.a((byte) -13)) {
-                      stackOut_80_0 = 0;
-                      stackIn_81_0 = stackOut_80_0;
+                      stackIn_81_0 = 0;
                       decompiledRegionSelector0 = 5;
                       break L0;
                     } else {
@@ -421,16 +411,14 @@ final class mo extends am {
                           break L15;
                         } else {
                           if (0 == sd.field_s.field_g) {
-                            stackOut_71_0 = 3;
-                            stackIn_72_0 = stackOut_71_0;
+                            stackIn_72_0 = 3;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
                             if (sd.field_s.field_g != 1) {
                               break L15;
                             } else {
-                              stackOut_74_0 = 1;
-                              stackIn_75_0 = stackOut_74_0;
+                              stackIn_75_0 = 1;
                               decompiledRegionSelector0 = 3;
                               break L0;
                             }
@@ -438,8 +426,7 @@ final class mo extends am {
                         }
                       }
                       if (e.field_f == 13) {
-                        stackOut_78_0 = 1;
-                        stackIn_79_0 = stackOut_78_0;
+                        stackIn_79_0 = 1;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
@@ -486,67 +473,31 @@ final class mo extends am {
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
-        Object stackIn_19_0 = null;
         Object stackIn_20_0 = null;
         Object stackIn_21_0 = null;
         int stackIn_21_1 = 0;
-        Object stackIn_23_0 = null;
         Object stackIn_24_0 = null;
         Object stackIn_25_0 = null;
         int stackIn_25_1 = 0;
-        Object stackIn_27_0 = null;
         Object stackIn_28_0 = null;
         Object stackIn_29_0 = null;
         int stackIn_29_1 = 0;
-        Object stackIn_36_0 = null;
-        int stackIn_36_1 = 0;
         Object stackIn_37_0 = null;
         int stackIn_37_1 = 0;
         Object stackIn_38_0 = null;
         int stackIn_38_1 = 0;
         int stackIn_38_2 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        Object stackOut_26_0 = null;
-        Object stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        Object stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        Object stackOut_22_0 = null;
-        Object stackOut_24_0 = null;
-        int stackOut_24_1 = 0;
-        Object stackOut_23_0 = null;
-        int stackOut_23_1 = 0;
-        Object stackOut_18_0 = null;
-        Object stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        Object stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        Object stackOut_35_0 = null;
-        int stackOut_35_1 = 0;
-        Object stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        int stackOut_37_2 = 0;
-        Object stackOut_36_0 = null;
-        int stackOut_36_1 = 0;
-        int stackOut_36_2 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         L0: {
           var11 = Torquing.field_u;
           if (param2 >= 97) {
@@ -558,48 +509,40 @@ final class mo extends am {
         }
         L1: {
           if (param1 > param3) {
-            stackOut_4_0 = param1;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = param1;
             break L1;
           } else {
-            stackOut_3_0 = param3;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = param3;
             break L1;
           }
         }
         L2: {
           var5 = stackIn_5_0;
           if (var5 < param0) {
-            stackOut_7_0 = param0;
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = param0;
             break L2;
           } else {
-            stackOut_6_0 = var5;
-            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_0 = var5;
             break L2;
           }
         }
         L3: {
           var5 = stackIn_8_0;
           if (param1 < param3) {
-            stackOut_10_0 = param1;
-            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_0 = param1;
             break L3;
           } else {
-            stackOut_9_0 = param3;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = param3;
             break L3;
           }
         }
         L4: {
           var6 = stackIn_11_0;
           if (var6 > param0) {
-            stackOut_13_0 = param0;
-            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_0 = param0;
             break L4;
           } else {
-            stackOut_12_0 = var6;
-            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_0 = var6;
             break L4;
           }
         }
@@ -614,20 +557,15 @@ final class mo extends am {
               var10 = (var5 - param0 << 1089787884) / var7;
               if (var5 == param1) {
                 L7: {
-                  stackOut_26_0 = this;
-                  stackIn_28_0 = stackOut_26_0;
-                  stackIn_27_0 = stackOut_26_0;
+                  stackIn_28_0 = this;
+
                   if (var6 == param3) {
-                    stackOut_28_0 = this;
-                    stackOut_28_1 = var10 + 20480;
-                    stackIn_29_0 = stackOut_28_0;
-                    stackIn_29_1 = stackOut_28_1;
+                    stackIn_29_0 = this;
+                    stackIn_29_1 = var10 + 20480;
                     break L7;
                   } else {
-                    stackOut_27_0 = this;
-                    stackOut_27_1 = -var9 + 4096;
-                    stackIn_29_0 = stackOut_27_0;
-                    stackIn_29_1 = stackOut_27_1;
+                    stackIn_29_0 = this;
+                    stackIn_29_1 = -var9 + 4096;
                     break L7;
                   }
                 }
@@ -636,20 +574,15 @@ final class mo extends am {
               } else {
                 if (var5 != param3) {
                   L8: {
-                    stackOut_22_0 = this;
-                    stackIn_24_0 = stackOut_22_0;
-                    stackIn_23_0 = stackOut_22_0;
+                    stackIn_24_0 = this;
+
                     if (var6 == param1) {
-                      stackOut_24_0 = this;
-                      stackOut_24_1 = 12288 - -var9;
-                      stackIn_25_0 = stackOut_24_0;
-                      stackIn_25_1 = stackOut_24_1;
+                      stackIn_25_0 = this;
+                      stackIn_25_1 = 12288 - -var9;
                       break L8;
                     } else {
-                      stackOut_23_0 = this;
-                      stackOut_23_1 = -var8 + 20480;
-                      stackIn_25_0 = stackOut_23_0;
-                      stackIn_25_1 = stackOut_23_1;
+                      stackIn_25_0 = this;
+                      stackIn_25_1 = -var8 + 20480;
                       break L8;
                     }
                   }
@@ -657,20 +590,15 @@ final class mo extends am {
                   break L6;
                 } else {
                   L9: {
-                    stackOut_18_0 = this;
-                    stackIn_20_0 = stackOut_18_0;
-                    stackIn_19_0 = stackOut_18_0;
+                    stackIn_20_0 = this;
+
                     if (var6 != param0) {
-                      stackOut_20_0 = this;
-                      stackOut_20_1 = -var10 + 12288;
-                      stackIn_21_0 = stackOut_20_0;
-                      stackIn_21_1 = stackOut_20_1;
+                      stackIn_21_0 = this;
+                      stackIn_21_1 = -var10 + 12288;
                       break L9;
                     } else {
-                      stackOut_19_0 = this;
-                      stackOut_19_1 = var8 + 4096;
-                      stackIn_21_0 = stackOut_19_0;
-                      stackIn_21_1 = stackOut_19_1;
+                      stackIn_21_0 = this;
+                      stackIn_21_1 = var8 + 4096;
                       break L9;
                     }
                   }
@@ -693,27 +621,19 @@ final class mo extends am {
             } else {
               if (-4097 < (this.field_v ^ -1)) {
                 L12: {
-                  stackOut_35_0 = this;
-                  stackOut_35_1 = var7 << 467803788;
-                  stackIn_37_0 = stackOut_35_0;
-                  stackIn_37_1 = stackOut_35_1;
-                  stackIn_36_0 = stackOut_35_0;
-                  stackIn_36_1 = stackOut_35_1;
+                  stackIn_37_0 = this;
+
+                  stackIn_37_1 = var7 << 467803788;
+
                   if (2048 < this.field_v) {
-                    stackOut_37_0 = this;
-                    stackOut_37_1 = stackIn_37_1;
-                    stackOut_37_2 = 8192 - this.field_v * 2;
-                    stackIn_38_0 = stackOut_37_0;
-                    stackIn_38_1 = stackOut_37_1;
-                    stackIn_38_2 = stackOut_37_2;
+                    stackIn_38_0 = this;
+                    stackIn_38_1 = stackIn_37_1;
+                    stackIn_38_2 = 8192 - this.field_v * 2;
                     break L12;
                   } else {
-                    stackOut_36_0 = this;
-                    stackOut_36_1 = stackIn_36_1;
-                    stackOut_36_2 = 2 * this.field_v;
-                    stackIn_38_0 = stackOut_36_0;
-                    stackIn_38_1 = stackOut_36_1;
-                    stackIn_38_2 = stackOut_36_2;
+                    stackIn_38_0 = this;
+                    stackIn_38_1 = stackIn_37_1;
+                    stackIn_38_2 = 2 * this.field_v;
                     break L12;
                   }
                 }
@@ -731,24 +651,14 @@ final class mo extends am {
 
     final void a(fj param0, int param1, int param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException var4 = null;
         var5 = Torquing.field_u;
         try {
           L0: {
@@ -785,27 +695,19 @@ final class mo extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var4);
-            stackOut_11_1 = new StringBuilder().append("mo.H(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var4);
+
+            stackIn_13_1 = new StringBuilder().append("mo.H(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -814,29 +716,25 @@ final class mo extends am {
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var14 = Torquing.field_u;
         if (param0 == -4) {
           L0: {
             if (-2049 > (param2 ^ -1)) {
-              stackOut_4_0 = param2 + param1 + -(param2 * param1 >> 972037996);
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = param2 + param1 + -(param2 * param1 >> 972037996);
               break L0;
             } else {
-              stackOut_3_0 = (param1 + 4096) * param2 >> 551445420;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = (param1 + 4096) * param2 >> 551445420;
               break L0;
             }
           }
@@ -911,19 +809,8 @@ final class mo extends am {
     }
 
     final static void a(t param0, int param1) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -931,14 +818,15 @@ final class mo extends am {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int[] var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
         var9 = Torquing.field_u;
         try {
           L0: {
@@ -971,11 +859,11 @@ final class mo extends am {
                       var7++;
                       continue L1;
                     } else {
-                      incrementValue$2 = var6;
+                      incrementValue$0 = var6;
                       var6++;
-                      incrementValue$3 = var5;
+                      incrementValue$1 = var5;
                       var5++;
-                      var4[incrementValue$2] = param0.field_y[incrementValue$3];
+                      var4[incrementValue$0] = param0.field_y[incrementValue$1];
                       var8++;
                       continue L2;
                     }
@@ -988,27 +876,19 @@ final class mo extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var2);
-            stackOut_12_1 = new StringBuilder().append("mo.A(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var2);
+
+            stackIn_14_1 = new StringBuilder().append("mo.A(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }

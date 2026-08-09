@@ -21,8 +21,8 @@ final class tl implements Runnable {
     static boolean field_d;
 
     final static char a(byte param0, char param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = DungeonAssault.field_K;
         if (param0 != -69) {
           field_c = (String) null;
@@ -581,10 +581,9 @@ final class tl implements Runnable {
             int var1_int = 0;
             Object var1 = null;
             Throwable var2 = null;
-            Object var2_ref = null;
-            Throwable var3 = null;
             int var4 = 0;
             Throwable decompiledCaughtException = null;
+            Object var2_ref = null;
             var4 = DungeonAssault.field_K;
             try {
               L0: {
@@ -638,12 +637,12 @@ final class tl implements Runnable {
     }
 
     final synchronized boolean d(int param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         if (this.field_a >= 2) {
           return true;
         } else {

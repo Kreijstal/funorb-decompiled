@@ -24,54 +24,32 @@ final class mf {
     }
 
     final void a(float[] param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        boolean[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8_int = 0;
-        float var8 = 0.0f;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        boolean[] var14 = null;
-        int var15 = 0;
-        int var16 = 0;
         int stackIn_5_0 = 0;
-        int[] stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
         int[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         int[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         int stackIn_10_2 = 0;
-        int[] stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
         int[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         int[] stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_14_2 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int[] stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int[] stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        int[] stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        int[] stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        int[] stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        int[] stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
+        int var3;
+        int var4;
+        boolean[] var5;
+        int var6;
+        int var7;
+        int var8_int;
+        float var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        boolean[] var14;
+        int var15;
+        int var16;
         var3 = this.field_a.length;
         var4 = field_b[this.field_d - 1];
         var5 = field_k;
@@ -126,12 +104,10 @@ final class mf {
               var11 = var4 - var9;
               var12 = var9;
               if (var11 >= var12) {
-                stackOut_4_0 = var12;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = var12;
                 break L3;
               } else {
-                stackOut_3_0 = var11;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = var11;
                 break L3;
               }
             }
@@ -149,27 +125,19 @@ final class mf {
               field_k[var6] = true;
               if (var10 < var13) {
                 L4: {
-                  stackOut_11_0 = (int[]) (field_g);
-                  stackOut_11_1 = var6;
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
-                  stackIn_12_0 = stackOut_11_0;
-                  stackIn_12_1 = stackOut_11_1;
+                  stackIn_13_0 = (int[]) (field_g);
+
+                  stackIn_13_1 = var6;
+
                   if ((var10 & 1) == 0) {
-                    stackOut_13_0 = (int[]) ((Object) stackIn_13_0);
-                    stackOut_13_1 = stackIn_13_1;
-                    stackOut_13_2 = var9 + var10 / 2;
-                    stackIn_14_0 = stackOut_13_0;
-                    stackIn_14_1 = stackOut_13_1;
-                    stackIn_14_2 = stackOut_13_2;
+                    stackIn_14_0 = (int[]) ((Object) stackIn_13_0);
+                    stackIn_14_1 = stackIn_13_1;
+                    stackIn_14_2 = var9 + var10 / 2;
                     break L4;
                   } else {
-                    stackOut_12_0 = (int[]) ((Object) stackIn_12_0);
-                    stackOut_12_1 = stackIn_12_1;
-                    stackOut_12_2 = var9 - (var10 + 1) / 2;
-                    stackIn_14_0 = stackOut_12_0;
-                    stackIn_14_1 = stackOut_12_1;
-                    stackIn_14_2 = stackOut_12_2;
+                    stackIn_14_0 = (int[]) ((Object) stackIn_13_0);
+                    stackIn_14_1 = stackIn_13_1;
+                    stackIn_14_2 = var9 - (var10 + 1) / 2;
                     break L4;
                   }
                 }
@@ -178,27 +146,19 @@ final class mf {
                 continue L0;
               } else {
                 L5: {
-                  stackOut_7_0 = (int[]) (field_g);
-                  stackOut_7_1 = var6;
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_8_0 = stackOut_7_0;
-                  stackIn_8_1 = stackOut_7_1;
+                  stackIn_9_0 = (int[]) (field_g);
+
+                  stackIn_9_1 = var6;
+
                   if (var11 <= var12) {
-                    stackOut_9_0 = (int[]) ((Object) stackIn_9_0);
-                    stackOut_9_1 = stackIn_9_1;
-                    stackOut_9_2 = var9 - var10 + var11 - 1;
-                    stackIn_10_0 = stackOut_9_0;
-                    stackIn_10_1 = stackOut_9_1;
-                    stackIn_10_2 = stackOut_9_2;
+                    stackIn_10_0 = (int[]) ((Object) stackIn_9_0);
+                    stackIn_10_1 = stackIn_9_1;
+                    stackIn_10_2 = var9 - var10 + var11 - 1;
                     break L5;
                   } else {
-                    stackOut_8_0 = (int[]) ((Object) stackIn_8_0);
-                    stackOut_8_1 = stackIn_8_1;
-                    stackOut_8_2 = var10 - var12 + var9;
-                    stackIn_10_0 = stackOut_8_0;
-                    stackIn_10_1 = stackOut_8_1;
-                    stackIn_10_2 = stackOut_8_2;
+                    stackIn_10_0 = (int[]) ((Object) stackIn_9_0);
+                    stackIn_10_1 = stackIn_9_1;
+                    stackIn_10_2 = var10 - var12 + var9;
                     break L5;
                   }
                 }
@@ -212,11 +172,11 @@ final class mf {
     }
 
     private final static int b(int[] param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var2 = param0[param1];
         var3 = -1;
         var4 = -2147483648;
@@ -286,12 +246,12 @@ final class mf {
     }
 
     private final void a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         if (param0 < param1) {
           var3 = param0;
           var4 = field_i[var3];
@@ -330,11 +290,11 @@ final class mf {
     }
 
     private final static int a(int[] param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var2 = param0[param1];
         var3 = -1;
         var4 = 2147483647;
@@ -398,19 +358,19 @@ final class mf {
     }
 
     mf() {
-        int incrementValue$2 = 0;
-        int dupTemp$3 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int[] var6_ref_int__ = null;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int[] var10 = null;
+        int incrementValue$0 = 0;
+        int dupTemp$1 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int[] var6_ref_int__;
+        int var7;
+        int var8;
+        int[] var9;
+        int[] var10;
         var1 = sd.a(16);
         if (var1 == 1) {
           var2 = sd.a(5);
@@ -465,9 +425,9 @@ final class mf {
                               var6++;
                               continue L3;
                             } else {
-                              incrementValue$2 = var5;
+                              incrementValue$0 = var5;
                               var5++;
-                              this.field_a[incrementValue$2] = sd.a(var4);
+                              this.field_a[incrementValue$0] = sd.a(var4);
                               var8++;
                               continue L6;
                             }
@@ -483,9 +443,9 @@ final class mf {
                 } else {
                   L7: {
                     this.field_h[var4] = sd.a(3) + 1;
-                    dupTemp$3 = sd.a(2);
-                    this.field_j[var4] = dupTemp$3;
-                    var5 = dupTemp$3;
+                    dupTemp$1 = sd.a(2);
+                    this.field_j[var4] = dupTemp$1;
+                    var5 = dupTemp$1;
                     if (var5 == 0) {
                       break L7;
                     } else {

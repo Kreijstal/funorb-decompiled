@@ -8,32 +8,12 @@ final class qn extends kj {
     static String field_h;
 
     final static void a(int param0, nc param1, int param2) {
-        int discarded$1 = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         pf var7 = null;
         pf var8 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        var6 = BachelorFridge.field_y;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = BachelorFridge.field_y;
         try {
-          L0: {
             var7 = sja.field_fb;
             var8 = var7;
             var8.c(param0, (byte) 109);
@@ -48,56 +28,16 @@ final class qn extends kj {
             var8.e(param1.field_i, -1615464796);
             var8.e(param1.field_g, -1615464796);
             var8.d(param1.field_m.length, param2 + 8692);
-            var5 = 0;
-            L1: while (true) {
-              if (param1.field_m.length <= var5) {
-                L2: {
-                  if (param2 == -8692) {
-                    break L2;
-                  } else {
-                    field_i = (cf) null;
-                    break L2;
-                  }
-                }
-                discarded$1 = var8.a(var4, 19);
-                var8.b((byte) -108, -var4 + var8.field_g);
-                break L0;
-              } else {
+            for (var5 = 0; param1.field_m.length > var5; var5++) {
                 var7.e(param1.field_m[var5], -1615464796);
-                var5++;
-                continue L1;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("qn.J(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L3;
-            } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L3;
+            if (param2 != -8692) {
+                field_i = (cf) null;
             }
-          }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ')');
+            var8.a(var4, 19);
+            var8.b((byte) -108, -var4 + var8.field_g);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) ((Object) runtimeException), "qn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -112,13 +52,13 @@ final class qn extends kj {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
-        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         var11 = BachelorFridge.field_y;
         try {
           L0: {

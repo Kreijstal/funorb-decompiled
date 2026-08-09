@@ -23,22 +23,18 @@ final class dk {
     int field_c;
 
     final void a(boolean param0, boolean param1, byte param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        String var9 = null;
-        int var9_int = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
         int stackIn_19_0 = 0;
         int stackIn_22_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        String var9;
+        int var9_int;
+        int var10;
+        int var11;
+        int var12;
         var12 = EscapeVector.field_A;
         var4 = this.field_f - -this.field_p;
         if (param2 > 16) {
@@ -110,24 +106,20 @@ final class dk {
               } else {
                 L6: {
                   if (param0) {
-                    stackOut_18_0 = this.field_k[1];
-                    stackIn_19_0 = stackOut_18_0;
+                    stackIn_19_0 = this.field_k[1];
                     break L6;
                   } else {
-                    stackOut_17_0 = this.field_k[0];
-                    stackIn_19_0 = stackOut_17_0;
+                    stackIn_19_0 = this.field_k[0];
                     break L6;
                   }
                 }
                 L7: {
                   var8 = stackIn_19_0;
                   if (param0) {
-                    stackOut_21_0 = this.field_a[1];
-                    stackIn_22_0 = stackOut_21_0;
+                    stackIn_22_0 = this.field_a[1];
                     break L7;
                   } else {
-                    stackOut_20_0 = this.field_a[0];
-                    stackIn_22_0 = stackOut_20_0;
+                    stackIn_22_0 = this.field_a[0];
                     break L7;
                   }
                 }
@@ -151,13 +143,13 @@ final class dk {
     }
 
     private final void h(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6_int = 0;
-        String var6 = null;
-        int var7 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6_int;
+        String var6;
+        int var7;
         var7 = EscapeVector.field_A;
         if (this.field_d != 4) {
           return;
@@ -250,30 +242,19 @@ final class dk {
     }
 
     final static byte[] a(byte param0, CharSequence param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        byte[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         byte[] stackIn_69_0 = null;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
         RuntimeException stackIn_72_0 = null;
         StringBuilder stackIn_72_1 = null;
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_73_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_68_0 = null;
-        RuntimeException stackOut_70_0 = null;
-        StringBuilder stackOut_70_1 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        String stackOut_71_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        byte[] var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
         var6 = EscapeVector.field_A;
         try {
           L0: {
@@ -290,8 +271,7 @@ final class dk {
             var4 = 0;
             L2: while (true) {
               if (var4 >= var2_int) {
-                stackOut_68_0 = (byte[]) (var3);
-                stackIn_69_0 = stackOut_68_0;
+                stackIn_69_0 = (byte[]) (var3);
                 break L0;
               } else {
                 L3: {
@@ -469,27 +449,19 @@ final class dk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_70_0 = (RuntimeException) (var2);
-            stackOut_70_1 = new StringBuilder().append("dk.K(").append(param0).append(',');
-            stackIn_72_0 = stackOut_70_0;
-            stackIn_72_1 = stackOut_70_1;
-            stackIn_71_0 = stackOut_70_0;
-            stackIn_71_1 = stackOut_70_1;
+            stackIn_72_0 = (RuntimeException) (var2);
+
+            stackIn_72_1 = new StringBuilder().append("dk.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
-              stackOut_72_2 = "null";
-              stackIn_73_0 = stackOut_72_0;
-              stackIn_73_1 = stackOut_72_1;
-              stackIn_73_2 = stackOut_72_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "null";
               break L7;
             } else {
-              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
-              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackOut_71_2 = "{...}";
-              stackIn_73_0 = stackOut_71_0;
-              stackIn_73_1 = stackOut_71_1;
-              stackIn_73_2 = stackOut_71_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "{...}";
               break L7;
             }
           }
@@ -543,21 +515,23 @@ final class dk {
     }
 
     final static void e(int param0) {
+        int stackIn_13_0 = 0;
+        int stackIn_13_1 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         dc var4 = null;
         int var4_int = 0;
-        cc var5_ref_cc = null;
         int var5 = 0;
+        cc var5_ref_cc = null;
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
         c var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = EscapeVector.field_A;
         try {
           L0: {
@@ -630,7 +604,9 @@ final class dk {
                         var5_ref_cc.c((byte) -62);
                         break L1;
                       } else {
-                        nm.a(param0 ^ 108457426);
+                        stackIn_13_0 = param0;
+                        stackIn_13_1 = 108457426;
+                        nm.a(stackIn_13_0 ^ stackIn_13_1);
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -666,8 +642,8 @@ final class dk {
     }
 
     final boolean a(byte param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         L0: {
           var4 = this.field_p + this.field_f;
           if (this.field_f > param1) {

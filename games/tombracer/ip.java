@@ -6,7 +6,7 @@ abstract class ip {
     static boolean field_b;
 
     final int a(byte param0, long param1) {
-        long var4 = 0L;
+        long var4;
         var4 = this.a((byte) 47);
         if ((var4 ^ -1L) >= -1L) {
           if (param0 <= 3) {

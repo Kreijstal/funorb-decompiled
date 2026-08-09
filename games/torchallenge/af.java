@@ -10,7 +10,7 @@ final class af {
     static int[] field_f;
 
     final static void b(int param0, int param1) {
-        pa var2 = null;
+        pa var2;
         var2 = dk.field_s;
         var2.d(25, param1);
         if (param0 != 9245) {
@@ -26,7 +26,6 @@ final class af {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_b = null;
         field_c = null;
         field_f = null;
@@ -34,7 +33,7 @@ final class af {
         field_e = (int[][][]) null;
         field_d = null;
         if (param0 != -7604) {
-            discarded$0 = af.a(1, -16);
+            af.a(1, -16);
         }
     }
 

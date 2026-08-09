@@ -8,9 +8,8 @@ final class pv implements dja {
     }
 
     public final tv[] a(int param0, int param1) {
-        tv[] discarded$0 = null;
         if (param0 != 11995) {
-            discarded$0 = this.a(51, -109);
+            this.a(51, -109);
             return (tv[]) ((Object) new lbb[param1]);
         }
         return (tv[]) ((Object) new lbb[param1]);

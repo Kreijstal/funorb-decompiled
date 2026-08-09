@@ -61,14 +61,12 @@ final class sa {
 
     final static boolean a(byte param0, boolean param1) {
         try {
-            long dupTemp$1 = 0L;
+            long dupTemp$0 = 0L;
+            int stackIn_8_0 = 0;
+            Throwable decompiledCaughtException = null;
             IOException var2 = null;
             oq var4 = null;
             oq var5 = null;
-            int stackIn_8_0 = 0;
-            Throwable decompiledCaughtException = null;
-            int stackOut_7_0 = 0;
-            int stackOut_6_0 = 0;
             L0: {
               if (ge.field_u != null) {
                 break L0;
@@ -78,9 +76,9 @@ final class sa {
               }
             }
             if (ge.field_u.field_f != 0) {
-              dupTemp$1 = rl.a((byte) -95);
-              nf.field_Q = dupTemp$1;
-              ob.field_v = dupTemp$1;
+              dupTemp$0 = rl.a((byte) -95);
+              nf.field_Q = dupTemp$0;
+              ob.field_v = dupTemp$0;
               if ((ge.field_u.field_f ^ -1) != -2) {
                 tl.field_J = vk.field_V;
                 if (param0 != 65) {
@@ -99,12 +97,10 @@ final class sa {
                       ej.field_j.field_v = 0;
                       var5.field_v = 0;
                       if (!param1) {
-                        stackOut_7_0 = -1;
-                        stackIn_8_0 = stackOut_7_0;
+                        stackIn_8_0 = -1;
                         break L2;
                       } else {
-                        stackOut_6_0 = -2;
-                        stackIn_8_0 = stackOut_6_0;
+                        stackIn_8_0 = -2;
                         break L2;
                       }
                     }
@@ -145,7 +141,6 @@ final class sa {
     }
 
     public static void a(int param0) {
-        boolean discarded$2 = false;
         field_s = null;
         field_m = null;
         field_v = null;
@@ -157,7 +152,7 @@ final class sa {
         field_y = null;
         field_e = null;
         if (param0 != -13265) {
-          discarded$2 = sa.a((byte) 89, true);
+          sa.a((byte) 89, true);
           field_q = null;
           field_f = null;
           field_o = null;

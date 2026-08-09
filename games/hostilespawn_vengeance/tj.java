@@ -20,16 +20,16 @@ abstract class tj extends am {
     abstract int c();
 
     final void a(int[] param0, int param1, int param2) {
-        if (((tj) this).field_h) {
-            ((tj) this).b(param0, param1, param2);
+        if (this.field_h) {
+            this.b(param0, param1, param2);
         } else {
-            ((tj) this).c(param2);
+            this.c(param2);
         }
     }
 
     abstract tj b();
 
     protected tj() {
-        ((tj) this).field_h = true;
+        this.field_h = true;
     }
 }

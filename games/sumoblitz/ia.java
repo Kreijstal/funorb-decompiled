@@ -14,26 +14,23 @@ final class ia implements Iterator {
 
     public final Object next() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
-        ms var3 = null;
-        ms var4 = null;
+        int var2;
+        Object var3;
+        ms var3_ref;
+        ms var4;
         var2 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_b == this.field_e.field_c[this.field_f + -1]) {
           L0: while (true) {
             if (this.field_f < this.field_e.field_d) {
               fieldTemp$1 = this.field_f;
               this.field_f = this.field_f + 1;
-              var3 = this.field_e.field_c[fieldTemp$1].field_b;
-              if (var3 == this.field_e.field_c[this.field_f - 1]) {
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  return null;
-                }
+              var3_ref = this.field_e.field_c[fieldTemp$1].field_b;
+              if (var3_ref == this.field_e.field_c[this.field_f - 1]) {
+                continue L0;
               } else {
-                this.field_g = var3;
-                this.field_b = var3.field_b;
-                return var3;
+                this.field_g = var3_ref;
+                this.field_b = var3_ref.field_b;
+                return var3_ref;
               }
             } else {
               return null;
@@ -57,24 +54,19 @@ final class ia implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_e.field_c[-1 + this.field_f] == this.field_b) {
           L0: while (true) {
             if (this.field_e.field_d > this.field_f) {
               fieldTemp$1 = this.field_f;
               this.field_f = this.field_f + 1;
-              if (this.field_e.field_c[fieldTemp$1].field_b == this.field_e.field_c[-1 + this.field_f]) {
-                this.field_b = this.field_e.field_c[-1 + this.field_f];
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  this.field_b = this.field_e.field_c[this.field_f - 1].field_b;
-                  return true;
-                }
-              } else {
+              if (this.field_e.field_c[fieldTemp$1].field_b != this.field_e.field_c[-1 + this.field_f]) {
                 this.field_b = this.field_e.field_c[this.field_f - 1].field_b;
                 return true;
+              } else {
+                this.field_b = this.field_e.field_c[-1 + this.field_f];
+                continue L0;
               }
             } else {
               return false;

@@ -32,41 +32,19 @@ final class ds {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param2 == -4) {
           var4 = param0;
-          if ((var4 ^ -1) == -8) {
-            L0: {
-              if (var5 == 0) {
-                this.a(param1, 9266);
-                if (var5 != 0) {
-                  break L0;
-                } else {
-                  this.d(param1, -98);
-                  return;
-                }
-              } else {
-                if (5 == var4) {
-                  break L0;
-                } else {
-                  if (-13 == (var4 ^ -1)) {
-                    this.f(-112, param1);
-                    if (var5 != 0) {
-                      this.c(param1, -11);
-                      this.b(-5, param1);
-                      this.d(param1, -98);
-                      return;
-                    } else {
-                      this.d(param1, -98);
-                      return;
-                    }
-                  } else {
-                    if (-11 != (var4 ^ -1)) {
-                      if (15 == var4) {
-                        this.c(param1, -11);
-                        if (var5 == 0) {
+          if ((var4 ^ -1) != -8) {
+            if (5 != var4) {
+              if (-13 != (var4 ^ -1)) {
+                if (-11 != (var4 ^ -1)) {
+                  if (15 != var4) {
+                    if ((var4 ^ -1) != -15) {
+                      if (-4 != (var4 ^ -1)) {
+                        if ((var4 ^ -1) != -5) {
                           this.d(param1, -98);
                           return;
                         } else {
@@ -75,142 +53,39 @@ final class ds {
                           return;
                         }
                       } else {
-                        if ((var4 ^ -1) == -15) {
-                          this.b(-5, param1);
-                          this.d(param1, -98);
-                          return;
-                        } else {
-                          if (-4 != (var4 ^ -1)) {
-                            if ((var4 ^ -1) == -5) {
-                              this.b(-5, param1);
-                              this.d(param1, -98);
-                              return;
-                            } else {
-                              this.d(param1, -98);
-                              return;
-                            }
-                          } else {
-                            if (var5 == 0) {
-                              this.b(-5, param1);
-                              this.d(param1, -98);
-                              return;
-                            } else {
-                              if ((var4 ^ -1) != -5) {
-                                this.d(param1, -98);
-                                return;
-                              } else {
-                                this.b(-5, param1);
-                                this.d(param1, -98);
-                                return;
-                              }
-                            }
-                          }
-                        }
+                        this.b(-5, param1);
+                        this.d(param1, -98);
+                        return;
                       }
                     } else {
-                      this.c(param1, -11);
                       this.b(-5, param1);
                       this.d(param1, -98);
                       return;
                     }
+                  } else {
+                    this.c(param1, -11);
+                    this.d(param1, -98);
+                    return;
                   }
+                } else {
+                  this.c(param1, -11);
+                  this.d(param1, -98);
+                  return;
                 }
+              } else {
+                this.f(-112, param1);
+                this.d(param1, -98);
+                return;
               }
-            }
-            this.e(-127, param1);
-            if (var5 != 0) {
-              this.f(-112, param1);
-              this.c(param1, -11);
-              this.b(-5, param1);
-              this.d(param1, -98);
-              return;
             } else {
+              this.e(-127, param1);
               this.d(param1, -98);
               return;
             }
           } else {
-            if (5 == var4) {
-              this.e(-127, param1);
-              if (var5 != 0) {
-                this.f(-112, param1);
-                this.c(param1, -11);
-                this.b(-5, param1);
-                this.d(param1, -98);
-                return;
-              } else {
-                this.d(param1, -98);
-                return;
-              }
-            } else {
-              if (-13 == (var4 ^ -1)) {
-                this.f(-112, param1);
-                if (var5 != 0) {
-                  this.c(param1, -11);
-                  this.b(-5, param1);
-                  this.d(param1, -98);
-                  return;
-                } else {
-                  this.d(param1, -98);
-                  return;
-                }
-              } else {
-                if (-11 != (var4 ^ -1)) {
-                  if (15 != var4) {
-                    if ((var4 ^ -1) == -15) {
-                      this.b(-5, param1);
-                      this.d(param1, -98);
-                      return;
-                    } else {
-                      if (-4 != (var4 ^ -1)) {
-                        if ((var4 ^ -1) == -5) {
-                          this.b(-5, param1);
-                          this.d(param1, -98);
-                          return;
-                        } else {
-                          this.d(param1, -98);
-                          return;
-                        }
-                      } else {
-                        if (var5 == 0) {
-                          this.b(-5, param1);
-                          this.d(param1, -98);
-                          return;
-                        } else {
-                          if ((var4 ^ -1) != -5) {
-                            this.d(param1, -98);
-                            return;
-                          } else {
-                            this.b(-5, param1);
-                            this.d(param1, -98);
-                            return;
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    this.c(param1, -11);
-                    if (var5 == 0) {
-                      this.d(param1, -98);
-                      return;
-                    } else {
-                      this.b(-5, param1);
-                      this.d(param1, -98);
-                      return;
-                    }
-                  }
-                } else {
-                  this.c(param1, -11);
-                  if (var5 == 0) {
-                    this.d(param1, -98);
-                    return;
-                  } else {
-                    this.b(-5, param1);
-                    this.d(param1, -98);
-                    return;
-                  }
-                }
-              }
-            }
+            this.a(param1, 9266);
+            this.d(param1, -98);
+            return;
           }
         } else {
           return;
@@ -225,7 +100,7 @@ final class ds {
     }
 
     final static void a(byte param0, boolean param1) {
-        int var2 = 0;
+        int var2;
         var2 = 105 % ((param0 - -9) / 56);
         if (!lca.a(false)) {
           return;
@@ -312,15 +187,7 @@ final class ds {
             if (-127 <= (param2 ^ -1)) {
               return (param1 & 65408) + param2;
             } else {
-              L0: {
-                param2 = 126;
-                if (!TombRacer.field_G) {
-                  break L0;
-                } else {
-                  param2 = 2;
-                  break L0;
-                }
-              }
+              param2 = 126;
               return (param1 & 65408) + param2;
             }
           } else {
@@ -333,15 +200,7 @@ final class ds {
             if (-127 <= (param2 ^ -1)) {
               return (param1 & 65408) + param2;
             } else {
-              L1: {
-                param2 = 126;
-                if (!TombRacer.field_G) {
-                  break L1;
-                } else {
-                  param2 = 2;
-                  break L1;
-                }
-              }
+              param2 = 126;
               return (param1 & 65408) + param2;
             }
           } else {
@@ -366,33 +225,27 @@ final class ds {
     }
 
     final void a(int param0, boolean param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        if (!param1) {
+        if (param1) {
+          return;
+        } else {
           var3 = 0;
           L0: while (true) {
-            if (this.field_d.length > var3) {
-              if (var4 == 0) {
-                L1: {
-                  if (var3 == param0) {
-                    break L1;
-                  } else {
-                    this.field_d[var3] = true;
-                    break L1;
-                  }
-                }
+            if (this.field_d.length <= var3) {
+              return;
+            } else {
+              if (var3 != param0) {
+                this.field_d[var3] = true;
                 var3++;
                 continue L0;
               } else {
-                return;
+                var3++;
+                continue L0;
               }
-            } else {
-              return;
             }
           }
-        } else {
-          return;
         }
     }
 

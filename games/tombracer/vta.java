@@ -36,28 +36,32 @@ final class vta extends vw {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param2 == 2048) {
-          if (-1 != (param1 & 2048 ^ -1)) {
-            if (-1 == (param0 & 55 ^ -1)) {
-              return false;
-            } else {
-              return true;
-            }
+        int stackIn_6_0 = 0;
+        L0: {
+          if (param2 == 2048) {
+            break L0;
           } else {
-            return false;
-          }
-        } else {
-          vta.c((byte) -99);
-          if (-1 != (param1 & 2048 ^ -1)) {
-            if (-1 == (param0 & 55 ^ -1)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
+            vta.c((byte) -99);
+            break L0;
           }
         }
+        L1: {
+          L2: {
+            if (-1 == (param1 & 2048 ^ -1)) {
+              break L2;
+            } else {
+              if (-1 == (param0 & 55 ^ -1)) {
+                break L2;
+              } else {
+                stackIn_6_0 = 1;
+                break L1;
+              }
+            }
+          }
+          stackIn_6_0 = 0;
+          break L1;
+        }
+        return stackIn_6_0 != 0;
     }
 
     final static int a(CharSequence param0, int param1) {
@@ -66,26 +70,13 @@ final class vta extends vw {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_8_0 = 0;
+        int stackIn_7_0 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -101,184 +92,76 @@ final class vta extends vw {
             var3 = 0;
             var4 = 0;
             L2: while (true) {
-              L3: {
-                if (var4 >= var2_int) {
-                  stackOut_7_0 = var3;
-                  stackIn_8_0 = stackOut_7_0;
-                  break L3;
-                } else {
-                  stackOut_5_0 = -var3 + ((var3 << -345436059) - -io.a(-377, param0.charAt(var4)));
-                  stackIn_8_0 = stackOut_5_0;
-                  stackIn_6_0 = stackOut_5_0;
-                  if (var5 != 0) {
-                    break L3;
-                  } else {
-                    var3 = stackIn_6_0;
-                    var4++;
-                    continue L2;
-                  }
-                }
+              if (var4 >= var2_int) {
+                stackIn_7_0 = var3;
+                break L0;
+              } else {
+                var3 = -var3 + ((var3 << -345436059) - -io.a(-377, param0.charAt(var4)));
+                var4++;
+                continue L2;
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2);
-            stackOut_9_1 = new StringBuilder().append("vta.D(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_10_0 = (RuntimeException) (var2);
+
+            stackIn_10_1 = new StringBuilder().append("vta.D(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L4;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
+              break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L4;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
+              break L3;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
         }
-        return stackIn_8_0;
+        return stackIn_7_0;
     }
 
     final void a(int param0, iva param1, int param2) {
-        int discarded$2 = 0;
-        RuntimeException runtimeException = null;
-        CharSequence var5 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
-            L1: {
-              this.field_c.a(true, param1);
-              this.field_c.a((byte) -35, param0);
-              if (param2 == 24595) {
-                break L1;
-              } else {
-                var5 = (CharSequence) null;
-                discarded$2 = vta.a((CharSequence) null, -89);
-                break L1;
-              }
+            this.field_c.a(true, param1);
+            this.field_c.a((byte) -35, param0);
+            if (param2 != 24595) {
+                CharSequence var5 = (CharSequence) null;
+                vta.a((CharSequence) null, -89);
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("vta.E(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "vta.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void a(int param0) {
         if (param0 >= -4) {
             field_e = -1.3910614252090454f;
-            this.field_c.a(false, (byte) 72);
-            return;
         }
         this.field_c.a(false, (byte) 72);
     }
 
     final boolean c(int param0) {
-        int discarded$0 = 0;
         if (param0 != 1185) {
             CharSequence var3 = (CharSequence) null;
-            discarded$0 = vta.a((CharSequence) null, -5);
+            vta.a((CharSequence) null, -5);
             return true;
         }
         return true;
     }
 
     final static void c(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         fua.field_g = false;
         if (param0 < 52) {
-          L0: {
             field_f = (String) null;
-            if (-1 != (vc.field_q.h(255) ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          ok.field_s = stackIn_8_0 != 0;
-          return;
-        } else {
-          L1: {
-            if (-1 != (vc.field_q.h(255) ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          ok.field_s = stackIn_4_0 != 0;
-          return;
         }
+        ok.field_s = -1 == (vc.field_q.h(255) ^ -1) ? true : false;
     }
 
     static {

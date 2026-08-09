@@ -21,10 +21,10 @@ final class pc {
     }
 
     final int c() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
         var1 = this.field_i.length;
         var2 = -1;
         var3 = 2147483647;
@@ -124,9 +124,9 @@ final class pc {
     }
 
     private final int d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var2 = this.field_c.field_m[this.field_c.field_q];
           if (var2 >= 0) {

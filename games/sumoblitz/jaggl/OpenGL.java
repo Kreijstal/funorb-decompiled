@@ -226,13 +226,11 @@ public class OpenGL {
     public final native static void glVertexPointer(int param0, int param1, int param2, long param3);
 
     public final boolean a(String param0) {
-        Object discarded$4 = null;
-        Object discarded$5 = null;
-        String var2 = null;
-        int var3 = 0;
-        int var4_int = 0;
-        String var4 = null;
-        String var5 = null;
+        String var2;
+        int var3;
+        int var4_int;
+        String var4;
+        String var5;
         if (this.b == null) {
           this.b = new Hashtable();
           var2 = jaggl.OpenGL.glGetString(7939);
@@ -244,14 +242,14 @@ public class OpenGL {
               if (var4.length() == 0) {
                 return this.b.containsKey(param0);
               } else {
-                discarded$4 = this.b.put(var4, var4);
+                this.b.put(var4, var4);
                 return this.b.containsKey(param0);
               }
             } else {
               L1: {
                 var5 = var2.substring(var3, var4_int).trim();
                 if (var5.length() != 0) {
-                  discarded$5 = this.b.put(var5, var5);
+                  this.b.put(var5, var5);
                   break L1;
                 } else {
                   break L1;
@@ -339,7 +337,7 @@ public class OpenGL {
             return false;
         }
         this.detachPeer();
-        Object discarded$0 = a.remove(this.c);
+        a.remove(this.c);
         this.c = null;
         return true;
     }
@@ -401,8 +399,8 @@ public class OpenGL {
     public final native static void glGetObjectParameterivARB(long param0, int param1, int[] param2, int param3);
 
     public final synchronized boolean b() {
-        Thread var1 = null;
-        jaggl.OpenGL var2 = null;
+        Thread var1;
+        jaggl.OpenGL var2;
         var1 = Thread.currentThread();
         if (this.attachPeer()) {
           var2 = (jaggl.OpenGL) (a.put(var1, this));

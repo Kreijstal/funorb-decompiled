@@ -14,7 +14,7 @@ final class ql {
     static vd field_i;
 
     final void a(int param0, byte param1) {
-        int var3 = 0;
+        int var3;
         L0: {
           var3 = -25 % ((30 - param1) / 45);
           this.field_h = 0;
@@ -358,7 +358,7 @@ final class ql {
     }
 
     final void c(int param0) {
-        int var2 = 0;
+        int var2;
         this.field_j = 0;
         this.field_h = 0;
         this.field_c = 0;
@@ -492,8 +492,6 @@ final class ql {
 
     final boolean c(byte param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == -82) {
           if (0 == this.field_c) {
             if (84 != this.field_h) {
@@ -516,12 +514,10 @@ final class ql {
             } else {
               L0: {
                 if (this.field_h != 83) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }
@@ -544,11 +540,8 @@ final class ql {
     }
 
     final boolean b(byte param0) {
-        boolean discarded$6 = false;
         int stackIn_8_0 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_6_0 = 0;
         if (param0 >= 16) {
           if (this.field_j != 1) {
             if (-98 != (this.field_h ^ -1)) {
@@ -559,8 +552,7 @@ final class ql {
                   return false;
                 }
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 1;
                 return stackIn_20_0 != 0;
               }
             } else {
@@ -570,7 +562,7 @@ final class ql {
             return true;
           }
         } else {
-          discarded$6 = this.c((byte) -22);
+          this.c((byte) -22);
           if (this.field_j != 1) {
             if (-98 != (this.field_h ^ -1)) {
               if ((this.field_h ^ -1) != -85) {
@@ -580,8 +572,7 @@ final class ql {
                   return false;
                 }
               } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 1;
                 return stackIn_8_0 != 0;
               }
             } else {
@@ -594,10 +585,7 @@ final class ql {
     }
 
     final boolean e(int param0) {
-        boolean discarded$7 = false;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == -748) {
           if (this.field_j == 0) {
             if (this.field_h != 84) {
@@ -613,19 +601,17 @@ final class ql {
             return true;
           }
         } else {
-          discarded$7 = this.b(-81);
+          this.b(-81);
           if (this.field_j == 0) {
             if (this.field_h == 84) {
               return true;
             } else {
               L0: {
                 if ((this.field_h ^ -1) != -84) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }
@@ -638,31 +624,20 @@ final class ql {
     }
 
     final void a(int param0, byte param1, boolean param2) {
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           this.field_a = 0;
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param2) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -1055,20 +1030,14 @@ final class ql {
     final boolean a(boolean param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0) {
           L0: {
             ql.a((byte) 15);
             if ((this.field_h ^ -1) != -103) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -1076,12 +1045,10 @@ final class ql {
         } else {
           L1: {
             if ((this.field_h ^ -1) != -103) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -1116,7 +1083,6 @@ final class ql {
 
     final boolean g(int param0) {
         int stackIn_5_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == -85) {
           if (-3 != (this.field_j ^ -1)) {
             if (-97 == (this.field_h ^ -1)) {
@@ -1125,8 +1091,7 @@ final class ql {
               return false;
             }
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             return stackIn_5_0 != 0;
           }
         } else {
@@ -1135,33 +1100,22 @@ final class ql {
     }
 
     final void a(int param0, int param1, boolean param2, int param3) {
-        int var5 = 0;
-        Object stackIn_1_0 = null;
+        int var5;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           this.field_a = 0;
           var5 = -77 % ((param3 - 1) / 39);
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param2) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }

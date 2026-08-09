@@ -11,11 +11,11 @@ final class ml {
     static String field_d;
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         ud var4 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = SteelSentinels.field_G;
         try {
           L0: {
@@ -51,7 +51,6 @@ final class ml {
     final static void a(int param0, cf param1, int param2) {
         kj var3 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var3 = mm.field_g;
             var3.a(param2, (byte) -117);
@@ -64,7 +63,7 @@ final class ml {
             var3.b(true, param1.field_E);
             var3.b(true, param1.field_z);
             var3.b(true, param1.field_y);
-            discarded$0 = var3.f(-72, var4);
+            var3.f(-72, var4);
             var3.b((byte) -115, var3.field_p - var4);
         } catch (RuntimeException runtimeException) {
             throw ci.a((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -95,8 +94,8 @@ final class ml {
     }
 
     final static void a(byte param0, int param1) {
-        kj var2 = null;
-        cf var3 = null;
+        kj var2;
+        cf var3;
         var2 = mm.field_g;
         if (param0 != 12) {
           var3 = (cf) null;

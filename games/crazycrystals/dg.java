@@ -19,8 +19,8 @@ final class dg {
     }
 
     final static byte a(char param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = CrazyCrystals.field_B;
         if (param1 != 17176) {
           field_a = (String) null;
@@ -641,14 +641,13 @@ final class dg {
     }
 
     final static void a(byte param0) {
-        byte discarded$2 = 0;
         lo.field_b = null;
         ec.field_l.a(22800);
         ke.field_b[jo.field_o] = 0;
         so.field_h.a(22800);
         fk.field_s = 0;
         if (param0 > -25) {
-          discarded$2 = dg.a('ￚ', 73);
+          dg.a('ￚ', 73);
           pc.field_y = 0;
           return;
         } else {

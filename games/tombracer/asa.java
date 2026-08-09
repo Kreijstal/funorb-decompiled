@@ -18,8 +18,9 @@ final class asa extends gda {
 
     final void b(int param0, int param1) {
         this.field_g = 1.0f;
-        this.field_h = ph.field_c[16383 & param1];
-        this.field_q = ph.field_c[16383 & param1];
+        float dupTemp$0 = ph.field_c[16383 & param1];
+        this.field_h = dupTemp$0;
+        this.field_q = dupTemp$0;
         this.field_o = ph.field_n[16383 & param1];
         this.field_m = -this.field_o;
         this.field_k = 0.0f;
@@ -33,33 +34,14 @@ final class asa extends gda {
     }
 
     final void a(gda param0, byte param1) {
-        RuntimeException var3 = null;
-        int var4 = 0;
         asa var5 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
-          L0: {
             var5 = (asa) ((Object) param0);
             this.field_g = var5.field_g;
             this.field_f = var5.field_p;
             this.field_l = var5.field_k;
             this.field_k = var5.field_l;
-            var4 = -22 % ((73 - param1) / 49);
+            int var4 = -22 % ((73 - param1) / 49);
             this.field_m = var5.field_o;
             this.field_q = var5.field_q;
             this.field_p = var5.field_f;
@@ -68,37 +50,8 @@ final class asa extends gda {
             this.field_o = var5.field_m;
             this.field_n = -(this.field_m * var5.field_i + (this.field_q * var5.field_n + this.field_k * var5.field_e));
             this.field_i = -(var5.field_e * this.field_p + var5.field_n * this.field_o + var5.field_i * this.field_h);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var3);
-            stackOut_2_1 = new StringBuilder().append("asa.R(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
-            } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "asa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -141,7 +94,7 @@ final class asa extends gda {
     }
 
     final void b(gda param0, int param1) {
-        RuntimeException var3 = null;
+        asa var12 = null;
         float var4 = 0.0f;
         float var5 = 0.0f;
         float var6 = 0.0f;
@@ -150,43 +103,20 @@ final class asa extends gda {
         float var9 = 0.0f;
         float var10 = 0.0f;
         float var11 = 0.0f;
-        asa var12 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
-          L0: {
-            L1: {
-              var12 = (asa) ((Object) param0);
-              var4 = this.field_g;
-              var5 = this.field_k;
-              var6 = this.field_l;
-              var7 = this.field_q;
-              var8 = this.field_f;
-              var9 = this.field_m;
-              var10 = this.field_e;
-              this.field_k = this.field_p * var12.field_m + (var12.field_q * var5 + var4 * var12.field_k);
-              this.field_g = var12.field_l * var5 + var12.field_g * var4 + var12.field_f * this.field_p;
-              var11 = this.field_n;
-              if (param1 == 3) {
-                break L1;
-              } else {
+            var12 = (asa) ((Object) param0);
+            var4 = this.field_g;
+            var5 = this.field_k;
+            var6 = this.field_l;
+            var7 = this.field_q;
+            var8 = this.field_f;
+            var9 = this.field_m;
+            var10 = this.field_e;
+            this.field_k = this.field_p * var12.field_m + (var12.field_q * var5 + var4 * var12.field_k);
+            this.field_g = var12.field_l * var5 + var12.field_g * var4 + var12.field_f * this.field_p;
+            var11 = this.field_n;
+            if (param1 != 3) {
                 this.field_e = -1.1916428804397583f;
-                break L1;
-              }
             }
             this.field_q = var6 * var12.field_k + var7 * var12.field_q + var12.field_m * this.field_o;
             this.field_l = var12.field_f * this.field_o + (var12.field_g * var6 + var7 * var12.field_l);
@@ -198,37 +128,8 @@ final class asa extends gda {
             this.field_n = var12.field_n + (var12.field_q * var11 + var12.field_k * var10 + var12.field_m * this.field_i);
             this.field_e = var10 * var12.field_g + var12.field_l * var11 + var12.field_f * this.field_i + var12.field_e;
             this.field_i = var11 * var12.field_o + var10 * var12.field_p + this.field_i * var12.field_h + var12.field_i;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("asa.C(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
-            if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
-            } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "asa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -294,8 +195,6 @@ final class asa extends gda {
         RuntimeException var3 = null;
         float[] stackIn_2_0 = null;
         float[] stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -303,16 +202,6 @@ final class asa extends gda {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        float[] stackOut_3_0 = null;
-        float[] stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             param0[3] = 0.0f;
@@ -332,13 +221,11 @@ final class asa extends gda {
               param0[4] = this.field_l;
               param0[5] = this.field_q;
               param0[12] = this.field_e;
-              stackOut_3_0 = (float[]) (param0);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (float[]) (param0);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (float[]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (float[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -347,27 +234,19 @@ final class asa extends gda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("asa.IA(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("asa.IA(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -384,8 +263,6 @@ final class asa extends gda {
         RuntimeException var3 = null;
         float[] stackIn_2_0 = null;
         float[] stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -393,16 +270,6 @@ final class asa extends gda {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        float[] stackOut_3_0 = null;
-        float[] stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             param1[10] = this.field_h;
@@ -422,13 +289,11 @@ final class asa extends gda {
               param1[0] = this.field_g;
               param1[15] = 1.0f;
               param1[14] = 0.0f;
-              stackOut_3_0 = (float[]) (param1);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (float[]) (param1);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (float[]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (float[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -437,27 +302,19 @@ final class asa extends gda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("asa.H(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("asa.H(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -561,8 +418,6 @@ final class asa extends gda {
         RuntimeException var3 = null;
         float[] stackIn_2_0 = null;
         float[] stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -570,16 +425,6 @@ final class asa extends gda {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        float[] stackOut_3_0 = null;
-        float[] stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             param1[15] = 1.0f;
@@ -599,13 +444,11 @@ final class asa extends gda {
               param1[9] = this.field_n;
               param1[2] = 0.0f;
               param1[4] = this.field_l;
-              stackOut_3_0 = (float[]) (param1);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (float[]) (param1);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (float[]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (float[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -614,27 +457,19 @@ final class asa extends gda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("asa.F(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("asa.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -668,8 +503,6 @@ final class asa extends gda {
         RuntimeException var3 = null;
         float[] stackIn_2_0 = null;
         float[] stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -677,16 +510,6 @@ final class asa extends gda {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        float[] stackOut_3_0 = null;
-        float[] stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             param0[7] = this.field_n;
@@ -698,13 +521,11 @@ final class asa extends gda {
               param0[5] = this.field_q;
               param0[6] = this.field_m;
               param0[2] = this.field_f;
-              stackOut_3_0 = (float[]) (param0);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (float[]) (param0);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (float[]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (float[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -713,27 +534,19 @@ final class asa extends gda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("asa.K(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("asa.K(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -747,51 +560,13 @@ final class asa extends gda {
     }
 
     final void a(gda param0, gda param1, byte param2) {
-        RuntimeException var4 = null;
-        asa var5 = null;
         asa var6 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        asa var5 = null;
         try {
-          L0: {
-            L1: {
-              var6 = (asa) ((Object) param0);
-              var5 = (asa) ((Object) param1);
-              if (param2 >= 118) {
-                break L1;
-              } else {
+            var6 = (asa) ((Object) param0);
+            var5 = (asa) ((Object) param1);
+            if (param2 < 118) {
                 this.field_o = -0.8563432097434998f;
-                break L1;
-              }
             }
             this.field_g = var5.field_g * var6.field_g + var5.field_k * var6.field_l + var6.field_f * var5.field_p;
             this.field_k = var6.field_m * var5.field_p + (var6.field_q * var5.field_k + var6.field_k * var5.field_g);
@@ -805,62 +580,8 @@ final class asa extends gda {
             this.field_h = var6.field_o * var5.field_m + var5.field_f * var6.field_p + var6.field_h * var5.field_h;
             this.field_n = var5.field_n * var6.field_q + var6.field_k * var5.field_e + var6.field_m * var5.field_i + var6.field_n;
             this.field_i = var6.field_i + (var6.field_h * var5.field_i + (var5.field_n * var6.field_o + var5.field_e * var6.field_p));
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var4);
-            stackOut_4_1 = new StringBuilder().append("asa.V(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
-            if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
-            } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
-            }
-          }
-          L3: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
-            if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
-            } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L3;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "asa.V(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -934,23 +655,12 @@ final class asa extends gda {
         RuntimeException var3 = null;
         gda var4 = null;
         float[] stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        float[] stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -978,35 +688,26 @@ final class asa extends gda {
             param0[6] = this.field_m;
             param0[5] = this.field_q;
             param0[13] = 0.0f;
-            stackOut_2_0 = (float[]) (param0);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (float[]) (param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("asa.LA(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("asa.LA(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -1016,9 +717,9 @@ final class asa extends gda {
     }
 
     final void a(float param0, int param1, int param2, int param3, int param4, float param5, float param6) {
-        float var8 = 0.0f;
-        float var9 = 0.0f;
-        gda var10 = null;
+        float var8;
+        float var9;
+        gda var10;
         L0: {
           if (param3 != 0) {
             var8 = ph.field_c[16383 & param3];
@@ -1049,31 +750,7 @@ final class asa extends gda {
             this.field_g = (float)(param1 * 2);
             this.field_q = (float)(param2 * 2);
             this.field_k = 0.0f;
-            if (!TombRacer.field_G) {
-              break L0;
-            } else {
-              var8 = ph.field_c[16383 & param3];
-              var9 = ph.field_n[16383 & param3];
-              this.field_e = (-(0.5f * var8) + 0.5f * var9) * (float)(2 * param1) + param0;
-              this.field_f = 0.0f;
-              this.field_l = (float)param2 * (var9 * -2.0f);
-              this.field_p = 0.0f;
-              this.field_n = param6 + (-(0.5f * var8) + -0.5f * var9) * (float)(param2 * 2);
-              this.field_m = 0.0f;
-              this.field_h = 1.0f;
-              this.field_k = var9 * 2.0f * (float)param1;
-              this.field_o = 0.0f;
-              this.field_i = param5;
-              this.field_g = (float)param1 * (var8 * 2.0f);
-              this.field_q = var8 * 2.0f * (float)param2;
-              if (param4 == 2) {
-                return;
-              } else {
-                var10 = (gda) null;
-                this.a(-20, (gda) null);
-                return;
-              }
-            }
+            break L0;
           }
         }
         if (param4 != 2) {
@@ -1112,7 +789,7 @@ final class asa extends gda {
     }
 
     final float a(int param0, float param1, float param2, float param3) {
-        gda var6 = null;
+        gda var6;
         if (param0 != 1) {
           var6 = (gda) null;
           this.b((gda) null, -20);
@@ -1123,14 +800,11 @@ final class asa extends gda {
     }
 
     final void a(int param0, float param1, float param2, float[] param3, float param4, float param5) {
-        RuntimeException var7 = null;
         float var7_float = 0.0f;
         float var8 = 0.0f;
         float var9 = 0.0f;
         float var10 = 0.0f;
         int var11 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -1138,66 +812,48 @@ final class asa extends gda {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var7 = null;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             if (param0 == 32560) {
               L1: {
                 L2: {
-                  L3: {
-                    param3[1] = this.field_k * param2 + param5 * this.field_q + param1 * this.field_m;
-                    param3[0] = param1 * this.field_f + (this.field_l * param5 + param2 * this.field_g);
-                    if (0.00390625f < param2) {
-                      break L3;
-                    } else {
-                      if (param2 >= -0.00390625f) {
-                        break L2;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  var10 = -param4 / param2;
-                  var7_float = this.field_e + this.field_g * var10;
-                  var9 = this.field_i + var10 * this.field_p;
-                  var8 = this.field_k * var10 + this.field_n;
-                  if (var11 == 0) {
-                    break L1;
-                  } else {
+                  param3[1] = this.field_k * param2 + param5 * this.field_q + param1 * this.field_m;
+                  param3[0] = param1 * this.field_f + (this.field_l * param5 + param2 * this.field_g);
+                  if (0.00390625f < param2) {
                     break L2;
-                  }
-                }
-                L4: {
-                  if (param5 > 0.00390625f) {
-                    break L4;
                   } else {
-                    if (-0.00390625f > param5) {
-                      break L4;
-                    } else {
-                      var10 = -param4 / param1;
-                      var7_float = this.field_e + var10 * this.field_f;
-                      var9 = this.field_i + var10 * this.field_h;
-                      var8 = var10 * this.field_m + this.field_n;
-                      if (var11 == 0) {
-                        break L1;
-                      } else {
-                        break L4;
+                    if (param2 >= -0.00390625f) {
+                      L3: {
+                        if (param5 > 0.00390625f) {
+                          break L3;
+                        } else {
+                          if (-0.00390625f > param5) {
+                            break L3;
+                          } else {
+                            var10 = -param4 / param1;
+                            var7_float = this.field_e + var10 * this.field_f;
+                            var9 = this.field_i + var10 * this.field_h;
+                            var8 = var10 * this.field_m + this.field_n;
+                            break L1;
+                          }
+                        }
                       }
+                      var10 = -param4 / param5;
+                      var8 = this.field_n + this.field_q * var10;
+                      var9 = this.field_i + this.field_o * var10;
+                      var7_float = var10 * this.field_l + this.field_e;
+                      break L1;
+                    } else {
+                      break L2;
                     }
                   }
                 }
-                var10 = -param4 / param5;
-                var8 = this.field_n + this.field_q * var10;
-                var9 = this.field_i + this.field_o * var10;
-                var7_float = var10 * this.field_l + this.field_e;
+                var10 = -param4 / param2;
+                var7_float = this.field_e + this.field_g * var10;
+                var9 = this.field_i + var10 * this.field_p;
+                var8 = this.field_k * var10 + this.field_n;
                 break L1;
               }
               param3[2] = this.field_p * param2 + this.field_o * param5 + param1 * this.field_h;
@@ -1211,30 +867,22 @@ final class asa extends gda {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var7 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var7);
-            stackOut_13_1 = new StringBuilder().append("asa.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var7);
+
+            stackIn_15_1 = new StringBuilder().append("asa.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L5;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L5;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L4;
             }
           }
           throw tba.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param4 + ',' + param5 + ')');
@@ -1247,7 +895,7 @@ final class asa extends gda {
     }
 
     final void a(float param0, float param1, boolean param2, float param3) {
-        gda var6 = null;
+        gda var6;
         this.field_e = 0.0f;
         this.field_k = 0.0f;
         this.field_g = param1;

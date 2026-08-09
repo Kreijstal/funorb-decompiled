@@ -18,8 +18,17 @@ final class al extends java.awt.Canvas {
     }
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        RuntimeException var9 = null;
+        int stackIn_43_0 = 0;
+        int stackIn_43_1 = 0;
+        RuntimeException stackIn_82_0 = null;
+        StringBuilder stackIn_82_1 = null;
+        RuntimeException stackIn_83_0 = null;
+        StringBuilder stackIn_83_1 = null;
+        String stackIn_83_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var9_int = 0;
+        RuntimeException var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -30,31 +39,6 @@ final class al extends java.awt.Canvas {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_26_1 = 0;
-        int stackIn_43_0 = 0;
-        int stackIn_43_1 = 0;
-        RuntimeException stackIn_81_0 = null;
-        StringBuilder stackIn_81_1 = null;
-        RuntimeException stackIn_82_0 = null;
-        StringBuilder stackIn_82_1 = null;
-        RuntimeException stackIn_83_0 = null;
-        StringBuilder stackIn_83_1 = null;
-        String stackIn_83_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_25_0 = 0;
-        int stackOut_25_1 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_42_1 = 0;
-        RuntimeException stackOut_80_0 = null;
-        StringBuilder stackOut_80_1 = null;
-        RuntimeException stackOut_82_0 = null;
-        StringBuilder stackOut_82_1 = null;
-        String stackOut_82_2 = null;
-        RuntimeException stackOut_81_0 = null;
-        StringBuilder stackOut_81_1 = null;
-        String stackOut_81_2 = null;
         var19 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -161,17 +145,15 @@ final class al extends java.awt.Canvas {
                                 break L9;
                               } else {
                                 var17 = var9_int >> 1728000272;
-                                stackOut_25_0 = var17 ^ -1;
-                                stackOut_25_1 = wi.field_c ^ -1;
-                                stackIn_43_0 = stackOut_25_0;
-                                stackIn_43_1 = stackOut_25_1;
-                                stackIn_26_0 = stackOut_25_0;
-                                stackIn_26_1 = stackOut_25_1;
+                                stackIn_43_0 = var17 ^ -1;
+
+                                stackIn_43_1 = wi.field_c ^ -1;
+
                                 if (var19 != 0) {
                                   break L8;
                                 } else {
                                   L13: {
-                                    if (stackIn_26_0 <= stackIn_26_1) {
+                                    if (stackIn_43_0 <= stackIn_43_1) {
                                       break L13;
                                     } else {
                                       L14: {
@@ -224,7 +206,11 @@ final class al extends java.awt.Canvas {
                                     var9_int = var9_int + var11;
                                     var10 = var10 + var12;
                                     var16 = var16 + ul.field_f;
-                                    continue L12;
+                                    if (var19 == 0) {
+                                      continue L12;
+                                    } else {
+                                      break L9;
+                                    }
                                   } else {
                                     decompiledRegionSelector0 = 3;
                                     break L0;
@@ -233,10 +219,8 @@ final class al extends java.awt.Canvas {
                               }
                             }
                           }
-                          stackOut_42_0 = param8;
-                          stackOut_42_1 = param1;
-                          stackIn_43_0 = stackOut_42_0;
-                          stackIn_43_1 = stackOut_42_1;
+                          stackIn_43_0 = param8;
+                          stackIn_43_1 = param1;
                           break L8;
                         }
                         L17: {
@@ -352,76 +336,83 @@ final class al extends java.awt.Canvas {
                     }
                   }
                   L26: while (true) {
-                    if (param6 >= param8) {
-                      decompiledRegionSelector0 = 4;
-                      break L0;
-                    } else {
-                      var16 = var9_int >> 1880272880;
-                      if (var19 != 0) {
-                        decompiledRegionSelector0 = 5;
-                        break L0;
+                    L27: {
+                      if (param6 >= param8) {
+                        break L27;
                       } else {
-                        L27: {
-                          if (wi.field_c <= var16) {
-                            break L27;
-                          } else {
-                            L28: {
-                              var17 = -(var9_int >> -2091310896) + (var10 >> -640935632);
-                              if (var17 != 0) {
-                                break L28;
-                              } else {
-                                if (-1 < (var16 ^ -1)) {
-                                  break L27;
+                        var16 = var9_int >> 1880272880;
+                        if (var19 != 0) {
+                          decompiledRegionSelector0 = 5;
+                          break L0;
+                        } else {
+                          L28: {
+                            if (wi.field_c <= var16) {
+                              break L28;
+                            } else {
+                              L29: {
+                                var17 = -(var9_int >> -2091310896) + (var10 >> -640935632);
+                                if (var17 != 0) {
+                                  break L29;
                                 } else {
-                                  if (var16 < wi.field_c) {
-                                    mb.a(var17, var16 - -var15, param0, param7, true);
-                                    if (var19 == 0) {
-                                      break L27;
+                                  if (-1 < (var16 ^ -1)) {
+                                    break L28;
+                                  } else {
+                                    if (var16 < wi.field_c) {
+                                      mb.a(var17, var16 - -var15, param0, param7, true);
+                                      if (var19 == 0) {
+                                        break L28;
+                                      } else {
+                                        break L29;
+                                      }
                                     } else {
                                       break L28;
                                     }
-                                  } else {
-                                    break L27;
                                   }
                                 }
                               }
-                            }
-                            L29: {
-                              if (wi.field_c > var17 + var16) {
-                                break L29;
-                              } else {
-                                var17 = wi.field_c + -var16 - 1;
-                                break L29;
-                              }
-                            }
-                            L30: {
-                              if (-1 < (var16 ^ -1)) {
-                                break L30;
-                              } else {
-                                mb.a(var17, var15 + var16, param0, param7, true);
-                                if (var19 == 0) {
-                                  break L27;
+                              L30: {
+                                if (wi.field_c > var17 + var16) {
+                                  break L30;
                                 } else {
+                                  var17 = wi.field_c + -var16 - 1;
                                   break L30;
                                 }
                               }
+                              L31: {
+                                if (-1 < (var16 ^ -1)) {
+                                  break L31;
+                                } else {
+                                  mb.a(var17, var15 + var16, param0, param7, true);
+                                  if (var19 == 0) {
+                                    break L28;
+                                  } else {
+                                    break L31;
+                                  }
+                                }
+                              }
+                              mb.a(var16 + var17, var15, param0, param7, true);
+                              break L28;
                             }
-                            mb.a(var16 + var17, var15, param0, param7, true);
-                            break L27;
                           }
-                        }
-                        param6++;
-                        if (param6 >= wi.field_a) {
-                          decompiledRegionSelector0 = 6;
-                          break L0;
-                        } else {
-                          var9_int = var9_int + var11;
-                          var10 = var10 + var12;
-                          var15 = var15 + ul.field_f;
-                          continue L26;
+                          param6++;
+                          if (param6 >= wi.field_a) {
+                            decompiledRegionSelector0 = 6;
+                            break L0;
+                          } else {
+                            var9_int = var9_int + var11;
+                            var10 = var10 + var12;
+                            var15 = var15 + ul.field_f;
+                            if (var19 == 0) {
+                              continue L26;
+                            } else {
+                              break L27;
+                            }
+                          }
                         }
                       }
                     }
+                    decompiledRegionSelector0 = 4;
+                    break L0;
                   }
                 }
               }
@@ -431,30 +422,22 @@ final class al extends java.awt.Canvas {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L31: {
+          L32: {
             var9 = decompiledCaughtException;
-            stackOut_80_0 = (RuntimeException) (var9);
-            stackOut_80_1 = new StringBuilder().append("al.A(");
-            stackIn_82_0 = stackOut_80_0;
-            stackIn_82_1 = stackOut_80_1;
-            stackIn_81_0 = stackOut_80_0;
-            stackIn_81_1 = stackOut_80_1;
+            stackIn_82_0 = (RuntimeException) (var9);
+
+            stackIn_82_1 = new StringBuilder().append("al.A(");
+
             if (param0 == null) {
-              stackOut_82_0 = (RuntimeException) ((Object) stackIn_82_0);
-              stackOut_82_1 = (StringBuilder) ((Object) stackIn_82_1);
-              stackOut_82_2 = "null";
-              stackIn_83_0 = stackOut_82_0;
-              stackIn_83_1 = stackOut_82_1;
-              stackIn_83_2 = stackOut_82_2;
-              break L31;
+              stackIn_83_0 = (RuntimeException) ((Object) stackIn_82_0);
+              stackIn_83_1 = (StringBuilder) ((Object) stackIn_82_1);
+              stackIn_83_2 = "null";
+              break L32;
             } else {
-              stackOut_81_0 = (RuntimeException) ((Object) stackIn_81_0);
-              stackOut_81_1 = (StringBuilder) ((Object) stackIn_81_1);
-              stackOut_81_2 = "{...}";
-              stackIn_83_0 = stackOut_81_0;
-              stackIn_83_1 = stackOut_81_1;
-              stackIn_83_2 = stackOut_81_2;
-              break L31;
+              stackIn_83_0 = (RuntimeException) ((Object) stackIn_82_0);
+              stackIn_83_1 = (StringBuilder) ((Object) stackIn_82_1);
+              stackIn_83_2 = "{...}";
+              break L32;
             }
           }
           throw dd.a((Throwable) ((Object) stackIn_83_0), stackIn_83_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
@@ -507,7 +490,6 @@ final class al extends java.awt.Canvas {
             ak var8 = null;
             ki stackIn_17_0 = null;
             Throwable decompiledCaughtException = null;
-            ki stackOut_16_0 = null;
             try {
               L0: {
                 L1: {
@@ -564,8 +546,7 @@ final class al extends java.awt.Canvas {
                     break L6;
                   }
                 }
-                stackOut_16_0 = new ki(var8, param0, param3);
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_0 = new ki(var8, param0, param3);
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {

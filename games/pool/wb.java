@@ -37,7 +37,7 @@ final class wb {
     }
 
     public static void a(byte param0) {
-        ea var2 = null;
+        ea var2;
         field_e = null;
         if (param0 != 118) {
           var2 = (ea) null;

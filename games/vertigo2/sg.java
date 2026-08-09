@@ -28,8 +28,11 @@ final class sg {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
-        RuntimeException var8 = null;
+        int stackIn_11_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -71,11 +74,6 @@ final class sg {
         int[] var57 = null;
         int[] var58 = null;
         int[] var59 = null;
-        int stackIn_11_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
         var47 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -137,12 +135,10 @@ final class sg {
                 } else {
                   L3: {
                     if (var9 > var12) {
-                      stackOut_10_0 = 0;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_11_0 = 0;
                       break L3;
                     } else {
-                      stackOut_9_0 = 1;
-                      stackIn_11_0 = stackOut_9_0;
+                      stackIn_11_0 = 1;
                       break L3;
                     }
                   }

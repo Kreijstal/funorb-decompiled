@@ -18,15 +18,8 @@ final class qd extends ae {
     int field_Z;
 
     final boolean a(na param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        RuntimeException var8 = null;
-        int var8_int = 0;
-        int var9 = 0;
-        double var10 = 0.0;
-        int var12 = 0;
         int stackIn_14_0 = 0;
         int stackIn_16_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -34,22 +27,16 @@ final class qd extends ae {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_13_0 = 0;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        int var8_int = 0;
+        RuntimeException var8 = null;
+        int var9 = 0;
+        double var10 = 0.0;
+        int var12 = 0;
         var12 = TetraLink.field_J;
         try {
           L0: {
             if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
-              stackOut_15_0 = 0;
-              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
@@ -91,8 +78,7 @@ final class qd extends ae {
                   }
                 }
               }
-              stackOut_13_0 = 1;
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -101,27 +87,19 @@ final class qd extends ae {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var8);
-            stackOut_17_1 = new StringBuilder().append("qd.PA(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var8);
+
+            stackIn_19_1 = new StringBuilder().append("qd.PA(");
+
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L5;
             }
           }
@@ -137,20 +115,14 @@ final class qd extends ae {
     final static el c(int param0, int param1) {
         gb stackIn_4_0 = null;
         gb stackIn_8_0 = null;
-        Object stackOut_7_0 = null;
-        gb stackOut_6_0 = null;
-        Object stackOut_3_0 = null;
-        gb stackOut_2_0 = null;
         if (param0 < 107) {
           L0: {
             field_P = (oh) null;
             if (null == db.field_e) {
-              stackOut_7_0 = null;
-              stackIn_8_0 = (gb) ((Object) stackOut_7_0);
+              stackIn_8_0 = null;
               break L0;
             } else {
-              stackOut_6_0 = db.field_e.a((long)param1, 1);
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = db.field_e.a((long)param1, 1);
               break L0;
             }
           }
@@ -158,12 +130,10 @@ final class qd extends ae {
         } else {
           L1: {
             if (null == db.field_e) {
-              stackOut_3_0 = null;
-              stackIn_4_0 = (gb) ((Object) stackOut_3_0);
+              stackIn_4_0 = null;
               break L1;
             } else {
-              stackOut_2_0 = db.field_e.a((long)param1, 1);
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = db.field_e.a((long)param1, 1);
               break L1;
             }
           }

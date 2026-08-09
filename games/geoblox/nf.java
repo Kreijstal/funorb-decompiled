@@ -90,17 +90,17 @@ final class nf {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var12 = Geoblox.field_C;
         if (this.field_D) {
           return;
@@ -134,7 +134,7 @@ final class nf {
               L2: {
                 var9 = this.field_O[var8];
                 var10 = this.field_q[var8];
-                if (var10 < var3) {
+                if ((var10 ^ -1) > (var3 ^ -1)) {
                   var3 = var10;
                   break L2;
                 } else {

@@ -17,10 +17,10 @@ final class sk {
     private long field_f;
 
     private final void b(byte param0) throws IOException {
-        long var2 = 0L;
-        long var4 = 0L;
-        int var6 = 0;
-        int var7 = 0;
+        long var2;
+        long var4;
+        int var6;
+        int var7;
         L0: {
           var7 = Geoblox.field_C;
           if (0L == (this.field_c ^ -1L)) {
@@ -127,6 +127,7 @@ final class sk {
         this.b((byte) 91);
         this.field_a.a((byte) -5);
         if (param0 != 27034) {
+            this.a((byte) 92);
         }
     }
 
@@ -138,11 +139,20 @@ final class sk {
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
-        boolean discarded$2 = false;
-        int incrementValue$3 = 0;
+        int incrementValue$0 = 0;
+        int stackIn_32_0 = 0;
+        int stackIn_32_1 = 0;
+        RuntimeException stackIn_64_0 = null;
+        StringBuilder stackIn_64_1 = null;
+        RuntimeException stackIn_65_0 = null;
+        StringBuilder stackIn_65_1 = null;
+        String stackIn_65_2 = null;
+        int decompiledRegionSelector0 = 0;
+        int decompiledRegionSelector1 = 0;
+        Throwable decompiledCaughtException = null;
+        long var5_long = 0L;
         IOException var5 = null;
         RuntimeException var5_ref = null;
-        long var5_long = 0L;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -150,24 +160,6 @@ final class sk {
         long var11 = 0L;
         int var13 = 0;
         int var14 = 0;
-        RuntimeException stackIn_62_0 = null;
-        StringBuilder stackIn_62_1 = null;
-        RuntimeException stackIn_63_0 = null;
-        StringBuilder stackIn_63_1 = null;
-        RuntimeException stackIn_64_0 = null;
-        StringBuilder stackIn_64_1 = null;
-        String stackIn_64_2 = null;
-        int decompiledRegionSelector0 = 0;
-        int decompiledRegionSelector1 = 0;
-        Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_61_0 = null;
-        StringBuilder stackOut_61_1 = null;
-        RuntimeException stackOut_63_0 = null;
-        StringBuilder stackOut_63_1 = null;
-        String stackOut_63_2 = null;
-        RuntimeException stackOut_62_0 = null;
-        StringBuilder stackOut_62_1 = null;
-        String stackOut_62_2 = null;
         var14 = Geoblox.field_C;
         try {
           L0: {
@@ -201,7 +193,7 @@ final class sk {
                     if (param3 == 9868) {
                       break L3;
                     } else {
-                      discarded$2 = sk.a(-115);
+                      sk.a(-115);
                       break L3;
                     }
                   }
@@ -277,7 +269,9 @@ final class sk {
                         if ((this.field_c ^ -1L) >= (this.field_f ^ -1L)) {
                           break L10;
                         } else {
-                          if (-1 <= (param1 ^ -1)) {
+                          stackIn_32_0 = -1;
+                          stackIn_32_1 = param1 ^ -1;
+                          if (stackIn_32_0 <= stackIn_32_1) {
                             break L10;
                           } else {
                             L11: {
@@ -294,9 +288,9 @@ final class sk {
                                 break L10;
                               } else {
                                 param1--;
-                                incrementValue$3 = param2;
+                                incrementValue$0 = param2;
                                 param2++;
-                                param0[incrementValue$3] = (byte) 0;
+                                param0[incrementValue$0] = (byte) 0;
                                 this.field_f = this.field_f + 1L;
                                 continue L12;
                               }
@@ -401,31 +395,23 @@ final class sk {
           decompiledCaughtException = decompiledCaughtParameter1;
           L17: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_61_0 = (RuntimeException) (var5_ref);
-            stackOut_61_1 = new StringBuilder().append("sk.B(");
-            stackIn_63_0 = stackOut_61_0;
-            stackIn_63_1 = stackOut_61_1;
-            stackIn_62_0 = stackOut_61_0;
-            stackIn_62_1 = stackOut_61_1;
+            stackIn_64_0 = (RuntimeException) (var5_ref);
+
+            stackIn_64_1 = new StringBuilder().append("sk.B(");
+
             if (param0 == null) {
-              stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
-              stackOut_63_1 = (StringBuilder) ((Object) stackIn_63_1);
-              stackOut_63_2 = "null";
-              stackIn_64_0 = stackOut_63_0;
-              stackIn_64_1 = stackOut_63_1;
-              stackIn_64_2 = stackOut_63_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "null";
               break L17;
             } else {
-              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
-              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
-              stackOut_62_2 = "{...}";
-              stackIn_64_0 = stackOut_62_0;
-              stackIn_64_1 = stackOut_62_1;
-              stackIn_64_2 = stackOut_62_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "{...}";
               break L17;
             }
           }
-          throw t.a((Throwable) ((Object) stackIn_64_0), stackIn_64_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_65_0), stackIn_65_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         if (decompiledRegionSelector1 == 0) {
           return;
@@ -435,22 +421,11 @@ final class sk {
     }
 
     final void a(int param0, int param1, byte[] param2, boolean param3) throws IOException {
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        int var5_int = 0;
-        long var5_long = 0L;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        pa stackIn_18_0 = null;
-        long stackIn_18_1 = 0L;
         pa stackIn_19_0 = null;
         long stackIn_19_1 = 0L;
         pa stackIn_20_0 = null;
         long stackIn_20_1 = 0L;
         int stackIn_20_2 = 0;
-        RuntimeException stackIn_53_0 = null;
-        StringBuilder stackIn_53_1 = null;
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
         RuntimeException stackIn_55_0 = null;
@@ -459,22 +434,13 @@ final class sk {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        pa stackOut_17_0 = null;
-        long stackOut_17_1 = 0L;
-        pa stackOut_19_0 = null;
-        long stackOut_19_1 = 0L;
-        int stackOut_19_2 = 0;
-        pa stackOut_18_0 = null;
-        long stackOut_18_1 = 0L;
-        int stackOut_18_2 = 0;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        RuntimeException stackOut_54_0 = null;
-        StringBuilder stackOut_54_1 = null;
-        String stackOut_54_2 = null;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        String stackOut_53_2 = null;
+        int var5_int = 0;
+        long var5_long = 0L;
+        IOException var5 = null;
+        RuntimeException var5_ref = null;
+        long var7 = 0L;
+        int var9 = 0;
+        int var10 = 0;
         var10 = Geoblox.field_C;
         try {
           L0: {
@@ -530,27 +496,19 @@ final class sk {
                         break L5;
                       } else {
                         L6: {
-                          stackOut_17_0 = this.field_a;
-                          stackOut_17_1 = this.field_f;
-                          stackIn_19_0 = stackOut_17_0;
-                          stackIn_19_1 = stackOut_17_1;
-                          stackIn_18_0 = stackOut_17_0;
-                          stackIn_18_1 = stackOut_17_1;
+                          stackIn_19_0 = this.field_a;
+
+                          stackIn_19_1 = this.field_f;
+
                           if (param3) {
-                            stackOut_19_0 = (pa) ((Object) stackIn_19_0);
-                            stackOut_19_1 = stackIn_19_1;
-                            stackOut_19_2 = 0;
-                            stackIn_20_0 = stackOut_19_0;
-                            stackIn_20_1 = stackOut_19_1;
-                            stackIn_20_2 = stackOut_19_2;
+                            stackIn_20_0 = (pa) ((Object) stackIn_19_0);
+                            stackIn_20_1 = stackIn_19_1;
+                            stackIn_20_2 = 0;
                             break L6;
                           } else {
-                            stackOut_18_0 = (pa) ((Object) stackIn_18_0);
-                            stackOut_18_1 = stackIn_18_1;
-                            stackOut_18_2 = 1;
-                            stackIn_20_0 = stackOut_18_0;
-                            stackIn_20_1 = stackOut_18_1;
-                            stackIn_20_2 = stackOut_18_2;
+                            stackIn_20_0 = (pa) ((Object) stackIn_19_0);
+                            stackIn_20_1 = stackIn_19_1;
+                            stackIn_20_2 = 1;
                             break L6;
                           }
                         }
@@ -695,27 +653,19 @@ final class sk {
           decompiledCaughtException = decompiledCaughtParameter1;
           L15: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_52_0 = (RuntimeException) (var5_ref);
-            stackOut_52_1 = new StringBuilder().append("sk.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_54_0 = stackOut_52_0;
-            stackIn_54_1 = stackOut_52_1;
-            stackIn_53_0 = stackOut_52_0;
-            stackIn_53_1 = stackOut_52_1;
+            stackIn_54_0 = (RuntimeException) (var5_ref);
+
+            stackIn_54_1 = new StringBuilder().append("sk.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
-              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
-              stackOut_54_2 = "null";
-              stackIn_55_0 = stackOut_54_0;
-              stackIn_55_1 = stackOut_54_1;
-              stackIn_55_2 = stackOut_54_2;
+              stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
+              stackIn_55_2 = "null";
               break L15;
             } else {
-              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
-              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
-              stackOut_53_2 = "{...}";
-              stackIn_55_0 = stackOut_53_0;
-              stackIn_55_1 = stackOut_53_1;
-              stackIn_55_2 = stackOut_53_2;
+              stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
+              stackIn_55_2 = "{...}";
               break L15;
             }
           }
@@ -746,9 +696,9 @@ final class sk {
     }
 
     private final void a(boolean param0) throws IOException {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = Geoblox.field_C;
         if (param0) {
           L0: {
@@ -802,9 +752,13 @@ final class sk {
     }
 
     final static boolean a(int param0) {
-        boolean discarded$1 = false;
-        RuntimeException var1 = null;
-        ja var1_ref = null;
+        int stackIn_5_0 = 0;
+        int stackIn_31_0 = 0;
+        int stackIn_33_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        ja var1 = null;
+        RuntimeException var1_ref = null;
         float var2 = 0.0f;
         ja var3 = null;
         wd var4 = null;
@@ -816,14 +770,6 @@ final class sk {
         int var10 = 0;
         ja var11 = null;
         wd var12 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_33_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_30_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_4_0 = 0;
         var10 = Geoblox.field_C;
         try {
           L0: {
@@ -831,7 +777,7 @@ final class sk {
               if (param0 == -1) {
                 break L1;
               } else {
-                discarded$1 = sk.a(3);
+                sk.a(3);
                 break L1;
               }
             }
@@ -841,7 +787,7 @@ final class sk {
                 el.field_o.d((byte) 116);
                 sh.field_y.a(255);
                 var11 = (ja) ((Object) a.field_d.a(false));
-                var1_ref = var11;
+                var1 = var11;
                 var2 = (-320.0f + var11.field_o) * (-320.0f + var11.field_o) + (var11.field_v - 240.0f) * (var11.field_v - 240.0f);
                 var3 = (ja) ((Object) a.field_d.a(false));
                 L2: while (true) {
@@ -849,12 +795,11 @@ final class sk {
                     var12 = new wd();
                     var4 = new wd();
                     var5 = 0;
-                    var12.a(var1_ref, false);
+                    var12.a(var1, false);
                     L3: while (true) {
                       var6 = (ja) ((Object) var12.a(true));
                       if (var6 == null) {
-                        stackOut_30_0 = 1;
-                        stackIn_31_0 = stackOut_30_0;
+                        stackIn_31_0 = 1;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       } else {
@@ -906,7 +851,7 @@ final class sk {
                     L8: {
                       if (var2 < (-320.0f + var3.field_o) * (var3.field_o - 320.0f) + (-240.0f + var3.field_v) * (-240.0f + var3.field_v)) {
                         var2 = (-320.0f + var3.field_o) * (var3.field_o - 320.0f) + (var3.field_v - 240.0f) * (-240.0f + var3.field_v);
-                        var1_ref = var3;
+                        var1 = var3;
                         break L8;
                       } else {
                         break L8;
@@ -918,22 +863,20 @@ final class sk {
                 }
               } else {
                 sh.field_y.a(255);
-                stackOut_32_0 = 0;
-                stackIn_33_0 = stackOut_32_0;
+                stackIn_33_0 = 0;
                 decompiledRegionSelector0 = 2;
                 break L0;
               }
             } else {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "sk.D(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw t.a((Throwable) ((Object) var1_ref), "sk.D(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_5_0 != 0;

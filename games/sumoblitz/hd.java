@@ -91,7 +91,7 @@ final class hd extends ac {
     }
 
     final void b(int param0, int param1, boolean param2, int param3) {
-        int var5 = 0;
+        int var5;
         super.b(param0, param1, param2, param3);
         param3 = param3 - this.field_v;
         param1 = param1 - this.field_r;
@@ -115,22 +115,12 @@ final class hd extends ac {
 
     private final void a(int param0, int param1, Object[] param2) {
         RuntimeException var4 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
@@ -165,27 +155,19 @@ final class hd extends ac {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("hd.DB(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("hd.DB(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -194,15 +176,15 @@ final class hd extends ac {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var11 = 0;
-        Object var14 = null;
-        String var15 = null;
-        Object var16 = null;
-        String var17 = null;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var11;
+        Object var14;
+        String var15;
+        Object var16;
+        String var17;
         var11 = Sumoblitz.field_L ? 1 : 0;
         if (param3 == 0) {
           if (param2 < -35) {
@@ -218,34 +200,30 @@ final class hd extends ac {
                 break L0;
               }
             }
-            if (this.field_K != null) {
+            if (this.field_K == null) {
+              return;
+            } else {
               var8 = 0;
               L1: while (true) {
-                if (this.field_K.length > var8) {
-                  var16 = this.field_K[var8];
-                  var17 = var16.toString();
-                  if (var11 == 0) {
-                    L2: {
-                      if (var7 != var8) {
-                        break L2;
-                      } else {
-                        lk.b(2 + var5, var6 + 4, -4 + this.field_q, this.field_J, 2188450, 128);
-                        break L2;
-                      }
-                    }
-                    var6 = var6 + this.field_J;
-                    this.field_P.b(var17, 2 + var5, var6, 10000536, -1);
-                    var8++;
-                    continue L1;
-                  } else {
-                    return;
-                  }
-                } else {
+                if (this.field_K.length <= var8) {
                   return;
+                } else {
+                  L2: {
+                    var16 = this.field_K[var8];
+                    var17 = var16.toString();
+                    if (var7 != var8) {
+                      break L2;
+                    } else {
+                      lk.b(2 + var5, var6 + 4, -4 + this.field_q, this.field_J, 2188450, 128);
+                      break L2;
+                    }
+                  }
+                  var6 = var6 + this.field_J;
+                  this.field_P.b(var17, 2 + var5, var6, 10000536, -1);
+                  var8++;
+                  continue L1;
                 }
               }
-            } else {
-              return;
             }
           } else {
             L3: {
@@ -265,24 +243,20 @@ final class hd extends ac {
               var8 = 0;
               L4: while (true) {
                 if (this.field_K.length > var8) {
-                  var14 = this.field_K[var8];
-                  var15 = var14.toString();
-                  if (var11 == 0) {
-                    L5: {
-                      if (var7 != var8) {
-                        break L5;
-                      } else {
-                        lk.b(2 + var5, var6 + 4, -4 + this.field_q, this.field_J, 2188450, 128);
-                        break L5;
-                      }
+                  L5: {
+                    var14 = this.field_K[var8];
+                    var15 = var14.toString();
+                    if (var7 != var8) {
+                      break L5;
+                    } else {
+                      lk.b(2 + var5, var6 + 4, -4 + this.field_q, this.field_J, 2188450, 128);
+                      break L5;
                     }
-                    var6 = var6 + this.field_J;
-                    this.field_P.b(var15, 2 + var5, var6, 10000536, -1);
-                    var8++;
-                    continue L4;
-                  } else {
-                    return;
                   }
+                  var6 = var6 + this.field_J;
+                  this.field_P.b(var15, 2 + var5, var6, 10000536, -1);
+                  var8++;
+                  continue L4;
                 } else {
                   return;
                 }

@@ -15,7 +15,7 @@ final class uc extends pv {
     }
 
     final static void d(int param0) {
-        fj var1 = null;
+        fj var1;
         L0: {
           var1 = (fj) ((Object) ii.field_m.a((byte) -124));
           if (var1 != null) {
@@ -38,11 +38,11 @@ final class uc extends pv {
     }
 
     final boolean b(boolean param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         if (param0) {
-          fieldTemp$2 = this.field_g + 1;
+          fieldTemp$1 = this.field_g + 1;
           this.field_g = this.field_g + 1;
-          if (fieldTemp$2 <= this.c(-31460)) {
+          if (fieldTemp$1 <= this.c(-31460)) {
             if ((this.field_g ^ -1) == -2) {
               this.field_f.field_v.a((byte) 107, this.field_f.field_g.field_o.field_b, 2);
               c.a(1220394217, this.field_f.field_g.field_o.field_e);

@@ -12,7 +12,6 @@ final class ha extends tia {
     static int field_k;
 
     final boolean a(int param0) {
-        int discarded$3 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -20,51 +19,37 @@ final class ha extends tia {
         int var6 = 0;
         int var7 = 0;
         lh var8 = null;
-        int var9 = 0;
-        var9 = BachelorFridge.field_y;
-        int fieldTemp$2 = this.field_g - 2;
+        int var9 = BachelorFridge.field_y;
+        int fieldTemp$0 = this.field_g - 2;
         this.field_g = this.field_g - 2;
-        if (-1 <= (fieldTemp$2 ^ -1)) {
-          return false;
-        } else {
-          L0: {
-            if (30 >= this.field_g) {
-              break L0;
-            } else {
-              var2 = this.field_g;
-              var2 += 16;
-              var3 = 0;
-              L1: while (true) {
-                if ((var3 ^ -1) <= -17) {
-                  break L0;
-                } else {
-                  var4 = 15 + kla.a(300, this.field_f, -2147483648) + -150;
-                  var5 = -(int)((double)((64 - -kla.a(50, this.field_f, -2147483648) + -25) * (16384 / (var2 / 16))) * Math.sin((double)var4));
-                  var6 = -(int)((double)(6144 / (var2 / 16) * (-25 - -kla.a(50, this.field_f, -2147483648) + 64)) * Math.cos((double)var4));
-                  var7 = (int)(Math.sin((double)var2 * 300.0) * 100.0);
-                  var8 = new lh(var5, var7, var6);
-                  discarded$3 = kla.a(10, this.field_f, -2147483648);
-                  var8.field_p = -kla.a(5000, this.field_f, -2147483648);
-                  var8.field_k = -kla.a(5000, this.field_f, -2147483648);
-                  var8.field_g = -kla.a(5000, this.field_f, -2147483648);
-                  var8.field_m = -2;
-                  var8.field_o = this.field_g - 10;
-                  var8.field_r = (double)var4;
-                  var8.field_l = 0;
-                  this.field_j.a(var8, true);
-                  var3++;
-                  continue L1;
-                }
-              }
-            }
-          }
-          cla.a((byte) 11, this.field_j, this.field_g, this.field_f);
-          if (param0 <= 0) {
-            return true;
-          } else {
-            return true;
-          }
+        if (!(-1 > (fieldTemp$0 ^ -1))) {
+            return false;
         }
+        if (30 < this.field_g) {
+            var2 = this.field_g;
+            var2 += 16;
+            for (var3 = 0; (var3 ^ -1) > -17; var3++) {
+                var4 = 15 + kla.a(300, this.field_f, -2147483648) + -150;
+                var5 = -(int)((double)((64 - -kla.a(50, this.field_f, -2147483648) + -25) * (16384 / (var2 / 16))) * Math.sin((double)var4));
+                var6 = -(int)((double)(6144 / (var2 / 16) * (-25 - -kla.a(50, this.field_f, -2147483648) + 64)) * Math.cos((double)var4));
+                var7 = (int)(Math.sin((double)var2 * 300.0) * 100.0);
+                var8 = new lh(var5, var7, var6);
+                kla.a(10, this.field_f, -2147483648);
+                var8.field_p = -kla.a(5000, this.field_f, -2147483648);
+                var8.field_k = -kla.a(5000, this.field_f, -2147483648);
+                var8.field_g = -kla.a(5000, this.field_f, -2147483648);
+                var8.field_m = -2;
+                var8.field_o = this.field_g - 10;
+                var8.field_r = (double)var4;
+                var8.field_l = 0;
+                this.field_j.a(var8, true);
+            }
+        }
+        cla.a((byte) 11, this.field_j, this.field_g, this.field_f);
+        if (param0 > 0) {
+            return true;
+        }
+        return true;
     }
 
     final static void a(int param0, int param1, boolean param2) {

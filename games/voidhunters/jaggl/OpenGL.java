@@ -22,8 +22,8 @@ public class OpenGL {
     public final native static void glMultMatrixf(float[] param0, int param1);
 
     public final synchronized boolean a() {
-        Thread var1 = null;
-        jaggl.OpenGL var3 = null;
+        Thread var1;
+        jaggl.OpenGL var3;
         var1 = Thread.currentThread();
         if (this.attachPeer()) {
           L0: {
@@ -169,7 +169,7 @@ public class OpenGL {
             return false;
         }
         this.detachPeer();
-        Object discarded$0 = c.remove(this.a);
+        c.remove(this.a);
         this.a = null;
         return true;
     }
@@ -359,14 +359,12 @@ public class OpenGL {
     public final native static void glAlphaFunc(int param0, float param1);
 
     public final boolean a(String param0) {
-        Object discarded$7 = null;
-        Object discarded$8 = null;
-        String var2 = null;
-        int var3 = 0;
-        int var4_int = 0;
-        String var4 = null;
-        Object var5 = null;
-        String var5_ref = null;
+        String var2;
+        int var3;
+        int var4_int;
+        Object var5;
+        String var5_ref;
+        String var4;
         if (this.b == null) {
           this.b = new Hashtable();
           var2 = jaggl.OpenGL.glGetString(7939);
@@ -379,7 +377,7 @@ public class OpenGL {
               if (var5_ref.length() == 0) {
                 continue L0;
               } else {
-                discarded$7 = this.b.put(var5_ref, var5_ref);
+                this.b.put(var5_ref, var5_ref);
                 continue L0;
               }
             } else {
@@ -387,7 +385,7 @@ public class OpenGL {
               if (0 == var4.length()) {
                 return this.b.containsKey(param0);
               } else {
-                discarded$8 = this.b.put(var4, var4);
+                this.b.put(var4, var4);
                 return this.b.containsKey(param0);
               }
             }

@@ -17,7 +17,7 @@ final class cd extends pk {
     private int field_n;
 
     final void c(byte param0) {
-        int var3 = 0;
+        int var3;
         var3 = Chess.field_G;
         if (this.field_v == bi.field_f) {
           this.field_r.a(this.field_i, this.field_k);
@@ -89,23 +89,12 @@ final class cd extends pk {
     final static byte[] a(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -116,35 +105,26 @@ final class cd extends pk {
                 break L1;
               }
             }
-            stackOut_2_0 = sc.field_c.a("", 30045, param0);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = sc.field_c.a("", 30045, param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("cd.J(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("cd.J(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -154,9 +134,8 @@ final class cd extends pk {
     }
 
     private final boolean c(int param0) {
-        int var2 = 0;
+        int var2;
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
         var2 = 71 / ((-5 - param0) / 50);
         if (this.a((byte) -9)) {
           if ((wh.field_f ^ -1) == -2) {
@@ -167,8 +146,7 @@ final class cd extends pk {
                 return false;
               }
             } else {
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = 1;
               return stackIn_7_0 != 0;
             }
           } else {
@@ -193,64 +171,35 @@ final class cd extends pk {
     }
 
     private final void d(byte param0) {
-        int var3 = 0;
-        byte[] var4 = null;
-        Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         Object stackIn_19_0 = null;
         int stackIn_19_1 = 0;
-        Object stackIn_37_0 = null;
         Object stackIn_38_0 = null;
         Object stackIn_39_0 = null;
         int stackIn_39_1 = 0;
-        Object stackIn_52_0 = null;
         Object stackIn_53_0 = null;
         Object stackIn_54_0 = null;
         int stackIn_54_1 = 0;
-        Object stackIn_75_0 = null;
         Object stackIn_76_0 = null;
         Object stackIn_77_0 = null;
         int stackIn_77_1 = 0;
-        Object stackOut_74_0 = null;
-        Object stackOut_76_0 = null;
-        int stackOut_76_1 = 0;
-        Object stackOut_75_0 = null;
-        int stackOut_75_1 = 0;
-        Object stackOut_51_0 = null;
-        Object stackOut_53_0 = null;
-        int stackOut_53_1 = 0;
-        Object stackOut_52_0 = null;
-        int stackOut_52_1 = 0;
-        Object stackOut_36_0 = null;
-        Object stackOut_38_0 = null;
-        int stackOut_38_1 = 0;
-        Object stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        Object stackOut_16_0 = null;
-        Object stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
+        int var3;
+        byte[] var4;
         var3 = Chess.field_G;
         if (this.field_d) {
           this.field_v = bi.field_f;
           if (this.field_y) {
             if (this.c(82)) {
               L0: {
-                stackOut_74_0 = this;
-                stackIn_76_0 = stackOut_74_0;
-                stackIn_75_0 = stackOut_74_0;
+                stackIn_76_0 = this;
+
                 if (this.field_d) {
-                  stackOut_76_0 = this;
-                  stackOut_76_1 = 0;
-                  stackIn_77_0 = stackOut_76_0;
-                  stackIn_77_1 = stackOut_76_1;
+                  stackIn_77_0 = this;
+                  stackIn_77_1 = 0;
                   break L0;
                 } else {
-                  stackOut_75_0 = this;
-                  stackOut_75_1 = 1;
-                  stackIn_77_0 = stackOut_75_0;
-                  stackIn_77_1 = stackOut_75_1;
+                  stackIn_77_0 = this;
+                  stackIn_77_1 = 1;
                   break L0;
                 }
               }
@@ -299,20 +248,15 @@ final class cd extends pk {
               if (this.field_y) {
                 if (this.c(82)) {
                   L2: {
-                    stackOut_51_0 = this;
-                    stackIn_53_0 = stackOut_51_0;
-                    stackIn_52_0 = stackOut_51_0;
+                    stackIn_53_0 = this;
+
                     if (this.field_d) {
-                      stackOut_53_0 = this;
-                      stackOut_53_1 = 0;
-                      stackIn_54_0 = stackOut_53_0;
-                      stackIn_54_1 = stackOut_53_1;
+                      stackIn_54_0 = this;
+                      stackIn_54_1 = 0;
                       break L2;
                     } else {
-                      stackOut_52_0 = this;
-                      stackOut_52_1 = 1;
-                      stackIn_54_0 = stackOut_52_0;
-                      stackIn_54_1 = stackOut_52_1;
+                      stackIn_54_0 = this;
+                      stackIn_54_1 = 1;
                       break L2;
                     }
                   }
@@ -353,20 +297,15 @@ final class cd extends pk {
               if (this.field_y) {
                 if (this.c(82)) {
                   L4: {
-                    stackOut_36_0 = this;
-                    stackIn_38_0 = stackOut_36_0;
-                    stackIn_37_0 = stackOut_36_0;
+                    stackIn_38_0 = this;
+
                     if (this.field_d) {
-                      stackOut_38_0 = this;
-                      stackOut_38_1 = 0;
-                      stackIn_39_0 = stackOut_38_0;
-                      stackIn_39_1 = stackOut_38_1;
+                      stackIn_39_0 = this;
+                      stackIn_39_1 = 0;
                       break L4;
                     } else {
-                      stackOut_37_0 = this;
-                      stackOut_37_1 = 1;
-                      stackIn_39_0 = stackOut_37_0;
-                      stackIn_39_1 = stackOut_37_1;
+                      stackIn_39_0 = this;
+                      stackIn_39_1 = 1;
                       break L4;
                     }
                   }
@@ -422,20 +361,15 @@ final class cd extends pk {
               if (this.field_y) {
                 if (this.c(82)) {
                   L8: {
-                    stackOut_16_0 = this;
-                    stackIn_18_0 = stackOut_16_0;
-                    stackIn_17_0 = stackOut_16_0;
+                    stackIn_18_0 = this;
+
                     if (this.field_d) {
-                      stackOut_18_0 = this;
-                      stackOut_18_1 = 0;
-                      stackIn_19_0 = stackOut_18_0;
-                      stackIn_19_1 = stackOut_18_1;
+                      stackIn_19_0 = this;
+                      stackIn_19_1 = 0;
                       break L8;
                     } else {
-                      stackOut_17_0 = this;
-                      stackOut_17_1 = 1;
-                      stackIn_19_0 = stackOut_17_0;
-                      stackIn_19_1 = stackOut_17_1;
+                      stackIn_19_0 = this;
+                      stackIn_19_1 = 1;
                       break L8;
                     }
                   }
@@ -495,7 +429,6 @@ final class cd extends pk {
         km var2 = null;
         int var3 = 0;
         int var4 = 0;
-        byte[] discarded$0 = null;
         try {
             var2 = new km(param1.a("final_frame.jpg", 30045, ""), (java.awt.Component) ((Object) ja.field_h));
             var3 = var2.field_w;
@@ -505,7 +438,7 @@ final class cd extends pk {
             v.field_i.e();
             if (param0 < 125) {
                 String var5 = (String) null;
-                discarded$0 = cd.a((String) null, -127);
+                cd.a((String) null, -127);
             }
             var2.d(0, 0);
             re.field_u = new km(var3, -v.field_i.field_t + var4);

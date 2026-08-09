@@ -153,7 +153,7 @@ final class ga extends nm {
     }
 
     final static void d(int param0) {
-        int var1 = 0;
+        int var1;
         if ((ki.field_d ^ -1) < -33) {
           L0: {
             var1 = ki.field_d % 32;

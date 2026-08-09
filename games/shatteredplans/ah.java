@@ -44,40 +44,40 @@ final class ah extends ts {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        String var5 = null;
-        u var6 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        bi var14 = null;
-        String var17 = null;
-        Object var18 = null;
-        bi var19 = null;
-        bi var20 = null;
-        bi var21 = null;
-        bi var22 = null;
-        String var23 = null;
-        Object var24 = null;
-        bi var25 = null;
-        bi var26 = null;
-        bi var27 = null;
-        bi var28 = null;
-        String var29 = null;
-        Object var30 = null;
-        bi var31 = null;
-        bi var35 = null;
-        bi var37 = null;
-        Object var38 = null;
-        bi var39 = null;
-        bi var40 = null;
-        bi var41 = null;
-        bi var42 = null;
-        pj var43 = null;
-        pj var44 = null;
-        pj var45 = null;
-        pj var46 = null;
+        String var5;
+        u var6;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        bi var14;
+        String var17;
+        Object var18;
+        bi var19;
+        bi var20;
+        bi var21;
+        bi var22;
+        String var23;
+        Object var24;
+        bi var25;
+        bi var26;
+        bi var27;
+        bi var28;
+        String var29;
+        Object var30;
+        bi var31;
+        bi var35;
+        bi var37;
+        Object var38;
+        bi var39;
+        bi var40;
+        bi var42;
+        pj var43;
+        pj var44;
+        pj var45;
+        pj var46;
+        bi var41;
         var18 = null;
         var24 = null;
         var30 = null;
@@ -473,55 +473,35 @@ final class ah extends ts {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_0_0 = 0;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var3_int = -79 / ((param0 - 61) / 59);
-            stackOut_0_0 = 0;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = 0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var3);
-            stackOut_2_1 = new StringBuilder().append("ah.CA(").append(param0).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var3);
+
+            stackIn_4_1 = new StringBuilder().append("ah.CA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -531,22 +511,22 @@ final class ah extends ts {
     }
 
     final static void g(byte param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int[] var6 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -559,30 +539,30 @@ final class ah extends ts {
               if (var4 <= var2) {
                 break L0;
               } else {
-                incrementValue$40 = var2;
+                incrementValue$16 = var2;
                 var2++;
-                var6[incrementValue$40] = 0;
-                incrementValue$41 = var2;
+                var6[incrementValue$16] = 0;
+                incrementValue$17 = var2;
                 var2++;
-                var6[incrementValue$41] = 0;
-                incrementValue$42 = var2;
+                var6[incrementValue$17] = 0;
+                incrementValue$18 = var2;
                 var2++;
-                var6[incrementValue$42] = 0;
-                incrementValue$43 = var2;
+                var6[incrementValue$18] = 0;
+                incrementValue$19 = var2;
                 var2++;
-                var6[incrementValue$43] = 0;
-                incrementValue$44 = var2;
+                var6[incrementValue$19] = 0;
+                incrementValue$20 = var2;
                 var2++;
-                var6[incrementValue$44] = 0;
-                incrementValue$45 = var2;
+                var6[incrementValue$20] = 0;
+                incrementValue$21 = var2;
                 var2++;
-                var6[incrementValue$45] = 0;
-                incrementValue$46 = var2;
+                var6[incrementValue$21] = 0;
+                incrementValue$22 = var2;
                 var2++;
-                var6[incrementValue$46] = 0;
-                incrementValue$47 = var2;
+                var6[incrementValue$22] = 0;
+                incrementValue$23 = var2;
                 var2++;
-                var6[incrementValue$47] = 0;
+                var6[incrementValue$23] = 0;
                 continue L1;
               }
             }

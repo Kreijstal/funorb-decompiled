@@ -10,66 +10,35 @@ final class oia extends kj {
     static String field_i;
 
     final boolean b(int param0) {
-        int fieldTemp$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        rea var9 = null;
-        int var10 = 0;
-        int stackIn_10_0 = 0;
+        int fieldTemp$0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
-        rea stackIn_13_0 = null;
-        rea stackIn_13_1 = null;
-        int stackIn_13_2 = 0;
-        int stackIn_13_3 = 0;
-        int stackIn_13_4 = 0;
-        rea stackIn_14_0 = null;
-        rea stackIn_14_1 = null;
-        int stackIn_14_2 = 0;
-        int stackIn_14_3 = 0;
-        int stackIn_14_4 = 0;
-        rea stackIn_15_0 = null;
-        rea stackIn_15_1 = null;
-        int stackIn_15_2 = 0;
-        int stackIn_15_3 = 0;
-        int stackIn_15_4 = 0;
-        int stackIn_15_5 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
-        rea stackOut_12_0 = null;
-        rea stackOut_12_1 = null;
-        int stackOut_12_2 = 0;
-        int stackOut_12_3 = 0;
-        int stackOut_12_4 = 0;
-        rea stackOut_14_0 = null;
-        rea stackOut_14_1 = null;
-        int stackOut_14_2 = 0;
-        int stackOut_14_3 = 0;
-        int stackOut_14_4 = 0;
-        int stackOut_14_5 = 0;
-        rea stackOut_13_0 = null;
-        rea stackOut_13_1 = null;
-        int stackOut_13_2 = 0;
-        int stackOut_13_3 = 0;
-        int stackOut_13_4 = 0;
-        int stackOut_13_5 = 0;
+        rea stackIn_14_0;
+        rea stackIn_14_1;
+        int stackIn_14_2;
+        int stackIn_14_3;
+        int stackIn_14_4;
+        rea stackIn_15_0;
+        rea stackIn_15_1;
+        int stackIn_15_2;
+        int stackIn_15_3;
+        int stackIn_15_4;
+        int stackIn_15_5;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        rea var9;
+        int var10;
         var10 = BachelorFridge.field_y;
         if (param0 > 21) {
-          fieldTemp$4 = this.field_h - 2;
+          fieldTemp$0 = this.field_h - 2;
           this.field_h = this.field_h - 2;
-          if (0 == fieldTemp$4) {
+          if (0 == fieldTemp$0) {
             return true;
           } else {
             L0: {
@@ -83,77 +52,55 @@ final class oia extends kj {
                   } else {
                     L2: {
                       var4 = kla.a(this.field_h, this.field_e.field_h.field_w, -2147483648) - (this.field_h >> -794847263);
-                      stackOut_9_0 = (this.field_h >> 1210346978) - Math.abs(var4) / 2;
-                      stackIn_11_0 = stackOut_9_0;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_11_0 = (this.field_h >> 1210346978) - Math.abs(var4) / 2;
+
                       if ((kla.a(2, this.field_e.field_h.field_w, -2147483648) ^ -1) >= -1) {
-                        stackOut_11_0 = stackIn_11_0;
-                        stackOut_11_1 = -1;
-                        stackIn_12_0 = stackOut_11_0;
-                        stackIn_12_1 = stackOut_11_1;
+                        stackIn_12_0 = stackIn_11_0;
+                        stackIn_12_1 = -1;
                         break L2;
                       } else {
-                        stackOut_10_0 = stackIn_10_0;
-                        stackOut_10_1 = 1;
-                        stackIn_12_0 = stackOut_10_0;
-                        stackIn_12_1 = stackOut_10_1;
+                        stackIn_12_0 = stackIn_11_0;
+                        stackIn_12_1 = 1;
                         break L2;
                       }
                     }
                     L3: {
                       var5 = stackIn_12_0 * stackIn_12_1;
-                      discarded$5 = kla.a(50, this.field_e.field_h.field_w, -2147483648);
+                      kla.a(50, this.field_e.field_h.field_w, -2147483648);
                       var6 = var4 - -64;
                       var7 = var5 + 32;
                       var8 = (int)(Math.sin(300.0 * (double)var2) * 100.0) * 0;
-                      stackOut_12_0 = null;
-                      stackOut_12_1 = null;
-                      stackOut_12_2 = var6;
-                      stackOut_12_3 = var8;
-                      stackOut_12_4 = var7;
-                      stackIn_14_0 = stackOut_12_0;
-                      stackIn_14_1 = stackOut_12_1;
-                      stackIn_14_2 = stackOut_12_2;
-                      stackIn_14_3 = stackOut_12_3;
-                      stackIn_14_4 = stackOut_12_4;
-                      stackIn_13_0 = stackOut_12_0;
-                      stackIn_13_1 = stackOut_12_1;
-                      stackIn_13_2 = stackOut_12_2;
-                      stackIn_13_3 = stackOut_12_3;
-                      stackIn_13_4 = stackOut_12_4;
+                      stackIn_14_0 = null;
+
+                      stackIn_14_1 = null;
+
+                      stackIn_14_2 = var6;
+
+                      stackIn_14_3 = var8;
+
+                      stackIn_14_4 = var7;
+
                       if (5 <= kla.a(20, this.field_e.field_h.field_w, -2147483648)) {
-                        stackOut_14_0 = null;
-                        stackOut_14_1 = null;
-                        stackOut_14_2 = stackIn_14_2;
-                        stackOut_14_3 = stackIn_14_3;
-                        stackOut_14_4 = stackIn_14_4;
-                        stackOut_14_5 = 16711680;
-                        stackIn_15_0 = stackOut_14_0;
-                        stackIn_15_1 = stackOut_14_1;
-                        stackIn_15_2 = stackOut_14_2;
-                        stackIn_15_3 = stackOut_14_3;
-                        stackIn_15_4 = stackOut_14_4;
-                        stackIn_15_5 = stackOut_14_5;
+                        stackIn_15_0 = null;
+                        stackIn_15_1 = null;
+                        stackIn_15_2 = stackIn_14_2;
+                        stackIn_15_3 = stackIn_14_3;
+                        stackIn_15_4 = stackIn_14_4;
+                        stackIn_15_5 = 16711680;
                         break L3;
                       } else {
-                        stackOut_13_0 = null;
-                        stackOut_13_1 = null;
-                        stackOut_13_2 = stackIn_13_2;
-                        stackOut_13_3 = stackIn_13_3;
-                        stackOut_13_4 = stackIn_13_4;
-                        stackOut_13_5 = 16631867;
-                        stackIn_15_0 = stackOut_13_0;
-                        stackIn_15_1 = stackOut_13_1;
-                        stackIn_15_2 = stackOut_13_2;
-                        stackIn_15_3 = stackOut_13_3;
-                        stackIn_15_4 = stackOut_13_4;
-                        stackIn_15_5 = stackOut_13_5;
+                        stackIn_15_0 = null;
+                        stackIn_15_1 = null;
+                        stackIn_15_2 = stackIn_14_2;
+                        stackIn_15_3 = stackIn_14_3;
+                        stackIn_15_4 = stackIn_14_4;
+                        stackIn_15_5 = 16631867;
                         break L3;
                       }
                     }
                     var9 = new rea(stackIn_15_2, stackIn_15_3, stackIn_15_4, stackIn_15_5);
-                    discarded$6 = kla.a(3, this.field_e.field_h.field_w, -2147483648);
-                    discarded$7 = kla.a(5000, this.field_e.field_h.field_w, -2147483648);
+                    kla.a(3, this.field_e.field_h.field_w, -2147483648);
+                    kla.a(5000, this.field_e.field_h.field_w, -2147483648);
                     var9.field_o = (double)(-1 + -kla.a(2, this.field_e.field_h.field_w, -2147483648));
                     var9.field_n = 25 + -kla.a(10, this.field_e.field_h.field_w, -2147483648);
                     var9.field_h = -1;

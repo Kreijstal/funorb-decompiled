@@ -22,10 +22,9 @@ final class vj extends sj {
     final synchronized void a(int param0) {
         int var2 = 0;
         hl var3 = null;
-        Object var4 = null;
         int var5 = 0;
-        Throwable var6 = null;
         Throwable decompiledCaughtException = null;
+        Object var4 = null;
         L0: while (true) {
           if (this.field_q >= 0) {
             if (this.field_o + param0 >= this.field_q) {
@@ -73,10 +72,9 @@ final class vj extends sj {
     final synchronized void b(int[] param0, int param1, int param2) {
         int var4 = 0;
         hl var5 = null;
-        Object var6 = null;
         int var7 = 0;
-        Throwable var8 = null;
         Throwable decompiledCaughtException = null;
+        Object var6 = null;
         L0: while (true) {
           if (this.field_q >= 0) {
             if (this.field_o + param2 >= this.field_q) {

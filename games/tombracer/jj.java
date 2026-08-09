@@ -12,7 +12,6 @@ final class jj extends Exception {
     }
 
     final static int a(int param0, byte param1) {
-        boolean discarded$7 = false;
         if (param1 < -56) {
           if (6406 != param0) {
             if (param0 != 6409) {
@@ -40,7 +39,7 @@ final class jj extends Exception {
             return 1;
           }
         } else {
-          discarded$7 = jj.a(-126, -76, -57);
+          jj.a(-126, -76, -57);
           if (6406 != param0) {
             if (param0 != 6409) {
               if ((param0 ^ -1) != -32842) {

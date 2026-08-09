@@ -14,27 +14,15 @@ final class ik {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ri stackIn_11_0 = null;
-        ri stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
+        ri stackIn_12_0 = null;
+        ri stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ri stackOut_12_0 = null;
-        ri stackOut_10_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -43,19 +31,17 @@ final class ik {
             L1: while (true) {
               if (var3 >= var2_int) {
                 if (param0 == -58) {
-                  stackOut_12_0 = n.field_b;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_14_0 = n.field_b;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_10_0 = (ri) null;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_12_0 = (ri) null;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
               } else {
                 var4 = param1.charAt(var3);
-                if (var4 >= 48) {
+                if ((var4 ^ -1) <= -49) {
                   if (var4 <= 57) {
                     var3++;
                     continue L1;
@@ -72,36 +58,28 @@ final class ik {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2);
-            stackOut_14_1 = new StringBuilder().append("ik.A(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_17_0 = (RuntimeException) (var2);
+
+            stackIn_17_1 = new StringBuilder().append("ik.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L2;
             }
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_11_0;
+          return stackIn_12_0;
         } else {
-          return stackIn_13_0;
+          return stackIn_14_0;
         }
     }
 

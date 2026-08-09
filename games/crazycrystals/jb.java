@@ -9,7 +9,6 @@ class jb {
     static String field_a;
 
     final void a(boolean param0) {
-        boolean discarded$7 = false;
         if (!param0) {
           if (null == this.field_d) {
             return;
@@ -21,7 +20,7 @@ class jb {
             return;
           }
         } else {
-          discarded$7 = this.b(-25);
+          this.b(-25);
           if (null == this.field_d) {
             return;
           } else {

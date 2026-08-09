@@ -34,15 +34,13 @@ final class pf implements hd {
     }
 
     final static int a(byte param0, int param1) {
-        hj discarded$4 = null;
-        hj discarded$5 = null;
         if (-1 != (param1 ^ -1)) {
           if (of.a(-969)) {
             if (param1 > ao.field_b) {
               return 1;
             } else {
               if (param0 <= 0) {
-                discarded$4 = pf.a((byte) -18);
+                pf.a((byte) -18);
                 return 0;
               } else {
                 return 0;
@@ -56,7 +54,7 @@ final class pf implements hd {
             return 1;
           } else {
             if (param0 <= 0) {
-              discarded$5 = pf.a((byte) -18);
+              pf.a((byte) -18);
               return 0;
             } else {
               return 0;
@@ -66,28 +64,16 @@ final class pf implements hd {
     }
 
     public final int a(byte param0, hd param1) {
-        int discarded$2 = 0;
         pf var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int stackIn_5_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -96,7 +82,7 @@ final class pf implements hd {
               if (param0 == -101) {
                 break L1;
               } else {
-                discarded$2 = pf.a((byte) 83, 126);
+                pf.a((byte) 83, 126);
                 break L1;
               }
             }
@@ -108,35 +94,26 @@ final class pf implements hd {
                 break L2;
               }
             }
-            stackOut_4_0 = var4;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = var4;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3_ref);
-            stackOut_6_1 = new StringBuilder().append("pf.C(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3_ref);
+
+            stackIn_8_1 = new StringBuilder().append("pf.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }

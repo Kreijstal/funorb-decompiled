@@ -26,9 +26,8 @@ abstract class ar {
     abstract void e(int param0);
 
     final int a(byte param0) {
-        boolean discarded$2 = false;
         if (param0 != 0) {
-          discarded$2 = this.c(-35);
+          this.c(-35);
           return this.field_h.c((byte) 123) - -this.field_j.c((byte) 83);
         } else {
           return this.field_h.c((byte) 123) - -this.field_j.c((byte) 83);
@@ -52,7 +51,7 @@ abstract class ar {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        int var6 = 0;
+        int var6;
         if ((Math.abs(param1) | Math.abs(param4) | Math.abs(param0) | Math.abs(param2)) >>> -1998687981 == 0) {
           var6 = -104 % ((-50 - param3) / 36);
           if (Math.abs(param0 - param1) < Math.abs(param2 + -param4)) {
@@ -68,14 +67,13 @@ abstract class ar {
     }
 
     final tk a(boolean param0, int param1, byte param2, int param3, int param4) {
-        boolean discarded$9 = false;
         long var6 = ((long)param1 << -2057056416) - -(long)param4;
         tk var8 = new tk();
         var8.field_w = param2;
         var8.field_q = param0 ? true : false;
         var8.field_l = var6;
         if (param3 != -2057056416) {
-            discarded$9 = this.c(-16);
+            this.c(-16);
             if (param0) {
                 if (!(this.a((byte) 0) < 20)) {
                     throw new RuntimeException();

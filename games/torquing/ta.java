@@ -55,9 +55,9 @@ class ta extends q {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
-        RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         var7 = Torquing.field_u;
         try {
           L0: {

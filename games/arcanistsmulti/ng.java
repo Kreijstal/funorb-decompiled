@@ -12,9 +12,8 @@ final class ng extends df implements pj, vb {
     private ie field_E;
 
     final static void a(byte param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         L0: {
           if (null == ob.field_hb) {
             break L0;
@@ -40,10 +39,9 @@ final class ng extends df implements pj, vb {
     }
 
     private final String g(int param0) {
-        boolean discarded$0 = false;
         if (param0 != -7) {
             qm var3 = (qm) null;
-            discarded$0 = this.a((qm) null, (byte) 70, 'ﾘ', 107);
+            this.a((qm) null, (byte) 70, 'ﾘ', 107);
         }
         return "<u=2164A2><col=2164A2>";
     }
@@ -56,6 +54,28 @@ final class ng extends df implements pj, vb {
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3) {
+        int stackIn_10_0 = 0;
+        String stackIn_24_0 = null;
+        kc stackIn_33_0 = null;
+        kc stackIn_34_0 = null;
+        String stackIn_34_1 = null;
+        kc stackIn_36_0 = null;
+        int stackIn_36_1 = 0;
+        String[] stackIn_36_2 = null;
+        kc stackIn_37_0 = null;
+        int stackIn_37_1 = 0;
+        String[] stackIn_37_2 = null;
+        String stackIn_37_3 = null;
+        kc stackIn_64_0 = null;
+        kc stackIn_65_0 = null;
+        int stackIn_65_1 = 0;
+        kc stackIn_69_0 = null;
+        kc stackIn_70_0 = null;
+        int stackIn_70_1 = 0;
+        kc stackIn_74_0 = null;
+        kc stackIn_75_0 = null;
+        int stackIn_75_1 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         kc var5 = null;
         kc var6 = null;
@@ -72,82 +92,6 @@ final class ng extends df implements pj, vb {
         kc var15 = null;
         String var16 = null;
         kc var17 = null;
-        int stackIn_10_0 = 0;
-        String stackIn_24_0 = null;
-        kc stackIn_32_0 = null;
-        kc stackIn_33_0 = null;
-        kc stackIn_34_0 = null;
-        String stackIn_34_1 = null;
-        kc stackIn_35_0 = null;
-        int stackIn_35_1 = 0;
-        String[] stackIn_35_2 = null;
-        kc stackIn_36_0 = null;
-        int stackIn_36_1 = 0;
-        String[] stackIn_36_2 = null;
-        kc stackIn_37_0 = null;
-        int stackIn_37_1 = 0;
-        String[] stackIn_37_2 = null;
-        String stackIn_37_3 = null;
-        kc stackIn_61_0 = null;
-        kc stackIn_62_0 = null;
-        kc stackIn_63_0 = null;
-        kc stackIn_64_0 = null;
-        kc stackIn_65_0 = null;
-        int stackIn_65_1 = 0;
-        kc stackIn_66_0 = null;
-        kc stackIn_67_0 = null;
-        kc stackIn_68_0 = null;
-        kc stackIn_69_0 = null;
-        kc stackIn_70_0 = null;
-        int stackIn_70_1 = 0;
-        kc stackIn_71_0 = null;
-        kc stackIn_72_0 = null;
-        kc stackIn_73_0 = null;
-        kc stackIn_74_0 = null;
-        kc stackIn_75_0 = null;
-        int stackIn_75_1 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        kc stackOut_31_0 = null;
-        kc stackOut_33_0 = null;
-        String stackOut_33_1 = null;
-        kc stackOut_32_0 = null;
-        String stackOut_32_1 = null;
-        kc stackOut_34_0 = null;
-        int stackOut_34_1 = 0;
-        String[] stackOut_34_2 = null;
-        kc stackOut_36_0 = null;
-        int stackOut_36_1 = 0;
-        String[] stackOut_36_2 = null;
-        String stackOut_36_3 = null;
-        kc stackOut_35_0 = null;
-        int stackOut_35_1 = 0;
-        String[] stackOut_35_2 = null;
-        String stackOut_35_3 = null;
-        String stackOut_23_0 = null;
-        String stackOut_22_0 = null;
-        kc stackOut_60_0 = null;
-        kc stackOut_61_0 = null;
-        kc stackOut_62_0 = null;
-        kc stackOut_63_0 = null;
-        int stackOut_63_1 = 0;
-        kc stackOut_64_0 = null;
-        int stackOut_64_1 = 0;
-        kc stackOut_65_0 = null;
-        kc stackOut_66_0 = null;
-        kc stackOut_67_0 = null;
-        kc stackOut_68_0 = null;
-        int stackOut_68_1 = 0;
-        kc stackOut_69_0 = null;
-        int stackOut_69_1 = 0;
-        kc stackOut_70_0 = null;
-        kc stackOut_71_0 = null;
-        kc stackOut_72_0 = null;
-        kc stackOut_73_0 = null;
-        int stackOut_73_1 = 0;
-        kc stackOut_74_0 = null;
-        int stackOut_74_1 = 0;
         var12 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -192,13 +136,11 @@ final class ng extends df implements pj, vb {
                         break L5;
                       } else {
                         L6: {
-                          if ((gh.field_E[var10 / 8] & 1 << (var10 & 7)) == 0) {
-                            stackOut_9_0 = 0;
-                            stackIn_10_0 = stackOut_9_0;
+                          if ((gh.field_E[var10 / 8] & 1 << (var10 & 7) ^ -1) == -1) {
+                            stackIn_10_0 = 0;
                             break L6;
                           } else {
-                            stackOut_8_0 = 1;
-                            stackIn_10_0 = stackOut_8_0;
+                            stackIn_10_0 = 1;
                             break L6;
                           }
                         }
@@ -238,53 +180,37 @@ final class ng extends df implements pj, vb {
                 dk.field_k.field_ub = true;
                 if (!dn.field_Db) {
                   L9: {
-                    stackOut_31_0 = dk.field_k;
-                    stackIn_33_0 = stackOut_31_0;
-                    stackIn_32_0 = stackOut_31_0;
+                    stackIn_33_0 = dk.field_k;
+
                     if (var8 == 0) {
-                      stackOut_33_0 = (kc) ((Object) stackIn_33_0);
-                      stackOut_33_1 = ah.field_d;
-                      stackIn_34_0 = stackOut_33_0;
-                      stackIn_34_1 = stackOut_33_1;
+                      stackIn_34_0 = (kc) ((Object) stackIn_33_0);
+                      stackIn_34_1 = ah.field_d;
                       break L9;
                     } else {
-                      stackOut_32_0 = (kc) ((Object) stackIn_32_0);
-                      stackOut_32_1 = fi.field_b;
-                      stackIn_34_0 = stackOut_32_0;
-                      stackIn_34_1 = stackOut_32_1;
+                      stackIn_34_0 = (kc) ((Object) stackIn_33_0);
+                      stackIn_34_1 = fi.field_b;
                       break L9;
                     }
                   }
                   L10: {
                     stackIn_34_0.field_rb = ((String) (Object) stackIn_34_1).toUpperCase();
-                    stackOut_34_0 = vc.field_c;
-                    stackOut_34_1 = -96;
-                    stackOut_34_2 = new String[]{dk.field_k.field_rb};
-                    stackIn_36_0 = stackOut_34_0;
-                    stackIn_36_1 = stackOut_34_1;
-                    stackIn_36_2 = stackOut_34_2;
-                    stackIn_35_0 = stackOut_34_0;
-                    stackIn_35_1 = stackOut_34_1;
-                    stackIn_35_2 = stackOut_34_2;
+                    stackIn_36_0 = vc.field_c;
+
+                    stackIn_36_1 = -96;
+
+                    stackIn_36_2 = new String[]{dk.field_k.field_rb};
+
                     if (var8 == 0) {
-                      stackOut_36_0 = (kc) ((Object) stackIn_36_0);
-                      stackOut_36_1 = stackIn_36_1;
-                      stackOut_36_2 = (String[]) ((Object) stackIn_36_2);
-                      stackOut_36_3 = bi.field_W;
-                      stackIn_37_0 = stackOut_36_0;
-                      stackIn_37_1 = stackOut_36_1;
-                      stackIn_37_2 = stackOut_36_2;
-                      stackIn_37_3 = stackOut_36_3;
+                      stackIn_37_0 = (kc) ((Object) stackIn_36_0);
+                      stackIn_37_1 = stackIn_36_1;
+                      stackIn_37_2 = (String[]) ((Object) stackIn_36_2);
+                      stackIn_37_3 = bi.field_W;
                       break L10;
                     } else {
-                      stackOut_35_0 = (kc) ((Object) stackIn_35_0);
-                      stackOut_35_1 = stackIn_35_1;
-                      stackOut_35_2 = (String[]) ((Object) stackIn_35_2);
-                      stackOut_35_3 = km.field_g;
-                      stackIn_37_0 = stackOut_35_0;
-                      stackIn_37_1 = stackOut_35_1;
-                      stackIn_37_2 = stackOut_35_2;
-                      stackIn_37_3 = stackOut_35_3;
+                      stackIn_37_0 = (kc) ((Object) stackIn_36_0);
+                      stackIn_37_1 = stackIn_36_1;
+                      stackIn_37_2 = (String[]) ((Object) stackIn_36_2);
+                      stackIn_37_3 = km.field_g;
                       break L10;
                     }
                   }
@@ -383,12 +309,10 @@ final class ng extends df implements pj, vb {
                     mo.field_o.field_ub = false;
                     vc.field_c.field_rb = j.field_e;
                     if (var8 == 0) {
-                      stackOut_23_0 = ql.field_e;
-                      stackIn_24_0 = stackOut_23_0;
+                      stackIn_24_0 = ql.field_e;
                       break L17;
                     } else {
-                      stackOut_22_0 = bb.field_f;
-                      stackIn_24_0 = stackOut_22_0;
+                      stackIn_24_0 = bb.field_f;
                       break L17;
                     }
                   }
@@ -431,109 +355,88 @@ final class ng extends df implements pj, vb {
             }
             L21: {
               L22: {
-                stackOut_60_0 = hl.field_m;
-                stackIn_64_0 = stackOut_60_0;
-                stackIn_61_0 = stackOut_60_0;
+                stackIn_64_0 = hl.field_m;
+
                 if (!param2) {
                   break L22;
                 } else {
-                  stackOut_61_0 = (kc) ((Object) stackIn_61_0);
-                  stackIn_64_0 = stackOut_61_0;
-                  stackIn_62_0 = stackOut_61_0;
+                  stackIn_64_0 = (kc) ((Object) stackIn_64_0);
+
                   if (param0) {
                     break L22;
                   } else {
-                    stackOut_62_0 = (kc) ((Object) stackIn_62_0);
-                    stackIn_64_0 = stackOut_62_0;
-                    stackIn_63_0 = stackOut_62_0;
+                    stackIn_64_0 = (kc) ((Object) stackIn_64_0);
+
                     if (so.field_j) {
                       break L22;
                     } else {
-                      stackOut_63_0 = (kc) ((Object) stackIn_63_0);
-                      stackOut_63_1 = 1;
-                      stackIn_65_0 = stackOut_63_0;
-                      stackIn_65_1 = stackOut_63_1;
+                      stackIn_65_0 = (kc) ((Object) stackIn_64_0);
+                      stackIn_65_1 = 1;
                       break L21;
                     }
                   }
                 }
               }
-              stackOut_64_0 = (kc) ((Object) stackIn_64_0);
-              stackOut_64_1 = 0;
-              stackIn_65_0 = stackOut_64_0;
-              stackIn_65_1 = stackOut_64_1;
+              stackIn_65_0 = (kc) ((Object) stackIn_64_0);
+              stackIn_65_1 = 0;
               break L21;
             }
             L23: {
               L24: {
                 ((kc) (Object) stackIn_65_0).b(stackIn_65_1 != 0, (byte) 33);
-                stackOut_65_0 = oh.field_h;
-                stackIn_69_0 = stackOut_65_0;
-                stackIn_66_0 = stackOut_65_0;
+                stackIn_69_0 = oh.field_h;
+
                 if (!param2) {
                   break L24;
                 } else {
-                  stackOut_66_0 = (kc) ((Object) stackIn_66_0);
-                  stackIn_69_0 = stackOut_66_0;
-                  stackIn_67_0 = stackOut_66_0;
+                  stackIn_69_0 = (kc) ((Object) stackIn_69_0);
+
                   if (param0) {
                     break L24;
                   } else {
-                    stackOut_67_0 = (kc) ((Object) stackIn_67_0);
-                    stackIn_69_0 = stackOut_67_0;
-                    stackIn_68_0 = stackOut_67_0;
+                    stackIn_69_0 = (kc) ((Object) stackIn_69_0);
+
                     if (so.field_j) {
                       break L24;
                     } else {
-                      stackOut_68_0 = (kc) ((Object) stackIn_68_0);
-                      stackOut_68_1 = 1;
-                      stackIn_70_0 = stackOut_68_0;
-                      stackIn_70_1 = stackOut_68_1;
+                      stackIn_70_0 = (kc) ((Object) stackIn_69_0);
+                      stackIn_70_1 = 1;
                       break L23;
                     }
                   }
                 }
               }
-              stackOut_69_0 = (kc) ((Object) stackIn_69_0);
-              stackOut_69_1 = 0;
-              stackIn_70_0 = stackOut_69_0;
-              stackIn_70_1 = stackOut_69_1;
+              stackIn_70_0 = (kc) ((Object) stackIn_69_0);
+              stackIn_70_1 = 0;
               break L23;
             }
             L25: {
               L26: {
                 ((kc) (Object) stackIn_70_0).b(stackIn_70_1 != 0, (byte) 90);
-                stackOut_70_0 = nl.field_Fb;
-                stackIn_74_0 = stackOut_70_0;
-                stackIn_71_0 = stackOut_70_0;
+                stackIn_74_0 = nl.field_Fb;
+
                 if (!param2) {
                   break L26;
                 } else {
-                  stackOut_71_0 = (kc) ((Object) stackIn_71_0);
-                  stackIn_74_0 = stackOut_71_0;
-                  stackIn_72_0 = stackOut_71_0;
+                  stackIn_74_0 = (kc) ((Object) stackIn_74_0);
+
                   if (param0) {
                     break L26;
                   } else {
-                    stackOut_72_0 = (kc) ((Object) stackIn_72_0);
-                    stackIn_74_0 = stackOut_72_0;
-                    stackIn_73_0 = stackOut_72_0;
+                    stackIn_74_0 = (kc) ((Object) stackIn_74_0);
+
                     if (!so.field_j) {
                       break L26;
                     } else {
-                      stackOut_73_0 = (kc) ((Object) stackIn_73_0);
-                      stackOut_73_1 = 1;
-                      stackIn_75_0 = stackOut_73_0;
-                      stackIn_75_1 = stackOut_73_1;
+                      stackIn_75_0 = (kc) ((Object) stackIn_74_0);
+                      stackIn_75_1 = 1;
                       break L25;
                     }
                   }
                 }
               }
-              stackOut_74_0 = (kc) ((Object) stackIn_74_0);
-              stackOut_74_1 = 0;
-              stackIn_75_0 = stackOut_74_0;
-              stackIn_75_1 = stackOut_74_1;
+              stackIn_75_0 = (kc) ((Object) stackIn_74_0);
+              stackIn_75_1 = 0;
               break L25;
             }
             L27: {
@@ -585,31 +488,21 @@ final class ng extends df implements pj, vb {
     }
 
     public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
-        String discarded$3 = null;
-        RuntimeException var6 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
+        String discarded$1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var6 = null;
         try {
           L0: {
             L1: {
               if (param0) {
                 break L1;
               } else {
-                discarded$3 = this.g(-67);
+                discarded$1 = this.g(-67);
                 break L1;
               }
             }
@@ -628,27 +521,19 @@ final class ng extends df implements pj, vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var6);
-            stackOut_6_1 = new StringBuilder().append("ng.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var6);
+
+            stackIn_8_1 = new StringBuilder().append("ng.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -661,8 +546,6 @@ final class ng extends df implements pj, vb {
         int stackIn_5_0 = 0;
         boolean stackIn_8_0 = false;
         boolean stackIn_12_0 = false;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -670,17 +553,6 @@ final class ng extends df implements pj, vb {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        boolean stackOut_11_0 = false;
-        boolean stackOut_7_0 = false;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             L1: {
@@ -692,23 +564,20 @@ final class ng extends df implements pj, vb {
               }
             }
             if (super.a(param0, (byte) -122, param2, param3)) {
-              stackOut_4_0 = 1;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (98 != param3) {
                 if (99 == param3) {
-                  stackOut_11_0 = this.b(2, param0);
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = this.b(2, param0);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   return false;
                 }
               } else {
-                stackOut_7_0 = this.a(param0, 9555);
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = this.a(param0, 9555);
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -718,27 +587,19 @@ final class ng extends df implements pj, vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var5);
-            stackOut_13_1 = new StringBuilder().append("ng.N(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var5);
+
+            stackIn_15_1 = new StringBuilder().append("ng.N(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L2;
             }
           }
@@ -756,24 +617,14 @@ final class ng extends df implements pj, vb {
     }
 
     public final void a(int param0, ej param1, int param2, int param3) {
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException var5 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -809,27 +660,19 @@ final class ng extends df implements pj, vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var5);
-            stackOut_11_1 = new StringBuilder().append("ng.C(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var5);
+
+            stackIn_13_1 = new StringBuilder().append("ng.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -846,8 +689,8 @@ final class ng extends df implements pj, vb {
 
     final static void a(boolean param0, long param1) {
         try {
-            InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
+            InterruptedException var3 = null;
             try {
               L0: {
                 L1: {
@@ -877,30 +720,12 @@ final class ng extends df implements pj, vb {
 
     ng(ie param0) {
         super(0, 0, 288, 0, (pf) null);
-        RuntimeException var2 = null;
+        String var7 = null;
         int var3 = 0;
         jm var4 = null;
         int var5 = 0;
         int var6 = 0;
-        String var7 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
             this.field_E = param0;
             this.field_F = new ag(qn.field_lb, (wc) null);
             this.field_F.field_r = (pf) ((Object) new mm());
@@ -922,37 +747,8 @@ final class ng extends df implements pj, vb {
             this.field_F.field_o = (wc) (this);
             this.c(-109, this.field_F);
             this.a(var5 + (var3 + 55), 0, 300, 0, -67);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (var2);
-            stackOut_3_1 = new StringBuilder().append("ng.<init>(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L1;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L1;
-            }
-          }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) ((Object) runtimeException), "ng.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -38,10 +38,9 @@ abstract class paa extends b implements mk {
     }
 
     public static void k(byte param0) {
-        g discarded$2 = null;
         field_y = null;
         if (param0 < 29) {
-          discarded$2 = paa.c(81, -67, 72);
+          paa.c(81, -67, 72);
           field_z = null;
           field_x = null;
           return;
@@ -63,10 +62,10 @@ abstract class paa extends b implements mk {
     }
 
     final static void a(boolean param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -108,11 +107,7 @@ abstract class paa extends b implements mk {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  if (var3 == 0) {
-                    continue L5;
-                  } else {
-                    return;
-                  }
+                  continue L5;
                 }
               }
             } else {

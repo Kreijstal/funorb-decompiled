@@ -50,8 +50,8 @@ final class ln extends kna {
     }
 
     final static mg b(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = TombRacer.field_G ? 1 : 0;
           if (param1 == 23688) {
@@ -64,66 +64,34 @@ final class ln extends kna {
         var2 = param0;
         if (-1 != (var2 ^ -1)) {
           if (1 != var2) {
-            L1: {
-              if ((var2 ^ -1) != -3) {
-                break L1;
-              } else {
-                if (var3 != 0) {
-                  break L1;
-                } else {
-                  return new mg(new int[]{30, 30});
-                }
-              }
-            }
-            L2: {
+            if ((var2 ^ -1) != -3) {
               if (3 != var2) {
-                break L2;
-              } else {
-                if (var3 != 0) {
-                  break L2;
-                } else {
-                  return new mg(new int[]{15, 15});
-                }
-              }
-            }
-            L3: {
-              if (-5 != (var2 ^ -1)) {
-                break L3;
-              } else {
-                if (var3 != 0) {
-                  break L3;
+                if (-5 != (var2 ^ -1)) {
+                  if (var2 != 5) {
+                    if (-7 != (var2 ^ -1)) {
+                      if (var2 != 7) {
+                        if (-9 != (var2 ^ -1)) {
+                          return new mg(new int[]{});
+                        } else {
+                          return new mg(new int[]{15, 10, 10, 15, 10, 5, 10, 5, 15, 5, 10, 10});
+                        }
+                      } else {
+                        return new mg(new int[]{5, 10, 10, 15, 5, 15, 10, 5, 10, 5, 20, 5});
+                      }
+                    } else {
+                      return new mg(new int[]{40, 40, 20, 40, 20, 20});
+                    }
+                  } else {
+                    return new mg(new int[]{40, 40, 20, 20, 20, 20});
+                  }
                 } else {
                   return new mg(new int[]{40, 40, 20, 20});
                 }
-              }
-            }
-            if (var2 != 5) {
-              L4: {
-                if (-7 != (var2 ^ -1)) {
-                  break L4;
-                } else {
-                  if (var3 != 0) {
-                    break L4;
-                  } else {
-                    return new mg(new int[]{40, 40, 20, 40, 20, 20});
-                  }
-                }
-              }
-              if (var2 != 7) {
-                if (-9 == (var2 ^ -1)) {
-                  if (var3 != 0) {
-                    return new mg(new int[]{});
-                  } else {
-                    return new mg(new int[]{15, 10, 10, 15, 10, 5, 10, 5, 15, 5, 10, 10});
-                  }
-                } else {
-                  return new mg(new int[]{});
-                }
               } else {
-                return new mg(new int[]{5, 10, 10, 15, 5, 15, 10, 5, 10, 5, 20, 5});
+                return new mg(new int[]{15, 15});
               }
             } else {
-              return new mg(new int[]{40, 40, 20, 20, 20, 20});
+              return new mg(new int[]{30, 30});
             }
           } else {
             return new mg(new int[]{60, 60});
@@ -162,30 +130,18 @@ final class ln extends kna {
     }
 
     final fsa a(boolean param0, int param1, la param2) {
-        int discarded$2 = 0;
         fsa var4 = null;
         RuntimeException var4_ref = null;
         lpa var5 = null;
         mfa var6 = null;
         ce var7 = null;
         fsa stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fsa stackOut_4_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -198,7 +154,7 @@ final class ln extends kna {
               if (param1 == 3) {
                 break L1;
               } else {
-                discarded$2 = this.t(49);
+                this.t(49);
                 break L1;
               }
             }
@@ -212,35 +168,26 @@ final class ln extends kna {
                 break L2;
               }
             }
-            stackOut_4_0 = (fsa) (var4);
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = (fsa) (var4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var4_ref);
-            stackOut_6_1 = new StringBuilder().append("ln.AC(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var4_ref);
+
+            stackIn_8_1 = new StringBuilder().append("ln.AC(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -261,9 +208,8 @@ final class ln extends kna {
     }
 
     final int t(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 8) {
-            discarded$0 = this.z(45);
+            this.z(45);
             return 3;
         }
         return 3;

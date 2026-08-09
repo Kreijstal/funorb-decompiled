@@ -39,94 +39,38 @@ final class hka extends uj {
     }
 
     final static void a(asb param0, int param1) {
-        RuntimeException var2 = null;
-        llb var3 = null;
         llb var5 = null;
         llb var6 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        try {
-          L0: {
-            iqb.field_o = gra.a(param0, "display_name_changed", "basic", true);
-            re.field_n = new wdb(0L, rbb.field_k, jj.field_q, esa.field_o);
-            vra.field_b = new wdb(0L, rbb.field_k, bnb.field_q, ci.field_a);
-            ci.field_c = new llb(0L, (llb) null);
-            rtb.field_h = new llb(0L, qc.field_q);
-            rtb.field_h.field_F = 1;
-            if (param1 < -96) {
-              aha.field_o = new llb(0L, sdb.field_p, kpb.field_r);
-              rrb.field_b = new llb(0L, qsa.field_d, mab.field_e);
-              nf.field_c = new llb(0L, iga.field_o);
-              ci.field_c.b(-561, rtb.field_h);
-              ci.field_c.b(-561, aha.field_o);
-              ci.field_c.b(-561, rrb.field_b);
-              ci.field_c.b(-561, re.field_n);
-              ci.field_c.b(-561, nf.field_c);
-              re.field_n.field_xb.field_xb.a(18445, qc.field_q);
-              re.field_n.field_xb.field_xb.field_B = 1;
-              var5 = re.field_n.field_xb.field_xb;
-              var6 = var5;
-              var6.field_F = 1;
-              vra.field_b.field_xb.field_xb.a(18445, qc.field_q);
-              var3 = vra.field_b.field_xb.field_xb;
-              vra.field_b.field_xb.field_xb.field_B = 1;
-              var3.field_F = 1;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("hka.F(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
-            if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L1;
-            } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L1;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+        llb var3 = null;
+        iqb.field_o = gra.a(param0, "display_name_changed", "basic", true);
+        re.field_n = new wdb(0L, rbb.field_k, jj.field_q, esa.field_o);
+        vra.field_b = new wdb(0L, rbb.field_k, bnb.field_q, ci.field_a);
+        ci.field_c = new llb(0L, (llb) null);
+        rtb.field_h = new llb(0L, qc.field_q);
+        rtb.field_h.field_F = 1;
+        if (param1 >= -96) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            aha.field_o = new llb(0L, sdb.field_p, kpb.field_r);
+            rrb.field_b = new llb(0L, qsa.field_d, mab.field_e);
+            nf.field_c = new llb(0L, iga.field_o);
+            ci.field_c.b(-561, rtb.field_h);
+            ci.field_c.b(-561, aha.field_o);
+            ci.field_c.b(-561, rrb.field_b);
+            ci.field_c.b(-561, re.field_n);
+            ci.field_c.b(-561, nf.field_c);
+            re.field_n.field_xb.field_xb.a(18445, qc.field_q);
+            re.field_n.field_xb.field_xb.field_B = 1;
+            var5 = re.field_n.field_xb.field_xb;
+            var6 = var5;
+            var6.field_F = 1;
+            vra.field_b.field_xb.field_xb.a(18445, qc.field_q);
+            var3 = vra.field_b.field_xb.field_xb;
+            vra.field_b.field_xb.field_xb.field_B = 1;
+            var3.field_F = 1;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "hka.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -138,9 +82,8 @@ final class hka extends uj {
     }
 
     final int b(int param0) {
-        boolean discarded$0 = false;
         if (param0 != -25131) {
-            discarded$0 = this.c(-85);
+            this.c(-85);
             return 256;
         }
         return 256;
@@ -148,24 +91,14 @@ final class hka extends uj {
 
     final static void a(int param0, java.awt.Canvas param1, boolean param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var3 = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -212,27 +145,19 @@ final class hka extends uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("hka.K(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3);
+
+            stackIn_16_1 = new StringBuilder().append("hka.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L3;
             }
           }

@@ -20,14 +20,14 @@ final class ik {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        RuntimeException decompiledCaughtException = null;
         var10 = Geoblox.field_C;
         try {
           L0: {
@@ -88,64 +88,30 @@ final class ik {
     }
 
     final static boolean a(ja param0, ja param1, boolean param2) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        RuntimeException var3 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_17_1 = 0;
+        int stackIn_77_0 = 0;
+        RuntimeException stackIn_80_0 = null;
+        StringBuilder stackIn_80_1 = null;
+        RuntimeException stackIn_81_0 = null;
+        StringBuilder stackIn_81_1 = null;
+        String stackIn_81_2 = null;
+        StringBuilder stackIn_83_1 = null;
+        StringBuilder stackIn_84_1 = null;
+        String stackIn_84_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5_int = 0;
         ja var5 = null;
         int var6_int = 0;
         ja var6 = null;
         int var7 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_17_1 = 0;
-        int stackIn_77_0 = 0;
-        RuntimeException stackIn_79_0 = null;
-        StringBuilder stackIn_79_1 = null;
-        RuntimeException stackIn_80_0 = null;
-        StringBuilder stackIn_80_1 = null;
-        RuntimeException stackIn_81_0 = null;
-        StringBuilder stackIn_81_1 = null;
-        String stackIn_81_2 = null;
-        RuntimeException stackIn_82_0 = null;
-        StringBuilder stackIn_82_1 = null;
-        RuntimeException stackIn_83_0 = null;
-        StringBuilder stackIn_83_1 = null;
-        RuntimeException stackIn_84_0 = null;
-        StringBuilder stackIn_84_1 = null;
-        String stackIn_84_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_16_1 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_78_0 = null;
-        StringBuilder stackOut_78_1 = null;
-        RuntimeException stackOut_80_0 = null;
-        StringBuilder stackOut_80_1 = null;
-        String stackOut_80_2 = null;
-        RuntimeException stackOut_79_0 = null;
-        StringBuilder stackOut_79_1 = null;
-        String stackOut_79_2 = null;
-        RuntimeException stackOut_81_0 = null;
-        StringBuilder stackOut_81_1 = null;
-        RuntimeException stackOut_83_0 = null;
-        StringBuilder stackOut_83_1 = null;
-        String stackOut_83_2 = null;
-        RuntimeException stackOut_82_0 = null;
-        StringBuilder stackOut_82_1 = null;
-        String stackOut_82_2 = null;
         var7 = Geoblox.field_C;
         try {
           L0: {
@@ -156,12 +122,12 @@ final class ik {
                   L3: {
                     var3_int = param2 ? 1 : 0;
                     var4 = 0;
-                    fieldTemp$2 = param1.field_L;
+                    fieldTemp$0 = param1.field_L;
                     param1.field_L = param1.field_L + 1;
-                    param1.field_n[fieldTemp$2] = param0;
-                    fieldTemp$3 = param0.field_L;
+                    param1.field_n[fieldTemp$0] = param0;
+                    fieldTemp$1 = param0.field_L;
                     param0.field_L = param0.field_L + 1;
-                    param0.field_n[fieldTemp$3] = param1;
+                    param0.field_n[fieldTemp$1] = param1;
                     if (param1.field_z != 0) {
                       break L3;
                     } else {
@@ -176,35 +142,28 @@ final class ik {
                     var5_int = 0;
                     var6_int = 0;
                     if (-2 != (param1.field_z ^ -1)) {
-                      stackOut_13_0 = 0;
-                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_14_0 = 0;
                       break L4;
                     } else {
-                      stackOut_12_0 = 1;
-                      stackIn_14_0 = stackOut_12_0;
+                      stackIn_14_0 = 1;
                       break L4;
                     }
                   }
                   L5: {
-                    stackOut_14_0 = stackIn_14_0;
-                    stackIn_16_0 = stackOut_14_0;
-                    stackIn_15_0 = stackOut_14_0;
+
+
                     if ((param0.field_z ^ -1) != -2) {
-                      stackOut_16_0 = stackIn_16_0;
-                      stackOut_16_1 = 0;
-                      stackIn_17_0 = stackOut_16_0;
-                      stackIn_17_1 = stackOut_16_1;
+
+                      stackIn_17_1 = 0;
                       break L5;
                     } else {
-                      stackOut_15_0 = stackIn_15_0;
-                      stackOut_15_1 = 1;
-                      stackIn_17_0 = stackOut_15_0;
-                      stackIn_17_1 = stackOut_15_1;
+
+                      stackIn_17_1 = 1;
                       break L5;
                     }
                   }
                   L6: {
-                    if ((stackIn_17_0 ^ stackIn_17_1) != 0) {
+                    if ((stackIn_14_0 ^ stackIn_17_1) != 0) {
                       L7: {
                         if (-2 != (param1.field_z ^ -1)) {
                           break L7;
@@ -417,14 +376,12 @@ final class ik {
                     break L19;
                   }
                 }
-                stackOut_76_0 = var3_int;
-                stackIn_77_0 = stackOut_76_0;
+                stackIn_77_0 = var3_int;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (param1.field_n[var3_int] == param0) {
-                  stackOut_5_0 = 0;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -438,56 +395,40 @@ final class ik {
           decompiledCaughtException = decompiledCaughtParameter0;
           L21: {
             var3 = decompiledCaughtException;
-            stackOut_78_0 = (RuntimeException) (var3);
-            stackOut_78_1 = new StringBuilder().append("ik.D(");
-            stackIn_80_0 = stackOut_78_0;
-            stackIn_80_1 = stackOut_78_1;
-            stackIn_79_0 = stackOut_78_0;
-            stackIn_79_1 = stackOut_78_1;
+            stackIn_80_0 = (RuntimeException) (var3);
+
+            stackIn_80_1 = new StringBuilder().append("ik.D(");
+
             if (param0 == null) {
-              stackOut_80_0 = (RuntimeException) ((Object) stackIn_80_0);
-              stackOut_80_1 = (StringBuilder) ((Object) stackIn_80_1);
-              stackOut_80_2 = "null";
-              stackIn_81_0 = stackOut_80_0;
-              stackIn_81_1 = stackOut_80_1;
-              stackIn_81_2 = stackOut_80_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+              stackIn_81_2 = "null";
               break L21;
             } else {
-              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
-              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
-              stackOut_79_2 = "{...}";
-              stackIn_81_0 = stackOut_79_0;
-              stackIn_81_1 = stackOut_79_1;
-              stackIn_81_2 = stackOut_79_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+              stackIn_81_2 = "{...}";
               break L21;
             }
           }
           L22: {
-            stackOut_81_0 = (RuntimeException) ((Object) stackIn_81_0);
-            stackOut_81_1 = ((StringBuilder) (Object) stackIn_81_1).append(stackIn_81_2).append(',');
-            stackIn_83_0 = stackOut_81_0;
-            stackIn_83_1 = stackOut_81_1;
-            stackIn_82_0 = stackOut_81_0;
-            stackIn_82_1 = stackOut_81_1;
+
+
+            stackIn_83_1 = ((StringBuilder) (Object) stackIn_81_1).append(stackIn_81_2).append(',');
+
             if (param1 == null) {
-              stackOut_83_0 = (RuntimeException) ((Object) stackIn_83_0);
-              stackOut_83_1 = (StringBuilder) ((Object) stackIn_83_1);
-              stackOut_83_2 = "null";
-              stackIn_84_0 = stackOut_83_0;
-              stackIn_84_1 = stackOut_83_1;
-              stackIn_84_2 = stackOut_83_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_81_0);
+              stackIn_84_1 = (StringBuilder) ((Object) stackIn_83_1);
+              stackIn_84_2 = "null";
               break L22;
             } else {
-              stackOut_82_0 = (RuntimeException) ((Object) stackIn_82_0);
-              stackOut_82_1 = (StringBuilder) ((Object) stackIn_82_1);
-              stackOut_82_2 = "{...}";
-              stackIn_84_0 = stackOut_82_0;
-              stackIn_84_1 = stackOut_82_1;
-              stackIn_84_2 = stackOut_82_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_81_0);
+              stackIn_84_1 = (StringBuilder) ((Object) stackIn_83_1);
+              stackIn_84_2 = "{...}";
               break L22;
             }
           }
-          throw t.a((Throwable) ((Object) stackIn_84_0), stackIn_84_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_81_0), stackIn_84_2 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_6_0 != 0;

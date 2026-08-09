@@ -14,8 +14,8 @@ final class fe extends pg {
     static int field_j;
 
     final static byte a(byte param0, char param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 < 16) {
           fe.a(true, -66, 87, 84, 125, false, 83, true, false, true, -66, true);
@@ -778,14 +778,13 @@ final class fe extends pg {
     }
 
     public static void a(int param0) {
-        byte discarded$2 = 0;
         field_k = null;
         field_h = null;
         field_o = null;
         field_m = null;
         field_g = null;
         if (param0 != 32369) {
-          discarded$2 = fe.a((byte) -127, 'ﾎ');
+          fe.a((byte) -127, 'ﾎ');
           field_p = null;
           field_n = null;
           return;

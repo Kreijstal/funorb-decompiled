@@ -28,27 +28,15 @@ final class vka extends kna {
     }
 
     final fsa a(boolean param0, int param1, la param2) {
-        boolean discarded$2 = false;
         fsa var4 = null;
         RuntimeException var4_ref = null;
         fsa stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fsa stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -56,42 +44,33 @@ final class vka extends kna {
               if (param1 == 3) {
                 break L1;
               } else {
-                discarded$2 = this.s(88);
+                this.s(88);
                 break L1;
               }
             }
             var4.b((byte) -11, this.field_k, this.field_l);
             this.field_F = new im(param2, param0);
             var4.a((byte) 83, (nv) (this.field_F));
-            stackOut_2_0 = (fsa) (var4);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (fsa) (var4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var4_ref);
-            stackOut_4_1 = new StringBuilder().append("vka.AC(").append(param0).append(',').append(param1).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var4_ref);
+
+            stackIn_6_1 = new StringBuilder().append("vka.AC(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -156,9 +135,8 @@ final class vka extends kna {
     }
 
     final int t(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 8) {
-            discarded$0 = this.s(-24);
+            this.s(-24);
         }
         return 3;
     }
@@ -183,19 +161,16 @@ final class vka extends kna {
 
     static {
         $cfr$clinit: {
-            int discarded$1 = 0;
-            int var0 = 0;
-            int var1 = 0;
-            long var2 = 0L;
-            long var4 = 0L;
-            long var6 = 0L;
-            long var8 = 0L;
-            long var10 = 0L;
-            long var12 = 0L;
-            int var14 = 0;
             long stackIn_5_0 = 0L;
-            long stackOut_4_0 = 0L;
-            long stackOut_3_0 = 0L;
+            int var0;
+            int var1;
+            long var2;
+            long var4;
+            long var6;
+            long var8;
+            long var10;
+            long var12;
+            int var14;
             field_I = new long[8][256];
             field_H = new long[11];
             var0 = 0;
@@ -205,7 +180,7 @@ final class vka extends kna {
                 var0 = 1;
                 L1: while (true) {
                   if (10 < var0) {
-                    discarded$1 = bia.a((byte) 93, 1600);
+                    bia.a((byte) 93, 1600);
                     break $cfr$clinit;
                   } else {
                     var1 = (var0 + -1) * 8;
@@ -218,12 +193,10 @@ final class vka extends kna {
                 L2: {
                   var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
                   if (0 == (1 & var0)) {
-                    stackOut_4_0 = (long)(var1 >>> -386276536);
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = (long)(var1 >>> -386276536);
                     break L2;
                   } else {
-                    stackOut_3_0 = (long)(255 & var1);
-                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_0 = (long)(255 & var1);
                     break L2;
                   }
                 }

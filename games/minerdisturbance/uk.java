@@ -8,7 +8,7 @@ final class uk extends rg implements sh {
     private boolean field_zb;
 
     final boolean n(int param0) {
-        ed var2 = null;
+        ed var2;
         if (param0 == -4) {
           if (this.field_K) {
             if (!this.field_yb) {
@@ -63,15 +63,6 @@ final class uk extends rg implements sh {
     }
 
     private final void a(ed param0, int param1, boolean param2) {
-        hc discarded$2 = null;
-        hc discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        fm var5 = null;
-        int var6 = 0;
-        ed var7 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
@@ -79,14 +70,11 @@ final class uk extends rg implements sh {
         String stackIn_34_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        fm var5 = null;
+        int var6 = 0;
+        ed var7 = null;
         var6 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -94,7 +82,7 @@ final class uk extends rg implements sh {
               this.field_yb = true;
               if (!param0.field_c) {
                 if (param0.field_d != null) {
-                  var4_ref = hm.field_L;
+                  var4 = hm.field_L;
                   if (this.field_Ab != null) {
                     this.field_Ab.a((byte) 47);
                     break L1;
@@ -102,7 +90,7 @@ final class uk extends rg implements sh {
                     break L1;
                   }
                 } else {
-                  var4_ref = param0.field_h;
+                  var4 = param0.field_h;
                   if (param0.field_e != 248) {
                     break L1;
                   } else {
@@ -114,25 +102,25 @@ final class uk extends rg implements sh {
                         break L2;
                       }
                     }
-                    var4_ref = gn.field_c;
+                    var4 = gn.field_c;
                     this.field_zb = true;
                     break L1;
                   }
                 }
               } else {
-                var4_ref = he.field_d;
+                var4 = he.field_d;
                 break L1;
               }
             }
             L3: {
-              var5 = new fm((rg) (this), cn.field_g, var4_ref);
+              var5 = new fm((rg) (this), cn.field_g, var4);
               if (param0.field_c) {
                 if (param0.field_i) {
                   this.a((byte) -53, (fe) (new ba((uk) (this))));
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  discarded$2 = var5.a(oh.field_A, 53, (rm) (this));
+                  var5.a(oh.field_A, 53, (rm) (this));
                   break L3;
                 }
               } else {
@@ -147,7 +135,7 @@ final class uk extends rg implements sh {
                       break L4;
                     }
                   } else {
-                    discarded$3 = var5.a(oh.field_A, 82, (rm) (this));
+                    var5.a(oh.field_A, 82, (rm) (this));
                     break L4;
                   }
                 }
@@ -177,28 +165,20 @@ final class uk extends rg implements sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var4);
-            stackOut_31_1 = new StringBuilder().append("uk.G(");
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_33_0 = (RuntimeException) (var4_ref);
+
+            stackIn_33_1 = new StringBuilder().append("uk.G(");
+
             if (param0 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L5;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L5;
             }
           }

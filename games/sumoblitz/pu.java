@@ -22,33 +22,22 @@ final class pu extends hr {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        ut var10 = null;
-        ut var11 = null;
-        ru stackIn_1_0 = null;
+        ut var10;
+        ut var11;
         ru stackIn_4_0 = null;
-        ru stackIn_5_0 = null;
-        ru stackIn_8_0 = null;
-        ru stackIn_9_0 = null;
-        ru stackIn_12_0 = null;
-        ru stackOut_0_0 = null;
-        ru stackOut_4_0 = null;
-        ru stackOut_8_0 = null;
         var11 = this.field_d.d(84);
         var10 = this.field_d.B(0);
-        stackOut_0_0 = this.field_j;
-        stackIn_4_0 = stackOut_0_0;
-        stackIn_1_0 = stackOut_0_0;
+        stackIn_4_0 = this.field_j;
+
         if (!this.field_h) {
-          stackOut_4_0 = (ru) ((Object) stackIn_4_0);
-          stackIn_8_0 = stackOut_4_0;
-          stackIn_5_0 = stackOut_4_0;
+
+
           if (!this.field_g) {
-            stackOut_8_0 = (ru) ((Object) stackIn_8_0);
-            stackIn_12_0 = stackOut_8_0;
-            stackIn_9_0 = stackOut_8_0;
+
+
             if ((param7 & 1) == 0) {
               L0: {
-                ((ru) (Object) stackIn_12_0).a(lh.field_l, 15149);
+                ((ru) (Object) stackIn_4_0).a(lh.field_l, 15149);
                 this.field_d.w(10);
                 this.field_d.a(this.field_j, 95);
                 this.field_d.e(param6, 13);
@@ -78,7 +67,7 @@ final class pu extends hr {
               return;
             } else {
               L1: {
-                ((ru) (Object) stackIn_9_0).a(ao.field_y, 15149);
+                ((ru) (Object) stackIn_4_0).a(ao.field_y, 15149);
                 this.field_d.w(10);
                 this.field_d.a(this.field_j, 95);
                 this.field_d.e(param6, 13);
@@ -109,7 +98,7 @@ final class pu extends hr {
             }
           } else {
             L2: {
-              ((ru) (Object) stackIn_5_0).a(lh.field_l, 15149);
+              ((ru) (Object) stackIn_4_0).a(lh.field_l, 15149);
               this.field_d.w(10);
               this.field_d.a(this.field_j, 95);
               this.field_d.e(param6, 13);
@@ -140,7 +129,7 @@ final class pu extends hr {
           }
         } else {
           L3: {
-            ((ru) (Object) stackIn_1_0).a(lh.field_l, 15149);
+            ((ru) (Object) stackIn_4_0).a(lh.field_l, 15149);
             this.field_d.w(10);
             this.field_d.a(this.field_j, 95);
             this.field_d.e(param6, 13);
@@ -176,70 +165,53 @@ final class pu extends hr {
     }
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
-        ut var12 = null;
-        float var13 = 0.0f;
-        float var14 = 0.0f;
-        float var15 = 0.0f;
-        float var16 = 0.0f;
-        float var17 = 0.0f;
-        float var18 = 0.0f;
-        float var19 = 0.0f;
-        float var20 = 0.0f;
-        float var21 = 0.0f;
-        float var22 = 0.0f;
-        float var23 = 0.0f;
-        float var24 = 0.0f;
-        float var25 = 0.0f;
-        float var26 = 0.0f;
-        ut var27 = null;
-        ru stackIn_1_0 = null;
-        ru stackIn_2_0 = null;
-        ru stackIn_3_0 = null;
+        ut var12;
+        float var13;
+        float var14;
+        float var15;
+        float var16;
+        float var17;
+        float var18;
+        float var19;
+        float var20;
+        float var21;
+        float var22;
+        float var23;
+        float var24;
+        float var25;
+        float var26;
+        ut var27;
         ru stackIn_4_0 = null;
         ru stackIn_5_0 = null;
         ji stackIn_5_1 = null;
-        ru stackOut_0_0 = null;
-        ru stackOut_1_0 = null;
-        ru stackOut_2_0 = null;
-        ru stackOut_3_0 = null;
-        ji stackOut_3_1 = null;
-        ru stackOut_4_0 = null;
-        ji stackOut_4_1 = null;
         L0: {
           L1: {
             var27 = this.field_d.d(82);
             var12 = this.field_d.B(0);
-            stackOut_0_0 = this.field_j;
-            stackIn_4_0 = stackOut_0_0;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_4_0 = this.field_j;
+
             if (this.field_h) {
               break L1;
             } else {
-              stackOut_1_0 = (ru) ((Object) stackIn_1_0);
-              stackIn_4_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_4_0 = (ru) ((Object) stackIn_4_0);
+
               if (this.field_g) {
                 break L1;
               } else {
-                stackOut_2_0 = (ru) ((Object) stackIn_2_0);
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_4_0 = (ru) ((Object) stackIn_4_0);
+
                 if (-1 == (1 & param9 ^ -1)) {
                   break L1;
                 } else {
-                  stackOut_3_0 = (ru) ((Object) stackIn_3_0);
-                  stackOut_3_1 = ao.field_y;
-                  stackIn_5_0 = stackOut_3_0;
-                  stackIn_5_1 = stackOut_3_1;
+                  stackIn_5_0 = (ru) ((Object) stackIn_4_0);
+                  stackIn_5_1 = ao.field_y;
                   break L0;
                 }
               }
             }
           }
-          stackOut_4_0 = (ru) ((Object) stackIn_4_0);
-          stackOut_4_1 = lh.field_l;
-          stackIn_5_0 = stackOut_4_0;
-          stackIn_5_1 = stackOut_4_1;
+          stackIn_5_0 = (ru) ((Object) stackIn_4_0);
+          stackIn_5_1 = lh.field_l;
           break L0;
         }
         L2: {
@@ -289,41 +261,27 @@ final class pu extends hr {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
-        Object stackIn_5_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         Object stackIn_8_0 = null;
-        Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_8_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
         this.field_f = param1;
         this.field_c = param2;
         this.field_b = param3;
         this.field_i = param0;
-        stackOut_0_0 = this;
-        stackIn_2_0 = stackOut_0_0;
-        stackIn_1_0 = stackOut_0_0;
+        stackIn_2_0 = this;
+
         if (this.field_i == 0) {
-          stackOut_2_0 = this;
-          stackIn_4_0 = stackOut_2_0;
-          stackIn_3_0 = stackOut_2_0;
+          stackIn_4_0 = this;
+
           if (-1 == (this.field_f ^ -1)) {
-            stackOut_4_0 = this;
-            stackIn_8_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_8_0 = this;
+
             if (-1 == (this.field_c ^ -1)) {
-              stackOut_8_0 = this;
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_10_0 = this;
+
               if (this.field_b != 0) {
                 ((pu) (this)).field_k = true;
                 return;
@@ -332,10 +290,8 @@ final class pu extends hr {
                 return;
               }
             } else {
-              stackOut_5_0 = this;
-              stackOut_5_1 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_0 = this;
+              stackIn_7_1 = 1;
               ((pu) (this)).field_k = stackIn_7_1 != 0;
               return;
             }
@@ -379,58 +335,22 @@ final class pu extends hr {
     }
 
     pu(aw param0, int param1, int param2, int[] param3, int param4, int param5) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
         RuntimeException var7 = null;
-        Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         this.field_f = 0;
         this.field_k = false;
         this.field_b = 0;
@@ -444,39 +364,29 @@ final class pu extends hr {
               this.field_l = param2;
               this.field_j = param0.a(false, param5, param3, param1, -45, param4, param2);
               this.field_j.a(true, true, true);
-              stackOut_1_0 = this;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_3_0 = this;
+
               if (param1 == this.field_j.b(-16625)) {
-                stackOut_3_0 = this;
-                stackOut_3_1 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 1;
                 break L1;
               }
             }
             L2: {
               ((pu) (this)).field_h = stackIn_4_1 != 0;
-              stackOut_4_0 = this;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_6_0 = this;
+
               if (param2 == this.field_j.a((byte) -97)) {
-                stackOut_6_0 = this;
-                stackOut_6_1 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = this;
+                stackIn_7_1 = 0;
                 break L2;
               } else {
-                stackOut_5_0 = this;
-                stackOut_5_1 = 1;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+                stackIn_7_0 = this;
+                stackIn_7_1 = 1;
                 break L2;
               }
             }
@@ -485,12 +395,12 @@ final class pu extends hr {
               if (this.field_h) {
                 break L3;
               } else {
-                discarded$4 = this.field_j.c(-24722);
+                this.field_j.c(-24722);
                 break L3;
               }
             }
             if (!this.field_g) {
-              discarded$5 = this.field_j.c(-24722);
+              this.field_j.c(-24722);
               break L0;
             } else {
               return;
@@ -500,56 +410,40 @@ final class pu extends hr {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var7 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var7);
-            stackOut_13_1 = new StringBuilder().append("pu.<init>(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var7);
+
+            stackIn_15_1 = new StringBuilder().append("pu.<init>(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }
           L5: {
-            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+
+
+            stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }
-          throw qo.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param4 + ',' + param5 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_16_0), stackIn_19_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -9,158 +9,114 @@ final class kqa {
     private ff field_d;
 
     final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int[] stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         int[] stackIn_5_0 = null;
         int stackIn_5_1 = 0;
-        int[] stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        int stackIn_6_2 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_12_1 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_19_0 = 0;
-        int[] stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int[] stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        int[] stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
-        int stackOut_18_0 = 0;
+        int stackIn_5_2 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         var9 = TombRacer.field_G ? 1 : 0;
         var2 = -103 % ((-35 - param0) / 39);
         var3 = 0;
         L0: while (true) {
-          L1: {
-            L2: {
-              if (var3 >= this.field_d.field_H.length) {
-                break L2;
-              } else {
-                if (var9 != 0) {
-                  break L1;
-                } else {
-                  L3: {
-                    stackOut_3_0 = this.field_c;
-                    stackOut_3_1 = var3;
-                    stackIn_5_0 = stackOut_3_0;
-                    stackIn_5_1 = stackOut_3_1;
-                    stackIn_4_0 = stackOut_3_0;
-                    stackIn_4_1 = stackOut_3_1;
-                    if (this.field_d.field_G[var3].b(0)) {
-                      stackOut_5_0 = (int[]) ((Object) stackIn_5_0);
-                      stackOut_5_1 = stackIn_5_1;
-                      stackOut_5_2 = -999;
-                      stackIn_6_0 = stackOut_5_0;
-                      stackIn_6_1 = stackOut_5_1;
-                      stackIn_6_2 = stackOut_5_2;
-                      break L3;
-                    } else {
-                      stackOut_4_0 = (int[]) ((Object) stackIn_4_0);
-                      stackOut_4_1 = stackIn_4_1;
-                      stackOut_4_2 = this.field_d.field_G[var3].b(false) - -this.field_d.field_H[var3].i((byte) -72);
-                      stackIn_6_0 = stackOut_4_0;
-                      stackIn_6_1 = stackOut_4_1;
-                      stackIn_6_2 = stackOut_4_2;
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    stackIn_6_0[stackIn_6_1] = stackIn_6_2;
-                    if (!this.field_d.f((byte) -99, var3)) {
-                      break L4;
-                    } else {
-                      this.field_c[var3] = 2147483647;
-                      break L4;
-                    }
-                  }
-                  var3++;
-                  if (var9 == 0) {
-                    continue L0;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-            }
+          if (var3 >= this.field_d.field_H.length) {
             var3 = 0;
-            break L1;
-          }
-          var4 = 0;
-          L5: while (true) {
-            stackOut_11_0 = var4;
-            stackOut_11_1 = this.field_e.length;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
-            L6: while (true) {
-              L7: {
-                L8: {
-                  if (stackIn_12_0 >= stackIn_12_1) {
-                    break L8;
+            var4 = 0;
+            L1: while (true) {
+              if (var4 >= this.field_e.length) {
+                L2: {
+                  if (var3 == 0) {
+                    break L2;
                   } else {
-                    stackOut_13_0 = var4;
-                    stackIn_19_0 = stackOut_13_0;
-                    stackIn_14_0 = stackOut_13_0;
-                    if (var9 != 0) {
-                      break L7;
-                    } else {
-                      var5 = stackIn_14_0;
-                      if (var5 >= this.field_e.length) {
-                        var4++;
-                        if (var9 == 0) {
-                          continue L5;
-                        } else {
-                          break L8;
-                        }
+                    var10 = 0;
+                    var4 = var10;
+                    L3: while (true) {
+                      if (var10 >= this.field_e.length) {
+                        break L2;
                       } else {
-                        var6 = this.field_e[var4];
-                        var7 = this.field_e[var5];
-                        var8 = 0;
-                        stackOut_15_0 = this.field_c[var7];
-                        stackOut_15_1 = this.field_c[var6];
-                        stackIn_12_0 = stackOut_15_0;
-                        stackIn_12_1 = stackOut_15_1;
-                        continue L6;
+                        this.field_b[this.field_e[var10]] = var10;
+                        var10++;
+                        continue L3;
                       }
                     }
                   }
                 }
-                stackOut_18_0 = var3;
-                stackIn_19_0 = stackOut_18_0;
-                break L7;
-              }
-              if (stackIn_19_0 != 0) {
-                var4 = 0;
-                L9: while (true) {
-                  if (var4 < this.field_e.length) {
-                    this.field_b[this.field_e[var4]] = var4;
+                return;
+              } else {
+                var5 = var4;
+                L4: while (true) {
+                  if (var5 >= this.field_e.length) {
                     var4++;
-                    if (var9 == 0) {
-                      continue L9;
-                    } else {
-                      return;
-                    }
+                    continue L1;
                   } else {
-                    return;
+                    L5: {
+                      var6 = this.field_e[var4];
+                      var7 = this.field_e[var5];
+                      var8 = 0;
+                      if (this.field_c[var7] < this.field_c[var6]) {
+                        var8 = 1;
+                        break L5;
+                      } else {
+                        if (this.field_c[var6] != this.field_c[var7]) {
+                          break L5;
+                        } else {
+                          if (this.field_d.field_G[var7].field_c < this.field_d.field_G[var6].field_c) {
+                            var8 = 1;
+                            break L5;
+                          } else {
+                            break L5;
+                          }
+                        }
+                      }
+                    }
+                    if (var8 != 0) {
+                      this.field_e[var4] = var7;
+                      var3 = 1;
+                      this.field_e[var5] = var6;
+                      var5++;
+                      continue L4;
+                    } else {
+                      var5++;
+                      continue L4;
+                    }
                   }
                 }
-              } else {
-                return;
               }
+            }
+          } else {
+            L6: {
+              stackIn_4_0 = this.field_c;
+
+              stackIn_4_1 = var3;
+
+              if (this.field_d.field_G[var3].b(0)) {
+                stackIn_5_0 = (int[]) ((Object) stackIn_4_0);
+                stackIn_5_1 = stackIn_4_1;
+                stackIn_5_2 = -999;
+                break L6;
+              } else {
+                stackIn_5_0 = (int[]) ((Object) stackIn_4_0);
+                stackIn_5_1 = stackIn_4_1;
+                stackIn_5_2 = this.field_d.field_G[var3].b(false) - -this.field_d.field_H[var3].i((byte) -72);
+                break L6;
+              }
+            }
+            stackIn_5_0[stackIn_5_1] = stackIn_5_2;
+            if (this.field_d.f((byte) -99, var3)) {
+              this.field_c[var3] = 2147483647;
+              var3++;
+              continue L0;
+            } else {
+              var3++;
+              continue L0;
             }
           }
         }
@@ -175,10 +131,10 @@ final class kqa {
 
     final static void b(int param0) {
         vb var1 = null;
-        RuntimeException var1_ref = null;
         fla var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -198,11 +154,7 @@ final class kqa {
                 var2 = new fla(var1, var1.field_f.k(), var1.field_f.g());
                 rs.a(var2, -58);
                 var1 = (vb) ((Object) tna.field_e.e(119));
-                if (var3 == 0) {
-                  continue L2;
-                } else {
-                  return;
-                }
+                continue L2;
               }
             }
           }
@@ -223,50 +175,18 @@ final class kqa {
     }
 
     final void a(boolean param0) {
-        int var2 = 0;
         int var3 = 0;
-        int var4 = 0;
-        var4 = TombRacer.field_G ? 1 : 0;
-        var2 = this.field_d.field_H.length;
-        if (!param0) {
-          this.field_c = new int[var2];
-          this.field_e = new int[var2];
-          this.field_b = new int[var2];
-          var3 = 0;
-          L0: while (true) {
-            if (var3 < var2) {
-              this.field_e[var3] = var3;
-              this.field_b[var3] = var3;
-              var3++;
-              if (var4 == 0) {
-                continue L0;
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
-          }
-        } else {
-          kqa.b(110);
-          this.field_c = new int[var2];
-          this.field_e = new int[var2];
-          this.field_b = new int[var2];
-          var3 = 0;
-          L1: while (true) {
-            if (var3 < var2) {
-              this.field_e[var3] = var3;
-              this.field_b[var3] = var3;
-              var3++;
-              if (var4 == 0) {
-                continue L1;
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
-          }
+        int var4 = TombRacer.field_G ? 1 : 0;
+        int var2 = this.field_d.field_H.length;
+        if (param0) {
+            kqa.b(110);
+        }
+        this.field_c = new int[var2];
+        this.field_e = new int[var2];
+        this.field_b = new int[var2];
+        for (var3 = 0; var3 < var2; var3++) {
+            this.field_e[var3] = var3;
+            this.field_b[var3] = var3;
         }
     }
 

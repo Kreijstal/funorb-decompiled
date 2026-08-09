@@ -38,7 +38,7 @@ final class gb implements Iterable {
     }
 
     final tf b(int param0) {
-        tf var2 = null;
+        tf var2;
         if (param0 == 31) {
           var2 = this.field_g.field_l;
           if (var2 == this.field_g) {
@@ -65,8 +65,6 @@ final class gb implements Iterable {
 
     final static String a(java.applet.Applet param0, int param1) {
         try {
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -78,8 +76,6 @@ final class gb implements Iterable {
             String stackIn_9_0 = null;
             String stackIn_15_0 = null;
             String stackIn_17_0 = null;
-            RuntimeException stackIn_19_0 = null;
-            StringBuilder stackIn_19_1 = null;
             RuntimeException stackIn_20_0 = null;
             StringBuilder stackIn_20_1 = null;
             RuntimeException stackIn_21_0 = null;
@@ -88,18 +84,8 @@ final class gb implements Iterable {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            String stackOut_8_0 = null;
-            String stackOut_16_0 = null;
-            String stackOut_14_0 = null;
-            String stackOut_2_0 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            String stackOut_20_2 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
             var8 = ArcanistsMulti.field_G ? 1 : 0;
             try {
               L0: {
@@ -124,8 +110,7 @@ final class gb implements Iterable {
                               if (!var5[var6].substring(0, var7).trim().equals(var3)) {
                                 break L3;
                               } else {
-                                stackOut_8_0 = var5[var6].substring(1 + var7).trim();
-                                stackIn_9_0 = stackOut_8_0;
+                                stackIn_9_0 = var5[var6].substring(1 + var7).trim();
                                 decompiledRegionSelector0 = 1;
                                 break L1;
                               }
@@ -146,13 +131,11 @@ final class gb implements Iterable {
                   }
                   if (decompiledRegionSelector0 == 0) {
                     if (vm.field_b == null) {
-                      stackOut_16_0 = param0.getParameter("settings");
-                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_0 = param0.getParameter("settings");
                       decompiledRegionSelector1 = 2;
                       break L0;
                     } else {
-                      stackOut_14_0 = vm.field_b;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = vm.field_b;
                       decompiledRegionSelector1 = 1;
                       break L0;
                     }
@@ -161,8 +144,7 @@ final class gb implements Iterable {
                     break L0;
                   }
                 } else {
-                  stackOut_2_0 = (String) null;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = (String) null;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 }
@@ -171,27 +153,19 @@ final class gb implements Iterable {
               decompiledCaughtException = decompiledCaughtParameter1;
               L5: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_18_0 = (RuntimeException) (var2_ref);
-                stackOut_18_1 = new StringBuilder().append("gb.C(");
-                stackIn_20_0 = stackOut_18_0;
-                stackIn_20_1 = stackOut_18_1;
-                stackIn_19_0 = stackOut_18_0;
-                stackIn_19_1 = stackOut_18_1;
+                stackIn_20_0 = (RuntimeException) (var2_ref);
+
+                stackIn_20_1 = new StringBuilder().append("gb.C(");
+
                 if (param0 == null) {
-                  stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackOut_20_2 = "null";
-                  stackIn_21_0 = stackOut_20_0;
-                  stackIn_21_1 = stackOut_20_1;
-                  stackIn_21_2 = stackOut_20_2;
+                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+                  stackIn_21_2 = "null";
                   break L5;
                 } else {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "{...}";
-                  stackIn_21_0 = stackOut_19_0;
-                  stackIn_21_1 = stackOut_19_1;
-                  stackIn_21_2 = stackOut_19_2;
+                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+                  stackIn_21_2 = "{...}";
                   break L5;
                 }
               }
@@ -218,7 +192,7 @@ final class gb implements Iterable {
     }
 
     final static void a(int param0, boolean param1) {
-        ab var2 = null;
+        ab var2;
         if (!param1) {
           return;
         } else {
@@ -263,8 +237,7 @@ final class gb implements Iterable {
     }
 
     final static void a(int param0) {
-        String discarded$5 = null;
-        java.applet.Applet var2 = null;
+        java.applet.Applet var2;
         L0: {
           oj.field_i = false;
           if (nn.field_q != null) {
@@ -285,7 +258,7 @@ final class gb implements Iterable {
           }
         } else {
           var2 = (java.applet.Applet) null;
-          discarded$5 = gb.a((java.applet.Applet) null, 114);
+          gb.a((java.applet.Applet) null, 114);
           if (nj.field_c == 0) {
             ng.field_K = 0;
             return;

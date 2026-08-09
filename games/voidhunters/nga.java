@@ -58,11 +58,11 @@ final class nga implements Iterable {
     }
 
     final ksa a(byte param0) {
-        int fieldTemp$2 = 0;
-        ksa var2 = null;
-        int var3 = 0;
-        Object var4 = null;
-        ksa var4_ref = null;
+        int fieldTemp$1 = 0;
+        ksa var2;
+        int var3;
+        Object var4;
+        ksa var4_ref;
         L0: {
           var3 = VoidHunters.field_G;
           if (0 >= this.field_d) {
@@ -86,9 +86,9 @@ final class nga implements Iterable {
               return null;
             }
           } else {
-            fieldTemp$2 = this.field_d;
+            fieldTemp$1 = this.field_d;
             this.field_d = this.field_d + 1;
-            var4_ref = this.field_h[fieldTemp$2].field_c;
+            var4_ref = this.field_h[fieldTemp$1].field_c;
             var2 = var4_ref;
             if (var4_ref == this.field_h[this.field_d - 1]) {
               continue L1;

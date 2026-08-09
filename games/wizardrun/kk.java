@@ -29,14 +29,6 @@ final class kk extends mh implements qd {
     }
 
     private final void a(boolean param0, wd param1, int param2) {
-        pl discarded$2 = null;
-        pl discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        vc var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         RuntimeException stackIn_36_0 = null;
@@ -44,25 +36,21 @@ final class kk extends mh implements qd {
         String stackIn_36_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        vc var5 = null;
+        int var6 = 0;
         var6 = wizardrun.field_H;
         try {
           L0: {
             L1: {
               this.field_Cb = true;
               if (param1.field_i) {
-                var4_ref = jl.field_v;
+                var4 = jl.field_v;
                 break L1;
               } else {
                 if (param1.field_c == null) {
-                  var4_ref = param1.field_h;
+                  var4 = param1.field_h;
                   if (-249 == (param1.field_b ^ -1)) {
                     L2: {
                       if (!param0) {
@@ -72,14 +60,14 @@ final class kk extends mh implements qd {
                         break L2;
                       }
                     }
-                    var4_ref = tk.field_f;
+                    var4 = tk.field_f;
                     this.field_Ab = true;
                     break L1;
                   } else {
                     break L1;
                   }
                 } else {
-                  var4_ref = uc.field_e;
+                  var4 = uc.field_e;
                   if (null != this.field_wb) {
                     this.field_wb.a(param2 ^ 2147479748);
                     break L1;
@@ -90,7 +78,7 @@ final class kk extends mh implements qd {
               }
             }
             L3: {
-              var5 = new vc((mh) (this), va.field_i, var4_ref);
+              var5 = new vc((mh) (this), va.field_i, var4);
               if (!param1.field_i) {
                 L4: {
                   if (!this.field_Ab) {
@@ -103,7 +91,7 @@ final class kk extends mh implements qd {
                       break L4;
                     }
                   } else {
-                    discarded$2 = var5.a(0, e.field_e, (ce) (this));
+                    var5.a(0, e.field_e, (ce) (this));
                     break L4;
                   }
                 }
@@ -124,7 +112,7 @@ final class kk extends mh implements qd {
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  discarded$3 = var5.a(0, e.field_e, (ce) (this));
+                  var5.a(0, e.field_e, (ce) (this));
                   break L3;
                 }
               }
@@ -144,28 +132,20 @@ final class kk extends mh implements qd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var4 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) (var4);
-            stackOut_33_1 = new StringBuilder().append("kk.CC(").append(param0).append(',');
-            stackIn_35_0 = stackOut_33_0;
-            stackIn_35_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_35_0 = (RuntimeException) (var4_ref);
+
+            stackIn_35_1 = new StringBuilder().append("kk.CC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "null";
               break L6;
             } else {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "{...}";
-              stackIn_36_0 = stackOut_34_0;
-              stackIn_36_1 = stackOut_34_1;
-              stackIn_36_2 = stackOut_34_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "{...}";
               break L6;
             }
           }
@@ -188,6 +168,8 @@ final class kk extends mh implements qd {
     }
 
     final static void o(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         of var3 = null;
@@ -201,17 +183,14 @@ final class kk extends mh implements qd {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int var14 = 0;
-        mg var15 = null;
-        int[][] var19 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
+        mg var14 = null;
+        int[][] var18 = null;
         var12 = wizardrun.field_H;
         try {
           L0: {
             L1: {
-              var15 = nk.field_N;
-              var2 = var15.f(255);
+              var14 = nk.field_N;
+              var2 = var14.f(255);
               var3 = (of) ((Object) bh.field_b.b((byte) 53));
               if (param0 <= -111) {
                 break L1;
@@ -239,7 +218,7 @@ final class kk extends mh implements qd {
                 break L0;
               } else {
                 L4: {
-                  var4 = var15.f(255);
+                  var4 = var14.f(255);
                   if (var4 != 0) {
                     var5 = var3.field_i;
                     ld.field_c[0] = d.field_a;
@@ -252,39 +231,38 @@ final class kk extends mh implements qd {
                           if (var4 <= var6_int) {
                             fl.f(var5, 16);
                             var6 = new String[2][var5];
-                            var19 = new int[2][4 * var5];
+                            var18 = new int[2][4 * var5];
                             var8 = lg.field_d;
                             var9 = 0;
                             var10 = 0;
                             L7: while (true) {
                               if (var9 >= var8) {
+                                var9 = 0;
                                 var13 = 0;
-                                var9 = var13;
-                                var14 = 0;
-                                var10 = var14;
+                                var10 = var13;
                                 L8: while (true) {
-                                  if (var8 > var13) {
+                                  if (var8 > var9) {
                                     L9: {
-                                      var11 = sj.field_m[var5 + var13];
-                                      var6[1][var14] = ld.field_c[var11];
-                                      var19[1][4 * var14] = ug.field_I[var11];
-                                      var19[1][1 + var14 * 4] = sk.field_B[var11];
-                                      var19[1][4 * var14 - -2] = tf.field_c[var11];
-                                      var19[1][4 * var14 - -3] = mk.field_c[var11];
+                                      var11 = sj.field_m[var5 + var9];
+                                      var6[1][var13] = ld.field_c[var11];
+                                      var18[1][4 * var13] = ug.field_I[var11];
+                                      var18[1][1 + var13 * 4] = sk.field_B[var11];
+                                      var18[1][4 * var13 - -2] = tf.field_c[var11];
+                                      var18[1][4 * var13 - -3] = mk.field_c[var11];
                                       if (!qj.a(ld.field_c[var11], 81)) {
                                         break L9;
                                       } else {
                                         if (0 == mk.field_c[var11] + sk.field_B[var11] - -tf.field_c[var11]) {
-                                          var6[1][var14] = null;
-                                          var14--;
+                                          var6[1][var13] = null;
+                                          var13--;
                                           break L9;
                                         } else {
                                           break L9;
                                         }
                                       }
                                     }
+                                    var9++;
                                     var13++;
-                                    var14++;
                                     continue L8;
                                   } else {
                                     var3.a(false);
@@ -295,10 +273,10 @@ final class kk extends mh implements qd {
                                 L10: {
                                   var11 = sj.field_m[var9];
                                   var6[0][var10] = ld.field_c[var11];
-                                  var19[0][4 * var10] = ug.field_I[var11];
-                                  var19[0][1 + 4 * var10] = sk.field_B[var11];
-                                  var19[0][var10 * 4 + 2] = tf.field_c[var11];
-                                  var19[0][3 + var10 * 4] = mk.field_c[var11];
+                                  var18[0][4 * var10] = ug.field_I[var11];
+                                  var18[0][1 + 4 * var10] = sk.field_B[var11];
+                                  var18[0][var10 * 4 + 2] = tf.field_c[var11];
+                                  var18[0][3 + var10 * 4] = mk.field_c[var11];
                                   if (!qj.a(ld.field_c[var11], 110)) {
                                     break L10;
                                   } else {
@@ -318,8 +296,8 @@ final class kk extends mh implements qd {
                             }
                           } else {
                             L11: {
-                              ci.a(2026380485, var15);
-                              if (var6_int != 0) {
+                              ci.a(2026380485, var14);
+                              if ((var6_int ^ -1) != -1) {
                                 rd.a(var6_int, ki.field_M, lj.field_a, -82, ia.field_j, bi.field_a);
                                 break L11;
                               } else {
@@ -332,7 +310,7 @@ final class kk extends mh implements qd {
                           }
                         }
                       } else {
-                        ld.field_c[var6_int] = var15.d(0);
+                        ld.field_c[var6_int] = var14.d(0);
                         var6_int++;
                         continue L5;
                       }
@@ -376,7 +354,7 @@ final class kk extends mh implements qd {
     }
 
     final boolean g(int param0) {
-        wd var2 = null;
+        wd var2;
         if (this.field_H) {
           if (!this.field_Cb) {
             var2 = ti.a((byte) -123);

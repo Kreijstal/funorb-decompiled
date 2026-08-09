@@ -26,9 +26,9 @@ final class kh {
 
     final static void a(boolean param0) {
         pe var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var2 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -110,14 +110,13 @@ final class kh {
 
     final static void a(int param0) {
         try {
-            gh discarded$2 = null;
             IOException iOException = null;
             IOException var2_ref = null;
             int var1_int = 0;
-            RuntimeException var1 = null;
             int var3 = 0;
             String var4 = null;
             Throwable decompiledCaughtException = null;
+            RuntimeException var1 = null;
             var3 = Virogrid.field_F ? 1 : 0;
             try {
               L0: {
@@ -126,7 +125,7 @@ final class kh {
                     break L1;
                   } else {
                     var4 = (String) null;
-                    discarded$2 = kh.a((byte) -112, (String) null);
+                    kh.a((byte) -112, (String) null);
                     break L1;
                   }
                 }
@@ -214,60 +213,41 @@ final class kh {
     }
 
     final static void a(km param0, int param1, int param2) {
-        RuntimeException var3 = null;
+        dj var9 = null;
+        mg var11 = null;
+        String var10 = null;
+        dj var12 = null;
+        mg var14 = null;
+        String var13 = null;
+        dj var15 = null;
+        mg var17 = null;
+        String var16 = null;
+        dj var18 = null;
+        mg var20 = null;
+        String var19 = null;
+        dj var21 = null;
+        mg var23 = null;
+        String var22 = null;
+        dj var24 = null;
+        mg var26 = null;
+        String var25 = null;
+        dj var27 = null;
+        String var28 = null;
+        dj var30 = null;
+        mg var32 = null;
+        String var31 = null;
+        dj var33 = null;
+        mg var35 = null;
+        String var34 = null;
+        dj var36 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        dj var9 = null;
-        String var10 = null;
-        mg var11 = null;
-        dj var12 = null;
-        String var13 = null;
-        mg var14 = null;
-        dj var15 = null;
-        String var16 = null;
-        mg var17 = null;
-        dj var18 = null;
-        String var19 = null;
-        mg var20 = null;
-        dj var21 = null;
-        String var22 = null;
-        mg var23 = null;
-        dj var24 = null;
-        String var25 = null;
-        mg var26 = null;
-        dj var27 = null;
-        String var28 = null;
         mg var29 = null;
-        dj var30 = null;
-        String var31 = null;
-        mg var32 = null;
-        dj var33 = null;
-        String var34 = null;
-        mg var35 = null;
-        dj var36 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
-          L0: {
-            L1: {
-              ai.a(param1, (um) null, (int[]) null, (String) null, 0L, (String) null, -1, param0, 60);
-              if (param1 == 0) {
+            ai.a(param1, (um) null, (int[]) null, (String) null, 0L, (String) null, -1, param0, 60);
+            if (!(param1 != 0)) {
                 var9 = md.field_e;
                 var11 = j.field_k[0];
                 var29 = var11;
@@ -286,15 +266,8 @@ final class kh {
                 var29 = var17;
                 var16 = f.field_h;
                 var15.field_a.a(var16, (byte) 89, 13, var17);
-                break L1;
-              } else {
-                break L1;
-              }
             }
-            L2: {
-              if (1 != param1) {
-                break L2;
-              } else {
+            if (1 == param1) {
                 var18 = md.field_e;
                 var20 = j.field_k[0];
                 var29 = var20;
@@ -313,11 +286,8 @@ final class kh {
                 var29 = var26;
                 var25 = la.field_m;
                 var24.field_a.a(var25, (byte) 89, 13, var26);
-                break L2;
-              }
             }
-            L3: {
-              if (param1 == 2) {
+            if (!(param1 != 2)) {
                 var27 = md.field_e;
                 var29 = j.field_k[0];
                 var28 = bf.field_s;
@@ -330,18 +300,9 @@ final class kh {
                 var35 = j.field_k[2];
                 var34 = mi.field_a;
                 var33.field_a.a(var34, (byte) 89, 13, var35);
-                break L3;
-              } else {
-                break L3;
-              }
             }
-            L4: {
-              if (param2 == 20435) {
-                break L4;
-              } else {
+            if (param2 != 20435) {
                 field_c = (dl) null;
-                break L4;
-              }
             }
             var36 = md.field_e;
             var4 = param0.field_Bb;
@@ -349,50 +310,21 @@ final class kh {
             var6 = param0.field_K;
             var7 = param0.field_ub;
             var36.field_a.a(var7, 0, var6, var4, var5);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var3);
-            stackOut_12_1 = new StringBuilder().append("kh.B(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
-            if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L5;
-            } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L5;
-            }
-          }
-          throw kg.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) ((Object) runtimeException), "kh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static mg[] a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9 = 0;
-        mg[] var10 = null;
-        mg[] var11_ref_mg__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        mg var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        e var16 = null;
+        int var9;
+        mg[] var10;
+        mg[] var11_ref_mg__;
+        int var11;
+        int var12;
+        mg var13;
+        int var14;
+        int var15;
+        e var16;
         var15 = Virogrid.field_F ? 1 : 0;
         var9 = param8 + param0 + param6;
         var10 = new mg[]{new mg(var9, var9), new mg(param5, var9), new mg(var9, var9), new mg(var9, param5), new mg(64, 64), new mg(var9, param5), new mg(var9, var9), new mg(param5, var9), new mg(var9, var9)};
@@ -465,7 +397,7 @@ final class kh {
                       } else {
                         var10[0].field_B[var12 + var9 * var11] = param3;
                         var10[0].field_B[var12 * var9 - -var11] = param3;
-                        if (var9 - var11 > var12) {
+                        if ((var9 - var11 ^ -1) < (var12 ^ -1)) {
                           var10[2].field_B[var12 - -(var11 * var9)] = param3;
                           var10[6].field_B[var9 * var12 - -var11] = param3;
                           var12++;
@@ -525,7 +457,6 @@ final class kh {
 
     final static gh a(byte param0, String param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         String var3 = null;
         gh var4 = null;
         String var5 = null;
@@ -533,23 +464,13 @@ final class kh {
         CharSequence var7 = null;
         CharSequence var8 = null;
         gh stackIn_16_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gh stackOut_15_0 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException var2 = null;
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -579,8 +500,7 @@ final class kh {
                     }
                   }
                   if (var5.equals(var3)) {
-                    stackOut_15_0 = (gh) (var4);
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = (gh) (var4);
                     break L0;
                   } else {
                     var4 = (gh) ((Object) ie.field_a.c(48));
@@ -598,27 +518,19 @@ final class kh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2);
-            stackOut_19_1 = new StringBuilder().append("kh.A(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2);
+
+            stackIn_21_1 = new StringBuilder().append("kh.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L4;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L4;
             }
           }

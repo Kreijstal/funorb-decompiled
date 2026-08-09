@@ -11,9 +11,9 @@ final class di {
     private rh field_b;
 
     final og a(byte param0, int param1) {
-        og var3 = null;
-        int var4 = 0;
-        byte[] var5 = null;
+        og var3;
+        int var4;
+        byte[] var5;
         var3 = (og) (this.field_f.a((byte) 106, (long)param1));
         if (var3 != null) {
           return var3;
@@ -58,10 +58,10 @@ final class di {
 
     final static void a(int param0, int param1) {
         hf var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         wc var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = Geoblox.field_C;
         try {
           L0: {

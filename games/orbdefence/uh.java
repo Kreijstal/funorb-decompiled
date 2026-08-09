@@ -7,7 +7,7 @@ final class uh {
     static String field_c;
 
     final static int a(byte param0, int param1) {
-        int var2 = 0;
+        int var2;
         L0: {
           var2 = 0;
           if (0 > param1) {

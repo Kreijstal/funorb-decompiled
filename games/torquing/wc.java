@@ -15,31 +15,21 @@ final class wc extends q {
     int field_q;
 
     final static void a(int param0, hi param1) {
-        int dupTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int incrementValue$6 = 0;
-        int dupTemp$7 = 0;
-        RuntimeException var2 = null;
+        int dupTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int dupTemp$3 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         var5 = Torquing.field_u;
         try {
           L0: {
@@ -49,8 +39,8 @@ final class wc extends q {
                 var2_int = 0;
                 L2: while (true) {
                   if (var2_int >= kb.field_b) {
-                    dupTemp$4 = param1.a((byte) -72);
-                    oc.field_b[dupTemp$4] = oc.field_b[dupTemp$4] + 1;
+                    dupTemp$0 = param1.a((byte) -72);
+                    oc.field_b[dupTemp$0] = oc.field_b[dupTemp$0] + 1;
                     var2_int = 0;
                     var3 = 0;
                     L3: while (true) {
@@ -64,14 +54,14 @@ final class wc extends q {
                           }
                         }
                         kb.field_b = var2_int;
-                        fieldTemp$5 = kb.field_b;
+                        fieldTemp$1 = kb.field_b;
                         kb.field_b = kb.field_b + 1;
-                        hi.field_j[fieldTemp$5] = param1;
+                        hi.field_j[fieldTemp$1] = param1;
                         break L0;
                       } else {
                         L5: {
                           L6: {
-                            if (param1.field_f == hi.field_j[var3].field_f) {
+                            if ((param1.field_f ^ -1) == (hi.field_j[var3].field_f ^ -1)) {
                               var4 = hi.field_j[var3].a((byte) -72);
                               if (kl.field_r < oc.field_b[var4]) {
                                 oc.field_b[var4] = oc.field_b[var4] - 1;
@@ -83,9 +73,9 @@ final class wc extends q {
                               break L6;
                             }
                           }
-                          incrementValue$6 = var2_int;
+                          incrementValue$2 = var2_int;
                           var2_int++;
-                          hi.field_j[incrementValue$6] = hi.field_j[var3];
+                          hi.field_j[incrementValue$2] = hi.field_j[var3];
                           break L5;
                         }
                         var3++;
@@ -97,8 +87,8 @@ final class wc extends q {
                       if (hi.field_j[var2_int].field_f != param1.field_f) {
                         break L7;
                       } else {
-                        dupTemp$7 = hi.field_j[var2_int].a((byte) -72);
-                        oc.field_b[dupTemp$7] = oc.field_b[dupTemp$7] + 1;
+                        dupTemp$3 = hi.field_j[var2_int].a((byte) -72);
+                        oc.field_b[dupTemp$3] = oc.field_b[dupTemp$3] + 1;
                         break L7;
                       }
                     }
@@ -117,31 +107,23 @@ final class wc extends q {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2);
-            stackOut_22_1 = new StringBuilder().append("wc.C(").append(param0).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_25_0 = (RuntimeException) (var2);
+
+            stackIn_25_1 = new StringBuilder().append("wc.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L8;
             }
           }
-          throw rb.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
     }
 
@@ -152,23 +134,12 @@ final class wc extends q {
         int var4 = 0;
         int var5 = 0;
         int stackIn_5_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         var5 = Torquing.field_u;
         try {
           L0: {
@@ -178,8 +149,7 @@ final class wc extends q {
             L1: while (true) {
               if (var4 >= var2_int) {
                 var4 = -59 % ((-3 - param0) / 47);
-                stackOut_4_0 = var3;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = var3;
                 break L0;
               } else {
                 var3 = -var3 + ((var3 << -1583276603) - -ka.a(false, param1.charAt(var4)));
@@ -192,27 +162,19 @@ final class wc extends q {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("wc.D(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("wc.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -230,7 +192,6 @@ final class wc extends q {
     }
 
     final static boolean a(boolean param0, int param1) {
-        boolean discarded$0 = false;
         if ((fa.field_b & 1 << param1) != 0) {
             return true;
         }
@@ -238,7 +199,7 @@ final class wc extends q {
             return true;
         }
         if (param0) {
-            discarded$0 = wc.a(false, -49);
+            wc.a(false, -49);
         }
         if (!ia.a(-22426, m.field_w[param1])) {
             return false;

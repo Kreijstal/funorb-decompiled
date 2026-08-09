@@ -36,7 +36,13 @@ final class ci implements td {
     }
 
     public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
-        int discarded$1 = 0;
+        pj stackIn_3_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -44,35 +50,14 @@ final class ci implements td {
         int var10 = 0;
         pj var11 = null;
         of var12 = null;
-        pj stackIn_3_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        pj stackOut_2_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         try {
           L0: {
             L1: {
               if (param2 instanceof of) {
-                stackOut_2_0 = (pj) (param2);
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (pj) (param2);
                 break L1;
               } else {
-                stackOut_1_0 = null;
-                stackIn_3_0 = (pj) ((Object) stackOut_1_0);
+                stackIn_3_0 = null;
                 break L1;
               }
             }
@@ -119,7 +104,7 @@ final class ci implements td {
             }
             if (this.field_f != null) {
               var10 = this.field_g + this.field_j - -this.field_a;
-              discarded$1 = this.field_f.a(param2.field_l, var10 + param2.field_s + param1, this.field_c + (param2.field_n + param0), param2.field_m - (var10 + this.field_g), -(this.field_g << 1126735649) + param2.field_r, this.field_n, this.field_o, this.field_l, this.field_e, 0);
+              this.field_f.a(param2.field_l, var10 + param2.field_s + param1, this.field_c + (param2.field_n + param0), param2.field_m - (var10 + this.field_g), -(this.field_g << 1126735649) + param2.field_r, this.field_n, this.field_o, this.field_l, this.field_e, 0);
               break L0;
             } else {
               return;
@@ -129,27 +114,19 @@ final class ci implements td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var6);
-            stackOut_16_1 = new StringBuilder().append("ci.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var6);
+
+            stackIn_18_1 = new StringBuilder().append("ci.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L6;
             }
           }

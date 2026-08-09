@@ -16,7 +16,7 @@ final class r {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        int var4 = 0;
+        int var4;
         jh.field_O.b(param1, param0);
         if (param3 == -40) {
           if (param2) {

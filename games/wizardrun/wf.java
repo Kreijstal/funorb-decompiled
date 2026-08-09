@@ -54,10 +54,10 @@ final class wf {
     }
 
     final int b() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
         var1 = this.field_a.length;
         var2 = -1;
         var3 = 2147483647;
@@ -172,9 +172,9 @@ final class wf {
     }
 
     private final int f(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var2 = this.field_f.field_k[this.field_f.field_m];
           if (var2 >= 0) {

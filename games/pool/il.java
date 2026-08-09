@@ -24,14 +24,14 @@ final class il {
     }
 
     final static dd[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9 = 0;
-        dd[] var10 = null;
-        dd[] var11_ref_dd__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        dd var13 = null;
-        int var14 = 0;
-        int var15 = 0;
+        int var9;
+        dd[] var10;
+        dd[] var11_ref_dd__;
+        int var11;
+        int var12;
+        dd var13;
+        int var14;
+        int var15;
         var15 = Pool.field_O;
         var9 = param1 + param0 + param5;
         var10 = new dd[]{new dd(var9, var9), new dd(param3, var9), new dd(var9, var9), new dd(var9, param3), new dd(64, 64), new dd(var9, param3), new dd(var9, var9), new dd(param3, var9), new dd(var9, var9)};
@@ -152,16 +152,9 @@ final class il {
     }
 
     final static int[] a(byte param0, int[] param1) {
-        RuntimeException var2 = null;
-        int[] var2_array = null;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
         int[] stackIn_7_0 = null;
         int[] stackIn_15_0 = null;
         int[] stackIn_17_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -169,17 +162,11 @@ final class il {
         String stackIn_21_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int[] stackOut_16_0 = null;
-        int[] stackOut_14_0 = null;
-        int[] stackOut_6_0 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        int[] var2 = null;
+        RuntimeException var2_ref = null;
+        int var3 = 0;
+        int var4 = 0;
+        int[] var5 = null;
         var4 = Pool.field_O;
         try {
           L0: {
@@ -197,24 +184,22 @@ final class il {
               } else {
                 if (param1.length != 0) {
                   if ((param1.length ^ -1) <= -13) {
-                    stackOut_16_0 = (int[]) (param1);
-                    stackIn_17_0 = stackOut_16_0;
+                    stackIn_17_0 = (int[]) (param1);
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
                     var5 = new int[12];
-                    var2_array = var5;
+                    var2 = var5;
                     var3 = 0;
                     L3: while (true) {
                       if (param1.length <= var3) {
                         L4: while (true) {
                           if (ln.field_m.length <= var3) {
-                            stackOut_14_0 = (int[]) (var2_array);
-                            stackIn_15_0 = stackOut_14_0;
+                            stackIn_15_0 = (int[]) (var2);
                             decompiledRegionSelector0 = 1;
                             break L0;
                           } else {
-                            var2_array[var3] = ln.field_m[var3];
+                            var2[var3] = ln.field_m[var3];
                             var3++;
                             continue L4;
                           }
@@ -231,36 +216,27 @@ final class il {
                 }
               }
             }
-            stackOut_6_0 = new int[]{ln.field_m[0], ln.field_m[1], ln.field_m[2], ln.field_m[3], ln.field_m[4], ln.field_m[5], ln.field_m[6], ln.field_m[7], ln.field_m[8], ln.field_m[9], ln.field_m[10], ln.field_m[11]};
-            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_0 = new int[]{ln.field_m[0], ln.field_m[1], ln.field_m[2], ln.field_m[3], ln.field_m[4], ln.field_m[5], ln.field_m[6], ln.field_m[7], ln.field_m[8], ln.field_m[9], ln.field_m[10], ln.field_m[11]};
             decompiledRegionSelector0 = 0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var2 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var2);
-            stackOut_18_1 = new StringBuilder().append("il.C(").append(param0).append(',');
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            var2_ref = decompiledCaughtException;
+            stackIn_20_0 = (RuntimeException) (var2_ref);
+
+            stackIn_20_1 = new StringBuilder().append("il.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L5;
             }
           }

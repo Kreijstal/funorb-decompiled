@@ -24,23 +24,16 @@ abstract class no {
     sp field_i;
 
     final boolean b(byte param0) {
-        boolean discarded$10 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -125) {
           L0: {
-            discarded$10 = this.d(-57);
+            this.d(-57);
             if (20 > this.c(param0 + 4734)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -48,12 +41,10 @@ abstract class no {
         } else {
           L1: {
             if (20 > this.c(param0 + 4734)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -66,23 +57,16 @@ abstract class no {
     abstract void a(int param0, boolean param1, Object param2);
 
     final boolean a(int param0) {
-        int discarded$10 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 20) {
           L0: {
-            discarded$10 = this.c(-49);
+            this.c(-49);
             if (20 > this.a(false)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -90,12 +74,10 @@ abstract class no {
         } else {
           L1: {
             if (20 > this.a(false)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -106,18 +88,18 @@ abstract class no {
     abstract void a(byte param0);
 
     final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        long var18 = 0L;
-        long var20 = 0L;
-        long var22 = 0L;
-        long var24 = 0L;
-        int var26 = 0;
-        int var27 = 0;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        long var18;
+        long var20;
+        long var22;
+        long var24;
+        int var26;
+        int var27;
         L0: {
           var12 = param2 + -param4;
           var13 = param0 + -param6;

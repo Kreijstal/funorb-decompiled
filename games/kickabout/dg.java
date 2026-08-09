@@ -20,92 +20,39 @@ class dg {
     }
 
     final static void a(byte param0, int param1, int param2, up param3) {
-        RuntimeException runtimeException = null;
-        up var5 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
-            L1: {
-              np.field_Jb.a(new rt(param2, param1, param3), 3);
-              if (param0 == -120) {
-                break L1;
-              } else {
-                var5 = (up) null;
+            np.field_Jb.a(new rt(param2, param1, param3), 3);
+            if (param0 != -120) {
+                up var5 = (up) null;
                 dg.a((byte) 119, -53, 107, (up) null);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("dg.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param3 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
-            }
-          }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) ((Object) runtimeException), "dg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String a(byte param0, int param1, long param2, boolean param3, int param4) {
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        StringBuilder var10 = null;
-        int var11 = 0;
-        int var12_int = 0;
-        StringBuilder var12 = null;
-        int var13 = 0;
-        StringBuilder var14 = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        String var7;
+        String var8;
+        String var9;
+        StringBuilder var10;
+        int var11;
+        int var12_int;
+        StringBuilder var12;
+        int var13;
+        StringBuilder var14;
         L0: {
           var13 = Kickabout.field_G;
           var14 = new StringBuilder(0);
           if (0L <= param2) {
             break L0;
           } else {
-            discarded$5 = var14.append("-");
+            discarded$0 = var14.append("-");
             param2 = -param2;
             break L0;
           }
@@ -182,13 +129,13 @@ class dg {
                           if (var11 % 3 != 0) {
                             break L8;
                           } else {
-                            discarded$6 = var12.append(var8);
+                            discarded$1 = var12.append(var8);
                             break L8;
                           }
                         }
                       }
                     }
-                    discarded$7 = var12.append(Integer.toString((int)(param2 % 10L)));
+                    discarded$2 = var12.append(Integer.toString((int)(param2 % 10L)));
                     param2 = param2 / 10L;
                     var11++;
                     continue L7;
@@ -197,13 +144,13 @@ class dg {
               }
             }
             if (0 < var10.length()) {
-              discarded$8 = var10.append(var7);
+              discarded$3 = var10.append(var7);
               return var14.toString() + bo.a(-1, var9) + bo.a(-1, var10.toString());
             } else {
               return var14.toString() + bo.a(-1, var9) + bo.a(-1, var10.toString());
             }
           } else {
-            discarded$9 = var10.append(Integer.toString((int)(param2 % 10L)));
+            discarded$4 = var10.append(Integer.toString((int)(param2 % 10L)));
             param2 = param2 / 10L;
             var11++;
             continue L5;

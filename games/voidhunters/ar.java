@@ -8,11 +8,11 @@ abstract class ar {
     static String field_a;
 
     final int a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        toa var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+        int var4;
+        int var5;
+        toa var6;
+        int var7;
+        int var8;
         L0: {
           var8 = VoidHunters.field_G;
           if (this.field_c == null) {
@@ -72,17 +72,14 @@ abstract class ar {
     }
 
     final int a(int param0) {
-        int discarded$2 = 0;
-        String var3 = null;
+        String var3;
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == 29565) {
             break L0;
           } else {
             var3 = (String) null;
-            discarded$2 = this.a(true, -112, -23, (String) null);
+            this.a(true, -112, -23, (String) null);
             break L0;
           }
         }
@@ -94,14 +91,12 @@ abstract class ar {
               if (this.field_c.length <= 0) {
                 break L2;
               } else {
-                stackOut_4_0 = -this.field_c[0].field_b + this.field_c[this.field_c.length + -1].field_a;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = -this.field_c[0].field_b + this.field_c[this.field_c.length + -1].field_a;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0;
@@ -115,27 +110,15 @@ abstract class ar {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int stackIn_13_0 = 0;
         int stackIn_15_0 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
+        int stackIn_17_0 = 0;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         var10 = VoidHunters.field_G;
         try {
           L0: {
@@ -146,13 +129,11 @@ abstract class ar {
             L1: while (true) {
               if (var8 >= var7) {
                 if ((var5_int ^ -1) >= -1) {
-                  stackOut_14_0 = 0;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_17_0 = 0;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_12_0 = (-param2 + param1 << -891458168) / var5_int;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_15_0 = (-param2 + param1 << -891458168) / var5_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -189,36 +170,28 @@ abstract class ar {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var5);
-            stackOut_16_1 = new StringBuilder().append("ar.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_20_0 = (RuntimeException) (var5);
+
+            stackIn_20_1 = new StringBuilder().append("ar.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L3;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_13_0;
-        } else {
           return stackIn_15_0;
+        } else {
+          return stackIn_17_0;
         }
     }
 
@@ -240,17 +213,11 @@ abstract class ar {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
         int stackIn_47_0 = 0;
         int stackIn_52_0 = 0;
         int stackIn_56_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_45_0 = 0;
+        int var3;
+        int var4;
         L0: {
           if (param1 >= 102) {
             break L0;
@@ -337,12 +304,10 @@ abstract class ar {
                 if (-67108865 < (param0 ^ -1)) {
                   L8: {
                     if (var3 >= 3) {
-                      stackOut_55_0 = eo.field_o[param0 >> 1860748338] << -3 + var3;
-                      stackIn_56_0 = stackOut_55_0;
+                      stackIn_56_0 = eo.field_o[param0 >> 1860748338] << -3 + var3;
                       break L8;
                     } else {
-                      stackOut_54_0 = eo.field_o[param0 >> -762980814] >> -var3 + 3;
-                      stackIn_56_0 = stackOut_54_0;
+                      stackIn_56_0 = eo.field_o[param0 >> -762980814] >> -var3 + 3;
                       break L8;
                     }
                   }
@@ -350,12 +315,10 @@ abstract class ar {
                 } else {
                   L9: {
                     if ((var3 ^ -1) > -3) {
-                      stackOut_51_0 = eo.field_o[param0 >> -70313740] >> 2 + -var3;
-                      stackIn_52_0 = stackOut_51_0;
+                      stackIn_52_0 = eo.field_o[param0 >> -70313740] >> 2 + -var3;
                       break L9;
                     } else {
-                      stackOut_50_0 = eo.field_o[param0 >> 615335380] << var3 - 2;
-                      stackIn_52_0 = stackOut_50_0;
+                      stackIn_52_0 = eo.field_o[param0 >> 615335380] << var3 - 2;
                       break L9;
                     }
                   }
@@ -365,12 +328,10 @@ abstract class ar {
                 if (1073741824 > param0) {
                   L10: {
                     if (var3 >= 1) {
-                      stackOut_46_0 = eo.field_o[param0 >> 1574831190] << -1 + var3;
-                      stackIn_47_0 = stackOut_46_0;
+                      stackIn_47_0 = eo.field_o[param0 >> 1574831190] << -1 + var3;
                       break L10;
                     } else {
-                      stackOut_45_0 = eo.field_o[param0 >> 1046894582] >> 1 - var3;
-                      stackIn_47_0 = stackOut_45_0;
+                      stackIn_47_0 = eo.field_o[param0 >> 1046894582] >> 1 - var3;
                       break L10;
                     }
                   }
@@ -421,19 +382,18 @@ abstract class ar {
     }
 
     final int c(int param0) {
-        int discarded$2 = 0;
-        int var2 = 0;
-        toa[] var3 = null;
-        int var4 = 0;
-        toa var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        toa[] var3;
+        int var4;
+        toa var5;
+        int var7;
+        int var6;
         L0: {
           var7 = VoidHunters.field_G;
           if (param0 == -18877) {
             break L0;
           } else {
-            discarded$2 = ar.a(-4, (byte) -85, -6);
+            ar.a(-4, (byte) -85, -6);
             break L0;
           }
         }
@@ -478,14 +438,13 @@ abstract class ar {
     }
 
     final int a(int param0, int param1) {
-        int discarded$0 = 0;
         int var4 = 0;
         toa var5 = null;
         int var6 = VoidHunters.field_G;
         toa[] var7 = this.field_c;
         toa[] var3 = var7;
         if (param1 > -107) {
-            discarded$0 = this.c(-56);
+            this.c(-56);
         }
         for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];

@@ -15,7 +15,7 @@ final class qk {
     static ak field_d;
 
     final void b(int param0) {
-        int var2 = 0;
+        int var2;
         L0: {
           if ((this.field_f ^ -1) > -13) {
             var2 = 120 - this.field_f * 10;
@@ -35,11 +35,11 @@ final class qk {
     }
 
     final void c(int param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         L0: {
-          fieldTemp$2 = this.field_f;
+          fieldTemp$1 = this.field_f;
           this.field_f = this.field_f + 1;
-          if (fieldTemp$2 > 30) {
+          if (fieldTemp$1 > 30) {
             this.field_f = 0;
             this.field_a = this.field_a + 1;
             break L0;
@@ -66,11 +66,10 @@ final class qk {
     }
 
     public static void a(int param0) {
-        String discarded$2 = null;
-        String var2 = null;
+        String var2;
         if (param0 != 6) {
           var2 = (String) null;
-          discarded$2 = qk.a((String) null, (String) null, (String) null, -71);
+          qk.a((String) null, (String) null, (String) null, -71);
           field_d = null;
           field_c = null;
           field_g = null;
@@ -84,8 +83,8 @@ final class qk {
     }
 
     final static String a(String param0, String param1, String param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         var4 = param0.indexOf(param1);
         L0: while (true) {

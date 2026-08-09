@@ -17,9 +17,6 @@ final class sm {
 
     final static int b(int param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            wq var2 = null;
             int stackIn_15_0 = 0;
             int stackIn_27_0 = 0;
             int stackIn_31_0 = 0;
@@ -27,11 +24,9 @@ final class sm {
             int stackIn_37_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_14_0 = 0;
-            int stackOut_30_0 = 0;
-            int stackOut_26_0 = 0;
-            int stackOut_36_0 = 0;
-            int stackOut_34_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            wq var2 = null;
             if (-5 >= (vd.field_f.field_i ^ -1)) {
               if (-1 != vd.field_f.field_f) {
                 if (vd.field_f.field_f != -2) {
@@ -59,8 +54,7 @@ final class sm {
                       break L2;
                     } else {
                       if ((fc.field_e.field_f ^ -1) == -3) {
-                        stackOut_14_0 = on.a((byte) 41, -1);
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = on.a((byte) 41, -1);
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
@@ -95,8 +89,7 @@ final class sm {
                       if (-1 > (dm.field_d.d(10434) ^ -1)) {
                         var1_int = dm.field_d.e(0);
                         if (var1_int != 0) {
-                          stackOut_30_0 = on.a((byte) 90, var1_int);
-                          stackIn_31_0 = stackOut_30_0;
+                          stackIn_31_0 = on.a((byte) 90, var1_int);
                           decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
@@ -105,8 +98,7 @@ final class sm {
                         }
                       } else {
                         if ((ff.field_b ^ -1L) > (ue.a(false) ^ -1L)) {
-                          stackOut_26_0 = on.a((byte) -85, -2);
-                          stackIn_27_0 = stackOut_26_0;
+                          stackIn_27_0 = on.a((byte) -85, -2);
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -116,8 +108,7 @@ final class sm {
                     }
                   }
                   if ((qj.field_j ^ -1) != -5) {
-                    stackOut_36_0 = -1;
-                    stackIn_37_0 = stackOut_36_0;
+                    stackIn_37_0 = -1;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
@@ -125,8 +116,7 @@ final class sm {
                     dm.field_d = null;
                     qj.field_j = 0;
                     fc.field_e = null;
-                    stackOut_34_0 = 0;
-                    stackIn_35_0 = stackOut_34_0;
+                    stackIn_35_0 = 0;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }

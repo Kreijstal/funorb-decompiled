@@ -12,12 +12,9 @@ final class re {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        jea stackIn_1_0 = null;
-        int stackIn_1_1 = 0;
-        int stackIn_1_2 = 0;
+        int var1;
+        int var2;
+        int var3;
         jea stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_2_2 = 0;
@@ -25,47 +22,12 @@ final class re {
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
         int stackIn_3_3 = 0;
-        jea stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        int stackIn_4_3 = 0;
-        jea stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        int stackIn_5_2 = 0;
-        int stackIn_5_3 = 0;
-        jea stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
+        int stackIn_5_2;
+        int stackIn_5_3;
         int stackIn_6_2 = 0;
         int stackIn_6_3 = 0;
         int stackIn_6_4 = 0;
         int stackIn_10_0 = 0;
-        jea stackOut_0_0 = null;
-        int stackOut_0_1 = 0;
-        int stackOut_0_2 = 0;
-        jea stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        int stackOut_2_3 = 0;
-        jea stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        int stackOut_1_3 = 0;
-        jea stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        int stackOut_3_3 = 0;
-        jea stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        int stackOut_5_3 = 0;
-        int stackOut_5_4 = 0;
-        jea stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        int stackOut_4_3 = 0;
-        int stackOut_4_4 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         L0: {
           jqa.field_g = bea.field_a;
           ob.field_i = bea.field_g;
@@ -73,77 +35,52 @@ final class re {
           oca.field_b.a(0, 0, 20, nra.field_a.field_G, -2 + (-40 + nra.field_a.field_t));
           lva.field_t.a(hk.field_e.field_G, di.field_a, param0 + 5264, 0, 0);
           var1 = 2 + di.field_a;
-          stackOut_0_0 = rra.field_e;
-          stackOut_0_1 = hk.field_e.field_G;
-          stackOut_0_2 = hk.field_e.field_t;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_2_1 = stackOut_0_1;
-          stackIn_2_2 = stackOut_0_2;
-          stackIn_1_0 = stackOut_0_0;
-          stackIn_1_1 = stackOut_0_1;
-          stackIn_1_2 = stackOut_0_2;
+          stackIn_2_0 = rra.field_e;
+
+          stackIn_2_1 = hk.field_e.field_G;
+
+          stackIn_2_2 = hk.field_e.field_t;
+
           if (!rca.field_p) {
-            stackOut_2_0 = (jea) ((Object) stackIn_2_0);
-            stackOut_2_1 = stackIn_2_1;
-            stackOut_2_2 = stackIn_2_2;
-            stackOut_2_3 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            stackIn_3_2 = stackOut_2_2;
-            stackIn_3_3 = stackOut_2_3;
+            stackIn_3_0 = (jea) ((Object) stackIn_2_0);
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = stackIn_2_2;
+            stackIn_3_3 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (jea) ((Object) stackIn_1_0);
-            stackOut_1_1 = stackIn_1_1;
-            stackOut_1_2 = stackIn_1_2;
-            stackOut_1_3 = var1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
-            stackIn_3_3 = stackOut_1_3;
+            stackIn_3_0 = (jea) ((Object) stackIn_2_0);
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = stackIn_2_2;
+            stackIn_3_3 = var1;
             break L0;
           }
         }
         L1: {
-          stackOut_3_0 = (jea) ((Object) stackIn_3_0);
-          stackOut_3_1 = stackIn_3_1;
-          stackOut_3_2 = stackIn_3_2 + -stackIn_3_3;
-          stackOut_3_3 = -23776;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_5_1 = stackOut_3_1;
-          stackIn_5_2 = stackOut_3_2;
-          stackIn_5_3 = stackOut_3_3;
-          stackIn_4_0 = stackOut_3_0;
-          stackIn_4_1 = stackOut_3_1;
-          stackIn_4_2 = stackOut_3_2;
-          stackIn_4_3 = stackOut_3_3;
+
+
+
+
+          stackIn_5_2 = stackIn_3_2 + -stackIn_3_3;
+
+          stackIn_5_3 = -23776;
+
           if (rca.field_p) {
-            stackOut_5_0 = (jea) ((Object) stackIn_5_0);
-            stackOut_5_1 = stackIn_5_1;
-            stackOut_5_2 = stackIn_5_2;
-            stackOut_5_3 = stackIn_5_3;
-            stackOut_5_4 = var1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            stackIn_6_2 = stackOut_5_2;
-            stackIn_6_3 = stackOut_5_3;
-            stackIn_6_4 = stackOut_5_4;
+            stackIn_3_0 = (jea) ((Object) stackIn_3_0);
+
+            stackIn_6_2 = stackIn_5_2;
+            stackIn_6_3 = stackIn_5_3;
+            stackIn_6_4 = var1;
             break L1;
           } else {
-            stackOut_4_0 = (jea) ((Object) stackIn_4_0);
-            stackOut_4_1 = stackIn_4_1;
-            stackOut_4_2 = stackIn_4_2;
-            stackOut_4_3 = stackIn_4_3;
-            stackOut_4_4 = 0;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_6_2 = stackOut_4_2;
-            stackIn_6_3 = stackOut_4_3;
-            stackIn_6_4 = stackOut_4_4;
+            stackIn_3_0 = (jea) ((Object) stackIn_3_0);
+
+            stackIn_6_2 = stackIn_5_2;
+            stackIn_6_3 = stackIn_5_3;
+            stackIn_6_4 = 0;
             break L1;
           }
         }
-        ((jea) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, 0);
+        ((jea) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, 0);
         da.a(false);
         st.field_j.a(nra.field_a.field_G, 40, -23776, nra.field_a.field_t - 40, 0);
         ap.field_a.a(cka.field_fd.field_G, 30, -23776, 0, 0);
@@ -157,12 +94,10 @@ final class re {
           L2: {
             l.field_K.a(48, 30, -23776, 5, 205);
             if (!rca.field_p) {
-              stackOut_9_0 = 200;
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = 200;
               break L2;
             } else {
-              stackOut_8_0 = 250;
-              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_0 = 250;
               break L2;
             }
           }

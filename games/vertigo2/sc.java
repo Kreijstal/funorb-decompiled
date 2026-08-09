@@ -7,7 +7,7 @@ final class sc {
     static String field_a;
 
     final static void a(boolean param0, int param1) {
-        int var2 = 0;
+        int var2;
         var2 = (-268435329 & param1) << 1662533540;
         ke.field_e[3] = oo.field_h[var2];
         if (!param0) {

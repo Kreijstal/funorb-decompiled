@@ -13,20 +13,19 @@ abstract class im extends bb {
     static int field_E;
 
     void b(int param0, int param1, byte param2) {
-        boolean discarded$1 = false;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         L0: {
           var16 = Torquing.field_u;
           ph.a(param1 + 6, 35 + param0, this.field_p - 12, this.field_o - 40, 2105376, 0);
@@ -36,7 +35,7 @@ abstract class im extends bb {
           if (param2 < -16) {
             break L0;
           } else {
-            discarded$1 = im.l(98);
+            im.l(98);
             break L0;
           }
         }
@@ -172,7 +171,6 @@ abstract class im extends bb {
     }
 
     final void b(int param0, byte param1, int param2, int param3) {
-        boolean discarded$0 = false;
         if (!(0 < param2)) {
             this.a(param3, (byte) -25, param0);
             return;
@@ -180,7 +178,7 @@ abstract class im extends bb {
         this.field_H = param0;
         this.field_M = this.field_o;
         if (param1 != -15) {
-            discarded$0 = im.l(59);
+            im.l(59);
         }
         this.field_I = this.field_p;
         this.field_G = param3;
@@ -198,8 +196,6 @@ abstract class im extends bb {
 
     final static boolean l(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == 169) {
           L0: {
             L1: {
@@ -209,14 +205,12 @@ abstract class im extends bb {
                 if (null == w.field_G.a(0)) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0 != 0;

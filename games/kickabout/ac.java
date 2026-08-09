@@ -58,9 +58,9 @@ final class ac implements hc {
     }
 
     public final void a(int param0, boolean param1) {
-        int var3 = 0;
-        int var4 = 0;
-        oi var5 = null;
+        int var3;
+        int var4;
+        oi var5;
         L0: {
           var4 = Kickabout.field_G;
           if (0 != lj.field_f) {

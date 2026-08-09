@@ -46,9 +46,13 @@ final class th {
     }
 
     final static bn a(boolean param0, int[] param1, int param2) {
-        cr discarded$3 = null;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
+        bn stackIn_33_0 = null;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
+        RuntimeException stackIn_37_0 = null;
+        StringBuilder stackIn_37_1 = null;
+        String stackIn_37_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -69,24 +73,6 @@ final class th {
         int var20 = 0;
         int var21 = 0;
         lg var22 = null;
-        bn stackIn_33_0 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        String stackIn_37_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        bn stackOut_32_0 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
         var21 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -94,7 +80,7 @@ final class th {
               if (param2 == -27911) {
                 break L1;
               } else {
-                discarded$3 = th.a(false);
+                th.a(false);
                 break L1;
               }
             }
@@ -102,8 +88,7 @@ final class th {
             var4 = 0;
             L2: while (true) {
               if (6 <= var4) {
-                stackOut_32_0 = var22.a(126, 43690, 1, 0, 0);
-                stackIn_33_0 = stackOut_32_0;
+                stackIn_33_0 = var22.a(126, 43690, 1, 0, 0);
                 break L0;
               } else {
                 var5 = 0;
@@ -200,8 +185,8 @@ final class th {
                             break L6;
                           }
                         }
-                        discarded$4 = var22.a(var15, var17, var16, (byte) 1, (byte)var19, (short) 128, (short)(4 * (var4 * 4 + var5) - -var6));
-                        discarded$5 = var22.a(var18, var16, var17, (byte) 1, (byte)var19, (short) 128, (short)((var5 + var4 * 4) * 4 + var6));
+                        var22.a(var15, var17, var16, (byte) 1, (byte)var19, (short) 128, (short)(4 * (var4 * 4 + var5) - -var6));
+                        var22.a(var18, var16, var17, (byte) 1, (byte)var19, (short) 128, (short)((var5 + var4 * 4) * 4 + var6));
                         var6++;
                         continue L4;
                       }
@@ -215,27 +200,19 @@ final class th {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_34_0 = (RuntimeException) (var3);
-            stackOut_34_1 = new StringBuilder().append("th.E(").append(param0).append(',');
-            stackIn_36_0 = stackOut_34_0;
-            stackIn_36_1 = stackOut_34_1;
-            stackIn_35_0 = stackOut_34_0;
-            stackIn_35_1 = stackOut_34_1;
+            stackIn_36_0 = (RuntimeException) (var3);
+
+            stackIn_36_1 = new StringBuilder().append("th.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
+              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "null";
               break L7;
             } else {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "{...}";
-              stackIn_37_0 = stackOut_35_0;
-              stackIn_37_1 = stackOut_35_1;
-              stackIn_37_2 = stackOut_35_2;
+              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "{...}";
               break L7;
             }
           }
@@ -245,9 +222,9 @@ final class th {
     }
 
     final boolean a(int param0) {
-        qp var2 = null;
-        int var3 = 0;
-        qp var4 = null;
+        qp var2;
+        int var3;
+        qp var4;
         var3 = Vertigo2.field_L ? 1 : 0;
         L0: while (true) {
           if (this.field_d >= this.field_b) {

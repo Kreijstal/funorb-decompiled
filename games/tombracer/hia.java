@@ -10,15 +10,15 @@ final class hia extends wda {
     private int field_q;
 
     final void b(byte param0) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        hca var11 = null;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        hca var11;
         var10 = TombRacer.field_G ? 1 : 0;
         var11 = this.field_n.H(-123);
         if (!var11.u(-25561)) {
@@ -34,100 +34,50 @@ final class hia extends wda {
           var9 = ua.a(var5, 4);
           if (this.field_t) {
             if (var8 > this.field_p) {
-              L0: {
-                if (var3 >= 0) {
-                  break L0;
-                } else {
-                  var6 = -this.field_q;
-                  if (var6 < var3) {
-                    var6 = var3;
-                    if (var10 != 0) {
-                      break L0;
-                    } else {
-                      this.field_n.a((byte) -42, var6, var7);
-                      return;
-                    }
-                  } else {
-                    this.field_n.a((byte) -42, var6, var7);
-                    return;
-                  }
-                }
-              }
-              var6 = this.field_q;
-              if (var6 > var3) {
-                var6 = var3;
-                if (var10 != 0) {
-                  if (this.field_r) {
-                    if (var9 > this.field_p) {
-                      L1: {
-                        if (var5 < 0) {
-                          break L1;
-                        } else {
-                          var7 = this.field_q;
-                          if (var7 > var5) {
-                            var7 = var5;
-                            break L1;
-                          } else {
-                            this.field_n.a((byte) -42, var6, var7);
-                            return;
-                          }
-                        }
-                      }
-                      var7 = -this.field_q;
-                      if (var7 < var5) {
-                        var7 = var5;
-                        this.field_n.a((byte) -42, var6, var7);
-                        return;
-                      } else {
-                        this.field_n.a((byte) -42, var6, var7);
-                        return;
-                      }
-                    } else {
-                      this.field_n.a((byte) -42, var6, var7);
-                      return;
-                    }
-                  } else {
-                    this.field_n.a((byte) -42, var6, var7);
-                    return;
-                  }
+              if (var3 >= 0) {
+                var6 = this.field_q;
+                if (var6 > var3) {
+                  var6 = var3;
+                  this.field_n.a((byte) -42, var6, var7);
+                  return;
                 } else {
                   this.field_n.a((byte) -42, var6, var7);
                   return;
                 }
               } else {
-                this.field_n.a((byte) -42, var6, var7);
-                return;
+                var6 = -this.field_q;
+                if (var6 < var3) {
+                  var6 = var3;
+                  this.field_n.a((byte) -42, var6, var7);
+                  return;
+                } else {
+                  this.field_n.a((byte) -42, var6, var7);
+                  return;
+                }
               }
             } else {
               if (this.field_r) {
                 if (var9 > this.field_p) {
-                  L2: {
-                    if (var5 < 0) {
-                      break L2;
+                  if (var5 < 0) {
+                    var7 = -this.field_q;
+                    if (var7 < var5) {
+                      var7 = var5;
+                      this.field_n.a((byte) -42, var6, var7);
+                      return;
                     } else {
-                      var7 = this.field_q;
-                      if (var7 > var5) {
-                        var7 = var5;
-                        if (var10 != 0) {
-                          break L2;
-                        } else {
-                          this.field_n.a((byte) -42, var6, var7);
-                          return;
-                        }
-                      } else {
-                        this.field_n.a((byte) -42, var6, var7);
-                        return;
-                      }
+                      this.field_n.a((byte) -42, var6, var7);
+                      return;
                     }
-                  }
-                  var7 = -this.field_q;
-                  if (var7 < var5) {
-                    var7 = var5;
-                    this.field_n.a((byte) -42, var6, var7);
-                    return;
                   } else {
-                    this.field_n.a((byte) -42, var6, var7);
-                    return;
+                    var7 = this.field_q;
+                    if (var7 > var5) {
+                      var7 = var5;
+                      this.field_n.a((byte) -42, var6, var7);
+                      return;
+                    } else {
+                      this.field_n.a((byte) -42, var6, var7);
+                      return;
+                    }
                   }
                 } else {
                   this.field_n.a((byte) -42, var6, var7);
@@ -141,33 +91,26 @@ final class hia extends wda {
           } else {
             if (this.field_r) {
               if (var9 > this.field_p) {
-                L3: {
-                  if (var5 < 0) {
-                    break L3;
+                if (var5 < 0) {
+                  var7 = -this.field_q;
+                  if (var7 < var5) {
+                    var7 = var5;
+                    this.field_n.a((byte) -42, var6, var7);
+                    return;
                   } else {
-                    var7 = this.field_q;
-                    if (var7 > var5) {
-                      var7 = var5;
-                      if (var10 != 0) {
-                        break L3;
-                      } else {
-                        this.field_n.a((byte) -42, var6, var7);
-                        return;
-                      }
-                    } else {
-                      this.field_n.a((byte) -42, var6, var7);
-                      return;
-                    }
+                    this.field_n.a((byte) -42, var6, var7);
+                    return;
                   }
-                }
-                var7 = -this.field_q;
-                if (var7 < var5) {
-                  var7 = var5;
-                  this.field_n.a((byte) -42, var6, var7);
-                  return;
                 } else {
-                  this.field_n.a((byte) -42, var6, var7);
-                  return;
+                  var7 = this.field_q;
+                  if (var7 > var5) {
+                    var7 = var5;
+                    this.field_n.a((byte) -42, var6, var7);
+                    return;
+                  } else {
+                    this.field_n.a((byte) -42, var6, var7);
+                    return;
+                  }
                 }
               } else {
                 this.field_n.a((byte) -42, var6, var7);
@@ -215,7 +158,6 @@ final class hia extends wda {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int discarded$0 = 0;
         try {
             var2_int = jba.field_j;
             var3 = sta.field_B;
@@ -229,48 +171,31 @@ final class hia extends wda {
             if (param0 > -63) {
                 field_s = (af) null;
             }
-            discarded$0 = kua.field_i.field_H.a(param1, var7 - -3, -kua.field_i.field_H.field_w + (hsa.field_a + 1) + var8, 500, 1000, 0, -1, 0, 0, di.field_a);
+            kua.field_i.field_H.a(param1, var7 - -3, -kua.field_i.field_H.field_w + (hsa.field_a + 1) + var8, 500, 1000, 0, -1, 0, 0, di.field_a);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) ((Object) runtimeException), "hia.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(int param0, boolean param1) {
-        Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        Object stackOut_5_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
         if (param0 != 11050) {
           L0: {
             this.field_o = (ir) null;
-            stackOut_5_0 = this;
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_7_0 = this;
+
             if (!param1) {
-              stackOut_7_0 = this;
-              stackOut_7_1 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_0 = this;
+              stackIn_8_1 = 0;
               break L0;
             } else {
-              stackOut_6_0 = this;
-              stackOut_6_1 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_0 = this;
+              stackIn_8_1 = 1;
               break L0;
             }
           }
@@ -278,20 +203,15 @@ final class hia extends wda {
           return;
         } else {
           L1: {
-            stackOut_1_0 = this;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_3_0 = this;
+
             if (!param1) {
-              stackOut_3_0 = this;
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_0 = this;
+              stackIn_4_1 = 0;
               break L1;
             } else {
-              stackOut_2_0 = this;
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_0 = this;
+              stackIn_4_1 = 1;
               break L1;
             }
           }
@@ -353,41 +273,24 @@ final class hia extends wda {
     }
 
     final void c(int param0, boolean param1) {
-        Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        Object stackOut_5_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
         if (param0 != 0) {
           L0: {
             this.field_r = false;
-            stackOut_5_0 = this;
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_7_0 = this;
+
             if (!param1) {
-              stackOut_7_0 = this;
-              stackOut_7_1 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_0 = this;
+              stackIn_8_1 = 0;
               break L0;
             } else {
-              stackOut_6_0 = this;
-              stackOut_6_1 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_0 = this;
+              stackIn_8_1 = 1;
               break L0;
             }
           }
@@ -395,20 +298,15 @@ final class hia extends wda {
           return;
         } else {
           L1: {
-            stackOut_1_0 = this;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_3_0 = this;
+
             if (!param1) {
-              stackOut_3_0 = this;
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_0 = this;
+              stackIn_4_1 = 0;
               break L1;
             } else {
-              stackOut_2_0 = this;
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_0 = this;
+              stackIn_4_1 = 1;
               break L1;
             }
           }

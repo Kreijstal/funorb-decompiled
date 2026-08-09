@@ -47,8 +47,8 @@ final class li implements Iterable {
     }
 
     final static void a(boolean param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           L1: {
             var3 = fleas.field_A ? 1 : 0;
@@ -220,21 +220,18 @@ final class li implements Iterable {
     }
 
     final lh a(boolean param0, long param1) {
-        lh var4 = null;
-        lh var5 = null;
-        int var6 = 0;
-        Object stackIn_6_0 = null;
+        lh var4;
+        lh var5;
+        int var6;
         Object stackIn_7_0 = null;
-        Object stackOut_5_0 = null;
         var6 = fleas.field_A ? 1 : 0;
         if (param0) {
           var4 = this.field_f[(int)(param1 & (long)(this.field_g + -1))];
           this.field_a = var4.field_h;
           L0: while (true) {
             if (var4 != this.field_a) {
-              stackOut_5_0 = this;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_7_0 = this;
+
               if (var6 == 0) {
                 if (((li) (this)).field_a.field_c == param1) {
                   var5 = this.field_a;
@@ -242,7 +239,12 @@ final class li implements Iterable {
                   return var5;
                 } else {
                   this.field_a = this.field_a.field_h;
-                  continue L0;
+                  if (var6 == 0) {
+                    continue L0;
+                  } else {
+                    this.field_a = null;
+                    return null;
+                  }
                 }
               } else {
                 ((li) (this)).field_a = null;

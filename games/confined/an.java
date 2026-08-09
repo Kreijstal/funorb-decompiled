@@ -11,7 +11,7 @@ final class an extends rk {
     static bi field_q;
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         var2 = param1 >>> -201766783;
         var2 = var2 | var2 >>> 79616961;
         var2 = var2 | var2 >>> -29003230;

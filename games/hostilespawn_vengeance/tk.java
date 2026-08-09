@@ -14,9 +14,12 @@ final class tk {
         try {
             qf.a(param1.a("", "headers.packvorbis", 0));
             var2 = qf.a(param1, "jagex logo2.packvorbis", "");
-            jb discarded$0 = var2.c();
+            if (!param0) {
+                field_a = (gb) null;
+            }
+            var2.c();
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "tk.B(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw wg.a((Throwable) ((Object) runtimeException), "tk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -24,9 +27,8 @@ final class tk {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_8_0 = 0;
+        int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
@@ -58,23 +60,33 @@ final class tk {
                 }
               }
             }
-            stackOut_7_0 = param2;
-            stackIn_8_0 = stackOut_7_0;
+            L4: {
+              if (param1 == 44) {
+                break L4;
+              } else {
+                field_f = (String) null;
+                break L4;
+              }
+            }
+            stackIn_10_0 = param2;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var3, "tk.A(" + param0 + ',' + 44 + ',' + param2 + ')');
+          throw wg.a((Throwable) ((Object) var3), "tk.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_8_0;
+        return stackIn_10_0;
     }
 
     final static void a(int param0, jb[] param1, int param2, boolean param3) {
         try {
+            if (!param3) {
+                field_d = 29;
+            }
             jh.a(uh.field_i, (byte) 51, param2, param1, param0);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "tk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + true + ')');
+            throw wg.a((Throwable) ((Object) runtimeException), "tk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -82,15 +94,11 @@ final class tk {
         field_c = null;
         field_b = null;
         field_a = null;
-        int var1 = 62;
+        int var1 = 124 / ((param0 - -61) / 61);
         field_f = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "<col=ffffff>Flamethrower</col><br>The flamethrower is highly effective against larger organic targets, but burns fuel fast. It is best used as a back-up weapon in tight situations.";
         field_f = "The left and right mouse buttons fire the marine's primary and secondary weapons, respectively.";
     }

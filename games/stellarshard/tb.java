@@ -11,20 +11,19 @@ abstract class tb extends ui {
     private int field_L;
 
     void b(int param0, int param1, int param2) {
-        am discarded$1 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var16;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
         var16 = stellarshard.field_B;
         ti.c(param2 + 6, param1 + 35, -12 + this.field_p, this.field_t + -40, 2105376, 0);
         var5 = 211;
@@ -38,7 +37,7 @@ abstract class tb extends ui {
               if (param0 == 1) {
                 break L1;
               } else {
-                discarded$1 = tb.g((byte) 122);
+                tb.g((byte) 122);
                 break L1;
               }
             }
@@ -196,7 +195,6 @@ abstract class tb extends ui {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        boolean discarded$2 = false;
         if (0 < param0) {
           this.field_O = 0;
           this.field_M = this.field_t;
@@ -205,7 +203,7 @@ abstract class tb extends ui {
           this.field_I = this.field_p;
           this.field_N = param1;
           if (param2 != -97) {
-            discarded$2 = this.d(true);
+            this.d(true);
             return;
           } else {
             return;
@@ -225,11 +223,11 @@ abstract class tb extends ui {
     }
 
     boolean d(boolean param0) {
-        int fieldTemp$2 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int fieldTemp$1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           if (-1 <= (this.field_L ^ -1)) {
             break L0;
@@ -237,9 +235,9 @@ abstract class tb extends ui {
             L1: {
               var2 = this.field_N;
               var3 = this.field_J;
-              fieldTemp$2 = this.field_O + 1;
+              fieldTemp$1 = this.field_O + 1;
               this.field_O = this.field_O + 1;
-              if (fieldTemp$2 < this.field_L) {
+              if (fieldTemp$1 < this.field_L) {
                 var4 = (this.field_L * 2 + -this.field_O) * this.field_O;
                 var5 = this.field_L * this.field_L;
                 var2 = this.field_I + (this.field_N - this.field_I) * var4 / var5;

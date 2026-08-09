@@ -15,11 +15,10 @@ final class dlb implements dja {
     }
 
     final static caa a(int param0) {
-        caa discarded$2 = null;
-        caa var1 = null;
+        caa var1;
         var1 = new caa(fbb.field_i, sg.field_H, iib.field_e[0], so.field_f[0], nhb.field_o[0], hla.field_a[0], sh.field_a[0], rlb.field_d);
         if (param0 >= -53) {
-          discarded$2 = dlb.a(16);
+          dlb.a(16);
           qqb.a(95);
           return var1;
         } else {

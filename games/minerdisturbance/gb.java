@@ -14,7 +14,7 @@ final class gb implements Iterator {
     public final boolean hasNext() {
         pi[] fieldTemp$2 = null;
         int fieldTemp$3 = 0;
-        int var2 = 0;
+        int var2;
         var2 = MinerDisturbance.field_ab;
         if (this.field_f.field_b[this.field_b - 1] == this.field_d) {
           L0: while (true) {
@@ -40,10 +40,10 @@ final class gb implements Iterator {
 
     final static void b(int param0) {
         sa var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var2 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -135,18 +135,18 @@ final class gb implements Iterator {
     }
 
     public final Object next() {
-        pi[] fieldTemp$4 = null;
-        int fieldTemp$5 = 0;
-        pi var1 = null;
-        int var2 = 0;
+        pi[] fieldTemp$2 = null;
+        int fieldTemp$3 = 0;
+        pi var1;
+        int var2;
         var2 = MinerDisturbance.field_ab;
         if (this.field_d == this.field_f.field_b[this.field_b + -1]) {
           L0: while (true) {
             if (this.field_f.field_f > this.field_b) {
-              fieldTemp$4 = this.field_f.field_b;
-              fieldTemp$5 = this.field_b;
+              fieldTemp$2 = this.field_f.field_b;
+              fieldTemp$3 = this.field_b;
               this.field_b = this.field_b + 1;
-              var1 = fieldTemp$4[fieldTemp$5].field_f;
+              var1 = fieldTemp$2[fieldTemp$3].field_f;
               if (this.field_f.field_b[this.field_b - 1] == var1) {
                 continue L0;
               } else {

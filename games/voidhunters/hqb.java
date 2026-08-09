@@ -15,8 +15,8 @@ final class hqb {
     static String field_j;
 
     private final boolean a(int param0, int param1, int param2) {
-        Object var4 = null;
-        String var4_ref = null;
+        Object var4;
+        String var4_ref;
         L0: {
           if (param2 <= -64) {
             break L0;
@@ -72,8 +72,8 @@ final class hqb {
     }
 
     private final boolean b(byte param0, int param1, int param2) {
-        boolean discarded$2 = false;
-        int var5 = 0;
+        boolean discarded$1 = false;
+        int var5;
         L0: {
           var5 = VoidHunters.field_G;
           if (-1 != (param2 ^ -1)) {
@@ -116,15 +116,18 @@ final class hqb {
         if (param0 == 99) {
           return true;
         } else {
-          discarded$2 = this.a((byte) 32, 2, 100);
+          discarded$1 = this.a((byte) 32, 2, 100);
           return true;
         }
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, byte param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_23_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -132,11 +135,6 @@ final class hqb {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_23_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
         var14 = VoidHunters.field_G;
         try {
           L0: {
@@ -167,12 +165,10 @@ final class hqb {
                           L3: {
                             var12 = sv.field_f[var11];
                             if (param3) {
-                              stackOut_22_0 = fmb.field_o[var12];
-                              stackIn_23_0 = stackOut_22_0;
+                              stackIn_23_0 = fmb.field_o[var12];
                               break L3;
                             } else {
-                              stackOut_21_0 = hga.field_o[var12];
-                              stackIn_23_0 = stackOut_21_0;
+                              stackIn_23_0 = hga.field_o[var12];
                               break L3;
                             }
                           }
@@ -180,9 +176,9 @@ final class hqb {
                             var13 = stackIn_23_0;
                             if (var13 > var7_int) {
                               sv.field_f[var11] = sv.field_f[var8];
-                              incrementValue$1 = var8;
+                              incrementValue$0 = var8;
                               var8++;
-                              sv.field_f[incrementValue$1] = var12;
+                              sv.field_f[incrementValue$0] = var12;
                               if (var13 < var9) {
                                 var9 = var13;
                                 break L4;
@@ -263,29 +259,18 @@ final class hqb {
     }
 
     final void a(int param0, int param1, int[] param2) {
-        String discarded$1 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        vu var5 = null;
-        int var6 = 0;
-        CharSequence var7 = null;
-        String var8 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        vu var5 = null;
+        int var6 = 0;
+        CharSequence var7 = null;
+        String var8 = null;
         try {
           L0: {
             L1: {
@@ -308,7 +293,7 @@ final class hqb {
                 } else {
                   L3: {
                     var8 = this.b((byte) -63);
-                    var4_ref = var8;
+                    var4 = var8;
                     var5 = di.a(this.field_a, 0);
                     var6 = ltb.a((byte) -94, this.field_a) ? 1 : 0;
                     if (var5 != null) {
@@ -385,7 +370,7 @@ final class hqb {
                 break L7;
               } else {
                 var7 = (CharSequence) null;
-                discarded$1 = hqb.a(false, (byte) -9, (CharSequence) null);
+                hqb.a(false, (byte) -9, (CharSequence) null);
                 break L7;
               }
             }
@@ -394,28 +379,20 @@ final class hqb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
-            var4 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var4);
-            stackOut_27_1 = new StringBuilder().append("hqb.M(").append(param0).append(',').append(param1).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_29_0 = (RuntimeException) (var4_ref);
+
+            stackIn_29_1 = new StringBuilder().append("hqb.M(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L8;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L8;
             }
           }
@@ -424,13 +401,6 @@ final class hqb {
     }
 
     final static String a(boolean param0, byte param1, CharSequence param2) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        String var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_11_0 = null;
@@ -438,8 +408,6 @@ final class hqb {
         String stackIn_21_0 = null;
         String stackIn_31_0 = null;
         String stackIn_36_0 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         RuntimeException stackIn_41_0 = null;
@@ -447,21 +415,13 @@ final class hqb {
         String stackIn_41_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_35_0 = null;
-        String stackOut_30_0 = null;
-        String stackOut_20_0 = null;
-        String stackOut_15_0 = null;
-        String stackOut_10_0 = null;
-        String stackOut_5_0 = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        String var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var8 = VoidHunters.field_G;
         try {
           L0: {
@@ -491,8 +451,7 @@ final class hqb {
                                   L4: while (true) {
                                     if (var6 >= param2.length()) {
                                       if (0 < var5) {
-                                        stackOut_35_0 = kma.field_d;
-                                        stackIn_36_0 = stackOut_35_0;
+                                        stackIn_36_0 = kma.field_d;
                                         decompiledRegionSelector0 = 6;
                                         break L0;
                                       } else {
@@ -514,8 +473,7 @@ final class hqb {
                                           break L6;
                                         } else {
                                           if (!param0) {
-                                            stackOut_30_0 = amb.field_a;
-                                            stackIn_31_0 = stackOut_30_0;
+                                            stackIn_31_0 = amb.field_a;
                                             decompiledRegionSelector0 = 5;
                                             break L0;
                                           } else {
@@ -532,8 +490,7 @@ final class hqb {
                                 }
                               }
                             }
-                            stackOut_20_0 = kma.field_d;
-                            stackIn_21_0 = stackOut_20_0;
+                            stackIn_21_0 = kma.field_d;
                             decompiledRegionSelector0 = 4;
                             break L0;
                           } else {
@@ -541,26 +498,22 @@ final class hqb {
                           }
                         }
                       }
-                      stackOut_15_0 = bka.field_o;
-                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_16_0 = bka.field_o;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }
                   }
                 }
-                stackOut_10_0 = bka.field_o;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = bka.field_o;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_5_0 = bka.field_o;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = bka.field_o;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = (String) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (String) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -569,27 +522,19 @@ final class hqb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_38_0 = (RuntimeException) (var3);
-            stackOut_38_1 = new StringBuilder().append("hqb.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_40_0 = stackOut_38_0;
-            stackIn_40_1 = stackOut_38_1;
-            stackIn_39_0 = stackOut_38_0;
-            stackIn_39_1 = stackOut_38_1;
+            stackIn_40_0 = (RuntimeException) (var3);
+
+            stackIn_40_1 = new StringBuilder().append("hqb.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "null";
-              stackIn_41_0 = stackOut_40_0;
-              stackIn_41_1 = stackOut_40_1;
-              stackIn_41_2 = stackOut_40_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "null";
               break L7;
             } else {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "{...}";
-              stackIn_41_0 = stackOut_39_0;
-              stackIn_41_1 = stackOut_39_1;
-              stackIn_41_2 = stackOut_39_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "{...}";
               break L7;
             }
           }
@@ -623,11 +568,10 @@ final class hqb {
     }
 
     public static void a(byte param0) {
-        String discarded$0 = null;
         field_k = (String[][]) null;
         if (param0 > -103) {
             CharSequence var2 = (CharSequence) null;
-            discarded$0 = hqb.a(true, (byte) -64, (CharSequence) null);
+            hqb.a(true, (byte) -64, (CharSequence) null);
         }
         field_j = null;
     }
@@ -640,8 +584,7 @@ final class hqb {
     }
 
     private final boolean b(int param0, int param1, int param2) {
-        boolean discarded$28 = false;
-        int var5 = 0;
+        int var5;
         L0: {
           var5 = VoidHunters.field_G;
           if (param2 == -17791) {
@@ -674,7 +617,7 @@ final class hqb {
                         if (19 != param1) {
                           return false;
                         } else {
-                          discarded$28 = fia.a(this.field_e, this.field_c, (byte) 105, this.field_d, this.field_a);
+                          fia.a(this.field_e, this.field_c, (byte) 105, this.field_d, this.field_a);
                           return true;
                         }
                       } else {
@@ -698,10 +641,10 @@ final class hqb {
     }
 
     final void a(boolean param0, int param1) {
-        jk var4 = null;
-        String var5 = null;
-        int var6 = 0;
-        jk var7 = null;
+        jk var4;
+        String var5;
+        int var6;
+        jk var7;
         L0: {
           var6 = VoidHunters.field_G;
           if (param1 > 1) {
@@ -784,8 +727,6 @@ final class hqb {
 
     final void a(pgb param0, int param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -793,14 +734,6 @@ final class hqb {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         try {
           L0: {
             if (param0.field_k) {
@@ -869,27 +802,19 @@ final class hqb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             runtimeException = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (runtimeException);
-            stackOut_22_1 = new StringBuilder().append("hqb.I(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (runtimeException);
+
+            stackIn_24_1 = new StringBuilder().append("hqb.I(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L7;
             }
           }
@@ -920,9 +845,9 @@ final class hqb {
     }
 
     final void a(boolean param0) {
-        String var3 = null;
-        int var4 = 0;
-        mm var5 = null;
+        String var3;
+        int var4;
+        mm var5;
         var4 = VoidHunters.field_G;
         if (param0) {
           L0: {
@@ -988,20 +913,18 @@ final class hqb {
         if (!(var6 != -2)) {
             return false;
         }
-        boolean discarded$1 = this.b((byte) 99, param2, var6);
+        boolean discarded$2 = this.b((byte) 99, param2, var6);
         if (param1 != -11) {
             this.b(26);
         }
-        boolean discarded$2 = this.a(param3, var6, -111);
-        boolean discarded$3 = this.b(param3, var6, -17791);
-        boolean discarded$4 = this.a((byte) 16, var6, param4);
+        boolean discarded$3 = this.a(param3, var6, -111);
+        boolean discarded$4 = this.b(param3, var6, -17791);
+        boolean discarded$5 = this.a((byte) 16, var6, param4);
         return true;
     }
 
     final boolean a(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == 0) {
           L0: {
             L1: {
@@ -1011,14 +934,12 @@ final class hqb {
                 if (!this.field_i.e((byte) -126)) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0 != 0;
@@ -1029,12 +950,10 @@ final class hqb {
 
     final void b(int param0) {
         String var3 = null;
-        if (this.field_a != null) {
-            if (wqa.field_a != this.field_d) {
-                var3 = this.b((byte) -110);
-                String var2 = var3;
-                this.field_i.a(isa.a(ona.field_l, new String[]{var3}, 83), (byte) -53, 17);
-            }
+        if (this.field_a != null && wqa.field_a != this.field_d) {
+            var3 = this.b((byte) -110);
+            String var2 = var3;
+            this.field_i.a(isa.a(ona.field_l, new String[]{var3}, 83), (byte) -53, 17);
         }
         if (param0 != -9923) {
             this.a(-125, false);

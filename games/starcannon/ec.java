@@ -16,7 +16,7 @@ final class ec {
     }
 
     final static int b(byte param0) {
-        int var1 = 0;
+        int var1;
         var1 = -49 % ((param0 - -82) / 43);
         if (2 > rk.field_d) {
           return 0;

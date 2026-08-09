@@ -21,10 +21,7 @@ final class ae {
     }
 
     final boolean a(int param0) {
-        String discarded$5 = null;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == 18544) {
           if (this != nn.field_m) {
             if (wi.field_s != this) {
@@ -40,19 +37,17 @@ final class ae {
             return true;
           }
         } else {
-          discarded$5 = this.toString();
+          this.toString();
           if (this != nn.field_m) {
             if (wi.field_s == this) {
               return true;
             } else {
               L0: {
                 if (pb.field_c != this) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }

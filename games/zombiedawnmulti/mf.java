@@ -11,9 +11,9 @@ abstract class mf {
     abstract void a(byte param0, java.awt.Component param1);
 
     final static void a(int param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var2 = (-640 + kp.field_l) / 2;
         if (param1) {
           mf.a(56, false);

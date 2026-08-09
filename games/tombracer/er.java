@@ -55,24 +55,7 @@ final class er extends fqa {
               if (param0 == 1) {
                 var4 = 0;
                 L4: while (true) {
-                  L5: {
-                    L6: {
-                      if (16 <= var4) {
-                        break L6;
-                      } else {
-                        v.b(var4, 0);
-                        var4++;
-                        if (var5 != 0) {
-                          break L5;
-                        } else {
-                          if (var5 == 0) {
-                            continue L4;
-                          } else {
-                            break L6;
-                          }
-                        }
-                      }
-                    }
+                  if (16 <= var4) {
                     if ((param1 ^ -1) == -2) {
                       aoa.a(112, 1);
                       aoa.a(45, 2);
@@ -84,14 +67,17 @@ final class er extends fqa {
                       aoa.a(122, 8);
                       aoa.a(param0 ^ 125, 13);
                       aoa.a(84, 14);
-                      break L5;
+                      aoa.a(105, 15);
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     } else {
                       return;
                     }
+                  } else {
+                    v.b(var4, 0);
+                    var4++;
+                    continue L4;
                   }
-                  aoa.a(105, 15);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
                 }
               } else {
                 decompiledRegionSelector0 = 1;
@@ -137,23 +123,12 @@ final class er extends fqa {
         mfa var6 = null;
         boa var7 = null;
         fsa stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fsa stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var4 = new fsa(param2, param0);
@@ -169,35 +144,26 @@ final class er extends fqa {
             var7 = (boa) ((Object) var6.a(7, 82));
             var7.b(119, 16);
             var4.a(var5, (byte) 124, var7);
-            stackOut_0_0 = (fsa) (var4);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = (fsa) (var4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var4_ref);
-            stackOut_2_1 = new StringBuilder().append("er.AC(").append(param0).append(',').append(param1).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var4_ref);
+
+            stackIn_4_1 = new StringBuilder().append("er.AC(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -241,20 +207,14 @@ final class er extends fqa {
     final static boolean c(int param0, int param1, int param2) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param2 != 52) {
           L0: {
             field_K = (int[][]) null;
             if (-1 == (param0 & 52 ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -262,12 +222,10 @@ final class er extends fqa {
         } else {
           L1: {
             if (-1 == (param0 & 52 ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -302,9 +260,8 @@ final class er extends fqa {
     }
 
     final boolean s(int param0) {
-        int discarded$0 = 0;
         if (param0 != -15254) {
-            discarded$0 = this.B(-5);
+            this.B(-5);
             return false;
         }
         return false;

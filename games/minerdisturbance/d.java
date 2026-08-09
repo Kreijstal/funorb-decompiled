@@ -9,7 +9,6 @@ final class d {
     static String field_a;
 
     final static boolean a(int param0, int param1, byte param2) {
-        boolean discarded$7 = false;
         if (param2 == 68) {
           if (null == aa.field_j) {
             if (null == aa.field_j) {
@@ -37,7 +36,7 @@ final class d {
             }
           }
         } else {
-          discarded$7 = d.a(9, -76, (byte) 7);
+          d.a(9, -76, (byte) 7);
           if (null != aa.field_j) {
             if (!aa.field_j.a(param0, param1, (byte) -66)) {
               if (null == aa.field_j) {
@@ -67,7 +66,7 @@ final class d {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         if (param1 == -31479) {
           var2 = 0;
           if (0 <= param0) {
@@ -197,11 +196,10 @@ final class d {
     }
 
     public static void a(byte param0) {
-        boolean discarded$0 = false;
         field_a = null;
         field_d = null;
         if (param0 != 109) {
-            discarded$0 = d.a(-41, -22, (byte) -35);
+            d.a(-41, -22, (byte) -35);
         }
     }
 

@@ -10,7 +10,7 @@ final class te {
         if (param0 != 0) {
             return;
         }
-        int discarded$0 = uo.a((byte) -75);
+        uo.a((byte) -75);
     }
 
     final static void a(boolean param0) {

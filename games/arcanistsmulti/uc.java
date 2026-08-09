@@ -13,7 +13,7 @@ final class uc {
     }
 
     final static void a(int param0, byte param1) {
-        ab var2 = null;
+        ab var2;
         var2 = he.field_e;
         var2.b((byte) -81, param0);
         var2.f(1, (byte) -101);

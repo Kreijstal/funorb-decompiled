@@ -22,66 +22,45 @@ final class tl extends rqa {
     }
 
     final nc a(nc[] param0, int param1) {
-        boolean discarded$2 = false;
         RuntimeException var3 = null;
         nc stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
               if (param1 < -119) {
                 break L1;
               } else {
-                discarded$2 = tl.b(125, -116, 41);
+                tl.b(125, -116, 41);
                 break L1;
               }
             }
             si.a(231, 62, param0[0].a(21));
-            stackOut_2_0 = new nc("void");
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new nc("void");
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("tl.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("tl.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -91,10 +70,9 @@ final class tl extends rqa {
     }
 
     public static void e(byte param0) {
-        boolean discarded$0 = false;
         field_o = null;
         if (param0 != -15) {
-            discarded$0 = tl.b(-46, 57, -52);
+            tl.b(-46, 57, -52);
             field_q = null;
             return;
         }
@@ -102,45 +80,37 @@ final class tl extends rqa {
     }
 
     final static boolean b(int param0, int param1, int param2) {
-        StringBuilder discarded$9 = null;
-        StringBuilder discarded$10 = null;
-        StringBuilder discarded$11 = null;
-        StringBuilder discarded$12 = null;
-        StringBuilder discarded$13 = null;
-        StringBuilder discarded$14 = null;
-        StringBuilder discarded$15 = null;
-        StringBuilder discarded$16 = null;
-        StringBuilder discarded$17 = null;
-        int var3 = 0;
-        String var4_ref_String = null;
-        int var4 = 0;
-        int var5 = 0;
-        String var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        String var12 = null;
-        String var13 = null;
-        String var14 = null;
-        String var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
-        String var35 = null;
-        String var36 = null;
-        String var37 = null;
-        String var38 = null;
-        String var39 = null;
-        String var40 = null;
-        String var41 = null;
-        String var42 = null;
-        String var43 = null;
-        String var44 = null;
-        String var45 = null;
-        Object var46 = null;
-        CharSequence var47 = null;
+        StringBuilder discarded$0 = null;
+        int var3;
+        String var4_ref_String;
+        int var4;
+        int var5;
+        String var7;
+        String var8;
+        int var9;
+        int var10;
+        int var11;
+        String var12;
+        String var13;
+        String var14;
+        String var15;
+        String var16;
+        String var17;
+        String var18;
+        String var19;
+        String var35;
+        String var36;
+        String var37;
+        String var38;
+        String var39;
+        String var40;
+        String var41;
+        String var42;
+        String var43;
+        String var44;
+        String var45;
+        Object var46;
+        CharSequence var47;
         L0: {
           var46 = null;
           var11 = VoidHunters.field_G;
@@ -240,7 +210,7 @@ final class tl extends rqa {
               if (var3 != 0) {
                 if (awa.field_p.length() < 80) {
                   L6: {
-                    discarded$9 = awa.field_p.append((char) var4);
+                    discarded$0 = awa.field_p.append((char) var4);
                     var5 = 485;
                     var17 = kca.field_a;
                     var16 = gfb.a(1, var17);
@@ -272,7 +242,7 @@ final class tl extends rqa {
                                         if (var5 >= ej.field_c.b(awa.field_p.toString())) {
                                           break L9;
                                         } else {
-                                          discarded$10 = npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+                                          npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
                                           break L9;
                                         }
                                       }
@@ -286,7 +256,7 @@ final class tl extends rqa {
                                       if (var5 >= ej.field_c.b(awa.field_p.toString())) {
                                         break L10;
                                       } else {
-                                        discarded$11 = npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+                                        npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
                                         break L10;
                                       }
                                     }
@@ -297,7 +267,7 @@ final class tl extends rqa {
                               var40 = var7 + var19 + ": ";
                               var5 = var5 - ej.field_c.b(var40);
                               if (var5 < ej.field_c.b(awa.field_p.toString())) {
-                                discarded$12 = npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+                                npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
                                 return true;
                               } else {
                                 return true;
@@ -314,7 +284,7 @@ final class tl extends rqa {
                               var44 = var43 + var19 + ": ";
                               var5 = var5 - ej.field_c.b(var44);
                               if (var5 < ej.field_c.b(awa.field_p.toString())) {
-                                discarded$13 = npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+                                npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
                                 return true;
                               } else {
                                 return true;
@@ -328,7 +298,7 @@ final class tl extends rqa {
                                 var42 = var41 + var19 + ": ";
                                 var5 = var5 - ej.field_c.b(var42);
                                 if (var5 < ej.field_c.b(awa.field_p.toString())) {
-                                  discarded$14 = npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+                                  npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
                                   return true;
                                 } else {
                                   return true;
@@ -344,7 +314,7 @@ final class tl extends rqa {
                         var35 = var7 + var19 + ": ";
                         var5 = var5 - ej.field_c.b(var35);
                         if (var5 < ej.field_c.b(awa.field_p.toString())) {
-                          discarded$15 = npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+                          npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
                           return true;
                         } else {
                           return true;
@@ -366,7 +336,7 @@ final class tl extends rqa {
                     }
                   }
                   if (var5 < ej.field_c.b(awa.field_p.toString())) {
-                    discarded$16 = npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+                    npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
                     return true;
                   } else {
                     return true;
@@ -388,7 +358,7 @@ final class tl extends rqa {
                 if (awa.field_p.length() <= 0) {
                   break L12;
                 } else {
-                  discarded$17 = npa.a(-1 + awa.field_p.length(), false, awa.field_p, ' ');
+                  npa.a(-1 + awa.field_p.length(), false, awa.field_p, ' ');
                   break L12;
                 }
               }

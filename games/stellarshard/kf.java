@@ -9,40 +9,18 @@ final class kf implements uk {
 
     final static void a(java.awt.Frame param0, int param1, ej param2) {
         re var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
-        n var5 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var3_ref = null;
+        n var5 = null;
         var4 = stellarshard.field_B;
         try {
           L0: {
@@ -78,56 +56,40 @@ final class kf implements uk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3_ref);
-            stackOut_10_1 = new StringBuilder().append("kf.C(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3_ref);
+
+            stackIn_12_1 = new StringBuilder().append("kf.C(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
           L5: {
-            stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }
-          throw ma.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ')');
         }
     }
 
@@ -149,8 +111,24 @@ final class kf implements uk {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, n param6, int param7) {
-        RuntimeException var8 = null;
-        int[] var8_array = null;
+        int stackIn_15_0 = 0;
+        int[] stackIn_17_0 = null;
+        int[] stackIn_18_0 = null;
+        int stackIn_18_1 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_27_0 = 0;
+        int stackIn_30_0 = 0;
+        wh stackIn_37_0 = null;
+        int stackIn_43_0 = 0;
+        int stackIn_47_0 = 0;
+        RuntimeException stackIn_52_0 = null;
+        StringBuilder stackIn_52_1 = null;
+        RuntimeException stackIn_53_0 = null;
+        StringBuilder stackIn_53_1 = null;
+        String stackIn_53_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int[] var8 = null;
+        RuntimeException var8_ref = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -159,8 +137,7 @@ final class kf implements uk {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        Object var21 = null;
-        wh var21_ref = null;
+        wh var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -190,53 +167,6 @@ final class kf implements uk {
         int[] var63 = null;
         int[] var64 = null;
         int[] var65 = null;
-        int stackIn_15_0 = 0;
-        int[] stackIn_16_0 = null;
-        int[] stackIn_17_0 = null;
-        int[] stackIn_18_0 = null;
-        int stackIn_18_1 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_30_0 = 0;
-        wh stackIn_37_0 = null;
-        int stackIn_43_0 = 0;
-        int stackIn_47_0 = 0;
-        RuntimeException stackIn_51_0 = null;
-        StringBuilder stackIn_51_1 = null;
-        RuntimeException stackIn_52_0 = null;
-        StringBuilder stackIn_52_1 = null;
-        RuntimeException stackIn_53_0 = null;
-        StringBuilder stackIn_53_1 = null;
-        String stackIn_53_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        short stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        short stackOut_26_0 = 0;
-        int stackOut_25_0 = 0;
-        short stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        wh stackOut_35_0 = null;
-        Object stackOut_36_0 = null;
-        int stackOut_46_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_11_0 = 0;
-        int[] stackOut_15_0 = null;
-        int[] stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        int[] stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        RuntimeException stackOut_50_0 = null;
-        StringBuilder stackOut_50_1 = null;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        String stackOut_52_2 = null;
-        RuntimeException stackOut_51_0 = null;
-        StringBuilder stackOut_51_1 = null;
-        String stackOut_51_2 = null;
         var40 = stellarshard.field_B;
         try {
           L0: {
@@ -261,7 +191,7 @@ final class kf implements uk {
             var55 = new int[param6.field_D];
             var50 = var55;
             var41 = var50;
-            var8_array = var41;
+            var8 = var41;
             var65 = new int[param6.field_D];
             var64 = hc.field_f;
             var63 = le.field_m;
@@ -282,36 +212,30 @@ final class kf implements uk {
                       var16 = param6.field_z[var14];
                       var17 = param6.field_m[var14];
                       if (hc.field_f.length > param6.field_M[var14]) {
-                        stackOut_23_0 = param6.field_M[var14];
-                        stackIn_24_0 = stackOut_23_0;
+                        stackIn_24_0 = param6.field_M[var14];
                         break L5;
                       } else {
-                        stackOut_22_0 = -1;
-                        stackIn_24_0 = stackOut_22_0;
+                        stackIn_24_0 = -1;
                         break L5;
                       }
                     }
                     L6: {
                       var18 = stackIn_24_0;
                       if (hc.field_f.length > param6.field_h[var14]) {
-                        stackOut_26_0 = param6.field_h[var14];
-                        stackIn_27_0 = stackOut_26_0;
+                        stackIn_27_0 = param6.field_h[var14];
                         break L6;
                       } else {
-                        stackOut_25_0 = -1;
-                        stackIn_27_0 = stackOut_25_0;
+                        stackIn_27_0 = -1;
                         break L6;
                       }
                     }
                     L7: {
                       var19 = stackIn_27_0;
                       if (hc.field_f.length > param6.field_v[var14]) {
-                        stackOut_29_0 = param6.field_v[var14];
-                        stackIn_30_0 = stackOut_29_0;
+                        stackIn_30_0 = param6.field_v[var14];
                         break L7;
                       } else {
-                        stackOut_28_0 = -1;
-                        stackIn_30_0 = stackOut_28_0;
+                        stackIn_30_0 = -1;
                         break L7;
                       }
                     }
@@ -333,8 +257,7 @@ final class kf implements uk {
                                 if (param6.field_c[var14] >= e.field_d.length) {
                                   break L9;
                                 } else {
-                                  stackOut_35_0 = e.field_d[param6.field_c[var14]];
-                                  stackIn_37_0 = stackOut_35_0;
+                                  stackIn_37_0 = e.field_d[param6.field_c[var14]];
                                   break L8;
                                 }
                               }
@@ -342,13 +265,12 @@ final class kf implements uk {
                           }
                         }
                       }
-                      stackOut_36_0 = null;
-                      stackIn_37_0 = (wh) ((Object) stackOut_36_0);
+                      stackIn_37_0 = null;
                       break L8;
                     }
                     L10: {
                       L11: {
-                        var21_ref = stackIn_37_0;
+                        var21 = stackIn_37_0;
                         var22 = nh.field_d[var15];
                         var23 = od.field_s[var15];
                         var24 = nh.field_d[var16];
@@ -362,13 +284,11 @@ final class kf implements uk {
                             L12: {
                               var28 = var55[var18];
                               var29 = var65[var18];
-                              if (var21_ref == null) {
-                                stackOut_46_0 = 8355711;
-                                stackIn_47_0 = stackOut_46_0;
+                              if (var21 == null) {
+                                stackIn_47_0 = 8355711;
                                 break L12;
                               } else {
-                                stackOut_45_0 = var21_ref.field_b;
-                                stackIn_47_0 = stackOut_45_0;
+                                stackIn_47_0 = var21.field_b;
                                 break L12;
                               }
                             }
@@ -391,13 +311,11 @@ final class kf implements uk {
                         var31 = var65[var18];
                         var32 = var65[var19];
                         var33 = var65[var20];
-                        if (var21_ref != null) {
-                          stackOut_42_0 = var21_ref.field_b;
-                          stackIn_43_0 = stackOut_42_0;
+                        if (var21 != null) {
+                          stackIn_43_0 = var21.field_b;
                           break L13;
                         } else {
-                          stackOut_41_0 = 8355711;
-                          stackIn_43_0 = stackOut_41_0;
+                          stackIn_43_0 = 8355711;
                           break L13;
                         }
                       }
@@ -430,37 +348,29 @@ final class kf implements uk {
                 L15: {
                   if (var14 >= 0) {
                     if ((var14 ^ -1) <= -129) {
-                      stackOut_14_0 = 256;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 256;
                       break L15;
                     } else {
-                      stackOut_13_0 = var14 + 128;
-                      stackIn_15_0 = stackOut_13_0;
+                      stackIn_15_0 = var14 + 128;
                       break L15;
                     }
                   } else {
-                    stackOut_11_0 = 128;
-                    stackIn_15_0 = stackOut_11_0;
+                    stackIn_15_0 = 128;
                     break L15;
                   }
                 }
                 L16: {
                   var14 = stackIn_15_0;
                   var15 = param5 * var62[var13] + param4 * var64[var13] - -(param2 * var63[var13]) >> -191165080;
-                  stackOut_15_0 = ol.field_g;
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_17_0 = ol.field_g;
+
                   if (0 <= var15) {
-                    stackOut_17_0 = (int[]) ((Object) stackIn_17_0);
-                    stackOut_17_1 = var15;
-                    stackIn_18_0 = stackOut_17_0;
-                    stackIn_18_1 = stackOut_17_1;
+                    stackIn_18_0 = (int[]) ((Object) stackIn_17_0);
+                    stackIn_18_1 = var15;
                     break L16;
                   } else {
-                    stackOut_16_0 = (int[]) ((Object) stackIn_16_0);
-                    stackOut_16_1 = -var15;
-                    stackIn_18_0 = stackOut_16_0;
-                    stackIn_18_1 = stackOut_16_1;
+                    stackIn_18_0 = (int[]) ((Object) stackIn_17_0);
+                    stackIn_18_1 = -var15;
                     break L16;
                   }
                 }
@@ -476,28 +386,20 @@ final class kf implements uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
-            var8 = decompiledCaughtException;
-            stackOut_50_0 = (RuntimeException) (var8);
-            stackOut_50_1 = new StringBuilder().append("kf.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-            stackIn_52_0 = stackOut_50_0;
-            stackIn_52_1 = stackOut_50_1;
-            stackIn_51_0 = stackOut_50_0;
-            stackIn_51_1 = stackOut_50_1;
+            var8_ref = decompiledCaughtException;
+            stackIn_52_0 = (RuntimeException) (var8_ref);
+
+            stackIn_52_1 = new StringBuilder().append("kf.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+
             if (param6 == null) {
-              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
-              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
-              stackOut_52_2 = "null";
-              stackIn_53_0 = stackOut_52_0;
-              stackIn_53_1 = stackOut_52_1;
-              stackIn_53_2 = stackOut_52_2;
+              stackIn_53_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
+              stackIn_53_2 = "null";
               break L17;
             } else {
-              stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
-              stackOut_51_1 = (StringBuilder) ((Object) stackIn_51_1);
-              stackOut_51_2 = "{...}";
-              stackIn_53_0 = stackOut_51_0;
-              stackIn_53_1 = stackOut_51_1;
-              stackIn_53_2 = stackOut_51_2;
+              stackIn_53_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
+              stackIn_53_2 = "{...}";
               break L17;
             }
           }
@@ -506,12 +408,6 @@ final class kf implements uk {
     }
 
     public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        pb var8 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -519,14 +415,10 @@ final class kf implements uk {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        pb var8 = null;
         try {
           L0: {
             L1: {
@@ -565,27 +457,19 @@ final class kf implements uk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var6);
-            stackOut_9_1 = new StringBuilder().append("kf.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var6);
+
+            stackIn_11_1 = new StringBuilder().append("kf.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }

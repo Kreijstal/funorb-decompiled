@@ -7,8 +7,8 @@ final class qf implements jh {
     static int field_a;
 
     final static ji a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Vertigo2.field_L ? 1 : 0;
         if (param0 == -39) {
           var2 = param1;

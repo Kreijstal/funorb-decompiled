@@ -50,9 +50,9 @@ final class cq {
     }
 
     final static int a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var10;
+        int var11;
+        int var12;
         if (-1 == (param8 ^ -1)) {
           return -1;
         } else {
@@ -154,29 +154,28 @@ final class cq {
         so.field_g[0].field_d.b((byte) -110, new bk(om.field_t, 1, 6, so.field_g[0].field_d));
         so.field_g[0].field_d.b((byte) -74, new bk(vj.field_f, 1, -1, so.field_g[0].field_d));
         so.field_g[0].a(false);
-        hq dupTemp$1 = new hq(fc.field_e, 2, 0);
-        so.field_g[1] = dupTemp$1;
-        so.field_g[0].field_j = dupTemp$1;
-        if (param0 == 4313) {
-          so.field_g[1].field_d.b((byte) -59, new bk(qq.field_yb, 40, 13, 128));
-          so.field_g[1].field_d.b((byte) -43, new bk(dr.field_e, 1, 8, 0));
-          so.field_g[1].field_d.b((byte) 99, new bk(ea.field_m, 1, 9, 0));
-          so.field_g[1].field_d.b((byte) 87, new bk(gn.field_a, 7, 11, 0));
-          so.field_g[1].field_d.b((byte) 99, new bk(lk.field_r, 1, 12, 0));
-          so.field_g[1].field_d.b((byte) -6, new bk(g.field_w, 1, -1, 0));
-          so.field_g[1].a(false);
-          so.field_g[2] = new hq(ep.field_G, 2, 1);
-          so.field_g[2].field_d.b((byte) -90, new bk(ca.field_m, 40, 13, 128));
-          so.field_g[2].field_d.b((byte) -99, new bk(cf.field_i, 1, 8, 0));
-          so.field_g[2].field_d.b((byte) -21, new bk(eq.field_N, 1, 14, 0));
-          so.field_g[2].field_d.b((byte) -9, new bk(pl.field_c, 1, 15, 0));
-          so.field_g[2].field_d.b((byte) -62, new bk(ui.field_N, 1, 16, 0));
-          so.field_g[2].field_d.b((byte) 92, new bk(rc.field_a, 1, -1, 0));
-          so.field_g[2].a(false);
-          return;
-        } else {
-          return;
+        hq dupTemp$0 = new hq(fc.field_e, 2, 0);
+        hq arrayValue$1 = so.field_g[0];
+        so.field_g[1] = dupTemp$0;
+        arrayValue$1.field_j = dupTemp$0;
+        if (param0 != 4313) {
+            return;
         }
+        so.field_g[1].field_d.b((byte) -59, new bk(qq.field_yb, 40, 13, 128));
+        so.field_g[1].field_d.b((byte) -43, new bk(dr.field_e, 1, 8, 0));
+        so.field_g[1].field_d.b((byte) 99, new bk(ea.field_m, 1, 9, 0));
+        so.field_g[1].field_d.b((byte) 87, new bk(gn.field_a, 7, 11, 0));
+        so.field_g[1].field_d.b((byte) 99, new bk(lk.field_r, 1, 12, 0));
+        so.field_g[1].field_d.b((byte) -6, new bk(g.field_w, 1, -1, 0));
+        so.field_g[1].a(false);
+        so.field_g[2] = new hq(ep.field_G, 2, 1);
+        so.field_g[2].field_d.b((byte) -90, new bk(ca.field_m, 40, 13, 128));
+        so.field_g[2].field_d.b((byte) -99, new bk(cf.field_i, 1, 8, 0));
+        so.field_g[2].field_d.b((byte) -21, new bk(eq.field_N, 1, 14, 0));
+        so.field_g[2].field_d.b((byte) -9, new bk(pl.field_c, 1, 15, 0));
+        so.field_g[2].field_d.b((byte) -62, new bk(ui.field_N, 1, 16, 0));
+        so.field_g[2].field_d.b((byte) 92, new bk(rc.field_a, 1, -1, 0));
+        so.field_g[2].a(false);
     }
 
     final static eg a(int param0, int param1, int param2, eg param3, int param4) {
@@ -185,8 +184,6 @@ final class cq {
         int var6 = 0;
         eg stackIn_3_0 = null;
         eg stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -194,16 +191,6 @@ final class cq {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        eg stackOut_12_0 = null;
-        eg stackOut_2_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var6 = Pool.field_O;
         try {
           L0: {
@@ -218,8 +205,7 @@ final class cq {
                       L3: while (true) {
                         if (var5_int >= param3.field_q.length) {
                           param3.a();
-                          stackOut_12_0 = (eg) (param3);
-                          stackIn_13_0 = stackOut_12_0;
+                          stackIn_13_0 = (eg) (param3);
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -241,8 +227,7 @@ final class cq {
                 }
               }
             } else {
-              stackOut_2_0 = (eg) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (eg) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -251,27 +236,19 @@ final class cq {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var5);
-            stackOut_14_1 = new StringBuilder().append("cq.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var5);
+
+            stackIn_16_1 = new StringBuilder().append("cq.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }

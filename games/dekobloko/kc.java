@@ -15,11 +15,11 @@ final class kc extends bh {
     static String field_q;
 
     final static void b(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           L1: {
             var6 = client.field_A ? 1 : 0;
@@ -264,8 +264,6 @@ final class kc extends bh {
             ji stackIn_15_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            ji stackOut_14_0 = null;
-            ji stackOut_1_0 = null;
             try {
               L0: {
                 if (!param4) {
@@ -315,13 +313,11 @@ final class kc extends bh {
                       break L5;
                     }
                   }
-                  stackOut_14_0 = new ji(var8, param0, param1);
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = new ji(var8, param0, param1);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_1_0 = (ji) null;
-                  stackIn_2_0 = stackOut_1_0;
+                  stackIn_2_0 = (ji) null;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }

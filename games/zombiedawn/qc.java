@@ -7,11 +7,11 @@ final class qc {
 
     final static void a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = ZombieDawn.field_J;
         try {
           L0: {
@@ -38,10 +38,10 @@ final class qc {
 
     final static void b(int param0) {
         le var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var2 = ZombieDawn.field_J;
         try {
           L0: {

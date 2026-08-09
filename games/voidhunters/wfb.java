@@ -40,9 +40,8 @@ final class wfb {
     }
 
     final int a(int param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = VoidHunters.field_G;
         var2 = this.field_a;
         if (-1 == (var2 ^ -1)) {
@@ -64,7 +63,7 @@ final class wfb {
                         if (param0 == 14951) {
                           break L0;
                         } else {
-                          discarded$1 = this.a(-100);
+                          this.a(-100);
                           break L0;
                         }
                       }
@@ -85,8 +84,9 @@ final class wfb {
     }
 
     final void a(int param0, int param1, boolean param2) {
-        int discarded$0 = 0;
         int var6 = 0;
+        lsb dupTemp$0 = null;
+        lsb dupTemp$1 = null;
         int var4 = 0;
         int var5 = VoidHunters.field_G;
         this.field_b = this.field_b << param0;
@@ -95,14 +95,16 @@ final class wfb {
             this.field_v[var4] = this.field_v[var4] << param0;
         }
         if (param1 <= 57) {
-            discarded$0 = this.a(8);
+            this.a(8);
         }
         if (this.field_o != null) {
             var6 = 0;
             var4 = var6;
             while (this.field_o.length > var6) {
-                this.field_o[var6].field_b = this.field_o[var6].field_b << param0;
-                this.field_o[var6].field_c = this.field_o[var6].field_c << param0;
+                dupTemp$0 = this.field_o[var6];
+                dupTemp$0.field_b = dupTemp$0.field_b << param0;
+                dupTemp$1 = this.field_o[var6];
+                dupTemp$1.field_c = dupTemp$1.field_c << param0;
                 var6++;
             }
         }
@@ -113,10 +115,10 @@ final class wfb {
     }
 
     private final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        lsb var5 = null;
+        int var2;
+        int var3;
+        int var4;
+        lsb var5;
         L0: {
           var4 = VoidHunters.field_G;
           if (param0 > 85) {
@@ -147,10 +149,9 @@ final class wfb {
     }
 
     final void a(byte param0, int param1) {
-        int discarded$0 = 0;
         this.field_j = param1 + 1;
         if (param0 >= -100) {
-            discarded$0 = this.b(-15);
+            this.b(-15);
         }
     }
 
@@ -199,26 +200,16 @@ final class wfb {
 
     final void a(int param0, lsb param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         lsb[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var3 = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
@@ -250,27 +241,19 @@ final class wfb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("wfb.F(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3);
+
+            stackIn_10_1 = new StringBuilder().append("wfb.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }

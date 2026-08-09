@@ -27,8 +27,8 @@ final class cq extends nm {
     }
 
     final static char a(byte param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var2 = 255 & param1;
         if (param0 < 0) {
           if (0 != var2) {
@@ -60,7 +60,7 @@ final class cq extends nm {
     }
 
     final static void a(boolean param0, byte param1) {
-        oi var3 = null;
+        oi var3;
         if (param1 >= -118) {
           L0: {
             var3 = (oi) null;
@@ -123,11 +123,8 @@ final class cq extends nm {
     }
 
     final static void a(int param0, boolean param1, int param2, oi param3) {
-        RuntimeException var4 = null;
+        String[] array$0 = null;
         String[] var5 = null;
-        String[] stackIn_1_0 = null;
-        String[] stackIn_1_1 = null;
-        int stackIn_1_2 = 0;
         String[] stackIn_2_0 = null;
         String[] stackIn_2_1 = null;
         int stackIn_2_2 = 0;
@@ -135,64 +132,34 @@ final class cq extends nm {
         String[] stackIn_3_1 = null;
         int stackIn_3_2 = 0;
         String stackIn_3_3 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[] stackOut_0_0 = null;
-        String[] stackOut_0_1 = null;
-        int stackOut_0_2 = 0;
-        String[] stackOut_2_0 = null;
-        String[] stackOut_2_1 = null;
-        int stackOut_2_2 = 0;
-        String stackOut_2_3 = null;
-        String[] stackOut_1_0 = null;
-        String[] stackOut_1_1 = null;
-        int stackOut_1_2 = 0;
-        String stackOut_1_3 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
-              stackOut_0_0 = new String[1];
-              stackOut_0_1 = new String[1];
-              stackOut_0_2 = 0;
-              stackIn_2_0 = stackOut_0_0;
-              stackIn_2_1 = stackOut_0_1;
-              stackIn_2_2 = stackOut_0_2;
-              stackIn_1_0 = stackOut_0_0;
-              stackIn_1_1 = stackOut_0_1;
-              stackIn_1_2 = stackOut_0_2;
+              array$0 = new String[1];
+              stackIn_2_0 = (String[]) (array$0);
+
+              stackIn_2_1 = (String[]) (array$0);
+
+              stackIn_2_2 = 0;
+
               if (tb.field_cb == null) {
-                stackOut_2_0 = (String[]) ((Object) stackIn_2_0);
-                stackOut_2_1 = (String[]) ((Object) stackIn_2_1);
-                stackOut_2_2 = stackIn_2_2;
-                stackOut_2_3 = we.field_c;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
-                stackIn_3_2 = stackOut_2_2;
-                stackIn_3_3 = stackOut_2_3;
+                stackIn_3_0 = (String[]) ((Object) stackIn_2_0);
+                stackIn_3_1 = (String[]) ((Object) stackIn_2_1);
+                stackIn_3_2 = stackIn_2_2;
+                stackIn_3_3 = we.field_c;
                 break L1;
               } else {
-                stackOut_1_0 = (String[]) ((Object) stackIn_1_0);
-                stackOut_1_1 = (String[]) ((Object) stackIn_1_1);
-                stackOut_1_2 = stackIn_1_2;
-                stackOut_1_3 = tb.field_cb;
-                stackIn_3_0 = stackOut_1_0;
-                stackIn_3_1 = stackOut_1_1;
-                stackIn_3_2 = stackOut_1_2;
-                stackIn_3_3 = stackOut_1_3;
+                stackIn_3_0 = (String[]) ((Object) stackIn_2_0);
+                stackIn_3_1 = (String[]) ((Object) stackIn_2_1);
+                stackIn_3_2 = stackIn_2_2;
+                stackIn_3_3 = tb.field_cb;
                 break L1;
               }
             }
@@ -245,27 +212,19 @@ final class cq extends nm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var4);
-            stackOut_14_1 = new StringBuilder().append("cq.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var4);
+
+            stackIn_16_1 = new StringBuilder().append("cq.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }

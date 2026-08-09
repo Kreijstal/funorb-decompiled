@@ -9,36 +9,23 @@ final class ph extends ge {
     static int field_o;
 
     final void a(int param0, boolean param1, int param2, byte param3) {
-        boolean discarded$5 = false;
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        int var5 = 0;
-        String var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int var5;
+        String var6;
+        int var11;
         int stackIn_3_0 = 0;
         int stackIn_27_0 = 0;
         int stackIn_54_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_25_0 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           var11 = wizardrun.field_H;
           if (!param1) {
-            stackOut_2_0 = 16639;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 16639;
             break L0;
           } else {
-            stackOut_1_0 = 16777215;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 16777215;
             break L0;
           }
         }
@@ -73,12 +60,10 @@ final class ph extends ge {
                 if (-3 == (param2 ^ -1)) {
                   L5: {
                     if (pk.field_s) {
-                      stackOut_53_0 = ee.field_p;
-                      stackIn_54_0 = stackOut_53_0;
+                      stackIn_54_0 = ee.field_p;
                       break L5;
                     } else {
-                      stackOut_52_0 = 0;
-                      stackIn_54_0 = stackOut_52_0;
+                      stackIn_54_0 = 0;
                       break L5;
                     }
                   }
@@ -142,7 +127,7 @@ final class ph extends ge {
                           if (param3 <= -98) {
                             break L9;
                           } else {
-                            discarded$5 = ph.a((byte) 46);
+                            ph.a((byte) 46);
                             break L9;
                           }
                         }
@@ -170,7 +155,7 @@ final class ph extends ge {
                         if (param3 <= -98) {
                           break L11;
                         } else {
-                          discarded$6 = ph.a((byte) 46);
+                          ph.a((byte) 46);
                           break L11;
                         }
                       }
@@ -186,12 +171,10 @@ final class ph extends ge {
                   } else {
                     L12: {
                       if (tl.field_e) {
-                        stackOut_26_0 = hc.field_o;
-                        stackIn_27_0 = stackOut_26_0;
+                        stackIn_27_0 = hc.field_o;
                         break L12;
                       } else {
-                        stackOut_25_0 = 0;
-                        stackIn_27_0 = stackOut_25_0;
+                        stackIn_27_0 = 0;
                         break L12;
                       }
                     }
@@ -250,7 +233,7 @@ final class ph extends ge {
                   if (param3 <= -98) {
                     break L16;
                   } else {
-                    discarded$7 = ph.a((byte) 46);
+                    ph.a((byte) 46);
                     break L16;
                   }
                 }
@@ -279,7 +262,7 @@ final class ph extends ge {
                 if (param3 <= -98) {
                   break L18;
                 } else {
-                  discarded$8 = ph.a((byte) 46);
+                  ph.a((byte) 46);
                   break L18;
                 }
               }
@@ -323,7 +306,7 @@ final class ph extends ge {
           if (param3 <= -98) {
             break L21;
           } else {
-            discarded$9 = ph.a((byte) 46);
+            ph.a((byte) 46);
             break L21;
           }
         }
@@ -338,30 +321,19 @@ final class ph extends ge {
 
     ph() {
         super(e.a(-106) ? 5 : 6, 160, 392, 152, 32);
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!e.a(-106)) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 6;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 6;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 5;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 5;
             break L0;
           }
         }
@@ -380,10 +352,8 @@ final class ph extends ge {
     }
 
     final void b(int param0, int param1) {
-        int var4 = 0;
+        int var4;
         int stackIn_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
         L0: {
           var4 = wizardrun.field_H;
           if (param0 < -123) {
@@ -425,12 +395,10 @@ final class ph extends ge {
                 if ((param1 ^ -1) == -3) {
                   L5: {
                     if (pk.field_s) {
-                      stackOut_23_0 = 0;
-                      stackIn_24_0 = stackOut_23_0;
+                      stackIn_24_0 = 0;
                       break L5;
                     } else {
-                      stackOut_22_0 = 1;
-                      stackIn_24_0 = stackOut_22_0;
+                      stackIn_24_0 = 1;
                       break L5;
                     }
                   }
@@ -489,23 +457,12 @@ final class ph extends ge {
     final static int a(int param0, CharSequence param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -516,35 +473,26 @@ final class ph extends ge {
                 break L1;
               }
             }
-            stackOut_2_0 = il.a(10, (byte) -83, param1, true);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = il.a(10, (byte) -83, param1, true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("ph.O(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("ph.O(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -554,7 +502,7 @@ final class ph extends ge {
     }
 
     final void a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
-        int var8 = 0;
+        int var8;
         L0: {
           var8 = wizardrun.field_H;
           if (param1 == 2) {
@@ -708,8 +656,6 @@ final class ph extends ge {
 
     final static boolean a(byte param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 > 12) {
           L0: {
             L1: {
@@ -719,14 +665,12 @@ final class ph extends ge {
                 if (-14 < (ri.field_a ^ -1)) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0 != 0;
@@ -736,16 +680,10 @@ final class ph extends ge {
     }
 
     final void a(int param0, int param1) {
-        int var4 = 0;
-        int stackIn_6_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
+        int var4;
         var4 = wizardrun.field_H;
         if (param0 != -6) {
           return;
@@ -768,20 +706,15 @@ final class ph extends ge {
                 if ((hc.field_o ^ -1) >= -1) {
                   L1: {
                     hc.field_o = 0;
-                    stackOut_5_0 = 1;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_6_0 = stackOut_5_0;
+                    stackIn_7_0 = 1;
+
                     if (tl.field_e) {
-                      stackOut_7_0 = stackIn_7_0;
-                      stackOut_7_1 = 0;
-                      stackIn_8_0 = stackOut_7_0;
-                      stackIn_8_1 = stackOut_7_1;
+                      stackIn_8_0 = stackIn_7_0;
+                      stackIn_8_1 = 0;
                       break L1;
                     } else {
-                      stackOut_6_0 = stackIn_6_0;
-                      stackOut_6_1 = 1;
-                      stackIn_8_0 = stackOut_6_0;
-                      stackIn_8_1 = stackOut_6_1;
+                      stackIn_8_0 = stackIn_7_0;
+                      stackIn_8_1 = 1;
                       break L1;
                     }
                   }

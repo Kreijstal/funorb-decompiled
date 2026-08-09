@@ -7,23 +7,16 @@ final class wp {
     static String[] field_b;
 
     final static boolean a(int param0) {
-        boolean discarded$8 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        boolean stackOut_6_0 = false;
-        int stackOut_3_0 = 0;
-        boolean stackOut_2_0 = false;
         if (param0 != -8798) {
           L0: {
-            discarded$8 = wp.a(108);
+            wp.a(108);
             if (null != ib.field_f) {
-              stackOut_7_0 = 1;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 1;
               break L0;
             } else {
-              stackOut_6_0 = ro.field_d;
-              stackIn_8_0 = stackOut_6_0 ? 1 : 0;
+              stackIn_8_0 = ro.field_d ? 1 : 0;
               break L0;
             }
           }
@@ -31,12 +24,10 @@ final class wp {
         } else {
           L1: {
             if (null != ib.field_f) {
-              stackOut_3_0 = 1;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 1;
               break L1;
             } else {
-              stackOut_2_0 = ro.field_d;
-              stackIn_4_0 = stackOut_2_0 ? 1 : 0;
+              stackIn_4_0 = ro.field_d ? 1 : 0;
               break L1;
             }
           }

@@ -15,18 +15,18 @@ final class fb extends l {
     int field_g;
 
     final static void a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        fa var4_ref_fa = null;
         int var4 = 0;
+        fa var4_ref_fa = null;
         Object var5 = null;
         int var6 = 0;
         cm var9 = null;
         hg var10 = null;
         byte[] var14 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {

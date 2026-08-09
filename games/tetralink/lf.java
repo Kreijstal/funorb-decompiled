@@ -14,15 +14,14 @@ final class lf {
     }
 
     final static oh[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7, int param8) {
-        oh[] discarded$1 = null;
-        int var9 = 0;
-        oh[] var10 = null;
-        oh[] var11_ref_oh__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        oh var13 = null;
-        int var14 = 0;
-        int var15 = 0;
+        int var9;
+        oh[] var10;
+        oh[] var11_ref_oh__;
+        int var11;
+        int var12;
+        oh var13;
+        int var14;
+        int var15;
         var15 = TetraLink.field_J;
         var9 = param4 + param5 - -param0;
         var10 = new oh[]{new oh(var9, var9), new oh(param6, var9), new oh(var9, var9), new oh(var9, param6), new oh(64, 64), new oh(var9, param6), new oh(var9, var9), new oh(param6, var9), new oh(var9, var9)};
@@ -41,7 +40,7 @@ final class lf {
                       if (param7 == -112) {
                         break L3;
                       } else {
-                        discarded$1 = lf.a(48, 126, 35, -60, 39, 14, -11, (byte) 26, 113);
+                        lf.a(48, 126, 35, -60, 39, 14, -11, (byte) 26, 113);
                         break L3;
                       }
                     }
@@ -91,7 +90,7 @@ final class lf {
                       if (var12 < var9) {
                         var10[0].field_C[var12 + var9 * var11] = param8;
                         var10[0].field_C[var9 * var12 - -var11] = param8;
-                        if (var12 < var9 + -var11) {
+                        if ((var12 ^ -1) > (var9 + -var11 ^ -1)) {
                           var10[2].field_C[var12 - -(var9 * var11)] = param8;
                           var10[6].field_C[var11 + var9 * var12] = param8;
                           var12++;

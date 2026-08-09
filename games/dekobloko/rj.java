@@ -7,10 +7,10 @@ final class rj extends eh {
     private java.awt.Component field_k;
 
     final void a(int param0, byte param1, int param2, java.awt.Component param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
-        java.awt.Graphics var8 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
+        java.awt.Graphics var8;
         if (param1 != 83) {
           var8 = (java.awt.Graphics) null;
           this.a((byte) -42, (java.awt.Graphics) null, -83, -93);
@@ -39,7 +39,7 @@ final class rj extends eh {
     }
 
     final void a(byte param0, java.awt.Graphics param1, int param2, int param3) {
-        boolean discarded$9 = param1.drawImage(this.field_c, param2, param3, (java.awt.image.ImageObserver) ((Object) this.field_k));
+        param1.drawImage(this.field_c, param2, param3, (java.awt.image.ImageObserver) ((Object) this.field_k));
         if (param0 <= 38) {
             java.awt.Graphics var6 = (java.awt.Graphics) null;
             this.a((byte) -30, (java.awt.Graphics) null, -118, 16);

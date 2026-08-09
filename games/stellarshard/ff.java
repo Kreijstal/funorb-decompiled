@@ -24,10 +24,10 @@ final class ff extends nh {
     }
 
     final static nj a(boolean param0, byte param1) {
-        int discarded$4 = 0;
-        String discarded$5 = null;
-        int discarded$6 = 0;
-        String discarded$7 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_9_0 = 0;
+        int[] stackIn_23_0 = null;
+        Throwable decompiledCaughtException = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -36,28 +36,16 @@ final class ff extends nh {
         int var8 = 0;
         ha var9 = null;
         od var10 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
-        int[] stackIn_23_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int[] stackOut_22_0 = null;
-        Object stackOut_21_0 = null;
         L0: {
           var8 = stellarshard.field_B;
           var9 = ae.field_N;
           var3 = var9.f(4);
           ii.field_J = var3 & 127;
           if ((var3 & 128) == 0) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -77,12 +65,10 @@ final class ff extends nh {
         }
         L2: {
           if (-2 != (var9.f(4) ^ -1)) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = 1;
             break L2;
           }
         }
@@ -100,15 +86,15 @@ final class ff extends nh {
         }
         L4: {
           if (-2 == (ii.field_J ^ -1)) {
-            discarded$4 = var9.c((byte) 105);
-            discarded$5 = var9.e((byte) 106);
+            var9.c((byte) 105);
+            var9.e((byte) 106);
             break L4;
           } else {
             if (ii.field_J != 4) {
               break L4;
             } else {
-              discarded$6 = var9.c((byte) 105);
-              discarded$7 = var9.e((byte) 106);
+              var9.c((byte) 105);
+              var9.e((byte) 106);
               break L4;
             }
           }
@@ -121,12 +107,10 @@ final class ff extends nh {
                 var10 = qh.field_e.a(32767, var6);
                 ug.field_b = var10.e(0);
                 if (!oe.field_d.equals(wf.field_b)) {
-                  stackOut_22_0 = var10.field_y;
-                  stackIn_23_0 = stackOut_22_0;
+                  stackIn_23_0 = var10.field_y;
                   break L6;
                 } else {
-                  stackOut_21_0 = null;
-                  stackIn_23_0 = (int[]) ((Object) stackOut_21_0);
+                  stackIn_23_0 = null;
                   break L6;
                 }
               }

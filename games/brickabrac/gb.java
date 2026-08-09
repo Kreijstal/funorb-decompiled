@@ -21,22 +21,11 @@ final class gb {
     boolean field_e;
 
     final static String a(CharSequence param0, int param1) {
-        StringBuilder discarded$1 = null;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        StringBuilder var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        StringBuilder discarded$0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_16_0 = null;
         Object stackIn_29_0 = null;
         String stackIn_31_0 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         RuntimeException stackIn_35_0 = null;
@@ -44,18 +33,15 @@ final class gb {
         String stackIn_35_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_30_0 = null;
-        Object stackOut_28_0 = null;
-        Object stackOut_15_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        StringBuilder var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -104,13 +90,11 @@ final class gb {
                       L6: while (true) {
                         if (var6 >= var3) {
                           if (0 != var5.length()) {
-                            stackOut_30_0 = var5.toString();
-                            stackIn_31_0 = stackOut_30_0;
+                            stackIn_31_0 = var5.toString();
                             decompiledRegionSelector0 = 3;
                             break L0;
                           } else {
-                            stackOut_28_0 = null;
-                            stackIn_29_0 = stackOut_28_0;
+                            stackIn_29_0 = null;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           }
@@ -120,7 +104,7 @@ final class gb {
                             if (m.a(true, (char) var7)) {
                               var8 = ah.a(207, (char) var7);
                               if (0 != var8) {
-                                discarded$1 = var5.append((char) var8);
+                                discarded$0 = var5.append((char) var8);
                                 break L7;
                               } else {
                                 break L7;
@@ -134,8 +118,7 @@ final class gb {
                         }
                       }
                     } else {
-                      stackOut_15_0 = null;
-                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_16_0 = null;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -145,8 +128,7 @@ final class gb {
                 }
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -155,27 +137,19 @@ final class gb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) (var2);
-            stackOut_32_1 = new StringBuilder().append("gb.C(");
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackIn_34_0 = (RuntimeException) (var2);
+
+            stackIn_34_1 = new StringBuilder().append("gb.C(");
+
             if (param0 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L8;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L8;
             }
           }
@@ -197,14 +171,13 @@ final class gb {
     }
 
     final int a(boolean param0) {
-        String discarded$2 = null;
-        CharSequence var3 = null;
+        CharSequence var3;
         L0: {
           if (param0) {
             break L0;
           } else {
             var3 = (CharSequence) null;
-            discarded$2 = gb.a((CharSequence) null, -7);
+            gb.a((CharSequence) null, -7);
             break L0;
           }
         }

@@ -8,7 +8,6 @@ final class hh {
     static boolean field_c;
 
     final static void a(int param0, aa param1) {
-        int[] discarded$0 = null;
         if (param1 == null) {
             return;
         }
@@ -16,7 +15,7 @@ final class hh {
             ji.field_n = param1;
             ql.field_L.field_M.c(0);
             if (param0 >= -17) {
-                discarded$0 = hh.a(76, 115, true);
+                hh.a(76, 115, true);
             }
             ql.field_L.b(ji.field_n, 121);
             pm.field_a = true;
@@ -38,7 +37,6 @@ final class hh {
     }
 
     final static String a(byte param0, int param1, ed param2) {
-        String discarded$2 = null;
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -47,24 +45,12 @@ final class hh {
         ed var6 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         Throwable decompiledCaughtException = null;
-        String stackOut_4_0 = null;
-        String stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             try {
@@ -74,7 +60,7 @@ final class hh {
                     break L2;
                   } else {
                     var6 = (ed) null;
-                    discarded$2 = hh.a((byte) 33, -101, (ed) null);
+                    hh.a((byte) 33, -101, (ed) null);
                     break L2;
                   }
                 }
@@ -90,15 +76,13 @@ final class hh {
                 var4 = new byte[var3_int];
                 param2.field_u = param2.field_u + ko.field_M.a(25330, var4, var3_int, param2.field_u, 0, param2.field_p);
                 var5 = mj.a(-125, var4, 0, var3_int);
-                stackOut_4_0 = (String) (var5);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (String) (var5);
                 break L1;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (Exception) (Object) decompiledCaughtException;
-              stackOut_6_0 = "Cabbage";
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = "Cabbage";
               return stackIn_7_0;
             }
             break L0;
@@ -107,27 +91,19 @@ final class hh {
           decompiledCaughtException = decompiledCaughtParameter1;
           L4: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3_ref);
-            stackOut_8_1 = new StringBuilder().append("hh.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3_ref);
+
+            stackIn_10_1 = new StringBuilder().append("hh.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }
@@ -137,14 +113,14 @@ final class hh {
     }
 
     final static int[] a(int param0, int param1, boolean param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         var3 = nf.a((byte) -28, param1);
         var4 = fk.a((byte) -118, param1);
         var5 = nf.a((byte) -28, param0);

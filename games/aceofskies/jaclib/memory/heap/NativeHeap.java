@@ -23,7 +23,7 @@ public final class NativeHeap {
     final synchronized native void deallocateBuffer(int param0);
 
     public final jaclib.memory.heap.NativeHeapBuffer a(int param0, boolean param1) {
-        RuntimeException var3 = null;
+        RuntimeException var3;
         if (!this.b) {
           throw new IllegalStateException();
         } else {

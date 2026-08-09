@@ -21,7 +21,7 @@ final class ue extends ne {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         L0: {
           L1: {
             var2 = 0;
@@ -98,8 +98,15 @@ final class ue extends ne {
     }
 
     final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        RuntimeException var9 = null;
+        RuntimeException stackIn_96_0 = null;
+        StringBuilder stackIn_96_1 = null;
+        RuntimeException stackIn_97_0 = null;
+        StringBuilder stackIn_97_1 = null;
+        String stackIn_97_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var9_int = 0;
+        RuntimeException var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -110,23 +117,6 @@ final class ue extends ne {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        RuntimeException stackIn_95_0 = null;
-        StringBuilder stackIn_95_1 = null;
-        RuntimeException stackIn_96_0 = null;
-        StringBuilder stackIn_96_1 = null;
-        RuntimeException stackIn_97_0 = null;
-        StringBuilder stackIn_97_1 = null;
-        String stackIn_97_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_94_0 = null;
-        StringBuilder stackOut_94_1 = null;
-        RuntimeException stackOut_96_0 = null;
-        StringBuilder stackOut_96_1 = null;
-        String stackOut_96_2 = null;
-        RuntimeException stackOut_95_0 = null;
-        StringBuilder stackOut_95_1 = null;
-        String stackOut_95_2 = null;
         var19 = DungeonAssault.field_K;
         try {
           L0: {
@@ -244,7 +234,7 @@ final class ue extends ne {
                               } else {
                                 L9: {
                                   var17 = var9_int >> -106614000;
-                                  if (var17 < re.field_b) {
+                                  if ((var17 ^ -1) > (re.field_b ^ -1)) {
                                     var18 = -(var9_int >> -7081648) + (var10 >> 599858320);
                                     if (var18 == 0) {
                                       if (0 > var17) {
@@ -299,7 +289,7 @@ final class ue extends ne {
                             } else {
                               L12: {
                                 var17 = var9_int >> -106614000;
-                                if (var17 < re.field_b) {
+                                if ((var17 ^ -1) > (re.field_b ^ -1)) {
                                   var18 = -(var9_int >> -7081648) + (var10 >> 599858320);
                                   if (var18 == 0) {
                                     if (0 > var17) {
@@ -451,27 +441,19 @@ final class ue extends ne {
           decompiledCaughtException = decompiledCaughtParameter0;
           L20: {
             var9 = decompiledCaughtException;
-            stackOut_94_0 = (RuntimeException) (var9);
-            stackOut_94_1 = new StringBuilder().append("ue.E(").append(param0).append(',');
-            stackIn_96_0 = stackOut_94_0;
-            stackIn_96_1 = stackOut_94_1;
-            stackIn_95_0 = stackOut_94_0;
-            stackIn_95_1 = stackOut_94_1;
+            stackIn_96_0 = (RuntimeException) (var9);
+
+            stackIn_96_1 = new StringBuilder().append("ue.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_96_0 = (RuntimeException) ((Object) stackIn_96_0);
-              stackOut_96_1 = (StringBuilder) ((Object) stackIn_96_1);
-              stackOut_96_2 = "null";
-              stackIn_97_0 = stackOut_96_0;
-              stackIn_97_1 = stackOut_96_1;
-              stackIn_97_2 = stackOut_96_2;
+              stackIn_97_0 = (RuntimeException) ((Object) stackIn_96_0);
+              stackIn_97_1 = (StringBuilder) ((Object) stackIn_96_1);
+              stackIn_97_2 = "null";
               break L20;
             } else {
-              stackOut_95_0 = (RuntimeException) ((Object) stackIn_95_0);
-              stackOut_95_1 = (StringBuilder) ((Object) stackIn_95_1);
-              stackOut_95_2 = "{...}";
-              stackIn_97_0 = stackOut_95_0;
-              stackIn_97_1 = stackOut_95_1;
-              stackIn_97_2 = stackOut_95_2;
+              stackIn_97_0 = (RuntimeException) ((Object) stackIn_96_0);
+              stackIn_97_1 = (StringBuilder) ((Object) stackIn_96_1);
+              stackIn_97_2 = "{...}";
               break L20;
             }
           }

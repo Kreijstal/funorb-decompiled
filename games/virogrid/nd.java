@@ -21,7 +21,7 @@ final class nd {
     }
 
     private final void a(int param0, int param1, int param2) {
-        int var4 = 0;
+        int var4;
         if (this.field_i >= param2) {
           if (this.field_f.length <= param2) {
             this.b((byte) -50, param2);
@@ -49,8 +49,8 @@ final class nd {
     }
 
     private final void b(byte param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         var4 = new int[this.a(0, param1)];
         var3 = var4;
         if (param0 != -50) {
@@ -79,7 +79,7 @@ final class nd {
     }
 
     final void a(byte param0, int param1) {
-        int var3 = 0;
+        int var3;
         if (-1 >= (param1 ^ -1)) {
           if (param1 > this.field_i) {
             throw new ArrayIndexOutOfBoundsException(param1);
@@ -116,8 +116,6 @@ final class nd {
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_2_0 = 0;
         var1_ref = w.field_L;
         synchronized (var1_ref) {
           L0: {
@@ -133,12 +131,10 @@ final class nd {
                   break L1;
                 }
               }
-              stackOut_6_0 = 1;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               return stackIn_3_0 != 0;
             }
           }
@@ -147,9 +143,8 @@ final class nd {
     }
 
     final int a(boolean param0) {
-        int discarded$0 = 0;
         if (param0) {
-            discarded$0 = this.a(71, (byte) 14);
+            this.a(71, (byte) 14);
             return 1 + this.field_i;
         }
         return 1 + this.field_i;
@@ -167,8 +162,8 @@ final class nd {
     }
 
     private final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = Virogrid.field_F ? 1 : 0;
         var3 = this.field_f.length;
         L0: while (true) {

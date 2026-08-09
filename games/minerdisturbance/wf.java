@@ -44,19 +44,19 @@ abstract class wf extends cc {
     }
 
     void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = MinerDisturbance.field_ab;
         eh.c(6 + param2, 35 + param1, this.field_v - 12, -40 + this.field_q, 2105376, 0);
         var5 = 211;
@@ -253,14 +253,13 @@ abstract class wf extends cc {
     }
 
     public static void g(byte param0) {
-        boolean discarded$0 = false;
         field_Y = (String[][]) null;
         field_P = null;
         field_V = null;
         field_N = null;
         field_Q = (String[][]) null;
         if (param0 != 87) {
-            discarded$0 = wf.q(-90);
+            wf.q(-90);
         }
         field_U = null;
     }

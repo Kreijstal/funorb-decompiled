@@ -49,10 +49,9 @@ final class ge extends no {
     }
 
     final boolean b(boolean param0) {
-        int discarded$0 = 0;
         if (param0) {
             StringBuilder var3 = (StringBuilder) null;
-            discarded$0 = this.a(61, (StringBuilder) null);
+            this.a(61, (StringBuilder) null);
         }
         return ck.field_m[this.field_i];
     }
@@ -61,8 +60,6 @@ final class ge extends no {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -70,26 +67,14 @@ final class ge extends no {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0 >= 79) {
-              stackOut_3_0 = 139 * this.field_y - -131 << -1763036443 ^ super.a(121, param1);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 139 * this.field_y - -131 << -1763036443 ^ super.a(121, param1);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = -19;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = -19;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -98,27 +83,19 @@ final class ge extends no {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("ge.A(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("ge.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -132,9 +109,16 @@ final class ge extends no {
     }
 
     final void a(j param0, byte param1) {
+        RuntimeException stackIn_80_0 = null;
+        StringBuilder stackIn_80_1 = null;
+        RuntimeException stackIn_81_0 = null;
+        StringBuilder stackIn_81_1 = null;
+        String stackIn_81_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         Object var3 = null;
-        RuntimeException var3_ref = null;
-        vn var3_ref2 = null;
+        vn var3_ref = null;
+        RuntimeException var3_ref2 = null;
         int var4 = 0;
         vn var5 = null;
         int var5_int = 0;
@@ -146,23 +130,6 @@ final class ge extends no {
         vn var11 = null;
         vn var12 = null;
         vn var13 = null;
-        RuntimeException stackIn_79_0 = null;
-        StringBuilder stackIn_79_1 = null;
-        RuntimeException stackIn_80_0 = null;
-        StringBuilder stackIn_80_1 = null;
-        RuntimeException stackIn_81_0 = null;
-        StringBuilder stackIn_81_1 = null;
-        String stackIn_81_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_78_0 = null;
-        StringBuilder stackOut_78_1 = null;
-        RuntimeException stackOut_80_0 = null;
-        StringBuilder stackOut_80_1 = null;
-        String stackOut_80_2 = null;
-        RuntimeException stackOut_79_0 = null;
-        StringBuilder stackOut_79_1 = null;
-        String stackOut_79_2 = null;
         var3 = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
@@ -187,7 +154,7 @@ final class ge extends no {
                                   break L2;
                                 } else {
                                   var12 = (vn) ((Object) param0.field_gb.d(-63));
-                                  var3_ref2 = var12;
+                                  var3_ref = var12;
                                   var4 = (31457280 + -(var12.field_m << 512207880)) / var12.field_o;
                                   var5 = (vn) ((Object) param0.field_gb.d(-8));
                                   L3: while (true) {
@@ -200,9 +167,9 @@ final class ge extends no {
                                         var6 = (31457280 + -(var5.field_m << -1250615224)) / var5.field_o;
                                         if (var4 <= var6) {
                                           if (var6 > var4) {
-                                            var3_ref2.b((byte) 111);
+                                            var3_ref.b((byte) 111);
                                             var4 = var6;
-                                            var3_ref2 = var5;
+                                            var3_ref = var5;
                                             break L4;
                                           } else {
                                             break L4;
@@ -226,11 +193,11 @@ final class ge extends no {
                                     param0.field_K.c((byte) -62);
                                     break L5;
                                   } else {
-                                    var3_ref2 = (vn) ((Object) param0.field_K.d(param1 + -108));
-                                    var3_ref2.field_C = 0;
-                                    var3_ref2.field_v = 0;
+                                    var3_ref = (vn) ((Object) param0.field_K.d(param1 + -108));
+                                    var3_ref.field_C = 0;
+                                    var3_ref.field_v = 0;
                                     param0.field_K.c((byte) -63);
-                                    param0.field_K.a(var3_ref2, (byte) 3);
+                                    param0.field_K.a(var3_ref, (byte) 3);
                                     break L5;
                                   }
                                 }
@@ -306,13 +273,13 @@ final class ge extends no {
                                           } else {
                                             if (17 != this.field_i) {
                                               if (18 == this.field_i) {
-                                                var3_ref2 = (vn) ((Object) param0.field_gb.d(-73));
+                                                var3_ref = (vn) ((Object) param0.field_gb.d(-73));
                                                 L10: while (true) {
-                                                  if (var3_ref2 == null) {
+                                                  if (var3_ref == null) {
                                                     break L1;
                                                   } else {
-                                                    var3_ref2.field_C = var3_ref2.field_C + 40;
-                                                    var3_ref2 = (vn) ((Object) param0.field_gb.a((byte) 116));
+                                                    var3_ref.field_C = var3_ref.field_C + 40;
+                                                    var3_ref = (vn) ((Object) param0.field_gb.a((byte) 116));
                                                     continue L10;
                                                   }
                                                 }
@@ -325,22 +292,22 @@ final class ge extends no {
                                             }
                                           }
                                         } else {
-                                          var3_ref2 = (vn) ((Object) param0.field_K.d(-30));
+                                          var3_ref = (vn) ((Object) param0.field_K.d(-30));
                                           L11: while (true) {
-                                            if (var3_ref2 == null) {
-                                              var3_ref2 = (vn) ((Object) param0.field_gb.d(-88));
+                                            if (var3_ref == null) {
+                                              var3_ref = (vn) ((Object) param0.field_gb.d(-88));
                                               L12: while (true) {
-                                                if (var3_ref2 == null) {
+                                                if (var3_ref == null) {
                                                   break L1;
                                                 } else {
-                                                  var3_ref2.b(-128, 150);
-                                                  var3_ref2 = (vn) ((Object) param0.field_gb.a((byte) 116));
+                                                  var3_ref.b(-128, 150);
+                                                  var3_ref = (vn) ((Object) param0.field_gb.a((byte) 116));
                                                   continue L12;
                                                 }
                                               }
                                             } else {
-                                              var3_ref2.b(param1 + -150, 150);
-                                              var3_ref2 = (vn) ((Object) param0.field_K.a((byte) 116));
+                                              var3_ref.b(param1 + -150, 150);
+                                              var3_ref = (vn) ((Object) param0.field_K.a((byte) 116));
                                               continue L11;
                                             }
                                           }
@@ -352,13 +319,13 @@ final class ge extends no {
                                     }
                                   }
                                 } else {
-                                  var3_ref2 = (vn) ((Object) param0.field_gb.d(-54));
+                                  var3_ref = (vn) ((Object) param0.field_gb.d(-54));
                                   L13: while (true) {
-                                    if (var3_ref2 == null) {
+                                    if (var3_ref == null) {
                                       break L1;
                                     } else {
-                                      var3_ref2.c(512, 128);
-                                      var3_ref2 = (vn) ((Object) param0.field_gb.a((byte) 116));
+                                      var3_ref.c(512, 128);
+                                      var3_ref = (vn) ((Object) param0.field_gb.a((byte) 116));
                                       continue L13;
                                     }
                                   }
@@ -382,22 +349,22 @@ final class ge extends no {
                       break L1;
                     }
                   } else {
-                    var3_ref2 = (vn) ((Object) param0.field_K.d(-75));
+                    var3_ref = (vn) ((Object) param0.field_K.d(-75));
                     L14: while (true) {
-                      if (var3_ref2 == null) {
-                        var3_ref2 = (vn) ((Object) param0.field_gb.d(-9));
+                      if (var3_ref == null) {
+                        var3_ref = (vn) ((Object) param0.field_gb.d(-9));
                         L15: while (true) {
-                          if (var3_ref2 == null) {
+                          if (var3_ref == null) {
                             break L1;
                           } else {
-                            var3_ref2.a((byte) 40, 150);
-                            var3_ref2 = (vn) ((Object) param0.field_gb.a((byte) 116));
+                            var3_ref.a((byte) 40, 150);
+                            var3_ref = (vn) ((Object) param0.field_gb.a((byte) 116));
                             continue L15;
                           }
                         }
                       } else {
-                        var3_ref2.a((byte) 40, 150);
-                        var3_ref2 = (vn) ((Object) param0.field_K.a((byte) 116));
+                        var3_ref.a((byte) 40, 150);
+                        var3_ref = (vn) ((Object) param0.field_K.a((byte) 116));
                         continue L14;
                       }
                     }
@@ -425,28 +392,20 @@ final class ge extends no {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
-            var3_ref = decompiledCaughtException;
-            stackOut_78_0 = (RuntimeException) (var3_ref);
-            stackOut_78_1 = new StringBuilder().append("ge.C(");
-            stackIn_80_0 = stackOut_78_0;
-            stackIn_80_1 = stackOut_78_1;
-            stackIn_79_0 = stackOut_78_0;
-            stackIn_79_1 = stackOut_78_1;
+            var3_ref2 = decompiledCaughtException;
+            stackIn_80_0 = (RuntimeException) (var3_ref2);
+
+            stackIn_80_1 = new StringBuilder().append("ge.C(");
+
             if (param0 == null) {
-              stackOut_80_0 = (RuntimeException) ((Object) stackIn_80_0);
-              stackOut_80_1 = (StringBuilder) ((Object) stackIn_80_1);
-              stackOut_80_2 = "null";
-              stackIn_81_0 = stackOut_80_0;
-              stackIn_81_1 = stackOut_80_1;
-              stackIn_81_2 = stackOut_80_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+              stackIn_81_2 = "null";
               break L17;
             } else {
-              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
-              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
-              stackOut_79_2 = "{...}";
-              stackIn_81_0 = stackOut_79_0;
-              stackIn_81_1 = stackOut_79_1;
-              stackIn_81_2 = stackOut_79_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+              stackIn_81_2 = "{...}";
               break L17;
             }
           }

@@ -8,9 +8,9 @@ final class ia {
 
     final static void a(byte param0) {
         ml var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -71,10 +71,9 @@ final class ia {
     }
 
     final static void a(int param0) {
-        Object var1 = null;
         int var2 = 0;
-        Throwable var3 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         var1 = pj.field_G;
         synchronized (var1) {
           L0: {

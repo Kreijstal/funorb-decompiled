@@ -12,17 +12,17 @@ final class oc {
     int field_a;
 
     final static ut c(byte param0) {
-        int var1 = 0;
-        Object var3 = null;
-        int var5 = 0;
-        int[] var5_ref_int__ = null;
-        int var6 = 0;
-        int var7 = 0;
-        int[] var9 = null;
-        int[] var11 = null;
-        int[] var13 = null;
-        byte[] var16 = null;
-        byte[] var17 = null;
+        int var1;
+        Object var3;
+        int[] var5_ref_int__;
+        int var5;
+        int var6;
+        int var7;
+        int[] var9;
+        int[] var11;
+        int[] var13;
+        byte[] var16;
+        byte[] var17;
         var7 = Kickabout.field_G;
         var1 = ku.field_c[0] * lo.field_j[0];
         if (param0 != 75) {
@@ -67,12 +67,11 @@ final class oc {
     }
 
     final static void a(byte param0) {
-        ut discarded$2 = null;
         nn.field_D = false;
         pg.field_a = null;
         cg.field_E = null;
         if (param0 >= -10) {
-          discarded$2 = oc.c((byte) -42);
+          oc.c((byte) -42);
           dn.field_Eb = null;
           pn.field_D = null;
           return;
@@ -84,9 +83,8 @@ final class oc {
     }
 
     public static void b(byte param0) {
-        ut discarded$0 = null;
         if (param0 > -48) {
-            discarded$0 = oc.c((byte) 119);
+            oc.c((byte) 119);
             field_b = null;
             field_f = null;
             return;

@@ -11,7 +11,6 @@ class df extends qm implements a {
     static ab field_z;
 
     final boolean b(int param0, qm param1) {
-        pg discarded$2 = null;
         RuntimeException var3 = null;
         qm var4 = null;
         oc var5 = null;
@@ -21,8 +20,6 @@ class df extends qm implements a {
         int stackIn_4_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -30,23 +27,11 @@ class df extends qm implements a {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_14_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
             if (this.field_B.b(true)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -62,23 +47,21 @@ class df extends qm implements a {
               }
               L2: while (true) {
                 if (var4 == null) {
-                  stackOut_18_0 = 0;
-                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_0 = 0;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   L3: {
                     if (var4.d(-2116)) {
                       var5 = new oc(this.field_B);
-                      discarded$2 = var5.a(false, var4);
+                      var5.a(false, var4);
                       var6 = (qm) ((Object) var5.d(-18502));
                       L4: while (true) {
                         if (var6 == null) {
                           break L3;
                         } else {
                           if (var6.a(0, param1)) {
-                            stackOut_14_0 = 1;
-                            stackIn_15_0 = stackOut_14_0;
+                            stackIn_15_0 = 1;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           } else {
@@ -101,27 +84,19 @@ class df extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var3);
-            stackOut_20_1 = new StringBuilder().append("df.TB(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var3);
+
+            stackIn_22_1 = new StringBuilder().append("df.TB(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L5;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L5;
             }
           }
@@ -147,8 +122,6 @@ class df extends qm implements a {
         int stackIn_7_0 = 0;
         boolean stackIn_14_0 = false;
         int stackIn_18_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -156,18 +129,6 @@ class df extends qm implements a {
         String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        boolean stackOut_13_0 = false;
-        boolean stackOut_12_0 = false;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -188,8 +149,7 @@ class df extends qm implements a {
                         if (!var8.a(param0, (byte) -122, param2, param3)) {
                           break L3;
                         } else {
-                          stackOut_6_0 = 1;
-                          stackIn_7_0 = stackOut_6_0;
+                          stackIn_7_0 = 1;
                           decompiledRegionSelector0 = 0;
                           break L0;
                         }
@@ -204,12 +164,10 @@ class df extends qm implements a {
               if ((var6 ^ -1) == -81) {
                 L4: {
                   if (ri.field_b[81]) {
-                    stackOut_13_0 = this.a(param0, 9555);
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = this.a(param0, 9555);
                     break L4;
                   } else {
-                    stackOut_12_0 = this.b(2, param0);
-                    stackIn_14_0 = stackOut_12_0;
+                    stackIn_14_0 = this.b(2, param0);
                     break L4;
                   }
                 }
@@ -217,8 +175,7 @@ class df extends qm implements a {
                 break L0;
               } else {
                 if (param1 < -120) {
-                  stackOut_17_0 = 0;
-                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_18_0 = 0;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -232,27 +189,19 @@ class df extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var5);
-            stackOut_19_1 = new StringBuilder().append("df.N(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var5);
+
+            stackIn_21_1 = new StringBuilder().append("df.N(");
+
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L5;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L5;
             }
           }
@@ -301,46 +250,23 @@ class df extends qm implements a {
     }
 
     private final void a(Hashtable param0, int param1, StringBuilder param2, boolean param3) {
-        StringBuilder discarded$12 = null;
-        StringBuilder discarded$13 = null;
-        StringBuilder discarded$14 = null;
-        RuntimeException var5 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
         qm var6 = null;
         int var7 = 0;
         int var8 = 0;
         qm var9 = null;
         oc var10 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var5 = null;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -359,15 +285,15 @@ class df extends qm implements a {
               if (var6 == null) {
                 break L0;
               } else {
-                discarded$12 = param2.append('\n');
+                discarded$3 = param2.append('\n');
                 var7 = 0;
                 L3: while (true) {
                   if (param1 < var7) {
-                    discarded$13 = var6.a(param2, param1 - -1, param0, (byte) 113);
+                    var6.a(param2, param1 - -1, param0, (byte) 113);
                     var6 = (qm) ((Object) var10.d(-18502));
                     continue L2;
                   } else {
-                    discarded$14 = param2.append(' ');
+                    discarded$4 = param2.append(' ');
                     var7++;
                     continue L3;
                   }
@@ -379,63 +305,47 @@ class df extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var5);
-            stackOut_10_1 = new StringBuilder().append("df.LB(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var5);
+
+            stackIn_12_1 = new StringBuilder().append("df.LB(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
           L5: {
-            stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ',' + param3 + ')');
         }
     }
 
     qm e(int param0) {
-        oc var2 = null;
-        qm var3 = null;
-        int var4 = 0;
+        oc var2;
+        qm var3;
+        int var4;
         L0: {
           var4 = ArcanistsMulti.field_G ? 1 : 0;
           if (param0 == 852710177) {
@@ -469,8 +379,6 @@ class df extends qm implements a {
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_12_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -478,17 +386,6 @@ class df extends qm implements a {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -497,20 +394,17 @@ class df extends qm implements a {
             L1: while (true) {
               if (var4 == null) {
                 if (param0 == 0) {
-                  stackOut_11_0 = 0;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = 0;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  stackOut_9_0 = 1;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = 1;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
               } else {
                 if (var4.a(0, param1)) {
-                  stackOut_5_0 = 1;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -524,27 +418,19 @@ class df extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3_ref);
-            stackOut_13_1 = new StringBuilder().append("df.A(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3_ref);
+
+            stackIn_15_1 = new StringBuilder().append("df.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L2;
             }
           }
@@ -603,15 +489,13 @@ class df extends qm implements a {
     }
 
     boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
-        oc var8 = null;
-        RuntimeException var8_ref = null;
+        RuntimeException var8 = null;
         int var9 = 0;
         qm var10 = null;
         int var11 = 0;
+        oc var12 = null;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -619,22 +503,12 @@ class df extends qm implements a {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_9_0 = 0;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
             var9 = 67 / ((-42 - param4) / 35);
-            var8 = new oc(this.field_B);
-            var10 = (qm) ((Object) var8.b(-46));
+            var12 = new oc(this.field_B);
+            var10 = (qm) ((Object) var12.b(-46));
             L1: while (true) {
               L2: {
                 if (var10 == null) {
@@ -644,19 +518,17 @@ class df extends qm implements a {
                     break L2;
                   } else {
                     if (var10.a(param0, param1, param2, param3 - -this.field_j, 89, param5, this.field_n + param6)) {
-                      stackOut_6_0 = 1;
-                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_7_0 = 1;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     } else {
-                      var10 = (qm) ((Object) var8.d(-18502));
+                      var10 = (qm) ((Object) var12.d(-18502));
                       continue L1;
                     }
                   }
                 }
               }
-              stackOut_9_0 = 0;
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -664,28 +536,20 @@ class df extends qm implements a {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var8_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var8_ref);
-            stackOut_11_1 = new StringBuilder().append("df.DA(").append(param0).append(',').append(param1).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            var8 = decompiledCaughtException;
+            stackIn_13_0 = (RuntimeException) (var8);
+
+            stackIn_13_1 = new StringBuilder().append("df.DA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -699,24 +563,28 @@ class df extends qm implements a {
     }
 
     void a(int param0, int param1, int param2, int param3, int param4) {
-        StringBuilder discarded$0 = null;
         super.a(param0, param1, param2, param3, -125);
         this.f(-28475);
         if (param4 >= -49) {
             Hashtable var7 = (Hashtable) null;
-            discarded$0 = this.a((StringBuilder) null, 92, (Hashtable) null, (byte) 58);
+            this.a((StringBuilder) null, 92, (Hashtable) null, (byte) 58);
         }
     }
 
     final static void d(boolean param0) {
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        fj stackIn_54_0 = null;
+        fj stackIn_55_0 = null;
+        int stackIn_55_1 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        rf var4 = null;
-        fj var4_ref = null;
+        fj var4 = null;
+        rf var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -740,17 +608,6 @@ class df extends qm implements a {
         ab var27 = null;
         long[][] var34 = null;
         int[][] var35 = null;
-        fj stackIn_53_0 = null;
-        fj stackIn_54_0 = null;
-        fj stackIn_55_0 = null;
-        int stackIn_55_1 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        fj stackOut_52_0 = null;
-        fj stackOut_54_0 = null;
-        int stackOut_54_1 = 0;
-        fj stackOut_53_0 = null;
-        int stackOut_53_1 = 0;
         var26 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -765,40 +622,36 @@ class df extends qm implements a {
                     break L1;
                   } else {
                     var3 = var27.n(-98);
-                    var4_ref = (fj) ((Object) me.field_O.b(12623));
+                    var27.c(-943038560);
+                    var4 = (fj) ((Object) me.field_O.b(12623));
                     L2: while (true) {
                       L3: {
-                        if (var4_ref == null) {
+                        if (var4 == null) {
                           break L3;
                         } else {
-                          if (var3 == var4_ref.field_k) {
+                          if (var3 == var4.field_k) {
                             break L3;
                           } else {
-                            var4_ref = (fj) ((Object) me.field_O.a(0));
+                            var4 = (fj) ((Object) me.field_O.a(0));
                             continue L2;
                           }
                         }
                       }
-                      if (var4_ref == null) {
+                      if (var4 == null) {
                         ka.b(false);
                         decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
                         L4: {
-                          stackOut_52_0 = (fj) (var4_ref);
-                          stackIn_54_0 = stackOut_52_0;
-                          stackIn_53_0 = stackOut_52_0;
+                          stackIn_54_0 = (fj) (var4);
+
                           if (param0) {
-                            stackOut_54_0 = (fj) ((Object) stackIn_54_0);
-                            stackOut_54_1 = 0;
-                            stackIn_55_0 = stackOut_54_0;
-                            stackIn_55_1 = stackOut_54_1;
+                            stackIn_55_0 = (fj) ((Object) stackIn_54_0);
+                            stackIn_55_1 = 0;
                             break L4;
                           } else {
-                            stackOut_53_0 = (fj) ((Object) stackIn_53_0);
-                            stackOut_53_1 = 1;
-                            stackIn_55_0 = stackOut_53_0;
-                            stackIn_55_1 = stackOut_53_1;
+                            stackIn_55_0 = (fj) ((Object) stackIn_54_0);
+                            stackIn_55_1 = 1;
                             break L4;
                           }
                         }
@@ -809,30 +662,30 @@ class df extends qm implements a {
                   }
                 } else {
                   var3 = var27.n(-98);
-                  var4 = (rf) ((Object) ef.field_u.b(12623));
+                  var4_ref = (rf) ((Object) ef.field_u.b(12623));
                   L5: while (true) {
                     L6: {
-                      if (var4 == null) {
+                      if (var4_ref == null) {
                         break L6;
                       } else {
-                        if (var3 == var4.field_i) {
+                        if (var3 == var4_ref.field_i) {
                           break L6;
                         } else {
-                          var4 = (rf) ((Object) ef.field_u.a(0));
+                          var4_ref = (rf) ((Object) ef.field_u.a(0));
                           continue L5;
                         }
                       }
                     }
-                    if (var4 == null) {
+                    if (var4_ref == null) {
                       ka.b(false);
                       decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       var5 = var27.e((byte) 112);
                       if (var5 != 0) {
-                        var6 = var4.field_m;
+                        var6 = var4_ref.field_m;
                         lc.field_q[0].field_e = ah.field_b;
-                        var7 = var4.field_h;
+                        var7 = var4_ref.field_h;
                         lc.field_q[0].field_j = false;
                         lc.field_q[0].field_f = null;
                         var8_int = 1;
@@ -868,9 +721,9 @@ class df extends qm implements a {
                                           var12++;
                                           break L9;
                                         } else {
-                                          incrementValue$3 = var15;
+                                          incrementValue$0 = var15;
                                           var15++;
-                                          var35[0][incrementValue$3] = var27.d(-10674);
+                                          var35[0][incrementValue$0] = var27.d(-10674);
                                           var25++;
                                           continue L10;
                                         }
@@ -896,9 +749,9 @@ class df extends qm implements a {
                                           if (var7 <= var25) {
                                             break L11;
                                           } else {
-                                            incrementValue$4 = var16;
+                                            incrementValue$1 = var16;
                                             var16++;
-                                            var35[1][incrementValue$4] = var27.d(-10674);
+                                            var35[1][incrementValue$1] = var27.d(-10674);
                                             var25++;
                                             continue L12;
                                           }
@@ -924,9 +777,9 @@ class df extends qm implements a {
                                           if (var25 >= var7) {
                                             break L13;
                                           } else {
-                                            incrementValue$5 = var17;
+                                            incrementValue$2 = var17;
                                             var17++;
-                                            var35[2][incrementValue$5] = var27.d(-10674);
+                                            var35[2][incrementValue$2] = var27.d(-10674);
                                             var25++;
                                             continue L14;
                                           }
@@ -937,12 +790,12 @@ class df extends qm implements a {
                                   var19++;
                                   continue L8;
                                 } else {
-                                  var4.a(true);
+                                  var4_ref.a(true);
                                   break L1;
                                 }
                               }
                             } else {
-                              var4.a(true);
+                              var4_ref.a(true);
                               break L1;
                             }
                           } else {
@@ -962,7 +815,7 @@ class df extends qm implements a {
                           }
                         }
                       } else {
-                        var4.a(true);
+                        var4_ref.a(true);
                         break L1;
                       }
                     }
@@ -997,10 +850,10 @@ class df extends qm implements a {
     }
 
     String b(boolean param0) {
-        oc var2 = null;
-        qm var3 = null;
-        String var4 = null;
-        int var5 = 0;
+        oc var2;
+        qm var3;
+        String var4;
+        int var5;
         L0: {
           var5 = ArcanistsMulti.field_G ? 1 : 0;
           if (!param0) {
@@ -1049,25 +902,15 @@ class df extends qm implements a {
 
     void a(qm param0, int param1, int param2, int param3) {
         oc var5 = null;
-        RuntimeException var5_ref = null;
         qm var6 = null;
         int var7 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var5_ref = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -1095,27 +938,19 @@ class df extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5_ref);
-            stackOut_6_1 = new StringBuilder().append("df.E(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5_ref);
+
+            stackIn_8_1 = new StringBuilder().append("df.E(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -1143,38 +978,15 @@ class df extends qm implements a {
         int var5_int = 0;
         RuntimeException var5 = null;
         StringBuilder stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        StringBuilder stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -1187,89 +999,62 @@ class df extends qm implements a {
                 break L1;
               }
             }
-            stackOut_2_0 = (StringBuilder) (param0);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (StringBuilder) (param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var5);
-            stackOut_4_1 = new StringBuilder().append("df.FA(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var5);
+
+            stackIn_6_1 = new StringBuilder().append("df.FA(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+
+
+            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ',' + param3 + ')');
         }
         return stackIn_3_0;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, qm param5) {
         oc var7 = null;
-        RuntimeException var7_ref = null;
         qm var8 = null;
         int var9 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var7_ref = null;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -1304,27 +1089,19 @@ class df extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var7_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var7_ref);
-            stackOut_8_1 = new StringBuilder().append("df.IA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var7_ref);
+
+            stackIn_10_1 = new StringBuilder().append("df.IA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }
@@ -1342,7 +1119,6 @@ class df extends qm implements a {
     }
 
     final boolean a(qm param0, int param1) {
-        pg discarded$2 = null;
         RuntimeException var3 = null;
         qm var4 = null;
         oc var5 = null;
@@ -1352,8 +1128,6 @@ class df extends qm implements a {
         int stackIn_4_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_20_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -1361,23 +1135,11 @@ class df extends qm implements a {
         String stackIn_24_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_15_0 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
             if (this.field_B.b(true)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -1393,23 +1155,21 @@ class df extends qm implements a {
               var4 = (qm) ((Object) var8.c(114));
               L2: while (true) {
                 if (var4 == null) {
-                  stackOut_19_0 = 0;
-                  stackIn_20_0 = stackOut_19_0;
+                  stackIn_20_0 = 0;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   L3: {
                     if (var4.d(param1 + -11671)) {
                       var5 = new oc(this.field_B);
-                      discarded$2 = var5.a(402, var4);
+                      var5.a(402, var4);
                       var6 = (qm) ((Object) var5.c(true));
                       L4: while (true) {
                         if (var6 == null) {
                           break L3;
                         } else {
                           if (var6.a(param1 + -9555, param0)) {
-                            stackOut_15_0 = 1;
-                            stackIn_16_0 = stackOut_15_0;
+                            stackIn_16_0 = 1;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           } else {
@@ -1432,27 +1192,19 @@ class df extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var3);
-            stackOut_21_1 = new StringBuilder().append("df.PB(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var3);
+
+            stackIn_23_1 = new StringBuilder().append("df.PB(");
+
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L5;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L5;
             }
           }
@@ -1470,15 +1222,12 @@ class df extends qm implements a {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, qm param6) {
-        qm discarded$2 = null;
         oc var8 = null;
         RuntimeException var8_ref = null;
         qm var9 = null;
         int var10 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -1486,16 +1235,6 @@ class df extends qm implements a {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_11_0 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         var10 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -1503,7 +1242,7 @@ class df extends qm implements a {
               if (param5 == 0) {
                 break L1;
               } else {
-                discarded$2 = this.e(117);
+                this.e(117);
                 break L1;
               }
             }
@@ -1524,8 +1263,7 @@ class df extends qm implements a {
                         if (!var9.a(param0, param1, param2, param3, param4, 0, param6)) {
                           break L4;
                         } else {
-                          stackOut_8_0 = 1;
-                          stackIn_9_0 = stackOut_8_0;
+                          stackIn_9_0 = 1;
                           decompiledRegionSelector0 = 0;
                           break L0;
                         }
@@ -1536,8 +1274,7 @@ class df extends qm implements a {
                   }
                 }
               }
-              stackOut_11_0 = 0;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -1546,27 +1283,19 @@ class df extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var8_ref);
-            stackOut_13_1 = new StringBuilder().append("df.HA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var8_ref);
+
+            stackIn_15_1 = new StringBuilder().append("df.HA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+
             if (param6 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }

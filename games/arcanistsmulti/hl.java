@@ -11,8 +11,9 @@ final class hl extends pg {
     wk field_j;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -32,7 +33,6 @@ final class hl extends pg {
         int var22 = 0;
         int[] var23 = null;
         int[] var24 = null;
-        RuntimeException decompiledCaughtException = null;
         var22 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -99,7 +99,7 @@ final class hl extends pg {
                       var12 = var16 - param1;
                       var13 = -param0 + var15;
                       var14 = var13 * var13 + var12 * var12;
-                      if (var14 < var5_int) {
+                      if ((var14 ^ -1) > (var5_int ^ -1)) {
                         L9: {
                           if (var14 != 0) {
                             break L9;

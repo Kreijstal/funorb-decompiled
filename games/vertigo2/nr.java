@@ -20,23 +20,16 @@ final class nr extends tb implements ef {
     }
 
     public final boolean d(int param0, int param1) {
-        int[] discarded$14 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 > -114) {
           L0: {
-            discarded$14 = this.a(0.3591744601726532f, 110, 81);
+            this.a(0.3591744601726532f, 110, 81);
             if (this.e(param1, -1).field_a) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -44,12 +37,10 @@ final class nr extends tb implements ef {
         } else {
           L1: {
             if (this.e(param1, -1).field_a) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -79,9 +70,8 @@ final class nr extends tb implements ef {
     }
 
     private final ta a(int param0, byte param1) {
-        int[] discarded$1 = null;
-        ta var3 = null;
-        byte[] var4 = null;
+        ta var3;
+        byte[] var4;
         var3 = (ta) ((Object) this.field_n.a((long)param0, false));
         if (var3 == null) {
           var4 = this.field_j.a(param0, 0, (byte) -126);
@@ -94,7 +84,7 @@ final class nr extends tb implements ef {
               return var3;
             }
           } else {
-            discarded$1 = this.a(1.1444469690322876f, -2, -78);
+            this.a(1.1444469690322876f, -2, -78);
             if (var4 == null) {
               return null;
             } else {
@@ -109,93 +99,27 @@ final class nr extends tb implements ef {
     }
 
     public final int[] a(float param0, int param1, int param2) {
-        ta var4 = null;
-        ta stackIn_3_0 = null;
-        Object stackIn_3_1 = null;
-        r stackIn_3_2 = null;
-        float stackIn_3_3 = 0.0f;
-        ta stackIn_4_0 = null;
-        Object stackIn_4_1 = null;
-        r stackIn_4_2 = null;
-        float stackIn_4_3 = 0.0f;
-        ta stackIn_5_0 = null;
-        Object stackIn_5_1 = null;
-        r stackIn_5_2 = null;
-        float stackIn_5_3 = 0.0f;
-        ta stackIn_6_0 = null;
-        Object stackIn_6_1 = null;
-        r stackIn_6_2 = null;
-        float stackIn_6_3 = 0.0f;
+        ta stackIn_5_0;
+        Object stackIn_5_1;
+        r stackIn_5_2;
+        float stackIn_5_3;
+        Object stackIn_6_1;
         ta stackIn_7_0 = null;
         Object stackIn_7_1 = null;
         r stackIn_7_2 = null;
         float stackIn_7_3 = 0.0f;
         int stackIn_7_4 = 0;
-        ta stackIn_12_0 = null;
-        Object stackIn_12_1 = null;
-        r stackIn_12_2 = null;
-        float stackIn_12_3 = 0.0f;
-        ta stackIn_13_0 = null;
-        Object stackIn_13_1 = null;
-        r stackIn_13_2 = null;
-        float stackIn_13_3 = 0.0f;
-        ta stackIn_14_0 = null;
-        Object stackIn_14_1 = null;
-        r stackIn_14_2 = null;
-        float stackIn_14_3 = 0.0f;
-        ta stackIn_15_0 = null;
-        Object stackIn_15_1 = null;
-        r stackIn_15_2 = null;
-        float stackIn_15_3 = 0.0f;
+        ta stackIn_14_0;
+        Object stackIn_14_1;
+        r stackIn_14_2;
+        float stackIn_14_3;
+        Object stackIn_15_1;
         ta stackIn_16_0 = null;
         Object stackIn_16_1 = null;
         r stackIn_16_2 = null;
         float stackIn_16_3 = 0.0f;
         int stackIn_16_4 = 0;
-        ta stackOut_11_0 = null;
-        Object stackOut_11_1 = null;
-        r stackOut_11_2 = null;
-        float stackOut_11_3 = 0.0f;
-        ta stackOut_12_0 = null;
-        Object stackOut_12_1 = null;
-        r stackOut_12_2 = null;
-        float stackOut_12_3 = 0.0f;
-        ta stackOut_15_0 = null;
-        Object stackOut_15_1 = null;
-        r stackOut_15_2 = null;
-        float stackOut_15_3 = 0.0f;
-        int stackOut_15_4 = 0;
-        ta stackOut_13_0 = null;
-        Object stackOut_13_1 = null;
-        r stackOut_13_2 = null;
-        float stackOut_13_3 = 0.0f;
-        ta stackOut_14_0 = null;
-        Object stackOut_14_1 = null;
-        r stackOut_14_2 = null;
-        float stackOut_14_3 = 0.0f;
-        int stackOut_14_4 = 0;
-        ta stackOut_2_0 = null;
-        Object stackOut_2_1 = null;
-        r stackOut_2_2 = null;
-        float stackOut_2_3 = 0.0f;
-        ta stackOut_3_0 = null;
-        Object stackOut_3_1 = null;
-        r stackOut_3_2 = null;
-        float stackOut_3_3 = 0.0f;
-        ta stackOut_6_0 = null;
-        Object stackOut_6_1 = null;
-        r stackOut_6_2 = null;
-        float stackOut_6_3 = 0.0f;
-        int stackOut_6_4 = 0;
-        ta stackOut_4_0 = null;
-        Object stackOut_4_1 = null;
-        r stackOut_4_2 = null;
-        float stackOut_4_3 = 0.0f;
-        ta stackOut_5_0 = null;
-        Object stackOut_5_1 = null;
-        r stackOut_5_2 = null;
-        float stackOut_5_3 = 0.0f;
-        int stackOut_5_4 = 0;
+        ta var4;
         if (param2 == 233) {
           var4 = this.a(param1, (byte) 79);
           if (var4 == null) {
@@ -203,68 +127,42 @@ final class nr extends tb implements ef {
           } else {
             L0: {
               L1: {
-                stackOut_11_0 = (ta) (var4);
-                stackOut_11_1 = this;
-                stackOut_11_2 = this.field_m;
-                stackOut_11_3 = param0;
-                stackIn_14_0 = stackOut_11_0;
-                stackIn_14_1 = stackOut_11_1;
-                stackIn_14_2 = stackOut_11_2;
-                stackIn_14_3 = stackOut_11_3;
-                stackIn_12_0 = stackOut_11_0;
-                stackIn_12_1 = stackOut_11_1;
-                stackIn_12_2 = stackOut_11_2;
-                stackIn_12_3 = stackOut_11_3;
+                stackIn_14_0 = (ta) (var4);
+
+                stackIn_14_1 = this;
+
+                stackIn_14_2 = this.field_m;
+
+                stackIn_14_3 = param0;
+
                 if (this.field_k) {
                   break L1;
                 } else {
-                  stackOut_12_0 = (ta) ((Object) stackIn_12_0);
-                  stackOut_12_1 = this;
-                  stackOut_12_2 = (r) ((Object) stackIn_12_2);
-                  stackOut_12_3 = stackIn_12_3;
-                  stackIn_15_0 = stackOut_12_0;
-                  stackIn_15_1 = stackOut_12_1;
-                  stackIn_15_2 = stackOut_12_2;
-                  stackIn_15_3 = stackOut_12_3;
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
-                  stackIn_13_2 = stackOut_12_2;
-                  stackIn_13_3 = stackOut_12_3;
+
+
+                  stackIn_15_1 = this;
+
                   if (!this.e(param1, -1).field_c) {
-                    stackOut_15_0 = (ta) ((Object) stackIn_15_0);
-                    stackOut_15_1 = this;
-                    stackOut_15_2 = (r) ((Object) stackIn_15_2);
-                    stackOut_15_3 = stackIn_15_3;
-                    stackOut_15_4 = 0;
-                    stackIn_16_0 = stackOut_15_0;
-                    stackIn_16_1 = stackOut_15_1;
-                    stackIn_16_2 = stackOut_15_2;
-                    stackIn_16_3 = stackOut_15_3;
-                    stackIn_16_4 = stackOut_15_4;
+                    stackIn_16_0 = (ta) ((Object) stackIn_14_0);
+                    stackIn_16_1 = this;
+                    stackIn_16_2 = (r) ((Object) stackIn_14_2);
+                    stackIn_16_3 = stackIn_14_3;
+                    stackIn_16_4 = 0;
                     break L0;
                   } else {
-                    stackOut_13_0 = (ta) ((Object) stackIn_13_0);
-                    stackOut_13_1 = this;
-                    stackOut_13_2 = (r) ((Object) stackIn_13_2);
-                    stackOut_13_3 = stackIn_13_3;
-                    stackIn_14_0 = stackOut_13_0;
-                    stackIn_14_1 = stackOut_13_1;
-                    stackIn_14_2 = stackOut_13_2;
-                    stackIn_14_3 = stackOut_13_3;
+                    stackIn_14_0 = (ta) ((Object) stackIn_14_0);
+                    stackIn_14_1 = this;
+                    stackIn_14_2 = (r) ((Object) stackIn_14_2);
+
                     break L1;
                   }
                 }
               }
-              stackOut_14_0 = (ta) ((Object) stackIn_14_0);
-              stackOut_14_1 = this;
-              stackOut_14_2 = (r) ((Object) stackIn_14_2);
-              stackOut_14_3 = stackIn_14_3;
-              stackOut_14_4 = 1;
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              stackIn_16_3 = stackOut_14_3;
-              stackIn_16_4 = stackOut_14_4;
+              stackIn_16_0 = (ta) ((Object) stackIn_14_0);
+              stackIn_16_1 = this;
+              stackIn_16_2 = (r) ((Object) stackIn_14_2);
+              stackIn_16_3 = stackIn_14_3;
+              stackIn_16_4 = 1;
               break L0;
             }
             return ((ta) (Object) stackIn_16_0).a((ka) (this), stackIn_16_2, stackIn_16_3, stackIn_16_4 != 0);
@@ -277,68 +175,42 @@ final class nr extends tb implements ef {
           } else {
             L2: {
               L3: {
-                stackOut_2_0 = (ta) (var4);
-                stackOut_2_1 = this;
-                stackOut_2_2 = this.field_m;
-                stackOut_2_3 = param0;
-                stackIn_5_0 = stackOut_2_0;
-                stackIn_5_1 = stackOut_2_1;
-                stackIn_5_2 = stackOut_2_2;
-                stackIn_5_3 = stackOut_2_3;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
-                stackIn_3_2 = stackOut_2_2;
-                stackIn_3_3 = stackOut_2_3;
+                stackIn_5_0 = (ta) (var4);
+
+                stackIn_5_1 = this;
+
+                stackIn_5_2 = this.field_m;
+
+                stackIn_5_3 = param0;
+
                 if (this.field_k) {
                   break L3;
                 } else {
-                  stackOut_3_0 = (ta) ((Object) stackIn_3_0);
-                  stackOut_3_1 = this;
-                  stackOut_3_2 = (r) ((Object) stackIn_3_2);
-                  stackOut_3_3 = stackIn_3_3;
-                  stackIn_6_0 = stackOut_3_0;
-                  stackIn_6_1 = stackOut_3_1;
-                  stackIn_6_2 = stackOut_3_2;
-                  stackIn_6_3 = stackOut_3_3;
-                  stackIn_4_0 = stackOut_3_0;
-                  stackIn_4_1 = stackOut_3_1;
-                  stackIn_4_2 = stackOut_3_2;
-                  stackIn_4_3 = stackOut_3_3;
+
+
+                  stackIn_6_1 = this;
+
                   if (!this.e(param1, -1).field_c) {
-                    stackOut_6_0 = (ta) ((Object) stackIn_6_0);
-                    stackOut_6_1 = this;
-                    stackOut_6_2 = (r) ((Object) stackIn_6_2);
-                    stackOut_6_3 = stackIn_6_3;
-                    stackOut_6_4 = 0;
-                    stackIn_7_0 = stackOut_6_0;
-                    stackIn_7_1 = stackOut_6_1;
-                    stackIn_7_2 = stackOut_6_2;
-                    stackIn_7_3 = stackOut_6_3;
-                    stackIn_7_4 = stackOut_6_4;
+                    stackIn_7_0 = (ta) ((Object) stackIn_5_0);
+                    stackIn_7_1 = this;
+                    stackIn_7_2 = (r) ((Object) stackIn_5_2);
+                    stackIn_7_3 = stackIn_5_3;
+                    stackIn_7_4 = 0;
                     break L2;
                   } else {
-                    stackOut_4_0 = (ta) ((Object) stackIn_4_0);
-                    stackOut_4_1 = this;
-                    stackOut_4_2 = (r) ((Object) stackIn_4_2);
-                    stackOut_4_3 = stackIn_4_3;
-                    stackIn_5_0 = stackOut_4_0;
-                    stackIn_5_1 = stackOut_4_1;
-                    stackIn_5_2 = stackOut_4_2;
-                    stackIn_5_3 = stackOut_4_3;
+                    stackIn_5_0 = (ta) ((Object) stackIn_5_0);
+                    stackIn_5_1 = this;
+                    stackIn_5_2 = (r) ((Object) stackIn_5_2);
+
                     break L3;
                   }
                 }
               }
-              stackOut_5_0 = (ta) ((Object) stackIn_5_0);
-              stackOut_5_1 = this;
-              stackOut_5_2 = (r) ((Object) stackIn_5_2);
-              stackOut_5_3 = stackIn_5_3;
-              stackOut_5_4 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              stackIn_7_3 = stackOut_5_3;
-              stackIn_7_4 = stackOut_5_4;
+              stackIn_7_0 = (ta) ((Object) stackIn_5_0);
+              stackIn_7_1 = this;
+              stackIn_7_2 = (r) ((Object) stackIn_5_2);
+              stackIn_7_3 = stackIn_5_3;
+              stackIn_7_4 = 1;
               break L2;
             }
             return ((ta) (Object) stackIn_7_0).a((ka) (this), stackIn_7_2, stackIn_7_3, stackIn_7_4 != 0);
@@ -356,11 +228,11 @@ final class nr extends tb implements ef {
     }
 
     public final boolean c(int param0, int param1) {
-        ta discarded$2 = null;
+        ta discarded$1 = null;
         if (!this.field_k) {
           if (!this.e(param1, -1).field_c) {
             if (param0 != 1) {
-              discarded$2 = this.a(-80, (byte) 53);
+              discarded$1 = this.a(-80, (byte) 53);
               return false;
             } else {
               return false;
@@ -374,24 +246,18 @@ final class nr extends tb implements ef {
     }
 
     final he g(int param0, int param1) {
-        ta var3 = null;
+        ta var3;
         he stackIn_4_0 = null;
         he stackIn_8_0 = null;
-        he stackOut_7_0 = null;
-        Object stackOut_6_0 = null;
-        he stackOut_3_0 = null;
-        Object stackOut_2_0 = null;
         if (param0 != 21922) {
           L0: {
             this.field_l = -110;
             var3 = this.a(param1, (byte) 92);
             if (var3 != null) {
-              stackOut_7_0 = var3.field_v;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = var3.field_v;
               break L0;
             } else {
-              stackOut_6_0 = null;
-              stackIn_8_0 = (he) ((Object) stackOut_6_0);
+              stackIn_8_0 = null;
               break L0;
             }
           }
@@ -400,12 +266,10 @@ final class nr extends tb implements ef {
           L1: {
             var3 = this.a(param1, (byte) 92);
             if (var3 != null) {
-              stackOut_3_0 = var3.field_v;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = var3.field_v;
               break L1;
             } else {
-              stackOut_2_0 = null;
-              stackIn_4_0 = (he) ((Object) stackOut_2_0);
+              stackIn_4_0 = null;
               break L1;
             }
           }
@@ -420,8 +284,6 @@ final class nr extends tb implements ef {
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -429,41 +291,25 @@ final class nr extends tb implements ef {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if (param1 >= 64) {
               L1: {
                 var2_int = param0.h(-11);
                 if (-2 != (var2_int ^ -1)) {
-                  stackOut_5_0 = 0;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = 0;
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L1;
                 }
               }
               var3 = stackIn_6_0;
-              stackOut_6_0 = var3;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = var3;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -472,27 +318,19 @@ final class nr extends tb implements ef {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2);
-            stackOut_8_1 = new StringBuilder().append("nr.I(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2);
+
+            stackIn_10_1 = new StringBuilder().append("nr.I(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }
@@ -513,23 +351,23 @@ final class nr extends tb implements ef {
     }
 
     final static er[] a(int param0, int param1, int param2, int param3, int param4) {
-        er dupTemp$4 = null;
-        er dupTemp$5 = null;
-        er[] var5 = null;
-        er[] var6 = null;
+        er dupTemp$2 = null;
+        er dupTemp$3 = null;
+        er[] var5;
+        er[] var6;
         L0: {
           var6 = new er[9];
           var5 = var6;
-          dupTemp$4 = ed.a(param3, param1, false);
-          var6[6] = dupTemp$4;
-          var5[3] = dupTemp$4;
-          var5[2] = dupTemp$4;
-          var5[1] = dupTemp$4;
-          var5[0] = dupTemp$4;
-          dupTemp$5 = ed.a(param2, param1, false);
-          var6[8] = dupTemp$5;
-          var5[7] = dupTemp$5;
-          var5[5] = dupTemp$5;
+          dupTemp$2 = ed.a(param3, param1, false);
+          var6[6] = dupTemp$2;
+          var5[3] = dupTemp$2;
+          var5[2] = dupTemp$2;
+          var5[1] = dupTemp$2;
+          var5[0] = dupTemp$2;
+          dupTemp$3 = ed.a(param2, param1, false);
+          var6[8] = dupTemp$3;
+          var5[7] = dupTemp$3;
+          var5[5] = dupTemp$3;
           if (-1 != (param0 ^ -1)) {
             var6[4] = ed.a(param0, 64, false);
             break L0;
@@ -561,24 +399,23 @@ final class nr extends tb implements ef {
     }
 
     final static void a(byte param0, int param1, int param2, int param3) {
-        er[] discarded$3 = null;
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int var4 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int var4;
         iq.field_x.field_u = 0;
         iq.field_x.f(12, 105);
         iq.field_x.e(j.field_r.nextInt(), param0 + -115);
         iq.field_x.e(j.field_r.nextInt(), 0);
         if (param0 != 115) {
-          discarded$3 = nr.a(-111, -84, -8, -110, 72);
+          nr.a(-111, -84, -8, -110, 72);
           iq.field_x.f(param2, 101);
           iq.field_x.f(param3, -67);
           iq.field_x.d(param1, param0 ^ -1670);
           iq.field_x.a(lp.field_E, jm.field_H, 9157);
           uh.field_Wb.j(18, param0 + 5);
-          fieldTemp$4 = uh.field_Wb.field_u + 1;
+          fieldTemp$2 = uh.field_Wb.field_u + 1;
           uh.field_Wb.field_u = uh.field_Wb.field_u + 1;
-          var4 = fieldTemp$4;
+          var4 = fieldTemp$2;
           uh.field_Wb.a(0, -10140, iq.field_x.field_p, iq.field_x.field_u);
           uh.field_Wb.b((byte) -95, -var4 + uh.field_Wb.field_u);
           return;
@@ -588,9 +425,9 @@ final class nr extends tb implements ef {
           iq.field_x.d(param1, param0 ^ -1670);
           iq.field_x.a(lp.field_E, jm.field_H, 9157);
           uh.field_Wb.j(18, param0 + 5);
-          fieldTemp$5 = uh.field_Wb.field_u + 1;
+          fieldTemp$3 = uh.field_Wb.field_u + 1;
           uh.field_Wb.field_u = uh.field_Wb.field_u + 1;
-          var4 = fieldTemp$5;
+          var4 = fieldTemp$3;
           uh.field_Wb.a(0, -10140, iq.field_x.field_p, iq.field_x.field_u);
           uh.field_Wb.b((byte) -95, -var4 + uh.field_Wb.field_u);
           return;

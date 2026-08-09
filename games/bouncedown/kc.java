@@ -9,18 +9,6 @@ final class kc {
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
-            Object discarded$6 = null;
-            Object discarded$7 = null;
-            Object discarded$8 = null;
-            Object discarded$9 = null;
-            Object discarded$10 = null;
-            Object discarded$11 = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            String var3 = null;
-            java.net.URL var4 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
@@ -28,27 +16,23 @@ final class kc {
             String stackIn_9_2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
+            String var3 = null;
+            java.net.URL var4 = null;
             try {
               L0: {
                 try {
                   L1: {
                     var4 = param0.getCodeBase();
                     var3 = ag.a(param0, var4, false).getFile();
-                    discarded$6 = ac.a(true, new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks");
-                    discarded$7 = ac.a(true, new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks");
-                    discarded$8 = ac.a(true, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks");
+                    ac.a(true, new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks");
+                    ac.a(true, new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks");
+                    ac.a(true, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks");
                     if (param1 == 27477) {
-                      discarded$9 = ac.a(true, new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks");
-                      discarded$10 = ac.a(true, new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks");
-                      discarded$11 = ac.a(true, new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks");
+                      ac.a(true, new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks");
+                      ac.a(true, new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks");
+                      ac.a(true, new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks");
                       decompiledRegionSelector0 = 1;
                       break L1;
                     } else {
@@ -71,27 +55,19 @@ final class kc {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var2_ref);
-                stackOut_6_1 = new StringBuilder().append("kc.B(");
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var2_ref);
+
+                stackIn_8_1 = new StringBuilder().append("kc.B(");
+
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L2;
                 }
               }
@@ -105,22 +81,22 @@ final class kc {
     }
 
     final static tg[] a(boolean param0) {
-        tg[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var5 = null;
-        int var6 = 0;
-        int[] var6_ref_int__ = null;
-        int var7 = 0;
-        int var8 = 0;
-        byte[] var9 = null;
-        int[] var10 = null;
-        byte[] var12 = null;
-        int[] var13 = null;
-        byte[] var16 = null;
-        int[] var17 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
+        tg[] var1;
+        int var2;
+        int var3;
+        byte[] var5;
+        int var6;
+        int[] var6_ref_int__;
+        int var7;
+        int var8;
+        byte[] var9;
+        int[] var10;
+        byte[] var12;
+        int[] var13;
+        byte[] var16;
+        int[] var17;
+        byte[] var21;
+        int[] var22;
         var8 = Bounce.field_N;
         var1 = new tg[nj.field_p];
         var2 = 0;
@@ -187,7 +163,7 @@ final class kc {
     }
 
     final static void a(byte param0) {
-        java.applet.Applet var2 = null;
+        java.applet.Applet var2;
         L0: {
           if (dh.field_a != null) {
             dh.field_a.a((byte) -70);

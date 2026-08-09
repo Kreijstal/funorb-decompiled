@@ -59,26 +59,26 @@ final class uh {
     }
 
     final ck a(byte param0) {
+        int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;
         int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int var3 = 0;
-        ck var4 = null;
-        ck var35 = null;
-        ck var36 = null;
-        ck var37 = null;
-        ck var38 = null;
-        ck var41 = null;
+        int var3;
+        ck var4;
+        ck var35;
+        ck var36;
+        ck var37;
+        ck var38;
+        ck var41;
         var3 = SteelSentinels.field_G;
         if (param0 > 92) {
           if (this.field_g > 0) {
             if (this.field_a == this.field_d[-1 + this.field_g]) {
               L0: while (true) {
                 if (this.field_g < this.field_b) {
-                  fieldTemp$4 = this.field_g;
+                  fieldTemp$3 = this.field_g;
                   this.field_g = this.field_g + 1;
-                  var38 = this.field_d[fieldTemp$4].field_k;
+                  var38 = this.field_d[fieldTemp$3].field_k;
                   if (this.field_d[this.field_g - 1] != var38) {
                     this.field_a = var38.field_k;
                     return var38;
@@ -97,9 +97,9 @@ final class uh {
           } else {
             L1: while (true) {
               if (this.field_g < this.field_b) {
-                fieldTemp$5 = this.field_g;
+                fieldTemp$4 = this.field_g;
                 this.field_g = this.field_g + 1;
-                var37 = this.field_d[fieldTemp$5].field_k;
+                var37 = this.field_d[fieldTemp$4].field_k;
                 if (this.field_d[this.field_g - 1] != var37) {
                   this.field_a = var37.field_k;
                   return var37;
@@ -121,9 +121,9 @@ final class uh {
             } else {
               L2: while (true) {
                 if (this.field_g < this.field_b) {
-                  fieldTemp$6 = this.field_g;
+                  fieldTemp$5 = this.field_g;
                   this.field_g = this.field_g + 1;
-                  var36 = this.field_d[fieldTemp$6].field_k;
+                  var36 = this.field_d[fieldTemp$5].field_k;
                   if (this.field_d[this.field_g - 1] != var36) {
                     this.field_a = var36.field_k;
                     return var36;
@@ -138,9 +138,9 @@ final class uh {
           } else {
             L3: while (true) {
               if (this.field_g < this.field_b) {
-                fieldTemp$7 = this.field_g;
+                fieldTemp$6 = this.field_g;
                 this.field_g = this.field_g + 1;
-                var4 = this.field_d[fieldTemp$7].field_k;
+                var4 = this.field_d[fieldTemp$6].field_k;
                 if (this.field_d[this.field_g - 1] != var4) {
                   this.field_a = var4.field_k;
                   return var4;
@@ -156,7 +156,7 @@ final class uh {
     }
 
     final static int a(boolean param0, int param1, int param2) {
-        int var3 = 0;
+        int var3;
         if (param0) {
           field_k = (wk) null;
           var3 = param1 >> -1769986657 & -1 + param2;
@@ -169,8 +169,6 @@ final class uh {
 
     final static void a(int param0, wk[] param1) {
         RuntimeException var2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -178,14 +176,6 @@ final class uh {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (param0 == 1) {
@@ -212,27 +202,19 @@ final class uh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2);
-            stackOut_7_1 = new StringBuilder().append("uh.H(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2);
+
+            stackIn_9_1 = new StringBuilder().append("uh.H(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -251,9 +233,9 @@ final class uh {
     }
 
     final ck a(long param0, int param1) {
-        ck var4 = null;
-        ck var5 = null;
-        int var6 = 0;
+        ck var4;
+        ck var5;
+        int var6;
         var6 = SteelSentinels.field_G;
         var4 = this.field_d[(int)(param0 & (long)(-1 + this.field_b))];
         this.field_c = var4.field_k;
@@ -282,38 +264,15 @@ final class uh {
         gk var3 = null;
         RuntimeException var3_ref = null;
         gk stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gk stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -333,81 +292,64 @@ final class uh {
             var3.field_p = param0.field_p;
             var3.field_o = param1;
             var3.field_n = param0.field_n;
-            stackOut_2_0 = (gk) (var3);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (gk) (var3);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3_ref);
-            stackOut_4_1 = new StringBuilder().append("uh.D(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3_ref);
+
+            stackIn_6_1 = new StringBuilder().append("uh.D(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+
+
+            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
 
     uh(int param0) {
-        ck dupTemp$2 = null;
-        int var2 = 0;
-        ck var3 = null;
+        ck dupTemp$1 = null;
+        int var2;
+        ck var3;
         this.field_g = 0;
         this.field_d = new ck[param0];
         this.field_b = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new ck();
-            var3 = dupTemp$2;
-            this.field_d[var2] = dupTemp$2;
+            dupTemp$1 = new ck();
+            var3 = dupTemp$1;
+            this.field_d[var2] = dupTemp$1;
             var3.field_k = var3;
             var3.field_i = var3;
             var2++;

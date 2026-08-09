@@ -26,9 +26,9 @@ final class ml {
     }
 
     final int a(byte param0) {
-        int var2 = 0;
-        ug var3 = null;
-        int var4 = 0;
+        int var2;
+        ug var3;
+        int var4;
         var4 = Bounce.field_N;
         var2 = 0;
         if (param0 != 12) {
@@ -58,7 +58,7 @@ final class ml {
     }
 
     final ug d(int param0) {
-        ug var2 = null;
+        ug var2;
         var2 = this.field_a.field_l;
         if (param0 < -74) {
           if (var2 == this.field_a) {
@@ -98,7 +98,7 @@ final class ml {
     }
 
     final ug a(int param0) {
-        ug var2 = null;
+        ug var2;
         var2 = this.field_a.field_l;
         if (param0 == -1) {
           if (this.field_a == var2) {
@@ -125,15 +125,14 @@ final class ml {
     }
 
     final ug b(int param0) {
-        ug discarded$2 = null;
-        ug var2 = null;
+        ug var2;
         var2 = this.field_b;
         if (this.field_a == var2) {
           this.field_b = null;
           return null;
         } else {
           if (param0 != 0) {
-            discarded$2 = this.b(96);
+            this.b(96);
             this.field_b = var2.field_l;
             return var2;
           } else {

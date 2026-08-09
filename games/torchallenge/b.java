@@ -86,26 +86,20 @@ abstract class b extends kj {
 
     private final int i(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 0) {
           return 92;
         } else {
           L0: {
             if (this.field_K) {
               if (this != this.field_L.f((byte) 123)) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L0;
               } else {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L0;
             }
           }
@@ -147,7 +141,6 @@ abstract class b extends kj {
     }
 
     boolean h(int param0) {
-        boolean discarded$2 = false;
         if (param0 >= 83) {
           this.field_P = this.i(0);
           if (this.field_P == 0) {
@@ -160,7 +153,7 @@ abstract class b extends kj {
             return false;
           }
         } else {
-          discarded$2 = this.j(-66);
+          this.j(-66);
           this.field_P = this.i(0);
           if (this.field_P == 0) {
             if (this.field_K) {
@@ -175,20 +168,12 @@ abstract class b extends kj {
     }
 
     boolean j(int param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_10_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_38_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+        int var2;
+        int var3;
         var2 = this.i(0);
         var3 = var2 - this.field_P;
         if (var3 <= 0) {
@@ -207,15 +192,13 @@ abstract class b extends kj {
                       if (this.field_K) {
                         break L1;
                       } else {
-                        stackOut_36_0 = 1;
-                        stackIn_38_0 = stackOut_36_0;
+                        stackIn_38_0 = 1;
                         break L0;
                       }
                     }
                   }
                 }
-                stackOut_37_0 = 0;
-                stackIn_38_0 = stackOut_37_0;
+                stackIn_38_0 = 0;
                 break L0;
               }
               return stackIn_38_0 != 0;
@@ -236,15 +219,13 @@ abstract class b extends kj {
                       if (this.field_K) {
                         break L3;
                       } else {
-                        stackOut_27_0 = 1;
-                        stackIn_29_0 = stackOut_27_0;
+                        stackIn_29_0 = 1;
                         break L2;
                       }
                     }
                   }
                 }
-                stackOut_28_0 = 0;
-                stackIn_29_0 = stackOut_28_0;
+                stackIn_29_0 = 0;
                 break L2;
               }
               return stackIn_29_0 != 0;
@@ -268,15 +249,13 @@ abstract class b extends kj {
                       if (this.field_K) {
                         break L5;
                       } else {
-                        stackOut_17_0 = 1;
-                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_19_0 = 1;
                         break L4;
                       }
                     }
                   }
                 }
-                stackOut_18_0 = 0;
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = 0;
                 break L4;
               }
               return stackIn_19_0 != 0;
@@ -289,12 +268,10 @@ abstract class b extends kj {
                 } else {
                   L6: {
                     if (this.field_K) {
-                      stackOut_9_0 = 0;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_0 = 0;
                       break L6;
                     } else {
-                      stackOut_8_0 = 1;
-                      stackIn_10_0 = stackOut_8_0;
+                      stackIn_10_0 = 1;
                       break L6;
                     }
                   }

@@ -31,8 +31,6 @@ final class ed extends np {
         ab stackIn_14_0 = null;
         ab stackIn_19_0 = null;
         ab stackIn_22_0 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -40,33 +38,17 @@ final class ed extends np {
         String stackIn_26_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ab stackOut_3_0 = null;
-        ab stackOut_7_0 = null;
-        ab stackOut_21_0 = null;
-        ab stackOut_18_0 = null;
-        ab stackOut_13_0 = null;
-        ab stackOut_10_0 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
         var8 = DungeonAssault.field_K;
         try {
           L0: {
             var2_int = param1.length();
             if (var2_int == 0) {
-              stackOut_3_0 = ri.field_e;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = ri.field_e;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (-256 > (var2_int ^ -1)) {
-                stackOut_7_0 = ta.field_d;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = ta.field_d;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -77,8 +59,7 @@ final class ed extends np {
                     var5 = 0;
                     L1: while (true) {
                       if (var5 >= var4.length) {
-                        stackOut_21_0 = id.a(-49, var3[-1 + var3.length]);
-                        stackIn_22_0 = stackOut_21_0;
+                        stackIn_22_0 = id.a(-49, var3[-1 + var3.length]);
                         decompiledRegionSelector0 = 5;
                         break L0;
                       } else {
@@ -88,22 +69,19 @@ final class ed extends np {
                           var5++;
                           continue L1;
                         } else {
-                          stackOut_18_0 = (ab) (var7);
-                          stackIn_19_0 = stackOut_18_0;
+                          stackIn_19_0 = (ab) (var7);
                           decompiledRegionSelector0 = 4;
                           break L0;
                         }
                       }
                     }
                   } else {
-                    stackOut_13_0 = (ab) null;
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = (ab) null;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
-                  stackOut_10_0 = ri.field_e;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = ri.field_e;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -114,27 +92,19 @@ final class ed extends np {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var2);
-            stackOut_23_1 = new StringBuilder().append("ed.LA(").append(param0).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var2);
+
+            stackIn_25_1 = new StringBuilder().append("ed.LA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L2;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L2;
             }
           }
@@ -194,7 +164,6 @@ final class ed extends np {
     private final int d(boolean param0) {
         int var5 = 0;
         int var6 = 0;
-        boolean discarded$0 = false;
         int var7 = DungeonAssault.field_K;
         if (!(null != this.field_J)) {
             return 0;
@@ -214,18 +183,18 @@ final class ed extends np {
             var4 = (rj) ((Object) this.field_J.a(4));
         }
         if (!param0) {
-            discarded$0 = ed.c(true);
+            ed.c(true);
         }
         return -var2 + var3;
     }
 
     final void e(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        rj var5 = null;
-        int var6 = 0;
-        rj var7 = null;
+        int var2;
+        int var3;
+        int var4;
+        rj var5;
+        int var6;
+        rj var7;
         L0: {
           L1: {
             var6 = DungeonAssault.field_K;
@@ -334,10 +303,10 @@ final class ed extends np {
     }
 
     final void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var7 = DungeonAssault.field_K;
         if (!this.field_N) {
           return;
@@ -399,12 +368,11 @@ final class ed extends np {
     }
 
     final void a(rj param0, byte param1) {
-        ab discarded$0 = null;
         try {
             param0.e(10 + this.field_O, 0, 79);
             if (param1 > -27) {
                 String var4 = (String) null;
-                discarded$0 = ed.a(-69, (String) null);
+                ed.a(-69, (String) null);
             }
             super.a(param0, (byte) -76);
         } catch (RuntimeException runtimeException) {
@@ -460,11 +428,18 @@ final class ed extends np {
 
     final static void a(boolean param0, wj param1) {
         try {
-            int discarded$1 = 0;
+            RuntimeException stackIn_64_0 = null;
+            StringBuilder stackIn_64_1 = null;
+            RuntimeException stackIn_65_0 = null;
+            StringBuilder stackIn_65_1 = null;
+            String stackIn_65_2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
             int var5 = 0;
+            int var6_int = 0;
             ClassNotFoundException var6 = null;
             InvalidClassException var6_ref = null;
             StreamCorruptedException var6_ref2 = null;
@@ -477,7 +452,6 @@ final class ed extends np {
             NullPointerException var6_ref9 = null;
             Exception var6_ref10 = null;
             Throwable var6_ref11 = null;
-            int var6_int = 0;
             int var8 = 0;
             Object[] var9 = null;
             int var10_int = 0;
@@ -486,78 +460,61 @@ final class ed extends np {
             int var12 = 0;
             oe var13 = null;
             java.lang.reflect.Field var15 = null;
-            oe var16 = null;
-            java.lang.reflect.Field var17 = null;
-            Object var18 = null;
-            Object var19 = null;
+            Object var16 = null;
+            Object var17 = null;
+            java.lang.reflect.Field var17_ref = null;
+            oe var18 = null;
+            java.lang.reflect.Field var19 = null;
             Object var21 = null;
             Object var22 = null;
             byte[][] var25 = null;
             java.lang.reflect.Field var26 = null;
-            java.lang.reflect.Field var27 = null;
+            java.lang.reflect.Method var27 = null;
             java.lang.reflect.Method var28 = null;
-            java.lang.reflect.Method var29 = null;
-            RuntimeException stackIn_63_0 = null;
-            StringBuilder stackIn_63_1 = null;
-            RuntimeException stackIn_64_0 = null;
-            StringBuilder stackIn_64_1 = null;
-            RuntimeException stackIn_65_0 = null;
-            StringBuilder stackIn_65_1 = null;
-            String stackIn_65_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_62_0 = null;
-            StringBuilder stackOut_62_1 = null;
-            RuntimeException stackOut_64_0 = null;
-            StringBuilder stackOut_64_1 = null;
-            String stackOut_64_2 = null;
-            RuntimeException stackOut_63_0 = null;
-            StringBuilder stackOut_63_1 = null;
-            String stackOut_63_2 = null;
-            var18 = null;
-            var19 = null;
+            var17 = null;
+            var16 = null;
             var21 = null;
             var22 = null;
             var12 = DungeonAssault.field_K;
             try {
               L0: {
                 var13 = (oe) ((Object) fe.field_k.e(-24172));
-                var16 = var13;
-                if (var16 != null) {
+                var18 = var13;
+                if (var18 != null) {
                   var3 = 0;
                   var4 = 0;
                   L1: while (true) {
-                    if (var4 >= var16.field_q) {
+                    if (var4 >= var18.field_q) {
                       if (var3 != 0) {
                         decompiledRegionSelector0 = 1;
                         break L0;
                       } else {
                         var4 = param1.field_o;
-                        param1.a((byte) 63, var16.field_j);
+                        param1.a((byte) 63, var18.field_j);
                         var5 = 0;
                         L2: while (true) {
-                          if (var16.field_q <= var5) {
-                            discarded$1 = param1.c((byte) -106, var4);
-                            var16.a(param0);
+                          if (var18.field_q <= var5) {
+                            param1.c((byte) -106, var4);
+                            var18.a(param0);
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
                             L3: {
-                              if (-1 == (var16.field_r[var5] ^ -1)) {
+                              if (-1 == (var18.field_r[var5] ^ -1)) {
                                 try {
                                   L4: {
                                     L5: {
-                                      var6_int = var16.field_n[var5];
+                                      var6_int = var18.field_n[var5];
                                       if (var6_int == 0) {
-                                        var27 = (java.lang.reflect.Field) (var16.field_s[var5].field_f);
-                                        var8 = var27.getInt((Object) null);
+                                        var15 = (java.lang.reflect.Field) (var18.field_s[var5].field_f);
+                                        var8 = var15.getInt((Object) null);
                                         param1.a(6, 0);
                                         param1.a((byte) 63, var8);
                                         break L5;
                                       } else {
                                         if (1 != var6_int) {
                                           if ((var6_int ^ -1) == -3) {
-                                            var26 = (java.lang.reflect.Field) (var16.field_s[var5].field_f);
+                                            var26 = (java.lang.reflect.Field) (var18.field_s[var5].field_f);
                                             var8 = var26.getModifiers();
                                             param1.a(6, 0);
                                             param1.a((byte) 63, var8);
@@ -566,9 +523,9 @@ final class ed extends np {
                                             break L5;
                                           }
                                         } else {
-                                          var15 = (java.lang.reflect.Field) (var16.field_s[var5].field_f);
-                                          var17 = var15;
-                                          var17.setInt((Object) null, var16.field_l[var5]);
+                                          var17_ref = (java.lang.reflect.Field) (var18.field_s[var5].field_f);
+                                          var19 = var17_ref;
+                                          var19.setInt((Object) null, var18.field_l[var5]);
                                           param1.a(6, 0);
                                           break L5;
                                         }
@@ -579,20 +536,20 @@ final class ed extends np {
                                         if ((var6_int ^ -1) != -5) {
                                           break L6;
                                         } else {
-                                          var29 = (java.lang.reflect.Method) (var16.field_o[var5].field_f);
-                                          var8 = var29.getModifiers();
+                                          var28 = (java.lang.reflect.Method) (var18.field_o[var5].field_f);
+                                          var8 = var28.getModifiers();
                                           param1.a(6, 0);
                                           param1.a((byte) 63, var8);
                                           break L6;
                                         }
                                       } else {
-                                        var28 = (java.lang.reflect.Method) (var16.field_o[var5].field_f);
-                                        var25 = var16.field_k[var5];
+                                        var27 = (java.lang.reflect.Method) (var18.field_o[var5].field_f);
+                                        var25 = var18.field_k[var5];
                                         var9 = new Object[var25.length];
                                         var10_int = 0;
                                         L7: while (true) {
                                           if (var10_int >= var25.length) {
-                                            var10 = var28.invoke((Object) null, var9);
+                                            var10 = var27.invoke((Object) null, var9);
                                             if (var10 == null) {
                                               param1.a(6, 0);
                                               break L6;
@@ -710,7 +667,7 @@ final class ed extends np {
                                 }
                                 break L3;
                               } else {
-                                param1.a(6, var16.field_r[var5]);
+                                param1.a(6, var18.field_r[var5]);
                                 break L3;
                               }
                             }
@@ -772,27 +729,19 @@ final class ed extends np {
               decompiledCaughtException = decompiledCaughtParameter12;
               L23: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_62_0 = (RuntimeException) (var2);
-                stackOut_62_1 = new StringBuilder().append("ed.H(").append(param0).append(',');
-                stackIn_64_0 = stackOut_62_0;
-                stackIn_64_1 = stackOut_62_1;
-                stackIn_63_0 = stackOut_62_0;
-                stackIn_63_1 = stackOut_62_1;
+                stackIn_64_0 = (RuntimeException) (var2);
+
+                stackIn_64_1 = new StringBuilder().append("ed.H(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-                  stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-                  stackOut_64_2 = "null";
-                  stackIn_65_0 = stackOut_64_0;
-                  stackIn_65_1 = stackOut_64_1;
-                  stackIn_65_2 = stackOut_64_2;
+                  stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+                  stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+                  stackIn_65_2 = "null";
                   break L23;
                 } else {
-                  stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
-                  stackOut_63_1 = (StringBuilder) ((Object) stackIn_63_1);
-                  stackOut_63_2 = "{...}";
-                  stackIn_65_0 = stackOut_63_0;
-                  stackIn_65_1 = stackOut_63_1;
-                  stackIn_65_2 = stackOut_63_2;
+                  stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+                  stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+                  stackIn_65_2 = "{...}";
                   break L23;
                 }
               }

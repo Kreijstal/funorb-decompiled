@@ -56,18 +56,16 @@ final class kj extends nv implements ut {
     }
 
     public final int g(byte param0) {
-        int discarded$0 = 0;
         if (param0 != -108) {
-            discarded$0 = this.g((byte) -25);
+            this.g((byte) -25);
             return 7798954;
         }
         return 7798954;
     }
 
     final int a(boolean param0) {
-        int discarded$0 = 0;
         if (param0) {
-            discarded$0 = this.a(-15, 107);
+            this.a(-15, 107);
             return 22;
         }
         return 22;
@@ -89,17 +87,13 @@ final class kj extends nv implements ut {
     }
 
     private final boolean e(boolean param0) {
-        int var2 = 0;
-        hca var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        hca var3;
+        int var4;
+        int var5;
+        int var6;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         var2 = this.field_p >> 1957873616;
         var2 = var2 * var2;
         var3 = this.m((byte) 19);
@@ -110,12 +104,10 @@ final class kj extends nv implements ut {
             var5 = this.field_g.e(9648) + -var3.e(9648) >> -1477182736;
             var6 = var4 * var4 - -(var5 * var5);
             if (var6 >= var2) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -126,12 +118,10 @@ final class kj extends nv implements ut {
             var5 = this.field_g.e(9648) + -var3.e(9648) >> -1477182736;
             var6 = var4 * var4 - -(var5 * var5);
             if (var6 >= var2) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -141,91 +131,40 @@ final class kj extends nv implements ut {
 
     kj(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
-        RuntimeException var4 = null;
-        Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
         int stackIn_9_1 = 0;
-        Object stackIn_12_0 = null;
         Object stackIn_13_0 = null;
         Object stackIn_14_0 = null;
         int stackIn_14_1 = 0;
-        Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         Object stackIn_19_0 = null;
         int stackIn_19_1 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_6_0 = null;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_11_0 = null;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        Object stackOut_16_0 = null;
-        Object stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
-              stackOut_1_0 = this;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_3_0 = this;
+
               if ((param1.b((byte) 44, 1) ^ -1) == -2) {
-                stackOut_3_0 = this;
-                stackOut_3_1 = 1;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 1;
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = 0;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 0;
                 break L1;
               }
             }
@@ -239,20 +178,15 @@ final class kj extends nv implements ut {
               }
             }
             L3: {
-              stackOut_6_0 = this;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_8_0 = this;
+
               if (-2 == (param1.b((byte) 44, 1) ^ -1)) {
-                stackOut_8_0 = this;
-                stackOut_8_1 = 1;
-                stackIn_9_0 = stackOut_8_0;
-                stackIn_9_1 = stackOut_8_1;
+                stackIn_9_0 = this;
+                stackIn_9_1 = 1;
                 break L3;
               } else {
-                stackOut_7_0 = this;
-                stackOut_7_1 = 0;
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_9_1 = stackOut_7_1;
+                stackIn_9_0 = this;
+                stackIn_9_1 = 0;
                 break L3;
               }
             }
@@ -266,20 +200,15 @@ final class kj extends nv implements ut {
               }
             }
             L5: {
-              stackOut_11_0 = this;
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_13_0 = this;
+
               if (1 != param1.b((byte) 44, 1)) {
-                stackOut_13_0 = this;
-                stackOut_13_1 = 0;
-                stackIn_14_0 = stackOut_13_0;
-                stackIn_14_1 = stackOut_13_1;
+                stackIn_14_0 = this;
+                stackIn_14_1 = 0;
                 break L5;
               } else {
-                stackOut_12_0 = this;
-                stackOut_12_1 = 1;
-                stackIn_14_0 = stackOut_12_0;
-                stackIn_14_1 = stackOut_12_1;
+                stackIn_14_0 = this;
+                stackIn_14_1 = 1;
                 break L5;
               }
             }
@@ -293,20 +222,15 @@ final class kj extends nv implements ut {
               }
             }
             L7: {
-              stackOut_16_0 = this;
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_17_0 = stackOut_16_0;
+              stackIn_18_0 = this;
+
               if (-2 == (param1.b((byte) 44, 1) ^ -1)) {
-                stackOut_18_0 = this;
-                stackOut_18_1 = 1;
-                stackIn_19_0 = stackOut_18_0;
-                stackIn_19_1 = stackOut_18_1;
+                stackIn_19_0 = this;
+                stackIn_19_1 = 1;
                 break L7;
               } else {
-                stackOut_17_0 = this;
-                stackOut_17_1 = 0;
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
+                stackIn_19_0 = this;
+                stackIn_19_1 = 0;
                 break L7;
               }
             }
@@ -318,56 +242,40 @@ final class kj extends nv implements ut {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var4 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var4);
-            stackOut_21_1 = new StringBuilder().append("kj.<init>(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var4);
+
+            stackIn_23_1 = new StringBuilder().append("kj.<init>(");
+
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+
+
+            stackIn_26_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
+
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L9;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L9;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_24_0), stackIn_27_2 + ',' + param2 + ')');
         }
     }
 
@@ -377,17 +285,6 @@ final class kj extends nv implements ut {
     }
 
     final void k(int param0) {
-        int var2 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        hca var6 = null;
-        hca var7 = null;
-        hca var8 = null;
-        hca var9 = null;
-        hca var10 = null;
-        hca var11 = null;
-        hca var12 = null;
-        hca var13 = null;
         int stackIn_13_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_26_0 = 0;
@@ -418,66 +315,17 @@ final class kj extends nv implements ut {
         int stackIn_226_0 = 0;
         int stackIn_232_0 = 0;
         int stackIn_240_0 = 0;
-        int stackOut_125_0 = 0;
-        int stackOut_124_0 = 0;
-        int stackOut_103_0 = 0;
-        int stackOut_102_0 = 0;
-        int stackOut_110_0 = 0;
-        int stackOut_109_0 = 0;
-        int stackOut_116_0 = 0;
-        int stackOut_115_0 = 0;
-        int stackOut_217_0 = 0;
-        int stackOut_216_0 = 0;
-        int stackOut_231_0 = 0;
-        int stackOut_230_0 = 0;
-        int stackOut_225_0 = 0;
-        int stackOut_224_0 = 0;
-        int stackOut_239_0 = 0;
-        int stackOut_238_0 = 0;
-        int stackOut_194_0 = 0;
-        int stackOut_193_0 = 0;
-        int stackOut_201_0 = 0;
-        int stackOut_200_0 = 0;
-        int stackOut_209_0 = 0;
-        int stackOut_208_0 = 0;
-        int stackOut_164_0 = 0;
-        int stackOut_163_0 = 0;
-        int stackOut_178_0 = 0;
-        int stackOut_177_0 = 0;
-        int stackOut_172_0 = 0;
-        int stackOut_171_0 = 0;
-        int stackOut_186_0 = 0;
-        int stackOut_185_0 = 0;
-        int stackOut_132_0 = 0;
-        int stackOut_131_0 = 0;
-        int stackOut_146_0 = 0;
-        int stackOut_145_0 = 0;
-        int stackOut_140_0 = 0;
-        int stackOut_139_0 = 0;
-        int stackOut_154_0 = 0;
-        int stackOut_153_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_80_0 = 0;
-        int stackOut_79_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_71_0 = 0;
-        int stackOut_88_0 = 0;
-        int stackOut_87_0 = 0;
+        int var2;
+        int var4;
+        int var5;
+        hca var6;
+        hca var7;
+        hca var8;
+        hca var9;
+        hca var10;
+        hca var11;
+        hca var12;
+        hca var13;
         var2 = 1;
         if (param0 != 5418) {
           L0: {
@@ -488,12 +336,10 @@ final class kj extends nv implements ut {
               if (this.field_t) {
                 L1: {
                   if (!this.d(false)) {
-                    stackOut_125_0 = 0;
-                    stackIn_126_0 = stackOut_125_0;
+                    stackIn_126_0 = 0;
                     break L1;
                   } else {
-                    stackOut_124_0 = 1;
-                    stackIn_126_0 = stackOut_124_0;
+                    stackIn_126_0 = 1;
                     break L1;
                   }
                 }
@@ -528,12 +374,10 @@ final class kj extends nv implements ut {
                     } else {
                       L4: {
                         if (!this.r(8192)) {
-                          stackOut_103_0 = 0;
-                          stackIn_104_0 = stackOut_103_0;
+                          stackIn_104_0 = 0;
                           break L4;
                         } else {
-                          stackOut_102_0 = 1;
-                          stackIn_104_0 = stackOut_102_0;
+                          stackIn_104_0 = 1;
                           break L4;
                         }
                       }
@@ -549,12 +393,10 @@ final class kj extends nv implements ut {
                     if (this.field_r) {
                       L6: {
                         if (!this.l(8192)) {
-                          stackOut_110_0 = 0;
-                          stackIn_111_0 = stackOut_110_0;
+                          stackIn_111_0 = 0;
                           break L6;
                         } else {
-                          stackOut_109_0 = 1;
-                          stackIn_111_0 = stackOut_109_0;
+                          stackIn_111_0 = 1;
                           break L6;
                         }
                       }
@@ -576,12 +418,10 @@ final class kj extends nv implements ut {
                     } else {
                       L8: {
                         if (!this.e(false)) {
-                          stackOut_116_0 = 0;
-                          stackIn_117_0 = stackOut_116_0;
+                          stackIn_117_0 = 0;
                           break L8;
                         } else {
-                          stackOut_115_0 = 1;
-                          stackIn_117_0 = stackOut_115_0;
+                          stackIn_117_0 = 1;
                           break L8;
                         }
                       }
@@ -610,12 +450,10 @@ final class kj extends nv implements ut {
                   } else {
                     L10: {
                       if (!this.r(8192)) {
-                        stackOut_217_0 = 0;
-                        stackIn_218_0 = stackOut_217_0;
+                        stackIn_218_0 = 0;
                         break L10;
                       } else {
-                        stackOut_216_0 = 1;
-                        stackIn_218_0 = stackOut_216_0;
+                        stackIn_218_0 = 1;
                         break L10;
                       }
                     }
@@ -631,12 +469,10 @@ final class kj extends nv implements ut {
                   if (this.field_r) {
                     L12: {
                       if (!this.l(8192)) {
-                        stackOut_231_0 = 0;
-                        stackIn_232_0 = stackOut_231_0;
+                        stackIn_232_0 = 0;
                         break L12;
                       } else {
-                        stackOut_230_0 = 1;
-                        stackIn_232_0 = stackOut_230_0;
+                        stackIn_232_0 = 1;
                         break L12;
                       }
                     }
@@ -646,12 +482,10 @@ final class kj extends nv implements ut {
                     if (this.field_q) {
                       L13: {
                         if (!this.e(false)) {
-                          stackOut_225_0 = 0;
-                          stackIn_226_0 = stackOut_225_0;
+                          stackIn_226_0 = 0;
                           break L13;
                         } else {
-                          stackOut_224_0 = 1;
-                          stackIn_226_0 = stackOut_224_0;
+                          stackIn_226_0 = 1;
                           break L13;
                         }
                       }
@@ -669,12 +503,10 @@ final class kj extends nv implements ut {
                 if (this.field_q) {
                   L14: {
                     if (!this.e(false)) {
-                      stackOut_239_0 = 0;
-                      stackIn_240_0 = stackOut_239_0;
+                      stackIn_240_0 = 0;
                       break L14;
                     } else {
-                      stackOut_238_0 = 1;
-                      stackIn_240_0 = stackOut_238_0;
+                      stackIn_240_0 = 1;
                       break L14;
                     }
                   }
@@ -704,12 +536,10 @@ final class kj extends nv implements ut {
                     } else {
                       L16: {
                         if (!this.r(8192)) {
-                          stackOut_194_0 = 0;
-                          stackIn_195_0 = stackOut_194_0;
+                          stackIn_195_0 = 0;
                           break L16;
                         } else {
-                          stackOut_193_0 = 1;
-                          stackIn_195_0 = stackOut_193_0;
+                          stackIn_195_0 = 1;
                           break L16;
                         }
                       }
@@ -725,12 +555,10 @@ final class kj extends nv implements ut {
                     if (this.field_r) {
                       L18: {
                         if (!this.l(8192)) {
-                          stackOut_201_0 = 0;
-                          stackIn_202_0 = stackOut_201_0;
+                          stackIn_202_0 = 0;
                           break L18;
                         } else {
-                          stackOut_200_0 = 1;
-                          stackIn_202_0 = stackOut_200_0;
+                          stackIn_202_0 = 1;
                           break L18;
                         }
                       }
@@ -745,12 +573,10 @@ final class kj extends nv implements ut {
                   if (this.field_q) {
                     L19: {
                       if (!this.e(false)) {
-                        stackOut_209_0 = 0;
-                        stackIn_210_0 = stackOut_209_0;
+                        stackIn_210_0 = 0;
                         break L19;
                       } else {
-                        stackOut_208_0 = 1;
-                        stackIn_210_0 = stackOut_208_0;
+                        stackIn_210_0 = 1;
                         break L19;
                       }
                     }
@@ -775,12 +601,10 @@ final class kj extends nv implements ut {
                     } else {
                       L21: {
                         if (!this.r(8192)) {
-                          stackOut_164_0 = 0;
-                          stackIn_165_0 = stackOut_164_0;
+                          stackIn_165_0 = 0;
                           break L21;
                         } else {
-                          stackOut_163_0 = 1;
-                          stackIn_165_0 = stackOut_163_0;
+                          stackIn_165_0 = 1;
                           break L21;
                         }
                       }
@@ -796,12 +620,10 @@ final class kj extends nv implements ut {
                     if (this.field_r) {
                       L23: {
                         if (!this.l(8192)) {
-                          stackOut_178_0 = 0;
-                          stackIn_179_0 = stackOut_178_0;
+                          stackIn_179_0 = 0;
                           break L23;
                         } else {
-                          stackOut_177_0 = 1;
-                          stackIn_179_0 = stackOut_177_0;
+                          stackIn_179_0 = 1;
                           break L23;
                         }
                       }
@@ -811,12 +633,10 @@ final class kj extends nv implements ut {
                       if (this.field_q) {
                         L24: {
                           if (!this.e(false)) {
-                            stackOut_172_0 = 0;
-                            stackIn_173_0 = stackOut_172_0;
+                            stackIn_173_0 = 0;
                             break L24;
                           } else {
-                            stackOut_171_0 = 1;
-                            stackIn_173_0 = stackOut_171_0;
+                            stackIn_173_0 = 1;
                             break L24;
                           }
                         }
@@ -834,12 +654,10 @@ final class kj extends nv implements ut {
                   if (this.field_q) {
                     L25: {
                       if (!this.e(false)) {
-                        stackOut_186_0 = 0;
-                        stackIn_187_0 = stackOut_186_0;
+                        stackIn_187_0 = 0;
                         break L25;
                       } else {
-                        stackOut_185_0 = 1;
-                        stackIn_187_0 = stackOut_185_0;
+                        stackIn_187_0 = 1;
                         break L25;
                       }
                     }
@@ -866,12 +684,10 @@ final class kj extends nv implements ut {
                 } else {
                   L27: {
                     if (!this.r(8192)) {
-                      stackOut_132_0 = 0;
-                      stackIn_133_0 = stackOut_132_0;
+                      stackIn_133_0 = 0;
                       break L27;
                     } else {
-                      stackOut_131_0 = 1;
-                      stackIn_133_0 = stackOut_131_0;
+                      stackIn_133_0 = 1;
                       break L27;
                     }
                   }
@@ -887,12 +703,10 @@ final class kj extends nv implements ut {
                 if (this.field_r) {
                   L29: {
                     if (!this.l(8192)) {
-                      stackOut_146_0 = 0;
-                      stackIn_147_0 = stackOut_146_0;
+                      stackIn_147_0 = 0;
                       break L29;
                     } else {
-                      stackOut_145_0 = 1;
-                      stackIn_147_0 = stackOut_145_0;
+                      stackIn_147_0 = 1;
                       break L29;
                     }
                   }
@@ -902,12 +716,10 @@ final class kj extends nv implements ut {
                   if (this.field_q) {
                     L30: {
                       if (!this.e(false)) {
-                        stackOut_140_0 = 0;
-                        stackIn_141_0 = stackOut_140_0;
+                        stackIn_141_0 = 0;
                         break L30;
                       } else {
-                        stackOut_139_0 = 1;
-                        stackIn_141_0 = stackOut_139_0;
+                        stackIn_141_0 = 1;
                         break L30;
                       }
                     }
@@ -925,12 +737,10 @@ final class kj extends nv implements ut {
               if (this.field_q) {
                 L31: {
                   if (!this.e(false)) {
-                    stackOut_154_0 = 0;
-                    stackIn_155_0 = stackOut_154_0;
+                    stackIn_155_0 = 0;
                     break L31;
                   } else {
-                    stackOut_153_0 = 1;
-                    stackIn_155_0 = stackOut_153_0;
+                    stackIn_155_0 = 1;
                     break L31;
                   }
                 }
@@ -954,12 +764,10 @@ final class kj extends nv implements ut {
               if (this.field_t) {
                 L33: {
                   if (!this.d(false)) {
-                    stackOut_33_0 = 0;
-                    stackIn_34_0 = stackOut_33_0;
+                    stackIn_34_0 = 0;
                     break L33;
                   } else {
-                    stackOut_32_0 = 1;
-                    stackIn_34_0 = stackOut_32_0;
+                    stackIn_34_0 = 1;
                     break L33;
                   }
                 }
@@ -994,12 +802,10 @@ final class kj extends nv implements ut {
                     } else {
                       L36: {
                         if (!this.r(8192)) {
-                          stackOut_12_0 = 0;
-                          stackIn_13_0 = stackOut_12_0;
+                          stackIn_13_0 = 0;
                           break L36;
                         } else {
-                          stackOut_11_0 = 1;
-                          stackIn_13_0 = stackOut_11_0;
+                          stackIn_13_0 = 1;
                           break L36;
                         }
                       }
@@ -1015,12 +821,10 @@ final class kj extends nv implements ut {
                     if (this.field_r) {
                       L38: {
                         if (!this.l(8192)) {
-                          stackOut_19_0 = 0;
-                          stackIn_20_0 = stackOut_19_0;
+                          stackIn_20_0 = 0;
                           break L38;
                         } else {
-                          stackOut_18_0 = 1;
-                          stackIn_20_0 = stackOut_18_0;
+                          stackIn_20_0 = 1;
                           break L38;
                         }
                       }
@@ -1042,12 +846,10 @@ final class kj extends nv implements ut {
                     } else {
                       L40: {
                         if (!this.e(false)) {
-                          stackOut_25_0 = 0;
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = 0;
                           break L40;
                         } else {
-                          stackOut_24_0 = 1;
-                          stackIn_26_0 = stackOut_24_0;
+                          stackIn_26_0 = 1;
                           break L40;
                         }
                       }
@@ -1085,12 +887,10 @@ final class kj extends nv implements ut {
                     } else {
                       L43: {
                         if (!this.r(8192)) {
-                          stackOut_41_0 = 0;
-                          stackIn_42_0 = stackOut_41_0;
+                          stackIn_42_0 = 0;
                           break L43;
                         } else {
-                          stackOut_40_0 = 1;
-                          stackIn_42_0 = stackOut_40_0;
+                          stackIn_42_0 = 1;
                           break L43;
                         }
                       }
@@ -1105,12 +905,10 @@ final class kj extends nv implements ut {
                       if (this.field_r) {
                         L45: {
                           if (!this.l(8192)) {
-                            stackOut_48_0 = 0;
-                            stackIn_49_0 = stackOut_48_0;
+                            stackIn_49_0 = 0;
                             break L45;
                           } else {
-                            stackOut_47_0 = 1;
-                            stackIn_49_0 = stackOut_47_0;
+                            stackIn_49_0 = 1;
                             break L45;
                           }
                         }
@@ -1132,12 +930,10 @@ final class kj extends nv implements ut {
                       } else {
                         L47: {
                           if (!this.e(false)) {
-                            stackOut_54_0 = 0;
-                            stackIn_55_0 = stackOut_54_0;
+                            stackIn_55_0 = 0;
                             break L47;
                           } else {
-                            stackOut_53_0 = 1;
-                            stackIn_55_0 = stackOut_53_0;
+                            stackIn_55_0 = 1;
                             break L47;
                           }
                         }
@@ -1161,12 +957,10 @@ final class kj extends nv implements ut {
               } else {
                 L49: {
                   if (!this.r(8192)) {
-                    stackOut_65_0 = 0;
-                    stackIn_66_0 = stackOut_65_0;
+                    stackIn_66_0 = 0;
                     break L49;
                   } else {
-                    stackOut_64_0 = 1;
-                    stackIn_66_0 = stackOut_64_0;
+                    stackIn_66_0 = 1;
                     break L49;
                   }
                 }
@@ -1182,12 +976,10 @@ final class kj extends nv implements ut {
               if (this.field_r) {
                 L51: {
                   if (!this.l(8192)) {
-                    stackOut_80_0 = 0;
-                    stackIn_81_0 = stackOut_80_0;
+                    stackIn_81_0 = 0;
                     break L51;
                   } else {
-                    stackOut_79_0 = 1;
-                    stackIn_81_0 = stackOut_79_0;
+                    stackIn_81_0 = 1;
                     break L51;
                   }
                 }
@@ -1201,12 +993,10 @@ final class kj extends nv implements ut {
                   } else {
                     L53: {
                       if (!this.e(false)) {
-                        stackOut_72_0 = 0;
-                        stackIn_73_0 = stackOut_72_0;
+                        stackIn_73_0 = 0;
                         break L53;
                       } else {
-                        stackOut_71_0 = 1;
-                        stackIn_73_0 = stackOut_71_0;
+                        stackIn_73_0 = 1;
                         break L53;
                       }
                     }
@@ -1223,12 +1013,10 @@ final class kj extends nv implements ut {
             if (this.field_q) {
               L54: {
                 if (!this.e(false)) {
-                  stackOut_88_0 = 0;
-                  stackIn_89_0 = stackOut_88_0;
+                  stackIn_89_0 = 0;
                   break L54;
                 } else {
-                  stackOut_87_0 = 1;
-                  stackIn_89_0 = stackOut_87_0;
+                  stackIn_89_0 = 1;
                   break L54;
                 }
               }

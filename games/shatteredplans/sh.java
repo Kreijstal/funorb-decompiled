@@ -8,19 +8,19 @@ final class sh implements fo {
     private int field_d;
 
     public final l a(byte param0) throws jn {
-        int var2 = 0;
-        int var3 = 0;
-        l var4 = null;
-        int var5 = 0;
-        vl var6 = null;
-        ln[] var7 = null;
-        int var8 = 0;
-        ln var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        ln var13 = null;
-        int var14 = 0;
+        int var2;
+        int var3;
+        l var4;
+        int var5;
+        vl var6;
+        ln[] var7;
+        int var8;
+        ln var9;
+        int var10;
+        int var11;
+        int var12;
+        ln var13;
+        int var14;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = pe.a((byte) 34, 11);
         var3 = ls.a(11, 2);
@@ -94,9 +94,9 @@ final class sh implements fo {
         int[] var12 = null;
         int[] var10 = null;
         int[] var2 = null;
+        int dupTemp$0 = 0;
         int var5 = 0;
         int var4 = 0;
-        boolean discarded$0 = false;
         int var8 = 0;
         int var3 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -108,8 +108,9 @@ final class sh implements fo {
             var10 = var12;
             var2 = var10;
             sn.a(var11, (byte) -76, param0);
-            var5 = var11[0];
-            var4 = var11[0];
+            dupTemp$0 = var11[0];
+            var5 = dupTemp$0;
+            var4 = dupTemp$0;
             for (var3 = 1; 4 > var3; var3++) {
                 if (var11[var3] < var4) {
                     var4 = var11[var3];
@@ -119,12 +120,12 @@ final class sh implements fo {
                 }
             }
             if (param1 != -5) {
-                discarded$0 = sh.b(31);
+                sh.b(31);
             }
             var8 = 0;
             var3 = var8;
             while (-5 < (var8 ^ -1)) {
-                var2[var8] = var12[var8] + -var5;
+                var7[var8] = var11[var8] + -var5;
                 var8++;
             }
             param0.field_u = var2;
@@ -136,11 +137,11 @@ final class sh implements fo {
     }
 
     final static boolean b(int param0) {
-        int var1 = 0;
-        long var2 = 0L;
-        long var4 = 0L;
-        int var6 = 0;
-        int var7 = 0;
+        int var1;
+        long var2;
+        long var4;
+        int var6;
+        int var7;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var1 = 52 / ((param0 - -16) / 49);
         var2 = pr.a(14274);
@@ -185,9 +186,8 @@ final class sh implements fo {
     }
 
     public static void b(byte param0) {
-        nf discarded$0 = null;
         if (param0 != 87) {
-            discarded$0 = sh.a(false, 42, -4, 3);
+            sh.a(false, 42, -4, 3);
         }
         field_c = null;
     }
@@ -202,22 +202,20 @@ final class sh implements fo {
     }
 
     final static nf a(boolean param0, int param1, int param2, int param3) {
-        Object var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        nf var8_ref_nf = null;
-        int var9 = 0;
-        nf var9_ref_nf = null;
-        int var10_int = 0;
-        String var10 = null;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int stackIn_41_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
+        int stackIn_42_0 = 0;
+        Object var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        nf var8_ref_nf;
+        int var9;
+        nf var9_ref_nf;
+        int var10_int;
+        String var10;
+        String var11;
+        int var12;
+        int var13;
         L0: {
           var13 = ShatteredPlansClient.field_F ? 1 : 0;
           var4 = null;
@@ -285,16 +283,14 @@ final class sh implements fo {
                 L7: {
                   ji.field_I.a(param1 * 2 * param3, true, (byte) -114, param3);
                   if (var9 != ji.field_I.field_xb.field_w + ji.field_I.field_xb.field_db) {
-                    stackOut_40_0 = 0;
-                    stackIn_41_0 = stackOut_40_0;
+                    stackIn_42_0 = 0;
                     break L7;
                   } else {
-                    stackOut_39_0 = 1;
-                    stackIn_41_0 = stackOut_39_0;
+                    stackIn_42_0 = 1;
                     break L7;
                   }
                 }
-                ShatteredPlansClient.field_K = stackIn_41_0 != 0;
+                ShatteredPlansClient.field_K = stackIn_42_0 != 0;
                 return (nf) (var4);
               } else {
                 var9_ref_nf = wm.field_d[var8];

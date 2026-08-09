@@ -14,8 +14,6 @@ final class f {
         nf[] var6 = null;
         nf[] stackIn_3_0 = null;
         nf[] stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -23,16 +21,6 @@ final class f {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        nf[] stackOut_7_0 = null;
-        nf[] stackOut_2_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var5 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -43,8 +31,7 @@ final class f {
               L1: while (true) {
                 if (var4 >= param1.length) {
                   pi.field_S.a((byte) 110);
-                  stackOut_7_0 = (nf[]) (var3);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = (nf[]) (var3);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -56,8 +43,7 @@ final class f {
                 }
               }
             } else {
-              stackOut_2_0 = (nf[]) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (nf[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -66,27 +52,19 @@ final class f {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3_ref);
-            stackOut_9_1 = new StringBuilder().append("f.A(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3_ref);
+
+            stackIn_11_1 = new StringBuilder().append("f.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -100,19 +78,18 @@ final class f {
     }
 
     public static void a(int param0) {
-        nf[] discarded$0 = null;
         field_b = null;
         field_a = null;
         field_c = null;
         if (param0 != -12435) {
             nf[] var2 = (nf[]) null;
-            discarded$0 = f.a(-105, (nf[]) null, 93);
+            f.a(-105, (nf[]) null, 93);
         }
     }
 
     final static byte a(char param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = Confined.field_J ? 1 : 0;
           if (param1 == -8483) {

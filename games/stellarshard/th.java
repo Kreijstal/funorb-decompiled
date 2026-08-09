@@ -7,8 +7,6 @@ final class th {
 
     final boolean b(int param0) {
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
         L0: {
           if (param0 == 48) {
             break L0;
@@ -26,8 +24,7 @@ final class th {
                 break L2;
               } else {
                 if (this != la.field_O) {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 0;
                   break L1;
                 } else {
                   break L2;
@@ -35,8 +32,7 @@ final class th {
               }
             }
           }
-          stackOut_6_0 = 1;
-          stackIn_8_0 = stackOut_6_0;
+          stackIn_8_0 = 1;
           break L1;
         }
         return stackIn_8_0 != 0;
@@ -51,21 +47,10 @@ final class th {
     }
 
     final static boolean a(int param0, boolean param1, int param2, CharSequence param3) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_26_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_38_0 = 0;
         int stackIn_44_0 = 0;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
         RuntimeException stackIn_48_0 = null;
@@ -73,18 +58,15 @@ final class th {
         String stackIn_48_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_43_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_37_0 = 0;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        RuntimeException stackOut_47_0 = null;
-        StringBuilder stackOut_47_1 = null;
-        String stackOut_47_2 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         var11 = stellarshard.field_B;
         try {
           L0: {
@@ -108,8 +90,7 @@ final class th {
                           break L3;
                         }
                       }
-                      stackOut_43_0 = var5;
-                      stackIn_44_0 = stackOut_43_0;
+                      stackIn_44_0 = var5;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
@@ -162,8 +143,7 @@ final class th {
                             }
                           }
                           if (97 > var9) {
-                            stackOut_25_0 = 0;
-                            stackIn_26_0 = stackOut_25_0;
+                            stackIn_26_0 = 0;
                             decompiledRegionSelector0 = 0;
                             break L0;
                           } else {
@@ -176,8 +156,7 @@ final class th {
                           }
                         }
                         if (param2 <= var9) {
-                          stackOut_31_0 = 0;
-                          stackIn_32_0 = stackOut_31_0;
+                          stackIn_32_0 = 0;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -191,8 +170,7 @@ final class th {
                           }
                           var10 = param2 * var6 - -var9;
                           if (var10 / param2 != var6) {
-                            stackOut_37_0 = 0;
-                            stackIn_38_0 = stackOut_37_0;
+                            stackIn_38_0 = 0;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
@@ -217,27 +195,19 @@ final class th {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var4 = decompiledCaughtException;
-            stackOut_45_0 = (RuntimeException) (var4);
-            stackOut_45_1 = new StringBuilder().append("th.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_47_0 = stackOut_45_0;
-            stackIn_47_1 = stackOut_45_1;
-            stackIn_46_0 = stackOut_45_0;
-            stackIn_46_1 = stackOut_45_1;
+            stackIn_47_0 = (RuntimeException) (var4);
+
+            stackIn_47_1 = new StringBuilder().append("th.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackOut_47_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackOut_47_2 = "null";
-              stackIn_48_0 = stackOut_47_0;
-              stackIn_48_1 = stackOut_47_1;
-              stackIn_48_2 = stackOut_47_2;
+              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
+              stackIn_48_2 = "null";
               break L10;
             } else {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "{...}";
-              stackIn_48_0 = stackOut_46_0;
-              stackIn_48_1 = stackOut_46_1;
-              stackIn_48_2 = stackOut_46_2;
+              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
+              stackIn_48_2 = "{...}";
               break L10;
             }
           }
@@ -259,13 +229,12 @@ final class th {
     }
 
     final static void a(bd param0, bd param1, int param2, int param3) {
-        boolean discarded$0 = false;
         try {
             pe.field_c = param1;
             mj.field_E = param0;
             if (param3 >= -99) {
                 CharSequence var5 = (CharSequence) null;
-                discarded$0 = th.a(-70, false, 43, (CharSequence) null);
+                th.a(-70, false, 43, (CharSequence) null);
             }
             gg.field_d = param2;
             ki.a(ti.field_i / 2, ti.field_b / 2, -116);
@@ -290,7 +259,6 @@ final class th {
     final static void a(int param0, fk param1, int param2) {
         ha var5 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var5 = pg.field_fb;
             var5.f(param0, 950);
@@ -303,7 +271,7 @@ final class th {
             var5.b(0, param1.field_s);
             var5.b(0, param1.field_o);
             var5.b(0, param1.field_n);
-            discarded$0 = var5.c(var4, (byte) -3);
+            var5.c(var4, (byte) -3);
             var5.a(-var4 + var5.field_k, (byte) 80);
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) ((Object) runtimeException), "th.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

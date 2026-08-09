@@ -11,18 +11,17 @@ final class md {
     static int field_c;
 
     final static String a(byte param0, long param1) {
-        String discarded$1 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         ul.field_c.setTime(new Date(param1));
         var3 = ul.field_c.get(7);
         if (param0 > -43) {
-          discarded$1 = md.a((byte) -70, -99L);
+          md.a((byte) -70, -99L);
           var4 = ul.field_c.get(5);
           var5 = ul.field_c.get(2);
           var6 = ul.field_c.get(1);

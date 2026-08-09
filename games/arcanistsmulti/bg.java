@@ -246,12 +246,10 @@ abstract class bg {
     }
 
     final static void a(int param0, int param1) {
-        boolean discarded$2 = false;
-        boolean discarded$3 = false;
         if (0 != (nm.field_h ^ -1)) {
           if (param1 == nm.field_h) {
             nm.field_h = param1;
-            discarded$2 = lc.a((byte) 112);
+            lc.a((byte) 112);
             he.field_e.b((byte) -76, 66);
             he.field_e.f(param1, (byte) -78);
             if (param0 <= qf.field_d) {
@@ -275,7 +273,7 @@ abstract class bg {
           }
         } else {
           nm.field_h = param1;
-          discarded$3 = lc.a((byte) 112);
+          lc.a((byte) 112);
           he.field_e.b((byte) -76, 66);
           he.field_e.f(param1, (byte) -78);
           if (param0 <= qf.field_d) {
@@ -298,7 +296,7 @@ abstract class bg {
     }
 
     final static void a(boolean param0, byte param1) {
-        cn var2 = null;
+        cn var2;
         n.field_g.a(param0, true);
         var2 = ln.field_U;
         if (var2 == null) {

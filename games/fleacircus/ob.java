@@ -9,17 +9,11 @@ final class ob {
     static String field_b;
 
     final static boolean a(boolean param0, int param1, boolean param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_21_0 = 0;
         int stackIn_50_0 = 0;
         int stackIn_60_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
+        int var4;
+        int var5;
         if (!param0) {
           if (uj.field_a[param3] <= uj.field_a[param1]) {
             if (uj.field_a[param3] >= uj.field_a[param1]) {
@@ -37,12 +31,10 @@ final class ob {
                       } else {
                         L0: {
                           if (param1 >= param3) {
-                            stackOut_59_0 = 0;
-                            stackIn_60_0 = stackOut_59_0;
+                            stackIn_60_0 = 0;
                             break L0;
                           } else {
-                            stackOut_58_0 = 1;
-                            stackIn_60_0 = stackOut_58_0;
+                            stackIn_60_0 = 1;
                             break L0;
                           }
                         }
@@ -58,12 +50,10 @@ final class ob {
                       } else {
                         L1: {
                           if (param1 >= param3) {
-                            stackOut_49_0 = 0;
-                            stackIn_50_0 = stackOut_49_0;
+                            stackIn_50_0 = 0;
                             break L1;
                           } else {
-                            stackOut_48_0 = 1;
-                            stackIn_50_0 = stackOut_48_0;
+                            stackIn_50_0 = 1;
                             break L1;
                           }
                         }
@@ -116,12 +106,10 @@ final class ob {
                       } else {
                         L2: {
                           if (param1 >= param3) {
-                            stackOut_20_0 = 0;
-                            stackIn_21_0 = stackOut_20_0;
+                            stackIn_21_0 = 0;
                             break L2;
                           } else {
-                            stackOut_19_0 = 1;
-                            stackIn_21_0 = stackOut_19_0;
+                            stackIn_21_0 = 1;
                             break L2;
                           }
                         }

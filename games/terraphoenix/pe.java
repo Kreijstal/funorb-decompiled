@@ -58,9 +58,9 @@ final class pe {
 
     static {
         $cfr$clinit: {
-            long var0 = 0L;
-            int var2 = 0;
-            int var3 = 0;
+            long var0;
+            int var2;
+            int var3;
             field_d = new long[256];
             field_c = new String[]{"Hostiles Neutralised", "Aliens Killed", "Grunts Killed", "Area secured", "Research base secured", "Airbase secured", "Manufacturing facility secured", "Alien transporter recovered", "Alien invader recovered", "Alien database stolen", "Alien codes stolen", "Warhead recovered", "Transporter captured", "Warhead set and ready", "Resources collected", "UFO escaped", "Base lost", "Assault failed", "Warhead lost", "Attack team failed", "Resources not recovered", "Soldiers wounded", "Soldiers lost", "Soldiers abandoned", "Difficulty bonus:", "Speed bonus:", "Mission score: ", "Game score: ", "Zombies Killed"};
             var2 = 0;

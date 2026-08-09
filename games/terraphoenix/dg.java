@@ -24,9 +24,8 @@ final class dg {
     }
 
     public static void b(boolean param0) {
-        java.applet.Applet discarded$2 = null;
         if (!param0) {
-          discarded$2 = dg.a(false);
+          dg.a(false);
           field_e = (byte[][]) null;
           field_a = null;
           field_c = null;
@@ -40,7 +39,7 @@ final class dg {
     }
 
     final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         if (param2 == -76) {
           var4 = 0;
           if (!param0) {
@@ -114,12 +113,12 @@ final class dg {
     }
 
     final static void a(int param0) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         uc var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var3 = Terraphoenix.field_V;
         try {
           L0: {
@@ -137,9 +136,9 @@ final class dg {
                 break L0;
               } else {
                 var1.k(-17410, 8);
-                fieldTemp$5 = var1.field_k + 1;
+                fieldTemp$2 = var1.field_k + 1;
                 var1.field_k = var1.field_k + 1;
-                var2 = fieldTemp$5;
+                var2 = fieldTemp$2;
                 ql.a(-124, var1);
                 di.field_l.j(var1.field_k + -var2, -119);
                 continue L2;

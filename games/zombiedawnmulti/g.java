@@ -14,13 +14,13 @@ final class g {
     }
 
     final static void a(ja param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         L0: {
           var3 = param1 + param2 * oo.field_b;
           var4 = 0;
@@ -115,13 +115,13 @@ final class g {
     }
 
     final static void a(ja param0, int param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           var4 = param1 + param2 * oo.field_b;
           var5 = 0;
@@ -199,7 +199,7 @@ final class g {
     }
 
     private final static boolean b(th param0) {
-        br var1 = null;
+        br var1;
         var1 = param0.c(51);
         L0: while (true) {
           L1: {
@@ -223,12 +223,12 @@ final class g {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         var12 = -param6;
         L0: while (true) {
           if (var12 >= 0) {
@@ -242,9 +242,9 @@ final class g {
                 var12++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 if (param2 == 0) {
                   param4++;
                   var13++;
@@ -252,9 +252,9 @@ final class g {
                 } else {
                   var10 = param0[param4];
                   var11 = 256 - ((param2 & 255) * param9 >> 8);
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = (var10 & 16711935) * var11 >> 8 & 16711935 | (var10 & 65280) * var11 >> 8 & 65280;
+                  param0[incrementValue$12] = (var10 & 16711935) * var11 >> 8 & 16711935 | (var10 & 65280) * var11 >> 8 & 65280;
                   var13++;
                   continue L1;
                 }
@@ -286,18 +286,18 @@ final class g {
     }
 
     final static void a(int param0) {
-        int incrementValue$7877 = 0;
-        int incrementValue$7878 = 0;
-        int var1 = 0;
-        int[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        ja var5 = null;
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int[] var10 = null;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int var1;
+        int[] var2;
+        int var3;
+        int var4;
+        ja var5;
+        int[] var6;
+        int var7;
+        int var8;
+        int[] var9;
+        int[] var10;
         var1 = 0;
         var10 = oo.field_i;
         var9 = var10;
@@ -366,16 +366,16 @@ final class g {
                         }
                       }
                     }
-                    incrementValue$7877 = var1;
+                    incrementValue$8 = var1;
                     var1++;
-                    var6[incrementValue$7877] = param0;
+                    var6[incrementValue$8] = param0;
                     var8++;
                     continue L1;
                   }
                 }
-                incrementValue$7878 = var1;
+                incrementValue$9 = var1;
                 var1++;
-                var6[incrementValue$7878] = var2[incrementValue$7878];
+                var6[incrementValue$9] = var2[incrementValue$9];
                 var8++;
                 continue L1;
               }
@@ -385,9 +385,9 @@ final class g {
     }
 
     final static void a(th param0) {
-        Object var1 = null;
-        br var1_ref = null;
-        br var2 = null;
+        Object var1;
+        br var1_ref;
+        br var2;
         L0: while (true) {
           if (g.b(param0)) {
             return;
@@ -424,8 +424,8 @@ final class g {
     }
 
     final static int a(int param0, int param1, boolean param2, boolean param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var4 = 750;
         if (param0 != 255) {
           L0: {
@@ -584,12 +584,12 @@ final class g {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var11 = -param6;
         L0: while (true) {
           if (var11 >= 0) {
@@ -603,9 +603,9 @@ final class g {
                 var11++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 if (param2 == 0) {
                   param4++;
                   var12++;
@@ -613,9 +613,9 @@ final class g {
                 } else {
                   var9 = param0[param4];
                   var10 = 256 - (param2 & 255);
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = (var9 & 16711935) * var10 >> 8 & 16711935 | (var9 & 65280) * var10 >> 8 & 65280;
+                  param0[incrementValue$12] = (var9 & 16711935) * var10 >> 8 & 16711935 | (var9 & 65280) * var10 >> 8 & 65280;
                   var12++;
                   continue L1;
                 }
@@ -631,8 +631,8 @@ final class g {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var10 = 0;
-        int var11 = 0;
+        int var10;
+        int var11;
         param8--;
         L0: while (true) {
           if (param8 < 0) {

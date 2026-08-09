@@ -24,13 +24,16 @@ final class li extends gg {
     }
 
     final static void d(int param0) {
-        int fieldTemp$3 = 0;
-        String discarded$4 = null;
-        int fieldTemp$5 = 0;
-        RuntimeException var1 = null;
-        jd var1_ref = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int stackIn_11_0 = 0;
+        ia stackIn_56_0 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        jd var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
-        String var3 = null;
+        Object var3 = null;
         int var3_int = 0;
         String var4_ref_String = null;
         int var4 = 0;
@@ -38,23 +41,14 @@ final class li extends gg {
         ia var5_ref = null;
         ia var6 = null;
         String var6_ref = null;
-        String var7 = null;
-        ia var7_ref = null;
+        ia var7 = null;
+        String var7_ref = null;
         int var8 = 0;
-        int stackIn_11_0 = 0;
-        ia stackIn_51_0 = null;
-        ia stackIn_56_0 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        ia stackOut_50_0 = null;
-        ia stackOut_55_0 = null;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
         var8 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            var1_ref = te.field_N;
-            var2 = var1_ref.j(255);
+            var1 = te.field_N;
+            var2 = var1.j(255);
             if ((var2 ^ -1) != -1) {
               if ((var2 ^ -1) == -2) {
                 L1: {
@@ -67,8 +61,8 @@ final class li extends gg {
                   }
                 }
                 L2: {
-                  var3 = var1_ref.h(55);
-                  if (var3.equals("")) {
+                  var3 = var1.h(55);
+                  if (((String) (var3)).equals("")) {
                     var3 = null;
                     break L2;
                   } else {
@@ -76,8 +70,8 @@ final class li extends gg {
                   }
                 }
                 L3: {
-                  var4_ref_String = var1_ref.h(75);
-                  var5 = var1_ref.h(56);
+                  var4_ref_String = var1.h(75);
+                  var5 = var1.h(56);
                   var6 = mc.a(var4_ref_String, (byte) 105);
                   if (var6 != null) {
                     break L3;
@@ -97,9 +91,9 @@ final class li extends gg {
                   } else {
                     var6 = new ia();
                     ok.field_a.a((long)jg.a((CharSequence) ((Object) var4_ref_String), -2).hashCode(), (byte) -109, var6);
-                    fieldTemp$3 = ng.field_c;
+                    fieldTemp$0 = ng.field_c;
                     ng.field_c = ng.field_c + 1;
-                    var6.field_jb = fieldTemp$3;
+                    var6.field_jb = fieldTemp$0;
                     va.field_f.a(var6, -7044);
                     break L4;
                   }
@@ -108,30 +102,29 @@ final class li extends gg {
                   if (null == var3) {
                     break L5;
                   } else {
-                    var3 = var3.intern();
+                    var3 = ((String) (var3)).intern();
                     break L5;
                   }
                 }
-                var6.field_gb = var3;
+                var6.field_gb = (String) (var3);
                 var6.field_ib = var4_ref_String;
                 var6.c(10);
-                var7_ref = (ia) ((Object) va.field_f.a((byte) 51));
+                var7 = (ia) ((Object) va.field_f.a((byte) 51));
                 L6: while (true) {
                   L7: {
                     L8: {
-                      if (var7_ref == null) {
+                      if (var7 == null) {
                         break L8;
                       } else {
-                        stackOut_50_0 = (ia) (var6);
-                        stackIn_56_0 = stackOut_50_0;
-                        stackIn_51_0 = stackOut_50_0;
+                        stackIn_56_0 = (ia) (var6);
+
                         if (var8 != 0) {
                           break L7;
                         } else {
-                          if (!je.a(stackIn_51_0, var7_ref, true)) {
+                          if (!je.a(stackIn_56_0, var7, true)) {
                             break L8;
                           } else {
-                            var7_ref = (ia) ((Object) va.field_f.b(-40));
+                            var7 = (ia) ((Object) va.field_f.b(-40));
                             if (var8 == 0) {
                               continue L6;
                             } else {
@@ -141,8 +134,7 @@ final class li extends gg {
                         }
                       }
                     }
-                    stackOut_55_0 = (ia) (var7_ref);
-                    stackIn_56_0 = stackOut_55_0;
+                    stackIn_56_0 = (ia) (var7);
                     break L7;
                   }
                   L9: {
@@ -158,7 +150,7 @@ final class li extends gg {
                         }
                       }
                     }
-                    ha.a(var6, (byte) 51, var7_ref);
+                    ha.a(var6, (byte) 51, var7);
                     break L9;
                   }
                   decompiledRegionSelector0 = 1;
@@ -204,9 +196,9 @@ final class li extends gg {
                       break L0;
                     } else {
                       lh.field_p = 1;
-                      var3 = var1_ref.h(37);
-                      qa.field_r = var3.intern();
-                      var4 = var1_ref.j(255);
+                      var3 = var1.h(37);
+                      qa.field_r = ((String) (var3)).intern();
+                      var4 = var1.j(255);
                       pk.a((byte) -48, var4);
                       decompiledRegionSelector0 = 4;
                       break L0;
@@ -225,21 +217,19 @@ final class li extends gg {
                 }
               }
               L15: {
-                if ((var1_ref.j(255) ^ -1) != -2) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
+                if ((var1.j(255) ^ -1) != -2) {
+                  stackIn_11_0 = 0;
                   break L15;
                 } else {
-                  stackOut_8_0 = 1;
-                  stackIn_11_0 = stackOut_8_0;
+                  stackIn_11_0 = 1;
                   break L15;
                 }
               }
               L16: {
                 var3_int = stackIn_11_0;
-                var4_ref_String = var1_ref.h(20);
+                var4_ref_String = var1.h(20);
                 if (var3_int != 0) {
-                  discarded$4 = var1_ref.h(31);
+                  var1.h(31);
                   break L16;
                 } else {
                   break L16;
@@ -247,10 +237,10 @@ final class li extends gg {
               }
               L17: {
                 var5_ref = ug.a(var4_ref_String, 113);
-                var6_ref = var1_ref.h(105);
-                var7 = jg.a((CharSequence) ((Object) var4_ref_String), -2);
-                if (null == var7) {
-                  var7 = var4_ref_String;
+                var6_ref = var1.h(105);
+                var7_ref = jg.a((CharSequence) ((Object) var4_ref_String), -2);
+                if (null == var7_ref) {
+                  var7_ref = var4_ref_String;
                   break L17;
                 } else {
                   break L17;
@@ -260,7 +250,7 @@ final class li extends gg {
                 if (var5_ref == null) {
                   var5_ref = ug.a(var6_ref, 115);
                   if (var5_ref != null) {
-                    lc.field_m.a((long)var7.hashCode(), (byte) -109, var5_ref);
+                    lc.field_m.a((long)var7_ref.hashCode(), (byte) -109, var5_ref);
                     break L18;
                   } else {
                     break L18;
@@ -274,10 +264,10 @@ final class li extends gg {
                   break L19;
                 } else {
                   var5_ref = new ia();
-                  lc.field_m.a((long)var7.hashCode(), (byte) -109, var5_ref);
-                  fieldTemp$5 = kj.field_O;
+                  lc.field_m.a((long)var7_ref.hashCode(), (byte) -109, var5_ref);
+                  fieldTemp$1 = kj.field_O;
                   kj.field_O = kj.field_O + 1;
-                  var5_ref.field_jb = fieldTemp$5;
+                  var5_ref.field_jb = fieldTemp$1;
                   vb.field_h.a(var5_ref, -7044);
                   break L19;
                 }
@@ -289,8 +279,8 @@ final class li extends gg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw fc.a((Throwable) ((Object) var1), "li.B(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw fc.a((Throwable) ((Object) var1_ref), "li.B(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

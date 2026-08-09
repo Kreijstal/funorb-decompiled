@@ -7,19 +7,17 @@ final class jm extends dp {
     static int[] field_e;
 
     final byte[] a(int param0) {
-        java.nio.ByteBuffer discarded$12 = null;
-        java.nio.ByteBuffer discarded$13 = null;
-        byte[] var2 = null;
-        byte[] var3 = null;
+        byte[] var2;
+        byte[] var3;
         var3 = new byte[this.field_c.capacity()];
         var2 = var3;
-        java.nio.Buffer discarded$11 = this.field_c.position(0);
+        this.field_c.position(0);
         if (param0 != -21056) {
           field_e = (int[]) null;
-          discarded$12 = this.field_c.get(var3);
+          this.field_c.get(var3);
           return var3;
         } else {
-          discarded$13 = this.field_c.get(var3);
+          this.field_c.get(var3);
           return var3;
         }
     }
@@ -32,10 +30,10 @@ final class jm extends dp {
 
     final static void a(int param0, int param1) {
         q var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         qp var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = Torquing.field_u;
         try {
           L0: {
@@ -67,15 +65,13 @@ final class jm extends dp {
     }
 
     final void a(byte param0, byte[] param1) {
-        java.nio.Buffer discarded$0 = null;
-        java.nio.ByteBuffer discarded$1 = null;
         try {
             this.field_c = java.nio.ByteBuffer.allocateDirect(param1.length);
             if (param0 > -11) {
                 jm.c(28);
             }
-            discarded$0 = this.field_c.position(0);
-            discarded$1 = this.field_c.put(param1);
+            this.field_c.position(0);
+            this.field_c.put(param1);
         } catch (RuntimeException runtimeException) {
             throw rb.a((Throwable) ((Object) runtimeException), "jm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -19,14 +19,14 @@ final class id implements Iterator {
     private ll field_h;
 
     public final Object next() {
-        ll var1 = this.field_h;
+        Object var1 = this.field_h;
         if (this.field_d.field_d == var1) {
             var1 = null;
             this.field_h = null;
         } else {
-            this.field_h = var1.field_n;
+            this.field_h = ((ll) (var1)).field_n;
         }
-        this.field_a = var1;
+        this.field_a = (ll) (var1);
         return var1;
     }
 
@@ -43,13 +43,11 @@ final class id implements Iterator {
     }
 
     final static void a(int param0) {
-        ab discarded$1 = null;
-        RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        int var4 = 0;
         qh var4_ref_qh = null;
+        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -71,6 +69,7 @@ final class id implements Iterator {
         int[] var21 = null;
         int[] var22 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var19 = DungeonAssault.field_K;
         try {
           L0: {
@@ -94,7 +93,7 @@ final class id implements Iterator {
                     break L2;
                   } else {
                     var20 = (String) null;
-                    discarded$1 = id.a(-29, (String) null);
+                    id.a(-29, (String) null);
                     break L2;
                   }
                 }
@@ -150,7 +149,7 @@ final class id implements Iterator {
                         }
                       } else {
                         L7: {
-                          if (var22[var16] < var22[var17_int]) {
+                          if ((var22[var16] ^ -1) > (var22[var17_int] ^ -1)) {
                             var16 = var17_int;
                             break L7;
                           } else {
@@ -216,23 +215,12 @@ final class id implements Iterator {
         int var4 = 0;
         int var5 = 0;
         ab stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ab stackOut_11_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         var5 = DungeonAssault.field_K;
         try {
           L0: {
@@ -248,8 +236,7 @@ final class id implements Iterator {
             var3 = 0;
             L2: while (true) {
               if (var2_int <= var3) {
-                stackOut_11_0 = np.field_E;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = np.field_E;
                 break L0;
               } else {
                 var4 = param1.charAt(var3);
@@ -270,27 +257,19 @@ final class id implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var2);
-            stackOut_13_1 = new StringBuilder().append("id.B(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var2);
+
+            stackIn_15_1 = new StringBuilder().append("id.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }
@@ -300,45 +279,23 @@ final class id implements Iterator {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int[] param5, int param6, int param7, int[] param8, int param9) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        RuntimeException var10 = null;
-        int var10_int = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        int var10_int = 0;
+        RuntimeException var10 = null;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
         var14 = DungeonAssault.field_K;
         try {
           L0: {
@@ -365,9 +322,9 @@ final class id implements Iterator {
                   } else {
                     L4: {
                       L5: {
-                        incrementValue$2 = param6;
+                        incrementValue$0 = param6;
                         param6++;
-                        param1 = param5[incrementValue$2];
+                        param1 = param5[incrementValue$0];
                         if (0 == param1) {
                           break L5;
                         } else {
@@ -376,9 +333,9 @@ final class id implements Iterator {
                           } else {
                             var10_int = param8[param0];
                             var11 = 255 & param1;
-                            incrementValue$3 = param0;
+                            incrementValue$1 = param0;
                             param0++;
-                            param8[incrementValue$3] = mp.a(nb.a(nb.a(65280, var10_int) * var11 >> -1891192504, 65280), mp.a(nb.a(nb.a(16711935, var10_int) * var11 >> 1385284200, 16711935), nb.a(var10_int, -16777216)));
+                            param8[incrementValue$1] = mp.a(nb.a(nb.a(65280, var10_int) * var11 >> -1891192504, 65280), mp.a(nb.a(nb.a(16711935, var10_int) * var11 >> 1385284200, 16711935), nb.a(var10_int, -16777216)));
                             break L4;
                           }
                         }
@@ -397,56 +354,40 @@ final class id implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var10 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var10);
-            stackOut_14_1 = new StringBuilder().append("id.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var10);
+
+            stackIn_16_1 = new StringBuilder().append("id.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param6).append(',').append(param7).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+
+
+            stackIn_19_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param6).append(',').append(param7).append(',');
+
             if (param8 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L7;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L7;
             }
           }
-          throw vk.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param9 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_17_0), stackIn_20_2 + ',' + param9 + ')');
         }
     }
 

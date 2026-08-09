@@ -31,10 +31,10 @@ final class no extends qk {
     }
 
     final static aj a(int param0, int param1) {
-        aj[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        aj[] var5 = null;
+        aj[] var2;
+        int var3;
+        int var4;
+        aj[] var5;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         var5 = so.c(96);
         var2 = var5;
@@ -58,68 +58,74 @@ final class no extends qk {
     }
 
     final static void h(int param0) {
-        RuntimeException var1 = null;
-        cg var1_ref = null;
-        na var1_ref2 = null;
-        int var2 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_25_1 = 0;
         RuntimeException decompiledCaughtException = null;
+        cg var1 = null;
+        na var1_ref = null;
+        RuntimeException var1_ref2 = null;
+        int var2 = 0;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            var1_ref = (cg) ((Object) gm.field_j.b(param0 + 12624));
+            var1 = (cg) ((Object) gm.field_j.b(param0 + 12624));
             L1: while (true) {
-              if (var1_ref == null) {
-                var1_ref2 = (na) ((Object) vh.field_a.b(param0 + 12624));
+              if (var1 == null) {
+                var1_ref = (na) ((Object) vh.field_a.b(param0 + 12624));
                 L2: while (true) {
-                  if (var1_ref2 == null) {
-                    var1_ref = (cg) ((Object) ph.field_a.b(param0 ^ -12624));
+                  if (var1_ref == null) {
+                    var1 = (cg) ((Object) ph.field_a.b(param0 ^ -12624));
                     L3: while (true) {
-                      if (var1_ref == null) {
-                        L4: {
+                      L4: {
+                        if (var1 == null) {
                           if (param0 == -1) {
                             break L4;
                           } else {
                             no.l((byte) 65);
                             break L4;
                           }
-                        }
-                        break L0;
-                      } else {
-                        L5: {
-                          if ((var1_ref.field_Eb ^ -1) >= -1) {
-                            break L5;
-                          } else {
-                            var1_ref.field_Eb = var1_ref.field_Eb - 1;
-                            if (0 == var1_ref.field_Eb) {
-                              var1_ref.field_Sb = 0;
-                              if (var1_ref.e(183874081)) {
-                                var1_ref.a(true);
-                                break L5;
-                              } else {
-                                break L5;
-                              }
+                        } else {
+                          stackIn_25_0 = var1.field_Eb ^ -1;
+
+                          stackIn_25_1 = -1;
+
+                          L5: {
+                            if (stackIn_25_0 >= stackIn_25_1) {
+                              break L5;
                             } else {
-                              var1_ref = (cg) ((Object) ph.field_a.a(0));
-                              continue L3;
+                              var1.field_Eb = var1.field_Eb - 1;
+                              if (0 == var1.field_Eb) {
+                                var1.field_Sb = 0;
+                                if (var1.e(183874081)) {
+                                  var1.a(true);
+                                  break L5;
+                                } else {
+                                  break L5;
+                                }
+                              } else {
+                                var1 = (cg) ((Object) ph.field_a.a(0));
+                                continue L3;
+                              }
                             }
                           }
+                          var1 = (cg) ((Object) ph.field_a.a(0));
+                          continue L3;
                         }
-                        var1_ref = (cg) ((Object) ph.field_a.a(0));
-                        continue L3;
                       }
+                      break L0;
                     }
                   } else {
                     L6: {
-                      if (-1 <= (var1_ref2.field_bc ^ -1)) {
+                      if (-1 <= (var1_ref.field_bc ^ -1)) {
                         break L6;
                       } else {
-                        var1_ref2.field_bc = var1_ref2.field_bc - 1;
-                        if (var1_ref2.field_bc == 0) {
-                          var1_ref2.field_ac = 0;
-                          if (!var1_ref2.e(-100)) {
+                        var1_ref.field_bc = var1_ref.field_bc - 1;
+                        if (var1_ref.field_bc == 0) {
+                          var1_ref.field_ac = 0;
+                          if (!var1_ref.e(-100)) {
                             break L6;
                           } else {
-                            var1_ref2.a(true);
+                            var1_ref.a(true);
                             break L6;
                           }
                         } else {
@@ -127,18 +133,18 @@ final class no extends qk {
                         }
                       }
                     }
-                    var1_ref2 = (na) ((Object) vh.field_a.a(0));
+                    var1_ref = (na) ((Object) vh.field_a.a(0));
                     continue L2;
                   }
                 }
               } else {
                 L7: {
-                  if ((var1_ref.field_Eb ^ -1) < -1) {
-                    var1_ref.field_Eb = var1_ref.field_Eb - 1;
-                    if (-1 == (var1_ref.field_Eb ^ -1)) {
-                      var1_ref.field_Sb = 0;
-                      if (var1_ref.e(183874081)) {
-                        var1_ref.a(true);
+                  if ((var1.field_Eb ^ -1) < -1) {
+                    var1.field_Eb = var1.field_Eb - 1;
+                    if (-1 == (var1.field_Eb ^ -1)) {
+                      var1.field_Sb = 0;
+                      if (var1.e(183874081)) {
+                        var1.a(true);
                         break L7;
                       } else {
                         break L7;
@@ -150,15 +156,15 @@ final class no extends qk {
                     break L7;
                   }
                 }
-                var1_ref = (cg) ((Object) gm.field_j.a(0));
+                var1 = (cg) ((Object) gm.field_j.a(0));
                 continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "no.G(" + param0 + ')');
+          var1_ref2 = decompiledCaughtException;
+          throw aa.a((Throwable) ((Object) var1_ref2), "no.G(" + param0 + ')');
         }
     }
 

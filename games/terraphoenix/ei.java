@@ -43,11 +43,6 @@ abstract class ei extends kh {
     }
 
     final static int a(byte param0, boolean param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_61_0 = 0;
         int stackIn_65_0 = 0;
         int stackIn_68_0 = 0;
@@ -57,14 +52,11 @@ abstract class ei extends kh {
         int stackIn_81_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_64_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_66_0 = 0;
-        int stackOut_80_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_75_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_78_0 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = Terraphoenix.field_V;
         try {
           L0: {
@@ -261,16 +253,14 @@ abstract class ei extends kh {
                     if (si.field_ob.c((byte) -121)) {
                       if (0 != si.field_ob.field_h) {
                         if (si.field_ob.field_h == 1) {
-                          stackOut_64_0 = 2;
-                          stackIn_65_0 = stackOut_64_0;
+                          stackIn_65_0 = 2;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
                           break L14;
                         }
                       } else {
-                        stackOut_60_0 = 3;
-                        stackIn_61_0 = stackOut_60_0;
+                        stackIn_61_0 = 3;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
@@ -278,12 +268,10 @@ abstract class ei extends kh {
                       break L14;
                     }
                   }
-                  stackOut_66_0 = 1;
-                  stackIn_68_0 = stackOut_66_0;
+                  stackIn_68_0 = 1;
                   L15: while (true) {
                     if (!fd.d(stackIn_68_0)) {
-                      stackOut_80_0 = 0;
-                      stackIn_81_0 = stackOut_80_0;
+                      stackIn_81_0 = 0;
                       decompiledRegionSelector0 = 5;
                       break L0;
                     } else {
@@ -293,16 +281,14 @@ abstract class ei extends kh {
                           break L16;
                         } else {
                           if (-1 == (si.field_ob.field_h ^ -1)) {
-                            stackOut_72_0 = 3;
-                            stackIn_73_0 = stackOut_72_0;
+                            stackIn_73_0 = 3;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
                             if ((si.field_ob.field_h ^ -1) != -2) {
                               break L16;
                             } else {
-                              stackOut_75_0 = 1;
-                              stackIn_76_0 = stackOut_75_0;
+                              stackIn_76_0 = 1;
                               decompiledRegionSelector0 = 3;
                               break L0;
                             }
@@ -310,12 +296,10 @@ abstract class ei extends kh {
                         }
                       }
                       if (lf.field_c != 13) {
-                        stackOut_67_0 = 1;
-                        stackIn_68_0 = stackOut_67_0;
+                        stackIn_68_0 = 1;
                         continue L15;
                       } else {
-                        stackOut_78_0 = 1;
-                        stackIn_79_0 = stackOut_78_0;
+                        stackIn_79_0 = 1;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       }
@@ -366,21 +350,20 @@ abstract class ei extends kh {
     }
 
     void a(int param0, int param1, byte param2) {
-        byte[] discarded$1 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        Object var17 = null;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        Object var17;
         var16 = Terraphoenix.field_V;
         l.b(6 + param0, param1 - -35, this.field_p + -12, this.field_n + -40, 2105376, 0);
         var4 = 35;
@@ -395,7 +378,7 @@ abstract class ei extends kh {
                 break L1;
               } else {
                 var17 = (Object) null;
-                discarded$1 = ei.a((Object) null, false, true);
+                ei.a((Object) null, false, true);
                 break L1;
               }
             }
@@ -438,7 +421,7 @@ abstract class ei extends kh {
               }
             }
           } else {
-            if (var8 >= l.field_d) {
+            if ((var8 ^ -1) <= (l.field_d ^ -1)) {
               if (var8 < l.field_c) {
                 L4: {
                   L5: {
@@ -557,12 +540,11 @@ abstract class ei extends kh {
     }
 
     final static void a(java.awt.Component param0, int param1) {
-        ec discarded$0 = null;
         try {
             param0.addMouseListener(a.field_d);
             if (param1 != -24289) {
                 String var3 = (String) null;
-                discarded$0 = ei.a(-4, (String) null);
+                ei.a(-4, (String) null);
             }
             param0.addMouseMotionListener(a.field_d);
             param0.addFocusListener(a.field_d);
@@ -585,22 +567,21 @@ abstract class ei extends kh {
     }
 
     boolean f(byte param0) {
-        byte[] discarded$0 = null;
         int var2 = 0;
         int var3 = 0;
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var4 = 0;
         int var5 = 0;
         if (param0 != -121) {
             Object var6 = (Object) null;
-            discarded$0 = ei.a((Object) null, true, false);
+            ei.a((Object) null, true, false);
         }
         if (-1 > (this.field_T ^ -1)) {
             var2 = this.field_P;
             var3 = this.field_U;
-            fieldTemp$1 = this.field_V + 1;
+            fieldTemp$0 = this.field_V + 1;
             this.field_V = this.field_V + 1;
-            if (fieldTemp$1 >= this.field_T) {
+            if (fieldTemp$0 >= this.field_T) {
                 this.field_T = 0;
                 this.g((byte) 109);
             } else {
@@ -618,23 +599,12 @@ abstract class ei extends kh {
         int var2_int = 0;
         RuntimeException var2 = null;
         ec stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ec stackOut_4_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -650,35 +620,26 @@ abstract class ei extends kh {
                 }
               }
             }
-            stackOut_4_0 = vc.field_a;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = vc.field_a;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("ei.AC(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("ei.AC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -695,8 +656,6 @@ abstract class ei extends kh {
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_14_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -704,18 +663,6 @@ abstract class ei extends kh {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_13_0 = null;
-        byte[] stackOut_10_0 = null;
-        byte[] stackOut_8_0 = null;
-        byte[] stackOut_1_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         try {
           L0: {
             if (!param2) {
@@ -725,21 +672,18 @@ abstract class ei extends kh {
                     throw new IllegalArgumentException();
                   } else {
                     var4 = (ke) (param0);
-                    stackOut_13_0 = var4.c(false);
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = var4.c(false);
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
                   var3 = (byte[]) (param0);
                   if (!param1) {
-                    stackOut_10_0 = (byte[]) (var3);
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = (byte[]) (var3);
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    stackOut_8_0 = li.a(0, var3);
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = li.a(0, var3);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -748,8 +692,7 @@ abstract class ei extends kh {
                 return null;
               }
             } else {
-              stackOut_1_0 = (byte[]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (byte[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -758,27 +701,19 @@ abstract class ei extends kh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var3_ref);
-            stackOut_16_1 = new StringBuilder().append("ei.CC(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var3_ref);
+
+            stackIn_18_1 = new StringBuilder().append("ei.CC(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L1;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L1;
             }
           }

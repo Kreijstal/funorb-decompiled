@@ -35,10 +35,10 @@ final class ql extends lh {
     }
 
     final static fh a(int param0, int param1) {
-        fh[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        fh[] var5 = null;
+        fh[] var2;
+        int var3;
+        int var4;
+        fh[] var5;
         var4 = fleas.field_A ? 1 : 0;
         if (param0 == -22471) {
           var5 = al.b(true);

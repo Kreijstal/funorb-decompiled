@@ -26,8 +26,6 @@ final class ed {
 
     final static boolean a(int param0) {
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 > -66) {
           return true;
         } else {
@@ -35,12 +33,10 @@ final class ed {
             st.field_C = true;
             jl.field_a = vi.b(124) - -15000L;
             if (11 != p.field_b) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L0;
             }
           }
@@ -49,11 +45,10 @@ final class ed {
     }
 
     final static void a(boolean param0) {
-        boolean discarded$2 = false;
         if (bl.field_b) {
           it.field_b = true;
           if (param0) {
-            discarded$2 = ed.a(-80);
+            ed.a(-80);
             wc.a(true, -49);
             p.field_b = 0;
             return;

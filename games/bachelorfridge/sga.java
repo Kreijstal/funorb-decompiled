@@ -32,7 +32,7 @@ final class sga extends sna {
     }
 
     private final void a(byte param0, int param1, int param2, boolean param3, int param4) {
-        int var6 = 0;
+        int var6;
         if (!this.field_xb.b(true)) {
           L0: {
             if (this.field_xb.f((byte) 62)) {
@@ -348,8 +348,7 @@ final class sga extends sna {
     }
 
     private final boolean a(int param0, int param1, int param2, byte param3, int param4, boolean param5, boolean param6) {
-        boolean discarded$1 = false;
-        int var8 = 0;
+        int var8;
         if (param3 > 18) {
           if (!param5) {
             if (this.field_T) {
@@ -377,7 +376,7 @@ final class sga extends sna {
             return var8 != 0;
           }
         } else {
-          discarded$1 = this.a(69, -104, -15, false, false, true);
+          this.a(69, -104, -15, false, false, true);
           if (!param5) {
             if (this.field_T) {
               if (param6) {

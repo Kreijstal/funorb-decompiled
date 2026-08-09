@@ -11,18 +11,18 @@ final class j implements fp {
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7, int param8) {
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        long var12 = 0L;
-        long var14 = 0L;
-        int var16 = 0;
-        long var17 = 0L;
-        long var19 = 0L;
-        long var21 = 0L;
-        long var23 = 0L;
-        int var25 = 0;
-        int var26 = 0;
+        int var9;
+        int var10;
+        int var11;
+        long var12;
+        long var14;
+        int var16;
+        long var17;
+        long var19;
+        long var21;
+        long var23;
+        int var25;
+        int var26;
         var9 = param6 - param1;
         var11 = -92 / ((param7 - -46) / 51);
         var10 = -param8 + param0;
@@ -210,9 +210,8 @@ final class j implements fp {
     }
 
     public static void a(int param0) {
-        int discarded$2 = 0;
         if (param0 != 16) {
-          discarded$2 = j.a(-121, 82, 21, -7, 28, 50, -82, (byte) 121, 119);
+          j.a(-121, 82, 21, -7, 28, 50, -82, (byte) 121, 119);
           field_a = null;
           return;
         } else {
@@ -227,22 +226,12 @@ final class j implements fp {
         int var7 = 0;
         int var8 = 0;
         dd var9 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -273,27 +262,19 @@ final class j implements fp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var6);
-            stackOut_6_1 = new StringBuilder().append("j.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var6);
+
+            stackIn_8_1 = new StringBuilder().append("j.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }

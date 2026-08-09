@@ -15,7 +15,7 @@ abstract class s {
     int field_g;
 
     final static void a(boolean param0) {
-        int var1 = 0;
+        int var1;
         if (param0) {
           L0: {
             field_b = (String) null;

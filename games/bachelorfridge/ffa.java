@@ -9,32 +9,28 @@ final class ffa extends kj {
     static String field_h;
 
     final boolean b(int param0) {
-        int fieldTemp$8 = 0;
-        boolean discarded$9 = false;
-        int fieldTemp$10 = 0;
-        boolean discarded$11 = false;
-        int fieldTemp$12 = 0;
-        boolean discarded$13 = false;
-        int fieldTemp$14 = 0;
-        boolean discarded$15 = false;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
         if (this.field_g != 60) {
           if (param0 > 21) {
-            fieldTemp$8 = this.field_g - 1;
+            fieldTemp$4 = this.field_g - 1;
             this.field_g = this.field_g - 1;
-            if (-1 < (fieldTemp$8 ^ -1)) {
+            if (-1 < (fieldTemp$4 ^ -1)) {
               jja.a(256, -1, 19);
-              discarded$9 = dha.a(-120, this.field_f, this.field_e);
+              dha.a(-120, this.field_f, this.field_e);
               return true;
             } else {
               return false;
             }
           } else {
             field_j = (String[][]) null;
-            fieldTemp$10 = this.field_g - 1;
+            fieldTemp$5 = this.field_g - 1;
             this.field_g = this.field_g - 1;
-            if (-1 < (fieldTemp$10 ^ -1)) {
+            if (-1 < (fieldTemp$5 ^ -1)) {
               jja.a(256, -1, 19);
-              discarded$11 = dha.a(-120, this.field_f, this.field_e);
+              dha.a(-120, this.field_f, this.field_e);
               return true;
             } else {
               return false;
@@ -44,21 +40,21 @@ final class ffa extends kj {
           jja.a(192, -1, 25);
           if (param0 <= 21) {
             field_j = (String[][]) null;
-            fieldTemp$12 = this.field_g - 1;
+            fieldTemp$6 = this.field_g - 1;
             this.field_g = this.field_g - 1;
-            if (-1 < (fieldTemp$12 ^ -1)) {
+            if (-1 < (fieldTemp$6 ^ -1)) {
               jja.a(256, -1, 19);
-              discarded$13 = dha.a(-120, this.field_f, this.field_e);
+              dha.a(-120, this.field_f, this.field_e);
               return true;
             } else {
               return false;
             }
           } else {
-            fieldTemp$14 = this.field_g - 1;
+            fieldTemp$7 = this.field_g - 1;
             this.field_g = this.field_g - 1;
-            if (-1 < (fieldTemp$14 ^ -1)) {
+            if (-1 < (fieldTemp$7 ^ -1)) {
               jja.a(256, -1, 19);
-              discarded$15 = dha.a(-120, this.field_f, this.field_e);
+              dha.a(-120, this.field_f, this.field_e);
               return true;
             } else {
               return false;
@@ -78,8 +74,8 @@ final class ffa extends kj {
     }
 
     final static k a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = BachelorFridge.field_y;
         var2 = param1;
         if (var2 != 0) {
@@ -260,7 +256,7 @@ final class ffa extends kj {
     }
 
     final void a(int param0, boolean param1, int param2) {
-        int var4 = 0;
+        int var4;
         var4 = (400 - -(-(this.field_g * 655360) + 52428800 >> 136562704)) * this.field_g / 80;
         if (!param1) {
           return;

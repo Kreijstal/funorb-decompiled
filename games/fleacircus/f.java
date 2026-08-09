@@ -63,11 +63,11 @@ final class f extends dk {
     }
 
     final void d(boolean param0) {
-        we var2 = null;
-        db var3 = null;
-        int var4 = 0;
-        we var5 = null;
-        we var6 = null;
+        we var2;
+        db var3;
+        int var4;
+        we var5;
+        we var6;
         var4 = fleas.field_A ? 1 : 0;
         if (param0) {
           var5 = new we(this.field_I);
@@ -84,7 +84,12 @@ final class f extends dk {
                   }
                 }
                 var3 = (db) ((Object) var5.c(-6144));
-                continue L0;
+                if (var4 == 0) {
+                  continue L0;
+                } else {
+                  this.field_A = (qa) ((Object) this.l(-75));
+                  return;
+                }
               } else {
                 return;
               }
@@ -110,7 +115,12 @@ final class f extends dk {
                   }
                 }
                 var3 = (db) ((Object) var6.c(-6144));
-                continue L2;
+                if (var4 == 0) {
+                  continue L2;
+                } else {
+                  this.field_A = (qa) ((Object) this.l(-75));
+                  return;
+                }
               } else {
                 return;
               }
@@ -128,51 +138,120 @@ final class f extends dk {
         int var4 = 0;
         we var5 = null;
         we var6 = null;
-        var4 = fleas.field_A ? 1 : 0;
-        if (param0 < -55) {
-          var5 = new we(this.field_I);
-          var2 = var5;
-          var3 = (db) ((Object) var5.b(84));
-          L0: while (true) {
-            if (var3 != null) {
-              var3.field_G = false;
-              var3 = (db) ((Object) var5.c(-6144));
-              if (var4 == 0) {
-                continue L0;
-              } else {
-                return;
-              }
-            } else {
-              this.field_A = null;
-              return;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = fleas.field_A ? 1 : 0;
+                    if (param0 < -55) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    field_G = (el) null;
+                    statePc = 10;
+                    continue stateLoop;
+                }
+                case 2: {
+                    var5 = new we(this.field_I);
+                    var2 = var5;
+                    var3 = (db) ((Object) var5.b(84));
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (var3 != null) {
+                        statePc = 6;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    this.field_A = null;
+                    return;
+                }
+                case 6: {
+                    var3.field_G = false;
+                    var3 = (db) ((Object) var5.c(-6144));
+                    if (var4 == 0) {
+                        statePc = 8;
+                    } else {
+                        statePc = 7;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    return;
+                }
+                case 8: {
+                    if (var4 == 0) {
+                        statePc = 3;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    this.field_A = null;
+                    return;
+                }
+                case 10: {
+                    var6 = new we(this.field_I);
+                    var2 = var6;
+                    var3 = (db) ((Object) var6.b(84));
+                    statePc = 11;
+                    continue stateLoop;
+                }
+                case 11: {
+                    if (var3 != null) {
+                        statePc = 14;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
+                    this.field_A = null;
+                    return;
+                }
+                case 14: {
+                    var3.field_G = false;
+                    var3 = (db) ((Object) var6.c(-6144));
+                    if (var4 == 0) {
+                        statePc = 16;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 15: {
+                    return;
+                }
+                case 16: {
+                    if (var4 == 0) {
+                        statePc = 11;
+                    } else {
+                        statePc = 17;
+                    }
+                    continue stateLoop;
+                }
+                case 17: {
+                    this.field_A = null;
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } else {
-          field_G = (el) null;
-          var6 = new we(this.field_I);
-          var2 = var6;
-          var3 = (db) ((Object) var6.b(84));
-          L1: while (true) {
-            if (var3 != null) {
-              var3.field_G = false;
-              var3 = (db) ((Object) var6.c(-6144));
-              if (var4 == 0) {
-                continue L1;
-              } else {
-                return;
-              }
-            } else {
-              this.field_A = null;
-              return;
-            }
-          }
         }
     }
 
     final void k(int param0) {
-        we var2 = null;
-        db var3 = null;
-        int var4 = 0;
+        we var2;
+        db var3;
+        int var4;
         var4 = fleas.field_A ? 1 : 0;
         if (param0 < -54) {
           var2 = new we(this.field_I);
@@ -189,7 +268,11 @@ final class f extends dk {
                   }
                 }
                 var3 = (db) ((Object) var2.c(-6144));
-                continue L0;
+                if (var4 == 0) {
+                  continue L0;
+                } else {
+                  return;
+                }
               } else {
                 return;
               }
@@ -213,7 +296,11 @@ final class f extends dk {
                   }
                 }
                 var3 = (db) ((Object) var2.c(-6144));
-                continue L2;
+                if (var4 == 0) {
+                  continue L2;
+                } else {
+                  return;
+                }
               } else {
                 return;
               }
@@ -243,7 +330,6 @@ final class f extends dk {
 
     final void b(qa param0, byte param1) {
         db var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param0 instanceof db)) {
                 throw new IllegalArgumentException();
@@ -254,7 +340,7 @@ final class f extends dk {
                 field_G = (el) null;
             }
             var3.field_G = true;
-            discarded$0 = var3.a((qa) (this), -53);
+            var3.a((qa) (this), -53);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) ((Object) runtimeException), "f.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -277,9 +363,9 @@ final class f extends dk {
     }
 
     final qa a(int param0) {
-        we var2 = null;
-        db var3 = null;
-        int var4 = 0;
+        we var2;
+        db var3;
+        int var4;
         var4 = fleas.field_A ? 1 : 0;
         var2 = new we(this.field_I);
         var3 = (db) ((Object) var2.b(-59));
@@ -325,62 +411,156 @@ final class f extends dk {
         we var5 = null;
         qa var6 = null;
         int var7 = 0;
-        var7 = fleas.field_A ? 1 : 0;
-        if (null == this.field_p) {
-          var5 = new we(this.field_I);
-          var6 = (qa) ((Object) var5.a((byte) 106));
-          L0: while (true) {
-            if (var6 != null) {
-              var6.b(this.field_z + param0, this.field_y + param1, true, param3);
-              var6 = (qa) ((Object) var5.a(true));
-              if (var7 == 0) {
-                continue L0;
-              } else {
-                return;
-              }
-            } else {
-              L1: {
-                if (param2) {
-                  break L1;
-                } else {
-                  f.j(69);
-                  break L1;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var7 = fleas.field_A ? 1 : 0;
+                    if (null == this.field_p) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
                 }
-              }
-              return;
-            }
-          }
-        } else {
-          this.field_p.a(-117, param1, true, (qa) (this), param0);
-          var5 = new we(this.field_I);
-          var6 = (qa) ((Object) var5.a((byte) 106));
-          L2: while (true) {
-            if (var6 == null) {
-              if (param2) {
-                return;
-              } else {
-                f.j(69);
-                return;
-              }
-            } else {
-              var6.b(this.field_z + param0, this.field_y + param1, true, param3);
-              var6 = (qa) ((Object) var5.a(true));
-              if (var7 == 0) {
-                if (var7 == 0) {
-                  continue L2;
-                } else {
-                  if (param2) {
+                case 1: {
+                    this.field_p.a(-117, param1, true, (qa) (this), param0);
+                    statePc = 15;
+                    continue stateLoop;
+                }
+                case 2: {
+                    var5 = new we(this.field_I);
+                    var6 = (qa) ((Object) var5.a((byte) 106));
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (var6 != null) {
+                        statePc = 8;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    if (param2) {
+                        statePc = 6;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    f.j(69);
+                    statePc = 6;
+                    continue stateLoop;
+                }
+                case 6: {
                     return;
-                  } else {
+                }
+                case 8: {
+                    var6.b(this.field_z + param0, this.field_y + param1, true, param3);
+                    var6 = (qa) ((Object) var5.a(true));
+                    if (var7 == 0) {
+                        statePc = 10;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    return;
+                }
+                case 10: {
+                    if (var7 == 0) {
+                        statePc = 3;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    if (param2) {
+                        statePc = 13;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
                     f.j(69);
                     return;
-                  }
                 }
-              } else {
-                return;
-              }
+                case 13: {
+                    return;
+                }
+                case 15: {
+                    var5 = new we(this.field_I);
+                    var6 = (qa) ((Object) var5.a((byte) 106));
+                    statePc = 16;
+                    continue stateLoop;
+                }
+                case 16: {
+                    if (var6 == null) {
+                        statePc = 25;
+                    } else {
+                        statePc = 17;
+                    }
+                    continue stateLoop;
+                }
+                case 17: {
+                    var6.b(this.field_z + param0, this.field_y + param1, true, param3);
+                    var6 = (qa) ((Object) var5.a(true));
+                    if (var7 == 0) {
+                        statePc = 19;
+                    } else {
+                        statePc = 18;
+                    }
+                    continue stateLoop;
+                }
+                case 18: {
+                    return;
+                }
+                case 19: {
+                    if (var7 == 0) {
+                        statePc = 16;
+                    } else {
+                        statePc = 20;
+                    }
+                    continue stateLoop;
+                }
+                case 20: {
+                    if (param2) {
+                        statePc = 23;
+                    } else {
+                        statePc = 21;
+                    }
+                    continue stateLoop;
+                }
+                case 21: {
+                    f.j(69);
+                    return;
+                }
+                case 23: {
+                    return;
+                }
+                case 25: {
+                    if (param2) {
+                        statePc = 28;
+                    } else {
+                        statePc = 26;
+                    }
+                    continue stateLoop;
+                }
+                case 26: {
+                    f.j(69);
+                    return;
+                }
+                case 28: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
         }
     }
 

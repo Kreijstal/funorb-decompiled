@@ -35,32 +35,25 @@ final class dg implements Iterable {
     }
 
     public static void a(boolean param0) {
-        sd discarded$0 = null;
         field_a = null;
         if (!param0) {
             java.applet.Applet var2 = (java.applet.Applet) null;
-            discarded$0 = dg.a((java.applet.Applet) null, (byte) -57);
+            dg.a((java.applet.Applet) null, (byte) -57);
         }
     }
 
     final static int a(int param0, int param1) {
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
         if (param0 == -20870) {
           param1 = param1 & 8191;
           if (4096 <= param1) {
             L0: {
               if (-6145 >= (param1 ^ -1)) {
-                stackOut_9_0 = -tc.field_a[-param1 + 8192];
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = -tc.field_a[-param1 + 8192];
                 break L0;
               } else {
-                stackOut_8_0 = -tc.field_a[param1 + -4096];
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = -tc.field_a[param1 + -4096];
                 break L0;
               }
             }
@@ -68,12 +61,10 @@ final class dg implements Iterable {
           } else {
             L1: {
               if ((param1 ^ -1) > -2049) {
-                stackOut_5_0 = tc.field_a[param1];
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = tc.field_a[param1];
                 break L1;
               } else {
-                stackOut_4_0 = tc.field_a[-param1 + 4096];
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = tc.field_a[-param1 + 4096];
                 break L1;
               }
             }
@@ -85,7 +76,7 @@ final class dg implements Iterable {
     }
 
     final uh b(boolean param0) {
-        uh var2 = null;
+        uh var2;
         var2 = this.field_b.field_p;
         if (this.field_b != var2) {
           var2.f(64);
@@ -101,22 +92,12 @@ final class dg implements Iterable {
 
     final static void a(byte param0, java.awt.Component param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -136,27 +117,19 @@ final class dg implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("dg.C(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("dg.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -180,7 +153,6 @@ final class dg implements Iterable {
     }
 
     final static sd a(java.applet.Applet param0, byte param1) {
-        int discarded$2 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
         sd[] var3 = null;
@@ -190,8 +162,6 @@ final class dg implements Iterable {
         sd stackIn_6_0 = null;
         sd stackIn_12_0 = null;
         sd stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -199,17 +169,6 @@ final class dg implements Iterable {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        sd stackOut_5_0 = null;
-        sd stackOut_14_0 = null;
-        sd stackOut_11_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -218,13 +177,12 @@ final class dg implements Iterable {
               if (param1 < -25) {
                 break L1;
               } else {
-                discarded$2 = dg.a(-9, -29);
+                dg.a(-9, -29);
                 break L1;
               }
             }
             if (var2 == null) {
-              stackOut_5_0 = mf.field_A;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = mf.field_A;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -232,15 +190,13 @@ final class dg implements Iterable {
               var4 = 0;
               L2: while (true) {
                 if (var3.length <= var4) {
-                  stackOut_14_0 = mf.field_A;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = mf.field_A;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   var5 = var3[var4];
                   if (var5.a(var2, 125)) {
-                    stackOut_11_0 = (sd) (var5);
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = (sd) (var5);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -255,27 +211,19 @@ final class dg implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var2_ref);
-            stackOut_16_1 = new StringBuilder().append("dg.D(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var2_ref);
+
+            stackIn_18_1 = new StringBuilder().append("dg.D(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L3;
             }
           }

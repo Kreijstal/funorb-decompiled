@@ -81,10 +81,10 @@ final class fm extends vg {
                   } else {
                     if (pka.field_b > param0) {
                       aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                      if (param8 <= -58) {
+                      if (param8 > -58) {
+                        fm.d(31);
                         return;
                       } else {
-                        fm.d(31);
                         return;
                       }
                     } else {
@@ -126,10 +126,10 @@ final class fm extends vg {
                             } else {
                               if (param9 > hc.field_h) {
                                 aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                                if (param8 <= -58) {
+                                if (param8 > -58) {
+                                  fm.d(31);
                                   return;
                                 } else {
-                                  fm.d(31);
                                   return;
                                 }
                               } else {
@@ -170,21 +170,11 @@ final class fm extends vg {
                                         }
                                       } else {
                                         g.a(param7, param1, param0, param3, -93, param6, param2, param9, param4, param5);
-                                        if (!TombRacer.field_G) {
-                                          if (param8 > -58) {
-                                            fm.d(31);
-                                            return;
-                                          } else {
-                                            return;
-                                          }
+                                        if (param8 > -58) {
+                                          fm.d(31);
+                                          return;
                                         } else {
-                                          aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                                          if (param8 > -58) {
-                                            fm.d(31);
-                                            return;
-                                          } else {
-                                            return;
-                                          }
+                                          return;
                                         }
                                       }
                                     }
@@ -232,9 +222,8 @@ final class fm extends vg {
     }
 
     final int c(int param0) {
-        int discarded$0 = 0;
         if (param0 != 4) {
-            discarded$0 = this.b(8);
+            this.b(8);
             return this.field_f;
         }
         return this.field_f;

@@ -11,9 +11,8 @@ final class bj {
     private boolean field_d;
 
     final boolean c(int param0) {
-        String discarded$0 = null;
         if (param0 != -1) {
-            discarded$0 = this.b(4);
+            this.b(4);
             return this.field_e;
         }
         return this.field_e;
@@ -29,9 +28,8 @@ final class bj {
     }
 
     final boolean a(boolean param0) {
-        String discarded$0 = null;
         if (!param0) {
-            discarded$0 = this.b(71);
+            this.b(71);
             return this.field_d;
         }
         return this.field_d;
@@ -52,7 +50,6 @@ final class bj {
     }
 
     final static boolean a(int param0, byte param1, int param2) {
-        boolean discarded$7 = false;
         if (param1 == -113) {
           if ((param0 & 2048) != 0) {
             if (-1 == (55 & param2 ^ -1)) {
@@ -64,7 +61,7 @@ final class bj {
             return false;
           }
         } else {
-          discarded$7 = bj.a(-103, (byte) 12, 126);
+          bj.a(-103, (byte) 12, 126);
           if ((param0 & 2048) != 0) {
             if (-1 == (55 & param2 ^ -1)) {
               return false;

@@ -7,12 +7,14 @@ final class sd {
     static sca field_c;
 
     final synchronized static byte[] a(int param0, int param1) {
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int dupTemp$6 = 0;
+        byte[][] arrayValue$7 = null;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
         L0: {
           if ((param0 ^ -1) != -101) {
             break L0;
@@ -20,9 +22,9 @@ final class sd {
             if (lt.field_b <= 0) {
               break L0;
             } else {
-              fieldTemp$6 = lt.field_b - 1;
+              fieldTemp$3 = lt.field_b - 1;
               lt.field_b = lt.field_b - 1;
-              var2_ref_byte__ = ena.field_p[fieldTemp$6];
+              var2_ref_byte__ = ena.field_p[fieldTemp$3];
               ena.field_p[lt.field_b] = null;
               return var2_ref_byte__;
             }
@@ -35,9 +37,9 @@ final class sd {
             if ((mc.field_h ^ -1) >= -1) {
               break L1;
             } else {
-              fieldTemp$7 = mc.field_h - 1;
+              fieldTemp$4 = mc.field_h - 1;
               mc.field_h = mc.field_h - 1;
-              var2_ref_byte__ = rn.field_q[fieldTemp$7];
+              var2_ref_byte__ = rn.field_q[fieldTemp$4];
               rn.field_q[mc.field_h] = null;
               return var2_ref_byte__;
             }
@@ -48,9 +50,9 @@ final class sd {
             break L2;
           } else {
             if (0 < sca.field_d) {
-              fieldTemp$8 = sca.field_d - 1;
+              fieldTemp$5 = sca.field_d - 1;
               sca.field_d = sca.field_d - 1;
-              var2_ref_byte__ = ok.field_zb[fieldTemp$8];
+              var2_ref_byte__ = ok.field_zb[fieldTemp$5];
               ok.field_zb[sca.field_d] = null;
               return var2_ref_byte__;
             } else {
@@ -69,8 +71,10 @@ final class sd {
               } else {
                 if (hw.field_xb[var2] == param0) {
                   if (nga.field_g[var2] > 0) {
-                    nga.field_g[var2] = nga.field_g[var2] - 1;
-                    var3 = vla.field_o[var2][nga.field_g[var2] - 1];
+                    dupTemp$6 = nga.field_g[var2] - 1;
+                    arrayValue$7 = vla.field_o[var2];
+                    nga.field_g[var2] = dupTemp$6;
+                    var3 = arrayValue$7[dupTemp$6];
                     vla.field_o[var2][nga.field_g[var2]] = null;
                     return var3;
                   } else {
@@ -97,24 +101,13 @@ final class sd {
     }
 
     final static void a(double param0, int param1, oha param2, byte param3, int param4, int param5, int param6) {
-        byte[] discarded$2 = null;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -122,7 +115,7 @@ final class sd {
               if (param3 == 74) {
                 break L1;
               } else {
-                discarded$2 = sd.a(71, -102);
+                sd.a(71, -102);
                 break L1;
               }
             }
@@ -132,27 +125,19 @@ final class sd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("sd.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("sd.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -161,7 +146,6 @@ final class sd {
     }
 
     final static void a(byte param0, lu param1, sfa param2) {
-        byte[] discarded$0 = null;
         if (param2 == null) {
             param1.d(-1, param0 + -124);
             return;
@@ -169,7 +153,7 @@ final class sd {
         try {
             param1.d(param2.field_f, 0);
             if (param0 != 124) {
-                discarded$0 = sd.a(62, 123);
+                sd.a(62, 123);
             }
             param1.b(param2.field_g, -112);
             er.a(param2.field_h, 110, param1);

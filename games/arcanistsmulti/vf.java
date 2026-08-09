@@ -29,8 +29,6 @@ final class vf extends pg {
         String stackIn_23_0 = null;
         String stackIn_27_0 = null;
         String stackIn_31_0 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         RuntimeException stackIn_36_0 = null;
@@ -38,40 +36,21 @@ final class vf extends pg {
         String stackIn_36_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        String stackOut_9_0 = null;
-        String stackOut_13_0 = null;
-        String stackOut_22_0 = null;
-        String stackOut_26_0 = null;
-        String stackOut_30_0 = null;
-        String stackOut_18_0 = null;
-        String stackOut_5_0 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
         try {
           L0: {
             if (-4 == (param2 ^ -1)) {
-              stackOut_2_0 = fm.field_a;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = fm.field_a;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (6 != param2) {
                 if (-8 == (param2 ^ -1)) {
-                  stackOut_9_0 = mm.field_v;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = mm.field_v;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (param2 == 8) {
-                    stackOut_13_0 = mf.field_f;
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = mf.field_f;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
@@ -85,20 +64,17 @@ final class vf extends pg {
                     }
                     if ((param2 ^ -1) != -10) {
                       if (10 == param2) {
-                        stackOut_22_0 = oj.field_c;
-                        stackIn_23_0 = stackOut_22_0;
+                        stackIn_23_0 = oj.field_c;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       } else {
                         if (11 == param2) {
-                          stackOut_26_0 = wd.field_f;
-                          stackIn_27_0 = stackOut_26_0;
+                          stackIn_27_0 = wd.field_f;
                           decompiledRegionSelector0 = 6;
                           break L0;
                         } else {
                           if ((param2 ^ -1) == -15) {
-                            stackOut_30_0 = tj.a(-17, new String[]{param1}, ji.field_k);
-                            stackIn_31_0 = stackOut_30_0;
+                            stackIn_31_0 = tj.a(-17, new String[]{param1}, ji.field_k);
                             decompiledRegionSelector0 = 7;
                             break L0;
                           } else {
@@ -107,16 +83,14 @@ final class vf extends pg {
                         }
                       }
                     } else {
-                      stackOut_18_0 = v.field_n;
-                      stackIn_19_0 = stackOut_18_0;
+                      stackIn_19_0 = v.field_n;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     }
                   }
                 }
               } else {
-                stackOut_5_0 = rf.field_k;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = rf.field_k;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -126,27 +100,19 @@ final class vf extends pg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) (var3);
-            stackOut_33_1 = new StringBuilder().append("vf.B(").append(param0).append(',');
-            stackIn_35_0 = stackOut_33_0;
-            stackIn_35_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+            stackIn_35_0 = (RuntimeException) (var3);
+
+            stackIn_35_1 = new StringBuilder().append("vf.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "null";
               break L2;
             } else {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "{...}";
-              stackIn_36_0 = stackOut_34_0;
-              stackIn_36_1 = stackOut_34_1;
-              stackIn_36_2 = stackOut_34_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "{...}";
               break L2;
             }
           }
@@ -192,7 +158,6 @@ final class vf extends pg {
     }
 
     public static void a(int param0) {
-        cg discarded$2 = null;
         field_i = null;
         field_h = null;
         field_p = null;
@@ -202,7 +167,7 @@ final class vf extends pg {
         field_j = null;
         field_g = null;
         if (param0 != 27494) {
-          discarded$2 = vf.a(-96L, -109);
+          vf.a(-96L, -109);
           field_v = null;
           field_k = null;
           return;

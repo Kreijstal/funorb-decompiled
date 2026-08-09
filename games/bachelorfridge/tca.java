@@ -106,12 +106,12 @@ final class tca implements Runnable {
     }
 
     final synchronized boolean b(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         if (this.field_e < 2) {
           L0: {
             if (this.field_e == 0) {
@@ -303,7 +303,6 @@ final class tca implements Runnable {
     }
 
     final static void a(gea param0, int param1, int param2) {
-        int discarded$0 = 0;
         pf var5 = sja.field_fb;
         var5.c(param2, (byte) 102);
         var5.field_g = var5.field_g + 1;
@@ -319,7 +318,7 @@ final class tca implements Runnable {
         }
         try {
             var5.e(param0.field_h, -1615464796);
-            discarded$0 = var5.a(var4, 19);
+            var5.a(var4, 19);
             var5.b((byte) 124, -var4 + var5.field_g);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) ((Object) runtimeException), "tca.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

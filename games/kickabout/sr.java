@@ -27,57 +27,43 @@ abstract class sr {
     abstract int a(int param0);
 
     final static kg[] a(int param0, int param1, boolean param2, byte param3, int param4, int param5) {
-        ut[] array$1 = null;
-        kg[] var6 = null;
-        kg[][] var7 = null;
-        ut[][] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        kg var11_ref_kg = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var15 = 0;
-        kg var15_ref_kg = null;
-        int var16_int = 0;
-        ut var16 = null;
-        int var17 = 0;
-        int var18 = 0;
-        nr[] var18_ref_nr__ = null;
-        int var19 = 0;
-        nr var20 = null;
-        int var21 = 0;
-        nr[][] var22 = null;
-        ut var23 = null;
-        nr[][] var24 = null;
+        ut[] array$0 = null;
         kg[][] stackIn_3_0 = null;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_26_0 = 0;
-        kg[][] stackOut_2_0 = null;
-        kg[][] stackOut_1_0 = null;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
+        kg[] var6;
+        kg[][] var7;
+        ut[][] var8;
+        int var9;
+        int var10;
+        int var11;
+        kg var11_ref_kg;
+        int var12;
+        int var13;
+        int var15;
+        kg var15_ref_kg;
+        ut var16;
+        int var16_int;
+        int var17;
+        nr[] var18_ref_nr__;
+        int var18;
+        int var19;
+        nr var20;
+        int var21;
+        nr[][] var22;
+        ut var23;
+        nr[][] var24;
         L0: {
           var21 = Kickabout.field_G;
           var6 = new kg[6];
           if (!param2) {
-            stackOut_2_0 = ps.field_c;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = ps.field_c;
             break L0;
           } else {
-            stackOut_1_0 = bf.field_s;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = bf.field_s;
             break L0;
           }
         }
@@ -88,12 +74,10 @@ abstract class sr {
           if (var9 >= var8.length) {
             L2: {
               if (!param2) {
-                stackOut_11_0 = 59;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = 59;
                 break L2;
               } else {
-                stackOut_10_0 = 50;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 50;
                 break L2;
               }
             }
@@ -101,48 +85,40 @@ abstract class sr {
             if (param3 <= -65) {
               L3: {
                 if (param2) {
-                  stackOut_16_0 = 34;
-                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_0 = 34;
                   break L3;
                 } else {
-                  stackOut_15_0 = 33;
-                  stackIn_17_0 = stackOut_15_0;
+                  stackIn_17_0 = 33;
                   break L3;
                 }
               }
               L4: {
                 var10 = stackIn_17_0;
                 if (param2) {
-                  stackOut_19_0 = 40;
-                  stackIn_20_0 = stackOut_19_0;
+                  stackIn_20_0 = 40;
                   break L4;
                 } else {
-                  stackOut_18_0 = 20;
-                  stackIn_20_0 = stackOut_18_0;
+                  stackIn_20_0 = 20;
                   break L4;
                 }
               }
               L5: {
                 var11 = stackIn_20_0;
                 if (!param2) {
-                  stackOut_22_0 = 4;
-                  stackIn_23_0 = stackOut_22_0;
+                  stackIn_23_0 = 4;
                   break L5;
                 } else {
-                  stackOut_21_0 = 0;
-                  stackIn_23_0 = stackOut_21_0;
+                  stackIn_23_0 = 0;
                   break L5;
                 }
               }
               L6: {
                 var12 = stackIn_23_0;
                 if (!param2) {
-                  stackOut_25_0 = 5;
-                  stackIn_26_0 = stackOut_25_0;
+                  stackIn_26_0 = 5;
                   break L6;
                 } else {
-                  stackOut_24_0 = 3;
-                  stackIn_26_0 = stackOut_24_0;
+                  stackIn_26_0 = 3;
                   break L6;
                 }
               }
@@ -224,7 +200,7 @@ abstract class sr {
                         var15++;
                         continue L7;
                       } else {
-                        if (p.a((byte) -24, 256) <= param1) {
+                        if ((p.a((byte) -24, 256) ^ -1) >= (param1 ^ -1)) {
                           L14: {
                             var17 = 39 - -(var16_int * var10) + var15;
                             var18 = var9 + var15 * var11;
@@ -319,8 +295,8 @@ abstract class sr {
               return (kg[]) null;
             }
           } else {
-            array$1 = new ut[var7[var9].length];
-            var8[var9] = array$1;
+            array$0 = new ut[var7[var9].length];
+            var8[var9] = array$0;
             var10 = 0;
             L20: while (true) {
               if (var10 >= var8[var9].length) {

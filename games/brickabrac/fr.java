@@ -65,90 +65,38 @@ final class fr {
     }
 
     final static void a(mf param0, byte param1) {
-        RuntimeException var2 = null;
-        mh var3 = null;
         mh var5 = null;
         mh var6 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        mh var3 = null;
         try {
-          L0: {
-            L1: {
-              ok.field_g = pl.a("basic", "display_name_changed", (byte) 109, param0);
-              gf.field_f = new hj(0L, rq.field_b, hk.field_J, oo.field_y);
-              f.field_c = new hj(0L, rq.field_b, ab.field_z, ng.field_e);
-              rg.field_c = new mh(0L, (mh) null);
-              sj.field_d = new mh(0L, ad.field_l);
-              sj.field_d.field_S = 1;
-              gk.field_c = new mh(0L, rp.field_t, n.field_a);
-              qj.field_u = new mh(0L, ik.field_a, bc.field_c);
-              mo.field_R = new mh(0L, tk.field_t);
-              rg.field_c.a(sj.field_d, 0);
-              rg.field_c.a(gk.field_c, 0);
-              rg.field_c.a(qj.field_u, 0);
-              rg.field_c.a(gf.field_f, 0);
-              rg.field_c.a(mo.field_R, 0);
-              gf.field_f.field_Qb.field_Qb.a((byte) -102, ad.field_l);
-              var5 = gf.field_f.field_Qb.field_Qb;
-              var6 = var5;
-              gf.field_f.field_Qb.field_Qb.field_Q = 1;
-              if (param1 > 58) {
-                break L1;
-              } else {
+            ok.field_g = pl.a("basic", "display_name_changed", (byte) 109, param0);
+            gf.field_f = new hj(0L, rq.field_b, hk.field_J, oo.field_y);
+            f.field_c = new hj(0L, rq.field_b, ab.field_z, ng.field_e);
+            rg.field_c = new mh(0L, (mh) null);
+            sj.field_d = new mh(0L, ad.field_l);
+            sj.field_d.field_S = 1;
+            gk.field_c = new mh(0L, rp.field_t, n.field_a);
+            qj.field_u = new mh(0L, ik.field_a, bc.field_c);
+            mo.field_R = new mh(0L, tk.field_t);
+            rg.field_c.a(sj.field_d, 0);
+            rg.field_c.a(gk.field_c, 0);
+            rg.field_c.a(qj.field_u, 0);
+            rg.field_c.a(gf.field_f, 0);
+            rg.field_c.a(mo.field_R, 0);
+            gf.field_f.field_Qb.field_Qb.a((byte) -102, ad.field_l);
+            var5 = gf.field_f.field_Qb.field_Qb;
+            var6 = var5;
+            gf.field_f.field_Qb.field_Qb.field_Q = 1;
+            if (param1 <= 58) {
                 field_k = 109;
-                break L1;
-              }
             }
             var6.field_S = 1;
             f.field_c.field_Qb.field_Qb.a((byte) -115, ad.field_l);
             var3 = f.field_c.field_Qb.field_Qb;
             f.field_c.field_Qb.field_Qb.field_Q = 1;
             var3.field_S = 1;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("fr.I(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
-            if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
-            } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
-            }
-          }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) ((Object) runtimeException), "fr.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -198,7 +146,7 @@ final class fr {
     }
 
     final static void a(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = BrickABrac.field_J ? 1 : 0;
         if (!pe.field_o.c(124)) {
           L0: {
@@ -255,17 +203,17 @@ final class fr {
     }
 
     final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var12 = BrickABrac.field_J ? 1 : 0;
         if (!this.field_r) {
           this.field_r = true;

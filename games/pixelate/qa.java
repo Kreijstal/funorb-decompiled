@@ -12,20 +12,18 @@ final class qa extends RuntimeException {
     private static String field_z;
 
     public static void a(boolean param0) {
-        tf[] discarded$0 = null;
         field_a = null;
         field_f = null;
         field_b = null;
         field_g = null;
         if (!param0) {
-            discarded$0 = qa.a(62, -2, 14, -125);
+            qa.a(62, -2, 14, -125);
         }
     }
 
     final static tf[] a(int param0, int param1, int param2, int param3) {
-        tf[] discarded$2 = null;
         if (param3 != 3) {
-          discarded$2 = qa.a(-72, -103, -103, -51);
+          qa.a(-72, -103, -103, -51);
           return ap.a(param1, param0, 5, param2, 1);
         } else {
           return ap.a(param1, param0, 5, param2, 1);

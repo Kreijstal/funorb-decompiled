@@ -12,12 +12,12 @@ abstract class nf {
     static int field_h;
 
     final int a(int param0) {
-        int var2 = 0;
-        mg[] var3 = null;
-        int var4 = 0;
-        mg var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        mg[] var3;
+        int var4;
+        mg var5;
+        int var7;
+        int var6;
         L0: {
           var7 = MinerDisturbance.field_ab;
           var2 = param0;
@@ -101,33 +101,21 @@ abstract class nf {
 
     final int a(int param0, String param1, int param2, int param3) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_19_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_23_2 = null;
+        int stackIn_17_0 = 0;
+        int stackIn_21_0 = 0;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_14_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var5 = null;
         var10 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -139,16 +127,14 @@ abstract class nf {
               if (var7 <= var8) {
                 if (param0 >= 48) {
                   if ((var5_int ^ -1) < -1) {
-                    stackOut_18_0 = (param3 - param2 << -606800696) / var5_int;
-                    stackIn_19_0 = stackOut_18_0;
+                    stackIn_21_0 = (param3 - param2 << -606800696) / var5_int;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     return 0;
                   }
                 } else {
-                  stackOut_14_0 = 125;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_17_0 = 125;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -187,107 +173,67 @@ abstract class nf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var5);
-            stackOut_20_1 = new StringBuilder().append("nf.M(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_24_0 = (RuntimeException) (var5);
+
+            stackIn_24_1 = new StringBuilder().append("nf.M(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L3;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L3;
             }
           }
-          throw lj.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param2 + ',' + param3 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param2 + ',' + param3 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_15_0;
+          return stackIn_17_0;
         } else {
-          return stackIn_19_0;
+          return stackIn_21_0;
         }
     }
 
     final int a(boolean param0, int param1, int param2) {
-        int var4 = 0;
         int var5 = 0;
         mg var6 = null;
         int var7 = 0;
-        int var8 = 0;
-        L0: {
-          var8 = MinerDisturbance.field_ab;
-          if (null == this.field_f) {
-            break L0;
-          } else {
-            if (-1 == (this.field_f.length ^ -1)) {
-              break L0;
-            } else {
-              if (param2 >= this.field_f[0].field_h) {
-                if (this.field_f[this.field_f.length + -1].field_i >= param2) {
-                  if (-2 != (this.field_f.length ^ -1)) {
-                    if (param0) {
-                      var4 = 0;
-                      var5 = 0;
-                      L1: while (true) {
-                        if (var5 >= this.field_f.length) {
-                          return -1;
-                        } else {
-                          L2: {
-                            var6 = this.field_f[var5];
-                            if (param2 < var6.field_h) {
-                              break L2;
-                            } else {
-                              if (param2 <= var6.field_i) {
-                                var7 = var6.a(param1, -24040);
-                                if (-1 == var7) {
-                                  return -1;
-                                } else {
-                                  return var4 + var7;
-                                }
-                              } else {
-                                break L2;
-                              }
-                            }
-                          }
-                          var4 = var4 + (-1 + var6.field_d.length);
-                          var5++;
-                          continue L1;
-                        }
-                      }
-                    } else {
-                      return 45;
+        int var8 = MinerDisturbance.field_ab;
+        if (null == this.field_f || -1 == (this.field_f.length ^ -1) || param2 < this.field_f[0].field_h) {
+            return -1;
+        }
+        if (this.field_f[this.field_f.length + -1].field_i < param2) {
+            return -1;
+        }
+        if (-2 == (this.field_f.length ^ -1)) {
+            return this.field_f[0].a(param1, -24040);
+        }
+        if (!param0) {
+            return 45;
+        }
+        int var4 = 0;
+        for (var5 = 0; var5 < this.field_f.length; var5++) {
+            var6 = this.field_f[var5];
+            if (param2 >= var6.field_h) {
+                if (!(param2 > var6.field_i)) {
+                    var7 = var6.a(param1, -24040);
+                    if (!(-1 != var7)) {
+                        return -1;
                     }
-                  } else {
-                    return this.field_f[0].a(param1, -24040);
-                  }
-                } else {
-                  return -1;
+                    return var4 + var7;
                 }
-              } else {
-                break L0;
-              }
             }
-          }
+            var4 = var4 + (-1 + var6.field_d.length);
         }
         return -1;
     }
 
     final int b(int param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 > 63) {
             break L0;
@@ -302,16 +248,14 @@ abstract class nf {
               break L2;
             } else {
               if (-1 > (this.field_f.length ^ -1)) {
-                stackOut_6_0 = -this.field_f[0].field_h + this.field_f[-1 + this.field_f.length].field_i;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = -this.field_f[0].field_h + this.field_f[-1 + this.field_f.length].field_i;
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0;

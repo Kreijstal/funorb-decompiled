@@ -27,11 +27,10 @@ final class ik {
     }
 
     public static void b(int param0) {
-        Object discarded$2 = null;
-        byte[] var2 = null;
+        byte[] var2;
         if (param0 != -137) {
           var2 = (byte[]) null;
-          discarded$2 = ik.a((byte[]) null, false, -83);
+          ik.a((byte[]) null, false, -83);
           field_f = null;
           field_d = null;
           field_c = null;
@@ -50,8 +49,6 @@ final class ik {
         la stackIn_5_0 = null;
         byte[] stackIn_8_0 = null;
         byte[] stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -59,37 +56,23 @@ final class ik {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_9_0 = null;
-        byte[] stackOut_7_0 = null;
-        la stackOut_4_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             if (param0 != null) {
               if (param2 <= (param0.length ^ -1)) {
                 if (param1) {
-                  stackOut_9_0 = ak.a(-14074, param0);
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = ak.a(-14074, param0);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  stackOut_7_0 = (byte[]) (param0);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = (byte[]) (param0);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
               } else {
                 var3 = new la();
                 ((jd) ((Object) var3)).a(-10543, param0);
-                stackOut_4_0 = (la) (var3);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (la) (var3);
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -101,27 +84,19 @@ final class ik {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3_ref);
-            stackOut_11_1 = new StringBuilder().append("ik.A(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3_ref);
+
+            stackIn_13_1 = new StringBuilder().append("ik.A(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L1;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L1;
             }
           }

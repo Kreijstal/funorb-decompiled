@@ -23,10 +23,10 @@ class ln extends hl {
     }
 
     final static e a(int param0, byte param1) {
-        e[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        e[] var5 = null;
+        e[] var2;
+        int var3;
+        int var4;
+        e[] var5;
         L0: {
           var4 = HoldTheLine.field_D;
           if (param1 < -50) {
@@ -63,65 +63,44 @@ class ln extends hl {
     }
 
     final static byte[] a(String param0, int param1) {
-        float discarded$2 = 0.0f;
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
               if (param1 == 0) {
                 break L1;
               } else {
-                discarded$2 = ln.a(11, 0.5669122934341431f);
+                ln.a(11, 0.5669122934341431f);
                 break L1;
               }
             }
-            stackOut_2_0 = tl.field_w.a(param0, false, "");
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = tl.field_w.a(param0, false, "");
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("ln.DB(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("ln.DB(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -144,13 +123,10 @@ class ln extends hl {
     }
 
     final static void a(int param0) {
-        float discarded$17 = 0.0f;
-        boolean discarded$18 = false;
-        boolean discarded$19 = false;
-        RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = HoldTheLine.field_D;
         try {
           L0: {
@@ -158,19 +134,19 @@ class ln extends hl {
               if (param0 >= 92) {
                 break L1;
               } else {
-                discarded$17 = ln.a(11, -0.14343492686748505f);
+                ln.a(11, -0.14343492686748505f);
                 break L1;
               }
             }
             if (ii.a((byte) -118)) {
-              discarded$18 = r.field_a.a(ab.field_lb, di.field_r, true, false);
+              r.field_a.a(ab.field_lb, di.field_r, true, false);
               r.field_a.g((byte) -59);
               L2: while (true) {
                 if (!qh.c(-44)) {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  discarded$19 = r.field_a.a(aa.field_n, pk.field_M, (byte) 117);
+                  r.field_a.a(aa.field_n, pk.field_M, (byte) 117);
                   continue L2;
                 }
               }

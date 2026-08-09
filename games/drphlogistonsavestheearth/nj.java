@@ -21,8 +21,14 @@ final class nj {
     private byte[] field_m;
 
     final void a(byte param0, byte[] param1, long param2) {
-        RuntimeException var5 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -30,22 +36,6 @@ final class nj {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
         var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -148,39 +138,29 @@ final class nj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var5 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var5);
-            stackOut_23_1 = new StringBuilder().append("nj.H(").append(param0).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_27_0 = (RuntimeException) (var5);
+
+            stackIn_27_1 = new StringBuilder().append("nj.H(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L9;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L9;
             }
           }
-          throw ie.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param2 + ')');
         }
     }
 
     final static boolean a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
-            Throwable var2_ref = null;
-            RuntimeException var2_ref2 = null;
             String var3 = null;
             String[] var4 = null;
             int var5 = 0;
@@ -190,8 +170,6 @@ final class nj {
             int stackIn_7_0 = 0;
             int stackIn_13_0 = 0;
             int stackIn_20_0 = 0;
-            RuntimeException stackIn_22_0 = null;
-            StringBuilder stackIn_22_1 = null;
             RuntimeException stackIn_23_0 = null;
             StringBuilder stackIn_23_1 = null;
             RuntimeException stackIn_24_0 = null;
@@ -200,25 +178,13 @@ final class nj {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_3_0 = 0;
-            int stackOut_12_0 = 0;
-            int stackOut_6_0 = 0;
-            int stackOut_19_0 = 0;
-            int stackOut_18_0 = 0;
-            RuntimeException stackOut_21_0 = null;
-            StringBuilder stackOut_21_1 = null;
-            RuntimeException stackOut_23_0 = null;
-            StringBuilder stackOut_23_1 = null;
-            String stackOut_23_2 = null;
-            RuntimeException stackOut_22_0 = null;
-            StringBuilder stackOut_22_1 = null;
-            String stackOut_22_2 = null;
+            Throwable var2_ref = null;
+            RuntimeException var2_ref2 = null;
             var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
             try {
               L0: {
                 if (aj.field_c) {
-                  stackOut_3_0 = 1;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = 1;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 } else {
@@ -242,8 +208,7 @@ final class nj {
                                 if (!var4[var5].substring(0, var6).trim().equals(var2)) {
                                   break L3;
                                 } else {
-                                  stackOut_12_0 = 1;
-                                  stackIn_13_0 = stackOut_12_0;
+                                  stackIn_13_0 = 1;
                                   decompiledRegionSelector0 = 2;
                                   break L1;
                                 }
@@ -254,8 +219,7 @@ final class nj {
                           }
                         }
                       } else {
-                        stackOut_6_0 = 0;
-                        stackIn_7_0 = stackOut_6_0;
+                        stackIn_7_0 = 0;
                         decompiledRegionSelector0 = 0;
                         break L1;
                       }
@@ -275,12 +239,10 @@ final class nj {
                     if (decompiledRegionSelector0 == 1) {
                       L5: {
                         if (null == param0.getParameter("tuhstatbut")) {
-                          stackOut_19_0 = 0;
-                          stackIn_20_0 = stackOut_19_0;
+                          stackIn_20_0 = 0;
                           break L5;
                         } else {
-                          stackOut_18_0 = 1;
-                          stackIn_20_0 = stackOut_18_0;
+                          stackIn_20_0 = 1;
                           break L5;
                         }
                       }
@@ -297,27 +259,19 @@ final class nj {
               decompiledCaughtException = decompiledCaughtParameter1;
               L6: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_21_0 = (RuntimeException) (var2_ref2);
-                stackOut_21_1 = new StringBuilder().append("nj.E(");
-                stackIn_23_0 = stackOut_21_0;
-                stackIn_23_1 = stackOut_21_1;
-                stackIn_22_0 = stackOut_21_0;
-                stackIn_22_1 = stackOut_21_1;
+                stackIn_23_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_23_1 = new StringBuilder().append("nj.E(");
+
                 if (param0 == null) {
-                  stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-                  stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-                  stackOut_23_2 = "null";
-                  stackIn_24_0 = stackOut_23_0;
-                  stackIn_24_1 = stackOut_23_1;
-                  stackIn_24_2 = stackOut_23_2;
+                  stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+                  stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+                  stackIn_24_2 = "null";
                   break L6;
                 } else {
-                  stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-                  stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-                  stackOut_22_2 = "{...}";
-                  stackIn_24_0 = stackOut_22_0;
-                  stackIn_24_1 = stackOut_22_1;
-                  stackIn_24_2 = stackOut_22_2;
+                  stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+                  stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+                  stackIn_24_2 = "{...}";
                   break L6;
                 }
               }
@@ -344,15 +298,8 @@ final class nj {
     }
 
     final void a(int param0, byte param1, byte[] param2) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        long var6 = 0L;
-        int var8 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -360,14 +307,11 @@ final class nj {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        long var6 = 0L;
+        int var8 = 0;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -384,9 +328,9 @@ final class nj {
                       this.field_g = 0;
                       break L1;
                     } else {
-                      fieldTemp$2 = this.field_g;
+                      fieldTemp$0 = this.field_g;
                       this.field_g = this.field_g + 1;
-                      this.field_k[fieldTemp$2] = (byte) 0;
+                      this.field_k[fieldTemp$0] = (byte) 0;
                       continue L2;
                     }
                   }
@@ -418,9 +362,9 @@ final class nj {
                     }
                   }
                 } else {
-                  fieldTemp$3 = this.field_g;
+                  fieldTemp$1 = this.field_g;
                   this.field_g = this.field_g + 1;
-                  this.field_k[fieldTemp$3] = (byte) 0;
+                  this.field_k[fieldTemp$1] = (byte) 0;
                   continue L3;
                 }
               }
@@ -433,27 +377,19 @@ final class nj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var4);
-            stackOut_13_1 = new StringBuilder().append("nj.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var4);
+
+            stackIn_15_1 = new StringBuilder().append("nj.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }
@@ -484,10 +420,9 @@ final class nj {
     }
 
     public static void b(int param0) {
-        String discarded$0 = null;
         field_e = null;
         if (param0 != 0) {
-            discarded$0 = nj.a(false, true, -15, true);
+            nj.a(false, true, -15, true);
         }
         field_c = null;
         field_f = null;
@@ -514,20 +449,10 @@ final class nj {
     }
 
     final static java.awt.Frame a(int param0, int param1, bl param2, boolean param3, int param4, int param5) {
-        RuntimeException var6 = null;
-        fl[] var6_array = null;
-        int var7_int = 0;
-        java.awt.Frame var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        fl[] var10 = null;
-        il var11 = null;
         Object stackIn_8_0 = null;
         Object stackIn_32_0 = null;
         Object stackIn_35_0 = null;
         java.awt.Frame stackIn_37_0 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         RuntimeException stackIn_41_0 = null;
@@ -535,18 +460,14 @@ final class nj {
         String stackIn_41_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_7_0 = null;
-        java.awt.Frame stackOut_36_0 = null;
-        Object stackOut_34_0 = null;
-        Object stackOut_31_0 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
+        fl[] var6 = null;
+        RuntimeException var6_ref = null;
+        int var7_int = 0;
+        java.awt.Frame var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        fl[] var10 = null;
+        il var11 = null;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -554,8 +475,8 @@ final class nj {
               L1: {
                 if (param1 == 0) {
                   var10 = eb.a(param2, true);
-                  var6_array = var10;
-                  if (var6_array != null) {
+                  var6 = var10;
+                  if (var6 != null) {
                     var7_int = 0;
                     var8 = 0;
                     L2: while (true) {
@@ -608,8 +529,7 @@ final class nj {
                       }
                     }
                   } else {
-                    stackOut_7_0 = null;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = null;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -631,20 +551,17 @@ final class nj {
                   var7 = (java.awt.Frame) (var11.field_g);
                   if (var7 != null) {
                     if (-3 != (var11.field_b ^ -1)) {
-                      stackOut_36_0 = (java.awt.Frame) (var7);
-                      stackIn_37_0 = stackOut_36_0;
+                      stackIn_37_0 = (java.awt.Frame) (var7);
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
                       ce.a(param2, var7, (byte) -47);
-                      stackOut_34_0 = null;
-                      stackIn_35_0 = stackOut_34_0;
+                      stackIn_35_0 = null;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
                   } else {
-                    stackOut_31_0 = null;
-                    stackIn_32_0 = stackOut_31_0;
+                    stackIn_32_0 = null;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -660,28 +577,20 @@ final class nj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
-            var6 = decompiledCaughtException;
-            stackOut_38_0 = (RuntimeException) (var6);
-            stackOut_38_1 = new StringBuilder().append("nj.G(").append(param0).append(',').append(param1).append(',');
-            stackIn_40_0 = stackOut_38_0;
-            stackIn_40_1 = stackOut_38_1;
-            stackIn_39_0 = stackOut_38_0;
-            stackIn_39_1 = stackOut_38_1;
+            var6_ref = decompiledCaughtException;
+            stackIn_40_0 = (RuntimeException) (var6_ref);
+
+            stackIn_40_1 = new StringBuilder().append("nj.G(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "null";
-              stackIn_41_0 = stackOut_40_0;
-              stackIn_41_1 = stackOut_40_1;
-              stackIn_41_2 = stackOut_40_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "null";
               break L8;
             } else {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "{...}";
-              stackIn_41_0 = stackOut_39_0;
-              stackIn_41_1 = stackOut_39_1;
-              stackIn_41_2 = stackOut_39_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "{...}";
               break L8;
             }
           }
@@ -703,14 +612,15 @@ final class nj {
     }
 
     private final void a(int param0) {
-        java.awt.Frame discarded$1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        bl var7 = null;
-        int var8 = 0;
+        long dupTemp$0 = 0L;
+        long arrayValue$1 = 0L;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        bl var7;
+        int var8;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var2 = 0;
         var3 = 0;
@@ -727,7 +637,7 @@ final class nj {
                         break L3;
                       } else {
                         var7 = (bl) null;
-                        discarded$1 = nj.a(118, 34, (bl) null, false, -72, 58);
+                        nj.a(118, 34, (bl) null, false, -72, 58);
                         break L3;
                       }
                     }
@@ -807,8 +717,10 @@ final class nj {
                   }
                 }
               } else {
-                this.field_q[var2] = this.field_n[var2];
-                this.field_h[var2] = ff.a(this.field_l[var2], this.field_n[var2]);
+                dupTemp$0 = this.field_n[var2];
+                arrayValue$1 = this.field_l[var2];
+                this.field_q[var2] = dupTemp$0;
+                this.field_h[var2] = ff.a(arrayValue$1, dupTemp$0);
                 var2++;
                 continue L1;
               }

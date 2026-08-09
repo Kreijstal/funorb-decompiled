@@ -42,8 +42,8 @@ final class uq {
 
     final static void a(long param0, byte param1) {
         try {
-            InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
+            InterruptedException var3 = null;
             try {
               L0: {
                 Thread.sleep(param0);
@@ -72,6 +72,7 @@ final class uq {
         RuntimeException runtimeException = null;
         kf var1 = null;
         int var2 = 0;
+        boolean stackIn_21_0 = false;
         RuntimeException decompiledCaughtException = null;
         var2 = Pool.field_O;
         try {
@@ -135,7 +136,8 @@ final class uq {
               if (null == tl.field_N) {
                 break L7;
               } else {
-                if (!tl.field_N.d(-11414)) {
+                stackIn_21_0 = tl.field_N.d(-11414);
+                if (!stackIn_21_0) {
                   break L7;
                 } else {
                   break L7;

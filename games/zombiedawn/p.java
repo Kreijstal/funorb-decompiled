@@ -11,9 +11,8 @@ final class p {
 
     final static void b(int param0, int param1) {
         try {
-            Object discarded$1 = null;
-            Throwable var2 = null;
             Throwable decompiledCaughtException = null;
+            Throwable var2 = null;
             L0: {
               if (param1 == 27102) {
                 break L0;
@@ -24,7 +23,7 @@ final class p {
             }
             try {
               L1: {
-                discarded$1 = qe.a(new Object[]{new Integer(param0)}, "resizing", 29674, hc.a(0));
+                qe.a(new Object[]{new Integer(param0)}, "resizing", 29674, hc.a(0));
                 break L1;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

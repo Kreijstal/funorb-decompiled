@@ -15,7 +15,7 @@ final class gj extends ca {
     int[][] field_l;
 
     public static void c(boolean param0) {
-        ki var2 = null;
+        ki var2;
         field_g = null;
         field_j = null;
         if (param0) {

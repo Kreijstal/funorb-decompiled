@@ -27,7 +27,7 @@ final class ul {
     }
 
     ul(byte[] param0, mb param1) {
-        int discarded$1 = 0;
+        Throwable decompiledCaughtException = null;
         Exception var3 = null;
         ed var4 = null;
         int var5 = 0;
@@ -40,7 +40,6 @@ final class ul {
         int var12 = 0;
         int var13 = 0;
         ed var14 = null;
-        Throwable decompiledCaughtException = null;
         this.field_a = null;
         this.field_l = -1;
         this.field_a = param1;
@@ -48,7 +47,7 @@ final class ul {
           L0: {
             var14 = new ed(param0);
             var4 = new ed(param0);
-            discarded$1 = var14.h(-11);
+            var14.h(-11);
             var14.field_u = var14.field_u + 2;
             var5 = var14.h(-11);
             var6 = 0;

@@ -13,7 +13,7 @@ final class ko extends IOException {
     }
 
     final static String a(boolean param0, byte param1, boolean param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         if (param1 == 100) {
           L0: {
             var4 = 0;
@@ -79,7 +79,7 @@ final class ko extends IOException {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var8 = 0;
+        int var8;
         var8 = Torquing.field_u;
         if (kn.field_e <= param6) {
           if (qg.field_z >= param3) {

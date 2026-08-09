@@ -42,13 +42,17 @@ final class bn extends gf {
     fh[] field_p;
 
     final void d() {
+        int dupTemp$0 = 0;
+        int[] arrayValue$1 = null;
         int[] array$2 = null;
-        int[] array$3 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        int[] var6 = null;
+        int dupTemp$3 = 0;
+        int[] arrayValue$4 = null;
+        int[] array$5 = null;
+        int var2;
+        int var3;
+        int var4;
+        int[] var5;
+        int[] var6;
         L0: {
           if (this.field_I == null) {
             break L0;
@@ -69,8 +73,10 @@ final class bn extends gf {
                         break L0;
                       } else {
                         var4 = this.field_I[var3];
-                        var5[var4] = var5[var4] + 1;
-                        this.field_M[var4][var5[var4]] = var3;
+                        dupTemp$0 = var5[var4];
+                        arrayValue$1 = this.field_M[var4];
+                        var5[var4] = dupTemp$0 + 1;
+                        arrayValue$1[dupTemp$0] = var3;
                         var3++;
                         continue L3;
                       }
@@ -118,15 +124,17 @@ final class bn extends gf {
                         break L4;
                       } else {
                         var4 = this.field_r[var3];
-                        var6[var4] = var6[var4] + 1;
-                        this.field_m[var4][var6[var4]] = var3;
+                        dupTemp$3 = var6[var4];
+                        arrayValue$4 = this.field_m[var4];
+                        var6[var4] = dupTemp$3 + 1;
+                        arrayValue$4[dupTemp$3] = var3;
                         var3++;
                         continue L7;
                       }
                     }
                   } else {
-                    array$3 = new int[var6[var3]];
-                    this.field_m[var3] = array$3;
+                    array$5 = new int[var6[var3]];
+                    this.field_m[var3] = array$5;
                     var6[var3] = 0;
                     var3++;
                     continue L6;
@@ -175,50 +183,50 @@ final class bn extends gf {
     }
 
     private final void a(byte[] param0) {
-        int var2 = 0;
-        int var3 = 0;
-        p var4 = null;
-        p var5 = null;
-        p var6 = null;
-        p var7 = null;
-        p var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
-        int var42 = 0;
-        int var43 = 0;
-        int var44 = 0;
-        int var45 = 0;
+        int var2;
+        int var3;
+        p var4;
+        p var5;
+        p var6;
+        p var7;
+        p var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var41;
+        int var42;
+        int var43;
+        int var44;
+        int var45;
         L0: {
           var2 = 0;
           var3 = 0;
@@ -677,11 +685,11 @@ final class bn extends gf {
     }
 
     private final int a(bn param0, int param1, short param2) {
-        int fieldTemp$1 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int fieldTemp$0 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var4 = param0.field_K[param1];
         var5 = param0.field_C[param1];
         var6 = param0.field_v[param1];
@@ -700,9 +708,9 @@ final class bn extends gf {
                 break L1;
               }
             }
-            fieldTemp$1 = this.field_h;
+            fieldTemp$0 = this.field_h;
             this.field_h = this.field_h + 1;
-            return fieldTemp$1;
+            return fieldTemp$0;
           } else {
             if (var4 == this.field_K[var7]) {
               if (var5 == this.field_C[var7]) {
@@ -754,26 +762,26 @@ final class bn extends gf {
     }
 
     final void b() {
-        fh dupTemp$1 = null;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        fh var16 = null;
-        cb var17 = null;
-        cb var18 = null;
-        cb var19 = null;
+        fh dupTemp$0 = null;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        fh var16;
+        cb var17;
+        cb var18;
+        cb var19;
         if (this.field_o == null) {
           this.field_o = new cb[this.field_q];
           var1 = 0;
@@ -845,9 +853,9 @@ final class bn extends gf {
                                           break L6;
                                         }
                                       }
-                                      dupTemp$1 = new fh();
-                                      this.field_p[var1] = dupTemp$1;
-                                      var16 = dupTemp$1;
+                                      dupTemp$0 = new fh();
+                                      this.field_p[var1] = dupTemp$0;
+                                      var16 = dupTemp$0;
                                       var16.field_f = var11;
                                       var16.field_a = var12;
                                       var16.field_c = var13;
@@ -917,17 +925,17 @@ final class bn extends gf {
     }
 
     final int a(int param0, int param1, int param2) {
-        int fieldTemp$1 = 0;
-        int var4 = 0;
+        int fieldTemp$0 = 0;
+        int var4;
         var4 = 0;
         L0: while (true) {
           if (var4 >= this.field_h) {
             this.field_K[this.field_h] = param0;
             this.field_C[this.field_h] = param1;
             this.field_v[this.field_h] = param2;
-            fieldTemp$1 = this.field_h + 1;
+            fieldTemp$0 = this.field_h + 1;
             this.field_h = this.field_h + 1;
-            this.field_q = fieldTemp$1;
+            this.field_q = fieldTemp$0;
             return this.field_h - 1;
           } else {
             if (this.field_K[var4] == param0) {
@@ -951,71 +959,67 @@ final class bn extends gf {
     }
 
     private final void b(byte[] param0) {
-        byte dupTemp$1 = 0;
-        p var2 = null;
-        p var3 = null;
-        p var4 = null;
-        p var5 = null;
-        p var6 = null;
-        p var7 = null;
-        p var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
-        int var42 = 0;
-        int var43 = 0;
-        int var44 = 0;
-        int var45 = 0;
-        int var46 = 0;
-        int var47 = 0;
-        int var48 = 0;
-        int var49 = 0;
-        int var50 = 0;
-        int var51 = 0;
-        int var52 = 0;
-        int var53 = 0;
-        int var54 = 0;
-        int var55 = 0;
-        int var56 = 0;
-        int var57 = 0;
-        int var58 = 0;
-        int var59 = 0;
+        byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
+        p var2;
+        p var3;
+        p var4;
+        p var5;
+        p var6;
+        p var7;
+        p var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var41;
+        int var42;
+        int var43;
+        int var44;
+        int var45;
+        int var46;
+        int var47;
+        int var48;
+        int var49;
+        int var50;
+        int var51;
+        int var52;
+        int var53;
+        int var54;
+        int var55;
+        int var56;
+        int var57;
+        int var58;
+        int var59;
         L0: {
           var2 = new p(param0);
           var3 = new p(param0);
@@ -1030,24 +1034,20 @@ final class bn extends gf {
           var11 = var2.i(-77);
           var12 = var2.i(-87);
           if ((var12 & 1) != 1) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
         L1: {
           var13 = stackIn_3_0;
           if ((var12 & 2) != 2) {
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L1;
           } else {
-            stackOut_4_0 = 1;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = 1;
             break L1;
           }
         }
@@ -1077,9 +1077,9 @@ final class bn extends gf {
                 break L2;
               } else {
                 L4: {
-                  dupTemp$1 = var2.g(0);
-                  this.field_l[var28] = dupTemp$1;
-                  var29 = dupTemp$1;
+                  dupTemp$0 = var2.g(0);
+                  this.field_l[var28] = dupTemp$0;
+                  var29 = dupTemp$0;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -1686,89 +1686,46 @@ final class bn extends gf {
     }
 
     bn(bn[] param0, int param1) {
+        byte dupTemp$0 = 0;
         int incrementValue$1 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        bn var10_ref_bn = null;
-        int var10 = 0;
-        bn var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        bn var15 = null;
-        bn var16 = null;
-        int var17 = 0;
-        bn var18 = null;
-        bn var19 = null;
-        int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_13_1 = 0;
-        int stackIn_14_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_16_1 = 0;
-        int stackIn_17_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_19_1 = 0;
-        int stackIn_20_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_22_1 = 0;
-        int stackIn_23_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
-        byte[] stackIn_75_0 = null;
-        int stackIn_75_1 = 0;
-        byte[] stackIn_76_0 = null;
-        int stackIn_76_1 = 0;
         byte[] stackIn_77_0 = null;
         int stackIn_77_1 = 0;
         byte[] stackIn_78_0 = null;
         int stackIn_78_1 = 0;
         int stackIn_78_2 = 0;
-        byte[] stackOut_74_0 = null;
-        int stackOut_74_1 = 0;
-        byte[] stackOut_75_0 = null;
-        int stackOut_75_1 = 0;
-        byte[] stackOut_76_0 = null;
-        int stackOut_76_1 = 0;
-        int stackOut_76_2 = 0;
-        byte[] stackOut_77_0 = null;
-        int stackOut_77_1 = 0;
-        int stackOut_77_2 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_12_1 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_14_1 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_18_1 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_17_1 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_21_1 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_20_1 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_24_1 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_23_1 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        bn var10_ref_bn;
+        bn var11;
+        int var12;
+        int var13;
+        int var14;
+        bn var15;
+        bn var16;
+        int var17;
+        bn var18;
+        bn var19;
         this.field_t = (byte) 0;
         this.field_y = 0;
         this.field_q = 0;
@@ -1889,8 +1846,9 @@ final class bn extends gf {
                           L11: while (true) {
                             if (var17 < var19.field_R) {
                               L12: {
-                                this.field_l[this.field_R] = var16.field_l[var17];
-                                var14 = var16.field_l[var17];
+                                dupTemp$0 = var16.field_l[var17];
+                                this.field_l[this.field_R] = dupTemp$0;
+                                var14 = dupTemp$0;
                                 if (var14 != 0) {
                                   break L12;
                                 } else {
@@ -1943,40 +1901,28 @@ final class bn extends gf {
                               L16: {
                                 incrementValue$1 = var9;
                                 var9++;
-                                stackOut_74_0 = this.field_Q;
-                                stackOut_74_1 = incrementValue$1;
-                                stackIn_77_0 = stackOut_74_0;
-                                stackIn_77_1 = stackOut_74_1;
-                                stackIn_75_0 = stackOut_74_0;
-                                stackIn_75_1 = stackOut_74_1;
+                                stackIn_77_0 = this.field_Q;
+
+                                stackIn_77_1 = incrementValue$1;
+
                                 if (var19.field_Q == null) {
                                   break L16;
                                 } else {
-                                  stackOut_75_0 = (byte[]) ((Object) stackIn_75_0);
-                                  stackOut_75_1 = stackIn_75_1;
-                                  stackIn_77_0 = stackOut_75_0;
-                                  stackIn_77_1 = stackOut_75_1;
-                                  stackIn_76_0 = stackOut_75_0;
-                                  stackIn_76_1 = stackOut_75_1;
+                                  stackIn_77_0 = (byte[]) ((Object) stackIn_77_0);
+
                                   if (var16.field_Q[var13] == -1) {
                                     break L16;
                                   } else {
-                                    stackOut_76_0 = (byte[]) ((Object) stackIn_76_0);
-                                    stackOut_76_1 = stackIn_76_1;
-                                    stackOut_76_2 = var16.field_Q[var13] + this.field_R;
-                                    stackIn_78_0 = stackOut_76_0;
-                                    stackIn_78_1 = stackOut_76_1;
-                                    stackIn_78_2 = stackOut_76_2;
+                                    stackIn_78_0 = (byte[]) ((Object) stackIn_77_0);
+                                    stackIn_78_1 = stackIn_77_1;
+                                    stackIn_78_2 = var16.field_Q[var13] + this.field_R;
                                     break L15;
                                   }
                                 }
                               }
-                              stackOut_77_0 = (byte[]) ((Object) stackIn_77_0);
-                              stackOut_77_1 = stackIn_77_1;
-                              stackOut_77_2 = -1;
-                              stackIn_78_0 = stackOut_77_0;
-                              stackIn_78_1 = stackOut_77_1;
-                              stackIn_78_2 = stackOut_77_2;
+                              stackIn_78_0 = (byte[]) ((Object) stackIn_77_0);
+                              stackIn_78_1 = stackIn_77_1;
+                              stackIn_78_2 = -1;
                               break L15;
                             }
                             stackIn_78_0[stackIn_78_1] = (byte)stackIn_78_2;
@@ -2112,96 +2058,71 @@ final class bn extends gf {
                 }
               }
               L25: {
-                stackOut_10_0 = var3;
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_12_0 = var3;
+
                 if (var10_ref_bn.field_G == null) {
-                  stackOut_12_0 = stackIn_12_0;
-                  stackOut_12_1 = 0;
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
+                  stackIn_13_0 = stackIn_12_0;
+                  stackIn_13_1 = 0;
                   break L25;
                 } else {
-                  stackOut_11_0 = stackIn_11_0;
-                  stackOut_11_1 = 1;
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
+                  stackIn_13_0 = stackIn_12_0;
+                  stackIn_13_1 = 1;
                   break L25;
                 }
               }
               L26: {
                 var3 = stackIn_13_0 | stackIn_13_1;
-                stackOut_13_0 = var5;
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_15_0 = var5;
+
                 if (var10_ref_bn.field_D == null) {
-                  stackOut_15_0 = stackIn_15_0;
-                  stackOut_15_1 = 0;
-                  stackIn_16_0 = stackOut_15_0;
-                  stackIn_16_1 = stackOut_15_1;
+                  stackIn_16_0 = stackIn_15_0;
+                  stackIn_16_1 = 0;
                   break L26;
                 } else {
-                  stackOut_14_0 = stackIn_14_0;
-                  stackOut_14_1 = 1;
-                  stackIn_16_0 = stackOut_14_0;
-                  stackIn_16_1 = stackOut_14_1;
+                  stackIn_16_0 = stackIn_15_0;
+                  stackIn_16_1 = 1;
                   break L26;
                 }
               }
               L27: {
                 var5 = stackIn_16_0 | stackIn_16_1;
-                stackOut_16_0 = var6;
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_18_0 = var6;
+
                 if (var10_ref_bn.field_r == null) {
-                  stackOut_18_0 = stackIn_18_0;
-                  stackOut_18_1 = 0;
-                  stackIn_19_0 = stackOut_18_0;
-                  stackIn_19_1 = stackOut_18_1;
+                  stackIn_19_0 = stackIn_18_0;
+                  stackIn_19_1 = 0;
                   break L27;
                 } else {
-                  stackOut_17_0 = stackIn_17_0;
-                  stackOut_17_1 = 1;
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_19_1 = stackOut_17_1;
+                  stackIn_19_0 = stackIn_18_0;
+                  stackIn_19_1 = 1;
                   break L27;
                 }
               }
               L28: {
                 var6 = stackIn_19_0 | stackIn_19_1;
-                stackOut_19_0 = var7;
-                stackIn_21_0 = stackOut_19_0;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_21_0 = var7;
+
                 if (var10_ref_bn.field_B == null) {
-                  stackOut_21_0 = stackIn_21_0;
-                  stackOut_21_1 = 0;
-                  stackIn_22_0 = stackOut_21_0;
-                  stackIn_22_1 = stackOut_21_1;
+                  stackIn_22_0 = stackIn_21_0;
+                  stackIn_22_1 = 0;
                   break L28;
                 } else {
-                  stackOut_20_0 = stackIn_20_0;
-                  stackOut_20_1 = 1;
-                  stackIn_22_0 = stackOut_20_0;
-                  stackIn_22_1 = stackOut_20_1;
+                  stackIn_22_0 = stackIn_21_0;
+                  stackIn_22_1 = 1;
                   break L28;
                 }
               }
               L29: {
                 var7 = stackIn_22_0 | stackIn_22_1;
-                stackOut_22_0 = var8;
-                stackIn_24_0 = stackOut_22_0;
-                stackIn_23_0 = stackOut_22_0;
+                stackIn_24_0 = var8;
+
                 if (var10_ref_bn.field_Q == null) {
-                  stackOut_24_0 = stackIn_24_0;
-                  stackOut_24_1 = 0;
-                  stackIn_25_0 = stackOut_24_0;
-                  stackIn_25_1 = stackOut_24_1;
+                  stackIn_25_0 = stackIn_24_0;
+                  stackIn_25_1 = 0;
                   break L29;
                 } else {
-                  stackOut_23_0 = stackIn_23_0;
-                  stackOut_23_1 = 1;
-                  stackIn_25_0 = stackOut_23_0;
-                  stackIn_25_1 = stackOut_23_1;
+                  stackIn_25_0 = stackIn_24_0;
+                  stackIn_25_1 = 1;
                   break L29;
                 }
               }

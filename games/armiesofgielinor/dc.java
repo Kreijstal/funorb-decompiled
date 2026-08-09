@@ -16,10 +16,9 @@ final class dc extends tc {
     int field_q;
 
     final static void a(java.awt.Component param0, int param1) {
-        wd discarded$0 = null;
         try {
             if (param1 > -25) {
-                discarded$0 = dc.a(false, false);
+                dc.a(false, false);
             }
             param0.removeMouseListener(lf.field_q);
             param0.removeMouseMotionListener(lf.field_q);
@@ -31,44 +30,26 @@ final class dc extends tc {
     }
 
     final static wd a(boolean param0, boolean param1) {
-        wd discarded$2 = null;
-        wd var2 = null;
-        wd stackIn_2_0 = null;
+        wd var2;
         wd stackIn_3_0 = null;
         wd stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        wd stackIn_6_0 = null;
         wd stackIn_7_0 = null;
         wd stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        wd stackOut_5_0 = null;
-        wd stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        wd stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        wd stackOut_1_0 = null;
-        wd stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        wd stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
         if (param1) {
           L0: {
-            discarded$2 = dc.a(false, false);
+            dc.a(false, false);
             var2 = new wd(true);
-            stackOut_5_0 = (wd) (var2);
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_7_0 = (wd) (var2);
+
             if (!param0) {
-              stackOut_7_0 = (wd) ((Object) stackIn_7_0);
-              stackOut_7_1 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_0 = (wd) ((Object) stackIn_7_0);
+              stackIn_8_1 = 0;
               break L0;
             } else {
-              stackOut_6_0 = (wd) ((Object) stackIn_6_0);
-              stackOut_6_1 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_0 = (wd) ((Object) stackIn_7_0);
+              stackIn_8_1 = 1;
               break L0;
             }
           }
@@ -77,20 +58,15 @@ final class dc extends tc {
         } else {
           L1: {
             var2 = new wd(true);
-            stackOut_1_0 = (wd) (var2);
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_3_0 = (wd) (var2);
+
             if (!param0) {
-              stackOut_3_0 = (wd) ((Object) stackIn_3_0);
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_0 = (wd) ((Object) stackIn_3_0);
+              stackIn_4_1 = 0;
               break L1;
             } else {
-              stackOut_2_0 = (wd) ((Object) stackIn_2_0);
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_0 = (wd) ((Object) stackIn_3_0);
+              stackIn_4_1 = 1;
               break L1;
             }
           }

@@ -13,8 +13,8 @@ final class eg {
     static he[] field_f;
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var2 = 0;
           if ((param1 & 7) == 0) {
@@ -34,9 +34,8 @@ final class eg {
     }
 
     final static sd[] b(byte param0) {
-        int discarded$2 = 0;
         if (param0 >= -103) {
-          discarded$2 = eg.a(99, 71);
+          eg.a(99, 71);
           return new sd[]{p.field_d, ka.field_q, mf.field_A};
         } else {
           return new sd[]{p.field_d, ka.field_q, mf.field_A};
@@ -47,8 +46,6 @@ final class eg {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -56,26 +53,14 @@ final class eg {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 >= 69) {
-              stackOut_3_0 = fj.a(param0, param2, 84, true);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = fj.a(param0, param2, 84, true);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 87;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 87;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -84,27 +69,19 @@ final class eg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("eg.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("eg.E(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -133,21 +110,19 @@ final class eg {
     }
 
     final static void a(byte param0) {
-        sd[] discarded$0 = null;
         if (!(uj.field_j == null)) {
             uj.field_j.b(50);
             uj.field_j = null;
         }
         if (param0 != 126) {
-            discarded$0 = eg.b((byte) 72);
+            eg.b((byte) 72);
             return;
         }
     }
 
     final static nh[] a(byte param0, int param1, int param2, int param3) {
-        sd[] discarded$2 = null;
         if (param0 < 66) {
-          discarded$2 = eg.b((byte) 0);
+          eg.b((byte) 0);
           return af.a(param1, 1, param2, (byte) 32, param3);
         } else {
           return af.a(param1, 1, param2, (byte) 32, param3);

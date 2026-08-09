@@ -8,12 +8,11 @@ final class hw {
     static ki field_a;
 
     final static void a(File param0, String param1, int param2) {
-        Object discarded$0 = null;
         try {
             if (param2 != 23295) {
                 field_b = (boolean[]) null;
             }
-            discarded$0 = mi.field_b.put(param1, param0);
+            mi.field_b.put(param1, param0);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) ((Object) runtimeException), "hw.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

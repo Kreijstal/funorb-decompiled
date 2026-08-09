@@ -27,8 +27,6 @@ final class ja extends rl {
         String stackIn_5_0 = null;
         String stackIn_8_0 = null;
         String stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -36,42 +34,26 @@ final class ja extends rl {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_9_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             if (this.field_v.a(param0, -91) != ra.field_k) {
               if (param1 < -114) {
                 if (this.a(param0, -90) != ra.field_k) {
-                  stackOut_9_0 = nh.field_v;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = nh.field_v;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_7_0 = oj.field_b;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = oj.field_b;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_4_0 = (String) null;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (String) null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = this.field_v.a(param0, (byte) -115);
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = this.field_v.a(param0, (byte) -115);
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -80,27 +62,19 @@ final class ja extends rl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("ja.A(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("ja.A(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L1;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L1;
             }
           }
@@ -128,8 +102,6 @@ final class ja extends rl {
         eh stackIn_2_0 = null;
         eh stackIn_7_0 = null;
         eh stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -137,18 +109,6 @@ final class ja extends rl {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        eh stackOut_6_0 = null;
-        eh stackOut_11_0 = null;
-        eh stackOut_10_0 = null;
-        eh stackOut_1_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             if (this.field_v.a(param0, 14) != ra.field_k) {
@@ -158,8 +118,7 @@ final class ja extends rl {
                 } else {
                   var3 = ib.a(2, param0);
                   if (!var3.a((byte) -111)) {
-                    stackOut_6_0 = ug.field_c;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = ug.field_c;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -172,20 +131,17 @@ final class ja extends rl {
               L2: {
                 var3_int = 75 / ((-50 - param1) / 36);
                 if (!this.field_x) {
-                  stackOut_11_0 = ra.field_k;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = ra.field_k;
                   break L2;
                 } else {
-                  stackOut_10_0 = nn.field_s;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = nn.field_s;
                   break L2;
                 }
               }
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_1_0 = ra.field_k;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = ra.field_k;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -194,27 +150,19 @@ final class ja extends rl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3_ref);
-            stackOut_13_1 = new StringBuilder().append("ja.E(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3_ref);
+
+            stackIn_15_1 = new StringBuilder().append("ja.E(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }
@@ -232,9 +180,8 @@ final class ja extends rl {
     }
 
     final static kc d(byte param0) {
-        kc discarded$0 = null;
         if (param0 != 90) {
-            discarded$0 = ja.d((byte) -69);
+            ja.d((byte) -69);
             return lf.field_b.field_Cb;
         }
         return lf.field_b.field_Cb;

@@ -73,17 +73,6 @@ class uk {
     }
 
     final void a(un param0, p param1, boolean param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        long var6 = 0L;
-        long var8 = 0L;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -99,154 +88,334 @@ class uk {
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        var15 = Chess.field_G;
-        try {
-          L0: {
-            var4_int = param1.i(-124);
-            if (3 < var4_int) {
-              throw new RuntimeException("Version number too recent");
-            } else {
-              if (param2) {
-                if (var4_int == 0) {
-                  throw new RuntimeException("Version number too old");
-                } else {
-                  if ((var4_int ^ -1) != -2) {
-                    L1: {
-                      if (var4_int == 2) {
-                        break L1;
-                      } else {
-                        L2: {
-                          if (-4 != (var4_int ^ -1)) {
-                            break L2;
-                          } else {
-                            L3: {
-                              var5 = param1.c(param2);
-                              var6 = param1.d((byte) 118);
-                              var8 = param1.d((byte) 118);
-                              var10 = param1.g(0);
-                              if (param0 == null) {
-                                break L3;
-                              } else {
-                                param0.field_e = (int)(50L * (var6 / 1000L));
-                                param0.field_B.field_f = var10;
-                                param0.field_v = (int)(var8 / 1000L * 50L);
-                                break L3;
-                              }
-                            }
-                            var11 = 0;
-                            L4: while (true) {
-                              if (var11 >= var5) {
-                                if (var15 == 0) {
-                                  break L2;
-                                } else {
-                                  break L1;
-                                }
-                              } else {
-                                var12 = param1.i(-123);
-                                var13 = param1.i(-103);
-                                var14 = param1.i(-97);
-                                this.a((byte) 19, var14, var12, var13);
-                                var11++;
-                                if (var15 != 0) {
-                                  break L2;
-                                } else {
-                                  continue L4;
-                                }
-                              }
-                            }
-                          }
-                        }
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      }
-                    }
-                    throw new RuntimeException("Version number too old");
-                  } else {
-                    throw new RuntimeException("Version number too old");
-                  }
+        int statePc = 0;
+        Throwable caughtException = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        long var6 = 0L;
+        long var8 = 0L;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var15 = Chess.field_G;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              } else {
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
+                case 1: {
+                    try {
+                        var4_int = param1.i(-124);
+                        if (3 < var4_int) {
+                            statePc = 3;
+                        } else {
+                            statePc = 2;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        statePc = 4;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        throw new RuntimeException("Version number too recent");
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        if (param2) {
+                            statePc = 6;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    return;
+                }
+                case 6: {
+                    try {
+                        if (var4_int == 0) {
+                            statePc = 20;
+                        } else {
+                            statePc = 7;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        if ((var4_int ^ -1) != -2) {
+                            statePc = 9;
+                        } else {
+                            statePc = 8;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        throw new RuntimeException("Version number too old");
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 9: {
+                    try {
+                        if (var4_int == 2) {
+                            statePc = 19;
+                        } else {
+                            statePc = 10;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_9) {
+                        caughtException = stateCaught_9;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    try {
+                        if (-4 != (var4_int ^ -1)) {
+                            statePc = 29;
+                        } else {
+                            statePc = 11;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_10) {
+                        caughtException = stateCaught_10;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    try {
+                        var5 = param1.c(param2);
+                        var6 = param1.d((byte) 118);
+                        var8 = param1.d((byte) 118);
+                        var10 = param1.g(0);
+                        if (param0 == null) {
+                            statePc = 13;
+                        } else {
+                            statePc = 12;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_11) {
+                        caughtException = stateCaught_11;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 12: {
+                    try {
+                        param0.field_e = (int)(50L * (var6 / 1000L));
+                        param0.field_B.field_f = var10;
+                        param0.field_v = (int)(var8 / 1000L * 50L);
+                        statePc = 13;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_12) {
+                        caughtException = stateCaught_12;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 13: {
+                    try {
+                        var11 = 0;
+                        statePc = 14;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_13) {
+                        caughtException = stateCaught_13;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 14: {
+                    try {
+                        if (var11 >= var5) {
+                            statePc = 18;
+                        } else {
+                            statePc = 15;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_14) {
+                        caughtException = stateCaught_14;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 15: {
+                    try {
+                        var12 = param1.i(-123);
+                        var13 = param1.i(-103);
+                        var14 = param1.i(-97);
+                        this.a((byte) 19, var14, var12, var13);
+                        var11++;
+                        if (var15 != 0) {
+                            statePc = 29;
+                        } else {
+                            statePc = 16;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_15) {
+                        caughtException = stateCaught_15;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 16: {
+                    try {
+                        if (var15 == 0) {
+                            statePc = 14;
+                        } else {
+                            statePc = 17;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_16) {
+                        caughtException = stateCaught_16;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 17: {
+                    try {
+                        statePc = 18;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_17) {
+                        caughtException = stateCaught_17;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 18: {
+                    try {
+                        if (var15 == 0) {
+                            statePc = 29;
+                        } else {
+                            statePc = 19;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_18) {
+                        caughtException = stateCaught_18;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 19: {
+                    try {
+                        throw new RuntimeException("Version number too old");
+                    } catch (Throwable stateCaught_19) {
+                        caughtException = stateCaught_19;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 20: {
+                    try {
+                        throw new RuntimeException("Version number too old");
+                    } catch (Throwable stateCaught_20) {
+                        caughtException = stateCaught_20;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                }
+                case 22: {
+                    var4 = (RuntimeException) ((Object) caughtException);
+                    stackIn_24_0 = (RuntimeException) (var4);
+                    stackIn_23_0 = stackIn_24_0;
+                    stackIn_24_1 = new StringBuilder().append("uk.IA(");
+                    stackIn_23_1 = stackIn_24_1;
+                    if (param0 == null) {
+                        statePc = 24;
+                    } else {
+                        statePc = 23;
+                    }
+                    continue stateLoop;
+                }
+                case 23: {
+                    stackIn_25_0 = (RuntimeException) ((Object) stackIn_23_0);
+                    stackIn_25_1 = (StringBuilder) ((Object) stackIn_23_1);
+                    stackIn_25_2 = "{...}";
+                    statePc = 25;
+                    continue stateLoop;
+                }
+                case 24: {
+                    stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+                    stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+                    stackIn_25_2 = "null";
+                    statePc = 25;
+                    continue stateLoop;
+                }
+                case 25: {
+                    stackIn_27_0 = (RuntimeException) ((Object) stackIn_25_0);
+                    stackIn_26_0 = stackIn_27_0;
+                    stackIn_27_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
+                    stackIn_26_1 = stackIn_27_1;
+                    if (param1 == null) {
+                        statePc = 27;
+                    } else {
+                        statePc = 26;
+                    }
+                    continue stateLoop;
+                }
+                case 26: {
+                    stackIn_28_0 = (RuntimeException) ((Object) stackIn_26_0);
+                    stackIn_28_1 = (StringBuilder) ((Object) stackIn_26_1);
+                    stackIn_28_2 = "{...}";
+                    statePc = 28;
+                    continue stateLoop;
+                }
+                case 27: {
+                    stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+                    stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+                    stackIn_28_2 = "null";
+                    statePc = 28;
+                    continue stateLoop;
+                }
+                case 28: {
+                    throw fk.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param2 + ')');
+                }
+                case 29: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var4);
-            stackOut_22_1 = new StringBuilder().append("uk.IA(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
-            if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L5;
-            } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
-              break L5;
-            }
-          }
-          L6: {
-            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
-            if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
-              break L6;
-            } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
-              break L6;
-            }
-          }
-          throw fk.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -262,82 +431,131 @@ class uk {
         boolean[] var12 = null;
         boolean stackIn_9_0 = false;
         int stackIn_14_0 = 0;
-        boolean stackOut_8_0 = false;
-        int stackOut_13_0 = 0;
-        var10 = Chess.field_G;
-        var4 = this.field_m;
-        if (param2 == -12) {
-          L0: {
-            var12 = new boolean[this.field_d.length];
-            var11 = var12;
-            var5 = var11;
-            ne.a(this.field_d, 0, var5, 0, var12.length);
-            var6 = this.field_f[param1];
-            if (var6 != 0) {
-              var7 = var6 & 16773120;
-              if (param0 == var7) {
-                this.a(param1, true, -1);
-                var8 = 0;
-                var9 = 63;
-                L1: while (true) {
-                  L2: {
-                    L3: {
-                      if ((var9 ^ -1) > -1) {
-                        break L3;
-                      } else {
-                        stackOut_8_0 = this.field_d[var9];
-                        stackIn_14_0 = stackOut_8_0 ? 1 : 0;
-                        stackIn_9_0 = stackOut_8_0;
-                        if (var10 != 0) {
-                          break L2;
-                        } else {
-                          L4: {
-                            if (!stackIn_9_0) {
-                              break L4;
-                            } else {
-                              var8 = 1;
-                              if (var10 == 0) {
-                                break L3;
-                              } else {
-                                break L4;
-                              }
-                            }
-                          }
-                          var9--;
-                          if (var10 == 0) {
-                            continue L1;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
+        boolean stackOut_8_0;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var10 = Chess.field_G;
+                    var4 = this.field_m;
+                    if (param2 == -12) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
                     }
-                    stackOut_13_0 = var8;
-                    stackIn_14_0 = stackOut_13_0;
-                    break L2;
-                  }
-                  if (stackIn_14_0 != 0) {
+                    continue stateLoop;
+                }
+                case 1: {
+                    return true;
+                }
+                case 2: {
+                    var12 = new boolean[this.field_d.length];
+                    var11 = var12;
+                    var5 = var11;
+                    ne.a(this.field_d, 0, var5, 0, var12.length);
+                    var6 = this.field_f[param1];
+                    if (var6 != 0) {
+                        statePc = 4;
+                    } else {
+                        statePc = 17;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    var7 = var6 & 16773120;
+                    if (param0 == var7) {
+                        statePc = 6;
+                    } else {
+                        statePc = 17;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    this.a(param1, true, -1);
+                    var8 = 0;
+                    var9 = 63;
+                    statePc = 7;
+                    continue stateLoop;
+                }
+                case 7: {
+                    if ((var9 ^ -1) > -1) {
+                        statePc = 13;
+                    } else {
+                        statePc = 8;
+                    }
+                    continue stateLoop;
+                }
+                case 8: {
+                    stackOut_8_0 = this.field_d[var9];
+                    stackIn_14_0 = stackOut_8_0 ? 1 : 0;
+                    stackIn_9_0 = stackOut_8_0;
+                    if (var10 != 0) {
+                        statePc = 14;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    if (!stackIn_9_0) {
+                        statePc = 11;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    var8 = 1;
+                    if (var10 == 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    var9--;
+                    if (var10 == 0) {
+                        statePc = 7;
+                    } else {
+                        statePc = 13;
+                    }
+                    continue stateLoop;
+                }
+                case 13: {
+                    stackIn_14_0 = var8;
+                    statePc = 14;
+                    continue stateLoop;
+                }
+                case 14: {
+                    if (stackIn_14_0 != 0) {
+                        statePc = 16;
+                    } else {
+                        statePc = 17;
+                    }
+                    continue stateLoop;
+                }
+                case 16: {
                     this.a(2, var12, var4);
                     return true;
-                  } else {
-                    break L0;
-                  }
                 }
-              } else {
-                break L0;
-              }
-            } else {
-              break L0;
+                case 17: {
+                    this.a(2, var12, var4);
+                    return false;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-          this.a(2, var12, var4);
-          return false;
-        } else {
-          return true;
         }
     }
 
     final boolean e(int param0, int param1) {
+        int stackIn_3_0 = 0;
+        int stackIn_3_1 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_12_1 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_21_0 = 0;
+        int statePc = 0;
         int var3 = 0;
         int var4 = 0;
         int var5_int = 0;
@@ -350,148 +568,217 @@ class uk {
         int var11 = 0;
         boolean[] var12 = null;
         boolean[] var13 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_3_1 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_12_1 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_2_1 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
-        int stackOut_19_0 = 0;
-        var11 = Chess.field_G;
-        var3 = -1;
-        var4 = 63;
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (-1 < (var4 ^ -1)) {
-                break L2;
-              } else {
-                var5_int = this.field_f[var4];
-                stackOut_2_0 = 0;
-                stackOut_2_1 = var5_int;
-                stackIn_12_0 = stackOut_2_0;
-                stackIn_12_1 = stackOut_2_1;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
-                if (var11 != 0) {
-                  break L1;
-                } else {
-                  L3: {
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var11 = Chess.field_G;
+                    var3 = -1;
+                    var4 = 63;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    if (-1 < (var4 ^ -1)) {
+                        statePc = 11;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
+                }
+                case 2: {
+                    var5_int = this.field_f[var4];
+                    stackIn_12_0 = 0;
+                    stackIn_3_0 = stackIn_12_0;
+                    stackIn_12_1 = var5_int;
+                    stackIn_3_1 = stackIn_12_1;
+                    if (var11 != 0) {
+                        statePc = 12;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
                     if (stackIn_3_0 != stackIn_3_1) {
-                      var6 = 16773120 & var5_int;
-                      var7 = -16773121 & var5_int;
-                      if (param0 != var6) {
-                        break L3;
-                      } else {
-                        if (6 == var7) {
-                          var3 = var4;
-                          if (var11 == 0) {
-                            break L2;
-                          } else {
-                            break L3;
-                          }
-                        } else {
-                          break L3;
-                        }
-                      }
+                        statePc = 5;
                     } else {
-                      break L3;
+                        statePc = 9;
                     }
-                  }
-                  var4--;
-                  if (var11 == 0) {
-                    continue L0;
-                  } else {
-                    break L2;
-                  }
+                    continue stateLoop;
                 }
-              }
-            }
-            stackOut_11_0 = var3;
-            stackOut_11_1 = -1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
-            break L1;
-          }
-          if ((stackIn_12_0 ^ stackIn_12_1) != 0) {
-            var4 = this.field_m;
-            if (param1 >= 49) {
-              var13 = new boolean[this.field_d.length];
-              var12 = var13;
-              var5 = var12;
-              ne.a(this.field_d, 0, var5, 0, var13.length);
-              var6 = 0;
-              var7 = 63;
-              L4: while (true) {
-                if ((var7 ^ -1) <= -1) {
-                  stackOut_19_0 = var6;
-                  stackIn_21_0 = stackOut_19_0;
-                  stackIn_20_0 = stackOut_19_0;
-                  if (var11 == 0) {
-                    if (stackIn_21_0 != 0) {
-                      this.a(2, var13, var4);
-                      return var6 != 0;
+                case 5: {
+                    var6 = 16773120 & var5_int;
+                    var7 = -16773121 & var5_int;
+                    if (param0 != var6) {
+                        statePc = 9;
                     } else {
-                      var8 = this.field_f[var7];
-                      if (-1 != (var8 ^ -1)) {
-                        var9 = 16773120 & var8;
-                        if (param0 != var9) {
-                          L5: {
-                            this.a(var7, false, -1);
-                            var10 = this.field_d[var3] ? 1 : 0;
-                            if (var10 == 0) {
-                              break L5;
-                            } else {
-                              var6 = 1;
-                              break L5;
-                            }
-                          }
-                          var7--;
-                          continue L4;
-                        } else {
-                          var7--;
-                          continue L4;
-                        }
-                      } else {
-                        var7--;
-                        continue L4;
-                      }
+                        statePc = 6;
                     }
-                  } else {
+                    continue stateLoop;
+                }
+                case 6: {
+                    if (6 == var7) {
+                        statePc = 8;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 8: {
+                    var3 = var4;
+                    if (var11 == 0) {
+                        statePc = 11;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    var4--;
+                    if (var11 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    stackIn_12_0 = var3;
+                    stackIn_12_1 = -1;
+                    statePc = 12;
+                    continue stateLoop;
+                }
+                case 12: {
+                    if ((stackIn_12_0 ^ stackIn_12_1) != 0) {
+                        statePc = 14;
+                    } else {
+                        statePc = 13;
+                    }
+                    continue stateLoop;
+                }
+                case 13: {
+                    return true;
+                }
+                case 14: {
+                    var4 = this.field_m;
+                    if (param1 >= 49) {
+                        statePc = 16;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 15: {
+                    return true;
+                }
+                case 16: {
+                    var13 = new boolean[this.field_d.length];
+                    var12 = var13;
+                    var5 = var12;
+                    ne.a(this.field_d, 0, var5, 0, var13.length);
+                    var6 = 0;
+                    var7 = 63;
+                    statePc = 17;
+                    continue stateLoop;
+                }
+                case 17: {
+                    if ((var7 ^ -1) <= -1) {
+                        statePc = 19;
+                    } else {
+                        statePc = 18;
+                    }
+                    continue stateLoop;
+                }
+                case 18: {
+                    this.a(2, var13, var4);
+                    return var6 != 0;
+                }
+                case 19: {
+                    stackIn_21_0 = var6;
+                    stackIn_20_0 = stackIn_21_0;
+                    if (var11 == 0) {
+                        statePc = 21;
+                    } else {
+                        statePc = 20;
+                    }
+                    continue stateLoop;
+                }
+                case 20: {
                     return stackIn_20_0 != 0;
-                  }
-                } else {
-                  this.a(2, var13, var4);
-                  return var6 != 0;
                 }
-              }
-            } else {
-              return true;
+                case 21: {
+                    if (stackIn_21_0 != 0) {
+                        statePc = 29;
+                    } else {
+                        statePc = 22;
+                    }
+                    continue stateLoop;
+                }
+                case 22: {
+                    var8 = this.field_f[var7];
+                    if (-1 != (var8 ^ -1)) {
+                        statePc = 24;
+                    } else {
+                        statePc = 28;
+                    }
+                    continue stateLoop;
+                }
+                case 24: {
+                    var9 = 16773120 & var8;
+                    if (param0 != var9) {
+                        statePc = 26;
+                    } else {
+                        statePc = 28;
+                    }
+                    continue stateLoop;
+                }
+                case 26: {
+                    this.a(var7, false, -1);
+                    var10 = this.field_d[var3] ? 1 : 0;
+                    if (var10 == 0) {
+                        statePc = 28;
+                    } else {
+                        statePc = 27;
+                    }
+                    continue stateLoop;
+                }
+                case 27: {
+                    var6 = 1;
+                    statePc = 28;
+                    continue stateLoop;
+                }
+                case 28: {
+                    var7--;
+                    if (var11 == 0) {
+                        statePc = 17;
+                    } else {
+                        statePc = 29;
+                    }
+                    continue stateLoop;
+                }
+                case 29: {
+                    this.a(2, var13, var4);
+                    return var6 != 0;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          } else {
-            return true;
-          }
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         var17 = Chess.field_G;
         var5 = this.field_f[param2];
         var6 = 16773120 & var5;
@@ -791,6 +1078,52 @@ class uk {
     }
 
     final void a(int param0, boolean param1, int param2) {
+        int stackIn_27_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_30_1 = 0;
+        int stackIn_57_0 = 0;
+        int stackIn_57_1 = 0;
+        int stackIn_61_0 = 0;
+        int stackIn_61_1 = 0;
+        int stackIn_67_0 = 0;
+        int stackIn_67_1 = 0;
+        int stackIn_91_0 = 0;
+        int stackIn_91_1 = 0;
+        int stackIn_96_0 = 0;
+        int stackIn_96_1 = 0;
+        int stackIn_131_0 = 0;
+        int stackIn_136_0 = 0;
+        int stackIn_150_0 = 0;
+        int stackIn_150_1 = 0;
+        int stackIn_152_0 = 0;
+        int stackIn_155_0 = 0;
+        int stackIn_155_1 = 0;
+        int stackIn_171_0 = 0;
+        int stackIn_173_0 = 0;
+        int stackIn_173_1 = 0;
+        int stackIn_178_0 = 0;
+        int stackIn_178_1 = 0;
+        int stackIn_192_0 = 0;
+        int stackIn_202_0 = 0;
+        int stackIn_264_0 = 0;
+        int stackIn_264_1 = 0;
+        int stackIn_267_0 = 0;
+        int stackIn_267_1 = 0;
+        int stackIn_275_0 = 0;
+        int stackIn_275_1 = 0;
+        int stackIn_305_0 = 0;
+        int stackIn_305_1 = 0;
+        int stackIn_308_0 = 0;
+        int stackIn_308_1 = 0;
+        int stackIn_316_0 = 0;
+        int stackIn_316_1 = 0;
+        int stackIn_346_0 = 0;
+        int stackIn_346_1 = 0;
+        int stackIn_349_0 = 0;
+        int stackIn_349_1 = 0;
+        int stackIn_357_0 = 0;
+        int stackIn_357_1 = 0;
+        int statePc = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -817,88 +1150,6 @@ class uk {
         int var27 = 0;
         int var28 = 0;
         int var29 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_30_1 = 0;
-        int stackIn_67_0 = 0;
-        int stackIn_67_1 = 0;
-        int stackIn_91_0 = 0;
-        int stackIn_91_1 = 0;
-        int stackIn_96_0 = 0;
-        int stackIn_96_1 = 0;
-        int stackIn_131_0 = 0;
-        int stackIn_136_0 = 0;
-        int stackIn_150_0 = 0;
-        int stackIn_150_1 = 0;
-        int stackIn_152_0 = 0;
-        int stackIn_155_0 = 0;
-        int stackIn_155_1 = 0;
-        int stackIn_171_0 = 0;
-        int stackIn_173_0 = 0;
-        int stackIn_173_1 = 0;
-        int stackIn_183_0 = 0;
-        int stackIn_193_0 = 0;
-        int stackIn_254_0 = 0;
-        int stackIn_254_1 = 0;
-        int stackIn_257_0 = 0;
-        int stackIn_257_1 = 0;
-        int stackIn_264_0 = 0;
-        int stackIn_264_1 = 0;
-        int stackIn_293_0 = 0;
-        int stackIn_293_1 = 0;
-        int stackIn_296_0 = 0;
-        int stackIn_296_1 = 0;
-        int stackIn_303_0 = 0;
-        int stackIn_303_1 = 0;
-        int stackIn_332_0 = 0;
-        int stackIn_332_1 = 0;
-        int stackIn_335_0 = 0;
-        int stackIn_335_1 = 0;
-        int stackIn_342_0 = 0;
-        int stackIn_342_1 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_29_1 = 0;
-        int stackOut_66_0 = 0;
-        int stackOut_66_1 = 0;
-        int stackOut_90_0 = 0;
-        int stackOut_90_1 = 0;
-        int stackOut_95_0 = 0;
-        int stackOut_95_1 = 0;
-        int stackOut_130_0 = 0;
-        int stackOut_135_0 = 0;
-        int stackOut_149_0 = 0;
-        int stackOut_149_1 = 0;
-        int stackOut_151_0 = 0;
-        int stackOut_154_0 = 0;
-        int stackOut_154_1 = 0;
-        int stackOut_170_0 = 0;
-        int stackOut_172_0 = 0;
-        int stackOut_172_1 = 0;
-        int stackOut_176_0 = 0;
-        int stackOut_176_1 = 0;
-        int stackOut_182_0 = 0;
-        int stackOut_192_0 = 0;
-        int stackOut_256_0 = 0;
-        int stackOut_256_1 = 0;
-        int stackOut_257_0 = 0;
-        int stackOut_257_1 = 0;
-        int stackOut_266_0 = 0;
-        int stackOut_266_1 = 0;
-        int stackOut_295_0 = 0;
-        int stackOut_295_1 = 0;
-        int stackOut_296_0 = 0;
-        int stackOut_296_1 = 0;
-        int stackOut_305_0 = 0;
-        int stackOut_305_1 = 0;
-        int stackOut_334_0 = 0;
-        int stackOut_334_1 = 0;
-        int stackOut_335_0 = 0;
-        int stackOut_335_1 = 0;
-        int stackOut_344_0 = 0;
-        int stackOut_344_1 = 0;
-        int statePc = 0;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -1034,7 +1285,7 @@ class uk {
                 }
                 case 21: {
                     if ((var27 ^ -1) != -7) {
-                        statePc = 226;
+                        statePc = 235;
                     } else {
                         statePc = 22;
                     }
@@ -1042,7 +1293,7 @@ class uk {
                 }
                 case 22: {
                     if (var29 == 0) {
-                        statePc = 180;
+                        statePc = 189;
                     } else {
                         statePc = 24;
                     }
@@ -1057,14 +1308,12 @@ class uk {
                     continue stateLoop;
                 }
                 case 25: {
-                    stackOut_25_0 = -1;
-                    stackIn_27_0 = stackOut_25_0;
+                    stackIn_27_0 = -1;
                     statePc = 27;
                     continue stateLoop;
                 }
                 case 26: {
-                    stackOut_26_0 = 1;
-                    stackIn_27_0 = stackOut_26_0;
+                    stackIn_27_0 = 1;
                     statePc = 27;
                     continue stateLoop;
                 }
@@ -1086,12 +1335,10 @@ class uk {
                 }
                 case 29: {
                     var10 = var7 - -var27;
-                    stackOut_29_0 = -1;
-                    stackOut_29_1 = var10 ^ -1;
-                    stackIn_67_0 = stackOut_29_0;
-                    stackIn_67_1 = stackOut_29_1;
-                    stackIn_30_0 = stackOut_29_0;
-                    stackIn_30_1 = stackOut_29_1;
+                    stackIn_67_0 = -1;
+                    stackIn_30_0 = stackIn_67_0;
+                    stackIn_67_1 = var10 ^ -1;
+                    stackIn_30_1 = stackIn_67_1;
                     if (var29 != 0) {
                         statePc = 67;
                     } else {
@@ -1216,7 +1463,7 @@ class uk {
                 }
                 case 45: {
                     if (-1 == var24) {
-                        statePc = 226;
+                        statePc = 235;
                     } else {
                         statePc = 46;
                     }
@@ -1289,7 +1536,7 @@ class uk {
                 }
                 case 55: {
                     if (var29 == 0) {
-                        statePc = 226;
+                        statePc = 235;
                     } else {
                         statePc = 56;
                     }
@@ -1297,52 +1544,60 @@ class uk {
                 }
                 case 56: {
                     var27 = 0;
-                    if (4 <= var27) {
-                        statePc = 115;
-                    } else {
-                        statePc = 57;
-                    }
+                    stackIn_57_0 = 4;
+                    stackIn_57_1 = var27;
+                    statePc = 57;
                     continue stateLoop;
                 }
                 case 57: {
-                    var15 = 1;
-                    if (var29 != 0) {
-                        statePc = 226;
+                    if (stackIn_57_0 <= stackIn_57_1) {
+                        statePc = 115;
                     } else {
                         statePc = 58;
                     }
                     continue stateLoop;
                 }
                 case 58: {
-                    var28 = var17[var27];
-                    if (0 <= var28) {
-                        statePc = 60;
+                    var15 = 1;
+                    if (var29 != 0) {
+                        statePc = 235;
                     } else {
                         statePc = 59;
                     }
                     continue stateLoop;
                 }
                 case 59: {
-                    var27++;
-                    statePc = 90;
+                    var28 = var17[var27];
+                    if (0 > var28) {
+                        statePc = 350;
+                    } else {
+                        statePc = 60;
+                    }
                     continue stateLoop;
                 }
                 case 60: {
-                    if ((var28 ^ -1) > -9) {
-                        statePc = 62;
+                    stackIn_57_0 = var28 ^ -1;
+                    stackIn_61_0 = stackIn_57_0;
+                    stackIn_57_1 = -9;
+                    stackIn_61_1 = stackIn_57_1;
+                    if (var29 != 0) {
+                        statePc = 57;
                     } else {
                         statePc = 61;
                     }
                     continue stateLoop;
                 }
                 case 61: {
-                    var27++;
-                    statePc = 90;
+                    if (stackIn_61_0 <= stackIn_61_1) {
+                        statePc = 350;
+                    } else {
+                        statePc = 62;
+                    }
                     continue stateLoop;
                 }
                 case 62: {
                     if (var15 == 0) {
-                        statePc = 336;
+                        statePc = 350;
                     } else {
                         statePc = 63;
                     }
@@ -1350,7 +1605,7 @@ class uk {
                 }
                 case 63: {
                     if (var27 == 0) {
-                        statePc = 287;
+                        statePc = 299;
                     } else {
                         statePc = 64;
                     }
@@ -1358,17 +1613,15 @@ class uk {
                 }
                 case 64: {
                     if (2 != var27) {
-                        statePc = 231;
+                        statePc = 240;
                     } else {
-                        statePc = 287;
+                        statePc = 299;
                     }
                     continue stateLoop;
                 }
                 case 66: {
-                    stackOut_66_0 = var8;
-                    stackOut_66_1 = 1;
-                    stackIn_67_0 = stackOut_66_0;
-                    stackIn_67_1 = stackOut_66_1;
+                    stackIn_67_0 = var8;
+                    stackIn_67_1 = 1;
                     statePc = 67;
                     continue stateLoop;
                 }
@@ -1447,7 +1700,7 @@ class uk {
                 }
                 case 78: {
                     if (-1 == var24) {
-                        statePc = 226;
+                        statePc = 235;
                     } else {
                         statePc = 79;
                     }
@@ -1520,7 +1773,7 @@ class uk {
                 }
                 case 88: {
                     if (var29 == 0) {
-                        statePc = 226;
+                        statePc = 235;
                     } else {
                         statePc = 89;
                     }
@@ -1532,10 +1785,8 @@ class uk {
                     continue stateLoop;
                 }
                 case 90: {
-                    stackOut_90_0 = 4;
-                    stackOut_90_1 = var27;
-                    stackIn_91_0 = stackOut_90_0;
-                    stackIn_91_1 = stackOut_90_1;
+                    stackIn_91_0 = 4;
+                    stackIn_91_1 = var27;
                     statePc = 91;
                     continue stateLoop;
                 }
@@ -1550,7 +1801,7 @@ class uk {
                 case 92: {
                     var15 = 1;
                     if (var29 != 0) {
-                        statePc = 226;
+                        statePc = 235;
                     } else {
                         statePc = 93;
                     }
@@ -1570,12 +1821,10 @@ class uk {
                     continue stateLoop;
                 }
                 case 95: {
-                    stackOut_95_0 = var28 ^ -1;
-                    stackOut_95_1 = -9;
-                    stackIn_91_0 = stackOut_95_0;
-                    stackIn_91_1 = stackOut_95_1;
-                    stackIn_96_0 = stackOut_95_0;
-                    stackIn_96_1 = stackOut_95_1;
+                    stackIn_91_0 = var28 ^ -1;
+                    stackIn_96_0 = stackIn_91_0;
+                    stackIn_91_1 = -9;
+                    stackIn_96_1 = stackIn_91_1;
                     if (var29 != 0) {
                         statePc = 91;
                     } else {
@@ -1684,17 +1933,25 @@ class uk {
                 }
                 case 113: {
                     var28 = var28 + var16[var27];
-                    statePc = 94;
+                    if (var29 == 0) {
+                        statePc = 94;
+                    } else {
+                        statePc = 114;
+                    }
                     continue stateLoop;
                 }
                 case 114: {
                     var27++;
-                    statePc = 90;
+                    if (var29 == 0) {
+                        statePc = 90;
+                    } else {
+                        statePc = 115;
+                    }
                     continue stateLoop;
                 }
                 case 115: {
                     if (var29 == 0) {
-                        statePc = 226;
+                        statePc = 235;
                     } else {
                         statePc = 116;
                     }
@@ -1717,7 +1974,7 @@ class uk {
                     var11 = var20[var27] + var8;
                     var10 = var7 + var21[var27];
                     if (var29 != 0) {
-                        statePc = 226;
+                        statePc = 235;
                     } else {
                         statePc = 119;
                     }
@@ -1782,12 +2039,16 @@ class uk {
                 }
                 case 127: {
                     var27++;
-                    statePc = 117;
+                    if (var29 == 0) {
+                        statePc = 117;
+                    } else {
+                        statePc = 128;
+                    }
                     continue stateLoop;
                 }
                 case 128: {
                     if (var29 == 0) {
-                        statePc = 226;
+                        statePc = 235;
                     } else {
                         statePc = 129;
                     }
@@ -1799,8 +2060,7 @@ class uk {
                     continue stateLoop;
                 }
                 case 130: {
-                    stackOut_130_0 = 4;
-                    stackIn_131_0 = stackOut_130_0;
+                    stackIn_131_0 = 4;
                     statePc = 131;
                     continue stateLoop;
                 }
@@ -1816,7 +2076,7 @@ class uk {
                     var11 = var18[var27] + var8;
                     var10 = var7 + var19[var27];
                     if (var29 != 0) {
-                        statePc = 226;
+                        statePc = 235;
                     } else {
                         statePc = 133;
                     }
@@ -1836,9 +2096,8 @@ class uk {
                     continue stateLoop;
                 }
                 case 135: {
-                    stackOut_135_0 = var11;
-                    stackIn_131_0 = stackOut_135_0;
-                    stackIn_136_0 = stackOut_135_0;
+                    stackIn_131_0 = var11;
+                    stackIn_136_0 = stackIn_131_0;
                     if (var29 != 0) {
                         statePc = 131;
                     } else {
@@ -1933,7 +2192,7 @@ class uk {
                 }
                 case 147: {
                     if (var29 == 0) {
-                        statePc = 226;
+                        statePc = 235;
                     } else {
                         statePc = 148;
                     }
@@ -1945,10 +2204,8 @@ class uk {
                     continue stateLoop;
                 }
                 case 149: {
-                    stackOut_149_0 = var27 ^ -1;
-                    stackOut_149_1 = -5;
-                    stackIn_150_0 = stackOut_149_0;
-                    stackIn_150_1 = stackOut_149_1;
+                    stackIn_150_0 = var27 ^ -1;
+                    stackIn_150_1 = -5;
                     statePc = 150;
                     continue stateLoop;
                 }
@@ -1962,9 +2219,8 @@ class uk {
                 }
                 case 151: {
                     var15 = 1;
-                    stackOut_151_0 = var17[var27];
-                    stackIn_171_0 = stackOut_151_0;
-                    stackIn_152_0 = stackOut_151_0;
+                    stackIn_171_0 = var17[var27];
+                    stackIn_152_0 = stackIn_171_0;
                     if (var29 != 0) {
                         statePc = 171;
                     } else {
@@ -1986,12 +2242,10 @@ class uk {
                     continue stateLoop;
                 }
                 case 154: {
-                    stackOut_154_0 = var28 ^ -1;
-                    stackOut_154_1 = -9;
-                    stackIn_150_0 = stackOut_154_0;
-                    stackIn_150_1 = stackOut_154_1;
-                    stackIn_155_0 = stackOut_154_0;
-                    stackIn_155_1 = stackOut_154_1;
+                    stackIn_150_0 = var28 ^ -1;
+                    stackIn_155_0 = stackIn_150_0;
+                    stackIn_150_1 = -9;
+                    stackIn_155_1 = stackIn_150_1;
                     if (var29 != 0) {
                         statePc = 150;
                     } else {
@@ -2084,17 +2338,24 @@ class uk {
                 }
                 case 168: {
                     var28 = var28 + var16[var27];
-                    statePc = 153;
+                    if (var29 == 0) {
+                        statePc = 153;
+                    } else {
+                        statePc = 169;
+                    }
                     continue stateLoop;
                 }
                 case 169: {
                     var27++;
-                    statePc = 149;
+                    if (var29 == 0) {
+                        statePc = 149;
+                    } else {
+                        statePc = 170;
+                    }
                     continue stateLoop;
                 }
                 case 170: {
-                    stackOut_170_0 = 0;
-                    stackIn_171_0 = stackOut_170_0;
+                    stackIn_171_0 = 0;
                     statePc = 171;
                     continue stateLoop;
                 }
@@ -2104,16 +2365,14 @@ class uk {
                     continue stateLoop;
                 }
                 case 172: {
-                    stackOut_172_0 = var27 ^ -1;
-                    stackOut_172_1 = -5;
-                    stackIn_173_0 = stackOut_172_0;
-                    stackIn_173_1 = stackOut_172_1;
+                    stackIn_173_0 = var27 ^ -1;
+                    stackIn_173_1 = -5;
                     statePc = 173;
                     continue stateLoop;
                 }
                 case 173: {
                     if (stackIn_173_0 <= stackIn_173_1) {
-                        statePc = 179;
+                        statePc = 188;
                     } else {
                         statePc = 174;
                     }
@@ -2123,7 +2382,7 @@ class uk {
                     var10 = var19[var27] + var7;
                     var11 = var18[var27] + var8;
                     if (var29 != 0) {
-                        statePc = 226;
+                        statePc = 235;
                     } else {
                         statePc = 175;
                     }
@@ -2131,822 +2390,906 @@ class uk {
                 }
                 case 175: {
                     var15 = 1;
-                    if (var15 == 0) {
-                        statePc = 178;
-                    } else {
-                        statePc = 176;
-                    }
+                    statePc = 176;
                     continue stateLoop;
                 }
                 case 176: {
-                    stackOut_176_0 = var11 ^ -1;
-                    stackOut_176_1 = -1;
-                    stackIn_173_0 = stackOut_176_0;
-                    stackIn_173_1 = stackOut_176_1;
-                    statePc = 173;
+                    if (var15 == 0) {
+                        statePc = 187;
+                    } else {
+                        statePc = 177;
+                    }
+                    continue stateLoop;
+                }
+                case 177: {
+                    stackIn_173_0 = var11 ^ -1;
+                    stackIn_178_0 = stackIn_173_0;
+                    stackIn_173_1 = -1;
+                    stackIn_178_1 = stackIn_173_1;
+                    if (var29 != 0) {
+                        statePc = 173;
+                    } else {
+                        statePc = 178;
+                    }
                     continue stateLoop;
                 }
                 case 178: {
-                    var27++;
-                    if (var29 == 0) {
-                        statePc = 172;
+                    if (stackIn_178_0 > stackIn_178_1) {
+                        statePc = 187;
                     } else {
                         statePc = 179;
                     }
                     continue stateLoop;
                 }
                 case 179: {
-                    if (var29 == 0) {
-                        statePc = 226;
+                    if (var11 >= 8) {
+                        statePc = 187;
                     } else {
                         statePc = 180;
                     }
                     continue stateLoop;
                 }
                 case 180: {
-                    var26 = new int[]{-1, 0, 1, 1, 1, 0, -1, -1};
-                    var25 = new int[]{1, 1, 1, 0, -1, -1, -1, 0};
-                    var27 = 0;
-                    statePc = 181;
+                    if ((var10 ^ -1) > -1) {
+                        statePc = 187;
+                    } else {
+                        statePc = 181;
+                    }
                     continue stateLoop;
                 }
                 case 181: {
-                    if (var27 >= 8) {
-                        statePc = 192;
+                    if (-9 >= (var10 ^ -1)) {
+                        statePc = 187;
                     } else {
                         statePc = 182;
                     }
                     continue stateLoop;
                 }
                 case 182: {
-                    var10 = var26[var27] + var7;
-                    var11 = var25[var27] + var8;
-                    stackOut_182_0 = var11;
-                    stackIn_193_0 = stackOut_182_0;
-                    stackIn_183_0 = stackOut_182_0;
-                    if (var29 != 0) {
-                        statePc = 193;
-                    } else {
-                        statePc = 183;
-                    }
-                    continue stateLoop;
-                }
-                case 183: {
-                    if (stackIn_183_0 < 0) {
-                        statePc = 191;
-                    } else {
+                    var9 = 8 * var11 + var10;
+                    var12 = this.field_f[var9];
+                    var14 = var12 & -16773121;
+                    var13 = var12 & 16773120;
+                    if (0 != var12) {
                         statePc = 184;
+                    } else {
+                        statePc = 186;
                     }
                     continue stateLoop;
                 }
                 case 184: {
-                    if (var11 >= 8) {
-                        statePc = 191;
+                    if (var13 == var5) {
+                        statePc = 187;
                     } else {
                         statePc = 185;
                     }
                     continue stateLoop;
                 }
                 case 185: {
-                    if (var10 < 0) {
-                        statePc = 191;
-                    } else {
-                        statePc = 186;
-                    }
+                    var15 = 0;
+                    statePc = 186;
                     continue stateLoop;
                 }
                 case 186: {
-                    if (var10 >= 8) {
-                        statePc = 191;
+                    this.a(-1, var9, param1);
+                    var10 = var10 + var19[var27];
+                    var11 = var11 + var18[var27];
+                    if (var29 == 0) {
+                        statePc = 176;
                     } else {
                         statePc = 187;
                     }
                     continue stateLoop;
                 }
                 case 187: {
-                    var9 = var10 + var11 * 8;
-                    var12 = this.field_f[var9];
-                    var14 = var12 & -16773121;
-                    var13 = 16773120 & var12;
-                    if (var14 == 0) {
-                        statePc = 190;
+                    var27++;
+                    if (var29 == 0) {
+                        statePc = 172;
                     } else {
                         statePc = 188;
                     }
                     continue stateLoop;
                 }
                 case 188: {
-                    if (var13 == var5) {
-                        statePc = 191;
+                    if (var29 == 0) {
+                        statePc = 235;
                     } else {
-                        statePc = 190;
+                        statePc = 189;
                     }
                     continue stateLoop;
                 }
+                case 189: {
+                    var26 = new int[]{-1, 0, 1, 1, 1, 0, -1, -1};
+                    var25 = new int[]{1, 1, 1, 0, -1, -1, -1, 0};
+                    var27 = 0;
+                    statePc = 190;
+                    continue stateLoop;
+                }
                 case 190: {
-                    this.a(-1, var9, param1);
-                    statePc = 191;
+                    if (var27 >= 8) {
+                        statePc = 201;
+                    } else {
+                        statePc = 191;
+                    }
                     continue stateLoop;
                 }
                 case 191: {
-                    var27++;
-                    statePc = 181;
+                    var10 = var26[var27] + var7;
+                    var11 = var25[var27] + var8;
+                    stackIn_202_0 = var11;
+                    stackIn_192_0 = stackIn_202_0;
+                    if (var29 != 0) {
+                        statePc = 202;
+                    } else {
+                        statePc = 192;
+                    }
                     continue stateLoop;
                 }
                 case 192: {
-                    stackOut_192_0 = 4096;
-                    stackIn_193_0 = stackOut_192_0;
-                    statePc = 193;
+                    if (stackIn_192_0 < 0) {
+                        statePc = 200;
+                    } else {
+                        statePc = 193;
+                    }
                     continue stateLoop;
                 }
                 case 193: {
-                    if (stackIn_193_0 != var5) {
-                        statePc = 209;
+                    if (var11 >= 8) {
+                        statePc = 200;
                     } else {
                         statePc = 194;
                     }
                     continue stateLoop;
                 }
                 case 194: {
-                    if (!param1) {
-                        statePc = 209;
+                    if (var10 < 0) {
+                        statePc = 200;
                     } else {
                         statePc = 195;
                     }
                     continue stateLoop;
                 }
                 case 195: {
-                    if (!this.e(4096, 52)) {
-                        statePc = 197;
+                    if (var10 >= 8) {
+                        statePc = 200;
                     } else {
-                        statePc = 209;
+                        statePc = 196;
+                    }
+                    continue stateLoop;
+                }
+                case 196: {
+                    var9 = var10 + var11 * 8;
+                    var12 = this.field_f[var9];
+                    var14 = var12 & -16773121;
+                    var13 = 16773120 & var12;
+                    if (var14 == 0) {
+                        statePc = 199;
+                    } else {
+                        statePc = 197;
                     }
                     continue stateLoop;
                 }
                 case 197: {
-                    if (!this.field_n[3]) {
-                        statePc = 204;
+                    if (var13 == var5) {
+                        statePc = 200;
                     } else {
-                        statePc = 198;
+                        statePc = 199;
                     }
                     continue stateLoop;
                 }
-                case 198: {
-                    if (this.field_d[-1 + this.field_m]) {
-                        statePc = 200;
-                    } else {
-                        statePc = 204;
-                    }
+                case 199: {
+                    this.a(-1, var9, param1);
+                    statePc = 200;
                     continue stateLoop;
                 }
                 case 200: {
-                    if (this.field_f[this.field_m + -2] != 0) {
-                        statePc = 204;
+                    var27++;
+                    if (var29 == 0) {
+                        statePc = 190;
                     } else {
                         statePc = 201;
                     }
                     continue stateLoop;
                 }
                 case 201: {
-                    if (0 == this.field_f[this.field_m - 3]) {
+                    stackIn_202_0 = 4096;
+                    statePc = 202;
+                    continue stateLoop;
+                }
+                case 202: {
+                    if (stackIn_202_0 != var5) {
+                        statePc = 218;
+                    } else {
                         statePc = 203;
+                    }
+                    continue stateLoop;
+                }
+                case 203: {
+                    if (!param1) {
+                        statePc = 218;
                     } else {
                         statePc = 204;
                     }
                     continue stateLoop;
                 }
-                case 203: {
-                    this.a(param2 + 0, -2 + this.field_m, param1);
-                    statePc = 204;
-                    continue stateLoop;
-                }
                 case 204: {
-                    if (!this.field_n[2]) {
-                        statePc = 209;
+                    if (!this.e(4096, 52)) {
+                        statePc = 206;
                     } else {
-                        statePc = 205;
+                        statePc = 218;
                     }
                     continue stateLoop;
                 }
-                case 205: {
-                    if (this.field_d[this.field_m + 1]) {
-                        statePc = 207;
+                case 206: {
+                    if (!this.field_n[3]) {
+                        statePc = 213;
                     } else {
-                        statePc = 209;
+                        statePc = 207;
                     }
                     continue stateLoop;
                 }
                 case 207: {
-                    if (this.field_f[this.field_m + 2] != 0) {
+                    if (this.field_d[-1 + this.field_m]) {
                         statePc = 209;
                     } else {
-                        statePc = 208;
+                        statePc = 213;
                     }
                     continue stateLoop;
                 }
-                case 208: {
-                    this.a(-1, 2 + this.field_m, param1);
-                    statePc = 209;
-                    continue stateLoop;
-                }
                 case 209: {
-                    if (0 != var5) {
-                        statePc = 226;
+                    if (this.field_f[this.field_m + -2] != 0) {
+                        statePc = 213;
                     } else {
                         statePc = 210;
                     }
                     continue stateLoop;
                 }
                 case 210: {
-                    if (!param1) {
-                        statePc = 226;
+                    if (0 == this.field_f[this.field_m - 3]) {
+                        statePc = 212;
                     } else {
-                        statePc = 211;
+                        statePc = 213;
                     }
                     continue stateLoop;
                 }
-                case 211: {
-                    if (!this.e(0, 82)) {
-                        statePc = 213;
-                    } else {
-                        statePc = 226;
-                    }
+                case 212: {
+                    this.a(param2 + 0, -2 + this.field_m, param1);
+                    statePc = 213;
                     continue stateLoop;
                 }
                 case 213: {
-                    if (!this.field_n[1]) {
-                        statePc = 220;
+                    if (!this.field_n[2]) {
+                        statePc = 218;
                     } else {
                         statePc = 214;
                     }
                     continue stateLoop;
                 }
                 case 214: {
-                    if (this.field_d[-1 + this.field_m]) {
+                    if (this.field_d[this.field_m + 1]) {
                         statePc = 216;
                     } else {
-                        statePc = 220;
+                        statePc = 218;
                     }
                     continue stateLoop;
                 }
                 case 216: {
-                    if (-1 != (this.field_f[this.field_m + -2] ^ -1)) {
-                        statePc = 220;
+                    if (this.field_f[this.field_m + 2] != 0) {
+                        statePc = 218;
                     } else {
                         statePc = 217;
                     }
                     continue stateLoop;
                 }
                 case 217: {
-                    if (-1 == (this.field_f[this.field_m - 3] ^ -1)) {
+                    this.a(-1, 2 + this.field_m, param1);
+                    statePc = 218;
+                    continue stateLoop;
+                }
+                case 218: {
+                    if (0 != var5) {
+                        statePc = 235;
+                    } else {
                         statePc = 219;
+                    }
+                    continue stateLoop;
+                }
+                case 219: {
+                    if (!param1) {
+                        statePc = 235;
                     } else {
                         statePc = 220;
                     }
                     continue stateLoop;
                 }
-                case 219: {
-                    this.a(-1, this.field_m + -2, param1);
-                    statePc = 220;
-                    continue stateLoop;
-                }
                 case 220: {
-                    if (!this.field_n[0]) {
-                        statePc = 226;
+                    if (!this.e(0, 82)) {
+                        statePc = 222;
                     } else {
-                        statePc = 221;
+                        statePc = 235;
                     }
                     continue stateLoop;
                 }
-                case 221: {
-                    if (this.field_d[this.field_m + 1]) {
-                        statePc = 223;
+                case 222: {
+                    if (!this.field_n[1]) {
+                        statePc = 229;
                     } else {
-                        statePc = 226;
+                        statePc = 223;
                     }
                     continue stateLoop;
                 }
                 case 223: {
-                    if (this.field_f[this.field_m - -2] == 0) {
+                    if (this.field_d[-1 + this.field_m]) {
                         statePc = 225;
-                    } else {
-                        statePc = 226;
-                    }
-                    continue stateLoop;
-                }
-                case 225: {
-                    this.a(-1, 2 + this.field_m, param1);
-                    statePc = 226;
-                    continue stateLoop;
-                }
-                case 226: {
-                    return;
-                }
-                case 229: {
-                    if (2 != var27) {
-                        statePc = 231;
-                    } else {
-                        statePc = 248;
-                    }
-                    continue stateLoop;
-                }
-                case 231: {
-                    var9 = var28 + 8 * var8;
-                    statePc = 246;
-                    continue stateLoop;
-                }
-                case 233: {
-                    if (var29 == 0) {
-                        statePc = 239;
-                    } else {
-                        statePc = 244;
-                    }
-                    continue stateLoop;
-                }
-                case 237: {
-                    if (var29 == 0) {
-                        statePc = 258;
-                    } else {
-                        statePc = 241;
-                    }
-                    continue stateLoop;
-                }
-                case 239: {
-                    var28 = var28 + var16[var27];
-                    statePc = 259;
-                    continue stateLoop;
-                }
-                case 240: {
-                    this.a(param2 + 0, var9, param1);
-                    statePc = 239;
-                    continue stateLoop;
-                }
-                case 241: {
-                    var15 = 0;
-                    statePc = 240;
-                    continue stateLoop;
-                }
-                case 242: {
-                    if (var13 != var5) {
-                        statePc = 241;
-                    } else {
-                        statePc = 237;
-                    }
-                    continue stateLoop;
-                }
-                case 244: {
-                    var12 = this.field_f[var9];
-                    var14 = -16773121 & var12;
-                    var13 = var12 & 16773120;
-                    if (-1 != (var12 ^ -1)) {
-                        statePc = 242;
-                    } else {
-                        statePc = 240;
-                    }
-                    continue stateLoop;
-                }
-                case 246: {
-                    if (var9 != this.field_m) {
-                        statePc = 244;
-                    } else {
-                        statePc = 233;
-                    }
-                    continue stateLoop;
-                }
-                case 248: {
-                    var9 = var7 - -(var28 * 8);
-                    if (var29 == 0) {
-                        statePc = 246;
-                    } else {
-                        statePc = 231;
-                    }
-                    continue stateLoop;
-                }
-                case 250: {
-                    if (var27 == 0) {
-                        statePc = 248;
                     } else {
                         statePc = 229;
                     }
                     continue stateLoop;
                 }
-                case 252: {
-                    if (var15 == 0) {
+                case 225: {
+                    if (-1 != (this.field_f[this.field_m + -2] ^ -1)) {
+                        statePc = 229;
+                    } else {
+                        statePc = 226;
+                    }
+                    continue stateLoop;
+                }
+                case 226: {
+                    if (-1 == (this.field_f[this.field_m - 3] ^ -1)) {
+                        statePc = 228;
+                    } else {
+                        statePc = 229;
+                    }
+                    continue stateLoop;
+                }
+                case 228: {
+                    this.a(-1, this.field_m + -2, param1);
+                    statePc = 229;
+                    continue stateLoop;
+                }
+                case 229: {
+                    if (!this.field_n[0]) {
+                        statePc = 235;
+                    } else {
+                        statePc = 230;
+                    }
+                    continue stateLoop;
+                }
+                case 230: {
+                    if (this.field_d[this.field_m + 1]) {
+                        statePc = 232;
+                    } else {
+                        statePc = 235;
+                    }
+                    continue stateLoop;
+                }
+                case 232: {
+                    if (this.field_f[this.field_m - -2] == 0) {
+                        statePc = 234;
+                    } else {
+                        statePc = 235;
+                    }
+                    continue stateLoop;
+                }
+                case 234: {
+                    this.a(-1, 2 + this.field_m, param1);
+                    statePc = 235;
+                    continue stateLoop;
+                }
+                case 235: {
+                    return;
+                }
+                case 238: {
+                    if (2 != var27) {
+                        statePc = 240;
+                    } else {
                         statePc = 258;
+                    }
+                    continue stateLoop;
+                }
+                case 240: {
+                    var9 = var28 + 8 * var8;
+                    statePc = 256;
+                    continue stateLoop;
+                }
+                case 242: {
+                    if (var29 == 0) {
+                        statePc = 248;
+                    } else {
+                        statePc = 254;
+                    }
+                    continue stateLoop;
+                }
+                case 246: {
+                    if (var29 == 0) {
+                        statePc = 268;
+                    } else {
+                        statePc = 251;
+                    }
+                    continue stateLoop;
+                }
+                case 248: {
+                    var28 = var28 + var16[var27];
+                    if (var29 == 0) {
+                        statePc = 270;
+                    } else {
+                        statePc = 268;
+                    }
+                    continue stateLoop;
+                }
+                case 250: {
+                    this.a(param2 + 0, var9, param1);
+                    statePc = 248;
+                    continue stateLoop;
+                }
+                case 251: {
+                    var15 = 0;
+                    statePc = 250;
+                    continue stateLoop;
+                }
+                case 252: {
+                    if (var13 != var5) {
+                        statePc = 251;
+                    } else {
+                        statePc = 246;
+                    }
+                    continue stateLoop;
+                }
+                case 254: {
+                    var12 = this.field_f[var9];
+                    var14 = -16773121 & var12;
+                    var13 = var12 & 16773120;
+                    if (-1 != (var12 ^ -1)) {
+                        statePc = 252;
                     } else {
                         statePc = 250;
                     }
                     continue stateLoop;
                 }
-                case 254: {
-                    if (stackIn_254_0 <= stackIn_254_1) {
-                        statePc = 258;
-                    } else {
-                        statePc = 252;
-                    }
-                    continue stateLoop;
-                }
                 case 256: {
-                    stackOut_256_0 = var28 ^ -1;
-                    stackOut_256_1 = -9;
-                    stackIn_264_0 = stackOut_256_0;
-                    stackIn_264_1 = stackOut_256_1;
-                    stackIn_257_0 = stackOut_256_0;
-                    stackIn_257_1 = stackOut_256_1;
-                    if (var29 != 0) {
-                        statePc = 264;
+                    if (var9 != this.field_m) {
+                        statePc = 254;
                     } else {
-                        statePc = 257;
+                        statePc = 242;
                     }
-                    continue stateLoop;
-                }
-                case 257: {
-                    stackOut_257_0 = stackIn_257_0;
-                    stackOut_257_1 = stackIn_257_1;
-                    stackIn_254_0 = stackOut_257_0;
-                    stackIn_254_1 = stackOut_257_1;
-                    statePc = 254;
                     continue stateLoop;
                 }
                 case 258: {
-                    var27++;
-                    statePc = 266;
-                    continue stateLoop;
-                }
-                case 259: {
-                    if (0 > var28) {
-                        statePc = 258;
-                    } else {
+                    var9 = var7 - -(var28 * 8);
+                    if (var29 == 0) {
                         statePc = 256;
+                    } else {
+                        statePc = 240;
                     }
                     continue stateLoop;
                 }
-                case 261: {
-                    var28 = var17[var27];
-                    statePc = 259;
+                case 260: {
+                    if (var27 == 0) {
+                        statePc = 258;
+                    } else {
+                        statePc = 238;
+                    }
                     continue stateLoop;
                 }
                 case 262: {
-                    var15 = 1;
-                    if (var29 != 0) {
-                        statePc = 226;
+                    if (var15 == 0) {
+                        statePc = 268;
                     } else {
-                        statePc = 261;
+                        statePc = 260;
                     }
                     continue stateLoop;
                 }
                 case 264: {
                     if (stackIn_264_0 <= stackIn_264_1) {
-                        statePc = 115;
+                        statePc = 268;
                     } else {
                         statePc = 262;
                     }
                     continue stateLoop;
                 }
                 case 266: {
-                    stackOut_266_0 = 4;
-                    stackOut_266_1 = var27;
-                    stackIn_264_0 = stackOut_266_0;
-                    stackIn_264_1 = stackOut_266_1;
+                    stackIn_275_0 = var28 ^ -1;
+                    stackIn_267_0 = stackIn_275_0;
+                    stackIn_275_1 = -9;
+                    stackIn_267_1 = stackIn_275_1;
+                    if (var29 != 0) {
+                        statePc = 275;
+                    } else {
+                        statePc = 267;
+                    }
+                    continue stateLoop;
+                }
+                case 267: {
+                    stackIn_264_0 = stackIn_267_0;
+                    stackIn_264_1 = stackIn_267_1;
                     statePc = 264;
                     continue stateLoop;
                 }
                 case 268: {
-                    if (2 != var27) {
-                        statePc = 270;
+                    var27++;
+                    if (var29 == 0) {
+                        statePc = 277;
                     } else {
-                        statePc = 287;
+                        statePc = 115;
                     }
                     continue stateLoop;
                 }
                 case 270: {
-                    var9 = var28 + 8 * var8;
-                    statePc = 285;
+                    if (0 > var28) {
+                        statePc = 268;
+                    } else {
+                        statePc = 266;
+                    }
                     continue stateLoop;
                 }
                 case 272: {
-                    if (var29 == 0) {
-                        statePc = 278;
-                    } else {
-                        statePc = 283;
-                    }
+                    var28 = var17[var27];
+                    statePc = 270;
                     continue stateLoop;
                 }
-                case 276: {
-                    if (var29 == 0) {
-                        statePc = 297;
-                    } else {
-                        statePc = 280;
-                    }
-                    continue stateLoop;
-                }
-                case 278: {
-                    var28 = var28 + var16[var27];
-                    statePc = 298;
-                    continue stateLoop;
-                }
-                case 279: {
-                    this.a(param2 + 0, var9, param1);
-                    statePc = 278;
-                    continue stateLoop;
-                }
-                case 280: {
-                    var15 = 0;
-                    statePc = 279;
-                    continue stateLoop;
-                }
-                case 281: {
-                    if (var13 != var5) {
-                        statePc = 280;
-                    } else {
-                        statePc = 276;
-                    }
-                    continue stateLoop;
-                }
-                case 283: {
-                    var12 = this.field_f[var9];
-                    var14 = -16773121 & var12;
-                    var13 = var12 & 16773120;
-                    if (-1 != (var12 ^ -1)) {
-                        statePc = 281;
-                    } else {
-                        statePc = 279;
-                    }
-                    continue stateLoop;
-                }
-                case 285: {
-                    if (var9 != this.field_m) {
-                        statePc = 283;
+                case 273: {
+                    var15 = 1;
+                    if (var29 != 0) {
+                        statePc = 235;
                     } else {
                         statePc = 272;
                     }
                     continue stateLoop;
                 }
-                case 287: {
-                    var9 = var7 - -(var28 * 8);
+                case 275: {
+                    if (stackIn_275_0 <= stackIn_275_1) {
+                        statePc = 115;
+                    } else {
+                        statePc = 273;
+                    }
+                    continue stateLoop;
+                }
+                case 277: {
+                    stackIn_275_0 = 4;
+                    stackIn_275_1 = var27;
+                    statePc = 275;
+                    continue stateLoop;
+                }
+                case 279: {
+                    if (2 != var27) {
+                        statePc = 281;
+                    } else {
+                        statePc = 299;
+                    }
+                    continue stateLoop;
+                }
+                case 281: {
+                    var9 = var28 + 8 * var8;
+                    statePc = 297;
+                    continue stateLoop;
+                }
+                case 283: {
                     if (var29 == 0) {
-                        statePc = 285;
-                    } else {
-                        statePc = 270;
-                    }
-                    continue stateLoop;
-                }
-                case 289: {
-                    if (var27 == 0) {
-                        statePc = 287;
-                    } else {
-                        statePc = 268;
-                    }
-                    continue stateLoop;
-                }
-                case 291: {
-                    if (var15 == 0) {
-                        statePc = 297;
-                    } else {
                         statePc = 289;
-                    }
-                    continue stateLoop;
-                }
-                case 293: {
-                    if (stackIn_293_0 <= stackIn_293_1) {
-                        statePc = 297;
-                    } else {
-                        statePc = 291;
-                    }
-                    continue stateLoop;
-                }
-                case 295: {
-                    stackOut_295_0 = var28 ^ -1;
-                    stackOut_295_1 = -9;
-                    stackIn_303_0 = stackOut_295_0;
-                    stackIn_303_1 = stackOut_295_1;
-                    stackIn_296_0 = stackOut_295_0;
-                    stackIn_296_1 = stackOut_295_1;
-                    if (var29 != 0) {
-                        statePc = 303;
-                    } else {
-                        statePc = 296;
-                    }
-                    continue stateLoop;
-                }
-                case 296: {
-                    stackOut_296_0 = stackIn_296_0;
-                    stackOut_296_1 = stackIn_296_1;
-                    stackIn_293_0 = stackOut_296_0;
-                    stackIn_293_1 = stackOut_296_1;
-                    statePc = 293;
-                    continue stateLoop;
-                }
-                case 297: {
-                    var27++;
-                    statePc = 305;
-                    continue stateLoop;
-                }
-                case 298: {
-                    if (0 > var28) {
-                        statePc = 297;
                     } else {
                         statePc = 295;
                     }
                     continue stateLoop;
                 }
-                case 300: {
-                    var28 = var17[var27];
-                    statePc = 298;
+                case 287: {
+                    if (var29 == 0) {
+                        statePc = 309;
+                    } else {
+                        statePc = 292;
+                    }
+                    continue stateLoop;
+                }
+                case 289: {
+                    var28 = var28 + var16[var27];
+                    if (var29 == 0) {
+                        statePc = 311;
+                    } else {
+                        statePc = 309;
+                    }
+                    continue stateLoop;
+                }
+                case 291: {
+                    this.a(param2 + 0, var9, param1);
+                    statePc = 289;
+                    continue stateLoop;
+                }
+                case 292: {
+                    var15 = 0;
+                    statePc = 291;
+                    continue stateLoop;
+                }
+                case 293: {
+                    if (var13 != var5) {
+                        statePc = 292;
+                    } else {
+                        statePc = 287;
+                    }
+                    continue stateLoop;
+                }
+                case 295: {
+                    var12 = this.field_f[var9];
+                    var14 = -16773121 & var12;
+                    var13 = var12 & 16773120;
+                    if (-1 != (var12 ^ -1)) {
+                        statePc = 293;
+                    } else {
+                        statePc = 291;
+                    }
+                    continue stateLoop;
+                }
+                case 297: {
+                    if (var9 != this.field_m) {
+                        statePc = 295;
+                    } else {
+                        statePc = 283;
+                    }
+                    continue stateLoop;
+                }
+                case 299: {
+                    var9 = var7 - -(var28 * 8);
+                    if (var29 == 0) {
+                        statePc = 297;
+                    } else {
+                        statePc = 281;
+                    }
                     continue stateLoop;
                 }
                 case 301: {
-                    var15 = 1;
-                    if (var29 != 0) {
-                        statePc = 226;
+                    if (var27 == 0) {
+                        statePc = 299;
                     } else {
-                        statePc = 300;
+                        statePc = 279;
                     }
                     continue stateLoop;
                 }
                 case 303: {
-                    if (stackIn_303_0 <= stackIn_303_1) {
-                        statePc = 115;
+                    if (var15 == 0) {
+                        statePc = 309;
                     } else {
                         statePc = 301;
                     }
                     continue stateLoop;
                 }
                 case 305: {
-                    stackOut_305_0 = 4;
-                    stackOut_305_1 = var27;
-                    stackIn_303_0 = stackOut_305_0;
-                    stackIn_303_1 = stackOut_305_1;
-                    statePc = 303;
+                    if (stackIn_305_0 <= stackIn_305_1) {
+                        statePc = 309;
+                    } else {
+                        statePc = 303;
+                    }
                     continue stateLoop;
                 }
                 case 307: {
-                    if (2 != var27) {
-                        statePc = 309;
+                    stackIn_316_0 = var28 ^ -1;
+                    stackIn_308_0 = stackIn_316_0;
+                    stackIn_316_1 = -9;
+                    stackIn_308_1 = stackIn_316_1;
+                    if (var29 != 0) {
+                        statePc = 316;
                     } else {
-                        statePc = 326;
+                        statePc = 308;
                     }
+                    continue stateLoop;
+                }
+                case 308: {
+                    stackIn_305_0 = stackIn_308_0;
+                    stackIn_305_1 = stackIn_308_1;
+                    statePc = 305;
                     continue stateLoop;
                 }
                 case 309: {
-                    var9 = var28 + 8 * var8;
-                    statePc = 324;
+                    var27++;
+                    if (var29 == 0) {
+                        statePc = 318;
+                    } else {
+                        statePc = 115;
+                    }
                     continue stateLoop;
                 }
                 case 311: {
-                    if (var29 == 0) {
-                        statePc = 317;
-                    } else {
-                        statePc = 322;
-                    }
-                    continue stateLoop;
-                }
-                case 315: {
-                    if (var29 == 0) {
-                        statePc = 336;
-                    } else {
-                        statePc = 319;
-                    }
-                    continue stateLoop;
-                }
-                case 317: {
-                    var28 = var28 + var16[var27];
-                    statePc = 337;
-                    continue stateLoop;
-                }
-                case 318: {
-                    this.a(param2 + 0, var9, param1);
-                    statePc = 317;
-                    continue stateLoop;
-                }
-                case 319: {
-                    var15 = 0;
-                    statePc = 318;
-                    continue stateLoop;
-                }
-                case 320: {
-                    if (var13 != var5) {
-                        statePc = 319;
-                    } else {
-                        statePc = 315;
-                    }
-                    continue stateLoop;
-                }
-                case 322: {
-                    var12 = this.field_f[var9];
-                    var14 = -16773121 & var12;
-                    var13 = var12 & 16773120;
-                    if (-1 != (var12 ^ -1)) {
-                        statePc = 320;
-                    } else {
-                        statePc = 318;
-                    }
-                    continue stateLoop;
-                }
-                case 324: {
-                    if (var9 != this.field_m) {
-                        statePc = 322;
-                    } else {
-                        statePc = 311;
-                    }
-                    continue stateLoop;
-                }
-                case 326: {
-                    var9 = var7 - -(var28 * 8);
-                    if (var29 == 0) {
-                        statePc = 324;
-                    } else {
+                    if (0 > var28) {
                         statePc = 309;
-                    }
-                    continue stateLoop;
-                }
-                case 328: {
-                    if (var27 == 0) {
-                        statePc = 326;
                     } else {
                         statePc = 307;
                     }
                     continue stateLoop;
                 }
-                case 330: {
-                    if (var15 == 0) {
-                        statePc = 336;
-                    } else {
-                        statePc = 328;
-                    }
-                    continue stateLoop;
-                }
-                case 332: {
-                    if (stackIn_332_0 <= stackIn_332_1) {
-                        statePc = 336;
-                    } else {
-                        statePc = 330;
-                    }
-                    continue stateLoop;
-                }
-                case 334: {
-                    stackOut_334_0 = var28 ^ -1;
-                    stackOut_334_1 = -9;
-                    stackIn_342_0 = stackOut_334_0;
-                    stackIn_342_1 = stackOut_334_1;
-                    stackIn_335_0 = stackOut_334_0;
-                    stackIn_335_1 = stackOut_334_1;
-                    if (var29 != 0) {
-                        statePc = 342;
-                    } else {
-                        statePc = 335;
-                    }
-                    continue stateLoop;
-                }
-                case 335: {
-                    stackOut_335_0 = stackIn_335_0;
-                    stackOut_335_1 = stackIn_335_1;
-                    stackIn_332_0 = stackOut_335_0;
-                    stackIn_332_1 = stackOut_335_1;
-                    statePc = 332;
-                    continue stateLoop;
-                }
-                case 336: {
-                    var27++;
-                    statePc = 344;
-                    continue stateLoop;
-                }
-                case 337: {
-                    if (0 > var28) {
-                        statePc = 336;
-                    } else {
-                        statePc = 334;
-                    }
-                    continue stateLoop;
-                }
-                case 339: {
+                case 313: {
                     var28 = var17[var27];
-                    statePc = 337;
+                    statePc = 311;
                     continue stateLoop;
                 }
-                case 340: {
+                case 314: {
                     var15 = 1;
                     if (var29 != 0) {
-                        statePc = 226;
+                        statePc = 235;
                     } else {
-                        statePc = 339;
+                        statePc = 313;
                     }
                     continue stateLoop;
                 }
-                case 342: {
-                    if (stackIn_342_0 <= stackIn_342_1) {
+                case 316: {
+                    if (stackIn_316_0 <= stackIn_316_1) {
                         statePc = 115;
+                    } else {
+                        statePc = 314;
+                    }
+                    continue stateLoop;
+                }
+                case 318: {
+                    stackIn_316_0 = 4;
+                    stackIn_316_1 = var27;
+                    statePc = 316;
+                    continue stateLoop;
+                }
+                case 320: {
+                    if (2 != var27) {
+                        statePc = 322;
                     } else {
                         statePc = 340;
                     }
                     continue stateLoop;
                 }
+                case 322: {
+                    var9 = var28 + 8 * var8;
+                    statePc = 338;
+                    continue stateLoop;
+                }
+                case 324: {
+                    if (var29 == 0) {
+                        statePc = 330;
+                    } else {
+                        statePc = 336;
+                    }
+                    continue stateLoop;
+                }
+                case 328: {
+                    if (var29 == 0) {
+                        statePc = 350;
+                    } else {
+                        statePc = 333;
+                    }
+                    continue stateLoop;
+                }
+                case 330: {
+                    var28 = var28 + var16[var27];
+                    if (var29 == 0) {
+                        statePc = 352;
+                    } else {
+                        statePc = 350;
+                    }
+                    continue stateLoop;
+                }
+                case 332: {
+                    this.a(param2 + 0, var9, param1);
+                    statePc = 330;
+                    continue stateLoop;
+                }
+                case 333: {
+                    var15 = 0;
+                    statePc = 332;
+                    continue stateLoop;
+                }
+                case 334: {
+                    if (var13 != var5) {
+                        statePc = 333;
+                    } else {
+                        statePc = 328;
+                    }
+                    continue stateLoop;
+                }
+                case 336: {
+                    var12 = this.field_f[var9];
+                    var14 = -16773121 & var12;
+                    var13 = var12 & 16773120;
+                    if (-1 != (var12 ^ -1)) {
+                        statePc = 334;
+                    } else {
+                        statePc = 332;
+                    }
+                    continue stateLoop;
+                }
+                case 338: {
+                    if (var9 != this.field_m) {
+                        statePc = 336;
+                    } else {
+                        statePc = 324;
+                    }
+                    continue stateLoop;
+                }
+                case 340: {
+                    var9 = var7 - -(var28 * 8);
+                    if (var29 == 0) {
+                        statePc = 338;
+                    } else {
+                        statePc = 322;
+                    }
+                    continue stateLoop;
+                }
+                case 342: {
+                    if (var27 == 0) {
+                        statePc = 340;
+                    } else {
+                        statePc = 320;
+                    }
+                    continue stateLoop;
+                }
                 case 344: {
-                    stackOut_344_0 = 4;
-                    stackOut_344_1 = var27;
-                    stackIn_342_0 = stackOut_344_0;
-                    stackIn_342_1 = stackOut_344_1;
-                    statePc = 342;
+                    if (var15 == 0) {
+                        statePc = 350;
+                    } else {
+                        statePc = 342;
+                    }
+                    continue stateLoop;
+                }
+                case 346: {
+                    if (stackIn_346_0 <= stackIn_346_1) {
+                        statePc = 350;
+                    } else {
+                        statePc = 344;
+                    }
+                    continue stateLoop;
+                }
+                case 348: {
+                    stackIn_357_0 = var28 ^ -1;
+                    stackIn_349_0 = stackIn_357_0;
+                    stackIn_357_1 = -9;
+                    stackIn_349_1 = stackIn_357_1;
+                    if (var29 != 0) {
+                        statePc = 357;
+                    } else {
+                        statePc = 349;
+                    }
+                    continue stateLoop;
+                }
+                case 349: {
+                    stackIn_346_0 = stackIn_349_0;
+                    stackIn_346_1 = stackIn_349_1;
+                    statePc = 346;
+                    continue stateLoop;
+                }
+                case 350: {
+                    var27++;
+                    if (var29 == 0) {
+                        statePc = 359;
+                    } else {
+                        statePc = 115;
+                    }
+                    continue stateLoop;
+                }
+                case 352: {
+                    if (0 > var28) {
+                        statePc = 350;
+                    } else {
+                        statePc = 348;
+                    }
+                    continue stateLoop;
+                }
+                case 354: {
+                    var28 = var17[var27];
+                    statePc = 352;
+                    continue stateLoop;
+                }
+                case 355: {
+                    var15 = 1;
+                    if (var29 != 0) {
+                        statePc = 235;
+                    } else {
+                        statePc = 354;
+                    }
+                    continue stateLoop;
+                }
+                case 357: {
+                    if (stackIn_357_0 <= stackIn_357_1) {
+                        statePc = 115;
+                    } else {
+                        statePc = 355;
+                    }
+                    continue stateLoop;
+                }
+                case 359: {
+                    stackIn_357_0 = 4;
+                    stackIn_357_1 = var27;
+                    statePc = 357;
                     continue stateLoop;
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
@@ -2955,25 +3298,15 @@ class uk {
     }
 
     private final void a(int param0, int param1, boolean param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        boolean[] stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         boolean[] stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         boolean[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         int stackIn_13_2 = 0;
-        boolean[] stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        boolean[] stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        boolean[] stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
         L0: {
           if (param0 == -1) {
             break L0;
@@ -3007,27 +3340,19 @@ class uk {
                           var7 = this.e(var5, param0 + 105) ? 1 : 0;
                           this.field_f[var4] = this.field_f[param1];
                           this.field_f[param1] = var6;
-                          stackOut_10_0 = this.field_d;
-                          stackOut_10_1 = param1;
-                          stackIn_12_0 = stackOut_10_0;
-                          stackIn_12_1 = stackOut_10_1;
-                          stackIn_11_0 = stackOut_10_0;
-                          stackIn_11_1 = stackOut_10_1;
+                          stackIn_12_0 = this.field_d;
+
+                          stackIn_12_1 = param1;
+
                           if (var7 != 0) {
-                            stackOut_12_0 = (boolean[]) ((Object) stackIn_12_0);
-                            stackOut_12_1 = stackIn_12_1;
-                            stackOut_12_2 = 0;
-                            stackIn_13_0 = stackOut_12_0;
-                            stackIn_13_1 = stackOut_12_1;
-                            stackIn_13_2 = stackOut_12_2;
+                            stackIn_13_0 = (boolean[]) ((Object) stackIn_12_0);
+                            stackIn_13_1 = stackIn_12_1;
+                            stackIn_13_2 = 0;
                             break L4;
                           } else {
-                            stackOut_11_0 = (boolean[]) ((Object) stackIn_11_0);
-                            stackOut_11_1 = stackIn_11_1;
-                            stackOut_11_2 = 1;
-                            stackIn_13_0 = stackOut_11_0;
-                            stackIn_13_1 = stackOut_11_1;
-                            stackIn_13_2 = stackOut_11_2;
+                            stackIn_13_0 = (boolean[]) ((Object) stackIn_12_0);
+                            stackIn_13_1 = stackIn_12_1;
+                            stackIn_13_2 = 1;
                             break L4;
                           }
                         }
@@ -3054,85 +3379,112 @@ class uk {
     }
 
     private final void d(int param0, int param1) {
+        byte[] stackIn_4_0 = null;
+        int statePc = 0;
         int var3 = 0;
         int var4 = 0;
         byte[] var5 = null;
         int var6 = 0;
         int var7 = 0;
-        byte[] stackIn_4_0 = null;
-        byte[] stackOut_3_0 = null;
-        byte[] stackOut_2_0 = null;
-        var7 = Chess.field_G;
-        if (-1 == (param1 ^ -1)) {
-          return;
-        } else {
-          L0: {
-            var3 = 16773120 & param1;
-            var4 = param1 & -16773121;
-            if ((var3 ^ -1) == -4097) {
-              stackOut_3_0 = this.field_g;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_2_0 = this.field_i;
-              stackIn_4_0 = stackOut_2_0;
-              break L0;
-            }
-          }
-          var5 = stackIn_4_0;
-          var6 = 0;
-          L1: while (true) {
-            L2: {
-              L3: {
-                if (var5[var6] == 0) {
-                  break L3;
-                } else {
-                  var6++;
-                  if (var7 != 0) {
-                    break L2;
-                  } else {
-                    if (var7 == 0) {
-                      continue L1;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var7 = Chess.field_G;
+                    if (-1 == (param1 ^ -1)) {
+                        statePc = 13;
                     } else {
-                      break L3;
+                        statePc = 1;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
-              L4: {
-                if (param0 == 3) {
-                  break L4;
-                } else {
-                  this.a(-43, 1, false);
-                  break L4;
+                case 1: {
+                    var3 = 16773120 & param1;
+                    var4 = param1 & -16773121;
+                    if ((var3 ^ -1) == -4097) {
+                        statePc = 3;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
                 }
-              }
-              var5[var6] = (byte)var4;
-              break L2;
+                case 2: {
+                    stackIn_4_0 = this.field_i;
+                    statePc = 4;
+                    continue stateLoop;
+                }
+                case 3: {
+                    stackIn_4_0 = this.field_g;
+                    statePc = 4;
+                    continue stateLoop;
+                }
+                case 4: {
+                    var5 = stackIn_4_0;
+                    var6 = 0;
+                    statePc = 5;
+                    continue stateLoop;
+                }
+                case 5: {
+                    if (var5[var6] == 0) {
+                        statePc = 9;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    var6++;
+                    if (var7 != 0) {
+                        statePc = 12;
+                    } else {
+                        statePc = 7;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    if (var7 == 0) {
+                        statePc = 5;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    if (param0 == 3) {
+                        statePc = 11;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    this.a(-43, 1, false);
+                    statePc = 11;
+                    continue stateLoop;
+                }
+                case 11: {
+                    var5[var6] = (byte)var4;
+                    statePc = 12;
+                    continue stateLoop;
+                }
+                case 12: {
+                    return;
+                }
+                case 13: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            return;
-          }
         }
     }
 
     private final void a(int param0, boolean[] param1, int param2) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -3151,27 +3503,19 @@ class uk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("uk.KA(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("uk.KA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -3203,13 +3547,11 @@ class uk {
     }
 
     private final boolean c(int param0, int param1) {
-        int var3 = 0;
-        boolean[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        boolean stackIn_5_0 = false;
+        int var3;
+        boolean[] var4;
+        int var5;
+        int var6;
         boolean stackIn_6_0 = false;
-        boolean stackOut_4_0 = false;
         L0: {
           var6 = Chess.field_G;
           var3 = this.field_m;
@@ -3225,18 +3567,22 @@ class uk {
         }
         L1: while (true) {
           if (-1 >= (var5 ^ -1)) {
-            stackOut_4_0 = this.a(param0, var5, (byte) -12);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_6_0 = this.a(param0, var5, (byte) -12);
+
             if (var6 == 0) {
               if (stackIn_6_0) {
                 return true;
               } else {
                 var5--;
-                continue L1;
+                if (var6 == 0) {
+                  continue L1;
+                } else {
+                  this.a(2, var4, var3);
+                  return false;
+                }
               }
             } else {
-              return stackIn_5_0;
+              return stackIn_6_0;
             }
           } else {
             this.a(2, var4, var3);
@@ -3246,6 +3592,11 @@ class uk {
     }
 
     final boolean a(int param0) {
+        int stackIn_12_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_31_0 = 0;
+        int statePc = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -3256,139 +3607,256 @@ class uk {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_29_0 = 0;
-        var11 = Chess.field_G;
-        if (0 <= this.field_m) {
-          if ((this.field_m ^ -1) > -65) {
-            var2 = this.field_f[this.field_m];
-            var3 = 16773120 & var2;
-            var4 = var2 & -16773121;
-            var5 = this.field_m % 8;
-            var6 = this.field_m / param0;
-            if ((var4 ^ -1) == -2) {
-              L0: {
-                if (0 != var3) {
-                  break L0;
-                } else {
-                  if (var6 != 6) {
-                    break L0;
-                  } else {
-                    var7 = -1;
-                    L1: while (true) {
-                      if (var7 > 1) {
-                        if (var11 != 0) {
-                          break L0;
-                        } else {
-                          return false;
-                        }
-                      } else {
-                        var8 = var6 - -1;
-                        var9 = var5 + var7;
-                        stackOut_11_0 = 0;
-                        stackIn_13_0 = stackOut_11_0;
-                        stackIn_12_0 = stackOut_11_0;
-                        if (var11 == 0) {
-                          L2: {
-                            if (stackIn_13_0 > var9) {
-                              break L2;
-                            } else {
-                              L3: {
-                                if (8 > var9) {
-                                  break L3;
-                                } else {
-                                  if (var11 == 0) {
-                                    break L2;
-                                  } else {
-                                    break L3;
-                                  }
-                                }
-                              }
-                              var10 = var8 * 8 + var9;
-                              if (!this.field_d[var10]) {
-                                break L2;
-                              } else {
-                                return true;
-                              }
-                            }
-                          }
-                          var7++;
-                          continue L1;
-                        } else {
-                          return stackIn_12_0 != 0;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              if (-4097 == (var3 ^ -1)) {
-                if ((var6 ^ -1) == -2) {
-                  var7 = -1;
-                  L4: while (true) {
-                    if (-2 <= (var7 ^ -1)) {
-                      var8 = -1 + var6;
-                      var9 = var5 + var7;
-                      stackOut_29_0 = var9 ^ -1;
-                      stackIn_31_0 = stackOut_29_0;
-                      stackIn_30_0 = stackOut_29_0;
-                      if (var11 == 0) {
-                        L5: {
-                          if (stackIn_31_0 > -1) {
-                            break L5;
-                          } else {
-                            L6: {
-                              if (var9 < 8) {
-                                break L6;
-                              } else {
-                                if (var11 == 0) {
-                                  break L5;
-                                } else {
-                                  break L6;
-                                }
-                              }
-                            }
-                            var10 = var8 * 8 + var9;
-                            if (!this.field_d[var10]) {
-                              break L5;
-                            } else {
-                              return true;
-                            }
-                          }
-                        }
-                        var7++;
-                        continue L4;
-                      } else {
-                        return stackIn_30_0 != 0;
-                      }
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var11 = Chess.field_G;
+                    if (0 <= this.field_m) {
+                        statePc = 2;
                     } else {
-                      return false;
+                        statePc = 1;
                     }
-                  }
-                } else {
-                  return false;
+                    continue stateLoop;
                 }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
+                case 1: {
+                    return false;
+                }
+                case 2: {
+                    if ((this.field_m ^ -1) > -65) {
+                        statePc = 5;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    return false;
+                }
+                case 5: {
+                    var2 = this.field_f[this.field_m];
+                    var3 = 16773120 & var2;
+                    var4 = var2 & -16773121;
+                    var5 = this.field_m % 8;
+                    var6 = this.field_m / param0;
+                    if ((var4 ^ -1) == -2) {
+                        statePc = 7;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    return false;
+                }
+                case 7: {
+                    if (0 != var3) {
+                        statePc = 22;
+                    } else {
+                        statePc = 8;
+                    }
+                    continue stateLoop;
+                }
+                case 8: {
+                    if (var6 != 6) {
+                        statePc = 22;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    var7 = -1;
+                    statePc = 10;
+                    continue stateLoop;
+                }
+                case 10: {
+                    if (var7 > 1) {
+                        statePc = 20;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    var8 = var6 - -1;
+                    var9 = var5 + var7;
+                    stackIn_13_0 = 0;
+                    stackIn_12_0 = stackIn_13_0;
+                    if (var11 == 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
+                    return stackIn_12_0 != 0;
+                }
+                case 13: {
+                    if (stackIn_13_0 > var9) {
+                        statePc = 19;
+                    } else {
+                        statePc = 14;
+                    }
+                    continue stateLoop;
+                }
+                case 14: {
+                    if (8 > var9) {
+                        statePc = 17;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 15: {
+                    if (var11 == 0) {
+                        statePc = 19;
+                    } else {
+                        statePc = 17;
+                    }
+                    continue stateLoop;
+                }
+                case 17: {
+                    var10 = var8 * 8 + var9;
+                    if (!this.field_d[var10]) {
+                        statePc = 19;
+                    } else {
+                        statePc = 18;
+                    }
+                    continue stateLoop;
+                }
+                case 18: {
+                    return true;
+                }
+                case 19: {
+                    var7++;
+                    if (var11 == 0) {
+                        statePc = 10;
+                    } else {
+                        statePc = 20;
+                    }
+                    continue stateLoop;
+                }
+                case 20: {
+                    if (var11 != 0) {
+                        statePc = 22;
+                    } else {
+                        statePc = 21;
+                    }
+                    continue stateLoop;
+                }
+                case 21: {
+                    return false;
+                }
+                case 22: {
+                    if (-4097 == (var3 ^ -1)) {
+                        statePc = 24;
+                    } else {
+                        statePc = 23;
+                    }
+                    continue stateLoop;
+                }
+                case 23: {
+                    return false;
+                }
+                case 24: {
+                    if ((var6 ^ -1) == -2) {
+                        statePc = 26;
+                    } else {
+                        statePc = 25;
+                    }
+                    continue stateLoop;
+                }
+                case 25: {
+                    return false;
+                }
+                case 26: {
+                    var7 = -1;
+                    statePc = 27;
+                    continue stateLoop;
+                }
+                case 27: {
+                    if (-2 <= (var7 ^ -1)) {
+                        statePc = 29;
+                    } else {
+                        statePc = 28;
+                    }
+                    continue stateLoop;
+                }
+                case 28: {
+                    return false;
+                }
+                case 29: {
+                    var8 = -1 + var6;
+                    var9 = var5 + var7;
+                    stackIn_31_0 = var9 ^ -1;
+                    stackIn_30_0 = stackIn_31_0;
+                    if (var11 == 0) {
+                        statePc = 31;
+                    } else {
+                        statePc = 30;
+                    }
+                    continue stateLoop;
+                }
+                case 30: {
+                    return stackIn_30_0 != 0;
+                }
+                case 31: {
+                    if (stackIn_31_0 > -1) {
+                        statePc = 37;
+                    } else {
+                        statePc = 32;
+                    }
+                    continue stateLoop;
+                }
+                case 32: {
+                    if (var9 < 8) {
+                        statePc = 35;
+                    } else {
+                        statePc = 33;
+                    }
+                    continue stateLoop;
+                }
+                case 33: {
+                    if (var11 == 0) {
+                        statePc = 37;
+                    } else {
+                        statePc = 35;
+                    }
+                    continue stateLoop;
+                }
+                case 35: {
+                    var10 = var8 * 8 + var9;
+                    if (!this.field_d[var10]) {
+                        statePc = 37;
+                    } else {
+                        statePc = 36;
+                    }
+                    continue stateLoop;
+                }
+                case 36: {
+                    return true;
+                }
+                case 37: {
+                    var7++;
+                    if (var11 == 0) {
+                        statePc = 27;
+                    } else {
+                        statePc = 38;
+                    }
+                    continue stateLoop;
+                }
+                case 38: {
+                    return false;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          } else {
-            return false;
-          }
-        } else {
-          return false;
         }
     }
 
     final int a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Chess.field_G;
         if (param0 < -89) {
           var2 = 0;

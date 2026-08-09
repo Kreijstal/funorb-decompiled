@@ -17,140 +17,70 @@ public class PixelBuffer extends jaclib.peer.sw implements jaclib.memory.Buffer 
 
     public final void a(byte[] param0, int param1, int param2, int param3) {
         int stackIn_3_0 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_7_1 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_8_1 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_9_1 = 0;
         int stackIn_9_2 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_10_1 = 0;
-        int stackIn_10_2 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_11_1 = 0;
-        int stackIn_11_2 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_12_1 = 0;
-        int stackIn_12_2 = 0;
         int stackIn_12_3 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_4_1 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        int stackOut_11_3 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
-        int stackOut_10_2 = 0;
-        int stackOut_10_3 = 0;
         L0: {
           if (param2 >= 0) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
         L1: {
-          stackOut_3_0 = stackIn_3_0;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_4_0 = stackOut_3_0;
+
+
           if (param0.length >= param1 + param3) {
-            stackOut_5_0 = stackIn_5_0;
-            stackOut_5_1 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+
+            stackIn_6_1 = 0;
             break L1;
           } else {
-            stackOut_4_0 = stackIn_4_0;
-            stackOut_4_1 = 1;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
+
+            stackIn_6_1 = 1;
             break L1;
           }
         }
         L2: {
-          stackOut_6_0 = stackIn_6_0;
-          stackOut_6_1 = stackIn_6_1;
-          stackIn_8_0 = stackOut_6_0;
-          stackIn_8_1 = stackOut_6_1;
-          stackIn_7_0 = stackOut_6_0;
-          stackIn_7_1 = stackOut_6_1;
+
+
+
+
           if (param0 != null) {
-            stackOut_8_0 = stackIn_8_0;
-            stackOut_8_1 = stackIn_8_1;
-            stackOut_8_2 = 0;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            stackIn_9_2 = stackOut_8_2;
+
+
+            stackIn_9_2 = 0;
             break L2;
           } else {
-            stackOut_7_0 = stackIn_7_0;
-            stackOut_7_1 = stackIn_7_1;
-            stackOut_7_2 = 1;
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_9_2 = stackOut_7_2;
+
+
+            stackIn_9_2 = 1;
             break L2;
           }
         }
         L3: {
-          stackOut_9_0 = stackIn_9_0;
-          stackOut_9_1 = stackIn_9_1;
-          stackOut_9_2 = stackIn_9_2;
-          stackIn_11_0 = stackOut_9_0;
-          stackIn_11_1 = stackOut_9_1;
-          stackIn_11_2 = stackOut_9_2;
-          stackIn_10_0 = stackOut_9_0;
-          stackIn_10_1 = stackOut_9_1;
-          stackIn_10_2 = stackOut_9_2;
+
+
+
+
+
+
           if ((param1 ^ -1) <= -1) {
-            stackOut_11_0 = stackIn_11_0;
-            stackOut_11_1 = stackIn_11_1;
-            stackOut_11_2 = stackIn_11_2;
-            stackOut_11_3 = 0;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
-            stackIn_12_2 = stackOut_11_2;
-            stackIn_12_3 = stackOut_11_3;
+
+
+
+            stackIn_12_3 = 0;
             break L3;
           } else {
-            stackOut_10_0 = stackIn_10_0;
-            stackOut_10_1 = stackIn_10_1;
-            stackOut_10_2 = stackIn_10_2;
-            stackOut_10_3 = 1;
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_12_2 = stackOut_10_2;
-            stackIn_12_3 = stackOut_10_3;
+
+
+
+            stackIn_12_3 = 1;
             break L3;
           }
         }
-        if ((stackIn_12_0 | (stackIn_12_1 | (stackIn_12_2 | stackIn_12_3))) == 0) {
+        if ((stackIn_3_0 | (stackIn_6_1 | (stackIn_9_2 | stackIn_12_3))) == 0) {
           if (param3 + param2 > this.getSize()) {
             throw new jagdx.fg();
           } else {
@@ -166,127 +96,68 @@ public class PixelBuffer extends jaclib.peer.sw implements jaclib.memory.Buffer 
 
     public final void a(int[] param0, int param1, int param2, int param3) {
         int stackIn_3_0 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_7_1 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_8_1 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_9_1 = 0;
         int stackIn_9_2 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_10_1 = 0;
-        int stackIn_11_0 = 0;
         int stackIn_11_1 = 0;
-        int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
         int stackIn_12_2 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_4_1 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
-        int stackOut_10_2 = 0;
         L0: {
           if ((param2 ^ -1) <= -1) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
         L1: {
-          stackOut_3_0 = stackIn_3_0;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_4_0 = stackOut_3_0;
+
+
           if (0 <= param1) {
-            stackOut_5_0 = stackIn_5_0;
-            stackOut_5_1 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+
+            stackIn_6_1 = 0;
             break L1;
           } else {
-            stackOut_4_0 = stackIn_4_0;
-            stackOut_4_1 = 1;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
+
+            stackIn_6_1 = 1;
             break L1;
           }
         }
         L2: {
-          stackOut_6_0 = stackIn_6_0;
-          stackOut_6_1 = stackIn_6_1;
-          stackIn_8_0 = stackOut_6_0;
-          stackIn_8_1 = stackOut_6_1;
-          stackIn_7_0 = stackOut_6_0;
-          stackIn_7_1 = stackOut_6_1;
+
+
+
+
           if (param0 != null) {
-            stackOut_8_0 = stackIn_8_0;
-            stackOut_8_1 = stackIn_8_1;
-            stackOut_8_2 = 0;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            stackIn_9_2 = stackOut_8_2;
+
+
+            stackIn_9_2 = 0;
             break L2;
           } else {
-            stackOut_7_0 = stackIn_7_0;
-            stackOut_7_1 = stackIn_7_1;
-            stackOut_7_2 = 1;
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_9_2 = stackOut_7_2;
+
+
+            stackIn_9_2 = 1;
             break L2;
           }
         }
         L3: {
-          stackOut_9_0 = stackIn_9_0;
-          stackOut_9_1 = stackIn_9_1 | stackIn_9_2;
-          stackIn_11_0 = stackOut_9_0;
-          stackIn_11_1 = stackOut_9_1;
-          stackIn_10_0 = stackOut_9_0;
-          stackIn_10_1 = stackOut_9_1;
+
+
+          stackIn_11_1 = stackIn_6_1 | stackIn_9_2;
+
           if (param0.length >= param3 + param1) {
-            stackOut_11_0 = stackIn_11_0;
-            stackOut_11_1 = stackIn_11_1;
-            stackOut_11_2 = 0;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
-            stackIn_12_2 = stackOut_11_2;
+
+            stackIn_12_1 = stackIn_11_1;
+            stackIn_12_2 = 0;
             break L3;
           } else {
-            stackOut_10_0 = stackIn_10_0;
-            stackOut_10_1 = stackIn_10_1;
-            stackOut_10_2 = 1;
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_12_2 = stackOut_10_2;
+
+            stackIn_12_1 = stackIn_11_1;
+            stackIn_12_2 = 1;
             break L3;
           }
         }
-        if ((stackIn_12_0 | (stackIn_12_1 | stackIn_12_2)) == 0) {
+        if ((stackIn_3_0 | (stackIn_12_1 | stackIn_12_2)) == 0) {
           if (4 * param3 + param2 > this.getSize()) {
             throw new jagdx.fg();
           } else {

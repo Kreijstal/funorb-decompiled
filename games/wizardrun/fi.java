@@ -14,7 +14,6 @@ final class fi extends ml {
 
     final static String a(CharSequence param0, int param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -23,23 +22,13 @@ final class fi extends ml {
         char[] var8 = null;
         char[] var9 = null;
         String stackIn_20_0 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_19_0 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        RuntimeException var2 = null;
         var7 = wizardrun.field_H;
         try {
           L0: {
@@ -59,8 +48,7 @@ final class fi extends ml {
             var5 = 0;
             L2: while (true) {
               if (var5 >= var2_int) {
-                stackOut_19_0 = new String(var9);
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = new String(var9);
                 break L0;
               } else {
                 L3: {
@@ -115,27 +103,19 @@ final class fi extends ml {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var2);
-            stackOut_21_1 = new StringBuilder().append("fi.M(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var2);
+
+            stackIn_23_1 = new StringBuilder().append("fi.M(");
+
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L8;
             }
           }
@@ -171,9 +151,8 @@ final class fi extends ml {
     }
 
     final int c(boolean param0) {
-        byte[] discarded$0 = null;
         if (param0) {
-            discarded$0 = this.d(123);
+            this.d(123);
         }
         if (!(null != this.field_C)) {
             return 0;
@@ -182,27 +161,13 @@ final class fi extends ml {
     }
 
     final byte[] d(int param0) {
-        byte[] discarded$2 = null;
-        L0: {
-          if (this.field_s) {
-            break L0;
-          } else {
-            if (this.field_C.field_m >= -this.field_D + this.field_C.field_k.length) {
-              L1: {
-                if (param0 == 95) {
-                  break L1;
-                } else {
-                  discarded$2 = this.d(-58);
-                  break L1;
-                }
-              }
-              return this.field_C.field_k;
-            } else {
-              break L0;
-            }
-          }
+        if (this.field_s || this.field_C.field_m < -this.field_D + this.field_C.field_k.length) {
+            throw new RuntimeException();
         }
-        throw new RuntimeException();
+        if (param0 != 95) {
+            this.d(-58);
+        }
+        return this.field_C.field_k;
     }
 
     fi() {

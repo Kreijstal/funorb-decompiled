@@ -15,13 +15,13 @@ final class dg extends af {
     static double[][] field_f;
 
     final void a(boolean param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           param1 = param1 + (this.field_k.field_a - -this.field_c);
           param2 = param2 + (this.field_d + this.field_k.field_g);

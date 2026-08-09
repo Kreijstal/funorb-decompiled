@@ -8,18 +8,14 @@ final class hc {
 
     final static si a(boolean param0) {
         int var1_int = 0;
-        IllegalArgumentException var1 = null;
-        si var2 = null;
         int var3 = 0;
         si stackIn_3_0 = null;
         jo stackIn_6_0 = null;
         si stackIn_8_0 = null;
-        si stackOut_2_0 = null;
-        jo stackOut_4_0 = null;
-        jo stackOut_5_0 = null;
-        si stackOut_7_0 = null;
         int statePc = 0;
         Throwable caughtException = null;
+        IllegalArgumentException var1 = null;
+        si var2 = null;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -44,8 +40,7 @@ final class hc {
                 }
                 case 2: {
                     try {
-                        stackOut_2_0 = (si) null;
-                        stackIn_3_0 = stackOut_2_0;
+                        stackIn_3_0 = (si) null;
                         statePc = 3;
                         continue stateLoop;
                     } catch (Throwable stateCaught_2) {
@@ -58,15 +53,13 @@ final class hc {
                     return stackIn_3_0;
                 }
                 case 4: {
-                    stackOut_4_0 = kq.field_A;
-                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_6_0 = kq.field_A;
                     statePc = 6;
                     continue stateLoop;
                 }
                 case 5: {
                     try {
-                        stackOut_5_0 = kq.field_A;
-                        stackIn_6_0 = stackOut_5_0;
+                        stackIn_6_0 = kq.field_A;
                         statePc = 6;
                         continue stateLoop;
                     } catch (Throwable stateCaught_5) {
@@ -92,8 +85,7 @@ final class hc {
                 }
                 case 7: {
                     try {
-                        stackOut_7_0 = (si) (var2);
-                        stackIn_8_0 = stackOut_7_0;
+                        stackIn_8_0 = (si) (var2);
                         statePc = 8;
                         continue stateLoop;
                     } catch (Throwable stateCaught_7) {
@@ -144,10 +136,9 @@ final class hc {
     }
 
     public static void a(byte param0) {
-        lp discarded$0 = null;
         field_c = null;
         if (param0 < 41) {
-            discarded$0 = hc.a(-92, -95, -94);
+            hc.a(-92, -95, -94);
             field_b = null;
             return;
         }

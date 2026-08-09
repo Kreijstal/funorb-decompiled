@@ -10,9 +10,8 @@ final class bd extends ot {
     static String field_k;
 
     final wba a(byte param0) {
-        wba discarded$0 = null;
         if (param0 != -106) {
-            discarded$0 = this.a((byte) 64);
+            this.a((byte) 64);
             return jda.field_g;
         }
         return jda.field_g;

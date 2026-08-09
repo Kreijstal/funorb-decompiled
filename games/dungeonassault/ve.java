@@ -10,12 +10,8 @@ final class ve {
     static String field_c;
 
     final static boolean a(boolean param0) {
-        boolean discarded$5 = false;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (!param0) {
           if (!ed.c(true)) {
             if ((pb.field_G ^ -1) >= -1) {
@@ -24,23 +20,20 @@ final class ve {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
-          discarded$5 = ve.a(false);
+          ve.a(false);
           if (ed.c(true)) {
             return true;
           } else {
             L0: {
               if ((pb.field_G ^ -1) < -1) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }
@@ -60,10 +53,10 @@ final class ve {
     }
 
     final void b(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = DungeonAssault.field_K;
         if (param0) {
           L0: while (true) {
@@ -114,19 +107,19 @@ final class ve {
     }
 
     final static String a(int param0, long param1, int param2, int param3, boolean param4) {
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
-        StringBuilder discarded$10 = null;
-        StringBuilder discarded$11 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        StringBuilder var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
+        int var6;
+        int var7;
+        int var8;
+        StringBuilder var9;
+        int var10;
+        int var11;
+        int var12;
         L0: {
           var12 = DungeonAssault.field_K;
           var6 = 44;
@@ -163,12 +156,12 @@ final class ve {
             var10 = 0;
             L4: while (true) {
               if (param0 <= var10) {
-                discarded$6 = var9.append((char) var6);
+                discarded$0 = var9.append((char) var6);
                 break L3;
               } else {
                 var11 = (int)param1;
                 param1 = param1 / 10L;
-                discarded$7 = var9.append((char)(-(10 * (int)param1) + (var11 + 48)));
+                discarded$1 = var9.append((char)(-(10 * (int)param1) + (var11 + 48)));
                 var10++;
                 continue L4;
               }
@@ -181,14 +174,14 @@ final class ve {
         L5: while (true) {
           var11 = (int)param1;
           param1 = param1 / 10L;
-          discarded$8 = var9.append((char)(48 - (-var11 - -(10 * (int)param1))));
+          discarded$2 = var9.append((char)(48 - (-var11 - -(10 * (int)param1))));
           if ((param1 ^ -1L) != -1L) {
             if (param4) {
               var10++;
               if (0 != var10 % 3) {
                 continue L5;
               } else {
-                discarded$9 = var9.append((char) var7);
+                discarded$3 = var9.append((char) var7);
                 continue L5;
               }
             } else {
@@ -199,7 +192,7 @@ final class ve {
               L6: {
                 field_a = true;
                 if (var8 != 0) {
-                  discarded$10 = var9.append('-');
+                  discarded$4 = var9.append('-');
                   break L6;
                 } else {
                   break L6;
@@ -209,7 +202,7 @@ final class ve {
             } else {
               L7: {
                 if (var8 != 0) {
-                  discarded$11 = var9.append('-');
+                  discarded$5 = var9.append('-');
                   break L7;
                 } else {
                   break L7;
@@ -222,13 +215,9 @@ final class ve {
     }
 
     private final int c(boolean param0) {
-        int var2 = 0;
+        int var2;
         int stackIn_5_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (!param0) {
           var2 = (this.field_b >> -2089464094) * (this.field_b >> -118145502) + (this.field_f >> -1225268702) * (this.field_f >> -799567614) + (this.field_d >> -1084721886) * (this.field_d >> -2147109758);
           if (var2 < 0) {
@@ -236,12 +225,10 @@ final class ve {
           } else {
             L0: {
               if (param0) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = 0;
                 break L0;
               } else {
-                stackOut_10_0 = 1;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 1;
                 break L0;
               }
             }
@@ -255,12 +242,10 @@ final class ve {
           } else {
             L1: {
               if (param0) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L1;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L1;
               }
             }

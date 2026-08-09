@@ -37,7 +37,7 @@ final class el {
     }
 
     final vp a(boolean param0) {
-        vp var2 = null;
+        vp var2;
         var2 = this.field_g.field_q;
         if (param0) {
           if (var2 == this.field_g) {
@@ -89,8 +89,7 @@ final class el {
     }
 
     final vp a(byte param0) {
-        vp discarded$2 = null;
-        vp var2 = null;
+        vp var2;
         if (param0 == -68) {
           var2 = this.field_a;
           if (this.field_g == var2) {
@@ -101,7 +100,7 @@ final class el {
             return var2;
           }
         } else {
-          discarded$2 = this.a(true);
+          this.a(true);
           var2 = this.field_a;
           if (this.field_g == var2) {
             this.field_a = null;

@@ -12,10 +12,10 @@ final class cf {
     static ko field_d;
 
     final static sj a(int param0, int param1) {
-        sj[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        sj[] var5 = null;
+        sj[] var2;
+        int var3;
+        int var4;
+        sj[] var5;
         var4 = CrazyCrystals.field_B;
         var5 = rp.a(58);
         var2 = var5;
@@ -39,7 +39,6 @@ final class cf {
     }
 
     public static void a(int param0) {
-        sj discarded$0 = null;
         field_d = null;
         field_g = null;
         field_e = null;
@@ -49,7 +48,7 @@ final class cf {
         field_a = null;
         field_c = null;
         if (param0 != 0) {
-            discarded$0 = cf.a(-12, -56);
+            cf.a(-12, -56);
         }
     }
 

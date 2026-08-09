@@ -6,7 +6,7 @@ final class wka {
     private static String field_z;
 
     final static int a(int param0, int param1, int param2, int param3) {
-        oha var4 = null;
+        oha var4;
         var4 = al.a(-101, param1);
         if (var4 instanceof t) {
           if (-3 != (((t) ((Object) var4)).field_p ^ -1)) {

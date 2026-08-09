@@ -14,9 +14,21 @@ final class ssa {
 
     final static void a(String param0, byte param1, Throwable param2) {
         try {
-            int discarded$1 = 0;
-            Exception var3 = null;
-            String var3_ref = null;
+            fia stackIn_16_0;
+            java.net.URL stackIn_16_1;
+            java.net.URL stackIn_16_2;
+            java.net.URL stackIn_16_3;
+            StringBuilder stackIn_16_4;
+            fia stackIn_17_0;
+            java.net.URL stackIn_17_1;
+            java.net.URL stackIn_17_2;
+            java.net.URL stackIn_17_3;
+            StringBuilder stackIn_17_4;
+            String stackIn_17_5;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            String var3 = null;
+            Exception var3_ref = null;
             naa var4 = null;
             DataInputStream var5 = null;
             int var6 = 0;
@@ -24,41 +36,6 @@ final class ssa {
             String var8 = null;
             String var9 = null;
             String var10 = null;
-            fia stackIn_15_0 = null;
-            java.net.URL stackIn_15_1 = null;
-            java.net.URL stackIn_15_2 = null;
-            java.net.URL stackIn_15_3 = null;
-            StringBuilder stackIn_15_4 = null;
-            fia stackIn_16_0 = null;
-            java.net.URL stackIn_16_1 = null;
-            java.net.URL stackIn_16_2 = null;
-            java.net.URL stackIn_16_3 = null;
-            StringBuilder stackIn_16_4 = null;
-            fia stackIn_17_0 = null;
-            java.net.URL stackIn_17_1 = null;
-            java.net.URL stackIn_17_2 = null;
-            java.net.URL stackIn_17_3 = null;
-            StringBuilder stackIn_17_4 = null;
-            String stackIn_17_5 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            fia stackOut_14_0 = null;
-            java.net.URL stackOut_14_1 = null;
-            java.net.URL stackOut_14_2 = null;
-            java.net.URL stackOut_14_3 = null;
-            StringBuilder stackOut_14_4 = null;
-            fia stackOut_16_0 = null;
-            java.net.URL stackOut_16_1 = null;
-            java.net.URL stackOut_16_2 = null;
-            java.net.URL stackOut_16_3 = null;
-            StringBuilder stackOut_16_4 = null;
-            String stackOut_16_5 = null;
-            fia stackOut_15_0 = null;
-            java.net.URL stackOut_15_1 = null;
-            java.net.URL stackOut_15_2 = null;
-            java.net.URL stackOut_15_3 = null;
-            StringBuilder stackOut_15_4 = null;
-            String stackOut_15_5 = null;
             var6 = TombRacer.field_G ? 1 : 0;
             try {
               L0: {
@@ -71,11 +48,11 @@ final class ssa {
                   }
                 }
                 L2: {
-                  var3_ref = "";
+                  var3 = "";
                   if (param2 == null) {
                     break L2;
                   } else {
-                    var3_ref = qi.a(107, param2);
+                    var3 = qi.a(107, param2);
                     break L2;
                   }
                 }
@@ -83,20 +60,20 @@ final class ssa {
                   if (param0 != null) {
                     L4: {
                       if (param2 != null) {
-                        var3_ref = var3_ref + " | ";
+                        var3 = var3 + " | ";
                         break L4;
                       } else {
                         break L4;
                       }
                     }
-                    var3_ref = var3_ref + param0;
+                    var3 = var3 + param0;
                     break L3;
                   } else {
                     break L3;
                   }
                 }
-                upa.a(var3_ref, (byte) -24);
-                var7 = qf.a(966747152, "%3a", ":", var3_ref);
+                upa.a(var3, (byte) -24);
+                var7 = qf.a(966747152, "%3a", ":", var3);
                 var8 = qf.a(966747152, "%40", "@", var7);
                 var9 = qf.a(966747152, "%26", "&", var8);
                 var10 = qf.a(966747152, "%23", "#", var9);
@@ -105,88 +82,63 @@ final class ssa {
                   break L0;
                 } else {
                   L5: {
-                    stackOut_14_0 = nea.field_c;
-                    stackOut_14_1 = null;
-                    stackOut_14_2 = null;
-                    stackOut_14_3 = dfa.field_e.getCodeBase();
-                    stackOut_14_4 = new StringBuilder().append("clienterror.ws?c=").append(sua.field_L).append("&u=");
-                    stackIn_16_0 = stackOut_14_0;
-                    stackIn_16_1 = stackOut_14_1;
-                    stackIn_16_2 = stackOut_14_2;
-                    stackIn_16_3 = stackOut_14_3;
-                    stackIn_16_4 = stackOut_14_4;
-                    stackIn_15_0 = stackOut_14_0;
-                    stackIn_15_1 = stackOut_14_1;
-                    stackIn_15_2 = stackOut_14_2;
-                    stackIn_15_3 = stackOut_14_3;
-                    stackIn_15_4 = stackOut_14_4;
+                    stackIn_16_0 = nea.field_c;
+
+                    stackIn_16_1 = null;
+
+                    stackIn_16_2 = null;
+
+                    stackIn_16_3 = dfa.field_e.getCodeBase();
+
+                    stackIn_16_4 = new StringBuilder().append("clienterror.ws?c=").append(sua.field_L).append("&u=");
+
                     if (toa.field_f != null) {
-                      stackOut_16_0 = (fia) ((Object) stackIn_16_0);
-                      stackOut_16_1 = null;
-                      stackOut_16_2 = null;
-                      stackOut_16_3 = (java.net.URL) ((Object) stackIn_16_3);
-                      stackOut_16_4 = (StringBuilder) ((Object) stackIn_16_4);
-                      stackOut_16_5 = toa.field_f;
-                      stackIn_17_0 = stackOut_16_0;
-                      stackIn_17_1 = stackOut_16_1;
-                      stackIn_17_2 = stackOut_16_2;
-                      stackIn_17_3 = stackOut_16_3;
-                      stackIn_17_4 = stackOut_16_4;
-                      stackIn_17_5 = stackOut_16_5;
+                      stackIn_17_0 = (fia) ((Object) stackIn_16_0);
+                      stackIn_17_1 = null;
+                      stackIn_17_2 = null;
+                      stackIn_17_3 = (java.net.URL) ((Object) stackIn_16_3);
+                      stackIn_17_4 = (StringBuilder) ((Object) stackIn_16_4);
+                      stackIn_17_5 = toa.field_f;
                       break L5;
                     } else {
-                      stackOut_15_0 = (fia) ((Object) stackIn_15_0);
-                      stackOut_15_1 = null;
-                      stackOut_15_2 = null;
-                      stackOut_15_3 = (java.net.URL) ((Object) stackIn_15_3);
-                      stackOut_15_4 = (StringBuilder) ((Object) stackIn_15_4);
-                      stackOut_15_5 = "" + ic.field_b;
-                      stackIn_17_0 = stackOut_15_0;
-                      stackIn_17_1 = stackOut_15_1;
-                      stackIn_17_2 = stackOut_15_2;
-                      stackIn_17_3 = stackOut_15_3;
-                      stackIn_17_4 = stackOut_15_4;
-                      stackIn_17_5 = stackOut_15_5;
+                      stackIn_17_0 = (fia) ((Object) stackIn_16_0);
+                      stackIn_17_1 = null;
+                      stackIn_17_2 = null;
+                      stackIn_17_3 = (java.net.URL) ((Object) stackIn_16_3);
+                      stackIn_17_4 = (StringBuilder) ((Object) stackIn_16_4);
+                      stackIn_17_5 = "" + ic.field_b;
                       break L5;
                     }
                   }
                   var4 = ((fia) (Object) stackIn_17_0).a(new java.net.URL(stackIn_17_3, stackIn_17_5 + "&v1=" + fia.field_e + "&v2=" + fia.field_v + "&e=" + var10), 122);
                   L6: while (true) {
-                    L7: {
-                      L8: {
-                        if (var4.field_b != 0) {
-                          break L8;
+                    if (var4.field_b != 0) {
+                      L7: {
+                        if (1 == var4.field_b) {
+                          var5 = (DataInputStream) (var4.field_f);
+                          var5.read();
+                          var5.close();
+                          break L7;
                         } else {
-                          vja.a(0, 1L);
-                          if (var6 != 0) {
-                            break L7;
-                          } else {
-                            if (var6 == 0) {
-                              continue L6;
-                            } else {
-                              break L8;
-                            }
-                          }
+                          break L7;
                         }
                       }
-                      if (1 == var4.field_b) {
-                        break L7;
-                      } else {
-                        return;
-                      }
+                      decompiledRegionSelector0 = 1;
+                      break L0;
+                    } else {
+                      vja.a(0, 1L);
+                      continue L6;
                     }
-                    var5 = (DataInputStream) (var4.field_f);
-                    discarded$1 = var5.read();
-                    var5.close();
-                    decompiledRegionSelector0 = 1;
-                    break L0;
                   }
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (Exception) (Object) decompiledCaughtException;
-              return;
+              L8: {
+                var3_ref = (Exception) (Object) decompiledCaughtException;
+                decompiledRegionSelector0 = 1;
+                break L8;
+              }
             }
             if (decompiledRegionSelector0 == 0) {
               return;
@@ -204,29 +156,16 @@ final class ssa {
         iea var2 = null;
         this.field_b.K(this.field_a);
         if (param0 != -31138) {
-          return;
-        } else {
-          L0: {
-            L1: {
-              if (null == this.field_f) {
-                break L1;
-              } else {
-                var2 = this.field_f;
-                this.field_f = this.field_f.field_b;
-                if (!TombRacer.field_G) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            var2 = new iea();
-            break L0;
-          }
-          var2.a(this.field_a[3], this.field_a[2], this.field_a[1], this.field_a[0], this.field_c, this.field_e, param0 ^ -31170);
-          this.field_c = var2;
-          return;
+            return;
         }
+        if (null != this.field_f) {
+            var2 = this.field_f;
+            this.field_f = this.field_f.field_b;
+        } else {
+            var2 = new iea();
+        }
+        var2.a(this.field_a[3], this.field_a[2], this.field_a[1], this.field_a[0], this.field_c, this.field_e, param0 ^ -31170);
+        this.field_c = var2;
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
@@ -255,9 +194,18 @@ final class ssa {
     }
 
     final static byte[] a(uia param0, int param1, boolean param2) throws Exception {
-        int[] array$1 = null;
-        RuntimeException var3 = null;
+        int[] array$0 = null;
+        Object stackIn_5_0 = null;
+        Object stackIn_47_0 = null;
+        RuntimeException stackIn_50_0 = null;
+        StringBuilder stackIn_50_1 = null;
+        RuntimeException stackIn_51_0 = null;
+        StringBuilder stackIn_51_1 = null;
+        String stackIn_51_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -284,39 +232,6 @@ final class ssa {
         int[] var28 = null;
         int[] var31 = null;
         byte[] var32 = null;
-        Object stackIn_5_0 = null;
-        int[] stackIn_38_0 = null;
-        int stackIn_38_1 = 0;
-        int stackIn_38_2 = 0;
-        int[] stackIn_40_0 = null;
-        int stackIn_40_1 = 0;
-        int stackIn_40_2 = 0;
-        Object stackIn_59_0 = null;
-        RuntimeException stackIn_61_0 = null;
-        StringBuilder stackIn_61_1 = null;
-        RuntimeException stackIn_62_0 = null;
-        StringBuilder stackIn_62_1 = null;
-        RuntimeException stackIn_63_0 = null;
-        StringBuilder stackIn_63_1 = null;
-        String stackIn_63_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int[] stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        int stackOut_37_2 = 0;
-        int[] stackOut_39_0 = null;
-        int stackOut_39_1 = 0;
-        int stackOut_39_2 = 0;
-        Object stackOut_58_0 = null;
-        Object stackOut_4_0 = null;
-        RuntimeException stackOut_60_0 = null;
-        StringBuilder stackOut_60_1 = null;
-        RuntimeException stackOut_62_0 = null;
-        StringBuilder stackOut_62_1 = null;
-        String stackOut_62_2 = null;
-        RuntimeException stackOut_61_0 = null;
-        StringBuilder stackOut_61_1 = null;
-        String stackOut_61_2 = null;
         var17 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -335,222 +250,145 @@ final class ssa {
                 var31 = var8;
                 var10_int = 0;
                 L1: while (true) {
-                  L2: {
-                    L3: {
-                      L4: {
-                        if ((var10_int ^ -1) <= -9) {
-                          break L4;
-                        } else {
-                          var31[var10_int] = 0;
-                          var10_int++;
-                          if (var17 != 0) {
-                            break L3;
-                          } else {
-                            if (var17 == 0) {
-                              continue L1;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
-                      }
+                  if ((var10_int ^ -1) <= -9) {
+                    L2: {
                       if (var7 == 0) {
-                        break L3;
+                        var8[0] = param0.e(105);
+                        break L2;
                       } else {
                         if (1 != var7) {
                           var20 = var8;
                           var22 = param0;
                           var11 = var22.h(255);
                           var12 = 0;
-                          L5: while (true) {
+                          L3: while (true) {
                             if (var11 <= var12) {
                               break L2;
                             } else {
                               var20[var12] = var22.e(-35);
                               var12++;
-                              if (var17 != 0) {
-                                break L2;
-                              } else {
-                                continue L5;
-                              }
+                              continue L3;
                             }
                           }
                         } else {
                           var19 = var8;
                           var21 = param0;
                           var11 = 0;
-                          L6: while (true) {
+                          L4: while (true) {
                             if (-9 >= (var11 ^ -1)) {
                               break L2;
                             } else {
                               var19[var11] = var21.e(100);
                               var11++;
-                              if (var17 != 0) {
-                                break L2;
-                              } else {
-                                if (var17 == 0) {
-                                  continue L6;
-                                } else {
-                                  break L2;
-                                }
-                              }
+                              continue L4;
                             }
                           }
                         }
                       }
                     }
-                    var8[0] = param0.e(105);
-                    break L2;
-                  }
-                  L7: {
-                    var9 = param0.h(255);
-                    if (-1 > (var9 ^ -1)) {
-                      var10 = new int[var9][];
-                      var11 = 0;
-                      L8: while (true) {
-                        if (var11 >= var9) {
-                          break L7;
-                        } else {
-                          var12 = param0.field_h;
-                          L9: while (true) {
-                            L10: {
-                              L11: {
-                                var13_int = param0.h(255);
-                                if ((var13_int ^ -1) <= -129) {
-                                  break L11;
-                                } else {
-                                  if (var17 == 0) {
-                                    break L10;
-                                  } else {
-                                    break L11;
-                                  }
-                                }
-                              }
-                              if (var17 == 0) {
-                                continue L9;
+                    L5: {
+                      var9 = param0.h(255);
+                      if (-1 > (var9 ^ -1)) {
+                        var10 = new int[var9][];
+                        var11 = 0;
+                        L6: while (true) {
+                          if (var11 >= var9) {
+                            break L5;
+                          } else {
+                            var12 = param0.field_h;
+                            L7: while (true) {
+                              var13_int = param0.h(255);
+                              if ((var13_int ^ -1) <= -129) {
+                                continue L7;
                               } else {
-                                break L10;
-                              }
-                            }
-                            array$1 = new int[31 + (-var12 + param0.field_h) * 7 >> -613839035];
-                            ((Object[]) (var10))[var11] = array$1;
-                            var13 = array$1;
-                            param0.field_h = var12;
-                            var14 = 0;
-                            var15 = 0;
-                            L12: while (true) {
-                              var16 = param0.h(255);
-                              stackOut_37_0 = (int[]) (var13);
-                              stackOut_37_1 = var14;
-                              stackOut_37_2 = var13[var14] + (sea.c(var16, 127) << var15);
-                              stackIn_38_0 = stackOut_37_0;
-                              stackIn_38_1 = stackOut_37_1;
-                              stackIn_38_2 = stackOut_37_2;
-                              L13: while (true) {
-                                L14: {
-                                  stackIn_38_0[stackIn_38_1] = stackIn_38_2;
-                                  if (var15 < 26) {
-                                    break L14;
-                                  } else {
-                                    stackOut_39_0 = (int[]) (var13);
-                                    stackOut_39_1 = var14 - -1;
-                                    stackOut_39_2 = var13[var14 - -1] + (sea.c(127, var16) >> -var15 + 32);
-                                    stackIn_38_0 = stackOut_39_0;
-                                    stackIn_38_1 = stackOut_39_1;
-                                    stackIn_38_2 = stackOut_39_2;
-                                    stackIn_40_0 = stackOut_39_0;
-                                    stackIn_40_1 = stackOut_39_1;
-                                    stackIn_40_2 = stackOut_39_2;
-                                    if (var17 != 0) {
-                                      continue L13;
+                                array$0 = new int[31 + (-var12 + param0.field_h) * 7 >> -613839035];
+                                ((Object[]) (var10))[var11] = array$0;
+                                var13 = array$0;
+                                param0.field_h = var12;
+                                var14 = 0;
+                                var15 = 0;
+                                L8: while (true) {
+                                  L9: {
+                                    var16 = param0.h(255);
+                                    var13[var14] = var13[var14] + (sea.c(var16, 127) << var15);
+                                    if (var15 < 26) {
+                                      break L9;
                                     } else {
-                                      stackIn_40_0[stackIn_40_1] = stackIn_40_2;
-                                      break L14;
+                                      var13[var14 - -1] = var13[var14 - -1] + (sea.c(127, var16) >> -var15 + 32);
+                                      break L9;
                                     }
                                   }
-                                }
-                                L15: {
-                                  L16: {
-                                    if (var16 >= 128) {
-                                      break L16;
-                                    } else {
-                                      if (var17 == 0) {
-                                        break L15;
-                                      } else {
-                                        break L16;
-                                      }
-                                    }
-                                  }
-                                  var15 += 7;
-                                  var14 = var14 + (var15 >> -1448925019);
-                                  var15 = var15 & 31;
-                                  if (var17 == 0) {
-                                    continue L12;
+                                  if (var16 >= 128) {
+                                    var15 += 7;
+                                    var14 = var14 + (var15 >> -1448925019);
+                                    var15 = var15 & 31;
+                                    continue L8;
                                   } else {
-                                    break L15;
+                                    var11++;
+                                    continue L6;
                                   }
                                 }
-                                var11++;
-                                continue L8;
                               }
                             }
                           }
                         }
+                      } else {
+                        break L5;
                       }
-                    } else {
-                      break L7;
                     }
-                  }
-                  L17: {
-                    var10 = null;
-                    if (param0.field_h < var6) {
-                      L18: {
-                        var11 = param0.h(255);
-                        if (var11 > 0) {
-                          var32 = new byte[var11];
-                          param0.a(var32, 0, -101, var11);
-                          break L18;
+                    L10: {
+                      var10 = null;
+                      if (param0.field_h < var6) {
+                        L11: {
+                          var11 = param0.h(255);
+                          if (var11 > 0) {
+                            var32 = new byte[var11];
+                            param0.a(var32, 0, -101, var11);
+                            break L11;
+                          } else {
+                            break L11;
+                          }
+                        }
+                        var12 = var6 - param0.field_h;
+                        if (0 >= var12) {
+                          break L10;
                         } else {
-                          break L18;
+                          var27 = new byte[var12];
+                          var24 = var27;
+                          var10 = var24;
+                          param0.a(var27, 0, -93, var12);
+                          break L10;
+                        }
+                      } else {
+                        break L10;
+                      }
+                    }
+                    if (param0.field_h <= var6) {
+                      L12: {
+                        if (param2) {
+                          System.out.println("Loading funorbprofile local: achievements=" + wg.a(0, var28));
+                          break L12;
+                        } else {
+                          break L12;
                         }
                       }
-                      var12 = var6 - param0.field_h;
-                      if (0 >= var12) {
-                        break L17;
-                      } else {
-                        var27 = new byte[var12];
-                        var24 = var27;
-                        var10 = var24;
-                        param0.a(var27, 0, -93, var12);
-                        break L17;
-                      }
+                      stackIn_47_0 = var10;
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     } else {
-                      break L17;
+                      throw ssa.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: data overrun: start=" + var5 + " length=" + var3_int + " end=" + var6 + " overranto=" + param0.field_h));
                     }
-                  }
-                  if (param0.field_h <= var6) {
-                    L19: {
-                      if (param2) {
-                        System.out.println("Loading funorbprofile local: achievements=" + wg.a(0, var28));
-                        break L19;
-                      } else {
-                        break L19;
-                      }
-                    }
-                    stackOut_58_0 = var10;
-                    stackIn_59_0 = stackOut_58_0;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
                   } else {
-                    throw ssa.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: data overrun: start=" + var5 + " length=" + var3_int + " end=" + var6 + " overranto=" + param0.field_h));
+                    var31[var10_int] = 0;
+                    var10_int++;
+                    continue L1;
                   }
                 }
               }
             } else {
               if (param2) {
                 System.out.println("Loading funorbprofile local: blank");
-                stackOut_4_0 = null;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = null;
                 decompiledRegionSelector0 = 0;
                 break L0;
               } else {
@@ -560,38 +398,30 @@ final class ssa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L20: {
+          L13: {
             var3 = decompiledCaughtException;
-            stackOut_60_0 = (RuntimeException) (var3);
-            stackOut_60_1 = new StringBuilder().append("ssa.B(");
-            stackIn_62_0 = stackOut_60_0;
-            stackIn_62_1 = stackOut_60_1;
-            stackIn_61_0 = stackOut_60_0;
-            stackIn_61_1 = stackOut_60_1;
+            stackIn_50_0 = (RuntimeException) (var3);
+
+            stackIn_50_1 = new StringBuilder().append("ssa.B(");
+
             if (param0 == null) {
-              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
-              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
-              stackOut_62_2 = "null";
-              stackIn_63_0 = stackOut_62_0;
-              stackIn_63_1 = stackOut_62_1;
-              stackIn_63_2 = stackOut_62_2;
-              break L20;
+              stackIn_51_0 = (RuntimeException) ((Object) stackIn_50_0);
+              stackIn_51_1 = (StringBuilder) ((Object) stackIn_50_1);
+              stackIn_51_2 = "null";
+              break L13;
             } else {
-              stackOut_61_0 = (RuntimeException) ((Object) stackIn_61_0);
-              stackOut_61_1 = (StringBuilder) ((Object) stackIn_61_1);
-              stackOut_61_2 = "{...}";
-              stackIn_63_0 = stackOut_61_0;
-              stackIn_63_1 = stackOut_61_1;
-              stackIn_63_2 = stackOut_61_2;
-              break L20;
+              stackIn_51_0 = (RuntimeException) ((Object) stackIn_50_0);
+              stackIn_51_1 = (StringBuilder) ((Object) stackIn_50_1);
+              stackIn_51_2 = "{...}";
+              break L13;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_63_0), stackIn_63_2 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_51_0), stackIn_51_2 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return (byte[]) ((Object) stackIn_5_0);
         } else {
-          return (byte[]) ((Object) stackIn_59_0);
+          return (byte[]) ((Object) stackIn_47_0);
         }
     }
 
@@ -606,21 +436,21 @@ final class ssa {
     }
 
     final static void b(int param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -632,35 +462,31 @@ final class ssa {
               if (var2 >= var3) {
                 break L0;
               } else {
-                incrementValue$40 = var2;
+                incrementValue$16 = var2;
                 var2++;
-                var5[incrementValue$40] = 0;
-                incrementValue$41 = var2;
+                var5[incrementValue$16] = 0;
+                incrementValue$17 = var2;
                 var2++;
-                var5[incrementValue$41] = 0;
-                incrementValue$42 = var2;
+                var5[incrementValue$17] = 0;
+                incrementValue$18 = var2;
                 var2++;
-                var5[incrementValue$42] = 0;
-                incrementValue$43 = var2;
+                var5[incrementValue$18] = 0;
+                incrementValue$19 = var2;
                 var2++;
-                var5[incrementValue$43] = 0;
-                incrementValue$44 = var2;
+                var5[incrementValue$19] = 0;
+                incrementValue$20 = var2;
                 var2++;
-                var5[incrementValue$44] = 0;
-                incrementValue$45 = var2;
+                var5[incrementValue$20] = 0;
+                incrementValue$21 = var2;
                 var2++;
-                var5[incrementValue$45] = 0;
-                incrementValue$46 = var2;
+                var5[incrementValue$21] = 0;
+                incrementValue$22 = var2;
                 var2++;
-                var5[incrementValue$46] = 0;
-                incrementValue$47 = var2;
+                var5[incrementValue$22] = 0;
+                incrementValue$23 = var2;
                 var2++;
-                var5[incrementValue$47] = 0;
-                if (var4 == 0) {
-                  continue L1;
-                } else {
-                  return;
-                }
+                var5[incrementValue$23] = 0;
+                continue L1;
               }
             }
           }

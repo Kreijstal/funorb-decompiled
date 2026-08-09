@@ -35,12 +35,12 @@ final class hm extends ta implements ai {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_s + param3;
         int var6 = this.field_n - -param0;
-        int discarded$0 = lm.field_f.a(bm.field_b, var5 - -20, 20 + var6, this.field_m - 40, this.field_r - 50, 16777215, -1, 1, 0, lm.field_f.field_H);
+        lm.field_f.a(bm.field_b, var5 - -20, 20 + var6, this.field_m - 40, this.field_r - 50, 16777215, -1, 1, 0, lm.field_f.field_H);
         super.a(param0, param1, param2, param3);
     }
 
     final static ki a(int param0, boolean param1, boolean param2, int param3, int param4) {
-        String var6 = null;
+        String var6;
         if (param0 != 48) {
           var6 = (String) null;
           hm.a((String) null, (byte) 56, false, true);
@@ -51,14 +51,13 @@ final class hm extends ta implements ai {
     }
 
     final static void a(String param0, byte param1, boolean param2, boolean param3) {
-        ki discarded$0 = null;
         try {
             bg.a(false);
             bm.field_d.n(7920);
             ig.field_ib = new pk(vh.field_k, (String) null, vh.field_j, param3, param2);
             kg.field_j = new pc(bm.field_d, ig.field_ib);
             if (param1 != 33) {
-                discarded$0 = hm.a(-114, false, true, 50, -56);
+                hm.a(-114, false, true, 50, -56);
             }
             bm.field_d.b((byte) 74, (pj) (kg.field_j));
         } catch (RuntimeException runtimeException) {
@@ -67,7 +66,7 @@ final class hm extends ta implements ai {
     }
 
     final static boolean a(int param0, char param1) {
-        String var3 = null;
+        String var3;
         if (param0 == -20625) {
           if (48 <= param1) {
             if (param1 > 57) {
@@ -99,8 +98,6 @@ final class hm extends ta implements ai {
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
         int stackIn_11_0 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -108,42 +105,26 @@ final class hm extends ta implements ai {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_5_0 = false;
-        int stackOut_10_0 = 0;
-        boolean stackOut_8_0 = false;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             if (!super.a(param0, param1, param2, param3 ^ param3)) {
               if ((param1 ^ -1) == -99) {
-                stackOut_5_0 = this.a(param2, false);
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = this.a(param2, false);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if ((param1 ^ -1) != -100) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = 0;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_8_0 = this.b(param2, false);
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = this.b(param2, false);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               }
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -152,27 +133,19 @@ final class hm extends ta implements ai {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var5);
-            stackOut_12_1 = new StringBuilder().append("hm.I(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var5);
+
+            stackIn_14_1 = new StringBuilder().append("hm.I(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L1;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L1;
             }
           }
@@ -206,22 +179,12 @@ final class hm extends ta implements ai {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         int var7 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -264,27 +227,19 @@ final class hm extends ta implements ai {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             runtimeException = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (runtimeException);
-            stackOut_11_1 = new StringBuilder().append("hm.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (runtimeException);
+
+            stackIn_13_1 = new StringBuilder().append("hm.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L4;
             }
           }

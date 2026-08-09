@@ -12,26 +12,15 @@ final class wh {
 
     final static int a(int param0, ld param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int stackIn_17_0 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException var2 = null;
         var3 = Chess.field_G;
         try {
           L0: {
@@ -80,35 +69,26 @@ final class wh {
                 break L3;
               }
             }
-            stackOut_16_0 = var2_int;
-            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_0 = var2_int;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var2);
-            stackOut_18_1 = new StringBuilder().append("wh.A(").append(param0).append(',');
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var2);
+
+            stackIn_20_1 = new StringBuilder().append("wh.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L4;
             }
           }
@@ -118,53 +98,35 @@ final class wh {
     }
 
     final static km[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        km var10 = null;
-        km var11 = null;
-        km var12 = null;
-        km var13 = null;
-        km var14 = null;
-        Object var15 = null;
-        int[] var16 = null;
         km var17 = null;
-        int[] var18 = null;
-        int[] var19 = null;
-        L0: {
-          var19 = wb.field_d;
-          var18 = var19;
-          var16 = var18;
-          var6 = var16;
-          var7 = wb.field_h;
-          var8 = 7 % ((param0 - -10) / 58);
-          var9 = wb.field_c;
-          var10 = new km(param2, param1 + -(2 * param2));
-          var10.e();
-          wb.c(0, 0, param2, -(2 * param2) + param1, param3, param4);
-          var11 = new km(param2, param2);
-          var11.e();
-          wb.f(0, 0, param2, param2, param3);
-          var12 = new km(16, param2);
-          var12.e();
-          wb.f(0, 0, 16, param2, param3);
-          var13 = new km(param2, param2);
-          var13.e();
-          wb.f(0, 0, param2, param2, param4);
-          var14 = new km(16, param2);
-          var14.e();
-          wb.f(0, 0, 16, param2, param4);
-          var15 = null;
-          if ((param5 ^ -1) >= -1) {
-            break L0;
-          } else {
+        int[] var19 = wb.field_d;
+        int[] var18 = var19;
+        int[] var16 = var18;
+        int[] var6 = var16;
+        int var7 = wb.field_h;
+        int var8 = 7 % ((param0 - -10) / 58);
+        int var9 = wb.field_c;
+        km var10 = new km(param2, param1 + -(2 * param2));
+        var10.e();
+        wb.c(0, 0, param2, -(2 * param2) + param1, param3, param4);
+        km var11 = new km(param2, param2);
+        var11.e();
+        wb.f(0, 0, param2, param2, param3);
+        km var12 = new km(16, param2);
+        var12.e();
+        wb.f(0, 0, 16, param2, param3);
+        km var13 = new km(param2, param2);
+        var13.e();
+        wb.f(0, 0, param2, param2, param4);
+        km var14 = new km(16, param2);
+        var14.e();
+        wb.f(0, 0, 16, param2, param4);
+        Object var15 = null;
+        if ((param5 ^ -1) < -1) {
             var17 = new km(16, 16);
             var15 = var17;
             var17.e();
             wb.f(0, 0, 16, 16, param5);
-            break L0;
-          }
         }
         wb.a(var19, var7, var9);
         return new km[]{var11, var12, var11, var10, (km) (var15), var10, var13, var14, var13};

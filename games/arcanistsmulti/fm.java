@@ -10,9 +10,9 @@ final class fm {
     long field_d;
 
     final static void a(int param0, boolean param1) {
-        int var3 = 0;
-        ab var4 = null;
-        ab var5 = null;
+        int var3;
+        ab var4;
+        ab var5;
         if (!param1) {
           fm.a(48, false);
           var4 = he.field_e;

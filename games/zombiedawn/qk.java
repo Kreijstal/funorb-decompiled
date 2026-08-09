@@ -64,9 +64,6 @@ class qk extends ah {
     }
 
     void a(byte param0, wk param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -74,14 +71,7 @@ class qk extends ah {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             super.a((byte) -83, param1);
@@ -131,27 +121,19 @@ class qk extends ah {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("qk.B(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3);
+
+            stackIn_16_1 = new StringBuilder().append("qk.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L3;
             }
           }
@@ -165,26 +147,22 @@ class qk extends ah {
     }
 
     final void e(int param0, int param1) {
-        if (-11 != (param0 ^ -1)) {
-            if (param0 != 11) {
-                if (null != this.field_yb) {
-                    this.field_yb.field_hb = false;
-                    this.field_yb = null;
-                }
-            }
+        if (-11 != (param0 ^ -1) && param0 != 11 && null != this.field_yb) {
+            this.field_yb.field_hb = false;
+            this.field_yb = null;
         }
         super.e(param0, param1);
     }
 
     final static void n(byte param0) {
         va[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         va var3 = null;
         int var4 = 0;
         va[] var5 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = ZombieDawn.field_J;
         try {
           L0: {
@@ -221,21 +199,13 @@ class qk extends ah {
     }
 
     private final boolean a(int param0, boolean param1, int param2) {
-        fb var4 = null;
-        kd var5 = null;
-        int var6 = 0;
-        Object stackIn_13_0 = null;
+        fb var4;
+        kd var5;
+        int var6;
         Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        Object stackOut_12_0 = null;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
         L0: {
           var6 = ZombieDawn.field_J;
           this.field_mb = 2147483647;
@@ -253,12 +223,10 @@ class qk extends ah {
           if (var4 == null) {
             L2: {
               if (this.field_sb == null) {
-                stackOut_19_0 = 0;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = 0;
                 break L2;
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 1;
                 break L2;
               }
             }
@@ -296,20 +264,15 @@ class qk extends ah {
                       }
                     }
                     L6: {
-                      stackOut_12_0 = this;
-                      stackIn_14_0 = stackOut_12_0;
-                      stackIn_13_0 = stackOut_12_0;
+                      stackIn_14_0 = this;
+
                       if (var5.field_bb <= 0) {
-                        stackOut_14_0 = this;
-                        stackOut_14_1 = 0;
-                        stackIn_15_0 = stackOut_14_0;
-                        stackIn_15_1 = stackOut_14_1;
+                        stackIn_15_0 = this;
+                        stackIn_15_1 = 0;
                         break L6;
                       } else {
-                        stackOut_13_0 = this;
-                        stackOut_13_1 = 1;
-                        stackIn_15_0 = stackOut_13_0;
-                        stackIn_15_1 = stackOut_13_1;
+                        stackIn_15_0 = this;
+                        stackIn_15_1 = 1;
                         break L6;
                       }
                     }
@@ -326,10 +289,10 @@ class qk extends ah {
     }
 
     void l(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        wk var5 = null;
+        int var2;
+        int var3;
+        int var4;
+        wk var5;
         L0: {
           var4 = ZombieDawn.field_J;
           if (this.field_F == 0) {
@@ -439,70 +402,38 @@ class qk extends ah {
     }
 
     qk(int param0, int param1, int param2) {
-        super(param0, param1, param2, 200704);
-        Object stackIn_1_0 = null;
-        int stackIn_1_1 = 0;
-        int stackIn_1_2 = 0;
-        int stackIn_1_3 = 0;
-        Object stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
-        int stackIn_2_2 = 0;
-        int stackIn_2_3 = 0;
+        super(0, 0, 0, 0);
+        Object stackIn_2_0;
+        int stackIn_2_1;
+        int stackIn_2_2;
+        int stackIn_2_3;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
         int stackIn_3_3 = 0;
         int stackIn_3_4 = 0;
-        Object stackOut_0_0 = null;
-        int stackOut_0_1 = 0;
-        int stackOut_0_2 = 0;
-        int stackOut_0_3 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        int stackOut_2_3 = 0;
-        int stackOut_2_4 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        int stackOut_1_3 = 0;
-        int stackOut_1_4 = 0;
         L0: {
-          stackOut_0_0 = this;
-          stackOut_0_1 = param0;
-          stackOut_0_2 = param1;
-          stackOut_0_3 = param2;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_2_1 = stackOut_0_1;
-          stackIn_2_2 = stackOut_0_2;
-          stackIn_2_3 = stackOut_0_3;
-          stackIn_1_0 = stackOut_0_0;
-          stackIn_1_1 = stackOut_0_1;
-          stackIn_1_2 = stackOut_0_2;
-          stackIn_1_3 = stackOut_0_3;
+          stackIn_2_0 = this;
+
+          stackIn_2_1 = param0;
+
+          stackIn_2_2 = param1;
+
+          stackIn_2_3 = param2;
+
           if (param2 != 23) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = stackIn_2_1;
-            stackOut_2_2 = stackIn_2_2;
-            stackOut_2_3 = stackIn_2_3;
-            stackOut_2_4 = 200704;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            stackIn_3_2 = stackOut_2_2;
-            stackIn_3_3 = stackOut_2_3;
-            stackIn_3_4 = stackOut_2_4;
+            stackIn_3_0 = this;
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = stackIn_2_2;
+            stackIn_3_3 = stackIn_2_3;
+            stackIn_3_4 = 200704;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = stackIn_1_1;
-            stackOut_1_2 = stackIn_1_2;
-            stackOut_1_3 = stackIn_1_3;
-            stackOut_1_4 = 143360;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_3_2 = stackOut_1_2;
-            stackIn_3_3 = stackOut_1_3;
-            stackIn_3_4 = stackOut_1_4;
+            stackIn_3_0 = this;
+            stackIn_3_1 = stackIn_2_1;
+            stackIn_3_2 = stackIn_2_2;
+            stackIn_3_3 = stackIn_2_3;
+            stackIn_3_4 = 143360;
             break L0;
           }
         }
@@ -633,23 +564,13 @@ class qk extends ah {
 
     void a(wk param0, int param1) {
         String var3 = null;
-        RuntimeException var3_ref = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var3_ref = null;
         try {
           L0: {
             L1: {
@@ -685,27 +606,19 @@ class qk extends ah {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3_ref);
-            stackOut_9_1 = new StringBuilder().append("qk.L(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3_ref);
+
+            stackIn_11_1 = new StringBuilder().append("qk.L(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -714,80 +627,46 @@ class qk extends ah {
     }
 
     void b(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        var8 = ZombieDawn.field_J;
-        var4 = 2 + this.field_Gb;
-        if (var4 == 0) {
-          return;
+        int var8 = ZombieDawn.field_J;
+        int var4 = 2 + this.field_Gb;
+        if (!(var4 != 0)) {
+            return;
+        }
+        int var5 = var4;
+        int var6 = var4 / 2;
+        if (param1 > -91) {
+            qk.a(-55, -46, -124, -122, -112);
+        }
+        int var7 = -var4 + 8;
+        if ((this.field_S ^ -1) == -2) {
+            bi.d(-var7 + param0 - -22, -36 + param2, -1 + var5, 0, 64);
+            bi.d(param0 - -17, -36 + param2, -1 + var6, 0, 128);
+            bi.a(-var7 + (22 + param0) << 325871236, param2 - 36 << 1105465508, var5 << 174869764, 250, dm.field_p);
+            bi.a(17 + param0 << 1062093956, param2 + -36 << -2066237084, var6 << -1717074844, 200, dm.field_r);
         } else {
-          L0: {
-            var5 = var4;
-            var6 = var4 / 2;
-            if (param1 <= -91) {
-              break L0;
-            } else {
-              qk.a(-55, -46, -124, -122, -112);
-              break L0;
-            }
-          }
-          L1: {
-            var7 = -var4 + 8;
-            if ((this.field_S ^ -1) != -2) {
-              if (this.field_S != 3) {
-                if (0 == this.field_S) {
-                  bi.d(param0 - 2, param2 + -54 + var7, var5, 0, 64);
-                  bi.d(-2 + param0, -50 + param2, var6, 0, 128);
-                  bi.a(-2 + param0 << 21902564, param2 - 54 - -var7 << 1917214564, var5 << -180827548, 250, dm.field_p);
-                  bi.a(-2 + param0 << -1421119132, param2 + -50 << -823603932, var6 << 1995243524, 200, dm.field_r);
-                  break L1;
-                } else {
-                  if ((this.field_S ^ -1) != -3) {
-                    break L1;
-                  } else {
-                    bi.d(-2 + param0, param2 - 10 + -var7, var5 - 1, 0, 64);
-                    bi.d(param0 + -2, param2 - 16, var6 - 1, 0, 128);
-                    bi.a(param0 + -2 << 586646820, param2 + (-10 + -var7) << 1428916612, var5 << 1704937060, 250, dm.field_p);
-                    bi.a(-2 + param0 << 947830404, param2 + -16 << 583654148, var6 << -1361774428, 200, dm.field_r);
-                    break L1;
-                  }
-                }
-              } else {
+            if (this.field_S == 3) {
                 bi.d(var7 + (param0 + -23), -36 + param2, var5, 0, 64);
                 bi.d(-18 + param0, param2 - 36, var6, 0, 128);
                 bi.a(var7 + param0 - 23 << -1991660924, param2 + -36 << 414119172, var5 << -2109650812, 250, dm.field_p);
                 bi.a(-18 + param0 << 736731140, param2 - 36 << 1117055044, var6 << 1943370852, 200, dm.field_r);
-                break L1;
-              }
             } else {
-              bi.d(-var7 + param0 - -22, -36 + param2, -1 + var5, 0, 64);
-              bi.d(param0 - -17, -36 + param2, -1 + var6, 0, 128);
-              bi.a(-var7 + (22 + param0) << 325871236, param2 - 36 << 1105465508, var5 << 174869764, 250, dm.field_p);
-              bi.a(17 + param0 << 1062093956, param2 + -36 << -2066237084, var6 << -1717074844, 200, dm.field_r);
-              break L1;
+                if (0 == this.field_S || (this.field_S ^ -1) == -3) {
+                    bi.d(param0 - 2, param2 + -54 + var7, var5, 0, 64);
+                    bi.d(-2 + param0, -50 + param2, var6, 0, 128);
+                    bi.a(-2 + param0 << 21902564, param2 - 54 - -var7 << 1917214564, var5 << -180827548, 250, dm.field_p);
+                    bi.a(-2 + param0 << -1421119132, param2 + -50 << -823603932, var6 << 1995243524, 200, dm.field_r);
+                }
             }
-          }
-          return;
         }
     }
 
     void g(int param0) {
-        int fieldTemp$3 = 0;
-        boolean discarded$4 = false;
-        int fieldTemp$5 = 0;
-        int var3 = 0;
-        Object stackIn_30_0 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         Object stackIn_31_0 = null;
         Object stackIn_32_0 = null;
         int stackIn_32_1 = 0;
-        Object stackOut_29_0 = null;
-        Object stackOut_31_0 = null;
-        int stackOut_31_1 = 0;
-        Object stackOut_30_0 = null;
-        int stackOut_30_1 = 0;
+        int var3;
         L0: {
           var3 = ZombieDawn.field_J;
           if (param0 > 95) {
@@ -835,15 +714,15 @@ class qk extends ah {
                       if (this.field_yb == null) {
                         break L4;
                       } else {
-                        fieldTemp$3 = this.field_Ab - 1;
+                        fieldTemp$0 = this.field_Ab - 1;
                         this.field_Ab = this.field_Ab - 1;
-                        if (-1 >= (fieldTemp$3 ^ -1)) {
+                        if (-1 >= (fieldTemp$0 ^ -1)) {
                           L5: {
                             if (28 != this.field_t) {
                               this.field_yb.z(0);
                               break L5;
                             } else {
-                              discarded$4 = dj.field_e.b(2, this.field_yb.f(237239984), true, this.field_yb.a(true));
+                              dj.field_e.b(2, this.field_yb.f(237239984), true, this.field_yb.a(true));
                               break L5;
                             }
                           }
@@ -860,22 +739,17 @@ class qk extends ah {
                     }
                   }
                   L6: {
-                    fieldTemp$5 = this.field_Lb - 1;
+                    fieldTemp$1 = this.field_Lb - 1;
                     this.field_Lb = this.field_Lb - 1;
-                    stackOut_29_0 = this;
-                    stackIn_31_0 = stackOut_29_0;
-                    stackIn_30_0 = stackOut_29_0;
-                    if (-1 != (fieldTemp$5 ^ -1)) {
-                      stackOut_31_0 = this;
-                      stackOut_31_1 = 11;
-                      stackIn_32_0 = stackOut_31_0;
-                      stackIn_32_1 = stackOut_31_1;
+                    stackIn_31_0 = this;
+
+                    if (-1 != (fieldTemp$1 ^ -1)) {
+                      stackIn_32_0 = this;
+                      stackIn_32_1 = 11;
                       break L6;
                     } else {
-                      stackOut_30_0 = this;
-                      stackOut_30_1 = 0;
-                      stackIn_32_0 = stackOut_30_0;
-                      stackIn_32_1 = stackOut_30_1;
+                      stackIn_32_0 = this;
+                      stackIn_32_1 = 0;
                       break L6;
                     }
                   }
@@ -916,10 +790,10 @@ class qk extends ah {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         var6 = ZombieDawn.field_J;
         try {
           L0: {
@@ -965,35 +839,23 @@ class qk extends ah {
     }
 
     final void m(byte param0) {
-        Object var2 = null;
-        int var3 = 0;
-        fb var4_ref_fb = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        Object var11 = null;
-        Object stackIn_27_0 = null;
         Object stackIn_28_0 = null;
         Object stackIn_29_0 = null;
         int stackIn_29_1 = 0;
-        Object stackIn_31_0 = null;
         Object stackIn_32_0 = null;
         Object stackIn_33_0 = null;
         int stackIn_33_1 = 0;
-        Object stackOut_30_0 = null;
-        Object stackOut_32_0 = null;
-        int stackOut_32_1 = 0;
-        Object stackOut_31_0 = null;
-        int stackOut_31_1 = 0;
-        Object stackOut_26_0 = null;
-        Object stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        Object stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
+        Object var2;
+        int var3;
+        fb var4_ref_fb;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        Object var11;
         var10 = ZombieDawn.field_J;
         if (this.field_wb) {
           this.e(3, -6904);
@@ -1084,20 +946,15 @@ class qk extends ah {
                   var5 = ((kd) (var2)).f(237239984) + -this.f(237239984);
                   if (Math.abs(var5) > Math.abs(var4)) {
                     L9: {
-                      stackOut_30_0 = this;
-                      stackIn_32_0 = stackOut_30_0;
-                      stackIn_31_0 = stackOut_30_0;
+                      stackIn_32_0 = this;
+
                       if (-1 > (var5 ^ -1)) {
-                        stackOut_32_0 = this;
-                        stackOut_32_1 = 2;
-                        stackIn_33_0 = stackOut_32_0;
-                        stackIn_33_1 = stackOut_32_1;
+                        stackIn_33_0 = this;
+                        stackIn_33_1 = 2;
                         break L9;
                       } else {
-                        stackOut_31_0 = this;
-                        stackOut_31_1 = 0;
-                        stackIn_33_0 = stackOut_31_0;
-                        stackIn_33_1 = stackOut_31_1;
+                        stackIn_33_0 = this;
+                        stackIn_33_1 = 0;
                         break L9;
                       }
                     }
@@ -1105,20 +962,15 @@ class qk extends ah {
                     break L8;
                   } else {
                     L10: {
-                      stackOut_26_0 = this;
-                      stackIn_28_0 = stackOut_26_0;
-                      stackIn_27_0 = stackOut_26_0;
+                      stackIn_28_0 = this;
+
                       if ((var4 ^ -1) >= -1) {
-                        stackOut_28_0 = this;
-                        stackOut_28_1 = 3;
-                        stackIn_29_0 = stackOut_28_0;
-                        stackIn_29_1 = stackOut_28_1;
+                        stackIn_29_0 = this;
+                        stackIn_29_1 = 3;
                         break L10;
                       } else {
-                        stackOut_27_0 = this;
-                        stackOut_27_1 = 1;
-                        stackIn_29_0 = stackOut_27_0;
-                        stackIn_29_1 = stackOut_27_1;
+                        stackIn_29_0 = this;
+                        stackIn_29_1 = 1;
                         break L10;
                       }
                     }

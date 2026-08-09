@@ -32,8 +32,15 @@ final class ub {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        RuntimeException var4 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_33_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -43,18 +50,6 @@ final class ub {
         int var12 = 0;
         int var13 = 0;
         int[][] var17 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_33_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_32_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_2_0 = 0;
         var12 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -77,8 +72,7 @@ final class ub {
               var7 = var13;
               L2: while (true) {
                 if (var9 <= var13) {
-                  stackOut_32_0 = -1;
-                  stackIn_33_0 = stackOut_32_0;
+                  stackIn_33_0 = -1;
                   decompiledRegionSelector0 = 4;
                   break L0;
                 } else {
@@ -114,8 +108,7 @@ final class ub {
                             if (var4_int > var11) {
                               break L5;
                             } else {
-                              stackOut_17_0 = var13;
-                              stackIn_18_0 = stackOut_17_0;
+                              stackIn_18_0 = var13;
                               decompiledRegionSelector0 = 1;
                               break L0;
                             }
@@ -141,8 +134,7 @@ final class ub {
                               }
                             }
                           }
-                          stackOut_24_0 = var13;
-                          stackIn_25_0 = stackOut_24_0;
+                          stackIn_25_0 = var13;
                           decompiledRegionSelector0 = 2;
                           break L0;
                         }
@@ -152,8 +144,7 @@ final class ub {
                       break L5;
                     } else {
                       if (var4_int >= var5) {
-                        stackOut_29_0 = var13;
-                        stackIn_30_0 = stackOut_29_0;
+                        stackIn_30_0 = var13;
                         decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
@@ -166,8 +157,7 @@ final class ub {
                 }
               }
             } else {
-              stackOut_2_0 = 81;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 81;
               decompiledRegionSelector0 = 0;
               break L0;
             }

@@ -22,12 +22,12 @@ final class aa extends hl {
     private hl field_Ub;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var11;
+        int var9;
+        int var10;
         var11 = TetraLink.field_J;
         if (this.field_Rb != 0) {
           var6 = 0;
@@ -55,7 +55,7 @@ final class aa extends hl {
               }
             } else {
               var8 = this.field_Lb[var7].b(-26606, this.field_Qb, this.field_Mb);
-              if (var6 < var8) {
+              if ((var6 ^ -1) > (var8 ^ -1)) {
                 var6 = var8;
                 var7++;
                 continue L0;
@@ -96,7 +96,7 @@ final class aa extends hl {
               }
             } else {
               var8 = this.field_Lb[var7].b(-26606, this.field_Qb, this.field_Mb);
-              if (var6 < var8) {
+              if ((var6 ^ -1) > (var8 ^ -1)) {
                 var6 = var8;
                 var7++;
                 continue L2;
@@ -153,22 +153,21 @@ final class aa extends hl {
     }
 
     final static void d(byte param0) {
-        String discarded$2 = null;
-        String var2 = null;
-        String var3 = null;
+        String var2;
+        String var3;
         var3 = (String) null;
         ve.a(-1, (String) null, pl.field_e);
         if (param0 >= 36) {
           return;
         } else {
           var2 = (String) null;
-          discarded$2 = aa.a((String) null, -21, -48, (String) null);
+          aa.a((String) null, -21, -48, (String) null);
           return;
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var9 = 0;
+        int var9;
         var9 = TetraLink.field_J;
         if (param3 <= param0) {
           if (param5 <= param0) {
@@ -279,48 +278,21 @@ final class aa extends hl {
         String stackIn_6_0 = null;
         String stackIn_9_0 = null;
         Object stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        Object stackOut_10_0 = null;
-        String stackOut_8_0 = null;
-        String stackOut_5_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         try {
           L0: {
             var8 = (CharSequence) ((Object) param0);
             if (!gi.a(false, var8)) {
-              stackOut_2_0 = uk.field_u;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = uk.field_u;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -337,19 +309,16 @@ final class aa extends hl {
                   var5.a(3, false);
                   var5.a(param0, 0);
                   var5.b(-var6 + var5.field_t, param2 + -4);
-                  stackOut_10_0 = null;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = null;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_8_0 = sk.a(new String[]{param3}, am.field_e, 121);
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = sk.a(new String[]{param3}, am.field_e, 121);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_5_0 = uf.field_a;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = uf.field_a;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -359,56 +328,40 @@ final class aa extends hl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var4);
-            stackOut_12_1 = new StringBuilder().append("aa.C(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var4);
+
+            stackIn_14_1 = new StringBuilder().append("aa.C(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L1;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L1;
             }
           }
           L2: {
-            stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+
+
+            stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L2;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L2;
             }
           }
-          throw oi.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_15_0), stackIn_18_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0;
@@ -426,48 +379,35 @@ final class aa extends hl {
     }
 
     final int b(boolean param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = TetraLink.field_J;
         this.a(0, param0);
         if (!param0) {
           return -2;
         } else {
-          if (param1 <= -90) {
-            var3 = 0;
-            L0: while (true) {
-              if (this.field_Rb <= var3) {
-                if (-1 != (tm.field_t ^ -1)) {
-                  return -1;
-                } else {
-                  return this.field_ac;
-                }
-              } else {
-                if (-1 == (this.field_Lb[var3].field_F ^ -1)) {
-                  var3++;
-                  continue L0;
-                } else {
-                  return this.field_Sb[var3];
-                }
-              }
+          L0: {
+            if (param1 <= -90) {
+              break L0;
+            } else {
+              field_Kb = (String) null;
+              break L0;
             }
-          } else {
-            field_Kb = (String) null;
-            var3 = 0;
-            L1: while (true) {
-              if (this.field_Rb <= var3) {
-                if (-1 != (tm.field_t ^ -1)) {
-                  return -1;
-                } else {
-                  return this.field_ac;
-                }
+          }
+          var3 = 0;
+          L1: while (true) {
+            if (this.field_Rb <= var3) {
+              if (-1 != (tm.field_t ^ -1)) {
+                return -1;
               } else {
-                if (-1 == (this.field_Lb[var3].field_F ^ -1)) {
-                  var3++;
-                  continue L1;
-                } else {
-                  return this.field_Sb[var3];
-                }
+                return this.field_ac;
+              }
+            } else {
+              if (-1 == (this.field_Lb[var3].field_F ^ -1)) {
+                var3++;
+                continue L1;
+              } else {
+                return this.field_Sb[var3];
               }
             }
           }

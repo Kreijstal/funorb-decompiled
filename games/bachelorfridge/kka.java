@@ -12,8 +12,8 @@ final class kka extends bw {
     static kv field_h;
 
     final static int a(int param0, int param1, int param2) {
-        String var3 = null;
-        int var4 = 0;
+        String var3;
+        int var4;
         var3 = lka.field_E[param0][param2];
         var3 = var3.trim();
         var3 = var3.toLowerCase();

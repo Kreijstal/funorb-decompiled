@@ -18,13 +18,13 @@ final class gh extends km {
     km field_Gb;
 
     final static String a(long param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         wc.field_l.setTime(new Date(param0));
         var3 = wc.field_l.get(7);
         var4 = wc.field_l.get(5);

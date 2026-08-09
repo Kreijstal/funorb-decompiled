@@ -24,12 +24,12 @@ final class sk implements Runnable {
     }
 
     final synchronized boolean c(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         if (-3 < (this.field_g ^ -1)) {
           L0: {
             if (-1 == (this.field_g ^ -1)) {
@@ -201,14 +201,14 @@ final class sk implements Runnable {
     }
 
     final static void b(byte param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -216,78 +216,151 @@ final class sk implements Runnable {
         int var4 = 0;
         String var5 = null;
         int[] var6 = null;
-        RuntimeException decompiledCaughtException = null;
-        var4 = fleas.field_A ? 1 : 0;
-        try {
-          L0: {
-            L1: {
-              var6 = ed.field_c;
-              var1 = var6;
-              var2 = 0;
-              var3 = var6.length;
-              if (param0 <= -75) {
-                break L1;
-              } else {
-                var5 = (String) null;
-                sk.a(-77, (String) null);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (var3 <= var2) {
-                break L0;
-              } else {
-                incrementValue$40 = var2;
-                var2++;
-                var1[incrementValue$40] = 0;
-                incrementValue$41 = var2;
-                var2++;
-                var1[incrementValue$41] = 0;
-                incrementValue$42 = var2;
-                var2++;
-                var1[incrementValue$42] = 0;
-                incrementValue$43 = var2;
-                var2++;
-                var1[incrementValue$43] = 0;
-                incrementValue$44 = var2;
-                var2++;
-                var1[incrementValue$44] = 0;
-                incrementValue$45 = var2;
-                var2++;
-                var1[incrementValue$45] = 0;
-                incrementValue$46 = var2;
-                var2++;
-                var1[incrementValue$46] = 0;
-                incrementValue$47 = var2;
-                var2++;
-                var1[incrementValue$47] = 0;
-                if (var4 == 0) {
-                  continue L2;
-                } else {
-                  return;
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = fleas.field_A ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
+                case 1: {
+                    try {
+                        var6 = ed.field_c;
+                        var1 = var6;
+                        var2 = 0;
+                        var3 = var6.length;
+                        if (param0 <= -75) {
+                            statePc = 3;
+                        } else {
+                            statePc = 2;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        var5 = (String) null;
+                        sk.a(-77, (String) null);
+                        statePc = 3;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        if (var3 <= var2) {
+                            statePc = 10;
+                        } else {
+                            statePc = 4;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        incrementValue$8 = var2;
+                        var2++;
+                        var1[incrementValue$8] = 0;
+                        incrementValue$9 = var2;
+                        var2++;
+                        var1[incrementValue$9] = 0;
+                        incrementValue$10 = var2;
+                        var2++;
+                        var1[incrementValue$10] = 0;
+                        incrementValue$11 = var2;
+                        var2++;
+                        var1[incrementValue$11] = 0;
+                        incrementValue$12 = var2;
+                        var2++;
+                        var1[incrementValue$12] = 0;
+                        incrementValue$13 = var2;
+                        var2++;
+                        var1[incrementValue$13] = 0;
+                        incrementValue$14 = var2;
+                        var2++;
+                        var1[incrementValue$14] = 0;
+                        incrementValue$15 = var2;
+                        var2++;
+                        var1[incrementValue$15] = 0;
+                        if (var4 == 0) {
+                            statePc = 6;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        return;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        if (var4 == 0) {
+                            statePc = 3;
+                        } else {
+                            statePc = 7;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        return;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 9: {
+                    var1_ref = (RuntimeException) ((Object) caughtException);
+                    throw pf.a((Throwable) ((Object) var1_ref), "sk.D(" + param0 + ')');
+                }
+                case 10: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1_ref), "sk.D(" + param0 + ')');
         }
     }
 
     public final void run() {
         try {
             int var1_int = 0;
-            Exception var1 = null;
-            Object var1_ref = null;
-            Throwable var2 = null;
-            Object var2_ref = null;
-            Throwable var3 = null;
             int var4 = 0;
             int var5 = 0;
             int var6 = 0;
             Throwable decompiledCaughtException = null;
+            Object var1 = null;
+            Exception var1_ref = null;
+            Object var2 = null;
             var4 = fleas.field_A ? 1 : 0;
             try {
               L0: while (true) {
@@ -326,8 +399,8 @@ final class sk implements Runnable {
                       break L2;
                     }
                   }
-                  var1_ref = this;
-                  synchronized (var1_ref) {
+                  var1 = this;
+                  synchronized (var1) {
                     L4: {
                       this.finalize();
                       this.field_g = 3;
@@ -340,9 +413,9 @@ final class sk implements Runnable {
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var2_ref = this;
-              synchronized (var2_ref) {
+              var1_ref = (Exception) (Object) decompiledCaughtException;
+              var2 = this;
+              synchronized (var2) {
                 L5: {
                   this.finalize();
                   this.field_g = this.field_g + 1;

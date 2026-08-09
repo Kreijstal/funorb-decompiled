@@ -17,9 +17,9 @@ final class ek {
     }
 
     private final int e(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var2 = this.field_d.field_j[this.field_d.field_h];
           if (var2 >= 0) {
@@ -215,10 +215,10 @@ final class ek {
     }
 
     final int a() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
         var1 = this.field_b.length;
         var2 = -1;
         var3 = 2147483647;

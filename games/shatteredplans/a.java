@@ -11,9 +11,8 @@ abstract class a extends oh {
     int field_h;
 
     public static void a(byte param0) {
-        int discarded$0 = 0;
         if (param0 != 15) {
-            discarded$0 = a.a(-111, -63);
+            a.a(-111, -63);
             field_i = null;
             return;
         }
@@ -82,7 +81,7 @@ abstract class a extends oh {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         if (0 != param0) {
           if (-1 > (param0 ^ -1)) {
             L0: {

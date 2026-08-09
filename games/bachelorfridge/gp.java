@@ -11,10 +11,10 @@ final class gp extends ana {
     static String[] field_B;
 
     final boolean c(byte param0) {
-        int var2 = 0;
-        int fieldTemp$2 = this.field_l - 1;
+        int var2;
+        int fieldTemp$1 = this.field_l - 1;
         this.field_l = this.field_l - 1;
-        if (-1 >= (fieldTemp$2 ^ -1)) {
+        if (-1 >= (fieldTemp$1 ^ -1)) {
           if (-26 == (this.field_l ^ -1)) {
             jja.a(256, -1, 52);
             this.e(44);
@@ -51,7 +51,7 @@ final class gp extends ana {
             return;
         }
         iv var3 = (iv) ((Object) this.field_w.field_o.b((byte) 90));
-        oha discarded$6 = al.a(107, this.field_w.field_k);
+        al.a(107, this.field_w.field_k);
         while (var3 != null) {
             var3.a(var2, this.field_q.field_h, 12);
             var4 = var3.field_h.a(-27449, this.field_q);
@@ -69,7 +69,6 @@ final class gp extends ana {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int discarded$0 = 0;
         try {
             var2_int = mk.field_p;
             var3 = gd.field_m;
@@ -83,7 +82,7 @@ final class gp extends ana {
             var8 = nga.a(var6, var3, (byte) 126, 20);
             dg.a(var7, var8, var5, var6, 0);
             dg.c(1 + var7, 1 + var8, var5 - 2, var6 - 2, 16777088);
-            discarded$0 = qs.field_m.field_jb.a(param1, 3 + var7, -qs.field_m.field_jb.field_u + (df.field_r + 1 + var8), 500, 1000, 0, -1, 0, 0, rg.field_h);
+            qs.field_m.field_jb.a(param1, 3 + var7, -qs.field_m.field_jb.field_u + (df.field_r + 1 + var8), 500, 1000, 0, -1, 0, 0, rg.field_h);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) ((Object) runtimeException), "gp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

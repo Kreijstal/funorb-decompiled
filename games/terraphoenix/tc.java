@@ -30,9 +30,8 @@ final class tc implements Iterable {
     }
 
     final vh c(int param0) {
-        vh discarded$0 = null;
         if (param0 != 0) {
-            discarded$0 = this.c(117);
+            this.c(117);
         }
         vh var2 = this.field_a.field_o;
         if (this.field_a == var2) {
@@ -44,11 +43,10 @@ final class tc implements Iterable {
 
     final static void b(int param0) {
         Object var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
-        Throwable var3 = null;
         int var4 = 0;
         Throwable decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = Terraphoenix.field_V;
         try {
           L0: {
@@ -125,35 +123,24 @@ final class tc implements Iterable {
     }
 
     final static String a(byte param0, byte[] param1, int param2, int param3) {
-        int incrementValue$1 = 0;
+        int incrementValue$0 = 0;
         char[] var4 = null;
-        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         char[] var10 = null;
         char[] var11 = null;
         char[] var12 = null;
         String stackIn_14_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_13_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException var4_ref = null;
+        int var8 = 0;
         var9 = Terraphoenix.field_V;
         try {
           L0: {
@@ -173,8 +160,7 @@ final class tc implements Iterable {
             var6 = 0;
             L2: while (true) {
               if (var6 >= param2) {
-                stackOut_13_0 = new String(var12, 0, var5);
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_0 = new String(var12, 0, var5);
                 break L0;
               } else {
                 var7 = 255 & param1[var6 + param3];
@@ -200,9 +186,9 @@ final class tc implements Iterable {
                       }
                     }
                   }
-                  incrementValue$1 = var5;
+                  incrementValue$0 = var5;
                   var5++;
-                  var10[incrementValue$1] = (char)var7;
+                  var10[incrementValue$0] = (char)var7;
                   var6++;
                   continue L2;
                 } else {
@@ -216,27 +202,19 @@ final class tc implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var4_ref);
-            stackOut_15_1 = new StringBuilder().append("tc.C(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var4_ref);
+
+            stackIn_17_1 = new StringBuilder().append("tc.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L5;
             }
           }

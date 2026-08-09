@@ -34,8 +34,8 @@ abstract class mf extends uh {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
+        int var6;
+        int var7;
         if (param0 != 5) {
           this.field_z = 65;
           var6 = this.field_z << 977481795;
@@ -55,8 +55,8 @@ abstract class mf extends uh {
     }
 
     final static void h(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         cj.field_e = null;
         gm.field_J = 0;

@@ -11,10 +11,9 @@ final class ok extends uf {
     private static String field_z;
 
     final static jh a(boolean param0, int param1) {
-        jh discarded$2 = null;
-        jh var2 = null;
+        jh var2;
         if (param0) {
-          discarded$2 = ok.a(false, -126);
+          ok.a(false, -126);
           var2 = new jh();
           qc.field_a.a(var2, -16611);
           da.a(0, param1);

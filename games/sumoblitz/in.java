@@ -75,7 +75,7 @@ final class in extends ie {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        wb var6 = null;
+        wb var6;
         if (0 != param3) {
           return;
         } else {

@@ -5,8 +5,6 @@ final class sh {
     static uk field_a;
 
     final static int b(int param0) {
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -17,50 +15,40 @@ final class sh {
         int stackIn_22_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_17_0 = 0;
         var2 = Torquing.field_u;
         try {
           L0: {
-            discarded$12 = dc.field_a.a(true, ld.field_l, bf.field_d, false);
+            dc.field_a.a(true, ld.field_l, bf.field_d, false);
             dc.field_a.g((byte) -125);
             L1: while (true) {
               if (!np.a((byte) -13)) {
                 if (param0 != (om.field_h ^ -1)) {
                   var1_int = om.field_h;
                   od.b(128, -1);
-                  stackOut_6_0 = var1_int;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = var1_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
                   if (aq.field_c) {
-                    stackOut_10_0 = 3;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = 3;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     if (kh.field_o == mg.field_b) {
-                      stackOut_14_0 = 1;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 1;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
                       if (qk.field_q.c(484)) {
                         if (bh.field_a == mg.field_b) {
-                          stackOut_21_0 = 2;
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_22_0 = 2;
                           decompiledRegionSelector0 = 4;
                           break L0;
                         } else {
                           return -1;
                         }
                       } else {
-                        stackOut_17_0 = 1;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = 1;
                         decompiledRegionSelector0 = 3;
                         break L0;
                       }
@@ -68,7 +56,7 @@ final class sh {
                   }
                 }
               } else {
-                discarded$13 = dc.field_a.a(e.field_f, 24454, m.field_t);
+                dc.field_a.a(e.field_f, 24454, m.field_t);
                 continue L1;
               }
             }

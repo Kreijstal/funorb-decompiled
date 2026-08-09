@@ -14,33 +14,19 @@ final class fj {
 
     final int a(int param0, int param1) {
         int var3 = 0;
-        int var4 = 0;
-        var4 = Chess.field_G;
-        if (param1 == -1) {
-          if (this.field_i == null) {
-            return 0;
-          } else {
-            if (-1 != (this.field_i.length ^ -1)) {
-              var3 = 1;
-              L0: while (true) {
-                if (var3 >= this.field_i.length) {
-                  return this.field_i.length + -1;
-                } else {
-                  if (this.field_i[var3] + this.field_i[-1 + var3] >> -144935775 > param0) {
-                    return var3 - 1;
-                  } else {
-                    var3++;
-                    continue L0;
-                  }
-                }
-              }
-            } else {
-              return 0;
-            }
-          }
-        } else {
-          return 55;
+        int var4 = Chess.field_G;
+        if (param1 != -1) {
+            return 55;
         }
+        if (this.field_i == null || -1 == (this.field_i.length ^ -1)) {
+            return 0;
+        }
+        for (var3 = 1; var3 < this.field_i.length; var3++) {
+            if (!(this.field_i[var3] + this.field_i[-1 + var3] >> -144935775 <= param0)) {
+                return var3 - 1;
+            }
+        }
+        return this.field_i.length + -1;
     }
 
     public static void a(byte param0) {
@@ -84,15 +70,12 @@ final class fj {
     }
 
     final int a(boolean param0) {
-        ld discarded$2 = null;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (!param0) {
             break L0;
           } else {
-            discarded$2 = fj.a(117, 25, -75, -73);
+            fj.a(117, 25, -75, -73);
             break L0;
           }
         }
@@ -102,16 +85,14 @@ final class fj {
               break L2;
             } else {
               if (0 != this.field_i.length) {
-                stackOut_6_0 = this.field_i[this.field_i.length + -1];
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = this.field_i[this.field_i.length + -1];
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0;
@@ -124,22 +105,20 @@ final class fj {
     }
 
     final static ld a(int param0, int param1, int param2, int param3) {
-        Object var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        ld var8_ref_ld = null;
-        int var9 = 0;
-        ld var9_ref_ld = null;
-        int var10_int = 0;
-        String var10 = null;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
         int stackIn_44_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_42_0 = 0;
+        Object var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        ld var8_ref_ld;
+        int var9;
+        ld var9_ref_ld;
+        int var10_int;
+        String var10;
+        String var11;
+        int var12;
+        int var13;
         L0: {
           var13 = Chess.field_G;
           ac.field_j.field_Kb.field_I.e(-31023);
@@ -207,12 +186,10 @@ final class fj {
                 L7: {
                   ac.field_j.a((byte) -109, param2, true, param1 * 2 * param2);
                   if (ac.field_j.field_Kb.field_V + ac.field_j.field_Kb.field_vb != var9) {
-                    stackOut_43_0 = 0;
-                    stackIn_44_0 = stackOut_43_0;
+                    stackIn_44_0 = 0;
                     break L7;
                   } else {
-                    stackOut_42_0 = 1;
-                    stackIn_44_0 = stackOut_42_0;
+                    stackIn_44_0 = 1;
                     break L7;
                   }
                 }

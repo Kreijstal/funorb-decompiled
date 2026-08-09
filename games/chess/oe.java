@@ -5,8 +5,8 @@ final class oe extends ek implements java.awt.event.MouseWheelListener {
     private int field_g;
 
     final synchronized int a(byte param0) {
-        int var2 = 0;
-        java.awt.Component var3 = null;
+        int var2;
+        java.awt.Component var3;
         if (param0 > -63) {
           var3 = (java.awt.Component) null;
           this.a((byte) 89, (java.awt.Component) null);

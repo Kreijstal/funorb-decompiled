@@ -20,7 +20,6 @@ final class la {
     }
 
     public static void a(byte param0) {
-        String discarded$2 = null;
         field_d = null;
         field_g = null;
         field_f = null;
@@ -28,7 +27,7 @@ final class la {
         field_e = null;
         field_b = null;
         if (param0 != -86) {
-          discarded$2 = la.a(119);
+          la.a(119);
           field_a = null;
           field_j = null;
           field_h = null;

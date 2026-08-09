@@ -17,7 +17,6 @@ final class ko extends vjb {
 
     final void a(float param0, float param1, float[] param2, float param3, int param4, float param5, byte param6, int param7, int param8, int param9, int param10) {
         int incrementValue$1 = 0;
-        RuntimeException var12 = null;
         int var12_int = 0;
         int var13 = 0;
         int var14 = 0;
@@ -48,22 +47,13 @@ final class ko extends vjb {
         float var39 = 0.0f;
         float var40 = 0.0f;
         int var41 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var12 = null;
         var41 = VoidHunters.field_G;
         try {
           L0: {
@@ -136,27 +126,19 @@ final class ko extends vjb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var12 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var12);
-            stackOut_10_1 = new StringBuilder().append("ko.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var12);
+
+            stackIn_12_1 = new StringBuilder().append("ko.B(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -167,6 +149,7 @@ final class ko extends vjb {
     ko(int param0) {
         int var4 = 0;
         int var5 = 0;
+        int dupTemp$0 = 0;
         int var3 = 0;
         this.field_f = new int[512];
         Random var2 = new Random((long)param0);
@@ -179,8 +162,9 @@ final class ko extends vjb {
         while (var7 < 256) {
             var4 = var2.nextInt() & 255;
             var5 = this.field_f[var4];
-            this.field_f[var4 - -256] = this.field_f[var7];
-            this.field_f[var4] = this.field_f[var7];
+            dupTemp$0 = this.field_f[var7];
+            this.field_f[var4 - -256] = dupTemp$0;
+            this.field_f[var4] = dupTemp$0;
             this.field_f[256 + var7] = var5;
             this.field_f[var7] = var5;
             var7++;

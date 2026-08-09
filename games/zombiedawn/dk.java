@@ -16,81 +16,55 @@ final class dk extends wc {
     private a[] field_bc;
 
     final void b(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        L0: {
-          var8 = ZombieDawn.field_J;
-          var4 = 2 + this.field_Gb;
-          if (param1 <= -91) {
-            break L0;
-          } else {
+        int var8 = ZombieDawn.field_J;
+        int var4 = 2 + this.field_Gb;
+        if (param1 > -91) {
             field_Vb = (String) null;
-            break L0;
-          }
         }
-        if (var4 == 0) {
-          return;
+        if (!(var4 != 0)) {
+            return;
+        }
+        int var5 = var4;
+        int var6 = var4 / 2;
+        int var7 = -var4 + 8;
+        if ((this.field_cc ^ -1) == -3) {
+            bi.d(-var7 + param0 - -9, param2 - 15 - var7, var5 + -1, 0, 64);
+            bi.d(7 + param0, -20 + param2, -1 + var6, 0, 128);
+            bi.a(9 + param0 + -var7 << 901558244, -var7 + (param2 - 15) << -1458768700, var5 << -133018556, 250, dm.field_p);
+            bi.a(param0 - -7 << -1225249756, -20 + param2 << 910197508, var6 << -294213340, 200, dm.field_r);
         } else {
-          L1: {
-            var5 = var4;
-            var6 = var4 / 2;
-            var7 = -var4 + 8;
-            if ((this.field_cc ^ -1) != -3) {
-              if ((this.field_cc ^ -1) == -2) {
-                bi.d(var7 + -7 + param0, -var7 + (param2 - 15), -1 + var5, 0, 64);
-                bi.d(-4 + param0, param2 - 20, -1 + var6, 0, 128);
-                bi.a(var7 + (param0 - 7) << -439229724, param2 + (-15 - var7) << -1177496348, var5 << 412788068, 250, dm.field_p);
-                bi.a(param0 - 4 << 816202884, param2 - 20 << -688756284, var6 << -978454108, 200, dm.field_r);
-                break L1;
-              } else {
+            if ((this.field_cc ^ -1) != -2) {
                 bi.d(-2 + param0, -10 + (param2 - var7), var5 + -1, 0, 64);
                 bi.d(-2 + param0, -16 + param2, var6 - 1, 0, 128);
                 bi.a(param0 - 2 << -215119484, -var7 + param2 + -10 << -1134074140, var5 << -513134716, 250, dm.field_p);
                 bi.a(param0 + -2 << 653891812, param2 - 16 << 1185891300, var6 << 1059036196, 200, dm.field_r);
-                break L1;
-              }
             } else {
-              bi.d(-var7 + param0 - -9, param2 - 15 - var7, var5 + -1, 0, 64);
-              bi.d(7 + param0, -20 + param2, -1 + var6, 0, 128);
-              bi.a(9 + param0 + -var7 << 901558244, -var7 + (param2 - 15) << -1458768700, var5 << -133018556, 250, dm.field_p);
-              bi.a(param0 - -7 << -1225249756, -20 + param2 << 910197508, var6 << -294213340, 200, dm.field_r);
-              break L1;
+                bi.d(var7 + -7 + param0, -var7 + (param2 - 15), -1 + var5, 0, 64);
+                bi.d(-4 + param0, param2 - 20, -1 + var6, 0, 128);
+                bi.a(var7 + (param0 - 7) << -439229724, param2 + (-15 - var7) << -1177496348, var5 << 412788068, 250, dm.field_p);
+                bi.a(param0 - 4 << 816202884, param2 - 20 << -688756284, var6 << -978454108, 200, dm.field_r);
             }
-          }
-          return;
         }
     }
 
     final void g(int param0) {
-        boolean discarded$6 = false;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        fn discarded$10 = null;
-        fn discarded$11 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        Object stackIn_54_0 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
         Object stackIn_55_0 = null;
         Object stackIn_56_0 = null;
         int stackIn_56_1 = 0;
-        Object stackOut_53_0 = null;
-        Object stackOut_55_0 = null;
-        int stackOut_55_1 = 0;
-        Object stackOut_54_0 = null;
-        int stackOut_54_1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = ZombieDawn.field_J;
           this.field_Wb = this.field_Wb + 1;
           if (1 == this.field_F) {
             this.field_V = false;
             this.g((byte) 87);
-            discarded$6 = this.h((byte) -91);
+            this.h((byte) -91);
             this.field_V = true;
             break L0;
           } else {
@@ -154,20 +128,15 @@ final class dk extends wc {
                   }
                   if ((this.field_Wb ^ -1) > -350) {
                     L6: {
-                      stackOut_53_0 = this;
-                      stackIn_55_0 = stackOut_53_0;
-                      stackIn_54_0 = stackOut_53_0;
+                      stackIn_55_0 = this;
+
                       if ((this.field_Wb ^ -1) >= -333) {
-                        stackOut_55_0 = this;
-                        stackOut_55_1 = 0;
-                        stackIn_56_0 = stackOut_55_0;
-                        stackIn_56_1 = stackOut_55_1;
+                        stackIn_56_0 = this;
+                        stackIn_56_1 = 0;
                         break L6;
                       } else {
-                        stackOut_54_0 = this;
-                        stackOut_54_1 = 1;
-                        stackIn_56_0 = stackOut_54_0;
-                        stackIn_56_1 = stackOut_54_1;
+                        stackIn_56_0 = this;
+                        stackIn_56_1 = 1;
                         break L6;
                       }
                     }
@@ -200,9 +169,9 @@ final class dk extends wc {
                               } else {
                                 if (-15981 > (this.field_Wb ^ -1)) {
                                   if (this.field_G >= 4) {
-                                    fieldTemp$7 = this.field_Yb;
+                                    fieldTemp$0 = this.field_Yb;
                                     this.field_Yb = this.field_Yb + 1;
-                                    if (fieldTemp$7 < 2) {
+                                    if (fieldTemp$0 < 2) {
                                       this.field_T = 0;
                                       this.field_O = 0;
                                       this.field_Y = this.a(true);
@@ -228,13 +197,13 @@ final class dk extends wc {
                                       }
                                     }
                                     super.g(125);
-                                    fieldTemp$8 = this.field_N + 1;
+                                    fieldTemp$1 = this.field_N + 1;
                                     this.field_N = this.field_N + 1;
-                                    if (fieldTemp$8 > 5) {
+                                    if (fieldTemp$1 > 5) {
                                       this.field_N = 0;
-                                      fieldTemp$9 = this.field_G + 1;
+                                      fieldTemp$2 = this.field_G + 1;
                                       this.field_G = this.field_G + 1;
-                                      if (fieldTemp$9 >= 6) {
+                                      if (fieldTemp$2 >= 6) {
                                         this.field_G = 6;
                                         break L4;
                                       } else {
@@ -276,8 +245,8 @@ final class dk extends wc {
                             }
                           }
                         } else {
-                          discarded$10 = kh.a(110, false);
-                          discarded$11 = jp.a((byte) 127, 100);
+                          kh.a(110, false);
+                          jp.a((byte) 127, 100);
                           this.e(0, -6904);
                           break L4;
                         }
@@ -316,25 +285,12 @@ final class dk extends wc {
     }
 
     final void a(byte param0, wk param1) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7_int = 0;
-        int[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
         int stackIn_16_0 = 0;
-        vn stackIn_28_0 = null;
-        int stackIn_28_1 = 0;
         vn stackIn_29_0 = null;
         int stackIn_29_1 = 0;
         vn stackIn_30_0 = null;
         int stackIn_30_1 = 0;
         int stackIn_30_2 = 0;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         RuntimeException stackIn_41_0 = null;
@@ -342,24 +298,15 @@ final class dk extends wc {
         String stackIn_41_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        vn stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        vn stackOut_29_0 = null;
-        int stackOut_29_1 = 0;
-        int stackOut_29_2 = 0;
-        vn stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        int stackOut_28_2 = 0;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7_int = 0;
+        int[] var7 = null;
+        int var8 = 0;
+        int var9 = 0;
         var9 = ZombieDawn.field_J;
         try {
           L0: {
@@ -417,12 +364,10 @@ final class dk extends wc {
                 }
                 L4: {
                   if (this.field_Ub) {
-                    stackOut_15_0 = this.field_cc * 6 + 6;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = this.field_cc * 6 + 6;
                     break L4;
                   } else {
-                    stackOut_14_0 = 0;
-                    stackIn_16_0 = stackOut_14_0;
+                    stackIn_16_0 = 0;
                     break L4;
                   }
                 }
@@ -439,27 +384,19 @@ final class dk extends wc {
                 break L2;
               }
               L6: {
-                stackOut_27_0 = nb.field_k[1];
-                stackOut_27_1 = -12;
-                stackIn_29_0 = stackOut_27_0;
-                stackIn_29_1 = stackOut_27_1;
-                stackIn_28_0 = stackOut_27_0;
-                stackIn_28_1 = stackOut_27_1;
+                stackIn_29_0 = nb.field_k[1];
+
+                stackIn_29_1 = -12;
+
                 if ((this.field_S ^ -1) != -4) {
-                  stackOut_29_0 = (vn) ((Object) stackIn_29_0);
-                  stackOut_29_1 = stackIn_29_1;
-                  stackOut_29_2 = var3_int + -3;
-                  stackIn_30_0 = stackOut_29_0;
-                  stackIn_30_1 = stackOut_29_1;
-                  stackIn_30_2 = stackOut_29_2;
+                  stackIn_30_0 = (vn) ((Object) stackIn_29_0);
+                  stackIn_30_1 = stackIn_29_1;
+                  stackIn_30_2 = var3_int + -3;
                   break L6;
                 } else {
-                  stackOut_28_0 = (vn) ((Object) stackIn_28_0);
-                  stackOut_28_1 = stackIn_28_1;
-                  stackOut_28_2 = var3_int + -2;
-                  stackIn_30_0 = stackOut_28_0;
-                  stackIn_30_1 = stackOut_28_1;
-                  stackIn_30_2 = stackOut_28_2;
+                  stackIn_30_0 = (vn) ((Object) stackIn_29_0);
+                  stackIn_30_1 = stackIn_29_1;
+                  stackIn_30_2 = var3_int + -2;
                   break L6;
                 }
               }
@@ -501,27 +438,19 @@ final class dk extends wc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var3 = decompiledCaughtException;
-            stackOut_38_0 = (RuntimeException) (var3);
-            stackOut_38_1 = new StringBuilder().append("dk.B(").append(param0).append(',');
-            stackIn_40_0 = stackOut_38_0;
-            stackIn_40_1 = stackOut_38_1;
-            stackIn_39_0 = stackOut_38_0;
-            stackIn_39_1 = stackOut_38_1;
+            stackIn_40_0 = (RuntimeException) (var3);
+
+            stackIn_40_1 = new StringBuilder().append("dk.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "null";
-              stackIn_41_0 = stackOut_40_0;
-              stackIn_41_1 = stackOut_40_1;
-              stackIn_41_2 = stackOut_40_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "null";
               break L10;
             } else {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "{...}";
-              stackIn_41_0 = stackOut_39_0;
-              stackIn_41_1 = stackOut_39_1;
-              stackIn_41_2 = stackOut_39_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "{...}";
               break L10;
             }
           }

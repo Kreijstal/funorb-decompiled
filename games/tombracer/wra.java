@@ -13,9 +13,9 @@ final class wra extends IOException {
 
     final static void a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -34,11 +34,7 @@ final class wra extends IOException {
               } else {
                 db.field_h.field_c[var1_int] = vba.field_x[var1_int];
                 var1_int++;
-                if (var2 == 0) {
-                  continue L2;
-                } else {
-                  return;
-                }
+                continue L2;
               }
             }
           }

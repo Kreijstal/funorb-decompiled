@@ -9,19 +9,11 @@ final class hh {
     static int field_e;
 
     final static void a(byte param0, int param1) {
-        uh discarded$8 = null;
-        uh discarded$9 = null;
-        uh discarded$10 = null;
-        uh discarded$11 = null;
-        uh discarded$12 = null;
-        uh discarded$13 = null;
-        uh discarded$14 = null;
-        uh discarded$15 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = Virogrid.field_F ? 1 : 0;
         var2 = 0;
         var3 = kf.field_e;
@@ -85,7 +77,7 @@ final class hh {
                 var5 = -1;
                 if (param0 < 75) {
                   L6: {
-                    discarded$8 = hh.a(105);
+                    hh.a(105);
                     if (-12 == (param1 ^ -1)) {
                       var4 = -1;
                       break L6;
@@ -184,7 +176,7 @@ final class hh {
           }
           if (param0 < 75) {
             L16: {
-              discarded$9 = hh.a(105);
+              hh.a(105);
               if (-12 == (param1 ^ -1)) {
                 var4 = -1;
                 break L16;
@@ -336,7 +328,7 @@ final class hh {
                     if (param0 >= 75) {
                       break L31;
                     } else {
-                      discarded$10 = hh.a(105);
+                      hh.a(105);
                       break L31;
                     }
                   }
@@ -391,7 +383,7 @@ final class hh {
                     if (param0 >= 75) {
                       break L37;
                     } else {
-                      discarded$11 = hh.a(105);
+                      hh.a(105);
                       break L37;
                     }
                   }
@@ -449,7 +441,7 @@ final class hh {
                   if (param0 >= 75) {
                     break L43;
                   } else {
-                    discarded$12 = hh.a(105);
+                    hh.a(105);
                     break L43;
                   }
                 }
@@ -605,7 +597,7 @@ final class hh {
                   return;
                 } else {
                   L60: {
-                    discarded$13 = hh.a(105);
+                    hh.a(105);
                     if (-12 == (param1 ^ -1)) {
                       var4 = -1;
                       break L60;
@@ -659,7 +651,7 @@ final class hh {
                   if (param0 >= 75) {
                     break L65;
                   } else {
-                    discarded$14 = hh.a(105);
+                    hh.a(105);
                     break L65;
                   }
                 }
@@ -778,7 +770,7 @@ final class hh {
               if (param0 >= 75) {
                 break L78;
               } else {
-                discarded$15 = hh.a(105);
+                hh.a(105);
                 break L78;
               }
             }
@@ -833,9 +825,8 @@ final class hh {
     }
 
     final static uh a(int param0) {
-        String discarded$2 = null;
         if (param0 != -30890) {
-          discarded$2 = hh.b((byte) 14);
+          hh.b((byte) 14);
           return new uh(eh.d(-110), ci.i(24410));
         } else {
           return new uh(eh.d(-110), ci.i(24410));

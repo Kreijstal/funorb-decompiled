@@ -44,14 +44,11 @@ final class cm {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
+        int stackIn_15_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_7_0 = 0;
         var4 = TetraLink.field_J;
         try {
           L0: {
@@ -60,19 +57,16 @@ final class cm {
               if (1 >= param2) {
                 if (1 != param2) {
                   if (param1 >= 80) {
-                    stackOut_12_0 = var3_int;
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_15_0 = var3_int;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    stackOut_10_0 = -51;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_13_0 = -51;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 } else {
-                  stackOut_7_0 = param0 * var3_int;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_10_0 = param0 * var3_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -97,12 +91,12 @@ final class cm {
           throw oi.a((Throwable) ((Object) var3), "cm.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0;
+          return stackIn_10_0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_11_0;
-          } else {
             return stackIn_13_0;
+          } else {
+            return stackIn_15_0;
           }
         }
     }

@@ -9,20 +9,14 @@ final class tb {
     final static java.awt.Canvas a(byte param0) {
         Object stackIn_4_0 = null;
         Object stackIn_8_0 = null;
-        java.awt.Canvas stackOut_7_0 = null;
-        ea stackOut_6_0 = null;
-        java.awt.Canvas stackOut_3_0 = null;
-        ea stackOut_2_0 = null;
         if (param0 <= 107) {
           L0: {
             field_b = (String[]) null;
             if (null == mg.field_k) {
-              stackOut_7_0 = tf.field_f;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = tf.field_f;
               break L0;
             } else {
-              stackOut_6_0 = mg.field_k;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = mg.field_k;
               break L0;
             }
           }
@@ -30,12 +24,10 @@ final class tb {
         } else {
           L1: {
             if (null == mg.field_k) {
-              stackOut_3_0 = tf.field_f;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = tf.field_f;
               break L1;
             } else {
-              stackOut_2_0 = mg.field_k;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = mg.field_k;
               break L1;
             }
           }
@@ -44,14 +36,13 @@ final class tb {
     }
 
     final static int a(int param0, int param1, int param2) {
-        java.awt.Canvas discarded$1 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var3 = param2 >> -714080944;
         if (param1 != 723204176) {
-          discarded$1 = tb.a((byte) -5);
+          tb.a((byte) -5);
           var4 = 65535 & param2;
           var5 = param0 >> 723204176;
           var6 = 65535 & param0;

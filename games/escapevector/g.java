@@ -24,7 +24,7 @@ abstract class g extends eh {
     }
 
     final int k(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = this.g((byte) 117);
         if (param0 == -67) {
           L0: {
@@ -155,30 +155,16 @@ abstract class g extends eh {
     }
 
     final void j(int param0) {
-        int discarded$38 = 0;
-        int discarded$39 = 0;
-        int var3 = 0;
-        Object stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
-        int stackIn_10_2 = 0;
+        int discarded$1 = 0;
+        int discarded$2 = 0;
+        int var3;
         Object stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
-        Object stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
-        int stackIn_12_2 = 0;
-        int stackIn_12_3 = 0;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        int stackOut_11_3 = 0;
-        Object stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        int stackOut_10_2 = 0;
-        int stackOut_10_3 = 0;
+        Object stackIn_12_0;
+        int stackIn_12_1;
+        int stackIn_12_2;
+        int stackIn_12_3;
         L0: {
           var3 = EscapeVector.field_A;
           if (param0 == -9926) {
@@ -191,38 +177,27 @@ abstract class g extends eh {
         L1: {
           if (aa.a((byte) 102)) {
             L2: {
-              stackOut_9_0 = this;
-              stackOut_9_1 = param0 ^ -9787;
-              stackOut_9_2 = 0;
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_11_0 = this;
+
+              stackIn_11_1 = param0 ^ -9787;
+
+              stackIn_11_2 = 0;
+
               if (null == df.field_d) {
-                stackOut_11_0 = this;
-                stackOut_11_1 = stackIn_11_1;
-                stackOut_11_2 = stackIn_11_2;
-                stackOut_11_3 = 0;
-                stackIn_12_0 = stackOut_11_0;
-                stackIn_12_1 = stackOut_11_1;
-                stackIn_12_2 = stackOut_11_2;
-                stackIn_12_3 = stackOut_11_3;
+                stackIn_12_0 = this;
+                stackIn_12_1 = stackIn_11_1;
+                stackIn_12_2 = stackIn_11_2;
+                stackIn_12_3 = 0;
                 break L2;
               } else {
-                stackOut_10_0 = this;
-                stackOut_10_1 = stackIn_10_1;
-                stackOut_10_2 = stackIn_10_2;
-                stackOut_10_3 = 1;
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_12_1 = stackOut_10_1;
-                stackIn_12_2 = stackOut_10_2;
-                stackIn_12_3 = stackOut_10_3;
+                stackIn_12_0 = this;
+                stackIn_12_1 = stackIn_11_1;
+                stackIn_12_2 = stackIn_11_2;
+                stackIn_12_3 = 1;
                 break L2;
               }
             }
-            discarded$38 = this.a(stackIn_12_1, stackIn_12_2 != 0, stackIn_12_3 != 0);
+            discarded$1 = this.a(stackIn_12_1, stackIn_12_2 != 0, stackIn_12_3 != 0);
             break L1;
           } else {
             if ((fc.field_a ^ -1) > -11) {
@@ -230,7 +205,7 @@ abstract class g extends eh {
             } else {
               if (jf.l(3)) {
                 if (ff.field_e == 0) {
-                  discarded$39 = this.a(255, false, false);
+                  discarded$2 = this.a(255, false, false);
                   break L1;
                 } else {
                   ac.a(25972, mg.field_f);
@@ -246,20 +221,19 @@ abstract class g extends eh {
     }
 
     final static ed[] e(int param0) {
-        ed[] discarded$1 = null;
-        ed[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int[] var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int[] var13 = null;
-        int[] var16 = null;
-        byte[] var20 = null;
-        int[] var21 = null;
-        byte[] var22 = null;
+        ed[] var1;
+        int var2;
+        int var3;
+        int[] var6;
+        int var6_int;
+        int var7;
+        int var8;
+        int[] var9;
+        int[] var13;
+        int[] var16;
+        byte[] var20;
+        int[] var21;
+        byte[] var22;
         var8 = EscapeVector.field_A;
         var1 = new ed[qk.field_j];
         var2 = 0;
@@ -269,7 +243,7 @@ abstract class g extends eh {
               if (param0 == 15556) {
                 break L1;
               } else {
-                discarded$1 = g.e(126);
+                g.e(126);
                 break L1;
               }
             }
@@ -327,21 +301,10 @@ abstract class g extends eh {
     }
 
     private final void a(int param0, String param1, int param2, int param3, int param4) {
-        Exception var6 = null;
-        RuntimeException var6_ref = null;
-        String var6_ref2 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -350,21 +313,13 @@ abstract class g extends eh {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        String var6 = null;
+        Exception var6_ref = null;
+        RuntimeException var6_ref2 = null;
+        String var7 = null;
+        String var8 = null;
+        String var9 = null;
+        String var10 = null;
         try {
           L0: {
             try {
@@ -373,33 +328,26 @@ abstract class g extends eh {
                   L2: {
                     L3: {
                       this.field_s = this.getCodeBase().getHost();
-                      var6_ref2 = this.field_s.toLowerCase();
-                      stackOut_2_0 = this;
-                      stackIn_5_0 = stackOut_2_0;
-                      stackIn_3_0 = stackOut_2_0;
-                      if (var6_ref2.equals("jagex.com")) {
+                      var6 = this.field_s.toLowerCase();
+                      stackIn_5_0 = this;
+
+                      if (var6.equals("jagex.com")) {
                         break L3;
                       } else {
-                        stackOut_3_0 = this;
-                        stackIn_6_0 = stackOut_3_0;
-                        stackIn_4_0 = stackOut_3_0;
-                        if (!var6_ref2.endsWith(".jagex.com")) {
-                          stackOut_6_0 = this;
-                          stackOut_6_1 = 0;
-                          stackIn_7_0 = stackOut_6_0;
-                          stackIn_7_1 = stackOut_6_1;
+                        stackIn_6_0 = this;
+
+                        if (!var6.endsWith(".jagex.com")) {
+                          stackIn_7_0 = this;
+                          stackIn_7_1 = 0;
                           break L2;
                         } else {
-                          stackOut_4_0 = this;
-                          stackIn_5_0 = stackOut_4_0;
+                          stackIn_5_0 = this;
                           break L3;
                         }
                       }
                     }
-                    stackOut_5_0 = this;
-                    stackOut_5_1 = 1;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_7_1 = stackOut_5_1;
+                    stackIn_7_0 = this;
+                    stackIn_7_1 = 1;
                     break L2;
                   }
                   L4: {
@@ -455,9 +403,9 @@ abstract class g extends eh {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L8: {
-                var6 = (Exception) (Object) decompiledCaughtException;
+                var6_ref = (Exception) (Object) decompiledCaughtException;
                 var10 = (String) null;
-                pf.a(false, (String) null, (Throwable) ((Object) var6));
+                pf.a(false, (String) null, (Throwable) ((Object) var6_ref));
                 this.a(-1, "crash");
                 decompiledRegionSelector0 = 1;
                 break L8;
@@ -474,28 +422,20 @@ abstract class g extends eh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           L9: {
-            var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var6_ref);
-            stackOut_21_1 = new StringBuilder().append("g.BA(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_23_0 = (RuntimeException) (var6_ref2);
+
+            stackIn_23_1 = new StringBuilder().append("g.BA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L9;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L9;
             }
           }
@@ -510,16 +450,16 @@ abstract class g extends eh {
 
     private final int a(int param0, boolean param1, boolean param2) {
         try {
+            Throwable decompiledCaughtException = null;
             int var4 = 0;
-            Exception var5 = null;
             int var5_int = 0;
+            Exception var5 = null;
             String var7 = null;
             int var8 = 0;
             String var9 = null;
             String var10 = null;
             Boolean var11 = null;
             n var12 = null;
-            Throwable decompiledCaughtException = null;
             var8 = EscapeVector.field_A;
             var4 = mm.a(param0 ^ 191, param2, mg.field_f, ff.field_h);
             if (-1 != (var4 ^ -1)) {
@@ -809,13 +749,11 @@ abstract class g extends eh {
     }
 
     final void f(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        gi var4 = null;
-        int var5 = 0;
         int stackIn_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
+        int var2;
+        int var3;
+        gi var4;
+        int var5;
         L0: {
           var5 = EscapeVector.field_A;
           var2 = cd.field_v;
@@ -880,12 +818,10 @@ abstract class g extends eh {
                                     }
                                     L3: {
                                       if (12 != var2) {
-                                        stackOut_24_0 = 0;
-                                        stackIn_25_0 = stackOut_24_0;
+                                        stackIn_25_0 = 0;
                                         break L3;
                                       } else {
-                                        stackOut_23_0 = 1;
-                                        stackIn_25_0 = stackOut_23_0;
+                                        stackIn_25_0 = 1;
                                         break L3;
                                       }
                                     }
@@ -928,43 +864,23 @@ abstract class g extends eh {
     }
 
     final static void a(byte[] param0, int param1, int[] param2, int param3, int param4) {
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        byte dupTemp$7 = 0;
+        int dupTemp$8 = 0;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var5 = null;
         var7 = EscapeVector.field_A;
         try {
           L0: {
@@ -984,17 +900,19 @@ abstract class g extends eh {
                 param4 = al.field_f[var5_int];
                 var6 = var5_int << 2109849060;
                 L3: while (true) {
-                  incrementValue$12 = param4;
+                  incrementValue$5 = param4;
                   param4--;
-                  if (incrementValue$12 == 0) {
+                  if (incrementValue$5 == 0) {
                     var5_int++;
                     continue L2;
                   } else {
-                    incrementValue$13 = var6;
+                    incrementValue$6 = var6;
                     var6++;
-                    param1 = bc.field_f[incrementValue$13];
-                    param2[param0[param1]] = param2[param0[param1]] + 1;
-                    bc.field_f[param2[param0[param1]]] = param1;
+                    param1 = bc.field_f[incrementValue$6];
+                    dupTemp$7 = param0[param1];
+                    dupTemp$8 = param2[dupTemp$7];
+                    param2[dupTemp$7] = dupTemp$8 + 1;
+                    bc.field_f[dupTemp$8] = param1;
                     continue L3;
                   }
                 }
@@ -1005,56 +923,40 @@ abstract class g extends eh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var5);
-            stackOut_10_1 = new StringBuilder().append("g.IA(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var5);
+
+            stackIn_12_1 = new StringBuilder().append("g.IA(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
           L5: {
-            stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param3 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1087,7 +989,7 @@ abstract class g extends eh {
     }
 
     private final int g(byte param0) {
-        int var2 = 0;
+        int var2;
         if (this.field_b) {
           return -1;
         } else {
@@ -1152,46 +1054,18 @@ abstract class g extends eh {
     }
 
     final void a(int param0, boolean param1) {
-        int var3 = 0;
-        java.awt.Dimension var4 = null;
-        int var5 = 0;
-        java.awt.Container var6 = null;
         int stackIn_24_0 = 0;
-        String stackIn_97_0 = null;
         String stackIn_98_0 = null;
         String stackIn_99_0 = null;
         int stackIn_99_1 = 0;
-        String stackIn_100_0 = null;
-        int stackIn_100_1 = 0;
-        int stackIn_100_2 = 0;
-        String stackIn_101_0 = null;
-        int stackIn_101_1 = 0;
         int stackIn_101_2 = 0;
-        String stackIn_102_0 = null;
-        int stackIn_102_1 = 0;
-        int stackIn_102_2 = 0;
-        int stackIn_102_3 = 0;
+        int stackIn_102_2;
+        int stackIn_102_3;
         int stackIn_131_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        String stackOut_96_0 = null;
-        String stackOut_98_0 = null;
-        int stackOut_98_1 = 0;
-        String stackOut_97_0 = null;
-        int stackOut_97_1 = 0;
-        String stackOut_99_0 = null;
-        int stackOut_99_1 = 0;
-        int stackOut_99_2 = 0;
-        String stackOut_101_0 = null;
-        int stackOut_101_1 = 0;
-        int stackOut_101_2 = 0;
-        int stackOut_101_3 = 0;
-        String stackOut_100_0 = null;
-        int stackOut_100_1 = 0;
-        int stackOut_100_2 = 0;
-        int stackOut_100_3 = 0;
-        int stackOut_130_0 = 0;
-        int stackOut_129_0 = 0;
+        int var3;
+        java.awt.Dimension var4;
+        int var5;
+        java.awt.Container var6;
         L0: {
           var5 = EscapeVector.field_A;
           if (km.field_n == null) {
@@ -1277,12 +1151,10 @@ abstract class g extends eh {
           }
           L8: {
             if (-1 != jn.field_b) {
-              stackOut_23_0 = 0;
-              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_0 = 0;
               break L8;
             } else {
-              stackOut_22_0 = 1;
-              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_0 = 1;
               break L8;
             }
           }
@@ -1525,56 +1397,40 @@ abstract class g extends eh {
                     }
                   }
                   L24: {
-                    stackOut_96_0 = ac.field_d;
-                    stackIn_98_0 = stackOut_96_0;
-                    stackIn_97_0 = stackOut_96_0;
+                    stackIn_98_0 = ac.field_d;
+
                     if (jb.field_p) {
-                      stackOut_98_0 = (String) ((Object) stackIn_98_0);
-                      stackOut_98_1 = 0;
-                      stackIn_99_0 = stackOut_98_0;
-                      stackIn_99_1 = stackOut_98_1;
+                      stackIn_99_0 = (String) ((Object) stackIn_98_0);
+                      stackIn_99_1 = 0;
                       break L24;
                     } else {
-                      stackOut_97_0 = (String) ((Object) stackIn_97_0);
-                      stackOut_97_1 = 1;
-                      stackIn_99_0 = stackOut_97_0;
-                      stackIn_99_1 = stackOut_97_1;
+                      stackIn_99_0 = (String) ((Object) stackIn_98_0);
+                      stackIn_99_1 = 1;
                       break L24;
                     }
                   }
                   L25: {
-                    stackOut_99_0 = (String) ((Object) stackIn_99_0);
-                    stackOut_99_1 = stackIn_99_1;
-                    stackOut_99_2 = 64;
-                    stackIn_101_0 = stackOut_99_0;
-                    stackIn_101_1 = stackOut_99_1;
-                    stackIn_101_2 = stackOut_99_2;
-                    stackIn_100_0 = stackOut_99_0;
-                    stackIn_100_1 = stackOut_99_1;
-                    stackIn_100_2 = stackOut_99_2;
+
+
+
+
+                    stackIn_101_2 = 64;
+
                     if (jb.field_p) {
-                      stackOut_101_0 = (String) ((Object) stackIn_101_0);
-                      stackOut_101_1 = stackIn_101_1;
-                      stackOut_101_2 = stackIn_101_2;
-                      stackOut_101_3 = 0;
-                      stackIn_102_0 = stackOut_101_0;
-                      stackIn_102_1 = stackOut_101_1;
-                      stackIn_102_2 = stackOut_101_2;
-                      stackIn_102_3 = stackOut_101_3;
+                      stackIn_99_0 = (String) ((Object) stackIn_99_0);
+
+                      stackIn_102_2 = stackIn_101_2;
+                      stackIn_102_3 = 0;
                       break L25;
                     } else {
-                      stackOut_100_0 = (String) ((Object) stackIn_100_0);
-                      stackOut_100_1 = stackIn_100_1;
-                      stackOut_100_2 = stackIn_100_2;
-                      stackOut_100_3 = 1;
-                      stackIn_102_0 = stackOut_100_0;
-                      stackIn_102_1 = stackOut_100_1;
-                      stackIn_102_2 = stackOut_100_2;
-                      stackIn_102_3 = stackOut_100_3;
+                      stackIn_99_0 = (String) ((Object) stackIn_99_0);
+
+                      stackIn_102_2 = stackIn_101_2;
+                      stackIn_102_3 = 1;
                       break L25;
                     }
                   }
-                  ff.a(stackIn_102_0, stackIn_102_1 != 0, stackIn_102_2, stackIn_102_3 != 0);
+                  ff.a(stackIn_99_0, stackIn_99_1 != 0, stackIn_102_2, stackIn_102_3 != 0);
                   break L22;
                 }
                 L26: {
@@ -1675,12 +1531,10 @@ abstract class g extends eh {
               if (null != fl.field_n) {
                 L36: {
                   if (!fl.field_n.a(7020)) {
-                    stackOut_130_0 = 0;
-                    stackIn_131_0 = stackOut_130_0;
+                    stackIn_131_0 = 0;
                     break L36;
                   } else {
-                    stackOut_129_0 = 1;
-                    stackIn_131_0 = stackOut_129_0;
+                    stackIn_131_0 = 1;
                     break L36;
                   }
                 }
@@ -1729,22 +1583,22 @@ abstract class g extends eh {
     }
 
     final static void h(int param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = EscapeVector.field_A;
         try {
           L0: {
@@ -1758,30 +1612,30 @@ abstract class g extends eh {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  incrementValue$40 = var2;
+                  incrementValue$16 = var2;
                   var2++;
-                  var5[incrementValue$40] = 0;
-                  incrementValue$41 = var2;
+                  var5[incrementValue$16] = 0;
+                  incrementValue$17 = var2;
                   var2++;
-                  var5[incrementValue$41] = 0;
-                  incrementValue$42 = var2;
+                  var5[incrementValue$17] = 0;
+                  incrementValue$18 = var2;
                   var2++;
-                  var5[incrementValue$42] = 0;
-                  incrementValue$43 = var2;
+                  var5[incrementValue$18] = 0;
+                  incrementValue$19 = var2;
                   var2++;
-                  var5[incrementValue$43] = 0;
-                  incrementValue$44 = var2;
+                  var5[incrementValue$19] = 0;
+                  incrementValue$20 = var2;
                   var2++;
-                  var5[incrementValue$44] = 0;
-                  incrementValue$45 = var2;
+                  var5[incrementValue$20] = 0;
+                  incrementValue$21 = var2;
                   var2++;
-                  var5[incrementValue$45] = 0;
-                  incrementValue$46 = var2;
+                  var5[incrementValue$21] = 0;
+                  incrementValue$22 = var2;
                   var2++;
-                  var5[incrementValue$46] = 0;
-                  incrementValue$47 = var2;
+                  var5[incrementValue$22] = 0;
+                  incrementValue$23 = var2;
                   var2++;
-                  var5[incrementValue$47] = 0;
+                  var5[incrementValue$23] = 0;
                   continue L1;
                 }
               }

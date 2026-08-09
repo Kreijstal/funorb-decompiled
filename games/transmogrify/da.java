@@ -20,25 +20,15 @@ final class da extends fi {
 
     final static void a(boolean param0, byte param1, java.awt.Canvas param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        java.awt.Canvas var5 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var3 = null;
+        java.awt.Canvas var5 = null;
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -107,27 +97,19 @@ final class da extends fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var3);
-            stackOut_16_1 = new StringBuilder().append("da.GA(").append(param0).append(',').append(param1).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var3);
+
+            stackIn_18_1 = new StringBuilder().append("da.GA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }
@@ -161,41 +143,110 @@ final class da extends fi {
         tl var2 = null;
         mk var3 = null;
         int var4 = 0;
-        var4 = Transmogrify.field_A ? 1 : 0;
-        var2 = new tl(this.field_D);
-        if (param0 == 31410) {
-          var3 = (mk) ((Object) var2.c(-121));
-          L0: while (true) {
-            if (var3 != null) {
-              var3.field_A = false;
-              var3 = (mk) ((Object) var2.a(param0 ^ 405111091));
-              if (var4 == 0) {
-                continue L0;
-              } else {
-                return;
-              }
-            } else {
-              this.field_v = null;
-              return;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = Transmogrify.field_A ? 1 : 0;
+                    var2 = new tl(this.field_D);
+                    if (param0 == 31410) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    field_B = (String) null;
+                    statePc = 10;
+                    continue stateLoop;
+                }
+                case 2: {
+                    var3 = (mk) ((Object) var2.c(-121));
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (var3 != null) {
+                        statePc = 6;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    this.field_v = null;
+                    return;
+                }
+                case 6: {
+                    var3.field_A = false;
+                    var3 = (mk) ((Object) var2.a(param0 ^ 405111091));
+                    if (var4 == 0) {
+                        statePc = 8;
+                    } else {
+                        statePc = 7;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    return;
+                }
+                case 8: {
+                    if (var4 == 0) {
+                        statePc = 3;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    this.field_v = null;
+                    return;
+                }
+                case 10: {
+                    var3 = (mk) ((Object) var2.c(-121));
+                    statePc = 11;
+                    continue stateLoop;
+                }
+                case 11: {
+                    if (var3 != null) {
+                        statePc = 14;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
+                    this.field_v = null;
+                    return;
+                }
+                case 14: {
+                    var3.field_A = false;
+                    var3 = (mk) ((Object) var2.a(param0 ^ 405111091));
+                    if (var4 == 0) {
+                        statePc = 16;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 15: {
+                    return;
+                }
+                case 16: {
+                    if (var4 == 0) {
+                        statePc = 11;
+                    } else {
+                        statePc = 17;
+                    }
+                    continue stateLoop;
+                }
+                case 17: {
+                    this.field_v = null;
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } else {
-          field_B = (String) null;
-          var3 = (mk) ((Object) var2.c(-121));
-          L1: while (true) {
-            if (var3 != null) {
-              var3.field_A = false;
-              var3 = (mk) ((Object) var2.a(param0 ^ 405111091));
-              if (var4 == 0) {
-                continue L1;
-              } else {
-                return;
-              }
-            } else {
-              this.field_v = null;
-              return;
-            }
-          }
         }
     }
 
@@ -217,9 +268,9 @@ final class da extends fi {
     }
 
     final void l(int param0) {
-        tl var2 = null;
-        mk var3 = null;
-        int var4 = 0;
+        tl var2;
+        mk var3;
+        int var4;
         var4 = Transmogrify.field_A ? 1 : 0;
         var2 = new tl(this.field_D);
         var3 = (mk) ((Object) var2.c(-116));
@@ -237,7 +288,12 @@ final class da extends fi {
                   }
                 }
                 var3 = (mk) ((Object) var2.a(param0 ^ 405142401));
-                continue L0;
+                if (var4 == 0) {
+                  continue L0;
+                } else {
+                  this.field_v = (qg) ((Object) this.e((byte) -107));
+                  return;
+                }
               } else {
                 return;
               }
@@ -259,7 +315,12 @@ final class da extends fi {
                   }
                 }
                 var3 = (mk) ((Object) var2.a(param0 ^ 405142401));
-                continue L2;
+                if (var4 == 0) {
+                  continue L2;
+                } else {
+                  this.field_v = (qg) ((Object) this.e((byte) -107));
+                  return;
+                }
               } else {
                 return;
               }
@@ -274,23 +335,12 @@ final class da extends fi {
     final static String a(boolean param0, CharSequence param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -301,35 +351,26 @@ final class da extends fi {
                 break L1;
               }
             }
-            stackOut_2_0 = tg.a(-54, false, param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = tg.a(-54, false, param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("da.D(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("da.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -339,56 +380,123 @@ final class da extends fi {
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
+        int statePc = 0;
         tl var5 = null;
         qg var6 = null;
         int var7 = 0;
         int var8 = 0;
         tl var9 = null;
         tl var10 = null;
-        var8 = Transmogrify.field_A ? 1 : 0;
-        if (this.field_q == null) {
-          var9 = new tl(this.field_D);
-          var6 = (qg) ((Object) var9.a((byte) 62));
-          var7 = -24 % ((param3 - 77) / 34);
-          L0: while (true) {
-            if (var6 != null) {
-              var6.a(param0 - -this.field_p, this.field_n + param1, param2, (byte) -95);
-              var6 = (qg) ((Object) var9.b(-29339));
-              if (var8 == 0) {
-                continue L0;
-              } else {
-                return;
-              }
-            } else {
-              return;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var8 = Transmogrify.field_A ? 1 : 0;
+                    if (this.field_q == null) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    this.field_q.a(param0, param1, true, (byte) 126, (qg) (this));
+                    statePc = 9;
+                    continue stateLoop;
+                }
+                case 2: {
+                    var9 = new tl(this.field_D);
+                    var6 = (qg) ((Object) var9.a((byte) 62));
+                    var7 = -24 % ((param3 - 77) / 34);
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (var6 != null) {
+                        statePc = 5;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    return;
+                }
+                case 5: {
+                    var6.a(param0 - -this.field_p, this.field_n + param1, param2, (byte) -95);
+                    var6 = (qg) ((Object) var9.b(-29339));
+                    if (var8 == 0) {
+                        statePc = 7;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    return;
+                }
+                case 7: {
+                    if (var8 == 0) {
+                        statePc = 3;
+                    } else {
+                        statePc = 8;
+                    }
+                    continue stateLoop;
+                }
+                case 8: {
+                    return;
+                }
+                case 9: {
+                    var10 = new tl(this.field_D);
+                    var5 = var10;
+                    var6 = (qg) ((Object) var10.a((byte) 62));
+                    var7 = -24 % ((param3 - 77) / 34);
+                    statePc = 10;
+                    continue stateLoop;
+                }
+                case 10: {
+                    if (var6 != null) {
+                        statePc = 12;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    return;
+                }
+                case 12: {
+                    var6.a(param0 - -this.field_p, this.field_n + param1, param2, (byte) -95);
+                    var6 = (qg) ((Object) var10.b(-29339));
+                    if (var8 == 0) {
+                        statePc = 14;
+                    } else {
+                        statePc = 13;
+                    }
+                    continue stateLoop;
+                }
+                case 13: {
+                    return;
+                }
+                case 14: {
+                    if (var8 == 0) {
+                        statePc = 10;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 15: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } else {
-          this.field_q.a(param0, param1, true, (byte) 126, (qg) (this));
-          var10 = new tl(this.field_D);
-          var5 = var10;
-          var6 = (qg) ((Object) var10.a((byte) 62));
-          var7 = -24 % ((param3 - 77) / 34);
-          L1: while (true) {
-            if (var6 != null) {
-              var6.a(param0 - -this.field_p, this.field_n + param1, param2, (byte) -95);
-              var6 = (qg) ((Object) var10.b(-29339));
-              if (var8 == 0) {
-                continue L1;
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
-          }
         }
     }
 
     final void j(int param0) {
-        tl var2 = null;
-        mk var3 = null;
-        int var4 = 0;
+        tl var2;
+        mk var3;
+        int var4;
         var4 = Transmogrify.field_A ? 1 : 0;
         if (param0 > 124) {
           var2 = new tl(this.field_D);
@@ -405,7 +513,11 @@ final class da extends fi {
                   }
                 }
                 var3 = (mk) ((Object) var2.a(405142401));
-                continue L0;
+                if (var4 == 0) {
+                  continue L0;
+                } else {
+                  return;
+                }
               } else {
                 return;
               }
@@ -429,7 +541,11 @@ final class da extends fi {
                   }
                 }
                 var3 = (mk) ((Object) var2.a(405142401));
-                continue L2;
+                if (var4 == 0) {
+                  continue L2;
+                } else {
+                  return;
+                }
               } else {
                 return;
               }
@@ -442,7 +558,6 @@ final class da extends fi {
 
     final void b(qg param0, byte param1) {
         mk var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param0 instanceof mk)) {
                 throw new IllegalArgumentException();
@@ -453,7 +568,7 @@ final class da extends fi {
             }
             this.field_D.a((wf) (var3), (byte) 33);
             var3.field_A = true;
-            discarded$0 = var3.a((qg) (this), param1 + 51);
+            var3.a((qg) (this), param1 + 51);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) ((Object) runtimeException), "da.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

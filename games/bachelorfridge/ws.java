@@ -3,13 +3,13 @@
  */
 final class ws {
     final static kv a(byte param0) {
-        int var1 = 0;
-        byte[] var2 = null;
-        int[] var3 = null;
-        int var4_int = 0;
-        kv var4 = null;
-        int var5 = 0;
-        byte[] var6 = null;
+        int var1;
+        byte[] var2;
+        int[] var3;
+        int var4_int;
+        kv var4;
+        int var5;
+        byte[] var6;
         var5 = BachelorFridge.field_y;
         var1 = lq.field_A[0] * eha.field_s[0];
         var6 = baa.field_P[0];

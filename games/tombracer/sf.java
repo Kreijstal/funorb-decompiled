@@ -19,18 +19,16 @@ final class sf extends hl implements eja {
     }
 
     public final una b(int param0) {
-        boolean discarded$0 = false;
         if (param0 != -32491) {
-            discarded$0 = this.a((byte) -127);
+            this.a((byte) -127);
             return this.field_l;
         }
         return this.field_l;
     }
 
     public final jaclib.memory.Buffer a(boolean param0, byte param1) {
-        boolean discarded$2 = false;
         if (param1 >= -9) {
-          discarded$2 = this.a((byte) 69);
+          this.a((byte) 69);
           return super.a(this.field_h.field_Qc, param0, 1);
         } else {
           return super.a(this.field_h.field_Qc, param0, 1);

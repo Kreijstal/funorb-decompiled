@@ -49,8 +49,6 @@ final class od extends cb {
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -58,35 +56,21 @@ final class od extends cb {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_6_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if (this.field_j.a(param1, 5) != fg.field_d) {
               var3_int = 71 / ((param0 - 49) / 56);
               if (this.a(param1, 5) != fg.field_d) {
-                stackOut_6_0 = c.field_b;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = c.field_b;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_4_0 = dl.field_a;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = dl.field_a;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = this.field_j.a((byte) 122, param1);
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = this.field_j.a((byte) 122, param1);
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -95,27 +79,19 @@ final class od extends cb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("od.C(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3);
+
+            stackIn_10_1 = new StringBuilder().append("od.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L1;
             }
           }
@@ -150,8 +126,6 @@ final class od extends cb {
         ag stackIn_6_0 = null;
         ag stackIn_11_0 = null;
         ag stackIn_16_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -159,24 +133,10 @@ final class od extends cb {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ag stackOut_2_0 = null;
-        ag stackOut_10_0 = null;
-        ag stackOut_15_0 = null;
-        ag stackOut_14_0 = null;
-        ag stackOut_5_0 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
         try {
           L0: {
             if (this.field_j.a(param0, param1 + 0) == fg.field_d) {
-              stackOut_2_0 = fg.field_d;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = fg.field_d;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -189,8 +149,7 @@ final class od extends cb {
                       this.field_m = var3.b(-118);
                       break L1;
                     } else {
-                      stackOut_10_0 = bm.field_o;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_11_0 = bm.field_o;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
@@ -200,20 +159,17 @@ final class od extends cb {
                 }
                 L2: {
                   if (this.field_m) {
-                    stackOut_15_0 = sc.field_a;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = sc.field_a;
                     break L2;
                   } else {
-                    stackOut_14_0 = fg.field_d;
-                    stackIn_16_0 = stackOut_14_0;
+                    stackIn_16_0 = fg.field_d;
                     break L2;
                   }
                 }
                 decompiledRegionSelector0 = 3;
                 break L0;
               } else {
-                stackOut_5_0 = (ag) null;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (ag) null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -223,27 +179,19 @@ final class od extends cb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var3_ref);
-            stackOut_17_1 = new StringBuilder().append("od.D(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var3_ref);
+
+            stackIn_19_1 = new StringBuilder().append("od.D(");
+
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L3;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L3;
             }
           }
@@ -265,18 +213,12 @@ final class od extends cb {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        sa discarded$6 = null;
-        sa discarded$7 = null;
-        sa discarded$8 = null;
-        sa discarded$9 = null;
-        sa discarded$10 = null;
-        sa discarded$11 = null;
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
         var5 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -296,7 +238,7 @@ final class od extends cb {
                     }
                   }
                   wi.field_v = rc.b(re.field_a[param1], 100, param2, param0);
-                  discarded$6 = mg.a(1963987425, wi.field_v);
+                  mg.a(1963987425, wi.field_v);
                   break L1;
                 } else {
                   if (param1 != 42) {
@@ -321,12 +263,12 @@ final class od extends cb {
                               }
                             }
                             si.field_b[var6] = rc.b(re.field_a[param1], 100, param2, param0);
-                            discarded$7 = mg.a(1963987425, si.field_b[var6]);
+                            mg.a(1963987425, si.field_b[var6]);
                             break L1;
                           }
                         }
                       } else {
-                        discarded$8 = ii.a(re.field_a[param1], false);
+                        ii.a(re.field_a[param1], false);
                         break L1;
                       }
                     } else {
@@ -348,7 +290,7 @@ final class od extends cb {
                             }
                           }
                           mh.field_b[var4_int] = rc.b(re.field_a[param1], 100, param2, param0);
-                          discarded$9 = mg.a(param3 + 1963987421, mh.field_b[var4_int]);
+                          mg.a(param3 + 1963987421, mh.field_b[var4_int]);
                           break L1;
                         }
                       }
@@ -367,7 +309,7 @@ final class od extends cb {
                       }
                     }
                     df.field_a = rc.b(re.field_a[param1], 100, param2, param0);
-                    discarded$10 = mg.a(1963987425, df.field_a);
+                    mg.a(1963987425, df.field_a);
                     break L1;
                   }
                 }
@@ -385,7 +327,7 @@ final class od extends cb {
                   }
                 }
                 qg.field_b = rc.b(re.field_a[param1], 100, param2, param0);
-                discarded$11 = mg.a(param3 + 1963987421, qg.field_b);
+                mg.a(param3 + 1963987421, qg.field_b);
                 break L1;
               }
             }

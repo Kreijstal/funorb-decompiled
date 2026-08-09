@@ -15,9 +15,9 @@ final class mk {
     static String field_a;
 
     final tk a(long param0, int param1) {
-        tk var4 = null;
-        tk var5 = null;
-        int var6 = 0;
+        tk var4;
+        tk var5;
+        int var6;
         var6 = BrickABrac.field_J ? 1 : 0;
         this.field_g = param0;
         var4 = this.field_e[(int)((long)(this.field_k + param1) & param0)];
@@ -40,10 +40,10 @@ final class mk {
     }
 
     final tk a(byte param0) {
-        tk var2 = null;
-        int var3_int = 0;
-        tk var3 = null;
-        int var4 = 0;
+        tk var2;
+        int var3_int;
+        tk var3;
+        int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
         if (null != this.field_d) {
           var2 = this.field_e[(int)((long)(this.field_k + -1) & this.field_g)];
@@ -69,30 +69,30 @@ final class mk {
     }
 
     final tk a(boolean param0) {
+        int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;
         int fieldTemp$6 = 0;
-        tk discarded$7 = null;
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int var3 = 0;
-        tk var4 = null;
-        tk var5 = null;
-        tk var36 = null;
-        tk var37 = null;
-        tk var38 = null;
-        tk var39 = null;
-        tk var42 = null;
+        int fieldTemp$7 = 0;
+        int var3;
+        Object var4;
+        tk var4_ref;
+        tk var5;
+        tk var36;
+        tk var37;
+        tk var38;
+        tk var39;
+        tk var42;
         var3 = BrickABrac.field_J ? 1 : 0;
         if (!param0) {
           if (0 < this.field_h) {
             if (this.field_e[-1 + this.field_h] == this.field_f) {
               L0: while (true) {
                 if (this.field_k > this.field_h) {
-                  fieldTemp$5 = this.field_h;
+                  fieldTemp$4 = this.field_h;
                   this.field_h = this.field_h + 1;
-                  var4 = this.field_e[fieldTemp$5].field_s;
-                  var39 = var4;
-                  if (var4 == this.field_e[-1 + this.field_h]) {
+                  var4_ref = this.field_e[fieldTemp$4].field_s;
+                  var39 = var4_ref;
+                  if (var4_ref == this.field_e[-1 + this.field_h]) {
                     continue L0;
                   } else {
                     this.field_f = var39.field_s;
@@ -110,11 +110,11 @@ final class mk {
           } else {
             L1: while (true) {
               if (this.field_k > this.field_h) {
-                fieldTemp$6 = this.field_h;
+                fieldTemp$5 = this.field_h;
                 this.field_h = this.field_h + 1;
-                var4 = this.field_e[fieldTemp$6].field_s;
-                var38 = var4;
-                if (var4 == this.field_e[-1 + this.field_h]) {
+                var4_ref = this.field_e[fieldTemp$5].field_s;
+                var38 = var4_ref;
+                if (var4_ref == this.field_e[-1 + this.field_h]) {
                   continue L1;
                 } else {
                   this.field_f = var38.field_s;
@@ -126,7 +126,7 @@ final class mk {
             }
           }
         } else {
-          discarded$7 = this.a(31L, -107);
+          this.a(31L, -107);
           if (0 < this.field_h) {
             if (this.field_e[-1 + this.field_h] != this.field_f) {
               var36 = this.field_f;
@@ -135,11 +135,11 @@ final class mk {
             } else {
               L2: while (true) {
                 if (this.field_k > this.field_h) {
-                  fieldTemp$8 = this.field_h;
+                  fieldTemp$6 = this.field_h;
                   this.field_h = this.field_h + 1;
-                  var4 = this.field_e[fieldTemp$8].field_s;
-                  var37 = var4;
-                  if (var4 == this.field_e[-1 + this.field_h]) {
+                  var4_ref = this.field_e[fieldTemp$6].field_s;
+                  var37 = var4_ref;
+                  if (var4_ref == this.field_e[-1 + this.field_h]) {
                     continue L2;
                   } else {
                     this.field_f = var37.field_s;
@@ -153,11 +153,11 @@ final class mk {
           } else {
             L3: while (true) {
               if (this.field_k > this.field_h) {
-                fieldTemp$9 = this.field_h;
+                fieldTemp$7 = this.field_h;
                 this.field_h = this.field_h + 1;
-                var4 = this.field_e[fieldTemp$9].field_s;
-                var5 = var4;
-                if (var4 == this.field_e[-1 + this.field_h]) {
+                var4_ref = this.field_e[fieldTemp$7].field_s;
+                var5 = var4_ref;
+                if (var4_ref == this.field_e[-1 + this.field_h]) {
                   continue L3;
                 } else {
                   this.field_f = var5.field_s;
@@ -217,18 +217,18 @@ final class mk {
     }
 
     mk(int param0) {
-        tk dupTemp$2 = null;
-        int var2 = 0;
-        tk var3 = null;
+        tk dupTemp$1 = null;
+        int var2;
+        tk var3;
         this.field_h = 0;
         this.field_e = new tk[param0];
         this.field_k = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new tk();
-            var3 = dupTemp$2;
-            this.field_e[var2] = dupTemp$2;
+            dupTemp$1 = new tk();
+            var3 = dupTemp$1;
+            this.field_e[var2] = dupTemp$1;
             var3.field_n = var3;
             var3.field_s = var3;
             var2++;

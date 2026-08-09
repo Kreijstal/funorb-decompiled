@@ -8,8 +8,7 @@ final class f {
     static int field_d;
 
     final static int a(byte param0, int param1, int param2, int param3, int param4) {
-        int discarded$1 = 0;
-        ut var5 = null;
+        ut var5;
         L0: {
           if (10 > param1) {
             break L0;
@@ -19,7 +18,7 @@ final class f {
           }
         }
         if (param0 <= 109) {
-          discarded$1 = f.a((byte) -108, -67, -1, 23, 75);
+          f.a((byte) -108, -67, -1, 23, 75);
           var5 = tb.field_q[param1 % 10];
           var5.c(-var5.field_s + param4, param3, param2);
           return var5.field_q + param4 + 3;

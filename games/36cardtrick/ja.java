@@ -42,8 +42,8 @@ final class ja {
     }
 
     final vd a(int param0, int param1) {
-        vd var3 = null;
-        byte[] var4 = null;
+        vd var3;
+        byte[] var4;
         var3 = (vd) (this.field_f.a((long)param0, -1));
         if (var3 != null) {
           return var3;

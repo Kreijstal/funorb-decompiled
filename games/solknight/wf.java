@@ -47,10 +47,9 @@ abstract class wf implements oe {
     abstract String e(int param0);
 
     final static void d(int param0) {
-        boolean discarded$2 = false;
         k.field_d = new rf();
         if (param0 != 350) {
-          discarded$2 = wf.c((byte) -49);
+          wf.c((byte) -49);
           gf.field_cb.c(-3399, k.field_d);
           return;
         } else {

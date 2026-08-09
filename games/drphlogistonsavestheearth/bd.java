@@ -15,30 +15,20 @@ abstract class bd extends pj {
     static boolean[] field_O;
 
     private final int i(int param0) {
-        boolean discarded$11 = false;
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 != 0) {
           L0: {
-            discarded$11 = this.k(-92);
+            this.k(-92);
             if (!this.field_Q) {
-              stackOut_11_0 = 0;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_0 = 0;
               break L0;
             } else {
               if (this != this.field_R.k(127)) {
-                stackOut_10_0 = 0;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 0;
                 break L0;
               } else {
-                stackOut_9_0 = 256;
-                stackIn_12_0 = stackOut_9_0;
+                stackIn_12_0 = 256;
                 break L0;
               }
             }
@@ -47,17 +37,14 @@ abstract class bd extends pj {
         } else {
           L1: {
             if (!this.field_Q) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               break L1;
             } else {
               if (this != this.field_R.k(127)) {
-                stackOut_4_0 = 0;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 0;
                 break L1;
               } else {
-                stackOut_3_0 = 256;
-                stackIn_6_0 = stackOut_3_0;
+                stackIn_6_0 = 256;
                 break L1;
               }
             }
@@ -91,7 +78,7 @@ abstract class bd extends pj {
     }
 
     final vg g(int param0) {
-        vg var2 = null;
+        vg var2;
         if (param0 == -22426) {
           var2 = super.g(param0 ^ 0);
           if (var2 != null) {
@@ -188,11 +175,9 @@ abstract class bd extends pj {
     }
 
     boolean k(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
         L0: {
           var2 = this.i(0);
           var3 = -this.field_J + var2;
@@ -218,12 +203,10 @@ abstract class bd extends pj {
             } else {
               L2: {
                 if (this.field_Q) {
-                  stackOut_13_0 = 0;
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_0 = 0;
                   break L2;
                 } else {
-                  stackOut_12_0 = 1;
-                  stackIn_14_0 = stackOut_12_0;
+                  stackIn_14_0 = 1;
                   break L2;
                 }
               }

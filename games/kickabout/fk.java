@@ -12,7 +12,6 @@ final class fk extends hs {
         int var4 = 0;
         int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
         var4 = Kickabout.field_G;
         try {
           L0: {
@@ -28,8 +27,7 @@ final class fk extends hs {
                   }
                 }
                 if (-2 == (param2 ^ -1)) {
-                  stackOut_10_0 = var3_int * param0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = var3_int * param0;
                   break L0;
                 } else {
                   return var3_int;
@@ -87,10 +85,9 @@ final class fk extends hs {
     }
 
     public static void f(int param0) {
-        int discarded$0 = 0;
         field_k = null;
         if (param0 != 1) {
-            discarded$0 = fk.b(76, -73, -121);
+            fk.b(76, -73, -121);
             field_j = null;
             return;
         }

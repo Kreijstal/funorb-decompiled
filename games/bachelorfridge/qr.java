@@ -7,13 +7,13 @@ final class qr extends ana {
     private tba field_x;
 
     private final void e(int param0) {
-        Object var3 = null;
-        pp var3_ref = null;
-        int var5 = 0;
-        aga var6 = null;
-        ad var7 = null;
-        aga var8 = null;
-        ad var9 = null;
+        Object var3;
+        pp var3_ref;
+        int var5;
+        aga var6;
+        ad var7;
+        aga var8;
+        ad var9;
         var3 = null;
         var5 = BachelorFridge.field_y;
         if (param0 > 9) {
@@ -73,8 +73,8 @@ final class qr extends ana {
     }
 
     final boolean c(byte param0) {
-        int fieldTemp$2 = 0;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        int var2;
         if (!this.field_m.a((byte) -106)) {
           if (!this.field_w.a((byte) -106)) {
             L0: {
@@ -87,9 +87,9 @@ final class qr extends ana {
               }
             }
             var2 = 93 / ((71 - param0) / 47);
-            fieldTemp$2 = this.field_l - 1;
+            fieldTemp$1 = this.field_l - 1;
             this.field_l = this.field_l - 1;
-            if ((fieldTemp$2 ^ -1) <= -1) {
+            if ((fieldTemp$1 ^ -1) <= -1) {
               return false;
             } else {
               this.f(-1);
@@ -115,18 +115,16 @@ final class qr extends ana {
     }
 
     private final void d(int param0) {
-        int[][] discarded$2 = null;
-        int[][] discarded$3 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        gf var6 = null;
-        int var7 = 0;
-        op var8 = null;
+        int var3;
+        int var4;
+        int var5;
+        gf var6;
+        int var7;
+        op var8;
         var7 = BachelorFridge.field_y;
         var8 = this.field_q.field_h;
         if (param0 == -1) {
-          discarded$2 = this.field_x.e(param0 ^ -7);
+          this.field_x.e(param0 ^ -7);
           var3 = 0;
           L0: while (true) {
             if (this.field_x.field_t.length <= var3) {
@@ -162,7 +160,7 @@ final class qr extends ana {
           }
         } else {
           this.field_v = false;
-          discarded$3 = this.field_x.e(param0 ^ -7);
+          this.field_x.e(param0 ^ -7);
           var3 = 0;
           L1: while (true) {
             if (this.field_x.field_t.length <= var3) {

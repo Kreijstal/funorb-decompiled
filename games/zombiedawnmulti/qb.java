@@ -70,7 +70,7 @@ abstract class qb {
     }
 
     public static void c(byte param0) {
-        pd var2 = null;
+        pd var2;
         field_e = null;
         if (param0 != -7) {
           var2 = (pd) null;
@@ -88,37 +88,26 @@ abstract class qb {
     }
 
     final tn a(int param0, int param1, boolean param2, int param3, byte param4) {
-        long var6 = 0L;
-        tn var8 = null;
-        Object var9 = null;
-        tn stackIn_1_0 = null;
+        long var6;
+        tn var8;
+        Object var9;
         tn stackIn_2_0 = null;
         tn stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        tn stackOut_0_0 = null;
-        tn stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        tn stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           var6 = ((long)param3 << 487989472) - -(long)param1;
           var8 = new tn();
           var8.field_B = param4;
           var8.field_l = var6;
-          stackOut_0_0 = (tn) (var8);
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = (tn) (var8);
+
           if (!param2) {
-            stackOut_2_0 = (tn) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (tn) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (tn) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (tn) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -163,20 +152,14 @@ abstract class qb {
     final boolean e(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 <= 13) {
           L0: {
             this.field_d = -46;
             if (-21 < (this.a(0) ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -184,12 +167,10 @@ abstract class qb {
         } else {
           L1: {
             if (-21 < (this.a(0) ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -200,20 +181,14 @@ abstract class qb {
     final boolean c(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 > -32) {
           L0: {
             this.field_b = (k) null;
             if ((this.d(20) ^ -1) > -21) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -221,12 +196,10 @@ abstract class qb {
         } else {
           L1: {
             if ((this.d(20) ^ -1) > -21) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

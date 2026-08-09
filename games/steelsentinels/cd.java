@@ -11,6 +11,8 @@ final class cd {
     static boolean field_a;
 
     final static void a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -25,8 +27,6 @@ final class cd {
         hl var13 = null;
         kj var14 = null;
         hl var15 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = SteelSentinels.field_G;
         try {
           L0: {
@@ -132,24 +132,12 @@ final class cd {
         String var6 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         Throwable decompiledCaughtException = null;
-        String stackOut_4_0 = null;
-        String stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             var3_int = 66 / ((51 - param2) / 49);
@@ -167,15 +155,13 @@ final class cd {
                 var5 = new byte[var4_int];
                 param0.field_p = param0.field_p + ob.field_r.a(var5, var4_int, 4408131, 0, param0.field_t, param0.field_p);
                 var6 = ub.a((byte) 37, 0, var5, var4_int);
-                stackOut_4_0 = (String) (var6);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (String) (var6);
                 break L1;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (Exception) (Object) decompiledCaughtException;
-              stackOut_6_0 = "Cabbage";
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = "Cabbage";
               return stackIn_7_0;
             }
             break L0;
@@ -184,27 +170,19 @@ final class cd {
           decompiledCaughtException = decompiledCaughtParameter1;
           L3: {
             var3 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("cd.B(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3);
+
+            stackIn_10_1 = new StringBuilder().append("cd.B(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -214,12 +192,11 @@ final class cd {
     }
 
     public static void a(boolean param0) {
-        String discarded$0 = null;
         field_c = null;
         field_b = null;
         if (param0) {
             gi var2 = (gi) null;
-            discarded$0 = cd.a((gi) null, 20, (byte) -110);
+            cd.a((gi) null, 20, (byte) -110);
         }
         field_e = null;
         field_d = null;

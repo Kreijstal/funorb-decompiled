@@ -47,10 +47,9 @@ final class nn extends le {
     }
 
     public static void c(int param0) {
-        boolean discarded$0 = false;
         field_j = null;
         if (param0 != 2) {
-            discarded$0 = nn.a(52);
+            nn.a(52);
         }
     }
 

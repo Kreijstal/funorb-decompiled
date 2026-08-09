@@ -45,9 +45,9 @@ class cia extends bw {
     }
 
     final boolean b(boolean param0) {
-        int fieldTemp$2 = this.field_o + this.field_m;
+        int fieldTemp$1 = this.field_o + this.field_m;
         this.field_o = this.field_o + this.field_m;
-        if (fieldTemp$2 >= 0) {
+        if (fieldTemp$1 >= 0) {
           this.field_q = this.field_q + this.field_g;
           this.field_h = this.field_h + this.field_k;
           this.field_i = this.field_i + this.field_p;
@@ -70,10 +70,9 @@ class cia extends bw {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        boolean discarded$2 = false;
         this.field_k = param2;
         if (param0 != 0) {
-          discarded$2 = this.b(false);
+          this.b(false);
           this.field_p = param3;
           this.field_g = param1;
           return;

@@ -87,9 +87,8 @@ final class ww extends ka {
     private static String field_Hb;
 
     private final void e() {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         if (this.field_eb != 0) {
           L0: {
             if (this.field_d.field_u <= 1) {
@@ -131,10 +130,9 @@ final class ww extends ka {
     }
 
     final void O(int param0, int param1, int param2) {
-        Object var4 = null;
         int var5 = 0;
-        Throwable var6 = null;
         Throwable decompiledCaughtException = null;
+        Object var4 = null;
         L0: {
           if (param0 == 128) {
             break L0;
@@ -189,26 +187,26 @@ final class ww extends ka {
     }
 
     private final void c() {
-        gna dupTemp$1 = null;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        gna var16 = null;
-        oha var17 = null;
-        oha var18 = null;
-        oha var19 = null;
+        gna dupTemp$0 = null;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        gna var16;
+        oha var17;
+        oha var18;
+        oha var19;
         this.field_lb = new oha[this.field_Z];
         var1 = 0;
         L0: while (true) {
@@ -279,9 +277,9 @@ final class ww extends ka {
                                         break L6;
                                       }
                                     }
-                                    dupTemp$1 = new gna();
-                                    this.field_I[var1] = dupTemp$1;
-                                    var16 = dupTemp$1;
+                                    dupTemp$0 = new gna();
+                                    this.field_I[var1] = dupTemp$0;
+                                    var16 = dupTemp$0;
                                     var16.field_a = var11;
                                     var16.field_c = var12;
                                     var16.field_b = var13;
@@ -347,10 +345,9 @@ final class ww extends ka {
 
     final void a() {
         try {
+            Throwable decompiledCaughtException = null;
             Object var1 = null;
             InterruptedException var2 = null;
-            Throwable var3 = null;
-            Throwable decompiledCaughtException = null;
             L0: {
               if (this.field_d.field_u <= 1) {
                 break L0;
@@ -400,22 +397,22 @@ final class ww extends ka {
         int incrementValue$15 = 0;
         int incrementValue$16 = 0;
         int incrementValue$17 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         L0: {
           var2 = 0;
           var3 = this.field_d.field_g;
@@ -735,10 +732,9 @@ final class ww extends ka {
     }
 
     final void H(int param0, int param1, int param2) {
-        Object var4 = null;
         int var5 = 0;
-        Throwable var6 = null;
         Throwable decompiledCaughtException = null;
+        Object var4 = null;
         L0: {
           if (param0 == 0) {
             break L0;
@@ -792,26 +788,26 @@ final class ww extends ka {
     }
 
     private final void b(int param0, boolean param1, boolean param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11_int = 0;
-        hna var11 = null;
-        int var12_int = 0;
-        nsa var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11_int;
+        hna var11;
+        int var12_int;
+        nsa var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
         if (this.field_Fb[param0] != -2) {
           L0: {
             L1: {
@@ -949,11 +945,11 @@ final class ww extends ka {
     }
 
     private final void j(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           L1: {
             var2 = this.field_M[param0];
@@ -1015,10 +1011,10 @@ final class ww extends ka {
     }
 
     private final void a(boolean param0, boolean param1, int param2, int param3) {
-        int var5 = 0;
-        hna var6_ref_hna = null;
-        int var6 = 0;
-        int var7 = 0;
+        int var5;
+        hna var6_ref_hna;
+        int var6;
+        int var7;
         L0: {
           if (this.field_e == null) {
             break L0;
@@ -1162,13 +1158,13 @@ final class ww extends ka {
     }
 
     private final int a(int param0, short param1, int param2) {
-        int var4 = 0;
-        dw var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var4;
+        dw var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           var4 = cla.field_m[this.a(param0, param2)];
           var5 = this.field_d.field_c.a((byte) -52, param1 & 65535);
@@ -1229,9 +1225,8 @@ final class ww extends ka {
     }
 
     private final void g() {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         L0: {
           if (this.field_eb != 0) {
             break L0;
@@ -1261,9 +1256,8 @@ final class ww extends ka {
     }
 
     final void b() {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         L0: {
           if (this.field_d.field_u <= 1) {
             break L0;
@@ -1282,9 +1276,8 @@ final class ww extends ka {
     }
 
     private final void a(boolean param0) {
-        Object var2 = null;
-        Throwable var3 = null;
         Throwable decompiledCaughtException = null;
+        Object var2 = null;
         L0: {
           if (this.field_d.field_u <= 1) {
             this.b(param0);
@@ -1303,33 +1296,33 @@ final class ww extends ka {
     }
 
     final void a(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13_int = 0;
-        nsa var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        nsa var23 = null;
-        hna var24 = null;
-        nsa var26 = null;
-        hna var27 = null;
-        nsa var29 = null;
-        nsa var31 = null;
-        nsa var33 = null;
-        int[] var52 = null;
-        int[] var53 = null;
-        int[] var54 = null;
-        int[] var55 = null;
-        int[] var56 = null;
-        int[] var57 = null;
-        int[] var58 = null;
-        int[] var59 = null;
-        int[] var60 = null;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        nsa var13;
+        int var13_int;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        nsa var23;
+        hna var24;
+        nsa var26;
+        hna var27;
+        nsa var29;
+        nsa var31;
+        nsa var33;
+        int[] var52;
+        int[] var53;
+        int[] var54;
+        int[] var55;
+        int[] var56;
+        int[] var57;
+        int[] var58;
+        int[] var59;
+        int[] var60;
         var8 = param1.length;
         if (param0 != 0) {
           if (param0 != 1) {
@@ -1924,15 +1917,15 @@ final class ww extends ka {
     }
 
     private final void i(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           if (this.field_F.field_h) {
             L1: {
@@ -2127,14 +2120,14 @@ final class ww extends ka {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6_int = 0;
-        hna var6 = null;
-        int var7_int = 0;
-        nsa var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var5;
+        hna var6;
+        int var6_int;
+        nsa var7;
+        int var7_int;
+        int var8;
+        int var9;
+        int var10;
         if ((this.field_P & 524288) == 524288) {
           var5 = 0;
           L0: while (true) {
@@ -2207,39 +2200,26 @@ final class ww extends ka {
     }
 
     private final ka a(ww param0, ww param1, int param2, boolean param3, boolean param4) {
-        int[] array$15 = null;
-        int[] array$16 = null;
-        int[] array$17 = null;
-        short[] array$18 = null;
-        int[] array$19 = null;
-        int[] array$20 = null;
-        int[] array$21 = null;
-        byte[] array$22 = null;
-        oha[] array$23 = null;
-        gna[] array$24 = null;
-        short[] array$25 = null;
-        byte[] array$26 = null;
-        nsa[] array$27 = null;
-        float[][] dupTemp$28 = null;
-        float[][] dupTemp$29 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        ww var10_ref_ww = null;
-        ww var11_ref_ww = null;
-        int var11 = 0;
+        int[] array$0 = null;
+        int[] array$1 = null;
+        int[] array$2 = null;
+        short[] array$3 = null;
+        int[] array$4 = null;
+        int[] array$5 = null;
+        int[] array$6 = null;
+        byte[] array$7 = null;
+        oha[] array$8 = null;
+        gna[] array$9 = null;
+        short[] array$10 = null;
+        byte[] array$11 = null;
+        nsa[] array$12 = null;
+        float[][] dupTemp$13 = null;
+        float[][] dupTemp$14 = null;
         int stackIn_8_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_11_0 = 0;
         int stackIn_11_1 = 0;
         int stackIn_17_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_31_0 = 0;
-        gna[] stackIn_130_0 = null;
-        int stackIn_130_1 = 0;
         gna[] stackIn_131_0 = null;
         int stackIn_131_1 = 0;
         gna[] stackIn_132_0 = null;
@@ -2248,37 +2228,14 @@ final class ww extends ka {
         int stackIn_158_0 = 0;
         int stackIn_183_0 = 0;
         int stackIn_197_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_24_0 = 0;
-        gna[] stackOut_129_0 = null;
-        int stackOut_129_1 = 0;
-        gna[] stackOut_131_0 = null;
-        int stackOut_131_1 = 0;
-        Object stackOut_131_2 = null;
-        gna[] stackOut_130_0 = null;
-        int stackOut_130_1 = 0;
-        gna stackOut_130_2 = null;
-        int stackOut_157_0 = 0;
-        int stackOut_156_0 = 0;
-        int stackOut_182_0 = 0;
-        int stackOut_181_0 = 0;
-        int stackOut_196_0 = 0;
-        int stackOut_195_0 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        ww var10_ref_ww;
+        ww var11_ref_ww;
+        int var11;
         L0: {
           param0.field_r = this.field_r;
           if (!this.field_r) {
@@ -2311,48 +2268,38 @@ final class ww extends ka {
         }
         L2: {
           if ((param2 & 7) != 7) {
-            stackOut_7_0 = 0;
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = 0;
             break L2;
           } else {
-            stackOut_6_0 = 1;
-            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_0 = 1;
             break L2;
           }
         }
         L3: {
-          stackOut_8_0 = stackIn_8_0;
-          stackIn_10_0 = stackOut_8_0;
-          stackIn_9_0 = stackOut_8_0;
+
+
           if ((param2 & 32) == 0) {
-            stackOut_10_0 = stackIn_10_0;
-            stackOut_10_1 = 0;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+
+            stackIn_11_1 = 0;
             break L3;
           } else {
-            stackOut_9_0 = stackIn_9_0;
-            stackOut_9_1 = 1;
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
+
+            stackIn_11_1 = 1;
             break L3;
           }
         }
         L4: {
-          var6 = stackIn_11_0 | stackIn_11_1;
+          var6 = stackIn_8_0 | stackIn_11_1;
           if (var6 == 0) {
             if ((param2 & 1) != 0) {
-              stackOut_15_0 = 1;
-              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_0 = 1;
               break L4;
             } else {
-              stackOut_14_0 = 0;
-              stackIn_17_0 = stackOut_14_0;
+              stackIn_17_0 = 0;
               break L4;
             }
           } else {
-            stackOut_12_0 = 1;
-            stackIn_17_0 = stackOut_12_0;
+            stackIn_17_0 = 1;
             break L4;
           }
         }
@@ -2360,17 +2307,14 @@ final class ww extends ka {
           var7 = stackIn_17_0;
           if (var6 == 0) {
             if ((param2 & 2) != 0) {
-              stackOut_21_0 = 1;
-              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_0 = 1;
               break L5;
             } else {
-              stackOut_20_0 = 0;
-              stackIn_23_0 = stackOut_20_0;
+              stackIn_23_0 = 0;
               break L5;
             }
           } else {
-            stackOut_18_0 = 1;
-            stackIn_23_0 = stackOut_18_0;
+            stackIn_23_0 = 1;
             break L5;
           }
         }
@@ -2379,22 +2323,18 @@ final class ww extends ka {
           if (var6 == 0) {
             if ((param2 & 4) == 0) {
               if ((param2 & 16) != 0) {
-                stackOut_29_0 = 1;
-                stackIn_31_0 = stackOut_29_0;
+                stackIn_31_0 = 1;
                 break L6;
               } else {
-                stackOut_28_0 = 0;
-                stackIn_31_0 = stackOut_28_0;
+                stackIn_31_0 = 0;
                 break L6;
               }
             } else {
-              stackOut_26_0 = 1;
-              stackIn_31_0 = stackOut_26_0;
+              stackIn_31_0 = 1;
               break L6;
             }
           } else {
-            stackOut_24_0 = 1;
-            stackIn_31_0 = stackOut_24_0;
+            stackIn_31_0 = 1;
             break L6;
           }
         }
@@ -2436,9 +2376,9 @@ final class ww extends ka {
                     }
                   }
                 }
-                array$15 = new int[this.field_p];
-                param1.field_xb = array$15;
-                param0.field_xb = array$15;
+                array$0 = new int[this.field_p];
+                param1.field_xb = array$0;
+                param0.field_xb = array$0;
                 break L10;
               }
               var10 = 0;
@@ -2471,9 +2411,9 @@ final class ww extends ka {
                     }
                   }
                 }
-                array$16 = new int[this.field_p];
-                param1.field_rb = array$16;
-                param0.field_rb = array$16;
+                array$1 = new int[this.field_p];
+                param1.field_rb = array$1;
+                param0.field_rb = array$1;
                 break L14;
               }
               var10 = 0;
@@ -2505,9 +2445,9 @@ final class ww extends ka {
                   }
                 }
               }
-              array$17 = new int[this.field_p];
-              param1.field_T = array$17;
-              param0.field_T = array$17;
+              array$2 = new int[this.field_p];
+              param1.field_T = array$2;
+              param0.field_T = array$2;
               break L17;
             }
             var10 = 0;
@@ -2541,9 +2481,9 @@ final class ww extends ka {
                 }
               }
               var10 = this.field_g;
-              array$18 = new short[var10];
-              param1.field_ob = array$18;
-              param0.field_ob = array$18;
+              array$3 = new short[var10];
+              param1.field_ob = array$3;
+              param0.field_ob = array$3;
               break L21;
             }
             var10 = 0;
@@ -2603,15 +2543,15 @@ final class ww extends ka {
                       }
                     }
                     var10 = this.field_g;
-                    array$19 = new int[var10];
-                    param1.field_t = array$19;
-                    param0.field_t = array$19;
-                    array$20 = new int[var10];
-                    param1.field_o = array$20;
-                    param0.field_o = array$20;
-                    array$21 = new int[var10];
-                    param1.field_Fb = array$21;
-                    param0.field_Fb = array$21;
+                    array$4 = new int[var10];
+                    param1.field_t = array$4;
+                    param0.field_t = array$4;
+                    array$5 = new int[var10];
+                    param1.field_o = array$5;
+                    param0.field_o = array$5;
+                    array$6 = new int[var10];
+                    param1.field_Fb = array$6;
+                    param0.field_Fb = array$6;
                     break L28;
                   }
                   var10 = 0;
@@ -2660,9 +2600,9 @@ final class ww extends ka {
                 }
               }
               var10 = this.field_g;
-              array$22 = new byte[var10];
-              param1.field_h = array$22;
-              param0.field_h = array$22;
+              array$7 = new byte[var10];
+              param1.field_h = array$7;
+              param0.field_h = array$7;
               break L32;
             }
             if (this.field_h == null) {
@@ -2726,9 +2666,9 @@ final class ww extends ka {
               }
             }
             var10 = this.field_Z;
-            array$23 = new oha[var10];
-            param1.field_lb = array$23;
-            param0.field_lb = array$23;
+            array$8 = new oha[var10];
+            param1.field_lb = array$8;
+            param0.field_lb = array$8;
             break L39;
           }
           L41: {
@@ -2766,9 +2706,9 @@ final class ww extends ka {
                 }
               }
               var10 = this.field_g;
-              array$24 = new gna[var10];
-              param1.field_I = array$24;
-              param0.field_I = array$24;
+              array$9 = new gna[var10];
+              param1.field_I = array$9;
+              param0.field_I = array$9;
               break L43;
             }
             var10 = 0;
@@ -2777,27 +2717,19 @@ final class ww extends ka {
                 break L36;
               } else {
                 L46: {
-                  stackOut_129_0 = param0.field_I;
-                  stackOut_129_1 = var10;
-                  stackIn_131_0 = stackOut_129_0;
-                  stackIn_131_1 = stackOut_129_1;
-                  stackIn_130_0 = stackOut_129_0;
-                  stackIn_130_1 = stackOut_129_1;
+                  stackIn_131_0 = param0.field_I;
+
+                  stackIn_131_1 = var10;
+
                   if (this.field_I[var10] == null) {
-                    stackOut_131_0 = (gna[]) ((Object) stackIn_131_0);
-                    stackOut_131_1 = stackIn_131_1;
-                    stackOut_131_2 = null;
-                    stackIn_132_0 = stackOut_131_0;
-                    stackIn_132_1 = stackOut_131_1;
-                    stackIn_132_2 = (gna) ((Object) stackOut_131_2);
+                    stackIn_132_0 = (gna[]) ((Object) stackIn_131_0);
+                    stackIn_132_1 = stackIn_131_1;
+                    stackIn_132_2 = null;
                     break L46;
                   } else {
-                    stackOut_130_0 = (gna[]) ((Object) stackIn_130_0);
-                    stackOut_130_1 = stackIn_130_1;
-                    stackOut_130_2 = new gna(this.field_I[var10]);
-                    stackIn_132_0 = stackOut_130_0;
-                    stackIn_132_1 = stackOut_130_1;
-                    stackIn_132_2 = stackOut_130_2;
+                    stackIn_132_0 = (gna[]) ((Object) stackIn_131_0);
+                    stackIn_132_1 = stackIn_131_1;
+                    stackIn_132_2 = new gna(this.field_I[var10]);
                     break L46;
                   }
                 }
@@ -2828,9 +2760,9 @@ final class ww extends ka {
                   }
                 }
                 var10 = this.field_g;
-                array$25 = new short[var10];
-                param1.field_X = array$25;
-                param0.field_X = array$25;
+                array$10 = new short[var10];
+                param1.field_X = array$10;
+                param0.field_X = array$10;
                 break L48;
               }
               var10 = 0;
@@ -2870,19 +2802,17 @@ final class ww extends ka {
                 }
                 L54: {
                   if (!param3) {
-                    stackOut_157_0 = this.field_g;
-                    stackIn_158_0 = stackOut_157_0;
+                    stackIn_158_0 = this.field_g;
                     break L54;
                   } else {
-                    stackOut_156_0 = this.field_g + 100;
-                    stackIn_158_0 = stackOut_156_0;
+                    stackIn_158_0 = this.field_g + 100;
                     break L54;
                   }
                 }
                 var10 = stackIn_158_0;
-                array$26 = new byte[var10];
-                param1.field_k = array$26;
-                param0.field_k = array$26;
+                array$11 = new byte[var10];
+                param1.field_k = array$11;
+                param0.field_k = array$11;
                 break L52;
               }
               var10 = 0;
@@ -2928,9 +2858,9 @@ final class ww extends ka {
               }
             }
             var10 = this.field_m;
-            array$27 = new nsa[var10];
-            param1.field_db = array$27;
-            param0.field_db = array$27;
+            array$12 = new nsa[var10];
+            param1.field_db = array$12;
+            param0.field_db = array$12;
             var11 = 0;
             L59: while (true) {
               if (var11 >= this.field_m) {
@@ -2966,19 +2896,17 @@ final class ww extends ka {
                   }
                   L64: {
                     if (!param3) {
-                      stackOut_182_0 = this.field_g;
-                      stackIn_183_0 = stackOut_182_0;
+                      stackIn_183_0 = this.field_g;
                       break L64;
                     } else {
-                      stackOut_181_0 = this.field_g + 100;
-                      stackIn_183_0 = stackOut_181_0;
+                      stackIn_183_0 = this.field_g + 100;
                       break L64;
                     }
                   }
                   var10 = stackIn_183_0;
-                  dupTemp$28 = new float[var10][3];
-                  param1.field_W = dupTemp$28;
-                  param0.field_W = dupTemp$28;
+                  dupTemp$13 = new float[var10][3];
+                  param1.field_W = dupTemp$13;
+                  param0.field_W = dupTemp$13;
                   break L62;
                 }
                 var10 = 0;
@@ -2999,19 +2927,17 @@ final class ww extends ka {
                       }
                       L68: {
                         if (!param3) {
-                          stackOut_196_0 = this.field_g;
-                          stackIn_197_0 = stackOut_196_0;
+                          stackIn_197_0 = this.field_g;
                           break L68;
                         } else {
-                          stackOut_195_0 = this.field_g + 100;
-                          stackIn_197_0 = stackOut_195_0;
+                          stackIn_197_0 = this.field_g + 100;
                           break L68;
                         }
                       }
                       var10 = stackIn_197_0;
-                      dupTemp$29 = new float[var10][3];
-                      param1.field_l = dupTemp$29;
-                      param0.field_l = dupTemp$29;
+                      dupTemp$14 = new float[var10][3];
+                      param1.field_l = dupTemp$14;
+                      param0.field_l = dupTemp$14;
                       break L66;
                     }
                     var10 = 0;
@@ -3069,74 +2995,74 @@ final class ww extends ka {
     }
 
     final void I(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14_int = 0;
-        nsa var14 = null;
-        int var15 = 0;
-        int[] var16_ref_int__ = null;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25_int = 0;
-        int[] var25 = null;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29_int = 0;
-        int[] var29 = null;
-        int var30 = 0;
-        int[] var31_ref_int__ = null;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int[] var35 = null;
-        int var35_int = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var42 = 0;
-        int var43 = 0;
-        int var44 = 0;
-        int var45 = 0;
-        int var46 = 0;
-        int[] var47 = null;
-        int[] var50 = null;
-        int[] var52 = null;
-        int[] var55 = null;
-        nsa var58 = null;
-        hna var59 = null;
-        nsa var61 = null;
-        hna var62 = null;
-        nsa var64 = null;
-        nsa var66 = null;
-        nsa var68 = null;
-        int[] var71 = null;
-        int[] var73 = null;
-        int[] var76 = null;
-        int[] var94 = null;
-        int[] var95 = null;
-        int[] var96 = null;
-        int[] var97 = null;
-        int[] var98 = null;
-        int[] var99 = null;
-        int[] var100 = null;
-        int[] var101 = null;
-        int[] var102 = null;
-        int[] var103 = null;
-        int[] var104 = null;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        nsa var14;
+        int var14_int;
+        int var15;
+        int var16;
+        int[] var16_ref_int__;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int[] var25;
+        int var25_int;
+        int var26;
+        int var27;
+        int var28;
+        int[] var29;
+        int var29_int;
+        int var30;
+        int var31;
+        int[] var31_ref_int__;
+        int var32;
+        int var33;
+        int var34;
+        int[] var35;
+        int var35_int;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var42;
+        int var43;
+        int var44;
+        int var45;
+        int var46;
+        int[] var47;
+        int[] var50;
+        int[] var52;
+        int[] var55;
+        nsa var58;
+        hna var59;
+        nsa var61;
+        hna var62;
+        nsa var64;
+        nsa var66;
+        nsa var68;
+        int[] var71;
+        int[] var73;
+        int[] var76;
+        int[] var94;
+        int[] var95;
+        int[] var96;
+        int[] var97;
+        int[] var98;
+        int[] var99;
+        int[] var100;
+        int[] var101;
+        int[] var102;
+        int[] var103;
+        int[] var104;
         var9 = param1.length;
         if (param0 != 0) {
           if (param0 != 1) {
@@ -4081,14 +4007,12 @@ final class ww extends ka {
     }
 
     private final void h() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        short stackOut_3_0 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = 0;
         L0: while (true) {
           if (var5 >= this.field_g) {
@@ -4097,12 +4021,10 @@ final class ww extends ka {
           } else {
             L1: {
               if (this.field_X == null) {
-                stackOut_4_0 = -1;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = -1;
                 break L1;
               } else {
-                stackOut_3_0 = this.field_X[var5];
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = this.field_X[var5];
                 break L1;
               }
             }
@@ -4140,15 +4062,15 @@ final class ww extends ka {
     }
 
     private final void g(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           if (this.field_F.field_h) {
             L1: {
@@ -4352,22 +4274,22 @@ final class ww extends ka {
         int incrementValue$15 = 0;
         int incrementValue$16 = 0;
         int incrementValue$17 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         L0: {
           var2 = 0;
           var3 = this.field_d.field_g;
@@ -4688,11 +4610,11 @@ final class ww extends ka {
     }
 
     private final void f(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           L1: {
             var2 = this.field_M[param0];
@@ -4746,11 +4668,10 @@ final class ww extends ka {
     final void FA(int param0) {
         int var2 = 0;
         int var3 = 0;
-        Object var4 = null;
         int var5 = 0;
         int var6 = 0;
-        Throwable var7 = null;
         Throwable decompiledCaughtException = null;
+        Object var4 = null;
         if ((this.field_P & 6) == 6) {
           var2 = qu.field_b[param0];
           var3 = qu.field_d[param0];
@@ -4790,6 +4711,33 @@ final class ww extends ka {
 
     private final void b(gda param0, el param1, int param2, int param3) {
         try {
+            float stackIn_17_0 = 0.0f;
+            float stackIn_27_0 = 0.0f;
+            float stackIn_42_0 = 0.0f;
+            int stackIn_73_0 = 0;
+            int stackIn_81_0 = 0;
+            iua stackIn_137_0 = null;
+            iua stackIn_138_0 = null;
+            int stackIn_138_1 = 0;
+            int stackIn_142_0 = 0;
+            Object stackIn_146_0 = null;
+            int stackIn_146_1 = 0;
+            Object stackIn_148_0 = null;
+            int stackIn_148_1 = 0;
+            Object stackIn_149_0 = null;
+            Object stackIn_150_0 = null;
+            int stackIn_150_1 = 0;
+            int stackIn_150_2 = 0;
+            Object stackIn_154_0 = null;
+            int stackIn_154_1 = 0;
+            Object stackIn_156_0 = null;
+            int stackIn_156_1 = 0;
+            Object stackIn_157_0 = null;
+            Object stackIn_158_0 = null;
+            int stackIn_158_1 = 0;
+            int stackIn_158_2 = 0;
+            Throwable caughtException = null;
+            Throwable decompiledCaughtException = null;
             pna var5 = null;
             int var6 = 0;
             float var7 = 0.0f;
@@ -4816,12 +4764,10 @@ final class ww extends ka {
             float var28 = 0.0f;
             float var29 = 0.0f;
             float var30 = 0.0f;
-            Object var31_ref = null;
-            int var31 = 0;
             Object var31_ref_Object = null;
+            int var31 = 0;
             InterruptedException var32_ref_InterruptedException = null;
             int var32 = 0;
-            Throwable var33_ref_Throwable = null;
             int var33 = 0;
             float var34 = 0.0f;
             float var35 = 0.0f;
@@ -4832,8 +4778,8 @@ final class ww extends ka {
             int var40 = 0;
             int var41 = 0;
             int var42 = 0;
-            Exception var43 = null;
             int var43_int = 0;
+            Exception var43 = null;
             Object var43_ref = null;
             int var44 = 0;
             int var45 = 0;
@@ -4842,106 +4788,12 @@ final class ww extends ka {
             float var47 = 0.0f;
             int var48 = 0;
             nsa var49 = null;
-            Throwable var50 = null;
             hna var51 = null;
             hna var52 = null;
             nsa var53 = null;
             hna var54 = null;
             hna var55 = null;
             nsa var56 = null;
-            float stackIn_17_0 = 0.0f;
-            float stackIn_27_0 = 0.0f;
-            float stackIn_42_0 = 0.0f;
-            int stackIn_73_0 = 0;
-            int stackIn_81_0 = 0;
-            iua stackIn_136_0 = null;
-            iua stackIn_137_0 = null;
-            iua stackIn_138_0 = null;
-            int stackIn_138_1 = 0;
-            int stackIn_142_0 = 0;
-            Object stackIn_144_0 = null;
-            int stackIn_144_1 = 0;
-            Object stackIn_145_0 = null;
-            int stackIn_145_1 = 0;
-            Object stackIn_146_0 = null;
-            int stackIn_146_1 = 0;
-            Object stackIn_147_0 = null;
-            int stackIn_147_1 = 0;
-            Object stackIn_148_0 = null;
-            int stackIn_148_1 = 0;
-            Object stackIn_149_0 = null;
-            int stackIn_149_1 = 0;
-            Object stackIn_150_0 = null;
-            int stackIn_150_1 = 0;
-            int stackIn_150_2 = 0;
-            Object stackIn_152_0 = null;
-            int stackIn_152_1 = 0;
-            Object stackIn_153_0 = null;
-            int stackIn_153_1 = 0;
-            Object stackIn_154_0 = null;
-            int stackIn_154_1 = 0;
-            Object stackIn_155_0 = null;
-            int stackIn_155_1 = 0;
-            Object stackIn_156_0 = null;
-            int stackIn_156_1 = 0;
-            Object stackIn_157_0 = null;
-            int stackIn_157_1 = 0;
-            Object stackIn_158_0 = null;
-            int stackIn_158_1 = 0;
-            int stackIn_158_2 = 0;
-            Throwable caughtException = null;
-            Throwable decompiledCaughtException = null;
-            float stackOut_16_0 = 0.0f;
-            float stackOut_15_0 = 0.0f;
-            float stackOut_26_0 = 0.0f;
-            float stackOut_25_0 = 0.0f;
-            float stackOut_41_0 = 0.0f;
-            float stackOut_40_0 = 0.0f;
-            int stackOut_72_0 = 0;
-            int stackOut_71_0 = 0;
-            int stackOut_79_0 = 0;
-            int stackOut_78_0 = 0;
-            int stackOut_76_0 = 0;
-            int stackOut_74_0 = 0;
-            iua stackOut_135_0 = null;
-            iua stackOut_137_0 = null;
-            int stackOut_137_1 = 0;
-            iua stackOut_136_0 = null;
-            int stackOut_136_1 = 0;
-            int stackOut_141_0 = 0;
-            int stackOut_140_0 = 0;
-            Object stackOut_151_0 = null;
-            int stackOut_151_1 = 0;
-            Object stackOut_152_0 = null;
-            int stackOut_152_1 = 0;
-            Object stackOut_153_0 = null;
-            int stackOut_153_1 = 0;
-            Object stackOut_154_0 = null;
-            int stackOut_154_1 = 0;
-            Object stackOut_157_0 = null;
-            int stackOut_157_1 = 0;
-            int stackOut_157_2 = 0;
-            Object stackOut_155_0 = null;
-            int stackOut_155_1 = 0;
-            Object stackOut_156_0 = null;
-            int stackOut_156_1 = 0;
-            int stackOut_156_2 = 0;
-            Object stackOut_143_0 = null;
-            int stackOut_143_1 = 0;
-            Object stackOut_144_0 = null;
-            int stackOut_144_1 = 0;
-            Object stackOut_145_0 = null;
-            int stackOut_145_1 = 0;
-            Object stackOut_146_0 = null;
-            int stackOut_146_1 = 0;
-            Object stackOut_149_0 = null;
-            int stackOut_149_1 = 0;
-            int stackOut_149_2 = 0;
-            Object stackOut_147_0 = null;
-            int stackOut_147_1 = 0;
-            Object stackOut_148_0 = null;
-            int stackOut_148_1 = 0;
-            int stackOut_148_2 = 0;
             if (this.field_Z >= 1) {
               L0: {
                 this.field_B = (pna) ((Object) param0);
@@ -4997,12 +4849,10 @@ final class ww extends ka {
               L2: {
                 var7 = var5.field_m + var5.field_r * this.field_B.field_l + var5.field_o * this.field_B.field_e + var5.field_f * this.field_B.field_m;
                 if (var6 == 0) {
-                  stackOut_16_0 = var5.field_r * this.field_B.field_i + var5.field_o * this.field_B.field_s + var5.field_f * this.field_B.field_o;
-                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_0 = var5.field_r * this.field_B.field_i + var5.field_o * this.field_B.field_s + var5.field_f * this.field_B.field_o;
                   break L2;
                 } else {
-                  stackOut_15_0 = var5.field_o;
-                  stackIn_17_0 = stackOut_15_0;
+                  stackIn_17_0 = var5.field_o;
                   break L2;
                 }
               }
@@ -5025,12 +4875,10 @@ final class ww extends ka {
                   L4: {
                     var13 = var5.field_l + var5.field_g * this.field_B.field_l + var5.field_i * this.field_B.field_e + var5.field_n * this.field_B.field_m;
                     if (var6 == 0) {
-                      stackOut_26_0 = var5.field_g * this.field_B.field_i + var5.field_i * this.field_B.field_s + var5.field_n * this.field_B.field_o;
-                      stackIn_27_0 = stackOut_26_0;
+                      stackIn_27_0 = var5.field_g * this.field_B.field_i + var5.field_i * this.field_B.field_s + var5.field_n * this.field_B.field_o;
                       break L4;
                     } else {
-                      stackOut_25_0 = var5.field_i;
-                      stackIn_27_0 = stackOut_25_0;
+                      stackIn_27_0 = var5.field_i;
                       break L4;
                     }
                   }
@@ -5074,12 +4922,10 @@ final class ww extends ka {
                   L7: {
                     var19 = var5.field_e + var5.field_h * this.field_B.field_l + var5.field_s * this.field_B.field_e + var5.field_j * this.field_B.field_m;
                     if (var6 == 0) {
-                      stackOut_41_0 = var5.field_h * this.field_B.field_i + var5.field_s * this.field_B.field_s + var5.field_j * this.field_B.field_o;
-                      stackIn_42_0 = stackOut_41_0;
+                      stackIn_42_0 = var5.field_h * this.field_B.field_i + var5.field_s * this.field_B.field_s + var5.field_j * this.field_B.field_o;
                       break L7;
                     } else {
-                      stackOut_40_0 = var5.field_s;
-                      stackIn_42_0 = stackOut_40_0;
+                      stackIn_42_0 = var5.field_s;
                       break L7;
                     }
                   }
@@ -5184,12 +5030,10 @@ final class ww extends ka {
                   L17: {
                     var31 = 0;
                     if (var11 > this.field_d.field_g) {
-                      stackOut_72_0 = 0;
-                      stackIn_73_0 = stackOut_72_0;
+                      stackIn_73_0 = 0;
                       break L17;
                     } else {
-                      stackOut_71_0 = 1;
-                      stackIn_73_0 = stackOut_71_0;
+                      stackIn_73_0 = 1;
                       break L17;
                     }
                   }
@@ -5198,22 +5042,18 @@ final class ww extends ka {
                     if (var32 == 0) {
                       if (this.field_i == null) {
                         if (this.field_kb != null) {
-                          stackOut_79_0 = 1;
-                          stackIn_81_0 = stackOut_79_0;
+                          stackIn_81_0 = 1;
                           break L18;
                         } else {
-                          stackOut_78_0 = 0;
-                          stackIn_81_0 = stackOut_78_0;
+                          stackIn_81_0 = 0;
                           break L18;
                         }
                       } else {
-                        stackOut_76_0 = 1;
-                        stackIn_81_0 = stackOut_76_0;
+                        stackIn_81_0 = 1;
                         break L18;
                       }
                     } else {
-                      stackOut_74_0 = 1;
-                      stackIn_81_0 = stackOut_74_0;
+                      stackIn_81_0 = 1;
                       break L18;
                     }
                   }
@@ -5470,20 +5310,15 @@ final class ww extends ka {
                   }
                   L32: {
                     this.a(true);
-                    stackOut_135_0 = this.field_w;
-                    stackIn_137_0 = stackOut_135_0;
-                    stackIn_136_0 = stackOut_135_0;
+                    stackIn_137_0 = this.field_w;
+
                     if ((param3 & 1) != 0) {
-                      stackOut_137_0 = (iua) ((Object) stackIn_137_0);
-                      stackOut_137_1 = 0;
-                      stackIn_138_0 = stackOut_137_0;
-                      stackIn_138_1 = stackOut_137_1;
+                      stackIn_138_0 = (iua) ((Object) stackIn_137_0);
+                      stackIn_138_1 = 0;
                       break L32;
                     } else {
-                      stackOut_136_0 = (iua) ((Object) stackIn_136_0);
-                      stackOut_136_1 = 1;
-                      stackIn_138_0 = stackOut_136_0;
-                      stackIn_138_1 = stackOut_136_1;
+                      stackIn_138_0 = (iua) ((Object) stackIn_137_0);
+                      stackIn_138_1 = 1;
                       break L32;
                     }
                   }
@@ -5493,12 +5328,10 @@ final class ww extends ka {
                     L33: {
                       L34: {
                         if ((param3 & 4) == 0) {
-                          stackOut_141_0 = 0;
-                          stackIn_142_0 = stackOut_141_0;
+                          stackIn_142_0 = 0;
                           break L34;
                         } else {
-                          stackOut_140_0 = 1;
-                          stackIn_142_0 = stackOut_140_0;
+                          stackIn_142_0 = 1;
                           break L34;
                         }
                       }
@@ -5508,60 +5341,42 @@ final class ww extends ka {
                           L36: {
                             L37: {
                               L38: {
-                                stackOut_151_0 = this;
-                                stackOut_151_1 = var31;
-                                stackIn_154_0 = stackOut_151_0;
-                                stackIn_154_1 = stackOut_151_1;
-                                stackIn_152_0 = stackOut_151_0;
-                                stackIn_152_1 = stackOut_151_1;
+                                stackIn_154_0 = this;
+
+                                stackIn_154_1 = var31;
+
                                 if (!this.field_F.field_J) {
                                   break L38;
                                 } else {
-                                  stackOut_152_0 = this;
-                                  stackOut_152_1 = stackIn_152_1;
-                                  stackIn_156_0 = stackOut_152_0;
-                                  stackIn_156_1 = stackOut_152_1;
-                                  stackIn_153_0 = stackOut_152_0;
-                                  stackIn_153_1 = stackOut_152_1;
+                                  stackIn_156_0 = this;
+
+                                  stackIn_156_1 = stackIn_154_1;
+
                                   if (var12 > this.field_F.field_B) {
                                     break L37;
                                   } else {
-                                    stackOut_153_0 = this;
-                                    stackOut_153_1 = stackIn_153_1;
-                                    stackIn_154_0 = stackOut_153_0;
-                                    stackIn_154_1 = stackOut_153_1;
+                                    stackIn_154_0 = this;
+
                                     break L38;
                                   }
                                 }
                               }
-                              stackOut_154_0 = this;
-                              stackOut_154_1 = stackIn_154_1;
-                              stackIn_157_0 = stackOut_154_0;
-                              stackIn_157_1 = stackOut_154_1;
-                              stackIn_155_0 = stackOut_154_0;
-                              stackIn_155_1 = stackOut_154_1;
+                              stackIn_157_0 = this;
+
                               if (!this.field_F.field_h) {
-                                stackOut_157_0 = this;
-                                stackOut_157_1 = stackIn_157_1;
-                                stackOut_157_2 = 0;
-                                stackIn_158_0 = stackOut_157_0;
-                                stackIn_158_1 = stackOut_157_1;
-                                stackIn_158_2 = stackOut_157_2;
+                                stackIn_158_0 = this;
+                                stackIn_158_1 = stackIn_154_1;
+                                stackIn_158_2 = 0;
                                 break L36;
                               } else {
-                                stackOut_155_0 = this;
-                                stackOut_155_1 = stackIn_155_1;
-                                stackIn_156_0 = stackOut_155_0;
-                                stackIn_156_1 = stackOut_155_1;
+                                stackIn_156_0 = this;
+                                stackIn_156_1 = stackIn_154_1;
                                 break L37;
                               }
                             }
-                            stackOut_156_0 = this;
-                            stackOut_156_1 = stackIn_156_1;
-                            stackOut_156_2 = 1;
-                            stackIn_158_0 = stackOut_156_0;
-                            stackIn_158_1 = stackOut_156_1;
-                            stackIn_158_2 = stackOut_156_2;
+                            stackIn_158_0 = this;
+                            stackIn_158_1 = stackIn_156_1;
+                            stackIn_158_2 = 1;
                             break L36;
                           }
                           this.a(stackIn_158_1 != 0, stackIn_158_2 != 0, var11, var12 - var11);
@@ -5570,60 +5385,42 @@ final class ww extends ka {
                           L39: {
                             L40: {
                               L41: {
-                                stackOut_143_0 = this;
-                                stackOut_143_1 = var31;
-                                stackIn_146_0 = stackOut_143_0;
-                                stackIn_146_1 = stackOut_143_1;
-                                stackIn_144_0 = stackOut_143_0;
-                                stackIn_144_1 = stackOut_143_1;
+                                stackIn_146_0 = this;
+
+                                stackIn_146_1 = var31;
+
                                 if (!this.field_F.field_J) {
                                   break L41;
                                 } else {
-                                  stackOut_144_0 = this;
-                                  stackOut_144_1 = stackIn_144_1;
-                                  stackIn_148_0 = stackOut_144_0;
-                                  stackIn_148_1 = stackOut_144_1;
-                                  stackIn_145_0 = stackOut_144_0;
-                                  stackIn_145_1 = stackOut_144_1;
+                                  stackIn_148_0 = this;
+
+                                  stackIn_148_1 = stackIn_146_1;
+
                                   if (var12 > this.field_F.field_B) {
                                     break L40;
                                   } else {
-                                    stackOut_145_0 = this;
-                                    stackOut_145_1 = stackIn_145_1;
-                                    stackIn_146_0 = stackOut_145_0;
-                                    stackIn_146_1 = stackOut_145_1;
+                                    stackIn_146_0 = this;
+
                                     break L41;
                                   }
                                 }
                               }
-                              stackOut_146_0 = this;
-                              stackOut_146_1 = stackIn_146_1;
-                              stackIn_149_0 = stackOut_146_0;
-                              stackIn_149_1 = stackOut_146_1;
-                              stackIn_147_0 = stackOut_146_0;
-                              stackIn_147_1 = stackOut_146_1;
+                              stackIn_149_0 = this;
+
                               if (!this.field_F.field_h) {
-                                stackOut_149_0 = this;
-                                stackOut_149_1 = stackIn_149_1;
-                                stackOut_149_2 = 0;
-                                stackIn_150_0 = stackOut_149_0;
-                                stackIn_150_1 = stackOut_149_1;
-                                stackIn_150_2 = stackOut_149_2;
+                                stackIn_150_0 = this;
+                                stackIn_150_1 = stackIn_146_1;
+                                stackIn_150_2 = 0;
                                 break L39;
                               } else {
-                                stackOut_147_0 = this;
-                                stackOut_147_1 = stackIn_147_1;
-                                stackIn_148_0 = stackOut_147_0;
-                                stackIn_148_1 = stackOut_147_1;
+                                stackIn_148_0 = this;
+                                stackIn_148_1 = stackIn_146_1;
                                 break L40;
                               }
                             }
-                            stackOut_148_0 = this;
-                            stackOut_148_1 = stackIn_148_1;
-                            stackOut_148_2 = 1;
-                            stackIn_150_0 = stackOut_148_0;
-                            stackIn_150_1 = stackOut_148_1;
-                            stackIn_150_2 = stackOut_148_2;
+                            stackIn_150_0 = this;
+                            stackIn_150_1 = stackIn_148_1;
+                            stackIn_150_2 = 1;
                             break L39;
                           }
                           this.b(stackIn_150_1 != 0, stackIn_150_2 != 0, var11, var12 - var11);
@@ -5689,19 +5486,19 @@ final class ww extends ka {
     }
 
     private final void d() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         if (!this.field_r) {
           var1 = 0;
           var2 = 0;
@@ -5721,6 +5518,7 @@ final class ww extends ka {
               this.field_Bb = (short)var5;
               this.field_vb = (short)var8;
               this.field_U = (short)(int)(Math.sqrt((double)var1) + 0.99);
+              Math.sqrt((double)var2);
               this.field_r = true;
               return;
             } else {
@@ -5822,10 +5620,10 @@ final class ww extends ka {
     }
 
     private final void b(boolean param0, boolean param1, int param2, int param3) {
-        int var5 = 0;
-        hna var6_ref_hna = null;
-        int var6 = 0;
-        int var7 = 0;
+        int var5;
+        hna var6_ref_hna;
+        int var6;
+        int var7;
         L0: {
           if (this.field_e == null) {
             break L0;
@@ -5969,27 +5767,6 @@ final class ww extends ka {
     }
 
     private final void b(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13_int = 0;
-        oha var13 = null;
-        int var14 = 0;
-        oha var15_ref_oha = null;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        gna var19 = null;
-        gna var20 = null;
         int stackIn_35_0 = 0;
         int stackIn_42_0 = 0;
         int stackIn_49_0 = 0;
@@ -5998,22 +5775,27 @@ final class ww extends ka {
         int stackIn_73_0 = 0;
         int stackIn_80_0 = 0;
         int stackIn_85_0 = 0;
-        int stackOut_84_0 = 0;
-        int stackOut_83_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_71_0 = 0;
-        int stackOut_79_0 = 0;
-        int stackOut_78_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_47_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        oha var13;
+        int var13_int;
+        int var14;
+        int var15;
+        oha var15_ref_oha;
+        int var16;
+        int var17;
+        int var18;
+        gna var19;
+        gna var20;
         if (this.field_eb != 1) {
           if (this.field_eb != 2) {
             L0: {
@@ -6116,12 +5898,10 @@ final class ww extends ka {
                           var20 = this.field_I[var8];
                           var14 = var2 * var20.field_a + var3 * var20.field_c + var4 * var20.field_b >> 16;
                           if (var14 <= 256) {
-                            stackOut_84_0 = var7;
-                            stackIn_85_0 = stackOut_84_0;
+                            stackIn_85_0 = var7;
                             break L10;
                           } else {
-                            stackOut_83_0 = var6;
-                            stackIn_85_0 = stackOut_83_0;
+                            stackIn_85_0 = var6;
                             break L10;
                           }
                         }
@@ -6152,12 +5932,10 @@ final class ww extends ka {
                       L13: {
                         var15 = (var2 * var13.field_a + var3 * var13.field_c + var4 * var13.field_b) / var13.field_d >> 16;
                         if (var15 <= 256) {
-                          stackOut_65_0 = var7;
-                          stackIn_66_0 = stackOut_65_0;
+                          stackIn_66_0 = var7;
                           break L13;
                         } else {
-                          stackOut_64_0 = var6;
-                          stackIn_66_0 = stackOut_64_0;
+                          stackIn_66_0 = var6;
                           break L13;
                         }
                       }
@@ -6183,12 +5961,10 @@ final class ww extends ka {
                       L16: {
                         var15 = (var2 * var13.field_a + var3 * var13.field_c + var4 * var13.field_b) / var13.field_d >> 16;
                         if (var15 <= 256) {
-                          stackOut_72_0 = var7;
-                          stackIn_73_0 = stackOut_72_0;
+                          stackIn_73_0 = var7;
                           break L16;
                         } else {
-                          stackOut_71_0 = var6;
-                          stackIn_73_0 = stackOut_71_0;
+                          stackIn_73_0 = var6;
                           break L16;
                         }
                       }
@@ -6214,12 +5990,10 @@ final class ww extends ka {
                       L19: {
                         var15 = (var2 * var13.field_a + var3 * var13.field_c + var4 * var13.field_b) / var13.field_d >> 16;
                         if (var15 <= 256) {
-                          stackOut_79_0 = var7;
-                          stackIn_80_0 = stackOut_79_0;
+                          stackIn_80_0 = var7;
                           break L19;
                         } else {
-                          stackOut_78_0 = var6;
-                          stackIn_80_0 = stackOut_78_0;
+                          stackIn_80_0 = var6;
                           break L19;
                         }
                       }
@@ -6248,12 +6022,10 @@ final class ww extends ka {
                           var19 = this.field_I[var8];
                           var16 = var2 * var19.field_a + var3 * var19.field_c + var4 * var19.field_b >> 16;
                           if (var16 <= 256) {
-                            stackOut_53_0 = var7;
-                            stackIn_54_0 = stackOut_53_0;
+                            stackIn_54_0 = var7;
                             break L20;
                           } else {
-                            stackOut_52_0 = var6;
-                            stackIn_54_0 = stackOut_52_0;
+                            stackIn_54_0 = var6;
                             break L20;
                           }
                         }
@@ -6287,12 +6059,10 @@ final class ww extends ka {
                       L23: {
                         var17 = (var2 * var15_ref_oha.field_a + var3 * var15_ref_oha.field_c + var4 * var15_ref_oha.field_b) / var15_ref_oha.field_d >> 16;
                         if (var17 <= 256) {
-                          stackOut_34_0 = var7;
-                          stackIn_35_0 = stackOut_34_0;
+                          stackIn_35_0 = var7;
                           break L23;
                         } else {
-                          stackOut_33_0 = var6;
-                          stackIn_35_0 = stackOut_33_0;
+                          stackIn_35_0 = var6;
                           break L23;
                         }
                       }
@@ -6318,12 +6088,10 @@ final class ww extends ka {
                       L26: {
                         var17 = (var2 * var15_ref_oha.field_a + var3 * var15_ref_oha.field_c + var4 * var15_ref_oha.field_b) / var15_ref_oha.field_d >> 16;
                         if (var17 <= 256) {
-                          stackOut_41_0 = var7;
-                          stackIn_42_0 = stackOut_41_0;
+                          stackIn_42_0 = var7;
                           break L26;
                         } else {
-                          stackOut_40_0 = var6;
-                          stackIn_42_0 = stackOut_40_0;
+                          stackIn_42_0 = var6;
                           break L26;
                         }
                       }
@@ -6349,12 +6117,10 @@ final class ww extends ka {
                       L29: {
                         var17 = (var2 * var15_ref_oha.field_a + var3 * var15_ref_oha.field_c + var4 * var15_ref_oha.field_b) / var15_ref_oha.field_d >> 16;
                         if (var17 <= 256) {
-                          stackOut_48_0 = var7;
-                          stackIn_49_0 = stackOut_48_0;
+                          stackIn_49_0 = var7;
                           break L29;
                         } else {
-                          stackOut_47_0 = var6;
-                          stackIn_49_0 = stackOut_47_0;
+                          stackIn_49_0 = var6;
                           break L29;
                         }
                       }
@@ -6423,26 +6189,26 @@ final class ww extends ka {
     }
 
     private final void a(int param0, boolean param1, boolean param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11_int = 0;
-        hna var11 = null;
-        int var12_int = 0;
-        nsa var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11_int;
+        hna var11;
+        int var12_int;
+        nsa var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
         if (this.field_Fb[param0] != -2) {
           L0: {
             L1: {
@@ -6593,108 +6359,90 @@ final class ww extends ka {
     }
 
     ww(sfa param0, oc param1, int param2, int param3, int param4, int param5) {
-        d var7 = null;
-        int var9_int = 0;
-        long[] var9 = null;
-        int var10 = 0;
-        int var11_int = 0;
-        ima var11 = null;
-        int var12 = 0;
-        Object var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18_int = 0;
-        dw var18 = null;
-        int var19_int = 0;
-        float[] var19 = null;
-        float[] var20 = null;
-        lp var21_ref_lp = null;
-        int var21 = 0;
-        dw var22_ref_dw = null;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        float var29 = 0.0f;
-        int var30 = 0;
-        float var30_float = 0.0f;
-        float var31 = 0.0f;
-        float var32 = 0.0f;
-        float var33 = 0.0f;
-        float var34_float = 0.0f;
-        int var34 = 0;
-        float var35_float = 0.0f;
-        int var35 = 0;
-        float var36_float = 0.0f;
-        int var36 = 0;
-        float var37_float = 0.0f;
-        int var37 = 0;
-        float var38_float = 0.0f;
-        int var38 = 0;
-        float var39_float = 0.0f;
-        int var39 = 0;
-        float var40_float = 0.0f;
-        int var40 = 0;
-        float var41_float = 0.0f;
-        int var41 = 0;
-        float var42_float = 0.0f;
-        int var42 = 0;
-        float var43 = 0.0f;
-        float var44 = 0.0f;
-        float var45 = 0.0f;
-        float var46 = 0.0f;
-        float var47 = 0.0f;
-        float var48 = 0.0f;
-        float var49 = 0.0f;
-        float var50 = 0.0f;
-        float var51 = 0.0f;
-        float var52 = 0.0f;
-        float var53 = 0.0f;
-        int var54 = 0;
-        jt var56 = null;
-        dw var57 = null;
-        long[] var58 = null;
-        jt var59 = null;
-        lp var60 = null;
-        tw var61 = null;
-        dw var62 = null;
-        float[] var65 = null;
-        float[] var66 = null;
-        long[] var68 = null;
-        int[] var74 = null;
-        float[] var75 = null;
-        float[] var76 = null;
         int stackIn_6_0 = 0;
         int stackIn_37_0 = 0;
-        int stackIn_50_0 = 0;
-        int stackIn_50_1 = 0;
         int stackIn_51_0 = 0;
         int stackIn_51_1 = 0;
         int stackIn_52_0 = 0;
         int stackIn_52_1 = 0;
         int stackIn_52_2 = 0;
         int stackIn_61_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_49_1 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_51_1 = 0;
-        int stackOut_51_2 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_50_1 = 0;
-        int stackOut_50_2 = 0;
-        short stackOut_60_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_32_0 = 0;
+        d var7;
+        int var9_int;
+        long[] var9;
+        int var10;
+        int var11_int;
+        ima var11;
+        int var12;
+        Object var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        dw var18;
+        int var18_int;
+        float[] var19;
+        int var19_int;
+        float[] var20;
+        int var21;
+        lp var21_ref_lp;
+        int var22;
+        dw var22_ref_dw;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        float var29;
+        int var30;
+        float var30_float;
+        float var31;
+        float var32;
+        float var33;
+        int var34;
+        float var34_float;
+        int var35;
+        float var35_float;
+        int var36;
+        float var36_float;
+        int var37;
+        float var37_float;
+        int var38;
+        float var38_float;
+        int var39;
+        float var39_float;
+        int var40;
+        float var40_float;
+        int var41;
+        float var41_float;
+        int var42;
+        float var42_float;
+        float var43;
+        float var44;
+        float var45;
+        float var46;
+        float var47;
+        float var48;
+        float var49;
+        float var50;
+        float var51;
+        float var52;
+        float var53;
+        int var54;
+        jt var56;
+        dw var57;
+        long[] var58;
+        jt var59;
+        lp var60;
+        tw var61;
+        dw var62;
+        float[] var65;
+        float[] var66;
+        long[] var68;
+        int[] var74;
+        float[] var75;
+        float[] var76;
         this.field_zb = false;
         this.field_Z = 0;
         this.field_r = false;
@@ -6735,12 +6483,10 @@ final class ww extends ka {
               var58 = var68;
               var9 = var58;
               if ((this.field_P & 256) == 0) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L1;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
@@ -6766,27 +6512,19 @@ final class ww extends ka {
                           var59 = param1.field_m[var54];
                           var60 = fw.a(var59.field_d, false);
                           var14 = bt.field_h[param1.field_A[var59.field_a] & 65535] & 16777215;
-                          stackOut_49_0 = var14;
-                          stackOut_49_1 = 255;
-                          stackIn_51_0 = stackOut_49_0;
-                          stackIn_51_1 = stackOut_49_1;
-                          stackIn_50_0 = stackOut_49_0;
-                          stackIn_50_1 = stackOut_49_1;
+                          stackIn_51_0 = var14;
+
+                          stackIn_51_1 = 255;
+
                           if (param1.field_n == null) {
-                            stackOut_51_0 = stackIn_51_0;
-                            stackOut_51_1 = stackIn_51_1;
-                            stackOut_51_2 = 0;
-                            stackIn_52_0 = stackOut_51_0;
-                            stackIn_52_1 = stackOut_51_1;
-                            stackIn_52_2 = stackOut_51_2;
+                            stackIn_52_0 = stackIn_51_0;
+                            stackIn_52_1 = stackIn_51_1;
+                            stackIn_52_2 = 0;
                             break L5;
                           } else {
-                            stackOut_50_0 = stackIn_50_0;
-                            stackOut_50_1 = stackIn_50_1;
-                            stackOut_50_2 = param1.field_n[var59.field_a] & 255;
-                            stackIn_52_0 = stackOut_50_0;
-                            stackIn_52_1 = stackOut_50_1;
-                            stackIn_52_2 = stackOut_50_2;
+                            stackIn_52_0 = stackIn_51_0;
+                            stackIn_52_1 = stackIn_51_1;
+                            stackIn_52_2 = param1.field_n[var59.field_a] & 255;
                             break L5;
                           }
                         }
@@ -6962,12 +6700,10 @@ final class ww extends ka {
                     }
                     L19: {
                       if (param1.field_r != null) {
-                        stackOut_60_0 = param1.field_r[var16];
-                        stackIn_61_0 = stackOut_60_0;
+                        stackIn_61_0 = param1.field_r[var16];
                         break L19;
                       } else {
-                        stackOut_59_0 = -1;
-                        stackIn_61_0 = stackOut_59_0;
+                        stackIn_61_0 = -1;
                         break L19;
                       }
                     }
@@ -7325,25 +7061,21 @@ final class ww extends ka {
                       if (this.field_h[var12] == 0) {
                         break L32;
                       } else {
-                        stackOut_30_0 = 1;
-                        stackIn_37_0 = stackOut_30_0;
+                        stackIn_37_0 = 1;
                         break L31;
                       }
                     }
                   }
                   if (var13 != null) {
                     if (((dw) (var13)).field_d == 2) {
-                      stackOut_35_0 = 1;
-                      stackIn_37_0 = stackOut_35_0;
+                      stackIn_37_0 = 1;
                       break L31;
                     } else {
-                      stackOut_34_0 = 0;
-                      stackIn_37_0 = stackOut_34_0;
+                      stackIn_37_0 = 0;
                       break L31;
                     }
                   } else {
-                    stackOut_32_0 = 0;
-                    stackIn_37_0 = stackOut_32_0;
+                    stackIn_37_0 = 0;
                     break L31;
                   }
                 }

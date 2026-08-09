@@ -8,16 +8,15 @@ final class bj {
     static String field_a;
 
     private final static void a(boolean param0, int param1, boolean param2, int param3) {
-        boolean discarded$1 = false;
-        RuntimeException var4 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         hl var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         fj var9 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var7 = TetraLink.field_J;
         try {
           L0: {
@@ -49,7 +48,7 @@ final class bj {
                   break L3;
                 } else {
                   if (cd.field_a) {
-                    discarded$1 = bk.field_e.a(oj.field_a.field_eb, param0, oj.field_a.field_z, false);
+                    bk.field_e.a(oj.field_a.field_eb, param0, oj.field_a.field_z, false);
                     break L3;
                   } else {
                     bk.field_e = null;
@@ -142,8 +141,8 @@ final class bj {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var2;
+        int var1;
         L0: {
           var2 = TetraLink.field_J;
           if (0 < qd.field_ab) {
@@ -214,10 +213,10 @@ final class bj {
     }
 
     final static db a(int param0, int param1) {
-        db[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        db[] var5 = null;
+        db[] var2;
+        int var3;
+        int var4;
+        db[] var5;
         var4 = TetraLink.field_J;
         var5 = cc.b(104);
         var2 = var5;

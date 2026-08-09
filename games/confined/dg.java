@@ -14,8 +14,8 @@ final class dg extends rk {
     static ad field_n;
 
     final static char a(boolean param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         if (!param0) {
           var2 = 255 & param1;
           if (0 != var2) {
@@ -59,14 +59,12 @@ final class dg extends rk {
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_12_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
+        RuntimeException var3 = null;
         var4 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -74,13 +72,11 @@ final class dg extends rk {
             L1: while (true) {
               if (-2 <= (param1 ^ -1)) {
                 if (-2 != (param1 ^ -1)) {
-                  stackOut_10_0 = var3_int;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_12_0 = var3_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_8_0 = var3_int * param2;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_10_0 = var3_int * param2;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -105,9 +101,9 @@ final class dg extends rk {
           throw sd.a((Throwable) ((Object) var3), "dg.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_9_0;
+          return stackIn_10_0;
         } else {
-          return stackIn_11_0;
+          return stackIn_12_0;
         }
     }
 

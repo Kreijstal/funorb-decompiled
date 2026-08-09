@@ -7,10 +7,10 @@ final class g {
 
     final static void b(boolean param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = Kickabout.field_G;
         try {
           L0: {

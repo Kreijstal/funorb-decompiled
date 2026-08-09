@@ -11,32 +11,22 @@ final class tf {
     static String[] field_d;
 
     final static void a(na param0, byte param1) {
-        int dupTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int incrementValue$6 = 0;
-        int dupTemp$7 = 0;
-        RuntimeException var2 = null;
+        int dupTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int dupTemp$3 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         var5 = SteelSentinels.field_G;
         try {
           L0: {
@@ -46,17 +36,17 @@ final class tf {
                 var2_int = 0;
                 L2: while (true) {
                   if (var2_int >= uc.field_a) {
-                    dupTemp$4 = param0.a((byte) 58);
-                    uf.field_a[dupTemp$4] = uf.field_a[dupTemp$4] + 1;
+                    dupTemp$0 = param0.a((byte) 58);
+                    uf.field_a[dupTemp$0] = uf.field_a[dupTemp$0] + 1;
                     if (param1 < -103) {
                       var2_int = 0;
                       var3 = 0;
                       L3: while (true) {
                         if (uc.field_a <= var3) {
                           uc.field_a = var2_int;
-                          fieldTemp$5 = uc.field_a;
+                          fieldTemp$1 = uc.field_a;
                           uc.field_a = uc.field_a + 1;
-                          ph.field_e[fieldTemp$5] = param0;
+                          ph.field_e[fieldTemp$1] = param0;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -74,9 +64,9 @@ final class tf {
                                 break L5;
                               }
                             }
-                            incrementValue$6 = var2_int;
+                            incrementValue$2 = var2_int;
                             var2_int++;
-                            ph.field_e[incrementValue$6] = ph.field_e[var3];
+                            ph.field_e[incrementValue$2] = ph.field_e[var3];
                             break L4;
                           }
                           var3++;
@@ -90,8 +80,8 @@ final class tf {
                   } else {
                     L6: {
                       if (param0.field_k == ph.field_e[var2_int].field_k) {
-                        dupTemp$7 = ph.field_e[var2_int].a((byte) 58);
-                        uf.field_a[dupTemp$7] = uf.field_a[dupTemp$7] + 1;
+                        dupTemp$3 = ph.field_e[var2_int].a((byte) 58);
+                        uf.field_a[dupTemp$3] = uf.field_a[dupTemp$3] + 1;
                         break L6;
                       } else {
                         break L6;
@@ -112,31 +102,23 @@ final class tf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2);
-            stackOut_22_1 = new StringBuilder().append("tf.C(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_25_0 = (RuntimeException) (var2);
+
+            stackIn_25_1 = new StringBuilder().append("tf.C(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L7;
             }
           }
-          throw ci.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -175,21 +157,11 @@ final class tf {
         if (param0 != 2459) {
             return false;
         }
-        if (param1 >= 160) {
-            if (param1 <= 255) {
-                return true;
-            }
+        if (param1 >= 160 && param1 <= 255) {
+            return true;
         }
-        if (param1 != 8364) {
-            if (338 != param1) {
-                if (8212 != param1) {
-                    if (param1 != 339) {
-                        if (param1 != 376) {
-                            return false;
-                        }
-                    }
-                }
-            }
+        if (param1 != 8364 && 338 != param1 && 8212 != param1 && param1 != 339 && param1 != 376) {
+            return false;
         }
         return true;
     }

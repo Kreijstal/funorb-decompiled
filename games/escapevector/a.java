@@ -31,8 +31,8 @@ final class a extends ca implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int a(int param0) {
-        int var2 = 0;
-        java.awt.Component var3 = null;
+        int var2;
+        java.awt.Component var3;
         var2 = this.field_e;
         if (param0 > -3) {
           var3 = (java.awt.Component) null;

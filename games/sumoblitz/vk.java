@@ -14,9 +14,12 @@ final class vk {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, boolean param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_23_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -24,19 +27,6 @@ final class vk {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_10_0 = 0;
-        boolean stackIn_14_0 = false;
-        boolean stackIn_23_0 = false;
-        int stackIn_26_0 = 0;
-        int stackIn_36_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_35_0 = 0;
-        boolean stackOut_22_0 = false;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_9_0 = 0;
-        boolean stackOut_13_0 = false;
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
@@ -55,127 +45,81 @@ final class vk {
                       var10 = param0;
                       var11 = param5;
                       L2: while (true) {
-                        L3: {
-                          if (param3 <= var11) {
-                            vk.a(var9, param1, param2, var8, param4, param5, param6);
-                            stackOut_35_0 = param0;
-                            stackIn_36_0 = stackOut_35_0;
-                            break L3;
-                          } else {
+                        if (param3 <= var11) {
+                          vk.a(var9, param1, param2, var8, param4, param5, param6);
+                          vk.a(param0, var10, (byte) -107, param3, param4, var8, param6);
+                          decompiledRegionSelector0 = 3;
+                          break L0;
+                        } else {
+                          L3: {
                             var12 = pd.field_q[var11];
-                            stackOut_22_0 = param6;
-                            stackIn_36_0 = stackOut_22_0 ? 1 : 0;
-                            stackIn_23_0 = stackOut_22_0;
-                            if (var14 != 0) {
+                            if (!param6) {
+                              stackIn_23_0 = uc.field_c[var12];
                               break L3;
                             } else {
-                              L4: {
-                                if (!stackIn_23_0) {
-                                  stackOut_25_0 = uc.field_c[var12];
-                                  stackIn_26_0 = stackOut_25_0;
-                                  break L4;
-                                } else {
-                                  stackOut_24_0 = lj.field_a[var12];
-                                  stackIn_26_0 = stackOut_24_0;
-                                  break L4;
-                                }
-                              }
-                              L5: {
-                                L6: {
-                                  var13 = stackIn_26_0;
-                                  if (var13 <= var7_int) {
-                                    break L6;
-                                  } else {
-                                    L7: {
-                                      pd.field_q[var11] = pd.field_q[var8];
-                                      if (var13 < var9) {
-                                        var9 = var13;
-                                        break L7;
-                                      } else {
-                                        break L7;
-                                      }
-                                    }
-                                    incrementValue$1 = var8;
-                                    var8++;
-                                    pd.field_q[incrementValue$1] = var12;
-                                    if (var14 == 0) {
-                                      break L5;
-                                    } else {
-                                      break L6;
-                                    }
-                                  }
-                                }
-                                if (var13 > var10) {
-                                  var10 = var13;
-                                  break L5;
-                                } else {
-                                  break L5;
-                                }
-                              }
-                              var11++;
-                              continue L2;
+                              stackIn_23_0 = lj.field_a[var12];
+                              break L3;
                             }
                           }
+                          L4: {
+                            var13 = stackIn_23_0;
+                            if (var13 <= var7_int) {
+                              if (var13 > var10) {
+                                var10 = var13;
+                                break L4;
+                              } else {
+                                break L4;
+                              }
+                            } else {
+                              L5: {
+                                pd.field_q[var11] = pd.field_q[var8];
+                                if (var13 < var9) {
+                                  var9 = var13;
+                                  break L5;
+                                } else {
+                                  break L5;
+                                }
+                              }
+                              incrementValue$0 = var8;
+                              var8++;
+                              pd.field_q[incrementValue$0] = var12;
+                              break L4;
+                            }
+                          }
+                          var11++;
+                          continue L2;
                         }
-                        vk.a(stackIn_36_0, var10, (byte) -107, param3, param4, var8, param6);
-                        decompiledRegionSelector0 = 3;
-                        break L0;
                       }
                     }
                   }
                 }
                 var7_int = -1 + param3;
-                L8: while (true) {
-                  stackOut_9_0 = var7_int ^ -1;
-                  stackIn_10_0 = stackOut_9_0;
-                  L9: while (true) {
-                    L10: {
-                      if (stackIn_10_0 >= (param5 ^ -1)) {
-                        break L10;
-                      } else {
-                        var8 = param5;
-                        L11: while (true) {
-                          L12: {
-                            if (var8 >= var7_int) {
-                              break L12;
-                            } else {
-                              var9 = pd.field_q[var8];
-                              var10 = pd.field_q[1 + var8];
-                              stackOut_13_0 = jl.a(var10, var9, param6, (byte) 98);
-                              stackIn_10_0 = stackOut_13_0 ? 1 : 0;
-                              stackIn_14_0 = stackOut_13_0;
-                              if (var14 != 0) {
-                                continue L9;
-                              } else {
-                                L13: {
-                                  if (stackIn_14_0) {
-                                    pd.field_q[var8] = var10;
-                                    pd.field_q[var8 + 1] = var9;
-                                    break L13;
-                                  } else {
-                                    break L13;
-                                  }
-                                }
-                                var8++;
-                                if (var14 == 0) {
-                                  continue L11;
-                                } else {
-                                  break L12;
-                                }
-                              }
-                            }
-                          }
-                          var7_int--;
-                          if (var14 == 0) {
-                            continue L8;
-                          } else {
-                            break L10;
-                          }
-                        }
-                      }
-                    }
+                L6: while (true) {
+                  if (var7_int <= param5) {
                     decompiledRegionSelector0 = 2;
                     break L0;
+                  } else {
+                    var8 = param5;
+                    L7: while (true) {
+                      if (var8 >= var7_int) {
+                        var7_int--;
+                        continue L6;
+                      } else {
+                        L8: {
+                          var9 = pd.field_q[var8];
+                          var10 = pd.field_q[1 + var8];
+                          if (jl.a(var10, var9, param6, (byte) 98)) {
+                            pd.field_q[var8] = var10;
+                            pd.field_q[var8 + 1] = var9;
+                            break L8;
+                          } else {
+                            break L8;
+                          }
+                        }
+                        var8++;
+                        continue L7;
+                      }
+                    }
                   }
                 }
               } else {
@@ -210,8 +154,6 @@ final class vk {
     final static void a(int param0) {
         if (param0 > -31) {
             vk.a(-31);
-            qr.field_c = new jn();
-            return;
         }
         qr.field_c = new jn();
     }
@@ -219,13 +161,9 @@ final class vk {
     public static void b(int param0) {
         field_b = null;
         if (param0 != 429166529) {
-          vk.a(100, 10, (byte) 96, 17, -1, -25, true);
-          field_d = null;
-          return;
-        } else {
-          field_d = null;
-          return;
+            vk.a(100, 10, (byte) 96, 17, -1, -25, true);
         }
+        field_d = null;
     }
 
     vk(fr param0, int param1, int param2) {

@@ -12,8 +12,7 @@ final class de implements ir {
     private int field_h;
 
     public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
+        RuntimeException runtimeException = null;
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
@@ -22,34 +21,20 @@ final class de implements ir {
         int var13 = 0;
         cn var14 = null;
         ea stackIn_3_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ea stackOut_2_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             L1: {
               if (param3 instanceof cn) {
-                stackOut_2_0 = (ea) (param3);
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (ea) (param3);
                 break L1;
               } else {
-                stackOut_1_0 = null;
-                stackIn_3_0 = (ea) ((Object) stackOut_1_0);
+                stackIn_3_0 = null;
                 break L1;
               }
             }
@@ -94,7 +79,7 @@ final class de implements ir {
                 break L5;
               } else {
                 var13 = var14.field_C + var14.field_A + this.field_d;
-                discarded$1 = this.field_c.a(param3.field_f, param2 - -param3.field_p - -var13, param3.field_h + param4 + this.field_h, param3.field_q - var13 - this.field_d, -(this.field_d << 2002516769) + param3.field_n, this.field_a, this.field_e, 1, 1, 0);
+                this.field_c.a(param3.field_f, param2 - -param3.field_p - -var13, param3.field_h + param4 + this.field_h, param3.field_q - var13 - this.field_d, -(this.field_d << 2002516769) + param3.field_n, this.field_a, this.field_e, 1, 1, 0);
                 break L5;
               }
             }
@@ -103,28 +88,20 @@ final class de implements ir {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var6);
-            stackOut_12_1 = new StringBuilder().append("de.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            runtimeException = decompiledCaughtException;
+            stackIn_14_0 = (RuntimeException) (runtimeException);
+
+            stackIn_14_1 = new StringBuilder().append("de.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L6;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L6;
             }
           }
@@ -134,8 +111,6 @@ final class de implements ir {
 
     final static void a(java.awt.Component param0, boolean param1) {
         RuntimeException var2 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -143,14 +118,6 @@ final class de implements ir {
         String stackIn_5_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             param0.addMouseListener(ho.field_b);
@@ -168,27 +135,19 @@ final class de implements ir {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var2);
-            stackOut_2_1 = new StringBuilder().append("de.C(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var2);
+
+            stackIn_4_1 = new StringBuilder().append("de.C(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -202,8 +161,6 @@ final class de implements ir {
     }
 
     final static int a(byte param0) {
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -216,49 +173,37 @@ final class de implements ir {
         int stackIn_25_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_2_0 = 0;
         var2 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
             if (param0 == 92) {
-              discarded$12 = vn.field_f.a(pd.field_b, true, qe.field_k, true);
+              vn.field_f.a(pd.field_b, true, qe.field_k, true);
               vn.field_f.f((byte) -117);
               L1: while (true) {
                 if (!ek.a((byte) -127)) {
                   if (-1 == dh.field_c) {
                     if (ss.field_t) {
-                      stackOut_12_0 = 3;
-                      stackIn_13_0 = stackOut_12_0;
+                      stackIn_13_0 = 3;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
                       if (jq.field_fb == nb.field_c) {
-                        stackOut_16_0 = 1;
-                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_0 = 1;
                         decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
                         if (gm.field_x.a(false)) {
                           if (jq.field_fb != ht.field_k) {
-                            stackOut_24_0 = -1;
-                            stackIn_25_0 = stackOut_24_0;
+                            stackIn_25_0 = -1;
                             decompiledRegionSelector0 = 6;
                             break L0;
                           } else {
-                            stackOut_22_0 = 2;
-                            stackIn_23_0 = stackOut_22_0;
+                            stackIn_23_0 = 2;
                             decompiledRegionSelector0 = 5;
                             break L0;
                           }
                         } else {
-                          stackOut_19_0 = 1;
-                          stackIn_20_0 = stackOut_19_0;
+                          stackIn_20_0 = 1;
                           decompiledRegionSelector0 = 4;
                           break L0;
                         }
@@ -267,19 +212,17 @@ final class de implements ir {
                   } else {
                     var1_int = dh.field_c;
                     oi.a(-1, param0 + 20573);
-                    stackOut_8_0 = var1_int;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = var1_int;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 } else {
-                  discarded$13 = vn.field_f.a(param0 + -42, fr.field_e, bk.field_f);
+                  vn.field_f.a(param0 + -42, fr.field_e, bk.field_f);
                   continue L1;
                 }
               }
             } else {
-              stackOut_2_0 = -79;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = -79;
               decompiledRegionSelector0 = 0;
               break L0;
             }

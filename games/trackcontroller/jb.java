@@ -43,7 +43,7 @@ final class jb {
     }
 
     final static void a(boolean param0) {
-        uf var2 = null;
+        uf var2;
         rj.field_d.field_e = 0;
         if (!param0) {
           var2 = (uf) null;

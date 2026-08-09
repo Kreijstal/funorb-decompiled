@@ -7,8 +7,8 @@ final class ij {
     static boolean field_a;
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -48,25 +48,15 @@ final class ij {
     }
 
     final static void a(gk param0, byte param1) {
-        byte[] var2 = null;
-        RuntimeException var2_ref = null;
-        int var3 = 0;
-        RuntimeException stackIn_229_0 = null;
-        StringBuilder stackIn_229_1 = null;
         RuntimeException stackIn_231_0 = null;
         StringBuilder stackIn_231_1 = null;
         RuntimeException stackIn_232_0 = null;
         StringBuilder stackIn_232_1 = null;
         String stackIn_232_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_228_0 = null;
-        StringBuilder stackOut_228_1 = null;
-        RuntimeException stackOut_231_0 = null;
-        StringBuilder stackOut_231_1 = null;
-        String stackOut_231_2 = null;
-        RuntimeException stackOut_229_0 = null;
-        StringBuilder stackOut_229_1 = null;
-        String stackOut_229_2 = null;
+        byte[] var2 = null;
+        RuntimeException var2_ref = null;
+        int var3 = 0;
         try {
           L0: {
             L1: {
@@ -654,27 +644,19 @@ final class ij {
           decompiledCaughtException = decompiledCaughtParameter0;
           L65: {
             var2_ref = decompiledCaughtException;
-            stackOut_228_0 = (RuntimeException) (var2_ref);
-            stackOut_228_1 = new StringBuilder().append("ij.E(");
-            stackIn_231_0 = stackOut_228_0;
-            stackIn_231_1 = stackOut_228_1;
-            stackIn_229_0 = stackOut_228_0;
-            stackIn_229_1 = stackOut_228_1;
+            stackIn_231_0 = (RuntimeException) (var2_ref);
+
+            stackIn_231_1 = new StringBuilder().append("ij.E(");
+
             if (param0 == null) {
-              stackOut_231_0 = (RuntimeException) ((Object) stackIn_231_0);
-              stackOut_231_1 = (StringBuilder) ((Object) stackIn_231_1);
-              stackOut_231_2 = "null";
-              stackIn_232_0 = stackOut_231_0;
-              stackIn_232_1 = stackOut_231_1;
-              stackIn_232_2 = stackOut_231_2;
+              stackIn_232_0 = (RuntimeException) ((Object) stackIn_231_0);
+              stackIn_232_1 = (StringBuilder) ((Object) stackIn_231_1);
+              stackIn_232_2 = "null";
               break L65;
             } else {
-              stackOut_229_0 = (RuntimeException) ((Object) stackIn_229_0);
-              stackOut_229_1 = (StringBuilder) ((Object) stackIn_229_1);
-              stackOut_229_2 = "{...}";
-              stackIn_232_0 = stackOut_229_0;
-              stackIn_232_1 = stackOut_229_1;
-              stackIn_232_2 = stackOut_229_2;
+              stackIn_232_0 = (RuntimeException) ((Object) stackIn_231_0);
+              stackIn_232_1 = (StringBuilder) ((Object) stackIn_231_1);
+              stackIn_232_2 = "{...}";
               break L65;
             }
           }
@@ -683,9 +665,9 @@ final class ij {
     }
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         try {
           L0: {
             if (param0 < -66) {
@@ -734,12 +716,10 @@ final class ij {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
-        RuntimeException var6 = null;
         int var7 = 0;
         int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
+        RuntimeException var6 = null;
         try {
           L0: {
             L1: {
@@ -767,12 +747,10 @@ final class ij {
               th.field_c[q.field_M] = param4;
               var6_int = param5 + (param0 + param4);
               if (param3 != var6_int) {
-                stackOut_10_0 = 1000 * param0 / var6_int;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = 1000 * param0 / var6_int;
                 break L3;
               } else {
-                stackOut_8_0 = 0;
-                stackIn_11_0 = stackOut_8_0;
+                stackIn_11_0 = 0;
                 break L3;
               }
             }

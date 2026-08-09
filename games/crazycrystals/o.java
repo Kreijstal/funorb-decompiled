@@ -28,40 +28,32 @@ final class o extends l {
     }
 
     final l a(int param0) {
-        l stackIn_4_0 = null;
-        l stackIn_8_0 = null;
-        Object stackOut_7_0 = null;
-        l stackOut_6_0 = null;
-        Object stackOut_3_0 = null;
-        l stackOut_2_0 = null;
+        Object stackIn_4_0 = null;
+        Object stackIn_8_0 = null;
         this.field_e = this.field_e - 1;
         if (param0 != -2) {
           L0: {
             this.field_e = 15;
             if (0 != this.field_e) {
-              stackOut_7_0 = this;
-              stackIn_8_0 = (l) ((Object) stackOut_7_0);
+              stackIn_8_0 = this;
               break L0;
             } else {
-              stackOut_6_0 = this.field_g;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = this.field_g;
               break L0;
             }
           }
-          return this;
+          return (l) (this);
         } else {
           L1: {
             if (0 != this.field_e) {
-              stackOut_3_0 = this;
-              stackIn_4_0 = (l) ((Object) stackOut_3_0);
+              stackIn_4_0 = this;
               break L1;
             } else {
-              stackOut_2_0 = this.field_g;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = this.field_g;
               break L1;
             }
           }
-          return this;
+          return (l) (this);
         }
     }
 

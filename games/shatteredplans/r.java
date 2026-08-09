@@ -18,8 +18,10 @@ final class r implements Runnable {
     private pb field_i;
 
     final static void a(byte param0) {
-        String[][] dupTemp$2 = null;
-        int[][] dupTemp$3 = null;
+        String[][] dupTemp$0 = null;
+        int[][] dupTemp$1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         gr var3 = null;
@@ -35,22 +37,19 @@ final class r implements Runnable {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int var15 = 0;
-        sl var16 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
+        sl var15 = null;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            var16 = sa.field_a;
-            var2 = var16.j(-102);
+            var15 = sa.field_a;
+            var2 = var15.j(-102);
             var3 = (gr) ((Object) qa.field_r.d(0));
             L1: while (true) {
               L2: {
                 if (var3 == null) {
                   break L2;
                 } else {
-                  if (var3.field_k != var2) {
+                  if ((var3.field_k ^ -1) != (var2 ^ -1)) {
                     var3 = (gr) ((Object) qa.field_r.a((byte) -71));
                     continue L1;
                   } else {
@@ -65,7 +64,7 @@ final class r implements Runnable {
               } else {
                 L3: {
                   var4 = -122 % ((14 - param0) / 34);
-                  var5 = var16.j(-87);
+                  var5 = var15.j(-87);
                   if (var5 != 0) {
                     var6 = var3.field_j;
                     wb.field_a[0] = ln.field_o;
@@ -77,46 +76,45 @@ final class r implements Runnable {
                         L5: while (true) {
                           if (var5 <= var7_int) {
                             bh.a(var6, (byte) -111);
-                            dupTemp$2 = new String[2][var6];
-                            var3.field_n = dupTemp$2;
-                            var7 = dupTemp$2;
-                            dupTemp$3 = new int[2][4 * var6];
-                            var3.field_m = dupTemp$3;
-                            var8 = dupTemp$3;
+                            dupTemp$0 = new String[2][var6];
+                            var3.field_n = dupTemp$0;
+                            var7 = dupTemp$0;
+                            dupTemp$1 = new int[2][4 * var6];
+                            var3.field_m = dupTemp$1;
+                            var8 = dupTemp$1;
                             var9 = wm.field_c;
                             var10 = 0;
                             var11 = 0;
                             L6: while (true) {
                               if (var9 <= var10) {
+                                var10 = 0;
                                 var14 = 0;
-                                var10 = var14;
-                                var15 = 0;
-                                var11 = var15;
+                                var11 = var14;
                                 L7: while (true) {
-                                  if (var9 <= var14) {
+                                  if (var9 <= var10) {
                                     break L3;
                                   } else {
                                     L8: {
-                                      var12 = lg.field_d[var14 + var6];
-                                      var7[1][var15] = wb.field_a[var12];
-                                      var8[1][4 * var15] = kf.field_f[var12];
-                                      var8[1][4 * var15 + 1] = fb.field_zb[var12];
-                                      var8[1][var15 * 4 + 2] = aj.field_d[var12];
-                                      var8[1][var15 * 4 - -3] = f.field_y[var12];
+                                      var12 = lg.field_d[var10 + var6];
+                                      var7[1][var14] = wb.field_a[var12];
+                                      var8[1][4 * var14] = kf.field_f[var12];
+                                      var8[1][4 * var14 + 1] = fb.field_zb[var12];
+                                      var8[1][var14 * 4 + 2] = aj.field_d[var12];
+                                      var8[1][var14 * 4 - -3] = f.field_y[var12];
                                       if (!jp.a(wb.field_a[var12], (byte) -105)) {
                                         break L8;
                                       } else {
                                         if (0 != fb.field_zb[var12] + aj.field_d[var12] + f.field_y[var12]) {
                                           break L8;
                                         } else {
-                                          var7[1][var15] = null;
-                                          var15--;
+                                          var7[1][var14] = null;
+                                          var14--;
                                           break L8;
                                         }
                                       }
                                     }
+                                    var10++;
                                     var14++;
-                                    var15++;
                                     continue L7;
                                   }
                                 }
@@ -147,8 +145,8 @@ final class r implements Runnable {
                             }
                           } else {
                             L10: {
-                              qg.a(var16, false);
-                              if (var7_int != 0) {
+                              qg.a(var15, false);
+                              if ((var7_int ^ -1) != -1) {
                                 ul.a(0, na.field_L, np.field_j, gp.field_c, var7_int, ig.field_d);
                                 break L10;
                               } else {
@@ -165,7 +163,7 @@ final class r implements Runnable {
                           }
                         }
                       } else {
-                        wb.field_a[var7_int] = var16.e(-1);
+                        wb.field_a[var7_int] = var15.e(-1);
                         var7_int++;
                         continue L4;
                       }
@@ -271,23 +269,12 @@ final class r implements Runnable {
         fk var3 = null;
         RuntimeException var3_ref = null;
         fk stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fk stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -301,35 +288,26 @@ final class r implements Runnable {
             var3 = new fk(param0);
             tr.field_vb.a((byte) -113, var3);
             dn.a(param2, var3, (byte) 13);
-            stackOut_2_0 = (fk) (var3);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (fk) (var3);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3_ref);
-            stackOut_4_1 = new StringBuilder().append("r.B(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3_ref);
+
+            stackIn_6_1 = new StringBuilder().append("r.B(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -407,12 +385,12 @@ final class r implements Runnable {
     }
 
     final synchronized boolean b(int param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         if (-3 >= (this.field_h ^ -1)) {
           return true;
         } else {

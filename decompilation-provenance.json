@@ -1,34 +1,37 @@
 {
   "formatVersion": 1,
-  "capturedAt": "2026-07-19T20:18:31.266Z",
+  "capturedAt": "2026-08-09T20:29:35.615Z",
   "generators": {
     "dekoblokoWork": {
-      "commit": "636c8031b92f4f851622d37dabe83e4cd7a52b1c",
+      "commit": "743cb79e9bf4229669e5a6ef15e380d8a86d3a57",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "7403bb59fbecc9fc1bc129c35b78109581c83ae7",
+      "commit": "7ebf724f85e1a49c2d7f6d4a31a1afe6a604405a",
       "trackedClean": true
     }
   },
   "invocation": {
     "script": "scripts/decompile-all-games.sh",
     "arguments": [
-      ".work/games"
+      ".work/games",
+      "--reuse-pipeline"
     ],
     "selectedGame": null,
-    "reusePipeline": false,
+    "reusePipeline": true,
     "updateBaseline": false,
     "fixedPipelineArguments": [
       "--profile",
       "none",
       "--safe-bytecode"
     ],
-    "environment": {}
+    "environment": {
+      "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+    }
   },
   "publication": {
-    "synchronizedAt": "2026-07-19T23:58:55.322Z",
-    "destinationBaseCommit": "25831130d345ac421ee463ed08215ca8c79a0778",
+    "synchronizedAt": "2026-08-09T21:08:24.383Z",
+    "destinationBaseCommit": "b14e032e43193c7fec566546ffcc4f732de38aac",
     "syncedGames": [
       "36cardtrick",
       "aceofskies",
@@ -47,6 +50,7 @@
       "fleacircus",
       "geoblox",
       "holdtheline",
+      "hostilespawn_vengeance",
       "kickabout",
       "lexicominos",
       "minerdisturbance",

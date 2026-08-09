@@ -57,9 +57,8 @@ final class ws extends wda {
     }
 
     final void b(int param0) {
-        int discarded$0 = 0;
         if (param0 != 1) {
-            discarded$0 = this.a(-86, 99);
+            this.a(-86, 99);
         }
     }
 

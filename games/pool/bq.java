@@ -30,25 +30,23 @@ final class bq extends ma {
     }
 
     final static int a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        RuntimeException var7 = null;
+        int stackIn_25_0 = 0;
+        int stackIn_30_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         sa var8_ref_sa = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        sa var12 = null;
         int var12_int = 0;
+        sa var12 = null;
         sa var13 = null;
         int var13_int = 0;
         int var14 = 0;
         sa var15 = null;
-        int stackIn_25_0 = 0;
-        int stackIn_30_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_24_0 = 0;
-        int stackOut_29_0 = 0;
         try {
           L0: {
             L1: {
@@ -177,8 +175,7 @@ final class bq extends ma {
                             }
                           }
                         }
-                        stackOut_24_0 = param1;
-                        stackIn_25_0 = stackOut_24_0;
+                        stackIn_25_0 = param1;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
@@ -200,8 +197,7 @@ final class bq extends ma {
               var12.field_u = var7_int;
               break L2;
             }
-            stackOut_29_0 = param1;
-            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_0 = param1;
             decompiledRegionSelector0 = 1;
             break L0;
           }
@@ -222,13 +218,12 @@ final class bq extends ma {
     }
 
     public static void c(byte param0) {
-        int discarded$0 = 0;
         field_n = null;
         field_s = null;
         field_q = null;
         field_r = null;
         if (param0 > -16) {
-            discarded$0 = bq.a((byte) -80, 69, -63, -22, -2, -27, -72);
+            bq.a((byte) -80, 69, -63, -22, -2, -27, -72);
         }
     }
 

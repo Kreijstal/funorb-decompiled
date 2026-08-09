@@ -6,23 +6,16 @@ abstract class nf extends oh {
     static dl field_g;
 
     final int a(byte param0, boolean param1) {
-        int discarded$12 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 > -53) {
           L0: {
-            discarded$12 = this.a((byte) -2, false);
+            this.a((byte) -2, false);
             if (param1) {
-              stackOut_7_0 = 16;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 16;
               break L0;
             } else {
-              stackOut_6_0 = 8;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 8;
               break L0;
             }
           }
@@ -30,12 +23,10 @@ abstract class nf extends oh {
         } else {
           L1: {
             if (param1) {
-              stackOut_3_0 = 16;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 16;
               break L1;
             } else {
-              stackOut_2_0 = 8;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 8;
               break L1;
             }
           }

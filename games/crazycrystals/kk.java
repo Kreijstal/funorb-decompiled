@@ -18,10 +18,6 @@ final class kk {
     final boolean b(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         this.field_i = this.field_i - this.field_f;
         this.field_c = this.field_c - 1;
         this.field_f = this.field_f - (this.field_f - -3 >> -1701764574);
@@ -29,12 +25,10 @@ final class kk {
           L0: {
             this.field_c = -69;
             if (-1 <= (this.field_c ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -42,12 +36,10 @@ final class kk {
         } else {
           L1: {
             if (-1 <= (this.field_c ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -78,10 +70,9 @@ final class kk {
     }
 
     final void a(byte param0) {
-        boolean discarded$0 = false;
         an.field_q.c(this.field_h, this.field_d, this.field_i >> 2062697124, 16760896, -1);
         if (param0 != 35) {
-            discarded$0 = this.b(-48);
+            this.b(-48);
         }
     }
 

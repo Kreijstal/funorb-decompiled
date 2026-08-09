@@ -12,7 +12,7 @@ public class lh {
     private static Hashtable field_b;
 
     public static File a(String param0, int param1) {
-        String var3 = null;
+        String var3;
         if (param1 > -77) {
           var3 = (String) null;
           lh.a(-79, (String) null, -22);

@@ -9,35 +9,12 @@ final class ed {
     double field_a;
 
     final void a(ed param0, int param1) {
-        RuntimeException var3 = null;
         double var3_double = 0.0;
         double var5 = 0.0;
         double var7 = 0.0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 65536) {
-                break L1;
-              } else {
+            if (param1 != 65536) {
                 this.a(true);
-                break L1;
-              }
             }
             var3_double = -(this.field_e * param0.field_e) + (-(this.field_b * param0.field_b) + (this.field_a * param0.field_a - this.field_d * param0.field_d));
             var5 = -(param0.field_e * this.field_b) + (this.field_e * param0.field_b + (this.field_d * param0.field_a + param0.field_d * this.field_a));
@@ -47,37 +24,8 @@ final class ed {
             this.field_d = var5;
             this.field_a = var3_double;
             this.a((byte) -126);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("ed.G(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
-            if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
-            } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
-            }
-          }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) ((Object) runtimeException), "ed.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -87,7 +35,7 @@ final class ed {
     }
 
     final void a(byte param0) {
-        double var2 = 0.0;
+        double var2;
         L0: {
           if (param0 <= -120) {
             break L0;
@@ -119,8 +67,8 @@ final class ed {
     }
 
     final void a(double param0, double param1, double param2, byte param3, double param4) {
-        double var10 = 0.0;
-        double var12 = 0.0;
+        double var10;
+        double var12;
         param4 = param4 * 0.5;
         var10 = Math.sin(param4);
         var12 = Math.cos(param4);
@@ -137,8 +85,8 @@ final class ed {
     }
 
     final static int a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var2 = 0;
           if (0 == (param1 & 7)) {
@@ -158,7 +106,6 @@ final class ed {
 
     final void a(int[] param0, byte param1) {
         double var3_double = 0.0;
-        RuntimeException var3 = null;
         double var5 = 0.0;
         double var7 = 0.0;
         double var9 = 0.0;
@@ -168,38 +115,16 @@ final class ed {
         double var17 = 0.0;
         double var19 = 0.0;
         double var21 = 0.0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
-          L0: {
-            L1: {
-              var3_double = this.field_a * this.field_a;
-              var5 = this.field_a * this.field_d;
-              var7 = this.field_a * this.field_b;
-              var9 = this.field_a * this.field_e;
-              var11 = this.field_d * this.field_d;
-              var13 = this.field_b * this.field_d;
-              var15 = this.field_d * this.field_e;
-              if (param1 >= 112) {
-                break L1;
-              } else {
+            var3_double = this.field_a * this.field_a;
+            var5 = this.field_a * this.field_d;
+            var7 = this.field_a * this.field_b;
+            var9 = this.field_a * this.field_e;
+            var11 = this.field_d * this.field_d;
+            var13 = this.field_b * this.field_d;
+            var15 = this.field_d * this.field_e;
+            if (param1 < 112) {
                 ed.b((byte) -77);
-                break L1;
-              }
             }
             var17 = this.field_b * this.field_b;
             var19 = this.field_e * this.field_b;
@@ -213,47 +138,18 @@ final class ed {
             param0[7] = (int)((var3_double + var17 - var11 - var21) * 65536.0);
             param0[9] = (int)((var15 + (var15 + var7) + var7) * 65536.0);
             param0[3] = (int)((-var21 + (var3_double + var11) - var17) * 65536.0);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("ed.D(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
-            if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
-            } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
-            }
-          }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) ((Object) runtimeException), "ed.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0) {
-        int incrementValue$2 = 0;
+        int incrementValue$1 = 0;
         int var1_int = 0;
-        RuntimeException var1 = null;
         ik var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var3 = Torquing.field_u;
         try {
           L0: {
@@ -262,9 +158,9 @@ final class ed {
             L1: while (true) {
               if (var2 == null) {
                 L2: while (true) {
-                  incrementValue$2 = var1_int;
+                  incrementValue$1 = var1_int;
                   var1_int--;
-                  if (0 >= incrementValue$2) {
+                  if (0 >= incrementValue$1) {
                     break L0;
                   } else {
                     sn.b((byte) 88);

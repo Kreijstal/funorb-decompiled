@@ -30,60 +30,40 @@ final class mjb extends aja {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        oj var10 = null;
-        oj var11 = null;
-        eb stackIn_1_0 = null;
-        eb stackIn_2_0 = null;
-        eb stackIn_3_0 = null;
+        oj var10;
+        oj var11;
         eb stackIn_4_0 = null;
-        eb stackIn_5_0 = null;
         eb stackIn_6_0 = null;
         tu stackIn_6_1 = null;
-        eb stackOut_0_0 = null;
-        eb stackOut_1_0 = null;
-        eb stackOut_2_0 = null;
-        eb stackOut_5_0 = null;
-        tu stackOut_5_1 = null;
-        eb stackOut_3_0 = null;
-        eb stackOut_4_0 = null;
-        tu stackOut_4_1 = null;
         L0: {
           L1: {
             var11 = this.field_h.A(11);
             var10 = this.field_h.H((byte) -119);
-            stackOut_0_0 = this.field_o;
-            stackIn_4_0 = stackOut_0_0;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_4_0 = this.field_o;
+
             if (this.field_j) {
               break L1;
             } else {
-              stackOut_1_0 = (eb) ((Object) stackIn_1_0);
-              stackIn_4_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_4_0 = (eb) ((Object) stackIn_4_0);
+
               if (this.field_i) {
                 break L1;
               } else {
-                stackOut_2_0 = (eb) ((Object) stackIn_2_0);
-                stackIn_5_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
+
+
                 if ((1 & param7) != 0) {
-                  stackOut_5_0 = (eb) ((Object) stackIn_5_0);
-                  stackOut_5_1 = cs.field_a;
-                  stackIn_6_0 = stackOut_5_0;
-                  stackIn_6_1 = stackOut_5_1;
+                  stackIn_6_0 = (eb) ((Object) stackIn_4_0);
+                  stackIn_6_1 = cs.field_a;
                   break L0;
                 } else {
-                  stackOut_3_0 = (eb) ((Object) stackIn_3_0);
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = (eb) ((Object) stackIn_4_0);
                   break L1;
                 }
               }
             }
           }
-          stackOut_4_0 = (eb) ((Object) stackIn_4_0);
-          stackOut_4_1 = jd.field_o;
-          stackIn_6_0 = stackOut_4_0;
-          stackIn_6_1 = stackOut_4_1;
+          stackIn_6_0 = (eb) ((Object) stackIn_4_0);
+          stackIn_6_1 = jd.field_o;
           break L0;
         }
         L2: {
@@ -157,70 +137,53 @@ final class mjb extends aja {
     }
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
-        oj var12 = null;
-        float var13 = 0.0f;
-        float var14 = 0.0f;
-        float var15 = 0.0f;
-        float var16 = 0.0f;
-        float var17 = 0.0f;
-        float var18 = 0.0f;
-        float var19 = 0.0f;
-        float var20 = 0.0f;
-        float var21 = 0.0f;
-        float var22 = 0.0f;
-        float var23 = 0.0f;
-        float var24 = 0.0f;
-        float var25 = 0.0f;
-        float var26 = 0.0f;
-        oj var27 = null;
-        eb stackIn_1_0 = null;
-        eb stackIn_2_0 = null;
-        eb stackIn_3_0 = null;
+        oj var12;
+        float var13;
+        float var14;
+        float var15;
+        float var16;
+        float var17;
+        float var18;
+        float var19;
+        float var20;
+        float var21;
+        float var22;
+        float var23;
+        float var24;
+        float var25;
+        float var26;
+        oj var27;
         eb stackIn_4_0 = null;
         eb stackIn_5_0 = null;
         tu stackIn_5_1 = null;
-        eb stackOut_0_0 = null;
-        eb stackOut_1_0 = null;
-        eb stackOut_2_0 = null;
-        eb stackOut_3_0 = null;
-        tu stackOut_3_1 = null;
-        eb stackOut_4_0 = null;
-        tu stackOut_4_1 = null;
         L0: {
           L1: {
             var27 = this.field_h.A(11);
             var12 = this.field_h.H((byte) 81);
-            stackOut_0_0 = this.field_o;
-            stackIn_4_0 = stackOut_0_0;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_4_0 = this.field_o;
+
             if (this.field_j) {
               break L1;
             } else {
-              stackOut_1_0 = (eb) ((Object) stackIn_1_0);
-              stackIn_4_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_4_0 = (eb) ((Object) stackIn_4_0);
+
               if (this.field_i) {
                 break L1;
               } else {
-                stackOut_2_0 = (eb) ((Object) stackIn_2_0);
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_4_0 = (eb) ((Object) stackIn_4_0);
+
                 if ((param9 & 1 ^ -1) == -1) {
                   break L1;
                 } else {
-                  stackOut_3_0 = (eb) ((Object) stackIn_3_0);
-                  stackOut_3_1 = cs.field_a;
-                  stackIn_5_0 = stackOut_3_0;
-                  stackIn_5_1 = stackOut_3_1;
+                  stackIn_5_0 = (eb) ((Object) stackIn_4_0);
+                  stackIn_5_1 = cs.field_a;
                   break L0;
                 }
               }
             }
           }
-          stackOut_4_0 = (eb) ((Object) stackIn_4_0);
-          stackOut_4_1 = jd.field_o;
-          stackIn_5_0 = stackOut_4_0;
-          stackIn_5_1 = stackOut_4_1;
+          stackIn_5_0 = (eb) ((Object) stackIn_4_0);
+          stackIn_5_1 = jd.field_o;
           break L0;
         }
         L2: {
@@ -274,27 +237,23 @@ final class mjb extends aja {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        oj var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        oj var23 = null;
+        oj var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var22;
+        oj var23;
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_9_0 = 0;
+        int var21;
         L0: {
           L1: {
             var22 = VoidHunters.field_G;
@@ -317,15 +276,13 @@ final class mjb extends aja {
                 if (-1 != (this.field_g ^ -1)) {
                   break L1;
                 } else {
-                  stackOut_3_0 = 1;
-                  stackIn_5_0 = stackOut_3_0;
+                  stackIn_5_0 = 1;
                   break L0;
                 }
               }
             }
           }
-          stackOut_4_0 = 0;
-          stackIn_5_0 = stackOut_4_0;
+          stackIn_5_0 = 0;
           break L0;
         }
         L2: {
@@ -340,15 +297,13 @@ final class mjb extends aja {
                 if (-1 != (this.field_f ^ -1)) {
                   break L3;
                 } else {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_0 = 1;
                   break L2;
                 }
               }
             }
           }
-          stackOut_9_0 = 0;
-          stackIn_10_0 = stackOut_9_0;
+          stackIn_10_0 = 0;
           break L2;
         }
         L4: {
@@ -541,69 +496,47 @@ final class mjb extends aja {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        Object stackIn_1_0 = null;
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_2_0 = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
         L0: {
           L1: {
             this.field_m = param1;
             this.field_l = param0;
             this.field_g = param3;
             this.field_f = param2;
-            stackOut_0_0 = this;
-            stackIn_5_0 = stackOut_0_0;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_5_0 = this;
+
             if (this.field_l != 0) {
               break L1;
             } else {
-              stackOut_1_0 = this;
-              stackIn_5_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_5_0 = this;
+
               if (0 != this.field_m) {
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackIn_5_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_5_0 = this;
+
                 if (0 != this.field_f) {
                   break L1;
                 } else {
-                  stackOut_3_0 = this;
-                  stackIn_6_0 = stackOut_3_0;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_6_0 = this;
+
                   if (this.field_g == 0) {
-                    stackOut_6_0 = this;
-                    stackOut_6_1 = 0;
-                    stackIn_7_0 = stackOut_6_0;
-                    stackIn_7_1 = stackOut_6_1;
+                    stackIn_7_0 = this;
+                    stackIn_7_1 = 0;
                     break L0;
                   } else {
-                    stackOut_4_0 = this;
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = this;
                     break L1;
                   }
                 }
               }
             }
           }
-          stackOut_5_0 = this;
-          stackOut_5_1 = 1;
-          stackIn_7_0 = stackOut_5_0;
-          stackIn_7_1 = stackOut_5_1;
+          stackIn_7_0 = this;
+          stackIn_7_1 = 1;
           break L0;
         }
         ((mjb) (this)).field_k = stackIn_7_1 != 0;
@@ -622,96 +555,36 @@ final class mjb extends aja {
     }
 
     mjb(pf param0, int param1, int param2, boolean param3) {
-        RuntimeException var5 = null;
-        Object stackIn_2_0 = null;
-        pf stackIn_2_1 = null;
-        int stackIn_2_2 = 0;
-        int stackIn_2_3 = 0;
-        int stackIn_2_4 = 0;
-        Object stackIn_3_0 = null;
-        pf stackIn_3_1 = null;
-        int stackIn_3_2 = 0;
-        int stackIn_3_3 = 0;
-        int stackIn_3_4 = 0;
+        Object stackIn_3_0;
+        pf stackIn_3_1;
+        int stackIn_3_2;
+        int stackIn_3_3;
+        int stackIn_3_4;
         Object stackIn_4_0 = null;
         pf stackIn_4_1 = null;
         int stackIn_4_2 = 0;
         int stackIn_4_3 = 0;
         int stackIn_4_4 = 0;
         kb stackIn_4_5 = null;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
         int stackIn_10_1 = 0;
-        Object stackIn_11_0 = null;
-        Object stackIn_12_0 = null;
         Object stackIn_13_0 = null;
         Object stackIn_14_0 = null;
         int stackIn_14_1 = 0;
-        Object stackIn_15_0 = null;
-        Object stackIn_16_0 = null;
         Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         int stackIn_18_1 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
-        pf stackOut_1_1 = null;
-        int stackOut_1_2 = 0;
-        int stackOut_1_3 = 0;
-        int stackOut_1_4 = 0;
-        Object stackOut_3_0 = null;
-        pf stackOut_3_1 = null;
-        int stackOut_3_2 = 0;
-        int stackOut_3_3 = 0;
-        int stackOut_3_4 = 0;
-        kb stackOut_3_5 = null;
-        Object stackOut_2_0 = null;
-        pf stackOut_2_1 = null;
-        int stackOut_2_2 = 0;
-        int stackOut_2_3 = 0;
-        int stackOut_2_4 = 0;
-        kb stackOut_2_5 = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_7_0 = null;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        Object stackOut_10_0 = null;
-        Object stackOut_11_0 = null;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        Object stackOut_14_0 = null;
-        Object stackOut_15_0 = null;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var5 = null;
         this.field_m = 0;
         this.field_k = false;
         this.field_f = 0;
@@ -723,146 +596,107 @@ final class mjb extends aja {
               this.field_n = param2;
               this.field_d = param1;
               this.field_h = param0;
-              stackOut_1_0 = this;
-              stackOut_1_1 = (pf) (param0);
-              stackOut_1_2 = 118;
-              stackOut_1_3 = param1;
-              stackOut_1_4 = param2;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_3_2 = stackOut_1_2;
-              stackIn_3_3 = stackOut_1_3;
-              stackIn_3_4 = stackOut_1_4;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              stackIn_2_2 = stackOut_1_2;
-              stackIn_2_3 = stackOut_1_3;
-              stackIn_2_4 = stackOut_1_4;
+              stackIn_3_0 = this;
+
+              stackIn_3_1 = (pf) (param0);
+
+              stackIn_3_2 = 118;
+
+              stackIn_3_3 = param1;
+
+              stackIn_3_4 = param2;
+
               if (param3) {
-                stackOut_3_0 = this;
-                stackOut_3_1 = (pf) ((Object) stackIn_3_1);
-                stackOut_3_2 = stackIn_3_2;
-                stackOut_3_3 = stackIn_3_3;
-                stackOut_3_4 = stackIn_3_4;
-                stackOut_3_5 = qua.field_d;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
-                stackIn_4_3 = stackOut_3_3;
-                stackIn_4_4 = stackOut_3_4;
-                stackIn_4_5 = stackOut_3_5;
+                stackIn_4_0 = this;
+                stackIn_4_1 = (pf) ((Object) stackIn_3_1);
+                stackIn_4_2 = stackIn_3_2;
+                stackIn_4_3 = stackIn_3_3;
+                stackIn_4_4 = stackIn_3_4;
+                stackIn_4_5 = qua.field_d;
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = (pf) ((Object) stackIn_2_1);
-                stackOut_2_2 = stackIn_2_2;
-                stackOut_2_3 = stackIn_2_3;
-                stackOut_2_4 = stackIn_2_4;
-                stackOut_2_5 = ep.field_o;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                stackIn_4_3 = stackOut_2_3;
-                stackIn_4_4 = stackOut_2_4;
-                stackIn_4_5 = stackOut_2_5;
+                stackIn_4_0 = this;
+                stackIn_4_1 = (pf) ((Object) stackIn_3_1);
+                stackIn_4_2 = stackIn_3_2;
+                stackIn_4_3 = stackIn_3_3;
+                stackIn_4_4 = stackIn_3_4;
+                stackIn_4_5 = ep.field_o;
                 break L1;
               }
             }
             L2: {
               ((mjb) (this)).field_o = ((pf) (Object) stackIn_4_1).a(stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, mj.field_f);
               this.field_o.a(true, (byte) -98, true);
-              stackOut_4_0 = this;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_6_0 = this;
+
               if ((param1 ^ -1) == (this.field_o.b((byte) 113) ^ -1)) {
-                stackOut_6_0 = this;
-                stackOut_6_1 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = this;
+                stackIn_7_1 = 0;
                 break L2;
               } else {
-                stackOut_5_0 = this;
-                stackOut_5_1 = 1;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+                stackIn_7_0 = this;
+                stackIn_7_1 = 1;
                 break L2;
               }
             }
             L3: {
               ((mjb) (this)).field_j = stackIn_7_1 != 0;
-              stackOut_7_0 = this;
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_9_0 = this;
+
               if (param2 == this.field_o.a((byte) -55)) {
-                stackOut_9_0 = this;
-                stackOut_9_1 = 0;
-                stackIn_10_0 = stackOut_9_0;
-                stackIn_10_1 = stackOut_9_1;
+                stackIn_10_0 = this;
+                stackIn_10_1 = 0;
                 break L3;
               } else {
-                stackOut_8_0 = this;
-                stackOut_8_1 = 1;
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_10_1 = stackOut_8_1;
+                stackIn_10_0 = this;
+                stackIn_10_1 = 1;
                 break L3;
               }
             }
             L4: {
               L5: {
                 ((mjb) (this)).field_i = stackIn_10_1 != 0;
-                stackOut_10_0 = this;
-                stackIn_13_0 = stackOut_10_0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_13_0 = this;
+
                 if (this.field_j) {
                   break L5;
                 } else {
-                  stackOut_11_0 = this;
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_13_0 = this;
+
                   if (!this.field_o.a(-127)) {
                     break L5;
                   } else {
-                    stackOut_12_0 = this;
-                    stackOut_12_1 = 1;
-                    stackIn_14_0 = stackOut_12_0;
-                    stackIn_14_1 = stackOut_12_1;
+                    stackIn_14_0 = this;
+                    stackIn_14_1 = 1;
                     break L4;
                   }
                 }
               }
-              stackOut_13_0 = this;
-              stackOut_13_1 = 0;
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_0 = this;
+              stackIn_14_1 = 0;
               break L4;
             }
             L6: {
               L7: {
                 ((mjb) (this)).field_b = stackIn_14_1 != 0;
-                stackOut_14_0 = this;
-                stackIn_17_0 = stackOut_14_0;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_17_0 = this;
+
                 if (this.field_i) {
                   break L7;
                 } else {
-                  stackOut_15_0 = this;
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_17_0 = this;
+
                   if (!this.field_o.a(36)) {
                     break L7;
                   } else {
-                    stackOut_16_0 = this;
-                    stackOut_16_1 = 1;
-                    stackIn_18_0 = stackOut_16_0;
-                    stackIn_18_1 = stackOut_16_1;
+                    stackIn_18_0 = this;
+                    stackIn_18_1 = 1;
                     break L6;
                   }
                 }
               }
-              stackOut_17_0 = this;
-              stackOut_17_1 = 0;
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_0 = this;
+              stackIn_18_1 = 0;
               break L6;
             }
             ((mjb) (this)).field_a = stackIn_18_1 != 0;
@@ -872,27 +706,19 @@ final class mjb extends aja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var5);
-            stackOut_20_1 = new StringBuilder().append("mjb.<init>(");
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var5);
+
+            stackIn_22_1 = new StringBuilder().append("mjb.<init>(");
+
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L8;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L8;
             }
           }
@@ -901,78 +727,28 @@ final class mjb extends aja {
     }
 
     mjb(pf param0, int param1, int param2, int[] param3, int param4, int param5) {
-        RuntimeException var7 = null;
-        Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        Object stackIn_8_0 = null;
-        Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
         Object stackIn_11_0 = null;
         int stackIn_11_1 = 0;
-        Object stackIn_12_0 = null;
-        Object stackIn_13_0 = null;
         Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
         int stackIn_15_1 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_7_0 = null;
-        Object stackOut_8_0 = null;
-        Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        Object stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        Object stackOut_11_0 = null;
-        Object stackOut_12_0 = null;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var7 = null;
         this.field_m = 0;
         this.field_k = false;
         this.field_f = 0;
@@ -986,98 +762,76 @@ final class mjb extends aja {
               this.field_h = param0;
               this.field_o = param0.a(param1, false, param3, param2, param5, true, param4);
               this.field_o.a(true, (byte) -98, true);
-              stackOut_1_0 = this;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_3_0 = this;
+
               if (param1 == this.field_o.b((byte) 113)) {
-                stackOut_3_0 = this;
-                stackOut_3_1 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
+                stackIn_4_0 = this;
+                stackIn_4_1 = 1;
                 break L1;
               }
             }
             L2: {
               ((mjb) (this)).field_j = stackIn_4_1 != 0;
-              stackOut_4_0 = this;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_6_0 = this;
+
               if ((this.field_o.a((byte) -57) ^ -1) == (param2 ^ -1)) {
-                stackOut_6_0 = this;
-                stackOut_6_1 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = this;
+                stackIn_7_1 = 0;
                 break L2;
               } else {
-                stackOut_5_0 = this;
-                stackOut_5_1 = 1;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+                stackIn_7_0 = this;
+                stackIn_7_1 = 1;
                 break L2;
               }
             }
             L3: {
               L4: {
                 ((mjb) (this)).field_i = stackIn_7_1 != 0;
-                stackOut_7_0 = this;
-                stackIn_10_0 = stackOut_7_0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_10_0 = this;
+
                 if (this.field_j) {
                   break L4;
                 } else {
-                  stackOut_8_0 = this;
-                  stackIn_10_0 = stackOut_8_0;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_10_0 = this;
+
                   if (!this.field_o.a(-13)) {
                     break L4;
                   } else {
-                    stackOut_9_0 = this;
-                    stackOut_9_1 = 1;
-                    stackIn_11_0 = stackOut_9_0;
-                    stackIn_11_1 = stackOut_9_1;
+                    stackIn_11_0 = this;
+                    stackIn_11_1 = 1;
                     break L3;
                   }
                 }
               }
-              stackOut_10_0 = this;
-              stackOut_10_1 = 0;
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_0 = this;
+              stackIn_11_1 = 0;
               break L3;
             }
             L5: {
               L6: {
                 ((mjb) (this)).field_b = stackIn_11_1 != 0;
-                stackOut_11_0 = this;
-                stackIn_14_0 = stackOut_11_0;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_14_0 = this;
+
                 if (this.field_i) {
                   break L6;
                 } else {
-                  stackOut_12_0 = this;
-                  stackIn_14_0 = stackOut_12_0;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_14_0 = this;
+
                   if (!this.field_o.a(-128)) {
                     break L6;
                   } else {
-                    stackOut_13_0 = this;
-                    stackOut_13_1 = 1;
-                    stackIn_15_0 = stackOut_13_0;
-                    stackIn_15_1 = stackOut_13_1;
+                    stackIn_15_0 = this;
+                    stackIn_15_1 = 1;
                     break L5;
                   }
                 }
               }
-              stackOut_14_0 = this;
-              stackOut_14_1 = 0;
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_0 = this;
+              stackIn_15_1 = 0;
               break L5;
             }
             ((mjb) (this)).field_a = stackIn_15_1 != 0;
@@ -1087,56 +841,40 @@ final class mjb extends aja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var7 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var7);
-            stackOut_17_1 = new StringBuilder().append("mjb.<init>(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var7);
+
+            stackIn_19_1 = new StringBuilder().append("mjb.<init>(");
+
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L7;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+
+
+            stackIn_22_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L8;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L8;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_20_0), stackIn_23_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -34,7 +34,7 @@ final class od extends RuntimeException {
     }
 
     final static c a(int param0, boolean param1) {
-        c var2 = null;
+        c var2;
         if (!param1) {
           field_m = 46;
           var2 = new c();

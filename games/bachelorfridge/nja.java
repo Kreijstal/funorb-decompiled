@@ -5,7 +5,7 @@ final class nja {
     static int field_a;
 
     final static void a(boolean param0, byte param1) {
-        int var3 = 0;
+        int var3;
         L0: {
           var3 = BachelorFridge.field_y;
           if (param0) {

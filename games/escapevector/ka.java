@@ -12,7 +12,6 @@ final class ka {
 
     final static void a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         fn var3 = null;
         ed var4 = null;
@@ -22,6 +21,7 @@ final class ka {
         int var8 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var8 = EscapeVector.field_A;
         try {
           L0: {

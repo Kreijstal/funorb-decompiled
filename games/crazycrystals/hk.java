@@ -11,11 +11,11 @@ abstract class hk extends pb {
     }
 
     final static void a(byte param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         we var4 = null;
         pp var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -63,10 +63,9 @@ abstract class hk extends pb {
     }
 
     final void a(boolean param0, ta param1, boolean param2) {
-        int discarded$0 = 0;
         try {
             if (param0) {
-                discarded$0 = this.a(-126, -48);
+                this.a(-126, -48);
             }
             param1.field_g = param1.field_g + 1;
         } catch (RuntimeException runtimeException) {
@@ -83,7 +82,7 @@ abstract class hk extends pb {
     }
 
     final int a(int param0, int param1) {
-        ta var4 = null;
+        ta var4;
         if (param0 != 1843275042) {
           var4 = (ta) null;
           this.a(true, (ta) null, false);
@@ -95,45 +94,29 @@ abstract class hk extends pb {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            Object discarded$6 = null;
-            Object discarded$7 = null;
-            Object discarded$8 = null;
-            Object discarded$9 = null;
-            Object discarded$10 = null;
-            Object discarded$11 = null;
-            int var2_int = 0;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            java.net.URL var3 = null;
-            String var4 = null;
-            RuntimeException stackIn_5_0 = null;
-            StringBuilder stackIn_5_1 = null;
             RuntimeException stackIn_6_0 = null;
             StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             String stackIn_7_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_4_0 = null;
-            StringBuilder stackOut_4_1 = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            String stackOut_6_2 = null;
-            RuntimeException stackOut_5_0 = null;
-            StringBuilder stackOut_5_1 = null;
-            String stackOut_5_2 = null;
+            int var2_int = 0;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
+            java.net.URL var3 = null;
+            String var4 = null;
             try {
               try {
                 L0: {
                   var2_int = -109 / ((59 - param0) / 33);
                   var3 = param1.getCodeBase();
                   var4 = gh.a(param1, var3, (byte) 67).getFile();
-                  discarded$6 = hi.a(-3729, "updatelinks", param1, new Object[]{"home", var4 + "home.ws"});
-                  discarded$7 = hi.a(-3729, "updatelinks", param1, new Object[]{"gamelist", var4 + "togamelist.ws"});
-                  discarded$8 = hi.a(-3729, "updatelinks", param1, new Object[]{"serverlist", var4 + "toserverlist.ws"});
-                  discarded$9 = hi.a(-3729, "updatelinks", param1, new Object[]{"options", var4 + "options.ws"});
-                  discarded$10 = hi.a(-3729, "updatelinks", param1, new Object[]{"terms", var4 + "terms.ws"});
-                  discarded$11 = hi.a(-3729, "updatelinks", param1, new Object[]{"privacy", var4 + "privacy.ws"});
+                  hi.a(-3729, "updatelinks", param1, new Object[]{"home", var4 + "home.ws"});
+                  hi.a(-3729, "updatelinks", param1, new Object[]{"gamelist", var4 + "togamelist.ws"});
+                  hi.a(-3729, "updatelinks", param1, new Object[]{"serverlist", var4 + "toserverlist.ws"});
+                  hi.a(-3729, "updatelinks", param1, new Object[]{"options", var4 + "options.ws"});
+                  hi.a(-3729, "updatelinks", param1, new Object[]{"terms", var4 + "terms.ws"});
+                  hi.a(-3729, "updatelinks", param1, new Object[]{"privacy", var4 + "privacy.ws"});
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -146,27 +129,19 @@ abstract class hk extends pb {
               decompiledCaughtException = decompiledCaughtParameter1;
               L1: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_4_0 = (RuntimeException) (var2_ref);
-                stackOut_4_1 = new StringBuilder().append("hk.E(").append(param0).append(',');
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_6_1 = stackOut_4_1;
-                stackIn_5_0 = stackOut_4_0;
-                stackIn_5_1 = stackOut_4_1;
+                stackIn_6_0 = (RuntimeException) (var2_ref);
+
+                stackIn_6_1 = new StringBuilder().append("hk.E(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-                  stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-                  stackOut_6_2 = "null";
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
-                  stackIn_7_2 = stackOut_6_2;
+                  stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+                  stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+                  stackIn_7_2 = "null";
                   break L1;
                 } else {
-                  stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-                  stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-                  stackOut_5_2 = "{...}";
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
-                  stackIn_7_2 = stackOut_5_2;
+                  stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+                  stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+                  stackIn_7_2 = "{...}";
                   break L1;
                 }
               }

@@ -7,24 +7,22 @@ final class tu extends qm {
     private java.awt.Component field_h;
 
     final void a(byte param0, int param1, java.awt.Graphics param2, int param3) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        java.awt.Component var6 = null;
+        java.awt.Component var6;
         if (param0 <= 27) {
           var6 = (java.awt.Component) null;
           this.a(-86, (java.awt.Component) null, 95, -74);
-          discarded$4 = param2.drawImage(this.field_c, param3, param1, (java.awt.image.ImageObserver) ((Object) this.field_h));
+          param2.drawImage(this.field_c, param3, param1, (java.awt.image.ImageObserver) ((Object) this.field_h));
           return;
         } else {
-          discarded$5 = param2.drawImage(this.field_c, param3, param1, (java.awt.image.ImageObserver) ((Object) this.field_h));
+          param2.drawImage(this.field_c, param3, param1, (java.awt.image.ImageObserver) ((Object) this.field_h));
           return;
         }
     }
 
     final void a(int param0, java.awt.Component param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         this.field_b = param2;
         this.field_e = new int[param0 * param2 - -1];
         this.field_f = param0;

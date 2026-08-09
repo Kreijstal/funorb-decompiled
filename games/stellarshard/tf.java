@@ -7,8 +7,8 @@ abstract class tf {
     static li field_b;
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = ok.a((byte) 125);
         var2 = kb.b((byte) 98);
         if (param0 != 0) {
@@ -37,8 +37,6 @@ abstract class tf {
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_14_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -46,17 +44,6 @@ abstract class tf {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_10_0 = null;
-        byte[] stackOut_8_0 = null;
-        byte[] stackOut_13_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         try {
           L0: {
             if (param2 != null) {
@@ -71,13 +58,11 @@ abstract class tf {
               if (param2 instanceof byte[]) {
                 var3 = (byte[]) (param2);
                 if (param1) {
-                  stackOut_10_0 = cl.a(0, var3);
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = cl.a(0, var3);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_8_0 = (byte[]) (var3);
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = (byte[]) (var3);
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -86,8 +71,7 @@ abstract class tf {
                   throw new IllegalArgumentException();
                 } else {
                   var4 = (i) (param2);
-                  stackOut_13_0 = var4.a(-27);
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_0 = var4.a(-27);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -100,27 +84,19 @@ abstract class tf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var3_ref);
-            stackOut_16_1 = new StringBuilder().append("tf.M(").append(param0).append(',').append(param1).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var3_ref);
+
+            stackIn_18_1 = new StringBuilder().append("tf.M(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L2;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L2;
             }
           }
@@ -138,101 +114,31 @@ abstract class tf {
     }
 
     final static void a(int param0, int param1, pb[] param2, int param3, int param4) {
-        RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        var10 = stellarshard.field_B;
-        try {
-          L0: {
-            L1: {
-              if (param2 == null) {
-                break L1;
-              } else {
-                if (param0 > 0) {
-                  var5_int = param2[0].field_w;
-                  var6 = param2[param1].field_w;
-                  var7 = param2[1].field_w;
-                  param2[0].e(param3, param4);
-                  param2[2].e(-var6 + param0 + param3, param4);
-                  ti.a(og.field_b);
-                  ti.a(var5_int + param3, param4, -var6 + param3 - -param0, param2[1].field_x + param4);
-                  var8 = param3 + var5_int;
-                  var9 = -var6 + (param3 - -param0);
-                  param3 = var8;
-                  L2: while (true) {
-                    if (param3 >= var9) {
-                      ti.b(og.field_b);
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      param2[1].e(param3, param4);
-                      param3 = param3 + var7;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  break L1;
-                }
-              }
-            }
-            decompiledRegionSelector0 = 0;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (runtimeException);
-            stackOut_9_1 = new StringBuilder().append("tf.J(").append(param0).append(',').append(param1).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
-            if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L3;
-            } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L3;
-            }
-          }
-          throw ma.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param3 + ',' + param4 + ')');
+        int var10 = stellarshard.field_B;
+        if (param2 == null || param0 <= 0) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            var5_int = param2[0].field_w;
+            var6 = param2[param1].field_w;
+            var7 = param2[1].field_w;
+            param2[0].e(param3, param4);
+            param2[2].e(-var6 + param0 + param3, param4);
+            ti.a(og.field_b);
+            ti.a(var5_int + param3, param4, -var6 + param3 - -param0, param2[1].field_x + param4);
+            var8 = param3 + var5_int;
+            var9 = -var6 + (param3 - -param0);
+            for (param3 = var8; param3 < var9; param3 = param3 + var7) {
+                param2[1].e(param3, param4);
+            }
+            ti.b(og.field_b);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) ((Object) runtimeException), "tf.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

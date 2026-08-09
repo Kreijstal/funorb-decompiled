@@ -17,32 +17,32 @@ final class ml {
 
     final static void a(int param0) {
         try {
-            Exception var1 = null;
-            java.lang.reflect.Method var1_ref = null;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
-            Long var3 = null;
-            Object[] var4 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            java.lang.reflect.Method var1 = null;
+            Exception var1_ref = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
+            Long var3 = null;
+            Object[] var4 = null;
             try {
               L0: {
                 if (param0 > 80) {
                   L1: {
-                    var1_ref = Runtime.class.getMethod("maxMemory", new Class[]{});
-                    if (var1_ref != null) {
+                    var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+                    if (var1 != null) {
                       try {
                         L2: {
-                          var2_ref = Runtime.getRuntime();
+                          var2 = Runtime.getRuntime();
                           var4 = (Object[]) null;
-                          var3 = (Long) (var1_ref.invoke((Object) (var2_ref), (Object[]) null));
+                          var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
                           mg.field_f = (int)(var3.longValue() / 1048576L) + 1;
                           break L2;
                         }
                       } catch (java.lang.Throwable decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
                         L3: {
-                          var2 = decompiledCaughtException;
+                          var2_ref = decompiledCaughtException;
                           break L3;
                         }
                       }
@@ -61,7 +61,7 @@ final class ml {
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
-                var1 = (Exception) (Object) decompiledCaughtException;
+                var1_ref = (Exception) (Object) decompiledCaughtException;
                 decompiledRegionSelector0 = 1;
                 break L4;
               }
@@ -81,20 +81,14 @@ final class ml {
     final boolean b(boolean param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0) {
           L0: {
             field_c = (lj) null;
             if (103 != this.field_k) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -102,12 +96,10 @@ final class ml {
         } else {
           L1: {
             if (103 != this.field_k) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -133,11 +125,6 @@ final class ml {
     }
 
     final void e(byte param0) {
-        boolean discarded$5 = false;
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
         this.field_k = 0;
         this.field_d = 0;
         if (-1 != (this.field_b ^ -1)) {
@@ -180,7 +167,7 @@ final class ml {
                   }
                 }
                 if (param0 != -74) {
-                  discarded$5 = this.a((byte) 14);
+                  this.a((byte) 14);
                   return;
                 } else {
                   return;
@@ -210,7 +197,7 @@ final class ml {
             }
           }
           if (param0 != -74) {
-            discarded$6 = this.a((byte) 14);
+            this.a((byte) 14);
             return;
           } else {
             return;
@@ -254,14 +241,14 @@ final class ml {
                 }
               }
               if (param0 != -74) {
-                discarded$7 = this.a((byte) 14);
+                this.a((byte) 14);
                 return;
               } else {
                 return;
               }
             } else {
               if (param0 != -74) {
-                discarded$8 = this.a((byte) 14);
+                this.a((byte) 14);
                 return;
               } else {
                 return;
@@ -290,7 +277,7 @@ final class ml {
               }
             }
             if (param0 != -74) {
-              discarded$9 = this.a((byte) 14);
+              this.a((byte) 14);
               return;
             } else {
               return;
@@ -306,8 +293,6 @@ final class ml {
 
     final boolean a(byte param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == -1) {
           if (0 == this.field_d) {
             if (this.field_k != 84) {
@@ -330,12 +315,10 @@ final class ml {
             } else {
               L0: {
                 if ((this.field_k ^ -1) != -84) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }
@@ -348,7 +331,7 @@ final class ml {
     }
 
     final static boolean b(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = 64 % ((-35 - param0) / 46);
         if (null != b.field_n) {
           if (b.field_n.k(3469) == null) {
@@ -802,30 +785,19 @@ final class ml {
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param3) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -848,20 +820,14 @@ final class ml {
     final boolean e(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 < 99) {
           L0: {
             this.d(58);
             if (96 != this.field_k) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -869,12 +835,10 @@ final class ml {
         } else {
           L1: {
             if (96 != this.field_k) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -883,7 +847,7 @@ final class ml {
     }
 
     final void d(byte param0) {
-        int var2 = 0;
+        int var2;
         L0: {
           this.field_d = 0;
           this.field_k = 0;
@@ -1195,20 +1159,14 @@ final class ml {
     final boolean c(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 >= -89) {
           L0: {
             this.field_i = -67;
             if (-103 != (this.field_k ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -1216,12 +1174,10 @@ final class ml {
         } else {
           L1: {
             if (-103 != (this.field_k ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

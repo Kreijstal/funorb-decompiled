@@ -28,7 +28,7 @@ abstract class l {
     }
 
     final static hf a(byte param0) {
-        String var1 = null;
+        String var1;
         if (param0 != -118) {
           return (hf) null;
         } else {
@@ -61,7 +61,7 @@ abstract class l {
     }
 
     final static void a(int param0, byte param1) {
-        ga var2 = null;
+        ga var2;
         var2 = ma.field_a;
         var2.b((byte) -35, param0);
         var2.a(-65, 2);

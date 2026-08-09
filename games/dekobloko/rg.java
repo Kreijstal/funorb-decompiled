@@ -14,18 +14,14 @@ final class rg {
         try {
             String var2 = null;
             RuntimeException var2_ref = null;
-            Throwable var2_ref2 = null;
             String var3 = null;
             String[] var4 = null;
             int var5 = 0;
             int var6 = 0;
             int var7 = 0;
             int stackIn_4_0 = 0;
-            int stackIn_10_0 = 0;
             int stackIn_13_0 = 0;
             int stackIn_20_0 = 0;
-            RuntimeException stackIn_22_0 = null;
-            StringBuilder stackIn_22_1 = null;
             RuntimeException stackIn_23_0 = null;
             StringBuilder stackIn_23_1 = null;
             RuntimeException stackIn_24_0 = null;
@@ -34,25 +30,12 @@ final class rg {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_3_0 = 0;
-            int stackOut_9_0 = 0;
-            int stackOut_12_0 = 0;
-            int stackOut_19_0 = 0;
-            int stackOut_18_0 = 0;
-            RuntimeException stackOut_21_0 = null;
-            StringBuilder stackOut_21_1 = null;
-            RuntimeException stackOut_23_0 = null;
-            StringBuilder stackOut_23_1 = null;
-            String stackOut_23_2 = null;
-            RuntimeException stackOut_22_0 = null;
-            StringBuilder stackOut_22_1 = null;
-            String stackOut_22_2 = null;
+            Throwable var2_ref2 = null;
             var7 = client.field_A ? 1 : 0;
             try {
               L0: {
                 if (vf.field_a) {
-                  stackOut_3_0 = 1;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = 1;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 } else {
@@ -76,22 +59,20 @@ final class rg {
                             break L4;
                           } else {
                             var6 = var4[var5].indexOf('=');
-                            stackOut_9_0 = var6;
-                            stackIn_20_0 = stackOut_9_0;
-                            stackIn_10_0 = stackOut_9_0;
+                            stackIn_20_0 = var6;
+
                             if (var7 != 0) {
                               decompiledRegionSelector0 = 1;
                               break L1;
                             } else {
                               L5: {
-                                if (stackIn_10_0 < 0) {
+                                if (stackIn_20_0 < 0) {
                                   break L5;
                                 } else {
                                   if (!var4[var5].substring(0, var6).trim().equals(var2)) {
                                     break L5;
                                   } else {
-                                    stackOut_12_0 = 1;
-                                    stackIn_13_0 = stackOut_12_0;
+                                    stackIn_13_0 = 1;
                                     decompiledRegionSelector0 = 2;
                                     break L1;
                                   }
@@ -121,12 +102,10 @@ final class rg {
                   L7: {
                     if (decompiledRegionSelector0 == 0) {
                       if (null == param0.getParameter("tuhstatbut")) {
-                        stackOut_19_0 = 0;
-                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_0 = 0;
                         break L7;
                       } else {
-                        stackOut_18_0 = 1;
-                        stackIn_20_0 = stackOut_18_0;
+                        stackIn_20_0 = 1;
                         break L7;
                       }
                     } else {
@@ -146,27 +125,19 @@ final class rg {
               decompiledCaughtException = decompiledCaughtParameter1;
               L8: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_21_0 = (RuntimeException) (var2_ref);
-                stackOut_21_1 = new StringBuilder().append("rg.B(");
-                stackIn_23_0 = stackOut_21_0;
-                stackIn_23_1 = stackOut_21_1;
-                stackIn_22_0 = stackOut_21_0;
-                stackIn_22_1 = stackOut_21_1;
+                stackIn_23_0 = (RuntimeException) (var2_ref);
+
+                stackIn_23_1 = new StringBuilder().append("rg.B(");
+
                 if (param0 == null) {
-                  stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-                  stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-                  stackOut_23_2 = "null";
-                  stackIn_24_0 = stackOut_23_0;
-                  stackIn_24_1 = stackOut_23_1;
-                  stackIn_24_2 = stackOut_23_2;
+                  stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+                  stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+                  stackIn_24_2 = "null";
                   break L8;
                 } else {
-                  stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-                  stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-                  stackOut_22_2 = "{...}";
-                  stackIn_24_0 = stackOut_22_0;
-                  stackIn_24_1 = stackOut_22_1;
-                  stackIn_24_2 = stackOut_22_2;
+                  stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+                  stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+                  stackIn_24_2 = "{...}";
                   break L8;
                 }
               }

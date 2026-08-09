@@ -26,29 +26,26 @@ final class da extends l {
     }
 
     final static cj a(int param0, int param1, int param2, int param3) {
-        cj discarded$1 = null;
-        Object var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        cj var8_ref_cj = null;
-        int var9 = 0;
-        cj var9_ref_cj = null;
-        int var10_int = 0;
-        String var10 = null;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
         int stackIn_44_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_42_0 = 0;
+        Object var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        cj var8_ref_cj;
+        int var9;
+        cj var9_ref_cj;
+        int var10_int;
+        String var10;
+        String var11;
+        int var12;
+        int var13;
         L0: {
           var13 = Virogrid.field_F ? 1 : 0;
           if (param0 == -1403) {
             break L0;
           } else {
-            discarded$1 = da.a(100, 27, 28, 13);
+            da.a(100, 27, 28, 13);
             break L0;
           }
         }
@@ -110,12 +107,10 @@ final class da extends l {
                 L7: {
                   ne.field_c.a(-1, param3, true, param1 * (2 * param3));
                   if (var9 != ne.field_c.field_Jb.field_Cb + ne.field_c.field_Jb.field_F) {
-                    stackOut_43_0 = 0;
-                    stackIn_44_0 = stackOut_43_0;
+                    stackIn_44_0 = 0;
                     break L7;
                   } else {
-                    stackOut_42_0 = 1;
-                    stackIn_44_0 = stackOut_42_0;
+                    stackIn_44_0 = 1;
                     break L7;
                   }
                 }

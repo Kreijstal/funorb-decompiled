@@ -32,11 +32,11 @@ final class kc {
 
     final static void a(byte param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {

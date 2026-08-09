@@ -30,8 +30,13 @@ abstract class jc {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -40,19 +45,6 @@ abstract class jc {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
         var13 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -60,48 +52,40 @@ abstract class jc {
               var5_int = param3 + param1;
               var6 = param4 + param2;
               if (param1 <= qg.field_a) {
-                stackOut_3_0 = qg.field_a;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = qg.field_a;
                 break L1;
               } else {
-                stackOut_2_0 = param1;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = param1;
                 break L1;
               }
             }
             L2: {
               var7 = stackIn_4_0;
               if (param4 <= qg.field_k) {
-                stackOut_6_0 = qg.field_k;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = qg.field_k;
                 break L2;
               } else {
-                stackOut_5_0 = param4;
-                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_0 = param4;
                 break L2;
               }
             }
             L3: {
               var8 = stackIn_7_0;
               if (var5_int >= qg.field_c) {
-                stackOut_9_0 = qg.field_c;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = qg.field_c;
                 break L3;
               } else {
-                stackOut_8_0 = var5_int;
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = var5_int;
                 break L3;
               }
             }
             L4: {
               var9 = stackIn_10_0;
               if (var6 < qg.field_l) {
-                stackOut_12_0 = var6;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = var6;
                 break L4;
               } else {
-                stackOut_11_0 = qg.field_l;
-                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_0 = qg.field_l;
                 break L4;
               }
             }
@@ -220,8 +204,8 @@ abstract class jc {
     }
 
     final static void b(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         L0: {
           if (param1 == 1) {
             break L0;
@@ -277,23 +261,12 @@ abstract class jc {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -305,35 +278,26 @@ abstract class jc {
               }
             }
             var3 = (CharSequence) ((Object) param0);
-            stackOut_2_0 = td.field_i.equals(il.a(var3, (byte) 21));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = td.field_i.equals(il.a(var3, (byte) 21));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("jc.L(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("jc.L(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }

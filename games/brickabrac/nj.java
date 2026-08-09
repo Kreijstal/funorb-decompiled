@@ -37,18 +37,18 @@ final class nj extends nm {
     private int field_L;
 
     final void c(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = BrickABrac.field_J ? 1 : 0;
           if (this.field_K <= 0) {
             break L0;
           } else {
-            fieldTemp$2 = this.field_K - 1;
+            fieldTemp$0 = this.field_K - 1;
             this.field_K = this.field_K - 1;
-            if (fieldTemp$2 <= 0) {
+            if (fieldTemp$0 <= 0) {
               break L0;
             } else {
               return;
@@ -91,9 +91,9 @@ final class nj extends nm {
               }
             }
             L5: {
-              fieldTemp$3 = this.field_k + 1;
+              fieldTemp$1 = this.field_k + 1;
               this.field_k = this.field_k + 1;
-              if (this.field_u != fieldTemp$3) {
+              if (this.field_u != fieldTemp$1) {
                 break L5;
               } else {
                 this.b((byte) 111);
@@ -104,7 +104,7 @@ final class nj extends nm {
             return;
           } else {
             L6: {
-              if (this.field_k > this.field_I) {
+              if ((this.field_k ^ -1) < (this.field_I ^ -1)) {
                 this.field_D[var2][this.field_J] = this.field_A[var2];
                 this.field_m[var2][this.field_J] = this.field_C[var2];
                 break L6;

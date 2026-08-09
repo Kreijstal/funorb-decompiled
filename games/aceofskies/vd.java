@@ -13,45 +13,33 @@ final class vd {
     byte[] field_d;
 
     private final static vd[] a(byte[] param0) {
-        byte dupTemp$2 = 0;
-        byte dupTemp$3 = 0;
-        rb var1 = null;
-        int var2 = 0;
-        vd[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7_int = 0;
-        int[] var7 = null;
-        int var8 = 0;
-        vd var8_ref_vd = null;
-        vd var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int[] var16 = null;
-        int[] var17 = null;
-        int stackIn_48_0 = 0;
+        byte dupTemp$0 = 0;
+        byte dupTemp$1 = 0;
         int stackIn_49_0 = 0;
         int stackIn_50_0 = 0;
         int stackIn_50_1 = 0;
-        int stackIn_62_0 = 0;
         int stackIn_63_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_64_1 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_63_1 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_62_1 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_49_1 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_48_1 = 0;
+        rb var1;
+        int var2;
+        vd[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7_int;
+        int[] var7;
+        int var8;
+        vd var8_ref_vd;
+        vd var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int[] var16;
+        int[] var17;
         var1 = new rb(param0);
         var1.field_g = param0.length - 2;
         var2 = var1.i((byte) 0);
@@ -118,23 +106,18 @@ final class vd {
                                                               continue L11;
                                                             } else {
                                                               L13: {
-                                                                dupTemp$2 = var1.d(0);
-                                                                var9.field_e[var13 + var14 * var9.field_h] = dupTemp$2;
-                                                                var15 = dupTemp$2;
-                                                                stackOut_61_0 = var12;
-                                                                stackIn_63_0 = stackOut_61_0;
-                                                                stackIn_62_0 = stackOut_61_0;
+                                                                dupTemp$0 = var1.d(0);
+                                                                var9.field_e[var13 + var14 * var9.field_h] = dupTemp$0;
+                                                                var15 = dupTemp$0;
+                                                                stackIn_63_0 = var12;
+
                                                                 if (var15 == -1) {
-                                                                  stackOut_63_0 = stackIn_63_0;
-                                                                  stackOut_63_1 = 0;
-                                                                  stackIn_64_0 = stackOut_63_0;
-                                                                  stackIn_64_1 = stackOut_63_1;
+                                                                  stackIn_64_0 = stackIn_63_0;
+                                                                  stackIn_64_1 = 0;
                                                                   break L13;
                                                                 } else {
-                                                                  stackOut_62_0 = stackIn_62_0;
-                                                                  stackOut_62_1 = 1;
-                                                                  stackIn_64_0 = stackOut_62_0;
-                                                                  stackIn_64_1 = stackOut_62_1;
+                                                                  stackIn_64_0 = stackIn_63_0;
+                                                                  stackIn_64_1 = 1;
                                                                   break L13;
                                                                 }
                                                               }
@@ -169,23 +152,18 @@ final class vd {
                                                           break L9;
                                                         } else {
                                                           L17: {
-                                                            dupTemp$3 = var1.d(0);
-                                                            var9.field_e[var13] = dupTemp$3;
-                                                            var14 = dupTemp$3;
-                                                            stackOut_47_0 = var12;
-                                                            stackIn_49_0 = stackOut_47_0;
-                                                            stackIn_48_0 = stackOut_47_0;
+                                                            dupTemp$1 = var1.d(0);
+                                                            var9.field_e[var13] = dupTemp$1;
+                                                            var14 = dupTemp$1;
+                                                            stackIn_49_0 = var12;
+
                                                             if (var14 == -1) {
-                                                              stackOut_49_0 = stackIn_49_0;
-                                                              stackOut_49_1 = 0;
-                                                              stackIn_50_0 = stackOut_49_0;
-                                                              stackIn_50_1 = stackOut_49_1;
+                                                              stackIn_50_0 = stackIn_49_0;
+                                                              stackIn_50_1 = 0;
                                                               break L17;
                                                             } else {
-                                                              stackOut_48_0 = stackIn_48_0;
-                                                              stackOut_48_1 = 1;
-                                                              stackIn_50_0 = stackOut_48_0;
-                                                              stackIn_50_1 = stackOut_48_1;
+                                                              stackIn_50_0 = stackIn_49_0;
+                                                              stackIn_50_1 = 1;
                                                               break L17;
                                                             }
                                                           }

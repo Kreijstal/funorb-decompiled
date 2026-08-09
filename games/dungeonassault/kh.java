@@ -28,16 +28,17 @@ final class kh extends ip {
     }
 
     final static void e(int param0) {
-        RuntimeException var1 = null;
+        Object stackIn_23_0 = null;
+        ai stackIn_23_1 = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
-        RuntimeException decompiledCaughtException = null;
         var7 = DungeonAssault.field_K;
         try {
           L0: {
@@ -79,20 +80,21 @@ final class kh extends ip {
                   } else {
                     var2 = -162 + 27 * var1_int;
                     var3 = 20 * var1_int;
-                    var8 = var1_int * 7 - 42;
-                    var4 = var8;
+                    var4 = var1_int * 7 - 42;
                     var5 = 0;
                     L5: while (true) {
                       if (13 - var1_int <= var5) {
                         var1_int++;
                         continue L3;
                       } else {
+                        var6 = 16777215;
+                        stackIn_23_0 = null;
+                        stackIn_23_1 = qj.field_c[var4];
                         L6: {
-                          var6 = 16777215;
-                          if (null != qj.field_c[var8]) {
+                          if (stackIn_23_0 != stackIn_23_1) {
                             rl.field_d[5].e(var2, var3, var6);
                             rl.field_d[4].e(27 + var2, var3, var6);
-                            ed.a(var3, var2, var8, (byte) -93, var6);
+                            ed.a(var3, var2, var4, (byte) -93, var6);
                             rl.field_d[5].e(27 + var2, var3 - -20 + 0, var6);
                             rl.field_d[4].e(var2, var3 - -20 - 0, var6);
                             break L6;
@@ -100,7 +102,7 @@ final class kh extends ip {
                             break L6;
                           }
                         }
-                        var8 += 8;
+                        var4 += 8;
                         var5++;
                         var2 += 54;
                         continue L5;
@@ -192,8 +194,6 @@ final class kh extends ip {
 
     final static boolean d(boolean param0) {
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           if (param0) {
             break L0;
@@ -214,8 +214,7 @@ final class kh extends ip {
                   break L2;
                 } else {
                   if (!ck.g(-1)) {
-                    stackOut_8_0 = 0;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = 0;
                     break L1;
                   } else {
                     break L2;
@@ -224,8 +223,7 @@ final class kh extends ip {
               }
             }
           }
-          stackOut_7_0 = 1;
-          stackIn_9_0 = stackOut_7_0;
+          stackIn_9_0 = 1;
           break L1;
         }
         return stackIn_9_0 != 0;
@@ -239,8 +237,6 @@ final class kh extends ip {
         od stackIn_3_0 = null;
         od stackIn_9_0 = null;
         od stackIn_14_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -248,24 +244,11 @@ final class kh extends ip {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        od stackOut_2_0 = null;
-        od stackOut_8_0 = null;
-        od stackOut_13_0 = null;
-        od stackOut_12_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         try {
           L0: {
             var4 = (CharSequence) ((Object) param0);
             if (!o.a((byte) 31, var4)) {
-              stackOut_2_0 = pd.field_J;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = pd.field_J;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -287,8 +270,7 @@ final class kh extends ip {
                       }
                     }
                   }
-                  stackOut_8_0 = oc.field_A;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = oc.field_A;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
@@ -296,12 +278,10 @@ final class kh extends ip {
               L3: {
                 var3_int = 108 % ((5 - param1) / 44);
                 if (this.field_p) {
-                  stackOut_13_0 = c.field_d;
-                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_0 = c.field_d;
                   break L3;
                 } else {
-                  stackOut_12_0 = pd.field_J;
-                  stackIn_14_0 = stackOut_12_0;
+                  stackIn_14_0 = pd.field_J;
                   break L3;
                 }
               }
@@ -313,27 +293,19 @@ final class kh extends ip {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var3_ref);
-            stackOut_15_1 = new StringBuilder().append("kh.C(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var3_ref);
+
+            stackIn_17_1 = new StringBuilder().append("kh.C(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L4;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L4;
             }
           }
@@ -359,8 +331,6 @@ final class kh extends ip {
         String stackIn_14_0 = null;
         String stackIn_17_0 = null;
         String stackIn_19_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -368,18 +338,6 @@ final class kh extends ip {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_13_0 = null;
-        String stackOut_18_0 = null;
-        String stackOut_16_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
         try {
           L0: {
             var5 = (CharSequence) ((Object) param1);
@@ -404,26 +362,22 @@ final class kh extends ip {
                 }
               }
               if (!this.field_p) {
-                stackOut_13_0 = fp.field_a;
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_0 = fp.field_a;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (param0 >= 44) {
-                  stackOut_18_0 = ng.field_N;
-                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_0 = ng.field_N;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_16_0 = (String) null;
-                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_0 = (String) null;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               }
             } else {
-              stackOut_1_0 = (String) (var3);
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (String) (var3);
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -432,27 +386,19 @@ final class kh extends ip {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var3_ref);
-            stackOut_20_1 = new StringBuilder().append("kh.D(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var3_ref);
+
+            stackIn_22_1 = new StringBuilder().append("kh.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L2;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L2;
             }
           }
@@ -480,9 +426,9 @@ final class kh extends ip {
 
     static {
         $cfr$clinit: {
-            long var0 = 0L;
-            int var2 = 0;
-            int var3 = 0;
+            long var0;
+            int var2;
+            int var3;
             field_q = new long[256];
             var2 = 0;
             L0: while (true) {

@@ -19,45 +19,45 @@ final class wb extends wg {
     private float field_p;
 
     final synchronized void b(int[] param0, int param1, int param2) {
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int fieldTemp$16 = 0;
-        int fieldTemp$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
-        int fieldTemp$24 = 0;
-        int fieldTemp$25 = 0;
-        int fieldTemp$26 = 0;
-        int fieldTemp$27 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        nc var23 = null;
-        lc var24 = null;
-        nc var25 = null;
-        lc var26 = null;
-        nc var27 = null;
-        lc var28 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        nc var23;
+        lc var24;
+        nc var25;
+        lc var26;
+        nc var27;
+        lc var28;
         this.e();
         param2 = param2 + param1;
         L0: while (true) {
@@ -143,15 +143,15 @@ final class wb extends wg {
                                         L13: while (true) {
                                           if (var16 >= 4) {
                                             if (var6 <= 12) {
-                                              incrementValue$14 = param1;
+                                              incrementValue$0 = param1;
                                               param1++;
-                                              param0[incrementValue$14] = param0[incrementValue$14] + (var15 * var11 + var13 * var9 >> 12 - var6);
+                                              param0[incrementValue$0] = param0[incrementValue$0] + (var15 * var11 + var13 * var9 >> 12 - var6);
                                               var12++;
                                               continue L11;
                                             } else {
-                                              incrementValue$15 = param1;
+                                              incrementValue$1 = param1;
                                               param1++;
-                                              param0[incrementValue$15] = param0[incrementValue$15] + (var15 * var11 + var13 * var9 << var6 - 12);
+                                              param0[incrementValue$1] = param0[incrementValue$1] + (var15 * var11 + var13 * var9 << var6 - 12);
                                               var12++;
                                               continue L11;
                                             }
@@ -160,9 +160,9 @@ final class wb extends wg {
                                             var18 = var28.field_b[var28.field_a] >> var6;
                                             var15 = var18 - var15;
                                             var28.field_b[var28.field_a] = var14 + (var18 * 2048 + 2048 >> 12) << var6;
-                                            fieldTemp$16 = var28.field_a + 1;
+                                            fieldTemp$2 = var28.field_a + 1;
                                             var28.field_a = var28.field_a + 1;
-                                            if (fieldTemp$16 >= var28.field_b.length) {
+                                            if (fieldTemp$2 >= var28.field_b.length) {
                                               var28.field_a = 0;
                                               var16++;
                                               continue L13;
@@ -180,9 +180,9 @@ final class wb extends wg {
                                           var19 = var19 + ((var18 - var19) * var8 + 2048 >> 12);
                                           var27.field_c = var19 << var6;
                                           var27.field_a[var27.field_b] = var14 + (var19 * var7 + 2048 >> 12) << var6;
-                                          fieldTemp$17 = var27.field_b + 1;
+                                          fieldTemp$3 = var27.field_b + 1;
                                           var27.field_b = var27.field_b + 1;
-                                          if (fieldTemp$17 < var27.field_a.length) {
+                                          if (fieldTemp$3 < var27.field_a.length) {
                                             break L14;
                                           } else {
                                             var27.field_b = 0;
@@ -205,12 +205,12 @@ final class wb extends wg {
                                     param1 = param1 >> 1;
                                     break L10;
                                   } else {
-                                    incrementValue$18 = var13;
+                                    incrementValue$4 = var13;
                                     var13++;
-                                    var14 = this.field_t[incrementValue$18] >> var6;
-                                    incrementValue$19 = var13;
+                                    var14 = this.field_t[incrementValue$4] >> var6;
+                                    incrementValue$5 = var13;
                                     var13++;
-                                    var15 = this.field_t[incrementValue$19] >> var6;
+                                    var15 = this.field_t[incrementValue$5] >> var6;
                                     var16 = (var14 + var15) * var10 >> 17;
                                     var17 = 0;
                                     var18 = 0;
@@ -227,20 +227,20 @@ final class wb extends wg {
                                                 L19: while (true) {
                                                   if (var19 >= 4) {
                                                     if (var6 <= 12) {
-                                                      incrementValue$20 = param1;
+                                                      incrementValue$6 = param1;
                                                       param1++;
-                                                      param0[incrementValue$20] = param0[incrementValue$20] + (var17 * var11 + var18 * var12 + var14 * var9 >> 12 - var6);
-                                                      incrementValue$21 = param1;
+                                                      param0[incrementValue$6] = param0[incrementValue$6] + (var17 * var11 + var18 * var12 + var14 * var9 >> 12 - var6);
+                                                      incrementValue$7 = param1;
                                                       param1++;
-                                                      param0[incrementValue$21] = param0[incrementValue$21] + (var18 * var11 + var17 * var12 + var15 * var9 >> 12 - var6);
+                                                      param0[incrementValue$7] = param0[incrementValue$7] + (var18 * var11 + var17 * var12 + var15 * var9 >> 12 - var6);
                                                       continue L15;
                                                     } else {
-                                                      incrementValue$22 = param1;
+                                                      incrementValue$8 = param1;
                                                       param1++;
-                                                      param0[incrementValue$22] = param0[incrementValue$22] + (var17 * var11 + var18 * var12 + var14 * var9 << var6 - 12);
-                                                      incrementValue$23 = param1;
+                                                      param0[incrementValue$8] = param0[incrementValue$8] + (var17 * var11 + var18 * var12 + var14 * var9 << var6 - 12);
+                                                      incrementValue$9 = param1;
                                                       param1++;
-                                                      param0[incrementValue$23] = param0[incrementValue$23] + (var18 * var11 + var17 * var12 + var15 * var9 << var6 - 12);
+                                                      param0[incrementValue$9] = param0[incrementValue$9] + (var18 * var11 + var17 * var12 + var15 * var9 << var6 - 12);
                                                       continue L15;
                                                     }
                                                   } else {
@@ -248,9 +248,9 @@ final class wb extends wg {
                                                     var21 = var26.field_b[var26.field_a] >> var6;
                                                     var18 = var21 - var18;
                                                     var26.field_b[var26.field_a] = var16 + (var21 * 2048 + 2048 >> 12) << var6;
-                                                    fieldTemp$24 = var26.field_a + 1;
+                                                    fieldTemp$10 = var26.field_a + 1;
                                                     var26.field_a = var26.field_a + 1;
-                                                    if (fieldTemp$24 >= var26.field_b.length) {
+                                                    if (fieldTemp$10 >= var26.field_b.length) {
                                                       var26.field_a = 0;
                                                       var19++;
                                                       continue L19;
@@ -268,9 +268,9 @@ final class wb extends wg {
                                                   var22 = var22 + ((var21 - var22) * var8 + 2048 >> 12);
                                                   var25.field_c = var22 << var6;
                                                   var25.field_a[var25.field_b] = var16 + (var22 * var7 + 2048 >> 12) << var6;
-                                                  fieldTemp$25 = var25.field_b + 1;
+                                                  fieldTemp$11 = var25.field_b + 1;
                                                   var25.field_b = var25.field_b + 1;
-                                                  if (fieldTemp$25 < var25.field_a.length) {
+                                                  if (fieldTemp$11 < var25.field_a.length) {
                                                     break L20;
                                                   } else {
                                                     var25.field_b = 0;
@@ -287,9 +287,9 @@ final class wb extends wg {
                                             var20 = var24.field_b[var24.field_a] >> var6;
                                             var17 = var20 - var17;
                                             var24.field_b[var24.field_a] = var16 + (var20 * 2048 + 2048 >> 12) << var6;
-                                            fieldTemp$26 = var24.field_a + 1;
+                                            fieldTemp$12 = var24.field_a + 1;
                                             var24.field_a = var24.field_a + 1;
-                                            if (fieldTemp$26 >= var24.field_b.length) {
+                                            if (fieldTemp$12 >= var24.field_b.length) {
                                               var24.field_a = 0;
                                               var18++;
                                               continue L17;
@@ -307,9 +307,9 @@ final class wb extends wg {
                                           var21 = var21 + ((var20 - var21) * var8 + 2048 >> 12);
                                           var23.field_c = var21 << var6;
                                           var23.field_a[var23.field_b] = var16 + (var21 * var7 + 2048 >> 12) << var6;
-                                          fieldTemp$27 = var23.field_b + 1;
+                                          fieldTemp$13 = var23.field_b + 1;
                                           var23.field_b = var23.field_b + 1;
-                                          if (fieldTemp$27 < var23.field_a.length) {
+                                          if (fieldTemp$13 < var23.field_a.length) {
                                             break L21;
                                           } else {
                                             var23.field_b = 0;
@@ -384,8 +384,8 @@ final class wb extends wg {
     }
 
     private final static int a(int param0, int[] param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         L0: {
           if (param3 <= param1.length) {
             break L0;
@@ -450,7 +450,7 @@ final class wb extends wg {
     }
 
     private final void e() {
-        int var1 = 0;
+        int var1;
         L0: {
           if (!ie.field_o) {
             if (this.field_y == null) {
@@ -540,27 +540,22 @@ final class wb extends wg {
     }
 
     wb(wg param0) {
-        L0: {
-          this.field_s = new nc[8];
-          this.field_s[0] = new nc(1116 * ie.field_q / 44100);
-          this.field_s[1] = new nc(1188 * ie.field_q / 44100);
-          this.field_s[2] = new nc(1277 * ie.field_q / 44100);
-          this.field_s[3] = new nc(1356 * ie.field_q / 44100);
-          this.field_s[4] = new nc(1422 * ie.field_q / 44100);
-          this.field_s[5] = new nc(1491 * ie.field_q / 44100);
-          this.field_s[6] = new nc(1557 * ie.field_q / 44100);
-          this.field_s[7] = new nc(1617 * ie.field_q / 44100);
-          this.field_l = new lc[4];
-          this.field_l[0] = new lc(556 * ie.field_q / 44100);
-          this.field_l[1] = new lc(441 * ie.field_q / 44100);
-          this.field_l[2] = new lc(341 * ie.field_q / 44100);
-          this.field_l[3] = new lc(225 * ie.field_q / 44100);
-          if (ie.field_o) {
-            break L0;
-          } else {
+        this.field_s = new nc[8];
+        this.field_s[0] = new nc(1116 * ie.field_q / 44100);
+        this.field_s[1] = new nc(1188 * ie.field_q / 44100);
+        this.field_s[2] = new nc(1277 * ie.field_q / 44100);
+        this.field_s[3] = new nc(1356 * ie.field_q / 44100);
+        this.field_s[4] = new nc(1422 * ie.field_q / 44100);
+        this.field_s[5] = new nc(1491 * ie.field_q / 44100);
+        this.field_s[6] = new nc(1557 * ie.field_q / 44100);
+        this.field_s[7] = new nc(1617 * ie.field_q / 44100);
+        this.field_l = new lc[4];
+        this.field_l[0] = new lc(556 * ie.field_q / 44100);
+        this.field_l[1] = new lc(441 * ie.field_q / 44100);
+        this.field_l[2] = new lc(341 * ie.field_q / 44100);
+        this.field_l[3] = new lc(225 * ie.field_q / 44100);
+        if (!ie.field_o) {
             this.field_t = new int[256];
-            break L0;
-          }
         }
         this.e();
         this.e(0.04500000178813934f);

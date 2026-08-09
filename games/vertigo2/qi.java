@@ -18,10 +18,8 @@ final class qi extends java.awt.Canvas implements java.awt.event.FocusListener {
             return;
         }
         try {
-            var4_int = param1;
-            while (var4_int < param1 - -param2) {
+            for (var4_int = param1; var4_int < param1 - -param2; var4_int = var4_int + qp.field_h.field_x) {
                 qp.field_h.c(var4_int, param3, 64);
-                var4_int = var4_int + qp.field_h.field_x;
             }
             bi.a();
             ln.field_f.c(param2 + param1, param3, 64);

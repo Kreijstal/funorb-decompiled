@@ -5,8 +5,8 @@ final class rka extends ida {
     private nq field_t;
 
     final boolean c(byte param0) {
-        ad var2 = null;
-        int var3 = 0;
+        ad var2;
+        int var3;
         var2 = this.field_p.a(-27449, this.field_s);
         int fieldTemp$1 = this.field_n + 1;
         this.field_n = this.field_n + 1;

@@ -134,14 +134,11 @@ final class nj {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
         var1 = vi.field_a;
         synchronized (var1) {
           L0: {
             if (dh.field_m == bb.field_e) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               return stackIn_4_0 != 0;
             } else {
               L1: {
@@ -155,8 +152,7 @@ final class nj {
                 }
               }
               dh.field_m = dh.field_m + 1 & 127;
-              stackOut_7_0 = 1;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -183,7 +179,7 @@ final class nj {
     }
 
     public static void a(byte param0) {
-        String var2 = null;
+        String var2;
         field_e = null;
         field_h = null;
         field_b = null;

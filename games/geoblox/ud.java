@@ -7,10 +7,10 @@ final class ud {
 
     final static void a(byte param0, int param1) {
         hf var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         p var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = Geoblox.field_C;
         try {
           L0: {
@@ -50,9 +50,7 @@ final class ud {
     }
 
     final static j a(int param0, String param1) {
-        j discarded$2 = null;
         String var2 = null;
-        RuntimeException var2_ref = null;
         j var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -60,23 +58,13 @@ final class ud {
         CharSequence var7 = null;
         CharSequence var8 = null;
         j stackIn_16_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        j stackOut_15_0 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException var2_ref = null;
         var5 = Geoblox.field_C;
         try {
           L0: {
@@ -97,7 +85,7 @@ final class ud {
                   break L2;
                 } else {
                   var6 = (String) null;
-                  discarded$2 = ud.a(55, (String) null);
+                  ud.a(55, (String) null);
                   break L2;
                 }
               }
@@ -114,8 +102,7 @@ final class ud {
                     }
                   }
                   if (var4.equals(var2)) {
-                    stackOut_15_0 = (j) (var3);
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = (j) (var3);
                     break L0;
                   } else {
                     var3 = (j) ((Object) ug.field_a.a(param0 ^ -29925));
@@ -133,27 +120,19 @@ final class ud {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2_ref = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2_ref);
-            stackOut_19_1 = new StringBuilder().append("ud.C(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2_ref);
+
+            stackIn_21_1 = new StringBuilder().append("ud.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L5;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L5;
             }
           }
@@ -171,6 +150,8 @@ final class ud {
     }
 
     final static void b(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -187,8 +168,6 @@ final class ud {
         qi var14 = null;
         qi var15 = null;
         int[] var16 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = Geoblox.field_C;
         try {
           L0: {

@@ -28,23 +28,12 @@ final class dj {
         int var4 = 0;
         int var5 = 0;
         String stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var5 = TetraLink.field_J;
         try {
           L0: {
@@ -61,8 +50,7 @@ final class dj {
             var4 = 0;
             L2: while (true) {
               if (var2_int <= var4) {
-                stackOut_6_0 = new String(var3);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = new String(var3);
                 break L0;
               } else {
                 var3[-var4 + (var2_int + -1)] = param1.charAt(var4);
@@ -75,27 +63,19 @@ final class dj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2);
-            stackOut_8_1 = new StringBuilder().append("dj.A(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2);
+
+            stackIn_10_1 = new StringBuilder().append("dj.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -105,9 +85,9 @@ final class dj {
     }
 
     final mc a(long param0, byte param1) {
-        mc var4 = null;
-        mc var5 = null;
-        int var6 = 0;
+        mc var4;
+        mc var5;
+        int var6;
         var6 = TetraLink.field_J;
         var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_f))];
         this.field_a = var4.field_j;
@@ -164,8 +144,8 @@ final class dj {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;
-        mc var2 = null;
-        int var3 = 0;
+        mc var2;
+        int var3;
         var3 = TetraLink.field_J;
         if (param0 == -1) {
           L0: {
@@ -241,18 +221,18 @@ final class dj {
     }
 
     dj(int param0) {
-        mc dupTemp$2 = null;
-        int var2 = 0;
-        mc var3 = null;
+        mc dupTemp$1 = null;
+        int var2;
+        mc var3;
         this.field_i = 0;
         this.field_e = new mc[param0];
         this.field_f = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new mc();
-            var3 = dupTemp$2;
-            this.field_e[var2] = dupTemp$2;
+            dupTemp$1 = new mc();
+            var3 = dupTemp$1;
+            this.field_e[var2] = dupTemp$1;
             var3.field_j = var3;
             var3.field_e = var3;
             var2++;

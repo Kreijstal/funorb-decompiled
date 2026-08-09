@@ -18,8 +18,6 @@ final class ri extends jb implements ha, we {
         Object stackIn_9_0 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_8_0 = null;
-        String stackOut_5_0 = null;
         if (param0 > 40) {
           try {
             L0: {
@@ -38,16 +36,14 @@ final class ri extends jb implements ha, we {
                       decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
-                      stackOut_8_0 = null;
-                      stackIn_9_0 = stackOut_8_0;
+                      stackIn_9_0 = null;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
                   }
                 }
               }
-              stackOut_5_0 = oc.a(od.field_X, new String[]{"1890", Integer.toString(-3 + var5)}, (byte) -59);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = oc.a(od.field_X, new String[]{"1890", Integer.toString(-3 + var5)}, (byte) -59);
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -107,9 +103,6 @@ final class ri extends jb implements ha, we {
         mk stackIn_11_0 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        mk stackOut_4_0 = null;
-        mk stackOut_10_0 = null;
-        mk stackOut_7_0 = null;
         try {
           L0: {
             L1: {
@@ -126,8 +119,7 @@ final class ri extends jb implements ha, we {
               }
             }
             if (-1891 < (var4 ^ -1)) {
-              stackOut_4_0 = qk.field_b;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = qk.field_b;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -136,14 +128,12 @@ final class ri extends jb implements ha, we {
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  stackOut_10_0 = qk.field_b;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = qk.field_b;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 }
               } else {
-                stackOut_7_0 = qk.field_b;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = qk.field_b;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -170,9 +160,8 @@ final class ri extends jb implements ha, we {
     }
 
     public static void h(int param0) {
-        um discarded$0 = null;
         if (param0 != 1) {
-            discarded$0 = ri.a(94, (byte) 26);
+            ri.a(94, (byte) 26);
             field_k = null;
             field_h = null;
             return;
@@ -206,22 +195,12 @@ final class ri extends jb implements ha, we {
 
     public final void b(qn param0, int param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -238,27 +217,19 @@ final class ri extends jb implements ha, we {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("ri.L(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("ri.L(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

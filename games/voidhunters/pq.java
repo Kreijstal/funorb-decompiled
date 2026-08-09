@@ -7,7 +7,7 @@ final class pq {
     private static boolean field_c;
 
     final synchronized static void a(int param0, e param1) {
-        naa var2 = null;
+        naa var2;
         if (field_c) {
           return;
         } else {
@@ -56,7 +56,7 @@ final class pq {
     }
 
     final synchronized static void a(byte param0) {
-        naa var1 = null;
+        naa var1;
         L0: {
           if (param0 == -128) {
             break L0;

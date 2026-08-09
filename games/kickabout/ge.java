@@ -10,7 +10,7 @@ final class ge extends jd {
     static hd field_n;
 
     final static void a(int param0, int param1, byte param2, int param3) {
-        hn var4 = null;
+        hn var4;
         if (param2 >= 93) {
           var4 = new hn(2, new int[]{param1, param3, param0});
           ii.a(var4, 73);
@@ -58,15 +58,12 @@ final class ge extends jd {
     }
 
     final String a(byte param0, String param1) {
-        String discarded$2 = null;
         l var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         String stackIn_6_0 = null;
         String stackIn_8_0 = null;
         String stackIn_14_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -74,17 +71,6 @@ final class ge extends jd {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_5_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_13_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         try {
           L0: {
             L1: {
@@ -100,15 +86,13 @@ final class ge extends jd {
                       if (param1.equals(this.field_l.field_q)) {
                         break L2;
                       } else {
-                        stackOut_5_0 = rl.field_p;
-                        stackIn_6_0 = stackOut_5_0;
+                        stackIn_6_0 = rl.field_p;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
                     }
                   }
-                  stackOut_7_0 = var3.b(-67);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = var3.b(-67);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -121,13 +105,12 @@ final class ge extends jd {
                 break L3;
               } else {
                 var4 = (String) null;
-                discarded$2 = this.a((byte) -109, (String) null);
+                this.a((byte) -109, (String) null);
                 break L3;
               }
             }
             if (!param1.equals(this.field_l.field_q)) {
-              stackOut_13_0 = rl.field_p;
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_0 = rl.field_p;
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
@@ -138,27 +121,19 @@ final class ge extends jd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var3_ref);
-            stackOut_15_1 = new StringBuilder().append("ge.A(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var3_ref);
+
+            stackIn_17_1 = new StringBuilder().append("ge.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L4;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L4;
             }
           }
@@ -197,8 +172,6 @@ final class ge extends jd {
         RuntimeException var3_ref = null;
         rv stackIn_8_0 = null;
         rv stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -206,17 +179,6 @@ final class ge extends jd {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        rv stackOut_7_0 = null;
-        rv stackOut_11_0 = null;
-        rv stackOut_10_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             L1: {
@@ -234,8 +196,7 @@ final class ge extends jd {
                   break L2;
                 } else {
                   if (var3.c(-24407) != he.field_yb) {
-                    stackOut_7_0 = jt.field_Bb;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = jt.field_Bb;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   } else {
@@ -248,12 +209,10 @@ final class ge extends jd {
             }
             L3: {
               if (param0.equals(this.field_l.field_q)) {
-                stackOut_11_0 = he.field_yb;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = he.field_yb;
                 break L3;
               } else {
-                stackOut_10_0 = jt.field_Bb;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = jt.field_Bb;
                 break L3;
               }
             }
@@ -264,27 +223,19 @@ final class ge extends jd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3_ref);
-            stackOut_13_1 = new StringBuilder().append("ge.E(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3_ref);
+
+            stackIn_15_1 = new StringBuilder().append("ge.E(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }
@@ -298,28 +249,17 @@ final class ge extends jd {
     }
 
     final static byte[] a(int param0, ut param1) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        RuntimeException var2 = null;
-        byte[] var2_array = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        byte[] var9 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
         byte[] stackIn_3_0 = null;
         byte[] stackIn_33_0 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
@@ -327,29 +267,27 @@ final class ge extends jd {
         String stackIn_37_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_32_0 = null;
-        byte[] stackOut_2_0 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
+        byte[] var2 = null;
+        RuntimeException var2_ref = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        byte[] var9 = null;
         var8 = Kickabout.field_G;
         try {
           L0: {
             var9 = new byte[param1.field_v * (param1.field_o >> 956025187)];
-            var2_array = var9;
+            var2 = var9;
             if (param0 == 16) {
               var3 = 0;
               var4 = 0;
               var5 = 0;
               L1: while (true) {
                 if (param1.field_v <= var5) {
-                  stackOut_32_0 = (byte[]) (var9);
-                  stackIn_33_0 = stackOut_32_0;
+                  stackIn_33_0 = (byte[]) (var9);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -361,9 +299,9 @@ final class ge extends jd {
                     } else {
                       L3: {
                         var7 = 0;
-                        incrementValue$9 = var4;
+                        incrementValue$0 = var4;
                         var4++;
-                        if (param1.field_y[incrementValue$9] != 0) {
+                        if (param1.field_y[incrementValue$0] != 0) {
                           var7 = (byte)(var7 | 1);
                           break L3;
                         } else {
@@ -371,9 +309,9 @@ final class ge extends jd {
                         }
                       }
                       L4: {
-                        incrementValue$10 = var4;
+                        incrementValue$1 = var4;
                         var4++;
-                        if (0 == param1.field_y[incrementValue$10]) {
+                        if (0 == param1.field_y[incrementValue$1]) {
                           break L4;
                         } else {
                           var7 = (byte)(var7 | 2);
@@ -381,9 +319,9 @@ final class ge extends jd {
                         }
                       }
                       L5: {
-                        incrementValue$11 = var4;
+                        incrementValue$2 = var4;
                         var4++;
-                        if (param1.field_y[incrementValue$11] != 0) {
+                        if (param1.field_y[incrementValue$2] != 0) {
                           var7 = (byte)(var7 | 4);
                           break L5;
                         } else {
@@ -391,9 +329,9 @@ final class ge extends jd {
                         }
                       }
                       L6: {
-                        incrementValue$12 = var4;
+                        incrementValue$3 = var4;
                         var4++;
-                        if (param1.field_y[incrementValue$12] != 0) {
+                        if (param1.field_y[incrementValue$3] != 0) {
                           var7 = (byte)(var7 | 8);
                           break L6;
                         } else {
@@ -401,9 +339,9 @@ final class ge extends jd {
                         }
                       }
                       L7: {
-                        incrementValue$13 = var4;
+                        incrementValue$4 = var4;
                         var4++;
-                        if (param1.field_y[incrementValue$13] != 0) {
+                        if (param1.field_y[incrementValue$4] != 0) {
                           var7 = (byte)(var7 | 16);
                           break L7;
                         } else {
@@ -411,9 +349,9 @@ final class ge extends jd {
                         }
                       }
                       L8: {
-                        incrementValue$14 = var4;
+                        incrementValue$5 = var4;
                         var4++;
-                        if (param1.field_y[incrementValue$14] != 0) {
+                        if (param1.field_y[incrementValue$5] != 0) {
                           var7 = (byte)(var7 | 32);
                           break L8;
                         } else {
@@ -421,9 +359,9 @@ final class ge extends jd {
                         }
                       }
                       L9: {
-                        incrementValue$15 = var4;
+                        incrementValue$6 = var4;
                         var4++;
-                        if (param1.field_y[incrementValue$15] == 0) {
+                        if (param1.field_y[incrementValue$6] == 0) {
                           break L9;
                         } else {
                           var7 = (byte)(var7 | 64);
@@ -431,18 +369,18 @@ final class ge extends jd {
                         }
                       }
                       L10: {
-                        incrementValue$16 = var4;
+                        incrementValue$7 = var4;
                         var4++;
-                        if (param1.field_y[incrementValue$16] != 0) {
+                        if (param1.field_y[incrementValue$7] != 0) {
                           var7 = (byte)(var7 | 128);
                           break L10;
                         } else {
                           break L10;
                         }
                       }
-                      incrementValue$17 = var3;
+                      incrementValue$8 = var3;
                       var3++;
-                      var9[incrementValue$17] = (byte)var7;
+                      var9[incrementValue$8] = (byte)var7;
                       var6 += 8;
                       continue L2;
                     }
@@ -450,8 +388,7 @@ final class ge extends jd {
                 }
               }
             } else {
-              stackOut_2_0 = (byte[]) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (byte[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -459,28 +396,20 @@ final class ge extends jd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
-            var2 = decompiledCaughtException;
-            stackOut_34_0 = (RuntimeException) (var2);
-            stackOut_34_1 = new StringBuilder().append("ge.G(").append(param0).append(',');
-            stackIn_36_0 = stackOut_34_0;
-            stackIn_36_1 = stackOut_34_1;
-            stackIn_35_0 = stackOut_34_0;
-            stackIn_35_1 = stackOut_34_1;
+            var2_ref = decompiledCaughtException;
+            stackIn_36_0 = (RuntimeException) (var2_ref);
+
+            stackIn_36_1 = new StringBuilder().append("ge.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
+              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "null";
               break L11;
             } else {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "{...}";
-              stackIn_37_0 = stackOut_35_0;
-              stackIn_37_1 = stackOut_35_1;
-              stackIn_37_2 = stackOut_35_2;
+              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "{...}";
               break L11;
             }
           }

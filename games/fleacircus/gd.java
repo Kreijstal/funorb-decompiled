@@ -17,9 +17,8 @@ final class gd {
     }
 
     final static boolean a(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != 70) {
-            discarded$0 = gd.a((byte) 83);
+            gd.a((byte) 83);
             return gf.field_e.a((byte) -128);
         }
         return gf.field_e.a((byte) -128);

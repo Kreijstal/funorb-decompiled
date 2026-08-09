@@ -8,9 +8,8 @@ final class sc {
     static int field_b;
 
     final static boolean a(byte param0) {
-        boolean discarded$0 = false;
         if (param0 > -127) {
-            discarded$0 = sc.a((byte) 91);
+            sc.a((byte) 91);
             return ep.field_l.a((byte) 0);
         }
         return ep.field_l.a((byte) 0);

@@ -26,12 +26,11 @@ final class ha {
 
     final static void b(int param0) {
         Object var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
-        Throwable var3 = null;
         int var4 = 0;
-        int var5 = 0;
         Throwable decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
+        int var5 = 0;
         var4 = ZombieDawn.field_J;
         try {
           L0: {

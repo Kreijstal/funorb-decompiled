@@ -21,10 +21,9 @@ final class no extends me {
     }
 
     final void a(byte param0) {
-        fla discarded$1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         if (this.field_t == 0) {
           if (null != rba.field_a) {
@@ -44,80 +43,17 @@ final class no extends me {
                     return;
                   }
                 } else {
-                  L0: {
-                    if (this.field_t < 100) {
-                      this.field_l = -10 + (koa.b(0) - var3 / 2);
-                      if (var4 == 0) {
-                        break L0;
-                      } else {
-                        this.field_l = koa.b(0) + -10 + -(this.field_t * (var3 / 2) / 20);
-                        if (this.field_l > koa.b(0) + 10) {
-                          this.field_h = true;
-                          this.p(94);
-                          return;
-                        } else {
-                          return;
-                        }
-                      }
+                  if (this.field_t < 100) {
+                    this.field_l = -10 + (koa.b(0) - var3 / 2);
+                    if (this.field_l > koa.b(0) + 10) {
+                      this.field_h = true;
+                      this.p(94);
+                      return;
                     } else {
-                      this.field_l = this.field_l + 10;
-                      if (var4 == 0) {
-                        break L0;
-                      } else {
-                        this.field_l = -10 + (koa.b(0) - var3 / 2);
-                        this.field_l = koa.b(0) + -10 + -(this.field_t * (var3 / 2) / 20);
-                        if (this.field_l > koa.b(0) + 10) {
-                          this.field_h = true;
-                          this.p(94);
-                          return;
-                        } else {
-                          return;
-                        }
-                      }
+                      return;
                     }
-                  }
-                  if (this.field_l <= koa.b(0) + 10) {
-                    return;
                   } else {
-                    this.field_h = true;
-                    this.p(94);
-                    return;
-                  }
-                }
-              } else {
-                return;
-              }
-            } else {
-              discarded$1 = rba.field_a.field_g[rba.field_a.l(92)].a(new fm(93, 0, 0, 0), -58);
-              this.field_t = this.field_t + 1;
-              if (param0 < -107) {
-                L1: {
-                  var2 = aq.field_a[0].c();
-                  var3 = 60;
-                  var3 = var2 * (var3 / var2);
-                  if ((this.field_t ^ -1) > -21) {
-                    break L1;
-                  } else {
-                    L2: {
-                      L3: {
-                        if (this.field_t < 100) {
-                          break L3;
-                        } else {
-                          this.field_l = this.field_l + 10;
-                          if (var4 == 0) {
-                            break L2;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                      this.field_l = -10 + (koa.b(0) - var3 / 2);
-                      if (var4 == 0) {
-                        break L2;
-                      } else {
-                        break L1;
-                      }
-                    }
+                    this.field_l = this.field_l + 10;
                     if (this.field_l > koa.b(0) + 10) {
                       this.field_h = true;
                       this.p(94);
@@ -127,17 +63,52 @@ final class no extends me {
                     }
                   }
                 }
-                L4: {
-                  this.field_l = koa.b(0) + -10 + -(this.field_t * (var3 / 2) / 20);
-                  if (this.field_l <= koa.b(0) + 10) {
-                    break L4;
-                  } else {
-                    this.field_h = true;
-                    this.p(94);
-                    break L4;
-                  }
-                }
+              } else {
                 return;
+              }
+            } else {
+              rba.field_a.field_g[rba.field_a.l(92)].a(new fm(93, 0, 0, 0), -58);
+              this.field_t = this.field_t + 1;
+              if (param0 < -107) {
+                var2 = aq.field_a[0].c();
+                var3 = 60;
+                var3 = var2 * (var3 / var2);
+                if ((this.field_t ^ -1) <= -21) {
+                  if (this.field_t < 100) {
+                    L0: {
+                      this.field_l = -10 + (koa.b(0) - var3 / 2);
+                      if (this.field_l <= koa.b(0) + 10) {
+                        break L0;
+                      } else {
+                        this.field_h = true;
+                        this.p(94);
+                        break L0;
+                      }
+                    }
+                    return;
+                  } else {
+                    this.field_l = this.field_l + 10;
+                    if (this.field_l > koa.b(0) + 10) {
+                      this.field_h = true;
+                      this.p(94);
+                      return;
+                    } else {
+                      return;
+                    }
+                  }
+                } else {
+                  L1: {
+                    this.field_l = koa.b(0) + -10 + -(this.field_t * (var3 / 2) / 20);
+                    if (this.field_l <= koa.b(0) + 10) {
+                      break L1;
+                    } else {
+                      this.field_h = true;
+                      this.p(94);
+                      break L1;
+                    }
+                  }
+                  return;
+                }
               } else {
                 return;
               }
@@ -149,60 +120,40 @@ final class no extends me {
               var3 = 60;
               var3 = var2 * (var3 / var2);
               if ((this.field_t ^ -1) <= -21) {
-                L5: {
-                  if (this.field_t < 100) {
-                    this.field_l = -10 + (koa.b(0) - var3 / 2);
-                    if (var4 == 0) {
-                      break L5;
-                    } else {
-                      L6: {
-                        this.field_l = koa.b(0) + -10 + -(this.field_t * (var3 / 2) / 20);
-                        if (this.field_l <= koa.b(0) + 10) {
-                          break L6;
-                        } else {
-                          this.field_h = true;
-                          this.p(94);
-                          break L6;
-                        }
-                      }
-                      return;
-                    }
-                  } else {
+                if (this.field_t >= 100) {
+                  L2: {
                     this.field_l = this.field_l + 10;
-                    if (var4 == 0) {
-                      break L5;
+                    if (this.field_l <= koa.b(0) + 10) {
+                      break L2;
                     } else {
-                      this.field_l = -10 + (koa.b(0) - var3 / 2);
-                      this.field_l = koa.b(0) + -10 + -(this.field_t * (var3 / 2) / 20);
-                      L7: {
-                        if (this.field_l <= koa.b(0) + 10) {
-                          break L7;
-                        } else {
-                          this.field_h = true;
-                          this.p(94);
-                          break L7;
-                        }
-                      }
-                      return;
+                      this.field_h = true;
+                      this.p(94);
+                      break L2;
                     }
                   }
-                }
-                if (this.field_l > koa.b(0) + 10) {
-                  this.field_h = true;
-                  this.p(94);
                   return;
                 } else {
+                  L3: {
+                    this.field_l = -10 + (koa.b(0) - var3 / 2);
+                    if (this.field_l <= koa.b(0) + 10) {
+                      break L3;
+                    } else {
+                      this.field_h = true;
+                      this.p(94);
+                      break L3;
+                    }
+                  }
                   return;
                 }
               } else {
-                L8: {
+                L4: {
                   this.field_l = koa.b(0) + -10 + -(this.field_t * (var3 / 2) / 20);
                   if (this.field_l <= koa.b(0) + 10) {
-                    break L8;
+                    break L4;
                   } else {
                     this.field_h = true;
                     this.p(94);
-                    break L8;
+                    break L4;
                   }
                 }
                 return;
@@ -218,60 +169,40 @@ final class no extends me {
             var3 = 60;
             var3 = var2 * (var3 / var2);
             if ((this.field_t ^ -1) <= -21) {
-              L9: {
-                if (this.field_t < 100) {
-                  this.field_l = -10 + (koa.b(0) - var3 / 2);
-                  if (var4 == 0) {
-                    break L9;
-                  } else {
-                    L10: {
-                      this.field_l = koa.b(0) + -10 + -(this.field_t * (var3 / 2) / 20);
-                      if (this.field_l <= koa.b(0) + 10) {
-                        break L10;
-                      } else {
-                        this.field_h = true;
-                        this.p(94);
-                        break L10;
-                      }
-                    }
-                    return;
-                  }
-                } else {
+              if (this.field_t >= 100) {
+                L5: {
                   this.field_l = this.field_l + 10;
-                  if (var4 == 0) {
-                    break L9;
+                  if (this.field_l <= koa.b(0) + 10) {
+                    break L5;
                   } else {
-                    this.field_l = -10 + (koa.b(0) - var3 / 2);
-                    this.field_l = koa.b(0) + -10 + -(this.field_t * (var3 / 2) / 20);
-                    L11: {
-                      if (this.field_l <= koa.b(0) + 10) {
-                        break L11;
-                      } else {
-                        this.field_h = true;
-                        this.p(94);
-                        break L11;
-                      }
-                    }
-                    return;
+                    this.field_h = true;
+                    this.p(94);
+                    break L5;
                   }
                 }
-              }
-              if (this.field_l > koa.b(0) + 10) {
-                this.field_h = true;
-                this.p(94);
                 return;
               } else {
+                L6: {
+                  this.field_l = -10 + (koa.b(0) - var3 / 2);
+                  if (this.field_l <= koa.b(0) + 10) {
+                    break L6;
+                  } else {
+                    this.field_h = true;
+                    this.p(94);
+                    break L6;
+                  }
+                }
                 return;
               }
             } else {
-              L12: {
+              L7: {
                 this.field_l = koa.b(0) + -10 + -(this.field_t * (var3 / 2) / 20);
                 if (this.field_l <= koa.b(0) + 10) {
-                  break L12;
+                  break L7;
                 } else {
                   this.field_h = true;
                   this.p(94);
-                  break L12;
+                  break L7;
                 }
               }
               return;
@@ -290,25 +221,22 @@ final class no extends me {
     }
 
     final void b(byte param0) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        String var14 = null;
-        int var15 = 0;
-        int var16 = 0;
-        String var17 = null;
-        String var18 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var15;
+        int var16;
+        String var17;
+        String var18;
         var16 = TombRacer.field_G ? 1 : 0;
         var2 = 300;
         var3 = 60;
@@ -319,32 +247,7 @@ final class no extends me {
         var6 = this.field_j;
         var7 = -(var3 / 2) + this.field_l;
         var8 = 10;
-        if (param0 <= -13) {
-          var9 = 10;
-          var10 = 10;
-          var11 = -var9 + -var8 + var2;
-          var12 = var3 + -(var10 * 2);
-          var13 = -var8 + (-var9 + -24 + var11);
-          var18 = lq.field_p[this.field_n].toUpperCase();
-          var15 = ds.field_n.a(var18, (byte) -117);
-          L0: while (true) {
-            if (var15 > var13) {
-              var13 = var13 + var4;
-              var11 = var11 + var4;
-              var2 = var2 + var4;
-              if (var16 == 0) {
-                continue L0;
-              } else {
-                return;
-              }
-            } else {
-              qa.a(var3, var2, (byte) 70, var6, aq.field_a, var7);
-              discarded$2 = be.a(var18, 1, eda.field_f, 16777215, 30, var12, 1, var10 + var7, var6 - -30 - -(2 * var8), -1, (byte) 60, var13);
-              lva.field_m[this.field_n].a(var8 + var6, var7 - -((-32 + var3) / 2), 32, 32);
-              return;
-            }
-          }
-        } else {
+        if (param0 > -13) {
           field_o = (String[][]) null;
           var9 = 10;
           var10 = 10;
@@ -352,23 +255,39 @@ final class no extends me {
           var12 = var3 + -(var10 * 2);
           var13 = -var8 + (-var9 + -24 + var11);
           var17 = lq.field_p[this.field_n].toUpperCase();
-          var14 = var17;
           var15 = ds.field_n.a(var17, (byte) -117);
-          L1: while (true) {
-            if (var15 > var13) {
+          L0: while (true) {
+            if (var15 <= var13) {
+              qa.a(var3, var2, (byte) 70, var6, aq.field_a, var7);
+              be.a(var17, 1, eda.field_f, 16777215, 30, var12, 1, var10 + var7, var6 - -30 - -(2 * var8), -1, (byte) 60, var13);
+              lva.field_m[this.field_n].a(var8 + var6, var7 - -((-32 + var3) / 2), 32, 32);
+              return;
+            } else {
               var13 = var13 + var4;
               var11 = var11 + var4;
               var2 = var2 + var4;
-              if (var16 != 0) {
-                return;
-              } else {
-                continue L1;
-              }
-            } else {
+              continue L0;
+            }
+          }
+        } else {
+          var9 = 10;
+          var10 = 10;
+          var11 = -var9 + -var8 + var2;
+          var12 = var3 + -(var10 * 2);
+          var13 = -var8 + (-var9 + -24 + var11);
+          var18 = lq.field_p[this.field_n].toUpperCase();
+          var15 = ds.field_n.a(var18, (byte) -117);
+          L1: while (true) {
+            if (var15 <= var13) {
               qa.a(var3, var2, (byte) 70, var6, aq.field_a, var7);
-              discarded$3 = be.a(var17, 1, eda.field_f, 16777215, 30, var12, 1, var10 + var7, var6 - -30 - -(2 * var8), -1, (byte) 60, var13);
+              be.a(var18, 1, eda.field_f, 16777215, 30, var12, 1, var10 + var7, var6 - -30 - -(2 * var8), -1, (byte) 60, var13);
               lva.field_m[this.field_n].a(var8 + var6, var7 - -((-32 + var3) / 2), 32, 32);
               return;
+            } else {
+              var13 = var13 + var4;
+              var11 = var11 + var4;
+              var2 = var2 + var4;
+              continue L1;
             }
           }
         }
@@ -378,83 +297,30 @@ final class no extends me {
         if (!lf.a(param0, param1, 128)) {
             return false;
         }
-        if (!(bqa.a(540800, param1, param0) | (-1 == (param1 & param2 ^ -1) ? true : false) | go.d(param0, param1, 26205))) {
+        if (!(!(bqa.a(540800, param1, param0) | (-1 != (param1 & param2 ^ -1) ? true : false) | go.d(param0, param1, 26205)))) {
             return true;
         }
         return (((8192 & param1) != 0 ? true : false) | kaa.a(param0, param1, false) | rg.e(param0, param2 ^ -36949, param1)) & (0 == (55 & param0) ? true : false);
     }
 
     final static void a(String param0, long param1, byte param2) {
-        RuntimeException runtimeException = null;
         CharSequence var5 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
-            L1: {
-              wp.field_a = param0;
-              bta.field_q = 2;
-              var5 = (CharSequence) ((Object) param0);
-              mn.field_n = jd.a(1, var5);
-              ica.field_b = param1;
-              ni.field_c = true;
-              if (param2 > 108) {
-                break L1;
-              } else {
+            wp.field_a = param0;
+            bta.field_q = 2;
+            var5 = (CharSequence) ((Object) param0);
+            mn.field_n = jd.a(1, var5);
+            ica.field_b = param1;
+            ni.field_c = true;
+            if (param2 <= 108) {
                 no.b(true);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("no.F(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "no.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void b(boolean param0) {
-        String discarded$0 = null;
         field_o = (String[][]) null;
         field_r = (int[][]) null;
         field_u = (int[][]) null;
@@ -464,7 +330,7 @@ final class no extends me {
         field_k = (int[][]) null;
         field_q = (int[][]) null;
         if (!param0) {
-            discarded$0 = no.a((byte) 52, '￐');
+            no.a((byte) 52, '￐');
         }
     }
 

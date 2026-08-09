@@ -4,7 +4,6 @@
 final class mn {
     final static ha a(byte param0, int param1, java.awt.Canvas param2, gk param3, d param4) {
         try {
-            ha discarded$2 = null;
             Class var5 = null;
             RuntimeException var5_ref = null;
             Throwable var5_ref2 = null;
@@ -12,7 +11,6 @@ final class mn {
             d var7 = null;
             ha stackIn_8_0 = null;
             Throwable decompiledCaughtException = null;
-            ha stackOut_7_0 = null;
             try {
               L0: {
                 if (tq.c(true)) {
@@ -25,13 +23,12 @@ final class mn {
                         break L1;
                       } else {
                         var7 = (d) null;
-                        discarded$2 = mn.a((byte) 32, -121, (java.awt.Canvas) null, (gk) null, (d) null);
+                        mn.a((byte) 32, -121, (java.awt.Canvas) null, (gk) null, (d) null);
                         break L1;
                       }
                     }
                     var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("d"), Class.forName("gk"), Class.forName("java.lang.Integer")});
-                    stackOut_7_0 = (ha) (var6.invoke((Object) null, new Object[]{param2, param4, param3, new Integer(param1)}));
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = (ha) (var6.invoke((Object) null, new Object[]{param2, param4, param3, new Integer(param1)}));
                     break L0;
                   }
                 } else {

@@ -8,23 +8,12 @@ final class aq extends rqa {
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
         nc stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -36,35 +25,26 @@ final class aq extends rqa {
               }
             }
             si.a(68, 62, param0[0].a(91));
-            stackOut_2_0 = new nc("void");
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new nc("void");
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("aq.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("aq.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -85,37 +65,25 @@ final class aq extends rqa {
     }
 
     final static pgb b(int param0, int param1, int param2, int param3) {
-        Object var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        pgb var8_ref_pgb = null;
-        int var9 = 0;
-        pgb var9_ref_pgb = null;
-        int var10_int = 0;
-        String var10 = null;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int stackIn_39_0 = 0;
-        int stackIn_47_0 = 0;
-        int stackIn_54_0 = 0;
-        int stackIn_66_0 = 0;
-        int stackIn_74_0 = 0;
-        int stackIn_81_0 = 0;
-        int stackOut_80_0 = 0;
-        int stackOut_79_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_37_0 = 0;
+        Object var4;
+        int var5;
+        int var6;
+        int var7;
+        pgb var8_ref_pgb;
+        int var9;
+        int var10_int;
+        int var13;
+        int stackIn_40_0 = 0;
+        int stackIn_48_0 = 0;
+        int stackIn_55_0 = 0;
+        int stackIn_67_0 = 0;
+        int stackIn_75_0 = 0;
+        int stackIn_82_0 = 0;
+        int var8;
+        pgb var9_ref_pgb;
+        String var10;
+        String var11;
+        int var12;
         var13 = VoidHunters.field_G;
         var4 = null;
         if (param3 <= -70) {
@@ -160,16 +128,14 @@ final class aq extends rqa {
                         L4: {
                           vea.field_p.a(2 * param0 * param2, true, param0, 0);
                           if (var9 != vea.field_p.field_wb.field_K - -vea.field_p.field_wb.field_db) {
-                            stackOut_80_0 = 0;
-                            stackIn_81_0 = stackOut_80_0;
+                            stackIn_82_0 = 0;
                             break L4;
                           } else {
-                            stackOut_79_0 = 1;
-                            stackIn_81_0 = stackOut_79_0;
+                            stackIn_82_0 = 1;
                             break L4;
                           }
                         }
-                        lf.field_o = stackIn_81_0 != 0;
+                        lf.field_o = stackIn_82_0 != 0;
                         return (pgb) (var4);
                       } else {
                         L5: {
@@ -184,16 +150,14 @@ final class aq extends rqa {
                         L6: {
                           vea.field_p.a(2 * param0 * param2, true, param0, 0);
                           if (var9 != vea.field_p.field_wb.field_K - -vea.field_p.field_wb.field_db) {
-                            stackOut_73_0 = 0;
-                            stackIn_74_0 = stackOut_73_0;
+                            stackIn_75_0 = 0;
                             break L6;
                           } else {
-                            stackOut_72_0 = 1;
-                            stackIn_74_0 = stackOut_72_0;
+                            stackIn_75_0 = 1;
                             break L6;
                           }
                         }
-                        lf.field_o = stackIn_74_0 != 0;
+                        lf.field_o = stackIn_75_0 != 0;
                         return (pgb) (var4);
                       }
                     } else {
@@ -209,16 +173,14 @@ final class aq extends rqa {
                       L8: {
                         vea.field_p.a(2 * param0 * param2, true, param0, 0);
                         if (var9 != vea.field_p.field_wb.field_K - -vea.field_p.field_wb.field_db) {
-                          stackOut_65_0 = 0;
-                          stackIn_66_0 = stackOut_65_0;
+                          stackIn_67_0 = 0;
                           break L8;
                         } else {
-                          stackOut_64_0 = 1;
-                          stackIn_66_0 = stackOut_64_0;
+                          stackIn_67_0 = 1;
                           break L8;
                         }
                       }
-                      lf.field_o = stackIn_66_0 != 0;
+                      lf.field_o = stackIn_67_0 != 0;
                       return (pgb) (var4);
                     }
                   } else {
@@ -236,9 +198,8 @@ final class aq extends rqa {
                     }
                     vea.field_p.field_wb.field_E = -vea.field_p.field_wb.field_G + var7;
                     if (fva.field_p) {
-                      if (null != qw.field_l) {
+                      if (null == qw.field_l) {
                         L10: {
-                          lf.field_o = true;
                           var9 = -vea.field_p.field_wb.field_E + -vea.field_p.field_wb.field_G + vea.field_p.field_xb.field_G;
                           if (lf.field_o) {
                             vea.field_p.field_wb.field_db = -vea.field_p.field_wb.field_K + var9;
@@ -250,19 +211,18 @@ final class aq extends rqa {
                         L11: {
                           vea.field_p.a(2 * param0 * param2, true, param0, 0);
                           if (var9 != vea.field_p.field_wb.field_K - -vea.field_p.field_wb.field_db) {
-                            stackOut_53_0 = 0;
-                            stackIn_54_0 = stackOut_53_0;
+                            stackIn_55_0 = 0;
                             break L11;
                           } else {
-                            stackOut_52_0 = 1;
-                            stackIn_54_0 = stackOut_52_0;
+                            stackIn_55_0 = 1;
                             break L11;
                           }
                         }
-                        lf.field_o = stackIn_54_0 != 0;
+                        lf.field_o = stackIn_55_0 != 0;
                         return (pgb) (var4);
                       } else {
                         L12: {
+                          lf.field_o = true;
                           var9 = -vea.field_p.field_wb.field_E + -vea.field_p.field_wb.field_G + vea.field_p.field_xb.field_G;
                           if (lf.field_o) {
                             vea.field_p.field_wb.field_db = -vea.field_p.field_wb.field_K + var9;
@@ -274,16 +234,14 @@ final class aq extends rqa {
                         L13: {
                           vea.field_p.a(2 * param0 * param2, true, param0, 0);
                           if (var9 != vea.field_p.field_wb.field_K - -vea.field_p.field_wb.field_db) {
-                            stackOut_46_0 = 0;
-                            stackIn_47_0 = stackOut_46_0;
+                            stackIn_48_0 = 0;
                             break L13;
                           } else {
-                            stackOut_45_0 = 1;
-                            stackIn_47_0 = stackOut_45_0;
+                            stackIn_48_0 = 1;
                             break L13;
                           }
                         }
-                        lf.field_o = stackIn_47_0 != 0;
+                        lf.field_o = stackIn_48_0 != 0;
                         return (pgb) (var4);
                       }
                     } else {
@@ -299,16 +257,14 @@ final class aq extends rqa {
                       L15: {
                         vea.field_p.a(2 * param0 * param2, true, param0, 0);
                         if (var9 != vea.field_p.field_wb.field_K - -vea.field_p.field_wb.field_db) {
-                          stackOut_38_0 = 0;
-                          stackIn_39_0 = stackOut_38_0;
+                          stackIn_40_0 = 0;
                           break L15;
                         } else {
-                          stackOut_37_0 = 1;
-                          stackIn_39_0 = stackOut_37_0;
+                          stackIn_40_0 = 1;
                           break L15;
                         }
                       }
-                      lf.field_o = stackIn_39_0 != 0;
+                      lf.field_o = stackIn_40_0 != 0;
                       return (pgb) (var4);
                     }
                   }

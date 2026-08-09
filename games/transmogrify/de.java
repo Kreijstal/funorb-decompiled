@@ -37,43 +37,26 @@ final class de {
     }
 
     final static uj a(boolean param0, byte param1) {
-        uj var2 = null;
-        uj stackIn_2_0 = null;
+        uj var2;
         uj stackIn_3_0 = null;
         uj stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        uj stackIn_6_0 = null;
         uj stackIn_7_0 = null;
         uj stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        uj stackOut_5_0 = null;
-        uj stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        uj stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        uj stackOut_1_0 = null;
-        uj stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        uj stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
         var2 = new uj(true);
         if (param1 != -116) {
           L0: {
             field_b = (int[]) null;
-            stackOut_5_0 = (uj) (var2);
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_7_0 = (uj) (var2);
+
             if (!param0) {
-              stackOut_7_0 = (uj) ((Object) stackIn_7_0);
-              stackOut_7_1 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_0 = (uj) ((Object) stackIn_7_0);
+              stackIn_8_1 = 0;
               break L0;
             } else {
-              stackOut_6_0 = (uj) ((Object) stackIn_6_0);
-              stackOut_6_1 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_0 = (uj) ((Object) stackIn_7_0);
+              stackIn_8_1 = 1;
               break L0;
             }
           }
@@ -81,20 +64,15 @@ final class de {
           return var2;
         } else {
           L1: {
-            stackOut_1_0 = (uj) (var2);
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_3_0 = (uj) (var2);
+
             if (!param0) {
-              stackOut_3_0 = (uj) ((Object) stackIn_3_0);
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_0 = (uj) ((Object) stackIn_3_0);
+              stackIn_4_1 = 0;
               break L1;
             } else {
-              stackOut_2_0 = (uj) ((Object) stackIn_2_0);
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_0 = (uj) ((Object) stackIn_3_0);
+              stackIn_4_1 = 1;
               break L1;
             }
           }
@@ -104,8 +82,8 @@ final class de {
     }
 
     final static byte a(int param0, char param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Transmogrify.field_A ? 1 : 0;
         if (param0 >= 0) {
           if (param1 <= 0) {

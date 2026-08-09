@@ -6,12 +6,12 @@ final class rv {
     private vca field_a;
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var7 = VoidHunters.field_G;
         var2 = 0;
         var3 = nd.field_r;
@@ -575,32 +575,21 @@ final class rv {
     }
 
     final static tpa a(boolean param0, int param1) {
-        tpa var2 = null;
-        tpa stackIn_1_0 = null;
+        tpa var2;
         tpa stackIn_2_0 = null;
         tpa stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        tpa stackOut_0_0 = null;
-        tpa stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        tpa stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           var2 = new tpa(true);
-          stackOut_0_0 = (tpa) (var2);
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = (tpa) (var2);
+
           if (!param0) {
-            stackOut_2_0 = (tpa) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (tpa) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (tpa) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (tpa) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }

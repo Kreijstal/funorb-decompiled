@@ -15,10 +15,16 @@ final class c implements Iterator {
     static char[] field_a;
 
     final static void a(byte param0, ci param1, int param2) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        RuntimeException var3 = null;
-        int[] var3_array = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        RuntimeException stackIn_48_0 = null;
+        StringBuilder stackIn_48_1 = null;
+        RuntimeException stackIn_49_0 = null;
+        StringBuilder stackIn_49_1 = null;
+        String stackIn_49_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int[] var3 = null;
+        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -26,28 +32,12 @@ final class c implements Iterator {
         java.applet.Applet var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        String stackIn_47_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
         var7 = Terraphoenix.field_V;
         try {
           L0: {
             var10 = param1.field_z;
             var9 = var10;
-            var3_array = var9;
+            var3 = var9;
             var4 = 0;
             var5 = -1 + param1.field_t;
             L1: while (true) {
@@ -82,9 +72,9 @@ final class c implements Iterator {
                                 var4++;
                                 break L6;
                               } else {
-                                incrementValue$2 = var4;
+                                incrementValue$0 = var4;
                                 var4++;
-                                var3_array[incrementValue$2] = param2;
+                                var3[incrementValue$0] = param2;
                                 break L6;
                               }
                             }
@@ -107,7 +97,7 @@ final class c implements Iterator {
                               if (0 >= var6) {
                                 break L9;
                               } else {
-                                if (var3_array[-1 + var4] <= 1) {
+                                if (var3[-1 + var4] <= 1) {
                                   break L9;
                                 } else {
                                   var10[var4] = 1;
@@ -119,7 +109,7 @@ final class c implements Iterator {
                               if (-1 <= (var5 ^ -1)) {
                                 break L10;
                               } else {
-                                if ((var3_array[-param1.field_r + var4] ^ -1) >= -2) {
+                                if ((var3[-param1.field_r + var4] ^ -1) >= -2) {
                                   break L10;
                                 } else {
                                   var10[var4] = 1;
@@ -131,7 +121,7 @@ final class c implements Iterator {
                               if (param1.field_r - 1 <= var6) {
                                 break L11;
                               } else {
-                                if ((var3_array[var4 + 1] ^ -1) >= -2) {
+                                if ((var3[var4 + 1] ^ -1) >= -2) {
                                   break L11;
                                 } else {
                                   var10[var4] = 1;
@@ -140,7 +130,7 @@ final class c implements Iterator {
                               }
                             }
                             if (param1.field_t - 1 > var5) {
-                              if (var3_array[var4 + param1.field_r] > 1) {
+                              if (var3[var4 + param1.field_r] > 1) {
                                 var10[var4] = 1;
                                 break L8;
                               } else {
@@ -171,9 +161,9 @@ final class c implements Iterator {
                   } else {
                     L13: {
                       if (1 == var10[var4]) {
-                        incrementValue$3 = var4;
+                        incrementValue$1 = var4;
                         var4++;
-                        var3_array[incrementValue$3] = 2;
+                        var3[incrementValue$1] = 2;
                         break L13;
                       } else {
                         var4++;
@@ -190,50 +180,41 @@ final class c implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L14: {
-            var3 = decompiledCaughtException;
-            stackOut_44_0 = (RuntimeException) (var3);
-            stackOut_44_1 = new StringBuilder().append("c.C(").append(param0).append(',');
-            stackIn_46_0 = stackOut_44_0;
-            stackIn_46_1 = stackOut_44_1;
-            stackIn_45_0 = stackOut_44_0;
-            stackIn_45_1 = stackOut_44_1;
+            var3_ref = decompiledCaughtException;
+            stackIn_48_0 = (RuntimeException) (var3_ref);
+
+            stackIn_48_1 = new StringBuilder().append("c.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "null";
-              stackIn_47_0 = stackOut_46_0;
-              stackIn_47_1 = stackOut_46_1;
-              stackIn_47_2 = stackOut_46_2;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "null";
               break L14;
             } else {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "{...}";
-              stackIn_47_0 = stackOut_45_0;
-              stackIn_47_1 = stackOut_45_1;
-              stackIn_47_2 = stackOut_45_2;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "{...}";
               break L14;
             }
           }
-          throw qk.a((Throwable) ((Object) stackIn_47_0), stackIn_47_2 + ',' + param2 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_49_0), stackIn_49_2 + ',' + param2 + ')');
         }
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_c = null;
         field_b = null;
         field_a = null;
         field_i = null;
         if (param0 != 1) {
-            discarded$0 = c.b(125);
+            c.b(125);
         }
         field_d = null;
     }
 
     public final boolean hasNext() {
-        int fieldTemp$8 = 0;
-        int var2 = 0;
+        int fieldTemp$2 = 0;
+        int var2;
         var2 = Terraphoenix.field_V;
         if (this.field_e != this.field_h.field_a[-1 + this.field_f]) {
           return true;
@@ -242,9 +223,9 @@ final class c implements Iterator {
             if (this.field_h.field_c <= this.field_f) {
               return false;
             } else {
-              fieldTemp$8 = this.field_f;
+              fieldTemp$2 = this.field_f;
               this.field_f = this.field_f + 1;
-              if (this.field_h.field_a[fieldTemp$8].field_d != this.field_h.field_a[this.field_f - 1]) {
+              if (this.field_h.field_a[fieldTemp$2].field_d != this.field_h.field_a[this.field_f - 1]) {
                 this.field_e = this.field_h.field_a[-1 + this.field_f].field_d;
                 return true;
               } else {
@@ -290,10 +271,6 @@ final class c implements Iterator {
     final static void a(byte param0, java.applet.Applet param1) {
         try {
             java.net.URL var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
@@ -302,14 +279,8 @@ final class c implements Iterator {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             try {
               L0: {
                 try {
@@ -345,27 +316,19 @@ final class c implements Iterator {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var2_ref2);
-                stackOut_6_1 = new StringBuilder().append("c.D(").append(param0).append(',');
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_8_1 = new StringBuilder().append("c.D(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L3;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L3;
                 }
               }
@@ -404,8 +367,6 @@ final class c implements Iterator {
 
     final static boolean b(int param0) {
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           if (param0 < -60) {
             break L0;
@@ -433,14 +394,12 @@ final class c implements Iterator {
                     }
                   }
                 }
-                stackOut_8_0 = 0;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 0;
                 break L1;
               }
             }
           }
-          stackOut_7_0 = 1;
-          stackIn_9_0 = stackOut_7_0;
+          stackIn_9_0 = 1;
           break L1;
         }
         return stackIn_9_0 != 0;

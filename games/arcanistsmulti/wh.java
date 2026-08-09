@@ -29,10 +29,9 @@ final class wh {
     }
 
     public static void a(byte param0) {
-        qb discarded$0 = null;
         field_b = null;
         if (param0 > -83) {
-            discarded$0 = wh.a(-29);
+            wh.a(-29);
         }
         field_e = null;
         field_h = null;
@@ -46,9 +45,8 @@ final class wh {
     }
 
     final static void a(byte param0, boolean param1) {
-        qb discarded$0 = null;
         if (param0 != 117) {
-            discarded$0 = wh.a(89);
+            wh.a(89);
         }
         wn.field_z.a(param1, (byte) -127);
     }

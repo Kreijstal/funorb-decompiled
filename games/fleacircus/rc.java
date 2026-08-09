@@ -19,8 +19,8 @@ final class rc implements Iterator {
     }
 
     final static byte a(char param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = fleas.field_A ? 1 : 0;
         if (param1 == 22861) {
           if (0 >= param0) {
@@ -1704,23 +1704,23 @@ final class rc implements Iterator {
     }
 
     public final Object next() {
-        pa var1 = null;
+        Object var1;
         var1 = this.field_b;
         if (var1 != this.field_c.field_a) {
-          this.field_b = var1.field_p;
+          this.field_b = ((pa) (var1)).field_p;
           if (fleas.field_A) {
             var1 = null;
             this.field_b = null;
-            this.field_d = var1;
+            this.field_d = (pa) (var1);
             return var1;
           } else {
-            this.field_d = var1;
+            this.field_d = (pa) (var1);
             return var1;
           }
         } else {
           var1 = null;
           this.field_b = null;
-          this.field_d = var1;
+          this.field_d = (pa) (var1);
           return var1;
         }
     }

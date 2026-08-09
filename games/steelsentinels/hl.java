@@ -12,12 +12,11 @@ final class hl extends ck {
     boolean field_t;
 
     final static String d(int param0) {
-        String discarded$2 = null;
         if (cb.field_j != nj.field_ab) {
           if (gf.field_a.a((byte) -72)) {
             if (nj.field_ab != jn.field_b) {
               if (param0 < 80) {
-                discarded$2 = hl.d(-61);
+                hl.d(-61);
                 return cc.field_Xb;
               } else {
                 return cc.field_Xb;
@@ -50,13 +49,12 @@ final class hl extends ck {
     }
 
     final static gh a(byte param0) {
-        gh discarded$2 = null;
         if (-1 <= (fj.field_f ^ -1)) {
           if (bd.field_c <= 0) {
             if (param0 == -66) {
               return null;
             } else {
-              discarded$2 = hl.a((byte) 61);
+              hl.a((byte) 61);
               return null;
             }
           } else {

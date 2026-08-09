@@ -14,7 +14,7 @@ final class s {
     static km field_f;
 
     final static boolean b(byte param0) {
-        int var1 = 0;
+        int var1;
         var1 = -51 / ((param0 - -22) / 47);
         if (he.field_Xb != null) {
           if (!he.field_Xb.e((byte) 32)) {
@@ -64,18 +64,14 @@ final class s {
             cb stackIn_4_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            cb stackOut_3_0 = null;
-            cb stackOut_1_0 = null;
             try {
               L0: {
                 if (param0 == -110) {
-                  stackOut_3_0 = (cb) (Class.forName("hb").newInstance());
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = (cb) (Class.forName("hb").newInstance());
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_1_0 = (cb) null;
-                  stackIn_2_0 = stackOut_1_0;
+                  stackIn_2_0 = (cb) null;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }

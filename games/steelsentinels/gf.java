@@ -9,8 +9,8 @@ final class gf {
     static String field_e;
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = SteelSentinels.field_G;
           ha.field_T = null;
@@ -67,14 +67,14 @@ final class gf {
     }
 
     final static void a(int param0) {
-        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var3_int = 0;
         wk var3 = null;
         int var4 = 0;
         int var5 = 0;
         int[] var9 = null;
-        RuntimeException decompiledCaughtException = null;
         var5 = SteelSentinels.field_G;
         try {
           L0: {

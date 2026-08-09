@@ -12,8 +12,8 @@ abstract class bk {
     abstract ul a(boolean param0);
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Virogrid.field_F ? 1 : 0;
         vm.field_b = null;
         ng.field_N = null;

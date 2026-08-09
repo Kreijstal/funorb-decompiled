@@ -22,22 +22,12 @@ final class bf extends l {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -61,27 +51,19 @@ final class bf extends l {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("bf.D(").append(param0).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("bf.D(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -104,15 +86,15 @@ final class bf extends l {
     }
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         fa var11 = null;
-        RuntimeException decompiledCaughtException = null;
         var10 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -169,7 +151,6 @@ final class bf extends l {
     final static void a(fa param0, int param1, int param2) {
         hg var5 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var5 = gk.field_g;
             var5.g(param2, 8);
@@ -182,7 +163,7 @@ final class bf extends l {
                 var5.a(param0.field_g.length, 76);
                 var5.a(param0.field_g, param0.field_g.length, 0, (byte) 94);
             }
-            discarded$0 = var5.b((byte) -111, var4);
+            var5.b((byte) -111, var4);
             var5.field_l = var5.field_l - param1;
             param0.field_i = var5.d((byte) 127);
             var5.b(var5.field_l + -var4, param1 ^ -5);
@@ -192,9 +173,8 @@ final class bf extends l {
     }
 
     final static km a(byte param0) {
-        km discarded$0 = null;
         if (param0 >= -70) {
-            discarded$0 = bf.a((byte) -57);
+            bf.a((byte) -57);
             return d.h(0);
         }
         return d.h(0);

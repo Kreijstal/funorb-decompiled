@@ -14,10 +14,9 @@ class ot extends iga {
     }
 
     final static boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, byte param6) {
-        boolean discarded$1 = false;
         if (param6 <= 43) {
           L0: {
-            discarded$1 = ot.a(-115, -104, true, 1, -88, -103, (byte) -27);
+            ot.a(-115, -104, true, 1, -88, -103, (byte) -27);
             if (!lb.g((byte) -96)) {
               break L0;
             } else {

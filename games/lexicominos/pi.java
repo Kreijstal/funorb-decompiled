@@ -3,45 +3,26 @@
  */
 final class pi extends db {
     final void g(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + (this.field_r - this.field_p - this.field_s);
-          param1 = param1 + this.field_w;
-          var3 = param0 + param1 * lf.field_f;
-          var4 = this.field_p - 1;
-          var5 = this.field_u;
-          var6 = this.field_p;
-          var7 = lf.field_f - var6;
-          var8 = var6 + var6;
-          if (param1 >= lf.field_c) {
-            break L0;
-          } else {
+        param0 = param0 + (this.field_r - this.field_p - this.field_s);
+        param1 = param1 + this.field_w;
+        int var3 = param0 + param1 * lf.field_f;
+        int var4 = this.field_p - 1;
+        int var5 = this.field_u;
+        int var6 = this.field_p;
+        int var7 = lf.field_f - var6;
+        int var8 = var6 + var6;
+        if (param1 < lf.field_c) {
             var9 = lf.field_c - param1;
             var5 = var5 - var9;
             param1 = lf.field_c;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * lf.field_f;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= lf.field_h) {
-            break L1;
-          } else {
+        if (param1 + var5 > lf.field_h) {
             var5 = var5 - (param1 + var5 - lf.field_h);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= lf.field_g) {
-            break L2;
-          } else {
+        if (param0 < lf.field_g) {
             var9 = lf.field_g - param0;
             var6 = var6 - var9;
             param0 = lf.field_g;
@@ -49,74 +30,40 @@ final class pi extends db {
             var3 = var3 + var9;
             var8 = var8 - var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= lf.field_e) {
-            break L3;
-          } else {
+        if (param0 + var6 > lf.field_e) {
             var9 = param0 + var6 - lf.field_e;
             var6 = var6 - var9;
             var8 = var8 - var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        L4: {
-          if (var6 <= 0) {
-            break L4;
-          } else {
-            if (var5 > 0) {
-              pi.e(lf.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var6 <= 0 || var5 <= 0) {
+            return;
         }
+        pi.e(lf.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_w;
-          var3 = param0 + param1 * lf.field_f;
-          var4 = 0;
-          var5 = this.field_u;
-          var6 = this.field_p;
-          var7 = lf.field_f - var6;
-          var8 = 0;
-          if (param1 >= lf.field_c) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_w;
+        int var3 = param0 + param1 * lf.field_f;
+        int var4 = 0;
+        int var5 = this.field_u;
+        int var6 = this.field_p;
+        int var7 = lf.field_f - var6;
+        int var8 = 0;
+        if (param1 < lf.field_c) {
             var9 = lf.field_c - param1;
             var5 = var5 - var9;
             param1 = lf.field_c;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * lf.field_f;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= lf.field_h) {
-            break L1;
-          } else {
+        if (param1 + var5 > lf.field_h) {
             var5 = var5 - (param1 + var5 - lf.field_h);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= lf.field_g) {
-            break L2;
-          } else {
+        if (param0 < lf.field_g) {
             var9 = lf.field_g - param0;
             var6 = var6 - var9;
             param0 = lf.field_g;
@@ -124,38 +71,23 @@ final class pi extends db {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= lf.field_e) {
-            break L3;
-          } else {
+        if (param0 + var6 > lf.field_e) {
             var9 = param0 + var6 - lf.field_e;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        L4: {
-          if (var6 <= 0) {
-            break L4;
-          } else {
-            if (var5 > 0) {
-              pi.d(lf.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var6 <= 0 || var5 <= 0) {
+            return;
         }
+        pi.d(lf.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var14;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -169,9 +101,9 @@ final class pi extends db {
                 param8++;
                 continue L0;
               } else {
-                incrementValue$66 = param5;
+                incrementValue$11 = param5;
                 param5++;
-                param0 = param4[incrementValue$66];
+                param0 = param4[incrementValue$11];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -184,9 +116,9 @@ final class pi extends db {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  incrementValue$67 = param7;
+                  incrementValue$12 = param7;
                   param7++;
-                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -197,45 +129,26 @@ final class pi extends db {
     }
 
     final void d(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_w;
-          var4 = param0 + param1 * lf.field_f;
-          var5 = 0;
-          var6 = this.field_u;
-          var7 = this.field_p;
-          var8 = lf.field_f - var7;
-          var9 = 0;
-          if (param1 >= lf.field_c) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_w;
+        int var4 = param0 + param1 * lf.field_f;
+        int var5 = 0;
+        int var6 = this.field_u;
+        int var7 = this.field_p;
+        int var8 = lf.field_f - var7;
+        int var9 = 0;
+        if (param1 < lf.field_c) {
             var10 = lf.field_c - param1;
             var6 = var6 - var10;
             param1 = lf.field_c;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * lf.field_f;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= lf.field_h) {
-            break L1;
-          } else {
+        if (param1 + var6 > lf.field_h) {
             var6 = var6 - (param1 + var6 - lf.field_h);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= lf.field_g) {
-            break L2;
-          } else {
+        if (param0 < lf.field_g) {
             var10 = lf.field_g - param0;
             var7 = var7 - var10;
             param0 = lf.field_g;
@@ -243,32 +156,17 @@ final class pi extends db {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= lf.field_e) {
-            break L3;
-          } else {
+        if (param0 + var7 > lf.field_e) {
             var10 = param0 + var7 - lf.field_e;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        L4: {
-          if (var7 <= 0) {
-            break L4;
-          } else {
-            if (var6 > 0) {
-              pi.b(0, 0, 0, lf.field_b, this.field_y, var5, 0, var4, 0, var7, var6, var8, var9, param2);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var7 <= 0 || var6 <= 0) {
+            return;
         }
+        pi.b(0, 0, 0, lf.field_b, this.field_y, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -298,45 +196,26 @@ final class pi extends db {
     }
 
     final void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_w;
-          var4 = param0 + param1 * lf.field_f;
-          var5 = 0;
-          var6 = this.field_u;
-          var7 = this.field_p;
-          var8 = lf.field_f - var7;
-          var9 = 0;
-          if (param1 >= lf.field_c) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_w;
+        int var4 = param0 + param1 * lf.field_f;
+        int var5 = 0;
+        int var6 = this.field_u;
+        int var7 = this.field_p;
+        int var8 = lf.field_f - var7;
+        int var9 = 0;
+        if (param1 < lf.field_c) {
             var10 = lf.field_c - param1;
             var6 = var6 - var10;
             param1 = lf.field_c;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * lf.field_f;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= lf.field_h) {
-            break L1;
-          } else {
+        if (param1 + var6 > lf.field_h) {
             var6 = var6 - (param1 + var6 - lf.field_h);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= lf.field_g) {
-            break L2;
-          } else {
+        if (param0 < lf.field_g) {
             var10 = lf.field_g - param0;
             var7 = var7 - var10;
             param0 = lf.field_g;
@@ -344,74 +223,40 @@ final class pi extends db {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= lf.field_e) {
-            break L3;
-          } else {
+        if (param0 + var7 > lf.field_e) {
             var10 = param0 + var7 - lf.field_e;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        L4: {
-          if (var7 <= 0) {
-            break L4;
-          } else {
-            if (var6 > 0) {
-              pi.d(lf.field_b, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var7 <= 0 || var6 <= 0) {
+            return;
         }
+        pi.d(lf.field_b, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void e(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_w;
-          var4 = param0 + param1 * lf.field_f;
-          var5 = 0;
-          var6 = this.field_u;
-          var7 = this.field_p;
-          var8 = lf.field_f - var7;
-          var9 = 0;
-          if (param1 >= lf.field_c) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_w;
+        int var4 = param0 + param1 * lf.field_f;
+        int var5 = 0;
+        int var6 = this.field_u;
+        int var7 = this.field_p;
+        int var8 = lf.field_f - var7;
+        int var9 = 0;
+        if (param1 < lf.field_c) {
             var10 = lf.field_c - param1;
             var6 = var6 - var10;
             param1 = lf.field_c;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * lf.field_f;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= lf.field_h) {
-            break L1;
-          } else {
+        if (param1 + var6 > lf.field_h) {
             var6 = var6 - (param1 + var6 - lf.field_h);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= lf.field_g) {
-            break L2;
-          } else {
+        if (param0 < lf.field_g) {
             var10 = lf.field_g - param0;
             var7 = var7 - var10;
             param0 = lf.field_g;
@@ -419,43 +264,28 @@ final class pi extends db {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= lf.field_e) {
-            break L3;
-          } else {
+        if (param0 + var7 > lf.field_e) {
             var10 = param0 + var7 - lf.field_e;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        L4: {
-          if (var7 <= 0) {
-            break L4;
-          } else {
-            if (var6 > 0) {
-              pi.b(lf.field_b, this.field_y, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var7 <= 0 || var6 <= 0) {
+            return;
         }
+        pi.b(lf.field_b, this.field_y, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var9 = -param5;
         var10 = -param6;
         L0: while (true) {
@@ -470,9 +300,9 @@ final class pi extends db {
                 var10++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -481,9 +311,9 @@ final class pi extends db {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+                  param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -494,14 +324,14 @@ final class pi extends db {
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         var9 = -param5;
         var10 = -param6;
         L0: while (true) {
@@ -516,9 +346,9 @@ final class pi extends db {
                 var10++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3--;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -527,9 +357,9 @@ final class pi extends db {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+                  param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -540,22 +370,22 @@ final class pi extends db {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
         var10 = param9 >> 16 & 255;
         var11 = param9 >> 8 & 255;
         var12 = param9 & 255;
@@ -575,9 +405,9 @@ final class pi extends db {
                 var15++;
                 continue L0;
               } else {
-                incrementValue$2 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                param2 = param1[incrementValue$2];
+                param2 = param1[incrementValue$0];
                 var17 = param2 >>> 24;
                 if (var17 == 0) {
                   param4++;
@@ -610,9 +440,9 @@ final class pi extends db {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  incrementValue$3 = param4;
+                  incrementValue$1 = param4;
                   param4++;
-                  param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
+                  param0[incrementValue$1] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
                   continue L1;
                 }
@@ -623,45 +453,26 @@ final class pi extends db {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_w;
-          var4 = param0 + param1 * lf.field_f;
-          var5 = 0;
-          var6 = this.field_u;
-          var7 = this.field_p;
-          var8 = lf.field_f - var7;
-          var9 = 0;
-          if (param1 >= lf.field_c) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_w;
+        int var4 = param0 + param1 * lf.field_f;
+        int var5 = 0;
+        int var6 = this.field_u;
+        int var7 = this.field_p;
+        int var8 = lf.field_f - var7;
+        int var9 = 0;
+        if (param1 < lf.field_c) {
             var10 = lf.field_c - param1;
             var6 = var6 - var10;
             param1 = lf.field_c;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * lf.field_f;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var6 <= lf.field_h) {
-            break L1;
-          } else {
+        if (param1 + var6 > lf.field_h) {
             var6 = var6 - (param1 + var6 - lf.field_h);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= lf.field_g) {
-            break L2;
-          } else {
+        if (param0 < lf.field_g) {
             var10 = lf.field_g - param0;
             var7 = var7 - var10;
             param0 = lf.field_g;
@@ -669,116 +480,85 @@ final class pi extends db {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var7 <= lf.field_e) {
-            break L3;
-          } else {
+        if (param0 + var7 > lf.field_e) {
             var10 = param0 + var7 - lf.field_e;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        L4: {
-          if (var7 <= 0) {
-            break L4;
-          } else {
-            if (var6 > 0) {
-              pi.c(lf.field_b, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var7 <= 0 || var6 <= 0) {
+            return;
         }
+        pi.c(lf.field_b, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void c(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int[] var22 = null;
-        int[] var23 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int[] var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int[] var22;
+        int[] var23;
         L0: {
           var3 = this.field_p >> 2;
           var4 = this.field_u >> 2;
           param0 = param0 + this.field_s / 4;
           param1 = param1 + this.field_w / 4;
           if (param0 >= lf.field_g) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = lf.field_g - param0 << 2;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = lf.field_g - param0 << 2;
             break L0;
           }
         }
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= lf.field_e) {
-            stackOut_5_0 = this.field_p - 4;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = this.field_p - 4;
             break L1;
           } else {
-            stackOut_4_0 = (lf.field_e - param0 << 2) - 4;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = (lf.field_e - param0 << 2) - 4;
             break L1;
           }
         }
         L2: {
           var6 = stackIn_6_0;
           if (param1 >= lf.field_c) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = lf.field_c - param1 << 2;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = lf.field_c - param1 << 2;
             break L2;
           }
         }
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= lf.field_h) {
-            stackOut_11_0 = this.field_u - 4;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = this.field_u - 4;
             break L3;
           } else {
-            stackOut_10_0 = (lf.field_h - param1 << 2) - 4;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = (lf.field_h - param1 << 2) - 4;
             break L3;
           }
         }
@@ -855,45 +635,26 @@ final class pi extends db {
     }
 
     final void d(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param0 = param0 + this.field_s;
-          param1 = param1 + this.field_w;
-          var3 = param0 + param1 * lf.field_f;
-          var4 = 0;
-          var5 = this.field_u;
-          var6 = this.field_p;
-          var7 = lf.field_f - var6;
-          var8 = 0;
-          if (param1 >= lf.field_c) {
-            break L0;
-          } else {
+        param0 = param0 + this.field_s;
+        param1 = param1 + this.field_w;
+        int var3 = param0 + param1 * lf.field_f;
+        int var4 = 0;
+        int var5 = this.field_u;
+        int var6 = this.field_p;
+        int var7 = lf.field_f - var6;
+        int var8 = 0;
+        if (param1 < lf.field_c) {
             var9 = lf.field_c - param1;
             var5 = var5 - var9;
             param1 = lf.field_c;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * lf.field_f;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var5 <= lf.field_h) {
-            break L1;
-          } else {
+        if (param1 + var5 > lf.field_h) {
             var5 = var5 - (param1 + var5 - lf.field_h);
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= lf.field_g) {
-            break L2;
-          } else {
+        if (param0 < lf.field_g) {
             var9 = lf.field_g - param0;
             var6 = var6 - var9;
             param0 = lf.field_g;
@@ -901,32 +662,17 @@ final class pi extends db {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var6 <= lf.field_e) {
-            break L3;
-          } else {
+        if (param0 + var6 > lf.field_e) {
             var9 = param0 + var6 - lf.field_e;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        L4: {
-          if (var6 <= 0) {
-            break L4;
-          } else {
-            if (var5 > 0) {
-              pi.d(lf.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var6 <= 0 || var5 <= 0) {
+            return;
         }
+        pi.d(lf.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
     }
 
     pi(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
@@ -934,100 +680,74 @@ final class pi extends db {
     }
 
     final void f(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int[] stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
         int[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         int[] stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_21_2 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int[] stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int[] stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        int stackOut_20_2 = 0;
-        int[] stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_19_2 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
         L0: {
           var3 = this.field_p >> 1;
           var4 = this.field_u >> 1;
           param0 = param0 + this.field_s / 2;
           param1 = param1 + this.field_w / 2;
           if (param0 >= lf.field_g) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = lf.field_g - param0 << 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = lf.field_g - param0 << 1;
             break L0;
           }
         }
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= lf.field_e) {
-            stackOut_5_0 = this.field_p - 2;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = this.field_p - 2;
             break L1;
           } else {
-            stackOut_4_0 = (lf.field_e - param0 << 1) - 2;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = (lf.field_e - param0 << 1) - 2;
             break L1;
           }
         }
         L2: {
           var6 = stackIn_6_0;
           if (param1 >= lf.field_c) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = lf.field_c - param1 << 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = lf.field_c - param1 << 1;
             break L2;
           }
         }
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= lf.field_h) {
-            stackOut_11_0 = this.field_u - 2;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = this.field_u - 2;
             break L3;
           } else {
-            stackOut_10_0 = (lf.field_h - param1 << 1) - 2;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = (lf.field_h - param1 << 1) - 2;
             break L3;
           }
         }
@@ -1073,27 +793,19 @@ final class pi extends db {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = this.field_y;
-                      stackOut_18_1 = var10 + (var19 & 1);
-                      stackIn_20_0 = stackOut_18_0;
-                      stackIn_20_1 = stackOut_18_1;
-                      stackIn_19_0 = stackOut_18_0;
-                      stackIn_19_1 = stackOut_18_1;
+                      stackIn_20_0 = this.field_y;
+
+                      stackIn_20_1 = var10 + (var19 & 1);
+
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
-                        stackOut_20_1 = stackIn_20_1;
-                        stackOut_20_2 = 0;
-                        stackIn_21_0 = stackOut_20_0;
-                        stackIn_21_1 = stackOut_20_1;
-                        stackIn_21_2 = stackOut_20_2;
+                        stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
+                        stackIn_21_1 = stackIn_20_1;
+                        stackIn_21_2 = 0;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
-                        stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = this.field_p;
-                        stackIn_21_0 = stackOut_19_0;
-                        stackIn_21_1 = stackOut_19_1;
-                        stackIn_21_2 = stackOut_19_2;
+                        stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
+                        stackIn_21_1 = stackIn_20_1;
+                        stackIn_21_2 = this.field_p;
                         break L7;
                       }
                     }
@@ -1114,14 +826,14 @@ final class pi extends db {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         var12 = param11 & 16711935;
         var13 = param11 >> 8 & 255;
         param6 = -param8;
@@ -1137,9 +849,9 @@ final class pi extends db {
                 param6++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 var14 = param2 >>> 24;
                 param2 = param2 & 16777215;
                 if (var14 == 0) {
@@ -1160,9 +872,9 @@ final class pi extends db {
                   }
                   var16 = 256 - var14;
                   var17 = param0[param4];
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
+                  param0[incrementValue$12] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
                   param5++;
                   continue L1;
                 }

@@ -28,8 +28,8 @@ class mh extends bk {
     }
 
     final static String a(CharSequence[] param0, byte param1, int param2, int param3) {
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -45,8 +45,6 @@ class mh extends bk {
         String stackIn_9_0 = null;
         String stackIn_11_0 = null;
         String stackIn_27_0 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
@@ -54,24 +52,11 @@ class mh extends bk {
         String stackIn_31_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        String stackOut_10_0 = null;
-        String stackOut_8_0 = null;
-        String stackOut_26_0 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
         var9 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
             if (param3 == 0) {
-              stackOut_3_0 = "";
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = "";
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -79,13 +64,11 @@ class mh extends bk {
                 var10 = param0[param2];
                 var4 = var10;
                 if (var4 != null) {
-                  stackOut_10_0 = var10.toString();
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = var10.toString();
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  stackOut_8_0 = "null";
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = "null";
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
@@ -107,18 +90,17 @@ class mh extends bk {
                     var7 = param2;
                     L3: while (true) {
                       if (var7 >= var4_int) {
-                        stackOut_26_0 = var6.toString();
-                        stackIn_27_0 = stackOut_26_0;
+                        stackIn_27_0 = var6.toString();
                         decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
                         L4: {
                           var8 = param0[var7];
                           if (var8 != null) {
-                            discarded$5 = var6.append(var8);
+                            discarded$3 = var6.append(var8);
                             break L4;
                           } else {
-                            discarded$6 = var6.append("null");
+                            discarded$4 = var6.append("null");
                             break L4;
                           }
                         }
@@ -148,27 +130,19 @@ class mh extends bk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4_ref = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var4_ref);
-            stackOut_28_1 = new StringBuilder().append("mh.D(");
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackIn_30_0 = (RuntimeException) (var4_ref);
+
+            stackIn_30_1 = new StringBuilder().append("mh.D(");
+
             if (param0 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L6;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L6;
             }
           }
@@ -191,22 +165,12 @@ class mh extends bk {
 
     final void a(boolean param0, jc param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -225,27 +189,19 @@ class mh extends bk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("mh.C(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("mh.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -255,10 +211,9 @@ class mh extends bk {
 
     final static void a(long param0, byte param1) {
         try {
-            String discarded$1 = null;
+            Throwable decompiledCaughtException = null;
             InterruptedException var3 = null;
             CharSequence[] var4 = null;
-            Throwable decompiledCaughtException = null;
             try {
               L0: {
                 L1: {
@@ -267,7 +222,7 @@ class mh extends bk {
                     break L1;
                   } else {
                     var4 = (CharSequence[]) null;
-                    discarded$1 = mh.a((CharSequence[]) null, (byte) 99, -73, 66);
+                    mh.a((CharSequence[]) null, (byte) 99, -73, 66);
                     break L1;
                   }
                 }

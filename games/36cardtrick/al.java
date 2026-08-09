@@ -7,8 +7,8 @@ final class al {
     static String field_c;
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var2 = Main.field_T;
         r.field_p = false;
         if (param0 < -18) {

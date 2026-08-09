@@ -15,9 +15,8 @@ final class vdb extends uj {
     }
 
     final int b(byte param0) {
-        int discarded$0 = 0;
         if (param0 <= 79) {
-            discarded$0 = this.d((byte) -127);
+            this.d((byte) -127);
             return 107;
         }
         return 107;
@@ -49,12 +48,11 @@ final class vdb extends uj {
 
     final static int d(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
         int var3 = 0;
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
         var3 = VoidHunters.field_G;
         try {
           L0: {
@@ -96,8 +94,7 @@ final class vdb extends uj {
                     }
                   }
                 }
-                stackOut_14_0 = var2;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = var2;
                 break L0;
               } else {
                 ei.field_c.a((byte) -94);

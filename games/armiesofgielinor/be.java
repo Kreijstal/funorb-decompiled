@@ -19,12 +19,11 @@ final class be extends bd {
     static int field_x;
 
     final void a(int param0, ha param1) {
-        String discarded$0 = null;
         try {
             this.field_C = param1.a(bw.field_m[this.field_t][1], this.field_B, this.field_G, 0, this.field_m, bw.field_m[this.field_t][2]);
             if (param0 != 64) {
                 CharSequence var4 = (CharSequence) null;
-                discarded$0 = be.a(-2, (CharSequence) null, false);
+                be.a(-2, (CharSequence) null, false);
             }
             param1.field_l.a((byte) -119, (tc) (new mb(this.field_t, this.field_G, this.field_B, this.field_C, this.field_m)));
         } catch (RuntimeException runtimeException) {
@@ -33,8 +32,8 @@ final class be extends bd {
     }
 
     final static String a(int param0, CharSequence param1, boolean param2) {
-        RuntimeException var3 = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -45,42 +44,20 @@ final class be extends bd {
         String stackIn_14_0 = null;
         String stackIn_19_0 = null;
         String stackIn_22_0 = null;
-        boolean stackIn_26_0 = false;
-        String stackIn_34_0 = null;
-        int stackIn_37_0 = 0;
-        String stackIn_40_0 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
+        String stackIn_32_0 = null;
+        String stackIn_37_0 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        String stackIn_41_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        boolean stackOut_25_0 = false;
-        String stackOut_33_0 = null;
-        int stackOut_36_0 = 0;
-        String stackOut_39_0 = null;
-        String stackOut_21_0 = null;
-        String stackOut_18_0 = null;
-        String stackOut_13_0 = null;
-        String stackOut_8_0 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
         var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
             if (param1 == null) {
-              stackOut_3_0 = pu.field_G;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = pu.field_G;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -109,71 +86,44 @@ final class be extends bd {
                                   var5 = 0;
                                   var6 = 0;
                                   L4: while (true) {
-                                    L5: {
+                                    if (var6 >= param1.length()) {
+                                      if (0 < var5) {
+                                        stackIn_37_0 = kd.field_U;
+                                        decompiledRegionSelector0 = 6;
+                                        break L0;
+                                      } else {
+                                        return null;
+                                      }
+                                    } else {
+                                      L5: {
+                                        var7 = param1.charAt(var6);
+                                        if (rs.a((char) var7, (byte) -88)) {
+                                          var5++;
+                                          break L5;
+                                        } else {
+                                          var5 = 0;
+                                          break L5;
+                                        }
+                                      }
                                       L6: {
-                                        if (var6 >= param1.length()) {
+                                        if ((var5 ^ -1) > -3) {
                                           break L6;
                                         } else {
-                                          var7 = param1.charAt(var6);
-                                          stackOut_25_0 = rs.a((char) var7, (byte) -88);
-                                          stackIn_37_0 = stackOut_25_0 ? 1 : 0;
-                                          stackIn_26_0 = stackOut_25_0;
-                                          if (var8 != 0) {
-                                            break L5;
+                                          if (!param2) {
+                                            stackIn_32_0 = ul.field_o;
+                                            decompiledRegionSelector0 = 5;
+                                            break L0;
                                           } else {
-                                            L7: {
-                                              if (!stackIn_26_0) {
-                                                var5 = 0;
-                                                if (var8 == 0) {
-                                                  break L7;
-                                                } else {
-                                                  var5++;
-                                                  break L7;
-                                                }
-                                              } else {
-                                                var5++;
-                                                break L7;
-                                              }
-                                            }
-                                            L8: {
-                                              if ((var5 ^ -1) > -3) {
-                                                break L8;
-                                              } else {
-                                                if (!param2) {
-                                                  stackOut_33_0 = ul.field_o;
-                                                  stackIn_34_0 = stackOut_33_0;
-                                                  decompiledRegionSelector0 = 5;
-                                                  break L0;
-                                                } else {
-                                                  break L8;
-                                                }
-                                              }
-                                            }
-                                            var6++;
-                                            if (var8 == 0) {
-                                              continue L4;
-                                            } else {
-                                              break L6;
-                                            }
+                                            break L6;
                                           }
                                         }
                                       }
-                                      stackOut_36_0 = 0;
-                                      stackIn_37_0 = stackOut_36_0;
-                                      break L5;
-                                    }
-                                    if (stackIn_37_0 < var5) {
-                                      stackOut_39_0 = kd.field_U;
-                                      stackIn_40_0 = stackOut_39_0;
-                                      decompiledRegionSelector0 = 6;
-                                      break L0;
-                                    } else {
-                                      return null;
+                                      var6++;
+                                      continue L4;
                                     }
                                   }
                                 } else {
-                                  stackOut_21_0 = (String) null;
-                                  stackIn_22_0 = stackOut_21_0;
+                                  stackIn_22_0 = (String) null;
                                   decompiledRegionSelector0 = 4;
                                   break L0;
                                 }
@@ -182,55 +132,44 @@ final class be extends bd {
                               }
                             }
                           }
-                          stackOut_18_0 = kd.field_U;
-                          stackIn_19_0 = stackOut_18_0;
+                          stackIn_19_0 = kd.field_U;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         }
                       }
                     }
-                    stackOut_13_0 = pu.field_G;
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = pu.field_G;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 }
               }
-              stackOut_8_0 = pu.field_G;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = pu.field_G;
               decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L7: {
             var3 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) (var3);
-            stackOut_41_1 = new StringBuilder().append("be.B(").append(param0).append(',');
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackIn_40_0 = (RuntimeException) (var3);
+
+            stackIn_40_1 = new StringBuilder().append("be.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
-              break L9;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "null";
+              break L7;
             } else {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
-              break L9;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "{...}";
+              break L7;
             }
           }
-          throw ig.a((Throwable) ((Object) stackIn_44_0), stackIn_44_2 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_41_0), stackIn_41_2 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0;
@@ -248,9 +187,9 @@ final class be extends bd {
                   return stackIn_22_0;
                 } else {
                   if (decompiledRegionSelector0 == 5) {
-                    return stackIn_34_0;
+                    return stackIn_32_0;
                   } else {
-                    return stackIn_40_0;
+                    return stackIn_37_0;
                   }
                 }
               }
@@ -265,19 +204,12 @@ final class be extends bd {
         field_w = null;
         field_y = null;
         if (param0 < 61) {
-          field_v = (String) null;
-          field_F = null;
-          field_D = null;
-          field_v = null;
-          field_z = null;
-          return;
-        } else {
-          field_F = null;
-          field_D = null;
-          field_v = null;
-          field_z = null;
-          return;
+            field_v = (String) null;
         }
+        field_F = null;
+        field_D = null;
+        field_v = null;
+        field_z = null;
     }
 
     be(int param0, int param1, int param2, int param3, int param4) {

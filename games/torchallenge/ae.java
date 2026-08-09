@@ -26,22 +26,12 @@ final class ae extends da {
     final static void a(byte param0, String[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             L1: {
@@ -64,27 +54,19 @@ final class ae extends da {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("ae.D(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("ae.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -93,7 +75,7 @@ final class ae extends da {
     }
 
     final static void a(int param0) {
-        String[] var2 = null;
+        String[] var2;
         if (param0 == 4) {
           if (bh.field_o != null) {
             L0: {
@@ -148,7 +130,6 @@ final class ae extends da {
     final static void a(int param0, bk param1, int param2) {
         pa var5 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var5 = dk.field_s;
             var5.d(25, param0);
@@ -164,7 +145,7 @@ final class ae extends da {
             var5.a(param1.field_k, false);
             var5.a(param1.field_u, false);
             var5.a(param1.field_j, false);
-            discarded$0 = var5.b(var4, param2 + 29454);
+            var5.b(var4, param2 + 29454);
             var5.a(var5.field_q - var4, -111);
         } catch (RuntimeException runtimeException) {
             throw oj.a((Throwable) ((Object) runtimeException), "ae.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -195,9 +176,9 @@ final class ae extends da {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
+            int var0;
+            int var1;
+            int var2;
             field_w = new int[256];
             field_j = new int[][]{new int[]{21, 26}, new int[]{36, 41}};
             field_s = new int[]{64, 96, 96, 64, 96, 64, 32, 96, 64, 32};

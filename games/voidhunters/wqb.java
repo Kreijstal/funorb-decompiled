@@ -51,9 +51,8 @@ final class wqb extends mfb {
     }
 
     final int b(boolean param0) {
-        int discarded$0 = 0;
         if (param0) {
-            discarded$0 = this.b(23);
+            this.b(23);
             return klb.field_p;
         }
         return klb.field_p;
@@ -65,9 +64,8 @@ final class wqb extends mfb {
     }
 
     final int d(byte param0) {
-        int discarded$0 = 0;
         if (param0 >= -52) {
-            discarded$0 = this.a(true);
+            this.a(true);
             return cca.field_p;
         }
         return cca.field_p;
@@ -81,9 +79,8 @@ final class wqb extends mfb {
     }
 
     final int a(boolean param0) {
-        int discarded$0 = 0;
         if (param0) {
-            discarded$0 = this.f((byte) -9);
+            this.f((byte) -9);
             return 3;
         }
         return 3;

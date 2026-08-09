@@ -9,12 +9,12 @@ final class ec {
     static int field_d;
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         ai var5 = null;
         mg var6 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var4 = Geoblox.field_C;
         try {
           L0: {
@@ -47,30 +47,26 @@ final class ec {
     }
 
     final static boolean b(int param0) {
-        boolean discarded$1 = false;
-        RuntimeException var1 = null;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_49_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         ja var5 = null;
         ja var6 = null;
         ja var7 = null;
-        ja var8_ref_ja = null;
         int var8 = 0;
-        ja var9_ref_ja = null;
+        ja var8_ref_ja = null;
         int var9 = 0;
+        ja var9_ref_ja = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_49_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_11_0 = 0;
         var11 = Geoblox.field_C;
         try {
           L0: {
@@ -90,8 +86,7 @@ final class ec {
                         break L2;
                       }
                     }
-                    stackOut_8_0 = 0;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = 0;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   } else {
@@ -134,7 +129,7 @@ final class ec {
                     if (param0 == -18913) {
                       break L7;
                     } else {
-                      discarded$1 = ec.b(-33);
+                      ec.b(-33);
                       break L7;
                     }
                   }
@@ -143,8 +138,7 @@ final class ec {
                   L8: while (true) {
                     if (var12 >= h.field_a) {
                       h.field_a = 0;
-                      stackOut_48_0 = 1;
-                      stackIn_49_0 = stackOut_48_0;
+                      stackIn_49_0 = 1;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -228,7 +222,7 @@ final class ec {
                       if (-1 < (var2 ^ -1)) {
                         break L15;
                       } else {
-                        if (nk.field_f[var2] <= var3) {
+                        if ((nk.field_f[var2] ^ -1) >= (var3 ^ -1)) {
                           break L15;
                         } else {
                           nk.field_f[1 + var2] = nk.field_f[var2];
@@ -244,8 +238,7 @@ final class ec {
                 }
               }
             } else {
-              stackOut_11_0 = 0;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -273,10 +266,10 @@ final class ec {
             return;
         }
         pk var2 = eh.field_d;
-        int discarded$0 = var2.a((byte) -102);
-        int discarded$1 = var2.a((byte) -108);
-        int discarded$2 = var2.a((byte) -71);
-        int discarded$3 = var2.a((byte) -83);
+        var2.a((byte) -102);
+        var2.a((byte) -108);
+        var2.a((byte) -71);
+        var2.a((byte) -83);
         var1.a(false);
     }
 

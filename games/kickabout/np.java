@@ -16,15 +16,6 @@ final class np extends hd {
     static String field_Gb;
 
     private final void a(boolean param0, int param1, int param2, int param3, boolean param4) {
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
-        boolean discarded$14 = false;
-        boolean discarded$15 = false;
-        boolean discarded$16 = false;
-        boolean discarded$17 = false;
         L0: {
           if (!this.field_Fb.j(-819561055)) {
             break L0;
@@ -76,7 +67,7 @@ final class np extends hd {
                   }
                   this.field_Fb.a(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
                   if (param0) {
-                    discarded$9 = np.a(-14);
+                    np.a(-14);
                     return;
                   } else {
                     return;
@@ -99,7 +90,7 @@ final class np extends hd {
                     }
                     this.field_Fb.a(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
                     if (param0) {
-                      discarded$10 = np.a(-14);
+                      np.a(-14);
                       return;
                     } else {
                       return;
@@ -119,7 +110,7 @@ final class np extends hd {
                     }
                     this.field_Fb.a(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
                     if (param0) {
-                      discarded$11 = np.a(-14);
+                      np.a(-14);
                       return;
                     } else {
                       return;
@@ -140,7 +131,7 @@ final class np extends hd {
                       if (!param0) {
                         break L9;
                       } else {
-                        discarded$12 = np.a(-14);
+                        np.a(-14);
                         break L9;
                       }
                     }
@@ -160,7 +151,7 @@ final class np extends hd {
             }
             this.field_Fb.a(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
             if (param0) {
-              discarded$13 = np.a(-14);
+              np.a(-14);
               return;
             } else {
               return;
@@ -195,7 +186,7 @@ final class np extends hd {
                     if (!param0) {
                       break L14;
                     } else {
-                      discarded$14 = np.a(-14);
+                      np.a(-14);
                       break L14;
                     }
                   }
@@ -228,7 +219,7 @@ final class np extends hd {
                     if (!param0) {
                       break L17;
                     } else {
-                      discarded$15 = np.a(-14);
+                      np.a(-14);
                       break L17;
                     }
                   }
@@ -247,7 +238,7 @@ final class np extends hd {
             }
             this.field_Fb.a(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
             if (param0) {
-              discarded$16 = np.a(-14);
+              np.a(-14);
               return;
             } else {
               return;
@@ -310,7 +301,7 @@ final class np extends hd {
             if (!param0) {
               break L24;
             } else {
-              discarded$17 = np.a(-14);
+              np.a(-14);
               break L24;
             }
           }
@@ -403,7 +394,7 @@ final class np extends hd {
     }
 
     private final boolean a(boolean param0, byte param1, int param2, int param3, int param4, int param5, boolean param6) {
-        int var8 = 0;
+        int var8;
         L0: {
           if (param1 == 38) {
             break L0;
@@ -440,15 +431,15 @@ final class np extends hd {
     }
 
     final static void h(int param0) {
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int var2;
         var2 = Kickabout.field_G;
         if (param0 == -1) {
           if (we.field_c == eq.field_a) {
-            fieldTemp$6 = vo.field_bb;
+            fieldTemp$1 = vo.field_bb;
             vo.field_bb = vo.field_bb + 1;
-            if ((fieldTemp$6 ^ -1) <= -17) {
+            if ((fieldTemp$1 ^ -1) <= -17) {
               if (!sq.field_G) {
                 pq.g((byte) 66);
                 eq.field_a = vu.field_Hb;
@@ -494,9 +485,9 @@ final class np extends hd {
               }
             } else {
               if (bn.field_A == eq.field_a) {
-                fieldTemp$7 = vo.field_bb;
+                fieldTemp$2 = vo.field_bb;
                 vo.field_bb = vo.field_bb - 1;
-                if (fieldTemp$7 > 0) {
+                if (fieldTemp$2 > 0) {
                   return;
                 } else {
                   eq.field_a = eq.field_j;
@@ -513,14 +504,13 @@ final class np extends hd {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        boolean discarded$0 = false;
         this.field_q = param5;
         this.field_J = param3;
         this.field_mb = param2;
         this.field_s = param4;
         this.a(param6, (byte) 124, param0);
         if (param1 < 36) {
-            discarded$0 = np.h((byte) 12);
+            np.h((byte) 12);
         }
     }
 

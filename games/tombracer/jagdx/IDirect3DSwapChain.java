@@ -12,8 +12,8 @@ public class IDirect3DSwapChain extends jaclib.peer.IUnknown {
     }
 
     public final jagdx.IDirect3DSurface a(int param0, int param1) {
-        jagdx.IDirect3DSurface var3 = null;
-        int var4 = 0;
+        jagdx.IDirect3DSurface var3;
+        int var4;
         var3 = new jagdx.IDirect3DSurface(this.a);
         var4 = this._GetBackBuffer(param0, param1, var3);
         if (jagdx.ah.a(var4, 10643)) {

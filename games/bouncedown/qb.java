@@ -46,9 +46,9 @@ final class qb {
     }
 
     final static int a(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var1;
+        int var2;
+        int var3;
         var3 = Bounce.field_N;
         var1 = (int)(11.0 * Math.random());
         if (var1 != 10) {
@@ -272,13 +272,11 @@ final class qb {
     final static boolean a(int param0, int param1) {
         try {
             int var2_int = 0;
-            IOException var2 = null;
             int stackIn_14_0 = 0;
             int stackIn_16_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_13_0 = 0;
-            int stackOut_15_0 = 0;
+            IOException var2 = null;
             if (param0 <= jc.field_g.field_h) {
               return true;
             } else {
@@ -301,14 +299,12 @@ final class qb {
                       qe.field_k = fa.a(-96);
                       jc.field_g.field_h = jc.field_g.field_h + var2_int;
                       if (jc.field_g.field_h < param0) {
-                        stackOut_13_0 = 0;
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = 0;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
                         jc.field_g.field_h = 0;
-                        stackOut_15_0 = 1;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = 1;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -363,7 +359,6 @@ final class qb {
     }
 
     final static boolean a(int param0, String param1, String param2) {
-        boolean discarded$2 = false;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
@@ -373,63 +368,30 @@ final class qb {
         int stackIn_24_0 = 0;
         int stackIn_27_0 = 0;
         int stackIn_29_0 = 0;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_36_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_23_0 = 0;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
         try {
           L0: {
             if (nd.a(param1, 60)) {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (ab.a(param1, (byte) -12)) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (hc.b(param1, 0)) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = 0;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -437,37 +399,32 @@ final class qb {
                     if (param0 < -122) {
                       break L1;
                     } else {
-                      discarded$2 = qb.a(-112, 114);
+                      qb.a(-112, 114);
                       break L1;
                     }
                   }
                   if (param2.length() == 0) {
-                    stackOut_16_0 = 1;
-                    stackIn_17_0 = stackOut_16_0;
+                    stackIn_17_0 = 1;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
                     if (pf.a(128, param1, param2)) {
-                      stackOut_20_0 = 0;
-                      stackIn_21_0 = stackOut_20_0;
+                      stackIn_21_0 = 0;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       if (!ee.a(-1, param2, param1)) {
                         if (!ah.a(param1, param2, (byte) 8)) {
-                          stackOut_28_0 = 1;
-                          stackIn_29_0 = stackOut_28_0;
+                          stackIn_29_0 = 1;
                           decompiledRegionSelector0 = 7;
                           break L0;
                         } else {
-                          stackOut_26_0 = 0;
-                          stackIn_27_0 = stackOut_26_0;
+                          stackIn_27_0 = 0;
                           decompiledRegionSelector0 = 6;
                           break L0;
                         }
                       } else {
-                        stackOut_23_0 = 0;
-                        stackIn_24_0 = stackOut_23_0;
+                        stackIn_24_0 = 0;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       }
@@ -481,56 +438,40 @@ final class qb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) (var3);
-            stackOut_30_1 = new StringBuilder().append("qb.F(").append(param0).append(',');
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackIn_32_0 = (RuntimeException) (var3);
+
+            stackIn_32_1 = new StringBuilder().append("qb.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L2;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-            stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',');
-            stackIn_35_0 = stackOut_33_0;
-            stackIn_35_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+
+
+            stackIn_35_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',');
+
             if (param2 == null) {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "null";
               break L3;
             } else {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "{...}";
-              stackIn_36_0 = stackOut_34_0;
-              stackIn_36_1 = stackOut_34_1;
-              stackIn_36_2 = stackOut_34_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "{...}";
               break L3;
             }
           }
-          throw ii.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_33_0), stackIn_36_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0 != 0;
@@ -564,24 +505,23 @@ final class qb {
     }
 
     private final void a(int param0) {
-        boolean discarded$7 = false;
-        int dupTemp$8 = 0;
-        int dupTemp$9 = 0;
-        int dupTemp$10 = 0;
-        int dupTemp$11 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
+        int dupTemp$2 = 0;
+        int dupTemp$3 = 0;
+        int dupTemp$4 = 0;
+        int dupTemp$5 = 0;
+        int var2;
+        int var3;
+        int var5;
+        int var4;
+        String var6;
         var5 = Bounce.field_N;
-        int fieldTemp$6 = this.field_a + 1;
+        int fieldTemp$1 = this.field_a + 1;
         this.field_a = this.field_a + 1;
-        this.field_e = this.field_e + fieldTemp$6;
+        this.field_e = this.field_e + fieldTemp$1;
         var2 = 0;
         if (param0 != 4094) {
           var6 = (String) null;
-          discarded$7 = qb.a(-56, (String) null, (String) null);
+          qb.a(-56, (String) null, (String) null);
           L0: while (true) {
             if (-257 < (var2 ^ -1)) {
               L1: {
@@ -605,12 +545,12 @@ final class qb {
                 }
               }
               this.field_d = this.field_d + this.field_c[255 & var2 - -128];
-              dupTemp$8 = this.field_e + this.field_c[da.b(1020, var3) >> 839191426] - -this.field_d;
-              var4 = dupTemp$8;
-              this.field_c[var2] = dupTemp$8;
-              dupTemp$9 = this.field_c[da.b(255, var4 >> -2116620216 >> -963449630)] - -var3;
-              this.field_e = dupTemp$9;
-              this.field_f[var2] = dupTemp$9;
+              dupTemp$2 = this.field_e + this.field_c[da.b(1020, var3) >> 839191426] - -this.field_d;
+              var4 = dupTemp$2;
+              this.field_c[var2] = dupTemp$2;
+              dupTemp$3 = this.field_c[da.b(255, var4 >> -2116620216 >> -963449630)] - -var3;
+              this.field_e = dupTemp$3;
+              this.field_f[var2] = dupTemp$3;
               var2++;
               continue L0;
             } else {
@@ -641,12 +581,12 @@ final class qb {
                 }
               }
               this.field_d = this.field_d + this.field_c[255 & var2 - -128];
-              dupTemp$10 = this.field_e + this.field_c[da.b(1020, var3) >> 839191426] - -this.field_d;
-              var4 = dupTemp$10;
-              this.field_c[var2] = dupTemp$10;
-              dupTemp$11 = this.field_c[da.b(255, var4 >> -2116620216 >> -963449630)] - -var3;
-              this.field_e = dupTemp$11;
-              this.field_f[var2] = dupTemp$11;
+              dupTemp$4 = this.field_e + this.field_c[da.b(1020, var3) >> 839191426] - -this.field_d;
+              var4 = dupTemp$4;
+              this.field_c[var2] = dupTemp$4;
+              dupTemp$5 = this.field_c[da.b(255, var4 >> -2116620216 >> -963449630)] - -var3;
+              this.field_e = dupTemp$5;
+              this.field_f[var2] = dupTemp$5;
               var2++;
               continue L2;
             } else {
@@ -657,12 +597,11 @@ final class qb {
     }
 
     public static void a(byte param0) {
-        boolean discarded$2 = false;
-        String var2 = null;
+        String var2;
         field_h = null;
         if (param0 != -30) {
           var2 = (String) null;
-          discarded$2 = qb.a(-124, (String) null, (String) null);
+          qb.a(-124, (String) null, (String) null);
           field_g = null;
           return;
         } else {
@@ -672,16 +611,16 @@ final class qb {
     }
 
     private final void b(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         var11 = Bounce.field_N;
         var5 = -1640531527;
         var7 = -1640531527;

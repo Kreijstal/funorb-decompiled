@@ -25,22 +25,12 @@ final class pg {
         he var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var3 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -72,27 +62,19 @@ final class pg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2_ref);
-            stackOut_9_1 = new StringBuilder().append("pg.E(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var2_ref);
+
+            stackIn_11_1 = new StringBuilder().append("pg.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -101,12 +83,11 @@ final class pg {
     }
 
     public static void b(int param0) {
-        boolean discarded$0 = false;
         field_c = null;
         field_j = null;
         field_a = null;
         if (param0 != 8192) {
-            discarded$0 = pg.a((byte) 74);
+            pg.a((byte) 74);
             field_i = null;
             return;
         }
@@ -122,9 +103,8 @@ final class pg {
     }
 
     final static boolean a(byte param0) {
-        int var1 = 0;
+        int var1;
         int stackIn_3_0 = 0;
-        int stackOut_1_0 = 0;
         var1 = -1 / ((-93 - param0) / 33);
         if (!qm.i(20)) {
           if ((bn.field_d ^ -1) >= -1) {
@@ -133,8 +113,7 @@ final class pg {
             return false;
           }
         } else {
-          stackOut_1_0 = 1;
-          stackIn_3_0 = stackOut_1_0;
+          stackIn_3_0 = 1;
           return stackIn_3_0 != 0;
         }
     }

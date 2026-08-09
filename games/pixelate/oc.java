@@ -25,7 +25,7 @@ final class oc extends ng {
     static String field_X;
 
     private final void d(byte param0) {
-        ng var3 = null;
+        ng var3;
         this.field_P = new tf[]{this.a(this.field_Z, this.field_I, (byte) -121), this.a(this.field_V, this.field_T, (byte) -125)};
         if (param0 <= 73) {
           var3 = (ng) null;
@@ -58,20 +58,16 @@ final class oc extends ng {
     }
 
     private final tf c(boolean param0) {
-        int var2 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        double var6 = 0.0;
-        int var8 = 0;
-        int var9 = 0;
-        tf var10 = null;
-        tf var11 = null;
+        int var2;
+        int var4;
+        int var5;
+        double var6;
+        int var8;
+        int var9;
+        tf var10;
+        tf var11;
         int stackIn_10_0 = 0;
         int stackIn_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         var9 = Pixelate.field_H ? 1 : 0;
         var2 = this.field_C >> 1529768609;
         if (!param0) {
@@ -97,12 +93,10 @@ final class oc extends ng {
                       L3: {
                         var6 = Math.sqrt(-var6 + 1.0);
                         if (1.0 <= var6) {
-                          stackOut_22_0 = 255;
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_23_0 = 255;
                           break L3;
                         } else {
-                          stackOut_21_0 = (int)(var6 * 255.0);
-                          stackIn_23_0 = stackOut_21_0;
+                          stackIn_23_0 = (int)(var6 * 255.0);
                           break L3;
                         }
                       }
@@ -141,12 +135,10 @@ final class oc extends ng {
                       L7: {
                         var6 = Math.sqrt(-var6 + 1.0);
                         if (1.0 <= var6) {
-                          stackOut_9_0 = 255;
-                          stackIn_10_0 = stackOut_9_0;
+                          stackIn_10_0 = 255;
                           break L7;
                         } else {
-                          stackOut_8_0 = (int)(var6 * 255.0);
-                          stackIn_10_0 = stackOut_8_0;
+                          stackIn_10_0 = (int)(var6 * 255.0);
                           break L7;
                         }
                       }
@@ -182,9 +174,9 @@ final class oc extends ng {
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var5;
+        int var6;
+        int var7;
         if (param1 == 0) {
           var5 = 19 % ((param3 - 70) / 49);
           var6 = this.field_z + param2;
@@ -222,22 +214,12 @@ final class oc extends ng {
 
     final void a(int param0, int param1, int param2, ng param3) {
         RuntimeException var5 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -264,27 +246,19 @@ final class oc extends ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var5);
-            stackOut_7_1 = new StringBuilder().append("oc.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var5);
+
+            stackIn_9_1 = new StringBuilder().append("oc.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -301,29 +275,21 @@ final class oc extends ng {
     }
 
     private final tf a(int param0, int param1, byte param2) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        tf var15 = null;
-        tf var16 = null;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        tf var15;
+        tf var16;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         var13 = Pixelate.field_H ? 1 : 0;
         if (param2 >= -119) {
           field_U = (ak) null;
@@ -343,12 +309,10 @@ final class oc extends ng {
                 var10 = var6 - var5;
                 var11 = 128 - -(int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
                 if (256 > var11) {
-                  stackOut_15_0 = (-16711936 & var8 * var11 | var9 * var11 & 16711680) >>> 624566664;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_0 = (-16711936 & var8 * var11 | var9 * var11 & 16711680) >>> 624566664;
                   break L1;
                 } else {
-                  stackOut_14_0 = var9 | var8;
-                  stackIn_16_0 = stackOut_14_0;
+                  stackIn_16_0 = var9 | var8;
                   break L1;
                 }
               }
@@ -359,12 +323,10 @@ final class oc extends ng {
                 var9 = param1 & 65280;
                 var8 = param1 & 16711935;
                 if (var11 >= 256) {
-                  stackOut_18_0 = var8 | var9;
-                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_0 = var8 | var9;
                   break L2;
                 } else {
-                  stackOut_17_0 = (-16711936 & var8 * var11 | 16711680 & var11 * var9) >>> 2054322600;
-                  stackIn_19_0 = stackOut_17_0;
+                  stackIn_19_0 = (-16711936 & var8 * var11 | 16711680 & var11 * var9) >>> 2054322600;
                   break L2;
                 }
               }
@@ -392,12 +354,10 @@ final class oc extends ng {
                 var10 = var6 - var5;
                 var11 = 128 - -(int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
                 if (256 > var11) {
-                  stackOut_5_0 = (-16711936 & var8 * var11 | var9 * var11 & 16711680) >>> 624566664;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = (-16711936 & var8 * var11 | var9 * var11 & 16711680) >>> 624566664;
                   break L4;
                 } else {
-                  stackOut_4_0 = var9 | var8;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = var9 | var8;
                   break L4;
                 }
               }
@@ -408,12 +368,10 @@ final class oc extends ng {
                 var9 = param1 & 65280;
                 var8 = param1 & 16711935;
                 if (var11 >= 256) {
-                  stackOut_8_0 = var8 | var9;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = var8 | var9;
                   break L5;
                 } else {
-                  stackOut_7_0 = (-16711936 & var8 * var11 | 16711680 & var11 * var9) >>> 2054322600;
-                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_0 = (-16711936 & var8 * var11 | 16711680 & var11 * var9) >>> 2054322600;
                   break L5;
                 }
               }
@@ -428,27 +386,17 @@ final class oc extends ng {
     }
 
     private final void a(tf param0, int param1, int param2, int param3) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -509,27 +457,19 @@ final class oc extends ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var5);
-            stackOut_16_1 = new StringBuilder().append("oc.A(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var5);
+
+            stackIn_18_1 = new StringBuilder().append("oc.A(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }

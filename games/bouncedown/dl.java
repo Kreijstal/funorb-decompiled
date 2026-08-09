@@ -14,8 +14,6 @@ final class dl {
 
     final static boolean a(byte param0) {
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         wb.field_b = true;
         if (param0 != -75) {
           return false;
@@ -23,12 +21,10 @@ final class dl {
           L0: {
             nj.field_n = fa.a(110) - -15000L;
             if (-12 != (mh.field_U ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L0;
             }
           }

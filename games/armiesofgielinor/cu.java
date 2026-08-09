@@ -14,7 +14,7 @@ final class cu implements gj {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         if (param1 != 0) {
           if (param0 == 3) {
             if ((param1 ^ -1) < -1) {

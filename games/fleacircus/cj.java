@@ -6,7 +6,7 @@ final class cj {
     static String field_a;
 
     final static void a(int param0) {
-        String var2 = null;
+        String var2;
         if (param0 != 0) {
           cj.a(47);
           var2 = (String) null;

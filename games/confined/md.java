@@ -18,20 +18,22 @@ final class md {
     }
 
     final static void b(int param0) {
-        String[][] dupTemp$6 = null;
-        long[][] dupTemp$7 = null;
-        int[][] dupTemp$8 = null;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
+        String[][] dupTemp$0 = null;
+        long[][] dupTemp$1 = null;
+        int[][] dupTemp$2 = null;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         qn var4 = null;
         long var4_long = 0L;
         int var5 = 0;
-        bj var6_ref_bj = null;
         int var6 = 0;
+        bj var6_ref_bj = null;
         int var7 = 0;
         int var8_int = 0;
         String[][] var8 = null;
@@ -53,8 +55,6 @@ final class md {
         int var25 = 0;
         int var26 = 0;
         hb var28 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -99,16 +99,16 @@ final class md {
                         var8_int = 1;
                         L6: while (true) {
                           if (var8_int >= var5) {
-                            dupTemp$6 = new String[3][var6];
-                            var4.field_u = dupTemp$6;
-                            var8 = dupTemp$6;
+                            dupTemp$0 = new String[3][var6];
+                            var4.field_u = dupTemp$0;
+                            var8 = dupTemp$0;
                             var9 = new String[3][var6];
-                            dupTemp$7 = new long[3][var6];
-                            var4.field_p = dupTemp$7;
-                            var10 = dupTemp$7;
-                            dupTemp$8 = new int[3][var6 * var7];
-                            var4.field_q = dupTemp$8;
-                            var11 = dupTemp$8;
+                            dupTemp$1 = new long[3][var6];
+                            var4.field_p = dupTemp$1;
+                            var10 = dupTemp$1;
+                            dupTemp$2 = new int[3][var6 * var7];
+                            var4.field_q = dupTemp$2;
+                            var11 = dupTemp$2;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -139,9 +139,9 @@ final class md {
                                           var12++;
                                           break L8;
                                         } else {
-                                          incrementValue$9 = var15;
+                                          incrementValue$3 = var15;
                                           var15++;
-                                          var11[0][incrementValue$9] = var28.f((byte) 52);
+                                          var11[0][incrementValue$3] = var28.f((byte) 52);
                                           var25++;
                                           continue L9;
                                         }
@@ -165,9 +165,9 @@ final class md {
                                           if (var7 <= var25) {
                                             break L10;
                                           } else {
-                                            incrementValue$10 = var16;
+                                            incrementValue$4 = var16;
                                             var16++;
-                                            var11[1][incrementValue$10] = var28.f((byte) 37);
+                                            var11[1][incrementValue$4] = var28.f((byte) 37);
                                             var25++;
                                             continue L11;
                                           }
@@ -191,9 +191,9 @@ final class md {
                                           if (var7 <= var25) {
                                             break L12;
                                           } else {
-                                            incrementValue$11 = var17;
+                                            incrementValue$5 = var17;
                                             var17++;
-                                            var11[2][incrementValue$11] = var28.f((byte) 100);
+                                            var11[2][incrementValue$5] = var28.f((byte) 100);
                                             var25++;
                                             continue L13;
                                           }
@@ -293,11 +293,18 @@ final class md {
 
     final static void a(hb param0, byte param1) {
         try {
-            int discarded$1 = 0;
+            RuntimeException stackIn_65_0 = null;
+            StringBuilder stackIn_65_1 = null;
+            RuntimeException stackIn_66_0 = null;
+            StringBuilder stackIn_66_1 = null;
+            String stackIn_66_2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
             int var5 = 0;
+            int var6_int = 0;
             ClassNotFoundException var6 = null;
             InvalidClassException var6_ref = null;
             StreamCorruptedException var6_ref2 = null;
@@ -310,7 +317,6 @@ final class md {
             NullPointerException var6_ref9 = null;
             Exception var6_ref10 = null;
             Throwable var6_ref11 = null;
-            int var6_int = 0;
             int var8 = 0;
             Object[] var9 = null;
             int var10_int = 0;
@@ -331,23 +337,6 @@ final class md {
             java.lang.reflect.Field var28 = null;
             java.lang.reflect.Method var29 = null;
             java.lang.reflect.Method var30 = null;
-            RuntimeException stackIn_64_0 = null;
-            StringBuilder stackIn_64_1 = null;
-            RuntimeException stackIn_65_0 = null;
-            StringBuilder stackIn_65_1 = null;
-            RuntimeException stackIn_66_0 = null;
-            StringBuilder stackIn_66_1 = null;
-            String stackIn_66_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_63_0 = null;
-            StringBuilder stackOut_63_1 = null;
-            RuntimeException stackOut_65_0 = null;
-            StringBuilder stackOut_65_1 = null;
-            String stackOut_65_2 = null;
-            RuntimeException stackOut_64_0 = null;
-            StringBuilder stackOut_64_1 = null;
-            String stackOut_64_2 = null;
             var18 = null;
             var19 = null;
             var16 = null;
@@ -380,7 +369,7 @@ final class md {
                                 break L3;
                               }
                             }
-                            discarded$1 = param0.e(26199, var4);
+                            param0.e(26199, var4);
                             var17.a(true);
                             decompiledRegionSelector0 = 2;
                             break L0;
@@ -615,27 +604,19 @@ final class md {
               decompiledCaughtException = decompiledCaughtParameter12;
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_63_0 = (RuntimeException) (var2);
-                stackOut_63_1 = new StringBuilder().append("md.G(");
-                stackIn_65_0 = stackOut_63_0;
-                stackIn_65_1 = stackOut_63_1;
-                stackIn_64_0 = stackOut_63_0;
-                stackIn_64_1 = stackOut_63_1;
+                stackIn_65_0 = (RuntimeException) (var2);
+
+                stackIn_65_1 = new StringBuilder().append("md.G(");
+
                 if (param0 == null) {
-                  stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
-                  stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
-                  stackOut_65_2 = "null";
-                  stackIn_66_0 = stackOut_65_0;
-                  stackIn_66_1 = stackOut_65_1;
-                  stackIn_66_2 = stackOut_65_2;
+                  stackIn_66_0 = (RuntimeException) ((Object) stackIn_65_0);
+                  stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+                  stackIn_66_2 = "null";
                   break L24;
                 } else {
-                  stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-                  stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-                  stackOut_64_2 = "{...}";
-                  stackIn_66_0 = stackOut_64_0;
-                  stackIn_66_1 = stackOut_64_1;
-                  stackIn_66_2 = stackOut_64_2;
+                  stackIn_66_0 = (RuntimeException) ((Object) stackIn_65_0);
+                  stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+                  stackIn_66_2 = "{...}";
                   break L24;
                 }
               }
@@ -667,15 +648,15 @@ final class md {
             md.b((byte) 101);
         }
         String var1 = mc.a(16);
-        if (var1 != null) {
-            if (var1.indexOf('@') >= 0) {
-                var1 = "";
-            }
+        if (var1 != null && var1.indexOf('@') >= 0) {
+            var1 = "";
         }
         return new bn(mc.a(16), hf.l(50));
     }
 
     final static void a(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -693,8 +674,6 @@ final class md {
         Object var16 = null;
         gd var16_ref = null;
         int[] var17 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var16 = null;
         var8 = Confined.field_J ? 1 : 0;
         try {
@@ -798,8 +777,6 @@ final class md {
 
     final static boolean a(int param0) {
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
         L0: {
           if (param0 < -73) {
             break L0;
@@ -819,15 +796,13 @@ final class md {
                 if (qn.field_v.field_K != null) {
                   break L2;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L1;
                 }
               }
             }
           }
-          stackOut_6_0 = 0;
-          stackIn_7_0 = stackOut_6_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0 != 0;

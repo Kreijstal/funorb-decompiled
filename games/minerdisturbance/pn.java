@@ -947,7 +947,7 @@ final class pn implements uj {
     }
 
     final static void b(int param0) {
-        int var1 = 0;
+        int var1;
         if (oc.field_f >= 224) {
           ma.a(-121, 256);
           if (param0 == 60) {
@@ -969,19 +969,17 @@ final class pn implements uj {
     }
 
     final static void b(byte param0) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        RuntimeException var1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         tc var5 = null;
-        String var6 = null;
+        Object var6 = null;
         int var7 = 0;
         int var8 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -1038,8 +1036,8 @@ final class pn implements uj {
                   }
                   L4: {
                     eh.b(-10 + var3, -10 + var2, 50, 20 - -var1_int, 65330, 120);
-                    discarded$2 = wi.field_A.a(var6, -10 + var3, var2 + -10, 50, var1_int + 20, 16777215, 5592405, 1, 1, 0);
-                    discarded$3 = wi.field_A.a(var5.field_n, var3 + -10 + 60, var2 + -10, 140, var1_int + 20, 16777215, -1, 0, 1, 0);
+                    wi.field_A.a((String) (var6), -10 + var3, var2 + -10, 50, var1_int + 20, 16777215, 5592405, 1, 1, 0);
+                    wi.field_A.a(var5.field_n, var3 + -10 + 60, var2 + -10, 140, var1_int + 20, 16777215, -1, 0, 1, 0);
                     var2 = var2 + (var1_int + 24);
                     if ((var2 ^ -1) < -421) {
                       var3 += 220;

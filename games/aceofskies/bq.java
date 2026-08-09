@@ -5,8 +5,8 @@ final class bq extends qg implements java.awt.event.MouseWheelListener {
     private int field_f;
 
     final synchronized int b(int param0) {
-        int var2 = 0;
-        java.awt.event.MouseWheelEvent var3 = null;
+        int var2;
+        java.awt.event.MouseWheelEvent var3;
         var2 = this.field_f;
         if (param0 != 12) {
           var3 = (java.awt.event.MouseWheelEvent) null;
@@ -25,9 +25,8 @@ final class bq extends qg implements java.awt.event.MouseWheelListener {
     }
 
     final void a(java.awt.Component param0, boolean param1) {
-        int discarded$0 = 0;
         if (param1) {
-            discarded$0 = this.b(-92);
+            this.b(-92);
             param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
             return;
         }

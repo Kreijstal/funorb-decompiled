@@ -21,59 +21,29 @@ final class vm {
     static String field_g;
 
     final void a(vf param0, int param1) {
-        RuntimeException var3 = null;
-        float var3_float = 0.0f;
-        int var4 = 0;
-        hm var4_ref_hm = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        Object stackIn_19_0 = null;
-        float stackIn_19_1 = 0.0f;
         Object stackIn_20_0 = null;
         float stackIn_20_1 = 0.0f;
         Object stackIn_21_0 = null;
         float stackIn_21_1 = 0.0f;
         float stackIn_21_2 = 0.0f;
-        Object stackIn_22_0 = null;
-        float stackIn_22_1 = 0.0f;
         Object stackIn_23_0 = null;
         float stackIn_23_1 = 0.0f;
         Object stackIn_24_0 = null;
         float stackIn_24_1 = 0.0f;
         float stackIn_24_2 = 0.0f;
-        RuntimeException stackIn_54_0 = null;
-        StringBuilder stackIn_54_1 = null;
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
         RuntimeException stackIn_56_0 = null;
         StringBuilder stackIn_56_1 = null;
         String stackIn_56_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_18_0 = null;
-        float stackOut_18_1 = 0.0f;
-        Object stackOut_20_0 = null;
-        float stackOut_20_1 = 0.0f;
-        float stackOut_20_2 = 0.0f;
-        Object stackOut_19_0 = null;
-        float stackOut_19_1 = 0.0f;
-        float stackOut_19_2 = 0.0f;
-        Object stackOut_21_0 = null;
-        float stackOut_21_1 = 0.0f;
-        Object stackOut_23_0 = null;
-        float stackOut_23_1 = 0.0f;
-        float stackOut_23_2 = 0.0f;
-        Object stackOut_22_0 = null;
-        float stackOut_22_1 = 0.0f;
-        float stackOut_22_2 = 0.0f;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        RuntimeException stackOut_55_0 = null;
-        StringBuilder stackOut_55_1 = null;
-        String stackOut_55_2 = null;
-        RuntimeException stackOut_54_0 = null;
-        StringBuilder stackOut_54_1 = null;
-        String stackOut_54_2 = null;
+        float var3_float = 0.0f;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        hm var4_ref_hm = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
         var6 = Pool.field_O;
         try {
           L0: {
@@ -146,53 +116,37 @@ final class vm {
                       } else {
                         if (0 == ga.a(1500, true, ea.field_r)) {
                           L8: {
-                            stackOut_18_0 = this;
-                            stackOut_18_1 = this.field_i;
-                            stackIn_20_0 = stackOut_18_0;
-                            stackIn_20_1 = stackOut_18_1;
-                            stackIn_19_0 = stackOut_18_0;
-                            stackIn_19_1 = stackOut_18_1;
+                            stackIn_20_0 = this;
+
+                            stackIn_20_1 = this.field_i;
+
                             if (-1 <= (this.field_k[0][0] ^ -1)) {
-                              stackOut_20_0 = this;
-                              stackOut_20_1 = stackIn_20_1;
-                              stackOut_20_2 = (float)(-ga.a(256, true, ea.field_r)) / 256.0f;
-                              stackIn_21_0 = stackOut_20_0;
-                              stackIn_21_1 = stackOut_20_1;
-                              stackIn_21_2 = stackOut_20_2;
+                              stackIn_21_0 = this;
+                              stackIn_21_1 = stackIn_20_1;
+                              stackIn_21_2 = (float)(-ga.a(256, true, ea.field_r)) / 256.0f;
                               break L8;
                             } else {
-                              stackOut_19_0 = this;
-                              stackOut_19_1 = stackIn_19_1;
-                              stackOut_19_2 = (float)ga.a(256, true, ea.field_r) / 256.0f;
-                              stackIn_21_0 = stackOut_19_0;
-                              stackIn_21_1 = stackOut_19_1;
-                              stackIn_21_2 = stackOut_19_2;
+                              stackIn_21_0 = this;
+                              stackIn_21_1 = stackIn_20_1;
+                              stackIn_21_2 = (float)ga.a(256, true, ea.field_r) / 256.0f;
                               break L8;
                             }
                           }
                           L9: {
                             ((vm) (this)).field_i = stackIn_21_1 + stackIn_21_2;
-                            stackOut_21_0 = this;
-                            stackOut_21_1 = this.field_a;
-                            stackIn_23_0 = stackOut_21_0;
-                            stackIn_23_1 = stackOut_21_1;
-                            stackIn_22_0 = stackOut_21_0;
-                            stackIn_22_1 = stackOut_21_1;
+                            stackIn_23_0 = this;
+
+                            stackIn_23_1 = this.field_a;
+
                             if (0 < this.field_k[0][1]) {
-                              stackOut_23_0 = this;
-                              stackOut_23_1 = stackIn_23_1;
-                              stackOut_23_2 = (float)ga.a(256, true, ea.field_r) / 256.0f;
-                              stackIn_24_0 = stackOut_23_0;
-                              stackIn_24_1 = stackOut_23_1;
-                              stackIn_24_2 = stackOut_23_2;
+                              stackIn_24_0 = this;
+                              stackIn_24_1 = stackIn_23_1;
+                              stackIn_24_2 = (float)ga.a(256, true, ea.field_r) / 256.0f;
                               break L9;
                             } else {
-                              stackOut_22_0 = this;
-                              stackOut_22_1 = stackIn_22_1;
-                              stackOut_22_2 = (float)(-ga.a(256, true, ea.field_r)) / 256.0f;
-                              stackIn_24_0 = stackOut_22_0;
-                              stackIn_24_1 = stackOut_22_1;
-                              stackIn_24_2 = stackOut_22_2;
+                              stackIn_24_0 = this;
+                              stackIn_24_1 = stackIn_23_1;
+                              stackIn_24_2 = (float)(-ga.a(256, true, ea.field_r)) / 256.0f;
                               break L9;
                             }
                           }
@@ -311,27 +265,19 @@ final class vm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var3 = decompiledCaughtException;
-            stackOut_53_0 = (RuntimeException) (var3);
-            stackOut_53_1 = new StringBuilder().append("vm.A(");
-            stackIn_55_0 = stackOut_53_0;
-            stackIn_55_1 = stackOut_53_1;
-            stackIn_54_0 = stackOut_53_0;
-            stackIn_54_1 = stackOut_53_1;
+            stackIn_55_0 = (RuntimeException) (var3);
+
+            stackIn_55_1 = new StringBuilder().append("vm.A(");
+
             if (param0 == null) {
-              stackOut_55_0 = (RuntimeException) ((Object) stackIn_55_0);
-              stackOut_55_1 = (StringBuilder) ((Object) stackIn_55_1);
-              stackOut_55_2 = "null";
-              stackIn_56_0 = stackOut_55_0;
-              stackIn_56_1 = stackOut_55_1;
-              stackIn_56_2 = stackOut_55_2;
+              stackIn_56_0 = (RuntimeException) ((Object) stackIn_55_0);
+              stackIn_56_1 = (StringBuilder) ((Object) stackIn_55_1);
+              stackIn_56_2 = "null";
               break L17;
             } else {
-              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
-              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
-              stackOut_54_2 = "{...}";
-              stackIn_56_0 = stackOut_54_0;
-              stackIn_56_1 = stackOut_54_1;
-              stackIn_56_2 = stackOut_54_2;
+              stackIn_56_0 = (RuntimeException) ((Object) stackIn_55_0);
+              stackIn_56_1 = (StringBuilder) ((Object) stackIn_55_1);
+              stackIn_56_2 = "{...}";
               break L17;
             }
           }
@@ -340,14 +286,14 @@ final class vm {
     }
 
     final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        int var7 = 0;
-        int[] var8 = null;
-        int[] var10 = null;
-        int[] var13 = null;
+        int var2;
+        int var3;
+        int var4;
+        int[] var5;
+        int var7;
+        int[] var8;
+        int[] var10;
+        int[] var13;
         var7 = Pool.field_O;
         var2 = -82 % ((param0 - 62) / 60);
         var3 = 0;
@@ -365,7 +311,7 @@ final class vm {
                 if (var4 >= var10.length) {
                   break L2;
                 } else {
-                  if (var4 >= var13.length) {
+                  if ((var4 ^ -1) <= (var13.length ^ -1)) {
                     break L2;
                   } else {
                     var5[var4] = var13[var4];

@@ -20,7 +20,6 @@ final class kh implements Runnable {
     }
 
     final static String a(byte param0) {
-        String discarded$0 = null;
         if (mi.field_C < 2) {
             return j.field_lb;
         }
@@ -34,7 +33,7 @@ final class kh implements Runnable {
             return ff.field_l;
         }
         if (param0 >= -59) {
-            discarded$0 = kh.a((byte) -7);
+            kh.a((byte) -7);
         }
         if (!l.field_h.a("commonui", (byte) -127)) {
             return wi.field_F + " - " + l.field_h.a(0, "commonui") + "%";

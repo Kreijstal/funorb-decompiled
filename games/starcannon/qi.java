@@ -7,29 +7,15 @@ final class qi {
     static String field_b;
 
     final static void a(byte param0, String param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
         String stackIn_42_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -74,22 +60,18 @@ final class qi {
                 if (!eg.field_h) {
                   if (di.field_m >= le.field_a) {
                     if (le.field_a - -hf.field_l > di.field_m) {
-                      stackOut_17_0 = 1;
-                      stackIn_19_0 = stackOut_17_0;
+                      stackIn_19_0 = 1;
                       break L5;
                     } else {
-                      stackOut_16_0 = 0;
-                      stackIn_19_0 = stackOut_16_0;
+                      stackIn_19_0 = 0;
                       break L5;
                     }
                   } else {
-                    stackOut_14_0 = 0;
-                    stackIn_19_0 = stackOut_14_0;
+                    stackIn_19_0 = 0;
                     break L5;
                   }
                 } else {
-                  stackOut_12_0 = 0;
-                  stackIn_19_0 = stackOut_12_0;
+                  stackIn_19_0 = 0;
                   break L5;
                 }
               }
@@ -169,27 +151,19 @@ final class qi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var2 = decompiledCaughtException;
-            stackOut_39_0 = (RuntimeException) (var2);
-            stackOut_39_1 = new StringBuilder().append("qi.B(").append(param0).append(',');
-            stackIn_41_0 = stackOut_39_0;
-            stackIn_41_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            stackIn_41_0 = (RuntimeException) (var2);
+
+            stackIn_41_1 = new StringBuilder().append("qi.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "null";
               break L10;
             } else {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "{...}";
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_42_1 = stackOut_40_1;
-              stackIn_42_2 = stackOut_40_2;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "{...}";
               break L10;
             }
           }
@@ -198,7 +172,7 @@ final class qi {
     }
 
     final static id a(int param0) {
-        id var1 = null;
+        id var1;
         var1 = new id(td.field_m, gb.field_w, fc.field_d[0], qd.field_H[0], gg.field_d[0], gh.field_C[0], og.field_c[0], of.field_g);
         rc.b((byte) 64);
         if (param0 != 14609) {

@@ -10,6 +10,7 @@ final class mg extends le {
         hn var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
+        boolean stackIn_20_0 = false;
         RuntimeException decompiledCaughtException = null;
         var2 = ZombieDawn.field_J;
         try {
@@ -73,7 +74,8 @@ final class mg extends le {
               if (uh.field_o == null) {
                 break L7;
               } else {
-                if (uh.field_o.c((byte) -34)) {
+                stackIn_20_0 = uh.field_o.c((byte) -34);
+                if (stackIn_20_0) {
                   break L7;
                 } else {
                   te.field_kb = null;

@@ -27,25 +27,22 @@ final class up {
         int var3 = 0;
         int var4 = 0;
         jn.field_n.a(100, false);
-        if ((hj.field_S ^ -1) == 0) {
-          var1 = -qe.field_n + qe.field_f;
-          var2 = qe.field_l - qe.field_c;
-          var3 = ug.a(true, (var2 >> -1360178292) * (var2 >> -1542754292) + (var1 >> 412359916) * (var1 >> 2112222732)) >> 193682278;
-          if (0 > var3) {
-            throw new RuntimeException();
-          } else {
-            L0: {
-              if (var3 != 0) {
+        if ((hj.field_S ^ -1) != 0) {
+            qe.field_l = eh.field_h << 36554640;
+            qe.field_f = hj.field_S << 804050224;
+            var1 = -qe.field_n + qe.field_f;
+            var2 = qe.field_l - qe.field_c;
+            var3 = ug.a(true, (var2 >> -1360178292) * (var2 >> -1542754292) + (var1 >> 412359916) * (var1 >> 2112222732)) >> 193682278;
+            if (!(0 <= var3)) {
+                throw new RuntimeException();
+            }
+            if (!(var3 == 0)) {
                 var2 = var2 / var3;
                 var1 = var1 / var3;
                 qe.field_a = qe.field_a + var1;
                 qe.field_j = qe.field_j + var2;
                 qe.field_j = 14 * qe.field_j >> 363381124;
                 qe.field_a = qe.field_a * 14 >> -389346396;
-                break L0;
-              } else {
-                break L0;
-              }
             }
             qe.field_n = qe.field_n + (int)(1048576.0 * te.a(mo.field_a));
             var4 = 100 / ((param0 - 46) / 52);
@@ -53,42 +50,31 @@ final class up {
             qe.field_c = qe.field_c + qe.field_j;
             qe.field_n = qe.field_n + qe.field_a;
             return;
-          }
-        } else {
-          qe.field_l = eh.field_h << 36554640;
-          qe.field_f = hj.field_S << 804050224;
-          var1 = -qe.field_n + qe.field_f;
-          var2 = qe.field_l - qe.field_c;
-          var3 = ug.a(true, (var2 >> -1360178292) * (var2 >> -1542754292) + (var1 >> 412359916) * (var1 >> 2112222732)) >> 193682278;
-          if (0 > var3) {
-            throw new RuntimeException();
-          } else {
-            L1: {
-              if (var3 != 0) {
-                var2 = var2 / var3;
-                var1 = var1 / var3;
-                qe.field_a = qe.field_a + var1;
-                qe.field_j = qe.field_j + var2;
-                qe.field_j = 14 * qe.field_j >> 363381124;
-                qe.field_a = qe.field_a * 14 >> -389346396;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            qe.field_n = qe.field_n + (int)(1048576.0 * te.a(mo.field_a));
-            var4 = 100 / ((param0 - 46) / 52);
-            qe.field_c = qe.field_c + (int)(te.a(mo.field_a ^ 773223) * 1048576.0);
-            qe.field_c = qe.field_c + qe.field_j;
-            qe.field_n = qe.field_n + qe.field_a;
-            return;
-          }
         }
+        var1 = -qe.field_n + qe.field_f;
+        var2 = qe.field_l - qe.field_c;
+        var3 = ug.a(true, (var2 >> -1360178292) * (var2 >> -1542754292) + (var1 >> 412359916) * (var1 >> 2112222732)) >> 193682278;
+        if (!(0 <= var3)) {
+            throw new RuntimeException();
+        }
+        if (!(var3 == 0)) {
+            var2 = var2 / var3;
+            var1 = var1 / var3;
+            qe.field_a = qe.field_a + var1;
+            qe.field_j = qe.field_j + var2;
+            qe.field_j = 14 * qe.field_j >> 363381124;
+            qe.field_a = qe.field_a * 14 >> -389346396;
+        }
+        qe.field_n = qe.field_n + (int)(1048576.0 * te.a(mo.field_a));
+        var4 = 100 / ((param0 - 46) / 52);
+        qe.field_c = qe.field_c + (int)(te.a(mo.field_a ^ 773223) * 1048576.0);
+        qe.field_c = qe.field_c + qe.field_j;
+        qe.field_n = qe.field_n + qe.field_a;
     }
 
     final ll a(int param0) {
-        ll var2 = null;
-        int var3 = 0;
+        ll var2;
+        int var3;
         var2 = this.field_a.field_n;
         var3 = 89 / ((58 - param0) / 60);
         if (var2 == this.field_a) {
@@ -100,7 +86,7 @@ final class up {
     }
 
     final ll a(byte param0) {
-        ll var2 = null;
+        ll var2;
         var2 = this.field_e;
         if (var2 != this.field_a) {
           this.field_e = var2.field_n;
@@ -157,13 +143,12 @@ final class up {
     }
 
     final int b(byte param0) {
-        int discarded$2 = 0;
-        int var2 = 0;
-        ll var3 = null;
-        int var4 = 0;
+        int var2;
+        ll var3;
+        int var4;
         var4 = DungeonAssault.field_K;
         if (param0 != 53) {
-          discarded$2 = this.b((byte) 10);
+          this.b((byte) 10);
           var2 = 0;
           var3 = this.field_a.field_n;
           L0: while (true) {

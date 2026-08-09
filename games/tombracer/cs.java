@@ -7,7 +7,7 @@ final class cs {
     static jea field_a;
 
     final static String a(byte param0) {
-        int var1 = 0;
+        int var1;
         var1 = 126 % ((param0 - -60) / 52);
         if (kl.field_a == gsa.field_y) {
           return ub.field_i;
@@ -25,9 +25,8 @@ final class cs {
     }
 
     public static void a(int param0) {
-        String discarded$2 = null;
         if (param0 != 3840) {
-          discarded$2 = cs.a((byte) 80);
+          cs.a((byte) 80);
           field_b = null;
           field_a = null;
           field_c = null;

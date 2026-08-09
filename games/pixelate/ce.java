@@ -11,8 +11,8 @@ final class ce {
     static int field_g;
 
     final static int a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Pixelate.field_H ? 1 : 0;
         sc.field_d = null;
         if (param0 == -124) {

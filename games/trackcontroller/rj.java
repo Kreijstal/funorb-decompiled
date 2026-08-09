@@ -12,8 +12,7 @@ final class rj implements Iterable {
     static String field_f;
 
     final gb a(int param0) {
-        Iterator discarded$2 = null;
-        gb var2 = null;
+        gb var2;
         if (param0 == 65) {
           var2 = this.field_e.field_k;
           if (this.field_e == var2) {
@@ -23,7 +22,7 @@ final class rj implements Iterable {
             return var2;
           }
         } else {
-          discarded$2 = this.iterator();
+          this.iterator();
           var2 = this.field_e.field_k;
           if (this.field_e == var2) {
             return null;
@@ -36,18 +35,6 @@ final class rj implements Iterable {
 
     final static void a(java.applet.Applet param0, byte param1) {
         try {
-            Object discarded$6 = null;
-            Object discarded$7 = null;
-            Object discarded$8 = null;
-            Object discarded$9 = null;
-            Object discarded$10 = null;
-            Object discarded$11 = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            String var3 = null;
-            java.net.URL var4 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
@@ -55,14 +42,10 @@ final class rj implements Iterable {
             String stackIn_9_2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
+            String var3 = null;
+            java.net.URL var4 = null;
             try {
               L0: {
                 try {
@@ -70,12 +53,12 @@ final class rj implements Iterable {
                     if (param1 < -52) {
                       var4 = param0.getCodeBase();
                       var3 = of.a(param0, var4, false).getFile();
-                      discarded$6 = sj.a(param0, new Object[]{"home", var3 + "home.ws"}, 7648, "updatelinks");
-                      discarded$7 = sj.a(param0, new Object[]{"gamelist", var3 + "togamelist.ws"}, 7648, "updatelinks");
-                      discarded$8 = sj.a(param0, new Object[]{"serverlist", var3 + "toserverlist.ws"}, 7648, "updatelinks");
-                      discarded$9 = sj.a(param0, new Object[]{"options", var3 + "options.ws"}, 7648, "updatelinks");
-                      discarded$10 = sj.a(param0, new Object[]{"terms", var3 + "terms.ws"}, 7648, "updatelinks");
-                      discarded$11 = sj.a(param0, new Object[]{"privacy", var3 + "privacy.ws"}, 7648, "updatelinks");
+                      sj.a(param0, new Object[]{"home", var3 + "home.ws"}, 7648, "updatelinks");
+                      sj.a(param0, new Object[]{"gamelist", var3 + "togamelist.ws"}, 7648, "updatelinks");
+                      sj.a(param0, new Object[]{"serverlist", var3 + "toserverlist.ws"}, 7648, "updatelinks");
+                      sj.a(param0, new Object[]{"options", var3 + "options.ws"}, 7648, "updatelinks");
+                      sj.a(param0, new Object[]{"terms", var3 + "terms.ws"}, 7648, "updatelinks");
+                      sj.a(param0, new Object[]{"privacy", var3 + "privacy.ws"}, 7648, "updatelinks");
                       decompiledRegionSelector0 = 1;
                       break L1;
                     } else {
@@ -98,27 +81,19 @@ final class rj implements Iterable {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var2_ref);
-                stackOut_6_1 = new StringBuilder().append("rj.D(");
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var2_ref);
+
+                stackIn_8_1 = new StringBuilder().append("rj.D(");
+
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L2;
                 }
               }

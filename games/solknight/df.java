@@ -15,7 +15,6 @@ final class df extends a {
     }
 
     final String a(String param0, boolean param1) {
-        String discarded$2 = null;
         String var3 = null;
         RuntimeException var3_ref = null;
         wg var4 = null;
@@ -25,8 +24,6 @@ final class df extends a {
         Object stackIn_11_0 = null;
         String stackIn_15_0 = null;
         String stackIn_17_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -34,18 +31,6 @@ final class df extends a {
         String stackIn_21_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_4_0 = null;
-        Object stackOut_10_0 = null;
-        String stackOut_16_0 = null;
-        String stackOut_14_0 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
         try {
           L0: {
             L1: {
@@ -53,15 +38,14 @@ final class df extends a {
                 break L1;
               } else {
                 var5 = (String) null;
-                discarded$2 = this.a((String) null, true);
+                this.a((String) null, true);
                 break L1;
               }
             }
             var6 = (CharSequence) ((Object) param0);
             var3 = sj.a(var6, 0);
             if (var3 != null) {
-              stackOut_4_0 = (String) (var3);
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = (String) (var3);
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -76,8 +60,7 @@ final class df extends a {
                       this.field_j = param0;
                       break L2;
                     } else {
-                      stackOut_10_0 = null;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_11_0 = null;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -87,13 +70,11 @@ final class df extends a {
                 }
               }
               if (this.field_k) {
-                stackOut_16_0 = hj.field_o;
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_0 = hj.field_o;
                 decompiledRegionSelector0 = 3;
                 break L0;
               } else {
-                stackOut_14_0 = pc.field_d;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = pc.field_d;
                 decompiledRegionSelector0 = 2;
                 break L0;
               }
@@ -103,27 +84,19 @@ final class df extends a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var3_ref);
-            stackOut_18_1 = new StringBuilder().append("df.K(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var3_ref);
+
+            stackIn_20_1 = new StringBuilder().append("df.K(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L3;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L3;
             }
           }
@@ -145,11 +118,10 @@ final class df extends a {
     }
 
     final void a(boolean param0) {
-        String discarded$0 = null;
         this.field_j = null;
         if (!param0) {
             String var3 = (String) null;
-            discarded$0 = this.a((String) null, true);
+            this.a((String) null, true);
         }
     }
 
@@ -162,7 +134,6 @@ final class df extends a {
     }
 
     final qf a(String param0, byte param1) {
-        String discarded$2 = null;
         wg var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -170,8 +141,6 @@ final class df extends a {
         qf stackIn_2_0 = null;
         qf stackIn_8_0 = null;
         qf stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -179,18 +148,6 @@ final class df extends a {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        qf stackOut_7_0 = null;
-        qf stackOut_14_0 = null;
-        qf stackOut_13_0 = null;
-        qf stackOut_1_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         try {
           L0: {
             var5 = (CharSequence) ((Object) param0);
@@ -213,8 +170,7 @@ final class df extends a {
                       }
                     }
                   }
-                  stackOut_7_0 = db.field_u;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = db.field_u;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
@@ -224,26 +180,23 @@ final class df extends a {
                   break L3;
                 } else {
                   var4 = (String) null;
-                  discarded$2 = this.a((String) null, true);
+                  this.a((String) null, true);
                   break L3;
                 }
               }
               L4: {
                 if (!this.field_k) {
-                  stackOut_14_0 = rg.field_f;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = rg.field_f;
                   break L4;
                 } else {
-                  stackOut_13_0 = ph.field_g;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = ph.field_g;
                   break L4;
                 }
               }
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_1_0 = rg.field_f;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = rg.field_f;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -252,27 +205,19 @@ final class df extends a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var3_ref);
-            stackOut_16_1 = new StringBuilder().append("df.J(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var3_ref);
+
+            stackIn_18_1 = new StringBuilder().append("df.J(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }

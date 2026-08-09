@@ -27,11 +27,8 @@ final class oa implements Runnable {
         df var5 = null;
         int var6 = 0;
         df stackIn_3_0 = null;
-        df stackIn_7_0 = null;
         df stackIn_10_0 = null;
         df stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -39,18 +36,6 @@ final class oa implements Runnable {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        df stackOut_6_0 = null;
-        df stackOut_9_0 = null;
-        df stackOut_12_0 = null;
-        df stackOut_2_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var6 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -65,15 +50,13 @@ final class oa implements Runnable {
                       break L3;
                     } else {
                       var5 = var3[var4];
-                      stackOut_6_0 = (df) (var5);
-                      stackIn_13_0 = stackOut_6_0;
-                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_13_0 = (df) (var5);
+
                       if (var6 != 0) {
                         break L2;
                       } else {
-                        if (((df) (Object) stackIn_7_0).a(-68, var2)) {
-                          stackOut_9_0 = (df) (var5);
-                          stackIn_10_0 = stackOut_9_0;
+                        if (((df) (Object) stackIn_13_0).a(-68, var2)) {
+                          stackIn_10_0 = (df) (var5);
                           decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
@@ -87,16 +70,14 @@ final class oa implements Runnable {
                       }
                     }
                   }
-                  stackOut_12_0 = jc.field_a;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = jc.field_a;
                   break L2;
                 }
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = jc.field_a;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = jc.field_a;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -105,27 +86,19 @@ final class oa implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2_ref);
-            stackOut_14_1 = new StringBuilder().append("oa.C(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2_ref);
+
+            stackIn_16_1 = new StringBuilder().append("oa.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }
@@ -146,103 +119,212 @@ final class oa implements Runnable {
         Exception exception = null;
         int var1_int = 0;
         la var2 = null;
-        Throwable var3 = null;
         int var4 = 0;
         String var5 = null;
         Object stackIn_6_0 = null;
         Object stackIn_11_0 = null;
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
-        Throwable decompiledCaughtException = null;
-        Object stackOut_10_0 = null;
-        Object stackOut_5_0 = null;
-        var4 = OrbDefence.field_D ? 1 : 0;
-        this.field_b = true;
-        try {
-          L0: {
-            try {
-              L1: {
-                L2: while (true) {
-                  L3: {
-                    if (this.field_h) {
-                      break L3;
-                    } else {
-                      if (var4 != 0) {
-                        decompiledRegionSelector0 = 1;
-                        break L1;
-                      } else {
-                        var1_int = 0;
-                        L4: while (true) {
-                          L5: {
-                            if (var1_int >= 2) {
-                              hb.a(10L, 116);
-                              stackOut_10_0 = null;
-                              stackIn_11_0 = stackOut_10_0;
-                              break L5;
-                            } else {
-                              var2 = this.field_c[var1_int];
-                              stackOut_5_0 = null;
-                              stackIn_11_0 = stackOut_5_0;
-                              stackIn_6_0 = stackOut_5_0;
-                              if (var4 != 0) {
-                                break L5;
-                              } else {
-                                L6: {
-                                  if (stackIn_6_0 != var2) {
-                                    var2.a();
-                                    break L6;
-                                  } else {
-                                    break L6;
-                                  }
-                                }
-                                var1_int++;
-                                continue L4;
-                              }
-                            }
-                          }
-                          vf.a(stackIn_11_0, 50, this.field_g);
-                          if (var4 == 0) {
-                            continue L2;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  decompiledRegionSelector0 = 0;
-                  break L1;
+        int statePc = 0;
+        Throwable caughtException = null;
+        Throwable var3 = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = OrbDefence.field_D ? 1 : 0;
+                    this.field_b = true;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              exception = (Exception) (Object) decompiledCaughtException;
-              var5 = (String) null;
-              pe.a((byte) -13, (Throwable) ((Object) exception), (String) null);
-              this.field_b = false;
-              return;
+                case 1: {
+                    try {
+                        if (this.field_h) {
+                            statePc = 12;
+                        } else {
+                            statePc = 2;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = ((Object) stateCaught_1 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        if (var4 != 0) {
+                            statePc = 17;
+                        } else {
+                            statePc = 3;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = ((Object) stateCaught_2 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        var1_int = 0;
+                        statePc = 4;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = ((Object) stateCaught_3 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        if (var1_int >= 2) {
+                            statePc = 10;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = ((Object) stateCaught_4 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        var2 = this.field_c[var1_int];
+                        stackIn_11_0 = null;
+                        stackIn_6_0 = stackIn_11_0;
+                        if (var4 != 0) {
+                            statePc = 11;
+                        } else {
+                            statePc = 6;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = ((Object) stateCaught_5 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        if (stackIn_6_0 != var2) {
+                            statePc = 8;
+                        } else {
+                            statePc = 7;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = ((Object) stateCaught_6 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        statePc = 9;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = ((Object) stateCaught_7 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        var2.a();
+                        statePc = 9;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = ((Object) stateCaught_8 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 9: {
+                    try {
+                        var1_int++;
+                        if (var4 == 0) {
+                            statePc = 4;
+                        } else {
+                            statePc = 10;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_9) {
+                        caughtException = stateCaught_9;
+                        statePc = ((Object) stateCaught_9 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    try {
+                        hb.a(10L, 116);
+                        stackIn_11_0 = null;
+                        statePc = 11;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_10) {
+                        caughtException = stateCaught_10;
+                        statePc = ((Object) stateCaught_10 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    try {
+                        vf.a(stackIn_11_0, 50, this.field_g);
+                        if (var4 == 0) {
+                            statePc = 1;
+                        } else {
+                            statePc = 12;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_11) {
+                        caughtException = stateCaught_11;
+                        statePc = ((Object) stateCaught_11 instanceof Exception ? 13 : 15);
+                        continue stateLoop;
+                    }
+                }
+                case 12: {
+                    this.field_b = false;
+                    statePc = 17;
+                    continue stateLoop;
+                }
+                case 13: {
+                    try {
+                        exception = (Exception) ((Object) caughtException);
+                        var5 = (String) null;
+                        pe.a((byte) -13, (Throwable) ((Object) exception), (String) null);
+                        statePc = 14;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_13) {
+                        caughtException = stateCaught_13;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 14: {
+                    this.field_b = false;
+                    return;
+                }
+                case 15: {
+                    try {
+                        var3 = caughtException;
+                        statePc = 16;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_15) {
+                        caughtException = stateCaught_15;
+                        statePc = 15;
+                        continue stateLoop;
+                    }
+                }
+                case 16: {
+                    this.field_b = false;
+                    throw oa.<RuntimeException>$cfr$sneakyThrow(var3);
+                }
+                case 17: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            if (decompiledRegionSelector0 == 0) {
-              decompiledRegionSelector1 = 0;
-              break L0;
-            } else {
-              decompiledRegionSelector1 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.Throwable decompiledCaughtParameter1) {
-          decompiledCaughtException = decompiledCaughtParameter1;
-          var3 = decompiledCaughtException;
-          this.field_b = false;
-          throw oa.<RuntimeException>$cfr$sneakyThrow(var3);
-        }
-        L7: {
-          if (decompiledRegionSelector1 == 0) {
-            this.field_b = false;
-            break L7;
-          } else {
-            break L7;
-          }
         }
     }
 

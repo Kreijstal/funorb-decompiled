@@ -11,9 +11,6 @@ abstract class sca {
 
     final static int a(int param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            lu var2 = null;
             int stackIn_13_0 = 0;
             int stackIn_23_0 = 0;
             int stackIn_26_0 = 0;
@@ -21,11 +18,9 @@ abstract class sca {
             int stackIn_32_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_12_0 = 0;
-            int stackOut_25_0 = 0;
-            int stackOut_22_0 = 0;
-            int stackOut_31_0 = 0;
-            int stackOut_29_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            lu var2 = null;
             if (-5 >= (aka.field_G.field_e ^ -1)) {
               if (0 != (aka.field_G.field_k ^ -1)) {
                 if (aka.field_G.field_k != -2) {
@@ -60,8 +55,7 @@ abstract class sca {
                           break L2;
                         }
                       } else {
-                        stackOut_12_0 = cj.a(-1, 1);
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = cj.a(-1, 1);
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
@@ -92,8 +86,7 @@ abstract class sca {
                           ds.field_m = ds.field_m + 1;
                           break L4;
                         } else {
-                          stackOut_25_0 = cj.a(var1_int, 1);
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = cj.a(var1_int, 1);
                           decompiledRegionSelector0 = 2;
                           break L0;
                         }
@@ -101,8 +94,7 @@ abstract class sca {
                         if ((wh.field_q ^ -1L) <= (f.b((byte) 73) ^ -1L)) {
                           break L4;
                         } else {
-                          stackOut_22_0 = cj.a(-2, 1);
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_23_0 = cj.a(-2, 1);
                           decompiledRegionSelector0 = 1;
                           break L0;
                         }
@@ -110,8 +102,7 @@ abstract class sca {
                     }
                   }
                   if (ds.field_m != 4) {
-                    stackOut_31_0 = -1;
-                    stackIn_32_0 = stackOut_31_0;
+                    stackIn_32_0 = -1;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
@@ -119,8 +110,7 @@ abstract class sca {
                     ch.field_p = null;
                     hla.field_s = null;
                     ds.field_m = 0;
-                    stackOut_29_0 = 0;
-                    stackIn_30_0 = stackOut_29_0;
+                    stackIn_30_0 = 0;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }

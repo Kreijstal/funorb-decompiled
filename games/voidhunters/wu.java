@@ -17,9 +17,9 @@ final class wu extends uda {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        ura var6 = null;
+        int var4;
+        int var5;
+        ura var6;
         var5 = VoidHunters.field_G;
         this.field_d.g(1, -124);
         if (param2 == 5) {
@@ -142,16 +142,6 @@ final class wu extends uda {
     }
 
     final static void a(boolean param0, boolean param1) {
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        int discarded$8 = 0;
-        int discarded$9 = 0;
-        String var2 = null;
-        String[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         int stackIn_19_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_31_0 = 0;
@@ -162,26 +152,11 @@ final class wu extends uda {
         int stackIn_65_0 = 0;
         int stackIn_74_0 = 0;
         int stackIn_77_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_75_0 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_50_0 = 0;
+        String var2;
+        String[] var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var2 = kca.field_a;
           if (var2 != null) {
@@ -235,26 +210,22 @@ final class wu extends uda {
                 L5: {
                   vqa.field_g = new uca(false, var3, 0, false, var4, var5, param0);
                   if (!param1) {
-                    stackOut_30_0 = 0;
-                    stackIn_31_0 = stackOut_30_0;
+                    stackIn_31_0 = 0;
                     break L5;
                   } else {
-                    stackOut_29_0 = 1;
-                    stackIn_31_0 = stackOut_29_0;
+                    stackIn_31_0 = 1;
                     break L5;
                   }
                 }
                 L6: {
                   mjb.field_e = stackIn_31_0 != 0;
-                  discarded$5 = di.field_l.a(false, -13027);
+                  di.field_l.a(false, -13027);
                   var6 = mnb.field_d ? 1 : 0;
                   if (bqa.a(false)) {
-                    stackOut_33_0 = 7;
-                    stackIn_34_0 = stackOut_33_0;
+                    stackIn_34_0 = 7;
                     break L6;
                   } else {
-                    stackOut_32_0 = 0;
-                    stackIn_34_0 = stackOut_32_0;
+                    stackIn_34_0 = 0;
                     break L6;
                   }
                 }
@@ -295,26 +266,22 @@ final class wu extends uda {
                 L10: {
                   vqa.field_g = new uca(false, var3, 0, false, var4, var5, param0);
                   if (!param1) {
-                    stackOut_18_0 = 0;
-                    stackIn_19_0 = stackOut_18_0;
+                    stackIn_19_0 = 0;
                     break L10;
                   } else {
-                    stackOut_17_0 = 1;
-                    stackIn_19_0 = stackOut_17_0;
+                    stackIn_19_0 = 1;
                     break L10;
                   }
                 }
                 L11: {
                   mjb.field_e = stackIn_19_0 != 0;
-                  discarded$6 = di.field_l.a(false, -13027);
+                  di.field_l.a(false, -13027);
                   var6 = mnb.field_d ? 1 : 0;
                   if (bqa.a(false)) {
-                    stackOut_21_0 = 7;
-                    stackIn_22_0 = stackOut_21_0;
+                    stackIn_22_0 = 7;
                     break L11;
                   } else {
-                    stackOut_20_0 = 0;
-                    stackIn_22_0 = stackOut_20_0;
+                    stackIn_22_0 = 0;
                     break L11;
                   }
                 }
@@ -364,26 +331,22 @@ final class wu extends uda {
             L15: {
               vqa.field_g = new uca(false, var3, 0, false, var4, var5, param0);
               if (!param1) {
-                stackOut_73_0 = 0;
-                stackIn_74_0 = stackOut_73_0;
+                stackIn_74_0 = 0;
                 break L15;
               } else {
-                stackOut_72_0 = 1;
-                stackIn_74_0 = stackOut_72_0;
+                stackIn_74_0 = 1;
                 break L15;
               }
             }
             L16: {
               mjb.field_e = stackIn_74_0 != 0;
-              discarded$7 = di.field_l.a(false, -13027);
+              di.field_l.a(false, -13027);
               var6 = mnb.field_d ? 1 : 0;
               if (bqa.a(false)) {
-                stackOut_76_0 = 7;
-                stackIn_77_0 = stackOut_76_0;
+                stackIn_77_0 = 7;
                 break L16;
               } else {
-                stackOut_75_0 = 0;
-                stackIn_77_0 = stackOut_75_0;
+                stackIn_77_0 = 0;
                 break L16;
               }
             }
@@ -417,26 +380,22 @@ final class wu extends uda {
             L19: {
               vqa.field_g = new uca(false, var3, 0, false, var4, var5, param0);
               if (!param1) {
-                stackOut_61_0 = 0;
-                stackIn_62_0 = stackOut_61_0;
+                stackIn_62_0 = 0;
                 break L19;
               } else {
-                stackOut_60_0 = 1;
-                stackIn_62_0 = stackOut_60_0;
+                stackIn_62_0 = 1;
                 break L19;
               }
             }
             L20: {
               mjb.field_e = stackIn_62_0 != 0;
-              discarded$8 = di.field_l.a(false, -13027);
+              di.field_l.a(false, -13027);
               var6 = mnb.field_d ? 1 : 0;
               if (bqa.a(false)) {
-                stackOut_64_0 = 7;
-                stackIn_65_0 = stackOut_64_0;
+                stackIn_65_0 = 7;
                 break L20;
               } else {
-                stackOut_63_0 = 0;
-                stackIn_65_0 = stackOut_63_0;
+                stackIn_65_0 = 0;
                 break L20;
               }
             }
@@ -470,26 +429,22 @@ final class wu extends uda {
           L23: {
             vqa.field_g = new uca(false, var3, 0, false, var4, var5, param0);
             if (!param1) {
-              stackOut_48_0 = 0;
-              stackIn_49_0 = stackOut_48_0;
+              stackIn_49_0 = 0;
               break L23;
             } else {
-              stackOut_47_0 = 1;
-              stackIn_49_0 = stackOut_47_0;
+              stackIn_49_0 = 1;
               break L23;
             }
           }
           L24: {
             mjb.field_e = stackIn_49_0 != 0;
-            discarded$9 = di.field_l.a(false, -13027);
+            di.field_l.a(false, -13027);
             var6 = mnb.field_d ? 1 : 0;
             if (bqa.a(false)) {
-              stackOut_51_0 = 7;
-              stackIn_52_0 = stackOut_51_0;
+              stackIn_52_0 = 7;
               break L24;
             } else {
-              stackOut_50_0 = 0;
-              stackIn_52_0 = stackOut_50_0;
+              stackIn_52_0 = 0;
               break L24;
             }
           }
@@ -512,9 +467,9 @@ final class wu extends uda {
     }
 
     final void d(int param0) {
-        oj var2 = null;
-        oj var3 = null;
-        ura var4 = null;
+        oj var2;
+        oj var3;
+        ura var4;
         L0: {
           if (0 == this.field_d.t((byte) 9)) {
             var2 = this.field_d.p(0);
@@ -541,22 +496,12 @@ final class wu extends uda {
 
     final void a(byte param0, int param1, ura param2) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -574,27 +519,19 @@ final class wu extends uda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("wu.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("wu.E(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

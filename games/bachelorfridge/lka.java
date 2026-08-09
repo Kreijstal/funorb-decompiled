@@ -15,10 +15,10 @@ class lka extends hf {
 
     private final void h(int param0) {
         try {
+            Throwable decompiledCaughtException = null;
             String var2 = null;
             Exception var2_ref = null;
             int var3 = 0;
-            Throwable decompiledCaughtException = null;
             try {
               L0: {
                 var3 = 123 % ((param0 - 55) / 48);
@@ -42,8 +42,8 @@ class lka extends hf {
     }
 
     private final int j(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = BachelorFridge.field_y;
         if (param0 != this.field_H) {
           var2 = -1 + this.field_H;
@@ -84,9 +84,9 @@ class lka extends hf {
     }
 
     private final int e(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = BachelorFridge.field_y;
         if (param0 == -26) {
           var2 = this.field_w.length();
@@ -134,23 +134,12 @@ class lka extends hf {
     final static kv a(byte param0, kv param1) {
         RuntimeException var2 = null;
         kv stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kv stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -163,35 +152,26 @@ class lka extends hf {
             }
             param1.g(2);
             param1.f(65793);
-            stackOut_2_0 = (kv) (param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (kv) (param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("lka.C(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("lka.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -202,9 +182,6 @@ class lka extends hf {
 
     private final void a(String param0, byte param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -212,14 +189,7 @@ class lka extends hf {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -263,27 +233,19 @@ class lka extends hf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var3);
-            stackOut_12_1 = new StringBuilder().append("lka.G(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var3);
+
+            stackIn_14_1 = new StringBuilder().append("lka.G(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
@@ -310,24 +272,16 @@ class lka extends hf {
     }
 
     final boolean b(int param0, int param1, int param2, int param3, int param4, wj param5, int param6) {
-        RuntimeException var8 = null;
-        int var8_int = 0;
-        long var8_long = 0L;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
         Object stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_6_2 = 0;
-        Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         int stackIn_16_0 = 0;
         int stackIn_18_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -335,81 +289,47 @@ class lka extends hf {
         String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        Object stackOut_6_0 = null;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        int stackOut_15_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        int var8_int = 0;
+        long var8_long = 0L;
+        RuntimeException var8 = null;
         try {
           L0: {
             if (!super.b(param0, param1, param2, param3, param4, param5, param6)) {
-              stackOut_17_0 = 0;
-              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
               if (this.field_f instanceof qka) {
                 L1: {
                   var8_int = ((qka) ((Object) this.field_f)).a((wj) (this), gd.field_m, param2, param4, mk.field_p, (byte) -86);
-                  stackOut_3_0 = this;
-                  stackOut_3_1 = 1;
-                  stackIn_5_0 = stackOut_3_0;
-                  stackIn_5_1 = stackOut_3_1;
-                  stackIn_4_0 = stackOut_3_0;
-                  stackIn_4_1 = stackOut_3_1;
+                  stackIn_5_0 = this;
+
+                  stackIn_5_1 = 1;
+
                   if (-1 != var8_int) {
-                    stackOut_5_0 = this;
-                    stackOut_5_1 = stackIn_5_1;
-                    stackOut_5_2 = var8_int;
-                    stackIn_6_0 = stackOut_5_0;
-                    stackIn_6_1 = stackOut_5_1;
-                    stackIn_6_2 = stackOut_5_2;
+                    stackIn_6_0 = this;
+                    stackIn_6_1 = stackIn_5_1;
+                    stackIn_6_2 = var8_int;
                     break L1;
                   } else {
-                    stackOut_4_0 = this;
-                    stackOut_4_1 = stackIn_4_1;
-                    stackOut_4_2 = 0;
-                    stackIn_6_0 = stackOut_4_0;
-                    stackIn_6_1 = stackOut_4_1;
-                    stackIn_6_2 = stackOut_4_2;
+                    stackIn_6_0 = this;
+                    stackIn_6_1 = stackIn_5_1;
+                    stackIn_6_2 = 0;
                     break L1;
                   }
                 }
                 L2: {
                   this.a(stackIn_6_1 != 0, stackIn_6_2);
                   var8_long = f.b((byte) 73);
-                  stackOut_6_0 = this;
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_8_0 = this;
+
                   if (-251L >= (var8_long - this.field_A ^ -1L)) {
-                    stackOut_8_0 = this;
-                    stackOut_8_1 = 0;
-                    stackIn_9_0 = stackOut_8_0;
-                    stackIn_9_1 = stackOut_8_1;
+                    stackIn_9_0 = this;
+                    stackIn_9_1 = 0;
                     break L2;
                   } else {
-                    stackOut_7_0 = this;
-                    stackOut_7_1 = 1;
-                    stackIn_9_0 = stackOut_7_0;
-                    stackIn_9_1 = stackOut_7_1;
+                    stackIn_9_0 = this;
+                    stackIn_9_1 = 1;
                     break L2;
                   }
                 }
@@ -437,8 +357,7 @@ class lka extends hf {
                   }
                 }
                 this.field_A = var8_long;
-                stackOut_15_0 = 1;
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_0 = 1;
                 decompiledRegionSelector0 = 0;
                 break L0;
               } else {
@@ -450,27 +369,19 @@ class lka extends hf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var8);
-            stackOut_19_1 = new StringBuilder().append("lka.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var8);
+
+            stackIn_21_1 = new StringBuilder().append("lka.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L5;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L5;
             }
           }
@@ -527,42 +438,30 @@ class lka extends hf {
     }
 
     private final String f(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
+        int var2;
+        int var3;
         if (param0 != -53) {
           L0: {
             this.field_H = -11;
             if (this.field_H <= this.field_K) {
-              stackOut_10_0 = this.field_H;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = this.field_H;
               break L0;
             } else {
-              stackOut_9_0 = this.field_K;
-              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_0 = this.field_K;
               break L0;
             }
           }
           L1: {
             var2 = stackIn_11_0;
             if (this.field_H <= this.field_K) {
-              stackOut_13_0 = this.field_K;
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_0 = this.field_K;
               break L1;
             } else {
-              stackOut_12_0 = this.field_H;
-              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_0 = this.field_H;
               break L1;
             }
           }
@@ -571,24 +470,20 @@ class lka extends hf {
         } else {
           L2: {
             if (this.field_H <= this.field_K) {
-              stackOut_3_0 = this.field_H;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = this.field_H;
               break L2;
             } else {
-              stackOut_2_0 = this.field_K;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = this.field_K;
               break L2;
             }
           }
           L3: {
             var2 = stackIn_4_0;
             if (this.field_H <= this.field_K) {
-              stackOut_6_0 = this.field_K;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = this.field_K;
               break L3;
             } else {
-              stackOut_5_0 = this.field_H;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = this.field_H;
               break L3;
             }
           }
@@ -598,141 +493,102 @@ class lka extends hf {
     }
 
     private final void d(byte param0) {
-        vv var3 = null;
+        qka var10 = null;
+        vv var11 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
-        qka var10 = null;
-        vv var11 = null;
-        qka var12 = null;
-        vv var13 = null;
-        var8 = BachelorFridge.field_y;
-        if (this.field_D) {
-          if (param0 < -71) {
-            if (this.field_f instanceof qka) {
-              var12 = (qka) ((Object) this.field_f);
-              var13 = var12.b((wj) (this), false);
-              var4 = var13.b((byte) 124);
-              var5 = var12.a((wj) (this), false);
-              var6 = var12.a(-30983) >> -1925269055;
-              if (-var6 + var5 <= var4) {
-                var7 = this.field_m - -var13.a(this.field_H, (byte) -99);
-                if (var7 <= var5 + -var6) {
-                  if (var6 <= var7) {
-                    if (0 < this.field_m) {
-                      this.field_m = 0;
-                      return;
-                    } else {
-                      if (this.field_m >= -var5 - -var6) {
-                        return;
-                      } else {
-                        this.field_m = var6 + -var5;
-                        return;
-                      }
-                    }
-                  } else {
-                    this.field_m = this.field_m + (var6 + -var7);
-                    if (0 < this.field_m) {
-                      this.field_m = 0;
-                      return;
-                    } else {
-                      if (this.field_m >= -var5 - -var6) {
-                        return;
-                      } else {
-                        this.field_m = var6 + -var5;
-                        return;
-                      }
-                    }
-                  }
-                } else {
-                  this.field_m = -var7 + (var5 + -var6 + this.field_m);
-                  if (0 < this.field_m) {
-                    this.field_m = 0;
-                    return;
-                  } else {
-                    if (this.field_m >= -var5 - -var6) {
-                      return;
-                    } else {
-                      this.field_m = var6 + -var5;
-                      return;
-                    }
-                  }
-                }
-              } else {
-                this.field_o = 0;
-                this.field_m = 0;
-                return;
-              }
-            } else {
-              return;
-            }
-          } else {
+        int var8 = BachelorFridge.field_y;
+        if (!this.field_D) {
+            this.field_m = 0;
+            this.field_o = 0;
+            return;
+        }
+        if (param0 >= -71) {
             this.field_J = -15;
-            if (this.field_f instanceof qka) {
-              var10 = (qka) ((Object) this.field_f);
-              var11 = var10.b((wj) (this), false);
-              var3 = var11;
-              var4 = var11.b((byte) 124);
-              var5 = var10.a((wj) (this), false);
-              var6 = var10.a(-30983) >> -1925269055;
-              if (-var6 + var5 <= var4) {
-                var7 = this.field_m - -var11.a(this.field_H, (byte) -99);
-                if (var7 <= var5 + -var6) {
-                  if (var6 > var7) {
-                    this.field_m = this.field_m + (var6 + -var7);
-                    if (0 >= this.field_m) {
-                      if (this.field_m < -var5 - -var6) {
-                        this.field_m = var6 + -var5;
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      this.field_m = 0;
-                      return;
-                    }
-                  } else {
-                    if (0 >= this.field_m) {
-                      if (this.field_m < -var5 - -var6) {
-                        this.field_m = var6 + -var5;
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      this.field_m = 0;
-                      return;
-                    }
-                  }
-                } else {
-                  this.field_m = -var7 + (var5 + -var6 + this.field_m);
-                  if (0 >= this.field_m) {
-                    if (this.field_m >= -var5 - -var6) {
-                      return;
-                    } else {
-                      this.field_m = var6 + -var5;
-                      return;
-                    }
-                  } else {
-                    this.field_m = 0;
-                    return;
-                  }
-                }
-              } else {
+            if (!(this.field_f instanceof qka)) {
+                return;
+            }
+            var10 = (qka) ((Object) this.field_f);
+            var11 = var10.b((wj) (this), false);
+            vv var3 = var11;
+            var4 = var11.b((byte) 124);
+            var5 = var10.a((wj) (this), false);
+            var6 = var10.a(-30983) >> -1925269055;
+            if (-var6 + var5 > var4) {
                 this.field_o = 0;
                 this.field_m = 0;
                 return;
-              }
-            } else {
-              return;
             }
-          }
-        } else {
-          this.field_m = 0;
-          this.field_o = 0;
-          return;
+            var7 = this.field_m - -var11.a(this.field_H, (byte) -99);
+            if (var7 > var5 + -var6) {
+                this.field_m = -var7 + (var5 + -var6 + this.field_m);
+                if (0 < this.field_m) {
+                    this.field_m = 0;
+                    return;
+                }
+                if (this.field_m < -var5 - -var6) {
+                    this.field_m = var6 + -var5;
+                    return;
+                }
+                return;
+            }
+            if (var6 <= var7) {
+                if (0 < this.field_m) {
+                    this.field_m = 0;
+                    return;
+                }
+                if (this.field_m >= -var5 - -var6) {
+                    return;
+                }
+                this.field_m = var6 + -var5;
+                return;
+            }
+            this.field_m = this.field_m + (var6 + -var7);
+            if (0 < this.field_m) {
+                this.field_m = 0;
+                return;
+            }
+            if (this.field_m >= -var5 - -var6) {
+                return;
+            }
+            this.field_m = var6 + -var5;
+            return;
+        }
+        if (!(this.field_f instanceof qka)) {
+            return;
+        }
+        qka var12 = (qka) ((Object) this.field_f);
+        vv var13 = var12.b((wj) (this), false);
+        var4 = var13.b((byte) 124);
+        var5 = var12.a((wj) (this), false);
+        var6 = var12.a(-30983) >> -1925269055;
+        if (-var6 + var5 > var4) {
+            this.field_o = 0;
+            this.field_m = 0;
+            return;
+        }
+        var7 = this.field_m - -var13.a(this.field_H, (byte) -99);
+        if (var7 > var5 + -var6) {
+            this.field_m = -var7 + (var5 + -var6 + this.field_m);
+            if (0 < this.field_m || this.field_m < -var5 - -var6) {
+                this.field_m = 0;
+                return;
+            }
+            return;
+        }
+        if (var6 > var7) {
+            this.field_m = this.field_m + (var6 + -var7);
+            if (0 < this.field_m || this.field_m < -var5 - -var6) {
+                this.field_m = 0;
+                return;
+            }
+            return;
+        }
+        if (0 < this.field_m || this.field_m < -var5 - -var6) {
+            this.field_m = 0;
+            return;
         }
     }
 
@@ -740,8 +596,6 @@ class lka extends hf {
         RuntimeException var5 = null;
         int var6 = 0;
         qka var7 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -749,14 +603,6 @@ class lka extends hf {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             super.a(param0, param1, param2, param3 + 0);
@@ -808,27 +654,19 @@ class lka extends hf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var5);
-            stackOut_14_1 = new StringBuilder().append("lka.O(").append(param0).append(',').append(param1).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var5);
+
+            stackIn_16_1 = new StringBuilder().append("lka.O(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L3;
             }
           }
@@ -842,26 +680,16 @@ class lka extends hf {
     }
 
     final void a(byte param0, String param1, boolean param2) {
-        int dupTemp$2 = 0;
+        int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             L1: {
@@ -887,9 +715,9 @@ class lka extends hf {
                 }
               }
             }
-            dupTemp$2 = this.field_w.length();
-            this.field_K = dupTemp$2;
-            this.field_H = dupTemp$2;
+            dupTemp$1 = this.field_w.length();
+            this.field_K = dupTemp$1;
+            this.field_H = dupTemp$1;
             if (!param2) {
               this.i((byte) -90);
               break L0;
@@ -901,27 +729,19 @@ class lka extends hf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var4);
-            stackOut_11_1 = new StringBuilder().append("lka.B(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var4);
+
+            stackIn_13_1 = new StringBuilder().append("lka.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -931,7 +751,7 @@ class lka extends hf {
 
     private final void b(boolean param0) {
         try {
-            String var2 = null;
+            String var2;
             var2 = this.f((byte) -53);
             if (param0) {
               return;
@@ -954,23 +774,16 @@ class lka extends hf {
     }
 
     final boolean a(int param0, int param1, char param2, wj param3) {
-        int dupTemp$2 = 0;
-        boolean discarded$3 = false;
-        RuntimeException var5 = null;
-        wj var6 = null;
+        int dupTemp$0 = 0;
         int stackIn_4_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_22_0 = 0;
-        Object stackIn_26_0 = null;
-        int stackIn_26_1 = 0;
         Object stackIn_27_0 = null;
         int stackIn_27_1 = 0;
         Object stackIn_28_0 = null;
         int stackIn_28_1 = 0;
         int stackIn_28_2 = 0;
         int stackIn_29_0 = 0;
-        Object stackIn_33_0 = null;
-        int stackIn_33_1 = 0;
         Object stackIn_34_0 = null;
         int stackIn_34_1 = 0;
         Object stackIn_35_0 = null;
@@ -988,8 +801,6 @@ class lka extends hf {
         int stackIn_71_0 = 0;
         int stackIn_73_0 = 0;
         int stackIn_77_0 = 0;
-        RuntimeException stackIn_79_0 = null;
-        StringBuilder stackIn_79_1 = null;
         RuntimeException stackIn_80_0 = null;
         StringBuilder stackIn_80_1 = null;
         RuntimeException stackIn_81_0 = null;
@@ -997,46 +808,8 @@ class lka extends hf {
         String stackIn_81_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_70_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_38_0 = 0;
-        Object stackOut_32_0 = null;
-        int stackOut_32_1 = 0;
-        Object stackOut_34_0 = null;
-        int stackOut_34_1 = 0;
-        int stackOut_34_2 = 0;
-        Object stackOut_33_0 = null;
-        int stackOut_33_1 = 0;
-        int stackOut_33_2 = 0;
-        int stackOut_35_0 = 0;
-        Object stackOut_25_0 = null;
-        int stackOut_25_1 = 0;
-        Object stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        int stackOut_27_2 = 0;
-        Object stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
-        int stackOut_26_2 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_78_0 = null;
-        StringBuilder stackOut_78_1 = null;
-        RuntimeException stackOut_80_0 = null;
-        StringBuilder stackOut_80_1 = null;
-        String stackOut_80_2 = null;
-        RuntimeException stackOut_79_0 = null;
-        StringBuilder stackOut_79_1 = null;
-        String stackOut_79_2 = null;
+        RuntimeException var5 = null;
+        wj var6 = null;
         try {
           L0: {
             L1: {
@@ -1082,17 +855,16 @@ class lka extends hf {
                               break L6;
                             } else {
                               this.field_w = this.field_w + param2;
-                              dupTemp$2 = this.field_w.length();
-                              this.field_H = dupTemp$2;
-                              this.field_K = dupTemp$2;
+                              dupTemp$0 = this.field_w.length();
+                              this.field_H = dupTemp$0;
+                              this.field_K = dupTemp$0;
                               break L6;
                             }
                           }
                           this.i((byte) -123);
                           break L4;
                         }
-                        stackOut_16_0 = 1;
-                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_0 = 1;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -1102,16 +874,14 @@ class lka extends hf {
                     if (-86 == (param1 ^ -1)) {
                       if (this.field_H != this.field_K) {
                         this.i(120);
-                        stackOut_72_0 = 1;
-                        stackIn_73_0 = stackOut_72_0;
+                        stackIn_73_0 = 1;
                         decompiledRegionSelector0 = 14;
                         break L0;
                       } else {
                         if (-1 > (this.field_H ^ -1)) {
                           this.field_K = this.field_H - 1;
                           this.i(111);
-                          stackOut_70_0 = 1;
-                          stackIn_71_0 = stackOut_70_0;
+                          stackIn_71_0 = 1;
                           decompiledRegionSelector0 = 13;
                           break L0;
                         } else {
@@ -1122,16 +892,14 @@ class lka extends hf {
                       if (-102 == (param1 ^ -1)) {
                         if (this.field_H != this.field_K) {
                           this.i(param0 + 109);
-                          stackOut_65_0 = 1;
-                          stackIn_66_0 = stackOut_65_0;
+                          stackIn_66_0 = 1;
                           decompiledRegionSelector0 = 12;
                           break L0;
                         } else {
                           if (this.field_H < this.field_w.length()) {
                             this.field_K = 1 + this.field_H;
                             this.i(106);
-                            stackOut_63_0 = 1;
-                            stackIn_64_0 = stackOut_63_0;
+                            stackIn_64_0 = 1;
                             decompiledRegionSelector0 = 11;
                             break L0;
                           } else {
@@ -1153,8 +921,7 @@ class lka extends hf {
                                           break L8;
                                         } else {
                                           this.g(81);
-                                          stackOut_48_0 = 1;
-                                          stackIn_49_0 = stackOut_48_0;
+                                          stackIn_49_0 = 1;
                                           decompiledRegionSelector0 = 8;
                                           break L0;
                                         }
@@ -1166,8 +933,7 @@ class lka extends hf {
                                       } else {
                                         if ((param1 ^ -1) == -67) {
                                           this.b(false);
-                                          stackOut_58_0 = 1;
-                                          stackIn_59_0 = stackOut_58_0;
+                                          stackIn_59_0 = 1;
                                           decompiledRegionSelector0 = 10;
                                           break L0;
                                         } else {
@@ -1180,8 +946,7 @@ class lka extends hf {
                                     } else {
                                       if (param1 == 67) {
                                         this.h(104);
-                                        stackOut_56_0 = 1;
-                                        stackIn_57_0 = stackOut_56_0;
+                                        stackIn_57_0 = 1;
                                         decompiledRegionSelector0 = 9;
                                         break L0;
                                       } else {
@@ -1190,22 +955,19 @@ class lka extends hf {
                                     }
                                   } else {
                                     this.h((byte) 52);
-                                    stackOut_44_0 = 1;
-                                    stackIn_45_0 = stackOut_44_0;
+                                    stackIn_45_0 = 1;
                                     decompiledRegionSelector0 = 7;
                                     break L0;
                                   }
                                 } else {
                                   this.a(true, this.field_w.length());
-                                  stackOut_41_0 = 1;
-                                  stackIn_42_0 = stackOut_41_0;
+                                  stackIn_42_0 = 1;
                                   decompiledRegionSelector0 = 6;
                                   break L0;
                                 }
                               } else {
                                 this.a(true, 0);
-                                stackOut_38_0 = 1;
-                                stackIn_39_0 = stackOut_38_0;
+                                stackIn_39_0 = 1;
                                 decompiledRegionSelector0 = 5;
                                 break L0;
                               }
@@ -1214,33 +976,24 @@ class lka extends hf {
                                 break L7;
                               } else {
                                 L10: {
-                                  stackOut_32_0 = this;
-                                  stackOut_32_1 = 1;
-                                  stackIn_34_0 = stackOut_32_0;
-                                  stackIn_34_1 = stackOut_32_1;
-                                  stackIn_33_0 = stackOut_32_0;
-                                  stackIn_33_1 = stackOut_32_1;
+                                  stackIn_34_0 = this;
+
+                                  stackIn_34_1 = 1;
+
                                   if (!wga.field_q[82]) {
-                                    stackOut_34_0 = this;
-                                    stackOut_34_1 = stackIn_34_1;
-                                    stackOut_34_2 = 1 + this.field_H;
-                                    stackIn_35_0 = stackOut_34_0;
-                                    stackIn_35_1 = stackOut_34_1;
-                                    stackIn_35_2 = stackOut_34_2;
+                                    stackIn_35_0 = this;
+                                    stackIn_35_1 = stackIn_34_1;
+                                    stackIn_35_2 = 1 + this.field_H;
                                     break L10;
                                   } else {
-                                    stackOut_33_0 = this;
-                                    stackOut_33_1 = stackIn_33_1;
-                                    stackOut_33_2 = this.e((byte) -26);
-                                    stackIn_35_0 = stackOut_33_0;
-                                    stackIn_35_1 = stackOut_33_1;
-                                    stackIn_35_2 = stackOut_33_2;
+                                    stackIn_35_0 = this;
+                                    stackIn_35_1 = stackIn_34_1;
+                                    stackIn_35_2 = this.e((byte) -26);
                                     break L10;
                                   }
                                 }
                                 this.a(stackIn_35_1 != 0, stackIn_35_2);
-                                stackOut_35_0 = 1;
-                                stackIn_36_0 = stackOut_35_0;
+                                stackIn_36_0 = 1;
                                 decompiledRegionSelector0 = 4;
                                 break L0;
                               }
@@ -1250,41 +1003,31 @@ class lka extends hf {
                               break L7;
                             } else {
                               L11: {
-                                stackOut_25_0 = this;
-                                stackOut_25_1 = 1;
-                                stackIn_27_0 = stackOut_25_0;
-                                stackIn_27_1 = stackOut_25_1;
-                                stackIn_26_0 = stackOut_25_0;
-                                stackIn_26_1 = stackOut_25_1;
+                                stackIn_27_0 = this;
+
+                                stackIn_27_1 = 1;
+
                                 if (wga.field_q[82]) {
-                                  stackOut_27_0 = this;
-                                  stackOut_27_1 = stackIn_27_1;
-                                  stackOut_27_2 = this.j(0);
-                                  stackIn_28_0 = stackOut_27_0;
-                                  stackIn_28_1 = stackOut_27_1;
-                                  stackIn_28_2 = stackOut_27_2;
+                                  stackIn_28_0 = this;
+                                  stackIn_28_1 = stackIn_27_1;
+                                  stackIn_28_2 = this.j(0);
                                   break L11;
                                 } else {
-                                  stackOut_26_0 = this;
-                                  stackOut_26_1 = stackIn_26_1;
-                                  stackOut_26_2 = -1 + this.field_H;
-                                  stackIn_28_0 = stackOut_26_0;
-                                  stackIn_28_1 = stackOut_26_1;
-                                  stackIn_28_2 = stackOut_26_2;
+                                  stackIn_28_0 = this;
+                                  stackIn_28_1 = stackIn_27_1;
+                                  stackIn_28_2 = -1 + this.field_H;
                                   break L11;
                                 }
                               }
                               this.a(stackIn_28_1 != 0, stackIn_28_2);
-                              stackOut_28_0 = 1;
-                              stackIn_29_0 = stackOut_28_0;
+                              stackIn_29_0 = 1;
                               decompiledRegionSelector0 = 3;
                               break L0;
                             }
                           }
                         } else {
                           this.j((byte) -85);
-                          stackOut_21_0 = 1;
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_22_0 = 1;
                           decompiledRegionSelector0 = 2;
                           break L0;
                         }
@@ -1292,20 +1035,18 @@ class lka extends hf {
                     }
                   }
                   if (param0 == 10) {
-                    stackOut_76_0 = 0;
-                    stackIn_77_0 = stackOut_76_0;
+                    stackIn_77_0 = 0;
                     decompiledRegionSelector0 = 15;
                     break L0;
                   } else {
                     var6 = (wj) null;
-                    discarded$3 = this.b(-24, 51, -40, -52, -18, (wj) null, -94);
+                    this.b(-24, 51, -40, -52, -18, (wj) null, -94);
                     return false;
                   }
                 }
               }
             }
-            stackOut_3_0 = 0;
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = 0;
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -1313,27 +1054,19 @@ class lka extends hf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L12: {
             var5 = decompiledCaughtException;
-            stackOut_78_0 = (RuntimeException) (var5);
-            stackOut_78_1 = new StringBuilder().append("lka.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_80_0 = stackOut_78_0;
-            stackIn_80_1 = stackOut_78_1;
-            stackIn_79_0 = stackOut_78_0;
-            stackIn_79_1 = stackOut_78_1;
+            stackIn_80_0 = (RuntimeException) (var5);
+
+            stackIn_80_1 = new StringBuilder().append("lka.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_80_0 = (RuntimeException) ((Object) stackIn_80_0);
-              stackOut_80_1 = (StringBuilder) ((Object) stackIn_80_1);
-              stackOut_80_2 = "null";
-              stackIn_81_0 = stackOut_80_0;
-              stackIn_81_1 = stackOut_80_1;
-              stackIn_81_2 = stackOut_80_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+              stackIn_81_2 = "null";
               break L12;
             } else {
-              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
-              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
-              stackOut_79_2 = "{...}";
-              stackIn_81_0 = stackOut_79_0;
-              stackIn_81_1 = stackOut_79_1;
-              stackIn_81_2 = stackOut_79_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+              stackIn_81_2 = "{...}";
               break L12;
             }
           }
@@ -1417,9 +1150,9 @@ class lka extends hf {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        long var6 = 0L;
-        qka var8 = null;
+        int var5;
+        long var6;
+        qka var8;
         if (null != this.field_f) {
           if (param2 == 0) {
             this.field_f.a(param3, (wj) (this), 32679, param1, this.field_z);

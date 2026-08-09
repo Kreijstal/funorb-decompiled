@@ -41,20 +41,14 @@ abstract class th {
     final boolean c(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -7614) {
           L0: {
             this.field_a = -74;
             if (-21 < (this.d(20) ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -62,12 +56,10 @@ abstract class th {
         } else {
           L1: {
             if (-21 < (this.d(20) ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -89,7 +81,6 @@ abstract class th {
     abstract void a(Object param0, boolean param1, byte param2);
 
     final static mh a(int param0, String param1) {
-        mh discarded$2 = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -99,8 +90,6 @@ abstract class th {
         mh stackIn_4_0 = null;
         mh stackIn_7_0 = null;
         mh stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -108,17 +97,6 @@ abstract class th {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        mh stackOut_12_0 = null;
-        mh stackOut_6_0 = null;
-        mh stackOut_3_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
@@ -134,23 +112,21 @@ abstract class th {
                         break L2;
                       } else {
                         var6 = (String) null;
-                        discarded$2 = th.a(-51, (String) null);
+                        th.a(-51, (String) null);
                         break L2;
                       }
                     }
                     var4 = param1.substring(1 + var2_int);
                     var5 = cf.a(var3, (byte) -124);
                     if (var5 != null) {
-                      stackOut_12_0 = (mh) (var5);
-                      stackIn_13_0 = stackOut_12_0;
+                      stackIn_13_0 = (mh) (var5);
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
                       return rh.b(2, var4);
                     }
                   } else {
-                    stackOut_6_0 = c.field_o;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = c.field_o;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -159,8 +135,7 @@ abstract class th {
                 }
               }
             }
-            stackOut_3_0 = ec.field_a;
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = ec.field_a;
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -168,27 +143,19 @@ abstract class th {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2);
-            stackOut_14_1 = new StringBuilder().append("th.N(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2);
+
+            stackIn_16_1 = new StringBuilder().append("th.N(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L3;
             }
           }
@@ -208,20 +175,14 @@ abstract class th {
     final boolean b(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 119) {
           L0: {
             this.field_b = (bh) null;
             if (20 > this.c((byte) -47)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -229,12 +190,10 @@ abstract class th {
         } else {
           L1: {
             if (20 > this.c((byte) -47)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

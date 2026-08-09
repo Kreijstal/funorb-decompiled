@@ -24,8 +24,6 @@ final class gb {
         int var6 = 0;
         int stackIn_3_0 = 0;
         int stackIn_10_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -33,16 +31,6 @@ final class gb {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -52,8 +40,7 @@ final class gb {
               var5 = 0;
               L1: while (true) {
                 if (var5 >= var4) {
-                  stackOut_9_0 = var3_int;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = var3_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -70,8 +57,7 @@ final class gb {
                 }
               }
             } else {
-              stackOut_2_0 = 126;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 126;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -80,27 +66,19 @@ final class gb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("gb.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("gb.E(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -114,12 +92,11 @@ final class gb {
     }
 
     public static void a(int param0) {
-        er[] discarded$0 = null;
         field_a = null;
         field_c = null;
         field_b = null;
         if (param0 != 19199) {
-            discarded$0 = gb.a(-81, 34, -41, -66, -87);
+            gb.a(-81, 34, -41, -66, -87);
         }
     }
 
@@ -135,111 +112,84 @@ final class gb {
     }
 
     final static String a(Throwable param0, boolean param1) throws IOException {
-        String var2 = null;
-        PrintWriter var4 = null;
-        String var5 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        dg var14 = null;
-        StringWriter var15 = null;
         String var16 = null;
         String var17 = null;
         String var18 = null;
         String var19 = null;
-        L0: {
-          var13 = Vertigo2.field_L ? 1 : 0;
-          if (!(param0 instanceof dg)) {
+        int var12 = 0;
+        dg var14 = null;
+        String var2 = null;
+        String var11 = null;
+        int var13 = Vertigo2.field_L ? 1 : 0;
+        if (param0 instanceof dg) {
+            var14 = (dg) ((Object) param0);
+            var2 = var14.field_e + " | ";
+            param0 = var14.field_a;
+        } else {
             var2 = "";
             var11 = var2;
             var2 = var11;
             var11 = var2;
-            break L0;
-          } else {
-            var14 = (dg) ((Object) param0);
-            var2 = var14.field_e + " | ";
-            param0 = var14.field_a;
-            break L0;
-          }
         }
-        var15 = new StringWriter();
-        var4 = new PrintWriter((Writer) ((Object) var15));
+        StringWriter var15 = new StringWriter();
+        PrintWriter var4 = new PrintWriter((Writer) ((Object) var15));
         param0.printStackTrace(var4);
         var4.close();
-        var5 = var15.toString();
+        String var5 = var15.toString();
         var11 = var5;
         var2 = var11;
         var11 = var5;
-        if (!param1) {
-          var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
-          var7 = var6.readLine();
-          var11 = var7;
-          var2 = var11;
-          var11 = var7;
-          L1: while (true) {
+        if (param1) {
+            return (String) null;
+        }
+        BufferedReader var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
+        String var7 = var6.readLine();
+        var11 = var7;
+        var2 = var11;
+        var11 = var7;
+        while (true) {
             var8 = var6.readLine();
             var11 = var8;
             var2 = var11;
             var11 = var8;
             if (var8 == null) {
-              var2 = var2 + "| " + var7;
-              return var2;
-            } else {
-              L2: {
-                var9 = var8.indexOf('(');
-                var10 = var8.indexOf(')', 1 + var9);
-                if (-1 == var9) {
-                  var11 = var8;
-                  var2 = var11;
-                  var2 = var11;
-                  break L2;
-                } else {
-                  var11 = var8.substring(0, var9);
-                  break L2;
-                }
-              }
-              L3: {
-                var16 = var11.trim();
-                var2 = var16;
-                var2 = var16;
-                var17 = var16.substring(1 + var16.lastIndexOf(' '));
-                var2 = var17;
-                var2 = var17;
-                var18 = var17.substring(1 + var17.lastIndexOf('\t'));
-                var2 = var18;
-                var2 = var18;
-                var19 = var2 + var18;
-                var2 = var19;
-                var2 = var19;
-                var2 = var19;
-                if (0 == (var9 ^ -1)) {
-                  break L3;
-                } else {
-                  if (0 == (var10 ^ -1)) {
-                    break L3;
-                  } else {
-                    var12 = var8.indexOf(".java:", var9);
-                    if ((var12 ^ -1) > -1) {
-                      break L3;
-                    } else {
-                      var2 = var19 + var8.substring(var12 + 5, var10);
-                      break L3;
-                    }
-                  }
-                }
-              }
-              var2 = var2 + ' ';
-              continue L1;
+                break;
             }
-          }
-        } else {
-          return (String) null;
+            var9 = var8.indexOf('(');
+            var10 = var8.indexOf(')', 1 + var9);
+            if (-1 != var9) {
+                var11 = var8.substring(0, var9);
+            } else {
+                var11 = var8;
+                var2 = var11;
+                var2 = var11;
+            }
+            var16 = var11.trim();
+            var2 = var16;
+            var2 = var16;
+            var17 = var16.substring(1 + var16.lastIndexOf(' '));
+            var2 = var17;
+            var2 = var17;
+            var18 = var17.substring(1 + var17.lastIndexOf('\t'));
+            var2 = var18;
+            var2 = var18;
+            var19 = var2 + var18;
+            var2 = var19;
+            var2 = var19;
+            var2 = var19;
+            if (0 != (var9 ^ -1) && 0 != (var10 ^ -1)) {
+                var12 = var8.indexOf(".java:", var9);
+                if ((var12 ^ -1) <= -1) {
+                    var2 = var19 + var8.substring(var12 + 5, var10);
+                }
+            }
+            var2 = var2 + ' ';
         }
+        var2 = var2 + "| " + var7;
+        return var2;
     }
 
     static {

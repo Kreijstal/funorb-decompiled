@@ -16,9 +16,8 @@ final class wn extends am {
     }
 
     final int[] a(byte param0, int param1) {
-        int[] discarded$0 = null;
         if (param0 <= 86) {
-            discarded$0 = this.a((byte) 88, -87);
+            this.a((byte) 88, -87);
             return q.field_b;
         }
         return q.field_b;

@@ -19,40 +19,29 @@ class ka implements uj {
     int[] field_c;
 
     private final int a(byte param0, int param1, int param2, int[] param3) {
-        RuntimeException var5 = null;
+        fs stackIn_29_0 = null;
+        fs stackIn_29_1 = null;
+        int stackIn_45_0 = 0;
+        RuntimeException stackIn_48_0 = null;
+        StringBuilder stackIn_48_1 = null;
+        RuntimeException stackIn_49_0 = null;
+        StringBuilder stackIn_49_1 = null;
+        String stackIn_49_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ln var9 = null;
         int var9_int = 0;
-        ln[] var10 = null;
+        ln var9 = null;
         int var10_int = 0;
+        ln[] var10 = null;
         int var11 = 0;
+        ln var12 = null;
         int var13 = 0;
         int var14 = 0;
         ln[] var15 = null;
-        ln var16 = null;
-        ln[] var17 = null;
-        ln var18 = null;
-        int stackIn_40_0 = 0;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_39_0 = 0;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -129,15 +118,15 @@ class ka implements uj {
                           if (var9 == null) {
                             break L6;
                           } else {
-                            var17 = var9.field_D;
+                            var10 = var9.field_D;
                             var11 = 0;
                             L9: while (true) {
                               L10: {
-                                if (var17.length <= var11) {
+                                if (param3.length <= var11) {
                                   break L10;
                                 } else {
-                                  var18 = var17[var11];
-                                  if (this.field_n == var18.field_y) {
+                                  var12 = var10[var11];
+                                  if (this.field_n == var12.field_y) {
                                     var11++;
                                     continue L9;
                                   } else {
@@ -167,8 +156,12 @@ class ka implements uj {
                           if (var11 >= var15.length) {
                             break L12;
                           } else {
-                            var16 = var15[var11];
-                            if (var16.field_y != this.field_n) {
+                            var12 = var15[var11];
+                            stackIn_29_0 = var12.field_y;
+
+                            stackIn_29_1 = this.field_n;
+
+                            if (stackIn_29_0 != stackIn_29_1) {
                               var8++;
                               break L12;
                             } else {
@@ -186,42 +179,33 @@ class ka implements uj {
                   break L6;
                 }
               }
-              stackOut_39_0 = var5_int;
-              stackIn_40_0 = stackOut_39_0;
+              stackIn_45_0 = var5_int;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L13: {
+          L19: {
             var5 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) (var5);
-            stackOut_41_1 = new StringBuilder().append("ka.QA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackIn_48_0 = (RuntimeException) (var5);
+
+            stackIn_48_1 = new StringBuilder().append("ka.QA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
-              break L13;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "null";
+              break L19;
             } else {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
-              break L13;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "{...}";
+              break L19;
             }
           }
-          throw r.a((Throwable) ((Object) stackIn_44_0), stackIn_44_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_49_0), stackIn_49_2 + ')');
         }
-        return stackIn_40_0;
+        return stackIn_45_0;
     }
 
     final int a(int param0, ln param1) {
@@ -233,23 +217,12 @@ class ka implements uj {
         mg var7 = null;
         int var8 = 0;
         int stackIn_18_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -278,8 +251,7 @@ class ka implements uj {
                     break L3;
                   }
                 }
-                stackOut_17_0 = var3_int;
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_0 = var3_int;
                 break L0;
               } else {
                 L4: {
@@ -319,27 +291,19 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var3);
-            stackOut_19_1 = new StringBuilder().append("ka.MA(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var3);
+
+            stackIn_21_1 = new StringBuilder().append("ka.MA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L7;
             }
           }
@@ -350,7 +314,6 @@ class ka implements uj {
 
     private final void a(sd param0, int[] param1, int param2) {
         ln[] var4 = null;
-        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         ln var7 = null;
@@ -358,37 +321,16 @@ class ka implements uj {
         int var9 = 0;
         int var10 = 0;
         ln[] var11 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException var4_ref = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -425,79 +367,48 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4_ref);
-            stackOut_8_1 = new StringBuilder().append("ka.AB(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4_ref);
+
+            stackIn_10_1 = new StringBuilder().append("ka.AB(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+
+
+            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L4;
             }
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_11_0), stackIn_14_2 + ',' + param2 + ')');
         }
     }
 
     private final int a(int param0, boolean param1, int param2, ln param3) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        ln[] var6_ref_ln__ = null;
-        int var6 = 0;
-        int var7 = 0;
-        ln var8_ref_ln = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        ln[] var11 = null;
-        ln var12 = null;
-        ln[] var13 = null;
-        ln var14 = null;
         int stackIn_5_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_37_0 = 0;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         RuntimeException stackIn_41_0 = null;
@@ -505,29 +416,26 @@ class ka implements uj {
         String stackIn_41_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_36_0 = 0;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        ln[] var6_ref_ln__ = null;
+        int var6 = 0;
+        int var7_int = 0;
+        ln[] var7 = null;
+        int var8 = 0;
+        ln var8_ref_ln = null;
+        ln var9 = null;
+        int var9_int = 0;
+        int var10 = 0;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
             var5_int = param2;
             var6_ref_ln__ = param3.field_D;
-            var7 = param0;
+            var7_int = param0;
             L1: while (true) {
               L2: {
-                if (var6_ref_ln__.length <= var7) {
+                if (var6_ref_ln__.length <= var7_int) {
                   if (var5_int == 0) {
                     break L2;
                   } else {
@@ -537,27 +445,25 @@ class ka implements uj {
                       if (-1 > (cq.field_E ^ -1)) {
                         L3: {
                           if (var5_int < cq.field_E) {
-                            stackOut_29_0 = var5_int;
-                            stackIn_30_0 = stackOut_29_0;
+                            stackIn_30_0 = var5_int;
                             break L3;
                           } else {
-                            stackOut_28_0 = cq.field_E;
-                            stackIn_30_0 = stackOut_28_0;
+                            stackIn_30_0 = cq.field_E;
                             break L3;
                           }
                         }
                         var6 = stackIn_30_0;
                         var5_int = var5_int - var6;
-                        var13 = param3.field_D;
+                        var7 = param3.field_D;
                         var8 = 0;
                         L4: while (true) {
-                          if (var13.length <= var8) {
+                          if (var7.length <= var8) {
                             break L2;
                           } else {
-                            var14 = var13[var8];
-                            if (var14.field_R == mj.field_yb) {
-                              this.a((byte) -67, var6, var14);
-                              this.a(param3, var14, var6, param0 ^ -1);
+                            var9 = var7[var8];
+                            if (var9.field_R == mj.field_yb) {
+                              this.a((byte) -67, var6, var9);
+                              this.a(param3, var9, var6, param0 ^ -1);
                               break L2;
                             } else {
                               var8++;
@@ -571,21 +477,21 @@ class ka implements uj {
                     }
                   }
                 } else {
-                  var8_ref_ln = var6_ref_ln__[var7];
-                  var9 = var8_ref_ln.field_p;
-                  if (ja.field_i[var9] < var5_int) {
+                  var8_ref_ln = var6_ref_ln__[var7_int];
+                  var9_int = var8_ref_ln.field_p;
+                  if (ja.field_i[var9_int] < var5_int) {
                     L5: {
-                      if (ja.field_i[var9] == 0) {
+                      if (ja.field_i[var9_int] == 0) {
                         break L5;
                       } else {
-                        this.a(param3, var8_ref_ln, ja.field_i[var9], -1);
-                        var5_int = var5_int - ja.field_i[var9];
-                        ja.field_i[var9] = 0;
+                        this.a(param3, var8_ref_ln, ja.field_i[var9_int], -1);
+                        var5_int = var5_int - ja.field_i[var9_int];
+                        ja.field_i[var9_int] = 0;
                         break L5;
                       }
                     }
                     if (var5_int != 0) {
-                      var7++;
+                      var7_int++;
                       continue L1;
                     } else {
                       if (var5_int == 0) {
@@ -597,27 +503,25 @@ class ka implements uj {
                           if (-1 > (cq.field_E ^ -1)) {
                             L6: {
                               if (var5_int < cq.field_E) {
-                                stackOut_15_0 = var5_int;
-                                stackIn_16_0 = stackOut_15_0;
+                                stackIn_16_0 = var5_int;
                                 break L6;
                               } else {
-                                stackOut_14_0 = cq.field_E;
-                                stackIn_16_0 = stackOut_14_0;
+                                stackIn_16_0 = cq.field_E;
                                 break L6;
                               }
                             }
                             var6 = stackIn_16_0;
                             var5_int = var5_int - var6;
-                            var11 = param3.field_D;
+                            var7 = param3.field_D;
                             var8 = 0;
                             L7: while (true) {
-                              if (var11.length <= var8) {
+                              if (var7.length <= var8) {
                                 break L2;
                               } else {
-                                var12 = var11[var8];
-                                if (var12.field_R == mj.field_yb) {
-                                  this.a((byte) -67, var6, var12);
-                                  this.a(param3, var12, var6, param0 ^ -1);
+                                var9 = var7[var8];
+                                if (var9.field_R == mj.field_yb) {
+                                  this.a((byte) -67, var6, var9);
+                                  this.a(param3, var9, var6, param0 ^ -1);
                                   break L2;
                                 } else {
                                   var8++;
@@ -633,16 +537,14 @@ class ka implements uj {
                     }
                   } else {
                     this.a(param3, var8_ref_ln, var5_int, param0 ^ -1);
-                    ja.field_i[var9] = ja.field_i[var9] - var5_int;
-                    stackOut_4_0 = param2;
-                    stackIn_5_0 = stackOut_4_0;
+                    ja.field_i[var9_int] = ja.field_i[var9_int] - var5_int;
+                    stackIn_5_0 = param2;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
                 }
               }
-              stackOut_36_0 = param2 - var5_int;
-              stackIn_37_0 = stackOut_36_0;
+              stackIn_37_0 = param2 - var5_int;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -651,27 +553,19 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
-            stackOut_38_0 = (RuntimeException) (var5);
-            stackOut_38_1 = new StringBuilder().append("ka.PA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_40_0 = stackOut_38_0;
-            stackIn_40_1 = stackOut_38_1;
-            stackIn_39_0 = stackOut_38_0;
-            stackIn_39_1 = stackOut_38_1;
+            stackIn_40_0 = (RuntimeException) (var5);
+
+            stackIn_40_1 = new StringBuilder().append("ka.PA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "null";
-              stackIn_41_0 = stackOut_40_0;
-              stackIn_41_1 = stackOut_40_1;
-              stackIn_41_2 = stackOut_40_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "null";
               break L8;
             } else {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "{...}";
-              stackIn_41_0 = stackOut_39_0;
-              stackIn_41_1 = stackOut_39_1;
-              stackIn_41_2 = stackOut_39_2;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "{...}";
               break L8;
             }
           }
@@ -688,24 +582,12 @@ class ka implements uj {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -719,12 +601,10 @@ class ka implements uj {
             L2: {
               var3_int = this.a(-5, param0);
               if (-1 != (var3_int ^ -1)) {
-                stackOut_4_0 = var3_int;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = var3_int;
                 break L2;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L2;
               }
             }
@@ -734,27 +614,19 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("ka.F(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("ka.F(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -765,24 +637,14 @@ class ka implements uj {
 
     private final void c(int param0, sd param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var3 = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -801,27 +663,19 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("ka.RA(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("ka.RA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -846,12 +700,34 @@ class ka implements uj {
     }
 
     int a(int param0, int param1, fs param2) {
-        RuntimeException var4 = null;
+        int[] dupTemp$0 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        fs stackIn_23_0 = null;
+        fs stackIn_23_1 = null;
+        int stackIn_33_0 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_40_0 = 0;
+        int stackIn_46_0 = 0;
+        int stackIn_50_0 = 0;
+        int stackIn_61_0 = 0;
+        int stackIn_63_0 = 0;
+        RuntimeException stackIn_66_0 = null;
+        StringBuilder stackIn_66_1 = null;
+        RuntimeException stackIn_67_0 = null;
+        StringBuilder stackIn_67_1 = null;
+        String stackIn_67_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         fs var5 = null;
         fs var6 = null;
         int var7 = 0;
         int var8 = 0;
+        ln[] var9 = null;
+        int[] var9_array = null;
         int var10 = 0;
         ln var11_ref_ln = null;
         int var11 = 0;
@@ -861,45 +737,6 @@ class ka implements uj {
         ln var15 = null;
         int var16 = 0;
         int[] var17 = null;
-        ln[] var18 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_42_0 = 0;
-        int stackIn_46_0 = 0;
-        int stackIn_57_0 = 0;
-        int stackIn_59_0 = 0;
-        RuntimeException stackIn_61_0 = null;
-        StringBuilder stackIn_61_1 = null;
-        RuntimeException stackIn_62_0 = null;
-        StringBuilder stackIn_62_1 = null;
-        RuntimeException stackIn_63_0 = null;
-        StringBuilder stackIn_63_1 = null;
-        String stackIn_63_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_60_0 = null;
-        StringBuilder stackOut_60_1 = null;
-        RuntimeException stackOut_62_0 = null;
-        StringBuilder stackOut_62_1 = null;
-        String stackOut_62_2 = null;
-        RuntimeException stackOut_61_0 = null;
-        StringBuilder stackOut_61_1 = null;
-        String stackOut_61_2 = null;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -912,8 +749,7 @@ class ka implements uj {
                   break L1;
                 } else {
                   if (-1 != (this.field_g.field_w & 1 << var4_int ^ -1)) {
-                    stackOut_8_0 = 0;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = 0;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -922,143 +758,146 @@ class ka implements uj {
                     if (var5 != param2) {
                       var7 = 0;
                       var8 = param1;
-                      var18 = this.field_g.field_g.field_e;
+                      var9 = this.field_g.field_g.field_e;
                       var10 = 0;
                       L2: while (true) {
-                        if (var18.length <= var10) {
-                          if (var7 <= var8 * 2) {
-                            if (!var5.field_h[var4_int]) {
-                              if (var5.field_h[var4_int]) {
-                                stackOut_35_0 = 5;
-                                stackIn_36_0 = stackOut_35_0;
-                                decompiledRegionSelector0 = 5;
-                                break L0;
-                              } else {
-                                if (var6 == param2) {
-                                  L3: {
-                                    if (var5 == this.field_n) {
-                                      stackOut_41_0 = -3;
-                                      stackIn_42_0 = stackOut_41_0;
+                        L3: {
+                          L4: {
+                            if (var9.length <= var10) {
+                              if (var7 <= var8 * 2) {
+                                if (!var5.field_h[var4_int]) {
+                                  if (var5.field_h[var4_int]) {
+                                    stackIn_40_0 = 5;
+                                    decompiledRegionSelector0 = 5;
+                                    break L0;
+                                  } else {
+                                    if (var6 == param2) {
                                       break L3;
                                     } else {
-                                      stackOut_40_0 = -2;
-                                      stackIn_42_0 = stackOut_40_0;
-                                      break L3;
-                                    }
-                                  }
-                                  decompiledRegionSelector0 = 6;
-                                  break L0;
-                                } else {
-                                  L4: {
-                                    if (var7 >= var8) {
                                       break L4;
-                                    } else {
-                                      if (2 * this.field_g.field_D[this.field_n.field_x] <= this.field_g.field_D[var4_int] * 3) {
-                                        break L4;
-                                      } else {
-                                        stackOut_45_0 = 3;
-                                        stackIn_46_0 = stackOut_45_0;
-                                        decompiledRegionSelector0 = 7;
-                                        break L0;
-                                      }
                                     }
                                   }
-                                  var17 = ff.field_x[this.field_n.field_x];
-                                  var10 = param0;
-                                  var11 = 0;
-                                  L5: while (true) {
-                                    if (var11 >= this.field_o) {
-                                      L6: {
-                                        if ((var10 ^ -1) <= -6) {
-                                          break L6;
-                                        } else {
-                                          if (var10 < param0) {
-                                            stackOut_56_0 = 4;
-                                            stackIn_57_0 = stackOut_56_0;
-                                            decompiledRegionSelector0 = 8;
-                                            break L0;
-                                          } else {
-                                            break L6;
-                                          }
-                                        }
+                                } else {
+                                  stackIn_36_0 = 2;
+                                  decompiledRegionSelector0 = 4;
+                                  break L0;
+                                }
+                              } else {
+                                stackIn_33_0 = -1;
+                                decompiledRegionSelector0 = 3;
+                                break L0;
+                              }
+                            } else {
+                              L5: {
+                                var11_ref_ln = var9[var10];
+                                if (var11_ref_ln.field_y == this.field_n) {
+                                  var12 = 0;
+                                  var13 = var11_ref_ln.field_D;
+                                  var14 = 0;
+                                  L6: while (true) {
+                                    if (var13.length <= var14) {
+                                      if (var12 != 0) {
+                                        var8 = var8 + var11_ref_ln.field_x;
+                                        break L5;
+                                      } else {
+                                        var10++;
+                                        continue L2;
                                       }
-                                      stackOut_58_0 = -3;
-                                      stackIn_59_0 = stackOut_58_0;
-                                      decompiledRegionSelector0 = 9;
-                                      break L0;
                                     } else {
+                                      var15 = var13[var14];
+                                      stackIn_23_0 = var15.field_y;
+
+                                      stackIn_23_1 = (fs) (param2);
+
                                       L7: {
-                                        if (!ac.field_q[var11]) {
+                                        if (stackIn_23_0 == stackIn_23_1) {
+                                          var12 = 1;
+                                          var7 = var7 + var15.field_x;
                                           break L7;
                                         } else {
-                                          if (ff.field_x[var4_int][var11] > var17[var11]) {
-                                            break L7;
-                                          } else {
-                                            var10--;
-                                            break L7;
-                                          }
+                                          break L7;
                                         }
                                       }
-                                      var11++;
-                                      continue L5;
+                                      var14++;
+                                      continue L6;
                                     }
-                                  }
-                                }
-                              }
-                            } else {
-                              stackOut_31_0 = 2;
-                              stackIn_32_0 = stackOut_31_0;
-                              decompiledRegionSelector0 = 4;
-                              break L0;
-                            }
-                          } else {
-                            stackOut_28_0 = -1;
-                            stackIn_29_0 = stackOut_28_0;
-                            decompiledRegionSelector0 = 3;
-                            break L0;
-                          }
-                        } else {
-                          L8: {
-                            var11_ref_ln = var18[var10];
-                            if (var11_ref_ln.field_y == this.field_n) {
-                              var12 = 0;
-                              var13 = var11_ref_ln.field_D;
-                              var14 = 0;
-                              L9: while (true) {
-                                if (var13.length <= var14) {
-                                  if (var12 != 0) {
-                                    var8 = var8 + var11_ref_ln.field_x;
-                                    break L8;
-                                  } else {
-                                    var10++;
-                                    continue L2;
                                   }
                                 } else {
-                                  L10: {
-                                    var15 = var13[var14];
-                                    if (var15.field_y == param2) {
-                                      var12 = 1;
-                                      var7 = var7 + var15.field_x;
-                                      break L10;
-                                    } else {
-                                      break L10;
-                                    }
-                                  }
-                                  var14++;
-                                  continue L9;
+                                  break L5;
                                 }
                               }
-                            } else {
-                              break L8;
+                              var10++;
+                              continue L2;
                             }
                           }
-                          var10++;
-                          continue L2;
+                          L8: {
+                            if (var7 >= var8) {
+                              break L8;
+                            } else {
+                              if (2 * this.field_g.field_D[this.field_n.field_x] <= this.field_g.field_D[var4_int] * 3) {
+                                break L8;
+                              } else {
+                                stackIn_50_0 = 3;
+                                decompiledRegionSelector0 = 7;
+                                break L0;
+                              }
+                            }
+                          }
+                          dupTemp$0 = ff.field_x[this.field_n.field_x];
+                          var17 = dupTemp$0;
+                          var9_array = dupTemp$0;
+                          var10 = param0;
+                          var11 = 0;
+                          L9: while (true) {
+                            if (var11 >= this.field_o) {
+                              L10: {
+                                if ((var10 ^ -1) <= -6) {
+                                  break L10;
+                                } else {
+                                  if (var10 < param0) {
+                                    stackIn_61_0 = 4;
+                                    decompiledRegionSelector0 = 8;
+                                    break L0;
+                                  } else {
+                                    break L10;
+                                  }
+                                }
+                              }
+                              stackIn_63_0 = -3;
+                              decompiledRegionSelector0 = 9;
+                              break L0;
+                            } else {
+                              L11: {
+                                if (!ac.field_q[var11]) {
+                                  break L11;
+                                } else {
+                                  if (ff.field_x[var4_int][var11] > var17[var11]) {
+                                    break L11;
+                                  } else {
+                                    var10--;
+                                    break L11;
+                                  }
+                                }
+                              }
+                              var11++;
+                              continue L9;
+                            }
+                          }
                         }
+                        L12: {
+                          if (var5 == this.field_n) {
+                            stackIn_46_0 = -3;
+                            break L12;
+                          } else {
+                            stackIn_46_0 = -2;
+                            break L12;
+                          }
+                        }
+                        decompiledRegionSelector0 = 6;
+                        break L0;
                       }
                     } else {
-                      stackOut_11_0 = 1;
-                      stackIn_12_0 = stackOut_11_0;
+                      stackIn_12_0 = 1;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
@@ -1066,40 +905,31 @@ class ka implements uj {
                 }
               }
             }
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 0;
             decompiledRegionSelector0 = 0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L13: {
             var4 = decompiledCaughtException;
-            stackOut_60_0 = (RuntimeException) (var4);
-            stackOut_60_1 = new StringBuilder().append("ka.UA(").append(param0).append(',').append(param1).append(',');
-            stackIn_62_0 = stackOut_60_0;
-            stackIn_62_1 = stackOut_60_1;
-            stackIn_61_0 = stackOut_60_0;
-            stackIn_61_1 = stackOut_60_1;
+            stackIn_66_0 = (RuntimeException) (var4);
+
+            stackIn_66_1 = new StringBuilder().append("ka.UA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
-              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
-              stackOut_62_2 = "null";
-              stackIn_63_0 = stackOut_62_0;
-              stackIn_63_1 = stackOut_62_1;
-              stackIn_63_2 = stackOut_62_2;
-              break L11;
+              stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+              stackIn_67_2 = "null";
+              break L13;
             } else {
-              stackOut_61_0 = (RuntimeException) ((Object) stackIn_61_0);
-              stackOut_61_1 = (StringBuilder) ((Object) stackIn_61_1);
-              stackOut_61_2 = "{...}";
-              stackIn_63_0 = stackOut_61_0;
-              stackIn_63_1 = stackOut_61_1;
-              stackIn_63_2 = stackOut_61_2;
-              break L11;
+              stackIn_67_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackIn_67_1 = (StringBuilder) ((Object) stackIn_66_1);
+              stackIn_67_2 = "{...}";
+              break L13;
             }
           }
-          throw r.a((Throwable) ((Object) stackIn_63_0), stackIn_63_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_67_0), stackIn_67_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_5_0;
@@ -1111,24 +941,24 @@ class ka implements uj {
               return stackIn_12_0;
             } else {
               if (decompiledRegionSelector0 == 3) {
-                return stackIn_29_0;
+                return stackIn_33_0;
               } else {
                 if (decompiledRegionSelector0 == 4) {
-                  return stackIn_32_0;
+                  return stackIn_36_0;
                 } else {
                   if (decompiledRegionSelector0 == 5) {
-                    return stackIn_36_0;
+                    return stackIn_40_0;
                   } else {
                     if (decompiledRegionSelector0 == 6) {
-                      return stackIn_42_0;
+                      return stackIn_46_0;
                     } else {
                       if (decompiledRegionSelector0 == 7) {
-                        return stackIn_46_0;
+                        return stackIn_50_0;
                       } else {
                         if (decompiledRegionSelector0 == 8) {
-                          return stackIn_57_0;
+                          return stackIn_61_0;
                         } else {
-                          return stackIn_59_0;
+                          return stackIn_63_0;
                         }
                       }
                     }
@@ -1141,11 +971,11 @@ class ka implements uj {
     }
 
     public final void b(byte param0) {
-        int discarded$1 = 0;
-        sd var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int discarded$0 = 0;
+        sd var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!this.field_n.field_i.g(59)) {
           L0: {
@@ -1156,7 +986,7 @@ class ka implements uj {
             if (param0 < -3) {
               break L0;
             } else {
-              discarded$1 = this.a(-67, 25, -122);
+              discarded$0 = this.a(-67, 25, -122);
               break L0;
             }
           }
@@ -1251,30 +1081,19 @@ class ka implements uj {
     }
 
     public final void a(fs param0, byte param1) {
-        int discarded$3 = 0;
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException var3 = null;
+        int var5 = 0;
+        int var6 = 0;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -1282,7 +1101,7 @@ class ka implements uj {
               if (param1 == -42) {
                 break L1;
               } else {
-                discarded$3 = this.d((ln) null, 1);
+                this.d((ln) null, 1);
                 break L1;
               }
             }
@@ -1336,27 +1155,19 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var3);
-            stackOut_18_1 = new StringBuilder().append("ka.LA(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var3);
+
+            stackIn_20_1 = new StringBuilder().append("ka.LA(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L4;
             }
           }
@@ -1365,11 +1176,11 @@ class ka implements uj {
     }
 
     private final int a(int param0, int param1, int param2) {
-        ln var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        ln var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         L0: {
           var8 = ShatteredPlansClient.field_F ? 1 : 0;
           var5 = 0;
@@ -1421,23 +1232,12 @@ class ka implements uj {
         int var4 = 0;
         int var5 = 0;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -1453,8 +1253,7 @@ class ka implements uj {
                     break L2;
                   }
                 }
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = var3_int;
                 break L0;
               } else {
                 var3_int = var3_int + param0.field_G[var4] * lh.field_y[var4];
@@ -1467,27 +1266,19 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("ka.NA(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3);
+
+            stackIn_10_1 = new StringBuilder().append("ka.NA(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -1497,15 +1288,15 @@ class ka implements uj {
     }
 
     private final void h(int param0) {
-        Object var2 = null;
-        int var3 = 0;
-        int var4_int = 0;
-        qm var4 = null;
-        int var5 = 0;
-        ln var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        Object var2;
+        int var3;
+        int var4_int;
+        int var5;
+        ln var6;
+        int var9;
+        qm var4;
+        int var7;
+        int var8;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = null;
         var3 = 0;
@@ -1560,35 +1351,59 @@ class ka implements uj {
     }
 
     private final void c(int param0, int param1, int param2) {
-        int var5 = 0;
-        ln var6 = null;
-        int var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (!(param2 >= (param1 ^ -1))) {
-            throw new RuntimeException();
-        }
-        if (param0 < 0) {
-            throw new RuntimeException();
-        }
-        int var4 = param1;
-        for (var5 = 0; var5 < this.field_o; var5++) {
-            var6 = this.field_g.field_g.field_e[var5];
-            var4 = var4 + ja.field_i[var5];
-            var4 = var4 - wb.field_b[var5];
-            var4 = var4 - u.field_c[var5];
-            if (!(ja.field_i[var5] <= var6.field_J)) {
-                throw new RuntimeException();
+        int var4;
+        int var5;
+        ln var6;
+        int var7;
+        var7 = ShatteredPlansClient.field_F ? 1 : 0;
+        if (param2 < (param1 ^ -1)) {
+          throw new RuntimeException();
+        } else {
+          if (param0 >= 0) {
+            var4 = param1;
+            var5 = 0;
+            L0: while (true) {
+              if (var5 >= this.field_o) {
+                if (var4 != param0) {
+                  throw new RuntimeException();
+                } else {
+                  return;
+                }
+              } else {
+                var6 = this.field_g.field_g.field_e[var5];
+                var4 = var4 + ja.field_i[var5];
+                var4 = var4 - wb.field_b[var5];
+                var4 = var4 - u.field_c[var5];
+                if ((ja.field_i[var5] ^ -1) < (var6.field_J ^ -1)) {
+                  throw new RuntimeException();
+                } else {
+                  var5++;
+                  continue L0;
+                }
+              }
             }
+          } else {
+            throw new RuntimeException();
+          }
         }
-        if (var4 == param0) {
-            return;
-        }
-        throw new RuntimeException();
     }
 
     final int[] a(byte param0, fs param1) {
-        int discarded$1 = 0;
-        RuntimeException var3 = null;
-        int[] var3_array = null;
+        int stackIn_6_0 = 0;
+        int[] stackIn_8_0 = null;
+        int stackIn_8_1 = 0;
+        int[] stackIn_9_0 = null;
+        int stackIn_9_1 = 0;
+        int stackIn_9_2 = 0;
+        int[] stackIn_24_0 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int[] var3 = null;
+        RuntimeException var3_ref = null;
         boolean[] var4 = null;
         ln[] var5 = null;
         int var6 = 0;
@@ -1601,51 +1416,11 @@ class ka implements uj {
         int var13 = 0;
         int var14 = 0;
         int[] var15 = null;
-        int[] var16 = null;
-        int[] var17 = null;
-        int stackIn_6_0 = 0;
-        int[] stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        int[] stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        int[] stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        int stackIn_9_2 = 0;
-        int[] stackIn_24_0 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int[] stackOut_23_0 = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int[] stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        int[] stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
-        int[] stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
             var15 = new int[this.field_o];
-            var17 = var15;
-            var16 = var17;
-            var3_array = var16;
+            var3 = var15;
             var4 = new boolean[this.field_o];
             var5 = this.field_g.field_g.field_e;
             var6 = 0;
@@ -1656,14 +1431,13 @@ class ka implements uj {
                   if (param0 <= -16) {
                     break L2;
                   } else {
-                    discarded$1 = this.a((byte) -4, 36);
+                    this.a((byte) -4, 36);
                     break L2;
                   }
                 }
                 L3: while (true) {
                   if (var6 == 0) {
-                    stackOut_23_0 = (int[]) (var3_array);
-                    stackIn_24_0 = stackOut_23_0;
+                    stackIn_24_0 = (int[]) (var3);
                     break L0;
                   } else {
                     var6 = 0;
@@ -1676,7 +1450,7 @@ class ka implements uj {
                           if (var4[var7]) {
                             var4[var7] = false;
                             var8 = var5[var7];
-                            var9 = var17[var7] - -1;
+                            var9 = var3[var7] - -1;
                             var10 = var8.field_D;
                             var11 = 0;
                             L6: while (true) {
@@ -1685,8 +1459,8 @@ class ka implements uj {
                               } else {
                                 var12 = var10[var11];
                                 var13 = var12.field_p;
-                                if (var17[var13] > var9) {
-                                  var17[var13] = var9;
+                                if ((var3[var13] ^ -1) < (var9 ^ -1)) {
+                                  var3[var13] = var9;
                                   var4[var13] = true;
                                   var6 = 1;
                                   var11++;
@@ -1710,39 +1484,29 @@ class ka implements uj {
               } else {
                 L7: {
                   if (param1 != var5[var6].field_y) {
-                    stackOut_5_0 = 0;
-                    stackIn_6_0 = stackOut_5_0;
+                    stackIn_6_0 = 0;
                     break L7;
                   } else {
-                    stackOut_4_0 = 1;
-                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_6_0 = 1;
                     break L7;
                   }
                 }
                 L8: {
                   var7 = stackIn_6_0;
                   var4[var6] = var7 != 0;
-                  stackOut_6_0 = (int[]) (var15);
-                  stackOut_6_1 = var6;
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_8_1 = stackOut_6_1;
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_8_0 = (int[]) (var15);
+
+                  stackIn_8_1 = var6;
+
                   if (var7 == 0) {
-                    stackOut_8_0 = (int[]) ((Object) stackIn_8_0);
-                    stackOut_8_1 = stackIn_8_1;
-                    stackOut_8_2 = 2147483647;
-                    stackIn_9_0 = stackOut_8_0;
-                    stackIn_9_1 = stackOut_8_1;
-                    stackIn_9_2 = stackOut_8_2;
+                    stackIn_9_0 = (int[]) ((Object) stackIn_8_0);
+                    stackIn_9_1 = stackIn_8_1;
+                    stackIn_9_2 = 2147483647;
                     break L8;
                   } else {
-                    stackOut_7_0 = (int[]) ((Object) stackIn_7_0);
-                    stackOut_7_1 = stackIn_7_1;
-                    stackOut_7_2 = 0;
-                    stackIn_9_0 = stackOut_7_0;
-                    stackIn_9_1 = stackOut_7_1;
-                    stackIn_9_2 = stackOut_7_2;
+                    stackIn_9_0 = (int[]) ((Object) stackIn_8_0);
+                    stackIn_9_1 = stackIn_8_1;
+                    stackIn_9_2 = 0;
                     break L8;
                   }
                 }
@@ -1755,28 +1519,20 @@ class ka implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
-            var3 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var3);
-            stackOut_25_1 = new StringBuilder().append("ka.L(").append(param0).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            var3_ref = decompiledCaughtException;
+            stackIn_27_0 = (RuntimeException) (var3_ref);
+
+            stackIn_27_1 = new StringBuilder().append("ka.L(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L9;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L9;
             }
           }
@@ -1786,8 +1542,15 @@ class ka implements uj {
     }
 
     void a(int param0, sd param1, byte param2) {
-        RuntimeException var4 = null;
-        int[] var4_array = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_43_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int[] var4 = null;
+        RuntimeException var4_ref = null;
         ln var5 = null;
         ln var6_ref_ln = null;
         int var6 = 0;
@@ -1799,27 +1562,6 @@ class ka implements uj {
         int var11 = 0;
         ln var12 = null;
         int[] var13 = null;
-        int[] var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        int[] var17 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        String stackIn_43_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -1835,11 +1577,9 @@ class ka implements uj {
                 break L1;
               }
             }
-            var16 = this.b(127, param1);
-            var14 = var16;
-            var13 = var14;
-            var4_array = var13;
-            this.a(param1, var16, 0);
+            var13 = this.b(127, param1);
+            var4 = var13;
+            this.a(param1, var13, 0);
             this.c(param0, cq.field_E, -1);
             param0 = param0 - this.a((byte) -106, param0);
             if ((param0 ^ -1) > -1) {
@@ -1927,9 +1667,7 @@ class ka implements uj {
                   } else {
                     L9: {
                       var9 = this.a(param0, (byte) -58);
-                      var17 = ik.a(u.field_d, this.field_o, (byte) 49);
-                      var15 = var17;
-                      var7 = var15;
+                      var7 = ik.a(u.field_d, this.field_o, (byte) 49);
                       if (var9 <= var6) {
                         break L9;
                       } else {
@@ -1939,7 +1677,7 @@ class ka implements uj {
                     }
                     this.c(param0, cq.field_E, -1);
                     param0 = param0 - var9;
-                    var8 = this.a(var9, param0, var16, var17, -1);
+                    var8 = this.a(var9, param0, var13, (int[]) (var7), -1);
                     param0 = param0 - var8;
                     param0 = param0 + var9;
                     this.c(param0, cq.field_E, -1);
@@ -1977,28 +1715,20 @@ class ka implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L12: {
-            var4 = decompiledCaughtException;
-            stackOut_40_0 = (RuntimeException) (var4);
-            stackOut_40_1 = new StringBuilder().append("ka.JA(").append(param0).append(',');
-            stackIn_42_0 = stackOut_40_0;
-            stackIn_42_1 = stackOut_40_1;
-            stackIn_41_0 = stackOut_40_0;
-            stackIn_41_1 = stackOut_40_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_42_0 = (RuntimeException) (var4_ref);
+
+            stackIn_42_1 = new StringBuilder().append("ka.JA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "null";
-              stackIn_43_0 = stackOut_42_0;
-              stackIn_43_1 = stackOut_42_1;
-              stackIn_43_2 = stackOut_42_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "null";
               break L12;
             } else {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "{...}";
-              stackIn_43_0 = stackOut_41_0;
-              stackIn_43_1 = stackOut_41_1;
-              stackIn_43_2 = stackOut_41_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "{...}";
               break L12;
             }
           }
@@ -2023,7 +1753,6 @@ class ka implements uj {
 
     private final void c(int param0) {
         int var2 = 0;
-        int discarded$0 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         for (var2 = 0; var2 < this.field_o; var2++) {
             ol.field_a[var2] = 0;
@@ -2034,18 +1763,18 @@ class ka implements uj {
             rl.field_b[var2] = false;
         }
         if (param0 != -17286) {
-            discarded$0 = this.a((byte) -58, (ln) null);
+            this.a((byte) -58, (ln) null);
         }
     }
 
     public final void a(int param0) {
-        int[] var2 = null;
-        fs[] var3 = null;
-        int var4 = 0;
-        fs var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int[] var8 = null;
+        int[] var2;
+        fs[] var3;
+        int var4;
+        fs var5;
+        int var7;
+        int[] var8;
+        int var6;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var8 = this.b(-128);
         var2 = var8;
@@ -2079,15 +1808,15 @@ class ka implements uj {
     }
 
     int a(byte param0, int param1) {
-        int var3 = 0;
-        ln var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        ln[] var7_ref_ln__ = null;
-        int var7 = 0;
-        int var8 = 0;
-        ln var9 = null;
-        int var10 = 0;
+        int var3;
+        ln var4;
+        int var5;
+        int var6;
+        ln[] var7_ref_ln__;
+        int var8;
+        ln var9;
+        int var10;
+        int var7;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         var3 = 0;
         var4 = mj.field_yb.j(18229);
@@ -2148,41 +1877,19 @@ class ka implements uj {
     }
 
     private final void a(ln param0, ln param1, int param2, int param3) {
-        RuntimeException var5 = null;
-        mg var5_ref = null;
-        int var6 = 0;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        String stackIn_47_2 = null;
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
         RuntimeException stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
-        RuntimeException stackIn_50_0 = null;
-        StringBuilder stackIn_50_1 = null;
-        String stackIn_50_2 = null;
+        String stackIn_49_2 = null;
+        StringBuilder stackIn_51_1 = null;
+        StringBuilder stackIn_52_1 = null;
+        String stackIn_52_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        RuntimeException stackOut_47_0 = null;
-        StringBuilder stackOut_47_1 = null;
-        RuntimeException stackOut_49_0 = null;
-        StringBuilder stackOut_49_1 = null;
-        String stackOut_49_2 = null;
-        RuntimeException stackOut_48_0 = null;
-        StringBuilder stackOut_48_1 = null;
-        String stackOut_48_2 = null;
+        mg var5 = null;
+        RuntimeException var5_ref = null;
+        int var6 = 0;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -2208,39 +1915,39 @@ class ka implements uj {
                           }
                         }
                       }
-                      var5_ref = (mg) ((Object) param1.field_s.c(-128));
+                      var5 = (mg) ((Object) param1.field_s.c(-128));
                       L3: while (true) {
                         L4: {
-                          if (var5_ref == null) {
+                          if (var5 == null) {
                             break L4;
                           } else {
                             L5: {
-                              if (var5_ref.field_G != this.field_n) {
+                              if (var5.field_G != this.field_n) {
                                 break L5;
                               } else {
-                                if (param0 != var5_ref.field_y) {
+                                if (param0 != var5.field_y) {
                                   break L5;
                                 } else {
                                   break L4;
                                 }
                               }
                             }
-                            var5_ref = (mg) ((Object) param1.field_s.b(32));
+                            var5 = (mg) ((Object) param1.field_s.b(32));
                             continue L3;
                           }
                         }
                         L6: {
-                          if (var5_ref != null) {
-                            if (var5_ref.field_z <= param2) {
-                              var5_ref.b((byte) -93);
-                              var5_ref.a(16);
-                              var5_ref.d(true);
-                              var5_ref.field_y.field_J = var5_ref.field_y.field_J + var5_ref.field_z;
-                              param2 = param2 - var5_ref.field_z;
+                          if (var5 != null) {
+                            if (var5.field_z <= param2) {
+                              var5.b((byte) -93);
+                              var5.a(16);
+                              var5.d(true);
+                              var5.field_y.field_J = var5.field_y.field_J + var5.field_z;
+                              param2 = param2 - var5.field_z;
                               break L6;
                             } else {
-                              var5_ref.field_z = var5_ref.field_z - param2;
-                              var5_ref.field_y.field_J = var5_ref.field_y.field_J + param2;
+                              var5.field_z = var5.field_z - param2;
+                              var5.field_y.field_J = var5.field_y.field_J + param2;
                               decompiledRegionSelector0 = 0;
                               break L0;
                             }
@@ -2254,20 +1961,20 @@ class ka implements uj {
                         } else {
                           if (param2 <= param1.field_J) {
                             param1.field_J = param1.field_J - param2;
-                            var5_ref = (mg) ((Object) lh.field_v.d(0));
+                            var5 = (mg) ((Object) lh.field_v.d(0));
                             L7: while (true) {
                               L8: {
-                                if (var5_ref == null) {
+                                if (var5 == null) {
                                   break L8;
                                 } else {
                                   L9: {
-                                    if (var5_ref.field_G != this.field_n) {
+                                    if (var5.field_G != this.field_n) {
                                       break L9;
                                     } else {
-                                      if (param1 != var5_ref.field_y) {
+                                      if (param1 != var5.field_y) {
                                         break L9;
                                       } else {
-                                        if (param0 == var5_ref.field_B) {
+                                        if (param0 == var5.field_B) {
                                           break L8;
                                         } else {
                                           break L9;
@@ -2275,17 +1982,17 @@ class ka implements uj {
                                       }
                                     }
                                   }
-                                  var5_ref = (mg) ((Object) lh.field_v.a((byte) -71));
+                                  var5 = (mg) ((Object) lh.field_v.a((byte) -71));
                                   continue L7;
                                 }
                               }
-                              if (var5_ref == null) {
-                                var5_ref = new mg(param1, param0, param2);
-                                lh.field_v.a((byte) -113, var5_ref);
+                              if (var5 == null) {
+                                var5 = new mg(param1, param0, param2);
+                                lh.field_v.a((byte) -113, var5);
                                 decompiledRegionSelector0 = 3;
                                 break L0;
                               } else {
-                                var5_ref.field_z = var5_ref.field_z + param2;
+                                var5.field_z = var5.field_z + param2;
                                 decompiledRegionSelector0 = 2;
                                 break L0;
                               }
@@ -2307,57 +2014,41 @@ class ka implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
-            var5 = decompiledCaughtException;
-            stackOut_44_0 = (RuntimeException) (var5);
-            stackOut_44_1 = new StringBuilder().append("ka.W(");
-            stackIn_46_0 = stackOut_44_0;
-            stackIn_46_1 = stackOut_44_1;
-            stackIn_45_0 = stackOut_44_0;
-            stackIn_45_1 = stackOut_44_1;
+            var5_ref = decompiledCaughtException;
+            stackIn_48_0 = (RuntimeException) (var5_ref);
+
+            stackIn_48_1 = new StringBuilder().append("ka.W(");
+
             if (param0 == null) {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "null";
-              stackIn_47_0 = stackOut_46_0;
-              stackIn_47_1 = stackOut_46_1;
-              stackIn_47_2 = stackOut_46_2;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "null";
               break L10;
             } else {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "{...}";
-              stackIn_47_0 = stackOut_45_0;
-              stackIn_47_1 = stackOut_45_1;
-              stackIn_47_2 = stackOut_45_2;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "{...}";
               break L10;
             }
           }
           L11: {
-            stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-            stackOut_47_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(',');
-            stackIn_49_0 = stackOut_47_0;
-            stackIn_49_1 = stackOut_47_1;
-            stackIn_48_0 = stackOut_47_0;
-            stackIn_48_1 = stackOut_47_1;
+
+
+            stackIn_51_1 = ((StringBuilder) (Object) stackIn_49_1).append(stackIn_49_2).append(',');
+
             if (param1 == null) {
-              stackOut_49_0 = (RuntimeException) ((Object) stackIn_49_0);
-              stackOut_49_1 = (StringBuilder) ((Object) stackIn_49_1);
-              stackOut_49_2 = "null";
-              stackIn_50_0 = stackOut_49_0;
-              stackIn_50_1 = stackOut_49_1;
-              stackIn_50_2 = stackOut_49_2;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_49_0);
+              stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
+              stackIn_52_2 = "null";
               break L11;
             } else {
-              stackOut_48_0 = (RuntimeException) ((Object) stackIn_48_0);
-              stackOut_48_1 = (StringBuilder) ((Object) stackIn_48_1);
-              stackOut_48_2 = "{...}";
-              stackIn_50_0 = stackOut_48_0;
-              stackIn_50_1 = stackOut_48_1;
-              stackIn_50_2 = stackOut_48_2;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_49_0);
+              stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
+              stackIn_52_2 = "{...}";
               break L11;
             }
           }
-          throw r.a((Throwable) ((Object) stackIn_50_0), stackIn_50_2 + ',' + param2 + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) stackIn_49_0), stackIn_52_2 + ',' + param2 + ',' + param3 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -2375,33 +2066,23 @@ class ka implements uj {
     }
 
     private final void a(int param0, sd param1) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        ln var3_ref = null;
-        int var4 = 0;
-        ln var5_ref_ln = null;
-        int var5 = 0;
-        Object var6 = null;
-        ln[] var7 = null;
-        int var8 = 0;
-        ln var9 = null;
-        int var10 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        int var3_int = 0;
+        ln var3 = null;
+        RuntimeException var3_ref = null;
+        int var4 = 0;
+        int var5 = 0;
+        ln var5_ref_ln = null;
+        Object var6 = null;
+        ln[] var7 = null;
+        int var8 = 0;
+        ln var9 = null;
+        int var10 = 0;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -2410,24 +2091,24 @@ class ka implements uj {
             var4 = -58 % ((param0 - 53) / 47);
             L1: while (true) {
               if (this.field_o <= var3_int) {
-                var3_ref = param1.j(18229);
+                var3 = param1.j(18229);
                 L2: while (true) {
-                  if (var3_ref == null) {
+                  if (var3 == null) {
                     break L0;
                   } else {
                     L3: {
-                      var4 = var3_ref.field_p;
+                      var4 = var3.field_p;
                       var5 = wb.field_b[var4];
                       if (var5 == 0) {
                         break L3;
                       } else {
-                        this.a(var5, 94, var3_ref);
+                        this.a(var5, 94, var3);
                         break L3;
                       }
                     }
                     wb.field_b[var4] = 0;
                     this.c(0, cq.field_E, -1);
-                    var3_ref = param1.h(-23410);
+                    var3 = param1.h(-23410);
                     continue L2;
                   }
                 }
@@ -2478,28 +2159,20 @@ class ka implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var3 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var3);
-            stackOut_21_1 = new StringBuilder().append("ka.OA(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            var3_ref = decompiledCaughtException;
+            stackIn_23_0 = (RuntimeException) (var3_ref);
+
+            stackIn_23_1 = new StringBuilder().append("ka.OA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L6;
             }
           }
@@ -2508,17 +2181,17 @@ class ka implements uj {
     }
 
     private final void f(int param0) {
-        Object var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        sd var5 = null;
-        qm var5_ref = null;
-        ln var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        lo var11 = null;
+        Object var2;
+        int var3;
+        int var4;
+        lo var5;
+        sd var5_ref;
+        qm var5_ref2;
+        ln var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 == 26539) {
           L0: {
@@ -2526,8 +2199,8 @@ class ka implements uj {
             var3 = 0;
             var4 = 0;
             if (this.field_g.field_o.field_i) {
-              var11 = this.field_n.field_m;
-              var6 = var11.j(18229);
+              var5 = this.field_n.field_m;
+              var6 = var5.j(18229);
               L1: while (true) {
                 if (var6 == null) {
                   break L0;
@@ -2541,7 +2214,7 @@ class ka implements uj {
                         break L3;
                       } else {
                         var8 = var8 + var6.field_G[var9];
-                        if (var11.field_u[var9] >= var6.field_G[var9]) {
+                        if (var5.field_u[var9] >= var6.field_G[var9]) {
                           var9++;
                           continue L2;
                         } else {
@@ -2580,21 +2253,21 @@ class ka implements uj {
                         break L4;
                       }
                     }
-                    var6 = var11.h(param0 + -49949);
+                    var6 = var5.h(param0 + -49949);
                     continue L1;
                   }
                 }
               }
             } else {
-              var5 = (sd) ((Object) this.field_n.field_i.d(0));
+              var5_ref = (sd) ((Object) this.field_n.field_i.d(0));
               L6: while (true) {
-                if (var5 == null) {
+                if (var5_ref == null) {
                   break L0;
                 } else {
-                  var6 = var5.j(18229);
+                  var6 = var5_ref.j(18229);
                   L7: while (true) {
                     if (var6 == null) {
-                      var5 = (sd) ((Object) this.field_n.field_i.a((byte) -71));
+                      var5_ref = (sd) ((Object) this.field_n.field_i.a((byte) -71));
                       continue L6;
                     } else {
                       var7 = 0;
@@ -2606,7 +2279,7 @@ class ka implements uj {
                             break L9;
                           } else {
                             var8 = var8 + var6.field_G[var9];
-                            if (var5.field_u[var9] >= var6.field_G[var9]) {
+                            if ((var5_ref.field_u[var9] ^ -1) <= (var6.field_G[var9] ^ -1)) {
                               var9++;
                               continue L8;
                             } else {
@@ -2642,10 +2315,10 @@ class ka implements uj {
                             var2 = var6;
                             break L10;
                           }
-                          var6 = var5.h(-23410);
+                          var6 = var5_ref.h(-23410);
                           continue L7;
                         } else {
-                          var6 = var5.h(-23410);
+                          var6 = var5_ref.h(-23410);
                           continue L7;
                         }
                       }
@@ -2657,8 +2330,8 @@ class ka implements uj {
           }
           L12: {
             if (var2 != null) {
-              var5_ref = new qm(1, this.field_n, (ln) (var2));
-              lh.field_G.a((byte) -113, var5_ref);
+              var5_ref2 = new qm(1, this.field_n, (ln) (var2));
+              lh.field_G.a((byte) -113, var5_ref2);
               break L12;
             } else {
               break L12;
@@ -2671,47 +2344,24 @@ class ka implements uj {
     }
 
     private final int a(int param0, int param1, int[] param2, int[] param3, int param4) {
-        RuntimeException var6 = null;
+        int stackIn_22_0 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        StringBuilder stackIn_28_1 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         ln var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int stackIn_21_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -2775,8 +2425,7 @@ class ka implements uj {
                   break L6;
                 }
               }
-              stackOut_20_0 = var6_int;
-              stackIn_21_0 = stackOut_20_0;
+              stackIn_22_0 = var6_int;
               break L0;
             }
           }
@@ -2784,78 +2433,63 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var6);
-            stackOut_22_1 = new StringBuilder().append("ka.I(").append(param0).append(',').append(param1).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_25_0 = (RuntimeException) (var6);
+
+            stackIn_25_1 = new StringBuilder().append("ka.I(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+
+
+            stackIn_28_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',');
+
             if (param3 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L8;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L8;
             }
           }
-          throw r.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param4 + ')');
+          throw r.a((Throwable) ((Object) stackIn_26_0), stackIn_29_2 + ',' + param4 + ')');
         }
-        return stackIn_21_0;
+        return stackIn_22_0;
     }
 
     int b(int param0, int param1) {
-        int discarded$2 = 0;
-        int var3 = 0;
-        ln var4 = null;
-        int var5 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        ln[] var11 = null;
-        ln var12 = null;
-        ln[] var13 = null;
-        ln var14 = null;
+        int var3;
+        ln var4;
+        int var5;
+        ln[] var6;
+        int var7;
+        ln var8;
+        int var9;
+        fs stackIn_9_0 = null;
+        fs stackIn_9_1 = null;
+        ln[] var10;
+        ln var11;
+        int var12;
         L0: {
           var9 = ShatteredPlansClient.field_F ? 1 : 0;
           if (param1 == -1799) {
             break L0;
           } else {
-            discarded$2 = this.b(114, -80);
+            this.b(114, -80);
             break L0;
           }
         }
@@ -2866,17 +2500,19 @@ class ka implements uj {
             return var3;
           } else {
             var5 = 0;
-            var11 = var4.field_D;
+            var6 = var4.field_D;
             var7 = 0;
             L2: while (true) {
               L3: {
-                if (var11.length <= var7) {
+                if (var6.length <= var7) {
                   break L3;
                 } else {
-                  var12 = var11[var7];
-                  if (null != var12.field_y) {
-                    if (this.field_n != var12.field_y) {
-                      if (!this.field_n.field_h[var12.field_y.field_x]) {
+                  var8 = var6[var7];
+                  if (null != var8.field_y) {
+                    stackIn_9_0 = this.field_n;
+                    stackIn_9_1 = var8.field_y;
+                    if (stackIn_9_0 != stackIn_9_1) {
+                      if (!this.field_n.field_h[var8.field_y.field_x]) {
                         var5 = 1;
                         break L3;
                       } else {
@@ -2895,26 +2531,28 @@ class ka implements uj {
               }
               L4: {
                 if (var5 != 0) {
-                  var13 = var4.field_D;
-                  var10 = 0;
-                  var7 = var10;
+                  var10 = var4.field_D;
+                  var6 = var4.field_D;
+                  var12 = 0;
+                  var7 = var12;
                   L5: while (true) {
-                    if (var13.length <= var10) {
+                    if (var10.length <= var12) {
                       break L4;
                     } else {
-                      var14 = var13[var10];
-                      if (this.field_n == var14.field_y) {
+                      var11 = var10[var12];
+                      var8 = var11;
+                      if (this.field_n == var8.field_y) {
                         if (param0 != 0) {
                           param0--;
-                          wb.field_b[var14.field_p] = wb.field_b[var14.field_p] + 1;
+                          wb.field_b[var11.field_p] = wb.field_b[var11.field_p] + 1;
                           var3++;
-                          var10++;
+                          var12++;
                           continue L5;
                         } else {
                           return var3;
                         }
                       } else {
-                        var10++;
+                        var12++;
                         continue L5;
                       }
                     }
@@ -2931,15 +2569,6 @@ class ka implements uj {
     }
 
     public final void a(fs param0, int param1) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         RuntimeException stackIn_46_0 = null;
@@ -2947,14 +2576,13 @@ class ka implements uj {
         String stackIn_46_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -3071,27 +2699,19 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_43_0 = (RuntimeException) (var3);
-            stackOut_43_1 = new StringBuilder().append("ka.SA(");
-            stackIn_45_0 = stackOut_43_0;
-            stackIn_45_1 = stackOut_43_1;
-            stackIn_44_0 = stackOut_43_0;
-            stackIn_44_1 = stackOut_43_1;
+            stackIn_45_0 = (RuntimeException) (var3);
+
+            stackIn_45_1 = new StringBuilder().append("ka.SA(");
+
             if (param0 == null) {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "null";
-              stackIn_46_0 = stackOut_45_0;
-              stackIn_46_1 = stackOut_45_1;
-              stackIn_46_2 = stackOut_45_2;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "null";
               break L6;
             } else {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "{...}";
-              stackIn_46_0 = stackOut_44_0;
-              stackIn_46_1 = stackOut_44_1;
-              stackIn_46_2 = stackOut_44_2;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "{...}";
               break L6;
             }
           }
@@ -3106,18 +2726,13 @@ class ka implements uj {
 
     private final int[] b(int param0, sd param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         ln var4 = null;
         int var6 = 0;
         ln var7 = null;
         int var8 = 0;
         ln[] var9 = null;
-        int[] var10 = null;
-        int var11 = 0;
         int[] stackIn_18_0 = null;
         int[] stackIn_26_0 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
@@ -3125,16 +2740,9 @@ class ka implements uj {
         String stackIn_30_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int[] stackOut_25_0 = null;
-        int[] stackOut_17_0 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        RuntimeException var3 = null;
+        int[] var10 = null;
+        int var11 = 0;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -3148,8 +2756,7 @@ class ka implements uj {
                   var6 = var11;
                   L2: while (true) {
                     if (this.field_o <= var11) {
-                      stackOut_25_0 = (int[]) (var10);
-                      stackIn_26_0 = stackOut_25_0;
+                      stackIn_26_0 = (int[]) (var10);
                       decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
@@ -3167,8 +2774,7 @@ class ka implements uj {
                     }
                   }
                 } else {
-                  stackOut_17_0 = (int[]) null;
-                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_18_0 = (int[]) null;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -3218,27 +2824,19 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var3);
-            stackOut_27_1 = new StringBuilder().append("ka.CA(").append(param0).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackIn_29_0 = (RuntimeException) (var3);
+
+            stackIn_29_1 = new StringBuilder().append("ka.CA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L7;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L7;
             }
           }
@@ -3252,14 +2850,14 @@ class ka implements uj {
     }
 
     void b(boolean param0) {
-        Object var2 = null;
-        int var3 = 0;
-        int var4_int = 0;
-        qm var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        Object var2;
+        int var3;
+        int var4_int;
+        int var5;
+        int var8;
+        qm var4;
+        int var6;
+        int var7;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0) {
           var2 = null;
@@ -3303,24 +2901,25 @@ class ka implements uj {
     }
 
     void e(byte param0) {
-        Object var2 = null;
-        int var3 = 0;
-        int var4_int = 0;
-        sd var4 = null;
-        Object var5 = null;
-        int var6 = 0;
-        int var7_int = 0;
-        qm var7 = null;
-        ln var8 = null;
-        int var9 = 0;
-        ln[] var10_ref_ln__ = null;
-        int var10 = 0;
-        int var11 = 0;
-        ln var12_ref_ln = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        ln var15 = null;
+        sd stackIn_20_0 = null;
+        sd stackIn_20_1 = null;
+        Object var2;
+        int var3;
+        int var4_int;
+        sd var4;
+        Object var5;
+        int var6;
+        int var7_int;
+        qm var7;
+        ln var8;
+        int var9;
+        ln[] var10_ref_ln__;
+        int var10;
+        int var11;
+        ln var12_ref_ln;
+        int var12;
+        int var13;
+        int var14;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = null;
         var3 = 0;
@@ -3357,7 +2956,9 @@ class ka implements uj {
                     return;
                   } else {
                     var8 = this.field_g.field_g.field_e[var7_int];
-                    if (var8.field_R != ((ln) (var2)).field_R) {
+                    stackIn_20_0 = var8.field_R;
+                    stackIn_20_1 = ((ln) (var2)).field_R;
+                    if (stackIn_20_0 != stackIn_20_1) {
                       L4: {
                         if (var8.field_y == this.field_n) {
                           break L4;
@@ -3450,11 +3051,11 @@ class ka implements uj {
               }
             }
           } else {
-            var15 = this.field_g.field_g.field_e[var4_int];
-            if (var15.field_y == this.field_n) {
+            var5 = this.field_g.field_g.field_e[var4_int];
+            if (((ln) (var5)).field_y == this.field_n) {
               L10: {
                 var6 = oe.field_i[var4_int];
-                if (var15.field_u) {
+                if (((ln) (var5)).field_u) {
                   var6 = 2 * var6 - -5;
                   break L10;
                 } else {
@@ -3462,7 +3063,7 @@ class ka implements uj {
                 }
               }
               if (var3 < var6) {
-                var2 = var15;
+                var2 = var5;
                 var3 = var6;
                 var4_int++;
                 continue L0;
@@ -3480,29 +3081,18 @@ class ka implements uj {
 
     int a(byte param0, ln param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         ln[] var4 = null;
         int var5 = 0;
         ln var6 = null;
         int var7 = 0;
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var3 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -3519,8 +3109,7 @@ class ka implements uj {
             var5 = 0;
             L2: while (true) {
               if (var5 >= var4.length) {
-                stackOut_12_0 = var3_int;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = var3_int;
                 break L0;
               } else {
                 var6 = var4[var5];
@@ -3549,27 +3138,19 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("ka.U(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3);
+
+            stackIn_16_1 = new StringBuilder().append("ka.U(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L3;
             }
           }
@@ -3586,23 +3167,12 @@ class ka implements uj {
         ln var6 = null;
         int var7 = 0;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -3619,8 +3189,7 @@ class ka implements uj {
                     break L2;
                   }
                 }
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = var3_int;
                 break L0;
               } else {
                 var6 = var4[var5];
@@ -3634,27 +3203,19 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("ka.T(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3);
+
+            stackIn_10_1 = new StringBuilder().append("ka.T(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -3664,32 +3225,22 @@ class ka implements uj {
     }
 
     private final void a(int param0, int param1, ln param2) {
-        RuntimeException var4 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
+        int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
         ln var9 = null;
         int var10 = 0;
         int var11 = 0;
-        int[] var12 = null;
-        int[] var16 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -3700,9 +3251,9 @@ class ka implements uj {
                 decompiledRegionSelector0 = 0;
                 break L0;
               } else {
-                var12 = this.field_g.field_g.field_c[param2.field_p];
+                var4 = this.field_g.field_g.field_c[param2.field_p];
                 var5 = 27 / ((param1 - -41) / 58);
-                var16 = nf.a(var12, 3718);
+                var6 = nf.a(var4, 3718);
                 var7 = 0;
                 L1: while (true) {
                   if (this.field_o <= var7) {
@@ -3721,8 +3272,8 @@ class ka implements uj {
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    if (0 != (var16[var7] ^ -1)) {
-                      var8 = var16[var7];
+                    if (0 != (var6[var7] ^ -1)) {
+                      var8 = var6[var7];
                       var9 = this.field_g.field_g.field_e[var8];
                       var10 = ja.field_i[var8];
                       if (param0 > var10) {
@@ -3768,32 +3319,24 @@ class ka implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var4 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var4);
-            stackOut_28_1 = new StringBuilder().append("ka.O(").append(param0).append(',').append(param1).append(',');
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_31_0 = (RuntimeException) (var4_ref);
+
+            stackIn_31_1 = new StringBuilder().append("ka.O(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L5;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L5;
             }
           }
-          throw r.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -3811,23 +3354,12 @@ class ka implements uj {
         RuntimeException var3 = null;
         int var4 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             L1: {
@@ -3840,35 +3372,26 @@ class ka implements uj {
                 break L1;
               }
             }
-            stackOut_3_0 = var4;
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = var4;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("ka.R(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("ka.R(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -3891,8 +3414,6 @@ class ka implements uj {
         int var6 = 0;
         int stackIn_14_0 = 0;
         int stackIn_16_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -3900,16 +3421,6 @@ class ka implements uj {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_13_0 = 0;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
         try {
           L0: {
             L1: {
@@ -3946,13 +3457,11 @@ class ka implements uj {
               }
             }
             if (param2 == 30) {
-              stackOut_15_0 = var5;
-              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_0 = var5;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_13_0 = 15;
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_0 = 15;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -3961,27 +3470,19 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var4);
-            stackOut_17_1 = new StringBuilder().append("ka.P(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var4);
+
+            stackIn_19_1 = new StringBuilder().append("ka.P(");
+
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L4;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L4;
             }
           }
@@ -3998,23 +3499,12 @@ class ka implements uj {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_9_0 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
@@ -4044,35 +3534,26 @@ class ka implements uj {
                 break L3;
               }
             }
-            stackOut_8_0 = var3_int;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = var3_int;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3);
-            stackOut_10_1 = new StringBuilder().append("ka.GA(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3);
+
+            stackIn_12_1 = new StringBuilder().append("ka.GA(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -4106,24 +3587,22 @@ class ka implements uj {
     }
 
     public final int a(boolean param0) {
-        int discarded$0 = 0;
         if (param0) {
-            discarded$0 = this.a(-105, (ln) null);
+            this.a(-105, (ln) null);
         }
         return this.field_h;
     }
 
     public void a(byte param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4_int = 0;
-        fs var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var2;
+        int var3;
+        int var4_int;
+        fs var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         L0: {
           var9 = ShatteredPlansClient.field_F ? 1 : 0;
           if (this.field_n.field_i.g(-116)) {
@@ -4142,7 +3621,7 @@ class ka implements uj {
               if (param0 == -63) {
                 break L2;
               } else {
-                discarded$1 = this.a(113, 108, (fs) null);
+                this.a(113, 108, (fs) null);
                 break L2;
               }
             }
@@ -4216,7 +3695,7 @@ class ka implements uj {
           } else {
             this.field_c[var4_int] = this.field_c[var4_int] - 1;
             this.field_d[var4_int] = this.field_d[var4_int] - 1;
-            if (var4_int == var2) {
+            if ((var4_int ^ -1) == (var2 ^ -1)) {
               this.field_i[var4_int] = 3;
               var4_int++;
               continue L1;
@@ -4238,23 +3717,12 @@ class ka implements uj {
     int b(ln param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -4265,35 +3733,26 @@ class ka implements uj {
                 break L1;
               }
             }
-            stackOut_2_0 = hs.field_i[param0.field_p];
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = hs.field_i[param0.field_p];
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("ka.D(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("ka.D(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -4303,14 +3762,14 @@ class ka implements uj {
     }
 
     private final int b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        ln var9 = null;
-        mg var10 = null;
-        int var11 = 0;
+        int var4;
+        int[] var5;
+        int var6;
+        int var7;
+        int var8;
+        ln var9;
+        mg var10;
+        int var11;
         L0: {
           var11 = ShatteredPlansClient.field_F ? 1 : 0;
           if (param1 < -124) {
@@ -4394,14 +3853,14 @@ class ka implements uj {
     }
 
     void g(int param0) {
-        int var2 = 0;
-        int var3_int = 0;
-        int[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var2;
+        int var3_int;
+        int[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = this.field_g.field_r;
         ff.field_x = new int[var2][];
@@ -4461,7 +3920,7 @@ class ka implements uj {
                       if (var7 >= var2) {
                         break L6;
                       } else {
-                        if (var7 != this.field_n.field_x) {
+                        if ((var7 ^ -1) != (this.field_n.field_x ^ -1)) {
                           if (this.field_n.field_h[var7]) {
                             if (var3[var5] >= ff.field_x[var7][var5]) {
                               var6 = 0;
@@ -4504,19 +3963,15 @@ class ka implements uj {
     }
 
     final boolean c(byte param0) {
-        int discarded$0 = 0;
         if (param0 >= -19) {
-            discarded$0 = this.b(102, -64);
+            this.b(102, -64);
         }
         return this.field_l;
     }
 
     private final void a(byte param0, int param1, ln param2) {
         qa var4 = null;
-        RuntimeException var4_ref = null;
         int var5 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -4524,14 +3979,7 @@ class ka implements uj {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException var4_ref = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -4565,27 +4013,19 @@ class ka implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var4_ref);
-            stackOut_11_1 = new StringBuilder().append("ka.M(").append(param0).append(',').append(param1).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var4_ref);
+
+            stackIn_13_1 = new StringBuilder().append("ka.M(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L2;
             }
           }

@@ -8,12 +8,11 @@ final class cka extends ana {
     static String field_w;
 
     private final void f(byte param0) {
-        oha discarded$1 = null;
-        Object var3 = null;
-        pp var3_ref = null;
-        int var5 = 0;
-        aga var6 = null;
-        ad var7 = null;
+        Object var3;
+        pp var3_ref;
+        int var5;
+        aga var6;
+        ad var7;
         L0: {
           var3 = null;
           var5 = BachelorFridge.field_y;
@@ -29,7 +28,7 @@ final class cka extends ana {
           return;
         } else {
           var3_ref = (pp) ((Object) this.field_v.field_o.b((byte) 90));
-          discarded$1 = al.a(-121, this.field_v.field_k);
+          al.a(-121, this.field_v.field_k);
           L1: while (true) {
             if (var3_ref == null) {
               return;
@@ -73,9 +72,8 @@ final class cka extends ana {
     }
 
     private final void e(byte param0) {
-        boolean discarded$0 = false;
         if (param0 < 83) {
-            discarded$0 = this.c((byte) 86);
+            this.c((byte) 86);
         }
     }
 

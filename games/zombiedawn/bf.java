@@ -4,8 +4,6 @@
 final class bf {
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           if (param1 == 0) {
             break L0;
@@ -28,27 +26,24 @@ final class bf {
                   if (param3 + param5 <= param2) {
                     break L2;
                   } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = 1;
                     break L1;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 0;
-          stackIn_8_0 = stackOut_7_0;
+          stackIn_8_0 = 0;
           break L1;
         }
         return stackIn_8_0 != 0;
     }
 
     final static void a(byte param0, int param1) {
-        boolean discarded$2 = false;
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = ZombieDawn.field_J;
         try {
           L0: {
@@ -61,7 +56,7 @@ final class bf {
                   if (param0 == -35) {
                     break L2;
                   } else {
-                    discarded$2 = bf.a(112, 74, 60, -121, 40, -69, -113);
+                    bf.a(112, 74, 60, -121, 40, -69, -113);
                     break L2;
                   }
                 }

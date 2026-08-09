@@ -22,12 +22,12 @@ final class ih extends qe {
     private rh field_y;
 
     private final int a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var9;
+        int var7;
+        int var8;
         var9 = DungeonAssault.field_K;
         var4 = 0;
         var5 = 0;
@@ -99,9 +99,9 @@ final class ih extends qe {
     }
 
     private final void d(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var3 = DungeonAssault.field_K;
           if (gm.field_d.field_s >= ac.field_s) {
@@ -163,18 +163,16 @@ final class ih extends qe {
     }
 
     final void a(boolean param0) {
-        Object var2 = null;
-        Object var3 = null;
-        rj var4 = null;
-        int var5_int = 0;
-        h var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        cn var8 = null;
-        int var9 = 0;
         cn stackIn_36_0 = null;
-        cn stackOut_35_0 = null;
-        Object stackOut_34_0 = null;
+        Object var2;
+        Object var3;
+        rj var4;
+        int var5_int;
+        h var5;
+        int var6;
+        int var7;
+        cn var8;
+        int var9;
         L0: {
           L1: {
             var9 = DungeonAssault.field_K;
@@ -295,12 +293,10 @@ final class ih extends qe {
                       var7 = eh.field_h + -40;
                       rp.a(8, 40, (byte) 108, var6, 40, kc.field_S, var7);
                       if (null != var5.field_e) {
-                        stackOut_35_0 = var5.field_e.a(40, 0, 40, 0);
-                        stackIn_36_0 = stackOut_35_0;
+                        stackIn_36_0 = var5.field_e.a(40, 0, 40, 0);
                         break L12;
                       } else {
-                        stackOut_34_0 = null;
-                        stackIn_36_0 = (cn) ((Object) stackOut_34_0);
+                        stackIn_36_0 = null;
                         break L12;
                       }
                     }
@@ -333,7 +329,7 @@ final class ih extends qe {
     }
 
     final static String[] a(int param0, char param1, String param2) {
-        int incrementValue$2 = 0;
+        int incrementValue$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
@@ -345,8 +341,6 @@ final class ih extends qe {
         CharSequence var10 = null;
         String[] stackIn_3_0 = null;
         String[] stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -354,16 +348,6 @@ final class ih extends qe {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String[] stackOut_10_0 = null;
-        String[] stackOut_2_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         var9 = DungeonAssault.field_K;
         try {
           L0: {
@@ -377,17 +361,16 @@ final class ih extends qe {
               L1: while (true) {
                 if (var7 >= var3_int) {
                   var4[var3_int] = param2.substring(var6);
-                  stackOut_10_0 = (String[]) (var4);
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = (String[]) (var4);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   var8 = var6;
                   L2: while (true) {
                     if (param1 == param2.charAt(var8)) {
-                      incrementValue$2 = var5;
+                      incrementValue$1 = var5;
                       var5++;
-                      var4[incrementValue$2] = param2.substring(var6, var8);
+                      var4[incrementValue$1] = param2.substring(var6, var8);
                       var6 = var8 - -1;
                       var7++;
                       continue L1;
@@ -399,8 +382,7 @@ final class ih extends qe {
                 }
               }
             } else {
-              stackOut_2_0 = (String[]) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (String[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -409,27 +391,19 @@ final class ih extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var3);
-            stackOut_12_1 = new StringBuilder().append("ih.J(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var3);
+
+            stackIn_14_1 = new StringBuilder().append("ih.J(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }
@@ -443,33 +417,30 @@ final class ih extends qe {
     }
 
     private final void f(int param0) {
-        o discarded$2 = null;
-        o discarded$3 = null;
-        hb var2_ref_hb = null;
-        int var2 = 0;
-        wb[] var3 = null;
-        hb var3_ref = null;
-        en var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        wb var13 = null;
-        int var14 = 0;
-        hb var15 = null;
-        wb[] var16 = null;
-        hb var17 = null;
-        h var18 = null;
-        h var19 = null;
-        hb var20 = null;
-        h var21 = null;
         hb stackIn_30_0 = null;
-        Object stackOut_29_0 = null;
-        hb stackOut_28_0 = null;
+        int stackIn_48_0 = 0;
+        int var2;
+        hb var2_ref_hb;
+        wb[] var3;
+        hb var3_ref;
+        en var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        wb var13;
+        int var14;
+        hb var15;
+        wb[] var16;
+        hb var17;
+        h var18;
+        h var19;
+        hb var20;
+        h var21;
         L0: {
           var14 = DungeonAssault.field_K;
           this.field_t = -1;
@@ -590,7 +561,7 @@ final class ih extends qe {
                         }
                         this.field_F = new wd(var18.field_e, var18.field_t, rf.field_M);
                         if (null != var18.field_p) {
-                          discarded$2 = gd.a(64, var18.field_p);
+                          gd.a(64, var18.field_p);
                           break L7;
                         } else {
                           break L7;
@@ -615,7 +586,8 @@ final class ih extends qe {
                             this.a(6, 0);
                             break L7;
                           } else {
-                            if (no.field_d != 1) {
+                            stackIn_48_0 = no.field_d;
+                            if (stackIn_48_0 != 1) {
                               if (2 != no.field_d) {
                                 break L7;
                               } else {
@@ -662,7 +634,7 @@ final class ih extends qe {
                                         if (var21.field_u != var20.field_b.field_n) {
                                           var20.field_b.a(124, var21.field_u);
                                           if (var20.field_n.field_p != null) {
-                                            discarded$3 = gd.a(param0 ^ -24836, var21.field_p);
+                                            gd.a(param0 ^ -24836, var21.field_p);
                                             break L7;
                                           } else {
                                             break L7;
@@ -702,12 +674,10 @@ final class ih extends qe {
                 } else {
                   L12: {
                     if (-1 == this.field_C) {
-                      stackOut_29_0 = null;
-                      stackIn_30_0 = (hb) ((Object) stackOut_29_0);
+                      stackIn_30_0 = null;
                       break L12;
                     } else {
-                      stackOut_28_0 = um.field_i[this.field_C];
-                      stackIn_30_0 = stackOut_28_0;
+                      stackIn_30_0 = um.field_i[this.field_C];
                       break L12;
                     }
                   }
@@ -842,14 +812,14 @@ final class ih extends qe {
     }
 
     private final void g(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         var9 = DungeonAssault.field_K;
         var2 = param0;
         var3 = 0;
@@ -929,20 +899,18 @@ final class ih extends qe {
             this.field_b = (kl) ((Object) new lf(oa.field_h, pb.field_F));
             return;
         }
-        if (kn.field_g) {
-            if (gm.field_d.field_K == 0) {
-                for (var3 = 0; var3 < 8; var3++) {
-                    if (null != gm.field_d.field_a[var3]) {
-                        break;
-                    }
+        if (kn.field_g && gm.field_d.field_K == 0) {
+            for (var3 = 0; var3 < 8; var3++) {
+                if (null != gm.field_d.field_a[var3]) {
+                    break;
                 }
-                if (!(-9 != (var3 ^ -1))) {
-                    fm.a(80, 21);
-                    return;
-                }
-                gd.a(g.field_Hb, 0, 2, param1);
+            }
+            if (!(-9 != (var3 ^ -1))) {
+                fm.a(80, 21);
                 return;
             }
+            gd.a(g.field_Hb, 0, 2, param1);
+            return;
         }
         int var4 = -29 / ((3 - param0) / 59);
         gd.a(g.field_Hb, 0, g.field_Hb, param1);
@@ -961,26 +929,20 @@ final class ih extends qe {
     }
 
     private final void a(int param0, int param1) {
-        int[] var3 = null;
-        int var4 = 0;
-        u[] var5 = null;
-        int var6 = 0;
-        u var7 = null;
-        int var8 = 0;
-        int[] var9 = null;
-        int[] var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
-        Object stackIn_37_0 = null;
         Object stackIn_38_0 = null;
         Object stackIn_39_0 = null;
         int stackIn_39_1 = 0;
-        Object stackOut_36_0 = null;
-        Object stackOut_38_0 = null;
-        int stackOut_38_1 = 0;
-        Object stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
+        int[] var3;
+        int var4;
+        u[] var5;
+        int var6;
+        u var7;
+        int var8;
+        int[] var9;
+        int[] var10;
+        int[] var11;
+        int[] var12;
+        int[] var13;
         L0: {
           var8 = DungeonAssault.field_K;
           var13 = new int[hp.field_b.length];
@@ -1103,20 +1065,15 @@ final class ih extends qe {
             break L6;
           } else {
             L7: {
-              stackOut_36_0 = this;
-              stackIn_38_0 = stackOut_36_0;
-              stackIn_37_0 = stackOut_36_0;
+              stackIn_38_0 = this;
+
               if (this.field_E) {
-                stackOut_38_0 = this;
-                stackOut_38_1 = 0;
-                stackIn_39_0 = stackOut_38_0;
-                stackIn_39_1 = stackOut_38_1;
+                stackIn_39_0 = this;
+                stackIn_39_1 = 0;
                 break L7;
               } else {
-                stackOut_37_0 = this;
-                stackOut_37_1 = 1;
-                stackIn_39_0 = stackOut_37_0;
-                stackIn_39_1 = stackOut_37_1;
+                stackIn_39_0 = this;
+                stackIn_39_1 = 1;
                 break L7;
               }
             }
@@ -1175,12 +1132,10 @@ final class ih extends qe {
     }
 
     private final void d(int param0) {
-        int var2 = 0;
-        eh var3 = null;
-        int var4 = 0;
+        int var2;
+        int var4;
         eh stackIn_9_0 = null;
-        eh stackOut_8_0 = null;
-        eh stackOut_7_0 = null;
+        eh var3;
         L0: {
           var4 = DungeonAssault.field_K;
           if (param0 == 1793) {
@@ -1200,12 +1155,10 @@ final class ih extends qe {
             if (null != um.field_i[var2]) {
               L2: {
                 if (um.field_i[var2].field_p == 255) {
-                  stackOut_8_0 = k.field_c;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = k.field_c;
                   break L2;
                 } else {
-                  stackOut_7_0 = um.field_i[var2].field_n.field_e;
-                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_0 = um.field_i[var2].field_n.field_e;
                   break L2;
                 }
               }
@@ -1222,13 +1175,13 @@ final class ih extends qe {
     }
 
     private final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var8;
+        int var5;
+        int var6;
+        int var7;
         L0: {
           var8 = DungeonAssault.field_K;
           if (param0 < -100) {
@@ -1271,9 +1224,9 @@ final class ih extends qe {
     }
 
     private final void a(byte param0, int param1) {
-        Object var3 = null;
-        h var4 = null;
-        int var5 = 0;
+        Object var3;
+        h var4;
+        int var5;
         var5 = DungeonAssault.field_K;
         this.field_C = param1;
         if (param0 == -112) {
@@ -1334,11 +1287,11 @@ final class ih extends qe {
     }
 
     private final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        h var4 = null;
-        u var5 = null;
-        int var6 = 0;
+        int var2;
+        int var3;
+        h var4;
+        int var6;
+        u var5;
         L0: {
           var6 = DungeonAssault.field_K;
           if (param0 <= -119) {
@@ -1388,12 +1341,12 @@ final class ih extends qe {
     }
 
     final void c(boolean param0) {
-        hb[] var2 = null;
-        int var3 = 0;
-        hb var4 = null;
-        int var5 = 0;
-        hb[] var6 = null;
-        lf var7 = null;
+        int var5;
+        hb[] var2;
+        int var3;
+        hb var4;
+        hb[] var6;
+        lf var7;
         var5 = DungeonAssault.field_K;
         super.c(param0);
         if (kh.field_s) {
@@ -1484,9 +1437,9 @@ final class ih extends qe {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
+            int var0;
+            int var1;
+            int var2;
             field_J = new int[256];
             field_r = new int[128];
             field_s = "Spectre";

@@ -86,38 +86,23 @@ class bh extends mc {
     }
 
     final void b(int param0, int param1) {
-        String discarded$0 = null;
         this.field_u[-1 + -param0 + this.field_t] = (byte)param0;
         if (param1 != -2) {
-            discarded$0 = this.i(13);
+            this.i(13);
         }
     }
 
     final static void a(int param0, String param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
         int stackIn_16_0 = 0;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_9_0 = 0;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
         var3 = TetraLink.field_J;
         try {
           L0: {
@@ -155,22 +140,18 @@ class bh extends mc {
                 if (!fl.field_s) {
                   if (ec.field_i >= gd.field_Mb) {
                     if (ej.field_z + gd.field_Mb > ec.field_i) {
-                      stackOut_14_0 = 1;
-                      stackIn_16_0 = stackOut_14_0;
+                      stackIn_16_0 = 1;
                       break L4;
                     } else {
-                      stackOut_13_0 = 0;
-                      stackIn_16_0 = stackOut_13_0;
+                      stackIn_16_0 = 0;
                       break L4;
                     }
                   } else {
-                    stackOut_11_0 = 0;
-                    stackIn_16_0 = stackOut_11_0;
+                    stackIn_16_0 = 0;
                     break L4;
                   }
                 } else {
-                  stackOut_9_0 = 0;
-                  stackIn_16_0 = stackOut_9_0;
+                  stackIn_16_0 = 0;
                   break L4;
                 }
               }
@@ -261,27 +242,19 @@ class bh extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var2 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) (var2);
-            stackOut_41_1 = new StringBuilder().append("bh.UA(").append(param0).append(',');
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackIn_43_0 = (RuntimeException) (var2);
+
+            stackIn_43_1 = new StringBuilder().append("bh.UA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "null";
               break L11;
             } else {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "{...}";
               break L11;
             }
           }
@@ -312,9 +285,16 @@ class bh extends mc {
     }
 
     final void a(int param0, int[] param1, int param2, int param3) {
-        int incrementValue$1 = 0;
-        RuntimeException var5 = null;
+        int incrementValue$0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -323,23 +303,6 @@ class bh extends mc {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var13 = TetraLink.field_J;
         try {
           L0: {
@@ -360,9 +323,9 @@ class bh extends mc {
                   var11 = -1640531527;
                   var12 = 32;
                   L2: while (true) {
-                    incrementValue$1 = var12;
+                    incrementValue$0 = var12;
                     var12--;
-                    if ((incrementValue$1 ^ -1) >= -1) {
+                    if ((incrementValue$0 ^ -1) >= -1) {
                       this.field_t = this.field_t - 8;
                       this.d(var8, (byte) -124);
                       this.d(var9, (byte) -124);
@@ -386,27 +349,19 @@ class bh extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var5);
-            stackOut_11_1 = new StringBuilder().append("bh.HA(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var5);
+
+            stackIn_13_1 = new StringBuilder().append("bh.HA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -439,27 +394,17 @@ class bh extends mc {
     }
 
     final void b(int param0, int param1, byte[] param2, int param3) {
-        int fieldTemp$7 = 0;
+        int fieldTemp$2 = 0;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var5 = null;
         var7 = TetraLink.field_J;
         try {
           L0: {
@@ -469,9 +414,9 @@ class bh extends mc {
               if (var5_int >= param1 + param0) {
                 break L0;
               } else {
-                fieldTemp$7 = this.field_t;
+                fieldTemp$2 = this.field_t;
                 this.field_t = this.field_t + 1;
-                param2[var5_int] = this.field_u[fieldTemp$7];
+                param2[var5_int] = this.field_u[fieldTemp$2];
                 var5_int++;
                 continue L1;
               }
@@ -481,27 +426,19 @@ class bh extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var5);
-            stackOut_5_1 = new StringBuilder().append("bh.L(").append(param0).append(',').append(param1).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var5);
+
+            stackIn_7_1 = new StringBuilder().append("bh.L(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -523,6 +460,7 @@ class bh extends mc {
             this.a(param1 >>> 278992583 | 128, false);
         }
         if (param0 >= -98) {
+            this.c(76);
         }
         this.a(param1 & 127, false);
     }
@@ -537,7 +475,6 @@ class bh extends mc {
     }
 
     private final void b(int param0, long param1) {
-        byte discarded$4 = 0;
         int fieldTemp$0 = this.field_t;
         this.field_t = this.field_t + 1;
         this.field_u[fieldTemp$0] = (byte)(int)(param1 >> 1937149040);
@@ -551,17 +488,17 @@ class bh extends mc {
         this.field_t = this.field_t + 1;
         this.field_u[fieldTemp$3] = (byte)(int)(param1 >> 820767256);
         if (param0 != -1427754144) {
-            discarded$4 = this.g(-73);
+            this.g(-73);
         }
+        int fieldTemp$4 = this.field_t;
+        this.field_t = this.field_t + 1;
+        this.field_u[fieldTemp$4] = (byte)(int)(param1 >> 581619344);
         int fieldTemp$5 = this.field_t;
         this.field_t = this.field_t + 1;
-        this.field_u[fieldTemp$5] = (byte)(int)(param1 >> 581619344);
+        this.field_u[fieldTemp$5] = (byte)(int)(param1 >> -194724344);
         int fieldTemp$6 = this.field_t;
         this.field_t = this.field_t + 1;
-        this.field_u[fieldTemp$6] = (byte)(int)(param1 >> -194724344);
-        int fieldTemp$7 = this.field_t;
-        this.field_t = this.field_t + 1;
-        this.field_u[fieldTemp$7] = (byte)(int)param1;
+        this.field_u[fieldTemp$6] = (byte)(int)param1;
     }
 
     final int e(byte param0) {
@@ -736,9 +673,15 @@ class bh extends mc {
     }
 
     final void a(int param0, int[] param1) {
-        int incrementValue$1 = 0;
-        RuntimeException var3 = null;
+        int incrementValue$0 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -746,22 +689,6 @@ class bh extends mc {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         var10 = TetraLink.field_J;
         try {
           L0: {
@@ -786,9 +713,9 @@ class bh extends mc {
                 var8 = -1640531527;
                 var9 = 32;
                 L3: while (true) {
-                  incrementValue$1 = var9;
+                  incrementValue$0 = var9;
                   var9--;
-                  if ((incrementValue$1 ^ -1) >= -1) {
+                  if ((incrementValue$0 ^ -1) >= -1) {
                     this.field_t = this.field_t - 8;
                     this.d(var5, (byte) -124);
                     this.d(var6, (byte) -124);
@@ -808,27 +735,19 @@ class bh extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3);
-            stackOut_10_1 = new StringBuilder().append("bh.Q(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3);
+
+            stackIn_12_1 = new StringBuilder().append("bh.Q(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -837,30 +756,20 @@ class bh extends mc {
     }
 
     final void a(byte param0, String param1) {
-        RuntimeException var3 = null;
-        long var3_long = 0L;
-        int var5 = 0;
-        long var6 = 0L;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        long var3_long = 0L;
+        RuntimeException var3 = null;
+        int var5 = 0;
+        long var6 = 0L;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         var11 = TetraLink.field_J;
         try {
           L0: {
@@ -937,27 +846,19 @@ class bh extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var3);
-            stackOut_21_1 = new StringBuilder().append("bh.W(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var3);
+
+            stackIn_23_1 = new StringBuilder().append("bh.W(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L6;
             }
           }
@@ -984,9 +885,8 @@ class bh extends mc {
     }
 
     final int f(byte param0) {
-        int discarded$0 = 0;
         if (param0 < 6) {
-            discarded$0 = this.e((byte) 89);
+            this.e((byte) 89);
         }
         int var2 = 255 & this.field_u[this.field_t];
         if (-129 < (var2 ^ -1)) {
@@ -996,26 +896,16 @@ class bh extends mc {
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var5 = null;
         var6 = TetraLink.field_J;
         try {
           L0: {
@@ -1032,9 +922,9 @@ class bh extends mc {
                 }
                 break L0;
               } else {
-                fieldTemp$2 = this.field_t;
+                fieldTemp$1 = this.field_t;
                 this.field_t = this.field_t + 1;
-                this.field_u[fieldTemp$2] = param2[var5_int];
+                this.field_u[fieldTemp$1] = param2[var5_int];
                 var5_int++;
                 continue L1;
               }
@@ -1044,27 +934,19 @@ class bh extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var5);
-            stackOut_7_1 = new StringBuilder().append("bh.U(").append(param0).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var5);
+
+            stackIn_9_1 = new StringBuilder().append("bh.U(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -1085,8 +967,6 @@ class bh extends mc {
     }
 
     final static int h(byte param0) {
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -1099,17 +979,11 @@ class bh extends mc {
         int stackIn_23_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_7_0 = 0;
         var2 = TetraLink.field_J;
         try {
           L0: {
             L1: {
-              discarded$12 = mf.field_s.a(TetraLink.field_I, true, mn.field_a, false);
+              mf.field_s.a(TetraLink.field_I, true, mn.field_a, false);
               if (param0 == -47) {
                 break L1;
               } else {
@@ -1125,45 +999,39 @@ class bh extends mc {
                   if (!s.field_f) {
                     if (ll.field_C != pi.field_a) {
                       if (!oa.field_y.c(false)) {
-                        stackOut_17_0 = 1;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = 1;
                         decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
                         if (ll.field_C != ma.field_d) {
-                          stackOut_22_0 = -1;
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_23_0 = -1;
                           decompiledRegionSelector0 = 5;
                           break L0;
                         } else {
-                          stackOut_20_0 = 2;
-                          stackIn_21_0 = stackOut_20_0;
+                          stackIn_21_0 = 2;
                           decompiledRegionSelector0 = 4;
                           break L0;
                         }
                       }
                     } else {
-                      stackOut_13_0 = 1;
-                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_14_0 = 1;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
                   } else {
-                    stackOut_10_0 = 3;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = 3;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 } else {
                   var1_int = fk.field_W;
                   t.a(-1, 0);
-                  stackOut_7_0 = var1_int;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = var1_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
               } else {
-                discarded$13 = mf.field_s.a(dg.field_e, tb.field_m, -81);
+                mf.field_s.a(dg.field_e, tb.field_m, -81);
                 continue L2;
               }
             }

@@ -17,70 +17,47 @@ final class tf {
     private int field_m;
 
     public static void a(int param0) {
-        String discarded$0 = null;
         if (param0 >= -85) {
             java.applet.Applet var2 = (java.applet.Applet) null;
-            discarded$0 = tf.a(101, (java.applet.Applet) null);
+            tf.a(101, (java.applet.Applet) null);
         }
         field_i = null;
         field_h = null;
     }
 
     final void d(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        Object stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
-        int stackIn_12_2 = 0;
         Object stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         int stackIn_13_2 = 0;
-        Object stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
-        int stackIn_14_2 = 0;
-        int stackIn_14_3 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        int stackOut_13_3 = 0;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        int stackOut_12_3 = 0;
+        Object stackIn_14_0;
+        int stackIn_14_1;
+        int stackIn_14_2;
+        int stackIn_14_3;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = EscapeVector.field_A;
           em.a(0, 0, 640, 480, 0, 64);
           if ((mj.field_d ^ -1) <= -21) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = -mj.field_d + 20;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = -mj.field_d + 20;
             break L0;
           }
         }
         L1: {
           var2 = stackIn_3_0;
           if (var2 < 20) {
-            stackOut_5_0 = (-var2 + 20) * 160 / 20;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = (-var2 + 20) * 160 / 20;
             break L1;
           } else {
-            stackOut_4_0 = 0;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = 0;
             break L1;
           }
         }
@@ -95,34 +72,23 @@ final class tf {
                 return;
               } else {
                 L3: {
-                  stackOut_11_0 = this;
-                  stackOut_11_1 = -19868;
-                  stackOut_11_2 = var4;
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
-                  stackIn_13_2 = stackOut_11_2;
-                  stackIn_12_0 = stackOut_11_0;
-                  stackIn_12_1 = stackOut_11_1;
-                  stackIn_12_2 = stackOut_11_2;
+                  stackIn_13_0 = this;
+
+                  stackIn_13_1 = -19868;
+
+                  stackIn_13_2 = var4;
+
                   if (var5 != ch.field_a.field_h) {
-                    stackOut_13_0 = this;
-                    stackOut_13_1 = stackIn_13_1;
-                    stackOut_13_2 = stackIn_13_2;
-                    stackOut_13_3 = 0;
-                    stackIn_14_0 = stackOut_13_0;
-                    stackIn_14_1 = stackOut_13_1;
-                    stackIn_14_2 = stackOut_13_2;
-                    stackIn_14_3 = stackOut_13_3;
+                    stackIn_14_0 = this;
+                    stackIn_14_1 = stackIn_13_1;
+                    stackIn_14_2 = stackIn_13_2;
+                    stackIn_14_3 = 0;
                     break L3;
                   } else {
-                    stackOut_12_0 = this;
-                    stackOut_12_1 = stackIn_12_1;
-                    stackOut_12_2 = stackIn_12_2;
-                    stackOut_12_3 = 1;
-                    stackIn_14_0 = stackOut_12_0;
-                    stackIn_14_1 = stackOut_12_1;
-                    stackIn_14_2 = stackOut_12_2;
-                    stackIn_14_3 = stackOut_12_3;
+                    stackIn_14_0 = this;
+                    stackIn_14_1 = stackIn_13_1;
+                    stackIn_14_2 = stackIn_13_2;
+                    stackIn_14_3 = 1;
                     break L3;
                   }
                 }
@@ -145,16 +111,13 @@ final class tf {
     }
 
     private final int a(int param0, boolean param1) {
-        String discarded$1 = null;
-        int var3_int = 0;
-        Object var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+        int var3_int;
+        Object var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         if (this.field_j == param0) {
           var3_int = (fh.field_g.b(oi.field_N) - -fh.field_g.b(ee.field_d)) / 2;
           var4 = (-68 + var3_int) / 2;
@@ -211,7 +174,7 @@ final class tf {
                 if (!param1) {
                   break L5;
                 } else {
-                  discarded$1 = tf.b((byte) 111);
+                  tf.b((byte) 111);
                   break L5;
                 }
               }
@@ -232,12 +195,10 @@ final class tf {
                 var6 = (var5 + fh.field_g.b(rh.field_J)) * 2;
                 var7 = 2 * (fh.field_g.b(nb.field_d) + var5);
                 if (var7 >= var6) {
-                  stackOut_9_0 = var7;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = var7;
                   break L7;
                 } else {
-                  stackOut_8_0 = var6;
-                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_0 = var6;
                   break L7;
                 }
               }
@@ -248,8 +209,8 @@ final class tf {
     }
 
     final void a(byte param0) {
-        boolean discarded$2 = false;
-        int var3 = 0;
+        boolean discarded$1 = false;
+        int var3;
         var3 = EscapeVector.field_A;
         L0: while (true) {
           if (!pn.p(-105)) {
@@ -262,7 +223,7 @@ final class tf {
               }
             }
             ch.field_a.a(0, this.field_d, this.field_f, 24, this.field_a);
-            discarded$2 = this.a(true, 123);
+            discarded$1 = this.a(true, 123);
             return;
           } else {
             if (nk.field_n == 13) {
@@ -281,27 +242,21 @@ final class tf {
     }
 
     private final boolean a(boolean param0, int param1) {
-        int discarded$1 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        o var8 = null;
-        int var9 = 0;
-        o var10 = null;
-        o var11 = null;
-        o var12 = null;
-        o var13 = null;
+        int discarded$0 = 0;
         int stackIn_39_0 = 0;
         int stackIn_79_0 = 0;
         int stackIn_99_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_78_0 = 0;
-        int stackOut_77_0 = 0;
-        int stackOut_98_0 = 0;
-        int stackOut_97_0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        o var8;
+        int var9;
+        o var10;
+        o var11;
+        o var12;
+        o var13;
         L0: {
           var9 = EscapeVector.field_A;
           if (!ch.field_a.field_e) {
@@ -441,12 +396,10 @@ final class tf {
                 var3 = fh.field_g.b(oi.field_N);
                 var4 = fh.field_g.b(ee.field_d);
                 if (var3 > var4) {
-                  stackOut_38_0 = var3;
-                  stackIn_39_0 = stackOut_38_0;
+                  stackIn_39_0 = var3;
                   break L12;
                 } else {
-                  stackOut_37_0 = var4;
-                  stackIn_39_0 = stackOut_37_0;
+                  stackIn_39_0 = var4;
                   break L12;
                 }
               }
@@ -489,7 +442,7 @@ final class tf {
           if (param1 >= 121) {
             break L15;
           } else {
-            discarded$1 = this.c((byte) -39);
+            discarded$0 = this.c((byte) -39);
             break L15;
           }
         }
@@ -582,12 +535,10 @@ final class tf {
                 var3 = fh.field_g.b(oi.field_N);
                 var4 = fh.field_g.b(ee.field_d);
                 if (var3 <= var4) {
-                  stackOut_78_0 = var4;
-                  stackIn_79_0 = stackOut_78_0;
+                  stackIn_79_0 = var4;
                   break L23;
                 } else {
-                  stackOut_77_0 = var3;
-                  stackIn_79_0 = stackOut_77_0;
+                  stackIn_79_0 = var3;
                   break L23;
                 }
               }
@@ -658,12 +609,10 @@ final class tf {
             }
             L29: {
               if (nf.field_r) {
-                stackOut_98_0 = 0;
-                stackIn_99_0 = stackOut_98_0;
+                stackIn_99_0 = 0;
                 break L29;
               } else {
-                stackOut_97_0 = 1;
-                stackIn_99_0 = stackOut_97_0;
+                stackIn_99_0 = 1;
                 break L29;
               }
             }
@@ -690,9 +639,6 @@ final class tf {
 
     final static String a(int param0, java.applet.Applet param1) {
         try {
-            String discarded$1 = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -703,8 +649,6 @@ final class tf {
             String stackIn_6_0 = null;
             String stackIn_12_0 = null;
             String stackIn_16_0 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
             RuntimeException stackIn_20_0 = null;
@@ -713,17 +657,8 @@ final class tf {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            String stackOut_5_0 = null;
-            String stackOut_15_0 = null;
-            String stackOut_11_0 = null;
-            RuntimeException stackOut_17_0 = null;
-            StringBuilder stackOut_17_1 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            String stackOut_18_2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
             var8 = EscapeVector.field_A;
             try {
               L0: {
@@ -747,8 +682,7 @@ final class tf {
                             if (!var5[var6].substring(0, var7).trim().equals(var3)) {
                               break L3;
                             } else {
-                              stackOut_5_0 = var5[var6].substring(var7 + 1).trim();
-                              stackIn_6_0 = stackOut_5_0;
+                              stackIn_6_0 = var5[var6].substring(var7 + 1).trim();
                               decompiledRegionSelector0 = 1;
                               break L1;
                             }
@@ -773,17 +707,15 @@ final class tf {
                       if (param0 == -1) {
                         break L5;
                       } else {
-                        discarded$1 = tf.b((byte) -31);
+                        tf.b((byte) -31);
                         break L5;
                       }
                     }
-                    stackOut_15_0 = param1.getParameter("settings");
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = param1.getParameter("settings");
                     decompiledRegionSelector1 = 1;
                     break L0;
                   } else {
-                    stackOut_11_0 = oh.field_p;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = oh.field_p;
                     decompiledRegionSelector1 = 0;
                     break L0;
                   }
@@ -796,27 +728,19 @@ final class tf {
               decompiledCaughtException = decompiledCaughtParameter1;
               L6: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_17_0 = (RuntimeException) (var2_ref);
-                stackOut_17_1 = new StringBuilder().append("tf.D(").append(param0).append(',');
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
+                stackIn_19_0 = (RuntimeException) (var2_ref);
+
+                stackIn_19_1 = new StringBuilder().append("tf.D(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "null";
-                  stackIn_20_0 = stackOut_19_0;
-                  stackIn_20_1 = stackOut_19_1;
-                  stackIn_20_2 = stackOut_19_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "null";
                   break L6;
                 } else {
-                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackOut_18_2 = "{...}";
-                  stackIn_20_0 = stackOut_18_0;
-                  stackIn_20_1 = stackOut_18_1;
-                  stackIn_20_2 = stackOut_18_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "{...}";
                   break L6;
                 }
               }
@@ -846,10 +770,10 @@ final class tf {
     }
 
     private final int c(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = EscapeVector.field_A;
         var2 = 0;
         var3 = 0;
@@ -859,7 +783,7 @@ final class tf {
             return var2;
           } else {
             var4 = this.a(var3, false);
-            if (var2 < var4) {
+            if ((var2 ^ -1) > (var4 ^ -1)) {
               var2 = var4;
               var3++;
               continue L0;
@@ -872,16 +796,16 @@ final class tf {
     }
 
     tf() {
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
         int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        oe var5 = null;
+        int var2;
+        int var3;
+        oe var5;
         L0: {
           var5 = ma.field_a;
           var2 = 1;
@@ -889,26 +813,26 @@ final class tf {
             this.field_l = -2;
             break L0;
           } else {
-            incrementValue$17 = var2;
+            incrementValue$11 = var2;
             var2++;
-            this.field_l = incrementValue$17;
+            this.field_l = incrementValue$11;
             break L0;
           }
         }
         L1: {
           L2: {
-            incrementValue$18 = var2;
+            incrementValue$12 = var2;
             var2++;
-            this.field_b = incrementValue$18;
+            this.field_b = incrementValue$12;
             if (var5.field_fc == 3) {
               break L2;
             } else {
               if (var5.field_Pb < 0) {
                 break L2;
               } else {
-                incrementValue$19 = var2;
+                incrementValue$13 = var2;
                 var2++;
-                this.field_g = incrementValue$19;
+                this.field_g = incrementValue$13;
                 break L1;
               }
             }
@@ -917,16 +841,16 @@ final class tf {
           break L1;
         }
         L3: {
-          incrementValue$20 = var2;
+          incrementValue$14 = var2;
           var2++;
-          this.field_j = incrementValue$20;
-          incrementValue$21 = var2;
+          this.field_j = incrementValue$14;
+          incrementValue$15 = var2;
           var2++;
-          this.field_c = incrementValue$21;
+          this.field_c = incrementValue$15;
           if ((s.field_x ^ -1) < -1) {
-            incrementValue$22 = var2;
+            incrementValue$16 = var2;
             var2++;
-            this.field_m = incrementValue$22;
+            this.field_m = incrementValue$16;
             break L3;
           } else {
             this.field_m = -2;
@@ -941,9 +865,9 @@ final class tf {
               if (!var5.field_rc) {
                 break L5;
               } else {
-                incrementValue$23 = var2;
+                incrementValue$17 = var2;
                 var2++;
-                this.field_k = incrementValue$23;
+                this.field_k = incrementValue$17;
                 break L4;
               }
             }
@@ -951,9 +875,9 @@ final class tf {
           this.field_k = -2;
           break L4;
         }
-        int incrementValue$24 = var2;
+        int incrementValue$18 = var2;
         var2++;
-        this.field_e = incrementValue$24;
+        this.field_e = incrementValue$18;
         this.field_f = 240 + -(var2 * 12);
         ch.field_a = new wc(var2);
         this.b(false, 320);
@@ -970,40 +894,26 @@ final class tf {
     }
 
     private final void a(int param0, int param1, boolean param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
         int stackIn_3_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_24_0 = 0;
-        ih stackIn_30_0 = null;
         ih stackIn_31_0 = null;
         ih stackIn_32_0 = null;
         String stackIn_32_1 = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        ih stackOut_29_0 = null;
-        ih stackOut_31_0 = null;
-        String stackOut_31_1 = null;
-        ih stackOut_30_0 = null;
-        String stackOut_30_1 = null;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           mj.field_b.g();
           em.d();
           if (!param2) {
-            stackOut_2_0 = 7899280;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 7899280;
             break L0;
           } else {
-            stackOut_1_0 = 16777215;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 16777215;
             break L0;
           }
         }
@@ -1048,12 +958,10 @@ final class tf {
                 var7 = fh.field_g.b(oi.field_N);
                 var8 = fh.field_g.b(ee.field_d);
                 if (var8 < var7) {
-                  stackOut_18_0 = var7;
-                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_0 = var7;
                   break L6;
                 } else {
-                  stackOut_17_0 = var8;
-                  stackIn_19_0 = stackOut_17_0;
+                  stackIn_19_0 = var8;
                   break L6;
                 }
               }
@@ -1074,12 +982,10 @@ final class tf {
                 var7 = fh.field_g.b(oi.field_N);
                 var8 = fh.field_g.b(ee.field_d);
                 if (var8 >= var7) {
-                  stackOut_23_0 = var8;
-                  stackIn_24_0 = stackOut_23_0;
+                  stackIn_24_0 = var8;
                   break L8;
                 } else {
-                  stackOut_22_0 = var7;
-                  stackIn_24_0 = stackOut_22_0;
+                  stackIn_24_0 = var7;
                   break L8;
                 }
               }
@@ -1107,20 +1013,15 @@ final class tf {
                 var8 = (fh.field_g.b(rh.field_J) - -fh.field_g.b(nb.field_d)) / 2;
                 var9 = var6 + (var7 - var8) / 2;
                 fh.field_g.b(nk.field_s, var9, 22, var5, -1);
-                stackOut_29_0 = fh.field_g;
-                stackIn_31_0 = stackOut_29_0;
-                stackIn_30_0 = stackOut_29_0;
+                stackIn_31_0 = fh.field_g;
+
                 if (nf.field_r) {
-                  stackOut_31_0 = (ih) ((Object) stackIn_31_0);
-                  stackOut_31_1 = rh.field_J;
-                  stackIn_32_0 = stackOut_31_0;
-                  stackIn_32_1 = stackOut_31_1;
+                  stackIn_32_0 = (ih) ((Object) stackIn_31_0);
+                  stackIn_32_1 = rh.field_J;
                   break L11;
                 } else {
-                  stackOut_30_0 = (ih) ((Object) stackIn_30_0);
-                  stackOut_30_1 = nb.field_d;
-                  stackIn_32_0 = stackOut_30_0;
-                  stackIn_32_1 = stackOut_30_1;
+                  stackIn_32_0 = (ih) ((Object) stackIn_31_0);
+                  stackIn_32_1 = nb.field_d;
                   break L11;
                 }
               }

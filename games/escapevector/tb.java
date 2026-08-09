@@ -8,9 +8,9 @@ final class tb extends r {
     static boolean field_D;
 
     final bb n(int param0) {
-        wf var2 = null;
-        bb var3 = null;
-        int var4 = 0;
+        wf var2;
+        bb var3;
+        int var4;
         L0: {
           var4 = EscapeVector.field_A;
           var2 = new wf(this.field_H);
@@ -66,9 +66,9 @@ final class tb extends r {
     }
 
     final hm j(int param0) {
-        wf var2 = null;
-        bb var3 = null;
-        int var4 = 0;
+        wf var2;
+        bb var3;
+        int var4;
         L0: {
           var4 = EscapeVector.field_A;
           var2 = new wf(this.field_H);
@@ -96,7 +96,6 @@ final class tb extends r {
 
     final void b(hm param0, int param1) {
         bb var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param0 instanceof bb)) {
                 throw new IllegalArgumentException();
@@ -107,7 +106,7 @@ final class tb extends r {
                 this.a(-45, (byte) -105, -25, -82);
             }
             var3.field_G = true;
-            discarded$0 = var3.a(-4659, (hm) (this));
+            var3.a(-4659, (hm) (this));
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "tb.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -115,8 +114,6 @@ final class tb extends r {
 
     final static boolean a(boolean param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (!param0) {
           L0: {
             L1: {
@@ -126,14 +123,12 @@ final class tb extends r {
                 if (!km.field_n.c(124)) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0 != 0;

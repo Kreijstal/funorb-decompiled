@@ -28,8 +28,6 @@ final class sb {
 
     final static boolean a(int param0) {
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
         L0: {
           if (param0 > 46) {
             break L0;
@@ -49,15 +47,13 @@ final class sb {
                 if (t.b(13)) {
                   break L2;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L1;
                 }
               }
             }
           }
-          stackOut_6_0 = 0;
-          stackIn_7_0 = stackOut_6_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0 != 0;
@@ -65,9 +61,9 @@ final class sb {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
+            int var0;
+            int var1;
+            int var2;
             field_f = "No highscores";
             field_b = new int[256];
             field_c = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";

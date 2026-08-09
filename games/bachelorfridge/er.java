@@ -8,8 +8,8 @@ final class er extends ana {
     static boolean field_y;
 
     final static void e(int param0) {
-        String var1 = null;
-        String var2 = null;
+        String var1;
+        String var2;
         L0: {
           if (ur.field_b == null) {
             break L0;
@@ -52,13 +52,8 @@ final class er extends ana {
     }
 
     final static boolean d(int param0) {
-        boolean discarded$5 = false;
         int stackIn_7_0 = 0;
         int stackIn_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == 11154) {
           if (-11 >= (jv.field_j ^ -1)) {
             if (qo.field_c) {
@@ -66,12 +61,10 @@ final class er extends ana {
             } else {
               L0: {
                 if (cia.a(0)) {
-                  stackOut_15_0 = 0;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_0 = 0;
                   break L0;
                 } else {
-                  stackOut_14_0 = 1;
-                  stackIn_16_0 = stackOut_14_0;
+                  stackIn_16_0 = 1;
                   break L0;
                 }
               }
@@ -81,19 +74,17 @@ final class er extends ana {
             return false;
           }
         } else {
-          discarded$5 = er.d(122);
+          er.d(122);
           if (-11 >= (jv.field_j ^ -1)) {
             if (qo.field_c) {
               return false;
             } else {
               L1: {
                 if (cia.a(0)) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L1;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L1;
                 }
               }
@@ -140,7 +131,7 @@ final class er extends ana {
         if (param0 >= 7) {
             return;
         }
-        boolean discarded$0 = er.d(-7);
+        er.d(-7);
     }
 
     public static void f(byte param0) {
@@ -171,17 +162,16 @@ final class er extends ana {
     }
 
     private final void g(int param0) {
-        oha discarded$1 = null;
-        pp var3 = null;
-        sia var5 = null;
-        int var6 = 0;
-        aga var7 = null;
-        ad var8 = null;
+        pp var3;
+        sia var5;
+        int var6;
+        aga var7;
+        ad var8;
         var6 = BachelorFridge.field_y;
         var7 = this.field_w.field_l.a(param0 ^ -113, this.field_q.field_h);
         if (!var7.i(param0 + -104)) {
           var3 = (pp) ((Object) this.field_w.field_o.b((byte) 90));
-          discarded$1 = al.a(116, this.field_w.field_k);
+          al.a(116, this.field_w.field_k);
           if (param0 == -1) {
             L0: while (true) {
               if (var3 != null) {
@@ -213,10 +203,9 @@ final class er extends ana {
 
     er(gj param0, oga param1) {
         super(param0, param1);
-        oha discarded$0 = null;
         try {
             this.field_w = param1;
-            discarded$0 = al.a(105, this.field_w.field_k);
+            al.a(105, this.field_w.field_k);
             this.field_v = new taa(this.field_q, this.field_w.field_s.a(-27449, this.field_q));
             this.a(27799, this.field_v);
         } catch (RuntimeException runtimeException) {

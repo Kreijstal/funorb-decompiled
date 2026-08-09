@@ -37,16 +37,14 @@ final class tm {
     }
 
     final static String b(byte param0) {
-        String discarded$2 = null;
-        String discarded$3 = null;
-        String var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        String var7 = null;
-        String var8 = null;
+        String var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        String var6;
+        String var7;
+        String var8;
         var5 = Chess.field_G;
         var6 = "(" + lf.field_T + " " + wc.field_u + " " + hh.field_o + ") " + wg.field_B;
         var1 = var6;
@@ -57,6 +55,7 @@ final class tm {
             if (sb.field_sb > var2) {
               L1: {
                 var7 = var1 + ' ';
+                var1 = var7;
                 var3 = 255 & tk.field_h.field_o[var2];
                 var4 = var3 >> -1927438172;
                 var3 = var3 & 15;
@@ -83,7 +82,7 @@ final class tm {
               continue L0;
             } else {
               if (param0 > -119) {
-                discarded$2 = tm.b((byte) 71);
+                tm.b((byte) 71);
                 return var1;
               } else {
                 return var1;
@@ -92,7 +91,7 @@ final class tm {
           }
         } else {
           if (param0 > -119) {
-            discarded$3 = tm.b((byte) 71);
+            tm.b((byte) 71);
             return var1;
           } else {
             return var1;

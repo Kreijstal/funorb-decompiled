@@ -46,91 +46,46 @@ final class ha extends i {
     }
 
     final static up a(long param0, int param1, int param2, int param3, int param4) {
-        up discarded$1 = null;
-        long var6 = 0L;
-        Random var8 = null;
-        up var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
         int stackIn_6_0 = 0;
-        up stackIn_17_0 = null;
-        int stackIn_17_1 = 0;
-        int stackIn_17_2 = 0;
         up stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         int stackIn_18_2 = 0;
-        up stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
-        int stackIn_19_2 = 0;
-        int stackIn_19_3 = 0;
-        up stackIn_23_0 = null;
-        int stackIn_23_1 = 0;
-        int stackIn_23_2 = 0;
+        up stackIn_19_0;
+        int stackIn_19_1;
+        int stackIn_19_2;
+        int stackIn_19_3;
         up stackIn_24_0 = null;
         int stackIn_24_1 = 0;
         int stackIn_24_2 = 0;
-        up stackIn_25_0 = null;
-        int stackIn_25_1 = 0;
-        int stackIn_25_2 = 0;
-        int stackIn_25_3 = 0;
-        up stackIn_29_0 = null;
-        int stackIn_29_1 = 0;
-        int stackIn_29_2 = 0;
+        up stackIn_25_0;
+        int stackIn_25_1;
+        int stackIn_25_2;
+        int stackIn_25_3;
         up stackIn_30_0 = null;
         int stackIn_30_1 = 0;
         int stackIn_30_2 = 0;
-        up stackIn_31_0 = null;
-        int stackIn_31_1 = 0;
-        int stackIn_31_2 = 0;
-        int stackIn_31_3 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        up stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        int stackOut_16_2 = 0;
-        up stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int stackOut_18_2 = 0;
-        int stackOut_18_3 = 0;
-        up stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        int stackOut_17_2 = 0;
-        int stackOut_17_3 = 0;
-        up stackOut_22_0 = null;
-        int stackOut_22_1 = 0;
-        int stackOut_22_2 = 0;
-        up stackOut_24_0 = null;
-        int stackOut_24_1 = 0;
-        int stackOut_24_2 = 0;
-        int stackOut_24_3 = 0;
-        up stackOut_23_0 = null;
-        int stackOut_23_1 = 0;
-        int stackOut_23_2 = 0;
-        int stackOut_23_3 = 0;
-        up stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        int stackOut_28_2 = 0;
-        up stackOut_30_0 = null;
-        int stackOut_30_1 = 0;
-        int stackOut_30_2 = 0;
-        int stackOut_30_3 = 0;
-        up stackOut_29_0 = null;
-        int stackOut_29_1 = 0;
-        int stackOut_29_2 = 0;
-        int stackOut_29_3 = 0;
+        up stackIn_31_0;
+        int stackIn_31_1;
+        int stackIn_31_2;
+        int stackIn_31_3;
+        long var6;
+        Random var8;
+        up var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         L0: {
           var16 = Kickabout.field_G;
           param2 = param2 & 15;
           if (param3 <= -37) {
             break L0;
           } else {
-            discarded$1 = ha.a(-62L, -5, -19, -99, -27);
+            ha.a(-62L, -5, -19, -99, -27);
             break L0;
           }
         }
@@ -221,12 +176,10 @@ final class ha extends i {
           } else {
             L7: {
               if (3 <= param4) {
-                stackOut_5_0 = 2;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 2;
                 break L7;
               } else {
-                stackOut_4_0 = 3;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 3;
                 break L7;
               }
             }
@@ -261,34 +214,23 @@ final class ha extends i {
               var11 = 40 + dq.a((byte) -69, 4, var8) * 10;
               if (var9.field_q == 0) {
                 L11: {
-                  stackOut_16_0 = (up) (var9);
-                  stackOut_16_1 = ng.field_d[param4];
-                  stackOut_16_2 = 86;
-                  stackIn_18_0 = stackOut_16_0;
-                  stackIn_18_1 = stackOut_16_1;
-                  stackIn_18_2 = stackOut_16_2;
-                  stackIn_17_0 = stackOut_16_0;
-                  stackIn_17_1 = stackOut_16_1;
-                  stackIn_17_2 = stackOut_16_2;
+                  stackIn_18_0 = (up) (var9);
+
+                  stackIn_18_1 = ng.field_d[param4];
+
+                  stackIn_18_2 = 86;
+
                   if (param4 == 0) {
-                    stackOut_18_0 = (up) ((Object) stackIn_18_0);
-                    stackOut_18_1 = stackIn_18_1;
-                    stackOut_18_2 = stackIn_18_2;
-                    stackOut_18_3 = 6;
-                    stackIn_19_0 = stackOut_18_0;
-                    stackIn_19_1 = stackOut_18_1;
-                    stackIn_19_2 = stackOut_18_2;
-                    stackIn_19_3 = stackOut_18_3;
+                    stackIn_19_0 = (up) ((Object) stackIn_18_0);
+                    stackIn_19_1 = stackIn_18_1;
+                    stackIn_19_2 = stackIn_18_2;
+                    stackIn_19_3 = 6;
                     break L11;
                   } else {
-                    stackOut_17_0 = (up) ((Object) stackIn_17_0);
-                    stackOut_17_1 = stackIn_17_1;
-                    stackOut_17_2 = stackIn_17_2;
-                    stackOut_17_3 = 11;
-                    stackIn_19_0 = stackOut_17_0;
-                    stackIn_19_1 = stackOut_17_1;
-                    stackIn_19_2 = stackOut_17_2;
-                    stackIn_19_3 = stackOut_17_3;
+                    stackIn_19_0 = (up) ((Object) stackIn_18_0);
+                    stackIn_19_1 = stackIn_18_1;
+                    stackIn_19_2 = stackIn_18_2;
+                    stackIn_19_3 = 11;
                     break L11;
                   }
                 }
@@ -303,34 +245,23 @@ final class ha extends i {
             L12: {
               if (-4 == (var9.field_q ^ -1)) {
                 L13: {
-                  stackOut_22_0 = (up) (var9);
-                  stackOut_22_1 = ng.field_d[param4];
-                  stackOut_22_2 = -60;
-                  stackIn_24_0 = stackOut_22_0;
-                  stackIn_24_1 = stackOut_22_1;
-                  stackIn_24_2 = stackOut_22_2;
-                  stackIn_23_0 = stackOut_22_0;
-                  stackIn_23_1 = stackOut_22_1;
-                  stackIn_23_2 = stackOut_22_2;
+                  stackIn_24_0 = (up) (var9);
+
+                  stackIn_24_1 = ng.field_d[param4];
+
+                  stackIn_24_2 = -60;
+
                   if (-1 == (param4 ^ -1)) {
-                    stackOut_24_0 = (up) ((Object) stackIn_24_0);
-                    stackOut_24_1 = stackIn_24_1;
-                    stackOut_24_2 = stackIn_24_2;
-                    stackOut_24_3 = 6;
-                    stackIn_25_0 = stackOut_24_0;
-                    stackIn_25_1 = stackOut_24_1;
-                    stackIn_25_2 = stackOut_24_2;
-                    stackIn_25_3 = stackOut_24_3;
+                    stackIn_25_0 = (up) ((Object) stackIn_24_0);
+                    stackIn_25_1 = stackIn_24_1;
+                    stackIn_25_2 = stackIn_24_2;
+                    stackIn_25_3 = 6;
                     break L13;
                   } else {
-                    stackOut_23_0 = (up) ((Object) stackIn_23_0);
-                    stackOut_23_1 = stackIn_23_1;
-                    stackOut_23_2 = stackIn_23_2;
-                    stackOut_23_3 = 11;
-                    stackIn_25_0 = stackOut_23_0;
-                    stackIn_25_1 = stackOut_23_1;
-                    stackIn_25_2 = stackOut_23_2;
-                    stackIn_25_3 = stackOut_23_3;
+                    stackIn_25_0 = (up) ((Object) stackIn_24_0);
+                    stackIn_25_1 = stackIn_24_1;
+                    stackIn_25_2 = stackIn_24_2;
+                    stackIn_25_3 = 11;
                     break L13;
                   }
                 }
@@ -345,34 +276,23 @@ final class ha extends i {
             L14: {
               if (var9.field_q == 1) {
                 L15: {
-                  stackOut_28_0 = (up) (var9);
-                  stackOut_28_1 = ng.field_d[param4];
-                  stackOut_28_2 = -66;
-                  stackIn_30_0 = stackOut_28_0;
-                  stackIn_30_1 = stackOut_28_1;
-                  stackIn_30_2 = stackOut_28_2;
-                  stackIn_29_0 = stackOut_28_0;
-                  stackIn_29_1 = stackOut_28_1;
-                  stackIn_29_2 = stackOut_28_2;
+                  stackIn_30_0 = (up) (var9);
+
+                  stackIn_30_1 = ng.field_d[param4];
+
+                  stackIn_30_2 = -66;
+
                   if (param4 == 0) {
-                    stackOut_30_0 = (up) ((Object) stackIn_30_0);
-                    stackOut_30_1 = stackIn_30_1;
-                    stackOut_30_2 = stackIn_30_2;
-                    stackOut_30_3 = 6;
-                    stackIn_31_0 = stackOut_30_0;
-                    stackIn_31_1 = stackOut_30_1;
-                    stackIn_31_2 = stackOut_30_2;
-                    stackIn_31_3 = stackOut_30_3;
+                    stackIn_31_0 = (up) ((Object) stackIn_30_0);
+                    stackIn_31_1 = stackIn_30_1;
+                    stackIn_31_2 = stackIn_30_2;
+                    stackIn_31_3 = 6;
                     break L15;
                   } else {
-                    stackOut_29_0 = (up) ((Object) stackIn_29_0);
-                    stackOut_29_1 = stackIn_29_1;
-                    stackOut_29_2 = stackIn_29_2;
-                    stackOut_29_3 = 11;
-                    stackIn_31_0 = stackOut_29_0;
-                    stackIn_31_1 = stackOut_29_1;
-                    stackIn_31_2 = stackOut_29_2;
-                    stackIn_31_3 = stackOut_29_3;
+                    stackIn_31_0 = (up) ((Object) stackIn_30_0);
+                    stackIn_31_1 = stackIn_30_1;
+                    stackIn_31_2 = stackIn_30_2;
+                    stackIn_31_3 = 11;
                     break L15;
                   }
                 }
@@ -500,7 +420,7 @@ final class ha extends i {
                   var15 = 0;
                   L25: while (true) {
                     if (var15 < vo.field_eb[param4].length) {
-                      if (var14 <= vo.field_eb[param4][var15]) {
+                      if ((var14 ^ -1) >= (vo.field_eb[param4][var15] ^ -1)) {
                         var9.field_h[var13] = var15;
                         var13++;
                         continue L24;
@@ -532,11 +452,10 @@ final class ha extends i {
     }
 
     public static void g(int param0) {
-        boolean discarded$0 = false;
         field_H = null;
         field_F = null;
         if (param0 != 100) {
-            discarded$0 = ha.a(false, (byte) -43);
+            ha.a(false, (byte) -43);
         }
         field_J = null;
     }

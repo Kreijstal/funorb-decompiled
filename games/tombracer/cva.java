@@ -9,7 +9,7 @@ final class cva {
     static dk[] field_c;
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1;
         if (wba.field_o == null) {
           throw new IllegalStateException("NGR");
         } else {

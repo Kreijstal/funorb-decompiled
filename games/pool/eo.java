@@ -33,9 +33,9 @@ final class eo extends vh {
     }
 
     final static void a(int param0, int param1, int param2) {
-        oq var4 = null;
-        kh var6 = null;
-        kh var7 = null;
+        oq var4;
+        kh var6;
+        kh var7;
         if (param1 == ka.field_r) {
           if (param2 != 11) {
             field_Rb = (String) null;

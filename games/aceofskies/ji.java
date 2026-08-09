@@ -15,11 +15,11 @@ final class ji {
 
     final static void a(int param0, int param1, byte param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
         var4 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {

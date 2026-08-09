@@ -50,10 +50,9 @@ final class vi extends k {
     final synchronized void a(int param0) {
         int var2 = 0;
         nb var3 = null;
-        Object var4 = null;
         int var5 = 0;
-        Throwable var6 = null;
         Throwable decompiledCaughtException = null;
+        Object var4 = null;
         L0: while (true) {
           if (this.field_o >= 0) {
             if (this.field_m + param0 >= this.field_o) {
@@ -140,10 +139,9 @@ final class vi extends k {
     final synchronized void a(int[] param0, int param1, int param2) {
         int var4 = 0;
         nb var5 = null;
-        Object var6 = null;
         int var7 = 0;
-        Throwable var8 = null;
         Throwable decompiledCaughtException = null;
+        Object var6 = null;
         L0: while (true) {
           if (this.field_o >= 0) {
             if (this.field_m + param2 >= this.field_o) {

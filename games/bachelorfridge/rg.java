@@ -9,8 +9,8 @@ final class rg extends bw {
     static eaa field_f;
 
     final static void a(int param0, int param1, byte param2, boolean param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         L0: {
           ug.field_o.e(param0, param1);
           var4 = -98 % ((param2 - -3) / 53);
@@ -81,11 +81,11 @@ final class rg extends bw {
 
     final static void a(int param0, int param1) {
         bw var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         cfa var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var4 = BachelorFridge.field_y;
         try {
           L0: {

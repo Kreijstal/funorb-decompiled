@@ -11,13 +11,12 @@ final class ui extends ug {
     static boolean field_G;
 
     public static void h(int param0) {
-        String discarded$2 = null;
-        CharSequence var2 = null;
+        CharSequence var2;
         field_U = null;
         field_V = null;
         if (param0 != -13) {
           var2 = (CharSequence) null;
-          discarded$2 = ui.a(20, (CharSequence) null);
+          ui.a(20, (CharSequence) null);
           field_W = null;
           field_S = null;
           return;
@@ -29,7 +28,14 @@ final class ui extends ug {
     }
 
     final static String a(int param0, CharSequence param1) {
-        StringBuilder discarded$1 = null;
+        StringBuilder discarded$0 = null;
+        Object stackIn_16_0 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -39,24 +45,6 @@ final class ui extends ug {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        Object stackIn_16_0 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_15_0 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
         var9 = SteelSentinels.field_G;
         try {
           L0: {
@@ -111,7 +99,7 @@ final class ui extends ug {
                               if (var8 == 0) {
                                 break L6;
                               } else {
-                                discarded$1 = var5.append((char) var8);
+                                discarded$0 = var5.append((char) var8);
                                 break L6;
                               }
                             }
@@ -121,8 +109,7 @@ final class ui extends ug {
                         }
                       }
                     } else {
-                      stackOut_15_0 = null;
-                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_16_0 = null;
                       break L0;
                     }
                   } else {
@@ -138,27 +125,19 @@ final class ui extends ug {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var2);
-            stackOut_28_1 = new StringBuilder().append("ui.CA(").append(param0).append(',');
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackIn_30_0 = (RuntimeException) (var2);
+
+            stackIn_30_1 = new StringBuilder().append("ui.CA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L7;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L7;
             }
           }
@@ -179,7 +158,7 @@ final class ui extends ug {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        wk var6 = null;
+        wk var6;
         if (-1 == (param3 ^ -1)) {
           if (this.field_J != null) {
             if (0 != this.field_R) {

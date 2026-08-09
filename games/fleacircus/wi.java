@@ -44,7 +44,7 @@ abstract class wi {
     }
 
     final static void b(int param0) {
-        ci var1 = null;
+        ci var1;
         if (param0 != -14277) {
           wi.a(true);
           var1 = new ci(22050, la.field_a);

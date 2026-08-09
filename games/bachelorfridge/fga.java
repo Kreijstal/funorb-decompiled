@@ -21,9 +21,8 @@ final class fga extends kj {
 
     final static void a(int param0, byte param1) {
         try {
-            Object discarded$1 = null;
-            Throwable var2 = null;
             Throwable decompiledCaughtException = null;
+            Throwable var2 = null;
             L0: {
               if (param1 == -2) {
                 break L0;
@@ -34,7 +33,7 @@ final class fga extends kj {
             }
             try {
               L1: {
-                discarded$1 = ac.a(nia.d(param1 + -31766), "resizing", new Object[]{new Integer(param0)}, (byte) 73);
+                ac.a(nia.d(param1 + -31766), "resizing", new Object[]{new Integer(param0)}, (byte) 73);
                 break L1;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

@@ -13,11 +13,11 @@ final class cn implements Iterable {
     static int field_f;
 
     final static void a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = Chess.field_G;
         var2 = 0;
         var3 = sl.field_a;
@@ -815,7 +815,7 @@ final class cn implements Iterable {
     }
 
     final static void a(int param0, boolean param1) {
-        jg var2 = null;
+        jg var2;
         uh.field_m.a(false, param1);
         var2 = ol.field_O;
         if (param0 != 16384) {
@@ -834,10 +834,9 @@ final class cn implements Iterable {
     }
 
     final void a(l param0, boolean param1) {
-        Iterator discarded$0 = null;
         try {
             if (param1) {
-                discarded$0 = this.iterator();
+                this.iterator();
             }
             if (!(null == param0.field_m)) {
                 param0.d(-1);
@@ -852,7 +851,7 @@ final class cn implements Iterable {
     }
 
     final l c(int param0) {
-        l var2 = null;
+        l var2;
         var2 = this.field_c.field_p;
         if (param0 == -14336) {
           if (var2 == this.field_c) {

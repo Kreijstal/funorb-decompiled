@@ -11,8 +11,8 @@ final class gi {
     static boolean field_g;
 
     final static hl[] a(int param0, int param1) {
-        hl[] var2 = null;
-        hl[] var3 = null;
+        hl[] var2;
+        hl[] var3;
         if (param0 != 4477) {
           field_g = false;
           var3 = new hl[9];
@@ -62,13 +62,12 @@ final class gi {
     }
 
     public static void b(int param0) {
-        hl[] discarded$0 = null;
         field_f = null;
         field_c = null;
         field_b = null;
         field_a = null;
         if (param0 != 640) {
-            discarded$0 = gi.a(-22, -65);
+            gi.a(-22, -65);
         }
     }
 

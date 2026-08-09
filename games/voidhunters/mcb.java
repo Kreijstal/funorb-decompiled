@@ -21,9 +21,8 @@ final class mcb extends uj {
     }
 
     final int b(byte param0) {
-        boolean discarded$0 = false;
         if (param0 < 79) {
-            discarded$0 = this.a(false);
+            this.a(false);
             return 105;
         }
         return 105;

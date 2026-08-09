@@ -16,9 +16,10 @@ final class nl extends ksa {
 
     final static void a(int param0, int param1) {
         ana var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
+        boolean stackIn_13_0 = false;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = VoidHunters.field_G;
         try {
           L0: {
@@ -43,8 +44,9 @@ final class nl extends ksa {
                       if (var2 == null) {
                         break L3;
                       } else {
+                        stackIn_13_0 = var2.field_g.b((byte) -63);
                         L5: {
-                          if (!var2.field_g.b((byte) -63)) {
+                          if (!stackIn_13_0) {
                             var2.b(param1 ^ 15505);
                             break L5;
                           } else {

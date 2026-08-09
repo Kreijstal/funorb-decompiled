@@ -14,8 +14,8 @@ final class mq {
     }
 
     final static char a(int param0, char param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = BachelorFridge.field_y;
         if (param0 != 4558) {
           field_b = (kv[]) null;
@@ -524,7 +524,7 @@ final class mq {
     }
 
     final static int a(int param0, int param1, int param2) {
-        String var3 = null;
+        String var3;
         var3 = lka.field_E[param2][param0];
         var3 = var3.trim();
         var3 = var3.toLowerCase();

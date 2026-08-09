@@ -40,8 +40,8 @@ final class nm extends mn implements ng {
     }
 
     final boolean h(int param0) {
-        dn var2 = null;
-        dn var3 = null;
+        dn var2;
+        dn var3;
         if (this.field_D) {
           if (!this.field_hb) {
             var2 = ji.a(false);
@@ -84,14 +84,6 @@ final class nm extends mn implements ng {
     }
 
     private final void a(boolean param0, dn param1, byte param2) {
-        lg discarded$2 = null;
-        lg discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        fo var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
@@ -99,25 +91,21 @@ final class nm extends mn implements ng {
         String stackIn_32_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        fo var5 = null;
+        int var6 = 0;
         var6 = Torquing.field_u;
         try {
           L0: {
             L1: {
               this.field_hb = true;
               if (param1.field_b) {
-                var4_ref = d.field_q;
+                var4 = d.field_q;
                 break L1;
               } else {
                 if (null != param1.field_d) {
-                  var4_ref = s.field_u;
+                  var4 = s.field_u;
                   if (null == this.field_ib) {
                     break L1;
                   } else {
@@ -125,18 +113,18 @@ final class nm extends mn implements ng {
                     break L1;
                   }
                 } else {
-                  var4_ref = param1.field_e;
+                  var4 = param1.field_e;
                   if ((param1.field_a ^ -1) != -249) {
                     break L1;
                   } else {
                     if (param0) {
                       this.field_gb = true;
-                      var4_ref = a.field_a;
+                      var4 = a.field_a;
                       break L1;
                     } else {
                       id.a((byte) 57);
                       this.field_gb = true;
-                      var4_ref = a.field_a;
+                      var4 = a.field_a;
                       break L1;
                     }
                   }
@@ -144,7 +132,7 @@ final class nm extends mn implements ng {
               }
             }
             L2: {
-              var5 = new fo((mn) (this), pe.field_E, var4_ref);
+              var5 = new fo((mn) (this), pe.field_E, var4);
               if (param2 < -102) {
                 break L2;
               } else {
@@ -155,7 +143,7 @@ final class nm extends mn implements ng {
             L3: {
               if (param1.field_b) {
                 if (!param1.field_g) {
-                  discarded$2 = var5.a(0, vd.field_d, (ca) (this));
+                  var5.a(0, vd.field_d, (ca) (this));
                   break L3;
                 } else {
                   this.c(new sc((nm) (this)), 33);
@@ -174,7 +162,7 @@ final class nm extends mn implements ng {
                       break L4;
                     }
                   } else {
-                    discarded$3 = var5.a(0, vd.field_d, (ca) (this));
+                    var5.a(0, vd.field_d, (ca) (this));
                     break L4;
                   }
                 }
@@ -198,28 +186,20 @@ final class nm extends mn implements ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var4 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) (var4);
-            stackOut_29_1 = new StringBuilder().append("nm.WA(").append(param0).append(',');
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_31_0 = (RuntimeException) (var4_ref);
+
+            stackIn_31_1 = new StringBuilder().append("nm.WA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L5;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L5;
             }
           }

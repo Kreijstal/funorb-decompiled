@@ -13,19 +13,15 @@ final class pe {
     }
 
     final static void c(int param0) {
-        int discarded$48 = 0;
-        int discarded$49 = 0;
-        int discarded$50 = 0;
-        int discarded$51 = 0;
-        u var1 = null;
-        ha var2 = null;
+        u var1;
+        ha var2;
         var1 = (u) ((Object) i.field_c.b(-103));
         if (var1 != null) {
           var2 = ae.field_N;
-          discarded$48 = var2.b(false);
-          discarded$49 = var2.b(false);
-          discarded$50 = var2.b(false);
-          discarded$51 = var2.b(false);
+          var2.b(false);
+          var2.b(false);
+          var2.b(false);
+          var2.b(false);
           if (param0 != 25214) {
             field_c = (bd) null;
             var1.c(param0 + -25194);
@@ -50,8 +46,8 @@ final class pe {
     }
 
     final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var4 = 0;
         if (!param3) {
           L0: {

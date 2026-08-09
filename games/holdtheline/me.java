@@ -64,7 +64,7 @@ public class me {
     }
 
     public static File a(String param0, int param1) {
-        String var3 = null;
+        String var3;
         if (param1 <= 10) {
           var3 = (String) null;
           me.a((String) null, 25, 85);

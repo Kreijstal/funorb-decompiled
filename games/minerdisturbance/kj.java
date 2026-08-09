@@ -112,7 +112,7 @@ final class kj {
         if (!param0) {
             return;
         }
-        byte discarded$0 = kj.a('[', 105);
+        kj.a('[', 105);
     }
 
     final static boolean a(boolean param0) {
@@ -124,8 +124,8 @@ final class kj {
     }
 
     final static byte a(char param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = MinerDisturbance.field_ab;
         if (param1 == -8251) {
           if (0 < param0) {

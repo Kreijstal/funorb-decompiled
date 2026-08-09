@@ -30,8 +30,6 @@ final class le extends di {
         CharSequence var5 = null;
         im stackIn_3_0 = null;
         im stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -39,22 +37,11 @@ final class le extends di {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        im stackOut_2_0 = null;
-        im stackOut_7_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             var4 = (CharSequence) ((Object) param0);
             if (!te.a(var4, true)) {
-              stackOut_2_0 = qf.field_d;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = qf.field_d;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -71,8 +58,7 @@ final class le extends di {
                   }
                 }
               }
-              stackOut_7_0 = qf.field_d;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = qf.field_d;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -81,27 +67,19 @@ final class le extends di {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3);
-            stackOut_9_1 = new StringBuilder().append("le.C(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("le.C(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -115,12 +93,11 @@ final class le extends di {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        boolean discarded$1 = false;
         L0: {
           if (!param2) {
             break L0;
           } else {
-            discarded$1 = le.a(false, (byte) -3);
+            le.a(false, (byte) -3);
             break L0;
           }
         }
@@ -766,8 +743,6 @@ final class le extends di {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         Object stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -775,27 +750,15 @@ final class le extends di {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (this.b(param0, 0) != qf.field_d) {
               var3_int = -102 % ((26 - param1) / 56);
-              stackOut_3_0 = null;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = null;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (String) (field_m);
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (String) (field_m);
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -804,27 +767,19 @@ final class le extends di {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("le.B(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("le.B(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -888,15 +843,12 @@ final class le extends di {
 
     final static boolean a(boolean param0, byte param1) {
         try {
-            String discarded$4 = null;
-            long dupTemp$5 = 0L;
+            long dupTemp$1 = 0L;
             IOException var2 = null;
             uc var4 = null;
             uc var5 = null;
             int stackIn_12_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_11_0 = 0;
-            int stackOut_10_0 = 0;
             L0: {
               if (null != bd.field_k) {
                 break L0;
@@ -909,16 +861,16 @@ final class le extends di {
               if (param1 > 82) {
                 break L1;
               } else {
-                discarded$4 = le.a(false);
+                le.a(false);
                 break L1;
               }
             }
             if (bd.field_k.field_d == 0) {
               return false;
             } else {
-              dupTemp$5 = ll.a(1000);
-              bl.field_h = dupTemp$5;
-              dm.field_c = dupTemp$5;
+              dupTemp$1 = ll.a(1000);
+              bl.field_h = dupTemp$1;
+              dm.field_c = dupTemp$1;
               if (1 == bd.field_k.field_d) {
                 try {
                   L2: {
@@ -929,12 +881,10 @@ final class le extends di {
                       var5 = var4;
                       mh.field_a = va.field_e;
                       if (!param0) {
-                        stackOut_11_0 = -1;
-                        stackIn_12_0 = stackOut_11_0;
+                        stackIn_12_0 = -1;
                         break L3;
                       } else {
-                        stackOut_10_0 = -2;
-                        stackIn_12_0 = stackOut_10_0;
+                        stackIn_12_0 = -2;
                         break L3;
                       }
                     }

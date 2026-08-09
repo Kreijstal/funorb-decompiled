@@ -18,22 +18,12 @@ final class al {
 
     private final void a(d param0, int param1) {
         RuntimeException var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -57,27 +47,19 @@ final class al {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("al.C(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("al.C(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -96,10 +78,9 @@ final class al {
     }
 
     final void a(long param0, Object param1, byte param2) {
-        int discarded$0 = 0;
         try {
             if (param2 != 116) {
-                discarded$0 = al.a(0.6495872916691957, (byte) 34);
+                al.a(0.6495872916691957, (byte) 34);
             }
             this.a(1, param0, param1, true);
         } catch (RuntimeException runtimeException) {
@@ -134,12 +115,11 @@ final class al {
     }
 
     private final void a(long param0, int param1) {
-        Object discarded$2 = null;
-        d var4 = null;
+        d var4;
         var4 = (d) ((Object) this.field_a.a(param0, param1 + -19110));
         this.a(var4, 111);
         if (param1 != 18998) {
-          discarded$2 = this.a(30, 43L);
+          this.a(30, 43L);
           return;
         } else {
           return;
@@ -147,9 +127,9 @@ final class al {
     }
 
     final Object a(int param0, long param1) {
-        Object var5 = null;
-        en var6 = null;
-        d var7 = null;
+        Object var5;
+        en var6;
+        d var7;
         var7 = (d) ((Object) this.field_a.a(param1, 115));
         if (param0 <= -122) {
           if (var7 != null) {

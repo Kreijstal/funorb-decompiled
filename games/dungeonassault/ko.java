@@ -6,11 +6,11 @@ class ko extends ll {
     static String field_w;
 
     final static void a(boolean param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         mm var4 = null;
         kj var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = DungeonAssault.field_K;
         try {
           L0: {

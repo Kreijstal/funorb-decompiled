@@ -9,13 +9,13 @@ final class ue extends ic {
     int field_k;
 
     final ue a(u param0) {
-        int dupTemp$2 = 0;
+        int dupTemp$1 = 0;
         this.field_h = param0.a(this.field_h, true);
         this.field_k = param0.a(false, this.field_k);
         if (this.field_i == this.field_l) {
-          dupTemp$2 = param0.a(this.field_i, 6);
-          this.field_l = dupTemp$2;
-          this.field_i = dupTemp$2;
+          dupTemp$1 = param0.a(this.field_i, 6);
+          this.field_l = dupTemp$1;
+          this.field_i = dupTemp$1;
           return (ue) (this);
         } else {
           L0: {

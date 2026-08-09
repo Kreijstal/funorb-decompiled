@@ -33,11 +33,10 @@ class lk extends u {
     }
 
     final static void b(int param0) {
-        int[] discarded$0 = null;
         qg.a(true, bg.field_q, ol.field_j, (byte) -11);
         hl.field_b = true;
         if (param0 != 1) {
-            discarded$0 = lk.c((byte) -37);
+            lk.c((byte) -37);
         }
     }
 
@@ -53,8 +52,22 @@ class lk extends u {
     }
 
     final static void a(byte[] param0, int param1) {
-        byte dupTemp$2 = 0;
-        byte dupTemp$3 = 0;
+        byte dupTemp$0 = 0;
+        byte dupTemp$1 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_23_1 = 0;
+        int stackIn_32_0 = 0;
+        int stackIn_33_0 = 0;
+        int stackIn_33_1 = 0;
+        int stackIn_48_0 = 0;
+        int stackIn_49_0 = 0;
+        int stackIn_49_1 = 0;
+        RuntimeException stackIn_55_0 = null;
+        StringBuilder stackIn_55_1 = null;
+        RuntimeException stackIn_56_0 = null;
+        StringBuilder stackIn_56_1 = null;
+        String stackIn_56_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -75,40 +88,6 @@ class lk extends u {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        int stackIn_29_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_31_1 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_46_0 = 0;
-        int stackIn_47_0 = 0;
-        int stackIn_47_1 = 0;
-        RuntimeException stackIn_52_0 = null;
-        StringBuilder stackIn_52_1 = null;
-        RuntimeException stackIn_53_0 = null;
-        StringBuilder stackIn_53_1 = null;
-        RuntimeException stackIn_54_0 = null;
-        StringBuilder stackIn_54_1 = null;
-        String stackIn_54_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_44_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_46_1 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_45_1 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_30_1 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_29_1 = 0;
-        RuntimeException stackOut_51_0 = null;
-        StringBuilder stackOut_51_1 = null;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        String stackOut_53_2 = null;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        String stackOut_52_2 = null;
         var15 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -151,21 +130,23 @@ class lk extends u {
                                   if (bd.field_M <= var4) {
                                     break L0;
                                   } else {
+                                    var5 = gf.field_o[var4];
+                                    var6 = qa.field_J[var4];
+                                    var7 = var5 * var6;
+                                    var20 = new byte[var7];
+                                    var18 = var20;
+                                    var8 = var18;
+                                    a.field_e[var4] = var20;
+                                    var21 = new byte[var7];
+                                    var19 = var21;
+                                    var9 = var19;
+                                    ll.field_o[var4] = var21;
+                                    var10 = 0;
+                                    var11 = var17.l(31760);
+                                    stackIn_23_0 = -1;
+                                    stackIn_23_1 = 1 & var11 ^ -1;
                                     L7: {
-                                      var5 = gf.field_o[var4];
-                                      var6 = qa.field_J[var4];
-                                      var7 = var5 * var6;
-                                      var20 = new byte[var7];
-                                      var18 = var20;
-                                      var8 = var18;
-                                      a.field_e[var4] = var20;
-                                      var21 = new byte[var7];
-                                      var19 = var21;
-                                      var9 = var19;
-                                      ll.field_o[var4] = var21;
-                                      var10 = 0;
-                                      var11 = var17.l(31760);
-                                      if (-1 != (1 & var11 ^ -1)) {
+                                      if (stackIn_23_0 != stackIn_23_1) {
                                         var12 = 0;
                                         L8: while (true) {
                                           if (var5 <= var12) {
@@ -182,27 +163,22 @@ class lk extends u {
                                                       continue L9;
                                                     } else {
                                                       L11: {
-                                                        dupTemp$2 = var17.n(99);
-                                                        var9[var13 * var5 + var12] = dupTemp$2;
-                                                        var14 = dupTemp$2;
-                                                        stackOut_44_0 = var10;
-                                                        stackIn_46_0 = stackOut_44_0;
-                                                        stackIn_45_0 = stackOut_44_0;
+                                                        dupTemp$0 = var17.n(99);
+                                                        var9[var13 * var5 + var12] = dupTemp$0;
+                                                        var14 = dupTemp$0;
+                                                        stackIn_48_0 = var10;
+
                                                         if (-1 == var14) {
-                                                          stackOut_46_0 = stackIn_46_0;
-                                                          stackOut_46_1 = 0;
-                                                          stackIn_47_0 = stackOut_46_0;
-                                                          stackIn_47_1 = stackOut_46_1;
+                                                          stackIn_49_0 = stackIn_48_0;
+                                                          stackIn_49_1 = 0;
                                                           break L11;
                                                         } else {
-                                                          stackOut_45_0 = stackIn_45_0;
-                                                          stackOut_45_1 = 1;
-                                                          stackIn_47_0 = stackOut_45_0;
-                                                          stackIn_47_1 = stackOut_45_1;
+                                                          stackIn_49_0 = stackIn_48_0;
+                                                          stackIn_49_1 = 1;
                                                           break L11;
                                                         }
                                                       }
-                                                      var10 = stackIn_47_0 | stackIn_47_1;
+                                                      var10 = stackIn_49_0 | stackIn_49_1;
                                                       var13++;
                                                       continue L10;
                                                     }
@@ -239,27 +215,22 @@ class lk extends u {
                                                   break L7;
                                                 } else {
                                                   L15: {
-                                                    dupTemp$3 = var17.n(98);
-                                                    var9[var12] = dupTemp$3;
-                                                    var13 = dupTemp$3;
-                                                    stackOut_28_0 = var10;
-                                                    stackIn_30_0 = stackOut_28_0;
-                                                    stackIn_29_0 = stackOut_28_0;
+                                                    dupTemp$1 = var17.n(98);
+                                                    var9[var12] = dupTemp$1;
+                                                    var13 = dupTemp$1;
+                                                    stackIn_32_0 = var10;
+
                                                     if (var13 == -1) {
-                                                      stackOut_30_0 = stackIn_30_0;
-                                                      stackOut_30_1 = 0;
-                                                      stackIn_31_0 = stackOut_30_0;
-                                                      stackIn_31_1 = stackOut_30_1;
+                                                      stackIn_33_0 = stackIn_32_0;
+                                                      stackIn_33_1 = 0;
                                                       break L15;
                                                     } else {
-                                                      stackOut_29_0 = stackIn_29_0;
-                                                      stackOut_29_1 = 1;
-                                                      stackIn_31_0 = stackOut_29_0;
-                                                      stackIn_31_1 = stackOut_29_1;
+                                                      stackIn_33_0 = stackIn_32_0;
+                                                      stackIn_33_1 = 1;
                                                       break L15;
                                                     }
                                                   }
-                                                  var10 = stackIn_31_0 | stackIn_31_1;
+                                                  var10 = stackIn_33_0 | stackIn_33_1;
                                                   var12++;
                                                   continue L14;
                                                 }
@@ -321,31 +292,23 @@ class lk extends u {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_51_0 = (RuntimeException) (var2);
-            stackOut_51_1 = new StringBuilder().append("lk.O(");
-            stackIn_53_0 = stackOut_51_0;
-            stackIn_53_1 = stackOut_51_1;
-            stackIn_52_0 = stackOut_51_0;
-            stackIn_52_1 = stackOut_51_1;
+            stackIn_55_0 = (RuntimeException) (var2);
+
+            stackIn_55_1 = new StringBuilder().append("lk.O(");
+
             if (param0 == null) {
-              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
-              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
-              stackOut_53_2 = "null";
-              stackIn_54_0 = stackOut_53_0;
-              stackIn_54_1 = stackOut_53_1;
-              stackIn_54_2 = stackOut_53_2;
+              stackIn_56_0 = (RuntimeException) ((Object) stackIn_55_0);
+              stackIn_56_1 = (StringBuilder) ((Object) stackIn_55_1);
+              stackIn_56_2 = "null";
               break L17;
             } else {
-              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
-              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
-              stackOut_52_2 = "{...}";
-              stackIn_54_0 = stackOut_52_0;
-              stackIn_54_1 = stackOut_52_1;
-              stackIn_54_2 = stackOut_52_2;
+              stackIn_56_0 = (RuntimeException) ((Object) stackIn_55_0);
+              stackIn_56_1 = (StringBuilder) ((Object) stackIn_55_1);
+              stackIn_56_2 = "{...}";
               break L17;
             }
           }
-          throw ie.a((Throwable) ((Object) stackIn_54_0), stackIn_54_2 + ',' + param1 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_56_0), stackIn_56_2 + ',' + param1 + ')');
         }
     }
 

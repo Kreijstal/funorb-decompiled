@@ -8,30 +8,30 @@ final class cf {
     static int[] field_c;
 
     final static oq a(int param0, int param1) {
-        int var4 = 0;
-        Object var5 = null;
-        Object var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        Object var17 = null;
-        int[] var18 = null;
-        int[] var19 = null;
-        int[] var20 = null;
-        int[] var21 = null;
-        int[] var22 = null;
-        int[] var23 = null;
-        int[] var24 = null;
-        int[] var25 = null;
-        int[] var26 = null;
-        int[] var27 = null;
+        int var4;
+        Object var5;
+        Object var6;
+        int[] var7;
+        int[] var8;
+        int[] var9;
+        int[] var10;
+        int[] var11;
+        int[] var12;
+        int[] var13;
+        int[] var14;
+        int[] var15;
+        int[] var16;
+        Object var17;
+        int[] var18;
+        int[] var19;
+        int[] var20;
+        int[] var21;
+        int[] var22;
+        int[] var23;
+        int[] var24;
+        int[] var25;
+        int[] var26;
+        int[] var27;
         var5 = null;
         if (param1 == -2635) {
           var17 = null;
@@ -106,23 +106,16 @@ final class cf {
     }
 
     final static boolean a(byte param0) {
-        boolean discarded$8 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 62) {
           L0: {
-            discarded$8 = cf.a((byte) 59);
+            cf.a((byte) 59);
             if (2 > kb.field_Yb) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -130,12 +123,10 @@ final class cf {
         } else {
           L1: {
             if (2 > kb.field_Yb) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -144,10 +135,9 @@ final class cf {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_b = (byte[][]) null;
         if (param0 != -12251) {
-            discarded$0 = cf.a((byte) -13);
+            cf.a((byte) -13);
             field_c = null;
             return;
         }

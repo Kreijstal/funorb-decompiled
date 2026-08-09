@@ -24,11 +24,10 @@ final class esb extends qq implements mkb {
     }
 
     public final jaclib.memory.Buffer a(boolean param0, byte param1) {
-        String discarded$2 = null;
-        CharSequence var4 = null;
+        CharSequence var4;
         if (param1 <= 16) {
           var4 = (CharSequence) null;
-          discarded$2 = esb.a(-9, (CharSequence) null);
+          esb.a(-9, (CharSequence) null);
           return super.a(false, param0, this.field_d.field_Vc);
         } else {
           return super.a(false, param0, this.field_d.field_Vc);
@@ -37,7 +36,6 @@ final class esb extends qq implements mkb {
 
     final static String a(int param0, CharSequence param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -45,23 +43,13 @@ final class esb extends qq implements mkb {
         char[] var7 = null;
         char[] var8 = null;
         String stackIn_22_0 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_21_0 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        RuntimeException var2 = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
@@ -88,8 +76,7 @@ final class esb extends qq implements mkb {
             var4 = 0;
             L3: while (true) {
               if (var2_int <= var4) {
-                stackOut_21_0 = new String(var8);
-                stackIn_22_0 = stackOut_21_0;
+                stackIn_22_0 = new String(var8);
                 break L0;
               } else {
                 L4: {
@@ -144,27 +131,19 @@ final class esb extends qq implements mkb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var2);
-            stackOut_23_1 = new StringBuilder().append("esb.E(").append(param0).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var2);
+
+            stackIn_25_1 = new StringBuilder().append("esb.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L9;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L9;
             }
           }
@@ -174,11 +153,10 @@ final class esb extends qq implements mkb {
     }
 
     public final boolean b(int param0) {
-        String discarded$2 = null;
-        CharSequence var3 = null;
+        CharSequence var3;
         if (param0 != -20836) {
           var3 = (CharSequence) null;
-          discarded$2 = esb.a(91, (CharSequence) null);
+          esb.a(91, (CharSequence) null);
           return super.a((byte) -124, this.field_d.field_Vc);
         } else {
           return super.a((byte) -124, this.field_d.field_Vc);
@@ -186,10 +164,9 @@ final class esb extends qq implements mkb {
     }
 
     public static void e(int param0) {
-        String discarded$0 = null;
         if (param0 >= -104) {
             CharSequence var2 = (CharSequence) null;
-            discarded$0 = esb.a(27, (CharSequence) null);
+            esb.a(27, (CharSequence) null);
             field_j = null;
             return;
         }

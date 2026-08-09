@@ -10,7 +10,6 @@ final class ia {
     static int field_e;
 
     final static boolean a(byte param0) {
-        int discarded$6 = 0;
         if (param0 == -79) {
           if (s.field_d != null) {
             if (null == s.field_d.d((byte) 94)) {
@@ -22,7 +21,7 @@ final class ia {
             return false;
           }
         } else {
-          discarded$6 = ia.a(-122, 113);
+          ia.a(-122, 113);
           if (s.field_d != null) {
             if (null == s.field_d.d((byte) 94)) {
               return false;
@@ -60,7 +59,7 @@ final class ia {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         if (param1 == 2) {
           var2 = 0;
           if (-1 >= (param0 ^ -1)) {

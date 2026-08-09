@@ -46,7 +46,7 @@ final class kf extends ck {
     }
 
     final static boolean a(char param0, byte param1) {
-        int var2 = 0;
+        int var2;
         var2 = -27 % ((10 - param1) / 49);
         if (param0 < 65) {
           if (97 <= param0) {

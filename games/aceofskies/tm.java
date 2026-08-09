@@ -16,28 +16,13 @@ final class tm extends pa {
     static int field_i;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        L0: {
-          this.field_j.a(false, -128);
-          this.field_g.g(1025208104);
-          this.field_g.b((byte) -113, param4);
-          jaggl.OpenGL.glColor4ub((byte)(param3 >> 1078945648), (byte)(param3 >> 611817960), (byte)param3, (byte)(param3 >> -1859342504));
-          param0 = param0 + this.field_c;
-          param1 = param1 + this.field_a;
-          if (this.field_f == null) {
-            this.field_g.a(this.field_j, 1);
-            this.field_g.a(param2, (byte) -39);
-            jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_j.field_p);
-            jaggl.OpenGL.glVertex2i(param0, param1);
-            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0, param1 - -this.field_j.field_o);
-            jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0 - -this.field_j.field_q, param1 + this.field_j.field_o);
-            jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, this.field_j.field_p);
-            jaggl.OpenGL.glVertex2i(param0 - -this.field_j.field_q, param1);
-            jaggl.OpenGL.glEnd();
-            break L0;
-          } else {
+        this.field_j.a(false, -128);
+        this.field_g.g(1025208104);
+        this.field_g.b((byte) -113, param4);
+        jaggl.OpenGL.glColor4ub((byte)(param3 >> 1078945648), (byte)(param3 >> 611817960), (byte)param3, (byte)(param3 >> -1859342504));
+        param0 = param0 + this.field_c;
+        param1 = param1 + this.field_a;
+        if (this.field_f != null) {
             this.a(false, param2);
             this.field_f.a(false, -128);
             jaggl.OpenGL.glBegin(7);
@@ -55,8 +40,19 @@ final class tm extends pa {
             jaggl.OpenGL.glVertex2i(this.field_j.field_q + param0, param1);
             jaggl.OpenGL.glEnd();
             this.b(118);
-            break L0;
-          }
+        } else {
+            this.field_g.a(this.field_j, 1);
+            this.field_g.a(param2, (byte) -39);
+            jaggl.OpenGL.glBegin(7);
+            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_j.field_p);
+            jaggl.OpenGL.glVertex2i(param0, param1);
+            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
+            jaggl.OpenGL.glVertex2i(param0, param1 - -this.field_j.field_o);
+            jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, 0.0f);
+            jaggl.OpenGL.glVertex2i(param0 - -this.field_j.field_q, param1 + this.field_j.field_o);
+            jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, this.field_j.field_p);
+            jaggl.OpenGL.glVertex2i(param0 - -this.field_j.field_q, param1);
+            jaggl.OpenGL.glEnd();
         }
     }
 
@@ -65,77 +61,53 @@ final class tm extends pa {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        Object stackIn_1_0 = null;
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_2_0 = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
         L0: {
           L1: {
             this.field_d = param2;
             this.field_a = param1;
             this.field_c = param0;
             this.field_b = param3;
-            stackOut_0_0 = this;
-            stackIn_5_0 = stackOut_0_0;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_5_0 = this;
+
             if (-1 != (this.field_c ^ -1)) {
               break L1;
             } else {
-              stackOut_1_0 = this;
-              stackIn_5_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_5_0 = this;
+
               if (this.field_a != 0) {
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackIn_5_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_5_0 = this;
+
                 if (this.field_d != 0) {
                   break L1;
                 } else {
-                  stackOut_3_0 = this;
-                  stackIn_6_0 = stackOut_3_0;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_6_0 = this;
+
                   if (this.field_b == 0) {
-                    stackOut_6_0 = this;
-                    stackOut_6_1 = 0;
-                    stackIn_7_0 = stackOut_6_0;
-                    stackIn_7_1 = stackOut_6_1;
+                    stackIn_7_0 = this;
+                    stackIn_7_1 = 0;
                     break L0;
                   } else {
-                    stackOut_4_0 = this;
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = this;
                     break L1;
                   }
                 }
               }
             }
           }
-          stackOut_5_0 = this;
-          stackOut_5_1 = 1;
-          stackIn_7_0 = stackOut_5_0;
-          stackIn_7_1 = stackOut_5_1;
+          stackIn_7_0 = this;
+          stackIn_7_1 = 1;
           break L0;
         }
         ((tm) (this)).field_e = stackIn_7_1 != 0;
     }
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
-        float var11 = 0.0f;
-        float var12 = 0.0f;
         float var13 = 0.0f;
         float var14 = 0.0f;
         float var15 = 0.0f;
@@ -148,17 +120,9 @@ final class tm extends pa {
         float var22 = 0.0f;
         float var23 = 0.0f;
         float var24 = 0.0f;
-        el stackIn_4_0 = null;
-        el stackIn_5_0 = null;
-        el stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        el stackOut_3_0 = null;
-        el stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        el stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        L0: {
-          if (this.field_e) {
+        float var11 = 0.0f;
+        float var12 = 0.0f;
+        if (!(!this.field_e)) {
             var11 = (float)this.d();
             var12 = (float)this.c();
             var13 = (param2 - param0) / var11;
@@ -179,31 +143,9 @@ final class tm extends pa {
             param3 = var18 + (var22 + param3);
             param1 = var18 + (param1 + var20);
             param5 = var24 + (var20 + param5);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        L1: {
-          var11 = param4 + (-param0 + param2);
-          stackOut_3_0 = this.field_j;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_4_0 = stackOut_3_0;
-          if (-1 == (1 & param9 ^ -1)) {
-            stackOut_5_0 = (el) ((Object) stackIn_5_0);
-            stackOut_5_1 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            break L1;
-          } else {
-            stackOut_4_0 = (el) ((Object) stackIn_4_0);
-            stackOut_4_1 = 1;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            break L1;
-          }
-        }
-        ((el) (Object) stackIn_6_0).a(stackIn_6_1 != 0, -128);
+        var11 = param4 + (-param0 + param2);
+        this.field_j.a(-1 != (1 & param9 ^ -1) ? true : false, -128);
         var12 = param3 + (-param1 + param5);
         this.field_g.g(1025208104);
         this.field_g.a(this.field_j, 1);
@@ -243,7 +185,7 @@ final class tm extends pa {
     }
 
     private final void a(boolean param0, int param1) {
-        int var4 = 0;
+        int var4;
         L0: {
           var4 = AceOfSkies.field_G ? 1 : 0;
           this.field_g.a(param0, 1);
@@ -310,38 +252,27 @@ final class tm extends pa {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        float var9 = 0.0f;
-        float var10 = 0.0f;
-        float var11 = 0.0f;
-        float var12 = 0.0f;
-        float var13 = 0.0f;
-        float var14 = 0.0f;
-        int var15 = 0;
-        el stackIn_1_0 = null;
+        float var9;
+        float var10;
+        float var11;
+        float var12;
+        float var13;
+        float var14;
+        int var15;
         el stackIn_2_0 = null;
         el stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        el stackOut_0_0 = null;
-        el stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        el stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           var15 = AceOfSkies.field_G ? 1 : 0;
-          stackOut_0_0 = this.field_j;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this.field_j;
+
           if ((param7 & 1) == 0) {
-            stackOut_2_0 = (el) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (el) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (el) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (el) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -449,22 +380,12 @@ final class tm extends pa {
 
     private final void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -482,27 +403,19 @@ final class tm extends pa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("tm.A(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("tm.A(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -511,8 +424,15 @@ final class tm extends pa {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, int param8) {
-        RuntimeException var9 = null;
+        RuntimeException stackIn_74_0 = null;
+        StringBuilder stackIn_74_1 = null;
+        RuntimeException stackIn_75_0 = null;
+        StringBuilder stackIn_75_1 = null;
+        String stackIn_75_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var9_int = 0;
+        RuntimeException var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -523,23 +443,6 @@ final class tm extends pa {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        RuntimeException stackIn_73_0 = null;
-        StringBuilder stackIn_73_1 = null;
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
-        RuntimeException stackIn_75_0 = null;
-        StringBuilder stackIn_75_1 = null;
-        String stackIn_75_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        RuntimeException stackOut_74_0 = null;
-        StringBuilder stackOut_74_1 = null;
-        String stackOut_74_2 = null;
-        RuntimeException stackOut_73_0 = null;
-        StringBuilder stackOut_73_1 = null;
-        String stackOut_73_2 = null;
         var19 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -675,7 +578,7 @@ final class tm extends pa {
                           } else {
                             L12: {
                               var17 = var9_int >> 1707718832;
-                              if (re.field_b <= var17) {
+                              if ((re.field_b ^ -1) >= (var17 ^ -1)) {
                                 break L12;
                               } else {
                                 var18 = -(var9_int >> -1049095792) + (var10 >> 219532496);
@@ -819,27 +722,19 @@ final class tm extends pa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L19: {
             var9 = decompiledCaughtException;
-            stackOut_72_0 = (RuntimeException) (var9);
-            stackOut_72_1 = new StringBuilder().append("tm.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_74_0 = stackOut_72_0;
-            stackIn_74_1 = stackOut_72_1;
-            stackIn_73_0 = stackOut_72_0;
-            stackIn_73_1 = stackOut_72_1;
+            stackIn_74_0 = (RuntimeException) (var9);
+
+            stackIn_74_1 = new StringBuilder().append("tm.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
-              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
-              stackOut_74_2 = "null";
-              stackIn_75_0 = stackOut_74_0;
-              stackIn_75_1 = stackOut_74_1;
-              stackIn_75_2 = stackOut_74_2;
+              stackIn_75_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackIn_75_1 = (StringBuilder) ((Object) stackIn_74_1);
+              stackIn_75_2 = "null";
               break L19;
             } else {
-              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
-              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
-              stackOut_73_2 = "{...}";
-              stackIn_75_0 = stackOut_73_0;
-              stackIn_75_1 = stackOut_73_1;
-              stackIn_75_2 = stackOut_73_2;
+              stackIn_75_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackIn_75_1 = (StringBuilder) ((Object) stackIn_74_1);
+              stackIn_75_2 = "{...}";
               break L19;
             }
           }

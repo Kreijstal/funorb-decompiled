@@ -27,7 +27,7 @@ final class jg {
     private int field_k;
 
     final nn b(int param0) {
-        nn var2 = null;
+        nn var2;
         this.field_g = li.field_A;
         this.field_o = na.field_i;
         this.field_c.a(this.field_b, true, this.field_a);
@@ -54,10 +54,10 @@ final class jg {
     }
 
     private final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = SteelSentinels.field_G;
         var2 = this.field_k;
         var3 = this.field_i;
@@ -286,7 +286,7 @@ final class jg {
     }
 
     final boolean a(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = -28 / ((-8 - param0) / 49);
         if (ed.field_a >= this.field_p) {
           if (-1 <= (rd.field_b ^ -1)) {
@@ -307,9 +307,9 @@ final class jg {
     }
 
     final void b(boolean param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        String var3 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        String var3;
         if (wb.field_c == null) {
           if (!param0) {
             L0: {
@@ -363,9 +363,9 @@ final class jg {
                 }
               }
             } else {
-              fieldTemp$2 = this.field_m - 1;
+              fieldTemp$0 = this.field_m - 1;
               this.field_m = this.field_m - 1;
-              if (fieldTemp$2 > 0) {
+              if (fieldTemp$0 > 0) {
                 return;
               } else {
                 this.field_m = this.field_n;
@@ -432,9 +432,9 @@ final class jg {
                 }
               }
             } else {
-              fieldTemp$3 = this.field_m - 1;
+              fieldTemp$1 = this.field_m - 1;
               this.field_m = this.field_m - 1;
-              if (fieldTemp$3 > 0) {
+              if (fieldTemp$1 > 0) {
                 return;
               } else {
                 this.field_m = this.field_n;
@@ -461,7 +461,6 @@ final class jg {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int discarded$0 = 0;
         try {
             var2_int = oh.field_f;
             var3 = pi.field_c;
@@ -472,7 +471,7 @@ final class jg {
             var8 = ol.a(var3, 0, 20, var6);
             pb.h(var7, var8, var5, var6, 0);
             pb.a(1 + var7, 1 + var8, -2 + var5, var6 + -2, 16777088);
-            discarded$0 = bd.field_f.field_L.a(param0, 3 + var7, param1 + var8 - (-km.field_g - -bd.field_f.field_L.field_G), 500, 1000, 0, -1, 0, 0, db.field_b);
+            bd.field_f.field_L.a(param0, 3 + var7, param1 + var8 - (-km.field_g - -bd.field_f.field_L.field_G), 500, 1000, 0, -1, 0, 0, db.field_b);
         } catch (RuntimeException runtimeException) {
             throw ci.a((Throwable) ((Object) runtimeException), "jg.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -480,7 +479,6 @@ final class jg {
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var6_int = 0;
-        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -488,6 +486,7 @@ final class jg {
         int var11 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         var11 = SteelSentinels.field_G;
         try {
           L0: {
@@ -535,9 +534,8 @@ final class jg {
     }
 
     final void a(int param0) {
-        int[] discarded$2 = null;
         if (param0 != 15481) {
-          discarded$2 = jg.a(true);
+          jg.a(true);
           this.field_c.a(this.field_o, true, this.field_g);
           return;
         } else {

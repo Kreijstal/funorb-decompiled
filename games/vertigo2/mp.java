@@ -36,11 +36,9 @@ final class mp {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        int var3 = 0;
-        String var4 = null;
+        int var3;
+        String var4;
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         L0: {
           if (param2 == 19297) {
             break L0;
@@ -51,12 +49,10 @@ final class mp {
         }
         L1: {
           if (null == sj.field_d) {
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 0;
             break L1;
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             break L1;
           }
         }
@@ -186,7 +182,7 @@ final class mp {
     }
 
     final static void a(int param0, int param1) {
-        mi var2 = null;
+        mi var2;
         if (param1 <= 17) {
           mp.a(-79, -52);
           var2 = uh.field_Wb;

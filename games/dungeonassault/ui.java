@@ -6,17 +6,14 @@ final class ui {
     static int field_a;
 
     final static String a(int param0, int param1) {
-        String discarded$2 = null;
-        String var2 = null;
-        String var3 = null;
+        String var2;
+        String var3;
         String stackIn_16_0 = null;
-        String stackOut_15_0 = null;
-        String stackOut_14_0 = null;
         L0: {
           if (param1 == 19435) {
             break L0;
           } else {
-            discarded$2 = ui.a(65, -11);
+            ui.a(65, -11);
             break L0;
           }
         }
@@ -60,12 +57,10 @@ final class ui {
           if (-29 == (param0 ^ -1)) {
             L4: {
               if (!gl.field_Lb) {
-                stackOut_15_0 = ql.field_g;
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_0 = ql.field_g;
                 break L4;
               } else {
-                stackOut_14_0 = go.field_V;
-                stackIn_16_0 = stackOut_14_0;
+                stackIn_16_0 = go.field_V;
                 break L4;
               }
             }
@@ -80,14 +75,16 @@ final class ui {
     }
 
     final static void a(int param0) {
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        al var4 = null;
-        fn var4_ref = null;
+        fn var4 = null;
+        al var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -111,8 +108,6 @@ final class ui {
         wj var27 = null;
         long[][] var34 = null;
         int[][] var35 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = DungeonAssault.field_K;
         try {
           L0: {
@@ -123,22 +118,23 @@ final class ui {
                 if (var2 != 0) {
                   if ((var2 ^ -1) == -2) {
                     var3 = var27.k(param0 + -30592);
-                    var4_ref = (fn) ((Object) cb.field_a.e(-24172));
+                    var27.c((byte) 68);
+                    var4 = (fn) ((Object) cb.field_a.e(-24172));
                     L2: while (true) {
                       L3: {
-                        if (var4_ref == null) {
+                        if (var4 == null) {
                           break L3;
                         } else {
-                          if (var3 == var4_ref.field_r) {
+                          if (var3 == var4.field_r) {
                             break L3;
                           } else {
-                            var4_ref = (fn) ((Object) cb.field_a.a(4));
+                            var4 = (fn) ((Object) cb.field_a.a(4));
                             continue L2;
                           }
                         }
                       }
-                      if (var4_ref != null) {
-                        var4_ref.a(false);
+                      if (var4 != null) {
+                        var4.a(false);
                         break L1;
                       } else {
                         tl.a(-96);
@@ -153,28 +149,28 @@ final class ui {
                   }
                 } else {
                   var3 = var27.k(param0 + -30592);
-                  var4 = (al) ((Object) hg.field_n.e(-24172));
+                  var4_ref = (al) ((Object) hg.field_n.e(-24172));
                   L4: while (true) {
                     L5: {
-                      if (var4 == null) {
+                      if (var4_ref == null) {
                         break L5;
                       } else {
-                        if (var3 != var4.field_k) {
-                          var4 = (al) ((Object) hg.field_n.a(param0 ^ 30596));
+                        if (var3 != var4_ref.field_k) {
+                          var4_ref = (al) ((Object) hg.field_n.a(param0 ^ 30596));
                           continue L4;
                         } else {
                           break L5;
                         }
                       }
                     }
-                    if (var4 != null) {
+                    if (var4_ref != null) {
                       var5 = var27.c(true);
                       if (-1 != (var5 ^ -1)) {
-                        var6 = var4.field_l;
+                        var6 = var4_ref.field_l;
                         lg.field_x[0].field_d = null;
                         lg.field_x[0].field_e = false;
                         lg.field_x[0].field_a = tc.field_u;
-                        var7 = var4.field_p;
+                        var7 = var4_ref.field_p;
                         var8_int = 1;
                         L6: while (true) {
                           if (var5 <= var8_int) {
@@ -208,9 +204,9 @@ final class ui {
                                         if (var7 <= var25) {
                                           break L8;
                                         } else {
-                                          incrementValue$3 = var15;
+                                          incrementValue$0 = var15;
                                           var15++;
-                                          var35[0][incrementValue$3] = var27.h(-99);
+                                          var35[0][incrementValue$0] = var27.h(-99);
                                           var25++;
                                           continue L9;
                                         }
@@ -234,9 +230,9 @@ final class ui {
                                           if (var7 <= var25) {
                                             break L10;
                                           } else {
-                                            incrementValue$4 = var16;
+                                            incrementValue$1 = var16;
                                             var16++;
-                                            var35[1][incrementValue$4] = var27.h(-37);
+                                            var35[1][incrementValue$1] = var27.h(-37);
                                             var25++;
                                             continue L11;
                                           }
@@ -262,9 +258,9 @@ final class ui {
                                           if (var25 >= var7) {
                                             break L12;
                                           } else {
-                                            incrementValue$5 = var17;
+                                            incrementValue$2 = var17;
                                             var17++;
-                                            var35[2][incrementValue$5] = var27.h(md.b(param0, -30643));
+                                            var35[2][incrementValue$2] = var27.h(md.b(param0, -30643));
                                             var25++;
                                             continue L13;
                                           }
@@ -277,12 +273,12 @@ final class ui {
                                   var19++;
                                   continue L7;
                                 } else {
-                                  var4.a(false);
+                                  var4_ref.a(false);
                                   break L1;
                                 }
                               }
                             } else {
-                              var4.a(false);
+                              var4_ref.a(false);
                               break L1;
                             }
                           } else {
@@ -302,7 +298,7 @@ final class ui {
                           }
                         }
                       } else {
-                        var4.a(false);
+                        var4_ref.a(false);
                         break L1;
                       }
                     } else {

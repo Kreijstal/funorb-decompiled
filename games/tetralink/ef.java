@@ -14,13 +14,13 @@ final class ef extends uh {
     static boolean field_n;
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         var9 = TetraLink.field_J;
         if (en.field_K < 0) {
           return;
@@ -303,8 +303,6 @@ final class ef extends uh {
         String stackIn_22_0 = null;
         String stackIn_25_0 = null;
         String stackIn_29_0 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
@@ -312,23 +310,6 @@ final class ef extends uh {
         String stackIn_34_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_17_0 = null;
-        String stackOut_21_0 = null;
-        String stackOut_28_0 = null;
-        String stackOut_24_0 = null;
-        String stackOut_13_0 = null;
-        String stackOut_10_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
         try {
           L0: {
             if (3 != param2) {
@@ -337,61 +318,52 @@ final class ef extends uh {
                   if (param2 != 7) {
                     if (8 != param2) {
                       if (-10 == (param2 ^ -1)) {
-                        stackOut_17_0 = p.field_c;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = p.field_c;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       } else {
                         if (-11 == (param2 ^ -1)) {
-                          stackOut_21_0 = gd.field_ec;
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_22_0 = gd.field_ec;
                           decompiledRegionSelector0 = 6;
                           break L0;
                         } else {
                           if (11 != param2) {
                             if (param2 == 14) {
-                              stackOut_28_0 = sk.a(new String[]{param1}, bk.field_l, 127);
-                              stackIn_29_0 = stackOut_28_0;
+                              stackIn_29_0 = sk.a(new String[]{param1}, bk.field_l, 127);
                               decompiledRegionSelector0 = 8;
                               break L0;
                             } else {
                               return null;
                             }
                           } else {
-                            stackOut_24_0 = lf.field_a;
-                            stackIn_25_0 = stackOut_24_0;
+                            stackIn_25_0 = lf.field_a;
                             decompiledRegionSelector0 = 7;
                             break L0;
                           }
                         }
                       }
                     } else {
-                      stackOut_13_0 = fl.field_h;
-                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_14_0 = fl.field_h;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     }
                   } else {
-                    stackOut_10_0 = na.field_q;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = na.field_q;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
-                  stackOut_7_0 = (String) null;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = (String) null;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_4_0 = al.field_l;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = al.field_l;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = le.field_Lb;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = le.field_Lb;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -400,27 +372,19 @@ final class ef extends uh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var3);
-            stackOut_31_1 = new StringBuilder().append("ef.K(").append(param0).append(',');
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackIn_33_0 = (RuntimeException) (var3);
+
+            stackIn_33_1 = new StringBuilder().append("ef.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L1;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L1;
             }
           }
@@ -462,8 +426,8 @@ final class ef extends uh {
     }
 
     final int a(long param0, byte param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = TetraLink.field_J;
         if (param1 == 52) {
           if ((this.field_i ^ -1L) >= (this.field_p ^ -1L)) {
@@ -516,11 +480,11 @@ final class ef extends uh {
     }
 
     private final long a(boolean param0) {
-        long var2 = 0L;
-        long var4 = 0L;
-        long var6 = 0L;
-        int var8 = 0;
-        int var9 = 0;
+        long var2;
+        long var4;
+        long var6;
+        int var8;
+        int var9;
         var9 = TetraLink.field_J;
         if (param0) {
           var2 = System.nanoTime();
@@ -597,6 +561,7 @@ final class ef extends uh {
             return;
           }
         } else {
+          this.b((byte) 107);
           this.field_h = 0L;
           if ((this.field_i ^ -1L) >= (this.field_p ^ -1L)) {
             return;

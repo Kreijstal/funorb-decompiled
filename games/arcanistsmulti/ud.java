@@ -85,21 +85,10 @@ abstract class ud extends dc {
     }
 
     final void a(int param0, String param1, int param2, byte param3, int param4) {
-        Exception var6 = null;
-        RuntimeException var6_ref = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
-        String var11 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -108,21 +97,13 @@ abstract class ud extends dc {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        Exception var6 = null;
+        RuntimeException var6_ref = null;
+        String var7 = null;
+        String var8 = null;
+        String var9 = null;
+        String var10 = null;
+        String var11 = null;
         try {
           L0: {
             try {
@@ -132,32 +113,25 @@ abstract class ud extends dc {
                     L3: {
                       this.field_q = this.getCodeBase().getHost();
                       var11 = this.field_q.toLowerCase();
-                      stackOut_2_0 = this;
-                      stackIn_5_0 = stackOut_2_0;
-                      stackIn_3_0 = stackOut_2_0;
+                      stackIn_5_0 = this;
+
                       if (var11.equals("jagex.com")) {
                         break L3;
                       } else {
-                        stackOut_3_0 = this;
-                        stackIn_6_0 = stackOut_3_0;
-                        stackIn_4_0 = stackOut_3_0;
+                        stackIn_6_0 = this;
+
                         if (!var11.endsWith(".jagex.com")) {
-                          stackOut_6_0 = this;
-                          stackOut_6_1 = 0;
-                          stackIn_7_0 = stackOut_6_0;
-                          stackIn_7_1 = stackOut_6_1;
+                          stackIn_7_0 = this;
+                          stackIn_7_1 = 0;
                           break L2;
                         } else {
-                          stackOut_4_0 = this;
-                          stackIn_5_0 = stackOut_4_0;
+                          stackIn_5_0 = this;
                           break L3;
                         }
                       }
                     }
-                    stackOut_5_0 = this;
-                    stackOut_5_1 = 1;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_7_1 = stackOut_5_1;
+                    stackIn_7_0 = this;
+                    stackIn_7_1 = 1;
                     break L2;
                   }
                   L4: {
@@ -241,27 +215,19 @@ abstract class ud extends dc {
           decompiledCaughtException = decompiledCaughtParameter1;
           L10: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var6_ref);
-            stackOut_24_1 = new StringBuilder().append("ud.P(").append(param0).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var6_ref);
+
+            stackIn_26_1 = new StringBuilder().append("ud.P(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L10;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L10;
             }
           }
@@ -276,36 +242,22 @@ abstract class ud extends dc {
 
     private final int a(boolean param0, boolean param1, boolean param2) {
         try {
+            int stackIn_24_0 = 0;
+            String stackIn_66_0 = null;
+            String stackIn_67_0 = null;
+            int stackIn_67_1 = 0;
+            Object stackIn_70_0 = null;
+            Object stackIn_71_0 = null;
+            int stackIn_71_1 = 0;
+            Throwable decompiledCaughtException = null;
             int var4 = 0;
-            Exception var5 = null;
             int var5_int = 0;
+            Exception var5 = null;
             String var7 = null;
             int var8 = 0;
             String var9 = null;
             Boolean var10 = null;
             wk var11 = null;
-            int stackIn_24_0 = 0;
-            String stackIn_65_0 = null;
-            String stackIn_66_0 = null;
-            String stackIn_67_0 = null;
-            int stackIn_67_1 = 0;
-            Object stackIn_69_0 = null;
-            Object stackIn_70_0 = null;
-            Object stackIn_71_0 = null;
-            int stackIn_71_1 = 0;
-            Throwable decompiledCaughtException = null;
-            int stackOut_23_0 = 0;
-            int stackOut_22_0 = 0;
-            Object stackOut_68_0 = null;
-            Object stackOut_70_0 = null;
-            int stackOut_70_1 = 0;
-            Object stackOut_69_0 = null;
-            int stackOut_69_1 = 0;
-            String stackOut_64_0 = null;
-            String stackOut_66_0 = null;
-            int stackOut_66_1 = 0;
-            String stackOut_65_0 = null;
-            int stackOut_65_1 = 0;
             var8 = ArcanistsMulti.field_G ? 1 : 0;
             var4 = tg.a(wn.field_y, param2, gm.field_f, 17);
             if (-1 != (var4 ^ -1)) {
@@ -376,12 +328,10 @@ abstract class ud extends dc {
                       if (var5_int != 0) {
                         L5: {
                           if (param0) {
-                            stackOut_23_0 = 0;
-                            stackIn_24_0 = stackOut_23_0;
+                            stackIn_24_0 = 0;
                             break L5;
                           } else {
-                            stackOut_22_0 = 1;
-                            stackIn_24_0 = stackOut_22_0;
+                            stackIn_24_0 = 1;
                             break L5;
                           }
                         }
@@ -499,20 +449,15 @@ abstract class ud extends dc {
                             var11 = nf.field_P.b(21496);
                             if (var11 == null) {
                               L20: {
-                                stackOut_68_0 = null;
-                                stackIn_70_0 = stackOut_68_0;
-                                stackIn_69_0 = stackOut_68_0;
+                                stackIn_70_0 = null;
+
                                 if (param0) {
-                                  stackOut_70_0 = stackIn_70_0;
-                                  stackOut_70_1 = 0;
-                                  stackIn_71_0 = stackOut_70_0;
-                                  stackIn_71_1 = stackOut_70_1;
+                                  stackIn_71_0 = stackIn_70_0;
+                                  stackIn_71_1 = 0;
                                   break L20;
                                 } else {
-                                  stackOut_69_0 = stackIn_69_0;
-                                  stackOut_69_1 = 1;
-                                  stackIn_71_0 = stackOut_69_0;
-                                  stackIn_71_1 = stackOut_69_1;
+                                  stackIn_71_0 = stackIn_70_0;
+                                  stackIn_71_1 = 1;
                                   break L20;
                                 }
                               }
@@ -521,20 +466,15 @@ abstract class ud extends dc {
                             } else {
                               L21: {
                                 var7 = ba.a(0, var11.field_g, (byte) -123, var11.field_j);
-                                stackOut_64_0 = (String) (var7);
-                                stackIn_66_0 = stackOut_64_0;
-                                stackIn_65_0 = stackOut_64_0;
+                                stackIn_66_0 = (String) (var7);
+
                                 if (param0) {
-                                  stackOut_66_0 = (String) ((Object) stackIn_66_0);
-                                  stackOut_66_1 = 0;
-                                  stackIn_67_0 = stackOut_66_0;
-                                  stackIn_67_1 = stackOut_66_1;
+                                  stackIn_67_0 = (String) ((Object) stackIn_66_0);
+                                  stackIn_67_1 = 0;
                                   break L21;
                                 } else {
-                                  stackOut_65_0 = (String) ((Object) stackIn_65_0);
-                                  stackOut_65_1 = 1;
-                                  stackIn_67_0 = stackOut_65_0;
-                                  stackIn_67_1 = stackOut_65_1;
+                                  stackIn_67_0 = (String) ((Object) stackIn_66_0);
+                                  stackIn_67_1 = 1;
                                   break L21;
                                 }
                               }
@@ -631,7 +571,7 @@ abstract class ud extends dc {
     }
 
     final int e(int param0) {
-        int var2 = 0;
+        int var2;
         if (this.field_d) {
           return -1;
         } else {
@@ -742,12 +682,10 @@ abstract class ud extends dc {
     }
 
     final void g(int param0) {
-        int var2 = 0;
-        jg var3 = null;
-        int var4 = 0;
         int stackIn_31_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
+        int var2;
+        jg var3;
+        int var4;
         L0: {
           var4 = ArcanistsMulti.field_G ? 1 : 0;
           var2 = on.field_g;
@@ -826,12 +764,10 @@ abstract class ud extends dc {
                                     }
                                     L4: {
                                       if ((var2 ^ -1) != -13) {
-                                        stackOut_30_0 = 0;
-                                        stackIn_31_0 = stackOut_30_0;
+                                        stackIn_31_0 = 0;
                                         break L4;
                                       } else {
-                                        stackOut_29_0 = 1;
-                                        stackIn_31_0 = stackOut_29_0;
+                                        stackIn_31_0 = 1;
                                         break L4;
                                       }
                                     }
@@ -874,34 +810,16 @@ abstract class ud extends dc {
     }
 
     final void a(boolean param0, boolean param1) {
-        int var3 = 0;
-        java.awt.Dimension var4 = null;
-        int var5 = 0;
-        java.awt.Container var6 = null;
         int stackIn_24_0 = 0;
         int stackIn_101_0 = 0;
-        int stackIn_102_0 = 0;
-        String stackIn_102_1 = null;
-        int stackIn_103_0 = 0;
         String stackIn_103_1 = null;
-        int stackIn_104_0 = 0;
         String stackIn_104_1 = null;
         int stackIn_104_2 = 0;
         int stackIn_133_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_100_0 = 0;
-        int stackOut_99_0 = 0;
-        int stackOut_101_0 = 0;
-        String stackOut_101_1 = null;
-        int stackOut_103_0 = 0;
-        String stackOut_103_1 = null;
-        int stackOut_103_2 = 0;
-        int stackOut_102_0 = 0;
-        String stackOut_102_1 = null;
-        int stackOut_102_2 = 0;
-        int stackOut_132_0 = 0;
-        int stackOut_131_0 = 0;
+        int var3;
+        java.awt.Dimension var4;
+        int var5;
+        java.awt.Container var6;
         L0: {
           var5 = ArcanistsMulti.field_G ? 1 : 0;
           if (ob.field_Y == null) {
@@ -987,12 +905,10 @@ abstract class ud extends dc {
           }
           L8: {
             if ((u.field_b ^ -1) != 0) {
-              stackOut_23_0 = 0;
-              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_0 = 0;
               break L8;
             } else {
-              stackOut_22_0 = 1;
-              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_0 = 1;
               break L8;
             }
           }
@@ -1246,41 +1162,31 @@ abstract class ud extends dc {
                   }
                   L25: {
                     if (af.field_Ib) {
-                      stackOut_100_0 = 0;
-                      stackIn_101_0 = stackOut_100_0;
+                      stackIn_101_0 = 0;
                       break L25;
                     } else {
-                      stackOut_99_0 = 1;
-                      stackIn_101_0 = stackOut_99_0;
+                      stackIn_101_0 = 1;
                       break L25;
                     }
                   }
                   L26: {
-                    stackOut_101_0 = stackIn_101_0;
-                    stackOut_101_1 = ul.field_y;
-                    stackIn_103_0 = stackOut_101_0;
-                    stackIn_103_1 = stackOut_101_1;
-                    stackIn_102_0 = stackOut_101_0;
-                    stackIn_102_1 = stackOut_101_1;
+
+
+                    stackIn_103_1 = ul.field_y;
+
                     if (af.field_Ib) {
-                      stackOut_103_0 = stackIn_103_0;
-                      stackOut_103_1 = (String) ((Object) stackIn_103_1);
-                      stackOut_103_2 = 0;
-                      stackIn_104_0 = stackOut_103_0;
-                      stackIn_104_1 = stackOut_103_1;
-                      stackIn_104_2 = stackOut_103_2;
+
+                      stackIn_104_1 = (String) ((Object) stackIn_103_1);
+                      stackIn_104_2 = 0;
                       break L26;
                     } else {
-                      stackOut_102_0 = stackIn_102_0;
-                      stackOut_102_1 = (String) ((Object) stackIn_102_1);
-                      stackOut_102_2 = 1;
-                      stackIn_104_0 = stackOut_102_0;
-                      stackIn_104_1 = stackOut_102_1;
-                      stackIn_104_2 = stackOut_102_2;
+
+                      stackIn_104_1 = (String) ((Object) stackIn_103_1);
+                      stackIn_104_2 = 1;
                       break L26;
                     }
                   }
-                  j.a(stackIn_104_0 != 0, stackIn_104_1, stackIn_104_2 != 0, false);
+                  j.a(stackIn_101_0 != 0, stackIn_104_1, stackIn_104_2 != 0, false);
                   break L23;
                 }
                 L27: {
@@ -1379,12 +1285,10 @@ abstract class ud extends dc {
               if (pm.field_h != null) {
                 L37: {
                   if (!pm.field_h.d(93)) {
-                    stackOut_132_0 = 0;
-                    stackIn_133_0 = stackOut_132_0;
+                    stackIn_133_0 = 0;
                     break L37;
                   } else {
-                    stackOut_131_0 = 1;
-                    stackIn_133_0 = stackOut_131_0;
+                    stackIn_133_0 = 1;
                     break L37;
                   }
                 }

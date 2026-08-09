@@ -12,11 +12,11 @@ final class df extends fa {
     int field_n;
 
     final static void a(int param0, int param1, int param2) {
-        pc var4 = null;
-        eq var6 = null;
-        eq var7 = null;
-        eq var9 = null;
-        eq var12 = null;
+        pc var4;
+        eq var6;
+        eq var7;
+        eq var9;
+        eq var12;
         if (param0 != 3) {
           L0: {
             field_m = (String) null;

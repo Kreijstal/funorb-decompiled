@@ -31,7 +31,7 @@ final class el {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = 0;
+        int var3;
         if (null != jh.field_O) {
           if (sd.field_K <= param2) {
             if (param2 < sd.field_K - -jh.field_O.field_F) {
@@ -110,18 +110,18 @@ final class el {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, float param6) {
-        int[] var7 = null;
-        float var8 = 0.0f;
-        float var9 = 0.0f;
-        float var10 = 0.0f;
-        int var11 = 0;
-        int var12 = 0;
-        int[] var13 = null;
-        int[] var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
+        int[] var7;
+        float var8;
+        float var9;
+        float var10;
+        int var11;
+        int var12;
+        int[] var13;
+        int[] var14;
+        int[] var15;
+        int[] var16;
+        int[] var17;
+        int[] var18;
         L0: {
           var17 = new int[8];
           var15 = var17;
@@ -182,18 +182,16 @@ final class el {
 
     final static fm a(int param0, boolean param1, boolean param2, int param3, int param4, boolean param5) {
         try {
-            fm discarded$2 = null;
             Object var6 = null;
             Object var7 = null;
             gg var8 = null;
             fm stackIn_16_0 = null;
             Throwable decompiledCaughtException = null;
-            fm stackOut_15_0 = null;
             L0: {
               if (param0 < -100) {
                 break L0;
               } else {
-                discarded$2 = el.a(68, true, true, -71, -103, true);
+                el.a(68, true, true, -71, -103, true);
                 break L0;
               }
             }
@@ -245,8 +243,7 @@ final class el {
                     break L6;
                   }
                 }
-                stackOut_15_0 = new fm(var8, param1, param4);
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_0 = new fm(var8, param1, param4);
                 break L1;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -263,7 +260,7 @@ final class el {
     }
 
     final static int a(int param0, byte param1) {
-        int var2 = 0;
+        int var2;
         L0: {
           var2 = 0;
           var2 = var2 | 1;

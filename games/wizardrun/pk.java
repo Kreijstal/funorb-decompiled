@@ -53,11 +53,10 @@ final class pk extends wl {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_n = null;
         field_q = null;
         if (param0 != -15563) {
-            discarded$0 = pk.a((byte) 103);
+            pk.a((byte) 103);
         }
     }
 

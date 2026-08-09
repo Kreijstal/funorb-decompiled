@@ -26,7 +26,7 @@ final class eo {
     }
 
     public static void a(byte param0) {
-        String var2 = null;
+        String var2;
         field_c = null;
         if (param0 >= -100) {
           var2 = (String) null;
@@ -56,7 +56,6 @@ final class eo {
     final static void a(int param0, int param1, int param2, String param3, int param4, String param5) {
         bc var8 = null;
         int var7 = 0;
-        int discarded$0 = 0;
         try {
             var8 = nd.field_Lb;
             bc var6 = var8;
@@ -70,7 +69,7 @@ final class eo {
             if (param5 == null) {
                 var8.b(param1, false);
             } else {
-                discarded$0 = hn.a(false, param5, var8);
+                hn.a(false, param5, var8);
             }
             var8.b(var8.field_t + -var7, -2);
         } catch (RuntimeException runtimeException) {

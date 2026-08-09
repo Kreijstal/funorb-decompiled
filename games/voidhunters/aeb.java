@@ -7,7 +7,6 @@ final class aeb {
     final static void a(int param0, int param1, ik param2) {
         faa var5 = null;
         int var4 = 0;
-        int discarded$59 = 0;
         try {
             var5 = dpa.field_p;
             var5.h(24335, param0);
@@ -20,7 +19,7 @@ final class aeb {
             var5.d(param2.field_d, param1 ^ -332603336);
             var5.d(param2.field_e, 332614536);
             var5.d(param2.field_i, 332614536);
-            discarded$59 = var5.g(param1 ^ -21109, var4);
+            var5.g(param1 ^ -21109, var4);
             if (param1 != -21584) {
                 aeb.a(47, -32);
             }

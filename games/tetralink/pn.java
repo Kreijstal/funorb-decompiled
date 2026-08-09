@@ -3,23 +3,23 @@
  */
 final class pn {
     final static void a(int param0, int param1, int param2, boolean param3, boolean param4) {
-        int incrementValue$1 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
+        int incrementValue$0 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
         L0: {
           var5 = (param2 & 16711935) * (256 - param1) >>> 8 & 16711935;
           param2 = var5 | (param2 & 65280) * (256 - param1) >>> 8 & 65280;
@@ -117,9 +117,9 @@ final class pn {
                         var19++;
                         continue L6;
                       } else {
-                        incrementValue$1 = var17;
+                        incrementValue$0 = var17;
                         var17++;
-                        ra.field_b[incrementValue$1] = var13;
+                        ra.field_b[incrementValue$0] = var13;
                         var20++;
                         continue L7;
                       }

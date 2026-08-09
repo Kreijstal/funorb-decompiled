@@ -16,20 +16,13 @@ final class hm extends ne {
     static int field_s;
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        pn discarded$1 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        String var9 = null;
         int stackIn_34_0 = 0;
         int stackIn_67_0 = 0;
         int stackIn_75_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_66_0 = 0;
-        int stackOut_65_0 = 0;
+        int var4;
+        int var5;
+        int var6;
+        String var9;
         L0: {
           var6 = DungeonAssault.field_K;
           var4 = param0;
@@ -37,12 +30,10 @@ final class hm extends ne {
             L1: {
               var4 = param2 ? 1 : 0;
               if (ve.a(false)) {
-                stackOut_33_0 = 12;
-                stackIn_34_0 = stackOut_33_0;
+                stackIn_34_0 = 12;
                 break L1;
               } else {
-                stackOut_32_0 = 0;
-                stackIn_34_0 = stackOut_32_0;
+                stackIn_34_0 = 0;
                 break L1;
               }
             }
@@ -102,7 +93,7 @@ final class hm extends ne {
                                       if (null == cm.field_R) {
                                         break L0;
                                       } else {
-                                        discarded$1 = i.field_A.a((java.awt.Component) ((Object) cm.field_R), (byte) 101, false);
+                                        i.field_A.a((java.awt.Component) ((Object) cm.field_R), (byte) 101, false);
                                         break L0;
                                       }
                                     } else {
@@ -155,12 +146,10 @@ final class hm extends ne {
                                                       if (28 == var4) {
                                                         L2: {
                                                           if (gl.field_Lb) {
-                                                            stackOut_74_0 = 0;
-                                                            stackIn_75_0 = stackOut_74_0;
+                                                            stackIn_75_0 = 0;
                                                             break L2;
                                                           } else {
-                                                            stackOut_73_0 = 1;
-                                                            stackIn_75_0 = stackOut_73_0;
+                                                            stackIn_75_0 = 1;
                                                             break L2;
                                                           }
                                                         }
@@ -184,12 +173,10 @@ final class hm extends ne {
                                                 if (!ed.c(true)) {
                                                   L3: {
                                                     if (!ve.a(false)) {
-                                                      stackOut_66_0 = 0;
-                                                      stackIn_67_0 = stackOut_66_0;
+                                                      stackIn_67_0 = 0;
                                                       break L3;
                                                     } else {
-                                                      stackOut_65_0 = 12;
-                                                      stackIn_67_0 = stackOut_65_0;
+                                                      stackIn_67_0 = 12;
                                                       break L3;
                                                     }
                                                   }
@@ -296,11 +283,6 @@ final class hm extends ne {
     }
 
     final static int a(boolean param0, byte param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_10_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_68_0 = 0;
@@ -310,13 +292,11 @@ final class hm extends ne {
         int stackIn_84_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_63_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_83_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_77_0 = 0;
-        int stackOut_81_0 = 0;
-        int stackOut_9_0 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = DungeonAssault.field_K;
         try {
           L0: {
@@ -504,14 +484,12 @@ final class hm extends ne {
                         break L12;
                       } else {
                         if (o.field_i.field_b == 0) {
-                          stackOut_63_0 = 3;
-                          stackIn_64_0 = stackOut_63_0;
+                          stackIn_64_0 = 3;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
                           if ((o.field_i.field_b ^ -1) == -2) {
-                            stackOut_67_0 = 2;
-                            stackIn_68_0 = stackOut_67_0;
+                            stackIn_68_0 = 2;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
@@ -522,8 +500,7 @@ final class hm extends ne {
                     }
                     L13: while (true) {
                       if (!ha.b((byte) 47)) {
-                        stackOut_83_0 = 0;
-                        stackIn_84_0 = stackOut_83_0;
+                        stackIn_84_0 = 0;
                         decompiledRegionSelector0 = 6;
                         break L0;
                       } else {
@@ -533,14 +510,12 @@ final class hm extends ne {
                             break L14;
                           } else {
                             if (o.field_i.field_b == 0) {
-                              stackOut_73_0 = 3;
-                              stackIn_74_0 = stackOut_73_0;
+                              stackIn_74_0 = 3;
                               decompiledRegionSelector0 = 3;
                               break L0;
                             } else {
                               if (o.field_i.field_b == 1) {
-                                stackOut_77_0 = 1;
-                                stackIn_78_0 = stackOut_77_0;
+                                stackIn_78_0 = 1;
                                 decompiledRegionSelector0 = 4;
                                 break L0;
                               } else {
@@ -550,8 +525,7 @@ final class hm extends ne {
                           }
                         }
                         if (-14 == (mm.field_t ^ -1)) {
-                          stackOut_81_0 = 1;
-                          stackIn_82_0 = stackOut_81_0;
+                          stackIn_82_0 = 1;
                           decompiledRegionSelector0 = 5;
                           break L0;
                         } else {
@@ -563,8 +537,7 @@ final class hm extends ne {
                     return 0;
                   }
                 } else {
-                  stackOut_9_0 = -25;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = -25;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -616,12 +589,8 @@ final class hm extends ne {
                     uj.a(var2.field_n, 95);
                 }
             }
-            if (m.field_e != null) {
-                if ((gn.field_h ^ -1) == -21) {
-                    if (param0 != null) {
-                        m.field_e.a(param1 + 21, param0);
-                    }
-                }
+            if (m.field_e != null && (gn.field_h ^ -1) == -21 && param0 != null) {
+                m.field_e.a(param1 + 21, param0);
             }
             if (null == m.field_e) {
                 gn.field_h = 0;

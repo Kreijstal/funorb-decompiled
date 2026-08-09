@@ -10,17 +10,14 @@ final class mk extends ug {
     static int field_h;
 
     final static void f(int param0) {
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        ug discarded$11 = null;
-        int fieldTemp$12 = 0;
-        int fieldTemp$13 = 0;
-        int fieldTemp$14 = 0;
-        ug discarded$15 = null;
-        int fieldTemp$16 = 0;
-        ug discarded$17 = null;
-        int var1 = 0;
-        int var2 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int var1;
+        int var2;
         var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (mb.field_e.a((byte) -117) != null) {
           var1 = qc.field_N;
@@ -30,20 +27,20 @@ final class mk extends ug {
               qc.field_N = 1;
               s.field_O = 0;
               if (var2 != 0) {
-                fieldTemp$9 = s.field_O;
+                fieldTemp$0 = s.field_O;
                 s.field_O = s.field_O + 1;
-                if (fieldTemp$9 > 150) {
+                if (fieldTemp$0 > 150) {
                   L0: {
                     qc.field_N = 2;
                     if (var2 == 0) {
                       break L0;
                     } else {
-                      fieldTemp$10 = em.field_B;
+                      fieldTemp$1 = em.field_B;
                       em.field_B = em.field_B + 1;
-                      if (480 >= fieldTemp$10) {
+                      if (480 >= fieldTemp$1) {
                         break L0;
                       } else {
-                        discarded$11 = mb.field_e.d(4011);
+                        mb.field_e.d(4011);
                         ke.b(8192);
                         if (param0 > 125) {
                           return;
@@ -88,9 +85,9 @@ final class mk extends ug {
             L1: {
               L2: {
                 if (-2 == (var1 ^ -1)) {
-                  fieldTemp$12 = s.field_O;
+                  fieldTemp$2 = s.field_O;
                   s.field_O = s.field_O + 1;
-                  if (fieldTemp$12 > 150) {
+                  if (fieldTemp$2 > 150) {
                     qc.field_N = 2;
                     if (var2 == 0) {
                       break L1;
@@ -115,20 +112,20 @@ final class mk extends ug {
                         qc.field_N = 1;
                         s.field_O = 0;
                         if (var2 != 0) {
-                          fieldTemp$13 = s.field_O;
+                          fieldTemp$3 = s.field_O;
                           s.field_O = s.field_O + 1;
-                          if (fieldTemp$13 > 150) {
+                          if (fieldTemp$3 > 150) {
                             L3: {
                               qc.field_N = 2;
                               if (var2 == 0) {
                                 break L3;
                               } else {
-                                fieldTemp$14 = em.field_B;
+                                fieldTemp$4 = em.field_B;
                                 em.field_B = em.field_B + 1;
-                                if (480 >= fieldTemp$14) {
+                                if (480 >= fieldTemp$4) {
                                   break L3;
                                 } else {
-                                  discarded$15 = mb.field_e.d(4011);
+                                  mb.field_e.d(4011);
                                   ke.b(8192);
                                   if (param0 <= 125) {
                                     mk.a(99);
@@ -180,12 +177,12 @@ final class mk extends ug {
                   }
                 }
               }
-              fieldTemp$16 = em.field_B;
+              fieldTemp$5 = em.field_B;
               em.field_B = em.field_B + 1;
-              if (480 >= fieldTemp$16) {
+              if (480 >= fieldTemp$5) {
                 break L1;
               } else {
-                discarded$17 = mb.field_e.d(4011);
+                mb.field_e.d(4011);
                 ke.b(8192);
                 if (param0 > 125) {
                   return;
@@ -234,25 +231,22 @@ final class mk extends ug {
     }
 
     final static String a(long param0, int param1) {
-        String discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
-        int var3 = 0;
-        long var4 = 0L;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        StringBuilder var12 = null;
-        StringBuilder var13 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        int var3;
+        long var4;
+        long var7;
+        int var9;
+        int var10;
+        int var11;
+        StringBuilder var12;
+        StringBuilder var13;
         var11 = MonkeyPuzzle2.field_F ? 1 : 0;
         if ((param0 ^ -1L) < -1L) {
           if (-6582952005840035282L < (param0 ^ -1L)) {
             if (0L != param0 % 37L) {
               if (param1 != 480) {
-                discarded$5 = mk.e(-14);
+                mk.e(-14);
                 var3 = 0;
                 var4 = param0;
                 L0: while (true) {
@@ -292,7 +286,7 @@ final class mk extends ug {
                                 break L5;
                               }
                             }
-                            discarded$6 = var12.append((char) var9);
+                            discarded$2 = var12.append((char) var9);
                             if (var11 == 0) {
                               continue L2;
                             } else {
@@ -301,7 +295,7 @@ final class mk extends ug {
                           }
                         }
                       }
-                      discarded$7 = var12.reverse();
+                      var12.reverse();
                       var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
                       break L3;
                     }
@@ -348,7 +342,7 @@ final class mk extends ug {
                                 break L11;
                               }
                             }
-                            discarded$8 = var13.append((char) var9);
+                            discarded$3 = var13.append((char) var9);
                             if (var11 == 0) {
                               continue L8;
                             } else {
@@ -357,7 +351,7 @@ final class mk extends ug {
                           }
                         }
                       }
-                      discarded$9 = var13.reverse();
+                      var13.reverse();
                       var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
                       break L9;
                     }

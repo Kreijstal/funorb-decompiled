@@ -15,20 +15,12 @@ final class rj {
     }
 
     final int a(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_10_1 = 0;
+        int var3;
+        int var4;
         int stackIn_11_0 = 0;
         int stackIn_11_1 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_25_1 = 0;
         int stackIn_26_0 = 0;
         int stackIn_26_1 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_24_1 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
         var4 = Lexicominos.field_L ? 1 : 0;
         if (param1 == -100) {
           if (this.field_a != null) {
@@ -36,21 +28,23 @@ final class rj {
               var3 = 1;
               L0: while (true) {
                 if (var3 < this.field_a.length) {
-                  stackOut_24_0 = param0;
-                  stackOut_24_1 = this.field_a[var3] + this.field_a[-1 + var3] >> 525366881;
-                  stackIn_26_0 = stackOut_24_0;
-                  stackIn_26_1 = stackOut_24_1;
-                  stackIn_25_0 = stackOut_24_0;
-                  stackIn_25_1 = stackOut_24_1;
+                  stackIn_26_0 = param0;
+
+                  stackIn_26_1 = this.field_a[var3] + this.field_a[-1 + var3] >> 525366881;
+
                   if (var4 == 0) {
                     if (stackIn_26_0 < stackIn_26_1) {
                       return var3 - 1;
                     } else {
                       var3++;
-                      continue L0;
+                      if (var4 == 0) {
+                        continue L0;
+                      } else {
+                        return -1 + this.field_a.length;
+                      }
                     }
                   } else {
-                    return stackIn_25_0 + stackIn_25_1;
+                    return stackIn_26_0 + stackIn_26_1;
                   }
                 } else {
                   return -1 + this.field_a.length;
@@ -69,21 +63,23 @@ final class rj {
               var3 = 1;
               L1: while (true) {
                 if (var3 < this.field_a.length) {
-                  stackOut_9_0 = param0;
-                  stackOut_9_1 = this.field_a[var3] + this.field_a[-1 + var3] >> 525366881;
-                  stackIn_11_0 = stackOut_9_0;
-                  stackIn_11_1 = stackOut_9_1;
-                  stackIn_10_0 = stackOut_9_0;
-                  stackIn_10_1 = stackOut_9_1;
+                  stackIn_11_0 = param0;
+
+                  stackIn_11_1 = this.field_a[var3] + this.field_a[-1 + var3] >> 525366881;
+
                   if (var4 == 0) {
                     if (stackIn_11_0 < stackIn_11_1) {
                       return var3 - 1;
                     } else {
                       var3++;
-                      continue L1;
+                      if (var4 == 0) {
+                        continue L1;
+                      } else {
+                        return -1 + this.field_a.length;
+                      }
                     }
                   } else {
-                    return stackIn_10_0 + stackIn_10_1;
+                    return stackIn_11_0 + stackIn_11_1;
                   }
                 } else {
                   return -1 + this.field_a.length;

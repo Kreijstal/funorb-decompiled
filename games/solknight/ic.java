@@ -22,11 +22,10 @@ final class ic extends sk {
     }
 
     final byte[] f(int param0) {
-        int discarded$2 = 0;
         if (!this.field_m) {
           if (this.field_v.field_m >= this.field_v.field_l.length + -this.field_y) {
             if (param0 != 0) {
-              discarded$2 = this.a((byte) 76);
+              this.a((byte) 76);
               return this.field_v.field_l;
             } else {
               return this.field_v.field_l;

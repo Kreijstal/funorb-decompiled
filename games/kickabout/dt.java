@@ -15,11 +15,11 @@ final class dt {
     static String field_j;
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        double var9 = 0.0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        double var9;
         L0: {
           this.field_c = param2;
           this.field_k = false;

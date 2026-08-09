@@ -23,20 +23,12 @@ final class rd {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_8_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_36_0 = 0;
         int stackIn_49_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
+        int var6;
+        int var7;
         he.field_m[lg.field_d] = param0;
         sj.field_m[lg.field_d] = lg.field_d;
         if (param3 <= -77) {
@@ -57,12 +49,10 @@ final class rd {
               mk.field_c[lg.field_d] = param5;
               var6 = param2 + param1 - -param5;
               if (-1 == (var6 ^ -1)) {
-                stackOut_48_0 = 0;
-                stackIn_49_0 = stackOut_48_0;
+                stackIn_49_0 = 0;
                 break L1;
               } else {
-                stackOut_47_0 = param1 * 1000 / var6;
-                stackIn_49_0 = stackOut_47_0;
+                stackIn_49_0 = param1 * 1000 / var6;
                 break L1;
               }
             }
@@ -101,12 +91,10 @@ final class rd {
               mk.field_c[lg.field_d] = param5;
               var6 = param2 + param1 - -param5;
               if (-1 == (var6 ^ -1)) {
-                stackOut_35_0 = 0;
-                stackIn_36_0 = stackOut_35_0;
+                stackIn_36_0 = 0;
                 break L5;
               } else {
-                stackOut_34_0 = param1 * 1000 / var6;
-                stackIn_36_0 = stackOut_34_0;
+                stackIn_36_0 = param1 * 1000 / var6;
                 break L5;
               }
             }
@@ -149,12 +137,10 @@ final class rd {
               mk.field_c[lg.field_d] = param5;
               var6 = param2 + param1 - -param5;
               if (-1 == (var6 ^ -1)) {
-                stackOut_20_0 = 0;
-                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_0 = 0;
                 break L9;
               } else {
-                stackOut_19_0 = param1 * 1000 / var6;
-                stackIn_21_0 = stackOut_19_0;
+                stackIn_21_0 = param1 * 1000 / var6;
                 break L9;
               }
             }
@@ -194,12 +180,10 @@ final class rd {
               mk.field_c[lg.field_d] = param5;
               var6 = param2 + param1 - -param5;
               if (-1 == (var6 ^ -1)) {
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 0;
                 break L13;
               } else {
-                stackOut_6_0 = param1 * 1000 / var6;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = param1 * 1000 / var6;
                 break L13;
               }
             }
@@ -228,9 +212,8 @@ final class rd {
     }
 
     public static void a(byte param0) {
-        int discarded$0 = 0;
         if (param0 != -63) {
-            discarded$0 = rd.a(-6, false);
+            rd.a(-6, false);
             field_a = null;
             return;
         }

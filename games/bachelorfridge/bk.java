@@ -24,14 +24,12 @@ final class bk extends ana {
     }
 
     private final void b(boolean param0) {
-        oha discarded$2 = null;
-        oha discarded$3 = null;
-        aga var2 = null;
-        Object var3 = null;
-        iv var3_ref = null;
-        int var5 = 0;
-        ad var6 = null;
-        ad var7 = null;
+        aga var2;
+        Object var3;
+        iv var3_ref;
+        int var5;
+        ad var6;
+        ad var7;
         var3 = null;
         var5 = BachelorFridge.field_y;
         var2 = this.field_x.field_l.a(124, this.field_q.field_h);
@@ -40,7 +38,7 @@ final class bk extends ana {
         } else {
           if (param0) {
             var3_ref = (iv) ((Object) this.field_x.field_o.b((byte) 90));
-            discarded$2 = al.a(-36, this.field_x.field_k);
+            al.a(-36, this.field_x.field_k);
             L0: while (true) {
               if (var3_ref == null) {
                 return;
@@ -56,7 +54,7 @@ final class bk extends ana {
           } else {
             field_w = (String) null;
             var3_ref = (iv) ((Object) this.field_x.field_o.b((byte) 90));
-            discarded$3 = al.a(-36, this.field_x.field_k);
+            al.a(-36, this.field_x.field_k);
             L1: while (true) {
               if (var3_ref == null) {
                 return;
@@ -74,11 +72,11 @@ final class bk extends ana {
     }
 
     final boolean c(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = -106 % ((71 - param0) / 47);
-        int fieldTemp$2 = this.field_l - 1;
+        int fieldTemp$1 = this.field_l - 1;
         this.field_l = this.field_l - 1;
-        if ((fieldTemp$2 ^ -1) <= -1) {
+        if ((fieldTemp$1 ^ -1) <= -1) {
           if (25 == this.field_l) {
             wf.a(69, (byte) 127);
             this.b(true);

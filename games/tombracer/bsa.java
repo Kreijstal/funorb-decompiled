@@ -23,123 +23,41 @@ final class bsa implements isa {
     }
 
     public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
+        rr var14 = null;
         int var7 = 0;
         int var8 = 0;
+        int var13 = 0;
         double var9 = 0.0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        rr var14 = null;
-        ae stackIn_3_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        ae stackOut_1_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
-          L0: {
-            L1: {
-              if (!(param0 instanceof rr)) {
-                stackOut_2_0 = null;
-                stackIn_3_0 = (ae) ((Object) stackOut_2_0);
-                break L1;
-              } else {
-                stackOut_1_0 = (ae) (param0);
-                stackIn_3_0 = stackOut_1_0;
-                break L1;
-              }
+            var14 = param0 instanceof rr ? (rr) ((Object) param0) : null;
+            if (var14 != null) {
             }
-            L2: {
-              var14 = (rr) ((Object) stackIn_3_0);
-              if (var14 == null) {
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              bea.e(param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, this.field_d);
-              var7 = var14.field_E + param0.field_i + param1;
-              var8 = var14.field_C + param3 + param0.field_n;
-              bea.e(var7, var8, var14.field_F, this.field_f);
-              if (0 != (var14.field_z ^ -1)) {
+            bea.e(param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, this.field_d);
+            var7 = var14.field_E + param0.field_i + param1;
+            var8 = var14.field_C + param3 + param0.field_n;
+            bea.e(var7, var8, var14.field_F, this.field_f);
+            if (!(0 == (var14.field_z ^ -1))) {
                 var9 = 3.141592653589793 * (double)var14.field_z * 2.0 / (double)var14.field_B;
                 var11 = (int)(-Math.sin(var9) * (double)var14.field_F);
                 var12 = (int)(Math.cos(var9) * (double)var14.field_F);
                 bea.e(var11 + var7, var8 - -var12, 1, this.field_e);
-                break L3;
-              } else {
-                break L3;
-              }
             }
-            L4: {
-              bea.e(var7, var8, 2, 1);
-              var9 = 3.141592653589793 * (double)var14.field_A * 2.0 / (double)var14.field_B;
-              if (param2 == 16777215) {
-                break L4;
-              } else {
+            bea.e(var7, var8, 2, 1);
+            var9 = 3.141592653589793 * (double)var14.field_A * 2.0 / (double)var14.field_B;
+            if (param2 != 16777215) {
                 bsa.a((byte) -126);
-                break L4;
-              }
             }
-            L5: {
-              var11 = (int)(-Math.sin(var9) * (double)var14.field_F);
-              var12 = (int)(Math.cos(var9) * (double)var14.field_F);
-              bea.a(var7, var8, var11 + var7, var8 + var12, 1);
-              if (this.field_a == null) {
-                break L5;
-              } else {
+            var11 = (int)(-Math.sin(var9) * (double)var14.field_F);
+            var12 = (int)(Math.cos(var9) * (double)var14.field_F);
+            bea.a(var7, var8, var11 + var7, var8 + var12, 1);
+            if (this.field_a != null) {
                 var13 = var14.field_F + (var14.field_E + this.field_h);
-                discarded$1 = this.field_a.a(param0.field_o, param1 - -param0.field_i + var13, this.field_b + (param3 - -param0.field_n), -this.field_h - (var13 - param0.field_m), param0.field_p - (this.field_h << -1716952159), this.field_g, this.field_c, 1, 1, 0);
-                break L5;
-              }
+                this.field_a.a(param0.field_o, param1 - -param0.field_i + var13, this.field_b + (param3 - -param0.field_n), -this.field_h - (var13 - param0.field_m), param0.field_p - (this.field_h << -1716952159), this.field_g, this.field_c, 1, 1, 0);
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var6);
-            stackOut_12_1 = new StringBuilder().append("bsa.B(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
-            if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L6;
-            } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L6;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "bsa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

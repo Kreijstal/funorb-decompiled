@@ -24,9 +24,9 @@ final class gh implements Iterable {
     }
 
     final rk a(int param0, long param1) {
-        rk var4 = null;
-        rk var5 = null;
-        int var6 = 0;
+        rk var4;
+        rk var5;
+        int var6;
         var6 = Confined.field_J ? 1 : 0;
         var4 = this.field_j[(int)((long)(this.field_i - param0) & param1)];
         this.field_g = var4.field_h;

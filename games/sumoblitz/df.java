@@ -8,9 +8,8 @@ final class df {
     static ri field_d;
 
     final static int a(byte param0) {
-        int discarded$0 = 0;
         if (param0 <= 97) {
-            discarded$0 = df.a((byte) 125);
+            df.a((byte) 125);
             return kj.field_e;
         }
         return kj.field_e;

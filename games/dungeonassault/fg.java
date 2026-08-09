@@ -16,8 +16,8 @@ final class fg extends gj {
     private int field_e;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, byte param12, int param13, int param14, int param15) {
-        int var16 = 0;
-        int var17 = 0;
+        int var16;
+        int var17;
         var17 = DungeonAssault.field_K;
         var16 = 53 % ((param12 - 24) / 48);
         if (param3 < param2) {
@@ -50,8 +50,8 @@ final class fg extends gj {
     }
 
     final int b(long param0, int param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = DungeonAssault.field_K;
         if (param1 == 2048) {
           if ((this.field_h ^ -1L) <= (this.field_l ^ -1L)) {
@@ -118,7 +118,7 @@ final class fg extends gj {
     }
 
     final long a(int param0) {
-        int var2 = 0;
+        int var2;
         this.field_h = this.field_h + this.c(0);
         if (this.field_h < this.field_l) {
           return (this.field_l - this.field_h) / 1000000L;
@@ -166,11 +166,11 @@ final class fg extends gj {
     }
 
     private final long c(int param0) {
-        long var2 = 0L;
-        long var4 = 0L;
-        long var6 = 0L;
-        int var8 = 0;
-        int var9 = 0;
+        long var2;
+        long var4;
+        long var6;
+        int var8;
+        int var9;
         var9 = DungeonAssault.field_K;
         var2 = System.nanoTime();
         var4 = -this.field_k + var2;

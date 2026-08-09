@@ -15,24 +15,13 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
     static float field_h;
 
     final void a(jk param0, int param1) {
-        String discarded$2 = null;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -40,7 +29,7 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
               if (param1 == -3) {
                 break L1;
               } else {
-                discarded$2 = a.a((byte) 81, 'O', -12);
+                a.a((byte) 81, 'O', -12);
                 break L1;
               }
             }
@@ -50,27 +39,19 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("a.B(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("a.B(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -94,8 +75,6 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
         String stackIn_19_0 = null;
         String stackIn_22_0 = null;
         Object stackIn_24_0 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
@@ -103,36 +82,18 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
         String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        String stackOut_12_0 = null;
-        Object stackOut_23_0 = null;
-        String stackOut_21_0 = null;
-        String stackOut_18_0 = null;
-        String stackOut_15_0 = null;
-        String stackOut_8_0 = null;
-        String stackOut_5_0 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
         try {
           L0: {
             var6 = (CharSequence) ((Object) param1);
             if (!ed.a(var6, 21257)) {
-              stackOut_2_0 = qj.field_a;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = qj.field_a;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (!qd.a((byte) 13, param1)) {
                 if ((ld.field_g ^ -1) == -3) {
                   if (va.a(param1, -19554)) {
-                    stackOut_12_0 = oc.a(dh.field_g, new String[]{param1}, (byte) -94);
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = oc.a(dh.field_g, new String[]{param1}, (byte) -94);
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
@@ -146,38 +107,32 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
                           var5.c(2, (byte) 68);
                           var5.a(-121, param1);
                           var5.a(-var4 + var5.field_l, -1);
-                          stackOut_23_0 = null;
-                          stackIn_24_0 = stackOut_23_0;
+                          stackIn_24_0 = null;
                           decompiledRegionSelector0 = 7;
                           break L0;
                         } else {
-                          stackOut_21_0 = (String) null;
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_22_0 = (String) null;
                           decompiledRegionSelector0 = 6;
                           break L0;
                         }
                       } else {
-                        stackOut_18_0 = oc.a(mf.field_B, new String[]{param1}, (byte) -85);
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_0 = oc.a(mf.field_B, new String[]{param1}, (byte) -85);
                         decompiledRegionSelector0 = 5;
                         break L0;
                       }
                     } else {
-                      stackOut_15_0 = nb.field_Hb;
-                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_16_0 = nb.field_Hb;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     }
                   }
                 } else {
-                  stackOut_8_0 = td.field_j;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = td.field_j;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_5_0 = ed.field_a;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = ed.field_a;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -187,27 +142,19 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var3);
-            stackOut_25_1 = new StringBuilder().append("a.E(").append(param0).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var3);
+
+            stackIn_27_1 = new StringBuilder().append("a.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L1;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L1;
             }
           }
@@ -249,57 +196,37 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
         RuntimeException var2_ref = null;
         int var3 = 0;
         aj stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        aj stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var2 = new aj(false);
             var3 = -37 / ((-21 - param1) / 51);
             var2.field_a = args;
-            stackOut_0_0 = (aj) (var2);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = (aj) (var2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var2_ref);
-            stackOut_2_1 = new StringBuilder().append("a.C(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var2_ref);
+
+            stackIn_4_1 = new StringBuilder().append("a.C(");
+
             if (args == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -309,8 +236,7 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     public static void a(int param0) {
-        String discarded$2 = null;
-        String var2 = null;
+        String var2;
         field_e = null;
         field_i = null;
         field_k = null;
@@ -318,7 +244,7 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_c = null;
         if (param0 != -9) {
           var2 = (String) null;
-          discarded$2 = a.a(19, (String) null, (byte) 40);
+          a.a(19, (String) null, (byte) 40);
           field_a = null;
           return;
         } else {
@@ -338,7 +264,6 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static String a(int param0, String param1, int param2) {
-        aj discarded$2 = null;
         RuntimeException var3 = null;
         String[] var4 = null;
         String stackIn_2_0 = null;
@@ -350,8 +275,6 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
         String stackIn_25_0 = null;
         String stackIn_28_0 = null;
         Object stackIn_32_0 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         RuntimeException stackIn_36_0 = null;
@@ -359,71 +282,47 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
         String stackIn_36_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_8_0 = null;
-        String stackOut_12_0 = null;
-        String stackOut_16_0 = null;
-        String stackOut_20_0 = null;
-        String stackOut_24_0 = null;
-        Object stackOut_31_0 = null;
-        String stackOut_27_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
         try {
           L0: {
             if (-4 != (param0 ^ -1)) {
               if ((param0 ^ -1) != -7) {
                 if ((param0 ^ -1) == -8) {
-                  stackOut_8_0 = jf.field_g;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = jf.field_g;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (-9 == (param0 ^ -1)) {
-                    stackOut_12_0 = lf.field_P;
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = lf.field_P;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
                     if ((param0 ^ -1) == -10) {
-                      stackOut_16_0 = ma.field_F;
-                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_0 = ma.field_F;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       if (param0 == 10) {
-                        stackOut_20_0 = dj.field_q;
-                        stackIn_21_0 = stackOut_20_0;
+                        stackIn_21_0 = dj.field_q;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       } else {
                         if (param0 == 11) {
-                          stackOut_24_0 = hk.field_N;
-                          stackIn_25_0 = stackOut_24_0;
+                          stackIn_25_0 = hk.field_N;
                           decompiledRegionSelector0 = 6;
                           break L0;
                         } else {
                           if (-15 != (param0 ^ -1)) {
                             if (param2 != -3) {
                               var4 = (String[]) null;
-                              discarded$2 = a.a((String[]) null, -18);
-                              stackOut_31_0 = null;
-                              stackIn_32_0 = stackOut_31_0;
+                              a.a((String[]) null, -18);
+                              stackIn_32_0 = null;
                               decompiledRegionSelector0 = 8;
                               break L0;
                             } else {
                               return null;
                             }
                           } else {
-                            stackOut_27_0 = oc.a(hn.field_b, new String[]{param1}, (byte) -119);
-                            stackIn_28_0 = stackOut_27_0;
+                            stackIn_28_0 = oc.a(hn.field_b, new String[]{param1}, (byte) -119);
                             decompiledRegionSelector0 = 7;
                             break L0;
                           }
@@ -433,14 +332,12 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
                   }
                 }
               } else {
-                stackOut_4_0 = hk.field_L;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = hk.field_L;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = uj.field_o;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = uj.field_o;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -449,27 +346,19 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) (var3);
-            stackOut_33_1 = new StringBuilder().append("a.F(").append(param0).append(',');
-            stackIn_35_0 = stackOut_33_0;
-            stackIn_35_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+            stackIn_35_0 = (RuntimeException) (var3);
+
+            stackIn_35_1 = new StringBuilder().append("a.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "null";
               break L1;
             } else {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "{...}";
-              stackIn_36_0 = stackOut_34_0;
-              stackIn_36_1 = stackOut_34_1;
-              stackIn_36_2 = stackOut_34_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "{...}";
               break L1;
             }
           }
@@ -539,10 +428,10 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static String a(byte param0, char param1, int param2) {
-        char[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        char[] var6 = null;
+        char[] var3;
+        int var4;
+        int var5;
+        char[] var6;
         var5 = Chess.field_G;
         var6 = new char[param2];
         var3 = var6;

@@ -7,12 +7,11 @@ final class ch {
     static String field_c;
 
     public static void a(int param0) {
-        boolean discarded$2 = false;
-        CharSequence var2 = null;
+        CharSequence var2;
         field_c = null;
         if (param0 != 1426) {
           var2 = (CharSequence) null;
-          discarded$2 = ch.a((CharSequence) null, false, -68);
+          ch.a((CharSequence) null, false, -68);
           field_a = null;
           return;
         } else {
@@ -30,28 +29,41 @@ final class ch {
     }
 
     final static void a(byte param0) {
-        boolean discarded$0 = false;
         ac.field_m = 1426;
         if (param0 != 80) {
             CharSequence var2 = (CharSequence) null;
-            discarded$0 = ch.a((CharSequence) null, false, 20);
+            ch.a((CharSequence) null, false, 20);
         }
     }
 
     final synchronized static byte[] a(int param0, int param1) {
-        int fieldTemp$82 = 0;
-        int fieldTemp$83 = 0;
-        byte[][] fieldTemp$84 = null;
-        int fieldTemp$85 = 0;
-        byte[][] fieldTemp$86 = null;
-        int fieldTemp$87 = 0;
-        int fieldTemp$88 = 0;
-        int fieldTemp$89 = 0;
-        byte[][] fieldTemp$90 = null;
-        int fieldTemp$91 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        int dupTemp$3 = 0;
+        byte[][] arrayValue$4 = null;
+        int dupTemp$5 = 0;
+        byte[][] arrayValue$6 = null;
+        int fieldTemp$7 = 0;
+        int dupTemp$8 = 0;
+        byte[][] arrayValue$9 = null;
+        int dupTemp$10 = 0;
+        byte[][] arrayValue$11 = null;
+        int fieldTemp$12 = 0;
+        byte[][] fieldTemp$13 = null;
+        int fieldTemp$14 = 0;
+        byte[][] fieldTemp$15 = null;
+        int fieldTemp$16 = 0;
+        int dupTemp$17 = 0;
+        byte[][] arrayValue$18 = null;
+        int dupTemp$19 = 0;
+        byte[][] arrayValue$20 = null;
+        int fieldTemp$21 = 0;
+        int fieldTemp$22 = 0;
+        int dupTemp$23 = 0;
+        byte[][] arrayValue$24 = null;
+        byte[][] fieldTemp$25 = null;
+        int fieldTemp$26 = 0;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
         if (100 == param1) {
           if ((qg.field_c ^ -1) >= -1) {
             if (param0 == -5827) {
@@ -65,8 +77,10 @@ final class ch {
                       } else {
                         if (param1 == fl.field_d[var2]) {
                           if ((ba.field_w[var2] ^ -1) < -1) {
-                            ba.field_w[var2] = ba.field_w[var2] - 1;
-                            var3 = wg.field_j[var2][ba.field_w[var2] - 1];
+                            dupTemp$3 = ba.field_w[var2] - 1;
+                            arrayValue$4 = wg.field_j[var2];
+                            ba.field_w[var2] = dupTemp$3;
+                            var3 = arrayValue$4[dupTemp$3];
                             wg.field_j[var2][ba.field_w[var2]] = null;
                             return var3;
                           } else {
@@ -92,8 +106,10 @@ final class ch {
                         } else {
                           if (param1 == fl.field_d[var2]) {
                             if ((ba.field_w[var2] ^ -1) < -1) {
-                              ba.field_w[var2] = ba.field_w[var2] - 1;
-                              var3 = wg.field_j[var2][ba.field_w[var2] - 1];
+                              dupTemp$5 = ba.field_w[var2] - 1;
+                              arrayValue$6 = wg.field_j[var2];
+                              ba.field_w[var2] = dupTemp$5;
+                              var3 = arrayValue$6[dupTemp$5];
                               wg.field_j[var2][ba.field_w[var2]] = null;
                               return var3;
                             } else {
@@ -110,9 +126,9 @@ final class ch {
                       return new byte[param1];
                     }
                   } else {
-                    fieldTemp$82 = kn.field_F - 1;
+                    fieldTemp$7 = kn.field_F - 1;
                     kn.field_F = kn.field_F - 1;
-                    var2_ref_byte__ = sh.field_j[fieldTemp$82];
+                    var2_ref_byte__ = sh.field_j[fieldTemp$7];
                     sh.field_j[kn.field_F] = null;
                     return var2_ref_byte__;
                   }
@@ -126,8 +142,10 @@ final class ch {
                         if (fl.field_d.length > var2) {
                           if (param1 == fl.field_d[var2]) {
                             if ((ba.field_w[var2] ^ -1) < -1) {
-                              ba.field_w[var2] = ba.field_w[var2] - 1;
-                              var3 = wg.field_j[var2][ba.field_w[var2] - 1];
+                              dupTemp$8 = ba.field_w[var2] - 1;
+                              arrayValue$9 = wg.field_j[var2];
+                              ba.field_w[var2] = dupTemp$8;
+                              var3 = arrayValue$9[dupTemp$8];
                               wg.field_j[var2][ba.field_w[var2]] = null;
                               return var3;
                             } else {
@@ -153,8 +171,10 @@ final class ch {
                           if (fl.field_d.length > var2) {
                             if (param1 == fl.field_d[var2]) {
                               if ((ba.field_w[var2] ^ -1) < -1) {
-                                ba.field_w[var2] = ba.field_w[var2] - 1;
-                                var3 = wg.field_j[var2][ba.field_w[var2] - 1];
+                                dupTemp$10 = ba.field_w[var2] - 1;
+                                arrayValue$11 = wg.field_j[var2];
+                                ba.field_w[var2] = dupTemp$10;
+                                var3 = arrayValue$11[dupTemp$10];
                                 wg.field_j[var2][ba.field_w[var2]] = null;
                                 return var3;
                               } else {
@@ -173,18 +193,18 @@ final class ch {
                         return new byte[param1];
                       }
                     } else {
-                      fieldTemp$83 = kn.field_F - 1;
+                      fieldTemp$12 = kn.field_F - 1;
                       kn.field_F = kn.field_F - 1;
-                      var2_ref_byte__ = sh.field_j[fieldTemp$83];
+                      var2_ref_byte__ = sh.field_j[fieldTemp$12];
                       sh.field_j[kn.field_F] = null;
                       return var2_ref_byte__;
                     }
                   }
                 } else {
-                  fieldTemp$84 = ka.field_e;
-                  fieldTemp$85 = re.field_e - 1;
+                  fieldTemp$13 = ka.field_e;
+                  fieldTemp$14 = re.field_e - 1;
                   re.field_e = re.field_e - 1;
-                  var2_ref_byte__ = fieldTemp$84[fieldTemp$85];
+                  var2_ref_byte__ = fieldTemp$13[fieldTemp$14];
                   ka.field_e[re.field_e] = null;
                   return var2_ref_byte__;
                 }
@@ -193,10 +213,10 @@ final class ch {
               return (byte[]) null;
             }
           } else {
-            fieldTemp$86 = ff.field_c;
-            fieldTemp$87 = qg.field_c - 1;
+            fieldTemp$15 = ff.field_c;
+            fieldTemp$16 = qg.field_c - 1;
             qg.field_c = qg.field_c - 1;
-            var2_ref_byte__ = fieldTemp$86[fieldTemp$87];
+            var2_ref_byte__ = fieldTemp$15[fieldTemp$16];
             ff.field_c[qg.field_c] = null;
             return var2_ref_byte__;
           }
@@ -210,8 +230,10 @@ final class ch {
                     if (fl.field_d.length > var2) {
                       if (param1 == fl.field_d[var2]) {
                         if ((ba.field_w[var2] ^ -1) < -1) {
-                          ba.field_w[var2] = ba.field_w[var2] - 1;
-                          var3 = wg.field_j[var2][ba.field_w[var2] - 1];
+                          dupTemp$17 = ba.field_w[var2] - 1;
+                          arrayValue$18 = wg.field_j[var2];
+                          ba.field_w[var2] = dupTemp$17;
+                          var3 = arrayValue$18[dupTemp$17];
                           wg.field_j[var2][ba.field_w[var2]] = null;
                           return var3;
                         } else {
@@ -237,8 +259,10 @@ final class ch {
                       if (fl.field_d.length > var2) {
                         if (param1 == fl.field_d[var2]) {
                           if ((ba.field_w[var2] ^ -1) < -1) {
-                            ba.field_w[var2] = ba.field_w[var2] - 1;
-                            var3 = wg.field_j[var2][ba.field_w[var2] - 1];
+                            dupTemp$19 = ba.field_w[var2] - 1;
+                            arrayValue$20 = wg.field_j[var2];
+                            ba.field_w[var2] = dupTemp$19;
+                            var3 = arrayValue$20[dupTemp$19];
                             wg.field_j[var2][ba.field_w[var2]] = null;
                             return var3;
                           } else {
@@ -257,9 +281,9 @@ final class ch {
                     return new byte[param1];
                   }
                 } else {
-                  fieldTemp$88 = kn.field_F - 1;
+                  fieldTemp$21 = kn.field_F - 1;
                   kn.field_F = kn.field_F - 1;
-                  var2_ref_byte__ = sh.field_j[fieldTemp$88];
+                  var2_ref_byte__ = sh.field_j[fieldTemp$21];
                   sh.field_j[kn.field_F] = null;
                   return var2_ref_byte__;
                 }
@@ -271,9 +295,9 @@ final class ch {
                     break L6;
                   } else {
                     if ((kn.field_F ^ -1) < -1) {
-                      fieldTemp$89 = kn.field_F - 1;
+                      fieldTemp$22 = kn.field_F - 1;
                       kn.field_F = kn.field_F - 1;
-                      var2_ref_byte__ = sh.field_j[fieldTemp$89];
+                      var2_ref_byte__ = sh.field_j[fieldTemp$22];
                       sh.field_j[kn.field_F] = null;
                       return var2_ref_byte__;
                     } else {
@@ -287,8 +311,10 @@ final class ch {
                     if (fl.field_d.length > var2) {
                       if (param1 == fl.field_d[var2]) {
                         if ((ba.field_w[var2] ^ -1) < -1) {
-                          ba.field_w[var2] = ba.field_w[var2] - 1;
-                          var3 = wg.field_j[var2][ba.field_w[var2] - 1];
+                          dupTemp$23 = ba.field_w[var2] - 1;
+                          arrayValue$24 = wg.field_j[var2];
+                          ba.field_w[var2] = dupTemp$23;
+                          var3 = arrayValue$24[dupTemp$23];
                           wg.field_j[var2][ba.field_w[var2]] = null;
                           return var3;
                         } else {
@@ -307,10 +333,10 @@ final class ch {
                   return new byte[param1];
                 }
               } else {
-                fieldTemp$90 = ka.field_e;
-                fieldTemp$91 = re.field_e - 1;
+                fieldTemp$25 = ka.field_e;
+                fieldTemp$26 = re.field_e - 1;
                 re.field_e = re.field_e - 1;
-                var2_ref_byte__ = fieldTemp$90[fieldTemp$91];
+                var2_ref_byte__ = fieldTemp$25[fieldTemp$26];
                 ka.field_e[re.field_e] = null;
                 return var2_ref_byte__;
               }
@@ -328,8 +354,6 @@ final class ch {
         int stackIn_4_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -337,37 +361,23 @@ final class ch {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_9_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var4 = ZombieDawn.field_J;
         try {
           L0: {
             if (!vb.a(param2, param0, param1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               var3_int = 0;
               L1: while (true) {
                 if (param0.length() <= var3_int) {
-                  stackOut_12_0 = 1;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = 1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (!jb.a((byte) 27, param0.charAt(var3_int))) {
-                    stackOut_9_0 = 0;
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = 0;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -382,27 +392,19 @@ final class ch {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("ch.B(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3);
+
+            stackIn_16_1 = new StringBuilder().append("ch.B(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L2;
             }
           }

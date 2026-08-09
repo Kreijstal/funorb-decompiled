@@ -11,7 +11,6 @@ final class d {
     static boolean field_f;
 
     final static int a(int param0, int param1, int param2) {
-        int discarded$7 = 0;
         if (param0 < -72) {
           if (param1 < param2) {
             return 2048 + -gj.a((param1 << -910904720) / param2, -111);
@@ -19,7 +18,7 @@ final class d {
             return gj.a((param2 << 1703558576) / param1, -106);
           }
         } else {
-          discarded$7 = d.a(48, -124, 86);
+          d.a(48, -124, 86);
           if (param1 < param2) {
             return 2048 + -gj.a((param1 << -910904720) / param2, -111);
           } else {
@@ -29,10 +28,10 @@ final class d {
     }
 
     final static la a(boolean param0, byte param1) {
-        int discarded$4 = 0;
-        String discarded$5 = null;
-        int discarded$6 = 0;
-        String discarded$7 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_11_0 = 0;
+        int[] stackIn_24_0 = null;
+        Throwable decompiledCaughtException = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -40,16 +39,6 @@ final class d {
         int var7 = 0;
         wj var8 = null;
         nf var9 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int[] stackIn_24_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        Object stackOut_23_0 = null;
-        int[] stackOut_22_0 = null;
         L0: {
           var7 = DungeonAssault.field_K;
           if (param1 > 40) {
@@ -64,12 +53,10 @@ final class d {
           var3 = var8.c(true);
           uk.field_a = 127 & var3;
           if ((128 & var3) == 0) {
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 0;
             break L1;
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             break L1;
           }
         }
@@ -89,12 +76,10 @@ final class d {
         }
         L3: {
           if (var8.c(true) != 1) {
-            stackOut_10_0 = 0;
-            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_0 = 0;
             break L3;
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             break L3;
           }
         }
@@ -111,13 +96,13 @@ final class d {
         }
         L5: {
           if (-2 == (uk.field_a ^ -1)) {
-            discarded$4 = var8.k(0);
-            discarded$5 = var8.d(-101);
+            var8.k(0);
+            var8.d(-101);
             break L5;
           } else {
             if ((uk.field_a ^ -1) == -5) {
-              discarded$6 = var8.k(0);
-              discarded$7 = var8.d(-101);
+              var8.k(0);
+              var8.d(-101);
               break L5;
             } else {
               break L5;
@@ -136,12 +121,10 @@ final class d {
                 var9 = fm.field_f.a(var5, -19256);
                 sa.field_t = var9.c((byte) -122);
                 if (tk.field_v.equals(tc.field_u)) {
-                  stackOut_23_0 = null;
-                  stackIn_24_0 = (int[]) ((Object) stackOut_23_0);
+                  stackIn_24_0 = null;
                   break L7;
                 } else {
-                  stackOut_22_0 = var9.field_D;
-                  stackIn_24_0 = stackOut_22_0;
+                  stackIn_24_0 = var9.field_D;
                   break L7;
                 }
               }

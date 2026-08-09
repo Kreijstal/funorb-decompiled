@@ -26,8 +26,6 @@ final class ocb extends eca {
         String stackIn_25_0 = null;
         String stackIn_28_0 = null;
         String stackIn_30_0 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
@@ -35,24 +33,6 @@ final class ocb extends eca {
         String stackIn_34_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_14_0 = null;
-        String stackOut_24_0 = null;
-        String stackOut_29_0 = null;
-        String stackOut_27_0 = null;
-        String stackOut_20_0 = null;
-        String stackOut_17_0 = null;
-        String stackOut_10_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_4_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
         try {
           L0: {
             var3 = this.field_f.field_j.toLowerCase();
@@ -63,65 +43,55 @@ final class ocb extends eca {
                 if (!ws.a((byte) 109, var5)) {
                   if (!mea.a(126, var5)) {
                     if (this.a(param0, false)) {
-                      stackOut_14_0 = gnb.field_f;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = gnb.field_f;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       if ((var3.length() ^ -1) < param1) {
                         if (!qnb.a(var5, -1, var3)) {
                           if (njb.a(var3, 95, var5)) {
-                            stackOut_24_0 = lna.field_p;
-                            stackIn_25_0 = stackOut_24_0;
+                            stackIn_25_0 = lna.field_p;
                             decompiledRegionSelector0 = 7;
                             break L0;
                           } else {
                             if (!wg.a(var5, var3, true)) {
-                              stackOut_29_0 = ema.field_r;
-                              stackIn_30_0 = stackOut_29_0;
+                              stackIn_30_0 = ema.field_r;
                               decompiledRegionSelector0 = 9;
                               break L0;
                             } else {
-                              stackOut_27_0 = jta.field_q;
-                              stackIn_28_0 = stackOut_27_0;
+                              stackIn_28_0 = jta.field_q;
                               decompiledRegionSelector0 = 8;
                               break L0;
                             }
                           }
                         } else {
-                          stackOut_20_0 = jta.field_q;
-                          stackIn_21_0 = stackOut_20_0;
+                          stackIn_21_0 = jta.field_q;
                           decompiledRegionSelector0 = 6;
                           break L0;
                         }
                       } else {
-                        stackOut_17_0 = cqa.field_q;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = cqa.field_q;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       }
                     }
                   } else {
-                    stackOut_10_0 = qab.field_a;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = qab.field_a;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
-                  stackOut_7_0 = ipa.field_o;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = ipa.field_o;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_4_0 = ema.field_r;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = ema.field_r;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -130,27 +100,19 @@ final class ocb extends eca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var3_ref);
-            stackOut_31_1 = new StringBuilder().append("ocb.C(");
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackIn_33_0 = (RuntimeException) (var3_ref);
+
+            stackIn_33_1 = new StringBuilder().append("ocb.C(");
+
             if (param0 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L1;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L1;
             }
           }
@@ -199,23 +161,12 @@ final class ocb extends eca {
         llb var13 = null;
         RuntimeException var13_ref = null;
         llb stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        llb stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -234,35 +185,26 @@ final class ocb extends eca {
             var13.field_ub = va.a(param2 + -37202, param0, param8);
             var13.field_Y = param10;
             var13.field_eb = param3;
-            stackOut_2_0 = (llb) (var13);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (llb) (var13);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var13_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var13_ref);
-            stackOut_4_1 = new StringBuilder().append("ocb.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var13_ref);
+
+            stackIn_6_1 = new StringBuilder().append("ocb.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -286,10 +228,9 @@ final class ocb extends eca {
     }
 
     final static void f(int param0) {
-        llb discarded$0 = null;
         ulb.a(100);
         if (param0 != -10150) {
-            discarded$0 = ocb.a(-128, 101, 87, (no) null, 109, 83, -49, -78, 19, -41, 88, -111, 125);
+            ocb.a(-128, 101, 87, (no) null, 109, 83, -49, -78, 19, -41, 88, -111, 125);
         }
         uda.b(-2283);
         ah.e(-17);
@@ -335,8 +276,6 @@ final class ocb extends eca {
         qrb stackIn_9_0 = null;
         qrb stackIn_12_0 = null;
         qrb stackIn_14_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -344,19 +283,6 @@ final class ocb extends eca {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        qrb stackOut_8_0 = null;
-        qrb stackOut_13_0 = null;
-        qrb stackOut_11_0 = null;
-        qrb stackOut_4_0 = null;
-        qrb stackOut_1_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         try {
           L0: {
             var3 = this.field_f.field_j.toLowerCase();
@@ -364,32 +290,27 @@ final class ocb extends eca {
               var4 = param0.toLowerCase();
               if (var4.length() != 0) {
                 if (!seb.a(var3, var4, -101)) {
-                  stackOut_8_0 = cca.field_o;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = cca.field_o;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (!this.a(param0, false)) {
-                    stackOut_13_0 = lea.field_o;
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = lea.field_o;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
-                    stackOut_11_0 = cca.field_o;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = cca.field_o;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 }
               } else {
-                stackOut_4_0 = cca.field_o;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = cca.field_o;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = (qrb) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (qrb) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -398,27 +319,19 @@ final class ocb extends eca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var3_ref);
-            stackOut_15_1 = new StringBuilder().append("ocb.B(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var3_ref);
+
+            stackIn_17_1 = new StringBuilder().append("ocb.B(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L1;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L1;
             }
           }
@@ -454,8 +367,6 @@ final class ocb extends eca {
         int stackIn_12_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_18_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -463,19 +374,6 @@ final class ocb extends eca {
         String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
         try {
           L0: {
             var3 = this.field_k.field_j.toLowerCase();
@@ -494,19 +392,16 @@ final class ocb extends eca {
                         var6 = var3.substring(0, var5);
                         var7 = var3.substring(1 + var5);
                         if (0 <= var4.indexOf(var6)) {
-                          stackOut_11_0 = 1;
-                          stackIn_12_0 = stackOut_11_0;
+                          stackIn_12_0 = 1;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
                           L2: {
                             if (-1 >= (var4.indexOf(var7) ^ -1)) {
-                              stackOut_15_0 = 1;
-                              stackIn_16_0 = stackOut_15_0;
+                              stackIn_16_0 = 1;
                               break L2;
                             } else {
-                              stackOut_14_0 = 0;
-                              stackIn_16_0 = stackOut_14_0;
+                              stackIn_16_0 = 0;
                               break L2;
                             }
                           }
@@ -522,13 +417,11 @@ final class ocb extends eca {
                   }
                 }
               }
-              stackOut_17_0 = 0;
-              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_0 = 0;
               decompiledRegionSelector0 = 3;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -537,27 +430,19 @@ final class ocb extends eca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var3_ref);
-            stackOut_19_1 = new StringBuilder().append("ocb.Q(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var3_ref);
+
+            stackIn_21_1 = new StringBuilder().append("ocb.Q(");
+
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L3;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L3;
             }
           }

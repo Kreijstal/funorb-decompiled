@@ -8,8 +8,8 @@ final class oh extends wf {
     int field_e;
 
     final static kc a(double param0, byte param1) {
-        double var3 = 0.0;
-        double var5 = 0.0;
+        double var3;
+        double var5;
         var3 = (double)bs.a(-1, ci.field_i, (int)(param0 * 20000.0)) - 10000.0 * param0;
         if (param1 != 28) {
           return (kc) null;

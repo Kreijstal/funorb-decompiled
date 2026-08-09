@@ -11,33 +11,28 @@ final class wh implements Iterable {
     private br field_e;
 
     final br a(long param0, int param1) {
-        br var4 = null;
-        int var5 = 0;
         br var6 = null;
-        int var7 = 0;
-        var7 = ZombieDawnMulti.field_E ? 1 : 0;
-        var4 = this.field_a[(int)(param0 & (long)(-1 + this.field_d))];
+        int var7 = ZombieDawnMulti.field_E ? 1 : 0;
+        br var4 = this.field_a[(int)(param0 & (long)(-1 + this.field_d))];
         this.field_e = var4.field_d;
-        var5 = -79 / ((param1 - -3) / 54);
-        L0: while (true) {
-          if (var4 != this.field_e) {
-            if (var7 == 0) {
-              if (param0 != this.field_e.field_e) {
-                this.field_e = this.field_e.field_d;
-                continue L0;
-              } else {
+        int var5 = -79 / ((param1 - -3) / 54);
+        do {
+            if (var4 == this.field_e) {
+                this.field_e = null;
+                return null;
+            }
+            if (var7 != 0) {
+                return null;
+            }
+            if (param0 == this.field_e.field_e) {
                 var6 = this.field_e;
                 this.field_e = this.field_e.field_d;
                 return var6;
-              }
-            } else {
-              return null;
             }
-          } else {
-            this.field_e = null;
-            return null;
-          }
-        }
+            this.field_e = this.field_e.field_d;
+        } while (var7 == 0);
+        this.field_e = null;
+        return null;
     }
 
     final void a(long param0, byte param1, br param2) {
@@ -61,7 +56,6 @@ final class wh implements Iterable {
     }
 
     final static fc a(byte[] param0, int param1) {
-        fc discarded$2 = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -69,8 +63,6 @@ final class wh implements Iterable {
         fc stackIn_10_0 = null;
         fc stackIn_13_0 = null;
         fc stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -78,18 +70,6 @@ final class wh implements Iterable {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        fc stackOut_14_0 = null;
-        fc stackOut_12_0 = null;
-        fc stackOut_9_0 = null;
-        fc stackOut_3_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         try {
           L0: {
             L1: {
@@ -97,27 +77,24 @@ final class wh implements Iterable {
                 break L1;
               } else {
                 var3 = (byte[]) null;
-                discarded$2 = wh.a((byte[]) null, -96);
+                wh.a((byte[]) null, -96);
                 break L1;
               }
             }
             var2_int = ql.a(true, 0, param0);
             if ((var2_int ^ -1) != -4) {
               if (-5 == (var2_int ^ -1)) {
-                stackOut_14_0 = nn.a(-99, param0);
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = nn.a(-99, param0);
                 decompiledRegionSelector0 = 3;
                 break L0;
               } else {
                 if (-6 == (var2_int ^ -1)) {
-                  stackOut_12_0 = jg.a(30270, param0);
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = jg.a(30270, param0);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (var2_int == 6) {
-                    stackOut_9_0 = gi.a(param0, -115);
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = gi.a(param0, -115);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -126,8 +103,7 @@ final class wh implements Iterable {
                 }
               }
             } else {
-              stackOut_3_0 = ee.a(param0, true);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = ee.a(param0, true);
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -136,27 +112,19 @@ final class wh implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var2);
-            stackOut_16_1 = new StringBuilder().append("wh.A(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var2);
+
+            stackIn_18_1 = new StringBuilder().append("wh.A(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L2;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L2;
             }
           }
@@ -182,10 +150,9 @@ final class wh implements Iterable {
     }
 
     public static void a(boolean param0) {
-        fc discarded$0 = null;
         if (param0) {
             byte[] var2 = (byte[]) null;
-            discarded$0 = wh.a((byte[]) null, -107);
+            wh.a((byte[]) null, -107);
             field_b = null;
             return;
         }
@@ -211,11 +178,11 @@ final class wh implements Iterable {
     }
 
     final static ja a(int param0, double param1, int param2) {
-        ja var5 = null;
-        ja var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        ja var9 = null;
+        ja var5;
+        ja var6;
+        int var7;
+        int var8;
+        ja var9;
         var9 = new ja(640, 75);
         var9.a();
         oo.a(0, 5, 640, 55, 16777215, 1);
@@ -241,21 +208,58 @@ final class wh implements Iterable {
     }
 
     wh(int param0) {
-        br dupTemp$0 = null;
-        br var3 = null;
-        int var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        this.field_a = new br[param0];
-        this.field_d = param0;
+        br dupTemp$1 = null;
         int var2 = 0;
-        while (param0 > var2) {
-            dupTemp$0 = new br();
-            var3 = dupTemp$0;
-            this.field_a[var2] = dupTemp$0;
-            var3.field_d = var3;
-            var3.field_b = var3;
-            var2++;
-            if (var4 != 0) {
-                return;
+        br var3 = null;
+        int var4 = 0;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = ZombieDawnMulti.field_E ? 1 : 0;
+                    this.field_a = new br[param0];
+                    this.field_d = param0;
+                    var2 = 0;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    if (param0 <= var2) {
+                        statePc = 5;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
+                }
+                case 2: {
+                    dupTemp$1 = new br();
+                    var3 = dupTemp$1;
+                    this.field_a[var2] = dupTemp$1;
+                    var3.field_d = var3;
+                    var3.field_b = var3;
+                    var2++;
+                    if (var4 == 0) {
+                        statePc = 4;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    return;
+                }
+                case 4: {
+                    if (var4 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
         }
     }

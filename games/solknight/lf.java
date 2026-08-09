@@ -12,14 +12,6 @@ abstract class lf {
     abstract void a(java.awt.Component param0, int param1);
 
     final static boolean a(int[] param0, int param1) {
-        RuntimeException var2 = null;
-        long var2_long = 0L;
-        sa var4_ref_sa = null;
-        int var4 = 0;
-        int var5_int = 0;
-        sa var5 = null;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_20_0 = 0;
@@ -36,27 +28,16 @@ abstract class lf {
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
         String stackIn_51_2 = null;
-        int stackOut_3_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_23_0 = 0;
-        boolean stackOut_25_0 = false;
-        int stackOut_27_0 = 0;
-        boolean stackOut_30_0 = false;
-        int stackOut_33_0 = 0;
-        int stackOut_46_0 = 0;
-        RuntimeException stackOut_48_0 = null;
-        StringBuilder stackOut_48_1 = null;
-        RuntimeException stackOut_49_0 = null;
-        StringBuilder stackOut_49_1 = null;
-        String stackOut_49_2 = null;
-        RuntimeException stackOut_50_0 = null;
-        StringBuilder stackOut_50_1 = null;
-        String stackOut_50_2 = null;
         int statePc = 0;
         Throwable caughtException = null;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
+        sa var4_ref_sa = null;
+        int var4 = 0;
+        int var5_int = 0;
+        sa var5 = null;
+        int var6 = 0;
+        int var7 = 0;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -90,8 +71,7 @@ abstract class lf {
                 }
                 case 3: {
                     try {
-                        stackOut_3_0 = 0;
-                        stackIn_4_0 = stackOut_3_0;
+                        stackIn_4_0 = 0;
                         statePc = 4;
                         continue stateLoop;
                     } catch (Throwable stateCaught_3) {
@@ -119,8 +99,7 @@ abstract class lf {
                 }
                 case 6: {
                     try {
-                        stackOut_6_0 = 0;
-                        stackIn_7_0 = stackOut_6_0;
+                        stackIn_7_0 = 0;
                         statePc = 7;
                         continue stateLoop;
                     } catch (Throwable stateCaught_6) {
@@ -284,8 +263,7 @@ abstract class lf {
                 }
                 case 19: {
                     try {
-                        stackOut_19_0 = 1;
-                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_0 = 1;
                         statePc = 20;
                         continue stateLoop;
                     } catch (Throwable stateCaught_19) {
@@ -298,21 +276,18 @@ abstract class lf {
                     return stackIn_20_0 != 0;
                 }
                 case 21: {
-                    stackOut_21_0 = qg.field_a;
-                    stackIn_24_0 = stackOut_21_0;
+                    stackIn_24_0 = qg.field_a;
                     statePc = 24;
                     continue stateLoop;
                 }
                 case 22: {
-                    stackOut_22_0 = qg.field_a;
-                    stackIn_24_0 = stackOut_22_0;
+                    stackIn_24_0 = qg.field_a;
                     statePc = 24;
                     continue stateLoop;
                 }
                 case 23: {
                     try {
-                        stackOut_23_0 = qg.field_a;
-                        stackIn_24_0 = stackOut_23_0;
+                        stackIn_24_0 = qg.field_a;
                         statePc = 24;
                         continue stateLoop;
                     } catch (Throwable stateCaught_23) {
@@ -338,9 +313,8 @@ abstract class lf {
                 case 25: {
                     try {
                         te.field_N.field_m = 0;
-                        stackOut_25_0 = bf.c(114, 1);
-                        stackIn_31_0 = stackOut_25_0;
-                        stackIn_26_0 = stackOut_25_0;
+                        stackIn_31_0 = bf.c(114, 1);
+                        stackIn_26_0 = stackIn_31_0;
                         if (var7 != 0) {
                             statePc = 31;
                         } else {
@@ -369,8 +343,7 @@ abstract class lf {
                 }
                 case 27: {
                     try {
-                        stackOut_27_0 = 0;
-                        stackIn_28_0 = stackOut_27_0;
+                        stackIn_28_0 = 0;
                         statePc = 28;
                         continue stateLoop;
                     } catch (Throwable stateCaught_27) {
@@ -397,8 +370,7 @@ abstract class lf {
                 }
                 case 30: {
                     try {
-                        stackOut_30_0 = qd.b((byte) 127);
-                        stackIn_31_0 = stackOut_30_0;
+                        stackIn_31_0 = qd.b((byte) 127);
                         statePc = 31;
                         continue stateLoop;
                     } catch (Throwable stateCaught_30) {
@@ -433,8 +405,7 @@ abstract class lf {
                 }
                 case 33: {
                     try {
-                        stackOut_33_0 = 0;
-                        stackIn_34_0 = stackOut_33_0;
+                        stackIn_34_0 = 0;
                         statePc = 34;
                         continue stateLoop;
                     } catch (Throwable stateCaught_33) {
@@ -600,8 +571,7 @@ abstract class lf {
                         jg.field_e = ob.field_h;
                         ob.field_h = qg.field_a;
                         qg.field_a = -1;
-                        stackOut_46_0 = 1;
-                        stackIn_47_0 = stackOut_46_0;
+                        stackIn_47_0 = 1;
                         statePc = 47;
                         continue stateLoop;
                     } catch (Throwable stateCaught_46) {
@@ -615,12 +585,10 @@ abstract class lf {
                 }
                 case 48: {
                     var2 = (RuntimeException) ((Object) caughtException);
-                    stackOut_48_0 = (RuntimeException) (var2);
-                    stackOut_48_1 = new StringBuilder().append("lf.E(");
-                    stackIn_50_0 = stackOut_48_0;
-                    stackIn_50_1 = stackOut_48_1;
-                    stackIn_49_0 = stackOut_48_0;
-                    stackIn_49_1 = stackOut_48_1;
+                    stackIn_50_0 = (RuntimeException) (var2);
+                    stackIn_49_0 = stackIn_50_0;
+                    stackIn_50_1 = new StringBuilder().append("lf.E(");
+                    stackIn_49_1 = stackIn_50_1;
                     if (param0 == null) {
                         statePc = 50;
                     } else {
@@ -629,22 +597,16 @@ abstract class lf {
                     continue stateLoop;
                 }
                 case 49: {
-                    stackOut_49_0 = (RuntimeException) ((Object) stackIn_49_0);
-                    stackOut_49_1 = (StringBuilder) ((Object) stackIn_49_1);
-                    stackOut_49_2 = "{...}";
-                    stackIn_51_0 = stackOut_49_0;
-                    stackIn_51_1 = stackOut_49_1;
-                    stackIn_51_2 = stackOut_49_2;
+                    stackIn_51_0 = (RuntimeException) ((Object) stackIn_49_0);
+                    stackIn_51_1 = (StringBuilder) ((Object) stackIn_49_1);
+                    stackIn_51_2 = "{...}";
                     statePc = 51;
                     continue stateLoop;
                 }
                 case 50: {
-                    stackOut_50_0 = (RuntimeException) ((Object) stackIn_50_0);
-                    stackOut_50_1 = (StringBuilder) ((Object) stackIn_50_1);
-                    stackOut_50_2 = "null";
-                    stackIn_51_0 = stackOut_50_0;
-                    stackIn_51_1 = stackOut_50_1;
-                    stackIn_51_2 = stackOut_50_2;
+                    stackIn_51_0 = (RuntimeException) ((Object) stackIn_50_0);
+                    stackIn_51_1 = (StringBuilder) ((Object) stackIn_50_1);
+                    stackIn_51_2 = "null";
                     statePc = 51;
                     continue stateLoop;
                 }
@@ -657,11 +619,10 @@ abstract class lf {
     }
 
     public static void b(int param0) {
-        fg discarded$2 = null;
-        java.applet.Applet var2 = null;
+        java.applet.Applet var2;
         if (param0 != 18609) {
           var2 = (java.applet.Applet) null;
-          discarded$2 = lf.a((byte) -36, (java.applet.Applet) null);
+          lf.a((byte) -36, (java.applet.Applet) null);
           field_a = null;
           field_f = null;
           field_e = null;
@@ -691,11 +652,8 @@ abstract class lf {
         fg var6 = null;
         int var7 = 0;
         fg stackIn_4_0 = null;
-        fg stackIn_8_0 = null;
         fg stackIn_10_0 = null;
         fg stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -703,26 +661,13 @@ abstract class lf {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        fg stackOut_3_0 = null;
-        fg stackOut_7_0 = null;
-        fg stackOut_9_0 = null;
-        fg stackOut_12_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var7 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
             var2_int = -56 % ((param0 - 51) / 35);
             var3 = na.a("jagex-last-login-method", param1, -32574);
             if (var3 == null) {
-              stackOut_3_0 = SolKnight.field_D;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = SolKnight.field_D;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -735,13 +680,12 @@ abstract class lf {
                       break L3;
                     } else {
                       var6 = var4[var5];
-                      stackOut_7_0 = (fg) (var6);
-                      stackIn_13_0 = stackOut_7_0;
-                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_13_0 = (fg) (var6);
+
                       if (var7 != 0) {
                         break L2;
                       } else {
-                        if (!((fg) (Object) stackIn_8_0).a(-126, var3)) {
+                        if (!((fg) (Object) stackIn_13_0).a(-126, var3)) {
                           var5++;
                           if (var7 == 0) {
                             continue L1;
@@ -749,16 +693,14 @@ abstract class lf {
                             break L3;
                           }
                         } else {
-                          stackOut_9_0 = (fg) (var6);
-                          stackIn_10_0 = stackOut_9_0;
+                          stackIn_10_0 = (fg) (var6);
                           decompiledRegionSelector0 = 2;
                           break L0;
                         }
                       }
                     }
                   }
-                  stackOut_12_0 = SolKnight.field_D;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = SolKnight.field_D;
                   break L2;
                 }
                 decompiledRegionSelector0 = 1;
@@ -770,27 +712,19 @@ abstract class lf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2);
-            stackOut_14_1 = new StringBuilder().append("lf.F(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2);
+
+            stackIn_16_1 = new StringBuilder().append("lf.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }

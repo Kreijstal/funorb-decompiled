@@ -9,9 +9,8 @@ final class em {
     int[] field_d;
 
     final int a(int param0, int param1) {
-        int discarded$5 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = Terraphoenix.field_V;
         if (this.field_d != null) {
           if (-1 != (this.field_d.length ^ -1)) {
@@ -19,7 +18,7 @@ final class em {
               var3 = 1;
               L0: while (true) {
                 if (this.field_d.length > var3) {
-                  if (param0 >= this.field_d[var3] + this.field_d[var3 + -1] >> -1679860287) {
+                  if ((param0 ^ -1) <= (this.field_d[var3] + this.field_d[var3 + -1] >> -1679860287 ^ -1)) {
                     var3++;
                     continue L0;
                   } else {
@@ -30,11 +29,11 @@ final class em {
                 }
               }
             } else {
-              discarded$5 = this.a(-82, 56);
+              this.a(-82, 56);
               var3 = 1;
               L1: while (true) {
                 if (this.field_d.length > var3) {
-                  if (param0 >= this.field_d[var3] + this.field_d[var3 + -1] >> -1679860287) {
+                  if ((param0 ^ -1) <= (this.field_d[var3] + this.field_d[var3 + -1] >> -1679860287 ^ -1)) {
                     var3++;
                     continue L1;
                   } else {

@@ -17,10 +17,9 @@ final class re extends ha {
     static String field_cb;
 
     private final void a(int param0, lh param1, int param2, String param3, int param4) {
-        int discarded$0 = 0;
         try {
             if (param0 != 15853) {
-                discarded$0 = this.h((byte) 24);
+                this.h((byte) 24);
             }
             rc.field_m.a(param3, param2 - -param1.field_o + (param1.field_x >> 1442117697), param4 - (-param1.field_z + 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
@@ -29,7 +28,7 @@ final class re extends ha {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        int var6 = 0;
+        int var6;
         super.a(param0, (byte) -106, param2, param3, param4);
         var6 = param3 - 130 >> -1318290079;
         if (this.field_Y) {
@@ -58,10 +57,8 @@ final class re extends ha {
     }
 
     final String e(int param0) {
-        String var2 = null;
+        String var2;
         String stackIn_7_0 = null;
-        String stackOut_6_0 = null;
-        String stackOut_5_0 = null;
         var2 = this.field_gb.e(param0 ^ param0);
         if (var2 != null) {
           return var2;
@@ -71,12 +68,10 @@ final class re extends ha {
           } else {
             L0: {
               if (null != this.field_v) {
-                stackOut_6_0 = this.field_v;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = this.field_v;
                 break L0;
               } else {
-                stackOut_5_0 = this.field_y;
-                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_0 = this.field_y;
                 break L0;
               }
             }
@@ -132,7 +127,6 @@ final class re extends ha {
         String var3 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         L0: {
           if (param0 == 14879) {
             break L0;
@@ -144,8 +138,7 @@ final class re extends ha {
         }
         try {
           L1: {
-            stackOut_2_0 = -1 + Integer.parseInt(this.field_gb.field_y);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = -1 + Integer.parseInt(this.field_gb.field_y);
             break L1;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -160,7 +153,6 @@ final class re extends ha {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         L0: {
           if (param0 < -71) {
             break L0;
@@ -171,8 +163,7 @@ final class re extends ha {
         }
         try {
           L1: {
-            stackOut_2_0 = Integer.parseInt(this.field_fb.field_y);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = Integer.parseInt(this.field_fb.field_y);
             break L1;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -187,23 +178,13 @@ final class re extends ha {
         try {
             java.net.URL var2 = null;
             RuntimeException var2_ref = null;
-            Exception var2_ref2 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            Exception var2_ref2 = null;
             try {
               L0: {
                 try {
@@ -231,27 +212,19 @@ final class re extends ha {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var2_ref);
-                stackOut_6_1 = new StringBuilder().append("re.M(");
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var2_ref);
+
+                stackIn_8_1 = new StringBuilder().append("re.M(");
+
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L3;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L3;
                 }
               }
@@ -298,23 +271,20 @@ final class re extends ha {
     }
 
     final int h(byte param0) {
-        int discarded$2 = 0;
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         try {
           L0: {
             L1: {
               if (param0 >= 16) {
                 break L1;
               } else {
-                discarded$2 = this.k(13);
+                this.k(13);
                 break L1;
               }
             }
-            stackOut_2_0 = Integer.parseInt(this.field_db.field_y);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = Integer.parseInt(this.field_db.field_y);
             break L0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

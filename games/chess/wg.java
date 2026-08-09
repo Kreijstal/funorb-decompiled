@@ -20,10 +20,10 @@ final class wg extends pk {
     static int field_B;
 
     final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var2 = this.field_i;
           var3 = 0;
@@ -95,27 +95,14 @@ final class wg extends pk {
     }
 
     final boolean a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int stackIn_9_0 = 0;
         int stackIn_16_0 = 0;
-        int stackIn_17_0 = 0;
         int stackIn_24_0 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_26_0 = 0;
         int stackIn_33_0 = 0;
-        int stackIn_34_0 = 0;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_33_1 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_34_1 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var2 = 0;
           var3 = this.field_i;
@@ -144,37 +131,29 @@ final class wg extends pk {
             break L2;
           }
         }
-        stackOut_8_0 = var2;
-        stackIn_16_0 = stackOut_8_0;
-        stackIn_9_0 = stackOut_8_0;
+        stackIn_16_0 = var2;
+
         if (hn.field_k < var3) {
-          stackOut_16_0 = stackIn_16_0;
-          stackIn_24_0 = stackOut_16_0;
-          stackIn_17_0 = stackOut_16_0;
+          stackIn_24_0 = stackIn_16_0;
+
           if (rf.field_b < this.field_k) {
             L3: {
-              stackOut_24_0 = stackIn_24_0;
-              stackIn_33_0 = stackOut_24_0;
-              stackIn_25_0 = stackOut_24_0;
+              stackIn_33_0 = stackIn_24_0;
+
               if (hn.field_k <= this.field_u - var4) {
-                stackOut_33_0 = stackIn_33_0;
-                stackOut_33_1 = 1;
-                stackIn_35_0 = stackOut_33_0;
-                stackIn_35_1 = stackOut_33_1;
+                stackIn_35_0 = stackIn_33_0;
+                stackIn_35_1 = 1;
                 break L3;
               } else {
-                stackOut_25_0 = stackIn_25_0;
-                stackIn_34_0 = stackOut_25_0;
-                stackIn_26_0 = stackOut_25_0;
+
+
                 if (rf.field_b > this.field_A.field_i) {
-                  stackOut_34_0 = stackIn_34_0;
-                  stackOut_34_1 = 0;
-                  stackIn_35_0 = stackOut_34_0;
-                  stackIn_35_1 = stackOut_34_1;
+                  stackIn_35_0 = stackIn_24_0;
+                  stackIn_35_1 = 0;
                   break L3;
                 } else {
                   L4: {
-                    var2 = stackIn_26_0 | 1;
+                    var2 = stackIn_24_0 | 1;
                     var3 = var3 + (this.field_u + -var4);
                     if (this.field_m != null) {
                       var2 = var2 != 0 | this.field_m.b(var3, this.field_k, hn.field_k, rf.field_b) ? 1 : 0;
@@ -208,7 +187,7 @@ final class wg extends pk {
             }
           } else {
             L6: {
-              var2 = stackIn_17_0 | 1;
+              var2 = stackIn_16_0 | 1;
               var3 = var3 + (this.field_u + -var4);
               if (this.field_m != null) {
                 var2 = var2 != 0 | this.field_m.b(var3, this.field_k, hn.field_k, rf.field_b) ? 1 : 0;
@@ -225,7 +204,7 @@ final class wg extends pk {
           }
         } else {
           L7: {
-            var2 = stackIn_9_0 | 1;
+            var2 = stackIn_16_0 | 1;
             var3 = var3 + (this.field_u + -var4);
             if (this.field_m != null) {
               var2 = var2 != 0 | this.field_m.b(var3, this.field_k, hn.field_k, rf.field_b) ? 1 : 0;
@@ -243,9 +222,9 @@ final class wg extends pk {
     }
 
     final void c(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = Chess.field_G;
         if (this.field_v) {
           L0: {

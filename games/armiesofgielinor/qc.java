@@ -38,7 +38,7 @@ abstract class qc {
     }
 
     final static wk a(int param0, int param1) {
-        co var2 = null;
+        co var2;
         if (param1 == 8806) {
           if (vc.field_m != null) {
             if ((param0 ^ -1) <= -1) {
@@ -76,7 +76,7 @@ abstract class qc {
     abstract int a(long param0, int param1);
 
     final int a(int param0, long param1) {
-        long var4 = 0L;
+        long var4;
         if (param0 >= -124) {
           return -53;
         } else {

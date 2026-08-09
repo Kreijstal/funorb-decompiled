@@ -10,9 +10,9 @@ final class uk {
     private long field_d;
 
     final ta b(int param0) {
-        ta var2 = null;
-        ta var3 = null;
-        int var4 = 0;
+        ta var2;
+        ta var3;
+        int var4;
         var4 = Torquing.field_u;
         if (null != this.field_f) {
           var2 = this.field_c[(int)(this.field_d & (long)(this.field_e + param0))];
@@ -37,10 +37,10 @@ final class uk {
     }
 
     final ta a(long param0, int param1) {
-        ta var4 = null;
-        int var5_int = 0;
-        ta var5 = null;
-        int var6 = 0;
+        ta var4;
+        int var5_int;
+        ta var5;
+        int var6;
         var6 = Torquing.field_u;
         this.field_d = param0;
         var4 = this.field_c[(int)(param0 & (long)(this.field_e + -1))];
@@ -64,11 +64,10 @@ final class uk {
     }
 
     final void a(ta param0, long param1, int param2) {
-        ta discarded$0 = null;
         ta var5 = null;
         try {
             if (param2 != 0) {
-                discarded$0 = this.a(-67L, 6);
+                this.a(-67L, 6);
             }
             if (param0.field_j != null) {
                 param0.h(0);
@@ -87,20 +86,14 @@ final class uk {
     final static boolean a(boolean param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0) {
           L0: {
             field_b = (int[]) null;
             if (param1 != (-param1 & param1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -108,12 +101,10 @@ final class uk {
         } else {
           L1: {
             if (param1 != (-param1 & param1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

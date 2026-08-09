@@ -17,13 +17,13 @@ final class ea {
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         var10 = Confined.field_J ? 1 : 0;
         try {
           L0: {

@@ -17,8 +17,6 @@ final class cm extends fa {
         int var5 = 0;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -26,16 +24,6 @@ final class cm extends fa {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -44,17 +32,15 @@ final class cm extends fa {
             L1: while (true) {
               if (param0.length() <= var3) {
                 var4 = 125 / ((param1 - -52) / 59);
-                stackOut_7_0 = 1;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                if (var2_int == param0.charAt(var3)) {
+                if ((var2_int ^ -1) == (param0.charAt(var3) ^ -1)) {
                   var3++;
                   continue L1;
                 } else {
-                  stackOut_4_0 = 0;
-                  stackIn_5_0 = stackOut_4_0;
+                  stackIn_5_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -65,27 +51,19 @@ final class cm extends fa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2);
-            stackOut_9_1 = new StringBuilder().append("cm.F(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var2);
+
+            stackIn_11_1 = new StringBuilder().append("cm.F(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -99,9 +77,9 @@ final class cm extends fa {
     }
 
     final static void b(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var2 = (ni.field_q + -640) / 2;
         var3 = qh.field_c * qh.field_c;
         var4 = -(param0 * param0) + var3;
@@ -121,8 +99,8 @@ final class cm extends fa {
     }
 
     final static char a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var2 = 255 & param0;
         if (param1 == 63) {
           if (-1 != (var2 ^ -1)) {
@@ -184,11 +162,10 @@ final class cm extends fa {
     }
 
     public static void a(int param0) {
-        boolean discarded$2 = false;
-        String var2 = null;
+        String var2;
         if (param0 != 128) {
           var2 = (String) null;
-          discarded$2 = cm.a((String) null, -122);
+          cm.a((String) null, -122);
           field_l = null;
           field_o = null;
           return;
@@ -217,10 +194,9 @@ final class cm extends fa {
     }
 
     final static void e(int param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         String var3 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         L0: {
           if (param0 < -84) {
             break L0;

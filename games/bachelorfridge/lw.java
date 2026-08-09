@@ -20,10 +20,9 @@ abstract class lw {
     }
 
     final void c(int param0) {
-        int discarded$0 = 0;
         ua.field_b = true;
         if (param0 <= 69) {
-            discarded$0 = lw.a(-78, 62, 3, 125, -30, -74, -51, 3, 42);
+            lw.a(-78, 62, 3, 125, -30, -74, -51, 3, 42);
         }
     }
 
@@ -71,25 +70,22 @@ abstract class lw {
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        RuntimeException var9 = null;
-        int var9_int = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         int stackIn_17_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_50_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_49_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_16_0 = 0;
+        int var9_int = 0;
+        RuntimeException var9 = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
         var12 = BachelorFridge.field_y;
         try {
           L0: {
@@ -130,9 +126,9 @@ abstract class lw {
                       } else {
                         L5: {
                           var11 = param3 >> 1934868304;
-                          incrementValue$6 = var9_int;
+                          incrementValue$0 = var9_int;
                           var9_int++;
-                          if (0 == incrementValue$6 / param0 % 2) {
+                          if (0 == incrementValue$0 / param0 % 2) {
                             qea.a(param1, var11, param8, (byte) -102, param2);
                             break L5;
                           } else {
@@ -157,9 +153,9 @@ abstract class lw {
                         L7: {
                           var11 = param1 >> 661913104;
                           param1 = param1 + var10;
-                          incrementValue$7 = var9_int;
+                          incrementValue$1 = var9_int;
                           var9_int++;
-                          if (0 == incrementValue$7 / param0 % 2) {
+                          if (0 == incrementValue$1 / param0 % 2) {
                             qea.a(var11, param3, param8, (byte) -128, param2);
                             break L7;
                           } else {
@@ -172,8 +168,7 @@ abstract class lw {
                     }
                   }
                 }
-                stackOut_49_0 = var9_int;
-                stackIn_50_0 = stackOut_49_0;
+                stackIn_50_0 = var9_int;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
@@ -185,9 +180,9 @@ abstract class lw {
                         break L8;
                       } else {
                         L10: {
-                          incrementValue$8 = var9_int;
+                          incrementValue$2 = var9_int;
                           var9_int++;
-                          if (incrementValue$8 / param0 % 2 != 0) {
+                          if (incrementValue$2 / param0 % 2 != 0) {
                             break L10;
                           } else {
                             qea.a(param1, var10, param8, (byte) -104, param2);
@@ -205,9 +200,9 @@ abstract class lw {
                         break L8;
                       } else {
                         L12: {
-                          incrementValue$9 = var9_int;
+                          incrementValue$3 = var9_int;
                           var9_int++;
-                          if (0 == incrementValue$9 / param0 % 2) {
+                          if (0 == incrementValue$3 / param0 % 2) {
                             qea.a(param1, var10, param8, (byte) -97, param2);
                             break L12;
                           } else {
@@ -220,8 +215,7 @@ abstract class lw {
                     }
                   }
                 }
-                stackOut_31_0 = var9_int;
-                stackIn_32_0 = stackOut_31_0;
+                stackIn_32_0 = var9_int;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -234,9 +228,9 @@ abstract class lw {
                       break L13;
                     } else {
                       L15: {
-                        incrementValue$10 = var9_int;
+                        incrementValue$4 = var9_int;
                         var9_int++;
-                        if (incrementValue$10 / param0 % 2 != 0) {
+                        if (incrementValue$4 / param0 % 2 != 0) {
                           break L15;
                         } else {
                           qea.a(var10, param3, param8, (byte) -107, param2);
@@ -254,9 +248,9 @@ abstract class lw {
                       break L13;
                     } else {
                       L17: {
-                        incrementValue$11 = var9_int;
+                        incrementValue$5 = var9_int;
                         var9_int++;
-                        if (incrementValue$11 / param0 % 2 == 0) {
+                        if (incrementValue$5 / param0 % 2 == 0) {
                           qea.a(var10, param3, param8, (byte) -113, param2);
                           break L17;
                         } else {
@@ -269,8 +263,7 @@ abstract class lw {
                   }
                 }
               }
-              stackOut_16_0 = var9_int;
-              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_0 = var9_int;
               decompiledRegionSelector0 = 0;
               break L0;
             }

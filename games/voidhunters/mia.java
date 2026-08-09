@@ -9,17 +9,16 @@ final class mia implements Runnable {
     volatile boolean field_e;
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_a = null;
         if (param0 != -11954) {
-            discarded$0 = mia.a('', false);
+            mia.a('', false);
         }
     }
 
     final static void a(int param0, int param1, int param2) {
-        faa var4 = null;
-        mm var6 = null;
-        mm var7 = null;
+        faa var4;
+        mm var6;
+        mm var7;
         if (param1 == paa.field_q) {
           if (param2 < 42) {
             field_a = (boolean[]) null;
@@ -63,13 +62,13 @@ final class mia implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        Exception var1 = null;
         vka var2 = null;
-        Throwable var3 = null;
         int var4 = 0;
+        Throwable decompiledCaughtException = null;
+        Exception var1 = null;
+        Throwable var3 = null;
         Object var5 = null;
         String var6 = null;
-        Throwable decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         this.field_c = true;
         try {
@@ -136,10 +135,6 @@ final class mia implements Runnable {
         int stackIn_22_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_2_0 = 0;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -149,8 +144,7 @@ final class mia implements Runnable {
                   break L1;
                 } else {
                   if (param0 < 128) {
-                    stackOut_10_0 = 1;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = 1;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -180,8 +174,7 @@ final class mia implements Runnable {
                     } else {
                       var4 = var6[var3];
                       if (var4 == param0) {
-                        stackOut_18_0 = 1;
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_0 = 1;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -194,13 +187,11 @@ final class mia implements Runnable {
                   break L3;
                 }
               }
-              stackOut_21_0 = 0;
-              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_0 = 0;
               decompiledRegionSelector0 = 3;
               break L0;
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }

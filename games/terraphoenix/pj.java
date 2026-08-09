@@ -33,8 +33,6 @@ final class pj {
 
     final boolean c(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == 7468) {
           L0: {
             L1: {
@@ -44,14 +42,12 @@ final class pj {
                 if (-1 <= (me.field_o ^ -1)) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0 != 0;
@@ -61,10 +57,10 @@ final class pj {
     }
 
     private final void b(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var5;
+        int var4;
         var5 = Terraphoenix.field_V;
         var2 = this.field_w;
         var3 = this.field_s;
@@ -153,7 +149,6 @@ final class pj {
 
     final static oa a(int param0, String param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -162,8 +157,6 @@ final class pj {
         oa stackIn_7_0 = null;
         oa stackIn_16_0 = null;
         oa stackIn_19_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -171,26 +164,14 @@ final class pj {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        oa stackOut_6_0 = null;
-        oa stackOut_18_0 = null;
-        oa stackOut_15_0 = null;
-        oa stackOut_2_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        RuntimeException var2 = null;
         var6 = Terraphoenix.field_V;
         try {
           L0: {
             var2_int = param1.length();
             if (-1 != (var2_int ^ -1)) {
               if (var2_int > 63) {
-                stackOut_6_0 = lg.field_j;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = lg.field_j;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -204,8 +185,7 @@ final class pj {
                         if (0 != (ge.field_f.indexOf(var5) ^ -1)) {
                           break L2;
                         } else {
-                          stackOut_18_0 = ge.field_a;
-                          stackIn_19_0 = stackOut_18_0;
+                          stackIn_19_0 = ge.field_a;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         }
@@ -221,8 +201,7 @@ final class pj {
                             }
                           }
                         }
-                        stackOut_15_0 = ge.field_a;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = ge.field_a;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
@@ -235,8 +214,7 @@ final class pj {
                 }
               }
             } else {
-              stackOut_2_0 = b.field_f;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = b.field_f;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -245,27 +223,19 @@ final class pj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2);
-            stackOut_22_1 = new StringBuilder().append("pj.D(").append(param0).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2);
+
+            stackIn_24_1 = new StringBuilder().append("pj.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L4;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L4;
             }
           }
@@ -309,7 +279,7 @@ final class pj {
     }
 
     final void a(byte param0) {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         if (a.field_b != null) {
           return;
         } else {
@@ -352,9 +322,9 @@ final class pj {
             }
             return;
           } else {
-            fieldTemp$1 = this.field_i - 1;
+            fieldTemp$0 = this.field_i - 1;
             this.field_i = this.field_i - 1;
-            if (fieldTemp$1 <= 0) {
+            if (fieldTemp$0 <= 0) {
               L4: {
                 if (param0 == 92) {
                   break L4;

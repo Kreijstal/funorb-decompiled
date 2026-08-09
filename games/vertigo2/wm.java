@@ -9,8 +9,8 @@ class wm extends mo {
     }
 
     final static char a(char param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Vertigo2.field_L ? 1 : 0;
         if (param1 < 47) {
           field_k = (jn) null;
@@ -510,10 +510,9 @@ class wm extends mo {
     }
 
     public static void b(int param0) {
-        char discarded$0 = 0;
         field_k = null;
         if (param0 < 80) {
-            discarded$0 = wm.a(' ', (byte) 92);
+            wm.a(' ', (byte) 92);
             field_j = null;
             return;
         }

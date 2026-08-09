@@ -10,15 +10,16 @@ final class bj {
 
     final static long b(int param0) {
         if (param0 != -21676) {
+            bj.b(-19);
         }
         return -he.field_a + qg.a(false);
     }
 
     final static void a(int param0, int param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
           L0: {

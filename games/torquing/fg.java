@@ -7,9 +7,9 @@ final class fg extends kn {
     private java.awt.Component field_i;
 
     final void a(java.awt.Component param0, byte param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         this.field_d = new int[param2 * param3 - -1];
         this.field_g = param3;
         if (param1 != 24) {
@@ -35,7 +35,7 @@ final class fg extends kn {
     }
 
     final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
-        boolean discarded$9 = param3.drawImage(this.field_c, param1, param2, (java.awt.image.ImageObserver) ((Object) this.field_i));
+        param3.drawImage(this.field_c, param1, param2, (java.awt.image.ImageObserver) ((Object) this.field_i));
         if (param0 <= 70) {
             this.field_i = (java.awt.Component) null;
         }

@@ -14,20 +14,20 @@ final class qi implements Iterable {
     static jg field_f;
 
     final static dd[] a(int param0, int param1, boolean param2, int param3, int param4, boolean param5) {
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        Object var10 = null;
-        Object var11 = null;
-        int[] var12 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        dd var17 = null;
-        dd var18 = null;
-        dd var19 = null;
-        dd var20 = null;
-        dd var21 = null;
-        dd var22 = null;
+        int[] var6;
+        int var7;
+        int var8;
+        Object var10;
+        Object var11;
+        int[] var12;
+        int[] var15;
+        int[] var16;
+        dd var17;
+        dd var18;
+        dd var19;
+        dd var20;
+        dd var21;
+        dd var22;
         var16 = qh.field_d;
         var15 = var16;
         var12 = var15;
@@ -116,9 +116,9 @@ final class qi implements Iterable {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var1;
+        int var2;
+        int var3;
         var1 = (-640 + fr.field_s) / 2;
         if (param0 >= -71) {
           field_b = 3;
@@ -163,7 +163,7 @@ final class qi implements Iterable {
     }
 
     final rg a(int param0) {
-        rg var2 = null;
+        rg var2;
         if (param0 < -87) {
           var2 = this.field_d.field_q;
           if (this.field_d == var2) {
@@ -188,8 +188,6 @@ final class qi implements Iterable {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -197,26 +195,14 @@ final class qi implements Iterable {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0 == -64) {
-              stackOut_3_0 = w.a(false, param1, (byte) -37);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = w.a(false, param1, (byte) -37);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -225,27 +211,19 @@ final class qi implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("qi.G(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("qi.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }

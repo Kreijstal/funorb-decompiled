@@ -11,19 +11,19 @@ final class je {
     }
 
     final static ed b(int param0) {
-        int var1 = 0;
-        Object var3 = null;
-        int var5 = 0;
-        int[] var5_ref_int__ = null;
-        int var6 = 0;
-        int var7 = 0;
-        int[] var9 = null;
-        int[] var11 = null;
-        int[] var13 = null;
-        byte[] var18 = null;
-        byte[] var19 = null;
-        byte[] var20 = null;
-        byte[] var21 = null;
+        int var1;
+        Object var3;
+        int[] var5_ref_int__;
+        int var5;
+        int var6;
+        int var7;
+        int[] var9;
+        int[] var11;
+        int[] var13;
+        byte[] var18;
+        byte[] var19;
+        byte[] var20;
+        byte[] var21;
         var7 = EscapeVector.field_A;
         if (param0 <= 44) {
           L0: {
@@ -104,7 +104,6 @@ final class je {
     }
 
     final static int a(boolean param0, int param1) {
-        ed discarded$6 = null;
         if (!param0) {
           if (!qd.a(param1, -102)) {
             return 0;
@@ -112,7 +111,7 @@ final class je {
             return pc.a(2513, param1);
           }
         } else {
-          discarded$6 = je.b(13);
+          je.b(13);
           if (!qd.a(param1, -102)) {
             return 0;
           } else {

@@ -19,24 +19,20 @@ final class qha extends ou {
     }
 
     final wea a(byte param0) {
-        wea var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var12 = 0;
-        g var13 = null;
-        g var14 = null;
         int stackIn_15_0 = 0;
         int stackIn_31_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
+        wea var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var12;
+        g var13;
+        g var14;
         var12 = TombRacer.field_G ? 1 : 0;
         var2 = new wea(this.field_a);
         var3 = aq.a(-5640);
@@ -52,59 +48,43 @@ final class qha extends ou {
               return var2;
             } else {
               L1: {
-                L2: {
-                  if (var7 == 0) {
+                if (var7 == 0) {
+                  var9 = hn.b(param0 + -58, var6).field_f;
+                  break L1;
+                } else {
+                  var10 = ak.a(var5, (byte) 127);
+                  var13 = ta.d(var10, false);
+                  var9 = var13.field_f;
+                  break L1;
+                }
+              }
+              L2: {
+                var2.a(var8, var9, this.b((byte) -56), (byte) -63);
+                if (var7 != 0) {
+                  var5++;
+                  if (var5 < var3) {
                     break L2;
                   } else {
-                    var10 = ak.a(var5, (byte) 127);
-                    var13 = ta.d(var10, false);
-                    var9 = var13.field_f;
-                    if (var12 == 0) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
+                    var5 = 0;
+                    break L2;
+                  }
+                } else {
+                  var6++;
+                  if (var6 >= var4) {
+                    var6 = 0;
+                    break L2;
+                  } else {
+                    break L2;
                   }
                 }
-                var9 = hn.b(param0 + -58, var6).field_f;
-                break L1;
               }
               L3: {
-                L4: {
-                  var2.a(var8, var9, this.b((byte) -56), (byte) -63);
-                  if (var7 != 0) {
-                    break L4;
-                  } else {
-                    var6++;
-                    if (var6 >= var4) {
-                      var6 = 0;
-                      if (var12 == 0) {
-                        break L3;
-                      } else {
-                        break L4;
-                      }
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                var5++;
-                if (var5 < var3) {
-                  break L3;
-                } else {
-                  var5 = 0;
-                  break L3;
-                }
-              }
-              L5: {
                 if (var7 != 0) {
-                  stackOut_30_0 = 0;
-                  stackIn_31_0 = stackOut_30_0;
-                  break L5;
+                  stackIn_31_0 = 0;
+                  break L3;
                 } else {
-                  stackOut_29_0 = 1;
-                  stackIn_31_0 = stackOut_29_0;
-                  break L5;
+                  stackIn_31_0 = 1;
+                  break L3;
                 }
               }
               var7 = stackIn_31_0;
@@ -114,69 +94,53 @@ final class qha extends ou {
           }
         } else {
           var8 = 0;
-          L6: while (true) {
+          L4: while (true) {
             if (this.field_a <= var8) {
               return var2;
             } else {
-              L7: {
-                L8: {
-                  if (var7 == 0) {
-                    break L8;
-                  } else {
-                    var10 = ak.a(var5, (byte) 127);
-                    var14 = ta.d(var10, false);
-                    var9 = var14.field_f;
-                    if (var12 == 0) {
-                      break L7;
-                    } else {
-                      break L8;
-                    }
-                  }
-                }
-                var9 = hn.b(param0 + -58, var6).field_f;
-                break L7;
-              }
-              L9: {
-                L10: {
-                  var2.a(var8, var9, this.b((byte) -56), (byte) -63);
-                  if (var7 != 0) {
-                    break L10;
-                  } else {
-                    var6++;
-                    if (var6 >= var4) {
-                      var6 = 0;
-                      if (var12 == 0) {
-                        break L9;
-                      } else {
-                        break L10;
-                      }
-                    } else {
-                      break L9;
-                    }
-                  }
-                }
-                var5++;
-                if (var5 < var3) {
-                  break L9;
+              L5: {
+                if (var7 == 0) {
+                  var9 = hn.b(param0 + -58, var6).field_f;
+                  break L5;
                 } else {
-                  var5 = 0;
-                  break L9;
+                  var10 = ak.a(var5, (byte) 127);
+                  var14 = ta.d(var10, false);
+                  var9 = var14.field_f;
+                  break L5;
                 }
               }
-              L11: {
+              L6: {
+                var2.a(var8, var9, this.b((byte) -56), (byte) -63);
                 if (var7 != 0) {
-                  stackOut_14_0 = 0;
-                  stackIn_15_0 = stackOut_14_0;
-                  break L11;
+                  var5++;
+                  if (var5 < var3) {
+                    break L6;
+                  } else {
+                    var5 = 0;
+                    break L6;
+                  }
                 } else {
-                  stackOut_13_0 = 1;
-                  stackIn_15_0 = stackOut_13_0;
-                  break L11;
+                  var6++;
+                  if (var6 >= var4) {
+                    var6 = 0;
+                    break L6;
+                  } else {
+                    break L6;
+                  }
+                }
+              }
+              L7: {
+                if (var7 != 0) {
+                  stackIn_15_0 = 0;
+                  break L7;
+                } else {
+                  stackIn_15_0 = 1;
+                  break L7;
                 }
               }
               var7 = stackIn_15_0;
               var8++;
-              continue L6;
+              continue L4;
             }
           }
         }

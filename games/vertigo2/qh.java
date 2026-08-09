@@ -24,29 +24,17 @@ final class qh {
     }
 
     final boolean a(int param0, int param1, byte[] param2, byte param3) {
-        byte[] discarded$4 = null;
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         Throwable var7 = null;
         int stackIn_9_0 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         Throwable decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             var5 = this.field_h;
@@ -62,7 +50,7 @@ final class qh {
                         if (param3 == -84) {
                           break L3;
                         } else {
-                          discarded$4 = this.a(-6, -73);
+                          this.a(-6, -73);
                           break L3;
                         }
                       }
@@ -74,8 +62,7 @@ final class qh {
                           break L4;
                         }
                       }
-                      stackOut_8_0 = var6;
-                      stackIn_9_0 = stackOut_8_0;
+                      stackIn_9_0 = var6;
                       break L1;
                     } else {
                       break L2;
@@ -91,27 +78,19 @@ final class qh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var5_ref);
-            stackOut_12_1 = new StringBuilder().append("qh.D(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var5_ref);
+
+            stackIn_14_1 = new StringBuilder().append("qh.D(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L5;
             }
           }
@@ -122,9 +101,9 @@ final class qh {
 
     final byte[] a(int param0, int param1) {
         try {
-            int incrementValue$1 = 0;
+            int incrementValue$2 = 0;
             Object var3 = null;
-            IOException var4 = null;
+            Object var3_ref = null;
             int var4_int = 0;
             int var5 = 0;
             byte[] var6 = null;
@@ -138,31 +117,18 @@ final class qh {
             int var14 = 0;
             int var15 = 0;
             int var16 = 0;
-            Throwable var17 = null;
             int var18 = 0;
             Object stackIn_3_0 = null;
-            Object stackIn_4_0 = null;
             Object stackIn_9_0 = null;
-            Object stackIn_10_0 = null;
             Object stackIn_23_0 = null;
-            Object stackIn_24_0 = null;
             byte[] stackIn_51_0 = null;
-            byte[] stackIn_52_0 = null;
             Object stackIn_54_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            byte[] stackOut_50_0 = null;
-            byte[] stackOut_51_0 = null;
-            Object stackOut_22_0 = null;
-            Object stackOut_23_0 = null;
-            Object stackOut_8_0 = null;
-            Object stackOut_9_0 = null;
-            Object stackOut_2_0 = null;
-            Object stackOut_3_0 = null;
-            Object stackOut_53_0 = null;
+            IOException var4 = null;
             var18 = Vertigo2.field_L ? 1 : 0;
-            var3 = this.field_h;
-            synchronized (var3) {
+            var3_ref = this.field_h;
+            synchronized (var3_ref) {
               try {
                 L0: {
                   if (((long)(6 * param0 + 6) ^ -1L) >= (this.field_i.c(-1) ^ -1L)) {
@@ -187,10 +153,8 @@ final class qh {
                             var8 = 0;
                             L2: while (true) {
                               if (var4_int <= var7) {
-                                stackOut_50_0 = (byte[]) (var6);
-                                stackIn_51_0 = stackOut_50_0;
-                                stackOut_51_0 = (byte[]) ((Object) stackIn_51_0);
-                                stackIn_52_0 = stackOut_51_0;
+                                stackIn_51_0 = (byte[]) (var6);
+
                                 decompiledRegionSelector0 = 3;
                                 break L0;
                               } else {
@@ -245,9 +209,9 @@ final class qh {
                                               if (var15 <= var16) {
                                                 continue L2;
                                               } else {
-                                                incrementValue$1 = var7;
+                                                incrementValue$2 = var7;
                                                 var7++;
-                                                var6[incrementValue$1] = lf.field_D[var16];
+                                                var6[incrementValue$2] = lf.field_D[var16];
                                                 var16++;
                                                 continue L6;
                                               }
@@ -268,10 +232,8 @@ final class qh {
                                     return null;
                                   }
                                 } else {
-                                  stackOut_22_0 = null;
-                                  stackIn_23_0 = stackOut_22_0;
-                                  stackOut_23_0 = stackIn_23_0;
-                                  stackIn_24_0 = stackOut_23_0;
+                                  stackIn_23_0 = null;
+
                                   decompiledRegionSelector0 = 2;
                                   break L0;
                                 }
@@ -284,10 +246,8 @@ final class qh {
                           return null;
                         }
                       } else {
-                        stackOut_8_0 = null;
-                        stackIn_9_0 = stackOut_8_0;
-                        stackOut_9_0 = stackIn_9_0;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_9_0 = null;
+
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -295,10 +255,8 @@ final class qh {
                       return null;
                     }
                   } else {
-                    stackOut_2_0 = null;
-                    stackIn_3_0 = stackOut_2_0;
-                    stackOut_3_0 = stackIn_3_0;
-                    stackIn_4_0 = stackOut_3_0;
+                    stackIn_3_0 = null;
+
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -306,20 +264,19 @@ final class qh {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (IOException) (Object) decompiledCaughtException;
-                stackOut_53_0 = null;
-                stackIn_54_0 = stackOut_53_0;
+                stackIn_54_0 = null;
                 return (byte[]) ((Object) stackIn_54_0);
               }
               if (decompiledRegionSelector0 == 0) {
-                return (byte[]) ((Object) stackIn_4_0);
+                return (byte[]) ((Object) stackIn_3_0);
               } else {
                 if (decompiledRegionSelector0 == 1) {
-                  return (byte[]) ((Object) stackIn_10_0);
+                  return (byte[]) ((Object) stackIn_9_0);
                 } else {
                   if (decompiledRegionSelector0 == 2) {
-                    return (byte[]) ((Object) stackIn_24_0);
+                    return (byte[]) ((Object) stackIn_23_0);
                   } else {
-                    return stackIn_52_0;
+                    return stackIn_51_0;
                   }
                 }
               }
@@ -365,7 +322,7 @@ final class qh {
     }
 
     final static int b(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = 15 / ((-32 - param0) / 63);
         pd.field_c.d(115);
         if (!kb.field_e.d(-3599)) {
@@ -388,33 +345,12 @@ final class qh {
 
     private final boolean a(boolean param0, byte[] param1, int param2, int param3, int param4) {
         try {
-            Object var6 = null;
-            RuntimeException var6_ref = null;
-            Object var6_ref2 = null;
-            IOException var7 = null;
-            int var7_int = 0;
-            int var8 = 0;
-            int var9 = 0;
-            int var10 = 0;
-            int var11 = 0;
-            int var12 = 0;
-            int var13 = 0;
-            EOFException var14 = null;
-            Throwable var15 = null;
-            int var16 = 0;
             int stackIn_10_0 = 0;
-            int stackIn_11_0 = 0;
             int stackIn_16_0 = 0;
-            int stackIn_17_0 = 0;
             int stackIn_36_0 = 0;
-            int stackIn_37_0 = 0;
             int stackIn_42_0 = 0;
-            int stackIn_43_0 = 0;
             int stackIn_62_0 = 0;
-            int stackIn_63_0 = 0;
             int stackIn_65_0 = 0;
-            RuntimeException stackIn_69_0 = null;
-            StringBuilder stackIn_69_1 = null;
             RuntimeException stackIn_70_0 = null;
             StringBuilder stackIn_70_1 = null;
             RuntimeException stackIn_71_0 = null;
@@ -424,29 +360,22 @@ final class qh {
             int decompiledRegionSelector1 = 0;
             int decompiledRegionSelector2 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_9_0 = 0;
-            int stackOut_10_0 = 0;
-            int stackOut_15_0 = 0;
-            int stackOut_16_0 = 0;
-            int stackOut_41_0 = 0;
-            int stackOut_42_0 = 0;
-            int stackOut_35_0 = 0;
-            int stackOut_36_0 = 0;
-            int stackOut_61_0 = 0;
-            int stackOut_62_0 = 0;
-            int stackOut_64_0 = 0;
-            RuntimeException stackOut_68_0 = null;
-            StringBuilder stackOut_68_1 = null;
-            RuntimeException stackOut_70_0 = null;
-            StringBuilder stackOut_70_1 = null;
-            String stackOut_70_2 = null;
-            RuntimeException stackOut_69_0 = null;
-            StringBuilder stackOut_69_1 = null;
-            String stackOut_69_2 = null;
+            Object var6 = null;
+            RuntimeException var6_ref = null;
+            int var7_int = 0;
+            IOException var7 = null;
+            int var8 = 0;
+            int var9 = 0;
+            int var10 = 0;
+            int var11 = 0;
+            int var12 = 0;
+            int var13 = 0;
+            EOFException var14 = null;
+            int var16 = 0;
             var16 = Vertigo2.field_L ? 1 : 0;
             try {
-              var6_ref2 = this.field_h;
-              synchronized (var6_ref2) {
+              var6 = this.field_h;
+              synchronized (var6) {
                 try {
                   L0: {
                     L1: {
@@ -460,10 +389,8 @@ final class qh {
                     L2: {
                       if (param0) {
                         if ((long)(6 + param3 * 6) > this.field_i.c(param2 + -256)) {
-                          stackOut_9_0 = 0;
-                          stackIn_10_0 = stackOut_9_0;
-                          stackOut_10_0 = stackIn_10_0;
-                          stackIn_11_0 = stackOut_10_0;
+                          stackIn_10_0 = 0;
+
                           decompiledRegionSelector2 = 0;
                           break L0;
                         } else {
@@ -481,10 +408,8 @@ final class qh {
                               }
                             }
                           }
-                          stackOut_15_0 = 0;
-                          stackIn_16_0 = stackOut_15_0;
-                          stackOut_16_0 = stackIn_16_0;
-                          stackIn_17_0 = stackOut_16_0;
+                          stackIn_16_0 = 0;
+
                           decompiledRegionSelector2 = 1;
                           break L0;
                         }
@@ -587,10 +512,8 @@ final class qh {
                                           }
                                         }
                                       }
-                                      stackOut_41_0 = 0;
-                                      stackIn_42_0 = stackOut_41_0;
-                                      stackOut_42_0 = stackIn_42_0;
-                                      stackIn_43_0 = stackOut_42_0;
+                                      stackIn_42_0 = 0;
+
                                       decompiledRegionSelector2 = 3;
                                       break L0;
                                     } else {
@@ -599,10 +522,8 @@ final class qh {
                                   }
                                 }
                               }
-                              stackOut_35_0 = 0;
-                              stackIn_36_0 = stackOut_35_0;
-                              stackOut_36_0 = stackIn_36_0;
-                              stackIn_37_0 = stackOut_36_0;
+                              stackIn_36_0 = 0;
+
                               decompiledRegionSelector2 = 2;
                               break L0;
                             } else {
@@ -695,10 +616,8 @@ final class qh {
                           continue L4;
                         }
                       }
-                      stackOut_61_0 = 1;
-                      stackIn_62_0 = stackOut_61_0;
-                      stackOut_62_0 = stackIn_62_0;
-                      stackIn_63_0 = stackOut_62_0;
+                      stackIn_62_0 = 1;
+
                       decompiledRegionSelector2 = 4;
                       break L0;
                     }
@@ -706,23 +625,22 @@ final class qh {
                 } catch (java.io.IOException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var7 = (IOException) (Object) decompiledCaughtException;
-                  stackOut_64_0 = 0;
-                  stackIn_65_0 = stackOut_64_0;
+                  stackIn_65_0 = 0;
                   return stackIn_65_0 != 0;
                 }
                 if (decompiledRegionSelector2 == 0) {
-                  return stackIn_11_0 != 0;
+                  return stackIn_10_0 != 0;
                 } else {
                   if (decompiledRegionSelector2 == 1) {
-                    return stackIn_17_0 != 0;
+                    return stackIn_16_0 != 0;
                   } else {
                     if (decompiledRegionSelector2 == 2) {
-                      return stackIn_37_0 != 0;
+                      return stackIn_36_0 != 0;
                     } else {
                       if (decompiledRegionSelector2 == 3) {
-                        return stackIn_43_0 != 0;
+                        return stackIn_42_0 != 0;
                       } else {
-                        return stackIn_63_0 != 0;
+                        return stackIn_62_0 != 0;
                       }
                     }
                   }
@@ -732,27 +650,19 @@ final class qh {
               decompiledCaughtException = decompiledCaughtParameter3;
               L20: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_68_0 = (RuntimeException) (var6_ref);
-                stackOut_68_1 = new StringBuilder().append("qh.C(").append(param0).append(',');
-                stackIn_70_0 = stackOut_68_0;
-                stackIn_70_1 = stackOut_68_1;
-                stackIn_69_0 = stackOut_68_0;
-                stackIn_69_1 = stackOut_68_1;
+                stackIn_70_0 = (RuntimeException) (var6_ref);
+
+                stackIn_70_1 = new StringBuilder().append("qh.C(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_70_0 = (RuntimeException) ((Object) stackIn_70_0);
-                  stackOut_70_1 = (StringBuilder) ((Object) stackIn_70_1);
-                  stackOut_70_2 = "null";
-                  stackIn_71_0 = stackOut_70_0;
-                  stackIn_71_1 = stackOut_70_1;
-                  stackIn_71_2 = stackOut_70_2;
+                  stackIn_71_0 = (RuntimeException) ((Object) stackIn_70_0);
+                  stackIn_71_1 = (StringBuilder) ((Object) stackIn_70_1);
+                  stackIn_71_2 = "null";
                   break L20;
                 } else {
-                  stackOut_69_0 = (RuntimeException) ((Object) stackIn_69_0);
-                  stackOut_69_1 = (StringBuilder) ((Object) stackIn_69_1);
-                  stackOut_69_2 = "{...}";
-                  stackIn_71_0 = stackOut_69_0;
-                  stackIn_71_1 = stackOut_69_1;
-                  stackIn_71_2 = stackOut_69_2;
+                  stackIn_71_0 = (RuntimeException) ((Object) stackIn_70_0);
+                  stackIn_71_1 = (StringBuilder) ((Object) stackIn_70_1);
+                  stackIn_71_2 = "{...}";
                   break L20;
                 }
               }

@@ -16,27 +16,16 @@ final class lua implements ntb, ofa {
     }
 
     public final void a(tv param0, int param1) {
-        boolean discarded$2 = false;
         lua var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         tv var5 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
@@ -50,7 +39,7 @@ final class lua implements ntb, ofa {
               }
             }
             L2: {
-              discarded$2 = tja.a(var3.field_b, 1, this.field_b, false, 5547);
+              tja.a(var3.field_b, 1, this.field_b, false, 5547);
               var4 = 0;
               if (dn.a(var3.field_b, false, 1, this.field_b, 124)) {
                 var4 = 1;
@@ -71,27 +60,19 @@ final class lua implements ntb, ofa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3_ref);
-            stackOut_9_1 = new StringBuilder().append("lua.F(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3_ref);
+
+            stackIn_11_1 = new StringBuilder().append("lua.F(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -100,18 +81,16 @@ final class lua implements ntb, ofa {
     }
 
     private final void a(int param0) {
-        qsa discarded$1 = null;
         int fieldTemp$0 = sja.field_g;
         sja.field_g = sja.field_g + 1;
         this.field_a = fieldTemp$0;
         if (param0 <= 118) {
-            discarded$1 = lua.a((byte) 80);
+            lua.a((byte) 80);
         }
     }
 
     public final void b(faa param0, int param1) {
         faa var3 = null;
-        RuntimeException var3_ref = null;
         qob[] var4 = null;
         int var5 = 0;
         qob[] var6 = null;
@@ -119,39 +98,18 @@ final class lua implements ntb, ofa {
         qob var8 = null;
         int var9 = 0;
         int stackIn_4_0 = 0;
-        faa stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
         faa stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         faa stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        faa stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        faa stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        int stackOut_10_2 = 0;
-        faa stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException var3_ref = null;
         var9 = VoidHunters.field_G;
         try {
           L0: {
@@ -159,12 +117,10 @@ final class lua implements ntb, ofa {
               var3 = param0;
               var4 = this.field_b;
               if (var4 != null) {
-                stackOut_3_0 = var4.length;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = var4.length;
                 break L1;
               } else {
-                stackOut_2_0 = 0;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = 0;
                 break L1;
               }
             }
@@ -180,32 +136,24 @@ final class lua implements ntb, ofa {
                   } else {
                     L4: {
                       var8 = var6[var7];
-                      stackOut_8_0 = (faa) (var3);
-                      stackOut_8_1 = -68;
-                      stackIn_10_0 = stackOut_8_0;
-                      stackIn_10_1 = stackOut_8_1;
-                      stackIn_9_0 = stackOut_8_0;
-                      stackIn_9_1 = stackOut_8_1;
+                      stackIn_10_0 = (faa) (var3);
+
+                      stackIn_10_1 = -68;
+
                       if (var8 == null) {
-                        stackOut_10_0 = (faa) ((Object) stackIn_10_0);
-                        stackOut_10_1 = stackIn_10_1;
-                        stackOut_10_2 = 0;
-                        stackIn_11_0 = stackOut_10_0;
-                        stackIn_11_1 = stackOut_10_1;
-                        stackIn_11_2 = stackOut_10_2;
+                        stackIn_11_0 = (faa) ((Object) stackIn_10_0);
+                        stackIn_11_1 = stackIn_10_1;
+                        stackIn_11_2 = 0;
                         break L4;
                       } else {
-                        stackOut_9_0 = (faa) ((Object) stackIn_9_0);
-                        stackOut_9_1 = stackIn_9_1;
-                        stackOut_9_2 = 1;
-                        stackIn_11_0 = stackOut_9_0;
-                        stackIn_11_1 = stackOut_9_1;
-                        stackIn_11_2 = stackOut_9_2;
+                        stackIn_11_0 = (faa) ((Object) stackIn_10_0);
+                        stackIn_11_1 = stackIn_10_1;
+                        stackIn_11_2 = 1;
                         break L4;
                       }
                     }
                     L5: {
-                      if (vq.a(stackIn_11_0, stackIn_11_1, stackIn_11_2 == 0)) {
+                      if (!vq.a(stackIn_11_0, stackIn_11_1, stackIn_11_2 != 0)) {
                         break L5;
                       } else {
                         stb.a(2, 1, var3, var8);
@@ -231,27 +179,19 @@ final class lua implements ntb, ofa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3_ref = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var3_ref);
-            stackOut_18_1 = new StringBuilder().append("lua.B(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var3_ref);
+
+            stackIn_20_1 = new StringBuilder().append("lua.B(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L6;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L6;
             }
           }
@@ -264,56 +204,36 @@ final class lua implements ntb, ofa {
         RuntimeException var3_ref = null;
         int var4 = 0;
         boolean stackIn_1_0 = false;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_0_0 = false;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var4 = 75 % ((param0 - 22) / 59);
             var3 = (lua) ((Object) param1);
-            stackOut_0_0 = dn.a(var3.field_b, false, 1, this.field_b, -78);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = dn.a(var3.field_b, false, 1, this.field_b, -78);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var3_ref);
-            stackOut_2_1 = new StringBuilder().append("lua.C(").append(param0).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var3_ref);
+
+            stackIn_4_1 = new StringBuilder().append("lua.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -342,8 +262,6 @@ final class lua implements ntb, ofa {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -351,16 +269,6 @@ final class lua implements ntb, ofa {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
@@ -368,8 +276,7 @@ final class lua implements ntb, ofa {
                 break L1;
               } else {
                 if (-4096 >= (this.field_b.length ^ -1)) {
-                  stackOut_3_0 = -1;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = -1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -387,8 +294,7 @@ final class lua implements ntb, ofa {
                 break L2;
               }
             }
-            stackOut_7_0 = -1 + this.field_b.length;
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = -1 + this.field_b.length;
             decompiledRegionSelector0 = 1;
             break L0;
           }
@@ -396,27 +302,19 @@ final class lua implements ntb, ofa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3);
-            stackOut_9_1 = new StringBuilder().append("lua.E(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("lua.E(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -438,10 +336,9 @@ final class lua implements ntb, ofa {
     }
 
     public final void a(faa param0, boolean param1) {
-        qsa discarded$0 = null;
         try {
             if (param1) {
-                discarded$0 = lua.a((byte) 76);
+                lua.a((byte) 76);
             }
             this.field_b = (qob[]) ((Object) kcb.a(12, rma.field_c, param0, 1, -65, this.field_b));
         } catch (RuntimeException runtimeException) {
@@ -450,9 +347,9 @@ final class lua implements ntb, ofa {
     }
 
     final static qsa a(byte param0) {
-        qsa[] fieldTemp$4 = null;
-        int fieldTemp$5 = 0;
-        int var1 = 0;
+        qsa[] fieldTemp$2 = null;
+        int fieldTemp$3 = 0;
+        int var1;
         if (bjb.field_p.length <= hcb.field_p) {
           nkb.a(false, "We've run out of temp objective slots");
           return null;
@@ -466,10 +363,10 @@ final class lua implements ntb, ofa {
             }
           }
           var1 = 28 / ((15 - param0) / 47);
-          fieldTemp$4 = bjb.field_p;
-          fieldTemp$5 = hcb.field_p;
+          fieldTemp$2 = bjb.field_p;
+          fieldTemp$3 = hcb.field_p;
           hcb.field_p = hcb.field_p + 1;
-          return fieldTemp$4[fieldTemp$5];
+          return fieldTemp$2[fieldTemp$3];
         }
     }
 

@@ -27,25 +27,14 @@ final class jk extends aj implements df {
     }
 
     public final void a(lj param0, int param1, int param2, int param3, int param4) {
-        int discarded$2 = 0;
-        RuntimeException var6 = null;
         int var7 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var6 = null;
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -85,7 +74,7 @@ final class jk extends aj implements df {
               if (param1 == 17) {
                 break L4;
               } else {
-                discarded$2 = jk.l(-1);
+                jk.l(-1);
                 break L4;
               }
             }
@@ -95,27 +84,19 @@ final class jk extends aj implements df {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var6);
-            stackOut_12_1 = new StringBuilder().append("jk.MA(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var6);
+
+            stackIn_14_1 = new StringBuilder().append("jk.MA(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L5;
             }
           }
@@ -149,7 +130,7 @@ final class jk extends aj implements df {
     }
 
     final static int l(int param0) {
-        String var2 = null;
+        String var2;
         if (param0 != -889) {
           var2 = (String) null;
           jk.a(80, 5, -66, 13, 33, false, (String) null, -125, -49, (byte) -7);
@@ -162,21 +143,20 @@ final class jk extends aj implements df {
     final void a(int param0, int param1, int param2, byte param3) {
         int var5 = param0 + this.field_p;
         int var6 = this.field_n + param1;
-        int discarded$0 = vd.field_h.a(wb.field_d, var5 - -20, 20 + var6, this.field_l + -40, -50 + this.field_h, 16777215, -1, 1, 0, vd.field_h.field_y);
+        vd.field_h.a(wb.field_d, var5 - -20, 20 + var6, this.field_l + -40, -50 + this.field_h, 16777215, -1, 1, 0, vd.field_h.field_y);
         super.a(param0, param1, param2, (byte) 123);
         int var7 = -112 / ((param3 - 77) / 34);
     }
 
     final static char a(char param0, boolean param1) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = Transmogrify.field_A ? 1 : 0;
           if (!param1) {
             break L0;
           } else {
-            discarded$1 = jk.l(100);
+            jk.l(100);
             break L0;
           }
         }
@@ -872,47 +852,23 @@ final class jk extends aj implements df {
     }
 
     final static void a(java.awt.Color param0, byte param1, int param2, String param3, boolean param4) {
-        boolean discarded$1 = false;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        StringBuilder stackIn_26_1 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        Throwable decompiledCaughtException = null;
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
         int var7 = 0;
         int var8 = 0;
         String var9 = null;
-        Object var10 = null;
-        java.awt.Graphics var10_ref = null;
+        java.awt.Graphics var10 = null;
         java.awt.Graphics var11 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
-        Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
         try {
           L0: {
             L1: {
@@ -927,7 +883,7 @@ final class jk extends aj implements df {
             try {
               L2: {
                 L3: {
-                  var10_ref = gd.field_k.getGraphics();
+                  var10 = gd.field_k.getGraphics();
                   if (ha.field_a != null) {
                     break L3;
                   } else {
@@ -937,8 +893,8 @@ final class jk extends aj implements df {
                 }
                 L4: {
                   if (param4) {
-                    var10_ref.setColor(java.awt.Color.black);
-                    var10_ref.fillRect(0, 0, fk.field_E, mk.field_x);
+                    var10.setColor(java.awt.Color.black);
+                    var10.fillRect(0, 0, fk.field_E, mk.field_x);
                     break L4;
                   } else {
                     break L4;
@@ -972,7 +928,7 @@ final class jk extends aj implements df {
                     var11.setFont(ha.field_a);
                     var11.setColor(java.awt.Color.white);
                     var11.drawString(param3, (-(6 * param3.length()) + 304) / 2, 22);
-                    discarded$1 = var10_ref.drawImage(hk.field_c, -152 + fk.field_E / 2, mk.field_x / 2 + -18, (java.awt.image.ImageObserver) null);
+                    var10.drawImage(hk.field_c, -152 + fk.field_E / 2, mk.field_x / 2 + -18, (java.awt.image.ImageObserver) null);
                     break L6;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -981,15 +937,15 @@ final class jk extends aj implements df {
                     var6 = (Exception) (Object) decompiledCaughtException;
                     var7 = -152 + fk.field_E / 2;
                     var8 = -18 + mk.field_x / 2;
-                    var10_ref.setColor(param0);
-                    var10_ref.drawRect(var7, var8, 303, 33);
-                    var10_ref.fillRect(2 + var7, var8 - -2, param2 * 3, 30);
-                    var10_ref.setColor(java.awt.Color.black);
-                    var10_ref.drawRect(1 + var7, var8 + 1, 301, 31);
-                    var10_ref.fillRect(2 + (var7 + 3 * param2), 2 + var8, -(param2 * 3) + 300, 30);
-                    var10_ref.setFont(ha.field_a);
-                    var10_ref.setColor(java.awt.Color.white);
-                    var10_ref.drawString(param3, var7 + (304 - 6 * param3.length()) / 2, 22 + var8);
+                    var10.setColor(param0);
+                    var10.drawRect(var7, var8, 303, 33);
+                    var10.fillRect(2 + var7, var8 - -2, param2 * 3, 30);
+                    var10.setColor(java.awt.Color.black);
+                    var10.drawRect(1 + var7, var8 + 1, 301, 31);
+                    var10.fillRect(2 + (var7 + 3 * param2), 2 + var8, -(param2 * 3) + 300, 30);
+                    var10.setFont(ha.field_a);
+                    var10.setColor(java.awt.Color.white);
+                    var10.drawString(param3, var7 + (304 - 6 * param3.length()) / 2, 22 + var8);
                     break L8;
                   }
                 }
@@ -997,9 +953,9 @@ final class jk extends aj implements df {
                   if (sj.field_r == null) {
                     break L9;
                   } else {
-                    var10_ref.setFont(ha.field_a);
-                    var10_ref.setColor(java.awt.Color.white);
-                    var10_ref.drawString(sj.field_r, fk.field_E / 2 - sj.field_r.length() * 6 / 2, mk.field_x / 2 + -26);
+                    var10.setFont(ha.field_a);
+                    var10.setColor(java.awt.Color.white);
+                    var10.drawString(sj.field_r, fk.field_E / 2 - sj.field_r.length() * 6 / 2, mk.field_x / 2 + -26);
                     break L9;
                   }
                 }
@@ -1019,56 +975,40 @@ final class jk extends aj implements df {
           decompiledCaughtException = decompiledCaughtParameter2;
           L11: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var5_ref);
-            stackOut_21_1 = new StringBuilder().append("jk.G(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var5_ref);
+
+            stackIn_23_1 = new StringBuilder().append("jk.G(");
+
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L11;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L11;
             }
           }
           L12: {
-            stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+
+
+            stackIn_26_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L12;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L12;
             }
           }
-          throw ch.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param4 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_24_0), stackIn_27_2 + ',' + param4 + ')');
         }
     }
 
@@ -1078,8 +1018,6 @@ final class jk extends aj implements df {
         int stackIn_3_0 = 0;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -1087,38 +1025,24 @@ final class jk extends aj implements df {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        boolean stackOut_9_0 = false;
-        boolean stackOut_5_0 = false;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             if (super.a(param0, param1, (byte) -61, param3)) {
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               var5_int = 42 % ((param2 - 65) / 55);
               if (98 != param0) {
                 if ((param0 ^ -1) == -100) {
-                  stackOut_9_0 = this.b(param1, 91);
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = this.b(param1, 91);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   return false;
                 }
               } else {
-                stackOut_5_0 = this.a(2, param1);
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = this.a(2, param1);
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -1128,27 +1052,19 @@ final class jk extends aj implements df {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var5);
-            stackOut_11_1 = new StringBuilder().append("jk.K(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var5);
+
+            stackIn_13_1 = new StringBuilder().append("jk.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L1;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L1;
             }
           }

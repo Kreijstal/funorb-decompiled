@@ -12,12 +12,10 @@ final class dka {
             Throwable var1 = null;
             qaa stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            qaa stackOut_2_0 = null;
             if (param0 <= -61) {
               try {
                 L0: {
-                  stackOut_2_0 = (qaa) (Class.forName("hfa").newInstance());
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = (qaa) (Class.forName("hfa").newInstance());
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {

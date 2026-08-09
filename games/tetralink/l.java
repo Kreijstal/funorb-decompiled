@@ -24,8 +24,6 @@ final class l {
         int var4 = 0;
         int stackIn_4_0 = 0;
         int stackIn_10_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -33,16 +31,6 @@ final class l {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             if (param2 > 0) {
@@ -59,8 +47,7 @@ final class l {
                 L2: while (true) {
                   var4 = param0.nextInt();
                   if (var3_int > var4) {
-                    stackOut_9_0 = oa.a(var4, 13309, param2);
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = oa.a(var4, 13309, param2);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -68,8 +55,7 @@ final class l {
                   }
                 }
               } else {
-                stackOut_3_0 = (int)(((long)param0.nextInt() & 4294967295L) * (long)param2 >> -36980832);
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = (int)(((long)param0.nextInt() & 4294967295L) * (long)param2 >> -36980832);
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -81,27 +67,19 @@ final class l {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("l.G(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("l.G(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -115,14 +93,14 @@ final class l {
     }
 
     private final void d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         var9 = TetraLink.field_J;
         this.field_f = new byte[6];
         var3 = 0;
@@ -156,7 +134,7 @@ final class l {
                         continue L2;
                       } else {
                         L5: {
-                          if (var4 != (this.field_e[var2] & var4)) {
+                          if ((var4 ^ -1) != (this.field_e[var2] & var4 ^ -1)) {
                             break L5;
                           } else {
                             if (var5 != (var5 & this.field_e[var2 - -1])) {
@@ -267,7 +245,7 @@ final class l {
                     continue L1;
                   } else {
                     L9: {
-                      if (var4 != (var4 & this.field_e[var2])) {
+                      if ((var4 ^ -1) != (var4 & this.field_e[var2] ^ -1)) {
                         break L9;
                       } else {
                         if (var4 != (this.field_e[1 + var2] & var4)) {
@@ -330,7 +308,7 @@ final class l {
                 continue L0;
               } else {
                 L11: {
-                  if ((var4 & this.field_e[var2]) != var4) {
+                  if ((var4 & this.field_e[var2] ^ -1) != (var4 ^ -1)) {
                     break L11;
                   } else {
                     this.field_f[var2] = (byte)mc.a((int) this.field_f[var2], var4);
@@ -358,15 +336,11 @@ final class l {
             field_j = -41;
         }
         int var3 = null != qe.field_a ? 1 : 0;
-        if (9 == dg.field_e) {
-            if (fi.a(ml.field_jb, vf.field_b, vd.field_h, (byte) -86, ba.field_N)) {
-                if (vf.field_b != 2) {
-                    if (var3 != 0) {
-                        return false;
-                    }
-                }
-                return sj.a(ml.field_jb, vd.field_h, ba.field_N, 108, vf.field_b);
+        if (9 == dg.field_e && fi.a(ml.field_jb, vf.field_b, vd.field_h, (byte) -86, ba.field_N)) {
+            if (vf.field_b != 2 && var3 != 0) {
+                return false;
             }
+            return sj.a(ml.field_jb, vd.field_h, ba.field_N, 108, vf.field_b);
         }
         if (dg.field_e == 10) {
             if (!(var3 == 0)) {
@@ -384,10 +358,8 @@ final class l {
                     return false;
                 }
             }
-            if (kd.field_h != 2) {
-                if (var3 != 0) {
-                    return false;
-                }
+            if (kd.field_h != 2 && var3 != 0) {
+                return false;
             }
             if (!(!ui.a((byte) -46))) {
                 String var4 = (String) null;
@@ -423,10 +395,9 @@ final class l {
     }
 
     final void e(int param0) {
-        bf discarded$1 = null;
-        ej var2 = null;
-        int var3 = 0;
-        int var4 = 0;
+        ej var2;
+        int var3;
+        int var4;
         var4 = TetraLink.field_J;
         var2 = (ej) ((Object) this.field_g.c(false));
         L0: while (true) {
@@ -463,7 +434,7 @@ final class l {
                       } else {
                         if (-1 < (var2.field_y ^ -1)) {
                           L4: {
-                            discarded$1 = lb.a(ti.field_a[ui.a(5, 1692)], 573509761);
+                            lb.a(ti.field_a[ui.a(5, 1692)], 573509761);
                             var3 = 1 << var2.field_u;
                             if (var2.field_x) {
                               this.field_e[var2.field_n] = (byte)mc.a((int) this.field_e[var2.field_n], var3);
@@ -518,33 +489,60 @@ final class l {
     }
 
     private final boolean a(boolean param0, int param1, int param2, int param3) {
-        int var6 = TetraLink.field_J;
-        if (param3 != -14933) {
+        ej var5;
+        int var6;
+        int stackIn_7_0 = 0;
+        L0: {
+          var6 = TetraLink.field_J;
+          if (param3 == -14933) {
+            break L0;
+          } else {
             this.field_m = 52;
+            break L0;
+          }
         }
-        ej var5 = (ej) ((Object) this.field_g.c(false));
-        while (var5 != null) {
-            if ((!var5.field_x ? 1 : 0) != (param0 ? 1 : 0)) {
-                if (param2 == var5.field_n) {
-                    if (param1 == var5.field_u) {
-                        return true;
-                    }
+        var5 = (ej) ((Object) this.field_g.c(false));
+        L1: while (true) {
+          if (var5 == null) {
+            return false;
+          } else {
+            L2: {
+              if (var5.field_x) {
+                stackIn_7_0 = 0;
+                break L2;
+              } else {
+                stackIn_7_0 = 1;
+                break L2;
+              }
+            }
+            L3: {
+              if (stackIn_7_0 == (param0 ? 1 : 0)) {
+                break L3;
+              } else {
+                if (param2 != var5.field_n) {
+                  break L3;
+                } else {
+                  if (param1 != var5.field_u) {
+                    break L3;
+                  } else {
+                    return true;
+                  }
                 }
+              }
             }
             var5 = (ej) ((Object) this.field_g.a((byte) -70));
+            continue L1;
+          }
         }
-        return false;
     }
 
     final void a(byte param0) {
-        bf discarded$2 = null;
-        bf discarded$3 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var7 = TetraLink.field_J;
         var2 = 0;
         L0: while (true) {
@@ -568,7 +566,7 @@ final class l {
                       break L1;
                     } else {
                       var5 = 1 << var4;
-                      if ((var3 & var5) != 0) {
+                      if ((var3 & var5 ^ -1) != -1) {
                         if (!this.a(true, var4, var2, -14933)) {
                           L3: {
                             if (this.field_a != 0) {
@@ -585,7 +583,7 @@ final class l {
                             }
                           }
                           this.field_g.a(new ej(var2, var4, true), false);
-                          discarded$2 = lb.a(s.field_a[ui.a(5, 1692)], 573509761);
+                          lb.a(s.field_a[ui.a(5, 1692)], 573509761);
                           var4++;
                           continue L2;
                         } else {
@@ -612,7 +610,7 @@ final class l {
                 L4: while (true) {
                   if (-8 < (var5 ^ -1)) {
                     var6 = 1 << var5;
-                    if ((var6 & var4) != 0) {
+                    if ((var6 & var4 ^ -1) != -1) {
                       if (!this.a(false, var5, var2, param0 ^ -14957)) {
                         L5: {
                           if (-2 != (this.field_a ^ -1)) {
@@ -629,7 +627,7 @@ final class l {
                           }
                         }
                         this.field_g.a(new ej(var2, var5, false), false);
-                        discarded$3 = lb.a(s.field_a[ui.a(5, 1692)], param0 ^ 573509817);
+                        lb.a(s.field_a[ui.a(5, 1692)], param0 ^ 573509817);
                         var5++;
                         continue L4;
                       } else {
@@ -682,10 +680,8 @@ final class l {
     }
 
     private final boolean a(byte param0, int param1, int param2) {
-        ie var5 = null;
+        ie var5;
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
         L0: {
           if (param0 == -75) {
             break L0;
@@ -706,15 +702,13 @@ final class l {
                 if (this.field_d.field_f != param1) {
                   break L2;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L1;
                 }
               }
             }
           }
-          stackOut_6_0 = 0;
-          stackIn_7_0 = stackOut_6_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0 != 0;

@@ -24,12 +24,12 @@ final class bi implements Runnable {
     }
 
     final synchronized boolean c(int param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         if (-3 < (this.field_a ^ -1)) {
           L0: {
             if (0 != this.field_a) {
@@ -309,7 +309,7 @@ final class bi implements Runnable {
     }
 
     final ds a(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = 118 % ((param0 - -32) / 54);
         if ((this.field_a ^ -1) != -4) {
           return null;

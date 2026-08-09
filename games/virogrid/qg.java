@@ -21,10 +21,9 @@ final class qg extends l {
     static int field_g;
 
     final static void a(int param0, boolean param1, int param2) {
-        int var3 = 0;
-        String var4 = null;
+        CharSequence var31 = null;
         Object var5 = null;
-        String var6 = null;
+        String var4 = null;
         Object var16 = null;
         Object var17 = null;
         Object var18 = null;
@@ -33,119 +32,67 @@ final class qg extends l {
         Object var21 = null;
         Object var22 = null;
         Object var23 = null;
-        CharSequence var31 = null;
-        var16 = null;
-        var17 = null;
-        var18 = null;
-        var19 = null;
-        var20 = null;
-        var21 = null;
-        var22 = null;
-        var23 = null;
-        if (he.field_Xb != null) {
-          var3 = he.field_Xb.b(param1, param0 ^ -29471);
-          if (0 != var3) {
-            L0: {
-              if (-3 != (var3 ^ -1)) {
-                break L0;
-              } else {
-                if (he.field_Xb.field_V == null) {
-                  break L0;
-                } else {
-                  if (!he.field_Xb.field_V.equals("")) {
-                    L1: {
-                      if (he.field_Xb.field_V.charAt(0) != 91) {
-                        var31 = (CharSequence) ((Object) he.field_Xb.field_V);
-                        var4 = c.a(var31, true);
-                        break L1;
-                      } else {
-                        var4 = he.field_Xb.field_V;
-                        break L1;
-                      }
-                    }
-                    L2: {
-                      var5 = null;
-                      if (0 == ge.field_d) {
-                        var5 = ab.a((byte) 73, var4, param2);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                    L3: {
-                      if ((ge.field_d ^ -1) == -2) {
-                        var5 = og.a(var4, true, param2);
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    L4: {
-                      if (-3 == (ge.field_d ^ -1)) {
-                        var5 = g.a(var4, -128, param2);
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    L5: {
-                      if (-4 != (ge.field_d ^ -1)) {
-                        break L5;
-                      } else {
-                        var5 = og.a(var4, param2, (byte) 60, var4);
-                        break L5;
-                      }
-                    }
-                    if (var5 == null) {
-                      break L0;
-                    } else {
-                      var6 = (String) null;
-                      gf.a(var4, 0, false, (String) (var5), 2, (String) null);
-                      he.field_Xb = null;
-                      ge.field_d = -1;
-                      if (param0 == 7377) {
-                        return;
-                      } else {
-                        qg.a(119);
-                        return;
-                      }
-                    }
-                  } else {
-                    he.field_Xb = null;
-                    ge.field_d = -1;
-                    if (param0 == 7377) {
-                      return;
-                    } else {
-                      qg.a(119);
-                      return;
-                    }
-                  }
-                }
-              }
-            }
-            he.field_Xb = null;
-            ge.field_d = -1;
-            if (param0 == 7377) {
-              return;
-            } else {
-              qg.a(119);
-              return;
-            }
-          } else {
+        if (he.field_Xb == null) {
             if (param0 != 7377) {
-              qg.a(119);
-              return;
-            } else {
-              return;
+                qg.a(119);
+                return;
             }
-          }
-        } else {
-          if (param0 == 7377) {
             return;
-          } else {
+        }
+        int var3 = he.field_Xb.b(param1, param0 ^ -29471);
+        if (0 == var3) {
+            if (param0 == 7377) {
+                return;
+            }
             qg.a(119);
             return;
-          }
+        }
+        if (-3 == (var3 ^ -1) && he.field_Xb.field_V != null) {
+            if (he.field_Xb.field_V.equals("")) {
+                he.field_Xb = null;
+                ge.field_d = -1;
+                if (param0 != 7377) {
+                    qg.a(119);
+                    return;
+                }
+                return;
+            }
+            if (he.field_Xb.field_V.charAt(0) == 91) {
+                var4 = he.field_Xb.field_V;
+            } else {
+                var31 = (CharSequence) ((Object) he.field_Xb.field_V);
+                var4 = c.a(var31, true);
+            }
+            var5 = null;
+            if (!(0 != ge.field_d)) {
+                var5 = ab.a((byte) 73, var4, param2);
+            }
+            if (!((ge.field_d ^ -1) != -2)) {
+                var5 = og.a(var4, true, param2);
+            }
+            if (!(-3 != (ge.field_d ^ -1))) {
+                var5 = g.a(var4, -128, param2);
+            }
+            if (-4 == (ge.field_d ^ -1)) {
+                var5 = og.a(var4, param2, (byte) 60, var4);
+            }
+            if (var5 != null) {
+                String var6 = (String) null;
+                gf.a(var4, 0, false, (String) (var5), 2, (String) null);
+                he.field_Xb = null;
+                ge.field_d = -1;
+                if (param0 != 7377) {
+                    qg.a(119);
+                    return;
+                }
+                return;
+            }
+        }
+        he.field_Xb = null;
+        ge.field_d = -1;
+        if (param0 != 7377) {
+            qg.a(119);
+            return;
         }
     }
 

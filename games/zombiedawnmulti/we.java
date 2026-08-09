@@ -30,38 +30,54 @@ final class we extends br {
         int var6 = 0;
         int stackIn_3_0 = 0;
         int stackIn_5_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_4_0 = 0;
-        var6 = ZombieDawnMulti.field_E ? 1 : 0;
-        var4 = param2.indexOf(param1);
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (-1 == var4) {
-                break L2;
-              } else {
-                param2 = param2.substring(0, var4) + param3 + param2.substring(param1.length() + var4);
-                stackOut_2_0 = param2.indexOf(param1, param3.length() + var4);
-                stackIn_5_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
-                if (var6 != 0) {
-                  break L1;
-                } else {
-                  var4 = stackIn_3_0;
-                  if (var6 == 0) {
-                    continue L0;
-                  } else {
-                    break L2;
-                  }
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var6 = ZombieDawnMulti.field_E ? 1 : 0;
+                    var4 = param2.indexOf(param1);
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
+                case 1: {
+                    if (-1 == var4) {
+                        statePc = 4;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
+                }
+                case 2: {
+                    param2 = param2.substring(0, var4) + param3 + param2.substring(param1.length() + var4);
+                    stackIn_5_0 = param2.indexOf(param1, param3.length() + var4);
+                    stackIn_3_0 = stackIn_5_0;
+                    if (var6 != 0) {
+                        statePc = 5;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    var4 = stackIn_3_0;
+                    if (var6 == 0) {
+                        statePc = 1;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    stackIn_5_0 = -18 / ((-2 - param0) / 54);
+                    statePc = 5;
+                    continue stateLoop;
+                }
+                case 5: {
+                    var5 = stackIn_5_0;
+                    return param2;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            stackOut_4_0 = -18 / ((-2 - param0) / 54);
-            stackIn_5_0 = stackOut_4_0;
-            break L1;
-          }
-          var5 = stackIn_5_0;
-          return param2;
         }
     }
 

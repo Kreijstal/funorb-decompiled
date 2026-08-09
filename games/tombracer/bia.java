@@ -13,23 +13,12 @@ final class bia extends fqa {
         cv var9 = null;
         fsa var10 = null;
         fsa stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fsa stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var10 = new fsa(param2, param0);
@@ -53,35 +42,26 @@ final class bia extends fqa {
             var9 = (cv) ((Object) var8.a(9, 123));
             var9.b(1, (byte) -112);
             var10.a(var5, (byte) 124, var9);
-            stackOut_0_0 = (fsa) (var10);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = (fsa) (var10);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var4);
-            stackOut_2_1 = new StringBuilder().append("bia.AC(").append(param0).append(',').append(param1).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var4);
+
+            stackIn_4_1 = new StringBuilder().append("bia.AC(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -110,9 +90,7 @@ final class bia extends fqa {
     }
 
     final static int a(byte param0, int param1) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        int var2 = 0;
+        int var2;
         L0: {
           var2 = 0;
           if (param1 < 0) {
@@ -165,7 +143,7 @@ final class bia extends fqa {
                 return var2 - -param1;
               } else {
                 L5: {
-                  discarded$2 = bia.a((byte) 58, 116);
+                  bia.a((byte) 58, 116);
                   if (256 > param1) {
                     break L5;
                   } else {
@@ -208,7 +186,7 @@ final class bia extends fqa {
         }
         if (param0 != 93) {
           L9: {
-            discarded$3 = bia.a((byte) 58, 116);
+            bia.a((byte) 58, 116);
             if (256 > param1) {
               break L9;
             } else {
@@ -302,10 +280,9 @@ final class bia extends fqa {
     }
 
     final int t(int param0) {
-        fsa discarded$0 = null;
         if (param0 != 8) {
             la var3 = (la) null;
-            discarded$0 = this.a(false, -105, (la) null);
+            this.a(false, -105, (la) null);
             return 7;
         }
         return 7;

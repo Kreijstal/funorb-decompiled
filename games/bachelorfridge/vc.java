@@ -41,7 +41,6 @@ final class vc {
         NumberFormatException var3 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         L0: {
           if (param2 == -16306) {
             break L0;
@@ -52,8 +51,7 @@ final class vc {
         }
         try {
           L1: {
-            stackOut_2_0 = Integer.parseInt(lka.field_E[param0][param1]);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = Integer.parseInt(lka.field_E[param0][param1]);
             break L1;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

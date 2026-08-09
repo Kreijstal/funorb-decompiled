@@ -12,28 +12,27 @@ final class tba extends vg {
     static String field_g;
 
     final static iu[] a(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
-        cn discarded$1 = null;
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        Object var10 = null;
-        Object var11 = null;
-        int[] var12 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        iu var17 = null;
-        iu var18 = null;
-        iu var19 = null;
-        iu var20 = null;
-        iu var21 = null;
-        iu var22 = null;
+        int[] var6;
+        int var7;
+        int var8;
+        Object var10;
+        Object var11;
+        int[] var12;
+        int[] var15;
+        int[] var16;
+        iu var17;
+        iu var18;
+        iu var19;
+        iu var20;
+        iu var21;
+        iu var22;
         var16 = bea.field_l;
         var15 = var16;
         var12 = var15;
         var6 = var12;
         if (param0 >= -62) {
           L0: {
-            discarded$1 = tba.a((byte) -71);
+            tba.a((byte) -71);
             var7 = bea.field_g;
             var8 = bea.field_a;
             var17 = new iu(16, param2);

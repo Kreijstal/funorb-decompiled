@@ -8,12 +8,10 @@ final class wcb extends uda {
     private nla field_e;
 
     final void b(boolean param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        float var3 = 0.0f;
-        float var4 = 0.0f;
-        float var5 = 0.0f;
+        jagdx.IDirect3DDevice var2;
+        float var3;
+        float var4;
+        float var5;
         L0: {
           if (null == this.field_g) {
             break L0;
@@ -21,13 +19,13 @@ final class wcb extends uda {
             L1: {
               var2 = this.field_e.field_Mc;
               if (-1 <= (this.field_d.field_j ^ -1)) {
-                discarded$4 = var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
+                var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
                 break L1;
               } else {
                 var3 = this.field_d.field_r;
                 var4 = this.field_d.field_p;
                 var5 = var4 - 512.0f;
-                discarded$5 = var2.b(10, var5, 1.0f / (var4 - var5), var4, 1.0f / (-var4 + var3));
+                var2.b(10, var5, 1.0f / (var4 - var5), var4, 1.0f / (-var4 + var3));
                 break L1;
               }
             }
@@ -49,14 +47,13 @@ final class wcb extends uda {
     }
 
     final void a(boolean param0) {
-        int discarded$2 = 0;
-        jagdx.IDirect3DDevice var2 = null;
+        jagdx.IDirect3DDevice var2;
         L0: {
           if (this.field_g == null) {
             break L0;
           } else {
             var2 = this.field_e.field_Mc;
-            discarded$2 = var2.a(4, this.field_d.a(108, field_h));
+            var2.a(4, this.field_d.a(108, field_h));
             break L0;
           }
         }
@@ -95,15 +92,13 @@ final class wcb extends uda {
     }
 
     final void d(int param0) {
-        float[] discarded$4 = null;
-        int discarded$5 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        oj var3 = null;
+        jagdx.IDirect3DDevice var2;
+        oj var3;
         L0: {
           if (null != this.field_g) {
             var2 = this.field_e.field_Mc;
             var3 = this.field_d.p(0);
-            discarded$4 = var3.b((byte) 105, field_h);
+            var3.b((byte) 105, field_h);
             field_h[7] = field_h[7] * 0.25f;
             field_h[4] = field_h[4] * 0.25f;
             field_h[6] = field_h[6] * 0.25f;
@@ -112,7 +107,7 @@ final class wcb extends uda {
             field_h[3] = field_h[3] * 0.25f;
             field_h[1] = field_h[1] * 0.25f;
             field_h[2] = field_h[2] * 0.25f;
-            discarded$5 = var2.SetVertexShaderConstantF(8, field_h, 2);
+            var2.SetVertexShaderConstantF(8, field_h, 2);
             break L0;
           } else {
             break L0;
@@ -151,14 +146,13 @@ final class wcb extends uda {
     }
 
     final void c(int param0) {
-        int discarded$2 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        oj var3 = null;
+        jagdx.IDirect3DDevice var2;
+        oj var3;
         L0: {
           if (this.field_g != null) {
             var2 = this.field_e.field_Mc;
             var3 = this.field_e.E(0);
-            discarded$2 = var2.a(0, var3.a(field_h, (byte) 22));
+            var2.a(0, var3.a(field_h, (byte) 22));
             break L0;
           } else {
             break L0;
@@ -179,10 +173,8 @@ final class wcb extends uda {
     }
 
     final void c(byte param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        oj var3 = null;
+        jagdx.IDirect3DDevice var2;
+        oj var3;
         if (param0 != 15) {
           L0: {
             this.field_f = (rga) null;
@@ -191,7 +183,7 @@ final class wcb extends uda {
             } else {
               var2 = this.field_e.field_Mc;
               var3 = this.field_e.E(0);
-              discarded$4 = var2.a(0, var3.a(field_h, (byte) 22));
+              var2.a(0, var3.a(field_h, (byte) 22));
               break L0;
             }
           }
@@ -203,7 +195,7 @@ final class wcb extends uda {
             } else {
               var2 = this.field_e.field_Mc;
               var3 = this.field_e.E(0);
-              discarded$5 = var2.a(0, var3.a(field_h, (byte) 22));
+              var2.a(0, var3.a(field_h, (byte) 22));
               break L1;
             }
           }
@@ -212,14 +204,10 @@ final class wcb extends uda {
     }
 
     final void a(int param0, int param1, int param2) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        int var5 = 0;
-        float var5_float = 0.0f;
-        jagdx.IDirect3DDevice var6 = null;
-        jagdx.IDirect3DDevice var7 = null;
+        float var5_float;
+        int var5;
+        jagdx.IDirect3DDevice var6;
+        jagdx.IDirect3DDevice var7;
         if (param2 != 5) {
           L0: {
             this.a(-112);
@@ -227,12 +215,12 @@ final class wcb extends uda {
             if (!this.field_f.field_b) {
               var5 = 16 * (this.field_d.field_pc % 4000) / 4000;
               this.field_d.a(this.field_f.field_a[var5], param2 + -127);
-              discarded$4 = var6.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
+              var6.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
               break L0;
             } else {
               var5_float = (float)(this.field_d.field_pc % 4000) / 4000.0f;
               this.field_d.a(this.field_f.field_d, -124);
-              discarded$5 = var6.b(11, var5_float, 0.0f, 0.0f, 0.0f);
+              var6.b(11, var5_float, 0.0f, 0.0f, 0.0f);
               break L0;
             }
           }
@@ -243,12 +231,12 @@ final class wcb extends uda {
             if (!this.field_f.field_b) {
               var5 = 16 * (this.field_d.field_pc % 4000) / 4000;
               this.field_d.a(this.field_f.field_a[var5], param2 + -127);
-              discarded$6 = var7.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
+              var7.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
               break L1;
             } else {
               var5_float = (float)(this.field_d.field_pc % 4000) / 4000.0f;
               this.field_d.a(this.field_f.field_d, -124);
-              discarded$7 = var7.b(11, var5_float, 0.0f, 0.0f, 0.0f);
+              var7.b(11, var5_float, 0.0f, 0.0f, 0.0f);
               break L1;
             }
           }

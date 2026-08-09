@@ -49,10 +49,9 @@ final class v implements Runnable {
             int var1_int = 0;
             Object var1 = null;
             Throwable var2 = null;
-            Object var2_ref = null;
-            Throwable var3 = null;
             int var4 = 0;
             Throwable decompiledCaughtException = null;
+            Object var2_ref = null;
             var4 = stellarshard.field_B;
             try {
               L0: {
@@ -108,9 +107,8 @@ final class v implements Runnable {
     }
 
     final static java.awt.Container a(boolean param0) {
-        java.awt.Container discarded$0 = null;
         if (!param0) {
-            discarded$0 = v.a(true);
+            v.a(true);
         }
         if (!(ah.field_q == null)) {
             return (java.awt.Container) ((Object) ah.field_q);
@@ -119,11 +117,11 @@ final class v implements Runnable {
     }
 
     final synchronized boolean a(int param0) {
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        Throwable decompiledCaughtException = null;
         if (-3 < (this.field_c ^ -1)) {
           L0: {
             if (-1 == (this.field_c ^ -1)) {
@@ -258,21 +256,21 @@ final class v implements Runnable {
     }
 
     final static void a(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         af var4 = null;
         int var4_int = 0;
-        fk var5_ref_fk = null;
         int var5 = 0;
+        fk var5_ref_fk = null;
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
         ha var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = stellarshard.field_B;
         try {
           L0: {

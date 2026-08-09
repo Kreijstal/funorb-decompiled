@@ -91,8 +91,7 @@ abstract class qd extends vk {
     abstract void c(int param0, byte param1, int param2);
 
     boolean i(int param0) {
-        lk discarded$2 = null;
-        byte[] var3 = null;
+        byte[] var3;
         if (param0 < -121) {
           this.field_A = this.a(0);
           if (this.field_A == 0) {
@@ -106,7 +105,7 @@ abstract class qd extends vk {
           }
         } else {
           var3 = (byte[]) null;
-          discarded$2 = qd.a((byte[]) null, (byte) -3);
+          qd.a((byte[]) null, (byte) -3);
           this.field_A = this.a(0);
           if (this.field_A == 0) {
             if (this.field_G) {
@@ -147,22 +146,12 @@ abstract class qd extends vk {
         int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         var8 = StarCannon.field_A;
         try {
           L0: {
@@ -190,27 +179,19 @@ abstract class qd extends vk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5_ref);
-            stackOut_6_1 = new StringBuilder().append("qd.TA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5_ref);
+
+            stackIn_8_1 = new StringBuilder().append("qd.TA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -220,26 +201,20 @@ abstract class qd extends vk {
 
     private final int a(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 0) {
           return 107;
         } else {
           L0: {
             if (this.field_G) {
               if (this.field_F.k(0) != this) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L0;
               } else {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L0;
             }
           }
@@ -259,8 +234,6 @@ abstract class qd extends vk {
     }
 
     boolean g(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_8_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_24_0 = 0;
@@ -269,22 +242,8 @@ abstract class qd extends vk {
         int stackIn_45_0 = 0;
         int stackIn_53_0 = 0;
         int stackIn_59_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
+        int var2;
+        int var3;
         var2 = this.a(0);
         var3 = var2 - this.field_A;
         if (param0 == -124) {
@@ -302,15 +261,13 @@ abstract class qd extends vk {
                       if (this.field_G) {
                         break L1;
                       } else {
-                        stackOut_57_0 = 1;
-                        stackIn_59_0 = stackOut_57_0;
+                        stackIn_59_0 = 1;
                         break L0;
                       }
                     }
                   }
                 }
-                stackOut_58_0 = 0;
-                stackIn_59_0 = stackOut_58_0;
+                stackIn_59_0 = 0;
                 break L0;
               }
               return stackIn_59_0 != 0;
@@ -326,15 +283,13 @@ abstract class qd extends vk {
                       if (this.field_G) {
                         break L3;
                       } else {
-                        stackOut_51_0 = 1;
-                        stackIn_53_0 = stackOut_51_0;
+                        stackIn_53_0 = 1;
                         break L2;
                       }
                     }
                   }
                 }
-                stackOut_52_0 = 0;
-                stackIn_53_0 = stackOut_52_0;
+                stackIn_53_0 = 0;
                 break L2;
               }
               return stackIn_53_0 != 0;
@@ -354,15 +309,13 @@ abstract class qd extends vk {
                       if (this.field_G) {
                         break L5;
                       } else {
-                        stackOut_43_0 = 1;
-                        stackIn_45_0 = stackOut_43_0;
+                        stackIn_45_0 = 1;
                         break L4;
                       }
                     }
                   }
                 }
-                stackOut_44_0 = 0;
-                stackIn_45_0 = stackOut_44_0;
+                stackIn_45_0 = 0;
                 break L4;
               }
               return stackIn_45_0 != 0;
@@ -378,15 +331,13 @@ abstract class qd extends vk {
                       if (this.field_G) {
                         break L7;
                       } else {
-                        stackOut_37_0 = 1;
-                        stackIn_39_0 = stackOut_37_0;
+                        stackIn_39_0 = 1;
                         break L6;
                       }
                     }
                   }
                 }
-                stackOut_38_0 = 0;
-                stackIn_39_0 = stackOut_38_0;
+                stackIn_39_0 = 0;
                 break L6;
               }
               return stackIn_39_0 != 0;
@@ -408,15 +359,13 @@ abstract class qd extends vk {
                       if (this.field_G) {
                         break L9;
                       } else {
-                        stackOut_28_0 = 1;
-                        stackIn_30_0 = stackOut_28_0;
+                        stackIn_30_0 = 1;
                         break L8;
                       }
                     }
                   }
                 }
-                stackOut_29_0 = 0;
-                stackIn_30_0 = stackOut_29_0;
+                stackIn_30_0 = 0;
                 break L8;
               }
               return stackIn_30_0 != 0;
@@ -433,15 +382,13 @@ abstract class qd extends vk {
                       if (this.field_G) {
                         break L11;
                       } else {
-                        stackOut_22_0 = 1;
-                        stackIn_24_0 = stackOut_22_0;
+                        stackIn_24_0 = 1;
                         break L10;
                       }
                     }
                   }
                 }
-                stackOut_23_0 = 0;
-                stackIn_24_0 = stackOut_23_0;
+                stackIn_24_0 = 0;
                 break L10;
               }
               return stackIn_24_0 != 0;
@@ -455,12 +402,10 @@ abstract class qd extends vk {
                 } else {
                   L12: {
                     if (this.field_G) {
-                      stackOut_14_0 = 0;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 0;
                       break L12;
                     } else {
-                      stackOut_13_0 = 1;
-                      stackIn_15_0 = stackOut_13_0;
+                      stackIn_15_0 = 1;
                       break L12;
                     }
                   }
@@ -481,15 +426,13 @@ abstract class qd extends vk {
                       if (this.field_G) {
                         break L14;
                       } else {
-                        stackOut_6_0 = 1;
-                        stackIn_8_0 = stackOut_6_0;
+                        stackIn_8_0 = 1;
                         break L13;
                       }
                     }
                   }
                 }
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 0;
                 break L13;
               }
               return stackIn_8_0 != 0;
@@ -505,60 +448,32 @@ abstract class qd extends vk {
         lh stackIn_2_0 = null;
         Object stackIn_5_0 = null;
         lh stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        lh stackOut_6_0 = null;
-        Object stackOut_4_0 = null;
-        lh stackOut_1_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             if (param3 > 71) {
               var6 = param4.a(param0, true, param1);
               var5 = var6;
               if (var6 != null) {
-                stackOut_6_0 = new lh(new rb(var6), param2);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = new lh(new rb(var6), param2);
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_4_0 = null;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = (lh) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (lh) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -567,56 +482,40 @@ abstract class qd extends vk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var5_ref);
-            stackOut_8_1 = new StringBuilder().append("qd.KA(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var5_ref);
+
+            stackIn_10_1 = new StringBuilder().append("qd.KA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L1;
             }
           }
           L2: {
-            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param3).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+
+
+            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L2;
             }
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_11_0), stackIn_14_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_2_0;
@@ -634,31 +533,19 @@ abstract class qd extends vk {
         RuntimeException var2 = null;
         lk var3 = null;
         lk stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        lk stackOut_3_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0 != null) {
               var2_int = -11 % ((29 - param1) / 41);
               var3 = new lk(param0, fc.field_d, field_H, gg.field_d, gh.field_C, og.field_c);
               rc.b((byte) -49);
-              stackOut_3_0 = (lk) (var3);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (lk) (var3);
               break L0;
             } else {
               return null;
@@ -668,27 +555,19 @@ abstract class qd extends vk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("qd.VA(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("qd.VA(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }

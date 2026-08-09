@@ -51,9 +51,8 @@ final class pva extends uj {
     }
 
     final int d(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != 64) {
-            discarded$0 = this.c((byte) -72);
+            this.c((byte) -72);
             return oq.field_t;
         }
         return oq.field_t;

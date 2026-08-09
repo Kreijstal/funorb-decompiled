@@ -28,14 +28,14 @@ final class qn {
     private boolean field_b;
 
     final void c(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         if (null == ua.field_d) {
           if (-1 > (go.field_c ^ -1)) {
             if (this.field_b) {
-              fieldTemp$2 = this.field_w - 1;
+              fieldTemp$0 = this.field_w - 1;
               this.field_w = this.field_w - 1;
-              if (-1 <= (fieldTemp$2 ^ -1)) {
+              if (-1 <= (fieldTemp$0 ^ -1)) {
                 this.field_w = this.field_g;
                 if (qh.field_a >= this.field_c) {
                   if (param0 >= 23) {
@@ -99,9 +99,9 @@ final class qn {
           } else {
             this.field_b = false;
             if (this.field_b) {
-              fieldTemp$3 = this.field_w - 1;
+              fieldTemp$1 = this.field_w - 1;
               this.field_w = this.field_w - 1;
-              if (-1 <= (fieldTemp$3 ^ -1)) {
+              if (-1 <= (fieldTemp$1 ^ -1)) {
                 this.field_w = this.field_g;
                 if (qh.field_a >= this.field_c) {
                   if (param0 >= 23) {
@@ -155,10 +155,10 @@ final class qn {
     }
 
     final static void a(byte param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         cq var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -267,10 +267,10 @@ final class qn {
     }
 
     private final void d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
         var2 = this.field_m;
         var3 = this.field_j;

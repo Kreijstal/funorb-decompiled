@@ -11,6 +11,9 @@ final class qb extends am {
 
     public static void a(boolean param0) {
         field_m = null;
+        if (param0) {
+            field_k = -37;
+        }
     }
 
     private qb() throws Throwable {
@@ -18,10 +21,6 @@ final class qb extends am {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = -1605303501;
         field_m = "Unable to connect to the data server. Please check any firewall you are using.";
     }

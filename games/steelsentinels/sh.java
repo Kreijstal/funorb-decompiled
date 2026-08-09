@@ -13,9 +13,8 @@ final class sh {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int discarded$0 = 0;
         if (param0 != -16088) {
-            discarded$0 = sh.c(11);
+            sh.c(11);
         }
         param3--;
         param2++;
@@ -29,13 +28,13 @@ final class sh {
     }
 
     final static void a(int param0, boolean param1, boolean param2) {
-        RuntimeException var3 = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        RuntimeException decompiledCaughtException = null;
         var7 = SteelSentinels.field_G;
         try {
           L0: {
@@ -53,7 +52,7 @@ final class sh {
                     break L1;
                   } else {
                     L3: {
-                      if (ol.field_Ub != var6) {
+                      if ((ol.field_Ub ^ -1) != (var6 ^ -1)) {
                         var4 = var4 + jh.field_a[var6 + var5];
                         break L3;
                       } else {
@@ -130,11 +129,10 @@ final class sh {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_b = null;
         field_c = null;
         if (param0 != -3274) {
-            discarded$0 = sh.c(63);
+            sh.c(63);
         }
     }
 

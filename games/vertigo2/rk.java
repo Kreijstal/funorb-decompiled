@@ -23,8 +23,6 @@ abstract class rk extends gp {
         String stackIn_22_0 = null;
         String stackIn_26_0 = null;
         String stackIn_30_0 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
@@ -32,27 +30,10 @@ abstract class rk extends gp {
         String stackIn_34_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        String stackOut_8_0 = null;
-        String stackOut_18_0 = null;
-        String stackOut_25_0 = null;
-        String stackOut_29_0 = null;
-        String stackOut_21_0 = null;
-        String stackOut_14_0 = null;
-        String stackOut_11_0 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
         try {
           L0: {
             if (-4 == (param2 ^ -1)) {
-              stackOut_2_0 = j.field_s;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = j.field_s;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -65,29 +46,25 @@ abstract class rk extends gp {
                 }
               }
               if ((param2 ^ -1) == -7) {
-                stackOut_8_0 = sk.field_d;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = sk.field_d;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (7 != param2) {
                   if (param2 != 8) {
                     if (param2 == 9) {
-                      stackOut_18_0 = ad.field_d;
-                      stackIn_19_0 = stackOut_18_0;
+                      stackIn_19_0 = ad.field_d;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       if (10 != param2) {
                         if ((param2 ^ -1) == -12) {
-                          stackOut_25_0 = fg.field_cb;
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = fg.field_cb;
                           decompiledRegionSelector0 = 6;
                           break L0;
                         } else {
                           if (-15 == (param2 ^ -1)) {
-                            stackOut_29_0 = Vertigo2.a(new String[]{param1}, bk.field_b, -115);
-                            stackIn_30_0 = stackOut_29_0;
+                            stackIn_30_0 = Vertigo2.a(new String[]{param1}, bk.field_b, -115);
                             decompiledRegionSelector0 = 7;
                             break L0;
                           } else {
@@ -95,21 +72,18 @@ abstract class rk extends gp {
                           }
                         }
                       } else {
-                        stackOut_21_0 = cf.field_b;
-                        stackIn_22_0 = stackOut_21_0;
+                        stackIn_22_0 = cf.field_b;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       }
                     }
                   } else {
-                    stackOut_14_0 = re.field_c;
-                    stackIn_15_0 = stackOut_14_0;
+                    stackIn_15_0 = re.field_c;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
-                  stackOut_11_0 = sp.field_K;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = sp.field_K;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -120,27 +94,19 @@ abstract class rk extends gp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var3);
-            stackOut_31_1 = new StringBuilder().append("rk.G(").append(param0).append(',');
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackIn_33_0 = (RuntimeException) (var3);
+
+            stackIn_33_1 = new StringBuilder().append("rk.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L2;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L2;
             }
           }

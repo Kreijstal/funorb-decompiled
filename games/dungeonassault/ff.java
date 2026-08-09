@@ -25,135 +25,19 @@ final class ff {
 
     private final void b(byte param0) {
         int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        L0: {
-          var11 = DungeonAssault.field_K;
-          var6 = -1640531527;
-          var9 = -1640531527;
-          var4 = -1640531527;
-          var7 = -1640531527;
-          var10 = -1640531527;
-          var8 = -1640531527;
-          var3 = -1640531527;
-          if (param0 > 66) {
-            break L0;
-          } else {
+        int var11 = DungeonAssault.field_K;
+        int var6 = -1640531527;
+        int var9 = -1640531527;
+        int var4 = -1640531527;
+        int var7 = -1640531527;
+        int var10 = -1640531527;
+        int var8 = -1640531527;
+        int var3 = -1640531527;
+        if (param0 <= 66) {
             ff.c(89);
-            break L0;
-          }
         }
-        var5 = -1640531527;
-        var2 = 0;
-        L1: while (true) {
-          if (4 <= var2) {
-            var2 = 0;
-            L2: while (true) {
-              if (-257 >= (var2 ^ -1)) {
-                var2 = 0;
-                L3: while (true) {
-                  if (256 <= var2) {
-                    this.b(256);
-                    this.field_a = 256;
-                    return;
-                  } else {
-                    var6 = var6 + this.field_g[var2 + 3];
-                    var8 = var8 + this.field_g[5 + var2];
-                    var9 = var9 + this.field_g[6 + var2];
-                    var4 = var4 + this.field_g[var2 + 1];
-                    var3 = var3 + this.field_g[var2];
-                    var7 = var7 + this.field_g[4 + var2];
-                    var5 = var5 + this.field_g[2 + var2];
-                    var10 = var10 + this.field_g[var2 - -7];
-                    var3 = var3 ^ var4 << 1027563339;
-                    var6 = var6 + var3;
-                    var4 = var4 + var5;
-                    var4 = var4 ^ var5 >>> 532792418;
-                    var5 = var5 + var6;
-                    var7 = var7 + var4;
-                    var5 = var5 ^ var6 << -1159207288;
-                    var6 = var6 + var7;
-                    var8 = var8 + var5;
-                    var6 = var6 ^ var7 >>> -1700270672;
-                    var9 = var9 + var6;
-                    var7 = var7 + var8;
-                    var7 = var7 ^ var8 << 322925066;
-                    var8 = var8 + var9;
-                    var10 = var10 + var7;
-                    var8 = var8 ^ var9 >>> 2013924068;
-                    var3 = var3 + var8;
-                    var9 = var9 + var10;
-                    var9 = var9 ^ var10 << -534831384;
-                    var4 = var4 + var9;
-                    var10 = var10 + var3;
-                    var10 = var10 ^ var3 >>> 198279977;
-                    var5 = var5 + var10;
-                    var3 = var3 + var4;
-                    this.field_g[var2] = var3;
-                    this.field_g[1 + var2] = var4;
-                    this.field_g[var2 - -2] = var5;
-                    this.field_g[3 + var2] = var6;
-                    this.field_g[4 + var2] = var7;
-                    this.field_g[5 + var2] = var8;
-                    this.field_g[var2 + 6] = var9;
-                    this.field_g[7 + var2] = var10;
-                    var2 += 8;
-                    continue L3;
-                  }
-                }
-              } else {
-                var10 = var10 + this.field_b[var2 + 7];
-                var6 = var6 + this.field_b[3 + var2];
-                var3 = var3 + this.field_b[var2];
-                var5 = var5 + this.field_b[2 + var2];
-                var8 = var8 + this.field_b[5 + var2];
-                var4 = var4 + this.field_b[var2 + 1];
-                var9 = var9 + this.field_b[var2 - -6];
-                var7 = var7 + this.field_b[4 + var2];
-                var3 = var3 ^ var4 << 1812542955;
-                var6 = var6 + var3;
-                var4 = var4 + var5;
-                var4 = var4 ^ var5 >>> 1972984706;
-                var7 = var7 + var4;
-                var5 = var5 + var6;
-                var5 = var5 ^ var6 << 1692357960;
-                var6 = var6 + var7;
-                var8 = var8 + var5;
-                var6 = var6 ^ var7 >>> 679070256;
-                var9 = var9 + var6;
-                var7 = var7 + var8;
-                var7 = var7 ^ var8 << 1494103082;
-                var8 = var8 + var9;
-                var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> -677505436;
-                var9 = var9 + var10;
-                var3 = var3 + var8;
-                var9 = var9 ^ var10 << 1701963752;
-                var10 = var10 + var3;
-                var4 = var4 + var9;
-                var10 = var10 ^ var3 >>> 821769609;
-                var5 = var5 + var10;
-                var3 = var3 + var4;
-                this.field_g[var2] = var3;
-                this.field_g[1 + var2] = var4;
-                this.field_g[var2 + 2] = var5;
-                this.field_g[var2 + 3] = var6;
-                this.field_g[4 + var2] = var7;
-                this.field_g[5 + var2] = var8;
-                this.field_g[6 + var2] = var9;
-                this.field_g[var2 - -7] = var10;
-                var2 += 8;
-                continue L2;
-              }
-            }
-          } else {
+        int var5 = -1640531527;
+        for (var2 = 0; 4 > var2; var2++) {
             var3 = var3 ^ var4 << 447717163;
             var6 = var6 + var3;
             var4 = var4 + var5;
@@ -178,23 +62,106 @@ final class ff {
             var10 = var10 ^ var3 >>> -585731927;
             var5 = var5 + var10;
             var3 = var3 + var4;
-            var2++;
-            continue L1;
-          }
         }
+        for (var2 = 0; -257 < (var2 ^ -1); var2 += 8) {
+            var10 = var10 + this.field_b[var2 + 7];
+            var6 = var6 + this.field_b[3 + var2];
+            var3 = var3 + this.field_b[var2];
+            var5 = var5 + this.field_b[2 + var2];
+            var8 = var8 + this.field_b[5 + var2];
+            var4 = var4 + this.field_b[var2 + 1];
+            var9 = var9 + this.field_b[var2 - -6];
+            var7 = var7 + this.field_b[4 + var2];
+            var3 = var3 ^ var4 << 1812542955;
+            var6 = var6 + var3;
+            var4 = var4 + var5;
+            var4 = var4 ^ var5 >>> 1972984706;
+            var7 = var7 + var4;
+            var5 = var5 + var6;
+            var5 = var5 ^ var6 << 1692357960;
+            var6 = var6 + var7;
+            var8 = var8 + var5;
+            var6 = var6 ^ var7 >>> 679070256;
+            var9 = var9 + var6;
+            var7 = var7 + var8;
+            var7 = var7 ^ var8 << 1494103082;
+            var8 = var8 + var9;
+            var10 = var10 + var7;
+            var8 = var8 ^ var9 >>> -677505436;
+            var9 = var9 + var10;
+            var3 = var3 + var8;
+            var9 = var9 ^ var10 << 1701963752;
+            var10 = var10 + var3;
+            var4 = var4 + var9;
+            var10 = var10 ^ var3 >>> 821769609;
+            var5 = var5 + var10;
+            var3 = var3 + var4;
+            this.field_g[var2] = var3;
+            this.field_g[1 + var2] = var4;
+            this.field_g[var2 + 2] = var5;
+            this.field_g[var2 + 3] = var6;
+            this.field_g[4 + var2] = var7;
+            this.field_g[5 + var2] = var8;
+            this.field_g[6 + var2] = var9;
+            this.field_g[var2 - -7] = var10;
+        }
+        for (var2 = 0; 256 > var2; var2 += 8) {
+            var6 = var6 + this.field_g[var2 + 3];
+            var8 = var8 + this.field_g[5 + var2];
+            var9 = var9 + this.field_g[6 + var2];
+            var4 = var4 + this.field_g[var2 + 1];
+            var3 = var3 + this.field_g[var2];
+            var7 = var7 + this.field_g[4 + var2];
+            var5 = var5 + this.field_g[2 + var2];
+            var10 = var10 + this.field_g[var2 - -7];
+            var3 = var3 ^ var4 << 1027563339;
+            var6 = var6 + var3;
+            var4 = var4 + var5;
+            var4 = var4 ^ var5 >>> 532792418;
+            var5 = var5 + var6;
+            var7 = var7 + var4;
+            var5 = var5 ^ var6 << -1159207288;
+            var6 = var6 + var7;
+            var8 = var8 + var5;
+            var6 = var6 ^ var7 >>> -1700270672;
+            var9 = var9 + var6;
+            var7 = var7 + var8;
+            var7 = var7 ^ var8 << 322925066;
+            var8 = var8 + var9;
+            var10 = var10 + var7;
+            var8 = var8 ^ var9 >>> 2013924068;
+            var3 = var3 + var8;
+            var9 = var9 + var10;
+            var9 = var9 ^ var10 << -534831384;
+            var4 = var4 + var9;
+            var10 = var10 + var3;
+            var10 = var10 ^ var3 >>> 198279977;
+            var5 = var5 + var10;
+            var3 = var3 + var4;
+            this.field_g[var2] = var3;
+            this.field_g[1 + var2] = var4;
+            this.field_g[var2 - -2] = var5;
+            this.field_g[3 + var2] = var6;
+            this.field_g[4 + var2] = var7;
+            this.field_g[5 + var2] = var8;
+            this.field_g[var2 + 6] = var9;
+            this.field_g[7 + var2] = var10;
+        }
+        this.b(256);
+        this.field_a = 256;
     }
 
     private final void b(int param0) {
-        int dupTemp$4 = 0;
-        int dupTemp$5 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int dupTemp$1 = 0;
+        int dupTemp$2 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = DungeonAssault.field_K;
-        int fieldTemp$3 = this.field_e + 1;
+        int fieldTemp$0 = this.field_e + 1;
         this.field_e = this.field_e + 1;
-        this.field_c = this.field_c + fieldTemp$3;
+        this.field_c = this.field_c + fieldTemp$0;
         if (param0 == 256) {
           var2 = 0;
           L0: while (true) {
@@ -222,12 +189,12 @@ final class ff {
                 }
               }
               this.field_d = this.field_d + this.field_g[var2 + 128 & 255];
-              dupTemp$4 = this.field_g[nb.a(var3 >> -2071862558, 255)] + (this.field_d - -this.field_c);
-              var4 = dupTemp$4;
-              this.field_g[var2] = dupTemp$4;
-              dupTemp$5 = this.field_g[nb.a(255, var4 >> -2028406552 >> -147005246)] + var3;
-              this.field_c = dupTemp$5;
-              this.field_b[var2] = dupTemp$5;
+              dupTemp$1 = this.field_g[nb.a(var3 >> -2071862558, 255)] + (this.field_d - -this.field_c);
+              var4 = dupTemp$1;
+              this.field_g[var2] = dupTemp$1;
+              dupTemp$2 = this.field_g[nb.a(255, var4 >> -2028406552 >> -147005246)] + var3;
+              this.field_c = dupTemp$2;
+              this.field_b[var2] = dupTemp$2;
               var2++;
               continue L0;
             }

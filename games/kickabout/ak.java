@@ -18,8 +18,6 @@ final class ak extends gn {
         int stackIn_18_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
@@ -27,17 +25,6 @@ final class ak extends gn {
         String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_21_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
         try {
           L0: {
             L1: {
@@ -98,15 +85,13 @@ final class ak extends gn {
                                               if (!ja.field_O) {
                                                 break L3;
                                               } else {
-                                                stackOut_21_0 = dt.b((byte) -75);
-                                                stackIn_22_0 = stackOut_21_0;
+                                                stackIn_22_0 = dt.b((byte) -75);
                                                 decompiledRegionSelector0 = 1;
                                                 break L0;
                                               }
                                             }
                                           }
-                                          stackOut_23_0 = 0;
-                                          stackIn_24_0 = stackOut_23_0;
+                                          stackIn_24_0 = 0;
                                           decompiledRegionSelector0 = 2;
                                           break L0;
                                         }
@@ -124,8 +109,7 @@ final class ak extends gn {
                 }
               }
             }
-            stackOut_17_0 = 256;
-            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_0 = 256;
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -133,27 +117,19 @@ final class ak extends gn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var2);
-            stackOut_25_1 = new StringBuilder().append("ak.C(");
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var2);
+
+            stackIn_27_1 = new StringBuilder().append("ak.C(");
+
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L4;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L4;
             }
           }
@@ -171,22 +147,18 @@ final class ak extends gn {
     }
 
     final int a(byte param0) {
-        int var2 = 0;
+        int var2;
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         var2 = 69 / ((param0 - 50) / 59);
         if ((this.field_j ^ -1) != -2) {
           if ((this.field_j ^ -1) != -3) {
             if (this.field_j == 3) {
               L0: {
                 if (this.field_n ^ ia.field_c) {
-                  stackOut_8_0 = 0;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = 0;
                   break L0;
                 } else {
-                  stackOut_7_0 = 1344;
-                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_0 = 1344;
                   break L0;
                 }
               }
@@ -211,31 +183,25 @@ final class ak extends gn {
     }
 
     final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5_int = 0;
-        long var5 = 0L;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int stackIn_5_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5_int;
+        long var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         var9 = Kickabout.field_G;
         if (-1 == (this.field_j ^ -1)) {
           L0: {
             if (-1 == (this.field_j ^ -1)) {
-              stackOut_11_0 = 4;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_0 = 4;
               break L0;
             } else {
-              stackOut_10_0 = this.field_e.field_v >> -1260780223;
-              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_0 = this.field_e.field_v >> -1260780223;
               break L0;
             }
           }
@@ -317,12 +283,10 @@ final class ak extends gn {
           } else {
             L2: {
               if (-1 == (this.field_j ^ -1)) {
-                stackOut_4_0 = 4;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 4;
                 break L2;
               } else {
-                stackOut_3_0 = this.field_e.field_v >> -1260780223;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = this.field_e.field_v >> -1260780223;
                 break L2;
               }
             }

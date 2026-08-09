@@ -61,10 +61,9 @@ abstract class fu {
     }
 
     public static void b(byte param0) {
-        int[] discarded$0 = null;
         field_d = null;
         if (param0 != 89) {
-            discarded$0 = fu.a(false);
+            fu.a(false);
         }
     }
 

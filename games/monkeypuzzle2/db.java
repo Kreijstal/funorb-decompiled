@@ -14,9 +14,8 @@ final class db implements ml {
     private int field_i;
 
     final static void a(int param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         var1 = we.field_n;
         synchronized (var1) {
           L0: {
@@ -36,20 +35,16 @@ final class db implements ml {
     }
 
     final static void a(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
         L0: {
           var2 = MonkeyPuzzle2.field_F ? 1 : 0;
           if (!param0) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -129,65 +124,172 @@ final class db implements ml {
         de var5 = null;
         d stackIn_4_0 = null;
         Object stackIn_6_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        d stackOut_3_0 = null;
-        ug stackOut_5_0 = null;
-        var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        try {
-          L0: {
-            var2_int = -108 % ((param1 - -28) / 61);
-            var3 = (d) ((Object) wk.field_b.a((byte) -117));
-            L1: while (true) {
-              L2: {
-                L3: {
-                  if (var3 == null) {
-                    break L3;
-                  } else {
-                    pj.a(param0, var3, true);
-                    stackOut_3_0 = (d) ((Object) wk.field_b.d((byte) 63));
-                    stackIn_6_0 = stackOut_3_0;
-                    stackIn_4_0 = stackOut_3_0;
-                    if (var4 != 0) {
-                      break L2;
-                    } else {
-                      var3 = stackIn_4_0;
-                      if (var4 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
+        d stackOut_3_0;
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = MonkeyPuzzle2.field_F ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    try {
+                        var2_int = -108 % ((param1 - -28) / 61);
+                        var3 = (d) ((Object) wk.field_b.a((byte) -117));
+                        statePc = 2;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 13;
+                        continue stateLoop;
                     }
-                  }
                 }
-                stackOut_5_0 = qa.field_d.a((byte) -117);
-                stackIn_6_0 = stackOut_5_0;
-                break L2;
-              }
-              var5 = (de) ((Object) stackIn_6_0);
-              L4: while (true) {
-                if (var5 == null) {
-                  break L0;
-                } else {
-                  w.a(-94, param0, var5);
-                  var5 = (de) ((Object) qa.field_d.d((byte) 63));
-                  if (var4 == 0) {
-                    continue L4;
-                  } else {
+                case 2: {
+                    try {
+                        if (var3 == null) {
+                            statePc = 5;
+                        } else {
+                            statePc = 3;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        pj.a(param0, var3, true);
+                        stackOut_3_0 = (d) ((Object) wk.field_b.d((byte) 63));
+                        stackIn_6_0 = stackOut_3_0;
+                        stackIn_4_0 = stackOut_3_0;
+                        if (var4 != 0) {
+                            statePc = 6;
+                        } else {
+                            statePc = 4;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        var3 = stackIn_4_0;
+                        if (var4 == 0) {
+                            statePc = 2;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        stackIn_6_0 = qa.field_d.a((byte) -117);
+                        statePc = 6;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        var5 = (de) ((Object) stackIn_6_0);
+                        statePc = 7;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        if (var5 == null) {
+                            statePc = 14;
+                        } else {
+                            statePc = 8;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        w.a(-94, param0, var5);
+                        var5 = (de) ((Object) qa.field_d.d((byte) 63));
+                        if (var4 == 0) {
+                            statePc = 10;
+                        } else {
+                            statePc = 9;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 9: {
+                    try {
+                        return;
+                    } catch (Throwable stateCaught_9) {
+                        caughtException = stateCaught_9;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    try {
+                        if (var4 == 0) {
+                            statePc = 7;
+                        } else {
+                            statePc = 11;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_10) {
+                        caughtException = stateCaught_10;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    try {
+                        return;
+                    } catch (Throwable stateCaught_11) {
+                        caughtException = stateCaught_11;
+                        statePc = 13;
+                        continue stateLoop;
+                    }
+                }
+                case 13: {
+                    var2 = (RuntimeException) ((Object) caughtException);
+                    throw la.a((Throwable) ((Object) var2), "db.A(" + param0 + ',' + param1 + ')');
+                }
+                case 14: {
                     return;
-                  }
                 }
-              }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw la.a((Throwable) ((Object) var2), "db.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     public final void a(boolean param0, we param1, int param2, int param3, int param4) {
-        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -197,8 +299,6 @@ final class db implements ml {
         int var13 = 0;
         fj var14 = null;
         we stackIn_3_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -206,26 +306,14 @@ final class db implements ml {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        we stackOut_2_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             L1: {
               if (param1 instanceof fj) {
-                stackOut_2_0 = (we) (param1);
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (we) (param1);
                 break L1;
               } else {
-                stackOut_1_0 = null;
-                stackIn_3_0 = (we) ((Object) stackOut_1_0);
+                stackIn_3_0 = null;
                 break L1;
               }
             }
@@ -260,7 +348,7 @@ final class db implements ml {
               ge.e(var7, var8, var7 + var11, var12 + var8, 1);
               if (this.field_a != null) {
                 var13 = this.field_d + var14.field_I + var14.field_G;
-                discarded$1 = this.field_a.a(param1.field_s, param1.field_r + (param3 - -var13), this.field_g + param2 - -param1.field_e, -this.field_d - (var13 - param1.field_l), -(this.field_d << 1978096801) + param1.field_p, this.field_f, this.field_h, 1, 1, 0);
+                this.field_a.a(param1.field_s, param1.field_r + (param3 - -var13), this.field_g + param2 - -param1.field_e, -this.field_d - (var13 - param1.field_l), -(this.field_d << 1978096801) + param1.field_p, this.field_f, this.field_h, 1, 1, 0);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -275,27 +363,19 @@ final class db implements ml {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var6);
-            stackOut_12_1 = new StringBuilder().append("db.C(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var6);
+
+            stackIn_14_1 = new StringBuilder().append("db.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
@@ -320,174 +400,14 @@ final class db implements ml {
     }
 
     final static void b(byte param0) {
-        int var1 = 0;
         int var2 = 0;
         int var3 = 0;
-        int stackIn_2_0 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_4_1 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_5_1 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_6_1 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_7_1 = 0;
-        int stackIn_7_2 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_14_1 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_15_1 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_16_1 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_17_1 = 0;
-        int stackIn_17_2 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_13_1 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_12_1 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_14_1 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_16_1 = 0;
-        int stackOut_16_2 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
-        int stackOut_15_2 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_3_1 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_2_1 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_4_1 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        var1 = 8;
+        int var1 = 8;
         ci.a(param0 ^ 30460, 176, 464, var1 + 40 + -2, 0, new int[]{0, 3, 11, 12, 4, 2, 13, 10}, 100);
         ci.a(30380, 176, 464, var1 + 40, 1, new int[]{1, 11, 12, 4, 3, 6}, 145);
-        if (param0 == 80) {
-          L0: {
-            stackOut_11_0 = 30380;
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_12_0 = stackOut_11_0;
-            if (fe.field_h == 2) {
-              stackOut_13_0 = stackIn_13_0;
-              stackOut_13_1 = 65;
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              break L0;
-            } else {
-              stackOut_12_0 = stackIn_12_0;
-              stackOut_12_1 = 75;
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              break L0;
-            }
-          }
-          L1: {
-            stackOut_14_0 = stackIn_14_0;
-            stackOut_14_1 = stackIn_14_1;
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
-            if (2 != fe.field_h) {
-              stackOut_16_0 = stackIn_16_0;
-              stackOut_16_1 = stackIn_16_1;
-              stackOut_16_2 = 565;
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L1;
-            } else {
-              stackOut_15_0 = stackIn_15_0;
-              stackOut_15_1 = stackIn_15_1;
-              stackOut_15_2 = 575;
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L1;
-            }
-          }
-          L2: {
-            ci.a(stackIn_17_0, stackIn_17_1, stackIn_17_2, var1 + 40, 2, new int[]{7, 8, 9, 5}, 380);
-            ci.a(30380, 255, 385, var1 + 40, 3, new int[]{16, 17, 19}, 380);
-            ci.a(30380, 255, 385, var1 + 40, 4, new int[]{16, 17, 18}, 380);
-            ci.a(30380, 166, 474, var1 + 40, 5, new int[]{5}, 370);
-            ci.a(param0 + 30300, 180, 460, 40 - -var1, 6, new int[]{2, 5}, 370);
-            ci.a(param0 + 30300, 164, 476, 40 - -var1, 7, new int[]{14, 15}, 200);
-            ci.a(param0 + 30300, 166, 474, 40 - -var1, 8, new int[]{14, 5}, 370);
-            ci.a(30380, 166, 474, var1 + 40, 9, new int[]{14, 5}, 380);
-            ci.a(param0 + 30300, 180, 460, 40 - -var1, 10, new int[]{5}, 370);
-            lh.field_b = pl.field_e.a(ma.field_a[11]);
-            var2 = pl.field_e.a(ma.field_a[12]);
-            if (var2 > lh.field_b) {
-              lh.field_b = var2;
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          var3 = 4 + pl.field_e.field_j - -pl.field_e.field_D;
-          i.field_r[7] = pl.field_e.field_D + 200 + (pl.field_e.field_C + var3);
-          mc.field_b[7] = 40 + var3;
-          return;
-        } else {
-          L3: {
+        if (param0 != 80) {
             field_e = (String) null;
-            stackOut_1_0 = 30380;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
-            if (fe.field_h == 2) {
-              stackOut_3_0 = stackIn_3_0;
-              stackOut_3_1 = 65;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              break L3;
-            } else {
-              stackOut_2_0 = stackIn_2_0;
-              stackOut_2_1 = 75;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              break L3;
-            }
-          }
-          L4: {
-            stackOut_4_0 = stackIn_4_0;
-            stackOut_4_1 = stackIn_4_1;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
-            if (2 != fe.field_h) {
-              stackOut_6_0 = stackIn_6_0;
-              stackOut_6_1 = stackIn_6_1;
-              stackOut_6_2 = 565;
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L4;
-            } else {
-              stackOut_5_0 = stackIn_5_0;
-              stackOut_5_1 = stackIn_5_1;
-              stackOut_5_2 = 575;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L4;
-            }
-          }
-          L5: {
-            ci.a(stackIn_7_0, stackIn_7_1, stackIn_7_2, var1 + 40, 2, new int[]{7, 8, 9, 5}, 380);
+            ci.a(30380, fe.field_h != 2 ? 75 : 65, 2 == fe.field_h ? 575 : 565, var1 + 40, 2, new int[]{7, 8, 9, 5}, 380);
             ci.a(30380, 255, 385, var1 + 40, 3, new int[]{16, 17, 19}, 380);
             ci.a(30380, 255, 385, var1 + 40, 4, new int[]{16, 17, 18}, 380);
             ci.a(30380, 166, 474, var1 + 40, 5, new int[]{5}, 370);
@@ -498,18 +418,31 @@ final class db implements ml {
             ci.a(param0 + 30300, 180, 460, 40 - -var1, 10, new int[]{5}, 370);
             lh.field_b = pl.field_e.a(ma.field_a[11]);
             var2 = pl.field_e.a(ma.field_a[12]);
-            if (var2 > lh.field_b) {
-              lh.field_b = var2;
-              break L5;
-            } else {
-              break L5;
+            if (!(var2 <= lh.field_b)) {
+                lh.field_b = var2;
             }
-          }
-          var3 = 4 + pl.field_e.field_j - -pl.field_e.field_D;
-          i.field_r[7] = pl.field_e.field_D + 200 + (pl.field_e.field_C + var3);
-          mc.field_b[7] = 40 + var3;
-          return;
+            var3 = 4 + pl.field_e.field_j - -pl.field_e.field_D;
+            i.field_r[7] = pl.field_e.field_D + 200 + (pl.field_e.field_C + var3);
+            mc.field_b[7] = 40 + var3;
+            return;
         }
+        ci.a(30380, fe.field_h != 2 ? 75 : 65, 2 == fe.field_h ? 575 : 565, var1 + 40, 2, new int[]{7, 8, 9, 5}, 380);
+        ci.a(30380, 255, 385, var1 + 40, 3, new int[]{16, 17, 19}, 380);
+        ci.a(30380, 255, 385, var1 + 40, 4, new int[]{16, 17, 18}, 380);
+        ci.a(30380, 166, 474, var1 + 40, 5, new int[]{5}, 370);
+        ci.a(param0 + 30300, 180, 460, 40 - -var1, 6, new int[]{2, 5}, 370);
+        ci.a(param0 + 30300, 164, 476, 40 - -var1, 7, new int[]{14, 15}, 200);
+        ci.a(param0 + 30300, 166, 474, 40 - -var1, 8, new int[]{14, 5}, 370);
+        ci.a(30380, 166, 474, var1 + 40, 9, new int[]{14, 5}, 380);
+        ci.a(param0 + 30300, 180, 460, 40 - -var1, 10, new int[]{5}, 370);
+        lh.field_b = pl.field_e.a(ma.field_a[11]);
+        var2 = pl.field_e.a(ma.field_a[12]);
+        if (!(var2 <= lh.field_b)) {
+            lh.field_b = var2;
+        }
+        var3 = 4 + pl.field_e.field_j - -pl.field_e.field_D;
+        i.field_r[7] = pl.field_e.field_D + 200 + (pl.field_e.field_C + var3);
+        mc.field_b[7] = 40 + var3;
     }
 
     db(ta param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

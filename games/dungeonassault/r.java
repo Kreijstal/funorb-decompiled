@@ -7,17 +7,11 @@ final class r {
     static String field_a;
 
     final static boolean a(int param0, boolean param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_18_0 = 0;
         int stackIn_45_0 = 0;
         int stackIn_54_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
+        int var4;
+        int var5;
         if (param1) {
           if (i.field_t[param2] < i.field_t[param3]) {
             return true;
@@ -34,12 +28,10 @@ final class r {
                       } else {
                         L0: {
                           if (param2 >= param3) {
-                            stackOut_53_0 = 0;
-                            stackIn_54_0 = stackOut_53_0;
+                            stackIn_54_0 = 0;
                             break L0;
                           } else {
-                            stackOut_52_0 = 1;
-                            stackIn_54_0 = stackOut_52_0;
+                            stackIn_54_0 = 1;
                             break L0;
                           }
                         }
@@ -58,12 +50,10 @@ final class r {
                       } else {
                         L1: {
                           if (param2 >= param3) {
-                            stackOut_44_0 = 0;
-                            stackIn_45_0 = stackOut_44_0;
+                            stackIn_45_0 = 0;
                             break L1;
                           } else {
-                            stackOut_43_0 = 1;
-                            stackIn_45_0 = stackOut_43_0;
+                            stackIn_45_0 = 1;
                             break L1;
                           }
                         }
@@ -116,12 +106,10 @@ final class r {
                       } else {
                         L2: {
                           if (param2 >= param3) {
-                            stackOut_17_0 = 0;
-                            stackIn_18_0 = stackOut_17_0;
+                            stackIn_18_0 = 0;
                             break L2;
                           } else {
-                            stackOut_16_0 = 1;
-                            stackIn_18_0 = stackOut_16_0;
+                            stackIn_18_0 = 1;
                             break L2;
                           }
                         }

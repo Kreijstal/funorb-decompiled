@@ -45,8 +45,6 @@ abstract class sm implements el {
         int stackIn_3_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -54,17 +52,6 @@ abstract class sm implements el {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var8 = EscapeVector.field_A;
         try {
           L0: {
@@ -74,8 +61,7 @@ abstract class sm implements el {
               var5 = 0;
               L1: while (true) {
                 if (var4.length <= var5) {
-                  stackOut_12_0 = -1;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = -1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -85,8 +71,7 @@ abstract class sm implements el {
                       if (!var7.a((byte) 65, param3, param0)) {
                         break L2;
                       } else {
-                        stackOut_9_0 = var7.field_c;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = var7.field_c;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -99,8 +84,7 @@ abstract class sm implements el {
                 }
               }
             } else {
-              stackOut_2_0 = -1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = -1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -109,27 +93,19 @@ abstract class sm implements el {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var4_ref);
-            stackOut_14_1 = new StringBuilder().append("sm.R(").append(param0).append(',').append(param1).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var4_ref);
+
+            stackIn_16_1 = new StringBuilder().append("sm.R(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L3;
             }
           }
@@ -168,7 +144,6 @@ abstract class sm implements el {
     final static void a(qd param0, int param1, boolean param2) {
         c var3 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var3 = om.field_c;
             var3.a(param1, param2);
@@ -181,7 +156,7 @@ abstract class sm implements el {
             var3.a((byte) 127, param0.field_i);
             var3.a((byte) 125, param0.field_j);
             var3.a((byte) 127, param0.field_g);
-            discarded$0 = var3.c(var4, -76);
+            var3.c(var4, -76);
             var3.e(86, var3.field_m - var4);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "sm.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -190,222 +165,109 @@ abstract class sm implements el {
 
     final static void a(boolean param0, boolean param1) {
         int var2 = 0;
-        int var3 = 0;
-        pk stackIn_17_0 = null;
-        pk stackIn_18_0 = null;
-        pk stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
-        pk stackIn_50_0 = null;
-        pk stackIn_51_0 = null;
-        pk stackIn_52_0 = null;
-        int stackIn_52_1 = 0;
-        pk stackOut_49_0 = null;
-        pk stackOut_51_0 = null;
-        int stackOut_51_1 = 0;
-        pk stackOut_50_0 = null;
-        int stackOut_50_1 = 0;
-        pk stackOut_16_0 = null;
-        pk stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        pk stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        var3 = EscapeVector.field_A;
-        if (!param0) {
-          if (s.field_x > 0) {
-            if (km.field_n == null) {
-              L0: {
-                df.field_d = al.a(640, -16493, g.field_r, 480, 0, 0);
-                if (null != df.field_d) {
-                  var2 = 2;
-                  rc.a(df.field_d, true);
-                  break L0;
-                } else {
-                  var2 = 3;
-                  break L0;
-                }
-              }
-              L1: {
-                if (null != km.field_n) {
-                  break L1;
-                } else {
-                  if (!e.field_d) {
-                    break L1;
-                  } else {
+        int var3 = EscapeVector.field_A;
+        if (param0) {
+            field_a = (String) null;
+            if (s.field_x <= 0) {
+                if (!aj.b(-104)) {
+                    var2 = 1;
+                    if (null != km.field_n) {
+                        return;
+                    }
+                    if (!e.field_d) {
+                        return;
+                    }
                     sn.a(var2, 0, param1);
                     return;
-                  }
                 }
-              }
-              return;
-            } else {
-              L2: {
-                stackOut_49_0 = km.field_n;
-                stackIn_51_0 = stackOut_49_0;
-                stackIn_50_0 = stackOut_49_0;
-                if (param0) {
-                  stackOut_51_0 = (pk) ((Object) stackIn_51_0);
-                  stackOut_51_1 = 0;
-                  stackIn_52_0 = stackOut_51_0;
-                  stackIn_52_1 = stackOut_51_1;
-                  break L2;
-                } else {
-                  stackOut_50_0 = (pk) ((Object) stackIn_50_0);
-                  stackOut_50_1 = 1;
-                  stackIn_52_0 = stackOut_50_0;
-                  stackIn_52_1 = stackOut_50_1;
-                  break L2;
-                }
-              }
-              L3: {
-                df.field_d = ((pk) (Object) stackIn_52_0).a(stackIn_52_1 != 0);
-                ue.b(2, (byte) 101);
-                if (null != df.field_d) {
-                  var2 = 2;
-                  rc.a(df.field_d, true);
-                  break L3;
-                } else {
-                  var2 = 3;
-                  break L3;
-                }
-              }
-              L4: {
+                var2 = 0;
                 if (null != km.field_n) {
-                  break L4;
-                } else {
-                  if (!e.field_d) {
-                    break L4;
-                  } else {
-                    sn.a(var2, 0, param1);
                     return;
-                  }
                 }
-              }
-              return;
-            }
-          } else {
-            if (aj.b(-104)) {
-              var2 = 0;
-              if (null == km.field_n) {
-                if (e.field_d) {
-                  sn.a(var2, 0, param1);
-                  return;
-                } else {
-                  return;
+                if (!e.field_d) {
+                    return;
                 }
-              } else {
+                sn.a(var2, 0, param1);
                 return;
-              }
+            }
+            if (km.field_n != null) {
+                df.field_d = km.field_n.a(!param0 ? true : false);
+                ue.b(2, (byte) 101);
+                if (null == df.field_d) {
+                    var2 = 3;
+                } else {
+                    var2 = 2;
+                    rc.a(df.field_d, true);
+                }
+                if (null != km.field_n) {
+                    return;
+                }
+                if (!e.field_d) {
+                    return;
+                }
+                sn.a(var2, 0, param1);
+                return;
+            }
+            df.field_d = al.a(640, -16493, g.field_r, 480, 0, 0);
+            if (null == df.field_d) {
+                var2 = 3;
             } else {
-              L5: {
+                var2 = 2;
+                rc.a(df.field_d, true);
+            }
+            if (null != km.field_n) {
+                return;
+            }
+            if (!e.field_d) {
+                return;
+            }
+            sn.a(var2, 0, param1);
+            return;
+        }
+        if (s.field_x <= 0) {
+            if (!aj.b(-104)) {
                 var2 = 1;
-                if (null != km.field_n) {
-                  break L5;
-                } else {
-                  if (!e.field_d) {
-                    break L5;
-                  } else {
+                if (null == km.field_n && e.field_d) {
                     sn.a(var2, 0, param1);
                     return;
-                  }
                 }
-              }
-              return;
+                return;
             }
-          }
+            var2 = 0;
+            if (null != km.field_n) {
+                return;
+            }
+            if (!e.field_d) {
+                return;
+            }
+            sn.a(var2, 0, param1);
+            return;
+        }
+        if (km.field_n != null) {
+            df.field_d = km.field_n.a(!param0 ? true : false);
+            ue.b(2, (byte) 101);
+            if (null == df.field_d) {
+                var2 = 3;
+            } else {
+                var2 = 2;
+                rc.a(df.field_d, true);
+            }
+            if (null == km.field_n && e.field_d) {
+                sn.a(var2, 0, param1);
+                return;
+            }
+            return;
+        }
+        df.field_d = al.a(640, -16493, g.field_r, 480, 0, 0);
+        if (null == df.field_d) {
+            var2 = 3;
         } else {
-          field_a = (String) null;
-          if (s.field_x > 0) {
-            if (km.field_n == null) {
-              L6: {
-                df.field_d = al.a(640, -16493, g.field_r, 480, 0, 0);
-                if (null != df.field_d) {
-                  var2 = 2;
-                  rc.a(df.field_d, true);
-                  break L6;
-                } else {
-                  var2 = 3;
-                  break L6;
-                }
-              }
-              if (null == km.field_n) {
-                if (e.field_d) {
-                  sn.a(var2, 0, param1);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              L7: {
-                stackOut_16_0 = km.field_n;
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_17_0 = stackOut_16_0;
-                if (param0) {
-                  stackOut_18_0 = (pk) ((Object) stackIn_18_0);
-                  stackOut_18_1 = 0;
-                  stackIn_19_0 = stackOut_18_0;
-                  stackIn_19_1 = stackOut_18_1;
-                  break L7;
-                } else {
-                  stackOut_17_0 = (pk) ((Object) stackIn_17_0);
-                  stackOut_17_1 = 1;
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_19_1 = stackOut_17_1;
-                  break L7;
-                }
-              }
-              L8: {
-                df.field_d = ((pk) (Object) stackIn_19_0).a(stackIn_19_1 != 0);
-                ue.b(2, (byte) 101);
-                if (null != df.field_d) {
-                  var2 = 2;
-                  rc.a(df.field_d, true);
-                  break L8;
-                } else {
-                  var2 = 3;
-                  break L8;
-                }
-              }
-              if (null == km.field_n) {
-                if (e.field_d) {
-                  sn.a(var2, 0, param1);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            }
-          } else {
-            if (aj.b(-104)) {
-              var2 = 0;
-              if (null == km.field_n) {
-                if (e.field_d) {
-                  sn.a(var2, 0, param1);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              var2 = 1;
-              if (null == km.field_n) {
-                if (e.field_d) {
-                  sn.a(var2, 0, param1);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            }
-          }
+            var2 = 2;
+            rc.a(df.field_d, true);
+        }
+        if (null == km.field_n && e.field_d) {
+            sn.a(var2, 0, param1);
+            return;
         }
     }
 

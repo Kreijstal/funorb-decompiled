@@ -20,10 +20,8 @@ final class cm {
         if (param0 != -8) {
             field_a = (String) null;
         }
-        if (var1 != null) {
-            if (-1 >= (var1.indexOf('@') ^ -1)) {
-                var1 = "";
-            }
+        if (var1 != null && -1 >= (var1.indexOf('@') ^ -1)) {
+            var1 = "";
         }
         return new ji(we.p((byte) -21), nb.c(0));
     }

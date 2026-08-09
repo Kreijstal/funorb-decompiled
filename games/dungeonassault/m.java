@@ -52,13 +52,12 @@ abstract class m implements dp {
     }
 
     public final od a(byte param0) {
-        java.applet.Applet discarded$2 = null;
         if (!this.a(-51)) {
           if ((350L + this.field_b ^ -1L) < (kd.c(-2456) ^ -1L)) {
             return ub.field_s;
           } else {
             if (param0 > -91) {
-              discarded$2 = m.c(false);
+              m.c(false);
               return this.b(false);
             } else {
               return this.b(false);
@@ -97,7 +96,7 @@ abstract class m implements dp {
     }
 
     final static void b(byte param0) {
-        int var1 = 0;
+        int var1;
         if (param0 >= 34) {
           if (-225 < (oo.field_d ^ -1)) {
             var1 = oo.field_d % 32;

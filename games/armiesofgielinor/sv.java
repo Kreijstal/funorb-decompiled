@@ -5,7 +5,7 @@ final class sv extends el implements java.awt.event.MouseWheelListener {
     private int field_g;
 
     final synchronized int a(int param0) {
-        int var2 = 0;
+        int var2;
         if (param0 != 9) {
           this.field_g = -118;
           var2 = this.field_g;

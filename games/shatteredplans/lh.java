@@ -18,7 +18,7 @@ final class lh extends vd {
     private int field_F;
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
+        int var4;
         if (!this.field_s) {
           return;
         } else {
@@ -91,9 +91,9 @@ final class lh extends vd {
     }
 
     final static void d(byte param0) {
-        int fieldTemp$2 = di.field_m + 1;
+        int fieldTemp$1 = di.field_m + 1;
         di.field_m = di.field_m + 1;
-        if ((fieldTemp$2 ^ -1) <= -201) {
+        if ((fieldTemp$1 ^ -1) <= -201) {
           if (jn.field_a) {
             if (!p.field_n) {
               jc.a(1, (byte) 127);
@@ -162,8 +162,8 @@ final class lh extends vd {
     }
 
     final void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         if (this.field_s) {
           L0: {
             var4 = bb.field_b - this.field_t;

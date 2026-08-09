@@ -16,14 +16,12 @@ final class pn extends nm {
     static String field_s;
 
     static int a(int param0, int param1) {
-        RuntimeException var2 = null;
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_0_0 = 0;
+        RuntimeException var2 = null;
         try {
           L0: {
-            stackOut_0_0 = param0 ^ param1;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = param0 ^ param1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -35,6 +33,11 @@ final class pn extends nm {
     }
 
     final static String c(int param0) {
+        String stackIn_3_0 = null;
+        String stackIn_59_0 = null;
+        Object stackIn_96_0 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         Object var1 = null;
         Object var2 = null;
         String var3 = null;
@@ -45,15 +48,6 @@ final class pn extends nm {
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
-        String stackIn_3_0 = null;
-        String stackIn_59_0 = null;
-        Object stackIn_96_0 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_58_0 = null;
-        String stackOut_56_0 = null;
-        Object stackOut_95_0 = null;
-        String stackOut_2_0 = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -198,12 +192,10 @@ final class pn extends nm {
                     }
                     L13: {
                       if (!ri.a(param0 + 9142)) {
-                        stackOut_58_0 = "<img=3>: ";
-                        stackIn_59_0 = stackOut_58_0;
+                        stackIn_59_0 = "<img=3>: ";
                         break L13;
                       } else {
-                        stackOut_56_0 = ": ";
-                        stackIn_59_0 = stackOut_56_0;
+                        stackIn_59_0 = ": ";
                         break L13;
                       }
                     }
@@ -288,13 +280,11 @@ final class pn extends nm {
                   break L6;
                 }
               }
-              stackOut_95_0 = var1;
-              stackIn_96_0 = stackOut_95_0;
+              stackIn_96_0 = var1;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = (String) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (String) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -328,9 +318,8 @@ final class pn extends nm {
     }
 
     final static void b(int param0, int param1) {
-        String discarded$2 = null;
-        RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -340,7 +329,7 @@ final class pn extends nm {
               if (param0 <= -4) {
                 break L1;
               } else {
-                discarded$2 = pn.c(104);
+                pn.c(104);
                 break L1;
               }
             }

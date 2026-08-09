@@ -57,12 +57,10 @@ final class mb extends he {
     }
 
     final static void c(byte param0) {
-        boolean discarded$14 = false;
-        boolean discarded$15 = false;
-        RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -83,7 +81,7 @@ final class mb extends he {
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
-              discarded$14 = hr.field_e.a(ik.field_l, true, qo.field_d, true);
+              hr.field_e.a(ik.field_l, true, qo.field_d, true);
               hr.field_e.f((byte) 33);
               if (param0 >= 120) {
                 L2: while (true) {
@@ -91,7 +89,7 @@ final class mb extends he {
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    discarded$15 = hr.field_e.a(108, fr.field_e, bk.field_f);
+                    hr.field_e.a(108, fr.field_e, bk.field_f);
                     continue L2;
                   }
                 }

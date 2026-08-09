@@ -11,17 +11,13 @@ final class ud extends q {
     long[] field_o;
 
     final static String b(int param0) {
-        if (!jd.field_E) {
-            if (lp.field_b >= um.field_l) {
-                if (um.field_l - -uf.field_g > lp.field_b) {
-                    return wb.field_t;
-                }
-            }
+        if (!jd.field_E && lp.field_b >= um.field_l && um.field_l - -uf.field_g > lp.field_b) {
+            return wb.field_t;
         }
         if (param0 == 0) {
             return null;
         }
-        String discarded$0 = ud.b(-7);
+        ud.b(-7);
         return null;
     }
 
@@ -29,23 +25,12 @@ final class ud extends q {
         ud var3 = null;
         RuntimeException var3_ref = null;
         ud stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ud stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -59,35 +44,26 @@ final class ud extends q {
               }
             }
             var3.field_o = this.field_o;
-            stackOut_2_0 = (ud) (var3);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (ud) (var3);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3_ref);
-            stackOut_4_1 = new StringBuilder().append("ud.A(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3_ref);
+
+            stackIn_6_1 = new StringBuilder().append("ud.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -104,13 +80,13 @@ final class ud extends q {
     }
 
     final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        long var5 = 0L;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
+        int var2;
+        int var3;
+        int var4;
+        long var5;
+        long var7;
+        int var9;
+        int var10;
         L0: {
           var10 = Torquing.field_u;
           this.field_o = ee.b(-124);

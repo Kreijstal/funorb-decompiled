@@ -5,9 +5,8 @@ final class vlb implements dja {
     static llb field_a;
 
     public final tv[] a(int param0, int param1) {
-        tv[] discarded$0 = null;
         if (param0 != 11995) {
-            discarded$0 = this.a(-6, 97);
+            this.a(-6, 97);
             return (tv[]) ((Object) new odb[param1]);
         }
         return (tv[]) ((Object) new odb[param1]);

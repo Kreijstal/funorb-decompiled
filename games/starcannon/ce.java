@@ -13,12 +13,10 @@ final class ce {
     }
 
     final static void a(byte param0) {
-        boolean discarded$15 = false;
-        boolean discarded$16 = false;
-        RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = StarCannon.field_A;
         try {
           L0: {
@@ -31,14 +29,14 @@ final class ce {
                   break L1;
                 }
               }
-              discarded$15 = ed.field_q.a((byte) -127, true, bg.field_e, ie.field_z);
+              ed.field_q.a((byte) -127, true, bg.field_e, ie.field_z);
               ed.field_q.h(-10597);
               L2: while (true) {
                 if (!ad.e((byte) -123)) {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  discarded$16 = ed.field_q.a(lb.field_B, -125, StarCannon.field_E);
+                  ed.field_q.a(lb.field_B, -125, StarCannon.field_E);
                   continue L2;
                 }
               }
@@ -73,11 +71,11 @@ final class ce {
     }
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         re var4 = null;
         vc var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = StarCannon.field_A;
         try {
           L0: {

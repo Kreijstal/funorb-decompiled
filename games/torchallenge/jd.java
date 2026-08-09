@@ -28,10 +28,10 @@ final class jd extends RuntimeException {
     }
 
     final static void a(byte param0) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        RuntimeException var1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -42,8 +42,6 @@ final class jd extends RuntimeException {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -141,10 +139,10 @@ final class jd extends RuntimeException {
                               L11: {
                                 var7 = lc.a(var10, 1);
                                 if (0 > var7) {
-                                  discarded$2 = tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, 1, 1, 0);
+                                  tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, 1, 1, 0);
                                   break L11;
                                 } else {
-                                  discarded$3 = tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, var7, 1, 1, 0);
+                                  tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, var7, 1, 1, 0);
                                   break L11;
                                 }
                               }

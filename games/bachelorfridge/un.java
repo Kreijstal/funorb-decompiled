@@ -17,10 +17,9 @@ final class un {
     int field_k;
 
     public static void a(int param0) {
-        boolean discarded$2 = false;
         field_f = null;
         if (param0 != 2) {
-          discarded$2 = un.a(false, -119, 88, 16);
+          un.a(false, -119, 88, 16);
           field_a = null;
           field_m = null;
           return;
@@ -36,14 +35,6 @@ final class un {
         int stackIn_11_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
         if (param0 >= 82) {
           if (Math.abs(param2) >= Math.abs(param1)) {
             if (Math.abs(param2) <= Math.abs(param1)) {
@@ -51,12 +42,10 @@ final class un {
                 if (0 < param2) {
                   L0: {
                     if ((param1 ^ -1) > -1) {
-                      stackOut_21_0 = 4;
-                      stackIn_22_0 = stackOut_21_0;
+                      stackIn_22_0 = 4;
                       break L0;
                     } else {
-                      stackOut_20_0 = 3;
-                      stackIn_22_0 = stackOut_20_0;
+                      stackIn_22_0 = 3;
                       break L0;
                     }
                   }
@@ -67,12 +56,10 @@ final class un {
               } else {
                 L1: {
                   if ((param1 ^ -1) <= -1) {
-                    stackOut_15_0 = 2;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = 2;
                     break L1;
                   } else {
-                    stackOut_14_0 = 1;
-                    stackIn_16_0 = stackOut_14_0;
+                    stackIn_16_0 = 1;
                     break L1;
                   }
                 }
@@ -81,12 +68,10 @@ final class un {
             } else {
               L2: {
                 if (-1 < (param2 ^ -1)) {
-                  stackOut_10_0 = 2;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = 2;
                   break L2;
                 } else {
-                  stackOut_9_0 = 4;
-                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_11_0 = 4;
                   break L2;
                 }
               }
@@ -95,12 +80,10 @@ final class un {
           } else {
             L3: {
               if ((param1 ^ -1) > -1) {
-                stackOut_5_0 = 1;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 1;
                 break L3;
               } else {
-                stackOut_4_0 = 3;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 3;
                 break L3;
               }
             }
@@ -112,11 +95,9 @@ final class un {
     }
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_45_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_43_0 = 0;
+        int var4;
+        int var5;
         if (param0) {
           if (gk.field_a[param1] > gk.field_a[param3]) {
             return true;
@@ -135,12 +116,10 @@ final class un {
                       } else {
                         L0: {
                           if (param1 <= param3) {
-                            stackOut_44_0 = 0;
-                            stackIn_45_0 = stackOut_44_0;
+                            stackIn_45_0 = 0;
                             break L0;
                           } else {
-                            stackOut_43_0 = 1;
-                            stackIn_45_0 = stackOut_43_0;
+                            stackIn_45_0 = 1;
                             break L0;
                           }
                         }

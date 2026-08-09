@@ -38,10 +38,8 @@ class tga extends jm {
                 tga.a(-106);
             }
             var3_int = param1.field_L.field_o[this.field_n][this.field_o].field_n;
-            if (0 != (param1.field_L.field_o[this.field_n][this.field_o].field_a ^ -1)) {
-                if (-10 < (param1.field_L.field_o[this.field_n][this.field_o].field_a ^ -1)) {
-                    var3_int = param1.field_L.field_o[this.field_n][this.field_o].field_a + 6;
-                }
+            if (0 != (param1.field_L.field_o[this.field_n][this.field_o].field_a ^ -1) && -10 < (param1.field_L.field_o[this.field_n][this.field_o].field_a ^ -1)) {
+                var3_int = param1.field_L.field_o[this.field_n][this.field_o].field_a + 6;
             }
             param1.b((byte) 76, var3_int, this.field_n, this.field_o);
         } catch (RuntimeException runtimeException) {

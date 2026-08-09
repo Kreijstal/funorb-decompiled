@@ -36,8 +36,6 @@ final class t {
         Class stackIn_26_0 = null;
         Class stackIn_29_0 = null;
         Class stackIn_31_0 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         RuntimeException stackIn_35_0 = null;
@@ -45,23 +43,6 @@ final class t {
         String stackIn_35_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Class stackOut_7_0 = null;
-        Class stackOut_14_0 = null;
-        Class stackOut_18_0 = null;
-        Class stackOut_25_0 = null;
-        Class stackOut_30_0 = null;
-        Class stackOut_28_0 = null;
-        Class stackOut_21_0 = null;
-        Class stackOut_10_0 = null;
-        Class stackOut_1_0 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
         try {
           L0: {
             if (!param0.equals("B")) {
@@ -74,61 +55,52 @@ final class t {
                 }
               }
               if (param0.equals("I")) {
-                stackOut_7_0 = Integer.TYPE;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = Integer.TYPE;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (!param0.equals("S")) {
                   if (param0.equals("J")) {
-                    stackOut_14_0 = Long.TYPE;
-                    stackIn_15_0 = stackOut_14_0;
+                    stackIn_15_0 = Long.TYPE;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
                     if (param0.equals("Z")) {
-                      stackOut_18_0 = Boolean.TYPE;
-                      stackIn_19_0 = stackOut_18_0;
+                      stackIn_19_0 = Boolean.TYPE;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       if (!param0.equals("F")) {
                         if (param0.equals("D")) {
-                          stackOut_25_0 = Double.TYPE;
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = Double.TYPE;
                           decompiledRegionSelector0 = 6;
                           break L0;
                         } else {
                           if (!param0.equals("C")) {
-                            stackOut_30_0 = Class.forName(param0);
-                            stackIn_31_0 = stackOut_30_0;
+                            stackIn_31_0 = Class.forName(param0);
                             decompiledRegionSelector0 = 8;
                             break L0;
                           } else {
-                            stackOut_28_0 = Character.TYPE;
-                            stackIn_29_0 = stackOut_28_0;
+                            stackIn_29_0 = Character.TYPE;
                             decompiledRegionSelector0 = 7;
                             break L0;
                           }
                         }
                       } else {
-                        stackOut_21_0 = Float.TYPE;
-                        stackIn_22_0 = stackOut_21_0;
+                        stackIn_22_0 = Float.TYPE;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       }
                     }
                   }
                 } else {
-                  stackOut_10_0 = Short.TYPE;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = Short.TYPE;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               }
             } else {
-              stackOut_1_0 = Byte.TYPE;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = Byte.TYPE;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -137,27 +109,19 @@ final class t {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) (var2);
-            stackOut_32_1 = new StringBuilder().append("t.C(");
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackIn_34_0 = (RuntimeException) (var2);
+
+            stackIn_34_1 = new StringBuilder().append("t.C(");
+
             if (param0 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L2;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L2;
             }
           }

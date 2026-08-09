@@ -23,8 +23,13 @@ final class hl {
     }
 
     final static void a(int param0) {
-        RuntimeException var1 = null;
+        int stackIn_10_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_11_1 = 0;
+        gk stackIn_15_0 = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -34,19 +39,6 @@ final class hl {
         int var8 = 0;
         gk var9 = null;
         int var10 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_11_1 = 0;
-        gk stackIn_15_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        gk stackOut_14_0 = null;
-        gk stackOut_13_0 = null;
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -77,20 +69,15 @@ final class hl {
                 }
                 L3: {
                   var6 = bc.field_e[var3];
-                  stackOut_8_0 = 12286;
-                  stackIn_10_0 = stackOut_8_0;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_10_0 = 12286;
+
                   if (-1 < (var4 ^ -1)) {
-                    stackOut_10_0 = stackIn_10_0;
-                    stackOut_10_1 = 0;
-                    stackIn_11_0 = stackOut_10_0;
-                    stackIn_11_1 = stackOut_10_1;
+                    stackIn_11_0 = stackIn_10_0;
+                    stackIn_11_1 = 0;
                     break L3;
                   } else {
-                    stackOut_9_0 = stackIn_9_0;
-                    stackOut_9_1 = 1;
-                    stackIn_11_0 = stackOut_9_0;
-                    stackIn_11_1 = stackOut_9_1;
+                    stackIn_11_0 = stackIn_10_0;
+                    stackIn_11_1 = 1;
                     break L3;
                   }
                 }
@@ -102,12 +89,10 @@ final class hl {
                   } else {
                     L5: {
                       if (var4 == ma.field_tb.field_f) {
-                        stackOut_14_0 = bc.field_c;
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = bc.field_c;
                         break L5;
                       } else {
-                        stackOut_13_0 = hj.field_i;
-                        stackIn_15_0 = stackOut_13_0;
+                        stackIn_15_0 = hj.field_i;
                         break L5;
                       }
                     }
@@ -151,7 +136,6 @@ final class hl {
     final static void a(je param0, int param1, int param2) {
         lh var6 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var6 = nj.field_p;
             var6.d(param2, -18392);
@@ -165,7 +149,7 @@ final class hl {
             var6.a(param0.field_p, (byte) 126);
             var6.a(param0.field_n, (byte) 123);
             var6.a(param0.field_h, (byte) -115);
-            discarded$0 = var6.d(var4, (byte) 48);
+            var6.d(var4, (byte) 48);
             var6.b(var6.field_j + -var4, (byte) 87);
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) ((Object) runtimeException), "hl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -173,7 +157,6 @@ final class hl {
     }
 
     final int b(int param0) {
-        int discarded$0 = 0;
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         int var2 = 0;
         uh var3 = this.field_g.field_p;
@@ -182,7 +165,7 @@ final class hl {
             var3 = var3.field_p;
         }
         if (param0 != 1423132065) {
-            discarded$0 = this.b(-11);
+            this.b(-11);
         }
         return var2;
     }
@@ -199,23 +182,13 @@ final class hl {
     }
 
     final void a(uh param0, int param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -244,27 +217,19 @@ final class hl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("hl.B(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("hl.B(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L3;
             }
           }

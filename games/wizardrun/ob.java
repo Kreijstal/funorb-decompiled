@@ -37,7 +37,7 @@ final class ob {
     }
 
     final int a(byte param0) {
-        int var2 = 0;
+        int var2;
         if (param0 != -68) {
           L0: {
             field_c = (o) null;

@@ -16,9 +16,15 @@ final class ao extends vh {
     }
 
     final static int a(int param0, boolean param1, boolean param2, CharSequence param3) {
-        int discarded$1 = 0;
-        RuntimeException var4 = null;
+        int stackIn_36_0 = 0;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_40_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -26,24 +32,6 @@ final class ao extends vh {
         int var9 = 0;
         int var10 = 0;
         CharSequence var11 = null;
-        int stackIn_36_0 = 0;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_40_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_35_0 = 0;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
         try {
           L0: {
             L1: {
@@ -61,15 +49,14 @@ final class ao extends vh {
                       break L2;
                     } else {
                       var11 = (CharSequence) null;
-                      discarded$1 = ao.a(-24, false, false, (CharSequence) null);
+                      ao.a(-24, false, false, (CharSequence) null);
                       break L2;
                     }
                   }
                   L3: while (true) {
                     if (var8 >= var7) {
                       if (var5 != 0) {
-                        stackOut_35_0 = var6;
-                        stackIn_36_0 = stackOut_35_0;
+                        stackIn_36_0 = var6;
                         break L0;
                       } else {
                         throw new NumberFormatException();
@@ -172,27 +159,19 @@ final class ao extends vh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var4 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) (var4);
-            stackOut_37_1 = new StringBuilder().append("ao.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            stackIn_39_0 = (RuntimeException) (var4);
+
+            stackIn_39_1 = new StringBuilder().append("ao.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "null";
               break L11;
             } else {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "{...}";
               break L11;
             }
           }

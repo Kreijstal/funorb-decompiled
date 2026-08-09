@@ -15,9 +15,9 @@ abstract class fb extends fa {
     int field_B;
 
     void d(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         if (!ng.field_e) {
           var2 = -113 / ((param0 - 66) / 50);
           var3 = this.field_y >> -711645929;
@@ -43,8 +43,9 @@ abstract class fb extends fa {
     }
 
     final fb e(byte param0) {
-        fb var3 = null;
-        fb var6 = null;
+        Object var3;
+        fb var3_ref;
+        fb var6;
         if (param0 == 32) {
           if (-1 != this.field_v) {
             L0: while (true) {
@@ -77,17 +78,17 @@ abstract class fb extends fa {
           this.field_x = -55;
           if (-1 != this.field_v) {
             L2: while (true) {
-              var3 = (fb) ((Object) dj.field_e.field_n.b(false));
-              if (var3 != null) {
-                if (var3.a((byte) 75, this.field_v)) {
+              var3_ref = (fb) ((Object) dj.field_e.field_n.b(false));
+              if (var3_ref != null) {
+                if (var3_ref.a((byte) 75, this.field_v)) {
                   if (-1 != this.field_A) {
-                    if (this.a(var3, 1654152400) >= this.field_A) {
+                    if (this.a(var3_ref, 1654152400) >= this.field_A) {
                       continue L2;
                     } else {
-                      return var3;
+                      return var3_ref;
                     }
                   } else {
-                    return var3;
+                    return var3_ref;
                   }
                 } else {
                   continue L2;
@@ -103,28 +104,16 @@ abstract class fb extends fa {
     }
 
     final int a(fb param0, int param1) {
-        boolean discarded$2 = false;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -132,41 +121,32 @@ abstract class fb extends fa {
               if (param1 == 1654152400) {
                 break L1;
               } else {
-                discarded$2 = this.a((byte) 21, -16);
+                this.a((byte) 21, -16);
                 break L1;
               }
             }
             var4 = -this.field_x + param0.field_x >> -190016048;
             this.field_s = var3_int * var3_int - -(var4 * var4);
-            stackOut_2_0 = this.field_s;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = this.field_s;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("fb.BB(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("fb.BB(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -182,23 +162,13 @@ abstract class fb extends fa {
         int stackIn_11_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_22_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
         if (this instanceof ah) {
           L0: {
             if (-1 == (param1 & 1 ^ -1)) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               break L0;
             } else {
-              stackOut_3_0 = 1;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = 1;
               break L0;
             }
           }
@@ -207,12 +177,10 @@ abstract class fb extends fa {
           if (this instanceof kd) {
             L1: {
               if (0 == (param1 & 2)) {
-                stackOut_10_0 = 0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = 0;
                 break L1;
               } else {
-                stackOut_9_0 = 1;
-                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_0 = 1;
                 break L1;
               }
             }
@@ -221,12 +189,10 @@ abstract class fb extends fa {
             if (this instanceof id) {
               L2: {
                 if (0 == (4 & param1)) {
-                  stackOut_16_0 = 0;
-                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_0 = 0;
                   break L2;
                 } else {
-                  stackOut_15_0 = 1;
-                  stackIn_17_0 = stackOut_15_0;
+                  stackIn_17_0 = 1;
                   break L2;
                 }
               }
@@ -249,12 +215,10 @@ abstract class fb extends fa {
               } else {
                 L3: {
                   if (0 == (param1 & 8)) {
-                    stackOut_21_0 = 0;
-                    stackIn_22_0 = stackOut_21_0;
+                    stackIn_22_0 = 0;
                     break L3;
                   } else {
-                    stackOut_20_0 = 1;
-                    stackIn_22_0 = stackOut_20_0;
+                    stackIn_22_0 = 1;
                     break L3;
                   }
                 }
@@ -266,9 +230,9 @@ abstract class fb extends fa {
     }
 
     final fb a(byte param0, int param1, int param2) {
-        Object var4 = null;
-        fb var4_ref = null;
-        int var5 = 0;
+        Object var4;
+        fb var4_ref;
+        int var5;
         if ((param1 ^ -1) != 0) {
           L0: {
             this.field_A = param1 * param1;
@@ -308,7 +272,7 @@ abstract class fb extends fa {
           L1: {
             this.field_A = -1;
             this.field_v = param2;
-            var4_ref = null;
+            var4 = null;
             if (param1 != -1) {
               var5 = 1 + (param1 >> -1058930521);
               var4_ref = (fb) ((Object) dj.field_e.field_n.a(var5, this.field_u, 29845, this.field_B));
@@ -343,7 +307,7 @@ abstract class fb extends fa {
     }
 
     final fb b(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         if ((param0 ^ -1) == 0) {
           this.field_A = -1;
           this.field_v = -1;
@@ -406,39 +370,28 @@ abstract class fb extends fa {
     }
 
     final int a(boolean param0) {
-        int discarded$0 = 0;
         if (!param0) {
-            discarded$0 = fb.a(-36, -98);
+            fb.a(-36, -98);
             return this.field_y >> 644333776;
         }
         return this.field_y >> 644333776;
     }
 
     final static int a(int param0, int param1) {
-        byte[] var3 = null;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
+        byte[] var3;
         if (param0 == 1311979239) {
           param1 = param1 & 8191;
           if (4096 > param1) {
             L0: {
               if (2048 <= param1) {
-                stackOut_18_0 = -lo.field_q[-2048 + param1];
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = -lo.field_q[-2048 + param1];
                 break L0;
               } else {
-                stackOut_17_0 = lo.field_q[-param1 + 2048];
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = lo.field_q[-param1 + 2048];
                 break L0;
               }
             }
@@ -446,12 +399,10 @@ abstract class fb extends fa {
           } else {
             L1: {
               if (param1 < 6144) {
-                stackOut_14_0 = -lo.field_q[-param1 + 6144];
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = -lo.field_q[-param1 + 6144];
                 break L1;
               } else {
-                stackOut_13_0 = lo.field_q[param1 + -6144];
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = lo.field_q[param1 + -6144];
                 break L1;
               }
             }
@@ -464,12 +415,10 @@ abstract class fb extends fa {
           if (4096 > param1) {
             L2: {
               if (2048 <= param1) {
-                stackOut_8_0 = -lo.field_q[-2048 + param1];
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = -lo.field_q[-2048 + param1];
                 break L2;
               } else {
-                stackOut_7_0 = lo.field_q[-param1 + 2048];
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = lo.field_q[-param1 + 2048];
                 break L2;
               }
             }
@@ -477,12 +426,10 @@ abstract class fb extends fa {
           } else {
             L3: {
               if (param1 < 6144) {
-                stackOut_4_0 = -lo.field_q[-param1 + 6144];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = -lo.field_q[-param1 + 6144];
                 break L3;
               } else {
-                stackOut_3_0 = lo.field_q[param1 + -6144];
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = lo.field_q[param1 + -6144];
                 break L3;
               }
             }

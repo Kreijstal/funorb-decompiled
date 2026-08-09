@@ -32,7 +32,6 @@ final class gp {
     final static void a(int param0, i param1, int param2) {
         oq var6 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var6 = ej.field_j;
             var6.b(false, param0);
@@ -49,7 +48,7 @@ final class gp {
             var6.a(true, param1.field_s);
             var6.a(true, param1.field_t);
             var6.a(true, param1.field_q);
-            discarded$0 = var6.d(-1, var4);
+            var6.d(-1, var4);
             var6.b(-var4 + var6.field_v, true);
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) ((Object) runtimeException), "gp.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

@@ -22,22 +22,22 @@ final class f extends gb {
     }
 
     final boolean b(byte param0) {
-        int var2 = 0;
-        int var3_int = 0;
-        je var3 = null;
-        int var4 = 0;
-        int var6 = 0;
-        bh var8 = null;
-        int var9 = 0;
-        Object var10 = null;
-        oe var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        bh var16 = null;
-        int[] var27 = null;
-        byte[] var28 = null;
-        int[] var29 = null;
-        byte[] var30 = null;
+        int var2;
+        int var3_int;
+        je var3;
+        int var4;
+        int var6;
+        bh var8;
+        int var9;
+        Object var10;
+        oe var11;
+        int var12;
+        int var13;
+        bh var16;
+        int[] var27;
+        byte[] var28;
+        int[] var29;
+        byte[] var30;
         var12 = TetraLink.field_J;
         if (null != this.field_u) {
           return true;
@@ -99,7 +99,7 @@ final class f extends gb {
                         if (var11 == null) {
                           break L6;
                         } else {
-                          if (var9 == var11.field_o) {
+                          if ((var9 ^ -1) == (var11.field_o ^ -1)) {
                             var10 = var11;
                             break L6;
                           } else {

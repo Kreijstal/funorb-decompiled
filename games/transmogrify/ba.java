@@ -32,10 +32,9 @@ final class ba extends wf {
     }
 
     final static void a(int param0, int param1) {
-        int discarded$0 = 0;
         sg.field_e = param1;
         if (param0 < 104) {
-            discarded$0 = ba.a((byte) -122);
+            ba.a((byte) -122);
         }
     }
 

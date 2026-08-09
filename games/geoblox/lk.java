@@ -35,8 +35,8 @@ final class lk {
     }
 
     final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = Geoblox.field_C;
         if (null != this.field_c) {
           if (this.field_c.length != 0) {

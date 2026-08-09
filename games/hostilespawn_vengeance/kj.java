@@ -15,70 +15,95 @@ final class kj implements Iterator {
     static bd field_f;
 
     public final Object next() {
-        dk var1 = ((kj) this).field_i;
-        if (((kj) this).field_h.field_a == var1) {
-            ((kj) this).field_i = null;
+        Object var1 = this.field_i;
+        if (this.field_h.field_a == var1) {
+            this.field_i = null;
             var1 = null;
         } else {
-            ((kj) this).field_i = var1.field_j;
+            this.field_i = ((dk) (var1)).field_j;
         }
-        ((kj) this).field_d = var1;
-        return (Object) (Object) var1;
+        this.field_d = (dk) (var1);
+        return var1;
     }
 
     final static s b(int param0) {
-        String var1 = qc.d(750938499);
-        if (var1 != null) {
-            if (var1.indexOf('@') >= 0) {
+        String var1;
+        if (param0 > -98) {
+          L0: {
+            kj.a((byte) 44);
+            var1 = qc.d(750938499);
+            if (var1 == null) {
+              break L0;
+            } else {
+              if (var1.indexOf('@') < 0) {
+                break L0;
+              } else {
                 var1 = "";
+                break L0;
+              }
             }
+          }
+          return new s(qc.d(750938499), ia.b(32674));
+        } else {
+          L1: {
+            var1 = qc.d(750938499);
+            if (var1 == null) {
+              break L1;
+            } else {
+              if (var1.indexOf('@') < 0) {
+                break L1;
+              } else {
+                var1 = "";
+                break L1;
+              }
+            }
+          }
+          return new s(qc.d(750938499), ia.b(32674));
         }
-        return new s(qc.d(750938499), ia.b(32674));
     }
 
     final static int a(int param0) {
         if (param0 > -90) {
-            field_e = null;
+            field_e = (String) null;
             return ia.field_h;
         }
         return ia.field_h;
     }
 
     public final void remove() {
-        if (!(null != ((kj) this).field_d)) {
+        if (!(null != this.field_d)) {
             throw new IllegalStateException();
         }
-        ((kj) this).field_d.c(-1);
-        ((kj) this).field_d = null;
+        this.field_d.c(-1);
+        this.field_d = null;
     }
 
     public static void a(byte param0) {
         field_e = null;
         field_g = null;
+        if (param0 != -13) {
+            return;
+        }
         field_a = null;
         field_f = null;
     }
 
     public final boolean hasNext() {
-        return ((kj) this).field_i != ((kj) this).field_h.field_a;
+        return this.field_i != this.field_h.field_a;
     }
 
     kj(ui param0) {
-        ((kj) this).field_d = null;
+        this.field_d = null;
         try {
-            ((kj) this).field_h = param0;
-            ((kj) this).field_i = ((kj) this).field_h.field_a.field_j;
-            ((kj) this).field_d = null;
+            this.field_h = param0;
+            this.field_i = this.field_h.field_a.field_j;
+            this.field_d = null;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw wg.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = false;
         field_a = "Name is available";
     }

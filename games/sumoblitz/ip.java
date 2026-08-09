@@ -6,17 +6,17 @@ final class ip extends ml {
     static tf field_y;
 
     final void a(byte param0, int param1, int param2) {
-        int incrementValue$2 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int incrementValue$1 = 0;
+        int var4;
+        int var5;
         if (param2 != 4096) {
           return;
         } else {
           var4 = param1 * 2;
           var5 = param0 & 255;
-          incrementValue$2 = var4;
+          incrementValue$1 = var4;
           var4++;
-          this.field_x[incrementValue$2] = (byte)(var5 * 3 >> 66555013);
+          this.field_x[incrementValue$1] = (byte)(var5 * 3 >> 66555013);
           this.field_x[var4] = (byte)(var5 * 3 >> 1886067877);
           return;
         }
@@ -34,18 +34,16 @@ final class ip extends ml {
     }
 
     final static void d(int param0) {
-        boolean discarded$45 = false;
-        boolean discarded$46 = false;
-        RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
             if (oj.a(false)) {
               L1: {
-                discarded$45 = pu.field_e.a(cc.field_j, c.field_r, true, param0 + -1886067878);
+                pu.field_e.a(cc.field_j, c.field_r, true, param0 + -1886067878);
                 if (param0 == 1886067877) {
                   break L1;
                 } else {
@@ -59,12 +57,8 @@ final class ip extends ml {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  discarded$46 = pu.field_e.a(np.field_c, tg.field_a, true);
-                  if (var2 == 0) {
-                    continue L2;
-                  } else {
-                    return;
-                  }
+                  pu.field_e.a(np.field_c, tg.field_a, true);
+                  continue L2;
                 }
               }
             } else {

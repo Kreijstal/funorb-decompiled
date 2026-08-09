@@ -13,14 +13,14 @@ final class cg extends eo {
         this.field_q = new on(param0);
         this.field_p = param0.b(16711935) == 1 ? true : false;
         this.field_s = param0.b(16711935) == 1 ? true : false;
-        int discarded$0 = param0.b(16711935);
-        int discarded$1 = param0.b(16711935);
+        param0.b(16711935);
+        param0.b(16711935);
         int var2 = param0.b(16711935) & 3;
-        byte discarded$22 = param0.b(true);
-        byte discarded$39 = param0.b(true);
-        int discarded$52 = param0.b(16711935);
-        int discarded$61 = param0.b(16711935);
-        int discarded$66 = param0.b(16711935);
+        param0.b(true);
+        param0.b(true);
+        param0.b(16711935);
+        param0.b(16711935);
+        param0.b(16711935);
         if (var2 == 1) {
             return;
         }
@@ -32,79 +32,62 @@ final class cg extends eo {
     }
 
     final int[] a(q param0, vr param1, float param2, boolean param3) {
-        int[] var5 = null;
-        int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int[] var30 = null;
-        int[] var31 = null;
-        int[] var32 = null;
-        int[] var33 = null;
-        int[] var34 = null;
-        int[] var35 = null;
-        int[] var39 = null;
-        int[] var40 = null;
-        int[] var41 = null;
-        int[] var42 = null;
-        int[] var43 = null;
-        int[] var44 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        Object stackIn_46_0 = null;
         Object stackIn_47_0 = null;
         Object stackIn_48_0 = null;
         int stackIn_48_1 = 0;
-        Object stackOut_45_0 = null;
-        Object stackOut_47_0 = null;
-        int stackOut_47_1 = 0;
-        Object stackOut_46_0 = null;
-        int stackOut_46_1 = 0;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
+        int[] var5;
+        int[] var6;
+        int[] var7;
+        int[] var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int[] var30;
+        int[] var31;
+        int[] var32;
+        int[] var33;
+        int[] var34;
+        int[] var35;
+        int[] var39;
+        int[] var40;
+        int[] var41;
+        int[] var42;
+        int[] var43;
+        int[] var44;
         if (this.field_n != null) {
           if (this.field_r != param2) {
             if (this.field_q.a(param0, param1, -90)) {
               L0: {
-                stackOut_45_0 = this;
-                stackIn_47_0 = stackOut_45_0;
-                stackIn_46_0 = stackOut_45_0;
+                stackIn_47_0 = this;
+
                 if (!param3) {
-                  stackOut_47_0 = this;
-                  stackOut_47_1 = 128;
-                  stackIn_48_0 = stackOut_47_0;
-                  stackIn_48_1 = stackOut_47_1;
+                  stackIn_48_0 = this;
+                  stackIn_48_1 = 128;
                   break L0;
                 } else {
-                  stackOut_46_0 = this;
-                  stackOut_46_1 = 64;
-                  stackIn_48_0 = stackOut_46_0;
-                  stackIn_48_1 = stackOut_46_1;
+                  stackIn_48_0 = this;
+                  stackIn_48_1 = 64;
                   break L0;
                 }
               }
@@ -263,20 +246,15 @@ final class cg extends eo {
         } else {
           if (this.field_q.a(param0, param1, -90)) {
             L9: {
-              stackOut_3_0 = this;
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_5_0 = this;
+
               if (!param3) {
-                stackOut_5_0 = this;
-                stackOut_5_1 = 128;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
+                stackIn_6_0 = this;
+                stackIn_6_1 = 128;
                 break L9;
               } else {
-                stackOut_4_0 = this;
-                stackOut_4_1 = 64;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_6_1 = stackOut_4_1;
+                stackIn_6_0 = this;
+                stackIn_6_1 = 64;
                 break L9;
               }
             }

@@ -9,10 +9,9 @@ final class fb {
     static String field_b;
 
     final static void a(int param0) {
-        Object var1 = null;
         int var2 = 0;
-        Throwable var3 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         var1 = ho.field_b;
         synchronized (var1) {
           L0: {
@@ -40,9 +39,8 @@ final class fb {
     }
 
     final static int b(int param0) {
-        int discarded$0 = 0;
         if (param0 != 0) {
-            discarded$0 = fb.b(-21);
+            fb.b(-21);
             return he.field_n;
         }
         return he.field_n;

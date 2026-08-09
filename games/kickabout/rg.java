@@ -44,11 +44,11 @@ abstract class rg {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = Kickabout.field_G;
         var2 = 0;
         var3 = up.field_p;

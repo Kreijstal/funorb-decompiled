@@ -11,14 +11,8 @@ final class pda {
         if (param3 != 256) {
             return true;
         }
-        if (param7 > param0) {
-            if (param4 > param2) {
-                if (param5 > param6) {
-                    if (param8 < param1) {
-                        return true;
-                    }
-                }
-            }
+        if (param7 > param0 && param4 > param2 && param5 > param6 && param8 < param1) {
+            return true;
         }
         return false;
     }

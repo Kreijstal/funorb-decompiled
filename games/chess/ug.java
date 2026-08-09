@@ -37,9 +37,8 @@ final class ug {
     }
 
     final static r a(byte param0, long param1) {
-        r discarded$2 = null;
         if (param0 > -75) {
-          discarded$2 = ug.a((byte) -33, -47L);
+          ug.a((byte) -33, -47L);
           return (r) ((Object) d.field_Mb.a(param1, 3000));
         } else {
           return (r) ((Object) d.field_Mb.a(param1, 3000));

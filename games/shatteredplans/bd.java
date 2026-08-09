@@ -11,13 +11,12 @@ final class bd extends qk {
     static bi field_G;
 
     final void a(int param0) {
-        int discarded$2 = 0;
-        int var2 = 0;
+        int var2;
         if (!this.field_s) {
           return;
         } else {
           if (this.field_u != null) {
-            discarded$2 = rs.field_Cb.a(this.field_u, this.field_k, this.field_t, this.field_m, 480, 16777215, -1, this.field_B, 0, rs.field_Cb.field_J);
+            rs.field_Cb.a(this.field_u, this.field_k, this.field_t, this.field_m, 480, 16777215, -1, this.field_B, 0, rs.field_Cb.field_J);
             var2 = 40 % ((param0 - 67) / 47);
             return;
           } else {

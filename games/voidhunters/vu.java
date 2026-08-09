@@ -15,13 +15,12 @@ final class vu extends llb {
     String field_Fb;
 
     final static int b(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int stackIn_26_0 = 0;
-        int stackOut_24_0 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         L0: {
           var5 = -14 + vkb.a(param1 + 35, param4 ^ param4 >> 968220511 | param2 >> -58486145 ^ param2 | param0 ^ param0 >> 721639711);
           if (-1 > (var5 ^ -1)) {
@@ -52,8 +51,7 @@ final class vu extends llb {
                     return var9;
                   }
                 } else {
-                  stackOut_24_0 = var8;
-                  stackIn_26_0 = stackOut_24_0;
+                  stackIn_26_0 = var8;
                   return stackIn_26_0;
                 }
               } else {
@@ -83,10 +81,9 @@ final class vu extends llb {
     }
 
     public static void e(byte param0) {
-        int discarded$0 = 0;
         field_zb = null;
         if (param0 != 113) {
-            discarded$0 = vu.b(30, 61, 5, 19, 62);
+            vu.b(30, 61, 5, 19, 62);
         }
     }
 

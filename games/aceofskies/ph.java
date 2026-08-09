@@ -19,7 +19,6 @@ final class ph {
 
     final wf a(byte param0, long param1) {
         wf var5 = null;
-        String discarded$0 = null;
         int var6 = AceOfSkies.field_G ? 1 : 0;
         wf var4 = this.field_d[(int)((long)(this.field_b + -1) & param1)];
         this.field_a = var4.field_a;
@@ -33,7 +32,7 @@ final class ph {
         }
         if (param0 != 106) {
             String var7 = (String) null;
-            discarded$0 = ph.a((String) null, 95);
+            ph.a((String) null, 95);
         }
         this.field_a = null;
         return null;
@@ -46,23 +45,12 @@ final class ph {
         int var4 = 0;
         int var5 = 0;
         String stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_4_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         var5 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -71,8 +59,7 @@ final class ph {
             var4 = param1;
             L1: while (true) {
               if (var2_int <= var4) {
-                stackOut_4_0 = new String(var3);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = new String(var3);
                 break L0;
               } else {
                 var3[-1 + var2_int - var4] = param0.charAt(var4);
@@ -85,27 +72,19 @@ final class ph {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("ph.E(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("ph.E(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -155,12 +134,10 @@ final class ph {
         int fieldTemp$0 = 0;
         wf var2 = null;
         int var3 = AceOfSkies.field_G ? 1 : 0;
-        if (this.field_e > param0) {
-            if (this.field_c != this.field_d[this.field_e - 1]) {
-                var2 = this.field_c;
-                this.field_c = var2.field_a;
-                return var2;
-            }
+        if (this.field_e > param0 && this.field_c != this.field_d[this.field_e - 1]) {
+            var2 = this.field_c;
+            this.field_c = var2.field_a;
+            return var2;
         }
         do {
             if (this.field_e >= this.field_b) {

@@ -27,8 +27,6 @@ final class mc extends fa {
         rk stackIn_3_0 = null;
         dd stackIn_5_0 = null;
         dd stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -36,30 +34,16 @@ final class mc extends fa {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        rk stackOut_2_0 = null;
-        rk stackOut_1_0 = null;
-        dd stackOut_6_0 = null;
-        dd stackOut_4_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
               tg.field_f = param0;
               var12 = vg.a((byte) 96, param3);
               if (!param2) {
-                stackOut_2_0 = ga.a(param3, 10);
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = ga.a(param3, 10);
                 break L1;
               } else {
-                stackOut_1_0 = rb.b(param3, (byte) 73);
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = rb.b(param3, (byte) 73);
                 break L1;
               }
             }
@@ -71,13 +55,11 @@ final class mc extends fa {
               var10 = mi.a(var12.field_d, param1, var12.field_j, 20);
               var11 = new dd(var12.field_j, var12.field_d, var7, var6.field_a, var6.field_b, var6.field_c, var9, var8, var10);
               var11.a((byte) 58, tg.field_f);
-              stackOut_6_0 = (dd) (var11);
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = (dd) (var11);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_4_0 = (dd) null;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = (dd) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -86,27 +68,19 @@ final class mc extends fa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var5);
-            stackOut_8_1 = new StringBuilder().append("mc.A(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var5);
+
+            stackIn_10_1 = new StringBuilder().append("mc.A(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }
@@ -120,12 +94,7 @@ final class mc extends fa {
     }
 
     final static void e(int param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        dd discarded$7 = null;
-        RuntimeException var1 = null;
-        tf var1_ref = null;
+        tf var1 = null;
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -147,22 +116,16 @@ final class mc extends fa {
         int[] var29 = null;
         int[] var30 = null;
         int[] var31 = null;
-        int stackIn_50_0 = 0;
-        int stackIn_50_1 = 0;
         int stackIn_51_0 = 0;
         int stackIn_51_1 = 0;
         int stackIn_52_0 = 0;
         int stackIn_52_1 = 0;
         int stackIn_52_2 = 0;
-        int stackIn_56_0 = 0;
-        int stackIn_56_1 = 0;
         int stackIn_57_0 = 0;
         int stackIn_57_1 = 0;
         int stackIn_58_0 = 0;
         int stackIn_58_1 = 0;
         int stackIn_58_2 = 0;
-        int stackIn_65_0 = 0;
-        int stackIn_65_1 = 0;
         int stackIn_66_0 = 0;
         int stackIn_66_1 = 0;
         int stackIn_67_0 = 0;
@@ -171,30 +134,7 @@ final class mc extends fa {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_49_0 = 0;
-        int stackOut_49_1 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_51_1 = 0;
-        int stackOut_51_2 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_50_1 = 0;
-        int stackOut_50_2 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_55_1 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_57_1 = 0;
-        int stackOut_57_2 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_56_1 = 0;
-        int stackOut_56_2 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_64_1 = 0;
-        int stackOut_66_0 = 0;
-        int stackOut_66_1 = 0;
-        int stackOut_66_2 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_65_1 = 0;
-        int stackOut_65_2 = 0;
+        RuntimeException var1_ref = null;
         var10 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -263,7 +203,7 @@ final class mc extends fa {
                               break L1;
                             } else {
                               li.field_a[var7].c();
-                              discarded$4 = qe.field_A.a(tm.field_S[var7], 3, 3, -6 + li.field_a[var7].field_F, li.field_a[var7].field_E + -6, ug.field_k, -1, 1, 1, qe.field_A.field_z + qe.field_A.field_w);
+                              qe.field_A.a(tm.field_S[var7], 3, 3, -6 + li.field_a[var7].field_F, li.field_a[var7].field_E + -6, ug.field_k, -1, 1, 1, qe.field_A.field_z + qe.field_A.field_w);
                               de.a(0, 0, 1, li.field_a[var7], li.field_a[var7].field_F, -1, 3, li.field_a[var7].field_E);
                               var7++;
                               continue L2;
@@ -358,7 +298,7 @@ final class mc extends fa {
                     mk.field_d.d();
                     var9 = new tf(mk.field_d.field_A, mk.field_d.field_B);
                     var9.c();
-                    discarded$5 = kc.field_r.a(var15, bl.field_c, cl.field_d, mp.field_f, vp.field_Lb, 16777215, -1, 1, 1, kc.field_r.field_w - -kc.field_r.field_z);
+                    kc.field_r.a(var15, bl.field_c, cl.field_d, mp.field_f, vp.field_Lb, 16777215, -1, 1, 1, kc.field_r.field_w - -kc.field_r.field_z);
                     de.a(0, 0, 1, var9, var9.field_A, -1, 3, var9.field_B);
                     mk.field_d.c();
                     var9.b(0, 0);
@@ -386,7 +326,7 @@ final class mc extends fa {
                     var5_ref_String = sd.a(dk.field_f, param0 + 18, new String[]{fa.field_i});
                     fa.field_i = null;
                     var17.c();
-                    discarded$6 = qe.field_A.a(var5_ref_String, 3, 3, var17.field_F + -6, -6 + var17.field_E, 16777215, -1, 0, 1, qe.field_A.field_w - -qe.field_A.field_z);
+                    qe.field_A.a(var5_ref_String, 3, 3, var17.field_F + -6, -6 + var17.field_E, 16777215, -1, 0, 1, qe.field_A.field_w - -qe.field_A.field_z);
                     de.a(0, 0, 1, var17, var17.field_F, -1, 3, var17.field_E);
                     qf.field_c.c();
                     var17.b(199 - qf.field_c.field_D, -qf.field_c.field_y + 83);
@@ -449,7 +389,7 @@ final class mc extends fa {
                   break L12;
                 } else {
                   var11 = (Random) null;
-                  discarded$7 = mc.a((Random) null, 44, true, 73, 110);
+                  mc.a((Random) null, 44, true, 73, 110);
                   break L12;
                 }
               }
@@ -471,37 +411,29 @@ final class mc extends fa {
                   } else {
                     L15: {
                       wo.field_c.b(231, 390);
-                      var1_ref = ro.field_b;
+                      var1 = ro.field_b;
                       if (a.field_I.field_j == 0) {
-                        var1_ref = ph.field_n;
+                        var1 = ph.field_n;
                         break L15;
                       } else {
                         break L15;
                       }
                     }
                     L16: {
-                      var1_ref.b(0, 0);
-                      stackOut_49_0 = 40;
-                      stackOut_49_1 = qk.field_e;
-                      stackIn_51_0 = stackOut_49_0;
-                      stackIn_51_1 = stackOut_49_1;
-                      stackIn_50_0 = stackOut_49_0;
-                      stackIn_50_1 = stackOut_49_1;
+                      var1.b(0, 0);
+                      stackIn_51_0 = 40;
+
+                      stackIn_51_1 = qk.field_e;
+
                       if (a.field_I.field_j == 0) {
-                        stackOut_51_0 = stackIn_51_0;
-                        stackOut_51_1 = stackIn_51_1;
-                        stackOut_51_2 = 4;
-                        stackIn_52_0 = stackOut_51_0;
-                        stackIn_52_1 = stackOut_51_1;
-                        stackIn_52_2 = stackOut_51_2;
+                        stackIn_52_0 = stackIn_51_0;
+                        stackIn_52_1 = stackIn_51_1;
+                        stackIn_52_2 = 4;
                         break L16;
                       } else {
-                        stackOut_50_0 = stackIn_50_0;
-                        stackOut_50_1 = stackIn_50_1;
-                        stackOut_50_2 = 3;
-                        stackIn_52_0 = stackOut_50_0;
-                        stackIn_52_1 = stackOut_50_1;
-                        stackIn_52_2 = stackOut_50_2;
+                        stackIn_52_0 = stackIn_51_0;
+                        stackIn_52_1 = stackIn_51_1;
+                        stackIn_52_2 = 3;
                         break L16;
                       }
                     }
@@ -512,37 +444,29 @@ final class mc extends fa {
                         wo.field_c.b(232, 389, var2);
                         wo.field_c.b(232, 391, var2);
                         wo.field_c.b(230, 391, var2);
-                        var1_ref.b(1, 1, var2);
-                        var1_ref.b(-1, 1, var2);
-                        var1_ref.b(1, -1, var2);
-                        var1_ref.b(-1, -1, var2);
+                        var1.b(1, 1, var2);
+                        var1.b(-1, 1, var2);
+                        var1.b(1, -1, var2);
+                        var1.b(-1, -1, var2);
                         break L17;
                       } else {
                         break L17;
                       }
                     }
                     L18: {
-                      stackOut_55_0 = ui.field_b;
-                      stackOut_55_1 = sd.field_K;
-                      stackIn_57_0 = stackOut_55_0;
-                      stackIn_57_1 = stackOut_55_1;
-                      stackIn_56_0 = stackOut_55_0;
-                      stackIn_56_1 = stackOut_55_1;
+                      stackIn_57_0 = ui.field_b;
+
+                      stackIn_57_1 = sd.field_K;
+
                       if (-1 != (a.field_I.field_j ^ -1)) {
-                        stackOut_57_0 = stackIn_57_0;
-                        stackOut_57_1 = stackIn_57_1;
-                        stackOut_57_2 = 0;
-                        stackIn_58_0 = stackOut_57_0;
-                        stackIn_58_1 = stackOut_57_1;
-                        stackIn_58_2 = stackOut_57_2;
+                        stackIn_58_0 = stackIn_57_0;
+                        stackIn_58_1 = stackIn_57_1;
+                        stackIn_58_2 = 0;
                         break L18;
                       } else {
-                        stackOut_56_0 = stackIn_56_0;
-                        stackOut_56_1 = stackIn_56_1;
-                        stackOut_56_2 = 1;
-                        stackIn_58_0 = stackOut_56_0;
-                        stackIn_58_1 = stackOut_56_1;
-                        stackIn_58_2 = stackOut_56_2;
+                        stackIn_58_0 = stackIn_57_0;
+                        stackIn_58_1 = stackIn_57_1;
+                        stackIn_58_2 = 1;
                         break L18;
                       }
                     }
@@ -569,27 +493,19 @@ final class mc extends fa {
                       }
                     }
                     L21: {
-                      stackOut_64_0 = bn.field_Q;
-                      stackOut_64_1 = ll.field_a;
-                      stackIn_66_0 = stackOut_64_0;
-                      stackIn_66_1 = stackOut_64_1;
-                      stackIn_65_0 = stackOut_64_0;
-                      stackIn_65_1 = stackOut_64_1;
+                      stackIn_66_0 = bn.field_Q;
+
+                      stackIn_66_1 = ll.field_a;
+
                       if (a.field_I.field_j != 1) {
-                        stackOut_66_0 = stackIn_66_0;
-                        stackOut_66_1 = stackIn_66_1;
-                        stackOut_66_2 = 0;
-                        stackIn_67_0 = stackOut_66_0;
-                        stackIn_67_1 = stackOut_66_1;
-                        stackIn_67_2 = stackOut_66_2;
+                        stackIn_67_0 = stackIn_66_0;
+                        stackIn_67_1 = stackIn_66_1;
+                        stackIn_67_2 = 0;
                         break L21;
                       } else {
-                        stackOut_65_0 = stackIn_65_0;
-                        stackOut_65_1 = stackIn_65_1;
-                        stackOut_65_2 = 1;
-                        stackIn_67_0 = stackOut_65_0;
-                        stackIn_67_1 = stackOut_65_1;
-                        stackIn_67_2 = stackOut_65_2;
+                        stackIn_67_0 = stackIn_66_0;
+                        stackIn_67_1 = stackIn_66_1;
+                        stackIn_67_2 = 1;
                         break L21;
                       }
                     }
@@ -664,8 +580,8 @@ final class mc extends fa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "mc.D(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw aa.a((Throwable) ((Object) var1_ref), "mc.D(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -675,8 +591,7 @@ final class mc extends fa {
     }
 
     final static pp a(int param0, int param1) {
-        pp discarded$2 = null;
-        ln var2 = null;
+        ln var2;
         if (po.field_b.i(0) >= 5) {
           return null;
         } else {
@@ -684,7 +599,7 @@ final class mc extends fa {
             if (param1 < -117) {
               break L0;
             } else {
-              discarded$2 = mc.a(17, -35);
+              mc.a(17, -35);
               break L0;
             }
           }

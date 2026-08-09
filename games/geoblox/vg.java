@@ -32,9 +32,9 @@ final class vg {
     }
 
     final rc a(int param0) {
-        rc var2 = null;
-        rc var3 = null;
-        int var4 = 0;
+        rc var2;
+        rc var3;
+        int var4;
         var4 = Geoblox.field_C;
         if (null != this.field_c) {
           var2 = this.field_g[(int)(this.field_e & (long)(-1 + this.field_h))];
@@ -78,9 +78,9 @@ final class vg {
     }
 
     final rc a(long param0, int param1) {
-        rc var4 = null;
-        rc var5 = null;
-        int var6 = 0;
+        rc var4;
+        rc var5;
+        int var6;
         var6 = Geoblox.field_C;
         this.field_e = param0;
         var4 = this.field_g[(int)(param0 & (long)(param1 + this.field_h))];
@@ -114,17 +114,17 @@ final class vg {
     }
 
     vg(int param0) {
-        rc dupTemp$2 = null;
-        int var2 = 0;
-        rc var3 = null;
+        rc dupTemp$1 = null;
+        int var2;
+        rc var3;
         this.field_g = new rc[param0];
         this.field_h = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new rc();
-            var3 = dupTemp$2;
-            this.field_g[var2] = dupTemp$2;
+            dupTemp$1 = new rc();
+            var3 = dupTemp$1;
+            this.field_g[var2] = dupTemp$1;
             var3.field_k = var3;
             var3.field_l = var3;
             var2++;

@@ -10,13 +10,12 @@ final class pi extends java.awt.Canvas {
     static String[] field_f;
 
     public static void b(byte param0) {
-        int discarded$0 = 0;
         field_a = null;
         field_b = null;
         field_f = null;
         if (param0 != 61) {
             gh var2 = (gh) null;
-            discarded$0 = pi.a((byte) 56, (gh) null, -94, true);
+            pi.a((byte) 56, (gh) null, -94, true);
         }
         field_e = null;
     }
@@ -30,8 +29,18 @@ final class pi extends java.awt.Canvas {
     }
 
     final static int a(byte param0, gh param1, int param2, boolean param3) {
-        RuntimeException var4 = null;
+        int stackIn_4_0 = 0;
+        String stackIn_34_0 = null;
+        int stackIn_41_0 = 0;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -43,36 +52,11 @@ final class pi extends java.awt.Canvas {
         gh var14 = null;
         gh var15 = null;
         gh var16 = null;
-        int stackIn_4_0 = 0;
-        String stackIn_34_0 = null;
-        int stackIn_41_0 = 0;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        String stackIn_45_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_40_0 = 0;
-        String stackOut_33_0 = null;
-        String stackOut_32_0 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
         var13 = SteelSentinels.field_G;
         try {
           L0: {
             if (!he.a((byte) 116)) {
-              stackOut_3_0 = param2;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = param2;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -89,8 +73,7 @@ final class pi extends java.awt.Canvas {
               var7 = 0;
               L2: while (true) {
                 if (var7 >= 8) {
-                  stackOut_40_0 = param2;
-                  stackIn_41_0 = stackOut_40_0;
+                  stackIn_41_0 = param2;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -155,12 +138,10 @@ final class pi extends java.awt.Canvas {
                                 var14.a(0, param2, 18, 0, var4_int);
                                 param1.a(var14, 126);
                                 if (!param3) {
-                                  stackOut_33_0 = he.field_h;
-                                  stackIn_34_0 = stackOut_33_0;
+                                  stackIn_34_0 = he.field_h;
                                   break L9;
                                 } else {
-                                  stackOut_32_0 = qj.field_c;
-                                  stackIn_34_0 = stackOut_32_0;
+                                  stackIn_34_0 = qj.field_c;
                                   break L9;
                                 }
                               }
@@ -219,27 +200,19 @@ final class pi extends java.awt.Canvas {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var4 = decompiledCaughtException;
-            stackOut_42_0 = (RuntimeException) (var4);
-            stackOut_42_1 = new StringBuilder().append("pi.C(").append(param0).append(',');
-            stackIn_44_0 = stackOut_42_0;
-            stackIn_44_1 = stackOut_42_1;
-            stackIn_43_0 = stackOut_42_0;
-            stackIn_43_1 = stackOut_42_1;
+            stackIn_44_0 = (RuntimeException) (var4);
+
+            stackIn_44_1 = new StringBuilder().append("pi.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "null";
-              stackIn_45_0 = stackOut_44_0;
-              stackIn_45_1 = stackOut_44_1;
-              stackIn_45_2 = stackOut_44_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "null";
               break L11;
             } else {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "{...}";
-              stackIn_45_0 = stackOut_43_0;
-              stackIn_45_1 = stackOut_43_1;
-              stackIn_45_2 = stackOut_43_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "{...}";
               break L11;
             }
           }
@@ -265,7 +238,6 @@ final class pi extends java.awt.Canvas {
             Throwable var1 = null;
             a stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            a stackOut_2_0 = null;
             try {
               L0: {
                 L1: {
@@ -276,8 +248,7 @@ final class pi extends java.awt.Canvas {
                     break L1;
                   }
                 }
-                stackOut_2_0 = (a) (Class.forName("mk").newInstance());
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (a) (Class.forName("mk").newInstance());
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

@@ -33,9 +33,9 @@ final class uj {
 
     static {
         $cfr$clinit: {
-            long var0 = 0L;
-            int var2 = 0;
-            int var3 = 0;
+            long var0;
+            int var2;
+            int var3;
             field_b = "Paused";
             field_a = new cg(6, 0, 4, 2);
             field_c = new long[256];

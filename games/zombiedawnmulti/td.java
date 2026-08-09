@@ -20,14 +20,10 @@ final class td {
     }
 
     final int a(boolean param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_12_1 = 0;
+        int var3;
+        int var4;
         int stackIn_13_0 = 0;
         int stackIn_13_1 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (!param0) {
           if (null != this.field_e) {
@@ -35,21 +31,23 @@ final class td {
               var3 = 1;
               L0: while (true) {
                 if (var3 < this.field_e.length) {
-                  stackOut_11_0 = this.field_e[-1 + var3] + this.field_e[var3] >> -234244127 ^ -1;
-                  stackOut_11_1 = param1 ^ -1;
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
-                  stackIn_12_0 = stackOut_11_0;
-                  stackIn_12_1 = stackOut_11_1;
+                  stackIn_13_0 = this.field_e[-1 + var3] + this.field_e[var3] >> -234244127 ^ -1;
+
+                  stackIn_13_1 = param1 ^ -1;
+
                   if (var4 == 0) {
                     if (stackIn_13_0 < stackIn_13_1) {
                       return var3 + -1;
                     } else {
                       var3++;
-                      continue L0;
+                      if (var4 == 0) {
+                        continue L0;
+                      } else {
+                        return -1 + this.field_e.length;
+                      }
                     }
                   } else {
-                    return stackIn_12_0 + stackIn_12_1;
+                    return stackIn_13_0 + stackIn_13_1;
                   }
                 } else {
                   return -1 + this.field_e.length;
@@ -69,9 +67,6 @@ final class td {
     final int a(int param0) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == -27328) {
           if (this.field_e != null) {
             if (-1 == (this.field_e.length ^ -1)) {
@@ -80,8 +75,7 @@ final class td {
               return this.field_e[-1 + this.field_e.length];
             }
           } else {
-            stackOut_9_0 = 0;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 0;
             return stackIn_11_0;
           }
         } else {
@@ -91,12 +85,10 @@ final class td {
           } else {
             L0: {
               if (-1 != (this.field_e.length ^ -1)) {
-                stackOut_4_0 = this.field_e[-1 + this.field_e.length];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = this.field_e[-1 + this.field_e.length];
                 break L0;
               } else {
-                stackOut_3_0 = 0;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 0;
                 break L0;
               }
             }
@@ -112,8 +104,7 @@ final class td {
     }
 
     final static jm a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
-        jm discarded$2 = null;
-        jm var8 = null;
+        jm var8;
         L0: {
           var8 = (jm) ((Object) mf.field_b.g(86));
           if (var8 == null) {
@@ -125,7 +116,7 @@ final class td {
         }
         var8.a(param5, param0, param1, param7, 27658, param4, param6, param2);
         if (param3 <= 26) {
-          discarded$2 = td.a(109, 31, 61, (byte) 110, 59, 3, 72, 118);
+          td.a(109, 31, 61, (byte) 110, 59, 3, 72, 118);
           return var8;
         } else {
           return var8;

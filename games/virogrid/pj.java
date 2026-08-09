@@ -37,10 +37,10 @@ final class pj {
 
     final static void a(int param0, int param1) {
         l var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         sa var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {

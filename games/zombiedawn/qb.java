@@ -17,7 +17,6 @@ abstract class qb {
 
     final static String a(int param0, CharSequence param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -25,23 +24,13 @@ abstract class qb {
         char[] var7 = null;
         char[] var8 = null;
         String stackIn_21_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_20_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        RuntimeException var2 = null;
         var6 = ZombieDawn.field_J;
         try {
           L0: {
@@ -68,8 +57,7 @@ abstract class qb {
             var4 = 0;
             L3: while (true) {
               if (var2_int <= var4) {
-                stackOut_20_0 = new String(var8);
-                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_0 = new String(var8);
                 break L0;
               } else {
                 L4: {
@@ -124,27 +112,19 @@ abstract class qb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2);
-            stackOut_22_1 = new StringBuilder().append("qb.F(").append(param0).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2);
+
+            stackIn_24_1 = new StringBuilder().append("qb.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L9;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L9;
             }
           }
@@ -157,10 +137,11 @@ abstract class qb {
 
     final static void a(boolean param0, int param1) {
         hn var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
+        boolean stackIn_14_0 = false;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = ZombieDawn.field_J;
         try {
           L0: {
@@ -178,8 +159,9 @@ abstract class qb {
                         if (var2 == null) {
                           break L2;
                         } else {
+                          stackIn_14_0 = var2.field_k.a((byte) 73);
                           L4: {
-                            if (!var2.field_k.a((byte) 73)) {
+                            if (!stackIn_14_0) {
                               var2.b(-27598);
                               break L4;
                             } else {
@@ -235,10 +217,9 @@ abstract class qb {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_c = null;
         if (param0 != -6633) {
-            discarded$0 = qb.a(62, (byte) -7);
+            qb.a(62, (byte) -7);
             field_f = null;
             return;
         }

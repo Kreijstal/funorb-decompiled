@@ -29,7 +29,7 @@ final class ud extends ck {
     }
 
     final static boolean e(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = -125 % ((-54 - param0) / 33);
         if (null != rb.field_h) {
           if (jd.field_sb != rn.field_v) {
@@ -46,9 +46,8 @@ final class ud extends ck {
     }
 
     public static void d(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 20000000) {
-            discarded$0 = ud.e(-26);
+            ud.e(-26);
             field_A = null;
             field_w = null;
             return;

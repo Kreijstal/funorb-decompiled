@@ -11,12 +11,11 @@ final class md {
 
     final static int a(boolean param0, long param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int stackIn_9_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
+        RuntimeException var3 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -32,8 +31,7 @@ final class md {
             var4 = 0;
             L2: while (true) {
               if ((var4 ^ -1) <= -59) {
-                stackOut_8_0 = var3_int;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = var3_int;
                 break L0;
               } else {
                 if ((param1 & 1L << var4) != 0L) {

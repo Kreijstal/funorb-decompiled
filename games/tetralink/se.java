@@ -9,18 +9,18 @@ abstract class se {
     abstract void a(int param0, java.awt.Component param1);
 
     final static void a(boolean param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        hc var4_ref_hc = null;
         int var4 = 0;
+        hc var4_ref_hc = null;
         Object var5 = null;
         int var6 = 0;
         km var8 = null;
         bc var9 = null;
         byte[] var13 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var6 = TetraLink.field_J;
         try {
           L0: {

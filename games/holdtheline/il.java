@@ -19,8 +19,6 @@ final class il {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         bm[] stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -28,27 +26,15 @@ final class il {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        bm[] stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             var4_int = 115 / ((-67 - param0) / 52);
             if (qg.a(param2, param3, (byte) -27, param1)) {
-              stackOut_3_0 = eg.b(false);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = eg.b(false);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -57,27 +43,19 @@ final class il {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var4);
-            stackOut_5_1 = new StringBuilder().append("il.A(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var4);
+
+            stackIn_7_1 = new StringBuilder().append("il.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -91,36 +69,38 @@ final class il {
     }
 
     final static jg a(int param0, int param1, int param2, int param3, byte param4) {
-        jg var5 = null;
-        int var6 = 0;
+        jg var5;
+        int var6;
+        jg var9;
+        jg var10;
         var6 = HoldTheLine.field_D;
         var5 = (jg) ((Object) pc.field_e.b((byte) 120));
         L0: while (true) {
           if (var5 == null) {
             if (param4 != -66) {
               il.a(-18);
-              var5 = new jg();
-              var5.field_n = param0;
-              var5.field_l = param3;
-              var5.field_i = param2;
-              pc.field_e.a((byte) -114, var5);
-              gd.a(var5, (byte) 86, param1);
-              return var5;
+              var9 = new jg();
+              var9.field_n = param0;
+              var9.field_l = param3;
+              var9.field_i = param2;
+              pc.field_e.a((byte) -114, var9);
+              gd.a(var9, (byte) 86, param1);
+              return var9;
             } else {
-              var5 = new jg();
-              var5.field_n = param0;
-              var5.field_l = param3;
-              var5.field_i = param2;
-              pc.field_e.a((byte) -114, var5);
-              gd.a(var5, (byte) 86, param1);
-              return var5;
+              var10 = new jg();
+              var10.field_n = param0;
+              var10.field_l = param3;
+              var10.field_i = param2;
+              pc.field_e.a((byte) -114, var10);
+              gd.a(var10, (byte) 86, param1);
+              return var10;
             }
           } else {
-            if (var5.field_i == param2) {
-              return var5;
-            } else {
+            if (var5.field_i != param2) {
               var5 = (jg) ((Object) pc.field_e.c((byte) -45));
               continue L0;
+            } else {
+              return var5;
             }
           }
         }

@@ -47,11 +47,9 @@ final class ul extends qr {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
+        int var6;
+        int var7;
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           re.field_d[wm.field_c] = param4;
           lg.field_d[wm.field_c] = wm.field_c;
@@ -77,12 +75,10 @@ final class ul extends qr {
           f.field_y[wm.field_c] = param5;
           var6 = param5 + param3 + param2;
           if (param0 == var6) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = 1000 * param2 / var6;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = 1000 * param2 / var6;
             break L2;
           }
         }
@@ -132,7 +128,6 @@ final class ul extends qr {
     }
 
     public static void g(int param0) {
-        boolean discarded$2 = false;
         field_Ob = null;
         field_Cb = null;
         field_Fb = null;
@@ -140,7 +135,7 @@ final class ul extends qr {
         field_Ab = null;
         field_Qb = null;
         if (param0 != 1000) {
-          discarded$2 = ul.a(-91, 59, -35, 74, -62);
+          ul.a(-91, 59, -35, 74, -62);
           field_xb = null;
           return;
         } else {
@@ -164,20 +159,12 @@ final class ul extends qr {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4) {
-        double var5 = 0.0;
-        double var7 = 0.0;
+        double var5;
+        double var7;
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         L0: {
           var5 = Math.atan2((double)param4, (double)param3);
           if (39 <= (param4 ^ -1)) {
@@ -202,12 +189,10 @@ final class ul extends qr {
               if (0 <= param0) {
                 L1: {
                   if (var7 >= var5) {
-                    stackOut_23_0 = 0;
-                    stackIn_24_0 = stackOut_23_0;
+                    stackIn_24_0 = 0;
                     break L1;
                   } else {
-                    stackOut_22_0 = 1;
-                    stackIn_24_0 = stackOut_22_0;
+                    stackIn_24_0 = 1;
                     break L1;
                   }
                 }
@@ -216,12 +201,10 @@ final class ul extends qr {
                 L2: {
                   var7 = var7 + 6.283185307179586;
                   if (var7 >= var5) {
-                    stackOut_19_0 = 0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_20_0 = 0;
                     break L2;
                   } else {
-                    stackOut_18_0 = 1;
-                    stackIn_20_0 = stackOut_18_0;
+                    stackIn_20_0 = 1;
                     break L2;
                   }
                 }
@@ -230,12 +213,10 @@ final class ul extends qr {
             } else {
               L3: {
                 if (var7 >= var5) {
-                  stackOut_14_0 = 0;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = 0;
                   break L3;
                 } else {
-                  stackOut_13_0 = 1;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = 1;
                   break L3;
                 }
               }
@@ -244,12 +225,10 @@ final class ul extends qr {
           } else {
             L4: {
               if (var7 >= var5) {
-                stackOut_9_0 = 0;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = 0;
                 break L4;
               } else {
-                stackOut_8_0 = 1;
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = 1;
                 break L4;
               }
             }
@@ -261,12 +240,12 @@ final class ul extends qr {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var11;
+        int var9;
+        int var10;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         if (this.field_Pb == 0) {
           this.field_Gb[this.field_Pb] = new sg(0L, (qr) null, (qr) null, this.field_Nb, (bi) null, we.field_a);

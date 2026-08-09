@@ -58,7 +58,7 @@ final class ej extends sl {
     }
 
     final Object g(int param0) {
-        pb var3 = null;
+        pb var3;
         if (param0 != 1) {
           var3 = (pb) null;
           ej.a(-50, (jp) null, -35, 2, 119, (pb) null);

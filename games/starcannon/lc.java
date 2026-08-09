@@ -20,7 +20,7 @@ final class lc extends qj {
     }
 
     public static void m(int param0) {
-        ue var2 = null;
+        ue var2;
         field_fb = null;
         if (param0 != -11147) {
           var2 = (ue) null;

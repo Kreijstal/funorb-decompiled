@@ -6,10 +6,10 @@ final class pga {
     static js field_b;
 
     final static du a(boolean param0, int param1) {
-        du[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        du[] var5 = null;
+        du[] var2;
+        int var3;
+        int var4;
+        du[] var5;
         var4 = BachelorFridge.field_y;
         var5 = wga.d(0);
         var2 = var5;

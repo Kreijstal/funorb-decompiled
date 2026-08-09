@@ -9,8 +9,6 @@ final class td {
     static String field_a;
 
     final static int a(byte param0) {
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -22,24 +20,17 @@ final class td {
         int stackIn_23_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_11_0 = 0;
         var2 = stellarshard.field_B;
         try {
           L0: {
-            discarded$12 = na.field_d.a(true, (byte) -123, ll.field_d, gi.field_c);
+            na.field_d.a(true, (byte) -123, ll.field_d, gi.field_c);
             na.field_d.f((byte) -127);
             L1: while (true) {
               if (!qh.c(123)) {
                 if (-1 != ee.field_a) {
                   var1_int = ee.field_a;
                   rh.a(-1, (byte) -72);
-                  stackOut_6_0 = var1_int;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = var1_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -55,37 +46,32 @@ final class td {
                     if (dj.field_a != el.field_E) {
                       if (al.field_f.a(true)) {
                         if (dj.field_a != o.field_l) {
-                          stackOut_22_0 = -1;
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_23_0 = -1;
                           decompiledRegionSelector0 = 5;
                           break L0;
                         } else {
-                          stackOut_20_0 = 2;
-                          stackIn_21_0 = stackOut_20_0;
+                          stackIn_21_0 = 2;
                           decompiledRegionSelector0 = 4;
                           break L0;
                         }
                       } else {
-                        stackOut_17_0 = 1;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = 1;
                         decompiledRegionSelector0 = 3;
                         break L0;
                       }
                     } else {
-                      stackOut_14_0 = 1;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 1;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
                   } else {
-                    stackOut_11_0 = 3;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = 3;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 }
               } else {
-                discarded$13 = na.field_d.a(gi.field_f, uc.field_b, true);
+                na.field_d.a(gi.field_f, uc.field_b, true);
                 continue L1;
               }
             }

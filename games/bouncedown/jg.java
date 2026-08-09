@@ -13,25 +13,15 @@ final class jg extends ak {
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param1) {
           param0 = param0 & 8191;
           if ((param0 ^ -1) > -4097) {
             L0: {
               if (2048 > param0) {
-                stackOut_18_0 = lc.field_x[param0];
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = lc.field_x[param0];
                 break L0;
               } else {
-                stackOut_17_0 = lc.field_x[-param0 + 4096];
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = lc.field_x[-param0 + 4096];
                 break L0;
               }
             }
@@ -39,12 +29,10 @@ final class jg extends ak {
           } else {
             L1: {
               if (param0 < 6144) {
-                stackOut_14_0 = -lc.field_x[-4096 + param0];
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = -lc.field_x[-4096 + param0];
                 break L1;
               } else {
-                stackOut_13_0 = -lc.field_x[8192 + -param0];
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = -lc.field_x[8192 + -param0];
                 break L1;
               }
             }
@@ -56,12 +44,10 @@ final class jg extends ak {
           if ((param0 ^ -1) > -4097) {
             L2: {
               if (2048 > param0) {
-                stackOut_8_0 = lc.field_x[param0];
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = lc.field_x[param0];
                 break L2;
               } else {
-                stackOut_7_0 = lc.field_x[-param0 + 4096];
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = lc.field_x[-param0 + 4096];
                 break L2;
               }
             }
@@ -69,12 +55,10 @@ final class jg extends ak {
           } else {
             L3: {
               if (param0 < 6144) {
-                stackOut_4_0 = -lc.field_x[-4096 + param0];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = -lc.field_x[-4096 + param0];
                 break L3;
               } else {
-                stackOut_3_0 = -lc.field_x[8192 + -param0];
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = -lc.field_x[8192 + -param0];
                 break L3;
               }
             }
@@ -84,7 +68,7 @@ final class jg extends ak {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        tg var6 = null;
+        tg var6;
         if (0 != param0) {
           return;
         } else {
@@ -130,21 +114,21 @@ final class jg extends ak {
     }
 
     final static void k(int param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = Bounce.field_N;
         try {
           L0: {
@@ -156,30 +140,30 @@ final class jg extends ak {
               if (var2 >= var3) {
                 break L0;
               } else {
-                incrementValue$40 = var2;
+                incrementValue$16 = var2;
                 var2++;
-                var5[incrementValue$40] = 0;
-                incrementValue$41 = var2;
+                var5[incrementValue$16] = 0;
+                incrementValue$17 = var2;
                 var2++;
-                var5[incrementValue$41] = 0;
-                incrementValue$42 = var2;
+                var5[incrementValue$17] = 0;
+                incrementValue$18 = var2;
                 var2++;
-                var5[incrementValue$42] = 0;
-                incrementValue$43 = var2;
+                var5[incrementValue$18] = 0;
+                incrementValue$19 = var2;
                 var2++;
-                var5[incrementValue$43] = 0;
-                incrementValue$44 = var2;
+                var5[incrementValue$19] = 0;
+                incrementValue$20 = var2;
                 var2++;
-                var5[incrementValue$44] = 0;
-                incrementValue$45 = var2;
+                var5[incrementValue$20] = 0;
+                incrementValue$21 = var2;
                 var2++;
-                var5[incrementValue$45] = 0;
-                incrementValue$46 = var2;
+                var5[incrementValue$21] = 0;
+                incrementValue$22 = var2;
                 var2++;
-                var5[incrementValue$46] = 0;
-                incrementValue$47 = var2;
+                var5[incrementValue$22] = 0;
+                incrementValue$23 = var2;
                 var2++;
-                var5[incrementValue$47] = 0;
+                var5[incrementValue$23] = 0;
                 continue L1;
               }
             }

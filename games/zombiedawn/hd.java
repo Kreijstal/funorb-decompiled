@@ -42,8 +42,6 @@ abstract class hd extends nb {
             dj stackIn_15_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            dj stackOut_14_0 = null;
-            dj stackOut_10_0 = null;
             try {
               L0: {
                 L1: {
@@ -93,13 +91,11 @@ abstract class hd extends nb {
                       break L5;
                     }
                   }
-                  stackOut_14_0 = new dj(var8, param4, param3);
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = new dj(var8, param4, param3);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_10_0 = (dj) null;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = (dj) null;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }

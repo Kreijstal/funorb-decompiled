@@ -36,10 +36,9 @@ abstract class ta extends pa {
     }
 
     final static void a(boolean param0, int param1) {
-        dd[] discarded$0 = null;
         uc.field_c.a(param0, 10518);
         if (param1 <= 43) {
-            discarded$0 = ta.a(19, 19, 119, 12, 2);
+            ta.a(19, 19, 119, 12, 2);
         }
     }
 

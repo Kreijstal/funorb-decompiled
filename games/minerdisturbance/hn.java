@@ -8,8 +8,7 @@ abstract class hn {
     static boolean field_c;
 
     final static String c(int param0) {
-        ed discarded$11 = null;
-        String var1 = null;
+        String var1;
         L0: {
           var1 = "";
           if (di.field_D == null) {
@@ -21,7 +20,7 @@ abstract class hn {
         }
         if (param0 <= 74) {
           L1: {
-            discarded$11 = hn.a(true, (byte) 38);
+            hn.a(true, (byte) 38);
             if (var1.length() == 0) {
               var1 = cb.a((byte) -98);
               break L1;
@@ -72,35 +71,24 @@ abstract class hn {
     abstract void a(sb param0, byte param1);
 
     final static ed a(boolean param0, byte param1) {
-        ed var2 = null;
-        ed stackIn_2_0 = null;
+        ed var2;
         ed stackIn_3_0 = null;
         ed stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        ed stackOut_1_0 = null;
-        ed stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        ed stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
         if (param1 != 105) {
           return (ed) null;
         } else {
           L0: {
             var2 = new ed(true);
-            stackOut_1_0 = (ed) (var2);
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_3_0 = (ed) (var2);
+
             if (!param0) {
-              stackOut_3_0 = (ed) ((Object) stackIn_3_0);
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_0 = (ed) ((Object) stackIn_3_0);
+              stackIn_4_1 = 0;
               break L0;
             } else {
-              stackOut_2_0 = (ed) ((Object) stackIn_2_0);
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_0 = (ed) ((Object) stackIn_3_0);
+              stackIn_4_1 = 1;
               break L0;
             }
           }
@@ -110,12 +98,11 @@ abstract class hn {
     }
 
     final static void a(byte param0) {
-        ed discarded$0 = null;
         ti.field_J = kj.field_a.a(false);
         CharSequence var2 = (CharSequence) ((Object) ti.field_J);
         in.field_b = cl.a(-95, var2);
         if (param0 > -22) {
-            discarded$0 = hn.a(true, (byte) 100);
+            hn.a(true, (byte) 100);
         }
     }
 

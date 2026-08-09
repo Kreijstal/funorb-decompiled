@@ -28,8 +28,8 @@ final class bi {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = gd.a(5);
         if (param0 <= 87) {
           return;

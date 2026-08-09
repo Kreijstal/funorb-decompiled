@@ -28,8 +28,6 @@ final class ge {
         int stackIn_9_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_2_0 = 0;
         var4 = Terraphoenix.field_V;
         try {
           L0: {
@@ -46,8 +44,7 @@ final class ge {
               }
               L2: while (true) {
                 if (-1 == (param1 ^ -1)) {
-                  stackOut_8_0 = param2;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = param2;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -58,8 +55,7 @@ final class ge {
                 }
               }
             } else {
-              stackOut_2_0 = -89;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = -89;
               decompiledRegionSelector0 = 0;
               break L0;
             }

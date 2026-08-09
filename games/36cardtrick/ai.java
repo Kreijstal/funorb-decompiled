@@ -18,8 +18,6 @@ final class ai extends cg {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         Object stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -27,28 +25,16 @@ final class ai extends cg {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        Object stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if (this.a(param0, -64) == pe.field_b) {
-              stackOut_2_0 = d.field_j;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = d.field_j;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (param1) {
                 field_m = -2;
-                stackOut_6_0 = null;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -60,27 +46,19 @@ final class ai extends cg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("ai.I(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3);
+
+            stackIn_10_1 = new StringBuilder().append("ai.I(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L1;
             }
           }
@@ -94,9 +72,12 @@ final class ai extends cg {
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_23_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -104,11 +85,6 @@ final class ai extends cg {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_23_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
         var14 = Main.field_T;
         try {
           L0: {
@@ -137,12 +113,10 @@ final class ai extends cg {
                           L3: {
                             var12 = re.field_c[var11];
                             if (param4) {
-                              stackOut_22_0 = p.field_n[var12];
-                              stackIn_23_0 = stackOut_22_0;
+                              stackIn_23_0 = p.field_n[var12];
                               break L3;
                             } else {
-                              stackOut_21_0 = db.field_l[var12];
-                              stackIn_23_0 = stackOut_21_0;
+                              stackIn_23_0 = db.field_l[var12];
                               break L3;
                             }
                           }
@@ -150,9 +124,9 @@ final class ai extends cg {
                             var13 = stackIn_23_0;
                             if (var7_int < var13) {
                               re.field_c[var11] = re.field_c[var8];
-                              incrementValue$1 = var8;
+                              incrementValue$0 = var8;
                               var8++;
-                              re.field_c[incrementValue$1] = var12;
+                              re.field_c[incrementValue$0] = var12;
                               if (var9 > var13) {
                                 var9 = var13;
                                 break L4;
@@ -246,8 +220,6 @@ final class ai extends cg {
         sg stackIn_6_0 = null;
         sg stackIn_11_0 = null;
         sg stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -255,24 +227,11 @@ final class ai extends cg {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        sg stackOut_2_0 = null;
-        sg stackOut_12_0 = null;
-        sg stackOut_10_0 = null;
-        sg stackOut_5_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             var4 = (CharSequence) ((Object) param0);
             if (!pg.a(false, var4)) {
-              stackOut_2_0 = pe.field_b;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = pe.field_b;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -284,8 +243,7 @@ final class ai extends cg {
                     break L1;
                   } else {
                     if ((var3_int ^ -1) >= -131) {
-                      stackOut_12_0 = ii.field_e;
-                      stackIn_13_0 = stackOut_12_0;
+                      stackIn_13_0 = ii.field_e;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
@@ -293,13 +251,11 @@ final class ai extends cg {
                     }
                   }
                 }
-                stackOut_10_0 = pe.field_b;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = pe.field_b;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_5_0 = (sg) null;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (sg) null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -309,27 +265,19 @@ final class ai extends cg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("ai.M(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3);
+
+            stackIn_16_1 = new StringBuilder().append("ai.M(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L2;
             }
           }

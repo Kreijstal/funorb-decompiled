@@ -20,12 +20,13 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     private final native int _CreateDepthStencilSurface(int param0, int param1, int param2, int param3, int param4, boolean param5, jagdx.IDirect3DSurface param6);
 
     public final jagdx.IDirect3DVertexDeclaration a(jagdx.VertexElementCollection param0, jagdx.IDirect3DVertexDeclaration param1) {
-        int var3 = 0;
+        int var3;
         L0: {
           if (param1 == null) {
             param1 = new jagdx.IDirect3DVertexDeclaration(this.b);
             break L0;
           } else {
+            param1.a(-22671);
             break L0;
           }
         }
@@ -69,6 +70,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         if (param4 == null) {
             param4 = new jagdx.IDirect3DVertexBuffer(this.b);
         } else {
+            param4.a(-22671);
         }
         int var6 = this._CreateVertexBuffer(param0, param1, param2, param3, param4);
         if (!(!jagdx.gv.a(var6, -1))) {
@@ -82,8 +84,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final native int _CreateVolumeTexture(int param0, int param1, int param2, int param3, int param4, int param5, int param6, jagdx.IDirect3DVolumeTexture param7);
 
     public final jagdx.IDirect3DPixelShader b(byte[] param0) {
-        jagdx.IDirect3DPixelShader var2 = null;
-        int var3 = 0;
+        jagdx.IDirect3DPixelShader var2;
+        int var3;
         if (param0 != null) {
           var2 = new jagdx.IDirect3DPixelShader(this.b);
           var3 = this._CreatePixelShader(param0, var2);
@@ -104,8 +106,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final native int SetViewport(int param0, int param1, int param2, int param3, float param4, float param5);
 
     public final jagdx.IDirect3DVolumeTexture a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        jagdx.IDirect3DVolumeTexture var8 = null;
-        int var9 = 0;
+        jagdx.IDirect3DVolumeTexture var8;
+        int var9;
         var8 = new jagdx.IDirect3DVolumeTexture(this.b);
         var9 = this._CreateVolumeTexture(param0, param1, param2, param3, param4, param5, param6, var8);
         if (jagdx.gv.a(var9, -1)) {
@@ -123,8 +125,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     }
 
     public final jagdx.IDirect3DSurface a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        jagdx.IDirect3DSurface var7 = null;
-        int var8 = 0;
+        jagdx.IDirect3DSurface var7;
+        int var8;
         var7 = new jagdx.IDirect3DSurface(this.b);
         var8 = this._CreateRenderTarget(param0, param1, param2, param3, param4, param5, var7);
         if (jagdx.gv.a(var8, -1)) {
@@ -171,8 +173,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     private final native int _GetDepthStencilSurface(jagdx.IDirect3DSurface param0);
 
     public final jagdx.IDirect3DSurface b() {
-        jagdx.IDirect3DSurface var1 = null;
-        int var2 = 0;
+        jagdx.IDirect3DSurface var1;
+        int var2;
         var1 = new jagdx.IDirect3DSurface(this.b);
         var2 = this._GetDepthStencilSurface(var1);
         if (jagdx.gv.a(var2, -1)) {
@@ -208,8 +210,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final native boolean LightEnable(int param0, boolean param1);
 
     public final jagdx.IDirect3DCubeTexture a(int param0, int param1, int param2, int param3, int param4) {
-        jagdx.IDirect3DCubeTexture var6 = null;
-        int var7 = 0;
+        jagdx.IDirect3DCubeTexture var6;
+        int var7;
         var6 = new jagdx.IDirect3DCubeTexture(this.b);
         var7 = this._CreateCubeTexture(param0, param1, param2, param3, param4, var6);
         if (jagdx.gv.a(var7, -1)) {
@@ -232,8 +234,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final native int SetSamplerState(int param0, int param1, int param2);
 
     public final jagdx.IDirect3DSurface c(int param0) {
-        jagdx.IDirect3DSurface var2 = null;
-        int var3 = 0;
+        jagdx.IDirect3DSurface var2;
+        int var3;
         var2 = new jagdx.IDirect3DSurface(this.b);
         var3 = this._GetRenderTarget(param0, var2);
         if (jagdx.gv.a(var3, -1)) {
@@ -261,7 +263,9 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final native int TestCooperativeLevel();
 
     public final jagdx.IDirect3DIndexBuffer a(int param0, int param1, int param2, int param3, jagdx.IDirect3DIndexBuffer param4) {
-        if (!(param4 != null)) {
+        if (param4 != null) {
+            param4.a(-22671);
+        } else {
             param4 = new jagdx.IDirect3DIndexBuffer(this.b);
         }
         int var6 = this._CreateIndexBuffer(param0, param1, param2, param3, param4);

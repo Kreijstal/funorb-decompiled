@@ -47,22 +47,12 @@ final class bq extends mg {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             if (param3 == 4) {
@@ -90,27 +80,19 @@ final class bq extends mg {
           decompiledCaughtException = decompiledCaughtParameter1;
           L2: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var4_ref2);
-            stackOut_6_1 = new StringBuilder().append("bq.E(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var4_ref2);
+
+            stackIn_8_1 = new StringBuilder().append("bq.E(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -119,11 +101,11 @@ final class bq extends mg {
     }
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
-        we var1_ref = null;
         int var2 = 0;
         ca var3 = null;
         RuntimeException decompiledCaughtException = null;
+        we var1 = null;
+        RuntimeException var1_ref = null;
         var2 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -142,8 +124,8 @@ final class bq extends mg {
                 continue L2;
               } else {
                 L3: while (true) {
-                  var1_ref = (we) ((Object) ec.field_l.c(0));
-                  if (var1_ref == null) {
+                  var1 = (we) ((Object) ec.field_l.c(0));
+                  if (var1 == null) {
                     if (param0 == -12) {
                       break L0;
                     } else {
@@ -151,7 +133,7 @@ final class bq extends mg {
                       return;
                     }
                   } else {
-                    lj.a(5, var1_ref, param0 ^ 120);
+                    lj.a(5, var1, param0 ^ 120);
                     continue L3;
                   }
                 }
@@ -160,8 +142,8 @@ final class bq extends mg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1), "bq.F(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw dn.a((Throwable) ((Object) var1_ref), "bq.F(" + param0 + ')');
         }
     }
 

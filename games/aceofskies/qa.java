@@ -22,8 +22,19 @@ final class qa {
     }
 
     final static void b(int param0) {
-        RuntimeException var1 = null;
+        int stackIn_21_0 = 0;
+        int stackIn_24_0 = 0;
+        String stackIn_30_0 = null;
+        String stackIn_37_0 = null;
+        int stackIn_42_0 = 0;
+        String stackIn_42_1 = null;
+        int stackIn_43_0 = 0;
+        String stackIn_43_1 = null;
+        int stackIn_43_2 = 0;
+        mg stackIn_47_0 = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         long var3_long = 0L;
         int var3 = 0;
@@ -34,37 +45,6 @@ final class qa {
         int var8 = 0;
         mg var9 = null;
         int var10 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
-        String stackIn_28_0 = null;
-        String stackIn_35_0 = null;
-        int stackIn_39_0 = 0;
-        String stackIn_39_1 = null;
-        int stackIn_40_0 = 0;
-        String stackIn_40_1 = null;
-        int stackIn_41_0 = 0;
-        String stackIn_41_1 = null;
-        int stackIn_41_2 = 0;
-        mg stackIn_45_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        String stackOut_27_0 = null;
-        String stackOut_26_0 = null;
-        String stackOut_34_0 = null;
-        String stackOut_33_0 = null;
-        int stackOut_38_0 = 0;
-        String stackOut_38_1 = null;
-        int stackOut_40_0 = 0;
-        String stackOut_40_1 = null;
-        int stackOut_40_2 = 0;
-        int stackOut_39_0 = 0;
-        String stackOut_39_1 = null;
-        int stackOut_39_2 = 0;
-        mg stackOut_44_0 = null;
-        mg stackOut_43_0 = null;
         var10 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -120,45 +100,39 @@ final class qa {
                     if ((var2 ^ -1) == -2) {
                       L6: {
                         if (es.field_a.length >= cn.field_z.length) {
-                          stackOut_18_0 = es.field_a.length;
-                          stackIn_19_0 = stackOut_18_0;
+                          stackIn_21_0 = es.field_a.length;
                           break L6;
                         } else {
-                          stackOut_17_0 = cn.field_z.length;
-                          stackIn_19_0 = stackOut_17_0;
+                          stackIn_21_0 = cn.field_z.length;
                           break L6;
                         }
                       }
                       L7: {
-                        var7 = stackIn_19_0;
+                        var7 = stackIn_21_0;
                         if (cc.field_b.length < gp.field_v.length) {
-                          stackOut_21_0 = gp.field_v.length;
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_24_0 = gp.field_v.length;
                           break L7;
                         } else {
-                          stackOut_20_0 = cc.field_b.length;
-                          stackIn_22_0 = stackOut_20_0;
+                          stackIn_24_0 = cc.field_b.length;
                           break L7;
                         }
                       }
                       L8: {
-                        var8 = stackIn_22_0;
+                        var8 = stackIn_24_0;
                         if ((var3 ^ -1) > -7) {
                           break L8;
                         } else {
                           if (6 - -var7 > var3) {
                             L9: {
                               if (var3 - (6 - es.field_a.length) + -var7 >= 0) {
-                                stackOut_27_0 = es.field_a[var3 + -6 - (-es.field_a.length - -var7)];
-                                stackIn_28_0 = stackOut_27_0;
+                                stackIn_30_0 = es.field_a[var3 + -6 - (-es.field_a.length - -var7)];
                                 break L9;
                               } else {
-                                stackOut_26_0 = "";
-                                stackIn_28_0 = stackOut_26_0;
+                                stackIn_30_0 = "";
                                 break L9;
                               }
                             }
-                            var6 = stackIn_28_0;
+                            var6 = stackIn_30_0;
                             break L8;
                           } else {
                             break L8;
@@ -171,16 +145,14 @@ final class qa {
                         if (var8 + (7 - -var7) > var3) {
                           L10: {
                             if (cc.field_b.length <= -var7 + (var3 + -7)) {
-                              stackOut_34_0 = "";
-                              stackIn_35_0 = stackOut_34_0;
+                              stackIn_37_0 = "";
                               break L10;
                             } else {
-                              stackOut_33_0 = cc.field_b[-var7 + var3 - 7];
-                              stackIn_35_0 = stackOut_33_0;
+                              stackIn_37_0 = cc.field_b[-var7 + var3 - 7];
                               break L10;
                             }
                           }
-                          var6 = stackIn_35_0;
+                          var6 = stackIn_37_0;
                           break L5;
                         } else {
                           break L5;
@@ -200,32 +172,24 @@ final class qa {
                   }
                 }
                 L12: {
-                  stackOut_38_0 = 1;
-                  stackOut_38_1 = (String) (var6);
-                  stackIn_40_0 = stackOut_38_0;
-                  stackIn_40_1 = stackOut_38_1;
-                  stackIn_39_0 = stackOut_38_0;
-                  stackIn_39_1 = stackOut_38_1;
+                  stackIn_42_0 = 1;
+
+                  stackIn_42_1 = (String) (var6);
+
                   if (0 > var4) {
-                    stackOut_40_0 = stackIn_40_0;
-                    stackOut_40_1 = (String) ((Object) stackIn_40_1);
-                    stackOut_40_2 = 0;
-                    stackIn_41_0 = stackOut_40_0;
-                    stackIn_41_1 = stackOut_40_1;
-                    stackIn_41_2 = stackOut_40_2;
+                    stackIn_43_0 = stackIn_42_0;
+                    stackIn_43_1 = (String) ((Object) stackIn_42_1);
+                    stackIn_43_2 = 0;
                     break L12;
                   } else {
-                    stackOut_39_0 = stackIn_39_0;
-                    stackOut_39_1 = (String) ((Object) stackIn_39_1);
-                    stackOut_39_2 = 1;
-                    stackIn_41_0 = stackOut_39_0;
-                    stackIn_41_1 = stackOut_39_1;
-                    stackIn_41_2 = stackOut_39_2;
+                    stackIn_43_0 = stackIn_42_0;
+                    stackIn_43_1 = (String) ((Object) stackIn_42_1);
+                    stackIn_43_2 = 1;
                     break L12;
                   }
                 }
                 L13: {
-                  var7 = kp.a(stackIn_41_0 != 0, stackIn_41_1, stackIn_41_2 != 0);
+                  var7 = kp.a(stackIn_43_0 != 0, stackIn_43_1, stackIn_43_2 != 0);
                   var8 = -(var7 >> -1432413823) + ri.field_a;
                   if (-1 < (var4 ^ -1)) {
                     break L13;
@@ -233,17 +197,15 @@ final class qa {
                     L14: {
                       var1_int = var1_int + pp.field_a;
                       if (pr.field_b.field_g != var4) {
-                        stackOut_44_0 = ej.field_a;
-                        stackIn_45_0 = stackOut_44_0;
+                        stackIn_47_0 = ej.field_a;
                         break L14;
                       } else {
-                        stackOut_43_0 = u.field_g;
-                        stackIn_45_0 = stackOut_43_0;
+                        stackIn_47_0 = u.field_g;
                         break L14;
                       }
                     }
                     L15: {
-                      var9 = stackIn_45_0;
+                      var9 = stackIn_47_0;
                       if (var9 == null) {
                         break L15;
                       } else {
@@ -279,12 +241,12 @@ final class qa {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         var8 = AceOfSkies.field_G ? 1 : 0;
         if (0 <= it.field_c) {
           L0: {

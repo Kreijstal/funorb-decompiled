@@ -58,7 +58,7 @@ final class daa extends sna {
     }
 
     private final void a(int param0, byte param1) {
-        int var3 = 0;
+        int var3;
         this.field_wb.a(this.field_p, 31407, this.field_wb.e(-1), 0, 0);
         if (param1 > -9) {
           this.a((byte) -67, -74, -46, -17, -10, -3);

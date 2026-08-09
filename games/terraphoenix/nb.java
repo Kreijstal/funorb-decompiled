@@ -11,10 +11,10 @@ abstract class nb {
     static String field_a;
 
     final static ci a(int param0, int param1, int param2) {
-        ci var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        ci var6 = null;
+        ci var3;
+        int var4;
+        int var5;
+        ci var6;
         var5 = Terraphoenix.field_V;
         var6 = new ci(param0, param0);
         var3 = var6;

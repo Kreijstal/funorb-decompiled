@@ -28,6 +28,11 @@ abstract class bh {
     abstract void a(int param0, int param1);
 
     final static String a(byte param0) {
+        String stackIn_9_0 = null;
+        String stackIn_19_0 = null;
+        String stackIn_26_0 = null;
+        String stackIn_36_0 = null;
+        int statePc = 0;
         String var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -39,158 +44,234 @@ abstract class bh {
         String var18 = null;
         String var19 = null;
         String var20 = null;
-        String stackIn_9_0 = null;
-        String stackIn_19_0 = null;
-        String stackIn_26_0 = null;
-        String stackIn_36_0 = null;
-        String stackOut_25_0 = null;
-        String stackOut_35_0 = null;
-        String stackOut_8_0 = null;
-        String stackOut_18_0 = null;
-        var5 = MonkeyPuzzle2.field_F ? 1 : 0;
-        if (param0 < 0) {
-          var18 = "(" + bk.field_f + " " + il.field_e + " " + hk.field_l + ") " + wk.field_a;
-          var1 = var18;
-          if (-1 > (rc.field_f ^ -1)) {
-            var1 = var18 + ":";
-            var2 = 0;
-            L0: while (true) {
-              if (rc.field_f > var2) {
-                L1: {
-                  stackOut_25_0 = var1 + ' ';
-                  stackIn_36_0 = stackOut_25_0;
-                  stackIn_26_0 = stackOut_25_0;
-                  if (var5 != 0) {
-                    break L1;
-                  } else {
-                    L2: {
-                      L3: {
-                        var19 = stackIn_26_0;
-                        var3 = 255 & MonkeyPuzzle2.field_D.field_g[var2];
-                        var4 = var3 >> -1395198204;
-                        var3 = var3 & 15;
-                        if ((var4 ^ -1) <= -11) {
-                          break L3;
-                        } else {
-                          var4 += 48;
-                          if (var5 == 0) {
-                            break L2;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                      var4 += 55;
-                      break L2;
-                    }
-                    L4: {
-                      L5: {
-                        var20 = var19 + (char)var4;
-                        if (-11 < (var3 ^ -1)) {
-                          break L5;
-                        } else {
-                          var3 += 55;
-                          if (var5 == 0) {
-                            break L4;
-                          } else {
-                            break L5;
-                          }
-                        }
-                      }
-                      var3 += 48;
-                      break L4;
-                    }
-                    var1 = var20 + (char)var3;
-                    var2++;
-                    if (var5 == 0) {
-                      continue L0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var5 = MonkeyPuzzle2.field_F ? 1 : 0;
+                    if (param0 < 0) {
+                        statePc = 20;
                     } else {
-                      stackOut_35_0 = (String) (var1);
-                      stackIn_36_0 = stackOut_35_0;
-                      break L1;
+                        statePc = 1;
                     }
-                  }
+                    continue stateLoop;
                 }
-                return stackIn_36_0;
-              } else {
-                return var1;
-              }
-            }
-          } else {
-            return var1;
-          }
-        } else {
-          field_j = -79;
-          var12 = "(" + bk.field_f + " " + il.field_e + " " + hk.field_l + ") " + wk.field_a;
-          var1 = var12;
-          if (-1 > (rc.field_f ^ -1)) {
-            var1 = var12 + ":";
-            var2 = 0;
-            L6: while (true) {
-              if (rc.field_f > var2) {
-                L7: {
-                  stackOut_8_0 = var1 + ' ';
-                  stackIn_19_0 = stackOut_8_0;
-                  stackIn_9_0 = stackOut_8_0;
-                  if (var5 != 0) {
-                    break L7;
-                  } else {
-                    L8: {
-                      L9: {
-                        var16 = stackIn_9_0;
-                        var3 = 255 & MonkeyPuzzle2.field_D.field_g[var2];
-                        var4 = var3 >> -1395198204;
-                        var3 = var3 & 15;
-                        if ((var4 ^ -1) <= -11) {
-                          break L9;
-                        } else {
-                          var4 += 48;
-                          if (var5 == 0) {
-                            break L8;
-                          } else {
-                            break L9;
-                          }
-                        }
-                      }
-                      var4 += 55;
-                      break L8;
+                case 1: {
+                    field_j = -79;
+                    var12 = "(" + bk.field_f + " " + il.field_e + " " + hk.field_l + ") " + wk.field_a;
+                    var1 = var12;
+                    if (-1 > (rc.field_f ^ -1)) {
+                        statePc = 4;
+                    } else {
+                        statePc = 2;
                     }
-                    L10: {
-                      L11: {
-                        var17 = var16 + (char)var4;
-                        if (-11 < (var3 ^ -1)) {
-                          break L11;
-                        } else {
-                          var3 += 55;
-                          if (var5 == 0) {
-                            break L10;
-                          } else {
-                            break L11;
-                          }
-                        }
-                      }
-                      var3 += 48;
-                      break L10;
+                    continue stateLoop;
+                }
+                case 2: {
+                    return var1;
+                }
+                case 4: {
+                    var1 = var12 + ":";
+                    var2 = 0;
+                    statePc = 5;
+                    continue stateLoop;
+                }
+                case 5: {
+                    if (rc.field_f > var2) {
+                        statePc = 8;
+                    } else {
+                        statePc = 6;
                     }
+                    continue stateLoop;
+                }
+                case 6: {
+                    return var1;
+                }
+                case 8: {
+                    stackIn_19_0 = var1 + ' ';
+                    stackIn_9_0 = stackIn_19_0;
+                    if (var5 != 0) {
+                        statePc = 19;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    var16 = stackIn_9_0;
+                    var3 = 255 & MonkeyPuzzle2.field_D.field_g[var2];
+                    var4 = var3 >> -1395198204;
+                    var3 = var3 & 15;
+                    if ((var4 ^ -1) <= -11) {
+                        statePc = 12;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    var4 += 48;
+                    if (var5 == 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
+                    var4 += 55;
+                    statePc = 13;
+                    continue stateLoop;
+                }
+                case 13: {
+                    var17 = var16 + (char)var4;
+                    if (-11 < (var3 ^ -1)) {
+                        statePc = 16;
+                    } else {
+                        statePc = 14;
+                    }
+                    continue stateLoop;
+                }
+                case 14: {
+                    var3 += 55;
+                    if (var5 == 0) {
+                        statePc = 17;
+                    } else {
+                        statePc = 16;
+                    }
+                    continue stateLoop;
+                }
+                case 16: {
+                    var3 += 48;
+                    statePc = 17;
+                    continue stateLoop;
+                }
+                case 17: {
                     var1 = var17 + (char)var3;
                     var2++;
                     if (var5 == 0) {
-                      continue L6;
+                        statePc = 5;
                     } else {
-                      stackOut_18_0 = (String) (var1);
-                      stackIn_19_0 = stackOut_18_0;
-                      break L7;
+                        statePc = 18;
                     }
-                  }
+                    continue stateLoop;
                 }
-                return stackIn_19_0;
-              } else {
-                return var1;
-              }
+                case 18: {
+                    stackIn_19_0 = (String) (var1);
+                    statePc = 19;
+                    continue stateLoop;
+                }
+                case 19: {
+                    return stackIn_19_0;
+                }
+                case 20: {
+                    var18 = "(" + bk.field_f + " " + il.field_e + " " + hk.field_l + ") " + wk.field_a;
+                    var1 = var18;
+                    if (-1 > (rc.field_f ^ -1)) {
+                        statePc = 22;
+                    } else {
+                        statePc = 21;
+                    }
+                    continue stateLoop;
+                }
+                case 21: {
+                    return var1;
+                }
+                case 22: {
+                    var1 = var18 + ":";
+                    var2 = 0;
+                    statePc = 23;
+                    continue stateLoop;
+                }
+                case 23: {
+                    if (rc.field_f > var2) {
+                        statePc = 25;
+                    } else {
+                        statePc = 24;
+                    }
+                    continue stateLoop;
+                }
+                case 24: {
+                    return var1;
+                }
+                case 25: {
+                    stackIn_36_0 = var1 + ' ';
+                    stackIn_26_0 = stackIn_36_0;
+                    if (var5 != 0) {
+                        statePc = 36;
+                    } else {
+                        statePc = 26;
+                    }
+                    continue stateLoop;
+                }
+                case 26: {
+                    var19 = stackIn_26_0;
+                    var3 = 255 & MonkeyPuzzle2.field_D.field_g[var2];
+                    var4 = var3 >> -1395198204;
+                    var3 = var3 & 15;
+                    if ((var4 ^ -1) <= -11) {
+                        statePc = 29;
+                    } else {
+                        statePc = 27;
+                    }
+                    continue stateLoop;
+                }
+                case 27: {
+                    var4 += 48;
+                    if (var5 == 0) {
+                        statePc = 30;
+                    } else {
+                        statePc = 29;
+                    }
+                    continue stateLoop;
+                }
+                case 29: {
+                    var4 += 55;
+                    statePc = 30;
+                    continue stateLoop;
+                }
+                case 30: {
+                    var20 = var19 + (char)var4;
+                    if (-11 < (var3 ^ -1)) {
+                        statePc = 33;
+                    } else {
+                        statePc = 31;
+                    }
+                    continue stateLoop;
+                }
+                case 31: {
+                    var3 += 55;
+                    if (var5 == 0) {
+                        statePc = 34;
+                    } else {
+                        statePc = 33;
+                    }
+                    continue stateLoop;
+                }
+                case 33: {
+                    var3 += 48;
+                    statePc = 34;
+                    continue stateLoop;
+                }
+                case 34: {
+                    var1 = var20 + (char)var3;
+                    var2++;
+                    if (var5 == 0) {
+                        statePc = 23;
+                    } else {
+                        statePc = 35;
+                    }
+                    continue stateLoop;
+                }
+                case 35: {
+                    stackIn_36_0 = (String) (var1);
+                    statePc = 36;
+                    continue stateLoop;
+                }
+                case 36: {
+                    return stackIn_36_0;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          } else {
-            return var1;
-          }
         }
     }
 

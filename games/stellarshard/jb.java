@@ -80,8 +80,8 @@ final class jb {
     }
 
     final void b(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         if (pd.field_f != null) {
           return;
         } else {
@@ -95,9 +95,9 @@ final class jb {
               }
             }
             if (this.field_f) {
-              fieldTemp$2 = this.field_g - 1;
+              fieldTemp$0 = this.field_g - 1;
               this.field_g = this.field_g - 1;
-              if (-1 <= (fieldTemp$2 ^ -1)) {
+              if (-1 <= (fieldTemp$0 ^ -1)) {
                 this.field_g = this.field_o;
                 if (fh.field_m < this.field_d) {
                   this.field_f = false;
@@ -163,9 +163,9 @@ final class jb {
               }
             }
             if (this.field_f) {
-              fieldTemp$3 = this.field_g - 1;
+              fieldTemp$1 = this.field_g - 1;
               this.field_g = this.field_g - 1;
-              if (-1 <= (fieldTemp$3 ^ -1)) {
+              if (-1 <= (fieldTemp$1 ^ -1)) {
                 this.field_g = this.field_o;
                 if (fh.field_m < this.field_d) {
                   this.field_f = false;
@@ -208,10 +208,10 @@ final class jb {
     }
 
     private final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = stellarshard.field_B;
         var2 = this.field_m;
         var3 = this.field_b;

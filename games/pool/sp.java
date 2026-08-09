@@ -15,9 +15,9 @@ final class sp extends gr {
 
     final static void a(boolean param0, int param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = Pool.field_O;
         try {
           L0: {

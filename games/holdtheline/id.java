@@ -48,10 +48,10 @@ final class id {
     }
 
     final int f() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
         var1 = this.field_e.length;
         var2 = -1;
         var3 = 2147483647;
@@ -131,9 +131,9 @@ final class id {
     }
 
     private final int f(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var2 = this.field_f.field_i[this.field_f.field_l];
           if (var2 >= 0) {

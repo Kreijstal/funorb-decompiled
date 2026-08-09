@@ -35,7 +35,7 @@ final class t {
     }
 
     public static void a(int param0) {
-        wh var2 = null;
+        wh var2;
         field_d = null;
         if (param0 != -11353) {
           var2 = (wh) null;

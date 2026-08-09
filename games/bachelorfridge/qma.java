@@ -8,16 +8,14 @@ final class qma extends pu {
 
     final static vr a(boolean param0, int param1, boolean param2, int param3, boolean param4, int param5) {
         try {
-            Object var6 = null;
-            Object var7 = null;
-            fp var8 = null;
             vr stackIn_5_0 = null;
             vr stackIn_16_0 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            vr stackOut_15_0 = null;
-            vr stackOut_4_0 = null;
+            Object var6 = null;
+            Object var7 = null;
+            fp var8 = null;
             try {
               L0: {
                 try {
@@ -69,13 +67,11 @@ final class qma extends pu {
                           break L6;
                         }
                       }
-                      stackOut_15_0 = new vr(var8, param0, param3);
-                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_16_0 = new vr(var8, param0, param3);
                       decompiledRegionSelector0 = 1;
                       break L1;
                     } else {
-                      stackOut_4_0 = (vr) null;
-                      stackIn_5_0 = stackOut_4_0;
+                      stackIn_5_0 = (vr) null;
                       decompiledRegionSelector0 = 0;
                       break L1;
                     }

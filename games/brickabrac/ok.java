@@ -20,19 +20,17 @@ final class ok {
     }
 
     public static void b(int param0) {
-        boolean discarded$0 = false;
         field_d = null;
         field_g = null;
         field_a = null;
         field_e = null;
         field_b = null;
         if (param0 > -2) {
-            discarded$0 = ok.a(false);
+            ok.a(false);
         }
     }
 
     final static boolean a(boolean param0) {
-        boolean discarded$5 = false;
         if (param0) {
           if (null != jj.field_a) {
             if (!jj.field_a.a((byte) -32)) {
@@ -44,7 +42,7 @@ final class ok {
             return false;
           }
         } else {
-          discarded$5 = ok.a(true);
+          ok.a(true);
           if (null != jj.field_a) {
             if (!jj.field_a.a((byte) -32)) {
               return false;

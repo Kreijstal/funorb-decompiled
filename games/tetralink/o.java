@@ -23,7 +23,7 @@ final class o extends mc {
     }
 
     final static void b(byte param0) {
-        int var1 = 0;
+        int var1;
         if (param0 <= 0) {
           om.field_Rb = mk.field_b.b(cd.field_c[14]);
           var1 = mk.field_b.b(cd.field_c[15]);

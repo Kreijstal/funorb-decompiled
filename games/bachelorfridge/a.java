@@ -10,32 +10,31 @@ final class a extends oha {
     static kv[] field_n;
 
     public static void c(int param0) {
-        int[] discarded$0 = null;
         field_p = null;
         field_m = (int[][]) null;
         field_n = null;
         field_o = null;
         if (param0 != 16763049) {
-            discarded$0 = a.a(-43, -100, -66, 126);
+            a.a(-43, -100, -66, 126);
         }
     }
 
     final static int[] a(int param0, int param1, int param2, int param3) {
-        int[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        double var8 = 0.0;
-        double var10 = 0.0;
-        double var12 = 0.0;
-        double var14 = 0.0;
-        double var16 = 0.0;
-        double var18 = 0.0;
-        int var20 = 0;
-        int var21 = 0;
-        int[] var22 = null;
-        int[] var23 = null;
-        int[] var24 = null;
+        int[] var4;
+        int var5;
+        int var6;
+        int var7;
+        double var8;
+        double var10;
+        double var12;
+        double var14;
+        double var16;
+        double var18;
+        int var20;
+        int var21;
+        int[] var22;
+        int[] var23;
+        int[] var24;
         var21 = BachelorFridge.field_y;
         var24 = new int[param1];
         var23 = var24;

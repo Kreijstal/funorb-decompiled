@@ -17,58 +17,142 @@ final class ke {
     static ja[] field_i;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int[] array$4 = null;
-        String discarded$5 = null;
+        int[] array$1 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var6 = ZombieDawnMulti.field_E ? 1 : 0;
-        try {
-          L0: {
-            L1: {
-              array$4 = new int[ah.field_e.field_P[0].length];
-              ah.field_e.field_P[param1] = array$4;
-              ah.field_e.field_P[param1][ia.field_s] = param0;
-              ah.field_e.field_P[param1][rj.field_F] = param3;
-              ah.field_e.field_P[param1][wm.field_Q[0]] = param4;
-              if (param2 == -17895) {
-                break L1;
-              } else {
-                discarded$5 = ke.a(92, -5L);
-                break L1;
-              }
-            }
-            var5_int = 1;
-            L2: while (true) {
-              if (wm.field_Q.length <= var5_int) {
-                break L0;
-              } else {
-                ah.field_e.field_P[param1][wm.field_Q[var5_int]] = ui.a(ah.field_e.field_P[param1][wm.field_Q[var5_int + -1]], false);
-                var5_int++;
-                if (var6 == 0) {
-                  continue L2;
-                } else {
-                  return;
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var6 = ZombieDawnMulti.field_E ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
+                case 1: {
+                    try {
+                        array$1 = new int[ah.field_e.field_P[0].length];
+                        ah.field_e.field_P[param1] = array$1;
+                        ah.field_e.field_P[param1][ia.field_s] = param0;
+                        ah.field_e.field_P[param1][rj.field_F] = param3;
+                        ah.field_e.field_P[param1][wm.field_Q[0]] = param4;
+                        if (param2 == -17895) {
+                            statePc = 3;
+                        } else {
+                            statePc = 2;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        ke.a(92, -5L);
+                        statePc = 3;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        var5_int = 1;
+                        statePc = 4;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        if (wm.field_Q.length <= var5_int) {
+                            statePc = 11;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        ah.field_e.field_P[param1][wm.field_Q[var5_int]] = ui.a(ah.field_e.field_P[param1][wm.field_Q[var5_int + -1]], false);
+                        var5_int++;
+                        if (var6 == 0) {
+                            statePc = 7;
+                        } else {
+                            statePc = 6;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        return;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        if (var6 == 0) {
+                            statePc = 4;
+                        } else {
+                            statePc = 8;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        return;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    var5 = (RuntimeException) ((Object) caughtException);
+                    throw fa.a((Throwable) ((Object) var5), "ke.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+                }
+                case 11: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          throw fa.a((Throwable) ((Object) var5), "ke.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static String a(int param0, long param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         cp.field_U.setTime(new Date(param1));
         var3 = cp.field_U.get(7);
         var4 = cp.field_U.get(5);

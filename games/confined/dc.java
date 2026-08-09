@@ -56,33 +56,33 @@ abstract class dc extends jl {
     }
 
     void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
         var31 = Confined.field_J ? 1 : 0;
         if (!this.field_V) {
           return;
@@ -532,7 +532,7 @@ abstract class dc extends jl {
                   }
                 } else {
                   var22 = this.field_U * (-this.field_G + var21) - -((var11 + -this.field_z) * this.field_O);
-                  if (var22 >= param1) {
+                  if ((var22 ^ -1) <= (param1 ^ -1)) {
                     if (param3 > var22) {
                       var22 = var22 >> 12;
                       var23 = (this.field_v << -222940536) - -((-this.field_v + this.field_E) * var22 >> -907948024);
@@ -593,8 +593,8 @@ abstract class dc extends jl {
     }
 
     final boolean a(vg param0, int param1) {
-        RuntimeException var3 = null;
         double var3_double = 0.0;
+        RuntimeException var3 = null;
         double var5 = 0.0;
         double var7 = 0.0;
         double var9 = 0.0;
@@ -609,24 +609,12 @@ abstract class dc extends jl {
         double var27 = 0.0;
         double var29 = 0.0;
         int stackIn_9_0 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_8_0 = 0;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
@@ -686,14 +674,12 @@ abstract class dc extends jl {
                   if (!this.g(-10603)) {
                     break L4;
                   } else {
-                    stackOut_7_0 = 1;
-                    stackIn_9_0 = stackOut_7_0;
+                    stackIn_9_0 = 1;
                     break L3;
                   }
                 }
               }
-              stackOut_8_0 = 0;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = 0;
               break L3;
             }
             break L0;
@@ -702,27 +688,19 @@ abstract class dc extends jl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3);
-            stackOut_10_1 = new StringBuilder().append("dc.LA(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3);
+
+            stackIn_12_1 = new StringBuilder().append("dc.LA(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L5;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L5;
             }
           }
@@ -733,8 +711,6 @@ abstract class dc extends jl {
 
     final static boolean f(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == -14) {
             break L0;
@@ -751,31 +727,29 @@ abstract class dc extends jl {
               if ((we.field_c ^ -1) > -14) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
     }
 
     void c(int param0) {
-        double var2 = 0.0;
-        double var4 = 0.0;
-        double var6 = 0.0;
-        double var8 = 0.0;
-        double var10 = 0.0;
-        double var12 = 0.0;
-        double var14 = 0.0;
-        double var16 = 0.0;
-        double var18 = 0.0;
-        double var20 = 0.0;
-        double var22 = 0.0;
+        double var2;
+        double var4;
+        double var6;
+        double var8;
+        double var10;
+        double var12;
+        double var14;
+        double var16;
+        double var18;
+        double var20;
+        double var22;
         var2 = 320.0 + this.field_Y / this.field_A * 640.0;
         var4 = 640.0 * (this.field_D / this.field_A) + 188.0;
         var6 = 12.8 / this.field_A;
@@ -834,26 +808,26 @@ abstract class dc extends jl {
     }
 
     final void a(boolean param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
         var23 = Confined.field_J ? 1 : 0;
         if (!this.field_V) {
           return;
@@ -965,10 +939,20 @@ abstract class dc extends jl {
     }
 
     final void a(mn param0, int param1) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        RuntimeException var3 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int stackIn_9_0 = 0;
+        rk stackIn_12_0 = null;
+        Object stackIn_23_0 = null;
+        Object stackIn_40_0 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         oi var6 = null;
@@ -987,34 +971,6 @@ abstract class dc extends jl {
         Object var24 = null;
         oi var24_ref = null;
         int var25 = 0;
-        int stackIn_9_0 = 0;
-        rk stackIn_12_0 = null;
-        Object stackIn_23_0 = null;
-        Object stackIn_40_0 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        String stackIn_45_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        rk stackOut_11_0 = null;
-        rk stackOut_10_0 = null;
-        oi stackOut_39_0 = null;
-        rk stackOut_38_0 = null;
-        oi stackOut_22_0 = null;
-        rk stackOut_21_0 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
         var23 = null;
         var24 = null;
         var25 = Confined.field_J ? 1 : 0;
@@ -1041,24 +997,20 @@ abstract class dc extends jl {
             }
             L3: {
               if (this.field_X <= this.field_eb) {
-                stackOut_8_0 = 0;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 0;
                 break L3;
               } else {
-                stackOut_7_0 = 1;
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = 1;
                 break L3;
               }
             }
             L4: {
               var5 = stackIn_9_0;
               if (var5 != 0) {
-                stackOut_11_0 = param0.a(-116);
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = param0.a(-116);
                 break L4;
               } else {
-                stackOut_10_0 = param0.a(false);
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = param0.a(false);
                 break L4;
               }
             }
@@ -1090,9 +1042,9 @@ abstract class dc extends jl {
                   var8 = var8 + 0.5 * (var22 - 1.0) * var16;
                   var10 = var10 - 0.5 * (-1.0 + var22) * var18;
                   var12 = var12 - var20 * ((-1.0 + var22) * 0.5);
-                  fieldTemp$2 = ah.field_U;
+                  fieldTemp$0 = ah.field_U;
                   ah.field_U = ah.field_U + 1;
-                  var24_ref = (oi) (ln.field_d.elementAt(fieldTemp$2));
+                  var24_ref = (oi) (ln.field_d.elementAt(fieldTemp$0));
                   var24_ref.field_t = var8;
                   var24_ref.field_u = var22 * this.field_B;
                   var24_ref.field_p = var12;
@@ -1113,12 +1065,10 @@ abstract class dc extends jl {
                       }
                       L10: {
                         if (var6 != null) {
-                          stackOut_39_0 = (oi) (var6);
-                          stackIn_40_0 = stackOut_39_0;
+                          stackIn_40_0 = (oi) (var6);
                           break L10;
                         } else {
-                          stackOut_38_0 = param0.field_a;
-                          stackIn_40_0 = stackOut_38_0;
+                          stackIn_40_0 = param0.field_a;
                           break L10;
                         }
                       }
@@ -1149,9 +1099,9 @@ abstract class dc extends jl {
                 break L0;
               } else {
                 L13: {
-                  fieldTemp$3 = ah.field_U;
+                  fieldTemp$1 = ah.field_U;
                   ah.field_U = ah.field_U + 1;
-                  var23_ref = (oi) (ln.field_d.elementAt(fieldTemp$3));
+                  var23_ref = (oi) (ln.field_d.elementAt(fieldTemp$1));
                   var23_ref.field_p = var12;
                   var23_ref.field_o = var10;
                   var23_ref.field_t = var8;
@@ -1193,12 +1143,10 @@ abstract class dc extends jl {
                       }
                       L18: {
                         if (var6 != null) {
-                          stackOut_22_0 = (oi) (var6);
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_23_0 = (oi) (var6);
                           break L18;
                         } else {
-                          stackOut_21_0 = param0.field_a;
-                          stackIn_23_0 = stackOut_21_0;
+                          stackIn_23_0 = param0.field_a;
                           break L18;
                         }
                       }
@@ -1217,27 +1165,19 @@ abstract class dc extends jl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L19: {
             var3 = decompiledCaughtException;
-            stackOut_42_0 = (RuntimeException) (var3);
-            stackOut_42_1 = new StringBuilder().append("dc.DA(");
-            stackIn_44_0 = stackOut_42_0;
-            stackIn_44_1 = stackOut_42_1;
-            stackIn_43_0 = stackOut_42_0;
-            stackIn_43_1 = stackOut_42_1;
+            stackIn_44_0 = (RuntimeException) (var3);
+
+            stackIn_44_1 = new StringBuilder().append("dc.DA(");
+
             if (param0 == null) {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "null";
-              stackIn_45_0 = stackOut_44_0;
-              stackIn_45_1 = stackOut_44_1;
-              stackIn_45_2 = stackOut_44_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "null";
               break L19;
             } else {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "{...}";
-              stackIn_45_0 = stackOut_43_0;
-              stackIn_45_1 = stackOut_43_1;
-              stackIn_45_2 = stackOut_43_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "{...}";
               break L19;
             }
           }
@@ -1246,15 +1186,15 @@ abstract class dc extends jl {
     }
 
     private final boolean c(boolean param0) {
-        double var2 = 0.0;
-        double var4 = 0.0;
-        double var6 = 0.0;
-        double var8 = 0.0;
-        double var10 = 0.0;
-        double var12 = 0.0;
-        double var14 = 0.0;
-        double var16 = 0.0;
-        double var18 = 0.0;
+        double var2;
+        double var4;
+        double var6;
+        double var8;
+        double var10;
+        double var12;
+        double var14;
+        double var16;
+        double var18;
         L0: {
           var2 = this.field_bb;
           var4 = this.field_ab;
@@ -1328,179 +1268,138 @@ abstract class dc extends jl {
     }
 
     final boolean g(int param0) {
-        double var2 = 0.0;
-        double var4 = 0.0;
-        double var6 = 0.0;
-        double var8 = 0.0;
-        double var10 = 0.0;
-        double var12 = 0.0;
-        double var14 = 0.0;
-        double var16 = 0.0;
         double var18 = 0.0;
-        int var20 = 0;
-        L0: {
-          var20 = Confined.field_J ? 1 : 0;
-          var2 = this.field_bb;
-          var4 = this.field_ab;
-          var6 = this.field_C;
-          var8 = this.field_Y;
-          var10 = this.field_D;
-          var12 = this.field_A;
-          var14 = this.field_F;
-          var16 = this.field_I;
-          if (param0 == -10603) {
-            break L0;
-          } else {
+        int var20 = Confined.field_J ? 1 : 0;
+        double var2 = this.field_bb;
+        double var4 = this.field_ab;
+        double var6 = this.field_C;
+        double var8 = this.field_Y;
+        double var10 = this.field_D;
+        double var12 = this.field_A;
+        double var14 = this.field_F;
+        double var16 = this.field_I;
+        if (param0 != -10603) {
             dc.e(-43);
-            break L0;
-          }
         }
-        L1: {
-          if (1.2 * var6 >= -var2) {
-            if (-var8 <= 1.2 * var12) {
-              break L1;
-            } else {
-              if (var6 * 1.1 < -var2) {
+        if (1.2 * var6 < -var2) {
+            if (var12 * 1.1 < -var8) {
                 return false;
-              } else {
+            }
+            var18 = (1.2 * var6 + var2) / ((var6 - var12) * 1.2 + (var2 - var8));
+            var2 = var2 + (var18 * (-var2 + var8) + this.a(var18, (byte) -84));
+            var4 = var4 + ((-var4 + var10) * var18 + this.a(var18, (byte) -80));
+            var14 = var14 + var18 * (var16 - var14);
+            var6 = var6 + var18 * (var12 - var6);
+            this.field_y = this.field_y * (1.0 - var18);
+        } else {
+            if (-var8 > 1.2 * var12) {
+                if (!(var6 * 1.1 >= -var2)) {
+                    return false;
+                }
                 var18 = (var8 + var12 * 1.2) / (1.2 * (var12 - var6) + (-var2 + var8));
                 var8 = var8 + ((-var8 + var2) * var18 + this.a(var18, (byte) -120));
                 var10 = var10 + ((var4 - var10) * var18 + this.a(var18, (byte) -12));
                 var16 = var16 + var18 * (-var16 + var14);
                 var12 = var12 + var18 * (var6 - var12);
                 this.field_y = this.field_y * (-var18 + 1.0);
-                break L1;
-              }
             }
-          } else {
-            if (var12 * 1.1 >= -var8) {
-              var18 = (1.2 * var6 + var2) / ((var6 - var12) * 1.2 + (var2 - var8));
-              var2 = var2 + (var18 * (-var2 + var8) + this.a(var18, (byte) -84));
-              var4 = var4 + ((-var4 + var10) * var18 + this.a(var18, (byte) -80));
-              var14 = var14 + var18 * (var16 - var14);
-              var6 = var6 + var18 * (var12 - var6);
-              this.field_y = this.field_y * (1.0 - var18);
-              break L1;
-            } else {
-              return false;
-            }
-          }
         }
-        L2: {
-          if (1.2 * var6 >= var2) {
-            if (-var8 > 1.2 * var12) {
-              if (var2 > var6 * 1.1) {
+        if (1.2 * var6 < var2) {
+            if (var12 * 1.1 < var8) {
                 return false;
-              } else {
+            }
+            var18 = (var2 - 1.2 * var6) / (-var8 + var2 + (var12 - var6) * 1.2);
+            var2 = var2 + (var18 * (var8 - var2) + this.a(var18, (byte) -29));
+            var4 = var4 + (this.a(var18, (byte) -4) + var18 * (var10 - var4));
+            var14 = var14 + (var16 - var14) * var18;
+            var6 = var6 + (-var6 + var12) * var18;
+            this.field_y = this.field_y * (1.0 - var18);
+        } else {
+            if (!(-var8 <= 1.2 * var12)) {
+                if (!(var2 <= var6 * 1.1)) {
+                    return false;
+                }
                 var18 = (-(var12 * 1.2) + var8) / (var8 - var2 + (var6 - var12) * 1.2);
                 var8 = var8 + (this.a(var18, (byte) -58) + (var2 - var8) * var18);
                 var12 = var12 + var18 * (-var12 + var6);
                 var10 = var10 + (var18 * (-var10 + var4) + this.a(var18, (byte) -3));
                 var16 = var16 + var18 * (var14 - var16);
                 this.field_y = this.field_y * (1.0 - var18);
-                break L2;
-              }
-            } else {
-              break L2;
             }
-          } else {
-            if (var12 * 1.1 >= var8) {
-              var18 = (var2 - 1.2 * var6) / (-var8 + var2 + (var12 - var6) * 1.2);
-              var2 = var2 + (var18 * (var8 - var2) + this.a(var18, (byte) -29));
-              var4 = var4 + (this.a(var18, (byte) -4) + var18 * (var10 - var4));
-              var14 = var14 + (var16 - var14) * var18;
-              var6 = var6 + (-var6 + var12) * var18;
-              this.field_y = this.field_y * (1.0 - var18);
-              break L2;
-            } else {
-              return false;
-            }
-          }
         }
-        L3: {
-          if (var6 * 1.2 >= -var4) {
-            if (1.2 * var12 < -var10) {
-              if (1.1 * var6 >= -var4) {
+        if (var6 * 1.2 < -var4) {
+            if (!(var12 * 1.1 >= -var10)) {
+                return false;
+            }
+            var18 = (var6 * 1.2 + var4) / (1.2 * (-var12 + var6) + (-var10 + var4));
+            var2 = var2 + (var18 * (-var2 + var8) + this.a(var18, (byte) -9));
+            var14 = var14 + (-var14 + var16) * var18;
+            var6 = var6 + var18 * (-var6 + var12);
+            var4 = var4 + (this.a(var18, (byte) -63) + var18 * (var10 - var4));
+            this.field_y = this.field_y * (-var18 + 1.0);
+        } else {
+            if (!(1.2 * var12 >= -var10)) {
+                if (1.1 * var6 < -var4) {
+                    return false;
+                }
                 var18 = (var12 * 1.2 + var10) / ((var12 - var6) * 1.2 + (-var4 + var10));
                 var8 = var8 + (this.a(var18, (byte) -101) + var18 * (-var8 + var2));
                 var16 = var16 + (var14 - var16) * var18;
                 var10 = var10 + (var18 * (-var10 + var4) + this.a(var18, (byte) -124));
                 var12 = var12 + (var6 - var12) * var18;
                 this.field_y = this.field_y * (-var18 + 1.0);
-                break L3;
-              } else {
+            }
+        }
+        if (1.2 * var6 >= var4) {
+            if (1.2 * var12 >= -var10) {
+                this.field_I = var16;
+                this.field_C = var6;
+                this.field_bb = var2;
+                this.field_F = var14;
+                this.field_ab = var4;
+                this.field_A = var12;
+                this.field_Y = var8;
+                this.field_D = var10;
+                return true;
+            }
+            if (!(var6 * 1.1 >= var4)) {
                 return false;
-              }
-            } else {
-              break L3;
             }
-          } else {
-            if (var12 * 1.1 < -var10) {
-              return false;
-            } else {
-              var18 = (var6 * 1.2 + var4) / (1.2 * (-var12 + var6) + (-var10 + var4));
-              var2 = var2 + (var18 * (-var2 + var8) + this.a(var18, (byte) -9));
-              var14 = var14 + (-var14 + var16) * var18;
-              var6 = var6 + var18 * (-var6 + var12);
-              var4 = var4 + (this.a(var18, (byte) -63) + var18 * (var10 - var4));
-              this.field_y = this.field_y * (-var18 + 1.0);
-              break L3;
-            }
-          }
-        }
-        if (1.2 * var6 < var4) {
-          if (var10 > 1.1 * var12) {
-            return false;
-          } else {
-            var18 = (var4 - var6 * 1.2) / ((var12 - var6) * 1.2 - (var10 - var4));
-            var2 = var2 + (this.a(var18, (byte) -56) + var18 * (var8 - var2));
-            var14 = var14 + (-var14 + var16) * var18;
-            var6 = var6 + var18 * (-var6 + var12);
-            var4 = var4 + (this.a(var18, (byte) -75) + var18 * (var10 - var4));
-            this.field_y = this.field_y * (-var18 + 1.0);
-            this.field_I = var16;
-            this.field_C = var6;
-            this.field_bb = var2;
-            this.field_F = var14;
-            this.field_ab = var4;
-            this.field_A = var12;
-            this.field_Y = var8;
-            this.field_D = var10;
-            return true;
-          }
+            var18 = (-(var12 * 1.2) + var10) / (1.2 * (var6 - var12) - (var4 - var10));
+            var8 = var8 + ((-var8 + var2) * var18 + this.a(var18, (byte) -64));
+            var16 = var16 + (-var16 + var14) * var18;
+            var10 = var10 + ((-var10 + var4) * var18 + this.a(var18, (byte) -58));
+            var12 = var12 + var18 * (var6 - var12);
+            this.field_y = this.field_y * (1.0 - var18);
         } else {
-          if (1.2 * var12 < -var10) {
-            if (var6 * 1.1 < var4) {
-              return false;
-            } else {
-              var18 = (-(var12 * 1.2) + var10) / (1.2 * (var6 - var12) - (var4 - var10));
-              var8 = var8 + ((-var8 + var2) * var18 + this.a(var18, (byte) -64));
-              var16 = var16 + (-var16 + var14) * var18;
-              var10 = var10 + ((-var10 + var4) * var18 + this.a(var18, (byte) -58));
-              var12 = var12 + var18 * (var6 - var12);
-              this.field_y = this.field_y * (1.0 - var18);
-              this.field_I = var16;
-              this.field_C = var6;
-              this.field_bb = var2;
-              this.field_F = var14;
-              this.field_ab = var4;
-              this.field_A = var12;
-              this.field_Y = var8;
-              this.field_D = var10;
-              return true;
+            if (var10 <= 1.1 * var12) {
+                var18 = (var4 - var6 * 1.2) / ((var12 - var6) * 1.2 - (var10 - var4));
+                var2 = var2 + (this.a(var18, (byte) -56) + var18 * (var8 - var2));
+                var14 = var14 + (-var14 + var16) * var18;
+                var6 = var6 + var18 * (-var6 + var12);
+                var4 = var4 + (this.a(var18, (byte) -75) + var18 * (var10 - var4));
+                this.field_y = this.field_y * (-var18 + 1.0);
+                this.field_I = var16;
+                this.field_C = var6;
+                this.field_bb = var2;
+                this.field_F = var14;
+                this.field_ab = var4;
+                this.field_A = var12;
+                this.field_Y = var8;
+                this.field_D = var10;
+                return true;
             }
-          } else {
-            this.field_I = var16;
-            this.field_C = var6;
-            this.field_bb = var2;
-            this.field_F = var14;
-            this.field_ab = var4;
-            this.field_A = var12;
-            this.field_Y = var8;
-            this.field_D = var10;
-            return true;
-          }
+            return false;
         }
+        this.field_I = var16;
+        this.field_C = var6;
+        this.field_bb = var2;
+        this.field_F = var14;
+        this.field_ab = var4;
+        this.field_A = var12;
+        this.field_Y = var8;
+        this.field_D = var10;
+        return true;
     }
 
     final void a(byte param0, double param1, double param2, double param3) {
@@ -1538,26 +1437,26 @@ abstract class dc extends jl {
     }
 
     private final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
         L0: {
           var23 = Confined.field_J ? 1 : 0;
           var4 = ((this.field_t + -this.field_G) * param2 >> 44925104) + this.field_G;
@@ -1665,9 +1564,8 @@ abstract class dc extends jl {
     }
 
     final static void d(int param0) {
-        boolean discarded$0 = false;
         if (param0 < 99) {
-            discarded$0 = dc.f(-117);
+            dc.f(-117);
         }
         if (null != kl.field_G) {
             kl.field_G.a(1);
@@ -1677,37 +1575,15 @@ abstract class dc extends jl {
 
     dc(pm param0, bi param1, int param2) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -1725,56 +1601,40 @@ abstract class dc extends jl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (runtimeException);
-            stackOut_4_1 = new StringBuilder().append("dc.<init>(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("dc.<init>(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+
+
+            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ',' + param2 + ')');
         }
     }
 

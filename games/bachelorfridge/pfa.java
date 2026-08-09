@@ -18,18 +18,6 @@ final class pfa {
     }
 
     final static void b(int param0) {
-        RuntimeException var1 = null;
-        int var1_int = 0;
-        int var2 = 0;
-        int var3 = 0;
-        long var3_long = 0L;
-        int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        lda var9 = null;
-        int var10 = 0;
         int stackIn_16_0 = 0;
         String stackIn_22_0 = null;
         int stackIn_26_0 = 0;
@@ -37,18 +25,18 @@ final class pfa {
         int stackIn_39_0 = 0;
         lda stackIn_43_0 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        String stackOut_21_0 = null;
-        String stackOut_20_0 = null;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
-        String stackOut_31_0 = null;
-        String stackOut_30_0 = null;
-        int stackOut_38_0 = 0;
-        int stackOut_37_0 = 0;
-        lda stackOut_42_0 = null;
-        lda stackOut_41_0 = null;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        long var3_long = 0L;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        String var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        lda var9 = null;
+        int var10 = 0;
         var10 = BachelorFridge.field_y;
         try {
           L0: {
@@ -106,12 +94,10 @@ final class pfa {
                     } else {
                       L6: {
                         if (vka.field_p.length < mq.field_a.length) {
-                          stackOut_15_0 = mq.field_a.length;
-                          stackIn_16_0 = stackOut_15_0;
+                          stackIn_16_0 = mq.field_a.length;
                           break L6;
                         } else {
-                          stackOut_14_0 = vka.field_p.length;
-                          stackIn_16_0 = stackOut_14_0;
+                          stackIn_16_0 = vka.field_p.length;
                           break L6;
                         }
                       }
@@ -123,12 +109,10 @@ final class pfa {
                           if (var7 + 6 > var3) {
                             L8: {
                               if ((var3 + -6 - -vka.field_p.length - var7 ^ -1) <= -1) {
-                                stackOut_21_0 = vka.field_p[-6 + var3 + vka.field_p.length + -var7];
-                                stackIn_22_0 = stackOut_21_0;
+                                stackIn_22_0 = vka.field_p[-6 + var3 + vka.field_p.length + -var7];
                                 break L8;
                               } else {
-                                stackOut_20_0 = "";
-                                stackIn_22_0 = stackOut_20_0;
+                                stackIn_22_0 = "";
                                 break L8;
                               }
                             }
@@ -141,12 +125,10 @@ final class pfa {
                       }
                       L9: {
                         if (wba.field_a.length < ta.field_b.length) {
-                          stackOut_25_0 = ta.field_b.length;
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = ta.field_b.length;
                           break L9;
                         } else {
-                          stackOut_24_0 = wba.field_a.length;
-                          stackIn_26_0 = stackOut_24_0;
+                          stackIn_26_0 = wba.field_a.length;
                           break L9;
                         }
                       }
@@ -157,12 +139,10 @@ final class pfa {
                         if (var3 < var8 + 7 - -var7) {
                           L10: {
                             if (-var7 + -7 + var3 >= wba.field_a.length) {
-                              stackOut_31_0 = "";
-                              stackIn_32_0 = stackOut_31_0;
+                              stackIn_32_0 = "";
                               break L10;
                             } else {
-                              stackOut_30_0 = wba.field_a[-var7 + -7 + var3];
-                              stackIn_32_0 = stackOut_30_0;
+                              stackIn_32_0 = wba.field_a[-var7 + -7 + var3];
                               break L10;
                             }
                           }
@@ -185,12 +165,10 @@ final class pfa {
                 }
                 L12: {
                   if (0 > var4) {
-                    stackOut_38_0 = 0;
-                    stackIn_39_0 = stackOut_38_0;
+                    stackIn_39_0 = 0;
                     break L12;
                   } else {
-                    stackOut_37_0 = 1;
-                    stackIn_39_0 = stackOut_37_0;
+                    stackIn_39_0 = 1;
                     break L12;
                   }
                 }
@@ -202,12 +180,10 @@ final class pfa {
                   } else {
                     L14: {
                       if (var4 != dp.field_o.field_g) {
-                        stackOut_42_0 = st.field_b;
-                        stackIn_43_0 = stackOut_42_0;
+                        stackIn_43_0 = st.field_b;
                         break L14;
                       } else {
-                        stackOut_41_0 = hi.field_a;
-                        stackIn_43_0 = stackOut_41_0;
+                        stackIn_43_0 = hi.field_a;
                         break L14;
                       }
                     }
@@ -250,22 +226,12 @@ final class pfa {
 
     final void a(int param0, ad param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -283,27 +249,19 @@ final class pfa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("pfa.D(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("pfa.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -312,11 +270,11 @@ final class pfa {
     }
 
     private final void a(byte param0) {
-        int var2 = 0;
-        int var3_int = 0;
-        jj var3 = null;
-        sna var4 = null;
-        int var5 = 0;
+        int var2;
+        int var3_int;
+        int var5;
+        jj var3;
+        sna var4;
         var5 = BachelorFridge.field_y;
         this.field_e = new jj[this.field_f.field_s.field_m.length];
         var2 = 0;
@@ -398,8 +356,8 @@ final class pfa {
     }
 
     final boolean a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = BachelorFridge.field_y;
           if (param0 == -214844415) {
@@ -443,42 +401,27 @@ final class pfa {
     }
 
     final void a(boolean param0) {
-        int discarded$1 = 0;
-        int var3_int = 0;
-        String var3 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        aga var10 = null;
-        oha var11 = null;
-        int var12 = 0;
-        aga var13 = null;
-        oha var14 = null;
-        oha var15 = null;
-        String var16 = null;
-        kv stackIn_37_0 = null;
-        int stackIn_37_1 = 0;
-        int stackIn_37_2 = 0;
         kv stackIn_38_0 = null;
         int stackIn_38_1 = 0;
         int stackIn_38_2 = 0;
-        kv stackIn_39_0 = null;
-        int stackIn_39_1 = 0;
-        int stackIn_39_2 = 0;
-        int stackIn_39_3 = 0;
-        kv stackOut_36_0 = null;
-        int stackOut_36_1 = 0;
-        int stackOut_36_2 = 0;
-        kv stackOut_38_0 = null;
-        int stackOut_38_1 = 0;
-        int stackOut_38_2 = 0;
-        int stackOut_38_3 = 0;
-        kv stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        int stackOut_37_2 = 0;
-        int stackOut_37_3 = 0;
+        kv stackIn_39_0;
+        int stackIn_39_1;
+        int stackIn_39_2;
+        int stackIn_39_3;
+        int var3_int;
+        String var3;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        aga var10;
+        oha var11;
+        int var12;
+        aga var13;
+        oha var14;
+        oha var15;
+        String var16;
         var9 = BachelorFridge.field_y;
         if (this.field_f != null) {
           L0: {
@@ -513,34 +456,23 @@ final class pfa {
           L1: while (true) {
             if (var3_int >= this.field_e.length) {
               L2: {
-                stackOut_36_0 = qt.field_m;
-                stackOut_36_1 = 510;
-                stackOut_36_2 = 142;
-                stackIn_38_0 = stackOut_36_0;
-                stackIn_38_1 = stackOut_36_1;
-                stackIn_38_2 = stackOut_36_2;
-                stackIn_37_0 = stackOut_36_0;
-                stackIn_37_1 = stackOut_36_1;
-                stackIn_37_2 = stackOut_36_2;
+                stackIn_38_0 = qt.field_m;
+
+                stackIn_38_1 = 510;
+
+                stackIn_38_2 = 142;
+
                 if (!this.field_d.field_T) {
-                  stackOut_38_0 = (kv) ((Object) stackIn_38_0);
-                  stackOut_38_1 = stackIn_38_1;
-                  stackOut_38_2 = stackIn_38_2;
-                  stackOut_38_3 = 16764160;
-                  stackIn_39_0 = stackOut_38_0;
-                  stackIn_39_1 = stackOut_38_1;
-                  stackIn_39_2 = stackOut_38_2;
-                  stackIn_39_3 = stackOut_38_3;
+                  stackIn_39_0 = (kv) ((Object) stackIn_38_0);
+                  stackIn_39_1 = stackIn_38_1;
+                  stackIn_39_2 = stackIn_38_2;
+                  stackIn_39_3 = 16764160;
                   break L2;
                 } else {
-                  stackOut_37_0 = (kv) ((Object) stackIn_37_0);
-                  stackOut_37_1 = stackIn_37_1;
-                  stackOut_37_2 = stackIn_37_2;
-                  stackOut_37_3 = 16777215;
-                  stackIn_39_0 = stackOut_37_0;
-                  stackIn_39_1 = stackOut_37_1;
-                  stackIn_39_2 = stackOut_37_2;
-                  stackIn_39_3 = stackOut_37_3;
+                  stackIn_39_0 = (kv) ((Object) stackIn_38_0);
+                  stackIn_39_1 = stackIn_38_1;
+                  stackIn_39_2 = stackIn_38_2;
+                  stackIn_39_3 = 16777215;
                   break L2;
                 }
               }
@@ -562,7 +494,7 @@ final class pfa {
                         var6 = ad.field_h.a(var16, 200, 0) + (ad.field_h.field_F << -1237670783);
                         dg.a(mk.field_p + 17, 4 + gd.field_m, var5 - -6, var6, 10, 65793, 128);
                         ad.field_h.c(var3, 20 + (mk.field_p - -4), 20 + gd.field_m, 0, -1);
-                        discarded$1 = ad.field_h.a(var16, 4 + (mk.field_p - -20), gd.field_m - -24, 200, 200, 0, -1, 0, 0, 0);
+                        ad.field_h.a(var16, 4 + (mk.field_p - -20), gd.field_m - -24, 200, 200, 0, -1, 0, 0, 0);
                         break L4;
                       }
                     }

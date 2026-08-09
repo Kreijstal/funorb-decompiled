@@ -51,30 +51,30 @@ class fk extends bc {
     }
 
     final static String a(Throwable param0, int param1) throws IOException {
-        String var2 = null;
-        PrintWriter var4 = null;
-        String var5 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        jd var14 = null;
-        StringWriter var15 = null;
-        String var20 = null;
-        String var21 = null;
-        String var22 = null;
-        String var23 = null;
-        String var24 = null;
-        String var25 = null;
-        String var26 = null;
-        String var27 = null;
-        String var28 = null;
-        String var29 = null;
-        String var30 = null;
-        String var31 = null;
+        String var2;
+        PrintWriter var4;
+        String var5;
+        BufferedReader var6;
+        String var7;
+        int var9;
+        int var10;
+        String var11;
+        int var12;
+        int var13;
+        jd var14;
+        StringWriter var15;
+        String var20;
+        String var21;
+        String var22;
+        String var23;
+        String var24;
+        String var25;
+        String var26;
+        String var27;
+        String var28;
+        String var29;
+        String var30;
+        String var31;
         L0: {
           var13 = TorChallenge.field_F ? 1 : 0;
           if (!(param0 instanceof jd)) {

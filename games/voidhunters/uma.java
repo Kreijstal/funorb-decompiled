@@ -20,10 +20,10 @@ final class uma extends ev {
     }
 
     final void b(byte param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var4 = this.field_f * param1 >> -1343071252;
         var5 = this.field_g * param1 >> -176812788;
         if (param0 != -112) {
@@ -41,10 +41,10 @@ final class uma extends ev {
     }
 
     final void a(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var4 = param2 * this.field_f >> 1480865772;
         var5 = param2 * this.field_g >> 1042149356;
         if (param1 != 110) {

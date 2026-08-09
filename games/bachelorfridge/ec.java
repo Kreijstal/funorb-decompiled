@@ -14,14 +14,14 @@ final class ec {
     }
 
     final static kv[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9 = 0;
-        kv[] var10 = null;
-        kv[] var11_ref_kv__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        kv var13 = null;
-        int var14 = 0;
-        int var15 = 0;
+        int var9;
+        kv[] var10;
+        kv[] var11_ref_kv__;
+        int var11;
+        int var12;
+        kv var13;
+        int var14;
+        int var15;
         var15 = BachelorFridge.field_y;
         var9 = param4 + (param8 - -param6);
         var10 = new kv[]{new kv(var9, var9), new kv(param0, var9), new kv(var9, var9), new kv(var9, param0), new kv(64, 64), new kv(var9, param0), new kv(var9, var9), new kv(param0, var9), new kv(var9, var9)};

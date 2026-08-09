@@ -20,8 +20,20 @@ final class hia extends sfa {
     }
 
     final static void a(int param0, byte[] param1) {
-        byte dupTemp$2 = 0;
-        byte dupTemp$3 = 0;
+        byte dupTemp$0 = 0;
+        byte dupTemp$1 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_30_1 = 0;
+        int stackIn_45_0 = 0;
+        int stackIn_46_0 = 0;
+        int stackIn_46_1 = 0;
+        RuntimeException stackIn_52_0 = null;
+        StringBuilder stackIn_52_1 = null;
+        RuntimeException stackIn_53_0 = null;
+        StringBuilder stackIn_53_1 = null;
+        String stackIn_53_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -43,40 +55,6 @@ final class hia extends sfa {
         byte[] var20 = null;
         byte[] var21 = null;
         byte[] var22 = null;
-        int stackIn_28_0 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_30_1 = 0;
-        int stackIn_44_0 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_46_0 = 0;
-        int stackIn_46_1 = 0;
-        RuntimeException stackIn_51_0 = null;
-        StringBuilder stackIn_51_1 = null;
-        RuntimeException stackIn_52_0 = null;
-        StringBuilder stackIn_52_1 = null;
-        RuntimeException stackIn_53_0 = null;
-        StringBuilder stackIn_53_1 = null;
-        String stackIn_53_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_43_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_45_1 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_44_1 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_29_1 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_28_1 = 0;
-        RuntimeException stackOut_50_0 = null;
-        StringBuilder stackOut_50_1 = null;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        String stackOut_52_2 = null;
-        RuntimeException stackOut_51_0 = null;
-        StringBuilder stackOut_51_1 = null;
-        String stackOut_51_2 = null;
         var16 = BachelorFridge.field_y;
         try {
           L0: {
@@ -150,23 +128,18 @@ final class hia extends sfa {
                                                       continue L9;
                                                     } else {
                                                       L11: {
-                                                        dupTemp$2 = var18.b(true);
-                                                        var10[var6 * var14 + var13] = dupTemp$2;
-                                                        var15 = dupTemp$2;
-                                                        stackOut_43_0 = var11;
-                                                        stackIn_45_0 = stackOut_43_0;
-                                                        stackIn_44_0 = stackOut_43_0;
+                                                        dupTemp$0 = var18.b(true);
+                                                        var10[var6 * var14 + var13] = dupTemp$0;
+                                                        var15 = dupTemp$0;
+                                                        stackIn_45_0 = var11;
+
                                                         if (var15 == -1) {
-                                                          stackOut_45_0 = stackIn_45_0;
-                                                          stackOut_45_1 = 0;
-                                                          stackIn_46_0 = stackOut_45_0;
-                                                          stackIn_46_1 = stackOut_45_1;
+                                                          stackIn_46_0 = stackIn_45_0;
+                                                          stackIn_46_1 = 0;
                                                           break L11;
                                                         } else {
-                                                          stackOut_44_0 = stackIn_44_0;
-                                                          stackOut_44_1 = 1;
-                                                          stackIn_46_0 = stackOut_44_0;
-                                                          stackIn_46_1 = stackOut_44_1;
+                                                          stackIn_46_0 = stackIn_45_0;
+                                                          stackIn_46_1 = 1;
                                                           break L11;
                                                         }
                                                       }
@@ -207,23 +180,18 @@ final class hia extends sfa {
                                                   break L7;
                                                 } else {
                                                   L15: {
-                                                    dupTemp$3 = var18.b(true);
-                                                    var10[var13] = dupTemp$3;
-                                                    var14 = dupTemp$3;
-                                                    stackOut_27_0 = var11;
-                                                    stackIn_29_0 = stackOut_27_0;
-                                                    stackIn_28_0 = stackOut_27_0;
+                                                    dupTemp$1 = var18.b(true);
+                                                    var10[var13] = dupTemp$1;
+                                                    var14 = dupTemp$1;
+                                                    stackIn_29_0 = var11;
+
                                                     if (0 == (var14 ^ -1)) {
-                                                      stackOut_29_0 = stackIn_29_0;
-                                                      stackOut_29_1 = 0;
-                                                      stackIn_30_0 = stackOut_29_0;
-                                                      stackIn_30_1 = stackOut_29_1;
+                                                      stackIn_30_0 = stackIn_29_0;
+                                                      stackIn_30_1 = 0;
                                                       break L15;
                                                     } else {
-                                                      stackOut_28_0 = stackIn_28_0;
-                                                      stackOut_28_1 = 1;
-                                                      stackIn_30_0 = stackOut_28_0;
-                                                      stackIn_30_1 = stackOut_28_1;
+                                                      stackIn_30_0 = stackIn_29_0;
+                                                      stackIn_30_1 = 1;
                                                       break L15;
                                                     }
                                                   }
@@ -289,27 +257,19 @@ final class hia extends sfa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_50_0 = (RuntimeException) (var2);
-            stackOut_50_1 = new StringBuilder().append("hia.E(").append(param0).append(',');
-            stackIn_52_0 = stackOut_50_0;
-            stackIn_52_1 = stackOut_50_1;
-            stackIn_51_0 = stackOut_50_0;
-            stackIn_51_1 = stackOut_50_1;
+            stackIn_52_0 = (RuntimeException) (var2);
+
+            stackIn_52_1 = new StringBuilder().append("hia.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
-              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
-              stackOut_52_2 = "null";
-              stackIn_53_0 = stackOut_52_0;
-              stackIn_53_1 = stackOut_52_1;
-              stackIn_53_2 = stackOut_52_2;
+              stackIn_53_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
+              stackIn_53_2 = "null";
               break L17;
             } else {
-              stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
-              stackOut_51_1 = (StringBuilder) ((Object) stackIn_51_1);
-              stackOut_51_2 = "{...}";
-              stackIn_53_0 = stackOut_51_0;
-              stackIn_53_1 = stackOut_51_1;
-              stackIn_53_2 = stackOut_51_2;
+              stackIn_53_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
+              stackIn_53_2 = "{...}";
               break L17;
             }
           }
@@ -331,7 +291,18 @@ final class hia extends sfa {
     }
 
     final ii a(op param0, int param1) {
-        int discarded$1 = 0;
+        vja stackIn_4_0 = null;
+        vja stackIn_10_0 = null;
+        vja stackIn_15_0 = null;
+        hba stackIn_31_0 = null;
+        Object stackIn_36_0 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_40_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         t var4 = null;
         Object var5 = null;
@@ -340,40 +311,12 @@ final class hia extends sfa {
         int var8 = 0;
         lu var9 = null;
         aga var10 = null;
-        vja stackIn_4_0 = null;
-        vja stackIn_10_0 = null;
-        vja stackIn_15_0 = null;
-        hba stackIn_31_0 = null;
-        Object stackIn_36_0 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_40_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        vja stackOut_3_0 = null;
-        vja stackOut_9_0 = null;
-        vja stackOut_14_0 = null;
-        hba stackOut_30_0 = null;
-        Object stackOut_35_0 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
         var8 = BachelorFridge.field_y;
         try {
           L0: {
             var10 = this.field_h.a(44, param0);
             if (9 == var10.field_y) {
-              stackOut_3_0 = this.a(true, false, true, param1 ^ -278);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = this.a(true, false, true, param1 ^ -278);
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -387,8 +330,7 @@ final class hia extends sfa {
                 }
               }
               if (2 == var10.field_y) {
-                stackOut_9_0 = this.a(true, false, true, param1 + -282);
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = this.a(true, false, true, param1 + -282);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -397,8 +339,7 @@ final class hia extends sfa {
                     break L2;
                   } else {
                     if (50 < kla.a(100, param0.field_w, -2147483648)) {
-                      stackOut_14_0 = this.a(false, true, true, -279);
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = this.a(false, true, true, -279);
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -415,7 +356,7 @@ final class hia extends sfa {
                   }
                 }
                 L4: {
-                  discarded$1 = kla.a(50, param0.field_w, param1 + 2147483645);
+                  kla.a(50, param0.field_w, param1 + 2147483645);
                   var5 = null;
                   if ((var4.field_p ^ -1) == -4) {
                     L5: {
@@ -462,8 +403,7 @@ final class hia extends sfa {
                       var5 = new hba(this.field_g, this.field_h, this.field_j, var6, false, false, false, false);
                       break L8;
                     } else {
-                      stackOut_30_0 = new hba(this.field_g, this.field_h, this.field_j, var6, false, false, false, true);
-                      stackIn_31_0 = stackOut_30_0;
+                      stackIn_31_0 = new hba(this.field_g, this.field_h, this.field_j, var6, false, false, false, true);
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }
@@ -480,8 +420,7 @@ final class hia extends sfa {
                   }
                 }
                 this.a(param1 ^ 94, ((vja) (var5)).field_o, param0);
-                stackOut_35_0 = var5;
-                stackIn_36_0 = stackOut_35_0;
+                stackIn_36_0 = var5;
                 decompiledRegionSelector0 = 4;
                 break L0;
               }
@@ -491,27 +430,19 @@ final class hia extends sfa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var3 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) (var3);
-            stackOut_37_1 = new StringBuilder().append("hia.A(");
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            stackIn_39_0 = (RuntimeException) (var3);
+
+            stackIn_39_1 = new StringBuilder().append("hia.A(");
+
             if (param0 == null) {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "null";
               break L10;
             } else {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "{...}";
               break L10;
             }
           }
@@ -537,6 +468,25 @@ final class hia extends sfa {
     }
 
     private final void a(int param0, eaa param1, op param2) {
+        int stackIn_6_0 = 0;
+        int[] stackIn_25_0 = null;
+        int stackIn_25_1 = 0;
+        int stackIn_25_2 = 0;
+        int[] stackIn_26_0 = null;
+        int stackIn_26_1 = 0;
+        int stackIn_26_2 = 0;
+        int stackIn_26_3 = 0;
+        int stackIn_117_0 = 0;
+        RuntimeException stackIn_130_0 = null;
+        StringBuilder stackIn_130_1 = null;
+        RuntimeException stackIn_131_0 = null;
+        StringBuilder stackIn_131_1 = null;
+        String stackIn_131_2 = null;
+        StringBuilder stackIn_133_1 = null;
+        StringBuilder stackIn_134_1 = null;
+        String stackIn_134_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         aga var5 = null;
         int var7 = 0;
@@ -544,10 +494,10 @@ final class hia extends sfa {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        wia var12_ref_wia = null;
         int var12 = 0;
-        aga var13_ref_aga = null;
+        wia var12_ref_wia = null;
         int var13 = 0;
+        aga var13_ref_aga = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -571,65 +521,6 @@ final class hia extends sfa {
         t var28_ref = null;
         t var29 = null;
         int[][] var33 = null;
-        int stackIn_6_0 = 0;
-        int[] stackIn_24_0 = null;
-        int stackIn_24_1 = 0;
-        int stackIn_24_2 = 0;
-        int[] stackIn_25_0 = null;
-        int stackIn_25_1 = 0;
-        int stackIn_25_2 = 0;
-        int[] stackIn_26_0 = null;
-        int stackIn_26_1 = 0;
-        int stackIn_26_2 = 0;
-        int stackIn_26_3 = 0;
-        int stackIn_117_0 = 0;
-        RuntimeException stackIn_129_0 = null;
-        StringBuilder stackIn_129_1 = null;
-        RuntimeException stackIn_130_0 = null;
-        StringBuilder stackIn_130_1 = null;
-        RuntimeException stackIn_131_0 = null;
-        StringBuilder stackIn_131_1 = null;
-        String stackIn_131_2 = null;
-        RuntimeException stackIn_132_0 = null;
-        StringBuilder stackIn_132_1 = null;
-        RuntimeException stackIn_133_0 = null;
-        StringBuilder stackIn_133_1 = null;
-        RuntimeException stackIn_134_0 = null;
-        StringBuilder stackIn_134_1 = null;
-        String stackIn_134_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_116_0 = 0;
-        int stackOut_115_0 = 0;
-        int[] stackOut_23_0 = null;
-        int stackOut_23_1 = 0;
-        int stackOut_23_2 = 0;
-        int[] stackOut_25_0 = null;
-        int stackOut_25_1 = 0;
-        int stackOut_25_2 = 0;
-        int stackOut_25_3 = 0;
-        int[] stackOut_24_0 = null;
-        int stackOut_24_1 = 0;
-        int stackOut_24_2 = 0;
-        int stackOut_24_3 = 0;
-        RuntimeException stackOut_128_0 = null;
-        StringBuilder stackOut_128_1 = null;
-        RuntimeException stackOut_130_0 = null;
-        StringBuilder stackOut_130_1 = null;
-        String stackOut_130_2 = null;
-        RuntimeException stackOut_129_0 = null;
-        StringBuilder stackOut_129_1 = null;
-        String stackOut_129_2 = null;
-        RuntimeException stackOut_131_0 = null;
-        StringBuilder stackOut_131_1 = null;
-        RuntimeException stackOut_133_0 = null;
-        StringBuilder stackOut_133_1 = null;
-        String stackOut_133_2 = null;
-        RuntimeException stackOut_132_0 = null;
-        StringBuilder stackOut_132_1 = null;
-        String stackOut_132_2 = null;
         var28 = null;
         var27 = BachelorFridge.field_y;
         try {
@@ -651,12 +542,10 @@ final class hia extends sfa {
               var8 = var5.field_J;
               var9 = var29.field_q;
               if (-1 > (var9 ^ -1)) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L2;
               }
             }
@@ -895,12 +784,10 @@ final class hia extends sfa {
                                       }
                                       L22: {
                                         if (var5.field_y != 53) {
-                                          stackOut_116_0 = var29.field_u;
-                                          stackIn_117_0 = stackOut_116_0;
+                                          stackIn_117_0 = var29.field_u;
                                           break L22;
                                         } else {
-                                          stackOut_115_0 = 53;
-                                          stackIn_117_0 = stackOut_115_0;
+                                          stackIn_117_0 = 53;
                                           break L22;
                                         }
                                       }
@@ -995,34 +882,23 @@ final class hia extends sfa {
                       break L26;
                     } else {
                       L27: {
-                        stackOut_23_0 = param2.field_T.field_F;
-                        stackOut_23_1 = var5.field_D;
-                        stackOut_23_2 = param2.field_T.field_F[var5.field_D];
-                        stackIn_25_0 = stackOut_23_0;
-                        stackIn_25_1 = stackOut_23_1;
-                        stackIn_25_2 = stackOut_23_2;
-                        stackIn_24_0 = stackOut_23_0;
-                        stackIn_24_1 = stackOut_23_1;
-                        stackIn_24_2 = stackOut_23_2;
+                        stackIn_25_0 = param2.field_T.field_F;
+
+                        stackIn_25_1 = var5.field_D;
+
+                        stackIn_25_2 = param2.field_T.field_F[var5.field_D];
+
                         if (var15 <= var13_ref_aga.field_t + -var13_ref_aga.field_I) {
-                          stackOut_25_0 = (int[]) ((Object) stackIn_25_0);
-                          stackOut_25_1 = stackIn_25_1;
-                          stackOut_25_2 = stackIn_25_2;
-                          stackOut_25_3 = var15;
-                          stackIn_26_0 = stackOut_25_0;
-                          stackIn_26_1 = stackOut_25_1;
-                          stackIn_26_2 = stackOut_25_2;
-                          stackIn_26_3 = stackOut_25_3;
+                          stackIn_26_0 = (int[]) ((Object) stackIn_25_0);
+                          stackIn_26_1 = stackIn_25_1;
+                          stackIn_26_2 = stackIn_25_2;
+                          stackIn_26_3 = var15;
                           break L27;
                         } else {
-                          stackOut_24_0 = (int[]) ((Object) stackIn_24_0);
-                          stackOut_24_1 = stackIn_24_1;
-                          stackOut_24_2 = stackIn_24_2;
-                          stackOut_24_3 = -var13_ref_aga.field_I + var13_ref_aga.field_t;
-                          stackIn_26_0 = stackOut_24_0;
-                          stackIn_26_1 = stackOut_24_1;
-                          stackIn_26_2 = stackOut_24_2;
-                          stackIn_26_3 = stackOut_24_3;
+                          stackIn_26_0 = (int[]) ((Object) stackIn_25_0);
+                          stackIn_26_1 = stackIn_25_1;
+                          stackIn_26_2 = stackIn_25_2;
+                          stackIn_26_3 = -var13_ref_aga.field_I + var13_ref_aga.field_t;
                           break L27;
                         }
                       }
@@ -1081,56 +957,40 @@ final class hia extends sfa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L31: {
             var4 = decompiledCaughtException;
-            stackOut_128_0 = (RuntimeException) (var4);
-            stackOut_128_1 = new StringBuilder().append("hia.D(").append(param0).append(',');
-            stackIn_130_0 = stackOut_128_0;
-            stackIn_130_1 = stackOut_128_1;
-            stackIn_129_0 = stackOut_128_0;
-            stackIn_129_1 = stackOut_128_1;
+            stackIn_130_0 = (RuntimeException) (var4);
+
+            stackIn_130_1 = new StringBuilder().append("hia.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_130_0 = (RuntimeException) ((Object) stackIn_130_0);
-              stackOut_130_1 = (StringBuilder) ((Object) stackIn_130_1);
-              stackOut_130_2 = "null";
-              stackIn_131_0 = stackOut_130_0;
-              stackIn_131_1 = stackOut_130_1;
-              stackIn_131_2 = stackOut_130_2;
+              stackIn_131_0 = (RuntimeException) ((Object) stackIn_130_0);
+              stackIn_131_1 = (StringBuilder) ((Object) stackIn_130_1);
+              stackIn_131_2 = "null";
               break L31;
             } else {
-              stackOut_129_0 = (RuntimeException) ((Object) stackIn_129_0);
-              stackOut_129_1 = (StringBuilder) ((Object) stackIn_129_1);
-              stackOut_129_2 = "{...}";
-              stackIn_131_0 = stackOut_129_0;
-              stackIn_131_1 = stackOut_129_1;
-              stackIn_131_2 = stackOut_129_2;
+              stackIn_131_0 = (RuntimeException) ((Object) stackIn_130_0);
+              stackIn_131_1 = (StringBuilder) ((Object) stackIn_130_1);
+              stackIn_131_2 = "{...}";
               break L31;
             }
           }
           L32: {
-            stackOut_131_0 = (RuntimeException) ((Object) stackIn_131_0);
-            stackOut_131_1 = ((StringBuilder) (Object) stackIn_131_1).append(stackIn_131_2).append(',');
-            stackIn_133_0 = stackOut_131_0;
-            stackIn_133_1 = stackOut_131_1;
-            stackIn_132_0 = stackOut_131_0;
-            stackIn_132_1 = stackOut_131_1;
+
+
+            stackIn_133_1 = ((StringBuilder) (Object) stackIn_131_1).append(stackIn_131_2).append(',');
+
             if (param2 == null) {
-              stackOut_133_0 = (RuntimeException) ((Object) stackIn_133_0);
-              stackOut_133_1 = (StringBuilder) ((Object) stackIn_133_1);
-              stackOut_133_2 = "null";
-              stackIn_134_0 = stackOut_133_0;
-              stackIn_134_1 = stackOut_133_1;
-              stackIn_134_2 = stackOut_133_2;
+              stackIn_131_0 = (RuntimeException) ((Object) stackIn_131_0);
+              stackIn_134_1 = (StringBuilder) ((Object) stackIn_133_1);
+              stackIn_134_2 = "null";
               break L32;
             } else {
-              stackOut_132_0 = (RuntimeException) ((Object) stackIn_132_0);
-              stackOut_132_1 = (StringBuilder) ((Object) stackIn_132_1);
-              stackOut_132_2 = "{...}";
-              stackIn_134_0 = stackOut_132_0;
-              stackIn_134_1 = stackOut_132_1;
-              stackIn_134_2 = stackOut_132_2;
+              stackIn_131_0 = (RuntimeException) ((Object) stackIn_131_0);
+              stackIn_134_1 = (StringBuilder) ((Object) stackIn_133_1);
+              stackIn_134_2 = "{...}";
               break L32;
             }
           }
-          throw pe.a((Throwable) ((Object) stackIn_134_0), stackIn_134_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_131_0), stackIn_134_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -1149,8 +1009,8 @@ final class hia extends sfa {
     }
 
     final static void c(byte param0) {
-        int var2 = 0;
-        byte[] var3 = null;
+        int var2;
+        byte[] var3;
         L0: {
           var2 = BachelorFridge.field_y;
           if (((dfa) ((Object) dj.field_c)).field_a) {

@@ -25,28 +25,17 @@ final class de extends wj {
     }
 
     private final void a(int param0, int param1, int param2, kv param3) {
-        int discarded$1 = 0;
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var8 = BachelorFridge.field_y;
         try {
           L0: {
@@ -57,7 +46,7 @@ final class de extends wj {
               if (param2 == 2) {
                 break L1;
               } else {
-                discarded$1 = de.d(12, 87, 19);
+                de.d(12, 87, 19);
                 break L1;
               }
             }
@@ -110,27 +99,19 @@ final class de extends wj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var5);
-            stackOut_15_1 = new StringBuilder().append("de.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var5);
+
+            stackIn_17_1 = new StringBuilder().append("de.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L6;
             }
           }
@@ -139,14 +120,13 @@ final class de extends wj {
     }
 
     final void c(int param0, int param1, int param2) {
-        int discarded$0 = 0;
         this.field_G = 8355711 & param1 >> -383506687;
         this.field_L = 8355711 & param2 >> 1705304705;
         this.field_O = param1;
         this.field_y = param2;
         this.h(param0 ^ 1705304811);
         if (param0 != 1705304705) {
-            discarded$0 = de.d(49, -4, 45);
+            de.d(49, -4, 45);
         }
     }
 
@@ -160,24 +140,13 @@ final class de extends wj {
     }
 
     final void a(int param0, int param1, wj param2, int param3) {
-        int discarded$2 = 0;
-        RuntimeException var5 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -197,7 +166,7 @@ final class de extends wj {
               if (param3 == 20) {
                 break L2;
               } else {
-                discarded$2 = de.d(13, 12, 21);
+                de.d(13, 12, 21);
                 break L2;
               }
             }
@@ -207,27 +176,19 @@ final class de extends wj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5);
-            stackOut_6_1 = new StringBuilder().append("de.O(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5);
+
+            stackIn_8_1 = new StringBuilder().append("de.O(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -263,8 +224,6 @@ final class de extends wj {
     }
 
     private final kv b(int param0, int param1, int param2) {
-        int discarded$1 = 0;
-        int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -272,71 +231,30 @@ final class de extends wj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        kv var14 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        L0: {
-          var13 = BachelorFridge.field_y;
-          var14 = new kv(2 * this.field_J, this.field_q);
-          bu.a(0, var14);
-          var5 = this.field_q >> -189066559;
-          if (param2 <= -13) {
-            break L0;
-          } else {
-            discarded$1 = de.d(117, -107, -102);
-            break L0;
-          }
+        int var13 = BachelorFridge.field_y;
+        kv var14 = new kv(2 * this.field_J, this.field_q);
+        bu.a(0, var14);
+        int var5 = this.field_q >> -189066559;
+        if (param2 > -13) {
+            de.d(117, -107, -102);
         }
-        var6 = 0;
-        L1: while (true) {
-          if (var6 >= this.field_q) {
-            db.b(108);
-            return var14;
-          } else {
-            L2: {
-              var7 = (var6 >> -1708043071) * (-1 + this.field_J * 2) % (2 * this.field_J);
-              var8 = 16711935 & param1;
-              var9 = param1 & 65280;
-              var10 = -var5 + var6;
-              var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
-              if (-257 >= (var11 ^ -1)) {
-                stackOut_6_0 = var9 | var8;
-                stackIn_7_0 = stackOut_6_0;
-                break L2;
-              } else {
-                stackOut_5_0 = (var8 * var11 & -16711936 | var9 * var11 & 16711680) >>> 499385608;
-                stackIn_7_0 = stackOut_5_0;
-                break L2;
-              }
-            }
-            L3: {
-              var12 = stackIn_7_0;
-              dg.e(var7, var6, this.field_J, var12);
-              dg.e(var7 - this.field_J * 2, var6, this.field_J, var12);
-              var8 = 16711935 & param0;
-              var9 = 65280 & param0;
-              if ((var11 ^ -1) <= -257) {
-                stackOut_9_0 = var8 | var9;
-                stackIn_10_0 = stackOut_9_0;
-                break L3;
-              } else {
-                stackOut_8_0 = (-16711936 & var11 * var8 | 16711680 & var9 * var11) >>> 778012328;
-                stackIn_10_0 = stackOut_8_0;
-                break L3;
-              }
-            }
-            var12 = stackIn_10_0;
+        for (var6 = 0; var6 < this.field_q; var6++) {
+            var7 = (var6 >> -1708043071) * (-1 + this.field_J * 2) % (2 * this.field_J);
+            var8 = 16711935 & param1;
+            var9 = param1 & 65280;
+            var10 = -var5 + var6;
+            var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
+            var12 = -257 < (var11 ^ -1) ? (var8 * var11 & -16711936 | var9 * var11 & 16711680) >>> 499385608 : var9 | var8;
+            dg.e(var7, var6, this.field_J, var12);
+            dg.e(var7 - this.field_J * 2, var6, this.field_J, var12);
+            var8 = 16711935 & param0;
+            var9 = 65280 & param0;
+            var12 = (var11 ^ -1) > -257 ? (-16711936 & var11 * var8 | 16711680 & var9 * var11) >>> 778012328 : var8 | var9;
             dg.e(this.field_J + var7, var6, this.field_J, var12);
             dg.e(-this.field_J + var7, var6, this.field_J, var12);
-            var6++;
-            continue L1;
-          }
         }
+        db.b(108);
+        return var14;
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
@@ -345,11 +263,10 @@ final class de extends wj {
     }
 
     private final void h(int param0) {
-        int discarded$0 = 0;
         this.field_D = new kv[]{this.b(this.field_y, this.field_O, -47), this.b(this.field_L, this.field_G, -126)};
         this.field_N = this.g(5);
         if (param0 <= 92) {
-            discarded$0 = de.d(84, 78, 72);
+            de.d(84, 78, 72);
         }
         this.field_z = this.field_N.h();
         this.field_H = new kv(this.field_q >> -1965937311, this.field_q);

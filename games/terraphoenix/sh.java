@@ -47,8 +47,17 @@ final class sh extends uf {
     }
 
     final static void a(int param0) {
-        RuntimeException var1 = null;
+        int stackIn_19_0 = 0;
+        int stackIn_22_0 = 0;
+        String stackIn_28_0 = null;
+        String stackIn_34_0 = null;
+        int stackIn_39_0 = 0;
+        int stackIn_40_0 = 0;
+        int stackIn_40_1 = 0;
+        bm stackIn_45_0 = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         long var3_long = 0L;
         int var3 = 0;
@@ -59,31 +68,6 @@ final class sh extends uf {
         int var8 = 0;
         bm var9 = null;
         int var10 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
-        String stackIn_28_0 = null;
-        String stackIn_34_0 = null;
-        int stackIn_38_0 = 0;
-        int stackIn_39_0 = 0;
-        int stackIn_40_0 = 0;
-        int stackIn_40_1 = 0;
-        bm stackIn_45_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        String stackOut_27_0 = null;
-        String stackOut_26_0 = null;
-        String stackOut_33_0 = null;
-        String stackOut_32_0 = null;
-        int stackOut_37_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_39_1 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_38_1 = 0;
-        bm stackOut_44_0 = null;
-        bm stackOut_43_0 = null;
         var10 = Terraphoenix.field_V;
         try {
           L0: {
@@ -141,24 +125,20 @@ final class sh extends uf {
                     } else {
                       L6: {
                         if (ia.field_r.length >= km.field_c.length) {
-                          stackOut_18_0 = ia.field_r.length;
-                          stackIn_19_0 = stackOut_18_0;
+                          stackIn_19_0 = ia.field_r.length;
                           break L6;
                         } else {
-                          stackOut_17_0 = km.field_c.length;
-                          stackIn_19_0 = stackOut_17_0;
+                          stackIn_19_0 = km.field_c.length;
                           break L6;
                         }
                       }
                       L7: {
                         var7 = stackIn_19_0;
                         if (kj.field_c.length < ec.field_d.length) {
-                          stackOut_21_0 = ec.field_d.length;
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_22_0 = ec.field_d.length;
                           break L7;
                         } else {
-                          stackOut_20_0 = kj.field_c.length;
-                          stackIn_22_0 = stackOut_20_0;
+                          stackIn_22_0 = kj.field_c.length;
                           break L7;
                         }
                       }
@@ -170,12 +150,10 @@ final class sh extends uf {
                           if (var3 < 6 + var7) {
                             L9: {
                               if (0 <= -var7 + (ia.field_r.length + var3 + -6)) {
-                                stackOut_27_0 = ia.field_r[-var7 + ia.field_r.length + var3 - 6];
-                                stackIn_28_0 = stackOut_27_0;
+                                stackIn_28_0 = ia.field_r[-var7 + ia.field_r.length + var3 - 6];
                                 break L9;
                               } else {
-                                stackOut_26_0 = "";
-                                stackIn_28_0 = stackOut_26_0;
+                                stackIn_28_0 = "";
                                 break L9;
                               }
                             }
@@ -194,12 +172,10 @@ final class sh extends uf {
                         } else {
                           L10: {
                             if (var3 - 7 + -var7 < kj.field_c.length) {
-                              stackOut_33_0 = kj.field_c[-7 + (var3 + -var7)];
-                              stackIn_34_0 = stackOut_33_0;
+                              stackIn_34_0 = kj.field_c[-7 + (var3 + -var7)];
                               break L10;
                             } else {
-                              stackOut_32_0 = "";
-                              stackIn_34_0 = stackOut_32_0;
+                              stackIn_34_0 = "";
                               break L10;
                             }
                           }
@@ -219,20 +195,15 @@ final class sh extends uf {
                   }
                 }
                 L12: {
-                  stackOut_37_0 = 87;
-                  stackIn_39_0 = stackOut_37_0;
-                  stackIn_38_0 = stackOut_37_0;
+                  stackIn_39_0 = 87;
+
                   if ((var4 ^ -1) > -1) {
-                    stackOut_39_0 = stackIn_39_0;
-                    stackOut_39_1 = 0;
-                    stackIn_40_0 = stackOut_39_0;
-                    stackIn_40_1 = stackOut_39_1;
+                    stackIn_40_0 = stackIn_39_0;
+                    stackIn_40_1 = 0;
                     break L12;
                   } else {
-                    stackOut_38_0 = stackIn_38_0;
-                    stackOut_38_1 = 1;
-                    stackIn_40_0 = stackOut_38_0;
-                    stackIn_40_1 = stackOut_38_1;
+                    stackIn_40_0 = stackIn_39_0;
+                    stackIn_40_1 = 1;
                     break L12;
                   }
                 }
@@ -242,12 +213,10 @@ final class sh extends uf {
                   if (var4 >= 0) {
                     L14: {
                       if (var4 == ai.field_i.field_h) {
-                        stackOut_44_0 = sa.field_c;
-                        stackIn_45_0 = stackOut_44_0;
+                        stackIn_45_0 = sa.field_c;
                         break L14;
                       } else {
-                        stackOut_43_0 = pj.field_q;
-                        stackIn_45_0 = stackOut_43_0;
+                        stackIn_45_0 = pj.field_q;
                         break L14;
                       }
                     }

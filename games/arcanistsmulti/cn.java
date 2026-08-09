@@ -53,8 +53,8 @@ final class cn extends kl implements vb {
     }
 
     final void e(int param0) {
-        int var2 = 0;
-        ag var3 = null;
+        int var2;
+        ag var3;
         if (param0 <= 17) {
           var3 = (ag) null;
           this.a(true, -29, 36, -108, (ag) null);
@@ -96,20 +96,14 @@ final class cn extends kl implements vb {
     final static boolean a(int param0, int param1) {
         int stackIn_7_0 = 0;
         int stackIn_13_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
         if (param0 > 103) {
           if ((param1 ^ -1) > -1) {
             L0: {
               if ((1 + param1) % 4 != 0) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L0;
               } else {
-                stackOut_5_0 = 1;
-                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_0 = 1;
                 break L0;
               }
             }
@@ -118,12 +112,10 @@ final class cn extends kl implements vb {
             if (-1583 < (param1 ^ -1)) {
               L1: {
                 if (0 != param1 % 4) {
-                  stackOut_12_0 = 0;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = 0;
                   break L1;
                 } else {
-                  stackOut_11_0 = 1;
-                  stackIn_13_0 = stackOut_11_0;
+                  stackIn_13_0 = 1;
                   break L1;
                 }
               }

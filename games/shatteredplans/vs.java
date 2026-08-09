@@ -10,7 +10,7 @@ final class vs {
     static String field_a;
 
     final static gb a(byte param0, int param1) {
-        gb var2 = null;
+        gb var2;
         var2 = new gb();
         vl.field_o.a((byte) -113, var2);
         bo.a(param1, 2);
@@ -32,10 +32,10 @@ final class vs {
 
     final static void a(int param0, byte param1) {
         oh var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         lq var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {

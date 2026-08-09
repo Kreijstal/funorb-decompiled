@@ -31,11 +31,10 @@ final class rq extends qt {
         int var6 = ((hu) ((Object) var3)).field_p + ((hu) ((Object) var3)).field_G;
         int var7 = ((hu) ((Object) var3)).c(vp.field_p, -var4 + var5, var6);
         on.a(-12 + var4, 155, -var4 + (var5 + 24), 12 + var7, 6, 0, 128);
-        int discarded$0 = ((hu) ((Object) var3)).a(vp.field_p, var4, 160, -var4 + var5, 1000, 16777215, -1, 0, 0, var6);
+        ((hu) ((Object) var3)).a(vp.field_p, var4, 160, -var4 + var5, 1000, 16777215, -1, 0, 0, var6);
     }
 
     final static double a(int param0, int param1, byte param2, int param3, ea param4, int param5, int param6, int param7, int param8) {
-        RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -49,23 +48,13 @@ final class rq extends qt {
         int var21 = 0;
         int var22 = 0;
         double stackIn_12_0 = 0.0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        double stackOut_11_0 = 0.0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var9 = null;
         var22 = Kickabout.field_G;
         try {
           L0: {
@@ -86,8 +75,7 @@ final class rq extends qt {
             var21 = param7;
             L2: while (true) {
               if (param1 <= var21) {
-                stackOut_11_0 = var19;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = var19;
                 break L0;
               } else {
                 L3: {
@@ -126,27 +114,19 @@ final class rq extends qt {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var9 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var9);
-            stackOut_13_1 = new StringBuilder().append("rq.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var9);
+
+            stackIn_15_1 = new StringBuilder().append("rq.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }
@@ -160,8 +140,8 @@ final class rq extends qt {
 
     final static void a(byte param0, long param1) {
         try {
-            InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
+            InterruptedException var3 = null;
             try {
               L0: {
                 Thread.sleep(param1);

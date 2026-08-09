@@ -55,24 +55,24 @@ final class sob extends ha {
     }
 
     final void s(int param0, int param1, int param2, int param3, int param4) {
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
         if (param2 != 0) {
           L0: {
             if (param2 >= 0) {
@@ -168,9 +168,9 @@ final class sob extends ha {
                                               this.field_k[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                               L7: while (true) {
                                                 L8: {
-                                                  incrementValue$5 = var11;
+                                                  incrementValue$0 = var11;
                                                   var11++;
-                                                  var12 = var12 + (incrementValue$5 + var11);
+                                                  var12 = var12 + (incrementValue$0 + var11);
                                                   var6 = var6 - this.field_i;
                                                   var7 = var7 + this.field_i;
                                                   if (var12 <= param2) {
@@ -342,9 +342,9 @@ final class sob extends ha {
                                     }
                                     L13: while (true) {
                                       L14: {
-                                        incrementValue$6 = var11;
+                                        incrementValue$1 = var11;
                                         var11++;
-                                        var12 = var12 + (incrementValue$6 + var11);
+                                        var12 = var12 + (incrementValue$1 + var11);
                                         var6 = var6 - this.field_i;
                                         var7 = var7 + this.field_i;
                                         if (var12 <= param2) {
@@ -583,9 +583,9 @@ final class sob extends ha {
                                             this.field_k[var14] = var15 + var18;
                                             L23: while (true) {
                                               L24: {
-                                                incrementValue$7 = var11;
+                                                incrementValue$2 = var11;
                                                 var11++;
-                                                var12 = var12 + (incrementValue$7 + var11);
+                                                var12 = var12 + (incrementValue$2 + var11);
                                                 var6 = var6 - this.field_i;
                                                 var7 = var7 + this.field_i;
                                                 if (var12 <= param2) {
@@ -769,9 +769,9 @@ final class sob extends ha {
                                   }
                                   L29: while (true) {
                                     L30: {
-                                      incrementValue$8 = var11;
+                                      incrementValue$3 = var11;
                                       var11++;
-                                      var12 = var12 + (incrementValue$8 + var11);
+                                      var12 = var12 + (incrementValue$3 + var11);
                                       var6 = var6 - this.field_i;
                                       var7 = var7 + this.field_i;
                                       if (var12 <= param2) {
@@ -1119,9 +1119,9 @@ final class sob extends ha {
                             }
                             L41: while (true) {
                               L42: {
-                                incrementValue$9 = var11;
+                                incrementValue$4 = var11;
                                 var11++;
-                                var12 = var12 + (incrementValue$9 + var11);
+                                var12 = var12 + (incrementValue$4 + var11);
                                 var6 = var6 - this.field_i;
                                 var7 = var7 + this.field_i;
                                 if (var12 <= param2) {
@@ -1375,12 +1375,12 @@ final class sob extends ha {
     }
 
     final aja a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
-        int incrementValue$21 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int incrementValue$4 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         var7 = 0;
         var8 = param1;
         var9 = 0;
@@ -1395,9 +1395,9 @@ final class sob extends ha {
                   var9++;
                   continue L0;
                 } else {
-                  incrementValue$21 = var8;
+                  incrementValue$4 = var8;
                   var8++;
-                  var11 = param0[incrementValue$21] >>> 24;
+                  var11 = param0[incrementValue$4] >>> 24;
                   if (var11 != 0) {
                     if (var11 != 255) {
                       var7 = 1;
@@ -1423,8 +1423,9 @@ final class sob extends ha {
     }
 
     final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int statePc = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -1433,205 +1434,328 @@ final class sob extends ha {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        L0: {
-          if (param0 >= this.field_H) {
-            break L0;
-          } else {
-            param2 = param2 - (this.field_H - param0);
-            param0 = this.field_H;
-            break L0;
-          }
-        }
-        L1: {
-          if (param1 >= this.field_n) {
-            break L1;
-          } else {
-            param3 = param3 - (this.field_n - param1);
-            param1 = this.field_n;
-            break L1;
-          }
-        }
-        L2: {
-          if (param0 + param2 <= this.field_A) {
-            break L2;
-          } else {
-            param2 = this.field_A - param0;
-            break L2;
-          }
-        }
-        L3: {
-          if (param1 + param3 <= this.field_p) {
-            break L3;
-          } else {
-            param3 = this.field_p - param1;
-            break L3;
-          }
-        }
-        L4: {
-          if (param2 <= 0) {
-            break L4;
-          } else {
-            L5: {
-              if (param3 <= 0) {
-                break L5;
-              } else {
-                if (param0 > this.field_A) {
-                  break L5;
-                } else {
-                  if (param1 <= this.field_p) {
-                    L6: {
-                      var7 = this.field_i - param2;
-                      var8 = param0 + param1 * this.field_i;
-                      var9 = param4 >>> 24;
-                      if (param5 == 0) {
-                        break L6;
-                      } else {
-                        L7: {
-                          if (param5 != 1) {
-                            break L7;
-                          } else {
-                            if (var9 != 255) {
-                              break L7;
-                            } else {
-                              break L6;
-                            }
-                          }
-                        }
-                        L8: {
-                          if (param5 != 1) {
-                            if (param5 != 2) {
-                              throw new IllegalArgumentException();
-                            } else {
-                              var10 = 0;
-                              L9: while (true) {
-                                if (var10 >= param3) {
-                                  break L8;
-                                } else {
-                                  var11 = -param2;
-                                  L10: while (true) {
-                                    if (var11 >= 0) {
-                                      var8 = var8 + var7;
-                                      var10++;
-                                      continue L9;
-                                    } else {
-                                      var12 = this.field_k[var8];
-                                      var13 = param4 + var12;
-                                      var14 = (param4 & 16711935) + (var12 & 16711935);
-                                      var12 = (var14 & 16777472) + (var13 - var14 & 65536);
-                                      incrementValue$2 = var8;
-                                      var8++;
-                                      this.field_k[incrementValue$2] = var13 - var12 | var12 - (var12 >>> 8);
-                                      var11++;
-                                      continue L10;
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          } else {
-                            param4 = ((param4 & 16711935) * var9 >> 8 & 16711935) + (((param4 & -16711936) >>> 8) * var9 & -16711936);
-                            var10 = 256 - var9;
-                            var11 = 0;
-                            L11: while (true) {
-                              if (var11 >= param3) {
-                                break L8;
-                              } else {
-                                var12 = -param2;
-                                L12: while (true) {
-                                  if (var12 >= 0) {
-                                    var8 = var8 + var7;
-                                    var11++;
-                                    continue L11;
-                                  } else {
-                                    var13 = this.field_k[var8];
-                                    var13 = ((var13 & 16711935) * var10 >> 8 & 16711935) + (((var13 & -16711936) >>> 8) * var10 & -16711936);
-                                    incrementValue$3 = var8;
-                                    var8++;
-                                    this.field_k[incrementValue$3] = param4 + var13;
-                                    var12++;
-                                    continue L12;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                        return;
-                      }
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    if (param0 >= this.field_H) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
                     }
+                    continue stateLoop;
+                }
+                case 1: {
+                    param2 = param2 - (this.field_H - param0);
+                    param0 = this.field_H;
+                    statePc = 2;
+                    continue stateLoop;
+                }
+                case 2: {
+                    if (param1 >= this.field_n) {
+                        statePc = 4;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    param3 = param3 - (this.field_n - param1);
+                    param1 = this.field_n;
+                    statePc = 4;
+                    continue stateLoop;
+                }
+                case 4: {
+                    if (param0 + param2 <= this.field_A) {
+                        statePc = 6;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    param2 = this.field_A - param0;
+                    statePc = 6;
+                    continue stateLoop;
+                }
+                case 6: {
+                    if (param1 + param3 <= this.field_p) {
+                        statePc = 8;
+                    } else {
+                        statePc = 7;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    param3 = this.field_p - param1;
+                    statePc = 8;
+                    continue stateLoop;
+                }
+                case 8: {
+                    if (param2 <= 0) {
+                        statePc = 43;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    if (param3 <= 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    if (param0 > this.field_A) {
+                        statePc = 13;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    if (param1 <= this.field_p) {
+                        statePc = 14;
+                    } else {
+                        statePc = 13;
+                    }
+                    continue stateLoop;
+                }
+                case 13: {
+                    return;
+                }
+                case 14: {
+                    var7 = this.field_i - param2;
+                    var8 = param0 + param1 * this.field_i;
+                    var9 = param4 >>> 24;
+                    if (param5 == 0) {
+                        statePc = 18;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 15: {
+                    if (param5 != 1) {
+                        statePc = 27;
+                    } else {
+                        statePc = 16;
+                    }
+                    continue stateLoop;
+                }
+                case 16: {
+                    if (var9 != 255) {
+                        statePc = 27;
+                    } else {
+                        statePc = 18;
+                    }
+                    continue stateLoop;
+                }
+                case 18: {
                     var10 = param2 >> 3;
                     var11 = param2 & 7;
                     param2 = var8 - 1;
                     var12 = -param3;
-                    L13: while (true) {
-                      if (var12 >= 0) {
-                        break L4;
-                      } else {
-                        L14: {
-                          if (var10 <= 0) {
-                            break L14;
-                          } else {
-                            param0 = var10;
-                            L15: while (true) {
-                              param2++;
-                              this.field_k[param2] = param4;
-                              param2++;
-                              this.field_k[param2] = param4;
-                              param2++;
-                              this.field_k[param2] = param4;
-                              param2++;
-                              this.field_k[param2] = param4;
-                              param2++;
-                              this.field_k[param2] = param4;
-                              param2++;
-                              this.field_k[param2] = param4;
-                              param2++;
-                              this.field_k[param2] = param4;
-                              param2++;
-                              this.field_k[param2] = param4;
-                              param0--;
-                              if (param0 > 0) {
-                                continue L15;
-                              } else {
-                                break L14;
-                              }
-                            }
-                          }
-                        }
-                        L16: {
-                          if (var11 <= 0) {
-                            break L16;
-                          } else {
-                            param0 = var11;
-                            L17: while (true) {
-                              param2++;
-                              this.field_k[param2] = param4;
-                              param0--;
-                              if (param0 > 0) {
-                                continue L17;
-                              } else {
-                                break L16;
-                              }
-                            }
-                          }
-                        }
-                        param2 = param2 + var7;
-                        var12++;
-                        continue L13;
-                      }
-                    }
-                  } else {
-                    break L5;
-                  }
+                    statePc = 19;
+                    continue stateLoop;
                 }
-              }
+                case 19: {
+                    if (var12 >= 0) {
+                        statePc = 43;
+                    } else {
+                        statePc = 20;
+                    }
+                    continue stateLoop;
+                }
+                case 20: {
+                    if (var10 <= 0) {
+                        statePc = 23;
+                    } else {
+                        statePc = 21;
+                    }
+                    continue stateLoop;
+                }
+                case 21: {
+                    param0 = var10;
+                    statePc = 22;
+                    continue stateLoop;
+                }
+                case 22: {
+                    param2++;
+                    this.field_k[param2] = param4;
+                    param2++;
+                    this.field_k[param2] = param4;
+                    param2++;
+                    this.field_k[param2] = param4;
+                    param2++;
+                    this.field_k[param2] = param4;
+                    param2++;
+                    this.field_k[param2] = param4;
+                    param2++;
+                    this.field_k[param2] = param4;
+                    param2++;
+                    this.field_k[param2] = param4;
+                    param2++;
+                    this.field_k[param2] = param4;
+                    param0--;
+                    if (param0 > 0) {
+                        statePc = 22;
+                    } else {
+                        statePc = 23;
+                    }
+                    continue stateLoop;
+                }
+                case 23: {
+                    if (var11 <= 0) {
+                        statePc = 26;
+                    } else {
+                        statePc = 24;
+                    }
+                    continue stateLoop;
+                }
+                case 24: {
+                    param0 = var11;
+                    statePc = 25;
+                    continue stateLoop;
+                }
+                case 25: {
+                    param2++;
+                    this.field_k[param2] = param4;
+                    param0--;
+                    if (param0 > 0) {
+                        statePc = 25;
+                    } else {
+                        statePc = 26;
+                    }
+                    continue stateLoop;
+                }
+                case 26: {
+                    param2 = param2 + var7;
+                    var12++;
+                    statePc = 19;
+                    continue stateLoop;
+                }
+                case 27: {
+                    if (param5 != 1) {
+                        statePc = 34;
+                    } else {
+                        statePc = 28;
+                    }
+                    continue stateLoop;
+                }
+                case 28: {
+                    param4 = ((param4 & 16711935) * var9 >> 8 & 16711935) + (((param4 & -16711936) >>> 8) * var9 & -16711936);
+                    var10 = 256 - var9;
+                    var11 = 0;
+                    statePc = 29;
+                    continue stateLoop;
+                }
+                case 29: {
+                    if (var11 >= param3) {
+                        statePc = 42;
+                    } else {
+                        statePc = 30;
+                    }
+                    continue stateLoop;
+                }
+                case 30: {
+                    var12 = -param2;
+                    statePc = 31;
+                    continue stateLoop;
+                }
+                case 31: {
+                    if (var12 >= 0) {
+                        statePc = 33;
+                    } else {
+                        statePc = 32;
+                    }
+                    continue stateLoop;
+                }
+                case 32: {
+                    var13 = this.field_k[var8];
+                    var13 = ((var13 & 16711935) * var10 >> 8 & 16711935) + (((var13 & -16711936) >>> 8) * var10 & -16711936);
+                    incrementValue$0 = var8;
+                    var8++;
+                    this.field_k[incrementValue$0] = param4 + var13;
+                    var12++;
+                    statePc = 31;
+                    continue stateLoop;
+                }
+                case 33: {
+                    var8 = var8 + var7;
+                    var11++;
+                    statePc = 29;
+                    continue stateLoop;
+                }
+                case 34: {
+                    if (param5 != 2) {
+                        statePc = 41;
+                    } else {
+                        statePc = 35;
+                    }
+                    continue stateLoop;
+                }
+                case 35: {
+                    var10 = 0;
+                    statePc = 36;
+                    continue stateLoop;
+                }
+                case 36: {
+                    if (var10 >= param3) {
+                        statePc = 42;
+                    } else {
+                        statePc = 37;
+                    }
+                    continue stateLoop;
+                }
+                case 37: {
+                    var11 = -param2;
+                    statePc = 38;
+                    continue stateLoop;
+                }
+                case 38: {
+                    if (var11 >= 0) {
+                        statePc = 40;
+                    } else {
+                        statePc = 39;
+                    }
+                    continue stateLoop;
+                }
+                case 39: {
+                    var12 = this.field_k[var8];
+                    var13 = param4 + var12;
+                    var14 = (param4 & 16711935) + (var12 & 16711935);
+                    var12 = (var14 & 16777472) + (var13 - var14 & 65536);
+                    incrementValue$1 = var8;
+                    var8++;
+                    this.field_k[incrementValue$1] = var13 - var12 | var12 - (var12 >>> 8);
+                    var11++;
+                    statePc = 38;
+                    continue stateLoop;
+                }
+                case 40: {
+                    var8 = var8 + var7;
+                    var10++;
+                    statePc = 36;
+                    continue stateLoop;
+                }
+                case 41: {
+                    throw new IllegalArgumentException();
+                }
+                case 42: {
+                    return;
+                }
+                case 43: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            return;
-          }
         }
     }
 
     final void ZA(int param0, float param1, float param2, float param3, float param4, float param5) {
+        Math.sqrt((double)(param3 * param3 + param4 * param4 + param5 * param5));
     }
 
     final boolean c() {
@@ -1676,7 +1800,7 @@ final class sob extends ha {
     }
 
     final co a(Runnable param0) {
-        int var2 = 0;
+        int var2;
         var2 = 0;
         L0: while (true) {
           if (var2 < this.field_g) {
@@ -1734,13 +1858,13 @@ final class sob extends ha {
     }
 
     final void P(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         L0: {
           if (param0 < this.field_H) {
             break L0;
@@ -1855,7 +1979,7 @@ final class sob extends ha {
     }
 
     private final void b(java.awt.Canvas param0, int param1, int param2) {
-        gpb var4 = null;
+        gpb var4;
         L0: {
           var4 = (gpb) ((Object) this.field_t.a((long)param0.hashCode(), 119));
           if (var4 != null) {
@@ -1904,99 +2028,55 @@ final class sob extends ha {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        co var8 = null;
-        daa var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        daa stackIn_19_0 = null;
-        daa stackIn_20_0 = null;
-        daa stackIn_21_0 = null;
-        daa stackIn_22_0 = null;
-        daa stackIn_23_0 = null;
-        daa stackIn_24_0 = null;
         daa stackIn_25_0 = null;
-        daa stackIn_26_0 = null;
         daa stackIn_27_0 = null;
         int stackIn_27_1 = 0;
-        daa stackIn_28_0 = null;
-        daa stackIn_29_0 = null;
-        daa stackIn_30_0 = null;
-        daa stackIn_31_0 = null;
-        daa stackIn_32_0 = null;
-        daa stackIn_33_0 = null;
         daa stackIn_34_0 = null;
-        daa stackIn_35_0 = null;
         daa stackIn_36_0 = null;
         int stackIn_36_1 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        daa stackOut_18_0 = null;
-        daa stackOut_19_0 = null;
-        daa stackOut_20_0 = null;
-        daa stackOut_21_0 = null;
-        daa stackOut_22_0 = null;
-        daa stackOut_23_0 = null;
-        daa stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
-        daa stackOut_24_0 = null;
-        daa stackOut_25_0 = null;
-        int stackOut_25_1 = 0;
-        daa stackOut_27_0 = null;
-        daa stackOut_28_0 = null;
-        daa stackOut_29_0 = null;
-        daa stackOut_30_0 = null;
-        daa stackOut_31_0 = null;
-        daa stackOut_32_0 = null;
-        daa stackOut_35_0 = null;
-        int stackOut_35_1 = 0;
-        daa stackOut_33_0 = null;
-        daa stackOut_34_0 = null;
-        int stackOut_34_1 = 0;
+        co var8;
+        daa var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
         L0: {
           var8 = this.a((Runnable) ((Object) Thread.currentThread()));
           var9 = var8.field_e;
           var10 = param2 - param0;
           var11 = param3 - param1;
           if (var10 < 0) {
-            stackOut_2_0 = -var10;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = -var10;
             break L0;
           } else {
-            stackOut_1_0 = var10;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = var10;
             break L0;
           }
         }
         L1: {
           var12 = stackIn_3_0;
           if (var11 < 0) {
-            stackOut_5_0 = -var11;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = -var11;
             break L1;
           } else {
-            stackOut_4_0 = var11;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = var11;
             break L1;
           }
         }
@@ -2054,48 +2134,39 @@ final class sob extends ha {
           L5: {
             L6: {
               this.a(false);
-              stackOut_18_0 = (daa) (var9);
-              stackIn_25_0 = stackOut_18_0;
-              stackIn_19_0 = stackOut_18_0;
+              stackIn_25_0 = (daa) (var9);
+
               if (var21 < 0) {
                 break L6;
               } else {
-                stackOut_19_0 = (daa) ((Object) stackIn_19_0);
-                stackIn_25_0 = stackOut_19_0;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_25_0 = (daa) ((Object) stackIn_25_0);
+
                 if (var21 > var9.field_b) {
                   break L6;
                 } else {
-                  stackOut_20_0 = (daa) ((Object) stackIn_20_0);
-                  stackIn_25_0 = stackOut_20_0;
-                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_25_0 = (daa) ((Object) stackIn_25_0);
+
                   if (var22 < 0) {
                     break L6;
                   } else {
-                    stackOut_21_0 = (daa) ((Object) stackIn_21_0);
-                    stackIn_25_0 = stackOut_21_0;
-                    stackIn_22_0 = stackOut_21_0;
+                    stackIn_25_0 = (daa) ((Object) stackIn_25_0);
+
                     if (var22 > var9.field_b) {
                       break L6;
                     } else {
-                      stackOut_22_0 = (daa) ((Object) stackIn_22_0);
-                      stackIn_25_0 = stackOut_22_0;
-                      stackIn_23_0 = stackOut_22_0;
+                      stackIn_25_0 = (daa) ((Object) stackIn_25_0);
+
                       if (var23 < 0) {
                         break L6;
                       } else {
-                        stackOut_23_0 = (daa) ((Object) stackIn_23_0);
-                        stackIn_26_0 = stackOut_23_0;
-                        stackIn_24_0 = stackOut_23_0;
+
+
                         if (var23 <= var9.field_b) {
-                          stackOut_26_0 = (daa) ((Object) stackIn_26_0);
-                          stackOut_26_1 = 0;
-                          stackIn_27_0 = stackOut_26_0;
-                          stackIn_27_1 = stackOut_26_1;
+                          stackIn_27_0 = (daa) ((Object) stackIn_25_0);
+                          stackIn_27_1 = 0;
                           break L5;
                         } else {
-                          stackOut_24_0 = (daa) ((Object) stackIn_24_0);
-                          stackIn_25_0 = stackOut_24_0;
+                          stackIn_25_0 = (daa) ((Object) stackIn_25_0);
                           break L6;
                         }
                       }
@@ -2104,58 +2175,47 @@ final class sob extends ha {
                 }
               }
             }
-            stackOut_25_0 = (daa) ((Object) stackIn_25_0);
-            stackOut_25_1 = 1;
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
+            stackIn_27_0 = (daa) ((Object) stackIn_25_0);
+            stackIn_27_1 = 1;
             break L5;
           }
           L7: {
             L8: {
               stackIn_27_0.field_n = stackIn_27_1 != 0;
               var9.a((float)var25, (float)var26, (float)var27, (float)var21, (float)var22, (float)var23, 100.0f, 100.0f, 100.0f, param4);
-              stackOut_27_0 = (daa) (var9);
-              stackIn_34_0 = stackOut_27_0;
-              stackIn_28_0 = stackOut_27_0;
+              stackIn_34_0 = (daa) (var9);
+
               if (var21 < 0) {
                 break L8;
               } else {
-                stackOut_28_0 = (daa) ((Object) stackIn_28_0);
-                stackIn_34_0 = stackOut_28_0;
-                stackIn_29_0 = stackOut_28_0;
+                stackIn_34_0 = (daa) ((Object) stackIn_34_0);
+
                 if (var21 > var9.field_b) {
                   break L8;
                 } else {
-                  stackOut_29_0 = (daa) ((Object) stackIn_29_0);
-                  stackIn_34_0 = stackOut_29_0;
-                  stackIn_30_0 = stackOut_29_0;
+                  stackIn_34_0 = (daa) ((Object) stackIn_34_0);
+
                   if (var23 < 0) {
                     break L8;
                   } else {
-                    stackOut_30_0 = (daa) ((Object) stackIn_30_0);
-                    stackIn_34_0 = stackOut_30_0;
-                    stackIn_31_0 = stackOut_30_0;
+                    stackIn_34_0 = (daa) ((Object) stackIn_34_0);
+
                     if (var23 > var9.field_b) {
                       break L8;
                     } else {
-                      stackOut_31_0 = (daa) ((Object) stackIn_31_0);
-                      stackIn_34_0 = stackOut_31_0;
-                      stackIn_32_0 = stackOut_31_0;
+                      stackIn_34_0 = (daa) ((Object) stackIn_34_0);
+
                       if (var24 < 0) {
                         break L8;
                       } else {
-                        stackOut_32_0 = (daa) ((Object) stackIn_32_0);
-                        stackIn_35_0 = stackOut_32_0;
-                        stackIn_33_0 = stackOut_32_0;
+
+
                         if (var24 <= var9.field_b) {
-                          stackOut_35_0 = (daa) ((Object) stackIn_35_0);
-                          stackOut_35_1 = 0;
-                          stackIn_36_0 = stackOut_35_0;
-                          stackIn_36_1 = stackOut_35_1;
+                          stackIn_36_0 = (daa) ((Object) stackIn_34_0);
+                          stackIn_36_1 = 0;
                           break L7;
                         } else {
-                          stackOut_33_0 = (daa) ((Object) stackIn_33_0);
-                          stackIn_34_0 = stackOut_33_0;
+                          stackIn_34_0 = (daa) ((Object) stackIn_34_0);
                           break L8;
                         }
                       }
@@ -2164,10 +2224,8 @@ final class sob extends ha {
                 }
               }
             }
-            stackOut_34_0 = (daa) ((Object) stackIn_34_0);
-            stackOut_34_1 = 1;
-            stackIn_36_0 = stackOut_34_0;
-            stackIn_36_1 = stackOut_34_1;
+            stackIn_36_0 = (daa) ((Object) stackIn_34_0);
+            stackIn_36_1 = 1;
             break L7;
           }
           stackIn_36_0.field_n = stackIn_36_1 != 0;
@@ -2180,10 +2238,10 @@ final class sob extends ha {
     }
 
     final da a(sw param0, ima[] param1, boolean param2) {
-        int[] var4 = null;
-        int[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        int[] var4;
+        int[] var5;
+        int var6;
+        int var7;
         var4 = new int[param1.length];
         var5 = new int[param1.length];
         var6 = 0;
@@ -2227,91 +2285,48 @@ final class sob extends ha {
     }
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
-        float[] array$2 = null;
-        java.awt.Dimension var5 = null;
-        gpb var6 = null;
         gpb var7 = null;
-        var6 = (gpb) ((Object) this.field_t.a((long)param0.hashCode(), 97));
-        if (var6 == null) {
-          return;
-        } else {
-          L0: {
+        java.awt.Dimension var5 = null;
+        float[] array$0 = null;
+        gpb var6 = (gpb) ((Object) this.field_t.a((long)param0.hashCode(), 97));
+        if (var6 != null) {
             var6.b(-3846);
             var7 = rba.a(param1, true, param0, param2);
             this.field_t.a((long)param0.hashCode(), var7, (byte) -122);
-            if (this.field_l != param0) {
-              break L0;
-            } else {
-              if (this.field_c != null) {
-                break L0;
-              } else {
-                L1: {
-                  L2: {
-                    var5 = param0.getSize();
-                    this.field_z = var5.width;
-                    this.field_o = var5.height;
-                    this.field_D = var7;
-                    this.field_k = var7.field_f;
-                    this.field_i = var7.field_e;
-                    this.field_j = var7.field_d;
-                    if (this.field_i != this.field_F) {
-                      break L2;
-                    } else {
-                      if (this.field_j == this.field_q) {
-                        break L1;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  this.field_F = this.field_i;
-                  this.field_v = this.field_i;
-                  this.field_q = this.field_j;
-                  this.field_u = this.field_j;
-                  array$2 = new float[this.field_F * this.field_q];
-                  this.field_r = array$2;
-                  this.field_G = array$2;
-                  break L1;
+            if (this.field_l == param0 && this.field_c == null) {
+                var5 = param0.getSize();
+                this.field_z = var5.width;
+                this.field_o = var5.height;
+                this.field_D = var7;
+                this.field_k = var7.field_f;
+                this.field_i = var7.field_e;
+                this.field_j = var7.field_d;
+                if (this.field_i != this.field_F || this.field_j != this.field_q) {
+                    this.field_F = this.field_i;
+                    this.field_v = this.field_i;
+                    this.field_q = this.field_j;
+                    this.field_u = this.field_j;
+                    array$0 = new float[this.field_F * this.field_q];
+                    this.field_r = array$0;
+                    this.field_G = array$0;
                 }
                 this.y();
-                break L0;
-              }
             }
-          }
-          return;
+            return;
         }
     }
 
     final void a(int param0, int param1) throws jkb {
-        Exception exception = null;
         java.awt.Graphics var3 = null;
-        Throwable decompiledCaughtException = null;
-        L0: {
-          if (this.field_l == null) {
-            break L0;
-          } else {
-            if (this.field_D != null) {
-              try {
-                L1: {
-                  var3 = this.field_l.getGraphics();
-                  this.field_D.a(var3, this.field_z, param1, 32255, param0, 0, 0, this.field_o);
-                  break L1;
-                }
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                L2: {
-                  exception = (Exception) (Object) decompiledCaughtException;
-                  this.field_l.repaint();
-                  break L2;
-                }
-              }
-              return;
-            } else {
-              break L0;
-            }
-          }
+        if (this.field_l == null || this.field_D == null) {
+            throw new IllegalStateException(field_K);
         }
-        throw new IllegalStateException(field_K);
+        try {
+            var3 = this.field_l.getGraphics();
+            this.field_D.a(var3, this.field_z, param1, 32255, param0, 0, 0, this.field_o);
+        } catch (Exception exception) {
+            this.field_l.repaint();
+        }
     }
 
     private sob(d param0) {
@@ -2345,15 +2360,16 @@ final class sob extends ha {
     }
 
     final void ya() {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int statePc = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -2362,131 +2378,194 @@ final class sob extends ha {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          if (this.field_H != 0) {
-            break L0;
-          } else {
-            if (this.field_A != this.field_i) {
-              break L0;
-            } else {
-              if (this.field_n != 0) {
-                break L0;
-              } else {
-                if (this.field_p != this.field_j) {
-                  break L0;
-                } else {
-                  var1 = this.field_r.length;
-                  var2 = var1 - (var1 & 7);
-                  var3 = 0;
-                  L1: while (true) {
-                    if (var3 >= var2) {
-                      L2: while (true) {
-                        if (var3 >= var1) {
-                          return;
-                        } else {
-                          incrementValue$9 = var3;
-                          var3++;
-                          this.field_r[incrementValue$9] = 2147483648.0f;
-                          continue L2;
-                        }
-                      }
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    if (this.field_H != 0) {
+                        statePc = 9;
                     } else {
-                      incrementValue$10 = var3;
-                      var3++;
-                      this.field_r[incrementValue$10] = 2147483648.0f;
-                      incrementValue$11 = var3;
-                      var3++;
-                      this.field_r[incrementValue$11] = 2147483648.0f;
-                      incrementValue$12 = var3;
-                      var3++;
-                      this.field_r[incrementValue$12] = 2147483648.0f;
-                      incrementValue$13 = var3;
-                      var3++;
-                      this.field_r[incrementValue$13] = 2147483648.0f;
-                      incrementValue$14 = var3;
-                      var3++;
-                      this.field_r[incrementValue$14] = 2147483648.0f;
-                      incrementValue$15 = var3;
-                      var3++;
-                      this.field_r[incrementValue$15] = 2147483648.0f;
-                      incrementValue$16 = var3;
-                      var3++;
-                      this.field_r[incrementValue$16] = 2147483648.0f;
-                      incrementValue$17 = var3;
-                      var3++;
-                      this.field_r[incrementValue$17] = 2147483648.0f;
-                      continue L1;
+                        statePc = 1;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
-            }
-          }
-        }
-        var1 = this.field_A - this.field_H;
-        var2 = this.field_p - this.field_n;
-        var3 = this.field_i - var1;
-        var4 = this.field_H + this.field_n * this.field_i;
-        var5 = var1 >> 3;
-        var6 = var1 & 7;
-        var1 = var4 - 1;
-        var8 = -var2;
-        L3: while (true) {
-          if (var8 >= 0) {
-            return;
-          } else {
-            L4: {
-              if (var5 <= 0) {
-                break L4;
-              } else {
-                var7 = var5;
-                L5: while (true) {
-                  var1++;
-                  this.field_r[var1] = 2147483648.0f;
-                  var1++;
-                  this.field_r[var1] = 2147483648.0f;
-                  var1++;
-                  this.field_r[var1] = 2147483648.0f;
-                  var1++;
-                  this.field_r[var1] = 2147483648.0f;
-                  var1++;
-                  this.field_r[var1] = 2147483648.0f;
-                  var1++;
-                  this.field_r[var1] = 2147483648.0f;
-                  var1++;
-                  this.field_r[var1] = 2147483648.0f;
-                  var1++;
-                  this.field_r[var1] = 2147483648.0f;
-                  var7--;
-                  if (var7 > 0) {
-                    continue L5;
-                  } else {
-                    break L4;
-                  }
+                case 1: {
+                    if (this.field_A != this.field_i) {
+                        statePc = 9;
+                    } else {
+                        statePc = 2;
+                    }
+                    continue stateLoop;
                 }
-              }
-            }
-            L6: {
-              if (var6 <= 0) {
-                break L6;
-              } else {
-                var7 = var6;
-                L7: while (true) {
-                  var1++;
-                  this.field_r[var1] = 2147483648.0f;
-                  var7--;
-                  if (var7 > 0) {
-                    continue L7;
-                  } else {
-                    break L6;
-                  }
+                case 2: {
+                    if (this.field_n != 0) {
+                        statePc = 9;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
                 }
-              }
+                case 3: {
+                    if (this.field_p != this.field_j) {
+                        statePc = 9;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    var1 = this.field_r.length;
+                    var2 = var1 - (var1 & 7);
+                    var3 = 0;
+                    statePc = 5;
+                    continue stateLoop;
+                }
+                case 5: {
+                    if (var3 >= var2) {
+                        statePc = 7;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    incrementValue$0 = var3;
+                    var3++;
+                    this.field_r[incrementValue$0] = 2147483648.0f;
+                    incrementValue$1 = var3;
+                    var3++;
+                    this.field_r[incrementValue$1] = 2147483648.0f;
+                    incrementValue$2 = var3;
+                    var3++;
+                    this.field_r[incrementValue$2] = 2147483648.0f;
+                    incrementValue$3 = var3;
+                    var3++;
+                    this.field_r[incrementValue$3] = 2147483648.0f;
+                    incrementValue$4 = var3;
+                    var3++;
+                    this.field_r[incrementValue$4] = 2147483648.0f;
+                    incrementValue$5 = var3;
+                    var3++;
+                    this.field_r[incrementValue$5] = 2147483648.0f;
+                    incrementValue$6 = var3;
+                    var3++;
+                    this.field_r[incrementValue$6] = 2147483648.0f;
+                    incrementValue$7 = var3;
+                    var3++;
+                    this.field_r[incrementValue$7] = 2147483648.0f;
+                    statePc = 5;
+                    continue stateLoop;
+                }
+                case 7: {
+                    if (var3 >= var1) {
+                        statePc = 19;
+                    } else {
+                        statePc = 8;
+                    }
+                    continue stateLoop;
+                }
+                case 8: {
+                    incrementValue$8 = var3;
+                    var3++;
+                    this.field_r[incrementValue$8] = 2147483648.0f;
+                    statePc = 7;
+                    continue stateLoop;
+                }
+                case 9: {
+                    var1 = this.field_A - this.field_H;
+                    var2 = this.field_p - this.field_n;
+                    var3 = this.field_i - var1;
+                    var4 = this.field_H + this.field_n * this.field_i;
+                    var5 = var1 >> 3;
+                    var6 = var1 & 7;
+                    var1 = var4 - 1;
+                    var8 = -var2;
+                    statePc = 10;
+                    continue stateLoop;
+                }
+                case 10: {
+                    if (var8 >= 0) {
+                        statePc = 18;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    if (var5 <= 0) {
+                        statePc = 14;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
+                    var7 = var5;
+                    statePc = 13;
+                    continue stateLoop;
+                }
+                case 13: {
+                    var1++;
+                    this.field_r[var1] = 2147483648.0f;
+                    var1++;
+                    this.field_r[var1] = 2147483648.0f;
+                    var1++;
+                    this.field_r[var1] = 2147483648.0f;
+                    var1++;
+                    this.field_r[var1] = 2147483648.0f;
+                    var1++;
+                    this.field_r[var1] = 2147483648.0f;
+                    var1++;
+                    this.field_r[var1] = 2147483648.0f;
+                    var1++;
+                    this.field_r[var1] = 2147483648.0f;
+                    var1++;
+                    this.field_r[var1] = 2147483648.0f;
+                    var7--;
+                    if (var7 > 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 14;
+                    }
+                    continue stateLoop;
+                }
+                case 14: {
+                    if (var6 <= 0) {
+                        statePc = 17;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 15: {
+                    var7 = var6;
+                    statePc = 16;
+                    continue stateLoop;
+                }
+                case 16: {
+                    var1++;
+                    this.field_r[var1] = 2147483648.0f;
+                    var7--;
+                    if (var7 > 0) {
+                        statePc = 16;
+                    } else {
+                        statePc = 17;
+                    }
+                    continue stateLoop;
+                }
+                case 17: {
+                    var1 = var1 + var3;
+                    var8++;
+                    statePc = 10;
+                    continue stateLoop;
+                }
+                case 18: {
+                    return;
+                }
+                case 19: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            var1 = var1 + var3;
-            var8++;
-            continue L3;
-          }
         }
     }
 
@@ -2519,30 +2598,12 @@ final class sob extends ha {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        co var11 = null;
-        daa var12 = null;
-        int var13 = 0;
-        daa stackIn_1_0 = null;
-        daa stackIn_2_0 = null;
-        daa stackIn_3_0 = null;
-        daa stackIn_4_0 = null;
-        daa stackIn_5_0 = null;
-        daa stackIn_6_0 = null;
         daa stackIn_7_0 = null;
-        daa stackIn_8_0 = null;
         daa stackIn_9_0 = null;
         int stackIn_9_1 = 0;
-        daa stackOut_0_0 = null;
-        daa stackOut_1_0 = null;
-        daa stackOut_2_0 = null;
-        daa stackOut_3_0 = null;
-        daa stackOut_4_0 = null;
-        daa stackOut_5_0 = null;
-        daa stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        daa stackOut_6_0 = null;
-        daa stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
+        co var11;
+        daa var12;
+        int var13;
         L0: {
           L1: {
             var11 = this.a((Runnable) ((Object) Thread.currentThread()));
@@ -2554,48 +2615,39 @@ final class sob extends ha {
             param1 = param1 - this.field_h;
             param3 = param3 - this.field_h;
             param5 = param5 - this.field_h;
-            stackOut_0_0 = (daa) (var12);
-            stackIn_7_0 = stackOut_0_0;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_7_0 = (daa) (var12);
+
             if (param0 < 0) {
               break L1;
             } else {
-              stackOut_1_0 = (daa) ((Object) stackIn_1_0);
-              stackIn_7_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_7_0 = (daa) ((Object) stackIn_7_0);
+
               if (param0 > var12.field_b) {
                 break L1;
               } else {
-                stackOut_2_0 = (daa) ((Object) stackIn_2_0);
-                stackIn_7_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_7_0 = (daa) ((Object) stackIn_7_0);
+
                 if (param2 < 0) {
                   break L1;
                 } else {
-                  stackOut_3_0 = (daa) ((Object) stackIn_3_0);
-                  stackIn_7_0 = stackOut_3_0;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_7_0 = (daa) ((Object) stackIn_7_0);
+
                   if (param2 > var12.field_b) {
                     break L1;
                   } else {
-                    stackOut_4_0 = (daa) ((Object) stackIn_4_0);
-                    stackIn_7_0 = stackOut_4_0;
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_7_0 = (daa) ((Object) stackIn_7_0);
+
                     if (param4 < 0) {
                       break L1;
                     } else {
-                      stackOut_5_0 = (daa) ((Object) stackIn_5_0);
-                      stackIn_8_0 = stackOut_5_0;
-                      stackIn_6_0 = stackOut_5_0;
+
+
                       if (param4 <= var12.field_b) {
-                        stackOut_8_0 = (daa) ((Object) stackIn_8_0);
-                        stackOut_8_1 = 0;
-                        stackIn_9_0 = stackOut_8_0;
-                        stackIn_9_1 = stackOut_8_1;
+                        stackIn_9_0 = (daa) ((Object) stackIn_7_0);
+                        stackIn_9_1 = 0;
                         break L0;
                       } else {
-                        stackOut_6_0 = (daa) ((Object) stackIn_6_0);
-                        stackIn_7_0 = stackOut_6_0;
+                        stackIn_7_0 = (daa) ((Object) stackIn_7_0);
                         break L1;
                       }
                     }
@@ -2604,10 +2656,8 @@ final class sob extends ha {
               }
             }
           }
-          stackOut_7_0 = (daa) ((Object) stackIn_7_0);
-          stackOut_7_1 = 1;
-          stackIn_9_0 = stackOut_7_0;
-          stackIn_9_1 = stackOut_7_1;
+          stackIn_9_0 = (daa) ((Object) stackIn_7_0);
+          stackIn_9_1 = 1;
           break L0;
         }
         L2: {
@@ -2668,9 +2718,9 @@ final class sob extends ha {
     }
 
     private final void a(java.awt.Canvas param0) {
-        float[] array$2 = null;
-        gpb var2 = null;
-        java.awt.Dimension var3 = null;
+        float[] array$1 = null;
+        gpb var2;
+        java.awt.Dimension var3;
         L0: {
           if (param0 == null) {
             this.field_l = null;
@@ -2718,9 +2768,9 @@ final class sob extends ha {
                   this.field_v = this.field_i;
                   this.field_q = this.field_j;
                   this.field_u = this.field_j;
-                  array$2 = new float[this.field_F * this.field_q];
-                  this.field_r = array$2;
-                  this.field_G = array$2;
+                  array$1 = new float[this.field_F * this.field_q];
+                  this.field_r = array$1;
+                  this.field_G = array$1;
                   break L1;
                 }
                 this.y();
@@ -2756,40 +2806,40 @@ final class sob extends ha {
     }
 
     final void za(int param0, int param1, int param2, int param3, int param4) {
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
-        int incrementValue$24 = 0;
-        int incrementValue$25 = 0;
-        int incrementValue$26 = 0;
-        int incrementValue$27 = 0;
-        int incrementValue$28 = 0;
-        int incrementValue$29 = 0;
-        int incrementValue$30 = 0;
-        int incrementValue$31 = 0;
-        int incrementValue$32 = 0;
-        int incrementValue$33 = 0;
-        int incrementValue$34 = 0;
-        int incrementValue$35 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
         L0: {
           if (param2 >= 0) {
             break L0;
@@ -2870,9 +2920,9 @@ final class sob extends ha {
                                 if (var12 <= var9) {
                                   break L10;
                                 } else {
-                                  incrementValue$18 = var10;
+                                  incrementValue$0 = var10;
                                   var10--;
-                                  var13 = var13 - (incrementValue$18 + var10);
+                                  var13 = var13 - (incrementValue$0 + var10);
                                   var12 = var12 - (var10 + var10);
                                   continue L9;
                                 }
@@ -2902,18 +2952,18 @@ final class sob extends ha {
                               if (var18 > var16) {
                                 var8++;
                                 var13 = var13 + (var11 + var11);
-                                incrementValue$19 = var11;
+                                incrementValue$1 = var11;
                                 var11++;
-                                var12 = var12 + (incrementValue$19 + var11);
+                                var12 = var12 + (incrementValue$1 + var11);
                                 continue L8;
                               } else {
                                 var19 = this.field_k[var17];
                                 var20 = param3 + var19;
                                 var21 = (param3 & 16711935) + (var19 & 16711935);
                                 var19 = (var21 & 16777472) + (var20 - var21 & 65536);
-                                incrementValue$20 = var17;
+                                incrementValue$2 = var17;
                                 var17++;
-                                this.field_k[incrementValue$20] = var20 - var19 | var19 - (var19 >>> 8);
+                                this.field_k[incrementValue$2] = var20 - var19 | var19 - (var19 >>> 8);
                                 var18++;
                                 continue L13;
                               }
@@ -2951,9 +3001,9 @@ final class sob extends ha {
                               L18: while (true) {
                                 if (var18 >= var16) {
                                   var8++;
-                                  incrementValue$21 = var11;
+                                  incrementValue$3 = var11;
                                   var11--;
-                                  var12 = var12 - (incrementValue$21 + var11);
+                                  var12 = var12 - (incrementValue$3 + var11);
                                   var13 = var13 - (var11 + var11);
                                   continue L7;
                                 } else {
@@ -2961,9 +3011,9 @@ final class sob extends ha {
                                   var20 = param3 + var19;
                                   var21 = (param3 & 16711935) + (var19 & 16711935);
                                   var19 = (var21 & 16777472) + (var20 - var21 & 65536);
-                                  incrementValue$22 = var17;
+                                  incrementValue$4 = var17;
                                   var17++;
-                                  this.field_k[incrementValue$22] = var20 - var19 | var19 - (var19 >>> 8);
+                                  this.field_k[incrementValue$4] = var20 - var19 | var19 - (var19 >>> 8);
                                   var18++;
                                   continue L18;
                                 }
@@ -2974,9 +3024,9 @@ final class sob extends ha {
                           }
                         }
                         var12 = var12 + (var10 + var10);
-                        incrementValue$23 = var10;
+                        incrementValue$5 = var10;
                         var10++;
-                        var13 = var13 + (incrementValue$23 + var10);
+                        var13 = var13 + (incrementValue$5 + var10);
                         continue L14;
                       }
                     }
@@ -3004,9 +3054,9 @@ final class sob extends ha {
                               if (var12 <= var9) {
                                 break L22;
                               } else {
-                                incrementValue$24 = var10;
+                                incrementValue$6 = var10;
                                 var10--;
-                                var13 = var13 - (incrementValue$24 + var10);
+                                var13 = var13 - (incrementValue$6 + var10);
                                 var12 = var12 - (var10 + var10);
                                 continue L21;
                               }
@@ -3036,16 +3086,16 @@ final class sob extends ha {
                             if (var19 > var17) {
                               var8++;
                               var13 = var13 + (var11 + var11);
-                              incrementValue$25 = var11;
+                              incrementValue$7 = var11;
                               var11++;
-                              var12 = var12 + (incrementValue$25 + var11);
+                              var12 = var12 + (incrementValue$7 + var11);
                               continue L20;
                             } else {
                               var20 = this.field_k[var18];
                               var20 = ((var20 & 16711935) * var15 >> 8 & 16711935) + ((var20 & 65280) * var15 >> 8 & 65280);
-                              incrementValue$26 = var18;
+                              incrementValue$8 = var18;
                               var18++;
-                              this.field_k[incrementValue$26] = param3 + var20;
+                              this.field_k[incrementValue$8] = param3 + var20;
                               var19++;
                               continue L25;
                             }
@@ -3083,17 +3133,17 @@ final class sob extends ha {
                             L30: while (true) {
                               if (var19 >= var17) {
                                 var8++;
-                                incrementValue$27 = var11;
+                                incrementValue$9 = var11;
                                 var11--;
-                                var12 = var12 - (incrementValue$27 + var11);
+                                var12 = var12 - (incrementValue$9 + var11);
                                 var13 = var13 - (var11 + var11);
                                 continue L19;
                               } else {
                                 var20 = this.field_k[var18];
                                 var20 = ((var20 & 16711935) * var15 >> 8 & 16711935) + ((var20 & 65280) * var15 >> 8 & 65280);
-                                incrementValue$28 = var18;
+                                incrementValue$10 = var18;
                                 var18++;
-                                this.field_k[incrementValue$28] = param3 + var20;
+                                this.field_k[incrementValue$10] = param3 + var20;
                                 var19++;
                                 continue L30;
                               }
@@ -3104,9 +3154,9 @@ final class sob extends ha {
                         }
                       }
                       var12 = var12 + (var10 + var10);
-                      incrementValue$29 = var10;
+                      incrementValue$11 = var10;
                       var10++;
-                      var13 = var13 + (incrementValue$29 + var10);
+                      var13 = var13 + (incrementValue$11 + var10);
                       continue L26;
                     }
                   }
@@ -3135,9 +3185,9 @@ final class sob extends ha {
                       if (var12 <= var9) {
                         break L34;
                       } else {
-                        incrementValue$30 = var10;
+                        incrementValue$12 = var10;
                         var10--;
-                        var13 = var13 - (incrementValue$30 + var10);
+                        var13 = var13 - (incrementValue$12 + var10);
                         var12 = var12 - (var10 + var10);
                         continue L33;
                       }
@@ -3167,14 +3217,14 @@ final class sob extends ha {
                     if (var18 > var16) {
                       var8++;
                       var13 = var13 + (var11 + var11);
-                      incrementValue$31 = var11;
+                      incrementValue$13 = var11;
                       var11++;
-                      var12 = var12 + (incrementValue$31 + var11);
+                      var12 = var12 + (incrementValue$13 + var11);
                       continue L32;
                     } else {
-                      incrementValue$32 = var17;
+                      incrementValue$14 = var17;
                       var17++;
-                      this.field_k[incrementValue$32] = param3;
+                      this.field_k[incrementValue$14] = param3;
                       var18++;
                       continue L37;
                     }
@@ -3212,15 +3262,15 @@ final class sob extends ha {
                     L42: while (true) {
                       if (var18 >= var16) {
                         var8++;
-                        incrementValue$33 = var11;
+                        incrementValue$15 = var11;
                         var11--;
-                        var12 = var12 - (incrementValue$33 + var11);
+                        var12 = var12 - (incrementValue$15 + var11);
                         var13 = var13 - (var11 + var11);
                         continue L31;
                       } else {
-                        incrementValue$34 = var17;
+                        incrementValue$16 = var17;
                         var17++;
-                        this.field_k[incrementValue$34] = param3;
+                        this.field_k[incrementValue$16] = param3;
                         var18++;
                         continue L42;
                       }
@@ -3231,9 +3281,9 @@ final class sob extends ha {
                 }
               }
               var12 = var12 + (var10 + var10);
-              incrementValue$35 = var10;
+              incrementValue$17 = var10;
               var10++;
-              var13 = var13 + (incrementValue$35 + var10);
+              var13 = var13 + (incrementValue$17 + var10);
               continue L38;
             }
           }
@@ -3265,42 +3315,32 @@ final class sob extends ha {
     }
 
     final aja a(ima param0, boolean param1) {
-        int[] var3 = null;
-        byte[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        Object var7 = null;
-        int[] var8 = null;
-        byte[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        byte[] var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        byte[] var17 = null;
-        int[] var18 = null;
-        int[] var19 = null;
-        int[] var20 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
-        int[] var23 = null;
-        int[] stackIn_25_0 = null;
-        int stackIn_25_1 = 0;
         int[] stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         int[] stackIn_27_0 = null;
         int stackIn_27_1 = 0;
         int stackIn_27_2 = 0;
-        int[] stackOut_24_0 = null;
-        int stackOut_24_1 = 0;
-        int[] stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
-        int stackOut_26_2 = 0;
-        int[] stackOut_25_0 = null;
-        int stackOut_25_1 = 0;
-        int stackOut_25_2 = 0;
+        int[] var3;
+        byte[] var4;
+        int var5;
+        int var6;
+        Object var7;
+        int[] var8;
+        byte[] var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        byte[] var14;
+        int[] var15;
+        int[] var16;
+        byte[] var17;
+        int[] var18;
+        int[] var19;
+        int[] var20;
+        byte[] var21;
+        int[] var22;
+        int[] var23;
         L0: {
           L1: {
             var20 = param0.field_b;
@@ -3374,27 +3414,19 @@ final class sob extends ha {
                   } else {
                     L7: {
                       var13 = var3[var4[var11 + var12] & 255];
-                      stackOut_24_0 = (int[]) (var15);
-                      stackOut_24_1 = var11 + var12;
-                      stackIn_26_0 = stackOut_24_0;
-                      stackIn_26_1 = stackOut_24_1;
-                      stackIn_25_0 = stackOut_24_0;
-                      stackIn_25_1 = stackOut_24_1;
+                      stackIn_26_0 = (int[]) (var15);
+
+                      stackIn_26_1 = var11 + var12;
+
                       if (var13 == 0) {
-                        stackOut_26_0 = (int[]) ((Object) stackIn_26_0);
-                        stackOut_26_1 = stackIn_26_1;
-                        stackOut_26_2 = 0;
-                        stackIn_27_0 = stackOut_26_0;
-                        stackIn_27_1 = stackOut_26_1;
-                        stackIn_27_2 = stackOut_26_2;
+                        stackIn_27_0 = (int[]) ((Object) stackIn_26_0);
+                        stackIn_27_1 = stackIn_26_1;
+                        stackIn_27_2 = 0;
                         break L7;
                       } else {
-                        stackOut_25_0 = (int[]) ((Object) stackIn_25_0);
-                        stackOut_25_1 = stackIn_25_1;
-                        stackOut_25_2 = -16777216 | var13;
-                        stackIn_27_0 = stackOut_25_0;
-                        stackIn_27_1 = stackOut_25_1;
-                        stackIn_27_2 = stackOut_25_2;
+                        stackIn_27_0 = (int[]) ((Object) stackIn_26_0);
+                        stackIn_27_1 = stackIn_26_1;
+                        stackIn_27_2 = -16777216 | var13;
                         break L7;
                       }
                     }
@@ -3454,13 +3486,13 @@ final class sob extends ha {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         param2 = param2 - param0;
         param3 = param3 - param1;
         if (param3 != 0) {
@@ -3833,12 +3865,12 @@ final class sob extends ha {
     }
 
     final void U(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         L0: {
           if (param1 < this.field_n) {
             break L0;
@@ -3936,7 +3968,7 @@ final class sob extends ha {
     }
 
     final void f(int param0, int param1) {
-        co discarded$0 = this.a((Runnable) ((Object) Thread.currentThread()));
+        this.a((Runnable) ((Object) Thread.currentThread()));
         this.field_y = param0;
         this.field_e = param1;
     }

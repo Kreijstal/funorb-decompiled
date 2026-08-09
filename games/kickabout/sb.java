@@ -20,11 +20,11 @@ final class sb {
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
-        gg var3 = null;
-        uv var4 = null;
-        String var5_ref_String = null;
-        int var5 = 0;
-        int var6 = 0;
+        gg var3;
+        uv var4;
+        String var5_ref_String;
+        int var5;
+        int var6;
         var3 = se.a(param0, 2, param2);
         if (param1) {
           return;
@@ -124,17 +124,17 @@ final class sb {
     }
 
     final char b(int param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         if (param0 >= -50) {
           this.field_c = -38;
-          fieldTemp$4 = this.field_c;
+          fieldTemp$2 = this.field_c;
           this.field_c = this.field_c + 1;
-          return this.field_f.charAt(fieldTemp$4);
+          return this.field_f.charAt(fieldTemp$2);
         } else {
-          fieldTemp$5 = this.field_c;
+          fieldTemp$3 = this.field_c;
           this.field_c = this.field_c + 1;
-          return this.field_f.charAt(fieldTemp$5);
+          return this.field_f.charAt(fieldTemp$3);
         }
     }
 
@@ -151,20 +151,14 @@ final class sb {
     final boolean a(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 <= 55) {
           L0: {
             field_a = 77;
             if (this.field_d > this.field_c) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -172,12 +166,10 @@ final class sb {
         } else {
           L1: {
             if (this.field_d > this.field_c) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

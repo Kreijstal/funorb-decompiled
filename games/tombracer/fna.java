@@ -39,8 +39,8 @@ final class fna {
     }
 
     final int d(int param0) {
-        nh var2 = null;
-        int var3 = 0;
+        nh var2;
+        int var3;
         if (-6 != (this.field_g ^ -1)) {
           if (-7 == (this.field_g ^ -1)) {
             return ng.field_k[5].c() / 2 + this.field_d;
@@ -86,67 +86,41 @@ final class fna {
     }
 
     final void a(boolean param0, boolean param1, boolean param2, int param3) {
-        boolean discarded$2 = false;
-        dea stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        boolean stackIn_5_2 = false;
         dea stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         boolean stackIn_6_2 = false;
-        dea stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        boolean stackIn_7_2 = false;
-        int stackIn_7_3 = 0;
-        dea stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        boolean stackOut_4_2 = false;
-        dea stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        boolean stackOut_6_2 = false;
-        int stackOut_6_3 = 0;
-        dea stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        boolean stackOut_5_2 = false;
-        int stackOut_5_3 = 0;
+        dea stackIn_7_0;
+        int stackIn_7_1;
+        boolean stackIn_7_2;
+        int stackIn_7_3;
         L0: {
           if (param3 == 6) {
             break L0;
           } else {
-            discarded$2 = this.a(-5, 1, -105);
+            this.a(-5, 1, -105);
             break L0;
           }
         }
         L1: {
           if (!this.field_a) {
             L2: {
-              stackOut_4_0 = this.field_c;
-              stackOut_4_1 = -115;
-              stackOut_4_2 = param0;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_6_0 = this.field_c;
+
+              stackIn_6_1 = -115;
+
+              stackIn_6_2 = param0;
+
               if (param2) {
-                stackOut_6_0 = (dea) ((Object) stackIn_6_0);
-                stackOut_6_1 = stackIn_6_1;
-                stackOut_6_2 = stackIn_6_2;
-                stackOut_6_3 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
-                stackIn_7_2 = stackOut_6_2;
-                stackIn_7_3 = stackOut_6_3;
+                stackIn_7_0 = (dea) ((Object) stackIn_6_0);
+                stackIn_7_1 = stackIn_6_1;
+                stackIn_7_2 = stackIn_6_2;
+                stackIn_7_3 = 0;
                 break L2;
               } else {
-                stackOut_5_0 = (dea) ((Object) stackIn_5_0);
-                stackOut_5_1 = stackIn_5_1;
-                stackOut_5_2 = stackIn_5_2;
-                stackOut_5_3 = 1;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
-                stackIn_7_2 = stackOut_5_2;
-                stackIn_7_3 = stackOut_5_3;
+                stackIn_7_0 = (dea) ((Object) stackIn_6_0);
+                stackIn_7_1 = stackIn_6_1;
+                stackIn_7_2 = stackIn_6_2;
+                stackIn_7_3 = 1;
                 break L2;
               }
             }
@@ -194,67 +168,50 @@ final class fna {
     }
 
     final void a(boolean param0, boolean param1, int param2, boolean param3) {
-        int var5 = 0;
-        da var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        nh var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        kea var20_ref_kea = null;
-        kia var20_ref_kia = null;
-        int var21_int = 0;
-        kea var21 = null;
-        nh var21_ref = null;
-        String var21_ref2 = null;
-        int var22_int = 0;
-        String var22 = null;
-        int var24 = 0;
-        nh[] var25 = null;
-        ha var26 = null;
-        kia var27 = null;
-        nh[] var28 = null;
-        ha var29 = null;
-        nh var30 = null;
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_19_0 = 0;
         kia stackIn_51_0 = null;
         int stackIn_78_0 = 0;
         nh stackIn_89_0 = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_14_0 = 0;
-        kia stackOut_50_0 = null;
-        kia stackOut_49_0 = null;
-        int stackOut_77_0 = 0;
-        int stackOut_76_0 = 0;
-        nh stackOut_88_0 = null;
-        nh stackOut_87_0 = null;
+        int var5;
+        da var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        nh var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        kia var20_ref_kia;
+        kea var20_ref_kea;
+        int var20;
+        int var21_int;
+        String var21;
+        kea var21_ref;
+        nh var21_ref2;
+        int var22_int;
+        String var22;
+        int var24;
+        nh[] var25;
+        ha var26;
+        kia var27;
+        nh[] var28;
+        ha var29;
+        nh var30;
         L0: {
           var24 = TombRacer.field_G ? 1 : 0;
           if (!param0) {
-            stackOut_2_0 = 2431750;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 2431750;
             break L0;
           } else {
-            stackOut_1_0 = 10827264;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 10827264;
             break L0;
           }
         }
@@ -274,22 +231,18 @@ final class fna {
             if (36 != this.field_g) {
               if (-38 != (this.field_g ^ -1)) {
                 if (38 == this.field_g) {
-                  stackOut_11_0 = 1;
-                  stackIn_13_0 = stackOut_11_0;
+                  stackIn_13_0 = 1;
                   break L1;
                 } else {
-                  stackOut_10_0 = 0;
-                  stackIn_13_0 = stackOut_10_0;
+                  stackIn_13_0 = 0;
                   break L1;
                 }
               } else {
-                stackOut_8_0 = 1;
-                stackIn_13_0 = stackOut_8_0;
+                stackIn_13_0 = 1;
                 break L1;
               }
             } else {
-              stackOut_6_0 = 1;
-              stackIn_13_0 = stackOut_6_0;
+              stackIn_13_0 = 1;
               break L1;
             }
           }
@@ -297,17 +250,14 @@ final class fna {
             var16 = stackIn_13_0;
             if (39 != this.field_g) {
               if (-41 == (this.field_g ^ -1)) {
-                stackOut_17_0 = 1;
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = 1;
                 break L2;
               } else {
-                stackOut_16_0 = 0;
-                stackIn_19_0 = stackOut_16_0;
+                stackIn_19_0 = 0;
                 break L2;
               }
             } else {
-              stackOut_14_0 = 1;
-              stackIn_19_0 = stackOut_14_0;
+              stackIn_19_0 = 1;
               break L2;
             }
           }
@@ -443,12 +393,10 @@ final class fna {
                       }
                       L16: {
                         if (-40 != (this.field_g ^ -1)) {
-                          stackOut_50_0 = vk.field_d;
-                          stackIn_51_0 = stackOut_50_0;
+                          stackIn_51_0 = vk.field_d;
                           break L16;
                         } else {
-                          stackOut_49_0 = ska.field_r;
-                          stackIn_51_0 = stackOut_49_0;
+                          stackIn_51_0 = ska.field_r;
                           break L16;
                         }
                       }
@@ -465,17 +413,17 @@ final class fna {
                         }
                       }
                       L18: {
-                        var21_ref2 = this.field_e;
+                        var21 = this.field_e;
                         if (ipa.a(dna.A(param2 + 124), true, var27)) {
                           break L18;
                         } else {
                           var5 = 2431750;
-                          var21_ref2 = "<str=010101>" + this.field_e + "</str>";
+                          var21 = "<str=010101>" + this.field_e + "</str>";
                           var15 = -1;
                           break L18;
                         }
                       }
-                      oka.a(var21_ref2, var5, var6, -1, 10 + var9, this.field_b, var15);
+                      oka.a(var21, var5, var6, -1, 10 + var9, this.field_b, var15);
                       if (var24 == 0) {
                         break L6;
                       } else {
@@ -523,8 +471,8 @@ final class fna {
                     }
                   }
                   L22: {
-                    var21 = dna.A(36);
-                    if (var20_ref_kea != var21) {
+                    var21_ref = dna.A(36);
+                    if (var20_ref_kea != var21_ref) {
                       break L22;
                     } else {
                       var15 = 2236962;
@@ -566,12 +514,10 @@ final class fna {
             L25: {
               oka.a(this.field_e, var5, var6, param2 + -2, var9, -64 + this.field_b, var15);
               if (-6 != (this.field_g ^ -1)) {
-                stackOut_77_0 = jg.a((byte) -103);
-                stackIn_78_0 = stackOut_77_0;
+                stackIn_78_0 = jg.a((byte) -103);
                 break L25;
               } else {
-                stackOut_76_0 = tk.a(param2 ^ -22635);
-                stackIn_78_0 = stackOut_76_0;
+                stackIn_78_0 = tk.a(param2 ^ -22635);
                 break L25;
               }
             }
@@ -612,18 +558,16 @@ final class fna {
             L30: {
               tga.field_a.la();
               if (this.field_g != 6) {
-                stackOut_88_0 = haa.field_z;
-                stackIn_89_0 = stackOut_88_0;
+                stackIn_89_0 = haa.field_z;
                 break L30;
               } else {
-                stackOut_87_0 = wh.field_y;
-                stackIn_89_0 = stackOut_87_0;
+                stackIn_89_0 = wh.field_y;
                 break L30;
               }
             }
             L31: {
               var30 = stackIn_89_0;
-              var21_ref = var30;
+              var21_ref2 = var30;
               if (!param3) {
                 break L31;
               } else {
@@ -653,10 +597,9 @@ final class fna {
     }
 
     final void a(boolean param0) {
-        hra discarded$0 = null;
         if (param0) {
             String var3 = (String) null;
-            discarded$0 = fna.a(86, (String) null);
+            fna.a(86, (String) null);
         }
         this.field_c.d(31990);
     }
@@ -671,8 +614,6 @@ final class fna {
         hra stackIn_4_0 = null;
         hra stackIn_8_0 = null;
         hra stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -680,17 +621,6 @@ final class fna {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        hra stackOut_7_0 = null;
-        hra stackOut_11_0 = null;
-        hra stackOut_3_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             L1: {
@@ -700,8 +630,7 @@ final class fna {
                 if (0 != param1.length()) {
                   var2_int = param1.indexOf('@');
                   if (var2_int == -1) {
-                    stackOut_7_0 = is.field_wb;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = is.field_wb;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -710,8 +639,7 @@ final class fna {
                     var6 = 77 % ((param0 - -25) / 63);
                     var5 = bd.a(-1, var3);
                     if (var5 != null) {
-                      stackOut_11_0 = (hra) (var5);
-                      stackIn_12_0 = stackOut_11_0;
+                      stackIn_12_0 = (hra) (var5);
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -723,8 +651,7 @@ final class fna {
                 }
               }
             }
-            stackOut_3_0 = mma.field_d;
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = mma.field_d;
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -732,27 +659,19 @@ final class fna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var2);
-            stackOut_13_1 = new StringBuilder().append("fna.I(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var2);
+
+            stackIn_15_1 = new StringBuilder().append("fna.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L2;
             }
           }
@@ -784,13 +703,13 @@ final class fna {
     }
 
     final boolean a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        nh var10 = null;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        nh var10;
         if (!this.field_c.b(20)) {
           return false;
         } else {

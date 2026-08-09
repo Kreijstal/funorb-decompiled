@@ -31,22 +31,20 @@ abstract class ne {
     abstract void c(int param0, int param1);
 
     final static void b(int param0, int param1) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        String var3 = null;
+        String var3;
         if (param1 != 150) {
           var3 = (String) null;
           ne.a(false, (String) null, (String) null, 49);
-          discarded$4 = mg.a((byte) -78);
+          mg.a((byte) -78);
           return;
         } else {
-          discarded$5 = mg.a((byte) -78);
+          mg.a((byte) -78);
           return;
         }
     }
 
     public static void a(int param0) {
-        String var2 = null;
+        String var2;
         field_l = null;
         field_c = null;
         if (param0 > -83) {
@@ -87,8 +85,6 @@ abstract class ne {
         int var5 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -96,16 +92,6 @@ abstract class ne {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var5 = StarCannon.field_A;
         try {
           L0: {
@@ -115,8 +101,7 @@ abstract class ne {
               var4 = 0;
               L1: while (true) {
                 if (var2_int <= var4) {
-                  stackOut_7_0 = var3;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = var3;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -126,8 +111,7 @@ abstract class ne {
                 }
               }
             } else {
-              stackOut_2_0 = -84;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = -84;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -136,27 +120,19 @@ abstract class ne {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2);
-            stackOut_9_1 = new StringBuilder().append("ne.I(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var2);
+
+            stackIn_11_1 = new StringBuilder().append("ne.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }

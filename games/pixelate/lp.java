@@ -28,7 +28,6 @@ final class lp {
         int var3 = 0;
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -70,8 +69,7 @@ final class lp {
                     }
                   }
                 }
-                stackOut_14_0 = var2;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = var2;
                 break L0;
               } else {
                 vp.field_Gb.a((byte) -48);

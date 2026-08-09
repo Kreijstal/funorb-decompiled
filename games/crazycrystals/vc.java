@@ -37,6 +37,7 @@ abstract class vc extends ij {
     }
 
     final int a(String param0) {
+        Throwable decompiledCaughtException = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -44,10 +45,9 @@ abstract class vc extends ij {
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        Exception var9 = null;
         int var9_int = 0;
+        Exception var9 = null;
         CharSequence var10 = null;
-        Throwable decompiledCaughtException = null;
         if (param0 != null) {
           var2 = -1;
           var3 = 0;
@@ -180,11 +180,16 @@ abstract class vc extends ij {
     }
 
     final int a(String param0, int[] param1, String[] param2) {
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        int stackIn_67_0 = 0;
+        int[] stackIn_67_1 = null;
+        int stackIn_68_0 = 0;
+        int[] stackIn_68_1 = null;
+        int stackIn_68_2 = 0;
+        Throwable decompiledCaughtException = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -197,29 +202,13 @@ abstract class vc extends ij {
         int var13 = 0;
         int var14 = 0;
         String var15 = null;
-        Exception var16 = null;
         int var16_int = 0;
+        Exception var16 = null;
         Object var17 = null;
         CharSequence var18 = null;
-        int stackIn_66_0 = 0;
-        int[] stackIn_66_1 = null;
-        int stackIn_67_0 = 0;
-        int[] stackIn_67_1 = null;
-        int stackIn_68_0 = 0;
-        int[] stackIn_68_1 = null;
-        int stackIn_68_2 = 0;
-        Throwable decompiledCaughtException = null;
-        int stackOut_65_0 = 0;
-        int[] stackOut_65_1 = null;
-        int stackOut_67_0 = 0;
-        int[] stackOut_67_1 = null;
-        int stackOut_67_2 = 0;
-        int stackOut_66_0 = 0;
-        int[] stackOut_66_1 = null;
-        int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          discarded$5 = pp.a(' ', field_x, 0, 5277);
+          pp.a(' ', field_x, 0, 5277);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -255,9 +244,9 @@ abstract class vc extends ij {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        discarded$6 = field_x.append('<');
-                        discarded$7 = field_x.append(var15);
-                        discarded$8 = field_x.append('>');
+                        discarded$0 = field_x.append('<');
+                        discarded$1 = field_x.append(var15);
+                        discarded$2 = field_x.append('>');
                         if (!var15.equals("br")) {
                           if (!var15.equals("lt")) {
                             if (!var15.equals("gt")) {
@@ -444,7 +433,7 @@ abstract class vc extends ij {
                       break L14;
                     } else {
                       L15: {
-                        discarded$9 = field_x.append((char) var14);
+                        discarded$3 = field_x.append((char) var14);
                         var14 = (char)(dg.a((char) var14, 17176) & 255);
                         var4 = var4 + this.field_G[var14];
                         if (this.field_F == null) {
@@ -477,27 +466,19 @@ abstract class vc extends ij {
                       break L17;
                     } else {
                       L18: {
-                        stackOut_65_0 = var4;
-                        stackOut_65_1 = (int[]) (param1);
-                        stackIn_67_0 = stackOut_65_0;
-                        stackIn_67_1 = stackOut_65_1;
-                        stackIn_66_0 = stackOut_65_0;
-                        stackIn_66_1 = stackOut_65_1;
+                        stackIn_67_0 = var4;
+
+                        stackIn_67_1 = (int[]) (param1);
+
                         if (var11 >= param1.length) {
-                          stackOut_67_0 = stackIn_67_0;
-                          stackOut_67_1 = (int[]) ((Object) stackIn_67_1);
-                          stackOut_67_2 = param1.length - 1;
-                          stackIn_68_0 = stackOut_67_0;
-                          stackIn_68_1 = stackOut_67_1;
-                          stackIn_68_2 = stackOut_67_2;
+                          stackIn_68_0 = stackIn_67_0;
+                          stackIn_68_1 = (int[]) ((Object) stackIn_67_1);
+                          stackIn_68_2 = param1.length - 1;
                           break L18;
                         } else {
-                          stackOut_66_0 = stackIn_66_0;
-                          stackOut_66_1 = (int[]) ((Object) stackIn_66_1);
-                          stackOut_66_2 = var11;
-                          stackIn_68_0 = stackOut_66_0;
-                          stackIn_68_1 = stackOut_66_1;
-                          stackIn_68_2 = stackOut_66_2;
+                          stackIn_68_0 = stackIn_67_0;
+                          stackIn_68_1 = (int[]) ((Object) stackIn_67_1);
+                          stackIn_68_2 = var11;
                           break L18;
                         }
                       }
@@ -545,21 +526,21 @@ abstract class vc extends ij {
     }
 
     private final static int a(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        byte[] var14 = null;
-        byte[] var15 = null;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        byte[] var14;
+        byte[] var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
         L0: {
           var7 = param2[param5];
           var8 = var7 + param4[param5];
@@ -600,11 +581,11 @@ abstract class vc extends ij {
           if (var18 >= var12) {
             return -var13;
           } else {
-            incrementValue$12 = var16;
+            incrementValue$6 = var16;
             var16++;
-            incrementValue$13 = var17;
+            incrementValue$7 = var17;
             var17++;
-            var19 = var14[incrementValue$12] + var15[incrementValue$13];
+            var19 = var14[incrementValue$6] + var15[incrementValue$7];
             if (var19 < var13) {
               var13 = var19;
               var18++;
@@ -618,13 +599,13 @@ abstract class vc extends ij {
     }
 
     private final void b(String param0) {
+        Throwable decompiledCaughtException = null;
         Exception var2 = null;
         CharSequence var3 = null;
         CharSequence var4 = null;
         CharSequence var5 = null;
         CharSequence var6 = null;
         CharSequence var7 = null;
-        Throwable decompiledCaughtException = null;
         try {
           L0: {
             L1: {
@@ -721,10 +702,10 @@ abstract class vc extends ij {
     }
 
     final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
-        int[] var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
+        int[] var12;
+        int var13;
+        int var14;
+        int var15;
         if (param0 != null) {
           L0: {
             this.a(param5, param6, param7);
@@ -838,32 +819,32 @@ abstract class vc extends ij {
     }
 
     private final void a(byte[] param0) {
-        byte[] array$7 = null;
-        int incrementValue$8 = 0;
-        byte[] array$9 = null;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int var2 = 0;
-        int var3_int = 0;
-        int[] var3 = null;
-        int[] var4 = null;
-        int var5_int = 0;
-        byte[][] var5 = null;
-        int var6_int = 0;
-        byte[][] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int[] var10 = null;
-        byte[][] var11 = null;
-        byte[][] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
-        byte[][] var15 = null;
-        byte[][] var16 = null;
-        int[] var17 = null;
+        byte[] array$0 = null;
+        int incrementValue$1 = 0;
+        byte[] array$2 = null;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int var2;
+        int var3_int;
+        int[] var3;
+        int[] var4;
+        int var5_int;
+        byte[][] var5;
+        int var6_int;
+        byte[][] var6;
+        int var7;
+        int var8;
+        int var9;
+        int[] var10;
+        byte[][] var11;
+        byte[][] var12;
+        int[] var13;
+        int[] var14;
+        byte[][] var15;
+        byte[][] var16;
+        int[] var17;
         L0: {
           this.field_G = new int[256];
           if (param0.length != 257) {
@@ -936,8 +917,8 @@ abstract class vc extends ij {
                                   }
                                 }
                               } else {
-                                array$7 = new byte[var14[var7]];
-                                var6[var7] = array$7;
+                                array$0 = new byte[var14[var7]];
+                                var6[var7] = array$0;
                                 var8 = 0;
                                 var9 = 0;
                                 L8: while (true) {
@@ -945,9 +926,9 @@ abstract class vc extends ij {
                                     var7++;
                                     continue L5;
                                   } else {
-                                    incrementValue$8 = var2;
+                                    incrementValue$1 = var2;
                                     var2++;
-                                    var8 = (byte)(var8 + param0[incrementValue$8]);
+                                    var8 = (byte)(var8 + param0[incrementValue$1]);
                                     var16[var7][var9] = (byte)var8;
                                     var9++;
                                     continue L8;
@@ -956,8 +937,8 @@ abstract class vc extends ij {
                               }
                             }
                           } else {
-                            array$9 = new byte[var14[var6_int]];
-                            var5[var6_int] = array$9;
+                            array$2 = new byte[var14[var6_int]];
+                            var5[var6_int] = array$2;
                             var7 = 0;
                             var8 = 0;
                             L9: while (true) {
@@ -965,9 +946,9 @@ abstract class vc extends ij {
                                 var6_int++;
                                 continue L4;
                               } else {
-                                incrementValue$10 = var2;
+                                incrementValue$3 = var2;
                                 var2++;
-                                var7 = (byte)(var7 + param0[incrementValue$10]);
+                                var7 = (byte)(var7 + param0[incrementValue$3]);
                                 var15[var6_int][var8] = (byte)var7;
                                 var8++;
                                 continue L9;
@@ -976,25 +957,25 @@ abstract class vc extends ij {
                           }
                         }
                       } else {
-                        incrementValue$11 = var2;
+                        incrementValue$4 = var2;
                         var2++;
-                        var4[var5_int] = param0[incrementValue$11] & 255;
+                        var4[var5_int] = param0[incrementValue$4] & 255;
                         var5_int++;
                         continue L3;
                       }
                     }
                   } else {
-                    incrementValue$12 = var2;
+                    incrementValue$5 = var2;
                     var2++;
-                    var3[var5_int] = param0[incrementValue$12] & 255;
+                    var3[var5_int] = param0[incrementValue$5] & 255;
                     var5_int++;
                     continue L2;
                   }
                 }
               } else {
-                incrementValue$13 = var2;
+                incrementValue$6 = var2;
                 var2++;
-                this.field_G[var3_int] = param0[incrementValue$13] & 255;
+                this.field_G[var3_int] = param0[incrementValue$6] & 255;
                 var3_int++;
                 continue L1;
               }
@@ -1016,6 +997,8 @@ abstract class vc extends ij {
     }
 
     private final void a(String param0, int param1, int param2) {
+        int stackIn_26_0 = 0;
+        Throwable decompiledCaughtException = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1023,16 +1006,12 @@ abstract class vc extends ij {
         int var8 = 0;
         String var9_ref_String = null;
         int var9 = 0;
-        Exception var10_ref_Exception = null;
         int var10 = 0;
-        int var11 = 0;
+        Exception var10_ref_Exception = null;
         wi var11_ref_wi = null;
+        int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
-        int stackIn_26_0 = 0;
-        Throwable decompiledCaughtException = null;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
         param2 = param2 - this.field_y;
         var4 = -1;
         var5 = 0;
@@ -1073,12 +1052,10 @@ abstract class vc extends ij {
                                             var10 = ti.a(100, var13);
                                             var11_ref_wi = this.field_C[var10];
                                             if (this.field_H == null) {
-                                              stackOut_25_0 = var11_ref_wi.field_c;
-                                              stackIn_26_0 = stackOut_25_0;
+                                              stackIn_26_0 = var11_ref_wi.field_c;
                                               break L3;
                                             } else {
-                                              stackOut_24_0 = this.field_H[var10];
-                                              stackIn_26_0 = stackOut_24_0;
+                                              stackIn_26_0 = this.field_H[var10];
                                               break L3;
                                             }
                                           }
@@ -1241,10 +1218,10 @@ abstract class vc extends ij {
     }
 
     final int c(String param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var3 = this.a(param0, new int[]{param1}, field_z);
         var4 = 0;
         var5 = 0;
@@ -1266,11 +1243,11 @@ abstract class vc extends ij {
     }
 
     private final void b(String param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var3 = 0;
         var4 = 0;
         var5 = param0.length();
@@ -1369,9 +1346,9 @@ abstract class vc extends ij {
     }
 
     vc(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var6;
+        int var7;
+        int var8;
         this.field_y = 0;
         this.field_p = param1;
         this.field_q = param2;

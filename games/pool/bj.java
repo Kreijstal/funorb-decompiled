@@ -8,8 +8,14 @@ final class bj extends ma {
     int field_n;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -18,20 +24,6 @@ final class bj extends ma {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
         var13 = Pool.field_O;
         try {
           L0: {
@@ -40,48 +32,40 @@ final class bj extends ma {
                 var5_int = param3 + param2;
                 var6 = param0 - -param1;
                 if (param3 > qh.field_b) {
-                  stackOut_5_0 = param3;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = param3;
                   break L1;
                 } else {
-                  stackOut_4_0 = qh.field_b;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = qh.field_b;
                   break L1;
                 }
               }
               L2: {
                 var7 = stackIn_6_0;
                 if (param0 > qh.field_c) {
-                  stackOut_8_0 = param0;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = param0;
                   break L2;
                 } else {
-                  stackOut_7_0 = qh.field_c;
-                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_0 = qh.field_c;
                   break L2;
                 }
               }
               L3: {
                 var8 = stackIn_9_0;
                 if (qh.field_j > var5_int) {
-                  stackOut_11_0 = var5_int;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = var5_int;
                   break L3;
                 } else {
-                  stackOut_10_0 = qh.field_j;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = qh.field_j;
                   break L3;
                 }
               }
               L4: {
                 var9 = stackIn_12_0;
                 if (var6 >= qh.field_g) {
-                  stackOut_14_0 = qh.field_g;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = qh.field_g;
                   break L4;
                 } else {
-                  stackOut_13_0 = var6;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = var6;
                   break L4;
                 }
               }
@@ -201,10 +185,9 @@ final class bj extends ma {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_o = null;
         if (param0 != -4303) {
-            discarded$0 = bj.c(-44);
+            bj.c(-44);
         }
     }
 

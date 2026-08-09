@@ -51,10 +51,10 @@ final class iqa {
         } else {
           if (param3 + param4 > ss.field_c) {
             nfa.a(0, param4, param2, param3, param1);
-            if (param0 == 30237) {
+            if (param0 != 30237) {
+              iqa.a(114, -54, -16, -30, -116);
               return;
             } else {
-              iqa.a(114, -54, -16, -30, -116);
               return;
             }
           } else {
@@ -77,21 +77,11 @@ final class iqa {
                 }
               } else {
                 bq.a(param1, param3, param2, (byte) -13, param4);
-                if (!TombRacer.field_G) {
-                  if (param0 != 30237) {
-                    iqa.a(114, -54, -16, -30, -116);
-                    return;
-                  } else {
-                    return;
-                  }
+                if (param0 == 30237) {
+                  return;
                 } else {
-                  nfa.a(0, param4, param2, param3, param1);
-                  if (param0 != 30237) {
-                    iqa.a(114, -54, -16, -30, -116);
-                    return;
-                  } else {
-                    return;
-                  }
+                  iqa.a(114, -54, -16, -30, -116);
+                  return;
                 }
               }
             }

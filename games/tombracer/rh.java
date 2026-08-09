@@ -52,7 +52,7 @@ final class rh extends nv implements ut {
     }
 
     final static void b(int param0, int param1) {
-        kh var2 = null;
+        kh var2;
         if (param1 > -98) {
           field_r = (String) null;
           var2 = ql.field_k;
@@ -97,12 +97,10 @@ final class rh extends nv implements ut {
     }
 
     final void k(int param0) {
-        jma discarded$4 = null;
-        jma discarded$5 = null;
         if (!this.field_p.f((byte) -56)) {
           this.field_p.a((byte) -14, this.d(8031));
           if (param0 != 5418) {
-            discarded$4 = this.k((byte) 120);
+            this.k((byte) 120);
             return;
           } else {
             return;
@@ -113,7 +111,7 @@ final class rh extends nv implements ut {
           if (param0 == 5418) {
             return;
           } else {
-            discarded$5 = this.k((byte) 120);
+            this.k((byte) 120);
             return;
           }
         }

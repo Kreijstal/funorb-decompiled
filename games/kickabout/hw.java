@@ -33,8 +33,6 @@ final class hw extends gn {
         int stackIn_21_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_35_0 = 0;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         RuntimeException stackIn_39_0 = null;
@@ -42,21 +40,6 @@ final class hw extends gn {
         String stackIn_39_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
         var8 = Kickabout.field_G;
         try {
           L0: {
@@ -78,8 +61,7 @@ final class hw extends gn {
                           break L2;
                         } else {
                           if (ca.a(false, var4.charAt(0))) {
-                            stackOut_17_0 = 0;
-                            stackIn_18_0 = stackOut_17_0;
+                            stackIn_18_0 = 0;
                             decompiledRegionSelector0 = 3;
                             break L0;
                           } else {
@@ -90,8 +72,7 @@ final class hw extends gn {
                                 L3: while (true) {
                                   if (param0.length() <= var6) {
                                     if (0 < var5) {
-                                      stackOut_34_0 = 0;
-                                      stackIn_35_0 = stackOut_34_0;
+                                      stackIn_35_0 = 0;
                                       decompiledRegionSelector0 = 6;
                                       break L0;
                                     } else {
@@ -115,8 +96,7 @@ final class hw extends gn {
                                         if (param2) {
                                           break L5;
                                         } else {
-                                          stackOut_29_0 = 0;
-                                          stackIn_30_0 = stackOut_29_0;
+                                          stackIn_30_0 = 0;
                                           decompiledRegionSelector0 = 5;
                                           break L0;
                                         }
@@ -127,8 +107,7 @@ final class hw extends gn {
                                   }
                                 }
                               } else {
-                                stackOut_20_0 = 0;
-                                stackIn_21_0 = stackOut_20_0;
+                                stackIn_21_0 = 0;
                                 decompiledRegionSelector0 = 4;
                                 break L0;
                               }
@@ -139,20 +118,17 @@ final class hw extends gn {
                         }
                       }
                     }
-                    stackOut_12_0 = 0;
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = 0;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 }
               }
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -161,27 +137,19 @@ final class hw extends gn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) (var3);
-            stackOut_36_1 = new StringBuilder().append("hw.B(");
-            stackIn_38_0 = stackOut_36_0;
-            stackIn_38_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+            stackIn_38_0 = (RuntimeException) (var3);
+
+            stackIn_38_1 = new StringBuilder().append("hw.B(");
+
             if (param0 == null) {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "null";
               break L6;
             } else {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "{...}";
-              stackIn_39_0 = stackOut_37_0;
-              stackIn_39_1 = stackOut_37_1;
-              stackIn_39_2 = stackOut_37_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "{...}";
               break L6;
             }
           }

@@ -21,7 +21,7 @@ final class n implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = SolKnight.field_L ? 1 : 0;
         if (this.field_f == this.field_e.field_b[-1 + this.field_g]) {
           L0: while (true) {
@@ -57,11 +57,10 @@ final class n implements Iterator {
     }
 
     private final void b(int param0) {
-        boolean discarded$2 = false;
         this.field_f = this.field_e.field_b[0].field_d;
         this.field_d = null;
         if (param0 > -23) {
-          discarded$2 = this.hasNext();
+          this.hasNext();
           this.field_g = 1;
           return;
         } else {
@@ -72,8 +71,8 @@ final class n implements Iterator {
 
     public final Object next() {
         int fieldTemp$1 = 0;
-        gg var1 = null;
-        int var2 = 0;
+        gg var1;
+        int var2;
         var2 = SolKnight.field_L ? 1 : 0;
         if (this.field_f == this.field_e.field_b[this.field_g - 1]) {
           L0: while (true) {

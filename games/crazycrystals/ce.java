@@ -10,19 +10,19 @@ final class ce extends dj {
     static dl field_eb;
 
     final static double[] b(byte param0) {
-        int var1 = 0;
-        int[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        double var8 = 0.0;
-        double var10 = 0.0;
-        double var12 = 0.0;
-        int var14 = 0;
-        fq var15 = null;
-        fq var16 = null;
+        int var1;
+        int[] var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        double var8;
+        double var10;
+        double var12;
+        int var14;
+        fq var15;
+        fq var16;
         L0: {
           var14 = CrazyCrystals.field_B;
           var1 = 0;

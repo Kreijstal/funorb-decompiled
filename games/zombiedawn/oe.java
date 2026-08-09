@@ -13,10 +13,8 @@ final class oe {
     static fn field_c;
 
     final int a(int param0) {
-        int var2 = 0;
+        int var2;
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         L0: {
           L1: {
             var2 = -58 / ((10 - param0) / 54);
@@ -24,16 +22,14 @@ final class oe {
               break L1;
             } else {
               if (this.field_e.length != 0) {
-                stackOut_4_0 = this.field_e[this.field_e.length + -1];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = this.field_e[this.field_e.length + -1];
                 break L0;
               } else {
                 break L1;
               }
             }
           }
-          stackOut_3_0 = 0;
-          stackIn_5_0 = stackOut_3_0;
+          stackIn_5_0 = 0;
           break L0;
         }
         return stackIn_5_0;
@@ -97,11 +93,8 @@ final class oe {
 
     final static void a(int param0, aa param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         aa var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -109,14 +102,7 @@ final class oe {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        RuntimeException var2 = null;
         var4 = ZombieDawn.field_J;
         try {
           L0: {
@@ -187,27 +173,19 @@ final class oe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var2);
-            stackOut_20_1 = new StringBuilder().append("oe.B(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var2);
+
+            stackIn_22_1 = new StringBuilder().append("oe.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L7;
             }
           }
@@ -225,8 +203,8 @@ final class oe {
     }
 
     final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         L0: {
           var4 = ZombieDawn.field_J;
           if (param1 == 0) {
@@ -248,7 +226,7 @@ final class oe {
                 if (this.field_e.length <= var3) {
                   return this.field_e.length - 1;
                 } else {
-                  if (this.field_e[var3] + this.field_e[-1 + var3] >> -747544255 <= param0) {
+                  if ((this.field_e[var3] + this.field_e[-1 + var3] >> -747544255 ^ -1) >= (param0 ^ -1)) {
                     var3++;
                     continue L2;
                   } else {

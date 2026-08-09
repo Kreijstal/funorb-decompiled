@@ -15,10 +15,6 @@ final class oh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "oh.A(";
         field_b = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
     }

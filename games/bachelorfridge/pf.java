@@ -75,17 +75,17 @@ final class pf extends lu {
     }
 
     final int k(int param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         if (param0 != 694) {
           this.i((byte) -2);
-          fieldTemp$4 = this.field_g;
+          fieldTemp$2 = this.field_g;
           this.field_g = this.field_g + 1;
-          return this.field_h[fieldTemp$4] - this.field_m.b(28602) & 255;
+          return this.field_h[fieldTemp$2] - this.field_m.b(28602) & 255;
         } else {
-          fieldTemp$5 = this.field_g;
+          fieldTemp$3 = this.field_g;
           this.field_g = this.field_g + 1;
-          return this.field_h[fieldTemp$5] - this.field_m.b(28602) & 255;
+          return this.field_h[fieldTemp$3] - this.field_m.b(28602) & 255;
         }
     }
 
@@ -100,26 +100,16 @@ final class pf extends lu {
     }
 
     final void b(byte[] param0, int param1, int param2, int param3) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         var6 = BachelorFridge.field_y;
         try {
           L0: {
@@ -133,9 +123,9 @@ final class pf extends lu {
                   return;
                 }
               } else {
-                fieldTemp$2 = this.field_g;
+                fieldTemp$1 = this.field_g;
                 this.field_g = this.field_g + 1;
-                param0[param2 + var5_int] = (byte)(this.field_h[fieldTemp$2] + -this.field_m.b(28602));
+                param0[param2 + var5_int] = (byte)(this.field_h[fieldTemp$1] + -this.field_m.b(28602));
                 var5_int++;
                 continue L1;
               }
@@ -145,27 +135,19 @@ final class pf extends lu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var5);
-            stackOut_7_1 = new StringBuilder().append("pf.A(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var5);
+
+            stackIn_9_1 = new StringBuilder().append("pf.A(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -175,9 +157,9 @@ final class pf extends lu {
 
     static {
         $cfr$clinit: {
-            long var0 = 0L;
-            int var2 = 0;
-            int var3 = 0;
+            long var0;
+            int var2;
+            int var3;
             field_j = new long[256];
             var2 = 0;
             L0: while (true) {

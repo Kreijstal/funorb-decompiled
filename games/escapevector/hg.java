@@ -40,7 +40,6 @@ class hg {
     }
 
     final static void a(int param0, int param1, cc param2) {
-        int discarded$0 = 0;
         c var5 = om.field_c;
         var5.a(param1, true);
         var5.field_m = var5.field_m + 1;
@@ -56,7 +55,7 @@ class hg {
             var5.a((byte) 127, param2.field_h);
             var5.a((byte) 123, param2.field_o);
             var5.a((byte) 125, param2.field_g);
-            discarded$0 = var5.c(var4, -61);
+            var5.c(var4, -61);
             var5.e(118, -var4 + var5.field_m);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "hg.WA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -64,25 +63,9 @@ class hg {
     }
 
     final static ui[] a(c param0, int param1) {
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        int discarded$8 = 0;
-        int discarded$9 = 0;
-        int discarded$10 = 0;
-        int discarded$11 = 0;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        ui[] var4 = null;
-        int var5 = 0;
-        ui var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
         Object stackIn_3_0 = null;
         ui[] stackIn_13_0 = null;
         ui[] stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -90,17 +73,14 @@ class hg {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ui[] stackOut_14_0 = null;
-        ui[] stackOut_12_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        ui[] var4 = null;
+        int var5 = 0;
+        ui var6 = null;
+        int var6_int = 0;
+        int var7 = 0;
         var7 = EscapeVector.field_A;
         try {
           L0: {
@@ -112,13 +92,11 @@ class hg {
               L1: while (true) {
                 if (var3 <= var5) {
                   if (param1 == 22178) {
-                    stackOut_14_0 = (ui[]) (var4);
-                    stackIn_15_0 = stackOut_14_0;
+                    stackIn_15_0 = (ui[]) (var4);
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    stackOut_12_0 = (ui[]) null;
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = (ui[]) null;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -126,13 +104,13 @@ class hg {
                   L2: {
                     if (da.a(param0, (byte) -116)) {
                       var6 = new ui();
-                      discarded$6 = param0.j(24, param1 ^ 22186);
-                      discarded$7 = param0.j(24, 8);
+                      param0.j(24, param1 ^ 22186);
+                      param0.j(24, 8);
                       var6.field_c = param0.j(24, param1 ^ 22186);
-                      discarded$8 = param0.j(9, 8);
-                      discarded$9 = param0.j(12, param1 ^ 22186);
-                      discarded$10 = param0.j(12, 8);
-                      discarded$11 = param0.j(12, 8);
+                      param0.j(9, 8);
+                      param0.j(12, param1 ^ 22186);
+                      param0.j(12, 8);
+                      param0.j(12, 8);
                       var4[var5] = var6;
                       break L2;
                     } else {
@@ -146,8 +124,7 @@ class hg {
                 }
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -156,27 +133,19 @@ class hg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var2);
-            stackOut_16_1 = new StringBuilder().append("hg.SA(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var2);
+
+            stackIn_18_1 = new StringBuilder().append("hg.SA(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L3;
             }
           }
@@ -209,12 +178,11 @@ class hg {
     }
 
     final void c(byte param0) {
-        boolean discarded$2 = false;
         if (this.field_d == null) {
           return;
         } else {
           if (param0 > -8) {
-            discarded$2 = hg.b(-128);
+            hg.b(-128);
             this.field_d.field_b = this.field_b;
             this.field_b.field_d = this.field_d;
             this.field_b = null;

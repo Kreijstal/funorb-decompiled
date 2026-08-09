@@ -30,51 +30,33 @@ final class sl extends ln implements fk {
         RuntimeException var2 = null;
         int var3 = 0;
         int stackIn_3_0 = 0;
-        boolean stackIn_7_0 = false;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        boolean stackOut_6_0 = false;
-        int stackOut_8_0 = 0;
-        int stackOut_2_0 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
             if (param0 == 90) {
               var2_int = 0;
               L1: while (true) {
-                L2: {
-                  if (var2_int >= param1) {
-                    stackOut_11_0 = 1;
-                    stackIn_12_0 = stackOut_11_0;
-                    break L2;
+                if (var2_int >= param1) {
+                  stackIn_11_0 = 1;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
+                } else {
+                  if (up.field_g[var2_int]) {
+                    var2_int++;
+                    continue L1;
                   } else {
-                    stackOut_6_0 = up.field_g[var2_int];
-                    stackIn_12_0 = stackOut_6_0 ? 1 : 0;
-                    stackIn_7_0 = stackOut_6_0;
-                    if (var3 != 0) {
-                      break L2;
-                    } else {
-                      if (stackIn_7_0) {
-                        var2_int++;
-                        continue L1;
-                      } else {
-                        stackOut_8_0 = 0;
-                        stackIn_9_0 = stackOut_8_0;
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      }
-                    }
+                    stackIn_8_0 = 0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
-                decompiledRegionSelector0 = 1;
-                break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -88,9 +70,9 @@ final class sl extends ln implements fk {
           return stackIn_3_0 != 0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_12_0 != 0;
+            return stackIn_8_0 != 0;
           } else {
-            return stackIn_9_0 != 0;
+            return stackIn_11_0 != 0;
           }
         }
     }

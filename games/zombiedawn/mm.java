@@ -11,25 +11,15 @@ final class mm extends le {
     static float field_k;
 
     final void a(byte param0, wk param1) {
-        RuntimeException var3 = null;
         int var4 = 0;
         pb var5 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var3 = null;
         var4 = ZombieDawn.field_J;
         try {
           L0: {
@@ -56,27 +46,19 @@ final class mm extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("mm.E(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("mm.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -114,7 +96,6 @@ final class mm extends le {
     }
 
     final void a(int param0) {
-        boolean discarded$0 = false;
         int var3 = ZombieDawn.field_J;
         pb var5 = (pb) ((Object) this.field_h.b((byte) 26));
         while (var5 != null) {
@@ -123,7 +104,7 @@ final class mm extends le {
         }
         if (param0 != -25687) {
             ah var4 = (ah) null;
-            discarded$0 = this.a((ah) null, (byte) 55);
+            this.a((ah) null, (byte) 55);
         }
     }
 
@@ -167,8 +148,6 @@ final class mm extends le {
         int var6 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -176,16 +155,6 @@ final class mm extends le {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var6 = ZombieDawn.field_J;
         try {
           L0: {
@@ -202,8 +171,7 @@ final class mm extends le {
             var5 = (pb) ((Object) this.field_h.b((byte) 26));
             L2: while (true) {
               if (var5 == null) {
-                stackOut_9_0 = 0;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -211,8 +179,7 @@ final class mm extends le {
                   var5 = (pb) ((Object) this.field_h.a(false));
                   continue L2;
                 } else {
-                  stackOut_6_0 = 1;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -223,27 +190,19 @@ final class mm extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("mm.G(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("mm.G(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -257,20 +216,20 @@ final class mm extends le {
     }
 
     mm(int param0, int param1) {
-        boolean[][] var3 = null;
-        boolean[][] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        boolean[][] var8_ref_boolean____ = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        boolean[][] var13 = null;
-        int var14 = 0;
-        boolean[][] var15 = null;
-        boolean[][] var16 = null;
+        boolean[][] var3;
+        boolean[][] var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        boolean[][] var8_ref_boolean____;
+        int var9;
+        int var10;
+        int var11;
+        boolean[][] var13;
+        int var14;
+        boolean[][] var15;
+        boolean[][] var16;
         param0 = param0 / 24;
         param1 = param1 / 24;
         var16 = new boolean[1 + 2 * t.field_b][1 + t.field_b * 2];

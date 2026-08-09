@@ -12,7 +12,6 @@ final class wp implements si {
     static String field_e;
 
     final static byte[] a(int param0, byte[] param1) {
-        int discarded$2 = 0;
         ge var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -21,11 +20,8 @@ final class wp implements si {
         int var5 = 0;
         byte[] var6 = null;
         Object var7 = null;
-        Throwable var8 = null;
         byte[] stackIn_12_0 = null;
         byte[] stackIn_32_0 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
@@ -33,16 +29,6 @@ final class wp implements si {
         String stackIn_37_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        byte[] stackOut_31_0 = null;
-        byte[] stackOut_11_0 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
         try {
           L0: {
             L1: {
@@ -83,7 +69,7 @@ final class wp implements si {
                       L5: {
                         var6 = new byte[var5];
                         if (1 == var3) {
-                          discarded$2 = rh.a(var6, var5, param1, var4, 9);
+                          rh.a(var6, var5, param1, var4, 9);
                           break L5;
                         } else {
                           var7 = db.field_Qb;
@@ -96,8 +82,7 @@ final class wp implements si {
                           break L5;
                         }
                       }
-                      stackOut_31_0 = (byte[]) (var6);
-                      stackIn_32_0 = stackOut_31_0;
+                      stackIn_32_0 = (byte[]) (var6);
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -106,8 +91,7 @@ final class wp implements si {
                 } else {
                   var5_ref_byte__ = new byte[var4];
                   var2.a(0, (byte) -121, var5_ref_byte__, var4);
-                  stackOut_11_0 = (byte[]) (var5_ref_byte__);
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = (byte[]) (var5_ref_byte__);
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -119,27 +103,19 @@ final class wp implements si {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) (var2_ref);
-            stackOut_33_1 = new StringBuilder().append("wp.A(").append(param0).append(',');
-            stackIn_36_0 = stackOut_33_0;
-            stackIn_36_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+            stackIn_36_0 = (RuntimeException) (var2_ref);
+
+            stackIn_36_1 = new StringBuilder().append("wp.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
+              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "null";
               break L7;
             } else {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "{...}";
-              stackIn_37_0 = stackOut_34_0;
-              stackIn_37_1 = stackOut_34_1;
-              stackIn_37_2 = stackOut_34_2;
+              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "{...}";
               break L7;
             }
           }
@@ -153,8 +129,22 @@ final class wp implements si {
     }
 
     final static eo a(boolean param0, int param1, int param2) {
-        RuntimeException var3 = null;
+        of stackIn_3_0 = null;
+        boolean stackIn_3_1 = false;
+        of stackIn_4_0 = null;
+        boolean stackIn_4_1 = false;
+        int stackIn_4_2 = 0;
+        vh stackIn_30_0 = null;
+        vh stackIn_31_0 = null;
+        String stackIn_31_1 = null;
+        vh stackIn_34_0 = null;
+        vh stackIn_35_0 = null;
+        String stackIn_35_1 = null;
+        int stackIn_39_0 = 0;
+        Object stackIn_88_0 = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         ko var4 = null;
         Object var5 = null;
         Object var6_ref = null;
@@ -171,69 +161,22 @@ final class wp implements si {
         String var16 = null;
         kn var17 = null;
         String var18 = null;
-        of stackIn_1_0 = null;
-        boolean stackIn_1_1 = false;
-        of stackIn_3_0 = null;
-        boolean stackIn_3_1 = false;
-        of stackIn_4_0 = null;
-        boolean stackIn_4_1 = false;
-        int stackIn_4_2 = 0;
-        vh stackIn_28_0 = null;
-        vh stackIn_30_0 = null;
-        vh stackIn_31_0 = null;
-        String stackIn_31_1 = null;
-        vh stackIn_32_0 = null;
-        vh stackIn_34_0 = null;
-        vh stackIn_35_0 = null;
-        String stackIn_35_1 = null;
-        int stackIn_39_0 = 0;
-        Object stackIn_88_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        of stackOut_0_0 = null;
-        boolean stackOut_0_1 = false;
-        of stackOut_3_0 = null;
-        boolean stackOut_3_1 = false;
-        int stackOut_3_2 = 0;
-        of stackOut_1_0 = null;
-        boolean stackOut_1_1 = false;
-        int stackOut_1_2 = 0;
-        vh stackOut_27_0 = null;
-        vh stackOut_30_0 = null;
-        String stackOut_30_1 = null;
-        vh stackOut_28_0 = null;
-        String stackOut_28_1 = null;
-        vh stackOut_31_0 = null;
-        vh stackOut_34_0 = null;
-        String stackOut_34_1 = null;
-        vh stackOut_32_0 = null;
-        String stackOut_32_1 = null;
-        int stackOut_38_0 = 0;
-        int stackOut_36_0 = 0;
-        Object stackOut_87_0 = null;
         try {
           L0: {
             L1: {
-              stackOut_0_0 = aj.field_Mb.field_Sb;
-              stackOut_0_1 = param0;
-              stackIn_3_0 = stackOut_0_0;
-              stackIn_3_1 = stackOut_0_1;
-              stackIn_1_0 = stackOut_0_0;
-              stackIn_1_1 = stackOut_0_1;
+              stackIn_3_0 = aj.field_Mb.field_Sb;
+
+              stackIn_3_1 = param0;
+
               if (aj.field_Mb.field_Sb != pf.field_c) {
-                stackOut_3_0 = (of) ((Object) stackIn_3_0);
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
+                stackIn_4_0 = (of) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = (of) ((Object) stackIn_1_0);
-                stackOut_1_1 = stackIn_1_1;
-                stackOut_1_2 = 1;
-                stackIn_4_0 = stackOut_1_0;
-                stackIn_4_1 = stackOut_1_1;
-                stackIn_4_2 = stackOut_1_2;
+                stackIn_4_0 = (of) ((Object) stackIn_3_0);
+                stackIn_4_1 = stackIn_3_1;
+                stackIn_4_2 = 1;
                 break L1;
               }
             }
@@ -355,40 +298,30 @@ final class wp implements si {
                       }
                     }
                     L11: {
-                      stackOut_27_0 = var7.field_Pb;
-                      stackIn_30_0 = stackOut_27_0;
-                      stackIn_28_0 = stackOut_27_0;
+                      stackIn_30_0 = var7.field_Pb;
+
                       if (-1 <= (var14 ^ -1)) {
-                        stackOut_30_0 = (vh) ((Object) stackIn_30_0);
-                        stackOut_30_1 = var7.field_Zb;
-                        stackIn_31_0 = stackOut_30_0;
-                        stackIn_31_1 = stackOut_30_1;
+                        stackIn_31_0 = (vh) ((Object) stackIn_30_0);
+                        stackIn_31_1 = var7.field_Zb;
                         break L11;
                       } else {
-                        stackOut_28_0 = (vh) ((Object) stackIn_28_0);
-                        stackOut_28_1 = lr.a(var7.field_Pb.field_I, var7.field_Zb, var14);
-                        stackIn_31_0 = stackOut_28_0;
-                        stackIn_31_1 = stackOut_28_1;
+                        stackIn_31_0 = (vh) ((Object) stackIn_30_0);
+                        stackIn_31_1 = lr.a(var7.field_Pb.field_I, var7.field_Zb, var14);
                         break L11;
                       }
                     }
                     L12: {
                       stackIn_31_0.field_nb = stackIn_31_1;
                       var7.field_Pb.b(var9, 2147483647, var13, var14, ad.field_x);
-                      stackOut_31_0 = var7.field_Nb;
-                      stackIn_34_0 = stackOut_31_0;
-                      stackIn_32_0 = stackOut_31_0;
+                      stackIn_34_0 = var7.field_Nb;
+
                       if (null != var7.field_Wb) {
-                        stackOut_34_0 = (vh) ((Object) stackIn_34_0);
-                        stackOut_34_1 = var7.field_Wb;
-                        stackIn_35_0 = stackOut_34_0;
-                        stackIn_35_1 = stackOut_34_1;
+                        stackIn_35_0 = (vh) ((Object) stackIn_34_0);
+                        stackIn_35_1 = var7.field_Wb;
                         break L12;
                       } else {
-                        stackOut_32_0 = (vh) ((Object) stackIn_32_0);
-                        stackOut_32_1 = we.field_j;
-                        stackIn_35_0 = stackOut_32_0;
-                        stackIn_35_1 = stackOut_32_1;
+                        stackIn_35_0 = (vh) ((Object) stackIn_34_0);
+                        stackIn_35_1 = we.field_j;
                         break L12;
                       }
                     }
@@ -396,12 +329,10 @@ final class wp implements si {
                       stackIn_35_0.field_nb = stackIn_35_1;
                       var7.field_Nb.b(var9, 2147483647, var7.field_gb + -80, 80, ad.field_x);
                       if (var7.field_Pb.field_nb.equals(var7.field_Zb)) {
-                        stackOut_38_0 = 0;
-                        stackIn_39_0 = stackOut_38_0;
+                        stackIn_39_0 = 0;
                         break L13;
                       } else {
-                        stackOut_36_0 = 1;
-                        stackIn_39_0 = stackOut_36_0;
+                        stackIn_39_0 = 1;
                         break L13;
                       }
                     }
@@ -487,8 +418,7 @@ final class wp implements si {
               }
             }
             var6 = -31 / ((param2 - 31) / 62);
-            stackOut_87_0 = var5;
-            stackIn_88_0 = stackOut_87_0;
+            stackIn_88_0 = var5;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -507,8 +437,6 @@ final class wp implements si {
         ea stackIn_16_0 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ea stackOut_11_0 = null;
-        ea stackOut_15_0 = null;
         var5 = Pool.field_O;
         try {
           L0: {
@@ -531,8 +459,7 @@ final class wp implements si {
                       break L3;
                     } else {
                       if (param0 == var4.field_s) {
-                        stackOut_11_0 = (ea) (var4);
-                        stackIn_12_0 = stackOut_11_0;
+                        stackIn_12_0 = (ea) (var4);
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
@@ -553,8 +480,7 @@ final class wp implements si {
                 wb.a(var4, param3, (byte) -96);
                 break L3;
               }
-              stackOut_15_0 = (ea) (var4);
-              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_0 = (ea) (var4);
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -572,14 +498,11 @@ final class wp implements si {
     }
 
     final static od a(int param0, sj param1, byte param2, int param3, int param4, int param5) {
-        java.awt.Component discarded$3 = null;
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         od var7 = null;
         Object stackIn_2_0 = null;
         od stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -587,16 +510,6 @@ final class wp implements si {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        od stackOut_6_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             var6 = nj.a(param3, param1, param0, false, param4, param5);
@@ -604,7 +517,7 @@ final class wp implements si {
               L1: {
                 var7 = new od();
                 var7.field_b = var6;
-                discarded$3 = var7.field_b.add((java.awt.Component) ((Object) var7));
+                var7.field_b.add((java.awt.Component) ((Object) var7));
                 var7.setBounds(0, 0, param0, param3);
                 var7.addFocusListener(var7);
                 if (param2 == 0) {
@@ -615,13 +528,11 @@ final class wp implements si {
                 }
               }
               var7.requestFocus();
-              stackOut_6_0 = (od) (var7);
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = (od) (var7);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -630,27 +541,19 @@ final class wp implements si {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var6_ref);
-            stackOut_8_1 = new StringBuilder().append("wp.E(").append(param0).append(',');
-            stackIn_11_0 = stackOut_8_0;
-            stackIn_11_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_11_0 = (RuntimeException) (var6_ref);
+
+            stackIn_11_1 = new StringBuilder().append("wp.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_12_0 = stackOut_9_0;
-              stackIn_12_1 = stackOut_9_1;
-              stackIn_12_2 = stackOut_9_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -664,8 +567,8 @@ final class wp implements si {
     }
 
     public static void a(int param0) {
-        RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         try {
           L0: {
             L1: {

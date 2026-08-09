@@ -45,8 +45,8 @@ final class tq {
     }
 
     private final void c(int param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         if (param1 != -12364) {
           this.field_f = 94;
           var4 = new int[this.a((byte) 24, param0)];
@@ -64,46 +64,30 @@ final class tq {
     }
 
     private final int a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        boolean stackIn_4_0 = false;
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        boolean stackOut_3_0 = false;
+        int var3;
+        int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         if (param0 != 24) {
           return -80;
         } else {
           var3 = this.field_c.length;
           L0: while (true) {
-            L1: {
-              if (param1 < var3) {
-                stackOut_9_0 = var3;
-                stackIn_10_0 = stackOut_9_0;
-                break L1;
-              } else {
-                stackOut_3_0 = this.field_e;
-                stackIn_10_0 = stackOut_3_0 ? 1 : 0;
-                stackIn_4_0 = stackOut_3_0;
-                if (var4 != 0) {
-                  break L1;
+            if (param1 < var3) {
+              return var3;
+            } else {
+              if (this.field_e) {
+                if (var3 != 0) {
+                  var3 = var3 * this.field_f;
+                  continue L0;
                 } else {
-                  if (stackIn_4_0) {
-                    if (var3 != 0) {
-                      var3 = var3 * this.field_f;
-                      continue L0;
-                    } else {
-                      var3 = 1;
-                      continue L0;
-                    }
-                  } else {
-                    var3 = var3 + this.field_f;
-                    continue L0;
-                  }
+                  var3 = 1;
+                  continue L0;
                 }
+              } else {
+                var3 = var3 + this.field_f;
+                continue L0;
               }
             }
-            return stackIn_10_0;
           }
         }
     }

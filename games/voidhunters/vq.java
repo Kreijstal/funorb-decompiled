@@ -11,11 +11,10 @@ abstract class vq extends dqa implements lca {
     static String field_w;
 
     void a(int param0, wta param1) {
-        eeb discarded$0 = null;
         try {
             this.field_z = param1;
             if (param0 <= 73) {
-                discarded$0 = this.a(68);
+                this.a(68);
             }
             this.field_z.field_c = (vq) (this);
         } catch (RuntimeException runtimeException) {
@@ -34,97 +33,59 @@ abstract class vq extends dqa implements lca {
     final static boolean a(faa param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        faa stackIn_1_0 = null;
-        int stackIn_1_1 = 0;
         faa stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         faa stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
         boolean stackIn_4_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        faa stackOut_0_0 = null;
-        int stackOut_0_1 = 0;
-        faa stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        faa stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        boolean stackOut_3_0 = false;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             L1: {
               var3_int = -28 / ((param1 - 0) / 33);
-              stackOut_0_0 = (faa) (param0);
-              stackOut_0_1 = -632;
-              stackIn_2_0 = stackOut_0_0;
-              stackIn_2_1 = stackOut_0_1;
-              stackIn_1_0 = stackOut_0_0;
-              stackIn_1_1 = stackOut_0_1;
+              stackIn_2_0 = (faa) (param0);
+
+              stackIn_2_1 = -632;
+
               if (param2) {
-                stackOut_2_0 = (faa) ((Object) stackIn_2_0);
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = 1;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
-                stackIn_3_2 = stackOut_2_2;
+                stackIn_3_0 = (faa) ((Object) stackIn_2_0);
+                stackIn_3_1 = stackIn_2_1;
+                stackIn_3_2 = 1;
                 break L1;
               } else {
-                stackOut_1_0 = (faa) ((Object) stackIn_1_0);
-                stackOut_1_1 = stackIn_1_1;
-                stackOut_1_2 = 0;
-                stackIn_3_0 = stackOut_1_0;
-                stackIn_3_1 = stackOut_1_1;
-                stackIn_3_2 = stackOut_1_2;
+                stackIn_3_0 = (faa) ((Object) stackIn_2_0);
+                stackIn_3_1 = stackIn_2_1;
+                stackIn_3_2 = 0;
                 break L1;
               }
             }
             ((faa) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, 1);
-            stackOut_3_0 = param2;
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = param2;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("vq.Q(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("vq.Q(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -134,9 +95,8 @@ abstract class vq extends dqa implements lca {
     }
 
     public final eeb a(int param0) {
-        eeb discarded$0 = null;
         if (param0 != -782444220) {
-            discarded$0 = this.a(84);
+            this.a(84);
             return (eeb) ((Object) this.field_z);
         }
         return (eeb) ((Object) this.field_z);
@@ -155,9 +115,6 @@ abstract class vq extends dqa implements lca {
 
     final static int g(int param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            ds var2 = null;
             int stackIn_17_0 = 0;
             int stackIn_27_0 = 0;
             int stackIn_31_0 = 0;
@@ -165,11 +122,9 @@ abstract class vq extends dqa implements lca {
             int stackIn_37_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_16_0 = 0;
-            int stackOut_30_0 = 0;
-            int stackOut_26_0 = 0;
-            int stackOut_36_0 = 0;
-            int stackOut_34_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            ds var2 = null;
             if (-5 >= (ff.field_o.field_g ^ -1)) {
               if (0 == (ff.field_o.field_k ^ -1)) {
                 return 3;
@@ -205,8 +160,7 @@ abstract class vq extends dqa implements lca {
                             break L2;
                           }
                         } else {
-                          stackOut_16_0 = jia.a(-93, -1);
-                          stackIn_17_0 = stackOut_16_0;
+                          stackIn_17_0 = jia.a(-93, -1);
                           decompiledRegionSelector0 = 0;
                           break L0;
                         }
@@ -234,8 +188,7 @@ abstract class vq extends dqa implements lca {
                         if (0 < eu.field_h.c(param0 ^ -6269)) {
                           var1_int = eu.field_h.a(-123);
                           if (var1_int != 0) {
-                            stackOut_30_0 = jia.a(-71, var1_int);
-                            stackIn_31_0 = stackOut_30_0;
+                            stackIn_31_0 = jia.a(-71, var1_int);
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
@@ -246,8 +199,7 @@ abstract class vq extends dqa implements lca {
                           if ((ldb.field_r ^ -1L) <= (wt.a(false) ^ -1L)) {
                             break L4;
                           } else {
-                            stackOut_26_0 = jia.a(-84, -2);
-                            stackIn_27_0 = stackOut_26_0;
+                            stackIn_27_0 = jia.a(-84, -2);
                             decompiledRegionSelector0 = 1;
                             break L0;
                           }
@@ -255,8 +207,7 @@ abstract class vq extends dqa implements lca {
                       }
                     }
                     if (gob.field_c != 4) {
-                      stackOut_36_0 = -1;
-                      stackIn_37_0 = stackOut_36_0;
+                      stackIn_37_0 = -1;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
@@ -264,8 +215,7 @@ abstract class vq extends dqa implements lca {
                       gob.field_c = 0;
                       eu.field_h = null;
                       ija.field_b = null;
-                      stackOut_34_0 = 0;
-                      stackIn_35_0 = stackOut_34_0;
+                      stackIn_35_0 = 0;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }

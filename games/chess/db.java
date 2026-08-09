@@ -18,7 +18,7 @@ final class db extends vm {
     }
 
     final static void i(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = Chess.field_G;
         if (param0 > -9) {
           db.d(false);
@@ -118,8 +118,6 @@ final class db extends vm {
         String stackIn_5_0 = null;
         String stackIn_8_0 = null;
         String stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -127,42 +125,26 @@ final class db extends vm {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_9_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             if (this.field_q.a((byte) -114, param0) != qk.field_b) {
               if (param1 == -9316) {
                 if (this.a((byte) -117, param0) != qk.field_b) {
-                  stackOut_9_0 = ie.field_c;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = ie.field_c;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_7_0 = v.field_h;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = v.field_h;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_4_0 = (String) null;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (String) null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = this.field_q.a(param0, -9316);
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = this.field_q.a(param0, -9316);
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -171,27 +153,19 @@ final class db extends vm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("db.D(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("db.D(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L1;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L1;
             }
           }
@@ -219,8 +193,6 @@ final class db extends vm {
         mk stackIn_3_0 = null;
         mk stackIn_8_0 = null;
         mk stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -228,24 +200,11 @@ final class db extends vm {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        mk stackOut_2_0 = null;
-        mk stackOut_7_0 = null;
-        mk stackOut_12_0 = null;
-        mk stackOut_11_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             var3_int = 28 / ((-49 - param0) / 62);
             if (this.field_q.a((byte) -116, param1) == qk.field_b) {
-              stackOut_2_0 = qk.field_b;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = qk.field_b;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -257,8 +216,7 @@ final class db extends vm {
                     this.field_o = var4.c(-79);
                     break L1;
                   } else {
-                    stackOut_7_0 = ek.field_d;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = ek.field_d;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -268,12 +226,10 @@ final class db extends vm {
               }
               L2: {
                 if (!this.field_o) {
-                  stackOut_12_0 = qk.field_b;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = qk.field_b;
                   break L2;
                 } else {
-                  stackOut_11_0 = oa.field_a;
-                  stackIn_13_0 = stackOut_11_0;
+                  stackIn_13_0 = oa.field_a;
                   break L2;
                 }
               }
@@ -285,27 +241,19 @@ final class db extends vm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("db.B(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3);
+
+            stackIn_16_1 = new StringBuilder().append("db.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L3;
             }
           }
@@ -323,7 +271,7 @@ final class db extends vm {
     }
 
     final static void a(int param0, int param1, int param2) {
-        nk var3 = null;
+        nk var3;
         var3 = qn.field_U;
         var3.f(param0, -83);
         var3.c(3, (byte) 83);

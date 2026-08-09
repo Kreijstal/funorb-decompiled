@@ -13,20 +13,19 @@ final class m implements Iterable {
     static int[] field_a;
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_c = null;
         field_a = null;
         field_e = null;
         if (param0 != -1) {
-            discarded$0 = m.a((byte) -27);
+            m.a((byte) -27);
         }
     }
 
     final ai a(byte param0, long param1) {
-        ai var4 = null;
-        int var5 = 0;
-        ai var6 = null;
-        int var7 = 0;
+        ai var4;
+        int var5;
+        ai var6;
+        int var7;
         var7 = Bounce.field_N;
         var5 = -117 / ((param0 - 20) / 36);
         var4 = this.field_b[(int)(param1 & (long)(-1 + this.field_d))];
@@ -49,11 +48,10 @@ final class m implements Iterable {
     }
 
     final void a(int param0, long param1, ai param2) {
-        Iterator discarded$0 = null;
         ai var5 = null;
         try {
             if (param0 > -95) {
-                discarded$0 = this.iterator();
+                this.iterator();
             }
             if (!(null == param2.field_f)) {
                 param2.c(2);

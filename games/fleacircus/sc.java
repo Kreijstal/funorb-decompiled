@@ -21,7 +21,6 @@ final class sc {
     final static void a(int param0, hi param1, int param2) {
         ih var5 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var5 = ud.field_b;
             var5.e(param2 + 7, param0);
@@ -34,7 +33,7 @@ final class sc {
             var5.a(param1.field_i, (byte) -82);
             var5.a(param1.field_l, (byte) -67);
             var5.a(param1.field_n, (byte) -42);
-            discarded$0 = var5.c(var4, param2 + -30533);
+            var5.c(var4, param2 + -30533);
             var5.c((byte) -81, var5.field_i - var4);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) ((Object) runtimeException), "sc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -42,21 +41,17 @@ final class sc {
     }
 
     final static void a(int param0) {
-        RuntimeException var1 = null;
-        Object var1_ref = null;
         int var2 = 0;
-        Throwable var3 = null;
         int var4 = 0;
-        int stackIn_5_0 = 0;
         int stackIn_17_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_16_0 = 0;
+        Object var1 = null;
+        RuntimeException var1_ref = null;
         var4 = fleas.field_A ? 1 : 0;
         try {
           L0: {
-            var1_ref = rh.field_f;
-            synchronized (var1_ref) {
+            var1 = rh.field_f;
+            synchronized (var1) {
               L1: {
                 L2: {
                   L3: {
@@ -73,15 +68,14 @@ final class sc {
                             } else {
                               var2 = qk.field_b[sd.field_a];
                               sd.field_a = 127 & 1 + sd.field_a;
-                              stackOut_4_0 = 0;
-                              stackIn_17_0 = stackOut_4_0;
-                              stackIn_5_0 = stackOut_4_0;
+                              stackIn_17_0 = 0;
+
                               if (var4 != 0) {
                                 break L3;
                               } else {
                                 L7: {
                                   L8: {
-                                    if (stackIn_5_0 <= var2) {
+                                    if (stackIn_17_0 <= var2) {
                                       break L8;
                                     } else {
                                       ei.field_H[var2 ^ -1] = false;
@@ -128,8 +122,7 @@ final class sc {
                         break L4;
                       }
                     }
-                    stackOut_16_0 = ak.field_e;
-                    stackIn_17_0 = stackOut_16_0;
+                    stackIn_17_0 = ak.field_e;
                     break L3;
                   }
                   tc.field_h = stackIn_17_0;
@@ -142,8 +135,8 @@ final class sc {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (RuntimeException) (Object) decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) var1), "sc.A(" + param0 + ')');
+          var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+          throw pf.a((Throwable) ((Object) var1_ref), "sc.A(" + param0 + ')');
         }
     }
 

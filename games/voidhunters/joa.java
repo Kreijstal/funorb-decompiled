@@ -9,23 +9,12 @@ final class joa {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_4_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -45,35 +34,26 @@ final class joa {
                 break L2;
               }
             }
-            stackOut_4_0 = (String) (var2);
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = (String) (var2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2_ref);
-            stackOut_6_1 = new StringBuilder().append("joa.C(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2_ref);
+
+            stackIn_8_1 = new StringBuilder().append("joa.C(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -83,29 +63,15 @@ final class joa {
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_9_0 = 0;
         int stackIn_9_1 = 0;
         int stackIn_30_0 = 0;
         int stackIn_40_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_29_0 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var8 = param5 * param3 + -(param1 * param0);
         if (var8 == 0) {
           return -1;
@@ -113,34 +79,27 @@ final class joa {
           L0: {
             var9 = param6 * param0 - param2 * param3;
             if (-1 < (var9 ^ -1)) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               break L0;
             } else {
-              stackOut_4_0 = 1;
-              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_0 = 1;
               break L0;
             }
           }
           L1: {
-            stackOut_6_0 = stackIn_6_0;
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_7_0 = stackOut_6_0;
+
+
             if (param7 >= var8) {
-              stackOut_8_0 = stackIn_8_0;
-              stackOut_8_1 = 0;
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
+
+              stackIn_9_1 = 0;
               break L1;
             } else {
-              stackOut_7_0 = stackIn_7_0;
-              stackOut_7_1 = 1;
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
+
+              stackIn_9_1 = 1;
               break L1;
             }
           }
-          if ((stackIn_9_0 ^ stackIn_9_1) != 0) {
+          if ((stackIn_6_0 ^ stackIn_9_1) != 0) {
             return -1;
           } else {
             L2: {
@@ -186,12 +145,10 @@ final class joa {
                         }
                       }
                     }
-                    stackOut_38_0 = var11;
-                    stackIn_40_0 = stackOut_38_0;
+                    stackIn_40_0 = var11;
                     break L3;
                   }
-                  stackOut_39_0 = -1;
-                  stackIn_40_0 = stackOut_39_0;
+                  stackIn_40_0 = -1;
                   break L3;
                 }
                 return stackIn_40_0;
@@ -222,12 +179,10 @@ final class joa {
                         }
                       }
                     }
-                    stackOut_28_0 = var11;
-                    stackIn_30_0 = stackOut_28_0;
+                    stackIn_30_0 = var11;
                     break L6;
                   }
-                  stackOut_29_0 = -1;
-                  stackIn_30_0 = stackOut_29_0;
+                  stackIn_30_0 = -1;
                   break L6;
                 }
                 return stackIn_30_0;
@@ -240,10 +195,9 @@ final class joa {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_b = null;
         if (param0 != 26936) {
-            discarded$0 = joa.a(-25, -71, 87, 48, 85, 34, -54, 36);
+            joa.a(-25, -71, 87, 48, 85, 34, -54, 36);
         }
     }
 

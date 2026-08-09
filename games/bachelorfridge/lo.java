@@ -20,17 +20,15 @@ final class lo {
     }
 
     final static void a(int param0) {
-        int fieldTemp$1 = 0;
-        RuntimeException var1 = null;
+        int fieldTemp$0 = 0;
+        int stackIn_20_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int stackIn_19_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -64,22 +62,20 @@ final class lo {
                           }
                           L6: {
                             if ((qaa.field_e[0] ^ -1) == 0) {
-                              stackOut_18_0 = 1;
-                              stackIn_19_0 = stackOut_18_0;
+                              stackIn_20_0 = 1;
                               break L6;
                             } else {
-                              stackOut_17_0 = 0;
-                              stackIn_19_0 = stackOut_17_0;
+                              stackIn_20_0 = 0;
                               break L6;
                             }
                           }
-                          rba.field_b = stackIn_19_0;
+                          rba.field_b = stackIn_20_0;
                           raa.e((byte) 31);
                           break L1;
                         }
                       } else {
                         var3 = kla.a(var1_int - var2, m.field_a, -2147483648) + var2;
-                        if (var3 != var2) {
+                        if ((var3 ^ -1) != (var2 ^ -1)) {
                           var4 = qaa.field_e[var2];
                           qaa.field_e[var2] = qaa.field_e[var3];
                           qaa.field_e[var3] = var4;
@@ -104,9 +100,9 @@ final class lo {
                 break L7;
               } else {
                 L8: {
-                  fieldTemp$1 = rba.field_b + 1;
+                  fieldTemp$0 = rba.field_b + 1;
                   rba.field_b = rba.field_b + 1;
-                  if (fieldTemp$1 != qaa.field_e.length) {
+                  if (fieldTemp$0 != qaa.field_e.length) {
                     break L8;
                   } else {
                     rba.field_b = 0;
@@ -135,9 +131,16 @@ final class lo {
     }
 
     final static boolean b(byte param0) {
-        RuntimeException var1 = null;
-        ola var1_ref = null;
+        int stackIn_10_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_38_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        ola var1 = null;
         int var1_int = 0;
+        RuntimeException var1_ref = null;
         int[] var2_ref_int__ = null;
         int var2 = 0;
         rk[] var3_ref_rk__ = null;
@@ -149,19 +152,6 @@ final class lo {
         int var8 = 0;
         ola var9 = null;
         boolean[] var13 = null;
-        int stackIn_10_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_38_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_24_0 = 0;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -177,7 +167,7 @@ final class lo {
                     }
                   }
                   var9 = gca.a(0, ig.field_m);
-                  var1_ref = var9;
+                  var1 = var9;
                   var2_ref_int__ = rd.a(true, ig.field_m);
                   var3_ref_rk__ = tj.a((byte) 124, ig.field_m);
                   mg.field_m.field_e = var9;
@@ -190,20 +180,17 @@ final class lo {
                 }
               }
               hb.field_j = false;
-              stackOut_9_0 = 1;
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (ri.field_a == 79) {
                 L3: {
                   if ((ig.field_m.b(16711935) ^ -1) == -2) {
-                    stackOut_15_0 = 1;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = 1;
                     break L3;
                   } else {
-                    stackOut_14_0 = 0;
-                    stackIn_16_0 = stackOut_14_0;
+                    stackIn_16_0 = 0;
                     break L3;
                   }
                 }
@@ -224,8 +211,7 @@ final class lo {
                         break L5;
                       }
                     }
-                    stackOut_21_0 = 1;
-                    stackIn_22_0 = stackOut_21_0;
+                    stackIn_22_0 = 1;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -254,8 +240,7 @@ final class lo {
                     L7: while (true) {
                       if ((var8 ^ -1) <= -51) {
                         gs.field_f.a(10, var13);
-                        stackOut_37_0 = 1;
-                        stackIn_38_0 = stackOut_37_0;
+                        stackIn_38_0 = 1;
                         decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
@@ -283,8 +268,7 @@ final class lo {
                     return false;
                   }
                 } else {
-                  stackOut_24_0 = 1;
-                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_25_0 = 1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -293,8 +277,8 @@ final class lo {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "lo.A(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw pe.a((Throwable) ((Object) var1_ref), "lo.A(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_10_0 != 0;

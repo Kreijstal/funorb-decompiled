@@ -14,15 +14,14 @@ final class ek extends nqa implements lv {
 
     ek(cta param0, ft param1, int param2, int param3, int param4, byte[] param5) {
         super(param0, param1, una.field_g, false, param2 * param3 * param4);
-        boolean discarded$1 = false;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        jagdx.PixelBuffer var15 = null;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        jagdx.PixelBuffer var15;
         L0: {
           this.field_h = param3;
           this.field_i = param4;
@@ -75,7 +74,7 @@ final class ek extends nqa implements lv {
                 }
               }
             }
-            discarded$1 = this.field_f.UnlockBox(0);
+            this.field_f.UnlockBox(0);
             break L0;
           }
         }

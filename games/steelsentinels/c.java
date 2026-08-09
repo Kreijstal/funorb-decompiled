@@ -11,11 +11,6 @@ final class c extends ck {
     static int field_u;
 
     final static int a(boolean param0, int param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_32_0 = 0;
         int stackIn_59_0 = 0;
         int stackIn_62_0 = 0;
@@ -25,13 +20,11 @@ final class c extends ck {
         int stackIn_77_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_61_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_70_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_31_0 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = SteelSentinels.field_G;
         try {
           L0: {
@@ -223,14 +216,12 @@ final class c extends ck {
                             if (-2 != (jh.field_i.field_e ^ -1)) {
                               break L13;
                             } else {
-                              stackOut_61_0 = 2;
-                              stackIn_62_0 = stackOut_61_0;
+                              stackIn_62_0 = 2;
                               decompiledRegionSelector0 = 2;
                               break L0;
                             }
                           } else {
-                            stackOut_58_0 = 3;
-                            stackIn_59_0 = stackOut_58_0;
+                            stackIn_59_0 = 3;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           }
@@ -249,14 +240,12 @@ final class c extends ck {
                                 if (1 != jh.field_i.field_e) {
                                   break L15;
                                 } else {
-                                  stackOut_70_0 = 1;
-                                  stackIn_71_0 = stackOut_70_0;
+                                  stackIn_71_0 = 1;
                                   decompiledRegionSelector0 = 4;
                                   break L0;
                                 }
                               } else {
-                                stackOut_67_0 = 3;
-                                stackIn_68_0 = stackOut_67_0;
+                                stackIn_68_0 = 3;
                                 decompiledRegionSelector0 = 3;
                                 break L0;
                               }
@@ -265,8 +254,7 @@ final class c extends ck {
                             }
                           }
                           if (ei.field_q == 13) {
-                            stackOut_74_0 = 1;
-                            stackIn_75_0 = stackOut_74_0;
+                            stackIn_75_0 = 1;
                             decompiledRegionSelector0 = 5;
                             break L0;
                           } else {
@@ -276,13 +264,11 @@ final class c extends ck {
                       }
                     }
                   }
-                  stackOut_76_0 = 0;
-                  stackIn_77_0 = stackOut_76_0;
+                  stackIn_77_0 = 0;
                   decompiledRegionSelector0 = 6;
                   break L0;
                 } else {
-                  stackOut_31_0 = -13;
-                  stackIn_32_0 = stackOut_31_0;
+                  stackIn_32_0 = -13;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }

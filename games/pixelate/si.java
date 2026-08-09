@@ -66,29 +66,18 @@ final class si extends qm {
     }
 
     final boolean a(byte param0, ng param1, int param2, int param3, int param4, int param5, int param6) {
-        RuntimeException var8 = null;
-        int var8_int = 0;
-        int var9 = 0;
-        double var10 = 0.0;
-        int var12 = 0;
         int stackIn_14_0 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        int var8_int = 0;
+        RuntimeException var8 = null;
+        int var9 = 0;
+        double var10 = 0.0;
+        int var12 = 0;
         var12 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -131,8 +120,7 @@ final class si extends qm {
                   }
                 }
               }
-              stackOut_13_0 = 1;
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_0 = 1;
               break L0;
             } else {
               return false;
@@ -142,27 +130,19 @@ final class si extends qm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var8);
-            stackOut_15_1 = new StringBuilder().append("si.N(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var8);
+
+            stackIn_17_1 = new StringBuilder().append("si.N(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L5;
             }
           }
@@ -176,9 +156,19 @@ final class si extends qm {
     }
 
     final static boolean a(int param0, int param1, CharSequence param2, boolean param3) {
-        boolean discarded$1 = false;
-        RuntimeException var4 = null;
+        int stackIn_25_0 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_35_0 = 0;
+        int stackIn_40_0 = 0;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        String stackIn_44_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -187,31 +177,6 @@ final class si extends qm {
         int var10 = 0;
         int var11 = 0;
         CharSequence var12 = null;
-        int stackIn_25_0 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_40_0 = 0;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_39_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_34_0 = 0;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
         var11 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -227,7 +192,7 @@ final class si extends qm {
                       break L2;
                     } else {
                       var12 = (CharSequence) null;
-                      discarded$1 = si.a(30, 48, (CharSequence) null, false);
+                      si.a(30, 48, (CharSequence) null, false);
                       break L2;
                     }
                   }
@@ -236,8 +201,7 @@ final class si extends qm {
                   var8 = 0;
                   L3: while (true) {
                     if (var7 <= var8) {
-                      stackOut_39_0 = var5;
-                      stackIn_40_0 = stackOut_39_0;
+                      stackIn_40_0 = var5;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
@@ -300,14 +264,12 @@ final class si extends qm {
                               }
                             }
                           }
-                          stackOut_24_0 = 0;
-                          stackIn_25_0 = stackOut_24_0;
+                          stackIn_25_0 = 0;
                           decompiledRegionSelector0 = 0;
                           break L0;
                         }
                         if (param1 <= var9) {
-                          stackOut_28_0 = 0;
-                          stackIn_29_0 = stackOut_28_0;
+                          stackIn_29_0 = 0;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -325,8 +287,7 @@ final class si extends qm {
                             var5 = 1;
                             break L4;
                           } else {
-                            stackOut_34_0 = 0;
-                            stackIn_35_0 = stackOut_34_0;
+                            stackIn_35_0 = 0;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           }
@@ -347,27 +308,19 @@ final class si extends qm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var4 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) (var4);
-            stackOut_41_1 = new StringBuilder().append("si.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackIn_43_0 = (RuntimeException) (var4);
+
+            stackIn_43_1 = new StringBuilder().append("si.B(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "null";
               break L11;
             } else {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "{...}";
               break L11;
             }
           }

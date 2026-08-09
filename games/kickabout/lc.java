@@ -11,23 +11,23 @@ final class lc implements Iterator {
     private ci field_c;
 
     public final Object next() {
-        am var1 = this.field_a;
+        Object var1 = this.field_a;
         if (this.field_c.field_d != var1) {
-            this.field_a = var1.field_f;
+            this.field_a = ((am) (var1)).field_f;
         } else {
             var1 = null;
             this.field_a = null;
         }
-        this.field_d = var1;
+        this.field_d = (am) (var1);
         return var1;
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        int var3 = 0;
-        String var4 = null;
-        String var5 = null;
-        String var6 = null;
-        CharSequence var7 = null;
+        int var3;
+        String var4;
+        Object var5;
+        String var6;
+        CharSequence var7;
         if (null != k.field_m) {
           var3 = k.field_m.a((byte) 84, param2);
           if (var3 != 0) {
@@ -86,7 +86,7 @@ final class lc implements Iterator {
                     return;
                   } else {
                     var6 = (String) null;
-                    wi.a((String) null, var4, 0, 2, var5, -115);
+                    wi.a((String) null, var4, 0, 2, (String) (var5), -115);
                     k.field_m = null;
                     fs.field_b = -1;
                     var3 = 91 % ((-21 - param0) / 44);

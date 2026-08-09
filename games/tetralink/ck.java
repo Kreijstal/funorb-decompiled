@@ -21,19 +21,13 @@ final class ck extends fk {
 
     final static void a(boolean param0, int param1) {
         mc var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         eh var4 = null;
-        je stackIn_7_0 = null;
         je stackIn_8_0 = null;
         je stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        je stackOut_6_0 = null;
-        je stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        je stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
+        RuntimeException var2_ref = null;
         var3 = TetraLink.field_J;
         try {
           L0: {
@@ -49,20 +43,15 @@ final class ck extends fk {
             L2: while (true) {
               if (var4 == null) {
                 L3: {
-                  stackOut_6_0 = sf.field_a;
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_8_0 = sf.field_a;
+
                   if (param0) {
-                    stackOut_8_0 = (je) ((Object) stackIn_8_0);
-                    stackOut_8_1 = 0;
-                    stackIn_9_0 = stackOut_8_0;
-                    stackIn_9_1 = stackOut_8_1;
+                    stackIn_9_0 = (je) ((Object) stackIn_8_0);
+                    stackIn_9_1 = 0;
                     break L3;
                   } else {
-                    stackOut_7_0 = (je) ((Object) stackIn_7_0);
-                    stackOut_7_1 = 1;
-                    stackIn_9_0 = stackOut_7_0;
-                    stackIn_9_1 = stackOut_7_1;
+                    stackIn_9_0 = (je) ((Object) stackIn_8_0);
+                    stackIn_9_1 = 1;
                     break L3;
                   }
                 }
@@ -91,25 +80,25 @@ final class ck extends fk {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        String var5 = null;
-        jk var6 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        String var17 = null;
-        Object var18 = null;
-        oh var19 = null;
-        oh var20 = null;
-        oh var21 = null;
-        Object var22 = null;
-        oh var23 = null;
-        oh var24 = null;
-        oh var26 = null;
-        oh var27 = null;
-        jh var28 = null;
-        jh var29 = null;
+        jk var6;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        String var17;
+        Object var18;
+        oh var19;
+        Object var22;
+        jh var28;
+        String var5;
+        oh var20;
+        oh var21;
+        oh var23;
+        oh var24;
+        oh var26;
+        oh var27;
+        jh var29;
         L0: {
           var18 = null;
           var22 = null;
@@ -324,28 +313,16 @@ final class ck extends fk {
     final boolean a(na param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             if (param1 == -384169950) {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               break L0;
             } else {
               field_bb = (hl) null;
@@ -356,27 +333,19 @@ final class ck extends fk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("ck.EB(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("ck.EB(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }

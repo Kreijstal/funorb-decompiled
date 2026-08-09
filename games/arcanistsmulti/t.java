@@ -27,21 +27,17 @@ final class t implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(int param0, int param1, int param2, java.awt.Frame param3, int param4, int param5) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        com.ms.awt.WComponentPeer var7 = null;
-        int var8 = 0;
-        java.awt.Frame var9 = null;
+        com.ms.awt.WComponentPeer var7;
+        int var8;
+        java.awt.Frame var9;
         param3.setVisible(true);
         var7 = (com.ms.awt.WComponentPeer) null;
         var8 = var7.getHwnd();
         if (param0 <= 17) {
           var9 = (java.awt.Frame) null;
           this.a((java.awt.Frame) null, (byte) 119);
-          discarded$4 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$5 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param3), 17);
           this.field_a.setDisplayMode(param4, param2, param1, param5, 0);
           param3.setBounds(0, 0, param4, param2);
@@ -49,8 +45,8 @@ final class t implements com.ms.directX.IEnumModesCallback {
           param3.requestFocus();
           return;
         } else {
-          discarded$6 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$7 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param3), 17);
           this.field_a.setDisplayMode(param4, param2, param1, param5, 0);
           param3.setBounds(0, 0, param4, param2);

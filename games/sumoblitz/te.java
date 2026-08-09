@@ -13,32 +13,42 @@ final class te {
     static String field_h;
 
     final ms a(boolean param0) {
-        int fieldTemp$0 = 0;
-        ms var2 = null;
-        int var3 = Sumoblitz.field_L ? 1 : 0;
-        if ((this.field_b ^ -1) < -1) {
-            if (this.field_i[this.field_b - 1] != this.field_d) {
-                var2 = this.field_d;
+        int fieldTemp$1 = 0;
+        ms var2;
+        int var3;
+        L0: {
+          var3 = Sumoblitz.field_L ? 1 : 0;
+          if ((this.field_b ^ -1) >= -1) {
+            break L0;
+          } else {
+            if (this.field_i[this.field_b - 1] == this.field_d) {
+              break L0;
+            } else {
+              var2 = this.field_d;
+              this.field_d = var2.field_b;
+              return var2;
+            }
+          }
+        }
+        if (param0) {
+          L1: while (true) {
+            if (this.field_a > this.field_b) {
+              fieldTemp$1 = this.field_b;
+              this.field_b = this.field_b + 1;
+              var2 = this.field_i[fieldTemp$1].field_b;
+              if (this.field_i[-1 + this.field_b] != var2) {
                 this.field_d = var2.field_b;
                 return var2;
+              } else {
+                continue L1;
+              }
+            } else {
+              return null;
             }
+          }
+        } else {
+          return (ms) null;
         }
-        if (!param0) {
-            return (ms) null;
-        }
-        do {
-            if (this.field_a <= this.field_b) {
-                return null;
-            }
-            fieldTemp$0 = this.field_b;
-            this.field_b = this.field_b + 1;
-            var2 = this.field_i[fieldTemp$0].field_b;
-            if (!(this.field_i[-1 + this.field_b] == var2)) {
-                this.field_d = var2.field_b;
-                return var2;
-            }
-        } while (var3 == 0);
-        return null;
     }
 
     final ms a(int param0, long param1) {
@@ -50,9 +60,6 @@ final class te {
         ms var4 = this.field_i[(int)(param1 & (long)(-1 + this.field_a))];
         this.field_e = var4.field_b;
         while (this.field_e != var4) {
-            if (var6 != 0) {
-                return null;
-            }
             if (!((param1 ^ -1L) != (this.field_e.field_h ^ -1L))) {
                 var5 = this.field_e;
                 this.field_e = this.field_e.field_b;
@@ -68,69 +75,22 @@ final class te {
         int var2 = 0;
         ms var3 = null;
         ms var4 = null;
-        int var5 = 0;
-        Object stackIn_5_0 = null;
-        Object stackIn_13_0 = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_12_0 = null;
-        var5 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 == 6407) {
-          var2 = 0;
-          L0: while (true) {
-            L1: {
-              L2: {
-                if (this.field_a <= var2) {
-                  break L2;
-                } else {
-                  stackOut_4_0 = this;
-                  stackIn_13_0 = stackOut_4_0;
-                  stackIn_5_0 = stackOut_4_0;
-                  if (var5 != 0) {
-                    break L1;
-                  } else {
-                    var3 = ((te) (this)).field_i[var2];
-                    L3: while (true) {
-                      L4: {
-                        L5: {
-                          var4 = var3.field_b;
-                          if (var4 == var3) {
-                            break L5;
-                          } else {
-                            var4.b(false);
-                            if (var5 != 0) {
-                              break L4;
-                            } else {
-                              if (var5 == 0) {
-                                continue L3;
-                              } else {
-                                break L5;
-                              }
-                            }
-                          }
-                        }
-                        var2++;
-                        break L4;
-                      }
-                      if (var5 == 0) {
-                        continue L0;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                }
-              }
-              this.field_d = null;
-              stackOut_12_0 = this;
-              stackIn_13_0 = stackOut_12_0;
-              break L1;
-            }
-            ((te) (this)).field_e = null;
+        int var5 = Sumoblitz.field_L ? 1 : 0;
+        if (param0 != 6407) {
             return;
-          }
-        } else {
-          return;
         }
+        for (var2 = 0; this.field_a > var2; var2++) {
+            var3 = this.field_i[var2];
+            while (true) {
+                var4 = var3.field_b;
+                if (var4 == var3) {
+                    break;
+                }
+                var4.b(false);
+            }
+        }
+        this.field_d = null;
+        this.field_e = null;
     }
 
     public static void b(int param0) {
@@ -183,8 +143,6 @@ final class te {
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_21_0 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -192,21 +150,6 @@ final class te {
         String stackIn_26_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
         try {
           L0: {
             if (param0 == -21339) {
@@ -215,14 +158,12 @@ final class te {
                   if (field_f != param1) {
                     if (kd.field_b != param1) {
                       if (param1 == ps.field_c) {
-                        stackOut_20_0 = 6410;
-                        stackIn_21_0 = stackOut_20_0;
+                        stackIn_21_0 = 6410;
                         decompiledRegionSelector0 = 6;
                         break L0;
                       } else {
                         if (rg.field_A == param1) {
-                          stackOut_18_0 = 6145;
-                          stackIn_19_0 = stackOut_18_0;
+                          stackIn_19_0 = 6145;
                           decompiledRegionSelector0 = 5;
                           break L0;
                         } else {
@@ -230,32 +171,27 @@ final class te {
                         }
                       }
                     } else {
-                      stackOut_13_0 = 6409;
-                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_14_0 = 6409;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     }
                   } else {
-                    stackOut_10_0 = 6406;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = 6406;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
-                  stackOut_7_0 = 6408;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 6408;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_4_0 = 6407;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 6407;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_1_0 = 57;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 57;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -264,27 +200,19 @@ final class te {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var2);
-            stackOut_23_1 = new StringBuilder().append("te.E(").append(param0).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var2);
+
+            stackIn_25_1 = new StringBuilder().append("te.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L1;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L1;
             }
           }

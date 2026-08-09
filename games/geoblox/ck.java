@@ -17,12 +17,11 @@ final class ck {
     }
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        int var4 = 0;
         nf var4_ref_nf = null;
+        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -37,12 +36,13 @@ final class ck {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        nf var17 = null;
-        int var18 = 0;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        nf var17 = null;
+        int var18 = 0;
         var19 = Geoblox.field_C;
         try {
           L0: {
@@ -162,12 +162,10 @@ final class ck {
     }
 
     final static void c(int param0) {
-        boolean discarded$15 = false;
-        boolean discarded$16 = false;
-        RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = Geoblox.field_C;
         try {
           L0: {
@@ -180,14 +178,14 @@ final class ck {
                   break L1;
                 }
               }
-              discarded$15 = oh.field_b.a(true, 127, dk.field_c, ni.field_I);
+              oh.field_b.a(true, 127, dk.field_c, ni.field_I);
               oh.field_b.i(-50);
               L2: while (true) {
                 if (!hh.a(125)) {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  discarded$16 = oh.field_b.a((byte) -126, te.field_a, ki.field_d);
+                  oh.field_b.a((byte) -126, te.field_a, ki.field_d);
                   continue L2;
                 }
               }

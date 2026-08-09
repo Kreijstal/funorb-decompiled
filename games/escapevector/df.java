@@ -14,135 +14,16 @@ final class df {
 
     private final void a(boolean param0) {
         int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        var11 = EscapeVector.field_A;
-        var5 = -1640531527;
-        var7 = -1640531527;
-        var6 = -1640531527;
-        var8 = -1640531527;
-        var9 = -1640531527;
-        var3 = -1640531527;
-        var4 = -1640531527;
-        var10 = -1640531527;
-        var2 = 0;
-        L0: while (true) {
-          if (-5 >= (var2 ^ -1)) {
-            L1: {
-              if (!param0) {
-                break L1;
-              } else {
-                df.a((byte) -116);
-                break L1;
-              }
-            }
-            var2 = 0;
-            L2: while (true) {
-              if (-257 >= (var2 ^ -1)) {
-                var2 = 0;
-                L3: while (true) {
-                  if (var2 >= 256) {
-                    this.b(-115);
-                    this.field_g = 256;
-                    return;
-                  } else {
-                    var9 = var9 + this.field_i[6 + var2];
-                    var3 = var3 + this.field_i[var2];
-                    var6 = var6 + this.field_i[var2 + 3];
-                    var8 = var8 + this.field_i[var2 - -5];
-                    var4 = var4 + this.field_i[var2 - -1];
-                    var5 = var5 + this.field_i[2 + var2];
-                    var7 = var7 + this.field_i[var2 - -4];
-                    var10 = var10 + this.field_i[var2 - -7];
-                    var3 = var3 ^ var4 << -146730869;
-                    var4 = var4 + var5;
-                    var6 = var6 + var3;
-                    var4 = var4 ^ var5 >>> 2135609410;
-                    var7 = var7 + var4;
-                    var5 = var5 + var6;
-                    var5 = var5 ^ var6 << 1561196616;
-                    var6 = var6 + var7;
-                    var8 = var8 + var5;
-                    var6 = var6 ^ var7 >>> 2000362512;
-                    var7 = var7 + var8;
-                    var9 = var9 + var6;
-                    var7 = var7 ^ var8 << 92771242;
-                    var8 = var8 + var9;
-                    var10 = var10 + var7;
-                    var8 = var8 ^ var9 >>> 1384457188;
-                    var3 = var3 + var8;
-                    var9 = var9 + var10;
-                    var9 = var9 ^ var10 << -1366361592;
-                    var10 = var10 + var3;
-                    var4 = var4 + var9;
-                    var10 = var10 ^ var3 >>> 1426433417;
-                    var5 = var5 + var10;
-                    var3 = var3 + var4;
-                    this.field_i[var2] = var3;
-                    this.field_i[var2 - -1] = var4;
-                    this.field_i[2 + var2] = var5;
-                    this.field_i[3 + var2] = var6;
-                    this.field_i[4 + var2] = var7;
-                    this.field_i[var2 - -5] = var8;
-                    this.field_i[6 + var2] = var9;
-                    this.field_i[var2 - -7] = var10;
-                    var2 += 8;
-                    continue L3;
-                  }
-                }
-              } else {
-                var7 = var7 + this.field_c[var2 - -4];
-                var3 = var3 + this.field_c[var2];
-                var8 = var8 + this.field_c[5 + var2];
-                var9 = var9 + this.field_c[6 + var2];
-                var4 = var4 + this.field_c[1 + var2];
-                var10 = var10 + this.field_c[var2 + 7];
-                var5 = var5 + this.field_c[var2 + 2];
-                var6 = var6 + this.field_c[3 + var2];
-                var3 = var3 ^ var4 << -85168501;
-                var4 = var4 + var5;
-                var6 = var6 + var3;
-                var4 = var4 ^ var5 >>> 625876770;
-                var7 = var7 + var4;
-                var5 = var5 + var6;
-                var5 = var5 ^ var6 << -260928920;
-                var6 = var6 + var7;
-                var8 = var8 + var5;
-                var6 = var6 ^ var7 >>> 932474512;
-                var7 = var7 + var8;
-                var9 = var9 + var6;
-                var7 = var7 ^ var8 << -1014308726;
-                var8 = var8 + var9;
-                var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> 1736563940;
-                var3 = var3 + var8;
-                var9 = var9 + var10;
-                var9 = var9 ^ var10 << -350915448;
-                var4 = var4 + var9;
-                var10 = var10 + var3;
-                var10 = var10 ^ var3 >>> 1071505865;
-                var3 = var3 + var4;
-                var5 = var5 + var10;
-                this.field_i[var2] = var3;
-                this.field_i[var2 - -1] = var4;
-                this.field_i[2 + var2] = var5;
-                this.field_i[3 + var2] = var6;
-                this.field_i[var2 - -4] = var7;
-                this.field_i[5 + var2] = var8;
-                this.field_i[6 + var2] = var9;
-                this.field_i[var2 + 7] = var10;
-                var2 += 8;
-                continue L2;
-              }
-            }
-          } else {
+        int var11 = EscapeVector.field_A;
+        int var5 = -1640531527;
+        int var7 = -1640531527;
+        int var6 = -1640531527;
+        int var8 = -1640531527;
+        int var9 = -1640531527;
+        int var3 = -1640531527;
+        int var4 = -1640531527;
+        int var10 = -1640531527;
+        for (var2 = 0; -5 < (var2 ^ -1); var2++) {
             var3 = var3 ^ var4 << 1519723627;
             var6 = var6 + var3;
             var4 = var4 + var5;
@@ -167,10 +48,96 @@ final class df {
             var10 = var10 ^ var3 >>> 1354533737;
             var3 = var3 + var4;
             var5 = var5 + var10;
-            var2++;
-            continue L0;
-          }
         }
+        if (param0) {
+            df.a((byte) -116);
+        }
+        for (var2 = 0; -257 < (var2 ^ -1); var2 += 8) {
+            var7 = var7 + this.field_c[var2 - -4];
+            var3 = var3 + this.field_c[var2];
+            var8 = var8 + this.field_c[5 + var2];
+            var9 = var9 + this.field_c[6 + var2];
+            var4 = var4 + this.field_c[1 + var2];
+            var10 = var10 + this.field_c[var2 + 7];
+            var5 = var5 + this.field_c[var2 + 2];
+            var6 = var6 + this.field_c[3 + var2];
+            var3 = var3 ^ var4 << -85168501;
+            var4 = var4 + var5;
+            var6 = var6 + var3;
+            var4 = var4 ^ var5 >>> 625876770;
+            var7 = var7 + var4;
+            var5 = var5 + var6;
+            var5 = var5 ^ var6 << -260928920;
+            var6 = var6 + var7;
+            var8 = var8 + var5;
+            var6 = var6 ^ var7 >>> 932474512;
+            var7 = var7 + var8;
+            var9 = var9 + var6;
+            var7 = var7 ^ var8 << -1014308726;
+            var8 = var8 + var9;
+            var10 = var10 + var7;
+            var8 = var8 ^ var9 >>> 1736563940;
+            var3 = var3 + var8;
+            var9 = var9 + var10;
+            var9 = var9 ^ var10 << -350915448;
+            var4 = var4 + var9;
+            var10 = var10 + var3;
+            var10 = var10 ^ var3 >>> 1071505865;
+            var3 = var3 + var4;
+            var5 = var5 + var10;
+            this.field_i[var2] = var3;
+            this.field_i[var2 - -1] = var4;
+            this.field_i[2 + var2] = var5;
+            this.field_i[3 + var2] = var6;
+            this.field_i[var2 - -4] = var7;
+            this.field_i[5 + var2] = var8;
+            this.field_i[6 + var2] = var9;
+            this.field_i[var2 + 7] = var10;
+        }
+        for (var2 = 0; var2 < 256; var2 += 8) {
+            var9 = var9 + this.field_i[6 + var2];
+            var3 = var3 + this.field_i[var2];
+            var6 = var6 + this.field_i[var2 + 3];
+            var8 = var8 + this.field_i[var2 - -5];
+            var4 = var4 + this.field_i[var2 - -1];
+            var5 = var5 + this.field_i[2 + var2];
+            var7 = var7 + this.field_i[var2 - -4];
+            var10 = var10 + this.field_i[var2 - -7];
+            var3 = var3 ^ var4 << -146730869;
+            var4 = var4 + var5;
+            var6 = var6 + var3;
+            var4 = var4 ^ var5 >>> 2135609410;
+            var7 = var7 + var4;
+            var5 = var5 + var6;
+            var5 = var5 ^ var6 << 1561196616;
+            var6 = var6 + var7;
+            var8 = var8 + var5;
+            var6 = var6 ^ var7 >>> 2000362512;
+            var7 = var7 + var8;
+            var9 = var9 + var6;
+            var7 = var7 ^ var8 << 92771242;
+            var8 = var8 + var9;
+            var10 = var10 + var7;
+            var8 = var8 ^ var9 >>> 1384457188;
+            var3 = var3 + var8;
+            var9 = var9 + var10;
+            var9 = var9 ^ var10 << -1366361592;
+            var10 = var10 + var3;
+            var4 = var4 + var9;
+            var10 = var10 ^ var3 >>> 1426433417;
+            var5 = var5 + var10;
+            var3 = var3 + var4;
+            this.field_i[var2] = var3;
+            this.field_i[var2 - -1] = var4;
+            this.field_i[2 + var2] = var5;
+            this.field_i[3 + var2] = var6;
+            this.field_i[4 + var2] = var7;
+            this.field_i[var2 - -5] = var8;
+            this.field_i[6 + var2] = var9;
+            this.field_i[var2 - -7] = var10;
+        }
+        this.b(-115);
+        this.field_g = 256;
     }
 
     final int a(int param0) {
@@ -187,16 +154,16 @@ final class df {
     }
 
     private final void b(int param0) {
-        int dupTemp$4 = 0;
-        int dupTemp$5 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int dupTemp$1 = 0;
+        int dupTemp$2 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = EscapeVector.field_A;
-        int fieldTemp$3 = this.field_a + 1;
+        int fieldTemp$0 = this.field_a + 1;
         this.field_a = this.field_a + 1;
-        this.field_e = this.field_e + fieldTemp$3;
+        this.field_e = this.field_e + fieldTemp$0;
         if (param0 <= -96) {
           var2 = 0;
           L0: while (true) {
@@ -224,12 +191,12 @@ final class df {
                 }
               }
               this.field_b = this.field_b + this.field_i[255 & var2 + 128];
-              dupTemp$4 = this.field_b + (this.field_i[ae.a(var3, 1020) >> 1900691618] - -this.field_e);
-              var4 = dupTemp$4;
-              this.field_i[var2] = dupTemp$4;
-              dupTemp$5 = var3 + this.field_i[ae.a(var4 >> -1854611896, 1020) >> 2067746082];
-              this.field_e = dupTemp$5;
-              this.field_c[var2] = dupTemp$5;
+              dupTemp$1 = this.field_b + (this.field_i[ae.a(var3, 1020) >> 1900691618] - -this.field_e);
+              var4 = dupTemp$1;
+              this.field_i[var2] = dupTemp$1;
+              dupTemp$2 = var3 + this.field_i[ae.a(var4 >> -1854611896, 1020) >> 2067746082];
+              this.field_e = dupTemp$2;
+              this.field_c[var2] = dupTemp$2;
               var2++;
               continue L0;
             }

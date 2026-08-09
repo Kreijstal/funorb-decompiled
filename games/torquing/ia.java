@@ -36,8 +36,6 @@ final class ia extends af {
 
     final static boolean a(int param0, int param1) {
         int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
         if (0 == (param1 ^ -1)) {
           return true;
         } else {
@@ -51,12 +49,10 @@ final class ia extends af {
           }
           L1: {
             if (0 == (1 << param1 & oh.field_c)) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               break L1;
             } else {
-              stackOut_4_0 = 1;
-              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_0 = 1;
               break L1;
             }
           }
@@ -72,85 +68,69 @@ final class ia extends af {
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
         L0: {
           var22 = Torquing.field_u;
           var4 = param1 + this.field_h;
           var6 = 120 / ((25 - param0) / 44);
           var5 = this.field_c + param2;
           if (wp.field_v[3] != null) {
-            stackOut_2_0 = wp.field_v[3].field_w;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = wp.field_v[3].field_w;
             break L0;
           } else {
-            stackOut_1_0 = 0;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 0;
             break L0;
           }
         }
         L1: {
           var7 = stackIn_3_0;
           if (null == wp.field_v[5]) {
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L1;
           } else {
-            stackOut_4_0 = wp.field_v[5].field_w;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = wp.field_v[5].field_w;
             break L1;
           }
         }
         L2: {
           var8 = stackIn_6_0;
           if (null != wp.field_v[1]) {
-            stackOut_8_0 = wp.field_v[1].field_u;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = wp.field_v[1].field_u;
             break L2;
           } else {
-            stackOut_7_0 = 0;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = 0;
             break L2;
           }
         }
         L3: {
           var9 = stackIn_9_0;
           if (wp.field_v[7] == null) {
-            stackOut_11_0 = 0;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = 0;
             break L3;
           } else {
-            stackOut_10_0 = wp.field_v[7].field_u;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = wp.field_v[7].field_u;
             break L3;
           }
         }

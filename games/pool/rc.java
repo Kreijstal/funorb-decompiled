@@ -18,14 +18,13 @@ final class rc {
     }
 
     public static void a(boolean param0) {
-        String discarded$2 = null;
         field_c = null;
         field_b = null;
         field_g = null;
         field_a = null;
         field_e = null;
         if (!param0) {
-          discarded$2 = rc.b(false);
+          rc.b(false);
           field_f = null;
           return;
         } else {

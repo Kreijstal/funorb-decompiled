@@ -10,11 +10,11 @@ final class jc {
     static String field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = DungeonAssault.field_K;
         try {
           L0: {
@@ -103,9 +103,8 @@ final class jc {
     }
 
     final static boolean a(char param0, int param1) {
-        int var2 = 0;
+        int var2;
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
         var2 = 82 % ((-4 - param1) / 40);
         if (param0 != 160) {
           if (32 != param0) {
@@ -116,8 +115,7 @@ final class jc {
                 return false;
               }
             } else {
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = 1;
               return stackIn_7_0 != 0;
             }
           } else {

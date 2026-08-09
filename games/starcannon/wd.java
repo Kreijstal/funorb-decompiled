@@ -67,32 +67,32 @@ final class wd extends oa {
     }
 
     private final boolean e() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
         L0: {
           var3 = 0;
           if (this.field_y == 1) {
@@ -1666,7 +1666,7 @@ final class wd extends oa {
     }
 
     final void b() {
-        int var1 = 0;
+        int var1;
         var1 = 0;
         L0: while (true) {
           if (var1 >= this.field_ab.field_p) {
@@ -1706,7 +1706,6 @@ final class wd extends oa {
 
     private final void d() {
         int var1 = 0;
-        int var2 = 0;
         this.field_P = 0;
         this.field_y = 0;
         this.field_S = 0;
@@ -1716,31 +1715,7 @@ final class wd extends oa {
         this.field_E = this.field_ab.field_w;
         this.field_q = this.field_ab.field_u;
         this.field_D = 64;
-        var1 = 0;
-        L0: while (true) {
-          if (var1 >= this.field_ab.field_p) {
-            this.field_n = 0;
-            this.field_t = null;
-            this.field_M = -1;
-            this.field_k = -1;
-            this.field_O = 0;
-            this.field_eb = 0;
-            this.field_K = -1;
-            this.field_v = 0;
-            var2 = 0;
-            var1 = var2;
-            L1: while (true) {
-              if (var2 >= this.field_ab.field_p) {
-                this.field_y = 1;
-                return;
-              } else {
-                this.field_o[var2] = null;
-                this.field_p[var2] = false;
-                var2++;
-                continue L1;
-              }
-            }
-          } else {
+        for (var1 = 0; var1 < this.field_ab.field_p; var1++) {
             this.field_ib[var1] = 0;
             this.field_I[var1] = 0;
             this.field_Z[var1] = 0;
@@ -1772,10 +1747,23 @@ final class wd extends oa {
             this.field_X[var1] = 128;
             this.field_gb[var1] = 0;
             this.field_R[var1] = -1;
-            var1++;
-            continue L0;
-          }
         }
+        this.field_n = 0;
+        this.field_t = null;
+        this.field_M = -1;
+        this.field_k = -1;
+        this.field_O = 0;
+        this.field_eb = 0;
+        this.field_K = -1;
+        this.field_v = 0;
+        int var2 = 0;
+        var1 = var2;
+        while (var2 < this.field_ab.field_p) {
+            this.field_o[var2] = null;
+            this.field_p[var2] = false;
+            var2++;
+        }
+        this.field_y = 1;
     }
 
     private final void d(int param0) {
@@ -1793,43 +1781,20 @@ final class wd extends oa {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        fj var7 = null;
-        Object var8 = null;
-        Throwable var9 = null;
-        ud stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
         ud stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         ud stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         int stackIn_15_2 = 0;
-        fj stackIn_16_0 = null;
         fj stackIn_17_0 = null;
         fj stackIn_18_0 = null;
         int stackIn_18_1 = 0;
-        fj stackIn_19_0 = null;
         fj stackIn_20_0 = null;
         fj stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         Throwable decompiledCaughtException = null;
-        ud stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        ud stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        int stackOut_14_2 = 0;
-        ud stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        fj stackOut_15_0 = null;
-        fj stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        fj stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        fj stackOut_18_0 = null;
-        fj stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        fj stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
+        fj var7 = null;
+        Object var8 = null;
         L0: {
           this.d(param0);
           if (param3 <= field_jb[7999]) {
@@ -1863,66 +1828,48 @@ final class wd extends oa {
                 }
               }
               L3: {
-                stackOut_12_0 = this.field_ab.field_L[param1];
-                stackOut_12_1 = param3 * 256 / df.field_n;
-                stackIn_14_0 = stackOut_12_0;
-                stackIn_14_1 = stackOut_12_1;
-                stackIn_13_0 = stackOut_12_0;
-                stackIn_13_1 = stackOut_12_1;
+                stackIn_14_0 = this.field_ab.field_L[param1];
+
+                stackIn_14_1 = param3 * 256 / df.field_n;
+
                 if (param2 == 0) {
-                  stackOut_14_0 = (ud) ((Object) stackIn_14_0);
-                  stackOut_14_1 = stackIn_14_1;
-                  stackOut_14_2 = param4 * this.field_D * this.field_cb >> 12;
-                  stackIn_15_0 = stackOut_14_0;
-                  stackIn_15_1 = stackOut_14_1;
-                  stackIn_15_2 = stackOut_14_2;
+                  stackIn_15_0 = (ud) ((Object) stackIn_14_0);
+                  stackIn_15_1 = stackIn_14_1;
+                  stackIn_15_2 = param4 * this.field_D * this.field_cb >> 12;
                   break L3;
                 } else {
-                  stackOut_13_0 = (ud) ((Object) stackIn_13_0);
-                  stackOut_13_1 = stackIn_13_1;
-                  stackOut_13_2 = 0;
-                  stackIn_15_0 = stackOut_13_0;
-                  stackIn_15_1 = stackOut_13_1;
-                  stackIn_15_2 = stackOut_13_2;
+                  stackIn_15_0 = (ud) ((Object) stackIn_14_0);
+                  stackIn_15_1 = stackIn_14_1;
+                  stackIn_15_2 = 0;
                   break L3;
                 }
               }
               L4: {
                 var7 = fj.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, param5);
                 var7.b(this.field_ab.field_e[param1], this.field_ab.field_A[param1]);
-                stackOut_15_0 = (fj) (var7);
-                stackIn_17_0 = stackOut_15_0;
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_17_0 = (fj) (var7);
+
                 if (this.field_ab.field_B[param1] == 0) {
-                  stackOut_17_0 = (fj) ((Object) stackIn_17_0);
-                  stackOut_17_1 = 0;
-                  stackIn_18_0 = stackOut_17_0;
-                  stackIn_18_1 = stackOut_17_1;
+                  stackIn_18_0 = (fj) ((Object) stackIn_17_0);
+                  stackIn_18_1 = 0;
                   break L4;
                 } else {
-                  stackOut_16_0 = (fj) ((Object) stackIn_16_0);
-                  stackOut_16_1 = -1;
-                  stackIn_18_0 = stackOut_16_0;
-                  stackIn_18_1 = stackOut_16_1;
+                  stackIn_18_0 = (fj) ((Object) stackIn_17_0);
+                  stackIn_18_1 = -1;
                   break L4;
                 }
               }
               L5: {
                 ((fj) (Object) stackIn_18_0).g(stackIn_18_1);
-                stackOut_18_0 = (fj) (var7);
-                stackIn_20_0 = stackOut_18_0;
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_20_0 = (fj) (var7);
+
                 if (this.field_ab.field_B[param1] != 2) {
-                  stackOut_20_0 = (fj) ((Object) stackIn_20_0);
-                  stackOut_20_1 = 0;
-                  stackIn_21_0 = stackOut_20_0;
-                  stackIn_21_1 = stackOut_20_1;
+                  stackIn_21_0 = (fj) ((Object) stackIn_20_0);
+                  stackIn_21_1 = 0;
                   break L5;
                 } else {
-                  stackOut_19_0 = (fj) ((Object) stackIn_19_0);
-                  stackOut_19_1 = 1;
-                  stackIn_21_0 = stackOut_19_0;
-                  stackIn_21_1 = stackOut_19_1;
+                  stackIn_21_0 = (fj) ((Object) stackIn_20_0);
+                  stackIn_21_1 = 1;
                   break L5;
                 }
               }
@@ -1960,10 +1907,8 @@ final class wd extends oa {
     }
 
     final int a(vi param0) {
-        if (this.e()) {
-            if (!this.field_W) {
-                return -1;
-            }
+        if (this.e() && !this.field_W) {
+            return -1;
         }
         int var3 = df.field_n;
         int var4 = (var3 << 9) + (var3 << 7);
@@ -1971,7 +1916,7 @@ final class wd extends oa {
     }
 
     final void a() {
-        int var1 = 0;
+        int var1;
         var1 = 0;
         L0: while (true) {
           if (var1 >= this.field_ab.field_p) {

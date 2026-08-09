@@ -18,10 +18,6 @@ final class em {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "em.A(";
         field_c = 0;
         field_a = new jb[28];

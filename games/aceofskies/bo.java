@@ -13,7 +13,6 @@ final class bo {
     private fo field_f;
 
     final static boolean a(byte param0) {
-        boolean discarded$5 = false;
         if (param0 == 102) {
           if (hr.field_e != null) {
             if (null == hr.field_e.d((byte) -112)) {
@@ -25,7 +24,7 @@ final class bo {
             return false;
           }
         } else {
-          discarded$5 = bo.a((byte) -128);
+          bo.a((byte) -128);
           if (hr.field_e != null) {
             if (null == hr.field_e.d((byte) -112)) {
               return false;
@@ -41,23 +40,12 @@ final class bo {
     final static rh a(al[] param0, int param1, int param2) {
         RuntimeException var3 = null;
         rh stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        rh stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -68,35 +56,26 @@ final class bo {
                 break L1;
               }
             }
-            stackOut_2_0 = gg.a(param0[qq.a(20, param0.length)], param1, -27227);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = gg.a(param0[qq.a(20, param0.length)], param1, -27227);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("bo.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("bo.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -106,8 +85,8 @@ final class bo {
     }
 
     final void a(boolean param0) {
-        fo var2 = null;
-        fo var3 = null;
+        fo var2;
+        fo var3;
         if (this.field_b.field_b == this.field_d) {
           if (!param0) {
             bo.a(65);
@@ -181,7 +160,7 @@ final class bo {
     }
 
     private final void b(int param0) {
-        fo var2 = null;
+        fo var2;
         L0: {
           this.field_c.K(this.field_e);
           if (null == this.field_f) {

@@ -10,10 +10,7 @@ final class sd extends sh implements rc {
     private gh field_kb;
 
     public final void a(byte param0, int param1, int param2, int param3, wd param4) {
-        RuntimeException var6 = null;
         rg var7 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -21,14 +18,7 @@ final class sd extends sh implements rc {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var6 = null;
         try {
           L0: {
             if (this.field_nb) {
@@ -56,27 +46,19 @@ final class sd extends sh implements rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var6);
-            stackOut_9_1 = new StringBuilder().append("sd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var6);
+
+            stackIn_11_1 = new StringBuilder().append("sd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -117,14 +99,6 @@ final class sd extends sh implements rc {
     }
 
     private final void a(int param0, boolean param1, rg param2) {
-        wd discarded$2 = null;
-        wd discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        uc var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
@@ -132,14 +106,10 @@ final class sd extends sh implements rc {
         String stackIn_33_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        uc var5 = null;
+        int var6 = 0;
         var6 = Bounce.field_N;
         try {
           L0: {
@@ -154,11 +124,11 @@ final class sd extends sh implements rc {
             }
             L2: {
               if (param2.field_f) {
-                var4_ref = ha.field_k;
+                var4 = ha.field_k;
                 break L2;
               } else {
                 if (param2.field_d == null) {
-                  var4_ref = param2.field_c;
+                  var4 = param2.field_c;
                   if (param2.field_g != 248) {
                     break L2;
                   } else {
@@ -170,12 +140,12 @@ final class sd extends sh implements rc {
                         break L3;
                       }
                     }
-                    var4_ref = ih.field_P;
+                    var4 = ih.field_P;
                     this.field_nb = true;
                     break L2;
                   }
                 } else {
-                  var4_ref = ma.field_n;
+                  var4 = ma.field_n;
                   if (this.field_kb == null) {
                     break L2;
                   } else {
@@ -186,20 +156,20 @@ final class sd extends sh implements rc {
               }
             }
             L4: {
-              var5 = new uc((sh) (this), ne.field_v, var4_ref);
+              var5 = new uc((sh) (this), ne.field_v, var4);
               if (param2.field_f) {
                 if (param2.field_a) {
                   this.a(10768, new eb((sd) (this)));
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  discarded$2 = var5.a(pc.field_i, (sk) (this), -4);
+                  var5.a(pc.field_i, (sk) (this), -4);
                   break L4;
                 }
               } else {
                 L5: {
                   if (this.field_nb) {
-                    discarded$3 = var5.a(pc.field_i, (sk) (this), -4);
+                    var5.a(pc.field_i, (sk) (this), -4);
                     break L5;
                   } else {
                     if ((param2.field_g ^ -1) == -6) {
@@ -232,28 +202,20 @@ final class sd extends sh implements rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var4 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) (var4);
-            stackOut_30_1 = new StringBuilder().append("sd.D(").append(param0).append(',').append(param1).append(',');
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_32_0 = (RuntimeException) (var4_ref);
+
+            stackIn_32_1 = new StringBuilder().append("sd.D(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L6;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L6;
             }
           }
@@ -267,8 +229,7 @@ final class sd extends sh implements rc {
     }
 
     final boolean e(byte param0) {
-        boolean discarded$6 = false;
-        rg var2 = null;
+        rg var2;
         if (param0 == 21) {
           if (this.field_D) {
             if (!this.field_ob) {
@@ -286,7 +247,7 @@ final class sd extends sh implements rc {
             return super.e((byte) 21);
           }
         } else {
-          discarded$6 = this.e((byte) -34);
+          this.e((byte) -34);
           if (this.field_D) {
             if (!this.field_ob) {
               var2 = jf.a(true);

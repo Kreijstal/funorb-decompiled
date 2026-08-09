@@ -11,50 +11,39 @@ abstract class le {
     abstract void a(byte[] param0, byte param1);
 
     final static boolean a(int param0, int param1, boolean param2) {
-        StringBuilder discarded$12 = null;
-        StringBuilder discarded$13 = null;
-        StringBuilder discarded$14 = null;
-        StringBuilder discarded$15 = null;
-        StringBuilder discarded$16 = null;
-        StringBuilder discarded$17 = null;
-        StringBuilder discarded$18 = null;
-        StringBuilder discarded$19 = null;
-        StringBuilder discarded$20 = null;
-        StringBuilder discarded$21 = null;
-        StringBuilder discarded$22 = null;
-        StringBuilder discarded$23 = null;
-        int var3 = 0;
-        String var4_ref_String = null;
-        int var4 = 0;
-        int var5 = 0;
-        String var7 = null;
-        String var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        String var12 = null;
-        String var13 = null;
-        String var14 = null;
-        String var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var20 = null;
-        String var47 = null;
-        String var48 = null;
-        String var49 = null;
-        String var50 = null;
-        String var51 = null;
-        String var52 = null;
-        String var53 = null;
-        String var54 = null;
-        String var55 = null;
-        String var56 = null;
-        String var57 = null;
-        String var58 = null;
-        String var59 = null;
-        Object var60 = null;
-        CharSequence var61 = null;
+        StringBuilder discarded$0 = null;
+        int var3;
+        String var4_ref_String;
+        int var4;
+        int var5;
+        String var7;
+        String var8;
+        int var9;
+        int var10;
+        int var11;
+        String var12;
+        String var13;
+        String var14;
+        String var15;
+        String var16;
+        String var17;
+        String var18;
+        String var20;
+        String var47;
+        String var48;
+        String var49;
+        String var50;
+        String var51;
+        String var52;
+        String var53;
+        String var54;
+        String var55;
+        String var56;
+        String var57;
+        String var58;
+        String var59;
+        Object var60;
+        CharSequence var61;
         L0: {
           var60 = null;
           var11 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -153,7 +142,7 @@ abstract class le {
               if (cg.field_E.length() <= 0) {
                 return true;
               } else {
-                discarded$12 = aj.a(cg.field_E, cg.field_E.length() + -1, 83, ' ');
+                aj.a(cg.field_E, cg.field_E.length() + -1, 83, ' ');
                 return true;
               }
             } else {
@@ -172,7 +161,7 @@ abstract class le {
               if (var3 != 0) {
                 if ((cg.field_E.length() ^ -1) > -81) {
                   L5: {
-                    discarded$13 = cg.field_E.append((char) var4);
+                    discarded$0 = cg.field_E.append((char) var4);
                     var5 = 485;
                     var17 = ln.field_o;
                     var16 = v.a(var17, (byte) 17);
@@ -190,7 +179,7 @@ abstract class le {
                         L6: {
                           var5 = var5 - var10;
                           if (var5 < ho.field_f.c(cg.field_E.toString())) {
-                            discarded$14 = aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                            aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                             break L6;
                           } else {
                             break L6;
@@ -217,7 +206,7 @@ abstract class le {
                                       var49 = var48 + var18 + ": ";
                                       var5 = var5 - ho.field_f.c(var49);
                                       if (var5 < ho.field_f.c(cg.field_E.toString())) {
-                                        discarded$15 = aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                                        aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                                         break L8;
                                       } else {
                                         break L8;
@@ -230,7 +219,7 @@ abstract class le {
                                       var53 = var52 + var18 + ": ";
                                       var5 = var5 - ho.field_f.c(var53);
                                       if (var5 < ho.field_f.c(cg.field_E.toString())) {
-                                        discarded$16 = aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                                        aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                                         break L9;
                                       } else {
                                         break L9;
@@ -244,7 +233,7 @@ abstract class le {
                                     var51 = var50 + var18 + ": ";
                                     var5 = var5 - ho.field_f.c(var51);
                                     if (var5 < ho.field_f.c(cg.field_E.toString())) {
-                                      discarded$17 = aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                                      aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                                       break L10;
                                     } else {
                                       break L10;
@@ -258,7 +247,7 @@ abstract class le {
                                 if (var5 >= ho.field_f.c(cg.field_E.toString())) {
                                   return true;
                                 } else {
-                                  discarded$18 = aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                                  aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                                   return true;
                                 }
                               }
@@ -273,7 +262,7 @@ abstract class le {
                                 var56 = var55 + var18 + ": ";
                                 var5 = var5 - ho.field_f.c(var56);
                                 if (var5 < ho.field_f.c(cg.field_E.toString())) {
-                                  discarded$19 = aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                                  aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                                   break L11;
                                 } else {
                                   break L11;
@@ -286,7 +275,7 @@ abstract class le {
                                 var59 = var7 + var18 + ": ";
                                 var5 = var5 - ho.field_f.c(var59);
                                 if (var5 < ho.field_f.c(cg.field_E.toString())) {
-                                  discarded$20 = aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                                  aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                                   break L12;
                                 } else {
                                   break L12;
@@ -300,7 +289,7 @@ abstract class le {
                               var58 = var57 + var18 + ": ";
                               var5 = var5 - ho.field_f.c(var58);
                               if (var5 < ho.field_f.c(cg.field_E.toString())) {
-                                discarded$21 = aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                                aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                                 break L13;
                               } else {
                                 break L13;
@@ -318,7 +307,7 @@ abstract class le {
                           var59 = var7 + var18 + ": ";
                           var5 = var5 - ho.field_f.c(var59);
                           if (var5 < ho.field_f.c(cg.field_E.toString())) {
-                            discarded$22 = aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                            aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                             break L14;
                           } else {
                             break L14;
@@ -331,7 +320,7 @@ abstract class le {
                   if (var5 >= ho.field_f.c(cg.field_E.toString())) {
                     return true;
                   } else {
-                    discarded$23 = aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                    aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                     return true;
                   }
                 } else {

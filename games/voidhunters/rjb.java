@@ -6,10 +6,9 @@ final class rjb extends kt {
     static int field_u;
 
     final byte[] b(int param0, byte param1, int param2, int param3) {
-        byte[] discarded$2 = null;
         this.field_t = new byte[param2 * param0 * (param3 * 2)];
         if (param1 > -36) {
-          discarded$2 = this.b(-114, (byte) -82, -98, -124);
+          this.b(-114, (byte) -82, -98, -124);
           this.a(param2, (byte) -10, param0, param3);
           return this.field_t;
         } else {
@@ -19,13 +18,13 @@ final class rjb extends kt {
     }
 
     final void a(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var4 = param2 * 2;
         var5 = 255 & param1;
-        int incrementValue$2 = var4;
+        int incrementValue$1 = var4;
         var4++;
-        this.field_t[incrementValue$2] = (byte)(3 * var5 >> -1386410427);
+        this.field_t[incrementValue$1] = (byte)(3 * var5 >> -1386410427);
         if (param0 != 0) {
           field_u = 17;
           this.field_t[var4] = (byte)(var5 * 3 >> 1315515045);

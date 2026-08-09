@@ -26,7 +26,7 @@ final class gf {
     private int field_m;
 
     final void b(boolean param0) {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         if (null != og.field_rb) {
           return;
         } else {
@@ -82,9 +82,9 @@ final class gf {
             }
           } else {
             if (param0) {
-              fieldTemp$1 = this.field_i - 1;
+              fieldTemp$0 = this.field_i - 1;
               this.field_i = this.field_i - 1;
-              if ((fieldTemp$1 ^ -1) >= -1) {
+              if ((fieldTemp$0 ^ -1) >= -1) {
                 this.field_i = this.field_m;
                 if (this.field_t > eb.field_i) {
                   this.field_d = false;
@@ -125,16 +125,10 @@ final class gf {
     }
 
     private final void a(boolean param0) {
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = TrackController.field_F ? 1 : 0;
         var2 = this.field_j;
         var3 = this.field_e;
@@ -176,7 +170,7 @@ final class gf {
                           if (!param0) {
                             break L3;
                           } else {
-                            discarded$6 = this.a(-92);
+                            this.a(-92);
                             break L3;
                           }
                         }
@@ -240,7 +234,7 @@ final class gf {
                     }
                   } else {
                     L8: {
-                      discarded$7 = this.a(-92);
+                      this.a(-92);
                       if (og.field_pb != var2) {
                         this.field_b.a(var2, var3, (byte) 4);
                         break L8;
@@ -268,7 +262,7 @@ final class gf {
                     if (!param0) {
                       break L10;
                     } else {
-                      discarded$8 = this.a(-92);
+                      this.a(-92);
                       break L10;
                     }
                   }
@@ -313,7 +307,7 @@ final class gf {
                     if (!param0) {
                       break L14;
                     } else {
-                      discarded$9 = this.a(-92);
+                      this.a(-92);
                       break L14;
                     }
                   }
@@ -372,7 +366,7 @@ final class gf {
                 }
               }
             } else {
-              discarded$10 = this.a(-92);
+              this.a(-92);
               if (og.field_pb != var2) {
                 L16: {
                   this.field_b.a(var2, var3, (byte) 4);
@@ -429,7 +423,7 @@ final class gf {
               return;
             } else {
               L19: {
-                discarded$11 = this.a(-92);
+                this.a(-92);
                 if (og.field_pb != var2) {
                   this.field_b.a(var2, var3, (byte) 4);
                   break L19;
@@ -460,7 +454,6 @@ final class gf {
     }
 
     final boolean a(int param0) {
-        ih discarded$6 = null;
         if (param0 == 32130) {
           if (eb.field_i >= this.field_t) {
             if (hk.field_d <= 0) {
@@ -472,7 +465,7 @@ final class gf {
             return false;
           }
         } else {
-          discarded$6 = this.c(98);
+          this.c(98);
           if (eb.field_i >= this.field_t) {
             if (hk.field_d <= 0) {
               return false;
@@ -486,7 +479,7 @@ final class gf {
     }
 
     final ih c(int param0) {
-        ih var2 = null;
+        ih var2;
         this.field_p = wf.field_b;
         this.field_n = og.field_pb;
         this.field_b.a(this.field_f, this.field_v, (byte) 4);

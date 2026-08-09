@@ -35,16 +35,15 @@ final class id implements Runnable {
 
     final void a(byte param0) {
         try {
-            InterruptedException var2 = null;
-            Object var2_ref = null;
-            Throwable var3 = null;
-            int var4 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            Object var2 = null;
+            InterruptedException var2_ref = null;
+            int var4 = 0;
             var4 = MonkeyPuzzle2.field_F ? 1 : 0;
             if (!this.field_n) {
-              var2_ref = this;
-              synchronized (var2_ref) {
+              var2 = this;
+              synchronized (var2) {
                 L0: {
                   this.field_n = true;
                   this.notifyAll();
@@ -80,7 +79,7 @@ final class id implements Runnable {
                       } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
                         L5: {
-                          var2 = (InterruptedException) (Object) decompiledCaughtException;
+                          var2_ref = (InterruptedException) (Object) decompiledCaughtException;
                           this.field_d = null;
                           decompiledRegionSelector0 = 1;
                           break L5;
@@ -145,35 +144,35 @@ final class id implements Runnable {
     }
 
     final static String a(Throwable param0, byte param1) throws IOException {
-        String var2 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        dd var14 = null;
-        PrintWriter var20 = null;
-        StringWriter var21 = null;
-        String var22 = null;
-        BufferedReader var23 = null;
-        String var24 = null;
-        String var25 = null;
-        String var26 = null;
-        String var27 = null;
-        String var28 = null;
-        String var29 = null;
-        PrintWriter var30 = null;
-        StringWriter var31 = null;
-        String var32 = null;
-        BufferedReader var33 = null;
-        String var34 = null;
-        String var35 = null;
-        String var36 = null;
-        String var37 = null;
-        String var38 = null;
-        String var39 = null;
+        String var2;
+        BufferedReader var6;
+        String var7;
+        int var9;
+        int var10;
+        String var11;
+        int var12;
+        int var13;
+        dd var14;
+        PrintWriter var20;
+        StringWriter var21;
+        String var22;
+        BufferedReader var23;
+        String var24;
+        String var25;
+        String var26;
+        String var27;
+        String var28;
+        String var29;
+        PrintWriter var30;
+        StringWriter var31;
+        String var32;
+        BufferedReader var33;
+        String var34;
+        String var35;
+        String var36;
+        String var37;
+        String var38;
+        String var39;
         L0: {
           L1: {
             var13 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -212,74 +211,81 @@ final class id implements Runnable {
           var11 = var29;
           L2: while (true) {
             L3: {
-              var24 = var23.readLine();
-              var11 = var24;
-              var2 = var11;
-              var11 = var24;
-              if (var24 == null) {
-                var2 = var2 + "| " + var29;
-                var11 = var2;
+              L4: {
+                var24 = var23.readLine();
+                var11 = var24;
                 var2 = var11;
-                var11 = var2;
-                break L3;
-              } else {
-                var9 = var24.indexOf('(');
-                var10 = var24.indexOf(')', 1 + var9);
-                if (var13 != 0) {
-                  break L3;
+                var11 = var24;
+                if (var24 == null) {
+                  break L4;
                 } else {
-                  L4: {
+                  var9 = var24.indexOf('(');
+                  var10 = var24.indexOf(')', 1 + var9);
+                  if (var13 != 0) {
+                    break L3;
+                  } else {
                     L5: {
-                      if (0 == (var9 ^ -1)) {
-                        break L5;
-                      } else {
-                        var11 = var24.substring(0, var9);
-                        if (var13 == 0) {
-                          break L4;
+                      L6: {
+                        if (0 == (var9 ^ -1)) {
+                          break L6;
                         } else {
-                          break L5;
+                          var11 = var24.substring(0, var9);
+                          if (var13 == 0) {
+                            break L5;
+                          } else {
+                            break L6;
+                          }
+                        }
+                      }
+                      var11 = var24;
+                      var2 = var11;
+                      var2 = var11;
+                      break L5;
+                    }
+                    L7: {
+                      var25 = var11.trim();
+                      var2 = var25;
+                      var2 = var25;
+                      var26 = var25.substring(1 + var25.lastIndexOf(' '));
+                      var2 = var26;
+                      var2 = var26;
+                      var27 = var26.substring(var26.lastIndexOf('\t') + 1);
+                      var2 = var27;
+                      var2 = var27;
+                      var28 = var2 + var27;
+                      var2 = var28;
+                      var2 = var28;
+                      var2 = var28;
+                      if (var9 == -1) {
+                        break L7;
+                      } else {
+                        if ((var10 ^ -1) != 0) {
+                          var12 = var24.indexOf(".java:", var9);
+                          if (-1 >= (var12 ^ -1)) {
+                            var2 = var28 + var24.substring(5 + var12, var10);
+                            break L7;
+                          } else {
+                            break L7;
+                          }
+                        } else {
+                          break L7;
                         }
                       }
                     }
-                    var11 = var24;
-                    var2 = var11;
-                    var2 = var11;
-                    break L4;
-                  }
-                  L6: {
-                    var25 = var11.trim();
-                    var2 = var25;
-                    var2 = var25;
-                    var26 = var25.substring(1 + var25.lastIndexOf(' '));
-                    var2 = var26;
-                    var2 = var26;
-                    var27 = var26.substring(var26.lastIndexOf('\t') + 1);
-                    var2 = var27;
-                    var2 = var27;
-                    var28 = var2 + var27;
-                    var2 = var28;
-                    var2 = var28;
-                    var2 = var28;
-                    if (var9 == -1) {
-                      break L6;
+                    var2 = var2 + ' ';
+                    if (var13 == 0) {
+                      continue L2;
                     } else {
-                      if ((var10 ^ -1) != 0) {
-                        var12 = var24.indexOf(".java:", var9);
-                        if (-1 >= (var12 ^ -1)) {
-                          var2 = var28 + var24.substring(5 + var12, var10);
-                          break L6;
-                        } else {
-                          break L6;
-                        }
-                      } else {
-                        break L6;
-                      }
+                      break L4;
                     }
                   }
-                  var2 = var2 + ' ';
-                  continue L2;
                 }
               }
+              var2 = var2 + "| " + var29;
+              var11 = var2;
+              var2 = var11;
+              var11 = var2;
+              break L3;
             }
             return var2;
           }
@@ -303,76 +309,83 @@ final class id implements Runnable {
           var11 = var7;
           var2 = var11;
           var11 = var7;
-          L7: while (true) {
-            L8: {
-              var34 = var33.readLine();
-              var11 = var34;
-              var2 = var11;
-              var11 = var34;
-              if (var34 == null) {
-                var2 = var2 + "| " + var39;
-                var11 = var2;
+          L8: while (true) {
+            L9: {
+              L10: {
+                var34 = var33.readLine();
+                var11 = var34;
                 var2 = var11;
-                var11 = var2;
-                break L8;
-              } else {
-                var9 = var34.indexOf('(');
-                var10 = var34.indexOf(')', 1 + var9);
-                if (var13 != 0) {
-                  break L8;
+                var11 = var34;
+                if (var34 == null) {
+                  break L10;
                 } else {
-                  L9: {
-                    L10: {
-                      if (0 == (var9 ^ -1)) {
-                        break L10;
-                      } else {
-                        var11 = var34.substring(0, var9);
-                        if (var13 == 0) {
-                          break L9;
-                        } else {
-                          break L10;
-                        }
-                      }
-                    }
-                    var11 = var34;
-                    var2 = var11;
-                    var2 = var11;
+                  var9 = var34.indexOf('(');
+                  var10 = var34.indexOf(')', 1 + var9);
+                  if (var13 != 0) {
                     break L9;
-                  }
-                  L11: {
-                    var35 = var11.trim();
-                    var2 = var35;
-                    var2 = var35;
-                    var36 = var35.substring(1 + var35.lastIndexOf(' '));
-                    var2 = var36;
-                    var2 = var36;
-                    var37 = var36.substring(var36.lastIndexOf('\t') + 1);
-                    var2 = var37;
-                    var2 = var37;
-                    var38 = var2 + var37;
-                    var2 = var38;
-                    var2 = var38;
-                    var2 = var38;
-                    if (var9 == -1) {
-                      break L11;
-                    } else {
-                      if ((var10 ^ -1) != 0) {
-                        var12 = var34.indexOf(".java:", var9);
-                        if (-1 >= (var12 ^ -1)) {
-                          var2 = var38 + var34.substring(5 + var12, var10);
-                          break L11;
+                  } else {
+                    L11: {
+                      L12: {
+                        if (0 == (var9 ^ -1)) {
+                          break L12;
                         } else {
-                          break L11;
+                          var11 = var34.substring(0, var9);
+                          if (var13 == 0) {
+                            break L11;
+                          } else {
+                            break L12;
+                          }
                         }
+                      }
+                      var11 = var34;
+                      var2 = var11;
+                      var2 = var11;
+                      break L11;
+                    }
+                    L13: {
+                      var35 = var11.trim();
+                      var2 = var35;
+                      var2 = var35;
+                      var36 = var35.substring(1 + var35.lastIndexOf(' '));
+                      var2 = var36;
+                      var2 = var36;
+                      var37 = var36.substring(var36.lastIndexOf('\t') + 1);
+                      var2 = var37;
+                      var2 = var37;
+                      var38 = var2 + var37;
+                      var2 = var38;
+                      var2 = var38;
+                      var2 = var38;
+                      if (var9 == -1) {
+                        break L13;
                       } else {
-                        break L11;
+                        if ((var10 ^ -1) != 0) {
+                          var12 = var34.indexOf(".java:", var9);
+                          if (-1 >= (var12 ^ -1)) {
+                            var2 = var38 + var34.substring(5 + var12, var10);
+                            break L13;
+                          } else {
+                            break L13;
+                          }
+                        } else {
+                          break L13;
+                        }
                       }
                     }
+                    var2 = var2 + ' ';
+                    if (var13 == 0) {
+                      continue L8;
+                    } else {
+                      break L10;
+                    }
                   }
-                  var2 = var2 + ' ';
-                  continue L7;
                 }
               }
+              var2 = var2 + "| " + var39;
+              var11 = var2;
+              var2 = var11;
+              var11 = var2;
+              break L9;
             }
             return var2;
           }
@@ -384,15 +397,6 @@ final class id implements Runnable {
     }
 
     final void a(byte[] param0, int param1, byte param2, int param3) throws IOException {
-        RuntimeException var5 = null;
-        Object var5_ref = null;
-        int var6 = 0;
-        Throwable var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
@@ -400,14 +404,12 @@ final class id implements Runnable {
         String stackIn_30_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        Object var5 = null;
+        RuntimeException var5_ref = null;
+        int var6 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
@@ -421,8 +423,8 @@ final class id implements Runnable {
                     break L1;
                   }
                 }
-                var5_ref = this;
-                synchronized (var5_ref) {
+                var5 = this;
+                synchronized (var5) {
                   L2: {
                     var6 = 0;
                     L3: while (true) {
@@ -492,28 +494,20 @@ final class id implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
-            var5 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var5);
-            stackOut_27_1 = new StringBuilder().append("id.F(");
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_29_0 = (RuntimeException) (var5_ref);
+
+            stackIn_29_1 = new StringBuilder().append("id.F(");
+
             if (param0 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L8;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L8;
             }
           }
@@ -535,14 +529,8 @@ final class id implements Runnable {
     }
 
     final void a(int param0, boolean param1, byte[] param2, int param3) throws IOException {
-        RuntimeException var5 = null;
-        int var5_int = 0;
         int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -550,16 +538,10 @@ final class id implements Runnable {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var7 = 0;
+        int var8 = 0;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
@@ -567,8 +549,7 @@ final class id implements Runnable {
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
-              stackOut_4_0 = 0;
-              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_0 = 0;
               L1: while (true) {
                 L2: {
                   L3: {
@@ -592,8 +573,7 @@ final class id implements Runnable {
                             param0 = param0 - var5_int;
                             param3 = param3 + var5_int;
                             if (var6 == 0) {
-                              stackOut_5_0 = 0;
-                              stackIn_6_0 = stackOut_5_0;
+                              stackIn_6_0 = 0;
                               continue L1;
                             } else {
                               break L4;
@@ -620,27 +600,19 @@ final class id implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var5);
-            stackOut_17_1 = new StringBuilder().append("id.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var5);
+
+            stackIn_19_1 = new StringBuilder().append("id.E(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L5;
             }
           }
@@ -655,28 +627,26 @@ final class id implements Runnable {
 
     public final void run() {
         try {
-            IOException var1 = null;
-            Exception var1_ref = null;
-            int var1_int = 0;
-            int var2 = 0;
-            IOException var3 = null;
-            Object var3_ref = null;
-            InterruptedException var4 = null;
-            Throwable var5 = null;
-            int var6 = 0;
-            String var7 = null;
             boolean stackIn_4_0 = false;
             int stackIn_12_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            boolean stackOut_3_0 = false;
-            int stackOut_11_0 = 0;
+            boolean stackOut_3_0;
+            int var1_int = 0;
+            IOException var1 = null;
+            Exception var1_ref = null;
+            int var2 = 0;
+            Object var3 = null;
+            IOException var3_ref = null;
+            InterruptedException var4 = null;
+            int var6 = 0;
+            String var7 = null;
             var6 = MonkeyPuzzle2.field_F ? 1 : 0;
             try {
               L0: {
                 L1: while (true) {
-                  var3_ref = this;
-                  synchronized (var3_ref) {
+                  var3 = this;
+                  synchronized (var3) {
                     L2: {
                       L3: {
                         L4: {
@@ -717,8 +687,7 @@ final class id implements Runnable {
                             }
                           }
                         }
-                        stackOut_11_0 = this.field_l;
-                        stackIn_12_0 = stackOut_11_0;
+                        stackIn_12_0 = this.field_l;
                         break L3;
                       }
                       L8: {
@@ -790,7 +759,7 @@ final class id implements Runnable {
                       } catch (java.io.IOException decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         L16: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_i = true;
                           break L16;
                         }
@@ -811,7 +780,7 @@ final class id implements Runnable {
                       } catch (java.io.IOException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L19: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_i = true;
                           break L19;
                         }

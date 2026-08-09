@@ -17,19 +17,17 @@ final class qe implements Iterable {
     }
 
     final static boolean b(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 14388) {
-            discarded$0 = qe.b(106);
+            qe.b(106);
             return vh.field_j;
         }
         return vh.field_j;
     }
 
     final void a(o param0, int param1) {
-        boolean discarded$0 = false;
         try {
             if (param1 != 21693) {
-                discarded$0 = qe.b(92);
+                qe.b(92);
             }
             if (!(param0.field_g == null)) {
                 param0.c(-1);
@@ -48,8 +46,8 @@ final class qe implements Iterable {
     }
 
     final o a(int param0) {
-        int var2 = 0;
-        o var3 = null;
+        int var2;
+        o var3;
         var2 = 13 % ((21 - param0) / 47);
         var3 = this.field_a.field_f;
         if (this.field_a == var3) {

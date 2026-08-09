@@ -6,11 +6,11 @@ final class jp {
     static String field_b;
 
     final static ak a(int param0, int param1, int param2, int param3, int param4) {
-        Object var5 = null;
-        ak var5_ref = null;
-        int var6 = 0;
-        ak var7 = null;
-        ak var8 = null;
+        Object var5;
+        ak var5_ref;
+        int var6;
+        ak var7;
+        ak var8;
         var5 = null;
         var6 = CrazyCrystals.field_B;
         if (param1 >= 114) {

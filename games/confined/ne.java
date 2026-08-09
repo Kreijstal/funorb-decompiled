@@ -16,14 +16,12 @@ final class ne {
 
     final static void a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
-        ce var2 = null;
         int var3 = 0;
         ce stackIn_9_0 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ce stackOut_8_0 = null;
-        ce stackOut_7_0 = null;
+        RuntimeException var1 = null;
+        ce var2 = null;
         var3 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -37,12 +35,10 @@ final class ne {
                   if (fb.field_d[var1_int] != null) {
                     L2: {
                       if ((ih.field_a & 1 << var1_int) == 0) {
-                        stackOut_8_0 = pn.field_a;
-                        stackIn_9_0 = stackOut_8_0;
+                        stackIn_9_0 = pn.field_a;
                         break L2;
                       } else {
-                        stackOut_7_0 = vg.field_I;
-                        stackIn_9_0 = stackOut_7_0;
+                        stackIn_9_0 = vg.field_I;
                         break L2;
                       }
                     }

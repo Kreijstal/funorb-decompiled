@@ -10,8 +10,8 @@ final class fi extends ki {
     static String field_v;
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var8 = null;
-        pb var9 = null;
+        pb var8;
+        pb var9;
         if (param1 < -84) {
           if (this.b((byte) -111)) {
             var9 = kd.a(this.field_m, param3, (byte) 107);
@@ -49,7 +49,7 @@ final class fi extends ki {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        int var5;
         var5 = 22 % ((param0 - -28) / 43);
         if ((param1 ^ -1) >= 0) {
           lb.g(param2, param3, 153, 240, 16777215, 11184810);
@@ -156,10 +156,7 @@ final class fi extends ki {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        pb var6 = null;
+        pb var6;
         if (this.b((byte) -125)) {
           var6 = ge.a(this.field_m, param3, -20777);
           if (var6.a((byte) -84, param3, this.field_m)) {
@@ -167,7 +164,7 @@ final class fi extends ki {
             if (param0) {
               return;
             } else {
-              discarded$6 = this.a(false);
+              this.a(false);
               return;
             }
           } else {
@@ -175,7 +172,7 @@ final class fi extends ki {
             var6.a(this.field_m, param3, (byte) 78);
             mn.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
             if (!param0) {
-              discarded$7 = this.a(false);
+              this.a(false);
               return;
             } else {
               return;
@@ -186,7 +183,7 @@ final class fi extends ki {
           if (param0) {
             return;
           } else {
-            discarded$8 = this.a(false);
+            this.a(false);
             return;
           }
         }

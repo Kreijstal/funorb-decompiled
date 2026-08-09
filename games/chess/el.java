@@ -17,7 +17,7 @@ final class el extends cm {
     }
 
     final static void a(int param0, int param1) {
-        nk var2 = null;
+        nk var2;
         var2 = qn.field_U;
         var2.f(param1, -60);
         if (param0 != 4) {

@@ -41,33 +41,24 @@ final class sua extends kna {
     }
 
     final static void r(byte param0) {
-        goa discarded$4 = null;
-        goa discarded$5 = null;
-        int var1 = 0;
-        L0: {
-          if ((ot.field_v ^ -1) <= -225) {
-            break L0;
+        int var1;
+        if ((ot.field_v ^ -1) <= -225) {
+          mp.a(2, 256);
+          if (param0 == 63) {
+            return;
           } else {
-            var1 = ot.field_v % 32;
-            mp.a(2, -var1 + (ot.field_v + 32));
-            if (!TombRacer.field_G) {
-              if (param0 != 63) {
-                discarded$4 = sua.A(63);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              break L0;
-            }
+            sua.A(63);
+            return;
           }
-        }
-        mp.a(2, 256);
-        if (param0 == 63) {
-          return;
         } else {
-          discarded$5 = sua.A(63);
-          return;
+          var1 = ot.field_v % 32;
+          mp.a(2, -var1 + (ot.field_v + 32));
+          if (param0 == 63) {
+            return;
+          } else {
+            sua.A(63);
+            return;
+          }
         }
     }
 
@@ -95,23 +86,12 @@ final class sua extends kna {
         nq var7 = null;
         fsa var8 = null;
         fsa stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fsa stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var8 = new fsa(param2, param0);
@@ -129,35 +109,26 @@ final class sua extends kna {
             var7 = (nq) ((Object) var6.a(16, 124));
             var7.b(8022, 2);
             var8.a(var5, (byte) 124, var7);
-            stackOut_0_0 = (fsa) (var8);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = (fsa) (var8);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var4);
-            stackOut_2_1 = new StringBuilder().append("sua.AC(").append(param0).append(',').append(param1).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var4);
+
+            stackIn_4_1 = new StringBuilder().append("sua.AC(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -185,8 +156,15 @@ final class sua extends kna {
     }
 
     final static byte[] a(byte[] param0, int param1) {
-        goa discarded$2 = null;
-        int discarded$3 = 0;
+        byte[] stackIn_21_0 = null;
+        byte[] stackIn_23_0 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -194,33 +172,11 @@ final class sua extends kna {
         int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
-        Throwable var8 = null;
         uia var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
-        byte[] stackIn_22_0 = null;
-        byte[] stackIn_24_0 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
-        byte[] stackOut_23_0 = null;
-        byte[] stackOut_21_0 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
         try {
           L0: {
             L1: {
@@ -230,7 +186,7 @@ final class sua extends kna {
               if (param1 <= -99) {
                 break L1;
               } else {
-                discarded$2 = sua.A(-108);
+                sua.A(-108);
                 break L1;
               }
             }
@@ -254,8 +210,7 @@ final class sua extends kna {
                   var11 = var13;
                   var5 = var11;
                   var9.a(var13, 0, -86, var4);
-                  stackOut_23_0 = (byte[]) (var5);
-                  stackIn_24_0 = stackOut_23_0;
+                  stackIn_23_0 = (byte[]) (var5);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -276,32 +231,24 @@ final class sua extends kna {
                         }
                       }
                       L6: {
-                        L7: {
-                          var12 = new byte[var5_int];
-                          var10 = var12;
-                          var6 = var10;
-                          if (-2 == (var3 ^ -1)) {
-                            break L7;
-                          } else {
-                            var7 = sma.field_e;
-                            synchronized (var7) {
-                              L8: {
-                                sma.field_e.a((byte) -34, var12, var9);
-                                break L8;
-                              }
-                            }
-                            if (!TombRacer.field_G) {
-                              break L6;
-                            } else {
+                        var12 = new byte[var5_int];
+                        var10 = var12;
+                        var6 = var10;
+                        if (-2 == (var3 ^ -1)) {
+                          kr.a(var12, var5_int, param0, var4, 9);
+                          break L6;
+                        } else {
+                          var7 = sma.field_e;
+                          synchronized (var7) {
+                            L7: {
+                              sma.field_e.a((byte) -34, var12, var9);
                               break L7;
                             }
                           }
+                          break L6;
                         }
-                        discarded$3 = kr.a(var12, var5_int, param0, var4, 9);
-                        break L6;
                       }
-                      stackOut_21_0 = (byte[]) (var6);
-                      stackIn_22_0 = stackOut_21_0;
+                      stackIn_21_0 = (byte[]) (var6);
                       decompiledRegionSelector0 = 0;
                       break L0;
                     }
@@ -314,38 +261,30 @@ final class sua extends kna {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var2);
-            stackOut_25_1 = new StringBuilder().append("sua.UB(");
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_26_0 = (RuntimeException) (var2);
+
+            stackIn_26_1 = new StringBuilder().append("sua.UB(");
+
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
-              break L9;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
+              break L8;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
-              break L9;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
+              break L8;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param1 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_22_0;
+          return stackIn_21_0;
         } else {
-          return stackIn_24_0;
+          return stackIn_23_0;
         }
     }
 
@@ -378,7 +317,7 @@ final class sua extends kna {
     }
 
     final static goa A(int param0) {
-        String var1 = null;
+        String var1;
         var1 = cs.a((byte) -112);
         if (param0 >= 46) {
           if (var1 != null) {

@@ -44,62 +44,44 @@ final class op extends de {
     }
 
     final static tf[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        tf var9 = null;
-        tf var10 = null;
-        tf var11 = null;
-        tf var12 = null;
-        tf var13 = null;
-        Object var14 = null;
-        int[] var15 = null;
         tf var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
-        L0: {
-          var18 = t.field_k;
-          var17 = var18;
-          var15 = var17;
-          var6 = var15;
-          var7 = t.field_j;
-          var8 = t.field_d;
-          var9 = new tf(param5, -(2 * param5) + param3);
-          var9.c();
-          t.g(0, 0, param5, -(2 * param5) + param3, param2, param0);
-          var10 = new tf(param5, param5);
-          var10.c();
-          t.d(0, 0, param5, param5, param2);
-          var11 = new tf(param1, param5);
-          var11.c();
-          t.d(0, 0, 16, param5, param2);
-          var12 = new tf(param5, param5);
-          var12.c();
-          t.d(0, 0, param5, param5, param0);
-          var13 = new tf(16, param5);
-          var13.c();
-          t.d(0, 0, 16, param5, param0);
-          var14 = null;
-          if (param4 > 0) {
+        int[] var18 = t.field_k;
+        int[] var17 = var18;
+        int[] var15 = var17;
+        int[] var6 = var15;
+        int var7 = t.field_j;
+        int var8 = t.field_d;
+        tf var9 = new tf(param5, -(2 * param5) + param3);
+        var9.c();
+        t.g(0, 0, param5, -(2 * param5) + param3, param2, param0);
+        tf var10 = new tf(param5, param5);
+        var10.c();
+        t.d(0, 0, param5, param5, param2);
+        tf var11 = new tf(param1, param5);
+        var11.c();
+        t.d(0, 0, 16, param5, param2);
+        tf var12 = new tf(param5, param5);
+        var12.c();
+        t.d(0, 0, param5, param5, param0);
+        tf var13 = new tf(16, param5);
+        var13.c();
+        t.d(0, 0, 16, param5, param0);
+        Object var14 = null;
+        if (!(param4 <= 0)) {
             var16 = new tf(16, 16);
             var14 = var16;
             var16.c();
             t.d(0, 0, 16, 16, param4);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         t.a(var18, var7, var8);
         return new tf[]{var10, var11, var10, var9, (tf) (var14), var9, var12, var13, var12};
     }
 
     final void a(int param0, byte param1, boolean param2) {
-        int discarded$1 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        int var7 = 0;
+        int var7;
+        int var4;
+        int var5;
+        String var6;
         L0: {
           var7 = Pixelate.field_H ? 1 : 0;
           if (param0 == 0) {
@@ -185,7 +167,7 @@ final class op extends de {
           if (param1 < -103) {
             break L3;
           } else {
-            discarded$1 = this.a(125, (byte) 57);
+            this.a(125, (byte) 57);
             break L3;
           }
         }
@@ -209,13 +191,11 @@ final class op extends de {
         if (param1) {
             this.a(103, -99, false);
         }
-        if ((param0 ^ -1) != -2) {
-            if (2 != param0) {
-                if ((param0 ^ -1) >= -3) {
-                    return super.a(param0, false);
-                }
-                return 500;
+        if ((param0 ^ -1) != -2 && 2 != param0) {
+            if ((param0 ^ -1) >= -3) {
+                return super.a(param0, false);
             }
+            return 500;
         }
         return lo.field_Jb - -hf.field_k;
     }
@@ -242,26 +222,13 @@ final class op extends de {
     }
 
     final int a(int param0, int param1) {
-        L0: {
-          if (param0 == -28071) {
-            break L0;
-          } else {
+        if (param0 != -28071) {
             op.f((byte) -35);
-            break L0;
-          }
         }
-        L1: {
-          if (1 == param1) {
-            break L1;
-          } else {
-            if (2 != param1) {
-              return super.a(-28071, param1);
-            } else {
-              break L1;
-            }
-          }
+        if (1 == param1 || 2 == param1) {
+            return rn.field_b;
         }
-        return rn.field_b;
+        return super.a(-28071, param1);
     }
 
     final void c(byte param0) {
@@ -272,23 +239,19 @@ final class op extends de {
     }
 
     final void b(int param0) {
-        boolean discarded$1 = false;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        boolean discarded$0 = false;
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = Pixelate.field_H ? 1 : 0;
           if (param0 < -35) {
             break L0;
           } else {
-            discarded$1 = this.a(true, 60);
+            discarded$0 = this.a(true, 60);
             break L0;
           }
         }
@@ -298,12 +261,10 @@ final class op extends de {
               if ((ke.field_a ^ -1) == -100) {
                 L3: {
                   if (98 != ke.field_a) {
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = 0;
                     break L3;
                   } else {
-                    stackOut_10_0 = 1;
-                    stackIn_12_0 = stackOut_10_0;
+                    stackIn_12_0 = 1;
                     break L3;
                   }
                 }
@@ -316,12 +277,10 @@ final class op extends de {
             } else {
               L4: {
                 if (98 != ke.field_a) {
-                  stackOut_5_0 = 0;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = 0;
                   break L4;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L4;
                 }
               }
@@ -436,32 +395,16 @@ final class op extends de {
     }
 
     final int a(int param0, int param1, int param2) {
-        int var4 = 0;
-        if (param2 < -110) {
-          L0: {
-            var4 = super.a(param0, param1, -112);
-            if (2 >= var4) {
-              break L0;
-            } else {
-              L1: {
-                if (param1 < 182) {
-                  break L1;
-                } else {
-                  if ((param1 ^ -1) >= -351) {
-                    break L0;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              var4 = -1;
-              break L0;
-            }
-          }
-          return var4;
-        } else {
-          return -71;
+        if (param2 >= -110) {
+            return -71;
         }
+        int var4 = super.a(param0, param1, -112);
+        if (2 < var4) {
+            if (param1 < 182 || (param1 ^ -1) < -351) {
+                var4 = -1;
+            }
+        }
+        return var4;
     }
 
     final int a(int param0, byte param1) {
@@ -469,13 +412,11 @@ final class op extends de {
         if (param1 != 90) {
             discarded$0 = this.a(false, 70);
         }
-        if (1 != param0) {
-            if ((param0 ^ -1) != -3) {
-                if (2 >= param0) {
-                    return super.a(param0, (byte) 90);
-                }
-                return 300;
+        if (1 != param0 && (param0 ^ -1) != -3) {
+            if (2 >= param0) {
+                return super.a(param0, (byte) 90);
             }
+            return 300;
         }
         return lo.field_Jb;
     }
@@ -511,11 +452,11 @@ final class op extends de {
 
     final static void e(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -560,50 +501,26 @@ final class op extends de {
     }
 
     final void a(byte param0, boolean param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        ob stackIn_15_0 = null;
-        String stackIn_15_1 = null;
-        int stackIn_15_2 = 0;
-        int stackIn_15_3 = 0;
-        ob stackIn_16_0 = null;
-        String stackIn_16_1 = null;
-        int stackIn_16_2 = 0;
-        int stackIn_16_3 = 0;
+        ob stackIn_16_0;
+        String stackIn_16_1;
+        int stackIn_16_2;
+        int stackIn_16_3;
         ob stackIn_17_0 = null;
         String stackIn_17_1 = null;
         int stackIn_17_2 = 0;
         int stackIn_17_3 = 0;
         int stackIn_17_4 = 0;
-        tf[] stackIn_19_0 = null;
         tf[] stackIn_20_0 = null;
         tf[] stackIn_21_0 = null;
         int stackIn_21_1 = 0;
-        ob stackOut_14_0 = null;
-        String stackOut_14_1 = null;
-        int stackOut_14_2 = 0;
-        int stackOut_14_3 = 0;
-        ob stackOut_16_0 = null;
-        String stackOut_16_1 = null;
-        int stackOut_16_2 = 0;
-        int stackOut_16_3 = 0;
-        int stackOut_16_4 = 0;
-        ob stackOut_15_0 = null;
-        String stackOut_15_1 = null;
-        int stackOut_15_2 = 0;
-        int stackOut_15_3 = 0;
-        int stackOut_15_4 = 0;
-        tf[] stackOut_18_0 = null;
-        tf[] stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        tf[] stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
+        int var4;
+        int var5;
+        String var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         L0: {
           var11 = Pixelate.field_H ? 1 : 0;
           if (param0 <= -116) {
@@ -646,41 +563,27 @@ final class op extends de {
                     }
                   }
                   L4: {
-                    stackOut_14_0 = rk.field_e;
-                    stackOut_14_1 = (String) (var6);
-                    stackOut_14_2 = var9;
-                    stackOut_14_3 = var10 - -rk.field_e.field_w;
-                    stackIn_16_0 = stackOut_14_0;
-                    stackIn_16_1 = stackOut_14_1;
-                    stackIn_16_2 = stackOut_14_2;
-                    stackIn_16_3 = stackOut_14_3;
-                    stackIn_15_0 = stackOut_14_0;
-                    stackIn_15_1 = stackOut_14_1;
-                    stackIn_15_2 = stackOut_14_2;
-                    stackIn_15_3 = stackOut_14_3;
+                    stackIn_16_0 = rk.field_e;
+
+                    stackIn_16_1 = (String) (var6);
+
+                    stackIn_16_2 = var9;
+
+                    stackIn_16_3 = var10 - -rk.field_e.field_w;
+
                     if (!param1) {
-                      stackOut_16_0 = (ob) ((Object) stackIn_16_0);
-                      stackOut_16_1 = (String) ((Object) stackIn_16_1);
-                      stackOut_16_2 = stackIn_16_2;
-                      stackOut_16_3 = stackIn_16_3;
-                      stackOut_16_4 = 2;
-                      stackIn_17_0 = stackOut_16_0;
-                      stackIn_17_1 = stackOut_16_1;
-                      stackIn_17_2 = stackOut_16_2;
-                      stackIn_17_3 = stackOut_16_3;
-                      stackIn_17_4 = stackOut_16_4;
+                      stackIn_17_0 = (ob) ((Object) stackIn_16_0);
+                      stackIn_17_1 = (String) ((Object) stackIn_16_1);
+                      stackIn_17_2 = stackIn_16_2;
+                      stackIn_17_3 = stackIn_16_3;
+                      stackIn_17_4 = 2;
                       break L4;
                     } else {
-                      stackOut_15_0 = (ob) ((Object) stackIn_15_0);
-                      stackOut_15_1 = (String) ((Object) stackIn_15_1);
-                      stackOut_15_2 = stackIn_15_2;
-                      stackOut_15_3 = stackIn_15_3;
-                      stackOut_15_4 = 0;
-                      stackIn_17_0 = stackOut_15_0;
-                      stackIn_17_1 = stackOut_15_1;
-                      stackIn_17_2 = stackOut_15_2;
-                      stackIn_17_3 = stackOut_15_3;
-                      stackIn_17_4 = stackOut_15_4;
+                      stackIn_17_0 = (ob) ((Object) stackIn_16_0);
+                      stackIn_17_1 = (String) ((Object) stackIn_16_1);
+                      stackIn_17_2 = stackIn_16_2;
+                      stackIn_17_3 = stackIn_16_3;
+                      stackIn_17_4 = 0;
                       break L4;
                     }
                   }
@@ -690,20 +593,15 @@ final class op extends de {
                       break L5;
                     } else {
                       L6: {
-                        stackOut_18_0 = ih.field_a;
-                        stackIn_20_0 = stackOut_18_0;
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_20_0 = ih.field_a;
+
                         if (!param1) {
-                          stackOut_20_0 = (tf[]) ((Object) stackIn_20_0);
-                          stackOut_20_1 = 0;
-                          stackIn_21_0 = stackOut_20_0;
-                          stackIn_21_1 = stackOut_20_1;
+                          stackIn_21_0 = (tf[]) ((Object) stackIn_20_0);
+                          stackIn_21_1 = 0;
                           break L6;
                         } else {
-                          stackOut_19_0 = (tf[]) ((Object) stackIn_19_0);
-                          stackOut_19_1 = 1;
-                          stackIn_21_0 = stackOut_19_0;
-                          stackIn_21_1 = stackOut_19_1;
+                          stackIn_21_0 = (tf[]) ((Object) stackIn_20_0);
+                          stackIn_21_1 = 1;
                           break L6;
                         }
                       }

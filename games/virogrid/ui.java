@@ -71,7 +71,7 @@ public class ui {
     }
 
     public static File a(String param0, byte param1) {
-        String var3 = null;
+        String var3;
         if (param1 != -83) {
           var3 = (String) null;
           ui.a((byte) -20, -119, (String) null);

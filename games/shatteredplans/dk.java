@@ -29,7 +29,6 @@ final class dk {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int discarded$0 = 0;
         try {
             var2_int = pd.field_k;
             var3 = bb.field_b;
@@ -41,14 +40,14 @@ final class dk {
             var9 = uq.a(20, 0, var7, var3);
             gf.b(var8, var9, var6, var7, 0);
             gf.d(1 + var8, 1 + var9, -2 + var6, var7 + -2, 16777088);
-            discarded$0 = ii.field_u.field_nb.a(param1, var8 + 3, s.field_i + (1 + var9 - ii.field_u.field_nb.field_J), 500, 1000, 0, -1, 0, 0, cr.field_c);
+            ii.field_u.field_nb.a(param1, var8 + 3, s.field_i + (1 + var9 - ii.field_u.field_nb.field_J), 500, 1000, 0, -1, 0, 0, cr.field_c);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) ((Object) runtimeException), "dk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(byte param0, char param1) {
-        int var2 = 0;
+        int var2;
         var2 = 56 % ((param0 - -3) / 56);
         if (param1 >= 48) {
           if (param1 > 57) {

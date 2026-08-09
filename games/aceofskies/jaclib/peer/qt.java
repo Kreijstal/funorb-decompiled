@@ -17,6 +17,7 @@ public final class qt {
     }
 
     private final void a(jaclib.peer.PeerReference param0, int param1) {
+        param0.a(param1 + 26222);
         if (param1 == -26315) {
           if (param0 != this.c) {
             if (param0 == this.b) {
@@ -203,8 +204,8 @@ public final class qt {
     }
 
     private final void a(int param0) {
-        java.lang.ref.Reference var2 = null;
-        jaclib.peer.PeerReference var3 = null;
+        java.lang.ref.Reference var2;
+        jaclib.peer.PeerReference var3;
         L0: while (true) {
           var2 = this.a.poll();
           if (var2 != null) {

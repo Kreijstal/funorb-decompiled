@@ -27,10 +27,10 @@ final class hc extends rra {
     }
 
     final void a(int param0, int param1, boolean param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var4 = this.field_i * param0 >> -432891284;
         var5 = this.field_f * param0 >> 2107257548;
         var6 = param1 * this.field_g >> -1386539956;

@@ -50,28 +50,19 @@ abstract class ud extends ch {
     private final int d(boolean param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0) {
           L0: {
             field_L = (int[]) null;
             if (this.field_N) {
               if (this != this.field_M.n(640)) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = 0;
                 break L0;
               } else {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 256;
                 break L0;
               }
             } else {
-              stackOut_8_0 = 0;
-              stackIn_12_0 = stackOut_8_0;
+              stackIn_12_0 = 0;
               break L0;
             }
           }
@@ -80,17 +71,14 @@ abstract class ud extends ch {
           L1: {
             if (this.field_N) {
               if (this != this.field_M.n(640)) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L1;
               } else {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L1;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L1;
             }
           }
@@ -119,7 +107,7 @@ abstract class ud extends ch {
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
-        int var5 = 0;
+        int var5;
         if (this.field_J != 0) {
           if (256 > this.field_J) {
             if (null != fd.field_a) {
@@ -181,8 +169,6 @@ abstract class ud extends ch {
     }
 
     boolean c(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_8_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_24_0 = 0;
@@ -191,22 +177,8 @@ abstract class ud extends ch {
         int stackIn_45_0 = 0;
         int stackIn_53_0 = 0;
         int stackIn_59_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
+        int var2;
+        int var3;
         if (!param0) {
           var2 = this.d(param0);
           var3 = -this.field_J + var2;
@@ -224,15 +196,13 @@ abstract class ud extends ch {
                       if (this.field_N) {
                         break L1;
                       } else {
-                        stackOut_57_0 = 1;
-                        stackIn_59_0 = stackOut_57_0;
+                        stackIn_59_0 = 1;
                         break L0;
                       }
                     }
                   }
                 }
-                stackOut_58_0 = 0;
-                stackIn_59_0 = stackOut_58_0;
+                stackIn_59_0 = 0;
                 break L0;
               }
               return stackIn_59_0 != 0;
@@ -248,15 +218,13 @@ abstract class ud extends ch {
                       if (this.field_N) {
                         break L3;
                       } else {
-                        stackOut_51_0 = 1;
-                        stackIn_53_0 = stackOut_51_0;
+                        stackIn_53_0 = 1;
                         break L2;
                       }
                     }
                   }
                 }
-                stackOut_52_0 = 0;
-                stackIn_53_0 = stackOut_52_0;
+                stackIn_53_0 = 0;
                 break L2;
               }
               return stackIn_53_0 != 0;
@@ -276,15 +244,13 @@ abstract class ud extends ch {
                       if (this.field_N) {
                         break L5;
                       } else {
-                        stackOut_43_0 = 1;
-                        stackIn_45_0 = stackOut_43_0;
+                        stackIn_45_0 = 1;
                         break L4;
                       }
                     }
                   }
                 }
-                stackOut_44_0 = 0;
-                stackIn_45_0 = stackOut_44_0;
+                stackIn_45_0 = 0;
                 break L4;
               }
               return stackIn_45_0 != 0;
@@ -300,15 +266,13 @@ abstract class ud extends ch {
                       if (this.field_N) {
                         break L7;
                       } else {
-                        stackOut_37_0 = 1;
-                        stackIn_39_0 = stackOut_37_0;
+                        stackIn_39_0 = 1;
                         break L6;
                       }
                     }
                   }
                 }
-                stackOut_38_0 = 0;
-                stackIn_39_0 = stackOut_38_0;
+                stackIn_39_0 = 0;
                 break L6;
               }
               return stackIn_39_0 != 0;
@@ -332,15 +296,13 @@ abstract class ud extends ch {
                       if (this.field_N) {
                         break L9;
                       } else {
-                        stackOut_28_0 = 1;
-                        stackIn_30_0 = stackOut_28_0;
+                        stackIn_30_0 = 1;
                         break L8;
                       }
                     }
                   }
                 }
-                stackOut_29_0 = 0;
-                stackIn_30_0 = stackOut_29_0;
+                stackIn_30_0 = 0;
                 break L8;
               }
               return stackIn_30_0 != 0;
@@ -357,15 +319,13 @@ abstract class ud extends ch {
                       if (this.field_N) {
                         break L11;
                       } else {
-                        stackOut_22_0 = 1;
-                        stackIn_24_0 = stackOut_22_0;
+                        stackIn_24_0 = 1;
                         break L10;
                       }
                     }
                   }
                 }
-                stackOut_23_0 = 0;
-                stackIn_24_0 = stackOut_23_0;
+                stackIn_24_0 = 0;
                 break L10;
               }
               return stackIn_24_0 != 0;
@@ -379,12 +339,10 @@ abstract class ud extends ch {
                 } else {
                   L12: {
                     if (this.field_N) {
-                      stackOut_14_0 = 0;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 0;
                       break L12;
                     } else {
-                      stackOut_13_0 = 1;
-                      stackIn_15_0 = stackOut_13_0;
+                      stackIn_15_0 = 1;
                       break L12;
                     }
                   }
@@ -405,15 +363,13 @@ abstract class ud extends ch {
                       if (this.field_N) {
                         break L14;
                       } else {
-                        stackOut_6_0 = 1;
-                        stackIn_8_0 = stackOut_6_0;
+                        stackIn_8_0 = 1;
                         break L13;
                       }
                     }
                   }
                 }
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 0;
                 break L13;
               }
               return stackIn_8_0 != 0;

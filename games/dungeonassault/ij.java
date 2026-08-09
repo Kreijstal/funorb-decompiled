@@ -20,14 +20,12 @@ final class ij extends c {
     }
 
     final void a(int param0, boolean param1, java.awt.Graphics param2, int param3) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
         if (!param1) {
           this.field_i = (java.awt.Component) null;
-          discarded$4 = param2.drawImage(this.field_a, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_i));
+          param2.drawImage(this.field_a, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_i));
           return;
         } else {
-          discarded$5 = param2.drawImage(this.field_a, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_i));
+          param2.drawImage(this.field_a, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_i));
           return;
         }
     }

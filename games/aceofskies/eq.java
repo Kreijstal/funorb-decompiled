@@ -7,11 +7,11 @@ abstract class eq extends wf {
     static gh field_e;
 
     final static void a(byte param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         uk var4 = null;
         oh var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {

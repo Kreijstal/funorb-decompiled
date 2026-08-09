@@ -15,21 +15,17 @@ final class vo {
     }
 
     final static void a(bc param0, bc param1, int param2) {
-        qf discarded$0 = null;
-        qf discarded$1 = null;
-        qf discarded$2 = null;
-        qf discarded$3 = null;
         try {
             mj.field_Sb = new io(param1, param0);
-            discarded$0 = gg.a(param2 + 28, 153, "shatteredplans_menu_open");
-            discarded$1 = gg.a(128, 153, "shatteredplans_menu_close");
+            gg.a(param2 + 28, 153, "shatteredplans_menu_open");
+            gg.a(128, 153, "shatteredplans_menu_close");
             us.field_d = gg.a(128, 256, "shatteredplans_ship_selection");
             hs.field_l = gg.a(128, 256, "shatteredplans_ship_move_order");
             jj.field_l = gg.a(128, 256, "shatteredplans_ship_attack_order");
             qc.field_w = gg.a(128, 256, "shatteredplans_factory_noise");
             pd.field_m = jj.a((byte) -111, 120, "shatteredplans_explosion");
-            discarded$2 = gg.a(128, param2, "shatteredplans_tab_open");
-            discarded$3 = gg.a(128, 100, "shatteredplans_tab_close");
+            gg.a(128, param2, "shatteredplans_tab_open");
+            gg.a(128, 100, "shatteredplans_tab_close");
             ub.field_yb = gg.a(param2 ^ 228, 256, "shatteredplans_next_open");
             sf.field_g = gg.a(128, 256, "shatteredplans_next_close");
         } catch (RuntimeException runtimeException) {

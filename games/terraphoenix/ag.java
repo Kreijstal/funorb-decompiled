@@ -33,7 +33,7 @@ final class ag {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var9 = 0;
+        int var9;
         var9 = Terraphoenix.field_V;
         if (param4 != 29842) {
           ag.a((byte) -90);

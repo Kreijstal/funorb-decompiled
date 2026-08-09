@@ -27,7 +27,7 @@ final class hb implements Iterable {
     }
 
     final kd a(int param0) {
-        kd var2 = null;
+        kd var2;
         L0: {
           if (param0 == 12515) {
             break L0;
@@ -67,8 +67,15 @@ final class hb implements Iterable {
     }
 
     final static void a(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7, int param8) {
-        RuntimeException var9 = null;
+        RuntimeException stackIn_91_0 = null;
+        StringBuilder stackIn_91_1 = null;
+        RuntimeException stackIn_92_0 = null;
+        StringBuilder stackIn_92_1 = null;
+        String stackIn_92_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var9_int = 0;
+        RuntimeException var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -80,23 +87,6 @@ final class hb implements Iterable {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        RuntimeException stackIn_90_0 = null;
-        StringBuilder stackIn_90_1 = null;
-        RuntimeException stackIn_91_0 = null;
-        StringBuilder stackIn_91_1 = null;
-        RuntimeException stackIn_92_0 = null;
-        StringBuilder stackIn_92_1 = null;
-        String stackIn_92_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_89_0 = null;
-        StringBuilder stackOut_89_1 = null;
-        RuntimeException stackOut_91_0 = null;
-        StringBuilder stackOut_91_1 = null;
-        String stackOut_91_2 = null;
-        RuntimeException stackOut_90_0 = null;
-        StringBuilder stackOut_90_1 = null;
-        String stackOut_90_2 = null;
         var20 = SteelSentinels.field_G;
         try {
           L0: {
@@ -414,27 +404,19 @@ final class hb implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L19: {
             var9 = decompiledCaughtException;
-            stackOut_89_0 = (RuntimeException) (var9);
-            stackOut_89_1 = new StringBuilder().append("hb.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_91_0 = stackOut_89_0;
-            stackIn_91_1 = stackOut_89_1;
-            stackIn_90_0 = stackOut_89_0;
-            stackIn_90_1 = stackOut_89_1;
+            stackIn_91_0 = (RuntimeException) (var9);
+
+            stackIn_91_1 = new StringBuilder().append("hb.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_91_0 = (RuntimeException) ((Object) stackIn_91_0);
-              stackOut_91_1 = (StringBuilder) ((Object) stackIn_91_1);
-              stackOut_91_2 = "null";
-              stackIn_92_0 = stackOut_91_0;
-              stackIn_92_1 = stackOut_91_1;
-              stackIn_92_2 = stackOut_91_2;
+              stackIn_92_0 = (RuntimeException) ((Object) stackIn_91_0);
+              stackIn_92_1 = (StringBuilder) ((Object) stackIn_91_1);
+              stackIn_92_2 = "null";
               break L19;
             } else {
-              stackOut_90_0 = (RuntimeException) ((Object) stackIn_90_0);
-              stackOut_90_1 = (StringBuilder) ((Object) stackIn_90_1);
-              stackOut_90_2 = "{...}";
-              stackIn_92_0 = stackOut_90_0;
-              stackIn_92_1 = stackOut_90_1;
-              stackIn_92_2 = stackOut_90_2;
+              stackIn_92_0 = (RuntimeException) ((Object) stackIn_91_0);
+              stackIn_92_1 = (StringBuilder) ((Object) stackIn_91_1);
+              stackIn_92_2 = "{...}";
               break L19;
             }
           }
@@ -618,8 +600,19 @@ final class hb implements Iterable {
     }
 
     final static void a(byte param0, wk[] param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        int stackIn_10_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_19_0 = 0;
+        RuntimeException stackIn_76_0 = null;
+        StringBuilder stackIn_76_1 = null;
+        RuntimeException stackIn_77_0 = null;
+        StringBuilder stackIn_77_1 = null;
+        String stackIn_77_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -637,35 +630,6 @@ final class hb implements Iterable {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_19_0 = 0;
-        RuntimeException stackIn_75_0 = null;
-        StringBuilder stackIn_75_1 = null;
-        RuntimeException stackIn_76_0 = null;
-        StringBuilder stackIn_76_1 = null;
-        RuntimeException stackIn_77_0 = null;
-        StringBuilder stackIn_77_1 = null;
-        String stackIn_77_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_74_0 = null;
-        StringBuilder stackOut_74_1 = null;
-        RuntimeException stackOut_76_0 = null;
-        StringBuilder stackOut_76_1 = null;
-        String stackOut_76_2 = null;
-        RuntimeException stackOut_75_0 = null;
-        StringBuilder stackOut_75_1 = null;
-        String stackOut_75_2 = null;
         var23 = SteelSentinels.field_G;
         try {
           L0: {
@@ -679,48 +643,40 @@ final class hb implements Iterable {
                   } else {
                     L2: {
                       if (null == param1[3]) {
-                        stackOut_9_0 = 0;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = 0;
                         break L2;
                       } else {
-                        stackOut_8_0 = param1[3].field_z;
-                        stackIn_10_0 = stackOut_8_0;
+                        stackIn_10_0 = param1[3].field_z;
                         break L2;
                       }
                     }
                     L3: {
                       var6_int = stackIn_10_0;
                       if (param1[5] != null) {
-                        stackOut_12_0 = param1[5].field_z;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = param1[5].field_z;
                         break L3;
                       } else {
-                        stackOut_11_0 = 0;
-                        stackIn_13_0 = stackOut_11_0;
+                        stackIn_13_0 = 0;
                         break L3;
                       }
                     }
                     L4: {
                       var7 = stackIn_13_0;
                       if (param1[1] != null) {
-                        stackOut_15_0 = param1[1].field_B;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = param1[1].field_B;
                         break L4;
                       } else {
-                        stackOut_14_0 = 0;
-                        stackIn_16_0 = stackOut_14_0;
+                        stackIn_16_0 = 0;
                         break L4;
                       }
                     }
                     L5: {
                       var8 = stackIn_16_0;
                       if (param1[7] == null) {
-                        stackOut_18_0 = 0;
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_0 = 0;
                         break L5;
                       } else {
-                        stackOut_17_0 = param1[7].field_B;
-                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_19_0 = param1[7].field_B;
                         break L5;
                       }
                     }
@@ -933,27 +889,19 @@ final class hb implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L23: {
             var6 = decompiledCaughtException;
-            stackOut_74_0 = (RuntimeException) (var6);
-            stackOut_74_1 = new StringBuilder().append("hb.C(").append(param0).append(',');
-            stackIn_76_0 = stackOut_74_0;
-            stackIn_76_1 = stackOut_74_1;
-            stackIn_75_0 = stackOut_74_0;
-            stackIn_75_1 = stackOut_74_1;
+            stackIn_76_0 = (RuntimeException) (var6);
+
+            stackIn_76_1 = new StringBuilder().append("hb.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_76_0 = (RuntimeException) ((Object) stackIn_76_0);
-              stackOut_76_1 = (StringBuilder) ((Object) stackIn_76_1);
-              stackOut_76_2 = "null";
-              stackIn_77_0 = stackOut_76_0;
-              stackIn_77_1 = stackOut_76_1;
-              stackIn_77_2 = stackOut_76_2;
+              stackIn_77_0 = (RuntimeException) ((Object) stackIn_76_0);
+              stackIn_77_1 = (StringBuilder) ((Object) stackIn_76_1);
+              stackIn_77_2 = "null";
               break L23;
             } else {
-              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
-              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
-              stackOut_75_2 = "{...}";
-              stackIn_77_0 = stackOut_75_0;
-              stackIn_77_1 = stackOut_75_1;
-              stackIn_77_2 = stackOut_75_2;
+              stackIn_77_0 = (RuntimeException) ((Object) stackIn_76_0);
+              stackIn_77_1 = (StringBuilder) ((Object) stackIn_76_1);
+              stackIn_77_2 = "{...}";
               break L23;
             }
           }

@@ -38,15 +38,11 @@ final class tk extends hd {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var4;
+        int var5;
+        int var6;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
         L0: {
           var6 = Kickabout.field_G;
           this.field_Db.field_s = param2;
@@ -56,24 +52,20 @@ final class tk extends hd {
           this.field_Eb.c((byte) -109);
           this.field_Kb.c((byte) -109);
           if (this.field_Gb.field_q >= this.field_Db.field_q) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
         L1: {
           var4 = stackIn_3_0;
           if (this.field_Gb.field_mb >= this.field_Db.field_mb) {
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L1;
           } else {
-            stackOut_4_0 = 1;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = 1;
             break L1;
           }
         }
@@ -131,7 +123,7 @@ final class tk extends hd {
     }
 
     private final void a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
-        int var8 = 0;
+        int var8;
         L0: {
           var8 = Kickabout.field_G;
           if (this.field_Eb.b(-74)) {

@@ -34,23 +34,12 @@ final class bs extends RuntimeException {
         int var3 = 0;
         int var4 = 0;
         ut[] stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ut[] stackOut_4_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         var4 = Kickabout.field_G;
         try {
           L0: {
@@ -58,8 +47,7 @@ final class bs extends RuntimeException {
             L1: while (true) {
               if (param0.length <= var2_int) {
                 var3 = 45 % ((param1 - -62) / 35);
-                stackOut_4_0 = (ut[]) (param0);
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (ut[]) (param0);
                 break L0;
               } else {
                 var3_ref_ut = param0[var2_int];
@@ -76,27 +64,19 @@ final class bs extends RuntimeException {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("bs.A(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("bs.A(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -106,11 +86,10 @@ final class bs extends RuntimeException {
     }
 
     final static void a(int param0, int param1, int param2) {
-        ut[] discarded$2 = null;
-        ut[] var4 = null;
+        ut[] var4;
         if (param1 != 0) {
           var4 = (ut[]) null;
-          discarded$2 = bs.a((ut[]) null, (byte) 5);
+          bs.a((ut[]) null, (byte) 5);
           tb.field_s = param0;
           ta.field_A = param2;
           return;

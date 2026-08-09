@@ -20,18 +20,10 @@ final class asa extends aa {
 
     final static Object a(File param0, byte param1) {
         try {
-            IOException var2 = null;
-            ClassNotFoundException var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            FileInputStream var2_ref3 = null;
-            ObjectInputStream var3 = null;
-            Object var4 = null;
             Object stackIn_2_0 = null;
             Object stackIn_5_0 = null;
             Object stackIn_7_0 = null;
             Object stackIn_11_0 = null;
-            RuntimeException stackIn_13_0 = null;
-            StringBuilder stackIn_13_1 = null;
             RuntimeException stackIn_14_0 = null;
             StringBuilder stackIn_14_1 = null;
             RuntimeException stackIn_15_0 = null;
@@ -40,36 +32,28 @@ final class asa extends aa {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            Object stackOut_6_0 = null;
-            Object stackOut_4_0 = null;
-            Object stackOut_10_0 = null;
-            Object stackOut_1_0 = null;
-            RuntimeException stackOut_12_0 = null;
-            StringBuilder stackOut_12_1 = null;
-            RuntimeException stackOut_14_0 = null;
-            StringBuilder stackOut_14_1 = null;
-            String stackOut_14_2 = null;
-            RuntimeException stackOut_13_0 = null;
-            StringBuilder stackOut_13_1 = null;
-            String stackOut_13_2 = null;
+            FileInputStream var2 = null;
+            IOException var2_ref = null;
+            ClassNotFoundException var2_ref2 = null;
+            RuntimeException var2_ref3 = null;
+            ObjectInputStream var3 = null;
+            Object var4 = null;
             try {
               L0: {
                 if (param0.exists()) {
                   try {
                     L1: {
-                      var2_ref3 = new FileInputStream(param0);
-                      var3 = new ObjectInputStream((InputStream) ((Object) var2_ref3));
+                      var2 = new FileInputStream(param0);
+                      var3 = new ObjectInputStream((InputStream) ((Object) var2));
                       var4 = var3.readObject();
                       if (param1 <= -42) {
                         var3.close();
-                        var2_ref3.close();
-                        stackOut_6_0 = var4;
-                        stackIn_7_0 = stackOut_6_0;
+                        var2.close();
+                        stackIn_7_0 = var4;
                         decompiledRegionSelector0 = 1;
                         break L1;
                       } else {
-                        stackOut_4_0 = (Object) null;
-                        stackIn_5_0 = stackOut_4_0;
+                        stackIn_5_0 = (Object) null;
                         decompiledRegionSelector0 = 0;
                         break L1;
                       }
@@ -77,14 +61,14 @@ final class asa extends aa {
                   } catch (java.io.IOException decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     L2: {
-                      var2 = (IOException) (Object) decompiledCaughtException;
+                      var2_ref = (IOException) (Object) decompiledCaughtException;
                       decompiledRegionSelector0 = 2;
                       break L2;
                     }
                   } catch (java.lang.ClassNotFoundException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     L3: {
-                      var2_ref = (ClassNotFoundException) (Object) decompiledCaughtException;
+                      var2_ref2 = (ClassNotFoundException) (Object) decompiledCaughtException;
                       decompiledRegionSelector0 = 2;
                       break L3;
                     }
@@ -97,15 +81,13 @@ final class asa extends aa {
                       decompiledRegionSelector1 = 3;
                       break L0;
                     } else {
-                      stackOut_10_0 = null;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_11_0 = null;
                       decompiledRegionSelector1 = 1;
                       break L0;
                     }
                   }
                 } else {
-                  stackOut_1_0 = null;
-                  stackIn_2_0 = stackOut_1_0;
+                  stackIn_2_0 = null;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 }
@@ -113,28 +95,20 @@ final class asa extends aa {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               L4: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_12_0 = (RuntimeException) (var2_ref2);
-                stackOut_12_1 = new StringBuilder().append("asa.B(");
-                stackIn_14_0 = stackOut_12_0;
-                stackIn_14_1 = stackOut_12_1;
-                stackIn_13_0 = stackOut_12_0;
-                stackIn_13_1 = stackOut_12_1;
+                var2_ref3 = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_14_0 = (RuntimeException) (var2_ref3);
+
+                stackIn_14_1 = new StringBuilder().append("asa.B(");
+
                 if (param0 == null) {
-                  stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-                  stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-                  stackOut_14_2 = "null";
-                  stackIn_15_0 = stackOut_14_0;
-                  stackIn_15_1 = stackOut_14_1;
-                  stackIn_15_2 = stackOut_14_2;
+                  stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+                  stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+                  stackIn_15_2 = "null";
                   break L4;
                 } else {
-                  stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-                  stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-                  stackOut_13_2 = "{...}";
-                  stackIn_15_0 = stackOut_13_0;
-                  stackIn_15_1 = stackOut_13_1;
-                  stackIn_15_2 = stackOut_13_2;
+                  stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+                  stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+                  stackIn_15_2 = "{...}";
                   break L4;
                 }
               }

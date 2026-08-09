@@ -57,7 +57,7 @@ final class fl extends at {
     }
 
     final boolean c(byte param0) {
-        int var2 = 0;
+        int var2;
         L0: {
           if (this.field_k == 10) {
             aba.a((byte) -67, 19);
@@ -66,9 +66,9 @@ final class fl extends at {
             break L0;
           }
         }
-        int fieldTemp$2 = this.field_k - 1;
+        int fieldTemp$1 = this.field_k - 1;
         this.field_k = this.field_k - 1;
-        if (-1 <= (fieldTemp$2 ^ -1)) {
+        if (-1 <= (fieldTemp$1 ^ -1)) {
           if ((this.field_n.field_j ^ -1) < -1) {
             return false;
           } else {

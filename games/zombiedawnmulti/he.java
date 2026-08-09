@@ -15,33 +15,20 @@ final class he implements nl {
     static String[][] field_d;
 
     public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -61,19 +48,17 @@ final class he implements nl {
                   if (param4.c(param2 ^ -15226)) {
                     break L3;
                   } else {
-                    stackOut_5_0 = 2188450;
-                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_0 = 2188450;
                     break L2;
                   }
                 }
               }
-              stackOut_6_0 = 3249872;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = 3249872;
               break L2;
             }
             L4: {
               var6_int = stackIn_7_0;
-              discarded$1 = this.field_g.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_j + "</u>", param3 - -param4.field_y, param4.field_i + param1, param4.field_n, param4.field_w, var6_int, -1, this.field_j, this.field_h, this.field_g.field_r + this.field_g.field_C);
+              this.field_g.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_j + "</u>", param3 - -param4.field_y, param4.field_i + param1, param4.field_n, param4.field_w, var6_int, -1, this.field_j, this.field_h, this.field_g.field_r + this.field_g.field_C);
               if (param4.c(127)) {
                 L5: {
                   L6: {
@@ -131,27 +116,19 @@ final class he implements nl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var6 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var6);
-            stackOut_20_1 = new StringBuilder().append("he.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var6);
+
+            stackIn_22_1 = new StringBuilder().append("he.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L9;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L9;
             }
           }
@@ -160,6 +137,9 @@ final class he implements nl {
     }
 
     final static void a(int param0) {
+        int stackIn_17_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -172,12 +152,6 @@ final class he implements nl {
         ga var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
-        int stackIn_10_0 = 0;
-        int stackIn_17_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_16_0 = 0;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -217,14 +191,13 @@ final class he implements nl {
                         if (var4_ref_n == null) {
                           break L7;
                         } else {
-                          stackOut_9_0 = var4_ref_n.field_h;
-                          stackIn_17_0 = stackOut_9_0;
-                          stackIn_10_0 = stackOut_9_0;
+                          stackIn_17_0 = var4_ref_n.field_h;
+
                           if (var6 != 0) {
                             break L6;
                           } else {
                             L8: {
-                              if (stackIn_10_0 != var3) {
+                              if (stackIn_17_0 != var3) {
                                 break L8;
                               } else {
                                 if (var6 == 0) {
@@ -244,8 +217,7 @@ final class he implements nl {
                         }
                       }
                       if (var4_ref_n == null) {
-                        stackOut_16_0 = -114;
-                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_0 = -114;
                         break L6;
                       } else {
                         var4_ref_n.a(true);

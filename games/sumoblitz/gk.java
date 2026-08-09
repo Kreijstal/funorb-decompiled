@@ -51,45 +51,54 @@ final class gk {
 
     final static void b(boolean param0) {
         try {
-            Exception var1 = null;
-            java.lang.reflect.Method var1_ref = null;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
+            Throwable decompiledCaughtException = null;
+            java.lang.reflect.Method var1 = null;
+            Exception var1_ref = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
             Long var3 = null;
             Object[] var4 = null;
-            Throwable decompiledCaughtException = null;
             try {
               L0: {
-                if (param0) {
-                  break L0;
-                } else {
-                  gk.b(true);
-                  break L0;
-                }
-              }
-              var1_ref = Runtime.class.getMethod("maxMemory", new Class[]{});
-              if (var1_ref != null) {
-                try {
-                  L1: {
-                    var2_ref = Runtime.getRuntime();
-                    var4 = (Object[]) null;
-                    var3 = (Long) (var1_ref.invoke((Object) (var2_ref), (Object[]) null));
-                    wh.field_x = (int)(var3.longValue() / 1048576L) - -1;
+                L1: {
+                  if (param0) {
+                    break L1;
+                  } else {
+                    gk.b(true);
                     break L1;
                   }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2 = decompiledCaughtException;
-                  return;
                 }
-                return;
-              } else {
-                return;
+                L2: {
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+                  if (var1 != null) {
+                    try {
+                      L3: {
+                        var2 = Runtime.getRuntime();
+                        var4 = (Object[]) null;
+                        var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
+                        wh.field_x = (int)(var3.longValue() / 1048576L) - -1;
+                        break L3;
+                      }
+                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L4: {
+                        var2_ref = decompiledCaughtException;
+                        break L4;
+                      }
+                    }
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              return;
+              L5: {
+                var1_ref = (Exception) (Object) decompiledCaughtException;
+                break L5;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -104,234 +113,125 @@ final class gk {
         field_v = null;
         field_o = null;
         if (param0 != 0) {
-          return;
-        } else {
-          field_w = (byte[][][]) null;
-          field_u = null;
-          field_O = null;
-          return;
+            return;
         }
+        field_w = (byte[][][]) null;
+        field_u = null;
+        field_O = null;
     }
 
     final void a(int param0, int param1, int param2, boolean param3, int param4) {
         int var6 = 0;
-        int var7 = 0;
-        var7 = Sumoblitz.field_L ? 1 : 0;
-        var6 = 0;
-        L0: while (true) {
-          if (var6 >= this.field_D) {
-            if (!param3) {
-              return;
-            } else {
-              this.a((byte) 101);
-              return;
-            }
-          } else {
+        int var7 = Sumoblitz.field_L ? 1 : 0;
+        for (var6 = 0; var6 < this.field_D; var6++) {
             this.field_Q[var6] = (short)(param4 * this.field_Q[var6] / param1);
             this.field_B[var6] = (short)(this.field_B[var6] * param2 / param1);
             this.field_r[var6] = (short)(param0 * this.field_r[var6] / param1);
-            var6++;
-            if (var7 == 0) {
-              continue L0;
-            } else {
-              return;
-            }
-          }
         }
+        if (!param3) {
+            return;
+        }
+        this.a((byte) 101);
     }
 
     private final void a(byte param0) {
         if (param0 != 101) {
             this.field_l = (short[]) null;
-            this.field_d = false;
-            return;
         }
         this.field_d = false;
     }
 
     final void a(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var12 = Sumoblitz.field_L ? 1 : 0;
         if (!this.field_d) {
-          this.field_d = true;
-          var2 = 32767;
-          var3 = 32767;
-          var4 = 32767;
-          var5 = -32768;
-          var6 = -32768;
-          var7 = -32768;
-          if (param0) {
-            this.a((byte) -95);
-            var8 = 0;
-            L0: while (true) {
-              L1: {
-                L2: {
-                  if (var8 >= this.field_D) {
-                    break L2;
-                  } else {
-                    var9 = this.field_Q[var8];
-                    var10 = this.field_B[var8];
-                    if (var12 != 0) {
-                      break L1;
-                    } else {
-                      L3: {
-                        if (var10 < var3) {
-                          var3 = var10;
-                          break L3;
-                        } else {
-                          break L3;
-                        }
-                      }
-                      L4: {
-                        if (var9 <= var5) {
-                          break L4;
-                        } else {
-                          var5 = var9;
-                          break L4;
-                        }
-                      }
-                      L5: {
-                        var11 = this.field_r[var8];
-                        if (var10 <= var6) {
-                          break L5;
-                        } else {
-                          var6 = var10;
-                          break L5;
-                        }
-                      }
-                      L6: {
-                        if (var2 > var9) {
-                          var2 = var9;
-                          break L6;
-                        } else {
-                          break L6;
-                        }
-                      }
-                      L7: {
-                        if (var7 >= var11) {
-                          break L7;
-                        } else {
-                          var7 = var11;
-                          break L7;
-                        }
-                      }
-                      L8: {
-                        if (var4 <= var11) {
-                          break L8;
-                        } else {
-                          var4 = var11;
-                          break L8;
-                        }
-                      }
-                      var8++;
-                      if (var12 == 0) {
-                        continue L0;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                }
-                this.field_P = var7;
-                this.field_T = var2;
-                this.field_t = var5;
-                this.field_S = var4;
-                this.field_f = var6;
-                this.field_j = var3;
-                break L1;
-              }
-              return;
+          L0: {
+            this.field_d = true;
+            var2 = 32767;
+            var3 = 32767;
+            var4 = 32767;
+            var5 = -32768;
+            var6 = -32768;
+            var7 = -32768;
+            if (!param0) {
+              break L0;
+            } else {
+              this.a((byte) -95);
+              break L0;
             }
-          } else {
-            var8 = 0;
-            L9: while (true) {
-              L10: {
-                L11: {
-                  if (var8 >= this.field_D) {
-                    break L11;
-                  } else {
-                    var9 = this.field_Q[var8];
-                    var10 = this.field_B[var8];
-                    if (var12 != 0) {
-                      break L10;
-                    } else {
-                      L12: {
-                        if (var10 < var3) {
-                          var3 = var10;
-                          break L12;
-                        } else {
-                          break L12;
-                        }
-                      }
-                      L13: {
-                        if (var9 <= var5) {
-                          break L13;
-                        } else {
-                          var5 = var9;
-                          break L13;
-                        }
-                      }
-                      L14: {
-                        var11 = this.field_r[var8];
-                        if (var10 <= var6) {
-                          break L14;
-                        } else {
-                          var6 = var10;
-                          break L14;
-                        }
-                      }
-                      L15: {
-                        if (var2 > var9) {
-                          var2 = var9;
-                          break L15;
-                        } else {
-                          break L15;
-                        }
-                      }
-                      L16: {
-                        if (var7 >= var11) {
-                          break L16;
-                        } else {
-                          var7 = var11;
-                          break L16;
-                        }
-                      }
-                      L17: {
-                        if (var4 <= var11) {
-                          break L17;
-                        } else {
-                          var4 = var11;
-                          break L17;
-                        }
-                      }
-                      var8++;
-                      if (var12 == 0) {
-                        continue L9;
-                      } else {
-                        break L11;
-                      }
-                    }
-                  }
-                }
-                this.field_P = var7;
-                this.field_T = var2;
-                this.field_t = var5;
-                this.field_S = var4;
-                this.field_f = var6;
-                this.field_j = var3;
-                break L10;
-              }
+          }
+          var8 = 0;
+          L1: while (true) {
+            if (var8 >= this.field_D) {
+              this.field_P = var7;
+              this.field_T = var2;
+              this.field_t = var5;
+              this.field_S = var4;
+              this.field_f = var6;
+              this.field_j = var3;
               return;
+            } else {
+              L2: {
+                var9 = this.field_Q[var8];
+                var10 = this.field_B[var8];
+                if (var10 < var3) {
+                  var3 = var10;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              L3: {
+                if (var9 <= var5) {
+                  break L3;
+                } else {
+                  var5 = var9;
+                  break L3;
+                }
+              }
+              L4: {
+                var11 = this.field_r[var8];
+                if (var10 <= var6) {
+                  break L4;
+                } else {
+                  var6 = var10;
+                  break L4;
+                }
+              }
+              L5: {
+                if (var2 > var9) {
+                  var2 = var9;
+                  break L5;
+                } else {
+                  break L5;
+                }
+              }
+              L6: {
+                if (var7 >= var11) {
+                  break L6;
+                } else {
+                  var7 = var11;
+                  break L6;
+                }
+              }
+              if (var4 > var11) {
+                var4 = var11;
+                var8++;
+                continue L1;
+              } else {
+                var8++;
+                continue L1;
+              }
             }
           }
         } else {
@@ -341,44 +241,15 @@ final class gk {
 
     final void a(int param0, int param1, byte param2, int param3) {
         int var5 = 0;
-        int var6 = 0;
-        var6 = Sumoblitz.field_L ? 1 : 0;
-        var5 = 0;
-        L0: while (true) {
-          if (var5 >= this.field_D) {
-            this.a((byte) 101);
-            if (param2 == -81) {
-              return;
-            } else {
-              this.field_n = (short) -48;
-              return;
-            }
-          } else {
+        int var6 = Sumoblitz.field_L ? 1 : 0;
+        for (var5 = 0; var5 < this.field_D; var5++) {
             this.field_Q[var5] = (short)(this.field_Q[var5] + param3);
             this.field_B[var5] = (short)(this.field_B[var5] + param1);
             this.field_r[var5] = (short)(this.field_r[var5] + param0);
-            var5++;
-            if (var6 != 0) {
-              if (param2 != -81) {
-                this.field_n = (short) -48;
-                return;
-              } else {
-                return;
-              }
-            } else {
-              if (var6 == 0) {
-                continue L0;
-              } else {
-                this.a((byte) 101);
-                if (param2 == -81) {
-                  return;
-                } else {
-                  this.field_n = (short) -48;
-                  return;
-                }
-              }
-            }
-          }
+        }
+        this.a((byte) 101);
+        if (param2 != -81) {
+            this.field_n = (short) -48;
         }
     }
 

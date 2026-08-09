@@ -19,17 +19,11 @@ final class jja extends nh {
     public static void a(boolean param0) {
         field_j = null;
         if (param0) {
-          jja.a(true);
-          field_l = null;
-          field_d = null;
-          field_k = null;
-          return;
-        } else {
-          field_l = null;
-          field_d = null;
-          field_k = null;
-          return;
+            jja.a(true);
         }
+        field_l = null;
+        field_d = null;
+        field_k = null;
     }
 
     private final void a(int param0) {
@@ -54,134 +48,28 @@ final class jja extends nh {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int[] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int[] var11 = null;
+        int[] var14 = null;
         int[] var12 = null;
-        int[] var13 = null;
-        var10 = TombRacer.field_G ? 1 : 0;
-        if (param5 == 8448) {
-          if (this.field_c.field_Eb) {
-            var13 = this.field_c.a(param4, param0, (byte) -81, param6, param2);
-            var12 = var13;
-            var11 = var12;
-            var8 = var11;
-            if (var11 != null) {
-              var9 = 0;
-              L0: while (true) {
-                if (var9 >= var13.length) {
-                  this.a(param4, param1, 0, 0, var13, param4, param3, param0);
-                  return;
-                } else {
-                  var11[var9] = fh.a(var13[var9], -16777216);
-                  var9++;
-                  if (var10 == 0) {
-                    continue L0;
-                  } else {
-                    return;
-                  }
-                }
-              }
-            } else {
-              return;
-            }
-          } else {
+        int[] var11 = null;
+        int[] var15 = null;
+        int var9 = 0;
+        int var10 = TombRacer.field_G ? 1 : 0;
+        if (param5 != 8448) {
+            this.a(93, -73, -91, -117, 84);
+        }
+        if (!this.field_c.field_Eb) {
             this.field_a.a(param2, param4, param1, param3, (byte) -84, param6, param0);
-            if (var10 != 0) {
-              var13 = this.field_c.a(param4, param0, (byte) -81, param6, param2);
-              var12 = var13;
-              var11 = var12;
-              var8 = var11;
-              if (var11 != null) {
-                var9 = 0;
-                L1: while (true) {
-                  if (var9 >= var13.length) {
-                    this.a(param4, param1, 0, 0, var13, param4, param3, param0);
-                    return;
-                  } else {
-                    var11[var9] = fh.a(var13[var9], -16777216);
-                    var9++;
-                    if (var10 != 0) {
-                      return;
-                    } else {
-                      if (var10 == 0) {
-                        continue L1;
-                      } else {
-                        this.a(param4, param1, 0, 0, var13, param4, param3, param0);
-                        return;
-                      }
-                    }
-                  }
-                }
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
-          }
         } else {
-          this.a(93, -73, -91, -117, 84);
-          if (!this.field_c.field_Eb) {
-            this.field_a.a(param2, param4, param1, param3, (byte) -84, param6, param0);
-            if (var10 != 0) {
-              var13 = this.field_c.a(param4, param0, (byte) -81, param6, param2);
-              var12 = var13;
-              var11 = var12;
-              var8 = var11;
-              if (var11 != null) {
-                var9 = 0;
-                L2: while (true) {
-                  if (var9 >= var13.length) {
-                    this.a(param4, param1, 0, 0, var13, param4, param3, param0);
-                    return;
-                  } else {
-                    var11[var9] = fh.a(var13[var9], -16777216);
-                    var9++;
-                    if (var10 != 0) {
-                      return;
-                    } else {
-                      if (var10 == 0) {
-                        continue L2;
-                      } else {
-                        this.a(param4, param1, 0, 0, var13, param4, param3, param0);
-                        return;
-                      }
-                    }
-                  }
-                }
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
-          } else {
-            var13 = this.field_c.a(param4, param0, (byte) -81, param6, param2);
-            var12 = var13;
+            var14 = this.field_c.a(param4, param0, (byte) -81, param6, param2);
+            var12 = var14;
             var11 = var12;
-            var8 = var11;
-            if (var11 != null) {
-              var9 = 0;
-              L3: while (true) {
-                if (var9 < var13.length) {
-                  var11[var9] = fh.a(var13[var9], -16777216);
-                  var9++;
-                  if (var10 == 0) {
-                    continue L3;
-                  } else {
-                    return;
-                  }
-                } else {
-                  this.a(param4, param1, 0, 0, var13, param4, param3, param0);
-                  return;
+            var15 = var11;
+            if (!(var11 == null)) {
+                for (var9 = 0; var9 < var14.length; var9++) {
+                    var11[var9] = fh.a(var14[var9], -16777216);
                 }
-              }
-            } else {
-              return;
+                this.a(param4, param1, 0, 0, var15, param4, param3, param0);
             }
-          }
         }
     }
 
@@ -194,68 +82,43 @@ final class jja extends nh {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        float var9 = 0.0f;
-        float var10 = 0.0f;
-        float var11 = 0.0f;
-        float var12 = 0.0f;
-        float var13 = 0.0f;
-        float var14 = 0.0f;
-        int var15 = 0;
-        qk stackIn_1_0 = null;
+        int var15;
         qk stackIn_2_0 = null;
         qk stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        qk stackOut_0_0 = null;
-        qk stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        qk stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
+        float var9;
+        float var10;
+        float var11;
+        float var12;
+        float var13;
+        float var14;
         L0: {
           var15 = TombRacer.field_G ? 1 : 0;
-          stackOut_0_0 = this.field_a;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this.field_a;
+
           if ((param7 & 1) == 0) {
-            stackOut_2_0 = (qk) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (qk) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (qk) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (qk) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }
-        ((qk) (Object) stackIn_3_0).b(stackIn_3_1 != 0, 3);
-        this.field_c.q(2);
-        this.field_c.a((byte) 25, param6);
-        jaggl.OpenGL.glColor4ub((byte)(param5 >> -632846160), (byte)(param5 >> 1521648776), (byte)param5, (byte)(param5 >> -1775118696));
-        if (this.field_b) {
-          var9 = (float)param2 / (float)this.d();
-          var10 = (float)param3 / (float)this.b();
-          var11 = (float)this.field_h * var9 + (float)param0;
-          var12 = (float)param1 + (float)this.field_e * var10;
-          var13 = var11 + var9 * (float)this.field_a.field_t;
-          var14 = (float)this.field_a.field_s * var10 + var12;
-          if (this.field_f == null) {
-            this.field_c.a(true, this.field_a);
-            this.field_c.d(1, param4);
-            jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
-            jaggl.OpenGL.glVertex2f(var11, var12);
-            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-            jaggl.OpenGL.glVertex2f(var11, var14);
-            jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
-            jaggl.OpenGL.glVertex2f(var13, var14);
-            jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
-            jaggl.OpenGL.glVertex2f(var13, var12);
-            jaggl.OpenGL.glEnd();
-            if (var15 == 0) {
-              return;
-            } else {
+        L1: {
+          ((qk) (Object) stackIn_3_0).b(stackIn_3_1 != 0, 3);
+          this.field_c.q(2);
+          this.field_c.a((byte) 25, param6);
+          jaggl.OpenGL.glColor4ub((byte)(param5 >> -632846160), (byte)(param5 >> 1521648776), (byte)param5, (byte)(param5 >> -1775118696));
+          if (this.field_b) {
+            var9 = (float)param2 / (float)this.d();
+            var10 = (float)param3 / (float)this.b();
+            var11 = (float)this.field_h * var9 + (float)param0;
+            var12 = (float)param1 + (float)this.field_e * var10;
+            var13 = var11 + var9 * (float)this.field_a.field_t;
+            var14 = (float)this.field_a.field_s * var10 + var12;
+            if (this.field_f != null) {
               this.b(param4, 117);
               this.field_f.b(true, 3);
               jaggl.OpenGL.glBegin(7);
@@ -273,126 +136,24 @@ final class jja extends nh {
               jaggl.OpenGL.glVertex2f(var13, var12);
               jaggl.OpenGL.glEnd();
               this.a(0);
-              return;
-            }
-          } else {
-            this.b(param4, 117);
-            this.field_f.b(true, 3);
-            jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
-            jaggl.OpenGL.glVertex2f(var11, var12);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
-            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-            jaggl.OpenGL.glVertex2f(var11, var14);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, 0.0f);
-            jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
-            jaggl.OpenGL.glVertex2f(var13, var14);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, this.field_a.field_v);
-            jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
-            jaggl.OpenGL.glVertex2f(var13, var12);
-            jaggl.OpenGL.glEnd();
-            this.a(0);
-            return;
-          }
-        } else {
-          if (null == this.field_f) {
-            this.field_c.a(true, this.field_a);
-            this.field_c.d(1, param4);
-            jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
-            jaggl.OpenGL.glVertex2i(param0, param1);
-            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0, param3 + param1);
-            jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
-            jaggl.OpenGL.glVertex2i(param2 + param0, param3 + param1);
-            jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
-            jaggl.OpenGL.glVertex2i(param0 - -param2, param1);
-            jaggl.OpenGL.glEnd();
-            if (var15 != 0) {
-              var9 = (float)param2 / (float)this.d();
-              var10 = (float)param3 / (float)this.b();
-              var11 = (float)this.field_h * var9 + (float)param0;
-              var12 = (float)param1 + (float)this.field_e * var10;
-              var13 = var11 + var9 * (float)this.field_a.field_t;
-              var14 = (float)this.field_a.field_s * var10 + var12;
-              if (this.field_f == null) {
-                this.field_c.a(true, this.field_a);
-                this.field_c.d(1, param4);
-                jaggl.OpenGL.glBegin(7);
-                jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
-                jaggl.OpenGL.glVertex2f(var11, var12);
-                jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                jaggl.OpenGL.glVertex2f(var11, var14);
-                jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
-                jaggl.OpenGL.glVertex2f(var13, var14);
-                jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
-                jaggl.OpenGL.glVertex2f(var13, var12);
-                jaggl.OpenGL.glEnd();
-                if (var15 != 0) {
-                  this.b(param4, 117);
-                  this.field_f.b(true, 3);
-                  jaggl.OpenGL.glBegin(7);
-                  jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
-                  jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
-                  jaggl.OpenGL.glVertex2f(var11, var12);
-                  jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
-                  jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                  jaggl.OpenGL.glVertex2f(var11, var14);
-                  jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, 0.0f);
-                  jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
-                  jaggl.OpenGL.glVertex2f(var13, var14);
-                  jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, this.field_a.field_v);
-                  jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
-                  jaggl.OpenGL.glVertex2f(var13, var12);
-                  jaggl.OpenGL.glEnd();
-                  this.a(0);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                this.b(param4, 117);
-                this.field_f.b(true, 3);
-                jaggl.OpenGL.glBegin(7);
-                jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
-                jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
-                jaggl.OpenGL.glVertex2f(var11, var12);
-                jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
-                jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                jaggl.OpenGL.glVertex2f(var11, var14);
-                jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, 0.0f);
-                jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
-                jaggl.OpenGL.glVertex2f(var13, var14);
-                jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, this.field_a.field_v);
-                jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
-                jaggl.OpenGL.glVertex2f(var13, var12);
-                jaggl.OpenGL.glEnd();
-                this.a(0);
-                return;
-              }
+              break L1;
             } else {
-              return;
+              this.field_c.a(true, this.field_a);
+              this.field_c.d(1, param4);
+              jaggl.OpenGL.glBegin(7);
+              jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
+              jaggl.OpenGL.glVertex2f(var11, var12);
+              jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
+              jaggl.OpenGL.glVertex2f(var11, var14);
+              jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
+              jaggl.OpenGL.glVertex2f(var13, var14);
+              jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
+              jaggl.OpenGL.glVertex2f(var13, var12);
+              jaggl.OpenGL.glEnd();
+              break L1;
             }
           } else {
-            this.b(param4, -48);
-            this.field_f.b(true, 3);
-            jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
-            jaggl.OpenGL.glVertex2i(param0, param1);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
-            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0, param3 + param1);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, 0.0f);
-            jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
-            jaggl.OpenGL.glVertex2i(param2 + param0, param1 - -param3);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, this.field_a.field_v);
-            jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
-            jaggl.OpenGL.glVertex2i(param2 + param0, param1);
-            jaggl.OpenGL.glEnd();
-            this.a(0);
-            if (var15 != 0) {
+            if (null == this.field_f) {
               this.field_c.a(true, this.field_a);
               this.field_c.d(1, param4);
               jaggl.OpenGL.glBegin(7);
@@ -405,81 +166,32 @@ final class jja extends nh {
               jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
               jaggl.OpenGL.glVertex2i(param0 - -param2, param1);
               jaggl.OpenGL.glEnd();
-              if (var15 != 0) {
-                var9 = (float)param2 / (float)this.d();
-                var10 = (float)param3 / (float)this.b();
-                var11 = (float)this.field_h * var9 + (float)param0;
-                var12 = (float)param1 + (float)this.field_e * var10;
-                var13 = var11 + var9 * (float)this.field_a.field_t;
-                var14 = (float)this.field_a.field_s * var10 + var12;
-                if (this.field_f == null) {
-                  this.field_c.a(true, this.field_a);
-                  this.field_c.d(1, param4);
-                  jaggl.OpenGL.glBegin(7);
-                  jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
-                  jaggl.OpenGL.glVertex2f(var11, var12);
-                  jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                  jaggl.OpenGL.glVertex2f(var11, var14);
-                  jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
-                  jaggl.OpenGL.glVertex2f(var13, var14);
-                  jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
-                  jaggl.OpenGL.glVertex2f(var13, var12);
-                  jaggl.OpenGL.glEnd();
-                  if (var15 != 0) {
-                    this.b(param4, 117);
-                    this.field_f.b(true, 3);
-                    jaggl.OpenGL.glBegin(7);
-                    jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
-                    jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
-                    jaggl.OpenGL.glVertex2f(var11, var12);
-                    jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
-                    jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                    jaggl.OpenGL.glVertex2f(var11, var14);
-                    jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, 0.0f);
-                    jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
-                    jaggl.OpenGL.glVertex2f(var13, var14);
-                    jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, this.field_a.field_v);
-                    jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
-                    jaggl.OpenGL.glVertex2f(var13, var12);
-                    jaggl.OpenGL.glEnd();
-                    this.a(0);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  this.b(param4, 117);
-                  this.field_f.b(true, 3);
-                  jaggl.OpenGL.glBegin(7);
-                  jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
-                  jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
-                  jaggl.OpenGL.glVertex2f(var11, var12);
-                  jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
-                  jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                  jaggl.OpenGL.glVertex2f(var11, var14);
-                  jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, 0.0f);
-                  jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
-                  jaggl.OpenGL.glVertex2f(var13, var14);
-                  jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, this.field_a.field_v);
-                  jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
-                  jaggl.OpenGL.glVertex2f(var13, var12);
-                  jaggl.OpenGL.glEnd();
-                  this.a(0);
-                  return;
-                }
-              } else {
-                return;
-              }
+              break L1;
             } else {
-              return;
+              this.b(param4, -48);
+              this.field_f.b(true, 3);
+              jaggl.OpenGL.glBegin(7);
+              jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
+              jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
+              jaggl.OpenGL.glVertex2i(param0, param1);
+              jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
+              jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
+              jaggl.OpenGL.glVertex2i(param0, param3 + param1);
+              jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, 0.0f);
+              jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
+              jaggl.OpenGL.glVertex2i(param2 + param0, param1 - -param3);
+              jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, this.field_a.field_v);
+              jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
+              jaggl.OpenGL.glVertex2i(param2 + param0, param1);
+              jaggl.OpenGL.glEnd();
+              this.a(0);
+              break L1;
             }
           }
         }
     }
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
-        float var11 = 0.0f;
-        float var12 = 0.0f;
         float var13 = 0.0f;
         float var14 = 0.0f;
         float var15 = 0.0f;
@@ -492,17 +204,9 @@ final class jja extends nh {
         float var22 = 0.0f;
         float var23 = 0.0f;
         float var24 = 0.0f;
-        qk stackIn_4_0 = null;
-        qk stackIn_5_0 = null;
-        qk stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        qk stackOut_3_0 = null;
-        qk stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        qk stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        L0: {
-          if (this.field_b) {
+        float var11 = 0.0f;
+        float var12 = 0.0f;
+        if (!(!this.field_b)) {
             var11 = (float)this.d();
             var12 = (float)this.b();
             var13 = (-param0 + param2) / var11;
@@ -523,32 +227,10 @@ final class jja extends nh {
             param4 = param4 + var19 + var23;
             param0 = var17 + (param0 + var19);
             param5 = param5 + var20 + var24;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        L1: {
-          var11 = param2 - param0 + param4;
-          var12 = param5 - param1 + param3;
-          stackOut_3_0 = this.field_a;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_4_0 = stackOut_3_0;
-          if ((1 & param9) == 0) {
-            stackOut_5_0 = (qk) ((Object) stackIn_5_0);
-            stackOut_5_1 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            break L1;
-          } else {
-            stackOut_4_0 = (qk) ((Object) stackIn_4_0);
-            stackOut_4_1 = 1;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            break L1;
-          }
-        }
-        ((qk) (Object) stackIn_6_0).b(stackIn_6_1 != 0, 3);
+        var11 = param2 - param0 + param4;
+        var12 = param5 - param1 + param3;
+        this.field_a.b((1 & param9) != 0 ? true : false, 3);
         this.field_c.q(2);
         this.field_c.a(true, this.field_a);
         this.field_c.a((byte) 96, param8);
@@ -567,64 +249,50 @@ final class jja extends nh {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        Object stackIn_1_0 = null;
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
+        Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        Object stackIn_8_0 = null;
-        Object stackIn_9_0 = null;
-        Object stackIn_10_0 = null;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_8_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        this.field_m = param3;
-        this.field_i = param2;
-        this.field_h = param0;
-        this.field_e = param1;
-        stackOut_0_0 = this;
-        stackIn_2_0 = stackOut_0_0;
-        stackIn_1_0 = stackOut_0_0;
-        if (0 == this.field_h) {
-          stackOut_2_0 = this;
-          stackIn_4_0 = stackOut_2_0;
-          stackIn_3_0 = stackOut_2_0;
-          if (this.field_e == 0) {
-            stackOut_4_0 = this;
-            stackIn_8_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
-            if (this.field_i == 0) {
-              stackOut_8_0 = this;
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_9_0 = stackOut_8_0;
-              if (-1 != (this.field_m ^ -1)) {
-                ((jja) (this)).field_b = true;
-                return;
-              } else {
-                ((jja) (this)).field_b = false;
-                return;
-              }
+        L0: {
+          L1: {
+            this.field_m = param3;
+            this.field_i = param2;
+            this.field_h = param0;
+            this.field_e = param1;
+            stackIn_5_0 = this;
+
+            if (0 != this.field_h) {
+              break L1;
             } else {
-              stackOut_5_0 = this;
-              stackOut_5_1 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              ((jja) (this)).field_b = stackIn_7_1 != 0;
-              return;
+              stackIn_5_0 = this;
+
+              if (this.field_e != 0) {
+                break L1;
+              } else {
+                stackIn_5_0 = this;
+
+                if (this.field_i != 0) {
+                  break L1;
+                } else {
+                  stackIn_6_0 = this;
+
+                  if (-1 == (this.field_m ^ -1)) {
+                    stackIn_7_0 = this;
+                    stackIn_7_1 = 0;
+                    break L0;
+                  } else {
+                    stackIn_5_0 = this;
+                    break L1;
+                  }
+                }
+              }
             }
-          } else {
-            ((jja) (this)).field_b = true;
-            return;
           }
-        } else {
-          ((jja) (this)).field_b = true;
-          return;
+          stackIn_7_0 = this;
+          stackIn_7_1 = 1;
+          break L0;
         }
+        ((jja) (this)).field_b = stackIn_7_1 != 0;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -635,19 +303,19 @@ final class jja extends nh {
         param0 = param0 + this.field_h;
         param1 = param1 + this.field_e;
         if (this.field_f == null) {
-          this.field_c.a(true, this.field_a);
-          this.field_c.d(1, param2);
-          jaggl.OpenGL.glBegin(7);
-          jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
-          jaggl.OpenGL.glVertex2i(param0, param1);
-          jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-          jaggl.OpenGL.glVertex2i(param0, param1 - -this.field_a.field_s);
-          jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
-          jaggl.OpenGL.glVertex2i(this.field_a.field_t + param0, param1 + this.field_a.field_s);
-          jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
-          jaggl.OpenGL.glVertex2i(param0 + this.field_a.field_t, param1);
-          jaggl.OpenGL.glEnd();
-          if (TombRacer.field_G) {
+            this.field_c.a(true, this.field_a);
+            this.field_c.d(1, param2);
+            jaggl.OpenGL.glBegin(7);
+            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
+            jaggl.OpenGL.glVertex2i(param0, param1);
+            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
+            jaggl.OpenGL.glVertex2i(param0, param1 - -this.field_a.field_s);
+            jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
+            jaggl.OpenGL.glVertex2i(this.field_a.field_t + param0, param1 + this.field_a.field_s);
+            jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
+            jaggl.OpenGL.glVertex2i(param0 + this.field_a.field_t, param1);
+            jaggl.OpenGL.glEnd();
+        } else {
             this.b(param2, -66);
             this.field_f.b(false, 3);
             jaggl.OpenGL.glBegin(7);
@@ -665,29 +333,6 @@ final class jja extends nh {
             jaggl.OpenGL.glVertex2i(this.field_a.field_t + param0, param1);
             jaggl.OpenGL.glEnd();
             this.a(0);
-            return;
-          } else {
-            return;
-          }
-        } else {
-          this.b(param2, -66);
-          this.field_f.b(false, 3);
-          jaggl.OpenGL.glBegin(7);
-          jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_a.field_v);
-          jaggl.OpenGL.glTexCoord2f(0.0f, this.field_a.field_v);
-          jaggl.OpenGL.glVertex2i(param0, param1);
-          jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
-          jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-          jaggl.OpenGL.glVertex2i(param0, param1 + this.field_a.field_s);
-          jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, 0.0f);
-          jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, 0.0f);
-          jaggl.OpenGL.glVertex2i(this.field_a.field_t + param0, param1 - -this.field_a.field_s);
-          jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_a.field_r, this.field_a.field_v);
-          jaggl.OpenGL.glTexCoord2f(this.field_a.field_r, this.field_a.field_v);
-          jaggl.OpenGL.glVertex2i(this.field_a.field_t + param0, param1);
-          jaggl.OpenGL.glEnd();
-          this.a(0);
-          return;
         }
     }
 
@@ -696,73 +341,41 @@ final class jja extends nh {
     }
 
     private final void b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        var4 = TombRacer.field_G ? 1 : 0;
-        this.field_c.e(1, true);
-        var3 = 105 / ((82 - param1) / 35);
-        this.field_c.a(true, this.field_a);
-        this.field_c.b(this.field_c.g(1, param0), 8960, 7681);
-        this.field_c.c(1, 0, 34167, 768);
-        this.field_c.b(34168, 3, 0, 770);
-        this.field_c.e(0, true);
-        this.field_c.a(true, this.field_f);
-        this.field_c.b(34479, 8960, 7681);
-        this.field_c.c(1, 0, 34166, 768);
-        if (-1 != (this.field_g ^ -1)) {
-          if (-2 == (this.field_g ^ -1)) {
-            this.field_c.a(1.0f, 0.5f, 0.5f, (byte) -76, 0.0f);
-            if (var4 != 0) {
-              this.field_c.a(0.5f, 1.0f, 0.5f, (byte) -76, 0.0f);
-              return;
-            } else {
-              return;
-            }
+        int var3;
+        int var4;
+        L0: {
+          var4 = TombRacer.field_G ? 1 : 0;
+          this.field_c.e(1, true);
+          var3 = 105 / ((82 - param1) / 35);
+          this.field_c.a(true, this.field_a);
+          this.field_c.b(this.field_c.g(1, param0), 8960, 7681);
+          this.field_c.c(1, 0, 34167, 768);
+          this.field_c.b(34168, 3, 0, 770);
+          this.field_c.e(0, true);
+          this.field_c.a(true, this.field_f);
+          this.field_c.b(34479, 8960, 7681);
+          this.field_c.c(1, 0, 34166, 768);
+          if (-1 == (this.field_g ^ -1)) {
+            this.field_c.a(0.5f, 1.0f, 0.5f, (byte) -76, 0.0f);
+            break L0;
           } else {
-            if ((this.field_g ^ -1) != -3) {
-              if (3 == this.field_g) {
-                this.field_c.a(128.5f, 128.5f, 128.5f, (byte) -76, 0.0f);
-                if (var4 != 0) {
-                  this.field_c.a(1.0f, 0.5f, 0.5f, (byte) -76, 0.0f);
-                  if (var4 != 0) {
-                    this.field_c.a(0.5f, 1.0f, 0.5f, (byte) -76, 0.0f);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
+            if (-2 == (this.field_g ^ -1)) {
+              this.field_c.a(1.0f, 0.5f, 0.5f, (byte) -76, 0.0f);
+              break L0;
             } else {
-              this.field_c.a(0.5f, 0.5f, 1.0f, (byte) -76, 0.0f);
-              if (var4 != 0) {
-                if (3 == this.field_g) {
-                  this.field_c.a(128.5f, 128.5f, 128.5f, (byte) -76, 0.0f);
-                  if (var4 != 0) {
-                    this.field_c.a(1.0f, 0.5f, 0.5f, (byte) -76, 0.0f);
-                    if (var4 == 0) {
-                      return;
-                    } else {
-                      this.field_c.a(0.5f, 1.0f, 0.5f, (byte) -76, 0.0f);
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
+              if ((this.field_g ^ -1) != -3) {
+                if (3 != this.field_g) {
+                  break L0;
                 } else {
-                  return;
+                  this.field_c.a(128.5f, 128.5f, 128.5f, (byte) -76, 0.0f);
+                  break L0;
                 }
               } else {
-                return;
+                this.field_c.a(0.5f, 0.5f, 1.0f, (byte) -76, 0.0f);
+                break L0;
               }
             }
           }
-        } else {
-          this.field_c.a(0.5f, 1.0f, 0.5f, (byte) -76, 0.0f);
-          return;
         }
     }
 

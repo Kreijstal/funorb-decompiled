@@ -18,50 +18,18 @@ final class ki extends fb {
     }
 
     final static void a(int param0, boolean param1) {
-        int stackIn_8_0 = 0;
-        int stackIn_9_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_11_1 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_18_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_20_1 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_28_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_30_1 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_36_0 = 0;
         int stackIn_37_0 = 0;
         int stackIn_38_0 = 0;
         int stackIn_38_1 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_37_1 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_28_1 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_29_1 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_18_1 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_19_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
         L0: {
           if (oc.field_p != null) {
             oc.field_p.b(param0 ^ 16777215, param1);
@@ -82,30 +50,23 @@ final class ki extends fb {
                 } else {
                   L2: {
                     L3: {
-                      stackOut_34_0 = -7093;
-                      stackIn_37_0 = stackOut_34_0;
-                      stackIn_35_0 = stackOut_34_0;
+                      stackIn_37_0 = -7093;
+
                       if (!param1) {
                         break L3;
                       } else {
-                        stackOut_35_0 = stackIn_35_0;
-                        stackIn_37_0 = stackOut_35_0;
-                        stackIn_36_0 = stackOut_35_0;
+
                         if (!ak.a(true)) {
                           break L3;
                         } else {
-                          stackOut_36_0 = stackIn_36_0;
-                          stackOut_36_1 = 1;
-                          stackIn_38_0 = stackOut_36_0;
-                          stackIn_38_1 = stackOut_36_1;
+                          stackIn_38_0 = stackIn_37_0;
+                          stackIn_38_1 = 1;
                           break L2;
                         }
                       }
                     }
-                    stackOut_37_0 = stackIn_37_0;
-                    stackOut_37_1 = 0;
-                    stackIn_38_0 = stackOut_37_0;
-                    stackIn_38_1 = stackOut_37_1;
+                    stackIn_38_0 = stackIn_37_0;
+                    stackIn_38_1 = 0;
                     break L2;
                   }
                   jb.a(stackIn_38_0, stackIn_38_1 != 0);
@@ -124,30 +85,23 @@ final class ki extends fb {
                 } else {
                   L5: {
                     L6: {
-                      stackOut_26_0 = -7093;
-                      stackIn_29_0 = stackOut_26_0;
-                      stackIn_27_0 = stackOut_26_0;
+                      stackIn_29_0 = -7093;
+
                       if (!param1) {
                         break L6;
                       } else {
-                        stackOut_27_0 = stackIn_27_0;
-                        stackIn_29_0 = stackOut_27_0;
-                        stackIn_28_0 = stackOut_27_0;
+
                         if (!ak.a(true)) {
                           break L6;
                         } else {
-                          stackOut_28_0 = stackIn_28_0;
-                          stackOut_28_1 = 1;
-                          stackIn_30_0 = stackOut_28_0;
-                          stackIn_30_1 = stackOut_28_1;
+                          stackIn_30_0 = stackIn_29_0;
+                          stackIn_30_1 = 1;
                           break L5;
                         }
                       }
                     }
-                    stackOut_29_0 = stackIn_29_0;
-                    stackOut_29_1 = 0;
-                    stackIn_30_0 = stackOut_29_0;
-                    stackIn_30_1 = stackOut_29_1;
+                    stackIn_30_0 = stackIn_29_0;
+                    stackIn_30_1 = 0;
                     break L5;
                   }
                   jb.a(stackIn_30_0, stackIn_30_1 != 0);
@@ -167,30 +121,23 @@ final class ki extends fb {
               } else {
                 L7: {
                   L8: {
-                    stackOut_16_0 = -7093;
-                    stackIn_19_0 = stackOut_16_0;
-                    stackIn_17_0 = stackOut_16_0;
+                    stackIn_19_0 = -7093;
+
                     if (!param1) {
                       break L8;
                     } else {
-                      stackOut_17_0 = stackIn_17_0;
-                      stackIn_19_0 = stackOut_17_0;
-                      stackIn_18_0 = stackOut_17_0;
+
                       if (!ak.a(true)) {
                         break L8;
                       } else {
-                        stackOut_18_0 = stackIn_18_0;
-                        stackOut_18_1 = 1;
-                        stackIn_20_0 = stackOut_18_0;
-                        stackIn_20_1 = stackOut_18_1;
+                        stackIn_20_0 = stackIn_19_0;
+                        stackIn_20_1 = 1;
                         break L7;
                       }
                     }
                   }
-                  stackOut_19_0 = stackIn_19_0;
-                  stackOut_19_1 = 0;
-                  stackIn_20_0 = stackOut_19_0;
-                  stackIn_20_1 = stackOut_19_1;
+                  stackIn_20_0 = stackIn_19_0;
+                  stackIn_20_1 = 0;
                   break L7;
                 }
                 jb.a(stackIn_20_0, stackIn_20_1 != 0);
@@ -209,30 +156,23 @@ final class ki extends fb {
                 } else {
                   L10: {
                     L11: {
-                      stackOut_7_0 = -7093;
-                      stackIn_10_0 = stackOut_7_0;
-                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_10_0 = -7093;
+
                       if (!param1) {
                         break L11;
                       } else {
-                        stackOut_8_0 = stackIn_8_0;
-                        stackIn_10_0 = stackOut_8_0;
-                        stackIn_9_0 = stackOut_8_0;
+
                         if (!ak.a(true)) {
                           break L11;
                         } else {
-                          stackOut_9_0 = stackIn_9_0;
-                          stackOut_9_1 = 1;
-                          stackIn_11_0 = stackOut_9_0;
-                          stackIn_11_1 = stackOut_9_1;
+                          stackIn_11_0 = stackIn_10_0;
+                          stackIn_11_1 = 1;
                           break L10;
                         }
                       }
                     }
-                    stackOut_10_0 = stackIn_10_0;
-                    stackOut_10_1 = 0;
-                    stackIn_11_0 = stackOut_10_0;
-                    stackIn_11_1 = stackOut_10_1;
+                    stackIn_11_0 = stackIn_10_0;
+                    stackIn_11_1 = 0;
                     break L10;
                   }
                   jb.a(stackIn_11_0, stackIn_11_1 != 0);
@@ -277,21 +217,21 @@ final class ki extends fb {
     }
 
     final static void a(int param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = Chess.field_G;
         try {
           L0: {
@@ -303,30 +243,30 @@ final class ki extends fb {
               if (var2 >= var3) {
                 break L0;
               } else {
-                incrementValue$40 = var2;
+                incrementValue$16 = var2;
                 var2++;
-                var5[incrementValue$40] = 0;
-                incrementValue$41 = var2;
+                var5[incrementValue$16] = 0;
+                incrementValue$17 = var2;
                 var2++;
-                var5[incrementValue$41] = 0;
-                incrementValue$42 = var2;
+                var5[incrementValue$17] = 0;
+                incrementValue$18 = var2;
                 var2++;
-                var5[incrementValue$42] = 0;
-                incrementValue$43 = var2;
+                var5[incrementValue$18] = 0;
+                incrementValue$19 = var2;
                 var2++;
-                var5[incrementValue$43] = 0;
-                incrementValue$44 = var2;
+                var5[incrementValue$19] = 0;
+                incrementValue$20 = var2;
                 var2++;
-                var5[incrementValue$44] = 0;
-                incrementValue$45 = var2;
+                var5[incrementValue$20] = 0;
+                incrementValue$21 = var2;
                 var2++;
-                var5[incrementValue$45] = 0;
-                incrementValue$46 = var2;
+                var5[incrementValue$21] = 0;
+                incrementValue$22 = var2;
                 var2++;
-                var5[incrementValue$46] = 0;
-                incrementValue$47 = var2;
+                var5[incrementValue$22] = 0;
+                incrementValue$23 = var2;
                 var2++;
-                var5[incrementValue$47] = 0;
+                var5[incrementValue$23] = 0;
                 continue L1;
               }
             }

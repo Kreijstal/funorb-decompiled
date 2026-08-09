@@ -14,23 +14,13 @@ final class wv extends le {
     }
 
     final void a(int param0, int param1, ds param2) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
@@ -55,27 +45,19 @@ final class wv extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var4);
-            stackOut_5_1 = new StringBuilder().append("wv.F(").append(param0).append(',').append(param1).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var4);
+
+            stackIn_7_1 = new StringBuilder().append("wv.F(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L3;
             }
           }
@@ -106,28 +88,22 @@ final class wv extends le {
     }
 
     final int[][] a(int param0, int param1) {
-        int incrementValue$1 = 0;
-        int[][] var3 = null;
-        int var4 = 0;
-        int[] var5 = null;
-        int[] var6 = null;
-        int[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int[][] var12 = null;
-        int[][] var13 = null;
-        int[][] var14 = null;
-        int stackIn_4_0 = 0;
+        int incrementValue$0 = 0;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_4_1 = 0;
+        int[][] var3;
+        int var4;
+        int[] var5;
+        int[] var6;
+        int[] var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int[][] var12;
+        int[][] var13;
+        int[][] var14;
         var11 = VoidHunters.field_G;
         if (param0 == 255) {
           L0: {
@@ -139,20 +115,15 @@ final class wv extends le {
               break L0;
             } else {
               L1: {
-                stackOut_3_0 = this.field_m;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_5_0 = this.field_m;
+
                 if (noa.field_o != this.field_j) {
-                  stackOut_5_0 = stackIn_5_0;
-                  stackOut_5_1 = this.field_j * param1 / noa.field_o;
-                  stackIn_6_0 = stackOut_5_0;
-                  stackIn_6_1 = stackOut_5_1;
+                  stackIn_6_0 = stackIn_5_0;
+                  stackIn_6_1 = this.field_j * param1 / noa.field_o;
                   break L1;
                 } else {
-                  stackOut_4_0 = stackIn_4_0;
-                  stackOut_4_1 = param1;
-                  stackIn_6_0 = stackOut_4_0;
-                  stackIn_6_1 = stackOut_4_1;
+                  stackIn_6_0 = stackIn_5_0;
+                  stackIn_6_1 = param1;
                   break L1;
                 }
               }
@@ -181,9 +152,9 @@ final class wv extends le {
                   if (hob.field_d <= var8) {
                     break L0;
                   } else {
-                    incrementValue$1 = var4;
+                    incrementValue$0 = var4;
                     var4++;
-                    var9 = this.field_k[incrementValue$1];
+                    var9 = this.field_k[incrementValue$0];
                     var7[var8] = dla.a(var9 << -1820230716, 4080);
                     var6[var8] = dla.a(var9, 65280) >> 1134535780;
                     var5[var8] = dla.a(var9 >> 443042092, 4080);

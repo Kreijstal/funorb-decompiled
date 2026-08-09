@@ -14,8 +14,10 @@ final class ja extends gg {
     static int field_q;
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
-        RuntimeException var8 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -41,8 +43,6 @@ final class ja extends gg {
         int var31 = 0;
         int[] var32 = null;
         int[] var33 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var31 = stellarshard.field_B;
         try {
           L0: {
@@ -263,12 +263,11 @@ final class ja extends gg {
     }
 
     final static void a(int param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        int var4 = 0;
         n var4_ref_n = null;
+        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -283,13 +282,14 @@ final class ja extends gg {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        n var17 = null;
-        int var18 = 0;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        n var17 = null;
+        int var18 = 0;
         var19 = stellarshard.field_B;
         try {
           L0: {
@@ -361,7 +361,7 @@ final class ja extends gg {
                             }
                           }
                         } else {
-                          if (var21[var16] < var21[var17_int]) {
+                          if ((var21[var16] ^ -1) > (var21[var17_int] ^ -1)) {
                             var16 = var17_int;
                             var17_int++;
                             continue L4;

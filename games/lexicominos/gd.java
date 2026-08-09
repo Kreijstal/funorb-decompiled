@@ -12,12 +12,12 @@ final class gd extends kd {
     int field_n;
 
     final void c(byte param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         if (param0 <= -17) {
-          fieldTemp$4 = this.field_h - 1;
+          fieldTemp$2 = this.field_h - 1;
           this.field_h = this.field_h - 1;
-          if (tb.field_a.field_E > fieldTemp$4) {
+          if (tb.field_a.field_E > fieldTemp$2) {
             this.b((byte) -123);
             return;
           } else {
@@ -25,9 +25,9 @@ final class gd extends kd {
           }
         } else {
           field_i = (td) null;
-          fieldTemp$5 = this.field_h - 1;
+          fieldTemp$3 = this.field_h - 1;
           this.field_h = this.field_h - 1;
-          if (tb.field_a.field_E <= fieldTemp$5) {
+          if (tb.field_a.field_E <= fieldTemp$3) {
             return;
           } else {
             this.b((byte) -123);
@@ -44,9 +44,8 @@ final class gd extends kd {
     }
 
     final static boolean d(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != -53) {
-            discarded$0 = gd.d((byte) 85);
+            gd.d((byte) 85);
             return nh.field_a.b(-79);
         }
         return nh.field_a.b(-79);

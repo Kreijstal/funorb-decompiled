@@ -5,7 +5,6 @@ final class faa {
     static String field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
@@ -18,6 +17,7 @@ final class faa {
         int var17 = 0;
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
         var17 = BachelorFridge.field_y;
         try {
           L0: {

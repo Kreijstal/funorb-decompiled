@@ -8,11 +8,10 @@ final class hd {
     static String field_b;
 
     final static jp a(int param0, int param1, byte param2) {
-        jp discarded$0 = null;
         int var4 = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
         if (param2 != -6) {
-            discarded$0 = hd.a(121, -95, (byte) -105);
+            hd.a(121, -95, (byte) -105);
         }
         jp var6 = new jp(param1, param1);
         jp var3 = var6;

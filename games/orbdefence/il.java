@@ -10,7 +10,7 @@ final class il {
     private o field_c;
 
     final o b(int param0) {
-        o var2 = null;
+        o var2;
         var2 = this.field_c;
         if (var2 == this.field_b) {
           this.field_c = null;
@@ -26,9 +26,9 @@ final class il {
     }
 
     final int a(byte param0) {
-        int var2 = 0;
-        o var3 = null;
-        int var4 = 0;
+        int var2;
+        o var3;
+        int var4;
         var4 = OrbDefence.field_D ? 1 : 0;
         if (param0 != -4) {
           return -79;
@@ -57,22 +57,12 @@ final class il {
     final void a(int param0, o param1) {
         RuntimeException var3 = null;
         o var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -99,27 +89,19 @@ final class il {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("il.B(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("il.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -144,8 +126,7 @@ final class il {
     }
 
     final o c(int param0) {
-        o discarded$2 = null;
-        o var2 = null;
+        o var2;
         if (param0 == 30664) {
           var2 = this.field_b.field_f;
           if (this.field_b == var2) {
@@ -155,7 +136,7 @@ final class il {
             return var2;
           }
         } else {
-          discarded$2 = this.b(40);
+          this.b(40);
           var2 = this.field_b.field_f;
           if (this.field_b == var2) {
             return null;
@@ -173,8 +154,8 @@ final class il {
     }
 
     final o b(byte param0) {
-        o var2 = null;
-        o var3 = null;
+        o var2;
+        o var3;
         if (param0 == 46) {
           var2 = this.field_b.field_f;
           if (var2 == this.field_b) {

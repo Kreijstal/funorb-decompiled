@@ -15,8 +15,8 @@ final class tq {
     static wj field_b;
 
     private final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 == 231) {
           var3 = this.field_d.length;

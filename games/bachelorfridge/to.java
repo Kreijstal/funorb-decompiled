@@ -6,20 +6,20 @@ final class to {
     static kv field_b;
 
     final static kv[] a(int param0, int param1, int param2, int param3, int param4) {
-        kv[] var5 = null;
-        kv[] var6 = null;
+        kv[] var5;
+        kv[] var6;
         var6 = new kv[9];
         var5 = var6;
-        kv dupTemp$4 = ik.b(param3, param1, param2 + 25976);
-        var5[6] = dupTemp$4;
-        var5[3] = dupTemp$4;
-        var5[2] = dupTemp$4;
-        var5[1] = dupTemp$4;
-        var5[0] = dupTemp$4;
-        kv dupTemp$5 = ik.b(param3, param0, 2);
-        var6[8] = dupTemp$5;
-        var5[7] = dupTemp$5;
-        var5[5] = dupTemp$5;
+        kv dupTemp$2 = ik.b(param3, param1, param2 + 25976);
+        var5[6] = dupTemp$2;
+        var5[3] = dupTemp$2;
+        var5[2] = dupTemp$2;
+        var5[1] = dupTemp$2;
+        var5[0] = dupTemp$2;
+        kv dupTemp$3 = ik.b(param3, param0, 2);
+        var6[8] = dupTemp$3;
+        var5[7] = dupTemp$3;
+        var5[5] = dupTemp$3;
         if (param2 != -25974) {
           L0: {
             field_a = (String) null;

@@ -22,9 +22,6 @@ final class wa {
         int stackIn_18_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_17_0 = 0;
         var5 = stellarshard.field_B;
         try {
           L0: {
@@ -33,8 +30,7 @@ final class wa {
                 break L1;
               } else {
                 if (param0 < 128) {
-                  stackOut_7_0 = 1;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -66,8 +62,7 @@ final class wa {
                   } else {
                     var4 = var6[var3];
                     if (param0 == var4) {
-                      stackOut_14_0 = 1;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 1;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
@@ -79,8 +74,7 @@ final class wa {
               }
             }
             var2_int = -80 / ((77 - param1) / 45);
-            stackOut_17_0 = 0;
-            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_0 = 0;
             decompiledRegionSelector0 = 2;
             break L0;
           }
@@ -108,11 +102,10 @@ final class wa {
     }
 
     public static void b(int param0) {
-        boolean discarded$0 = false;
         field_e = null;
         field_b = null;
         if (param0 != 0) {
-            discarded$0 = wa.a('\n', (byte) 2);
+            wa.a('\n', (byte) 2);
         }
     }
 
@@ -154,9 +147,9 @@ final class wa {
     }
 
     final Object b(long param0, byte param1) {
-        Object var5 = null;
-        ld var6 = null;
-        gj var7 = null;
+        Object var5;
+        ld var6;
+        gj var7;
         var7 = (gj) ((Object) this.field_a.a(param0, -1));
         if (var7 != null) {
           var5 = var7.e(-118);
@@ -197,8 +190,6 @@ final class wa {
 
     private final void a(gj param0, byte param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -206,14 +197,6 @@ final class wa {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 >= 116) {
@@ -238,27 +221,19 @@ final class wa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (runtimeException);
-            stackOut_5_1 = new StringBuilder().append("wa.F(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (runtimeException);
+
+            stackIn_7_1 = new StringBuilder().append("wa.F(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -272,7 +247,7 @@ final class wa {
     }
 
     private final void a(long param0, byte param1) {
-        gj var4 = null;
+        gj var4;
         var4 = (gj) ((Object) this.field_a.a(param0, -1));
         if (param1 <= 106) {
           wa.b(-119);

@@ -71,13 +71,13 @@ final class lo extends IOException {
 
     final static void a(int param0) {
         try {
+            Throwable decompiledCaughtException = null;
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
             Long var3 = null;
             Object[] var4 = null;
-            Throwable decompiledCaughtException = null;
             try {
               L0: {
                 var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
@@ -91,15 +91,15 @@ final class lo extends IOException {
               if (var1 != null) {
                 try {
                   L1: {
-                    var2_ref = Runtime.getRuntime();
+                    var2 = Runtime.getRuntime();
                     var4 = (Object[]) null;
-                    var3 = (Long) (var1.invoke((Object) (var2_ref), (Object[]) null));
+                    var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
                     rf.field_d = 1 + (int)(var3.longValue() / 1048576L);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  var2 = decompiledCaughtException;
+                  var2_ref = decompiledCaughtException;
                   return;
                 }
                 return;

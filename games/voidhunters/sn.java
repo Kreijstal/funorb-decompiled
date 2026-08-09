@@ -29,22 +29,12 @@ final class sn extends os implements oo {
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, lta param6) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -62,27 +52,19 @@ final class sn extends os implements oo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("sn.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("sn.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+
             if (param6 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -117,15 +99,6 @@ final class sn extends os implements oo {
     }
 
     private final void a(boolean param0, boolean param1, tpa param2) {
-        htb discarded$2 = null;
-        htb discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        nna var5 = null;
-        int var6 = 0;
-        soa var7 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
@@ -133,25 +106,22 @@ final class sn extends os implements oo {
         String stackIn_34_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        nna var5 = null;
+        int var6 = 0;
+        soa var7 = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
             L1: {
               this.field_Z = true;
               if (param2.field_g) {
-                var4_ref = uj.field_c;
+                var4 = uj.field_c;
                 break L1;
               } else {
                 if (null == param2.field_e) {
-                  var4_ref = param2.field_f;
+                  var4 = param2.field_f;
                   if (-249 == (param2.field_d ^ -1)) {
                     L2: {
                       if (!param0) {
@@ -161,14 +131,14 @@ final class sn extends os implements oo {
                         break L2;
                       }
                     }
-                    var4_ref = mtb.field_q;
+                    var4 = mtb.field_q;
                     this.field_ab = true;
                     break L1;
                   } else {
                     break L1;
                   }
                 } else {
-                  var4_ref = ks.field_p;
+                  var4 = ks.field_p;
                   if (null == this.field_X) {
                     break L1;
                   } else {
@@ -179,20 +149,20 @@ final class sn extends os implements oo {
               }
             }
             L3: {
-              var5 = new nna((os) (this), vob.field_r, var4_ref);
+              var5 = new nna((os) (this), vob.field_r, var4);
               if (param2.field_g) {
                 if (param2.field_c) {
                   this.b(new w((sn) (this)), -99);
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  discarded$2 = var5.a((byte) 107, tn.field_b, (sba) (this));
+                  var5.a((byte) 107, tn.field_b, (sba) (this));
                   break L3;
                 }
               } else {
                 L4: {
                   if (this.field_ab) {
-                    discarded$3 = var5.a((byte) 98, tn.field_b, (sba) (this));
+                    var5.a((byte) 98, tn.field_b, (sba) (this));
                     break L4;
                   } else {
                     if (param2.field_d == 5) {
@@ -234,28 +204,20 @@ final class sn extends os implements oo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var4);
-            stackOut_31_1 = new StringBuilder().append("sn.P(").append(param0).append(',').append(param1).append(',');
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_33_0 = (RuntimeException) (var4_ref);
+
+            stackIn_33_1 = new StringBuilder().append("sn.P(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L6;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L6;
             }
           }
@@ -278,7 +240,7 @@ final class sn extends os implements oo {
     }
 
     final boolean a(int param0) {
-        tpa var2 = null;
+        tpa var2;
         if (param0 == 248) {
           if (this.field_z) {
             if (!this.field_Z) {

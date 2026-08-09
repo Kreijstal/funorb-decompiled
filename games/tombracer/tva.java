@@ -20,10 +20,9 @@ final class tva extends qe {
     }
 
     public static void c(int param0) {
-        dk discarded$0 = null;
         field_c = null;
         if (param0 > -103) {
-            discarded$0 = tva.a(114, -12, 14, -11);
+            tva.a(114, -12, 14, -11);
             field_d = null;
             return;
         }
@@ -31,8 +30,8 @@ final class tva extends qe {
     }
 
     final static dk a(int param0, int param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 == -2) {
           var4 = param3;
@@ -44,38 +43,10 @@ final class tva extends qe {
                 return jf.field_p[param1];
               }
             } else {
-              if (var5 != 0) {
-                if (3 == var4) {
-                  return jf.field_p[param1];
-                } else {
-                  throw new IllegalArgumentException("Animation category not recognised");
-                }
-              } else {
-                return qja.field_f[param1];
-              }
+              return qja.field_f[param1];
             }
           } else {
-            if (var5 != 0) {
-              if (-2 == (var4 ^ -1)) {
-                if (var5 != 0) {
-                  if (3 != var4) {
-                    throw new IllegalArgumentException("Animation category not recognised");
-                  } else {
-                    return jf.field_p[param1];
-                  }
-                } else {
-                  return qja.field_f[param1];
-                }
-              } else {
-                if (3 == var4) {
-                  return jf.field_p[param1];
-                } else {
-                  throw new IllegalArgumentException("Animation category not recognised");
-                }
-              }
-            } else {
-              return wl.field_f[param2][param1];
-            }
+            return wl.field_f[param2][param1];
           }
         } else {
           return (dk) null;

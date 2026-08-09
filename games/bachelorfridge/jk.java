@@ -25,12 +25,11 @@ final class jk extends at {
 
     final static int d(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
         int var3 = 0;
         int stackIn_17_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
         var3 = BachelorFridge.field_y;
         try {
           L0: {
@@ -72,8 +71,7 @@ final class jk extends at {
                     break L4;
                   }
                 }
-                stackOut_16_0 = var2;
-                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_0 = var2;
                 break L0;
               } else {
                 fw.field_i.b(true);
@@ -95,14 +93,13 @@ final class jk extends at {
     }
 
     public static void d(byte param0) {
-        int discarded$0 = 0;
         field_p = null;
         field_k = null;
         field_j = null;
         field_l = null;
         field_o = null;
         if (param0 >= -77) {
-            discarded$0 = jk.d(-67);
+            jk.d(-67);
         }
     }
 

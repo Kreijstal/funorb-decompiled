@@ -13,22 +13,12 @@ final class vn extends v implements fd, aa {
 
     public final void a(boolean param0, jf param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -45,27 +35,19 @@ final class vn extends v implements fd, aa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("vn.C(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("vn.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -83,8 +65,6 @@ final class vn extends v implements fd, aa {
         String stackIn_7_0 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        String stackOut_6_0 = null;
-        String stackOut_3_0 = null;
         try {
           L0: {
             L1: {
@@ -106,16 +86,14 @@ final class vn extends v implements fd, aa {
                       return null;
                     }
                   } else {
-                    stackOut_6_0 = (String) null;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = (String) null;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 }
               }
             }
-            stackOut_3_0 = db.a(ce.field_u, -26, new String[]{"1890", Integer.toString(var5 - 3)});
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = db.a(ce.field_u, -26, new String[]{"1890", Integer.toString(var5 - 3)});
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -213,10 +191,10 @@ final class vn extends v implements fd, aa {
     }
 
     final static String a(char param0, int param1, int param2) {
-        char[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        char[] var6 = null;
+        char[] var3;
+        int var4;
+        int var5;
+        char[] var6;
         var5 = SteelSentinels.field_G;
         var6 = new char[param2];
         var3 = var6;
@@ -237,9 +215,8 @@ final class vn extends v implements fd, aa {
     }
 
     final static void c(int param0) {
-        wg discarded$0 = null;
         if (param0 <= 0) {
-            discarded$0 = vn.c((byte) -125);
+            vn.c((byte) -125);
             vc.a(-1);
             return;
         }
@@ -257,9 +234,6 @@ final class vn extends v implements fd, aa {
         vd stackIn_10_0 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        vd stackOut_5_0 = null;
-        vd stackOut_9_0 = null;
-        vd stackOut_1_0 = null;
         try {
           L0: {
             var2_int = this.field_n.j(-127);
@@ -268,14 +242,12 @@ final class vn extends v implements fd, aa {
             var5 = rg.d(param0 ^ 31644);
             if (-1891 >= (var4 ^ -1)) {
               if (var4 > -3 + var5) {
-                stackOut_5_0 = fa.field_d;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = fa.field_d;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (!oh.a(var4, true, var2_int, var3)) {
-                  stackOut_9_0 = fa.field_d;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = fa.field_d;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
@@ -284,8 +256,7 @@ final class vn extends v implements fd, aa {
                 }
               }
             } else {
-              stackOut_1_0 = fa.field_d;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = fa.field_d;
               decompiledRegionSelector0 = 0;
               break L0;
             }

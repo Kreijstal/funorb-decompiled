@@ -23,73 +23,33 @@ final class jc {
     int field_h;
 
     public final String toString() {
-        StringBuilder var2 = null;
-        StringBuilder stackIn_1_0 = null;
-        StringBuilder stackIn_2_0 = null;
-        StringBuilder stackIn_3_0 = null;
-        String stackIn_3_1 = null;
-        StringBuilder stackOut_0_0 = null;
-        StringBuilder stackOut_2_0 = null;
-        String stackOut_2_1 = null;
-        StringBuilder stackOut_1_0 = null;
-        String stackOut_1_1 = null;
-        L0: {
-          var2 = new StringBuilder();
-          stackOut_0_0 = (StringBuilder) (var2);
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
-          if (!this.field_o) {
-            stackOut_2_0 = (StringBuilder) ((Object) stackIn_2_0);
-            stackOut_2_1 = "away";
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            break L0;
-          } else {
-            stackOut_1_0 = (StringBuilder) ((Object) stackIn_1_0);
-            stackOut_1_1 = "home";
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            break L0;
-          }
-        }
-        StringBuilder discarded$9 = ((StringBuilder) (Object) stackIn_3_0).append(stackIn_3_1);
-        StringBuilder discarded$10 = var2.append(" resigntime=" + this.field_p);
-        StringBuilder discarded$11 = var2.append(" reward=" + this.field_d);
-        StringBuilder discarded$12 = var2.append(" member=" + this.field_b);
-        StringBuilder discarded$13 = var2.append(" tackles=" + this.field_m + "." + this.field_c + "." + this.field_n + "." + this.field_a);
-        StringBuilder discarded$14 = var2.append(" kicks=" + this.field_i + "." + this.field_f + "." + this.field_q);
-        StringBuilder discarded$15 = var2.append(" crosses=" + this.field_j);
-        StringBuilder discarded$16 = var2.append(" headers=" + this.field_h);
-        StringBuilder discarded$17 = var2.append(" tot_goals=" + this.field_s);
+        StringBuilder var2 = new StringBuilder();
+        StringBuilder discarded$0 = var2.append(this.field_o ? "home" : "away");
+        StringBuilder discarded$1 = var2.append(" resigntime=" + this.field_p);
+        StringBuilder discarded$2 = var2.append(" reward=" + this.field_d);
+        StringBuilder discarded$3 = var2.append(" member=" + this.field_b);
+        StringBuilder discarded$4 = var2.append(" tackles=" + this.field_m + "." + this.field_c + "." + this.field_n + "." + this.field_a);
+        StringBuilder discarded$5 = var2.append(" kicks=" + this.field_i + "." + this.field_f + "." + this.field_q);
+        StringBuilder discarded$6 = var2.append(" crosses=" + this.field_j);
+        StringBuilder discarded$7 = var2.append(" headers=" + this.field_h);
+        StringBuilder discarded$8 = var2.append(" tot_goals=" + this.field_s);
         return "LoggedPlayer{" + var2.toString() + "}";
     }
 
     final static long a(CharSequence param0, boolean param1) {
-        int discarded$1 = 0;
-        RuntimeException var2 = null;
-        long var2_long = 0L;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
         long stackIn_23_0 = 0L;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        long stackOut_22_0 = 0L;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
         var7 = Kickabout.field_G;
         try {
           L0: {
@@ -97,7 +57,7 @@ final class jc {
               if (!param1) {
                 break L1;
               } else {
-                discarded$1 = jc.a(-79, true);
+                jc.a(-79, true);
                 break L1;
               }
             }
@@ -168,8 +128,7 @@ final class jc {
                     }
                   }
                 }
-                stackOut_22_0 = var2_long;
-                stackIn_23_0 = stackOut_22_0;
+                stackIn_23_0 = var2_long;
                 break L0;
               }
             }
@@ -178,27 +137,19 @@ final class jc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var2);
-            stackOut_24_1 = new StringBuilder().append("jc.C(");
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var2);
+
+            stackIn_26_1 = new StringBuilder().append("jc.C(");
+
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L9;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L9;
             }
           }

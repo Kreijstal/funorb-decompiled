@@ -26,25 +26,19 @@ final class sq extends i {
             hp.b(0);
             return true;
         }
-        if (11 == cc.field_e) {
-            if (nu.field_j) {
-                if (qs.field_K == 2) {
-                    if (!nq.a(false, oc.field_f, qh.field_c)) {
-                        return false;
-                    }
-                }
-                if (2 != qs.field_K) {
-                    if (var3 != 0) {
-                        return false;
-                    }
-                }
-                if (!jk.b(0)) {
-                    return true;
-                }
-                String var5 = (String) null;
-                gp.a(vb.field_h, 101, qs.field_K, param2, oc.field_f, (String) null);
+        if (11 == cc.field_e && nu.field_j) {
+            if (qs.field_K == 2 && !nq.a(false, oc.field_f, qh.field_c)) {
+                return false;
+            }
+            if (2 != qs.field_K && var3 != 0) {
+                return false;
+            }
+            if (!jk.b(0)) {
                 return true;
             }
+            String var5 = (String) null;
+            gp.a(vb.field_h, 101, qs.field_K, param2, oc.field_f, (String) null);
+            return true;
         }
         return false;
     }

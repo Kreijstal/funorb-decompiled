@@ -11,7 +11,7 @@ final class al extends hd {
     static n field_Ab;
 
     final static int a(boolean param0, byte param1) {
-        int var2 = 0;
+        int var2;
         if (ja.field_O) {
           if (!param0) {
             var2 = 87 % ((-53 - param1) / 43);
@@ -26,11 +26,10 @@ final class al extends hd {
     }
 
     public static void a(int param0) {
-        tc discarded$0 = null;
         field_Ab = null;
         field_Bb = (double[][]) null;
         if (param0 != 1) {
-            discarded$0 = al.h((byte) 68);
+            al.h((byte) 68);
         }
     }
 
@@ -64,12 +63,11 @@ final class al extends hd {
 
     final static tc h(byte param0) {
         int var1_int = 0;
-        IllegalArgumentException var1 = null;
         tc var2 = null;
         int var3 = 0;
         tc stackIn_6_0 = null;
         Throwable decompiledCaughtException = null;
-        tc stackOut_5_0 = null;
+        IllegalArgumentException var1 = null;
         var3 = Kickabout.field_G;
         try {
           L0: {
@@ -88,8 +86,7 @@ final class al extends hd {
                 var1_int++;
                 continue L2;
               } else {
-                stackOut_5_0 = (tc) (var2);
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (tc) (var2);
                 break L0;
               }
             }
@@ -107,8 +104,8 @@ final class al extends hd {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         var5 = (this.field_q + param0) / 2;
         var6 = -param3 + this.field_mb;
         this.field_Cb.a(param0, 117, var6 - param0, 0, 0, this.field_q, param1);

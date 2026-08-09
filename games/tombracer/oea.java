@@ -10,18 +10,14 @@ final class oea extends vg {
     static jea field_i;
 
     final static boolean a(int param0, int param1, byte param2) {
-        int var3 = 0;
+        int var3;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
         L0: {
           if (0 == (65536 & param0)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -46,12 +42,48 @@ final class oea extends vg {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var9 = 0;
+        int var9;
         var9 = TombRacer.field_G ? 1 : 0;
         if (param0 > param3) {
           if (param4 <= param0) {
             if (param3 >= param4) {
               vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, bea.field_l);
+              if (param1 != -8543) {
+                field_i = (jea) null;
+                return;
+              } else {
+                return;
+              }
+            } else {
+              vb.a(-922437200, param2, param6, param3, param7, param5, param4, param0, bea.field_l);
+              if (param1 != -8543) {
+                field_i = (jea) null;
+                return;
+              } else {
+                return;
+              }
+            }
+          } else {
+            vb.a(-922437200, param7, param6, param3, param2, param5, param0, param4, bea.field_l);
+            if (param1 != -8543) {
+              field_i = (jea) null;
+              return;
+            } else {
+              return;
+            }
+          }
+        } else {
+          if (param3 < param4) {
+            vb.a(-922437200, param5, param6, param0, param2, param7, param3, param4, bea.field_l);
+            if (param1 == -8543) {
+              return;
+            } else {
+              field_i = (jea) null;
+              return;
+            }
+          } else {
+            if (param4 > param0) {
+              vb.a(-922437200, param2, param6, param0, param5, param7, param4, param3, bea.field_l);
               if (param1 == -8543) {
                 return;
               } else {
@@ -59,205 +91,11 @@ final class oea extends vg {
                 return;
               }
             } else {
-              vb.a(-922437200, param2, param6, param3, param7, param5, param4, param0, bea.field_l);
-              if (var9 == 0) {
-                if (param1 == -8543) {
-                  return;
-                } else {
-                  field_i = (jea) null;
-                  return;
-                }
-              } else {
-                vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, bea.field_l);
-                if (param1 == -8543) {
-                  return;
-                } else {
-                  field_i = (jea) null;
-                  return;
-                }
-              }
-            }
-          } else {
-            vb.a(-922437200, param7, param6, param3, param2, param5, param0, param4, bea.field_l);
-            if (var9 != 0) {
-              if (param3 >= param4) {
-                L0: {
-                  vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, bea.field_l);
-                  if (param1 == -8543) {
-                    break L0;
-                  } else {
-                    field_i = (jea) null;
-                    break L0;
-                  }
-                }
-                return;
-              } else {
-                vb.a(-922437200, param2, param6, param3, param7, param5, param4, param0, bea.field_l);
-                if (var9 == 0) {
-                  if (param1 == -8543) {
-                    return;
-                  } else {
-                    field_i = (jea) null;
-                    return;
-                  }
-                } else {
-                  vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, bea.field_l);
-                  if (param1 != -8543) {
-                    field_i = (jea) null;
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              }
-            } else {
-              if (param1 != -8543) {
-                field_i = (jea) null;
-                return;
-              } else {
-                return;
-              }
-            }
-          }
-        } else {
-          if (param3 < param4) {
-            vb.a(-922437200, param5, param6, param0, param2, param7, param3, param4, bea.field_l);
-            if (var9 != 0) {
-              L1: {
-                L2: {
-                  if (param4 <= param0) {
-                    break L2;
-                  } else {
-                    vb.a(-922437200, param7, param6, param3, param2, param5, param0, param4, bea.field_l);
-                    if (var9 == 0) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                if (param3 >= param4) {
-                  vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, bea.field_l);
-                  break L1;
-                } else {
-                  vb.a(-922437200, param2, param6, param3, param7, param5, param4, param0, bea.field_l);
-                  if (var9 == 0) {
-                    break L1;
-                  } else {
-                    vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, bea.field_l);
-                    break L1;
-                  }
-                }
-              }
-              if (param1 != -8543) {
-                field_i = (jea) null;
-                return;
-              } else {
-                return;
-              }
-            } else {
-              if (param1 != -8543) {
-                field_i = (jea) null;
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
-            if (param4 <= param0) {
               vb.a(-922437200, param7, param6, param4, param5, param2, param0, param3, bea.field_l);
-              if (var9 != 0) {
-                vb.a(-922437200, param2, param6, param0, param5, param7, param4, param3, bea.field_l);
-                if (var9 == 0) {
-                  if (param1 != -8543) {
-                    field_i = (jea) null;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  L3: {
-                    vb.a(-922437200, param5, param6, param0, param2, param7, param3, param4, bea.field_l);
-                    if (param4 <= param0) {
-                      break L3;
-                    } else {
-                      vb.a(-922437200, param7, param6, param3, param2, param5, param0, param4, bea.field_l);
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    if (param3 >= param4) {
-                      vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, bea.field_l);
-                      break L4;
-                    } else {
-                      vb.a(-922437200, param2, param6, param3, param7, param5, param4, param0, bea.field_l);
-                      if (var9 == 0) {
-                        break L4;
-                      } else {
-                        vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, bea.field_l);
-                        break L4;
-                      }
-                    }
-                  }
-                  L5: {
-                    if (param1 == -8543) {
-                      break L5;
-                    } else {
-                      field_i = (jea) null;
-                      break L5;
-                    }
-                  }
-                  return;
-                }
+              if (param1 != -8543) {
+                field_i = (jea) null;
+                return;
               } else {
-                if (param1 != -8543) {
-                  field_i = (jea) null;
-                  return;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              vb.a(-922437200, param2, param6, param0, param5, param7, param4, param3, bea.field_l);
-              if (var9 == 0) {
-                if (param1 != -8543) {
-                  field_i = (jea) null;
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                L6: {
-                  vb.a(-922437200, param5, param6, param0, param2, param7, param3, param4, bea.field_l);
-                  if (param4 <= param0) {
-                    break L6;
-                  } else {
-                    vb.a(-922437200, param7, param6, param3, param2, param5, param0, param4, bea.field_l);
-                    break L6;
-                  }
-                }
-                L7: {
-                  if (param3 >= param4) {
-                    vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, bea.field_l);
-                    break L7;
-                  } else {
-                    vb.a(-922437200, param2, param6, param3, param7, param5, param4, param0, bea.field_l);
-                    if (var9 == 0) {
-                      break L7;
-                    } else {
-                      vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, bea.field_l);
-                      break L7;
-                    }
-                  }
-                }
-                L8: {
-                  if (param1 == -8543) {
-                    break L8;
-                  } else {
-                    field_i = (jea) null;
-                    break L8;
-                  }
-                }
                 return;
               }
             }
@@ -275,11 +113,10 @@ final class oea extends vg {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int discarded$2 = 0;
-        int var3 = 0;
+        int var3;
         var3 = param1 + -1 & param0 >> 759697279;
         if (param2 > -54) {
-          discarded$2 = oea.a(28, -97, -108);
+          oea.a(28, -97, -108);
           return (param0 - -(param0 >>> -48471489)) % param1 - -var3;
         } else {
           return (param0 - -(param0 >>> -48471489)) % param1 - -var3;

@@ -15,10 +15,9 @@ final class jda extends iga {
     }
 
     final void a(lu param0, boolean param1) {
-        wba discarded$0 = null;
         try {
             if (param1) {
-                discarded$0 = this.a((byte) -118);
+                this.a((byte) -118);
             }
             param0.a(this.field_f, 70);
             param0.a(-117, this.field_e);

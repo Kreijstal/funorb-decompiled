@@ -42,201 +42,191 @@ public final class Geoblox extends wf {
         int var2 = 0;
         int[] array$0 = null;
         dm[] var12 = null;
+        dm[] var3 = null;
         int var4 = 0;
         int var8_int = 0;
-        dm[] var13 = null;
         dm[] var5 = null;
         dm[] var6 = null;
         na[] var7 = null;
-        int[] var15 = null;
         int[] var14 = null;
+        int[] var13 = null;
         int[] var8 = null;
         int var11 = 0;
-        dm discarded$1 = null;
         int var5_int = 0;
         int var6_int = 0;
         int var7_int = 0;
         int var9 = 0;
         int var10 = field_C;
         oj.a(vc.field_i, (byte) -104);
-        if (null != wj.field_F) {
-            if (null != fe.field_a) {
-                if (ah.field_c != null) {
-                    if (null != cd.field_m) {
-                        lc.a(ca.field_h, -2, 60.0f);
-                        this.a(25853);
-                        jg.a(wj.field_F, (byte) 80, ah.field_c, fe.field_a, cd.field_m);
-                        ah.field_c = null;
-                        wj.field_F = null;
-                        cd.field_m = null;
-                        fe.field_a = null;
-                        ih.b(127);
-                        return false;
-                    }
-                }
-            }
+        if (null != wj.field_F && null != fe.field_a && ah.field_c != null && null != cd.field_m) {
+            lc.a(ca.field_h, -2, 60.0f);
+            this.a(25853);
+            jg.a(wj.field_F, (byte) 80, ah.field_c, fe.field_a, cd.field_m);
+            ah.field_c = null;
+            wj.field_F = null;
+            cd.field_m = null;
+            fe.field_a = null;
+            ih.b(127);
+            return false;
         }
-        if (null != ll.field_f) {
-            if (null != ii.field_k) {
-                if (ki.field_b != null) {
-                    lc.a(oh.field_c, param0 + -25871, 80.0f);
-                    this.a(25853);
-                    dd.field_G = w.a("", ll.field_f, ii.field_k, true, "font");
-                    wf.field_p = dd.field_G.e(1);
-                    dd.field_G.field_K[0][wf.field_p] = 16689938;
-                    dd.field_G.field_K[0][dd.field_G.e(16777215)] = 1;
-                    var2 = dd.field_G.field_K[0].length;
-                    array$0 = new int[var2];
-                    dd.field_G.field_K[1] = array$0;
-                    sf.a(dd.field_G.field_K[0], 0, dd.field_G.field_K[1], 0, var2);
-                    dd.field_G.field_K[1][wf.field_p] = 16777215;
-                    var12 = wj.a("geoms", "", ll.field_f, 0);
-                    var4 = -1;
-                    for (var5_int = 0; var12.length > var5_int; var5_int++) {
-                        var6_int = var5_int % 7;
-                        if (!(var6_int != 0)) {
-                            var4++;
-                            if (-8 >= (var4 ^ -1)) {
-                                break;
-                            }
-                        }
-                        var7_int = var12[var5_int].field_s;
-                        var8_int = var12[var5_int].field_o;
-                        s.field_G[var4][var6_int] = var12[var5_int];
-                        for (var9 = 0; -8 < (var9 ^ -1); var9++) {
-                            ke.field_a[var4][var6_int][var9] = new dm(var7_int, var8_int);
-                            ke.field_a[var4][var6_int][var9].e();
-                            var12[var5_int].b(0, 0, jg.field_f[var4][var9]);
-                        }
+        if (null != ll.field_f && null != ii.field_k && ki.field_b != null) {
+            lc.a(oh.field_c, param0 + -25871, 80.0f);
+            this.a(25853);
+            dd.field_G = w.a("", ll.field_f, ii.field_k, true, "font");
+            wf.field_p = dd.field_G.e(1);
+            dd.field_G.field_K[0][wf.field_p] = 16689938;
+            dd.field_G.field_K[0][dd.field_G.e(16777215)] = 1;
+            var2 = dd.field_G.field_K[0].length;
+            array$0 = new int[var2];
+            dd.field_G.field_K[1] = array$0;
+            sf.a(dd.field_G.field_K[0], 0, dd.field_G.field_K[1], 0, var2);
+            dd.field_G.field_K[1][wf.field_p] = 16777215;
+            var12 = wj.a("geoms", "", ll.field_f, 0);
+            var3 = var12;
+            var4 = -1;
+            for (var5_int = 0; var12.length > var5_int; var5_int++) {
+                var6_int = var5_int % 7;
+                if (!((var6_int ^ -1) != -1)) {
+                    var4++;
+                    if (-8 >= (var4 ^ -1)) {
+                        break;
                     }
-                    var13 = wj.a("amorphic", "", ll.field_f, param0 ^ 25869);
-                    for (var4 = 0; -8 < (var4 ^ -1); var4++) {
-                        for (var5_int = 0; (var5_int ^ -1) > -8; var5_int++) {
-                            for (var6_int = 0; var6_int < var13.length; var6_int++) {
-                                ka.field_m[var4][var5_int][var6_int] = new dm(4 + var13[var6_int].field_s, 4 + var13[var6_int].field_o);
-                                ka.field_m[var4][var5_int][var6_int].e();
-                                var13[var6_int].b(2, 2, jg.field_f[var4][var5_int]);
-                                k.a(0, 0, ka.field_m[var4][var5_int][var6_int].field_s, param0 ^ -3266, ka.field_m[var4][var5_int][var6_int].field_o);
-                            }
-                        }
-                    }
-                    sh.field_y.a(255);
-                    fi.field_d = gi.a(ii.field_k, 1, ll.field_f, "small_font", "");
-                    fc.field_g = wj.a("black", "", ll.field_f, 0);
-                    hg.field_b = wj.a("black_implode", "", ll.field_f, 0);
-                    hb.field_d = wj.a("silver", "", ll.field_f, 0);
-                    ej.field_a = wj.a("amorph_crack", "", ll.field_f, 0);
-                    i.field_a = ug.a("player_back", ll.field_f, (byte) -78, "");
-                    var5 = wj.a("player_eyes", "", ll.field_f, 0);
-                    if (da.a(0, 125)) {
-                        var5 = wj.a("player_eyes", "halloween", ll.field_f, 0);
-                    }
-                    fc.field_b = new dm[var5.length];
-                    for (var6_int = 0; var5.length > var6_int; var6_int++) {
-                        fc.field_b[var6_int] = new dm(4 + var5[var6_int].field_s, var5[var6_int].field_o - -4);
-                        fc.field_b[var6_int].e();
-                        var5[var6_int].c(2, 2);
-                        k.a(0, 0, fc.field_b[var6_int].field_s, -27085, fc.field_b[var6_int].field_m);
-                        fc.field_b[var6_int].d();
-                    }
-                    var6 = wj.a("player_mouth", "", ll.field_f, 0);
-                    if (da.a(0, param0 + -25774)) {
-                        var6 = wj.a("player_mouth", "halloween", ll.field_f, 0);
-                    }
-                    vh.field_H = new dm[var6.length];
-                    for (var7_int = 0; var6.length > var7_int; var7_int++) {
-                        vh.field_H[var7_int] = new dm(var6[var7_int].field_s + 4, var6[var7_int].field_o + 4);
-                        vh.field_H[var7_int].e();
-                        var6[var7_int].c(2, 2);
-                        k.a(2 + var6[var7_int].field_p, 0, vh.field_H[var7_int].field_s, -27085, var6[var7_int].field_m);
-                        vh.field_H[var7_int].d();
-                    }
-                    sh.field_y.a(255);
-                    fe.field_j = jg.a(ll.field_f, 1, "sun", "sky_background");
-                    ne.field_b = ug.a("sky_foreground", ll.field_f, (byte) -78, "sun");
-                    ll.field_g[1] = true;
-                    ee.field_A = ug.a("menu_background", ll.field_f, (byte) -78, "");
-                    vc.field_j = ug.a("menu_foreground", ll.field_f, (byte) -78, "");
-                    qj.field_c = ug.a("transition", ll.field_f, (byte) -78, "");
-                    vg.field_f = wj.a("silver_shock", "", ll.field_f, 0);
-                    mi.field_B = wj.a("sparkle", "", ll.field_f, 0);
-                    for (var7_int = 0; mi.field_B.length > var7_int; var7_int++) {
-                        mi.field_B[var7_int].g(1);
-                    }
-                    vj.field_a = wj.a("bang", "", ll.field_f, 0);
-                    eg.field_q = wj.a("bonus_glow", "", ll.field_f, 0);
-                    pk.field_k = ug.a("bubble", ll.field_f, (byte) -78, "");
-                    k.field_a = ug.a("pop", ll.field_f, (byte) -78, "");
-                    eb.field_g = wj.a("box_mouse", "", ll.field_f, 0);
-                    vf.field_H = wj.a("cry_begin", "", ll.field_f, 0);
-                    ok.field_a = wj.a("cry_middle", "", ll.field_f, 0);
-                    ld.field_b = wj.a("cry_end", "", ll.field_f, 0);
-                    if (!(!da.a(0, 110))) {
-                        vf.field_H = wj.a("cry_begin", "halloween", ll.field_f, 0);
-                        ok.field_a = wj.a("cry_middle", "halloween", ll.field_f, 0);
-                        ld.field_b = wj.a("cry_end", "halloween", ll.field_f, 0);
-                    }
-                    var7 = new na[8];
-                    var7[0] = jg.a(ll.field_f, 1, "", "keyboard_left");
-                    var7[1] = jg.a(ll.field_f, 1, "", "keyboard_right");
-                    var7[2] = jg.a(ll.field_f, 1, "", "keyboard_enter");
-                    var7[3] = jg.a(ll.field_f, 1, "", "keyboard_space");
-                    var7[4] = jg.a(ll.field_f, h.a(param0, 25868), "", "keyboard_esc");
-                    var7[5] = jg.a(ll.field_f, 1, "", "keyboard_backspace");
-                    var7[6] = jg.a(ll.field_f, 1, "", "keyboard_down");
-                    var7[7] = jg.a(ll.field_f, 1, "", "keyboard_i");
-                    var15 = new int[var7.length];
-                    var14 = var15;
-                    var8 = var14;
-                    var11 = 0;
-                    var9 = var11;
-                    while (var11 < var15.length) {
-                        var8[var11] = var7[var11].field_c + -3;
-                        var11++;
-                    }
-                    fi.field_d.a(var7, var15);
-                    sh.field_y.a(255);
-                    kh.field_h[0] = ug.a("main_title", ll.field_f, (byte) -78, "");
-                    kh.field_h[2] = ug.a("bestscoreseach_title", ll.field_f, (byte) -78, "");
-                    kh.field_h[3] = ug.a("myscores_title", ll.field_f, (byte) -78, "");
-                    kh.field_h[1] = ug.a("allscores_title", ll.field_f, (byte) -78, "");
-                    kh.field_h[6] = ug.a("gameover_title", ll.field_f, (byte) -78, "");
-                    kh.field_h[4] = ug.a("achievements_title", ll.field_f, (byte) -78, "");
-                    kh.field_h[5] = ug.a("instructions_title", ll.field_f, (byte) -78, "");
-                    kh.field_h[7] = ug.a("achievements_tg_title", ll.field_f, (byte) -78, "");
-                    kh.field_h[8] = ug.a("login_title", ll.field_f, (byte) -78, "");
-                    ll.field_h = new dm[9];
-                    ll.field_h[0] = ug.a("frame_topleft", ll.field_f, (byte) -78, "");
-                    ll.field_h[1] = ug.a("frame_top", ll.field_f, (byte) -78, "");
-                    ll.field_h[2] = ug.a("frame_topright", ll.field_f, (byte) -78, "");
-                    ll.field_h[3] = ug.a("frame_left", ll.field_f, (byte) -78, "");
-                    ll.field_h[4] = ug.a("frame_centre", ll.field_f, (byte) -78, "");
-                    ll.field_h[5] = ug.a("frame_right", ll.field_f, (byte) -78, "");
-                    ll.field_h[6] = ug.a("frame_bottomleft", ll.field_f, (byte) -78, "");
-                    ll.field_h[7] = ug.a("frame_bottom", ll.field_f, (byte) -78, "");
-                    ll.field_h[8] = ug.a("frame_bottomright", ll.field_f, (byte) -78, "");
-                    re.field_h = ug.a("widget", ll.field_f, (byte) -78, "");
-                    sd.field_y = ug.a("bar", ll.field_f, (byte) -78, "");
-                    lj.field_d = ug.a("box_sml", ll.field_f, (byte) -78, "");
-                    g.field_i = ug.a("box_count", ll.field_f, (byte) -78, "");
-                    vh.field_G = ug.a("box_lgr", ll.field_f, (byte) -78, "");
-                    tl.field_r = wj.a("intro_faces", "", ll.field_f, 0);
-                    if (da.a(0, -105)) {
-                        tl.field_r = wj.a("intro_faces", "halloween", ll.field_f, 0);
-                    }
-                    qh.field_O = wj.a("intro_geoms", "", ll.field_f, 0);
-                    sl.field_f = wj.a("achievements", "", ll.field_f, 0);
-                    am.field_b = ug.a("unachieved", ki.field_b, (byte) -78, "basic");
-                    discarded$1 = ug.a("locked", ki.field_b, (byte) -78, "basic");
-                    uk.field_m = ug.a("orbcoin", ki.field_b, (byte) -78, "basic");
-                    c.field_ab = 1;
-                    cd.a((byte) 79);
-                    ih.b(-62);
-                    ii.field_k = null;
-                    ki.field_b = null;
-                    return false;
+                }
+                var7_int = var12[var5_int].field_s;
+                var8_int = var12[var5_int].field_o;
+                s.field_G[var4][var6_int] = var12[var5_int];
+                for (var9 = 0; -8 < (var9 ^ -1); var9++) {
+                    ke.field_a[var4][var6_int][var9] = new dm(var7_int, var8_int);
+                    ke.field_a[var4][var6_int][var9].e();
+                    var12[var5_int].b(0, 0, jg.field_f[var4][var9]);
                 }
             }
+            var3 = wj.a("amorphic", "", ll.field_f, param0 ^ 25869);
+            for (var4 = 0; -8 < (var4 ^ -1); var4++) {
+                for (var5_int = 0; (var5_int ^ -1) > -8; var5_int++) {
+                    for (var6_int = 0; var6_int < var3.length; var6_int++) {
+                        ka.field_m[var4][var5_int][var6_int] = new dm(4 + var3[var6_int].field_s, 4 + var3[var6_int].field_o);
+                        ka.field_m[var4][var5_int][var6_int].e();
+                        var3[var6_int].b(2, 2, jg.field_f[var4][var5_int]);
+                        k.a(0, 0, ka.field_m[var4][var5_int][var6_int].field_s, param0 ^ -3266, ka.field_m[var4][var5_int][var6_int].field_o);
+                    }
+                }
+            }
+            sh.field_y.a(255);
+            fi.field_d = gi.a(ii.field_k, 1, ll.field_f, "small_font", "");
+            fc.field_g = wj.a("black", "", ll.field_f, 0);
+            hg.field_b = wj.a("black_implode", "", ll.field_f, 0);
+            hb.field_d = wj.a("silver", "", ll.field_f, 0);
+            ej.field_a = wj.a("amorph_crack", "", ll.field_f, 0);
+            i.field_a = ug.a("player_back", ll.field_f, (byte) -78, "");
+            var5 = wj.a("player_eyes", "", ll.field_f, 0);
+            if (da.a(0, 125)) {
+                var5 = wj.a("player_eyes", "halloween", ll.field_f, 0);
+            }
+            fc.field_b = new dm[var5.length];
+            for (var6_int = 0; var5.length > var6_int; var6_int++) {
+                fc.field_b[var6_int] = new dm(4 + var5[var6_int].field_s, var5[var6_int].field_o - -4);
+                fc.field_b[var6_int].e();
+                var5[var6_int].c(2, 2);
+                k.a(0, 0, fc.field_b[var6_int].field_s, -27085, fc.field_b[var6_int].field_m);
+                fc.field_b[var6_int].d();
+            }
+            var6 = wj.a("player_mouth", "", ll.field_f, 0);
+            if (da.a(0, param0 + -25774)) {
+                var6 = wj.a("player_mouth", "halloween", ll.field_f, 0);
+            }
+            vh.field_H = new dm[var6.length];
+            for (var7_int = 0; var6.length > var7_int; var7_int++) {
+                vh.field_H[var7_int] = new dm(var6[var7_int].field_s + 4, var6[var7_int].field_o + 4);
+                vh.field_H[var7_int].e();
+                var6[var7_int].c(2, 2);
+                k.a(2 + var6[var7_int].field_p, 0, vh.field_H[var7_int].field_s, -27085, var6[var7_int].field_m);
+                vh.field_H[var7_int].d();
+            }
+            sh.field_y.a(255);
+            fe.field_j = jg.a(ll.field_f, 1, "sun", "sky_background");
+            ne.field_b = ug.a("sky_foreground", ll.field_f, (byte) -78, "sun");
+            ll.field_g[1] = true;
+            ee.field_A = ug.a("menu_background", ll.field_f, (byte) -78, "");
+            vc.field_j = ug.a("menu_foreground", ll.field_f, (byte) -78, "");
+            qj.field_c = ug.a("transition", ll.field_f, (byte) -78, "");
+            vg.field_f = wj.a("silver_shock", "", ll.field_f, 0);
+            mi.field_B = wj.a("sparkle", "", ll.field_f, 0);
+            for (var7_int = 0; mi.field_B.length > var7_int; var7_int++) {
+                mi.field_B[var7_int].g(1);
+            }
+            vj.field_a = wj.a("bang", "", ll.field_f, 0);
+            eg.field_q = wj.a("bonus_glow", "", ll.field_f, 0);
+            pk.field_k = ug.a("bubble", ll.field_f, (byte) -78, "");
+            k.field_a = ug.a("pop", ll.field_f, (byte) -78, "");
+            eb.field_g = wj.a("box_mouse", "", ll.field_f, 0);
+            vf.field_H = wj.a("cry_begin", "", ll.field_f, 0);
+            ok.field_a = wj.a("cry_middle", "", ll.field_f, 0);
+            ld.field_b = wj.a("cry_end", "", ll.field_f, 0);
+            if (!(!da.a(0, 110))) {
+                vf.field_H = wj.a("cry_begin", "halloween", ll.field_f, 0);
+                ok.field_a = wj.a("cry_middle", "halloween", ll.field_f, 0);
+                ld.field_b = wj.a("cry_end", "halloween", ll.field_f, 0);
+            }
+            var7 = new na[8];
+            var7[0] = jg.a(ll.field_f, 1, "", "keyboard_left");
+            var7[1] = jg.a(ll.field_f, 1, "", "keyboard_right");
+            var7[2] = jg.a(ll.field_f, 1, "", "keyboard_enter");
+            var7[3] = jg.a(ll.field_f, 1, "", "keyboard_space");
+            var7[4] = jg.a(ll.field_f, h.a(param0, 25868), "", "keyboard_esc");
+            var7[5] = jg.a(ll.field_f, 1, "", "keyboard_backspace");
+            var7[6] = jg.a(ll.field_f, 1, "", "keyboard_down");
+            var7[7] = jg.a(ll.field_f, 1, "", "keyboard_i");
+            var14 = new int[var7.length];
+            var13 = var14;
+            var8 = var13;
+            var11 = 0;
+            var9 = var11;
+            while (var11 < var14.length) {
+                var8[var11] = var7[var11].field_c + -3;
+                var11++;
+            }
+            fi.field_d.a(var7, var14);
+            sh.field_y.a(255);
+            kh.field_h[0] = ug.a("main_title", ll.field_f, (byte) -78, "");
+            kh.field_h[2] = ug.a("bestscoreseach_title", ll.field_f, (byte) -78, "");
+            kh.field_h[3] = ug.a("myscores_title", ll.field_f, (byte) -78, "");
+            kh.field_h[1] = ug.a("allscores_title", ll.field_f, (byte) -78, "");
+            kh.field_h[6] = ug.a("gameover_title", ll.field_f, (byte) -78, "");
+            kh.field_h[4] = ug.a("achievements_title", ll.field_f, (byte) -78, "");
+            kh.field_h[5] = ug.a("instructions_title", ll.field_f, (byte) -78, "");
+            kh.field_h[7] = ug.a("achievements_tg_title", ll.field_f, (byte) -78, "");
+            kh.field_h[8] = ug.a("login_title", ll.field_f, (byte) -78, "");
+            ll.field_h = new dm[9];
+            ll.field_h[0] = ug.a("frame_topleft", ll.field_f, (byte) -78, "");
+            ll.field_h[1] = ug.a("frame_top", ll.field_f, (byte) -78, "");
+            ll.field_h[2] = ug.a("frame_topright", ll.field_f, (byte) -78, "");
+            ll.field_h[3] = ug.a("frame_left", ll.field_f, (byte) -78, "");
+            ll.field_h[4] = ug.a("frame_centre", ll.field_f, (byte) -78, "");
+            ll.field_h[5] = ug.a("frame_right", ll.field_f, (byte) -78, "");
+            ll.field_h[6] = ug.a("frame_bottomleft", ll.field_f, (byte) -78, "");
+            ll.field_h[7] = ug.a("frame_bottom", ll.field_f, (byte) -78, "");
+            ll.field_h[8] = ug.a("frame_bottomright", ll.field_f, (byte) -78, "");
+            re.field_h = ug.a("widget", ll.field_f, (byte) -78, "");
+            sd.field_y = ug.a("bar", ll.field_f, (byte) -78, "");
+            lj.field_d = ug.a("box_sml", ll.field_f, (byte) -78, "");
+            g.field_i = ug.a("box_count", ll.field_f, (byte) -78, "");
+            vh.field_G = ug.a("box_lgr", ll.field_f, (byte) -78, "");
+            tl.field_r = wj.a("intro_faces", "", ll.field_f, 0);
+            if (da.a(0, -105)) {
+                tl.field_r = wj.a("intro_faces", "halloween", ll.field_f, 0);
+            }
+            qh.field_O = wj.a("intro_geoms", "", ll.field_f, 0);
+            sl.field_f = wj.a("achievements", "", ll.field_f, 0);
+            am.field_b = ug.a("unachieved", ki.field_b, (byte) -78, "basic");
+            ug.a("locked", ki.field_b, (byte) -78, "basic");
+            uk.field_m = ug.a("orbcoin", ki.field_b, (byte) -78, "basic");
+            c.field_ab = 1;
+            cd.a((byte) 79);
+            ih.b(-62);
+            ii.field_k = null;
+            ki.field_b = null;
+            return false;
         }
         if (param0 != 25869) {
             field_z = (String[]) null;
@@ -248,69 +238,27 @@ public final class Geoblox extends wf {
     }
 
     private final boolean g(boolean param0) {
-        rh stackIn_9_0 = null;
         rh stackIn_10_0 = null;
         rh stackIn_11_0 = null;
         int stackIn_11_1 = 0;
-        String stackIn_26_0 = null;
-        rh stackIn_26_1 = null;
-        String stackIn_26_2 = null;
-        String stackIn_26_3 = null;
-        String stackIn_27_0 = null;
-        rh stackIn_27_1 = null;
-        String stackIn_27_2 = null;
-        String stackIn_27_3 = null;
+        String stackIn_27_0;
+        rh stackIn_27_1;
+        String stackIn_27_2;
+        String stackIn_27_3;
         String stackIn_28_0 = null;
         rh stackIn_28_1 = null;
         String stackIn_28_2 = null;
         String stackIn_28_3 = null;
         int stackIn_28_4 = 0;
-        String stackIn_46_0 = null;
-        rh stackIn_46_1 = null;
-        String stackIn_46_2 = null;
-        String stackIn_46_3 = null;
-        String stackIn_47_0 = null;
-        rh stackIn_47_1 = null;
-        String stackIn_47_2 = null;
-        String stackIn_47_3 = null;
+        String stackIn_47_0;
+        rh stackIn_47_1;
+        String stackIn_47_2;
+        String stackIn_47_3;
         String stackIn_48_0 = null;
         rh stackIn_48_1 = null;
         String stackIn_48_2 = null;
         String stackIn_48_3 = null;
         int stackIn_48_4 = 0;
-        rh stackOut_8_0 = null;
-        rh stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        rh stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        String stackOut_45_0 = null;
-        rh stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        String stackOut_45_3 = null;
-        String stackOut_47_0 = null;
-        rh stackOut_47_1 = null;
-        String stackOut_47_2 = null;
-        String stackOut_47_3 = null;
-        int stackOut_47_4 = 0;
-        String stackOut_46_0 = null;
-        rh stackOut_46_1 = null;
-        String stackOut_46_2 = null;
-        String stackOut_46_3 = null;
-        int stackOut_46_4 = 0;
-        String stackOut_25_0 = null;
-        rh stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        String stackOut_25_3 = null;
-        String stackOut_27_0 = null;
-        rh stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        String stackOut_27_3 = null;
-        int stackOut_27_4 = 0;
-        String stackOut_26_0 = null;
-        rh stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        String stackOut_26_3 = null;
-        int stackOut_26_4 = 0;
         if (ef.field_e) {
           return true;
         } else {
@@ -327,24 +275,19 @@ public final class Geoblox extends wf {
                     break L1;
                   } else {
                     L2: {
-                      stackOut_8_0 = ah.field_c;
-                      stackIn_10_0 = stackOut_8_0;
-                      stackIn_9_0 = stackOut_8_0;
+                      stackIn_10_0 = ah.field_c;
+
                       if (param0) {
-                        stackOut_10_0 = (rh) ((Object) stackIn_10_0);
-                        stackOut_10_1 = 0;
-                        stackIn_11_0 = stackOut_10_0;
-                        stackIn_11_1 = stackOut_10_1;
+                        stackIn_11_0 = (rh) ((Object) stackIn_10_0);
+                        stackIn_11_1 = 0;
                         break L2;
                       } else {
-                        stackOut_9_0 = (rh) ((Object) stackIn_9_0);
-                        stackOut_9_1 = 1;
-                        stackIn_11_0 = stackOut_9_0;
-                        stackIn_11_1 = stackOut_9_1;
+                        stackIn_11_0 = (rh) ((Object) stackIn_10_0);
+                        stackIn_11_1 = 1;
                         break L2;
                       }
                     }
-                    if (((rh) (Object) stackIn_11_0).b(stackIn_11_1 == 0)) {
+                    if (!((rh) (Object) stackIn_11_0).b(stackIn_11_1 != 0)) {
                       break L1;
                     } else {
                       L3: {
@@ -417,41 +360,27 @@ public final class Geoblox extends wf {
                                                       }
                                                     }
                                                     L11: {
-                                                      stackOut_45_0 = ff.field_l;
-                                                      stackOut_45_1 = ki.field_b;
-                                                      stackOut_45_2 = "basic";
-                                                      stackOut_45_3 = wi.field_F;
-                                                      stackIn_47_0 = stackOut_45_0;
-                                                      stackIn_47_1 = stackOut_45_1;
-                                                      stackIn_47_2 = stackOut_45_2;
-                                                      stackIn_47_3 = stackOut_45_3;
-                                                      stackIn_46_0 = stackOut_45_0;
-                                                      stackIn_46_1 = stackOut_45_1;
-                                                      stackIn_46_2 = stackOut_45_2;
-                                                      stackIn_46_3 = stackOut_45_3;
+                                                      stackIn_47_0 = ff.field_l;
+
+                                                      stackIn_47_1 = ki.field_b;
+
+                                                      stackIn_47_2 = "basic";
+
+                                                      stackIn_47_3 = wi.field_F;
+
                                                       if (param0) {
-                                                        stackOut_47_0 = (String) ((Object) stackIn_47_0);
-                                                        stackOut_47_1 = (rh) ((Object) stackIn_47_1);
-                                                        stackOut_47_2 = (String) ((Object) stackIn_47_2);
-                                                        stackOut_47_3 = (String) ((Object) stackIn_47_3);
-                                                        stackOut_47_4 = 0;
-                                                        stackIn_48_0 = stackOut_47_0;
-                                                        stackIn_48_1 = stackOut_47_1;
-                                                        stackIn_48_2 = stackOut_47_2;
-                                                        stackIn_48_3 = stackOut_47_3;
-                                                        stackIn_48_4 = stackOut_47_4;
+                                                        stackIn_48_0 = (String) ((Object) stackIn_47_0);
+                                                        stackIn_48_1 = (rh) ((Object) stackIn_47_1);
+                                                        stackIn_48_2 = (String) ((Object) stackIn_47_2);
+                                                        stackIn_48_3 = (String) ((Object) stackIn_47_3);
+                                                        stackIn_48_4 = 0;
                                                         break L11;
                                                       } else {
-                                                        stackOut_46_0 = (String) ((Object) stackIn_46_0);
-                                                        stackOut_46_1 = (rh) ((Object) stackIn_46_1);
-                                                        stackOut_46_2 = (String) ((Object) stackIn_46_2);
-                                                        stackOut_46_3 = (String) ((Object) stackIn_46_3);
-                                                        stackOut_46_4 = 1;
-                                                        stackIn_48_0 = stackOut_46_0;
-                                                        stackIn_48_1 = stackOut_46_1;
-                                                        stackIn_48_2 = stackOut_46_2;
-                                                        stackIn_48_3 = stackOut_46_3;
-                                                        stackIn_48_4 = stackOut_46_4;
+                                                        stackIn_48_0 = (String) ((Object) stackIn_47_0);
+                                                        stackIn_48_1 = (rh) ((Object) stackIn_47_1);
+                                                        stackIn_48_2 = (String) ((Object) stackIn_47_2);
+                                                        stackIn_48_3 = (String) ((Object) stackIn_47_3);
+                                                        stackIn_48_4 = 1;
                                                         break L11;
                                                       }
                                                     }
@@ -471,41 +400,27 @@ public final class Geoblox extends wf {
                                     }
                                   }
                                   L12: {
-                                    stackOut_25_0 = ik.field_b;
-                                    stackOut_25_1 = ii.field_k;
-                                    stackOut_25_2 = "";
-                                    stackOut_25_3 = nb.field_a;
-                                    stackIn_27_0 = stackOut_25_0;
-                                    stackIn_27_1 = stackOut_25_1;
-                                    stackIn_27_2 = stackOut_25_2;
-                                    stackIn_27_3 = stackOut_25_3;
-                                    stackIn_26_0 = stackOut_25_0;
-                                    stackIn_26_1 = stackOut_25_1;
-                                    stackIn_26_2 = stackOut_25_2;
-                                    stackIn_26_3 = stackOut_25_3;
+                                    stackIn_27_0 = ik.field_b;
+
+                                    stackIn_27_1 = ii.field_k;
+
+                                    stackIn_27_2 = "";
+
+                                    stackIn_27_3 = nb.field_a;
+
                                     if (param0) {
-                                      stackOut_27_0 = (String) ((Object) stackIn_27_0);
-                                      stackOut_27_1 = (rh) ((Object) stackIn_27_1);
-                                      stackOut_27_2 = (String) ((Object) stackIn_27_2);
-                                      stackOut_27_3 = (String) ((Object) stackIn_27_3);
-                                      stackOut_27_4 = 0;
-                                      stackIn_28_0 = stackOut_27_0;
-                                      stackIn_28_1 = stackOut_27_1;
-                                      stackIn_28_2 = stackOut_27_2;
-                                      stackIn_28_3 = stackOut_27_3;
-                                      stackIn_28_4 = stackOut_27_4;
+                                      stackIn_28_0 = (String) ((Object) stackIn_27_0);
+                                      stackIn_28_1 = (rh) ((Object) stackIn_27_1);
+                                      stackIn_28_2 = (String) ((Object) stackIn_27_2);
+                                      stackIn_28_3 = (String) ((Object) stackIn_27_3);
+                                      stackIn_28_4 = 0;
                                       break L12;
                                     } else {
-                                      stackOut_26_0 = (String) ((Object) stackIn_26_0);
-                                      stackOut_26_1 = (rh) ((Object) stackIn_26_1);
-                                      stackOut_26_2 = (String) ((Object) stackIn_26_2);
-                                      stackOut_26_3 = (String) ((Object) stackIn_26_3);
-                                      stackOut_26_4 = 1;
-                                      stackIn_28_0 = stackOut_26_0;
-                                      stackIn_28_1 = stackOut_26_1;
-                                      stackIn_28_2 = stackOut_26_2;
-                                      stackIn_28_3 = stackOut_26_3;
-                                      stackIn_28_4 = stackOut_26_4;
+                                      stackIn_28_0 = (String) ((Object) stackIn_27_0);
+                                      stackIn_28_1 = (rh) ((Object) stackIn_27_1);
+                                      stackIn_28_2 = (String) ((Object) stackIn_27_2);
+                                      stackIn_28_3 = (String) ((Object) stackIn_27_3);
+                                      stackIn_28_4 = 1;
                                       break L12;
                                     }
                                   }
@@ -794,22 +709,12 @@ public final class Geoblox extends wf {
     final static void a(int param0, dm param1) {
         RuntimeException runtimeException = null;
         dm var3 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -829,27 +734,19 @@ public final class Geoblox extends wf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("Geoblox.T(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("Geoblox.T(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -869,34 +766,18 @@ public final class Geoblox extends wf {
     }
 
     final void c(boolean param0) {
-        int fieldTemp$2 = 0;
-        boolean discarded$3 = false;
-        int var2 = 0;
-        int var3 = 0;
-        Object stackIn_7_0 = null;
+        int fieldTemp$0 = 0;
+        boolean discarded$1 = false;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
         int stackIn_9_1 = 0;
-        Object stackIn_12_0 = null;
         Object stackIn_13_0 = null;
         Object stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_63_0 = 0;
         int stackIn_91_0 = 0;
-        Object stackOut_6_0 = null;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_11_0 = null;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_90_0 = 0;
-        int stackOut_89_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_61_0 = 0;
+        int var2;
+        int var3;
         var3 = field_C;
         ng.h(78);
         if (!param0) {
@@ -914,20 +795,15 @@ public final class Geoblox extends wf {
             }
           }
           L1: {
-            stackOut_6_0 = this;
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_7_0 = stackOut_6_0;
+            stackIn_8_0 = this;
+
             if (null == vl.field_n) {
-              stackOut_8_0 = this;
-              stackOut_8_1 = 0;
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_0 = this;
+              stackIn_9_1 = 0;
               break L1;
             } else {
-              stackOut_7_0 = this;
-              stackOut_7_1 = 1;
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_0 = this;
+              stackIn_9_1 = 1;
               break L1;
             }
           }
@@ -935,20 +811,15 @@ public final class Geoblox extends wf {
             this.b(stackIn_9_1 != 0, 19660);
             if (cf.field_k) {
               L3: {
-                stackOut_11_0 = this;
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_13_0 = this;
+
                 if (param0) {
-                  stackOut_13_0 = this;
-                  stackOut_13_1 = 0;
-                  stackIn_14_0 = stackOut_13_0;
-                  stackIn_14_1 = stackOut_13_1;
+                  stackIn_14_0 = this;
+                  stackIn_14_1 = 0;
                   break L3;
                 } else {
-                  stackOut_12_0 = this;
-                  stackOut_12_1 = 1;
-                  stackIn_14_0 = stackOut_12_0;
-                  stackIn_14_1 = stackOut_12_1;
+                  stackIn_14_0 = this;
+                  stackIn_14_1 = 1;
                   break L3;
                 }
               }
@@ -993,12 +864,10 @@ public final class Geoblox extends wf {
                             if (!jk.field_a) {
                               L9: {
                                 if (vl.field_n == null) {
-                                  stackOut_90_0 = 0;
-                                  stackIn_91_0 = stackOut_90_0;
+                                  stackIn_91_0 = 0;
                                   break L9;
                                 } else {
-                                  stackOut_89_0 = 1;
-                                  stackIn_91_0 = stackOut_89_0;
+                                  stackIn_91_0 = 1;
                                   break L9;
                                 }
                               }
@@ -1181,9 +1050,9 @@ public final class Geoblox extends wf {
                               break L22;
                             }
                           }
-                          fieldTemp$2 = nf.field_A + 1;
+                          fieldTemp$0 = nf.field_A + 1;
                           nf.field_A = nf.field_A + 1;
-                          if (fieldTemp$2 != 160) {
+                          if (fieldTemp$0 != 160) {
                             break L6;
                           } else {
                             L23: {
@@ -1225,12 +1094,10 @@ public final class Geoblox extends wf {
                             if (dl.field_b) {
                               L26: {
                                 if (gb.b(1)) {
-                                  stackOut_62_0 = 0;
-                                  stackIn_63_0 = stackOut_62_0;
+                                  stackIn_63_0 = 0;
                                   break L26;
                                 } else {
-                                  stackOut_61_0 = 1;
-                                  stackIn_63_0 = stackOut_61_0;
+                                  stackIn_63_0 = 1;
                                   break L26;
                                 }
                               }
@@ -1281,7 +1148,7 @@ public final class Geoblox extends wf {
                   if (!fj.f(-31456)) {
                     break L5;
                   } else {
-                    discarded$3 = this.g(false);
+                    discarded$1 = this.g(false);
                     break L5;
                   }
                 }
@@ -1298,27 +1165,19 @@ public final class Geoblox extends wf {
     }
 
     final void a(int param0) {
-        Object var2 = null;
-        int var3 = 0;
-        int var4 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
         int stackIn_42_0 = 0;
-        he stackOut_2_0 = null;
-        java.awt.Canvas stackOut_1_0 = null;
-        boolean stackOut_41_0 = false;
-        int stackOut_40_0 = 0;
-        int stackOut_6_0 = 0;
-        boolean stackOut_5_0 = false;
+        Object var2;
+        int var3;
+        int var4;
         L0: {
           var4 = field_C;
           if (vl.field_n != null) {
-            stackOut_2_0 = vl.field_n;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = vl.field_n;
             break L0;
           } else {
-            stackOut_1_0 = f.field_kb;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = f.field_kb;
             break L0;
           }
         }
@@ -1420,12 +1279,10 @@ public final class Geoblox extends wf {
                 } else {
                   L9: {
                     if (null == vl.field_n) {
-                      stackOut_41_0 = lh.field_d;
-                      stackIn_42_0 = stackOut_41_0 ? 1 : 0;
+                      stackIn_42_0 = lh.field_d ? 1 : 0;
                       break L9;
                     } else {
-                      stackOut_40_0 = 1;
-                      stackIn_42_0 = stackOut_40_0;
+                      stackIn_42_0 = 1;
                       break L9;
                     }
                   }
@@ -1448,12 +1305,10 @@ public final class Geoblox extends wf {
         } else {
           L11: {
             if (vl.field_n != null) {
-              stackOut_6_0 = 1;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = 1;
               break L11;
             } else {
-              stackOut_5_0 = lh.field_d;
-              stackIn_7_0 = stackOut_5_0 ? 1 : 0;
+              stackIn_7_0 = lh.field_d ? 1 : 0;
               break L11;
             }
           }
@@ -1523,11 +1378,11 @@ public final class Geoblox extends wf {
     }
 
     final static void a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = field_C;
           var2 = 0;

@@ -6,27 +6,19 @@ final class gw extends le {
     static int[] field_i;
 
     final int[] a(int param0, boolean param1) {
-        int[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int[] var10 = null;
-        int[] var11 = null;
         int stackIn_13_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_27_0 = 0;
         int stackIn_34_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_25_0 = 0;
+        int[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int[] var9;
+        int[] var10;
+        int[] var11;
         var8 = VoidHunters.field_G;
         if (param1) {
           var11 = this.field_f.a((byte) 124, param0);
@@ -61,12 +53,10 @@ final class gw extends le {
                             if (-1 >= (var7 ^ -1)) {
                               var9 = var3;
                               var11 = var10;
-                              stackOut_12_0 = var7;
-                              stackIn_13_0 = stackOut_12_0;
+                              stackIn_13_0 = var7;
                               break L2;
                             } else {
-                              stackOut_11_0 = -var7;
-                              stackIn_13_0 = stackOut_11_0;
+                              stackIn_13_0 = -var7;
                               break L2;
                             }
                           }
@@ -91,12 +81,10 @@ final class gw extends le {
                       L4: {
                         var7 = var4 - 2048;
                         if ((var7 ^ -1) <= -1) {
-                          stackOut_19_0 = var7;
-                          stackIn_20_0 = stackOut_19_0;
+                          stackIn_20_0 = var7;
                           break L4;
                         } else {
-                          stackOut_18_0 = -var7;
-                          stackIn_20_0 = stackOut_18_0;
+                          stackIn_20_0 = -var7;
                           break L4;
                         }
                       }
@@ -132,12 +120,10 @@ final class gw extends le {
                       L7: {
                         var7 = -var4 + 2048;
                         if (0 > var7) {
-                          stackOut_33_0 = -var7;
-                          stackIn_34_0 = stackOut_33_0;
+                          stackIn_34_0 = -var7;
                           break L7;
                         } else {
-                          stackOut_32_0 = var7;
-                          stackIn_34_0 = stackOut_32_0;
+                          stackIn_34_0 = var7;
                           break L7;
                         }
                       }
@@ -155,12 +141,10 @@ final class gw extends le {
                 L8: {
                   var7 = var6 + -2048;
                   if (-1 >= (var7 ^ -1)) {
-                    stackOut_26_0 = var7;
-                    stackIn_27_0 = stackOut_26_0;
+                    stackIn_27_0 = var7;
                     break L8;
                   } else {
-                    stackOut_25_0 = -var7;
-                    stackIn_27_0 = stackOut_25_0;
+                    stackIn_27_0 = -var7;
                     break L8;
                   }
                 }
@@ -188,22 +172,12 @@ final class gw extends le {
     final void a(int param0, int param1, ds param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -226,27 +200,19 @@ final class gw extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var4);
-            stackOut_6_1 = new StringBuilder().append("gw.F(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var4);
+
+            stackIn_8_1 = new StringBuilder().append("gw.F(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }

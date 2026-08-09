@@ -95,10 +95,10 @@ final class k extends si {
     }
 
     final bd k(int param0) {
-        rh var2 = null;
-        int var3 = 0;
-        bd var4 = null;
-        int var5 = 0;
+        rh var2;
+        int var3;
+        bd var4;
+        int var5;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var3 = 87 % ((param0 - 56) / 53);
         var2 = new rh(this.field_K);
@@ -124,7 +124,6 @@ final class k extends si {
 
     final void a(byte param0, vg param1) {
         bd var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param1 instanceof bd)) {
                 throw new IllegalArgumentException();
@@ -135,17 +134,17 @@ final class k extends si {
                 field_M = (int[]) null;
             }
             var3.field_Q = true;
-            discarded$0 = var3.a(false, (vg) (this));
+            var3.a(false, (vg) (this));
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) ((Object) runtimeException), "k.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final vg h(int param0) {
-        rh var2 = null;
-        int var3 = 0;
-        bd var4 = null;
-        int var5 = 0;
+        rh var2;
+        int var3;
+        bd var4;
+        int var5;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var3 = -123 / ((param0 - -28) / 57);
         var2 = new rh(this.field_K);

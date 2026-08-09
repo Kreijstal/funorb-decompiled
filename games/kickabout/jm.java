@@ -19,24 +19,12 @@ final class jm extends gn {
             dh var5_ref = null;
             og stackIn_3_0 = null;
             dh stackIn_5_0 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            og stackOut_2_0 = null;
-            dh stackOut_4_0 = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
             try {
               L0: {
                 try {
@@ -52,8 +40,7 @@ final class jm extends gn {
                     var4 = Class.forName("pm");
                     var5 = (og) (var4.newInstance());
                     var5.a(30, param1, param2, param3);
-                    stackOut_2_0 = (og) (var5);
-                    stackIn_3_0 = stackOut_2_0;
+                    stackIn_3_0 = (og) (var5);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -61,8 +48,7 @@ final class jm extends gn {
                   var4_ref = decompiledCaughtException;
                   var5_ref = new dh();
                   ((og) ((Object) var5_ref)).a(30, param1, param2, param3);
-                  stackOut_4_0 = (dh) (var5_ref);
-                  stackIn_5_0 = stackOut_4_0;
+                  stackIn_5_0 = (dh) (var5_ref);
                   return (og) ((Object) stackIn_5_0);
                 }
                 break L0;
@@ -71,27 +57,19 @@ final class jm extends gn {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var4_ref2);
-                stackOut_6_1 = new StringBuilder().append("jm.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var4_ref2);
+
+                stackIn_8_1 = new StringBuilder().append("jm.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
                 if (param3 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L3;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L3;
                 }
               }
@@ -117,36 +95,19 @@ final class jm extends gn {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        wh discarded$3 = null;
-        wh discarded$4 = null;
-        wh discarded$5 = null;
-        RuntimeException var3 = null;
+        int stackIn_31_0 = 0;
+        int stackIn_35_0 = 0;
+        int stackIn_38_1 = 0;
+        int stackIn_74_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         hn var7 = null;
         tf var8 = null;
-        int stackIn_31_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_37_0 = 0;
-        int stackIn_38_0 = 0;
-        int stackIn_38_1 = 0;
-        int stackIn_74_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_37_1 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_72_0 = 0;
         var6 = Kickabout.field_G;
         try {
           L0: {
@@ -240,12 +201,10 @@ final class jm extends gn {
                       } else {
                         L8: {
                           if (tu.field_E.field_A) {
-                            stackOut_30_0 = 0;
-                            stackIn_31_0 = stackOut_30_0;
+                            stackIn_31_0 = 0;
                             break L8;
                           } else {
-                            stackOut_29_0 = 1;
-                            stackIn_31_0 = stackOut_29_0;
+                            stackIn_31_0 = 1;
                             break L8;
                           }
                         }
@@ -254,34 +213,27 @@ final class jm extends gn {
                         } else {
                           L9: {
                             if (tu.field_E.field_d) {
-                              stackOut_34_0 = 0;
-                              stackIn_35_0 = stackOut_34_0;
+                              stackIn_35_0 = 0;
                               break L9;
                             } else {
-                              stackOut_33_0 = 1;
-                              stackIn_35_0 = stackOut_33_0;
+                              stackIn_35_0 = 1;
                               break L9;
                             }
                           }
                           L10: {
-                            stackOut_35_0 = stackIn_35_0;
-                            stackIn_37_0 = stackOut_35_0;
-                            stackIn_36_0 = stackOut_35_0;
+
+
                             if (pf.field_c) {
-                              stackOut_37_0 = stackIn_37_0;
-                              stackOut_37_1 = 0;
-                              stackIn_38_0 = stackOut_37_0;
-                              stackIn_38_1 = stackOut_37_1;
+
+                              stackIn_38_1 = 0;
                               break L10;
                             } else {
-                              stackOut_36_0 = stackIn_36_0;
-                              stackOut_36_1 = 1;
-                              stackIn_38_0 = stackOut_36_0;
-                              stackIn_38_1 = stackOut_36_1;
+
+                              stackIn_38_1 = 1;
                               break L10;
                             }
                           }
-                          if (stackIn_38_0 != stackIn_38_1) {
+                          if (stackIn_35_0 != stackIn_38_1) {
                             break L7;
                           } else {
                             L11: {
@@ -406,17 +358,15 @@ final class jm extends gn {
                     } else {
                       L22: {
                         if (!((qt) ((Object) ra.field_G)).a((qt) ((Object) cq.field_h), -4319)) {
-                          stackOut_73_0 = 55;
-                          stackIn_74_0 = stackOut_73_0;
+                          stackIn_74_0 = 55;
                           break L22;
                         } else {
-                          stackOut_72_0 = 56;
-                          stackIn_74_0 = stackOut_72_0;
+                          stackIn_74_0 = 56;
                           break L22;
                         }
                       }
                       var3_int = stackIn_74_0;
-                      discarded$3 = sp.c(var3_int, -119);
+                      sp.c(var3_int, -119);
                       break L20;
                     }
                   }
@@ -428,7 +378,7 @@ final class jm extends gn {
                     if (!(cq.field_h instanceof qt)) {
                       break L23;
                     } else {
-                      discarded$4 = sp.c(55, 22);
+                      sp.c(55, 22);
                       break L20;
                     }
                   }
@@ -439,7 +389,7 @@ final class jm extends gn {
                   if (!(ra.field_G instanceof qt)) {
                     break L20;
                   } else {
-                    discarded$5 = sp.c(56, 49);
+                    sp.c(56, 49);
                     break L20;
                   }
                 }
@@ -480,11 +430,11 @@ final class jm extends gn {
     }
 
     final static void a(int param0, int param1, int param2) {
-        long var3 = 0L;
-        float var5 = 0.0f;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        long var3;
+        float var5;
+        int var6;
+        int var7;
+        int var8;
         var3 = nj.a(-127);
         if (var3 >= up.field_b) {
           up.field_b = var3 + 25L;

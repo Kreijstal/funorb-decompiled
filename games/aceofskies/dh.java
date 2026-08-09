@@ -24,6 +24,8 @@ final class dh {
     }
 
     final static void a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -41,8 +43,6 @@ final class dh {
         Object var16 = null;
         eh var16_ref = null;
         int[] var17 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var16 = null;
         var8 = AceOfSkies.field_G ? 1 : 0;
         try {

@@ -13,28 +13,19 @@ abstract class jc extends ib {
     private final int h(byte param0) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 90) {
           L0: {
             field_M = (vl) null;
             if (this.field_N) {
               if (this.field_I.g(-125) != this) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = 0;
                 break L0;
               } else {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 256;
                 break L0;
               }
             } else {
-              stackOut_8_0 = 0;
-              stackIn_12_0 = stackOut_8_0;
+              stackIn_12_0 = 0;
               break L0;
             }
           }
@@ -43,17 +34,14 @@ abstract class jc extends ib {
           L1: {
             if (this.field_N) {
               if (this.field_I.g(-125) != this) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 break L1;
               } else {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L1;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = 0;
               break L1;
             }
           }
@@ -62,20 +50,12 @@ abstract class jc extends ib {
     }
 
     boolean h(int param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_7_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_29_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
+        int var2;
+        int var3;
         var2 = this.h((byte) 90);
         var3 = var2 - this.field_L;
         if ((var3 ^ -1) >= -1) {
@@ -92,15 +72,13 @@ abstract class jc extends ib {
                     if (this.field_N) {
                       break L1;
                     } else {
-                      stackOut_27_0 = 1;
-                      stackIn_29_0 = stackOut_27_0;
+                      stackIn_29_0 = 1;
                       break L0;
                     }
                   }
                 }
               }
-              stackOut_28_0 = 0;
-              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_0 = 0;
               break L0;
             }
             return stackIn_29_0 != 0;
@@ -116,15 +94,13 @@ abstract class jc extends ib {
                     if (this.field_N) {
                       break L3;
                     } else {
-                      stackOut_21_0 = 1;
-                      stackIn_23_0 = stackOut_21_0;
+                      stackIn_23_0 = 1;
                       break L2;
                     }
                   }
                 }
               }
-              stackOut_22_0 = 0;
-              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_0 = 0;
               break L2;
             }
             return stackIn_23_0 != 0;
@@ -138,12 +114,10 @@ abstract class jc extends ib {
               } else {
                 L4: {
                   if (this.field_N) {
-                    stackOut_13_0 = 0;
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = 0;
                     break L4;
                   } else {
-                    stackOut_12_0 = 1;
-                    stackIn_14_0 = stackOut_12_0;
+                    stackIn_14_0 = 1;
                     break L4;
                   }
                 }
@@ -165,15 +139,13 @@ abstract class jc extends ib {
                     if (this.field_N) {
                       break L6;
                     } else {
-                      stackOut_5_0 = 1;
-                      stackIn_7_0 = stackOut_5_0;
+                      stackIn_7_0 = 1;
                       break L5;
                     }
                   }
                 }
               }
-              stackOut_6_0 = 0;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = 0;
               break L5;
             }
             return stackIn_7_0 != 0;
@@ -318,7 +290,7 @@ abstract class jc extends ib {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        int var4 = 0;
+        int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
         if (param2 >= -84) {
           L0: {

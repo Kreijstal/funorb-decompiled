@@ -11,14 +11,13 @@ final class oja {
     static String field_e;
 
     public static void a(int param0) {
-        String discarded$2 = null;
         field_e = null;
         field_d = null;
         field_b = null;
         field_g = null;
         field_f = null;
         if (param0 != -32341) {
-          discarded$2 = oja.a((byte) 92, 'R');
+          oja.a((byte) 92, 'R');
           field_a = null;
           return;
         } else {

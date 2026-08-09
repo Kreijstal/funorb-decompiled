@@ -9,7 +9,7 @@ final class rh {
     static hj field_b;
 
     final static void a(byte param0, int param1, boolean param2) {
-        int var3 = 0;
+        int var3;
         var3 = 99 / ((param0 - 75) / 33);
         te.field_O = 0;
         kk.field_S = param1;

@@ -60,6 +60,13 @@ final class oj {
     }
 
     final static void a(pb param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        String stackIn_44_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
         int var10 = 0;
         int var11 = 0;
@@ -75,23 +82,6 @@ final class oj {
         int[] var25 = null;
         int[] var29 = null;
         int[] var30 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
         var19 = stellarshard.field_B;
         try {
           L0: {
@@ -240,27 +230,19 @@ final class oj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L12: {
             var8 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) (var8);
-            stackOut_41_1 = new StringBuilder().append("oj.I(");
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackIn_43_0 = (RuntimeException) (var8);
+
+            stackIn_43_1 = new StringBuilder().append("oj.I(");
+
             if (param0 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "null";
               break L12;
             } else {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "{...}";
               break L12;
             }
           }
@@ -302,9 +284,9 @@ final class oj {
     }
 
     final void a(byte param0) {
-        gg var2 = null;
-        int var3 = 0;
-        gg var4 = null;
+        gg var2;
+        int var3;
+        gg var4;
         var3 = stellarshard.field_B;
         L0: while (true) {
           var2 = this.field_d.field_g;
@@ -351,7 +333,6 @@ final class oj {
     }
 
     final gg b(int param0) {
-        gg discarded$0 = null;
         gg var2 = this.field_d.field_g;
         if (!(var2 != this.field_d)) {
             this.field_c = null;
@@ -359,7 +340,7 @@ final class oj {
         }
         this.field_c = var2.field_g;
         if (param0 > -74) {
-            discarded$0 = this.b((byte) -32);
+            this.b((byte) -32);
         }
         return var2;
     }

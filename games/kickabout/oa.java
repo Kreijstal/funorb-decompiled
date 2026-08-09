@@ -16,53 +16,36 @@ final class oa {
     }
 
     final static ut a(boolean param0, int param1, byte param2) {
-        int var4 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        kg[] var10 = null;
-        int[] var12 = null;
-        ut var13 = null;
-        kg[] var14 = null;
-        int[] var15 = null;
-        ut var16 = null;
-        kg[] var17 = null;
-        kg[][] stackIn_2_0 = null;
+        int var4;
+        int var7;
+        int var8;
+        int var9;
+        kg[] var10;
+        int[] var12;
+        ut var13;
+        kg[] var14;
+        int[] var15;
+        ut var16;
+        kg[] var17;
         kg[][] stackIn_3_0 = null;
         kg[][] stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        kg[][] stackIn_9_0 = null;
         kg[][] stackIn_10_0 = null;
         kg[][] stackIn_11_0 = null;
         int stackIn_11_1 = 0;
-        kg[][] stackOut_8_0 = null;
-        kg[][] stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        kg[][] stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        kg[][] stackOut_1_0 = null;
-        kg[][] stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        kg[][] stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
         var9 = Kickabout.field_G;
         if (param2 <= 94) {
           L0: {
             oa.b(-53);
-            stackOut_8_0 = ph.field_e;
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_10_0 = ph.field_e;
+
             if (param0) {
-              stackOut_10_0 = (kg[][]) ((Object) stackIn_10_0);
-              stackOut_10_1 = 1;
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_0 = (kg[][]) ((Object) stackIn_10_0);
+              stackIn_11_1 = 1;
               break L0;
             } else {
-              stackOut_9_0 = (kg[][]) ((Object) stackIn_9_0);
-              stackOut_9_1 = 3;
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_0 = (kg[][]) ((Object) stackIn_10_0);
+              stackIn_11_1 = 3;
               break L0;
             }
           }
@@ -91,20 +74,15 @@ final class oa {
           }
         } else {
           L2: {
-            stackOut_1_0 = ph.field_e;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_3_0 = ph.field_e;
+
             if (param0) {
-              stackOut_3_0 = (kg[][]) ((Object) stackIn_3_0);
-              stackOut_3_1 = 1;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_0 = (kg[][]) ((Object) stackIn_3_0);
+              stackIn_4_1 = 1;
               break L2;
             } else {
-              stackOut_2_0 = (kg[][]) ((Object) stackIn_2_0);
-              stackOut_2_1 = 3;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_0 = (kg[][]) ((Object) stackIn_3_0);
+              stackIn_4_1 = 3;
               break L2;
             }
           }

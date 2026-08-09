@@ -7,21 +7,11 @@ final class kn {
     static vs field_b;
 
     final static java.awt.Frame a(rk param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
-        rm[] var6_array = null;
-        int var7_int = 0;
-        java.awt.Frame var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        rm[] var10 = null;
-        en var11 = null;
         Object stackIn_8_0 = null;
         Object stackIn_26_0 = null;
         Object stackIn_32_0 = null;
         java.awt.Frame stackIn_35_0 = null;
         Object stackIn_39_0 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
         RuntimeException stackIn_43_0 = null;
@@ -29,19 +19,14 @@ final class kn {
         String stackIn_43_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_25_0 = null;
-        Object stackOut_7_0 = null;
-        Object stackOut_38_0 = null;
-        java.awt.Frame stackOut_34_0 = null;
-        Object stackOut_31_0 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
+        rm[] var6 = null;
+        RuntimeException var6_ref = null;
+        int var7_int = 0;
+        java.awt.Frame var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        rm[] var10 = null;
+        en var11 = null;
         var9 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -49,8 +34,8 @@ final class kn {
               L1: {
                 if (param3 == 0) {
                   var10 = sk.a(param0, 1175069442);
-                  var6_array = var10;
-                  if (var6_array != null) {
+                  var6 = var10;
+                  if (var6 != null) {
                     var7_int = 0;
                     var8 = 0;
                     L2: while (true) {
@@ -58,8 +43,7 @@ final class kn {
                         if (var7_int != 0) {
                           break L1;
                         } else {
-                          stackOut_25_0 = null;
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = null;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         }
@@ -105,8 +89,7 @@ final class kn {
                       }
                     }
                   } else {
-                    stackOut_7_0 = null;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = null;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -122,22 +105,19 @@ final class kn {
                     if (param5 == 29742) {
                       if (-3 == (var11.field_a ^ -1)) {
                         ke.a(param5 ^ 30691, param0, var7);
-                        stackOut_38_0 = null;
-                        stackIn_39_0 = stackOut_38_0;
+                        stackIn_39_0 = null;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
                         return var7;
                       }
                     } else {
-                      stackOut_34_0 = (java.awt.Frame) null;
-                      stackIn_35_0 = stackOut_34_0;
+                      stackIn_35_0 = (java.awt.Frame) null;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }
                   } else {
-                    stackOut_31_0 = null;
-                    stackIn_32_0 = stackOut_31_0;
+                    stackIn_32_0 = null;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   }
@@ -153,28 +133,20 @@ final class kn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var6 = decompiledCaughtException;
-            stackOut_40_0 = (RuntimeException) (var6);
-            stackOut_40_1 = new StringBuilder().append("kn.A(");
-            stackIn_42_0 = stackOut_40_0;
-            stackIn_42_1 = stackOut_40_1;
-            stackIn_41_0 = stackOut_40_0;
-            stackIn_41_1 = stackOut_40_1;
+            var6_ref = decompiledCaughtException;
+            stackIn_42_0 = (RuntimeException) (var6_ref);
+
+            stackIn_42_1 = new StringBuilder().append("kn.A(");
+
             if (param0 == null) {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "null";
-              stackIn_43_0 = stackOut_42_0;
-              stackIn_43_1 = stackOut_42_1;
-              stackIn_43_2 = stackOut_42_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "null";
               break L6;
             } else {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "{...}";
-              stackIn_43_0 = stackOut_41_0;
-              stackIn_43_1 = stackOut_41_1;
-              stackIn_43_2 = stackOut_41_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "{...}";
               break L6;
             }
           }

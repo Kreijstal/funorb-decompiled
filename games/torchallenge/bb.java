@@ -25,18 +25,16 @@ final class bb implements Runnable {
 
     final static lj a(int param0, boolean param1, int param2, byte param3, boolean param4, boolean param5) {
         try {
-            lj discarded$2 = null;
             Object var6 = null;
             Object var7 = null;
             di var8 = null;
             lj stackIn_16_0 = null;
             Throwable decompiledCaughtException = null;
-            lj stackOut_15_0 = null;
             L0: {
               if (param3 > 91) {
                 break L0;
               } else {
-                discarded$2 = bb.a(70, true, 52, (byte) -68, false, false);
+                bb.a(70, true, 52, (byte) -68, false, false);
                 break L0;
               }
             }
@@ -88,8 +86,7 @@ final class bb implements Runnable {
                     break L6;
                   }
                 }
-                stackOut_15_0 = new lj(var8, param1, param2);
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_0 = new lj(var8, param1, param2);
                 break L1;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -138,13 +135,12 @@ final class bb implements Runnable {
     }
 
     public static void b(int param0) {
-        lj discarded$0 = null;
         field_k = (int[][]) null;
         field_g = null;
         field_j = null;
         field_d = null;
         if (param0 != 6) {
-            discarded$0 = bb.a(21, false, 57, (byte) -119, true, false);
+            bb.a(21, false, 57, (byte) -119, true, false);
         }
     }
 

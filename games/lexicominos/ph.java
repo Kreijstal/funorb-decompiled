@@ -10,8 +10,6 @@ final class ph {
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_10_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -19,17 +17,6 @@ final class ph {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             L1: {
@@ -43,13 +30,11 @@ final class ph {
                     break L1;
                   } else {
                     if (param0 == 107) {
-                      stackOut_9_0 = 0;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_0 = 0;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
-                      stackOut_7_0 = 1;
-                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_8_0 = 1;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -57,8 +42,7 @@ final class ph {
                 }
               }
             }
-            stackOut_4_0 = 1;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 1;
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -66,27 +50,19 @@ final class ph {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var2);
-            stackOut_11_1 = new StringBuilder().append("ph.C(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var2);
+
+            stackIn_13_1 = new StringBuilder().append("ph.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L2;
             }
           }
@@ -135,20 +111,22 @@ final class ph {
     }
 
     final synchronized static byte[] a(int param0, int param1) {
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int dupTemp$6 = 0;
+        byte[][] arrayValue$7 = null;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
         L0: {
           if (-101 != (param1 ^ -1)) {
             break L0;
           } else {
             if (mc.field_l > 0) {
-              fieldTemp$6 = mc.field_l - 1;
+              fieldTemp$3 = mc.field_l - 1;
               mc.field_l = mc.field_l - 1;
-              var2_ref_byte__ = m.field_a[fieldTemp$6];
+              var2_ref_byte__ = m.field_a[fieldTemp$3];
               m.field_a[mc.field_l] = null;
               return var2_ref_byte__;
             } else {
@@ -163,9 +141,9 @@ final class ph {
             if (re.field_Z <= 0) {
               break L1;
             } else {
-              fieldTemp$7 = re.field_Z - 1;
+              fieldTemp$4 = re.field_Z - 1;
               re.field_Z = re.field_Z - 1;
-              var2_ref_byte__ = rb.field_c[fieldTemp$7];
+              var2_ref_byte__ = rb.field_c[fieldTemp$4];
               rb.field_c[re.field_Z] = null;
               return var2_ref_byte__;
             }
@@ -178,9 +156,9 @@ final class ph {
             if (0 >= li.field_S) {
               break L2;
             } else {
-              fieldTemp$8 = li.field_S - 1;
+              fieldTemp$5 = li.field_S - 1;
               li.field_S = li.field_S - 1;
-              var2_ref_byte__ = gj.field_s[fieldTemp$8];
+              var2_ref_byte__ = gj.field_s[fieldTemp$5];
               gj.field_s[li.field_S] = null;
               return var2_ref_byte__;
             }
@@ -197,8 +175,10 @@ final class ph {
               } else {
                 if (ui.field_D[var2] == param1) {
                   if (0 < d.field_e[var2]) {
-                    d.field_e[var2] = d.field_e[var2] - 1;
-                    var3 = vg.field_a[var2][d.field_e[var2] - 1];
+                    dupTemp$6 = d.field_e[var2] - 1;
+                    arrayValue$7 = vg.field_a[var2];
+                    d.field_e[var2] = dupTemp$6;
+                    var3 = arrayValue$7[dupTemp$6];
                     vg.field_a[var2][d.field_e[var2]] = null;
                     return var3;
                   } else {

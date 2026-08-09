@@ -33,31 +33,22 @@ abstract class vi extends df {
     }
 
     private final int i(byte param0) {
-        String var3 = null;
+        String var3;
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 != -52) {
           L0: {
             var3 = (String) null;
             vi.a((byte) -57, (String) null);
             if (!this.field_G) {
-              stackOut_11_0 = 0;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_0 = 0;
               break L0;
             } else {
               if (this == this.field_H.g(7213)) {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = 256;
                 break L0;
               } else {
-                stackOut_9_0 = 0;
-                stackIn_12_0 = stackOut_9_0;
+                stackIn_12_0 = 0;
                 break L0;
               }
             }
@@ -66,17 +57,14 @@ abstract class vi extends df {
         } else {
           L1: {
             if (!this.field_G) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               break L1;
             } else {
               if (this == this.field_H.g(7213)) {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 256;
                 break L1;
               } else {
-                stackOut_3_0 = 0;
-                stackIn_6_0 = stackOut_3_0;
+                stackIn_6_0 = 0;
                 break L1;
               }
             }
@@ -95,7 +83,7 @@ abstract class vi extends df {
     }
 
     public static void h(byte param0) {
-        String var2 = null;
+        String var2;
         if (param0 != 62) {
           var2 = (String) null;
           vi.a((byte) 8, (String) null);
@@ -251,20 +239,12 @@ abstract class vi extends df {
     }
 
     boolean a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_10_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_35_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+        int var2;
+        int var3;
         if (param0 >= 19) {
           var2 = this.i((byte) -52);
           var3 = -this.field_S + var2;
@@ -282,15 +262,13 @@ abstract class vi extends df {
                       if (this.field_G) {
                         break L1;
                       } else {
-                        stackOut_33_0 = 1;
-                        stackIn_35_0 = stackOut_33_0;
+                        stackIn_35_0 = 1;
                         break L0;
                       }
                     }
                   }
                 }
-                stackOut_34_0 = 0;
-                stackIn_35_0 = stackOut_34_0;
+                stackIn_35_0 = 0;
                 break L0;
               }
               return stackIn_35_0 != 0;
@@ -306,15 +284,13 @@ abstract class vi extends df {
                       if (this.field_G) {
                         break L3;
                       } else {
-                        stackOut_27_0 = 1;
-                        stackIn_29_0 = stackOut_27_0;
+                        stackIn_29_0 = 1;
                         break L2;
                       }
                     }
                   }
                 }
-                stackOut_28_0 = 0;
-                stackIn_29_0 = stackOut_28_0;
+                stackIn_29_0 = 0;
                 break L2;
               }
               return stackIn_29_0 != 0;
@@ -329,12 +305,10 @@ abstract class vi extends df {
                 } else {
                   L4: {
                     if (this.field_G) {
-                      stackOut_19_0 = 0;
-                      stackIn_20_0 = stackOut_19_0;
+                      stackIn_20_0 = 0;
                       break L4;
                     } else {
-                      stackOut_18_0 = 1;
-                      stackIn_20_0 = stackOut_18_0;
+                      stackIn_20_0 = 1;
                       break L4;
                     }
                   }
@@ -350,12 +324,10 @@ abstract class vi extends df {
                 } else {
                   L5: {
                     if (this.field_G) {
-                      stackOut_9_0 = 0;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_0 = 0;
                       break L5;
                     } else {
-                      stackOut_8_0 = 1;
-                      stackIn_10_0 = stackOut_8_0;
+                      stackIn_10_0 = 1;
                       break L5;
                     }
                   }

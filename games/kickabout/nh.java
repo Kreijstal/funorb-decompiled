@@ -13,51 +13,35 @@ final class nh {
     private static int field_g;
 
     private final static int b(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
         int var4 = 0;
-        var1 = param0 >> 16 & 255;
-        var2 = param0 >> 8 & 255;
-        var3 = param0 & 255;
-        if (var1 < var2) {
-          if (var1 < var3) {
-            if (var2 < var3) {
-              var4 = var3 - var1;
-              return (4096 + 1024 * (var1 - var2) / var4) % 6144 << 19 | var4 * 524032 / var3 & 524032 | var3;
-            } else {
-              var4 = var2 - var1;
-              return (2048 + 1024 * (var3 - var1) / var4) % 6144 << 19 | var4 * 524032 / var2 & 524032 | var2;
+        int var1 = param0 >> 16 & 255;
+        int var2 = param0 >> 8 & 255;
+        int var3 = param0 & 255;
+        if (var1 >= var2) {
+            if (var2 >= var3) {
+                if (var3 == var2 && var3 == var1) {
+                    return var3;
+                }
+                var4 = var1 - var3;
+                return (6144 + 1024 * (var2 - var3) / var4) % 6144 << 19 | var4 * 524032 / var1 & 524032 | var1;
             }
-          } else {
+            if (var1 >= var3) {
+                var4 = var1 - var2;
+                return (6144 + 1024 * (var2 - var3) / var4) % 6144 << 19 | var4 * 524032 / var1 & 524032 | var1;
+            }
+            var4 = var3 - var2;
+            return (4096 + 1024 * (var1 - var2) / var4) % 6144 << 19 | var4 * 524032 / var3 & 524032 | var3;
+        }
+        if (var1 >= var3) {
             var4 = var2 - var3;
             return (2048 + 1024 * (var3 - var1) / var4) % 6144 << 19 | var4 * 524032 / var2 & 524032 | var2;
-          }
-        } else {
-          if (var2 < var3) {
-            if (var1 < var3) {
-              var4 = var3 - var2;
-              return (4096 + 1024 * (var1 - var2) / var4) % 6144 << 19 | var4 * 524032 / var3 & 524032 | var3;
-            } else {
-              var4 = var1 - var2;
-              return (6144 + 1024 * (var2 - var3) / var4) % 6144 << 19 | var4 * 524032 / var1 & 524032 | var1;
-            }
-          } else {
-            L0: {
-              if (var3 != var2) {
-                break L0;
-              } else {
-                if (var3 != var1) {
-                  break L0;
-                } else {
-                  return var3;
-                }
-              }
-            }
-            var4 = var1 - var3;
-            return (6144 + 1024 * (var2 - var3) / var4) % 6144 << 19 | var4 * 524032 / var1 & 524032 | var1;
-          }
         }
+        if (var2 >= var3) {
+            var4 = var2 - var1;
+            return (2048 + 1024 * (var3 - var1) / var4) % 6144 << 19 | var4 * 524032 / var2 & 524032 | var2;
+        }
+        var4 = var3 - var1;
+        return (4096 + 1024 * (var1 - var2) / var4) % 6144 << 19 | var4 * 524032 / var3 & 524032 | var3;
     }
 
     public static void a() {
@@ -90,45 +74,26 @@ final class nh {
     }
 
     final static void a(ot param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param1 = param1 + param0.field_s;
-          param2 = param2 + param0.field_n;
-          var3 = param1 + param2 * on.field_g;
-          var4 = 0;
-          var5 = param0.field_w;
-          var6 = param0.field_q;
-          var7 = on.field_g - var6;
-          var8 = 0;
-          if (param2 >= on.field_e) {
-            break L0;
-          } else {
+        param1 = param1 + param0.field_s;
+        param2 = param2 + param0.field_n;
+        int var3 = param1 + param2 * on.field_g;
+        int var4 = 0;
+        int var5 = param0.field_w;
+        int var6 = param0.field_q;
+        int var7 = on.field_g - var6;
+        int var8 = 0;
+        if (param2 < on.field_e) {
             var9 = on.field_e - param2;
             var5 = var5 - var9;
             param2 = on.field_e;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * on.field_g;
-            break L0;
-          }
         }
-        L1: {
-          if (param2 + var5 <= on.field_h) {
-            break L1;
-          } else {
+        if (param2 + var5 > on.field_h) {
             var5 = var5 - (param2 + var5 - on.field_h);
-            break L1;
-          }
         }
-        L2: {
-          if (param1 >= on.field_b) {
-            break L2;
-          } else {
+        if (param1 < on.field_b) {
             var9 = on.field_b - param1;
             var6 = var6 - var9;
             param1 = on.field_b;
@@ -136,44 +101,20 @@ final class nh {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param1 + var6 <= on.field_c) {
-            break L3;
-          } else {
+        if (param1 + var6 > on.field_c) {
             var9 = param1 + var6 - on.field_c;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        L4: {
-          if (var6 <= 0) {
-            break L4;
-          } else {
-            if (var5 > 0) {
-              nh.a(on.field_a, param0.field_y, 0, var4, var3, var6, var5, var7, var8);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var6 <= 0 || var5 <= 0) {
+            return;
         }
+        nh.a(on.field_a, param0.field_y, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final static ot a(ut param0) {
-        int incrementValue$1 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int[] var3 = null;
-        ot var4 = null;
-        int[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -181,121 +122,74 @@ final class nh {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        var1 = param0.field_q;
-        var2 = param0.field_w;
-        var3 = param0.field_y;
-        var4 = new ot(var1 >> 1, var2 >> 1);
-        var5 = var4.field_y;
-        var6 = 0;
-        var7 = 0;
-        var8 = 0;
-        L0: while (true) {
-          if (var8 >= var2) {
-            var4.field_s = param0.field_s >> 1;
-            var4.field_n = param0.field_s >> 1;
-            var4.field_o = param0.field_o >> 1;
-            var4.field_v = param0.field_v >> 1;
-            return var4;
-          } else {
-            var9 = 0;
-            L1: while (true) {
-              if (var9 >= var1) {
-                var8 += 2;
-                var6 = var6 + (param0.field_q << 1);
-                continue L0;
-              } else {
+        int incrementValue$0 = 0;
+        int var1 = param0.field_q;
+        int var2 = param0.field_w;
+        int[] var3 = param0.field_y;
+        ot var4 = new ot(var1 >> 1, var2 >> 1);
+        int[] var5 = var4.field_y;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        while (var8 < var2) {
+            for (var9 = 0; var9 < var1; var9 += 2) {
                 var10 = var3[var6 + var9];
                 var11 = var3[var6 + var9 + 1];
                 var12 = var3[var6 + var1 + var9];
                 var13 = var3[var6 + var1 + var9 + 1];
                 var14 = (-var10 >>> 31) + (-var11 >>> 31) + (-var12 >>> 31) + (-var13 >>> 31) << 6;
                 var15 = var14 & 256;
-                incrementValue$1 = var7;
+                incrementValue$0 = var7;
                 var7++;
-                var5[incrementValue$1] = ((var14 | var15 - (var15 >> 8)) << 24) + ((var10 & 16711935) + (var11 & 16711935) + (var12 & 16711935) + (var13 & 16711935) >> 2 & 16711935) + (((var10 & 65280) >>> 2) + ((var11 & 65280) >>> 2) + ((var12 & 65280) >>> 2) + ((var13 & 65280) >>> 2) & 65280);
-                var9 += 2;
-                continue L1;
-              }
+                var5[incrementValue$0] = ((var14 | var15 - (var15 >> 8)) << 24) + ((var10 & 16711935) + (var11 & 16711935) + (var12 & 16711935) + (var13 & 16711935) >> 2 & 16711935) + (((var10 & 65280) >>> 2) + ((var11 & 65280) >>> 2) + ((var12 & 65280) >>> 2) + ((var13 & 65280) >>> 2) & 65280);
             }
-          }
+            var8 += 2;
+            var6 = var6 + (param0.field_q << 1);
         }
+        var4.field_s = param0.field_s >> 1;
+        var4.field_n = param0.field_s >> 1;
+        var4.field_o = param0.field_o >> 1;
+        var4.field_v = param0.field_v >> 1;
+        return var4;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
         int var15 = 0;
-        L0: {
-          var7 = param2 - param0;
-          var8 = param3 - param1;
-          var9 = (int)Math.sqrt((double)(var7 * var7 + var8 * var8));
-          var10 = (int)(65536.0 / Math.sqrt((double)(var7 * var7 + var8 * var8)));
-          var7 = var7 * var10;
-          var8 = var8 * var10;
-          var11 = param0;
-          var12 = param1;
-          var13 = param2;
-          var14 = param3;
-          if (var11 <= var13) {
-            break L0;
-          } else {
+        int var7 = param2 - param0;
+        int var8 = param3 - param1;
+        int var9 = (int)Math.sqrt((double)(var7 * var7 + var8 * var8));
+        int var10 = (int)(65536.0 / Math.sqrt((double)(var7 * var7 + var8 * var8)));
+        var7 = var7 * var10;
+        var8 = var8 * var10;
+        int var11 = param0;
+        int var12 = param1;
+        int var13 = param2;
+        int var14 = param3;
+        if (var11 > var13) {
             var15 = var11;
             var11 = var13;
             var13 = var15;
-            break L0;
-          }
         }
-        L1: {
-          if (var12 <= var14) {
-            break L1;
-          } else {
+        if (var12 > var14) {
             var15 = var12;
             var12 = var14;
             var14 = var15;
-            break L1;
-          }
         }
-        L2: {
-          var11 = var11 - param4;
-          var12 = var12 - param4;
-          var13 = var13 + param4;
-          var14 = var14 + param4;
-          if (var11 >= on.field_b) {
-            break L2;
-          } else {
+        var11 = var11 - param4;
+        var12 = var12 - param4;
+        var13 = var13 + param4;
+        var14 = var14 + param4;
+        if (var11 < on.field_b) {
             var11 = on.field_b;
-            break L2;
-          }
         }
-        L3: {
-          if (var12 >= on.field_e) {
-            break L3;
-          } else {
+        if (var12 < on.field_e) {
             var12 = on.field_e;
-            break L3;
-          }
         }
-        L4: {
-          if (var13 <= on.field_c) {
-            break L4;
-          } else {
+        if (var13 > on.field_c) {
             var13 = on.field_c;
-            break L4;
-          }
         }
-        L5: {
-          if (var14 <= on.field_h) {
-            break L5;
-          } else {
+        if (var14 > on.field_h) {
             var14 = on.field_h;
-            break L5;
-          }
         }
         field_c = 256 / param4;
         field_g = param5 * 128 / param4;
@@ -308,68 +202,47 @@ final class nh {
     }
 
     private final static int a(int param0) {
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        var1 = param0 >>> 19 & 8191;
-        var2 = param0 >>> 8 & 2047;
-        var3 = param0 & 255;
-        var4 = var1 % 1024;
-        var5 = var3 * (2047 - var2) + 1024 >>> 11 & 255;
-        var6 = var1 >> 10;
-        int incrementValue$5 = var6;
+        int var1 = param0 >>> 19 & 8191;
+        int var2 = param0 >>> 8 & 2047;
+        int var3 = param0 & 255;
+        int var4 = var1 % 1024;
+        int var5 = var3 * (2047 - var2) + 1024 >>> 11 & 255;
+        int var6 = var1 >> 10;
+        int incrementValue$0 = var6;
         var6--;
-        if (incrementValue$5 != 0) {
-          incrementValue$6 = var6;
-          var6--;
-          if (incrementValue$6 != 0) {
-            incrementValue$7 = var6;
-            var6--;
-            if (incrementValue$7 != 0) {
-              incrementValue$8 = var6;
-              var6--;
-              if (incrementValue$8 != 0) {
-                incrementValue$9 = var6;
-                var6--;
-                if (incrementValue$9 != 0) {
-                  if (var6 != 0) {
-                    return 16711935;
-                  } else {
-                    return var3 << 16 | var5 << 8 | var3 * (2097152 - var4 * var2) + 1048576 >>> 21 & 255;
-                  }
-                } else {
-                  return (var3 * (2097152 - (1023 - var4) * var2) + 1048576 >>> 21 & 255) << 16 | var5 << 8 | var3;
-                }
-              } else {
-                return var5 << 16 | (var3 * (2097152 - var4 * var2) + 1048576 >>> 21 & 255) << 8 | var3;
-              }
-            } else {
-              return var5 << 16 | var3 << 8 | var3 * (2097152 - (1023 - var4) * var2) + 1048576 >>> 21 & 255;
-            }
-          } else {
-            return (var3 * (2097152 - var4 * var2) + 1048576 >>> 21 & 255) << 16 | var3 << 8 | var5;
-          }
-        } else {
-          return var3 << 16 | (var3 * (2097152 - (1023 - var4) * var2) + 1048576 >>> 21 & 255) << 8 | var5;
+        if (incrementValue$0 == 0) {
+            return var3 << 16 | (var3 * (2097152 - (1023 - var4) * var2) + 1048576 >>> 21 & 255) << 8 | var5;
         }
+        int incrementValue$1 = var6;
+        var6--;
+        if (incrementValue$1 == 0) {
+            return (var3 * (2097152 - var4 * var2) + 1048576 >>> 21 & 255) << 16 | var3 << 8 | var5;
+        }
+        int incrementValue$2 = var6;
+        var6--;
+        if (incrementValue$2 == 0) {
+            return var5 << 16 | var3 << 8 | var3 * (2097152 - (1023 - var4) * var2) + 1048576 >>> 21 & 255;
+        }
+        int incrementValue$3 = var6;
+        var6--;
+        if (incrementValue$3 == 0) {
+            return var5 << 16 | (var3 * (2097152 - var4 * var2) + 1048576 >>> 21 & 255) << 8 | var3;
+        }
+        int incrementValue$4 = var6;
+        var6--;
+        if (incrementValue$4 == 0) {
+            return (var3 * (2097152 - (1023 - var4) * var2) + 1048576 >>> 21 & 255) << 16 | var5 << 8 | var3;
+        }
+        if (var6 == 0) {
+            return var3 << 16 | var5 << 8 | var3 * (2097152 - var4 * var2) + 1048576 >>> 21 & 255;
+        }
+        return 16711935;
     }
 
     private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        int var14 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
+        int var14;
         L0: while (true) {
           if (param11 >= 0) {
             return;
@@ -395,17 +268,14 @@ final class nh {
                           L3: {
                             if (param0 >= param2) {
                               if (param0 <= param5 - param2) {
-                                stackOut_15_0 = param8;
-                                stackIn_16_0 = stackOut_15_0;
+                                stackIn_16_0 = param8;
                                 break L3;
                               } else {
-                                stackOut_14_0 = (param5 + param2 - param0) * field_g >> 8;
-                                stackIn_16_0 = stackOut_14_0;
+                                stackIn_16_0 = (param5 + param2 - param0) * field_g >> 8;
                                 break L3;
                               }
                             } else {
-                              stackOut_12_0 = (param0 + param2) * field_g >> 8;
-                              stackIn_16_0 = stackOut_12_0;
+                              stackIn_16_0 = (param0 + param2) * field_g >> 8;
                               break L3;
                             }
                           }
@@ -413,12 +283,10 @@ final class nh {
                             param3 = stackIn_16_0;
                             param4 = param1 * param3 * field_c >> 8;
                             if (param4 < 0) {
-                              stackOut_18_0 = field_b[param3 + param4];
-                              stackIn_19_0 = stackOut_18_0;
+                              stackIn_19_0 = field_b[param3 + param4];
                               break L4;
                             } else {
-                              stackOut_17_0 = field_b[param3 - param4];
-                              stackIn_19_0 = stackOut_17_0;
+                              stackIn_19_0 = field_b[param3 - param4];
                               break L4;
                             }
                           }
@@ -454,19 +322,19 @@ final class nh {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$250 = 0;
-        int incrementValue$251 = 0;
-        int incrementValue$252 = 0;
-        int incrementValue$253 = 0;
-        int incrementValue$254 = 0;
-        int incrementValue$255 = 0;
-        int incrementValue$256 = 0;
-        int incrementValue$257 = 0;
-        int incrementValue$258 = 0;
-        int incrementValue$259 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
+        int incrementValue$48 = 0;
+        int incrementValue$49 = 0;
+        int incrementValue$50 = 0;
+        int incrementValue$51 = 0;
+        int incrementValue$52 = 0;
+        int incrementValue$53 = 0;
+        int var9;
+        int var10;
+        int var11;
         var9 = -(param5 >> 2);
         param5 = -(param5 & 3);
         var10 = -param6;
@@ -485,17 +353,17 @@ final class nh {
                     var10++;
                     continue L0;
                   } else {
-                    incrementValue$250 = param3;
+                    incrementValue$44 = param3;
                     param3++;
-                    param2 = param1[incrementValue$250];
+                    param2 = param1[incrementValue$44];
                     if ((param2 & -16777216) == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      incrementValue$251 = param4;
+                      incrementValue$45 = param4;
                       param4++;
-                      param0[incrementValue$251] = param2;
+                      param0[incrementValue$45] = param2;
                       var11++;
                       continue L2;
                     }
@@ -503,58 +371,58 @@ final class nh {
                 }
               } else {
                 L3: {
-                  incrementValue$252 = param3;
+                  incrementValue$46 = param3;
                   param3++;
-                  param2 = param1[incrementValue$252];
+                  param2 = param1[incrementValue$46];
                   if ((param2 & -16777216) == 0) {
                     param4++;
                     break L3;
                   } else {
-                    incrementValue$253 = param4;
+                    incrementValue$47 = param4;
                     param4++;
-                    param0[incrementValue$253] = param2;
+                    param0[incrementValue$47] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  incrementValue$254 = param3;
+                  incrementValue$48 = param3;
                   param3++;
-                  param2 = param1[incrementValue$254];
+                  param2 = param1[incrementValue$48];
                   if ((param2 & -16777216) == 0) {
                     param4++;
                     break L4;
                   } else {
-                    incrementValue$255 = param4;
+                    incrementValue$49 = param4;
                     param4++;
-                    param0[incrementValue$255] = param2;
+                    param0[incrementValue$49] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  incrementValue$256 = param3;
+                  incrementValue$50 = param3;
                   param3++;
-                  param2 = param1[incrementValue$256];
+                  param2 = param1[incrementValue$50];
                   if ((param2 & -16777216) == 0) {
                     param4++;
                     break L5;
                   } else {
-                    incrementValue$257 = param4;
+                    incrementValue$51 = param4;
                     param4++;
-                    param0[incrementValue$257] = param2;
+                    param0[incrementValue$51] = param2;
                     break L5;
                   }
                 }
-                incrementValue$258 = param3;
+                incrementValue$52 = param3;
                 param3++;
-                param2 = param1[incrementValue$258];
+                param2 = param1[incrementValue$52];
                 if ((param2 & -16777216) == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  incrementValue$259 = param4;
+                  incrementValue$53 = param4;
                   param4++;
-                  param0[incrementValue$259] = param2;
+                  param0[incrementValue$53] = param2;
                   var11++;
                   continue L1;
                 }
@@ -565,45 +433,26 @@ final class nh {
     }
 
     final static void a(ut param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          param1 = param1 + param0.field_s;
-          param2 = param2 + param0.field_n;
-          var3 = param1 + param2 * on.field_g;
-          var4 = 0;
-          var5 = param0.field_w;
-          var6 = param0.field_q;
-          var7 = on.field_g - var6;
-          var8 = 0;
-          if (param2 >= on.field_e) {
-            break L0;
-          } else {
+        param1 = param1 + param0.field_s;
+        param2 = param2 + param0.field_n;
+        int var3 = param1 + param2 * on.field_g;
+        int var4 = 0;
+        int var5 = param0.field_w;
+        int var6 = param0.field_q;
+        int var7 = on.field_g - var6;
+        int var8 = 0;
+        if (param2 < on.field_e) {
             var9 = on.field_e - param2;
             var5 = var5 - var9;
             param2 = on.field_e;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * on.field_g;
-            break L0;
-          }
         }
-        L1: {
-          if (param2 + var5 <= on.field_h) {
-            break L1;
-          } else {
+        if (param2 + var5 > on.field_h) {
             var5 = var5 - (param2 + var5 - on.field_h);
-            break L1;
-          }
         }
-        L2: {
-          if (param1 >= on.field_b) {
-            break L2;
-          } else {
+        if (param1 < on.field_b) {
             var9 = on.field_b - param1;
             var6 = var6 - var9;
             param1 = on.field_b;
@@ -611,32 +460,17 @@ final class nh {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param1 + var6 <= on.field_c) {
-            break L3;
-          } else {
+        if (param1 + var6 > on.field_c) {
             var9 = param1 + var6 - on.field_c;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        L4: {
-          if (var6 <= 0) {
-            break L4;
-          } else {
-            if (var5 > 0) {
-              nh.b(on.field_a, param0.field_y, 0, var4, var3, var6, var5, var7, var8);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var6 <= 0 || var5 <= 0) {
+            return;
         }
+        nh.b(on.field_a, param0.field_y, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final static void a(int[] param0, double param1, double param2, double param3) {
@@ -665,10 +499,8 @@ final class nh {
             }
             var10 = var11 << 19 | var12 << 8 | var13;
             var14 = nh.a(var10);
-            if (var14 == 0) {
-                if ((var9 & 16777215) != 0) {
-                    var14 = 65793;
-                }
+            if (var14 == 0 && (var9 & 16777215) != 0) {
+                var14 = 65793;
             }
             var9 = var9 & -16777216 | var14;
             param0[var8] = var9;
@@ -676,105 +508,56 @@ final class nh {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        L0: {
-          var5 = param2 * param2;
-          var6 = param0 - param2 >> 4;
-          var7 = param0 + param2 + 15 >> 4;
-          var8 = param1 - param2 >> 4;
-          var9 = param1 + param2 + 15 >> 4;
-          if (var6 >= on.field_b) {
-            break L0;
-          } else {
+        int var5 = param2 * param2;
+        int var6 = param0 - param2 >> 4;
+        int var7 = param0 + param2 + 15 >> 4;
+        int var8 = param1 - param2 >> 4;
+        int var9 = param1 + param2 + 15 >> 4;
+        if (var6 < on.field_b) {
             var6 = on.field_b;
-            break L0;
-          }
         }
-        L1: {
-          if (var7 <= on.field_c) {
-            break L1;
-          } else {
+        if (var7 > on.field_c) {
             var7 = on.field_c;
-            break L1;
-          }
         }
-        L2: {
-          if (var8 >= on.field_e) {
-            break L2;
-          } else {
+        if (var8 < on.field_e) {
             var8 = on.field_e;
-            break L2;
-          }
         }
-        L3: {
-          if (var9 <= on.field_h) {
-            break L3;
-          } else {
+        if (var9 > on.field_h) {
             var9 = on.field_h;
-            break L3;
-          }
         }
-        var10 = (var6 << 4) - param0;
+        int var10 = (var6 << 4) - param0;
         var10 = var10 * var10;
-        var11 = (var6 + 1 << 4) - param0;
+        int var11 = (var6 + 1 << 4) - param0;
         var11 = var11 * var11;
-        var12 = (var6 + 2 << 4) - param0;
+        int var12 = (var6 + 2 << 4) - param0;
         var12 = var12 * var12;
-        var13 = var11 - var10;
-        var14 = var12 - var11;
-        var15 = var14 - var13;
-        var16 = (var8 << 4) - param1;
+        int var13 = var11 - var10;
+        int var14 = var12 - var11;
+        int var15 = var14 - var13;
+        int var16 = (var8 << 4) - param1;
         var16 = var16 * var16;
-        var17 = (var8 + 1 << 4) - param1;
+        int var17 = (var8 + 1 << 4) - param1;
         var17 = var17 * var17;
-        var18 = (var8 + 2 << 4) - param1;
+        int var18 = (var8 + 2 << 4) - param1;
         var18 = var18 * var18;
-        var19 = var17 - var16;
-        var20 = var18 - var17;
-        var21 = var20 - var19;
-        var22 = var6 + var8 * on.field_g;
-        var23 = on.field_g + var6 - var7;
+        int var19 = var17 - var16;
+        int var20 = var18 - var17;
+        int var21 = var20 - var19;
+        int var22 = var6 + var8 * on.field_g;
+        int var23 = on.field_g + var6 - var7;
         nh.a(0, 0, 0, 0, 0, var15, var5, var22, on.field_a, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
     final static ut a(ot param0) {
-        ut var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int[] stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
+        ut var1;
+        int var2;
+        int var3;
+        int var4;
         int[] stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         int[] stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_6_2 = 0;
-        int[] stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int[] stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        int[] stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
         var1 = new ut(param0.field_q, param0.field_w);
         var1.field_s = param0.field_s;
         var1.field_n = param0.field_n;
@@ -794,27 +577,19 @@ final class nh {
             } else {
               L1: {
                 var4 = var4 & 16777215;
-                stackOut_3_0 = var1.field_y;
-                stackOut_3_1 = var3;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_5_1 = stackOut_3_1;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
+                stackIn_5_0 = var1.field_y;
+
+                stackIn_5_1 = var3;
+
                 if (var4 != 0) {
-                  stackOut_5_0 = (int[]) ((Object) stackIn_5_0);
-                  stackOut_5_1 = stackIn_5_1;
-                  stackOut_5_2 = var4;
-                  stackIn_6_0 = stackOut_5_0;
-                  stackIn_6_1 = stackOut_5_1;
-                  stackIn_6_2 = stackOut_5_2;
+                  stackIn_6_0 = (int[]) ((Object) stackIn_5_0);
+                  stackIn_6_1 = stackIn_5_1;
+                  stackIn_6_2 = var4;
                   break L1;
                 } else {
-                  stackOut_4_0 = (int[]) ((Object) stackIn_4_0);
-                  stackOut_4_1 = stackIn_4_1;
-                  stackOut_4_2 = 65793;
-                  stackIn_6_0 = stackOut_4_0;
-                  stackIn_6_1 = stackOut_4_1;
-                  stackIn_6_2 = stackOut_4_2;
+                  stackIn_6_0 = (int[]) ((Object) stackIn_5_0);
+                  stackIn_6_1 = stackIn_5_1;
+                  stackIn_6_2 = 65793;
                   break L1;
                 }
               }
@@ -827,12 +602,12 @@ final class nh {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var11 = -param6;
         L0: while (true) {
           if (var11 >= 0) {
@@ -846,9 +621,9 @@ final class nh {
                 var11++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 if (param2 == 0) {
                   param4++;
                   var12++;
@@ -856,9 +631,9 @@ final class nh {
                 } else {
                   var9 = param0[param4];
                   var10 = 256 - (param2 & 255);
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = ((var9 & 16711935) * var10 & -16711936 | (var9 & 65280) * var10 & 16711680) >> 8;
+                  param0[incrementValue$12] = ((var9 & 16711935) * var10 & -16711936 | (var9 & 65280) * var10 & 16711680) >> 8;
                   var12++;
                   continue L1;
                 }
@@ -893,116 +668,59 @@ final class nh {
     }
 
     final static void a(ot param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
-        int var6 = 0;
+        int var13 = 0;
+        int var15 = 0;
+        if (param3 <= 0 || param4 <= 0) {
+            return;
+        }
+        int var5 = param0.field_q;
+        int var6 = param0.field_w;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        L0: {
-          if (param3 <= 0) {
-            break L0;
-          } else {
-            if (param4 > 0) {
-              L1: {
-                var5 = param0.field_q;
-                var6 = param0.field_w;
-                var7 = 0;
-                var8 = 0;
-                var9 = param0.field_o;
-                var10 = param0.field_v;
-                var11 = (var9 << 16) / param3;
-                var12 = (var10 << 16) / param4;
-                if (param0.field_s <= 0) {
-                  break L1;
-                } else {
-                  var13 = ((param0.field_s << 16) + var11 - 1) / var11;
-                  param1 = param1 + var13;
-                  var7 = var7 + (var13 * var11 - (param0.field_s << 16));
-                  break L1;
-                }
-              }
-              L2: {
-                if (param0.field_n <= 0) {
-                  break L2;
-                } else {
-                  var13 = ((param0.field_n << 16) + var12 - 1) / var12;
-                  param2 = param2 + var13;
-                  var8 = var8 + (var13 * var12 - (param0.field_n << 16));
-                  break L2;
-                }
-              }
-              L3: {
-                if (var5 >= var9) {
-                  break L3;
-                } else {
-                  param3 = ((var5 << 16) - var7 + var11 - 1) / var11;
-                  break L3;
-                }
-              }
-              L4: {
-                if (var6 >= var10) {
-                  break L4;
-                } else {
-                  param4 = ((var6 << 16) - var8 + var12 - 1) / var12;
-                  break L4;
-                }
-              }
-              L5: {
-                var13 = param1 + param2 * on.field_g;
-                var14 = on.field_g - param3;
-                if (param2 + param4 <= on.field_h) {
-                  break L5;
-                } else {
-                  param4 = param4 - (param2 + param4 - on.field_h);
-                  break L5;
-                }
-              }
-              L6: {
-                if (param2 >= on.field_e) {
-                  break L6;
-                } else {
-                  var15 = on.field_e - param2;
-                  param4 = param4 - var15;
-                  var13 = var13 + var15 * on.field_g;
-                  var8 = var8 + var12 * var15;
-                  break L6;
-                }
-              }
-              L7: {
-                if (param1 + param3 <= on.field_c) {
-                  break L7;
-                } else {
-                  var15 = param1 + param3 - on.field_c;
-                  param3 = param3 - var15;
-                  var14 = var14 + var15;
-                  break L7;
-                }
-              }
-              L8: {
-                if (param1 >= on.field_b) {
-                  break L8;
-                } else {
-                  var15 = on.field_b - param1;
-                  param3 = param3 - var15;
-                  var13 = var13 + var15;
-                  var7 = var7 + var11 * var15;
-                  var14 = var14 + var15;
-                  break L8;
-                }
-              }
-              nh.a(on.field_a, param0.field_y, 0, var7, var8, var13, var14, param3, param4, var11, var12, var5);
-              return;
-            } else {
-              break L0;
-            }
-          }
+        int var9 = param0.field_o;
+        int var10 = param0.field_v;
+        int var11 = (var9 << 16) / param3;
+        int var12 = (var10 << 16) / param4;
+        if (param0.field_s > 0) {
+            var13 = ((param0.field_s << 16) + var11 - 1) / var11;
+            param1 = param1 + var13;
+            var7 = var7 + (var13 * var11 - (param0.field_s << 16));
         }
+        if (param0.field_n > 0) {
+            var13 = ((param0.field_n << 16) + var12 - 1) / var12;
+            param2 = param2 + var13;
+            var8 = var8 + (var13 * var12 - (param0.field_n << 16));
+        }
+        if (var5 < var9) {
+            param3 = ((var5 << 16) - var7 + var11 - 1) / var11;
+        }
+        if (var6 < var10) {
+            param4 = ((var6 << 16) - var8 + var12 - 1) / var12;
+        }
+        var13 = param1 + param2 * on.field_g;
+        int var14 = on.field_g - param3;
+        if (param2 + param4 > on.field_h) {
+            param4 = param4 - (param2 + param4 - on.field_h);
+        }
+        if (param2 < on.field_e) {
+            var15 = on.field_e - param2;
+            param4 = param4 - var15;
+            var13 = var13 + var15 * on.field_g;
+            var8 = var8 + var12 * var15;
+        }
+        if (param1 + param3 > on.field_c) {
+            var15 = param1 + param3 - on.field_c;
+            param3 = param3 - var15;
+            var14 = var14 + var15;
+        }
+        if (param1 < on.field_b) {
+            var15 = on.field_b - param1;
+            param3 = param3 - var15;
+            var13 = var13 + var15;
+            var7 = var7 + var11 * var15;
+            var14 = var14 + var15;
+        }
+        nh.a(on.field_a, param0.field_y, 0, var7, var8, var13, var14, param3, param4, var11, var12, var5);
     }
 
     final static void a(ut param0, double param1, double param2, double param3) {
@@ -1010,55 +728,37 @@ final class nh {
     }
 
     final static ot b(ot param0) {
-        int incrementValue$1 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int[] var3 = null;
-        ot var4 = null;
-        int[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        var1 = param0.field_q;
-        var2 = param0.field_w;
-        var3 = param0.field_y;
-        var4 = new ot(var1 >> 1, var2 >> 1);
-        var5 = var4.field_y;
-        var6 = 0;
-        var7 = 0;
-        var8 = 0;
-        L0: while (true) {
-          if (var8 >= var2) {
-            var4.field_s = param0.field_s >> 1;
-            var4.field_n = param0.field_s >> 1;
-            var4.field_o = param0.field_o >> 1;
-            var4.field_v = param0.field_v >> 1;
-            return var4;
-          } else {
-            var9 = 0;
-            L1: while (true) {
-              if (var9 >= var1) {
-                var8 += 2;
-                var6 = var6 + (param0.field_q << 1);
-                continue L0;
-              } else {
+        int incrementValue$0 = 0;
+        int var1 = param0.field_q;
+        int var2 = param0.field_w;
+        int[] var3 = param0.field_y;
+        ot var4 = new ot(var1 >> 1, var2 >> 1);
+        int[] var5 = var4.field_y;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        while (var8 < var2) {
+            for (var9 = 0; var9 < var1; var9 += 2) {
                 var10 = var3[var6 + var9];
                 var11 = var3[var6 + var9 + 1];
                 var12 = var3[var6 + var1 + var9];
                 var13 = var3[var6 + var1 + var9 + 1];
-                incrementValue$1 = var7;
+                incrementValue$0 = var7;
                 var7++;
-                var5[incrementValue$1] = ((var10 & 16711935) + (var11 & 16711935) + (var12 & 16711935) + (var13 & 16711935) >> 2 & 16711935) + (((var10 & -16711936) >>> 2) + ((var11 & -16711936) >>> 2) + ((var12 & -16711936) >>> 2) + ((var13 & -16711936) >>> 2) & -16711936);
-                var9 += 2;
-                continue L1;
-              }
+                var5[incrementValue$0] = ((var10 & 16711935) + (var11 & 16711935) + (var12 & 16711935) + (var13 & 16711935) >> 2 & 16711935) + (((var10 & -16711936) >>> 2) + ((var11 & -16711936) >>> 2) + ((var12 & -16711936) >>> 2) + ((var13 & -16711936) >>> 2) & -16711936);
             }
-          }
+            var8 += 2;
+            var6 = var6 + (param0.field_q << 1);
         }
+        var4.field_s = param0.field_s >> 1;
+        var4.field_n = param0.field_s >> 1;
+        var4.field_o = param0.field_o >> 1;
+        var4.field_v = param0.field_v >> 1;
+        return var4;
     }
 }

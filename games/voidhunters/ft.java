@@ -8,8 +8,8 @@ final class ft extends kt {
     final void a(int param0, byte param1, int param2) {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         if (param0 != 0) {
           field_t = -1;
           var4 = param2 * 2;
@@ -31,7 +31,7 @@ final class ft extends kt {
     }
 
     final static void b(int param0) {
-        int var1 = 0;
+        int var1;
         if (param0 == 18941) {
           if (-225 < (kt.field_l ^ -1)) {
             var1 = kt.field_l % 32;

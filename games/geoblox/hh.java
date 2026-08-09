@@ -26,28 +26,22 @@ final class hh {
         int stackIn_7_0 = 0;
         int stackIn_9_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_2_0 = 0;
         var1_ref = je.field_j;
         synchronized (var1_ref) {
           L0: {
             if (param0 > 41) {
               if (vd.field_n == pc.field_p) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 return stackIn_7_0 != 0;
               } else {
                 ki.field_d = kj.field_O[vd.field_n];
                 te.field_a = ai.field_n[vd.field_n];
                 vd.field_n = 1 + vd.field_n & 127;
-                stackOut_8_0 = 1;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               return stackIn_3_0 != 0;
             }
           }
@@ -56,12 +50,11 @@ final class hh {
     }
 
     public static void a(boolean param0) {
-        sl discarded$0 = null;
         field_a = null;
         field_b = null;
         field_d = null;
         if (param0) {
-            discarded$0 = hh.a(102, true);
+            hh.a(102, true);
             field_c = null;
             return;
         }

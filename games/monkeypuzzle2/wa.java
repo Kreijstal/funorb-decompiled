@@ -9,7 +9,7 @@ final class wa {
     static String field_c;
 
     final static String a(boolean param0, boolean param1, int param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         if (param2 == 22890) {
           L0: {
             var4 = 0;
@@ -67,10 +67,9 @@ final class wa {
     }
 
     public static void a(int param0) {
-        String discarded$2 = null;
         field_b = null;
         if (param0 != 1000) {
-          discarded$2 = wa.a(true, true, 10, false);
+          wa.a(true, true, 10, false);
           field_a = (byte[][]) null;
           field_c = null;
           field_d = null;

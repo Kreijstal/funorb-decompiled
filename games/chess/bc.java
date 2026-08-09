@@ -8,7 +8,7 @@ final class bc {
     static boolean field_d;
 
     final static void a(long param0, byte param1) {
-        int var3 = 0;
+        int var3;
         if (param0 <= 0L) {
           return;
         } else {

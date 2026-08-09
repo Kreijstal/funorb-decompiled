@@ -29,8 +29,8 @@ final class ep implements com.ms.directX.IEnumModesCallback {
         param5.setVisible(true);
         com.ms.awt.WComponentPeer var8 = (com.ms.awt.WComponentPeer) null;
         int var9 = var8.getHwnd();
-        int discarded$0 = com.ms.win32.User32.SetWindowLong(var9, -16, -2147483648);
-        int discarded$1 = com.ms.win32.User32.SetWindowLong(var9, -20, 8);
+        com.ms.win32.User32.SetWindowLong(var9, -16, -2147483648);
+        com.ms.win32.User32.SetWindowLong(var9, -20, 8);
         this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param5), 17);
         this.field_b.setDisplayMode(param2, param0, param4, param3, 0);
         param5.setBounds(0, 0, param2, param0);

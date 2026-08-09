@@ -38,8 +38,8 @@ final class dj {
     }
 
     private final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         if (param0 != -1501881951) {
           dj.b(-112);
           var1 = ka.m(param0 + 1501881973);

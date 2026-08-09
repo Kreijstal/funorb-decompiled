@@ -18,100 +18,73 @@ final class ona extends kna {
     }
 
     final fsa a(boolean param0, int param1, la param2) {
-        RuntimeException var4 = null;
         ri var5 = null;
         int var6 = 0;
         int var7_int = 0;
-        mfa var7 = null;
-        nq var8 = null;
         fsa var9 = null;
         fsa stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fsa stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var4 = null;
+        mfa var7 = null;
+        nq var8 = null;
         try {
           L0: {
             L1: {
-              L2: {
-                var9 = new fsa(param2, param0);
-                var9.b((byte) -11, this.field_k, this.field_l);
-                var9.h(param1, param1 + -3);
-                var9.a(1, (byte) -12, true);
-                var9.a((byte) -3, 6);
-                var9.b((byte) 17, false);
-                var9.g(param1 ^ 126, 2);
-                var9.a((byte) 83, (nv) (new eq(param2, param0)));
-                var5 = new ri(param2, param0);
-                var5.a((byte) -35, 8 * this.field_G);
-                var6 = 2048;
-                var7_int = this.r(12);
-                if ((var7_int ^ -1) == -32) {
-                  var5.a(true, var6);
-                  if (!TombRacer.field_G) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
+              var9 = new fsa(param2, param0);
+              var9.b((byte) -11, this.field_k, this.field_l);
+              var9.h(param1, param1 + -3);
+              var9.a(1, (byte) -12, true);
+              var9.a((byte) -3, 6);
+              var9.b((byte) 17, false);
+              var9.g(param1 ^ 126, 2);
+              var9.a((byte) 83, (nv) (new eq(param2, param0)));
+              var5 = new ri(param2, param0);
+              var5.a((byte) -35, 8 * this.field_G);
+              var6 = 2048;
+              var7_int = this.r(12);
+              if ((var7_int ^ -1) == -32) {
+                var5.a(true, var6);
+                break L1;
+              } else {
+                if (32 == var7_int) {
+                  var5.a(true, var6 * 2);
+                  break L1;
                 } else {
-                  if (32 == var7_int) {
-                    break L2;
-                  } else {
-                    break L1;
-                  }
+                  break L1;
                 }
               }
-              var5.a(true, var6 * 2);
-              break L1;
             }
             var9.a(var5, 0);
             var7 = rm.field_a;
             var8 = (nq) ((Object) var7.a(16, param1 ^ 107));
             var8.b(param1 ^ 8021, 2);
             var9.a(var5, (byte) 124, var8);
-            stackOut_5_0 = (fsa) (var9);
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = (fsa) (var9);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var4);
-            stackOut_7_1 = new StringBuilder().append("ona.AC(").append(param0).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("ona.AC(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
+              break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L3;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
+              break L2;
             }
           }
           throw tba.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
@@ -129,8 +102,8 @@ final class ona extends kna {
     }
 
     final static int b(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 == 0) {
           var2 = param1;
@@ -139,165 +112,25 @@ final class ona extends kna {
               if (-5 != (var2 ^ -1)) {
                 if (var2 != 0) {
                   if ((var2 ^ -1) != -8) {
-                    if (var2 == 5) {
-                      return 7;
-                    } else {
+                    if (var2 != 5) {
                       return param1;
+                    } else {
+                      return 7;
                     }
                   } else {
-                    if (var3 == 0) {
-                      return 5;
-                    } else {
-                      if (var2 == 5) {
-                        return 7;
-                      } else {
-                        return param1;
-                      }
-                    }
+                    return 5;
                   }
                 } else {
-                  if (var3 != 0) {
-                    if ((var2 ^ -1) != -8) {
-                      if (var2 != 5) {
-                        return param1;
-                      } else {
-                        return 7;
-                      }
-                    } else {
-                      if (var2 == 5) {
-                        return 7;
-                      } else {
-                        return param1;
-                      }
-                    }
-                  } else {
-                    return 4;
-                  }
+                  return 4;
                 }
               } else {
-                if (var3 != 0) {
-                  if (var2 != 0) {
-                    if ((var2 ^ -1) != -8) {
-                      if (var2 != 5) {
-                        return param1;
-                      } else {
-                        return 7;
-                      }
-                    } else {
-                      if (var3 != 0) {
-                        if (var2 == 5) {
-                          return 7;
-                        } else {
-                          return param1;
-                        }
-                      } else {
-                        return 5;
-                      }
-                    }
-                  } else {
-                    if ((var2 ^ -1) != -8) {
-                      if (var2 == 5) {
-                        return 7;
-                      } else {
-                        return param1;
-                      }
-                    } else {
-                      if (var2 == 5) {
-                        return 7;
-                      } else {
-                        return param1;
-                      }
-                    }
-                  }
-                } else {
-                  return 0;
-                }
+                return 0;
               }
             } else {
               return 1;
             }
           } else {
-            if (var3 != 0) {
-              if ((var2 ^ -1) != -4) {
-                if (-5 == (var2 ^ -1)) {
-                  if (var3 != 0) {
-                    if (var2 == 0) {
-                      if (var3 != 0) {
-                        if ((var2 ^ -1) != -8) {
-                          if (var2 == 5) {
-                            return 7;
-                          } else {
-                            return param1;
-                          }
-                        } else {
-                          if (var2 == 5) {
-                            return 7;
-                          } else {
-                            return param1;
-                          }
-                        }
-                      } else {
-                        return 4;
-                      }
-                    } else {
-                      if ((var2 ^ -1) != -8) {
-                        if (var2 != 5) {
-                          return param1;
-                        } else {
-                          return 7;
-                        }
-                      } else {
-                        if (var2 == 5) {
-                          return 7;
-                        } else {
-                          return param1;
-                        }
-                      }
-                    }
-                  } else {
-                    return 0;
-                  }
-                } else {
-                  if (var2 != 0) {
-                    if ((var2 ^ -1) != -8) {
-                      if (var2 != 5) {
-                        return param1;
-                      } else {
-                        return 7;
-                      }
-                    } else {
-                      if (var3 != 0) {
-                        if (var2 == 5) {
-                          return 7;
-                        } else {
-                          return param1;
-                        }
-                      } else {
-                        return 5;
-                      }
-                    }
-                  } else {
-                    if ((var2 ^ -1) != -8) {
-                      if (var2 != 5) {
-                        return param1;
-                      } else {
-                        return 7;
-                      }
-                    } else {
-                      if (var2 == 5) {
-                        return 7;
-                      } else {
-                        return param1;
-                      }
-                    }
-                  }
-                }
-              } else {
-                return 1;
-              }
-            } else {
-              return 3;
-            }
+            return 3;
           }
         } else {
           return -34;
@@ -354,10 +187,9 @@ final class ona extends kna {
     }
 
     final boolean z(int param0) {
-        fsa discarded$0 = null;
         if (param0 != 0) {
             la var3 = (la) null;
-            discarded$0 = this.a(true, -127, (la) null);
+            this.a(true, -127, (la) null);
             return false;
         }
         return false;

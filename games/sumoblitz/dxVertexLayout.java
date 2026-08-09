@@ -5,17 +5,17 @@ public class dxVertexLayout extends hq {
     jagdx.IDirect3DVertexDeclaration field_d;
 
     dxVertexLayout(ir param0, hu[] param1) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        hu var7 = null;
-        int var8 = 0;
-        ls var9 = null;
-        jagdx.VertexElementCollection var10 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int var4;
+        int var5;
+        int var6;
+        hu var7;
+        int var8;
+        ls var9;
+        jagdx.VertexElementCollection var10;
         var10 = new jagdx.VertexElementCollection(param0.field_Wc);
         var4 = 0;
         var5 = 0;
@@ -43,31 +43,31 @@ public class dxVertexLayout extends hq {
                       if (var9 != ls.field_g) {
                         if (var9 != ls.field_j) {
                           if (ls.field_e == var9) {
-                            incrementValue$4 = var4;
+                            incrementValue$0 = var4;
                             var4++;
-                            var10.addElement(var5, 1, 0, 5, incrementValue$4, var6);
+                            var10.addElement(var5, 1, 0, 5, incrementValue$0, var6);
                             break L2;
                           } else {
                             if (var9 == ls.field_d) {
-                              incrementValue$5 = var4;
+                              incrementValue$1 = var4;
                               var4++;
-                              var10.addElement(var5, 2, 0, 5, incrementValue$5, var6);
+                              var10.addElement(var5, 2, 0, 5, incrementValue$1, var6);
                               break L2;
                             } else {
                               if (ls.field_a != var9) {
                                 break L2;
                               } else {
-                                incrementValue$6 = var4;
+                                incrementValue$2 = var4;
                                 var4++;
-                                var10.addElement(var5, 3, 0, 5, incrementValue$6, var6);
+                                var10.addElement(var5, 3, 0, 5, incrementValue$2, var6);
                                 break L2;
                               }
                             }
                           }
                         } else {
-                          incrementValue$7 = var4;
+                          incrementValue$3 = var4;
                           var4++;
-                          var10.addElement(var5, 0, 0, 5, incrementValue$7, var6);
+                          var10.addElement(var5, 0, 0, 5, incrementValue$3, var6);
                           break L2;
                         }
                       } else {

@@ -7,27 +7,21 @@ final class c {
     static sb field_a;
 
     final static void a(byte param0) {
-        int fieldTemp$21 = 0;
-        pi discarded$22 = null;
-        int fieldTemp$23 = 0;
-        int fieldTemp$24 = 0;
-        int fieldTemp$25 = 0;
-        pi discarded$26 = null;
-        int fieldTemp$27 = 0;
-        int fieldTemp$28 = 0;
-        pi discarded$29 = null;
-        int fieldTemp$30 = 0;
-        int fieldTemp$31 = 0;
-        int fieldTemp$32 = 0;
-        pi discarded$33 = null;
-        int fieldTemp$34 = 0;
-        int fieldTemp$35 = 0;
-        pi discarded$36 = null;
-        int fieldTemp$37 = 0;
-        int fieldTemp$38 = 0;
-        int fieldTemp$39 = 0;
-        pi discarded$40 = null;
-        int fieldTemp$41 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
         if (!kj.a(false)) {
           L0: {
             if (null == r.field_d) {
@@ -61,17 +55,17 @@ final class c {
                 if (null == ce.field_a.b(108)) {
                   break L2;
                 } else {
-                  fieldTemp$21 = tf.field_a + 1;
+                  fieldTemp$0 = tf.field_a + 1;
                   tf.field_a = tf.field_a + 1;
-                  if (fieldTemp$21 != 370) {
+                  if (fieldTemp$0 != 370) {
                     break L2;
                   } else {
                     L3: {
                       tf.field_a = 0;
-                      discarded$22 = ce.field_a.e(63854);
-                      fieldTemp$23 = ph.field_c;
+                      ce.field_a.e(63854);
+                      fieldTemp$1 = ph.field_c;
                       ph.field_c = ph.field_c + 1;
-                      if (0 != (fieldTemp$23 & 3)) {
+                      if (0 != (fieldTemp$1 & 3)) {
                         break L3;
                       } else {
                         L4: {
@@ -112,9 +106,9 @@ final class c {
                 }
               }
               L5: {
-                fieldTemp$24 = ph.field_c;
+                fieldTemp$2 = ph.field_c;
                 ph.field_c = ph.field_c + 1;
-                if (0 != (fieldTemp$24 & 3)) {
+                if (0 != (fieldTemp$2 & 3)) {
                   break L5;
                 } else {
                   if (0 > ah.field_e) {
@@ -176,21 +170,21 @@ final class c {
                 if (null == ce.field_a.b(108)) {
                   break L7;
                 } else {
-                  fieldTemp$25 = tf.field_a + 1;
+                  fieldTemp$3 = tf.field_a + 1;
                   tf.field_a = tf.field_a + 1;
-                  if (fieldTemp$25 != 370) {
+                  if (fieldTemp$3 != 370) {
                     break L7;
                   } else {
                     tf.field_a = 0;
-                    discarded$26 = ce.field_a.e(63854);
+                    ce.field_a.e(63854);
                     break L7;
                   }
                 }
               }
               L8: {
-                fieldTemp$27 = ph.field_c;
+                fieldTemp$4 = ph.field_c;
                 ph.field_c = ph.field_c + 1;
-                if (0 != (fieldTemp$27 & 3)) {
+                if (0 != (fieldTemp$4 & 3)) {
                   break L8;
                 } else {
                   L9: {
@@ -234,17 +228,17 @@ final class c {
                 if (null == ce.field_a.b(108)) {
                   break L10;
                 } else {
-                  fieldTemp$28 = tf.field_a + 1;
+                  fieldTemp$5 = tf.field_a + 1;
                   tf.field_a = tf.field_a + 1;
-                  if (fieldTemp$28 != 370) {
+                  if (fieldTemp$5 != 370) {
                     break L10;
                   } else {
                     L11: {
                       tf.field_a = 0;
-                      discarded$29 = ce.field_a.e(63854);
-                      fieldTemp$30 = ph.field_c;
+                      ce.field_a.e(63854);
+                      fieldTemp$6 = ph.field_c;
                       ph.field_c = ph.field_c + 1;
-                      if (0 != (fieldTemp$30 & 3)) {
+                      if (0 != (fieldTemp$6 & 3)) {
                         break L11;
                       } else {
                         L12: {
@@ -284,9 +278,9 @@ final class c {
                   }
                 }
               }
-              fieldTemp$31 = ph.field_c;
+              fieldTemp$7 = ph.field_c;
               ph.field_c = ph.field_c + 1;
-              if (0 == (fieldTemp$31 & 3)) {
+              if (0 == (fieldTemp$7 & 3)) {
                 if (0 > ah.field_e) {
                   qh.field_c = qh.field_c + 1;
                   if ((ah.field_e ^ -1) > -1) {
@@ -349,21 +343,21 @@ final class c {
                 if (null == ce.field_a.b(108)) {
                   break L15;
                 } else {
-                  fieldTemp$32 = tf.field_a + 1;
+                  fieldTemp$8 = tf.field_a + 1;
                   tf.field_a = tf.field_a + 1;
-                  if (fieldTemp$32 != 370) {
+                  if (fieldTemp$8 != 370) {
                     break L15;
                   } else {
                     tf.field_a = 0;
-                    discarded$33 = ce.field_a.e(63854);
+                    ce.field_a.e(63854);
                     break L15;
                   }
                 }
               }
               L16: {
-                fieldTemp$34 = ph.field_c;
+                fieldTemp$9 = ph.field_c;
                 ph.field_c = ph.field_c + 1;
-                if (0 != (fieldTemp$34 & 3)) {
+                if (0 != (fieldTemp$9 & 3)) {
                   break L16;
                 } else {
                   L17: {
@@ -430,17 +424,17 @@ final class c {
               if (null == ce.field_a.b(108)) {
                 break L19;
               } else {
-                fieldTemp$35 = tf.field_a + 1;
+                fieldTemp$10 = tf.field_a + 1;
                 tf.field_a = tf.field_a + 1;
-                if (fieldTemp$35 != 370) {
+                if (fieldTemp$10 != 370) {
                   break L19;
                 } else {
                   L20: {
                     tf.field_a = 0;
-                    discarded$36 = ce.field_a.e(63854);
-                    fieldTemp$37 = ph.field_c;
+                    ce.field_a.e(63854);
+                    fieldTemp$11 = ph.field_c;
                     ph.field_c = ph.field_c + 1;
-                    if (0 != (fieldTemp$37 & 3)) {
+                    if (0 != (fieldTemp$11 & 3)) {
                       break L20;
                     } else {
                       L21: {
@@ -481,9 +475,9 @@ final class c {
               }
             }
             L22: {
-              fieldTemp$38 = ph.field_c;
+              fieldTemp$12 = ph.field_c;
               ph.field_c = ph.field_c + 1;
-              if (0 != (fieldTemp$38 & 3)) {
+              if (0 != (fieldTemp$12 & 3)) {
                 break L22;
               } else {
                 if (0 > ah.field_e) {
@@ -545,21 +539,21 @@ final class c {
               if (null == ce.field_a.b(108)) {
                 break L24;
               } else {
-                fieldTemp$39 = tf.field_a + 1;
+                fieldTemp$13 = tf.field_a + 1;
                 tf.field_a = tf.field_a + 1;
-                if (fieldTemp$39 != 370) {
+                if (fieldTemp$13 != 370) {
                   break L24;
                 } else {
                   tf.field_a = 0;
-                  discarded$40 = ce.field_a.e(63854);
+                  ce.field_a.e(63854);
                   break L24;
                 }
               }
             }
             L25: {
-              fieldTemp$41 = ph.field_c;
+              fieldTemp$14 = ph.field_c;
               ph.field_c = ph.field_c + 1;
-              if (0 != (fieldTemp$41 & 3)) {
+              if (0 != (fieldTemp$14 & 3)) {
                 break L25;
               } else {
                 L26: {

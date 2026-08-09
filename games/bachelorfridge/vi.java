@@ -37,9 +37,9 @@ final class vi {
 
     final static void b(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
           L0: {
@@ -80,12 +80,11 @@ final class vi {
     }
 
     vi(int param0) {
+        int var2 = 0;
         this.field_e = new eo();
         this.field_c = new in();
         this.field_b = param0;
-        int var2 = 1;
-        while (param0 > var2 + var2) {
-            var2 = var2 + var2;
+        for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {
         }
         this.field_g = new js(var2);
     }

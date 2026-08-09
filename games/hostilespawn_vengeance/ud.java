@@ -13,7 +13,7 @@ final class ud {
             return 0;
           }
         } else {
-          field_a = null;
+          field_a = (String) null;
           sj.field_a.c(param0 ^ -11);
           if (!ig.field_N.e(-95)) {
             return sj.a(true);
@@ -24,15 +24,11 @@ final class ud {
     }
 
     public static void a(byte param0) {
-        int var1 = -33;
+        int var1 = -33 / ((-41 - param0) / 48);
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Creating your account";
     }
 }

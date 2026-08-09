@@ -25,7 +25,7 @@ final class bl {
     }
 
     final int a(byte param0) {
-        int var2 = 0;
+        int var2;
         L0: {
           var2 = 35 % ((-36 - param0) / 53);
           if (this.field_d) {

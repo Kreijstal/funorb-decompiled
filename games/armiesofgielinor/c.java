@@ -19,9 +19,8 @@ final class c {
     }
 
     final static boolean a(int param0, byte param1) {
-        int var2 = 0;
+        int var2;
         int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
         var2 = -3 % ((23 - param1) / 60);
         if ((bw.field_m[param0][0] ^ -1) != -5) {
           if ((bw.field_m[param0][0] ^ -1) != -4) {
@@ -32,8 +31,7 @@ final class c {
                 return false;
               }
             } else {
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = 1;
               return stackIn_7_0 != 0;
             }
           } else {

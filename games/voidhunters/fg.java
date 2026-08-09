@@ -5,7 +5,7 @@ abstract class fg {
     static String field_a;
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int var4 = 0;
+        int var4;
         var4 = -107 % ((0 - param3) / 34);
         if (li.field_i) {
           if (!ne.field_v) {
@@ -36,8 +36,6 @@ abstract class fg {
     final static boolean a(char param0, int param1) {
         int stackIn_8_0 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_6_0 = 0;
         if (param1 > 22) {
           if (param0 != 160) {
             if (param0 != 32) {
@@ -48,8 +46,7 @@ abstract class fg {
                   return false;
                 }
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 1;
                 return stackIn_20_0 != 0;
               }
             } else {
@@ -69,8 +66,7 @@ abstract class fg {
                   return false;
                 }
               } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 1;
                 return stackIn_8_0 != 0;
               }
             } else {

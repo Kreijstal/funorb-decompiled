@@ -22,7 +22,7 @@ class ug extends ai {
     }
 
     final void a(int param0) {
-        int var2 = 0;
+        int var2;
         if (this.field_i == null) {
           return;
         } else {

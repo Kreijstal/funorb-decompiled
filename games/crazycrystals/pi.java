@@ -43,7 +43,7 @@ final class pi extends jb {
     }
 
     final static void a(int param0, int param1) {
-        int discarded$0 = ga.p(-1);
+        ga.p(-1);
         int var2 = 97 / ((param1 - -34) / 55);
     }
 

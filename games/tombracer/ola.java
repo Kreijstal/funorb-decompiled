@@ -20,14 +20,12 @@ final class ola extends jea {
     private int field_xb;
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         L0: {
           var11 = TombRacer.field_G ? 1 : 0;
           if (this.field_zb == 0) {
@@ -53,16 +51,12 @@ final class ola extends jea {
               this.a(var6, var7, -23776, var9, var8);
               var10 = 0;
               L2: while (true) {
-                if (this.field_zb > var10) {
+                if (this.field_zb <= var10) {
+                  return;
+                } else {
                   this.field_Db[var10].a(var6 - this.field_Hb * 2, this.field_Hb, this.field_vb, this.field_Gb, 0, this.field_wb, this.field_tb - -(var10 * this.field_Gb));
                   var10++;
-                  if (var11 == 0) {
-                    continue L2;
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
+                  continue L2;
                 }
               }
             } else {
@@ -70,40 +64,11 @@ final class ola extends jea {
             }
           } else {
             var8 = this.field_Db[var7].b(this.field_wb, 16474, this.field_vb);
-            var13 = var8 ^ -1;
-            var12 = var6 ^ -1;
-            if (var11 != 0) {
-              if (var12 < var13) {
-                var7 = this.field_tb + (this.field_zb * this.field_Gb + this.field_tb);
-                var8 = bt.a((byte) -8, var6, param3, param4);
-                var9 = hsa.a(param1, var7, param0, (byte) -98);
-                this.a(var6, var7, -23776, var9, var8);
-                var10 = 0;
-                L3: while (true) {
-                  if (this.field_zb > var10) {
-                    this.field_Db[var10].a(var6 - this.field_Hb * 2, this.field_Hb, this.field_vb, this.field_Gb, 0, this.field_wb, this.field_tb - -(var10 * this.field_Gb));
-                    var10++;
-                    if (var11 == 0) {
-                      continue L3;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                return;
-              }
+            if ((var6 ^ -1) > (var8 ^ -1)) {
+              var6 = var8;
+              var7++;
+              continue L1;
             } else {
-              L4: {
-                if (var12 > var13) {
-                  var6 = var8;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
               var7++;
               continue L1;
             }
@@ -155,84 +120,50 @@ final class ola extends jea {
 
     final int d(int param0, boolean param1) {
         int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        var4 = TombRacer.field_G ? 1 : 0;
+        int var4 = TombRacer.field_G ? 1 : 0;
         this.c(-102, param1);
-        if (!param1) {
-          return -2;
-        } else {
-          var3 = 0;
-          L0: while (true) {
-            L1: {
-              if (var3 >= this.field_zb) {
-                break L1;
-              } else {
-                var6 = this.field_Db[var3].field_y;
-                var5 = 0;
-                if (var4 != 0) {
-                  if (var5 != var6) {
-                    return -1;
-                  } else {
-                    return this.field_xb;
-                  }
-                } else {
-                  if (var5 == var6) {
-                    var3++;
-                    if (var4 == 0) {
-                      continue L0;
-                    } else {
-                      break L1;
-                    }
-                  } else {
-                    return this.field_Fb[var3];
-                  }
-                }
-              }
-            }
-            if (hf.field_b != param0) {
-              return -1;
-            } else {
-              return this.field_xb;
-            }
-          }
+        if (!(param1)) {
+            return -2;
         }
+        for (var3 = 0; var3 < this.field_zb; var3++) {
+            if (0 != this.field_Db[var3].field_y) {
+                return this.field_Fb[var3];
+            }
+        }
+        if (hf.field_b != param0) {
+            return -1;
+        }
+        return this.field_xb;
     }
 
     final static void f(byte param0) {
         int var1 = 0;
-        Object var2 = null;
-        Throwable var3 = null;
         Throwable decompiledCaughtException = null;
-        var1 = 1 % ((-53 - param0) / 62);
-        if (nfa.field_n != null) {
-          var2 = nfa.field_n;
-          synchronized (var2) {
-            L0: {
-              nfa.field_n = null;
-              break L0;
+        Object var2 = null;
+        L0: {
+          var1 = 1 % ((-53 - param0) / 62);
+          if (nfa.field_n != null) {
+            var2 = nfa.field_n;
+            synchronized (var2) {
+              L1: {
+                nfa.field_n = null;
+                break L1;
+              }
             }
+            break L0;
+          } else {
+            break L0;
           }
-          return;
-        } else {
-          return;
         }
     }
 
     public static void d(byte param0) {
         if (param0 != -39) {
-          ola.f((byte) -65);
-          field_yb = null;
-          field_Ib = null;
-          field_Bb = null;
-          return;
-        } else {
-          field_yb = null;
-          field_Ib = null;
-          field_Bb = null;
-          return;
+            ola.f((byte) -65);
         }
+        field_yb = null;
+        field_Ib = null;
+        field_Bb = null;
     }
 
     final void a(byte param0, int param1, String param2) {
@@ -270,65 +201,13 @@ final class ola extends jea {
     }
 
     final static void a(int param0, ena param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
-            L1: {
-              hba.field_c = param1;
-              if (param0 == 13) {
-                break L1;
-              } else {
+            hba.field_c = param1;
+            if (param0 != 13) {
                 field_Eb = -36;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("ola.H(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "ola.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

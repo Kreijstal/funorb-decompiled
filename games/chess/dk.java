@@ -17,9 +17,9 @@ final class dk {
     static String field_l;
 
     final l b(boolean param0) {
-        l var2 = null;
-        l var3 = null;
-        int var4 = 0;
+        l var2;
+        l var3;
+        int var4;
         var4 = Chess.field_G;
         if (param0) {
           if (this.field_i != null) {
@@ -48,9 +48,8 @@ final class dk {
     }
 
     final l a(boolean param0) {
-        boolean discarded$2 = false;
         if (param0) {
-          discarded$2 = dk.c(false);
+          dk.c(false);
           this.field_d = 0;
           return this.a(0);
         } else {
@@ -60,9 +59,9 @@ final class dk {
     }
 
     final l a(long param0, int param1) {
-        l var4 = null;
-        l var5 = null;
-        int var6 = 0;
+        l var4;
+        l var5;
+        int var6;
         var6 = Chess.field_G;
         this.field_j = param0;
         if (param1 == 3000) {
@@ -126,13 +125,13 @@ final class dk {
     }
 
     final l a(int param0) {
-        int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var3 = 0;
-        l var4 = null;
-        l var5 = null;
-        l var9 = null;
-        l var12 = null;
+        int fieldTemp$4 = 0;
+        int var3;
+        l var4;
+        l var5;
+        l var9;
+        l var12;
         var3 = Chess.field_G;
         if (-1 > (this.field_d ^ -1)) {
           if (this.field_c == this.field_b[this.field_d + -1]) {
@@ -145,9 +144,9 @@ final class dk {
                   return null;
                 }
               } else {
-                fieldTemp$2 = this.field_d;
+                fieldTemp$3 = this.field_d;
                 this.field_d = this.field_d + 1;
-                var4 = this.field_b[fieldTemp$2].field_p;
+                var4 = this.field_b[fieldTemp$3].field_p;
                 var9 = var4;
                 if (var4 != this.field_b[-1 + this.field_d]) {
                   this.field_c = var9.field_p;
@@ -172,9 +171,9 @@ final class dk {
                 return null;
               }
             } else {
-              fieldTemp$3 = this.field_d;
+              fieldTemp$4 = this.field_d;
               this.field_d = this.field_d + 1;
-              var4 = this.field_b[fieldTemp$3].field_p;
+              var4 = this.field_b[fieldTemp$4].field_p;
               var5 = var4;
               if (var4 != this.field_b[-1 + this.field_d]) {
                 this.field_c = var5.field_p;
@@ -188,17 +187,16 @@ final class dk {
     }
 
     final static boolean c(boolean param0) {
-        boolean discarded$1 = false;
-        long var1 = 0L;
-        long var3 = 0L;
-        int var5 = 0;
-        int var6 = 0;
+        long var1;
+        long var3;
+        int var5;
+        int var6;
         L0: {
           var6 = Chess.field_G;
           if (!param0) {
             break L0;
           } else {
-            discarded$1 = dk.c(false);
+            dk.c(false);
             break L0;
           }
         }
@@ -275,18 +273,18 @@ final class dk {
     }
 
     dk(int param0) {
-        l dupTemp$2 = null;
-        int var2 = 0;
-        l var3 = null;
+        l dupTemp$1 = null;
+        int var2;
+        l var3;
         this.field_d = 0;
         this.field_b = new l[param0];
         this.field_m = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new l();
-            var3 = dupTemp$2;
-            this.field_b[var2] = dupTemp$2;
+            dupTemp$1 = new l();
+            var3 = dupTemp$1;
+            this.field_b[var2] = dupTemp$1;
             var3.field_m = var3;
             var3.field_p = var3;
             var2++;

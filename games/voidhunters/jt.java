@@ -16,8 +16,6 @@ final class jt extends rqa {
         RuntimeException var3 = null;
         nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -25,27 +23,15 @@ final class jt extends rqa {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        nc stackOut_3_0 = null;
-        nc stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             si.a(192, 62, param0[0].a(85));
             if (param1 <= -119) {
-              stackOut_3_0 = new nc("void");
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = new nc("void");
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (nc) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (nc) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -54,27 +40,19 @@ final class jt extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("jt.A(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("jt.A(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -92,7 +70,6 @@ final class jt extends rqa {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
-        int var7 = 0;
         aja var8 = null;
         int var9 = 0;
         int var10 = 0;
@@ -107,9 +84,11 @@ final class jt extends rqa {
         aja var19 = null;
         aja var20 = null;
         aja var21 = null;
-        L0: {
-          var7 = -51 % ((-20 - param3) / 43);
-          if (li.field_i) {
+        int var7 = -51 % ((-20 - param3) / 43);
+        if (!li.field_i) {
+            paa.a(3377322, -77, param1, param0, param2, param6);
+            uv.a(116, param6, param2, param0, 16777215, param1);
+        } else {
             var8 = mmb.field_d[param4];
             var9 = var8.d();
             var10 = var8.a();
@@ -133,12 +112,6 @@ final class jt extends rqa {
             var20.b(param6 - -var9, -var10 + param0 - -param2, param1 + -(var9 << 241671937), var10, var12, var11, var13);
             var21 = mmb.field_d[param4 + 8];
             var21.a(param6 - (-param1 + var9), param0 + (param2 + -var10), var12, var11, var13);
-            break L0;
-          } else {
-            paa.a(3377322, -77, param1, param0, param2, param6);
-            uv.a(116, param6, param2, param0, 16777215, param1);
-            break L0;
-          }
         }
     }
 

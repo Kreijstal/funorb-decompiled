@@ -7,8 +7,8 @@ final class wb {
     static String field_c;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -22,34 +22,20 @@ final class wb {
             var6 = op.field_c[0][param2] & 65280;
             var7 = 0;
             L1: while (true) {
-              L2: {
-                L3: {
-                  if (-17 >= (var7 ^ -1)) {
-                    break L3;
-                  } else {
-                    var8 = -(int)((double)(var7 >> -2026833630) * Math.sin((double)(-param3 + var7) * 3.141592653589793 / 10.0));
-                    var9 = (int)((Math.cos((double)(var7 - param3) * 3.141592653589793 / 10.0) + 1.0) * (double)(var7 << -1992909502));
-                    qn.h(20 + param1 - -var7, var8 + param4 + -13, 20 + param1 - -var7, -7 + var8 + param4, ((var9 + 128) * var6 & 16711680 | var5_int * (128 + var9) & -16711936) >>> -55666616);
-                    var7++;
-                    if (var10 != 0) {
-                      break L2;
-                    } else {
-                      if (var10 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                }
+              if (-17 >= (var7 ^ -1)) {
                 qn.h(param1 + 20, -13 + param4, 20 + param1, 2 + param4, 7816226);
-                break L2;
-              }
-              if (param0 == 7816226) {
-                break L0;
+                if (param0 == 7816226) {
+                  break L0;
+                } else {
+                  wb.a(37, 108, -63, 105, -25);
+                  return;
+                }
               } else {
-                wb.a(37, 108, -63, 105, -25);
-                return;
+                var8 = -(int)((double)(var7 >> -2026833630) * Math.sin((double)(-param3 + var7) * 3.141592653589793 / 10.0));
+                var9 = (int)((Math.cos((double)(var7 - param3) * 3.141592653589793 / 10.0) + 1.0) * (double)(var7 << -1992909502));
+                qn.h(20 + param1 - -var7, var8 + param4 + -13, 20 + param1 - -var7, -7 + var8 + param4, ((var9 + 128) * var6 & 16711680 | var5_int * (128 + var9) & -16711936) >>> -55666616);
+                var7++;
+                continue L1;
               }
             }
           }

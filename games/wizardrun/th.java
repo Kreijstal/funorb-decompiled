@@ -13,9 +13,8 @@ final class th {
     private rk field_f;
 
     final static void b(byte param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         var1 = tc.field_m;
         synchronized (var1) {
           L0: {
@@ -43,7 +42,7 @@ final class th {
     }
 
     final rk d(int param0) {
-        rk var2 = null;
+        rk var2;
         var2 = this.field_f;
         if (this.field_c != var2) {
           if (param0 <= 3) {
@@ -61,8 +60,7 @@ final class th {
     }
 
     final rk a(int param0) {
-        rk discarded$7 = null;
-        rk var2 = null;
+        rk var2;
         var2 = this.field_c.field_i;
         if (param0 == 0) {
           if (this.field_c == var2) {
@@ -73,7 +71,7 @@ final class th {
             return var2;
           }
         } else {
-          discarded$7 = this.b(68);
+          this.b(68);
           if (this.field_c == var2) {
             this.field_f = null;
             return null;
@@ -85,9 +83,9 @@ final class th {
     }
 
     final int c(int param0) {
-        int var2 = 0;
-        rk var3 = null;
-        int var4 = 0;
+        int var2;
+        rk var3;
+        int var4;
         var4 = wizardrun.field_H;
         var2 = 0;
         var3 = this.field_c.field_i;
@@ -113,8 +111,6 @@ final class th {
         int var6 = 0;
         StringBuilder stackIn_3_0 = null;
         StringBuilder stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -122,16 +118,6 @@ final class th {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        StringBuilder stackOut_6_0 = null;
-        StringBuilder stackOut_2_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var6 = wizardrun.field_H;
         try {
           L0: {
@@ -141,8 +127,7 @@ final class th {
             if (param3 == 1) {
               L1: while (true) {
                 if (param2 <= var5) {
-                  stackOut_6_0 = (StringBuilder) (param0);
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = (StringBuilder) (param0);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -152,8 +137,7 @@ final class th {
                 }
               }
             } else {
-              stackOut_2_0 = (StringBuilder) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (StringBuilder) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -162,27 +146,19 @@ final class th {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("th.C(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("th.C(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }
@@ -207,10 +183,9 @@ final class th {
     }
 
     final void a(rk param0, int param1) {
-        rk discarded$0 = null;
         try {
             if (param1 != 14) {
-                discarded$0 = this.a(-10);
+                this.a(-10);
             }
             if (param0.field_l != null) {
                 param0.b(false);
@@ -225,7 +200,7 @@ final class th {
     }
 
     final rk b(int param0) {
-        rk var2 = null;
+        rk var2;
         var2 = this.field_c.field_i;
         if (param0 >= 33) {
           if (this.field_c == var2) {

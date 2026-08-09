@@ -8,15 +8,15 @@ final class jma extends at {
     private gj field_l;
 
     final boolean c(byte param0) {
-        pp var2 = null;
-        int var3 = 0;
-        ad var3_ref_ad = null;
-        oha var4 = null;
-        int var5 = 0;
+        pp var2;
+        int var3;
+        ad var3_ref_ad;
+        oha var4;
+        int var5;
         var5 = BachelorFridge.field_y;
-        int fieldTemp$1 = this.field_k - 1;
+        int fieldTemp$0 = this.field_k - 1;
         this.field_k = this.field_k - 1;
-        if (0 >= fieldTemp$1) {
+        if (0 >= fieldTemp$0) {
           var2 = (pp) ((Object) this.field_j.field_m.b((byte) 90));
           L0: while (true) {
             if (var2 == null) {

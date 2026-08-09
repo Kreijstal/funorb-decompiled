@@ -8,12 +8,11 @@ final class ooa extends wka {
     static jea field_f;
 
     final static String a(byte param0) {
-        String discarded$8 = null;
-        String var1 = null;
+        String var1;
         var1 = "";
         if (param0 >= -46) {
           L0: {
-            discarded$8 = ooa.a((byte) -83);
+            ooa.a((byte) -83);
             if (null != vn.field_b) {
               var1 = vn.field_b.a(39);
               break L0;
@@ -76,19 +75,15 @@ final class ooa extends wka {
 
     final static boolean a(int param0, int param1, int param2) {
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param2 > -42) {
           return true;
         } else {
           L0: {
             if (-1 == (param1 & 8192 ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L0;
             }
           }

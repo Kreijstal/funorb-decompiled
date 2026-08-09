@@ -14,23 +14,21 @@ final class qj {
     private int field_c;
 
     final void a(byte param0) {
-        fn discarded$4 = null;
-        fn discarded$5 = null;
         if (param0 != 29) {
           this.c(19);
           this.field_b = true;
-          discarded$4 = kh.a(59, false);
+          kh.a(59, false);
           return;
         } else {
           this.field_b = true;
-          discarded$5 = kh.a(59, false);
+          kh.a(59, false);
           return;
         }
     }
 
     final void c(int param0) {
         this.field_b = false;
-        fn discarded$0 = kh.a(param0, false);
+        kh.a(param0, false);
     }
 
     final void b(int param0) {
@@ -58,32 +56,16 @@ final class qj {
     }
 
     final void a(byte param0, wk param1) {
-        RuntimeException var3 = null;
-        vn[] stackIn_5_0 = null;
         vn[] stackIn_6_0 = null;
         vn[] stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vn[] stackOut_4_0 = null;
-        vn[] stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        vn[] stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -97,20 +79,15 @@ final class qj {
             L2: {
               if (this.field_i >= 0.0f) {
                 L3: {
-                  stackOut_4_0 = lb.field_eb;
-                  stackIn_6_0 = stackOut_4_0;
-                  stackIn_5_0 = stackOut_4_0;
+                  stackIn_6_0 = lb.field_eb;
+
                   if (!this.field_b) {
-                    stackOut_6_0 = (vn[]) ((Object) stackIn_6_0);
-                    stackOut_6_1 = (int)this.field_i;
-                    stackIn_7_0 = stackOut_6_0;
-                    stackIn_7_1 = stackOut_6_1;
+                    stackIn_7_0 = (vn[]) ((Object) stackIn_6_0);
+                    stackIn_7_1 = (int)this.field_i;
                     break L3;
                   } else {
-                    stackOut_5_0 = (vn[]) ((Object) stackIn_5_0);
-                    stackOut_5_1 = 6;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_7_1 = stackOut_5_1;
+                    stackIn_7_0 = (vn[]) ((Object) stackIn_6_0);
+                    stackIn_7_1 = 6;
                     break L3;
                   }
                 }
@@ -126,27 +103,19 @@ final class qj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3);
-            stackOut_9_1 = new StringBuilder().append("qj.A(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("qj.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -180,13 +149,12 @@ final class qj {
     }
 
     final static char a(int param0, char param1) {
-        char discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = ZombieDawn.field_J;
         if (param0 >= -98) {
           L0: {
-            discarded$1 = qj.a(-122, 'ﾛ');
+            qj.a(-122, 'ﾛ');
             var2 = param1;
             if (32 != var2) {
               if (var2 != 160) {

@@ -13,9 +13,6 @@ final class qk {
     final static boolean a(char param0, byte param1) {
         int stackIn_27_0 = 0;
         int stackIn_30_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_26_0 = 0;
         if (param1 == -110) {
           if (param0 < 48) {
             if (65 > param0) {
@@ -33,8 +30,7 @@ final class qk {
               return false;
             } else {
               if (param0 <= 90) {
-                stackOut_28_0 = 1;
-                stackIn_30_0 = stackOut_28_0;
+                stackIn_30_0 = 1;
                 return stackIn_30_0 != 0;
               } else {
                 L1: {
@@ -45,14 +41,12 @@ final class qk {
                       if (122 < param0) {
                         break L2;
                       } else {
-                        stackOut_25_0 = 1;
-                        stackIn_27_0 = stackOut_25_0;
+                        stackIn_27_0 = 1;
                         break L1;
                       }
                     }
                   }
-                  stackOut_26_0 = 0;
-                  stackIn_27_0 = stackOut_26_0;
+                  stackIn_27_0 = 0;
                   break L1;
                 }
                 return stackIn_27_0 != 0;

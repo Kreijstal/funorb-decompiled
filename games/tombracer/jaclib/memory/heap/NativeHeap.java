@@ -40,7 +40,7 @@ public final class NativeHeap {
     }
 
     public final jaclib.memory.heap.NativeHeapBuffer a(int param0, boolean param1) {
-        RuntimeException var3 = null;
+        RuntimeException var3;
         if (this.a) {
           return new jaclib.memory.heap.NativeHeapBuffer((jaclib.memory.heap.NativeHeap) (this), this.allocateBuffer(param0, param1), param0);
         } else {

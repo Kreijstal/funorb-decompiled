@@ -66,8 +66,6 @@ abstract class rf extends ii {
         RuntimeException var4 = null;
         q[] stackIn_5_0 = null;
         q[] stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -75,27 +73,15 @@ abstract class rf extends ii {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        q[] stackOut_6_0 = null;
-        q[] stackOut_4_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if (kk.a(param2, 1, param3, param0)) {
               if (param1 == -71) {
-                stackOut_6_0 = vl.d(-89);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = vl.d(-89);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                stackOut_4_0 = (q[]) null;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (q[]) null;
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -107,27 +93,19 @@ abstract class rf extends ii {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("rf.HA(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("rf.HA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L1;
             }
           }
@@ -182,11 +160,9 @@ abstract class rf extends ii {
     }
 
     boolean f(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_13_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_12_0 = 0;
         L0: {
           var2 = this.j(78);
           if (param0 == -90) {
@@ -224,39 +200,33 @@ abstract class rf extends ii {
                 if (this.field_T) {
                   break L4;
                 } else {
-                  stackOut_11_0 = 1;
-                  stackIn_13_0 = stackOut_11_0;
+                  stackIn_13_0 = 1;
                   break L3;
                 }
               }
             }
           }
-          stackOut_12_0 = 0;
-          stackIn_13_0 = stackOut_12_0;
+          stackIn_13_0 = 0;
           break L3;
         }
         return stackIn_13_0 != 0;
     }
 
     private final int j(int param0) {
-        q[] discarded$0 = null;
         if (param0 < 61) {
             nh var3 = (nh) null;
-            discarded$0 = rf.a(0, (byte) 10, (nh) null, -24);
+            rf.a(0, (byte) 10, (nh) null, -24);
         }
         return this.field_T ? this.field_R.i(32) != this ? 0 : 256 : 0;
     }
 
     boolean i(int param0) {
-        q discarded$2 = null;
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == 462) {
             break L0;
           } else {
-            discarded$2 = rf.a(-12);
+            rf.a(-12);
             break L0;
           }
         }
@@ -269,14 +239,12 @@ abstract class rf extends ii {
               if (this.field_T) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
@@ -285,13 +253,12 @@ abstract class rf extends ii {
     abstract void a(int param0, int param1, boolean param2);
 
     final lm g(int param0) {
-        boolean discarded$0 = false;
         lm var2 = super.g(param0 ^ 0);
         if (!(var2 == null)) {
             return var2;
         }
         if (param0 != -20311) {
-            discarded$0 = this.f((byte) 104);
+            this.f((byte) 104);
         }
         return (lm) (this);
     }

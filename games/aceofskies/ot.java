@@ -10,11 +10,10 @@ final class ot {
     static int field_a;
 
     private final void c(int param0, int param1) {
-        int discarded$2 = 0;
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         if (param0 != -1) {
-          discarded$2 = this.a((byte) -66);
+          this.a((byte) -66);
           var4 = new int[this.b((byte) -82, param1)];
           var3 = var4;
           au.a(this.field_c, 0, var4, 0, this.field_c.length);
@@ -83,8 +82,8 @@ final class ot {
     }
 
     private final int b(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = AceOfSkies.field_G ? 1 : 0;
         var3 = this.field_c.length;
         L0: while (true) {

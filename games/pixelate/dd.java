@@ -22,9 +22,8 @@ final class dd {
     static String field_f;
 
     final static wm[] b(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != 62) {
-            discarded$0 = dd.a('￑', (byte) 81);
+            dd.a('￑', (byte) 81);
         }
         return new wm[]{rn.field_f, ej.field_b, w.field_w, gj.field_T, lb.field_r, lm.field_l, lb.field_C, gn.field_u, pf.field_f, of.field_e, kn.field_M, u.field_d, gh.field_s, ad.field_u};
     }
@@ -90,8 +89,7 @@ final class dd {
     }
 
     final static String[] a(String param0, byte param1, char param2) {
-        String[] discarded$4 = null;
-        int incrementValue$5 = 0;
+        int incrementValue$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
@@ -103,23 +101,12 @@ final class dd {
         String var10 = null;
         CharSequence var11 = null;
         String[] stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[] stackOut_9_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -137,20 +124,19 @@ final class dd {
                     break L2;
                   } else {
                     var10 = (String) null;
-                    discarded$4 = dd.a((String) null, (byte) -32, 'k');
+                    dd.a((String) null, (byte) -32, 'k');
                     break L2;
                   }
                 }
-                stackOut_9_0 = (String[]) (var4);
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = (String[]) (var4);
                 break L0;
               } else {
                 var8 = var6;
                 L3: while (true) {
                   if (param2 == param0.charAt(var8)) {
-                    incrementValue$5 = var5;
+                    incrementValue$1 = var5;
                     var5++;
-                    var4[incrementValue$5] = param0.substring(var6, var8);
+                    var4[incrementValue$1] = param0.substring(var6, var8);
                     var6 = 1 + var8;
                     var7++;
                     continue L1;
@@ -166,27 +152,19 @@ final class dd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("dd.G(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("dd.G(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L4;
             }
           }
@@ -196,15 +174,12 @@ final class dd {
     }
 
     final static boolean a(char param0, byte param1) {
-        boolean discarded$2 = false;
         int stackIn_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
         L0: {
           if (param1 >= 44) {
             break L0;
           } else {
-            discarded$2 = dd.a('ﾰ', (byte) -89);
+            dd.a('ﾰ', (byte) -89);
             break L0;
           }
         }
@@ -243,12 +218,10 @@ final class dd {
                 }
               }
             }
-            stackOut_12_0 = 0;
-            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_0 = 0;
             break L1;
           }
-          stackOut_11_0 = 1;
-          stackIn_13_0 = stackOut_11_0;
+          stackIn_13_0 = 1;
           break L1;
         }
         return stackIn_13_0 != 0;
@@ -290,9 +263,9 @@ final class dd {
 
     static {
         $cfr$clinit: {
-            long var0 = 0L;
-            int var2 = 0;
-            int var3 = 0;
+            long var0;
+            int var2;
+            int var3;
             field_c = new long[256];
             var2 = 0;
             L0: while (true) {

@@ -17,8 +17,7 @@ final class ab implements td {
     static int field_l;
 
     public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
+        RuntimeException runtimeException = null;
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
@@ -28,34 +27,20 @@ final class ab implements td {
         pj var14 = null;
         bj var15 = null;
         pj stackIn_3_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        pj stackOut_1_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             L1: {
               if (!(param2 instanceof bj)) {
-                stackOut_2_0 = null;
-                stackIn_3_0 = (pj) ((Object) stackOut_2_0);
+                stackIn_3_0 = null;
                 break L1;
               } else {
-                stackOut_1_0 = (pj) (param2);
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = (pj) (param2);
                 break L1;
               }
             }
@@ -101,7 +86,7 @@ final class ab implements td {
                 break L5;
               } else {
                 var13 = this.field_m + (var15.field_H + var15.field_G);
-                discarded$1 = this.field_k.a(param2.field_l, param2.field_s + (param1 + var13), param0 - -param2.field_n - -this.field_b, param2.field_m - (var13 - -this.field_m), param2.field_r - (this.field_m << -839238015), this.field_e, this.field_c, 1, 1, 0);
+                this.field_k.a(param2.field_l, param2.field_s + (param1 + var13), param0 - -param2.field_n - -this.field_b, param2.field_m - (var13 - -this.field_m), param2.field_r - (this.field_m << -839238015), this.field_e, this.field_c, 1, 1, 0);
                 break L5;
               }
             }
@@ -110,28 +95,20 @@ final class ab implements td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var6 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var6);
-            stackOut_11_1 = new StringBuilder().append("ab.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            runtimeException = decompiledCaughtException;
+            stackIn_13_0 = (RuntimeException) (runtimeException);
+
+            stackIn_13_1 = new StringBuilder().append("ab.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L6;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L6;
             }
           }
@@ -158,11 +135,8 @@ final class ab implements td {
         int var3 = 0;
         Throwable var4 = null;
         int var5 = 0;
-        int stackIn_13_0 = 0;
         int stackIn_19_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_18_0 = 0;
         var5 = OrbDefence.field_D ? 1 : 0;
         try {
           var1_int = -43 % ((-78 - param0) / 46);
@@ -214,15 +188,14 @@ final class ab implements td {
                     } else {
                       var3 = gl.field_i[al.field_b];
                       al.field_b = al.field_b + 1 & 127;
-                      stackOut_12_0 = 0;
-                      stackIn_19_0 = stackOut_12_0;
-                      stackIn_13_0 = stackOut_12_0;
+                      stackIn_19_0 = 0;
+
                       if (var5 != 0) {
                         break L1;
                       } else {
                         L8: {
                           L9: {
-                            if (stackIn_13_0 <= var3) {
+                            if (stackIn_19_0 <= var3) {
                               break L9;
                             } else {
                               ek.field_a[var3 ^ -1] = false;
@@ -245,8 +218,7 @@ final class ab implements td {
                     }
                   }
                 }
-                stackOut_18_0 = uf.field_a;
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = uf.field_a;
                 break L1;
               }
               pk.field_H = stackIn_19_0;

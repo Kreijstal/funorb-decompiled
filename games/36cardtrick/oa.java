@@ -9,17 +9,11 @@ final class oa {
     static int[] field_e;
 
     final static boolean a(int param0, int param1, boolean param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_25_0 = 0;
         int stackIn_43_0 = 0;
         int stackIn_52_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
+        int var4;
+        int var5;
         if (!param2) {
           if (db.field_l[param1] >= db.field_l[param3]) {
             if (db.field_l[param1] <= db.field_l[param3]) {
@@ -53,12 +47,10 @@ final class oa {
                       } else {
                         L0: {
                           if (param3 <= param1) {
-                            stackOut_24_0 = 0;
-                            stackIn_25_0 = stackOut_24_0;
+                            stackIn_25_0 = 0;
                             break L0;
                           } else {
-                            stackOut_23_0 = 1;
-                            stackIn_25_0 = stackOut_23_0;
+                            stackIn_25_0 = 1;
                             break L0;
                           }
                         }
@@ -92,12 +84,10 @@ final class oa {
                       } else {
                         L1: {
                           if (param3 <= param1) {
-                            stackOut_51_0 = 0;
-                            stackIn_52_0 = stackOut_51_0;
+                            stackIn_52_0 = 0;
                             break L1;
                           } else {
-                            stackOut_50_0 = 1;
-                            stackIn_52_0 = stackOut_50_0;
+                            stackIn_52_0 = 1;
                             break L1;
                           }
                         }
@@ -116,12 +106,10 @@ final class oa {
                       } else {
                         L2: {
                           if (param3 <= param1) {
-                            stackOut_42_0 = 0;
-                            stackIn_43_0 = stackOut_42_0;
+                            stackIn_43_0 = 0;
                             break L2;
                           } else {
-                            stackOut_41_0 = 1;
-                            stackIn_43_0 = stackOut_41_0;
+                            stackIn_43_0 = 1;
                             break L2;
                           }
                         }

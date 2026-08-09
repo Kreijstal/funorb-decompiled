@@ -15,9 +15,8 @@ final class kba extends od implements wia {
     int field_n;
 
     public static void a(byte param0) {
-        int discarded$0 = 0;
         if (param0 != -48) {
-            discarded$0 = kba.f(-96);
+            kba.f(-96);
             field_u = null;
             field_k = null;
             return;
@@ -37,20 +36,14 @@ final class kba extends od implements wia {
     final static boolean a(int param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (0 <= param1) {
           if ((param1 ^ -1) > -1583) {
             L0: {
               if (param1 % 4 != 0) {
-                stackOut_9_0 = 0;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = 0;
                 break L0;
               } else {
-                stackOut_8_0 = 1;
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = 1;
                 break L0;
               }
             }
@@ -73,12 +66,10 @@ final class kba extends od implements wia {
         } else {
           L1: {
             if (-1 != ((param1 + 1) % 4 ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -92,9 +83,8 @@ final class kba extends od implements wia {
     }
 
     final void a(int param0, int param1, int param2) {
-        int discarded$2 = 0;
         if (param2 != -23992) {
-          discarded$2 = kba.f(-114);
+          kba.f(-114);
           jaggl.OpenGL.glFramebufferRenderbufferEXT(param1, param0, 36161, this.field_m);
           this.field_q = param1;
           this.field_r = param0;

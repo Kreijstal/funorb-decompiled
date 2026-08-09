@@ -53,14 +53,10 @@ abstract class vf extends vd {
     }
 
     boolean a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_12_0 = 0;
         int stackIn_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
         if (param0 <= -32) {
           L0: {
             var2 = this.l(80);
@@ -79,12 +75,10 @@ abstract class vf extends vd {
               } else {
                 L1: {
                   if (this.field_C) {
-                    stackOut_20_0 = 0;
-                    stackIn_21_0 = stackOut_20_0;
+                    stackIn_21_0 = 0;
                     break L1;
                   } else {
-                    stackOut_19_0 = 1;
-                    stackIn_21_0 = stackOut_19_0;
+                    stackIn_21_0 = 1;
                     break L1;
                   }
                 }
@@ -101,12 +95,10 @@ abstract class vf extends vd {
               } else {
                 L2: {
                   if (this.field_C) {
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = 0;
                     break L2;
                   } else {
-                    stackOut_10_0 = 1;
-                    stackIn_12_0 = stackOut_10_0;
+                    stackIn_12_0 = 1;
                     break L2;
                   }
                 }
@@ -122,7 +114,7 @@ abstract class vf extends vd {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        int var5;
         if (this.field_E != 0) {
           if (-257 >= (this.field_E ^ -1)) {
             if (param2 != 0) {
@@ -201,7 +193,7 @@ abstract class vf extends vd {
     }
 
     final wj g(int param0) {
-        wj var2 = null;
+        wj var2;
         if (param0 <= -26) {
           var2 = super.g(-116);
           if (var2 != null) {

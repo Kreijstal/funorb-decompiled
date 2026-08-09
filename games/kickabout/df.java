@@ -9,11 +9,10 @@ final class df extends dj {
     static hd field_G;
 
     final static void d(boolean param0) {
-        int discarded$0 = 0;
         nl var1 = null;
         nl var2 = null;
         if (!param0) {
-            discarded$0 = df.g(57);
+            df.g(57);
         }
         if (!(0 == et.field_d.field_R[1].field_g)) {
             if (!((et.field_d.field_V.field_m ^ -1) != -2)) {
@@ -26,34 +25,30 @@ final class df extends dj {
     }
 
     final static vn a(int param0, int param1, boolean param2, int param3) {
-        boolean[][] var4 = null;
-        boolean[][] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        vn var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        short[] var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        boolean[][] var20 = null;
-        int var21 = 0;
-        boolean[][] var22 = null;
-        boolean[][] var24 = null;
-        boolean[][] var25 = null;
-        boolean[][] var27 = null;
-        short[] var29 = null;
         int stackIn_7_0 = 0;
         int stackIn_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
+        boolean[][] var4;
+        boolean[][] var5;
+        int var6;
+        int var7;
+        vn var8;
+        int var9;
+        int var10;
+        short[] var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        boolean[][] var20;
+        int var21;
+        boolean[][] var22;
+        boolean[][] var24;
+        boolean[][] var25;
+        boolean[][] var27;
+        short[] var29;
         var19 = Kickabout.field_G;
         var25 = je.field_g[param0].field_l[0];
         var22 = var25;
@@ -89,12 +84,10 @@ final class df extends dj {
                     L3: {
                       var17 = 9 - var16;
                       if (var5[-var14 + 12][var17]) {
-                        stackOut_21_0 = var7;
-                        stackIn_22_0 = stackOut_21_0;
+                        stackIn_22_0 = var7;
                         break L3;
                       } else {
-                        stackOut_20_0 = var6;
-                        stackIn_22_0 = stackOut_20_0;
+                        stackIn_22_0 = var6;
                         break L3;
                       }
                     }
@@ -134,12 +127,10 @@ final class df extends dj {
                 L6: {
                   var17 = var16;
                   if (!var20[-var14 + 12][var17]) {
-                    stackOut_6_0 = var6;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = var6;
                     break L6;
                   } else {
-                    stackOut_5_0 = var7;
-                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_0 = var7;
                     break L6;
                   }
                 }
@@ -172,24 +163,17 @@ final class df extends dj {
     }
 
     final void a(int param0, boolean param1) {
-        int discarded$1 = 0;
-        int var3 = 0;
-        int var4_int = 0;
-        ot var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        String var8 = null;
-        int var9 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
-        ot stackIn_22_0 = null;
-        ot stackOut_21_0 = null;
-        ot stackOut_20_0 = null;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        ot stackIn_23_0 = null;
+        int var3;
+        ot var4;
+        int var4_int;
+        int var5;
+        int var6;
+        int var7;
+        String var8;
+        int var9;
         L0: {
           var9 = Kickabout.field_G;
           super.a(param0, param1);
@@ -203,7 +187,7 @@ final class df extends dj {
                 break L0;
               } else {
                 pb.field_C.c(ml.field_t[var3], 150 + this.field_j, 256 - -(50 * var3), 16777215, -1);
-                discarded$1 = pb.field_C.a(jq.field_a[var3], this.field_j + 170, 243 - -(var3 * 50), 420, 300, 16777215, -1, 0, 0, 16);
+                pb.field_C.a(jq.field_a[var3], this.field_j + 170, 243 - -(var3 * 50), 420, 300, 16777215, -1, 0, 0, 16);
                 var3++;
                 continue L1;
               }
@@ -220,16 +204,14 @@ final class df extends dj {
                     } else {
                       L4: {
                         if (0 == (var3 & 1)) {
-                          stackOut_21_0 = eq.field_h;
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_23_0 = eq.field_h;
                           break L4;
                         } else {
-                          stackOut_20_0 = ml.field_q;
-                          stackIn_22_0 = stackOut_20_0;
+                          stackIn_23_0 = ml.field_q;
                           break L4;
                         }
                       }
-                      var4 = stackIn_22_0;
+                      var4 = stackIn_23_0;
                       ((ut) ((Object) var4)).c(var3 * 45 + 380 + this.field_j, 145);
                       var3++;
                       continue L3;
@@ -237,30 +219,26 @@ final class df extends dj {
                   }
                 } else {
                   L5: {
-                    if ((var3 ^ -1) != -2) {
-                      stackOut_7_0 = 0;
-                      stackIn_8_0 = stackOut_7_0;
+                    if ((var3 ^ -1) == -2) {
+                      stackIn_9_0 = 1;
                       break L5;
                     } else {
-                      stackOut_6_0 = 1;
-                      stackIn_8_0 = stackOut_6_0;
+                      stackIn_9_0 = 0;
                       break L5;
                     }
                   }
                   L6: {
-                    var4_int = stackIn_8_0;
+                    var4_int = stackIn_9_0;
                     if (var4_int != 0) {
-                      stackOut_10_0 = 345;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_12_0 = 345;
                       break L6;
                     } else {
-                      stackOut_9_0 = 50;
-                      stackIn_11_0 = stackOut_9_0;
+                      stackIn_12_0 = 50;
                       break L6;
                     }
                   }
                   L7: {
-                    var5 = stackIn_11_0;
+                    var5 = stackIn_12_0;
                     var5 = var5 + this.field_j;
                     var6 = 146;
                     on.a(-10 + var5, 126, 265, 270, 10, 65793, 140);
@@ -308,7 +286,6 @@ final class df extends dj {
         int var3 = 0;
         int stackIn_16_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
         var3 = Kickabout.field_G;
         try {
           L0: {
@@ -350,8 +327,7 @@ final class df extends dj {
                     }
                   }
                 }
-                stackOut_15_0 = var2;
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_0 = var2;
                 break L0;
               } else {
                 re.field_c.d(105);

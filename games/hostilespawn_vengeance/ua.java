@@ -14,30 +14,33 @@ final class ua implements Runnable {
         int var1_int = 0;
         ug var2 = null;
         int var4 = HostileSpawn.field_I ? 1 : 0;
-        ((ua) this).field_e = true;
+        this.field_e = true;
         try {
-            while (!((ua) this).field_d) {
-                for (var1_int = 0; var1_int < 2; var1_int++) {
-                    var2 = ((ua) this).field_g[var1_int];
+            while (!this.field_d) {
+                for (var1_int = 0; (var1_int ^ -1) > -3; var1_int++) {
+                    var2 = this.field_g[var1_int];
                     if (var2 != null) {
                         var2.f();
                     }
                 }
                 vj.a(10L, (byte) -49);
-                Object var5 = null;
-                eb.a(((ua) this).field_b, 1001, (Object) null);
+                Object var5 = (Object) null;
+                eb.a(this.field_b, 1001, (Object) null);
             }
         } catch (Exception exception) {
-            Object var6 = null;
-            ic.a((byte) -125, (String) null, (Throwable) (Object) exception);
+            String var6 = (String) null;
+            ic.a((byte) -125, (String) null, (Throwable) ((Object) exception));
         } finally {
-            ((ua) this).field_e = false;
+            this.field_e = false;
         }
     }
 
     public static void a(byte param0) {
         field_c = null;
         field_a = null;
+        if (param0 != 60) {
+            return;
+        }
         field_f = null;
     }
 
@@ -50,7 +53,7 @@ final class ua implements Runnable {
           if (param0 <= 0) {
             break L0;
           } else {
-            field_c = null;
+            field_c = (jb[]) null;
             break L0;
           }
         }
@@ -81,16 +84,12 @@ final class ua implements Runnable {
     }
 
     ua() {
-        ((ua) this).field_g = new ug[2];
-        ((ua) this).field_d = false;
-        ((ua) this).field_e = false;
+        this.field_g = new ug[2];
+        this.field_d = false;
+        this.field_e = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Player Name: ";
         field_c = new jb[]{};
     }

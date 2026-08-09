@@ -10,11 +10,8 @@ final class uk extends ra {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_8_0 = 0;
+        int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_7_0 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -28,33 +25,15 @@ final class uk extends ra {
             }
             var3_int = 0;
             L2: while (true) {
-              L3: {
-                L4: {
-                  if (param2 <= 0) {
-                    break L4;
-                  } else {
-                    var3_int = 1 & param0 | var3_int << -193105279;
-                    param2--;
-                    stackOut_5_0 = param0 >>> 1;
-                    stackIn_8_0 = stackOut_5_0;
-                    stackIn_6_0 = stackOut_5_0;
-                    if (var4 != 0) {
-                      break L3;
-                    } else {
-                      param0 = stackIn_6_0;
-                      if (var4 == 0) {
-                        continue L2;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                }
-                stackOut_7_0 = var3_int;
-                stackIn_8_0 = stackOut_7_0;
-                break L3;
+              if (param2 <= 0) {
+                stackIn_7_0 = var3_int;
+                break L0;
+              } else {
+                var3_int = 1 & param0 | var3_int << -193105279;
+                param2--;
+                param0 = param0 >>> 1;
+                continue L2;
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -62,7 +41,7 @@ final class uk extends ra {
           var3 = decompiledCaughtException;
           throw tba.a((Throwable) ((Object) var3), "uk.TB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_8_0;
+        return stackIn_7_0;
     }
 
     uk(la param0, int param1, kh param2, csa param3) {
@@ -95,23 +74,12 @@ final class uk extends ra {
         fu var11 = null;
         fsa var12 = null;
         fsa stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fsa stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var12 = new fsa(param2, param0);
@@ -141,35 +109,26 @@ final class uk extends ra {
             var11 = (fu) ((Object) var10.a(8, param1 + 119));
             var11.a(false, 1);
             var12.a(var6, (byte) 124, var11);
-            stackOut_0_0 = (fsa) (var12);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = (fsa) (var12);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var4);
-            stackOut_2_1 = new StringBuilder().append("uk.AC(").append(param0).append(',').append(param1).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var4);
+
+            stackIn_4_1 = new StringBuilder().append("uk.AC(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -224,9 +183,8 @@ final class uk extends ra {
     }
 
     final boolean n(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != -122) {
-            discarded$0 = this.A(-19);
+            this.A(-19);
             return false;
         }
         return false;
@@ -238,11 +196,10 @@ final class uk extends ra {
     }
 
     public static void s(byte param0) {
-        boolean discarded$0 = false;
         field_M = null;
         field_O = null;
         if (param0 < 112) {
-            discarded$0 = uk.a(27, (byte) 64, 114);
+            uk.a(27, (byte) 64, 114);
         }
     }
 

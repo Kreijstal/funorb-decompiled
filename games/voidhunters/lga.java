@@ -6,10 +6,9 @@ final class lga {
     }
 
     final static void a(boolean param0, int param1) {
-        int discarded$0 = 0;
         crb.a(3, param0);
         if (param1 != -24055) {
-            discarded$0 = lga.a((byte) 71, -57);
+            lga.a((byte) 71, -57);
             ao.a((byte) 91, param0);
             return;
         }
@@ -17,9 +16,8 @@ final class lga {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        boolean discarded$2 = false;
         if (param0 != 14216) {
-          discarded$2 = lga.a(-124, 11, -116);
+          lga.a(-124, 11, -116);
           return (uoa.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & rfb.a((byte) -49, param2, param1);
         } else {
           return (uoa.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & rfb.a((byte) -49, param2, param1);
@@ -27,14 +25,13 @@ final class lga {
     }
 
     final static int a(byte param0, int param1) {
-        int discarded$2 = 0;
         if (-14 != (param1 ^ -1)) {
           if ((param1 ^ -1) != -10) {
             if (11 != param1) {
               if (-4 != (param1 ^ -1)) {
                 if ((param1 ^ -1) != -13) {
                   if (param0 != -2) {
-                    discarded$2 = lga.a((byte) 36, 1);
+                    lga.a((byte) 36, 1);
                     return aea.field_b * oq.field_l;
                   } else {
                     return aea.field_b * oq.field_l;

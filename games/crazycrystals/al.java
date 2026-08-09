@@ -21,12 +21,11 @@ final class al {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_d = null;
         field_h = null;
         field_a = null;
         if (param0 != 31753) {
-            discarded$0 = al.a(false);
+            al.a(false);
         }
     }
 

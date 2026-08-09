@@ -16,9 +16,6 @@ final class dc extends aa {
     final static boolean a(byte param0, char param1) {
         int stackIn_27_0 = 0;
         int stackIn_30_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_26_0 = 0;
         if (param0 < -67) {
           if (param1 < 48) {
             if (param1 < 65) {
@@ -36,8 +33,7 @@ final class dc extends aa {
               return false;
             } else {
               if (param1 <= 90) {
-                stackOut_28_0 = 1;
-                stackIn_30_0 = stackOut_28_0;
+                stackIn_30_0 = 1;
                 return stackIn_30_0 != 0;
               } else {
                 L1: {
@@ -48,14 +44,12 @@ final class dc extends aa {
                       if (122 < param1) {
                         break L2;
                       } else {
-                        stackOut_25_0 = 1;
-                        stackIn_27_0 = stackOut_25_0;
+                        stackIn_27_0 = 1;
                         break L1;
                       }
                     }
                   }
-                  stackOut_26_0 = 0;
-                  stackIn_27_0 = stackOut_26_0;
+                  stackIn_27_0 = 0;
                   break L1;
                 }
                 return stackIn_27_0 != 0;

@@ -23,10 +23,10 @@ final class pl extends jq {
     }
 
     final void b(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         if (param1 < 26) {
           return;
         } else {
@@ -40,247 +40,134 @@ final class pl extends jq {
     }
 
     final static int a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        var3 = Vertigo2.field_L ? 1 : 0;
+        int var3 = Vertigo2.field_L ? 1 : 0;
         al.field_t = 0;
         pq.field_f = null;
         fn.field_y = null;
-        var2 = rf.field_l;
-        if (param0 == 11) {
-          rf.field_l = md.field_D;
-          kb.field_e.field_m = kb.field_e.field_m + 1;
-          md.field_D = var2;
-          if (-52 == (param1 ^ -1)) {
-            L0: {
-              kb.field_e.field_j = 2;
-              if (-3 < (kb.field_e.field_m ^ -1)) {
-                break L0;
-              } else {
-                if (param1 != 51) {
-                  break L0;
-                } else {
-                  return 2;
+        int var2 = rf.field_l;
+        if (param0 != 11) {
+            field_j = (String) null;
+            rf.field_l = md.field_D;
+            kb.field_e.field_m = kb.field_e.field_m + 1;
+            md.field_D = var2;
+            if (-52 != (param1 ^ -1)) {
+                if (-51 != (param1 ^ -1)) {
+                    kb.field_e.field_j = 1;
+                    if (-3 < (kb.field_e.field_m ^ -1)) {
+                        if ((kb.field_e.field_m ^ -1) > -3) {
+                            if (!((kb.field_e.field_m ^ -1) > -5)) {
+                                return 1;
+                            }
+                            return -1;
+                        }
+                        if (50 == param1) {
+                            return 5;
+                        }
+                        if (!((kb.field_e.field_m ^ -1) > -5)) {
+                            return 1;
+                        }
+                        return -1;
+                    }
+                    if (param1 == 51) {
+                        return 2;
+                    }
+                    if ((kb.field_e.field_m ^ -1) <= -3 && 50 == param1) {
+                        return 5;
+                    }
+                    if (!((kb.field_e.field_m ^ -1) > -5)) {
+                        return 1;
+                    }
+                    return -1;
                 }
-              }
-            }
-            L1: {
-              if ((kb.field_e.field_m ^ -1) > -3) {
-                break L1;
-              } else {
-                if (50 != param1) {
-                  break L1;
-                } else {
-                  return 5;
-                }
-              }
-            }
-            if ((kb.field_e.field_m ^ -1) <= -5) {
-              return 1;
-            } else {
-              return -1;
-            }
-          } else {
-            if (-51 == (param1 ^ -1)) {
-              L2: {
                 kb.field_e.field_j = 5;
                 if (-3 < (kb.field_e.field_m ^ -1)) {
-                  break L2;
-                } else {
-                  if (param1 != 51) {
-                    break L2;
-                  } else {
+                    if ((kb.field_e.field_m ^ -1) <= -3 && 50 == param1) {
+                        return 5;
+                    }
+                    if (!((kb.field_e.field_m ^ -1) > -5)) {
+                        return 1;
+                    }
+                    return -1;
+                }
+                if (param1 == 51) {
                     return 2;
-                  }
                 }
-              }
-              L3: {
-                if ((kb.field_e.field_m ^ -1) > -3) {
-                  break L3;
-                } else {
-                  if (50 != param1) {
-                    break L3;
-                  } else {
+                if ((kb.field_e.field_m ^ -1) <= -3 && 50 == param1) {
                     return 5;
-                  }
                 }
-              }
-              if ((kb.field_e.field_m ^ -1) <= -5) {
-                return 1;
-              } else {
+                if (!((kb.field_e.field_m ^ -1) > -5)) {
+                    return 1;
+                }
                 return -1;
-              }
-            } else {
-              L4: {
-                kb.field_e.field_j = 1;
-                if (-3 < (kb.field_e.field_m ^ -1)) {
-                  break L4;
-                } else {
-                  if (param1 != 51) {
-                    break L4;
-                  } else {
-                    return 2;
-                  }
-                }
-              }
-              L5: {
-                if ((kb.field_e.field_m ^ -1) > -3) {
-                  break L5;
-                } else {
-                  if (50 != param1) {
-                    break L5;
-                  } else {
-                    return 5;
-                  }
-                }
-              }
-              if ((kb.field_e.field_m ^ -1) <= -5) {
-                return 1;
-              } else {
-                return -1;
-              }
             }
-          }
-        } else {
-          field_j = (String) null;
-          rf.field_l = md.field_D;
-          kb.field_e.field_m = kb.field_e.field_m + 1;
-          md.field_D = var2;
-          if (-52 == (param1 ^ -1)) {
             kb.field_e.field_j = 2;
-            if (-3 >= (kb.field_e.field_m ^ -1)) {
-              if (param1 != 51) {
-                L6: {
-                  if ((kb.field_e.field_m ^ -1) > -3) {
-                    break L6;
-                  } else {
-                    if (50 != param1) {
-                      break L6;
-                    } else {
-                      return 5;
-                    }
-                  }
-                }
-                if ((kb.field_e.field_m ^ -1) <= -5) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              } else {
-                return 2;
-              }
-            } else {
-              L7: {
-                if ((kb.field_e.field_m ^ -1) > -3) {
-                  break L7;
-                } else {
-                  if (50 != param1) {
-                    break L7;
-                  } else {
+            if (-3 < (kb.field_e.field_m ^ -1)) {
+                if ((kb.field_e.field_m ^ -1) <= -3 && 50 == param1) {
                     return 5;
-                  }
                 }
-              }
-              if ((kb.field_e.field_m ^ -1) <= -5) {
-                return 1;
-              } else {
+                if (!((kb.field_e.field_m ^ -1) > -5)) {
+                    return 1;
+                }
                 return -1;
-              }
             }
-          } else {
-            if (-51 == (param1 ^ -1)) {
-              kb.field_e.field_j = 5;
-              if (-3 >= (kb.field_e.field_m ^ -1)) {
-                if (param1 != 51) {
-                  L8: {
-                    if ((kb.field_e.field_m ^ -1) > -3) {
-                      break L8;
-                    } else {
-                      if (50 != param1) {
-                        break L8;
-                      } else {
-                        return 5;
-                      }
-                    }
-                  }
-                  if ((kb.field_e.field_m ^ -1) <= -5) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return 2;
-                }
-              } else {
-                L9: {
-                  if ((kb.field_e.field_m ^ -1) > -3) {
-                    break L9;
-                  } else {
-                    if (50 != param1) {
-                      break L9;
-                    } else {
-                      return 5;
-                    }
-                  }
-                }
-                if ((kb.field_e.field_m ^ -1) <= -5) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              }
-            } else {
-              kb.field_e.field_j = 1;
-              if (-3 >= (kb.field_e.field_m ^ -1)) {
-                if (param1 != 51) {
-                  L10: {
-                    if ((kb.field_e.field_m ^ -1) > -3) {
-                      break L10;
-                    } else {
-                      if (50 != param1) {
-                        break L10;
-                      } else {
-                        return 5;
-                      }
-                    }
-                  }
-                  if ((kb.field_e.field_m ^ -1) <= -5) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return 2;
-                }
-              } else {
-                if ((kb.field_e.field_m ^ -1) <= -3) {
-                  if (50 != param1) {
-                    if ((kb.field_e.field_m ^ -1) <= -5) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return 5;
-                  }
-                } else {
-                  if ((kb.field_e.field_m ^ -1) <= -5) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                }
-              }
+            if (param1 == 51) {
+                return 2;
             }
-          }
+            if ((kb.field_e.field_m ^ -1) <= -3 && 50 == param1) {
+                return 5;
+            }
+            if (!((kb.field_e.field_m ^ -1) > -5)) {
+                return 1;
+            }
+            return -1;
         }
+        rf.field_l = md.field_D;
+        kb.field_e.field_m = kb.field_e.field_m + 1;
+        md.field_D = var2;
+        if (-52 != (param1 ^ -1)) {
+            if (-51 != (param1 ^ -1)) {
+                kb.field_e.field_j = 1;
+                if (-3 >= (kb.field_e.field_m ^ -1) && param1 == 51) {
+                    return 2;
+                }
+                if ((kb.field_e.field_m ^ -1) <= -3 && 50 == param1) {
+                    return 5;
+                }
+                if (!((kb.field_e.field_m ^ -1) > -5)) {
+                    return 1;
+                }
+                return -1;
+            }
+            kb.field_e.field_j = 5;
+            if (-3 >= (kb.field_e.field_m ^ -1) && param1 == 51) {
+                return 2;
+            }
+            if ((kb.field_e.field_m ^ -1) <= -3 && 50 == param1) {
+                return 5;
+            }
+            if (!((kb.field_e.field_m ^ -1) > -5)) {
+                return 1;
+            }
+            return -1;
+        }
+        kb.field_e.field_j = 2;
+        if (-3 >= (kb.field_e.field_m ^ -1) && param1 == 51) {
+            return 2;
+        }
+        if ((kb.field_e.field_m ^ -1) <= -3 && 50 == param1) {
+            return 5;
+        }
+        if (!((kb.field_e.field_m ^ -1) > -5)) {
+            return 1;
+        }
+        return -1;
     }
 
     final void a(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var4 = param2 * this.field_k >> 932938668;
         var5 = param2 * this.field_l >> 1816589100;
         if (param1 >= -31) {
@@ -294,9 +181,8 @@ final class pl extends jq {
     }
 
     final void a(int param0, int param1, int param2) {
-        int discarded$0 = 0;
         if (param2 != 45) {
-            discarded$0 = pl.a((byte) -97, -32);
+            pl.a((byte) -97, -32);
         }
     }
 

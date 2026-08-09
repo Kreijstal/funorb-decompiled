@@ -7,13 +7,10 @@ final class pa {
     private static boolean field_c;
 
     final synchronized static void a(int param0) {
-        ui var1 = null;
         jn stackIn_4_0 = null;
-        jn stackOut_2_0 = null;
-        jn stackOut_3_0 = null;
+        ui var1;
         if (param0 < -119) {
-          stackOut_2_0 = (jn) (field_b);
-          stackIn_4_0 = stackOut_2_0;
+          stackIn_4_0 = (jn) (field_b);
           L0: while (true) {
             var1 = (ui) ((Object) ((jn) (Object) stackIn_4_0).c(9));
             if (var1 == null) {
@@ -21,8 +18,7 @@ final class pa {
             } else {
               var1.field_k.w(true);
               var1.b(false);
-              stackOut_3_0 = (jn) (field_b);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (jn) (field_b);
               continue L0;
             }
           }
@@ -40,7 +36,7 @@ final class pa {
     }
 
     final synchronized static void a(e param0, byte param1) {
-        ui var2 = null;
+        ui var2;
         if (!field_c) {
           if (param1 != -37) {
             L0: {

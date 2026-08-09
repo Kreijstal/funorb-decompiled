@@ -8,8 +8,8 @@ final class jk extends fb {
     private ji field_i;
 
     final fb a(int param0) {
-        int var2 = 0;
-        f[][] var3 = null;
+        int var2;
+        f[][] var3;
         var2 = 81 / ((param0 - 36) / 62);
         var3 = (f[][]) null;
         if (null == this.field_i.b((f[][]) null, 0, (byte) 28, 0)) {

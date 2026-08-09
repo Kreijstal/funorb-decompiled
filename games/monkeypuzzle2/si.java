@@ -20,11 +20,11 @@ final class si extends fb {
     }
 
     final static hl a(boolean param0, int param1) {
-        cd[] discarded$5 = null;
-        int discarded$6 = 0;
-        String discarded$7 = null;
-        int discarded$8 = 0;
-        String discarded$9 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_12_0 = 0;
+        int[] stackIn_29_0 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -32,28 +32,15 @@ final class si extends fb {
         int var7 = 0;
         hb var8 = null;
         pi var9 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_12_0 = 0;
-        int[] stackIn_29_0 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int[] stackOut_28_0 = null;
-        Object stackOut_27_0 = null;
         L0: {
           var7 = MonkeyPuzzle2.field_F ? 1 : 0;
           var8 = MonkeyPuzzle2.field_D;
           var3 = var8.a((byte) 114);
           if (-1 == (128 & var3 ^ -1)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -63,7 +50,7 @@ final class si extends fb {
           if (param1 == 0) {
             break L1;
           } else {
-            discarded$5 = si.f(78);
+            si.f(78);
             break L1;
           }
         }
@@ -89,12 +76,10 @@ final class si extends fb {
         }
         L4: {
           if ((var8.a((byte) 114) ^ -1) != -2) {
-            stackOut_11_0 = 0;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = 0;
             break L4;
           } else {
-            stackOut_10_0 = 1;
-            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_0 = 1;
             break L4;
           }
         }
@@ -116,15 +101,15 @@ final class si extends fb {
         }
         L6: {
           if ((lf.field_c ^ -1) == -2) {
-            discarded$6 = var8.j(17277);
-            discarded$7 = var8.f(-1);
+            var8.j(17277);
+            var8.f(-1);
             break L6;
           } else {
             if (lf.field_c != 4) {
               break L6;
             } else {
-              discarded$8 = var8.j(17277);
-              discarded$9 = var8.f(-1);
+              var8.j(17277);
+              var8.f(-1);
               break L6;
             }
           }
@@ -150,12 +135,10 @@ final class si extends fb {
                 var9 = hi.field_a.a(var5, param1 ^ -32769);
                 ba.field_h = var9.b((byte) -54);
                 if (!i.field_h.equals(cl.field_e)) {
-                  stackOut_28_0 = var9.field_q;
-                  stackIn_29_0 = stackOut_28_0;
+                  stackIn_29_0 = var9.field_q;
                   break L10;
                 } else {
-                  stackOut_27_0 = null;
-                  stackIn_29_0 = (int[]) ((Object) stackOut_27_0);
+                  stackIn_29_0 = null;
                   break L10;
                 }
               }
@@ -193,9 +176,8 @@ final class si extends fb {
     }
 
     public static void b(byte param0) {
-        cd[] discarded$2 = null;
         if (param0 != 20) {
-          discarded$2 = si.f(-27);
+          si.f(-27);
           field_v = null;
           field_s = null;
           field_o = null;
@@ -211,7 +193,6 @@ final class si extends fb {
     }
 
     final int a(boolean param0) {
-        cd[] discarded$5 = null;
         if (param0) {
           if (this.field_j) {
             return 0;
@@ -219,7 +200,7 @@ final class si extends fb {
             return 100;
           }
         } else {
-          discarded$5 = si.f(-82);
+          si.f(-82);
           if (this.field_j) {
             return 0;
           } else {

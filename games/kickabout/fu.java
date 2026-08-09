@@ -21,7 +21,6 @@ final class fu {
     }
 
     private final void a(boolean param0, int param1, int param2) {
-        int discarded$0 = 0;
         if (this.field_g < param2) {
             this.field_g = param2;
         }
@@ -30,13 +29,13 @@ final class fu {
         }
         this.field_d[param2] = param1;
         if (!param0) {
-            discarded$0 = fu.a(-117, 14, -87);
+            fu.a(-117, 14, -87);
         }
     }
 
     private final int b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         L0: {
           var4 = Kickabout.field_G;
           if (param1 == 20151) {
@@ -83,16 +82,19 @@ final class fu {
     }
 
     public static void a(boolean param0) {
-        int discarded$0 = 0;
         field_a = null;
         field_f = null;
         if (!param0) {
-            discarded$0 = fu.a(52, 5, 56);
+            fu.a(52, 5, 56);
         }
         field_b = null;
     }
 
     final static int a(int param0, int param1, int param2) {
+        int stackIn_22_0 = 0;
+        int stackIn_25_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         double var4 = 0.0;
         double var6 = 0.0;
@@ -100,12 +102,6 @@ final class fu {
         int var9 = 0;
         int var10 = 0;
         tf var11 = null;
-        int stackIn_22_0 = 0;
-        int stackIn_25_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_24_0 = 0;
-        int stackOut_21_0 = 0;
         var10 = Kickabout.field_G;
         try {
           L0: {
@@ -179,8 +175,7 @@ final class fu {
             var8 = (oi) ((Object) var11.g(param0 + 18545));
             L9: while (true) {
               if (var8 == null) {
-                stackOut_24_0 = -1;
-                stackIn_25_0 = stackOut_24_0;
+                stackIn_25_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -191,8 +186,7 @@ final class fu {
                   continue L9;
                 } else {
                   var6 = var6 + (double)var9 * var4 / 100.0;
-                  stackOut_21_0 = (int)var6;
-                  stackIn_22_0 = stackOut_21_0;
+                  stackIn_22_0 = (int)var6;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }

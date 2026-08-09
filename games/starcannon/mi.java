@@ -34,14 +34,14 @@ abstract class mi extends uh {
 
     final static void e(byte param0) {
         try {
-            java.lang.reflect.Method var1 = null;
-            Exception var1_ref = null;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
-            Long var3 = null;
-            Object[] var4 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            java.lang.reflect.Method var1 = null;
+            Exception var1_ref = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
+            Long var3 = null;
+            Object[] var4 = null;
             try {
               L0: {
                 L1: {
@@ -51,9 +51,9 @@ abstract class mi extends uh {
                   } else {
                     try {
                       L2: {
-                        var2_ref = Runtime.getRuntime();
+                        var2 = Runtime.getRuntime();
                         var4 = (Object[]) null;
-                        var3 = (Long) (var1.invoke((Object) (var2_ref), (Object[]) null));
+                        var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
                         la.field_b = (int)(var3.longValue() / 1048576L) + 1;
                         decompiledRegionSelector0 = 0;
                         break L2;
@@ -61,7 +61,7 @@ abstract class mi extends uh {
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L3: {
-                        var2 = decompiledCaughtException;
+                        var2_ref = decompiledCaughtException;
                         decompiledRegionSelector0 = 1;
                         break L3;
                       }

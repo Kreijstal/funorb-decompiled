@@ -28,9 +28,9 @@ final class kg extends ji {
     }
 
     final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = Vertigo2.field_L ? 1 : 0;
         this.field_B = kk.a(this.field_C, (byte) 38);
         this.g(5865);
@@ -72,8 +72,14 @@ final class kg extends ji {
     }
 
     private final void a(int[] param0, int param1, int param2) {
-        RuntimeException var4 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_40_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -90,22 +96,6 @@ final class kg extends ji {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_40_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
         var20 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -289,27 +279,19 @@ final class kg extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var4 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) (var4);
-            stackOut_37_1 = new StringBuilder().append("kg.K(");
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            stackIn_39_0 = (RuntimeException) (var4);
+
+            stackIn_39_1 = new StringBuilder().append("kg.K(");
+
             if (param0 == null) {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "null";
               break L16;
             } else {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "{...}";
               break L16;
             }
           }
@@ -326,17 +308,6 @@ final class kg extends ji {
     }
 
     private final int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
@@ -345,22 +316,17 @@ final class kg extends ji {
         int stackIn_28_0 = 0;
         int stackIn_33_0 = 0;
         int stackIn_37_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
         L0: {
           var18 = Vertigo2.field_L ? 1 : 0;
           var13 = param0 >> 2000135916;
@@ -383,12 +349,10 @@ final class kg extends ji {
           if (var14 <= 1) {
             L2: {
               if (-1 == (var14 ^ -1)) {
-                stackOut_9_0 = param5 + param0;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = param5 + param0;
                 break L2;
               } else {
-                stackOut_8_0 = param5 - param0;
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = param5 - param0;
                 break L2;
               }
             }
@@ -397,12 +361,10 @@ final class kg extends ji {
           } else {
             L3: {
               if ((var14 ^ -1) == -3) {
-                stackOut_5_0 = param0 + -param5;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = param0 + -param5;
                 break L3;
               } else {
-                stackOut_4_0 = -param0 + -param5;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = -param0 + -param5;
                 break L3;
               }
             }
@@ -415,12 +377,10 @@ final class kg extends ji {
           if ((var14 ^ -1) >= -2) {
             L5: {
               if (var14 != 0) {
-                stackOut_18_0 = param5 + -var11;
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = param5 + -var11;
                 break L5;
               } else {
-                stackOut_17_0 = var11 - -param5;
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = var11 - -param5;
                 break L5;
               }
             }
@@ -429,12 +389,10 @@ final class kg extends ji {
           } else {
             L6: {
               if ((var14 ^ -1) == -3) {
-                stackOut_14_0 = -param5 + var11;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = -param5 + var11;
                 break L6;
               } else {
-                stackOut_13_0 = -var11 - param5;
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = -var11 - param5;
                 break L6;
               }
             }
@@ -448,12 +406,10 @@ final class kg extends ji {
           if (-2 <= (var14 ^ -1)) {
             L8: {
               if (var14 != 0) {
-                stackOut_27_0 = var10 + -param0;
-                stackIn_28_0 = stackOut_27_0;
+                stackIn_28_0 = var10 + -param0;
                 break L8;
               } else {
-                stackOut_26_0 = var10 + param0;
-                stackIn_28_0 = stackOut_26_0;
+                stackIn_28_0 = var10 + param0;
                 break L8;
               }
             }
@@ -462,12 +418,10 @@ final class kg extends ji {
           } else {
             L9: {
               if ((var14 ^ -1) != -3) {
-                stackOut_23_0 = -var10 + -param0;
-                stackIn_24_0 = stackOut_23_0;
+                stackIn_24_0 = -var10 + -param0;
                 break L9;
               } else {
-                stackOut_22_0 = -var10 + param0;
-                stackIn_24_0 = stackOut_22_0;
+                stackIn_24_0 = -var10 + param0;
                 break L9;
               }
             }
@@ -480,12 +434,10 @@ final class kg extends ji {
           if (1 >= var14) {
             L11: {
               if (var14 == 0) {
-                stackOut_36_0 = var10 + var11;
-                stackIn_37_0 = stackOut_36_0;
+                stackIn_37_0 = var10 + var11;
                 break L11;
               } else {
-                stackOut_35_0 = var10 + -var11;
-                stackIn_37_0 = stackOut_35_0;
+                stackIn_37_0 = var10 + -var11;
                 break L11;
               }
             }
@@ -494,12 +446,10 @@ final class kg extends ji {
           } else {
             L12: {
               if (2 != var14) {
-                stackOut_32_0 = -var10 + -var11;
-                stackIn_33_0 = stackOut_32_0;
+                stackIn_33_0 = -var10 + -var11;
                 break L12;
               } else {
-                stackOut_31_0 = var11 + -var10;
-                stackIn_33_0 = stackOut_31_0;
+                stackIn_33_0 = var11 + -var10;
                 break L12;
               }
             }
@@ -512,35 +462,19 @@ final class kg extends ji {
     }
 
     final void a(byte param0, int param1, ed param2) {
-        int dupTemp$1 = 0;
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        Object stackIn_16_0 = null;
+        int dupTemp$0 = 0;
         Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         int stackIn_18_1 = 0;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_15_0 = null;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -578,9 +512,9 @@ final class kg extends ji {
                         }
                       }
                     } else {
-                      dupTemp$1 = param2.h(param0 ^ -101);
-                      this.field_A = dupTemp$1;
-                      this.field_F = dupTemp$1;
+                      dupTemp$0 = param2.h(param0 ^ -101);
+                      this.field_A = dupTemp$0;
+                      this.field_F = dupTemp$0;
                       break L2;
                     }
                   } else {
@@ -604,20 +538,15 @@ final class kg extends ji {
                 }
               } else {
                 L4: {
-                  stackOut_15_0 = this;
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_17_0 = this;
+
                   if (-2 != (param2.h(-11) ^ -1)) {
-                    stackOut_17_0 = this;
-                    stackOut_17_1 = 0;
-                    stackIn_18_0 = stackOut_17_0;
-                    stackIn_18_1 = stackOut_17_1;
+                    stackIn_18_0 = this;
+                    stackIn_18_1 = 0;
                     break L4;
                   } else {
-                    stackOut_16_0 = this;
-                    stackOut_16_1 = 1;
-                    stackIn_18_0 = stackOut_16_0;
-                    stackIn_18_1 = stackOut_16_1;
+                    stackIn_18_0 = this;
+                    stackIn_18_1 = 1;
                     break L4;
                   }
                 }
@@ -631,27 +560,19 @@ final class kg extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) (var4);
-            stackOut_30_1 = new StringBuilder().append("kg.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackIn_32_0 = (RuntimeException) (var4);
+
+            stackIn_32_1 = new StringBuilder().append("kg.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L5;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L5;
             }
           }
@@ -660,8 +581,8 @@ final class kg extends ji {
     }
 
     private final void g(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = Vertigo2.field_L ? 1 : 0;
           if (param0 == 5865) {

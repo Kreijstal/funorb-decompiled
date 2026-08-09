@@ -22,18 +22,18 @@ final class nf extends gg {
     }
 
     final static void a(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        mk var3_ref_mk = null;
         int var3 = 0;
+        mk var3_ref_mk = null;
         le var4 = null;
         int var4_int = 0;
         Object var5 = null;
         int var6 = 0;
         ha var9 = null;
         byte[] var13 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var6 = stellarshard.field_B;
         try {
           L0: {

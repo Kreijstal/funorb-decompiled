@@ -13,9 +13,17 @@ final class eb {
     static int field_h;
 
     final static void b(int param0) {
-        boolean discarded$1 = false;
-        RuntimeException var1 = null;
+        int stackIn_19_0 = 0;
+        String stackIn_24_0 = null;
+        int stackIn_28_0 = 0;
+        String stackIn_34_0 = null;
+        String stackIn_40_0 = null;
+        String stackIn_41_0 = null;
+        int stackIn_41_1 = 0;
+        mp stackIn_45_0 = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         long var3_long = 0L;
         int var3 = 0;
@@ -27,31 +35,6 @@ final class eb {
         mp var9 = null;
         int var10 = 0;
         String var11 = null;
-        int stackIn_19_0 = 0;
-        String stackIn_24_0 = null;
-        int stackIn_28_0 = 0;
-        String stackIn_34_0 = null;
-        String stackIn_39_0 = null;
-        String stackIn_40_0 = null;
-        String stackIn_41_0 = null;
-        int stackIn_41_1 = 0;
-        mp stackIn_45_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        String stackOut_23_0 = null;
-        String stackOut_22_0 = null;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
-        String stackOut_33_0 = null;
-        String stackOut_32_0 = null;
-        String stackOut_38_0 = null;
-        String stackOut_40_0 = null;
-        int stackOut_40_1 = 0;
-        String stackOut_39_0 = null;
-        int stackOut_39_1 = 0;
-        mp stackOut_44_0 = null;
-        mp stackOut_43_0 = null;
         var10 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -76,7 +59,7 @@ final class eb {
                 break L2;
               } else {
                 var11 = (String) null;
-                discarded$1 = eb.a((String) null, true);
+                eb.a((String) null, true);
                 break L2;
               }
             }
@@ -108,12 +91,10 @@ final class eb {
                     if (var2 == 1) {
                       L6: {
                         if (rp.field_e.length > jo.field_g.length) {
-                          stackOut_18_0 = rp.field_e.length;
-                          stackIn_19_0 = stackOut_18_0;
+                          stackIn_19_0 = rp.field_e.length;
                           break L6;
                         } else {
-                          stackOut_17_0 = jo.field_g.length;
-                          stackIn_19_0 = stackOut_17_0;
+                          stackIn_19_0 = jo.field_g.length;
                           break L6;
                         }
                       }
@@ -127,12 +108,10 @@ final class eb {
                           } else {
                             L8: {
                               if (-1 >= (-6 + var3 + (jo.field_g.length + -var7) ^ -1)) {
-                                stackOut_23_0 = jo.field_g[jo.field_g.length + (-6 + var3 - var7)];
-                                stackIn_24_0 = stackOut_23_0;
+                                stackIn_24_0 = jo.field_g[jo.field_g.length + (-6 + var3 - var7)];
                                 break L8;
                               } else {
-                                stackOut_22_0 = "";
-                                stackIn_24_0 = stackOut_22_0;
+                                stackIn_24_0 = "";
                                 break L8;
                               }
                             }
@@ -143,12 +122,10 @@ final class eb {
                       }
                       L9: {
                         if (ba.field_b.length > bl.field_z.length) {
-                          stackOut_27_0 = ba.field_b.length;
-                          stackIn_28_0 = stackOut_27_0;
+                          stackIn_28_0 = ba.field_b.length;
                           break L9;
                         } else {
-                          stackOut_26_0 = bl.field_z.length;
-                          stackIn_28_0 = stackOut_26_0;
+                          stackIn_28_0 = bl.field_z.length;
                           break L9;
                         }
                       }
@@ -159,12 +136,10 @@ final class eb {
                         if (var8 + (7 - -var7) > var3) {
                           L10: {
                             if (var3 + (-7 - var7) < bl.field_z.length) {
-                              stackOut_33_0 = bl.field_z[-7 + var3 - var7];
-                              stackIn_34_0 = stackOut_33_0;
+                              stackIn_34_0 = bl.field_z[-7 + var3 - var7];
                               break L10;
                             } else {
-                              stackOut_32_0 = "";
-                              stackIn_34_0 = stackOut_32_0;
+                              stackIn_34_0 = "";
                               break L10;
                             }
                           }
@@ -188,20 +163,15 @@ final class eb {
                   }
                 }
                 L12: {
-                  stackOut_38_0 = (String) (var6);
-                  stackIn_40_0 = stackOut_38_0;
-                  stackIn_39_0 = stackOut_38_0;
+                  stackIn_40_0 = (String) (var6);
+
                   if (0 > var4) {
-                    stackOut_40_0 = (String) ((Object) stackIn_40_0);
-                    stackOut_40_1 = 0;
-                    stackIn_41_0 = stackOut_40_0;
-                    stackIn_41_1 = stackOut_40_1;
+                    stackIn_41_0 = (String) ((Object) stackIn_40_0);
+                    stackIn_41_1 = 0;
                     break L12;
                   } else {
-                    stackOut_39_0 = (String) ((Object) stackIn_39_0);
-                    stackOut_39_1 = 1;
-                    stackIn_41_0 = stackOut_39_0;
-                    stackIn_41_1 = stackOut_39_1;
+                    stackIn_41_0 = (String) ((Object) stackIn_40_0);
+                    stackIn_41_1 = 1;
                     break L12;
                   }
                 }
@@ -213,12 +183,10 @@ final class eb {
                   } else {
                     L14: {
                       if (var4 == ve.field_d.field_c) {
-                        stackOut_44_0 = mq.field_v;
-                        stackIn_45_0 = stackOut_44_0;
+                        stackIn_45_0 = mq.field_v;
                         break L14;
                       } else {
-                        stackOut_43_0 = gl.field_i;
-                        stackIn_45_0 = stackOut_43_0;
+                        stackIn_45_0 = gl.field_i;
                         break L14;
                       }
                     }
@@ -272,7 +240,6 @@ final class eb {
     }
 
     final static boolean a(String param0, boolean param1) {
-        Process discarded$2 = null;
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -284,8 +251,6 @@ final class eb {
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_21_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -294,20 +259,6 @@ final class eb {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_20_0 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -319,8 +270,7 @@ final class eb {
                       break L2;
                     } else {
                       if (!param0.startsWith("https://")) {
-                        stackOut_7_0 = 0;
-                        stackIn_8_0 = stackOut_7_0;
+                        stackIn_8_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L1;
                       } else {
@@ -333,9 +283,8 @@ final class eb {
                     var3 = 0;
                     L3: while (true) {
                       if (var3 >= param0.length()) {
-                        discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                        stackOut_18_0 = 1;
-                        stackIn_19_0 = stackOut_18_0;
+                        Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+                        stackIn_19_0 = 1;
                         decompiledRegionSelector0 = 4;
                         break L1;
                       } else {
@@ -343,22 +292,19 @@ final class eb {
                           var3++;
                           continue L3;
                         } else {
-                          stackOut_15_0 = 0;
-                          stackIn_16_0 = stackOut_15_0;
+                          stackIn_16_0 = 0;
                           decompiledRegionSelector0 = 3;
                           break L1;
                         }
                       }
                     }
                   } else {
-                    stackOut_10_0 = 0;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = 0;
                     decompiledRegionSelector0 = 2;
                     break L1;
                   }
                 } else {
-                  stackOut_2_0 = 0;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L1;
                 }
@@ -366,8 +312,7 @@ final class eb {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackOut_20_0 = 0;
-              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_0 = 0;
               return stackIn_21_0 != 0;
             }
             if (decompiledRegionSelector0 == 0) {
@@ -397,27 +342,19 @@ final class eb {
           decompiledCaughtException = decompiledCaughtParameter1;
           L4: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2_ref2);
-            stackOut_22_1 = new StringBuilder().append("eb.E(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2_ref2);
+
+            stackIn_24_1 = new StringBuilder().append("eb.E(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L4;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L4;
             }
           }

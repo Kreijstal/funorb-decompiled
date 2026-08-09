@@ -13,9 +13,8 @@ final class vna implements dja {
     }
 
     public final tv[] a(int param0, int param1) {
-        int discarded$0 = 0;
         if (param0 != 11995) {
-            discarded$0 = vna.b((byte) 55);
+            vna.b((byte) 55);
             return (tv[]) ((Object) new tbb[param1]);
         }
         return (tv[]) ((Object) new tbb[param1]);

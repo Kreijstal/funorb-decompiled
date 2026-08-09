@@ -29,10 +29,9 @@ final class rk {
     }
 
     final void b(int param0, rf param1) {
-        rf discarded$0 = null;
         try {
             if (param0 <= 55) {
-                discarded$0 = this.c(-56);
+                this.c(-56);
             }
             if (param1.field_d != null) {
                 param1.b(4);
@@ -47,7 +46,6 @@ final class rk {
     }
 
     final void a(int param0, rf param1) {
-        rf discarded$0 = null;
         try {
             if (!(param1.field_d == null)) {
                 param1.b(4);
@@ -56,7 +54,7 @@ final class rk {
             param1.field_a = this.field_c.field_a;
             param1.field_d.field_a = param1;
             if (param0 >= -44) {
-                discarded$0 = this.a(63);
+                this.a(63);
             }
             param1.field_a.field_d = param1;
         } catch (RuntimeException runtimeException) {
@@ -65,8 +63,8 @@ final class rk {
     }
 
     final rf d(int param0) {
-        rf var2 = null;
-        int var3 = 0;
+        rf var2;
+        int var3;
         var3 = 63 % ((param0 - -5) / 45);
         var2 = this.field_c.field_d;
         if (this.field_c == var2) {
@@ -78,23 +76,16 @@ final class rk {
     }
 
     final boolean a(boolean param0) {
-        rf discarded$10 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (!param0) {
           L0: {
-            discarded$10 = this.a((byte) -75);
+            this.a((byte) -75);
             if (this.field_c != this.field_c.field_a) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -102,12 +93,10 @@ final class rk {
         } else {
           L1: {
             if (this.field_c != this.field_c.field_a) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -116,8 +105,8 @@ final class rk {
     }
 
     final void b(int param0) {
-        rf var3 = null;
-        rf var4 = null;
+        rf var4;
+        rf var3;
         if (param0 == 23505) {
           L0: while (true) {
             var3 = this.field_c.field_a;
@@ -167,8 +156,7 @@ final class rk {
     }
 
     final rf a(byte param0) {
-        rf discarded$2 = null;
-        rf var2 = null;
+        rf var2;
         if (param0 == 39) {
           var2 = this.field_c.field_a;
           if (var2 == this.field_c) {
@@ -178,7 +166,7 @@ final class rk {
             return var2;
           }
         } else {
-          discarded$2 = this.d(-75);
+          this.d(-75);
           var2 = this.field_c.field_a;
           if (var2 == this.field_c) {
             return null;

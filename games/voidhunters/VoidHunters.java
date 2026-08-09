@@ -11,24 +11,14 @@ public final class VoidHunters extends ms {
 
     private final void a(int param0, cl param1, int param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var4 = null;
         var5 = field_G;
         try {
           L0: {
@@ -64,27 +54,19 @@ public final class VoidHunters extends ms {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var4);
-            stackOut_9_1 = new StringBuilder().append("VoidHunters.O(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var4);
+
+            stackIn_11_1 = new StringBuilder().append("VoidHunters.O(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -93,8 +75,8 @@ public final class VoidHunters extends ms {
     }
 
     final static boolean a(boolean param0, Object param1) {
-        Object[] fieldTemp$4 = null;
-        int fieldTemp$5 = 0;
+        Object[] fieldTemp$2 = null;
+        int fieldTemp$3 = 0;
         int var2_int = 0;
         Object[] var2 = null;
         RuntimeException var2_ref = null;
@@ -104,8 +86,6 @@ public final class VoidHunters extends ms {
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_21_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -113,17 +93,6 @@ public final class VoidHunters extends ms {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         var4 = field_G;
         try {
           L0: {
@@ -164,12 +133,11 @@ public final class VoidHunters extends ms {
                           break L4;
                         }
                       }
-                      fieldTemp$4 = ug.field_o;
-                      fieldTemp$5 = hh.field_o;
+                      fieldTemp$2 = ug.field_o;
+                      fieldTemp$3 = hh.field_o;
                       hh.field_o = hh.field_o + 1;
-                      fieldTemp$4[fieldTemp$5] = param1;
-                      stackOut_20_0 = 0;
-                      stackIn_21_0 = stackOut_20_0;
+                      fieldTemp$2[fieldTemp$3] = param1;
+                      stackIn_21_0 = 0;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -177,8 +145,7 @@ public final class VoidHunters extends ms {
                         var2_int++;
                         continue L2;
                       } else {
-                        stackOut_9_0 = 1;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = 1;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -187,8 +154,7 @@ public final class VoidHunters extends ms {
                 }
               }
             }
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 0;
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -196,27 +162,19 @@ public final class VoidHunters extends ms {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2_ref = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2_ref);
-            stackOut_22_1 = new StringBuilder().append("VoidHunters.B(").append(param0).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2_ref);
+
+            stackIn_24_1 = new StringBuilder().append("VoidHunters.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L6;
             }
           }
@@ -242,23 +200,13 @@ public final class VoidHunters extends ms {
     }
 
     final static void a(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6, boolean param7) {
-        RuntimeException var8 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var8 = null;
         try {
           L0: {
             L1: {
@@ -317,27 +265,19 @@ public final class VoidHunters extends ms {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var8 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var8);
-            stackOut_14_1 = new StringBuilder().append("VoidHunters.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var8);
+
+            stackIn_16_1 = new StringBuilder().append("VoidHunters.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L6;
             }
           }
@@ -361,15 +301,12 @@ public final class VoidHunters extends ms {
     }
 
     private final void a(int param0, int param1) {
-        ana discarded$1 = null;
-        Object var3 = null;
-        int var4 = 0;
-        Object var5 = null;
-        int var7 = 0;
-        uca var8 = null;
         int stackIn_59_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_57_0 = 0;
+        Object var3;
+        int var4;
+        Object var5;
+        int var7;
+        uca var8;
         var7 = field_G;
         if (param0 != 9) {
           L0: {
@@ -506,12 +443,10 @@ public final class VoidHunters extends ms {
                             if (var3 != null) {
                               L12: {
                                 if (bqa.a(false)) {
-                                  stackOut_58_0 = 7;
-                                  stackIn_59_0 = stackOut_58_0;
+                                  stackIn_59_0 = 7;
                                   break L12;
                                 } else {
-                                  stackOut_57_0 = 0;
-                                  stackIn_59_0 = stackOut_57_0;
+                                  stackIn_59_0 = 0;
                                   break L12;
                                 }
                               }
@@ -582,7 +517,7 @@ public final class VoidHunters extends ms {
                                             break L16;
                                           } else {
                                             if (idb.field_o) {
-                                              discarded$1 = lha.a(-118, fa.field_d[5]);
+                                              lha.a(-118, fa.field_d[5]);
                                               break L16;
                                             } else {
                                               break L16;
@@ -728,39 +663,21 @@ public final class VoidHunters extends ms {
     }
 
     final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        ea var7 = null;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        Object stackIn_25_0 = null;
         Object stackIn_26_0 = null;
         Object stackIn_27_0 = null;
         int stackIn_27_1 = 0;
         int stackIn_69_0 = 0;
         int stackIn_81_0 = 0;
         int stackIn_85_0 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_24_0 = null;
-        Object stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
-        Object stackOut_25_0 = null;
-        int stackOut_25_1 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_84_0 = 0;
-        int stackOut_83_0 = 0;
-        int stackOut_80_0 = 0;
-        int stackOut_79_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        ea var7;
         L0: {
           var6 = field_G;
           aqb.field_f = ria.a(32);
@@ -779,20 +696,15 @@ public final class VoidHunters extends ms {
           }
         }
         L1: {
-          stackOut_4_0 = this;
-          stackIn_6_0 = stackOut_4_0;
-          stackIn_5_0 = stackOut_4_0;
+          stackIn_6_0 = this;
+
           if (psb.field_b == null) {
-            stackOut_6_0 = this;
-            stackOut_6_1 = 0;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_7_0 = this;
+            stackIn_7_1 = 0;
             break L1;
           } else {
-            stackOut_5_0 = this;
-            stackOut_5_1 = 1;
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
+            stackIn_7_0 = this;
+            stackIn_7_1 = 1;
             break L1;
           }
         }
@@ -852,20 +764,15 @@ public final class VoidHunters extends ms {
             } else {
               if (tjb.l(0)) {
                 L5: {
-                  stackOut_24_0 = this;
-                  stackIn_26_0 = stackOut_24_0;
-                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_26_0 = this;
+
                   if (psb.field_b == null) {
-                    stackOut_26_0 = this;
-                    stackOut_26_1 = 0;
-                    stackIn_27_0 = stackOut_26_0;
-                    stackIn_27_1 = stackOut_26_1;
+                    stackIn_27_0 = this;
+                    stackIn_27_1 = 0;
                     break L5;
                   } else {
-                    stackOut_25_0 = this;
-                    stackOut_25_1 = 1;
-                    stackIn_27_0 = stackOut_25_0;
-                    stackIn_27_1 = stackOut_25_1;
+                    stackIn_27_0 = this;
+                    stackIn_27_1 = 1;
                     break L5;
                   }
                 }
@@ -1025,15 +932,13 @@ public final class VoidHunters extends ms {
                     if (!si.field_o[35]) {
                       break L16;
                     } else {
-                      stackOut_67_0 = 1;
-                      stackIn_69_0 = stackOut_67_0;
+                      stackIn_69_0 = 1;
                       break L15;
                     }
                   }
                 }
               }
-              stackOut_68_0 = 0;
-              stackIn_69_0 = stackOut_68_0;
+              stackIn_69_0 = 0;
               break L15;
             }
             L20: {
@@ -1095,12 +1000,10 @@ public final class VoidHunters extends ms {
                           if (!idb.field_o) {
                             L27: {
                               if (!bqa.a(false)) {
-                                stackOut_84_0 = 0;
-                                stackIn_85_0 = stackOut_84_0;
+                                stackIn_85_0 = 0;
                                 break L27;
                               } else {
-                                stackOut_83_0 = 7;
-                                stackIn_85_0 = stackOut_83_0;
+                                stackIn_85_0 = 7;
                                 break L27;
                               }
                             }
@@ -1110,12 +1013,10 @@ public final class VoidHunters extends ms {
                             L28: {
                               iia.field_c = hsa.field_o;
                               if (bqa.a(false)) {
-                                stackOut_80_0 = 7;
-                                stackIn_81_0 = stackOut_80_0;
+                                stackIn_81_0 = 7;
                                 break L28;
                               } else {
-                                stackOut_79_0 = 0;
-                                stackIn_81_0 = stackOut_79_0;
+                                stackIn_81_0 = 0;
                                 break L28;
                               }
                             }
@@ -1207,24 +1108,14 @@ public final class VoidHunters extends ms {
 
     private final void a(cl param0, int param1, int param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var4 = null;
         var5 = field_G;
         try {
           L0: {
@@ -1260,27 +1151,19 @@ public final class VoidHunters extends ms {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var4);
-            stackOut_10_1 = new StringBuilder().append("VoidHunters.C(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var4);
+
+            stackIn_12_1 = new StringBuilder().append("VoidHunters.C(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -1331,20 +1214,18 @@ public final class VoidHunters extends ms {
     }
 
     private final void g(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        uca var4 = null;
-        int var5 = 0;
-        int var6_int = 0;
-        cl var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        cl var9 = null;
-        cl var10 = null;
-        cl var11 = null;
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
+        int var2;
+        int var3;
+        uca var4;
+        int var5;
+        int var6_int;
+        cl var6;
+        int var7;
+        int var8;
+        cl var9;
+        cl var10;
+        cl var11;
         L0: {
           L1: {
             var7 = field_G;
@@ -1352,16 +1233,14 @@ public final class VoidHunters extends ms {
               break L1;
             } else {
               if (null == ndb.field_a) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
                 break L1;
               }
             }
           }
-          stackOut_3_0 = 1;
-          stackIn_5_0 = stackOut_3_0;
+          stackIn_5_0 = 1;
           break L0;
         }
         L2: {
@@ -1571,10 +1450,6 @@ public final class VoidHunters extends ms {
     final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
@@ -1583,14 +1458,8 @@ public final class VoidHunters extends ms {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             try {
               L0: {
                 try {
@@ -1626,27 +1495,19 @@ public final class VoidHunters extends ms {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var2_ref2);
-                stackOut_6_1 = new StringBuilder().append("VoidHunters.T(");
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_8_1 = new StringBuilder().append("VoidHunters.T(");
+
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L3;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L3;
                 }
               }
@@ -1665,1143 +1526,849 @@ public final class VoidHunters extends ms {
     }
 
     final void b(boolean param0) {
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_33_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_39_0 = 0;
-        int stackIn_42_0 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_48_0 = 0;
-        int stackIn_51_0 = 0;
-        int stackIn_54_0 = 0;
-        int stackIn_57_0 = 0;
-        int stackIn_60_0 = 0;
-        int stackIn_63_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_61_0 = 0;
-        L0: {
-          VoidHunters.n(0);
-          abb.a(4);
-          no.a();
-          kla.a(89);
-          bw.a(9502);
-          hb.a(15873);
-          veb.a(1);
-          oua.a(true);
-          kda.b(66);
-          fab.a(10970);
-          pa.a(2);
-          fdb.g(0);
-          dra.c(98);
-          btb.a((byte) 94);
-          bda.a(-12407);
-          sh.a((byte) 89);
-          ot.a(param0);
-          gob.a(26986);
-          tua.a(114);
-          coa.a(true);
-          boa.a(0);
-          rrb.a(-106);
-          ms.d(false);
-          hva.a(127);
-          bi.b(-19766);
-          fg.a(-25692);
-          dma.b();
-          asb.a((byte) 112);
-          ds.j(-38);
-          wt.a(-101);
-          tc.a((byte) 40);
-          kia.a(3553);
-          kmb.a(32768);
-          wja.a(false);
-          bsb.a(23870);
-          dp.a(8);
-          lmb.a((byte) -53);
-          pgb.a((byte) 75);
-          nqa.a((byte) -30);
-          mab.a(-23483);
-          wsb.b((byte) -108);
-          ufb.a(false);
-          vfa.c((byte) 120);
-          wf.a(3);
-          if (param0) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        L1: {
-          uca.f(stackIn_3_0 != 0);
-          kc.a(-106);
-          djb.c((byte) -107);
-          fcb.a(111);
-          dla.a((byte) 101);
-          mn.a(-49);
-          ml.e(24388);
-          iwa.a((byte) -116);
-          igb.a(0);
-          ro.a(-47);
-          kma.c(-58);
-          lja.c((byte) 114);
-          aqa.b(-69);
-          if (param0) {
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            break L1;
-          } else {
-            stackOut_4_0 = 1;
-            stackIn_6_0 = stackOut_4_0;
-            break L1;
-          }
-        }
-        L2: {
-          qjb.c(stackIn_6_0 != 0);
-          fra.a(2147483647);
-          jb.a(12472);
-          uj.a((byte) -95);
-          eqb.a(65);
-          es.a(param0);
-          pd.c((byte) 26);
-          oma.a(28801);
-          bea.a(1);
-          wm.a((byte) -110);
-          una.a((byte) -98);
-          bba.b((byte) -76);
-          if (param0) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
-            break L2;
-          } else {
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
-            break L2;
-          }
-        }
-        L3: {
-          lbb.a(stackIn_9_0 != 0);
-          et.a((byte) -102);
-          qsa.a(30089);
-          crb.l(3);
-          nbb.j((byte) -127);
-          it.c(3);
-          jo.a(true);
-          fba.b(117);
-          tj.g(-124);
-          rba.a(false);
-          aoa.a(false);
-          pe.h(3);
-          so.a((byte) 61);
-          twa.a(32);
-          tw.a(-120);
-          rj.a();
-          ncb.a(500);
-          cib.a(-18013);
-          llb.f(-2147483648);
-          bv.a(39);
-          hw.a(-1);
-          bfb.b();
-          aaa.a((byte) 35);
-          tr.b(17674);
-          vpa.a(param0);
-          qga.a(114);
-          qs.a(true);
-          joa.a(26936);
-          qua.a(16606);
-          sfa.a(false);
-          ara.a(true);
-          cf.c(112);
-          dab.b((byte) -44);
-          tja.a(false);
-          nwa.a(1);
-          rgb.a(true);
-          ptb.b((byte) 127);
-          tt.a((byte) 94);
-          jpa.a(true);
-          ika.b(1);
-          pob.a((byte) 24);
-          lrb.a((byte) 118);
-          cc.c(6970);
-          iia.b(-15818);
-          om.b(-2684);
-          jsb.b((byte) 11);
-          ih.b(-10570);
-          cqb.c(-120);
-          gda.c((byte) 18);
-          lu.a((byte) 87);
-          vra.a((byte) -66);
-          kl.b(-127);
-          aib.a((byte) 48);
-          mqb.j((byte) -116);
-          rdb.c(51200);
-          rca.a(12035);
-          imb.a(64);
-          kra.a((byte) 70);
-          pea.a(true);
-          sra.a(96);
-          ii.b(25498);
-          bmb.a((byte) -120);
-          dqb.a(15060);
-          if (param0) {
-            stackOut_11_0 = 0;
-            stackIn_12_0 = stackOut_11_0;
-            break L3;
-          } else {
-            stackOut_10_0 = 1;
-            stackIn_12_0 = stackOut_10_0;
-            break L3;
-          }
-        }
-        L4: {
-          tea.a(stackIn_12_0 != 0);
-          if (param0) {
-            stackOut_14_0 = 0;
-            stackIn_15_0 = stackOut_14_0;
-            break L4;
-          } else {
-            stackOut_13_0 = 1;
-            stackIn_15_0 = stackOut_13_0;
-            break L4;
-          }
-        }
-        L5: {
-          hbb.c(stackIn_15_0 != 0);
-          gnb.b((byte) 19);
-          fkb.d(-25815);
-          q.b();
-          ht.a(false);
-          vka.d();
-          iab.a(2);
-          um.a(100);
-          lc.a(95);
-          ssa.a(2);
-          pr.b(1);
-          spb.b(0);
-          enb.a((byte) 38);
-          ae.e(-1);
-          nl.a(2128263208);
-          mba.a((byte) 26);
-          fgb.a(8);
-          cwa.a((byte) 74);
-          wia.a(9911);
-          ida.h((byte) -96);
-          ud.e(false);
-          rq.f(112);
-          rla.i((byte) 61);
-          vla.e(3);
-          waa.i((byte) 115);
-          dj.a((byte) -114);
-          rbb.b((byte) -29);
-          kr.a(-127);
-          oca.b(-125);
-          if (param0) {
-            stackOut_17_0 = 0;
-            stackIn_18_0 = stackOut_17_0;
-            break L5;
-          } else {
-            stackOut_16_0 = 1;
-            stackIn_18_0 = stackOut_16_0;
-            break L5;
-          }
-        }
-        L6: {
-          qpa.a(stackIn_18_0 != 0);
-          bc.a(-22113);
-          gdb.a(-73);
-          lo.a(true);
-          psb.a(false);
-          oib.a(124);
-          vw.a((byte) 55);
-          wc.b(-20221);
-          ona.c(125);
-          pfa.b(63);
-          fwa.b(5);
-          ppb.a(37);
-          pjb.e((byte) 22);
-          aw.h(0);
-          wdb.e((byte) 127);
-          hqb.a((byte) -106);
-          lwa.h(0);
-          cna.h(1);
-          bs.a((byte) 42);
-          ooa.h(126);
-          fh.d(-31049);
-          qc.a((byte) 78);
-          ffb.a(-106);
-          kw.g((byte) 124);
-          pia.e(-89);
-          bra.a(true);
-          cd.a(5);
-          ebb.a(23357);
-          if (param0) {
-            stackOut_20_0 = 0;
-            stackIn_21_0 = stackOut_20_0;
-            break L6;
-          } else {
-            stackOut_19_0 = 1;
-            stackIn_21_0 = stackOut_19_0;
-            break L6;
-          }
-        }
-        L7: {
-          sqb.a(stackIn_21_0 != 0);
-          mr.l((byte) -16);
-          ija.a(true);
-          uc.a(0);
-          lm.a(127);
-          wk.a((byte) 80);
-          tjb.i(85);
-          jv.a((byte) -33);
-          tgb.b((byte) -58);
-          eua.a(-128);
-          feb.a((byte) 122);
-          alb.a(6947);
-          uv.a(22089);
-          uea.a((byte) -18);
-          ei.a(false);
-          jba.a(true);
-          bob.b(22540);
-          shb.c((byte) 71);
-          bl.i((byte) -17);
-          ar.b(54);
-          hnb.i(1);
-          fm.a((byte) -114);
-          iw.f(-27545);
-          nva.f(-104);
-          htb.d(124);
-          dqa.b(param0);
-          oda.a(0);
-          pwa.a(-126);
-          whb.a(-113);
-          ub.c((byte) 104);
-          mo.d((byte) 46);
-          bhb.a(32);
-          umb.a(16214);
-          pca.d(9);
-          hg.a(false);
-          gtb.a((byte) -88);
-          hp.a(false);
-          fnb.a(-19);
-          mia.a(-11954);
-          dv.a((byte) -98);
-          sa.b();
-          eka.b(0);
-          gqb.a(126);
-          uab.a(0);
-          fca.a();
-          wma.b(118);
-          csa.a((byte) 124);
-          cjb.a(0);
-          bd.a((byte) -103);
-          kea.a(115);
-          kca.a((byte) 127);
-          ps.a(1);
-          cv.a();
-          dha.a(53);
-          fia.a((byte) -28);
-          ota.a();
-          qd.a((byte) 66);
-          pfb.a(118);
-          bbb.a(0);
-          jw.a(false);
-          rb.a((byte) -109);
-          ndb.a(91);
-          qdb.a((byte) -125);
-          odb.a(true);
-          dmb.a((byte) -128);
-          wna.a((byte) -128);
-          lh.a(15261);
-          vp.b(-2404);
-          ehb.a(false);
-          if (param0) {
-            stackOut_23_0 = 0;
-            stackIn_24_0 = stackOut_23_0;
-            break L7;
-          } else {
-            stackOut_22_0 = 1;
-            stackIn_24_0 = stackOut_22_0;
-            break L7;
-          }
-        }
-        L8: {
-          lra.a(stackIn_24_0 != 0);
-          qeb.a((byte) -122);
-          tn.a((byte) 110);
-          bqa.a((byte) 124);
-          via.b(0);
-          qw.a(true);
-          wh.h(0);
-          km.g((byte) 114);
-          jma.e(100);
-          ga.c((byte) -110);
-          qda.a();
-          tga.j(88);
-          uf.h((byte) -128);
-          ttb.d(16711935);
-          kja.a(-30);
-          gm.e(-2459);
-          jla.a(-125);
-          eca.e(-27183);
-          reb.a(false);
-          w.i((byte) 77);
-          ut.a(-72);
-          cja.a(-17719);
-          ata.a(6344);
-          fj.a(0);
-          ita.j((byte) 106);
-          vq.i((byte) -81);
-          sha.f(1);
-          nga.b((byte) -126);
-          if (param0) {
-            stackOut_26_0 = 0;
-            stackIn_27_0 = stackOut_26_0;
-            break L8;
-          } else {
-            stackOut_25_0 = 1;
-            stackIn_27_0 = stackOut_25_0;
-            break L8;
-          }
-        }
-        L9: {
-          vh.b(stackIn_27_0 != 0);
-          al.a(true);
-          rlb.a(-120);
-          fbb.a(param0);
-          kha.b(1);
-          mpb.g(0);
-          vf.a((byte) -26);
-          tla.b(1);
-          rpa.f(1);
-          epb.c(13);
-          rtb.c((byte) 81);
-          pf.d((byte) -101);
-          pb.a((byte) -84);
-          mj.a(17);
-          rga.a((byte) 108);
-          oj.b(108);
-          kba.a(17121);
-          aba.a(-3696);
-          atb.a(true);
-          uda.b((byte) -96);
-          as.c(0);
-          je.b((byte) 117);
-          vmb.a(8192);
-          slb.a((byte) 13);
-          uja.a((byte) -123);
-          jra.a((byte) -125);
-          jp.K(771);
-          esb.e(-118);
-          hma.a(-1);
-          re.d(-2705);
-          ef.e(-100);
-          tda.g(29914);
-          qh.l((byte) -123);
-          bk.e(80);
-          vcb.j((byte) -7);
-          ta.a((byte) -109);
-          se.c(-27982);
-          ri.a(41);
-          ska.e(5697);
-          if (param0) {
-            stackOut_29_0 = 0;
-            stackIn_30_0 = stackOut_29_0;
-            break L9;
-          } else {
-            stackOut_28_0 = 1;
-            stackIn_30_0 = stackOut_28_0;
-            break L9;
-          }
-        }
-        L10: {
-          bna.a(stackIn_30_0 != 0);
-          aqb.b(true);
-          gab.a(15325);
-          pja.d(-1);
-          wv.d(65280);
-          ul.a(-23460);
-          drb.e((byte) -85);
-          jwa.d(-122);
-          jlb.a(true);
-          grb.e((byte) -72);
-          owa.e((byte) 110);
-          di.e((byte) 113);
-          lq.d(262144);
-          gw.a(param0);
-          vm.e((byte) 110);
-          if (param0) {
-            stackOut_32_0 = 0;
-            stackIn_33_0 = stackOut_32_0;
-            break L10;
-          } else {
-            stackOut_31_0 = 1;
-            stackIn_33_0 = stackOut_31_0;
-            break L10;
-          }
-        }
-        L11: {
-          vn.a(stackIn_33_0 != 0);
-          kbb.e((byte) -117);
-          me.a(true);
-          lnb.e(1);
-          hpb.d(-6200);
-          qqa.e((byte) -104);
-          moa.d(-120);
-          cm.e((byte) -118);
-          md.a(false);
-          koa.d(19);
-          gia.a(false);
-          rw.e((byte) 86);
-          elb.c((byte) 78);
-          hk.d(-1210841460);
-          oqb.e((byte) -123);
-          hc.a();
-          jn.a((byte) -101);
-          lia.a(97);
-          uva.a();
-          woa.a(-16777216);
-          cs.a((byte) 111);
-          hq.c((byte) -128);
-          r.e((byte) -123);
-          ct.a((byte) -96);
-          mb.f((byte) -122);
-          of.a(8345);
-          ob.c((byte) 42);
-          nv.e(33);
-          mea.c(-95);
-          qg.c(-15081);
-          jjb.a(false);
-          ne.a(-2);
-          uia.a(-4353);
-          gpa.a(-92);
-          im.c((byte) 105);
-          tob.a(91);
-          bt.a(-4509);
-          vab.a(false);
-          bkb.b(26);
-          oaa.c(124);
-          mnb.b(117);
-          dda.a(0);
-          uga.a((byte) -9);
-          iib.d(1);
-          ku.a((byte) 108);
-          uob.d(3168);
-          ti.a(true);
-          mw.d(13776);
-          ts.a((byte) 90);
-          tu.a((byte) 88);
-          if (param0) {
-            stackOut_35_0 = 0;
-            stackIn_36_0 = stackOut_35_0;
-            break L11;
-          } else {
-            stackOut_34_0 = 1;
-            stackIn_36_0 = stackOut_34_0;
-            break L11;
-          }
-        }
-        L12: {
-          cba.b(stackIn_36_0 != 0);
-          gib.a(15);
-          ko.a(-35);
-          mjb.a(-81);
-          sv.e(0);
-          wu.d((byte) 46);
-          hab.e(-18951);
-          bib.c(param0);
-          kt.d((byte) -19);
-          gna.b(false);
-          vjb.b((byte) 53);
-          ho.a(13032);
-          ubb.f((byte) 42);
-          gn.e(106);
-          qva.a(6);
-          rab.a(148);
-          gla.a(-5709);
-          fib.e(-113);
-          bva.b(23008);
-          tb.a(-75);
-          pl.b((byte) -109);
-          fk.a((byte) 80);
-          iob.c(-5509);
-          vhb.b(21053);
-          hla.a((byte) 39);
-          asa.a(20000000);
-          ue.a((byte) 124);
-          sja.a((byte) 120);
-          qb.a(111);
-          cl.a((byte) -99);
-          ccb.b((byte) 126);
-          amb.a(-46);
-          gl.a(0);
-          vva.a((byte) 121);
-          meb.a((byte) -52);
-          kpb.c(17433);
-          dw.a(118);
-          if (param0) {
-            stackOut_38_0 = 0;
-            stackIn_39_0 = stackOut_38_0;
-            break L12;
-          } else {
-            stackOut_37_0 = 1;
-            stackIn_39_0 = stackOut_37_0;
-            break L12;
-          }
-        }
-        L13: {
-          qpb.b(stackIn_39_0 != 0);
-          kab.c(777);
-          qn.a(true);
-          ifa.a(95);
-          vu.e((byte) 113);
-          fa.c((byte) 119);
-          ujb.a((byte) -111);
-          lw.a(false);
-          kob.a(127);
-          rqa.a(true);
-          gva.a(true);
-          qab.b(0);
-          kua.a(181765988);
-          nfb.b((byte) 120);
-          etb.b((byte) 43);
-          pn.a(-30938);
-          nfa.d(-3408);
-          rea.d(102);
-          qsb.d(104);
-          uw.d(34037);
-          lg.d(108);
-          nnb.b(false);
-          pva.d(109);
-          fpa.d(110);
-          hka.d(0);
-          fjb.a(105);
-          ecb.a(95);
-          wva.a(-13);
-          av.a(false);
-          dtb.b((byte) 124);
-          efb.b((byte) -80);
-          akb.b((byte) 21);
-          fpb.l(62);
-          deb.i((byte) -125);
-          wqb.i((byte) 75);
-          mna.i((byte) 9);
-          teb.l(8192);
-          fma.i((byte) -22);
-          rma.l(3);
-          wca.l(-36);
-          ira.l(17036);
-          jeb.i((byte) -81);
-          ok.b((byte) -103);
-          ej.b((byte) 124);
-          gfb.b((byte) 80);
-          dkb.b((byte) -120);
-          jga.a(-121);
-          gs.b((byte) 120);
-          gmb.a(-109);
-          ng.a(false);
-          ajb.c((byte) 44);
-          ns.a(102);
-          ge.a((byte) 122);
-          eta.a(126);
-          mta.a(false);
-          jdb.a(param0);
-          cn.a(false);
-          vfb.a(92);
-          hsb.b((byte) 27);
-          bf.b((byte) 27);
-          nra.a(2);
-          wkb.a(-1);
-          mbb.a(50);
-          osb.a(1);
-          eoa.a(-18593);
-          upb.b(50);
-          pu.a(124);
-          sl.a(-123);
-          lhb.b((byte) -116);
-          lob.b((byte) 102);
-          lka.a(8192);
-          lsa.c((byte) -92);
-          dfa.a((byte) 112);
-          tpa.a(2);
-          lp.b((byte) 43);
-          nna.c(true);
-          rg.a(-117);
-          us.b((byte) 32);
-          un.a(false);
-          cfa.c((byte) 83);
-          ea.a(10);
-          nj.a(false);
-          br.a(true);
-          t.a(1);
-          vv.b(24358);
-          pbb.a(-652030847);
-          nrb.a(11227);
-          bpa.a((byte) 68);
-          tia.a(-102);
-          jja.b((byte) -110);
-          uu.a(-19);
-          npa.a(true);
-          nf.a(27167);
-          ci.a(-5254);
-          kgb.a(0);
-          nma.b((byte) -4);
-          skb.a(301);
-          jd.a(125);
-          klb.b(true);
-          cka.a(-2);
-          wda.e((byte) -100);
-          wnb.e(0);
-          dpa.b(false);
-          eq.e((byte) -105);
-          uqa.a(1);
-          gq.b(false);
-          tca.a(-9028);
-          wg.b(false);
-          cg.b(false);
-          hca.e((byte) 124);
-          og.a(23969);
-          ck.a(7311);
-          ema.a(0);
-          awa.a(-1);
-          dfb.e(105);
-          jrb.e(-2326);
-          eja.a(2);
-          jfb.a(0);
-          baa.e((byte) -47);
-          nha.e((byte) 74);
-          vea.a(0);
-          ltb.a(10);
-          apa.a(25837);
-          vha.e((byte) -5);
-          fu.e((byte) -125);
-          hjb.a(100);
-          oja.a(9141);
-          hha.a(0);
-          scb.a(30465);
-          nob.a(0);
-          nw.e((byte) -93);
-          ddb.e((byte) 89);
-          ppa.b(param0);
-          na.a(27358);
-          uka.a(0);
-          fq.a(1);
-          vba.e((byte) -31);
-          qwa.a(123);
-          if (param0) {
-            stackOut_41_0 = 0;
-            stackIn_42_0 = stackOut_41_0;
-            break L13;
-          } else {
-            stackOut_40_0 = 1;
-            stackIn_42_0 = stackOut_40_0;
-            break L13;
-          }
-        }
-        L14: {
-          inb.b(stackIn_42_0 != 0);
-          hqa.e((byte) -115);
-          jqa.e((byte) 4);
-          ewa.b(false);
-          kj.a(0);
-          s.a(18841);
-          hpa.a(2);
-          fv.a(16224);
-          sla.e((byte) 98);
-          tsb.b(param0);
-          qf.a(34);
-          ji.a(200);
-          lf.e((byte) 121);
-          bsa.e((byte) -7);
-          oha.a(-23714);
-          nh.e((byte) 124);
-          hra.a(9839);
-          kaa.a(-21447);
-          wpb.a(0);
-          k.e((byte) -71);
-          aj.e((byte) 32);
-          edb.a(-122);
-          ueb.a(0);
-          sp.a(30388);
-          vbb.a(2051507073);
-          ufa.a(-92);
-          rsa.a(-1);
-          gjb.a(-118);
-          gp.a(-23822);
-          urb.a(0);
-          cga.e((byte) -31);
-          tg.a(-32514);
-          mla.a(0);
-          eo.e(53562);
-          fc.a(95);
-          kq.e((byte) 84);
-          ki.a(-91);
-          cw.a(118);
-          leb.e((byte) -29);
-          jda.a(0);
-          gcb.a(0);
-          cab.a(106);
-          fha.a(25553);
-          ca.e((byte) 116);
-          lba.e((byte) 49);
-          icb.a(0);
-          erb.a(96);
-          uib.b(false);
-          pp.a(256);
-          kk.e((byte) 107);
-          jqb.e((byte) -15);
-          qi.a(101);
-          ff.a(-105);
-          ws.e(-122);
-          te.b(param0);
-          ql.e((byte) 63);
-          mja.e((byte) 103);
-          nt.a(2);
-          loa.a(-128);
-          ie.e(3575);
-          dob.e((byte) -66);
-          kkb.e((byte) 40);
-          ica.e((byte) -20);
-          pha.a(22829);
-          bjb.b(false);
-          rib.e((byte) -128);
-          qta.b(false);
-          fla.e((byte) -91);
-          nkb.e((byte) -115);
-          opb.e((byte) 123);
-          acb.b(false);
-          hsa.a(111);
-          lib.a(0);
-          ll.e(1);
-          df.f((byte) -96);
-          jab.a(2);
-          wj.e((byte) -114);
-          uhb.e((byte) 32);
-          ug.f((byte) -104);
-          neb.e((byte) -57);
-          bka.a(0);
-          hja.a(21);
-          gba.a(-21968);
-          otb.b(true);
-          ic.a(124);
-          nsa.e((byte) -115);
-          hj.a(87);
-          nd.b(false);
-          wlb.e((byte) -70);
-          mgb.e((byte) -49);
-          dt.e(44);
-          sj.a(0);
-          ina.a(-1721);
-          mhb.e((byte) -127);
-          omb.e((byte) -50);
-          oqa.e((byte) 53);
-          lea.a(33);
-          mqa.a(-125);
-          hcb.a(68);
-          psa.a(0);
-          rh.a(-51);
-          iua.e((byte) -119);
-          jgb.e(0);
-          jl.a(37);
-          bta.e((byte) -119);
-          jnb.a(-126);
-          fd.e(-1);
-          ir.e((byte) 32);
-          dsb.a(-23436);
-          ljb.a(-100);
-          era.a(42);
-          ew.b(param0);
-          mk.e((byte) 7);
-          ov.a(46);
-          vg.e((byte) -114);
-          lqb.a(122);
-          sdb.e((byte) 87);
-          cha.e((byte) 76);
-          stb.a(3);
-          qt.a(124);
-          gt.e((byte) 123);
-          vgb.a(51);
-          qja.a(124);
-          jna.b(true);
-          vnb.a(54);
-          fsa.e((byte) 56);
-          epa.a(55);
-          tfb.e((byte) 112);
-          msa.e((byte) -61);
-          nr.e((byte) -127);
-          oba.a(-78);
-          hlb.e((byte) 95);
-          ieb.a(122);
-          pra.a(-75);
-          qla.e((byte) 126);
-          seb.b(true);
-          tma.f((byte) 66);
-          cca.e((byte) -41);
-          mtb.e((byte) -117);
-          gwa.b(true);
-          nhb.a(12124934);
-          if (param0) {
-            stackOut_44_0 = 0;
-            stackIn_45_0 = stackOut_44_0;
-            break L14;
-          } else {
-            stackOut_43_0 = 1;
-            stackIn_45_0 = stackOut_43_0;
-            break L14;
-          }
-        }
-        L15: {
-          tm.b(stackIn_45_0 != 0);
-          afa.b(true);
-          if (param0) {
-            stackOut_47_0 = 0;
-            stackIn_48_0 = stackOut_47_0;
-            break L15;
-          } else {
-            stackOut_46_0 = 1;
-            stackIn_48_0 = stackOut_46_0;
-            break L15;
-          }
-        }
-        L16: {
-          iga.b(stackIn_48_0 != 0);
-          aq.a(-10441);
-          dwa.a(69);
-          uta.e((byte) 112);
-          bfa.a(70);
-          eg.a(-124);
-          aab.b(true);
-          bo.a(-26081);
-          if (param0) {
-            stackOut_50_0 = 0;
-            stackIn_51_0 = stackOut_50_0;
-            break L16;
-          } else {
-            stackOut_49_0 = 1;
-            stackIn_51_0 = stackOut_49_0;
-            break L16;
-          }
-        }
-        L17: {
-          qea.b(stackIn_51_0 != 0);
-          ee.e(-15435);
-          lb.a(-612363640);
-          tab.a(76);
-          emb.a(23518);
-          mpa.a(-27645);
-          fb.e((byte) 42);
-          rta.a(32);
-          iqb.a(122);
-          wpa.b(true);
-          dhb.a(6);
-          pua.a(80);
-          aha.a(1511754497);
-          eaa.a(-110);
-          vwa.a(32);
-          bqb.e((byte) -96);
-          jmb.b(true);
-          ad.e((byte) -27);
-          hr.a(-60);
-          dd.a(85);
-          bm.a(-28228);
-          aka.e((byte) -119);
-          gra.e((byte) -8);
-          fqb.a(27154);
-          pqa.a(0);
-          gkb.a(88);
-          jh.a(89);
-          hmb.a(21584);
-          rnb.e((byte) 127);
-          web.e((byte) 102);
-          eia.a(92);
-          lna.e((byte) -115);
-          u.a(4);
-          qia.e((byte) -87);
-          jha.e((byte) 127);
-          fe.a(6425);
-          keb.a(-87);
-          if (param0) {
-            stackOut_53_0 = 0;
-            stackIn_54_0 = stackOut_53_0;
-            break L17;
-          } else {
-            stackOut_52_0 = 1;
-            stackIn_54_0 = stackOut_52_0;
-            break L17;
-          }
-        }
-        L18: {
-          esa.b(stackIn_54_0 != 0);
-          sga.e((byte) -97);
-          vl.a(127);
-          dua.f((byte) 106);
-          mp.b(false);
-          rja.e((byte) -91);
-          lva.a(617169759);
-          raa.a(0);
-          gka.a(-114);
-          eha.a(-17297);
-          vpb.a(1600);
-          ra.a(107);
-          kwa.b(true);
-          jea.e(-20005);
-          noa.a(194);
-          gsa.a(109);
-          ks.e((byte) 119);
-          js.a(-20626);
-          wd.a(0);
-          ena.a(-100);
-          tk.e((byte) 101);
-          job.e((byte) -16);
-          rd.a(-1);
-          kn.a(16086);
-          gk.a(116);
-          iv.a(117);
-          hgb.e((byte) 57);
-          ejb.e(117);
-          vda.e((byte) 99);
-          up.e((byte) 65);
-          qmb.e((byte) -125);
-          wrb.a(100);
-          jm.e((byte) 71);
-          rf.a(15110);
-          pga.a(-29417);
-          nda.a(0);
-          lr.a(125);
-          qv.e((byte) -78);
-          pmb.a(-1);
-          eob.a(127);
-          jhb.e((byte) 53);
-          sbb.a(-120);
-          dn.a(-52);
-          tnb.e((byte) -25);
-          usa.e((byte) 108);
-          sta.a(63);
-          ceb.e((byte) -116);
-          qra.e((byte) -80);
-          po.a(69);
-          mlb.e((byte) 92);
-          dh.e((byte) -99);
-          am.e(-1);
-          nlb.e((byte) -80);
-          plb.a(16);
-          fhb.a(-116);
-          cta.a(14675);
-          ahb.a(0);
-          vaa.e((byte) 21);
-          hwa.e((byte) 107);
-          vsa.a(-92);
-          if (param0) {
-            stackOut_56_0 = 0;
-            stackIn_57_0 = stackOut_56_0;
-            break L18;
-          } else {
-            stackOut_55_0 = 1;
-            stackIn_57_0 = stackOut_55_0;
-            break L18;
-          }
-        }
-        L19: {
-          vo.b(stackIn_57_0 != 0);
-          qoa.a(9099);
-          wo.a(-124);
-          bpb.a(0);
-          kg.a(7848);
-          eva.a(0);
-          kpa.a(146);
-          we.e((byte) 97);
-          ioa.e((byte) -102);
-          pma.e((byte) -102);
-          hoa.a(-123);
-          vqb.e((byte) -127);
-          lcb.a(0);
-          orb.a(-982);
-          ijb.a(-59);
-          wea.a(153);
-          lda.a(-2573);
-          hv.e((byte) 15);
-          ma.a(-17548);
-          tqa.a(76);
-          st.a(0);
-          qe.e((byte) 118);
-          if (param0) {
-            stackOut_59_0 = 0;
-            stackIn_60_0 = stackOut_59_0;
-            break L19;
-          } else {
-            stackOut_58_0 = 1;
-            stackIn_60_0 = stackOut_58_0;
-            break L19;
-          }
-        }
-        L20: {
-          gbb.b(stackIn_60_0 != 0);
-          fmb.a(0);
-          bja.f((byte) 92);
-          ip.e((byte) 62);
-          cu.a(163);
-          ag.b(false);
-          if (param0) {
-            stackOut_62_0 = 0;
-            stackIn_63_0 = stackOut_62_0;
-            break L20;
-          } else {
-            stackOut_61_0 = 1;
-            stackIn_63_0 = stackOut_61_0;
-            break L20;
-          }
-        }
-        si.b(stackIn_63_0 != 0);
+        VoidHunters.n(0);
+        abb.a(4);
+        no.a();
+        kla.a(89);
+        bw.a(9502);
+        hb.a(15873);
+        veb.a(1);
+        oua.a(true);
+        kda.b(66);
+        fab.a(10970);
+        pa.a(2);
+        fdb.g(0);
+        dra.c(98);
+        btb.a((byte) 94);
+        bda.a(-12407);
+        sh.a((byte) 89);
+        ot.a(param0);
+        gob.a(26986);
+        tua.a(114);
+        coa.a(true);
+        boa.a(0);
+        rrb.a(-106);
+        ms.d(false);
+        hva.a(127);
+        bi.b(-19766);
+        fg.a(-25692);
+        dma.b();
+        asb.a((byte) 112);
+        ds.j(-38);
+        wt.a(-101);
+        tc.a((byte) 40);
+        kia.a(3553);
+        kmb.a(32768);
+        wja.a(false);
+        bsb.a(23870);
+        dp.a(8);
+        lmb.a((byte) -53);
+        pgb.a((byte) 75);
+        nqa.a((byte) -30);
+        mab.a(-23483);
+        wsb.b((byte) -108);
+        ufb.a(false);
+        vfa.c((byte) 120);
+        wf.a(3);
+        uca.f(!param0 ? true : false);
+        kc.a(-106);
+        djb.c((byte) -107);
+        fcb.a(111);
+        dla.a((byte) 101);
+        mn.a(-49);
+        ml.e(24388);
+        iwa.a((byte) -116);
+        igb.a(0);
+        ro.a(-47);
+        kma.c(-58);
+        lja.c((byte) 114);
+        aqa.b(-69);
+        qjb.c(!param0 ? true : false);
+        fra.a(2147483647);
+        jb.a(12472);
+        uj.a((byte) -95);
+        eqb.a(65);
+        es.a(param0);
+        pd.c((byte) 26);
+        oma.a(28801);
+        bea.a(1);
+        wm.a((byte) -110);
+        una.a((byte) -98);
+        bba.b((byte) -76);
+        lbb.a(!param0 ? true : false);
+        et.a((byte) -102);
+        qsa.a(30089);
+        crb.l(3);
+        nbb.j((byte) -127);
+        it.c(3);
+        jo.a(true);
+        fba.b(117);
+        tj.g(-124);
+        rba.a(false);
+        aoa.a(false);
+        pe.h(3);
+        so.a((byte) 61);
+        twa.a(32);
+        tw.a(-120);
+        rj.a();
+        ncb.a(500);
+        cib.a(-18013);
+        llb.f(-2147483648);
+        bv.a(39);
+        hw.a(-1);
+        bfb.b();
+        aaa.a((byte) 35);
+        tr.b(17674);
+        vpa.a(param0);
+        qga.a(114);
+        qs.a(true);
+        joa.a(26936);
+        qua.a(16606);
+        sfa.a(false);
+        ara.a(true);
+        cf.c(112);
+        dab.b((byte) -44);
+        tja.a(false);
+        nwa.a(1);
+        rgb.a(true);
+        ptb.b((byte) 127);
+        tt.a((byte) 94);
+        jpa.a(true);
+        ika.b(1);
+        pob.a((byte) 24);
+        lrb.a((byte) 118);
+        cc.c(6970);
+        iia.b(-15818);
+        om.b(-2684);
+        jsb.b((byte) 11);
+        ih.b(-10570);
+        cqb.c(-120);
+        gda.c((byte) 18);
+        lu.a((byte) 87);
+        vra.a((byte) -66);
+        kl.b(-127);
+        aib.a((byte) 48);
+        mqb.j((byte) -116);
+        rdb.c(51200);
+        rca.a(12035);
+        imb.a(64);
+        kra.a((byte) 70);
+        pea.a(true);
+        sra.a(96);
+        ii.b(25498);
+        bmb.a((byte) -120);
+        dqb.a(15060);
+        tea.a(!param0 ? true : false);
+        hbb.c(!param0 ? true : false);
+        gnb.b((byte) 19);
+        fkb.d(-25815);
+        q.b();
+        ht.a(false);
+        vka.d();
+        iab.a(2);
+        um.a(100);
+        lc.a(95);
+        ssa.a(2);
+        pr.b(1);
+        spb.b(0);
+        enb.a((byte) 38);
+        ae.e(-1);
+        nl.a(2128263208);
+        mba.a((byte) 26);
+        fgb.a(8);
+        cwa.a((byte) 74);
+        wia.a(9911);
+        ida.h((byte) -96);
+        ud.e(false);
+        rq.f(112);
+        rla.i((byte) 61);
+        vla.e(3);
+        waa.i((byte) 115);
+        dj.a((byte) -114);
+        rbb.b((byte) -29);
+        kr.a(-127);
+        oca.b(-125);
+        qpa.a(!param0 ? true : false);
+        bc.a(-22113);
+        gdb.a(-73);
+        lo.a(true);
+        psb.a(false);
+        oib.a(124);
+        vw.a((byte) 55);
+        wc.b(-20221);
+        ona.c(125);
+        pfa.b(63);
+        fwa.b(5);
+        ppb.a(37);
+        pjb.e((byte) 22);
+        aw.h(0);
+        wdb.e((byte) 127);
+        hqb.a((byte) -106);
+        lwa.h(0);
+        cna.h(1);
+        bs.a((byte) 42);
+        ooa.h(126);
+        fh.d(-31049);
+        qc.a((byte) 78);
+        ffb.a(-106);
+        kw.g((byte) 124);
+        pia.e(-89);
+        bra.a(true);
+        cd.a(5);
+        ebb.a(23357);
+        sqb.a(!param0 ? true : false);
+        mr.l((byte) -16);
+        ija.a(true);
+        uc.a(0);
+        lm.a(127);
+        wk.a((byte) 80);
+        tjb.i(85);
+        jv.a((byte) -33);
+        tgb.b((byte) -58);
+        eua.a(-128);
+        feb.a((byte) 122);
+        alb.a(6947);
+        uv.a(22089);
+        uea.a((byte) -18);
+        ei.a(false);
+        jba.a(true);
+        bob.b(22540);
+        shb.c((byte) 71);
+        bl.i((byte) -17);
+        ar.b(54);
+        hnb.i(1);
+        fm.a((byte) -114);
+        iw.f(-27545);
+        nva.f(-104);
+        htb.d(124);
+        dqa.b(param0);
+        oda.a(0);
+        pwa.a(-126);
+        whb.a(-113);
+        ub.c((byte) 104);
+        mo.d((byte) 46);
+        bhb.a(32);
+        umb.a(16214);
+        pca.d(9);
+        hg.a(false);
+        gtb.a((byte) -88);
+        hp.a(false);
+        fnb.a(-19);
+        mia.a(-11954);
+        dv.a((byte) -98);
+        sa.b();
+        eka.b(0);
+        gqb.a(126);
+        uab.a(0);
+        fca.a();
+        wma.b(118);
+        csa.a((byte) 124);
+        cjb.a(0);
+        bd.a((byte) -103);
+        kea.a(115);
+        kca.a((byte) 127);
+        ps.a(1);
+        cv.a();
+        dha.a(53);
+        fia.a((byte) -28);
+        ota.a();
+        qd.a((byte) 66);
+        pfb.a(118);
+        bbb.a(0);
+        jw.a(false);
+        rb.a((byte) -109);
+        ndb.a(91);
+        qdb.a((byte) -125);
+        odb.a(true);
+        dmb.a((byte) -128);
+        wna.a((byte) -128);
+        lh.a(15261);
+        vp.b(-2404);
+        ehb.a(false);
+        lra.a(!param0 ? true : false);
+        qeb.a((byte) -122);
+        tn.a((byte) 110);
+        bqa.a((byte) 124);
+        via.b(0);
+        qw.a(true);
+        wh.h(0);
+        km.g((byte) 114);
+        jma.e(100);
+        ga.c((byte) -110);
+        qda.a();
+        tga.j(88);
+        uf.h((byte) -128);
+        ttb.d(16711935);
+        kja.a(-30);
+        gm.e(-2459);
+        jla.a(-125);
+        eca.e(-27183);
+        reb.a(false);
+        w.i((byte) 77);
+        ut.a(-72);
+        cja.a(-17719);
+        ata.a(6344);
+        fj.a(0);
+        ita.j((byte) 106);
+        vq.i((byte) -81);
+        sha.f(1);
+        nga.b((byte) -126);
+        vh.b(!param0 ? true : false);
+        al.a(true);
+        rlb.a(-120);
+        fbb.a(param0);
+        kha.b(1);
+        mpb.g(0);
+        vf.a((byte) -26);
+        tla.b(1);
+        rpa.f(1);
+        epb.c(13);
+        rtb.c((byte) 81);
+        pf.d((byte) -101);
+        pb.a((byte) -84);
+        mj.a(17);
+        rga.a((byte) 108);
+        oj.b(108);
+        kba.a(17121);
+        aba.a(-3696);
+        atb.a(true);
+        uda.b((byte) -96);
+        as.c(0);
+        je.b((byte) 117);
+        vmb.a(8192);
+        slb.a((byte) 13);
+        uja.a((byte) -123);
+        jra.a((byte) -125);
+        jp.K(771);
+        esb.e(-118);
+        hma.a(-1);
+        re.d(-2705);
+        ef.e(-100);
+        tda.g(29914);
+        qh.l((byte) -123);
+        bk.e(80);
+        vcb.j((byte) -7);
+        ta.a((byte) -109);
+        se.c(-27982);
+        ri.a(41);
+        ska.e(5697);
+        bna.a(!param0 ? true : false);
+        aqb.b(true);
+        gab.a(15325);
+        pja.d(-1);
+        wv.d(65280);
+        ul.a(-23460);
+        drb.e((byte) -85);
+        jwa.d(-122);
+        jlb.a(true);
+        grb.e((byte) -72);
+        owa.e((byte) 110);
+        di.e((byte) 113);
+        lq.d(262144);
+        gw.a(param0);
+        vm.e((byte) 110);
+        vn.a(!param0 ? true : false);
+        kbb.e((byte) -117);
+        me.a(true);
+        lnb.e(1);
+        hpb.d(-6200);
+        qqa.e((byte) -104);
+        moa.d(-120);
+        cm.e((byte) -118);
+        md.a(false);
+        koa.d(19);
+        gia.a(false);
+        rw.e((byte) 86);
+        elb.c((byte) 78);
+        hk.d(-1210841460);
+        oqb.e((byte) -123);
+        hc.a();
+        jn.a((byte) -101);
+        lia.a(97);
+        uva.a();
+        woa.a(-16777216);
+        cs.a((byte) 111);
+        hq.c((byte) -128);
+        r.e((byte) -123);
+        ct.a((byte) -96);
+        mb.f((byte) -122);
+        of.a(8345);
+        ob.c((byte) 42);
+        nv.e(33);
+        mea.c(-95);
+        qg.c(-15081);
+        jjb.a(false);
+        ne.a(-2);
+        uia.a(-4353);
+        gpa.a(-92);
+        im.c((byte) 105);
+        tob.a(91);
+        bt.a(-4509);
+        vab.a(false);
+        bkb.b(26);
+        oaa.c(124);
+        mnb.b(117);
+        dda.a(0);
+        uga.a((byte) -9);
+        iib.d(1);
+        ku.a((byte) 108);
+        uob.d(3168);
+        ti.a(true);
+        mw.d(13776);
+        ts.a((byte) 90);
+        tu.a((byte) 88);
+        cba.b(!param0 ? true : false);
+        gib.a(15);
+        ko.a(-35);
+        mjb.a(-81);
+        sv.e(0);
+        wu.d((byte) 46);
+        hab.e(-18951);
+        bib.c(param0);
+        kt.d((byte) -19);
+        gna.b(false);
+        vjb.b((byte) 53);
+        ho.a(13032);
+        ubb.f((byte) 42);
+        gn.e(106);
+        qva.a(6);
+        rab.a(148);
+        gla.a(-5709);
+        fib.e(-113);
+        bva.b(23008);
+        tb.a(-75);
+        pl.b((byte) -109);
+        fk.a((byte) 80);
+        iob.c(-5509);
+        vhb.b(21053);
+        hla.a((byte) 39);
+        asa.a(20000000);
+        ue.a((byte) 124);
+        sja.a((byte) 120);
+        qb.a(111);
+        cl.a((byte) -99);
+        ccb.b((byte) 126);
+        amb.a(-46);
+        gl.a(0);
+        vva.a((byte) 121);
+        meb.a((byte) -52);
+        kpb.c(17433);
+        dw.a(118);
+        qpb.b(!param0 ? true : false);
+        kab.c(777);
+        qn.a(true);
+        ifa.a(95);
+        vu.e((byte) 113);
+        fa.c((byte) 119);
+        ujb.a((byte) -111);
+        lw.a(false);
+        kob.a(127);
+        rqa.a(true);
+        gva.a(true);
+        qab.b(0);
+        kua.a(181765988);
+        nfb.b((byte) 120);
+        etb.b((byte) 43);
+        pn.a(-30938);
+        nfa.d(-3408);
+        rea.d(102);
+        qsb.d(104);
+        uw.d(34037);
+        lg.d(108);
+        nnb.b(false);
+        pva.d(109);
+        fpa.d(110);
+        hka.d(0);
+        fjb.a(105);
+        ecb.a(95);
+        wva.a(-13);
+        av.a(false);
+        dtb.b((byte) 124);
+        efb.b((byte) -80);
+        akb.b((byte) 21);
+        fpb.l(62);
+        deb.i((byte) -125);
+        wqb.i((byte) 75);
+        mna.i((byte) 9);
+        teb.l(8192);
+        fma.i((byte) -22);
+        rma.l(3);
+        wca.l(-36);
+        ira.l(17036);
+        jeb.i((byte) -81);
+        ok.b((byte) -103);
+        ej.b((byte) 124);
+        gfb.b((byte) 80);
+        dkb.b((byte) -120);
+        jga.a(-121);
+        gs.b((byte) 120);
+        gmb.a(-109);
+        ng.a(false);
+        ajb.c((byte) 44);
+        ns.a(102);
+        ge.a((byte) 122);
+        eta.a(126);
+        mta.a(false);
+        jdb.a(param0);
+        cn.a(false);
+        vfb.a(92);
+        hsb.b((byte) 27);
+        bf.b((byte) 27);
+        nra.a(2);
+        wkb.a(-1);
+        mbb.a(50);
+        osb.a(1);
+        eoa.a(-18593);
+        upb.b(50);
+        pu.a(124);
+        sl.a(-123);
+        lhb.b((byte) -116);
+        lob.b((byte) 102);
+        lka.a(8192);
+        lsa.c((byte) -92);
+        dfa.a((byte) 112);
+        tpa.a(2);
+        lp.b((byte) 43);
+        nna.c(true);
+        rg.a(-117);
+        us.b((byte) 32);
+        un.a(false);
+        cfa.c((byte) 83);
+        ea.a(10);
+        nj.a(false);
+        br.a(true);
+        t.a(1);
+        vv.b(24358);
+        pbb.a(-652030847);
+        nrb.a(11227);
+        bpa.a((byte) 68);
+        tia.a(-102);
+        jja.b((byte) -110);
+        uu.a(-19);
+        npa.a(true);
+        nf.a(27167);
+        ci.a(-5254);
+        kgb.a(0);
+        nma.b((byte) -4);
+        skb.a(301);
+        jd.a(125);
+        klb.b(true);
+        cka.a(-2);
+        wda.e((byte) -100);
+        wnb.e(0);
+        dpa.b(false);
+        eq.e((byte) -105);
+        uqa.a(1);
+        gq.b(false);
+        tca.a(-9028);
+        wg.b(false);
+        cg.b(false);
+        hca.e((byte) 124);
+        og.a(23969);
+        ck.a(7311);
+        ema.a(0);
+        awa.a(-1);
+        dfb.e(105);
+        jrb.e(-2326);
+        eja.a(2);
+        jfb.a(0);
+        baa.e((byte) -47);
+        nha.e((byte) 74);
+        vea.a(0);
+        ltb.a(10);
+        apa.a(25837);
+        vha.e((byte) -5);
+        fu.e((byte) -125);
+        hjb.a(100);
+        oja.a(9141);
+        hha.a(0);
+        scb.a(30465);
+        nob.a(0);
+        nw.e((byte) -93);
+        ddb.e((byte) 89);
+        ppa.b(param0);
+        na.a(27358);
+        uka.a(0);
+        fq.a(1);
+        vba.e((byte) -31);
+        qwa.a(123);
+        inb.b(!param0 ? true : false);
+        hqa.e((byte) -115);
+        jqa.e((byte) 4);
+        ewa.b(false);
+        kj.a(0);
+        s.a(18841);
+        hpa.a(2);
+        fv.a(16224);
+        sla.e((byte) 98);
+        tsb.b(param0);
+        qf.a(34);
+        ji.a(200);
+        lf.e((byte) 121);
+        bsa.e((byte) -7);
+        oha.a(-23714);
+        nh.e((byte) 124);
+        hra.a(9839);
+        kaa.a(-21447);
+        wpb.a(0);
+        k.e((byte) -71);
+        aj.e((byte) 32);
+        edb.a(-122);
+        ueb.a(0);
+        sp.a(30388);
+        vbb.a(2051507073);
+        ufa.a(-92);
+        rsa.a(-1);
+        gjb.a(-118);
+        gp.a(-23822);
+        urb.a(0);
+        cga.e((byte) -31);
+        tg.a(-32514);
+        mla.a(0);
+        eo.e(53562);
+        fc.a(95);
+        kq.e((byte) 84);
+        ki.a(-91);
+        cw.a(118);
+        leb.e((byte) -29);
+        jda.a(0);
+        gcb.a(0);
+        cab.a(106);
+        fha.a(25553);
+        ca.e((byte) 116);
+        lba.e((byte) 49);
+        icb.a(0);
+        erb.a(96);
+        uib.b(false);
+        pp.a(256);
+        kk.e((byte) 107);
+        jqb.e((byte) -15);
+        qi.a(101);
+        ff.a(-105);
+        ws.e(-122);
+        te.b(param0);
+        ql.e((byte) 63);
+        mja.e((byte) 103);
+        nt.a(2);
+        loa.a(-128);
+        ie.e(3575);
+        dob.e((byte) -66);
+        kkb.e((byte) 40);
+        ica.e((byte) -20);
+        pha.a(22829);
+        bjb.b(false);
+        rib.e((byte) -128);
+        qta.b(false);
+        fla.e((byte) -91);
+        nkb.e((byte) -115);
+        opb.e((byte) 123);
+        acb.b(false);
+        hsa.a(111);
+        lib.a(0);
+        ll.e(1);
+        df.f((byte) -96);
+        jab.a(2);
+        wj.e((byte) -114);
+        uhb.e((byte) 32);
+        ug.f((byte) -104);
+        neb.e((byte) -57);
+        bka.a(0);
+        hja.a(21);
+        gba.a(-21968);
+        otb.b(true);
+        ic.a(124);
+        nsa.e((byte) -115);
+        hj.a(87);
+        nd.b(false);
+        wlb.e((byte) -70);
+        mgb.e((byte) -49);
+        dt.e(44);
+        sj.a(0);
+        ina.a(-1721);
+        mhb.e((byte) -127);
+        omb.e((byte) -50);
+        oqa.e((byte) 53);
+        lea.a(33);
+        mqa.a(-125);
+        hcb.a(68);
+        psa.a(0);
+        rh.a(-51);
+        iua.e((byte) -119);
+        jgb.e(0);
+        jl.a(37);
+        bta.e((byte) -119);
+        jnb.a(-126);
+        fd.e(-1);
+        ir.e((byte) 32);
+        dsb.a(-23436);
+        ljb.a(-100);
+        era.a(42);
+        ew.b(param0);
+        mk.e((byte) 7);
+        ov.a(46);
+        vg.e((byte) -114);
+        lqb.a(122);
+        sdb.e((byte) 87);
+        cha.e((byte) 76);
+        stb.a(3);
+        qt.a(124);
+        gt.e((byte) 123);
+        vgb.a(51);
+        qja.a(124);
+        jna.b(true);
+        vnb.a(54);
+        fsa.e((byte) 56);
+        epa.a(55);
+        tfb.e((byte) 112);
+        msa.e((byte) -61);
+        nr.e((byte) -127);
+        oba.a(-78);
+        hlb.e((byte) 95);
+        ieb.a(122);
+        pra.a(-75);
+        qla.e((byte) 126);
+        seb.b(true);
+        tma.f((byte) 66);
+        cca.e((byte) -41);
+        mtb.e((byte) -117);
+        gwa.b(true);
+        nhb.a(12124934);
+        tm.b(!param0 ? true : false);
+        afa.b(true);
+        iga.b(!param0 ? true : false);
+        aq.a(-10441);
+        dwa.a(69);
+        uta.e((byte) 112);
+        bfa.a(70);
+        eg.a(-124);
+        aab.b(true);
+        bo.a(-26081);
+        qea.b(!param0 ? true : false);
+        ee.e(-15435);
+        lb.a(-612363640);
+        tab.a(76);
+        emb.a(23518);
+        mpa.a(-27645);
+        fb.e((byte) 42);
+        rta.a(32);
+        iqb.a(122);
+        wpa.b(true);
+        dhb.a(6);
+        pua.a(80);
+        aha.a(1511754497);
+        eaa.a(-110);
+        vwa.a(32);
+        bqb.e((byte) -96);
+        jmb.b(true);
+        ad.e((byte) -27);
+        hr.a(-60);
+        dd.a(85);
+        bm.a(-28228);
+        aka.e((byte) -119);
+        gra.e((byte) -8);
+        fqb.a(27154);
+        pqa.a(0);
+        gkb.a(88);
+        jh.a(89);
+        hmb.a(21584);
+        rnb.e((byte) 127);
+        web.e((byte) 102);
+        eia.a(92);
+        lna.e((byte) -115);
+        u.a(4);
+        qia.e((byte) -87);
+        jha.e((byte) 127);
+        fe.a(6425);
+        keb.a(-87);
+        esa.b(!param0 ? true : false);
+        sga.e((byte) -97);
+        vl.a(127);
+        dua.f((byte) 106);
+        mp.b(false);
+        rja.e((byte) -91);
+        lva.a(617169759);
+        raa.a(0);
+        gka.a(-114);
+        eha.a(-17297);
+        vpb.a(1600);
+        ra.a(107);
+        kwa.b(true);
+        jea.e(-20005);
+        noa.a(194);
+        gsa.a(109);
+        ks.e((byte) 119);
+        js.a(-20626);
+        wd.a(0);
+        ena.a(-100);
+        tk.e((byte) 101);
+        job.e((byte) -16);
+        rd.a(-1);
+        kn.a(16086);
+        gk.a(116);
+        iv.a(117);
+        hgb.e((byte) 57);
+        ejb.e(117);
+        vda.e((byte) 99);
+        up.e((byte) 65);
+        qmb.e((byte) -125);
+        wrb.a(100);
+        jm.e((byte) 71);
+        rf.a(15110);
+        pga.a(-29417);
+        nda.a(0);
+        lr.a(125);
+        qv.e((byte) -78);
+        pmb.a(-1);
+        eob.a(127);
+        jhb.e((byte) 53);
+        sbb.a(-120);
+        dn.a(-52);
+        tnb.e((byte) -25);
+        usa.e((byte) 108);
+        sta.a(63);
+        ceb.e((byte) -116);
+        qra.e((byte) -80);
+        po.a(69);
+        mlb.e((byte) 92);
+        dh.e((byte) -99);
+        am.e(-1);
+        nlb.e((byte) -80);
+        plb.a(16);
+        fhb.a(-116);
+        cta.a(14675);
+        ahb.a(0);
+        vaa.e((byte) 21);
+        hwa.e((byte) 107);
+        vsa.a(-92);
+        vo.b(!param0 ? true : false);
+        qoa.a(9099);
+        wo.a(-124);
+        bpb.a(0);
+        kg.a(7848);
+        eva.a(0);
+        kpa.a(146);
+        we.e((byte) 97);
+        ioa.e((byte) -102);
+        pma.e((byte) -102);
+        hoa.a(-123);
+        vqb.e((byte) -127);
+        lcb.a(0);
+        orb.a(-982);
+        ijb.a(-59);
+        wea.a(153);
+        lda.a(-2573);
+        hv.e((byte) 15);
+        ma.a(-17548);
+        tqa.a(76);
+        st.a(0);
+        qe.e((byte) 118);
+        gbb.b(!param0 ? true : false);
+        fmb.a(0);
+        bja.f((byte) 92);
+        ip.e((byte) 62);
+        cu.a(163);
+        ag.b(false);
+        si.b(!param0 ? true : false);
         egb.a(118);
         oea.e((byte) -113);
         nu.a(-10515);
@@ -2931,7 +2498,6 @@ public final class VoidHunters extends ms {
     }
 
     private final boolean h(byte param0) {
-        boolean discarded$0 = false;
         int var2 = 0;
         int var3 = field_G;
         mab.field_a = (VoidHunters) (this);
@@ -2950,7 +2516,7 @@ public final class VoidHunters extends ms {
         hb.a(pab.field_k[0], (byte) -114);
         if (param0 <= 124) {
             Object var4 = (Object) null;
-            discarded$0 = VoidHunters.a(true, (Object) null);
+            VoidHunters.a(true, (Object) null);
         }
         for (var2 = 0; (var2 ^ -1) > -17; var2++) {
             fi.field_o.b(0, (byte) 18, var2);
@@ -2960,81 +2526,53 @@ public final class VoidHunters extends ms {
         qn.c((byte) 89);
         fkb.a(2096);
         fka.a("Finished loadloop", (byte) -128);
-        if (this.l(0)) {
-            if (fda.e((byte) 116)) {
-                wu.a(true, false);
-            }
+        if (this.l(0) && fda.e((byte) 116)) {
+            wu.a(true, false);
         }
         return true;
     }
 
     final void b(int param0) {
-        String discarded$0 = null;
         prb.b(false);
         if (!(null == psb.field_b)) {
             cqb.b((byte) 86);
         }
         jn.a(1);
         if (param0 >= -102) {
-            discarded$0 = VoidHunters.b(63, 91);
+            VoidHunters.b(63, 91);
         }
     }
 
     private final void d(boolean param0, int param1) {
-        int fieldTemp$2 = 0;
-        ksa discarded$3 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int[] var11 = null;
-        int[] var12 = null;
+        int fieldTemp$0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_32_0 = 0;
-        uca stackIn_42_0 = null;
-        int stackIn_42_1 = 0;
         uca stackIn_43_0 = null;
         int stackIn_43_1 = 0;
         uca stackIn_44_0 = null;
         int stackIn_44_1 = 0;
         int stackIn_44_2 = 0;
-        faa stackIn_114_0 = null;
-        int stackIn_114_1 = 0;
-        faa stackIn_115_0 = null;
-        int stackIn_115_1 = 0;
-        faa stackIn_116_0 = null;
-        int stackIn_116_1 = 0;
-        int stackIn_116_2 = 0;
-        int stackIn_196_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_31_0 = 0;
-        uca stackOut_41_0 = null;
-        int stackOut_41_1 = 0;
-        uca stackOut_43_0 = null;
-        int stackOut_43_1 = 0;
-        int stackOut_43_2 = 0;
-        uca stackOut_42_0 = null;
-        int stackOut_42_1 = 0;
-        int stackOut_42_2 = 0;
-        faa stackOut_113_0 = null;
-        int stackOut_113_1 = 0;
-        faa stackOut_115_0 = null;
-        int stackOut_115_1 = 0;
-        int stackOut_115_2 = 0;
-        faa stackOut_114_0 = null;
-        int stackOut_114_1 = 0;
-        int stackOut_114_2 = 0;
-        int stackOut_195_0 = 0;
-        int stackOut_194_0 = 0;
+        boolean stackIn_48_0 = false;
+        int stackIn_59_0 = 0;
+        faa stackIn_118_0 = null;
+        int stackIn_118_1 = 0;
+        faa stackIn_119_0 = null;
+        int stackIn_119_1 = 0;
+        int stackIn_119_2 = 0;
+        boolean stackIn_133_0 = false;
+        int stackIn_200_0 = 0;
+        boolean stackOut_47_0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int[] var11;
+        int[] var12;
         L0: {
           var10 = field_G;
           if (!ssa.b(2)) {
@@ -3066,12 +2604,10 @@ public final class VoidHunters extends ms {
                 L2: {
                   nkb.a(false, "Cookie ship found, so starting game");
                   if (bqa.a(false)) {
-                    stackOut_9_0 = 7;
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = 7;
                     break L2;
                   } else {
-                    stackOut_8_0 = 0;
-                    stackIn_10_0 = stackOut_8_0;
+                    stackIn_10_0 = 0;
                     break L2;
                   }
                 }
@@ -3163,14 +2699,12 @@ public final class VoidHunters extends ms {
                   if (!nna.field_C.c(13462)) {
                     break L10;
                   } else {
-                    stackOut_16_0 = 1;
-                    stackIn_18_0 = stackOut_16_0;
+                    stackIn_18_0 = 1;
                     break L9;
                   }
                 }
               }
-              stackOut_17_0 = 0;
-              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_0 = 0;
               break L9;
             }
             L11: {
@@ -3217,8 +2751,7 @@ public final class VoidHunters extends ms {
                               }
                             }
                           }
-                          stackOut_30_0 = 1;
-                          stackIn_32_0 = stackOut_30_0;
+                          stackIn_32_0 = 1;
                           break L11;
                         }
                       }
@@ -3226,148 +2759,146 @@ public final class VoidHunters extends ms {
                   }
                 }
               }
-              stackOut_31_0 = 0;
-              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_0 = 0;
               break L11;
             }
             L15: {
-              var6 = stackIn_32_0;
-              bq.a(true, var6 != 0, ip.field_p.width, ip.field_p.height);
-              if (param0) {
-                break L15;
-              } else {
-                if ((wgb.field_f ^ -1) != (oab.field_o ^ -1)) {
-                  pob.field_b = pob.field_b + 1;
-                  if (32 != pob.field_b) {
-                    break L15;
-                  } else {
-                    olb.d(991426348);
-                    break L15;
-                  }
+              L16: {
+                var6 = stackIn_32_0;
+                bq.a(true, var6 != 0, ip.field_p.width, ip.field_p.height);
+                if (param0) {
+                  break L16;
                 } else {
-                  if ((oab.field_o ^ -1) != 0) {
-                    if ((oab.field_o ^ -1) == 1) {
-                      var3 = 1;
-                      break L15;
+                  if ((wgb.field_f ^ -1) != (oab.field_o ^ -1)) {
+                    pob.field_b = pob.field_b + 1;
+                    if (32 != pob.field_b) {
+                      break L16;
                     } else {
-                      if (wqa.a(false, oab.field_o)) {
-                        lo.field_a[oab.field_o].b(0);
-                        break L15;
-                      } else {
-                        break L15;
-                      }
+                      olb.d(991426348);
+                      break L16;
                     }
                   } else {
-                    L16: {
-                      if (!jkb.field_a) {
-                        break L16;
-                      } else {
+                    if ((oab.field_o ^ -1) != 0) {
+                      if ((oab.field_o ^ -1) == 1) {
                         var3 = 1;
-                        var4 = 1;
                         break L16;
-                      }
-                    }
-                    L17: {
-                      if (!jkb.field_a) {
-                        break L17;
                       } else {
-                        if (null == vqa.field_g) {
-                          break L15;
+                        if (wqa.a(false, oab.field_o)) {
+                          lo.field_a[oab.field_o].b(0);
+                          break L16;
                         } else {
-                          if (vqa.field_g.field_N) {
-                            break L15;
-                          } else {
-                            break L17;
-                          }
-                        }
-                      }
-                    }
-                    L18: {
-                      stackOut_41_0 = vqa.field_g;
-                      stackOut_41_1 = 81;
-                      stackIn_43_0 = stackOut_41_0;
-                      stackIn_43_1 = stackOut_41_1;
-                      stackIn_42_0 = stackOut_41_0;
-                      stackIn_42_1 = stackOut_41_1;
-                      if (var5 != 0) {
-                        stackOut_43_0 = (uca) ((Object) stackIn_43_0);
-                        stackOut_43_1 = stackIn_43_1;
-                        stackOut_43_2 = 0;
-                        stackIn_44_0 = stackOut_43_0;
-                        stackIn_44_1 = stackOut_43_1;
-                        stackIn_44_2 = stackOut_43_2;
-                        break L18;
-                      } else {
-                        stackOut_42_0 = (uca) ((Object) stackIn_42_0);
-                        stackOut_42_1 = stackIn_42_1;
-                        stackOut_42_2 = 1;
-                        stackIn_44_0 = stackOut_42_0;
-                        stackIn_44_1 = stackOut_42_1;
-                        stackIn_44_2 = stackOut_42_2;
-                        break L18;
-                      }
-                    }
-                    ((uca) (Object) stackIn_44_0).a((byte) stackIn_44_1, stackIn_44_2 != 0);
-                    if (!jkb.field_a) {
-                      L19: while (true) {
-                        if (!ata.e(127)) {
-                          break L15;
-                        } else {
-                          if (!qmb.a(-22029)) {
-                            vqa.field_g.d((byte) 121);
-                            continue L19;
-                          } else {
-                            continue L19;
-                          }
+                          break L16;
                         }
                       }
                     } else {
-                      break L15;
+                      L17: {
+                        if (!jkb.field_a) {
+                          break L17;
+                        } else {
+                          var3 = 1;
+                          var4 = 1;
+                          break L17;
+                        }
+                      }
+                      L18: {
+                        if (!jkb.field_a) {
+                          break L18;
+                        } else {
+                          if (null == vqa.field_g) {
+                            break L16;
+                          } else {
+                            if (vqa.field_g.field_N) {
+                              break L16;
+                            } else {
+                              break L18;
+                            }
+                          }
+                        }
+                      }
+                      L19: {
+                        stackIn_43_0 = vqa.field_g;
+
+                        stackIn_43_1 = 81;
+
+                        if (var5 != 0) {
+                          stackIn_44_0 = (uca) ((Object) stackIn_43_0);
+                          stackIn_44_1 = stackIn_43_1;
+                          stackIn_44_2 = 0;
+                          break L19;
+                        } else {
+                          stackIn_44_0 = (uca) ((Object) stackIn_43_0);
+                          stackIn_44_1 = stackIn_43_1;
+                          stackIn_44_2 = 1;
+                          break L19;
+                        }
+                      }
+                      ((uca) (Object) stackIn_44_0).a((byte) stackIn_44_1, stackIn_44_2 != 0);
+                      if (!jkb.field_a) {
+                        L20: while (true) {
+                          if (!ata.e(127)) {
+                            break L16;
+                          } else {
+                            stackOut_47_0 = qmb.a(-22029);
+                            stackIn_59_0 = stackOut_47_0 ? 1 : 0;
+                            stackIn_48_0 = stackOut_47_0;
+                            if (!stackIn_48_0) {
+                              vqa.field_g.d((byte) 121);
+                              continue L20;
+                            } else {
+                              continue L20;
+                            }
+                          }
+                        }
+                      } else {
+                        break L16;
+                      }
                     }
                   }
                 }
               }
-            }
-            L20: {
-              glb.c(17043);
-              if (null == wca.field_b) {
-                break L20;
-              } else {
-                wca.field_b.b(0);
-                break L20;
-              }
+              stackIn_59_0 = 17043;
+              break L15;
             }
             L21: {
-              if (null == nna.field_C) {
+              glb.c(stackIn_59_0);
+              if (null == wca.field_b) {
                 break L21;
               } else {
-                if (!nna.field_C.c(13462)) {
-                  break L21;
-                } else {
-                  var3 = 0;
-                  var4 = 0;
-                  break L21;
-                }
+                wca.field_b.b(0);
+                break L21;
               }
             }
             L22: {
-              L23: {
+              if (null == nna.field_C) {
+                break L22;
+              } else {
+                if (!nna.field_C.c(13462)) {
+                  break L22;
+                } else {
+                  var3 = 0;
+                  var4 = 0;
+                  break L22;
+                }
+              }
+            }
+            L23: {
+              L24: {
                 if (di.field_l.a(-28208)) {
-                  break L23;
+                  break L24;
                 } else {
                   if (idb.field_o) {
-                    break L22;
+                    break L23;
                   } else {
                     if (nhb.field_p) {
-                      break L22;
+                      break L23;
                     } else {
                       if (lqa.field_o == null) {
-                        break L22;
+                        break L23;
                       } else {
                         if (lqa.field_o.field_fc) {
-                          break L23;
+                          break L24;
                         } else {
-                          break L22;
+                          break L23;
                         }
                       }
                     }
@@ -3376,212 +2907,208 @@ public final class VoidHunters extends ms {
               }
               var3 = 0;
               var4 = 0;
-              break L22;
+              break L23;
             }
-            L24: {
-              if (!jkb.field_a) {
-                break L24;
-              } else {
-                if (lu.field_d) {
-                  break L24;
+            L25: {
+              L26: {
+                if (!jkb.field_a) {
+                  break L26;
                 } else {
-                  if (dua.field_o) {
-                    break L24;
+                  if (lu.field_d) {
+                    break L26;
                   } else {
-                    L25: {
-                      if (!idb.field_o) {
-                        break L25;
-                      } else {
-                        if (!fva.field_p) {
-                          break L25;
-                        } else {
-                          var3 = 0;
-                          break L25;
-                        }
-                      }
-                    }
-                    L26: {
-                      m.a((byte) 21, var3 != 0);
-                      if (nhb.field_p) {
-                        ndb.field_a.a((byte) 98, var4 != 0);
-                        break L26;
-                      } else {
-                        break L26;
-                      }
-                    }
-                    L27: {
-                      if (idb.field_o) {
-                        if (vqa.field_g == null) {
-                          idb.field_o = false;
+                    if (dua.field_o) {
+                      break L26;
+                    } else {
+                      L27: {
+                        if (!idb.field_o) {
                           break L27;
                         } else {
-                          var7 = (-dma.field_g + ip.field_p.width) / 2;
-                          var8 = (-dma.field_j + ip.field_p.height) / 2;
-                          js.a(-119, var8, var7);
-                          hlb.a(tqa.e((byte) 93), var4 != 0, sea.a(-99), 123);
-                          cc.b(-1);
-                          if (vqa.field_g.field_N) {
-                            vqa.field_g.a((byte) 89, var4 != 0);
+                          if (!fva.field_p) {
                             break L27;
                           } else {
+                            var3 = 0;
                             break L27;
                           }
                         }
-                      } else {
-                        break L27;
                       }
-                    }
-                    var7 = 0;
-                    L28: while (true) {
-                      if (!ata.e(127)) {
-                        break L24;
-                      } else {
-                        if (qmb.a(-22029)) {
-                          continue L28;
+                      L28: {
+                        m.a((byte) 21, var3 != 0);
+                        if (nhb.field_p) {
+                          ndb.field_a.a((byte) 98, var4 != 0);
+                          break L28;
                         } else {
-                          L29: {
-                            L30: {
-                              if (!idb.field_o) {
-                                break L30;
-                              } else {
-                                if (pma.field_o == 9) {
-                                  break L30;
+                          break L28;
+                        }
+                      }
+                      L29: {
+                        if (idb.field_o) {
+                          if (vqa.field_g == null) {
+                            idb.field_o = false;
+                            break L29;
+                          } else {
+                            var7 = (-dma.field_g + ip.field_p.width) / 2;
+                            var8 = (-dma.field_j + ip.field_p.height) / 2;
+                            js.a(-119, var8, var7);
+                            hlb.a(tqa.e((byte) 93), var4 != 0, sea.a(-99), 123);
+                            cc.b(-1);
+                            if (vqa.field_g.field_N) {
+                              vqa.field_g.a((byte) 89, var4 != 0);
+                              break L29;
+                            } else {
+                              break L29;
+                            }
+                          }
+                        } else {
+                          break L29;
+                        }
+                      }
+                      var7 = 0;
+                      L30: while (true) {
+                        if (!ata.e(127)) {
+                          break L26;
+                        } else {
+                          if (qmb.a(-22029)) {
+                            continue L30;
+                          } else {
+                            stackIn_133_0 = idb.field_o;
+
+                            L31: {
+                              L32: {
+                                if (!stackIn_133_0) {
+                                  break L32;
                                 } else {
-                                  if ((pma.field_o ^ -1) == -11) {
-                                    break L30;
+                                  if (pma.field_o == 9) {
+                                    break L32;
                                   } else {
-                                    if ((pma.field_o ^ -1) != -12) {
-                                      L31: {
-                                        if (!fva.field_p) {
-                                          mjb.field_e = false;
-                                          break L31;
-                                        } else {
-                                          break L31;
-                                        }
-                                      }
-                                      L32: {
-                                        if (fva.field_p) {
-                                          break L32;
-                                        } else {
-                                          if (!me.field_r) {
-                                            if (na.field_q != pma.field_o) {
-                                              if ((vnb.field_p ^ -1) == (pma.field_o ^ -1)) {
-                                                fva.field_p = true;
-                                                mjb.field_e = true;
-                                                var7 = 1;
-                                                continue L28;
-                                              } else {
-                                                break L32;
-                                              }
-                                            } else {
-                                              var7 = 1;
-                                              mjb.field_e = false;
-                                              fva.field_p = true;
-                                              continue L28;
-                                            }
+                                    if ((pma.field_o ^ -1) == -11) {
+                                      break L32;
+                                    } else {
+                                      if ((pma.field_o ^ -1) != -12) {
+                                        L33: {
+                                          if (!fva.field_p) {
+                                            mjb.field_e = false;
+                                            break L33;
                                           } else {
-                                            if (pma.field_o == vu.field_Db) {
-                                              mjb.field_e = false;
-                                              fva.field_p = true;
-                                              var7 = 1;
-                                              continue L28;
-                                            } else {
-                                              if (jmb.field_p == pma.field_o) {
-                                                var7 = 1;
-                                                mjb.field_e = true;
-                                                fva.field_p = true;
-                                                continue L28;
+                                            break L33;
+                                          }
+                                        }
+                                        L34: {
+                                          if (fva.field_p) {
+                                            break L34;
+                                          } else {
+                                            if (!me.field_r) {
+                                              if (na.field_q != pma.field_o) {
+                                                if ((vnb.field_p ^ -1) == (pma.field_o ^ -1)) {
+                                                  fva.field_p = true;
+                                                  mjb.field_e = true;
+                                                  var7 = 1;
+                                                  continue L30;
+                                                } else {
+                                                  break L34;
+                                                }
                                               } else {
-                                                break L32;
+                                                var7 = 1;
+                                                mjb.field_e = false;
+                                                fva.field_p = true;
+                                                continue L30;
+                                              }
+                                            } else {
+                                              if (pma.field_o == vu.field_Db) {
+                                                mjb.field_e = false;
+                                                fva.field_p = true;
+                                                var7 = 1;
+                                                continue L30;
+                                              } else {
+                                                if (jmb.field_p == pma.field_o) {
+                                                  var7 = 1;
+                                                  mjb.field_e = true;
+                                                  fva.field_p = true;
+                                                  continue L30;
+                                                } else {
+                                                  break L34;
+                                                }
                                               }
                                             }
                                           }
                                         }
-                                      }
-                                      L33: {
-                                        if (var7 != 0) {
-                                          L34: {
-                                            dpa.field_p.h(24335, 69);
-                                            stackOut_113_0 = dpa.field_p;
-                                            stackOut_113_1 = 0;
-                                            stackIn_115_0 = stackOut_113_0;
-                                            stackIn_115_1 = stackOut_113_1;
-                                            stackIn_114_0 = stackOut_113_0;
-                                            stackIn_114_1 = stackOut_113_1;
-                                            if (mjb.field_e) {
-                                              stackOut_115_0 = (faa) ((Object) stackIn_115_0);
-                                              stackOut_115_1 = stackIn_115_1;
-                                              stackOut_115_2 = 1;
-                                              stackIn_116_0 = stackOut_115_0;
-                                              stackIn_116_1 = stackOut_115_1;
-                                              stackIn_116_2 = stackOut_115_2;
-                                              break L34;
-                                            } else {
-                                              stackOut_114_0 = (faa) ((Object) stackIn_114_0);
-                                              stackOut_114_1 = stackIn_114_1;
-                                              stackOut_114_2 = 0;
-                                              stackIn_116_0 = stackOut_114_0;
-                                              stackIn_116_1 = stackOut_114_1;
-                                              stackIn_116_2 = stackOut_114_2;
-                                              break L34;
-                                            }
-                                          }
-                                          ((faa) (Object) stackIn_116_0).c(stackIn_116_1, stackIn_116_2);
-                                          break L33;
-                                        } else {
-                                          break L33;
-                                        }
-                                      }
-                                      if (var7 != 0) {
-                                        break L29;
-                                      } else {
                                         L35: {
-                                          if (pma.field_o != 80) {
+                                          if (var7 != 0) {
+                                            L36: {
+                                              dpa.field_p.h(24335, 69);
+                                              stackIn_118_0 = dpa.field_p;
+
+                                              stackIn_118_1 = 0;
+
+                                              if (mjb.field_e) {
+                                                stackIn_119_0 = (faa) ((Object) stackIn_118_0);
+                                                stackIn_119_1 = stackIn_118_1;
+                                                stackIn_119_2 = 1;
+                                                break L36;
+                                              } else {
+                                                stackIn_119_0 = (faa) ((Object) stackIn_118_0);
+                                                stackIn_119_1 = stackIn_118_1;
+                                                stackIn_119_2 = 0;
+                                                break L36;
+                                              }
+                                            }
+                                            ((faa) (Object) stackIn_119_0).c(stackIn_119_1, stackIn_119_2);
                                             break L35;
                                           } else {
-                                            if (!fva.field_p) {
-                                              break L29;
-                                            } else {
-                                              break L35;
-                                            }
+                                            break L35;
                                           }
                                         }
-                                        if (gbb.a(13, 15, 12, (byte) 23)) {
-                                          continue L28;
+                                        if (var7 != 0) {
+                                          break L31;
                                         } else {
-                                          break L29;
+                                          L37: {
+                                            if (pma.field_o != 80) {
+                                              break L37;
+                                            } else {
+                                              if (!fva.field_p) {
+                                                break L31;
+                                              } else {
+                                                break L37;
+                                              }
+                                            }
+                                          }
+                                          if (gbb.a(13, 15, 12, (byte) 23)) {
+                                            continue L30;
+                                          } else {
+                                            break L31;
+                                          }
                                         }
+                                      } else {
+                                        break L32;
                                       }
-                                    } else {
-                                      break L30;
                                     }
                                   }
                                 }
                               }
-                            }
-                            if (!aka.field_p) {
-                              break L29;
-                            } else {
-                              if (jlb.b(12, -2048, 13, 15)) {
-                                continue L28;
+                              if (!aka.field_p) {
+                                break L31;
                               } else {
-                                break L29;
+                                if (jlb.b(12, -2048, 13, 15)) {
+                                  continue L30;
+                                } else {
+                                  break L31;
+                                }
                               }
                             }
-                          }
-                          L36: {
-                            if (nhb.field_p) {
-                              ndb.field_a.d((byte) -111);
-                              break L36;
-                            } else {
-                              break L36;
+                            L38: {
+                              if (nhb.field_p) {
+                                ndb.field_a.d((byte) -111);
+                                break L38;
+                              } else {
+                                break L38;
+                              }
                             }
-                          }
-                          if (idb.field_o) {
-                            vqa.field_g.d((byte) -16);
-                            continue L28;
-                          } else {
-                            continue L28;
+                            if (idb.field_o) {
+                              vqa.field_g.d((byte) -16);
+                              continue L30;
+                            } else {
+                              continue L30;
+                            }
                           }
                         }
                       }
@@ -3589,47 +3116,49 @@ public final class VoidHunters extends ms {
                   }
                 }
               }
+              stackIn_133_0 = jkb.field_a;
+              break L25;
             }
-            L37: {
-              if (jkb.field_a) {
-                break L37;
+            L39: {
+              if (stackIn_133_0) {
+                break L39;
               } else {
                 VoidHunters.m(-29130);
-                break L37;
+                break L39;
               }
             }
-            L38: {
+            L40: {
               if (aka.field_p) {
                 if ((ldb.field_o ^ -1) >= (vga.field_b ^ -1)) {
-                  break L38;
+                  break L40;
                 } else {
                   vga.field_b = vga.field_b + 1;
-                  break L38;
+                  break L40;
                 }
               } else {
                 if (0 < vga.field_b) {
                   vga.field_b = vga.field_b - 1;
-                  break L38;
+                  break L40;
                 } else {
-                  break L38;
+                  break L40;
                 }
               }
             }
-            L39: {
+            L41: {
               var7 = ldb.field_o * ldb.field_o;
               var8 = -(vga.field_b * vga.field_b) + var7;
               var9 = 120 * var8 / var7 + nv.field_v;
               ig.a(0, var9);
               if (dv.field_c.d(0) == null) {
-                break L39;
+                break L41;
               } else {
-                fieldTemp$2 = wva.field_b + 1;
+                fieldTemp$0 = wva.field_b + 1;
                 wva.field_b = wva.field_b + 1;
-                if (fieldTemp$2 != 335) {
-                  break L39;
+                if (fieldTemp$0 != 335) {
+                  break L41;
                 } else {
                   wva.field_b = 0;
-                  discarded$3 = dv.field_c.a(true);
+                  dv.field_c.a(true);
                   break L3;
                 }
               }
@@ -3637,103 +3166,73 @@ public final class VoidHunters extends ms {
             break L3;
           }
         }
-        L40: {
+        L42: {
           if (wgb.field_f != -3) {
-            break L40;
+            break L42;
           } else {
             wu.a(false, false);
-            break L40;
+            break L42;
           }
         }
-        L41: {
+        L43: {
           if (-4 == wgb.field_f) {
             dpa.field_p.h(24335, 9);
             wgb.field_f = oab.field_o;
             lu.field_d = true;
             vga.field_b = ldb.field_o;
-            break L41;
-          } else {
-            break L41;
-          }
-        }
-        L42: {
-          if (-5 != wgb.field_f) {
-            break L42;
-          } else {
-            sh.a(lqa.field_o.f((byte) -13), -1, 11);
-            dua.field_o = true;
-            wgb.field_f = oab.field_o;
-            break L42;
-          }
-        }
-        L43: {
-          if (param1 < -117) {
             break L43;
           } else {
-            this.field_B = -120;
             break L43;
           }
         }
         L44: {
-          if (-1 > (wh.field_n ^ -1)) {
-            wh.field_n = wh.field_n - 1;
+          if (-5 != wgb.field_f) {
             break L44;
           } else {
+            sh.a(lqa.field_o.f((byte) -13), -1, 11);
+            dua.field_o = true;
+            wgb.field_f = oab.field_o;
             break L44;
           }
         }
         L45: {
-          L46: {
+          if (param1 < -117) {
+            break L45;
+          } else {
+            this.field_B = -120;
+            break L45;
+          }
+        }
+        L46: {
+          if (-1 > (wh.field_n ^ -1)) {
+            wh.field_n = wh.field_n - 1;
+            break L46;
+          } else {
+            break L46;
+          }
+        }
+        L47: {
+          L48: {
             this.g((byte) -127);
             if (!ssa.b(2)) {
-              break L46;
+              break L48;
             } else {
               if (si.field_o[1]) {
                 li.field_i = true;
-                break L45;
+                break L47;
               } else {
-                break L46;
+                break L48;
               }
             }
           }
           if (!ssa.b(2)) {
-            break L45;
+            break L47;
           } else {
             if (si.field_o[2]) {
               li.field_i = false;
-              break L45;
-            } else {
-              break L45;
-            }
-          }
-        }
-        L47: {
-          if (!ssa.b(2)) {
-            break L47;
-          } else {
-            if (!si.field_o[3]) {
               break L47;
             } else {
-              nkb.a(false, "Selecting opengl toolkit...");
-              var11 = new int[]{1};
-              vq.field_x.a(false, fja.a(var11, 2));
-              nkb.a(false, "Done");
               break L47;
-            }
-          }
-        }
-        L48: {
-          if (!ssa.b(2)) {
-            break L48;
-          } else {
-            if (si.field_o[4]) {
-              nkb.a(false, "Selecting java toolkit...");
-              var12 = new int[]{0};
-              vq.field_x.a(false, fja.a(var12, 2));
-              nkb.a(false, "Done");
-              break L48;
-            } else {
-              break L48;
             }
           }
         }
@@ -3741,38 +3240,66 @@ public final class VoidHunters extends ms {
           if (!ssa.b(2)) {
             break L49;
           } else {
-            L50: {
+            if (!si.field_o[3]) {
+              break L49;
+            } else {
+              nkb.a(false, "Selecting opengl toolkit...");
+              var11 = new int[]{1};
+              vq.field_x.a(false, fja.a(var11, 2));
+              nkb.a(false, "Done");
+              break L49;
+            }
+          }
+        }
+        L50: {
+          if (!ssa.b(2)) {
+            break L50;
+          } else {
+            if (si.field_o[4]) {
+              nkb.a(false, "Selecting java toolkit...");
+              var12 = new int[]{0};
+              vq.field_x.a(false, fja.a(var12, 2));
+              nkb.a(false, "Done");
+              break L50;
+            } else {
+              break L50;
+            }
+          }
+        }
+        L51: {
+          if (!ssa.b(2)) {
+            break L51;
+          } else {
+            L52: {
               if (!si.field_o[55]) {
-                break L50;
+                break L52;
               } else {
                 if (!si.field_o[82]) {
-                  break L50;
+                  break L52;
                 } else {
-                  L51: {
+                  L53: {
                     iia.field_c = "This is a forced error, you pressed some crazy button combo";
                     if (!bqa.a(false)) {
-                      stackOut_195_0 = 0;
-                      stackIn_196_0 = stackOut_195_0;
-                      break L51;
+                      stackIn_200_0 = 0;
+                      break L53;
                     } else {
-                      stackOut_194_0 = 7;
-                      stackIn_196_0 = stackOut_194_0;
-                      break L51;
+                      stackIn_200_0 = 7;
+                      break L53;
                     }
                   }
-                  lha.a(stackIn_196_0, false, (byte) -85, 6);
-                  break L50;
+                  lha.a(stackIn_200_0, false, (byte) -85, 6);
+                  break L52;
                 }
               }
             }
-            break L49;
+            break L51;
           }
         }
     }
 
     private final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         if (0 >= param2) {
           return;
         } else {
@@ -3832,11 +3359,14 @@ public final class VoidHunters extends ms {
 
     final void d(int param0) {
         try {
-            boolean discarded$1 = false;
+            int stackIn_81_0 = 0;
+            int stackIn_82_0 = 0;
+            int stackIn_82_1 = 0;
+            Throwable decompiledCaughtException = null;
             int var3_int = 0;
             hua var3 = null;
-            jkb var4 = null;
             int var4_int = 0;
+            jkb var4 = null;
             int var5_int = 0;
             String var5 = null;
             int var6 = 0;
@@ -3845,18 +3375,6 @@ public final class VoidHunters extends ms {
             kla var8_ref_kla = null;
             int var9 = 0;
             java.awt.Canvas var10 = null;
-            int stackIn_79_0 = 0;
-            int stackIn_80_0 = 0;
-            int stackIn_81_0 = 0;
-            int stackIn_82_0 = 0;
-            int stackIn_82_1 = 0;
-            Throwable decompiledCaughtException = null;
-            int stackOut_78_0 = 0;
-            int stackOut_79_0 = 0;
-            int stackOut_80_0 = 0;
-            int stackOut_80_1 = 0;
-            int stackOut_81_0 = 0;
-            int stackOut_81_1 = 0;
             L0: {
               var9 = field_G;
               ip.field_p = df.e((byte) 102).getSize();
@@ -3915,7 +3433,7 @@ public final class VoidHunters extends ms {
                             if (og.field_r.s()) {
                               break L5;
                             } else {
-                              discarded$1 = og.field_r.b();
+                              og.field_r.b();
                               break L5;
                             }
                           }
@@ -4149,30 +3667,23 @@ public final class VoidHunters extends ms {
                     }
                     L23: {
                       L24: {
-                        stackOut_78_0 = 0;
-                        stackIn_81_0 = stackOut_78_0;
-                        stackIn_79_0 = stackOut_78_0;
+                        stackIn_81_0 = 0;
+
                         if ((pk.field_o ^ -1) == 0) {
                           break L24;
                         } else {
-                          stackOut_79_0 = stackIn_79_0;
-                          stackIn_81_0 = stackOut_79_0;
-                          stackIn_80_0 = stackOut_79_0;
+
                           if ((noa.field_q ^ -1) == 0) {
                             break L24;
                           } else {
-                            stackOut_80_0 = stackIn_80_0;
-                            stackOut_80_1 = 1;
-                            stackIn_82_0 = stackOut_80_0;
-                            stackIn_82_1 = stackOut_80_1;
+                            stackIn_82_0 = stackIn_81_0;
+                            stackIn_82_1 = 1;
                             break L23;
                           }
                         }
                       }
-                      stackOut_81_0 = stackIn_81_0;
-                      stackOut_81_1 = 0;
-                      stackIn_82_0 = stackOut_81_0;
-                      stackIn_82_1 = stackOut_81_1;
+                      stackIn_82_0 = stackIn_81_0;
+                      stackIn_82_1 = 0;
                       break L23;
                     }
                     L25: {

@@ -16,7 +16,6 @@ final class sj implements fc {
     private int field_l;
 
     public final void a(int param0, lk param1, byte param2, boolean param3, int param4) {
-        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -27,34 +26,20 @@ final class sj implements fc {
         int var14 = 0;
         fh var15 = null;
         lk stackIn_3_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        lk stackOut_2_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
               if (param1 instanceof fh) {
-                stackOut_2_0 = (lk) (param1);
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (lk) (param1);
                 break L1;
               } else {
-                stackOut_1_0 = null;
-                stackIn_3_0 = (lk) ((Object) stackOut_1_0);
+                stackIn_3_0 = null;
                 break L1;
               }
             }
@@ -89,7 +74,7 @@ final class sj implements fc {
             na.a(var7, var8, var11 + var7, var12 + var8, 1);
             if (null != this.field_i) {
               var14 = var15.field_I + (var15.field_H - -this.field_h);
-              discarded$1 = this.field_i.a(param1.field_h, param1.field_r + param4 - -var14, param0 - -param1.field_i + this.field_e, -this.field_h + (-var14 + param1.field_k), -(this.field_h << -1814982111) + param1.field_m, this.field_b, this.field_g, 1, 1, 0);
+              this.field_i.a(param1.field_h, param1.field_r + param4 - -var14, param0 - -param1.field_i + this.field_e, -this.field_h + (-var14 + param1.field_k), -(this.field_h << -1814982111) + param1.field_m, this.field_b, this.field_g, 1, 1, 0);
               break L0;
             } else {
               return;
@@ -99,27 +84,19 @@ final class sj implements fc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var6);
-            stackOut_10_1 = new StringBuilder().append("sj.B(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var6);
+
+            stackIn_12_1 = new StringBuilder().append("sj.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }

@@ -7,97 +7,59 @@ final class te {
     private static double[] field_a;
 
     final static void a(int param0, int param1, int param2, int[] param3) {
-        int var4 = 0;
         int var5 = 0;
-        L0: {
-          if (param1 < gf.field_f) {
-            break L0;
-          } else {
-            if (param1 < gf.field_e) {
-              L1: {
-                if (param0 >= gf.field_j) {
-                  break L1;
-                } else {
-                  param2 = param2 - (gf.field_j - param0);
-                  param0 = gf.field_j;
-                  break L1;
-                }
-              }
-              L2: {
-                if (param0 + param2 <= gf.field_h) {
-                  break L2;
-                } else {
-                  param2 = gf.field_h - param0;
-                  break L2;
-                }
-              }
-              var4 = param1 * gf.field_i + param0;
-              L3: while (true) {
-                param2--;
-                if (param2 < 0) {
-                  return;
-                } else {
-                  L4: {
-                    var5 = 16 + (int)(32.0 * te.c(param0 + 102, param1 - 43, 0.125));
-                    if (var5 >= 0) {
-                      break L4;
-                    } else {
-                      var5 = 0;
-                      break L4;
-                    }
-                  }
-                  L5: {
-                    if (var5 <= 31) {
-                      break L5;
-                    } else {
-                      var5 = 31;
-                      break L5;
-                    }
-                  }
-                  gf.field_b[var4] = param3[var5];
-                  param0++;
-                  var4++;
-                  continue L3;
-                }
-              }
-            } else {
-              break L0;
+        if (param1 < gf.field_f || param1 >= gf.field_e) {
+            return;
+        }
+        if (param0 < gf.field_j) {
+            param2 = param2 - (gf.field_j - param0);
+            param0 = gf.field_j;
+        }
+        if (param0 + param2 > gf.field_h) {
+            param2 = gf.field_h - param0;
+        }
+        int var4 = param1 * gf.field_i + param0;
+        while (true) {
+            param2--;
+            if (param2 < 0) {
+                break;
             }
-          }
+            var5 = 16 + (int)(32.0 * te.c(param0 + 102, param1 - 43, 0.125));
+            if (var5 < 0) {
+                var5 = 0;
+            }
+            if (var5 > 31) {
+                var5 = 31;
+            }
+            gf.field_b[var4] = param3[var5];
+            param0++;
+            var4++;
         }
     }
 
     final static int[] b(int param0, int param1, double param2) {
-        int[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        double[][] var8 = null;
-        double var9 = 0.0;
-        double var11 = 0.0;
-        double var13 = 0.0;
-        double var15 = 0.0;
-        double var17 = 0.0;
-        double var19 = 0.0;
-        double var21 = 0.0;
-        ve var23 = null;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        double[][] var27 = null;
-        double[][] var28 = null;
         double stackIn_7_0 = 0.0;
         double stackIn_10_0 = 0.0;
         double stackIn_16_0 = 0.0;
         double stackIn_19_0 = 0.0;
-        double stackOut_6_0 = 0.0;
-        double stackOut_5_0 = 0.0;
-        double stackOut_9_0 = 0.0;
-        double stackOut_8_0 = 0.0;
-        double stackOut_15_0 = 0.0;
-        double stackOut_14_0 = 0.0;
-        double stackOut_18_0 = 0.0;
-        double stackOut_17_0 = 0.0;
+        int[] var4;
+        int var5;
+        int var6;
+        int var7;
+        double[][] var8;
+        double var9;
+        double var11;
+        double var13;
+        double var15;
+        double var17;
+        double var19;
+        double var21;
+        ve var23;
+        int var24;
+        int var25;
+        int var26;
+        double[][] var27;
+        double[][] var28;
         var4 = new int[param0 * param1];
         var7 = 0;
         var28 = te.a(param0, param1, param2);
@@ -116,24 +78,20 @@ final class te {
               } else {
                 L2: {
                   if (var5 != 0) {
-                    stackOut_6_0 = var8[var5 - 1][var6];
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = var8[var5 - 1][var6];
                     break L2;
                   } else {
-                    stackOut_5_0 = var28[0][var6];
-                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_0 = var28[0][var6];
                     break L2;
                   }
                 }
                 L3: {
                   var9 = stackIn_7_0;
                   if (var5 != param0 - 1) {
-                    stackOut_9_0 = var8[var5 + 1][var6];
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = var8[var5 + 1][var6];
                     break L3;
                   } else {
-                    stackOut_8_0 = var8[param0 - 1][var6];
-                    stackIn_10_0 = stackOut_8_0;
+                    stackIn_10_0 = var8[param0 - 1][var6];
                     break L3;
                   }
                 }
@@ -156,24 +114,20 @@ final class te {
                 }
                 L6: {
                   if (var6 != 0) {
-                    stackOut_15_0 = var28[var5][var6 - 1];
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = var28[var5][var6 - 1];
                     break L6;
                   } else {
-                    stackOut_14_0 = var28[var5][0];
-                    stackIn_16_0 = stackOut_14_0;
+                    stackIn_16_0 = var28[var5][0];
                     break L6;
                   }
                 }
                 L7: {
                   var15 = stackIn_16_0;
                   if (var6 != param1 - 1) {
-                    stackOut_18_0 = var28[var5][var6 + 1];
-                    stackIn_19_0 = stackOut_18_0;
+                    stackIn_19_0 = var28[var5][var6 + 1];
                     break L7;
                   } else {
-                    stackOut_17_0 = var28[var5][param1 - 1];
-                    stackIn_19_0 = stackOut_17_0;
+                    stackIn_19_0 = var28[var5][param1 - 1];
                     break L7;
                   }
                 }
@@ -302,13 +256,13 @@ final class te {
     }
 
     final static cn a(int param0, int param1, int param2, int[] param3, int param4, int param5, double param6) {
-        int incrementValue$1 = 0;
-        cn var8 = null;
-        int[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int incrementValue$0 = 0;
+        cn var8;
+        int[] var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         var8 = new cn(param0, param1);
         var9 = var8.field_B;
         var10 = 0;
@@ -337,9 +291,9 @@ final class te {
                     break L3;
                   }
                 }
-                incrementValue$1 = var10;
+                incrementValue$0 = var10;
                 var10++;
-                var9[incrementValue$1] = param3[var13];
+                var9[incrementValue$0] = param3[var13];
                 var12++;
                 continue L1;
               } else {
@@ -382,63 +336,33 @@ final class te {
     }
 
     final static void b(int param0, int param1, int param2, int[] param3) {
-        int var4 = 0;
         int var5 = 0;
-        L0: {
-          if (param0 < gf.field_j) {
-            break L0;
-          } else {
-            if (param0 < gf.field_h) {
-              L1: {
-                if (param1 >= gf.field_f) {
-                  break L1;
-                } else {
-                  param2 = param2 - (gf.field_f - param1);
-                  param1 = gf.field_f;
-                  break L1;
-                }
-              }
-              L2: {
-                if (param1 + param2 <= gf.field_e) {
-                  break L2;
-                } else {
-                  param2 = gf.field_e - param1;
-                  break L2;
-                }
-              }
-              var4 = param1 * gf.field_i + param0;
-              L3: while (true) {
-                param2--;
-                if (param2 < 0) {
-                  return;
-                } else {
-                  L4: {
-                    var5 = 16 + (int)(32.0 * te.c(param0 + 102, param1 - 43, 0.125));
-                    if (var5 >= 0) {
-                      break L4;
-                    } else {
-                      var5 = 0;
-                      break L4;
-                    }
-                  }
-                  L5: {
-                    if (var5 <= 31) {
-                      break L5;
-                    } else {
-                      var5 = 31;
-                      break L5;
-                    }
-                  }
-                  gf.field_b[var4] = param3[var5];
-                  param1++;
-                  var4 = var4 + gf.field_i;
-                  continue L3;
-                }
-              }
-            } else {
-              break L0;
+        if (param0 < gf.field_j || param0 >= gf.field_h) {
+            return;
+        }
+        if (param1 < gf.field_f) {
+            param2 = param2 - (gf.field_f - param1);
+            param1 = gf.field_f;
+        }
+        if (param1 + param2 > gf.field_e) {
+            param2 = gf.field_e - param1;
+        }
+        int var4 = param1 * gf.field_i + param0;
+        while (true) {
+            param2--;
+            if (param2 < 0) {
+                break;
             }
-          }
+            var5 = 16 + (int)(32.0 * te.c(param0 + 102, param1 - 43, 0.125));
+            if (var5 < 0) {
+                var5 = 0;
+            }
+            if (var5 > 31) {
+                var5 = 31;
+            }
+            gf.field_b[var4] = param3[var5];
+            param1++;
+            var4 = var4 + gf.field_i;
         }
     }
 

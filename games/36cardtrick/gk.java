@@ -22,7 +22,7 @@ abstract class gk {
     abstract long a(int param0);
 
     final int a(long param0, int param1) {
-        long var4 = 0L;
+        long var4;
         if (param1 > -124) {
           L0: {
             gk.c(25);

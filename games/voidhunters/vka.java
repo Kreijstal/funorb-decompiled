@@ -30,12 +30,9 @@ class vka {
 
     final static vka a(eab param0, java.awt.Component param1, int param2, int param3) {
         try {
-            mob discarded$2 = null;
             cob var4 = null;
             Throwable var4_ref = null;
             cob var5 = null;
-            cob stackIn_9_0 = null;
-            int stackIn_9_1 = 0;
             cob stackIn_10_0 = null;
             int stackIn_10_1 = 0;
             cob stackIn_11_0 = null;
@@ -43,15 +40,6 @@ class vka {
             int stackIn_11_2 = 0;
             cob stackIn_21_0 = null;
             Throwable decompiledCaughtException = null;
-            cob stackOut_8_0 = null;
-            int stackOut_8_1 = 0;
-            cob stackOut_10_0 = null;
-            int stackOut_10_1 = 0;
-            int stackOut_10_2 = 0;
-            cob stackOut_9_0 = null;
-            int stackOut_9_1 = 0;
-            int stackOut_9_2 = 0;
-            cob stackOut_20_0 = null;
             if (field_s != 0) {
               L0: {
                 if (param2 < 0) {
@@ -71,27 +59,19 @@ class vka {
                         L3: {
                           var5 = new cob();
                           var4 = var5;
-                          stackOut_8_0 = (cob) (var4);
-                          stackOut_8_1 = 256;
-                          stackIn_10_0 = stackOut_8_0;
-                          stackIn_10_1 = stackOut_8_1;
-                          stackIn_9_0 = stackOut_8_0;
-                          stackIn_9_1 = stackOut_8_1;
+                          stackIn_10_0 = (cob) (var4);
+
+                          stackIn_10_1 = 256;
+
                           if (!field_r) {
-                            stackOut_10_0 = (cob) ((Object) stackIn_10_0);
-                            stackOut_10_1 = stackIn_10_1;
-                            stackOut_10_2 = 1;
-                            stackIn_11_0 = stackOut_10_0;
-                            stackIn_11_1 = stackOut_10_1;
-                            stackIn_11_2 = stackOut_10_2;
+                            stackIn_11_0 = (cob) ((Object) stackIn_10_0);
+                            stackIn_11_1 = stackIn_10_1;
+                            stackIn_11_2 = 1;
                             break L3;
                           } else {
-                            stackOut_9_0 = (cob) ((Object) stackIn_9_0);
-                            stackOut_9_1 = stackIn_9_1;
-                            stackOut_9_2 = 2;
-                            stackIn_11_0 = stackOut_9_0;
-                            stackIn_11_1 = stackOut_9_1;
-                            stackIn_11_2 = stackOut_9_2;
+                            stackIn_11_0 = (cob) ((Object) stackIn_10_0);
+                            stackIn_11_1 = stackIn_10_1;
+                            stackIn_11_2 = 2;
                             break L3;
                           }
                         }
@@ -117,7 +97,7 @@ class vka {
                             } else {
                               field_e = new mia();
                               field_e.field_d = param0;
-                              discarded$2 = param0.a(0, field_u, (Runnable) ((Object) field_e));
+                              param0.a(0, field_u, (Runnable) ((Object) field_e));
                               break L5;
                             }
                           }
@@ -134,8 +114,7 @@ class vka {
                             }
                           }
                         }
-                        stackOut_20_0 = (cob) (var4);
-                        stackIn_21_0 = stackOut_20_0;
+                        stackIn_21_0 = (cob) (var4);
                         break L2;
                       }
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -162,12 +141,12 @@ class vka {
 
     final synchronized void h() {
         try {
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             long var1 = 0L;
             Exception var3 = null;
             int var3_int = 0;
             int var4 = 0;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
             if (!this.field_a) {
               var1 = wt.a(false);
               try {
@@ -352,35 +331,12 @@ class vka {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_s = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_r = stackIn_7_0 != 0;
-              field_u = param2;
-              return;
-            } else {
-              break L0;
-            }
-          }
+        if (param0 < 8000 || param0 > 48000) {
+            throw new IllegalArgumentException();
         }
-        throw new IllegalArgumentException();
+        field_s = param0;
+        field_r = param1 ? true : false;
+        field_u = param2;
     }
 
     final synchronized void a(f param0) {
@@ -410,22 +366,22 @@ class vka {
     }
 
     private final void a(int[] param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7_int = 0;
-        f var7 = null;
-        int var8_int = 0;
-        f[] var8 = null;
-        int var9 = 0;
-        Object var10 = null;
-        f var11 = null;
-        dl var12 = null;
-        int var13 = 0;
-        f var14 = null;
-        f var15 = null;
-        int var15_int = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7_int;
+        Object var7;
+        int var8_int;
+        f[] var8;
+        int var9;
+        Object var10;
+        f var11;
+        dl var12;
+        int var13;
+        f var14;
+        int var15_int;
+        f var15;
         L0: {
           var3 = param1;
           if (!field_r) {
@@ -580,9 +536,9 @@ class vka {
                         var6++;
                         continue L14;
                       } else {
-                        var10 = var7.field_d;
-                        var7.field_d = null;
-                        var7 = (f) (var10);
+                        var10 = ((f) (var7)).field_d;
+                        ((f) (var7)).field_d = null;
+                        var7 = var10;
                         continue L15;
                       }
                     }
@@ -618,8 +574,8 @@ class vka {
     }
 
     final synchronized void e() {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         L0: {
           if (field_e == null) {
             break L0;

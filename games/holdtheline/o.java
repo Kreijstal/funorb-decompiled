@@ -43,9 +43,9 @@ final class o {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        uh discarded$1 = null;
-        RuntimeException var7 = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -61,7 +61,6 @@ final class o {
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
-        RuntimeException decompiledCaughtException = null;
         var22 = HoldTheLine.field_D;
         try {
           L0: {
@@ -95,7 +94,7 @@ final class o {
               if (param5 == -4441) {
                 break L4;
               } else {
-                discarded$1 = o.a((byte) -27);
+                o.a((byte) -27);
                 break L4;
               }
             }

@@ -131,10 +131,8 @@ final class tk {
             }
             try {
                 if (false) throw (IOException) null;
-                if (0 <= var2_int) {
-                    if (-30001L <= (ea.i((byte) -128) ^ -1L)) {
-                        return false;
-                    }
+                if (0 <= var2_int && -30001L <= (ea.i((byte) -128) ^ -1L)) {
+                    return false;
                 }
                 si.d(65280);
             } catch (IOException iOException) {

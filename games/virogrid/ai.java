@@ -34,8 +34,8 @@ final class ai {
     }
 
     final static void a(boolean param0) {
-        Object var1 = null;
-        qg var1_ref = null;
+        Object var1;
+        qg var1_ref;
         var1 = null;
         if (param0) {
           var1_ref = (qg) ((Object) jk.field_a.b(15));

@@ -17,9 +17,9 @@ abstract class jb implements vb {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var1;
+        int var2;
+        int var3;
         if (param0 != -89) {
           field_c = (String) null;
           var1 = ug.field_b * ug.field_b;

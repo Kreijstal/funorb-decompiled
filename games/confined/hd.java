@@ -10,19 +10,16 @@ final class hd {
     static String field_c;
 
     final static String a(long param0, byte param1) {
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        int discarded$7 = 0;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
-        int var3 = 0;
-        long var4 = 0L;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        StringBuilder var12 = null;
-        StringBuilder var13 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        int var3;
+        long var4;
+        long var7;
+        int var9;
+        int var10;
+        int var11;
+        StringBuilder var12;
+        StringBuilder var13;
         var11 = Confined.field_J ? 1 : 0;
         if (param0 > 0L) {
           if (-6582952005840035282L < (param0 ^ -1L)) {
@@ -35,7 +32,7 @@ final class hd {
                     var12 = new StringBuilder(var3);
                     L1: while (true) {
                       if (0L == param0) {
-                        discarded$5 = var12.reverse();
+                        var12.reverse();
                         var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
                         return var12.toString();
                       } else {
@@ -52,7 +49,7 @@ final class hd {
                             break L2;
                           }
                         }
-                        discarded$6 = var12.append((char) var9);
+                        discarded$2 = var12.append((char) var9);
                         continue L1;
                       }
                     }
@@ -63,13 +60,13 @@ final class hd {
                   }
                 }
               } else {
-                discarded$7 = hd.a(98);
+                hd.a(98);
                 L3: while (true) {
                   if (var4 == 0L) {
                     var13 = new StringBuilder(var3);
                     L4: while (true) {
                       if (0L == param0) {
-                        discarded$8 = var13.reverse();
+                        var13.reverse();
                         var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
                         return var13.toString();
                       } else {
@@ -86,7 +83,7 @@ final class hd {
                             break L5;
                           }
                         }
-                        discarded$9 = var13.append((char) var9);
+                        discarded$3 = var13.append((char) var9);
                         continue L4;
                       }
                     }
@@ -109,11 +106,10 @@ final class hd {
     }
 
     public static void a(boolean param0) {
-        String discarded$0 = null;
         field_a = null;
         field_c = null;
         if (!param0) {
-            discarded$0 = hd.a(10L, (byte) 3);
+            hd.a(10L, (byte) 3);
             field_e = null;
             return;
         }

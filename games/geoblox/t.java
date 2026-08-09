@@ -51,11 +51,10 @@ final class t {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_i = (int[][]) null;
         field_k = null;
         if (param0 != 17348) {
-            discarded$0 = t.b(-123);
+            t.b(-123);
         }
     }
 

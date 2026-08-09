@@ -20,16 +20,15 @@ final class pd extends hb {
     }
 
     final static String a(byte param0, long param1) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        int var3 = 0;
-        long var4 = 0L;
-        StringBuilder var6 = null;
-        int var7 = 0;
-        long var8 = 0L;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        StringBuilder discarded$1 = null;
+        int var3;
+        long var4;
+        StringBuilder var6;
+        int var7;
+        long var8;
+        int var10;
+        int var11;
+        int var12;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 > 0L) {
           if (6582952005840035281L > param1) {
@@ -44,7 +43,7 @@ final class pd extends hb {
                   var6 = new StringBuilder(var3);
                   L1: while (true) {
                     if ((param1 ^ -1L) == -1L) {
-                      discarded$2 = var6.reverse();
+                      var6.reverse();
                       var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                       return var6.toString();
                     } else {
@@ -61,7 +60,7 @@ final class pd extends hb {
                           break L2;
                         }
                       }
-                      discarded$3 = var6.append((char) var10);
+                      discarded$1 = var6.append((char) var10);
                       continue L1;
                     }
                   }
@@ -81,9 +80,8 @@ final class pd extends hb {
     }
 
     final int b(byte param0) {
-        int discarded$0 = 0;
         if (param0 != -61) {
-            discarded$0 = this.b((byte) 6);
+            this.b((byte) 6);
             return this.field_i.b(0);
         }
         return this.field_i.b(0);

@@ -31,15 +31,10 @@ class or extends fi {
 
     or(int param0, int param1, int param2, int param3, int param4, float param5) {
         super(param0, param1, param2, param3, param4);
-        int var8 = TombRacer.field_G ? 1 : 0;
-        this.field_i = new int[this.field_a];
         int var7 = 0;
-        while (this.field_a > var7) {
+        this.field_i = new int[this.field_a];
+        for (var7 = 0; this.field_a > var7; var7++) {
             this.field_i[var7] = (short)(int)(Math.pow((double)param5, (double)var7) * 4096.0);
-            var7++;
-            if (var8 != 0) {
-                return;
-            }
         }
     }
 
@@ -80,8 +75,8 @@ class or extends fi {
     }
 
     final static void d(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = qd.a((byte) 82);
         var2 = mg.a(-62);
         qqa.field_t.a((byte) 57, var1 - -(ro.field_p << 1553777153), -lsa.field_b + jua.field_d, am.field_o + -ro.field_p, (lsa.field_b << -1226152383) + var2);

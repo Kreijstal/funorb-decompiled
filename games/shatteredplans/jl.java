@@ -37,19 +37,19 @@ abstract class jl extends w {
     }
 
     void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         gf.i(param0 + 6, param2 - -35, -12 + this.field_x, -40 + this.field_n, 2105376, 0);
         var4 = 35;
@@ -106,7 +106,7 @@ abstract class jl extends w {
               }
             }
           } else {
-            if (gf.field_a <= var8) {
+            if ((gf.field_a ^ -1) >= (var8 ^ -1)) {
               if (var8 < gf.field_f) {
                 L4: {
                   var9 = var5 + var7 * (-var5 + var6) / var4;
@@ -221,11 +221,11 @@ abstract class jl extends w {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int var3 = 0;
-        String var4 = null;
-        Object var5 = null;
-        String var6 = null;
-        CharSequence var7 = null;
+        int var3;
+        String var4;
+        Object var5;
+        String var6;
+        CharSequence var7;
         L0: {
           if (param0 == -21) {
             break L0;
@@ -347,12 +347,9 @@ abstract class jl extends w {
 
     final static int a(nf param0, byte param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int stackIn_3_0 = 0;
         int stackIn_17_0 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -360,16 +357,7 @@ abstract class jl extends w {
         String stackIn_21_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException var2 = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -411,13 +399,11 @@ abstract class jl extends w {
                   }
                 }
               }
-              stackOut_16_0 = var2_int;
-              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_0 = var2_int;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = -19;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = -19;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -426,27 +412,19 @@ abstract class jl extends w {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var2);
-            stackOut_18_1 = new StringBuilder().append("jl.H(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var2);
+
+            stackIn_20_1 = new StringBuilder().append("jl.H(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L3;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L3;
             }
           }

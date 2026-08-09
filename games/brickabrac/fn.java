@@ -8,22 +8,20 @@ final class fn {
     int[] field_d;
 
     fn() {
-        int discarded$8 = 0;
         int var1 = 0;
-        int discarded$13 = 0;
-        int discarded$7 = bk.c(16);
+        bk.c(16);
         this.field_b = bk.b() != 0 ? bk.c(4) + 1 : 1;
         if (bk.b() != 0) {
-            discarded$8 = bk.c(8);
+            bk.c(8);
         }
-        int discarded$12 = bk.c(2);
+        bk.c(2);
         if (this.field_b > 1) {
             this.field_c = bk.c(4);
         }
         this.field_d = new int[this.field_b];
         this.field_a = new int[this.field_b];
         for (var1 = 0; var1 < this.field_b; var1++) {
-            discarded$13 = bk.c(8);
+            bk.c(8);
             this.field_d[var1] = bk.c(8);
             this.field_a[var1] = bk.c(8);
         }

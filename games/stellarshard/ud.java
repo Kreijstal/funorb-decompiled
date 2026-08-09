@@ -9,13 +9,13 @@ final class ud extends gb {
     int field_p;
 
     final ud a(qh param0) {
-        int dupTemp$2 = 0;
+        int dupTemp$1 = 0;
         this.field_n = param0.a(85, this.field_n);
         this.field_m = param0.a(this.field_m, 15);
         if (this.field_l == this.field_p) {
-          dupTemp$2 = param0.b(this.field_l, -10689);
-          this.field_p = dupTemp$2;
-          this.field_l = dupTemp$2;
+          dupTemp$1 = param0.b(this.field_l, -10689);
+          this.field_p = dupTemp$1;
+          this.field_l = dupTemp$1;
           return (ud) (this);
         } else {
           L0: {

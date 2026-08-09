@@ -13,7 +13,7 @@ class nh extends sk {
     private long field_j;
 
     final static boolean a(int param0, boolean param1) {
-        long dupTemp$3 = 0L;
+        long dupTemp$2 = 0L;
         L0: {
           if (null != am.field_c) {
             break L0;
@@ -24,9 +24,9 @@ class nh extends sk {
         }
         if (param0 != (am.field_c.field_f ^ -1)) {
           L1: {
-            dupTemp$3 = ih.a((byte) -98);
-            t.field_d = dupTemp$3;
-            ka.field_o = dupTemp$3;
+            dupTemp$2 = ih.a((byte) -98);
+            t.field_d = dupTemp$2;
+            ka.field_o = dupTemp$2;
             if (-2 != (am.field_c.field_f ^ -1)) {
               break L1;
             } else {
@@ -49,11 +49,10 @@ class nh extends sk {
     }
 
     final void a(int param0, ka param1) {
-        ua discarded$0 = null;
         try {
             param1.a((byte) 122, this.field_j);
             if (param0 != 95) {
-                discarded$0 = this.a(-10);
+                this.a(-10);
             }
             param1.a(false, this.field_i);
         } catch (RuntimeException runtimeException) {
@@ -72,7 +71,6 @@ class nh extends sk {
 
     final static void a(le param0, byte param1, int param2) {
         int var4 = 0;
-        int discarded$0 = 0;
         ha var5 = pg.field_fb;
         var5.f(param2, 950);
         if (param1 != -30) {
@@ -88,7 +86,7 @@ class nh extends sk {
                 var5.a(false, param0.field_p.length);
                 var5.a(param0.field_p.length, 0, (byte) -13, param0.field_p);
             }
-            discarded$0 = var5.c(var4, (byte) -3);
+            var5.c(var4, (byte) -3);
             var5.field_k = var5.field_k - 4;
             param0.field_o = var5.b(false);
             var5.a(-var4 + var5.field_k, (byte) 70);
@@ -98,7 +96,18 @@ class nh extends sk {
     }
 
     final static String a(CharSequence param0, boolean param1) {
-        StringBuilder discarded$2 = null;
+        StringBuilder discarded$0 = null;
+        Object stackIn_3_0 = null;
+        String stackIn_10_0 = null;
+        Object stackIn_29_0 = null;
+        String stackIn_31_0 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        String stackIn_35_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -108,31 +117,6 @@ class nh extends sk {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        Object stackIn_3_0 = null;
-        String stackIn_10_0 = null;
-        Object stackIn_29_0 = null;
-        String stackIn_31_0 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_30_0 = null;
-        Object stackOut_28_0 = null;
-        String stackOut_9_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
         var9 = stellarshard.field_B;
         try {
           L0: {
@@ -174,13 +158,11 @@ class nh extends sk {
                         L5: while (true) {
                           if (var3 <= var6) {
                             if (-1 != (var5.length() ^ -1)) {
-                              stackOut_30_0 = var5.toString();
-                              stackIn_31_0 = stackOut_30_0;
+                              stackIn_31_0 = var5.toString();
                               decompiledRegionSelector0 = 3;
                               break L0;
                             } else {
-                              stackOut_28_0 = null;
-                              stackIn_29_0 = stackOut_28_0;
+                              stackIn_29_0 = null;
                               decompiledRegionSelector0 = 2;
                               break L0;
                             }
@@ -190,7 +172,7 @@ class nh extends sk {
                               if (s.a(45, (char) var7)) {
                                 var8 = of.a(-119, (char) var7);
                                 if (var8 != 0) {
-                                  discarded$2 = var5.append((char) var8);
+                                  discarded$0 = var5.append((char) var8);
                                   break L6;
                                 } else {
                                   break L6;
@@ -211,15 +193,13 @@ class nh extends sk {
                     }
                   }
                 } else {
-                  stackOut_9_0 = (String) null;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = (String) null;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -228,27 +208,19 @@ class nh extends sk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) (var2);
-            stackOut_32_1 = new StringBuilder().append("nh.D(");
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackIn_34_0 = (RuntimeException) (var2);
+
+            stackIn_34_1 = new StringBuilder().append("nh.D(");
+
             if (param0 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L7;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L7;
             }
           }
@@ -270,21 +242,21 @@ class nh extends sk {
     }
 
     final static void c(int param0) {
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = stellarshard.field_B;
         try {
           L0: {
@@ -304,30 +276,30 @@ class nh extends sk {
                 }
                 break L0;
               } else {
-                incrementValue$16 = var2;
+                incrementValue$8 = var2;
                 var2++;
-                var5[incrementValue$16] = 0;
-                incrementValue$17 = var2;
+                var5[incrementValue$8] = 0;
+                incrementValue$9 = var2;
                 var2++;
-                var5[incrementValue$17] = 0;
-                incrementValue$18 = var2;
+                var5[incrementValue$9] = 0;
+                incrementValue$10 = var2;
                 var2++;
-                var5[incrementValue$18] = 0;
-                incrementValue$19 = var2;
+                var5[incrementValue$10] = 0;
+                incrementValue$11 = var2;
                 var2++;
-                var5[incrementValue$19] = 0;
-                incrementValue$20 = var2;
+                var5[incrementValue$11] = 0;
+                incrementValue$12 = var2;
                 var2++;
-                var5[incrementValue$20] = 0;
-                incrementValue$21 = var2;
+                var5[incrementValue$12] = 0;
+                incrementValue$13 = var2;
                 var2++;
-                var5[incrementValue$21] = 0;
-                incrementValue$22 = var2;
+                var5[incrementValue$13] = 0;
+                incrementValue$14 = var2;
                 var2++;
-                var5[incrementValue$22] = 0;
-                incrementValue$23 = var2;
+                var5[incrementValue$14] = 0;
+                incrementValue$15 = var2;
                 var2++;
-                var5[incrementValue$23] = 0;
+                var5[incrementValue$15] = 0;
                 continue L1;
               }
             }

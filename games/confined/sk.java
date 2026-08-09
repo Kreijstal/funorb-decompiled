@@ -71,45 +71,29 @@ final class sk extends wj {
     }
 
     private final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        if (param1 < param2) {
-            if (param1 < param3) {
-                if (param1 < param4) {
-                    return false;
-                }
-            }
+        if (param1 < param2 && param1 < param3 && param1 < param4) {
+            return false;
         }
-        if (param1 > param2) {
-            if (param1 > param3) {
-                if (param1 > param4) {
-                    return false;
-                }
-            }
+        if (param1 > param2 && param1 > param3 && param1 > param4) {
+            return false;
         }
-        if (param0 < param5) {
-            if (param0 < param6) {
-                if (param0 < param7) {
-                    return false;
-                }
-            }
+        if (param0 < param5 && param0 < param6 && param0 < param7) {
+            return false;
         }
-        if (param0 > param5) {
-            if (param0 > param6) {
-                if (param0 > param7) {
-                    return false;
-                }
-            }
+        if (param0 > param5 && param0 > param6 && param0 > param7) {
+            return false;
         }
         return true;
     }
 
     private final void e(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         if (!field_L[param0]) {
           L0: {
             var2 = this.field_t[param0];
@@ -179,8 +163,8 @@ final class sk extends wj {
     }
 
     final void a() {
-        Exception var1 = null;
         Throwable decompiledCaughtException = null;
+        Exception var1 = null;
         try {
           L0: {
             this.d();
@@ -196,19 +180,19 @@ final class sk extends wj {
     }
 
     private final void b() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         var1 = 32767;
         var2 = 32767;
         var3 = 32767;
@@ -220,6 +204,7 @@ final class sk extends wj {
         var9 = 0;
         L0: while (true) {
           if (var9 >= this.field_m) {
+            Math.sqrt((double)var7);
             this.field_O = (short)(int)(Math.sqrt((double)var8) + 0.99);
             this.field_s = true;
             return;
@@ -319,25 +304,25 @@ final class sk extends wj {
         int incrementValue$15 = 0;
         int incrementValue$16 = 0;
         int incrementValue$17 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
         L0: {
           var2 = ti.field_k;
           var3 = ti.field_f;
@@ -684,48 +669,57 @@ final class sk extends wj {
     }
 
     private final void a(boolean param0, boolean param1, long param2, int param3, int param4) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
+        int dupTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int dupTemp$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int fieldTemp$7 = 0;
+        int dupTemp$8 = 0;
+        int[] arrayValue$9 = null;
+        int dupTemp$10 = 0;
+        int[] arrayValue$11 = null;
         int incrementValue$12 = 0;
         int fieldTemp$13 = 0;
-        int incrementValue$14 = 0;
-        int fieldTemp$15 = 0;
-        int fieldTemp$16 = 0;
-        int incrementValue$17 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14_int = 0;
-        int[] var14 = null;
-        int var15_int = 0;
-        int[] var15 = null;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int[] var45 = null;
-        int[] var46 = null;
-        int[] var47 = null;
-        int[] var48 = null;
-        int[] var49 = null;
+        int fieldTemp$14 = 0;
+        int dupTemp$15 = 0;
+        int[] arrayValue$16 = null;
+        int dupTemp$17 = 0;
+        int[] arrayValue$18 = null;
+        int incrementValue$19 = 0;
         int stackIn_74_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_72_0 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14_int;
+        int[] var14;
+        int var15_int;
+        int[] var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int[] var45;
+        int[] var46;
+        int[] var47;
+        int[] var48;
+        int[] var49;
         if (param4 < 1600) {
           L0: {
             field_bb = param4;
@@ -791,8 +785,9 @@ final class sk extends wj {
                                   } else {
                                     var13 = var47[var12];
                                     var14_int = this.field_Q[var13];
-                                    field_T[var14_int] = field_T[var14_int] + 1;
-                                    var15_int = field_T[var14_int];
+                                    dupTemp$0 = field_T[var14_int];
+                                    field_T[var14_int] = dupTemp$0 + 1;
+                                    var15_int = dupTemp$0;
                                     field_w[var14_int][var15_int] = var13;
                                     if (var14_int >= 10) {
                                       if (var14_int != 10) {
@@ -821,8 +816,9 @@ final class sk extends wj {
                                 if (var12 < field_Z[var10]) {
                                   var13 = var48[var12];
                                   var14_int = this.field_Q[var13];
-                                  field_T[var14_int] = field_T[var14_int] + 1;
-                                  var15_int = field_T[var14_int];
+                                  dupTemp$1 = field_T[var14_int];
+                                  field_T[var14_int] = dupTemp$1 + 1;
+                                  var15_int = dupTemp$1;
                                   field_w[var14_int][var15_int] = var13;
                                   if (var14_int >= 10) {
                                     if (var14_int != 10) {
@@ -870,12 +866,10 @@ final class sk extends wj {
                           } else {
                             L13: {
                               if (var9 <= 64) {
-                                stackOut_73_0 = var9;
-                                stackIn_74_0 = stackOut_73_0;
+                                stackIn_74_0 = var9;
                                 break L13;
                               } else {
-                                stackOut_72_0 = 64;
-                                stackIn_74_0 = stackOut_72_0;
+                                stackIn_74_0 = 64;
                                 break L13;
                               }
                             }
@@ -928,8 +922,9 @@ final class sk extends wj {
                             var9 = field_n[var8];
                             var10 = field_I[var8];
                             var11 = this.field_Q[var9];
-                            field_T[var11] = field_T[var11] + 1;
-                            var12 = field_T[var11];
+                            dupTemp$2 = field_T[var11];
+                            field_T[var11] = dupTemp$2 + 1;
+                            var12 = dupTemp$2;
                             field_w[var11][var12] = var9;
                             if (var11 >= 10) {
                               if (var11 != 10) {
@@ -1049,9 +1044,9 @@ final class sk extends wj {
                       return;
                     } else {
                       L29: {
-                        incrementValue$9 = var12;
+                        incrementValue$3 = var12;
                         var12++;
-                        this.e(var14[incrementValue$9]);
+                        this.e(var14[incrementValue$3]);
                         if (var12 != var13) {
                           break L29;
                         } else {
@@ -1085,9 +1080,9 @@ final class sk extends wj {
                           break L31;
                         } else {
                           L32: {
-                            incrementValue$10 = var12;
+                            incrementValue$4 = var12;
                             var12++;
-                            this.e(var14[incrementValue$10]);
+                            this.e(var14[incrementValue$4]);
                             if (var12 != var13) {
                               break L32;
                             } else {
@@ -1121,9 +1116,9 @@ final class sk extends wj {
                             break L34;
                           } else {
                             L35: {
-                              incrementValue$11 = var12;
+                              incrementValue$5 = var12;
                               var12++;
-                              this.e(var14[incrementValue$11]);
+                              this.e(var14[incrementValue$5]);
                               if (var12 != var13) {
                                 break L35;
                               } else {
@@ -1157,9 +1152,9 @@ final class sk extends wj {
                               break L37;
                             } else {
                               L38: {
-                                incrementValue$12 = var12;
+                                incrementValue$6 = var12;
                                 var12++;
-                                this.e(var14[incrementValue$12]);
+                                this.e(var14[incrementValue$6]);
                                 if (var12 != var13) {
                                   break L38;
                                 } else {
@@ -1259,10 +1254,10 @@ final class sk extends wj {
                               break L42;
                             } else {
                               if (field_fb != 512) {
-                                fieldTemp$13 = field_fb;
+                                fieldTemp$7 = field_fb;
                                 field_fb = field_fb + 1;
-                                var28 = 65 + fieldTemp$13;
-                                field_cb[var27] = 65 + fieldTemp$13;
+                                var28 = 65 + fieldTemp$7;
+                                field_cb[var27] = 65 + fieldTemp$7;
                                 break L42;
                               } else {
                                 var8++;
@@ -1271,21 +1266,25 @@ final class sk extends wj {
                             }
                           }
                           var28 -= 65;
-                          field_Z[var28] = field_Z[var28] + 1;
-                          field_A[var28][field_Z[var28]] = var8;
+                          dupTemp$8 = field_Z[var28];
+                          arrayValue$9 = field_A[var28];
+                          field_Z[var28] = dupTemp$8 + 1;
+                          arrayValue$9[dupTemp$8] = var8;
                           var8++;
                           continue L3;
                         } else {
-                          field_cb[var27] = field_cb[var27] + 1;
-                          field_P[var27][field_cb[var27]] = var8;
+                          dupTemp$10 = field_cb[var27];
+                          arrayValue$11 = field_P[var27];
+                          field_cb[var27] = dupTemp$10 + 1;
+                          arrayValue$11[dupTemp$10] = var8;
                           var8++;
                           continue L3;
                         }
                       } else {
                         field_I[var7] = (field_g[var9] + field_g[var10] + field_g[var11]) / 3;
-                        incrementValue$14 = var7;
+                        incrementValue$12 = var7;
                         var7++;
-                        field_n[incrementValue$14] = var8;
+                        field_n[incrementValue$12] = var8;
                         var8++;
                         continue L3;
                       }
@@ -1302,9 +1301,9 @@ final class sk extends wj {
                     if (!this.a(on.field_a + ti.field_k, bj.field_q + ti.field_f, field_J[var9], field_J[var10], field_J[var11], var12, var13, var14_int)) {
                       break L43;
                     } else {
-                      fieldTemp$15 = tk.field_g;
+                      fieldTemp$13 = tk.field_g;
                       tk.field_g = tk.field_g + 1;
-                      la.field_S[fieldTemp$15] = param2;
+                      la.field_S[fieldTemp$13] = param2;
                       param1 = false;
                       break L43;
                     }
@@ -1353,10 +1352,10 @@ final class sk extends wj {
                           break L46;
                         } else {
                           if (field_fb != 512) {
-                            fieldTemp$16 = field_fb;
+                            fieldTemp$14 = field_fb;
                             field_fb = field_fb + 1;
-                            var16 = 65 + fieldTemp$16;
-                            field_cb[var15_int] = 65 + fieldTemp$16;
+                            var16 = 65 + fieldTemp$14;
+                            field_cb[var15_int] = 65 + fieldTemp$14;
                             break L46;
                           } else {
                             var8++;
@@ -1365,21 +1364,25 @@ final class sk extends wj {
                         }
                       }
                       var16 -= 65;
-                      field_Z[var16] = field_Z[var16] + 1;
-                      field_A[var16][field_Z[var16]] = var8;
+                      dupTemp$15 = field_Z[var16];
+                      arrayValue$16 = field_A[var16];
+                      field_Z[var16] = dupTemp$15 + 1;
+                      arrayValue$16[dupTemp$15] = var8;
                       var8++;
                       continue L3;
                     } else {
-                      field_cb[var15_int] = field_cb[var15_int] + 1;
-                      field_P[var15_int][field_cb[var15_int]] = var8;
+                      dupTemp$17 = field_cb[var15_int];
+                      arrayValue$18 = field_P[var15_int];
+                      field_cb[var15_int] = dupTemp$17 + 1;
+                      arrayValue$18[dupTemp$17] = var8;
                       var8++;
                       continue L3;
                     }
                   } else {
                     field_I[var7] = (field_g[var9] + field_g[var10] + field_g[var11]) / 3;
-                    incrementValue$17 = var7;
+                    incrementValue$19 = var7;
                     var7++;
-                    field_n[incrementValue$17] = var8;
+                    field_n[incrementValue$19] = var8;
                     var8++;
                     continue L3;
                   }
@@ -1399,13 +1402,13 @@ final class sk extends wj {
     }
 
     private final void d() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var5 = 0;
-        int var8 = 0;
-        int[] var11 = null;
-        int[] var12 = null;
+        int var1;
+        int var2;
+        int var3;
+        int var5;
+        int var8;
+        int[] var11;
+        int[] var12;
         if (field_bb != 0) {
           field_u = ti.field_e;
           field_j = ti.field_g;
@@ -1573,6 +1576,9 @@ final class sk extends wj {
     }
 
     final void a(int[] param0, int[] param1) {
+        int stackIn_15_0 = 0;
+        int stackIn_21_0 = 0;
+        Throwable decompiledCaughtException = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1591,22 +1597,14 @@ final class sk extends wj {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        Exception var21 = null;
         int var21_int = 0;
+        Exception var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
         int var27 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_21_0 = 0;
-        Throwable decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_16_0 = 0;
         L0: {
           field_bb = 0;
           if (this.field_s) {
@@ -1648,12 +1646,10 @@ final class sk extends wj {
                 if (var4 <= var5 + var15) {
                   L1: {
                     if (var5 > 50 + this.field_O) {
-                      stackOut_14_0 = 0;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 0;
                       break L1;
                     } else {
-                      stackOut_13_0 = 1;
-                      stackIn_15_0 = stackOut_13_0;
+                      stackIn_15_0 = 1;
                       break L1;
                     }
                   }
@@ -1661,17 +1657,14 @@ final class sk extends wj {
                     var16 = stackIn_15_0;
                     if (var16 == 0) {
                       if (this.field_r > 0) {
-                        stackOut_19_0 = 1;
-                        stackIn_21_0 = stackOut_19_0;
+                        stackIn_21_0 = 1;
                         break L2;
                       } else {
-                        stackOut_18_0 = 0;
-                        stackIn_21_0 = stackOut_18_0;
+                        stackIn_21_0 = 0;
                         break L2;
                       }
                     } else {
-                      stackOut_16_0 = 1;
-                      stackIn_21_0 = stackOut_16_0;
+                      stackIn_21_0 = 1;
                       break L2;
                     }
                   }
@@ -1761,94 +1754,55 @@ final class sk extends wj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        if (param0 < 65536) {
-          if (!field_L[param0]) {
+        if (param0 >= 65536) {
             return;
-          } else {
-            L0: {
-              var2 = ti.field_k;
-              var3 = ti.field_f;
-              var4 = this.field_t[param0];
-              var5 = this.field_M[param0];
-              var6 = this.field_y[param0];
-              var7 = field_N[var4];
-              var8 = field_N[var5];
-              var9 = field_N[var6];
-              if (var7 >= 50) {
-                break L0;
-              } else {
-                L1: {
-                  var10 = field_H[var4];
-                  var11 = field_V[var4];
-                  if (var9 < 50) {
-                    break L1;
-                  } else {
+        }
+        if (field_L[param0]) {
+            var2 = ti.field_k;
+            var3 = ti.field_f;
+            var4 = this.field_t[param0];
+            var5 = this.field_M[param0];
+            var6 = this.field_y[param0];
+            var7 = field_N[var4];
+            var8 = field_N[var5];
+            var9 = field_N[var6];
+            if (var7 < 50) {
+                var10 = field_H[var4];
+                var11 = field_V[var4];
+                if (var9 >= 50) {
                     var12 = (50 - var7) * ti.field_i[var9 - var7];
                     this.b(var2 + (var10 + ((field_H[var6] - var10) * var12 >> 16) << 9) / 50, var3 + (var11 + ((field_V[var6] - var11) * var12 >> 16) << 9) / 50);
-                    break L1;
-                  }
                 }
-                if (var8 < 50) {
-                  break L0;
-                } else {
-                  var12 = (50 - var7) * ti.field_i[var8 - var7];
-                  this.b(var2 + (var10 + ((field_H[var5] - var10) * var12 >> 16) << 9) / 50, var3 + (var11 + ((field_V[var5] - var11) * var12 >> 16) << 9) / 50);
-                  break L0;
+                if (var8 >= 50) {
+                    var12 = (50 - var7) * ti.field_i[var8 - var7];
+                    this.b(var2 + (var10 + ((field_H[var5] - var10) * var12 >> 16) << 9) / 50, var3 + (var11 + ((field_V[var5] - var11) * var12 >> 16) << 9) / 50);
                 }
-              }
             }
-            L2: {
-              if (var8 >= 50) {
-                break L2;
-              } else {
-                L3: {
-                  var10 = field_H[var5];
-                  var11 = field_V[var5];
-                  if (var7 < 50) {
-                    break L3;
-                  } else {
+            if (var8 < 50) {
+                var10 = field_H[var5];
+                var11 = field_V[var5];
+                if (var7 >= 50) {
                     var12 = (50 - var8) * ti.field_i[var7 - var8];
                     this.b(var2 + (var10 + ((field_H[var4] - var10) * var12 >> 16) << 9) / 50, var3 + (var11 + ((field_V[var4] - var11) * var12 >> 16) << 9) / 50);
-                    break L3;
-                  }
                 }
-                if (var9 < 50) {
-                  break L2;
-                } else {
-                  var12 = (50 - var8) * ti.field_i[var9 - var8];
-                  this.b(var2 + (var10 + ((field_H[var6] - var10) * var12 >> 16) << 9) / 50, var3 + (var11 + ((field_V[var6] - var11) * var12 >> 16) << 9) / 50);
-                  break L2;
+                if (var9 >= 50) {
+                    var12 = (50 - var8) * ti.field_i[var9 - var8];
+                    this.b(var2 + (var10 + ((field_H[var6] - var10) * var12 >> 16) << 9) / 50, var3 + (var11 + ((field_V[var6] - var11) * var12 >> 16) << 9) / 50);
                 }
-              }
             }
-            L4: {
-              if (var9 >= 50) {
-                break L4;
-              } else {
-                L5: {
-                  var10 = field_H[var6];
-                  var11 = field_V[var6];
-                  if (var8 < 50) {
-                    break L5;
-                  } else {
+            if (var9 < 50) {
+                var10 = field_H[var6];
+                var11 = field_V[var6];
+                if (var8 >= 50) {
                     var12 = (50 - var9) * ti.field_i[var8 - var9];
                     this.b(var2 + (var10 + ((field_H[var5] - var10) * var12 >> 16) << 9) / 50, var3 + (var11 + ((field_V[var5] - var11) * var12 >> 16) << 9) / 50);
-                    break L5;
-                  }
                 }
-                if (var7 < 50) {
-                  break L4;
-                } else {
-                  var12 = (50 - var9) * ti.field_i[var7 - var9];
-                  this.b(var2 + (var10 + ((field_H[var4] - var10) * var12 >> 16) << 9) / 50, var3 + (var11 + ((field_V[var4] - var11) * var12 >> 16) << 9) / 50);
-                  break L4;
+                if (var7 >= 50) {
+                    var12 = (50 - var9) * ti.field_i[var7 - var9];
+                    this.b(var2 + (var10 + ((field_H[var4] - var10) * var12 >> 16) << 9) / 50, var3 + (var11 + ((field_V[var4] - var11) * var12 >> 16) << 9) / 50);
                 }
-              }
             }
             return;
-          }
-        } else {
-          return;
         }
     }
 
@@ -1872,22 +1826,23 @@ final class sk extends wj {
     }
 
     sk(od param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$1 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int[] var9_ref_int__ = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        oh var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int[] var17 = null;
-        ea var18 = null;
-        ea var19 = null;
-        int[] var20 = null;
+        int incrementValue$0 = 0;
+        int dupTemp$1 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int[] var9_ref_int__;
+        int var10;
+        int var11;
+        int var12;
+        oh var13;
+        int var14;
+        int var15;
+        int var16;
+        int[] var17;
+        ea var18;
+        ea var19;
+        int[] var20;
         L0: {
           this.field_E = 0;
           this.field_S = 0;
@@ -2006,9 +1961,9 @@ final class sk extends wj {
                                 this.field_Y[var10] = param0.field_g[var11] & 65535;
                                 this.field_R[var10] = param0.field_U[var11] & 65535;
                                 this.field_x[var10] = param0.field_T[var11] & 65535;
-                                incrementValue$1 = var10;
+                                incrementValue$0 = var10;
                                 var10++;
-                                var9_ref_int__[var11] = incrementValue$1;
+                                var9_ref_int__[var11] = incrementValue$0;
                                 var11++;
                                 continue L6;
                               }
@@ -2037,7 +1992,8 @@ final class sk extends wj {
                   }
                 } else {
                   if (param0.field_y[var10] != -1) {
-                    var9_ref_int__[param0.field_y[var10] & 255] = var9_ref_int__[param0.field_y[var10] & 255] + 1;
+                    dupTemp$1 = param0.field_y[var10] & 255;
+                    var9_ref_int__[dupTemp$1] = var9_ref_int__[dupTemp$1] + 1;
                     var10++;
                     continue L4;
                   } else {

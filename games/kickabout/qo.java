@@ -9,22 +9,15 @@ final class qo extends jd {
     static String field_j;
 
     final static tf d(byte param0) {
-        int discarded$1 = 0;
-        tf var1 = null;
-        L0: {
-          var1 = new tf();
-          var1.a(new hm("sumIntegers", new Class[]{int[].class}, (String) null), 3);
-          var1.a(new kb("writeIntegers", new Class[]{int[].class}, (String) null), 3);
-          var1.a(new jo("demoIntegers", new Class[]{}, (String) null), 3);
-          var1.a(new jf("doSomething", new Class[]{String.class}, "Do something clever to a string to annoy TdR."), param0 + -23);
-          var1.a(new ir("three", new Class[]{}, (String) null), param0 ^ 25);
-          var1.a(new pb("isSix", new Class[]{Integer.TYPE}, (String) null), param0 + -23);
-          if (param0 == 26) {
-            break L0;
-          } else {
-            discarded$1 = qo.a(42, -71L, -88L);
-            break L0;
-          }
+        tf var1 = new tf();
+        var1.a(new hm("sumIntegers", new Class[]{int[].class}, (String) null), 3);
+        var1.a(new kb("writeIntegers", new Class[]{int[].class}, (String) null), 3);
+        var1.a(new jo("demoIntegers", new Class[]{}, (String) null), 3);
+        var1.a(new jf("doSomething", new Class[]{String.class}, "Do something clever to a string to annoy TdR."), param0 + -23);
+        var1.a(new ir("three", new Class[]{}, (String) null), param0 ^ 25);
+        var1.a(new pb("isSix", new Class[]{Integer.TYPE}, (String) null), param0 + -23);
+        if (param0 != 26) {
+            qo.a(42, -71L, -88L);
         }
         var1.a(new tq("not", new Class[]{Boolean.TYPE}, (String) null), param0 + -23);
         var1.a(new ik("intDouble", new Class[]{Integer.TYPE}, (String) null), 3);
@@ -38,14 +31,11 @@ final class qo extends jd {
     }
 
     final rv a(String param0, int param1) {
-        boolean discarded$2 = false;
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         rv stackIn_7_0 = null;
         rv stackIn_9_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -53,28 +43,14 @@ final class qo extends jd {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        rv stackOut_8_0 = null;
-        rv stackOut_6_0 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
               if (null != gf.a(64, param0)) {
-                stackOut_2_0 = 0;
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = 1;
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = 1;
                 break L1;
               }
             }
@@ -83,18 +59,16 @@ final class qo extends jd {
               if (param1 == -5) {
                 break L2;
               } else {
-                discarded$2 = qo.c((byte) -62);
+                qo.c((byte) -62);
                 break L2;
               }
             }
             if (var3_int != 0) {
-              stackOut_8_0 = he.field_yb;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = he.field_yb;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_6_0 = jt.field_Bb;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = jt.field_Bb;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -103,27 +77,19 @@ final class qo extends jd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3);
-            stackOut_10_1 = new StringBuilder().append("qo.E(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3);
+
+            stackIn_12_1 = new StringBuilder().append("qo.E(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L3;
             }
           }
@@ -137,16 +103,14 @@ final class qo extends jd {
     }
 
     final static int a(int param0, long param1, long param2) {
-        int discarded$0 = 0;
         if (param0 != -8905) {
-            discarded$0 = qo.e((byte) 58);
+            qo.e((byte) 58);
         }
         return (int)(param1 * param2 >> 488475472);
     }
 
     final static ot g(int param0) {
         int var2_int = 0;
-        ot discarded$0 = null;
         int var3 = 0;
         int var4 = Kickabout.field_G;
         ut var6 = new ut(108, 108);
@@ -157,7 +121,7 @@ final class qo extends jd {
             on.d(54, 54, var2_int, var3);
         }
         if (param0 != -22976) {
-            discarded$0 = qo.g(126);
+            qo.g(126);
         }
         ta.e(param0 ^ -22987);
         ot var2 = new ot(54, 54);
@@ -177,8 +141,6 @@ final class qo extends jd {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -186,16 +148,6 @@ final class qo extends jd {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_5_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (this.a(param1, param0 ^ -30) != jt.field_Bb) {
@@ -207,13 +159,11 @@ final class qo extends jd {
                   break L1;
                 }
               }
-              stackOut_5_0 = dl.field_g;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = dl.field_g;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = tk.field_Cb;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = tk.field_Cb;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -222,27 +172,19 @@ final class qo extends jd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("qo.A(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("qo.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -310,8 +252,6 @@ final class qo extends jd {
 
     final static boolean c(byte param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == -42) {
           L0: {
             L1: {
@@ -321,14 +261,12 @@ final class qo extends jd {
                 if (!oo.field_c.field_l) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0 != 0;

@@ -25,7 +25,7 @@ final class bda extends lw {
     }
 
     final void a(int param0, byte param1) {
-        int var4 = 0;
+        int var4;
         var4 = BachelorFridge.field_y;
         if (param0 == 34) {
           if (0 != this.field_e) {
@@ -181,7 +181,7 @@ final class bda extends lw {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
+        int var2;
         if (param0 >= 103) {
           var2 = (int)((1.0 - Math.cos((double)(vr.field_b * 4) * 3.141592653589793 / 100.0)) * 256.0);
           if (-2 == (this.field_e ^ -1)) {

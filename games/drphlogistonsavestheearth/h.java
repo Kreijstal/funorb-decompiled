@@ -7,8 +7,8 @@ final class h extends gi {
     boolean field_i;
 
     final static void a(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         if (!param0) {
           h.d(-114);
           var1 = jj.c(32059);

@@ -13,18 +13,19 @@ final class oe implements Iterator {
     private am field_f;
 
     public final boolean hasNext() {
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        int var2;
         var2 = HostileSpawn.field_I ? 1 : 0;
-        if (((oe) this).field_c.field_f[-1 + ((oe) this).field_e] == ((oe) this).field_b) {
+        if (this.field_c.field_f[-1 + this.field_e] == this.field_b) {
           L0: while (true) {
-            if (((oe) this).field_c.field_b > ((oe) this).field_e) {
-              int fieldTemp$1 = ((oe) this).field_e;
-              ((oe) this).field_e = ((oe) this).field_e + 1;
-              if (((oe) this).field_c.field_f[fieldTemp$1].field_g == ((oe) this).field_c.field_f[((oe) this).field_e + -1]) {
-                ((oe) this).field_b = ((oe) this).field_c.field_f[((oe) this).field_e + -1];
+            if (this.field_c.field_b > this.field_e) {
+              fieldTemp$1 = this.field_e;
+              this.field_e = this.field_e + 1;
+              if (this.field_c.field_f[fieldTemp$1].field_g == this.field_c.field_f[this.field_e + -1]) {
+                this.field_b = this.field_c.field_f[this.field_e + -1];
                 continue L0;
               } else {
-                ((oe) this).field_b = ((oe) this).field_c.field_f[-1 + ((oe) this).field_e].field_g;
+                this.field_b = this.field_c.field_f[-1 + this.field_e].field_g;
                 return true;
               }
             } else {
@@ -37,39 +38,50 @@ final class oe implements Iterator {
     }
 
     public final void remove() {
-        if (((oe) this).field_f == null) {
+        if (this.field_f == null) {
             throw new IllegalStateException();
         }
-        ((oe) this).field_f.b(-124);
-        ((oe) this).field_f = null;
+        this.field_f.b(-124);
+        this.field_f = null;
     }
 
     public static void a(int param0) {
         field_d = null;
         field_a = null;
+        if (param0 <= 31) {
+            field_d = (bd) null;
+            field_g = null;
+            return;
+        }
         field_g = null;
     }
 
     private final void a(byte param0) {
-        ((oe) this).field_f = null;
-        ((oe) this).field_e = 1;
-        ((oe) this).field_b = ((oe) this).field_c.field_f[0].field_g;
+        this.field_f = null;
+        if (param0 != 105) {
+          return;
+        } else {
+          this.field_e = 1;
+          this.field_b = this.field_c.field_f[0].field_g;
+          return;
+        }
     }
 
     public final Object next() {
-        am var1 = null;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        am var1;
+        int var2;
         var2 = HostileSpawn.field_I ? 1 : 0;
-        if (((oe) this).field_c.field_f[((oe) this).field_e - 1] == ((oe) this).field_b) {
+        if (this.field_c.field_f[this.field_e - 1] == this.field_b) {
           L0: while (true) {
-            if (((oe) this).field_e < ((oe) this).field_c.field_b) {
-              int fieldTemp$2 = ((oe) this).field_e;
-              ((oe) this).field_e = ((oe) this).field_e + 1;
-              var1 = ((oe) this).field_c.field_f[fieldTemp$2].field_g;
-              if (((oe) this).field_c.field_f[-1 + ((oe) this).field_e] != var1) {
-                ((oe) this).field_f = var1;
-                ((oe) this).field_b = var1.field_g;
-                return (Object) (Object) var1;
+            if (this.field_e < this.field_c.field_b) {
+              fieldTemp$1 = this.field_e;
+              this.field_e = this.field_e + 1;
+              var1 = this.field_c.field_f[fieldTemp$1].field_g;
+              if (this.field_c.field_f[-1 + this.field_e] != var1) {
+                this.field_f = var1;
+                this.field_b = var1.field_g;
+                return var1;
               } else {
                 continue L0;
               }
@@ -78,52 +90,82 @@ final class oe implements Iterator {
             }
           }
         } else {
-          var1 = ((oe) this).field_b;
-          ((oe) this).field_f = var1;
-          ((oe) this).field_b = var1.field_g;
-          return (Object) (Object) var1;
+          var1 = this.field_b;
+          this.field_f = var1;
+          this.field_b = var1.field_g;
+          return var1;
         }
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var9 = 0;
+        int var9;
         var9 = HostileSpawn.field_I ? 1 : 0;
         if (param2 >= param5) {
           if (param2 >= param6) {
-            if (param6 > param5) {
-              t.a(si.field_i, false, param4, param2, param0, param5, param6, param3, param7);
-              return;
-            } else {
+            if (param6 <= param5) {
               t.a(si.field_i, false, param4, param2, param0, param6, param5, param7, param3);
-              return;
+              if (param1 == -121) {
+                return;
+              } else {
+                field_d = (bd) null;
+                return;
+              }
+            } else {
+              t.a(si.field_i, false, param4, param2, param0, param5, param6, param3, param7);
+              if (param1 == -121) {
+                return;
+              } else {
+                field_d = (bd) null;
+                return;
+              }
             }
           } else {
             t.a(si.field_i, false, param4, param6, param3, param5, param2, param0, param7);
-            return;
+            if (param1 == -121) {
+              return;
+            } else {
+              field_d = (bd) null;
+              return;
+            }
           }
         } else {
           if (param5 >= param6) {
-            if (param2 < param6) {
-              t.a(si.field_i, false, param4, param5, param7, param2, param6, param3, param0);
-              return;
-            } else {
+            if (param2 >= param6) {
               t.a(si.field_i, false, param4, param5, param7, param6, param2, param0, param3);
-              return;
+              if (param1 == -121) {
+                return;
+              } else {
+                field_d = (bd) null;
+                return;
+              }
+            } else {
+              t.a(si.field_i, false, param4, param5, param7, param2, param6, param3, param0);
+              if (param1 == -121) {
+                return;
+              } else {
+                field_d = (bd) null;
+                return;
+              }
             }
           } else {
             t.a(si.field_i, false, param4, param6, param3, param2, param5, param7, param0);
-            return;
+            if (param1 == -121) {
+              return;
+            } else {
+              field_d = (bd) null;
+              return;
+            }
           }
         }
     }
 
     oe(ed param0) {
-        ((oe) this).field_f = null;
+        this.field_f = null;
         try {
-            ((oe) this).field_c = param0;
+            this.field_c = param0;
             this.a((byte) 105);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "oe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw wg.a((Throwable) ((Object) runtimeException), "oe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

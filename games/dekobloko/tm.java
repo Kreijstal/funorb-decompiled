@@ -12,21 +12,16 @@ final class tm {
     static int field_c;
 
     final static int a(byte param0) {
-        int discarded$1 = 0;
-        RuntimeException var1 = null;
+        boolean stackIn_11_0 = false;
+        int stackIn_34_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        boolean stackIn_4_0 = false;
-        boolean stackIn_11_0 = false;
-        int stackIn_34_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        boolean stackOut_10_0 = false;
-        int stackOut_33_0 = 0;
         var7 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -39,14 +34,13 @@ final class tm {
                     break L3;
                   } else {
                     k.field_f.a(-111);
-                    stackOut_3_0 = k.field_f.b((byte) 114);
-                    stackIn_11_0 = stackOut_3_0;
-                    stackIn_4_0 = stackOut_3_0;
+                    stackIn_11_0 = k.field_f.b((byte) 114);
+
                     if (var7 != 0) {
                       break L2;
                     } else {
                       L4: {
-                        if (stackIn_4_0) {
+                        if (stackIn_11_0) {
                           var1_int = 1;
                           break L4;
                         } else {
@@ -67,8 +61,7 @@ final class tm {
                   }
                 }
                 k.field_f.a(ub.a(bh.field_g, (byte) -81, pm.field_f), -20563, ub.a(he.field_S, (byte) -81, nf.field_h));
-                stackOut_10_0 = k.field_f.b((byte) 114);
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = k.field_f.b((byte) 114);
                 break L2;
               }
               L5: {
@@ -127,7 +120,7 @@ final class tm {
                 if (param0 <= -88) {
                   break L10;
                 } else {
-                  discarded$1 = tm.a((byte) 116);
+                  tm.a((byte) 116);
                   break L10;
                 }
               }
@@ -150,8 +143,7 @@ final class tm {
                   }
                 }
               }
-              stackOut_33_0 = var3;
-              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_0 = var3;
               break L0;
             }
           }

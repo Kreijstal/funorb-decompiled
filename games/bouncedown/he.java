@@ -35,9 +35,12 @@ final class he extends ai {
     }
 
     final static void a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        qg var3 = null;
+        Object var3 = null;
+        qg var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -48,31 +51,29 @@ final class he extends ai {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int var14 = 0;
-        ii var15 = null;
-        int[][] var19 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
+        ii var14 = null;
+        int[][] var18 = null;
+        var3 = null;
         var12 = Bounce.field_N;
         try {
           L0: {
-            var15 = jc.field_g;
-            var2 = var15.d((byte) -77);
-            var3 = (qg) ((Object) cf.field_b.a((byte) -60));
+            var14 = jc.field_g;
+            var2 = var14.d((byte) -77);
+            var3_ref = (qg) ((Object) cf.field_b.a((byte) -60));
             L1: while (true) {
               L2: {
-                if (var3 == null) {
+                if (var3_ref == null) {
                   break L2;
                 } else {
-                  if (var3.field_h != var2) {
-                    var3 = (qg) ((Object) cf.field_b.d((byte) -22));
+                  if ((var3_ref.field_h ^ -1) != (var2 ^ -1)) {
+                    var3_ref = (qg) ((Object) cf.field_b.d((byte) -22));
                     continue L1;
                   } else {
                     break L2;
                   }
                 }
               }
-              if (var3 == null) {
+              if (var3_ref == null) {
                 kc.a((byte) 18);
                 decompiledRegionSelector0 = 0;
                 break L0;
@@ -86,9 +87,9 @@ final class he extends ai {
                   }
                 }
                 L4: {
-                  var4 = var15.d((byte) -127);
+                  var4 = var14.d((byte) -127);
                   if (var4 != 0) {
-                    var5 = var3.field_i;
+                    var5 = var3_ref.field_i;
                     wh.field_c[0] = ja.field_b;
                     var6_int = 1;
                     L5: while (true) {
@@ -99,43 +100,42 @@ final class he extends ai {
                           if (var4 <= var6_int) {
                             bj.a((byte) -125, var5);
                             var6 = new String[2][var5];
-                            var19 = new int[2][4 * var5];
+                            var18 = new int[2][4 * var5];
                             var8 = q.field_M;
                             var9 = 0;
                             var10 = 0;
                             L7: while (true) {
                               if (var8 <= var9) {
+                                var9 = 0;
                                 var13 = 0;
-                                var9 = var13;
-                                var14 = 0;
-                                var10 = var14;
+                                var10 = var13;
                                 L8: while (true) {
-                                  if (var8 <= var13) {
-                                    var3.c(2);
+                                  if (var8 <= var9) {
+                                    var3_ref.c(2);
                                     break L4;
                                   } else {
-                                    var11 = w.field_f[var13 + var5];
-                                    var6[1][var14] = wh.field_c[var11];
-                                    var19[1][4 * var14] = sj.field_j[var11];
-                                    var19[1][4 * var14 + 1] = nh.field_S[var11];
-                                    var19[1][4 * var14 + 2] = gk.field_i[var11];
-                                    var19[1][3 + 4 * var14] = th.field_c[var11];
+                                    var11 = w.field_f[var9 + var5];
+                                    var6[1][var13] = wh.field_c[var11];
+                                    var18[1][4 * var13] = sj.field_j[var11];
+                                    var18[1][4 * var13 + 1] = nh.field_S[var11];
+                                    var18[1][4 * var13 + 2] = gk.field_i[var11];
+                                    var18[1][3 + 4 * var13] = th.field_c[var11];
                                     if (s.a(wh.field_c[var11], -97)) {
                                       L9: {
                                         if (-1 == (nh.field_S[var11] - (-gk.field_i[var11] + -th.field_c[var11]) ^ -1)) {
-                                          var6[1][var14] = null;
-                                          var14--;
+                                          var6[1][var13] = null;
+                                          var13--;
                                           break L9;
                                         } else {
                                           break L9;
                                         }
                                       }
-                                      var14++;
                                       var13++;
+                                      var9++;
                                       continue L8;
                                     } else {
-                                      var14++;
                                       var13++;
+                                      var9++;
                                       continue L8;
                                     }
                                   }
@@ -143,10 +143,10 @@ final class he extends ai {
                               } else {
                                 var11 = w.field_f[var9];
                                 var6[0][var10] = wh.field_c[var11];
-                                var19[0][4 * var10] = sj.field_j[var11];
-                                var19[0][var10 * 4 - -1] = nh.field_S[var11];
-                                var19[0][var10 * 4 - -2] = gk.field_i[var11];
-                                var19[0][4 * var10 + 3] = th.field_c[var11];
+                                var18[0][4 * var10] = sj.field_j[var11];
+                                var18[0][var10 * 4 - -1] = nh.field_S[var11];
+                                var18[0][var10 * 4 - -2] = gk.field_i[var11];
+                                var18[0][4 * var10 + 3] = th.field_c[var11];
                                 if (s.a(wh.field_c[var11], param0 + -3)) {
                                   L10: {
                                     if (gk.field_i[var11] + nh.field_S[var11] - -th.field_c[var11] == 0) {
@@ -169,7 +169,7 @@ final class he extends ai {
                             }
                           } else {
                             L11: {
-                              vd.a((byte) 72, var15);
+                              vd.a((byte) 72, var14);
                               if (var6_int != 0) {
                                 ij.a(de.field_b, var6_int, qe.field_i, 0, ed.field_b, kf.field_a);
                                 break L11;
@@ -183,13 +183,13 @@ final class he extends ai {
                           }
                         }
                       } else {
-                        wh.field_c[var6_int] = var15.b(true);
+                        wh.field_c[var6_int] = var14.b(true);
                         var6_int++;
                         continue L5;
                       }
                     }
                   } else {
-                    var3.c(2);
+                    var3_ref.c(2);
                     break L4;
                   }
                 }
@@ -211,10 +211,9 @@ final class he extends ai {
     }
 
     public static void b(byte param0) {
-        String discarded$0 = null;
         field_i = null;
         if (param0 >= -16) {
-            discarded$0 = he.a(-107, true, true, false);
+            he.a(-107, true, true, false);
         }
         field_n = null;
         field_p = null;

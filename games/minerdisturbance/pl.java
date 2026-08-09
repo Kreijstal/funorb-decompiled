@@ -38,9 +38,8 @@ final class pl {
     }
 
     final void a(boolean param0, int param1, int param2) {
-        boolean discarded$2 = false;
         if (param0) {
-          discarded$2 = this.d(90);
+          this.d(90);
           this.field_r = param2;
           this.field_d = param1;
           return;
@@ -52,7 +51,7 @@ final class pl {
     }
 
     final l a(byte param0) {
-        l var2 = null;
+        l var2;
         if (param0 != -70) {
           L0: {
             this.a(71);
@@ -113,10 +112,10 @@ final class pl {
     }
 
     private final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = MinerDisturbance.field_ab;
         var2 = this.field_r;
         if (param0 != 2) {
@@ -460,8 +459,8 @@ final class pl {
     }
 
     final void c(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         if (null != kf.field_d) {
           return;
         } else {
@@ -509,9 +508,9 @@ final class pl {
                 }
               }
             } else {
-              fieldTemp$2 = this.field_m - 1;
+              fieldTemp$0 = this.field_m - 1;
               this.field_m = this.field_m - 1;
-              if (-1 <= (fieldTemp$2 ^ -1)) {
+              if (-1 <= (fieldTemp$0 ^ -1)) {
                 if (param0 == 565) {
                   this.field_m = this.field_v;
                   if (ec.field_e < this.field_s) {
@@ -559,9 +558,9 @@ final class pl {
               }
               return;
             } else {
-              fieldTemp$3 = this.field_m - 1;
+              fieldTemp$1 = this.field_m - 1;
               this.field_m = this.field_m - 1;
-              if (-1 <= (fieldTemp$3 ^ -1)) {
+              if (-1 <= (fieldTemp$1 ^ -1)) {
                 if (param0 == 565) {
                   this.field_m = this.field_v;
                   if (ec.field_e < this.field_s) {

@@ -26,13 +26,13 @@ final class da extends le {
     }
 
     final static void d(byte param0) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         am var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var3 = ZombieDawn.field_J;
         try {
           L0: {
@@ -44,9 +44,9 @@ final class da extends le {
                   break L0;
                 } else {
                   var1.j(11, 8);
-                  fieldTemp$5 = var1.field_j + 1;
+                  fieldTemp$2 = var1.field_j + 1;
                   var1.field_j = var1.field_j + 1;
-                  var2 = fieldTemp$5;
+                  var2 = fieldTemp$2;
                   dn.a(var1, 84);
                   dp.field_e.d(-128, var1.field_j + -var2);
                   continue L1;

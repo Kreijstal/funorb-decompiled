@@ -25,7 +25,7 @@ abstract class pa extends ek {
     int field_M;
 
     final boolean b(int param0, int param1) {
-        int var4 = 0;
+        int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         this.field_M = 1;
         if (param1 <= -14) {
@@ -238,8 +238,7 @@ abstract class pa extends ek {
     }
 
     final boolean c(byte param0, int param1) {
-        boolean discarded$1 = false;
-        int var4 = 0;
+        int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         this.field_M = 4;
         if (param0 == -68) {
@@ -303,7 +302,7 @@ abstract class pa extends ek {
             }
           }
         } else {
-          discarded$1 = this.k(106);
+          this.k(106);
           this.field_P = this.field_A.field_m.a((byte) 32, param1, 600);
           if (5 == this.field_Q) {
             this.c(93, 28672 * this.field_M);
@@ -372,11 +371,6 @@ abstract class pa extends ek {
     }
 
     final boolean k(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         int stackIn_17_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_68_0 = 0;
@@ -389,56 +383,11 @@ abstract class pa extends ek {
         int stackIn_294_0 = 0;
         int stackIn_329_0 = 0;
         int stackIn_432_0 = 0;
-        int stackOut_327_0 = 0;
-        int stackOut_320_0 = 0;
-        int stackOut_326_0 = 0;
-        int stackOut_325_0 = 0;
-        int stackOut_323_0 = 0;
-        int stackOut_431_0 = 0;
-        int stackOut_430_0 = 0;
-        int stackOut_428_0 = 0;
-        int stackOut_281_0 = 0;
-        int stackOut_280_0 = 0;
-        int stackOut_278_0 = 0;
-        int stackOut_292_0 = 0;
-        int stackOut_285_0 = 0;
-        int stackOut_291_0 = 0;
-        int stackOut_290_0 = 0;
-        int stackOut_288_0 = 0;
-        int stackOut_231_0 = 0;
-        int stackOut_229_0 = 0;
-        int stackOut_203_0 = 0;
-        int stackOut_202_0 = 0;
-        int stackOut_200_0 = 0;
-        int stackOut_198_0 = 0;
-        int stackOut_195_0 = 0;
-        int stackOut_142_0 = 0;
-        int stackOut_140_0 = 0;
-        int stackOut_114_0 = 0;
-        int stackOut_113_0 = 0;
-        int stackOut_111_0 = 0;
-        int stackOut_109_0 = 0;
-        int stackOut_106_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_66_0 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_78_0 = 0;
-        int stackOut_77_0 = 0;
-        int stackOut_75_0 = 0;
-        int stackOut_69_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_18_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 == 2) {
           var2 = this.field_N << -2141754256;
@@ -456,8 +405,7 @@ abstract class pa extends ek {
                       L1: {
                         var4 = 1;
                         if (this.field_W == 0) {
-                          stackOut_327_0 = 1;
-                          stackIn_329_0 = stackOut_327_0;
+                          stackIn_329_0 = 1;
                           break L1;
                         } else {
                           L2: {
@@ -467,25 +415,21 @@ abstract class pa extends ek {
                               if (var3 >= this.field_E) {
                                 break L2;
                               } else {
-                                stackOut_320_0 = 1;
-                                stackIn_329_0 = stackOut_320_0;
+                                stackIn_329_0 = 1;
                                 break L1;
                               }
                             }
                           }
                           if (this.field_W < 0) {
                             if (var3 > this.field_E) {
-                              stackOut_326_0 = 1;
-                              stackIn_329_0 = stackOut_326_0;
+                              stackIn_329_0 = 1;
                               break L1;
                             } else {
-                              stackOut_325_0 = 0;
-                              stackIn_329_0 = stackOut_325_0;
+                              stackIn_329_0 = 0;
                               break L1;
                             }
                           } else {
-                            stackOut_323_0 = 0;
-                            stackIn_329_0 = stackOut_323_0;
+                            stackIn_329_0 = 0;
                             break L1;
                           }
                         }
@@ -876,17 +820,14 @@ abstract class pa extends ek {
                       L32: {
                         if (this.field_W < 0) {
                           if (var3 <= this.field_E) {
-                            stackOut_431_0 = 0;
-                            stackIn_432_0 = stackOut_431_0;
+                            stackIn_432_0 = 0;
                             break L32;
                           } else {
-                            stackOut_430_0 = 1;
-                            stackIn_432_0 = stackOut_430_0;
+                            stackIn_432_0 = 1;
                             break L32;
                           }
                         } else {
-                          stackOut_428_0 = 0;
-                          stackIn_432_0 = stackOut_428_0;
+                          stackIn_432_0 = 0;
                           break L32;
                         }
                       }
@@ -1329,25 +1270,21 @@ abstract class pa extends ek {
                   L66: {
                     if (0 > this.field_R) {
                       if (var2 <= this.field_G) {
-                        stackOut_281_0 = 0;
-                        stackIn_282_0 = stackOut_281_0;
+                        stackIn_282_0 = 0;
                         break L66;
                       } else {
-                        stackOut_280_0 = 1;
-                        stackIn_282_0 = stackOut_280_0;
+                        stackIn_282_0 = 1;
                         break L66;
                       }
                     } else {
-                      stackOut_278_0 = 0;
-                      stackIn_282_0 = stackOut_278_0;
+                      stackIn_282_0 = 0;
                       break L66;
                     }
                   }
                   L67: {
                     var4 = stackIn_282_0;
                     if (this.field_W == 0) {
-                      stackOut_292_0 = 1;
-                      stackIn_294_0 = stackOut_292_0;
+                      stackIn_294_0 = 1;
                       break L67;
                     } else {
                       L68: {
@@ -1357,25 +1294,21 @@ abstract class pa extends ek {
                           if (var3 >= this.field_E) {
                             break L68;
                           } else {
-                            stackOut_285_0 = 1;
-                            stackIn_294_0 = stackOut_285_0;
+                            stackIn_294_0 = 1;
                             break L67;
                           }
                         }
                       }
                       if (this.field_W < 0) {
                         if (var3 > this.field_E) {
-                          stackOut_291_0 = 1;
-                          stackIn_294_0 = stackOut_291_0;
+                          stackIn_294_0 = 1;
                           break L67;
                         } else {
-                          stackOut_290_0 = 0;
-                          stackIn_294_0 = stackOut_290_0;
+                          stackIn_294_0 = 0;
                           break L67;
                         }
                       } else {
-                        stackOut_288_0 = 0;
-                        stackIn_294_0 = stackOut_288_0;
+                        stackIn_294_0 = 0;
                         break L67;
                       }
                     }
@@ -1546,13 +1479,11 @@ abstract class pa extends ek {
                             }
                             return false;
                           } else {
-                            stackOut_231_0 = 0;
-                            stackIn_256_0 = stackOut_231_0;
+                            stackIn_256_0 = 0;
                             break L75;
                           }
                         } else {
-                          stackOut_229_0 = 0;
-                          stackIn_256_0 = stackOut_229_0;
+                          stackIn_256_0 = 0;
                           break L75;
                         }
                       } else {
@@ -1560,17 +1491,14 @@ abstract class pa extends ek {
                           L82: {
                             if (this.field_W < 0) {
                               if (var3 <= this.field_E) {
-                                stackOut_203_0 = 0;
-                                stackIn_204_0 = stackOut_203_0;
+                                stackIn_204_0 = 0;
                                 break L82;
                               } else {
-                                stackOut_202_0 = 1;
-                                stackIn_204_0 = stackOut_202_0;
+                                stackIn_204_0 = 1;
                                 break L82;
                               }
                             } else {
-                              stackOut_200_0 = 0;
-                              stackIn_204_0 = stackOut_200_0;
+                              stackIn_204_0 = 0;
                               break L82;
                             }
                           }
@@ -1651,14 +1579,12 @@ abstract class pa extends ek {
                             return false;
                           }
                         } else {
-                          stackOut_198_0 = 1;
-                          stackIn_256_0 = stackOut_198_0;
+                          stackIn_256_0 = 1;
                           break L75;
                         }
                       }
                     } else {
-                      stackOut_195_0 = 1;
-                      stackIn_256_0 = stackOut_195_0;
+                      stackIn_256_0 = 1;
                       break L75;
                     }
                   }
@@ -1827,13 +1753,11 @@ abstract class pa extends ek {
                           return false;
                         }
                       } else {
-                        stackOut_142_0 = 0;
-                        stackIn_168_0 = stackOut_142_0;
+                        stackIn_168_0 = 0;
                         break L94;
                       }
                     } else {
-                      stackOut_140_0 = 0;
-                      stackIn_168_0 = stackOut_140_0;
+                      stackIn_168_0 = 0;
                       break L94;
                     }
                   } else {
@@ -1841,17 +1765,14 @@ abstract class pa extends ek {
                       L100: {
                         if (this.field_W < 0) {
                           if (var3 <= this.field_E) {
-                            stackOut_114_0 = 0;
-                            stackIn_115_0 = stackOut_114_0;
+                            stackIn_115_0 = 0;
                             break L100;
                           } else {
-                            stackOut_113_0 = 1;
-                            stackIn_115_0 = stackOut_113_0;
+                            stackIn_115_0 = 1;
                             break L100;
                           }
                         } else {
-                          stackOut_111_0 = 0;
-                          stackIn_115_0 = stackOut_111_0;
+                          stackIn_115_0 = 0;
                           break L100;
                         }
                       }
@@ -1932,14 +1853,12 @@ abstract class pa extends ek {
                         return false;
                       }
                     } else {
-                      stackOut_109_0 = 1;
-                      stackIn_168_0 = stackOut_109_0;
+                      stackIn_168_0 = 1;
                       break L94;
                     }
                   }
                 } else {
-                  stackOut_106_0 = 1;
-                  stackIn_168_0 = stackOut_106_0;
+                  stackIn_168_0 = 1;
                   break L94;
                 }
               }
@@ -2031,30 +1950,25 @@ abstract class pa extends ek {
                       if (this.field_G <= var2) {
                         break L112;
                       } else {
-                        stackOut_60_0 = 1;
-                        stackIn_68_0 = stackOut_60_0;
+                        stackIn_68_0 = 1;
                         break L111;
                       }
                     }
                   }
                   if (0 > this.field_R) {
                     if (var2 > this.field_G) {
-                      stackOut_66_0 = 1;
-                      stackIn_68_0 = stackOut_66_0;
+                      stackIn_68_0 = 1;
                       break L111;
                     } else {
-                      stackOut_65_0 = 0;
-                      stackIn_68_0 = stackOut_65_0;
+                      stackIn_68_0 = 0;
                       break L111;
                     }
                   } else {
-                    stackOut_63_0 = 0;
-                    stackIn_68_0 = stackOut_63_0;
+                    stackIn_68_0 = 0;
                     break L111;
                   }
                 } else {
-                  stackOut_57_0 = 1;
-                  stackIn_68_0 = stackOut_57_0;
+                  stackIn_68_0 = 1;
                   break L111;
                 }
               }
@@ -2068,30 +1982,25 @@ abstract class pa extends ek {
                       if (var3 >= this.field_E) {
                         break L114;
                       } else {
-                        stackOut_72_0 = 1;
-                        stackIn_80_0 = stackOut_72_0;
+                        stackIn_80_0 = 1;
                         break L113;
                       }
                     }
                   }
                   if (this.field_W < 0) {
                     if (var3 > this.field_E) {
-                      stackOut_78_0 = 1;
-                      stackIn_80_0 = stackOut_78_0;
+                      stackIn_80_0 = 1;
                       break L113;
                     } else {
-                      stackOut_77_0 = 0;
-                      stackIn_80_0 = stackOut_77_0;
+                      stackIn_80_0 = 0;
                       break L113;
                     }
                   } else {
-                    stackOut_75_0 = 0;
-                    stackIn_80_0 = stackOut_75_0;
+                    stackIn_80_0 = 0;
                     break L113;
                   }
                 } else {
-                  stackOut_69_0 = 1;
-                  stackIn_80_0 = stackOut_69_0;
+                  stackIn_80_0 = 1;
                   break L113;
                 }
               }
@@ -2199,30 +2108,25 @@ abstract class pa extends ek {
                   if (this.field_G <= var2) {
                     break L122;
                   } else {
-                    stackOut_9_0 = 1;
-                    stackIn_17_0 = stackOut_9_0;
+                    stackIn_17_0 = 1;
                     break L121;
                   }
                 }
               }
               if (0 > this.field_R) {
                 if (var2 > this.field_G) {
-                  stackOut_15_0 = 1;
-                  stackIn_17_0 = stackOut_15_0;
+                  stackIn_17_0 = 1;
                   break L121;
                 } else {
-                  stackOut_14_0 = 0;
-                  stackIn_17_0 = stackOut_14_0;
+                  stackIn_17_0 = 0;
                   break L121;
                 }
               } else {
-                stackOut_12_0 = 0;
-                stackIn_17_0 = stackOut_12_0;
+                stackIn_17_0 = 0;
                 break L121;
               }
             } else {
-              stackOut_6_0 = 1;
-              stackIn_17_0 = stackOut_6_0;
+              stackIn_17_0 = 1;
               break L121;
             }
           }
@@ -2236,30 +2140,25 @@ abstract class pa extends ek {
                   if (var3 >= this.field_E) {
                     break L124;
                   } else {
-                    stackOut_21_0 = 1;
-                    stackIn_29_0 = stackOut_21_0;
+                    stackIn_29_0 = 1;
                     break L123;
                   }
                 }
               }
               if (this.field_W < 0) {
                 if (var3 > this.field_E) {
-                  stackOut_27_0 = 1;
-                  stackIn_29_0 = stackOut_27_0;
+                  stackIn_29_0 = 1;
                   break L123;
                 } else {
-                  stackOut_26_0 = 0;
-                  stackIn_29_0 = stackOut_26_0;
+                  stackIn_29_0 = 0;
                   break L123;
                 }
               } else {
-                stackOut_24_0 = 0;
-                stackIn_29_0 = stackOut_24_0;
+                stackIn_29_0 = 0;
                 break L123;
               }
             } else {
-              stackOut_18_0 = 1;
-              stackIn_29_0 = stackOut_18_0;
+              stackIn_29_0 = 1;
               break L123;
             }
           }
@@ -2343,7 +2242,7 @@ abstract class pa extends ek {
     }
 
     final static hq g(byte param0) {
-        int var1 = 0;
+        int var1;
         if (hj.field_d == null) {
           hj.field_d = new hq(cp.field_H, 20, 0, 0, 0, 11579568, -1, 0, 0, cp.field_H.field_C, -1, 2147483647, true);
           var1 = -122 % ((53 - param0) / 62);
@@ -2358,7 +2257,7 @@ abstract class pa extends ek {
         super(param0, param1, param2);
         this.field_Q = this instanceof lm ? 0 : 4;
         this.field_X = false;
-        int discarded$0 = hp.a((byte) 105, g.field_a, 2);
+        hp.a((byte) 105, g.field_a, 2);
         this.field_V = 0;
         this.field_Z = false;
         this.field_P = 400;
@@ -2413,56 +2312,26 @@ abstract class pa extends ek {
     }
 
     final void c(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        Object stackIn_4_0 = null;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        Object stackIn_11_0 = null;
         Object stackIn_12_0 = null;
         Object stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        Object stackIn_18_0 = null;
         Object stackIn_19_0 = null;
         Object stackIn_20_0 = null;
         int stackIn_20_1 = 0;
-        Object stackIn_28_0 = null;
         Object stackIn_29_0 = null;
         Object stackIn_30_0 = null;
         int stackIn_30_1 = 0;
-        Object stackIn_36_0 = null;
         Object stackIn_37_0 = null;
         Object stackIn_38_0 = null;
         int stackIn_38_1 = 0;
-        Object stackOut_35_0 = null;
-        Object stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        Object stackOut_36_0 = null;
-        int stackOut_36_1 = 0;
-        Object stackOut_27_0 = null;
-        Object stackOut_29_0 = null;
-        int stackOut_29_1 = 0;
-        Object stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        Object stackOut_17_0 = null;
-        Object stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        Object stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        Object stackOut_10_0 = null;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         this.field_S = true;
         this.field_db = param1;
@@ -2487,20 +2356,15 @@ abstract class pa extends ek {
                     }
                   } else {
                     L0: {
-                      stackOut_35_0 = this;
-                      stackIn_37_0 = stackOut_35_0;
-                      stackIn_36_0 = stackOut_35_0;
+                      stackIn_37_0 = this;
+
                       if (!(this instanceof lm)) {
-                        stackOut_37_0 = this;
-                        stackOut_37_1 = 4;
-                        stackIn_38_0 = stackOut_37_0;
-                        stackIn_38_1 = stackOut_37_1;
+                        stackIn_38_0 = this;
+                        stackIn_38_1 = 4;
                         break L0;
                       } else {
-                        stackOut_36_0 = this;
-                        stackOut_36_1 = 0;
-                        stackIn_38_0 = stackOut_36_0;
-                        stackIn_38_1 = stackOut_36_1;
+                        stackIn_38_0 = this;
+                        stackIn_38_1 = 0;
                         break L0;
                       }
                     }
@@ -2520,20 +2384,15 @@ abstract class pa extends ek {
                   }
                 } else {
                   L2: {
-                    stackOut_27_0 = this;
-                    stackIn_29_0 = stackOut_27_0;
-                    stackIn_28_0 = stackOut_27_0;
+                    stackIn_29_0 = this;
+
                     if (!(this instanceof lm)) {
-                      stackOut_29_0 = this;
-                      stackOut_29_1 = 4;
-                      stackIn_30_0 = stackOut_29_0;
-                      stackIn_30_1 = stackOut_29_1;
+                      stackIn_30_0 = this;
+                      stackIn_30_1 = 4;
                       break L2;
                     } else {
-                      stackOut_28_0 = this;
-                      stackOut_28_1 = 0;
-                      stackIn_30_0 = stackOut_28_0;
-                      stackIn_30_1 = stackOut_28_1;
+                      stackIn_30_0 = this;
+                      stackIn_30_1 = 0;
                       break L2;
                     }
                   }
@@ -2551,20 +2410,15 @@ abstract class pa extends ek {
                 }
               } else {
                 L3: {
-                  stackOut_17_0 = this;
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_19_0 = this;
+
                   if (!(this instanceof lm)) {
-                    stackOut_19_0 = this;
-                    stackOut_19_1 = 4;
-                    stackIn_20_0 = stackOut_19_0;
-                    stackIn_20_1 = stackOut_19_1;
+                    stackIn_20_0 = this;
+                    stackIn_20_1 = 4;
                     break L3;
                   } else {
-                    stackOut_18_0 = this;
-                    stackOut_18_1 = 0;
-                    stackIn_20_0 = stackOut_18_0;
-                    stackIn_20_1 = stackOut_18_1;
+                    stackIn_20_0 = this;
+                    stackIn_20_1 = 0;
                     break L3;
                   }
                 }
@@ -2587,20 +2441,15 @@ abstract class pa extends ek {
               }
             } else {
               L4: {
-                stackOut_10_0 = this;
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_12_0 = this;
+
                 if (!(this instanceof lm)) {
-                  stackOut_12_0 = this;
-                  stackOut_12_1 = 4;
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
+                  stackIn_13_0 = this;
+                  stackIn_13_1 = 4;
                   break L4;
                 } else {
-                  stackOut_11_0 = this;
-                  stackOut_11_1 = 0;
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
+                  stackIn_13_0 = this;
+                  stackIn_13_1 = 0;
                   break L4;
                 }
               }
@@ -2620,20 +2469,15 @@ abstract class pa extends ek {
             }
           } else {
             L6: {
-              stackOut_3_0 = this;
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_5_0 = this;
+
               if (!(this instanceof lm)) {
-                stackOut_5_0 = this;
-                stackOut_5_1 = 4;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
+                stackIn_6_0 = this;
+                stackIn_6_1 = 4;
                 break L6;
               } else {
-                stackOut_4_0 = this;
-                stackOut_4_1 = 0;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_6_1 = stackOut_4_1;
+                stackIn_6_0 = this;
+                stackIn_6_1 = 0;
                 break L6;
               }
             }
@@ -2660,12 +2504,11 @@ abstract class pa extends ek {
     }
 
     final void b(byte param0, int param1) {
-        int fieldTemp$15 = 0;
-        int fieldTemp$16 = 0;
-        boolean discarded$17 = false;
-        int fieldTemp$18 = 0;
-        int fieldTemp$19 = 0;
-        int var3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
+        int var3;
         L0: {
           if (this.field_V >= gg.field_j[param1]) {
             this.field_V = 0;
@@ -2684,12 +2527,12 @@ abstract class pa extends ek {
               break L1;
             }
           }
-          fieldTemp$15 = this.field_L + 1;
+          fieldTemp$4 = this.field_L + 1;
           this.field_L = this.field_L + 1;
-          if (fieldTemp$15 > var3) {
-            fieldTemp$16 = this.field_V + 1;
+          if (fieldTemp$4 > var3) {
+            fieldTemp$5 = this.field_V + 1;
             this.field_V = this.field_V + 1;
-            if (fieldTemp$16 != gg.field_j[param1]) {
+            if (fieldTemp$5 != gg.field_j[param1]) {
               this.field_L = 0;
               return;
             } else {
@@ -2702,7 +2545,7 @@ abstract class pa extends ek {
           }
         } else {
           L2: {
-            discarded$17 = this.b(55, -76);
+            this.b(55, -76);
             if (2 <= this.field_M) {
               break L2;
             } else {
@@ -2710,12 +2553,12 @@ abstract class pa extends ek {
               break L2;
             }
           }
-          fieldTemp$18 = this.field_L + 1;
+          fieldTemp$6 = this.field_L + 1;
           this.field_L = this.field_L + 1;
-          if (fieldTemp$18 > var3) {
-            fieldTemp$19 = this.field_V + 1;
+          if (fieldTemp$6 > var3) {
+            fieldTemp$7 = this.field_V + 1;
             this.field_V = this.field_V + 1;
-            if (fieldTemp$19 != gg.field_j[param1]) {
+            if (fieldTemp$7 != gg.field_j[param1]) {
               this.field_L = 0;
               return;
             } else {

@@ -7,8 +7,8 @@ final class jm {
     static hj field_b;
 
     final static void b(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = me.b((byte) -18);
         var2 = dc.c(0);
         if (param0 != -1178583839) {

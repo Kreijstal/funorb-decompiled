@@ -28,10 +28,10 @@ final class e extends en {
     }
 
     final cn b(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        cn var5 = null;
+        int var2;
+        int var3;
+        int var4;
+        cn var5;
         if (this.field_m == null) {
           return null;
         } else {

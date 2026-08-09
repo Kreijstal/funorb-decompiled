@@ -94,12 +94,12 @@ final class ll implements Runnable {
     }
 
     final synchronized boolean b(byte param0) {
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         if (2 <= this.field_n) {
           return true;
         } else {

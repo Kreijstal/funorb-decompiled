@@ -30,33 +30,25 @@ final class ub extends ne {
 
     final static int a(byte param0, int param1) {
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 15) {
           return 34;
         } else {
           L0: {
             if (param1 != 0) {
               if (param1 == 1) {
-                stackOut_7_0 = 3;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 3;
                 break L0;
               } else {
                 if ((param1 ^ -1) != -3) {
-                  stackOut_6_0 = 9;
-                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_0 = 9;
                   break L0;
                 } else {
-                  stackOut_5_0 = 6;
-                  stackIn_8_0 = stackOut_5_0;
+                  stackIn_8_0 = 6;
                   break L0;
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_8_0 = stackOut_2_0;
+              stackIn_8_0 = 0;
               break L0;
             }
           }

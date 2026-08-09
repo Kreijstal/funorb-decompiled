@@ -28,22 +28,22 @@ final class sm extends gn {
     }
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         ml var2 = null;
         int var3 = 0;
         int var4 = 0;
         dl var5 = null;
         int var5_int = 0;
-        hr var6_ref_hr = null;
         int var6 = 0;
+        hr var6_ref_hr = null;
         int[] var7 = null;
         int var8 = 0;
         int var9 = 0;
         int[] var11 = null;
         int[] var12 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var9 = Kickabout.field_G;
         try {
           L0: {

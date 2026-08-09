@@ -36,6 +36,8 @@ final class bh extends java.awt.Canvas {
     }
 
     final static void a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         re var3 = null;
@@ -49,17 +51,14 @@ final class bh extends java.awt.Canvas {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int var14 = 0;
-        pk var15 = null;
-        int[][] var19 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
+        pk var14 = null;
+        int[][] var18 = null;
         var12 = Geoblox.field_C;
         try {
           L0: {
-            var15 = eh.field_d;
+            var14 = eh.field_d;
             if (param0 == 2) {
-              var2 = var15.c((byte) 34);
+              var2 = var14.c((byte) 34);
               var3 = (re) ((Object) nj.field_f.g(0));
               L1: while (true) {
                 L2: {
@@ -80,7 +79,7 @@ final class bh extends java.awt.Canvas {
                   break L0;
                 } else {
                   L3: {
-                    var4 = var15.c((byte) 34);
+                    var4 = var14.c((byte) 34);
                     if (var4 != 0) {
                       oi.field_a[0] = wd.field_f;
                       var5 = var3.field_g;
@@ -93,42 +92,41 @@ final class bh extends java.awt.Canvas {
                             if (var4 <= var6_int) {
                               kc.a(var5, (byte) -98);
                               var6 = new String[2][var5];
-                              var19 = new int[2][4 * var5];
+                              var18 = new int[2][4 * var5];
                               var8 = md.field_c;
                               var9 = 0;
                               var10 = 0;
                               L6: while (true) {
                                 if (var9 >= var8) {
+                                  var9 = 0;
                                   var13 = 0;
-                                  var9 = var13;
-                                  var14 = 0;
-                                  var10 = var14;
+                                  var10 = var13;
                                   L7: while (true) {
-                                    if (var13 >= var8) {
+                                    if (var9 >= var8) {
                                       var3.a(false);
                                       break L3;
                                     } else {
                                       L8: {
-                                        var11 = qi.field_i[var13 + var5];
-                                        var6[1][var14] = oi.field_a[var11];
-                                        var19[1][4 * var14] = hg.field_a[var11];
-                                        var19[1][1 + 4 * var14] = fb.field_m[var11];
-                                        var19[1][var14 * 4 + 2] = k.field_i[var11];
-                                        var19[1][var14 * 4 - -3] = cj.field_b[var11];
+                                        var11 = qi.field_i[var9 + var5];
+                                        var6[1][var13] = oi.field_a[var11];
+                                        var18[1][4 * var13] = hg.field_a[var11];
+                                        var18[1][1 + 4 * var13] = fb.field_m[var11];
+                                        var18[1][var13 * 4 + 2] = k.field_i[var11];
+                                        var18[1][var13 * 4 - -3] = cj.field_b[var11];
                                         if (ge.a(oi.field_a[var11], (byte) 12)) {
                                           if (cj.field_b[var11] + k.field_i[var11] + fb.field_m[var11] != 0) {
                                             break L8;
                                           } else {
-                                            var6[1][var14] = null;
-                                            var14--;
+                                            var6[1][var13] = null;
+                                            var13--;
                                             break L8;
                                           }
                                         } else {
                                           break L8;
                                         }
                                       }
-                                      var14++;
                                       var13++;
+                                      var9++;
                                       continue L7;
                                     }
                                   }
@@ -136,10 +134,10 @@ final class bh extends java.awt.Canvas {
                                   L9: {
                                     var11 = qi.field_i[var9];
                                     var6[0][var10] = oi.field_a[var11];
-                                    var19[0][4 * var10] = hg.field_a[var11];
-                                    var19[0][4 * var10 - -1] = fb.field_m[var11];
-                                    var19[0][4 * var10 - -2] = k.field_i[var11];
-                                    var19[0][4 * var10 + 3] = cj.field_b[var11];
+                                    var18[0][4 * var10] = hg.field_a[var11];
+                                    var18[0][4 * var10 - -1] = fb.field_m[var11];
+                                    var18[0][4 * var10 - -2] = k.field_i[var11];
+                                    var18[0][4 * var10 + 3] = cj.field_b[var11];
                                     if (!ge.a(oi.field_a[var11], (byte) 12)) {
                                       break L9;
                                     } else {
@@ -159,8 +157,8 @@ final class bh extends java.awt.Canvas {
                               }
                             } else {
                               L10: {
-                                me.a(116, var15);
-                                if (var6_int != 0) {
+                                me.a(116, var14);
+                                if ((var6_int ^ -1) != -1) {
                                   nd.a(fe.field_g, var6_int, (byte) 123, rd.field_v, h.field_b, lc.field_b);
                                   break L10;
                                 } else {
@@ -173,7 +171,7 @@ final class bh extends java.awt.Canvas {
                             }
                           }
                         } else {
-                          oi.field_a[var6_int] = var15.e((byte) 120);
+                          oi.field_a[var6_int] = var14.e((byte) 120);
                           var6_int++;
                           continue L4;
                         }
@@ -217,7 +215,20 @@ final class bh extends java.awt.Canvas {
     }
 
     final static void a(boolean param0, ja param1, int param2, ja param3, boolean param4) {
+        ja dupTemp$0 = null;
         ja dupTemp$1 = null;
+        ja dupTemp$2 = null;
+        ja stackIn_31_0 = null;
+        ja stackIn_31_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        String stackIn_42_2 = null;
+        StringBuilder stackIn_44_1 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         wd var6 = null;
         int var7 = 0;
@@ -229,37 +240,6 @@ final class bh extends java.awt.Canvas {
         int var13 = 0;
         wd var14 = null;
         wd var15 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        String stackIn_39_2 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        String stackIn_42_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
         var13 = Geoblox.field_C;
         try {
           L0: {
@@ -271,9 +251,9 @@ final class bh extends java.awt.Canvas {
             var8 = param1.field_z;
             var9 = param1.field_C;
             L1: while (true) {
-              dupTemp$1 = (ja) ((Object) var15.a(true));
-              var10 = dupTemp$1;
-              if (null == dupTemp$1) {
+              dupTemp$0 = (ja) ((Object) var15.a(true));
+              var10 = dupTemp$0;
+              if (null == dupTemp$0) {
                 L2: {
                   if (param2 == 1) {
                     break L2;
@@ -347,7 +327,10 @@ final class bh extends java.awt.Canvas {
                             break L10;
                           } else {
                             var10.field_m = var10.field_m + 1;
-                            var10.field_n[var11].field_m = var10.field_n[var11].field_m + 1;
+                            dupTemp$1 = var10.field_n[var11];
+                            stackIn_31_0 = (ja) (dupTemp$1);
+                            stackIn_31_1 = (ja) (dupTemp$1);
+                            stackIn_31_0.field_m = stackIn_31_1.field_m + 1;
                             break L10;
                           }
                         }
@@ -357,7 +340,8 @@ final class bh extends java.awt.Canvas {
                           } else {
                             var10.field_u = param1.field_u;
                             var10.field_N = var10.field_N + 1;
-                            var10.field_n[var11].field_N = var10.field_n[var11].field_N + 1;
+                            dupTemp$2 = var10.field_n[var11];
+                            dupTemp$2.field_N = dupTemp$2.field_N + 1;
                             break L11;
                           }
                         }
@@ -383,56 +367,40 @@ final class bh extends java.awt.Canvas {
           decompiledCaughtException = decompiledCaughtParameter0;
           L12: {
             var5 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) (var5);
-            stackOut_36_1 = new StringBuilder().append("bh.D(").append(param0).append(',');
-            stackIn_38_0 = stackOut_36_0;
-            stackIn_38_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+            stackIn_41_0 = (RuntimeException) (var5);
+
+            stackIn_41_1 = new StringBuilder().append("bh.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "null";
               break L12;
             } else {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "{...}";
-              stackIn_39_0 = stackOut_37_0;
-              stackIn_39_1 = stackOut_37_1;
-              stackIn_39_2 = stackOut_37_2;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "{...}";
               break L12;
             }
           }
           L13: {
-            stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-            stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',').append(param2).append(',');
-            stackIn_41_0 = stackOut_39_0;
-            stackIn_41_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+
+
+            stackIn_44_1 = ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "null";
               break L13;
             } else {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "{...}";
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_42_1 = stackOut_40_1;
-              stackIn_42_2 = stackOut_40_2;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "{...}";
               break L13;
             }
           }
-          throw t.a((Throwable) ((Object) stackIn_42_0), stackIn_42_2 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) stackIn_42_0), stackIn_45_2 + ',' + param4 + ')');
         }
     }
 

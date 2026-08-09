@@ -18,8 +18,8 @@ final class pe extends k {
     }
 
     final int[] a(int param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         var4 = this.field_j.a(param0, -1);
         var3 = var4;
         if (param1 == 0) {

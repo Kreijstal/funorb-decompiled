@@ -8,7 +8,7 @@ final class hp {
     static cf[] field_c;
 
     final static void a(int param0, byte param1) {
-        wj var2 = null;
+        wj var2;
         var2 = ac.field_B;
         var2.d((byte) -88, param0);
         if (param1 <= 66) {

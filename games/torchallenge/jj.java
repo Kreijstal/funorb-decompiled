@@ -23,15 +23,11 @@ final class jj {
         int var5 = 0;
         char[] var6 = null;
         int stackIn_8_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_19_0 = 0;
+        int stackIn_17_0 = 0;
         int stackIn_21_0 = 0;
+        int stackIn_23_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_18_0 = 0;
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -40,8 +36,7 @@ final class jj {
                 break L1;
               } else {
                 if (param1 < 128) {
-                  stackOut_7_0 = 1;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -74,8 +69,7 @@ final class jj {
                       var3++;
                       continue L4;
                     } else {
-                      stackOut_14_0 = 1;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_17_0 = 1;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -86,13 +80,11 @@ final class jj {
               }
             }
             if (param0 > 82) {
-              stackOut_20_0 = 0;
-              stackIn_21_0 = stackOut_20_0;
+              stackIn_23_0 = 0;
               decompiledRegionSelector0 = 3;
               break L0;
             } else {
-              stackOut_18_0 = 1;
-              stackIn_19_0 = stackOut_18_0;
+              stackIn_21_0 = 1;
               decompiledRegionSelector0 = 2;
               break L0;
             }
@@ -106,12 +98,12 @@ final class jj {
           return stackIn_8_0 != 0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_15_0 != 0;
+            return stackIn_17_0 != 0;
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return stackIn_19_0 != 0;
-            } else {
               return stackIn_21_0 != 0;
+            } else {
+              return stackIn_23_0 != 0;
             }
           }
         }
@@ -119,22 +111,12 @@ final class jj {
 
     final static ka a(byte param0, lj param1, int param2, int param3) {
         RuntimeException var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             if (param0 > 30) {
@@ -153,27 +135,19 @@ final class jj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var4);
-            stackOut_6_1 = new StringBuilder().append("jj.E(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var4);
+
+            stackIn_8_1 = new StringBuilder().append("jj.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L1;
             }
           }
@@ -190,7 +164,6 @@ final class jj {
 
     final static int a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -198,7 +171,7 @@ final class jj {
         int var6 = 0;
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
+        RuntimeException var1 = null;
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -216,8 +189,7 @@ final class jj {
             var4 = 0;
             L2: while (true) {
               if (-7 >= (var4 ^ -1)) {
-                stackOut_14_0 = var2;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = var2;
                 break L0;
               } else {
                 L3: {

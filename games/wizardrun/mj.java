@@ -19,8 +19,6 @@ final class mj {
         RuntimeException var3_ref = null;
         ib stackIn_2_0 = null;
         ea stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -28,29 +26,17 @@ final class mj {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ea stackOut_3_0 = null;
-        ib stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param2 == -1) {
               var3 = new ea();
               ((ib) ((Object) var3)).field_a = param0;
               ((ib) ((Object) var3)).field_c = param1;
-              stackOut_3_0 = (ea) (var3);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (ea) (var3);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (ib) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (ib) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -59,27 +45,19 @@ final class mj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3_ref);
-            stackOut_5_1 = new StringBuilder().append("mj.D(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3_ref);
+
+            stackIn_7_1 = new StringBuilder().append("mj.D(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -106,34 +84,34 @@ final class mj {
     }
 
     final static String a(Throwable param0, byte param1) throws IOException {
-        String var2 = null;
-        PrintWriter var4 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        java.awt.Component var14 = null;
-        eb var15 = null;
-        StringWriter var16 = null;
-        String var21 = null;
-        BufferedReader var22 = null;
-        String var23 = null;
-        String var24 = null;
-        String var25 = null;
-        String var26 = null;
-        String var27 = null;
-        String var28 = null;
-        String var29 = null;
-        BufferedReader var30 = null;
-        String var31 = null;
-        String var32 = null;
-        String var33 = null;
-        String var34 = null;
-        String var35 = null;
-        String var36 = null;
+        String var2;
+        PrintWriter var4;
+        int var9;
+        int var10;
+        String var11;
+        int var13;
+        java.awt.Component var14;
+        eb var15;
+        StringWriter var16;
+        String var21;
+        BufferedReader var22;
+        String var23;
+        String var24;
+        String var25;
+        String var26;
+        String var27;
+        String var28;
+        BufferedReader var6;
+        String var7;
+        int var12;
+        String var29;
+        BufferedReader var30;
+        String var31;
+        String var32;
+        String var33;
+        String var34;
+        String var35;
+        String var36;
         L0: {
           var13 = wizardrun.field_H;
           if (!(param0 instanceof eb)) {

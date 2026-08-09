@@ -23,7 +23,7 @@ final class lb extends pi {
     }
 
     final static int a(boolean param0, int param1, int param2) {
-        int var3 = 0;
+        int var3;
         if (param0) {
           lb.a(-94);
           var3 = param1 >>> -1033791905;

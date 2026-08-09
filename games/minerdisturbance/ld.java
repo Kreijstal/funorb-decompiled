@@ -26,58 +26,107 @@ final class ld extends sb {
         String stackIn_7_0 = null;
         String stackIn_11_0 = null;
         String stackIn_13_0 = null;
-        String stackOut_6_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_12_0 = null;
-        String stackOut_10_0 = null;
-        var5 = MinerDisturbance.field_ab;
-        if (param1 == -1) {
-          var4 = param2.indexOf(param3);
-          L0: while (true) {
-            L1: {
-              if (var4 == -1) {
-                stackOut_6_0 = (String) (param2);
-                stackIn_7_0 = stackOut_6_0;
-                break L1;
-              } else {
-                param2 = param2.substring(0, var4) + param0 + param2.substring(param3.length() + var4);
-                stackOut_4_0 = (String) (param2);
-                stackIn_7_0 = stackOut_4_0;
-                stackIn_5_0 = stackOut_4_0;
-                if (var5 != 0) {
-                  break L1;
-                } else {
-                  var4 = ((String) (Object) stackIn_5_0).indexOf(param3, var4 + param0.length());
-                  continue L0;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var5 = MinerDisturbance.field_ab;
+                    if (param1 == -1) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
                 }
-              }
-            }
-            return stackIn_7_0;
-          }
-        } else {
-          field_B = -32;
-          var4 = param2.indexOf(param3);
-          L2: while (true) {
-            L3: {
-              if (var4 == -1) {
-                stackOut_12_0 = (String) (param2);
-                stackIn_13_0 = stackOut_12_0;
-                break L3;
-              } else {
-                param2 = param2.substring(0, var4) + param0 + param2.substring(param3.length() + var4);
-                stackOut_10_0 = (String) (param2);
-                stackIn_13_0 = stackOut_10_0;
-                stackIn_11_0 = stackOut_10_0;
-                if (var5 != 0) {
-                  break L3;
-                } else {
-                  var4 = ((String) (Object) stackIn_11_0).indexOf(param3, var4 + param0.length());
-                  continue L2;
+                case 1: {
+                    field_B = -32;
+                    statePc = 8;
+                    continue stateLoop;
                 }
-              }
+                case 2: {
+                    var4 = param2.indexOf(param3);
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (var4 == -1) {
+                        statePc = 6;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    param2 = param2.substring(0, var4) + param0 + param2.substring(param3.length() + var4);
+                    stackIn_7_0 = (String) (param2);
+                    stackIn_5_0 = stackIn_7_0;
+                    if (var5 != 0) {
+                        statePc = 7;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    var4 = ((String) (Object) stackIn_5_0).indexOf(param3, var4 + param0.length());
+                    if (var5 == 0) {
+                        statePc = 3;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    stackIn_7_0 = (String) (param2);
+                    statePc = 7;
+                    continue stateLoop;
+                }
+                case 7: {
+                    return stackIn_7_0;
+                }
+                case 8: {
+                    var4 = param2.indexOf(param3);
+                    statePc = 9;
+                    continue stateLoop;
+                }
+                case 9: {
+                    if (var4 == -1) {
+                        statePc = 12;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    param2 = param2.substring(0, var4) + param0 + param2.substring(param3.length() + var4);
+                    stackIn_13_0 = (String) (param2);
+                    stackIn_11_0 = stackIn_13_0;
+                    if (var5 != 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    var4 = ((String) (Object) stackIn_11_0).indexOf(param3, var4 + param0.length());
+                    if (var5 == 0) {
+                        statePc = 9;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
+                    stackIn_13_0 = (String) (param2);
+                    statePc = 13;
+                    continue stateLoop;
+                }
+                case 13: {
+                    return stackIn_13_0;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            return stackIn_13_0;
-          }
         }
     }
 
@@ -106,13 +155,13 @@ final class ld extends sb {
     }
 
     final int e(byte param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         if (param0 != 0) {
           return -16;
         } else {
-          fieldTemp$2 = this.field_o;
+          fieldTemp$1 = this.field_o;
           this.field_o = this.field_o + 1;
-          return this.field_u[fieldTemp$2] + -this.field_v.b(4) & 255;
+          return this.field_u[fieldTemp$1] + -this.field_v.b(4) & 255;
         }
     }
 
@@ -123,100 +172,223 @@ final class ld extends sb {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var6 = MinerDisturbance.field_ab;
-        if (param0 < -64) {
-          var3 = this.field_y >> 242816483;
-          var4 = -(7 & this.field_y) + 8;
-          this.field_y = this.field_y + param1;
-          var5 = 0;
-          L0: while (true) {
-            if (param1 > var4) {
-              incrementValue$2 = var3;
-              var3++;
-              var5 = var5 + ((this.field_u[incrementValue$2] & pl.field_b[var4]) << -var4 + param1);
-              param1 = param1 - var4;
-              var4 = 8;
-              if (var6 == 0) {
-                continue L0;
-              } else {
-                var5 = var5 + (this.field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
-                return var5;
-              }
-            } else {
-              L1: {
-                L2: {
-                  if (param1 != var4) {
-                    break L2;
-                  } else {
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var6 = MinerDisturbance.field_ab;
+                    if (param0 < -64) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    field_B = -20;
+                    statePc = 17;
+                    continue stateLoop;
+                }
+                case 2: {
+                    var3 = this.field_y >> 242816483;
+                    var4 = -(7 & this.field_y) + 8;
+                    this.field_y = this.field_y + param1;
+                    var5 = 0;
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (param1 > var4) {
+                        statePc = 9;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    if (param1 != var4) {
+                        statePc = 6;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
                     var5 = var5 + (pl.field_b[var4] & this.field_u[var3]);
                     if (var6 == 0) {
-                      break L1;
+                        statePc = 7;
                     } else {
-                      break L2;
+                        statePc = 6;
                     }
-                  }
+                    continue stateLoop;
                 }
-                var5 = var5 + (this.field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
-                break L1;
-              }
-              return var5;
-            }
-          }
-        } else {
-          field_B = -20;
-          var3 = this.field_y >> 242816483;
-          var4 = -(7 & this.field_y) + 8;
-          this.field_y = this.field_y + param1;
-          var5 = 0;
-          L3: while (true) {
-            if (param1 > var4) {
-              incrementValue$3 = var3;
-              var3++;
-              var5 = var5 + ((this.field_u[incrementValue$3] & pl.field_b[var4]) << -var4 + param1);
-              param1 = param1 - var4;
-              var4 = 8;
-              if (var6 == 0) {
-                continue L3;
-              } else {
-                var5 = var5 + (this.field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
-                return var5;
-              }
-            } else {
-              L4: {
-                L5: {
-                  if (param1 != var4) {
-                    break L5;
-                  } else {
+                case 6: {
+                    var5 = var5 + (this.field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
+                    statePc = 7;
+                    continue stateLoop;
+                }
+                case 7: {
+                    return var5;
+                }
+                case 9: {
+                    incrementValue$2 = var3;
+                    var3++;
+                    var5 = var5 + ((this.field_u[incrementValue$2] & pl.field_b[var4]) << -var4 + param1);
+                    param1 = param1 - var4;
+                    var4 = 8;
+                    if (var6 == 0) {
+                        statePc = 12;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    var5 = var5 + (this.field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
+                    return var5;
+                }
+                case 12: {
+                    if (var6 == 0) {
+                        statePc = 3;
+                    } else {
+                        statePc = 13;
+                    }
+                    continue stateLoop;
+                }
+                case 13: {
+                    if (param1 != var4) {
+                        statePc = 15;
+                    } else {
+                        statePc = 14;
+                    }
+                    continue stateLoop;
+                }
+                case 14: {
                     var5 = var5 + (pl.field_b[var4] & this.field_u[var3]);
                     if (var6 == 0) {
-                      break L4;
+                        statePc = 16;
                     } else {
-                      break L5;
+                        statePc = 15;
                     }
-                  }
+                    continue stateLoop;
                 }
-                var5 = var5 + (this.field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
-                break L4;
-              }
-              return var5;
+                case 15: {
+                    var5 = var5 + (this.field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
+                    statePc = 16;
+                    continue stateLoop;
+                }
+                case 16: {
+                    return var5;
+                }
+                case 17: {
+                    var3 = this.field_y >> 242816483;
+                    var4 = -(7 & this.field_y) + 8;
+                    this.field_y = this.field_y + param1;
+                    var5 = 0;
+                    statePc = 18;
+                    continue stateLoop;
+                }
+                case 18: {
+                    if (param1 > var4) {
+                        statePc = 23;
+                    } else {
+                        statePc = 19;
+                    }
+                    continue stateLoop;
+                }
+                case 19: {
+                    if (param1 != var4) {
+                        statePc = 21;
+                    } else {
+                        statePc = 20;
+                    }
+                    continue stateLoop;
+                }
+                case 20: {
+                    var5 = var5 + (pl.field_b[var4] & this.field_u[var3]);
+                    if (var6 == 0) {
+                        statePc = 22;
+                    } else {
+                        statePc = 21;
+                    }
+                    continue stateLoop;
+                }
+                case 21: {
+                    var5 = var5 + (this.field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
+                    statePc = 22;
+                    continue stateLoop;
+                }
+                case 22: {
+                    return var5;
+                }
+                case 23: {
+                    incrementValue$3 = var3;
+                    var3++;
+                    var5 = var5 + ((this.field_u[incrementValue$3] & pl.field_b[var4]) << -var4 + param1);
+                    param1 = param1 - var4;
+                    var4 = 8;
+                    if (var6 == 0) {
+                        statePc = 26;
+                    } else {
+                        statePc = 24;
+                    }
+                    continue stateLoop;
+                }
+                case 24: {
+                    var5 = var5 + (this.field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
+                    return var5;
+                }
+                case 26: {
+                    if (var6 == 0) {
+                        statePc = 18;
+                    } else {
+                        statePc = 27;
+                    }
+                    continue stateLoop;
+                }
+                case 27: {
+                    if (param1 != var4) {
+                        statePc = 29;
+                    } else {
+                        statePc = 28;
+                    }
+                    continue stateLoop;
+                }
+                case 28: {
+                    var5 = var5 + (pl.field_b[var4] & this.field_u[var3]);
+                    if (var6 == 0) {
+                        statePc = 30;
+                    } else {
+                        statePc = 29;
+                    }
+                    continue stateLoop;
+                }
+                case 29: {
+                    var5 = var5 + (this.field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
+                    statePc = 30;
+                    continue stateLoop;
+                }
+                case 30: {
+                    return var5;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
         }
     }
 
     final void d(byte param0, int param1) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         if (param0 >= -42) {
           field_x = (ea) null;
-          fieldTemp$4 = this.field_o;
+          fieldTemp$2 = this.field_o;
           this.field_o = this.field_o + 1;
-          this.field_u[fieldTemp$4] = (byte)(param1 + this.field_v.b(4));
+          this.field_u[fieldTemp$2] = (byte)(param1 + this.field_v.b(4));
           return;
         } else {
-          fieldTemp$5 = this.field_o;
+          fieldTemp$3 = this.field_o;
           this.field_o = this.field_o + 1;
-          this.field_u[fieldTemp$5] = (byte)(param1 + this.field_v.b(4));
+          this.field_u[fieldTemp$3] = (byte)(param1 + this.field_v.b(4));
           return;
         }
     }
@@ -238,9 +410,8 @@ final class ld extends sb {
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$1 = 0;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -250,65 +421,128 @@ final class ld extends sb {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        var7 = MinerDisturbance.field_ab;
-        try {
-          L0: {
-            var5_int = 0;
-            var6 = -2 / ((62 - param1) / 47);
-            L1: while (true) {
-              if (param2 <= var5_int) {
-                break L0;
-              } else {
-                fieldTemp$5 = this.field_o;
-                this.field_o = this.field_o + 1;
-                param0[var5_int + param3] = (byte)(this.field_u[fieldTemp$5] + -this.field_v.b(4));
-                var5_int++;
-                if (var7 == 0) {
-                  continue L1;
-                } else {
-                  return;
+        int statePc = 0;
+        Throwable caughtException = null;
+        RuntimeException var5 = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var7 = MinerDisturbance.field_ab;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-              }
+                case 1: {
+                    try {
+                        var5_int = 0;
+                        var6 = -2 / ((62 - param1) / 47);
+                        statePc = 2;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 8;
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        if (param2 <= var5_int) {
+                            statePc = 12;
+                        } else {
+                            statePc = 3;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 8;
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        fieldTemp$1 = this.field_o;
+                        this.field_o = this.field_o + 1;
+                        param0[var5_int + param3] = (byte)(this.field_u[fieldTemp$1] + -this.field_v.b(4));
+                        var5_int++;
+                        if (var7 == 0) {
+                            statePc = 5;
+                        } else {
+                            statePc = 4;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 8;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        return;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 8;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        if (var7 == 0) {
+                            statePc = 2;
+                        } else {
+                            statePc = 6;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 8;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        statePc = 12;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 8;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    var5 = (RuntimeException) ((Object) caughtException);
+                    stackIn_10_0 = (RuntimeException) (var5);
+                    stackIn_9_0 = stackIn_10_0;
+                    stackIn_10_1 = new StringBuilder().append("ld.K(");
+                    stackIn_9_1 = stackIn_10_1;
+                    if (param0 == null) {
+                        statePc = 10;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    stackIn_11_0 = (RuntimeException) ((Object) stackIn_9_0);
+                    stackIn_11_1 = (StringBuilder) ((Object) stackIn_9_1);
+                    stackIn_11_2 = "{...}";
+                    statePc = 11;
+                    continue stateLoop;
+                }
+                case 10: {
+                    stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+                    stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+                    stackIn_11_2 = "null";
+                    statePc = 11;
+                    continue stateLoop;
+                }
+                case 11: {
+                    throw lj.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+                }
+                case 12: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var5);
-            stackOut_8_1 = new StringBuilder().append("ld.K(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L2;
-            } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L2;
-            }
-          }
-          throw lj.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -325,95 +559,266 @@ final class ld extends sb {
     }
 
     final void a(int param0, byte param1, int param2) {
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
         int fieldTemp$10 = 0;
         int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
+        int fieldTemp$15 = 0;
+        int fieldTemp$16 = 0;
+        int fieldTemp$17 = 0;
+        int fieldTemp$18 = 0;
+        int fieldTemp$19 = 0;
         int var5 = 0;
-        var5 = MinerDisturbance.field_ab;
-        if (param1 == 14) {
-          param0 = param0 & pl.field_b[param2];
-          L0: while (true) {
-            if (this.field_z >= param2) {
-              if (param2 == this.field_z) {
-                fieldTemp$6 = this.field_o;
-                this.field_o = this.field_o + 1;
-                this.field_u[fieldTemp$6] = (byte)(this.field_u[fieldTemp$6] + param0);
-                this.field_u[this.field_o] = (byte) 0;
-                this.field_z = 8;
-                return;
-              } else {
-                this.field_z = this.field_z - param2;
-                this.field_u[this.field_o] = (byte)(this.field_u[this.field_o] + (param0 << this.field_z));
-                if (var5 == 0) {
-                  return;
-                } else {
-                  fieldTemp$7 = this.field_o;
-                  this.field_o = this.field_o + 1;
-                  this.field_u[fieldTemp$7] = (byte)(this.field_u[fieldTemp$7] + param0);
-                  this.field_u[this.field_o] = (byte) 0;
-                  this.field_z = 8;
-                  return;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var5 = MinerDisturbance.field_ab;
+                    if (param1 == 14) {
+                        statePc = 20;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
                 }
-              }
-            } else {
-              param2 = param2 - this.field_z;
-              fieldTemp$8 = this.field_o;
-              this.field_o = this.field_o + 1;
-              this.field_u[fieldTemp$8] = (byte)(this.field_u[fieldTemp$8] + (param0 >>> param2));
-              this.field_u[this.field_o] = (byte) 0;
-              this.field_z = 8;
-              if (var5 != 0) {
-                this.field_z = 8;
-                return;
-              } else {
-                continue L0;
-              }
-            }
-          }
-        } else {
-          field_x = (ea) null;
-          param0 = param0 & pl.field_b[param2];
-          L1: while (true) {
-            if (this.field_z < param2) {
-              param2 = param2 - this.field_z;
-              fieldTemp$9 = this.field_o;
-              this.field_o = this.field_o + 1;
-              this.field_u[fieldTemp$9] = (byte)(this.field_u[fieldTemp$9] + (param0 >>> param2));
-              this.field_u[this.field_o] = (byte) 0;
-              this.field_z = 8;
-              if (var5 == 0) {
-                continue L1;
-              } else {
-                this.field_z = 8;
-                return;
-              }
-            } else {
-              if (param2 != this.field_z) {
-                this.field_z = this.field_z - param2;
-                this.field_u[this.field_o] = (byte)(this.field_u[this.field_o] + (param0 << this.field_z));
-                if (var5 != 0) {
-                  fieldTemp$10 = this.field_o;
-                  this.field_o = this.field_o + 1;
-                  this.field_u[fieldTemp$10] = (byte)(this.field_u[fieldTemp$10] + param0);
-                  this.field_u[this.field_o] = (byte) 0;
-                  this.field_z = 8;
-                  return;
-                } else {
-                  return;
+                case 1: {
+                    field_x = (ea) null;
+                    param0 = param0 & pl.field_b[param2];
+                    statePc = 2;
+                    continue stateLoop;
                 }
-              } else {
-                fieldTemp$11 = this.field_o;
-                this.field_o = this.field_o + 1;
-                this.field_u[fieldTemp$11] = (byte)(this.field_u[fieldTemp$11] + param0);
-                this.field_u[this.field_o] = (byte) 0;
-                this.field_z = 8;
-                return;
-              }
+                case 2: {
+                    if (this.field_z < param2) {
+                        statePc = 9;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (param2 != this.field_z) {
+                        statePc = 5;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    fieldTemp$10 = this.field_o;
+                    this.field_o = this.field_o + 1;
+                    this.field_u[fieldTemp$10] = (byte)(this.field_u[fieldTemp$10] + param0);
+                    this.field_u[this.field_o] = (byte) 0;
+                    this.field_z = 8;
+                    return;
+                }
+                case 5: {
+                    this.field_z = this.field_z - param2;
+                    this.field_u[this.field_o] = (byte)(this.field_u[this.field_o] + (param0 << this.field_z));
+                    if (var5 != 0) {
+                        statePc = 7;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    return;
+                }
+                case 7: {
+                    fieldTemp$11 = this.field_o;
+                    this.field_o = this.field_o + 1;
+                    this.field_u[fieldTemp$11] = (byte)(this.field_u[fieldTemp$11] + param0);
+                    this.field_u[this.field_o] = (byte) 0;
+                    this.field_z = 8;
+                    return;
+                }
+                case 9: {
+                    param2 = param2 - this.field_z;
+                    fieldTemp$12 = this.field_o;
+                    this.field_o = this.field_o + 1;
+                    this.field_u[fieldTemp$12] = (byte)(this.field_u[fieldTemp$12] + (param0 >>> param2));
+                    this.field_u[this.field_o] = (byte) 0;
+                    this.field_z = 8;
+                    if (var5 == 0) {
+                        statePc = 11;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    this.field_z = 8;
+                    return;
+                }
+                case 11: {
+                    if (var5 == 0) {
+                        statePc = 2;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
+                    if (param2 != this.field_z) {
+                        statePc = 15;
+                    } else {
+                        statePc = 13;
+                    }
+                    continue stateLoop;
+                }
+                case 13: {
+                    fieldTemp$13 = this.field_o;
+                    this.field_o = this.field_o + 1;
+                    this.field_u[fieldTemp$13] = (byte)(this.field_u[fieldTemp$13] + param0);
+                    this.field_u[this.field_o] = (byte) 0;
+                    this.field_z = 8;
+                    return;
+                }
+                case 15: {
+                    this.field_z = this.field_z - param2;
+                    this.field_u[this.field_o] = (byte)(this.field_u[this.field_o] + (param0 << this.field_z));
+                    if (var5 == 0) {
+                        statePc = 19;
+                    } else {
+                        statePc = 16;
+                    }
+                    continue stateLoop;
+                }
+                case 16: {
+                    fieldTemp$14 = this.field_o;
+                    this.field_o = this.field_o + 1;
+                    this.field_u[fieldTemp$14] = (byte)(this.field_u[fieldTemp$14] + param0);
+                    this.field_u[this.field_o] = (byte) 0;
+                    statePc = 18;
+                    continue stateLoop;
+                }
+                case 18: {
+                    this.field_z = 8;
+                    return;
+                }
+                case 19: {
+                    return;
+                }
+                case 20: {
+                    param0 = param0 & pl.field_b[param2];
+                    statePc = 21;
+                    continue stateLoop;
+                }
+                case 21: {
+                    if (this.field_z >= param2) {
+                        statePc = 29;
+                    } else {
+                        statePc = 22;
+                    }
+                    continue stateLoop;
+                }
+                case 22: {
+                    param2 = param2 - this.field_z;
+                    fieldTemp$15 = this.field_o;
+                    this.field_o = this.field_o + 1;
+                    this.field_u[fieldTemp$15] = (byte)(this.field_u[fieldTemp$15] + (param0 >>> param2));
+                    this.field_u[this.field_o] = (byte) 0;
+                    this.field_z = 8;
+                    if (var5 != 0) {
+                        statePc = 33;
+                    } else {
+                        statePc = 23;
+                    }
+                    continue stateLoop;
+                }
+                case 23: {
+                    if (var5 == 0) {
+                        statePc = 21;
+                    } else {
+                        statePc = 24;
+                    }
+                    continue stateLoop;
+                }
+                case 24: {
+                    if (param2 == this.field_z) {
+                        statePc = 27;
+                    } else {
+                        statePc = 25;
+                    }
+                    continue stateLoop;
+                }
+                case 25: {
+                    this.field_z = this.field_z - param2;
+                    this.field_u[this.field_o] = (byte)(this.field_u[this.field_o] + (param0 << this.field_z));
+                    if (var5 == 0) {
+                        statePc = 28;
+                    } else {
+                        statePc = 26;
+                    }
+                    continue stateLoop;
+                }
+                case 26: {
+                    fieldTemp$16 = this.field_o;
+                    this.field_o = this.field_o + 1;
+                    this.field_u[fieldTemp$16] = (byte)(this.field_u[fieldTemp$16] + param0);
+                    this.field_u[this.field_o] = (byte) 0;
+                    this.field_z = 8;
+                    return;
+                }
+                case 27: {
+                    fieldTemp$17 = this.field_o;
+                    this.field_o = this.field_o + 1;
+                    this.field_u[fieldTemp$17] = (byte)(this.field_u[fieldTemp$17] + param0);
+                    this.field_u[this.field_o] = (byte) 0;
+                    this.field_z = 8;
+                    return;
+                }
+                case 28: {
+                    return;
+                }
+                case 29: {
+                    if (param2 == this.field_z) {
+                        statePc = 32;
+                    } else {
+                        statePc = 30;
+                    }
+                    continue stateLoop;
+                }
+                case 30: {
+                    this.field_z = this.field_z - param2;
+                    this.field_u[this.field_o] = (byte)(this.field_u[this.field_o] + (param0 << this.field_z));
+                    if (var5 == 0) {
+                        statePc = 35;
+                    } else {
+                        statePc = 31;
+                    }
+                    continue stateLoop;
+                }
+                case 31: {
+                    fieldTemp$18 = this.field_o;
+                    this.field_o = this.field_o + 1;
+                    this.field_u[fieldTemp$18] = (byte)(this.field_u[fieldTemp$18] + param0);
+                    this.field_u[this.field_o] = (byte) 0;
+                    this.field_z = 8;
+                    return;
+                }
+                case 32: {
+                    fieldTemp$19 = this.field_o;
+                    this.field_o = this.field_o + 1;
+                    this.field_u[fieldTemp$19] = (byte)(this.field_u[fieldTemp$19] + param0);
+                    this.field_u[this.field_o] = (byte) 0;
+                    statePc = 34;
+                    continue stateLoop;
+                }
+                case 33: {
+                    this.field_z = 8;
+                    return;
+                }
+                case 34: {
+                    this.field_z = 8;
+                    return;
+                }
+                case 35: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
         }
     }
 

@@ -23,14 +23,13 @@ final class mi extends de {
         String var8 = var7 + " " + ub.a(sd.a(bf.a(param0 + -99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{mj.field_i}), param0 + -11, "<br><br>", '#');
         tc var5 = qj.field_e;
         int var6 = 1 + var5.field_z + var5.field_w;
-        int discarded$0 = var5.a(var8, 50, 150, 540, 10 * var6, 16777215, 0, 1, 0, var6);
+        var5.a(var8, 50, 150, 540, 10 * var6, 16777215, 0, 1, 0, var6);
     }
 
     final static void e(int param0) {
-        hh[] discarded$1 = null;
-        int var1 = 0;
-        int var2 = 0;
-        ph var3 = null;
+        int var1;
+        int var2;
+        ph var3;
         L0: {
           var2 = Pixelate.field_H ? 1 : 0;
           if (0 == ki.field_f) {
@@ -73,21 +72,21 @@ final class mi extends de {
           if (param0 < -121) {
             break L2;
           } else {
-            discarded$1 = mi.a(71, 124, 48, -115);
+            mi.a(71, 124, 48, -115);
             break L2;
           }
         }
     }
 
     final static hh[] a(int param0, int param1, int param2, int param3) {
-        hh[] var4 = null;
-        int var5 = 0;
-        boolean[] var6 = null;
-        hh[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        hh[] var11 = null;
+        hh[] var4;
+        int var5;
+        boolean[] var6;
+        hh[] var7;
+        int var8;
+        int var9;
+        int var10;
+        hh[] var11;
         var10 = Pixelate.field_H ? 1 : 0;
         var11 = al.field_c[param2][param0];
         var4 = var11;
@@ -117,7 +116,7 @@ final class mi extends de {
                   continue L0;
                 } else {
                   var9++;
-                  if (var5 <= var9) {
+                  if ((var5 ^ -1) >= (var9 ^ -1)) {
                     var9 = 0;
                     continue L2;
                   } else {
@@ -133,9 +132,8 @@ final class mi extends de {
     }
 
     final static int d(int param0, int param1) {
-        int discarded$0 = 0;
         if (param0 != -4096) {
-            discarded$0 = mi.a(126, 19, (byte) -117);
+            mi.a(126, 19, (byte) -117);
         }
         param1 = param1 & 8191;
         if (param1 >= 4096) {
@@ -150,20 +148,6 @@ final class mi extends de {
 
     final static int a(boolean param0, byte param1, String param2, int param3, boolean param4, String param5) {
         try {
-            int discarded$5 = 0;
-            int discarded$6 = 0;
-            int discarded$7 = 0;
-            Object discarded$8 = null;
-            Object discarded$9 = null;
-            RuntimeException var6 = null;
-            int var6_int = 0;
-            String var6_ref = null;
-            int var7 = 0;
-            Throwable var8_ref_Throwable = null;
-            int var8 = 0;
-            int var9 = 0;
-            String var10 = null;
-            CharSequence var11 = null;
             int stackIn_4_0 = 0;
             int stackIn_30_0 = 0;
             int stackIn_40_0 = 0;
@@ -175,53 +159,25 @@ final class mi extends de {
             int stackIn_92_0 = 0;
             int stackIn_100_0 = 0;
             int stackIn_103_0 = 0;
-            RuntimeException stackIn_105_0 = null;
-            StringBuilder stackIn_105_1 = null;
             RuntimeException stackIn_106_0 = null;
             StringBuilder stackIn_106_1 = null;
             RuntimeException stackIn_107_0 = null;
             StringBuilder stackIn_107_1 = null;
             String stackIn_107_2 = null;
-            RuntimeException stackIn_108_0 = null;
-            StringBuilder stackIn_108_1 = null;
-            RuntimeException stackIn_109_0 = null;
             StringBuilder stackIn_109_1 = null;
-            RuntimeException stackIn_110_0 = null;
             StringBuilder stackIn_110_1 = null;
             String stackIn_110_2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_3_0 = 0;
-            int stackOut_29_0 = 0;
-            int stackOut_39_0 = 0;
-            int stackOut_38_0 = 0;
-            int stackOut_43_0 = 0;
-            int stackOut_42_0 = 0;
-            int stackOut_46_0 = 0;
-            int stackOut_45_0 = 0;
-            int stackOut_49_0 = 0;
-            int stackOut_48_0 = 0;
-            int stackOut_78_0 = 0;
-            int stackOut_91_0 = 0;
-            int stackOut_89_0 = 0;
-            int stackOut_99_0 = 0;
-            int stackOut_102_0 = 0;
-            RuntimeException stackOut_104_0 = null;
-            StringBuilder stackOut_104_1 = null;
-            RuntimeException stackOut_106_0 = null;
-            StringBuilder stackOut_106_1 = null;
-            String stackOut_106_2 = null;
-            RuntimeException stackOut_105_0 = null;
-            StringBuilder stackOut_105_1 = null;
-            String stackOut_105_2 = null;
-            RuntimeException stackOut_107_0 = null;
-            StringBuilder stackOut_107_1 = null;
-            RuntimeException stackOut_109_0 = null;
-            StringBuilder stackOut_109_1 = null;
-            String stackOut_109_2 = null;
-            RuntimeException stackOut_108_0 = null;
-            StringBuilder stackOut_108_1 = null;
-            String stackOut_108_2 = null;
+            int var6_int = 0;
+            String var6 = null;
+            RuntimeException var6_ref = null;
+            int var7 = 0;
+            int var8 = 0;
+            Throwable var8_ref_Throwable = null;
+            int var9 = 0;
+            String var10 = null;
+            CharSequence var11 = null;
             var9 = Pixelate.field_H ? 1 : 0;
             try {
               L0: {
@@ -232,8 +188,7 @@ final class mi extends de {
                     if (wb.a(0, param4)) {
                       break L1;
                     } else {
-                      stackOut_3_0 = -1;
-                      stackIn_4_0 = stackOut_3_0;
+                      stackIn_4_0 = -1;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     }
@@ -316,8 +271,7 @@ final class mi extends de {
                             if ((var6_int ^ -1) == -9) {
                               na.a(true);
                               qj.field_b = false;
-                              stackOut_29_0 = var6_int;
-                              stackIn_30_0 = stackOut_29_0;
+                              stackIn_30_0 = var6_int;
                               decompiledRegionSelector0 = 1;
                               break L0;
                             } else {
@@ -347,7 +301,7 @@ final class mi extends de {
                         wo.field_h = vi.field_o.f(255);
                         rj.field_I = vi.field_o.f(255);
                         uo.field_j = vi.field_o.a((byte) -116);
-                        var6_ref = vi.field_o.e((byte) 79);
+                        var6 = vi.field_o.e((byte) 79);
                         var7 = vi.field_o.f(255);
                         if (-1 == (var7 & 1 ^ -1)) {
                           break L9;
@@ -358,12 +312,10 @@ final class mi extends de {
                       }
                       L10: {
                         if (-1 == (16 & var7 ^ -1)) {
-                          stackOut_39_0 = 0;
-                          stackIn_40_0 = stackOut_39_0;
+                          stackIn_40_0 = 0;
                           break L10;
                         } else {
-                          stackOut_38_0 = 1;
-                          stackIn_40_0 = stackOut_38_0;
+                          stackIn_40_0 = 1;
                           break L10;
                         }
                       }
@@ -374,36 +326,30 @@ final class mi extends de {
                         } else {
                           L12: {
                             if (0 == (var7 & 2)) {
-                              stackOut_43_0 = 0;
-                              stackIn_44_0 = stackOut_43_0;
+                              stackIn_44_0 = 0;
                               break L12;
                             } else {
-                              stackOut_42_0 = 1;
-                              stackIn_44_0 = stackOut_42_0;
+                              stackIn_44_0 = 1;
                               break L12;
                             }
                           }
                           L13: {
                             lh.field_g = stackIn_44_0 != 0;
                             if (-1 == (8 & var7 ^ -1)) {
-                              stackOut_46_0 = 0;
-                              stackIn_47_0 = stackOut_46_0;
+                              stackIn_47_0 = 0;
                               break L13;
                             } else {
-                              stackOut_45_0 = 1;
-                              stackIn_47_0 = stackOut_45_0;
+                              stackIn_47_0 = 1;
                               break L13;
                             }
                           }
                           L14: {
                             ln.field_q = stackIn_47_0 != 0;
                             if (-1 == (4 & var7 ^ -1)) {
-                              stackOut_49_0 = 0;
-                              stackIn_50_0 = stackOut_49_0;
+                              stackIn_50_0 = 0;
                               break L14;
                             } else {
-                              stackOut_48_0 = 1;
-                              stackIn_50_0 = stackOut_48_0;
+                              stackIn_50_0 = 1;
                               break L14;
                             }
                           }
@@ -418,9 +364,9 @@ final class mi extends de {
                       }
                       L15: {
                         if (vm.field_d) {
-                          discarded$5 = vi.field_o.f(255);
-                          discarded$6 = vi.field_o.f(255);
-                          discarded$7 = vi.field_o.k(0);
+                          vi.field_o.f(255);
+                          vi.field_o.f(255);
+                          vi.field_o.k(0);
                           mo.field_k = vi.field_o.a((byte) -115);
                           dc.field_b = new byte[mo.field_k];
                           var8 = 0;
@@ -457,8 +403,8 @@ final class mi extends de {
                       }
                       L18: {
                         qj.field_b = false;
-                        if (var6_ref != null) {
-                          rd.a(var6_ref, 126, ao.a(13867));
+                        if (var6 != null) {
+                          rd.a(var6, 126, ao.a(13867));
                           break L18;
                         } else {
                           break L18;
@@ -472,7 +418,7 @@ final class mi extends de {
                             if (!wg.field_a) {
                               try {
                                 L21: {
-                                  discarded$8 = cq.a("unzap", (byte) -56, ao.a(13867));
+                                  cq.a("unzap", (byte) -56, ao.a(13867));
                                   break L21;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -490,7 +436,7 @@ final class mi extends de {
                         }
                         try {
                           L23: {
-                            discarded$9 = cq.a(ao.a(13867), (byte) -37, new Object[]{we.b(vn.field_b, -7067)}, "zap");
+                            cq.a(ao.a(13867), (byte) -37, new Object[]{we.b(vn.field_b, -7067)}, "zap");
                             break L23;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -515,8 +461,7 @@ final class mi extends de {
                       L26: while (true) {
                         if (var8 >= 4) {
                           vi.field_o.a(0, ud.field_L);
-                          stackOut_78_0 = mn.field_e;
-                          stackIn_79_0 = stackOut_78_0;
+                          stackIn_79_0 = mn.field_e;
                           decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
@@ -542,8 +487,7 @@ final class mi extends de {
                         } else {
                           if (!qj.field_b) {
                             qj.field_b = true;
-                            stackOut_91_0 = -1;
-                            stackIn_92_0 = stackOut_91_0;
+                            stackIn_92_0 = -1;
                             decompiledRegionSelector0 = 4;
                             break L0;
                           } else {
@@ -561,8 +505,7 @@ final class mi extends de {
                       }
                       gi.field_b = vi.field_o.h(5);
                       qj.field_b = false;
-                      stackOut_89_0 = mn.field_e;
-                      stackIn_90_0 = stackOut_89_0;
+                      stackIn_90_0 = mn.field_e;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
@@ -590,8 +533,7 @@ final class mi extends de {
                         }
                       }
                       qj.field_b = false;
-                      stackOut_99_0 = 3;
-                      stackIn_100_0 = stackOut_99_0;
+                      stackIn_100_0 = 3;
                       decompiledRegionSelector0 = 5;
                       break L0;
                     }
@@ -599,65 +541,48 @@ final class mi extends de {
                     break L30;
                   }
                 }
-                stackOut_102_0 = -1;
-                stackIn_103_0 = stackOut_102_0;
+                stackIn_103_0 = -1;
                 decompiledRegionSelector0 = 6;
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               L32: {
-                var6 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_104_0 = (RuntimeException) (var6);
-                stackOut_104_1 = new StringBuilder().append("mi.B(").append(param0).append(',').append(param1).append(',');
-                stackIn_106_0 = stackOut_104_0;
-                stackIn_106_1 = stackOut_104_1;
-                stackIn_105_0 = stackOut_104_0;
-                stackIn_105_1 = stackOut_104_1;
+                var6_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_106_0 = (RuntimeException) (var6_ref);
+
+                stackIn_106_1 = new StringBuilder().append("mi.B(").append(param0).append(',').append(param1).append(',');
+
                 if (param2 == null) {
-                  stackOut_106_0 = (RuntimeException) ((Object) stackIn_106_0);
-                  stackOut_106_1 = (StringBuilder) ((Object) stackIn_106_1);
-                  stackOut_106_2 = "null";
-                  stackIn_107_0 = stackOut_106_0;
-                  stackIn_107_1 = stackOut_106_1;
-                  stackIn_107_2 = stackOut_106_2;
+                  stackIn_107_0 = (RuntimeException) ((Object) stackIn_106_0);
+                  stackIn_107_1 = (StringBuilder) ((Object) stackIn_106_1);
+                  stackIn_107_2 = "null";
                   break L32;
                 } else {
-                  stackOut_105_0 = (RuntimeException) ((Object) stackIn_105_0);
-                  stackOut_105_1 = (StringBuilder) ((Object) stackIn_105_1);
-                  stackOut_105_2 = "{...}";
-                  stackIn_107_0 = stackOut_105_0;
-                  stackIn_107_1 = stackOut_105_1;
-                  stackIn_107_2 = stackOut_105_2;
+                  stackIn_107_0 = (RuntimeException) ((Object) stackIn_106_0);
+                  stackIn_107_1 = (StringBuilder) ((Object) stackIn_106_1);
+                  stackIn_107_2 = "{...}";
                   break L32;
                 }
               }
               L33: {
-                stackOut_107_0 = (RuntimeException) ((Object) stackIn_107_0);
-                stackOut_107_1 = ((StringBuilder) (Object) stackIn_107_1).append(stackIn_107_2).append(',').append(param3).append(',').append(param4).append(',');
-                stackIn_109_0 = stackOut_107_0;
-                stackIn_109_1 = stackOut_107_1;
-                stackIn_108_0 = stackOut_107_0;
-                stackIn_108_1 = stackOut_107_1;
+
+
+                stackIn_109_1 = ((StringBuilder) (Object) stackIn_107_1).append(stackIn_107_2).append(',').append(param3).append(',').append(param4).append(',');
+
                 if (param5 == null) {
-                  stackOut_109_0 = (RuntimeException) ((Object) stackIn_109_0);
-                  stackOut_109_1 = (StringBuilder) ((Object) stackIn_109_1);
-                  stackOut_109_2 = "null";
-                  stackIn_110_0 = stackOut_109_0;
-                  stackIn_110_1 = stackOut_109_1;
-                  stackIn_110_2 = stackOut_109_2;
+                  stackIn_107_0 = (RuntimeException) ((Object) stackIn_107_0);
+                  stackIn_110_1 = (StringBuilder) ((Object) stackIn_109_1);
+                  stackIn_110_2 = "null";
                   break L33;
                 } else {
-                  stackOut_108_0 = (RuntimeException) ((Object) stackIn_108_0);
-                  stackOut_108_1 = (StringBuilder) ((Object) stackIn_108_1);
-                  stackOut_108_2 = "{...}";
-                  stackIn_110_0 = stackOut_108_0;
-                  stackIn_110_1 = stackOut_108_1;
-                  stackIn_110_2 = stackOut_108_2;
+                  stackIn_107_0 = (RuntimeException) ((Object) stackIn_107_0);
+                  stackIn_110_1 = (StringBuilder) ((Object) stackIn_109_1);
+                  stackIn_110_2 = "{...}";
                   break L33;
                 }
               }
-              throw aa.a((Throwable) ((Object) stackIn_110_0), stackIn_110_2 + ')');
+              throw aa.a((Throwable) ((Object) stackIn_107_0), stackIn_110_2 + ')');
             }
             if (decompiledRegionSelector0 == 0) {
               return stackIn_4_0;
@@ -720,8 +645,6 @@ final class mi extends de {
         int stackIn_12_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_7_0 = 0;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -737,8 +660,7 @@ final class mi extends de {
             }
             L2: while (true) {
               if (var3_int >= vm.field_e.length) {
-                stackOut_11_0 = -1;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -752,8 +674,7 @@ final class mi extends de {
                       var4 = var4 + (gk.field_fb + ko.field_fb + (bd.field_c << -1496593663));
                       break L3;
                     } else {
-                      stackOut_7_0 = var5;
-                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_8_0 = var5;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     }

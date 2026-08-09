@@ -9,8 +9,8 @@ final class hb {
     private hk field_c;
 
     final fc a(int param0, int param1) {
-        fc var3 = null;
-        byte[] var4 = null;
+        fc var3;
+        byte[] var4;
         var3 = (fc) (this.field_c.a((long)param1, (byte) 95));
         if (var3 != null) {
           return var3;
@@ -56,10 +56,10 @@ final class hb {
     }
 
     final static ea a(int param0, int param1, int param2) {
-        ea var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        ea var6 = null;
+        ea var3;
+        int var4;
+        int var5;
+        ea var6;
         var5 = MinerDisturbance.field_ab;
         if (param1 != 32768) {
           return (ea) null;

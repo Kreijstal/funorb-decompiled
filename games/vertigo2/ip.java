@@ -18,7 +18,6 @@ final class ip {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
-        RuntimeException var8 = null;
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
@@ -56,13 +55,12 @@ final class ip {
         int var42 = 0;
         int var43 = 0;
         int var44 = 0;
-        int var45 = 0;
-        int var46 = 0;
         int var47 = 0;
         int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
+        RuntimeException var8 = null;
+        int var45 = 0;
+        int var46 = 0;
         var47 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -115,12 +113,10 @@ final class ip {
               } else {
                 L3: {
                   if (var9 > var12) {
-                    stackOut_7_0 = 0;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = 0;
                     break L3;
                   } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = 1;
                     break L3;
                   }
                 }

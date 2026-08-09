@@ -20,7 +20,6 @@ final class jf extends d {
     }
 
     final int a(int param0, byte param1) {
-        int discarded$2 = 0;
         L0: {
           if (0 > param0) {
             break L0;
@@ -32,7 +31,7 @@ final class jf extends d {
                 if (param1 > 121) {
                   break L1;
                 } else {
-                  discarded$2 = this.a(112, (byte) -62);
+                  this.a(112, (byte) -62);
                   break L1;
                 }
               }
@@ -51,9 +50,8 @@ final class jf extends d {
     }
 
     final int a(byte param0) {
-        int discarded$0 = 0;
         if (param0 > -44) {
-            discarded$0 = this.a(-3, (byte) 2);
+            this.a(-3, (byte) 2);
         }
         return this.field_I.b(117);
     }
@@ -83,35 +81,23 @@ final class jf extends d {
     }
 
     final boolean a(int param0, int param1, int param2, iq param3, int param4, byte param5, int param6) {
-        RuntimeException var8 = null;
+        int stackIn_22_0 = 0;
+        int stackIn_26_0 = 0;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_25_0 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_24_0 = 0;
-        int stackOut_20_0 = 0;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
         var14 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -124,8 +110,7 @@ final class jf extends d {
                   break L1;
                 }
               }
-              stackOut_24_0 = 0;
-              stackIn_25_0 = stackOut_24_0;
+              stackIn_26_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
@@ -171,7 +156,7 @@ final class jf extends d {
                         L6: {
                           var13 = -var8_int + this.field_I.a(0, var12);
                           var13 = var13 * var13;
-                          if (var10 > var13) {
+                          if ((var10 ^ -1) < (var13 ^ -1)) {
                             var10 = var13;
                             var11 = var12;
                             break L6;
@@ -186,8 +171,7 @@ final class jf extends d {
                   }
                 }
               }
-              stackOut_20_0 = 1;
-              stackIn_21_0 = stackOut_20_0;
+              stackIn_22_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -196,36 +180,28 @@ final class jf extends d {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var8 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var8);
-            stackOut_26_1 = new StringBuilder().append("jf.JA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_29_0 = (RuntimeException) (var8);
+
+            stackIn_29_1 = new StringBuilder().append("jf.JA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L7;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L7;
             }
           }
-          throw wn.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_21_0 != 0;
+          return stackIn_22_0 != 0;
         } else {
-          return stackIn_25_0 != 0;
+          return stackIn_26_0 != 0;
         }
     }
 

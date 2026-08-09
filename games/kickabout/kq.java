@@ -35,10 +35,10 @@ final class kq extends hd {
     }
 
     final void h(byte param0) {
-        int[] var2 = null;
-        int[] var3 = null;
-        int[] var4 = null;
-        int[] var5 = null;
+        int[] var2;
+        int[] var3;
+        int[] var4;
+        int[] var5;
         if (!this.field_Eb.c(-2)) {
           if (null == this.field_Db) {
             jr.a(this.field_F - -(this.field_q >> 1357484641), -36, (this.field_mb >> -290474335) + this.field_T);
@@ -212,9 +212,6 @@ final class kq extends hd {
     }
 
     final void a(int param0, int param1, byte param2, int param3, up param4) {
-        RuntimeException var6 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -222,14 +219,7 @@ final class kq extends hd {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var6 = null;
         try {
           L0: {
             L1: {
@@ -260,16 +250,19 @@ final class kq extends hd {
               }
               L3: {
                 if (null == this.field_Db) {
-                  if (this.field_Eb.c(-2)) {
-                    break L3;
-                  } else {
-                    if (null == ra.field_G) {
-                      this.field_Db = pg.a(param0, param1, this.field_Eb, -79, param3);
-                      break L3;
+                  L4: {
+                    if (this.field_Eb.c(-2)) {
+                      break L4;
                     } else {
-                      break L3;
+                      if (null == ra.field_G) {
+                        this.field_Db = pg.a(param0, param1, this.field_Eb, -79, param3);
+                        break L4;
+                      } else {
+                        break L3;
+                      }
                     }
                   }
+                  break L3;
                 } else {
                   this.field_Db.a(2, (la[]) null, false, false);
                   this.field_Db.g((byte) 127);
@@ -285,30 +278,22 @@ final class kq extends hd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var6 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var6);
-            stackOut_16_1 = new StringBuilder().append("kq.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var6);
+
+            stackIn_18_1 = new StringBuilder().append("kq.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
-              break L4;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
+              break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
-              break L4;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
+              break L5;
             }
           }
           throw nb.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');

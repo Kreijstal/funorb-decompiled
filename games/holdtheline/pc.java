@@ -40,12 +40,11 @@ abstract class pc {
     }
 
     final void b(int param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = HoldTheLine.field_D;
         if (param0 != 12515) {
-          discarded$1 = this.a(true, 122, -88);
+          this.a(true, 122, -88);
           if (gg.field_J == 0) {
             if (rd.field_f == 0) {
               this.field_k = false;
@@ -200,7 +199,7 @@ abstract class pc {
     }
 
     void b(int param0, int param1) {
-        int var4 = 0;
+        int var4;
         var4 = HoldTheLine.field_D;
         if (param1 == -24489) {
           if (-97 != (aa.field_n ^ -1)) {
@@ -251,8 +250,8 @@ abstract class pc {
     }
 
     void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        int var7 = 0;
-        int var8 = 0;
+        int var8;
+        int var7;
         var8 = HoldTheLine.field_D;
         if (param5) {
           r.field_b = r.field_b - 1;
@@ -288,7 +287,7 @@ abstract class pc {
     }
 
     void a(boolean param0) {
-        int var3 = 0;
+        int var3;
         var3 = HoldTheLine.field_D;
         if (param0) {
           if (this.field_k) {
@@ -335,7 +334,7 @@ abstract class pc {
     abstract void c(int param0, int param1);
 
     final void a(byte param0) {
-        int var2 = 0;
+        int var2;
         if (!this.field_g) {
           this.field_c = -1;
           var2 = -85 / ((param0 - 13) / 45);
@@ -349,51 +348,23 @@ abstract class pc {
     }
 
     void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
+        int var2;
+        int var3;
+        int var4;
         Object stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_5_2 = 0;
-        Object stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        int stackIn_6_2 = 0;
-        int stackIn_6_3 = 0;
-        Object stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
-        int stackIn_13_2 = 0;
+        Object stackIn_6_0;
+        int stackIn_6_1;
+        int stackIn_6_2;
+        int stackIn_6_3;
         Object stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_14_2 = 0;
-        Object stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
-        int stackIn_15_2 = 0;
-        int stackIn_15_3 = 0;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        int stackOut_14_2 = 0;
-        int stackOut_14_3 = 0;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        int stackOut_13_3 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        int stackOut_5_3 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        int stackOut_4_3 = 0;
+        Object stackIn_15_0;
+        int stackIn_15_1;
+        int stackIn_15_2;
+        int stackIn_15_3;
         var4 = HoldTheLine.field_D;
         if (param0 != -55) {
           this.field_a = 124;
@@ -402,34 +373,23 @@ abstract class pc {
           L0: while (true) {
             if (var2 < this.field_a) {
               L1: {
-                stackOut_12_0 = this;
-                stackOut_12_1 = var3;
-                stackOut_12_2 = var2;
-                stackIn_14_0 = stackOut_12_0;
-                stackIn_14_1 = stackOut_12_1;
-                stackIn_14_2 = stackOut_12_2;
-                stackIn_13_0 = stackOut_12_0;
-                stackIn_13_1 = stackOut_12_1;
-                stackIn_13_2 = stackOut_12_2;
+                stackIn_14_0 = this;
+
+                stackIn_14_1 = var3;
+
+                stackIn_14_2 = var2;
+
                 if (var2 != this.field_c) {
-                  stackOut_14_0 = this;
-                  stackOut_14_1 = stackIn_14_1;
-                  stackOut_14_2 = stackIn_14_2;
-                  stackOut_14_3 = 0;
-                  stackIn_15_0 = stackOut_14_0;
-                  stackIn_15_1 = stackOut_14_1;
-                  stackIn_15_2 = stackOut_14_2;
-                  stackIn_15_3 = stackOut_14_3;
+                  stackIn_15_0 = this;
+                  stackIn_15_1 = stackIn_14_1;
+                  stackIn_15_2 = stackIn_14_2;
+                  stackIn_15_3 = 0;
                   break L1;
                 } else {
-                  stackOut_13_0 = this;
-                  stackOut_13_1 = stackIn_13_1;
-                  stackOut_13_2 = stackIn_13_2;
-                  stackOut_13_3 = 1;
-                  stackIn_15_0 = stackOut_13_0;
-                  stackIn_15_1 = stackOut_13_1;
-                  stackIn_15_2 = stackOut_13_2;
-                  stackIn_15_3 = stackOut_13_3;
+                  stackIn_15_0 = this;
+                  stackIn_15_1 = stackIn_14_1;
+                  stackIn_15_2 = stackIn_14_2;
+                  stackIn_15_3 = 1;
                   break L1;
                 }
               }
@@ -449,34 +409,23 @@ abstract class pc {
               return;
             } else {
               L3: {
-                stackOut_3_0 = this;
-                stackOut_3_1 = var3;
-                stackOut_3_2 = var2;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_5_1 = stackOut_3_1;
-                stackIn_5_2 = stackOut_3_2;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
+                stackIn_5_0 = this;
+
+                stackIn_5_1 = var3;
+
+                stackIn_5_2 = var2;
+
                 if (var2 != this.field_c) {
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = stackIn_5_1;
-                  stackOut_5_2 = stackIn_5_2;
-                  stackOut_5_3 = 0;
-                  stackIn_6_0 = stackOut_5_0;
-                  stackIn_6_1 = stackOut_5_1;
-                  stackIn_6_2 = stackOut_5_2;
-                  stackIn_6_3 = stackOut_5_3;
+                  stackIn_6_0 = this;
+                  stackIn_6_1 = stackIn_5_1;
+                  stackIn_6_2 = stackIn_5_2;
+                  stackIn_6_3 = 0;
                   break L3;
                 } else {
-                  stackOut_4_0 = this;
-                  stackOut_4_1 = stackIn_4_1;
-                  stackOut_4_2 = stackIn_4_2;
-                  stackOut_4_3 = 1;
-                  stackIn_6_0 = stackOut_4_0;
-                  stackIn_6_1 = stackOut_4_1;
-                  stackIn_6_2 = stackOut_4_2;
-                  stackIn_6_3 = stackOut_4_3;
+                  stackIn_6_0 = this;
+                  stackIn_6_1 = stackIn_5_1;
+                  stackIn_6_2 = stackIn_5_2;
+                  stackIn_6_3 = 1;
                   break L3;
                 }
               }

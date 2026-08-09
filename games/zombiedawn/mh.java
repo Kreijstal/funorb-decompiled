@@ -15,7 +15,7 @@ final class mh extends pa {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        vn var6 = null;
+        vn var6;
         if (param3 == param1) {
           if (this.field_z == null) {
             return;

@@ -11,10 +11,9 @@ final class sj {
     String field_a;
 
     public static void a(boolean param0) {
-        int discarded$2 = 0;
         field_c = (byte[][]) null;
         if (!param0) {
-          discarded$2 = sj.a(-79, -85, 54);
+          sj.a(-79, -85, 54);
           field_f = null;
           field_b = null;
           return;
@@ -26,7 +25,7 @@ final class sj {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3;
         var3 = param2 >>> -682951649;
         if (param0 >= -57) {
           field_c = (byte[][]) null;

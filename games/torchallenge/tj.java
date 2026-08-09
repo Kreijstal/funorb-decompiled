@@ -9,7 +9,7 @@ final class tj {
     static int[] field_a;
 
     final static void a(boolean param0, int param1, int param2, int param3) {
-        int var4 = 0;
+        int var4;
         ub.field_e.g(param3, param2);
         if (param1 == 5106) {
           L0: {

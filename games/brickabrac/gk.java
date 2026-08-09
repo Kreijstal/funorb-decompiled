@@ -21,7 +21,7 @@ abstract class gk {
     abstract int b(int param0);
 
     final static void a(int param0, byte param1) {
-        int discarded$3 = vi.c((byte) -109);
+        vi.c((byte) -109);
         if (param1 <= 111) {
             gk.a(-66, (byte) -49);
         }

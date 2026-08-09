@@ -25,24 +25,24 @@ final class aw extends ana {
     }
 
     private final void f(byte param0) {
-        ip discarded$2 = null;
-        uea discarded$3 = null;
-        op var3 = null;
-        aga var4 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        Object var18 = null;
-        hd var18_ref = null;
-        int[][] var21 = null;
+        ip discarded$0 = null;
+        uea discarded$1 = null;
+        op var3;
+        aga var4;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        Object var18;
+        hd var18_ref;
+        int[][] var21;
         L0: {
           var18 = null;
           var16 = BachelorFridge.field_y;
@@ -81,8 +81,8 @@ final class aw extends ana {
                     if (var3.field_z > var14) {
                       if (var15 >= 0) {
                         if (var15 < var3.field_B) {
-                          discarded$2 = new ip(this.field_q, var14, var15);
-                          discarded$3 = new uea(this.field_q, var14, var15, gma.field_e[var18_ref.field_q].field_a);
+                          discarded$0 = new ip(this.field_q, var14, var15);
+                          discarded$1 = new uea(this.field_q, var14, var15, gma.field_e[var18_ref.field_q].field_a);
                           var13++;
                           continue L2;
                         } else {
@@ -143,7 +143,7 @@ final class aw extends ana {
             return;
         }
         pp var3 = (pp) ((Object) this.field_z.field_o.b((byte) 90));
-        oha discarded$8 = al.a(param0 ^ 19, this.field_z.field_k);
+        al.a(param0 ^ 19, this.field_z.field_k);
         while (var3 != null) {
             var4 = var3.field_h.a(-27449, this.field_q);
             this.a(27799, new taa(this.field_q, var4));

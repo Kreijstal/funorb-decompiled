@@ -10,22 +10,20 @@ final class el extends kh {
     }
 
     final void a(java.awt.Graphics param0, int param1, int param2, byte param3) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
         if (param3 < 110) {
           this.field_i = (java.awt.Component) null;
-          discarded$4 = param0.drawImage(this.field_a, param1, param2, (java.awt.image.ImageObserver) ((Object) this.field_i));
+          param0.drawImage(this.field_a, param1, param2, (java.awt.image.ImageObserver) ((Object) this.field_i));
           return;
         } else {
-          discarded$5 = param0.drawImage(this.field_a, param1, param2, (java.awt.image.ImageObserver) ((Object) this.field_i));
+          param0.drawImage(this.field_a, param1, param2, (java.awt.image.ImageObserver) ((Object) this.field_i));
           return;
         }
     }
 
     final void a(java.awt.Component param0, int param1, byte param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         if (param2 != 68) {
           this.field_i = (java.awt.Component) null;
           this.field_b = param3;

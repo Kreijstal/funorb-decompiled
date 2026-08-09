@@ -27,31 +27,19 @@ final class or extends bp implements ru {
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        char[] var7 = null;
-        char[] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;
-        int stackIn_27_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_2_0 = 0;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
             if (!Character.isISOControl(param1)) {
               if (!qw.a(57, param1)) {
                 L1: {
-                  var8 = bs.field_o;
-                  var7 = var8;
-                  var6 = var7;
+                  var6 = bs.field_o;
                   var2 = var6;
                   if (param0 == 61) {
                     break L1;
@@ -62,107 +50,43 @@ final class or extends bp implements ru {
                 }
                 var3 = 0;
                 L2: while (true) {
-                  L3: {
-                    L4: {
-                      L5: {
-                        L6: {
-                          if (var8.length <= var3) {
-                            break L6;
-                          } else {
-                            var4 = var8[var3];
-                            var10 = param1 ^ -1;
-                            var9 = var4 ^ -1;
-                            if (var5 != 0) {
-                              if (var9 >= var10) {
-                                break L4;
-                              } else {
-                                L7: while (true) {
-                                  var4 = var2[var3];
-                                  stackOut_20_0 = param1 ^ -1;
-                                  stackIn_27_0 = stackOut_20_0;
-                                  stackIn_21_0 = stackOut_20_0;
-                                  if (var5 != 0) {
-                                    break L3;
-                                  } else {
-                                    if (stackIn_21_0 == (var4 ^ -1)) {
-                                      break L5;
-                                    } else {
-                                      var3++;
-                                      if (var5 == 0) {
-                                        if (var2.length <= var3) {
-                                          break L4;
-                                        } else {
-                                          continue L7;
-                                        }
-                                      } else {
-                                        break L4;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            } else {
-                              if (var9 != var10) {
-                                var3++;
-                                if (var5 == 0) {
-                                  continue L2;
-                                } else {
-                                  break L6;
-                                }
-                              } else {
-                                return true;
-                              }
-                            }
-                          }
-                        }
-                        var2 = fs.field_m;
-                        var3 = 0;
-                        L8: while (true) {
-                          if (var2.length <= var3) {
-                            break L4;
-                          } else {
-                            var4 = var2[var3];
-                            stackOut_20_0 = param1 ^ -1;
-                            stackIn_27_0 = stackOut_20_0;
-                            stackIn_21_0 = stackOut_20_0;
-                            if (var5 != 0) {
-                              break L3;
-                            } else {
-                              if (stackIn_21_0 == (var4 ^ -1)) {
-                                break L5;
-                              } else {
-                                var3++;
-                                if (var5 == 0) {
-                                  continue L8;
-                                } else {
-                                  break L4;
-                                }
-                              }
-                            }
-                          }
+                  if (var6.length <= var3) {
+                    var2 = fs.field_m;
+                    var3 = 0;
+                    L3: while (true) {
+                      if (var2.length <= var3) {
+                        stackIn_24_0 = 0;
+                        decompiledRegionSelector0 = 3;
+                        break L0;
+                      } else {
+                        var4 = var2[var3];
+                        if (param1 == var4) {
+                          stackIn_21_0 = 1;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
+                        } else {
+                          var3++;
+                          continue L3;
                         }
                       }
-                      stackOut_23_0 = 1;
-                      stackIn_24_0 = stackOut_23_0;
-                      decompiledRegionSelector0 = 3;
-                      break L0;
                     }
-                    stackOut_26_0 = 0;
-                    stackIn_27_0 = stackOut_26_0;
-                    break L3;
+                  } else {
+                    var4 = var6[var3];
+                    if ((var4 ^ -1) != (param1 ^ -1)) {
+                      var3++;
+                      continue L2;
+                    } else {
+                      return true;
+                    }
                   }
-                  decompiledRegionSelector0 = 2;
-                  break L0;
                 }
               } else {
-                stackOut_5_0 = 1;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -179,7 +103,7 @@ final class or extends bp implements ru {
             return stackIn_6_0 != 0;
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return stackIn_27_0 != 0;
+              return stackIn_21_0 != 0;
             } else {
               return stackIn_24_0 != 0;
             }

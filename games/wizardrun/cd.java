@@ -32,22 +32,12 @@ final class cd implements Runnable {
     final static void a(java.applet.Applet param0, byte param1) {
         RuntimeException runtimeException = null;
         va var3 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -67,27 +57,19 @@ final class cd implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("cd.C(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("cd.C(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -118,27 +100,22 @@ final class cd implements Runnable {
 
     final static int a(int param0) {
         try {
-            rb[] discarded$1 = null;
-            IOException var1 = null;
-            int var1_int = 0;
-            vh var2 = null;
-            va var3 = null;
             int stackIn_15_0 = 0;
             int stackIn_26_0 = 0;
             int stackIn_29_0 = 0;
             int stackIn_34_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_14_0 = 0;
-            int stackOut_28_0 = 0;
-            int stackOut_25_0 = 0;
-            int stackOut_33_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            vh var2 = null;
+            va var3 = null;
             L0: {
               if (param0 == -18067) {
                 break L0;
               } else {
                 var2 = (vh) null;
-                discarded$1 = cd.a(true, (vh) null);
+                cd.a(true, (vh) null);
                 break L0;
               }
             }
@@ -166,8 +143,7 @@ final class cd implements Runnable {
                           break L3;
                         }
                       } else {
-                        stackOut_14_0 = mh.a((byte) -121, -1);
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = mh.a((byte) -121, -1);
                         decompiledRegionSelector0 = 0;
                         break L1;
                       }
@@ -196,8 +172,7 @@ final class cd implements Runnable {
                           wc.field_k = wc.field_k + 1;
                           break L5;
                         } else {
-                          stackOut_28_0 = mh.a((byte) 85, var1_int);
-                          stackIn_29_0 = stackOut_28_0;
+                          stackIn_29_0 = mh.a((byte) 85, var1_int);
                           decompiledRegionSelector0 = 2;
                           break L1;
                         }
@@ -205,8 +180,7 @@ final class cd implements Runnable {
                         if (la.field_g >= d.a((byte) 127)) {
                           break L5;
                         } else {
-                          stackOut_25_0 = mh.a((byte) 122, -2);
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = mh.a((byte) 122, -2);
                           decompiledRegionSelector0 = 1;
                           break L1;
                         }
@@ -220,8 +194,7 @@ final class cd implements Runnable {
                     wc.field_k = 0;
                     hb.field_k = null;
                     si.field_q = null;
-                    stackOut_33_0 = 0;
-                    stackIn_34_0 = stackOut_33_0;
+                    stackIn_34_0 = 0;
                     decompiledRegionSelector0 = 3;
                     break L1;
                   } else {
@@ -265,6 +238,19 @@ final class cd implements Runnable {
     }
 
     final static rb[] a(boolean param0, vh param1) {
+        rb[] stackIn_4_0 = null;
+        long stackIn_9_0 = 0L;
+        long stackIn_10_0 = 0L;
+        int stackIn_10_1 = 0;
+        rb[] stackIn_13_0 = null;
+        rb[] stackIn_20_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
         rb[] var4 = null;
@@ -274,44 +260,11 @@ final class cd implements Runnable {
         jh var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        rb[] stackIn_4_0 = null;
-        long stackIn_8_0 = 0L;
-        long stackIn_9_0 = 0L;
-        long stackIn_10_0 = 0L;
-        int stackIn_10_1 = 0;
-        rb[] stackIn_13_0 = null;
-        rb[] stackIn_20_0 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        rb[] stackOut_3_0 = null;
-        rb[] stackOut_19_0 = null;
-        rb[] stackOut_12_0 = null;
-        long stackOut_7_0 = 0L;
-        long stackOut_9_0 = 0L;
-        int stackOut_9_1 = 0;
-        long stackOut_8_0 = 0L;
-        int stackOut_8_1 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
         var7 = wizardrun.field_H;
         try {
           L0: {
             if (!param1.a(169978736)) {
-              stackOut_3_0 = new rb[]{};
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = new rb[]{};
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -334,8 +287,7 @@ final class cd implements Runnable {
                     var5 = 0;
                     L3: while (true) {
                       if (var4.length <= var5) {
-                        stackOut_19_0 = (rb[]) (var4);
-                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_0 = (rb[]) (var4);
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -350,27 +302,21 @@ final class cd implements Runnable {
                       }
                     }
                   } else {
-                    stackOut_12_0 = new rb[]{};
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = new rb[]{};
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 } else {
                   L4: {
-                    stackOut_7_0 = 10L;
-                    stackIn_9_0 = stackOut_7_0;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_9_0 = 10L;
+
                     if (param0) {
-                      stackOut_9_0 = stackIn_9_0;
-                      stackOut_9_1 = 0;
-                      stackIn_10_0 = stackOut_9_0;
-                      stackIn_10_1 = stackOut_9_1;
+                      stackIn_10_0 = stackIn_9_0;
+                      stackIn_10_1 = 0;
                       break L4;
                     } else {
-                      stackOut_8_0 = stackIn_8_0;
-                      stackOut_8_1 = 1;
-                      stackIn_10_0 = stackOut_8_0;
-                      stackIn_10_1 = stackOut_8_1;
+                      stackIn_10_0 = stackIn_9_0;
+                      stackIn_10_1 = 1;
                       break L4;
                     }
                   }
@@ -384,27 +330,19 @@ final class cd implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var2);
-            stackOut_21_1 = new StringBuilder().append("cd.E(").append(param0).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var2);
+
+            stackIn_23_1 = new StringBuilder().append("cd.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L5;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L5;
             }
           }
@@ -426,8 +364,6 @@ final class cd implements Runnable {
         RuntimeException var4_ref = null;
         sk stackIn_2_0 = null;
         sk stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -435,16 +371,6 @@ final class cd implements Runnable {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        sk stackOut_3_0 = null;
-        sk stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0 == -46) {
@@ -454,13 +380,11 @@ final class cd implements Runnable {
               var4.field_x = 3;
               var4.field_r = false;
               this.a(var4, -1);
-              stackOut_3_0 = (sk) (var4);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (sk) (var4);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (sk) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (sk) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -469,27 +393,19 @@ final class cd implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var4_ref);
-            stackOut_5_1 = new StringBuilder().append("cd.J(").append(param0).append(',').append(param1).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var4_ref);
+
+            stackIn_7_1 = new StringBuilder().append("cd.J(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -507,38 +423,15 @@ final class cd implements Runnable {
         RuntimeException var5_ref = null;
         int var6 = 0;
         sk stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        sk stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             var5 = new sk();
@@ -549,64 +442,47 @@ final class cd implements Runnable {
             var6 = -115 % ((param0 - -68) / 43);
             var5.field_r = false;
             this.a(var5, -1);
-            stackOut_0_0 = (sk) (var5);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = (sk) (var5);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var5_ref);
-            stackOut_2_1 = new StringBuilder().append("cd.F(").append(param0).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var5_ref);
+
+            stackIn_4_1 = new StringBuilder().append("cd.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+
+
+            stackIn_7_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
+
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param3 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_5_0), stackIn_8_2 + ',' + param3 + ')');
         }
         return stackIn_1_0;
     }
@@ -616,28 +492,15 @@ final class cd implements Runnable {
         RuntimeException var4_ref = null;
         Object var5 = null;
         sk var6 = null;
-        Throwable var7 = null;
         int var8 = 0;
         sk stackIn_9_0 = null;
         sk stackIn_16_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         Throwable decompiledCaughtException = null;
-        sk stackOut_8_0 = null;
-        sk stackOut_15_0 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
         var8 = wizardrun.field_H;
         try {
           L0: {
@@ -661,8 +524,7 @@ final class cd implements Runnable {
                           if (2 == var6.field_x) {
                             var4.field_s = false;
                             var4.field_A = var6.field_A;
-                            stackOut_8_0 = (sk) (var4);
-                            stackIn_9_0 = stackOut_8_0;
+                            stackIn_9_0 = (sk) (var4);
                             return stackIn_9_0;
                           } else {
                             break L3;
@@ -679,35 +541,26 @@ final class cd implements Runnable {
             var4.field_A = param2.a(true, param0);
             var4.field_s = false;
             var4.field_r = true;
-            stackOut_15_0 = (sk) (var4);
-            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_0 = (sk) (var4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var4_ref);
-            stackOut_17_1 = new StringBuilder().append("cd.H(").append(param0).append(',').append(param1).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var4_ref);
+
+            stackIn_19_1 = new StringBuilder().append("cd.H(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L4;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L4;
             }
           }
@@ -717,14 +570,13 @@ final class cd implements Runnable {
     }
 
     private final void a(sk param0, int param1) {
-        sk discarded$0 = null;
         synchronized (this.field_f) {
             this.field_f.a(param0, 14);
             this.field_b = this.field_b + 1;
             this.field_f.notifyAll();
             if (param1 != -1) {
                 sg var5 = (sg) null;
-                discarded$0 = this.a(80, 53, (sg) null);
+                this.a(80, 53, (sg) null);
             }
         }
     }
@@ -744,16 +596,14 @@ final class cd implements Runnable {
 
     public final void run() {
         try {
-            boolean discarded$1 = false;
             InterruptedException interruptedException = null;
             Object var2 = null;
-            Exception var2_ref = null;
-            Throwable var4 = null;
             int var5 = 0;
-            String var6 = null;
             sk var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            Exception var2_ref = null;
+            String var6 = null;
             var5 = wizardrun.field_H;
             L0: while (true) {
               if (this.field_g) {
@@ -792,7 +642,7 @@ final class cd implements Runnable {
                     L4: {
                       L5: {
                         if (var7.field_x == 2) {
-                          discarded$1 = var7.field_w.a(var7.field_A, (int)var7.field_o, 0, var7.field_A.length);
+                          var7.field_w.a(var7.field_A, (int)var7.field_o, 0, var7.field_A.length);
                           var7.field_s = false;
                           break L5;
                         } else {

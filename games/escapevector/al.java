@@ -10,7 +10,6 @@ final class al {
     static String field_c;
 
     final static int a(int param0, int param1) {
-        af discarded$0 = null;
         param0 = l.a(param1 + -34966, param0);
         if (-1 < (param0 ^ -1)) {
             return -1;
@@ -29,7 +28,7 @@ final class al {
         }
         if (param1 != 26504) {
             lk var3 = (lk) null;
-            discarded$0 = al.a(-101, -4, (lk) null, 127, 70, -30);
+            al.a(-101, -4, (lk) null, 127, 70, -30);
         }
         return -1;
     }
@@ -39,12 +38,11 @@ final class al {
     }
 
     public static void a(int param0) {
-        ed discarded$0 = null;
         field_b = null;
         field_a = null;
         field_d = null;
         if (param0 > -1) {
-            discarded$0 = al.a((byte) 104);
+            al.a((byte) 104);
         }
         field_f = null;
         field_c = null;
@@ -68,29 +66,17 @@ final class al {
     }
 
     final static af a(int param0, int param1, lk param2, int param3, int param4, int param5) {
-        java.awt.Component discarded$9 = null;
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         af var7 = null;
         java.awt.Frame var8 = null;
         af stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        af stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             var8 = ib.a((byte) 93, param0, param3, param2, param4, param5);
@@ -99,7 +85,7 @@ final class al {
               L1: {
                 var7 = new af();
                 var7.field_d = var8;
-                discarded$9 = var7.field_d.add((java.awt.Component) ((Object) var7));
+                var7.field_d.add((java.awt.Component) ((Object) var7));
                 if (param1 == -16493) {
                   break L1;
                 } else {
@@ -110,8 +96,7 @@ final class al {
               var7.setBounds(0, 0, param0, param3);
               var7.addFocusListener(var7);
               var7.requestFocus();
-              stackOut_5_0 = (af) (var7);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = (af) (var7);
               break L0;
             } else {
               return null;
@@ -121,27 +106,19 @@ final class al {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var6_ref);
-            stackOut_7_1 = new StringBuilder().append("al.D(").append(param0).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var6_ref);
+
+            stackIn_9_1 = new StringBuilder().append("al.D(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -152,9 +129,9 @@ final class al {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
+            int var0;
+            int var1;
+            int var2;
             field_a = new int[256];
             field_f = new int[1024];
             var1 = 0;

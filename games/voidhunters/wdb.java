@@ -38,8 +38,8 @@ final class wdb extends llb {
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         var5 = (this.field_hb + param0) / 2;
         var6 = -param1 + this.field_G;
         this.field_xb.a(this.field_hb, param0, -1, -param0 + var6, 0, 0, param2);

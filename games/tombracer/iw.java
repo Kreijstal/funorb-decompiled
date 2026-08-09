@@ -27,16 +27,12 @@ final class iw {
 
     final static void a(byte param0, boolean param1) {
         lla stackIn_3_0 = null;
-        lla stackOut_2_0 = null;
-        lla stackOut_1_0 = null;
         L0: {
           if (param1) {
-            stackOut_2_0 = new lla(ipa.field_O, fu.field_t);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new lla(ipa.field_O, fu.field_t);
             break L0;
           } else {
-            stackOut_1_0 = new lla(kh.field_p, lk.field_l);
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = new lla(kh.field_p, lk.field_l);
             break L0;
           }
         }

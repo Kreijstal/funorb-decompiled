@@ -27,8 +27,8 @@ abstract class hi extends al {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
+        int var6;
+        int var7;
         var6 = this.field_x << 1711113379;
         var7 = this.field_A << -493640925;
         param1 = (15 & var6) + (param1 << -1271909436);

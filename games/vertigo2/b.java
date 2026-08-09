@@ -19,28 +19,18 @@ final class b {
     String field_k;
 
     final void a(int[] param0, int param1, byte param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        String var4_ref = null;
-        tp var5 = null;
-        int var6 = 0;
-        String var7 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        String var4 = null;
+        int var4_int = 0;
+        RuntimeException var4_ref = null;
+        tp var5 = null;
+        int var6 = 0;
+        String var7 = null;
         try {
           L0: {
             L1: {
@@ -61,7 +51,7 @@ final class b {
                 if (2 == ba.field_d) {
                   L3: {
                     var7 = this.a(true);
-                    var4_ref = var7;
+                    var4 = var7;
                     var5 = vo.a(this.field_k, 0);
                     var6 = iq.b(this.field_k, 100) ? 1 : 0;
                     if (var5 != null) {
@@ -142,28 +132,20 @@ final class b {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
-            var4 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var4);
-            stackOut_25_1 = new StringBuilder().append("b.M(");
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_27_0 = (RuntimeException) (var4_ref);
+
+            stackIn_27_1 = new StringBuilder().append("b.M(");
+
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L7;
             }
           }
@@ -173,159 +155,127 @@ final class b {
 
     final void a(int param0) {
         String var3 = null;
-        int var4 = 0;
-        uh var5 = null;
-        var4 = Vertigo2.field_L ? 1 : 0;
-        if (null == gd.field_j) {
-          var5 = ln.a(0, this.field_j);
-          if (var5 != null) {
-            var3 = var5.field_Nb;
-            if (var5.field_Sb) {
-              this.field_n.a(Vertigo2.a(new String[]{var3}, af.field_G, 87), 2, param0 + -2);
-              this.field_n.a(Vertigo2.a(new String[]{var3}, aq.field_b, -124), 3, 0);
-              if (param0 == 2) {
-                return;
-              } else {
-                this.field_j = 36;
-                return;
-              }
-            } else {
-              if (var5.field_dc) {
-                this.field_n.a(Vertigo2.a(new String[]{var3}, kq.field_Ub, -123), 2, 0);
-                if (var5.field_qc) {
-                  this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
-                  if (param0 == 2) {
-                    return;
-                  } else {
-                    this.field_j = 36;
-                    return;
-                  }
-                } else {
-                  if (param0 == 2) {
-                    return;
-                  } else {
-                    this.field_j = 36;
-                    return;
-                  }
-                }
-              } else {
-                if (!var5.field_qc) {
-                  if (var5.field_vc) {
-                    if (var5.field_kc) {
-                      if (!var5.field_dc) {
-                        if (var5.field_qc) {
-                          this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
-                          if (param0 == 2) {
-                            return;
-                          } else {
-                            this.field_j = 36;
-                            return;
-                          }
-                        } else {
-                          if (param0 == 2) {
-                            return;
-                          } else {
-                            this.field_j = 36;
-                            return;
-                          }
-                        }
-                      } else {
-                        this.field_n.a(Vertigo2.a(new String[]{var3}, qj.field_a, -117), 2, 0);
-                        if (var5.field_qc) {
-                          this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
-                          if (param0 == 2) {
-                            return;
-                          } else {
-                            this.field_j = 36;
-                            return;
-                          }
-                        } else {
-                          if (param0 == 2) {
-                            return;
-                          } else {
-                            this.field_j = 36;
-                            return;
-                          }
-                        }
-                      }
-                    } else {
-                      this.field_n.a(Vertigo2.a(new String[]{var3}, qj.field_a, -117), 2, 0);
-                      if (var5.field_qc) {
-                        this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
-                        if (param0 == 2) {
-                          return;
-                        } else {
-                          this.field_j = 36;
-                          return;
-                        }
-                      } else {
-                        if (param0 == 2) {
-                          return;
-                        } else {
-                          this.field_j = 36;
-                          return;
-                        }
-                      }
-                    }
-                  } else {
-                    if (var5.field_qc) {
-                      this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
-                      if (param0 == 2) {
-                        return;
-                      } else {
-                        this.field_j = 36;
-                        return;
-                      }
-                    } else {
-                      if (param0 == 2) {
-                        return;
-                      } else {
-                        this.field_j = 36;
-                        return;
-                      }
-                    }
-                  }
-                } else {
-                  if (var5.field_qc) {
-                    this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
-                    if (param0 == 2) {
-                      return;
-                    } else {
-                      this.field_j = 36;
-                      return;
-                    }
-                  } else {
-                    if (param0 != 2) {
-                      this.field_j = 36;
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                }
-              }
-            }
-          } else {
+        int var4 = Vertigo2.field_L ? 1 : 0;
+        if (null != gd.field_j) {
             if (param0 == 2) {
-              return;
-            } else {
-              this.field_j = 36;
-              return;
+                return;
             }
-          }
-        } else {
-          if (param0 != 2) {
             this.field_j = 36;
             return;
-          } else {
+        }
+        uh var5 = ln.a(0, this.field_j);
+        if (!(var5 == null)) {
+            var3 = var5.field_Nb;
+            if (!var5.field_Sb) {
+                if (!var5.field_dc) {
+                    if (var5.field_qc) {
+                        if (!var5.field_qc) {
+                            if (param0 == 2) {
+                                return;
+                            }
+                            this.field_j = 36;
+                            return;
+                        }
+                        this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
+                        if (param0 != 2) {
+                            this.field_j = 36;
+                            return;
+                        }
+                        return;
+                    }
+                    if (!var5.field_vc) {
+                        if (!var5.field_qc) {
+                            if (param0 != 2) {
+                                this.field_j = 36;
+                                return;
+                            }
+                            return;
+                        }
+                        this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
+                        if (param0 != 2) {
+                            this.field_j = 36;
+                            return;
+                        }
+                        return;
+                    }
+                    if (!var5.field_kc) {
+                        this.field_n.a(Vertigo2.a(new String[]{var3}, qj.field_a, -117), 2, 0);
+                        if (!var5.field_qc) {
+                            if (param0 != 2) {
+                                this.field_j = 36;
+                                return;
+                            }
+                            return;
+                        }
+                        this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
+                        if (param0 != 2) {
+                            this.field_j = 36;
+                            return;
+                        }
+                        return;
+                    }
+                    if (var5.field_dc) {
+                        this.field_n.a(Vertigo2.a(new String[]{var3}, qj.field_a, -117), 2, 0);
+                        if (!var5.field_qc) {
+                            if (param0 != 2) {
+                                this.field_j = 36;
+                                return;
+                            }
+                            return;
+                        }
+                        this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
+                        if (param0 != 2) {
+                            this.field_j = 36;
+                            return;
+                        }
+                        return;
+                    }
+                    if (!var5.field_qc) {
+                        if (param0 != 2) {
+                            this.field_j = 36;
+                            return;
+                        }
+                        return;
+                    }
+                    this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
+                    if (param0 != 2) {
+                        this.field_j = 36;
+                        return;
+                    }
+                    return;
+                }
+                this.field_n.a(Vertigo2.a(new String[]{var3}, kq.field_Ub, -123), 2, 0);
+                if (!var5.field_qc) {
+                    if (param0 != 2) {
+                        this.field_j = 36;
+                        return;
+                    }
+                    return;
+                }
+                this.field_n.a(Vertigo2.a(new String[]{var3}, we.field_L, param0 ^ -114), 3, 0);
+                if (param0 != 2) {
+                    this.field_j = 36;
+                    return;
+                }
+                return;
+            }
+            this.field_n.a(Vertigo2.a(new String[]{var3}, af.field_G, 87), 2, param0 + -2);
+            this.field_n.a(Vertigo2.a(new String[]{var3}, aq.field_b, -124), 3, 0);
+            if (param0 != 2) {
+                this.field_j = 36;
+                return;
+            }
             return;
-          }
+        }
+        if (param0 != 2) {
+            this.field_j = 36;
+            return;
         }
     }
 
     final void c(int param0) {
-        String var2 = null;
-        String var3 = null;
+        String var2;
+        String var3;
         L0: {
           if (null == this.field_k) {
             break L0;
@@ -350,8 +300,6 @@ final class b {
 
     final void a(boolean param0, tn param1) {
         RuntimeException var3 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -359,14 +307,6 @@ final class b {
         String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
         try {
           L0: {
             if (!param1.field_n) {
@@ -435,27 +375,19 @@ final class b {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var3);
-            stackOut_20_1 = new StringBuilder().append("b.L(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var3);
+
+            stackIn_22_1 = new StringBuilder().append("b.L(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L7;
             }
           }
@@ -469,7 +401,7 @@ final class b {
     }
 
     private final boolean b(int param0, int param1, int param2) {
-        int var4 = 0;
+        int var4;
         var4 = 92 % ((param0 - -53) / 50);
         if (param1 == 17) {
           up.field_z = new cb(this.field_l.field_ob, this.field_l.field_C, this.field_l.field_Fb, this.field_l.field_db, param2, hb.field_D, ji.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e, this.field_k, this.field_o);
@@ -480,9 +412,7 @@ final class b {
     }
 
     private final boolean b(int param0, int param1, byte param2) {
-        boolean discarded$2 = false;
-        boolean discarded$3 = false;
-        int var5 = 0;
+        int var5;
         var5 = Vertigo2.field_L ? 1 : 0;
         if (param2 < 102) {
           this.field_j = 28;
@@ -496,7 +426,7 @@ final class b {
                         if (param1 != 19) {
                           return false;
                         } else {
-                          discarded$2 = qm.a(this.field_g, this.field_k, (byte) 114, this.field_c, this.field_o);
+                          qm.a(this.field_g, this.field_k, (byte) 114, this.field_c, this.field_o);
                           return true;
                         }
                       } else {
@@ -536,7 +466,7 @@ final class b {
                     if (14 != param1) {
                       if (-21 != (param1 ^ -1)) {
                         if (param1 == 19) {
-                          discarded$3 = qm.a(this.field_g, this.field_k, (byte) 114, this.field_c, this.field_o);
+                          qm.a(this.field_g, this.field_k, (byte) 114, this.field_c, this.field_o);
                           return true;
                         } else {
                           return false;
@@ -606,7 +536,7 @@ final class b {
         boolean discarded$13 = false;
         boolean discarded$14 = false;
         boolean discarded$15 = false;
-        int var6 = 0;
+        int var6;
         var6 = this.field_n.a(false, param1);
         if ((var6 ^ -1) != 1) {
           if (param4 != 2) {
@@ -654,19 +584,19 @@ final class b {
     }
 
     private final boolean a(int param0, int param1, int param2) {
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
-        boolean discarded$14 = false;
-        boolean discarded$15 = false;
-        Object var4 = null;
-        String var5 = null;
-        String var9 = null;
-        String var13 = null;
-        String var14 = null;
+        boolean discarded$0 = false;
+        boolean discarded$1 = false;
+        boolean discarded$2 = false;
+        boolean discarded$3 = false;
+        boolean discarded$4 = false;
+        boolean discarded$5 = false;
+        boolean discarded$6 = false;
+        boolean discarded$7 = false;
+        Object var4;
+        String var5;
+        String var9;
+        String var13;
+        String var14;
         var4 = null;
         if ((param1 ^ -1) != -5) {
           if ((param1 ^ -1) != -6) {
@@ -675,7 +605,7 @@ final class b {
                 var14 = en.a(this.field_k, (byte) 67, this.field_e, param0);
                 if (var14 == null) {
                   if (param2 != 0) {
-                    discarded$8 = this.b(-26, 104, (byte) -5);
+                    discarded$0 = this.b(-26, 104, (byte) -5);
                     return true;
                   } else {
                     return true;
@@ -683,7 +613,7 @@ final class b {
                 } else {
                   dh.a((byte) -52, var14, 2, (String) null, 0, this.field_k);
                   if (param2 != 0) {
-                    discarded$9 = this.b(-26, 104, (byte) -5);
+                    discarded$1 = this.b(-26, 104, (byte) -5);
                     return true;
                   } else {
                     return true;
@@ -696,7 +626,7 @@ final class b {
               var13 = br.a(this.field_k, param0, 100);
               if (var13 == null) {
                 if (param2 != 0) {
-                  discarded$10 = this.b(-26, 104, (byte) -5);
+                  discarded$2 = this.b(-26, 104, (byte) -5);
                   return true;
                 } else {
                   return true;
@@ -704,7 +634,7 @@ final class b {
               } else {
                 dh.a((byte) -52, var13, 2, (String) null, 0, this.field_k);
                 if (param2 != 0) {
-                  discarded$11 = this.b(-26, 104, (byte) -5);
+                  discarded$3 = this.b(-26, 104, (byte) -5);
                   return true;
                 } else {
                   return true;
@@ -715,7 +645,7 @@ final class b {
             var9 = lk.a((byte) -41, param0, this.field_k);
             if (var9 == null) {
               if (param2 != 0) {
-                discarded$12 = this.b(-26, 104, (byte) -5);
+                discarded$4 = this.b(-26, 104, (byte) -5);
                 return true;
               } else {
                 return true;
@@ -723,7 +653,7 @@ final class b {
             } else {
               dh.a((byte) -52, var9, 2, (String) null, 0, this.field_k);
               if (param2 != 0) {
-                discarded$13 = this.b(-26, 104, (byte) -5);
+                discarded$5 = this.b(-26, 104, (byte) -5);
                 return true;
               } else {
                 return true;
@@ -737,12 +667,12 @@ final class b {
             if (param2 == 0) {
               return true;
             } else {
-              discarded$14 = this.b(-26, 104, (byte) -5);
+              discarded$6 = this.b(-26, 104, (byte) -5);
               return true;
             }
           } else {
             if (param2 != 0) {
-              discarded$15 = this.b(-26, 104, (byte) -5);
+              discarded$7 = this.b(-26, 104, (byte) -5);
               return true;
             } else {
               return true;
@@ -764,10 +694,10 @@ final class b {
     }
 
     final void a(int param0, boolean param1) {
-        bs var4 = null;
-        String var5 = null;
-        int var6 = 0;
-        bs var7 = null;
+        bs var4;
+        String var5;
+        int var6;
+        bs var7;
         var6 = Vertigo2.field_L ? 1 : 0;
         if (this.field_k != null) {
           if (ao.field_N != this.field_o) {
@@ -905,7 +835,7 @@ final class b {
     }
 
     private final boolean a(int param0, int param1, byte param2) {
-        int var5 = 0;
+        int var5;
         var5 = Vertigo2.field_L ? 1 : 0;
         if (param2 >= 19) {
           if (0 != param0) {

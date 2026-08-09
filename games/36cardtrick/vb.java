@@ -38,14 +38,15 @@ final class vb {
         int fieldTemp$5 = 0;
         int fieldTemp$6 = 0;
         int fieldTemp$7 = 0;
-        int var3 = 0;
-        qb var4 = null;
-        qb var5 = null;
-        qb var36 = null;
-        qb var37 = null;
-        qb var38 = null;
-        qb var39 = null;
-        qb var42 = null;
+        int var3;
+        Object var4;
+        qb var4_ref;
+        qb var5;
+        qb var36;
+        qb var37;
+        qb var38;
+        qb var39;
+        qb var42;
         var3 = Main.field_T;
         if (param0) {
           if ((this.field_j ^ -1) < -1) {
@@ -58,9 +59,9 @@ final class vb {
                 if (this.field_j < this.field_d) {
                   fieldTemp$4 = this.field_j;
                   this.field_j = this.field_j + 1;
-                  var4 = this.field_f[fieldTemp$4].field_d;
-                  var39 = var4;
-                  if (var4 == this.field_f[this.field_j - 1]) {
+                  var4_ref = this.field_f[fieldTemp$4].field_d;
+                  var39 = var4_ref;
+                  if (var4_ref == this.field_f[this.field_j - 1]) {
                     continue L0;
                   } else {
                     this.field_i = var39.field_d;
@@ -76,9 +77,9 @@ final class vb {
               if (this.field_j < this.field_d) {
                 fieldTemp$5 = this.field_j;
                 this.field_j = this.field_j + 1;
-                var4 = this.field_f[fieldTemp$5].field_d;
-                var38 = var4;
-                if (var4 == this.field_f[this.field_j - 1]) {
+                var4_ref = this.field_f[fieldTemp$5].field_d;
+                var38 = var4_ref;
+                if (var4_ref == this.field_f[this.field_j - 1]) {
                   continue L1;
                 } else {
                   this.field_i = var38.field_d;
@@ -101,9 +102,9 @@ final class vb {
                 if (this.field_j < this.field_d) {
                   fieldTemp$6 = this.field_j;
                   this.field_j = this.field_j + 1;
-                  var4 = this.field_f[fieldTemp$6].field_d;
-                  var37 = var4;
-                  if (var4 == this.field_f[this.field_j - 1]) {
+                  var4_ref = this.field_f[fieldTemp$6].field_d;
+                  var37 = var4_ref;
+                  if (var4_ref == this.field_f[this.field_j - 1]) {
                     continue L2;
                   } else {
                     this.field_i = var37.field_d;
@@ -119,9 +120,9 @@ final class vb {
               if (this.field_j < this.field_d) {
                 fieldTemp$7 = this.field_j;
                 this.field_j = this.field_j + 1;
-                var4 = this.field_f[fieldTemp$7].field_d;
-                var5 = var4;
-                if (var4 == this.field_f[this.field_j - 1]) {
+                var4_ref = this.field_f[fieldTemp$7].field_d;
+                var5 = var4_ref;
+                if (var4_ref == this.field_f[this.field_j - 1]) {
                   continue L3;
                 } else {
                   this.field_i = var5.field_d;
@@ -136,25 +137,14 @@ final class vb {
     }
 
     final void a(long param0, byte param1, qb param2) {
-        qb discarded$2 = null;
         qb var5 = null;
-        RuntimeException var5_ref = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var5_ref = null;
         try {
           L0: {
             L1: {
@@ -175,7 +165,7 @@ final class vb {
               if (param1 >= 24) {
                 break L2;
               } else {
-                discarded$2 = this.a(true);
+                this.a(true);
                 break L2;
               }
             }
@@ -185,27 +175,19 @@ final class vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var5_ref);
-            stackOut_5_1 = new StringBuilder().append("vb.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var5_ref);
+
+            stackIn_7_1 = new StringBuilder().append("vb.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L3;
             }
           }
@@ -225,10 +207,10 @@ final class vb {
     }
 
     final qb a(boolean param0, long param1) {
-        qb var4 = null;
-        qb var5 = null;
-        int var6 = 0;
-        qb var7 = null;
+        qb var4;
+        qb var5;
+        int var6;
+        qb var7;
         var6 = Main.field_T;
         if (!param0) {
           var4 = this.field_f[(int)(param1 & (long)(this.field_d - 1))];
@@ -272,18 +254,18 @@ final class vb {
     }
 
     vb(int param0) {
-        qb dupTemp$2 = null;
-        int var2 = 0;
-        qb var3 = null;
+        qb dupTemp$1 = null;
+        int var2;
+        qb var3;
         this.field_j = 0;
         this.field_f = new qb[param0];
         this.field_d = param0;
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            dupTemp$2 = new qb();
-            var3 = dupTemp$2;
-            this.field_f[var2] = dupTemp$2;
+            dupTemp$1 = new qb();
+            var3 = dupTemp$1;
+            this.field_f[var2] = dupTemp$1;
             var3.field_d = var3;
             var3.field_a = var3;
             var2++;

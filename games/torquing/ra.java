@@ -51,12 +51,10 @@ final class ra {
     }
 
     final static void a(byte param0) {
-        boolean discarded$15 = false;
-        boolean discarded$16 = false;
-        RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = Torquing.field_u;
         try {
           L0: {
@@ -69,14 +67,14 @@ final class ra {
               }
             }
             if (im.l(169)) {
-              discarded$15 = w.field_G.a(true, ha.field_e, oe.field_a, false);
+              w.field_G.a(true, ha.field_e, oe.field_a, false);
               w.field_G.g((byte) -107);
               L2: while (true) {
                 if (!np.a((byte) -13)) {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  discarded$16 = w.field_G.a(e.field_f, 24454, m.field_t);
+                  w.field_G.a(e.field_f, 24454, m.field_t);
                   continue L2;
                 }
               }
@@ -111,11 +109,8 @@ final class ra {
     }
 
     final static boolean a(char param0, int param1) {
-        boolean discarded$6 = false;
         int stackIn_8_0 = 0;
         int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_6_0 = 0;
         if (param1 == 252) {
           if (param0 != 160) {
             if (32 != param0) {
@@ -126,8 +121,7 @@ final class ra {
                   return false;
                 }
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 1;
                 return stackIn_20_0 != 0;
               }
             } else {
@@ -137,7 +131,7 @@ final class ra {
             return true;
           }
         } else {
-          discarded$6 = ra.a('ﾷ', -121);
+          ra.a('ﾷ', -121);
           if (param0 != 160) {
             if (32 != param0) {
               if (param0 != 95) {
@@ -147,8 +141,7 @@ final class ra {
                   return false;
                 }
               } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 1;
                 return stackIn_8_0 != 0;
               }
             } else {

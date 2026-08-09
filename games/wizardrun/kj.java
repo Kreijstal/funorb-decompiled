@@ -18,15 +18,15 @@ final class kj {
 
     final static void a(int param0) {
         try {
-            java.lang.reflect.Method var1_ref_java_lang_reflect_Method = null;
-            Exception var1_ref_Exception = null;
-            int var1 = 0;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
-            Long var3 = null;
-            Object[] var4 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            java.lang.reflect.Method var1_ref_java_lang_reflect_Method = null;
+            int var1 = 0;
+            Exception var1_ref_Exception = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
+            Long var3 = null;
+            Object[] var4 = null;
             try {
               L0: {
                 L1: {
@@ -36,9 +36,9 @@ final class kj {
                   } else {
                     try {
                       L2: {
-                        var2_ref = Runtime.getRuntime();
+                        var2 = Runtime.getRuntime();
                         var4 = (Object[]) null;
-                        var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2_ref), (Object[]) null));
+                        var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2), (Object[]) null));
                         jd.field_b = (int)(var3.longValue() / 1048576L) + 1;
                         decompiledRegionSelector0 = 0;
                         break L2;
@@ -46,7 +46,7 @@ final class kj {
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L3: {
-                        var2 = decompiledCaughtException;
+                        var2_ref = decompiledCaughtException;
                         decompiledRegionSelector0 = 1;
                         break L3;
                       }

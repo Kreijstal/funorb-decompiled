@@ -29,20 +29,17 @@ final class ai {
 
     final static boolean a(boolean param0, byte param1) {
         try {
-            boolean discarded$4 = false;
-            long dupTemp$5 = 0L;
+            long dupTemp$1 = 0L;
             IOException var2 = null;
             jd var4 = null;
             jd var5 = null;
             int stackIn_11_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_10_0 = 0;
-            int stackOut_9_0 = 0;
             L0: {
               if (param1 == -37) {
                 break L0;
               } else {
-                discarded$4 = ai.a(false, (byte) 48);
+                ai.a(false, (byte) 48);
                 break L0;
               }
             }
@@ -57,9 +54,9 @@ final class ai {
             if (0 == bk.field_a.field_c) {
               return false;
             } else {
-              dupTemp$5 = je.a(1);
-              gf.field_Y = dupTemp$5;
-              md.field_y = dupTemp$5;
+              dupTemp$1 = je.a(1);
+              gf.field_Y = dupTemp$1;
+              md.field_y = dupTemp$1;
               if (bk.field_a.field_c != 1) {
                 ef.field_e = wc.field_f;
                 bk.field_a = null;
@@ -73,12 +70,10 @@ final class ai {
                       var4 = te.field_N;
                       var5 = var4;
                       if (param0) {
-                        stackOut_10_0 = -2;
-                        stackIn_11_0 = stackOut_10_0;
+                        stackIn_11_0 = -2;
                         break L3;
                       } else {
-                        stackOut_9_0 = -1;
-                        stackIn_11_0 = stackOut_9_0;
+                        stackIn_11_0 = -1;
                         break L3;
                       }
                     }
@@ -116,9 +111,7 @@ final class ai {
     }
 
     final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
-        String discarded$2 = null;
-        String discarded$3 = null;
-        int var4 = 0;
+        int var4;
         var4 = 0;
         if (!param3) {
           L0: {
@@ -131,7 +124,7 @@ final class ai {
           }
           if (param0 != 71) {
             L1: {
-              discarded$2 = ai.a((byte) -23, true, false, true);
+              ai.a((byte) -23, true, false, true);
               if (param2) {
                 var4++;
                 break L1;
@@ -173,7 +166,7 @@ final class ai {
             return ad.field_c[var4];
           } else {
             L5: {
-              discarded$3 = ai.a((byte) -23, true, false, true);
+              ai.a((byte) -23, true, false, true);
               if (param2) {
                 var4++;
                 break L5;

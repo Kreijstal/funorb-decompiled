@@ -122,95 +122,46 @@ final class fb extends uf {
     }
 
     static {
-        $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            long var2 = 0L;
-            long var4 = 0L;
-            long var6 = 0L;
-            long var8 = 0L;
-            long var10 = 0L;
-            long var12 = 0L;
-            int var14 = 0;
-            int var15 = 0;
-            long stackIn_5_0 = 0L;
-            long stackOut_4_0 = 0L;
-            long stackOut_3_0 = 0L;
-            field_m = new long[11];
-            field_n = new long[8][256];
-            var0 = 0;
-            L0: while (true) {
-              if (-257 >= (var0 ^ -1)) {
-                field_m[0] = 0L;
-                var15 = 1;
-                var0 = var15;
-                L1: while (true) {
-                  if ((var15 ^ -1) < -11) {
-                    break $cfr$clinit;
-                  } else {
-                    var1 = 8 * var15 - 8;
-                    field_m[var15] = fb.a(fb.a(wj.a(field_n[6][6 + var1], 65280L), fb.a(wj.a(16711680L, field_n[5][5 + var1]), fb.a(wj.a(4278190080L, field_n[4][4 + var1]), fb.a(fb.a(fb.a(wj.a(field_n[1][1 + var1], 71776119061217280L), wj.a(-72057594037927936L, field_n[0][var1])), wj.a(280375465082880L, field_n[2][var1 + 2])), wj.a(field_n[3][var1 + 3], 1095216660480L))))), wj.a(field_n[7][var1 - -7], 255L));
-                    var15++;
-                    continue L1;
-                  }
-                }
-              } else {
-                L2: {
-                  var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-                  if (0 != (1 & var0)) {
-                    stackOut_4_0 = (long)(255 & var1);
-                    stackIn_5_0 = stackOut_4_0;
-                    break L2;
-                  } else {
-                    stackOut_3_0 = (long)(var1 >>> 522210504);
-                    stackIn_5_0 = stackOut_3_0;
-                    break L2;
-                  }
-                }
-                L3: {
-                  var2 = stackIn_5_0;
-                  var4 = var2 << 1591315009;
-                  if ((var4 ^ -1L) > -257L) {
-                    break L3;
-                  } else {
-                    var4 = var4 ^ 285L;
-                    break L3;
-                  }
-                }
-                L4: {
-                  var6 = var4 << -806964479;
-                  if (256L > var6) {
-                    break L4;
-                  } else {
-                    var6 = var6 ^ 285L;
-                    break L4;
-                  }
-                }
-                L5: {
-                  var8 = var6 ^ var2;
-                  var10 = var6 << 1915065537;
-                  if (256L > var10) {
-                    break L5;
-                  } else {
-                    var10 = var10 ^ 285L;
-                    break L5;
-                  }
-                }
-                var12 = var2 ^ var10;
-                field_n[0][var0] = ad.a(ad.a(ad.a(var8 << 352046096, ad.a(var10 << 1806679576, ad.a(ad.a(ad.a(var2 << 1680800120, var2 << 385441648), var6 << 897563432), var2 << -994040288))), var4 << 152592776), var12);
-                var14 = 1;
-                L6: while (true) {
-                  if (8 <= var14) {
-                    var0++;
-                    continue L0;
-                  } else {
-                    field_n[var14][var0] = ad.a(field_n[-1 + var14][var0] >>> -283766776, field_n[var14 + -1][var0] << -1240752840);
-                    var14++;
-                    continue L6;
-                  }
-                }
-              }
+        int var0 = 0;
+        int var1 = 0;
+        long var2 = 0L;
+        long var4 = 0L;
+        long var6 = 0L;
+        long var8 = 0L;
+        long var10 = 0L;
+        long var12 = 0L;
+        int var14 = 0;
+        field_m = new long[11];
+        field_n = new long[8][256];
+        for (var0 = 0; -257 < (var0 ^ -1); var0++) {
+            var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+            var2 = 0 == (1 & var0) ? (long)(var1 >>> 522210504) : (long)(255 & var1);
+            var4 = var2 << 1591315009;
+            if ((var4 ^ -1L) <= -257L) {
+                var4 = var4 ^ 285L;
             }
+            var6 = var4 << -806964479;
+            if (256L <= var6) {
+                var6 = var6 ^ 285L;
+            }
+            var8 = var6 ^ var2;
+            var10 = var6 << 1915065537;
+            if (256L <= var10) {
+                var10 = var10 ^ 285L;
+            }
+            var12 = var2 ^ var10;
+            field_n[0][var0] = ad.a(ad.a(ad.a(var8 << 352046096, ad.a(var10 << 1806679576, ad.a(ad.a(ad.a(var2 << 1680800120, var2 << 385441648), var6 << 897563432), var2 << -994040288))), var4 << 152592776), var12);
+            for (var14 = 1; 8 > var14; var14++) {
+                field_n[var14][var0] = ad.a(field_n[-1 + var14][var0] >>> -283766776, field_n[var14 + -1][var0] << -1240752840);
+            }
+        }
+        field_m[0] = 0L;
+        int var15 = 1;
+        var0 = var15;
+        while ((var15 ^ -1) >= -11) {
+            var1 = 8 * var15 - 8;
+            field_m[var15] = fb.a(fb.a(wj.a(field_n[6][6 + var1], 65280L), fb.a(wj.a(16711680L, field_n[5][5 + var1]), fb.a(wj.a(4278190080L, field_n[4][4 + var1]), fb.a(fb.a(fb.a(wj.a(field_n[1][1 + var1], 71776119061217280L), wj.a(-72057594037927936L, field_n[0][var1])), wj.a(280375465082880L, field_n[2][var1 + 2])), wj.a(field_n[3][var1 + 3], 1095216660480L))))), wj.a(field_n[7][var1 - -7], 255L));
+            var15++;
         }
     }
 }

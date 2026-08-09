@@ -51,23 +51,16 @@ final class tf {
     }
 
     final static void a(byte param0, int param1, int param2, int param3) {
-        int discarded$1 = 0;
-        RuntimeException var4 = null;
-        String var4_ref = null;
+        String var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ce stackIn_10_0 = null;
         ce stackIn_11_0 = null;
         ce stackIn_12_0 = null;
         String stackIn_12_1 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ce stackOut_9_0 = null;
-        ce stackOut_11_0 = null;
-        String stackOut_11_1 = null;
-        ce stackOut_10_0 = null;
-        String stackOut_10_1 = null;
+        RuntimeException var4_ref = null;
         var7 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -83,31 +76,26 @@ final class tf {
             }
             L2: {
               if ((32800 & (param3 ^ -1) & 1 << param1) != 0) {
-                var4_ref = n.field_e;
+                var4 = n.field_e;
                 break L2;
               } else {
-                var4_ref = jf.field_c[param1];
+                var4 = jf.field_c[param1];
                 break L2;
               }
             }
-            var5 = pn.field_a.b(var4_ref, 171);
-            discarded$1 = pn.field_a.a(var4_ref, 80, -166 + -pn.field_a.field_C + (-(var5 * 10) + 274 - -param2), 171, 1000, 4243584, -1, 0, 0, 20);
+            var5 = pn.field_a.b(var4, 171);
+            pn.field_a.a(var4, 80, -166 + -pn.field_a.field_C + (-(var5 * 10) + 274 - -param2), 171, 1000, 4243584, -1, 0, 0, 20);
             if (param0 == 59) {
               L3: {
-                stackOut_9_0 = pn.field_a;
-                stackIn_11_0 = stackOut_9_0;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_11_0 = pn.field_a;
+
                 if (0 == (param3 & 1 << param1)) {
-                  stackOut_11_0 = (ce) ((Object) stackIn_11_0);
-                  stackOut_11_1 = an.field_m;
-                  stackIn_12_0 = stackOut_11_0;
-                  stackIn_12_1 = stackOut_11_1;
+                  stackIn_12_0 = (ce) ((Object) stackIn_11_0);
+                  stackIn_12_1 = an.field_m;
                   break L3;
                 } else {
-                  stackOut_10_0 = (ce) ((Object) stackIn_10_0);
-                  stackOut_10_1 = fj.field_r;
-                  stackIn_12_0 = stackOut_10_0;
-                  stackIn_12_1 = stackOut_10_1;
+                  stackIn_12_0 = (ce) ((Object) stackIn_11_0);
+                  stackIn_12_1 = fj.field_r;
                   break L3;
                 }
               }
@@ -139,8 +127,8 @@ final class tf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var4), "tf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          var4_ref = decompiledCaughtException;
+          throw sd.a((Throwable) ((Object) var4_ref), "tf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

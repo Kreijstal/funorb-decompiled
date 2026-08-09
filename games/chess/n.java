@@ -12,7 +12,7 @@ final class n {
     static bn[] field_b;
 
     final static vg a(byte param0) {
-        String var1 = null;
+        String var1;
         if (param0 <= 18) {
           L0: {
             field_d = (String[]) null;

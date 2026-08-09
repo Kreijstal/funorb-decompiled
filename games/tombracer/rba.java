@@ -12,14 +12,14 @@ final class rba implements Iterator {
     static qh field_a;
 
     public final Object next() {
-        od var1 = this.field_c;
+        Object var1 = this.field_c;
         if (var1 == this.field_d.field_d) {
             var1 = null;
             this.field_c = null;
         } else {
-            this.field_c = var1.field_g;
+            this.field_c = ((od) (var1)).field_g;
         }
-        this.field_f = var1;
+        this.field_f = (od) (var1);
         return var1;
     }
 

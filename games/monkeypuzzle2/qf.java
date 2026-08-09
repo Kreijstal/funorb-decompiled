@@ -62,7 +62,6 @@ final class qf extends og {
 
     private final void e() {
         int var1 = 0;
-        int var2 = 0;
         this.field_T = 0;
         this.field_K = 0;
         this.field_B = 0;
@@ -72,31 +71,7 @@ final class qf extends og {
         this.field_cb = this.field_X.field_f;
         this.field_O = this.field_X.field_K;
         this.field_r = 64;
-        var1 = 0;
-        L0: while (true) {
-          if (var1 >= this.field_X.field_j) {
-            this.field_fb = 0;
-            this.field_kb = null;
-            this.field_Z = -1;
-            this.field_gb = -1;
-            this.field_o = 0;
-            this.field_u = 0;
-            this.field_l = -1;
-            this.field_ib = 0;
-            var2 = 0;
-            var1 = var2;
-            L1: while (true) {
-              if (var2 >= this.field_X.field_j) {
-                this.field_K = 1;
-                return;
-              } else {
-                this.field_R[var2] = null;
-                this.field_x[var2] = false;
-                var2++;
-                continue L1;
-              }
-            }
-          } else {
+        for (var1 = 0; var1 < this.field_X.field_j; var1++) {
             this.field_z[var1] = 0;
             this.field_eb[var1] = 0;
             this.field_y[var1] = 0;
@@ -128,10 +103,23 @@ final class qf extends og {
             this.field_w[var1] = 128;
             this.field_db[var1] = 0;
             this.field_hb[var1] = -1;
-            var1++;
-            continue L0;
-          }
         }
+        this.field_fb = 0;
+        this.field_kb = null;
+        this.field_Z = -1;
+        this.field_gb = -1;
+        this.field_o = 0;
+        this.field_u = 0;
+        this.field_l = -1;
+        this.field_ib = 0;
+        int var2 = 0;
+        var1 = var2;
+        while (var2 < this.field_X.field_j) {
+            this.field_R[var2] = null;
+            this.field_x[var2] = false;
+            var2++;
+        }
+        this.field_K = 1;
     }
 
     private final void e(int param0) {
@@ -151,32 +139,32 @@ final class qf extends og {
     }
 
     private final boolean d() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
         L0: {
           var3 = 0;
           if (this.field_K == 1) {
@@ -1739,10 +1727,8 @@ final class qf extends og {
     }
 
     final int a(mj param0) {
-        if (this.d()) {
-            if (!this.field_P) {
-                return -1;
-            }
+        if (this.d() && !this.field_P) {
+            return -1;
         }
         int var3 = va.field_i;
         int var4 = (var3 << 9) + (var3 << 7);
@@ -1789,43 +1775,20 @@ final class qf extends og {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        li var7 = null;
-        Object var8 = null;
-        Throwable var9 = null;
-        td stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
         td stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         td stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_14_2 = 0;
-        li stackIn_15_0 = null;
         li stackIn_16_0 = null;
         li stackIn_17_0 = null;
         int stackIn_17_1 = 0;
-        li stackIn_18_0 = null;
         li stackIn_19_0 = null;
         li stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         Throwable decompiledCaughtException = null;
-        td stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        td stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        td stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        li stackOut_14_0 = null;
-        li stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        li stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        li stackOut_17_0 = null;
-        li stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        li stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
+        li var7 = null;
+        Object var8 = null;
         L0: {
           this.e(param0);
           if (param3 <= field_v[7999]) {
@@ -1859,66 +1822,48 @@ final class qf extends og {
                 }
               }
               L3: {
-                stackOut_11_0 = this.field_X.field_h[param1];
-                stackOut_11_1 = param3 * 256 / va.field_i;
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_13_1 = stackOut_11_1;
-                stackIn_12_0 = stackOut_11_0;
-                stackIn_12_1 = stackOut_11_1;
+                stackIn_13_0 = this.field_X.field_h[param1];
+
+                stackIn_13_1 = param3 * 256 / va.field_i;
+
                 if (param2 == 0) {
-                  stackOut_13_0 = (td) ((Object) stackIn_13_0);
-                  stackOut_13_1 = stackIn_13_1;
-                  stackOut_13_2 = param4 * this.field_r * this.field_M >> 12;
-                  stackIn_14_0 = stackOut_13_0;
-                  stackIn_14_1 = stackOut_13_1;
-                  stackIn_14_2 = stackOut_13_2;
+                  stackIn_14_0 = (td) ((Object) stackIn_13_0);
+                  stackIn_14_1 = stackIn_13_1;
+                  stackIn_14_2 = param4 * this.field_r * this.field_M >> 12;
                   break L3;
                 } else {
-                  stackOut_12_0 = (td) ((Object) stackIn_12_0);
-                  stackOut_12_1 = stackIn_12_1;
-                  stackOut_12_2 = 0;
-                  stackIn_14_0 = stackOut_12_0;
-                  stackIn_14_1 = stackOut_12_1;
-                  stackIn_14_2 = stackOut_12_2;
+                  stackIn_14_0 = (td) ((Object) stackIn_13_0);
+                  stackIn_14_1 = stackIn_13_1;
+                  stackIn_14_2 = 0;
                   break L3;
                 }
               }
               L4: {
                 var7 = li.a(stackIn_14_0, stackIn_14_1, stackIn_14_2, param5);
                 var7.c(this.field_X.field_B[param1], this.field_X.field_A[param1]);
-                stackOut_14_0 = (li) (var7);
-                stackIn_16_0 = stackOut_14_0;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_16_0 = (li) (var7);
+
                 if (this.field_X.field_c[param1] == 0) {
-                  stackOut_16_0 = (li) ((Object) stackIn_16_0);
-                  stackOut_16_1 = 0;
-                  stackIn_17_0 = stackOut_16_0;
-                  stackIn_17_1 = stackOut_16_1;
+                  stackIn_17_0 = (li) ((Object) stackIn_16_0);
+                  stackIn_17_1 = 0;
                   break L4;
                 } else {
-                  stackOut_15_0 = (li) ((Object) stackIn_15_0);
-                  stackOut_15_1 = -1;
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_17_1 = stackOut_15_1;
+                  stackIn_17_0 = (li) ((Object) stackIn_16_0);
+                  stackIn_17_1 = -1;
                   break L4;
                 }
               }
               L5: {
                 ((li) (Object) stackIn_17_0).h(stackIn_17_1);
-                stackOut_17_0 = (li) (var7);
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_19_0 = (li) (var7);
+
                 if (this.field_X.field_c[param1] != 2) {
-                  stackOut_19_0 = (li) ((Object) stackIn_19_0);
-                  stackOut_19_1 = 0;
-                  stackIn_20_0 = stackOut_19_0;
-                  stackIn_20_1 = stackOut_19_1;
+                  stackIn_20_0 = (li) ((Object) stackIn_19_0);
+                  stackIn_20_1 = 0;
                   break L5;
                 } else {
-                  stackOut_18_0 = (li) ((Object) stackIn_18_0);
-                  stackOut_18_1 = 1;
-                  stackIn_20_0 = stackOut_18_0;
-                  stackIn_20_1 = stackOut_18_1;
+                  stackIn_20_0 = (li) ((Object) stackIn_19_0);
+                  stackIn_20_1 = 1;
                   break L5;
                 }
               }

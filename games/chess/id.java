@@ -18,8 +18,8 @@ final class id {
     }
 
     final void a(int param0, int param1, int param2, int param3, boolean param4) {
-        int var6 = 0;
-        int var7 = 0;
+        int var6;
+        int var7;
         var6 = 24;
         var7 = 5;
         this.field_a.a((byte) -86, param2, param0, param1, var7, var6, param3);

@@ -10,28 +10,16 @@ final class tj extends si implements n {
     private pl field_tb;
 
     final static String a(CharSequence param0, int param1) {
-        String discarded$2 = null;
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
         String stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_4_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -39,7 +27,7 @@ final class tj extends si implements n {
                 break L1;
               } else {
                 var3 = (CharSequence) null;
-                discarded$2 = tj.a((CharSequence) null, 66);
+                tj.a((CharSequence) null, 66);
                 break L1;
               }
             }
@@ -52,35 +40,26 @@ final class tj extends si implements n {
                 break L2;
               }
             }
-            stackOut_4_0 = (String) (var2);
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = (String) (var2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2_ref);
-            stackOut_6_1 = new StringBuilder().append("tj.R(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2_ref);
+
+            stackIn_8_1 = new StringBuilder().append("tj.R(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -99,20 +78,18 @@ final class tj extends si implements n {
     }
 
     public static void p(int param0) {
-        String discarded$0 = null;
         field_ub = null;
         if (param0 <= 29) {
             CharSequence var2 = (CharSequence) null;
-            discarded$0 = tj.a((CharSequence) null, 112);
+            tj.a((CharSequence) null, 112);
         }
     }
 
     final void q(int param0) {
-        String discarded$2 = null;
-        CharSequence var3 = null;
+        CharSequence var3;
         if (param0 < 66) {
           var3 = (CharSequence) null;
-          discarded$2 = tj.a((CharSequence) null, -117);
+          tj.a((CharSequence) null, -117);
           this.a(aj.a(248, (byte) -47, ib.field_ab), (byte) -110, true);
           return;
         } else {
@@ -122,14 +99,6 @@ final class tj extends si implements n {
     }
 
     private final void a(pd param0, byte param1, boolean param2) {
-        eb discarded$2 = null;
-        eb discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        oi var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
@@ -137,33 +106,29 @@ final class tj extends si implements n {
         String stackIn_33_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        oi var5 = null;
+        int var6 = 0;
         var6 = Terraphoenix.field_V;
         try {
           L0: {
             L1: {
               this.field_vb = true;
               if (param0.field_i) {
-                var4_ref = sh.field_q;
+                var4 = sh.field_q;
                 break L1;
               } else {
                 if (null == param0.field_d) {
-                  var4_ref = param0.field_b;
+                  var4 = param0.field_b;
                   if (248 == param0.field_c) {
                     if (param2) {
-                      var4_ref = ib.field_ab;
+                      var4 = ib.field_ab;
                       this.field_xb = true;
                       break L1;
                     } else {
                       dm.a((byte) -119);
-                      var4_ref = ib.field_ab;
+                      var4 = ib.field_ab;
                       this.field_xb = true;
                       break L1;
                     }
@@ -171,7 +136,7 @@ final class tj extends si implements n {
                     break L1;
                   }
                 } else {
-                  var4_ref = mg.field_m;
+                  var4 = mg.field_m;
                   if (null == this.field_tb) {
                     break L1;
                   } else {
@@ -182,7 +147,7 @@ final class tj extends si implements n {
               }
             }
             L2: {
-              var5 = new oi((si) (this), be.field_x, var4_ref);
+              var5 = new oi((si) (this), be.field_x, var4);
               if (param1 == -110) {
                 break L2;
               } else {
@@ -193,7 +158,7 @@ final class tj extends si implements n {
             L3: {
               if (param0.field_i) {
                 if (!param0.field_a) {
-                  discarded$2 = var5.a((byte) 23, (sc) (this), rj.field_e);
+                  var5.a((byte) 23, (sc) (this), rj.field_e);
                   break L3;
                 } else {
                   this.a(new cl((tj) (this)), -86);
@@ -212,7 +177,7 @@ final class tj extends si implements n {
                       break L4;
                     }
                   } else {
-                    discarded$3 = var5.a((byte) 23, (sc) (this), rj.field_e);
+                    var5.a((byte) 23, (sc) (this), rj.field_e);
                     break L4;
                   }
                 }
@@ -236,28 +201,20 @@ final class tj extends si implements n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var4 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) (var4);
-            stackOut_30_1 = new StringBuilder().append("tj.S(");
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_32_0 = (RuntimeException) (var4_ref);
+
+            stackIn_32_1 = new StringBuilder().append("tj.S(");
+
             if (param0 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L5;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L5;
             }
           }
@@ -285,7 +242,7 @@ final class tj extends si implements n {
     }
 
     final boolean f(byte param0) {
-        pd var2 = null;
+        pd var2;
         L0: {
           if (!this.field_J) {
             break L0;

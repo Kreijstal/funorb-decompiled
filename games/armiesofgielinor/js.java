@@ -41,50 +41,50 @@ final class js extends ni {
     int[] field_D;
 
     private final void b(byte[] param0) {
-        int var2 = 0;
-        int var3 = 0;
-        vh var4 = null;
-        vh var5 = null;
-        vh var6 = null;
-        vh var7 = null;
-        vh var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
-        int var42 = 0;
-        int var43 = 0;
-        int var44 = 0;
-        int var45 = 0;
+        int var2;
+        int var3;
+        vh var4;
+        vh var5;
+        vh var6;
+        vh var7;
+        vh var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var41;
+        int var42;
+        int var43;
+        int var44;
+        int var45;
         L0: {
           var2 = 0;
           var3 = 0;
@@ -542,71 +542,67 @@ final class js extends ni {
     }
 
     private final void a(byte[] param0) {
-        byte dupTemp$1 = 0;
-        vh var2 = null;
-        vh var3 = null;
-        vh var4 = null;
-        vh var5 = null;
-        vh var6 = null;
-        vh var7 = null;
-        vh var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
-        int var42 = 0;
-        int var43 = 0;
-        int var44 = 0;
-        int var45 = 0;
-        int var46 = 0;
-        int var47 = 0;
-        int var48 = 0;
-        int var49 = 0;
-        int var50 = 0;
-        int var51 = 0;
-        int var52 = 0;
-        int var53 = 0;
-        int var54 = 0;
-        int var55 = 0;
-        int var56 = 0;
-        int var57 = 0;
-        int var58 = 0;
-        int var59 = 0;
+        byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
+        vh var2;
+        vh var3;
+        vh var4;
+        vh var5;
+        vh var6;
+        vh var7;
+        vh var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var41;
+        int var42;
+        int var43;
+        int var44;
+        int var45;
+        int var46;
+        int var47;
+        int var48;
+        int var49;
+        int var50;
+        int var51;
+        int var52;
+        int var53;
+        int var54;
+        int var55;
+        int var56;
+        int var57;
+        int var58;
+        int var59;
         L0: {
           var2 = new vh(param0);
           var3 = new vh(param0);
@@ -621,24 +617,20 @@ final class js extends ni {
           var11 = var2.k(0);
           var12 = var2.k(0);
           if ((var12 & 1) != 1) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
         L1: {
           var13 = stackIn_3_0;
           if ((var12 & 2) != 2) {
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L1;
           } else {
-            stackOut_4_0 = 1;
-            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_0 = 1;
             break L1;
           }
         }
@@ -668,9 +660,9 @@ final class js extends ni {
                 break L2;
               } else {
                 L4: {
-                  dupTemp$1 = var2.a((byte) 107);
-                  this.field_t[var28] = dupTemp$1;
-                  var29 = dupTemp$1;
+                  dupTemp$0 = var2.a((byte) 107);
+                  this.field_t[var28] = dupTemp$0;
+                  var29 = dupTemp$0;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -1218,26 +1210,26 @@ final class js extends ni {
     }
 
     final void b() {
-        kg dupTemp$1 = null;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        kg var16 = null;
-        wi var17 = null;
-        wi var18 = null;
-        wi var19 = null;
+        kg dupTemp$0 = null;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        kg var16;
+        wi var17;
+        wi var18;
+        wi var19;
         if (this.field_y == null) {
           this.field_y = new wi[this.field_v];
           var1 = 0;
@@ -1309,9 +1301,9 @@ final class js extends ni {
                                           break L6;
                                         }
                                       }
-                                      dupTemp$1 = new kg();
-                                      this.field_L[var1] = dupTemp$1;
-                                      var16 = dupTemp$1;
+                                      dupTemp$0 = new kg();
+                                      this.field_L[var1] = dupTemp$0;
+                                      var16 = dupTemp$0;
                                       var16.field_b = var11;
                                       var16.field_a = var12;
                                       var16.field_e = var13;
@@ -1380,13 +1372,17 @@ final class js extends ni {
     }
 
     final void a() {
+        int dupTemp$0 = 0;
+        int[] arrayValue$1 = null;
         int[] array$2 = null;
-        int[] array$3 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        int[] var6 = null;
+        int dupTemp$3 = 0;
+        int[] arrayValue$4 = null;
+        int[] array$5 = null;
+        int var2;
+        int var3;
+        int var4;
+        int[] var5;
+        int[] var6;
         L0: {
           if (this.field_m == null) {
             break L0;
@@ -1407,8 +1403,10 @@ final class js extends ni {
                         break L0;
                       } else {
                         var4 = this.field_m[var3];
-                        var5[var4] = var5[var4] + 1;
-                        this.field_l[var4][var5[var4]] = var3;
+                        dupTemp$0 = var5[var4];
+                        arrayValue$1 = this.field_l[var4];
+                        var5[var4] = dupTemp$0 + 1;
+                        arrayValue$1[dupTemp$0] = var3;
                         var3++;
                         continue L3;
                       }
@@ -1456,15 +1454,17 @@ final class js extends ni {
                         break L4;
                       } else {
                         var4 = this.field_e[var3];
-                        var6[var4] = var6[var4] + 1;
-                        this.field_H[var4][var6[var4]] = var3;
+                        dupTemp$3 = var6[var4];
+                        arrayValue$4 = this.field_H[var4];
+                        var6[var4] = dupTemp$3 + 1;
+                        arrayValue$4[dupTemp$3] = var3;
                         var3++;
                         continue L7;
                       }
                     }
                   } else {
-                    array$3 = new int[var6[var3]];
-                    this.field_H[var3] = array$3;
+                    array$5 = new int[var6[var3]];
+                    this.field_H[var3] = array$5;
                     var6[var3] = 0;
                     var3++;
                     continue L6;
@@ -1510,7 +1510,7 @@ final class js extends ni {
     }
 
     js(js param0, boolean param1, boolean param2, boolean param3, boolean param4) {
-        int var6 = 0;
+        int var6;
         L0: {
           this.field_v = 0;
           this.field_O = 0;

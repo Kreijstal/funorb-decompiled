@@ -5,15 +5,14 @@ class tf extends eo {
     static volatile int field_n;
 
     final static kv a(byte param0, int param1, int param2, int param3, int param4) {
-        kv discarded$1 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        kv var13 = null;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        kv var13;
         var12 = BachelorFridge.field_y;
         var13 = new kv(param3, param4);
         var6 = 0;
@@ -24,7 +23,7 @@ class tf extends eo {
               if (param0 == 119) {
                 break L1;
               } else {
-                discarded$1 = tf.a((byte) -3, -17, -90, -4, -52);
+                tf.a((byte) -3, -17, -90, -4, -52);
                 break L1;
               }
             }

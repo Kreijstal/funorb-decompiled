@@ -22,52 +22,42 @@ final class gt extends mo {
     static String field_o;
 
     final static void a(int param0, int param1, byte param2, int param3) {
+        int var8 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        if (param2 >= 96) {
-          L0: {
-            var4 = ws.field_c[param3][param0 - 1][2];
-            var5 = ws.field_c[param3][-1 + param0][3];
-            var6 = var4 * ql.field_a[0] / 896;
-            var7 = var5 * ql.field_a[1] / 1344;
-            if ((param1 ^ -1) != -1) {
-              var9 = var7 + (-var5 + 1344 + -ws.field_c[param3][-1 + param0][1]);
-              var8 = var6 + -var4 + (896 - ws.field_c[param3][param0 - 1][0]);
-              break L0;
-            } else {
-              var8 = var6 + ws.field_c[param3][-1 + param0][0];
-              var9 = var7 + ws.field_c[param3][param0 + -1][1];
-              break L0;
-            }
-          }
-          ge.field_m[0] = Math.min(896, Math.max(0, var8));
-          ge.field_m[1] = Math.min(1344, Math.max(0, var9));
-          return;
-        } else {
-          L1: {
+        if (param2 < 96) {
             field_h = (int[][][][]) null;
             var4 = ws.field_c[param3][param0 - 1][2];
             var5 = ws.field_c[param3][-1 + param0][3];
             var6 = var4 * ql.field_a[0] / 896;
             var7 = var5 * ql.field_a[1] / 1344;
-            if ((param1 ^ -1) != -1) {
-              var9 = var7 + (-var5 + 1344 + -ws.field_c[param3][-1 + param0][1]);
-              var8 = var6 + -var4 + (896 - ws.field_c[param3][param0 - 1][0]);
-              break L1;
+            if ((param1 ^ -1) == -1) {
+                var8 = var6 + ws.field_c[param3][-1 + param0][0];
+                var9 = var7 + ws.field_c[param3][param0 + -1][1];
             } else {
-              var8 = var6 + ws.field_c[param3][-1 + param0][0];
-              var9 = var7 + ws.field_c[param3][param0 + -1][1];
-              break L1;
+                var9 = var7 + (-var5 + 1344 + -ws.field_c[param3][-1 + param0][1]);
+                var8 = var6 + -var4 + (896 - ws.field_c[param3][param0 - 1][0]);
             }
-          }
-          ge.field_m[0] = Math.min(896, Math.max(0, var8));
-          ge.field_m[1] = Math.min(1344, Math.max(0, var9));
-          return;
+            ge.field_m[0] = Math.min(896, Math.max(0, var8));
+            ge.field_m[1] = Math.min(1344, Math.max(0, var9));
+            return;
         }
+        var4 = ws.field_c[param3][param0 - 1][2];
+        var5 = ws.field_c[param3][-1 + param0][3];
+        var6 = var4 * ql.field_a[0] / 896;
+        var7 = var5 * ql.field_a[1] / 1344;
+        if ((param1 ^ -1) == -1) {
+            var8 = var6 + ws.field_c[param3][-1 + param0][0];
+            var9 = var7 + ws.field_c[param3][param0 + -1][1];
+        } else {
+            var9 = var7 + (-var5 + 1344 + -ws.field_c[param3][-1 + param0][1]);
+            var8 = var6 + -var4 + (896 - ws.field_c[param3][param0 - 1][0]);
+        }
+        ge.field_m[0] = Math.min(896, Math.max(0, var8));
+        ge.field_m[1] = Math.min(1344, Math.max(0, var9));
     }
 
     final static ak c(int param0) {
@@ -148,10 +138,9 @@ final class gt extends mo {
     }
 
     public static void a(boolean param0) {
-        wh discarded$0 = null;
         field_r = null;
         if (!param0) {
-            discarded$0 = gt.a(false, -40, (byte) 99, -28);
+            gt.a(false, -40, (byte) 99, -28);
             field_t = null;
             field_j = null;
             field_h = (int[][][][]) null;
@@ -174,7 +163,7 @@ final class gt extends mo {
     }
 
     final static void a(boolean param0, int param1) {
-        int var3 = 0;
+        int var3;
         var3 = Kickabout.field_G;
         if (param1 == 1) {
           if (param0) {

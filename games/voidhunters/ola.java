@@ -8,26 +8,25 @@ final class ola extends gna {
     static String field_q;
 
     final void a(int param0, int param1, byte param2) {
-        int incrementValue$2 = 0;
-        int var4 = 0;
+        int incrementValue$1 = 0;
+        int var4;
         if (param0 != 1111320769) {
           return;
         } else {
           var4 = 2 * param1;
           param2 = (byte)((127 & param2 >> -32962879) + 127);
-          incrementValue$2 = var4;
+          incrementValue$1 = var4;
           var4++;
-          this.field_n[incrementValue$2] = (byte)param2;
+          this.field_n[incrementValue$1] = (byte)param2;
           this.field_n[var4] = (byte)param2;
           return;
         }
     }
 
     final static caa[] d(byte param0) {
-        caa[] discarded$3 = null;
-        caa[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
+        caa[] var1;
+        int var2;
+        int var3;
         var3 = VoidHunters.field_G;
         if (param0 == -91) {
           var1 = new caa[mma.field_a];
@@ -43,7 +42,7 @@ final class ola extends gna {
             }
           }
         } else {
-          discarded$3 = ola.d((byte) 67);
+          ola.d((byte) 67);
           var1 = new caa[mma.field_a];
           var2 = 0;
           L1: while (true) {
@@ -60,11 +59,10 @@ final class ola extends gna {
     }
 
     public static void b(int param0) {
-        caa[] discarded$0 = null;
         field_q = null;
         field_o = null;
         if (param0 != 2) {
-            discarded$0 = ola.d((byte) -116);
+            ola.d((byte) -116);
             field_p = null;
             return;
         }

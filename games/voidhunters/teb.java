@@ -41,9 +41,8 @@ final class teb extends mfb {
     }
 
     final int b(byte param0) {
-        int discarded$0 = 0;
         if (param0 < 27) {
-            discarded$0 = this.f(-17);
+            this.f(-17);
             return op.field_p;
         }
         return op.field_p;

@@ -7,14 +7,14 @@ final class sk {
     static og field_c;
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {
-        RuntimeException var5 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        RuntimeException decompiledCaughtException = null;
         var10 = StarCannon.field_A;
         try {
           L0: {

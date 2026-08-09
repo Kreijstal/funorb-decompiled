@@ -38,10 +38,9 @@ final class gs extends fp {
     }
 
     final long a(int param0) {
-        int discarded$10 = 0;
         this.field_l = this.field_l + this.c(1);
         if (param0 != 0) {
-            discarded$10 = this.a(-15, -125L);
+            this.a(-15, -125L);
             if (!((this.field_l ^ -1L) <= (this.field_n ^ -1L))) {
                 return (-this.field_l + this.field_n) / 1000000L;
             }
@@ -65,11 +64,11 @@ final class gs extends fp {
     }
 
     private final long c(int param0) {
-        long var2 = 0L;
-        long var4 = 0L;
-        long var6 = 0L;
-        int var8 = 0;
-        int var9 = 0;
+        long var2;
+        long var4;
+        long var6;
+        int var8;
+        int var9;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = System.nanoTime();
         var4 = -this.field_h + var2;
@@ -134,8 +133,8 @@ final class gs extends fp {
     }
 
     final int a(int param0, long param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 == 18907) {
           if (this.field_l >= this.field_n) {
@@ -202,8 +201,8 @@ final class gs extends fp {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
-        String var7 = null;
-        tm var8 = null;
+        String var7;
+        tm var8;
         L0: {
           if ((em.field_h ^ -1) != -3) {
             var7 = qk.field_z;

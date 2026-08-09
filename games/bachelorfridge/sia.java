@@ -43,11 +43,18 @@ final class sia extends kj {
 
     final static void a(pf param0, int param1) {
         try {
-            int discarded$1 = 0;
+            RuntimeException stackIn_68_0 = null;
+            StringBuilder stackIn_68_1 = null;
+            RuntimeException stackIn_69_0 = null;
+            StringBuilder stackIn_69_1 = null;
+            String stackIn_69_2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
             int var5 = 0;
+            int var6_int = 0;
             ClassNotFoundException var6 = null;
             InvalidClassException var6_ref = null;
             StreamCorruptedException var6_ref2 = null;
@@ -60,7 +67,6 @@ final class sia extends kj {
             NullPointerException var6_ref9 = null;
             Exception var6_ref10 = null;
             Throwable var6_ref11 = null;
-            int var6_int = 0;
             int var8 = 0;
             Object[] var9 = null;
             int var10_int = 0;
@@ -69,57 +75,40 @@ final class sia extends kj {
             int var12 = 0;
             fka var13 = null;
             java.lang.reflect.Field var15 = null;
-            fka var16 = null;
-            java.lang.reflect.Field var17 = null;
-            Object var18 = null;
-            Object var19 = null;
+            Object var16 = null;
+            Object var17 = null;
+            java.lang.reflect.Field var17_ref = null;
+            fka var18 = null;
+            java.lang.reflect.Field var19 = null;
             Object var20 = null;
             Object var22 = null;
             byte[][] var25 = null;
             java.lang.reflect.Field var26 = null;
-            java.lang.reflect.Field var27 = null;
+            java.lang.reflect.Method var27 = null;
             java.lang.reflect.Method var28 = null;
-            java.lang.reflect.Method var29 = null;
-            RuntimeException stackIn_67_0 = null;
-            StringBuilder stackIn_67_1 = null;
-            RuntimeException stackIn_68_0 = null;
-            StringBuilder stackIn_68_1 = null;
-            RuntimeException stackIn_69_0 = null;
-            StringBuilder stackIn_69_1 = null;
-            String stackIn_69_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_66_0 = null;
-            StringBuilder stackOut_66_1 = null;
-            RuntimeException stackOut_68_0 = null;
-            StringBuilder stackOut_68_1 = null;
-            String stackOut_68_2 = null;
-            RuntimeException stackOut_67_0 = null;
-            StringBuilder stackOut_67_1 = null;
-            String stackOut_67_2 = null;
-            var18 = null;
-            var19 = null;
+            var17 = null;
+            var16 = null;
             var20 = null;
             var22 = null;
             var12 = BachelorFridge.field_y;
             try {
               L0: {
                 var13 = (fka) ((Object) fd.field_z.b((byte) 90));
-                var16 = var13;
-                if (var16 != null) {
+                var18 = var13;
+                if (var18 != null) {
                   var3 = 0;
                   var4 = 0;
                   L1: while (true) {
-                    if (var4 >= var16.field_k) {
+                    if (var4 >= var18.field_k) {
                       if (var3 != 0) {
                         decompiledRegionSelector0 = 1;
                         break L0;
                       } else {
                         var4 = param0.field_g;
-                        param0.e(var16.field_n, -1615464796);
+                        param0.e(var18.field_n, -1615464796);
                         var5 = 0;
                         L2: while (true) {
-                          if (var5 >= var16.field_k) {
+                          if (var5 >= var18.field_k) {
                             L3: {
                               if (param1 > 66) {
                                 break L3;
@@ -128,30 +117,30 @@ final class sia extends kj {
                                 break L3;
                               }
                             }
-                            discarded$1 = param0.a(var4, 19);
-                            var16.a(false);
+                            param0.a(var4, 19);
+                            var18.a(false);
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
                             L4: {
-                              if (-1 != (var16.field_l[var5] ^ -1)) {
-                                param0.d(var16.field_l[var5], 0);
+                              if (-1 != (var18.field_l[var5] ^ -1)) {
+                                param0.d(var18.field_l[var5], 0);
                                 break L4;
                               } else {
                                 try {
                                   L5: {
                                     L6: {
-                                      var6_int = var16.field_g[var5];
+                                      var6_int = var18.field_g[var5];
                                       if (var6_int == 0) {
-                                        var27 = (java.lang.reflect.Field) (var16.field_i[var5].field_e);
-                                        var8 = var27.getInt((Object) null);
+                                        var15 = (java.lang.reflect.Field) (var18.field_i[var5].field_e);
+                                        var8 = var15.getInt((Object) null);
                                         param0.d(0, 0);
                                         param0.e(var8, -1615464796);
                                         break L6;
                                       } else {
                                         if (1 != var6_int) {
                                           if ((var6_int ^ -1) == -3) {
-                                            var26 = (java.lang.reflect.Field) (var16.field_i[var5].field_e);
+                                            var26 = (java.lang.reflect.Field) (var18.field_i[var5].field_e);
                                             var8 = var26.getModifiers();
                                             param0.d(0, 0);
                                             param0.e(var8, -1615464796);
@@ -160,9 +149,9 @@ final class sia extends kj {
                                             break L6;
                                           }
                                         } else {
-                                          var15 = (java.lang.reflect.Field) (var16.field_i[var5].field_e);
-                                          var17 = var15;
-                                          var17.setInt((Object) null, var16.field_m[var5]);
+                                          var17_ref = (java.lang.reflect.Field) (var18.field_i[var5].field_e);
+                                          var19 = var17_ref;
+                                          var19.setInt((Object) null, var18.field_m[var5]);
                                           param0.d(0, 0);
                                           break L6;
                                         }
@@ -170,13 +159,13 @@ final class sia extends kj {
                                     }
                                     L7: {
                                       if (var6_int == 3) {
-                                        var29 = (java.lang.reflect.Method) (var16.field_j[var5].field_e);
-                                        var25 = var16.field_f[var5];
+                                        var28 = (java.lang.reflect.Method) (var18.field_j[var5].field_e);
+                                        var25 = var18.field_f[var5];
                                         var9 = new Object[var25.length];
                                         var10_int = 0;
                                         L8: while (true) {
                                           if (var10_int >= var25.length) {
-                                            var10 = var29.invoke((Object) null, var9);
+                                            var10 = var28.invoke((Object) null, var9);
                                             if (var10 == null) {
                                               param0.d(0, 0);
                                               break L7;
@@ -205,8 +194,8 @@ final class sia extends kj {
                                         }
                                       } else {
                                         if (4 == var6_int) {
-                                          var28 = (java.lang.reflect.Method) (var16.field_j[var5].field_e);
-                                          var8 = var28.getModifiers();
+                                          var27 = (java.lang.reflect.Method) (var18.field_j[var5].field_e);
+                                          var8 = var27.getModifiers();
                                           param0.d(0, 0);
                                           param0.e(var8, -1615464796);
                                           break L7;
@@ -365,27 +354,19 @@ final class sia extends kj {
               decompiledCaughtException = decompiledCaughtParameter12;
               L25: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_66_0 = (RuntimeException) (var2);
-                stackOut_66_1 = new StringBuilder().append("sia.A(");
-                stackIn_68_0 = stackOut_66_0;
-                stackIn_68_1 = stackOut_66_1;
-                stackIn_67_0 = stackOut_66_0;
-                stackIn_67_1 = stackOut_66_1;
+                stackIn_68_0 = (RuntimeException) (var2);
+
+                stackIn_68_1 = new StringBuilder().append("sia.A(");
+
                 if (param0 == null) {
-                  stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
-                  stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
-                  stackOut_68_2 = "null";
-                  stackIn_69_0 = stackOut_68_0;
-                  stackIn_69_1 = stackOut_68_1;
-                  stackIn_69_2 = stackOut_68_2;
+                  stackIn_69_0 = (RuntimeException) ((Object) stackIn_68_0);
+                  stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
+                  stackIn_69_2 = "null";
                   break L25;
                 } else {
-                  stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
-                  stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
-                  stackOut_67_2 = "{...}";
-                  stackIn_69_0 = stackOut_67_0;
-                  stackIn_69_1 = stackOut_67_1;
-                  stackIn_69_2 = stackOut_67_2;
+                  stackIn_69_0 = (RuntimeException) ((Object) stackIn_68_0);
+                  stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
+                  stackIn_69_2 = "{...}";
                   break L25;
                 }
               }
@@ -408,7 +389,6 @@ final class sia extends kj {
     }
 
     final void a(int param0, boolean param1, int param2) {
-        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -417,43 +397,23 @@ final class sia extends kj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        L0: {
-          var13 = BachelorFridge.field_y;
-          param2 -= 4;
-          var4 = 128;
-          param0 -= 120;
-          if ((this.field_f ^ -1) >= -81) {
-            break L0;
-          } else {
+        int var13 = BachelorFridge.field_y;
+        param2 -= 4;
+        int var4 = 128;
+        param0 -= 120;
+        if ((this.field_f ^ -1) < -81) {
             param0 = param0 + (-80 + this.field_f);
             var4 = (100 - this.field_f) * var4 / 20;
-            break L0;
-          }
         }
-        L1: {
-          if (40 <= this.field_f) {
-            break L1;
-          } else {
+        if (40 > this.field_f) {
             param0 = param0 - (-this.field_f + 40 >> 855516289);
             var4 = this.field_f * var4 / 40;
-            break L1;
-          }
         }
-        L2: {
-          this.field_k.field_f.a(-10 + param0, 2048, param2 - 10, 2048, var4, (byte) 119);
-          if (param1) {
-            break L2;
-          } else {
+        this.field_k.field_f.a(-10 + param0, 2048, param2 - 10, 2048, var4, (byte) 119);
+        if (!param1) {
             this.field_k = (ad) null;
-            break L2;
-          }
         }
-        var5 = 0;
-        L3: while (true) {
-          if (3 <= var5) {
-            return;
-          } else {
+        for (var5 = 0; 3 > var5; var5++) {
             var6 = 50 * vr.field_b - -(65536 * var5 / 3);
             var7 = via.a(var6, (byte) 106);
             var8 = ft.a(var6, (byte) -128);
@@ -464,9 +424,6 @@ final class sia extends kj {
             var8 = (var12 * var8 >> 630273520) + param0 + 60;
             var7 = param2 - -70 - -(var7 * var12 >> -1426565520);
             var9.c(var7 - (var10 >> 208139649), var8 - (var11 >> 1985393793), var10, var11, var4);
-            var5++;
-            continue L3;
-          }
         }
     }
 

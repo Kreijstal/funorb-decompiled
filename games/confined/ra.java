@@ -17,7 +17,6 @@ abstract class ra implements dm {
     }
 
     public final fi a(int param0) {
-        String discarded$0 = null;
         if (!(!this.a(true))) {
             return gi.field_bb;
         }
@@ -25,7 +24,7 @@ abstract class ra implements dm {
             return ab.field_b;
         }
         if (param0 != -3621) {
-            discarded$0 = this.b((byte) 22);
+            this.b((byte) 22);
         }
         return this.c(true);
     }
@@ -45,30 +44,19 @@ abstract class ra implements dm {
 
     final static long a(CharSequence param0, int param1) {
         long var2_long = 0L;
-        RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         CharSequence var8 = null;
         long stackIn_22_0 = 0L;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        long stackOut_21_0 = 0L;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        RuntimeException var2 = null;
         var7 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -80,6 +68,7 @@ abstract class ra implements dm {
                 break L1;
               } else {
                 var8 = (CharSequence) null;
+                ra.a((CharSequence) null, 84);
                 break L1;
               }
             }
@@ -147,8 +136,7 @@ abstract class ra implements dm {
                     }
                   }
                 }
-                stackOut_21_0 = var2_long;
-                stackIn_22_0 = stackOut_21_0;
+                stackIn_22_0 = var2_long;
                 break L0;
               }
             }
@@ -157,27 +145,19 @@ abstract class ra implements dm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var2);
-            stackOut_23_1 = new StringBuilder().append("ra.K(");
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var2);
+
+            stackIn_25_1 = new StringBuilder().append("ra.K(");
+
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L9;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L9;
             }
           }

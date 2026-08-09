@@ -24,10 +24,10 @@ final class vfa {
     boolean field_b;
 
     private final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = VoidHunters.field_G;
         var2 = this.field_f;
         var3 = this.field_h;
@@ -438,7 +438,7 @@ final class vfa {
     }
 
     final ufb a(byte param0) {
-        ufb var2 = null;
+        ufb var2;
         this.field_s = rda.field_p;
         this.field_r = fua.field_p;
         if (param0 >= 112) {
@@ -520,9 +520,6 @@ final class vfa {
     final boolean b(int param0, int param1, int param2) {
         int stackIn_13_0 = 0;
         int stackIn_27_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
         if (param2 == 0) {
           if (this.field_g <= param1) {
             if (param1 <= this.field_o) {
@@ -535,8 +532,7 @@ final class vfa {
                       return false;
                     }
                   } else {
-                    stackOut_25_0 = 1;
-                    stackIn_27_0 = stackOut_25_0;
+                    stackIn_27_0 = 1;
                     return stackIn_27_0 != 0;
                   }
                 } else {
@@ -562,12 +558,10 @@ final class vfa {
                   } else {
                     L0: {
                       if (Math.round(this.field_j * (float)param0) != param1) {
-                        stackOut_12_0 = 0;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = 0;
                         break L0;
                       } else {
-                        stackOut_11_0 = 1;
-                        stackIn_13_0 = stackOut_11_0;
+                        stackIn_13_0 = 1;
                         break L0;
                       }
                     }
@@ -589,15 +583,15 @@ final class vfa {
     }
 
     final void d(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         if (null == psb.field_b) {
           if (0 >= hcb.field_o) {
             this.field_b = false;
             if (this.field_b) {
-              fieldTemp$2 = this.field_k - 1;
+              fieldTemp$0 = this.field_k - 1;
               this.field_k = this.field_k - 1;
-              if (0 < fieldTemp$2) {
+              if (0 < fieldTemp$0) {
                 return;
               } else {
                 this.field_k = this.field_m;
@@ -668,9 +662,9 @@ final class vfa {
             }
           } else {
             if (this.field_b) {
-              fieldTemp$3 = this.field_k - 1;
+              fieldTemp$1 = this.field_k - 1;
               this.field_k = this.field_k - 1;
-              if (0 < fieldTemp$3) {
+              if (0 < fieldTemp$1) {
                 return;
               } else {
                 this.field_k = this.field_m;

@@ -10,11 +10,9 @@ final class si {
     static boolean field_a;
 
     final static void a(int param0) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
         if (null == ci.field_i) {
           if (param0 >= -23) {
-            discarded$4 = si.a((byte) -22);
+            si.a((byte) -22);
             return;
           } else {
             return;
@@ -25,7 +23,7 @@ final class si {
           if (param0 < -23) {
             return;
           } else {
-            discarded$5 = si.a((byte) -22);
+            si.a((byte) -22);
             return;
           }
         }

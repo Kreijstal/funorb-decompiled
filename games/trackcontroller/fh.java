@@ -18,7 +18,6 @@ abstract class fh {
             int var9 = 0;
             kk stackIn_14_0 = null;
             Throwable decompiledCaughtException = null;
-            kk stackOut_13_0 = null;
             try {
               L0: {
                 L1: {
@@ -68,8 +67,7 @@ abstract class fh {
                     break L5;
                   }
                 }
-                stackOut_13_0 = new kk(var8, param0, param4);
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_0 = new kk(var8, param0, param4);
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {

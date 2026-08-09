@@ -10,15 +10,13 @@ final class kb {
     static String field_c;
 
     final static void a(boolean param0, int param1, int param2) {
-        li discarded$4 = null;
-        li discarded$5 = null;
         if (!param0) {
           if (uh.field_b[param2] != null) {
             if (!uh.field_b[param2].b(10000536)) {
               return;
             } else {
               fe.a(uh.field_b[param2], 2);
-              discarded$4 = da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
+              da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
               return;
             }
           } else {
@@ -31,7 +29,7 @@ final class kb {
               return;
             } else {
               fe.a(uh.field_b[param2], 2);
-              discarded$5 = da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
+              da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
               return;
             }
           } else {

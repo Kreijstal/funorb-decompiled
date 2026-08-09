@@ -50,65 +50,13 @@ abstract class qg extends ke {
     }
 
     final void a(String param0, int param1, int param2) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
-            L1: {
-              this.a(103, param0, param1, 640, 480);
-              if (param2 == 1686) {
-                break L1;
-              } else {
+            this.a(103, param0, param1, 640, 480);
+            if (param2 != 1686) {
                 field_D = (jp[]) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("qg.EA(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
-            }
-          }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) ((Object) runtimeException), "qg.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -137,8 +85,17 @@ abstract class qg extends ke {
     }
 
     final static jp a(jp param0, int param1) {
-        RuntimeException var2 = null;
+        jp stackIn_39_0 = null;
+        jp stackIn_47_0 = null;
+        RuntimeException stackIn_50_0 = null;
+        StringBuilder stackIn_50_1 = null;
+        RuntimeException stackIn_51_0 = null;
+        StringBuilder stackIn_51_1 = null;
+        String stackIn_51_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int[] var4 = null;
         int var5 = 0;
@@ -151,27 +108,6 @@ abstract class qg extends ke {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        jp stackIn_39_0 = null;
-        jp stackIn_47_0 = null;
-        RuntimeException stackIn_49_0 = null;
-        StringBuilder stackIn_49_1 = null;
-        RuntimeException stackIn_50_0 = null;
-        StringBuilder stackIn_50_1 = null;
-        RuntimeException stackIn_51_0 = null;
-        StringBuilder stackIn_51_1 = null;
-        String stackIn_51_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        jp stackOut_38_0 = null;
-        jp stackOut_46_0 = null;
-        RuntimeException stackOut_48_0 = null;
-        StringBuilder stackOut_48_1 = null;
-        RuntimeException stackOut_50_0 = null;
-        StringBuilder stackOut_50_1 = null;
-        String stackOut_50_2 = null;
-        RuntimeException stackOut_49_0 = null;
-        StringBuilder stackOut_49_1 = null;
-        String stackOut_49_2 = null;
         var14 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -289,8 +225,7 @@ abstract class qg extends ke {
                             if (var2_int + -1 != var5) {
                               break L14;
                             } else {
-                              stackOut_38_0 = (jp) (param0);
-                              stackIn_39_0 = stackOut_38_0;
+                              stackIn_39_0 = (jp) (param0);
                               decompiledRegionSelector0 = 0;
                               break L0;
                             }
@@ -309,8 +244,7 @@ abstract class qg extends ke {
                         param0.field_C = var10;
                         param0.field_G = var11;
                         param0.field_F = param0.field_F + var6;
-                        stackOut_46_0 = (jp) (param0);
-                        stackIn_47_0 = stackOut_46_0;
+                        stackIn_47_0 = (jp) (param0);
                         decompiledRegionSelector0 = 1;
                         break L0;
                       } else {
@@ -336,27 +270,19 @@ abstract class qg extends ke {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_48_0 = (RuntimeException) (var2);
-            stackOut_48_1 = new StringBuilder().append("qg.KA(");
-            stackIn_50_0 = stackOut_48_0;
-            stackIn_50_1 = stackOut_48_1;
-            stackIn_49_0 = stackOut_48_0;
-            stackIn_49_1 = stackOut_48_1;
+            stackIn_50_0 = (RuntimeException) (var2);
+
+            stackIn_50_1 = new StringBuilder().append("qg.KA(");
+
             if (param0 == null) {
-              stackOut_50_0 = (RuntimeException) ((Object) stackIn_50_0);
-              stackOut_50_1 = (StringBuilder) ((Object) stackIn_50_1);
-              stackOut_50_2 = "null";
-              stackIn_51_0 = stackOut_50_0;
-              stackIn_51_1 = stackOut_50_1;
-              stackIn_51_2 = stackOut_50_2;
+              stackIn_51_0 = (RuntimeException) ((Object) stackIn_50_0);
+              stackIn_51_1 = (StringBuilder) ((Object) stackIn_50_1);
+              stackIn_51_2 = "null";
               break L17;
             } else {
-              stackOut_49_0 = (RuntimeException) ((Object) stackIn_49_0);
-              stackOut_49_1 = (StringBuilder) ((Object) stackIn_49_1);
-              stackOut_49_2 = "{...}";
-              stackIn_51_0 = stackOut_49_0;
-              stackIn_51_1 = stackOut_49_1;
-              stackIn_51_2 = stackOut_49_2;
+              stackIn_51_0 = (RuntimeException) ((Object) stackIn_50_0);
+              stackIn_51_1 = (StringBuilder) ((Object) stackIn_50_1);
+              stackIn_51_2 = "{...}";
               break L17;
             }
           }
@@ -370,60 +296,35 @@ abstract class qg extends ke {
     }
 
     private final int n(int param0) {
-        int var2 = 0;
-        if (this.field_d) {
-          return -1;
-        } else {
-          if (ui.a(false)) {
-            if (n.field_e) {
-              return -1;
-            } else {
-              var2 = wp.a(ud.d(true), true, true, this.field_s, this.field_C, ee.b(false));
-              if (var2 == param0) {
-                return -1;
-              } else {
-                L0: {
-                  if (var2 == 0) {
-                    break L0;
-                  } else {
-                    if (-2 != (var2 ^ -1)) {
-                      L1: {
-                        if (!hk.field_R) {
-                          this.a("reconnect", 4000);
-                          break L1;
-                        } else {
-                          break L1;
-                        }
-                      }
-                      qb.g(108);
-                      tf.a(eo.field_e, (byte) -61, var2);
-                      n.field_e = true;
-                      cg.field_i = ue.a(false) + 15000L;
-                      return var2;
-                    } else {
-                      break L0;
-                    }
-                  }
-                }
-                L2: {
-                  if (-12 != (i.field_j ^ -1)) {
-                    break L2;
-                  } else {
-                    if (tm.field_a == 0) {
-                      ei.b(param0 ^ -1);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                return var2;
-              }
-            }
-          } else {
+        if (!(!this.field_d)) {
             return -1;
-          }
         }
+        if (!ui.a(false)) {
+            return -1;
+        }
+        if (!(!n.field_e)) {
+            return -1;
+        }
+        int var2 = wp.a(ud.d(true), true, true, this.field_s, this.field_C, ee.b(false));
+        if (!(var2 != param0)) {
+            return -1;
+        }
+        if (var2 == 0 || -2 == (var2 ^ -1)) {
+            if (-12 == (i.field_j ^ -1)) {
+                if (!(tm.field_a != 0)) {
+                    ei.b(param0 ^ -1);
+                }
+            }
+            return var2;
+        }
+        if (!(hk.field_R)) {
+            this.a("reconnect", 4000);
+        }
+        qb.g(108);
+        tf.a(eo.field_e, (byte) -61, var2);
+        n.field_e = true;
+        cg.field_i = ue.a(false) + 15000L;
+        return var2;
     }
 
     final void l(int param0) {
@@ -434,84 +335,37 @@ abstract class qg extends ke {
     }
 
     final int o(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        L0: {
-          L1: {
-            var2 = this.n(-1);
-            if (var2 == 0) {
-              break L1;
-            } else {
-              if (var2 != 1) {
-                break L0;
-              } else {
-                break L1;
-              }
+        int var2 = this.n(-1);
+        if (var2 == 0 || var2 == 1) {
+            if (uf.field_d[1]) {
+                ie.a(2, (byte) -46);
             }
-          }
-          L2: {
-            if (!uf.field_d[1]) {
-              break L2;
-            } else {
-              ie.a(2, (byte) -46);
-              break L2;
+            if (uf.field_d[2]) {
+                ff.a((byte) -61, 3);
             }
-          }
-          L3: {
-            if (!uf.field_d[2]) {
-              break L3;
-            } else {
-              ff.a((byte) -61, 3);
-              break L3;
+            if (uf.field_d[3]) {
+                nq.a(4, 13330);
             }
-          }
-          L4: {
-            if (!uf.field_d[3]) {
-              break L4;
-            } else {
-              nq.a(4, 13330);
-              break L4;
+            if (uf.field_d[4]) {
+                ui.a(5, (byte) 115);
             }
-          }
-          L5: {
-            if (!uf.field_d[4]) {
-              break L5;
-            } else {
-              ui.a(5, (byte) 115);
-              break L5;
+            if (uf.field_d[5]) {
+                hj.b(6, 0);
             }
-          }
-          L6: {
-            if (!uf.field_d[5]) {
-              break L6;
-            } else {
-              hj.b(6, 0);
-              break L6;
+            if (!(!uf.field_d[6])) {
+                qn.a((byte) 119, 7);
             }
-          }
-          L7: {
-            if (uf.field_d[6]) {
-              qn.a((byte) 119, 7);
-              break L7;
-            } else {
-              break L7;
+            if (uf.field_d[8]) {
+                we.a((byte) -46);
             }
-          }
-          if (!uf.field_d[8]) {
-            break L0;
-          } else {
-            we.a((byte) -46);
-            break L0;
-          }
         }
-        var3 = -122 % ((-43 - param0) / 60);
+        int var3 = -122 % ((-43 - param0) / 60);
         return var2;
     }
 
     final int b(boolean param0, byte param1) {
-        int discarded$0 = 0;
         if (param1 != -118) {
-            discarded$0 = this.o(30);
+            this.o(30);
         }
         return this.a(param0, (byte) 46, true);
     }
@@ -546,15 +400,15 @@ abstract class qg extends ke {
 
     private final int a(boolean param0, byte param1, boolean param2) {
         try {
+            Throwable decompiledCaughtException = null;
             int var4 = 0;
-            Exception var5 = null;
             int var5_int = 0;
+            Exception var5 = null;
             String var7 = null;
             int var8 = 0;
             String var9 = null;
             Boolean var11 = null;
             wq var12 = null;
-            Throwable decompiledCaughtException = null;
             var8 = BrickABrac.field_J ? 1 : 0;
             var4 = df.a(-27790, qc.field_o, cd.field_e, param0);
             if (var4 == 0) {
@@ -804,18 +658,12 @@ abstract class qg extends ke {
     }
 
     final void g(boolean param0) {
-        int discarded$32 = 0;
-        int discarded$33 = 0;
-        int var3 = 0;
-        Object stackIn_11_0 = null;
+        int discarded$1 = 0;
+        int discarded$2 = 0;
+        int var3;
         Object stackIn_12_0 = null;
         Object stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        Object stackOut_10_0 = null;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
         L0: {
           var3 = BrickABrac.field_J ? 1 : 0;
           if (!param0) {
@@ -828,30 +676,25 @@ abstract class qg extends ke {
         L1: {
           if (kb.i(7457)) {
             L2: {
-              stackOut_10_0 = this;
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_12_0 = this;
+
               if (ua.field_d == null) {
-                stackOut_12_0 = this;
-                stackOut_12_1 = 0;
-                stackIn_13_0 = stackOut_12_0;
-                stackIn_13_1 = stackOut_12_1;
+                stackIn_13_0 = this;
+                stackIn_13_1 = 0;
                 break L2;
               } else {
-                stackOut_11_0 = this;
-                stackOut_11_1 = 1;
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_13_1 = stackOut_11_1;
+                stackIn_13_0 = this;
+                stackIn_13_1 = 1;
                 break L2;
               }
             }
-            discarded$32 = this.a(stackIn_13_1 != 0, (byte) 46, false);
+            discarded$1 = this.a(stackIn_13_1 != 0, (byte) 46, false);
             break L1;
           } else {
             if ((field_A ^ -1) <= -11) {
               if (il.e((byte) -126)) {
                 if (i.field_j == 0) {
-                  discarded$33 = this.a(false, (byte) 46, false);
+                  discarded$2 = this.a(false, (byte) 46, false);
                   break L1;
                 } else {
                   gk.a(qc.field_o, (byte) 124);
@@ -878,27 +721,15 @@ abstract class qg extends ke {
     }
 
     final void h(boolean param0) {
-        int var2 = 0;
-        gb var3 = null;
-        int var4 = 0;
-        Object stackIn_20_0 = null;
         Object stackIn_21_0 = null;
         Object stackIn_22_0 = null;
         int stackIn_22_1 = 0;
-        int stackIn_30_0 = 0;
         int stackIn_31_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_32_1 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_31_1 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_30_1 = 0;
-        Object stackOut_19_0 = null;
-        Object stackOut_21_0 = null;
-        int stackOut_21_1 = 0;
-        Object stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
+        int var2;
+        gb var3;
+        int var4;
         L0: {
           var4 = BrickABrac.field_J ? 1 : 0;
           var2 = si.field_a;
@@ -956,20 +787,15 @@ abstract class qg extends ke {
                                         }
                                       }
                                       L3: {
-                                        stackOut_29_0 = 67;
-                                        stackIn_31_0 = stackOut_29_0;
-                                        stackIn_30_0 = stackOut_29_0;
+                                        stackIn_31_0 = 67;
+
                                         if (var2 != 12) {
-                                          stackOut_31_0 = stackIn_31_0;
-                                          stackOut_31_1 = 0;
-                                          stackIn_32_0 = stackOut_31_0;
-                                          stackIn_32_1 = stackOut_31_1;
+                                          stackIn_32_0 = stackIn_31_0;
+                                          stackIn_32_1 = 0;
                                           break L3;
                                         } else {
-                                          stackOut_30_0 = stackIn_30_0;
-                                          stackOut_30_1 = 1;
-                                          stackIn_32_0 = stackOut_30_0;
-                                          stackIn_32_1 = stackOut_30_1;
+                                          stackIn_32_0 = stackIn_31_0;
+                                          stackIn_32_1 = 1;
                                           break L3;
                                         }
                                       }
@@ -983,20 +809,15 @@ abstract class qg extends ke {
                                   }
                                 } else {
                                   L4: {
-                                    stackOut_19_0 = this;
-                                    stackIn_21_0 = stackOut_19_0;
-                                    stackIn_20_0 = stackOut_19_0;
+                                    stackIn_21_0 = this;
+
                                     if (param0) {
-                                      stackOut_21_0 = this;
-                                      stackOut_21_1 = 0;
-                                      stackIn_22_0 = stackOut_21_0;
-                                      stackIn_22_1 = stackOut_21_1;
+                                      stackIn_22_0 = this;
+                                      stackIn_22_1 = 0;
                                       break L4;
                                     } else {
-                                      stackOut_20_0 = this;
-                                      stackOut_20_1 = 1;
-                                      stackIn_22_0 = stackOut_20_0;
-                                      stackIn_22_1 = stackOut_20_1;
+                                      stackIn_22_0 = this;
+                                      stackIn_22_1 = 1;
                                       break L4;
                                     }
                                   }
@@ -1039,21 +860,10 @@ abstract class qg extends ke {
     }
 
     private final void a(int param0, String param1, int param2, int param3, int param4) {
-        Exception var6 = null;
-        RuntimeException var6_ref = null;
-        String var6_ref2 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -1062,21 +872,13 @@ abstract class qg extends ke {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        String var6 = null;
+        Exception var6_ref = null;
+        RuntimeException var6_ref2 = null;
+        String var7 = null;
+        String var8 = null;
+        String var9 = null;
+        String var10 = null;
         try {
           L0: {
             try {
@@ -1085,33 +887,26 @@ abstract class qg extends ke {
                   L2: {
                     L3: {
                       this.field_x = this.getCodeBase().getHost();
-                      var6_ref2 = this.field_x.toLowerCase();
-                      stackOut_2_0 = this;
-                      stackIn_5_0 = stackOut_2_0;
-                      stackIn_3_0 = stackOut_2_0;
-                      if (var6_ref2.equals("jagex.com")) {
+                      var6 = this.field_x.toLowerCase();
+                      stackIn_5_0 = this;
+
+                      if (var6.equals("jagex.com")) {
                         break L3;
                       } else {
-                        stackOut_3_0 = this;
-                        stackIn_6_0 = stackOut_3_0;
-                        stackIn_4_0 = stackOut_3_0;
-                        if (!var6_ref2.endsWith(".jagex.com")) {
-                          stackOut_6_0 = this;
-                          stackOut_6_1 = 0;
-                          stackIn_7_0 = stackOut_6_0;
-                          stackIn_7_1 = stackOut_6_1;
+                        stackIn_6_0 = this;
+
+                        if (!var6.endsWith(".jagex.com")) {
+                          stackIn_7_0 = this;
+                          stackIn_7_1 = 0;
                           break L2;
                         } else {
-                          stackOut_4_0 = this;
-                          stackIn_5_0 = stackOut_4_0;
+                          stackIn_5_0 = this;
                           break L3;
                         }
                       }
                     }
-                    stackOut_5_0 = this;
-                    stackOut_5_1 = 1;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_7_1 = stackOut_5_1;
+                    stackIn_7_0 = this;
+                    stackIn_7_1 = 1;
                     break L2;
                   }
                   L4: {
@@ -1175,9 +970,9 @@ abstract class qg extends ke {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L9: {
-                var6 = (Exception) (Object) decompiledCaughtException;
+                var6_ref = (Exception) (Object) decompiledCaughtException;
                 var10 = (String) null;
-                rk.a((String) null, (Throwable) ((Object) var6), 58);
+                rk.a((String) null, (Throwable) ((Object) var6_ref), 58);
                 this.a("crash", 4000);
                 decompiledRegionSelector0 = 1;
                 break L9;
@@ -1194,28 +989,20 @@ abstract class qg extends ke {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           L10: {
-            var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var6_ref);
-            stackOut_22_1 = new StringBuilder().append("qg.LA(").append(param0).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_24_0 = (RuntimeException) (var6_ref2);
+
+            stackIn_24_1 = new StringBuilder().append("qg.LA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L10;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L10;
             }
           }
@@ -1244,23 +1031,12 @@ abstract class qg extends ke {
         jp var3 = null;
         int var4 = 0;
         jp[] stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        jp[] stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -1275,8 +1051,7 @@ abstract class qg extends ke {
             var2_int = 0;
             L2: while (true) {
               if (param0.length <= var2_int) {
-                stackOut_6_0 = (jp[]) (param0);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (jp[]) (param0);
                 break L0;
               } else {
                 var3 = param0[var2_int];
@@ -1293,27 +1068,19 @@ abstract class qg extends ke {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2);
-            stackOut_8_1 = new StringBuilder().append("qg.EB(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2);
+
+            stackIn_10_1 = new StringBuilder().append("qg.EB(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -1326,28 +1093,14 @@ abstract class qg extends ke {
     }
 
     final void b(boolean param0, int param1) {
-        int var3 = 0;
-        java.awt.Dimension var4 = null;
-        int var5 = 0;
-        java.awt.Container var6 = null;
         int stackIn_23_0 = 0;
         int stackIn_99_0 = 0;
-        int stackIn_100_0 = 0;
-        int stackIn_101_0 = 0;
-        int stackIn_102_0 = 0;
         int stackIn_102_1 = 0;
         int stackIn_132_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_98_0 = 0;
-        int stackOut_97_0 = 0;
-        int stackOut_99_0 = 0;
-        int stackOut_101_0 = 0;
-        int stackOut_101_1 = 0;
-        int stackOut_100_0 = 0;
-        int stackOut_100_1 = 0;
-        int stackOut_131_0 = 0;
-        int stackOut_130_0 = 0;
+        int var3;
+        java.awt.Dimension var4;
+        int var5;
+        java.awt.Container var6;
         L0: {
           var5 = BrickABrac.field_J ? 1 : 0;
           if (jj.field_a == null) {
@@ -1433,12 +1186,10 @@ abstract class qg extends ke {
           }
           L8: {
             if (0 != (tm.field_a ^ -1)) {
-              stackOut_22_0 = 0;
-              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_0 = 0;
               break L8;
             } else {
-              stackOut_21_0 = 1;
-              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_0 = 1;
               break L8;
             }
           }
@@ -1684,34 +1435,27 @@ abstract class qg extends ke {
                   }
                   L24: {
                     if (cb.field_k) {
-                      stackOut_98_0 = 0;
-                      stackIn_99_0 = stackOut_98_0;
+                      stackIn_99_0 = 0;
                       break L24;
                     } else {
-                      stackOut_97_0 = 1;
-                      stackIn_99_0 = stackOut_97_0;
+                      stackIn_99_0 = 1;
                       break L24;
                     }
                   }
                   L25: {
-                    stackOut_99_0 = stackIn_99_0;
-                    stackIn_101_0 = stackOut_99_0;
-                    stackIn_100_0 = stackOut_99_0;
+
+
                     if (cb.field_k) {
-                      stackOut_101_0 = stackIn_101_0;
-                      stackOut_101_1 = 0;
-                      stackIn_102_0 = stackOut_101_0;
-                      stackIn_102_1 = stackOut_101_1;
+
+                      stackIn_102_1 = 0;
                       break L25;
                     } else {
-                      stackOut_100_0 = stackIn_100_0;
-                      stackOut_100_1 = 1;
-                      stackIn_102_0 = stackOut_100_0;
-                      stackIn_102_1 = stackOut_100_1;
+
+                      stackIn_102_1 = 1;
                       break L25;
                     }
                   }
-                  bf.a(stackIn_102_0 != 0, stackIn_102_1 != 0, param1 ^ -15948, dq.field_a);
+                  bf.a(stackIn_99_0 != 0, stackIn_102_1 != 0, param1 ^ -15948, dq.field_a);
                   break L22;
                 }
                 L26: {
@@ -1810,12 +1554,10 @@ abstract class qg extends ke {
               } else {
                 L36: {
                   if (!bh.field_tb.d(-115)) {
-                    stackOut_131_0 = 0;
-                    stackIn_132_0 = stackOut_131_0;
+                    stackIn_132_0 = 0;
                     break L36;
                   } else {
-                    stackOut_130_0 = 1;
-                    stackIn_132_0 = stackOut_130_0;
+                    stackIn_132_0 = 1;
                     break L36;
                   }
                 }

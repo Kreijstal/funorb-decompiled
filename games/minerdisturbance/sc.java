@@ -8,10 +8,9 @@ final class sc {
     static boolean field_b;
 
     public static void a(int param0) {
-        byte[] discarded$0 = null;
         if (param0 != 5565) {
             Object var2 = (Object) null;
-            discarded$0 = sc.a(true, true, (Object) null);
+            sc.a(true, true, (Object) null);
         }
         field_a = null;
     }
@@ -24,8 +23,6 @@ final class sc {
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_15_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -33,18 +30,6 @@ final class sc {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_10_0 = null;
-        byte[] stackOut_8_0 = null;
-        byte[] stackOut_14_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
         try {
           L0: {
             if (param2 != null) {
@@ -59,21 +44,18 @@ final class sc {
               if (param2 instanceof byte[]) {
                 var3 = (byte[]) (param2);
                 if (!param0) {
-                  stackOut_10_0 = (byte[]) (var3);
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = (byte[]) (var3);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  stackOut_8_0 = kh.a(var3, (byte) -16);
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = kh.a(var3, (byte) -16);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
               } else {
                 if (param2 instanceof ni) {
                   var4 = (ni) (param2);
-                  stackOut_14_0 = var4.a(3006);
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = var4.a(3006);
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
@@ -81,8 +63,7 @@ final class sc {
                 }
               }
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -91,27 +72,19 @@ final class sc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var3_ref);
-            stackOut_17_1 = new StringBuilder().append("sc.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var3_ref);
+
+            stackIn_19_1 = new StringBuilder().append("sc.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L2;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L2;
             }
           }
@@ -133,14 +106,14 @@ final class sc {
     }
 
     final static ea[] a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7, int param8) {
-        int var9 = 0;
-        ea[] var10 = null;
-        ea[] var11_ref_ea__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        ea var13 = null;
-        int var14 = 0;
-        int var15 = 0;
+        int var9;
+        ea[] var10;
+        ea[] var11_ref_ea__;
+        int var11;
+        int var12;
+        ea var13;
+        int var14;
+        int var15;
         var15 = MinerDisturbance.field_ab;
         var9 = param2 + param8 + param5;
         var10 = new ea[]{new ea(var9, var9), new ea(param0, var9), new ea(var9, var9), new ea(var9, param0), new ea(64, 64), new ea(var9, param0), new ea(var9, var9), new ea(param0, var9), new ea(var9, var9)};

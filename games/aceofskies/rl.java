@@ -20,9 +20,9 @@ final class rl {
     static st field_o;
 
     final static rl a(int param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = AceOfSkies.field_G ? 1 : 0;
         var2 = 49 / ((-9 - param1) / 45);
         var3 = param0;
@@ -124,7 +124,6 @@ final class rl {
     }
 
     final static boolean a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        rl discarded$6 = null;
         if (param0 == -21) {
           if (param1 >= param5) {
             if (param1 < param5 + param3) {
@@ -144,7 +143,7 @@ final class rl {
             return false;
           }
         } else {
-          discarded$6 = rl.a(122, (byte) -53);
+          rl.a(122, (byte) -53);
           if (param1 >= param5) {
             if (param1 < param5 + param3) {
               if (param6 <= param2) {
@@ -166,11 +165,10 @@ final class rl {
     }
 
     final static void a(byte param0) {
-        rl discarded$2 = null;
         gg.b((byte) -98);
         nm.field_a = true;
         if (param0 != 0) {
-          discarded$2 = rl.a(-83, (byte) 35);
+          rl.a(-83, (byte) 35);
           nf.field_a = true;
           vn.field_f.e((byte) 89);
           ua.a(wo.field_e, false, (byte) 104);
@@ -185,22 +183,12 @@ final class rl {
 
     private rl(int param0, int param1, la param2) {
         RuntimeException var4 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             this.field_h = param2;
@@ -217,27 +205,19 @@ final class rl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (var4);
-            stackOut_3_1 = new StringBuilder().append("rl.<init>(").append(param0).append(',').append(param1).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (var4);
+
+            stackIn_5_1 = new StringBuilder().append("rl.<init>(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L1;
             }
           }

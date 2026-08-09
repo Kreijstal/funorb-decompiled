@@ -13,39 +13,29 @@ final class qj {
     static String field_e;
 
     final static void a(int param0, int param1, int param2, int param3, ed param4, int param5, int param6, int param7) {
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        RuntimeException var8 = null;
-        int var8_int = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        double var15_double = 0.0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
+        int var8_int = 0;
+        RuntimeException var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        double var15_double = 0.0;
+        int var16 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        int var19 = 0;
         var19 = EscapeVector.field_A;
         try {
           L0: {
@@ -96,7 +86,7 @@ final class qj {
                                 } else {
                                   L8: {
                                     var15 = var13 + var14 * (var14 - -1);
-                                    if (var15 < var10) {
+                                    if ((var15 ^ -1) > (var10 ^ -1)) {
                                       var16 = -(255 * var15 / var10) + 255;
                                       em.field_i[var14 + var12] = var16 * 65793;
                                       break L8;
@@ -109,16 +99,16 @@ final class qj {
                                 }
                               }
                             } else {
-                              incrementValue$3 = var12;
+                              incrementValue$0 = var12;
                               var12++;
-                              em.field_i[incrementValue$3] = var14 * 65793;
+                              em.field_i[incrementValue$0] = var14 * 65793;
                               var15++;
                               continue L6;
                             }
                           }
                         } else {
                           var15 = var13 + var14 * (1 + var14);
-                          if (var15 < var10) {
+                          if ((var15 ^ -1) > (var10 ^ -1)) {
                             var16 = -(var15 * 255 / var10) + 255;
                             em.field_i[var14 + var12] = var16 * 65793;
                             var14++;
@@ -162,12 +152,12 @@ final class qj {
                                   if (param4.field_s <= var17) {
                                     break L10;
                                   } else {
-                                    incrementValue$4 = var13;
+                                    incrementValue$1 = var13;
                                     var13++;
-                                    var18 = param4.field_B[incrementValue$4];
-                                    incrementValue$5 = var14;
+                                    var18 = param4.field_B[incrementValue$1];
+                                    incrementValue$2 = var14;
                                     var14++;
-                                    em.field_i[incrementValue$5] = var18 - ae.a(4144959, var18 >> -1276284702);
+                                    em.field_i[incrementValue$2] = var18 - ae.a(4144959, var18 >> -1276284702);
                                     var17++;
                                     continue L11;
                                   }
@@ -205,27 +195,19 @@ final class qj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
             var8 = decompiledCaughtException;
-            stackOut_42_0 = (RuntimeException) (var8);
-            stackOut_42_1 = new StringBuilder().append("qj.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_44_0 = stackOut_42_0;
-            stackIn_44_1 = stackOut_42_1;
-            stackIn_43_0 = stackOut_42_0;
-            stackIn_43_1 = stackOut_42_1;
+            stackIn_44_0 = (RuntimeException) (var8);
+
+            stackIn_44_1 = new StringBuilder().append("qj.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "null";
-              stackIn_45_0 = stackOut_44_0;
-              stackIn_45_1 = stackOut_44_1;
-              stackIn_45_2 = stackOut_44_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "null";
               break L13;
             } else {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "{...}";
-              stackIn_45_0 = stackOut_43_0;
-              stackIn_45_1 = stackOut_43_1;
-              stackIn_45_2 = stackOut_43_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "{...}";
               break L13;
             }
           }
@@ -234,9 +216,9 @@ final class qj {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        ed var3 = null;
+        int var1;
+        int var2;
+        ed var3;
         L0: {
           L1: {
             L2: {

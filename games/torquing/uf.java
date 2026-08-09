@@ -25,9 +25,17 @@ final class uf {
     int field_j;
 
     final boolean a(boolean param0, String param1) {
-        int fieldTemp$1 = 0;
-        RuntimeException var3 = null;
+        int fieldTemp$0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_18_0 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         String[] var5 = null;
         int var6 = 0;
@@ -44,27 +52,6 @@ final class uf {
         int var17 = 0;
         int[] var18 = null;
         int[] var19 = null;
-        int stackIn_8_0 = 0;
-        int stackIn_18_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
         var17 = Torquing.field_u;
         try {
           L0: {
@@ -91,12 +78,10 @@ final class uf {
             }
             L3: {
               if (this.field_k < var3_int + var4) {
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 0;
                 break L3;
               } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 1;
                 break L3;
               }
             }
@@ -122,9 +107,9 @@ final class uf {
                       }
                     }
                     L7: {
-                      fieldTemp$1 = this.field_f;
+                      fieldTemp$0 = this.field_f;
                       this.field_f = this.field_f + 1;
-                      this.field_i[fieldTemp$1] = new String[]{var11};
+                      this.field_i[fieldTemp$0] = new String[]{var11};
                       if (this.field_u.length != this.field_f) {
                         break L7;
                       } else {
@@ -155,35 +140,26 @@ final class uf {
                 break L4;
               }
             }
-            stackOut_17_0 = var8;
-            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_0 = var8;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var3);
-            stackOut_19_1 = new StringBuilder().append("uf.I(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var3);
+
+            stackIn_21_1 = new StringBuilder().append("uf.I(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L8;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L8;
             }
           }
@@ -193,28 +169,25 @@ final class uf {
     }
 
     final void c(int param0) {
-        boolean discarded$3 = false;
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        String[] var10 = null;
-        int var10_int = 0;
-        int var11 = 0;
-        String[] var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        String[] var16 = null;
-        t var17 = null;
-        t var18 = null;
-        t[] var19 = null;
-        t var20 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        String[] var10;
+        int var10_int;
+        int var11;
+        String[] var12;
+        int var13;
+        int var14;
+        int var15;
+        String[] var16;
+        t var17;
+        t var18;
+        t[] var19;
+        t var20;
         var15 = Torquing.field_u;
         if (this.field_h != null) {
           var2 = this.field_u[this.field_f];
@@ -272,7 +245,7 @@ final class uf {
                                         if (0 == var10[var11].length()) {
                                           var20.field_u = var20.field_u + var20.field_s * var3 / var4;
                                           var20.field_w = 0;
-                                          discarded$3 = this.a(var20, var10[var11], param0 ^ 250);
+                                          this.a(var20, var10[var11], param0 ^ 250);
                                           var11++;
                                           continue L5;
                                         } else {
@@ -288,7 +261,7 @@ final class uf {
                                       break L7;
                                     } else {
                                       if (var20.field_u == 0) {
-                                        discarded$4 = this.a(false, var10[var11]);
+                                        this.a(false, var10[var11]);
                                         var11++;
                                         continue L5;
                                       } else {
@@ -297,7 +270,7 @@ final class uf {
                                     }
                                   }
                                   var17 = var20;
-                                  discarded$5 = this.a(var17, var10[var11], 250);
+                                  this.a(var17, var10[var11], 250);
                                   var11++;
                                   continue L5;
                                 } else {
@@ -421,23 +394,12 @@ final class uf {
         int var10 = 0;
         int[] var11 = null;
         String[] stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[] stackOut_7_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var10 = Torquing.field_u;
         try {
           L0: {
@@ -452,8 +414,7 @@ final class uf {
                 var9 = 0;
                 L2: while (true) {
                   if (var9 >= var7) {
-                    stackOut_7_0 = (String[]) (var8);
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = (String[]) (var8);
                     break L0;
                   } else {
                     var8[var9] = var6[var9];
@@ -473,27 +434,19 @@ final class uf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var5_ref);
-            stackOut_9_1 = new StringBuilder().append("uf.F(").append(param0).append(',').append(param1).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var5_ref);
+
+            stackIn_11_1 = new StringBuilder().append("uf.F(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -503,7 +456,7 @@ final class uf {
     }
 
     final void a(byte param0, int param1) {
-        boolean discarded$0 = this.a(new t(param1, 0), "", 250);
+        this.a(new t(param1, 0), "", 250);
         int var3 = 65 / ((37 - param0) / 44);
     }
 
@@ -522,16 +475,16 @@ final class uf {
     }
 
     private final int a(int param0, int param1) {
-        int incrementValue$1 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int incrementValue$0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         L0: {
           var3 = this.field_m;
           if (this.field_e == null) {
@@ -569,9 +522,9 @@ final class uf {
                     var11 = var8;
                     L4: while (true) {
                       if (var11 < var9) {
-                        incrementValue$1 = var10;
+                        incrementValue$0 = var10;
                         var10++;
-                        if (this.field_e.field_l[incrementValue$1] != 0) {
+                        if (this.field_e.field_l[incrementValue$0] != 0) {
                           var3 = var4 + var11;
                           var7++;
                           continue L1;
@@ -607,7 +560,18 @@ final class uf {
     }
 
     final boolean a(t param0, String param1, int param2) {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_20_0 = 0;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        StringBuilder stackIn_26_1 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -622,42 +586,6 @@ final class uf {
         int[] var14 = null;
         int[] var15 = null;
         int[] var16 = null;
-        int stackIn_13_0 = 0;
-        int stackIn_20_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_19_0 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
         try {
           L0: {
             L1: {
@@ -700,12 +628,10 @@ final class uf {
             }
             L5: {
               if (this.field_k < var5 + var4_int) {
-                stackOut_12_0 = 0;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = 0;
                 break L5;
               } else {
-                stackOut_11_0 = 1;
-                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_0 = 1;
                 break L5;
               }
             }
@@ -715,9 +641,9 @@ final class uf {
                 L7: {
                   this.field_a[this.field_f] = param0;
                   this.field_i[this.field_f] = var7;
-                  fieldTemp$1 = this.field_f;
+                  fieldTemp$0 = this.field_f;
                   this.field_f = this.field_f + 1;
-                  this.field_h[fieldTemp$1] = param1;
+                  this.field_h[fieldTemp$0] = param1;
                   if (this.field_f == this.field_u.length) {
                     var11 = new t[4 + this.field_f];
                     dk.a(this.field_a, 0, var11, 0, this.field_f);
@@ -744,64 +670,47 @@ final class uf {
                 break L6;
               }
             }
-            stackOut_19_0 = var10;
-            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_0 = var10;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var4 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var4);
-            stackOut_21_1 = new StringBuilder().append("uf.J(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var4);
+
+            stackIn_23_1 = new StringBuilder().append("uf.J(");
+
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+
+
+            stackIn_26_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
+
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L9;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L9;
             }
           }
-          throw rb.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_24_0), stackIn_27_2 + ',' + param2 + ')');
         }
         return stackIn_20_0 != 0;
     }
@@ -810,17 +719,17 @@ final class uf {
         int var5 = -56 % ((param2 - 32) / 52);
         t var4 = new t(param0, 0);
         var4.field_u = param1;
-        boolean discarded$0 = this.a(var4, "", 250);
+        this.a(var4, "", 250);
     }
 
     final void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        t var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        String[] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
+        int var4;
+        t var5;
+        int var6;
+        int var7;
+        String[] var8;
+        int var9;
+        int var10;
         L0: {
           var10 = Torquing.field_u;
           if (ph.field_a <= param0) {

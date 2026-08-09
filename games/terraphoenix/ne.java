@@ -23,14 +23,14 @@ final class ne implements Iterator {
     }
 
     public final Object next() {
-        vh var1 = this.field_a;
+        Object var1 = this.field_a;
         if (this.field_d.field_a == var1) {
             var1 = null;
             this.field_a = null;
         } else {
-            this.field_a = var1.field_o;
+            this.field_a = ((vh) (var1)).field_o;
         }
-        this.field_c = var1;
+        this.field_c = (vh) (var1);
         return var1;
     }
 

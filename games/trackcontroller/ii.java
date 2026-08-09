@@ -18,9 +18,10 @@ class ii extends gb {
 
     final static void a(byte param0) {
         li var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
+        boolean stackIn_20_0 = false;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var2 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -83,7 +84,8 @@ class ii extends gb {
               if (null == fj.field_P) {
                 break L7;
               } else {
-                if (!fj.field_P.c((byte) -64)) {
+                stackIn_20_0 = fj.field_P.c((byte) -64);
+                if (!stackIn_20_0) {
                   ch.field_n = null;
                   break L7;
                 } else {

@@ -74,12 +74,12 @@ final class mg {
     }
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         var8 = Main.field_T;
         if (0 <= h.field_F) {
           L0: {
@@ -181,113 +181,73 @@ final class mg {
     }
 
     final static void c(byte param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         String var6 = null;
         String var7 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = Main.field_T;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = Main.field_T;
         try {
-          L0: {
-            L1: {
-              cj.field_l = new int[]{105, 151, 380, 418, 411, 373, 368, 368, 368, 368, 368};
-              nk.field_a = new int[]{217, 216, 34, 263, 347, 148, 149, 149, 149, 104, 62};
-              fh.field_G = new int[][]{new int[]{0, 5, 1, 3, 4, 8, 6, 9, 12}, new int[]{7, 3, 4, 5, 10}, new int[]{11}, new int[]{17}, new int[]{16, 17}, new int[]{16, 17}, new int[]{15}, new int[]{15}, new int[]{15}, new int[]{13, 14}, new int[]{21, 17}};
-              kb.field_b = new int[]{36, 36, 64, 64, 36, 36, 36, 36, 36, 36, 36};
-              ia.field_c = new kc[22];
-              var1_int = qa.field_b.a(bk.field_c[3]);
-              var2 = qa.field_b.a(bk.field_c[4]);
-              if (var1_int >= var2) {
-                break L1;
-              } else {
+            cj.field_l = new int[]{105, 151, 380, 418, 411, 373, 368, 368, 368, 368, 368};
+            nk.field_a = new int[]{217, 216, 34, 263, 347, 148, 149, 149, 149, 104, 62};
+            fh.field_G = new int[][]{new int[]{0, 5, 1, 3, 4, 8, 6, 9, 12}, new int[]{7, 3, 4, 5, 10}, new int[]{11}, new int[]{17}, new int[]{16, 17}, new int[]{16, 17}, new int[]{15}, new int[]{15}, new int[]{15}, new int[]{13, 14}, new int[]{21, 17}};
+            kb.field_b = new int[]{36, 36, 64, 64, 36, 36, 36, 36, 36, 36, 36};
+            ia.field_c = new kc[22];
+            var1_int = qa.field_b.a(bk.field_c[3]);
+            var2 = qa.field_b.a(bk.field_c[4]);
+            if (var1_int < var2) {
                 var1_int = var2;
-                break L1;
-              }
             }
             t.field_i = -80 + (207 + var1_int) >> -1813530431;
-            var1_int = 0;
-            L2: while (true) {
-              if (-15 > (var1_int ^ -1)) {
-                L3: {
-                  if (param0 == 96) {
-                    break L3;
-                  } else {
-                    mg.a(-44, 89, -75);
-                    break L3;
-                  }
-                }
-                var1_int = 15;
-                L4: while (true) {
-                  if (-22 > (var1_int ^ -1)) {
-                    gf.field_e.a(200);
-                    break L0;
-                  } else {
-                    ia.field_c[var1_int] = new kc(120, 31);
-                    ia.field_c[var1_int].c();
-                    vj.c(0, 0, 207, 34, 6962948);
-                    vj.g(2, 2, 118, 29);
-                    field_j[4].b(0, 0);
-                    var7 = bk.field_c[var1_int];
-                    var3 = qa.field_b.a(var7);
-                    var4 = 120 + -var3 >> 1694859009;
-                    a.a(16777214, var7, param0 ^ -97, var4, 16777215, 23);
-                    var1_int++;
-                    continue L4;
-                  }
-                }
-              } else {
-                L5: {
-                  L6: {
-                    ia.field_c[var1_int] = new kc(207, 34);
-                    ia.field_c[var1_int].c();
-                    vj.c(0, 0, 207, 34, 6962948);
-                    vj.g(4, 4, 203, 30);
-                    field_j[4].b(0, 0);
-                    var6 = bk.field_c[var1_int];
-                    var3 = qa.field_b.a(var6);
-                    var4 = -var3 + 207 >> -1044279615;
-                    if (var1_int == 3) {
-                      break L6;
-                    } else {
-                      if (4 != var1_int) {
-                        break L5;
-                      } else {
-                        break L6;
-                      }
-                    }
-                  }
-                  var4 = -var3 + t.field_i;
-                  break L5;
+            for (var1_int = 0; -15 <= (var1_int ^ -1); var1_int++) {
+                ia.field_c[var1_int] = new kc(207, 34);
+                ia.field_c[var1_int].c();
+                vj.c(0, 0, 207, 34, 6962948);
+                vj.g(4, 4, 203, 30);
+                field_j[4].b(0, 0);
+                var6 = bk.field_c[var1_int];
+                var3 = qa.field_b.a(var6);
+                var4 = -var3 + 207 >> -1044279615;
+                if (var1_int == 3 || 4 == var1_int) {
+                    var4 = -var3 + t.field_i;
                 }
                 a.a(16777214, var6, -1, var4, 16777215, 23);
-                var1_int++;
-                continue L2;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "mg.B(" + param0 + ')');
+            if (param0 != 96) {
+                mg.a(-44, 89, -75);
+            }
+            for (var1_int = 15; -22 <= (var1_int ^ -1); var1_int++) {
+                ia.field_c[var1_int] = new kc(120, 31);
+                ia.field_c[var1_int].c();
+                vj.c(0, 0, 207, 34, 6962948);
+                vj.g(2, 2, 118, 29);
+                field_j[4].b(0, 0);
+                var7 = bk.field_c[var1_int];
+                var3 = qa.field_b.a(var7);
+                var4 = 120 + -var3 >> 1694859009;
+                a.a(16777214, var7, param0 ^ -97, var4, 16777215, 23);
+            }
+            gf.field_e.a(200);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) ((Object) runtimeException), "mg.B(" + param0 + ')');
         }
     }
 
     final static void b(byte param0) {
-        String[][] dupTemp$6 = null;
-        long[][] dupTemp$7 = null;
-        int[][] dupTemp$8 = null;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
+        String[][] dupTemp$0 = null;
+        long[][] dupTemp$1 = null;
+        int[][] dupTemp$2 = null;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        uh var4_ref_uh = null;
         long var4 = 0L;
+        uh var4_ref_uh = null;
         int var5 = 0;
         ad var6 = null;
         int var6_int = 0;
@@ -312,8 +272,6 @@ final class mg {
         int var25 = 0;
         int var26 = 0;
         w var27 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = Main.field_T;
         try {
           L0: {
@@ -395,16 +353,16 @@ final class mg {
                         var8_int = 1;
                         L8: while (true) {
                           if (var8_int >= var5) {
-                            dupTemp$6 = new String[3][var6_int];
-                            var4_ref_uh.field_m = dupTemp$6;
-                            var8 = dupTemp$6;
+                            dupTemp$0 = new String[3][var6_int];
+                            var4_ref_uh.field_m = dupTemp$0;
+                            var8 = dupTemp$0;
                             var9 = new String[3][var6_int];
-                            dupTemp$7 = new long[3][var6_int];
-                            var4_ref_uh.field_j = dupTemp$7;
-                            var10 = dupTemp$7;
-                            dupTemp$8 = new int[3][var6_int * var7];
-                            var4_ref_uh.field_q = dupTemp$8;
-                            var11 = dupTemp$8;
+                            dupTemp$1 = new long[3][var6_int];
+                            var4_ref_uh.field_j = dupTemp$1;
+                            var10 = dupTemp$1;
+                            dupTemp$2 = new int[3][var6_int * var7];
+                            var4_ref_uh.field_q = dupTemp$2;
+                            var11 = dupTemp$2;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -437,9 +395,9 @@ final class mg {
                                         if (var7 <= var25) {
                                           break L10;
                                         } else {
-                                          incrementValue$9 = var15;
+                                          incrementValue$3 = var15;
                                           var15++;
-                                          var11[0][incrementValue$9] = var27.e((byte) 126);
+                                          var11[0][incrementValue$3] = var27.e((byte) 126);
                                           var25++;
                                           continue L11;
                                         }
@@ -461,9 +419,9 @@ final class mg {
                                           if (var7 <= var25) {
                                             break L12;
                                           } else {
-                                            incrementValue$10 = var16;
+                                            incrementValue$4 = var16;
                                             var16++;
-                                            var11[1][incrementValue$10] = var27.e((byte) 125);
+                                            var11[1][incrementValue$4] = var27.e((byte) 125);
                                             var25++;
                                             continue L13;
                                           }
@@ -489,9 +447,9 @@ final class mg {
                                           if (var25 >= var7) {
                                             break L14;
                                           } else {
-                                            incrementValue$11 = var17;
+                                            incrementValue$5 = var17;
                                             var17++;
-                                            var11[2][incrementValue$11] = var27.e((byte) 124);
+                                            var11[2][incrementValue$5] = var27.e((byte) 124);
                                             var25++;
                                             continue L15;
                                           }
@@ -574,17 +532,17 @@ final class mg {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var12 = Main.field_T;
         if (!this.field_L) {
           this.field_L = true;

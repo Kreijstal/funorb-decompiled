@@ -21,8 +21,8 @@ final class jj {
     }
 
     final uf d(byte param0) {
-        uf var2 = null;
-        int var3 = 0;
+        uf var2;
+        int var3;
         var2 = this.field_a.field_d;
         if (var2 == this.field_a) {
           return null;
@@ -60,10 +60,9 @@ final class jj {
     }
 
     final void c(int param0) {
-        uf discarded$1 = null;
-        int var3 = 0;
-        uf var4 = null;
-        uf var5 = null;
+        int var3;
+        uf var4;
+        uf var5;
         var3 = Terraphoenix.field_V;
         if (param0 == 21480) {
           L0: while (true) {
@@ -77,7 +76,7 @@ final class jj {
             }
           }
         } else {
-          discarded$1 = this.d(-102);
+          this.d(-102);
           L1: while (true) {
             var5 = this.field_a.field_d;
             if (var5 == this.field_a) {
@@ -94,23 +93,12 @@ final class jj {
     final static bg a(fa param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         bg stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        bg stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -122,8 +110,7 @@ final class jj {
               }
             }
             if (vh.a(param3, param1, param0, true)) {
-              stackOut_5_0 = km.a(param2 + 97);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = km.a(param2 + 97);
               break L0;
             } else {
               return null;
@@ -133,27 +120,19 @@ final class jj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var4);
-            stackOut_7_1 = new StringBuilder().append("jj.I(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("jj.I(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -163,8 +142,7 @@ final class jj {
     }
 
     final uf e(byte param0) {
-        uf discarded$2 = null;
-        uf var2 = null;
+        uf var2;
         if (param0 == -119) {
           var2 = this.field_b;
           if (var2 == this.field_a) {
@@ -175,7 +153,7 @@ final class jj {
             return var2;
           }
         } else {
-          discarded$2 = this.b((byte) -7);
+          this.b((byte) -7);
           var2 = this.field_b;
           if (var2 == this.field_a) {
             this.field_b = null;
@@ -188,9 +166,8 @@ final class jj {
     }
 
     final uf b(int param0) {
-        bg discarded$2 = null;
-        uf var2 = null;
-        fa var3 = null;
+        uf var2;
+        fa var3;
         var2 = this.field_b;
         if (var2 == this.field_a) {
           this.field_b = null;
@@ -199,7 +176,7 @@ final class jj {
           this.field_b = var2.field_a;
           if (param0 > -67) {
             var3 = (fa) null;
-            discarded$2 = jj.a((fa) null, 85, (byte) 51, 81);
+            jj.a((fa) null, 85, (byte) 51, 81);
             return var2;
           } else {
             return var2;
@@ -246,8 +223,8 @@ final class jj {
     }
 
     final uf b(byte param0) {
-        int var2 = 0;
-        uf var3 = null;
+        int var2;
+        uf var3;
         var2 = -86 % ((53 - param0) / 47);
         var3 = this.field_a.field_a;
         if (this.field_a == var3) {

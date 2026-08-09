@@ -30,17 +30,17 @@ abstract class fe extends kd {
     abstract byte[] d(byte param0);
 
     final static void c(byte param0) {
-        RuntimeException var1 = null;
-        cc var1_ref = null;
-        hk var1_ref2 = null;
-        int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        cc var1 = null;
+        hk var1_ref = null;
+        RuntimeException var1_ref2 = null;
+        int var2 = 0;
         var2 = SteelSentinels.field_G;
         try {
           L0: {
-            var1_ref = (cc) ((Object) q.field_m.e(13058));
+            var1 = (cc) ((Object) q.field_m.e(13058));
             L1: while (true) {
-              if (var1_ref == null) {
+              if (var1 == null) {
                 L2: {
                   if (param0 > 102) {
                     break L2;
@@ -49,45 +49,45 @@ abstract class fe extends kd {
                     break L2;
                   }
                 }
-                var1_ref2 = (hk) ((Object) ci.field_e.e(13058));
+                var1_ref = (hk) ((Object) ci.field_e.e(13058));
                 L3: while (true) {
-                  if (var1_ref2 == null) {
-                    var1_ref = (cc) ((Object) o.field_d.e(13058));
+                  if (var1_ref == null) {
+                    var1 = (cc) ((Object) o.field_d.e(13058));
                     L4: while (true) {
-                      if (var1_ref == null) {
+                      if (var1 == null) {
                         break L0;
                       } else {
                         L5: {
-                          if ((var1_ref.field_Ub ^ -1) < -1) {
-                            var1_ref.field_Ub = var1_ref.field_Ub - 1;
-                            if (-1 == (var1_ref.field_Ub ^ -1)) {
-                              var1_ref.field_Wb = 0;
-                              if (!var1_ref.d((byte) -36)) {
+                          if ((var1.field_Ub ^ -1) < -1) {
+                            var1.field_Ub = var1.field_Ub - 1;
+                            if (-1 == (var1.field_Ub ^ -1)) {
+                              var1.field_Wb = 0;
+                              if (!var1.d((byte) -36)) {
                                 break L5;
                               } else {
-                                var1_ref.b(4);
+                                var1.b(4);
                                 break L5;
                               }
                             } else {
-                              var1_ref = (cc) ((Object) o.field_d.a((byte) -34));
+                              var1 = (cc) ((Object) o.field_d.a((byte) -34));
                               continue L4;
                             }
                           } else {
                             break L5;
                           }
                         }
-                        var1_ref = (cc) ((Object) o.field_d.a((byte) -34));
+                        var1 = (cc) ((Object) o.field_d.a((byte) -34));
                         continue L4;
                       }
                     }
                   } else {
                     L6: {
-                      if ((var1_ref2.field_mc ^ -1) < -1) {
-                        var1_ref2.field_mc = var1_ref2.field_mc - 1;
-                        if (-1 == (var1_ref2.field_mc ^ -1)) {
-                          var1_ref2.field_Ac = 0;
-                          if (var1_ref2.k(4219)) {
-                            var1_ref2.b(4);
+                      if ((var1_ref.field_mc ^ -1) < -1) {
+                        var1_ref.field_mc = var1_ref.field_mc - 1;
+                        if (-1 == (var1_ref.field_mc ^ -1)) {
+                          var1_ref.field_Ac = 0;
+                          if (var1_ref.k(4219)) {
+                            var1_ref.b(4);
                             break L6;
                           } else {
                             break L6;
@@ -99,18 +99,18 @@ abstract class fe extends kd {
                         break L6;
                       }
                     }
-                    var1_ref2 = (hk) ((Object) ci.field_e.a((byte) -33));
+                    var1_ref = (hk) ((Object) ci.field_e.a((byte) -33));
                     continue L3;
                   }
                 }
               } else {
                 L7: {
-                  if (-1 > (var1_ref.field_Ub ^ -1)) {
-                    var1_ref.field_Ub = var1_ref.field_Ub - 1;
-                    if (var1_ref.field_Ub == 0) {
-                      var1_ref.field_Wb = 0;
-                      if (var1_ref.d((byte) -36)) {
-                        var1_ref.b(4);
+                  if (-1 > (var1.field_Ub ^ -1)) {
+                    var1.field_Ub = var1.field_Ub - 1;
+                    if (var1.field_Ub == 0) {
+                      var1.field_Wb = 0;
+                      if (var1.d((byte) -36)) {
+                        var1.b(4);
                         break L7;
                       } else {
                         break L7;
@@ -122,15 +122,15 @@ abstract class fe extends kd {
                     break L7;
                   }
                 }
-                var1_ref = (cc) ((Object) q.field_m.a((byte) -36));
+                var1 = (cc) ((Object) q.field_m.a((byte) -36));
                 continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var1), "fe.J(" + param0 + ')');
+          var1_ref2 = decompiledCaughtException;
+          throw ci.a((Throwable) ((Object) var1_ref2), "fe.J(" + param0 + ')');
         }
     }
 

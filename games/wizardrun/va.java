@@ -26,15 +26,6 @@ class va extends wl {
     }
 
     final void a(String param0, int param1) {
-        RuntimeException var3 = null;
-        long var3_long = 0L;
-        long var5 = 0L;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -42,14 +33,13 @@ class va extends wl {
         String stackIn_27_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        long var3_long = 0L;
+        RuntimeException var3 = null;
+        long var5 = 0L;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
         var10 = wizardrun.field_H;
         try {
           L0: {
@@ -131,27 +121,19 @@ class va extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var3);
-            stackOut_24_1 = new StringBuilder().append("va.N(");
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var3);
+
+            stackIn_26_1 = new StringBuilder().append("va.N(");
+
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L6;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L6;
             }
           }
@@ -165,27 +147,17 @@ class va extends wl {
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) {
-        int fieldTemp$7 = 0;
+        int fieldTemp$2 = 0;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var5 = null;
         var7 = wizardrun.field_H;
         try {
           L0: {
@@ -195,9 +167,9 @@ class va extends wl {
               if (param2 + param1 <= var6) {
                 break L0;
               } else {
-                fieldTemp$7 = this.field_m;
+                fieldTemp$2 = this.field_m;
                 this.field_m = this.field_m + 1;
-                this.field_k[fieldTemp$7] = param0[var6];
+                this.field_k[fieldTemp$2] = param0[var6];
                 var6++;
                 continue L1;
               }
@@ -207,27 +179,19 @@ class va extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var5);
-            stackOut_5_1 = new StringBuilder().append("va.TA(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var5);
+
+            stackIn_7_1 = new StringBuilder().append("va.TA(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -265,47 +229,47 @@ class va extends wl {
     }
 
     final void b(int param0, long param1) {
-        int fieldTemp$8 = 0;
-        byte[] var5 = null;
-        L0: {
-          fieldTemp$8 = this.field_m;
-          this.field_m = this.field_m + 1;
-          this.field_k[fieldTemp$8] = (byte)(int)(param1 >> -195708040);
-          if (param0 == 1290648728) {
-            break L0;
-          } else {
-            var5 = (byte[]) null;
+        int fieldTemp$0 = this.field_m;
+        this.field_m = this.field_m + 1;
+        this.field_k[fieldTemp$0] = (byte)(int)(param1 >> -195708040);
+        if (param0 != 1290648728) {
+            byte[] var5 = (byte[]) null;
             this.a(true, -58, (byte[]) null, 44);
-            break L0;
-          }
         }
-        int fieldTemp$9 = this.field_m;
+        int fieldTemp$1 = this.field_m;
         this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$9] = (byte)(int)(param1 >> 1088471216);
-        int fieldTemp$10 = this.field_m;
+        this.field_k[fieldTemp$1] = (byte)(int)(param1 >> 1088471216);
+        int fieldTemp$2 = this.field_m;
         this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$10] = (byte)(int)(param1 >> -1278008792);
-        int fieldTemp$11 = this.field_m;
+        this.field_k[fieldTemp$2] = (byte)(int)(param1 >> -1278008792);
+        int fieldTemp$3 = this.field_m;
         this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$11] = (byte)(int)(param1 >> -244826912);
-        int fieldTemp$12 = this.field_m;
+        this.field_k[fieldTemp$3] = (byte)(int)(param1 >> -244826912);
+        int fieldTemp$4 = this.field_m;
         this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$12] = (byte)(int)(param1 >> 1290648728);
-        int fieldTemp$13 = this.field_m;
+        this.field_k[fieldTemp$4] = (byte)(int)(param1 >> 1290648728);
+        int fieldTemp$5 = this.field_m;
         this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$13] = (byte)(int)(param1 >> 1799809936);
-        int fieldTemp$14 = this.field_m;
+        this.field_k[fieldTemp$5] = (byte)(int)(param1 >> 1799809936);
+        int fieldTemp$6 = this.field_m;
         this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$14] = (byte)(int)(param1 >> -79645368);
-        int fieldTemp$15 = this.field_m;
+        this.field_k[fieldTemp$6] = (byte)(int)(param1 >> -79645368);
+        int fieldTemp$7 = this.field_m;
         this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$15] = (byte)(int)param1;
+        this.field_k[fieldTemp$7] = (byte)(int)param1;
     }
 
     final void a(boolean param0, int[] param1, int param2, int param3) {
-        int incrementValue$1 = 0;
-        RuntimeException var5 = null;
+        int incrementValue$0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -314,23 +278,6 @@ class va extends wl {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var13 = wizardrun.field_H;
         try {
           L0: {
@@ -351,9 +298,9 @@ class va extends wl {
                   var11 = -1640531527;
                   var12 = 32;
                   L2: while (true) {
-                    incrementValue$1 = var12;
+                    incrementValue$0 = var12;
                     var12--;
-                    if (0 >= incrementValue$1) {
+                    if (0 >= incrementValue$0) {
                       this.field_m = this.field_m - 8;
                       this.f(var8, 613003928);
                       this.f(var9, 613003928);
@@ -377,27 +324,19 @@ class va extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var5);
-            stackOut_11_1 = new StringBuilder().append("va.M(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var5);
+
+            stackIn_13_1 = new StringBuilder().append("va.M(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -506,12 +445,9 @@ class va extends wl {
     }
 
     final void a(boolean param0, int param1, byte[] param2, int param3) {
-        int fieldTemp$8 = 0;
+        int fieldTemp$2 = 0;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -519,14 +455,7 @@ class va extends wl {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var5 = null;
         var6 = wizardrun.field_H;
         try {
           L0: {
@@ -537,9 +466,9 @@ class va extends wl {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  fieldTemp$8 = this.field_m;
+                  fieldTemp$2 = this.field_m;
                   this.field_m = this.field_m + 1;
-                  param2[var5_int] = this.field_k[fieldTemp$8];
+                  param2[var5_int] = this.field_k[fieldTemp$2];
                   var5_int++;
                   continue L1;
                 }
@@ -553,27 +482,19 @@ class va extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var5);
-            stackOut_7_1 = new StringBuilder().append("va.IA(").append(param0).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var5);
+
+            stackIn_9_1 = new StringBuilder().append("va.IA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -644,10 +565,9 @@ class va extends wl {
     }
 
     final void a(int param0, int param1) {
-        int discarded$0 = 0;
         this.field_k[this.field_m - (param0 - -1)] = (byte)param0;
         if (param1 >= -43) {
-            discarded$0 = this.e(108, -51);
+            this.e(108, -51);
         }
     }
 
@@ -677,16 +597,15 @@ class va extends wl {
     }
 
     final void c(int param0, int param1) {
-        String discarded$0 = null;
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var4 = wizardrun.field_H;
         if (param1 <= 122) {
-            discarded$0 = this.d(-54);
+            this.d(-54);
         }
         while (this.field_m < param0) {
-            fieldTemp$1 = this.field_m;
+            fieldTemp$0 = this.field_m;
             this.field_m = this.field_m + 1;
-            this.field_k[fieldTemp$1] = (byte) 0;
+            this.field_k[fieldTemp$0] = (byte) 0;
         }
     }
 
@@ -740,9 +659,8 @@ class va extends wl {
     }
 
     final void a(boolean param0, int[] param1) {
-        int incrementValue$5 = 0;
+        int incrementValue$2 = 0;
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -750,22 +668,13 @@ class va extends wl {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var3 = null;
         var10 = wizardrun.field_H;
         try {
           L0: {
@@ -773,6 +682,7 @@ class va extends wl {
               if (!param0) {
                 break L1;
               } else {
+                this.e((byte) -74);
                 break L1;
               }
             }
@@ -789,9 +699,9 @@ class va extends wl {
                 var8 = -1640531527;
                 var9 = 32;
                 L3: while (true) {
-                  incrementValue$5 = var9;
+                  incrementValue$2 = var9;
                   var9--;
-                  if (incrementValue$5 <= 0) {
+                  if (incrementValue$2 <= 0) {
                     this.field_m = this.field_m - 8;
                     this.f(var5, 613003928);
                     this.f(var6, 613003928);
@@ -811,27 +721,19 @@ class va extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var3);
-            stackOut_10_1 = new StringBuilder().append("va.WA(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var3);
+
+            stackIn_12_1 = new StringBuilder().append("va.WA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -899,9 +801,8 @@ class va extends wl {
     }
 
     final int e(int param0, int param1) {
-        String discarded$0 = null;
         if (param1 != -1182887024) {
-            discarded$0 = this.d(-77);
+            this.d(-77);
         }
         int var3 = gh.a(this.field_k, 107, param0, this.field_m);
         this.f(var3, 613003928);
@@ -909,11 +810,10 @@ class va extends wl {
     }
 
     final void a(int param0, byte param1) {
-        String discarded$0 = null;
         this.field_k[-2 + -param0 + this.field_m] = (byte)(param0 >> -271081976);
         this.field_k[-1 + (this.field_m - param0)] = (byte)param0;
         if (param1 != -67) {
-            discarded$0 = this.d(73);
+            this.d(73);
         }
     }
 

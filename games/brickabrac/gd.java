@@ -26,15 +26,25 @@ final class gd {
     }
 
     final synchronized static byte[] a(int param0, byte param1) {
-        int fieldTemp$34 = 0;
-        int fieldTemp$35 = 0;
-        int fieldTemp$36 = 0;
-        int fieldTemp$37 = 0;
-        int fieldTemp$38 = 0;
-        int fieldTemp$39 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        int fieldTemp$2 = 0;
+        int dupTemp$3 = 0;
+        byte[][] arrayValue$4 = null;
+        int fieldTemp$5 = 0;
+        int dupTemp$6 = 0;
+        byte[][] arrayValue$7 = null;
+        int dupTemp$8 = 0;
+        byte[][] arrayValue$9 = null;
+        int dupTemp$10 = 0;
+        byte[][] arrayValue$11 = null;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
+        int dupTemp$15 = 0;
+        byte[][] arrayValue$16 = null;
+        int fieldTemp$17 = 0;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
         if (100 != param0) {
           L0: {
             if ((param0 ^ -1) != -5001) {
@@ -43,9 +53,9 @@ final class gd {
               if (-1 <= (dq.field_b ^ -1)) {
                 break L0;
               } else {
-                fieldTemp$34 = dq.field_b - 1;
+                fieldTemp$2 = dq.field_b - 1;
                 dq.field_b = dq.field_b - 1;
-                var2_ref_byte__ = da.field_L[fieldTemp$34];
+                var2_ref_byte__ = da.field_L[fieldTemp$2];
                 da.field_L[dq.field_b] = null;
                 return var2_ref_byte__;
               }
@@ -64,8 +74,10 @@ final class gd {
                     } else {
                       if (gn.field_x[var2] == param0) {
                         if (lk.field_u[var2] > 0) {
-                          lk.field_u[var2] = lk.field_u[var2] - 1;
-                          var3 = bm.field_a[var2][lk.field_u[var2] - 1];
+                          dupTemp$3 = lk.field_u[var2] - 1;
+                          arrayValue$4 = bm.field_a[var2];
+                          lk.field_u[var2] = dupTemp$3;
+                          var3 = arrayValue$4[dupTemp$3];
                           bm.field_a[var2][lk.field_u[var2]] = null;
                           return var3;
                         } else {
@@ -86,9 +98,9 @@ final class gd {
             }
           } else {
             if (ac.field_e > 0) {
-              fieldTemp$35 = ac.field_e - 1;
+              fieldTemp$5 = ac.field_e - 1;
               ac.field_e = ac.field_e - 1;
-              var2_ref_byte__ = si.field_b[fieldTemp$35];
+              var2_ref_byte__ = si.field_b[fieldTemp$5];
               si.field_b[ac.field_e] = null;
               return var2_ref_byte__;
             } else {
@@ -104,8 +116,10 @@ final class gd {
                       } else {
                         if (gn.field_x[var2] == param0) {
                           if (lk.field_u[var2] > 0) {
-                            lk.field_u[var2] = lk.field_u[var2] - 1;
-                            var3 = bm.field_a[var2][lk.field_u[var2] - 1];
+                            dupTemp$6 = lk.field_u[var2] - 1;
+                            arrayValue$7 = bm.field_a[var2];
+                            lk.field_u[var2] = dupTemp$6;
+                            var3 = arrayValue$7[dupTemp$6];
                             bm.field_a[var2][lk.field_u[var2]] = null;
                             return var3;
                           } else {
@@ -138,8 +152,10 @@ final class gd {
                         if (gn.field_x.length > var2) {
                           if (gn.field_x[var2] == param0) {
                             if (lk.field_u[var2] > 0) {
-                              lk.field_u[var2] = lk.field_u[var2] - 1;
-                              var3 = bm.field_a[var2][lk.field_u[var2] - 1];
+                              dupTemp$8 = lk.field_u[var2] - 1;
+                              arrayValue$9 = bm.field_a[var2];
+                              lk.field_u[var2] = dupTemp$8;
+                              var3 = arrayValue$9[dupTemp$8];
                               bm.field_a[var2][lk.field_u[var2]] = null;
                               return var3;
                             } else {
@@ -169,8 +185,10 @@ final class gd {
                           if (gn.field_x.length > var2) {
                             if (gn.field_x[var2] == param0) {
                               if (lk.field_u[var2] > 0) {
-                                lk.field_u[var2] = lk.field_u[var2] - 1;
-                                var3 = bm.field_a[var2][lk.field_u[var2] - 1];
+                                dupTemp$10 = lk.field_u[var2] - 1;
+                                arrayValue$11 = bm.field_a[var2];
+                                lk.field_u[var2] = dupTemp$10;
+                                var3 = arrayValue$11[dupTemp$10];
                                 bm.field_a[var2][lk.field_u[var2]] = null;
                                 return var3;
                               } else {
@@ -192,17 +210,17 @@ final class gd {
                       return (byte[]) null;
                     }
                   } else {
-                    fieldTemp$36 = ac.field_e - 1;
+                    fieldTemp$12 = ac.field_e - 1;
                     ac.field_e = ac.field_e - 1;
-                    var2_ref_byte__ = si.field_b[fieldTemp$36];
+                    var2_ref_byte__ = si.field_b[fieldTemp$12];
                     si.field_b[ac.field_e] = null;
                     return var2_ref_byte__;
                   }
                 }
               } else {
-                fieldTemp$37 = dq.field_b - 1;
+                fieldTemp$13 = dq.field_b - 1;
                 dq.field_b = dq.field_b - 1;
-                var2_ref_byte__ = da.field_L[fieldTemp$37];
+                var2_ref_byte__ = da.field_L[fieldTemp$13];
                 da.field_L[dq.field_b] = null;
                 return var2_ref_byte__;
               }
@@ -212,9 +230,9 @@ final class gd {
                   break L7;
                 } else {
                   if (ac.field_e > 0) {
-                    fieldTemp$38 = ac.field_e - 1;
+                    fieldTemp$14 = ac.field_e - 1;
                     ac.field_e = ac.field_e - 1;
-                    var2_ref_byte__ = si.field_b[fieldTemp$38];
+                    var2_ref_byte__ = si.field_b[fieldTemp$14];
                     si.field_b[ac.field_e] = null;
                     return var2_ref_byte__;
                   } else {
@@ -229,8 +247,10 @@ final class gd {
                     if (gn.field_x.length > var2) {
                       if (gn.field_x[var2] == param0) {
                         if (lk.field_u[var2] > 0) {
-                          lk.field_u[var2] = lk.field_u[var2] - 1;
-                          var3 = bm.field_a[var2][lk.field_u[var2] - 1];
+                          dupTemp$15 = lk.field_u[var2] - 1;
+                          arrayValue$16 = bm.field_a[var2];
+                          lk.field_u[var2] = dupTemp$15;
+                          var3 = arrayValue$16[dupTemp$15];
                           bm.field_a[var2][lk.field_u[var2]] = null;
                           return var3;
                         } else {
@@ -253,9 +273,9 @@ final class gd {
               }
             }
           } else {
-            fieldTemp$39 = ig.field_N - 1;
+            fieldTemp$17 = ig.field_N - 1;
             ig.field_N = ig.field_N - 1;
-            var2_ref_byte__ = cf.field_b[fieldTemp$39];
+            var2_ref_byte__ = cf.field_b[fieldTemp$17];
             cf.field_b[ig.field_N] = null;
             return var2_ref_byte__;
           }

@@ -15,7 +15,7 @@ final class hba {
     }
 
     final static void a(int param0, long param1, byte param2, int param3) {
-        nra var5 = null;
+        nra var5;
         if (null == ql.field_k) {
           return;
         } else {

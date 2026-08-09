@@ -12,9 +12,6 @@ final class ai {
 
     final static int a(int param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            oa var2 = null;
             int stackIn_16_0 = 0;
             int stackIn_27_0 = 0;
             int stackIn_32_0 = 0;
@@ -22,11 +19,9 @@ final class ai {
             int stackIn_37_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_15_0 = 0;
-            int stackOut_26_0 = 0;
-            int stackOut_31_0 = 0;
-            int stackOut_36_0 = 0;
-            int stackOut_34_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            oa var2 = null;
             if (-5 >= (oh.field_h.field_p ^ -1)) {
               if (0 == (oh.field_h.field_k ^ -1)) {
                 return 3;
@@ -54,8 +49,7 @@ final class ai {
                       break L2;
                     } else {
                       if ((wj.field_j.field_c ^ -1) == -3) {
-                        stackOut_15_0 = og.a(2, -1);
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = og.a(2, -1);
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
@@ -93,8 +87,7 @@ final class ai {
                         } else {
                           var1_int = re.field_y.c(1);
                           if (var1_int != 0) {
-                            stackOut_26_0 = og.a(param0 ^ 0, var1_int);
-                            stackIn_27_0 = stackOut_26_0;
+                            stackIn_27_0 = og.a(param0 ^ 0, var1_int);
                             decompiledRegionSelector0 = 1;
                             break L0;
                           } else {
@@ -108,8 +101,7 @@ final class ai {
                         }
                       }
                       if (ob.field_G < lk.a(0)) {
-                        stackOut_31_0 = og.a(2, -2);
-                        stackIn_32_0 = stackOut_31_0;
+                        stackIn_32_0 = og.a(2, -2);
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -118,8 +110,7 @@ final class ai {
                     }
                   }
                   if (4 != cl.field_A) {
-                    stackOut_36_0 = -1;
-                    stackIn_37_0 = stackOut_36_0;
+                    stackIn_37_0 = -1;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
@@ -127,8 +118,7 @@ final class ai {
                     re.field_y = null;
                     cl.field_A = 0;
                     wj.field_j = null;
-                    stackOut_34_0 = 0;
-                    stackIn_35_0 = stackOut_34_0;
+                    stackIn_35_0 = 0;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
@@ -164,12 +154,11 @@ final class ai {
     }
 
     public static void a(byte param0) {
-        int discarded$2 = 0;
         field_a = null;
         field_e = (byte[][]) null;
         field_d = null;
         if (param0 != 67) {
-          discarded$2 = ai.a(17);
+          ai.a(17);
           field_b = null;
           return;
         } else {
@@ -179,8 +168,8 @@ final class ai {
     }
 
     final static void b(int param0) {
-        String var1 = null;
-        int var2 = 0;
+        String var1;
+        int var2;
         if (lb.field_d) {
           var2 = 33 / ((-70 - param0) / 55);
           if (null != wg.field_d) {

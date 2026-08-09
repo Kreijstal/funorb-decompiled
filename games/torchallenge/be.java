@@ -37,8 +37,10 @@ final class be {
     }
 
     final static int a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        RuntimeException var8 = null;
+        int stackIn_28_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -52,9 +54,6 @@ final class be {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        int stackIn_28_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_27_0 = 0;
         var21 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -183,8 +182,7 @@ final class be {
                 break L2;
               }
             }
-            stackOut_27_0 = param6;
-            stackIn_28_0 = stackOut_27_0;
+            stackIn_28_0 = param6;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -210,10 +208,8 @@ final class be {
             return (qa) null;
         }
         String var1 = si.h(-118);
-        if (var1 != null) {
-            if (0 <= var1.indexOf('@')) {
-                var1 = "";
-            }
+        if (var1 != null && 0 <= var1.indexOf('@')) {
+            var1 = "";
         }
         return new qa(si.h(16), fc.d(125));
     }

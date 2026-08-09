@@ -8,15 +8,15 @@ final class oa {
     static fr field_b;
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        RuntimeException var5 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        RuntimeException decompiledCaughtException = null;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -92,9 +92,9 @@ final class oa {
             IOException iOException = null;
             IOException var2_ref = null;
             int var1_int = 0;
-            RuntimeException var1 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
+            RuntimeException var1 = null;
             var3 = ShatteredPlansClient.field_F ? 1 : 0;
             try {
               L0: {

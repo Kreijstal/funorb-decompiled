@@ -18,7 +18,7 @@ final class qg {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        pc var3 = null;
+        pc var3;
         if (param2) {
           field_c = (String) null;
           var3 = aa.field_f;

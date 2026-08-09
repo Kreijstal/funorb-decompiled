@@ -40,9 +40,8 @@ final class ja {
     }
 
     final static wk b(int param0, boolean param1) {
-        wk discarded$1 = null;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = SteelSentinels.field_G;
         var2 = param0;
         if (-105 != (var2 ^ -1)) {
@@ -76,7 +75,7 @@ final class ja {
                                                     return nc.a(param0 - 199, (byte) -114).a();
                                                   }
                                                 } else {
-                                                  discarded$1 = ja.b(-72, true);
+                                                  ja.b(-72, true);
                                                   if (-201 < (param0 ^ -1)) {
                                                     if (param0 < rh.field_v.length) {
                                                       return rh.field_v[param0];

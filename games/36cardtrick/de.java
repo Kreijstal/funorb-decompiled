@@ -20,13 +20,11 @@ final class de {
     }
 
     final static void b(int param0) {
-        int discarded$1 = 0;
-        RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        int var4 = 0;
         mg var4_ref_mg = null;
+        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -41,12 +39,13 @@ final class de {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        mg var17 = null;
-        int var18 = 0;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        mg var17 = null;
+        int var18 = 0;
         var19 = Main.field_T;
         try {
           L0: {
@@ -85,7 +84,7 @@ final class de {
                   if (param0 >= 17) {
                     break L3;
                   } else {
-                    discarded$1 = de.a(93);
+                    de.a(93);
                     break L3;
                   }
                 }

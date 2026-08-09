@@ -24,9 +24,12 @@ final class pj extends bo implements Cloneable {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, byte param5, int param6) {
-        int incrementValue$1 = 0;
-        RuntimeException var7 = null;
+        int incrementValue$0 = 0;
+        int stackIn_23_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -34,11 +37,6 @@ final class pj extends bo implements Cloneable {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_23_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
         var14 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -69,12 +67,10 @@ final class pj extends bo implements Cloneable {
                           L3: {
                             var12 = wp.field_d[var11];
                             if (!param3) {
-                              stackOut_22_0 = jk.field_g[var12];
-                              stackIn_23_0 = stackOut_22_0;
+                              stackIn_23_0 = jk.field_g[var12];
                               break L3;
                             } else {
-                              stackOut_21_0 = mh.field_l[var12];
-                              stackIn_23_0 = stackOut_21_0;
+                              stackIn_23_0 = mh.field_l[var12];
                               break L3;
                             }
                           }
@@ -90,9 +86,9 @@ final class pj extends bo implements Cloneable {
                               }
                             } else {
                               wp.field_d[var11] = wp.field_d[var8];
-                              incrementValue$1 = var8;
+                              incrementValue$0 = var8;
                               var8++;
-                              wp.field_d[incrementValue$1] = var12;
+                              wp.field_d[incrementValue$0] = var12;
                               if (var9 > var13) {
                                 var9 = var13;
                                 break L4;
@@ -165,7 +161,7 @@ final class pj extends bo implements Cloneable {
     }
 
     final void b(int param0, int param1, int param2, boolean param3, int param4, int param5) {
-        int var7 = 0;
+        int var7;
         L0: {
           if ((this.field_u ^ -1) <= -1) {
             L1: {
@@ -248,15 +244,13 @@ final class pj extends bo implements Cloneable {
         if (!param0) {
             return;
         }
-        if ((this.field_u ^ -1) <= -1) {
-            if (-5 < (this.field_u ^ -1)) {
-                if (!(this.field_s != 0)) {
-                    var3 = le.field_g[this.field_u].length + -10;
-                    var4 = (int)(3.0 * ((double)var3 * Math.random()));
-                    if (-1 >= (var4 ^ -1)) {
-                        if (!(var4 >= var3)) {
-                            this.field_t = 10 - -var4;
-                        }
+        if ((this.field_u ^ -1) <= -1 && -5 < (this.field_u ^ -1)) {
+            if (!(this.field_s != 0)) {
+                var3 = le.field_g[this.field_u].length + -10;
+                var4 = (int)(3.0 * ((double)var3 * Math.random()));
+                if (-1 >= (var4 ^ -1)) {
+                    if (!(var4 >= var3)) {
+                        this.field_t = 10 - -var4;
                     }
                 }
             }

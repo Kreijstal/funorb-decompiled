@@ -13,10 +13,9 @@ final class cg extends ua implements tl {
     }
 
     public final void a(int param0) {
-        boolean discarded$0 = false;
         super.a(param0 + 0);
         if (param0 != 4665) {
-            discarded$0 = this.a((byte) 95);
+            this.a((byte) 95);
         }
     }
 
@@ -84,9 +83,8 @@ final class cg extends ua implements tl {
     }
 
     final int c(byte param0) {
-        boolean discarded$0 = false;
         if (param0 < 17) {
-            discarded$0 = this.a((byte) -104);
+            this.a((byte) -104);
             return this.field_o;
         }
         return this.field_o;

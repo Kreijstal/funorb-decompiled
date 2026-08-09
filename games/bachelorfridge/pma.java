@@ -9,23 +9,13 @@ final class pma extends k {
 
     final void a(byte param0, lu param1, int param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
@@ -51,27 +41,19 @@ final class pma extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var4);
-            stackOut_6_1 = new StringBuilder().append("pma.E(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var4);
+
+            stackIn_8_1 = new StringBuilder().append("pma.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -118,53 +100,20 @@ final class pma extends k {
     }
 
     final static void a(byte param0, boolean param1) {
-        int var2 = 0;
+        int var2;
         int stackIn_8_0 = 0;
         int stackIn_13_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_14_1 = 0;
-        int stackIn_14_2 = 0;
-        int stackIn_14_3 = 0;
-        int stackIn_14_4 = 0;
-        int stackIn_14_5 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_15_1 = 0;
-        int stackIn_15_2 = 0;
-        int stackIn_15_3 = 0;
-        int stackIn_15_4 = 0;
-        int stackIn_15_5 = 0;
-        int stackIn_16_0 = 0;
+        int stackIn_15_1;
+        int stackIn_15_2;
+        int stackIn_15_3;
+        int stackIn_15_4;
+        int stackIn_15_5;
         int stackIn_16_1 = 0;
         int stackIn_16_2 = 0;
         int stackIn_16_3 = 0;
         int stackIn_16_4 = 0;
         int stackIn_16_5 = 0;
         int stackIn_16_6 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        int stackOut_13_3 = 0;
-        int stackOut_13_4 = 0;
-        int stackOut_13_5 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
-        int stackOut_15_2 = 0;
-        int stackOut_15_3 = 0;
-        int stackOut_15_4 = 0;
-        int stackOut_15_5 = 0;
-        int stackOut_15_6 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_14_1 = 0;
-        int stackOut_14_2 = 0;
-        int stackOut_14_3 = 0;
-        int stackOut_14_4 = 0;
-        int stackOut_14_5 = 0;
-        int stackOut_14_6 = 0;
         L0: {
           mla.b((byte) 5);
           if (param0 == 122) {
@@ -177,17 +126,14 @@ final class pma extends k {
         L1: {
           if (pw.field_w != null) {
             if (hfa.a(pw.field_w.field_Rb, param0 + -120)) {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L1;
             } else {
-              stackOut_5_0 = 0;
-              stackIn_8_0 = stackOut_5_0;
+              stackIn_8_0 = 0;
               break L1;
             }
           } else {
-            stackOut_3_0 = 0;
-            stackIn_8_0 = stackOut_3_0;
+            stackIn_8_0 = 0;
             break L1;
           }
         }
@@ -198,73 +144,51 @@ final class pma extends k {
               break L3;
             } else {
               if (!gja.field_n) {
-                stackOut_12_0 = 0;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = 0;
                 break L2;
               } else {
                 break L3;
               }
             }
           }
-          stackOut_11_0 = 1;
-          stackIn_13_0 = stackOut_11_0;
+          stackIn_13_0 = 1;
           break L2;
         }
         L4: {
-          stackOut_13_0 = stackIn_13_0;
-          stackOut_13_1 = 14;
-          stackOut_13_2 = 13;
-          stackOut_13_3 = 15;
-          stackOut_13_4 = var2;
-          stackOut_13_5 = vc.field_a;
-          stackIn_15_0 = stackOut_13_0;
-          stackIn_15_1 = stackOut_13_1;
-          stackIn_15_2 = stackOut_13_2;
-          stackIn_15_3 = stackOut_13_3;
-          stackIn_15_4 = stackOut_13_4;
-          stackIn_15_5 = stackOut_13_5;
-          stackIn_14_0 = stackOut_13_0;
-          stackIn_14_1 = stackOut_13_1;
-          stackIn_14_2 = stackOut_13_2;
-          stackIn_14_3 = stackOut_13_3;
-          stackIn_14_4 = stackOut_13_4;
-          stackIn_14_5 = stackOut_13_5;
+
+
+          stackIn_15_1 = 14;
+
+          stackIn_15_2 = 13;
+
+          stackIn_15_3 = 15;
+
+          stackIn_15_4 = var2;
+
+          stackIn_15_5 = vc.field_a;
+
           if ((md.field_l ^ -1) >= -51) {
-            stackOut_15_0 = stackIn_15_0;
-            stackOut_15_1 = stackIn_15_1;
-            stackOut_15_2 = stackIn_15_2;
-            stackOut_15_3 = stackIn_15_3;
-            stackOut_15_4 = stackIn_15_4;
-            stackOut_15_5 = stackIn_15_5;
-            stackOut_15_6 = 0;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
-            stackIn_16_2 = stackOut_15_2;
-            stackIn_16_3 = stackOut_15_3;
-            stackIn_16_4 = stackOut_15_4;
-            stackIn_16_5 = stackOut_15_5;
-            stackIn_16_6 = stackOut_15_6;
+
+            stackIn_16_1 = stackIn_15_1;
+            stackIn_16_2 = stackIn_15_2;
+            stackIn_16_3 = stackIn_15_3;
+            stackIn_16_4 = stackIn_15_4;
+            stackIn_16_5 = stackIn_15_5;
+            stackIn_16_6 = 0;
             break L4;
           } else {
-            stackOut_14_0 = stackIn_14_0;
-            stackOut_14_1 = stackIn_14_1;
-            stackOut_14_2 = stackIn_14_2;
-            stackOut_14_3 = stackIn_14_3;
-            stackOut_14_4 = stackIn_14_4;
-            stackOut_14_5 = stackIn_14_5;
-            stackOut_14_6 = 1;
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_16_2 = stackOut_14_2;
-            stackIn_16_3 = stackOut_14_3;
-            stackIn_16_4 = stackOut_14_4;
-            stackIn_16_5 = stackOut_14_5;
-            stackIn_16_6 = stackOut_14_6;
+
+            stackIn_16_1 = stackIn_15_1;
+            stackIn_16_2 = stackIn_15_2;
+            stackIn_16_3 = stackIn_15_3;
+            stackIn_16_4 = stackIn_15_4;
+            stackIn_16_5 = stackIn_15_5;
+            stackIn_16_6 = 1;
             break L4;
           }
         }
         L5: {
-          gfa.a(stackIn_16_0 != 0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4 != 0, stackIn_16_5, stackIn_16_6 != 0, param1, 0, true, 109, 11);
+          gfa.a(stackIn_13_0 != 0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4 != 0, stackIn_16_5, stackIn_16_6 != 0, param1, 0, true, 109, 11);
           if (aba.field_f) {
             sja.field_fb.c(57, (byte) 100);
             aba.field_f = false;

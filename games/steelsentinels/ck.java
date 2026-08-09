@@ -18,7 +18,7 @@ class ck {
     static gh[] field_f;
 
     final static ll a(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = -105 / ((param0 - 83) / 42);
         if (kh.field_w == null) {
           kh.field_w = new ll();

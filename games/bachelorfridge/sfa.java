@@ -9,7 +9,7 @@ abstract class sfa extends bw {
     abstract ii a(op param0, int param1);
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
-        int var5 = 0;
+        int var5;
         var5 = -51 % ((-79 - param2) / 46);
         if (param3 >= an.field_q) {
           if (param3 > ha.field_n) {
@@ -36,7 +36,7 @@ abstract class sfa extends bw {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        pf var3 = null;
+        pf var3;
         var3 = sja.field_fb;
         var3.c(param0, (byte) 119);
         var3.d(3, 0);

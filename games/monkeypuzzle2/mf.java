@@ -20,6 +20,6 @@ final class mf {
         if (!param0) {
             return;
         }
-        Object discarded$0 = netscape.javascript.JSObject.getWindow(param1).eval(param2);
+        netscape.javascript.JSObject.getWindow(param1).eval(param2);
     }
 }

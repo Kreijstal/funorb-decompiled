@@ -30,10 +30,10 @@ abstract class tl {
     }
 
     final static vk a(int param0, boolean param1) {
-        int discarded$4 = 0;
-        String discarded$5 = null;
-        int discarded$6 = 0;
-        String discarded$7 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_11_0 = 0;
+        int[] stackIn_24_0 = null;
+        Throwable decompiledCaughtException = null;
         w var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -42,16 +42,6 @@ abstract class tl {
         int var7 = 0;
         w var8 = null;
         vd var9 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int[] stackIn_24_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int[] stackOut_23_0 = null;
-        Object stackOut_22_0 = null;
         var7 = Main.field_T;
         if (param0 == 24881) {
           L0: {
@@ -59,12 +49,10 @@ abstract class tl {
             var2 = var8;
             var3 = var8.f(-112);
             if (0 == (var3 & 128)) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               break L0;
             } else {
-              stackOut_3_0 = 1;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = 1;
               break L0;
             }
           }
@@ -85,12 +73,10 @@ abstract class tl {
           }
           L2: {
             if (var8.f(76) != 1) {
-              stackOut_10_0 = 0;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = 0;
               break L2;
             } else {
-              stackOut_9_0 = 1;
-              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_0 = 1;
               break L2;
             }
           }
@@ -107,13 +93,13 @@ abstract class tl {
           }
           L4: {
             if ((hg.field_b ^ -1) == -2) {
-              discarded$4 = var8.d((byte) 72);
-              discarded$5 = var8.c(false);
+              var8.d((byte) 72);
+              var8.c(false);
               break L4;
             } else {
               if ((hg.field_b ^ -1) == -5) {
-                discarded$6 = var8.d((byte) 72);
-                discarded$7 = var8.c(false);
+                var8.d((byte) 72);
+                var8.c(false);
                 break L4;
               } else {
                 break L4;
@@ -132,12 +118,10 @@ abstract class tl {
                   var9 = mh.field_d.a(var5, -32769);
                   hi.field_b = var9.b((byte) 28);
                   if (!fj.field_c.equals(ri.field_c)) {
-                    stackOut_23_0 = var9.field_m;
-                    stackIn_24_0 = stackOut_23_0;
+                    stackIn_24_0 = var9.field_m;
                     break L6;
                   } else {
-                    stackOut_22_0 = null;
-                    stackIn_24_0 = (int[]) ((Object) stackOut_22_0);
+                    stackIn_24_0 = null;
                     break L6;
                   }
                 }

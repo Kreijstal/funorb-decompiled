@@ -24,25 +24,13 @@ abstract class ou {
 
     private final void b(int param0) {
         int var2 = 0;
-        int var3 = 0;
-        var3 = TombRacer.field_G ? 1 : 0;
+        int var3 = TombRacer.field_G ? 1 : 0;
         this.field_c = new qea(new int[]{this.field_b});
         this.field_d = new int[this.field_a];
-        var2 = 0;
-        L0: while (true) {
-          if (var2 < this.field_a) {
+        for (var2 = 0; var2 < this.field_a; var2++) {
             this.field_d[var2] = this.field_c.b(95);
-            var2++;
-            if (var3 == 0) {
-              continue L0;
-            } else {
-              return;
-            }
-          } else {
-            var2 = -123 % ((-62 - param0) / 49);
-            return;
-          }
         }
+        var2 = -123 % ((-62 - param0) / 49);
     }
 
     abstract wea a(byte param0);

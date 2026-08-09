@@ -7,7 +7,7 @@ final class vo extends iq {
     private java.awt.Component field_m;
 
     final void a(java.awt.Graphics param0, int param1, int param2, int param3) {
-        boolean discarded$10 = param0.drawImage(this.field_c, param1, param2, (java.awt.image.ImageObserver) ((Object) this.field_m));
+        param0.drawImage(this.field_c, param1, param2, (java.awt.image.ImageObserver) ((Object) this.field_m));
         if (param3 != -23820) {
             java.awt.Graphics var6 = (java.awt.Graphics) null;
             this.a((java.awt.Graphics) null, 50, 82, 44);
@@ -18,10 +18,10 @@ final class vo extends iq {
     }
 
     final void a(int param0, int param1, int param2, java.awt.Component param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
-        java.awt.Component var8 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
+        java.awt.Component var8;
         if (param2 != -6980) {
           var8 = (java.awt.Component) null;
           this.a(16, 8, -58, (java.awt.Component) null);

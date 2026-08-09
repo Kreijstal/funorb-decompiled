@@ -29,7 +29,6 @@ final class kn extends ie {
 
     final void b(int param0, ng param1) {
         ud var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param1 instanceof ud)) {
                 throw new IllegalArgumentException();
@@ -40,16 +39,16 @@ final class kn extends ie {
             }
             this.field_N.b(param0 ^ -1392505192, var3);
             var3.field_N = true;
-            discarded$0 = var3.a((ng) (this), 27);
+            var3.a((ng) (this), 27);
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) ((Object) runtimeException), "kn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final ng l(int param0) {
-        nm var2 = null;
-        ud var3 = null;
-        int var4 = 0;
+        nm var2;
+        ud var3;
+        int var4;
         L0: {
           var4 = Pixelate.field_H ? 1 : 0;
           if (param0 >= 48) {
@@ -95,9 +94,9 @@ final class kn extends ie {
     }
 
     final ud n(int param0) {
-        nm var2 = null;
-        ud var3 = null;
-        int var4 = 0;
+        nm var2;
+        ud var3;
+        int var4;
         L0: {
           var4 = Pixelate.field_H ? 1 : 0;
           if (param0 == 640) {

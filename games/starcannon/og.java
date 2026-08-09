@@ -24,7 +24,7 @@ final class og {
     }
 
     final static rj a(int param0, byte param1) {
-        rj var2 = null;
+        rj var2;
         var2 = new rj();
         sd.field_d.b(124, var2);
         if (param1 != 113) {

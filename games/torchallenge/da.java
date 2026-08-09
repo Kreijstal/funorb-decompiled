@@ -45,12 +45,9 @@ class da {
     }
 
     final boolean b(int param0) {
-        boolean discarded$6 = false;
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 11163) {
-          discarded$6 = this.b(-32);
+          this.b(-32);
           if (null != this.field_h) {
             return true;
           } else {
@@ -59,12 +56,10 @@ class da {
         } else {
           L0: {
             if (null == this.field_h) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L0;
             }
           }

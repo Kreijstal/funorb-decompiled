@@ -27,7 +27,7 @@ final class cha extends lw {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
+        int var2;
         if (param0 >= 103) {
           var2 = (int)((-Math.cos((double)(4 * vr.field_b) * 3.141592653589793 / 100.0) + 1.0) * 256.0);
           if (this.field_e == 0) {
@@ -49,7 +49,7 @@ final class cha extends lw {
     }
 
     final void a(int param0, byte param1) {
-        int var4 = 0;
+        int var4;
         var4 = BachelorFridge.field_y;
         if (param1 != 73) {
           this.a(26);

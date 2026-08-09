@@ -6,7 +6,7 @@ final class id {
     static volatile int field_b;
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1;
         L0: {
           if ((ck.field_f ^ -1) >= -33) {
             break L0;
@@ -50,20 +50,16 @@ final class id {
     }
 
     final static void a(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int var1;
+        int var2;
         L0: {
           var2 = OrbDefence.field_D ? 1 : 0;
           if (!param0) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }

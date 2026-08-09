@@ -9,7 +9,6 @@ final class kc {
     final static void a(int param0, byte param1, ei param2) {
         la var6 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var6 = ra.field_C;
             var6.c(param0, 7);
@@ -22,7 +21,7 @@ final class kc {
                 var6.a(param2.field_l.length, (byte) -102);
                 var6.a(param2.field_l.length, 96, 0, param2.field_l);
             }
-            discarded$0 = var6.a(var4, false);
+            var6.a(var4, false);
             var6.field_k = var6.field_k - 4;
             param2.field_n = var6.e((byte) 113);
             int var5 = -14 / ((param1 - -66) / 49);
@@ -33,6 +32,8 @@ final class kc {
     }
 
     final static void b(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -49,8 +50,6 @@ final class kc {
         th var14 = null;
         th var15 = null;
         int[] var16 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = TrackController.field_F ? 1 : 0;
         try {
           L0: {

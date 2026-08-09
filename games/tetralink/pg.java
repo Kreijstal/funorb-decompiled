@@ -18,13 +18,13 @@ final class pg implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        Exception var1 = null;
         nk var2 = null;
-        Throwable var3 = null;
         int var4 = 0;
+        Throwable decompiledCaughtException = null;
+        Exception var1 = null;
+        Throwable var3 = null;
         Object var5 = null;
         String var6 = null;
-        Throwable decompiledCaughtException = null;
         var4 = TetraLink.field_J;
         this.field_k = true;
         try {

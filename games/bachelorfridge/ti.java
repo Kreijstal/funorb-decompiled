@@ -10,19 +10,19 @@ final class ti {
     }
 
     final static String a(byte param0, int param1, long param2, int param3, boolean param4) {
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        StringBuilder var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        StringBuilder var10;
+        int var11;
+        int var12;
+        int var13;
         L0: {
           var13 = BachelorFridge.field_y;
           var6 = 44;
@@ -60,12 +60,12 @@ final class ti {
             var11 = 0;
             L4: while (true) {
               if (var11 >= param1) {
-                discarded$5 = var10.append((char) var6);
+                discarded$0 = var10.append((char) var6);
                 break L3;
               } else {
                 var12 = (int)param2;
                 param2 = param2 / 10L;
-                discarded$6 = var10.append((char)(-(10 * (int)param2) + var12 + 48));
+                discarded$1 = var10.append((char)(-(10 * (int)param2) + var12 + 48));
                 var11++;
                 continue L4;
               }
@@ -78,14 +78,14 @@ final class ti {
         L5: while (true) {
           var12 = (int)param2;
           param2 = param2 / 10L;
-          discarded$7 = var10.append((char)(48 + (var12 - 10 * (int)param2)));
+          discarded$2 = var10.append((char)(48 + (var12 - 10 * (int)param2)));
           if (0L != param2) {
             if (!param4) {
               continue L5;
             } else {
               var11++;
               if (var11 % 3 == 0) {
-                discarded$8 = var10.append((char) var7);
+                discarded$3 = var10.append((char) var7);
                 continue L5;
               } else {
                 continue L5;
@@ -94,7 +94,7 @@ final class ti {
           } else {
             L6: {
               if (var8 != 0) {
-                discarded$9 = var10.append('-');
+                discarded$4 = var10.append('-');
                 break L6;
               } else {
                 break L6;

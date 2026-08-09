@@ -5,16 +5,30 @@ final class pe {
     static int[] field_a;
 
     final synchronized static byte[] a(int param0, byte param1) {
-        int fieldTemp$39 = 0;
-        int fieldTemp$40 = 0;
-        int fieldTemp$41 = 0;
-        int fieldTemp$42 = 0;
-        int fieldTemp$43 = 0;
-        int fieldTemp$44 = 0;
-        int fieldTemp$45 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        int dupTemp$2 = 0;
+        byte[][] arrayValue$3 = null;
+        int dupTemp$4 = 0;
+        byte[][] arrayValue$5 = null;
+        int fieldTemp$6 = 0;
+        int dupTemp$7 = 0;
+        byte[][] arrayValue$8 = null;
+        int dupTemp$9 = 0;
+        byte[][] arrayValue$10 = null;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int dupTemp$14 = 0;
+        byte[][] arrayValue$15 = null;
+        int dupTemp$16 = 0;
+        byte[][] arrayValue$17 = null;
+        int fieldTemp$18 = 0;
+        int fieldTemp$19 = 0;
+        int dupTemp$20 = 0;
+        byte[][] arrayValue$21 = null;
+        int fieldTemp$22 = 0;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
         if (param1 == -2) {
           if (param0 == 100) {
             if (0 >= nn.field_cb) {
@@ -28,8 +42,10 @@ final class pe {
                       } else {
                         if (param0 == ed.field_V[var2]) {
                           if (0 < im.field_d[var2]) {
-                            im.field_d[var2] = im.field_d[var2] - 1;
-                            var3 = rk.field_c[var2][im.field_d[var2] - 1];
+                            dupTemp$2 = im.field_d[var2] - 1;
+                            arrayValue$3 = rk.field_c[var2];
+                            im.field_d[var2] = dupTemp$2;
+                            var3 = arrayValue$3[dupTemp$2];
                             rk.field_c[var2][im.field_d[var2]] = null;
                             return var3;
                           } else {
@@ -55,8 +71,10 @@ final class pe {
                         } else {
                           if (param0 == ed.field_V[var2]) {
                             if (0 < im.field_d[var2]) {
-                              im.field_d[var2] = im.field_d[var2] - 1;
-                              var3 = rk.field_c[var2][im.field_d[var2] - 1];
+                              dupTemp$4 = im.field_d[var2] - 1;
+                              arrayValue$5 = rk.field_c[var2];
+                              im.field_d[var2] = dupTemp$4;
+                              var3 = arrayValue$5[dupTemp$4];
                               rk.field_c[var2][im.field_d[var2]] = null;
                               return var3;
                             } else {
@@ -73,9 +91,9 @@ final class pe {
                       return new byte[param0];
                     }
                   } else {
-                    fieldTemp$39 = uf.field_e - 1;
+                    fieldTemp$6 = uf.field_e - 1;
                     uf.field_e = uf.field_e - 1;
-                    var2_ref_byte__ = ng.field_q[fieldTemp$39];
+                    var2_ref_byte__ = ng.field_q[fieldTemp$6];
                     ng.field_q[uf.field_e] = null;
                     return var2_ref_byte__;
                   }
@@ -89,8 +107,10 @@ final class pe {
                         if (ed.field_V.length > var2) {
                           if (param0 == ed.field_V[var2]) {
                             if (0 < im.field_d[var2]) {
-                              im.field_d[var2] = im.field_d[var2] - 1;
-                              var3 = rk.field_c[var2][im.field_d[var2] - 1];
+                              dupTemp$7 = im.field_d[var2] - 1;
+                              arrayValue$8 = rk.field_c[var2];
+                              im.field_d[var2] = dupTemp$7;
+                              var3 = arrayValue$8[dupTemp$7];
                               rk.field_c[var2][im.field_d[var2]] = null;
                               return var3;
                             } else {
@@ -116,8 +136,10 @@ final class pe {
                           if (ed.field_V.length > var2) {
                             if (param0 == ed.field_V[var2]) {
                               if (0 < im.field_d[var2]) {
-                                im.field_d[var2] = im.field_d[var2] - 1;
-                                var3 = rk.field_c[var2][im.field_d[var2] - 1];
+                                dupTemp$9 = im.field_d[var2] - 1;
+                                arrayValue$10 = rk.field_c[var2];
+                                im.field_d[var2] = dupTemp$9;
+                                var3 = arrayValue$10[dupTemp$9];
                                 rk.field_c[var2][im.field_d[var2]] = null;
                                 return var3;
                               } else {
@@ -136,25 +158,25 @@ final class pe {
                         return new byte[param0];
                       }
                     } else {
-                      fieldTemp$40 = uf.field_e - 1;
+                      fieldTemp$11 = uf.field_e - 1;
                       uf.field_e = uf.field_e - 1;
-                      var2_ref_byte__ = ng.field_q[fieldTemp$40];
+                      var2_ref_byte__ = ng.field_q[fieldTemp$11];
                       ng.field_q[uf.field_e] = null;
                       return var2_ref_byte__;
                     }
                   }
                 } else {
-                  fieldTemp$41 = ae.field_L - 1;
+                  fieldTemp$12 = ae.field_L - 1;
                   ae.field_L = ae.field_L - 1;
-                  var2_ref_byte__ = bg.field_j[fieldTemp$41];
+                  var2_ref_byte__ = bg.field_j[fieldTemp$12];
                   bg.field_j[ae.field_L] = null;
                   return var2_ref_byte__;
                 }
               }
             } else {
-              fieldTemp$42 = nn.field_cb - 1;
+              fieldTemp$13 = nn.field_cb - 1;
               nn.field_cb = nn.field_cb - 1;
-              var2_ref_byte__ = d.field_f[fieldTemp$42];
+              var2_ref_byte__ = d.field_f[fieldTemp$13];
               d.field_f[nn.field_cb] = null;
               return var2_ref_byte__;
             }
@@ -167,8 +189,10 @@ final class pe {
                     if (ed.field_V.length > var2) {
                       if (param0 == ed.field_V[var2]) {
                         if (0 < im.field_d[var2]) {
-                          im.field_d[var2] = im.field_d[var2] - 1;
-                          var3 = rk.field_c[var2][im.field_d[var2] - 1];
+                          dupTemp$14 = im.field_d[var2] - 1;
+                          arrayValue$15 = rk.field_c[var2];
+                          im.field_d[var2] = dupTemp$14;
+                          var3 = arrayValue$15[dupTemp$14];
                           rk.field_c[var2][im.field_d[var2]] = null;
                           return var3;
                         } else {
@@ -194,8 +218,10 @@ final class pe {
                       if (ed.field_V.length > var2) {
                         if (param0 == ed.field_V[var2]) {
                           if (0 < im.field_d[var2]) {
-                            im.field_d[var2] = im.field_d[var2] - 1;
-                            var3 = rk.field_c[var2][im.field_d[var2] - 1];
+                            dupTemp$16 = im.field_d[var2] - 1;
+                            arrayValue$17 = rk.field_c[var2];
+                            im.field_d[var2] = dupTemp$16;
+                            var3 = arrayValue$17[dupTemp$16];
                             rk.field_c[var2][im.field_d[var2]] = null;
                             return var3;
                           } else {
@@ -214,9 +240,9 @@ final class pe {
                     return new byte[param0];
                   }
                 } else {
-                  fieldTemp$43 = uf.field_e - 1;
+                  fieldTemp$18 = uf.field_e - 1;
                   uf.field_e = uf.field_e - 1;
-                  var2_ref_byte__ = ng.field_q[fieldTemp$43];
+                  var2_ref_byte__ = ng.field_q[fieldTemp$18];
                   ng.field_q[uf.field_e] = null;
                   return var2_ref_byte__;
                 }
@@ -228,9 +254,9 @@ final class pe {
                     break L6;
                   } else {
                     if ((uf.field_e ^ -1) < -1) {
-                      fieldTemp$44 = uf.field_e - 1;
+                      fieldTemp$19 = uf.field_e - 1;
                       uf.field_e = uf.field_e - 1;
-                      var2_ref_byte__ = ng.field_q[fieldTemp$44];
+                      var2_ref_byte__ = ng.field_q[fieldTemp$19];
                       ng.field_q[uf.field_e] = null;
                       return var2_ref_byte__;
                     } else {
@@ -244,8 +270,10 @@ final class pe {
                     if (ed.field_V.length > var2) {
                       if (param0 == ed.field_V[var2]) {
                         if (0 < im.field_d[var2]) {
-                          im.field_d[var2] = im.field_d[var2] - 1;
-                          var3 = rk.field_c[var2][im.field_d[var2] - 1];
+                          dupTemp$20 = im.field_d[var2] - 1;
+                          arrayValue$21 = rk.field_c[var2];
+                          im.field_d[var2] = dupTemp$20;
+                          var3 = arrayValue$21[dupTemp$20];
                           rk.field_c[var2][im.field_d[var2]] = null;
                           return var3;
                         } else {
@@ -264,9 +292,9 @@ final class pe {
                   return new byte[param0];
                 }
               } else {
-                fieldTemp$45 = ae.field_L - 1;
+                fieldTemp$22 = ae.field_L - 1;
                 ae.field_L = ae.field_L - 1;
-                var2_ref_byte__ = bg.field_j[fieldTemp$45];
+                var2_ref_byte__ = bg.field_j[fieldTemp$22];
                 bg.field_j[ae.field_L] = null;
                 return var2_ref_byte__;
               }
@@ -287,10 +315,9 @@ final class pe {
     }
 
     public static void a(boolean param0) {
-        byte[] discarded$0 = null;
         field_a = null;
         if (!param0) {
-            discarded$0 = pe.a(80, (byte) 40);
+            pe.a(80, (byte) 40);
         }
     }
 

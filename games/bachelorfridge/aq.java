@@ -6,7 +6,7 @@ final class aq {
     static sna field_b;
 
     final static void a(int param0, byte param1) {
-        pf var2 = null;
+        pf var2;
         if (param1 < 42) {
           aq.a(121, (byte) 73);
           var2 = sja.field_fb;
@@ -24,7 +24,7 @@ final class aq {
     }
 
     final static void a(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         var3 = BachelorFridge.field_y;
         tla.d(param1 ^ 92);
         if (0 == param0) {

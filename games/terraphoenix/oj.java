@@ -14,8 +14,8 @@ abstract class oj extends vh {
     int field_r;
 
     private final void a(byte param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
+        int var6;
+        int var7;
         var6 = this.field_q << 294922755;
         var7 = this.field_u << -232022461;
         param4 = (var6 & 15) + (param4 << -174144380);

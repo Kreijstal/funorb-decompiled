@@ -6,39 +6,27 @@ final class hi implements dja {
     static int field_b;
 
     public final tv[] a(int param0, int param1) {
-        byte[] discarded$0 = null;
         if (param0 != 11995) {
             CharSequence var4 = (CharSequence) null;
-            discarded$0 = hi.a((CharSequence) null, 67);
+            hi.a((CharSequence) null, 67);
         }
         return (tv[]) ((Object) new vpa[param1]);
     }
 
     final static byte[] a(CharSequence param0, int param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        byte[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         byte[] stackIn_68_0 = null;
-        RuntimeException stackIn_70_0 = null;
-        StringBuilder stackIn_70_1 = null;
         RuntimeException stackIn_71_0 = null;
         StringBuilder stackIn_71_1 = null;
         RuntimeException stackIn_72_0 = null;
         StringBuilder stackIn_72_1 = null;
         String stackIn_72_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_67_0 = null;
-        RuntimeException stackOut_69_0 = null;
-        StringBuilder stackOut_69_1 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        String stackOut_71_2 = null;
-        RuntimeException stackOut_70_0 = null;
-        StringBuilder stackOut_70_1 = null;
-        String stackOut_70_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        byte[] var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
         var6 = VoidHunters.field_G;
         try {
           L0: {
@@ -55,8 +43,7 @@ final class hi implements dja {
             }
             L2: while (true) {
               if (var2_int <= var4) {
-                stackOut_67_0 = (byte[]) (var3);
-                stackIn_68_0 = stackOut_67_0;
+                stackIn_68_0 = (byte[]) (var3);
                 break L0;
               } else {
                 L3: {
@@ -234,27 +221,19 @@ final class hi implements dja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_69_0 = (RuntimeException) (var2);
-            stackOut_69_1 = new StringBuilder().append("hi.D(");
-            stackIn_71_0 = stackOut_69_0;
-            stackIn_71_1 = stackOut_69_1;
-            stackIn_70_0 = stackOut_69_0;
-            stackIn_70_1 = stackOut_69_1;
+            stackIn_71_0 = (RuntimeException) (var2);
+
+            stackIn_71_1 = new StringBuilder().append("hi.D(");
+
             if (param0 == null) {
-              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
-              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackOut_71_2 = "null";
-              stackIn_72_0 = stackOut_71_0;
-              stackIn_72_1 = stackOut_71_1;
-              stackIn_72_2 = stackOut_71_2;
+              stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
+              stackIn_72_2 = "null";
               break L7;
             } else {
-              stackOut_70_0 = (RuntimeException) ((Object) stackIn_70_0);
-              stackOut_70_1 = (StringBuilder) ((Object) stackIn_70_1);
-              stackOut_70_2 = "{...}";
-              stackIn_72_0 = stackOut_70_0;
-              stackIn_72_1 = stackOut_70_1;
-              stackIn_72_2 = stackOut_70_2;
+              stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
+              stackIn_72_2 = "{...}";
               break L7;
             }
           }
@@ -269,14 +248,14 @@ final class hi implements dja {
     }
 
     final static phb[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9 = 0;
-        phb[] var10 = null;
-        phb[] var11_ref_phb__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        phb var13 = null;
-        int var14 = 0;
-        int var15 = 0;
+        int var9;
+        phb[] var10;
+        phb[] var11_ref_phb__;
+        int var11;
+        int var12;
+        phb var13;
+        int var14;
+        int var15;
         var15 = VoidHunters.field_G;
         var9 = param1 - (-param5 + -param6);
         var10 = new phb[]{new phb(var9, var9), new phb(param3, var9), new phb(var9, var9), new phb(var9, param3), new phb(64, 64), new phb(var9, param3), new phb(var9, var9), new phb(param3, var9), new phb(var9, var9)};
@@ -348,7 +327,7 @@ final class hi implements dja {
                       } else {
                         var10[0].field_r[var12 + var11 * var9] = param7;
                         var10[0].field_r[var12 * var9 - -var11] = param7;
-                        if (var12 < -var11 + var9) {
+                        if ((var12 ^ -1) > (-var11 + var9 ^ -1)) {
                           var10[2].field_r[var12 - -(var9 * var11)] = param7;
                           var10[6].field_r[var11 + var9 * var12] = param7;
                           var12++;

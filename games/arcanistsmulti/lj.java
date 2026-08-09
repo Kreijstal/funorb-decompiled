@@ -20,31 +20,20 @@ final class lj extends hg {
     static String field_p;
 
     final static void a(int param0, ec param1, int param2, int param3) {
-        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
               if (param3 >= 60) {
                 break L1;
               } else {
-                discarded$2 = lj.b(false);
+                lj.b(false);
                 break L1;
               }
             }
@@ -54,27 +43,19 @@ final class lj extends hg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("lj.Q(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("lj.Q(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -109,8 +90,8 @@ final class lj extends hg {
     }
 
     final int a(long param0, byte param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param1 < -15) {
           if (this.field_f < this.field_i) {
@@ -151,21 +132,21 @@ final class lj extends hg {
     }
 
     final static void a(boolean param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        qb var4 = null;
-        qb var5 = null;
-        int var6 = 0;
-        qb var8 = null;
-        qb var9 = null;
-        qb var10 = null;
-        qb var11 = null;
-        qb var12 = null;
-        qb var13 = null;
-        qb var14 = null;
-        qb var15 = null;
-        qb var16 = null;
-        qb var17 = null;
+        int var2;
+        int var3;
+        qb var4;
+        qb var5;
+        int var6;
+        qb var8;
+        qb var9;
+        qb var10;
+        qb var11;
+        qb var12;
+        qb var13;
+        qb var14;
+        qb var15;
+        qb var16;
+        qb var17;
         L0: {
           var6 = ArcanistsMulti.field_G ? 1 : 0;
           var2 = param1;

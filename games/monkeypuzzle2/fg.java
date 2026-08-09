@@ -6,13 +6,11 @@ abstract class fg {
     static int field_a;
 
     final int a(long param0, int param1) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        long var4 = 0L;
+        long var4;
         var4 = this.a(-43);
         if ((var4 ^ -1L) >= -1L) {
           if (param1 != -128) {
-            discarded$4 = this.a(31L, -83);
+            this.a(31L, -83);
             return this.a(param0, (byte) 37);
           } else {
             return this.a(param0, (byte) 37);
@@ -22,7 +20,7 @@ abstract class fg {
           if (param1 == -128) {
             return this.a(param0, (byte) 37);
           } else {
-            discarded$5 = this.a(31L, -83);
+            this.a(31L, -83);
             return this.a(param0, (byte) 37);
           }
         }
@@ -35,9 +33,8 @@ abstract class fg {
     abstract void a(boolean param0);
 
     final static char a(int param0, byte param1) {
-        char discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var2 = param1 & 255;
         if (param0 == 16) {
           if (-1 == (var2 ^ -1)) {
@@ -64,7 +61,7 @@ abstract class fg {
             }
           }
         } else {
-          discarded$1 = fg.a(-100, (byte) -72);
+          fg.a(-100, (byte) -72);
           if (-1 == (var2 ^ -1)) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
           } else {

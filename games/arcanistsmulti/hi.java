@@ -23,7 +23,7 @@ final class hi {
     }
 
     final static void a(int param0, boolean param1) {
-        Object var2 = null;
+        Object var2;
         if (param0 >= -45) {
           L0: {
             hi.a(23, true);

@@ -15,9 +15,8 @@ final class od extends hl {
     int field_j;
 
     public static void a(int param0) {
-        w discarded$2 = null;
         if (param0 <= 22) {
-          discarded$2 = od.a(true);
+          od.a(true);
           field_q = null;
           field_o = null;
           field_i = null;

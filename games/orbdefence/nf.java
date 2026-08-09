@@ -13,14 +13,11 @@ abstract class nf extends o {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
         var1 = ad.field_b;
         synchronized (var1) {
           L0: {
             if (md.field_g == pk.field_H) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               return stackIn_4_0 != 0;
             } else {
               L1: {
@@ -34,8 +31,7 @@ abstract class nf extends o {
               ob.field_K = g.field_g[md.field_g];
               od.field_k = ll.field_b[md.field_g];
               md.field_g = 1 + md.field_g & 127;
-              stackOut_7_0 = 1;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -60,25 +56,9 @@ abstract class nf extends o {
     }
 
     final static byte[] a(byte[] param0, int param1) {
-        int discarded$1 = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        byte[] var5_ref_byte__ = null;
-        byte[] var6 = null;
-        Object var7 = null;
-        Throwable var8 = null;
-        mg var9 = null;
-        byte[] var10 = null;
-        byte[] var11 = null;
-        byte[] var12 = null;
-        byte[] var13 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_10_0 = null;
         byte[] stackIn_25_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
@@ -86,17 +66,18 @@ abstract class nf extends o {
         String stackIn_29_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        byte[] stackOut_24_0 = null;
-        byte[] stackOut_9_0 = null;
-        byte[] stackOut_1_0 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        byte[] var5_ref_byte__ = null;
+        byte[] var6 = null;
+        Object var7 = null;
+        mg var9 = null;
+        byte[] var10 = null;
+        byte[] var11 = null;
+        byte[] var12 = null;
+        byte[] var13 = null;
         try {
           L0: {
             if (param1 == -2) {
@@ -143,7 +124,7 @@ abstract class nf extends o {
                             if ((var3 ^ -1) != -2) {
                               break L6;
                             } else {
-                              discarded$1 = ac.a(var13, var5, param0, var4, 9);
+                              ac.a(var13, var5, param0, var4, 9);
                               if (!OrbDefence.field_D) {
                                 break L5;
                               } else {
@@ -160,8 +141,7 @@ abstract class nf extends o {
                           }
                           break L5;
                         }
-                        stackOut_24_0 = (byte[]) (var6);
-                        stackIn_25_0 = stackOut_24_0;
+                        stackIn_25_0 = (byte[]) (var6);
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
@@ -172,8 +152,7 @@ abstract class nf extends o {
                     var10 = var12;
                     var5_ref_byte__ = var10;
                     var9.a((byte) 114, var12, 0, var4);
-                    stackOut_9_0 = (byte[]) (var5_ref_byte__);
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = (byte[]) (var5_ref_byte__);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -181,8 +160,7 @@ abstract class nf extends o {
               }
               throw new RuntimeException();
             } else {
-              stackOut_1_0 = (byte[]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (byte[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -191,27 +169,19 @@ abstract class nf extends o {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var2);
-            stackOut_26_1 = new StringBuilder().append("nf.D(");
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_28_0 = (RuntimeException) (var2);
+
+            stackIn_28_1 = new StringBuilder().append("nf.D(");
+
             if (param0 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L8;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L8;
             }
           }

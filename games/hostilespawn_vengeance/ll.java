@@ -19,14 +19,10 @@ final class ll {
     public static void a(int param0) {
         field_e = null;
         field_b = null;
-        int var1 = 122;
+        int var1 = 122 / ((-61 - param0) / 56);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
     }
 }

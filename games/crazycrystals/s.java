@@ -16,15 +16,14 @@ final class s extends ke {
     private long[] field_n;
 
     final int a(long param0, int param1) {
-        dl[] discarded$1 = null;
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         L0: {
           var5 = CrazyCrystals.field_B;
           if (param1 == -19) {
             break L0;
           } else {
-            discarded$1 = s.a(69, -78, -40, (byte) 66);
+            s.a(69, -78, -40, (byte) 66);
             break L0;
           }
         }
@@ -70,11 +69,10 @@ final class s extends ke {
     }
 
     public static void b(byte param0) {
-        dl[] discarded$2 = null;
         field_d = null;
         field_h = null;
         if (param0 != 118) {
-          discarded$2 = s.a(-125, -56, 33, (byte) -7);
+          s.a(-125, -56, 33, (byte) -7);
           field_f = null;
           field_o = null;
           return;
@@ -108,24 +106,12 @@ final class s extends ke {
         String var6 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         Throwable decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        String stackOut_4_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             try {
@@ -143,15 +129,13 @@ final class s extends ke {
                 var5 = new byte[var3_int];
                 param0.field_f = param0.field_f + dm.field_f.a(param0.field_h, 0, -1, var3_int, param0.field_f, var5);
                 var6 = gd.a((byte) 61, var5, 0, var3_int);
-                stackOut_2_0 = (String) (var6);
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (String) (var6);
                 break L1;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (Exception) (Object) decompiledCaughtException;
-              stackOut_4_0 = "Cabbage";
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = "Cabbage";
               return stackIn_5_0;
             }
             break L0;
@@ -160,27 +144,19 @@ final class s extends ke {
           decompiledCaughtException = decompiledCaughtParameter1;
           L3: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3_ref);
-            stackOut_6_1 = new StringBuilder().append("s.I(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3_ref);
+
+            stackIn_8_1 = new StringBuilder().append("s.I(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -203,11 +179,11 @@ final class s extends ke {
     }
 
     private final long c(byte param0) {
-        long var2 = 0L;
-        long var4 = 0L;
-        long var6 = 0L;
-        int var8 = 0;
-        int var9 = 0;
+        long var2;
+        long var4;
+        long var6;
+        int var8;
+        int var9;
         L0: {
           var9 = CrazyCrystals.field_B;
           var2 = System.nanoTime();

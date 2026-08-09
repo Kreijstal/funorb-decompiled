@@ -12,17 +12,16 @@ final class wm implements Iterable {
     static int field_b;
 
     final le a(boolean param0, long param1) {
-        int discarded$2 = 0;
-        le var4 = null;
-        le var5 = null;
-        int var6 = 0;
+        le var4;
+        le var5;
+        int var6;
         var6 = ZombieDawn.field_J;
         var4 = this.field_c[(int)((long)(-1 + this.field_f) & param1)];
         this.field_a = var4.field_b;
         L0: while (true) {
           if (var4 == this.field_a) {
             if (param0) {
-              discarded$2 = wm.a(17, (byte) 50);
+              wm.a(17, (byte) 50);
               this.field_a = null;
               return null;
             } else {
@@ -43,8 +42,8 @@ final class wm implements Iterable {
     }
 
     final static int a(int param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var2 = 41 / ((-39 - param1) / 56);
         var3 = 0;
         if (-1 >= (param0 ^ -1)) {
@@ -173,23 +172,12 @@ final class wm implements Iterable {
     final static hn a(int param0, gi param1) {
         RuntimeException var2 = null;
         hn stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hn stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -200,35 +188,26 @@ final class wm implements Iterable {
                 break L1;
               }
             }
-            stackOut_2_0 = aa.a(106, fn.a(param1, 100, 96));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = aa.a(106, fn.a(param1, 100, 96));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2);
-            stackOut_4_1 = new StringBuilder().append("wm.B(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2);
+
+            stackIn_6_1 = new StringBuilder().append("wm.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -243,7 +222,6 @@ final class wm implements Iterable {
 
     final void a(long param0, boolean param1, le param2) {
         le var5 = null;
-        Iterator discarded$0 = null;
         try {
             if (null != param2.field_d) {
                 param2.b(-27598);
@@ -251,7 +229,7 @@ final class wm implements Iterable {
             var5 = this.field_c[(int)((long)(this.field_f - 1) & param0)];
             param2.field_b = var5;
             if (!param1) {
-                discarded$0 = this.iterator();
+                this.iterator();
             }
             param2.field_d = var5.field_d;
             param2.field_d.field_b = param2;

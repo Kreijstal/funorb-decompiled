@@ -21,7 +21,7 @@ final class qj {
     }
 
     final wf a(int param0) {
-        wf var2 = null;
+        wf var2;
         if (param0 == -9424) {
           var2 = this.field_d.field_f;
           if (this.field_d == var2) {
@@ -44,22 +44,12 @@ final class qj {
 
     final static ti[] a(int param0, int param1, ci param2, byte param3) {
         RuntimeException var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             if (param3 == -57) {
@@ -78,27 +68,19 @@ final class qj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var4);
-            stackOut_6_1 = new StringBuilder().append("qj.H(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var4);
+
+            stackIn_8_1 = new StringBuilder().append("qj.H(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L1;
             }
           }
@@ -115,15 +97,14 @@ final class qj {
     }
 
     final wf a(boolean param0) {
-        wf discarded$2 = null;
-        wf var2 = null;
+        wf var2;
         var2 = this.field_b;
         if (this.field_d == var2) {
           this.field_b = null;
           return null;
         } else {
           if (!param0) {
-            discarded$2 = this.a(true);
+            this.a(true);
             this.field_b = var2.field_b;
             return var2;
           } else {
@@ -135,22 +116,12 @@ final class qj {
 
     final void a(wf param0, int param1) {
         RuntimeException var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             L1: {
@@ -176,27 +147,19 @@ final class qj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("qj.O(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("qj.O(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -205,7 +168,7 @@ final class qj {
     }
 
     final wf b(int param0) {
-        wf var2 = null;
+        wf var2;
         var2 = this.field_d.field_f;
         if (param0 == -10231) {
           if (this.field_d == var2) {
@@ -231,8 +194,6 @@ final class qj {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -240,26 +201,14 @@ final class qj {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 >= 36) {
-              stackOut_3_0 = ig.a(10, false, true, param0);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = ig.a(10, false, true, param0);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -268,27 +217,19 @@ final class qj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("qj.F(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("qj.F(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -302,58 +243,122 @@ final class qj {
     }
 
     final void g(int param0) {
-        boolean discarded$1 = false;
+        int statePc = 0;
         int var3 = 0;
         wf var4 = null;
         wf var5 = null;
-        var3 = Transmogrify.field_A ? 1 : 0;
-        if (param0 == -1) {
-          L0: while (true) {
-            L1: {
-              var4 = this.field_d.field_b;
-              if (this.field_d != var4) {
-                var4.c(5);
-                break L1;
-              } else {
-                if (var3 != 0) {
-                  break L1;
-                } else {
-                  if (var3 == 0) {
-                    this.field_b = null;
-                    return;
-                  } else {
-                    var4.c(5);
-                    break L1;
-                  }
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var3 = Transmogrify.field_A ? 1 : 0;
+                    if (param0 == -1) {
+                        statePc = 10;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
                 }
-              }
-            }
-            continue L0;
-          }
-        } else {
-          discarded$1 = qj.b((byte) 115);
-          L2: while (true) {
-            L3: {
-              var5 = this.field_d.field_b;
-              if (this.field_d == var5) {
-                if (var3 != 0) {
-                  break L3;
-                } else {
-                  if (var3 == 0) {
-                    this.field_b = null;
-                    return;
-                  } else {
+                case 1: {
+                    qj.b((byte) 115);
+                    statePc = 2;
+                    continue stateLoop;
+                }
+                case 2: {
+                    var5 = this.field_d.field_b;
+                    if (this.field_d == var5) {
+                        statePc = 4;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
                     var5.c(5);
-                    break L3;
-                  }
+                    statePc = 8;
+                    continue stateLoop;
                 }
-              } else {
-                var5.c(5);
-                break L3;
-              }
+                case 4: {
+                    if (var3 != 0) {
+                        statePc = 8;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    if (var3 == 0) {
+                        statePc = 9;
+                    } else {
+                        statePc = 7;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    var5.c(5);
+                    statePc = 8;
+                    continue stateLoop;
+                }
+                case 8: {
+                    if (var3 == 0) {
+                        statePc = 2;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    this.field_b = null;
+                    return;
+                }
+                case 10: {
+                    var4 = this.field_d.field_b;
+                    if (this.field_d != var4) {
+                        statePc = 14;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    if (var3 != 0) {
+                        statePc = 16;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
+                    if (var3 == 0) {
+                        statePc = 17;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 14: {
+                    var4.c(5);
+                    statePc = 16;
+                    continue stateLoop;
+                }
+                case 15: {
+                    var4.c(5);
+                    statePc = 16;
+                    continue stateLoop;
+                }
+                case 16: {
+                    if (var3 == 0) {
+                        statePc = 10;
+                    } else {
+                        statePc = 17;
+                    }
+                    continue stateLoop;
+                }
+                case 17: {
+                    this.field_b = null;
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            continue L2;
-          }
         }
     }
 
@@ -364,7 +369,7 @@ final class qj {
     }
 
     final wf f(int param0) {
-        wf var2 = null;
+        wf var2;
         var2 = this.field_b;
         if (var2 != this.field_d) {
           if (param0 != -33) {
@@ -406,14 +411,13 @@ final class qj {
     }
 
     final wf c(int param0) {
-        boolean discarded$2 = false;
-        wf var2 = null;
-        CharSequence var3 = null;
+        wf var2;
+        CharSequence var3;
         var2 = this.field_d.field_b;
         if (var2 != this.field_d) {
           if (param0 > -71) {
             var3 = (CharSequence) null;
-            discarded$2 = qj.a((CharSequence) null, 11);
+            qj.a((CharSequence) null, 11);
             var2.c(5);
             return var2;
           } else {
@@ -432,7 +436,7 @@ final class qj {
     }
 
     final static void e(int param0) {
-        int var1 = 0;
+        int var1;
         if (param0 <= -65) {
           if ((kc.field_g ^ -1) >= -33) {
             ec.a(0, 9956);

@@ -26,25 +26,14 @@ final class dl extends si {
     }
 
     final static void a(String param0, int param1, int param2) {
-        fg discarded$2 = null;
         RuntimeException runtimeException = null;
         int var3_int = 0;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
         try {
           L0: {
             L1: {
@@ -53,7 +42,7 @@ final class dl extends si {
               if (param2 >= 57) {
                 break L1;
               } else {
-                discarded$2 = dl.a(false, -65);
+                dl.a(false, -65);
                 break L1;
               }
             }
@@ -139,27 +128,19 @@ final class dl extends si {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             runtimeException = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (runtimeException);
-            stackOut_28_1 = new StringBuilder().append("dl.G(");
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackIn_30_0 = (RuntimeException) (runtimeException);
+
+            stackIn_30_1 = new StringBuilder().append("dl.G(");
+
             if (param0 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L9;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L9;
             }
           }
@@ -168,10 +149,10 @@ final class dl extends si {
     }
 
     final static fg a(boolean param0, int param1) {
-        int discarded$4 = 0;
-        String discarded$5 = null;
-        int discarded$6 = 0;
-        String discarded$7 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_9_0 = 0;
+        int[] stackIn_22_0 = null;
+        Throwable decompiledCaughtException = null;
         lh var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -181,28 +162,16 @@ final class dl extends si {
         int var8 = 0;
         lh var9 = null;
         ai var10 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
-        int[] stackIn_22_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        Object stackOut_21_0 = null;
-        int[] stackOut_20_0 = null;
         L0: {
           var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           var9 = dh.field_N;
           var2 = var9;
           var3 = var9.l(31760);
           if (-1 == (128 & var3 ^ -1)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -224,12 +193,10 @@ final class dl extends si {
         }
         L2: {
           if (-2 != (var9.l(31760) ^ -1)) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = 1;
             break L2;
           }
         }
@@ -246,15 +213,15 @@ final class dl extends si {
         }
         L4: {
           if (1 == kl.field_J) {
-            discarded$4 = var9.j(-788751192);
-            discarded$5 = var9.b((byte) -57);
+            var9.j(-788751192);
+            var9.b((byte) -57);
             break L4;
           } else {
             if ((kl.field_J ^ -1) != -5) {
               break L4;
             } else {
-              discarded$6 = var9.j(-788751192);
-              discarded$7 = var9.b((byte) -57);
+              var9.j(-788751192);
+              var9.b((byte) -57);
               break L4;
             }
           }
@@ -271,12 +238,10 @@ final class dl extends si {
                 var10 = nc.field_O.a(var6, (byte) -74);
                 am.field_m = var10.i(121);
                 if (tf.field_kb.equals(oa.field_d)) {
-                  stackOut_21_0 = null;
-                  stackIn_22_0 = (int[]) ((Object) stackOut_21_0);
+                  stackIn_22_0 = null;
                   break L6;
                 } else {
-                  stackOut_20_0 = var10.field_D;
-                  stackIn_22_0 = stackOut_20_0;
+                  stackIn_22_0 = var10.field_D;
                   break L6;
                 }
               }
@@ -301,7 +266,7 @@ final class dl extends si {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        nh var5 = null;
+        nh var5;
         if (param1 != 0) {
           return;
         } else {
@@ -329,6 +294,7 @@ final class dl extends si {
 
     final static double a(boolean param0, double param1, double param2) {
         if (!param0) {
+          dl.a(true, 0.6275412853469347, 1.160076860557818);
           return Math.sqrt(param2 * param2 + param1 * param1);
         } else {
           return Math.sqrt(param2 * param2 + param1 * param1);

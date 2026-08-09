@@ -32,8 +32,6 @@ abstract class vf {
     }
 
     final static int b(byte param0) {
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -46,70 +44,56 @@ abstract class vf {
         int stackIn_26_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_9_0 = 0;
         var2 = Main.field_T;
         try {
           L0: {
-            discarded$12 = sd.field_c.a((byte) -116, lg.field_E, te.field_a, true);
+            sd.field_c.a((byte) -116, lg.field_E, te.field_a, true);
             sd.field_c.l(-2054);
             L1: while (true) {
               if (!ge.b((byte) -114)) {
                 if (0 != (ml.field_a ^ -1)) {
                   var1_int = ml.field_a;
                   gh.a(-1, 31888);
-                  stackOut_6_0 = var1_int;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = var1_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
                   if (param0 >= 63) {
                     if (r.field_p) {
-                      stackOut_13_0 = 3;
-                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_14_0 = 3;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
                       if (ei.field_d == hh.field_g) {
-                        stackOut_17_0 = 1;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = 1;
                         decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
                         if (wh.field_a.a(640)) {
                           if (hh.field_g != jc.field_P) {
-                            stackOut_25_0 = -1;
-                            stackIn_26_0 = stackOut_25_0;
+                            stackIn_26_0 = -1;
                             decompiledRegionSelector0 = 6;
                             break L0;
                           } else {
-                            stackOut_23_0 = 2;
-                            stackIn_24_0 = stackOut_23_0;
+                            stackIn_24_0 = 2;
                             decompiledRegionSelector0 = 5;
                             break L0;
                           }
                         } else {
-                          stackOut_20_0 = 1;
-                          stackIn_21_0 = stackOut_20_0;
+                          stackIn_21_0 = 1;
                           decompiledRegionSelector0 = 4;
                           break L0;
                         }
                       }
                     }
                   } else {
-                    stackOut_9_0 = 44;
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = 44;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 }
               } else {
-                discarded$13 = sd.field_c.a(fd.field_n, 34, tb.field_d);
+                sd.field_c.a(fd.field_n, 34, tb.field_d);
                 continue L1;
               }
             }
@@ -147,6 +131,8 @@ abstract class vf {
     }
 
     final static void a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         mf var3 = null;
@@ -162,8 +148,6 @@ abstract class vf {
         int var13 = 0;
         w var14 = null;
         int[][] var18 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var12 = Main.field_T;
         try {
           L0: {

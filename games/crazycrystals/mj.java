@@ -49,10 +49,10 @@ final class mj {
     }
 
     final dl a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        dl var5 = null;
-        int var6 = 0;
+        int var3;
+        int var4;
+        dl var5;
+        int var6;
         L0: {
           var6 = CrazyCrystals.field_B;
           if (1 != param1) {

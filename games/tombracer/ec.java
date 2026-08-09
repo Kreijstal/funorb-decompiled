@@ -10,9 +10,9 @@ final class ec extends ija {
     private java.awt.Canvas field_m;
 
     final void a(java.awt.Canvas param0, int param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
         this.field_m = param0;
         this.field_l = new java.awt.Rectangle();
         this.field_h = param1;
@@ -30,8 +30,6 @@ final class ec extends ija {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, java.awt.Graphics param6, int param7) {
-        boolean discarded$2 = false;
-        boolean discarded$3 = false;
         this.field_j = param6.getClip();
         this.field_l.y = param1;
         this.field_l.width = param7;
@@ -40,12 +38,12 @@ final class ec extends ija {
         if (param3 < 61) {
           this.field_k = (java.awt.Image) null;
           param6.setClip((java.awt.Shape) ((Object) this.field_l));
-          discarded$2 = param6.drawImage(this.field_k, -param2 + param5, -param4 + param1, (java.awt.image.ImageObserver) ((Object) this.field_m));
+          param6.drawImage(this.field_k, -param2 + param5, -param4 + param1, (java.awt.image.ImageObserver) ((Object) this.field_m));
           param6.setClip(this.field_j);
           return;
         } else {
           param6.setClip((java.awt.Shape) ((Object) this.field_l));
-          discarded$3 = param6.drawImage(this.field_k, -param2 + param5, -param4 + param1, (java.awt.image.ImageObserver) ((Object) this.field_m));
+          param6.drawImage(this.field_k, -param2 + param5, -param4 + param1, (java.awt.image.ImageObserver) ((Object) this.field_m));
           param6.setClip(this.field_j);
           return;
         }

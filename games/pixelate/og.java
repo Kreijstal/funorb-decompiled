@@ -13,9 +13,8 @@ final class og extends fa {
     }
 
     final static tf[] a(int param0, boolean param1, int param2, int param3, int param4) {
-        tf[] discarded$2 = null;
         if (!param1) {
-          discarded$2 = og.a(65, true, -72, -125, 47);
+          og.a(65, true, -72, -125, 47);
           return ra.a(1, 1, param3, param0, 3, (byte) 126, param4, param2, 1);
         } else {
           return ra.a(1, 1, param3, param0, 3, (byte) 126, param4, param2, 1);

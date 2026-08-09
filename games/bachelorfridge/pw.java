@@ -19,7 +19,6 @@ final class pw extends ana {
     }
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        RuntimeException var8 = null;
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
@@ -57,16 +56,15 @@ final class pw extends ana {
         int var42 = 0;
         int var43 = 0;
         int var44 = 0;
-        int var45 = 0;
-        int var46 = 0;
         int var47 = 0;
         int[] var48 = null;
         int[] var49 = null;
         int stackIn_8_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
+        RuntimeException var8 = null;
+        int var45 = 0;
+        int var46 = 0;
         var47 = BachelorFridge.field_y;
         try {
           L0: {
@@ -115,12 +113,10 @@ final class pw extends ana {
                 } else {
                   L2: {
                     if (var9 > var12) {
-                      stackOut_7_0 = 0;
-                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_8_0 = 0;
                       break L2;
                     } else {
-                      stackOut_6_0 = 1;
-                      stackIn_8_0 = stackOut_6_0;
+                      stackIn_8_0 = 1;
                       break L2;
                     }
                   }
@@ -257,25 +253,24 @@ final class pw extends ana {
     }
 
     private final void e(byte param0) {
-        boolean discarded$5 = false;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        aca var14 = null;
-        int var15 = 0;
-        op var17 = null;
-        int[][] var20 = null;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        aca var14;
+        int var15;
+        op var17;
+        int[][] var20;
         var15 = BachelorFridge.field_y;
-        oha discarded$3 = al.a(-32, this.field_v.field_k);
+        al.a(-32, this.field_v.field_k);
         var17 = this.field_q.field_h;
-        aga discarded$4 = this.field_v.field_l.a(123, this.field_q.field_h);
+        this.field_v.field_l.a(123, this.field_q.field_h);
         var20 = this.field_v.d(1);
         var4 = this.field_v.field_r;
         var5 = this.field_v.field_s;
@@ -289,7 +284,7 @@ final class pw extends ana {
         L0: while (true) {
           if (var6 <= var10) {
             if (param0 != -85) {
-              discarded$5 = this.c((byte) 19);
+              this.c((byte) 19);
               return;
             } else {
               return;
@@ -339,10 +334,9 @@ final class pw extends ana {
     }
 
     private final void e(int param0) {
-        oha discarded$10 = null;
-        aga var2 = null;
-        pp var3 = null;
-        int var4 = 0;
+        aga var2;
+        pp var3;
+        int var4;
         var4 = BachelorFridge.field_y;
         if (param0 == -1) {
           var2 = this.field_v.field_l.a(81, this.field_q.field_h);
@@ -350,7 +344,7 @@ final class pw extends ana {
             return;
           } else {
             var3 = (pp) ((Object) this.field_v.field_o.b((byte) 90));
-            discarded$10 = al.a(param0 + -69, this.field_v.field_k);
+            al.a(param0 + -69, this.field_v.field_k);
             L0: while (true) {
               if (var3 == null) {
                 return;

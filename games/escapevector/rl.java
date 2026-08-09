@@ -115,8 +115,20 @@ final class rl extends hg {
     }
 
     final static boolean a(int param0, byte param1, boolean param2, CharSequence param3) {
-        RuntimeException var4 = null;
+        int stackIn_26_0 = 0;
+        int stackIn_31_0 = 0;
+        int stackIn_37_0 = 0;
+        int stackIn_43_0 = 0;
+        int stackIn_45_0 = 0;
+        RuntimeException stackIn_48_0 = null;
+        StringBuilder stackIn_48_1 = null;
+        RuntimeException stackIn_49_0 = null;
+        StringBuilder stackIn_49_1 = null;
+        String stackIn_49_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -124,33 +136,6 @@ final class rl extends hg {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_41_0 = 0;
-        int stackIn_43_0 = 0;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        String stackIn_47_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_42_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_34_0 = 0;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
         var11 = EscapeVector.field_A;
         try {
           L0: {
@@ -169,13 +154,11 @@ final class rl extends hg {
                   L2: while (true) {
                     if (var7 <= var8) {
                       if (param1 > 20) {
-                        stackOut_42_0 = var5;
-                        stackIn_43_0 = stackOut_42_0;
+                        stackIn_45_0 = var5;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
-                        stackOut_40_0 = 0;
-                        stackIn_41_0 = stackOut_40_0;
+                        stackIn_43_0 = 0;
                         decompiledRegionSelector0 = 3;
                         break L0;
                       }
@@ -183,7 +166,7 @@ final class rl extends hg {
                       L3: {
                         L4: {
                           var9 = param3.charAt(var8);
-                          if (var8 != 0) {
+                          if ((var8 ^ -1) != -1) {
                             break L4;
                           } else {
                             if (var9 == 45) {
@@ -239,14 +222,12 @@ final class rl extends hg {
                               }
                             }
                           }
-                          stackOut_23_0 = 0;
-                          stackIn_24_0 = stackOut_23_0;
+                          stackIn_26_0 = 0;
                           decompiledRegionSelector0 = 0;
                           break L0;
                         }
                         if (var9 >= param0) {
-                          stackOut_28_0 = 0;
-                          stackIn_29_0 = stackOut_28_0;
+                          stackIn_31_0 = 0;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -264,8 +245,7 @@ final class rl extends hg {
                             var6 = var10;
                             break L3;
                           } else {
-                            stackOut_34_0 = 0;
-                            stackIn_35_0 = stackOut_34_0;
+                            stackIn_37_0 = 0;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           }
@@ -284,45 +264,37 @@ final class rl extends hg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var4 = decompiledCaughtException;
-            stackOut_44_0 = (RuntimeException) (var4);
-            stackOut_44_1 = new StringBuilder().append("rl.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_46_0 = stackOut_44_0;
-            stackIn_46_1 = stackOut_44_1;
-            stackIn_45_0 = stackOut_44_0;
-            stackIn_45_1 = stackOut_44_1;
+            stackIn_48_0 = (RuntimeException) (var4);
+
+            stackIn_48_1 = new StringBuilder().append("rl.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "null";
-              stackIn_47_0 = stackOut_46_0;
-              stackIn_47_1 = stackOut_46_1;
-              stackIn_47_2 = stackOut_46_2;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "null";
               break L10;
             } else {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "{...}";
-              stackIn_47_0 = stackOut_45_0;
-              stackIn_47_1 = stackOut_45_1;
-              stackIn_47_2 = stackOut_45_2;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "{...}";
               break L10;
             }
           }
-          throw t.a((Throwable) ((Object) stackIn_47_0), stackIn_47_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_49_0), stackIn_49_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_24_0 != 0;
+          return stackIn_26_0 != 0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_29_0 != 0;
+            return stackIn_31_0 != 0;
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return stackIn_35_0 != 0;
+              return stackIn_37_0 != 0;
             } else {
               if (decompiledRegionSelector0 == 3) {
-                return stackIn_41_0 != 0;
-              } else {
                 return stackIn_43_0 != 0;
+              } else {
+                return stackIn_45_0 != 0;
               }
             }
           }

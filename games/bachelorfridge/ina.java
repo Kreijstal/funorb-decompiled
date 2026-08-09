@@ -62,7 +62,7 @@ final class ina extends bi {
         this.e(true);
         this.p(param0 + -2);
         this.c(true);
-        int discarded$18 = fn.field_n.a(kw.field_m, 89, 340, 250, 100, 10, -1, 1, 0, 12);
+        fn.field_n.a(kw.field_m, 89, 340, 250, 100, 10, -1, 1, 0, 12);
         if (param0 != 9) {
             this.field_m = (String) null;
         }
@@ -79,8 +79,8 @@ final class ina extends bi {
     }
 
     final kv b(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = BachelorFridge.field_y;
         if (param1 > 62) {
           var3 = param0;
@@ -99,17 +99,15 @@ final class ina extends bi {
     }
 
     private final void e(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         L0: {
           var9 = BachelorFridge.field_y;
           var2 = this.e((byte) 126);
@@ -145,12 +143,10 @@ final class ina extends bi {
                 var4 = 0;
                 var3++;
                 if (-9 < (var2 ^ -1)) {
-                  stackOut_9_0 = var2;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = var2;
                   break L4;
                 } else {
-                  stackOut_8_0 = 8;
-                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_0 = 8;
                   break L4;
                 }
               }
@@ -197,7 +193,7 @@ final class ina extends bi {
     }
 
     final int a(int param0, boolean param1) {
-        int var3 = 0;
+        int var3;
         L0: {
           if (param1) {
             break L0;
@@ -226,8 +222,8 @@ final class ina extends bi {
     }
 
     final int b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         L0: {
           var4 = BachelorFridge.field_y;
           if (param1 == 40) {
@@ -250,32 +246,26 @@ final class ina extends bi {
     }
 
     private final void p(int param0) {
-        int discarded$2 = 0;
-        boolean discarded$3 = false;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        String var7 = null;
-        kv var8 = null;
-        sba var9 = null;
-        int var10_int = 0;
-        String var10 = null;
-        int var11 = 0;
-        int var12 = 0;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        String var6;
+        String var7;
+        kv var8;
+        sba var9;
+        int var10_int;
+        String var10;
+        int var11;
+        int var12;
         L0: {
           var12 = BachelorFridge.field_y;
           if (this.field_t == -1) {
-            stackOut_2_0 = this.field_p;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = this.field_p;
             break L0;
           } else {
-            stackOut_1_0 = this.field_t;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = this.field_t;
             break L0;
           }
         }
@@ -302,12 +292,12 @@ final class ina extends bi {
           }
           L2: {
             var9 = wt.field_k;
-            discarded$2 = ((po) ((Object) var9)).a(var7, 400, 275, 190, 100, 16777215, -1, 3, 0, ((po) ((Object) var9)).field_u);
+            ((po) ((Object) var9)).a(var7, 400, 275, 190, 100, 16777215, -1, 3, 0, ((po) ((Object) var9)).field_u);
             var10_int = 0;
             if (param0 == 7) {
               break L2;
             } else {
-              discarded$3 = this.c(8, -78);
+              this.c(8, -78);
               break L2;
             }
           }
@@ -328,17 +318,15 @@ final class ina extends bi {
     }
 
     private final int a(byte param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         var11 = BachelorFridge.field_y;
         var4 = this.e((byte) 125);
         var5 = -1;
@@ -367,12 +355,10 @@ final class ina extends bi {
                   var6 = 0;
                   var5++;
                   if (8 > var4) {
-                    stackOut_9_0 = var4;
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = var4;
                     break L3;
                   } else {
-                    stackOut_8_0 = 8;
-                    stackIn_10_0 = stackOut_8_0;
+                    stackIn_10_0 = 8;
                     break L3;
                   }
                 }
@@ -418,9 +404,8 @@ final class ina extends bi {
     }
 
     final int a(int param0, byte param1) {
-        int discarded$0 = 0;
         if (param1 >= -38) {
-            discarded$0 = this.a(113, (byte) -5);
+            this.a(113, (byte) -5);
         }
         return 418;
     }
@@ -457,44 +442,21 @@ final class ina extends bi {
     }
 
     final void e(int param0) {
-        cq discarded$2 = null;
         int var2 = 0;
-        L0: {
-          this.field_p = this.a((byte) -117, mk.field_p, gd.field_m);
-          if (1 != lf.field_c) {
-            break L0;
-          } else {
-            discarded$2 = ol.a(kea.field_r[0], true);
+        this.field_p = this.a((byte) -117, mk.field_p, gd.field_m);
+        if (1 == lf.field_c) {
+            ol.a(kea.field_r[0], true);
             var2 = this.a((byte) -123, nfa.field_a, jc.field_r);
-            if (this.field_t == var2) {
-              this.field_t = -1;
-              break L0;
-            } else {
-              if ((var2 ^ -1) == 0) {
-                break L0;
-              } else {
-                this.field_t = var2;
-                break L0;
-              }
+            if (this.field_t == var2 || (var2 ^ -1) != 0) {
+                this.field_t = -1;
             }
-          }
         }
         super.e(param0);
     }
 
     private final kv a(int param0, String param1) {
-        RuntimeException var3 = null;
-        fea var3_ref = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        kv var7 = null;
-        int var8 = 0;
-        int var9 = 0;
         kv stackIn_3_0 = null;
         kv stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -502,26 +464,24 @@ final class ina extends bi {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        kv stackOut_12_0 = null;
-        kv stackOut_2_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        fea var3 = null;
+        RuntimeException var3_ref = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        kv var7 = null;
+        int var8 = 0;
+        int var9 = 0;
         var9 = BachelorFridge.field_y;
         try {
           L0: {
             if (param0 == 872364388) {
               L1: {
                 if (!param1.equals(this.field_m)) {
-                  var3_ref = jha.field_g;
-                  var4 = ((po) ((Object) var3_ref)).a(param1);
+                  var3 = jha.field_g;
+                  var4 = ((po) ((Object) var3)).a(param1);
                   var5 = 30 + var4;
-                  var6 = ((po) ((Object) var3_ref)).field_u << 219151521;
+                  var6 = ((po) ((Object) var3)).field_u << 219151521;
                   var7 = new kv(var5, var6);
                   bu.a(0, var7);
                   hp.a(var5, 0, (byte) 108, var6, de.field_A, 0);
@@ -532,7 +492,7 @@ final class ina extends bi {
                       this.field_l.b();
                       var8 = kla.a(768, m.field_a, -2147483648) - 384;
                       kh.a(false, var6 << -989908189, var5 << -1713753308, 4096, 4096, var6 << 872364388, var5 << 2052204611, var8, var7);
-                      ((po) ((Object) var3_ref)).a(param1, var5, (9 * var6 >> -1814927261) - 2, -16711423, -1);
+                      ((po) ((Object) var3)).a(param1, var5, (9 * var6 >> -1814927261) - 2, -16711423, -1);
                       db.b(104);
                       this.field_l.d();
                       this.field_m = param1;
@@ -554,13 +514,11 @@ final class ina extends bi {
                   break L1;
                 }
               }
-              stackOut_12_0 = this.field_l;
-              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_0 = this.field_l;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = (kv) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (kv) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -568,28 +526,20 @@ final class ina extends bi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("ina.N(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            var3_ref = decompiledCaughtException;
+            stackIn_16_0 = (RuntimeException) (var3_ref);
+
+            stackIn_16_1 = new StringBuilder().append("ina.N(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }
@@ -603,9 +553,9 @@ final class ina extends bi {
     }
 
     private final int e(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = BachelorFridge.field_y;
         var2 = 0;
         if (param0 >= 108) {

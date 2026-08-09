@@ -23,7 +23,7 @@ final class sfb extends f {
     }
 
     private final void e() {
-        int var1 = 0;
+        int var1;
         L0: {
           if (!vka.field_r) {
             if (this.field_o == null) {
@@ -102,8 +102,8 @@ final class sfb extends f {
     }
 
     private final static int a(int param0, int[] param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         L0: {
           if (param3 <= param1.length) {
             break L0;
@@ -162,45 +162,45 @@ final class sfb extends f {
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int fieldTemp$16 = 0;
-        int fieldTemp$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
-        int fieldTemp$24 = 0;
-        int fieldTemp$25 = 0;
-        int fieldTemp$26 = 0;
-        int fieldTemp$27 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        in var23 = null;
-        oka var24 = null;
-        in var25 = null;
-        oka var26 = null;
-        in var27 = null;
-        oka var28 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        in var23;
+        oka var24;
+        in var25;
+        oka var26;
+        in var27;
+        oka var28;
         this.e();
         param2 = param2 + param1;
         L0: while (true) {
@@ -286,15 +286,15 @@ final class sfb extends f {
                                         L13: while (true) {
                                           if (var16 >= 4) {
                                             if (var6 <= 12) {
-                                              incrementValue$14 = param1;
+                                              incrementValue$0 = param1;
                                               param1++;
-                                              param0[incrementValue$14] = param0[incrementValue$14] + (var15 * var11 + var13 * var9 >> 12 - var6);
+                                              param0[incrementValue$0] = param0[incrementValue$0] + (var15 * var11 + var13 * var9 >> 12 - var6);
                                               var12++;
                                               continue L11;
                                             } else {
-                                              incrementValue$15 = param1;
+                                              incrementValue$1 = param1;
                                               param1++;
-                                              param0[incrementValue$15] = param0[incrementValue$15] + (var15 * var11 + var13 * var9 << var6 - 12);
+                                              param0[incrementValue$1] = param0[incrementValue$1] + (var15 * var11 + var13 * var9 << var6 - 12);
                                               var12++;
                                               continue L11;
                                             }
@@ -303,9 +303,9 @@ final class sfb extends f {
                                             var18 = var28.field_a[var28.field_b] >> var6;
                                             var15 = var18 - var15;
                                             var28.field_a[var28.field_b] = var14 + (var18 * 2048 + 2048 >> 12) << var6;
-                                            fieldTemp$16 = var28.field_b + 1;
+                                            fieldTemp$2 = var28.field_b + 1;
                                             var28.field_b = var28.field_b + 1;
-                                            if (fieldTemp$16 >= var28.field_a.length) {
+                                            if (fieldTemp$2 >= var28.field_a.length) {
                                               var28.field_b = 0;
                                               var16++;
                                               continue L13;
@@ -323,9 +323,9 @@ final class sfb extends f {
                                           var19 = var19 + ((var18 - var19) * var8 + 2048 >> 12);
                                           var27.field_c = var19 << var6;
                                           var27.field_a[var27.field_b] = var14 + (var19 * var7 + 2048 >> 12) << var6;
-                                          fieldTemp$17 = var27.field_b + 1;
+                                          fieldTemp$3 = var27.field_b + 1;
                                           var27.field_b = var27.field_b + 1;
-                                          if (fieldTemp$17 < var27.field_a.length) {
+                                          if (fieldTemp$3 < var27.field_a.length) {
                                             break L14;
                                           } else {
                                             var27.field_b = 0;
@@ -348,12 +348,12 @@ final class sfb extends f {
                                     param1 = param1 >> 1;
                                     break L10;
                                   } else {
-                                    incrementValue$18 = var13;
+                                    incrementValue$4 = var13;
                                     var13++;
-                                    var14 = this.field_j[incrementValue$18] >> var6;
-                                    incrementValue$19 = var13;
+                                    var14 = this.field_j[incrementValue$4] >> var6;
+                                    incrementValue$5 = var13;
                                     var13++;
-                                    var15 = this.field_j[incrementValue$19] >> var6;
+                                    var15 = this.field_j[incrementValue$5] >> var6;
                                     var16 = (var14 + var15) * var10 >> 17;
                                     var17 = 0;
                                     var18 = 0;
@@ -370,20 +370,20 @@ final class sfb extends f {
                                                 L19: while (true) {
                                                   if (var19 >= 4) {
                                                     if (var6 <= 12) {
-                                                      incrementValue$20 = param1;
+                                                      incrementValue$6 = param1;
                                                       param1++;
-                                                      param0[incrementValue$20] = param0[incrementValue$20] + (var17 * var11 + var18 * var12 + var14 * var9 >> 12 - var6);
-                                                      incrementValue$21 = param1;
+                                                      param0[incrementValue$6] = param0[incrementValue$6] + (var17 * var11 + var18 * var12 + var14 * var9 >> 12 - var6);
+                                                      incrementValue$7 = param1;
                                                       param1++;
-                                                      param0[incrementValue$21] = param0[incrementValue$21] + (var18 * var11 + var17 * var12 + var15 * var9 >> 12 - var6);
+                                                      param0[incrementValue$7] = param0[incrementValue$7] + (var18 * var11 + var17 * var12 + var15 * var9 >> 12 - var6);
                                                       continue L15;
                                                     } else {
-                                                      incrementValue$22 = param1;
+                                                      incrementValue$8 = param1;
                                                       param1++;
-                                                      param0[incrementValue$22] = param0[incrementValue$22] + (var17 * var11 + var18 * var12 + var14 * var9 << var6 - 12);
-                                                      incrementValue$23 = param1;
+                                                      param0[incrementValue$8] = param0[incrementValue$8] + (var17 * var11 + var18 * var12 + var14 * var9 << var6 - 12);
+                                                      incrementValue$9 = param1;
                                                       param1++;
-                                                      param0[incrementValue$23] = param0[incrementValue$23] + (var18 * var11 + var17 * var12 + var15 * var9 << var6 - 12);
+                                                      param0[incrementValue$9] = param0[incrementValue$9] + (var18 * var11 + var17 * var12 + var15 * var9 << var6 - 12);
                                                       continue L15;
                                                     }
                                                   } else {
@@ -391,9 +391,9 @@ final class sfb extends f {
                                                     var21 = var26.field_a[var26.field_b] >> var6;
                                                     var18 = var21 - var18;
                                                     var26.field_a[var26.field_b] = var16 + (var21 * 2048 + 2048 >> 12) << var6;
-                                                    fieldTemp$24 = var26.field_b + 1;
+                                                    fieldTemp$10 = var26.field_b + 1;
                                                     var26.field_b = var26.field_b + 1;
-                                                    if (fieldTemp$24 >= var26.field_a.length) {
+                                                    if (fieldTemp$10 >= var26.field_a.length) {
                                                       var26.field_b = 0;
                                                       var19++;
                                                       continue L19;
@@ -411,9 +411,9 @@ final class sfb extends f {
                                                   var22 = var22 + ((var21 - var22) * var8 + 2048 >> 12);
                                                   var25.field_c = var22 << var6;
                                                   var25.field_a[var25.field_b] = var16 + (var22 * var7 + 2048 >> 12) << var6;
-                                                  fieldTemp$25 = var25.field_b + 1;
+                                                  fieldTemp$11 = var25.field_b + 1;
                                                   var25.field_b = var25.field_b + 1;
-                                                  if (fieldTemp$25 < var25.field_a.length) {
+                                                  if (fieldTemp$11 < var25.field_a.length) {
                                                     break L20;
                                                   } else {
                                                     var25.field_b = 0;
@@ -430,9 +430,9 @@ final class sfb extends f {
                                             var20 = var24.field_a[var24.field_b] >> var6;
                                             var17 = var20 - var17;
                                             var24.field_a[var24.field_b] = var16 + (var20 * 2048 + 2048 >> 12) << var6;
-                                            fieldTemp$26 = var24.field_b + 1;
+                                            fieldTemp$12 = var24.field_b + 1;
                                             var24.field_b = var24.field_b + 1;
-                                            if (fieldTemp$26 >= var24.field_a.length) {
+                                            if (fieldTemp$12 >= var24.field_a.length) {
                                               var24.field_b = 0;
                                               var18++;
                                               continue L17;
@@ -450,9 +450,9 @@ final class sfb extends f {
                                           var21 = var21 + ((var20 - var21) * var8 + 2048 >> 12);
                                           var23.field_c = var21 << var6;
                                           var23.field_a[var23.field_b] = var16 + (var21 * var7 + 2048 >> 12) << var6;
-                                          fieldTemp$27 = var23.field_b + 1;
+                                          fieldTemp$13 = var23.field_b + 1;
                                           var23.field_b = var23.field_b + 1;
-                                          if (fieldTemp$27 < var23.field_a.length) {
+                                          if (fieldTemp$13 < var23.field_a.length) {
                                             break L21;
                                           } else {
                                             var23.field_b = 0;
@@ -540,27 +540,22 @@ final class sfb extends f {
     }
 
     sfb(f param0) {
-        L0: {
-          this.field_i = new in[8];
-          this.field_i[0] = new in(1116 * vka.field_s / 44100);
-          this.field_i[1] = new in(1188 * vka.field_s / 44100);
-          this.field_i[2] = new in(1277 * vka.field_s / 44100);
-          this.field_i[3] = new in(1356 * vka.field_s / 44100);
-          this.field_i[4] = new in(1422 * vka.field_s / 44100);
-          this.field_i[5] = new in(1491 * vka.field_s / 44100);
-          this.field_i[6] = new in(1557 * vka.field_s / 44100);
-          this.field_i[7] = new in(1617 * vka.field_s / 44100);
-          this.field_r = new oka[4];
-          this.field_r[0] = new oka(556 * vka.field_s / 44100);
-          this.field_r[1] = new oka(441 * vka.field_s / 44100);
-          this.field_r[2] = new oka(341 * vka.field_s / 44100);
-          this.field_r[3] = new oka(225 * vka.field_s / 44100);
-          if (vka.field_r) {
-            break L0;
-          } else {
+        this.field_i = new in[8];
+        this.field_i[0] = new in(1116 * vka.field_s / 44100);
+        this.field_i[1] = new in(1188 * vka.field_s / 44100);
+        this.field_i[2] = new in(1277 * vka.field_s / 44100);
+        this.field_i[3] = new in(1356 * vka.field_s / 44100);
+        this.field_i[4] = new in(1422 * vka.field_s / 44100);
+        this.field_i[5] = new in(1491 * vka.field_s / 44100);
+        this.field_i[6] = new in(1557 * vka.field_s / 44100);
+        this.field_i[7] = new in(1617 * vka.field_s / 44100);
+        this.field_r = new oka[4];
+        this.field_r[0] = new oka(556 * vka.field_s / 44100);
+        this.field_r[1] = new oka(441 * vka.field_s / 44100);
+        this.field_r[2] = new oka(341 * vka.field_s / 44100);
+        this.field_r[3] = new oka(225 * vka.field_s / 44100);
+        if (!vka.field_r) {
             this.field_j = new int[256];
-            break L0;
-          }
         }
         this.e();
         this.d(0.04500000178813934f);

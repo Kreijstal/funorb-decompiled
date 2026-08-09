@@ -26,55 +26,19 @@ final class br extends oh {
         int var10 = 0;
         int stackIn_3_0 = 0;
         int stackIn_21_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_31_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -85,8 +49,7 @@ final class br extends oh {
               var8 = 0;
               L1: while (true) {
                 if (-129 >= (var8 ^ -1)) {
-                  stackOut_20_0 = var5_int;
-                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_0 = var5_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -143,8 +106,7 @@ final class br extends oh {
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -153,81 +115,57 @@ final class br extends oh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var5);
-            stackOut_22_1 = new StringBuilder().append("br.C(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var5);
+
+            stackIn_24_1 = new StringBuilder().append("br.C(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+
+
+            stackIn_27_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
+
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',');
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+
+
+            stackIn_30_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',');
+
             if (param2 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L8;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L8;
             }
           }
-          throw r.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) stackIn_25_0), stackIn_31_2 + ',' + param3 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0 != 0;
@@ -254,29 +192,37 @@ final class br extends oh {
         if (param0 == 65536) {
             return null;
         }
-        kj discarded$0 = br.a(-98);
+        br.a(-98);
         return null;
     }
 
     public static void d(int param0) {
-        kj discarded$0 = null;
         field_l = null;
         if (param0 != 59114) {
-            discarded$0 = br.a(7);
+            br.a(7);
         }
         field_o = null;
     }
 
     br(byte[] param0) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        kc dupTemp$17 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        kc dupTemp$8 = null;
+        byte[] stackIn_39_0 = null;
+        byte[] stackIn_42_0 = null;
+        RuntimeException stackIn_209_0 = null;
+        StringBuilder stackIn_209_1 = null;
+        RuntimeException stackIn_210_0 = null;
+        StringBuilder stackIn_210_1 = null;
+        String stackIn_210_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         byte[] var4 = null;
@@ -293,10 +239,10 @@ final class br extends oh {
         kc[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
-        kc var15 = null;
-        byte[] var15_array = null;
-        int var16_int = 0;
+        byte[] var15 = null;
+        kc var15_ref = null;
         byte[] var16 = null;
+        int var16_int = 0;
         int var17 = 0;
         byte[] var18 = null;
         int var19 = 0;
@@ -339,29 +285,6 @@ final class br extends oh {
         byte[] var56 = null;
         byte[] var57 = null;
         byte[] var58 = null;
-        byte[] stackIn_39_0 = null;
-        byte[] stackIn_42_0 = null;
-        RuntimeException stackIn_208_0 = null;
-        StringBuilder stackIn_208_1 = null;
-        RuntimeException stackIn_209_0 = null;
-        StringBuilder stackIn_209_1 = null;
-        RuntimeException stackIn_210_0 = null;
-        StringBuilder stackIn_210_1 = null;
-        String stackIn_210_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_38_0 = null;
-        byte[] stackOut_37_0 = null;
-        byte[] stackOut_41_0 = null;
-        Object stackOut_40_0 = null;
-        RuntimeException stackOut_207_0 = null;
-        StringBuilder stackOut_207_1 = null;
-        RuntimeException stackOut_209_0 = null;
-        StringBuilder stackOut_209_1 = null;
-        String stackOut_209_2 = null;
-        RuntimeException stackOut_208_0 = null;
-        StringBuilder stackOut_208_1 = null;
-        String stackOut_208_2 = null;
         try {
           L0: {
             this.field_j = new kc[128];
@@ -425,9 +348,9 @@ final class br extends oh {
                                             L9: {
                                               var15_int = var38.j(-67);
                                               if (var15_int == 0) {
-                                                incrementValue$9 = var12;
+                                                incrementValue$0 = var12;
                                                 var12++;
-                                                var13_int = incrementValue$9;
+                                                var13_int = incrementValue$0;
                                                 break L9;
                                               } else {
                                                 L10: {
@@ -459,26 +382,22 @@ final class br extends oh {
                                         L12: {
                                           var14 = var38.j(-81);
                                           if (0 >= var14) {
-                                            stackOut_38_0 = null;
-                                            stackIn_39_0 = (byte[]) ((Object) stackOut_38_0);
+                                            stackIn_39_0 = null;
                                             break L12;
                                           } else {
-                                            stackOut_37_0 = new byte[2 * var14];
-                                            stackIn_39_0 = stackOut_37_0;
+                                            stackIn_39_0 = new byte[2 * var14];
                                             break L12;
                                           }
                                         }
                                         L13: {
                                           var46 = stackIn_39_0;
-                                          var15_array = var46;
+                                          var15 = var46;
                                           var14 = var38.j(-77);
                                           if ((var14 ^ -1) < -1) {
-                                            stackOut_41_0 = new byte[var14 * 2];
-                                            stackIn_42_0 = stackOut_41_0;
+                                            stackIn_42_0 = new byte[var14 * 2];
                                             break L13;
                                           } else {
-                                            stackOut_40_0 = null;
-                                            stackIn_42_0 = (byte[]) ((Object) stackOut_40_0);
+                                            stackIn_42_0 = null;
                                             break L13;
                                           }
                                         }
@@ -539,7 +458,7 @@ final class br extends oh {
                                                                             L23: while (true) {
                                                                               if (var27 >= var12) {
                                                                                 L24: {
-                                                                                  if (var15_array == null) {
+                                                                                  if (var15 == null) {
                                                                                     break L24;
                                                                                   } else {
                                                                                     var27 = 1;
@@ -547,7 +466,7 @@ final class br extends oh {
                                                                                       if (var46.length <= var27) {
                                                                                         break L24;
                                                                                       } else {
-                                                                                        var15_array[var27] = var38.g(-2852);
+                                                                                        var15[var27] = var38.g(-2852);
                                                                                         var27 += 2;
                                                                                         continue L25;
                                                                                       }
@@ -578,9 +497,9 @@ final class br extends oh {
                                                                                       if (var12 <= var27) {
                                                                                         L30: {
                                                                                           L31: {
-                                                                                            if (var15_array != null) {
+                                                                                            if (var15 != null) {
                                                                                               var19 = var38.j(-91);
-                                                                                              var15_array[0] = (byte)var19;
+                                                                                              var15[0] = (byte)var19;
                                                                                               var27 = 2;
                                                                                               L32: while (true) {
                                                                                                 if (var27 >= var46.length) {
@@ -592,11 +511,11 @@ final class br extends oh {
                                                                                                       var29 = 2;
                                                                                                       L34: while (true) {
                                                                                                         if (var29 >= var46.length) {
-                                                                                                          var15_array = null;
+                                                                                                          var15 = null;
                                                                                                           var30 = var27;
                                                                                                           L35: while (true) {
                                                                                                             if (-129 >= (var30 ^ -1)) {
-                                                                                                              if (var16 == null) {
+                                                                                                              if (null == var16) {
                                                                                                                 break L30;
                                                                                                               } else {
                                                                                                                 var19 = var38.j(-63);
@@ -621,7 +540,7 @@ final class br extends oh {
                                                                                                           }
                                                                                                         } else {
                                                                                                           var30 = var46[var29];
-                                                                                                          var31 = var15_array[var29 - -1];
+                                                                                                          var31 = var15[var29 - -1];
                                                                                                           var32 = (-var27 + var30) / 2 + var28 * (var30 - var27);
                                                                                                           var33 = var27;
                                                                                                           L37: while (true) {
@@ -648,7 +567,7 @@ final class br extends oh {
                                                                                                   }
                                                                                                 } else {
                                                                                                   var19 = var38.j(-111) + (var19 - -1);
-                                                                                                  var15_array[var27] = (byte)var19;
+                                                                                                  var15[var27] = (byte)var19;
                                                                                                   var27 += 2;
                                                                                                   continue L32;
                                                                                                 }
@@ -954,9 +873,9 @@ final class br extends oh {
                                                                                     var20 = -1;
                                                                                     break L68;
                                                                                   } else {
-                                                                                    incrementValue$10 = var21;
+                                                                                    incrementValue$1 = var21;
                                                                                     var21++;
-                                                                                    var20 = var18[incrementValue$10];
+                                                                                    var20 = var18[incrementValue$1];
                                                                                     break L68;
                                                                                   }
                                                                                 }
@@ -985,9 +904,9 @@ final class br extends oh {
                                                                               } else {
                                                                                 var25 = var13[var53[var21]];
                                                                                 if (var57.length > var21) {
-                                                                                  incrementValue$11 = var21;
+                                                                                  incrementValue$2 = var21;
                                                                                   var21++;
-                                                                                  var20 = var10[incrementValue$11];
+                                                                                  var20 = var10[incrementValue$2];
                                                                                   break L70;
                                                                                 } else {
                                                                                   var20 = -1;
@@ -1015,18 +934,18 @@ final class br extends oh {
                                                                           } else {
                                                                             L73: {
                                                                               if (var21 < var56.length) {
-                                                                                incrementValue$12 = var21;
+                                                                                incrementValue$3 = var21;
                                                                                 var21++;
-                                                                                var20 = var7[incrementValue$12];
+                                                                                var20 = var7[incrementValue$3];
                                                                                 break L73;
                                                                               } else {
                                                                                 var20 = -1;
                                                                                 break L73;
                                                                               }
                                                                             }
-                                                                            incrementValue$13 = var8;
+                                                                            incrementValue$4 = var8;
                                                                             var8++;
-                                                                            var24 = 16 + var38.field_h[incrementValue$13] << 2042256162;
+                                                                            var24 = 16 + var38.field_h[incrementValue$4] << 2042256162;
                                                                             break L72;
                                                                           }
                                                                         }
@@ -1053,15 +972,15 @@ final class br extends oh {
                                                                             var20 = -1;
                                                                             break L76;
                                                                           } else {
-                                                                            incrementValue$14 = var21;
+                                                                            incrementValue$5 = var21;
                                                                             var21++;
-                                                                            var20 = var4[incrementValue$14];
+                                                                            var20 = var4[incrementValue$5];
                                                                             break L76;
                                                                           }
                                                                         }
-                                                                        incrementValue$15 = var5;
+                                                                        incrementValue$6 = var5;
                                                                         var5++;
-                                                                        var23 = -1 + var38.field_h[incrementValue$15];
+                                                                        var23 = -1 + var38.field_h[incrementValue$6];
                                                                         break L75;
                                                                       }
                                                                     }
@@ -1081,9 +1000,9 @@ final class br extends oh {
                                                               } else {
                                                                 L78: {
                                                                   if (var54.length > var21) {
-                                                                    incrementValue$16 = var21;
+                                                                    incrementValue$7 = var21;
                                                                     var21++;
-                                                                    var20 = var18[incrementValue$16];
+                                                                    var20 = var18[incrementValue$7];
                                                                     break L78;
                                                                   } else {
                                                                     var20 = -1;
@@ -1128,15 +1047,15 @@ final class br extends oh {
                                         }
                                       } else {
                                         L79: {
-                                          dupTemp$17 = new kc();
-                                          var13[var14] = dupTemp$17;
-                                          var40 = dupTemp$17;
-                                          var15 = var40;
+                                          dupTemp$8 = new kc();
+                                          var13[var14] = dupTemp$8;
+                                          var40 = dupTemp$8;
+                                          var15_ref = var40;
                                           var16_int = var38.j(-114);
                                           if (-1 <= (var16_int ^ -1)) {
                                             break L79;
                                           } else {
-                                            var15.field_n = new byte[var16_int * 2];
+                                            var15_ref.field_n = new byte[var16_int * 2];
                                             break L79;
                                           }
                                         }
@@ -1145,7 +1064,7 @@ final class br extends oh {
                                           if (0 >= var16_int) {
                                             break L80;
                                           } else {
-                                            var15.field_e = new byte[2 * var16_int + 2];
+                                            var15_ref.field_e = new byte[2 * var16_int + 2];
                                             var40.field_e[1] = (byte)64;
                                             break L80;
                                           }
@@ -1192,27 +1111,19 @@ final class br extends oh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L81: {
             var2 = decompiledCaughtException;
-            stackOut_207_0 = (RuntimeException) (var2);
-            stackOut_207_1 = new StringBuilder().append("br.<init>(");
-            stackIn_209_0 = stackOut_207_0;
-            stackIn_209_1 = stackOut_207_1;
-            stackIn_208_0 = stackOut_207_0;
-            stackIn_208_1 = stackOut_207_1;
+            stackIn_209_0 = (RuntimeException) (var2);
+
+            stackIn_209_1 = new StringBuilder().append("br.<init>(");
+
             if (param0 == null) {
-              stackOut_209_0 = (RuntimeException) ((Object) stackIn_209_0);
-              stackOut_209_1 = (StringBuilder) ((Object) stackIn_209_1);
-              stackOut_209_2 = "null";
-              stackIn_210_0 = stackOut_209_0;
-              stackIn_210_1 = stackOut_209_1;
-              stackIn_210_2 = stackOut_209_2;
+              stackIn_210_0 = (RuntimeException) ((Object) stackIn_209_0);
+              stackIn_210_1 = (StringBuilder) ((Object) stackIn_209_1);
+              stackIn_210_2 = "null";
               break L81;
             } else {
-              stackOut_208_0 = (RuntimeException) ((Object) stackIn_208_0);
-              stackOut_208_1 = (StringBuilder) ((Object) stackIn_208_1);
-              stackOut_208_2 = "{...}";
-              stackIn_210_0 = stackOut_208_0;
-              stackIn_210_1 = stackOut_208_1;
-              stackIn_210_2 = stackOut_208_2;
+              stackIn_210_0 = (RuntimeException) ((Object) stackIn_209_0);
+              stackIn_210_1 = (StringBuilder) ((Object) stackIn_209_1);
+              stackIn_210_2 = "{...}";
               break L81;
             }
           }

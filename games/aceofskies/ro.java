@@ -13,7 +13,6 @@ final class ro extends ua implements ti {
     static int[] field_t;
 
     final static byte[] b(int param0, int param1) {
-        int discarded$0 = 0;
         byte[] var11 = null;
         byte[] var10 = null;
         byte[] var3 = null;
@@ -24,7 +23,7 @@ final class ro extends ua implements ti {
         int var5 = 0;
         int var9 = AceOfSkies.field_G ? 1 : 0;
         if (param0 != -3992) {
-            discarded$0 = ro.c((byte) 102);
+            ro.c((byte) 102);
         }
         bi var2 = (bi) ((Object) hh.field_b.a((byte) -27, (long)param1));
         if (var2 == null) {
@@ -81,32 +80,21 @@ final class ro extends ua implements ti {
     }
 
     final static int a(int param0, boolean param1, int param2, CharSequence param3) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
         int stackIn_45_0 = 0;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
         RuntimeException stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
         String stackIn_49_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_44_0 = 0;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        RuntimeException stackOut_48_0 = null;
-        StringBuilder stackOut_48_1 = null;
-        String stackOut_48_2 = null;
-        RuntimeException stackOut_47_0 = null;
-        StringBuilder stackOut_47_1 = null;
-        String stackOut_47_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
         try {
           L0: {
             L1: {
@@ -132,8 +120,7 @@ final class ro extends ua implements ti {
                       if (var5 == 0) {
                         throw new NumberFormatException();
                       } else {
-                        stackOut_44_0 = var6;
-                        stackIn_45_0 = stackOut_44_0;
+                        stackIn_45_0 = var6;
                         break L0;
                       }
                     } else {
@@ -235,27 +222,19 @@ final class ro extends ua implements ti {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var4 = decompiledCaughtException;
-            stackOut_46_0 = (RuntimeException) (var4);
-            stackOut_46_1 = new StringBuilder().append("ro.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_48_0 = stackOut_46_0;
-            stackIn_48_1 = stackOut_46_1;
-            stackIn_47_0 = stackOut_46_0;
-            stackIn_47_1 = stackOut_46_1;
+            stackIn_48_0 = (RuntimeException) (var4);
+
+            stackIn_48_1 = new StringBuilder().append("ro.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_48_0 = (RuntimeException) ((Object) stackIn_48_0);
-              stackOut_48_1 = (StringBuilder) ((Object) stackIn_48_1);
-              stackOut_48_2 = "null";
-              stackIn_49_0 = stackOut_48_0;
-              stackIn_49_1 = stackOut_48_1;
-              stackIn_49_2 = stackOut_48_2;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "null";
               break L11;
             } else {
-              stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackOut_47_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackOut_47_2 = "{...}";
-              stackIn_49_0 = stackOut_47_0;
-              stackIn_49_1 = stackOut_47_1;
-              stackIn_49_2 = stackOut_47_2;
+              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "{...}";
               break L11;
             }
           }
@@ -265,9 +244,8 @@ final class ro extends ua implements ti {
     }
 
     public final jaclib.memory.Buffer a(boolean param0, int param1) {
-        boolean discarded$0 = false;
         if (param1 != 32570) {
-            discarded$0 = this.a((byte) -43);
+            this.a((byte) -43);
         }
         return super.a(this.field_a.field_Qc, param0, -10386);
     }

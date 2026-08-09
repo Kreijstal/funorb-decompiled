@@ -24,14 +24,14 @@ final class ra {
     }
 
     final static tf[] a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8) {
-        int var9 = 0;
-        tf[] var10 = null;
-        tf[] var11_ref_tf__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        tf var13 = null;
-        int var14 = 0;
-        int var15 = 0;
+        int var9;
+        tf[] var10;
+        tf[] var11_ref_tf__;
+        int var11;
+        int var12;
+        tf var13;
+        int var14;
+        int var15;
         var15 = Pixelate.field_H ? 1 : 0;
         var9 = param1 + param0 + param8;
         var10 = new tf[]{new tf(var9, var9), new tf(param4, var9), new tf(var9, var9), new tf(var9, param4), new tf(64, 64), new tf(var9, param4), new tf(var9, var9), new tf(param4, var9), new tf(var9, var9)};
@@ -100,7 +100,7 @@ final class ra {
                       if (var12 < var9) {
                         var10[0].field_G[var9 * var11 + var12] = param2;
                         var10[0].field_G[var11 + var9 * var12] = param2;
-                        if (var9 - var11 > var12) {
+                        if ((var9 - var11 ^ -1) < (var12 ^ -1)) {
                           var10[2].field_G[var11 * var9 + var12] = param2;
                           var10[6].field_G[var11 + var12 * var9] = param2;
                           var12++;
@@ -166,11 +166,9 @@ final class ra {
         if (param3 != -32268) {
             field_f = (String) null;
         }
-        if (nm.field_c != 0) {
-            if (var4 == 0) {
-                po.a(true);
-                param2 = false;
-            }
+        if (nm.field_c != 0 && var4 == 0) {
+            po.a(true);
+            param2 = false;
         }
         if (!(!param2)) {
             bo.field_h.b(param1, param3 ^ 32267, param0);
@@ -182,10 +180,8 @@ final class ra {
         if ((var5 ^ -1) < -641) {
             di.field_a = di.field_a + 5;
         } else {
-            if (635 > var5) {
-                if (0 < di.field_a) {
-                    di.field_a = di.field_a - 5;
-                }
+            if (635 > var5 && 0 < di.field_a) {
+                di.field_a = di.field_a - 5;
             }
         }
     }

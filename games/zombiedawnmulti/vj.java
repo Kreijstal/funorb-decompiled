@@ -43,8 +43,8 @@ final class vj extends nc {
     }
 
     final static int b(boolean param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var2 = 0;
           if ((7 & param1) != 0) {
@@ -63,18 +63,6 @@ final class vj extends nc {
     }
 
     final void a(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
         ef var20 = null;
         ja var21 = null;
         ja var22 = null;
@@ -115,119 +103,18 @@ final class vj extends nc {
         ja var57 = null;
         ja var58 = null;
         ja var59 = null;
-        ef var60 = null;
-        ja var61 = null;
-        ja var62 = null;
-        ja var63 = null;
-        ja var64 = null;
-        vh stackIn_7_0 = null;
-        vh stackIn_8_0 = null;
-        vh stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        Object stackIn_10_0 = null;
-        Object stackIn_11_0 = null;
-        Object stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
-        vh stackIn_21_0 = null;
-        vh stackIn_22_0 = null;
-        vh stackIn_23_0 = null;
-        int stackIn_23_1 = 0;
-        Object stackIn_24_0 = null;
-        Object stackIn_25_0 = null;
-        Object stackIn_26_0 = null;
-        int stackIn_26_1 = 0;
-        vh stackIn_35_0 = null;
-        vh stackIn_36_0 = null;
-        vh stackIn_37_0 = null;
-        int stackIn_37_1 = 0;
-        Object stackIn_38_0 = null;
-        Object stackIn_39_0 = null;
-        Object stackIn_40_0 = null;
-        int stackIn_40_1 = 0;
-        vh stackIn_49_0 = null;
-        vh stackIn_50_0 = null;
-        vh stackIn_51_0 = null;
-        int stackIn_51_1 = 0;
-        Object stackIn_52_0 = null;
-        Object stackIn_53_0 = null;
-        Object stackIn_54_0 = null;
-        int stackIn_54_1 = 0;
-        vh stackIn_58_0 = null;
-        vh stackIn_59_0 = null;
-        vh stackIn_60_0 = null;
-        int stackIn_60_1 = 0;
-        Object stackIn_61_0 = null;
-        Object stackIn_62_0 = null;
-        Object stackIn_63_0 = null;
-        int stackIn_63_1 = 0;
-        vh stackIn_74_0 = null;
-        vh stackIn_75_0 = null;
-        vh stackIn_76_0 = null;
-        int stackIn_76_1 = 0;
-        Object stackIn_77_0 = null;
-        Object stackIn_78_0 = null;
-        Object stackIn_79_0 = null;
-        int stackIn_79_1 = 0;
-        vh stackOut_57_0 = null;
-        vh stackOut_59_0 = null;
-        int stackOut_59_1 = 0;
-        vh stackOut_58_0 = null;
-        int stackOut_58_1 = 0;
-        Object stackOut_60_0 = null;
-        Object stackOut_62_0 = null;
-        int stackOut_62_1 = 0;
-        Object stackOut_61_0 = null;
-        int stackOut_61_1 = 0;
-        vh stackOut_73_0 = null;
-        vh stackOut_75_0 = null;
-        int stackOut_75_1 = 0;
-        vh stackOut_74_0 = null;
-        int stackOut_74_1 = 0;
-        Object stackOut_76_0 = null;
-        Object stackOut_78_0 = null;
-        int stackOut_78_1 = 0;
-        Object stackOut_77_0 = null;
-        int stackOut_77_1 = 0;
-        vh stackOut_48_0 = null;
-        vh stackOut_50_0 = null;
-        int stackOut_50_1 = 0;
-        vh stackOut_49_0 = null;
-        int stackOut_49_1 = 0;
-        Object stackOut_51_0 = null;
-        Object stackOut_53_0 = null;
-        int stackOut_53_1 = 0;
-        Object stackOut_52_0 = null;
-        int stackOut_52_1 = 0;
-        vh stackOut_34_0 = null;
-        vh stackOut_36_0 = null;
-        int stackOut_36_1 = 0;
-        vh stackOut_35_0 = null;
-        int stackOut_35_1 = 0;
-        Object stackOut_37_0 = null;
-        Object stackOut_39_0 = null;
-        int stackOut_39_1 = 0;
-        Object stackOut_38_0 = null;
-        int stackOut_38_1 = 0;
-        vh stackOut_20_0 = null;
-        vh stackOut_22_0 = null;
-        int stackOut_22_1 = 0;
-        vh stackOut_21_0 = null;
-        int stackOut_21_1 = 0;
-        Object stackOut_23_0 = null;
-        Object stackOut_25_0 = null;
-        int stackOut_25_1 = 0;
-        Object stackOut_24_0 = null;
-        int stackOut_24_1 = 0;
-        vh stackOut_6_0 = null;
-        vh stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        vh stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_9_0 = null;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        Object stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
         oo.b();
         this.b(0);
         super.a(param0);
@@ -235,565 +122,54 @@ final class vj extends nc {
         oo.f(32, 62, 56, 48, 8947814, 128);
         oo.a(30, 142, 60, 52, 3381555);
         oo.f(32, 144, 56, 48, 8947814, 128);
-        if (kd.field_b == 1) {
-          if ((vb.field_f ^ -1) < -31) {
-            if (-61 > (ka.field_t ^ -1)) {
-              if ((vb.field_f ^ -1) > -91) {
-                L0: {
-                  if ((ka.field_t ^ -1) <= -113) {
-                    break L0;
-                  } else {
-                    L1: {
-                      stackOut_57_0 = this.field_r;
-                      stackIn_59_0 = stackOut_57_0;
-                      stackIn_58_0 = stackOut_57_0;
-                      if ((this.field_q ^ -1) == -2) {
-                        stackOut_59_0 = (vh) ((Object) stackIn_59_0);
-                        stackOut_59_1 = this.field_n;
-                        stackIn_60_0 = stackOut_59_0;
-                        stackIn_60_1 = stackOut_59_1;
-                        break L1;
-                      } else {
-                        stackOut_58_0 = (vh) ((Object) stackIn_58_0);
-                        stackOut_58_1 = this.field_o;
-                        stackIn_60_0 = stackOut_58_0;
-                        stackIn_60_1 = stackOut_58_1;
-                        break L1;
-                      }
-                    }
-                    L2: {
-                      stackIn_60_0.field_Ob = stackIn_60_1;
-                      stackOut_60_0 = this;
-                      stackIn_62_0 = stackOut_60_0;
-                      stackIn_61_0 = stackOut_60_0;
-                      if (-2 == (this.field_q ^ -1)) {
-                        stackOut_62_0 = this;
-                        stackOut_62_1 = 2;
-                        stackIn_63_0 = stackOut_62_0;
-                        stackIn_63_1 = stackOut_62_1;
-                        break L2;
-                      } else {
-                        stackOut_61_0 = this;
-                        stackOut_61_1 = 1;
-                        stackIn_63_0 = stackOut_61_0;
-                        stackIn_63_1 = stackOut_61_1;
-                        break L2;
-                      }
-                    }
-                    ((vj) (this)).field_q = stackIn_63_1;
-                    break L0;
-                  }
-                }
-                if ((kd.field_b ^ -1) == -2) {
-                  if (30 < vb.field_f) {
-                    if (142 < ka.field_t) {
-                      if (90 > vb.field_f) {
-                        L3: {
-                          if (ka.field_t >= 194) {
-                            break L3;
-                          } else {
-                            L4: {
-                              stackOut_73_0 = this.field_r;
-                              stackIn_75_0 = stackOut_73_0;
-                              stackIn_74_0 = stackOut_73_0;
-                              if (this.field_q == 3) {
-                                stackOut_75_0 = (vh) ((Object) stackIn_75_0);
-                                stackOut_75_1 = this.field_s;
-                                stackIn_76_0 = stackOut_75_0;
-                                stackIn_76_1 = stackOut_75_1;
-                                break L4;
-                              } else {
-                                stackOut_74_0 = (vh) ((Object) stackIn_74_0);
-                                stackOut_74_1 = this.field_l;
-                                stackIn_76_0 = stackOut_74_0;
-                                stackIn_76_1 = stackOut_74_1;
-                                break L4;
-                              }
-                            }
-                            L5: {
-                              stackIn_76_0.field_Ob = stackIn_76_1;
-                              stackOut_76_0 = this;
-                              stackIn_78_0 = stackOut_76_0;
-                              stackIn_77_0 = stackOut_76_0;
-                              if (this.field_q != 3) {
-                                stackOut_78_0 = this;
-                                stackOut_78_1 = 3;
-                                stackIn_79_0 = stackOut_78_0;
-                                stackIn_79_1 = stackOut_78_1;
-                                break L5;
-                              } else {
-                                stackOut_77_0 = this;
-                                stackOut_77_1 = 4;
-                                stackIn_79_0 = stackOut_77_0;
-                                stackIn_79_1 = stackOut_77_1;
-                                break L5;
-                              }
-                            }
-                            ((vj) (this)).field_q = stackIn_79_1;
-                            break L3;
-                          }
-                        }
-                        var2 = 100;
-                        var3 = 60;
-                        var4 = 20;
-                        var5 = 20;
-                        var6 = 2;
-                        var60 = qp.field_w;
-                        var8 = 2 + (var60.field_r + var60.field_C);
-                        var60.c("Skin", var2, -2 + (-var60.field_r + var3), 16777215, 0);
-                        this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
-                        var3 = var3 + (var5 + var8 + 5);
-                        var60.c("Cloth", var2, var3 + (-var60.field_r - 2), 16777215, 0);
-                        this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
-                        var3 = var3 + (5 + var5 + var8);
-                        var60.c("Skin", var2, -var60.field_r + (var3 + -2), 16777215, 0);
-                        this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
-                        var3 = var3 + (5 + (var8 + var5));
-                        var60.c("Cloth", var2, -2 + (-var60.field_r + var3), 16777215, 0);
-                        this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
-                        var9 = 0;
-                        var10 = 4;
-                        var11 = gg.field_b[var10];
-                        var12 = gg.field_l[var10];
-                        var13 = gg.field_j[var10];
-                        var14 = var12 + wf.field_m / var11 % var13;
-                        var61 = am.a(var14, this.field_o, var9, 1, this.field_n);
-                        og.h((byte) 110);
-                        var61.g(47, 57);
-                        var62 = am.a(var14, this.field_o, 1, 1, this.field_n);
-                        og.h((byte) 117);
-                        var62.g(17, 57);
-                        var63 = am.a(var14, this.field_l, var9, 1, this.field_s);
-                        og.h((byte) 118);
-                        var63.g(47, 139);
-                        var64 = am.a(var14, this.field_l, 1, 1, this.field_s);
-                        og.h((byte) 113);
-                        var64.g(17, 139);
-                        this.field_r.i(-31);
-                        return;
-                      } else {
-                        var2 = 100;
-                        var3 = 60;
-                        var4 = 20;
-                        var5 = 20;
-                        var6 = 2;
-                        var55 = qp.field_w;
-                        var8 = 2 + (var55.field_r + var55.field_C);
-                        var55.c("Skin", var2, -2 + (-var55.field_r + var3), 16777215, 0);
-                        this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
-                        var3 = var3 + (var5 + var8 + 5);
-                        var55.c("Cloth", var2, var3 + (-var55.field_r - 2), 16777215, 0);
-                        this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
-                        var3 = var3 + (5 + var5 + var8);
-                        var55.c("Skin", var2, -var55.field_r + (var3 + -2), 16777215, 0);
-                        this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
-                        var3 = var3 + (5 + (var8 + var5));
-                        var55.c("Cloth", var2, -2 + (-var55.field_r + var3), 16777215, 0);
-                        this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
-                        var9 = 0;
-                        var10 = 4;
-                        var11 = gg.field_b[var10];
-                        var12 = gg.field_l[var10];
-                        var13 = gg.field_j[var10];
-                        var14 = var12 + wf.field_m / var11 % var13;
-                        var56 = am.a(var14, this.field_o, var9, 1, this.field_n);
-                        og.h((byte) 110);
-                        var56.g(47, 57);
-                        var57 = am.a(var14, this.field_o, 1, 1, this.field_n);
-                        og.h((byte) 117);
-                        var57.g(17, 57);
-                        var58 = am.a(var14, this.field_l, var9, 1, this.field_s);
-                        og.h((byte) 118);
-                        var58.g(47, 139);
-                        var59 = am.a(var14, this.field_l, 1, 1, this.field_s);
-                        og.h((byte) 113);
-                        var59.g(17, 139);
-                        this.field_r.i(-31);
-                        return;
-                      }
-                    } else {
-                      var2 = 100;
-                      var3 = 60;
-                      var4 = 20;
-                      var5 = 20;
-                      var6 = 2;
-                      var50 = qp.field_w;
-                      var8 = 2 + (var50.field_r + var50.field_C);
-                      var50.c("Skin", var2, -2 + (-var50.field_r + var3), 16777215, 0);
-                      this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
-                      var3 = var3 + (var5 + var8 + 5);
-                      var50.c("Cloth", var2, var3 + (-var50.field_r - 2), 16777215, 0);
-                      this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
-                      var3 = var3 + (5 + var5 + var8);
-                      var50.c("Skin", var2, -var50.field_r + (var3 + -2), 16777215, 0);
-                      this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
-                      var3 = var3 + (5 + (var8 + var5));
-                      var50.c("Cloth", var2, -2 + (-var50.field_r + var3), 16777215, 0);
-                      this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
-                      var9 = 0;
-                      var10 = 4;
-                      var11 = gg.field_b[var10];
-                      var12 = gg.field_l[var10];
-                      var13 = gg.field_j[var10];
-                      var14 = var12 + wf.field_m / var11 % var13;
-                      var51 = am.a(var14, this.field_o, var9, 1, this.field_n);
-                      og.h((byte) 110);
-                      var51.g(47, 57);
-                      var52 = am.a(var14, this.field_o, 1, 1, this.field_n);
-                      og.h((byte) 117);
-                      var52.g(17, 57);
-                      var53 = am.a(var14, this.field_l, var9, 1, this.field_s);
-                      og.h((byte) 118);
-                      var53.g(47, 139);
-                      var54 = am.a(var14, this.field_l, 1, 1, this.field_s);
-                      og.h((byte) 113);
-                      var54.g(17, 139);
-                      this.field_r.i(-31);
-                      return;
-                    }
-                  } else {
-                    var2 = 100;
-                    var3 = 60;
-                    var4 = 20;
-                    var5 = 20;
-                    var6 = 2;
-                    var45 = qp.field_w;
-                    var8 = 2 + (var45.field_r + var45.field_C);
-                    var45.c("Skin", var2, -2 + (-var45.field_r + var3), 16777215, 0);
-                    this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
-                    var3 = var3 + (var5 + var8 + 5);
-                    var45.c("Cloth", var2, var3 + (-var45.field_r - 2), 16777215, 0);
-                    this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
-                    var3 = var3 + (5 + var5 + var8);
-                    var45.c("Skin", var2, -var45.field_r + (var3 + -2), 16777215, 0);
-                    this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
-                    var3 = var3 + (5 + (var8 + var5));
-                    var45.c("Cloth", var2, -2 + (-var45.field_r + var3), 16777215, 0);
-                    this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
-                    var9 = 0;
-                    var10 = 4;
-                    var11 = gg.field_b[var10];
-                    var12 = gg.field_l[var10];
-                    var13 = gg.field_j[var10];
-                    var14 = var12 + wf.field_m / var11 % var13;
-                    var46 = am.a(var14, this.field_o, var9, 1, this.field_n);
-                    og.h((byte) 110);
-                    var46.g(47, 57);
-                    var47 = am.a(var14, this.field_o, 1, 1, this.field_n);
-                    og.h((byte) 117);
-                    var47.g(17, 57);
-                    var48 = am.a(var14, this.field_l, var9, 1, this.field_s);
-                    og.h((byte) 118);
-                    var48.g(47, 139);
-                    var49 = am.a(var14, this.field_l, 1, 1, this.field_s);
-                    og.h((byte) 113);
-                    var49.g(17, 139);
-                    this.field_r.i(-31);
-                    return;
-                  }
-                } else {
-                  var2 = 100;
-                  var3 = 60;
-                  var4 = 20;
-                  var5 = 20;
-                  var6 = 2;
-                  var40 = qp.field_w;
-                  var8 = 2 + (var40.field_r + var40.field_C);
-                  var40.c("Skin", var2, -2 + (-var40.field_r + var3), 16777215, 0);
-                  this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
-                  var3 = var3 + (var5 + var8 + 5);
-                  var40.c("Cloth", var2, var3 + (-var40.field_r - 2), 16777215, 0);
-                  this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
-                  var3 = var3 + (5 + var5 + var8);
-                  var40.c("Skin", var2, -var40.field_r + (var3 + -2), 16777215, 0);
-                  this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
-                  var3 = var3 + (5 + (var8 + var5));
-                  var40.c("Cloth", var2, -2 + (-var40.field_r + var3), 16777215, 0);
-                  this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
-                  var9 = 0;
-                  var10 = 4;
-                  var11 = gg.field_b[var10];
-                  var12 = gg.field_l[var10];
-                  var13 = gg.field_j[var10];
-                  var14 = var12 + wf.field_m / var11 % var13;
-                  var41 = am.a(var14, this.field_o, var9, 1, this.field_n);
-                  og.h((byte) 110);
-                  var41.g(47, 57);
-                  var42 = am.a(var14, this.field_o, 1, 1, this.field_n);
-                  og.h((byte) 117);
-                  var42.g(17, 57);
-                  var43 = am.a(var14, this.field_l, var9, 1, this.field_s);
-                  og.h((byte) 118);
-                  var43.g(47, 139);
-                  var44 = am.a(var14, this.field_l, 1, 1, this.field_s);
-                  og.h((byte) 113);
-                  var44.g(17, 139);
-                  this.field_r.i(-31);
-                  return;
-                }
-              } else {
-                L6: {
-                  if ((kd.field_b ^ -1) != -2) {
-                    break L6;
-                  } else {
-                    if (30 >= vb.field_f) {
-                      break L6;
-                    } else {
-                      if (142 >= ka.field_t) {
-                        break L6;
-                      } else {
-                        if (90 <= vb.field_f) {
-                          break L6;
-                        } else {
-                          if (ka.field_t >= 194) {
-                            break L6;
-                          } else {
-                            L7: {
-                              stackOut_48_0 = this.field_r;
-                              stackIn_50_0 = stackOut_48_0;
-                              stackIn_49_0 = stackOut_48_0;
-                              if (this.field_q == 3) {
-                                stackOut_50_0 = (vh) ((Object) stackIn_50_0);
-                                stackOut_50_1 = this.field_s;
-                                stackIn_51_0 = stackOut_50_0;
-                                stackIn_51_1 = stackOut_50_1;
-                                break L7;
-                              } else {
-                                stackOut_49_0 = (vh) ((Object) stackIn_49_0);
-                                stackOut_49_1 = this.field_l;
-                                stackIn_51_0 = stackOut_49_0;
-                                stackIn_51_1 = stackOut_49_1;
-                                break L7;
-                              }
-                            }
-                            L8: {
-                              stackIn_51_0.field_Ob = stackIn_51_1;
-                              stackOut_51_0 = this;
-                              stackIn_53_0 = stackOut_51_0;
-                              stackIn_52_0 = stackOut_51_0;
-                              if (this.field_q != 3) {
-                                stackOut_53_0 = this;
-                                stackOut_53_1 = 3;
-                                stackIn_54_0 = stackOut_53_0;
-                                stackIn_54_1 = stackOut_53_1;
-                                break L8;
-                              } else {
-                                stackOut_52_0 = this;
-                                stackOut_52_1 = 4;
-                                stackIn_54_0 = stackOut_52_0;
-                                stackIn_54_1 = stackOut_52_1;
-                                break L8;
-                              }
-                            }
-                            ((vj) (this)).field_q = stackIn_54_1;
-                            break L6;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-                var2 = 100;
-                var3 = 60;
-                var4 = 20;
-                var5 = 20;
-                var6 = 2;
-                var35 = qp.field_w;
-                var8 = 2 + (var35.field_r + var35.field_C);
-                var35.c("Skin", var2, -2 + (-var35.field_r + var3), 16777215, 0);
-                this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
-                var3 = var3 + (var5 + var8 + 5);
-                var35.c("Cloth", var2, var3 + (-var35.field_r - 2), 16777215, 0);
-                this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
-                var3 = var3 + (5 + var5 + var8);
-                var35.c("Skin", var2, -var35.field_r + (var3 + -2), 16777215, 0);
-                this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
-                var3 = var3 + (5 + (var8 + var5));
-                var35.c("Cloth", var2, -2 + (-var35.field_r + var3), 16777215, 0);
-                this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
-                var9 = 0;
-                var10 = 4;
-                var11 = gg.field_b[var10];
-                var12 = gg.field_l[var10];
-                var13 = gg.field_j[var10];
-                var14 = var12 + wf.field_m / var11 % var13;
-                var36 = am.a(var14, this.field_o, var9, 1, this.field_n);
-                og.h((byte) 110);
-                var36.g(47, 57);
-                var37 = am.a(var14, this.field_o, 1, 1, this.field_n);
-                og.h((byte) 117);
-                var37.g(17, 57);
-                var38 = am.a(var14, this.field_l, var9, 1, this.field_s);
-                og.h((byte) 118);
-                var38.g(47, 139);
-                var39 = am.a(var14, this.field_l, 1, 1, this.field_s);
-                og.h((byte) 113);
-                var39.g(17, 139);
-                this.field_r.i(-31);
-                return;
-              }
-            } else {
-              L9: {
-                if ((kd.field_b ^ -1) != -2) {
-                  break L9;
-                } else {
-                  if (30 >= vb.field_f) {
-                    break L9;
-                  } else {
-                    if (142 >= ka.field_t) {
-                      break L9;
-                    } else {
-                      if (90 <= vb.field_f) {
-                        break L9;
-                      } else {
-                        if (ka.field_t >= 194) {
-                          break L9;
-                        } else {
-                          L10: {
-                            stackOut_34_0 = this.field_r;
-                            stackIn_36_0 = stackOut_34_0;
-                            stackIn_35_0 = stackOut_34_0;
-                            if (this.field_q == 3) {
-                              stackOut_36_0 = (vh) ((Object) stackIn_36_0);
-                              stackOut_36_1 = this.field_s;
-                              stackIn_37_0 = stackOut_36_0;
-                              stackIn_37_1 = stackOut_36_1;
-                              break L10;
-                            } else {
-                              stackOut_35_0 = (vh) ((Object) stackIn_35_0);
-                              stackOut_35_1 = this.field_l;
-                              stackIn_37_0 = stackOut_35_0;
-                              stackIn_37_1 = stackOut_35_1;
-                              break L10;
-                            }
-                          }
-                          L11: {
-                            stackIn_37_0.field_Ob = stackIn_37_1;
-                            stackOut_37_0 = this;
-                            stackIn_39_0 = stackOut_37_0;
-                            stackIn_38_0 = stackOut_37_0;
-                            if (this.field_q != 3) {
-                              stackOut_39_0 = this;
-                              stackOut_39_1 = 3;
-                              stackIn_40_0 = stackOut_39_0;
-                              stackIn_40_1 = stackOut_39_1;
-                              break L11;
-                            } else {
-                              stackOut_38_0 = this;
-                              stackOut_38_1 = 4;
-                              stackIn_40_0 = stackOut_38_0;
-                              stackIn_40_1 = stackOut_38_1;
-                              break L11;
-                            }
-                          }
-                          ((vj) (this)).field_q = stackIn_40_1;
-                          break L9;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              var2 = 100;
-              var3 = 60;
-              var4 = 20;
-              var5 = 20;
-              var6 = 2;
-              var30 = qp.field_w;
-              var8 = 2 + (var30.field_r + var30.field_C);
-              var30.c("Skin", var2, -2 + (-var30.field_r + var3), 16777215, 0);
-              this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
-              var3 = var3 + (var5 + var8 + 5);
-              var30.c("Cloth", var2, var3 + (-var30.field_r - 2), 16777215, 0);
-              this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
-              var3 = var3 + (5 + var5 + var8);
-              var30.c("Skin", var2, -var30.field_r + (var3 + -2), 16777215, 0);
-              this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
-              var3 = var3 + (5 + (var8 + var5));
-              var30.c("Cloth", var2, -2 + (-var30.field_r + var3), 16777215, 0);
-              this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
-              var9 = 0;
-              var10 = 4;
-              var11 = gg.field_b[var10];
-              var12 = gg.field_l[var10];
-              var13 = gg.field_j[var10];
-              var14 = var12 + wf.field_m / var11 % var13;
-              var31 = am.a(var14, this.field_o, var9, 1, this.field_n);
-              og.h((byte) 110);
-              var31.g(47, 57);
-              var32 = am.a(var14, this.field_o, 1, 1, this.field_n);
-              og.h((byte) 117);
-              var32.g(17, 57);
-              var33 = am.a(var14, this.field_l, var9, 1, this.field_s);
-              og.h((byte) 118);
-              var33.g(47, 139);
-              var34 = am.a(var14, this.field_l, 1, 1, this.field_s);
-              og.h((byte) 113);
-              var34.g(17, 139);
-              this.field_r.i(-31);
-              return;
+        if (kd.field_b != 1) {
+            if ((kd.field_b ^ -1) == -2 && 30 < vb.field_f && 142 < ka.field_t && 90 > vb.field_f && ka.field_t < 194) {
+                this.field_r.field_Ob = this.field_q != 3 ? this.field_l : this.field_s;
+                this.field_q = this.field_q == 3 ? 4 : 3;
             }
-          } else {
-            L12: {
-              if ((kd.field_b ^ -1) != -2) {
-                break L12;
-              } else {
-                if (30 >= vb.field_f) {
-                  break L12;
-                } else {
-                  if (142 >= ka.field_t) {
-                    break L12;
-                  } else {
-                    if (90 <= vb.field_f) {
-                      break L12;
-                    } else {
-                      if (ka.field_t >= 194) {
-                        break L12;
-                      } else {
-                        L13: {
-                          stackOut_20_0 = this.field_r;
-                          stackIn_22_0 = stackOut_20_0;
-                          stackIn_21_0 = stackOut_20_0;
-                          if (this.field_q == 3) {
-                            stackOut_22_0 = (vh) ((Object) stackIn_22_0);
-                            stackOut_22_1 = this.field_s;
-                            stackIn_23_0 = stackOut_22_0;
-                            stackIn_23_1 = stackOut_22_1;
-                            break L13;
-                          } else {
-                            stackOut_21_0 = (vh) ((Object) stackIn_21_0);
-                            stackOut_21_1 = this.field_l;
-                            stackIn_23_0 = stackOut_21_0;
-                            stackIn_23_1 = stackOut_21_1;
-                            break L13;
-                          }
-                        }
-                        L14: {
-                          stackIn_23_0.field_Ob = stackIn_23_1;
-                          stackOut_23_0 = this;
-                          stackIn_25_0 = stackOut_23_0;
-                          stackIn_24_0 = stackOut_23_0;
-                          if (this.field_q != 3) {
-                            stackOut_25_0 = this;
-                            stackOut_25_1 = 3;
-                            stackIn_26_0 = stackOut_25_0;
-                            stackIn_26_1 = stackOut_25_1;
-                            break L14;
-                          } else {
-                            stackOut_24_0 = this;
-                            stackOut_24_1 = 4;
-                            stackIn_26_0 = stackOut_24_0;
-                            stackIn_26_1 = stackOut_24_1;
-                            break L14;
-                          }
-                        }
-                        ((vj) (this)).field_q = stackIn_26_1;
-                        break L12;
-                      }
-                    }
-                  }
-                }
-              }
+            var2 = 100;
+            var3 = 60;
+            var4 = 20;
+            var5 = 20;
+            var6 = 2;
+            var20 = qp.field_w;
+            var8 = 2 + (var20.field_r + var20.field_C);
+            var20.c("Skin", var2, -2 + (-var20.field_r + var3), 16777215, 0);
+            this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
+            var3 = var3 + (var5 + var8 + 5);
+            var20.c("Cloth", var2, var3 + (-var20.field_r - 2), 16777215, 0);
+            this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
+            var3 = var3 + (5 + var5 + var8);
+            var20.c("Skin", var2, -var20.field_r + (var3 + -2), 16777215, 0);
+            this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
+            var3 = var3 + (5 + (var8 + var5));
+            var20.c("Cloth", var2, -2 + (-var20.field_r + var3), 16777215, 0);
+            this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
+            var9 = 0;
+            var10 = 4;
+            var11 = gg.field_b[var10];
+            var12 = gg.field_l[var10];
+            var13 = gg.field_j[var10];
+            var14 = var12 + wf.field_m / var11 % var13;
+            var21 = am.a(var14, this.field_o, var9, 1, this.field_n);
+            og.h((byte) 110);
+            var21.g(47, 57);
+            var22 = am.a(var14, this.field_o, 1, 1, this.field_n);
+            og.h((byte) 117);
+            var22.g(17, 57);
+            var23 = am.a(var14, this.field_l, var9, 1, this.field_s);
+            og.h((byte) 118);
+            var23.g(47, 139);
+            var24 = am.a(var14, this.field_l, 1, 1, this.field_s);
+            og.h((byte) 113);
+            var24.g(17, 139);
+            this.field_r.i(-31);
+            return;
+        }
+        if ((vb.field_f ^ -1) >= -31) {
+            if ((kd.field_b ^ -1) == -2 && 30 < vb.field_f && 142 < ka.field_t && 90 > vb.field_f && ka.field_t < 194) {
+                this.field_r.field_Ob = this.field_q != 3 ? this.field_l : this.field_s;
+                this.field_q = this.field_q == 3 ? 4 : 3;
             }
             var2 = 100;
             var3 = 60;
@@ -833,108 +209,300 @@ final class vj extends nc {
             var29.g(17, 139);
             this.field_r.i(-31);
             return;
-          }
-        } else {
-          L15: {
-            if ((kd.field_b ^ -1) != -2) {
-              break L15;
-            } else {
-              if (30 >= vb.field_f) {
-                break L15;
-              } else {
-                if (142 >= ka.field_t) {
-                  break L15;
-                } else {
-                  if (90 <= vb.field_f) {
-                    break L15;
-                  } else {
-                    if (ka.field_t >= 194) {
-                      break L15;
-                    } else {
-                      L16: {
-                        stackOut_6_0 = this.field_r;
-                        stackIn_8_0 = stackOut_6_0;
-                        stackIn_7_0 = stackOut_6_0;
-                        if (this.field_q == 3) {
-                          stackOut_8_0 = (vh) ((Object) stackIn_8_0);
-                          stackOut_8_1 = this.field_s;
-                          stackIn_9_0 = stackOut_8_0;
-                          stackIn_9_1 = stackOut_8_1;
-                          break L16;
-                        } else {
-                          stackOut_7_0 = (vh) ((Object) stackIn_7_0);
-                          stackOut_7_1 = this.field_l;
-                          stackIn_9_0 = stackOut_7_0;
-                          stackIn_9_1 = stackOut_7_1;
-                          break L16;
-                        }
-                      }
-                      L17: {
-                        stackIn_9_0.field_Ob = stackIn_9_1;
-                        stackOut_9_0 = this;
-                        stackIn_11_0 = stackOut_9_0;
-                        stackIn_10_0 = stackOut_9_0;
-                        if (this.field_q != 3) {
-                          stackOut_11_0 = this;
-                          stackOut_11_1 = 3;
-                          stackIn_12_0 = stackOut_11_0;
-                          stackIn_12_1 = stackOut_11_1;
-                          break L17;
-                        } else {
-                          stackOut_10_0 = this;
-                          stackOut_10_1 = 4;
-                          stackIn_12_0 = stackOut_10_0;
-                          stackIn_12_1 = stackOut_10_1;
-                          break L17;
-                        }
-                      }
-                      ((vj) (this)).field_q = stackIn_12_1;
-                      break L15;
-                    }
-                  }
-                }
-              }
-            }
-          }
-          var2 = 100;
-          var3 = 60;
-          var4 = 20;
-          var5 = 20;
-          var6 = 2;
-          var20 = qp.field_w;
-          var8 = 2 + (var20.field_r + var20.field_C);
-          var20.c("Skin", var2, -2 + (-var20.field_r + var3), 16777215, 0);
-          this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
-          var3 = var3 + (var5 + var8 + 5);
-          var20.c("Cloth", var2, var3 + (-var20.field_r - 2), 16777215, 0);
-          this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
-          var3 = var3 + (5 + var5 + var8);
-          var20.c("Skin", var2, -var20.field_r + (var3 + -2), 16777215, 0);
-          this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
-          var3 = var3 + (5 + (var8 + var5));
-          var20.c("Cloth", var2, -2 + (-var20.field_r + var3), 16777215, 0);
-          this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
-          var9 = 0;
-          var10 = 4;
-          var11 = gg.field_b[var10];
-          var12 = gg.field_l[var10];
-          var13 = gg.field_j[var10];
-          var14 = var12 + wf.field_m / var11 % var13;
-          var21 = am.a(var14, this.field_o, var9, 1, this.field_n);
-          og.h((byte) 110);
-          var21.g(47, 57);
-          var22 = am.a(var14, this.field_o, 1, 1, this.field_n);
-          og.h((byte) 117);
-          var22.g(17, 57);
-          var23 = am.a(var14, this.field_l, var9, 1, this.field_s);
-          og.h((byte) 118);
-          var23.g(47, 139);
-          var24 = am.a(var14, this.field_l, 1, 1, this.field_s);
-          og.h((byte) 113);
-          var24.g(17, 139);
-          this.field_r.i(-31);
-          return;
         }
+        if (-61 <= (ka.field_t ^ -1)) {
+            if ((kd.field_b ^ -1) == -2 && 30 < vb.field_f && 142 < ka.field_t && 90 > vb.field_f && ka.field_t < 194) {
+                this.field_r.field_Ob = this.field_q != 3 ? this.field_l : this.field_s;
+                this.field_q = this.field_q == 3 ? 4 : 3;
+            }
+            var2 = 100;
+            var3 = 60;
+            var4 = 20;
+            var5 = 20;
+            var6 = 2;
+            var30 = qp.field_w;
+            var8 = 2 + (var30.field_r + var30.field_C);
+            var30.c("Skin", var2, -2 + (-var30.field_r + var3), 16777215, 0);
+            this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
+            var3 = var3 + (var5 + var8 + 5);
+            var30.c("Cloth", var2, var3 + (-var30.field_r - 2), 16777215, 0);
+            this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
+            var3 = var3 + (5 + var5 + var8);
+            var30.c("Skin", var2, -var30.field_r + (var3 + -2), 16777215, 0);
+            this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
+            var3 = var3 + (5 + (var8 + var5));
+            var30.c("Cloth", var2, -2 + (-var30.field_r + var3), 16777215, 0);
+            this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
+            var9 = 0;
+            var10 = 4;
+            var11 = gg.field_b[var10];
+            var12 = gg.field_l[var10];
+            var13 = gg.field_j[var10];
+            var14 = var12 + wf.field_m / var11 % var13;
+            var31 = am.a(var14, this.field_o, var9, 1, this.field_n);
+            og.h((byte) 110);
+            var31.g(47, 57);
+            var32 = am.a(var14, this.field_o, 1, 1, this.field_n);
+            og.h((byte) 117);
+            var32.g(17, 57);
+            var33 = am.a(var14, this.field_l, var9, 1, this.field_s);
+            og.h((byte) 118);
+            var33.g(47, 139);
+            var34 = am.a(var14, this.field_l, 1, 1, this.field_s);
+            og.h((byte) 113);
+            var34.g(17, 139);
+            this.field_r.i(-31);
+            return;
+        }
+        if ((vb.field_f ^ -1) <= -91) {
+            if ((kd.field_b ^ -1) == -2 && 30 < vb.field_f && 142 < ka.field_t && 90 > vb.field_f && ka.field_t < 194) {
+                this.field_r.field_Ob = this.field_q != 3 ? this.field_l : this.field_s;
+                this.field_q = this.field_q == 3 ? 4 : 3;
+            }
+            var2 = 100;
+            var3 = 60;
+            var4 = 20;
+            var5 = 20;
+            var6 = 2;
+            var35 = qp.field_w;
+            var8 = 2 + (var35.field_r + var35.field_C);
+            var35.c("Skin", var2, -2 + (-var35.field_r + var3), 16777215, 0);
+            this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
+            var3 = var3 + (var5 + var8 + 5);
+            var35.c("Cloth", var2, var3 + (-var35.field_r - 2), 16777215, 0);
+            this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
+            var3 = var3 + (5 + var5 + var8);
+            var35.c("Skin", var2, -var35.field_r + (var3 + -2), 16777215, 0);
+            this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
+            var3 = var3 + (5 + (var8 + var5));
+            var35.c("Cloth", var2, -2 + (-var35.field_r + var3), 16777215, 0);
+            this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
+            var9 = 0;
+            var10 = 4;
+            var11 = gg.field_b[var10];
+            var12 = gg.field_l[var10];
+            var13 = gg.field_j[var10];
+            var14 = var12 + wf.field_m / var11 % var13;
+            var36 = am.a(var14, this.field_o, var9, 1, this.field_n);
+            og.h((byte) 110);
+            var36.g(47, 57);
+            var37 = am.a(var14, this.field_o, 1, 1, this.field_n);
+            og.h((byte) 117);
+            var37.g(17, 57);
+            var38 = am.a(var14, this.field_l, var9, 1, this.field_s);
+            og.h((byte) 118);
+            var38.g(47, 139);
+            var39 = am.a(var14, this.field_l, 1, 1, this.field_s);
+            og.h((byte) 113);
+            var39.g(17, 139);
+            this.field_r.i(-31);
+            return;
+        }
+        if ((ka.field_t ^ -1) > -113) {
+            this.field_r.field_Ob = (this.field_q ^ -1) != -2 ? this.field_o : this.field_n;
+            this.field_q = -2 != (this.field_q ^ -1) ? 1 : 2;
+        }
+        if ((kd.field_b ^ -1) != -2) {
+            var2 = 100;
+            var3 = 60;
+            var4 = 20;
+            var5 = 20;
+            var6 = 2;
+            var40 = qp.field_w;
+            var8 = 2 + (var40.field_r + var40.field_C);
+            var40.c("Skin", var2, -2 + (-var40.field_r + var3), 16777215, 0);
+            this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
+            var3 = var3 + (var5 + var8 + 5);
+            var40.c("Cloth", var2, var3 + (-var40.field_r - 2), 16777215, 0);
+            this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
+            var3 = var3 + (5 + var5 + var8);
+            var40.c("Skin", var2, -var40.field_r + (var3 + -2), 16777215, 0);
+            this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
+            var3 = var3 + (5 + (var8 + var5));
+            var40.c("Cloth", var2, -2 + (-var40.field_r + var3), 16777215, 0);
+            this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
+            var9 = 0;
+            var10 = 4;
+            var11 = gg.field_b[var10];
+            var12 = gg.field_l[var10];
+            var13 = gg.field_j[var10];
+            var14 = var12 + wf.field_m / var11 % var13;
+            var41 = am.a(var14, this.field_o, var9, 1, this.field_n);
+            og.h((byte) 110);
+            var41.g(47, 57);
+            var42 = am.a(var14, this.field_o, 1, 1, this.field_n);
+            og.h((byte) 117);
+            var42.g(17, 57);
+            var43 = am.a(var14, this.field_l, var9, 1, this.field_s);
+            og.h((byte) 118);
+            var43.g(47, 139);
+            var44 = am.a(var14, this.field_l, 1, 1, this.field_s);
+            og.h((byte) 113);
+            var44.g(17, 139);
+            this.field_r.i(-31);
+            return;
+        }
+        if (30 >= vb.field_f) {
+            var2 = 100;
+            var3 = 60;
+            var4 = 20;
+            var5 = 20;
+            var6 = 2;
+            var45 = qp.field_w;
+            var8 = 2 + (var45.field_r + var45.field_C);
+            var45.c("Skin", var2, -2 + (-var45.field_r + var3), 16777215, 0);
+            this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
+            var3 = var3 + (var5 + var8 + 5);
+            var45.c("Cloth", var2, var3 + (-var45.field_r - 2), 16777215, 0);
+            this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
+            var3 = var3 + (5 + var5 + var8);
+            var45.c("Skin", var2, -var45.field_r + (var3 + -2), 16777215, 0);
+            this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
+            var3 = var3 + (5 + (var8 + var5));
+            var45.c("Cloth", var2, -2 + (-var45.field_r + var3), 16777215, 0);
+            this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
+            var9 = 0;
+            var10 = 4;
+            var11 = gg.field_b[var10];
+            var12 = gg.field_l[var10];
+            var13 = gg.field_j[var10];
+            var14 = var12 + wf.field_m / var11 % var13;
+            var46 = am.a(var14, this.field_o, var9, 1, this.field_n);
+            og.h((byte) 110);
+            var46.g(47, 57);
+            var47 = am.a(var14, this.field_o, 1, 1, this.field_n);
+            og.h((byte) 117);
+            var47.g(17, 57);
+            var48 = am.a(var14, this.field_l, var9, 1, this.field_s);
+            og.h((byte) 118);
+            var48.g(47, 139);
+            var49 = am.a(var14, this.field_l, 1, 1, this.field_s);
+            og.h((byte) 113);
+            var49.g(17, 139);
+            this.field_r.i(-31);
+            return;
+        }
+        if (142 >= ka.field_t) {
+            var2 = 100;
+            var3 = 60;
+            var4 = 20;
+            var5 = 20;
+            var6 = 2;
+            var50 = qp.field_w;
+            var8 = 2 + (var50.field_r + var50.field_C);
+            var50.c("Skin", var2, -2 + (-var50.field_r + var3), 16777215, 0);
+            this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
+            var3 = var3 + (var5 + var8 + 5);
+            var50.c("Cloth", var2, var3 + (-var50.field_r - 2), 16777215, 0);
+            this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
+            var3 = var3 + (5 + var5 + var8);
+            var50.c("Skin", var2, -var50.field_r + (var3 + -2), 16777215, 0);
+            this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
+            var3 = var3 + (5 + (var8 + var5));
+            var50.c("Cloth", var2, -2 + (-var50.field_r + var3), 16777215, 0);
+            this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
+            var9 = 0;
+            var10 = 4;
+            var11 = gg.field_b[var10];
+            var12 = gg.field_l[var10];
+            var13 = gg.field_j[var10];
+            var14 = var12 + wf.field_m / var11 % var13;
+            var51 = am.a(var14, this.field_o, var9, 1, this.field_n);
+            og.h((byte) 110);
+            var51.g(47, 57);
+            var52 = am.a(var14, this.field_o, 1, 1, this.field_n);
+            og.h((byte) 117);
+            var52.g(17, 57);
+            var53 = am.a(var14, this.field_l, var9, 1, this.field_s);
+            og.h((byte) 118);
+            var53.g(47, 139);
+            var54 = am.a(var14, this.field_l, 1, 1, this.field_s);
+            og.h((byte) 113);
+            var54.g(17, 139);
+            this.field_r.i(-31);
+            return;
+        }
+        if (90 <= vb.field_f) {
+            var2 = 100;
+            var3 = 60;
+            var4 = 20;
+            var5 = 20;
+            var6 = 2;
+            var55 = qp.field_w;
+            var8 = 2 + (var55.field_r + var55.field_C);
+            var55.c("Skin", var2, -2 + (-var55.field_r + var3), 16777215, 0);
+            this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
+            var3 = var3 + (var5 + var8 + 5);
+            var55.c("Cloth", var2, var3 + (-var55.field_r - 2), 16777215, 0);
+            this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
+            var3 = var3 + (5 + var5 + var8);
+            var55.c("Skin", var2, -var55.field_r + (var3 + -2), 16777215, 0);
+            this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
+            var3 = var3 + (5 + (var8 + var5));
+            var55.c("Cloth", var2, -2 + (-var55.field_r + var3), 16777215, 0);
+            this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
+            var9 = 0;
+            var10 = 4;
+            var11 = gg.field_b[var10];
+            var12 = gg.field_l[var10];
+            var13 = gg.field_j[var10];
+            var14 = var12 + wf.field_m / var11 % var13;
+            var56 = am.a(var14, this.field_o, var9, 1, this.field_n);
+            og.h((byte) 110);
+            var56.g(47, 57);
+            var57 = am.a(var14, this.field_o, 1, 1, this.field_n);
+            og.h((byte) 117);
+            var57.g(17, 57);
+            var58 = am.a(var14, this.field_l, var9, 1, this.field_s);
+            og.h((byte) 118);
+            var58.g(47, 139);
+            var59 = am.a(var14, this.field_l, 1, 1, this.field_s);
+            og.h((byte) 113);
+            var59.g(17, 139);
+            this.field_r.i(-31);
+            return;
+        }
+        if (ka.field_t < 194) {
+            this.field_r.field_Ob = this.field_q != 3 ? this.field_l : this.field_s;
+            this.field_q = this.field_q == 3 ? 4 : 3;
+        }
+        var2 = 100;
+        var3 = 60;
+        var4 = 20;
+        var5 = 20;
+        var6 = 2;
+        ef var60 = qp.field_w;
+        var8 = 2 + (var60.field_r + var60.field_C);
+        var60.c("Skin", var2, -2 + (-var60.field_r + var3), 16777215, 0);
+        this.a(var4, 1, var6, this.field_o, (byte) -64, var5, var2, var3);
+        var3 = var3 + (var5 + var8 + 5);
+        var60.c("Cloth", var2, var3 + (-var60.field_r - 2), 16777215, 0);
+        this.a(var4, 2, var6, this.field_n, (byte) -105, var5, var2, var3);
+        var3 = var3 + (5 + var5 + var8);
+        var60.c("Skin", var2, -var60.field_r + (var3 + -2), 16777215, 0);
+        this.a(var4, 3, var6, this.field_l, (byte) -93, var5, var2, var3);
+        var3 = var3 + (5 + (var8 + var5));
+        var60.c("Cloth", var2, -2 + (-var60.field_r + var3), 16777215, 0);
+        this.a(var4, 4, var6, this.field_s, (byte) -96, var5, var2, var3);
+        var9 = 0;
+        var10 = 4;
+        var11 = gg.field_b[var10];
+        var12 = gg.field_l[var10];
+        var13 = gg.field_j[var10];
+        var14 = var12 + wf.field_m / var11 % var13;
+        ja var61 = am.a(var14, this.field_o, var9, 1, this.field_n);
+        og.h((byte) 110);
+        var61.g(47, 57);
+        ja var62 = am.a(var14, this.field_o, 1, 1, this.field_n);
+        og.h((byte) 117);
+        var62.g(17, 57);
+        ja var63 = am.a(var14, this.field_l, var9, 1, this.field_s);
+        og.h((byte) 118);
+        var63.g(47, 139);
+        ja var64 = am.a(var14, this.field_l, 1, 1, this.field_s);
+        og.h((byte) 113);
+        var64.g(17, 139);
+        this.field_r.i(-31);
     }
 
     final void a(int param0, boolean param1, int param2) {
@@ -948,8 +516,8 @@ final class vj extends nc {
     }
 
     final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         super.a(0);
         this.field_r.j(1);
@@ -1111,7 +679,6 @@ final class vj extends nc {
     }
 
     private final void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
-        int var9 = 0;
         int stackIn_4_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_20_0 = 0;
@@ -1120,22 +687,7 @@ final class vj extends nc {
         int stackIn_49_0 = 0;
         int stackIn_57_0 = 0;
         int stackIn_64_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int var9;
         if ((kd.field_b ^ -1) == -2) {
           if (vb.field_f > param6) {
             L0: {
@@ -1152,12 +704,10 @@ final class vj extends nc {
                       this.field_r.field_Ob = param3;
                       this.field_q = param1;
                       if (this.field_q != param1) {
-                        stackOut_41_0 = 6710886;
-                        stackIn_42_0 = stackOut_41_0;
+                        stackIn_42_0 = 6710886;
                         break L1;
                       } else {
-                        stackOut_40_0 = 14540253;
-                        stackIn_42_0 = stackOut_40_0;
+                        stackIn_42_0 = 14540253;
                         break L1;
                       }
                     }
@@ -1177,12 +727,10 @@ final class vj extends nc {
                             } else {
                               L3: {
                                 if (-1 > (1 & jf.field_e ^ -1)) {
-                                  stackOut_48_0 = 16777215;
-                                  stackIn_49_0 = stackOut_48_0;
+                                  stackIn_49_0 = 16777215;
                                   break L3;
                                 } else {
-                                  stackOut_47_0 = 14540219;
-                                  stackIn_49_0 = stackOut_47_0;
+                                  stackIn_49_0 = 14540219;
                                   break L3;
                                 }
                               }
@@ -1207,12 +755,10 @@ final class vj extends nc {
             }
             L4: {
               if (this.field_q != param1) {
-                stackOut_56_0 = 6710886;
-                stackIn_57_0 = stackOut_56_0;
+                stackIn_57_0 = 6710886;
                 break L4;
               } else {
-                stackOut_55_0 = 14540253;
-                stackIn_57_0 = stackOut_55_0;
+                stackIn_57_0 = 14540253;
                 break L4;
               }
             }
@@ -1232,12 +778,10 @@ final class vj extends nc {
                     } else {
                       L6: {
                         if (-1 > (1 & jf.field_e ^ -1)) {
-                          stackOut_63_0 = 16777215;
-                          stackIn_64_0 = stackOut_63_0;
+                          stackIn_64_0 = 16777215;
                           break L6;
                         } else {
-                          stackOut_62_0 = 14540219;
-                          stackIn_64_0 = stackOut_62_0;
+                          stackIn_64_0 = 14540219;
                           break L6;
                         }
                       }
@@ -1259,12 +803,10 @@ final class vj extends nc {
           } else {
             L7: {
               if (this.field_q != param1) {
-                stackOut_19_0 = 6710886;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = 6710886;
                 break L7;
               } else {
-                stackOut_18_0 = 14540253;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_0 = 14540253;
                 break L7;
               }
             }
@@ -1282,12 +824,10 @@ final class vj extends nc {
                     } else {
                       L9: {
                         if (-1 > (1 & jf.field_e ^ -1)) {
-                          stackOut_30_0 = 16777215;
-                          stackIn_31_0 = stackOut_30_0;
+                          stackIn_31_0 = 16777215;
                           break L9;
                         } else {
-                          stackOut_29_0 = 14540219;
-                          stackIn_31_0 = stackOut_29_0;
+                          stackIn_31_0 = 14540219;
                           break L9;
                         }
                       }
@@ -1319,12 +859,10 @@ final class vj extends nc {
         } else {
           L10: {
             if (this.field_q != param1) {
-              stackOut_3_0 = 6710886;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 6710886;
               break L10;
             } else {
-              stackOut_2_0 = 14540253;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 14540253;
               break L10;
             }
           }
@@ -1344,12 +882,10 @@ final class vj extends nc {
                   } else {
                     L12: {
                       if (-1 > (1 & jf.field_e ^ -1)) {
-                        stackOut_10_0 = 16777215;
-                        stackIn_11_0 = stackOut_10_0;
+                        stackIn_11_0 = 16777215;
                         break L12;
                       } else {
-                        stackOut_9_0 = 14540219;
-                        stackIn_11_0 = stackOut_9_0;
+                        stackIn_11_0 = 14540219;
                         break L12;
                       }
                     }

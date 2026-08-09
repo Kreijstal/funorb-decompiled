@@ -14,8 +14,8 @@ final class nb extends cc implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int a(boolean param0) {
-        int var2 = 0;
-        java.awt.Component var3 = null;
+        int var2;
+        java.awt.Component var3;
         var2 = this.field_c;
         this.field_c = 0;
         if (!param0) {

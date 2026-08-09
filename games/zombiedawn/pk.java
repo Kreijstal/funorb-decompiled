@@ -12,24 +12,13 @@ final class pk extends gl {
     static boolean field_J;
 
     private final void a(int param0, byte param1, Object[] param2) {
-        boolean discarded$2 = false;
         RuntimeException var4 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
@@ -39,7 +28,7 @@ final class pk extends gl {
               if (param1 == 94) {
                 break L1;
               } else {
-                discarded$2 = this.b(((int[]) (this.field_L[37]))[8], 8, ((int[]) (this.field_L[1]))[1], 39, -119);
+                this.b(((int[]) (this.field_L[37]))[8], 8, ((int[]) (this.field_L[1]))[1], 39, -119);
                 break L1;
               }
             }
@@ -64,27 +53,19 @@ final class pk extends gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("pk.P(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("pk.P(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -93,13 +74,13 @@ final class pk extends gl {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        Object var9 = null;
-        String var10 = null;
-        int var11 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        Object var9;
+        String var10;
+        int var11;
         var11 = ZombieDawn.field_J;
         if (param1 == 0) {
           L0: {
@@ -145,8 +126,8 @@ final class pk extends gl {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         var5 = -12 / ((param1 - -12) / 56);
         super.b(param0, -103, param2, param3);
         param0 = param0 - this.field_k;
@@ -170,12 +151,8 @@ final class pk extends gl {
     }
 
     final Object g(int param0) {
-        boolean discarded$1 = false;
         Object stackIn_5_0 = null;
         Object stackIn_11_0 = null;
-        Object stackOut_9_0 = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_3_0 = null;
         if (param0 == 0) {
           if (null != this.field_L) {
             if (0 == (this.field_K ^ -1)) {
@@ -184,23 +161,20 @@ final class pk extends gl {
               return this.field_L[this.field_K];
             }
           } else {
-            stackOut_9_0 = null;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = null;
             return stackIn_11_0;
           }
         } else {
-          discarded$1 = this.b(70, ((int[]) (this.field_L[25]))[1], ((int[]) (((Object[]) (this.field_L[4]))[1]))[5], ((int[]) (((Object[]) (this.field_L[6]))[4]))[0], ((int[]) (this.field_L[0]))[3]);
+          this.b(70, ((int[]) (this.field_L[25]))[1], ((int[]) (((Object[]) (this.field_L[4]))[1]))[5], ((int[]) (((Object[]) (this.field_L[6]))[4]))[0], ((int[]) (this.field_L[0]))[3]);
           if (null == this.field_L) {
             return null;
           } else {
             L0: {
               if (0 != (this.field_K ^ -1)) {
-                stackOut_4_0 = this.field_L[this.field_K];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = this.field_L[this.field_K];
                 break L0;
               } else {
-                stackOut_3_0 = null;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = null;
                 break L0;
               }
             }
@@ -296,20 +270,14 @@ final class pk extends gl {
     final int h(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 1227847265) {
           L0: {
             this.a(49, (byte) -85, (Object[]) (this.field_L[5]));
             if (null != this.field_L) {
-              stackOut_7_0 = (2 * this.field_L.length + 1) * this.field_I >> 1227847265;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = (2 * this.field_L.length + 1) * this.field_I >> 1227847265;
               break L0;
             } else {
-              stackOut_6_0 = 200;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 200;
               break L0;
             }
           }
@@ -317,12 +285,10 @@ final class pk extends gl {
         } else {
           L1: {
             if (null != this.field_L) {
-              stackOut_3_0 = (2 * this.field_L.length + 1) * this.field_I >> 1227847265;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (2 * this.field_L.length + 1) * this.field_I >> 1227847265;
               break L1;
             } else {
-              stackOut_2_0 = 200;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 200;
               break L1;
             }
           }

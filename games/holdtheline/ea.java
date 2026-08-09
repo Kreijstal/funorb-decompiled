@@ -41,27 +41,17 @@ final class ea extends n {
     }
 
     private final void a(int param0, int param1, hj param2, int param3) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var8 = HoldTheLine.field_D;
         try {
           L0: {
@@ -125,27 +115,19 @@ final class ea extends n {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var5);
-            stackOut_13_1 = new StringBuilder().append("ea.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var5);
+
+            stackIn_15_1 = new StringBuilder().append("ea.B(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L6;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L6;
             }
           }
@@ -154,7 +136,6 @@ final class ea extends n {
     }
 
     private final hj b(int param0, int param1, int param2) {
-        int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -162,67 +143,30 @@ final class ea extends n {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        hj var14 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        var13 = HoldTheLine.field_D;
-        var14 = new hj(this.field_F * 2, this.field_u);
-        if (param0 > 120) {
-          hf.a(var14, -1);
-          var5 = this.field_u >> -1388409919;
-          var6 = 0;
-          L0: while (true) {
-            if (this.field_u <= var6) {
-              dm.b((byte) -10);
-              return var14;
-            } else {
-              L1: {
-                var7 = (var6 >> -59102399) * (-1 + this.field_F * 2) % (this.field_F * 2);
-                var8 = param1 & 16711935;
-                var9 = 65280 & param1;
-                var10 = -var5 + var6;
-                var11 = (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0) + 128;
-                if ((var11 ^ -1) <= -257) {
-                  stackOut_6_0 = var8 | var9;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = (var11 * var9 & 16711680 | -16711936 & var8 * var11) >>> -387144856;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              L2: {
-                var12 = stackIn_7_0;
-                tc.b(var7, var6, this.field_F, var12);
-                var9 = 65280 & param2;
-                var8 = param2 & 16711935;
-                tc.b(-(this.field_F * 2) + var7, var6, this.field_F, var12);
-                if (-257 >= (var11 ^ -1)) {
-                  stackOut_9_0 = var8 | var9;
-                  stackIn_10_0 = stackOut_9_0;
-                  break L2;
-                } else {
-                  stackOut_8_0 = (var11 * var9 & 16711680 | -16711936 & var11 * var8) >>> 367197992;
-                  stackIn_10_0 = stackOut_8_0;
-                  break L2;
-                }
-              }
-              var12 = stackIn_10_0;
-              tc.b(var7 - -this.field_F, var6, this.field_F, var12);
-              tc.b(var7 + -this.field_F, var6, this.field_F, var12);
-              var6++;
-              continue L0;
-            }
-          }
-        } else {
-          return (hj) null;
+        int var13 = HoldTheLine.field_D;
+        hj var14 = new hj(this.field_F * 2, this.field_u);
+        if (param0 <= 120) {
+            return (hj) null;
         }
+        hf.a(var14, -1);
+        int var5 = this.field_u >> -1388409919;
+        for (var6 = 0; this.field_u > var6; var6++) {
+            var7 = (var6 >> -59102399) * (-1 + this.field_F * 2) % (this.field_F * 2);
+            var8 = param1 & 16711935;
+            var9 = 65280 & param1;
+            var10 = -var5 + var6;
+            var11 = (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0) + 128;
+            var12 = (var11 ^ -1) > -257 ? (var11 * var9 & 16711680 | -16711936 & var8 * var11) >>> -387144856 : var8 | var9;
+            tc.b(var7, var6, this.field_F, var12);
+            var9 = 65280 & param2;
+            var8 = param2 & 16711935;
+            tc.b(-(this.field_F * 2) + var7, var6, this.field_F, var12);
+            var12 = -257 < (var11 ^ -1) ? (var11 * var9 & 16711680 | -16711936 & var11 * var8) >>> 367197992 : var8 | var9;
+            tc.b(var7 - -this.field_F, var6, this.field_F, var12);
+            tc.b(var7 + -this.field_F, var6, this.field_F, var12);
+        }
+        dm.b((byte) -10);
+        return var14;
     }
 
     private final hj a(int param0) {
@@ -260,24 +204,14 @@ final class ea extends n {
     }
 
     final void a(int param0, n param1, int param2, byte param3) {
-        hj discarded$2 = null;
-        RuntimeException var5 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
+        hj discarded$1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -297,7 +231,7 @@ final class ea extends n {
               if (param3 == -3) {
                 break L2;
               } else {
-                discarded$2 = this.b(-85, 81, -16);
+                discarded$1 = this.b(-85, 81, -16);
                 break L2;
               }
             }
@@ -307,27 +241,19 @@ final class ea extends n {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5);
-            stackOut_6_1 = new StringBuilder().append("ea.JA(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5);
+
+            stackIn_8_1 = new StringBuilder().append("ea.JA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -336,18 +262,17 @@ final class ea extends n {
     }
 
     final static void a(boolean param0) {
-        RuntimeException var1 = null;
-        Object var1_ref = null;
         int var2 = 0;
-        Throwable var3 = null;
         int var4 = 0;
-        int var5 = 0;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
+        RuntimeException var1_ref = null;
+        int var5 = 0;
         var4 = HoldTheLine.field_D;
         try {
           L0: {
-            var1_ref = tf.field_n;
-            synchronized (var1_ref) {
+            var1 = tf.field_n;
+            synchronized (var1) {
               L1: {
                 cb.field_j = cb.field_j + 1;
                 if (!param0) {
@@ -395,8 +320,8 @@ final class ea extends n {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (RuntimeException) (Object) decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var1), "ea.I(" + param0 + ')');
+          var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+          throw kk.a((Throwable) ((Object) var1_ref), "ea.I(" + param0 + ')');
         }
     }
 

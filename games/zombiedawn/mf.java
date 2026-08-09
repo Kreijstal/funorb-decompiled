@@ -9,10 +9,10 @@ final class mf {
 
     final static void a(byte param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = ZombieDawn.field_J;
         try {
           L0: {
@@ -62,8 +62,6 @@ final class mf {
 
     final static boolean a(int param0, int param1, int param2) {
         int stackIn_12_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_11_0 = 0;
         L0: {
           param0 = param0 / 24;
           param1 = param1 / 24;
@@ -85,14 +83,12 @@ final class mf {
                         if (vm.field_u[param0][param1] >= 1) {
                           break L2;
                         } else {
-                          stackOut_10_0 = 1;
-                          stackIn_12_0 = stackOut_10_0;
+                          stackIn_12_0 = 1;
                           break L1;
                         }
                       }
                     }
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = 0;
                     break L1;
                   }
                   return stackIn_12_0 != 0;

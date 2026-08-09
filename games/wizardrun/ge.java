@@ -18,7 +18,7 @@ abstract class ge {
     private int field_d;
 
     private final void a(int param0, byte param1) {
-        int var4 = 0;
+        int var4;
         var4 = wizardrun.field_H;
         if (param1 == 81) {
           if ((vk.field_r ^ -1) != -97) {
@@ -69,24 +69,14 @@ abstract class ge {
     }
 
     void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
+        int var2;
+        int var3;
+        int var4;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         Object stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_5_2 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
         var4 = wizardrun.field_H;
         var2 = 0;
         var3 = this.field_d;
@@ -100,27 +90,19 @@ abstract class ge {
             }
           } else {
             L1: {
-              stackOut_2_0 = this;
-              stackOut_2_1 = var3;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              stackIn_3_0 = stackOut_2_0;
-              stackIn_3_1 = stackOut_2_1;
+              stackIn_4_0 = this;
+
+              stackIn_4_1 = var3;
+
               if (this.field_a != var2) {
-                stackOut_4_0 = this;
-                stackOut_4_1 = stackIn_4_1;
-                stackOut_4_2 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                stackIn_5_1 = stackOut_4_1;
-                stackIn_5_2 = stackOut_4_2;
+                stackIn_5_0 = this;
+                stackIn_5_1 = stackIn_4_1;
+                stackIn_5_2 = 0;
                 break L1;
               } else {
-                stackOut_3_0 = this;
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_5_1 = stackOut_3_1;
-                stackIn_5_2 = stackOut_3_2;
+                stackIn_5_0 = this;
+                stackIn_5_1 = stackIn_4_1;
+                stackIn_5_2 = 1;
                 break L1;
               }
             }
@@ -137,7 +119,7 @@ abstract class ge {
     abstract void a(int param0, boolean param1);
 
     final void b(int param0) {
-        int var3 = 0;
+        int var3;
         var3 = wizardrun.field_H;
         if (param0 == 0) {
           if (!this.field_m) {
@@ -218,8 +200,8 @@ abstract class ge {
     abstract void a(int param0, int param1);
 
     final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = wizardrun.field_H;
         if (param0 == -2) {
           if (w.field_c != 0) {
@@ -292,7 +274,7 @@ abstract class ge {
     }
 
     void a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
-        int var8 = 0;
+        int var8;
         var8 = wizardrun.field_H;
         if (!param4) {
           if (param3 == 1) {
@@ -369,7 +351,7 @@ abstract class ge {
     }
 
     private final int a(int param0, int param1, int param2) {
-        int var4 = 0;
+        int var4;
         if (param0 >= this.field_l) {
           if (param0 < this.field_h) {
             if (this.field_d > param2) {

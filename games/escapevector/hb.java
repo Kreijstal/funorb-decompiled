@@ -22,11 +22,10 @@ final class hb implements Iterator {
     }
 
     private final void a(byte param0) {
-        boolean discarded$0 = false;
         this.field_g = this.field_e.field_b[0].field_b;
         this.field_c = null;
         if (param0 != -59) {
-            discarded$0 = this.hasNext();
+            this.hasNext();
         }
         this.field_f = 1;
     }
@@ -59,9 +58,9 @@ final class hb implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        hg var1 = null;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        hg var1;
+        int var2;
         var2 = EscapeVector.field_A;
         if (this.field_e.field_b[-1 + this.field_f] != this.field_g) {
           var1 = this.field_g;
@@ -71,9 +70,9 @@ final class hb implements Iterator {
         } else {
           L0: while (true) {
             if (this.field_e.field_g > this.field_f) {
-              fieldTemp$2 = this.field_f;
+              fieldTemp$1 = this.field_f;
               this.field_f = this.field_f + 1;
-              var1 = this.field_e.field_b[fieldTemp$2].field_b;
+              var1 = this.field_e.field_b[fieldTemp$1].field_b;
               if (this.field_e.field_b[this.field_f + -1] != var1) {
                 this.field_c = var1;
                 this.field_g = var1.field_b;

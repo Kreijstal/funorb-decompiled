@@ -11,19 +11,15 @@ final class usb extends oda {
     private int field_x;
 
     private final void a(int param0, byte param1, int param2) {
-        int var4 = 0;
-        shb[] var5 = null;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int var4;
+        shb[] var5;
         L0: {
           if (null != this.field_y) {
-            stackOut_2_0 = this.field_y.length;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = this.field_y.length;
             break L0;
           } else {
-            stackOut_1_0 = 0;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 0;
             break L0;
           }
         }
@@ -83,22 +79,18 @@ final class usb extends oda {
     }
 
     private final void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int var4;
+        int[] var5;
+        int var6;
+        int var7;
         L0: {
           var7 = VoidHunters.field_G;
           if (this.field_A != null) {
-            stackOut_2_0 = this.field_A.length;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = this.field_A.length;
             break L0;
           } else {
-            stackOut_1_0 = 0;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 0;
             break L0;
           }
         }
@@ -182,12 +174,12 @@ final class usb extends oda {
     }
 
     final void d(int param0) {
-        int incrementValue$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        shb var5 = null;
-        int var6 = 0;
+        int incrementValue$0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var6;
+        shb var5;
         var6 = VoidHunters.field_G;
         var2 = 0;
         if (param0 == 16777215) {
@@ -198,10 +190,10 @@ final class usb extends oda {
                 var4 = 0;
                 L1: while (true) {
                   if (var2 < this.field_u.length) {
-                    if (var4 < this.field_y.length) {
-                      incrementValue$1 = var2;
+                    if ((var4 ^ -1) > (this.field_y.length ^ -1)) {
+                      incrementValue$0 = var2;
                       var2++;
-                      var5 = this.field_u[incrementValue$1];
+                      var5 = this.field_u[incrementValue$0];
                       if (var5 != null) {
                         this.a(var3, (byte) 72, var4, var5);
                         var4++;
@@ -261,6 +253,7 @@ final class usb extends oda {
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
+        int dupTemp$0 = 0;
         int var9 = VoidHunters.field_G;
         try {
             int var3_int = 9 % ((-48 - param0) / 36);
@@ -271,8 +264,9 @@ final class usb extends oda {
             var7 = 0;
             var8 = 0;
             while (var6.length > var7) {
-                var8 = var8 + var6[var7];
-                var6[var7] = var8 + var6[var7];
+                dupTemp$0 = var8 + var6[var7];
+                var8 = dupTemp$0;
+                var6[var7] = dupTemp$0;
                 var7++;
             }
             this.a(var5, (byte) -83, var4);
@@ -283,11 +277,10 @@ final class usb extends oda {
     }
 
     final void c(int param0, int param1, int param2) {
-        boolean discarded$2 = false;
-        shb var5 = null;
+        shb var5;
         if (param0 != -6) {
           var5 = (shb) null;
-          discarded$2 = this.a(-108, 52, 75, -20, (shb) null, -91, (byte) 106);
+          this.a(-108, 52, 75, -20, (shb) null, -91, (byte) 106);
           this.field_x = param1;
           this.field_z = param2;
           return;
@@ -299,20 +292,16 @@ final class usb extends oda {
     }
 
     private final void b(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int[] var5 = null;
-        int var6 = 0;
+        int var4;
+        int[] var5;
+        int var6;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
         L0: {
           if (this.field_y != null) {
-            stackOut_2_0 = this.field_y.length;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = this.field_y.length;
             break L0;
           } else {
-            stackOut_1_0 = 0;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 0;
             break L0;
           }
         }
@@ -347,23 +336,12 @@ final class usb extends oda {
     final boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -374,35 +352,26 @@ final class usb extends oda {
                 break L1;
               }
             }
-            stackOut_2_0 = super.a(param0, param1, param2, param3, param4, param5, (byte) -120);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = super.a(param0, param1, param2, param3, param4, param5, (byte) -120);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var8 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var8);
-            stackOut_4_1 = new StringBuilder().append("usb.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var8);
+
+            stackIn_6_1 = new StringBuilder().append("usb.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -417,6 +386,7 @@ final class usb extends oda {
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
+        int dupTemp$0 = 0;
         int var8 = VoidHunters.field_G;
         try {
             var3_int = null != this.field_y ? this.field_y.length : 0;
@@ -426,8 +396,9 @@ final class usb extends oda {
             var6 = 0;
             var7 = param0;
             while (var5.length > var6) {
-                var7 = var7 + var5[var6];
-                var5[var6] = var7 + var5[var6];
+                dupTemp$0 = var7 + var5[var6];
+                var7 = dupTemp$0;
+                var5[var6] = dupTemp$0;
                 var6++;
             }
             this.c(var3_int, (byte) -86, var4);
@@ -438,8 +409,18 @@ final class usb extends oda {
     }
 
     private final void a(int param0, byte param1, int param2, shb param3) {
-        RuntimeException var5 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_7_1 = 0;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
+        String stackIn_36_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -455,34 +436,6 @@ final class usb extends oda {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_7_1 = 0;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        String stackIn_36_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
         var20 = VoidHunters.field_G;
         try {
           L0: {
@@ -490,31 +443,24 @@ final class usb extends oda {
               var5_int = this.field_y[-1 + this.field_y.length];
               var6 = this.field_A[this.field_A.length - 1];
               if (0 >= param2) {
-                stackOut_3_0 = 0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = this.field_y[param2 + -1];
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = this.field_y[param2 + -1];
                 break L1;
               }
             }
             L2: {
               var7 = stackIn_4_0 * this.field_h / var5_int;
-              stackOut_4_0 = this.field_f;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_6_0 = this.field_f;
+
               if (0 >= param0) {
-                stackOut_6_0 = stackIn_6_0;
-                stackOut_6_1 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = stackIn_6_0;
+                stackIn_7_1 = 0;
                 break L2;
               } else {
-                stackOut_5_0 = stackIn_5_0;
-                stackOut_5_1 = this.field_A[param0 + -1];
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+                stackIn_7_0 = stackIn_6_0;
+                stackIn_7_1 = this.field_A[param0 + -1];
                 break L2;
               }
             }
@@ -625,27 +571,19 @@ final class usb extends oda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var5 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) (var5);
-            stackOut_33_1 = new StringBuilder().append("usb.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_35_0 = stackOut_33_0;
-            stackIn_35_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+            stackIn_35_0 = (RuntimeException) (var5);
+
+            stackIn_35_1 = new StringBuilder().append("usb.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "null";
               break L10;
             } else {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "{...}";
-              stackIn_36_0 = stackOut_34_0;
-              stackIn_36_1 = stackOut_34_1;
-              stackIn_36_2 = stackOut_34_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "{...}";
               break L10;
             }
           }
@@ -655,16 +593,12 @@ final class usb extends oda {
 
     final boolean a(int param0, int param1, shb param2, char param3) {
         int var5_int = 0;
-        RuntimeException var5 = null;
-        String var6 = null;
         int stackIn_3_0 = 0;
         boolean stackIn_11_0 = false;
         boolean stackIn_13_0 = false;
         boolean stackIn_15_0 = false;
         boolean stackIn_17_0 = false;
         int stackIn_21_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -672,45 +606,29 @@ final class usb extends oda {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        boolean stackOut_12_0 = false;
-        boolean stackOut_14_0 = false;
-        boolean stackOut_16_0 = false;
-        int stackOut_20_0 = 0;
-        boolean stackOut_10_0 = false;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        RuntimeException var5 = null;
+        String var6 = null;
         try {
           L0: {
             if (super.a(param0 + 0, param1, param2, param3)) {
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               var5_int = param1;
               if (var5_int != 98) {
                 if (var5_int == 99) {
-                  stackOut_12_0 = this.a(this.field_y.length, param2, 0);
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = this.a(this.field_y.length, param2, 0);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (96 == var5_int) {
-                    stackOut_14_0 = this.a(param2, (byte) -123);
-                    stackIn_15_0 = stackOut_14_0;
+                    stackIn_15_0 = this.a(param2, (byte) -123);
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
                     if (97 == var5_int) {
-                      stackOut_16_0 = this.b(param2, (byte) 39);
-                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_0 = this.b(param2, (byte) 39);
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
@@ -723,16 +641,14 @@ final class usb extends oda {
                           break L1;
                         }
                       }
-                      stackOut_20_0 = 0;
-                      stackIn_21_0 = stackOut_20_0;
+                      stackIn_21_0 = 0;
                       decompiledRegionSelector0 = 5;
                       break L0;
                     }
                   }
                 }
               } else {
-                stackOut_10_0 = this.a(param2, 103, this.field_y.length);
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = this.a(param2, 103, this.field_y.length);
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -742,27 +658,19 @@ final class usb extends oda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var5);
-            stackOut_22_1 = new StringBuilder().append("usb.N(").append(param0).append(',').append(param1).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var5);
+
+            stackIn_24_1 = new StringBuilder().append("usb.N(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L2;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L2;
             }
           }
@@ -792,42 +700,20 @@ final class usb extends oda {
     }
 
     final static void a(int param0, no param1, String param2, int param3, int param4, int param5, int param6) {
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
         try {
           L0: {
             L1: {
@@ -859,76 +745,56 @@ final class usb extends oda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var7 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var7);
-            stackOut_7_1 = new StringBuilder().append("usb.P(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var7);
+
+            stackIn_9_1 = new StringBuilder().append("usb.P(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+
+
+            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
+
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_13_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     private final void c(int param0, byte param1, int param2) {
-        int var4 = 0;
-        shb[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        shb[] var5;
+        int var6;
+        int var7;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
         L0: {
           var7 = VoidHunters.field_G;
           if (null != this.field_A) {
-            stackOut_2_0 = this.field_A.length;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = this.field_A.length;
             break L0;
           } else {
-            stackOut_1_0 = 0;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 0;
             break L0;
           }
         }

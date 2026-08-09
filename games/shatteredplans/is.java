@@ -7,9 +7,8 @@ final class is {
     private static String field_z;
 
     final static int a(byte param0, int param1) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = ShatteredPlansClient.field_F ? 1 : 0;
           gb.field_i = 0;
@@ -18,7 +17,7 @@ final class is {
           if (param0 == -94) {
             break L0;
           } else {
-            discarded$1 = is.a((byte) -54, 83);
+            is.a((byte) -54, 83);
             break L0;
           }
         }

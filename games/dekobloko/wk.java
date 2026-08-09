@@ -20,24 +20,13 @@ class wk extends fm {
         int var3 = 0;
         boolean stackIn_4_0 = false;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        byte stackOut_6_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        boolean stackOut_3_0;
         var3 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -68,8 +57,7 @@ class wk extends fm {
                     }
                   }
                 }
-                stackOut_6_0 = param0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = param0;
                 break L2;
               }
               L4: {
@@ -100,27 +88,19 @@ class wk extends fm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2_ref);
-            stackOut_14_1 = new StringBuilder().append("wk.H(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2_ref);
+
+            stackIn_16_1 = new StringBuilder().append("wk.H(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L6;
             }
           }
@@ -158,9 +138,9 @@ class wk extends fm {
     }
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           L1: {
             var5 = client.field_A ? 1 : 0;
@@ -268,7 +248,7 @@ class wk extends fm {
     }
 
     public static void c(int param0) {
-        ff var2 = null;
+        ff var2;
         field_o = null;
         field_g = null;
         if (param0 != 7751) {

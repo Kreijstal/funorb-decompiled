@@ -31,9 +31,8 @@ abstract class nf extends fl {
     }
 
     final static void g(int param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         var1 = om.field_b;
         synchronized (var1) {
           L0: {
@@ -84,8 +83,8 @@ abstract class nf extends fl {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
+        int var6;
+        int var7;
         if (param1 != 34) {
           this.field_v = 118;
           var6 = this.field_A << 1008705795;

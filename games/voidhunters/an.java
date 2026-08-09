@@ -5,7 +5,7 @@ final class an extends fg implements java.awt.event.MouseWheelListener {
     private int field_b;
 
     final synchronized int b(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = this.field_b;
         if (param0 != 1) {
           this.field_b = -13;

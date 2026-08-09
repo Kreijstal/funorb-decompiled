@@ -17,8 +17,6 @@ final class dh extends df {
         byte[] var4 = null;
         Object stackIn_4_0 = null;
         fb stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -26,16 +24,6 @@ final class dh extends df {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        fb stackOut_5_0 = null;
-        Object stackOut_3_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -49,13 +37,11 @@ final class dh extends df {
             var4 = param1.c(param0, -103);
             var3 = var4;
             if (var4 != null) {
-              stackOut_5_0 = new fb(var4);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = new fb(var4);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_3_0 = null;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -64,27 +50,19 @@ final class dh extends df {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3_ref);
-            stackOut_7_1 = new StringBuilder().append("dh.B(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3_ref);
+
+            stackIn_9_1 = new StringBuilder().append("dh.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -109,8 +87,8 @@ final class dh extends df {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var2 = 0;
           if (0 != (7 & param1)) {
@@ -141,11 +119,10 @@ final class dh extends df {
     }
 
     public static void g(int param0) {
-        int discarded$2 = 0;
         field_Y = null;
         field_cb = (ka[][]) null;
         if (param0 != 112) {
-          discarded$2 = dh.a(-110, -29);
+          dh.a(-110, -29);
           field_ab = null;
           field_V = null;
           return;
@@ -157,32 +134,32 @@ final class dh extends df {
     }
 
     final void a(int param0, int param1, boolean param2, int param3) {
-        String var5 = null;
-        rj var6 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        ka var16 = null;
-        String var17 = null;
-        Object var18 = null;
-        ka var19 = null;
-        ka var20 = null;
-        ka var21 = null;
-        String var23 = null;
-        Object var24 = null;
-        ka var25 = null;
-        ka var27 = null;
-        ka var30 = null;
-        ka var32 = null;
-        Object var37 = null;
-        ka var38 = null;
-        ka var39 = null;
-        ka var40 = null;
-        gd var41 = null;
-        gd var42 = null;
-        gd var43 = null;
+        rj var6;
+        int var9;
+        int var10;
+        int var13;
+        String var17;
+        Object var18;
+        ka var19;
+        ka var20;
+        Object var24;
+        Object var37;
+        gd var41;
+        String var5;
+        int var11;
+        int var12;
+        ka var16;
+        ka var21;
+        String var23;
+        ka var25;
+        ka var27;
+        ka var30;
+        ka var32;
+        ka var38;
+        ka var39;
+        ka var40;
+        gd var42;
+        gd var43;
         var18 = null;
         var24 = null;
         var37 = null;
@@ -453,28 +430,16 @@ final class dh extends df {
     final boolean a(ee param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             if (param1 == 0) {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               break L0;
             } else {
               this.field_W = (String) null;
@@ -485,27 +450,19 @@ final class dh extends df {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("dh.RA(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("dh.RA(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L1;
             }
           }
@@ -515,12 +472,9 @@ final class dh extends df {
     }
 
     final static ae a(int param0, int param1, byte param2, int param3, int param4) {
-        ae discarded$1 = null;
-        Object var5 = null;
-        ae var5_ref = null;
-        int var6 = 0;
-        ae var7 = null;
-        ae var8 = null;
+        Object var5;
+        ae var5_ref;
+        int var6;
         var5 = null;
         var6 = TorChallenge.field_F ? 1 : 0;
         if (param2 == -69) {
@@ -534,17 +488,17 @@ final class dh extends df {
                 continue L0;
               }
             } else {
-              var7 = new ae();
-              var7.field_r = param1;
-              var7.field_q = param3;
-              var7.field_o = param0;
-              bk.field_t.a(var7, -53);
-              bg.a(param4, (byte) 26, var7);
-              return var7;
+              var5_ref = new ae();
+              var5_ref.field_r = param1;
+              var5_ref.field_q = param3;
+              var5_ref.field_o = param0;
+              bk.field_t.a(var5_ref, -53);
+              bg.a(param4, (byte) 26, var5_ref);
+              return var5_ref;
             }
           }
         } else {
-          discarded$1 = dh.a(-109, -75, (byte) -32, 2, -86);
+          dh.a(-109, -75, (byte) -32, 2, -86);
           var5_ref = (ae) ((Object) bk.field_t.c((byte) 121));
           L1: while (true) {
             if (var5_ref != null) {
@@ -555,14 +509,13 @@ final class dh extends df {
                 continue L1;
               }
             } else {
-              var8 = new ae();
-              var5_ref = var8;
-              var8.field_r = param1;
-              var8.field_q = param3;
-              var8.field_o = param0;
-              bk.field_t.a(var8, -53);
-              bg.a(param4, (byte) 26, var8);
-              return var8;
+              var5_ref = new ae();
+              var5_ref.field_r = param1;
+              var5_ref.field_q = param3;
+              var5_ref.field_o = param0;
+              bk.field_t.a(var5_ref, -53);
+              bg.a(param4, (byte) 26, var5_ref);
+              return var5_ref;
             }
           }
         }
@@ -572,7 +525,7 @@ final class dh extends df {
         if (!param0) {
             return null;
         }
-        String discarded$0 = this.b(false);
+        this.b(false);
         return null;
     }
 

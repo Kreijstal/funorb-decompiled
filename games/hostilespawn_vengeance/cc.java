@@ -4,13 +4,16 @@
 final class cc {
     final static boolean a(byte param0) {
         if (param0 >= -91) {
-            boolean discarded$6 = cc.a((byte) 35);
+            cc.a((byte) 35);
             return kh.field_eb != null ? true : false;
         }
         return kh.field_eb != null ? true : false;
     }
 
     final static String a(int param0) {
+        if (param0 <= 29) {
+            return (String) null;
+        }
         if (!(pb.field_Kb >= 2)) {
             return kb.field_b;
         }

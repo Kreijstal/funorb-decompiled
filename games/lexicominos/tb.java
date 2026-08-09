@@ -8,85 +8,119 @@ abstract class tb {
     abstract long b(int param0);
 
     final static String a(String param0, String param1, boolean param2, String param3) {
-        int var4 = 0;
-        int var5 = 0;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
         String stackIn_11_0 = null;
         String stackIn_13_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_6_0 = null;
-        String stackOut_10_0 = null;
-        String stackOut_12_0 = null;
-        var5 = Lexicominos.field_L ? 1 : 0;
-        if (param2) {
-          var4 = param1.indexOf(param0);
-          L0: while (true) {
-            L1: {
-              L2: {
-                if (0 == (var4 ^ -1)) {
-                  break L2;
-                } else {
-                  param1 = param1.substring(0, var4) + param3 + param1.substring(param0.length() + var4);
-                  stackOut_4_0 = (String) (param1);
-                  stackIn_7_0 = stackOut_4_0;
-                  stackIn_5_0 = stackOut_4_0;
-                  if (var5 != 0) {
-                    break L1;
-                  } else {
+        int statePc = 0;
+        int var4 = 0;
+        int var5 = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var5 = Lexicominos.field_L ? 1 : 0;
+                    if (param2) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    field_a = (mj) null;
+                    statePc = 8;
+                    continue stateLoop;
+                }
+                case 2: {
+                    var4 = param1.indexOf(param0);
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (0 == (var4 ^ -1)) {
+                        statePc = 6;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    param1 = param1.substring(0, var4) + param3 + param1.substring(param0.length() + var4);
+                    stackIn_7_0 = (String) (param1);
+                    stackIn_5_0 = stackIn_7_0;
+                    if (var5 != 0) {
+                        statePc = 7;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
                     var4 = ((String) (Object) stackIn_5_0).indexOf(param0, param3.length() + var4);
                     if (var5 == 0) {
-                      continue L0;
+                        statePc = 3;
                     } else {
-                      break L2;
+                        statePc = 6;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
-              stackOut_6_0 = (String) (param1);
-              stackIn_7_0 = stackOut_6_0;
-              break L1;
-            }
-            return stackIn_7_0;
-          }
-        } else {
-          field_a = (mj) null;
-          var4 = param1.indexOf(param0);
-          L3: while (true) {
-            L4: {
-              L5: {
-                if (0 == (var4 ^ -1)) {
-                  break L5;
-                } else {
-                  param1 = param1.substring(0, var4) + param3 + param1.substring(param0.length() + var4);
-                  stackOut_10_0 = (String) (param1);
-                  stackIn_13_0 = stackOut_10_0;
-                  stackIn_11_0 = stackOut_10_0;
-                  if (var5 != 0) {
-                    break L4;
-                  } else {
+                case 6: {
+                    stackIn_7_0 = (String) (param1);
+                    statePc = 7;
+                    continue stateLoop;
+                }
+                case 7: {
+                    return stackIn_7_0;
+                }
+                case 8: {
+                    var4 = param1.indexOf(param0);
+                    statePc = 9;
+                    continue stateLoop;
+                }
+                case 9: {
+                    if (0 == (var4 ^ -1)) {
+                        statePc = 12;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    param1 = param1.substring(0, var4) + param3 + param1.substring(param0.length() + var4);
+                    stackIn_13_0 = (String) (param1);
+                    stackIn_11_0 = stackIn_13_0;
+                    if (var5 != 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
                     var4 = ((String) (Object) stackIn_11_0).indexOf(param0, param3.length() + var4);
                     if (var5 == 0) {
-                      continue L3;
+                        statePc = 9;
                     } else {
-                      break L5;
+                        statePc = 12;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
-              stackOut_12_0 = (String) (param1);
-              stackIn_13_0 = stackOut_12_0;
-              break L4;
+                case 12: {
+                    stackIn_13_0 = (String) (param1);
+                    statePc = 13;
+                    continue stateLoop;
+                }
+                case 13: {
+                    return stackIn_13_0;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            return stackIn_13_0;
-          }
         }
     }
 
     public static void a(int param0) {
-        String discarded$0 = null;
         if (param0 != 255) {
-            discarded$0 = tb.a((String) null, (String) null, true, (String) null);
+            tb.a((String) null, (String) null, true, (String) null);
             field_a = null;
             return;
         }
@@ -98,9 +132,17 @@ abstract class tb {
     abstract void a(byte param0);
 
     final static pk a(th param0, int param1) {
-        int discarded$1 = 0;
-        RuntimeException var2 = null;
+        pk stackIn_5_0 = null;
+        pk stackIn_29_0 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        String stackIn_33_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         pk var5 = null;
@@ -109,27 +151,6 @@ abstract class tb {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        pk stackIn_5_0 = null;
-        pk stackIn_29_0 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        pk stackOut_28_0 = null;
-        pk stackOut_4_0 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
@@ -165,7 +186,7 @@ abstract class tb {
                   if (var4 == 0) {
                     break L2;
                   } else {
-                    discarded$1 = param0.g(16, 26527);
+                    param0.g(16, 26527);
                     var5.field_d = hi.a(param0, (byte) -70, 16, var5.field_d);
                     var5.field_s = hi.a(param0, (byte) -96, 16, var5.field_s);
                     var5.field_e = hi.a(param0, (byte) -128, 16, var5.field_e);
@@ -240,13 +261,11 @@ abstract class tb {
                     break L4;
                   }
                 }
-                stackOut_28_0 = (pk) (var5);
-                stackIn_29_0 = stackOut_28_0;
+                stackIn_29_0 = (pk) (var5);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                stackOut_4_0 = (pk) null;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = (pk) null;
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -258,27 +277,19 @@ abstract class tb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var2 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) (var2);
-            stackOut_30_1 = new StringBuilder().append("tb.I(");
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackIn_32_0 = (RuntimeException) (var2);
+
+            stackIn_32_1 = new StringBuilder().append("tb.I(");
+
             if (param0 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L10;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L10;
             }
           }
@@ -292,7 +303,7 @@ abstract class tb {
     }
 
     final int a(byte param0, long param1) {
-        long var4 = 0L;
+        long var4;
         if (param0 >= 5) {
           var4 = this.b(255);
           if (0L < var4) {

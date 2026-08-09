@@ -17,7 +17,7 @@ final class rc {
     static String field_i;
 
     final static boolean b(int param0) {
-        int var1 = 0;
+        int var1;
         var1 = 51 % ((-1 - param0) / 32);
         if (ne.field_b != null) {
           if (!ne.field_b.b(95)) {
@@ -31,10 +31,9 @@ final class rc {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_a = null;
         if (param0 >= -116) {
-            discarded$0 = rc.b(7);
+            rc.b(7);
             field_m = null;
             field_i = null;
             return;

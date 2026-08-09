@@ -45,9 +45,8 @@ final class wg implements Runnable {
     }
 
     final static int b(int param0) {
-        int discarded$0 = 0;
         if (param0 != 13174) {
-            discarded$0 = wg.b(57);
+            wg.b(57);
             return 1;
         }
         return 1;
@@ -73,11 +72,11 @@ final class wg implements Runnable {
     }
 
     final synchronized boolean a(int param0) {
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        Throwable decompiledCaughtException = null;
         if (this.field_d < 2) {
           L0: {
             if (0 == this.field_d) {
@@ -241,15 +240,13 @@ final class wg implements Runnable {
     public final void run() {
         try {
             int var1_int = 0;
-            Exception var1 = null;
-            Object var1_ref = null;
-            Throwable var2 = null;
-            Object var2_ref = null;
-            Throwable var3 = null;
             int var4 = 0;
             int var5 = 0;
             int var6 = 0;
             Throwable decompiledCaughtException = null;
+            Object var1 = null;
+            Exception var1_ref = null;
+            Object var2 = null;
             var4 = Lexicominos.field_L ? 1 : 0;
             try {
               L0: while (true) {
@@ -295,8 +292,8 @@ final class wg implements Runnable {
                       break L2;
                     }
                   }
-                  var1_ref = this;
-                  synchronized (var1_ref) {
+                  var1 = this;
+                  synchronized (var1) {
                     L5: {
                       this.finalize();
                       this.field_d = 3;
@@ -309,9 +306,9 @@ final class wg implements Runnable {
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var2_ref = this;
-              synchronized (var2_ref) {
+              var1_ref = (Exception) (Object) decompiledCaughtException;
+              var2 = this;
+              synchronized (var2) {
                 L6: {
                   this.finalize();
                   this.field_d = this.field_d + 1;

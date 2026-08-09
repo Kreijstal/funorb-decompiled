@@ -7,13 +7,14 @@ final class glb {
     static String field_a;
 
     final static void c(int param0) {
-        RuntimeException var1 = null;
-        qw var1_ref = null;
-        nl var1_ref2 = null;
+        boolean stackIn_13_0 = false;
+        RuntimeException decompiledCaughtException = null;
+        qw var1 = null;
+        nl var1_ref = null;
+        RuntimeException var1_ref2 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -32,20 +33,20 @@ final class glb {
                 if (ms.field_y.b(-42)) {
                   break L2;
                 } else {
-                  var1_ref = (qw) ((Object) ms.field_y.d(0));
+                  var1 = (qw) ((Object) ms.field_y.d(0));
                   L3: while (true) {
-                    if (var1_ref == null) {
+                    if (var1 == null) {
                       break L2;
                     } else {
                       L4: {
-                        if (!var1_ref.field_k.b((byte) -63)) {
-                          var1_ref.b(-3846);
+                        if (!var1.field_k.b((byte) -63)) {
+                          var1.b(-3846);
                           break L4;
                         } else {
                           break L4;
                         }
                       }
-                      var1_ref = (qw) ((Object) ms.field_y.a((byte) 77));
+                      var1 = (qw) ((Object) ms.field_y.a((byte) 77));
                       continue L3;
                     }
                   }
@@ -56,33 +57,34 @@ final class glb {
               if (null == gtb.field_d) {
                 break L5;
               } else {
-                if (!gtb.field_d.b(-74)) {
-                  var1_ref2 = (nl) ((Object) gtb.field_d.d(0));
+                stackIn_13_0 = gtb.field_d.b(-74);
+                if (!stackIn_13_0) {
+                  var1_ref = (nl) ((Object) gtb.field_d.d(0));
                   L6: while (true) {
-                    if (var1_ref2 == null) {
+                    if (var1_ref == null) {
                       break L5;
                     } else {
                       L7: {
-                        if (!var1_ref2.field_h) {
-                          nmb.a((byte) -91, var1_ref2.field_d);
-                          var1_ref2.b(param0 ^ -19863);
+                        if (!var1_ref.field_h) {
+                          nmb.a((byte) -91, var1_ref.field_d);
+                          var1_ref.b(param0 ^ -19863);
                           break L7;
                         } else {
                           L8: {
-                            if (!var1_ref2.field_g) {
+                            if (!var1_ref.field_g) {
                               break L8;
                             } else {
-                              var2 = uv.a(param0 + -16915, var1_ref2.field_i);
-                              var3 = pja.b((byte) 119, var1_ref2.field_i, var1_ref2.field_f);
-                              var1_ref2.field_d.a(param0 ^ 16915, var3, var2);
+                              var2 = uv.a(param0 + -16915, var1_ref.field_i);
+                              var3 = pja.b((byte) 119, var1_ref.field_i, var1_ref.field_f);
+                              var1_ref.field_d.a(param0 ^ 16915, var3, var2);
                               break L8;
                             }
                           }
-                          var1_ref2.field_h = false;
+                          var1_ref.field_h = false;
                           break L7;
                         }
                       }
-                      var1_ref2 = (nl) ((Object) gtb.field_d.a((byte) 12));
+                      var1_ref = (nl) ((Object) gtb.field_d.a((byte) 12));
                       continue L6;
                     }
                   }
@@ -95,8 +97,8 @@ final class glb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1), "glb.C(" + param0 + ')');
+          var1_ref2 = decompiledCaughtException;
+          throw rta.a((Throwable) ((Object) var1_ref2), "glb.C(" + param0 + ')');
         }
     }
 

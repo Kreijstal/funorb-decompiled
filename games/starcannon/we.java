@@ -10,7 +10,6 @@ final class we extends rf {
     static byte[][] field_h;
 
     final static String a(int param0) {
-        boolean discarded$0 = false;
         if (uh.field_k == jl.field_a) {
             return wj.field_c;
         }
@@ -22,7 +21,7 @@ final class we extends rf {
         }
         if (param0 != 29084) {
             CharSequence var2 = (CharSequence) null;
-            discarded$0 = we.a((byte) -46, (CharSequence) null, false, -37);
+            we.a((byte) -46, (CharSequence) null, false, -37);
         }
         return lc.field_hb;
     }
@@ -32,21 +31,11 @@ final class we extends rf {
     }
 
     final static boolean a(byte param0, CharSequence param1, boolean param2, int param3) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
         int stackIn_6_0 = 0;
         int stackIn_26_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_37_0 = 0;
         int stackIn_41_0 = 0;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         RuntimeException stackIn_45_0 = null;
@@ -54,19 +43,14 @@ final class we extends rf {
         String stackIn_45_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_40_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
         try {
           L0: {
             L1: {
@@ -84,8 +68,7 @@ final class we extends rf {
                     var8 = 0;
                     L2: while (true) {
                       if (var8 >= var7) {
-                        stackOut_40_0 = var5;
-                        stackIn_41_0 = stackOut_40_0;
+                        stackIn_41_0 = var5;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
@@ -137,8 +120,7 @@ final class we extends rf {
                               }
                             }
                             if (97 > var9) {
-                              stackOut_25_0 = 0;
-                              stackIn_26_0 = stackOut_25_0;
+                              stackIn_26_0 = 0;
                               decompiledRegionSelector0 = 1;
                               break L0;
                             } else {
@@ -161,8 +143,7 @@ final class we extends rf {
                             }
                             var10 = var6 * param3 - -var9;
                             if (var6 != var10 / param3) {
-                              stackOut_36_0 = 0;
-                              stackIn_37_0 = stackOut_36_0;
+                              stackIn_37_0 = 0;
                               decompiledRegionSelector0 = 3;
                               break L0;
                             } else {
@@ -171,8 +152,7 @@ final class we extends rf {
                               break L3;
                             }
                           } else {
-                            stackOut_29_0 = 0;
-                            stackIn_30_0 = stackOut_29_0;
+                            stackIn_30_0 = 0;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           }
@@ -182,8 +162,7 @@ final class we extends rf {
                       }
                     }
                   } else {
-                    stackOut_5_0 = 1;
-                    stackIn_6_0 = stackOut_5_0;
+                    stackIn_6_0 = 1;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -196,27 +175,19 @@ final class we extends rf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var4 = decompiledCaughtException;
-            stackOut_42_0 = (RuntimeException) (var4);
-            stackOut_42_1 = new StringBuilder().append("we.B(").append(param0).append(',');
-            stackIn_44_0 = stackOut_42_0;
-            stackIn_44_1 = stackOut_42_1;
-            stackIn_43_0 = stackOut_42_0;
-            stackIn_43_1 = stackOut_42_1;
+            stackIn_44_0 = (RuntimeException) (var4);
+
+            stackIn_44_1 = new StringBuilder().append("we.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "null";
-              stackIn_45_0 = stackOut_44_0;
-              stackIn_45_1 = stackOut_44_1;
-              stackIn_45_2 = stackOut_44_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "null";
               break L9;
             } else {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "{...}";
-              stackIn_45_0 = stackOut_43_0;
-              stackIn_45_1 = stackOut_43_1;
-              stackIn_45_2 = stackOut_43_2;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "{...}";
               break L9;
             }
           }
@@ -242,9 +213,8 @@ final class we extends rf {
     }
 
     public static void b(byte param0) {
-        String discarded$0 = null;
         if (param0 != 95) {
-            discarded$0 = we.a(-107);
+            we.a(-107);
         }
         field_f = null;
         field_h = (byte[][]) null;

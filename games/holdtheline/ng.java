@@ -9,8 +9,8 @@ final class ng {
     private gn field_a;
 
     final on a(int param0, int param1) {
-        on var3 = null;
-        byte[] var4 = null;
+        on var3;
+        byte[] var4;
         var3 = (on) (this.field_c.a((long)param0, -113));
         if (var3 == null) {
           L0: {
@@ -55,14 +55,13 @@ final class ng {
     }
 
     final static void a(int param0) {
-        int discarded$0 = 0;
         ci.field_h = false;
         if (param0 >= -2) {
             ng.a(-88);
-            discarded$0 = rd.field_e.f((byte) -55);
+            rd.field_e.f((byte) -55);
             return;
         }
-        int discarded$1 = rd.field_e.f((byte) -55);
+        rd.field_e.f((byte) -55);
     }
 
     private ng() throws Throwable {

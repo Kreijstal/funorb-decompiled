@@ -8,7 +8,6 @@ final class qn {
     static tf field_b;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -19,6 +18,7 @@ final class qn {
         int var13 = 0;
         int var14 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         var14 = Kickabout.field_G;
         try {
           L0: {

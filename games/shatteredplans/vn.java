@@ -26,7 +26,6 @@ final class vn extends oh {
     static qr field_y;
 
     final static void d(int param0) {
-        int discarded$2 = 0;
         RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;
@@ -57,7 +56,7 @@ final class vn extends oh {
                 if (param0 == -14145) {
                   break L3;
                 } else {
-                  discarded$2 = vn.e(-71);
+                  vn.e(-71);
                   break L3;
                 }
               }
@@ -89,21 +88,15 @@ final class vn extends oh {
         int stackIn_15_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_10_0 = 0;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
             L1: {
               if (eh.field_L == null) {
-                stackOut_3_0 = 0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = eh.field_L.length;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = eh.field_L.length;
                 break L1;
               }
             }
@@ -128,16 +121,14 @@ final class vn extends oh {
               var2 = var1_int * ol.field_g.field_j;
               if (var2 > te.field_c) {
                 te.field_c = var2;
-                stackOut_14_0 = 0;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return true;
               }
             } else {
-              stackOut_10_0 = 0;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -155,16 +146,12 @@ final class vn extends oh {
     }
 
     final void c(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = ShatteredPlansClient.field_F ? 1 : 0;
           this.field_v = (int[]) ((Object) this.field_m.clone());
@@ -192,24 +179,20 @@ final class vn extends oh {
               L3: {
                 var2 = -1 + this.field_m.length;
                 if (null != this.field_k) {
-                  stackOut_14_0 = this.field_k.field_x;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = this.field_k.field_x;
                   break L3;
                 } else {
-                  stackOut_13_0 = var2;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = var2;
                   break L3;
                 }
               }
               L4: {
                 var3 = stackIn_15_0;
                 if (this.field_l == null) {
-                  stackOut_17_0 = var2;
-                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_18_0 = var2;
                   break L4;
                 } else {
-                  stackOut_16_0 = this.field_l.field_x;
-                  stackIn_18_0 = stackOut_16_0;
+                  stackIn_18_0 = this.field_l.field_x;
                   break L4;
                 }
               }
@@ -241,7 +224,6 @@ final class vn extends oh {
     }
 
     public static void a(byte param0) {
-        int discarded$0 = 0;
         field_p = null;
         field_s = null;
         field_y = null;
@@ -251,7 +233,7 @@ final class vn extends oh {
         field_A = null;
         field_i = null;
         if (param0 != 68) {
-            discarded$0 = vn.e(52);
+            vn.e(52);
         }
     }
 
@@ -288,8 +270,6 @@ final class vn extends oh {
         ro stackIn_8_0 = null;
         ro stackIn_11_0 = null;
         ro stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -297,18 +277,6 @@ final class vn extends oh {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ro stackOut_7_0 = null;
-        ro stackOut_12_0 = null;
-        ro stackOut_10_0 = null;
-        ro stackOut_3_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
@@ -318,8 +286,7 @@ final class vn extends oh {
                 if (0 != param1.length()) {
                   var2_int = param1.indexOf((int) (char)param0);
                   if (-1 == var2_int) {
-                    stackOut_7_0 = fg.field_a;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = fg.field_a;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -327,13 +294,11 @@ final class vn extends oh {
                     var4 = param1.substring(var2_int - -1);
                     var5 = uc.a(-77, var3);
                     if (var5 == null) {
-                      stackOut_12_0 = fg.a(var4, (byte) 111);
-                      stackIn_13_0 = stackOut_12_0;
+                      stackIn_13_0 = fg.a(var4, (byte) 111);
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
-                      stackOut_10_0 = (ro) (var5);
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_11_0 = (ro) (var5);
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
@@ -343,8 +308,7 @@ final class vn extends oh {
                 }
               }
             }
-            stackOut_3_0 = hd.field_r;
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = hd.field_r;
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -352,27 +316,19 @@ final class vn extends oh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2);
-            stackOut_14_1 = new StringBuilder().append("vn.E(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2);
+
+            stackIn_16_1 = new StringBuilder().append("vn.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L2;
             }
           }

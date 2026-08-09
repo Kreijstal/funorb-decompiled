@@ -7,11 +7,10 @@ final class ng {
     static boolean field_a;
 
     public static void b(int param0) {
-        uq[] discarded$0 = null;
         field_b = null;
         if (param0 != 16952) {
             mi var2 = (mi) null;
-            discarded$0 = ng.a((byte) 5, (mi) null);
+            ng.a((byte) 5, (mi) null);
         }
     }
 
@@ -23,12 +22,6 @@ final class ng {
     }
 
     final static uq[] a(byte param0, mi param1) {
-        int discarded$12 = 0;
-        int discarded$13 = 0;
-        int discarded$14 = 0;
-        int discarded$15 = 0;
-        int discarded$16 = 0;
-        int discarded$17 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -39,8 +32,6 @@ final class ng {
         int var7 = 0;
         uq[] stackIn_6_0 = null;
         uq[] stackIn_14_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -48,16 +39,6 @@ final class ng {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        uq[] stackOut_13_0 = null;
-        uq[] stackOut_5_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -69,21 +50,20 @@ final class ng {
                 var5 = 0;
                 L1: while (true) {
                   if (var5 >= var3) {
-                    stackOut_13_0 = (uq[]) (var4);
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = (uq[]) (var4);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     L2: {
                       if (id.a(param1, -31980)) {
                         var6 = new uq();
-                        discarded$12 = param1.c((byte) -124, 24);
-                        discarded$13 = param1.c((byte) -121, 24);
+                        param1.c((byte) -124, 24);
+                        param1.c((byte) -121, 24);
                         var6.field_e = param1.c((byte) -120, 24);
-                        discarded$14 = param1.c((byte) -115, 9);
-                        discarded$15 = param1.c((byte) -105, 12);
-                        discarded$16 = param1.c((byte) -119, 12);
-                        discarded$17 = param1.c((byte) -106, 12);
+                        param1.c((byte) -115, 9);
+                        param1.c((byte) -105, 12);
+                        param1.c((byte) -119, 12);
+                        param1.c((byte) -106, 12);
                         var4[var5] = var6;
                         break L2;
                       } else {
@@ -97,8 +77,7 @@ final class ng {
                   }
                 }
               } else {
-                stackOut_5_0 = (uq[]) null;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (uq[]) null;
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -110,27 +89,19 @@ final class ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var2);
-            stackOut_15_1 = new StringBuilder().append("ng.B(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var2);
+
+            stackIn_17_1 = new StringBuilder().append("ng.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L3;
             }
           }
@@ -144,8 +115,8 @@ final class ng {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var7 = 0;
-        int var8 = 0;
+        int var8;
+        int var7;
         L0: {
           L1: {
             var8 = Vertigo2.field_L ? 1 : 0;

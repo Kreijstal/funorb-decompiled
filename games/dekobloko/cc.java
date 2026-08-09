@@ -12,7 +12,7 @@ final class cc {
     static String field_e;
 
     final static f a(int param0, byte param1) {
-        f var2 = null;
+        f var2;
         var2 = new f();
         rc.field_e.a(var2, 2777);
         gm.b(param0, 65);

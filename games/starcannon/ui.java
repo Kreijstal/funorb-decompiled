@@ -17,7 +17,7 @@ abstract class ui extends uh {
     static int[] field_r;
 
     public static void d(byte param0) {
-        qe var2 = null;
+        qe var2;
         field_z = null;
         field_r = null;
         field_s = null;
@@ -34,8 +34,8 @@ abstract class ui extends uh {
     }
 
     private final void a(int param0, int param1, int param2, byte param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
+        int var6;
+        int var7;
         if (param3 != 23) {
           this.field_y = 81;
           var6 = this.field_x << 1496864067;

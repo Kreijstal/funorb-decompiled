@@ -16,14 +16,14 @@ final class rh {
     }
 
     final void a(cn param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         L0: {
           var4 = (int)(32.0 * (1.0 + te.a(mo.field_a << 4)));
           if (var4 >= 0) {

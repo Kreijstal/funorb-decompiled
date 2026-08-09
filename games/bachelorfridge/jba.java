@@ -12,33 +12,20 @@ final class jba extends ana {
     private boolean field_v;
 
     final boolean c(byte param0) {
-        int fieldTemp$2 = 0;
-        int var2 = 0;
-        if (this.field_m.a((byte) -106)) {
-          return false;
-        } else {
-          if (!this.field_y.a((byte) -106)) {
-            fieldTemp$2 = this.field_l - 1;
-            this.field_l = this.field_l - 1;
-            if (fieldTemp$2 > 0) {
-              L0: {
-                if (this.field_v) {
-                  break L0;
-                } else {
-                  this.e((byte) 47);
-                  break L0;
-                }
-              }
-              return false;
-            } else {
-              var2 = 92 % ((param0 - 71) / 47);
-              this.b(true);
-              return true;
-            }
-          } else {
+        if (this.field_m.a((byte) -106) || this.field_y.a((byte) -106)) {
             return false;
-          }
         }
+        int fieldTemp$0 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
+        if (!(fieldTemp$0 <= 0)) {
+            if (!this.field_v) {
+                this.e((byte) 47);
+            }
+            return false;
+        }
+        int var2 = 92 % ((param0 - 71) / 47);
+        this.b(true);
+        return true;
     }
 
     private final void b(boolean param0) {
@@ -49,25 +36,23 @@ final class jba extends ana {
     }
 
     private final void e(byte param0) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        kw var16 = null;
-        int var17 = 0;
-        int[][] var21 = null;
         int stackIn_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        kw var16;
+        int var17;
+        int[][] var21;
         L0: {
           var17 = BachelorFridge.field_y;
           var21 = this.field_z.d(1);
@@ -104,12 +89,10 @@ final class jba extends ana {
                   if (this.field_q.field_h.a(var13, var14, (byte) 61)) {
                     L3: {
                       if (this.field_q.field_h.field_a[var13][var14].field_l != null) {
-                        stackOut_12_0 = 0;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = 0;
                         break L3;
                       } else {
-                        stackOut_11_0 = 1;
-                        stackIn_13_0 = stackOut_11_0;
+                        stackIn_13_0 = 1;
                         break L3;
                       }
                     }

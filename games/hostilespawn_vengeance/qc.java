@@ -30,7 +30,7 @@ abstract class qc extends dk {
                 return rf.field_e;
               }
             } else {
-              field_x = null;
+              field_x = (bd[]) null;
               if (!c.field_a.d((byte) -70)) {
                 return uh.field_g;
               } else {
@@ -49,7 +49,7 @@ abstract class qc extends dk {
           if (null == nj.field_c) {
             return;
           } else {
-            var1 = (Object) (Object) nj.field_c;
+            var1 = nj.field_c;
             synchronized (var1) {
               L0: {
                 nj.field_c = null;
@@ -64,33 +64,51 @@ abstract class qc extends dk {
     }
 
     private final void a(int param0, int param1, int param2, boolean param3, int param4) {
-        int var6 = ((qc) this).field_u << 3;
-        param0 = (var6 & 15) + (param0 << 4);
-        int var7 = ((qc) this).field_r << 3;
-        param2 = (param2 << 4) - -(15 & var7);
-        ((qc) this).a(var6, var7, param0, param2, param1, param4);
+        int var6;
+        int var7;
+        var6 = this.field_u << -1274103901;
+        param0 = (var6 & 15) + (param0 << 476238244);
+        if (param3) {
+          return;
+        } else {
+          var7 = this.field_r << 750938499;
+          param2 = (param2 << -239596316) - -(15 & var7);
+          this.a(var6, var7, param0, param2, param1, param4);
+          return;
+        }
     }
 
     public static void a(boolean param0) {
         field_t = null;
-        field_x = null;
-        field_q = null;
-        field_B = null;
-        field_v = null;
-        field_C = null;
+        if (!param0) {
+          qc.c((byte) -25);
+          field_x = null;
+          field_q = null;
+          field_B = null;
+          field_v = null;
+          field_C = null;
+          return;
+        } else {
+          field_x = null;
+          field_q = null;
+          field_B = null;
+          field_v = null;
+          field_C = null;
+          return;
+        }
     }
 
     final void a(double param0, double param1, boolean param2, double param3, int param4) {
-        ((qc) this).a(((qc) this).field_u << 3, ((qc) this).field_r << 3, (int)Math.floor(0.5 + param1 * 16.0), (int)Math.floor(0.5 + param0 * 16.0), (int)Math.floor(0.5 + param3 * 256.0), param4 << 5);
+        this.a(this.field_u << -143834141, this.field_r << 2014366435, (int)Math.floor(0.5 + param1 * 16.0), (int)Math.floor(0.5 + param0 * 16.0), (int)Math.floor(0.5 + param3 * 256.0), param4 << 134798021);
         if (param2) {
             qc.c((byte) -94);
         }
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        this.a(param3, param2 << 8, param4, false, param1 << 5);
+        this.a(param3, param2 << 80998248, param4, false, param1 << -1479461371);
         if (!param0) {
-            field_v = null;
+            field_v = (pg) null;
         }
     }
 
@@ -100,10 +118,6 @@ abstract class qc extends dk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = "Cancel";
         field_t = "???";
     }

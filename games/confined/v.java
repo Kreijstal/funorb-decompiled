@@ -11,15 +11,6 @@ final class v extends dh implements el {
     static pb field_Db;
 
     private final void a(byte param0, boolean param1, in param2) {
-        rg discarded$2 = null;
-        rg discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        jn var5 = null;
-        int var6 = 0;
-        rg var7 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
@@ -27,25 +18,22 @@ final class v extends dh implements el {
         String stackIn_34_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        jn var5 = null;
+        int var6 = 0;
+        rg var7 = null;
         var6 = Confined.field_J ? 1 : 0;
         try {
           L0: {
             L1: {
               this.field_Fb = true;
               if (param2.field_a) {
-                var4_ref = gd.field_r;
+                var4 = gd.field_r;
                 break L1;
               } else {
                 if (null == param2.field_c) {
-                  var4_ref = param2.field_f;
+                  var4 = param2.field_f;
                   if (param2.field_g == 248) {
                     L2: {
                       if (!param1) {
@@ -55,14 +43,14 @@ final class v extends dh implements el {
                         break L2;
                       }
                     }
-                    var4_ref = ec.field_a;
+                    var4 = ec.field_a;
                     this.field_Gb = true;
                     break L1;
                   } else {
                     break L1;
                   }
                 } else {
-                  var4_ref = fh.field_c;
+                  var4 = fh.field_c;
                   if (this.field_Hb == null) {
                     break L1;
                   } else {
@@ -73,7 +61,7 @@ final class v extends dh implements el {
               }
             }
             L3: {
-              var5 = new jn((dh) (this), fd.field_k, var4_ref);
+              var5 = new jn((dh) (this), fd.field_k, var4);
               if (!param2.field_a) {
                 L4: {
                   if (!this.field_Gb) {
@@ -86,7 +74,7 @@ final class v extends dh implements el {
                       break L4;
                     }
                   } else {
-                    discarded$2 = var5.a(gi.field_fb, (uk) (this), false);
+                    var5.a(gi.field_fb, (uk) (this), false);
                     break L4;
                   }
                 }
@@ -107,7 +95,7 @@ final class v extends dh implements el {
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  discarded$3 = var5.a(gi.field_fb, (uk) (this), false);
+                  var5.a(gi.field_fb, (uk) (this), false);
                   break L3;
                 }
               }
@@ -125,28 +113,20 @@ final class v extends dh implements el {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var4);
-            stackOut_31_1 = new StringBuilder().append("v.FB(").append(param0).append(',').append(param1).append(',');
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_33_0 = (RuntimeException) (var4_ref);
+
+            stackIn_33_1 = new StringBuilder().append("v.FB(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L5;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L5;
             }
           }
@@ -176,8 +156,8 @@ final class v extends dh implements el {
     }
 
     final boolean l(int param0) {
-        in var2 = null;
-        rg var3 = null;
+        in var2;
+        rg var3;
         if (param0 == -6) {
           if (this.field_H) {
             if (!this.field_Fb) {

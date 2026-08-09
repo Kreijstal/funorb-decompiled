@@ -27,9 +27,9 @@ final class wa {
     }
 
     final ne a(long param0, int param1) {
-        ne var4 = null;
-        ne var5 = null;
-        int var6 = 0;
+        ne var4;
+        ne var5;
+        int var6;
         var6 = DungeonAssault.field_K;
         if (param1 == 8) {
           var4 = this.field_h[(int)((long)(-1 + this.field_n) & param0)];
@@ -108,21 +108,20 @@ final class wa {
     }
 
     final static int[] b(int param0) {
-        int[] discarded$0 = null;
         if (param0 != -1) {
-            discarded$0 = wa.b(20);
+            wa.b(20);
             return new int[8];
         }
         return new int[8];
     }
 
     final ne a(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        int var3 = 0;
-        ne var4 = null;
-        ne var7 = null;
-        ne var8 = null;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int var3;
+        ne var4;
+        ne var7;
+        ne var8;
         var3 = DungeonAssault.field_K;
         if (0 >= this.field_g) {
           if (param0 != 4318) {
@@ -130,9 +129,9 @@ final class wa {
           } else {
             L0: while (true) {
               if (this.field_g < this.field_n) {
-                fieldTemp$2 = this.field_g;
+                fieldTemp$4 = this.field_g;
                 this.field_g = this.field_g + 1;
-                var8 = this.field_h[fieldTemp$2].field_e;
+                var8 = this.field_h[fieldTemp$4].field_e;
                 if (this.field_h[this.field_g + -1] != var8) {
                   this.field_i = var8.field_e;
                   return var8;
@@ -155,9 +154,9 @@ final class wa {
             } else {
               L1: while (true) {
                 if (this.field_g < this.field_n) {
-                  fieldTemp$3 = this.field_g;
+                  fieldTemp$5 = this.field_g;
                   this.field_g = this.field_g + 1;
-                  var4 = this.field_h[fieldTemp$3].field_e;
+                  var4 = this.field_h[fieldTemp$5].field_e;
                   if (this.field_h[this.field_g + -1] != var4) {
                     this.field_i = var4.field_e;
                     return var4;
@@ -194,18 +193,18 @@ final class wa {
     }
 
     wa(int param0) {
-        ne dupTemp$2 = null;
-        int var2 = 0;
-        ne var3 = null;
+        ne dupTemp$1 = null;
+        int var2;
+        ne var3;
         this.field_g = 0;
         this.field_h = new ne[param0];
         this.field_n = param0;
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            dupTemp$2 = new ne();
-            var3 = dupTemp$2;
-            this.field_h[var2] = dupTemp$2;
+            dupTemp$1 = new ne();
+            var3 = dupTemp$1;
+            this.field_h[var2] = dupTemp$1;
             var3.field_a = var3;
             var3.field_e = var3;
             var2++;

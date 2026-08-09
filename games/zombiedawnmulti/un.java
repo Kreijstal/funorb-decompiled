@@ -18,11 +18,9 @@ abstract class un extends gf implements fi {
     }
 
     final static boolean a(int param0, boolean param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_27_0 = 0;
+        int var4;
+        int var5;
         L0: {
           if (param0 >= 74) {
             break L0;
@@ -76,12 +74,10 @@ abstract class un extends gf implements fi {
           if (var4 <= var5) {
             L2: {
               if (param2 >= param3) {
-                stackOut_28_0 = 0;
-                stackIn_29_0 = stackOut_28_0;
+                stackIn_29_0 = 0;
                 break L2;
               } else {
-                stackOut_27_0 = 1;
-                stackIn_29_0 = stackOut_27_0;
+                stackIn_29_0 = 1;
                 break L2;
               }
             }
@@ -119,10 +115,8 @@ abstract class un extends gf implements fi {
     }
 
     public final boolean b(int param0) {
-        pm var3 = null;
+        pm var3;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == -3) {
             break L0;
@@ -138,24 +132,32 @@ abstract class un extends gf implements fi {
               break L2;
             } else {
               if ((this.field_m.field_j.length() ^ -1) != -1) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 1;
           break L1;
         }
         return stackIn_7_0 != 0;
     }
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
-        RuntimeException var17 = null;
+        int stackIn_55_0 = 0;
+        int stackIn_55_1 = 0;
+        RuntimeException stackIn_87_0 = null;
+        StringBuilder stackIn_87_1 = null;
+        RuntimeException stackIn_88_0 = null;
+        StringBuilder stackIn_88_1 = null;
+        String stackIn_88_2 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var17_int = 0;
+        RuntimeException var17 = null;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
@@ -181,32 +183,6 @@ abstract class un extends gf implements fi {
         int var40 = 0;
         int var41 = 0;
         int var42 = 0;
-        int stackIn_37_0 = 0;
-        int stackIn_37_1 = 0;
-        int stackIn_55_0 = 0;
-        int stackIn_55_1 = 0;
-        RuntimeException stackIn_86_0 = null;
-        StringBuilder stackIn_86_1 = null;
-        RuntimeException stackIn_87_0 = null;
-        StringBuilder stackIn_87_1 = null;
-        RuntimeException stackIn_88_0 = null;
-        StringBuilder stackIn_88_1 = null;
-        String stackIn_88_2 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_54_1 = 0;
-        RuntimeException stackOut_85_0 = null;
-        StringBuilder stackOut_85_1 = null;
-        RuntimeException stackOut_87_0 = null;
-        StringBuilder stackOut_87_1 = null;
-        String stackOut_87_2 = null;
-        RuntimeException stackOut_86_0 = null;
-        StringBuilder stackOut_86_1 = null;
-        String stackOut_86_2 = null;
         var42 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -447,17 +423,15 @@ abstract class un extends gf implements fi {
                               break L13;
                             } else {
                               var37 = var17_int >> -1120218992;
-                              stackOut_36_0 = var37 ^ -1;
-                              stackOut_36_1 = ep.field_i ^ -1;
-                              stackIn_55_0 = stackOut_36_0;
-                              stackIn_55_1 = stackOut_36_1;
-                              stackIn_37_0 = stackOut_36_0;
-                              stackIn_37_1 = stackOut_36_1;
+                              stackIn_55_0 = var37 ^ -1;
+
+                              stackIn_55_1 = ep.field_i ^ -1;
+
                               if (var42 != 0) {
                                 break L12;
                               } else {
                                 L17: {
-                                  if (stackIn_37_0 > stackIn_37_1) {
+                                  if (stackIn_55_0 > stackIn_55_1) {
                                     L18: {
                                       var38 = -(var17_int >> -1276425040) + (var18 >> -737654768);
                                       if (-1 != (var38 ^ -1)) {
@@ -533,10 +507,8 @@ abstract class un extends gf implements fi {
                           }
                         }
                         var36 = param4 - param7;
-                        stackOut_54_0 = 0;
-                        stackOut_54_1 = var36;
-                        stackIn_55_0 = stackOut_54_0;
-                        stackIn_55_1 = stackOut_54_1;
+                        stackIn_55_0 = 0;
+                        stackIn_55_1 = var36;
                         break L12;
                       }
                       L21: {
@@ -716,27 +688,19 @@ abstract class un extends gf implements fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L32: {
             var17 = decompiledCaughtException;
-            stackOut_85_0 = (RuntimeException) (var17);
-            stackOut_85_1 = new StringBuilder().append("un.S(");
-            stackIn_87_0 = stackOut_85_0;
-            stackIn_87_1 = stackOut_85_1;
-            stackIn_86_0 = stackOut_85_0;
-            stackIn_86_1 = stackOut_85_1;
+            stackIn_87_0 = (RuntimeException) (var17);
+
+            stackIn_87_1 = new StringBuilder().append("un.S(");
+
             if (param0 == null) {
-              stackOut_87_0 = (RuntimeException) ((Object) stackIn_87_0);
-              stackOut_87_1 = (StringBuilder) ((Object) stackIn_87_1);
-              stackOut_87_2 = "null";
-              stackIn_88_0 = stackOut_87_0;
-              stackIn_88_1 = stackOut_87_1;
-              stackIn_88_2 = stackOut_87_2;
+              stackIn_88_0 = (RuntimeException) ((Object) stackIn_87_0);
+              stackIn_88_1 = (StringBuilder) ((Object) stackIn_87_1);
+              stackIn_88_2 = "null";
               break L32;
             } else {
-              stackOut_86_0 = (RuntimeException) ((Object) stackIn_86_0);
-              stackOut_86_1 = (StringBuilder) ((Object) stackIn_86_1);
-              stackOut_86_2 = "{...}";
-              stackIn_88_0 = stackOut_86_0;
-              stackIn_88_1 = stackOut_86_1;
-              stackIn_88_2 = stackOut_86_2;
+              stackIn_88_0 = (RuntimeException) ((Object) stackIn_87_0);
+              stackIn_88_1 = (StringBuilder) ((Object) stackIn_87_1);
+              stackIn_88_2 = "{...}";
               break L32;
             }
           }

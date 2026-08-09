@@ -13,8 +13,10 @@ final class rs {
     String field_e;
 
     final static void a(boolean param0) {
-        RuntimeException var1 = null;
-        int[] var1_array = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int[] var4 = null;
@@ -24,8 +26,6 @@ final class rs {
         int[] var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var3 = BachelorFridge.field_y;
         try {
           L0: {
@@ -81,14 +81,14 @@ final class rs {
                   var9 = sg.field_q;
                   var7 = var9;
                   var4 = var7;
-                  var1_array = var4;
+                  var1 = var4;
                   var2 = 0;
                   L6: while (true) {
                     if (var2 >= 8) {
                       var10 = nga.field_i;
                       var8 = var10;
                       var5 = var8;
-                      var1_array = var5;
+                      var1 = var5;
                       var6 = 0;
                       var2 = var6;
                       L7: while (true) {
@@ -173,8 +173,8 @@ final class rs {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "rs.D(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw pe.a((Throwable) ((Object) var1_ref), "rs.D(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -185,8 +185,6 @@ final class rs {
 
     final static boolean b(boolean param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0) {
           L0: {
             L1: {
@@ -196,14 +194,12 @@ final class rs {
                 if (null == pja.field_e.h(0)) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0 != 0;
@@ -220,10 +216,9 @@ final class rs {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_f = null;
         if (param0 != 2) {
-            discarded$0 = rs.b(true);
+            rs.b(true);
         }
         field_g = null;
         field_h = null;

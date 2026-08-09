@@ -18,8 +18,20 @@ final class hi extends java.awt.Canvas {
     }
 
     final static void a(byte[] param0, int param1) {
-        byte dupTemp$2 = 0;
-        byte dupTemp$3 = 0;
+        byte dupTemp$0 = 0;
+        byte dupTemp$1 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_31_0 = 0;
+        int stackIn_31_1 = 0;
+        int stackIn_46_0 = 0;
+        int stackIn_47_0 = 0;
+        int stackIn_47_1 = 0;
+        RuntimeException stackIn_53_0 = null;
+        StringBuilder stackIn_53_1 = null;
+        RuntimeException stackIn_54_0 = null;
+        StringBuilder stackIn_54_1 = null;
+        String stackIn_54_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -40,40 +52,6 @@ final class hi extends java.awt.Canvas {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        int stackIn_29_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_31_1 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_46_0 = 0;
-        int stackIn_47_0 = 0;
-        int stackIn_47_1 = 0;
-        RuntimeException stackIn_52_0 = null;
-        StringBuilder stackIn_52_1 = null;
-        RuntimeException stackIn_53_0 = null;
-        StringBuilder stackIn_53_1 = null;
-        RuntimeException stackIn_54_0 = null;
-        StringBuilder stackIn_54_1 = null;
-        String stackIn_54_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_44_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_46_1 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_45_1 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_30_1 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_29_1 = 0;
-        RuntimeException stackOut_51_0 = null;
-        StringBuilder stackOut_51_1 = null;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        String stackOut_53_2 = null;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        String stackOut_52_2 = null;
         var15 = StarCannon.field_A;
         try {
           L0: {
@@ -146,23 +124,18 @@ final class hi extends java.awt.Canvas {
                                                       continue L9;
                                                     } else {
                                                       L11: {
-                                                        dupTemp$2 = var17.a(false);
-                                                        var9[var5 * var13 + var12] = dupTemp$2;
-                                                        var14 = dupTemp$2;
-                                                        stackOut_44_0 = var10;
-                                                        stackIn_46_0 = stackOut_44_0;
-                                                        stackIn_45_0 = stackOut_44_0;
+                                                        dupTemp$0 = var17.a(false);
+                                                        var9[var5 * var13 + var12] = dupTemp$0;
+                                                        var14 = dupTemp$0;
+                                                        stackIn_46_0 = var10;
+
                                                         if (0 == (var14 ^ -1)) {
-                                                          stackOut_46_0 = stackIn_46_0;
-                                                          stackOut_46_1 = 0;
-                                                          stackIn_47_0 = stackOut_46_0;
-                                                          stackIn_47_1 = stackOut_46_1;
+                                                          stackIn_47_0 = stackIn_46_0;
+                                                          stackIn_47_1 = 0;
                                                           break L11;
                                                         } else {
-                                                          stackOut_45_0 = stackIn_45_0;
-                                                          stackOut_45_1 = 1;
-                                                          stackIn_47_0 = stackOut_45_0;
-                                                          stackIn_47_1 = stackOut_45_1;
+                                                          stackIn_47_0 = stackIn_46_0;
+                                                          stackIn_47_1 = 1;
                                                           break L11;
                                                         }
                                                       }
@@ -203,23 +176,18 @@ final class hi extends java.awt.Canvas {
                                                   break L7;
                                                 } else {
                                                   L15: {
-                                                    dupTemp$3 = var17.a(false);
-                                                    var9[var12] = dupTemp$3;
-                                                    var13 = dupTemp$3;
-                                                    stackOut_28_0 = var10;
-                                                    stackIn_30_0 = stackOut_28_0;
-                                                    stackIn_29_0 = stackOut_28_0;
+                                                    dupTemp$1 = var17.a(false);
+                                                    var9[var12] = dupTemp$1;
+                                                    var13 = dupTemp$1;
+                                                    stackIn_30_0 = var10;
+
                                                     if (0 == (var13 ^ -1)) {
-                                                      stackOut_30_0 = stackIn_30_0;
-                                                      stackOut_30_1 = 0;
-                                                      stackIn_31_0 = stackOut_30_0;
-                                                      stackIn_31_1 = stackOut_30_1;
+                                                      stackIn_31_0 = stackIn_30_0;
+                                                      stackIn_31_1 = 0;
                                                       break L15;
                                                     } else {
-                                                      stackOut_29_0 = stackIn_29_0;
-                                                      stackOut_29_1 = 1;
-                                                      stackIn_31_0 = stackOut_29_0;
-                                                      stackIn_31_1 = stackOut_29_1;
+                                                      stackIn_31_0 = stackIn_30_0;
+                                                      stackIn_31_1 = 1;
                                                       break L15;
                                                     }
                                                   }
@@ -245,7 +213,7 @@ final class hi extends java.awt.Canvas {
                               } else {
                                 L16: {
                                   of.field_g[var4] = var17.g(-115);
-                                  if (of.field_g[var4] == 0) {
+                                  if ((of.field_g[var4] ^ -1) == -1) {
                                     of.field_g[var4] = 1;
                                     break L16;
                                   } else {
@@ -285,27 +253,19 @@ final class hi extends java.awt.Canvas {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_51_0 = (RuntimeException) (var2);
-            stackOut_51_1 = new StringBuilder().append("hi.C(");
-            stackIn_53_0 = stackOut_51_0;
-            stackIn_53_1 = stackOut_51_1;
-            stackIn_52_0 = stackOut_51_0;
-            stackIn_52_1 = stackOut_51_1;
+            stackIn_53_0 = (RuntimeException) (var2);
+
+            stackIn_53_1 = new StringBuilder().append("hi.C(");
+
             if (param0 == null) {
-              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
-              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
-              stackOut_53_2 = "null";
-              stackIn_54_0 = stackOut_53_0;
-              stackIn_54_1 = stackOut_53_1;
-              stackIn_54_2 = stackOut_53_2;
+              stackIn_54_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackIn_54_1 = (StringBuilder) ((Object) stackIn_53_1);
+              stackIn_54_2 = "null";
               break L17;
             } else {
-              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
-              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
-              stackOut_52_2 = "{...}";
-              stackIn_54_0 = stackOut_52_0;
-              stackIn_54_1 = stackOut_52_1;
-              stackIn_54_2 = stackOut_52_2;
+              stackIn_54_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackIn_54_1 = (StringBuilder) ((Object) stackIn_53_1);
+              stackIn_54_2 = "{...}";
               break L17;
             }
           }

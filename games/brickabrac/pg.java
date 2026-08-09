@@ -16,9 +16,6 @@ final class pg extends nm {
     final static boolean c(int param0) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 > 57) {
           if (!og.h(-26090)) {
             if (0 >= go.field_c) {
@@ -27,8 +24,7 @@ final class pg extends nm {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
@@ -38,12 +34,10 @@ final class pg extends nm {
           } else {
             L0: {
               if (0 < go.field_c) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }
@@ -53,29 +47,17 @@ final class pg extends nm {
     }
 
     final static jp a(jp param0, int param1, int param2) {
-        boolean discarded$1 = false;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         jp var6 = null;
         jp stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        jp stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -83,7 +65,7 @@ final class pg extends nm {
               if (param2 == -17912) {
                 break L1;
               } else {
-                discarded$1 = pg.c(-48);
+                pg.c(-48);
                 break L1;
               }
             }
@@ -98,8 +80,7 @@ final class pg extends nm {
                 kc.field_q.a((byte) 109);
                 var6.field_F = param0.field_F - param1;
                 var6.field_E = -param1 + param0.field_E;
-                stackOut_6_0 = (jp) (var6);
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (jp) (var6);
                 break L0;
               } else {
                 param0.d(-param0.field_E + param1, -param0.field_F + param1, 0);
@@ -113,27 +94,19 @@ final class pg extends nm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("pg.D(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3);
+
+            stackIn_10_1 = new StringBuilder().append("pg.D(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -179,7 +152,6 @@ final class pg extends nm {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int discarded$0 = 0;
         try {
             var2_int = pq.field_k;
             var3 = po.field_a;
@@ -194,7 +166,7 @@ final class pg extends nm {
             var8 = br.a(var6, var3, 20, -30);
             lb.e(var7, var8, var5, var6, 0);
             lb.g(var7 + 1, 1 + var8, -2 + var5, var6 - 2, 16777088);
-            discarded$0 = ad.field_l.field_O.a(param1, 3 + var7, -ad.field_l.field_O.field_F + (1 + var8) - -ok.field_f, 500, 1000, 0, -1, 0, 0, np.field_a);
+            ad.field_l.field_O.a(param1, 3 + var7, -ad.field_l.field_O.field_F + (1 + var8) - -ok.field_f, 500, 1000, 0, -1, 0, 0, np.field_a);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

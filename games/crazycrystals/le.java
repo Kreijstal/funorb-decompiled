@@ -5,6 +5,8 @@ final class le extends ln {
     static dl[][] field_g;
 
     final static void a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -21,8 +23,6 @@ final class le extends ln {
         int[] var14 = null;
         dp var15 = null;
         int[] var16 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = CrazyCrystals.field_B;
         try {
           L0: {

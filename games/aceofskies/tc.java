@@ -24,105 +24,60 @@ final class tc extends ib implements go {
     }
 
     tc(kr param0, int param1, boolean param2, int[][] param3) {
-        super(param0, lc.field_g, la.field_h, false, 6 * param1 * param1);
-        boolean discarded$1 = false;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        jagdx.PixelBuffer var10 = null;
-        jagdx.PixelBuffer var11 = null;
-        Object stackIn_1_0 = null;
-        kr stackIn_1_1 = null;
-        hd stackIn_1_2 = null;
-        la stackIn_1_3 = null;
-        Object stackIn_2_0 = null;
-        kr stackIn_2_1 = null;
-        hd stackIn_2_2 = null;
-        la stackIn_2_3 = null;
-        Object stackIn_3_0 = null;
-        kr stackIn_3_1 = null;
-        hd stackIn_3_2 = null;
-        la stackIn_3_3 = null;
+        super(null, null, null, false, 6 * param1 * param1);
+        Object stackIn_3_0;
+        kr stackIn_3_1;
+        hd stackIn_3_2;
+        la stackIn_3_3;
         Object stackIn_4_0 = null;
         kr stackIn_4_1 = null;
         hd stackIn_4_2 = null;
         la stackIn_4_3 = null;
         int stackIn_4_4 = 0;
-        Object stackOut_0_0 = null;
-        kr stackOut_0_1 = null;
-        hd stackOut_0_2 = null;
-        la stackOut_0_3 = null;
-        Object stackOut_1_0 = null;
-        kr stackOut_1_1 = null;
-        hd stackOut_1_2 = null;
-        la stackOut_1_3 = null;
-        Object stackOut_2_0 = null;
-        kr stackOut_2_1 = null;
-        hd stackOut_2_2 = null;
-        la stackOut_2_3 = null;
-        int stackOut_2_4 = 0;
-        Object stackOut_3_0 = null;
-        kr stackOut_3_1 = null;
-        hd stackOut_3_2 = null;
-        la stackOut_3_3 = null;
-        int stackOut_3_4 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        jagdx.PixelBuffer var10;
+        jagdx.PixelBuffer var11;
         L0: {
           L1: {
-            stackOut_0_0 = this;
-            stackOut_0_1 = (kr) (param0);
-            stackOut_0_2 = lc.field_g;
-            stackOut_0_3 = la.field_h;
-            stackIn_3_0 = stackOut_0_0;
-            stackIn_3_1 = stackOut_0_1;
-            stackIn_3_2 = stackOut_0_2;
-            stackIn_3_3 = stackOut_0_3;
-            stackIn_1_0 = stackOut_0_0;
-            stackIn_1_1 = stackOut_0_1;
-            stackIn_1_2 = stackOut_0_2;
-            stackIn_1_3 = stackOut_0_3;
+            stackIn_3_0 = this;
+
+            stackIn_3_1 = (kr) (param0);
+
+            stackIn_3_2 = lc.field_g;
+
+            stackIn_3_3 = la.field_h;
+
             if (!param2) {
               break L1;
             } else {
-              stackOut_1_0 = this;
-              stackOut_1_1 = (kr) ((Object) stackIn_1_1);
-              stackOut_1_2 = (hd) ((Object) stackIn_1_2);
-              stackOut_1_3 = (la) ((Object) stackIn_1_3);
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_3_2 = stackOut_1_2;
-              stackIn_3_3 = stackOut_1_3;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              stackIn_2_2 = stackOut_1_2;
-              stackIn_2_3 = stackOut_1_3;
+              stackIn_3_0 = this;
+
+              stackIn_3_1 = (kr) ((Object) stackIn_3_1);
+
+              stackIn_3_2 = (hd) ((Object) stackIn_3_2);
+
+              stackIn_3_3 = (la) ((Object) stackIn_3_3);
+
               if (!param0.field_rc) {
                 break L1;
               } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = (kr) ((Object) stackIn_2_1);
-                stackOut_2_2 = (hd) ((Object) stackIn_2_2);
-                stackOut_2_3 = (la) ((Object) stackIn_2_3);
-                stackOut_2_4 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                stackIn_4_3 = stackOut_2_3;
-                stackIn_4_4 = stackOut_2_4;
+                stackIn_4_0 = this;
+                stackIn_4_1 = (kr) ((Object) stackIn_3_1);
+                stackIn_4_2 = (hd) ((Object) stackIn_3_2);
+                stackIn_4_3 = (la) ((Object) stackIn_3_3);
+                stackIn_4_4 = 1;
                 break L0;
               }
             }
           }
-          stackOut_3_0 = this;
-          stackOut_3_1 = (kr) ((Object) stackIn_3_1);
-          stackOut_3_2 = (hd) ((Object) stackIn_3_2);
-          stackOut_3_3 = (la) ((Object) stackIn_3_3);
-          stackOut_3_4 = 0;
-          stackIn_4_0 = stackOut_3_0;
-          stackIn_4_1 = stackOut_3_1;
-          stackIn_4_2 = stackOut_3_2;
-          stackIn_4_3 = stackOut_3_3;
-          stackIn_4_4 = stackOut_3_4;
+          stackIn_4_0 = this;
+          stackIn_4_1 = (kr) ((Object) stackIn_3_1);
+          stackIn_4_2 = (hd) ((Object) stackIn_3_2);
+          stackIn_4_3 = (la) ((Object) stackIn_3_3);
+          stackIn_4_4 = 0;
           break L0;
         }
         L2: {
@@ -162,7 +117,7 @@ final class tc extends ib implements go {
                   break L4;
                 }
               }
-              discarded$1 = this.field_f.UnlockRect(var6, 0);
+              this.field_f.UnlockRect(var6, 0);
               var6++;
               continue L3;
             } else {

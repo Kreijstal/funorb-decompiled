@@ -35,32 +35,20 @@ final class bc implements Runnable {
     }
 
     final static byte[] a(byte param0, CharSequence param1) {
-        byte[] discarded$1 = null;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        byte[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        CharSequence var7 = null;
         byte[] stackIn_69_0 = null;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
         RuntimeException stackIn_72_0 = null;
         StringBuilder stackIn_72_1 = null;
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_73_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_68_0 = null;
-        RuntimeException stackOut_70_0 = null;
-        StringBuilder stackOut_70_1 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        String stackOut_71_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        byte[] var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        CharSequence var7 = null;
         var6 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -71,15 +59,14 @@ final class bc implements Runnable {
                 break L1;
               } else {
                 var7 = (CharSequence) null;
-                discarded$1 = bc.a((byte) 8, (CharSequence) null);
+                bc.a((byte) 8, (CharSequence) null);
                 break L1;
               }
             }
             var4 = 0;
             L2: while (true) {
               if (var2_int <= var4) {
-                stackOut_68_0 = (byte[]) (var3);
-                stackIn_69_0 = stackOut_68_0;
+                stackIn_69_0 = (byte[]) (var3);
                 break L0;
               } else {
                 L3: {
@@ -257,27 +244,19 @@ final class bc implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_70_0 = (RuntimeException) (var2);
-            stackOut_70_1 = new StringBuilder().append("bc.E(").append(param0).append(',');
-            stackIn_72_0 = stackOut_70_0;
-            stackIn_72_1 = stackOut_70_1;
-            stackIn_71_0 = stackOut_70_0;
-            stackIn_71_1 = stackOut_70_1;
+            stackIn_72_0 = (RuntimeException) (var2);
+
+            stackIn_72_1 = new StringBuilder().append("bc.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
-              stackOut_72_2 = "null";
-              stackIn_73_0 = stackOut_72_0;
-              stackIn_73_1 = stackOut_72_1;
-              stackIn_73_2 = stackOut_72_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "null";
               break L7;
             } else {
-              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
-              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackOut_71_2 = "{...}";
-              stackIn_73_0 = stackOut_71_0;
-              stackIn_73_1 = stackOut_71_1;
-              stackIn_73_2 = stackOut_71_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "{...}";
               break L7;
             }
           }
@@ -287,14 +266,11 @@ final class bc implements Runnable {
     }
 
     final static ck a(int param0, byte[] param1) {
-        byte[] discarded$2 = null;
         ck var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
         Object stackIn_2_0 = null;
         ck stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -302,16 +278,6 @@ final class bc implements Runnable {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ck stackOut_5_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (param1 != null) {
@@ -320,19 +286,17 @@ final class bc implements Runnable {
                   break L1;
                 } else {
                   var3 = (CharSequence) null;
-                  discarded$2 = bc.a((byte) -122, (CharSequence) null);
+                  bc.a((byte) -122, (CharSequence) null);
                   break L1;
                 }
               }
               var2 = new ck(param1, ka.field_f, vb.field_a, cf.field_p, j.field_f, qe.field_z, qk.field_M);
               ff.b(26);
-              stackOut_5_0 = (ck) (var2);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = (ck) (var2);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -341,27 +305,19 @@ final class bc implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var2_ref);
-            stackOut_7_1 = new StringBuilder().append("bc.A(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var2_ref);
+
+            stackIn_9_1 = new StringBuilder().append("bc.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -379,10 +335,9 @@ final class bc implements Runnable {
     }
 
     final int b(int param0) throws IOException {
-        byte[] discarded$4 = null;
         if (param0 != 0) {
             CharSequence var3 = (CharSequence) null;
-            discarded$4 = bc.a((byte) 44, (CharSequence) null);
+            bc.a((byte) 44, (CharSequence) null);
             if (!(!this.field_j)) {
                 return 0;
             }
@@ -398,8 +353,6 @@ final class bc implements Runnable {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -407,14 +360,6 @@ final class bc implements Runnable {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var6 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -448,27 +393,19 @@ final class bc implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var5);
-            stackOut_11_1 = new StringBuilder().append("bc.I(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var5);
+
+            stackIn_13_1 = new StringBuilder().append("bc.I(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L2;
             }
           }
@@ -483,26 +420,24 @@ final class bc implements Runnable {
 
     final void d(int param0) {
         try {
-            ck discarded$1 = null;
-            InterruptedException var2 = null;
-            Object var2_ref = null;
-            Throwable var3 = null;
+            Throwable decompiledCaughtException = null;
+            Object var2 = null;
+            InterruptedException var2_ref = null;
             int var4 = 0;
             byte[] var5 = null;
-            Throwable decompiledCaughtException = null;
             L0: {
               var4 = TrackController.field_F ? 1 : 0;
               if (param0 == 16777215) {
                 break L0;
               } else {
                 var5 = (byte[]) null;
-                discarded$1 = bc.a(-6, (byte[]) null);
+                bc.a(-6, (byte[]) null);
                 break L0;
               }
             }
             if (!this.field_j) {
-              var2_ref = this;
-              synchronized (var2_ref) {
+              var2 = this;
+              synchronized (var2) {
                 L1: {
                   this.field_j = true;
                   this.notifyAll();
@@ -526,7 +461,7 @@ final class bc implements Runnable {
                         }
                       } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
-                        var2 = (InterruptedException) (Object) decompiledCaughtException;
+                        var2_ref = (InterruptedException) (Object) decompiledCaughtException;
                         this.field_f = null;
                         return;
                       }
@@ -550,8 +485,13 @@ final class bc implements Runnable {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -560,19 +500,6 @@ final class bc implements Runnable {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_15_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
         var13 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -580,36 +507,30 @@ final class bc implements Runnable {
               var5_int = param2 + param4;
               var6 = param3 + param0;
               if (ll.field_a >= param4) {
-                stackOut_3_0 = ll.field_a;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = ll.field_a;
                 break L1;
               } else {
-                stackOut_2_0 = param4;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = param4;
                 break L1;
               }
             }
             L2: {
               var7 = stackIn_4_0;
               if (ll.field_b < param3) {
-                stackOut_6_0 = param3;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = param3;
                 break L2;
               } else {
-                stackOut_5_0 = ll.field_b;
-                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_0 = ll.field_b;
                 break L2;
               }
             }
             L3: {
               var8 = stackIn_7_0;
               if (ll.field_e > var5_int) {
-                stackOut_9_0 = var5_int;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = var5_int;
                 break L3;
               } else {
-                stackOut_8_0 = ll.field_e;
-                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_0 = ll.field_e;
                 break L3;
               }
             }
@@ -624,12 +545,10 @@ final class bc implements Runnable {
             }
             L5: {
               if (ll.field_g <= var6) {
-                stackOut_14_0 = ll.field_g;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = ll.field_g;
                 break L5;
               } else {
-                stackOut_13_0 = var6;
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = var6;
                 break L5;
               }
             }
@@ -736,27 +655,16 @@ final class bc implements Runnable {
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
-        RuntimeException var5 = null;
-        Object var5_ref = null;
-        int var6 = 0;
-        Throwable var7 = null;
-        int var8 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        Object var5 = null;
+        RuntimeException var5_ref = null;
+        int var6 = 0;
+        int var8 = 0;
         var8 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -770,8 +678,8 @@ final class bc implements Runnable {
                     break L1;
                   }
                 }
-                var5_ref = this;
-                synchronized (var5_ref) {
+                var5 = this;
+                synchronized (var5) {
                   L2: {
                     L3: {
                       if (param0 < -101) {
@@ -819,28 +727,20 @@ final class bc implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var5 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var5);
-            stackOut_25_1 = new StringBuilder().append("bc.K(").append(param0).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_27_0 = (RuntimeException) (var5_ref);
+
+            stackIn_27_1 = new StringBuilder().append("bc.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L6;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L6;
             }
           }
@@ -850,24 +750,23 @@ final class bc implements Runnable {
 
     public final void run() {
         try {
-            IOException var1 = null;
-            Exception var1_ref = null;
-            int var1_int = 0;
-            int var2 = 0;
-            IOException var3 = null;
-            Object var3_ref = null;
-            InterruptedException var4 = null;
-            Throwable var5 = null;
-            int var6 = 0;
-            String var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            int var1_int = 0;
+            IOException var1 = null;
+            Exception var1_ref = null;
+            int var2 = 0;
+            Object var3 = null;
+            IOException var3_ref = null;
+            InterruptedException var4 = null;
+            int var6 = 0;
+            String var7 = null;
             var6 = TrackController.field_F ? 1 : 0;
             try {
               L0: {
                 L1: while (true) {
-                  var3_ref = this;
-                  synchronized (var3_ref) {
+                  var3 = this;
+                  synchronized (var3) {
                     L2: {
                       L3: {
                         if (this.field_i == this.field_h) {
@@ -957,7 +856,7 @@ final class bc implements Runnable {
                       } catch (java.io.IOException decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         L13: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_l = true;
                           break L13;
                         }
@@ -978,7 +877,7 @@ final class bc implements Runnable {
                       } catch (java.io.IOException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L16: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_l = true;
                           break L16;
                         }
@@ -1005,15 +904,14 @@ final class bc implements Runnable {
     }
 
     final void a(boolean param0) throws IOException {
-        ck discarded$2 = null;
-        byte[] var3 = null;
+        byte[] var3;
         if (!this.field_j) {
           if (!this.field_l) {
             if (param0) {
               return;
             } else {
               var3 = (byte[]) null;
-              discarded$2 = bc.a(113, (byte[]) null);
+              bc.a(113, (byte[]) null);
               return;
             }
           } else {

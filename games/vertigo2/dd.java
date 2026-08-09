@@ -36,22 +36,22 @@ class dd {
     }
 
     private final void a(int[] param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7_int = 0;
-        sn var7 = null;
-        int var8_int = 0;
-        sn[] var8 = null;
-        int var9 = 0;
-        Object var10 = null;
-        sn var11 = null;
-        dr var12 = null;
-        int var13 = 0;
-        sn var14 = null;
-        sn var15 = null;
-        int var15_int = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7_int;
+        Object var7;
+        int var8_int;
+        sn[] var8;
+        int var9;
+        Object var10;
+        sn var11;
+        dr var12;
+        int var13;
+        sn var14;
+        int var15_int;
+        sn var15;
         L0: {
           var3 = param1;
           if (!field_h) {
@@ -206,9 +206,9 @@ class dd {
                         var6++;
                         continue L14;
                       } else {
-                        var10 = var7.field_q;
-                        var7.field_q = null;
-                        var7 = (sn) (var10);
+                        var10 = ((sn) (var7)).field_q;
+                        ((sn) (var7)).field_q = null;
+                        var7 = var10;
                         continue L15;
                       }
                     }
@@ -246,12 +246,12 @@ class dd {
 
     final synchronized void b() {
         try {
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             long var1 = 0L;
             Exception var3 = null;
             int var3_int = 0;
             int var4 = 0;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
             if (!this.field_g) {
               var1 = gk.a(77);
               try {
@@ -452,45 +452,19 @@ class dd {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_u = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_h = stackIn_7_0 != 0;
-              field_e = param2;
-              return;
-            } else {
-              break L0;
-            }
-          }
+        if (param0 < 8000 || param0 > 48000) {
+            throw new IllegalArgumentException();
         }
-        throw new IllegalArgumentException();
+        field_u = param0;
+        field_h = param1 ? true : false;
+        field_e = param2;
     }
 
     final static dd a(jj param0, java.awt.Component param1, int param2, int param3) {
         try {
-            wk discarded$2 = null;
             vr var4 = null;
             Throwable var4_ref = null;
             vr var5 = null;
-            vr stackIn_9_0 = null;
-            int stackIn_9_1 = 0;
             vr stackIn_10_0 = null;
             int stackIn_10_1 = 0;
             vr stackIn_11_0 = null;
@@ -498,15 +472,6 @@ class dd {
             int stackIn_11_2 = 0;
             vr stackIn_21_0 = null;
             Throwable decompiledCaughtException = null;
-            vr stackOut_8_0 = null;
-            int stackOut_8_1 = 0;
-            vr stackOut_10_0 = null;
-            int stackOut_10_1 = 0;
-            int stackOut_10_2 = 0;
-            vr stackOut_9_0 = null;
-            int stackOut_9_1 = 0;
-            int stackOut_9_2 = 0;
-            vr stackOut_20_0 = null;
             if (field_u != 0) {
               L0: {
                 if (param2 < 0) {
@@ -526,27 +491,19 @@ class dd {
                         L3: {
                           var5 = new vr();
                           var4 = var5;
-                          stackOut_8_0 = (vr) (var4);
-                          stackOut_8_1 = 256;
-                          stackIn_10_0 = stackOut_8_0;
-                          stackIn_10_1 = stackOut_8_1;
-                          stackIn_9_0 = stackOut_8_0;
-                          stackIn_9_1 = stackOut_8_1;
+                          stackIn_10_0 = (vr) (var4);
+
+                          stackIn_10_1 = 256;
+
                           if (!field_h) {
-                            stackOut_10_0 = (vr) ((Object) stackIn_10_0);
-                            stackOut_10_1 = stackIn_10_1;
-                            stackOut_10_2 = 1;
-                            stackIn_11_0 = stackOut_10_0;
-                            stackIn_11_1 = stackOut_10_1;
-                            stackIn_11_2 = stackOut_10_2;
+                            stackIn_11_0 = (vr) ((Object) stackIn_10_0);
+                            stackIn_11_1 = stackIn_10_1;
+                            stackIn_11_2 = 1;
                             break L3;
                           } else {
-                            stackOut_9_0 = (vr) ((Object) stackIn_9_0);
-                            stackOut_9_1 = stackIn_9_1;
-                            stackOut_9_2 = 2;
-                            stackIn_11_0 = stackOut_9_0;
-                            stackIn_11_1 = stackOut_9_1;
-                            stackIn_11_2 = stackOut_9_2;
+                            stackIn_11_0 = (vr) ((Object) stackIn_10_0);
+                            stackIn_11_1 = stackIn_10_1;
+                            stackIn_11_2 = 2;
                             break L3;
                           }
                         }
@@ -572,7 +529,7 @@ class dd {
                             } else {
                               field_j = new jr();
                               field_j.field_c = param0;
-                              discarded$2 = param0.a(field_e, (Runnable) ((Object) field_j), 0);
+                              param0.a(field_e, (Runnable) ((Object) field_j), 0);
                               break L5;
                             }
                           }
@@ -589,8 +546,7 @@ class dd {
                             }
                           }
                         }
-                        stackOut_20_0 = (vr) (var4);
-                        stackIn_21_0 = stackOut_20_0;
+                        stackIn_21_0 = (vr) (var4);
                         break L2;
                       }
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -648,8 +604,8 @@ class dd {
     }
 
     final synchronized void d() {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         L0: {
           if (field_j == null) {
             break L0;

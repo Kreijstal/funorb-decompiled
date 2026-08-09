@@ -24,16 +24,24 @@ final class ej {
     }
 
     final synchronized static byte[] a(int param0, int param1) {
-        int fieldTemp$25 = 0;
-        byte[][] fieldTemp$26 = null;
-        int fieldTemp$27 = 0;
-        int fieldTemp$28 = 0;
-        int fieldTemp$29 = 0;
-        byte[][] fieldTemp$30 = null;
-        int fieldTemp$31 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        int fieldTemp$3 = 0;
+        byte[][] fieldTemp$4 = null;
+        int fieldTemp$5 = 0;
+        int dupTemp$6 = 0;
+        byte[][] arrayValue$7 = null;
+        int dupTemp$8 = 0;
+        byte[][] arrayValue$9 = null;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        byte[][] fieldTemp$12 = null;
+        int fieldTemp$13 = 0;
+        int dupTemp$14 = 0;
+        byte[][] arrayValue$15 = null;
+        int dupTemp$16 = 0;
+        byte[][] arrayValue$17 = null;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
         if ((param0 ^ -1) == -101) {
           if (0 >= p.field_U) {
             L0: {
@@ -43,9 +51,9 @@ final class ej {
                 if (dj.field_d <= 0) {
                   break L0;
                 } else {
-                  fieldTemp$25 = dj.field_d - 1;
+                  fieldTemp$3 = dj.field_d - 1;
                   dj.field_d = dj.field_d - 1;
-                  var2_ref_byte__ = wl.field_g[fieldTemp$25];
+                  var2_ref_byte__ = wl.field_g[fieldTemp$3];
                   wl.field_g[dj.field_d] = null;
                   return var2_ref_byte__;
                 }
@@ -58,10 +66,10 @@ final class ej {
                 if ((id.field_a ^ -1) >= -1) {
                   break L1;
                 } else {
-                  fieldTemp$26 = qh.field_a;
-                  fieldTemp$27 = id.field_a - 1;
+                  fieldTemp$4 = qh.field_a;
+                  fieldTemp$5 = id.field_a - 1;
                   id.field_a = id.field_a - 1;
-                  var2_ref_byte__ = fieldTemp$26[fieldTemp$27];
+                  var2_ref_byte__ = fieldTemp$4[fieldTemp$5];
                   qh.field_a[id.field_a] = null;
                   return var2_ref_byte__;
                 }
@@ -76,8 +84,10 @@ final class ej {
                   } else {
                     if (param0 == mj.field_a[var2]) {
                       if (0 < pe.field_C[var2]) {
-                        pe.field_C[var2] = pe.field_C[var2] - 1;
-                        var3 = th.field_a[var2][pe.field_C[var2] - 1];
+                        dupTemp$6 = pe.field_C[var2] - 1;
+                        arrayValue$7 = th.field_a[var2];
+                        pe.field_C[var2] = dupTemp$6;
+                        var3 = arrayValue$7[dupTemp$6];
                         th.field_a[var2][pe.field_C[var2]] = null;
                         return var3;
                       } else {
@@ -103,8 +113,10 @@ final class ej {
                   } else {
                     if (param0 == mj.field_a[var2]) {
                       if (0 < pe.field_C[var2]) {
-                        pe.field_C[var2] = pe.field_C[var2] - 1;
-                        var3 = th.field_a[var2][pe.field_C[var2] - 1];
+                        dupTemp$8 = pe.field_C[var2] - 1;
+                        arrayValue$9 = th.field_a[var2];
+                        pe.field_C[var2] = dupTemp$8;
+                        var3 = arrayValue$9[dupTemp$8];
                         th.field_a[var2][pe.field_C[var2]] = null;
                         return var3;
                       } else {
@@ -122,9 +134,9 @@ final class ej {
               }
             }
           } else {
-            fieldTemp$28 = p.field_U - 1;
+            fieldTemp$10 = p.field_U - 1;
             p.field_U = p.field_U - 1;
-            var2_ref_byte__ = ec.field_f[fieldTemp$28];
+            var2_ref_byte__ = ec.field_f[fieldTemp$10];
             ec.field_f[p.field_U] = null;
             return var2_ref_byte__;
           }
@@ -136,9 +148,9 @@ final class ej {
               if (dj.field_d <= 0) {
                 break L4;
               } else {
-                fieldTemp$29 = dj.field_d - 1;
+                fieldTemp$11 = dj.field_d - 1;
                 dj.field_d = dj.field_d - 1;
-                var2_ref_byte__ = wl.field_g[fieldTemp$29];
+                var2_ref_byte__ = wl.field_g[fieldTemp$11];
                 wl.field_g[dj.field_d] = null;
                 return var2_ref_byte__;
               }
@@ -151,10 +163,10 @@ final class ej {
               if ((id.field_a ^ -1) >= -1) {
                 break L5;
               } else {
-                fieldTemp$30 = qh.field_a;
-                fieldTemp$31 = id.field_a - 1;
+                fieldTemp$12 = qh.field_a;
+                fieldTemp$13 = id.field_a - 1;
                 id.field_a = id.field_a - 1;
-                var2_ref_byte__ = fieldTemp$30[fieldTemp$31];
+                var2_ref_byte__ = fieldTemp$12[fieldTemp$13];
                 qh.field_a[id.field_a] = null;
                 return var2_ref_byte__;
               }
@@ -167,8 +179,10 @@ final class ej {
                 if (mj.field_a.length > var2) {
                   if (param0 == mj.field_a[var2]) {
                     if (0 < pe.field_C[var2]) {
-                      pe.field_C[var2] = pe.field_C[var2] - 1;
-                      var3 = th.field_a[var2][pe.field_C[var2] - 1];
+                      dupTemp$14 = pe.field_C[var2] - 1;
+                      arrayValue$15 = th.field_a[var2];
+                      pe.field_C[var2] = dupTemp$14;
+                      var3 = arrayValue$15[dupTemp$14];
                       th.field_a[var2][pe.field_C[var2]] = null;
                       return var3;
                     } else {
@@ -194,8 +208,10 @@ final class ej {
                 if (mj.field_a.length > var2) {
                   if (param0 == mj.field_a[var2]) {
                     if (0 < pe.field_C[var2]) {
-                      pe.field_C[var2] = pe.field_C[var2] - 1;
-                      var3 = th.field_a[var2][pe.field_C[var2] - 1];
+                      dupTemp$16 = pe.field_C[var2] - 1;
+                      arrayValue$17 = th.field_a[var2];
+                      pe.field_C[var2] = dupTemp$16;
+                      var3 = arrayValue$17[dupTemp$16];
                       th.field_a[var2][pe.field_C[var2]] = null;
                       return var3;
                     } else {
@@ -219,16 +235,13 @@ final class ej {
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_15_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_16_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
+        RuntimeException var3 = null;
         var4 = wizardrun.field_H;
         try {
           L0: {
@@ -236,19 +249,16 @@ final class ej {
             L1: while (true) {
               if (param2 <= 1) {
                 if ((param2 ^ -1) == -2) {
-                  stackOut_9_0 = param0 * var3_int;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_11_0 = param0 * var3_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
                   if (param1 == -1) {
-                    stackOut_14_0 = var3_int;
-                    stackIn_15_0 = stackOut_14_0;
+                    stackIn_16_0 = var3_int;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    stackOut_12_0 = -47;
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_14_0 = -47;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -274,12 +284,12 @@ final class ej {
           throw bd.a((Throwable) ((Object) var3), "ej.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_10_0;
+          return stackIn_11_0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_13_0;
+            return stackIn_14_0;
           } else {
-            return stackIn_15_0;
+            return stackIn_16_0;
           }
         }
     }

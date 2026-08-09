@@ -12,8 +12,8 @@ public class OpenGL {
     private Thread b;
 
     public final synchronized boolean a() {
-        Thread var1 = null;
-        jaggl.OpenGL var2 = null;
+        Thread var1;
+        jaggl.OpenGL var2;
         var1 = Thread.currentThread();
         if (this.attachPeer()) {
           var2 = (jaggl.OpenGL) (c.put(var1, this));
@@ -39,13 +39,11 @@ public class OpenGL {
     public final native static void glStencilOp(int param0, int param1, int param2);
 
     public final boolean a(String param0) {
-        Object discarded$2 = null;
-        Object discarded$3 = null;
-        String var2 = null;
-        int var3 = 0;
-        int var4_int = 0;
-        String var4 = null;
-        String var5 = null;
+        String var2;
+        int var3;
+        int var4_int;
+        String var5;
+        String var4;
         if (null == this.a) {
           this.a = new Hashtable();
           var2 = jaggl.OpenGL.glGetString(7939);
@@ -55,7 +53,7 @@ public class OpenGL {
             if ((var4_int ^ -1) == 0) {
               var4 = var2.substring(var3).trim();
               if (var4.length() != 0) {
-                discarded$2 = this.a.put(var4, var4);
+                this.a.put(var4, var4);
                 return this.a.containsKey(param0);
               } else {
                 return this.a.containsKey(param0);
@@ -64,7 +62,7 @@ public class OpenGL {
               var5 = var2.substring(var3, var4_int).trim();
               var3 = var4_int + 1;
               if (0 != var5.length()) {
-                discarded$3 = this.a.put(var5, var5);
+                this.a.put(var5, var5);
                 continue L0;
               } else {
                 continue L0;
@@ -297,7 +295,7 @@ public class OpenGL {
             return false;
         }
         this.detachPeer();
-        Object discarded$0 = c.remove(this.b);
+        c.remove(this.b);
         this.b = null;
         return true;
     }

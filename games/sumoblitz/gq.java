@@ -9,10 +9,6 @@ final class gq extends ve {
     final boolean d(int param0) {
         int stackIn_7_0 = 0;
         int stackIn_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == -8111) {
           if (this.field_m.field_xc) {
             if (!this.field_m.field_wb) {
@@ -20,12 +16,10 @@ final class gq extends ve {
             } else {
               L0: {
                 if (!this.field_m.field_Hb) {
-                  stackOut_15_0 = 0;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_0 = 0;
                   break L0;
                 } else {
-                  stackOut_14_0 = 1;
-                  stackIn_16_0 = stackOut_14_0;
+                  stackIn_16_0 = 1;
                   break L0;
                 }
               }
@@ -42,12 +36,10 @@ final class gq extends ve {
             } else {
               L1: {
                 if (!this.field_m.field_Hb) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L1;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L1;
                 }
               }

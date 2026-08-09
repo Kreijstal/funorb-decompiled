@@ -8,10 +8,11 @@ final class b extends ob {
     static vh field_H;
 
     final void c(int param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        String dupTemp$2 = null;
+        String dupTemp$3 = null;
+        int var2;
+        int var3;
+        int var4;
         super.c(127);
         var2 = 480;
         if (param0 >= 36) {
@@ -65,8 +66,9 @@ final class b extends ob {
           } else {
             L3: {
               L4: {
-                pl.field_f = rn.field_a[this.field_I];
-                pl.field_a = dq.a(4, 0, rn.field_a[this.field_I]);
+                dupTemp$2 = rn.field_a[this.field_I];
+                pl.field_f = dupTemp$2;
+                pl.field_a = dq.a(4, 0, dupTemp$2);
                 pl.field_a.c(qh.field_l + -pl.field_a.field_z >> 1326190049, -mc.field_e.field_C + var3);
                 var3 += 5;
                 if (bq.field_p != this.field_I) {
@@ -112,11 +114,12 @@ final class b extends ob {
             }
           }
         } else {
-          discarded$1 = this.b((byte) -57, -26);
+          this.b((byte) -57, -26);
           var3 = rj.field_h;
           if (rn.field_a[this.field_I] != pl.field_f) {
-            pl.field_f = rn.field_a[this.field_I];
-            pl.field_a = dq.a(4, 0, rn.field_a[this.field_I]);
+            dupTemp$3 = rn.field_a[this.field_I];
+            pl.field_f = dupTemp$3;
+            pl.field_a = dq.a(4, 0, dupTemp$3);
             pl.field_a.c(qh.field_l + -pl.field_a.field_z >> 1326190049, -mc.field_e.field_C + var3);
             var3 += 5;
             if (bq.field_p == this.field_I) {
@@ -244,42 +247,31 @@ final class b extends ob {
     }
 
     final void e(int param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_48_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var4 = Pool.field_O;
           if (this.e(0, -120)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
         var2 = stackIn_3_0;
         if (param0 != -34) {
           L1: {
-            discarded$1 = this.a(false, 51);
+            this.a(false, 51);
             if (this.e(2, 102)) {
-              stackOut_47_0 = 2;
-              stackIn_48_0 = stackOut_47_0;
+              stackIn_48_0 = 2;
               break L1;
             } else {
-              stackOut_46_0 = 1;
-              stackIn_48_0 = stackOut_46_0;
+              stackIn_48_0 = 1;
               break L1;
             }
           }
@@ -360,12 +352,10 @@ final class b extends ob {
         } else {
           L2: {
             if (this.e(2, 102)) {
-              stackOut_6_0 = 2;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = 2;
               break L2;
             } else {
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = 1;
               break L2;
             }
           }
@@ -447,8 +437,8 @@ final class b extends ob {
     }
 
     final void b(int param0, boolean param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = Pool.field_O;
         var4 = this.field_h[param2];
         if (-26 != (var4 ^ -1)) {
@@ -517,7 +507,7 @@ final class b extends ob {
     }
 
     final boolean e(int param0, int param1) {
-        int var3 = 0;
+        int var3;
         if (-1 != (param0 ^ -1)) {
           if (2 == param0) {
             if (rb.field_n.length - 1 != this.field_I) {

@@ -17,8 +17,6 @@ final class tm extends qm {
 
     final static boolean a(byte param0) {
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           if (param0 >= 108) {
             break L0;
@@ -39,8 +37,7 @@ final class tm extends qm {
                   break L2;
                 } else {
                   if (!ha.b(12742)) {
-                    stackOut_8_0 = 0;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = 0;
                     break L1;
                   } else {
                     break L2;
@@ -49,8 +46,7 @@ final class tm extends qm {
               }
             }
           }
-          stackOut_7_0 = 1;
-          stackIn_9_0 = stackOut_7_0;
+          stackIn_9_0 = 1;
           break L1;
         }
         return stackIn_9_0 != 0;
@@ -74,26 +70,13 @@ final class tm extends qm {
     }
 
     final int a(byte param0, int param1) {
-        L0: {
-          if (param1 < 0) {
-            break L0;
-          } else {
-            if (param1 < this.field_W.b(1)) {
-              L1: {
-                if (param0 <= -84) {
-                  break L1;
-                } else {
-                  field_U = -103;
-                  break L1;
-                }
-              }
-              return this.field_W.c(param1, -124);
-            } else {
-              break L0;
-            }
-          }
+        if (param1 < 0 || param1 >= this.field_W.b(1)) {
+            return -1;
         }
-        return -1;
+        if (param0 > -84) {
+            field_U = -103;
+        }
+        return this.field_W.c(param1, -124);
     }
 
     final int k(int param0) {
@@ -104,18 +87,8 @@ final class tm extends qm {
     }
 
     final boolean a(byte param0, ng param1, int param2, int param3, int param4, int param5, int param6) {
-        RuntimeException var8 = null;
-        int var8_int = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
         int stackIn_21_0 = 0;
         int stackIn_23_0 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -123,22 +96,19 @@ final class tm extends qm {
         String stackIn_27_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_22_0 = 0;
-        int stackOut_20_0 = 0;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        int var8_int = 0;
+        RuntimeException var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
         var14 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
             if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
-              stackOut_22_0 = 0;
-              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
@@ -197,8 +167,7 @@ final class tm extends qm {
                   break L3;
                 }
               }
-              stackOut_20_0 = 1;
-              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -207,27 +176,19 @@ final class tm extends qm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var8);
-            stackOut_24_1 = new StringBuilder().append("tm.N(").append(param0).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var8);
+
+            stackIn_26_1 = new StringBuilder().append("tm.N(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L5;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L5;
             }
           }
@@ -282,7 +243,6 @@ final class tm extends qm {
         int var4 = 0;
         int stackIn_6_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -297,8 +257,7 @@ final class tm extends qm {
             }
             L2: while (true) {
               if ((param2 ^ -1) >= -1) {
-                stackOut_5_0 = var3_int;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = var3_int;
                 break L0;
               } else {
                 var3_int = param0 & 1 | var3_int << -1595841631;

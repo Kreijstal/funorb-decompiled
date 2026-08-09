@@ -34,24 +34,14 @@ final class sg extends anb implements ntb, utb {
     }
 
     public final void a(faa param0, int param1) {
-        RuntimeException var3 = null;
-        int var4 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -113,27 +103,19 @@ final class sg extends anb implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("sg.L(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3);
+
+            stackIn_16_1 = new StringBuilder().append("sg.L(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L5;
             }
           }
@@ -143,8 +125,6 @@ final class sg extends anb implements ntb, utb {
 
     final boolean q(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 < -6) {
             break L0;
@@ -161,14 +141,12 @@ final class sg extends anb implements ntb, utb {
               if (oq.field_I != this.field_G) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
@@ -191,10 +169,8 @@ final class sg extends anb implements ntb, utb {
     }
 
     final boolean s(int param0) {
-        aoa var3 = null;
+        aoa var3;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 >= 31) {
             break L0;
@@ -210,16 +186,14 @@ final class sg extends anb implements ntb, utb {
               break L2;
             } else {
               if (this.g(false)) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 1;
           break L1;
         }
         return stackIn_7_0 != 0;
@@ -237,24 +211,13 @@ final class sg extends anb implements ntb, utb {
     }
 
     final void a(qua param0, int param1) {
-        int discarded$2 = 0;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -262,7 +225,7 @@ final class sg extends anb implements ntb, utb {
               if (param1 == 3) {
                 break L1;
               } else {
-                discarded$2 = this.o((byte) -104);
+                this.o((byte) -104);
                 break L1;
               }
             }
@@ -272,27 +235,19 @@ final class sg extends anb implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("sg.ID(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("sg.ID(");
+
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }
@@ -301,10 +256,8 @@ final class sg extends anb implements ntb, utb {
     }
 
     final boolean j(byte param0) {
-        int var2 = 0;
+        int var2;
         int stackIn_4_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_3_0 = 0;
         L0: {
           L1: {
             var2 = 76 / ((param0 - 49) / 42);
@@ -314,23 +267,20 @@ final class sg extends anb implements ntb, utb {
               if (this.field_F >= oq.field_A) {
                 break L1;
               } else {
-                stackOut_2_0 = 1;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = 1;
                 break L0;
               }
             }
           }
-          stackOut_3_0 = 0;
-          stackIn_4_0 = stackOut_3_0;
+          stackIn_4_0 = 0;
           break L0;
         }
         return stackIn_4_0 != 0;
     }
 
     final boolean n(int param0) {
-        int[] discarded$0 = null;
         if (param0 != 31390) {
-            discarded$0 = this.A(125);
+            this.A(125);
         }
         return this.field_R;
     }
@@ -356,15 +306,12 @@ final class sg extends anb implements ntb, utb {
     }
 
     final boolean s(byte param0) {
-        boolean discarded$2 = false;
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == -90) {
             break L0;
           } else {
-            discarded$2 = this.r((byte) -68);
+            this.r((byte) -68);
             break L0;
           }
         }
@@ -376,14 +323,12 @@ final class sg extends anb implements ntb, utb {
               if ((this.field_I ^ -1) >= -1) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
@@ -414,14 +359,12 @@ final class sg extends anb implements ntb, utb {
     }
 
     final void a(boolean param0, pe param1) {
-        boolean discarded$0 = false;
-        boolean discarded$1 = false;
         try {
             if (!param0) {
                 tv var4 = (tv) null;
-                discarded$0 = this.a((byte) 18, (tv) null);
+                this.a((byte) 18, (tv) null);
             }
-            discarded$1 = this.field_z.a((sg) (this), (byte) -73, param1);
+            this.field_z.a((sg) (this), (byte) -73, param1);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) ((Object) runtimeException), "sg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -458,9 +401,8 @@ final class sg extends anb implements ntb, utb {
     }
 
     final boa n(byte param0) {
-        int discarded$0 = 0;
         if (param0 != 28) {
-            discarded$0 = this.l(45);
+            this.l(45);
         }
         return this.field_S;
     }
@@ -476,14 +418,12 @@ final class sg extends anb implements ntb, utb {
             } else {
                 param0.b(param1 + -10267, new ihb(4, this.field_G));
             }
-            if (!param2) {
-                if (!param3) {
-                    if (!this.field_O) {
-                        param0.b(param1 ^ -10265, new ihb(8, 0));
-                    }
-                    if (!(!this.field_K)) {
-                        param0.b(-10258, new ihb(9, this.field_M));
-                    }
+            if (!param2 && !param3) {
+                if (!this.field_O) {
+                    param0.b(param1 ^ -10265, new ihb(8, 0));
+                }
+                if (!(!this.field_K)) {
+                    param0.b(-10258, new ihb(9, this.field_M));
                 }
             }
             this.field_k.a(param0, (sg) (this), 0);
@@ -542,91 +482,31 @@ final class sg extends anb implements ntb, utb {
     }
 
     public final boolean a(byte param0, tv param1) {
-        RuntimeException var3 = null;
-        int var4 = 0;
-        sg var5 = null;
         int stackIn_7_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_10_0 = 0;
         int stackIn_10_1 = 0;
         int stackIn_20_0 = 0;
         int stackIn_24_0 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_27_0 = 0;
         int stackIn_27_1 = 0;
-        boolean stackIn_29_0 = false;
         boolean stackIn_30_0 = false;
         boolean stackIn_31_0 = false;
         int stackIn_31_1 = 0;
         int stackIn_36_0 = 0;
         int stackIn_40_0 = 0;
-        boolean stackIn_42_0 = false;
         boolean stackIn_43_0 = false;
         boolean stackIn_44_0 = false;
         int stackIn_44_1 = 0;
         int stackIn_50_0 = 0;
-        int stackIn_51_0 = 0;
-        int stackIn_52_0 = 0;
-        int stackIn_53_0 = 0;
         int stackIn_53_1 = 0;
         int stackIn_61_0 = 0;
-        RuntimeException stackIn_63_0 = null;
-        StringBuilder stackIn_63_1 = null;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
         RuntimeException stackIn_65_0 = null;
         StringBuilder stackIn_65_1 = null;
         String stackIn_65_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_26_1 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_25_1 = 0;
-        boolean stackOut_28_0 = false;
-        boolean stackOut_30_0 = false;
-        int stackOut_30_1 = 0;
-        boolean stackOut_29_0 = false;
-        int stackOut_29_1 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_38_0 = 0;
-        boolean stackOut_41_0 = false;
-        boolean stackOut_43_0 = false;
-        int stackOut_43_1 = 0;
-        boolean stackOut_42_0 = false;
-        int stackOut_42_1 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_52_1 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_51_1 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_59_0 = 0;
-        RuntimeException stackOut_62_0 = null;
-        StringBuilder stackOut_62_1 = null;
-        RuntimeException stackOut_64_0 = null;
-        StringBuilder stackOut_64_1 = null;
-        String stackOut_64_2 = null;
-        RuntimeException stackOut_63_0 = null;
-        StringBuilder stackOut_63_1 = null;
-        String stackOut_63_2 = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        sg var5 = null;
         try {
           L0: {
             L1: {
@@ -647,34 +527,27 @@ final class sg extends anb implements ntb, utb {
                       } else {
                         L3: {
                           if (null != var5.field_z) {
-                            stackOut_6_0 = 0;
-                            stackIn_7_0 = stackOut_6_0;
+                            stackIn_7_0 = 0;
                             break L3;
                           } else {
-                            stackOut_5_0 = 1;
-                            stackIn_7_0 = stackOut_5_0;
+                            stackIn_7_0 = 1;
                             break L3;
                           }
                         }
                         L4: {
-                          stackOut_7_0 = stackIn_7_0;
-                          stackIn_9_0 = stackOut_7_0;
-                          stackIn_8_0 = stackOut_7_0;
+
+
                           if (this.field_z != null) {
-                            stackOut_9_0 = stackIn_9_0;
-                            stackOut_9_1 = 0;
-                            stackIn_10_0 = stackOut_9_0;
-                            stackIn_10_1 = stackOut_9_1;
+
+                            stackIn_10_1 = 0;
                             break L4;
                           } else {
-                            stackOut_8_0 = stackIn_8_0;
-                            stackOut_8_1 = 1;
-                            stackIn_10_0 = stackOut_8_0;
-                            stackIn_10_1 = stackOut_8_1;
+
+                            stackIn_10_1 = 1;
                             break L4;
                           }
                         }
-                        if ((stackIn_10_0 ^ stackIn_10_1) != 0) {
+                        if ((stackIn_7_0 ^ stackIn_10_1) != 0) {
                           break L2;
                         } else {
                           L5: {
@@ -699,12 +572,10 @@ final class sg extends anb implements ntb, utb {
                               } else {
                                 L6: {
                                   if (this.field_y) {
-                                    stackOut_19_0 = 0;
-                                    stackIn_20_0 = stackOut_19_0;
+                                    stackIn_20_0 = 0;
                                     break L6;
                                   } else {
-                                    stackOut_18_0 = 1;
-                                    stackIn_20_0 = stackOut_18_0;
+                                    stackIn_20_0 = 1;
                                     break L6;
                                   }
                                 }
@@ -713,51 +584,39 @@ final class sg extends anb implements ntb, utb {
                                 } else {
                                   L7: {
                                     if (this.field_K) {
-                                      stackOut_23_0 = 0;
-                                      stackIn_24_0 = stackOut_23_0;
+                                      stackIn_24_0 = 0;
                                       break L7;
                                     } else {
-                                      stackOut_22_0 = 1;
-                                      stackIn_24_0 = stackOut_22_0;
+                                      stackIn_24_0 = 1;
                                       break L7;
                                     }
                                   }
                                   L8: {
-                                    stackOut_24_0 = stackIn_24_0;
-                                    stackIn_26_0 = stackOut_24_0;
-                                    stackIn_25_0 = stackOut_24_0;
+
+
                                     if (var5.field_K) {
-                                      stackOut_26_0 = stackIn_26_0;
-                                      stackOut_26_1 = 0;
-                                      stackIn_27_0 = stackOut_26_0;
-                                      stackIn_27_1 = stackOut_26_1;
+
+                                      stackIn_27_1 = 0;
                                       break L8;
                                     } else {
-                                      stackOut_25_0 = stackIn_25_0;
-                                      stackOut_25_1 = 1;
-                                      stackIn_27_0 = stackOut_25_0;
-                                      stackIn_27_1 = stackOut_25_1;
+
+                                      stackIn_27_1 = 1;
                                       break L8;
                                     }
                                   }
-                                  if (stackIn_27_0 != stackIn_27_1) {
+                                  if (stackIn_24_0 != stackIn_27_1) {
                                     break L2;
                                   } else {
                                     L9: {
-                                      stackOut_28_0 = this.field_O;
-                                      stackIn_30_0 = stackOut_28_0;
-                                      stackIn_29_0 = stackOut_28_0;
+                                      stackIn_30_0 = this.field_O;
+
                                       if (var5.field_O) {
-                                        stackOut_30_0 = stackIn_30_0;
-                                        stackOut_30_1 = 0;
-                                        stackIn_31_0 = stackOut_30_0;
-                                        stackIn_31_1 = stackOut_30_1;
+                                        stackIn_31_0 = stackIn_30_0;
+                                        stackIn_31_1 = 0;
                                         break L9;
                                       } else {
-                                        stackOut_29_0 = stackIn_29_0;
-                                        stackOut_29_1 = 1;
-                                        stackIn_31_0 = stackOut_29_0;
-                                        stackIn_31_1 = stackOut_29_1;
+                                        stackIn_31_0 = stackIn_30_0;
+                                        stackIn_31_1 = 1;
                                         break L9;
                                       }
                                     }
@@ -769,12 +628,10 @@ final class sg extends anb implements ntb, utb {
                                       } else {
                                         L10: {
                                           if (var5.field_T) {
-                                            stackOut_35_0 = 0;
-                                            stackIn_36_0 = stackOut_35_0;
+                                            stackIn_36_0 = 0;
                                             break L10;
                                           } else {
-                                            stackOut_34_0 = 1;
-                                            stackIn_36_0 = stackOut_34_0;
+                                            stackIn_36_0 = 1;
                                             break L10;
                                           }
                                         }
@@ -783,12 +640,10 @@ final class sg extends anb implements ntb, utb {
                                         } else {
                                           L11: {
                                             if (this.field_w) {
-                                              stackOut_39_0 = 0;
-                                              stackIn_40_0 = stackOut_39_0;
+                                              stackIn_40_0 = 0;
                                               break L11;
                                             } else {
-                                              stackOut_38_0 = 1;
-                                              stackIn_40_0 = stackOut_38_0;
+                                              stackIn_40_0 = 1;
                                               break L11;
                                             }
                                           }
@@ -796,20 +651,15 @@ final class sg extends anb implements ntb, utb {
                                             break L2;
                                           } else {
                                             L12: {
-                                              stackOut_41_0 = this.field_R;
-                                              stackIn_43_0 = stackOut_41_0;
-                                              stackIn_42_0 = stackOut_41_0;
+                                              stackIn_43_0 = this.field_R;
+
                                               if (var5.field_R) {
-                                                stackOut_43_0 = stackIn_43_0;
-                                                stackOut_43_1 = 0;
-                                                stackIn_44_0 = stackOut_43_0;
-                                                stackIn_44_1 = stackOut_43_1;
+                                                stackIn_44_0 = stackIn_43_0;
+                                                stackIn_44_1 = 0;
                                                 break L12;
                                               } else {
-                                                stackOut_42_0 = stackIn_42_0;
-                                                stackOut_42_1 = 1;
-                                                stackIn_44_0 = stackOut_42_0;
-                                                stackIn_44_1 = stackOut_42_1;
+                                                stackIn_44_0 = stackIn_43_0;
+                                                stackIn_44_1 = 1;
                                                 break L12;
                                               }
                                             }
@@ -824,34 +674,27 @@ final class sg extends anb implements ntb, utb {
                                                 } else {
                                                   L13: {
                                                     if (var5.field_S != null) {
-                                                      stackOut_49_0 = 0;
-                                                      stackIn_50_0 = stackOut_49_0;
+                                                      stackIn_50_0 = 0;
                                                       break L13;
                                                     } else {
-                                                      stackOut_48_0 = 1;
-                                                      stackIn_50_0 = stackOut_48_0;
+                                                      stackIn_50_0 = 1;
                                                       break L13;
                                                     }
                                                   }
                                                   L14: {
-                                                    stackOut_50_0 = stackIn_50_0;
-                                                    stackIn_52_0 = stackOut_50_0;
-                                                    stackIn_51_0 = stackOut_50_0;
+
+
                                                     if (this.field_S != null) {
-                                                      stackOut_52_0 = stackIn_52_0;
-                                                      stackOut_52_1 = 0;
-                                                      stackIn_53_0 = stackOut_52_0;
-                                                      stackIn_53_1 = stackOut_52_1;
+
+                                                      stackIn_53_1 = 0;
                                                       break L14;
                                                     } else {
-                                                      stackOut_51_0 = stackIn_51_0;
-                                                      stackOut_51_1 = 1;
-                                                      stackIn_53_0 = stackOut_51_0;
-                                                      stackIn_53_1 = stackOut_51_1;
+
+                                                      stackIn_53_1 = 1;
                                                       break L14;
                                                     }
                                                   }
-                                                  if ((stackIn_53_0 ^ stackIn_53_1) != 0) {
+                                                  if ((stackIn_50_0 ^ stackIn_53_1) != 0) {
                                                     break L2;
                                                   } else {
                                                     L15: {
@@ -866,8 +709,7 @@ final class sg extends anb implements ntb, utb {
                                                       }
                                                     }
                                                     if (var5.field_F == this.field_F) {
-                                                      stackOut_60_0 = 0;
-                                                      stackIn_61_0 = stackOut_60_0;
+                                                      stackIn_61_0 = 0;
                                                       break L1;
                                                     } else {
                                                       break L2;
@@ -891,8 +733,7 @@ final class sg extends anb implements ntb, utb {
                   }
                 }
               }
-              stackOut_59_0 = 1;
-              stackIn_61_0 = stackOut_59_0;
+              stackIn_61_0 = 1;
               break L1;
             }
             break L0;
@@ -901,27 +742,19 @@ final class sg extends anb implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var3 = decompiledCaughtException;
-            stackOut_62_0 = (RuntimeException) (var3);
-            stackOut_62_1 = new StringBuilder().append("sg.C(").append(param0).append(',');
-            stackIn_64_0 = stackOut_62_0;
-            stackIn_64_1 = stackOut_62_1;
-            stackIn_63_0 = stackOut_62_0;
-            stackIn_63_1 = stackOut_62_1;
+            stackIn_64_0 = (RuntimeException) (var3);
+
+            stackIn_64_1 = new StringBuilder().append("sg.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-              stackOut_64_2 = "null";
-              stackIn_65_0 = stackOut_64_0;
-              stackIn_65_1 = stackOut_64_1;
-              stackIn_65_2 = stackOut_64_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "null";
               break L16;
             } else {
-              stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
-              stackOut_63_1 = (StringBuilder) ((Object) stackIn_63_1);
-              stackOut_63_2 = "{...}";
-              stackIn_65_0 = stackOut_63_0;
-              stackIn_65_1 = stackOut_63_1;
-              stackIn_65_2 = stackOut_63_2;
+              stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
+              stackIn_65_2 = "{...}";
               break L16;
             }
           }
@@ -936,32 +769,21 @@ final class sg extends anb implements ntb, utb {
     }
 
     final qua p(byte param0) {
-        int discarded$0 = 0;
         if (param0 != 49) {
-            discarded$0 = this.t(-25);
+            this.t(-25);
         }
         return this.field_L;
     }
 
     public final void a(faa param0, boolean param1) {
-        RuntimeException var3 = null;
-        int var4 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -1022,27 +844,19 @@ final class sg extends anb implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3);
-            stackOut_13_1 = new StringBuilder().append("sg.H(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3);
+
+            stackIn_15_1 = new StringBuilder().append("sg.H(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }
@@ -1058,9 +872,20 @@ final class sg extends anb implements ntb, utb {
     }
 
     final boolean a(pe param0, int param1, int param2, int param3) {
-        boolean discarded$1 = false;
-        RuntimeException var5 = null;
-        ml[] var5_array = null;
+        int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_36_1 = 0;
+        int stackIn_38_0 = 0;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        String stackIn_42_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        ml[] var5 = null;
+        RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1074,35 +899,11 @@ final class sg extends anb implements ntb, utb {
         int var16 = 0;
         ml[] var17 = null;
         ml[] var18 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_37_0 = 0;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        String stackIn_41_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
         var16 = VoidHunters.field_G;
         try {
           L0: {
             if (!this.d(4, 67)) {
-              stackOut_3_0 = 1;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -1113,16 +914,16 @@ final class sg extends anb implements ntb, utb {
                   if (param3 == 0) {
                     break L1;
                   } else {
-                    discarded$1 = this.n(-12);
+                    this.n(-12);
                     break L1;
                   }
                 }
                 L2: {
                   var17 = this.field_k.a((byte) 101, param1, nw.field_o, (ml[]) null, param2);
                   var18 = var17;
-                  var5_array = var18;
+                  var5 = var18;
                   var6 = 1;
-                  if (var5_array == null) {
+                  if (var5 == null) {
                     break L2;
                   } else {
                     if ((var17.length ^ -1) < -1) {
@@ -1211,17 +1012,17 @@ final class sg extends anb implements ntb, utb {
                   if (var6 == 0) {
                     break L9;
                   } else {
-                    rmb.a(param2, this.field_l, 72, -72, param1);
+                    stackIn_36_0 = param2;
+                    stackIn_36_1 = this.field_l;
+                    rmb.a(stackIn_36_0, stackIn_36_1, 72, -72, param1);
                     break L9;
                   }
                 }
-                stackOut_36_0 = 0;
-                stackIn_37_0 = stackOut_36_0;
+                stackIn_38_0 = 0;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -1230,32 +1031,24 @@ final class sg extends anb implements ntb, utb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
-            var5 = decompiledCaughtException;
-            stackOut_38_0 = (RuntimeException) (var5);
-            stackOut_38_1 = new StringBuilder().append("sg.HC(");
-            stackIn_40_0 = stackOut_38_0;
-            stackIn_40_1 = stackOut_38_1;
-            stackIn_39_0 = stackOut_38_0;
-            stackIn_39_1 = stackOut_38_1;
+            var5_ref = decompiledCaughtException;
+            stackIn_41_0 = (RuntimeException) (var5_ref);
+
+            stackIn_41_1 = new StringBuilder().append("sg.HC(");
+
             if (param0 == null) {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "null";
-              stackIn_41_0 = stackOut_40_0;
-              stackIn_41_1 = stackOut_40_1;
-              stackIn_41_2 = stackOut_40_2;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "null";
               break L10;
             } else {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "{...}";
-              stackIn_41_0 = stackOut_39_0;
-              stackIn_41_1 = stackOut_39_1;
-              stackIn_41_2 = stackOut_39_2;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "{...}";
               break L10;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_41_0), stackIn_41_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_42_0), stackIn_42_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0 != 0;
@@ -1263,30 +1056,19 @@ final class sg extends anb implements ntb, utb {
           if (decompiledRegionSelector0 == 1) {
             return stackIn_7_0 != 0;
           } else {
-            return stackIn_37_0 != 0;
+            return stackIn_38_0 != 0;
           }
         }
     }
 
     final void a(pe param0, boolean param1, byte param2, boolean param3) {
-        boolean discarded$1 = false;
-        RuntimeException var5 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -1381,7 +1163,7 @@ final class sg extends anb implements ntb, utb {
                 if (this.field_M > oq.field_e) {
                   break L8;
                 } else {
-                  discarded$1 = this.field_k.a(400, param2 + -20, param0, (anb) (this));
+                  this.field_k.a(400, param2 + -20, param0, (anb) (this));
                   break L8;
                 }
               }
@@ -1400,27 +1182,19 @@ final class sg extends anb implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var5 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) (var5);
-            stackOut_30_1 = new StringBuilder().append("sg.SA(");
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackIn_32_0 = (RuntimeException) (var5);
+
+            stackIn_32_1 = new StringBuilder().append("sg.SA(");
+
             if (param0 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L10;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L10;
             }
           }
@@ -1429,27 +1203,17 @@ final class sg extends anb implements ntb, utb {
     }
 
     public final void b(byte param0, tv param1) {
-        RuntimeException var3 = null;
-        int var4 = 0;
-        faa var5 = null;
-        sg var6 = null;
-        sg var7 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        faa var5 = null;
+        sg var6 = null;
+        sg var7 = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -1522,27 +1286,19 @@ final class sg extends anb implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var3);
-            stackOut_17_1 = new StringBuilder().append("sg.D(").append(param0).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var3);
+
+            stackIn_19_1 = new StringBuilder().append("sg.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L6;
             }
           }
@@ -1551,18 +1307,16 @@ final class sg extends anb implements ntb, utb {
     }
 
     final void f(int param0, int param1) {
-        boolean discarded$0 = false;
         this.field_A = this.field_A | param1;
         if (param0 != 0) {
-            discarded$0 = this.l((byte) -73);
+            this.l((byte) -73);
         }
     }
 
     final void a(aoa param0, int param1) {
-        int discarded$0 = 0;
         try {
             if (param1 != 4) {
-                discarded$0 = this.w(105);
+                this.w(105);
             }
             this.field_z = param0;
         } catch (RuntimeException runtimeException) {
@@ -1586,69 +1340,26 @@ final class sg extends anb implements ntb, utb {
     }
 
     public final void b(faa param0, int param1) {
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
-        RuntimeException var3 = null;
-        faa stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
         faa stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         faa stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_5_2 = 0;
-        int stackIn_8_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_10_1 = 0;
-        faa stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
         faa stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         faa stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         int stackIn_13_2 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        faa stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        faa stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        faa stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
-        faa stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        faa stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        faa stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -1657,39 +1368,31 @@ final class sg extends anb implements ntb, utb {
               if (param1 < -109) {
                 break L1;
               } else {
-                discarded$7 = this.s((byte) -86);
+                this.s((byte) -86);
                 break L1;
               }
             }
             L2: {
               param0.a(-632, this.field_N, 32);
               param0.a(-632, this.field_u, 32);
-              stackOut_2_0 = (faa) (param0);
-              stackOut_2_1 = -76;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              stackIn_3_0 = stackOut_2_0;
-              stackIn_3_1 = stackOut_2_1;
+              stackIn_4_0 = (faa) (param0);
+
+              stackIn_4_1 = -76;
+
               if (this.field_z == null) {
-                stackOut_4_0 = (faa) ((Object) stackIn_4_0);
-                stackOut_4_1 = stackIn_4_1;
-                stackOut_4_2 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                stackIn_5_1 = stackOut_4_1;
-                stackIn_5_2 = stackOut_4_2;
+                stackIn_5_0 = (faa) ((Object) stackIn_4_0);
+                stackIn_5_1 = stackIn_4_1;
+                stackIn_5_2 = 0;
                 break L2;
               } else {
-                stackOut_3_0 = (faa) ((Object) stackIn_3_0);
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_5_1 = stackOut_3_1;
-                stackIn_5_2 = stackOut_3_2;
+                stackIn_5_0 = (faa) ((Object) stackIn_4_0);
+                stackIn_5_1 = stackIn_4_1;
+                stackIn_5_2 = 1;
                 break L2;
               }
             }
             L3: {
-              if (vq.a(stackIn_5_0, stackIn_5_1, stackIn_5_2 == 0)) {
+              if (!vq.a(stackIn_5_0, stackIn_5_1, stackIn_5_2 != 0)) {
                 break L3;
               } else {
                 this.field_z.b(param0, -113);
@@ -1700,54 +1403,41 @@ final class sg extends anb implements ntb, utb {
               param0.a(-632, this.field_P, 32);
               param0.a(-632, this.field_I, 32);
               param0.a(-632, this.field_G, 32);
-              discarded$8 = vq.a(param0, 81, this.field_y);
-              discarded$9 = vq.a(param0, 47, this.field_K);
-              discarded$10 = vq.a(param0, 82, this.field_O);
+              vq.a(param0, 81, this.field_y);
+              vq.a(param0, 47, this.field_K);
+              vq.a(param0, 82, this.field_O);
               param0.a(-632, this.field_M, 32);
-              discarded$11 = vq.a(param0, 70, this.field_T);
-              discarded$12 = vq.a(param0, -121, this.field_w);
-              discarded$13 = vq.a(param0, 104, this.field_R);
+              vq.a(param0, 70, this.field_T);
+              vq.a(param0, -121, this.field_w);
+              vq.a(param0, 104, this.field_R);
               param0.a(-632, this.field_v, 32);
-              stackOut_7_0 = 4;
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_9_0 = 4;
+
               if (this.field_J != null) {
-                stackOut_9_0 = stackIn_9_0;
-                stackOut_9_1 = this.field_J.length;
-                stackIn_10_0 = stackOut_9_0;
-                stackIn_10_1 = stackOut_9_1;
+                stackIn_10_0 = stackIn_9_0;
+                stackIn_10_1 = this.field_J.length;
                 break L4;
               } else {
-                stackOut_8_0 = stackIn_8_0;
-                stackOut_8_1 = 0;
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_10_1 = stackOut_8_1;
+                stackIn_10_0 = stackIn_9_0;
+                stackIn_10_1 = 0;
                 break L4;
               }
             }
             L5: {
               pgb.a(stackIn_10_0, stackIn_10_1, -125, param0, this.field_J);
-              stackOut_10_0 = (faa) (param0);
-              stackOut_10_1 = 78;
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
+              stackIn_12_0 = (faa) (param0);
+
+              stackIn_12_1 = 78;
+
               if (null == this.field_S) {
-                stackOut_12_0 = (faa) ((Object) stackIn_12_0);
-                stackOut_12_1 = stackIn_12_1;
-                stackOut_12_2 = 0;
-                stackIn_13_0 = stackOut_12_0;
-                stackIn_13_1 = stackOut_12_1;
-                stackIn_13_2 = stackOut_12_2;
+                stackIn_13_0 = (faa) ((Object) stackIn_12_0);
+                stackIn_13_1 = stackIn_12_1;
+                stackIn_13_2 = 0;
                 break L5;
               } else {
-                stackOut_11_0 = (faa) ((Object) stackIn_11_0);
-                stackOut_11_1 = stackIn_11_1;
-                stackOut_11_2 = 1;
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_13_1 = stackOut_11_1;
-                stackIn_13_2 = stackOut_11_2;
+                stackIn_13_0 = (faa) ((Object) stackIn_12_0);
+                stackIn_13_1 = stackIn_12_1;
+                stackIn_13_2 = 1;
                 break L5;
               }
             }
@@ -1766,27 +1456,19 @@ final class sg extends anb implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var3);
-            stackOut_18_1 = new StringBuilder().append("sg.B(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var3);
+
+            stackIn_20_1 = new StringBuilder().append("sg.B(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L7;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L7;
             }
           }
@@ -1795,13 +1477,9 @@ final class sg extends anb implements ntb, utb {
     }
 
     final boolean d(int param0, int param1) {
-        tv var4 = null;
+        tv var4;
         int stackIn_7_0 = 0;
         int stackIn_13_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param1 > 38) {
             break L0;
@@ -1825,28 +1503,24 @@ final class sg extends anb implements ntb, utb {
                   break L2;
                 } else {
                   if (-1 <= (this.field_G ^ -1)) {
-                    stackOut_12_0 = 0;
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = 0;
                     break L1;
                   } else {
                     break L2;
                   }
                 }
               }
-              stackOut_11_0 = 1;
-              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_0 = 1;
               break L1;
             }
             return stackIn_13_0 != 0;
           } else {
             L3: {
               if (this.field_G <= pca.field_i[4].d((byte) 64)) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L3;
               } else {
-                stackOut_5_0 = 1;
-                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_0 = 1;
                 break L3;
               }
             }
@@ -1885,9 +1559,8 @@ final class sg extends anb implements ntb, utb {
     }
 
     final void h(int param0, int param1) {
-        aoa discarded$0 = null;
         if (param0 != 17704) {
-            discarded$0 = this.k((byte) -15);
+            this.k((byte) -15);
         }
         this.field_N = param1;
     }
@@ -1900,9 +1573,8 @@ final class sg extends anb implements ntb, utb {
     }
 
     final int[] A(int param0) {
-        int discarded$0 = 0;
         if (param0 < 21) {
-            discarded$0 = this.y(-71);
+            this.y(-71);
         }
         return this.field_x;
     }
@@ -1929,69 +1601,26 @@ final class sg extends anb implements ntb, utb {
     }
 
     public final void a(faa param0, byte param1) {
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
-        RuntimeException var3 = null;
-        faa stackIn_1_0 = null;
-        int stackIn_1_1 = 0;
         faa stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         faa stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
-        int stackIn_7_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_9_1 = 0;
-        faa stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
         faa stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         faa stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_14_2 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        faa stackOut_0_0 = null;
-        int stackOut_0_1 = 0;
-        faa stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        faa stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_1_2 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        faa stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        faa stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        faa stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -1999,27 +1628,19 @@ final class sg extends anb implements ntb, utb {
               param0.a(-632, this.field_Q, 32);
               param0.a(-632, this.field_N, 32);
               param0.a(-632, this.field_u, 32);
-              stackOut_0_0 = (faa) (param0);
-              stackOut_0_1 = -128;
-              stackIn_2_0 = stackOut_0_0;
-              stackIn_2_1 = stackOut_0_1;
-              stackIn_1_0 = stackOut_0_0;
-              stackIn_1_1 = stackOut_0_1;
+              stackIn_2_0 = (faa) (param0);
+
+              stackIn_2_1 = -128;
+
               if (null == this.field_z) {
-                stackOut_2_0 = (faa) ((Object) stackIn_2_0);
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = 0;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
-                stackIn_3_2 = stackOut_2_2;
+                stackIn_3_0 = (faa) ((Object) stackIn_2_0);
+                stackIn_3_1 = stackIn_2_1;
+                stackIn_3_2 = 0;
                 break L1;
               } else {
-                stackOut_1_0 = (faa) ((Object) stackIn_1_0);
-                stackOut_1_1 = stackIn_1_1;
-                stackOut_1_2 = 1;
-                stackIn_3_0 = stackOut_1_0;
-                stackIn_3_1 = stackOut_1_1;
-                stackIn_3_2 = stackOut_1_2;
+                stackIn_3_0 = (faa) ((Object) stackIn_2_0);
+                stackIn_3_1 = stackIn_2_1;
+                stackIn_3_2 = 1;
                 break L1;
               }
             }
@@ -2036,28 +1657,23 @@ final class sg extends anb implements ntb, utb {
               param0.a(-632, this.field_I, 32);
               param0.a(-632, this.field_C, 32);
               param0.a(-632, this.field_G, 32);
-              discarded$7 = vq.a(param0, -73, this.field_y);
-              discarded$8 = vq.a(param0, 90, this.field_K);
-              discarded$9 = vq.a(param0, 113, this.field_O);
+              vq.a(param0, -73, this.field_y);
+              vq.a(param0, 90, this.field_K);
+              vq.a(param0, 113, this.field_O);
               param0.a(-632, this.field_M, 32);
-              discarded$10 = vq.a(param0, -92, this.field_T);
-              discarded$11 = vq.a(param0, 107, this.field_w);
-              discarded$12 = vq.a(param0, -102, this.field_R);
+              vq.a(param0, -92, this.field_T);
+              vq.a(param0, 107, this.field_w);
+              vq.a(param0, -102, this.field_R);
               param0.a(-632, this.field_v, 32);
-              stackOut_6_0 = 4;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_8_0 = 4;
+
               if (this.field_J == null) {
-                stackOut_8_0 = stackIn_8_0;
-                stackOut_8_1 = 0;
-                stackIn_9_0 = stackOut_8_0;
-                stackIn_9_1 = stackOut_8_1;
+                stackIn_9_0 = stackIn_8_0;
+                stackIn_9_1 = 0;
                 break L3;
               } else {
-                stackOut_7_0 = stackIn_7_0;
-                stackOut_7_1 = this.field_J.length;
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_9_1 = stackOut_7_1;
+                stackIn_9_0 = stackIn_8_0;
+                stackIn_9_1 = this.field_J.length;
                 break L3;
               }
             }
@@ -2066,37 +1682,29 @@ final class sg extends anb implements ntb, utb {
               if (param1 <= -91) {
                 break L4;
               } else {
-                discarded$13 = this.s(57);
+                this.s(57);
                 break L4;
               }
             }
             L5: {
-              stackOut_11_0 = (faa) (param0);
-              stackOut_11_1 = 101;
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
+              stackIn_13_0 = (faa) (param0);
+
+              stackIn_13_1 = 101;
+
               if (null == this.field_S) {
-                stackOut_13_0 = (faa) ((Object) stackIn_13_0);
-                stackOut_13_1 = stackIn_13_1;
-                stackOut_13_2 = 0;
-                stackIn_14_0 = stackOut_13_0;
-                stackIn_14_1 = stackOut_13_1;
-                stackIn_14_2 = stackOut_13_2;
+                stackIn_14_0 = (faa) ((Object) stackIn_13_0);
+                stackIn_14_1 = stackIn_13_1;
+                stackIn_14_2 = 0;
                 break L5;
               } else {
-                stackOut_12_0 = (faa) ((Object) stackIn_12_0);
-                stackOut_12_1 = stackIn_12_1;
-                stackOut_12_2 = 1;
-                stackIn_14_0 = stackOut_12_0;
-                stackIn_14_1 = stackOut_12_1;
-                stackIn_14_2 = stackOut_12_2;
+                stackIn_14_0 = (faa) ((Object) stackIn_13_0);
+                stackIn_14_1 = stackIn_13_1;
+                stackIn_14_2 = 1;
                 break L5;
               }
             }
             L6: {
-              if (vq.a(stackIn_14_0, stackIn_14_1, stackIn_14_2 == 0)) {
+              if (!vq.a(stackIn_14_0, stackIn_14_1, stackIn_14_2 != 0)) {
                 break L6;
               } else {
                 this.field_S.b(param0, -118);
@@ -2110,27 +1718,19 @@ final class sg extends anb implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var3);
-            stackOut_18_1 = new StringBuilder().append("sg.E(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var3);
+
+            stackIn_20_1 = new StringBuilder().append("sg.E(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L7;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L7;
             }
           }
@@ -2175,8 +1775,17 @@ final class sg extends anb implements ntb, utb {
     }
 
     final void a(lta param0, int param1, pe param2) {
-        RuntimeException var4 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        StringBuilder stackIn_16_1 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -2186,37 +1795,6 @@ final class sg extends anb implements ntb, utb {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var13 = VoidHunters.field_G;
         try {
           L0: {
@@ -2272,113 +1850,73 @@ final class sg extends anb implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var4);
-            stackOut_11_1 = new StringBuilder().append("sg.P(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var4);
+
+            stackIn_13_1 = new StringBuilder().append("sg.P(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L5;
             }
           }
           L6: {
-            stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param1).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+
+
+            stackIn_16_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L6;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_14_0), stackIn_17_2 + ')');
         }
     }
 
     final aoa k(byte param0) {
-        int discarded$0 = 0;
         if (param0 != -108) {
-            discarded$0 = this.q((byte) -110);
+            this.q((byte) -110);
         }
         return this.field_z;
     }
 
     final boolean l(byte param0) {
-        int discarded$0 = 0;
         if (param0 != -10) {
-            discarded$0 = this.q((byte) 25);
+            this.q((byte) 25);
         }
         return null != this.field_z ? true : false;
     }
 
     final void a(int param0, int param1, pe param2, int param3, int param4) {
-        RuntimeException var6 = null;
-        uj var7 = null;
-        uj var8 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        Object stackIn_13_0 = null;
         Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
         int stackIn_15_1 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        Object stackOut_12_0 = null;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        RuntimeException var6 = null;
+        uj var7 = null;
+        uj var8 = null;
         try {
           L0: {
             L1: {
@@ -2396,20 +1934,15 @@ final class sg extends anb implements ntb, utb {
                   }
                 } else {
                   L2: {
-                    stackOut_3_0 = this;
-                    stackIn_5_0 = stackOut_3_0;
-                    stackIn_4_0 = stackOut_3_0;
+                    stackIn_5_0 = this;
+
                     if (this.field_y) {
-                      stackOut_5_0 = this;
-                      stackOut_5_1 = 0;
-                      stackIn_6_0 = stackOut_5_0;
-                      stackIn_6_1 = stackOut_5_1;
+                      stackIn_6_0 = this;
+                      stackIn_6_1 = 0;
                       break L2;
                     } else {
-                      stackOut_4_0 = this;
-                      stackOut_4_1 = 1;
-                      stackIn_6_0 = stackOut_4_0;
-                      stackIn_6_1 = stackOut_4_1;
+                      stackIn_6_0 = this;
+                      stackIn_6_1 = 1;
                       break L2;
                     }
                   }
@@ -2427,20 +1960,15 @@ final class sg extends anb implements ntb, utb {
               } else {
                 if (!this.field_O) {
                   L4: {
-                    stackOut_12_0 = this;
-                    stackIn_14_0 = stackOut_12_0;
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_14_0 = this;
+
                     if (this.field_K) {
-                      stackOut_14_0 = this;
-                      stackOut_14_1 = 0;
-                      stackIn_15_0 = stackOut_14_0;
-                      stackIn_15_1 = stackOut_14_1;
+                      stackIn_15_0 = this;
+                      stackIn_15_1 = 0;
                       break L4;
                     } else {
-                      stackOut_13_0 = this;
-                      stackOut_13_1 = 1;
-                      stackIn_15_0 = stackOut_13_0;
-                      stackIn_15_1 = stackOut_13_1;
+                      stackIn_15_0 = this;
+                      stackIn_15_1 = 1;
                       break L4;
                     }
                   }
@@ -2483,27 +2011,19 @@ final class sg extends anb implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var6);
-            stackOut_25_1 = new StringBuilder().append("sg.WA(").append(param0).append(',').append(param1).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var6);
+
+            stackIn_27_1 = new StringBuilder().append("sg.WA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L7;
             }
           }
@@ -2512,9 +2032,8 @@ final class sg extends anb implements ntb, utb {
     }
 
     final boolean g(boolean param0) {
-        boolean discarded$0 = false;
         if (param0) {
-            discarded$0 = this.r((byte) -85);
+            this.r((byte) -85);
         }
         return this.field_k.field_j == 0 ? true : false;
     }
@@ -2536,91 +2055,31 @@ final class sg extends anb implements ntb, utb {
     }
 
     public final void a(tv param0, int param1) {
-        RuntimeException var3 = null;
-        int var4 = 0;
-        sg var5 = null;
         int stackIn_19_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_22_0 = 0;
         int stackIn_22_1 = 0;
-        boolean stackIn_39_0 = false;
         boolean stackIn_40_0 = false;
         boolean stackIn_41_0 = false;
         int stackIn_41_1 = 0;
-        boolean stackIn_44_0 = false;
         boolean stackIn_45_0 = false;
         boolean stackIn_46_0 = false;
         int stackIn_46_1 = 0;
-        boolean stackIn_49_0 = false;
         boolean stackIn_50_0 = false;
         boolean stackIn_51_0 = false;
         int stackIn_51_1 = 0;
         int stackIn_62_0 = 0;
         int stackIn_70_0 = 0;
-        int stackIn_71_0 = 0;
-        int stackIn_72_0 = 0;
-        int stackIn_73_0 = 0;
         int stackIn_73_1 = 0;
         int stackIn_84_0 = 0;
-        int stackIn_85_0 = 0;
-        int stackIn_86_0 = 0;
-        int stackIn_87_0 = 0;
         int stackIn_87_1 = 0;
-        RuntimeException stackIn_99_0 = null;
-        StringBuilder stackIn_99_1 = null;
         RuntimeException stackIn_100_0 = null;
         StringBuilder stackIn_100_1 = null;
         RuntimeException stackIn_101_0 = null;
         StringBuilder stackIn_101_1 = null;
         String stackIn_101_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_21_1 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_20_1 = 0;
-        boolean stackOut_38_0 = false;
-        boolean stackOut_40_0 = false;
-        int stackOut_40_1 = 0;
-        boolean stackOut_39_0 = false;
-        int stackOut_39_1 = 0;
-        boolean stackOut_43_0 = false;
-        boolean stackOut_45_0 = false;
-        int stackOut_45_1 = 0;
-        boolean stackOut_44_0 = false;
-        int stackOut_44_1 = 0;
-        boolean stackOut_48_0 = false;
-        boolean stackOut_50_0 = false;
-        int stackOut_50_1 = 0;
-        boolean stackOut_49_0 = false;
-        int stackOut_49_1 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_69_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_70_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_72_1 = 0;
-        int stackOut_71_0 = 0;
-        int stackOut_71_1 = 0;
-        int stackOut_83_0 = 0;
-        int stackOut_82_0 = 0;
-        int stackOut_84_0 = 0;
-        int stackOut_86_0 = 0;
-        int stackOut_86_1 = 0;
-        int stackOut_85_0 = 0;
-        int stackOut_85_1 = 0;
-        RuntimeException stackOut_98_0 = null;
-        StringBuilder stackOut_98_1 = null;
-        RuntimeException stackOut_100_0 = null;
-        StringBuilder stackOut_100_1 = null;
-        String stackOut_100_2 = null;
-        RuntimeException stackOut_99_0 = null;
-        StringBuilder stackOut_99_1 = null;
-        String stackOut_99_2 = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        sg var5 = null;
         try {
           L0: {
             L1: {
@@ -2679,36 +2138,29 @@ final class sg extends anb implements ntb, utb {
             }
             L6: {
               if (null != this.field_z) {
-                stackOut_18_0 = 0;
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = 0;
                 break L6;
               } else {
-                stackOut_17_0 = 1;
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = 1;
                 break L6;
               }
             }
             L7: {
-              stackOut_19_0 = stackIn_19_0;
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_20_0 = stackOut_19_0;
+
+
               if (null != var5.field_z) {
-                stackOut_21_0 = stackIn_21_0;
-                stackOut_21_1 = 0;
-                stackIn_22_0 = stackOut_21_0;
-                stackIn_22_1 = stackOut_21_1;
+
+                stackIn_22_1 = 0;
                 break L7;
               } else {
-                stackOut_20_0 = stackIn_20_0;
-                stackOut_20_1 = 1;
-                stackIn_22_0 = stackOut_20_0;
-                stackIn_22_1 = stackOut_20_1;
+
+                stackIn_22_1 = 1;
                 break L7;
               }
             }
             L8: {
               L9: {
-                if ((stackIn_22_0 ^ stackIn_22_1) != 0) {
+                if ((stackIn_19_0 ^ stackIn_22_1) != 0) {
                   break L9;
                 } else {
                   if (this.field_z == null) {
@@ -2763,20 +2215,15 @@ final class sg extends anb implements ntb, utb {
               }
             }
             L14: {
-              stackOut_38_0 = this.field_y;
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_39_0 = stackOut_38_0;
+              stackIn_40_0 = this.field_y;
+
               if (var5.field_y) {
-                stackOut_40_0 = stackIn_40_0;
-                stackOut_40_1 = 0;
-                stackIn_41_0 = stackOut_40_0;
-                stackIn_41_1 = stackOut_40_1;
+                stackIn_41_0 = stackIn_40_0;
+                stackIn_41_1 = 0;
                 break L14;
               } else {
-                stackOut_39_0 = stackIn_39_0;
-                stackOut_39_1 = 1;
-                stackIn_41_0 = stackOut_39_0;
-                stackIn_41_1 = stackOut_39_1;
+                stackIn_41_0 = stackIn_40_0;
+                stackIn_41_1 = 1;
                 break L14;
               }
             }
@@ -2790,20 +2237,15 @@ final class sg extends anb implements ntb, utb {
               }
             }
             L16: {
-              stackOut_43_0 = var5.field_K;
-              stackIn_45_0 = stackOut_43_0;
-              stackIn_44_0 = stackOut_43_0;
+              stackIn_45_0 = var5.field_K;
+
               if (this.field_K) {
-                stackOut_45_0 = stackIn_45_0;
-                stackOut_45_1 = 0;
-                stackIn_46_0 = stackOut_45_0;
-                stackIn_46_1 = stackOut_45_1;
+                stackIn_46_0 = stackIn_45_0;
+                stackIn_46_1 = 0;
                 break L16;
               } else {
-                stackOut_44_0 = stackIn_44_0;
-                stackOut_44_1 = 1;
-                stackIn_46_0 = stackOut_44_0;
-                stackIn_46_1 = stackOut_44_1;
+                stackIn_46_0 = stackIn_45_0;
+                stackIn_46_1 = 1;
                 break L16;
               }
             }
@@ -2817,20 +2259,15 @@ final class sg extends anb implements ntb, utb {
               }
             }
             L18: {
-              stackOut_48_0 = this.field_O;
-              stackIn_50_0 = stackOut_48_0;
-              stackIn_49_0 = stackOut_48_0;
+              stackIn_50_0 = this.field_O;
+
               if (var5.field_O) {
-                stackOut_50_0 = stackIn_50_0;
-                stackOut_50_1 = 0;
-                stackIn_51_0 = stackOut_50_0;
-                stackIn_51_1 = stackOut_50_1;
+                stackIn_51_0 = stackIn_50_0;
+                stackIn_51_1 = 0;
                 break L18;
               } else {
-                stackOut_49_0 = stackIn_49_0;
-                stackOut_49_1 = 1;
-                stackIn_51_0 = stackOut_49_0;
-                stackIn_51_1 = stackOut_49_1;
+                stackIn_51_0 = stackIn_50_0;
+                stackIn_51_1 = 1;
                 break L18;
               }
             }
@@ -2862,12 +2299,10 @@ final class sg extends anb implements ntb, utb {
             }
             L22: {
               if (var5.field_T) {
-                stackOut_61_0 = 0;
-                stackIn_62_0 = stackOut_61_0;
+                stackIn_62_0 = 0;
                 break L22;
               } else {
-                stackOut_60_0 = 1;
-                stackIn_62_0 = stackOut_60_0;
+                stackIn_62_0 = 1;
                 break L22;
               }
             }
@@ -2891,35 +2326,28 @@ final class sg extends anb implements ntb, utb {
             }
             L25: {
               if (this.field_R) {
-                stackOut_69_0 = 0;
-                stackIn_70_0 = stackOut_69_0;
+                stackIn_70_0 = 0;
                 break L25;
               } else {
-                stackOut_68_0 = 1;
-                stackIn_70_0 = stackOut_68_0;
+                stackIn_70_0 = 1;
                 break L25;
               }
             }
             L26: {
-              stackOut_70_0 = stackIn_70_0;
-              stackIn_72_0 = stackOut_70_0;
-              stackIn_71_0 = stackOut_70_0;
+
+
               if (var5.field_R) {
-                stackOut_72_0 = stackIn_72_0;
-                stackOut_72_1 = 0;
-                stackIn_73_0 = stackOut_72_0;
-                stackIn_73_1 = stackOut_72_1;
+
+                stackIn_73_1 = 0;
                 break L26;
               } else {
-                stackOut_71_0 = stackIn_71_0;
-                stackOut_71_1 = 1;
-                stackIn_73_0 = stackOut_71_0;
-                stackIn_73_1 = stackOut_71_1;
+
+                stackIn_73_1 = 1;
                 break L26;
               }
             }
             L27: {
-              if (stackIn_73_0 == stackIn_73_1) {
+              if (stackIn_70_0 == stackIn_73_1) {
                 break L27;
               } else {
                 System.out.println("boolean shields_on has changed. before=" + var5.field_R + ", now=" + this.field_R);
@@ -2947,36 +2375,29 @@ final class sg extends anb implements ntb, utb {
             }
             L30: {
               if (this.field_S != null) {
-                stackOut_83_0 = 0;
-                stackIn_84_0 = stackOut_83_0;
+                stackIn_84_0 = 0;
                 break L30;
               } else {
-                stackOut_82_0 = 1;
-                stackIn_84_0 = stackOut_82_0;
+                stackIn_84_0 = 1;
                 break L30;
               }
             }
             L31: {
-              stackOut_84_0 = stackIn_84_0;
-              stackIn_86_0 = stackOut_84_0;
-              stackIn_85_0 = stackOut_84_0;
+
+
               if (var5.field_S != null) {
-                stackOut_86_0 = stackIn_86_0;
-                stackOut_86_1 = 0;
-                stackIn_87_0 = stackOut_86_0;
-                stackIn_87_1 = stackOut_86_1;
+
+                stackIn_87_1 = 0;
                 break L31;
               } else {
-                stackOut_85_0 = stackIn_85_0;
-                stackOut_85_1 = 1;
-                stackIn_87_0 = stackOut_85_0;
-                stackIn_87_1 = stackOut_85_1;
+
+                stackIn_87_1 = 1;
                 break L31;
               }
             }
             L32: {
               L33: {
-                if ((stackIn_87_0 ^ stackIn_87_1) != 0) {
+                if ((stackIn_84_0 ^ stackIn_87_1) != 0) {
                   break L33;
                 } else {
                   if (null == this.field_S) {
@@ -3017,27 +2438,19 @@ final class sg extends anb implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L36: {
             var3 = decompiledCaughtException;
-            stackOut_98_0 = (RuntimeException) (var3);
-            stackOut_98_1 = new StringBuilder().append("sg.F(");
-            stackIn_100_0 = stackOut_98_0;
-            stackIn_100_1 = stackOut_98_1;
-            stackIn_99_0 = stackOut_98_0;
-            stackIn_99_1 = stackOut_98_1;
+            stackIn_100_0 = (RuntimeException) (var3);
+
+            stackIn_100_1 = new StringBuilder().append("sg.F(");
+
             if (param0 == null) {
-              stackOut_100_0 = (RuntimeException) ((Object) stackIn_100_0);
-              stackOut_100_1 = (StringBuilder) ((Object) stackIn_100_1);
-              stackOut_100_2 = "null";
-              stackIn_101_0 = stackOut_100_0;
-              stackIn_101_1 = stackOut_100_1;
-              stackIn_101_2 = stackOut_100_2;
+              stackIn_101_0 = (RuntimeException) ((Object) stackIn_100_0);
+              stackIn_101_1 = (StringBuilder) ((Object) stackIn_100_1);
+              stackIn_101_2 = "null";
               break L36;
             } else {
-              stackOut_99_0 = (RuntimeException) ((Object) stackIn_99_0);
-              stackOut_99_1 = (StringBuilder) ((Object) stackIn_99_1);
-              stackOut_99_2 = "{...}";
-              stackIn_101_0 = stackOut_99_0;
-              stackIn_101_1 = stackOut_99_1;
-              stackIn_101_2 = stackOut_99_2;
+              stackIn_101_0 = (RuntimeException) ((Object) stackIn_100_0);
+              stackIn_101_1 = (StringBuilder) ((Object) stackIn_100_1);
+              stackIn_101_2 = "{...}";
               break L36;
             }
           }

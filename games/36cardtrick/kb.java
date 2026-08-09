@@ -10,7 +10,6 @@ final class kb {
     static int[] field_c;
 
     final static boolean a(boolean param0) {
-        boolean discarded$5 = false;
         if (!param0) {
           if (wc.field_A != null) {
             if (!wc.field_A.b(true)) {
@@ -22,7 +21,7 @@ final class kb {
             return false;
           }
         } else {
-          discarded$5 = kb.a(false);
+          kb.a(false);
           if (wc.field_A != null) {
             if (!wc.field_A.b(true)) {
               return false;

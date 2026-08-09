@@ -20,20 +20,22 @@ final class ja {
     }
 
     final static void a(byte param0) {
-        String[][] dupTemp$6 = null;
-        long[][] dupTemp$7 = null;
-        int[][] dupTemp$8 = null;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
+        String[][] dupTemp$0 = null;
+        long[][] dupTemp$1 = null;
+        int[][] dupTemp$2 = null;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         ij var4 = null;
         long var4_long = 0L;
         int var5 = 0;
-        ik var6_ref_ik = null;
         int var6 = 0;
+        ik var6_ref_ik = null;
         int var7 = 0;
         int var8_int = 0;
         String[][] var8 = null;
@@ -55,8 +57,6 @@ final class ja {
         int var25 = 0;
         int var26 = 0;
         c var28 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var26 = EscapeVector.field_A;
         try {
           L0: {
@@ -71,7 +71,7 @@ final class ja {
                     if (var4 == null) {
                       break L3;
                     } else {
-                      if (var4.field_n != var3) {
+                      if ((var4.field_n ^ -1) != (var3 ^ -1)) {
                         var4 = (ij) ((Object) qd.field_n.b((byte) 70));
                         continue L2;
                       } else {
@@ -95,16 +95,16 @@ final class ja {
                         var8_int = 1;
                         L5: while (true) {
                           if (var5 <= var8_int) {
-                            dupTemp$6 = new String[3][var6];
-                            var4.field_m = dupTemp$6;
-                            var8 = dupTemp$6;
+                            dupTemp$0 = new String[3][var6];
+                            var4.field_m = dupTemp$0;
+                            var8 = dupTemp$0;
                             var9 = new String[3][var6];
-                            dupTemp$7 = new long[3][var6];
-                            var4.field_k = dupTemp$7;
-                            var10 = dupTemp$7;
-                            dupTemp$8 = new int[3][var7 * var6];
-                            var4.field_o = dupTemp$8;
-                            var11 = dupTemp$8;
+                            dupTemp$1 = new long[3][var6];
+                            var4.field_k = dupTemp$1;
+                            var10 = dupTemp$1;
+                            dupTemp$2 = new int[3][var7 * var6];
+                            var4.field_o = dupTemp$2;
+                            var11 = dupTemp$2;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -125,7 +125,7 @@ final class ja {
                                     var21 = bg.field_a[var20].field_h;
                                     var22 = var28.i(-800509813);
                                     var24 = var28.field_m;
-                                    if (var6 <= var19) {
+                                    if ((var6 ^ -1) >= (var19 ^ -1)) {
                                       break L7;
                                     } else {
                                       var8[0][var12] = var21;
@@ -137,9 +137,9 @@ final class ja {
                                           var12++;
                                           break L7;
                                         } else {
-                                          incrementValue$9 = var15;
+                                          incrementValue$3 = var15;
                                           var15++;
-                                          var11[0][incrementValue$9] = var28.g(-5053);
+                                          var11[0][incrementValue$3] = var28.g(-5053);
                                           var25++;
                                           continue L8;
                                         }
@@ -163,9 +163,9 @@ final class ja {
                                           if (var25 >= var7) {
                                             break L9;
                                           } else {
-                                            incrementValue$10 = var16;
+                                            incrementValue$4 = var16;
                                             var16++;
-                                            var11[1][incrementValue$10] = var28.g(-5053);
+                                            var11[1][incrementValue$4] = var28.g(-5053);
                                             var25++;
                                             continue L10;
                                           }
@@ -189,9 +189,9 @@ final class ja {
                                           if (var25 >= var7) {
                                             break L11;
                                           } else {
-                                            incrementValue$11 = var17;
+                                            incrementValue$5 = var17;
                                             var17++;
-                                            var11[2][incrementValue$11] = var28.g(-5053);
+                                            var11[2][incrementValue$5] = var28.g(-5053);
                                             var25++;
                                             continue L12;
                                           }
@@ -290,8 +290,6 @@ final class ja {
         RuntimeException var2 = null;
         d stackIn_6_0 = null;
         d stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -299,16 +297,6 @@ final class ja {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        d stackOut_7_0 = null;
-        d stackOut_5_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
@@ -324,13 +312,11 @@ final class ja {
               }
             }
             if (param1) {
-              stackOut_7_0 = di.field_g;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = di.field_g;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_5_0 = (d) null;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = (d) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -339,27 +325,19 @@ final class ja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2);
-            stackOut_9_1 = new StringBuilder().append("ja.A(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var2);
+
+            stackIn_11_1 = new StringBuilder().append("ja.A(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }

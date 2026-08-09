@@ -18,7 +18,7 @@ final class rca extends me {
     }
 
     final boolean a(int param0, char param1, byte param2) {
-        int var4 = 0;
+        int var4;
         var4 = -94 % ((29 - param2) / 57);
         if (-84 != (param0 ^ -1)) {
           if (param0 != 84) {
@@ -54,22 +54,19 @@ final class rca extends me {
     }
 
     final boolean d(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != -75) {
-            discarded$0 = this.a(false);
+            this.a(false);
             return this.field_j;
         }
         return this.field_j;
     }
 
     final void a(byte param0) {
-        vb discarded$2 = null;
-        vb discarded$3 = null;
         if (param0 > -107) {
           L0: {
             this.b((byte) 103);
             if (!this.field_k) {
-              discarded$2 = v.a(100, (byte) -76, 128, 222, 0, 96);
+              v.a(100, (byte) -76, 128, 222, 0, 96);
               this.field_k = true;
               break L0;
             } else {
@@ -97,7 +94,7 @@ final class rca extends me {
         } else {
           L3: {
             if (!this.field_k) {
-              discarded$3 = v.a(100, (byte) -76, 128, 222, 0, 96);
+              v.a(100, (byte) -76, 128, 222, 0, 96);
               this.field_k = true;
               break L3;
             } else {
@@ -127,157 +124,68 @@ final class rca extends me {
 
     rca(qh param0, taa param1) {
         super(param0);
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         this.field_k = false;
         try {
-          L0: {
-            L1: {
-              this.field_m = param1;
-              if (0 != param1.c(16)) {
-                break L1;
-              } else {
+            this.field_m = param1;
+            if (0 == param1.c(16)) {
                 this.field_o = new bua(0, param1.a(-13939), 1);
                 this.field_o.a(param1.a(-13939), false, 0, 37, true);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (runtimeException);
-            stackOut_4_1 = new StringBuilder().append("rca.<init>(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
-            if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
-            } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
-            }
-          }
-          L3: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
-            if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
-            } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L3;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "rca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(byte param0) {
-        boolean discarded$1 = false;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        String var6 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
+        int var2;
+        int var3;
+        int var4;
+        String var6;
+        String var7;
+        String var8;
+        String var9;
         ik.field_h.a(0, 0);
         if (param0 <= -13) {
-          L0: {
-            var2 = aaa.a(false) - kq.field_a.a() >> -1312544927;
-            var3 = koa.b(0) - kq.field_a.c() >> -1872517087;
-            if (-1 != (this.field_m.c(16) ^ -1)) {
-              break L0;
+          var2 = aaa.a(false) - kq.field_a.a() >> -1312544927;
+          var3 = koa.b(0) - kq.field_a.c() >> -1872517087;
+          if (-1 != (this.field_m.c(16) ^ -1)) {
+            if (this.field_m.c(16) != 1) {
+              return;
             } else {
-              var8 = gv.field_v;
-              var9 = la.field_m[this.field_m.a(-13939)];
-              oka.a(var8.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
-              ura.a(-10985);
-              hp.a(1024, 0, 0, this.field_o.b((byte) 74), -1918106173, 300, 320);
-              se.f((byte) -6);
-              kq.field_a.a(var2, var3 + 85);
-              oka.a(var9.toUpperCase(), 65793, eda.field_f, -1, (koa.b(0) >> -2098880447) - -92, aaa.a(false) >> 732717537, -1);
-              if (TombRacer.field_G) {
-                break L0;
-              } else {
-                return;
-              }
+              var4 = this.field_m.a(-13939);
+              oka.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+              cb.field_i[var4].a((aaa.a(false) >> -1347710559) - cb.field_i[var4].a() / 2, (koa.b(0) >> 1271516225) + -(cb.field_i[var4].c() / 2) - 20);
+              kq.field_a.a(var2, var3 + 60);
+              oka.a(vj.field_d[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> -1549693183, -1);
+              return;
             }
-          }
-          if (this.field_m.c(16) != 1) {
-            return;
           } else {
-            var4 = this.field_m.a(-13939);
-            oka.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
-            cb.field_i[var4].a((aaa.a(false) >> -1347710559) - cb.field_i[var4].a() / 2, (koa.b(0) >> 1271516225) + -(cb.field_i[var4].c() / 2) - 20);
-            kq.field_a.a(var2, var3 + 60);
-            oka.a(vj.field_d[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> -1549693183, -1);
+            var8 = gv.field_v;
+            var9 = la.field_m[this.field_m.a(-13939)];
+            oka.a(var8.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+            ura.a(-10985);
+            hp.a(1024, 0, 0, this.field_o.b((byte) 74), -1918106173, 300, 320);
+            se.f((byte) -6);
+            kq.field_a.a(var2, var3 + 85);
+            oka.a(var9.toUpperCase(), 65793, eda.field_f, -1, (koa.b(0) >> -2098880447) - -92, aaa.a(false) >> 732717537, -1);
             return;
           }
         } else {
-          discarded$1 = this.d((byte) 83);
+          this.d((byte) 83);
           var2 = aaa.a(false) - kq.field_a.a() >> -1312544927;
           var3 = koa.b(0) - kq.field_a.c() >> -1872517087;
-          if (-1 == (this.field_m.c(16) ^ -1)) {
+          if (-1 != (this.field_m.c(16) ^ -1)) {
+            if (this.field_m.c(16) != 1) {
+              return;
+            } else {
+              var4 = this.field_m.a(-13939);
+              oka.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+              cb.field_i[var4].a((aaa.a(false) >> -1347710559) - cb.field_i[var4].a() / 2, (koa.b(0) >> 1271516225) + -(cb.field_i[var4].c() / 2) - 20);
+              kq.field_a.a(var2, var3 + 60);
+              oka.a(vj.field_d[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> -1549693183, -1);
+              return;
+            }
+          } else {
             var6 = gv.field_v;
             var7 = la.field_m[this.field_m.a(-13939)];
             oka.a(var6.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
@@ -286,36 +194,6 @@ final class rca extends me {
             se.f((byte) -6);
             kq.field_a.a(var2, var3 + 85);
             oka.a(var7.toUpperCase(), 65793, eda.field_f, -1, (koa.b(0) >> -2098880447) - -92, aaa.a(false) >> 732717537, -1);
-            if (TombRacer.field_G) {
-              L1: {
-                if (this.field_m.c(16) == 1) {
-                  var4 = this.field_m.a(-13939);
-                  oka.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
-                  cb.field_i[var4].a((aaa.a(false) >> -1347710559) - cb.field_i[var4].a() / 2, (koa.b(0) >> 1271516225) + -(cb.field_i[var4].c() / 2) - 20);
-                  kq.field_a.a(var2, var3 + 60);
-                  oka.a(vj.field_d[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> -1549693183, -1);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              return;
-            } else {
-              return;
-            }
-          } else {
-            L2: {
-              if (this.field_m.c(16) == 1) {
-                var4 = this.field_m.a(-13939);
-                oka.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
-                cb.field_i[var4].a((aaa.a(false) >> -1347710559) - cb.field_i[var4].a() / 2, (koa.b(0) >> 1271516225) + -(cb.field_i[var4].c() / 2) - 20);
-                kq.field_a.a(var2, var3 + 60);
-                oka.a(vj.field_d[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> -1549693183, -1);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
             return;
           }
         }

@@ -20,6 +20,6 @@ final class hp {
         if (param1 != 27476) {
             return;
         }
-        Object discarded$0 = netscape.javascript.JSObject.getWindow(param2).eval(param0);
+        netscape.javascript.JSObject.getWindow(param2).eval(param0);
     }
 }

@@ -14,7 +14,7 @@ final class fr extends ma {
     static int field_t;
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         if (-1 != (param1 ^ -1)) {
           if (0 < param1) {
             L0: {
@@ -162,7 +162,6 @@ final class fr extends ma {
     final static void a(int param0, kg param1, int param2) {
         oq var6 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var6 = ej.field_j;
             oq var3 = var6;
@@ -177,7 +176,7 @@ final class fr extends ma {
                 var6.a(0, false);
             }
             int var5 = 48 / ((param0 - 52) / 40);
-            discarded$0 = var6.d(-1, var4);
+            var6.d(-1, var4);
             var6.field_v = var6.field_v - 4;
             param1.field_o = var6.b(true);
             var6.b(-var4 + var6.field_v, true);
@@ -187,9 +186,9 @@ final class fr extends ma {
     }
 
     final static void a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var2 = (-640 + field_s) / 2;
         if (param0 > -21) {
           field_s = -62;
@@ -208,12 +207,11 @@ final class fr extends ma {
     }
 
     public static void c(byte param0) {
-        int discarded$0 = 0;
         field_m = null;
         field_q = null;
         field_o = null;
         if (param0 < 39) {
-            discarded$0 = fr.a(-16, 120);
+            fr.a(-16, 120);
         }
     }
 

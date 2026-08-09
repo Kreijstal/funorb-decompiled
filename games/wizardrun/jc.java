@@ -23,7 +23,7 @@ final class jc extends mi {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        o var6 = null;
+        o var6;
         if (param2 == param1) {
           if (null != this.field_F) {
             if (-1 == (this.field_G ^ -1)) {

@@ -7,9 +7,8 @@ final class aj {
     static jp[][] field_a;
 
     public static void b(int param0) {
-        int discarded$2 = 0;
         if (param0 != -789103103) {
-          discarded$2 = aj.a(57, -37, 115);
+          aj.a(57, -37, 115);
           field_c = (jp[][]) null;
           field_a = (jp[][]) null;
           field_b = null;
@@ -41,7 +40,6 @@ final class aj {
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -51,8 +49,7 @@ final class aj {
         int stackIn_13_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_6_0 = 0;
+        RuntimeException var3 = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -60,8 +57,7 @@ final class aj {
             var4 = mi.field_d;
             L1: while (true) {
               if (kn.field_E.length <= var3_int) {
-                stackOut_12_0 = -1;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -75,8 +71,7 @@ final class aj {
                     var7 = -(var6 >> -789103103) + cc.field_J;
                     var4 = var4 + dj.field_g;
                     if (bg.a(-ek.field_lb + var7, (wg.field_f << 1214339297) + nq.field_i, (ek.field_lb << 256028001) + var6, (byte) 80, param1, param2, var4)) {
-                      stackOut_6_0 = var5;
-                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_7_0 = var5;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     } else {

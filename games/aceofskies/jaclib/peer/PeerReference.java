@@ -26,6 +26,7 @@ abstract class PeerReference extends java.lang.ref.WeakReference {
     }
 
     final void setPeer(long param0) {
+        this.a(-120);
         this.peer = param0;
     }
 

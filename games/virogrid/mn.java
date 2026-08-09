@@ -18,7 +18,7 @@ final class mn {
     }
 
     final static void a(boolean param0) {
-        int var2 = 0;
+        int var2;
         var2 = Virogrid.field_F ? 1 : 0;
         if (-1 == (vg.field_I.field_C.field_D & 1 << vg.field_I.field_e ^ -1)) {
           if (vg.field_I.field_C.field_D == 0) {

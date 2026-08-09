@@ -8,7 +8,7 @@ final class sh {
     static mh field_d;
 
     final static eh a(byte param0) {
-        int var1 = 0;
+        int var1;
         if (null == dm.field_g) {
           dm.field_g = new eh();
           dm.field_g.a(a.field_u, 13421772);
@@ -29,8 +29,19 @@ final class sh {
     }
 
     final static boolean a(boolean param0, int param1, CharSequence param2, int param3) {
-        RuntimeException var4 = null;
+        int stackIn_24_0 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_35_0 = 0;
+        int stackIn_40_0 = 0;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        String stackIn_44_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -39,31 +50,6 @@ final class sh {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_40_0 = 0;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_39_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_34_0 = 0;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -80,8 +66,7 @@ final class sh {
                   var9 = 0;
                   L2: while (true) {
                     if (var8 <= var9) {
-                      stackOut_39_0 = var6;
-                      stackIn_40_0 = stackOut_39_0;
+                      stackIn_40_0 = var6;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
@@ -144,14 +129,12 @@ final class sh {
                               }
                             }
                           }
-                          stackOut_23_0 = 0;
-                          stackIn_24_0 = stackOut_23_0;
+                          stackIn_24_0 = 0;
                           decompiledRegionSelector0 = 0;
                           break L0;
                         }
                         if (param3 <= var10) {
-                          stackOut_28_0 = 0;
-                          stackIn_29_0 = stackOut_28_0;
+                          stackIn_29_0 = 0;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -169,8 +152,7 @@ final class sh {
                             var6 = 1;
                             break L3;
                           } else {
-                            stackOut_34_0 = 0;
-                            stackIn_35_0 = stackOut_34_0;
+                            stackIn_35_0 = 0;
                             decompiledRegionSelector0 = 2;
                             break L0;
                           }
@@ -191,27 +173,19 @@ final class sh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var4 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) (var4);
-            stackOut_41_1 = new StringBuilder().append("sh.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_43_0 = stackOut_41_0;
-            stackIn_43_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackIn_43_0 = (RuntimeException) (var4);
+
+            stackIn_43_1 = new StringBuilder().append("sh.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "null";
               break L10;
             } else {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "{...}";
-              stackIn_44_0 = stackOut_42_0;
-              stackIn_44_1 = stackOut_42_1;
-              stackIn_44_2 = stackOut_42_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "{...}";
               break L10;
             }
           }
@@ -234,14 +208,14 @@ final class sh {
 
     final static void b(int param0) {
         try {
-            Exception var1 = null;
-            java.lang.reflect.Method var1_ref = null;
-            Throwable var2 = null;
-            Runtime var2_ref = null;
-            Long var3 = null;
-            Object[] var4 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            java.lang.reflect.Method var1 = null;
+            Exception var1_ref = null;
+            Runtime var2 = null;
+            Throwable var2_ref = null;
+            Long var3 = null;
+            Object[] var4 = null;
             try {
               L0: {
                 L1: {
@@ -253,15 +227,15 @@ final class sh {
                   }
                 }
                 L2: {
-                  var1_ref = Runtime.class.getMethod("maxMemory", new Class[]{});
-                  if (var1_ref == null) {
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+                  if (var1 == null) {
                     break L2;
                   } else {
                     try {
                       L3: {
-                        var2_ref = Runtime.getRuntime();
+                        var2 = Runtime.getRuntime();
                         var4 = (Object[]) null;
-                        var3 = (Long) (var1_ref.invoke((Object) (var2_ref), (Object[]) null));
+                        var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
                         qh.field_a = 1 + (int)(var3.longValue() / 1048576L);
                         decompiledRegionSelector0 = 0;
                         break L3;
@@ -269,7 +243,7 @@ final class sh {
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L4: {
-                        var2 = decompiledCaughtException;
+                        var2_ref = decompiledCaughtException;
                         decompiledRegionSelector0 = 1;
                         break L4;
                       }
@@ -286,7 +260,7 @@ final class sh {
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L5: {
-                var1 = (Exception) (Object) decompiledCaughtException;
+                var1_ref = (Exception) (Object) decompiledCaughtException;
                 break L5;
               }
             }

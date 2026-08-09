@@ -27,7 +27,6 @@ final class um {
     }
 
     final void a(int param0, int param1, byte param2) {
-        boolean discarded$1 = false;
         this.field_d = this.field_d + this.field_j;
         this.field_e = this.field_e + this.field_k;
         if (param2 < -51) {
@@ -53,7 +52,7 @@ final class um {
             }
           }
         } else {
-          discarded$1 = um.b(-91);
+          um.b(-91);
           if (0.0f == this.field_j) {
             if (0.0f != this.field_k) {
               if (!fb.field_e.field_u.a(59, (int)(this.field_e + (float)param0), (int)((float)param1 + this.field_d))) {

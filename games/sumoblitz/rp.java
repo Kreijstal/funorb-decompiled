@@ -63,51 +63,39 @@ final class rp {
     }
 
     rp(qa param0) {
-        af discarded$23 = null;
-        af discarded$24 = null;
-        af discarded$25 = null;
-        af discarded$26 = null;
-        af discarded$27 = null;
-        af discarded$28 = null;
-        af discarded$29 = null;
-        af discarded$30 = null;
-        af discarded$31 = null;
-        af discarded$32 = null;
+        af discarded$12 = null;
+        af discarded$13 = null;
+        af discarded$14 = null;
+        af discarded$15 = null;
+        af discarded$16 = null;
+        af discarded$17 = null;
+        af discarded$18 = null;
+        af discarded$19 = null;
+        af discarded$20 = null;
+        af discarded$21 = null;
         int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        var3 = Sumoblitz.field_L ? 1 : 0;
-        kn discarded$22 = new kn();
+        RuntimeException var2 = null;
+        kn discarded$11 = new kn();
         try {
           L0: {
             this.field_a = param0;
             this.field_c = new bg(param0, (rp) (this));
-            discarded$23 = new af(this.field_a);
-            discarded$24 = new af(this.field_a);
-            discarded$25 = new af(this.field_a);
-            discarded$26 = new af(this.field_a);
-            discarded$27 = new af(this.field_a);
-            discarded$28 = new af(this.field_a);
-            discarded$29 = new af(this.field_a);
-            discarded$30 = new af(this.field_a);
-            discarded$31 = new af(this.field_a);
-            discarded$32 = new af(this.field_a);
+            discarded$12 = new af(this.field_a);
+            discarded$13 = new af(this.field_a);
+            discarded$14 = new af(this.field_a);
+            discarded$15 = new af(this.field_a);
+            discarded$16 = new af(this.field_a);
+            discarded$17 = new af(this.field_a);
+            discarded$18 = new af(this.field_a);
+            discarded$19 = new af(this.field_a);
+            discarded$20 = new af(this.field_a);
+            discarded$21 = new af(this.field_a);
             this.field_f = new int[af.field_c];
             var2_int = 0;
             L1: while (true) {
@@ -116,11 +104,7 @@ final class rp {
               } else {
                 this.field_f[var2_int] = -1;
                 var2_int++;
-                if (var3 == 0) {
-                  continue L1;
-                } else {
-                  return;
-                }
+                continue L1;
               }
             }
           }
@@ -128,31 +112,23 @@ final class rp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2);
-            stackOut_8_1 = new StringBuilder().append("rp.<init>(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("rp.<init>(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
     }
 

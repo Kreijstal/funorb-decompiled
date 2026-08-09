@@ -35,8 +35,8 @@ abstract class dj {
     }
 
     final static int a(boolean param0, int param1) {
-        int var2 = 0;
-        kl var3 = null;
+        int var2;
+        kl var3;
         if (!param0) {
           var2 = 0;
           if (-1 >= (param1 ^ -1)) {

@@ -16,20 +16,14 @@ final class il extends pi {
     final static boolean e(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -31391) {
           L0: {
             field_t = (String[][]) null;
             if (-16 == (pl.field_h ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -37,12 +31,10 @@ final class il extends pi {
         } else {
           L1: {
             if (-16 == (pl.field_h ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -57,7 +49,7 @@ final class il extends pi {
     }
 
     final static void a(int param0, byte param1) {
-        int discarded$4 = s.a(-27911);
+        s.a(-27911);
         if (param1 != -109) {
             field_t = (String[][]) null;
         }

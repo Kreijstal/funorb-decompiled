@@ -8,9 +8,8 @@ final class cj {
     static rd field_b;
 
     final static void b(int param0) {
-        pb[] discarded$0 = null;
         if (param0 > -1) {
-            discarded$0 = cj.a(-25, -30, -99, -115);
+            cj.a(-25, -30, -99, -115);
         }
     }
 
@@ -31,15 +30,14 @@ final class cj {
     }
 
     final static String a(long param0, byte param1) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        int var3 = 0;
-        long var4 = 0L;
-        StringBuilder var6 = null;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        StringBuilder discarded$1 = null;
+        int var3;
+        long var4;
+        StringBuilder var6;
+        long var7;
+        int var9;
+        int var10;
+        int var11;
         var11 = stellarshard.field_B;
         if (0L < param0) {
           if (-6582952005840035282L < (param0 ^ -1L)) {
@@ -54,7 +52,7 @@ final class cj {
                     var6 = new StringBuilder(var3);
                     L1: while (true) {
                       if (param0 == 0L) {
-                        discarded$2 = var6.reverse();
+                        var6.reverse();
                         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                         return var6.toString();
                       } else {
@@ -71,7 +69,7 @@ final class cj {
                             break L2;
                           }
                         }
-                        discarded$3 = var6.append((char) var9);
+                        discarded$1 = var6.append((char) var9);
                         continue L1;
                       }
                     }

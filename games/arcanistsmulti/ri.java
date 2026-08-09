@@ -32,14 +32,14 @@ final class ri {
     }
 
     final static int[] a(int param0, byte param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         var3 = of.a(115, param2);
         var4 = j.a(param2, -107);
         var5 = of.a(-95, param0);
@@ -64,22 +64,16 @@ final class ri {
     final static boolean a(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         oj.field_h = true;
         tn.field_Hb = qj.b(-26572) - -15000L;
         if (param0 > -87) {
           L0: {
             ri.a(50, -118, -15);
             if ((fj.field_j ^ -1) != -12) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -87,12 +81,10 @@ final class ri {
         } else {
           L1: {
             if ((fj.field_j ^ -1) != -12) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

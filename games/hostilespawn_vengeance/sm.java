@@ -17,7 +17,7 @@ abstract class sm {
     abstract void a(int param0, java.awt.Component param1, int param2, int param3);
 
     final void b(byte param0) {
-        si.a(((sm) this).field_f, ((sm) this).field_b, ((sm) this).field_e);
+        si.a(this.field_f, this.field_b, this.field_e);
         int var2 = -15 % ((param0 - 49) / 57);
     }
 
@@ -25,84 +25,89 @@ abstract class sm {
         field_a = null;
         field_h = null;
         field_i = null;
+        if (param0 != -102) {
+            return;
+        }
         field_d = null;
     }
 
     final static void a(int param0, int param1, int param2) {
-        RuntimeException var3 = null;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_11_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_7_0 = 0;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
             L1: {
-              if (qi.field_J < param2) {
-                qi.field_J = param2;
+              if (param0 == -11003) {
                 break L1;
               } else {
+                sm.a((byte) 109);
                 break L1;
               }
             }
             L2: {
-              var3_int = 366;
-              var4 = 614;
-              si.c(var4 + 4, 70 + var3_int, 12, 12, 0);
-              if (param1 > 0) {
-                L3: {
-                  if (param1 * 4 >= param2) {
-                    if (param2 <= param1 * 2) {
-                      stackOut_10_0 = 128;
-                      stackIn_11_0 = stackOut_10_0;
-                      break L3;
-                    } else {
-                      stackOut_9_0 = 64;
-                      stackIn_11_0 = stackOut_9_0;
-                      break L3;
-                    }
-                  } else {
-                    stackOut_7_0 = 32;
-                    stackIn_11_0 = stackOut_7_0;
-                    break L3;
-                  }
-                }
-                L4: {
-                  var5 = stackIn_11_0;
-                  var6 = var5 + -1 & sg.field_i;
-                  if (var5 / 2 <= var6) {
-                    var6 = var5 - var6;
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                si.a(var4 - -4, 70 + var3_int, 12, 12, 16776960, var6 * 256 / var5);
+              if (qi.field_J < param2) {
+                qi.field_J = param2;
                 break L2;
               } else {
                 break L2;
+              }
+            }
+            L3: {
+              var3_int = 366;
+              var4 = 614;
+              si.c(var4 + 4, 70 + var3_int, 12, 12, 0);
+              if (-1 > (param1 ^ -1)) {
+                L4: {
+                  if (param1 * 4 >= param2) {
+                    if (param2 <= param1 * 2) {
+                      stackIn_13_0 = 128;
+                      break L4;
+                    } else {
+                      stackIn_13_0 = 64;
+                      break L4;
+                    }
+                  } else {
+                    stackIn_13_0 = 32;
+                    break L4;
+                  }
+                }
+                L5: {
+                  var5 = stackIn_13_0;
+                  var6 = var5 + -1 & sg.field_i;
+                  if (var5 / 2 <= var6) {
+                    var6 = var5 - var6;
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                si.a(var4 - -4, 70 + var3_int, 12, 12, 16776960, var6 * 256 / var5);
+                break L3;
+              } else {
+                break L3;
               }
             }
             HostileSpawn.field_J[0].e(var4, var3_int);
             var5 = var3_int + 64;
             var6 = param2;
             var7 = var3_int;
-            L5: while (true) {
+            L6: while (true) {
               if (var7 <= -var6 + var5) {
-                L6: {
+                L7: {
                   var7 = var7 - HostileSpawn.field_J[2].field_A;
                   if (param1 <= param2) {
-                    break L6;
+                    break L7;
                   } else {
                     param1 = param2;
-                    break L6;
+                    break L7;
                   }
                 }
                 HostileSpawn.field_J[2].e(var4, var7);
@@ -111,22 +116,18 @@ abstract class sm {
               } else {
                 var7 = var7 - HostileSpawn.field_J[1].field_A;
                 HostileSpawn.field_J[1].e(var4, var7);
-                continue L5;
+                continue L6;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var3, "sm.D(" + -11003 + ',' + param1 + ',' + param2 + ')');
+          throw wg.a((Throwable) ((Object) var3), "sm.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Find the console that activates the lift.";
     }
 }

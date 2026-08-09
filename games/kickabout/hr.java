@@ -27,6 +27,22 @@ final class hr extends gn {
     }
 
     final static void a(byte param0) {
+        int stackIn_20_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_26_0 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_33_0 = 0;
+        int stackIn_34_0 = 0;
+        int stackIn_34_1 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_37_0 = 0;
+        int stackIn_37_1 = 0;
+        int stackIn_62_0 = 0;
+        int stackIn_63_0 = 0;
+        int stackIn_63_1 = 0;
+        int stackIn_66_0 = 0;
+        int stackIn_85_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2_int = 0;
         oh[] var2 = null;
@@ -44,52 +60,6 @@ final class hr extends gn {
         int var13 = 0;
         int var14 = 0;
         ut var15 = null;
-        int stackIn_20_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_33_0 = 0;
-        int stackIn_34_0 = 0;
-        int stackIn_34_1 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_37_0 = 0;
-        int stackIn_37_1 = 0;
-        int stackIn_61_0 = 0;
-        int stackIn_62_0 = 0;
-        int stackIn_63_0 = 0;
-        int stackIn_63_1 = 0;
-        int stackIn_66_0 = 0;
-        int stackIn_85_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_33_1 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_32_1 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_35_1 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_62_1 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_61_1 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_84_0 = 0;
-        int stackOut_83_0 = 0;
         var14 = Kickabout.field_G;
         try {
           L0: {
@@ -161,48 +131,40 @@ final class hr extends gn {
                 }
                 L7: {
                   if (qr.a(0, (byte) -1) >= 0) {
-                    stackOut_19_0 = 0;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_20_0 = 0;
                     break L7;
                   } else {
-                    stackOut_18_0 = 1;
-                    stackIn_20_0 = stackOut_18_0;
+                    stackIn_20_0 = 1;
                     break L7;
                   }
                 }
                 L8: {
                   var2_int = stackIn_20_0;
                   if (896 >= qr.a(640, (byte) -1)) {
-                    stackOut_22_0 = 0;
-                    stackIn_23_0 = stackOut_22_0;
+                    stackIn_23_0 = 0;
                     break L8;
                   } else {
-                    stackOut_21_0 = 1;
-                    stackIn_23_0 = stackOut_21_0;
+                    stackIn_23_0 = 1;
                     break L8;
                   }
                 }
                 L9: {
                   var3 = stackIn_23_0;
                   if ((ig.a(0, param0 + 4668) ^ -1) <= -1) {
-                    stackOut_25_0 = 0;
-                    stackIn_26_0 = stackOut_25_0;
+                    stackIn_26_0 = 0;
                     break L9;
                   } else {
-                    stackOut_24_0 = 1;
-                    stackIn_26_0 = stackOut_24_0;
+                    stackIn_26_0 = 1;
                     break L9;
                   }
                 }
                 L10: {
                   var4_int = stackIn_26_0;
                   if (-1345 <= (ig.a(480, 4620) ^ -1)) {
-                    stackOut_28_0 = 0;
-                    stackIn_29_0 = stackOut_28_0;
+                    stackIn_29_0 = 0;
                     break L10;
                   } else {
-                    stackOut_27_0 = 1;
-                    stackIn_29_0 = stackOut_27_0;
+                    stackIn_29_0 = 1;
                     break L10;
                   }
                 }
@@ -211,39 +173,29 @@ final class hr extends gn {
                   if (var2_int != 0) {
                     L12: {
                       var6 = b.c(param0 + -26, -15 + -var15.field_o);
-                      stackOut_31_0 = -15;
-                      stackIn_33_0 = stackOut_31_0;
-                      stackIn_32_0 = stackOut_31_0;
+                      stackIn_33_0 = -15;
+
                       if (var4_int != 0) {
-                        stackOut_33_0 = stackIn_33_0;
-                        stackOut_33_1 = var15.field_v;
-                        stackIn_34_0 = stackOut_33_0;
-                        stackIn_34_1 = stackOut_33_1;
+                        stackIn_34_0 = stackIn_33_0;
+                        stackIn_34_1 = var15.field_v;
                         break L12;
                       } else {
-                        stackOut_32_0 = stackIn_32_0;
-                        stackOut_32_1 = 0;
-                        stackIn_34_0 = stackOut_32_0;
-                        stackIn_34_1 = stackOut_32_1;
+                        stackIn_34_0 = stackIn_33_0;
+                        stackIn_34_1 = 0;
                         break L12;
                       }
                     }
                     L13: {
                       var7 = stackIn_34_0 - stackIn_34_1;
-                      stackOut_34_0 = 1344;
-                      stackIn_36_0 = stackOut_34_0;
-                      stackIn_35_0 = stackOut_34_0;
+                      stackIn_36_0 = 1344;
+
                       if (var5 == 0) {
-                        stackOut_36_0 = stackIn_36_0;
-                        stackOut_36_1 = 0;
-                        stackIn_37_0 = stackOut_36_0;
-                        stackIn_37_1 = stackOut_36_1;
+                        stackIn_37_0 = stackIn_36_0;
+                        stackIn_37_1 = 0;
                         break L13;
                       } else {
-                        stackOut_35_0 = stackIn_35_0;
-                        stackOut_35_1 = var15.field_v;
-                        stackIn_37_0 = stackOut_35_0;
-                        stackIn_37_1 = stackOut_35_1;
+                        stackIn_37_0 = stackIn_36_0;
+                        stackIn_37_1 = var15.field_v;
                         break L13;
                       }
                     }
@@ -325,32 +277,25 @@ final class hr extends gn {
                         } else {
                           L23: {
                             var8 = b.c(-63, var6);
-                            stackOut_60_0 = -15;
-                            stackIn_62_0 = stackOut_60_0;
-                            stackIn_61_0 = stackOut_60_0;
+                            stackIn_62_0 = -15;
+
                             if (var4_int != 0) {
-                              stackOut_62_0 = stackIn_62_0;
-                              stackOut_62_1 = var15.field_v;
-                              stackIn_63_0 = stackOut_62_0;
-                              stackIn_63_1 = stackOut_62_1;
+                              stackIn_63_0 = stackIn_62_0;
+                              stackIn_63_1 = var15.field_v;
                               break L23;
                             } else {
-                              stackOut_61_0 = stackIn_61_0;
-                              stackOut_61_1 = 0;
-                              stackIn_63_0 = stackOut_61_0;
-                              stackIn_63_1 = stackOut_61_1;
+                              stackIn_63_0 = stackIn_62_0;
+                              stackIn_63_1 = 0;
                               break L23;
                             }
                           }
                           L24: {
                             var9 = stackIn_63_0 + -stackIn_63_1;
                             if (var5 != 0) {
-                              stackOut_65_0 = var15.field_v;
-                              stackIn_66_0 = stackOut_65_0;
+                              stackIn_66_0 = var15.field_v;
                               break L24;
                             } else {
-                              stackOut_64_0 = 0;
-                              stackIn_66_0 = stackOut_64_0;
+                              stackIn_66_0 = 0;
                               break L24;
                             }
                           }
@@ -421,12 +366,10 @@ final class hr extends gn {
                     L31: {
                       var2_int = fp.field_f * 6 >> 2141360360;
                       if (3 >= var2_int) {
-                        stackOut_84_0 = var2_int;
-                        stackIn_85_0 = stackOut_84_0;
+                        stackIn_85_0 = var2_int;
                         break L31;
                       } else {
-                        stackOut_83_0 = 6 + -var2_int;
-                        stackIn_85_0 = stackOut_83_0;
+                        stackIn_85_0 = 6 + -var2_int;
                         break L31;
                       }
                     }

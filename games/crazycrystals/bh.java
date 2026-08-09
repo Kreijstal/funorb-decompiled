@@ -10,15 +10,14 @@ final class bh {
     static String field_a;
 
     final int a(int param0, int param1) {
-        int discarded$2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         L0: {
           var4 = CrazyCrystals.field_B;
           if (param0 <= -32) {
             break L0;
           } else {
-            discarded$2 = this.b(-83);
+            this.b(-83);
             break L0;
           }
         }
@@ -64,15 +63,12 @@ final class bh {
     }
 
     final int b(int param0) {
-        int discarded$2 = 0;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == -2288) {
             break L0;
           } else {
-            discarded$2 = this.a(-44, -4);
+            this.a(-44, -4);
             break L0;
           }
         }
@@ -82,16 +78,14 @@ final class bh {
               break L2;
             } else {
               if (this.field_e.length != 0) {
-                stackOut_6_0 = this.field_e[this.field_e.length + -1];
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = this.field_e[this.field_e.length + -1];
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0;

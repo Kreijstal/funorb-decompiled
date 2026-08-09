@@ -22,8 +22,6 @@ final class tfa extends pp {
         int var5 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -31,16 +29,6 @@ final class tfa extends pp {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -49,14 +37,12 @@ final class tfa extends pp {
             L1: while (true) {
               if (var3 >= param1.length()) {
                 var4 = -97 % ((param0 - -55) / 36);
-                stackOut_8_0 = 1;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                if (var2_int != param1.charAt(var3)) {
-                  stackOut_5_0 = 0;
-                  stackIn_6_0 = stackOut_5_0;
+                if ((var2_int ^ -1) != (param1.charAt(var3) ^ -1)) {
+                  stackIn_6_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -70,27 +56,19 @@ final class tfa extends pp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var2);
-            stackOut_10_1 = new StringBuilder().append("tfa.D(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var2);
+
+            stackIn_12_1 = new StringBuilder().append("tfa.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L2;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L2;
             }
           }
@@ -104,69 +82,37 @@ final class tfa extends pp {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        String[] var10 = null;
-        String[] var11 = null;
-        String var12 = null;
-        String var13 = null;
         int stackIn_53_0 = 0;
         int stackIn_56_0 = 0;
-        String[] stackIn_62_0 = null;
-        int stackIn_62_1 = 0;
         String[] stackIn_63_0 = null;
         int stackIn_63_1 = 0;
         String[] stackIn_64_0 = null;
         int stackIn_64_1 = 0;
         String stackIn_64_2 = null;
-        String[] stackIn_68_0 = null;
-        int stackIn_68_1 = 0;
         String[] stackIn_69_0 = null;
         int stackIn_69_1 = 0;
         String[] stackIn_70_0 = null;
         int stackIn_70_1 = 0;
         String stackIn_70_2 = null;
         int stackIn_91_0 = 0;
-        int stackIn_109_0 = 0;
         int stackIn_110_0 = 0;
         int stackIn_111_0 = 0;
         int stackIn_111_1 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_52_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_54_0 = 0;
-        String[] stackOut_67_0 = null;
-        int stackOut_67_1 = 0;
-        String[] stackOut_69_0 = null;
-        int stackOut_69_1 = 0;
-        String stackOut_69_2 = null;
-        String[] stackOut_68_0 = null;
-        int stackOut_68_1 = 0;
-        String stackOut_68_2 = null;
-        String[] stackOut_61_0 = null;
-        int stackOut_61_1 = 0;
-        String[] stackOut_63_0 = null;
-        int stackOut_63_1 = 0;
-        String stackOut_63_2 = null;
-        String[] stackOut_62_0 = null;
-        int stackOut_62_1 = 0;
-        String stackOut_62_2 = null;
-        int stackOut_108_0 = 0;
-        int stackOut_110_0 = 0;
-        int stackOut_110_1 = 0;
-        int stackOut_109_0 = 0;
-        int stackOut_109_1 = 0;
-        int stackOut_90_0 = 0;
-        int stackOut_89_0 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        String[] var4_ref_String__ = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        String[] var10 = null;
+        String var11 = null;
+        String var12 = null;
         var9 = BachelorFridge.field_y;
         try {
           L0: {
@@ -286,24 +232,20 @@ final class tfa extends pp {
                                 ta.field_b = new String[-1 + -var4 + var3_int];
                                 bl.a(ec.field_a, 1 + var4, ta.field_b, 0, -1 + var3_int - var4);
                                 if (vka.field_p.length >= mq.field_a.length) {
-                                  stackOut_52_0 = vka.field_p.length;
-                                  stackIn_53_0 = stackOut_52_0;
+                                  stackIn_53_0 = vka.field_p.length;
                                   break L10;
                                 } else {
-                                  stackOut_51_0 = mq.field_a.length;
-                                  stackIn_53_0 = stackOut_51_0;
+                                  stackIn_53_0 = mq.field_a.length;
                                   break L10;
                                 }
                               }
                               L11: {
                                 var5 = stackIn_53_0;
                                 if (wba.field_a.length >= ta.field_b.length) {
-                                  stackOut_55_0 = wba.field_a.length;
-                                  stackIn_56_0 = stackOut_55_0;
+                                  stackIn_56_0 = wba.field_a.length;
                                   break L11;
                                 } else {
-                                  stackOut_54_0 = ta.field_b.length;
-                                  stackIn_56_0 = stackOut_54_0;
+                                  stackIn_56_0 = ta.field_b.length;
                                   break L11;
                                 }
                               }
@@ -337,27 +279,19 @@ final class tfa extends pp {
                                           break L1;
                                         } else {
                                           L15: {
-                                            stackOut_67_0 = mj.field_h;
-                                            stackOut_67_1 = var8 + 7 + var5;
-                                            stackIn_69_0 = stackOut_67_0;
-                                            stackIn_69_1 = stackOut_67_1;
-                                            stackIn_68_0 = stackOut_67_0;
-                                            stackIn_68_1 = stackOut_67_1;
+                                            stackIn_69_0 = mj.field_h;
+
+                                            stackIn_69_1 = var8 + 7 + var5;
+
                                             if (ta.field_b.length > var8) {
-                                              stackOut_69_0 = (String[]) ((Object) stackIn_69_0);
-                                              stackOut_69_1 = stackIn_69_1;
-                                              stackOut_69_2 = ta.field_b[var8];
-                                              stackIn_70_0 = stackOut_69_0;
-                                              stackIn_70_1 = stackOut_69_1;
-                                              stackIn_70_2 = stackOut_69_2;
+                                              stackIn_70_0 = (String[]) ((Object) stackIn_69_0);
+                                              stackIn_70_1 = stackIn_69_1;
+                                              stackIn_70_2 = ta.field_b[var8];
                                               break L15;
                                             } else {
-                                              stackOut_68_0 = (String[]) ((Object) stackIn_68_0);
-                                              stackOut_68_1 = stackIn_68_1;
-                                              stackOut_68_2 = "";
-                                              stackIn_70_0 = stackOut_68_0;
-                                              stackIn_70_1 = stackOut_68_1;
-                                              stackIn_70_2 = stackOut_68_2;
+                                              stackIn_70_0 = (String[]) ((Object) stackIn_69_0);
+                                              stackIn_70_1 = stackIn_69_1;
+                                              stackIn_70_2 = "";
                                               break L15;
                                             }
                                           }
@@ -368,27 +302,19 @@ final class tfa extends pp {
                                       }
                                     } else {
                                       L16: {
-                                        stackOut_61_0 = mj.field_h;
-                                        stackOut_61_1 = var8 + 6;
-                                        stackIn_63_0 = stackOut_61_0;
-                                        stackIn_63_1 = stackOut_61_1;
-                                        stackIn_62_0 = stackOut_61_0;
-                                        stackIn_62_1 = stackOut_61_1;
+                                        stackIn_63_0 = mj.field_h;
+
+                                        stackIn_63_1 = var8 + 6;
+
                                         if (-var5 + var8 + mq.field_a.length >= 0) {
-                                          stackOut_63_0 = (String[]) ((Object) stackIn_63_0);
-                                          stackOut_63_1 = stackIn_63_1;
-                                          stackOut_63_2 = mq.field_a[mq.field_a.length + (var8 + -var5)];
-                                          stackIn_64_0 = stackOut_63_0;
-                                          stackIn_64_1 = stackOut_63_1;
-                                          stackIn_64_2 = stackOut_63_2;
+                                          stackIn_64_0 = (String[]) ((Object) stackIn_63_0);
+                                          stackIn_64_1 = stackIn_63_1;
+                                          stackIn_64_2 = mq.field_a[mq.field_a.length + (var8 + -var5)];
                                           break L16;
                                         } else {
-                                          stackOut_62_0 = (String[]) ((Object) stackIn_62_0);
-                                          stackOut_62_1 = stackIn_62_1;
-                                          stackOut_62_2 = "";
-                                          stackIn_64_0 = stackOut_62_0;
-                                          stackIn_64_1 = stackOut_62_1;
-                                          stackIn_64_2 = stackOut_62_2;
+                                          stackIn_64_0 = (String[]) ((Object) stackIn_63_0);
+                                          stackIn_64_1 = stackIn_63_1;
+                                          stackIn_64_2 = "";
                                           break L16;
                                         }
                                       }
@@ -527,17 +453,18 @@ final class tfa extends pp {
                   L25: {
                     if (-3 == (ub.field_j ^ -1)) {
                       var10 = vka.field_p;
+                      var4_ref_String__ = var10;
                       var5 = 0;
                       L26: while (true) {
                         if (var5 >= var10.length) {
-                          var11 = wba.field_a;
+                          var4_ref_String__ = wba.field_a;
                           var5 = 0;
                           L27: while (true) {
-                            if (var11.length <= var5) {
+                            if (var4_ref_String__.length <= var5) {
                               break L25;
                             } else {
-                              var13 = var11[var5];
-                              var7 = gg.a(false, -120, var13);
+                              var12 = var4_ref_String__[var5];
+                              var7 = gg.a(false, -120, var12);
                               if (var7 > var3_int) {
                                 var3_int = var7;
                                 var5++;
@@ -549,8 +476,8 @@ final class tfa extends pp {
                             }
                           }
                         } else {
-                          var12 = var10[var5];
-                          var7 = gg.a(false, -46, var12);
+                          var11 = var10[var5];
+                          var7 = gg.a(false, -46, var11);
                           if (var3_int < var7) {
                             var3_int = var7;
                             var5++;
@@ -613,20 +540,15 @@ final class tfa extends pp {
                       }
                     } else {
                       L32: {
-                        stackOut_108_0 = qk.field_l;
-                        stackIn_110_0 = stackOut_108_0;
-                        stackIn_109_0 = stackOut_108_0;
+                        stackIn_110_0 = qk.field_l;
+
                         if (-1 < (fr.field_l[var4] ^ -1)) {
-                          stackOut_110_0 = stackIn_110_0;
-                          stackOut_110_1 = mm.field_z;
-                          stackIn_111_0 = stackOut_110_0;
-                          stackIn_111_1 = stackOut_110_1;
+                          stackIn_111_0 = stackIn_110_0;
+                          stackIn_111_1 = mm.field_z;
                           break L32;
                         } else {
-                          stackOut_109_0 = stackIn_109_0;
-                          stackOut_109_1 = hc.field_D;
-                          stackIn_111_0 = stackOut_109_0;
-                          stackIn_111_1 = stackOut_109_1;
+                          stackIn_111_0 = stackIn_110_0;
+                          stackIn_111_1 = hc.field_D;
                           break L32;
                         }
                       }
@@ -638,12 +560,10 @@ final class tfa extends pp {
                 } else {
                   L33: {
                     if (-1 < (fr.field_l[var4] ^ -1)) {
-                      stackOut_90_0 = 0;
-                      stackIn_91_0 = stackOut_90_0;
+                      stackIn_91_0 = 0;
                       break L33;
                     } else {
-                      stackOut_89_0 = 1;
-                      stackIn_91_0 = stackOut_89_0;
+                      stackIn_91_0 = 1;
                       break L33;
                     }
                   }
@@ -676,12 +596,11 @@ final class tfa extends pp {
     }
 
     final void a(aga param0, op param1, int param2) {
-        boolean discarded$0 = false;
         try {
             param1.field_l = true;
             if (param2 != 12) {
                 String var5 = (String) null;
-                discarded$0 = tfa.a(-11, (String) null);
+                tfa.a(-11, (String) null);
             }
             param1.field_F = 0;
         } catch (RuntimeException runtimeException) {

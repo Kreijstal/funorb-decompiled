@@ -16,8 +16,8 @@ final class bk {
     static String field_b;
 
     final int a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = TetraLink.field_J;
         if (this.field_j != null) {
           if (0 != this.field_j.length) {
@@ -25,7 +25,7 @@ final class bk {
               var3 = 1;
               L0: while (true) {
                 if (this.field_j.length > var3) {
-                  if (param1 < this.field_j[-1 + var3] - -this.field_j[var3] >> -655791103) {
+                  if ((param1 ^ -1) > (this.field_j[-1 + var3] - -this.field_j[var3] >> -655791103 ^ -1)) {
                     return var3 + -1;
                   } else {
                     var3++;
@@ -40,7 +40,7 @@ final class bk {
               var3 = 1;
               L1: while (true) {
                 if (this.field_j.length > var3) {
-                  if (param1 < this.field_j[-1 + var3] - -this.field_j[var3] >> -655791103) {
+                  if ((param1 ^ -1) > (this.field_j[-1 + var3] - -this.field_j[var3] >> -655791103 ^ -1)) {
                     return var3 + -1;
                   } else {
                     var3++;
@@ -79,8 +79,8 @@ final class bk {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var2 = TetraLink.field_J;
         s.field_f = false;
         if (param0 == 1) {
@@ -124,9 +124,6 @@ final class bk {
     final int a(byte param0) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 <= -12) {
           if (null != this.field_j) {
             if (this.field_j.length == 0) {
@@ -135,8 +132,7 @@ final class bk {
               return this.field_j[-1 + this.field_j.length];
             }
           } else {
-            stackOut_9_0 = 0;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 0;
             return stackIn_11_0;
           }
         } else {
@@ -146,12 +142,10 @@ final class bk {
           } else {
             L0: {
               if (this.field_j.length != 0) {
-                stackOut_4_0 = this.field_j[-1 + this.field_j.length];
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = this.field_j[-1 + this.field_j.length];
                 break L0;
               } else {
-                stackOut_3_0 = 0;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 0;
                 break L0;
               }
             }

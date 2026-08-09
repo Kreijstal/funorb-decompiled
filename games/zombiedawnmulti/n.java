@@ -40,13 +40,6 @@ final class n extends br {
         int stackIn_10_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == 107) {
           if (!ia.field_r) {
             if (wc.j(98)) {
@@ -58,19 +51,16 @@ final class n extends br {
             if (!qd.field_bb) {
               L0: {
                 if (!wc.j(98)) {
-                  stackOut_20_0 = 0;
-                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_0 = 0;
                   break L0;
                 } else {
-                  stackOut_19_0 = 1;
-                  stackIn_21_0 = stackOut_19_0;
+                  stackIn_21_0 = 1;
                   break L0;
                 }
               }
               return stackIn_21_0 != 0;
             } else {
-              stackOut_15_0 = 1;
-              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_0 = 1;
               return stackIn_17_0 != 0;
             }
           }
@@ -82,12 +72,10 @@ final class n extends br {
             } else {
               L1: {
                 if (!wc.j(98)) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = 0;
                   break L1;
                 } else {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_0 = 1;
                   break L1;
                 }
               }
@@ -96,12 +84,10 @@ final class n extends br {
           } else {
             L2: {
               if (!wc.j(98)) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L2;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L2;
               }
             }

@@ -31,8 +31,12 @@ final class oh {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        int stackIn_18_0 = 0;
+        int stackIn_30_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -43,14 +47,6 @@ final class oh {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_30_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
         var15 = Torquing.field_u;
         try {
           L0: {
@@ -80,12 +76,10 @@ final class oh {
                 }
                 L3: {
                   if (var7 >= var6_int) {
-                    stackOut_17_0 = 0;
-                    stackIn_18_0 = stackOut_17_0;
+                    stackIn_18_0 = 0;
                     break L3;
                   } else {
-                    stackOut_16_0 = 1;
-                    stackIn_18_0 = stackOut_16_0;
+                    stackIn_18_0 = 1;
                     break L3;
                   }
                 }
@@ -138,12 +132,10 @@ final class oh {
                 }
                 L8: {
                   if (param2 > param1) {
-                    stackOut_29_0 = 1;
-                    stackIn_30_0 = stackOut_29_0;
+                    stackIn_30_0 = 1;
                     break L8;
                   } else {
-                    stackOut_28_0 = -1;
-                    stackIn_30_0 = stackOut_28_0;
+                    stackIn_30_0 = -1;
                     break L8;
                   }
                 }

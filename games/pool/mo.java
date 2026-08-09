@@ -18,6 +18,6 @@ final class mo {
         if (param2 != 35) {
             return;
         }
-        Object discarded$0 = netscape.javascript.JSObject.getWindow(param1).eval(param0);
+        netscape.javascript.JSObject.getWindow(param1).eval(param0);
     }
 }

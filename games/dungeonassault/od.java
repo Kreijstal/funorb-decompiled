@@ -7,30 +7,30 @@ final class od {
     static String[] field_b;
 
     final static boolean a(byte param0) {
-        int fieldTemp$20 = 0;
-        int fieldTemp$21 = 0;
-        int fieldTemp$22 = 0;
-        int fieldTemp$23 = 0;
-        int fieldTemp$24 = 0;
-        int fieldTemp$25 = 0;
-        int fieldTemp$26 = 0;
-        int fieldTemp$27 = 0;
-        int fieldTemp$28 = 0;
-        int fieldTemp$29 = 0;
-        int fieldTemp$30 = 0;
-        int fieldTemp$31 = 0;
-        int fieldTemp$32 = 0;
-        int fieldTemp$33 = 0;
-        int fieldTemp$34 = 0;
-        int fieldTemp$35 = 0;
-        int fieldTemp$36 = 0;
-        int fieldTemp$37 = 0;
-        int fieldTemp$38 = 0;
-        int fieldTemp$39 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        gn var4 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
+        int fieldTemp$15 = 0;
+        int fieldTemp$16 = 0;
+        int fieldTemp$17 = 0;
+        int fieldTemp$18 = 0;
+        int fieldTemp$19 = 0;
+        int var1;
+        int var2;
+        int var3;
+        gn var4;
         var3 = DungeonAssault.field_K;
         if (null == gk.field_L) {
           if (null == jn.field_l) {
@@ -113,9 +113,9 @@ final class od {
                             }
                           } else {
                             L6: {
-                              fieldTemp$20 = fc.field_d - 1;
+                              fieldTemp$0 = fc.field_d - 1;
                               fc.field_d = fc.field_d - 1;
-                              if (0 > fieldTemp$20) {
+                              if (0 > fieldTemp$0) {
                                 fc.field_d = -1 + uo.field_f.length;
                                 break L6;
                               } else {
@@ -126,9 +126,9 @@ final class od {
                             return true;
                           }
                         } else {
-                          fieldTemp$21 = fc.field_d + 1;
+                          fieldTemp$1 = fc.field_d + 1;
                           fc.field_d = fc.field_d + 1;
-                          if (fieldTemp$21 >= uo.field_f.length) {
+                          if (fieldTemp$1 >= uo.field_f.length) {
                             fc.field_d = 0;
                             og.a(false, 0, uo.field_f[fc.field_d]);
                             return true;
@@ -152,9 +152,9 @@ final class od {
                               }
                             } else {
                               L8: {
-                                fieldTemp$22 = fc.field_d - 1;
+                                fieldTemp$2 = fc.field_d - 1;
                                 fc.field_d = fc.field_d - 1;
-                                if (0 > fieldTemp$22) {
+                                if (0 > fieldTemp$2) {
                                   fc.field_d = -1 + uo.field_f.length;
                                   break L8;
                                 } else {
@@ -166,9 +166,9 @@ final class od {
                             }
                           } else {
                             L9: {
-                              fieldTemp$23 = fc.field_d + 1;
+                              fieldTemp$3 = fc.field_d + 1;
                               fc.field_d = fc.field_d + 1;
-                              if (fieldTemp$23 < uo.field_f.length) {
+                              if (fieldTemp$3 < uo.field_f.length) {
                                 break L9;
                               } else {
                                 fc.field_d = 0;
@@ -197,9 +197,9 @@ final class od {
                       }
                     } else {
                       L10: {
-                        fieldTemp$24 = fc.field_d - 1;
+                        fieldTemp$4 = fc.field_d - 1;
                         fc.field_d = fc.field_d - 1;
-                        if (0 > fieldTemp$24) {
+                        if (0 > fieldTemp$4) {
                           fc.field_d = -1 + uo.field_f.length;
                           break L10;
                         } else {
@@ -210,9 +210,9 @@ final class od {
                       return true;
                     }
                   } else {
-                    fieldTemp$25 = fc.field_d + 1;
+                    fieldTemp$5 = fc.field_d + 1;
                     fc.field_d = fc.field_d + 1;
-                    if (fieldTemp$25 < uo.field_f.length) {
+                    if (fieldTemp$5 < uo.field_f.length) {
                       og.a(false, 0, uo.field_f[fc.field_d]);
                       return true;
                     } else {
@@ -235,9 +235,9 @@ final class od {
                       }
                     } else {
                       L11: {
-                        fieldTemp$26 = fc.field_d - 1;
+                        fieldTemp$6 = fc.field_d - 1;
                         fc.field_d = fc.field_d - 1;
-                        if (0 > fieldTemp$26) {
+                        if (0 > fieldTemp$6) {
                           fc.field_d = -1 + uo.field_f.length;
                           break L11;
                         } else {
@@ -248,9 +248,9 @@ final class od {
                       return true;
                     }
                   } else {
-                    fieldTemp$27 = fc.field_d + 1;
+                    fieldTemp$7 = fc.field_d + 1;
                     fc.field_d = fc.field_d + 1;
-                    if (fieldTemp$27 >= uo.field_f.length) {
+                    if (fieldTemp$7 >= uo.field_f.length) {
                       fc.field_d = 0;
                       og.a(false, 0, uo.field_f[fc.field_d]);
                       return true;
@@ -356,9 +356,9 @@ final class od {
                           }
                         } else {
                           L20: {
-                            fieldTemp$28 = fc.field_d - 1;
+                            fieldTemp$8 = fc.field_d - 1;
                             fc.field_d = fc.field_d - 1;
-                            if (0 > fieldTemp$28) {
+                            if (0 > fieldTemp$8) {
                               fc.field_d = -1 + uo.field_f.length;
                               break L20;
                             } else {
@@ -370,9 +370,9 @@ final class od {
                         }
                       } else {
                         L21: {
-                          fieldTemp$29 = fc.field_d + 1;
+                          fieldTemp$9 = fc.field_d + 1;
                           fc.field_d = fc.field_d + 1;
-                          if (fieldTemp$29 < uo.field_f.length) {
+                          if (fieldTemp$9 < uo.field_f.length) {
                             break L21;
                           } else {
                             fc.field_d = 0;
@@ -400,9 +400,9 @@ final class od {
                     }
                   } else {
                     L22: {
-                      fieldTemp$30 = fc.field_d - 1;
+                      fieldTemp$10 = fc.field_d - 1;
                       fc.field_d = fc.field_d - 1;
-                      if (0 > fieldTemp$30) {
+                      if (0 > fieldTemp$10) {
                         fc.field_d = -1 + uo.field_f.length;
                         break L22;
                       } else {
@@ -413,9 +413,9 @@ final class od {
                     return true;
                   }
                 } else {
-                  fieldTemp$31 = fc.field_d + 1;
+                  fieldTemp$11 = fc.field_d + 1;
                   fc.field_d = fc.field_d + 1;
-                  if (fieldTemp$31 >= uo.field_f.length) {
+                  if (fieldTemp$11 >= uo.field_f.length) {
                     fc.field_d = 0;
                     og.a(false, 0, uo.field_f[fc.field_d]);
                     return true;
@@ -439,9 +439,9 @@ final class od {
                       }
                     } else {
                       L24: {
-                        fieldTemp$32 = fc.field_d - 1;
+                        fieldTemp$12 = fc.field_d - 1;
                         fc.field_d = fc.field_d - 1;
-                        if (0 > fieldTemp$32) {
+                        if (0 > fieldTemp$12) {
                           fc.field_d = -1 + uo.field_f.length;
                           break L24;
                         } else {
@@ -453,9 +453,9 @@ final class od {
                     }
                   } else {
                     L25: {
-                      fieldTemp$33 = fc.field_d + 1;
+                      fieldTemp$13 = fc.field_d + 1;
                       fc.field_d = fc.field_d + 1;
-                      if (fieldTemp$33 < uo.field_f.length) {
+                      if (fieldTemp$13 < uo.field_f.length) {
                         break L25;
                       } else {
                         fc.field_d = 0;
@@ -557,9 +557,9 @@ final class od {
                         }
                       } else {
                         L34: {
-                          fieldTemp$34 = fc.field_d - 1;
+                          fieldTemp$14 = fc.field_d - 1;
                           fc.field_d = fc.field_d - 1;
-                          if (0 > fieldTemp$34) {
+                          if (0 > fieldTemp$14) {
                             fc.field_d = -1 + uo.field_f.length;
                             break L34;
                           } else {
@@ -571,9 +571,9 @@ final class od {
                       }
                     } else {
                       L35: {
-                        fieldTemp$35 = fc.field_d + 1;
+                        fieldTemp$15 = fc.field_d + 1;
                         fc.field_d = fc.field_d + 1;
-                        if (fieldTemp$35 < uo.field_f.length) {
+                        if (fieldTemp$15 < uo.field_f.length) {
                           break L35;
                         } else {
                           fc.field_d = 0;
@@ -601,9 +601,9 @@ final class od {
                   }
                 } else {
                   L36: {
-                    fieldTemp$36 = fc.field_d - 1;
+                    fieldTemp$16 = fc.field_d - 1;
                     fc.field_d = fc.field_d - 1;
-                    if (0 > fieldTemp$36) {
+                    if (0 > fieldTemp$16) {
                       fc.field_d = -1 + uo.field_f.length;
                       break L36;
                     } else {
@@ -614,9 +614,9 @@ final class od {
                   return true;
                 }
               } else {
-                fieldTemp$37 = fc.field_d + 1;
+                fieldTemp$17 = fc.field_d + 1;
                 fc.field_d = fc.field_d + 1;
-                if (fieldTemp$37 >= uo.field_f.length) {
+                if (fieldTemp$17 >= uo.field_f.length) {
                   fc.field_d = 0;
                   og.a(false, 0, uo.field_f[fc.field_d]);
                   return true;
@@ -640,9 +640,9 @@ final class od {
                     }
                   } else {
                     L38: {
-                      fieldTemp$38 = fc.field_d - 1;
+                      fieldTemp$18 = fc.field_d - 1;
                       fc.field_d = fc.field_d - 1;
-                      if (0 > fieldTemp$38) {
+                      if (0 > fieldTemp$18) {
                         fc.field_d = -1 + uo.field_f.length;
                         break L38;
                       } else {
@@ -654,9 +654,9 @@ final class od {
                   }
                 } else {
                   L39: {
-                    fieldTemp$39 = fc.field_d + 1;
+                    fieldTemp$19 = fc.field_d + 1;
                     fc.field_d = fc.field_d + 1;
-                    if (fieldTemp$39 < uo.field_f.length) {
+                    if (fieldTemp$19 < uo.field_f.length) {
                       break L39;
                     } else {
                       fc.field_d = 0;

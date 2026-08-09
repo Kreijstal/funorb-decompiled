@@ -16,11 +16,10 @@ final class bn {
     }
 
     public static void a(byte param0) {
-        int discarded$0 = 0;
         field_c = null;
         field_a = null;
         if (param0 > -108) {
-            discarded$0 = bn.a(-84, (byte) 74, -123);
+            bn.a(-84, (byte) 74, -123);
         }
     }
 
@@ -34,16 +33,10 @@ final class bn {
         char[] var7 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_20_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_2_0 = 0;
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -59,9 +52,8 @@ final class bn {
                     var4 = 0;
                     L2: while (true) {
                       if (var4 >= var3.length) {
-                        stackOut_19_0 = 0;
-                        stackIn_20_0 = stackOut_19_0;
-                        decompiledRegionSelector0 = 4;
+                        stackIn_21_0 = 0;
+                        decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
                         var5 = var3[var4];
@@ -69,35 +61,29 @@ final class bn {
                           var4++;
                           continue L2;
                         } else {
-                          stackOut_16_0 = 1;
-                          stackIn_17_0 = stackOut_16_0;
-                          decompiledRegionSelector0 = 3;
+                          stackIn_18_0 = 1;
+                          decompiledRegionSelector0 = 2;
                           break L0;
                         }
                       }
                     }
                   } else {
                     var5 = var7[var4];
-                    if (param1 != var5) {
+                    if ((param1 ^ -1) != (var5 ^ -1)) {
                       var4++;
                       continue L1;
                     } else {
-                      stackOut_10_0 = 1;
-                      stackIn_11_0 = stackOut_10_0;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
+                      return true;
                     }
                   }
                 }
               } else {
-                stackOut_5_0 = 1;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -114,13 +100,9 @@ final class bn {
             return stackIn_6_0 != 0;
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return stackIn_11_0 != 0;
+              return stackIn_18_0 != 0;
             } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_17_0 != 0;
-              } else {
-                return stackIn_20_0 != 0;
-              }
+              return stackIn_21_0 != 0;
             }
           }
         }

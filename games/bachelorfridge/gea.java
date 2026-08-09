@@ -15,10 +15,10 @@ final class gea extends bw {
 
     final static void a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = BachelorFridge.field_y;
         try {
           L0: {

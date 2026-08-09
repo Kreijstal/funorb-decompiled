@@ -25,11 +25,11 @@ final class em {
     final am a(int param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var3 = 0;
-        am var4 = null;
-        am var5 = null;
-        am var9 = null;
-        am var12 = null;
+        int var3;
+        am var4;
+        am var5;
+        am var9;
+        am var12;
         var3 = Kickabout.field_G;
         if (param0 < this.field_g) {
           if (this.field_i == this.field_b[-1 + this.field_g]) {
@@ -103,9 +103,9 @@ final class em {
     }
 
     final am a(byte param0) {
-        am var2 = null;
-        am var3 = null;
-        int var4 = 0;
+        am var2;
+        am var3;
+        int var4;
         var4 = Kickabout.field_G;
         if (null != this.field_h) {
           if (param0 > 19) {
@@ -150,18 +150,18 @@ final class em {
     }
 
     em(int param0) {
-        am dupTemp$2 = null;
-        int var2 = 0;
-        am var3 = null;
+        am dupTemp$1 = null;
+        int var2;
+        am var3;
         this.field_g = 0;
         this.field_a = param0;
         this.field_b = new am[param0];
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new am();
-            var3 = dupTemp$2;
-            this.field_b[var2] = dupTemp$2;
+            dupTemp$1 = new am();
+            var3 = dupTemp$1;
+            this.field_b[var2] = dupTemp$1;
             var3.field_e = var3;
             var3.field_f = var3;
             var2++;
@@ -173,9 +173,9 @@ final class em {
     }
 
     final am a(int param0, long param1) {
-        am var4 = null;
-        am var5 = null;
-        int var6 = 0;
+        am var4;
+        am var5;
+        int var6;
         var6 = Kickabout.field_G;
         this.field_f = param1;
         var4 = this.field_b[(int)((long)(this.field_a - 1) & param1)];

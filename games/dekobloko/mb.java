@@ -14,15 +14,13 @@ final class mb {
 
     final static boolean a(boolean param0, int param1) {
         try {
-            long dupTemp$2 = 0L;
+            long dupTemp$1 = 0L;
             uf var2_ref_uf = null;
             int var2 = 0;
             IOException var2_ref_IOException = null;
             int stackIn_10_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_9_0 = 0;
-            int stackOut_8_0 = 0;
             L0: {
               if (k.field_c != null) {
                 break L0;
@@ -34,9 +32,9 @@ final class mb {
             if (k.field_c.field_c != 0) {
               L1: {
                 L2: {
-                  dupTemp$2 = ik.a(4);
-                  el.field_J = dupTemp$2;
-                  p.field_a = dupTemp$2;
+                  dupTemp$1 = ik.a(4);
+                  el.field_J = dupTemp$1;
+                  p.field_a = dupTemp$1;
                   if (-2 == (k.field_c.field_c ^ -1)) {
                     break L2;
                   } else {
@@ -56,12 +54,10 @@ final class mb {
                       we.field_b.field_n = 0;
                       ph.field_xb = ba.field_f;
                       if (!param0) {
-                        stackOut_9_0 = -1;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = -1;
                         break L4;
                       } else {
-                        stackOut_8_0 = -2;
-                        stackIn_10_0 = stackOut_8_0;
+                        stackIn_10_0 = -2;
                         break L4;
                       }
                     }
@@ -110,28 +106,18 @@ final class mb {
     }
 
     final static String a(int param0, hl param1) {
-        Object var2 = null;
-        String var3 = null;
-        int var4 = 0;
-        String var5 = null;
         String stackIn_33_0 = null;
-        Object stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
         Object stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         Object stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_32_0 = null;
-        Object stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        Object stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        Object stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
+        Object var2 = null;
+        String var3 = null;
+        Object var3_ref = null;
+        int var4 = 0;
+        String var5 = null;
         var4 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -154,8 +140,8 @@ final class mb {
                 }
                 if (-3 == (param1.field_l ^ -1)) {
                   var2 = "<img=1>" + (String) (var2);
-                  var3 = (String) (var2);
-                  var3 = (String) (var2);
+                  var3_ref = var2;
+                  var3_ref = var2;
                   break L1;
                 } else {
                   break L1;
@@ -251,35 +237,26 @@ final class mb {
                 break L4;
               }
             }
-            stackOut_32_0 = (String) (var3);
-            stackIn_33_0 = stackOut_32_0;
+            stackIn_33_0 = (String) (var3);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var2 = decompiledCaughtException;
-            stackOut_34_0 = var2;
-            stackOut_34_1 = new StringBuilder().append("mb.D(").append(param0).append(',');
-            stackIn_36_0 = stackOut_34_0;
-            stackIn_36_1 = stackOut_34_1;
-            stackIn_35_0 = stackOut_34_0;
-            stackIn_35_1 = stackOut_34_1;
+            stackIn_36_0 = var2;
+
+            stackIn_36_1 = new StringBuilder().append("mb.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_36_0 = stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
+              stackIn_37_0 = stackIn_36_0;
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "null";
               break L11;
             } else {
-              stackOut_35_0 = stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "{...}";
-              stackIn_37_0 = stackOut_35_0;
-              stackIn_37_1 = stackOut_35_1;
-              stackIn_37_2 = stackOut_35_2;
+              stackIn_37_0 = stackIn_36_0;
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "{...}";
               break L11;
             }
           }
@@ -302,13 +279,12 @@ final class mb {
     }
 
     private final void a(int param0, int param1) {
-        int discarded$2 = 0;
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         var4 = new int[this.a((byte) -63, param0)];
         var3 = var4;
         if (param1 >= -4) {
-          discarded$2 = this.b(9, -101);
+          this.b(9, -101);
           an.a(this.field_b, 0, var4, 0, this.field_b.length);
           this.field_b = var4;
           return;
@@ -320,82 +296,179 @@ final class mb {
     }
 
     private final int a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
         boolean stackIn_4_0 = false;
         int stackIn_10_0 = 0;
         boolean stackIn_14_0 = false;
         int stackIn_20_0 = 0;
-        int stackOut_19_0 = 0;
-        boolean stackOut_13_0 = false;
-        int stackOut_9_0 = 0;
-        boolean stackOut_3_0 = false;
-        var4 = client.field_A ? 1 : 0;
-        if (param0 != -63) {
-          this.field_f = -94;
-          var3 = this.field_b.length;
-          L0: while (true) {
-            L1: {
-              if (param1 < var3) {
-                stackOut_19_0 = var3;
-                stackIn_20_0 = stackOut_19_0;
-                break L1;
-              } else {
-                stackOut_13_0 = this.field_a;
-                stackIn_20_0 = stackOut_13_0 ? 1 : 0;
-                stackIn_14_0 = stackOut_13_0;
-                if (var4 != 0) {
-                  break L1;
-                } else {
-                  if (!stackIn_14_0) {
-                    var3 = var3 + this.field_f;
-                    continue L0;
-                  } else {
-                    if (var3 == 0) {
-                      var3 = 1;
-                      continue L0;
+        boolean stackOut_3_0;
+        boolean stackOut_13_0;
+        int statePc = 0;
+        int var3 = 0;
+        int var4 = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = client.field_A ? 1 : 0;
+                    if (param0 != -63) {
+                        statePc = 11;
                     } else {
-                      var3 = var3 * this.field_f;
-                      continue L0;
+                        statePc = 1;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
-            }
-            return stackIn_20_0;
-          }
-        } else {
-          var3 = this.field_b.length;
-          L2: while (true) {
-            L3: {
-              if (param1 < var3) {
-                stackOut_9_0 = var3;
-                stackIn_10_0 = stackOut_9_0;
-                break L3;
-              } else {
-                stackOut_3_0 = this.field_a;
-                stackIn_10_0 = stackOut_3_0 ? 1 : 0;
-                stackIn_4_0 = stackOut_3_0;
-                if (var4 != 0) {
-                  break L3;
-                } else {
-                  if (!stackIn_4_0) {
-                    var3 = var3 + this.field_f;
-                    continue L2;
-                  } else {
-                    if (var3 == 0) {
-                      var3 = 1;
-                      continue L2;
+                case 1: {
+                    var3 = this.field_b.length;
+                    statePc = 2;
+                    continue stateLoop;
+                }
+                case 2: {
+                    if (param1 < var3) {
+                        statePc = 9;
                     } else {
-                      var3 = var3 * this.field_f;
-                      continue L2;
+                        statePc = 3;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
+                case 3: {
+                    stackOut_3_0 = this.field_a;
+                    stackIn_10_0 = stackOut_3_0 ? 1 : 0;
+                    stackIn_4_0 = stackOut_3_0;
+                    if (var4 != 0) {
+                        statePc = 10;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    if (!stackIn_4_0) {
+                        statePc = 8;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    if (var3 == 0) {
+                        statePc = 7;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    var3 = var3 * this.field_f;
+                    if (var4 == 0) {
+                        statePc = 2;
+                    } else {
+                        statePc = 7;
+                    }
+                    continue stateLoop;
+                }
+                case 7: {
+                    var3 = 1;
+                    if (var4 == 0) {
+                        statePc = 2;
+                    } else {
+                        statePc = 8;
+                    }
+                    continue stateLoop;
+                }
+                case 8: {
+                    var3 = var3 + this.field_f;
+                    if (var4 == 0) {
+                        statePc = 2;
+                    } else {
+                        statePc = 9;
+                    }
+                    continue stateLoop;
+                }
+                case 9: {
+                    stackIn_10_0 = var3;
+                    statePc = 10;
+                    continue stateLoop;
+                }
+                case 10: {
+                    return stackIn_10_0;
+                }
+                case 11: {
+                    this.field_f = -94;
+                    var3 = this.field_b.length;
+                    statePc = 12;
+                    continue stateLoop;
+                }
+                case 12: {
+                    if (param1 < var3) {
+                        statePc = 19;
+                    } else {
+                        statePc = 13;
+                    }
+                    continue stateLoop;
+                }
+                case 13: {
+                    stackOut_13_0 = this.field_a;
+                    stackIn_20_0 = stackOut_13_0 ? 1 : 0;
+                    stackIn_14_0 = stackOut_13_0;
+                    if (var4 != 0) {
+                        statePc = 20;
+                    } else {
+                        statePc = 14;
+                    }
+                    continue stateLoop;
+                }
+                case 14: {
+                    if (!stackIn_14_0) {
+                        statePc = 18;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 15: {
+                    if (var3 == 0) {
+                        statePc = 17;
+                    } else {
+                        statePc = 16;
+                    }
+                    continue stateLoop;
+                }
+                case 16: {
+                    var3 = var3 * this.field_f;
+                    if (var4 == 0) {
+                        statePc = 12;
+                    } else {
+                        statePc = 17;
+                    }
+                    continue stateLoop;
+                }
+                case 17: {
+                    var3 = 1;
+                    if (var4 == 0) {
+                        statePc = 12;
+                    } else {
+                        statePc = 18;
+                    }
+                    continue stateLoop;
+                }
+                case 18: {
+                    var3 = var3 + this.field_f;
+                    if (var4 == 0) {
+                        statePc = 12;
+                    } else {
+                        statePc = 19;
+                    }
+                    continue stateLoop;
+                }
+                case 19: {
+                    stackIn_20_0 = var3;
+                    statePc = 20;
+                    continue stateLoop;
+                }
+                case 20: {
+                    return stackIn_20_0;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            return stackIn_10_0;
-          }
         }
     }
 
@@ -435,7 +508,7 @@ final class mb {
     }
 
     final static int a(boolean param0, int param1, byte param2, int param3, int param4) {
-        int var5 = 0;
+        int var5;
         L0: {
           var5 = 256 + param1 * (-param4 + param3);
           if (param0) {

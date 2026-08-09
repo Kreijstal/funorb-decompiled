@@ -7,18 +7,16 @@ class fd extends ug {
     static String field_o;
 
     public static void a(boolean param0) {
-        String discarded$0 = null;
         field_o = null;
         field_n = null;
         field_m = null;
         if (param0) {
-            discarded$0 = fd.c((byte) 32);
+            fd.c((byte) 32);
         }
     }
 
     final static void a(gk param0, int param1) {
         te var2 = null;
-        ue discarded$0 = null;
         try {
             if (param1 != -1) {
                 gk var3 = (gk) null;
@@ -26,7 +24,7 @@ class fd extends ug {
             }
             te.b(param0.b("headers.packvorbis", "", param1 + -72));
             var2 = te.a(param0, "jagex logo2.packvorbis", "");
-            discarded$0 = var2.a();
+            var2.a();
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) ((Object) runtimeException), "fd.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -36,7 +34,7 @@ class fd extends ug {
     }
 
     final static String c(byte param0) {
-        String var1 = null;
+        String var1;
         var1 = "";
         if (param0 != 61) {
           L0: {

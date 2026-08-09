@@ -14,28 +14,18 @@ final class gf extends kj {
 
     gf(gj param0, int param1, int param2) {
         super(param0, param1, param2);
-        kv[] array$5 = null;
+        kv[] array$2 = null;
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             this.field_j = new eaa();
@@ -48,8 +38,8 @@ final class gf extends kj {
                 break L0;
               } else {
                 var6 = aw.field_v[var5].length;
-                array$5 = new kv[var6];
-                this.field_g[var5] = array$5;
+                array$2 = new kv[var6];
+                this.field_g[var5] = array$2;
                 var7 = 0;
                 L2: while (true) {
                   if (var6 <= var7) {
@@ -68,27 +58,19 @@ final class gf extends kj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("gf.<init>(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("gf.<init>(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -124,19 +106,12 @@ final class gf extends kj {
     }
 
     final boolean b(int param0) {
-        boolean discarded$1 = false;
-        Object var2 = null;
-        int var2_int = 0;
-        mia var2_ref = null;
-        int var3 = 0;
         int stackIn_23_0 = 0;
-        int stackIn_39_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_38_0 = 0;
+        int stackIn_41_0 = 0;
+        Object var2;
+        int var2_int;
+        mia var2_ref;
+        int var3;
         L0: {
           var2 = null;
           var3 = BachelorFridge.field_y;
@@ -186,23 +161,19 @@ final class gf extends kj {
               L5: {
                 if ((this.field_f ^ -1) <= -76) {
                   if (100 > this.field_f) {
-                    stackOut_22_0 = 15;
-                    stackIn_23_0 = stackOut_22_0;
+                    stackIn_23_0 = 15;
                     break L5;
                   } else {
                     if (this.field_f >= 150) {
-                      stackOut_21_0 = 3;
-                      stackIn_23_0 = stackOut_21_0;
+                      stackIn_23_0 = 3;
                       break L5;
                     } else {
-                      stackOut_20_0 = 7;
-                      stackIn_23_0 = stackOut_20_0;
+                      stackIn_23_0 = 7;
                       break L5;
                     }
                   }
                 } else {
-                  stackOut_17_0 = 31;
-                  stackIn_23_0 = stackOut_17_0;
+                  stackIn_23_0 = 31;
                   break L5;
                 }
               }
@@ -244,20 +215,18 @@ final class gf extends kj {
                     if (!this.field_j.e(12917)) {
                       break L10;
                     } else {
-                      stackOut_37_0 = 1;
-                      stackIn_39_0 = stackOut_37_0;
+                      stackIn_41_0 = 1;
                       break L9;
                     }
                   }
                 }
-                stackOut_38_0 = 0;
-                stackIn_39_0 = stackOut_38_0;
+                stackIn_41_0 = 0;
                 break L9;
               }
-              return stackIn_39_0 != 0;
+              return stackIn_41_0 != 0;
             } else {
               L11: {
-                discarded$1 = var2_ref.b(true);
+                var2_ref.b(true);
                 if (-1 >= (var2_ref.field_h ^ -1)) {
                   break L11;
                 } else {

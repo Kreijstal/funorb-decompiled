@@ -9,8 +9,8 @@ final class ik {
     static long field_b;
 
     final static void a(boolean param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = TorChallenge.field_F ? 1 : 0;
         if (-1 <= (ee.field_o ^ -1)) {
           if (d.p(-110)) {
@@ -231,11 +231,6 @@ final class ik {
     }
 
     final static int a(byte param0, boolean param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_58_0 = 0;
         int stackIn_61_0 = 0;
         int stackIn_69_0 = 0;
@@ -244,12 +239,11 @@ final class ik {
         int stackIn_79_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_57_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_78_0 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -450,16 +444,14 @@ final class ik {
                         break L15;
                       } else {
                         if (of.field_c.field_j == 0) {
-                          stackOut_57_0 = 3;
-                          stackIn_58_0 = stackOut_57_0;
+                          stackIn_58_0 = 3;
                           decompiledRegionSelector0 = 0;
                           break L0;
                         } else {
                           if (1 != of.field_c.field_j) {
                             break L15;
                           } else {
-                            stackOut_60_0 = 2;
-                            stackIn_61_0 = stackOut_60_0;
+                            stackIn_61_0 = 2;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           }
@@ -474,14 +466,12 @@ final class ik {
                           of.field_c.a(0, 0);
                           if (of.field_c.c((byte) 79)) {
                             if (-1 == (of.field_c.field_j ^ -1)) {
-                              stackOut_68_0 = 3;
-                              stackIn_69_0 = stackOut_68_0;
+                              stackIn_69_0 = 3;
                               decompiledRegionSelector0 = 2;
                               break L0;
                             } else {
                               if (1 == of.field_c.field_j) {
-                                stackOut_72_0 = 1;
-                                stackIn_73_0 = stackOut_72_0;
+                                stackIn_73_0 = 1;
                                 decompiledRegionSelector0 = 3;
                                 break L0;
                               } else {
@@ -493,8 +483,7 @@ final class ik {
                           }
                         }
                         if (13 == b.field_J) {
-                          stackOut_76_0 = 1;
-                          stackIn_77_0 = stackOut_76_0;
+                          stackIn_77_0 = 1;
                           decompiledRegionSelector0 = 4;
                           break L0;
                         } else {
@@ -504,8 +493,7 @@ final class ik {
                     }
                   }
                 }
-                stackOut_78_0 = 0;
-                stackIn_79_0 = stackOut_78_0;
+                stackIn_79_0 = 0;
                 decompiledRegionSelector0 = 5;
                 break L0;
               } else {

@@ -21,8 +21,6 @@ final class cf extends q {
         lh stackIn_4_0 = null;
         lh stackIn_9_0 = null;
         lh stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -30,17 +28,6 @@ final class cf extends q {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        lh stackOut_10_0 = null;
-        lh stackOut_8_0 = null;
-        lh stackOut_3_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             L1: {
@@ -60,8 +47,7 @@ final class cf extends q {
                   break L2;
                 } else {
                   if (130 >= var3_int) {
-                    stackOut_10_0 = kk.field_w;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = kk.field_w;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
@@ -69,13 +55,11 @@ final class cf extends q {
                   }
                 }
               }
-              stackOut_8_0 = si.field_m;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = si.field_m;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_3_0 = si.field_m;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = si.field_m;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -84,27 +68,19 @@ final class cf extends q {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var3);
-            stackOut_12_1 = new StringBuilder().append("cf.D(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var3);
+
+            stackIn_14_1 = new StringBuilder().append("cf.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }
@@ -132,8 +108,6 @@ final class cf extends q {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -141,30 +115,18 @@ final class cf extends q {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_5_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if (this.a(-257, param1) != si.field_m) {
               if (param0 != 422) {
-                stackOut_5_0 = (String) null;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (String) null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return null;
               }
             } else {
-              stackOut_1_0 = sl.field_i;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = sl.field_i;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -173,27 +135,19 @@ final class cf extends q {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("cf.A(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3);
+
+            stackIn_10_1 = new StringBuilder().append("cf.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L1;
             }
           }
@@ -215,11 +169,10 @@ final class cf extends q {
     }
 
     final static void d(byte param0) {
-        boolean discarded$2 = false;
         me var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var2 = Geoblox.field_C;
         try {
           L0: {
@@ -227,7 +180,7 @@ final class cf extends q {
               if (param0 >= 8) {
                 break L1;
               } else {
-                discarded$2 = cf.c((byte) 121);
+                cf.c((byte) 121);
                 break L1;
               }
             }
@@ -277,11 +230,6 @@ final class cf extends q {
         int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_2_0 = 0;
         var3 = Geoblox.field_C;
         try {
           L0: {
@@ -292,8 +240,7 @@ final class cf extends q {
                 var2 = 0;
                 L1: while (true) {
                   if (var1.field_f <= var2) {
-                    stackOut_20_0 = 1;
-                    stackIn_21_0 = stackOut_20_0;
+                    stackIn_21_0 = 1;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
@@ -302,8 +249,7 @@ final class cf extends q {
                         if (var4.field_n[var2].field_a != 0) {
                           break L2;
                         } else {
-                          stackOut_12_0 = 0;
-                          stackIn_13_0 = stackOut_12_0;
+                          stackIn_13_0 = 0;
                           decompiledRegionSelector0 = 2;
                           break L0;
                         }
@@ -316,8 +262,7 @@ final class cf extends q {
                         break L3;
                       } else {
                         if (var4.field_i[var2].field_a == 0) {
-                          stackOut_17_0 = 0;
-                          stackIn_18_0 = stackOut_17_0;
+                          stackIn_18_0 = 0;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
@@ -330,14 +275,12 @@ final class cf extends q {
                   }
                 }
               } else {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }

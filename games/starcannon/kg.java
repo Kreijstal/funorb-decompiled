@@ -24,7 +24,7 @@ final class kg {
     }
 
     final static long b(byte param0) {
-        String var2 = null;
+        String var2;
         if (param0 != -71) {
           var2 = (String) null;
           kg.a((String) null, (String) null, (byte) 108);

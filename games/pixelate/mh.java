@@ -23,13 +23,13 @@ final class mh {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           param2 = param2 + hp.field_Gb.field_D;
           param0 = param0 + hp.field_Gb.field_y;

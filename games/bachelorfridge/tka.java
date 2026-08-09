@@ -70,11 +70,11 @@ final class tka extends kj {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        ee var8 = null;
-        ee var9 = null;
+        int var4;
+        int var6;
+        int var7;
+        ee var8;
+        ee var9;
         if (param1 != 0) {
           this.a(-106, -128, -74);
           var4 = ((655360 * (-this.field_f + 80) >> 377409296) + 400) * this.field_f / 80;

@@ -11,7 +11,6 @@ final class nha {
     final static void a(int param0, bga param1, byte param2) {
         pf var6 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var6 = sja.field_fb;
             pf var3 = var6;
@@ -25,7 +24,7 @@ final class nha {
             } else {
                 var6.d(0, 0);
             }
-            discarded$0 = var6.a(var4, 19);
+            var6.a(var4, 19);
             var6.field_g = var6.field_g - 4;
             if (param2 >= -22) {
                 bga var5 = (bga) null;
@@ -50,17 +49,17 @@ final class nha {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        RuntimeException var6 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
         int var10 = 0;
         int[] var11 = null;
         int[] var12 = null;
-        RuntimeException decompiledCaughtException = null;
         var10 = BachelorFridge.field_y;
         try {
           L0: {
@@ -106,17 +105,17 @@ final class nha {
                       param2 = an.field_q;
                       break L4;
                     } else {
-                      incrementValue$2 = param2;
+                      incrementValue$0 = param2;
                       param2++;
-                      hba.a(param0, param4, tj.field_b[incrementValue$2], 7, param5);
+                      hba.a(param0, param4, tj.field_b[incrementValue$0], 7, param5);
                       break L4;
                     }
                   }
                   L5: {
                     if (ha.field_n >= param1) {
-                      incrementValue$3 = param1;
+                      incrementValue$1 = param1;
                       param1--;
-                      hba.a(param0, param4, tj.field_b[incrementValue$3], 7, param5);
+                      hba.a(param0, param4, tj.field_b[incrementValue$1], 7, param5);
                       break L5;
                     } else {
                       param1 = ha.field_n;

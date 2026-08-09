@@ -9,21 +9,17 @@ final class nl extends fb {
     private de field_h;
 
     final void a(boolean param0, int param1, int param2, byte param3, boolean param4, int param5, int param6) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        wm var14 = null;
-        int var15 = 0;
-        int var16 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        wm var14;
+        int var15;
+        int var16;
         L0: {
           var16 = CrazyCrystals.field_B;
           if (24 <= this.field_i) {
@@ -50,24 +46,20 @@ final class nl extends fb {
                 var11 = -(var10 * 2) + (param2 + param6);
                 var11 = var11 + (-48 + this.field_i) * (var10 * ((this.field_i - 48) * (-48 + this.field_i))) / 4608;
                 if (param0) {
-                  stackOut_8_0 = param2 + param6;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = param2 + param6;
                   break L2;
                 } else {
-                  stackOut_7_0 = 0;
-                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_0 = 0;
                   break L2;
                 }
               }
               L3: {
                 var12 = stackIn_9_0;
                 if (param0) {
-                  stackOut_11_0 = 480;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = 480;
                   break L3;
                 } else {
-                  stackOut_10_0 = param2 + param6;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = param2 + param6;
                   break L3;
                 }
               }
@@ -171,14 +163,13 @@ final class nl extends fb {
 
     final static void a(db param0, int param1) {
         bl var2 = null;
-        ko discarded$0 = null;
         try {
             bl.b(param0.a(7693, "", "headers.packvorbis"));
             if (param1 != 640) {
                 nl.b(100);
             }
             var2 = bl.a(param0, "jagex logo2.packvorbis", "");
-            discarded$0 = var2.a();
+            var2.a();
         } catch (RuntimeException runtimeException) {
             throw dn.a((Throwable) ((Object) runtimeException), "nl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

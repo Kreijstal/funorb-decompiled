@@ -5,8 +5,8 @@ final class ii extends jb implements java.awt.event.MouseWheelListener {
     private int field_f;
 
     final synchronized int a(int param0) {
-        int var2 = 0;
-        java.awt.Component var3 = null;
+        int var2;
+        java.awt.Component var3;
         var2 = this.field_f;
         if (param0 <= 90) {
           var3 = (java.awt.Component) null;

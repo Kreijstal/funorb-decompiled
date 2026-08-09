@@ -19,8 +19,6 @@ final class kn {
 
     final void a(pn param0, boolean param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -28,14 +26,6 @@ final class kn {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         try {
           L0: {
             if (param0.field_g) {
@@ -107,27 +97,19 @@ final class kn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             runtimeException = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (runtimeException);
-            stackOut_22_1 = new StringBuilder().append("kn.J(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (runtimeException);
+
+            stackIn_24_1 = new StringBuilder().append("kn.J(");
+
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L8;
             }
           }
@@ -148,7 +130,7 @@ final class kn {
     }
 
     private final boolean a(byte param0, int param1, int param2) {
-        int var5 = 0;
+        int var5;
         var5 = Pool.field_O;
         if (param0 == 98) {
           L0: {
@@ -196,28 +178,18 @@ final class kn {
     }
 
     final void a(int param0, int[] param1, byte param2) {
-        boolean discarded$1 = false;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        eo var5 = null;
-        int var6 = 0;
-        String var7 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
+        boolean discarded$0 = false;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        eo var5 = null;
+        int var6 = 0;
+        String var7 = null;
         try {
           L0: {
             L1: {
@@ -240,7 +212,7 @@ final class kn {
                 } else {
                   L3: {
                     var7 = this.a(3);
-                    var4_ref = var7;
+                    var4 = var7;
                     var5 = gf.a(-103, this.field_m);
                     var6 = ia.a(this.field_m, 24552) ? 1 : 0;
                     if (var5 != null) {
@@ -316,7 +288,7 @@ final class kn {
               if (param2 >= 43) {
                 break L7;
               } else {
-                discarded$1 = this.a(63, 79, -128);
+                discarded$0 = this.a(63, 79, -128);
                 break L7;
               }
             }
@@ -325,28 +297,20 @@ final class kn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
-            var4 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) (var4);
-            stackOut_29_1 = new StringBuilder().append("kn.O(").append(param0).append(',');
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_31_0 = (RuntimeException) (var4_ref);
+
+            stackIn_31_1 = new StringBuilder().append("kn.O(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L8;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L8;
             }
           }
@@ -370,8 +334,7 @@ final class kn {
     }
 
     private final boolean a(int param0, byte param1, int param2) {
-        boolean discarded$26101 = false;
-        int var5 = 0;
+        int var5;
         L0: {
           var5 = Pool.field_O;
           if (-9 != (param2 ^ -1)) {
@@ -393,7 +356,7 @@ final class kn {
                         if (-20 != (param2 ^ -1)) {
                           return false;
                         } else {
-                          discarded$26101 = hj.a(this.field_a, this.field_h, this.field_l, this.field_m, (byte) 76);
+                          hj.a(this.field_a, this.field_h, this.field_l, this.field_m, (byte) 76);
                           break L0;
                         }
                       }
@@ -425,9 +388,8 @@ final class kn {
     }
 
     private final boolean b(byte param0, int param1, int param2) {
-        boolean discarded$0 = false;
         if (param0 > -74) {
-            discarded$0 = kn.a((byte) 75, 'ﾪ');
+            kn.a((byte) 75, 'ﾪ');
         }
         if (17 != param2) {
             return false;
@@ -438,8 +400,6 @@ final class kn {
 
     final boolean b(byte param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == 111) {
             break L0;
@@ -456,14 +416,12 @@ final class kn {
               if (!this.field_n.f((byte) -49)) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
@@ -494,9 +452,9 @@ final class kn {
     }
 
     private final boolean a(int param0, int param1, int param2) {
-        Object var4 = null;
-        String var4_ref = null;
-        String var5 = null;
+        Object var4;
+        String var4_ref;
+        String var5;
         L0: {
           var4 = null;
           if (-5 == (param0 ^ -1)) {
@@ -538,9 +496,9 @@ final class kn {
     }
 
     final void a(byte param0, boolean param1) {
-        im var4 = null;
-        String var5 = null;
-        im var6 = null;
+        im var4;
+        String var5;
+        im var6;
         L0: {
           if (null == this.field_m) {
             break L0;
@@ -645,10 +603,6 @@ final class kn {
         int stackIn_20_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_9_0 = 0;
         try {
           L0: {
             L1: {
@@ -656,8 +610,7 @@ final class kn {
                 break L1;
               } else {
                 if (param1 < 128) {
-                  stackOut_6_0 = 1;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -690,8 +643,7 @@ final class kn {
                     } else {
                       var4 = var5[var3];
                       if (var4 == param1) {
-                        stackOut_16_0 = 1;
-                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_0 = 1;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -702,13 +654,11 @@ final class kn {
                   }
                 }
               }
-              stackOut_19_0 = 0;
-              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_0 = 0;
               decompiledRegionSelector0 = 3;
               break L0;
             } else {
-              stackOut_9_0 = 1;
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = 1;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -750,9 +700,8 @@ final class kn {
     }
 
     final void b(int param0) {
-        boolean discarded$1 = false;
-        String var3 = null;
-        kh var4 = null;
+        String var3;
+        kh var4;
         L0: {
           if (null == em.field_L) {
             var4 = rb.a(this.field_b, 125);
@@ -809,7 +758,7 @@ final class kn {
           if (param0 == 2616) {
             break L3;
           } else {
-            discarded$1 = kn.a((byte) 103, 'ﾥ');
+            kn.a((byte) 103, 'ﾥ');
             break L3;
           }
         }

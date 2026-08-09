@@ -9,12 +9,11 @@ class br {
     static cj field_c;
 
     final void a(boolean param0) {
-        int discarded$2 = 0;
         if (this.field_b != null) {
           this.field_b.field_d = this.field_d;
           this.field_d.field_b = this.field_b;
           if (!param0) {
-            discarded$2 = br.a(false, 40, -48, -58);
+            br.a(false, 40, -48, -58);
             this.field_b = null;
             this.field_d = null;
             return;
@@ -39,13 +38,12 @@ class br {
     }
 
     final static int a(boolean param0, int param1, int param2, int param3) {
-        int discarded$2 = 0;
         if (param1 + param2 - -param3 <= oo.field_l) {
           return param2 + param1;
         } else {
           if (-1 < (-param3 + param1 ^ -1)) {
             if (!param0) {
-              discarded$2 = br.a(false, -49, -96, 42);
+              br.a(false, -49, -96, 42);
               return oo.field_l + -param3;
             } else {
               return oo.field_l + -param3;

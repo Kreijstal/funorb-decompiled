@@ -10,11 +10,11 @@ final class fh {
 
     final static void b(byte param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -48,12 +48,12 @@ final class fh {
     }
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         var8 = Virogrid.field_F ? 1 : 0;
         if ((kf.field_e ^ -1) > -1) {
           return;

@@ -12,56 +12,36 @@ final class aib implements ntb, ofa, utb {
         RuntimeException var3 = null;
         aib var4 = null;
         boolean stackIn_1_0 = false;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_0_0 = false;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var3_int = -26 % ((param0 - 22) / 59);
             var4 = (aib) ((Object) param1);
-            stackOut_0_0 = dn.a(var4.field_a, false, 1, this.field_a, -69);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = dn.a(var4.field_a, false, 1, this.field_a, -69);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var3);
-            stackOut_2_1 = new StringBuilder().append("aib.C(").append(param0).append(',');
-            stackIn_5_0 = stackOut_2_0;
-            stackIn_5_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_5_0 = (RuntimeException) (var3);
+
+            stackIn_5_1 = new StringBuilder().append("aib.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_6_0 = stackOut_3_0;
-              stackIn_6_1 = stackOut_3_1;
-              stackIn_6_2 = stackOut_3_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L1;
             }
           }
@@ -72,9 +52,6 @@ final class aib implements ntb, ofa, utb {
 
     public final void b(byte param0, tv param1) {
         aib var3 = null;
-        RuntimeException var3_ref = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -82,14 +59,7 @@ final class aib implements ntb, ofa, utb {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var3_ref = null;
         try {
           L0: {
             var3 = (aib) ((Object) param1);
@@ -115,27 +85,19 @@ final class aib implements ntb, ofa, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3_ref);
-            stackOut_9_1 = new StringBuilder().append("aib.D(").append(param0).append(',');
-            stackIn_12_0 = stackOut_9_0;
-            stackIn_12_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_12_0 = (RuntimeException) (var3_ref);
+
+            stackIn_12_1 = new StringBuilder().append("aib.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_13_0 = stackOut_10_0;
-              stackIn_13_1 = stackOut_10_1;
-              stackIn_13_2 = stackOut_10_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L2;
             }
           }
@@ -194,43 +156,17 @@ final class aib implements ntb, ofa, utb {
         crb var8 = null;
         int var9 = 0;
         int stackIn_5_0 = 0;
-        faa stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
-        faa stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
         faa stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         faa stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         int stackIn_15_2 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
-        faa stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        faa stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        int stackOut_14_2 = 0;
-        faa stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        faa stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
         var9 = VoidHunters.field_G;
         try {
           L0: {
@@ -238,12 +174,10 @@ final class aib implements ntb, ofa, utb {
               var3 = param0;
               var4 = this.field_a;
               if (null == var4) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = var4.length;
-                stackIn_5_0 = stackOut_2_0;
+                stackIn_5_0 = var4.length;
                 break L1;
               }
             }
@@ -265,36 +199,26 @@ final class aib implements ntb, ofa, utb {
                         break L2;
                       } else {
                         L5: {
-                          stackOut_9_0 = (faa) (var3);
-                          stackOut_9_1 = 68;
-                          stackIn_14_0 = stackOut_9_0;
-                          stackIn_14_1 = stackOut_9_1;
-                          stackIn_10_0 = stackOut_9_0;
-                          stackIn_10_1 = stackOut_9_1;
+                          stackIn_14_0 = (faa) (var3);
+
+                          stackIn_14_1 = 68;
+
                           if (null == var8) {
-                            stackOut_14_0 = (faa) ((Object) stackIn_14_0);
-                            stackOut_14_1 = stackIn_14_1;
-                            stackOut_14_2 = 0;
-                            stackIn_15_0 = stackOut_14_0;
-                            stackIn_15_1 = stackOut_14_1;
-                            stackIn_15_2 = stackOut_14_2;
+                            stackIn_15_0 = (faa) ((Object) stackIn_14_0);
+                            stackIn_15_1 = stackIn_14_1;
+                            stackIn_15_2 = 0;
                             break L5;
                           } else {
-                            stackOut_10_0 = (faa) ((Object) stackIn_10_0);
-                            stackOut_10_1 = stackIn_10_1;
-                            stackIn_12_0 = stackOut_10_0;
-                            stackIn_12_1 = stackOut_10_1;
-                            stackOut_12_0 = (faa) ((Object) stackIn_12_0);
-                            stackOut_12_1 = stackIn_12_1;
-                            stackOut_12_2 = 1;
-                            stackIn_15_0 = stackOut_12_0;
-                            stackIn_15_1 = stackOut_12_1;
-                            stackIn_15_2 = stackOut_12_2;
+
+
+                            stackIn_15_0 = (faa) ((Object) stackIn_14_0);
+                            stackIn_15_1 = stackIn_14_1;
+                            stackIn_15_2 = 1;
                             break L5;
                           }
                         }
                         L6: {
-                          if (vq.a(stackIn_15_0, stackIn_15_1, stackIn_15_2 == 0)) {
+                          if (!vq.a(stackIn_15_0, stackIn_15_1, stackIn_15_2 != 0)) {
                             break L6;
                           } else {
                             stb.a(2, 1, var3, var8);
@@ -325,27 +249,19 @@ final class aib implements ntb, ofa, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             runtimeException = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (runtimeException);
-            stackOut_23_1 = new StringBuilder().append("aib.B(");
-            stackIn_26_0 = stackOut_23_0;
-            stackIn_26_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_26_0 = (RuntimeException) (runtimeException);
+
+            stackIn_26_1 = new StringBuilder().append("aib.B(");
+
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L7;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_27_0 = stackOut_24_0;
-              stackIn_27_1 = stackOut_24_1;
-              stackIn_27_2 = stackOut_24_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L7;
             }
           }
@@ -354,32 +270,20 @@ final class aib implements ntb, ofa, utb {
     }
 
     public final void a(tv param0, int param1) {
-        boolean discarded$6 = false;
-        int discarded$7 = 0;
         RuntimeException runtimeException = null;
         aib var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
               var3 = (aib) ((Object) param0);
-              discarded$6 = tja.a(var3.field_a, 1, this.field_a, false, 5547);
+              tja.a(var3.field_a, 1, this.field_a, false, 5547);
               var4 = 0;
               if (!dn.a(var3.field_a, false, 1, this.field_a, 127)) {
                 break L1;
@@ -393,7 +297,7 @@ final class aib implements ntb, ofa, utb {
               if (param1 <= -19) {
                 break L2;
               } else {
-                discarded$7 = aib.a((byte) 79, (String) null, 92, 121, -57);
+                aib.a((byte) 79, (String) null, 92, 121, -57);
                 break L2;
               }
             }
@@ -411,27 +315,19 @@ final class aib implements ntb, ofa, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (runtimeException);
-            stackOut_9_1 = new StringBuilder().append("aib.F(");
-            stackIn_12_0 = stackOut_9_0;
-            stackIn_12_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_12_0 = (RuntimeException) (runtimeException);
+
+            stackIn_12_1 = new StringBuilder().append("aib.F(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_13_0 = stackOut_10_0;
-              stackIn_13_1 = stackOut_10_1;
-              stackIn_13_2 = stackOut_10_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -440,20 +336,6 @@ final class aib implements ntb, ofa, utb {
     }
 
     final static void a(byte param0, asb param1) {
-        String discarded$10 = null;
-        String discarded$11 = null;
-        String discarded$12 = null;
-        String discarded$13 = null;
-        String discarded$14 = null;
-        String discarded$15 = null;
-        String discarded$16 = null;
-        String discarded$17 = null;
-        String discarded$18 = null;
-        String discarded$19 = null;
-        byte[] var2 = null;
-        RuntimeException var2_ref = null;
-        RuntimeException stackIn_1171_0 = null;
-        StringBuilder stackIn_1171_1 = null;
         RuntimeException stackIn_1173_0 = null;
         StringBuilder stackIn_1173_1 = null;
         RuntimeException stackIn_1174_0 = null;
@@ -462,14 +344,8 @@ final class aib implements ntb, ofa, utb {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_1170_0 = null;
-        StringBuilder stackOut_1170_1 = null;
-        RuntimeException stackOut_1173_0 = null;
-        StringBuilder stackOut_1173_1 = null;
-        String stackOut_1173_2 = null;
-        RuntimeException stackOut_1171_0 = null;
-        StringBuilder stackOut_1171_1 = null;
-        String stackOut_1171_2 = null;
+        byte[] var2 = null;
+        RuntimeException var2_ref = null;
         try {
           L0: {
             L1: {
@@ -638,7 +514,7 @@ final class aib implements ntb, ofa, utb {
             L19: {
               var2 = dqb.a((byte) -49, "beta_uppercase");
               if (null != var2) {
-                discarded$10 = qpa.a((byte) -125, var2);
+                qpa.a((byte) -125, var2);
                 break L19;
               } else {
                 break L19;
@@ -1286,7 +1162,7 @@ final class aib implements ntb, ofa, utb {
             L91: {
               var2 = dqb.a((byte) -33, "reloading");
               if (var2 != null) {
-                discarded$11 = qpa.a((byte) -125, var2);
+                qpa.a((byte) -125, var2);
                 break L91;
               } else {
                 break L91;
@@ -1342,7 +1218,7 @@ final class aib implements ntb, ofa, utb {
               if (var2 == null) {
                 break L97;
               } else {
-                discarded$12 = qpa.a((byte) -125, var2);
+                qpa.a((byte) -125, var2);
                 break L97;
               }
             }
@@ -1351,7 +1227,7 @@ final class aib implements ntb, ofa, utb {
               if (var2 == null) {
                 break L98;
               } else {
-                discarded$13 = qpa.a((byte) -125, var2);
+                qpa.a((byte) -125, var2);
                 break L98;
               }
             }
@@ -1360,7 +1236,7 @@ final class aib implements ntb, ofa, utb {
               if (var2 == null) {
                 break L99;
               } else {
-                discarded$14 = qpa.a((byte) -125, var2);
+                qpa.a((byte) -125, var2);
                 break L99;
               }
             }
@@ -1421,7 +1297,7 @@ final class aib implements ntb, ofa, utb {
             L106: {
               var2 = dqb.a((byte) -9, "missile_locked_on");
               if (null != var2) {
-                discarded$15 = qpa.a((byte) -125, var2);
+                qpa.a((byte) -125, var2);
                 break L106;
               } else {
                 break L106;
@@ -1448,7 +1324,7 @@ final class aib implements ntb, ofa, utb {
             L109: {
               var2 = dqb.a((byte) -126, "TYPE_HULL");
               if (null != var2) {
-                discarded$16 = qpa.a((byte) -125, var2);
+                qpa.a((byte) -125, var2);
                 break L109;
               } else {
                 break L109;
@@ -1477,7 +1353,7 @@ final class aib implements ntb, ofa, utb {
               if (var2 == null) {
                 break L112;
               } else {
-                discarded$17 = qpa.a((byte) -125, var2);
+                qpa.a((byte) -125, var2);
                 break L112;
               }
             }
@@ -1486,7 +1362,7 @@ final class aib implements ntb, ofa, utb {
               if (var2 == null) {
                 break L113;
               } else {
-                discarded$18 = qpa.a((byte) -125, var2);
+                qpa.a((byte) -125, var2);
                 break L113;
               }
             }
@@ -3089,7 +2965,7 @@ final class aib implements ntb, ofa, utb {
                 if (var2 == null) {
                   break L291;
                 } else {
-                  discarded$19 = qpa.a((byte) -125, var2);
+                  qpa.a((byte) -125, var2);
                   break L291;
                 }
               }
@@ -3483,27 +3359,19 @@ final class aib implements ntb, ofa, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L334: {
             var2_ref = decompiledCaughtException;
-            stackOut_1170_0 = (RuntimeException) (var2_ref);
-            stackOut_1170_1 = new StringBuilder().append("aib.G(").append(param0).append(',');
-            stackIn_1173_0 = stackOut_1170_0;
-            stackIn_1173_1 = stackOut_1170_1;
-            stackIn_1171_0 = stackOut_1170_0;
-            stackIn_1171_1 = stackOut_1170_1;
+            stackIn_1173_0 = (RuntimeException) (var2_ref);
+
+            stackIn_1173_1 = new StringBuilder().append("aib.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_1173_0 = (RuntimeException) ((Object) stackIn_1173_0);
-              stackOut_1173_1 = (StringBuilder) ((Object) stackIn_1173_1);
-              stackOut_1173_2 = "null";
-              stackIn_1174_0 = stackOut_1173_0;
-              stackIn_1174_1 = stackOut_1173_1;
-              stackIn_1174_2 = stackOut_1173_2;
+              stackIn_1174_0 = (RuntimeException) ((Object) stackIn_1173_0);
+              stackIn_1174_1 = (StringBuilder) ((Object) stackIn_1173_1);
+              stackIn_1174_2 = "null";
               break L334;
             } else {
-              stackOut_1171_0 = (RuntimeException) ((Object) stackIn_1171_0);
-              stackOut_1171_1 = (StringBuilder) ((Object) stackIn_1171_1);
-              stackOut_1171_2 = "{...}";
-              stackIn_1174_0 = stackOut_1171_0;
-              stackIn_1174_1 = stackOut_1171_1;
-              stackIn_1174_2 = stackOut_1171_2;
+              stackIn_1174_0 = (RuntimeException) ((Object) stackIn_1173_0);
+              stackIn_1174_1 = (StringBuilder) ((Object) stackIn_1173_1);
+              stackIn_1174_2 = "{...}";
               break L334;
             }
           }
@@ -3517,32 +3385,16 @@ final class aib implements ntb, ofa, utb {
     }
 
     public final void a(faa param0, boolean param1) {
-        RuntimeException var3 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -3554,20 +3406,15 @@ final class aib implements ntb, ofa, utb {
               }
             }
             L2: {
-              stackOut_3_0 = this;
-              stackIn_6_0 = stackOut_3_0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_6_0 = this;
+
               if (param1) {
-                stackOut_6_0 = this;
-                stackOut_6_1 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = this;
+                stackIn_7_1 = 0;
                 break L2;
               } else {
-                stackOut_4_0 = this;
-                stackOut_4_1 = 1;
-                stackIn_7_0 = stackOut_4_0;
-                stackIn_7_1 = stackOut_4_1;
+                stackIn_7_0 = this;
+                stackIn_7_1 = 1;
                 break L2;
               }
             }
@@ -3579,27 +3426,19 @@ final class aib implements ntb, ofa, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3);
-            stackOut_9_1 = new StringBuilder().append("aib.H(");
-            stackIn_12_0 = stackOut_9_0;
-            stackIn_12_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_12_0 = (RuntimeException) (var3);
+
+            stackIn_12_1 = new StringBuilder().append("aib.H(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_13_0 = stackOut_10_0;
-              stackIn_13_1 = stackOut_10_1;
-              stackIn_13_2 = stackOut_10_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L3;
             }
           }
@@ -3608,12 +3447,9 @@ final class aib implements ntb, ofa, utb {
     }
 
     final static int a(byte param0, String param1, int param2, int param3, int param4) {
-        int discarded$2 = 0;
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -3621,34 +3457,22 @@ final class aib implements ntb, ofa, utb {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
               if (param0 == -37) {
                 break L1;
               } else {
-                discarded$2 = aib.a((byte) 0, (String) null, -53, 66, 33);
+                aib.a((byte) 0, (String) null, -53, 66, 33);
                 break L1;
               }
             }
             if (!li.field_i) {
-              stackOut_6_0 = ita.a(param3, param0 + 8025).b(param1, param4, param2);
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = ita.a(param3, param0 + 8025).b(param1, param4, param2);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_4_0 = de.a(param3, 300).a(param1, param2, param4, (byte) 112, (aja[]) null);
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = de.a(param3, 300).a(param1, param2, param4, (byte) 112, (aja[]) null);
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -3657,27 +3481,19 @@ final class aib implements ntb, ofa, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var5);
-            stackOut_8_1 = new StringBuilder().append("aib.K(").append(param0).append(',');
-            stackIn_11_0 = stackOut_8_0;
-            stackIn_11_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_11_0 = (RuntimeException) (var5);
+
+            stackIn_11_1 = new StringBuilder().append("aib.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_12_0 = stackOut_9_0;
-              stackIn_12_1 = stackOut_9_1;
-              stackIn_12_2 = stackOut_9_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -3691,8 +3507,8 @@ final class aib implements ntb, ofa, utb {
     }
 
     public static void a(byte param0) {
-        RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         try {
           L0: {
             L1: {
@@ -3717,7 +3533,6 @@ final class aib implements ntb, ofa, utb {
         RuntimeException var2 = null;
         crb[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
-        crb[] stackOut_3_0 = null;
         try {
           L0: {
             L1: {
@@ -3728,8 +3543,7 @@ final class aib implements ntb, ofa, utb {
                 break L1;
               }
             }
-            stackOut_3_0 = this.field_a;
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = this.field_a;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3744,38 +3558,15 @@ final class aib implements ntb, ofa, utb {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             L1: {
@@ -3795,64 +3586,47 @@ final class aib implements ntb, ofa, utb {
                 break L2;
               }
             }
-            stackOut_6_0 = var4_int;
-            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_0 = var4_int;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("aib.A(");
-            stackIn_11_0 = stackOut_8_0;
-            stackIn_11_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_11_0 = (RuntimeException) (var4);
+
+            stackIn_11_1 = new StringBuilder().append("aib.A(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_12_0 = stackOut_9_0;
-              stackIn_12_1 = stackOut_9_1;
-              stackIn_12_2 = stackOut_9_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(',');
-            stackIn_15_0 = stackOut_12_0;
-            stackIn_15_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_16_0 = stackOut_13_0;
-              stackIn_16_1 = stackOut_13_1;
-              stackIn_16_2 = stackOut_13_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_16_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -3870,13 +3644,12 @@ final class aib implements ntb, ofa, utb {
 
     final void b(int param0) {
         int fieldTemp$0 = 0;
-        boolean discarded$1 = false;
         try {
             fieldTemp$0 = wnb.field_q;
             wnb.field_q = wnb.field_q + 1;
             this.field_d = fieldTemp$0;
             if (param0 >= -37) {
-                discarded$1 = this.a((pe) null, 6, (crb) null);
+                this.a((pe) null, 6, (crb) null);
             }
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) ((Object) runtimeException), "aib.J(" + param0 + ')');
@@ -3884,23 +3657,13 @@ final class aib implements ntb, ofa, utb {
     }
 
     public final void a(faa param0, int param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -3918,27 +3681,19 @@ final class aib implements ntb, ofa, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("aib.L(");
-            stackIn_8_0 = stackOut_5_0;
-            stackIn_8_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("aib.L(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_9_0 = stackOut_6_0;
-              stackIn_9_1 = stackOut_6_1;
-              stackIn_9_2 = stackOut_6_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -3948,7 +3703,6 @@ final class aib implements ntb, ofa, utb {
 
     public final void a(faa param0, byte param1) {
         faa var3 = null;
-        RuntimeException var3_ref = null;
         crb[] var4 = null;
         int var5 = 0;
         crb[] var6 = null;
@@ -3956,43 +3710,18 @@ final class aib implements ntb, ofa, utb {
         crb var8 = null;
         int var9 = 0;
         int stackIn_8_0 = 0;
-        faa stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
-        faa stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
         faa stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         faa stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         int stackIn_18_2 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_5_0 = 0;
-        faa stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        faa stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        int stackOut_17_2 = 0;
-        faa stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        faa stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        int stackOut_15_2 = 0;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        RuntimeException var3_ref = null;
         var9 = VoidHunters.field_G;
         try {
           L0: {
@@ -4008,12 +3737,10 @@ final class aib implements ntb, ofa, utb {
               var3 = param0;
               var4 = this.field_a;
               if (var4 == null) {
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 0;
                 break L2;
               } else {
-                stackOut_5_0 = var4.length;
-                stackIn_8_0 = stackOut_5_0;
+                stackIn_8_0 = var4.length;
                 break L2;
               }
             }
@@ -4035,31 +3762,21 @@ final class aib implements ntb, ofa, utb {
                         break L3;
                       } else {
                         L6: {
-                          stackOut_12_0 = (faa) (var3);
-                          stackOut_12_1 = -111;
-                          stackIn_17_0 = stackOut_12_0;
-                          stackIn_17_1 = stackOut_12_1;
-                          stackIn_13_0 = stackOut_12_0;
-                          stackIn_13_1 = stackOut_12_1;
+                          stackIn_17_0 = (faa) (var3);
+
+                          stackIn_17_1 = -111;
+
                           if (var8 == null) {
-                            stackOut_17_0 = (faa) ((Object) stackIn_17_0);
-                            stackOut_17_1 = stackIn_17_1;
-                            stackOut_17_2 = 0;
-                            stackIn_18_0 = stackOut_17_0;
-                            stackIn_18_1 = stackOut_17_1;
-                            stackIn_18_2 = stackOut_17_2;
+                            stackIn_18_0 = (faa) ((Object) stackIn_17_0);
+                            stackIn_18_1 = stackIn_17_1;
+                            stackIn_18_2 = 0;
                             break L6;
                           } else {
-                            stackOut_13_0 = (faa) ((Object) stackIn_13_0);
-                            stackOut_13_1 = stackIn_13_1;
-                            stackIn_15_0 = stackOut_13_0;
-                            stackIn_15_1 = stackOut_13_1;
-                            stackOut_15_0 = (faa) ((Object) stackIn_15_0);
-                            stackOut_15_1 = stackIn_15_1;
-                            stackOut_15_2 = 1;
-                            stackIn_18_0 = stackOut_15_0;
-                            stackIn_18_1 = stackOut_15_1;
-                            stackIn_18_2 = stackOut_15_2;
+
+
+                            stackIn_18_0 = (faa) ((Object) stackIn_17_0);
+                            stackIn_18_1 = stackIn_17_1;
+                            stackIn_18_2 = 1;
                             break L6;
                           }
                         }
@@ -4090,27 +3807,19 @@ final class aib implements ntb, ofa, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3_ref = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var3_ref);
-            stackOut_24_1 = new StringBuilder().append("aib.E(");
-            stackIn_27_0 = stackOut_24_0;
-            stackIn_27_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_27_0 = (RuntimeException) (var3_ref);
+
+            stackIn_27_1 = new StringBuilder().append("aib.E(");
+
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L8;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_28_0 = stackOut_25_0;
-              stackIn_28_1 = stackOut_25_1;
-              stackIn_28_2 = stackOut_25_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L8;
             }
           }

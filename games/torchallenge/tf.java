@@ -46,13 +46,23 @@ final class tf {
     }
 
     private final void a(byte param0, byte[] param1) {
-        int dupTemp$7 = 0;
-        int dupTemp$8 = 0;
-        int[] array$9 = null;
-        int dupTemp$10 = 0;
-        int[] array$11 = null;
-        int dupTemp$12 = 0;
-        int[] array$13 = null;
+        int dupTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int[] array$2 = null;
+        int dupTemp$3 = 0;
+        int[] dupTemp$4 = null;
+        int[] array$5 = null;
+        int dupTemp$6 = 0;
+        int[] dupTemp$7 = null;
+        int[] array$8 = null;
+        int stackIn_11_0 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException stackIn_101_0 = null;
+        StringBuilder stackIn_101_1 = null;
+        RuntimeException stackIn_102_0 = null;
+        StringBuilder stackIn_102_1 = null;
+        String stackIn_102_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -70,28 +80,6 @@ final class tf {
         int var17 = 0;
         uf var18 = null;
         byte[] var22 = null;
-        int stackIn_11_0 = 0;
-        int stackIn_14_0 = 0;
-        RuntimeException stackIn_100_0 = null;
-        StringBuilder stackIn_100_1 = null;
-        RuntimeException stackIn_101_0 = null;
-        StringBuilder stackIn_101_1 = null;
-        RuntimeException stackIn_102_0 = null;
-        StringBuilder stackIn_102_1 = null;
-        String stackIn_102_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        RuntimeException stackOut_99_0 = null;
-        StringBuilder stackOut_99_1 = null;
-        RuntimeException stackOut_101_0 = null;
-        StringBuilder stackOut_101_1 = null;
-        String stackOut_101_2 = null;
-        RuntimeException stackOut_100_0 = null;
-        StringBuilder stackOut_100_1 = null;
-        String stackOut_100_2 = null;
         var17 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -114,24 +102,20 @@ final class tf {
                   L3: {
                     var5 = var18.j(-128);
                     if ((1 & var5) == 0) {
-                      stackOut_10_0 = 0;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_11_0 = 0;
                       break L3;
                     } else {
-                      stackOut_9_0 = 1;
-                      stackIn_11_0 = stackOut_9_0;
+                      stackIn_11_0 = 1;
                       break L3;
                     }
                   }
                   L4: {
                     var6 = stackIn_11_0;
                     if (-1 == (2 & var5 ^ -1)) {
-                      stackOut_13_0 = 0;
-                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_14_0 = 0;
                       break L4;
                     } else {
-                      stackOut_12_0 = 1;
-                      stackIn_14_0 = stackOut_12_0;
+                      stackIn_14_0 = 1;
                       break L4;
                     }
                   }
@@ -156,10 +140,10 @@ final class tf {
                           break L6;
                         } else {
                           L8: {
-                            dupTemp$7 = var8 + var18.h(96);
-                            var8 = dupTemp$7;
-                            this.field_y[var10] = dupTemp$7;
-                            if (this.field_y[var10] > var9) {
+                            dupTemp$0 = var8 + var18.h(96);
+                            var8 = dupTemp$0;
+                            this.field_y[var10] = dupTemp$0;
+                            if ((this.field_y[var10] ^ -1) < (var9 ^ -1)) {
                               var9 = this.field_y[var10];
                               break L8;
                             } else {
@@ -176,10 +160,10 @@ final class tf {
                         if (this.field_m <= var10) {
                           break L6;
                         } else {
-                          dupTemp$8 = var8 + var18.c(false);
-                          var8 = dupTemp$8;
-                          this.field_y[var10] = dupTemp$8;
-                          if (this.field_y[var10] > var9) {
+                          dupTemp$1 = var8 + var18.c(false);
+                          var8 = dupTemp$1;
+                          this.field_y[var10] = dupTemp$1;
+                          if ((this.field_y[var10] ^ -1) < (var9 ^ -1)) {
                             var9 = this.field_y[var10];
                             var10++;
                             continue L9;
@@ -285,8 +269,8 @@ final class tf {
                                   var12 = this.field_y[var11];
                                   var8 = 0;
                                   var13 = this.field_e[var12];
-                                  array$9 = new int[var13];
-                                  this.field_A[var12] = array$9;
+                                  array$2 = new int[var13];
+                                  this.field_A[var12] = array$2;
                                   var14 = -1;
                                   var15 = 0;
                                   L22: while (true) {
@@ -304,10 +288,11 @@ final class tf {
                                       continue L21;
                                     } else {
                                       L24: {
-                                        dupTemp$10 = var8 + var18.h(-116);
-                                        var8 = dupTemp$10;
-                                        this.field_A[var12][var15] = dupTemp$10;
-                                        var16 = dupTemp$10;
+                                        dupTemp$3 = var8 + var18.h(-116);
+                                        var8 = dupTemp$3;
+                                        dupTemp$4 = this.field_A[var12];
+                                        dupTemp$4[var15] = dupTemp$3;
+                                        var16 = dupTemp$3;
                                         if (var16 > var14) {
                                           var14 = var16;
                                           break L24;
@@ -339,8 +324,8 @@ final class tf {
                                   var12 = this.field_y[var11];
                                   var13 = this.field_e[var12];
                                   var8 = 0;
-                                  array$11 = new int[var13];
-                                  this.field_A[var12] = array$11;
+                                  array$5 = new int[var13];
+                                  this.field_A[var12] = array$5;
                                   var14 = -1;
                                   var15 = 0;
                                   L27: while (true) {
@@ -358,11 +343,12 @@ final class tf {
                                       continue L26;
                                     } else {
                                       L29: {
-                                        dupTemp$12 = var8 + var18.c(false);
-                                        var8 = dupTemp$12;
-                                        this.field_A[var12][var15] = dupTemp$12;
-                                        var16 = dupTemp$12;
-                                        if (var16 > var14) {
+                                        dupTemp$6 = var8 + var18.c(false);
+                                        var8 = dupTemp$6;
+                                        dupTemp$7 = this.field_A[var12];
+                                        dupTemp$7[var15] = dupTemp$6;
+                                        var16 = dupTemp$6;
+                                        if ((var16 ^ -1) < (var14 ^ -1)) {
                                           var14 = var16;
                                           break L29;
                                         } else {
@@ -394,8 +380,8 @@ final class tf {
                             } else {
                               var12 = this.field_y[var11];
                               var13 = this.field_e[var12];
-                              array$13 = new int[this.field_g[var12]];
-                              this.field_v[var12] = array$13;
+                              array$8 = new int[this.field_g[var12]];
+                              this.field_v[var12] = array$8;
                               var14 = 0;
                               L32: while (true) {
                                 if (var14 >= this.field_g[var12]) {
@@ -450,27 +436,19 @@ final class tf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L35: {
             var3 = decompiledCaughtException;
-            stackOut_99_0 = (RuntimeException) (var3);
-            stackOut_99_1 = new StringBuilder().append("tf.A(").append(param0).append(',');
-            stackIn_101_0 = stackOut_99_0;
-            stackIn_101_1 = stackOut_99_1;
-            stackIn_100_0 = stackOut_99_0;
-            stackIn_100_1 = stackOut_99_1;
+            stackIn_101_0 = (RuntimeException) (var3);
+
+            stackIn_101_1 = new StringBuilder().append("tf.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_101_0 = (RuntimeException) ((Object) stackIn_101_0);
-              stackOut_101_1 = (StringBuilder) ((Object) stackIn_101_1);
-              stackOut_101_2 = "null";
-              stackIn_102_0 = stackOut_101_0;
-              stackIn_102_1 = stackOut_101_1;
-              stackIn_102_2 = stackOut_101_2;
+              stackIn_102_0 = (RuntimeException) ((Object) stackIn_101_0);
+              stackIn_102_1 = (StringBuilder) ((Object) stackIn_101_1);
+              stackIn_102_2 = "null";
               break L35;
             } else {
-              stackOut_100_0 = (RuntimeException) ((Object) stackIn_100_0);
-              stackOut_100_1 = (StringBuilder) ((Object) stackIn_100_1);
-              stackOut_100_2 = "{...}";
-              stackIn_102_0 = stackOut_100_0;
-              stackIn_102_1 = stackOut_100_1;
-              stackIn_102_2 = stackOut_100_2;
+              stackIn_102_0 = (RuntimeException) ((Object) stackIn_101_0);
+              stackIn_102_1 = (StringBuilder) ((Object) stackIn_101_1);
+              stackIn_102_2 = "{...}";
               break L35;
             }
           }

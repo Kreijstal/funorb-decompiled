@@ -22,7 +22,7 @@ final class bc {
     }
 
     final static ei a(int param0, int param1) {
-        ei var2 = null;
+        ei var2;
         var2 = new ei();
         nf.field_w.a(-12328, var2);
         if (param1 <= 61) {

@@ -12,50 +12,95 @@ final class bc {
         int var5 = 0;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_5_0 = 0;
-        var5 = MonkeyPuzzle2.field_F ? 1 : 0;
-        try {
-          L0: {
-            var4 = -64 % ((param2 - -8) / 50);
-            var3_int = 0;
-            L1: while (true) {
-              L2: {
-                L3: {
-                  if ((param1 ^ -1) >= -1) {
-                    break L3;
-                  } else {
-                    var3_int = 1 & param0 | var3_int << -191611743;
-                    param1--;
-                    stackOut_3_0 = param0 >>> 1;
-                    stackIn_6_0 = stackOut_3_0;
-                    stackIn_4_0 = stackOut_3_0;
-                    if (var5 != 0) {
-                      break L2;
-                    } else {
-                      param0 = stackIn_4_0;
-                      if (var5 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var5 = MonkeyPuzzle2.field_F ? 1 : 0;
+                    statePc = 1;
+                    continue stateLoop;
                 }
-                stackOut_5_0 = var3_int;
-                stackIn_6_0 = stackOut_5_0;
-                break L2;
-              }
-              break L0;
+                case 1: {
+                    try {
+                        var4 = -64 % ((param2 - -8) / 50);
+                        var3_int = 0;
+                        statePc = 2;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 7;
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        if ((param1 ^ -1) >= -1) {
+                            statePc = 5;
+                        } else {
+                            statePc = 3;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 7;
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        var3_int = 1 & param0 | var3_int << -191611743;
+                        param1--;
+                        stackIn_6_0 = param0 >>> 1;
+                        stackIn_4_0 = stackIn_6_0;
+                        if (var5 != 0) {
+                            statePc = 6;
+                        } else {
+                            statePc = 4;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 7;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        param0 = stackIn_4_0;
+                        if (var5 == 0) {
+                            statePc = 2;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 7;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        stackIn_6_0 = var3_int;
+                        statePc = 6;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 7;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    return stackIn_6_0;
+                }
+                case 7: {
+                    var3 = (RuntimeException) ((Object) caughtException);
+                    throw la.a((Throwable) ((Object) var3), field_z + param0 + ',' + param1 + ',' + param2 + ')');
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw la.a((Throwable) ((Object) var3), field_z + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_6_0;
     }
 
     static {

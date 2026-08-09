@@ -11,23 +11,12 @@ final class fn extends ji {
         ch var3 = null;
         RuntimeException var3_ref = null;
         ch stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ch stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -41,35 +30,26 @@ final class fn extends ji {
               }
             }
             var3.field_h = param0;
-            stackOut_2_0 = (ch) (var3);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (ch) (var3);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3_ref);
-            stackOut_4_1 = new StringBuilder().append("fn.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3_ref);
+
+            stackIn_6_1 = new StringBuilder().append("fn.E(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -79,14 +59,13 @@ final class fn extends ji {
     }
 
     final static void a(byte param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9, int param10, boolean param11) {
-        ch discarded$2 = null;
-        String var13 = null;
+        String var13;
         ok.a(param6, param10, param1, param5, param11, param7, 16777215, 12423, param2, param3, param9, param8, param4, 16777215);
         if (param0 > 84) {
           return;
         } else {
           var13 = (String) null;
-          discarded$2 = fn.a(113, true, (String) null);
+          fn.a(113, true, (String) null);
           return;
         }
     }
@@ -106,7 +85,7 @@ final class fn extends ji {
     }
 
     private final int d(int param0, int param1, int param2) {
-        int var4 = 0;
+        int var4;
         var4 = 57 * param2 + param0;
         if (param1 != 2147483647) {
           fn.a(42, 102, 48, -125, -26, (byte) 110, 39, -15);
@@ -119,11 +98,11 @@ final class fn extends ji {
     }
 
     final int[] c(int param0, int param1) {
-        int[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int[] var7 = null;
+        int[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int[] var7;
         var6 = Vertigo2.field_L ? 1 : 0;
         if (param1 > 91) {
           var7 = this.field_x.a(param0, (byte) -108);
@@ -149,16 +128,16 @@ final class fn extends ji {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7) {
-        RuntimeException var8 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var14 = 0;
         int[] var18 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var14 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {

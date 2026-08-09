@@ -8,7 +8,24 @@ abstract class bi extends jla {
     static sna field_h;
 
     final static void a(int param0, boolean param1, int param2, oha param3, int param4, int param5, int param6, boolean param7, double param8) {
-        int discarded$1 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_21_1 = 0;
+        int stackIn_21_2 = 0;
+        int stackIn_22_1 = 0;
+        int stackIn_22_2 = 0;
+        int stackIn_22_3 = 0;
+        int stackIn_24_1 = 0;
+        int stackIn_25_1 = 0;
+        int stackIn_25_2 = 0;
+        RuntimeException stackIn_56_0 = null;
+        StringBuilder stackIn_56_1 = null;
+        RuntimeException stackIn_57_0 = null;
+        StringBuilder stackIn_57_1 = null;
+        String stackIn_57_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
         String var11 = null;
         int var12 = 0;
@@ -27,72 +44,6 @@ abstract class bi extends jla {
         String var25 = null;
         int var26 = 0;
         String var27 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_20_1 = 0;
-        int stackIn_20_2 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_21_1 = 0;
-        int stackIn_21_2 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_22_1 = 0;
-        int stackIn_22_2 = 0;
-        int stackIn_22_3 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_23_1 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_24_1 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_25_1 = 0;
-        int stackIn_25_2 = 0;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
-        RuntimeException stackIn_56_0 = null;
-        StringBuilder stackIn_56_1 = null;
-        RuntimeException stackIn_57_0 = null;
-        StringBuilder stackIn_57_1 = null;
-        String stackIn_57_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_19_1 = 0;
-        int stackOut_19_2 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_21_1 = 0;
-        int stackOut_21_2 = 0;
-        int stackOut_21_3 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_20_1 = 0;
-        int stackOut_20_2 = 0;
-        int stackOut_20_3 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_22_1 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_24_1 = 0;
-        int stackOut_24_2 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_23_1 = 0;
-        int stackOut_23_2 = 0;
-        RuntimeException stackOut_54_0 = null;
-        StringBuilder stackOut_54_1 = null;
-        RuntimeException stackOut_56_0 = null;
-        StringBuilder stackOut_56_1 = null;
-        String stackOut_56_2 = null;
-        RuntimeException stackOut_55_0 = null;
-        StringBuilder stackOut_55_1 = null;
-        String stackOut_55_2 = null;
         var26 = BachelorFridge.field_y;
         try {
           L0: {
@@ -100,12 +51,10 @@ abstract class bi extends jla {
               var27 = param3.a((byte) 37);
               var11 = param3.field_k;
               if (-2 != (param3.field_a ^ -1)) {
-                stackOut_3_0 = 0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = 1;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = 1;
                 break L1;
               }
             }
@@ -114,17 +63,14 @@ abstract class bi extends jla {
               var13 = 0;
               if (var12 != 0) {
                 if (-1 > (param3.field_g ^ -1)) {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_0 = 1;
                   break L2;
                 } else {
-                  stackOut_7_0 = 0;
-                  stackIn_10_0 = stackOut_7_0;
+                  stackIn_10_0 = 0;
                   break L2;
                 }
               } else {
-                stackOut_5_0 = 0;
-                stackIn_10_0 = stackOut_5_0;
+                stackIn_10_0 = 0;
                 break L2;
               }
             }
@@ -132,17 +78,14 @@ abstract class bi extends jla {
               var14 = stackIn_10_0;
               if (var12 != 0) {
                 if (-1 != (((t) ((Object) param3)).field_u ^ -1)) {
-                  stackOut_14_0 = 1;
-                  stackIn_16_0 = stackOut_14_0;
+                  stackIn_16_0 = 1;
                   break L3;
                 } else {
-                  stackOut_13_0 = 0;
-                  stackIn_16_0 = stackOut_13_0;
+                  stackIn_16_0 = 0;
                   break L3;
                 }
               } else {
-                stackOut_11_0 = 0;
-                stackIn_16_0 = stackOut_11_0;
+                stackIn_16_0 = 0;
                 break L3;
               }
             }
@@ -150,75 +93,54 @@ abstract class bi extends jla {
               var15 = stackIn_16_0;
               var16 = 10 + ad.field_h.c(var11, 200);
               if (var14 == 0) {
-                stackOut_18_0 = 0;
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = 0;
                 break L4;
               } else {
-                stackOut_17_0 = 10;
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = 10;
                 break L4;
               }
             }
             L5: {
-              stackOut_19_0 = stackIn_19_0;
-              stackOut_19_1 = ad.field_h.a(var11, 200, var13);
-              stackOut_19_2 = ad.field_h.field_F;
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+
+
+              stackIn_21_1 = ad.field_h.a(var11, 200, var13);
+
+              stackIn_21_2 = ad.field_h.field_F;
+
               if (var12 != 0) {
-                stackOut_21_0 = stackIn_21_0;
-                stackOut_21_1 = stackIn_21_1;
-                stackOut_21_2 = stackIn_21_2;
-                stackOut_21_3 = 2;
-                stackIn_22_0 = stackOut_21_0;
-                stackIn_22_1 = stackOut_21_1;
-                stackIn_22_2 = stackOut_21_2;
-                stackIn_22_3 = stackOut_21_3;
+
+                stackIn_22_1 = stackIn_21_1;
+                stackIn_22_2 = stackIn_21_2;
+                stackIn_22_3 = 2;
                 break L5;
               } else {
-                stackOut_20_0 = stackIn_20_0;
-                stackOut_20_1 = stackIn_20_1;
-                stackOut_20_2 = stackIn_20_2;
-                stackOut_20_3 = 1;
-                stackIn_22_0 = stackOut_20_0;
-                stackIn_22_1 = stackOut_20_1;
-                stackIn_22_2 = stackOut_20_2;
-                stackIn_22_3 = stackOut_20_3;
+
+                stackIn_22_1 = stackIn_21_1;
+                stackIn_22_2 = stackIn_21_2;
+                stackIn_22_3 = 1;
                 break L5;
               }
             }
             L6: {
-              stackOut_22_0 = stackIn_22_0;
-              stackOut_22_1 = stackIn_22_1 + (stackIn_22_2 << stackIn_22_3);
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
+
+
+              stackIn_24_1 = stackIn_22_1 + (stackIn_22_2 << stackIn_22_3);
+
               if (var15 != 0) {
-                stackOut_24_0 = stackIn_24_0;
-                stackOut_24_1 = stackIn_24_1;
-                stackOut_24_2 = ad.field_h.field_F;
-                stackIn_25_0 = stackOut_24_0;
-                stackIn_25_1 = stackOut_24_1;
-                stackIn_25_2 = stackOut_24_2;
+
+                stackIn_25_1 = stackIn_24_1;
+                stackIn_25_2 = ad.field_h.field_F;
                 break L6;
               } else {
-                stackOut_23_0 = stackIn_23_0;
-                stackOut_23_1 = stackIn_23_1;
-                stackOut_23_2 = 0;
-                stackIn_25_0 = stackOut_23_0;
-                stackIn_25_1 = stackOut_23_1;
-                stackIn_25_2 = stackOut_23_2;
+
+                stackIn_25_1 = stackIn_24_1;
+                stackIn_25_2 = 0;
                 break L6;
               }
             }
             L7: {
               L8: {
-                var17 = stackIn_25_0 + (stackIn_25_1 + stackIn_25_2);
+                var17 = stackIn_19_0 + (stackIn_25_1 + stackIn_25_2);
                 if (param7) {
                   break L8;
                 } else {
@@ -251,7 +173,7 @@ abstract class bi extends jla {
             L11: {
               dg.a(param4 - -13, param6, 6 + var16, var17, 10, 65793, 192);
               ad.field_h.c(var27, 20 + param4, 16 + param6, 0, -1);
-              discarded$1 = ad.field_h.a(var11, param4 - -20, param6 - -24, 200, 200, 0, -1, 0, 0, var13);
+              ad.field_h.a(var11, param4 - -20, param6 - -24, 200, 200, 0, -1, 0, 0, var13);
               var18 = ad.field_h.a(var11, 200, 0);
               if (var12 != 0) {
                 L12: {
@@ -318,27 +240,19 @@ abstract class bi extends jla {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var10 = decompiledCaughtException;
-            stackOut_54_0 = (RuntimeException) (var10);
-            stackOut_54_1 = new StringBuilder().append("bi.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_56_0 = stackOut_54_0;
-            stackIn_56_1 = stackOut_54_1;
-            stackIn_55_0 = stackOut_54_0;
-            stackIn_55_1 = stackOut_54_1;
+            stackIn_56_0 = (RuntimeException) (var10);
+
+            stackIn_56_1 = new StringBuilder().append("bi.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_56_0 = (RuntimeException) ((Object) stackIn_56_0);
-              stackOut_56_1 = (StringBuilder) ((Object) stackIn_56_1);
-              stackOut_56_2 = "null";
-              stackIn_57_0 = stackOut_56_0;
-              stackIn_57_1 = stackOut_56_1;
-              stackIn_57_2 = stackOut_56_2;
+              stackIn_57_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackIn_57_1 = (StringBuilder) ((Object) stackIn_56_1);
+              stackIn_57_2 = "null";
               break L15;
             } else {
-              stackOut_55_0 = (RuntimeException) ((Object) stackIn_55_0);
-              stackOut_55_1 = (StringBuilder) ((Object) stackIn_55_1);
-              stackOut_55_2 = "{...}";
-              stackIn_57_0 = stackOut_55_0;
-              stackIn_57_1 = stackOut_55_1;
-              stackIn_57_2 = stackOut_55_2;
+              stackIn_57_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackIn_57_1 = (StringBuilder) ((Object) stackIn_56_1);
+              stackIn_57_2 = "{...}";
               break L15;
             }
           }
@@ -366,34 +280,28 @@ abstract class bi extends jla {
     }
 
     void b(boolean param0, int param1, int param2) {
-        int var5 = 0;
-        String var6 = null;
-        pia var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        kv var11 = null;
+        int var5;
+        String var6;
+        pia var7;
+        int var8;
+        int var9;
+        int var10;
+        kv var11;
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         L0: {
           var11 = this.b(param1, (byte) 74);
           var5 = this.d(param1, param2 + 26891) ? 1 : 0;
           var6 = this.d(false, pj.field_b[this.field_b][param1]);
           var7 = fn.field_n;
           if (var5 == 0) {
-            stackOut_4_0 = 8;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 8;
             break L0;
           } else {
             if (param0) {
-              stackOut_3_0 = 10;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = 10;
               break L0;
             } else {
-              stackOut_2_0 = 9;
-              stackIn_5_0 = stackOut_2_0;
+              stackIn_5_0 = 9;
               break L0;
             }
           }

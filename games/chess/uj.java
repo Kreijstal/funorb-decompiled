@@ -21,13 +21,12 @@ final class uj extends o {
     }
 
     final static char a(char param0, byte param1) {
-        char discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Chess.field_G;
         if (param1 < 15) {
           L0: {
-            discarded$1 = uj.a('w', (byte) 121);
+            uj.a('w', (byte) 121);
             var2 = param0;
             if ((var2 ^ -1) != -33) {
               if ((var2 ^ -1) != -161) {
@@ -532,11 +531,13 @@ final class uj extends o {
     }
 
     final static void a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        pa var4_ref_pa = null;
         int var4 = 0;
+        pa var4_ref_pa = null;
         dc var5 = null;
         int var5_int = 0;
         int[] var6 = null;
@@ -545,8 +546,6 @@ final class uj extends o {
         nk var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = Chess.field_G;
         try {
           L0: {
@@ -569,7 +568,7 @@ final class uj extends o {
                           break L3;
                         } else {
                           L4: {
-                            if (var5.field_j != var3) {
+                            if ((var5.field_j ^ -1) != (var3 ^ -1)) {
                               break L4;
                             } else {
                               if (var4 != var5.field_l) {

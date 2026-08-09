@@ -16,23 +16,23 @@ final class ol implements Iterator {
     static int field_j;
 
     public final Object next() {
-        o var1 = null;
+        Object var1;
         var1 = this.field_i;
         if (var1 != this.field_g.field_a) {
-          this.field_i = var1.field_f;
+          this.field_i = ((o) (var1)).field_f;
           if (OrbDefence.field_D) {
             this.field_i = null;
             var1 = null;
-            this.field_c = var1;
+            this.field_c = (o) (var1);
             return var1;
           } else {
-            this.field_c = var1;
+            this.field_c = (o) (var1);
             return var1;
           }
         } else {
           this.field_i = null;
           var1 = null;
-          this.field_c = var1;
+          this.field_c = (o) (var1);
           return var1;
         }
     }
@@ -44,7 +44,6 @@ final class ol implements Iterator {
     final static void a(int param0, qf param1, int param2) {
         se var6 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var6 = uk.field_b;
             var6.i(param2, 112);
@@ -61,7 +60,7 @@ final class ol implements Iterator {
             }
             var6.b(param1.field_f, -1);
             var6.b(param1.field_n, -1);
-            discarded$0 = var6.e(-18951, var4);
+            var6.e(-18951, var4);
             var6.c((byte) -69, -var4 + var6.field_i);
         } catch (RuntimeException runtimeException) {
             throw dd.a((Throwable) ((Object) runtimeException), "ol.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

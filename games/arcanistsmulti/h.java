@@ -10,9 +10,9 @@ final class h extends wn {
     static int field_J;
 
     final qm a(int param0) {
-        oc var2 = null;
-        vi var3 = null;
-        int var4 = 0;
+        oc var2;
+        vi var3;
+        int var4;
         L0: {
           var4 = ArcanistsMulti.field_G ? 1 : 0;
           if (param0 > 31) {
@@ -124,9 +124,9 @@ final class h extends wn {
     }
 
     final vi g(int param0) {
-        oc var2 = null;
-        vi var3 = null;
-        int var4 = 0;
+        oc var2;
+        vi var3;
+        int var4;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         var2 = new oc(this.field_H);
         if (param0 == 7213) {
@@ -185,25 +185,14 @@ final class h extends wn {
     }
 
     final void b(qm param0, int param1) {
-        boolean discarded$8 = false;
         vi var3 = null;
-        RuntimeException var3_ref = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var3_ref = null;
         try {
           L0: {
             if (param0 instanceof vi) {
@@ -211,7 +200,7 @@ final class h extends wn {
                 var3 = (vi) ((Object) param0);
                 this.field_H.a((pg) (var3), (byte) -58);
                 var3.field_G = true;
-                discarded$8 = var3.a(0, (qm) (this));
+                var3.a(0, (qm) (this));
                 if (param1 == 15637) {
                   break L1;
                 } else {
@@ -228,27 +217,19 @@ final class h extends wn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3_ref);
-            stackOut_5_1 = new StringBuilder().append("h.H(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3_ref);
+
+            stackIn_7_1 = new StringBuilder().append("h.H(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }

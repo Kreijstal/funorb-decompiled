@@ -15,8 +15,8 @@ final class mk extends a implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int b(int param0) {
-        int var2 = 0;
-        java.awt.Component var3 = null;
+        int var2;
+        java.awt.Component var3;
         if (param0 != -1) {
           var3 = (java.awt.Component) null;
           this.a((java.awt.Component) null, true);

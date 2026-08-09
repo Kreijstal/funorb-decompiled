@@ -28,9 +28,21 @@ final class en extends km {
 
     final static void a(String param0, Throwable param1, int param2) {
         try {
-            int discarded$1 = 0;
-            Exception var3 = null;
-            String var3_ref = null;
+            pd stackIn_12_0;
+            java.net.URL stackIn_12_1;
+            java.net.URL stackIn_12_2;
+            java.net.URL stackIn_12_3;
+            StringBuilder stackIn_12_4;
+            pd stackIn_13_0;
+            java.net.URL stackIn_13_1;
+            java.net.URL stackIn_13_2;
+            java.net.URL stackIn_13_3;
+            StringBuilder stackIn_13_4;
+            String stackIn_13_5;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            String var3 = null;
+            Exception var3_ref = null;
             un var4 = null;
             DataInputStream var5 = null;
             int var6 = 0;
@@ -38,50 +50,15 @@ final class en extends km {
             String var8 = null;
             String var9 = null;
             String var10 = null;
-            pd stackIn_11_0 = null;
-            java.net.URL stackIn_11_1 = null;
-            java.net.URL stackIn_11_2 = null;
-            java.net.URL stackIn_11_3 = null;
-            StringBuilder stackIn_11_4 = null;
-            pd stackIn_12_0 = null;
-            java.net.URL stackIn_12_1 = null;
-            java.net.URL stackIn_12_2 = null;
-            java.net.URL stackIn_12_3 = null;
-            StringBuilder stackIn_12_4 = null;
-            pd stackIn_13_0 = null;
-            java.net.URL stackIn_13_1 = null;
-            java.net.URL stackIn_13_2 = null;
-            java.net.URL stackIn_13_3 = null;
-            StringBuilder stackIn_13_4 = null;
-            String stackIn_13_5 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            pd stackOut_10_0 = null;
-            java.net.URL stackOut_10_1 = null;
-            java.net.URL stackOut_10_2 = null;
-            java.net.URL stackOut_10_3 = null;
-            StringBuilder stackOut_10_4 = null;
-            pd stackOut_12_0 = null;
-            java.net.URL stackOut_12_1 = null;
-            java.net.URL stackOut_12_2 = null;
-            java.net.URL stackOut_12_3 = null;
-            StringBuilder stackOut_12_4 = null;
-            String stackOut_12_5 = null;
-            pd stackOut_11_0 = null;
-            java.net.URL stackOut_11_1 = null;
-            java.net.URL stackOut_11_2 = null;
-            java.net.URL stackOut_11_3 = null;
-            StringBuilder stackOut_11_4 = null;
-            String stackOut_11_5 = null;
             var6 = Virogrid.field_F ? 1 : 0;
             try {
               L0: {
                 L1: {
-                  var3_ref = "";
+                  var3 = "";
                   if (param1 == null) {
                     break L1;
                   } else {
-                    var3_ref = ma.a(40, param1);
+                    var3 = ma.a(40, param1);
                     break L1;
                   }
                 }
@@ -93,16 +70,16 @@ final class en extends km {
                       if (param1 == null) {
                         break L3;
                       } else {
-                        var3_ref = var3_ref + " | ";
+                        var3 = var3 + " | ";
                         break L3;
                       }
                     }
-                    var3_ref = var3_ref + param0;
+                    var3 = var3 + param0;
                     break L2;
                   }
                 }
-                kb.a(var3_ref, 0);
-                var7 = kn.a(var3_ref, (byte) -33, "%3a", ":");
+                kb.a(var3, 0);
+                var7 = kn.a(var3, (byte) -33, "%3a", ":");
                 var8 = kn.a(var7, (byte) -33, "%40", "@");
                 var9 = kn.a(var8, (byte) -33, "%26", "&");
                 var10 = kn.a(var9, (byte) -33, "%23", "#");
@@ -111,48 +88,31 @@ final class en extends km {
                   break L0;
                 } else {
                   L4: {
-                    stackOut_10_0 = qn.field_R;
-                    stackOut_10_1 = null;
-                    stackOut_10_2 = null;
-                    stackOut_10_3 = wf.field_m.getCodeBase();
-                    stackOut_10_4 = new StringBuilder().append("clienterror.ws?c=").append(db.field_v).append("&u=");
-                    stackIn_12_0 = stackOut_10_0;
-                    stackIn_12_1 = stackOut_10_1;
-                    stackIn_12_2 = stackOut_10_2;
-                    stackIn_12_3 = stackOut_10_3;
-                    stackIn_12_4 = stackOut_10_4;
-                    stackIn_11_0 = stackOut_10_0;
-                    stackIn_11_1 = stackOut_10_1;
-                    stackIn_11_2 = stackOut_10_2;
-                    stackIn_11_3 = stackOut_10_3;
-                    stackIn_11_4 = stackOut_10_4;
+                    stackIn_12_0 = qn.field_R;
+
+                    stackIn_12_1 = null;
+
+                    stackIn_12_2 = null;
+
+                    stackIn_12_3 = wf.field_m.getCodeBase();
+
+                    stackIn_12_4 = new StringBuilder().append("clienterror.ws?c=").append(db.field_v).append("&u=");
+
                     if (mf.field_f == null) {
-                      stackOut_12_0 = (pd) ((Object) stackIn_12_0);
-                      stackOut_12_1 = null;
-                      stackOut_12_2 = null;
-                      stackOut_12_3 = (java.net.URL) ((Object) stackIn_12_3);
-                      stackOut_12_4 = (StringBuilder) ((Object) stackIn_12_4);
-                      stackOut_12_5 = "" + ae.field_d;
-                      stackIn_13_0 = stackOut_12_0;
-                      stackIn_13_1 = stackOut_12_1;
-                      stackIn_13_2 = stackOut_12_2;
-                      stackIn_13_3 = stackOut_12_3;
-                      stackIn_13_4 = stackOut_12_4;
-                      stackIn_13_5 = stackOut_12_5;
+                      stackIn_13_0 = (pd) ((Object) stackIn_12_0);
+                      stackIn_13_1 = null;
+                      stackIn_13_2 = null;
+                      stackIn_13_3 = (java.net.URL) ((Object) stackIn_12_3);
+                      stackIn_13_4 = (StringBuilder) ((Object) stackIn_12_4);
+                      stackIn_13_5 = "" + ae.field_d;
                       break L4;
                     } else {
-                      stackOut_11_0 = (pd) ((Object) stackIn_11_0);
-                      stackOut_11_1 = null;
-                      stackOut_11_2 = null;
-                      stackOut_11_3 = (java.net.URL) ((Object) stackIn_11_3);
-                      stackOut_11_4 = (StringBuilder) ((Object) stackIn_11_4);
-                      stackOut_11_5 = mf.field_f;
-                      stackIn_13_0 = stackOut_11_0;
-                      stackIn_13_1 = stackOut_11_1;
-                      stackIn_13_2 = stackOut_11_2;
-                      stackIn_13_3 = stackOut_11_3;
-                      stackIn_13_4 = stackOut_11_4;
-                      stackIn_13_5 = stackOut_11_5;
+                      stackIn_13_0 = (pd) ((Object) stackIn_12_0);
+                      stackIn_13_1 = null;
+                      stackIn_13_2 = null;
+                      stackIn_13_3 = (java.net.URL) ((Object) stackIn_12_3);
+                      stackIn_13_4 = (StringBuilder) ((Object) stackIn_12_4);
+                      stackIn_13_5 = mf.field_f;
                       break L4;
                     }
                   }
@@ -164,7 +124,7 @@ final class en extends km {
                           break L6;
                         } else {
                           var5 = (DataInputStream) (var4.field_f);
-                          discarded$1 = var5.read();
+                          var5.read();
                           var5.close();
                           break L6;
                         }
@@ -181,7 +141,7 @@ final class en extends km {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L7: {
-                var3 = (Exception) (Object) decompiledCaughtException;
+                var3_ref = (Exception) (Object) decompiledCaughtException;
                 decompiledRegionSelector0 = 1;
                 break L7;
               }
@@ -213,45 +173,21 @@ final class en extends km {
     }
 
     final static int a(boolean param0, String param1, jc param2) {
-        int discarded$2 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
         jc var5 = null;
         CharSequence var6 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -262,70 +198,53 @@ final class en extends km {
                 break L1;
               } else {
                 var5 = (jc) null;
-                discarded$2 = en.a(true, (String) null, (jc) null);
+                en.a(true, (String) null, (jc) null);
                 break L1;
               }
             }
             param2.f(var4.length, 30408);
             param2.field_l = param2.field_l + ph.field_k.a(var4.length, param2.field_l, -7089, 0, var4, param2.field_g);
-            stackOut_2_0 = -var3_int + param2.field_l;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = -var3_int + param2.field_l;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("en.A(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("en.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+
+
+            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
-          throw kg.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ')');
         }
         return stackIn_3_0;
     }

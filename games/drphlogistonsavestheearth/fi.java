@@ -16,8 +16,8 @@ final class fi implements Runnable {
     static he[] field_e;
 
     final static String a(int param0, byte param1, int param2, CharSequence[] param3) {
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -33,8 +33,6 @@ final class fi implements Runnable {
         String stackIn_9_0 = null;
         String stackIn_12_0 = null;
         String stackIn_26_0 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
@@ -42,24 +40,11 @@ final class fi implements Runnable {
         String stackIn_30_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        String stackOut_25_0 = null;
-        String stackOut_11_0 = null;
-        String stackOut_8_0 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
             if (0 == param0) {
-              stackOut_3_0 = "";
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = "";
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -74,18 +59,17 @@ final class fi implements Runnable {
                       var7 = param2;
                       L2: while (true) {
                         if (var7 >= var4_int) {
-                          stackOut_25_0 = var6.toString();
-                          stackIn_26_0 = stackOut_25_0;
+                          stackIn_26_0 = var6.toString();
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
                           L3: {
                             var8 = param3[var7];
                             if (var8 == null) {
-                              discarded$5 = var6.append("null");
+                              discarded$3 = var6.append("null");
                               break L3;
                             } else {
-                              discarded$6 = var6.append(var8);
+                              discarded$4 = var6.append(var8);
                               break L3;
                             }
                           }
@@ -109,8 +93,7 @@ final class fi implements Runnable {
                     }
                   }
                 } else {
-                  stackOut_11_0 = (String) null;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = (String) null;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -118,8 +101,7 @@ final class fi implements Runnable {
                 var10 = param3[param2];
                 var4 = var10;
                 if (var4 == null) {
-                  stackOut_8_0 = "null";
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = "null";
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -132,27 +114,19 @@ final class fi implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var4_ref);
-            stackOut_27_1 = new StringBuilder().append("fi.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackIn_29_0 = (RuntimeException) (var4_ref);
+
+            stackIn_29_1 = new StringBuilder().append("fi.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L5;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L5;
             }
           }
@@ -196,10 +170,9 @@ final class fi implements Runnable {
             int var1_int = 0;
             Object var1 = null;
             Throwable var2 = null;
-            Object var2_ref = null;
-            Throwable var3 = null;
             int var4 = 0;
             Throwable decompiledCaughtException = null;
+            Object var2_ref = null;
             var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
             try {
               L0: {
@@ -255,11 +228,11 @@ final class fi implements Runnable {
     }
 
     final synchronized boolean b(int param0) {
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        Throwable decompiledCaughtException = null;
         if (2 > this.field_g) {
           L0: {
             if (0 == this.field_g) {

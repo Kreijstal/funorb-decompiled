@@ -32,8 +32,8 @@ final class aa {
     }
 
     private final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         L0: {
           var4 = MinerDisturbance.field_ab;
           if (param0 == -32676) {
@@ -89,36 +89,16 @@ final class aa {
     }
 
     final void c(int param0, int param1) {
-        int discarded$2 = 0;
-        L0: {
-          if (param1 == 0) {
-            break L0;
-          } else {
-            discarded$2 = this.a(121, (byte) 110);
-            break L0;
-          }
+        if (param1 != 0) {
+            this.a(121, (byte) 110);
         }
-        L1: {
-          if (-1 < (param0 ^ -1)) {
-            break L1;
-          } else {
-            if (param0 <= this.field_g) {
-              L2: {
-                if (this.field_g != param0) {
-                  ai.a(this.field_c, param0 - -1, this.field_c, param0, -param0 + this.field_g);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              this.field_g = this.field_g - 1;
-              return;
-            } else {
-              break L1;
-            }
-          }
+        if (-1 < (param0 ^ -1) || param0 > this.field_g) {
+            throw new ArrayIndexOutOfBoundsException(param0);
         }
-        throw new ArrayIndexOutOfBoundsException(param0);
+        if (!(this.field_g == param0)) {
+            ai.a(this.field_c, param0 - -1, this.field_c, param0, -param0 + this.field_g);
+        }
+        this.field_g = this.field_g - 1;
     }
 
     final void d(int param0, int param1) {

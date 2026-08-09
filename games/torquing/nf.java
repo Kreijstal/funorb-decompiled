@@ -89,7 +89,7 @@ final class nf {
     }
 
     private final static void a() {
-        int var0 = 0;
+        int var0;
         if (!field_h) {
           L0: {
             be.field_q = field_m;
@@ -134,26 +134,22 @@ final class nf {
         int incrementValue$15 = 0;
         int incrementValue$16 = 0;
         int incrementValue$17 = 0;
-        int var0 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         int stackIn_28_0 = 0;
         int stackIn_48_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_46_0 = 0;
+        int var12;
+        int var13;
         L0: {
           var0 = be.field_g;
           var1 = be.field_b;
@@ -302,8 +298,7 @@ final class nf {
                           break L8;
                         } else {
                           if (var8 <= ph.field_a) {
-                            stackOut_27_0 = 0;
-                            stackIn_28_0 = stackOut_27_0;
+                            stackIn_28_0 = 0;
                             break L7;
                           } else {
                             break L8;
@@ -314,8 +309,7 @@ final class nf {
                   }
                 }
               }
-              stackOut_26_0 = 1;
-              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_0 = 1;
               break L7;
             }
             be.field_q = stackIn_28_0 != 0;
@@ -371,8 +365,7 @@ final class nf {
                               break L11;
                             } else {
                               if (field_g[3] <= ph.field_a) {
-                                stackOut_47_0 = 0;
-                                stackIn_48_0 = stackOut_47_0;
+                                stackIn_48_0 = 0;
                                 break L10;
                               } else {
                                 break L11;
@@ -385,8 +378,7 @@ final class nf {
                   }
                 }
               }
-              stackOut_46_0 = 1;
-              stackIn_48_0 = stackOut_46_0;
+              stackIn_48_0 = 1;
               break L10;
             }
             be.field_q = stackIn_48_0 != 0;
@@ -492,14 +484,12 @@ final class nf {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        RuntimeException var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int stackIn_18_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
+        RuntimeException var10 = null;
         if (param0 != -1) {
           field_r = param0;
           field_l = param1;
@@ -539,8 +529,7 @@ final class nf {
                                     break L4;
                                   } else {
                                     if (var12 <= ph.field_a) {
-                                      stackOut_17_0 = 0;
-                                      stackIn_18_0 = stackOut_17_0;
+                                      stackIn_18_0 = 0;
                                       break L3;
                                     } else {
                                       break L4;
@@ -551,8 +540,7 @@ final class nf {
                             }
                           }
                         }
-                        stackOut_16_0 = 1;
-                        stackIn_18_0 = stackOut_16_0;
+                        stackIn_18_0 = 1;
                         break L3;
                       }
                       field_m = stackIn_18_0 != 0;

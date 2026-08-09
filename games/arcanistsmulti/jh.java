@@ -35,10 +35,10 @@ final class jh extends java.awt.Canvas {
     }
 
     final static void a(int param0, boolean param1) {
-        ml dupTemp$1 = null;
-        int var3 = 0;
-        ml var4 = null;
-        ml var5 = null;
+        ml dupTemp$0 = null;
+        int var3;
+        ml var4;
+        ml var5;
         L0: {
           var3 = ArcanistsMulti.field_G ? 1 : 0;
           if (-1 == (mj.field_p ^ -1)) {
@@ -828,8 +828,8 @@ final class jh extends java.awt.Canvas {
                 if (240 <= rk.field_O.a(0, true).field_ib) {
                   break L29;
                 } else {
-                  dupTemp$1 = rk.field_O.a(0, true);
-                  dupTemp$1.field_ib = dupTemp$1.field_ib + 1;
+                  dupTemp$0 = rk.field_O.a(0, true);
+                  dupTemp$0.field_ib = dupTemp$0.field_ib + 1;
                   break L29;
                 }
               }
@@ -1019,38 +1019,15 @@ final class jh extends java.awt.Canvas {
         byte[] var4 = null;
         CharSequence var5 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -1066,128 +1043,84 @@ final class jh extends java.awt.Canvas {
             var4 = go.a(var5, (byte) -82);
             param0.d(var4.length, (byte) -124);
             param0.field_g = param0.field_g + kh.field_g.a(param0.field_j, var4.length, var4, param0.field_g, 1, 0);
-            stackOut_2_0 = -var3_int + param0.field_g;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = -var3_int + param0.field_g;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("jh.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("jh.A(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+
+
+            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ')');
         }
         return stackIn_3_0;
     }
 
     final static void a(Throwable param0, String param1, byte param2) {
         try {
-            int discarded$1 = 0;
-            Exception var3 = null;
-            String var3_ref = null;
+            dl stackIn_14_0;
+            int stackIn_14_1;
+            java.net.URL stackIn_14_2;
+            java.net.URL stackIn_14_3;
+            java.net.URL stackIn_14_4;
+            StringBuilder stackIn_14_5;
+            dl stackIn_15_0;
+            int stackIn_15_1;
+            java.net.URL stackIn_15_2;
+            java.net.URL stackIn_15_3;
+            java.net.URL stackIn_15_4;
+            StringBuilder stackIn_15_5;
+            String stackIn_15_6;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            String var3 = null;
+            Exception var3_ref = null;
             og var4 = null;
             DataInputStream var5 = null;
             int var6 = 0;
             java.applet.Applet var7 = null;
             String var8 = null;
-            dl stackIn_13_0 = null;
-            int stackIn_13_1 = 0;
-            java.net.URL stackIn_13_2 = null;
-            java.net.URL stackIn_13_3 = null;
-            java.net.URL stackIn_13_4 = null;
-            StringBuilder stackIn_13_5 = null;
-            dl stackIn_14_0 = null;
-            int stackIn_14_1 = 0;
-            java.net.URL stackIn_14_2 = null;
-            java.net.URL stackIn_14_3 = null;
-            java.net.URL stackIn_14_4 = null;
-            StringBuilder stackIn_14_5 = null;
-            dl stackIn_15_0 = null;
-            int stackIn_15_1 = 0;
-            java.net.URL stackIn_15_2 = null;
-            java.net.URL stackIn_15_3 = null;
-            java.net.URL stackIn_15_4 = null;
-            StringBuilder stackIn_15_5 = null;
-            String stackIn_15_6 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            dl stackOut_12_0 = null;
-            int stackOut_12_1 = 0;
-            java.net.URL stackOut_12_2 = null;
-            java.net.URL stackOut_12_3 = null;
-            java.net.URL stackOut_12_4 = null;
-            StringBuilder stackOut_12_5 = null;
-            dl stackOut_14_0 = null;
-            int stackOut_14_1 = 0;
-            java.net.URL stackOut_14_2 = null;
-            java.net.URL stackOut_14_3 = null;
-            java.net.URL stackOut_14_4 = null;
-            StringBuilder stackOut_14_5 = null;
-            String stackOut_14_6 = null;
-            dl stackOut_13_0 = null;
-            int stackOut_13_1 = 0;
-            java.net.URL stackOut_13_2 = null;
-            java.net.URL stackOut_13_3 = null;
-            java.net.URL stackOut_13_4 = null;
-            StringBuilder stackOut_13_5 = null;
-            String stackOut_13_6 = null;
             var6 = ArcanistsMulti.field_G ? 1 : 0;
             try {
               L0: {
                 L1: {
-                  var3_ref = "";
+                  var3 = "";
                   if (param0 == null) {
                     break L1;
                   } else {
-                    var3_ref = b.a((byte) 122, param0);
+                    var3 = b.a((byte) 122, param0);
                     break L1;
                   }
                 }
@@ -1199,16 +1132,16 @@ final class jh extends java.awt.Canvas {
                       if (param0 == null) {
                         break L3;
                       } else {
-                        var3_ref = var3_ref + " | ";
+                        var3 = var3 + " | ";
                         break L3;
                       }
                     }
-                    var3_ref = var3_ref + param1;
+                    var3 = var3 + param1;
                     break L2;
                   }
                 }
                 L4: {
-                  se.a((byte) -125, var3_ref);
+                  se.a((byte) -125, var3);
                   if (param2 == 20) {
                     break L4;
                   } else {
@@ -1217,64 +1150,44 @@ final class jh extends java.awt.Canvas {
                     break L4;
                   }
                 }
-                var3_ref = si.a(var3_ref, ":", "%3a", (byte) 107);
-                var3_ref = si.a(var3_ref, "@", "%40", (byte) 125);
-                var3_ref = si.a(var3_ref, "&", "%26", (byte) 100);
-                var8 = si.a(var3_ref, "#", "%23", (byte) 100);
+                var3 = si.a(var3, ":", "%3a", (byte) 107);
+                var3 = si.a(var3, "@", "%40", (byte) 125);
+                var3 = si.a(var3, "&", "%26", (byte) 100);
+                var8 = si.a(var3, "#", "%23", (byte) 100);
                 if (hh.field_e == null) {
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
                   L5: {
-                    stackOut_12_0 = rb.field_k;
-                    stackOut_12_1 = 1;
-                    stackOut_12_2 = null;
-                    stackOut_12_3 = null;
-                    stackOut_12_4 = hh.field_e.getCodeBase();
-                    stackOut_12_5 = new StringBuilder().append("clienterror.ws?c=").append(ji.field_g).append("&u=");
-                    stackIn_14_0 = stackOut_12_0;
-                    stackIn_14_1 = stackOut_12_1;
-                    stackIn_14_2 = stackOut_12_2;
-                    stackIn_14_3 = stackOut_12_3;
-                    stackIn_14_4 = stackOut_12_4;
-                    stackIn_14_5 = stackOut_12_5;
-                    stackIn_13_0 = stackOut_12_0;
-                    stackIn_13_1 = stackOut_12_1;
-                    stackIn_13_2 = stackOut_12_2;
-                    stackIn_13_3 = stackOut_12_3;
-                    stackIn_13_4 = stackOut_12_4;
-                    stackIn_13_5 = stackOut_12_5;
+                    stackIn_14_0 = rb.field_k;
+
+                    stackIn_14_1 = 1;
+
+                    stackIn_14_2 = null;
+
+                    stackIn_14_3 = null;
+
+                    stackIn_14_4 = hh.field_e.getCodeBase();
+
+                    stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(ji.field_g).append("&u=");
+
                     if (null == fj.field_i) {
-                      stackOut_14_0 = (dl) ((Object) stackIn_14_0);
-                      stackOut_14_1 = stackIn_14_1;
-                      stackOut_14_2 = null;
-                      stackOut_14_3 = null;
-                      stackOut_14_4 = (java.net.URL) ((Object) stackIn_14_4);
-                      stackOut_14_5 = (StringBuilder) ((Object) stackIn_14_5);
-                      stackOut_14_6 = "" + vg.field_K;
-                      stackIn_15_0 = stackOut_14_0;
-                      stackIn_15_1 = stackOut_14_1;
-                      stackIn_15_2 = stackOut_14_2;
-                      stackIn_15_3 = stackOut_14_3;
-                      stackIn_15_4 = stackOut_14_4;
-                      stackIn_15_5 = stackOut_14_5;
-                      stackIn_15_6 = stackOut_14_6;
+                      stackIn_15_0 = (dl) ((Object) stackIn_14_0);
+                      stackIn_15_1 = stackIn_14_1;
+                      stackIn_15_2 = null;
+                      stackIn_15_3 = null;
+                      stackIn_15_4 = (java.net.URL) ((Object) stackIn_14_4);
+                      stackIn_15_5 = (StringBuilder) ((Object) stackIn_14_5);
+                      stackIn_15_6 = "" + vg.field_K;
                       break L5;
                     } else {
-                      stackOut_13_0 = (dl) ((Object) stackIn_13_0);
-                      stackOut_13_1 = stackIn_13_1;
-                      stackOut_13_2 = null;
-                      stackOut_13_3 = null;
-                      stackOut_13_4 = (java.net.URL) ((Object) stackIn_13_4);
-                      stackOut_13_5 = (StringBuilder) ((Object) stackIn_13_5);
-                      stackOut_13_6 = fj.field_i;
-                      stackIn_15_0 = stackOut_13_0;
-                      stackIn_15_1 = stackOut_13_1;
-                      stackIn_15_2 = stackOut_13_2;
-                      stackIn_15_3 = stackOut_13_3;
-                      stackIn_15_4 = stackOut_13_4;
-                      stackIn_15_5 = stackOut_13_5;
-                      stackIn_15_6 = stackOut_13_6;
+                      stackIn_15_0 = (dl) ((Object) stackIn_14_0);
+                      stackIn_15_1 = stackIn_14_1;
+                      stackIn_15_2 = null;
+                      stackIn_15_3 = null;
+                      stackIn_15_4 = (java.net.URL) ((Object) stackIn_14_4);
+                      stackIn_15_5 = (StringBuilder) ((Object) stackIn_14_5);
+                      stackIn_15_6 = fj.field_i;
                       break L5;
                     }
                   }
@@ -1286,7 +1199,7 @@ final class jh extends java.awt.Canvas {
                           break L7;
                         } else {
                           var5 = (DataInputStream) (var4.field_g);
-                          discarded$1 = var5.read();
+                          var5.read();
                           var5.close();
                           break L7;
                         }
@@ -1303,7 +1216,7 @@ final class jh extends java.awt.Canvas {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L8: {
-                var3 = (Exception) (Object) decompiledCaughtException;
+                var3_ref = (Exception) (Object) decompiledCaughtException;
                 decompiledRegionSelector0 = 1;
                 break L8;
               }

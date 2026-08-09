@@ -38,7 +38,7 @@ final class iq extends lw {
     }
 
     final void a(int param0, byte param1) {
-        int var4 = 0;
+        int var4;
         var4 = BachelorFridge.field_y;
         if (param1 != 73) {
           iq.d((byte) -86);

@@ -13,7 +13,6 @@ final class kp {
     final static void a(int param0, byte param1, pn param2) {
         pi var6 = null;
         int var5 = 0;
-        int discarded$0 = 0;
         try {
             var6 = k.field_h;
             int var4 = 107 / ((44 - param1) / 45);
@@ -27,7 +26,7 @@ final class kp {
             var6.a(param2.field_r, (byte) -79);
             var6.a(param2.field_l, (byte) -79);
             var6.a(param2.field_k, (byte) -79);
-            discarded$0 = var6.d(3, var5);
+            var6.d(3, var5);
             var6.d((byte) 124, -var5 + var6.field_l);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) ((Object) runtimeException), "kp.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

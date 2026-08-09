@@ -27,9 +27,6 @@ abstract class nd extends jl {
         int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_9_0 = 0;
         var5 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -70,15 +67,13 @@ abstract class nd extends jl {
                 var3 = 0;
                 L5: while (true) {
                   if (var3 >= var6.length) {
-                    stackOut_20_0 = 0;
-                    stackIn_21_0 = stackOut_20_0;
+                    stackIn_21_0 = 0;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
                     var4 = var6[var3];
                     if (var4 == param0) {
-                      stackOut_17_0 = 1;
-                      stackIn_18_0 = stackOut_17_0;
+                      stackIn_18_0 = 1;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
@@ -91,8 +86,7 @@ abstract class nd extends jl {
                 return false;
               }
             }
-            stackOut_9_0 = 1;
-            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_0 = 1;
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -113,14 +107,15 @@ abstract class nd extends jl {
     }
 
     final static void e(byte param0) {
-        od dupTemp$7 = null;
+        od[] dupTemp$2 = null;
+        od dupTemp$3 = null;
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         od var3 = null;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -137,9 +132,10 @@ abstract class nd extends jl {
                       var1_int++;
                       continue L1;
                     } else {
-                      dupTemp$7 = new od(bf.field_R[-1 + var1_int][var2], false, true, true, true);
-                      bf.field_R[var1_int][var2] = dupTemp$7;
-                      var3 = dupTemp$7;
+                      dupTemp$2 = bf.field_R[var1_int];
+                      dupTemp$3 = new od(bf.field_R[-1 + var1_int][var2], false, true, true, true);
+                      dupTemp$2[var2] = dupTemp$3;
+                      var3 = dupTemp$3;
                       var3.a(80, 80, 80);
                       var2++;
                       continue L2;

@@ -16,13 +16,13 @@ final class bt {
     }
 
     final static String a(boolean param0, long param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         qs.field_a.setTime(new Date(param1));
         var3 = qs.field_a.get(7);
         var4 = qs.field_a.get(5);

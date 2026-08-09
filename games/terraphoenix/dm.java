@@ -27,9 +27,7 @@ final class dm {
     }
 
     final static q a(byte param0, String param1) {
-        q discarded$2 = null;
         String var2 = null;
-        RuntimeException var2_ref = null;
         q var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -38,8 +36,6 @@ final class dm {
         CharSequence var8 = null;
         Object stackIn_5_0 = null;
         q stackIn_16_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -47,16 +43,7 @@ final class dm {
         String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        q stackOut_15_0 = null;
-        Object stackOut_4_0 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException var2_ref = null;
         var5 = Terraphoenix.field_V;
         try {
           L0: {
@@ -65,7 +52,7 @@ final class dm {
                 break L1;
               } else {
                 var6 = (String) null;
-                discarded$2 = dm.a((byte) 0, (String) null);
+                dm.a((byte) 0, (String) null);
                 break L1;
               }
             }
@@ -94,8 +81,7 @@ final class dm {
                     }
                   }
                   if (var4.equals(var2)) {
-                    stackOut_15_0 = (q) (var3);
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = (q) (var3);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -107,8 +93,7 @@ final class dm {
                 }
               }
             } else {
-              stackOut_4_0 = null;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -117,27 +102,19 @@ final class dm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2_ref = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2_ref);
-            stackOut_19_1 = new StringBuilder().append("dm.C(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2_ref);
+
+            stackIn_21_1 = new StringBuilder().append("dm.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L5;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L5;
             }
           }
@@ -161,9 +138,9 @@ final class dm {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
+            int var0;
+            int var1;
+            int var2;
             field_f = 20000000L;
             field_b = new int[256];
             var1 = 0;

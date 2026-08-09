@@ -40,15 +40,12 @@ final class ji implements Iterable {
     }
 
     final static boolean a(byte param0) {
-        boolean discarded$3 = false;
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_2_0 = 0;
         var1_ref = ol.field_l;
         synchronized (var1_ref) {
           L0: {
@@ -57,19 +54,17 @@ final class ji implements Iterable {
                 if (param0 == -72) {
                   break L1;
                 } else {
-                  discarded$3 = ji.a((byte) 25);
+                  ji.a((byte) 25);
                   break L1;
                 }
               }
               da.field_b = gj.field_x[tj.field_h];
               pe.field_b = ok.field_q[tj.field_h];
               tj.field_h = 127 & tj.field_h + 1;
-              stackOut_6_0 = 1;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               return stackIn_3_0 != 0;
             }
           }
@@ -78,10 +73,9 @@ final class ji implements Iterable {
     }
 
     final kd a(byte param0, long param1) {
-        Iterator discarded$1 = null;
-        kd var4 = null;
-        kd var5 = null;
-        int var6 = 0;
+        kd var4;
+        kd var5;
+        int var6;
         var6 = Lexicominos.field_L ? 1 : 0;
         if (param0 == 42) {
           var4 = this.field_f[(int)(param1 & (long)(-1 + this.field_d))];
@@ -91,7 +85,12 @@ final class ji implements Iterable {
               if (var6 == 0) {
                 if ((param1 ^ -1L) != (this.field_c.field_d ^ -1L)) {
                   this.field_c = this.field_c.field_f;
-                  continue L0;
+                  if (var6 == 0) {
+                    continue L0;
+                  } else {
+                    this.field_c = null;
+                    return null;
+                  }
                 } else {
                   var5 = this.field_c;
                   this.field_c = this.field_c.field_f;
@@ -106,7 +105,7 @@ final class ji implements Iterable {
             }
           }
         } else {
-          discarded$1 = this.iterator();
+          this.iterator();
           var4 = this.field_f[(int)(param1 & (long)(-1 + this.field_d))];
           this.field_c = var4.field_f;
           L1: while (true) {
@@ -114,7 +113,12 @@ final class ji implements Iterable {
               if (var6 == 0) {
                 if ((param1 ^ -1L) != (this.field_c.field_d ^ -1L)) {
                   this.field_c = this.field_c.field_f;
-                  continue L1;
+                  if (var6 == 0) {
+                    continue L1;
+                  } else {
+                    this.field_c = null;
+                    return null;
+                  }
                 } else {
                   var5 = this.field_c;
                   this.field_c = this.field_c.field_f;

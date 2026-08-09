@@ -16,22 +16,12 @@ final class wf {
             int var4 = 0;
             int var5 = 0;
             byte[] var6 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
             RuntimeException stackIn_20_0 = null;
             StringBuilder stackIn_20_1 = null;
             String stackIn_20_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_17_0 = null;
-            StringBuilder stackOut_17_1 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            String stackOut_19_2 = null;
-            RuntimeException stackOut_18_0 = null;
-            StringBuilder stackOut_18_1 = null;
-            String stackOut_18_2 = null;
             var5 = Pixelate.field_H ? 1 : 0;
             try {
               L0: {
@@ -97,27 +87,19 @@ final class wf {
               decompiledCaughtException = decompiledCaughtParameter1;
               L7: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_17_0 = (RuntimeException) (var2_ref);
-                stackOut_17_1 = new StringBuilder().append("wf.B(").append(param0).append(',');
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
-                stackIn_18_0 = stackOut_17_0;
-                stackIn_18_1 = stackOut_17_1;
+                stackIn_19_0 = (RuntimeException) (var2_ref);
+
+                stackIn_19_1 = new StringBuilder().append("wf.B(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackOut_19_2 = "null";
-                  stackIn_20_0 = stackOut_19_0;
-                  stackIn_20_1 = stackOut_19_1;
-                  stackIn_20_2 = stackOut_19_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "null";
                   break L7;
                 } else {
-                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackOut_18_2 = "{...}";
-                  stackIn_20_0 = stackOut_18_0;
-                  stackIn_20_1 = stackOut_18_1;
-                  stackIn_20_2 = stackOut_18_2;
+                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "{...}";
                   break L7;
                 }
               }
@@ -138,12 +120,6 @@ final class wf {
     }
 
     final static el a(boolean param0, String param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         el stackIn_3_0 = null;
         el stackIn_6_0 = null;
         el stackIn_11_0 = null;
@@ -151,8 +127,6 @@ final class wf {
         el stackIn_24_0 = null;
         el stackIn_38_0 = null;
         el stackIn_42_0 = null;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
         RuntimeException stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
         RuntimeException stackIn_50_0 = null;
@@ -160,22 +134,12 @@ final class wf {
         String stackIn_50_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        el stackOut_23_0 = null;
-        el stackOut_10_0 = null;
-        el stackOut_41_0 = null;
-        el stackOut_37_0 = null;
-        el stackOut_5_0 = null;
-        el stackOut_2_0 = null;
-        RuntimeException stackOut_47_0 = null;
-        StringBuilder stackOut_47_1 = null;
-        RuntimeException stackOut_49_0 = null;
-        StringBuilder stackOut_49_1 = null;
-        String stackOut_49_2 = null;
-        RuntimeException stackOut_48_0 = null;
-        StringBuilder stackOut_48_1 = null;
-        String stackOut_48_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
         var6 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -193,12 +157,10 @@ final class wf {
                           if (var5 == 92) {
                             L3: {
                               if (var3 != 0) {
-                                stackOut_19_0 = 0;
-                                stackIn_20_0 = stackOut_19_0;
+                                stackIn_20_0 = 0;
                                 break L3;
                               } else {
-                                stackOut_18_0 = 1;
-                                stackIn_20_0 = stackOut_18_0;
+                                stackIn_20_0 = 1;
                                 break L3;
                               }
                             }
@@ -212,8 +174,7 @@ final class wf {
                                 if (var3 != 0) {
                                   break L4;
                                 } else {
-                                  stackOut_23_0 = gm.field_f;
-                                  stackIn_24_0 = stackOut_23_0;
+                                  stackIn_24_0 = gm.field_f;
                                   decompiledRegionSelector0 = 3;
                                   break L0;
                                 }
@@ -230,8 +191,7 @@ final class wf {
                       }
                     }
                   } else {
-                    stackOut_10_0 = gm.field_f;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = gm.field_f;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   }
@@ -247,8 +207,7 @@ final class wf {
                             var3 = 0;
                             break L6;
                           } else {
-                            stackOut_41_0 = gm.field_f;
-                            stackIn_42_0 = stackOut_41_0;
+                            stackIn_42_0 = gm.field_f;
                             decompiledRegionSelector0 = 5;
                             break L0;
                           }
@@ -269,8 +228,7 @@ final class wf {
                               }
                             }
                           }
-                          stackOut_37_0 = gm.field_f;
-                          stackIn_38_0 = stackOut_37_0;
+                          stackIn_38_0 = gm.field_f;
                           decompiledRegionSelector0 = 4;
                           break L0;
                         }
@@ -283,14 +241,12 @@ final class wf {
                   }
                 }
               } else {
-                stackOut_5_0 = mk.field_a;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = mk.field_a;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = pd.field_Kb;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = pd.field_Kb;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -299,27 +255,19 @@ final class wf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_47_0 = (RuntimeException) (var2);
-            stackOut_47_1 = new StringBuilder().append("wf.C(").append(param0).append(',');
-            stackIn_49_0 = stackOut_47_0;
-            stackIn_49_1 = stackOut_47_1;
-            stackIn_48_0 = stackOut_47_0;
-            stackIn_48_1 = stackOut_47_1;
+            stackIn_49_0 = (RuntimeException) (var2);
+
+            stackIn_49_1 = new StringBuilder().append("wf.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_49_0 = (RuntimeException) ((Object) stackIn_49_0);
-              stackOut_49_1 = (StringBuilder) ((Object) stackIn_49_1);
-              stackOut_49_2 = "null";
-              stackIn_50_0 = stackOut_49_0;
-              stackIn_50_1 = stackOut_49_1;
-              stackIn_50_2 = stackOut_49_2;
+              stackIn_50_0 = (RuntimeException) ((Object) stackIn_49_0);
+              stackIn_50_1 = (StringBuilder) ((Object) stackIn_49_1);
+              stackIn_50_2 = "null";
               break L8;
             } else {
-              stackOut_48_0 = (RuntimeException) ((Object) stackIn_48_0);
-              stackOut_48_1 = (StringBuilder) ((Object) stackIn_48_1);
-              stackOut_48_2 = "{...}";
-              stackIn_50_0 = stackOut_48_0;
-              stackIn_50_1 = stackOut_48_1;
-              stackIn_50_2 = stackOut_48_2;
+              stackIn_50_0 = (RuntimeException) ((Object) stackIn_49_0);
+              stackIn_50_1 = (StringBuilder) ((Object) stackIn_49_1);
+              stackIn_50_2 = "{...}";
               break L8;
             }
           }

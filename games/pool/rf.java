@@ -35,7 +35,7 @@ final class rf {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         if (param0 == 0) {
           return 0;
         } else {

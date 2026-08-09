@@ -13,9 +13,9 @@ final class pf {
     static char[] field_h;
 
     final nb a(int param0, long param1) {
-        nb var4 = null;
-        nb var5 = null;
-        int var6 = 0;
+        nb var4;
+        nb var5;
+        int var6;
         var6 = ZombieDawn.field_J;
         this.field_e = param1;
         if (param0 == 93) {

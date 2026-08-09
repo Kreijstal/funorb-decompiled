@@ -9,11 +9,10 @@ final class fa {
     static int field_c;
 
     final static cb a(int param0, int param1, int param2, int param3) {
-        cb discarded$2 = null;
-        cb var4 = null;
+        cb var4;
         var4 = new cb();
         if (param2 != 27375) {
-          discarded$2 = fa.a(5, -19, -58, -17);
+          fa.a(5, -19, -58, -17);
           var4.field_k = param1;
           var4.field_l = param3;
           ae.field_nb.a((byte) 54, var4);
@@ -29,11 +28,11 @@ final class fa {
     }
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         og var4 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = Torquing.field_u;
         try {
           L0: {

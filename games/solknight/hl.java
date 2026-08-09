@@ -16,14 +16,13 @@ final class hl {
     }
 
     final int a(int param0) {
-        ec discarded$2 = null;
-        int var2 = 0;
-        ec var3 = null;
-        int var4 = 0;
+        int var2;
+        ec var3;
+        int var4;
         var4 = SolKnight.field_L ? 1 : 0;
         var2 = 0;
         if (param0 != -29749) {
-          discarded$2 = this.c(127);
+          this.c(127);
           var3 = this.field_b.field_i;
           L0: while (true) {
             if (var3 == this.field_b) {
@@ -49,7 +48,7 @@ final class hl {
     }
 
     final ec c(int param0) {
-        ec var2 = null;
+        ec var2;
         if (param0 == 0) {
           var2 = this.field_b.field_i;
           if (var2 == this.field_b) {
@@ -90,8 +89,8 @@ final class hl {
     }
 
     final static String a(String param0, String param1, String param2, boolean param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = SolKnight.field_L ? 1 : 0;
         if (param3) {
           var4 = param0.indexOf(param2);
@@ -120,7 +119,7 @@ final class hl {
     }
 
     final ec d(int param0) {
-        ec var2 = null;
+        ec var2;
         var2 = this.field_b.field_i;
         if (var2 != this.field_b) {
           this.field_c = var2.field_i;
@@ -136,7 +135,7 @@ final class hl {
     }
 
     final ec b(int param0) {
-        ec var2 = null;
+        ec var2;
         if (param0 == -1) {
           var2 = this.field_c;
           if (this.field_b == var2) {

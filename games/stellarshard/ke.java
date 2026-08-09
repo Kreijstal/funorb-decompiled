@@ -14,8 +14,8 @@ final class ke {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
-        int var16 = 0;
-        int var17 = 0;
+        int var16;
+        int var17;
         var17 = stellarshard.field_B;
         var16 = -36 / ((57 - param7) / 40);
         if (param12 < param1) {

@@ -49,26 +49,20 @@ final class tl extends wg {
     }
 
     private final void e(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         int stackIn_4_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         var2 = this.field_p;
         if (0 == var2) {
           L0: {
             this.field_r = 0;
             if ((this.field_r & 65536) == 0) {
-              stackOut_10_0 = 0;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = 0;
               break L0;
             } else {
-              stackOut_9_0 = this.field_s;
-              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_0 = this.field_s;
               break L0;
             }
           }
@@ -86,12 +80,10 @@ final class tl extends wg {
           L1: {
             this.field_r = this.field_r - var2;
             if ((this.field_r & 65536) == 0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = this.field_s;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = this.field_s;
               break L1;
             }
           }

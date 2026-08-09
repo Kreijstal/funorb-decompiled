@@ -33,19 +33,15 @@ final class dg extends al {
 
     private final qj b(boolean param0) {
         qj discarded$1 = null;
-        int var2 = 0;
-        qj var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        double var6 = 0.0;
-        int var8 = 0;
-        int var9 = 0;
+        int var2;
+        qj var3;
+        int var4;
+        int var5;
+        double var6;
+        int var8;
+        int var9;
         int stackIn_10_0 = 0;
         int stackIn_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         var9 = TrackController.field_F ? 1 : 0;
         var2 = this.field_u >> -1317445023;
         var3 = new qj(var2, this.field_u);
@@ -71,12 +67,10 @@ final class dg extends al {
                       L3: {
                         var6 = Math.sqrt(-var6 + 1.0);
                         if (1.0 <= var6) {
-                          stackOut_22_0 = 255;
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_23_0 = 255;
                           break L3;
                         } else {
-                          stackOut_21_0 = (int)(255.0 * var6);
-                          stackIn_23_0 = stackOut_21_0;
+                          stackIn_23_0 = (int)(255.0 * var6);
                           break L3;
                         }
                       }
@@ -113,12 +107,10 @@ final class dg extends al {
                       L7: {
                         var6 = Math.sqrt(-var6 + 1.0);
                         if (1.0 <= var6) {
-                          stackOut_9_0 = 255;
-                          stackIn_10_0 = stackOut_9_0;
+                          stackIn_10_0 = 255;
                           break L7;
                         } else {
-                          stackOut_8_0 = (int)(255.0 * var6);
-                          stackIn_10_0 = stackOut_8_0;
+                          stackIn_10_0 = (int)(255.0 * var6);
                           break L7;
                         }
                       }
@@ -149,8 +141,8 @@ final class dg extends al {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         L0: {
           if (param3 == 29221) {
             break L0;
@@ -185,13 +177,6 @@ final class dg extends al {
     }
 
     private final void a(qj param0, int param1, int param2, int param3) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -199,14 +184,11 @@ final class dg extends al {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var8 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -265,27 +247,19 @@ final class dg extends al {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var5);
-            stackOut_16_1 = new StringBuilder().append("dg.C(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var5);
+
+            stackIn_18_1 = new StringBuilder().append("dg.C(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L4;
             }
           }
@@ -299,22 +273,18 @@ final class dg extends al {
     }
 
     private final qj a(int param0, boolean param1, int param2) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        qj var14 = null;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        qj var14;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         var13 = TrackController.field_F ? 1 : 0;
         var14 = new qj(2 * this.field_K, this.field_u);
         if (!param1) {
@@ -335,12 +305,10 @@ final class dg extends al {
                 var10 = var6 + -var5;
                 var11 = 128 - -(int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
                 if (-257 >= (var11 ^ -1)) {
-                  stackOut_5_0 = var8 | var9;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = var8 | var9;
                   break L1;
                 } else {
-                  stackOut_4_0 = (16711680 & var11 * var9 | var11 * var8 & -16711936) >>> -1320549784;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = (16711680 & var11 * var9 | var11 * var8 & -16711936) >>> -1320549784;
                   break L1;
                 }
               }
@@ -351,12 +319,10 @@ final class dg extends al {
                 ll.a(var7 - this.field_K * 2, var6, this.field_K, var12);
                 var9 = param0 & 65280;
                 if ((var11 ^ -1) > -257) {
-                  stackOut_8_0 = (16711680 & var9 * var11 | var11 * var8 & -16711936) >>> 910887784;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = (16711680 & var9 * var11 | var11 * var8 & -16711936) >>> 910887784;
                   break L2;
                 } else {
-                  stackOut_7_0 = var9 | var8;
-                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_0 = var9 | var8;
                   break L2;
                 }
               }
@@ -372,22 +338,12 @@ final class dg extends al {
 
     final void a(int param0, int param1, byte param2, al param3) {
         RuntimeException var5 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -414,27 +370,19 @@ final class dg extends al {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5);
-            stackOut_6_1 = new StringBuilder().append("dg.EA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5);
+
+            stackIn_8_1 = new StringBuilder().append("dg.EA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -455,27 +403,15 @@ final class dg extends al {
     }
 
     final static qj[] a(boolean param0, int param1, int param2, kk param3) {
-        qj[] discarded$2 = null;
         RuntimeException var4 = null;
         kk var5 = null;
         qj[] stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qj[] stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             if (sk.a(param2, param3, 1, param1)) {
@@ -484,12 +420,11 @@ final class dg extends al {
                   break L1;
                 } else {
                   var5 = (kk) null;
-                  discarded$2 = dg.a(true, 90, -7, (kk) null);
+                  dg.a(true, 90, -7, (kk) null);
                   break L1;
                 }
               }
-              stackOut_5_0 = nb.a((byte) -100);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = nb.a((byte) -100);
               break L0;
             } else {
               return null;
@@ -499,27 +434,19 @@ final class dg extends al {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var4);
-            stackOut_7_1 = new StringBuilder().append("dg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("dg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }

@@ -8,12 +8,12 @@ final class ib {
     boolean field_c;
 
     final int a(byte param0) {
-        int var2 = 0;
-        aga[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        aga var6 = null;
-        int var7 = 0;
+        int var2;
+        aga[] var3;
+        int var4;
+        int var5;
+        aga var6;
+        int var7;
         var7 = BachelorFridge.field_y;
         var2 = 0;
         var3 = this.field_b;
@@ -37,16 +37,15 @@ final class ib {
     }
 
     final static int a(boolean param0) {
-        RuntimeException var1 = null;
+        int stackIn_27_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_27_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_26_0 = 0;
         var7 = BachelorFridge.field_y;
         try {
           L0: {
@@ -127,8 +126,7 @@ final class ib {
                     }
                   }
                 }
-                stackOut_26_0 = var3;
-                stackIn_27_0 = stackOut_26_0;
+                stackIn_27_0 = var3;
                 break L0;
               } else {
                 L8: {
@@ -165,11 +163,11 @@ final class ib {
     }
 
     final int b(byte param0) {
-        int var2 = 0;
-        aga[] var3 = null;
-        int var4 = 0;
-        aga var5 = null;
-        int var6 = 0;
+        int var2;
+        aga[] var3;
+        int var4;
+        aga var5;
+        int var6;
         L0: {
           var6 = BachelorFridge.field_y;
           if (param0 >= 58) {
@@ -205,18 +203,17 @@ final class ib {
     }
 
     final boolean a(byte param0, int param1) {
-        int discarded$2 = 0;
-        aga[] var3 = null;
-        int var4 = 0;
-        aga var5 = null;
-        int var6 = 0;
+        aga[] var3;
+        int var4;
+        aga var5;
+        int var6;
         L0: {
           var6 = BachelorFridge.field_y;
           var3 = this.field_b;
           if (param0 <= -19) {
             break L0;
           } else {
-            discarded$2 = ib.a(false);
+            ib.a(false);
             break L0;
           }
         }

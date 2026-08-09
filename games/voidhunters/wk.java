@@ -13,24 +13,24 @@ final class wk implements rs {
     }
 
     final static void a(float param0, float param1, int param2, int param3, float param4, int param5, float param6, float param7) {
-        float var8 = 0.0f;
-        float var9 = 0.0f;
-        float var10 = 0.0f;
-        float var11 = 0.0f;
-        float var12 = 0.0f;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
+        float var8;
+        float var9;
+        float var10;
+        float var11;
+        float var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
         var8 = param4 - param7;
         var9 = -param1 + param6;
         var10 = -var9;

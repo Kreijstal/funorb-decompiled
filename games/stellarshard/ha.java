@@ -16,41 +16,31 @@ final class ha extends ka {
     }
 
     final int h(byte param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         if (param0 != -9) {
           field_x = (String) null;
-          fieldTemp$4 = this.field_k;
+          fieldTemp$2 = this.field_k;
           this.field_k = this.field_k + 1;
-          return 255 & this.field_r[fieldTemp$4] + -this.field_u.a(-609392408);
+          return 255 & this.field_r[fieldTemp$2] + -this.field_u.a(-609392408);
         } else {
-          fieldTemp$5 = this.field_k;
+          fieldTemp$3 = this.field_k;
           this.field_k = this.field_k + 1;
-          return 255 & this.field_r[fieldTemp$5] + -this.field_u.a(-609392408);
+          return 255 & this.field_r[fieldTemp$3] + -this.field_u.a(-609392408);
         }
     }
 
     final void a(byte[] param0, boolean param1, int param2, int param3) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        RuntimeException var5 = null;
         var6 = stellarshard.field_B;
         try {
           L0: {
@@ -67,9 +57,9 @@ final class ha extends ka {
               if (param3 <= var5_int) {
                 break L0;
               } else {
-                fieldTemp$5 = this.field_k;
+                fieldTemp$2 = this.field_k;
                 this.field_k = this.field_k + 1;
-                param0[param2 + var5_int] = (byte)(this.field_r[fieldTemp$5] + -this.field_u.a(-609392408));
+                param0[param2 + var5_int] = (byte)(this.field_r[fieldTemp$2] + -this.field_u.a(-609392408));
                 var5_int++;
                 continue L2;
               }
@@ -79,27 +69,19 @@ final class ha extends ka {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var5);
-            stackOut_7_1 = new StringBuilder().append("ha.G(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var5);
+
+            stackIn_9_1 = new StringBuilder().append("ha.G(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -128,10 +110,9 @@ final class ha extends ka {
     }
 
     final static void a(java.math.BigInteger param0, ka param1, ka param2, int param3, java.math.BigInteger param4) {
-        int discarded$0 = 0;
         try {
             if (param3 >= -94) {
-                discarded$0 = ha.k(109);
+                ha.k(109);
             }
             rl.a(-13791, param1, param0, param4, param2.field_r, param2.field_k, 0);
         } catch (RuntimeException runtimeException) {
@@ -140,7 +121,6 @@ final class ha extends ka {
     }
 
     final static int k(int param0) {
-        int discarded$2 = 0;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -148,8 +128,6 @@ final class ha extends ka {
         int stackIn_11_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_7_0 = 0;
         var2 = stellarshard.field_B;
         try {
           L0: {
@@ -157,21 +135,19 @@ final class ha extends ka {
               if (param0 == -1001) {
                 break L1;
               } else {
-                discarded$2 = ha.k(28);
+                ha.k(28);
                 break L1;
               }
             }
             var1_int = 0;
             L2: while (true) {
               if (-1001 >= (var1_int ^ -1)) {
-                stackOut_10_0 = -1;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = -1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (null == hf.field_e[var1_int]) {
-                  stackOut_7_0 = var1_int;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = var1_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {

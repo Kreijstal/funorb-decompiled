@@ -24,11 +24,11 @@ final class db extends sh {
 
     final static void j(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -62,21 +62,20 @@ final class db extends sh {
     }
 
     final static void i(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         eh var4_ref_eh = null;
         Object var5 = null;
-        byte[] var5_array = null;
         int var6 = 0;
         byte[] var8 = null;
         eb var9 = null;
         pa var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -89,13 +88,13 @@ final class db extends sh {
                   L2: {
                     var4 = var10.j(-119);
                     if (0 == var4) {
-                      var5_array = null;
+                      var5 = null;
                       break L2;
                     } else {
                       var12 = new byte[var4];
                       var11 = var12;
                       var8 = var11;
-                      var5_array = var8;
+                      var5 = var8;
                       var10.a(111, var12, var4, 0);
                       break L2;
                     }
@@ -107,7 +106,7 @@ final class db extends sh {
                     break L0;
                   } else {
                     var9.field_j = true;
-                    var9.field_q = var5_array;
+                    var9.field_q = (byte[]) (var5);
                     var9.a(true);
                     break L1;
                   }
@@ -129,7 +128,7 @@ final class db extends sh {
                       if (var4_ref_eh == null) {
                         break L4;
                       } else {
-                        if (var4_ref_eh.field_j == var3) {
+                        if ((var4_ref_eh.field_j ^ -1) == (var3 ^ -1)) {
                           break L4;
                         } else {
                           var4_ref_eh = (eh) ((Object) nh.field_cb.c(-270));
@@ -181,8 +180,9 @@ final class db extends sh {
     }
 
     final static void g(int param0) {
-        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var5 = 0;
@@ -191,7 +191,6 @@ final class db extends sh {
         qe var8 = null;
         qe var9 = null;
         qe var10 = null;
-        RuntimeException decompiledCaughtException = null;
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {

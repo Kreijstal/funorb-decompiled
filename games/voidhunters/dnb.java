@@ -6,7 +6,7 @@ final class dnb extends ksa {
     byte[] field_e;
 
     final static tja c(byte param0) {
-        tja var1 = null;
+        tja var1;
         bk.field_w.field_e = 0;
         if (param0 == -39) {
           bk.field_w.p(-23497);

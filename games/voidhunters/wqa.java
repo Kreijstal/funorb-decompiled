@@ -18,9 +18,8 @@ final class wqa implements dja {
     }
 
     public final tv[] a(int param0, int param1) {
-        tv[] discarded$0 = null;
         if (param0 != 11995) {
-            discarded$0 = this.a(-39, -108);
+            this.a(-39, -108);
             return (tv[]) ((Object) new iia[param1]);
         }
         return (tv[]) ((Object) new iia[param1]);

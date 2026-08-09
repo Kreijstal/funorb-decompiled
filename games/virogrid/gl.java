@@ -32,8 +32,6 @@ final class gl {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -41,16 +39,6 @@ final class gl {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -62,13 +50,11 @@ final class gl {
               }
             }
             if (!param1) {
-              stackOut_5_0 = j.field_h.a(param2);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = j.field_h.a(param2);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_3_0 = ti.field_g.a(param2);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = ti.field_g.a(param2);
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -77,27 +63,19 @@ final class gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("gl.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("gl.E(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -112,34 +90,12 @@ final class gl {
 
     private final boolean a(byte[] param0, int param1, int param2, int param3, boolean param4) {
         try {
-            Object var6 = null;
-            RuntimeException var6_ref = null;
-            Object var6_ref2 = null;
-            IOException var7 = null;
-            int var7_int = 0;
-            int var8 = 0;
-            int var9 = 0;
-            int var10 = 0;
-            int var11 = 0;
-            int var12 = 0;
-            int var13 = 0;
-            int var14 = 0;
-            EOFException var15 = null;
-            Throwable var16 = null;
-            int var17 = 0;
             int stackIn_8_0 = 0;
-            int stackIn_9_0 = 0;
             int stackIn_14_0 = 0;
-            int stackIn_15_0 = 0;
             int stackIn_34_0 = 0;
-            int stackIn_35_0 = 0;
             int stackIn_40_0 = 0;
-            int stackIn_41_0 = 0;
             int stackIn_61_0 = 0;
-            int stackIn_62_0 = 0;
             int stackIn_64_0 = 0;
-            RuntimeException stackIn_68_0 = null;
-            StringBuilder stackIn_68_1 = null;
             RuntimeException stackIn_69_0 = null;
             StringBuilder stackIn_69_1 = null;
             RuntimeException stackIn_70_0 = null;
@@ -149,38 +105,30 @@ final class gl {
             int decompiledRegionSelector1 = 0;
             int decompiledRegionSelector2 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_7_0 = 0;
-            int stackOut_8_0 = 0;
-            int stackOut_13_0 = 0;
-            int stackOut_14_0 = 0;
-            int stackOut_39_0 = 0;
-            int stackOut_40_0 = 0;
-            int stackOut_33_0 = 0;
-            int stackOut_34_0 = 0;
-            int stackOut_60_0 = 0;
-            int stackOut_61_0 = 0;
-            int stackOut_63_0 = 0;
-            RuntimeException stackOut_67_0 = null;
-            StringBuilder stackOut_67_1 = null;
-            RuntimeException stackOut_69_0 = null;
-            StringBuilder stackOut_69_1 = null;
-            String stackOut_69_2 = null;
-            RuntimeException stackOut_68_0 = null;
-            StringBuilder stackOut_68_1 = null;
-            String stackOut_68_2 = null;
+            Object var6 = null;
+            RuntimeException var6_ref = null;
+            int var7_int = 0;
+            IOException var7 = null;
+            int var8 = 0;
+            int var9 = 0;
+            int var10 = 0;
+            int var11 = 0;
+            int var12 = 0;
+            int var13 = 0;
+            int var14 = 0;
+            EOFException var15 = null;
+            int var17 = 0;
             var17 = Virogrid.field_F ? 1 : 0;
             try {
-              var6_ref2 = this.field_d;
-              synchronized (var6_ref2) {
+              var6 = this.field_d;
+              synchronized (var6) {
                 try {
                   L0: {
                     L1: {
                       if (param4) {
                         if ((this.field_j.a((byte) 125) ^ -1L) > ((long)(param3 * 6 - -6) ^ -1L)) {
-                          stackOut_7_0 = 0;
-                          stackIn_8_0 = stackOut_7_0;
-                          stackOut_8_0 = stackIn_8_0;
-                          stackIn_9_0 = stackOut_8_0;
+                          stackIn_8_0 = 0;
+
                           decompiledRegionSelector2 = 0;
                           break L0;
                         } else {
@@ -198,10 +146,8 @@ final class gl {
                               }
                             }
                           }
-                          stackOut_13_0 = 0;
-                          stackIn_14_0 = stackOut_13_0;
-                          stackOut_14_0 = stackIn_14_0;
-                          stackIn_15_0 = stackOut_14_0;
+                          stackIn_14_0 = 0;
+
                           decompiledRegionSelector2 = 1;
                           break L0;
                         }
@@ -307,20 +253,16 @@ final class gl {
                                           }
                                         }
                                       }
-                                      stackOut_39_0 = 0;
-                                      stackIn_40_0 = stackOut_39_0;
-                                      stackOut_40_0 = stackIn_40_0;
-                                      stackIn_41_0 = stackOut_40_0;
+                                      stackIn_40_0 = 0;
+
                                       decompiledRegionSelector2 = 3;
                                       break L0;
                                     }
                                   }
                                 }
                               }
-                              stackOut_33_0 = 0;
-                              stackIn_34_0 = stackOut_33_0;
-                              stackOut_34_0 = stackIn_34_0;
-                              stackIn_35_0 = stackOut_34_0;
+                              stackIn_34_0 = 0;
+
                               decompiledRegionSelector2 = 2;
                               break L0;
                             } else {
@@ -413,10 +355,8 @@ final class gl {
                           continue L3;
                         }
                       }
-                      stackOut_60_0 = 1;
-                      stackIn_61_0 = stackOut_60_0;
-                      stackOut_61_0 = stackIn_61_0;
-                      stackIn_62_0 = stackOut_61_0;
+                      stackIn_61_0 = 1;
+
                       decompiledRegionSelector2 = 4;
                       break L0;
                     }
@@ -424,23 +364,22 @@ final class gl {
                 } catch (java.io.IOException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var7 = (IOException) (Object) decompiledCaughtException;
-                  stackOut_63_0 = 0;
-                  stackIn_64_0 = stackOut_63_0;
+                  stackIn_64_0 = 0;
                   return stackIn_64_0 != 0;
                 }
                 if (decompiledRegionSelector2 == 0) {
-                  return stackIn_9_0 != 0;
+                  return stackIn_8_0 != 0;
                 } else {
                   if (decompiledRegionSelector2 == 1) {
-                    return stackIn_15_0 != 0;
+                    return stackIn_14_0 != 0;
                   } else {
                     if (decompiledRegionSelector2 == 2) {
-                      return stackIn_35_0 != 0;
+                      return stackIn_34_0 != 0;
                     } else {
                       if (decompiledRegionSelector2 == 3) {
-                        return stackIn_41_0 != 0;
+                        return stackIn_40_0 != 0;
                       } else {
-                        return stackIn_62_0 != 0;
+                        return stackIn_61_0 != 0;
                       }
                     }
                   }
@@ -450,27 +389,19 @@ final class gl {
               decompiledCaughtException = decompiledCaughtParameter3;
               L19: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_67_0 = (RuntimeException) (var6_ref);
-                stackOut_67_1 = new StringBuilder().append("gl.A(");
-                stackIn_69_0 = stackOut_67_0;
-                stackIn_69_1 = stackOut_67_1;
-                stackIn_68_0 = stackOut_67_0;
-                stackIn_68_1 = stackOut_67_1;
+                stackIn_69_0 = (RuntimeException) (var6_ref);
+
+                stackIn_69_1 = new StringBuilder().append("gl.A(");
+
                 if (param0 == null) {
-                  stackOut_69_0 = (RuntimeException) ((Object) stackIn_69_0);
-                  stackOut_69_1 = (StringBuilder) ((Object) stackIn_69_1);
-                  stackOut_69_2 = "null";
-                  stackIn_70_0 = stackOut_69_0;
-                  stackIn_70_1 = stackOut_69_1;
-                  stackIn_70_2 = stackOut_69_2;
+                  stackIn_70_0 = (RuntimeException) ((Object) stackIn_69_0);
+                  stackIn_70_1 = (StringBuilder) ((Object) stackIn_69_1);
+                  stackIn_70_2 = "null";
                   break L19;
                 } else {
-                  stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
-                  stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
-                  stackOut_68_2 = "{...}";
-                  stackIn_70_0 = stackOut_68_0;
-                  stackIn_70_1 = stackOut_68_1;
-                  stackIn_70_2 = stackOut_68_2;
+                  stackIn_70_0 = (RuntimeException) ((Object) stackIn_69_0);
+                  stackIn_70_1 = (StringBuilder) ((Object) stackIn_69_1);
+                  stackIn_70_2 = "{...}";
                   break L19;
                 }
               }
@@ -502,11 +433,11 @@ final class gl {
 
     final byte[] a(int param0, int param1) {
         try {
-            int discarded$2 = 0;
-            int incrementValue$3 = 0;
+            int incrementValue$2 = 0;
             Object var3 = null;
-            IOException var4 = null;
+            Object var3_ref = null;
             int var4_int = 0;
+            IOException var4 = null;
             int var5 = 0;
             byte[] var6 = null;
             int var7 = 0;
@@ -523,28 +454,15 @@ final class gl {
             int var18 = 0;
             String var19 = null;
             Object stackIn_11_0 = null;
-            Object stackIn_12_0 = null;
             Object stackIn_17_0 = null;
-            Object stackIn_18_0 = null;
             Object stackIn_44_0 = null;
-            Object stackIn_45_0 = null;
             byte[] stackIn_51_0 = null;
-            byte[] stackIn_52_0 = null;
             Object stackIn_54_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            byte[] stackOut_50_0 = null;
-            byte[] stackOut_51_0 = null;
-            Object stackOut_43_0 = null;
-            Object stackOut_44_0 = null;
-            Object stackOut_16_0 = null;
-            Object stackOut_17_0 = null;
-            Object stackOut_10_0 = null;
-            Object stackOut_11_0 = null;
-            Object stackOut_53_0 = null;
             var18 = Virogrid.field_F ? 1 : 0;
-            var3 = this.field_d;
-            synchronized (var3) {
+            var3_ref = this.field_d;
+            synchronized (var3_ref) {
               try {
                 L0: {
                   if (((long)(6 + param0 * 6) ^ -1L) >= (this.field_j.a((byte) 127) ^ -1L)) {
@@ -555,7 +473,7 @@ final class gl {
                         break L1;
                       } else {
                         var19 = (String) null;
-                        discarded$2 = gl.a(-48, false, (String) null);
+                        gl.a(-48, false, (String) null);
                         break L1;
                       }
                     }
@@ -570,10 +488,8 @@ final class gl {
                             var8 = 0;
                             L2: while (true) {
                               if (var7 >= var4_int) {
-                                stackOut_50_0 = (byte[]) (var6);
-                                stackIn_51_0 = stackOut_50_0;
-                                stackOut_51_0 = (byte[]) ((Object) stackIn_51_0);
-                                stackIn_52_0 = stackOut_51_0;
+                                stackIn_51_0 = (byte[]) (var6);
+
                                 decompiledRegionSelector0 = 3;
                                 break L0;
                               } else {
@@ -628,18 +544,16 @@ final class gl {
                                                 var5 = var12;
                                                 continue L2;
                                               } else {
-                                                incrementValue$3 = var7;
+                                                incrementValue$2 = var7;
                                                 var7++;
-                                                var6[incrementValue$3] = an.field_c[var16];
+                                                var6[incrementValue$2] = an.field_c[var16];
                                                 var16++;
                                                 continue L6;
                                               }
                                             }
                                           } else {
-                                            stackOut_43_0 = null;
-                                            stackIn_44_0 = stackOut_43_0;
-                                            stackOut_44_0 = stackIn_44_0;
-                                            stackIn_45_0 = stackOut_44_0;
+                                            stackIn_44_0 = null;
+
                                             decompiledRegionSelector0 = 2;
                                             break L0;
                                           }
@@ -661,10 +575,8 @@ final class gl {
                               }
                             }
                           } else {
-                            stackOut_16_0 = null;
-                            stackIn_17_0 = stackOut_16_0;
-                            stackOut_17_0 = stackIn_17_0;
-                            stackIn_18_0 = stackOut_17_0;
+                            stackIn_17_0 = null;
+
                             decompiledRegionSelector0 = 1;
                             break L0;
                           }
@@ -672,10 +584,8 @@ final class gl {
                           return null;
                         }
                       } else {
-                        stackOut_10_0 = null;
-                        stackIn_11_0 = stackOut_10_0;
-                        stackOut_11_0 = stackIn_11_0;
-                        stackIn_12_0 = stackOut_11_0;
+                        stackIn_11_0 = null;
+
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
@@ -689,20 +599,19 @@ final class gl {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (IOException) (Object) decompiledCaughtException;
-                stackOut_53_0 = null;
-                stackIn_54_0 = stackOut_53_0;
+                stackIn_54_0 = null;
                 return (byte[]) ((Object) stackIn_54_0);
               }
               if (decompiledRegionSelector0 == 0) {
-                return (byte[]) ((Object) stackIn_12_0);
+                return (byte[]) ((Object) stackIn_11_0);
               } else {
                 if (decompiledRegionSelector0 == 1) {
-                  return (byte[]) ((Object) stackIn_18_0);
+                  return (byte[]) ((Object) stackIn_17_0);
                 } else {
                   if (decompiledRegionSelector0 == 2) {
-                    return (byte[]) ((Object) stackIn_45_0);
+                    return (byte[]) ((Object) stackIn_44_0);
                   } else {
-                    return stackIn_52_0;
+                    return stackIn_51_0;
                   }
                 }
               }
@@ -715,30 +624,18 @@ final class gl {
     }
 
     final boolean a(byte[] param0, int param1, int param2, byte param3) {
-        boolean discarded$4 = false;
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         Throwable var7 = null;
         byte[] var8 = null;
         int stackIn_10_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         Throwable decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             var5 = this.field_d;
@@ -754,7 +651,7 @@ final class gl {
                           break L3;
                         } else {
                           var8 = (byte[]) null;
-                          discarded$4 = this.a((byte[]) null, 80, 22, (byte) -103);
+                          this.a((byte[]) null, 80, 22, (byte) -103);
                           break L3;
                         }
                       }
@@ -767,8 +664,7 @@ final class gl {
                           break L4;
                         }
                       }
-                      stackOut_9_0 = var6;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_0 = var6;
                       break L1;
                     } else {
                       break L2;
@@ -784,27 +680,19 @@ final class gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var5_ref);
-            stackOut_13_1 = new StringBuilder().append("gl.D(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var5_ref);
+
+            stackIn_15_1 = new StringBuilder().append("gl.D(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }

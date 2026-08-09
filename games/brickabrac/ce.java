@@ -66,8 +66,8 @@ final class ce {
     }
 
     final static void a(boolean param0, int param1, byte param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         if (nq.field_p) {
           L0: {
             wd.field_w.a(param0, -15211);

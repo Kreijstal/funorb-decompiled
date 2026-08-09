@@ -9,15 +9,18 @@ final class sk extends oh {
     static String field_i;
 
     public static void a(int param0) {
-        nf discarded$0 = null;
         field_i = null;
         field_k = null;
         if (param0 >= -6) {
-            discarded$0 = sk.a(false, 27);
+            sk.a(false, 27);
         }
     }
 
     final static nf a(boolean param0, int param1) {
+        int stackIn_3_0 = 0;
+        int stackIn_9_0 = 0;
+        int[] stackIn_22_0 = null;
+        Throwable decompiledCaughtException = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -25,27 +28,15 @@ final class sk extends oh {
         int var7 = 0;
         sl var8 = null;
         dp var9 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
-        int[] stackIn_22_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        Object stackOut_21_0 = null;
-        int[] stackOut_20_0 = null;
         L0: {
           var7 = ShatteredPlansClient.field_F ? 1 : 0;
           var8 = sa.field_a;
           var3 = var8.j(param1 ^ 113);
           if (param1 == (128 & var3 ^ -1)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -66,12 +57,10 @@ final class sk extends oh {
         }
         L2: {
           if (1 != var8.j(param1 + -66)) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = 1;
             break L2;
           }
         }
@@ -112,12 +101,10 @@ final class sk extends oh {
                 var9 = dh.field_c.a((byte) 47, var5);
                 ke.field_h = var9.f(80);
                 if (em.field_a.equals(ln.field_o)) {
-                  stackOut_21_0 = null;
-                  stackIn_22_0 = (int[]) ((Object) stackOut_21_0);
+                  stackIn_22_0 = null;
                   break L7;
                 } else {
-                  stackOut_20_0 = var9.field_o;
-                  stackIn_22_0 = stackOut_20_0;
+                  stackIn_22_0 = var9.field_o;
                   break L7;
                 }
               }

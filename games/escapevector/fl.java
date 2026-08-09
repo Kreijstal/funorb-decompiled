@@ -39,8 +39,6 @@ class fl extends hg {
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           if (param2 == -1) {
             break L0;
@@ -63,16 +61,14 @@ class fl extends hg {
                   if (param3 - -param1 <= param6) {
                     break L2;
                   } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = 1;
                     break L1;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 0;
-          stackIn_8_0 = stackOut_7_0;
+          stackIn_8_0 = 0;
           break L1;
         }
         return stackIn_8_0 != 0;

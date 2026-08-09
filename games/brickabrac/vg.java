@@ -20,7 +20,7 @@ final class vg {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        pi var3 = null;
+        pi var3;
         var3 = k.field_h;
         var3.e(-13413, param2);
         var3.a(-29, 3);

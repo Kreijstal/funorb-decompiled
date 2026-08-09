@@ -11,16 +11,13 @@ final class uk extends ana {
     }
 
     private final void e(int param0) {
-        oha discarded$3 = null;
-        boolean discarded$4 = false;
-        oha discarded$5 = null;
-        Object var3 = null;
-        iv var3_ref = null;
-        int var5 = 0;
-        aga var7 = null;
-        ad var8 = null;
-        aga var9 = null;
-        ad var10 = null;
+        Object var3;
+        iv var3_ref;
+        int var5;
+        aga var7;
+        ad var8;
+        aga var9;
+        ad var10;
         var3 = null;
         var5 = BachelorFridge.field_y;
         if (param0 == 1) {
@@ -29,7 +26,7 @@ final class uk extends ana {
             return;
           } else {
             var3_ref = (iv) ((Object) this.field_v.field_o.b((byte) 90));
-            discarded$3 = al.a(param0 + 106, this.field_v.field_k);
+            al.a(param0 + 106, this.field_v.field_k);
             L0: while (true) {
               if (var3_ref == null) {
                 return;
@@ -44,13 +41,13 @@ final class uk extends ana {
             }
           }
         } else {
-          discarded$4 = this.c((byte) -34);
+          this.c((byte) -34);
           var7 = this.field_v.field_l.a(98, this.field_q.field_h);
           if (var7.i(-123)) {
             return;
           } else {
             var3_ref = (iv) ((Object) this.field_v.field_o.b((byte) 90));
-            discarded$5 = al.a(param0 + 106, this.field_v.field_k);
+            al.a(param0 + 106, this.field_v.field_k);
             L1: while (true) {
               if (var3_ref == null) {
                 return;
@@ -68,10 +65,10 @@ final class uk extends ana {
     }
 
     final boolean c(byte param0) {
-        int var2 = 0;
-        int fieldTemp$2 = this.field_l - 1;
+        int var2;
+        int fieldTemp$1 = this.field_l - 1;
         this.field_l = this.field_l - 1;
-        if (fieldTemp$2 >= 0) {
+        if (fieldTemp$1 >= 0) {
           if ((this.field_l ^ -1) == -26) {
             jja.a(256, -1, 35);
             this.e(1);
@@ -87,9 +84,8 @@ final class uk extends ana {
     }
 
     private final void f(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 11642) {
-            discarded$0 = this.c((byte) 8);
+            this.c((byte) 8);
         }
     }
 

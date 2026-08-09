@@ -48,8 +48,8 @@ final class ei extends wl {
     final static o[] a(int param0, int param1, int param2, int param3, int param4) {
         o dupTemp$4 = null;
         o dupTemp$5 = null;
-        o[] var5 = null;
-        o[] var6 = null;
+        o[] var5;
+        o[] var6;
         var6 = new o[9];
         var5 = var6;
         o dupTemp$3 = id.a((byte) 107, param1, param3);
@@ -85,7 +85,6 @@ final class ei extends wl {
     }
 
     final static void a(byte param0, int param1) {
-        o[] discarded$2 = null;
         wl var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -103,7 +102,7 @@ final class ei extends wl {
                     if (param0 == 51) {
                       break L0;
                     } else {
-                      discarded$2 = ei.a(122, 75, 31, 20, 79);
+                      ei.a(122, 75, 31, 20, 79);
                       return;
                     }
                   } else {

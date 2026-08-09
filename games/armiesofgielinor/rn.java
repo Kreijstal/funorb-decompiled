@@ -60,7 +60,7 @@ final class rn {
     }
 
     public static void a(boolean param0) {
-        String var2 = null;
+        String var2;
         if (param0) {
           var2 = (String) null;
           rn.a(-107, (String) null, true, true);

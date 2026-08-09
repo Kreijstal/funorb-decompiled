@@ -38,64 +38,30 @@ final class lm implements Runnable {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        ic stackIn_6_0 = null;
         ic stackIn_7_0 = null;
         ic stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        ic stackIn_10_0 = null;
         ic stackIn_11_0 = null;
         ic stackIn_12_0 = null;
         int stackIn_12_1 = 0;
-        ic stackIn_15_0 = null;
         ic stackIn_16_0 = null;
         ic stackIn_17_0 = null;
         int stackIn_17_1 = 0;
-        ic stackIn_19_0 = null;
         ic stackIn_20_0 = null;
         ic stackIn_21_0 = null;
         int stackIn_21_1 = 0;
-        oi stackIn_24_0 = null;
-        int stackIn_24_1 = 0;
         oi stackIn_25_0 = null;
         int stackIn_25_1 = 0;
         oi stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         int stackIn_26_2 = 0;
         RuntimeException decompiledCaughtException = null;
-        oi stackOut_23_0 = null;
-        int stackOut_23_1 = 0;
-        oi stackOut_25_0 = null;
-        int stackOut_25_1 = 0;
-        int stackOut_25_2 = 0;
-        oi stackOut_24_0 = null;
-        int stackOut_24_1 = 0;
-        int stackOut_24_2 = 0;
-        ic stackOut_18_0 = null;
-        ic stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        ic stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        ic stackOut_14_0 = null;
-        ic stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        ic stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        ic stackOut_9_0 = null;
-        ic stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        ic stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        ic stackOut_5_0 = null;
-        ic stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        ic stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
         var9 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -106,27 +72,19 @@ final class lm implements Runnable {
                 } else {
                   L2: {
                     pj.a(c.field_d, param4 + 256);
-                    stackOut_23_0 = al.field_j[param0];
-                    stackOut_23_1 = param3;
-                    stackIn_25_0 = stackOut_23_0;
-                    stackIn_25_1 = stackOut_23_1;
-                    stackIn_24_0 = stackOut_23_0;
-                    stackIn_24_1 = stackOut_23_1;
+                    stackIn_25_0 = al.field_j[param0];
+
+                    stackIn_25_1 = param3;
+
                     if (!ke.field_p.field_d) {
-                      stackOut_25_0 = (oi) ((Object) stackIn_25_0);
-                      stackOut_25_1 = stackIn_25_1;
-                      stackOut_25_2 = 2;
-                      stackIn_26_0 = stackOut_25_0;
-                      stackIn_26_1 = stackOut_25_1;
-                      stackIn_26_2 = stackOut_25_2;
+                      stackIn_26_0 = (oi) ((Object) stackIn_25_0);
+                      stackIn_26_1 = stackIn_25_1;
+                      stackIn_26_2 = 2;
                       break L2;
                     } else {
-                      stackOut_24_0 = (oi) ((Object) stackIn_24_0);
-                      stackOut_24_1 = stackIn_24_1;
-                      stackOut_24_2 = 0;
-                      stackIn_26_0 = stackOut_24_0;
-                      stackIn_26_1 = stackOut_24_1;
-                      stackIn_26_2 = stackOut_24_2;
+                      stackIn_26_0 = (oi) ((Object) stackIn_25_0);
+                      stackIn_26_1 = stackIn_25_1;
+                      stackIn_26_2 = 0;
                       break L2;
                     }
                   }
@@ -146,20 +104,15 @@ final class lm implements Runnable {
                 if (vg.field_I != null) {
                   if (ke.field_p.field_d) {
                     L4: {
-                      stackOut_18_0 = vg.field_I;
-                      stackIn_20_0 = stackOut_18_0;
-                      stackIn_19_0 = stackOut_18_0;
+                      stackIn_20_0 = vg.field_I;
+
                       if (0.0 <= nk.field_K[11]) {
-                        stackOut_20_0 = (ic) ((Object) stackIn_20_0);
-                        stackOut_20_1 = 0;
-                        stackIn_21_0 = stackOut_20_0;
-                        stackIn_21_1 = stackOut_20_1;
+                        stackIn_21_0 = (ic) ((Object) stackIn_20_0);
+                        stackIn_21_1 = 0;
                         break L4;
                       } else {
-                        stackOut_19_0 = (ic) ((Object) stackIn_19_0);
-                        stackOut_19_1 = 1;
-                        stackIn_21_0 = stackOut_19_0;
-                        stackIn_21_1 = stackOut_19_1;
+                        stackIn_21_0 = (ic) ((Object) stackIn_20_0);
+                        stackIn_21_1 = 1;
                         break L4;
                       }
                     }
@@ -167,20 +120,15 @@ final class lm implements Runnable {
                     break L1;
                   } else {
                     L5: {
-                      stackOut_14_0 = vg.field_I;
-                      stackIn_16_0 = stackOut_14_0;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_16_0 = vg.field_I;
+
                       if (0.0 <= nk.field_K[11]) {
-                        stackOut_16_0 = (ic) ((Object) stackIn_16_0);
-                        stackOut_16_1 = 0;
-                        stackIn_17_0 = stackOut_16_0;
-                        stackIn_17_1 = stackOut_16_1;
+                        stackIn_17_0 = (ic) ((Object) stackIn_16_0);
+                        stackIn_17_1 = 0;
                         break L5;
                       } else {
-                        stackOut_15_0 = (ic) ((Object) stackIn_15_0);
-                        stackOut_15_1 = 1;
-                        stackIn_17_0 = stackOut_15_0;
-                        stackIn_17_1 = stackOut_15_1;
+                        stackIn_17_0 = (ic) ((Object) stackIn_16_0);
+                        stackIn_17_1 = 1;
                         break L5;
                       }
                     }
@@ -193,20 +141,15 @@ final class lm implements Runnable {
                   } else {
                     if (ke.field_p.field_d) {
                       L6: {
-                        stackOut_9_0 = ei.field_b;
-                        stackIn_11_0 = stackOut_9_0;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_11_0 = ei.field_b;
+
                         if (nk.field_K[11] >= 0.0) {
-                          stackOut_11_0 = (ic) ((Object) stackIn_11_0);
-                          stackOut_11_1 = 0;
-                          stackIn_12_0 = stackOut_11_0;
-                          stackIn_12_1 = stackOut_11_1;
+                          stackIn_12_0 = (ic) ((Object) stackIn_11_0);
+                          stackIn_12_1 = 0;
                           break L6;
                         } else {
-                          stackOut_10_0 = (ic) ((Object) stackIn_10_0);
-                          stackOut_10_1 = 1;
-                          stackIn_12_0 = stackOut_10_0;
-                          stackIn_12_1 = stackOut_10_1;
+                          stackIn_12_0 = (ic) ((Object) stackIn_11_0);
+                          stackIn_12_1 = 1;
                           break L6;
                         }
                       }
@@ -214,20 +157,15 @@ final class lm implements Runnable {
                       break L1;
                     } else {
                       L7: {
-                        stackOut_5_0 = ei.field_b;
-                        stackIn_7_0 = stackOut_5_0;
-                        stackIn_6_0 = stackOut_5_0;
+                        stackIn_7_0 = ei.field_b;
+
                         if (0.0 <= nk.field_K[11]) {
-                          stackOut_7_0 = (ic) ((Object) stackIn_7_0);
-                          stackOut_7_1 = 0;
-                          stackIn_8_0 = stackOut_7_0;
-                          stackIn_8_1 = stackOut_7_1;
+                          stackIn_8_0 = (ic) ((Object) stackIn_7_0);
+                          stackIn_8_1 = 0;
                           break L7;
                         } else {
-                          stackOut_6_0 = (ic) ((Object) stackIn_6_0);
-                          stackOut_6_1 = 1;
-                          stackIn_8_0 = stackOut_6_0;
-                          stackIn_8_1 = stackOut_6_1;
+                          stackIn_8_0 = (ic) ((Object) stackIn_7_0);
+                          stackIn_8_1 = 1;
                           break L7;
                         }
                       }
@@ -320,27 +258,17 @@ final class lm implements Runnable {
     }
 
     final static mg[] a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
-        int var6 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        mg var10 = null;
-        Object var11 = null;
-        Object var12 = null;
         mg var13 = null;
         mg var14 = null;
-        int[] var18 = null;
-        L0: {
-          var6 = 51 / ((34 - param1) / 32);
-          var18 = df.field_d;
-          var8 = df.field_e;
-          var9 = df.field_f;
-          var10 = new mg(16, param2);
-          var10.b();
-          df.a(0, 0, 16, param2, param3, param0);
-          var11 = null;
-          if (!param5) {
-            break L0;
-          } else {
+        int var6 = 51 / ((34 - param1) / 32);
+        int[] var18 = df.field_d;
+        int var8 = df.field_e;
+        int var9 = df.field_f;
+        mg var10 = new mg(16, param2);
+        var10.b();
+        df.a(0, 0, 16, param2, param3, param0);
+        Object var11 = null;
+        if (param5) {
             var13 = var10.d();
             var11 = var13;
             var13.b();
@@ -349,14 +277,9 @@ final class lm implements Runnable {
             df.b(0, 2, 2, 0);
             df.b(0, 3, 1, 0);
             df.b(0, 4, 1, 0);
-            break L0;
-          }
         }
-        L1: {
-          var12 = null;
-          if (!param4) {
-            break L1;
-          } else {
+        Object var12 = null;
+        if (param4) {
             var14 = var10.d();
             var12 = var14;
             var14.b();
@@ -365,8 +288,6 @@ final class lm implements Runnable {
             df.b(14, 2, 2, 0);
             df.b(15, 3, 1, 0);
             df.b(15, 4, 1, 0);
-            break L1;
-          }
         }
         df.a(var18, var8, var9);
         return new mg[]{null, null, null, (mg) (var11), var10, (mg) (var12), null, null, null};

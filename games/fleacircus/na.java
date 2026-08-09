@@ -14,9 +14,9 @@ final class na implements Iterator {
 
     public final Object next() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
-        lh var3 = null;
-        lh var4 = null;
+        int var2;
+        lh var3;
+        lh var4;
         var2 = fleas.field_A ? 1 : 0;
         if (this.field_g.field_f[-1 + this.field_d] == this.field_a) {
           L0: while (true) {
@@ -73,7 +73,7 @@ final class na implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = fleas.field_A ? 1 : 0;
         if (this.field_a == this.field_g.field_f[this.field_d - 1]) {
           L0: while (true) {

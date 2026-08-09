@@ -35,8 +35,14 @@ final class gk extends c implements bp {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -45,20 +51,6 @@ final class gk extends c implements bp {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
         var13 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -67,48 +59,40 @@ final class gk extends c implements bp {
                 var5_int = param3 + param0;
                 var6 = param4 + param1;
                 if (t.field_e < param0) {
-                  stackOut_5_0 = param0;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = param0;
                   break L1;
                 } else {
-                  stackOut_4_0 = t.field_e;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = t.field_e;
                   break L1;
                 }
               }
               L2: {
                 var7 = stackIn_6_0;
                 if (param1 > t.field_f) {
-                  stackOut_8_0 = param1;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = param1;
                   break L2;
                 } else {
-                  stackOut_7_0 = t.field_f;
-                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_0 = t.field_f;
                   break L2;
                 }
               }
               L3: {
                 var8 = stackIn_9_0;
                 if (t.field_h > var5_int) {
-                  stackOut_11_0 = var5_int;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = var5_int;
                   break L3;
                 } else {
-                  stackOut_10_0 = t.field_h;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = t.field_h;
                   break L3;
                 }
               }
               L4: {
                 var9 = stackIn_12_0;
                 if (t.field_a > var6) {
-                  stackOut_14_0 = var6;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = var6;
                   break L4;
                 } else {
-                  stackOut_13_0 = t.field_a;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = t.field_a;
                   break L4;
                 }
               }
@@ -257,30 +241,19 @@ final class gk extends c implements bp {
     }
 
     final static byte[] b(CharSequence param0, int param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        byte[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         byte[] stackIn_69_0 = null;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
         RuntimeException stackIn_72_0 = null;
         StringBuilder stackIn_72_1 = null;
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_73_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_68_0 = null;
-        RuntimeException stackOut_70_0 = null;
-        StringBuilder stackOut_70_1 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        String stackOut_71_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        byte[] var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
         var6 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -297,8 +270,7 @@ final class gk extends c implements bp {
             var4 = 0;
             L2: while (true) {
               if (var4 >= var2_int) {
-                stackOut_68_0 = (byte[]) (var3);
-                stackIn_69_0 = stackOut_68_0;
+                stackIn_69_0 = (byte[]) (var3);
                 break L0;
               } else {
                 L3: {
@@ -476,27 +448,19 @@ final class gk extends c implements bp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_70_0 = (RuntimeException) (var2);
-            stackOut_70_1 = new StringBuilder().append("gk.CA(");
-            stackIn_72_0 = stackOut_70_0;
-            stackIn_72_1 = stackOut_70_1;
-            stackIn_71_0 = stackOut_70_0;
-            stackIn_71_1 = stackOut_70_1;
+            stackIn_72_0 = (RuntimeException) (var2);
+
+            stackIn_72_1 = new StringBuilder().append("gk.CA(");
+
             if (param0 == null) {
-              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
-              stackOut_72_2 = "null";
-              stackIn_73_0 = stackOut_72_0;
-              stackIn_73_1 = stackOut_72_1;
-              stackIn_73_2 = stackOut_72_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "null";
               break L7;
             } else {
-              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
-              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackOut_71_2 = "{...}";
-              stackIn_73_0 = stackOut_71_0;
-              stackIn_73_1 = stackOut_71_1;
-              stackIn_73_2 = stackOut_71_2;
+              stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
+              stackIn_73_2 = "{...}";
               break L7;
             }
           }

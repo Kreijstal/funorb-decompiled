@@ -62,7 +62,6 @@ final class nia extends lw {
     }
 
     final void a(int param0, byte param1) {
-        java.applet.Applet discarded$2 = null;
         L0: {
           L1: {
             if (-1 != (this.field_e ^ -1)) {
@@ -103,7 +102,7 @@ final class nia extends lw {
           if (param1 == 73) {
             break L2;
           } else {
-            discarded$2 = nia.d(124);
+            nia.d(124);
             break L2;
           }
         }
@@ -130,11 +129,10 @@ final class nia extends lw {
     }
 
     public static void b(boolean param0) {
-        int discarded$0 = 0;
         field_l = null;
         field_m = null;
         if (param0) {
-            discarded$0 = nia.a(-47, true);
+            nia.a(-47, true);
         }
     }
 
@@ -149,14 +147,13 @@ final class nia extends lw {
     }
 
     final static void e(byte param0) {
-        int discarded$2 = 0;
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -167,7 +164,7 @@ final class nia extends lw {
               if (param0 >= 16) {
                 break L1;
               } else {
-                discarded$2 = nia.a(120, true);
+                nia.a(120, true);
                 break L1;
               }
             }

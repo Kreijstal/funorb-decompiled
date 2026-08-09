@@ -79,7 +79,6 @@ final class sa {
     final static void a(byte param0, int param1, eh param2) {
         pa var5 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var5 = dk.field_s;
             var5.d(25, param1);
@@ -95,7 +94,7 @@ final class sa {
                 var5.d(param2.field_i.length, (byte) 122);
                 var5.a(param2.field_i.length, 0, param2.field_i, -16384);
             }
-            discarded$0 = var5.b(var4, 14430);
+            var5.b(var4, 14430);
             var5.field_q = var5.field_q - 4;
             param2.field_j = var5.i(67);
             var5.a(var5.field_q - var4, -112);
@@ -105,9 +104,7 @@ final class sa {
     }
 
     final static int a(byte param0, int param1) {
-        String discarded$2 = null;
-        String discarded$3 = null;
-        int var2 = 0;
+        int var2;
         L0: {
           var2 = 0;
           if (param1 < 0) {
@@ -160,7 +157,7 @@ final class sa {
                 return var2 + param1;
               } else {
                 L5: {
-                  discarded$2 = sa.a(true);
+                  sa.a(true);
                   if (4 <= param1) {
                     var2 += 2;
                     param1 = param1 >>> 2;
@@ -203,7 +200,7 @@ final class sa {
         }
         if (param0 <= 59) {
           L9: {
-            discarded$3 = sa.a(true);
+            sa.a(true);
             if (4 <= param1) {
               var2 += 2;
               param1 = param1 >>> 2;

@@ -35,10 +35,10 @@ final class va {
     }
 
     private final void d(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = fleas.field_A ? 1 : 0;
         var2 = this.field_o;
         var3 = this.field_l;
@@ -325,7 +325,7 @@ final class va {
     }
 
     final vb b(int param0) {
-        vb var2 = null;
+        vb var2;
         this.field_c = ki.field_a;
         this.field_b = gm.field_nb;
         this.field_p.a(this.field_h, param0 + 6874, this.field_f);
@@ -352,8 +352,8 @@ final class va {
     }
 
     final void a(byte param0) {
-        int fieldTemp$1 = 0;
-        int var2 = 0;
+        int fieldTemp$0 = 0;
+        int var2;
         if (null != rh.field_p) {
           return;
         } else {
@@ -366,9 +366,9 @@ final class va {
             }
           }
           if (this.field_r) {
-            fieldTemp$1 = this.field_n - 1;
+            fieldTemp$0 = this.field_n - 1;
             this.field_n = this.field_n - 1;
-            if (-1 > (fieldTemp$1 ^ -1)) {
+            if (-1 > (fieldTemp$0 ^ -1)) {
               return;
             } else {
               this.field_n = this.field_d;
@@ -447,58 +447,38 @@ final class va {
         RuntimeException var9_ref = null;
         int var10 = 0;
         bh stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        bh stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             var10 = -124 % ((param5 - 37) / 55);
             var9 = new bh(param1, param3, param4, param2, param0, param8, param7);
             wi.field_j.a(false, var9);
             s.a(-4471, param6, var9);
-            stackOut_0_0 = (bh) (var9);
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = (bh) (var9);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var9_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var9_ref);
-            stackOut_2_1 = new StringBuilder().append("va.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var9_ref);
+
+            stackIn_4_1 = new StringBuilder().append("va.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
+
             if (param7 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
@@ -518,7 +498,7 @@ final class va {
     }
 
     final boolean c(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = -30 / ((-74 - param0) / 38);
         if (kf.field_k >= this.field_j) {
           if ((wc.field_q ^ -1) >= -1) {
@@ -532,14 +512,13 @@ final class va {
     }
 
     public static void b(byte param0) {
-        bh discarded$0 = null;
         field_t = null;
         field_k = null;
         field_g = null;
         field_s = null;
         if (param0 != 126) {
             int[] var2 = (int[]) null;
-            discarded$0 = va.a(-115, -85, -112, -17, 89, (byte) -77, -98, (int[]) null, 75);
+            va.a(-115, -85, -112, -17, 89, (byte) -77, -98, (int[]) null, 75);
         }
     }
 

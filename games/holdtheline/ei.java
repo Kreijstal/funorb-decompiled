@@ -19,22 +19,22 @@ final class ei {
     }
 
     final static hj[] a(int param0) {
-        hj[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var5 = null;
-        int var6 = 0;
-        int[] var6_ref_int__ = null;
-        int var7 = 0;
-        int var8 = 0;
-        byte[] var9 = null;
-        int[] var10 = null;
-        byte[] var11 = null;
-        int[] var13 = null;
-        byte[] var15 = null;
-        int[] var17 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
+        hj[] var1;
+        int var2;
+        int var3;
+        byte[] var5;
+        int var6;
+        int[] var6_ref_int__;
+        int var7;
+        int var8;
+        byte[] var9;
+        int[] var10;
+        byte[] var11;
+        int[] var13;
+        byte[] var15;
+        int[] var17;
+        byte[] var21;
+        int[] var22;
         var8 = HoldTheLine.field_D;
         if (param0 >= 51) {
           var1 = new hj[vn.field_d];
@@ -117,8 +117,14 @@ final class ei {
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
-        RuntimeException var5 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -127,20 +133,6 @@ final class ei {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
         var13 = HoldTheLine.field_D;
         try {
           L0: {
@@ -149,48 +141,40 @@ final class ei {
               L1: {
                 var6 = param0 + param3;
                 if (param2 <= tc.field_d) {
-                  stackOut_5_0 = tc.field_d;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = tc.field_d;
                   break L1;
                 } else {
-                  stackOut_4_0 = param2;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = param2;
                   break L1;
                 }
               }
               L2: {
                 var7 = stackIn_6_0;
                 if (param3 > tc.field_a) {
-                  stackOut_8_0 = param3;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = param3;
                   break L2;
                 } else {
-                  stackOut_7_0 = tc.field_a;
-                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_0 = tc.field_a;
                   break L2;
                 }
               }
               L3: {
                 var8 = stackIn_9_0;
                 if (var5_int >= tc.field_e) {
-                  stackOut_11_0 = tc.field_e;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = tc.field_e;
                   break L3;
                 } else {
-                  stackOut_10_0 = var5_int;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = var5_int;
                   break L3;
                 }
               }
               L4: {
                 var9 = stackIn_12_0;
                 if (var6 < tc.field_i) {
-                  stackOut_14_0 = var6;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = var6;
                   break L4;
                 } else {
-                  stackOut_13_0 = tc.field_i;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = tc.field_i;
                   break L4;
                 }
               }
@@ -328,10 +312,7 @@ final class ei {
 
     private final void a(byte param0, hd param1, int param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -339,14 +320,7 @@ final class ei {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException var4 = null;
         var5 = HoldTheLine.field_D;
         try {
           L0: {
@@ -381,27 +355,19 @@ final class ei {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var4);
-            stackOut_11_1 = new StringBuilder().append("ei.A(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var4);
+
+            stackIn_13_1 = new StringBuilder().append("ei.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }

@@ -12,8 +12,8 @@ final class qh {
     static af[] field_f;
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
+        int var6;
+        int var7;
         var6 = 24;
         if (param3 != -74) {
           return;
@@ -30,9 +30,8 @@ final class qh {
     }
 
     final static void a(int param0, int param1, rp param2, int param3, int param4, int param5) {
-        int discarded$1 = 0;
+        RuntimeException runtimeException = null;
         ef var6 = null;
-        RuntimeException var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -43,22 +42,12 @@ final class qh {
         int var14 = 0;
         int var15 = 0;
         ef var16 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             L1: {
@@ -108,7 +97,7 @@ final class qh {
               var9 = var7 * 31 / var8;
               oo.f(param4 + 80, param3 + 36, 12, 31 - var9, 1, param5);
               wa.field_b[-44 + param0 + 26].c(18 + param4, param3 - -44, param5);
-              discarded$1 = ((fm) ((Object) var16)).a(gh.field_f[param0], param4 - -4, -7 + param3, 54, 90, 16777215, 1, param5, 1, 1, ((fm) ((Object) var6)).field_C - -((fm) ((Object) var6)).field_r);
+              ((fm) ((Object) var16)).a(gh.field_f[param0], param4 - -4, -7 + param3, 54, 90, 16777215, 1, param5, 1, 1, ((fm) ((Object) var6)).field_C - -((fm) ((Object) var6)).field_r);
               var10 = new Random();
               if (var7 < var8) {
                 break L5;
@@ -137,28 +126,20 @@ final class qh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var6_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var6_ref);
-            stackOut_13_1 = new StringBuilder().append("qh.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            runtimeException = decompiledCaughtException;
+            stackIn_15_0 = (RuntimeException) (runtimeException);
+
+            stackIn_15_1 = new StringBuilder().append("qh.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L6;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L6;
             }
           }

@@ -9,19 +9,17 @@ final class pa {
     int field_b;
 
     final static int b(byte param0) {
-        int discarded$0 = 0;
         if (param0 <= 110) {
-            discarded$0 = pa.b((byte) 37);
+            pa.b((byte) 37);
             return bt.field_b;
         }
         return bt.field_b;
     }
 
     public static void a(byte param0) {
-        int discarded$0 = 0;
         field_c = null;
         if (param0 != 117) {
-            discarded$0 = pa.b((byte) -106);
+            pa.b((byte) -106);
         }
     }
 

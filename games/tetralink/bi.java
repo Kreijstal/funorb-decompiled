@@ -10,9 +10,8 @@ final class bi {
     static int field_a;
 
     public static void a(int param0) {
-        uh discarded$2 = null;
         if (param0 != 480) {
-          discarded$2 = bi.a((byte) -77);
+          bi.a((byte) -77);
           field_c = null;
           field_d = null;
           field_e = (int[][]) null;

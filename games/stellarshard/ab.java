@@ -5,7 +5,7 @@ final class ab {
     static int field_a;
 
     final static he a(int param0, int param1) {
-        he var2 = null;
+        he var2;
         if (param0 != -5094) {
           return (he) null;
         } else {

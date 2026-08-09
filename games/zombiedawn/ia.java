@@ -21,9 +21,8 @@ final class ia {
     }
 
     final static int a(byte param0) {
-        int discarded$0 = 0;
         if (param0 < 58) {
-            discarded$0 = ia.a((byte) 26);
+            ia.a((byte) 26);
             return wc.field_Ob;
         }
         return wc.field_Ob;

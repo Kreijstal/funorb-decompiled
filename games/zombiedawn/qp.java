@@ -18,8 +18,8 @@ final class qp {
     }
 
     final static String a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = ZombieDawn.field_J;
         if (param1 > 32) {
           var2 = param0;

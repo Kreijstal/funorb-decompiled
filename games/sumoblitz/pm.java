@@ -11,7 +11,6 @@ final class pm {
     final static void a(int param0, int param1, hg param2) {
         pl var5 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var5 = as.field_v;
             var5.g(param0, 8);
@@ -24,7 +23,7 @@ final class pm {
             var5.e(48, param2.field_s);
             var5.e(48, param2.field_n);
             var5.e(48, param2.field_p);
-            discarded$0 = var5.a(var4, false);
+            var5.a(var4, false);
             var5.c(var5.field_p + -var4, -13745);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) ((Object) runtimeException), "pm.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -32,47 +31,33 @@ final class pm {
     }
 
     private final void a(byte param0) {
-        bl var2 = null;
+        bl var2;
         this.field_c.K(this.field_b);
         if (param0 >= -40) {
           L0: {
-            L1: {
-              this.field_e = (bl) null;
-              if (this.field_a == null) {
-                break L1;
-              } else {
-                var2 = this.field_a;
-                this.field_a = this.field_a.field_f;
-                if (!Sumoblitz.field_L) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
+            this.field_e = (bl) null;
+            if (this.field_a == null) {
+              var2 = new bl();
+              break L0;
+            } else {
+              var2 = this.field_a;
+              this.field_a = this.field_a.field_f;
+              break L0;
             }
-            var2 = new bl();
-            break L0;
           }
           var2.a(this.field_e, this.field_b[1], this.field_b[2], this.field_d, -1, this.field_b[3], this.field_b[0]);
           this.field_e = var2;
           return;
         } else {
-          L2: {
-            L3: {
-              if (this.field_a == null) {
-                break L3;
-              } else {
-                var2 = this.field_a;
-                this.field_a = this.field_a.field_f;
-                if (!Sumoblitz.field_L) {
-                  break L2;
-                } else {
-                  break L3;
-                }
-              }
+          L1: {
+            if (this.field_a == null) {
+              var2 = new bl();
+              break L1;
+            } else {
+              var2 = this.field_a;
+              this.field_a = this.field_a.field_f;
+              break L1;
             }
-            var2 = new bl();
-            break L2;
           }
           var2.a(this.field_e, this.field_b[1], this.field_b[2], this.field_d, -1, this.field_b[3], this.field_b[0]);
           this.field_e = var2;
@@ -81,66 +66,64 @@ final class pm {
     }
 
     final void a(int param0) {
-        bl var2 = null;
         bl var3 = null;
-        if (this.field_d == this.field_e.field_h) {
-          this.field_c.KA(this.field_e.field_c, this.field_e.field_b, this.field_e.field_d, this.field_e.field_g);
-          var3 = this.field_e;
-          var2 = var3;
-          this.field_e = this.field_e.field_f;
-          if (param0 == 29709) {
-            var3.field_f = this.field_a;
-            this.field_a = var3;
-            var3.field_h = null;
-            return;
-          } else {
-            this.a((byte) 28);
-            var3.field_f = this.field_a;
-            this.field_a = var3;
-            var3.field_h = null;
-            return;
-          }
-        } else {
-          this.field_c.b();
-          if (null == this.field_e.field_h) {
+        bl var2 = null;
+        if (this.field_d != this.field_e.field_h) {
+            this.field_c.b();
+            if (null != this.field_e.field_h) {
+                this.field_c.a(this.field_e.field_h, true);
+            } else {
+                this.field_d = this.field_e.field_h;
+                this.field_c.KA(this.field_e.field_c, this.field_e.field_b, this.field_e.field_d, this.field_e.field_g);
+                var3 = this.field_e;
+                var2 = var3;
+                this.field_e = this.field_e.field_f;
+                if (param0 != 29709) {
+                    this.a((byte) 28);
+                } else {
+                    var3.field_f = this.field_a;
+                    this.field_a = var3;
+                    var3.field_h = null;
+                    return;
+                }
+                var3.field_f = this.field_a;
+                this.field_a = var3;
+                var3.field_h = null;
+                return;
+            }
             this.field_d = this.field_e.field_h;
             this.field_c.KA(this.field_e.field_c, this.field_e.field_b, this.field_e.field_d, this.field_e.field_g);
             var3 = this.field_e;
             var2 = var3;
             this.field_e = this.field_e.field_f;
-            if (param0 == 29709) {
-              var3.field_f = this.field_a;
-              this.field_a = var3;
-              var3.field_h = null;
-              return;
+            if (param0 != 29709) {
+                this.a((byte) 28);
             } else {
-              this.a((byte) 28);
-              var3.field_f = this.field_a;
-              this.field_a = var3;
-              var3.field_h = null;
-              return;
+                var3.field_f = this.field_a;
+                this.field_a = var3;
+                var3.field_h = null;
+                return;
             }
-          } else {
-            this.field_c.a(this.field_e.field_h, true);
-            this.field_d = this.field_e.field_h;
-            this.field_c.KA(this.field_e.field_c, this.field_e.field_b, this.field_e.field_d, this.field_e.field_g);
-            var3 = this.field_e;
-            var2 = var3;
-            this.field_e = this.field_e.field_f;
-            if (param0 == 29709) {
-              var3.field_f = this.field_a;
-              this.field_a = var3;
-              var3.field_h = null;
-              return;
-            } else {
-              this.a((byte) 28);
-              var3.field_f = this.field_a;
-              this.field_a = var3;
-              var3.field_h = null;
-              return;
-            }
-          }
+            var3.field_f = this.field_a;
+            this.field_a = var3;
+            var3.field_h = null;
+            return;
         }
+        this.field_c.KA(this.field_e.field_c, this.field_e.field_b, this.field_e.field_d, this.field_e.field_g);
+        var3 = this.field_e;
+        var2 = var3;
+        this.field_e = this.field_e.field_f;
+        if (param0 != 29709) {
+            this.a((byte) 28);
+        } else {
+            var3.field_f = this.field_a;
+            this.field_a = var3;
+            var3.field_h = null;
+            return;
+        }
+        var3.field_f = this.field_a;
+        this.field_a = var3;
+        var3.field_h = null;
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
@@ -150,15 +133,15 @@ final class pm {
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        hg var11 = null;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        hg var11;
         if (param0 < 45) {
           var11 = (hg) null;
           pm.a(-57, 125, (hg) null);

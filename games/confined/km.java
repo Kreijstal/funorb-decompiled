@@ -10,7 +10,7 @@ final class km {
     }
 
     final static int b(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         var2 = 0;
         if ((param1 ^ -1) <= -1) {
           if (65536 <= param1) {

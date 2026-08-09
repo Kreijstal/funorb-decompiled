@@ -21,8 +21,9 @@ final class re extends ue {
     private int[] field_s;
 
     final void f(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        ik dupTemp$0 = null;
+        int var2;
+        int var3;
         var3 = CrazyCrystals.field_B;
         if (param0 <= -87) {
           L0: {
@@ -35,7 +36,8 @@ final class re extends ue {
                 } else {
                   if (this.field_i >= 60 + var2 * 10) {
                     if (75 - -(10 * var2) > this.field_i) {
-                      this.field_d[var2].field_a = this.field_d[var2].field_a - 18;
+                      dupTemp$0 = this.field_d[var2];
+                      dupTemp$0.field_a = dupTemp$0.field_a - 18;
                       var2++;
                       continue L1;
                     } else {
@@ -60,33 +62,19 @@ final class re extends ue {
     }
 
     final void a(int param0, boolean param1) {
-        dl var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int stackIn_13_0 = 0;
-        ik stackIn_15_0 = null;
         ik stackIn_16_0 = null;
         ik stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_27_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        ik stackOut_14_0 = null;
-        ik stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        ik stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
+        dl var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         L0: {
           var8 = CrazyCrystals.field_B;
           var3 = ee.field_m;
@@ -119,12 +107,10 @@ final class re extends ue {
           if (var6 >= this.field_d.length) {
             L3: {
               if (5 != this.field_b.field_c) {
-                stackOut_20_0 = 12640511;
-                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_0 = 12640511;
                 break L3;
               } else {
-                stackOut_19_0 = 16777215;
-                stackIn_21_0 = stackOut_19_0;
+                stackIn_21_0 = 16777215;
                 break L3;
               }
             }
@@ -132,12 +118,10 @@ final class re extends ue {
               var6 = stackIn_21_0;
               this.a(this.field_d[5], var6, gi.field_m, true);
               if (-7 == (this.field_b.field_c ^ -1)) {
-                stackOut_23_0 = 16777215;
-                stackIn_24_0 = stackOut_23_0;
+                stackIn_24_0 = 16777215;
                 break L4;
               } else {
-                stackOut_22_0 = 12640511;
-                stackIn_24_0 = stackOut_22_0;
+                stackIn_24_0 = 12640511;
                 break L4;
               }
             }
@@ -145,12 +129,10 @@ final class re extends ue {
               var6 = stackIn_24_0;
               this.a(this.field_d[6], var6, qd.field_r, true);
               if (-8 == (this.field_b.field_c ^ -1)) {
-                stackOut_26_0 = 16777215;
-                stackIn_27_0 = stackOut_26_0;
+                stackIn_27_0 = 16777215;
                 break L5;
               } else {
-                stackOut_25_0 = 12640511;
-                stackIn_27_0 = stackOut_25_0;
+                stackIn_27_0 = 12640511;
                 break L5;
               }
             }
@@ -174,15 +156,13 @@ final class re extends ue {
             return;
           } else {
             L7: {
-              if (param0 != var6) {
+              if ((param0 ^ -1) != (var6 ^ -1)) {
                 L8: {
                   if (var6 == this.field_b.field_c) {
-                    stackOut_12_0 = 16777215;
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = 16777215;
                     break L8;
                   } else {
-                    stackOut_11_0 = 12640511;
-                    stackIn_13_0 = stackOut_11_0;
+                    stackIn_13_0 = 12640511;
                     break L8;
                   }
                 }
@@ -194,20 +174,15 @@ final class re extends ue {
               }
             }
             L9: {
-              stackOut_14_0 = this.field_d[var6];
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_15_0 = stackOut_14_0;
+              stackIn_16_0 = this.field_d[var6];
+
               if (var6 != this.field_b.field_c) {
-                stackOut_16_0 = (ik) ((Object) stackIn_16_0);
-                stackOut_16_1 = 0;
-                stackIn_17_0 = stackOut_16_0;
-                stackIn_17_1 = stackOut_16_1;
+                stackIn_17_0 = (ik) ((Object) stackIn_16_0);
+                stackIn_17_1 = 0;
                 break L9;
               } else {
-                stackOut_15_0 = (ik) ((Object) stackIn_15_0);
-                stackOut_15_1 = 1;
-                stackIn_17_0 = stackOut_15_0;
-                stackIn_17_1 = stackOut_15_1;
+                stackIn_17_0 = (ik) ((Object) stackIn_16_0);
+                stackIn_17_1 = 1;
                 break L9;
               }
             }
@@ -219,9 +194,9 @@ final class re extends ue {
     }
 
     final boolean a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var4 = CrazyCrystals.field_B;
           var2 = this.field_b.field_c;
@@ -613,20 +588,22 @@ final class re extends ue {
     }
 
     private final void a(int param0, byte param1) {
+        ik dupTemp$0 = null;
         int var3 = 0;
+        ik dupTemp$1 = null;
         int var4 = CrazyCrystals.field_B;
         if ((param0 ^ -1) <= -1) {
             if (!((this.field_t[param0] ^ -1) <= -21)) {
                 this.field_t[param0] = this.field_t[param0] + 1;
-                this.field_d[param0].field_a = this.field_d[param0].field_a - 14;
+                dupTemp$0 = this.field_d[param0];
+                dupTemp$0.field_a = dupTemp$0.field_a - 14;
             }
         }
         for (var3 = 0; var3 < 12; var3++) {
-            if (param0 != var3) {
-                if (-1 > (this.field_t[var3] ^ -1)) {
-                    this.field_t[var3] = this.field_t[var3] - 1;
-                    this.field_d[var3].field_a = this.field_d[var3].field_a + 14;
-                }
+            if ((param0 ^ -1) != (var3 ^ -1) && -1 > (this.field_t[var3] ^ -1)) {
+                this.field_t[var3] = this.field_t[var3] - 1;
+                dupTemp$1 = this.field_d[var3];
+                dupTemp$1.field_a = dupTemp$1.field_a + 14;
             }
             this.field_d[var3].field_d = this.field_t[var3] * (-this.field_s[var3] + this.field_e[var3]) * this.field_t[var3] / 400 + this.field_s[var3];
         }
@@ -650,17 +627,18 @@ final class re extends ue {
 
     final void a(byte param0, int param1) {
         int var3 = 0;
-        boolean discarded$0 = false;
+        ik dupTemp$0 = null;
         int var4 = CrazyCrystals.field_B;
         if (!(-21 >= (this.field_l ^ -1))) {
             this.field_l = this.field_l + 1;
             for (var3 = 0; 12 > var3; var3++) {
-                this.field_d[var3].field_a = this.field_d[var3].field_a + 14;
+                dupTemp$0 = this.field_d[var3];
+                dupTemp$0.field_a = dupTemp$0.field_a + 14;
             }
         }
         this.a(param1, (byte) -18);
         if (param0 != 20) {
-            discarded$0 = this.a(-34);
+            this.a(-34);
         }
     }
 
@@ -704,7 +682,6 @@ final class re extends ue {
     }
 
     final static boolean a(boolean param0, String param1) {
-        Process discarded$2 = null;
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -715,8 +692,6 @@ final class re extends ue {
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_21_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -725,19 +700,6 @@ final class re extends ue {
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_20_0 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         var4 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -749,8 +711,7 @@ final class re extends ue {
                       break L2;
                     } else {
                       if (!param1.startsWith("https://")) {
-                        stackOut_7_0 = 0;
-                        stackIn_8_0 = stackOut_7_0;
+                        stackIn_8_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L1;
                       } else {
@@ -770,15 +731,13 @@ final class re extends ue {
                           break L4;
                         }
                       }
-                      discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
-                      stackOut_18_0 = 1;
-                      stackIn_19_0 = stackOut_18_0;
+                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
+                      stackIn_19_0 = 1;
                       decompiledRegionSelector0 = 3;
                       break L1;
                     } else {
                       if (-1 == var2.indexOf((int) param1.charAt(var3))) {
-                        stackOut_13_0 = 0;
-                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L1;
                       } else {
@@ -788,8 +747,7 @@ final class re extends ue {
                     }
                   }
                 } else {
-                  stackOut_2_0 = 0;
-                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L1;
                 }
@@ -797,8 +755,7 @@ final class re extends ue {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackOut_20_0 = 0;
-              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_0 = 0;
               return stackIn_21_0 != 0;
             }
             if (decompiledRegionSelector0 == 0) {
@@ -823,27 +780,19 @@ final class re extends ue {
           decompiledCaughtException = decompiledCaughtParameter1;
           L5: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var2_ref2);
-            stackOut_22_1 = new StringBuilder().append("re.K(").append(param0).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_24_0 = (RuntimeException) (var2_ref2);
+
+            stackIn_24_1 = new StringBuilder().append("re.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L5;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L5;
             }
           }
@@ -876,6 +825,7 @@ final class re extends ue {
 
     private final void d(int param0) {
         int var2 = 0;
+        ik dupTemp$0 = null;
         int var3 = CrazyCrystals.field_B;
         if (param0 != 14) {
             field_n = (String) null;
@@ -883,7 +833,8 @@ final class re extends ue {
         if ((this.field_l ^ -1) < -1) {
             this.field_l = this.field_l - 1;
             for (var2 = 0; 12 > var2; var2++) {
-                this.field_d[var2].field_a = this.field_d[var2].field_a - 14;
+                dupTemp$0 = this.field_d[var2];
+                dupTemp$0.field_a = dupTemp$0.field_a - 14;
             }
         }
         this.a(-1, (byte) -18);
@@ -929,122 +880,93 @@ final class re extends ue {
 
     re() {
         super(12);
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
+        this.field_f = 0;
+        this.field_q = -126;
+        this.field_e = new int[12];
+        this.field_t = new int[12];
+        this.field_l = 0;
+        this.field_g = 0;
+        this.field_i = 0;
+        this.field_s = new int[12];
+        this.field_d = new ik[12];
         int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int[] var15 = null;
-        int[] var16 = null;
-        L0: {
-          this.field_f = 0;
-          this.field_q = -126;
-          this.field_e = new int[12];
-          this.field_t = new int[12];
-          this.field_l = 0;
-          this.field_g = 0;
-          this.field_i = 0;
-          this.field_s = new int[12];
-          this.field_d = new ik[12];
-          var1 = 0;
-          var2 = 95;
-          incrementValue$9 = var1;
-          var1++;
-          this.field_d[incrementValue$9] = (ik) ((Object) new mh(690, var2, 180, ai.field_n, 2));
-          var2 += 26;
-          var2 += 10;
-          incrementValue$10 = var1;
-          var1++;
-          this.field_d[incrementValue$10] = (ik) ((Object) new mh(690, var2, 180, rh.field_d, 2));
-          var2 += 26;
-          incrementValue$11 = var1;
-          var1++;
-          this.field_d[incrementValue$11] = (ik) ((Object) new mh(690, var2, 180, li.field_e, 2));
-          var2 += 26;
-          incrementValue$12 = var1;
-          var1++;
-          this.field_d[incrementValue$12] = (ik) ((Object) new mh(690, var2, 180, l.field_c, 2));
-          var2 += 26;
-          incrementValue$13 = var1;
-          var1++;
-          this.field_d[incrementValue$13] = (ik) ((Object) new mh(690, var2, 180, b.field_d, 2));
-          var2 += 26;
-          var2 += 10;
-          var3 = go.field_l.a(fa.field_m);
-          var4 = go.field_l.a(cc.field_b);
-          var5 = var3;
-          if (var4 <= var5) {
-            break L0;
-          } else {
+        int var2 = 95;
+        int incrementValue$0 = var1;
+        var1++;
+        this.field_d[incrementValue$0] = (ik) ((Object) new mh(690, var2, 180, ai.field_n, 2));
+        var2 += 26;
+        var2 += 10;
+        int incrementValue$1 = var1;
+        var1++;
+        this.field_d[incrementValue$1] = (ik) ((Object) new mh(690, var2, 180, rh.field_d, 2));
+        var2 += 26;
+        int incrementValue$2 = var1;
+        var1++;
+        this.field_d[incrementValue$2] = (ik) ((Object) new mh(690, var2, 180, li.field_e, 2));
+        var2 += 26;
+        int incrementValue$3 = var1;
+        var1++;
+        this.field_d[incrementValue$3] = (ik) ((Object) new mh(690, var2, 180, l.field_c, 2));
+        var2 += 26;
+        int incrementValue$4 = var1;
+        var1++;
+        this.field_d[incrementValue$4] = (ik) ((Object) new mh(690, var2, 180, b.field_d, 2));
+        var2 += 26;
+        var2 += 10;
+        int var3 = go.field_l.a(fa.field_m);
+        int var4 = go.field_l.a(cc.field_b);
+        int var5 = var3;
+        if (var4 > var5) {
             var5 = var4;
-            break L0;
-          }
         }
         this.field_r = (-79 + (var5 + 180)) / 2;
         this.field_d[var1] = (ik) ((Object) new mh(690, var2, 180, fa.field_m, 0));
         var2 += 26;
-        ((mh) ((Object) this.field_d[var1])).field_k = ((mh) ((Object) this.field_d[var1])).field_k + (-var3 + this.field_r);
+        mh dupTemp$5 = (mh) ((Object) this.field_d[var1]);
+        dupTemp$5.field_k = dupTemp$5.field_k + (-var3 + this.field_r);
         var1++;
         this.field_d[var1] = (ik) ((Object) new mh(690, var2, 180, cc.field_b, 0));
         var2 += 26;
-        ((mh) ((Object) this.field_d[var1])).field_k = ((mh) ((Object) this.field_d[var1])).field_k + (-var4 + this.field_r);
+        mh dupTemp$6 = (mh) ((Object) this.field_d[var1]);
+        dupTemp$6.field_k = dupTemp$6.field_k + (-var4 + this.field_r);
         var1++;
         this.field_d[var1] = (ik) ((Object) new mh(690, var2, 180, vl.field_e, 2));
         var2 += 26;
         var1++;
         var2 += 10;
-        int incrementValue$14 = var1;
+        int incrementValue$7 = var1;
         var1++;
-        this.field_d[incrementValue$14] = (ik) ((Object) new mh(690, var2, 180, cp.field_h, 2));
+        this.field_d[incrementValue$7] = (ik) ((Object) new mh(690, var2, 180, cp.field_h, 2));
         var2 += 26;
-        int incrementValue$15 = var1;
+        int incrementValue$8 = var1;
         var1++;
-        this.field_d[incrementValue$15] = (ik) ((Object) new mh(690, var2, 180, fq.field_G, 2));
-        var2 += 26;
-        var2 += 10;
-        int incrementValue$16 = var1;
-        var1++;
-        this.field_d[incrementValue$16] = (ik) ((Object) new mh(690, var2, 180, nk.field_n, 2));
+        this.field_d[incrementValue$8] = (ik) ((Object) new mh(690, var2, 180, fq.field_G, 2));
         var2 += 26;
         var2 += 10;
-        int incrementValue$17 = var1;
+        int incrementValue$9 = var1;
         var1++;
-        this.field_d[incrementValue$17] = (ik) ((Object) new mh(690, var2, 180, dc.field_C, 2));
+        this.field_d[incrementValue$9] = (ik) ((Object) new mh(690, var2, 180, nk.field_n, 2));
         var2 += 26;
-        var1 = 0;
-        L1: while (true) {
-          if ((var1 ^ -1) <= -13) {
-            var1 = 0;
-            L2: while (true) {
-              if (5 <= var1) {
-                var16 = this.field_e;
-                var15 = this.field_e;
-                this.field_e[10] = 78;
-                var15[9] = 78;
-                var16[8] = 78;
-                um.a(128, "menu", (byte) 77);
-                return;
-              } else {
-                this.field_e[var1] = 10;
-                var1++;
-                continue L2;
-              }
-            }
-          } else {
+        var2 += 10;
+        int incrementValue$10 = var1;
+        var1++;
+        this.field_d[incrementValue$10] = (ik) ((Object) new mh(690, var2, 180, dc.field_C, 2));
+        var2 += 26;
+        for (var1 = 0; (var1 ^ -1) > -13; var1++) {
             this.field_s[var1] = this.field_d[var1].field_d;
-            var1++;
-            continue L1;
-          }
         }
+        for (var1 = 0; 5 > var1; var1++) {
+            this.field_e[var1] = 10;
+        }
+        int[] var16 = this.field_e;
+        int[] var15 = this.field_e;
+        this.field_e[10] = 78;
+        var15[9] = 78;
+        var16[8] = 78;
+        um.a(128, "menu", (byte) 77);
     }
 
     final void c(int param0) {
-        boolean discarded$0 = false;
         if (this.field_f > 0) {
             this.field_f = this.field_f - this.field_u;
             if ((this.field_f ^ -1) > -1) {
@@ -1053,7 +975,7 @@ final class re extends ue {
         }
         if (param0 != -1) {
             String var3 = (String) null;
-            discarded$0 = re.a(true, (String) null);
+            re.a(true, (String) null);
         }
     }
 

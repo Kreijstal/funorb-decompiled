@@ -15,10 +15,10 @@ final class ug implements Iterable {
         try {
             IOException iOException = null;
             int var1_int = 0;
-            RuntimeException var1 = null;
-            IOException var2 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
+            RuntimeException var1 = null;
+            IOException var2 = null;
             var3 = CrazyCrystals.field_B;
             try {
               L0: {

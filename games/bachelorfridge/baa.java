@@ -27,7 +27,7 @@ final class baa extends ana {
     static byte[][] field_P;
 
     final static void e(int param0) {
-        eaa var2 = null;
+        eaa var2;
         bn.field_h = null;
         nw.field_p = null;
         jla.field_d = null;
@@ -134,10 +134,10 @@ final class baa extends ana {
 
     final boolean c(byte param0) {
         int fieldTemp$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        aj var5 = null;
+        int var2;
+        int var3;
+        int var4;
+        aj var5;
         if (!this.field_m.a((byte) -106)) {
           L0: {
             if (!this.field_N) {
@@ -196,27 +196,17 @@ final class baa extends ana {
     }
 
     final static void a(eaa param0, boolean param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
-        rea var6_ref = null;
+        rea var6 = null;
         int var7 = 0;
         int var8 = 0;
         eaa var9 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var6_ref = null;
         var8 = BachelorFridge.field_y;
         try {
           L0: {
@@ -229,14 +219,14 @@ final class baa extends ana {
                 break L1;
               }
             }
-            var6_ref = (rea) ((Object) param0.b((byte) 90));
+            var6 = (rea) ((Object) param0.b((byte) 90));
             L2: while (true) {
-              if (var6_ref == null) {
+              if (var6 == null) {
                 break L0;
               } else {
                 L3: {
-                  var7 = (326565 * (int)var6_ref.field_j + 8357 * (int)var6_ref.field_m & 630) + (var6_ref.field_n >> 443562849);
-                  param2 = var6_ref.field_i;
+                  var7 = (326565 * (int)var6.field_j + 8357 * (int)var6.field_m & 630) + (var6.field_n >> 443562849);
+                  param2 = var6.field_i;
                   if (-257 > (var7 ^ -1)) {
                     var7 = 256;
                     break L3;
@@ -244,9 +234,9 @@ final class baa extends ana {
                     break L3;
                   }
                 }
-                dg.d(((int)var6_ref.field_m * param5 >> 1746121648) + param3, -2 + param4 - (((int)var6_ref.field_j - (int)var6_ref.field_l) * param5 >> 1255465072), 5, param2);
-                dg.f(param3 + (int)var6_ref.field_m, (int)var6_ref.field_l + param4 + -2, (-var6_ref.field_n + 128) / 12, param2, 256 + -var7 >> 1300669059);
-                var6_ref = (rea) ((Object) param0.c(0));
+                dg.d(((int)var6.field_m * param5 >> 1746121648) + param3, -2 + param4 - (((int)var6.field_j - (int)var6.field_l) * param5 >> 1255465072), 5, param2);
+                dg.f(param3 + (int)var6.field_m, (int)var6.field_l + param4 + -2, (-var6.field_n + 128) / 12, param2, 256 + -var7 >> 1300669059);
+                var6 = (rea) ((Object) param0.c(0));
                 continue L2;
               }
             }
@@ -254,28 +244,20 @@ final class baa extends ana {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var6 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var6);
-            stackOut_10_1 = new StringBuilder().append("baa.C(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            var6_ref = decompiledCaughtException;
+            stackIn_12_0 = (RuntimeException) (var6_ref);
+
+            stackIn_12_1 = new StringBuilder().append("baa.C(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -295,8 +277,8 @@ final class baa extends ana {
     }
 
     private final boolean d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = BachelorFridge.field_y;
         if (param0 <= -8) {
           if (this.field_w) {
@@ -588,13 +570,13 @@ final class baa extends ana {
     }
 
     final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        aj var8 = null;
-        aj var9 = null;
+        int var2;
+        int var3;
+        int var5;
+        int var6;
+        int var7;
+        aj var8;
+        aj var9;
         if (!this.field_m.a((byte) -106)) {
           if (!this.field_f) {
             var2 = (this.field_K << -9776816) - -((-this.field_K + this.field_O << 1591830736) * this.field_L / 6);

@@ -62,8 +62,10 @@ abstract class oi extends aja {
     }
 
     private final boolean a(float param0, float param1, float param2, float param3, float param4, float param5) {
-        int var7 = 0;
-        int var8 = 0;
+        float var17 = 0.0f;
+        float var18 = 0.0f;
+        float var19 = 0.0f;
+        float var20 = 0.0f;
         float var9 = 0.0f;
         float var10 = 0.0f;
         float var11 = 0.0f;
@@ -72,191 +74,105 @@ abstract class oi extends aja {
         float var14 = 0.0f;
         float var15 = 0.0f;
         float var16 = 0.0f;
-        float var17 = 0.0f;
-        float var18 = 0.0f;
-        float var19 = 0.0f;
-        float var20 = 0.0f;
-        L0: {
-          L1: {
-            var7 = this.field_k + this.field_e + this.field_D;
-            var8 = this.field_n + this.field_q + this.field_j;
-            if (var7 != this.field_e) {
-              break L1;
-            } else {
-              if (var8 == this.field_q) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          var9 = (param2 - param0) / (float)var7;
-          var10 = (param3 - param1) / (float)var7;
-          var11 = (param4 - param0) / (float)var8;
-          var12 = (param5 - param1) / (float)var8;
-          var13 = var11 * (float)this.field_n;
-          var14 = var12 * (float)this.field_n;
-          var15 = var9 * (float)this.field_k;
-          var16 = var10 * (float)this.field_k;
-          var17 = -var9 * (float)this.field_D;
-          var18 = -var10 * (float)this.field_D;
-          var19 = -var11 * (float)this.field_j;
-          var20 = -var12 * (float)this.field_j;
-          param0 = param0 + (var15 + var13);
-          param1 = param1 + (var16 + var14);
-          param2 = param2 + (var17 + var13);
-          param3 = param3 + (var18 + var14);
-          param4 = param4 + (var15 + var19);
-          param5 = param5 + (var16 + var20);
-          break L0;
+        int var7 = this.field_k + this.field_e + this.field_D;
+        int var8 = this.field_n + this.field_q + this.field_j;
+        if (var7 != this.field_e || var8 != this.field_q) {
+            var9 = (param2 - param0) / (float)var7;
+            var10 = (param3 - param1) / (float)var7;
+            var11 = (param4 - param0) / (float)var8;
+            var12 = (param5 - param1) / (float)var8;
+            var13 = var11 * (float)this.field_n;
+            var14 = var12 * (float)this.field_n;
+            var15 = var9 * (float)this.field_k;
+            var16 = var10 * (float)this.field_k;
+            var17 = -var9 * (float)this.field_D;
+            var18 = -var10 * (float)this.field_D;
+            var19 = -var11 * (float)this.field_j;
+            var20 = -var12 * (float)this.field_j;
+            param0 = param0 + (var15 + var13);
+            param1 = param1 + (var16 + var14);
+            param2 = param2 + (var17 + var13);
+            param3 = param3 + (var18 + var14);
+            param4 = param4 + (var15 + var19);
+            param5 = param5 + (var16 + var20);
         }
-        L2: {
-          var9 = param4 + (param2 - param0);
-          var10 = param3 + (param5 - param1);
-          if (param0 >= param2) {
-            var11 = param2;
-            var12 = param0;
-            break L2;
-          } else {
+        var9 = param4 + (param2 - param0);
+        var10 = param3 + (param5 - param1);
+        if (param0 < param2) {
             var11 = param0;
             var12 = param2;
-            break L2;
-          }
+        } else {
+            var11 = param2;
+            var12 = param0;
         }
-        L3: {
-          if (param4 >= var11) {
-            break L3;
-          } else {
+        if (param4 < var11) {
             var11 = param4;
-            break L3;
-          }
         }
-        L4: {
-          if (var9 >= var11) {
-            break L4;
-          } else {
+        if (var9 < var11) {
             var11 = var9;
-            break L4;
-          }
         }
-        L5: {
-          if (param4 <= var12) {
-            break L5;
-          } else {
+        if (param4 > var12) {
             var12 = param4;
-            break L5;
-          }
         }
-        L6: {
-          if (var9 <= var12) {
-            break L6;
-          } else {
+        if (var9 > var12) {
             var12 = var9;
-            break L6;
-          }
         }
-        L7: {
-          if (param1 >= param3) {
-            var13 = param3;
-            var14 = param1;
-            break L7;
-          } else {
+        if (param1 < param3) {
             var13 = param1;
             var14 = param3;
-            break L7;
-          }
+        } else {
+            var13 = param3;
+            var14 = param1;
         }
-        L8: {
-          if (param5 >= var13) {
-            break L8;
-          } else {
+        if (param5 < var13) {
             var13 = param5;
-            break L8;
-          }
         }
-        L9: {
-          if (var10 >= var13) {
-            break L9;
-          } else {
+        if (var10 < var13) {
             var13 = var10;
-            break L9;
-          }
         }
-        L10: {
-          if (param5 <= var14) {
-            break L10;
-          } else {
+        if (param5 > var14) {
             var14 = param5;
-            break L10;
-          }
         }
-        L11: {
-          if (var10 <= var14) {
-            break L11;
-          } else {
+        if (var10 > var14) {
             var14 = var10;
-            break L11;
-          }
         }
-        L12: {
-          if (var11 >= (float)this.field_w.field_H) {
-            break L12;
-          } else {
+        if (var11 < (float)this.field_w.field_H) {
             var11 = (float)this.field_w.field_H;
-            break L12;
-          }
         }
-        L13: {
-          if (var12 <= (float)this.field_w.field_A) {
-            break L13;
-          } else {
+        if (var12 > (float)this.field_w.field_A) {
             var12 = (float)this.field_w.field_A;
-            break L13;
-          }
         }
-        L14: {
-          if (var13 >= (float)this.field_w.field_n) {
-            break L14;
-          } else {
+        if (var13 < (float)this.field_w.field_n) {
             var13 = (float)this.field_w.field_n;
-            break L14;
-          }
         }
-        L15: {
-          if (var14 <= (float)this.field_w.field_p) {
-            break L15;
-          } else {
+        if (var14 > (float)this.field_w.field_p) {
             var14 = (float)this.field_w.field_p;
-            break L15;
-          }
         }
         var12 = var11 - var12;
-        if (var12 < 0.0f) {
-          var14 = var13 - var14;
-          if (var14 < 0.0f) {
-            field_o = this.field_w.field_i;
-            field_f = (int)((float)((int)var13 * field_o) + var11);
-            var15 = (param2 - param0) * (param5 - param1) - (param3 - param1) * (param4 - param0);
-            var16 = (param4 - param0) * (param3 - param1) - (param5 - param1) * (param2 - param0);
-            field_C = (int)((param5 - param1) * 4096.0f * (float)this.field_e / var15);
-            field_v = (int)((param3 - param1) * 4096.0f * (float)this.field_q / var16);
-            field_z = (int)((param4 - param0) * 4096.0f * (float)this.field_e / var16);
-            field_u = (int)((param2 - param0) * 4096.0f * (float)this.field_q / var15);
-            field_A = (int)(var11 * 16.0f + 8.0f - (param0 + param2 + param4 + var9) / 4.0f * 16.0f);
-            field_d = (int)(var13 * 16.0f + 8.0f - (param1 + param3 + param5 + var10) / 4.0f * 16.0f);
-            field_m = (this.field_e >> 1 << 12) + (field_d * field_z >> 4);
-            field_p = (this.field_q >> 1 << 12) + (field_d * field_u >> 4);
-            field_a = field_A * field_C >> 4;
-            field_l = field_A * field_v >> 4;
-            field_B = (int)var12;
-            field_h = (int)var14;
-            return true;
-          } else {
+        if (var12 >= 0.0f) {
             return false;
-          }
-        } else {
-          return false;
         }
+        var14 = var13 - var14;
+        if (var14 >= 0.0f) {
+            return false;
+        }
+        field_o = this.field_w.field_i;
+        field_f = (int)((float)((int)var13 * field_o) + var11);
+        var15 = (param2 - param0) * (param5 - param1) - (param3 - param1) * (param4 - param0);
+        var16 = (param4 - param0) * (param3 - param1) - (param5 - param1) * (param2 - param0);
+        field_C = (int)((param5 - param1) * 4096.0f * (float)this.field_e / var15);
+        field_v = (int)((param3 - param1) * 4096.0f * (float)this.field_q / var16);
+        field_z = (int)((param4 - param0) * 4096.0f * (float)this.field_e / var16);
+        field_u = (int)((param2 - param0) * 4096.0f * (float)this.field_q / var15);
+        field_A = (int)(var11 * 16.0f + 8.0f - (param0 + param2 + param4 + var9) / 4.0f * 16.0f);
+        field_d = (int)(var13 * 16.0f + 8.0f - (param1 + param3 + param5 + var10) / 4.0f * 16.0f);
+        field_m = (this.field_e >> 1 << 12) + (field_d * field_z >> 4);
+        field_p = (this.field_q >> 1 << 12) + (field_d * field_u >> 4);
+        field_a = field_A * field_C >> 4;
+        field_l = field_A * field_v >> 4;
+        field_B = (int)var12;
+        field_h = (int)var14;
+        return true;
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -289,8 +205,8 @@ abstract class oi extends aja {
     }
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
-        int var11 = 0;
-        int var12 = 0;
+        int var11;
+        int var12;
         if (!this.field_w.g()) {
           if (this.a(param0, param1, param2, param3, param4, param5)) {
             L0: {

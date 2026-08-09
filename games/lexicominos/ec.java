@@ -12,23 +12,23 @@ final class ec implements Iterator {
     static ng field_e;
 
     public final Object next() {
-        ca var1 = null;
+        Object var1;
         var1 = this.field_a;
         if (var1 != this.field_d.field_e) {
-          this.field_a = var1.field_l;
+          this.field_a = ((ca) (var1)).field_l;
           if (Lexicominos.field_L) {
             this.field_a = null;
             var1 = null;
-            this.field_f = var1;
+            this.field_f = (ca) (var1);
             return var1;
           } else {
-            this.field_f = var1;
+            this.field_f = (ca) (var1);
             return var1;
           }
         } else {
           this.field_a = null;
           var1 = null;
-          this.field_f = var1;
+          this.field_f = (ca) (var1);
           return var1;
         }
     }

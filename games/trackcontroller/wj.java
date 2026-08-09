@@ -29,7 +29,7 @@ abstract class wj {
     }
 
     final int a(byte param0, long param1) {
-        long var4 = 0L;
+        long var4;
         if (param0 < 105) {
           L0: {
             field_a = (qj[]) null;
@@ -57,9 +57,9 @@ abstract class wj {
     }
 
     final static void a(byte param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = TrackController.field_F ? 1 : 0;
         var2 = -64 / ((44 - param0) / 37);
         if (0 < hk.field_d) {

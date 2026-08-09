@@ -20,15 +20,15 @@ final class fk {
     }
 
     private final byte[] b() {
-        int var1 = 0;
-        int var2 = 0;
-        byte[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int[] var13 = null;
+        int var1;
+        int var2;
+        byte[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int var8;
+        int var9;
+        int[] var13;
         var1 = 0;
         var2 = 0;
         L0: while (true) {
@@ -101,8 +101,8 @@ final class fk {
     }
 
     private fk(kg param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         this.field_c = new lg[10];
         var2 = 0;
         L0: while (true) {

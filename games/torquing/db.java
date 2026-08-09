@@ -15,10 +15,7 @@ final class db {
     private int field_e;
 
     final boolean f(byte param0) {
-        boolean discarded$7 = false;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == -60) {
           if (this.field_e == 0) {
             if ((this.field_h ^ -1) != -85) {
@@ -34,19 +31,17 @@ final class db {
             return true;
           }
         } else {
-          discarded$7 = this.d((byte) 26);
+          this.d((byte) 26);
           if (this.field_e == 0) {
             if ((this.field_h ^ -1) == -85) {
               return true;
             } else {
               L0: {
                 if (83 != this.field_h) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }
@@ -266,10 +261,7 @@ final class db {
     }
 
     final boolean c(int param0) {
-        boolean discarded$7 = false;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == -97) {
           if (this.field_c == 0) {
             if (-85 != (this.field_h ^ -1)) {
@@ -285,19 +277,17 @@ final class db {
             return true;
           }
         } else {
-          discarded$7 = this.f((byte) -87);
+          this.f((byte) -87);
           if (this.field_c == 0) {
             if (-85 == (this.field_h ^ -1)) {
               return true;
             } else {
               L0: {
                 if (this.field_h != 83) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }
@@ -310,16 +300,6 @@ final class db {
     }
 
     final void a(byte param0, int param1) {
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
-        boolean discarded$14 = false;
-        boolean discarded$15 = false;
-        boolean discarded$16 = false;
-        boolean discarded$17 = false;
-        boolean discarded$18 = false;
-        boolean discarded$19 = false;
         this.field_c = 0;
         this.field_h = 0;
         this.field_e = 0;
@@ -381,7 +361,7 @@ final class db {
                       }
                     } else {
                       L2: {
-                        discarded$10 = this.d((byte) -58);
+                        this.d((byte) -58);
                         if (this.field_b != 0) {
                           break L2;
                         } else {
@@ -413,7 +393,7 @@ final class db {
                     if (param0 > 44) {
                       break L4;
                     } else {
-                      discarded$11 = this.d((byte) -58);
+                      this.d((byte) -58);
                       break L4;
                     }
                   }
@@ -472,7 +452,7 @@ final class db {
                 return;
               }
             } else {
-              discarded$12 = this.d((byte) -58);
+              this.d((byte) -58);
               if (this.field_b == 0) {
                 if ((e.field_f ^ -1) == -99) {
                   this.field_k = false;
@@ -515,7 +495,7 @@ final class db {
                       if (param0 > 44) {
                         break L8;
                       } else {
-                        discarded$13 = this.d((byte) -58);
+                        this.d((byte) -58);
                         break L8;
                       }
                     }
@@ -577,7 +557,7 @@ final class db {
                 return;
               } else {
                 L13: {
-                  discarded$14 = this.d((byte) -58);
+                  this.d((byte) -58);
                   if (this.field_b != 0) {
                     break L13;
                   } else {
@@ -608,7 +588,7 @@ final class db {
                 if (param0 > 44) {
                   break L15;
                 } else {
-                  discarded$15 = this.d((byte) -58);
+                  this.d((byte) -58);
                   break L15;
                 }
               }
@@ -657,7 +637,7 @@ final class db {
                       if (param0 > 44) {
                         break L19;
                       } else {
-                        discarded$16 = this.d((byte) -58);
+                        this.d((byte) -58);
                         break L19;
                       }
                     }
@@ -692,7 +672,7 @@ final class db {
                     if (param0 > 44) {
                       break L22;
                     } else {
-                      discarded$17 = this.d((byte) -58);
+                      this.d((byte) -58);
                       break L22;
                     }
                   }
@@ -755,7 +735,7 @@ final class db {
               }
             } else {
               L26: {
-                discarded$18 = this.d((byte) -58);
+                this.d((byte) -58);
                 if (this.field_b != 0) {
                   break L26;
                 } else {
@@ -806,7 +786,7 @@ final class db {
               if (param0 > 44) {
                 break L29;
               } else {
-                discarded$19 = this.d((byte) -58);
+                this.d((byte) -58);
                 break L29;
               }
             }
@@ -847,9 +827,6 @@ final class db {
     final boolean b(byte param0) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == -108) {
           if (-3 != (this.field_c ^ -1)) {
             if ((this.field_h ^ -1) == -97) {
@@ -858,8 +835,7 @@ final class db {
               return false;
             }
           } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_0 = 1;
             return stackIn_11_0 != 0;
           }
         } else {
@@ -869,12 +845,10 @@ final class db {
           } else {
             L0: {
               if ((this.field_h ^ -1) != -97) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L0;
               }
             }
@@ -908,7 +882,6 @@ final class db {
 
     final boolean b(int param0) {
         int stackIn_9_0 = 0;
-        int stackOut_7_0 = 0;
         if (param0 >= 81) {
           if (1 != this.field_c) {
             if (this.field_h != 97) {
@@ -919,8 +892,7 @@ final class db {
                   return false;
                 }
               } else {
-                stackOut_7_0 = 1;
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = 1;
                 return stackIn_9_0 != 0;
               }
             } else {
@@ -935,25 +907,18 @@ final class db {
     }
 
     final boolean e(int param0) {
-        String discarded$8 = null;
-        String var3 = null;
+        String var3;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 7632) {
           L0: {
             var3 = (String) null;
-            discarded$8 = db.a((String) null, -6);
+            db.a((String) null, -6);
             if (-98 != (this.field_h ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -961,12 +926,10 @@ final class db {
         } else {
           L1: {
             if (-98 != (this.field_h ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -975,32 +938,25 @@ final class db {
     }
 
     public static void d(int param0) {
-        String discarded$0 = null;
         field_d = null;
         field_a = null;
         if (param0 != -98) {
             String var2 = (String) null;
-            discarded$0 = db.a((String) null, 63);
+            db.a((String) null, 63);
         }
     }
 
     final boolean d(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 106) {
           L0: {
             this.field_g = 90;
             if (-104 != (this.field_h ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -1008,12 +964,10 @@ final class db {
         } else {
           L1: {
             if (-104 != (this.field_h ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -1024,20 +978,14 @@ final class db {
     final boolean a(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -116) {
           L0: {
             this.field_b = -116;
             if (0 == this.field_b) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -1045,12 +993,10 @@ final class db {
         } else {
           L1: {
             if (0 == this.field_b) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -1496,8 +1442,6 @@ final class db {
         int var5 = 0;
         String stackIn_3_0 = null;
         String stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -1505,16 +1449,6 @@ final class db {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_7_0 = null;
-        String stackOut_2_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         var5 = Torquing.field_u;
         try {
           L0: {
@@ -1524,8 +1458,7 @@ final class db {
               var4 = 0;
               L1: while (true) {
                 if (var2_int <= var4) {
-                  stackOut_7_0 = new String(var3);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = new String(var3);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -1535,8 +1468,7 @@ final class db {
                 }
               }
             } else {
-              stackOut_2_0 = (String) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (String) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -1545,27 +1477,19 @@ final class db {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2);
-            stackOut_9_1 = new StringBuilder().append("db.D(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var2);
+
+            stackIn_11_1 = new StringBuilder().append("db.D(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -1579,32 +1503,21 @@ final class db {
     }
 
     final void a(int param0, byte param1, boolean param2, int param3) {
-        int var5 = 0;
-        Object stackIn_1_0 = null;
+        int var5;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           var5 = -25 / ((param1 - -9) / 58);
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param2) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -1622,20 +1535,14 @@ final class db {
     final boolean c(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 <= 31) {
           L0: {
             this.a(81);
             if ((this.field_h ^ -1) != -97) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -1643,12 +1550,10 @@ final class db {
         } else {
           L1: {
             if ((this.field_h ^ -1) != -97) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

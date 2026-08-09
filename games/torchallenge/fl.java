@@ -20,17 +20,11 @@ final class fl extends vb {
     private final void a(boolean param0, byte param1) {
         try {
             IOException iOException = null;
-            Exception var4 = null;
-            uf stackIn_6_0 = null;
             uf stackIn_7_0 = null;
             uf stackIn_8_0 = null;
             int stackIn_8_1 = 0;
             Throwable decompiledCaughtException = null;
-            uf stackOut_5_0 = null;
-            uf stackOut_7_0 = null;
-            int stackOut_7_1 = 0;
-            uf stackOut_6_0 = null;
-            int stackOut_6_1 = 0;
+            Exception var4 = null;
             L0: {
               if (param1 <= -50) {
                 break L0;
@@ -46,20 +40,15 @@ final class fl extends vb {
                 L1: {
                   L2: {
                     this.field_d.field_q = 0;
-                    stackOut_5_0 = this.field_d;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_6_0 = stackOut_5_0;
+                    stackIn_7_0 = this.field_d;
+
                     if (!param0) {
-                      stackOut_7_0 = (uf) ((Object) stackIn_7_0);
-                      stackOut_7_1 = 3;
-                      stackIn_8_0 = stackOut_7_0;
-                      stackIn_8_1 = stackOut_7_1;
+                      stackIn_8_0 = (uf) ((Object) stackIn_7_0);
+                      stackIn_8_1 = 3;
                       break L2;
                     } else {
-                      stackOut_6_0 = (uf) ((Object) stackIn_6_0);
-                      stackOut_6_1 = 2;
-                      stackIn_8_0 = stackOut_6_0;
-                      stackIn_8_1 = stackOut_6_1;
+                      stackIn_8_0 = (uf) ((Object) stackIn_7_0);
+                      stackIn_8_1 = 2;
                       break L2;
                     }
                   }
@@ -110,30 +99,19 @@ final class fl extends vb {
 
     final void a(boolean param0, Object param1, byte param2) {
         try {
-            boolean discarded$1 = false;
-            Exception var4 = null;
-            IOException var4_ref = null;
-            RuntimeException var4_ref2 = null;
-            db var4_ref3 = null;
-            Exception var5 = null;
-            int var6 = 0;
-            pa var7 = null;
-            RuntimeException stackIn_26_0 = null;
-            StringBuilder stackIn_26_1 = null;
             RuntimeException stackIn_27_0 = null;
             StringBuilder stackIn_27_1 = null;
             RuntimeException stackIn_28_0 = null;
             StringBuilder stackIn_28_1 = null;
             String stackIn_28_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_25_0 = null;
-            StringBuilder stackOut_25_1 = null;
-            RuntimeException stackOut_27_0 = null;
-            StringBuilder stackOut_27_1 = null;
-            String stackOut_27_2 = null;
-            RuntimeException stackOut_26_0 = null;
-            StringBuilder stackOut_26_1 = null;
-            String stackOut_26_2 = null;
+            Exception var4 = null;
+            db var4_ref = null;
+            IOException var4_ref2 = null;
+            RuntimeException var4_ref3 = null;
+            Exception var5 = null;
+            int var6 = 0;
+            pa var7 = null;
             var6 = TorChallenge.field_F ? 1 : 0;
             try {
               L0: {
@@ -167,20 +145,20 @@ final class fl extends vb {
                     break L4;
                   } else {
                     var7 = (pa) null;
-                    discarded$1 = fl.a((pa) null, (byte) 59);
+                    fl.a((pa) null, (byte) 59);
                     break L4;
                   }
                 }
                 L5: while (true) {
-                  var4_ref3 = (db) ((Object) this.field_l.c(-1));
-                  if (var4_ref3 != null) {
-                    this.field_c.a(var4_ref3, 3329);
+                  var4_ref = (db) ((Object) this.field_l.c(-1));
+                  if (var4_ref != null) {
+                    this.field_c.a(var4_ref, 3329);
                     continue L5;
                   } else {
                     L6: while (true) {
-                      var4_ref3 = (db) ((Object) this.field_i.c(-1));
-                      if (var4_ref3 != null) {
-                        this.field_k.a(var4_ref3, param2 + 3214);
+                      var4_ref = (db) ((Object) this.field_i.c(-1));
+                      if (var4_ref != null) {
+                        this.field_k.a(var4_ref, param2 + 3214);
                         continue L6;
                       } else {
                         L7: {
@@ -199,7 +177,7 @@ final class fl extends vb {
                             } catch (java.io.IOException decompiledCaughtParameter1) {
                               decompiledCaughtException = decompiledCaughtParameter1;
                               L9: {
-                                var4_ref = (IOException) (Object) decompiledCaughtException;
+                                var4_ref2 = (IOException) (Object) decompiledCaughtException;
                                 try {
                                   L10: {
                                     this.field_u.a((byte) 127);
@@ -232,28 +210,20 @@ final class fl extends vb {
             } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               L12: {
-                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_25_0 = (RuntimeException) (var4_ref2);
-                stackOut_25_1 = new StringBuilder().append("fl.A(").append(param0).append(',');
-                stackIn_27_0 = stackOut_25_0;
-                stackIn_27_1 = stackOut_25_1;
-                stackIn_26_0 = stackOut_25_0;
-                stackIn_26_1 = stackOut_25_1;
+                var4_ref3 = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_27_0 = (RuntimeException) (var4_ref3);
+
+                stackIn_27_1 = new StringBuilder().append("fl.A(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-                  stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-                  stackOut_27_2 = "null";
-                  stackIn_28_0 = stackOut_27_0;
-                  stackIn_28_1 = stackOut_27_1;
-                  stackIn_28_2 = stackOut_27_2;
+                  stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+                  stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+                  stackIn_28_2 = "null";
                   break L12;
                 } else {
-                  stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-                  stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-                  stackOut_26_2 = "{...}";
-                  stackIn_28_0 = stackOut_26_0;
-                  stackIn_28_1 = stackOut_26_1;
-                  stackIn_28_2 = stackOut_26_2;
+                  stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+                  stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+                  stackIn_28_2 = "{...}";
                   break L12;
                 }
               }
@@ -314,8 +284,8 @@ final class fl extends vb {
     private final void d(byte param0) {
         try {
             IOException iOException = null;
-            Exception var3 = null;
             Throwable decompiledCaughtException = null;
+            Exception var3 = null;
             if (null != this.field_u) {
               L0: {
                 if (param0 == 2) {
@@ -368,45 +338,30 @@ final class fl extends vb {
     }
 
     final static boolean a(pa param0, byte param1) {
-        int discarded$2 = 0;
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
               if (param1 >= 103) {
                 break L1;
               } else {
-                discarded$2 = fl.f(97);
+                fl.f(97);
                 break L1;
               }
             }
             L2: {
               if (param0.e(1, -53) != 1) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L2;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L2;
               }
             }
@@ -416,27 +371,19 @@ final class fl extends vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var2);
-            stackOut_6_1 = new StringBuilder().append("fl.E(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var2);
+
+            stackIn_8_1 = new StringBuilder().append("fl.E(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -447,12 +394,16 @@ final class fl extends vb {
 
     final boolean b(int param0) {
         try {
-            IOException var2 = null;
+            int stackIn_63_0 = 0;
+            int stackIn_80_0 = 0;
+            int stackIn_89_0 = 0;
+            Throwable decompiledCaughtException = null;
             long var2_long = 0L;
-            db var2_ref = null;
+            db var2 = null;
             int var2_int = 0;
-            Exception var3 = null;
+            IOException var2_ref = null;
             int var3_int = 0;
+            Exception var3 = null;
             int var4 = 0;
             Exception var5_ref_Exception = null;
             int var5 = 0;
@@ -467,15 +418,6 @@ final class fl extends vb {
             db var14_ref = null;
             int var15 = 0;
             int var16 = 0;
-            int stackIn_63_0 = 0;
-            int stackIn_80_0 = 0;
-            int stackIn_89_0 = 0;
-            Throwable decompiledCaughtException = null;
-            int stackOut_88_0 = 0;
-            int stackOut_62_0 = 0;
-            int stackOut_61_0 = 0;
-            int stackOut_79_0 = 0;
-            int stackOut_78_0 = 0;
             L0: {
               var16 = TorChallenge.field_F ? 1 : 0;
               if (this.field_u == null) {
@@ -530,9 +472,9 @@ final class fl extends vb {
               try {
                 L5: {
                   this.field_u.b(127);
-                  var2_ref = (db) ((Object) this.field_c.a(25777));
+                  var2 = (db) ((Object) this.field_c.a(25777));
                   L6: while (true) {
-                    if (var2_ref == null) {
+                    if (var2 == null) {
                       L7: {
                         if (param0 <= -44) {
                           break L7;
@@ -541,14 +483,13 @@ final class fl extends vb {
                           break L7;
                         }
                       }
-                      var2_ref = (db) ((Object) this.field_k.a(25777));
+                      var2 = (db) ((Object) this.field_k.a(25777));
                       L8: while (true) {
-                        if (var2_ref == null) {
+                        if (var2 == null) {
                           var2_int = 0;
                           L9: while (true) {
                             if ((var2_int ^ -1) <= -101) {
-                              stackOut_88_0 = 1;
-                              stackIn_89_0 = stackOut_88_0;
+                              stackIn_89_0 = 1;
                               break L5;
                             } else {
                               var3_int = this.field_u.a(0);
@@ -612,12 +553,10 @@ final class fl extends vb {
                                             var9 = this.field_o.i(64);
                                             var10 = var8 & 127;
                                             if ((var8 & 128) == 0) {
-                                              stackOut_62_0 = 0;
-                                              stackIn_63_0 = stackOut_62_0;
+                                              stackIn_63_0 = 0;
                                               break L15;
                                             } else {
-                                              stackOut_61_0 = 1;
-                                              stackIn_63_0 = stackOut_61_0;
+                                              stackIn_63_0 = 1;
                                               break L15;
                                             }
                                           }
@@ -660,12 +599,10 @@ final class fl extends vb {
                                           } else {
                                             L19: {
                                               if (0 == var10) {
-                                                stackOut_79_0 = 5;
-                                                stackIn_80_0 = stackOut_79_0;
+                                                stackIn_80_0 = 5;
                                                 break L19;
                                               } else {
-                                                stackOut_78_0 = 9;
-                                                stackIn_80_0 = stackOut_78_0;
+                                                stackIn_80_0 = 9;
                                                 break L19;
                                               }
                                             }
@@ -757,27 +694,27 @@ final class fl extends vb {
                         } else {
                           this.field_d.field_q = 0;
                           this.field_d.d(0, (byte) 122);
-                          this.field_d.a(var2_ref.field_l, -1709073240);
+                          this.field_d.a(var2.field_l, -1709073240);
                           this.field_u.a(this.field_d.field_m.length, 0, (byte) 76, this.field_d.field_m);
-                          this.field_i.a(var2_ref, 3329);
-                          var2_ref = (db) ((Object) this.field_k.d(118));
+                          this.field_i.a(var2, 3329);
+                          var2 = (db) ((Object) this.field_k.d(118));
                           continue L8;
                         }
                       }
                     } else {
                       this.field_d.field_q = 0;
                       this.field_d.d(1, (byte) 122);
-                      this.field_d.a(var2_ref.field_l, -1709073240);
+                      this.field_d.a(var2.field_l, -1709073240);
                       this.field_u.a(this.field_d.field_m.length, 0, (byte) 101, this.field_d.field_m);
-                      this.field_l.a(var2_ref, 3329);
-                      var2_ref = (db) ((Object) this.field_c.d(49));
+                      this.field_l.a(var2, 3329);
+                      var2 = (db) ((Object) this.field_c.d(49));
                       continue L6;
                     }
                   }
                 }
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
-                var2 = (IOException) (Object) decompiledCaughtException;
+                var2_ref = (IOException) (Object) decompiledCaughtException;
                 try {
                   L24: {
                     this.field_u.a((byte) 118);

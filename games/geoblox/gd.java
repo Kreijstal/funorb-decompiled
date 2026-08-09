@@ -9,13 +9,13 @@ final class gd extends e {
     byte[] field_k;
 
     final gd a(ue param0) {
-        int dupTemp$2 = 0;
+        int dupTemp$1 = 0;
         this.field_k = param0.a(99, this.field_k);
         this.field_h = param0.a(-128, this.field_h);
         if (this.field_g == this.field_j) {
-          dupTemp$2 = param0.b(this.field_g, 6);
-          this.field_j = dupTemp$2;
-          this.field_g = dupTemp$2;
+          dupTemp$1 = param0.b(this.field_g, 6);
+          this.field_j = dupTemp$1;
+          this.field_g = dupTemp$1;
           return (gd) (this);
         } else {
           L0: {

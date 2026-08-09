@@ -17,7 +17,7 @@ final class pl implements Iterator {
     public final boolean hasNext() {
         ca[] fieldTemp$2 = null;
         int fieldTemp$3 = 0;
-        int var2 = 0;
+        int var2;
         var2 = OrbDefence.field_D ? 1 : 0;
         if (this.field_c == this.field_e.field_b[-1 + this.field_b]) {
           L0: while (true) {
@@ -49,9 +49,9 @@ final class pl implements Iterator {
     public final Object next() {
         ca[] fieldTemp$2 = null;
         int fieldTemp$3 = 0;
-        int var2 = 0;
-        ca var3 = null;
-        ca var4 = null;
+        int var2;
+        ca var3;
+        ca var4;
         var2 = OrbDefence.field_D ? 1 : 0;
         if (this.field_e.field_b[this.field_b - 1] == this.field_c) {
           L0: while (true) {

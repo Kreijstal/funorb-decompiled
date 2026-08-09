@@ -40,9 +40,19 @@ final class ij extends l {
     }
 
     final static void a(int[] param0, int param1, int param2, int param3, int[] param4) {
-        int incrementValue$1 = 0;
-        RuntimeException var5 = null;
+        int incrementValue$0 = 0;
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        StringBuilder stackIn_18_1 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -52,40 +62,6 @@ final class ij extends l {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_5_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         var14 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -104,12 +80,10 @@ final class ij extends l {
                   param4[var6] = param4[param3];
                   param4[param3] = var9;
                   if (-2147483648 != (var8 ^ -1)) {
-                    stackOut_4_0 = 1;
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = 1;
                     break L2;
                   } else {
-                    stackOut_3_0 = 0;
-                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_0 = 0;
                     break L2;
                   }
                 }
@@ -132,9 +106,9 @@ final class ij extends l {
                         param0[var7] = var12;
                         var13 = param4[var11];
                         param4[var11] = param4[var7];
-                        incrementValue$1 = var7;
+                        incrementValue$0 = var7;
                         var7++;
-                        param4[incrementValue$1] = var13;
+                        param4[incrementValue$0] = var13;
                         break L4;
                       } else {
                         break L4;
@@ -152,62 +126,46 @@ final class ij extends l {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var5);
-            stackOut_13_1 = new StringBuilder().append("ij.A(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var5);
+
+            stackIn_15_1 = new StringBuilder().append("ij.A(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }
           L6: {
-            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+
+
+            stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L6;
             }
           }
-          throw kg.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_16_0), stackIn_19_2 + ')');
         }
     }
 
     final static byte a(char param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Virogrid.field_F ? 1 : 0;
         if (param1 == 4290) {
           L0: {
@@ -395,7 +353,7 @@ final class ij extends l {
             var2 = ge.field_a;
         }
         String var3 = var2.substring(0, var1 <= var2.length() ? var1 : var2.length());
-        int discarded$14 = mc.field_b.a(var3, 120, 100, 400, 200, 1141646, -1, 0, 0, 0);
+        mc.field_b.a(var3, 120, 100, 400, 200, 1141646, -1, 0, 0, 0);
         if (param0 != 105) {
             int[] var4 = (int[]) null;
             ij.a((int[]) null, 50, -10, -91, (int[]) null);
@@ -403,15 +361,15 @@ final class ij extends l {
     }
 
     final static void a(int param0, int param1) {
-        int incrementValue$7 = 0;
+        int incrementValue$2 = 0;
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var7 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -430,9 +388,9 @@ final class ij extends l {
                 var5 = var5 * param1;
                 var5 = var5 & 16711680;
                 var5 = (var6 | var5) >> -204613496;
-                incrementValue$7 = var2_int;
+                incrementValue$2 = var2_int;
                 var2_int++;
-                df.field_d[incrementValue$7] = var5;
+                df.field_d[incrementValue$2] = var5;
                 var4++;
                 continue L1;
               }

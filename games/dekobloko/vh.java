@@ -12,10 +12,10 @@ final class vh {
     static mi field_a;
 
     final static boolean a(byte param0) {
-        long var1 = 0L;
-        long var3 = 0L;
-        int var5 = 0;
-        int var6 = 0;
+        long var1;
+        long var3;
+        int var5;
+        int var6;
         var6 = client.field_A ? 1 : 0;
         if (param0 > 50) {
           var1 = ik.a(4);
@@ -99,7 +99,6 @@ final class vh {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        int discarded$2 = 0;
         if (hk.field_j >= param2 + param3) {
           return param3;
         } else {
@@ -107,7 +106,7 @@ final class vh {
             return param0 + param3 + -param2;
           } else {
             if (param1 != -18265) {
-              discarded$2 = vh.a(-78, -105, 117, -8);
+              vh.a(-78, -105, 117, -8);
               return hk.field_j - param2;
             } else {
               return hk.field_j - param2;

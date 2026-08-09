@@ -11,9 +11,9 @@ final class oe {
     private qk field_f;
 
     final mb a(boolean param0, int param1) {
-        mb var3 = null;
-        byte[] var4 = null;
-        mb var5 = null;
+        mb var3;
+        byte[] var4;
+        mb var5;
         var3 = (mb) (this.field_f.a((long)param1, -24469));
         if (var3 == null) {
           L0: {
@@ -60,7 +60,7 @@ final class oe {
     }
 
     final static String a(boolean param0, byte param1, boolean param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         var4 = 0;
         if (!param2) {
           L0: {

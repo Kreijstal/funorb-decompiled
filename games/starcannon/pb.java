@@ -11,10 +11,10 @@ final class pb {
     }
 
     final static fb a(int param0, boolean param1) {
-        int discarded$4 = 0;
-        String discarded$5 = null;
-        int discarded$6 = 0;
-        String discarded$7 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_11_0 = 0;
+        int[] stackIn_24_0 = null;
+        Throwable decompiledCaughtException = null;
         ia var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -23,16 +23,6 @@ final class pb {
         int var7 = 0;
         ia var8 = null;
         ff var9 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int[] stackIn_24_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        Object stackOut_23_0 = null;
-        int[] stackOut_22_0 = null;
         var7 = StarCannon.field_A;
         var8 = se.field_p;
         var2 = var8;
@@ -41,12 +31,10 @@ final class pb {
           L0: {
             pf.field_e = var3 & 127;
             if (-1 == (var3 & 128 ^ -1)) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               break L0;
             } else {
-              stackOut_3_0 = 1;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = 1;
               break L0;
             }
           }
@@ -66,12 +54,10 @@ final class pb {
           }
           L2: {
             if (1 != var8.j(7909)) {
-              stackOut_10_0 = 0;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = 0;
               break L2;
             } else {
-              stackOut_9_0 = 1;
-              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_0 = 1;
               break L2;
             }
           }
@@ -88,13 +74,13 @@ final class pb {
           }
           L4: {
             if (1 == pf.field_e) {
-              discarded$4 = var8.i(-1174051992);
-              discarded$5 = var8.a(-95);
+              var8.i(-1174051992);
+              var8.a(-95);
               break L4;
             } else {
               if ((pf.field_e ^ -1) == -5) {
-                discarded$6 = var8.i(-1174051992);
-                discarded$7 = var8.a(-95);
+                var8.i(-1174051992);
+                var8.a(-95);
                 break L4;
               } else {
                 break L4;
@@ -113,12 +99,10 @@ final class pb {
                   var9 = ad.field_C.a(var5, -32769);
                   vd.field_e = var9.e(-95);
                   if (fb.field_e.equals(we.field_i)) {
-                    stackOut_23_0 = null;
-                    stackIn_24_0 = (int[]) ((Object) stackOut_23_0);
+                    stackIn_24_0 = null;
                     break L6;
                   } else {
-                    stackOut_22_0 = var9.field_s;
-                    stackIn_24_0 = stackOut_22_0;
+                    stackIn_24_0 = var9.field_s;
                     break L6;
                   }
                 }

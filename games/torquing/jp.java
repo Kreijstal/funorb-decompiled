@@ -22,9 +22,8 @@ abstract class jp {
     abstract boolean b(int param0);
 
     final int c(byte param0) {
-        boolean discarded$2 = false;
         if (param0 != 0) {
-          discarded$2 = this.a(23);
+          this.a(23);
           return this.field_a.b(param0 ^ -24088) + this.field_h.b(param0 ^ -24088);
         } else {
           return this.field_a.b(param0 ^ -24088) + this.field_h.b(param0 ^ -24088);
@@ -43,20 +42,14 @@ abstract class jp {
     final boolean a(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 20) {
           L0: {
             this.field_a = (gb) null;
             if (20 > this.c((byte) 0)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -64,12 +57,10 @@ abstract class jp {
         } else {
           L1: {
             if (20 > this.c((byte) 0)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -78,46 +69,29 @@ abstract class jp {
     }
 
     final ac a(byte param0, int param1, boolean param2, byte param3, int param4) {
-        long var6 = 0L;
-        ac var8 = null;
-        ac stackIn_2_0 = null;
         ac stackIn_3_0 = null;
         ac stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        ac stackIn_14_0 = null;
         ac stackIn_15_0 = null;
         ac stackIn_16_0 = null;
         int stackIn_16_1 = 0;
-        ac stackOut_13_0 = null;
-        ac stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        ac stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        ac stackOut_1_0 = null;
-        ac stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        ac stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
+        long var6;
+        ac var8;
         var6 = ((long)param1 << -490022304) + (long)param4;
         var8 = new ac();
         var8.field_l = var6;
         var8.field_y = param0;
         if (param3 == -51) {
           L0: {
-            stackOut_13_0 = (ac) (var8);
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_14_0 = stackOut_13_0;
+            stackIn_15_0 = (ac) (var8);
+
             if (!param2) {
-              stackOut_15_0 = (ac) ((Object) stackIn_15_0);
-              stackOut_15_1 = 0;
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_0 = (ac) ((Object) stackIn_15_0);
+              stackIn_16_1 = 0;
               break L0;
             } else {
-              stackOut_14_0 = (ac) ((Object) stackIn_14_0);
-              stackOut_14_1 = 1;
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_0 = (ac) ((Object) stackIn_15_0);
+              stackIn_16_1 = 1;
               break L0;
             }
           }
@@ -140,20 +114,15 @@ abstract class jp {
         } else {
           L1: {
             this.e((byte) -94);
-            stackOut_1_0 = (ac) (var8);
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_3_0 = (ac) (var8);
+
             if (!param2) {
-              stackOut_3_0 = (ac) ((Object) stackIn_3_0);
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_0 = (ac) ((Object) stackIn_3_0);
+              stackIn_4_1 = 0;
               break L1;
             } else {
-              stackOut_2_0 = (ac) ((Object) stackIn_2_0);
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_0 = (ac) ((Object) stackIn_3_0);
+              stackIn_4_1 = 1;
               break L1;
             }
           }
@@ -181,20 +150,14 @@ abstract class jp {
     final boolean a(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 <= 100) {
           L0: {
             this.b((byte) 57);
             if (this.c(-6292) < 20) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -202,12 +165,10 @@ abstract class jp {
         } else {
           L1: {
             if (this.c(-6292) < 20) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

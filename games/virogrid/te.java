@@ -36,7 +36,6 @@ final class te extends IOException {
     final static void a(int param0, sa param1, int param2) {
         hg var5 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         try {
             var5 = gk.field_g;
             var5.g(param2, 8);
@@ -49,7 +48,7 @@ final class te extends IOException {
             var5.a(param1.field_h, (byte) -42);
             var5.a(param1.field_g, (byte) -42);
             var5.a(param1.field_n, (byte) -42);
-            discarded$0 = var5.b((byte) -111, var4);
+            var5.b((byte) -111, var4);
             var5.b(-var4 + var5.field_l, -1);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) ((Object) runtimeException), "te.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -57,8 +56,8 @@ final class te extends IOException {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         L0: {
           if (null == km.field_yb) {
             break L0;

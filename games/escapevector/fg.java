@@ -6,10 +6,10 @@ final class fg {
     static int field_b;
 
     final static int a(boolean param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var3 = param1 >> -572659792;
         if (param0) {
           field_a = (hh) null;
@@ -32,9 +32,9 @@ final class fg {
     }
 
     final static te[] a(int param0) {
-        te[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
+        te[] var1;
+        int var2;
+        int var3;
         var3 = EscapeVector.field_A;
         var1 = new te[qk.field_j];
         if (param0 != 13029) {

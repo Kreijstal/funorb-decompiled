@@ -28,11 +28,10 @@ final class dib extends ev {
     }
 
     final static int a(byte param0, int param1, int param2, int param3) {
-        tsa[] discarded$3 = null;
         int var4 = 0;
         if (param0 <= 49) {
             String var5 = (String) null;
-            discarded$3 = dib.a((String) null, 68);
+            dib.a((String) null, 68);
             if (param2 >= 256) {
                 return param1;
             }
@@ -61,7 +60,7 @@ final class dib extends ev {
     }
 
     final static tsa[] a(String param0, int param1) {
-        int incrementValue$2 = 0;
+        int incrementValue$1 = 0;
         ij var2 = null;
         RuntimeException var2_ref = null;
         tsa[] var3 = null;
@@ -71,8 +70,6 @@ final class dib extends ev {
         tsa[] stackIn_4_0 = null;
         tsa[] stackIn_7_0 = null;
         tsa[] stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -80,23 +77,11 @@ final class dib extends ev {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        tsa[] stackOut_3_0 = null;
-        tsa[] stackOut_10_0 = null;
-        tsa[] stackOut_6_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
             if (param0.equals(tkb.field_o)) {
-              stackOut_3_0 = neb.field_q;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = neb.field_q;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -109,21 +94,19 @@ final class dib extends ev {
                   if (var5 == null) {
                     neb.field_q = var3;
                     tkb.field_o = param0;
-                    stackOut_10_0 = (tsa[]) (var3);
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = (tsa[]) (var3);
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    incrementValue$2 = var4;
+                    incrementValue$1 = var4;
                     var4++;
-                    var3[incrementValue$2] = var5;
+                    var3[incrementValue$1] = var5;
                     var5 = (tsa) ((Object) var2.a((byte) 82));
                     continue L1;
                   }
                 }
               } else {
-                stackOut_6_0 = (tsa[]) null;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = (tsa[]) null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -133,27 +116,19 @@ final class dib extends ev {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var2_ref);
-            stackOut_12_1 = new StringBuilder().append("dib.H(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var2_ref);
+
+            stackIn_14_1 = new StringBuilder().append("dib.H(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L2;
             }
           }
@@ -180,15 +155,14 @@ final class dib extends ev {
     }
 
     final void b(byte param0, int param1, int param2) {
-        int discarded$1 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var4 = param1 * this.field_g >> 864555308;
         var5 = this.field_i * param1 >> -456668532;
         if (param0 != -112) {
-          discarded$1 = dib.a((byte) 92, -127, 80, 107);
+          dib.a((byte) 92, -127, 80, 107);
           var6 = param2 * this.field_f >> 783961356;
           var7 = this.field_h * param2 >> -1415387124;
           fcb.a(this.field_e, var7, var6, var4, var5, (byte) -117);
@@ -202,10 +176,10 @@ final class dib extends ev {
     }
 
     final void a(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var4 = this.field_g * param2 >> -1259938868;
         if (param1 != 110) {
           field_j = (String) null;
@@ -226,20 +200,14 @@ final class dib extends ev {
     final static boolean a(int param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 < 93) {
           L0: {
             field_j = (String) null;
             if (2 > param1) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -247,12 +215,10 @@ final class dib extends ev {
         } else {
           L1: {
             if (2 > param1) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

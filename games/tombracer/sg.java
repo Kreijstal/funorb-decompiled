@@ -53,8 +53,6 @@ final class sg extends nv {
         Class stackIn_20_0 = null;
         Class stackIn_24_0 = null;
         Class stackIn_30_0 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
@@ -62,48 +60,28 @@ final class sg extends nv {
         String stackIn_34_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Class stackOut_2_0 = null;
-        Class stackOut_6_0 = null;
-        Class stackOut_13_0 = null;
-        Class stackOut_23_0 = null;
-        Class stackOut_29_0 = null;
-        Class stackOut_19_0 = null;
-        Class stackOut_16_0 = null;
-        Class stackOut_9_0 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
         try {
           L0: {
             if (param0.equals("B")) {
-              stackOut_2_0 = Byte.TYPE;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = Byte.TYPE;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (param0.equals("I")) {
-                stackOut_6_0 = Integer.TYPE;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = Integer.TYPE;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (!param0.equals("S")) {
                   if (param0.equals("J")) {
-                    stackOut_13_0 = Long.TYPE;
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = Long.TYPE;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
                     if (!param0.equals("Z")) {
                       if (!param0.equals("F")) {
                         if (param0.equals("D")) {
-                          stackOut_23_0 = Double.TYPE;
-                          stackIn_24_0 = stackOut_23_0;
+                          stackIn_24_0 = Double.TYPE;
                           decompiledRegionSelector0 = 6;
                           break L0;
                         } else {
@@ -116,8 +94,7 @@ final class sg extends nv {
                             }
                           }
                           if (param0.equals("C")) {
-                            stackOut_29_0 = Character.TYPE;
-                            stackIn_30_0 = stackOut_29_0;
+                            stackIn_30_0 = Character.TYPE;
                             decompiledRegionSelector0 = 7;
                             break L0;
                           } else {
@@ -125,21 +102,18 @@ final class sg extends nv {
                           }
                         }
                       } else {
-                        stackOut_19_0 = Float.TYPE;
-                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_0 = Float.TYPE;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       }
                     } else {
-                      stackOut_16_0 = Boolean.TYPE;
-                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_0 = Boolean.TYPE;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     }
                   }
                 } else {
-                  stackOut_9_0 = Short.TYPE;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = Short.TYPE;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -150,27 +124,19 @@ final class sg extends nv {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var2);
-            stackOut_31_1 = new StringBuilder().append("sg.H(");
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackIn_33_0 = (RuntimeException) (var2);
+
+            stackIn_33_1 = new StringBuilder().append("sg.H(");
+
             if (param0 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L2;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L2;
             }
           }
@@ -208,9 +174,20 @@ final class sg extends nv {
     }
 
     final void k(int param0) {
-        hca var2 = null;
+        hca var2;
         if (param0 == 5418) {
-          if (this.d(8031)) {
+          if (!this.d(8031)) {
+            if (this.field_r) {
+              if (!this.field_p) {
+                return;
+              } else {
+                this.c(false);
+                return;
+              }
+            } else {
+              return;
+            }
+          } else {
             L0: {
               this.field_r = true;
               var2 = this.m((byte) 19);
@@ -222,63 +199,20 @@ final class sg extends nv {
               }
             }
             if (!this.field_o) {
-              L1: {
-                if (this.field_v) {
-                  var2.n(21120);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              if (TombRacer.field_G) {
-                if (this.field_r) {
-                  if (this.field_p) {
-                    this.c(false);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
+              if (!this.field_v) {
+                return;
               } else {
+                var2.n(21120);
                 return;
               }
             } else {
-              L2: {
-                var2.l((byte) 28);
-                if (this.field_v) {
-                  var2.n(21120);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              if (TombRacer.field_G) {
-                if (this.field_r) {
-                  if (this.field_p) {
-                    this.c(false);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            }
-          } else {
-            if (this.field_r) {
-              if (this.field_p) {
-                this.c(false);
+              var2.l((byte) 28);
+              if (!this.field_v) {
                 return;
               } else {
+                var2.n(21120);
                 return;
               }
-            } else {
-              return;
             }
           }
         } else {

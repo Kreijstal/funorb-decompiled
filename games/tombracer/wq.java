@@ -33,10 +33,10 @@ final class wq implements ms {
     }
 
     public final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = TombRacer.field_G ? 1 : 0;
           if (this.field_c) {
@@ -58,59 +58,74 @@ final class wq implements ms {
         var4 = 0;
         if (param0 == -7109) {
           L2: {
-            L3: {
-              if ((var2 ^ -1) > -1) {
-                break L3;
+            if ((var2 ^ -1) > -1) {
+              var2 = 0;
+              var4 = 1;
+              break L2;
+            } else {
+              if (this.a(false) >= var2) {
+                break L2;
               } else {
-                if (this.a(false) >= var2) {
-                  break L2;
+                var4 = 1;
+                var2 = this.a(false);
+                if (var3 >= 0) {
+                  if (this.a(-8660) < var3) {
+                    var4 = 1;
+                    var3 = this.a(param0 + -1551);
+                    if (var4 == 0) {
+                      return;
+                    } else {
+                      this.field_b.a(var2, var3, 1823844912);
+                      return;
+                    }
+                  } else {
+                    if (var4 == 0) {
+                      return;
+                    } else {
+                      this.field_b.a(var2, var3, 1823844912);
+                      return;
+                    }
+                  }
                 } else {
                   var4 = 1;
-                  var2 = this.a(false);
-                  if (var5 == 0) {
-                    break L2;
+                  var3 = 0;
+                  if (var4 == 0) {
+                    return;
                   } else {
-                    break L3;
+                    this.field_b.a(var2, var3, 1823844912);
+                    return;
                   }
                 }
               }
             }
-            var2 = 0;
-            var4 = 1;
-            break L2;
           }
-          L4: {
-            L5: {
-              if (var3 >= 0) {
-                break L5;
-              } else {
-                var4 = 1;
-                var3 = 0;
-                if (var5 == 0) {
-                  break L4;
-                } else {
-                  break L5;
-                }
-              }
-            }
+          if (var3 >= 0) {
             if (this.a(-8660) < var3) {
               var4 = 1;
               var3 = this.a(param0 + -1551);
-              break L4;
-            } else {
-              if (var4 == 0) {
+              if (var4 != 0) {
+                this.field_b.a(var2, var3, 1823844912);
                 return;
               } else {
+                return;
+              }
+            } else {
+              if (var4 != 0) {
                 this.field_b.a(var2, var3, 1823844912);
+                return;
+              } else {
                 return;
               }
             }
-          }
-          if (var4 != 0) {
-            this.field_b.a(var2, var3, 1823844912);
-            return;
           } else {
-            return;
+            var4 = 1;
+            var3 = 0;
+            if (var4 == 0) {
+              return;
+            } else {
+              this.field_b.a(var2, var3, 1823844912);
+              return;
+            }
           }
         } else {
           return;
@@ -271,38 +286,15 @@ final class wq implements ms {
         byte[] var4 = null;
         CharSequence var5 = null;
         int stackIn_1_0 = 0;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_0_0 = 0;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             var3_int = param1.field_h;
@@ -310,64 +302,47 @@ final class wq implements ms {
             var4 = us.a(var5, false);
             param1.c(var4.length, (byte) 111);
             param1.field_h = param1.field_h + nma.field_m.a((byte) -109, param1.field_g, param2, param1.field_h, var4.length, var4);
-            stackOut_0_0 = param1.field_h - var3_int;
-            stackIn_1_0 = stackOut_0_0;
+            stackIn_1_0 = param1.field_h - var3_int;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (var3);
-            stackOut_2_1 = new StringBuilder().append("wq.F(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_4_0 = (RuntimeException) (var3);
+
+            stackIn_4_1 = new StringBuilder().append("wq.F(");
+
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackIn_5_2 = "{...}";
               break L1;
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+
+
+            stackIn_7_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_5_0), stackIn_8_2 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }
@@ -380,20 +355,14 @@ final class wq implements ms {
     final static boolean b(int param0, int param1, int param2) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param2 != 8000) {
           L0: {
             field_d = (String) null;
             if (-1 == (param1 & 65536 ^ -1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -401,12 +370,10 @@ final class wq implements ms {
         } else {
           L1: {
             if (-1 == (param1 & 65536 ^ -1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

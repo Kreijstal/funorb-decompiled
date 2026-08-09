@@ -15,16 +15,9 @@ final class se extends hl {
     static char[] field_K;
 
     final boolean a(int param0, int param1, int param2, int param3, lk param4, int param5, int param6) {
-        RuntimeException var8 = null;
-        int var8_int = 0;
-        int var9 = 0;
-        double var10 = 0.0;
-        int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_18_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -32,24 +25,17 @@ final class se extends hl {
         String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        int var8_int = 0;
+        RuntimeException var8 = null;
+        int var9 = 0;
+        double var10 = 0.0;
+        int var12 = 0;
         var12 = Main.field_T;
         try {
           L0: {
             if (param3 <= -14) {
               if (!super.a(param0, param1, param2, -39, param4, param5, param6)) {
-                stackOut_17_0 = 0;
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_0 = 0;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
@@ -91,14 +77,12 @@ final class se extends hl {
                     }
                   }
                 }
-                stackOut_15_0 = 1;
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -107,27 +91,19 @@ final class se extends hl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var8);
-            stackOut_19_1 = new StringBuilder().append("se.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var8);
+
+            stackIn_21_1 = new StringBuilder().append("se.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L5;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L5;
             }
           }
@@ -156,14 +132,14 @@ final class se extends hl {
     }
 
     final static void e(byte param0) {
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -187,30 +163,30 @@ final class se extends hl {
                   return;
                 }
               } else {
-                incrementValue$16 = var2;
+                incrementValue$8 = var2;
                 var2++;
-                var5[incrementValue$16] = 0;
-                incrementValue$17 = var2;
+                var5[incrementValue$8] = 0;
+                incrementValue$9 = var2;
                 var2++;
-                var5[incrementValue$17] = 0;
-                incrementValue$18 = var2;
+                var5[incrementValue$9] = 0;
+                incrementValue$10 = var2;
                 var2++;
-                var5[incrementValue$18] = 0;
-                incrementValue$19 = var2;
+                var5[incrementValue$10] = 0;
+                incrementValue$11 = var2;
                 var2++;
-                var5[incrementValue$19] = 0;
-                incrementValue$20 = var2;
+                var5[incrementValue$11] = 0;
+                incrementValue$12 = var2;
                 var2++;
-                var5[incrementValue$20] = 0;
-                incrementValue$21 = var2;
+                var5[incrementValue$12] = 0;
+                incrementValue$13 = var2;
                 var2++;
-                var5[incrementValue$21] = 0;
-                incrementValue$22 = var2;
+                var5[incrementValue$13] = 0;
+                incrementValue$14 = var2;
                 var2++;
-                var5[incrementValue$22] = 0;
-                incrementValue$23 = var2;
+                var5[incrementValue$14] = 0;
+                incrementValue$15 = var2;
                 var2++;
-                var5[incrementValue$23] = 0;
+                var5[incrementValue$15] = 0;
                 continue L1;
               }
             }

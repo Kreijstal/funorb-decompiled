@@ -11,23 +11,13 @@ final class kma extends k {
     private int field_q;
 
     final void a(byte param0, lu param1, int param2) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
@@ -52,27 +42,19 @@ final class kma extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var4);
-            stackOut_5_1 = new StringBuilder().append("kma.E(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var4);
+
+            stackIn_7_1 = new StringBuilder().append("kma.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L3;
             }
           }
@@ -81,39 +63,26 @@ final class kma extends k {
     }
 
     final int[][] a(boolean param0, int param1) {
-        int incrementValue$3 = 0;
-        int discarded$4 = 0;
-        int incrementValue$5 = 0;
-        int[][] var3 = null;
-        int var4 = 0;
-        int[] var5 = null;
-        int[] var6 = null;
-        int[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int[][] var12 = null;
-        int[][] var13 = null;
-        int[][] var14 = null;
-        int stackIn_5_0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int[][] var3;
+        int var4;
+        int[] var5;
+        int[] var6;
+        int[] var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int[][] var12;
+        int[][] var13;
+        int[][] var14;
         int stackIn_6_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
-        int stackIn_21_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_23_1 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_22_1 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_21_1 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
         var11 = BachelorFridge.field_y;
         if (!param0) {
           var14 = this.field_h.a(param1, -858);
@@ -122,20 +91,15 @@ final class kma extends k {
           var3 = var12;
           if (this.field_h.field_b) {
             L0: {
-              stackOut_20_0 = this.field_k;
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_21_0 = stackOut_20_0;
+              stackIn_22_0 = this.field_k;
+
               if (this.field_q == bi.field_g) {
-                stackOut_22_0 = stackIn_22_0;
-                stackOut_22_1 = param1;
-                stackIn_23_0 = stackOut_22_0;
-                stackIn_23_1 = stackOut_22_1;
+                stackIn_23_0 = stackIn_22_0;
+                stackIn_23_1 = param1;
                 break L0;
               } else {
-                stackOut_21_0 = stackIn_21_0;
-                stackOut_21_1 = this.field_q * param1 / bi.field_g;
-                stackIn_23_0 = stackOut_21_0;
-                stackIn_23_1 = stackOut_21_1;
+                stackIn_23_0 = stackIn_22_0;
+                stackIn_23_1 = this.field_q * param1 / bi.field_g;
                 break L0;
               }
             }
@@ -147,9 +111,9 @@ final class kma extends k {
               var8 = 0;
               L1: while (true) {
                 if (hh.field_d > var8) {
-                  incrementValue$3 = var4;
+                  incrementValue$1 = var4;
                   var4++;
-                  var9 = this.field_n[incrementValue$3];
+                  var9 = this.field_n[incrementValue$1];
                   var7[var8] = dda.a(4080, var9 << 442831940);
                   var6[var8] = dda.a(var9, 65280) >> 330292804;
                   var5[var8] = dda.a(4080, var9 >> -16962676);
@@ -179,27 +143,22 @@ final class kma extends k {
             return var3;
           }
         } else {
-          discarded$4 = this.c((byte) 116);
+          this.c((byte) 116);
           var14 = this.field_h.a(param1, -858);
           var13 = var14;
           var12 = var13;
           var3 = var12;
           if (this.field_h.field_b) {
             L3: {
-              stackOut_4_0 = this.field_k;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_6_0 = this.field_k;
+
               if (this.field_q == bi.field_g) {
-                stackOut_6_0 = stackIn_6_0;
-                stackOut_6_1 = param1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = stackIn_6_0;
+                stackIn_7_1 = param1;
                 break L3;
               } else {
-                stackOut_5_0 = stackIn_5_0;
-                stackOut_5_1 = this.field_q * param1 / bi.field_g;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+                stackIn_7_0 = stackIn_6_0;
+                stackIn_7_1 = this.field_q * param1 / bi.field_g;
                 break L3;
               }
             }
@@ -228,9 +187,9 @@ final class kma extends k {
                 if (hh.field_d <= var8) {
                   return var3;
                 } else {
-                  incrementValue$5 = var4;
+                  incrementValue$2 = var4;
                   var4++;
-                  var9 = this.field_n[incrementValue$5];
+                  var9 = this.field_n[incrementValue$2];
                   var7[var8] = dda.a(4080, var9 << 442831940);
                   var6[var8] = dda.a(var9, 65280) >> 330292804;
                   var5[var8] = dda.a(4080, var9 >> -16962676);
@@ -246,10 +205,8 @@ final class kma extends k {
     }
 
     final void a(int param0, byte param1, int param2) {
-        int var4 = 0;
+        int var4;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
         if (param1 <= -9) {
           super.a(param0, (byte) -95, param2);
           if (this.field_l >= 0) {
@@ -258,12 +215,10 @@ final class kma extends k {
             } else {
               L0: {
                 if (da.field_c.c(this.field_l, 0).field_d) {
-                  stackOut_7_0 = 64;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = 64;
                   break L0;
                 } else {
-                  stackOut_6_0 = 128;
-                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_0 = 128;
                   break L0;
                 }
               }
@@ -301,10 +256,10 @@ final class kma extends k {
 
     final static void d(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
           L0: {

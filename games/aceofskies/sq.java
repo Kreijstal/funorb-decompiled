@@ -35,7 +35,7 @@ final class sq extends mi {
     }
 
     final static wp a(int param0) {
-        wp var1 = null;
+        wp var1;
         if (param0 != 15636) {
           return (wp) null;
         } else {

@@ -13,33 +13,21 @@ final class lj implements Iterator {
     static int[] field_b;
 
     final static id a(int param0, bc param1) {
-        int discarded$1 = 0;
-        RuntimeException var2 = null;
+        id stackIn_24_0 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         id var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        id stackIn_23_0 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        id stackOut_22_0 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
         var8 = TetraLink.field_J;
         try {
           L0: {
@@ -76,7 +64,7 @@ final class lj implements Iterator {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  discarded$1 = param1.e(16, (byte) -112);
+                  param1.e(16, (byte) -112);
                   var5.field_k = cc.a(var5.field_k, param1, 16, param0 ^ -16483);
                   var5.field_p = cc.a(var5.field_p, param1, 16, 0);
                   var5.field_A = cc.a(var5.field_A, param1, 16, 0);
@@ -108,7 +96,7 @@ final class lj implements Iterator {
                         break L4;
                       }
                     } else {
-                      if ((var5.field_u[var7] & 255) > var6) {
+                      if ((var5.field_u[var7] & 255 ^ -1) < (var6 ^ -1)) {
                         var6 = 255 & var5.field_u[var7];
                         var7++;
                         continue L5;
@@ -122,8 +110,7 @@ final class lj implements Iterator {
                   break L4;
                 }
               }
-              stackOut_22_0 = (id) (var5);
-              stackIn_23_0 = stackOut_22_0;
+              stackIn_24_0 = (id) (var5);
               break L0;
             }
           }
@@ -131,39 +118,31 @@ final class lj implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var2);
-            stackOut_24_1 = new StringBuilder().append("lj.A(").append(param0).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_27_0 = (RuntimeException) (var2);
+
+            stackIn_27_1 = new StringBuilder().append("lj.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L6;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L6;
             }
           }
-          throw oi.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');
         }
-        return stackIn_23_0;
+        return stackIn_24_0;
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        mc var1 = null;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        mc var1;
+        int var2;
         var2 = TetraLink.field_J;
         if (this.field_e.field_d[-1 + this.field_g] != this.field_f) {
           var1 = this.field_f;
@@ -173,9 +152,9 @@ final class lj implements Iterator {
         } else {
           L0: while (true) {
             if (this.field_g < this.field_e.field_i) {
-              fieldTemp$2 = this.field_g;
+              fieldTemp$1 = this.field_g;
               this.field_g = this.field_g + 1;
-              var1 = this.field_e.field_d[fieldTemp$2].field_j;
+              var1 = this.field_e.field_d[fieldTemp$1].field_j;
               if (this.field_e.field_d[this.field_g - 1] != var1) {
                 this.field_f = var1.field_j;
                 this.field_d = var1;
@@ -191,8 +170,8 @@ final class lj implements Iterator {
     }
 
     public final boolean hasNext() {
-        int fieldTemp$8 = 0;
-        int var2 = 0;
+        int fieldTemp$2 = 0;
+        int var2;
         var2 = TetraLink.field_J;
         if (this.field_e.field_d[this.field_g + -1] != this.field_f) {
           return true;
@@ -201,9 +180,9 @@ final class lj implements Iterator {
             if (this.field_e.field_i <= this.field_g) {
               return false;
             } else {
-              fieldTemp$8 = this.field_g;
+              fieldTemp$2 = this.field_g;
               this.field_g = this.field_g + 1;
-              if (this.field_e.field_d[fieldTemp$8].field_j != this.field_e.field_d[-1 + this.field_g]) {
+              if (this.field_e.field_d[fieldTemp$2].field_j != this.field_e.field_d[-1 + this.field_g]) {
                 this.field_f = this.field_e.field_d[this.field_g + -1].field_j;
                 return true;
               } else {
@@ -242,25 +221,18 @@ final class lj implements Iterator {
     }
 
     final static void a(byte param0) {
-        rm[] discarded$0 = null;
         int var1 = (cf.field_n - 640) / 2;
         int var2 = ma.field_f * ma.field_f;
         int var3 = -(qd.field_ab * qd.field_ab) + var2;
         if (param0 >= -21) {
             bc var4 = (bc) null;
-            discarded$0 = lj.a((bc) null, -52);
+            lj.a((bc) null, -52);
         }
         hn.field_P.a((byte) -92, 199, 90, -120 + ra.field_e + -94, var1 - var3 * 199 / var2);
         qe.field_c.a((byte) -124, 438, 0, -4 + ra.field_e - 120, 438 * var3 / var2 + (202 + var1));
     }
 
     final static rm[] a(bc param0, int param1) {
-        int discarded$12 = 0;
-        int discarded$13 = 0;
-        int discarded$14 = 0;
-        int discarded$15 = 0;
-        int discarded$16 = 0;
-        int discarded$17 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -271,8 +243,6 @@ final class lj implements Iterator {
         int var7 = 0;
         Object stackIn_3_0 = null;
         rm[] stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -280,16 +250,6 @@ final class lj implements Iterator {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        rm[] stackOut_10_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         var7 = TetraLink.field_J;
         try {
           L0: {
@@ -300,21 +260,20 @@ final class lj implements Iterator {
               var5 = 0;
               L1: while (true) {
                 if (var3 <= var5) {
-                  stackOut_10_0 = (rm[]) (var4);
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = (rm[]) (var4);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   L2: {
                     if (bc.a(100, param0)) {
                       var6 = new rm();
-                      discarded$12 = param0.e(24, (byte) -112);
-                      discarded$13 = param0.e(24, (byte) -112);
+                      param0.e(24, (byte) -112);
+                      param0.e(24, (byte) -112);
                       var6.field_j = param0.e(24, (byte) -112);
-                      discarded$14 = param0.e(9, (byte) -112);
-                      discarded$15 = param0.e(12, (byte) -112);
-                      discarded$16 = param0.e(12, (byte) -112);
-                      discarded$17 = param0.e(12, (byte) -112);
+                      param0.e(9, (byte) -112);
+                      param0.e(12, (byte) -112);
+                      param0.e(12, (byte) -112);
+                      param0.e(12, (byte) -112);
                       var4[var5] = var6;
                       break L2;
                     } else {
@@ -328,8 +287,7 @@ final class lj implements Iterator {
                 }
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -338,27 +296,19 @@ final class lj implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var2);
-            stackOut_12_1 = new StringBuilder().append("lj.C(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var2);
+
+            stackIn_14_1 = new StringBuilder().append("lj.C(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }

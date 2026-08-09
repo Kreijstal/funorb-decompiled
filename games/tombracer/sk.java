@@ -44,65 +44,30 @@ final class sk implements Iterable {
     }
 
     final void a(int param0) {
-        int var2 = 0;
-        vg var3 = null;
-        vg var4 = null;
-        int var5 = 0;
-        Object stackIn_3_0 = null;
-        Object stackIn_13_0 = null;
-        Object stackOut_12_0 = null;
-        Object stackOut_2_0 = null;
+        int var2;
+        vg var3;
+        vg var4;
+        int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         var2 = param0;
         L0: while (true) {
-          L1: {
-            if (var2 >= this.field_g) {
-              this.field_d = null;
-              stackOut_12_0 = this;
-              stackIn_13_0 = stackOut_12_0;
-              break L1;
-            } else {
-              stackOut_2_0 = this;
-              stackIn_13_0 = stackOut_2_0;
-              stackIn_3_0 = stackOut_2_0;
-              if (var5 != 0) {
-                break L1;
+          if (var2 >= this.field_g) {
+            this.field_d = null;
+            this.field_a = null;
+            return;
+          } else {
+            var3 = this.field_e[var2];
+            L1: while (true) {
+              var4 = var3.field_a;
+              if (var3 != var4) {
+                var4.p(92);
+                continue L1;
               } else {
-                var3 = ((sk) (this)).field_e[var2];
-                L2: while (true) {
-                  L3: {
-                    L4: {
-                      var4 = var3.field_a;
-                      if (var3 == var4) {
-                        if (var5 != 0) {
-                          break L4;
-                        } else {
-                          if (var5 == 0) {
-                            break L3;
-                          } else {
-                            var4.p(92);
-                            break L4;
-                          }
-                        }
-                      } else {
-                        var4.p(92);
-                        break L4;
-                      }
-                    }
-                    if (var5 == 0) {
-                      continue L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  var2++;
-                  continue L0;
-                }
+                var2++;
+                continue L0;
               }
             }
           }
-          ((sk) (this)).field_a = null;
-          return;
         }
     }
 
@@ -131,88 +96,47 @@ final class sk implements Iterable {
     }
 
     final vg a(byte param0) {
-        vg discarded$0 = null;
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         vg var2 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != 55) {
-            discarded$0 = this.a(100L, true);
+            this.a(100L, true);
         }
-        if (this.field_b > 0) {
-            if (this.field_e[this.field_b - 1] != this.field_a) {
-                var2 = this.field_a;
-                this.field_a = var2.field_a;
-                return var2;
-            }
+        if (this.field_b > 0 && this.field_e[this.field_b - 1] != this.field_a) {
+            var2 = this.field_a;
+            this.field_a = var2.field_a;
+            return var2;
         }
         do {
             if (this.field_b >= this.field_g) {
                 return null;
             }
-            fieldTemp$1 = this.field_b;
+            fieldTemp$0 = this.field_b;
             this.field_b = this.field_b + 1;
-            var2 = this.field_e[fieldTemp$1].field_a;
-            if (this.field_e[-1 + this.field_b] != var2) {
-                this.field_a = var2.field_a;
-                return var2;
-            }
-        } while (var3 == 0);
-        return null;
+            var2 = this.field_e[fieldTemp$0].field_a;
+        } while (this.field_e[-1 + this.field_b] == var2);
+        this.field_a = var2.field_a;
+        return var2;
     }
 
     final vg a(long param0, boolean param1) {
-        vg var4 = null;
         vg var5 = null;
-        int var6 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_2_0 = 0;
-        boolean stackOut_7_0 = false;
-        var6 = TombRacer.field_G ? 1 : 0;
-        var4 = this.field_e[(int)((long)(-1 + this.field_g) & param0)];
+        int var6 = TombRacer.field_G ? 1 : 0;
+        vg var4 = this.field_e[(int)((long)(-1 + this.field_g) & param0)];
         this.field_d = var4.field_a;
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (var4 == this.field_d) {
-                break L2;
-              } else {
-                stackOut_2_0 = (param0 < this.field_d.field_d ? -1 : (param0 == this.field_d.field_d ? 0 : 1));
-                stackIn_8_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
-                if (var6 != 0) {
-                  break L1;
-                } else {
-                  if (stackIn_3_0 == 0) {
-                    var5 = this.field_d;
-                    this.field_d = this.field_d.field_a;
-                    return var5;
-                  } else {
-                    this.field_d = this.field_d.field_a;
-                    if (var6 == 0) {
-                      continue L0;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-              }
+        while (var4 != this.field_d) {
+            if (!(param0 != this.field_d.field_d)) {
+                var5 = this.field_d;
+                this.field_d = this.field_d.field_a;
+                return var5;
             }
-            stackOut_7_0 = param1;
-            stackIn_8_0 = stackOut_7_0 ? 1 : 0;
-            break L1;
-          }
-          L3: {
-            if (stackIn_8_0 == 0) {
-              break L3;
-            } else {
-              field_c = (int[]) null;
-              break L3;
-            }
-          }
-          this.field_d = null;
-          return null;
+            this.field_d = this.field_d.field_a;
         }
+        if (param1) {
+            field_c = (int[]) null;
+        }
+        this.field_d = null;
+        return null;
     }
 
     static {

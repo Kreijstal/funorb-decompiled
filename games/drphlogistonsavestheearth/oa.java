@@ -20,14 +20,14 @@ final class oa implements Iterator {
     }
 
     public final Object next() {
-        uh var1 = this.field_e;
+        Object var1 = this.field_e;
         if (this.field_f.field_b != var1) {
-            this.field_e = var1.field_p;
+            this.field_e = ((uh) (var1)).field_p;
         } else {
             this.field_e = null;
             var1 = null;
         }
-        this.field_a = var1;
+        this.field_a = (uh) (var1);
         return var1;
     }
 
@@ -36,11 +36,9 @@ final class oa implements Iterator {
     }
 
     final static boolean a(byte param0, int param1, int param2, boolean param3) {
-        int var4 = 0;
-        int var5 = 0;
         int stackIn_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
+        int var4;
+        int var5;
         if (!param3) {
           if (kf.field_c[param2] >= kf.field_c[param1]) {
             if (kf.field_c[param1] >= kf.field_c[param2]) {
@@ -91,12 +89,10 @@ final class oa implements Iterator {
                       } else {
                         L0: {
                           if (param2 >= param1) {
-                            stackOut_35_0 = 0;
-                            stackIn_36_0 = stackOut_35_0;
+                            stackIn_36_0 = 0;
                             break L0;
                           } else {
-                            stackOut_34_0 = 1;
-                            stackIn_36_0 = stackOut_34_0;
+                            stackIn_36_0 = 1;
                             break L0;
                           }
                         }
@@ -124,9 +120,8 @@ final class oa implements Iterator {
     }
 
     public static void a(int param0) {
-        boolean discarded$2 = false;
         if (param0 <= 70) {
-          discarded$2 = oa.a((byte) -83, -53, 50, true);
+          oa.a((byte) -83, -53, 50, true);
           field_d = null;
           field_c = null;
           return;

@@ -16,17 +16,11 @@ final class km extends jtb {
     }
 
     final byte[] a(int param0) {
-        int var2 = 0;
-        if (this.field_n) {
-          throw new RuntimeException();
-        } else {
-          if (this.field_p.field_e >= this.field_p.field_h.length - this.field_q) {
-            var2 = 9 / ((17 - param0) / 58);
-            return this.field_p.field_h;
-          } else {
+        if (this.field_n || this.field_p.field_e < this.field_p.field_h.length - this.field_q) {
             throw new RuntimeException();
-          }
         }
+        int var2 = 9 / ((17 - param0) / 58);
+        return this.field_p.field_h;
     }
 
     final static void e(int param0) {
@@ -38,7 +32,6 @@ final class km extends jtb {
     }
 
     final static void a(asb param0, byte param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         wma var5 = null;
@@ -47,8 +40,6 @@ final class km extends jtb {
         faa var8 = null;
         int var9 = 0;
         faa var10 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -56,14 +47,7 @@ final class km extends jtb {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var2 = null;
         var7 = VoidHunters.field_G;
         try {
           L0: {
@@ -111,27 +95,19 @@ final class km extends jtb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2);
-            stackOut_9_1 = new StringBuilder().append("km.A(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var2);
+
+            stackIn_11_1 = new StringBuilder().append("km.A(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -145,42 +121,28 @@ final class km extends jtb {
     }
 
     final static void f(byte param0) {
-        if (param0 == -119) {
-          if (-11 == (qmb.field_q ^ -1)) {
+        if (param0 != -119) {
+            km.g((byte) 33);
+            if (-11 == (qmb.field_q ^ -1) || nua.b(true)) {
+                twa.b(param0 ^ -108);
+                qmb.field_q = 11;
+                dga.field_a = true;
+                return;
+            }
             twa.b(param0 ^ -108);
             qmb.field_q = 11;
             dga.field_a = true;
             return;
-          } else {
-            if (!nua.b(true)) {
-              twa.b(param0 ^ -108);
-              qmb.field_q = 11;
-              dga.field_a = true;
-              return;
-            } else {
-              dga.field_a = true;
-              return;
-            }
-          }
-        } else {
-          km.g((byte) 33);
-          if (-11 == (qmb.field_q ^ -1)) {
-            twa.b(param0 ^ -108);
-            qmb.field_q = 11;
-            dga.field_a = true;
-            return;
-          } else {
-            if (!nua.b(true)) {
-              twa.b(param0 ^ -108);
-              qmb.field_q = 11;
-              dga.field_a = true;
-              return;
-            } else {
-              dga.field_a = true;
-              return;
-            }
-          }
         }
+        if (-11 == (qmb.field_q ^ -1) || nua.b(true)) {
+            twa.b(param0 ^ -108);
+            qmb.field_q = 11;
+            dga.field_a = true;
+            return;
+        }
+        twa.b(param0 ^ -108);
+        qmb.field_q = 11;
+        dga.field_a = true;
     }
 
     km() {

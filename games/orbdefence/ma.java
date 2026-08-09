@@ -10,10 +10,9 @@ final class ma extends pe implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int a(int param0) {
-        int discarded$2 = 0;
-        int var2 = 0;
+        int var2;
         if (param0 != 1) {
-          discarded$2 = this.a(-92);
+          this.a(-92);
           var2 = this.field_d;
           this.field_d = 0;
           return var2;
@@ -25,10 +24,9 @@ final class ma extends pe implements java.awt.event.MouseWheelListener {
     }
 
     final void a(java.awt.Component param0, int param1) {
-        int discarded$0 = 0;
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param1 != 23678) {
-            discarded$0 = this.a(-114);
+            this.a(-114);
         }
     }
 

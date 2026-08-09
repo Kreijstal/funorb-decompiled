@@ -15,18 +15,9 @@ final class kg {
     }
 
     final static int a(byte param0, vk param1) {
-        int discarded$1 = 0;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        vk var6 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_62_0 = 0;
-        RuntimeException stackIn_64_0 = null;
-        StringBuilder stackIn_64_1 = null;
         RuntimeException stackIn_65_0 = null;
         StringBuilder stackIn_65_1 = null;
         RuntimeException stackIn_66_0 = null;
@@ -34,29 +25,22 @@ final class kg {
         String stackIn_66_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_61_0 = 0;
-        RuntimeException stackOut_63_0 = null;
-        StringBuilder stackOut_63_1 = null;
-        RuntimeException stackOut_65_0 = null;
-        StringBuilder stackOut_65_1 = null;
-        String stackOut_65_2 = null;
-        RuntimeException stackOut_64_0 = null;
-        StringBuilder stackOut_64_1 = null;
-        String stackOut_64_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        vk var6 = null;
         var5 = HoldTheLine.field_D;
         try {
           L0: {
             if (param1.field_r) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (param1.field_j == null) {
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -65,7 +49,7 @@ final class kg {
                     break L1;
                   } else {
                     var6 = (vk) null;
-                    discarded$1 = kg.a((byte) 14, (vk) null);
+                    kg.a((byte) 14, (vk) null);
                     break L1;
                   }
                 }
@@ -197,8 +181,7 @@ final class kg {
                 L10: while (true) {
                   if (param1.field_j.length <= var4) {
                     var2_int = var2_int + var3 * 224 / param1.field_j.length;
-                    stackOut_61_0 = var2_int;
-                    stackIn_62_0 = stackOut_61_0;
+                    stackIn_62_0 = var2_int;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
@@ -221,27 +204,19 @@ final class kg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L12: {
             var2 = decompiledCaughtException;
-            stackOut_63_0 = (RuntimeException) (var2);
-            stackOut_63_1 = new StringBuilder().append("kg.B(").append(param0).append(',');
-            stackIn_65_0 = stackOut_63_0;
-            stackIn_65_1 = stackOut_63_1;
-            stackIn_64_0 = stackOut_63_0;
-            stackIn_64_1 = stackOut_63_1;
+            stackIn_65_0 = (RuntimeException) (var2);
+
+            stackIn_65_1 = new StringBuilder().append("kg.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
-              stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
-              stackOut_65_2 = "null";
-              stackIn_66_0 = stackOut_65_0;
-              stackIn_66_1 = stackOut_65_1;
-              stackIn_66_2 = stackOut_65_2;
+              stackIn_66_0 = (RuntimeException) ((Object) stackIn_65_0);
+              stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+              stackIn_66_2 = "null";
               break L12;
             } else {
-              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
-              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
-              stackOut_64_2 = "{...}";
-              stackIn_66_0 = stackOut_64_0;
-              stackIn_66_1 = stackOut_64_1;
-              stackIn_66_2 = stackOut_64_2;
+              stackIn_66_0 = (RuntimeException) ((Object) stackIn_65_0);
+              stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+              stackIn_66_2 = "{...}";
               break L12;
             }
           }
@@ -259,10 +234,10 @@ final class kg {
     }
 
     final mg[] a(int param0) {
-        hj[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        hj[] var5 = null;
+        hj[] var2;
+        int var3;
+        int var4;
+        hj[] var5;
         var4 = HoldTheLine.field_D;
         if (param0 == 16) {
           if (this.field_d == null) {

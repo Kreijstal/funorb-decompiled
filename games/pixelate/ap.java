@@ -31,10 +31,10 @@ final class ap {
     }
 
     final int a(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         var6 = Pixelate.field_H ? 1 : 0;
         var3 = -1 + (this.field_h.length >> 999862689);
         var4 = param0 & var3;
@@ -58,20 +58,20 @@ final class ap {
     }
 
     final static tf[] a(int param0, int param1, int param2, int param3, int param4) {
-        tf[] var5 = null;
-        tf[] var6 = null;
+        tf[] var5;
+        tf[] var6;
         var6 = new tf[9];
         var5 = var6;
-        tf dupTemp$4 = cl.a(param4, param3, (byte) -108);
-        var6[6] = dupTemp$4;
-        var5[3] = dupTemp$4;
-        var5[2] = dupTemp$4;
-        var5[1] = dupTemp$4;
-        var5[0] = dupTemp$4;
-        tf dupTemp$5 = cl.a(param4, param0, (byte) -116);
-        var6[8] = dupTemp$5;
-        var5[7] = dupTemp$5;
-        var5[param2] = dupTemp$5;
+        tf dupTemp$2 = cl.a(param4, param3, (byte) -108);
+        var6[6] = dupTemp$2;
+        var5[3] = dupTemp$2;
+        var5[2] = dupTemp$2;
+        var5[1] = dupTemp$2;
+        var5[0] = dupTemp$2;
+        tf dupTemp$3 = cl.a(param4, param0, (byte) -116);
+        var6[8] = dupTemp$3;
+        var5[7] = dupTemp$3;
+        var5[param2] = dupTemp$3;
         if (param1 != 0) {
           var6[4] = cl.a(64, param1, (byte) -50);
           return var5;
@@ -82,25 +82,15 @@ final class ap {
 
     ap(int[] param0) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             var2_int = 1;
@@ -145,27 +135,19 @@ final class ap {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2);
-            stackOut_14_1 = new StringBuilder().append("ap.<init>(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2);
+
+            stackIn_16_1 = new StringBuilder().append("ap.<init>(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L5;
             }
           }

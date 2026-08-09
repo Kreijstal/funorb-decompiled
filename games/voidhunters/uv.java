@@ -18,8 +18,8 @@ final class uv implements wwa {
     private int field_h;
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var2 = kba.field_a.a(param1, (byte) 121) + -kba.field_a.field_d;
         var3 = param0 - -(var2 / 4);
         if (var3 <= 250) {
@@ -65,7 +65,13 @@ final class uv implements wwa {
     }
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
-        int discarded$1 = 0;
+        shb stackIn_3_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -73,35 +79,14 @@ final class uv implements wwa {
         int var10 = 0;
         int var11 = 0;
         jla var12 = null;
-        shb stackIn_3_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        shb stackOut_1_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         try {
           L0: {
             L1: {
               if (!(param1 instanceof jla)) {
-                stackOut_2_0 = null;
-                stackIn_3_0 = (shb) ((Object) stackOut_2_0);
+                stackIn_3_0 = null;
                 break L1;
               } else {
-                stackOut_1_0 = (shb) (param1);
-                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_0 = (shb) (param1);
                 break L1;
               }
             }
@@ -140,7 +125,7 @@ final class uv implements wwa {
             var10 = 49 % ((param0 - -27) / 35);
             if (null != this.field_j) {
               var11 = this.field_l + this.field_d + this.field_m;
-              discarded$1 = this.field_j.a(param1.field_j, var11 + (param2 - -param1.field_g), this.field_c + param3 - -param1.field_r, -this.field_m + (-var11 + param1.field_h), -(this.field_m << -1325802399) + param1.field_f, this.field_g, this.field_h, this.field_b, this.field_e, 0);
+              this.field_j.a(param1.field_j, var11 + (param2 - -param1.field_g), this.field_c + param3 - -param1.field_r, -this.field_m + (-var11 + param1.field_h), -(this.field_m << -1325802399) + param1.field_f, this.field_g, this.field_h, this.field_b, this.field_e, 0);
               break L0;
             } else {
               return;
@@ -150,27 +135,19 @@ final class uv implements wwa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var6);
-            stackOut_16_1 = new StringBuilder().append("uv.A(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var6);
+
+            stackIn_18_1 = new StringBuilder().append("uv.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }

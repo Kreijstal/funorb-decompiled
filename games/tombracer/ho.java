@@ -23,7 +23,7 @@ final class ho {
     }
 
     final synchronized static void a(int param0, e param1) {
-        rw var2 = null;
+        rw var2;
         if (field_b) {
           return;
         } else {
@@ -43,8 +43,8 @@ final class ho {
     }
 
     final synchronized static void a(boolean param0) {
-        rw var1 = null;
-        RuntimeException var1_ref = null;
+        rw var1;
+        RuntimeException var1_ref;
         L0: while (true) {
           var1 = (rw) ((Object) field_a.c(-113));
           if (var1 == null) {

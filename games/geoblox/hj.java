@@ -8,64 +8,30 @@ final class hj {
 
     final static int a(byte param0, int param1) {
         int var2 = 0;
-        L0: {
-          L1: {
-            var2 = 0;
-            if (0 > param1) {
-              break L1;
-            } else {
-              if (-65537 < (param1 ^ -1)) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          param1 = param1 >>> 16;
-          var2 += 16;
-          break L0;
+        if (0 > param1 || -65537 >= (param1 ^ -1)) {
+            param1 = param1 >>> 16;
+            var2 += 16;
         }
-        L2: {
-          if (-257 >= (param1 ^ -1)) {
+        if (!(-257 < (param1 ^ -1))) {
             var2 += 8;
             param1 = param1 >>> 8;
-            break L2;
-          } else {
-            break L2;
-          }
         }
-        L3: {
-          if (16 <= param1) {
+        if (!(16 > param1)) {
             var2 += 4;
             param1 = param1 >>> 4;
-            break L3;
-          } else {
-            break L3;
-          }
         }
-        L4: {
-          if (-5 < (param1 ^ -1)) {
-            break L4;
-          } else {
+        if (-5 >= (param1 ^ -1)) {
             var2 += 2;
             param1 = param1 >>> 2;
-            break L4;
-          }
         }
-        L5: {
-          if (1 > param1) {
-            break L5;
-          } else {
+        if (1 <= param1) {
             param1 = param1 >>> 1;
             var2++;
-            break L5;
-          }
         }
-        if (param0 == 58) {
-          return param1 + var2;
-        } else {
-          return -21;
+        if (param0 != 58) {
+            return -21;
         }
+        return param1 + var2;
     }
 
     final static void a(byte param0, java.awt.Component param1) {
@@ -82,22 +48,22 @@ final class hj {
     }
 
     final static dm[] a(int param0) {
-        dm[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var5 = null;
-        int var6 = 0;
-        int[] var6_ref_int__ = null;
-        int var7 = 0;
-        int var8 = 0;
-        byte[] var9 = null;
-        int[] var10 = null;
-        byte[] var11 = null;
-        int[] var13 = null;
-        byte[] var15 = null;
-        int[] var17 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
+        dm[] var1;
+        int var2;
+        int var3;
+        byte[] var5;
+        int var6;
+        int[] var6_ref_int__;
+        int var7;
+        int var8;
+        byte[] var9;
+        int[] var10;
+        byte[] var11;
+        int[] var13;
+        byte[] var15;
+        int[] var17;
+        byte[] var21;
+        int[] var22;
         L0: {
           var8 = Geoblox.field_C;
           var1 = new dm[sb.field_a];

@@ -40,10 +40,10 @@ final class we extends kj {
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         if (param0 <= 7) {
           this.field_j = 39;
           var4 = param2 * this.field_g >> -1757895124;
@@ -69,10 +69,10 @@ final class we extends kj {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         if (param2 >= -101) {
           we.a(98, 26, 121, -55, -62);
           var4 = param0 * this.field_g >> 1002896172;

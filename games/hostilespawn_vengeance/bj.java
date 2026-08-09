@@ -40,38 +40,38 @@ abstract class bj implements bg {
 
     public final bm b(int param0) {
         if (param0 < -58) {
-          if (!((bj) this).a((byte) 73)) {
-            if (~hn.a((byte) 80) > ~(350L + ((bj) this).field_c)) {
+          if (!this.a((byte) 73)) {
+            if ((hn.a((byte) 80) ^ -1L) > (350L + this.field_c ^ -1L)) {
               return wl.field_c;
             } else {
-              return ((bj) this).d(11269);
+              return this.d(11269);
             }
           } else {
             return bm.field_g;
           }
         } else {
-          return null;
+          return (bm) null;
         }
     }
 
     public final String a(int param0) {
         if (param0 < -22) {
-          if (!((bj) this).a((byte) -70)) {
-            if (~(350L + ((bj) this).field_c) < ~hn.a((byte) 80)) {
+          if (!this.a((byte) -70)) {
+            if ((350L + this.field_c ^ -1L) < (hn.a((byte) 80) ^ -1L)) {
               return null;
             } else {
-              return ((bj) this).b((byte) 18);
+              return this.b((byte) 18);
             }
           } else {
             return null;
           }
         } else {
-          ((bj) this).a(false);
-          if (!((bj) this).a((byte) -70)) {
-            if (~(350L + ((bj) this).field_c) < ~hn.a((byte) 80)) {
+          this.a(false);
+          if (!this.a((byte) -70)) {
+            if ((350L + this.field_c ^ -1L) < (hn.a((byte) 80) ^ -1L)) {
               return null;
             } else {
-              return ((bj) this).b((byte) 18);
+              return this.b((byte) 18);
             }
           } else {
             return null;
@@ -80,9 +80,9 @@ abstract class bj implements bg {
     }
 
     public final void a(boolean param0) {
-        ((bj) this).field_c = hn.a((byte) 80);
+        this.field_c = hn.a((byte) 80);
         if (!param0) {
-            boolean discarded$0 = bj.c((byte) -120);
+            bj.c((byte) -120);
         }
     }
 
@@ -100,10 +100,6 @@ abstract class bj implements bg {
     abstract bm d(int param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_h = "I seem to be getting somewhere now.";
         field_g = "Controls";

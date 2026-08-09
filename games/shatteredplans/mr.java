@@ -17,17 +17,17 @@ final class mr implements fo {
     private int field_j;
 
     public final l a(byte param0) throws jn {
-        l var3 = null;
-        ln[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        ln var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        ln var11 = null;
-        int var12 = 0;
-        pc var13 = null;
+        l var3;
+        ln[] var4;
+        int var5;
+        int var6;
+        ln var7;
+        int var8;
+        int var9;
+        int var10;
+        ln var11;
+        int var12;
+        pc var13;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_e = this.field_e - 1;
         var13 = new pc(this.field_b, this.field_j, this.field_l, this.field_e, this.field_k);

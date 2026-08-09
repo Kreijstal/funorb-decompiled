@@ -39,8 +39,8 @@ final class vj implements com.ms.directX.IEnumModesCallback {
     }
 
     final int[] a(byte param0) {
-        int[] var2 = null;
-        int[] var3 = null;
+        int[] var2;
+        int[] var3;
         this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_b = new int[field_a];
         field_a = 0;
@@ -57,21 +57,17 @@ final class vj implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(int param0, java.awt.Frame param1, int param2, int param3, int param4, int param5) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        com.ms.awt.WComponentPeer var7 = null;
-        int var8 = 0;
-        com.ms.com.IUnknown var9 = null;
+        com.ms.awt.WComponentPeer var7;
+        int var8;
+        com.ms.com.IUnknown var9;
         if (param3 >= -9) {
           var9 = (com.ms.com.IUnknown) null;
           this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
           param1.setVisible(true);
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
-          discarded$4 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$5 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param1), 17);
           this.field_c.setDisplayMode(param2, param5, param4, param0, 0);
           param1.setBounds(0, 0, param2, param5);
@@ -82,8 +78,8 @@ final class vj implements com.ms.directX.IEnumModesCallback {
           param1.setVisible(true);
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
-          discarded$6 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$7 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param1), 17);
           this.field_c.setDisplayMode(param2, param5, param4, param0, 0);
           param1.setBounds(0, 0, param2, param5);

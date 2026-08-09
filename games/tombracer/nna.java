@@ -47,8 +47,6 @@ final class nna {
         String stackIn_17_0 = null;
         String stackIn_20_0 = null;
         Object stackIn_22_0 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -56,41 +54,23 @@ final class nna {
         String stackIn_26_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_5_0 = null;
-        String stackOut_12_0 = null;
-        String stackOut_16_0 = null;
-        Object stackOut_21_0 = null;
-        String stackOut_19_0 = null;
-        String stackOut_8_0 = null;
-        String stackOut_1_0 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
         try {
           L0: {
             var6 = (CharSequence) ((Object) param1);
             if (fs.a(true, var6)) {
               if (ue.a(param1, 0)) {
-                stackOut_5_0 = iia.field_q;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = iia.field_q;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if ((ae.field_g ^ -1) == param0) {
                   if (qaa.a(2180, param1)) {
-                    stackOut_12_0 = gl.a((byte) 125, bva.field_a, new String[]{param1});
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = gl.a((byte) 125, bva.field_a, new String[]{param1});
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
                     if (100 <= tba.field_k) {
-                      stackOut_16_0 = bs.field_h;
-                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_0 = bs.field_h;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
@@ -102,28 +82,24 @@ final class nna {
                         var5.i(2, 0);
                         var5.a(param1, false);
                         var5.d(-var4 + var5.field_h, (byte) -104);
-                        stackOut_21_0 = null;
-                        stackIn_22_0 = stackOut_21_0;
+                        stackIn_22_0 = null;
                         decompiledRegionSelector0 = 6;
                         break L0;
                       } else {
-                        stackOut_19_0 = gl.a((byte) 94, bha.field_o, new String[]{param1});
-                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_0 = gl.a((byte) 94, bha.field_o, new String[]{param1});
                         decompiledRegionSelector0 = 5;
                         break L0;
                       }
                     }
                   }
                 } else {
-                  stackOut_8_0 = eia.field_o;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = eia.field_o;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               }
             } else {
-              stackOut_1_0 = pk.field_v;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = pk.field_v;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -132,27 +108,19 @@ final class nna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var3);
-            stackOut_23_1 = new StringBuilder().append("nna.A(").append(param0).append(',');
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var3);
+
+            stackIn_25_1 = new StringBuilder().append("nna.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L1;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L1;
             }
           }

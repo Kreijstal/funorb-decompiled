@@ -5,7 +5,7 @@ package jaclib.peer;
 
 public class IUnknown extends jaclib.peer.Peer {
     public final long a(int param0) {
-        RuntimeException var2 = null;
+        RuntimeException var2;
         if (param0 == -22671) {
           return super.a();
         } else {

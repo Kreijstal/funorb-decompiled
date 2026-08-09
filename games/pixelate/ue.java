@@ -28,8 +28,6 @@ final class ue extends fa {
         int stackIn_16_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_12_0 = 0;
         var6 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -52,15 +50,13 @@ final class ue extends fa {
                 var5 = 0;
                 L3: while (true) {
                   if (var5 >= var8.length) {
-                    stackOut_15_0 = ok.a(tg.field_f, -125, la.field_a.length);
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = ok.a(tg.field_f, -125, la.field_a.length);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     var4 = var4 - var8[var5];
                     if (var4 <= 0) {
-                      stackOut_12_0 = var5;
-                      stackIn_13_0 = stackOut_12_0;
+                      stackIn_13_0 = var5;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     } else {
@@ -113,10 +109,10 @@ final class ue extends fa {
 
     final static void b(int param0, byte param1) {
         fa var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         hf var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {

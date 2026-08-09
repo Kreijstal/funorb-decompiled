@@ -76,22 +76,11 @@ final class nf {
     }
 
     final static String a(eg param0, int param1) {
-        int incrementValue$1 = 0;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        ne var4 = null;
-        String var5 = null;
-        String[] var6 = null;
-        String var7 = null;
-        int var8 = 0;
-        String var9 = null;
+        int incrementValue$0 = 0;
         String stackIn_11_0 = null;
         String stackIn_14_0 = null;
         String stackIn_18_0 = null;
         String stackIn_33_0 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
@@ -99,19 +88,15 @@ final class nf {
         String stackIn_37_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_17_0 = null;
-        String stackOut_16_0 = null;
-        String stackOut_32_0 = null;
-        String stackOut_13_0 = null;
-        String stackOut_10_0 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        ne var4 = null;
+        String var5 = null;
+        String[] var6 = null;
+        String var7 = null;
+        int var8 = 0;
+        String var9 = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -124,12 +109,10 @@ final class nf {
                   if (-1 != (var2_int ^ -1)) {
                     L2: {
                       if (1 == var2_int) {
-                        stackOut_17_0 = bk.field_d;
-                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_0 = bk.field_d;
                         break L2;
                       } else {
-                        stackOut_16_0 = re.a(rl.field_e, 4371, new String[]{Integer.toString(var2_int)});
-                        stackIn_18_0 = stackOut_16_0;
+                        stackIn_18_0 = re.a(rl.field_e, 4371, new String[]{Integer.toString(var2_int)});
                         break L2;
                       }
                     }
@@ -165,9 +148,9 @@ final class nf {
                                         break L6;
                                       }
                                     }
-                                    incrementValue$1 = var3;
+                                    incrementValue$0 = var3;
                                     var3++;
-                                    var6[incrementValue$1] = var7;
+                                    var6[incrementValue$0] = var7;
                                     break L5;
                                   }
                                 }
@@ -181,19 +164,16 @@ final class nf {
                         break L3;
                       }
                     }
-                    stackOut_32_0 = (String) (var5);
-                    stackIn_33_0 = stackOut_32_0;
+                    stackIn_33_0 = (String) (var5);
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    stackOut_13_0 = bq.field_f;
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = bq.field_f;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 } else {
-                  stackOut_10_0 = (String) null;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = (String) null;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -227,27 +207,19 @@ final class nf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_34_0 = (RuntimeException) (var2);
-            stackOut_34_1 = new StringBuilder().append("nf.E(");
-            stackIn_36_0 = stackOut_34_0;
-            stackIn_36_1 = stackOut_34_1;
-            stackIn_35_0 = stackOut_34_0;
-            stackIn_35_1 = stackOut_34_1;
+            stackIn_36_0 = (RuntimeException) (var2);
+
+            stackIn_36_1 = new StringBuilder().append("nf.E(");
+
             if (param0 == null) {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
+              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "null";
               break L9;
             } else {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "{...}";
-              stackIn_37_0 = stackOut_35_0;
-              stackIn_37_1 = stackOut_35_1;
-              stackIn_37_2 = stackOut_35_2;
+              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "{...}";
               break L9;
             }
           }
@@ -272,23 +244,12 @@ final class nf {
         int var5 = 0;
         int var6 = 0;
         int[] stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int[] stackOut_10_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -305,8 +266,7 @@ final class nf {
             var4 = 1;
             L2: while (true) {
               if (var2_int <= var4) {
-                stackOut_10_0 = (int[]) (var3);
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = (int[]) (var3);
                 break L0;
               } else {
                 var5 = var4;
@@ -316,7 +276,7 @@ final class nf {
                     if (0 > var5) {
                       break L4;
                     } else {
-                      if (param0[var3[var5]] <= param0[var4]) {
+                      if ((param0[var3[var5]] ^ -1) >= (param0[var4] ^ -1)) {
                         break L4;
                       } else {
                         var3[1 + var5] = var3[var5];
@@ -335,27 +295,19 @@ final class nf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var2);
-            stackOut_12_1 = new StringBuilder().append("nf.C(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var2);
+
+            stackIn_14_1 = new StringBuilder().append("nf.C(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L5;
             }
           }
@@ -365,8 +317,8 @@ final class nf {
     }
 
     final static String a(String param0, String param1, byte param2, String param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         var4 = param1.indexOf(param0);
         if (param2 > 57) {
@@ -385,8 +337,8 @@ final class nf {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         if (null == tc.field_G) {
           var3 = 107 % ((param0 - -29) / 53);
           return;

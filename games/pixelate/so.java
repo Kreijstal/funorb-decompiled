@@ -134,46 +134,22 @@ final class so {
     }
 
     final void f(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        boolean[] var4 = null;
-        int var5 = 0;
-        tf[] stackIn_5_0 = null;
         tf[] stackIn_6_0 = null;
         tf[] stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        tf[] stackIn_8_0 = null;
         tf[] stackIn_9_0 = null;
         tf[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
-        tf[] stackIn_11_0 = null;
         tf[] stackIn_12_0 = null;
         tf[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        tf[] stackIn_14_0 = null;
         tf[] stackIn_15_0 = null;
         tf[] stackIn_16_0 = null;
         int stackIn_16_1 = 0;
-        tf[] stackOut_4_0 = null;
-        tf[] stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        tf[] stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        tf[] stackOut_7_0 = null;
-        tf[] stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        tf[] stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        tf[] stackOut_10_0 = null;
-        tf[] stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        tf[] stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        tf[] stackOut_13_0 = null;
-        tf[] stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        tf[] stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
+        int var2;
+        int var3;
+        boolean[] var4;
+        int var5;
         L0: {
           var5 = Pixelate.field_H ? 1 : 0;
           t.e(535, -15 + this.field_o, 62, 15 + this.field_b + 15, 6, 0);
@@ -195,77 +171,57 @@ final class so {
           } else {
             L2: {
               var4 = vn.field_e[this.field_i[var3]];
-              stackOut_4_0 = rg.field_e.field_a;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_6_0 = rg.field_e.field_a;
+
               if (!var4[0]) {
-                stackOut_6_0 = (tf[]) ((Object) stackIn_6_0);
-                stackOut_6_1 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_0 = (tf[]) ((Object) stackIn_6_0);
+                stackIn_7_1 = 0;
                 break L2;
               } else {
-                stackOut_5_0 = (tf[]) ((Object) stackIn_5_0);
-                stackOut_5_1 = 1;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+                stackIn_7_0 = (tf[]) ((Object) stackIn_6_0);
+                stackIn_7_1 = 1;
                 break L2;
               }
             }
             L3: {
               ((tf) (Object) stackIn_7_0[stackIn_7_1]).b(550, var2);
-              stackOut_7_0 = rg.field_e.field_a;
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_9_0 = rg.field_e.field_a;
+
               if (var4[1]) {
-                stackOut_9_0 = (tf[]) ((Object) stackIn_9_0);
-                stackOut_9_1 = 1;
-                stackIn_10_0 = stackOut_9_0;
-                stackIn_10_1 = stackOut_9_1;
+                stackIn_10_0 = (tf[]) ((Object) stackIn_9_0);
+                stackIn_10_1 = 1;
                 break L3;
               } else {
-                stackOut_8_0 = (tf[]) ((Object) stackIn_8_0);
-                stackOut_8_1 = 0;
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_10_1 = stackOut_8_1;
+                stackIn_10_0 = (tf[]) ((Object) stackIn_9_0);
+                stackIn_10_1 = 0;
                 break L3;
               }
             }
             L4: {
               ((tf) (Object) stackIn_10_0[stackIn_10_1]).b(566, var2);
-              stackOut_10_0 = rg.field_e.field_a;
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_12_0 = rg.field_e.field_a;
+
               if (var4[2]) {
-                stackOut_12_0 = (tf[]) ((Object) stackIn_12_0);
-                stackOut_12_1 = 1;
-                stackIn_13_0 = stackOut_12_0;
-                stackIn_13_1 = stackOut_12_1;
+                stackIn_13_0 = (tf[]) ((Object) stackIn_12_0);
+                stackIn_13_1 = 1;
                 break L4;
               } else {
-                stackOut_11_0 = (tf[]) ((Object) stackIn_11_0);
-                stackOut_11_1 = 0;
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_13_1 = stackOut_11_1;
+                stackIn_13_0 = (tf[]) ((Object) stackIn_12_0);
+                stackIn_13_1 = 0;
                 break L4;
               }
             }
             L5: {
               ((tf) (Object) stackIn_13_0[stackIn_13_1]).b(550, var2 - -16);
-              stackOut_13_0 = rg.field_e.field_a;
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_15_0 = rg.field_e.field_a;
+
               if (!var4[3]) {
-                stackOut_15_0 = (tf[]) ((Object) stackIn_15_0);
-                stackOut_15_1 = 0;
-                stackIn_16_0 = stackOut_15_0;
-                stackIn_16_1 = stackOut_15_1;
+                stackIn_16_0 = (tf[]) ((Object) stackIn_15_0);
+                stackIn_16_1 = 0;
                 break L5;
               } else {
-                stackOut_14_0 = (tf[]) ((Object) stackIn_14_0);
-                stackOut_14_1 = 1;
-                stackIn_16_0 = stackOut_14_0;
-                stackIn_16_1 = stackOut_14_1;
+                stackIn_16_0 = (tf[]) ((Object) stackIn_15_0);
+                stackIn_16_1 = 1;
                 break L5;
               }
             }

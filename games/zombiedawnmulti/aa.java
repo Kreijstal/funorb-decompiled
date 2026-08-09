@@ -16,8 +16,8 @@ final class aa extends ii {
     private long field_i;
 
     final static ra b(int param0, int param1) {
-        ra var2 = null;
-        uj var3 = null;
+        ra var2;
+        uj var3;
         var2 = new ra();
         if (param0 != -19300) {
           var3 = (uj) null;
@@ -100,131 +100,179 @@ final class aa extends ii {
         long stackIn_16_0 = 0L;
         long stackIn_20_0 = 0L;
         long stackIn_22_0 = 0L;
-        long stackOut_19_0 = 0L;
-        long stackOut_21_0 = 0L;
-        long stackOut_13_0 = 0L;
-        long stackOut_15_0 = 0L;
-        long stackOut_3_0 = 0L;
-        long stackOut_5_0 = 0L;
-        var9 = ZombieDawnMulti.field_E ? 1 : 0;
-        var2 = System.nanoTime();
-        var4 = var2 + -this.field_m;
-        this.field_m = var2;
-        if (var4 > -5000000000L) {
-          if (var4 >= 5000000000L) {
-            var6 = 0L;
-            var8 = param0;
-            L0: while (true) {
-              L1: {
-                L2: {
-                  if (var8 > this.field_f) {
-                    break L2;
-                  } else {
-                    stackOut_19_0 = var6 + this.field_g[(-var8 + (this.field_q - -10)) % 10];
-                    stackIn_22_0 = stackOut_19_0;
-                    stackIn_20_0 = stackOut_19_0;
-                    if (var9 != 0) {
-                      break L1;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var9 = ZombieDawnMulti.field_E ? 1 : 0;
+                    var2 = System.nanoTime();
+                    var4 = var2 + -this.field_m;
+                    this.field_m = var2;
+                    if (var4 > -5000000000L) {
+                        statePc = 7;
                     } else {
-                      var6 = stackIn_20_0;
-                      var8++;
-                      if (var9 == 0) {
-                        continue L0;
-                      } else {
-                        break L2;
-                      }
+                        statePc = 1;
                     }
-                  }
+                    continue stateLoop;
                 }
-                stackOut_21_0 = var6 / (long)this.field_f;
-                stackIn_22_0 = stackOut_21_0;
-                break L1;
-              }
-              return stackIn_22_0;
-            }
-          } else {
-            L3: {
-              this.field_g[this.field_q] = var4;
-              if (1 > this.field_f) {
-                this.field_f = this.field_f + 1;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            this.field_q = (this.field_q - -1) % 10;
-            var6 = 0L;
-            var8 = param0;
-            L4: while (true) {
-              L5: {
-                L6: {
-                  if (var8 > this.field_f) {
-                    break L6;
-                  } else {
-                    stackOut_13_0 = var6 + this.field_g[(-var8 + (this.field_q - -10)) % 10];
-                    stackIn_16_0 = stackOut_13_0;
-                    stackIn_14_0 = stackOut_13_0;
-                    if (var9 != 0) {
-                      break L5;
+                case 1: {
+                    var6 = 0L;
+                    var8 = param0;
+                    statePc = 2;
+                    continue stateLoop;
+                }
+                case 2: {
+                    if (var8 > this.field_f) {
+                        statePc = 5;
                     } else {
-                      var6 = stackIn_14_0;
-                      var8++;
-                      if (var9 == 0) {
-                        continue L4;
-                      } else {
-                        break L6;
-                      }
+                        statePc = 3;
                     }
-                  }
+                    continue stateLoop;
                 }
-                stackOut_15_0 = var6 / (long)this.field_f;
-                stackIn_16_0 = stackOut_15_0;
-                break L5;
-              }
-              return stackIn_16_0;
-            }
-          }
-        } else {
-          var6 = 0L;
-          var8 = param0;
-          L7: while (true) {
-            L8: {
-              L9: {
-                if (var8 > this.field_f) {
-                  break L9;
-                } else {
-                  stackOut_3_0 = var6 + this.field_g[(-var8 + (this.field_q - -10)) % 10];
-                  stackIn_6_0 = stackOut_3_0;
-                  stackIn_4_0 = stackOut_3_0;
-                  if (var9 != 0) {
-                    break L8;
-                  } else {
+                case 3: {
+                    stackIn_6_0 = var6 + this.field_g[(-var8 + (this.field_q - -10)) % 10];
+                    stackIn_4_0 = stackIn_6_0;
+                    if (var9 != 0) {
+                        statePc = 6;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
                     var6 = stackIn_4_0;
                     var8++;
                     if (var9 == 0) {
-                      continue L7;
+                        statePc = 2;
                     } else {
-                      break L9;
+                        statePc = 5;
                     }
-                  }
+                    continue stateLoop;
                 }
-              }
-              stackOut_5_0 = var6 / (long)this.field_f;
-              stackIn_6_0 = stackOut_5_0;
-              break L8;
+                case 5: {
+                    stackIn_6_0 = var6 / (long)this.field_f;
+                    statePc = 6;
+                    continue stateLoop;
+                }
+                case 6: {
+                    return stackIn_6_0;
+                }
+                case 7: {
+                    if (var4 >= 5000000000L) {
+                        statePc = 17;
+                    } else {
+                        statePc = 8;
+                    }
+                    continue stateLoop;
+                }
+                case 8: {
+                    this.field_g[this.field_q] = var4;
+                    if (1 > this.field_f) {
+                        statePc = 10;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    this.field_f = this.field_f + 1;
+                    statePc = 11;
+                    continue stateLoop;
+                }
+                case 11: {
+                    this.field_q = (this.field_q - -1) % 10;
+                    var6 = 0L;
+                    var8 = param0;
+                    statePc = 12;
+                    continue stateLoop;
+                }
+                case 12: {
+                    if (var8 > this.field_f) {
+                        statePc = 15;
+                    } else {
+                        statePc = 13;
+                    }
+                    continue stateLoop;
+                }
+                case 13: {
+                    stackIn_16_0 = var6 + this.field_g[(-var8 + (this.field_q - -10)) % 10];
+                    stackIn_14_0 = stackIn_16_0;
+                    if (var9 != 0) {
+                        statePc = 16;
+                    } else {
+                        statePc = 14;
+                    }
+                    continue stateLoop;
+                }
+                case 14: {
+                    var6 = stackIn_14_0;
+                    var8++;
+                    if (var9 == 0) {
+                        statePc = 12;
+                    } else {
+                        statePc = 15;
+                    }
+                    continue stateLoop;
+                }
+                case 15: {
+                    stackIn_16_0 = var6 / (long)this.field_f;
+                    statePc = 16;
+                    continue stateLoop;
+                }
+                case 16: {
+                    return stackIn_16_0;
+                }
+                case 17: {
+                    var6 = 0L;
+                    var8 = param0;
+                    statePc = 18;
+                    continue stateLoop;
+                }
+                case 18: {
+                    if (var8 > this.field_f) {
+                        statePc = 21;
+                    } else {
+                        statePc = 19;
+                    }
+                    continue stateLoop;
+                }
+                case 19: {
+                    stackIn_22_0 = var6 + this.field_g[(-var8 + (this.field_q - -10)) % 10];
+                    stackIn_20_0 = stackIn_22_0;
+                    if (var9 != 0) {
+                        statePc = 22;
+                    } else {
+                        statePc = 20;
+                    }
+                    continue stateLoop;
+                }
+                case 20: {
+                    var6 = stackIn_20_0;
+                    var8++;
+                    if (var9 == 0) {
+                        statePc = 18;
+                    } else {
+                        statePc = 21;
+                    }
+                    continue stateLoop;
+                }
+                case 21: {
+                    stackIn_22_0 = var6 / (long)this.field_f;
+                    statePc = 22;
+                    continue stateLoop;
+                }
+                case 22: {
+                    return stackIn_22_0;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-            return stackIn_6_0;
-          }
         }
     }
 
     final int a(long param0, boolean param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         int stackIn_5_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_7_0 = 0;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param1) {
           if ((this.field_k ^ -1L) > (this.field_i ^ -1L)) {
@@ -237,8 +285,7 @@ final class aa extends ii {
             L0: while (true) {
               this.field_i = this.field_i + param0;
               var4++;
-              stackOut_4_0 = var4;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = var4;
               L1: while (true) {
                 L2: {
                   if (stackIn_5_0 >= 10) {
@@ -251,14 +298,13 @@ final class aa extends ii {
                     }
                   }
                 }
-                stackOut_7_0 = (this.field_i < this.field_k ? -1 : (this.field_i == this.field_k ? 0 : 1));
-                stackIn_5_0 = stackOut_7_0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_5_0 = (this.field_i < this.field_k ? -1 : (this.field_i == this.field_k ? 0 : 1));
+
                 if (var5 != 0) {
                   continue L1;
                 } else {
                   L3: {
-                    if (stackIn_8_0 < 0) {
+                    if (stackIn_5_0 < 0) {
                       this.field_i = this.field_k;
                       break L3;
                     } else {

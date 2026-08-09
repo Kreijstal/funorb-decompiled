@@ -10,6 +10,9 @@ final class jp {
     static cj field_b;
 
     final static String a(byte param0) {
+        String stackIn_67_0 = null;
+        Object stackIn_104_0 = null;
+        RuntimeException decompiledCaughtException = null;
         Object var1 = null;
         Object var2 = null;
         String var3 = null;
@@ -20,12 +23,6 @@ final class jp {
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
-        String stackIn_67_0 = null;
-        Object stackIn_104_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_66_0 = null;
-        String stackOut_64_0 = null;
-        Object stackOut_103_0 = null;
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -185,12 +182,10 @@ final class jp {
                 }
                 L15: {
                   if (!lq.b(param0 + 104)) {
-                    stackOut_66_0 = "<img=3>: ";
-                    stackIn_67_0 = stackOut_66_0;
+                    stackIn_67_0 = "<img=3>: ";
                     break L15;
                   } else {
-                    stackOut_64_0 = ": ";
-                    stackIn_67_0 = stackOut_64_0;
+                    stackIn_67_0 = ": ";
                     break L15;
                   }
                 }
@@ -271,8 +266,7 @@ final class jp {
                 break L7;
               }
             }
-            stackOut_103_0 = var1;
-            stackIn_104_0 = stackOut_103_0;
+            stackIn_104_0 = var1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

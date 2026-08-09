@@ -6,12 +6,12 @@ final class ki extends ana {
     private iba field_v;
 
     private final void f(int param0) {
-        hd var4 = null;
+        hd var4;
         var4 = (hd) ((Object) al.a(103, this.field_v.field_k));
         var4 = var4;
-        aga discarded$7 = this.field_v.field_l.a(19, this.field_q.field_h);
-        int[][] discarded$8 = this.field_v.d((byte) 2);
-        uea discarded$9 = new uea(this.field_q, this.field_v.field_q, this.field_v.field_r, gma.field_e[var4.field_q].field_a);
+        this.field_v.field_l.a(19, this.field_q.field_h);
+        this.field_v.d((byte) 2);
+        uea discarded$3 = new uea(this.field_q, this.field_v.field_q, this.field_v.field_r, gma.field_e[var4.field_q].field_a);
         this.field_v.a(this.field_q.field_h, false);
         if (param0 != -1) {
           ki.e(80);
@@ -31,10 +31,10 @@ final class ki extends ana {
     }
 
     final boolean c(byte param0) {
-        int var2 = 0;
-        int fieldTemp$2 = this.field_l - 1;
+        int var2;
+        int fieldTemp$1 = this.field_l - 1;
         this.field_l = this.field_l - 1;
-        if ((fieldTemp$2 ^ -1) <= -1) {
+        if ((fieldTemp$1 ^ -1) <= -1) {
           if (-26 != (this.field_l ^ -1)) {
             return false;
           } else {

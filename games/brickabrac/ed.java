@@ -17,11 +17,10 @@ final class ed {
     }
 
     final static void a(boolean param0, mf param1, mf param2, byte param3) {
-        int discarded$0 = 0;
         try {
             ai.a(lp.field_Ab, ul.field_m, f.field_a, vo.field_C, im.field_d, wi.field_n, tk.field_t, ad.field_l, (byte) 61, param0, ic.field_c, fp.field_u);
             if (param3 < 74) {
-                discarded$0 = ed.b(2, -57);
+                ed.b(2, -57);
             }
             ef.field_b = cr.a("lobby", param1, "chatfilter", 2);
             rh.field_e[0] = mc.field_a;
@@ -34,14 +33,13 @@ final class ed {
     }
 
     final static int b(int param0, int param1) {
-        int discarded$1 = 0;
-        int var2 = 0;
+        int var2;
         L0: {
           var2 = 0;
           if (param0 == 9) {
             break L0;
           } else {
-            discarded$1 = ed.b(-83, -74);
+            ed.b(-83, -74);
             break L0;
           }
         }

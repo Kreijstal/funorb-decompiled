@@ -15,19 +15,19 @@ final class wa {
     static String field_d;
 
     final static tf[] c(int param0) {
-        tf[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int[] var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        int[] var13 = null;
-        int[] var16 = null;
-        byte[] var20 = null;
-        int[] var21 = null;
-        byte[] var22 = null;
+        tf[] var1;
+        int var2;
+        int var3;
+        int[] var6;
+        int var6_int;
+        int var7;
+        int var8;
+        int[] var9;
+        int[] var13;
+        int[] var16;
+        byte[] var20;
+        int[] var21;
+        byte[] var22;
         var8 = Pixelate.field_H ? 1 : 0;
         var1 = new tf[im.field_Qb];
         var2 = 0;
@@ -80,8 +80,8 @@ final class wa {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
-        int var16 = 0;
-        int var17 = 0;
+        int var16;
+        int var17;
         L0: {
           var17 = Pixelate.field_H ? 1 : 0;
           var16 = -29 / ((param11 - -19) / 57);
@@ -116,13 +116,12 @@ final class wa {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_e = null;
         field_g = null;
         field_f = null;
         field_a = null;
         if (param0 != 0) {
-            discarded$0 = wa.b(46);
+            wa.b(46);
         }
         field_c = null;
         field_d = null;

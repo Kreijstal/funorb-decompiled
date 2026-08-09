@@ -9,9 +9,23 @@ final class v {
 
     final static void a(String param0, byte param1, Throwable param2) {
         try {
-            int discarded$1 = 0;
-            Exception var3 = null;
-            String var3_ref = null;
+            rk stackIn_16_0;
+            int stackIn_16_1;
+            java.net.URL stackIn_16_2;
+            java.net.URL stackIn_16_3;
+            java.net.URL stackIn_16_4;
+            StringBuilder stackIn_16_5;
+            rk stackIn_17_0;
+            int stackIn_17_1;
+            java.net.URL stackIn_17_2;
+            java.net.URL stackIn_17_3;
+            java.net.URL stackIn_17_4;
+            StringBuilder stackIn_17_5;
+            String stackIn_17_6;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            String var3 = null;
+            Exception var3_ref = null;
             en var4 = null;
             DataInputStream var5 = null;
             int var6 = 0;
@@ -19,54 +33,13 @@ final class v {
             String var8 = null;
             String var9 = null;
             String var10 = null;
-            rk stackIn_15_0 = null;
-            int stackIn_15_1 = 0;
-            java.net.URL stackIn_15_2 = null;
-            java.net.URL stackIn_15_3 = null;
-            java.net.URL stackIn_15_4 = null;
-            StringBuilder stackIn_15_5 = null;
-            rk stackIn_16_0 = null;
-            int stackIn_16_1 = 0;
-            java.net.URL stackIn_16_2 = null;
-            java.net.URL stackIn_16_3 = null;
-            java.net.URL stackIn_16_4 = null;
-            StringBuilder stackIn_16_5 = null;
-            rk stackIn_17_0 = null;
-            int stackIn_17_1 = 0;
-            java.net.URL stackIn_17_2 = null;
-            java.net.URL stackIn_17_3 = null;
-            java.net.URL stackIn_17_4 = null;
-            StringBuilder stackIn_17_5 = null;
-            String stackIn_17_6 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            rk stackOut_14_0 = null;
-            int stackOut_14_1 = 0;
-            java.net.URL stackOut_14_2 = null;
-            java.net.URL stackOut_14_3 = null;
-            java.net.URL stackOut_14_4 = null;
-            StringBuilder stackOut_14_5 = null;
-            rk stackOut_16_0 = null;
-            int stackOut_16_1 = 0;
-            java.net.URL stackOut_16_2 = null;
-            java.net.URL stackOut_16_3 = null;
-            java.net.URL stackOut_16_4 = null;
-            StringBuilder stackOut_16_5 = null;
-            String stackOut_16_6 = null;
-            rk stackOut_15_0 = null;
-            int stackOut_15_1 = 0;
-            java.net.URL stackOut_15_2 = null;
-            java.net.URL stackOut_15_3 = null;
-            java.net.URL stackOut_15_4 = null;
-            StringBuilder stackOut_15_5 = null;
-            String stackOut_15_6 = null;
             var6 = AceOfSkies.field_G ? 1 : 0;
             try {
               L0: {
                 L1: {
-                  var3_ref = "";
+                  var3 = "";
                   if (param2 != null) {
-                    var3_ref = br.a(param2, (byte) -29);
+                    var3 = br.a(param2, (byte) -29);
                     break L1;
                   } else {
                     break L1;
@@ -78,18 +51,18 @@ final class v {
                       if (param2 == null) {
                         break L3;
                       } else {
-                        var3_ref = var3_ref + " | ";
+                        var3 = var3 + " | ";
                         break L3;
                       }
                     }
-                    var3_ref = var3_ref + param0;
+                    var3 = var3 + param0;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                jb.a(var3_ref, 20164);
-                var7 = eh.a(":", param1 + 165, "%3a", var3_ref);
+                jb.a(var3, 20164);
+                var7 = eh.a(":", param1 + 165, "%3a", var3);
                 var8 = eh.a("@", -77, "%40", var7);
                 var9 = eh.a("&", param1 ^ -67, "%26", var8);
                 if (param1 == -52) {
@@ -99,55 +72,35 @@ final class v {
                     break L0;
                   } else {
                     L4: {
-                      stackOut_14_0 = mj.field_a;
-                      stackOut_14_1 = 70;
-                      stackOut_14_2 = null;
-                      stackOut_14_3 = null;
-                      stackOut_14_4 = fb.field_c.getCodeBase();
-                      stackOut_14_5 = new StringBuilder().append("clienterror.ws?c=").append(bs.field_c).append("&u=");
-                      stackIn_16_0 = stackOut_14_0;
-                      stackIn_16_1 = stackOut_14_1;
-                      stackIn_16_2 = stackOut_14_2;
-                      stackIn_16_3 = stackOut_14_3;
-                      stackIn_16_4 = stackOut_14_4;
-                      stackIn_16_5 = stackOut_14_5;
-                      stackIn_15_0 = stackOut_14_0;
-                      stackIn_15_1 = stackOut_14_1;
-                      stackIn_15_2 = stackOut_14_2;
-                      stackIn_15_3 = stackOut_14_3;
-                      stackIn_15_4 = stackOut_14_4;
-                      stackIn_15_5 = stackOut_14_5;
+                      stackIn_16_0 = mj.field_a;
+
+                      stackIn_16_1 = 70;
+
+                      stackIn_16_2 = null;
+
+                      stackIn_16_3 = null;
+
+                      stackIn_16_4 = fb.field_c.getCodeBase();
+
+                      stackIn_16_5 = new StringBuilder().append("clienterror.ws?c=").append(bs.field_c).append("&u=");
+
                       if (co.field_g == null) {
-                        stackOut_16_0 = (rk) ((Object) stackIn_16_0);
-                        stackOut_16_1 = stackIn_16_1;
-                        stackOut_16_2 = null;
-                        stackOut_16_3 = null;
-                        stackOut_16_4 = (java.net.URL) ((Object) stackIn_16_4);
-                        stackOut_16_5 = (StringBuilder) ((Object) stackIn_16_5);
-                        stackOut_16_6 = "" + dl.field_o;
-                        stackIn_17_0 = stackOut_16_0;
-                        stackIn_17_1 = stackOut_16_1;
-                        stackIn_17_2 = stackOut_16_2;
-                        stackIn_17_3 = stackOut_16_3;
-                        stackIn_17_4 = stackOut_16_4;
-                        stackIn_17_5 = stackOut_16_5;
-                        stackIn_17_6 = stackOut_16_6;
+                        stackIn_17_0 = (rk) ((Object) stackIn_16_0);
+                        stackIn_17_1 = stackIn_16_1;
+                        stackIn_17_2 = null;
+                        stackIn_17_3 = null;
+                        stackIn_17_4 = (java.net.URL) ((Object) stackIn_16_4);
+                        stackIn_17_5 = (StringBuilder) ((Object) stackIn_16_5);
+                        stackIn_17_6 = "" + dl.field_o;
                         break L4;
                       } else {
-                        stackOut_15_0 = (rk) ((Object) stackIn_15_0);
-                        stackOut_15_1 = stackIn_15_1;
-                        stackOut_15_2 = null;
-                        stackOut_15_3 = null;
-                        stackOut_15_4 = (java.net.URL) ((Object) stackIn_15_4);
-                        stackOut_15_5 = (StringBuilder) ((Object) stackIn_15_5);
-                        stackOut_15_6 = co.field_g;
-                        stackIn_17_0 = stackOut_15_0;
-                        stackIn_17_1 = stackOut_15_1;
-                        stackIn_17_2 = stackOut_15_2;
-                        stackIn_17_3 = stackOut_15_3;
-                        stackIn_17_4 = stackOut_15_4;
-                        stackIn_17_5 = stackOut_15_5;
-                        stackIn_17_6 = stackOut_15_6;
+                        stackIn_17_0 = (rk) ((Object) stackIn_16_0);
+                        stackIn_17_1 = stackIn_16_1;
+                        stackIn_17_2 = null;
+                        stackIn_17_3 = null;
+                        stackIn_17_4 = (java.net.URL) ((Object) stackIn_16_4);
+                        stackIn_17_5 = (StringBuilder) ((Object) stackIn_16_5);
+                        stackIn_17_6 = co.field_g;
                         break L4;
                       }
                     }
@@ -159,7 +112,7 @@ final class v {
                             break L6;
                           } else {
                             var5 = (DataInputStream) (var4.field_f);
-                            discarded$1 = var5.read();
+                            var5.read();
                             var5.close();
                             break L6;
                           }
@@ -180,7 +133,7 @@ final class v {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L7: {
-                var3 = (Exception) (Object) decompiledCaughtException;
+                var3_ref = (Exception) (Object) decompiledCaughtException;
                 decompiledRegionSelector0 = 2;
                 break L7;
               }
@@ -210,44 +163,28 @@ final class v {
 
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
-            Object discarded$6 = null;
-            Object discarded$7 = null;
-            Object discarded$8 = null;
-            Object discarded$9 = null;
-            Object discarded$10 = null;
-            Object discarded$11 = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            String var3 = null;
-            java.net.URL var4 = null;
-            RuntimeException stackIn_6_0 = null;
-            StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             String stackIn_8_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_5_0 = null;
-            StringBuilder stackOut_5_1 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            String stackOut_6_2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
+            String var3 = null;
+            java.net.URL var4 = null;
             try {
               L0: {
                 try {
                   L1: {
                     var4 = param1.getCodeBase();
                     var3 = jf.a(param1, var4, 70).getFile();
-                    discarded$6 = fe.a("updatelinks", -15201, new Object[]{"home", var3 + "home.ws"}, param1);
-                    discarded$7 = fe.a("updatelinks", -15201, new Object[]{"gamelist", var3 + "togamelist.ws"}, param1);
-                    discarded$8 = fe.a("updatelinks", -15201, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1);
-                    discarded$9 = fe.a("updatelinks", -15201, new Object[]{"options", var3 + "options.ws"}, param1);
-                    discarded$10 = fe.a("updatelinks", -15201, new Object[]{"terms", var3 + "terms.ws"}, param1);
-                    discarded$11 = fe.a("updatelinks", -15201, new Object[]{"privacy", var3 + "privacy.ws"}, param1);
+                    fe.a("updatelinks", -15201, new Object[]{"home", var3 + "home.ws"}, param1);
+                    fe.a("updatelinks", -15201, new Object[]{"gamelist", var3 + "togamelist.ws"}, param1);
+                    fe.a("updatelinks", -15201, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1);
+                    fe.a("updatelinks", -15201, new Object[]{"options", var3 + "options.ws"}, param1);
+                    fe.a("updatelinks", -15201, new Object[]{"terms", var3 + "terms.ws"}, param1);
+                    fe.a("updatelinks", -15201, new Object[]{"privacy", var3 + "privacy.ws"}, param1);
                     if (param0) {
                       break L1;
                     } else {
@@ -266,27 +203,19 @@ final class v {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_5_0 = (RuntimeException) (var2_ref);
-                stackOut_5_1 = new StringBuilder().append("v.C(").append(param0).append(',');
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
+                stackIn_7_0 = (RuntimeException) (var2_ref);
+
+                stackIn_7_1 = new StringBuilder().append("v.C(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "null";
-                  stackIn_8_0 = stackOut_7_0;
-                  stackIn_8_1 = stackOut_7_1;
-                  stackIn_8_2 = stackOut_7_2;
+                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+                  stackIn_8_2 = "null";
                   break L2;
                 } else {
-                  stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-                  stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-                  stackOut_6_2 = "{...}";
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_8_1 = stackOut_6_1;
-                  stackIn_8_2 = stackOut_6_2;
+                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+                  stackIn_8_2 = "{...}";
                   break L2;
                 }
               }

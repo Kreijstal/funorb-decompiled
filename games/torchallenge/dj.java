@@ -19,13 +19,13 @@ class dj extends ng {
     static boolean field_Z;
 
     private final void d(byte param0) {
-        lg var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        gd var9 = null;
+        lg var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        gd var9;
         var8 = TorChallenge.field_F ? 1 : 0;
         if (this.field_ab) {
           if (this.field_q instanceof gd) {
@@ -99,8 +99,8 @@ class dj extends ng {
     }
 
     private final int h(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = TorChallenge.field_F ? 1 : 0;
         if (param0 >= 101) {
           if (this.field_R != 0) {
@@ -129,33 +129,22 @@ class dj extends ng {
     }
 
     void a(ee param0, int param1, byte param2, int param3) {
-        og discarded$3 = null;
-        RuntimeException var5 = null;
         int var6 = 0;
         gd var7 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
               if (param2 <= -97) {
                 break L1;
               } else {
-                discarded$3 = dj.c((byte) -78);
+                dj.c((byte) -78);
                 break L1;
               }
             }
@@ -205,27 +194,19 @@ class dj extends ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var5);
-            stackOut_14_1 = new StringBuilder().append("dj.U(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var5);
+
+            stackIn_16_1 = new StringBuilder().append("dj.U(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L5;
             }
           }
@@ -246,21 +227,21 @@ class dj extends ng {
 
     private final void e(byte param0) {
         try {
-            Exception var2 = null;
-            String var2_ref = null;
             Throwable decompiledCaughtException = null;
+            String var2 = null;
+            Exception var2_ref = null;
             if (param0 > 11) {
               try {
                 L0: {
-                  var2_ref = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
+                  var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
                   this.d(true);
-                  this.a(var2_ref, 1);
+                  this.a(var2, 1);
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 L1: {
-                  var2 = (Exception) (Object) decompiledCaughtException;
+                  var2_ref = (Exception) (Object) decompiledCaughtException;
                   break L1;
                 }
               }
@@ -315,10 +296,7 @@ class dj extends ng {
 
     private final void a(String param0, int param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -326,14 +304,7 @@ class dj extends ng {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -370,27 +341,19 @@ class dj extends ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("dj.P(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("dj.P(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -412,24 +375,20 @@ class dj extends ng {
     }
 
     final static void f(byte param0) {
-        og discarded$0 = null;
         if (!(lj.field_q)) {
             throw new IllegalStateException();
         }
         fh.field_g = true;
         wb.a(true, (byte) -73);
         if (param0 > -51) {
-            discarded$0 = dj.c((byte) -1);
+            dj.c((byte) -1);
         }
         gj.field_c = 0;
     }
 
     final void a(String param0, boolean param1, byte param2) {
-        int dupTemp$3 = 0;
+        int dupTemp$2 = 0;
         int var4_int = 0;
-        RuntimeException var4 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -437,14 +396,7 @@ class dj extends ng {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
@@ -471,9 +423,9 @@ class dj extends ng {
             }
             if (param2 == -21) {
               L3: {
-                dupTemp$3 = this.field_v.length();
-                this.field_U = dupTemp$3;
-                this.field_R = dupTemp$3;
+                dupTemp$2 = this.field_v.length();
+                this.field_U = dupTemp$2;
+                this.field_R = dupTemp$2;
                 if (!param1) {
                   this.k(-93);
                   break L3;
@@ -492,27 +444,19 @@ class dj extends ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var4);
-            stackOut_12_1 = new StringBuilder().append("dj.T(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var4);
+
+            stackIn_14_1 = new StringBuilder().append("dj.T(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
@@ -526,9 +470,8 @@ class dj extends ng {
     }
 
     final boolean a(int param0, char param1, byte param2, ee param3) {
-        int discarded$2 = 0;
-        int dupTemp$3 = 0;
-        RuntimeException var5 = null;
+        int discarded$0 = 0;
+        int dupTemp$1 = 0;
         int stackIn_6_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_26_0 = 0;
@@ -536,12 +479,10 @@ class dj extends ng {
         int stackIn_34_0 = 0;
         int stackIn_36_0 = 0;
         int stackIn_39_0 = 0;
-        Object stackIn_43_0 = null;
         Object stackIn_44_0 = null;
         Object stackIn_45_0 = null;
         int stackIn_45_1 = 0;
         int stackIn_46_0 = 0;
-        Object stackIn_50_0 = null;
         Object stackIn_51_0 = null;
         Object stackIn_52_0 = null;
         int stackIn_52_1 = 0;
@@ -553,8 +494,6 @@ class dj extends ng {
         int stackIn_73_0 = 0;
         int stackIn_75_0 = 0;
         int stackIn_77_0 = 0;
-        RuntimeException stackIn_79_0 = null;
-        StringBuilder stackIn_79_1 = null;
         RuntimeException stackIn_80_0 = null;
         StringBuilder stackIn_80_1 = null;
         RuntimeException stackIn_81_0 = null;
@@ -562,40 +501,7 @@ class dj extends ng {
         String stackIn_81_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_70_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_55_0 = 0;
-        Object stackOut_49_0 = null;
-        Object stackOut_51_0 = null;
-        int stackOut_51_1 = 0;
-        Object stackOut_50_0 = null;
-        int stackOut_50_1 = 0;
-        int stackOut_52_0 = 0;
-        Object stackOut_42_0 = null;
-        Object stackOut_44_0 = null;
-        int stackOut_44_1 = 0;
-        Object stackOut_43_0 = null;
-        int stackOut_43_1 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_76_0 = 0;
-        RuntimeException stackOut_78_0 = null;
-        StringBuilder stackOut_78_1 = null;
-        RuntimeException stackOut_80_0 = null;
-        StringBuilder stackOut_80_1 = null;
-        String stackOut_80_2 = null;
-        RuntimeException stackOut_79_0 = null;
-        StringBuilder stackOut_79_1 = null;
-        String stackOut_79_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -603,13 +509,12 @@ class dj extends ng {
               if (param2 >= 9) {
                 break L1;
               } else {
-                discarded$2 = this.h(110);
+                discarded$0 = this.h(110);
                 break L1;
               }
             }
             if (param1 == 60) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -644,9 +549,9 @@ class dj extends ng {
                         L6: {
                           if (this.field_R >= this.field_v.length()) {
                             this.field_v = this.field_v + param1;
-                            dupTemp$3 = this.field_v.length();
-                            this.field_R = dupTemp$3;
-                            this.field_U = dupTemp$3;
+                            dupTemp$1 = this.field_v.length();
+                            this.field_R = dupTemp$1;
+                            this.field_U = dupTemp$1;
                             break L6;
                           } else {
                             this.field_v = this.field_v.substring(0, this.field_R) + param1 + this.field_v.substring(this.field_R, this.field_v.length());
@@ -658,8 +563,7 @@ class dj extends ng {
                         this.k(-105);
                         break L4;
                       }
-                      stackOut_19_0 = 1;
-                      stackIn_20_0 = stackOut_19_0;
+                      stackIn_20_0 = 1;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -674,8 +578,7 @@ class dj extends ng {
                             if (param0 != 102) {
                               if ((param0 ^ -1) == -104) {
                                 this.a(this.field_v.length(), -1);
-                                stackOut_74_0 = 1;
-                                stackIn_75_0 = stackOut_74_0;
+                                stackIn_75_0 = 1;
                                 decompiledRegionSelector0 = 14;
                                 break L0;
                               } else {
@@ -688,8 +591,7 @@ class dj extends ng {
                                         break L8;
                                       } else {
                                         this.g((byte) 79);
-                                        stackOut_63_0 = 1;
-                                        stackIn_64_0 = stackOut_63_0;
+                                        stackIn_64_0 = 1;
                                         decompiledRegionSelector0 = 11;
                                         break L0;
                                       }
@@ -701,8 +603,7 @@ class dj extends ng {
                                     } else {
                                       if ((param0 ^ -1) == -67) {
                                         this.g(0);
-                                        stackOut_72_0 = 1;
-                                        stackIn_73_0 = stackOut_72_0;
+                                        stackIn_73_0 = 1;
                                         decompiledRegionSelector0 = 13;
                                         break L0;
                                       } else {
@@ -717,24 +618,21 @@ class dj extends ng {
                                       break L7;
                                     } else {
                                       this.e((byte) 65);
-                                      stackOut_70_0 = 1;
-                                      stackIn_71_0 = stackOut_70_0;
+                                      stackIn_71_0 = 1;
                                       decompiledRegionSelector0 = 12;
                                       break L0;
                                     }
                                   }
                                 } else {
                                   this.h((byte) -108);
-                                  stackOut_59_0 = 1;
-                                  stackIn_60_0 = stackOut_59_0;
+                                  stackIn_60_0 = 1;
                                   decompiledRegionSelector0 = 10;
                                   break L0;
                                 }
                               }
                             } else {
                               this.a(0, -1);
-                              stackOut_55_0 = 1;
-                              stackIn_56_0 = stackOut_55_0;
+                              stackIn_56_0 = 1;
                               decompiledRegionSelector0 = 9;
                               break L0;
                             }
@@ -743,26 +641,20 @@ class dj extends ng {
                               break L7;
                             } else {
                               L10: {
-                                stackOut_49_0 = this;
-                                stackIn_51_0 = stackOut_49_0;
-                                stackIn_50_0 = stackOut_49_0;
+                                stackIn_51_0 = this;
+
                                 if (nj.field_c[82]) {
-                                  stackOut_51_0 = this;
-                                  stackOut_51_1 = this.e(true);
-                                  stackIn_52_0 = stackOut_51_0;
-                                  stackIn_52_1 = stackOut_51_1;
+                                  stackIn_52_0 = this;
+                                  stackIn_52_1 = this.e(true);
                                   break L10;
                                 } else {
-                                  stackOut_50_0 = this;
-                                  stackOut_50_1 = 1 + this.field_R;
-                                  stackIn_52_0 = stackOut_50_0;
-                                  stackIn_52_1 = stackOut_50_1;
+                                  stackIn_52_0 = this;
+                                  stackIn_52_1 = 1 + this.field_R;
                                   break L10;
                                 }
                               }
                               this.a(stackIn_52_1, -1);
-                              stackOut_52_0 = 1;
-                              stackIn_53_0 = stackOut_52_0;
+                              stackIn_53_0 = 1;
                               decompiledRegionSelector0 = 8;
                               break L0;
                             }
@@ -772,50 +664,41 @@ class dj extends ng {
                             break L7;
                           } else {
                             L11: {
-                              stackOut_42_0 = this;
-                              stackIn_44_0 = stackOut_42_0;
-                              stackIn_43_0 = stackOut_42_0;
+                              stackIn_44_0 = this;
+
                               if (nj.field_c[82]) {
-                                stackOut_44_0 = this;
-                                stackOut_44_1 = this.h(121);
-                                stackIn_45_0 = stackOut_44_0;
-                                stackIn_45_1 = stackOut_44_1;
+                                stackIn_45_0 = this;
+                                stackIn_45_1 = this.h(121);
                                 break L11;
                               } else {
-                                stackOut_43_0 = this;
-                                stackOut_43_1 = this.field_R + -1;
-                                stackIn_45_0 = stackOut_43_0;
-                                stackIn_45_1 = stackOut_43_1;
+                                stackIn_45_0 = this;
+                                stackIn_45_1 = this.field_R + -1;
                                 break L11;
                               }
                             }
                             this.a(stackIn_45_1, -1);
-                            stackOut_45_0 = 1;
-                            stackIn_46_0 = stackOut_45_0;
+                            stackIn_46_0 = 1;
                             decompiledRegionSelector0 = 7;
                             break L0;
                           }
                         }
                       } else {
                         this.i(-22617);
-                        stackOut_38_0 = 1;
-                        stackIn_39_0 = stackOut_38_0;
+                        stackIn_39_0 = 1;
                         decompiledRegionSelector0 = 6;
                         break L0;
                       }
                     } else {
                       if (this.field_U != this.field_R) {
                         this.d(true);
-                        stackOut_35_0 = 1;
-                        stackIn_36_0 = stackOut_35_0;
+                        stackIn_36_0 = 1;
                         decompiledRegionSelector0 = 5;
                         break L0;
                       } else {
                         if (this.field_R < this.field_v.length()) {
                           this.field_U = 1 + this.field_R;
                           this.d(true);
-                          stackOut_33_0 = 1;
-                          stackIn_34_0 = stackOut_33_0;
+                          stackIn_34_0 = 1;
                           decompiledRegionSelector0 = 4;
                           break L0;
                         } else {
@@ -826,16 +709,14 @@ class dj extends ng {
                   } else {
                     if (this.field_R != this.field_U) {
                       this.d(true);
-                      stackOut_27_0 = 1;
-                      stackIn_28_0 = stackOut_27_0;
+                      stackIn_28_0 = 1;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
                       if (-1 > (this.field_R ^ -1)) {
                         this.field_U = -1 + this.field_R;
                         this.d(true);
-                        stackOut_25_0 = 1;
-                        stackIn_26_0 = stackOut_25_0;
+                        stackIn_26_0 = 1;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -844,8 +725,7 @@ class dj extends ng {
                     }
                   }
                 }
-                stackOut_76_0 = 0;
-                stackIn_77_0 = stackOut_76_0;
+                stackIn_77_0 = 0;
                 decompiledRegionSelector0 = 15;
                 break L0;
               } else {
@@ -857,27 +737,19 @@ class dj extends ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L12: {
             var5 = decompiledCaughtException;
-            stackOut_78_0 = (RuntimeException) (var5);
-            stackOut_78_1 = new StringBuilder().append("dj.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_80_0 = stackOut_78_0;
-            stackIn_80_1 = stackOut_78_1;
-            stackIn_79_0 = stackOut_78_0;
-            stackIn_79_1 = stackOut_78_1;
+            stackIn_80_0 = (RuntimeException) (var5);
+
+            stackIn_80_1 = new StringBuilder().append("dj.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_80_0 = (RuntimeException) ((Object) stackIn_80_0);
-              stackOut_80_1 = (StringBuilder) ((Object) stackIn_80_1);
-              stackOut_80_2 = "null";
-              stackIn_81_0 = stackOut_80_0;
-              stackIn_81_1 = stackOut_80_1;
-              stackIn_81_2 = stackOut_80_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+              stackIn_81_2 = "null";
               break L12;
             } else {
-              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
-              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
-              stackOut_79_2 = "{...}";
-              stackIn_81_0 = stackOut_79_0;
-              stackIn_81_1 = stackOut_79_1;
-              stackIn_81_2 = stackOut_79_2;
+              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+              stackIn_81_2 = "{...}";
               break L12;
             }
           }
@@ -951,7 +823,6 @@ class dj extends ng {
             Throwable var1 = null;
             og stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            og stackOut_2_0 = null;
             try {
               L0: {
                 L1: {
@@ -962,8 +833,7 @@ class dj extends ng {
                     break L1;
                   }
                 }
-                stackOut_2_0 = (og) (Class.forName("sc").newInstance());
-                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_0 = (og) (Class.forName("sc").newInstance());
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -996,9 +866,9 @@ class dj extends ng {
     }
 
     private final int e(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = TorChallenge.field_F ? 1 : 0;
         if (param0) {
           var2 = this.field_v.length();
@@ -1033,18 +903,16 @@ class dj extends ng {
         if (param2) {
             return;
         }
-        if (this.field_q != null) {
-            if (-1 == (param3 ^ -1)) {
-                this.field_q.a((ee) (this), param0, param1, (byte) 97, this.field_F);
-                if (!(!(this.field_q instanceof gd))) {
-                    var8 = (gd) ((Object) this.field_q);
-                    if (this.field_R != this.field_U) {
-                        var8.a((byte) 3, param0, this.field_U, this.field_R, param1, (ee) (this));
-                    }
-                    var6 = ol.a(256);
-                    if (500L > (-this.field_X + var6) % 1000L) {
-                        var8.a(param1, param0, (ee) (this), this.field_R, (byte) 77);
-                    }
+        if (this.field_q != null && -1 == (param3 ^ -1)) {
+            this.field_q.a((ee) (this), param0, param1, (byte) 97, this.field_F);
+            if (!(!(this.field_q instanceof gd))) {
+                var8 = (gd) ((Object) this.field_q);
+                if (this.field_R != this.field_U) {
+                    var8.a((byte) 3, param0, this.field_U, this.field_R, param1, (ee) (this));
+                }
+                var6 = ol.a(256);
+                if (500L > (-this.field_X + var6) % 1000L) {
+                    var8.a(param1, param0, (ee) (this), this.field_R, (byte) 77);
                 }
             }
         }
@@ -1065,21 +933,14 @@ class dj extends ng {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ee param6) {
-        RuntimeException var8 = null;
-        int var8_int = 0;
-        long var8_long = 0L;
-        Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         int stackIn_5_1 = 0;
-        Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_16_0 = 0;
         int stackIn_18_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -1087,26 +948,9 @@ class dj extends ng {
         String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_5_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        int var8_int = 0;
+        long var8_long = 0L;
+        RuntimeException var8 = null;
         try {
           L0: {
             L1: {
@@ -1118,40 +962,30 @@ class dj extends ng {
                 } else {
                   L2: {
                     var8_int = ((gd) ((Object) this.field_q)).a(ph.field_d, kc.field_u, (ee) (this), (byte) 72, param3, param4);
-                    stackOut_2_0 = this;
-                    stackIn_4_0 = stackOut_2_0;
-                    stackIn_3_0 = stackOut_2_0;
+                    stackIn_4_0 = this;
+
                     if (0 != (var8_int ^ -1)) {
-                      stackOut_4_0 = this;
-                      stackOut_4_1 = var8_int;
-                      stackIn_5_0 = stackOut_4_0;
-                      stackIn_5_1 = stackOut_4_1;
+                      stackIn_5_0 = this;
+                      stackIn_5_1 = var8_int;
                       break L2;
                     } else {
-                      stackOut_3_0 = this;
-                      stackOut_3_1 = 0;
-                      stackIn_5_0 = stackOut_3_0;
-                      stackIn_5_1 = stackOut_3_1;
+                      stackIn_5_0 = this;
+                      stackIn_5_1 = 0;
                       break L2;
                     }
                   }
                   L3: {
                     this.a(stackIn_5_1, param2 ^ 80);
                     var8_long = ol.a(param2 + 337);
-                    stackOut_5_0 = this;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_6_0 = stackOut_5_0;
+                    stackIn_7_0 = this;
+
                     if (var8_long + -this.field_T >= 250L) {
-                      stackOut_7_0 = this;
-                      stackOut_7_1 = 0;
-                      stackIn_8_0 = stackOut_7_0;
-                      stackIn_8_1 = stackOut_7_1;
+                      stackIn_8_0 = this;
+                      stackIn_8_1 = 0;
                       break L3;
                     } else {
-                      stackOut_6_0 = this;
-                      stackOut_6_1 = 1;
-                      stackIn_8_0 = stackOut_6_0;
-                      stackIn_8_1 = stackOut_6_1;
+                      stackIn_8_0 = this;
+                      stackIn_8_1 = 1;
                       break L3;
                     }
                   }
@@ -1179,15 +1013,13 @@ class dj extends ng {
                     }
                   }
                   this.field_T = var8_long;
-                  stackOut_15_0 = 1;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
               }
             }
-            stackOut_17_0 = 0;
-            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_0 = 0;
             decompiledRegionSelector0 = 1;
             break L0;
           }
@@ -1195,27 +1027,19 @@ class dj extends ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var8 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var8);
-            stackOut_19_1 = new StringBuilder().append("dj.CA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var8);
+
+            stackIn_21_1 = new StringBuilder().append("dj.CA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+
             if (param6 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L6;
             }
           }

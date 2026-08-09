@@ -21,15 +21,13 @@ final class mj {
 
     final static void a(int param0) {
         qj var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         qj[] stackIn_5_0 = null;
-        qj[] stackOut_3_0 = null;
-        qj[] stackOut_4_0 = null;
         int statePc = 0;
         Throwable caughtException = null;
+        RuntimeException var1_ref = null;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -58,15 +56,13 @@ final class mj {
                     return;
                 }
                 case 3: {
-                    stackOut_3_0 = mb.field_d;
-                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_0 = mb.field_d;
                     statePc = 5;
                     continue stateLoop;
                 }
                 case 4: {
                     try {
-                        stackOut_4_0 = mb.field_d;
-                        stackIn_5_0 = stackOut_4_0;
+                        stackIn_5_0 = mb.field_d;
                         statePc = 5;
                         continue stateLoop;
                     } catch (Throwable stateCaught_4) {

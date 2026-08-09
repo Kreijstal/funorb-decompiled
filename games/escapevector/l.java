@@ -33,21 +33,19 @@ final class l extends bj implements qb {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var5;
+        int var6;
         if (param1 <= 85) {
           this.field_J = (hc) null;
           var5 = this.field_k - -param3;
           var6 = param0 + this.field_j;
-          discarded$2 = sb.field_a.a(q.field_F, var5 + 20, var6 + 20, this.field_g + -40, this.field_x + -50, 16777215, -1, 1, 0, sb.field_a.field_r);
+          sb.field_a.a(q.field_F, var5 + 20, var6 + 20, this.field_g + -40, this.field_x + -50, 16777215, -1, 1, 0, sb.field_a.field_r);
           super.a(param0, (byte) 99, param2, param3);
           return;
         } else {
           var5 = this.field_k - -param3;
           var6 = param0 + this.field_j;
-          discarded$3 = sb.field_a.a(q.field_F, var5 + 20, var6 + 20, this.field_g + -40, this.field_x + -50, 16777215, -1, 1, 0, sb.field_a.field_r);
+          sb.field_a.a(q.field_F, var5 + 20, var6 + 20, this.field_g + -40, this.field_x + -50, 16777215, -1, 1, 0, sb.field_a.field_r);
           super.a(param0, (byte) 99, param2, param3);
           return;
         }
@@ -79,25 +77,14 @@ final class l extends bj implements qb {
     }
 
     public final void a(hc param0, int param1, int param2, int param3, int param4) {
-        boolean discarded$1 = false;
-        RuntimeException var6 = null;
         int var7 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException var6 = null;
         var7 = EscapeVector.field_A;
         try {
           L0: {
@@ -122,7 +109,7 @@ final class l extends bj implements qb {
             if (param3 == 1) {
               break L0;
             } else {
-              discarded$1 = l.a((byte) -64);
+              l.a((byte) -64);
               return;
             }
           }
@@ -130,27 +117,19 @@ final class l extends bj implements qb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var6);
-            stackOut_11_1 = new StringBuilder().append("l.K(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var6);
+
+            stackIn_13_1 = new StringBuilder().append("l.K(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L2;
             }
           }
@@ -164,8 +143,6 @@ final class l extends bj implements qb {
         boolean stackIn_6_0 = false;
         int stackIn_9_0 = 0;
         boolean stackIn_13_0 = false;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -173,45 +150,29 @@ final class l extends bj implements qb {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        boolean stackOut_12_0 = false;
-        int stackOut_8_0 = 0;
-        boolean stackOut_5_0 = false;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             if (super.a(param0, param1, param2, 71)) {
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (param2 != 98) {
                 if (param3 >= 0) {
                   if ((param2 ^ -1) == -100) {
-                    stackOut_12_0 = this.a(param0, true);
-                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_0 = this.a(param0, true);
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
                     return false;
                   }
                 } else {
-                  stackOut_8_0 = 1;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = 1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_5_0 = this.a((byte) 22, param0);
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = this.a((byte) 22, param0);
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -221,27 +182,19 @@ final class l extends bj implements qb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var5);
-            stackOut_14_1 = new StringBuilder().append("l.G(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var5);
+
+            stackIn_16_1 = new StringBuilder().append("l.G(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L1;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L1;
             }
           }

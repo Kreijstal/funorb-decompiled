@@ -12,12 +12,10 @@ final class qk {
     private pa[] field_c;
 
     final pa a(long param0, int param1) {
-        pa var4 = null;
-        pa var5 = null;
-        int var6 = 0;
-        Object stackIn_6_0 = null;
+        pa var4;
+        pa var5;
+        int var6;
         Object stackIn_7_0 = null;
-        Object stackOut_5_0 = null;
         var6 = fleas.field_A ? 1 : 0;
         if (param1 == 16571) {
           this.field_e = param0;
@@ -25,9 +23,8 @@ final class qk {
           this.field_d = var4.field_p;
           L0: while (true) {
             if (var4 != this.field_d) {
-              stackOut_5_0 = this;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_7_0 = this;
+
               if (var6 == 0) {
                 if (((qk) (this)).field_d.field_j == param0) {
                   var5 = this.field_d;
@@ -35,7 +32,12 @@ final class qk {
                   return var5;
                 } else {
                   this.field_d = this.field_d.field_p;
-                  continue L0;
+                  if (var6 == 0) {
+                    continue L0;
+                  } else {
+                    this.field_d = null;
+                    return null;
+                  }
                 }
               } else {
                 ((qk) (this)).field_d = null;
@@ -52,15 +54,11 @@ final class qk {
     }
 
     final pa a(int param0) {
-        pa var2 = null;
-        pa var3 = null;
-        int var4 = 0;
-        Object stackIn_6_0 = null;
+        pa var2;
+        pa var3;
+        int var4;
         Object stackIn_7_0 = null;
-        Object stackIn_15_0 = null;
         Object stackIn_16_0 = null;
-        Object stackOut_14_0 = null;
-        Object stackOut_5_0 = null;
         var4 = fleas.field_A ? 1 : 0;
         if (this.field_d != null) {
           var2 = this.field_c[(int)(this.field_e & (long)(this.field_g - 1))];
@@ -68,13 +66,17 @@ final class qk {
             field_a = -114;
             L0: while (true) {
               if (var2 != this.field_d) {
-                stackOut_14_0 = this;
-                stackIn_16_0 = stackOut_14_0;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_16_0 = this;
+
                 if (var4 == 0) {
                   if ((((qk) (this)).field_d.field_j ^ -1L) != (this.field_e ^ -1L)) {
                     this.field_d = this.field_d.field_p;
-                    continue L0;
+                    if (var4 == 0) {
+                      continue L0;
+                    } else {
+                      this.field_d = null;
+                      return null;
+                    }
                   } else {
                     var3 = this.field_d;
                     this.field_d = this.field_d.field_p;
@@ -92,13 +94,17 @@ final class qk {
           } else {
             L1: while (true) {
               if (var2 != this.field_d) {
-                stackOut_5_0 = this;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_7_0 = this;
+
                 if (var4 == 0) {
                   if ((((qk) (this)).field_d.field_j ^ -1L) != (this.field_e ^ -1L)) {
                     this.field_d = this.field_d.field_p;
-                    continue L1;
+                    if (var4 == 0) {
+                      continue L1;
+                    } else {
+                      this.field_d = null;
+                      return null;
+                    }
                   } else {
                     var3 = this.field_d;
                     this.field_d = this.field_d.field_p;
@@ -130,31 +136,26 @@ final class qk {
     }
 
     qk(int param0) {
-        pa dupTemp$2 = null;
-        int var2 = 0;
+        pa dupTemp$0 = null;
         pa var3 = null;
-        int var4 = 0;
-        var4 = fleas.field_A ? 1 : 0;
+        int var4 = fleas.field_A ? 1 : 0;
         this.field_c = new pa[param0];
         this.field_g = param0;
-        var2 = 0;
-        L0: while (true) {
-          if (param0 > var2) {
-            dupTemp$2 = new pa();
-            var3 = dupTemp$2;
-            this.field_c[var2] = dupTemp$2;
+        int var2 = 0;
+        do {
+            if (param0 <= var2) {
+                return;
+            }
+            dupTemp$0 = new pa();
+            var3 = dupTemp$0;
+            this.field_c[var2] = dupTemp$0;
             var3.field_m = var3;
             var3.field_p = var3;
             var2++;
-            if (var4 == 0) {
-              continue L0;
-            } else {
-              return;
+            if (var4 != 0) {
+                return;
             }
-          } else {
-            return;
-          }
-        }
+        } while (var4 == 0);
     }
 
     final void a(pa param0, int param1, long param2) {

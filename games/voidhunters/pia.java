@@ -12,7 +12,7 @@ final class pia extends oda implements oo {
     }
 
     final void d(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = 250;
         if (param0 != 16777215) {
           return;

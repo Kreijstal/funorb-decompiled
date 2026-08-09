@@ -9,16 +9,15 @@ final class vd {
     static int field_b;
 
     final static int a(byte param0) {
-        RuntimeException var1 = null;
+        int stackIn_29_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_29_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_28_0 = 0;
         var7 = stellarshard.field_B;
         try {
           L0: {
@@ -99,8 +98,7 @@ final class vd {
                     break L7;
                   }
                 }
-                stackOut_28_0 = var3;
-                stackIn_29_0 = stackOut_28_0;
+                stackIn_29_0 = var3;
                 break L0;
               } else {
                 L8: {
@@ -130,10 +128,9 @@ final class vd {
     }
 
     final static char a(int param0, byte param1) {
-        int discarded$0 = 0;
         int var3 = 0;
         if (param0 != -128) {
-            discarded$0 = vd.a((byte) 99);
+            vd.a((byte) 99);
         }
         int var2 = param1 & 255;
         if (!(var2 != 0)) {
@@ -152,31 +149,21 @@ final class vd {
     }
 
     final static void a(nj param0, int param1) {
-        int dupTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int incrementValue$6 = 0;
-        int dupTemp$7 = 0;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
+        int dupTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int dupTemp$3 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var5 = stellarshard.field_B;
         try {
           L0: {
@@ -194,16 +181,16 @@ final class vd {
                 var2_int = 0;
                 L3: while (true) {
                   if (gi.field_g <= var2_int) {
-                    dupTemp$4 = param0.a((byte) 90);
-                    cg.field_d[dupTemp$4] = cg.field_d[dupTemp$4] + 1;
+                    dupTemp$0 = param0.a((byte) 90);
+                    cg.field_d[dupTemp$0] = cg.field_d[dupTemp$0] + 1;
                     var2_int = 0;
                     var3 = 0;
                     L4: while (true) {
                       if (var3 >= gi.field_g) {
                         gi.field_g = var2_int;
-                        fieldTemp$5 = gi.field_g;
+                        fieldTemp$1 = gi.field_g;
                         gi.field_g = gi.field_g + 1;
-                        ai.field_d[fieldTemp$5] = param0;
+                        ai.field_d[fieldTemp$1] = param0;
                         break L0;
                       } else {
                         L5: {
@@ -220,9 +207,9 @@ final class vd {
                               break L6;
                             }
                           }
-                          incrementValue$6 = var2_int;
+                          incrementValue$2 = var2_int;
                           var2_int++;
-                          ai.field_d[incrementValue$6] = ai.field_d[var3];
+                          ai.field_d[incrementValue$2] = ai.field_d[var3];
                           break L5;
                         }
                         var3++;
@@ -234,8 +221,8 @@ final class vd {
                       if (ai.field_d[var2_int].field_p != param0.field_p) {
                         break L7;
                       } else {
-                        dupTemp$7 = ai.field_d[var2_int].a((byte) 95);
-                        cg.field_d[dupTemp$7] = cg.field_d[dupTemp$7] + 1;
+                        dupTemp$3 = ai.field_d[var2_int].a((byte) 95);
+                        cg.field_d[dupTemp$3] = cg.field_d[dupTemp$3] + 1;
                         break L7;
                       }
                     }
@@ -254,27 +241,19 @@ final class vd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var2);
-            stackOut_21_1 = new StringBuilder().append("vd.D(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var2);
+
+            stackIn_23_1 = new StringBuilder().append("vd.D(");
+
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L8;
             }
           }

@@ -40,23 +40,13 @@ class iu {
     }
 
     final void a(String param0, byte param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -100,27 +90,19 @@ class iu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3);
-            stackOut_9_1 = new StringBuilder().append("iu.FA(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("iu.FA(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -129,8 +111,8 @@ class iu {
     }
 
     void b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param1 == -3) {
           L0: {
@@ -1025,69 +1007,29 @@ class iu {
     }
 
     final void f(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        Object stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
         Object stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         Object stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_14_2 = 0;
-        Object stackIn_17_0 = null;
-        int stackIn_17_1 = 0;
         Object stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         Object stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         int stackIn_19_2 = 0;
-        Object stackIn_22_0 = null;
-        int stackIn_22_1 = 0;
         Object stackIn_23_0 = null;
         int stackIn_23_1 = 0;
         Object stackIn_24_0 = null;
         int stackIn_24_1 = 0;
         int stackIn_24_2 = 0;
-        Object stackIn_27_0 = null;
-        int stackIn_27_1 = 0;
         Object stackIn_28_0 = null;
         int stackIn_28_1 = 0;
         Object stackIn_29_0 = null;
         int stackIn_29_1 = 0;
         int stackIn_29_2 = 0;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        Object stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int stackOut_18_2 = 0;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        int stackOut_17_2 = 0;
-        Object stackOut_21_0 = null;
-        int stackOut_21_1 = 0;
-        Object stackOut_23_0 = null;
-        int stackOut_23_1 = 0;
-        int stackOut_23_2 = 0;
-        Object stackOut_22_0 = null;
-        int stackOut_22_1 = 0;
-        int stackOut_22_2 = 0;
-        Object stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
-        Object stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        int stackOut_28_2 = 0;
-        Object stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        int stackOut_27_2 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           L1: {
             var2 = 40;
@@ -1127,27 +1069,19 @@ class iu {
           if (var2 < this.field_j) {
             L4: {
               var4 = -var2 + this.field_j;
-              stackOut_11_0 = this;
-              stackOut_11_1 = this.field_j;
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
+              stackIn_13_0 = this;
+
+              stackIn_13_1 = this.field_j;
+
               if ((var4 ^ -1) < -6) {
-                stackOut_13_0 = this;
-                stackOut_13_1 = stackIn_13_1;
-                stackOut_13_2 = 5;
-                stackIn_14_0 = stackOut_13_0;
-                stackIn_14_1 = stackOut_13_1;
-                stackIn_14_2 = stackOut_13_2;
+                stackIn_14_0 = this;
+                stackIn_14_1 = stackIn_13_1;
+                stackIn_14_2 = 5;
                 break L4;
               } else {
-                stackOut_12_0 = this;
-                stackOut_12_1 = stackIn_12_1;
-                stackOut_12_2 = var4;
-                stackIn_14_0 = stackOut_12_0;
-                stackIn_14_1 = stackOut_12_1;
-                stackIn_14_2 = stackOut_12_2;
+                stackIn_14_0 = this;
+                stackIn_14_1 = stackIn_13_1;
+                stackIn_14_2 = var4;
                 break L4;
               }
             }
@@ -1163,27 +1097,19 @@ class iu {
           } else {
             L6: {
               var4 = -this.field_j + var2;
-              stackOut_16_0 = this;
-              stackOut_16_1 = this.field_j;
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
+              stackIn_18_0 = this;
+
+              stackIn_18_1 = this.field_j;
+
               if (5 < var4) {
-                stackOut_18_0 = this;
-                stackOut_18_1 = stackIn_18_1;
-                stackOut_18_2 = 5;
-                stackIn_19_0 = stackOut_18_0;
-                stackIn_19_1 = stackOut_18_1;
-                stackIn_19_2 = stackOut_18_2;
+                stackIn_19_0 = this;
+                stackIn_19_1 = stackIn_18_1;
+                stackIn_19_2 = 5;
                 break L6;
               } else {
-                stackOut_17_0 = this;
-                stackOut_17_1 = stackIn_17_1;
-                stackOut_17_2 = var4;
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
-                stackIn_19_2 = stackOut_17_2;
+                stackIn_19_0 = this;
+                stackIn_19_1 = stackIn_18_1;
+                stackIn_19_2 = var4;
                 break L6;
               }
             }
@@ -1197,27 +1123,19 @@ class iu {
           } else {
             L8: {
               var4 = this.field_g - this.field_f;
-              stackOut_21_0 = this;
-              stackOut_21_1 = this.field_g;
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
+              stackIn_23_0 = this;
+
+              stackIn_23_1 = this.field_g;
+
               if ((var4 ^ -1) < -6) {
-                stackOut_23_0 = this;
-                stackOut_23_1 = stackIn_23_1;
-                stackOut_23_2 = 5;
-                stackIn_24_0 = stackOut_23_0;
-                stackIn_24_1 = stackOut_23_1;
-                stackIn_24_2 = stackOut_23_2;
+                stackIn_24_0 = this;
+                stackIn_24_1 = stackIn_23_1;
+                stackIn_24_2 = 5;
                 break L8;
               } else {
-                stackOut_22_0 = this;
-                stackOut_22_1 = stackIn_22_1;
-                stackOut_22_2 = var4;
-                stackIn_24_0 = stackOut_22_0;
-                stackIn_24_1 = stackOut_22_1;
-                stackIn_24_2 = stackOut_22_2;
+                stackIn_24_0 = this;
+                stackIn_24_1 = stackIn_23_1;
+                stackIn_24_2 = var4;
                 break L8;
               }
             }
@@ -1231,27 +1149,19 @@ class iu {
           } else {
             L10: {
               var4 = this.field_f + -this.field_g;
-              stackOut_26_0 = this;
-              stackOut_26_1 = this.field_g;
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
+              stackIn_28_0 = this;
+
+              stackIn_28_1 = this.field_g;
+
               if (-6 > (var4 ^ -1)) {
-                stackOut_28_0 = this;
-                stackOut_28_1 = stackIn_28_1;
-                stackOut_28_2 = 5;
-                stackIn_29_0 = stackOut_28_0;
-                stackIn_29_1 = stackOut_28_1;
-                stackIn_29_2 = stackOut_28_2;
+                stackIn_29_0 = this;
+                stackIn_29_1 = stackIn_28_1;
+                stackIn_29_2 = 5;
                 break L10;
               } else {
-                stackOut_27_0 = this;
-                stackOut_27_1 = stackIn_27_1;
-                stackOut_27_2 = var4;
-                stackIn_29_0 = stackOut_27_0;
-                stackIn_29_1 = stackOut_27_1;
-                stackIn_29_2 = stackOut_27_2;
+                stackIn_29_0 = this;
+                stackIn_29_1 = stackIn_28_1;
+                stackIn_29_2 = var4;
                 break L10;
               }
             }
@@ -1279,8 +1189,8 @@ class iu {
     }
 
     private final void b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         L0: {
           var4 = ArmiesOfGielinor.field_M ? 1 : 0;
           this.field_c = true;
@@ -1903,26 +1813,11 @@ class iu {
     }
 
     final void h(byte param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_10_1 = 0;
-        int stackIn_10_2 = 0;
-        int stackIn_10_3 = 0;
-        wk[] stackIn_10_4 = null;
-        int stackIn_11_0 = 0;
-        int stackIn_11_1 = 0;
-        int stackIn_11_2 = 0;
-        int stackIn_11_3 = 0;
-        wk[] stackIn_11_4 = null;
-        int stackIn_12_0 = 0;
-        int stackIn_12_1 = 0;
-        int stackIn_12_2 = 0;
-        int stackIn_12_3 = 0;
-        wk[] stackIn_12_4 = null;
+        int stackIn_12_0;
+        int stackIn_12_1;
+        int stackIn_12_2;
+        int stackIn_12_3;
+        wk[] stackIn_12_4;
         int stackIn_13_0 = 0;
         int stackIn_13_1 = 0;
         int stackIn_13_2 = 0;
@@ -1932,34 +1827,10 @@ class iu {
         int stackIn_20_0 = 0;
         String stackIn_24_0 = null;
         String stackIn_28_0 = null;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        int stackOut_9_3 = 0;
-        wk[] stackOut_9_4 = null;
-        int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
-        int stackOut_10_2 = 0;
-        int stackOut_10_3 = 0;
-        wk[] stackOut_10_4 = null;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        int stackOut_11_3 = 0;
-        wk[] stackOut_11_4 = null;
-        int[] stackOut_11_5 = null;
-        int stackOut_12_0 = 0;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        int stackOut_12_3 = 0;
-        wk[] stackOut_12_4 = null;
-        int[] stackOut_12_5 = null;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        String stackOut_23_0 = null;
-        String stackOut_22_0 = null;
-        String stackOut_27_0 = null;
-        String stackOut_26_0 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = ArmiesOfGielinor.field_M ? 1 : 0;
           if (param0 == 21) {
@@ -1994,70 +1865,41 @@ class iu {
               } else {
                 L4: {
                   L5: {
-                    stackOut_9_0 = -5 + var2 + -this.field_g;
-                    stackOut_9_1 = -45 + var3;
-                    stackOut_9_2 = this.field_g - 10;
-                    stackOut_9_3 = 30;
-                    stackOut_9_4 = il.field_s;
-                    stackIn_12_0 = stackOut_9_0;
-                    stackIn_12_1 = stackOut_9_1;
-                    stackIn_12_2 = stackOut_9_2;
-                    stackIn_12_3 = stackOut_9_3;
-                    stackIn_12_4 = stackOut_9_4;
-                    stackIn_10_0 = stackOut_9_0;
-                    stackIn_10_1 = stackOut_9_1;
-                    stackIn_10_2 = stackOut_9_2;
-                    stackIn_10_3 = stackOut_9_3;
-                    stackIn_10_4 = stackOut_9_4;
+                    stackIn_12_0 = -5 + var2 + -this.field_g;
+
+                    stackIn_12_1 = -45 + var3;
+
+                    stackIn_12_2 = this.field_g - 10;
+
+                    stackIn_12_3 = 30;
+
+                    stackIn_12_4 = il.field_s;
+
                     if (-3 == (this.field_w ^ -1)) {
                       break L5;
                     } else {
-                      stackOut_10_0 = stackIn_10_0;
-                      stackOut_10_1 = stackIn_10_1;
-                      stackOut_10_2 = stackIn_10_2;
-                      stackOut_10_3 = stackIn_10_3;
-                      stackOut_10_4 = (wk[]) ((Object) stackIn_10_4);
-                      stackIn_12_0 = stackOut_10_0;
-                      stackIn_12_1 = stackOut_10_1;
-                      stackIn_12_2 = stackOut_10_2;
-                      stackIn_12_3 = stackOut_10_3;
-                      stackIn_12_4 = stackOut_10_4;
-                      stackIn_11_0 = stackOut_10_0;
-                      stackIn_11_1 = stackOut_10_1;
-                      stackIn_11_2 = stackOut_10_2;
-                      stackIn_11_3 = stackOut_10_3;
-                      stackIn_11_4 = stackOut_10_4;
+
+                      stackIn_12_4 = (wk[]) ((Object) stackIn_12_4);
+
                       if (!wg.a(param0 + -54, -5 + -this.field_g + var2, var2 - 15, -45 + var3, var3 + -15)) {
                         break L5;
                       } else {
-                        stackOut_11_0 = stackIn_11_0;
-                        stackOut_11_1 = stackIn_11_1;
-                        stackOut_11_2 = stackIn_11_2;
-                        stackOut_11_3 = stackIn_11_3;
-                        stackOut_11_4 = (wk[]) ((Object) stackIn_11_4);
-                        stackOut_11_5 = ci.field_e;
-                        stackIn_13_0 = stackOut_11_0;
-                        stackIn_13_1 = stackOut_11_1;
-                        stackIn_13_2 = stackOut_11_2;
-                        stackIn_13_3 = stackOut_11_3;
-                        stackIn_13_4 = stackOut_11_4;
-                        stackIn_13_5 = stackOut_11_5;
+                        stackIn_13_0 = stackIn_12_0;
+                        stackIn_13_1 = stackIn_12_1;
+                        stackIn_13_2 = stackIn_12_2;
+                        stackIn_13_3 = stackIn_12_3;
+                        stackIn_13_4 = (wk[]) ((Object) stackIn_12_4);
+                        stackIn_13_5 = ci.field_e;
                         break L4;
                       }
                     }
                   }
-                  stackOut_12_0 = stackIn_12_0;
-                  stackOut_12_1 = stackIn_12_1;
-                  stackOut_12_2 = stackIn_12_2;
-                  stackOut_12_3 = stackIn_12_3;
-                  stackOut_12_4 = (wk[]) ((Object) stackIn_12_4);
-                  stackOut_12_5 = nd.field_b;
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
-                  stackIn_13_2 = stackOut_12_2;
-                  stackIn_13_3 = stackOut_12_3;
-                  stackIn_13_4 = stackOut_12_4;
-                  stackIn_13_5 = stackOut_12_5;
+                  stackIn_13_0 = stackIn_12_0;
+                  stackIn_13_1 = stackIn_12_1;
+                  stackIn_13_2 = stackIn_12_2;
+                  stackIn_13_3 = stackIn_12_3;
+                  stackIn_13_4 = (wk[]) ((Object) stackIn_12_4);
+                  stackIn_13_5 = nd.field_b;
                   break L4;
                 }
                 L6: {
@@ -2079,12 +1921,10 @@ class iu {
                   } else {
                     L8: {
                       if (-35 != (this.field_k ^ -1)) {
-                        stackOut_19_0 = 0;
-                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_0 = 0;
                         break L8;
                       } else {
-                        stackOut_18_0 = 1;
-                        stackIn_20_0 = stackOut_18_0;
+                        stackIn_20_0 = 1;
                         break L8;
                       }
                     }
@@ -2096,12 +1936,10 @@ class iu {
                         } else {
                           L11: {
                             if (var4 != 0) {
-                              stackOut_23_0 = vg.field_k;
-                              stackIn_24_0 = stackOut_23_0;
+                              stackIn_24_0 = vg.field_k;
                               break L11;
                             } else {
-                              stackOut_22_0 = pl.field_z;
-                              stackIn_24_0 = stackOut_22_0;
+                              stackIn_24_0 = pl.field_z;
                               break L11;
                             }
                           }
@@ -2115,12 +1953,10 @@ class iu {
                       }
                       L12: {
                         if (var4 == 0) {
-                          stackOut_27_0 = jk.field_a;
-                          stackIn_28_0 = stackOut_27_0;
+                          stackIn_28_0 = jk.field_a;
                           break L12;
                         } else {
-                          stackOut_26_0 = kj.field_t;
-                          stackIn_28_0 = stackOut_26_0;
+                          stackIn_28_0 = kj.field_t;
                           break L12;
                         }
                       }
@@ -2176,7 +2012,7 @@ class iu {
           L15: {
             if (this.field_e != null) {
               qn.f(var2 - this.field_g, -this.field_j + var3, var2 - 10, var3 - 45);
-              discarded$1 = rs.field_n.a(this.field_e, -this.field_g + var2, -this.field_j + var3, 220, 400, 16777215, -1, 0, 0, 0);
+              rs.field_n.a(this.field_e, -this.field_g + var2, -this.field_j + var3, 220, 400, 16777215, -1, 0, 0, 0);
               break L15;
             } else {
               break L15;
@@ -2226,30 +2062,14 @@ class iu {
     }
 
     final void a(boolean param0) {
-        int var3 = 0;
-        Object stackIn_11_0 = null;
+        int var3;
         Object stackIn_12_0 = null;
         Object stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
-        Object stackIn_16_0 = null;
         Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         int stackIn_18_1 = 0;
-        Object stackOut_10_0 = null;
-        Object stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        Object stackOut_13_0 = null;
-        Object stackOut_15_0 = null;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
         L0: {
           var3 = ArmiesOfGielinor.field_M ? 1 : 0;
           if (!param0) {
@@ -2293,50 +2113,37 @@ class iu {
                 }
               }
               L5: {
-                stackOut_10_0 = this;
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_12_0 = this;
+
                 if (this.field_c) {
-                  stackOut_12_0 = this;
-                  stackOut_12_1 = 0;
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
+                  stackIn_13_0 = this;
+                  stackIn_13_1 = 0;
                   break L5;
                 } else {
-                  stackOut_11_0 = this;
-                  stackOut_11_1 = 1;
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
+                  stackIn_13_0 = this;
+                  stackIn_13_1 = 1;
                   break L5;
                 }
               }
               L6: {
                 ((iu) (this)).field_c = stackIn_13_1 != 0;
-                stackOut_13_0 = this;
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_14_0 = stackOut_13_0;
+                stackIn_15_0 = this;
+
                 if (!this.field_c) {
-                  stackOut_15_0 = this;
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_17_0 = this;
+
                   if ((this.field_k ^ -1) != -35) {
-                    stackOut_17_0 = this;
-                    stackOut_17_1 = 240;
-                    stackIn_18_0 = stackOut_17_0;
-                    stackIn_18_1 = stackOut_17_1;
+                    stackIn_18_0 = this;
+                    stackIn_18_1 = 240;
                     break L6;
                   } else {
-                    stackOut_16_0 = this;
-                    stackOut_16_1 = 100;
-                    stackIn_18_0 = stackOut_16_0;
-                    stackIn_18_1 = stackOut_16_1;
+                    stackIn_18_0 = this;
+                    stackIn_18_1 = 100;
                     break L6;
                   }
                 } else {
-                  stackOut_14_0 = this;
-                  stackOut_14_1 = 240;
-                  stackIn_18_0 = stackOut_14_0;
-                  stackIn_18_1 = stackOut_14_1;
+                  stackIn_18_0 = this;
+                  stackIn_18_1 = 240;
                   break L6;
                 }
               }
@@ -2366,8 +2173,8 @@ class iu {
     }
 
     private final int a(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         if (param1 <= -108) {
           var3 = this.field_q.field_xb.field_Eb[param0].field_h;
           var4 = var3;
@@ -2404,11 +2211,28 @@ class iu {
     }
 
     final static int a(int param0, String param1, int param2, ka param3, String[] param4) {
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        RuntimeException var5 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_21_1 = 0;
+        int stackIn_25_0 = 0;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
+        StringBuilder stackIn_31_1 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
+        StringBuilder stackIn_34_1 = null;
+        StringBuilder stackIn_35_1 = null;
+        String stackIn_35_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -2417,65 +2241,6 @@ class iu {
         String var11 = null;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_10_1 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_21_1 = 0;
-        int stackIn_25_0 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        String stackIn_32_2 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_20_1 = 0;
-        int stackOut_24_0 = 0;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
         var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -2488,8 +2253,7 @@ class iu {
                   break L1;
                 } else {
                   param4[0] = param1;
-                  stackOut_3_0 = 1;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -2516,18 +2280,16 @@ class iu {
                     break L5;
                   } else {
                     var10 = param1.charAt(var9);
-                    stackOut_9_0 = var10;
-                    stackOut_9_1 = 32;
-                    stackIn_21_0 = stackOut_9_0;
-                    stackIn_21_1 = stackOut_9_1;
-                    stackIn_10_0 = stackOut_9_0;
-                    stackIn_10_1 = stackOut_9_1;
+                    stackIn_21_0 = var10;
+
+                    stackIn_21_1 = 32;
+
                     if (var13 != 0) {
                       break L4;
                     } else {
                       L6: {
                         L7: {
-                          if (stackIn_10_0 == stackIn_10_1) {
+                          if (stackIn_21_0 == stackIn_21_1) {
                             break L7;
                           } else {
                             if (45 == var10) {
@@ -2542,9 +2304,9 @@ class iu {
                         if (var12 < param0) {
                           break L6;
                         } else {
-                          incrementValue$3 = var6;
+                          incrementValue$0 = var6;
                           var6++;
-                          param4[incrementValue$3] = var11;
+                          param4[incrementValue$0] = var11;
                           var7 = 1 + var9;
                           break L6;
                         }
@@ -2554,9 +2316,9 @@ class iu {
                           break L8;
                         } else {
                           if (param1.regionMatches(-3 + var9, "<br>", 0, 4)) {
-                            incrementValue$4 = var6;
+                            incrementValue$1 = var6;
                             var6++;
-                            param4[incrementValue$4] = param1.substring(var7, -3 + var9).trim();
+                            param4[incrementValue$1] = param1.substring(var7, -3 + var9).trim();
                             var7 = var9 + 1;
                             break L8;
                           } else {
@@ -2573,24 +2335,21 @@ class iu {
                     }
                   }
                 }
-                stackOut_20_0 = var8;
-                stackOut_20_1 = var7;
-                stackIn_21_0 = stackOut_20_0;
-                stackIn_21_1 = stackOut_20_1;
+                stackIn_21_0 = var8;
+                stackIn_21_1 = var7;
                 break L4;
               }
               L9: {
                 if (stackIn_21_0 > stackIn_21_1) {
-                  incrementValue$5 = var6;
+                  incrementValue$2 = var6;
                   var6++;
-                  param4[incrementValue$5] = param1.substring(var7, var8).trim();
+                  param4[incrementValue$2] = param1.substring(var7, var8).trim();
                   break L9;
                 } else {
                   break L9;
                 }
               }
-              stackOut_24_0 = var6;
-              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_0 = var6;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -2599,81 +2358,57 @@ class iu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var5 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var5);
-            stackOut_26_1 = new StringBuilder().append("iu.MA(").append(param0).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_28_0 = (RuntimeException) (var5);
+
+            stackIn_28_1 = new StringBuilder().append("iu.MA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L10;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L10;
             }
           }
           L11: {
-            stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',').append(param2).append(',');
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+
+
+            stackIn_31_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L11;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L11;
             }
           }
           L12: {
-            stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',');
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+
+
+            stackIn_34_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',');
+
             if (param4 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L12;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L12;
             }
           }
-          throw ig.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_29_0), stackIn_35_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0;

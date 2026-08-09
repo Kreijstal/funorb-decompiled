@@ -25,7 +25,7 @@ final class wt extends k {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var8 = 0;
+        int var8;
         L0: {
           var8 = BachelorFridge.field_y;
           if (param1 == 1) {
@@ -72,76 +72,38 @@ final class wt extends k {
     }
 
     private final void a(int param0, int param1, byte param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
-        Object stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
         Object stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         Object stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_21_2 = 0;
-        Object stackIn_26_0 = null;
         Object stackIn_27_0 = null;
         Object stackIn_28_0 = null;
         int stackIn_28_1 = 0;
-        Object stackIn_31_0 = null;
         Object stackIn_32_0 = null;
         Object stackIn_33_0 = null;
         int stackIn_33_1 = 0;
-        Object stackIn_35_0 = null;
         Object stackIn_36_0 = null;
         Object stackIn_37_0 = null;
         int stackIn_37_1 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        Object stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        Object stackOut_20_0 = null;
-        int stackOut_20_1 = 0;
-        int stackOut_20_2 = 0;
-        Object stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_19_2 = 0;
-        Object stackOut_34_0 = null;
-        Object stackOut_36_0 = null;
-        int stackOut_36_1 = 0;
-        Object stackOut_35_0 = null;
-        int stackOut_35_1 = 0;
-        Object stackOut_30_0 = null;
-        Object stackOut_32_0 = null;
-        int stackOut_32_1 = 0;
-        Object stackOut_31_0 = null;
-        int stackOut_31_1 = 0;
-        Object stackOut_25_0 = null;
-        Object stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        Object stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         L0: {
           var11 = BachelorFridge.field_y;
           if (param3 > param1) {
-            stackOut_2_0 = param3;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = param3;
             break L0;
           } else {
-            stackOut_1_0 = param1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = param1;
             break L0;
           }
         }
@@ -149,36 +111,30 @@ final class wt extends k {
         if (param2 >= 34) {
           L1: {
             if (var5 < param0) {
-              stackOut_7_0 = param0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = param0;
               break L1;
             } else {
-              stackOut_6_0 = var5;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = var5;
               break L1;
             }
           }
           L2: {
             var5 = stackIn_8_0;
             if (param1 > param3) {
-              stackOut_10_0 = param3;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = param3;
               break L2;
             } else {
-              stackOut_9_0 = param1;
-              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_0 = param1;
               break L2;
             }
           }
           L3: {
             var6 = stackIn_11_0;
             if (var6 <= param0) {
-              stackOut_13_0 = var6;
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_0 = var6;
               break L3;
             } else {
-              stackOut_12_0 = param0;
-              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_0 = param0;
               break L3;
             }
           }
@@ -192,27 +148,19 @@ final class wt extends k {
               } else {
                 if (this.field_s < 4096) {
                   L6: {
-                    stackOut_18_0 = this;
-                    stackOut_18_1 = var7 << 947193004;
-                    stackIn_20_0 = stackOut_18_0;
-                    stackIn_20_1 = stackOut_18_1;
-                    stackIn_19_0 = stackOut_18_0;
-                    stackIn_19_1 = stackOut_18_1;
+                    stackIn_20_0 = this;
+
+                    stackIn_20_1 = var7 << 947193004;
+
                     if (this.field_s > 2048) {
-                      stackOut_20_0 = this;
-                      stackOut_20_1 = stackIn_20_1;
-                      stackOut_20_2 = 8192 - 2 * this.field_s;
-                      stackIn_21_0 = stackOut_20_0;
-                      stackIn_21_1 = stackOut_20_1;
-                      stackIn_21_2 = stackOut_20_2;
+                      stackIn_21_0 = this;
+                      stackIn_21_1 = stackIn_20_1;
+                      stackIn_21_2 = 8192 - 2 * this.field_s;
                       break L6;
                     } else {
-                      stackOut_19_0 = this;
-                      stackOut_19_1 = stackIn_19_1;
-                      stackOut_19_2 = 2 * this.field_s;
-                      stackIn_21_0 = stackOut_19_0;
-                      stackIn_21_1 = stackOut_19_1;
-                      stackIn_21_2 = stackOut_19_2;
+                      stackIn_21_0 = this;
+                      stackIn_21_1 = stackIn_20_1;
+                      stackIn_21_2 = 2 * this.field_s;
                       break L6;
                     }
                   }
@@ -235,20 +183,15 @@ final class wt extends k {
                 if (var5 != param3) {
                   if (param1 != var5) {
                     L9: {
-                      stackOut_34_0 = this;
-                      stackIn_36_0 = stackOut_34_0;
-                      stackIn_35_0 = stackOut_34_0;
+                      stackIn_36_0 = this;
+
                       if (var6 != param3) {
-                        stackOut_36_0 = this;
-                        stackOut_36_1 = -var8 + 20480;
-                        stackIn_37_0 = stackOut_36_0;
-                        stackIn_37_1 = stackOut_36_1;
+                        stackIn_37_0 = this;
+                        stackIn_37_1 = -var8 + 20480;
                         break L9;
                       } else {
-                        stackOut_35_0 = this;
-                        stackOut_35_1 = var9 + 12288;
-                        stackIn_37_0 = stackOut_35_0;
-                        stackIn_37_1 = stackOut_35_1;
+                        stackIn_37_0 = this;
+                        stackIn_37_1 = var9 + 12288;
                         break L9;
                       }
                     }
@@ -256,20 +199,15 @@ final class wt extends k {
                     break L8;
                   } else {
                     L10: {
-                      stackOut_30_0 = this;
-                      stackIn_32_0 = stackOut_30_0;
-                      stackIn_31_0 = stackOut_30_0;
+                      stackIn_32_0 = this;
+
                       if (var6 == param0) {
-                        stackOut_32_0 = this;
-                        stackOut_32_1 = var8 + 4096;
-                        stackIn_33_0 = stackOut_32_0;
-                        stackIn_33_1 = stackOut_32_1;
+                        stackIn_33_0 = this;
+                        stackIn_33_1 = var8 + 4096;
                         break L10;
                       } else {
-                        stackOut_31_0 = this;
-                        stackOut_31_1 = -var10 + 12288;
-                        stackIn_33_0 = stackOut_31_0;
-                        stackIn_33_1 = stackOut_31_1;
+                        stackIn_33_0 = this;
+                        stackIn_33_1 = -var10 + 12288;
                         break L10;
                       }
                     }
@@ -278,20 +216,15 @@ final class wt extends k {
                   }
                 } else {
                   L11: {
-                    stackOut_25_0 = this;
-                    stackIn_27_0 = stackOut_25_0;
-                    stackIn_26_0 = stackOut_25_0;
+                    stackIn_27_0 = this;
+
                     if (var6 == param1) {
-                      stackOut_27_0 = this;
-                      stackOut_27_1 = var10 + 20480;
-                      stackIn_28_0 = stackOut_27_0;
-                      stackIn_28_1 = stackOut_27_1;
+                      stackIn_28_0 = this;
+                      stackIn_28_1 = var10 + 20480;
                       break L11;
                     } else {
-                      stackOut_26_0 = this;
-                      stackOut_26_1 = -var9 + 4096;
-                      stackIn_28_0 = stackOut_26_0;
-                      stackIn_28_1 = stackOut_26_1;
+                      stackIn_28_0 = this;
+                      stackIn_28_1 = -var9 + 4096;
                       break L11;
                     }
                   }
@@ -324,24 +257,14 @@ final class wt extends k {
 
     final void a(byte param0, lu param1, int param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var4 = null;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
@@ -378,27 +301,19 @@ final class wt extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var4);
-            stackOut_12_1 = new StringBuilder().append("wt.E(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var4);
+
+            stackIn_14_1 = new StringBuilder().append("wt.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }
@@ -407,28 +322,24 @@ final class wt extends k {
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         L0: {
           var14 = BachelorFridge.field_y;
           if (-2049 > (param1 ^ -1)) {
-            stackOut_2_0 = -(param3 * param1 >> 1922136044) + (param3 + param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = -(param3 * param1 >> 1922136044) + (param3 + param1);
             break L0;
           } else {
-            stackOut_1_0 = (4096 + param3) * param1 >> 313689132;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = (4096 + param3) * param1 >> 313689132;
             break L0;
           }
         }
@@ -517,19 +428,19 @@ final class wt extends k {
     }
 
     final int[][] a(boolean param0, int param1) {
-        int[][] var3 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int[][] var13 = null;
-        int[][] var15 = null;
-        int[][] var20 = null;
-        int[][] var28 = null;
-        int[] var29 = null;
-        int[] var30 = null;
-        int[] var31 = null;
+        int[][] var3;
+        int[] var8;
+        int[] var9;
+        int[] var10;
+        int var11;
+        int var12;
+        int[][] var13;
+        int[][] var15;
+        int[][] var20;
+        int[][] var28;
+        int[] var29;
+        int[] var30;
+        int[] var31;
         L0: {
           var12 = BachelorFridge.field_y;
           if (!param0) {

@@ -75,9 +75,9 @@ final class j extends qg {
     }
 
     final qf d(byte param0) {
-        qd var2 = null;
-        qf var3 = null;
-        int var4 = 0;
+        qd var2;
+        qf var3;
+        int var4;
         L0: {
           var4 = Main.field_T;
           if (param0 >= 7) {
@@ -105,7 +105,6 @@ final class j extends qg {
 
     final void b(lk param0, byte param1) {
         qf var3 = null;
-        boolean discarded$0 = false;
         try {
             if (!(param0 instanceof qf)) {
                 throw new IllegalArgumentException();
@@ -114,7 +113,7 @@ final class j extends qg {
             var3 = (qf) ((Object) param0);
             this.field_D.a(-121, var3);
             var3.field_E = true;
-            discarded$0 = var3.a(115, (lk) (this));
+            var3.a(115, (lk) (this));
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) ((Object) runtimeException), "j.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

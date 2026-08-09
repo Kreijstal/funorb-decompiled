@@ -58,23 +58,16 @@ final class ve extends ci {
     }
 
     final static boolean k(int param0) {
-        boolean discarded$9 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 > -50) {
           L0: {
-            discarded$9 = ve.k(-78);
+            ve.k(-78);
             if (null == me.field_a) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -82,12 +75,10 @@ final class ve extends ci {
         } else {
           L1: {
             if (null == me.field_a) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -100,8 +91,6 @@ final class ve extends ci {
     }
 
     final static int f(byte param0) {
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -112,30 +101,23 @@ final class ve extends ci {
         int stackIn_23_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_9_0 = 0;
         var2 = Chess.field_G;
         try {
           L0: {
-            discarded$12 = jh.field_e.a(-120, hd.field_d, vj.field_h, true);
+            jh.field_e.a(-120, hd.field_d, vj.field_h, true);
             jh.field_e.f((byte) 70);
             L1: while (true) {
               if (!kf.d(param0 ^ -19010)) {
                 if (rn.field_a != -1) {
                   var1_int = rn.field_a;
                   uk.a(false, -1);
-                  stackOut_6_0 = var1_int;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = var1_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
                   if (!cf.field_Nb) {
                     if (vl.field_A == ci.field_ub) {
-                      stackOut_13_0 = 1;
-                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_14_0 = 1;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -149,29 +131,26 @@ final class ve extends ci {
                           }
                         }
                         if (g.field_a == ci.field_ub) {
-                          stackOut_22_0 = 2;
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_23_0 = 2;
                           decompiledRegionSelector0 = 4;
                           break L0;
                         } else {
                           return -1;
                         }
                       } else {
-                        stackOut_16_0 = 1;
-                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_0 = 1;
                         decompiledRegionSelector0 = 3;
                         break L0;
                       }
                     }
                   } else {
-                    stackOut_9_0 = 3;
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = 3;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 }
               } else {
-                discarded$13 = jh.field_e.a(d.field_Ib, 57, vg.field_a);
+                jh.field_e.a(d.field_Ib, 57, vg.field_a);
                 continue L1;
               }
             }

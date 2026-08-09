@@ -22,89 +22,67 @@ final class dt implements Runnable {
     private InputStream field_d;
 
     final int a(int param0) throws IOException {
-        if (param0 < -84) {
-          if (this.field_l) {
-            return 0;
-          } else {
-            return this.field_d.read();
-          }
-        } else {
-          this.field_e = (byte[]) null;
-          if (this.field_l) {
-            return 0;
-          } else {
-            return this.field_d.read();
-          }
+        if (param0 >= -84) {
+            this.field_e = (byte[]) null;
         }
+        if (this.field_l) {
+            return 0;
+        }
+        return this.field_d.read();
     }
 
     public final void run() {
         try {
-            IOException var1 = null;
-            Exception var1_ref = null;
-            int var1_int = 0;
-            int var2 = 0;
-            IOException var3 = null;
-            Object var3_ref = null;
-            InterruptedException var4 = null;
-            Throwable var5 = null;
-            int var6 = 0;
-            String var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
+            int var1_int = 0;
+            IOException var1 = null;
+            Exception var1_ref = null;
+            int var2 = 0;
+            Object var3 = null;
+            IOException var3_ref = null;
+            InterruptedException var4 = null;
+            int var6 = 0;
+            String var7 = null;
             var6 = Sumoblitz.field_L ? 1 : 0;
             try {
               L0: {
                 L1: while (true) {
-                  var3_ref = this;
-                  synchronized (var3_ref) {
+                  var3 = this;
+                  synchronized (var3) {
                     L2: {
                       L3: {
                         if (this.field_a == this.field_c) {
-                          L4: {
-                            if (!this.field_l) {
-                              break L4;
-                            } else {
-                              if (var6 == 0) {
-                                decompiledRegionSelector0 = 0;
-                                break L2;
-                              } else {
+                          if (!this.field_l) {
+                            try {
+                              L4: {
+                                this.wait();
                                 break L4;
                               }
+                            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                              decompiledCaughtException = decompiledCaughtParameter0;
+                              L5: {
+                                var4 = (InterruptedException) (Object) decompiledCaughtException;
+                                break L5;
+                              }
                             }
+                            break L3;
+                          } else {
+                            decompiledRegionSelector0 = 0;
+                            break L2;
                           }
-                          try {
-                            L5: {
-                              this.wait();
-                              break L5;
-                            }
-                          } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                            decompiledCaughtException = decompiledCaughtParameter0;
-                            L6: {
-                              var4 = (InterruptedException) (Object) decompiledCaughtException;
-                              break L6;
-                            }
-                          }
-                          break L3;
                         } else {
                           break L3;
                         }
                       }
-                      L7: {
-                        L8: {
-                          if (this.field_c > this.field_a) {
-                            break L8;
-                          } else {
-                            var1_int = -this.field_c + this.field_a;
-                            if (var6 == 0) {
-                              break L7;
-                            } else {
-                              break L8;
-                            }
-                          }
+                      L6: {
+                        if (this.field_c > this.field_a) {
+                          var1_int = -this.field_c + this.field_j;
+                          break L6;
+                        } else {
+                          var1_int = -this.field_c + this.field_a;
+                          break L6;
                         }
-                        var1_int = -this.field_c + this.field_j;
-                        break L7;
                       }
                       var2 = this.field_c;
                       decompiledRegionSelector0 = 1;
@@ -113,38 +91,38 @@ final class dt implements Runnable {
                   }
                   if (decompiledRegionSelector0 == 0) {
                     try {
-                      L9: {
-                        L10: {
+                      L7: {
+                        L8: {
                           if (null != this.field_d) {
                             this.field_d.close();
-                            break L10;
+                            break L8;
                           } else {
-                            break L10;
+                            break L8;
                           }
                         }
-                        L11: {
+                        L9: {
                           if (null != this.field_k) {
                             this.field_k.close();
-                            break L11;
+                            break L9;
                           } else {
-                            break L11;
+                            break L9;
                           }
                         }
-                        L12: {
+                        L10: {
                           if (this.field_m == null) {
-                            break L12;
+                            break L10;
                           } else {
                             this.field_m.close();
-                            break L12;
+                            break L10;
                           }
                         }
-                        break L9;
+                        break L7;
                       }
                     } catch (java.io.IOException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
-                      L13: {
+                      L11: {
                         var1 = (IOException) (Object) decompiledCaughtException;
-                        break L13;
+                        break L11;
                       }
                     }
                     this.field_e = null;
@@ -152,37 +130,37 @@ final class dt implements Runnable {
                   } else {
                     if (0 < var1_int) {
                       try {
-                        L14: {
+                        L12: {
                           this.field_k.write(this.field_e, var2, var1_int);
-                          break L14;
+                          break L12;
                         }
                       } catch (java.io.IOException decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
-                        L15: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                        L13: {
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_b = true;
-                          break L15;
+                          break L13;
                         }
                       }
                       this.field_c = (this.field_c - -var1_int) % this.field_j;
                       try {
-                        L16: {
-                          L17: {
+                        L14: {
+                          L15: {
                             if (this.field_a == this.field_c) {
                               this.field_k.flush();
-                              break L17;
+                              break L15;
                             } else {
-                              break L17;
+                              break L15;
                             }
                           }
-                          break L16;
+                          break L14;
                         }
                       } catch (java.io.IOException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
-                        L18: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                        L16: {
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           this.field_b = true;
-                          break L18;
+                          break L16;
                         }
                       }
                       continue L1;
@@ -194,11 +172,11 @@ final class dt implements Runnable {
               }
             } catch (java.lang.Exception decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
-              L19: {
+              L17: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
                 var7 = (String) null;
                 ms.a((String) null, (Throwable) ((Object) var1_ref), 0);
-                break L19;
+                break L17;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -225,76 +203,30 @@ final class dt implements Runnable {
 
     final void a(byte param0) {
         try {
-            InterruptedException var2 = null;
-            Object var2_ref = null;
-            Throwable var3 = null;
             int var4 = 0;
-            Throwable decompiledCaughtException = null;
             var4 = Sumoblitz.field_L ? 1 : 0;
-            if (this.field_l) {
-              return;
-            } else {
-              L0: {
-                if (param0 < -36) {
-                  break L0;
-                } else {
-                  this.field_g = (wi) null;
-                  break L0;
-                }
-              }
-              var2_ref = this;
-              synchronized (var2_ref) {
-                L1: {
-                  this.field_l = true;
-                  this.notifyAll();
-                  break L1;
-                }
-              }
-              if (this.field_o == null) {
-                this.field_o = null;
+            if (!(!this.field_l)) {
                 return;
-              } else {
-                L2: while (true) {
-                  L3: {
-                    L4: {
-                      if (this.field_o.field_c != 0) {
-                        break L4;
-                      } else {
-                        tg.a(1L, (byte) 113);
-                        if (var4 != 0) {
-                          break L3;
-                        } else {
-                          if (var4 == 0) {
-                            continue L2;
-                          } else {
-                            break L4;
-                          }
-                        }
-                      }
-                    }
-                    if (-2 == (this.field_o.field_c ^ -1)) {
-                      try {
-                        L5: {
-                          ((Thread) (this.field_o.field_d)).join();
-                          break L5;
-                        }
-                      } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                        decompiledCaughtException = decompiledCaughtParameter0;
-                        var2 = (InterruptedException) (Object) decompiledCaughtException;
-                        this.field_o = null;
-                        return;
-                      }
-                      break L3;
-                    } else {
-                      this.field_o = null;
-                      return;
-                    }
-                  }
-                  this.field_o = null;
-                  return;
-                }
-              }
             }
+            if (param0 >= -36) {
+                this.field_g = (wi) null;
+            }
+            synchronized (this) {
+                this.field_l = true;
+                this.notifyAll();
+            }
+            if (this.field_o != null) {
+                while (this.field_o.field_c == 0) {
+                    tg.a(1L, (byte) 113);
+                }
+                if (!(-2 != (this.field_o.field_c ^ -1))) {
+                    try {
+                        ((Thread) (this.field_o.field_d)).join();
+                    } catch (InterruptedException interruptedException) {
+                    }
+                }
+            }
+            this.field_o = null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -313,31 +245,17 @@ final class dt implements Runnable {
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
-        RuntimeException var5 = null;
-        Object var5_ref = null;
-        int var6 = 0;
-        Throwable var7 = null;
-        int var8 = 0;
-        Object stackIn_14_0 = null;
-        Object stackIn_18_0 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
+        String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_17_0 = null;
-        Object stackOut_13_0 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        Object var5 = null;
+        RuntimeException var5_ref = null;
+        int var6 = 0;
+        int var8 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
@@ -354,8 +272,8 @@ final class dt implements Runnable {
                     break L1;
                   }
                 }
-                var5_ref = this;
-                synchronized (var5_ref) {
+                var5 = this;
+                synchronized (var5) {
                   L2: {
                     L3: {
                       if (param1 == -2) {
@@ -367,77 +285,64 @@ final class dt implements Runnable {
                     }
                     var6 = 0;
                     L4: while (true) {
-                      L5: {
-                        if (var6 >= param3) {
-                          stackOut_17_0 = this;
-                          stackIn_18_0 = stackOut_17_0;
-                          break L5;
-                        } else {
-                          this.field_e[this.field_a] = param2[var6 + param0];
-                          this.field_a = (this.field_a + 1) % this.field_j;
-                          stackOut_13_0 = this;
-                          stackIn_18_0 = stackOut_13_0;
-                          stackIn_14_0 = stackOut_13_0;
-                          if (var8 != 0) {
+                      if (var6 >= param3) {
+                        L5: {
+                          if (this.field_o != null) {
                             break L5;
                           } else {
-                            if (((dt) (this)).field_a != (-100 + this.field_c + this.field_j) % this.field_j) {
-                              var6++;
-                              continue L4;
-                            } else {
-                              throw new IOException();
-                            }
+                            this.field_o = this.field_g.a(true, (Runnable) (this), 3);
+                            break L5;
                           }
                         }
-                      }
-                      L6: {
-                        if (((dt) (this)).field_o != null) {
-                          break L6;
+                        this.notifyAll();
+                        break L2;
+                      } else {
+                        this.field_e[this.field_a] = param2[var6 + param0];
+                        this.field_a = (this.field_a + 1) % this.field_j;
+                        if (this.field_a != (-100 + this.field_c + this.field_j) % this.field_j) {
+                          var6++;
+                          continue L4;
                         } else {
-                          this.field_o = this.field_g.a(true, (Runnable) (this), 3);
-                          break L6;
+                          throw new IOException();
                         }
                       }
-                      this.notifyAll();
-                      break L2;
                     }
                   }
                 }
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
+              decompiledRegionSelector0 = 0;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var5 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var5);
-            stackOut_25_1 = new StringBuilder().append("dt.G(").append(param0).append(',').append(param1).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+          L6: {
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_25_0 = (RuntimeException) (var5_ref);
+
+            stackIn_25_1 = new StringBuilder().append("dt.G(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
-              break L7;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
+              break L6;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
-              break L7;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
+              break L6;
             }
           }
-          throw qo.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param3 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -465,47 +370,25 @@ final class dt implements Runnable {
 
     public static void d(int param0) {
         if (param0 <= 19) {
-          dt.d(-53);
-          field_i = null;
-          field_h = null;
-          field_p = null;
-          field_n = null;
-          return;
-        } else {
-          field_i = null;
-          field_h = null;
-          field_p = null;
-          field_n = null;
-          return;
+            dt.d(-53);
         }
+        field_i = null;
+        field_h = null;
+        field_p = null;
+        field_n = null;
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
-        RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_20_2 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        RuntimeException var5 = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
@@ -513,84 +396,52 @@ final class dt implements Runnable {
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
-              stackOut_4_0 = 0;
-              stackIn_6_0 = stackOut_4_0;
               L1: while (true) {
-                L2: {
-                  L3: {
-                    L4: {
-                      if (stackIn_6_0 >= param2) {
-                        break L4;
-                      } else {
-                        var5_int = this.field_d.read(param3, param1, param2);
-                        var8 = var5_int;
-                        var7 = 0;
-                        if (var6 != 0) {
-                          if (var7 <= var8) {
-                            break L2;
-                          } else {
-                            break L3;
-                          }
-                        } else {
-                          if (var7 < var8) {
-                            param1 = param1 + var5_int;
-                            param2 = param2 - var5_int;
-                            if (var6 == 0) {
-                              stackOut_5_0 = 0;
-                              stackIn_6_0 = stackOut_5_0;
-                              continue L1;
-                            } else {
-                              break L4;
-                            }
-                          } else {
-                            throw new EOFException();
-                          }
-                        }
-                      }
-                    }
+                if (0 >= param2) {
+                  L2: {
                     if (param0 <= -12) {
                       break L2;
                     } else {
-                      break L3;
+                      this.field_b = true;
+                      break L2;
                     }
                   }
-                  this.field_b = true;
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  var5_int = this.field_d.read(param3, param1, param2);
+                  if (0 < var5_int) {
+                    param1 = param1 + var5_int;
+                    param2 = param2 - var5_int;
+                    continue L1;
+                  } else {
+                    throw new EOFException();
+                  }
                 }
-                decompiledRegionSelector0 = 1;
-                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L3: {
             var5 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var5);
-            stackOut_17_1 = new StringBuilder().append("dt.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_15_0 = (RuntimeException) (var5);
+
+            stackIn_15_1 = new StringBuilder().append("dt.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
-              break L5;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L3;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
-              break L5;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L3;
             }
           }
-          throw qo.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

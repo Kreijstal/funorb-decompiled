@@ -8,16 +8,15 @@ final class jh extends sk {
     private em field_i;
 
     final void b(byte param0) {
-        int discarded$2 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        ec var3 = null;
+        jagdx.IDirect3DDevice var2;
+        ec var3;
         L0: {
           if (null == this.field_f) {
             break L0;
           } else {
             var2 = this.field_g.field_Rc;
             var3 = this.field_g.v((byte) 56);
-            discarded$2 = var2.a(0, var3.c(field_h, param0 ^ 74));
+            var2.a(0, var3.c(field_h, param0 ^ 74));
             break L0;
           }
         }
@@ -30,14 +29,13 @@ final class jh extends sk {
     }
 
     final void b(int param0) {
-        int discarded$2 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        ec var3 = null;
+        jagdx.IDirect3DDevice var2;
+        ec var3;
         L0: {
           if (null != this.field_f) {
             var2 = this.field_g.field_Rc;
             var3 = this.field_g.v((byte) -80);
-            discarded$2 = var2.a(0, var3.c(field_h, -72));
+            var2.a(0, var3.c(field_h, -72));
             break L0;
           } else {
             break L0;
@@ -52,22 +50,20 @@ final class jh extends sk {
     }
 
     final void a(int param0, int param1, int param2) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        jagdx.IDirect3DDevice var4 = null;
-        float var5_float = 0.0f;
-        int var5 = 0;
+        jagdx.IDirect3DDevice var4;
+        float var5_float;
+        int var5;
         L0: {
           var4 = this.field_g.field_Rc;
           if (!this.field_i.field_e) {
             var5 = 16 * (this.field_b.field_r % 4000) / 4000;
             this.field_b.a(this.field_i.field_i[var5], -9135);
-            discarded$4 = var4.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
+            var4.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
             break L0;
           } else {
             var5_float = (float)(this.field_b.field_r % 4000) / 4000.0f;
             this.field_b.a(this.field_i.field_f, -9135);
-            discarded$5 = var4.b(11, var5_float, 0.0f, 0.0f, 0.0f);
+            var4.b(11, var5_float, 0.0f, 0.0f, 0.0f);
             break L0;
           }
         }
@@ -80,10 +76,8 @@ final class jh extends sk {
     }
 
     final void d(int param0) {
-        float[] discarded$2 = null;
-        int discarded$3 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        ec var3 = null;
+        jagdx.IDirect3DDevice var2;
+        ec var3;
         if (param0 != 18580) {
           return;
         } else {
@@ -93,7 +87,7 @@ final class jh extends sk {
             } else {
               var2 = this.field_g.field_Rc;
               var3 = this.field_b.J(param0 + -18494);
-              discarded$2 = var3.a(false, field_h);
+              var3.a(false, field_h);
               field_h[7] = field_h[7] * 0.25f;
               field_h[3] = field_h[3] * 0.25f;
               field_h[1] = field_h[1] * 0.25f;
@@ -102,7 +96,7 @@ final class jh extends sk {
               field_h[4] = field_h[4] * 0.25f;
               field_h[6] = field_h[6] * 0.25f;
               field_h[5] = field_h[5] * 0.25f;
-              discarded$3 = var2.SetVertexShaderConstantF(8, field_h, 2);
+              var2.SetVertexShaderConstantF(8, field_h, 2);
               break L0;
             }
           }
@@ -134,12 +128,10 @@ final class jh extends sk {
     }
 
     final void a(int param0) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        jagdx.IDirect3DDevice var2 = null;
-        float var3 = 0.0f;
-        float var4 = 0.0f;
-        float var5 = 0.0f;
+        jagdx.IDirect3DDevice var2;
+        float var3;
+        float var4;
+        float var5;
         if (param0 != 10) {
           return;
         } else {
@@ -148,13 +140,13 @@ final class jh extends sk {
               L1: {
                 var2 = this.field_g.field_Rc;
                 if (0 >= this.field_b.field_p) {
-                  discarded$2 = var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
+                  var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
                   break L1;
                 } else {
                   var3 = this.field_b.field_y;
                   var4 = this.field_b.field_Xb;
                   var5 = var4 - 512.0f;
-                  discarded$3 = var2.b(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (-var4 + var3));
+                  var2.b(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (-var4 + var3));
                   break L1;
                 }
               }
@@ -203,12 +195,11 @@ final class jh extends sk {
     }
 
     final void c(int param0) {
-        int discarded$2 = 0;
-        jagdx.IDirect3DDevice var2 = null;
+        jagdx.IDirect3DDevice var2;
         L0: {
           if (this.field_f != null) {
             var2 = this.field_g.field_Rc;
-            discarded$2 = var2.a(4, this.field_b.a(12, field_h));
+            var2.a(4, this.field_b.a(12, field_h));
             break L0;
           } else {
             break L0;

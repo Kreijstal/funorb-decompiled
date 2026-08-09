@@ -3,7 +3,7 @@
  */
 final class ke extends pu {
     final static void b(int param0) {
-        RuntimeException var1 = null;
+        RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -287,8 +287,8 @@ final class ke extends pu {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "ke.A(" + param0 + ')');
+          runtimeException = decompiledCaughtException;
+          throw pe.a((Throwable) ((Object) runtimeException), "ke.A(" + param0 + ')');
         }
     }
 

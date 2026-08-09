@@ -38,15 +38,14 @@ final class rc {
     }
 
     final static dl[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        dl[] discarded$1 = null;
-        int var9 = 0;
-        dl[] var10 = null;
-        dl[] var11_ref_dl__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        dl var13 = null;
-        int var14 = 0;
-        int var15 = 0;
+        int var9;
+        dl[] var10;
+        dl[] var11_ref_dl__;
+        int var11;
+        int var12;
+        dl var13;
+        int var14;
+        int var15;
         var15 = CrazyCrystals.field_B;
         var9 = param8 + (param1 - -param4);
         var10 = new dl[]{new dl(var9, var9), new dl(param0, var9), new dl(var9, var9), new dl(var9, param0), new dl(64, 64), new dl(var9, param0), new dl(var9, var9), new dl(param0, var9), new dl(var9, var9)};
@@ -62,7 +61,7 @@ final class rc {
                   if (param7 == 2958) {
                     break L2;
                   } else {
-                    discarded$1 = rc.a(-44, -87, 63, -114, -113, -87, 75, -11, 77);
+                    rc.a(-44, -87, 63, -114, -113, -87, 75, -11, 77);
                     break L2;
                   }
                 }

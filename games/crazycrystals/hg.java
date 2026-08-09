@@ -7,7 +7,7 @@ final class hg extends bc {
     private java.awt.Component field_g;
 
     final void a(java.awt.Graphics param0, int param1, byte param2, int param3) {
-        boolean discarded$0 = param0.drawImage(this.field_b, param3, param1, (java.awt.image.ImageObserver) ((Object) this.field_g));
+        param0.drawImage(this.field_b, param3, param1, (java.awt.image.ImageObserver) ((Object) this.field_g));
         int var5 = -48 / ((param2 - 83) / 34);
     }
 

@@ -14,85 +14,20 @@ final class pp extends kq {
     static String field_S;
 
     private final void a(int param0, int param1, Object[] param2) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
-          L0: {
-            L1: {
-              this.field_T = param0;
-              if (param1 == 5526) {
-                break L1;
-              } else {
+            this.field_T = param0;
+            if (param1 != 5526) {
                 this.a(-25, -92, new Object[6]);
-                break L1;
-              }
             }
-            L2: {
-              this.field_W = param2;
-              this.field_O = -1;
-              if (param2 == null) {
-                break L2;
-              } else {
-                L3: {
-                  if ((this.field_T ^ -1) > 0) {
-                    break L3;
-                  } else {
-                    if (this.field_T < this.field_W.length) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
+            this.field_W = param2;
+            this.field_O = -1;
+            if (param2 != null) {
+                if ((this.field_T ^ -1) > 0 || this.field_T >= this.field_W.length) {
+                    throw new IllegalStateException();
                 }
-                throw new IllegalStateException();
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("pp.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L4;
-            } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L4;
-            }
-          }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) ((Object) runtimeException), "pp.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -121,20 +56,14 @@ final class pp extends kq {
     final int a(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != -126) {
           L0: {
             field_R = (int[]) null;
             if (null == this.field_W) {
-              stackOut_7_0 = 200;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 200;
               break L0;
             } else {
-              stackOut_6_0 = (1 + this.field_W.length * 2) * this.field_Z >> -78011903;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = (1 + this.field_W.length * 2) * this.field_Z >> -78011903;
               break L0;
             }
           }
@@ -142,12 +71,10 @@ final class pp extends kq {
         } else {
           L1: {
             if (null == this.field_W) {
-              stackOut_3_0 = 200;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 200;
               break L1;
             } else {
-              stackOut_2_0 = (1 + this.field_W.length * 2) * this.field_Z >> -78011903;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = (1 + this.field_W.length * 2) * this.field_Z >> -78011903;
               break L1;
             }
           }
@@ -157,7 +84,6 @@ final class pp extends kq {
 
     final Object j(int param0) {
         Object stackIn_5_0 = null;
-        Object stackOut_3_0 = null;
         if (param0 == -6508) {
           if (null != this.field_W) {
             if (this.field_T == -1) {
@@ -166,8 +92,7 @@ final class pp extends kq {
               return this.field_W[this.field_T];
             }
           } else {
-            stackOut_3_0 = null;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = null;
             return stackIn_5_0;
           }
         } else {
@@ -176,16 +101,15 @@ final class pp extends kq {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        boolean discarded$1 = false;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var11 = 0;
-        Object var14 = null;
-        String var15 = null;
-        Object var16 = null;
-        String var17 = null;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var11;
+        Object var14;
+        String var15;
+        Object var16;
+        String var17;
         var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param3 == 0) {
           var5 = param0 + this.field_B;
@@ -201,38 +125,34 @@ final class pp extends kq {
                 break L0;
               }
             }
-            if (null != this.field_W) {
+            if (null == this.field_W) {
+              return;
+            } else {
               var8 = 0;
               L1: while (true) {
-                if (this.field_W.length > var8) {
-                  var16 = this.field_W[var8];
-                  var17 = var16.toString();
-                  if (var11 == 0) {
-                    L2: {
-                      if (var7 != var8) {
-                        break L2;
-                      } else {
-                        qn.b(var5 + 2, 4 + var6, this.field_l + -4, this.field_Z, 2188450, 128);
-                        break L2;
-                      }
-                    }
-                    var6 = var6 + this.field_Z;
-                    this.field_U.b(var17, var5 + 2, var6, 10000536, -1);
-                    var8++;
-                    continue L1;
-                  } else {
-                    return;
-                  }
-                } else {
+                if (this.field_W.length <= var8) {
                   return;
+                } else {
+                  L2: {
+                    var16 = this.field_W[var8];
+                    var17 = var16.toString();
+                    if (var7 != var8) {
+                      break L2;
+                    } else {
+                      qn.b(var5 + 2, 4 + var6, this.field_l + -4, this.field_Z, 2188450, 128);
+                      break L2;
+                    }
+                  }
+                  var6 = var6 + this.field_Z;
+                  this.field_U.b(var17, var5 + 2, var6, 10000536, -1);
+                  var8++;
+                  continue L1;
                 }
               }
-            } else {
-              return;
             }
           } else {
             L3: {
-              discarded$1 = this.b(((int[]) (this.field_W[13]))[3], -51, -121, ((int[]) (this.field_W[9]))[0], -117);
+              this.b(((int[]) (this.field_W[13]))[3], -51, -121, ((int[]) (this.field_W[9]))[0], -117);
               var6 = this.field_p + param1;
               qn.f(var5, var6, this.field_l, this.field_w, 0);
               var7 = this.field_T;
@@ -247,24 +167,20 @@ final class pp extends kq {
               var8 = 0;
               L4: while (true) {
                 if (this.field_W.length > var8) {
-                  var14 = this.field_W[var8];
-                  var15 = var14.toString();
-                  if (var11 == 0) {
-                    L5: {
-                      if (var7 != var8) {
-                        break L5;
-                      } else {
-                        qn.b(var5 + 2, 4 + var6, this.field_l + -4, this.field_Z, 2188450, 128);
-                        break L5;
-                      }
+                  L5: {
+                    var14 = this.field_W[var8];
+                    var15 = var14.toString();
+                    if (var7 != var8) {
+                      break L5;
+                    } else {
+                      qn.b(var5 + 2, 4 + var6, this.field_l + -4, this.field_Z, 2188450, 128);
+                      break L5;
                     }
-                    var6 = var6 + this.field_Z;
-                    this.field_U.b(var15, var5 + 2, var6, 10000536, -1);
-                    var8++;
-                    continue L4;
-                  } else {
-                    return;
                   }
+                  var6 = var6 + this.field_Z;
+                  this.field_U.b(var15, var5 + 2, var6, 10000536, -1);
+                  var8++;
+                  continue L4;
                 } else {
                   return;
                 }
@@ -279,7 +195,6 @@ final class pp extends kq {
     }
 
     final boolean b(int param0, int param1, int param2, int param3, int param4) {
-        boolean discarded$1 = false;
         this.field_O = -1;
         if (!this.field_V.field_H) {
           return false;
@@ -315,7 +230,7 @@ final class pp extends kq {
                   return false;
                 }
               } else {
-                discarded$1 = this.b(((int[]) (this.field_W[22]))[2], ((int[]) (this.field_W[1]))[19], 73, ((int[]) (((Object[]) (this.field_W[0]))[3]))[0], ((int[]) (this.field_W[3]))[14]);
+                this.b(((int[]) (this.field_W[22]))[2], ((int[]) (this.field_W[1]))[19], 73, ((int[]) (((Object[]) (this.field_W[0]))[3]))[0], ((int[]) (this.field_W[3]))[14]);
                 param2 = param2 - (param4 - -this.field_p);
                 param3 = param3 - (param1 - -this.field_B);
                 if (0 <= param3) {
@@ -350,7 +265,7 @@ final class pp extends kq {
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
-        int var5 = 0;
+        int var5;
         super.a(param0, param1, param2, param3);
         param1 = param1 - this.field_B;
         param2 = param2 - this.field_p;

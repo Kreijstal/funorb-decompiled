@@ -23,27 +23,15 @@ final class ar implements eb {
     }
 
     public final int b(int[] param0, int param1) {
-        int discarded$2 = 0;
         RuntimeException var3 = null;
         int[] var4 = null;
         int stackIn_3_0 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -51,39 +39,30 @@ final class ar implements eb {
                 break L1;
               } else {
                 var4 = (int[]) null;
-                discarded$2 = this.b((int[]) null, 59);
+                this.b((int[]) null, 59);
                 break L1;
               }
             }
-            stackOut_2_0 = param0[9] * this.field_c + (this.field_e * param0[10] + this.field_a * param0[11]);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = param0[9] * this.field_c + (this.field_e * param0[10] + this.field_a * param0[11]);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("ar.C(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("ar.C(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -119,20 +98,20 @@ final class ar implements eb {
     }
 
     final static void a(byte param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int[] var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         try {
           L0: {
             L1: {
@@ -151,30 +130,30 @@ final class ar implements eb {
               if (var3 <= var2) {
                 break L0;
               } else {
-                incrementValue$40 = var2;
+                incrementValue$16 = var2;
                 var2++;
-                var1[incrementValue$40] = 0;
-                incrementValue$41 = var2;
+                var1[incrementValue$16] = 0;
+                incrementValue$17 = var2;
                 var2++;
-                var1[incrementValue$41] = 0;
-                incrementValue$42 = var2;
+                var1[incrementValue$17] = 0;
+                incrementValue$18 = var2;
                 var2++;
-                var1[incrementValue$42] = 0;
-                incrementValue$43 = var2;
+                var1[incrementValue$18] = 0;
+                incrementValue$19 = var2;
                 var2++;
-                var1[incrementValue$43] = 0;
-                incrementValue$44 = var2;
+                var1[incrementValue$19] = 0;
+                incrementValue$20 = var2;
                 var2++;
-                var1[incrementValue$44] = 0;
-                incrementValue$45 = var2;
+                var1[incrementValue$20] = 0;
+                incrementValue$21 = var2;
                 var2++;
-                var1[incrementValue$45] = 0;
-                incrementValue$46 = var2;
+                var1[incrementValue$21] = 0;
+                incrementValue$22 = var2;
                 var2++;
-                var1[incrementValue$46] = 0;
-                incrementValue$47 = var2;
+                var1[incrementValue$22] = 0;
+                incrementValue$23 = var2;
                 var2++;
-                var1[incrementValue$47] = 0;
+                var1[incrementValue$23] = 0;
                 continue L2;
               }
             }

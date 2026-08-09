@@ -11,8 +11,8 @@ final class mb {
     static hl field_a;
 
     final static void a(byte param0) {
-        int var3 = 0;
-        tj var4 = null;
+        int var3;
+        tj var4;
         L0: {
           var3 = EscapeVector.field_A;
           var4 = qa.f((byte) -49);
@@ -897,18 +897,14 @@ final class mb {
     }
 
     final static boolean b(byte param0) {
-        int var1 = 0;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int var1;
         L0: {
           if (aj.b(-96)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -1354,12 +1350,11 @@ final class mb {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_b = null;
         field_g = null;
         field_f = null;
         if (param0 != 4) {
-            discarded$0 = mb.b((byte) -110);
+            mb.b((byte) -110);
             field_a = null;
             return;
         }

@@ -10,7 +10,7 @@ final class oh {
     private tg[] field_b;
 
     public static void a(byte param0) {
-        String[] var2 = null;
+        String[] var2;
         if (param0 != -59) {
           var2 = (String[]) null;
           oh.a((byte) -47, (String[]) null);
@@ -33,22 +33,12 @@ final class oh {
 
     final static void a(byte param0, String[] param1) {
         RuntimeException var2 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
@@ -78,27 +68,19 @@ final class oh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2);
-            stackOut_8_1 = new StringBuilder().append("oh.E(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2);
+
+            stackIn_10_1 = new StringBuilder().append("oh.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -135,15 +117,15 @@ final class oh {
 
     final static void a(int param0) {
         try {
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
             int var2 = 0;
-            Throwable var3 = null;
-            Runtime var3_ref = null;
+            Runtime var3 = null;
+            Throwable var3_ref = null;
             Long var4 = null;
             Object[] var5 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
             try {
               L0: {
                 L1: {
@@ -154,9 +136,9 @@ final class oh {
                   } else {
                     try {
                       L2: {
-                        var3_ref = Runtime.getRuntime();
+                        var3 = Runtime.getRuntime();
                         var5 = (Object[]) null;
-                        var4 = (Long) (var1.invoke((Object) (var3_ref), (Object[]) null));
+                        var4 = (Long) (var1.invoke((Object) (var3), (Object[]) null));
                         ja.field_d = (int)(var4.longValue() / 1048576L) - -1;
                         decompiledRegionSelector0 = 0;
                         break L2;
@@ -164,7 +146,7 @@ final class oh {
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L3: {
-                        var3 = decompiledCaughtException;
+                        var3_ref = decompiledCaughtException;
                         decompiledRegionSelector0 = 1;
                         break L3;
                       }

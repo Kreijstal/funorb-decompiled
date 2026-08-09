@@ -23,7 +23,7 @@ abstract class sg {
     abstract int a(int param0, long param1);
 
     final int b(int param0, long param1) {
-        long var4 = 0L;
+        long var4;
         var4 = this.a(-32578);
         if (var4 > (long)param0) {
           wh.a(var4, 19406);

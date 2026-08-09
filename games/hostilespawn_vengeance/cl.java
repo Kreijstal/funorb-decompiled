@@ -15,6 +15,9 @@ final class cl extends am {
         field_h = null;
         field_i = null;
         field_o = null;
+        if (param0 > -100) {
+            return;
+        }
         field_j = null;
         field_k = null;
     }
@@ -24,10 +27,6 @@ final class cl extends am {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Waiting for graphics";
         field_k = "Now head back to the lift to finish the level.";
     }

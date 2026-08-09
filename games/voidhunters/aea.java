@@ -7,15 +7,13 @@ final class aea {
     private static String field_z;
 
     final static byte a(int param0, char param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
         int stackIn_3_0 = 0;
         int stackIn_67_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_66_0 = 0;
-        int stackOut_2_0 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
         var3 = VoidHunters.field_G;
         try {
           L0: {
@@ -185,13 +183,11 @@ final class aea {
                 var2_int = (byte)param1;
                 break L1;
               }
-              stackOut_66_0 = var2_int;
-              stackIn_67_0 = stackOut_66_0;
+              stackIn_67_0 = var2_int;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = 32;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 32;
               decompiledRegionSelector0 = 0;
               break L0;
             }

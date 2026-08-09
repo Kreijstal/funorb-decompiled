@@ -6,7 +6,7 @@ final class bg {
     private java.awt.GraphicsDevice field_b;
 
     private final void a(java.awt.Frame param0, int param1) {
-        java.awt.Frame var4 = null;
+        java.awt.Frame var4;
         this.field_b.setFullScreenWindow((java.awt.Window) ((Object) param0));
         L0: {
           if (param1 == 0) {
@@ -34,11 +34,11 @@ final class bg {
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        java.awt.DisplayMode[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int var6;
+        java.awt.DisplayMode[] var7;
+        int var8;
+        int var9;
+        int var10;
         this.field_a = this.field_b.getDisplayMode();
         if (null != this.field_a) {
           L0: {
@@ -105,11 +105,11 @@ final class bg {
     }
 
     public bg() throws Exception {
-        java.awt.GraphicsEnvironment var1 = null;
-        java.awt.GraphicsDevice[] var2 = null;
-        java.awt.GraphicsDevice[] var3 = null;
-        int var4 = 0;
-        java.awt.GraphicsDevice var5 = null;
+        java.awt.GraphicsEnvironment var1;
+        java.awt.GraphicsDevice[] var2;
+        java.awt.GraphicsDevice[] var3;
+        int var4;
+        java.awt.GraphicsDevice var5;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
         this.field_b = var1.getDefaultScreenDevice();
         if (this.field_b.isFullScreenSupported()) {

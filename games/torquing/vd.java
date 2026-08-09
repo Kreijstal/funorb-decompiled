@@ -10,10 +10,11 @@ final class vd {
     static String field_a;
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        RuntimeException var6 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -21,7 +22,6 @@ final class vd {
         int var11 = 0;
         int[] var12 = null;
         int[] var13 = null;
-        RuntimeException decompiledCaughtException = null;
         var11 = Torquing.field_u;
         try {
           L0: {
@@ -70,9 +70,9 @@ final class vd {
                       param0 = j.field_q;
                       break L4;
                     } else {
-                      incrementValue$2 = param0;
+                      incrementValue$0 = param0;
                       param0++;
-                      di.a(param4, (byte) -101, param3, qd.field_a[incrementValue$2], param2);
+                      di.a(param4, (byte) -101, param3, qd.field_a[incrementValue$0], param2);
                       break L4;
                     }
                   }
@@ -81,9 +81,9 @@ final class vd {
                       param5 = qk.field_p;
                       break L5;
                     } else {
-                      incrementValue$3 = param5;
+                      incrementValue$1 = param5;
                       param5--;
-                      di.a(param4, (byte) 113, param3, qd.field_a[incrementValue$3], param2);
+                      di.a(param4, (byte) 113, param3, qd.field_a[incrementValue$1], param2);
                       break L5;
                     }
                   }
@@ -162,6 +162,8 @@ final class vd {
     }
 
     final static void a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -178,8 +180,6 @@ final class vd {
         nh var14 = null;
         nh var15 = null;
         int[] var16 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = Torquing.field_u;
         try {
           L0: {
@@ -282,13 +282,10 @@ final class vd {
 
     final static String a(int param0, CharSequence param1, boolean param2) {
         String var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         String stackIn_6_0 = null;
         String stackIn_12_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -296,16 +293,7 @@ final class vd {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_5_0 = null;
-        String stackOut_11_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException var3_ref = null;
         var5 = Torquing.field_u;
         try {
           L0: {
@@ -319,8 +307,7 @@ final class vd {
               }
             }
             if (var3 != null) {
-              stackOut_5_0 = (String) (var3);
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = (String) (var3);
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -331,8 +318,7 @@ final class vd {
                     var4++;
                     continue L2;
                   } else {
-                    stackOut_11_0 = wc.field_s;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = wc.field_s;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -346,27 +332,19 @@ final class vd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var3_ref);
-            stackOut_15_1 = new StringBuilder().append("vd.D(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var3_ref);
+
+            stackIn_17_1 = new StringBuilder().append("vd.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L3;
             }
           }

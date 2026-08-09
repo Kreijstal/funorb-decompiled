@@ -44,7 +44,7 @@ final class te extends si {
     }
 
     final static int b(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3;
         if (param0 != 25403) {
           return -126;
         } else {

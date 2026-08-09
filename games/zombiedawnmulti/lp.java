@@ -35,8 +35,8 @@ final class lp extends br {
     }
 
     final static void a(byte param0, int param1, boolean param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         if (param0 == -45) {
           if (ee.field_b) {
             L0: {
@@ -294,8 +294,8 @@ final class lp extends br {
     }
 
     final static void a(byte param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 < -27) {
           L0: {

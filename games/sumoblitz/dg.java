@@ -6,135 +6,49 @@ final class dg extends ie {
     private jn field_z;
 
     final void a(int param0, int param1, byte param2, int param3) {
-        cb var5 = null;
-        pk var6 = null;
-        int var7 = 0;
-        L0: {
-          var7 = Sumoblitz.field_L ? 1 : 0;
-          if (this.field_w == null) {
-            break L0;
-          } else {
+        int var7 = Sumoblitz.field_L ? 1 : 0;
+        if (this.field_w != null) {
             this.field_w.a((pk) (this), param1, 5592405, true, param0);
-            break L0;
-          }
         }
-        L1: {
-          if (param2 < -35) {
-            break L1;
-          } else {
+        if (param2 >= -35) {
             this.field_z = (jn) null;
-            break L1;
-          }
         }
-        var5 = new cb(this.field_z);
-        var6 = (pk) ((Object) var5.a((byte) -119));
-        L2: while (true) {
-          L3: {
-            if (var6 == null) {
-              break L3;
-            } else {
-              var6.a(this.field_r + param0, param1 + this.field_v, (byte) -105, param3);
-              var6 = (pk) ((Object) var5.c((byte) 87));
-              if (var7 != 0) {
-                break L3;
-              } else {
-                if (var7 == 0) {
-                  continue L2;
-                } else {
-                  break L3;
-                }
-              }
-            }
-          }
-          return;
+        cb var5 = new cb(this.field_z);
+        pk var6 = (pk) ((Object) var5.a((byte) -119));
+        while (var6 != null) {
+            var6.a(this.field_r + param0, param1 + this.field_v, (byte) -105, param3);
+            var6 = (pk) ((Object) var5.c((byte) 87));
         }
     }
 
     final void h(int param0) {
-        cb var2 = null;
-        rg var3 = null;
-        int var4 = 0;
-        L0: {
-          var4 = Sumoblitz.field_L ? 1 : 0;
-          if (param0 < -63) {
-            break L0;
-          } else {
+        int var4 = Sumoblitz.field_L ? 1 : 0;
+        if (param0 >= -63) {
             this.h(45);
-            break L0;
-          }
         }
-        var2 = new cb(this.field_z);
-        var3 = (rg) ((Object) var2.b((byte) -80));
-        L1: while (true) {
-          L2: {
-            L3: {
-              if (var3 == null) {
-                break L3;
-              } else {
-                if (var4 != 0) {
-                  break L2;
-                } else {
-                  L4: {
-                    if (!var3.g(-28778)) {
-                      break L4;
-                    } else {
-                      var3.b(false);
-                      break L4;
-                    }
-                  }
-                  var3 = (rg) ((Object) var2.b(0));
-                  if (var4 == 0) {
-                    continue L1;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
+        cb var2 = new cb(this.field_z);
+        rg var3 = (rg) ((Object) var2.b((byte) -80));
+        while (var3 != null) {
+            if (var3.g(-28778)) {
+                var3.b(false);
             }
-            this.field_y = (pk) ((Object) this.e((byte) 54));
-            break L2;
-          }
-          return;
+            var3 = (rg) ((Object) var2.b(0));
         }
+        this.field_y = (pk) ((Object) this.e((byte) 54));
     }
 
     final void e(boolean param0) {
-        cb var2 = null;
-        rg var3 = null;
-        int var4 = 0;
-        var4 = Sumoblitz.field_L ? 1 : 0;
-        if (!param0) {
-          var2 = new cb(this.field_z);
-          var3 = (rg) ((Object) var2.b((byte) -80));
-          L0: while (true) {
-            L1: {
-              if (var3 == null) {
-                break L1;
-              } else {
-                if (var4 != 0) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (!var3.h(0)) {
-                      break L2;
-                    } else {
-                      var3.b(false);
-                      break L2;
-                    }
-                  }
-                  var3 = (rg) ((Object) var2.b(0));
-                  if (var4 == 0) {
-                    continue L0;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-            }
+        int var4 = Sumoblitz.field_L ? 1 : 0;
+        if (param0) {
             return;
-          }
-        } else {
-          return;
+        }
+        cb var2 = new cb(this.field_z);
+        rg var3 = (rg) ((Object) var2.b((byte) -80));
+        while (var3 != null) {
+            if (var3.h(0)) {
+                var3.b(false);
+            }
+            var3 = (rg) ((Object) var2.b(0));
         }
     }
 
@@ -146,22 +60,32 @@ final class dg extends ie {
     }
 
     final rg e(byte param0) {
-        int var4 = Sumoblitz.field_L ? 1 : 0;
-        cb var2 = new cb(this.field_z);
-        rg var3 = (rg) ((Object) var2.b((byte) -80));
-        if (param0 != 54) {
+        cb var2;
+        rg var3;
+        int var4;
+        L0: {
+          var4 = Sumoblitz.field_L ? 1 : 0;
+          var2 = new cb(this.field_z);
+          var3 = (rg) ((Object) var2.b((byte) -80));
+          if (param0 == 54) {
+            break L0;
+          } else {
             this.field_z = (jn) null;
+            break L0;
+          }
         }
-        do {
-            if (var3 == null) {
-                return null;
+        L1: while (true) {
+          if (var3 != null) {
+            if (!var3.field_D) {
+              var3 = (rg) ((Object) var2.b(param0 + -54));
+              continue L1;
+            } else {
+              return var3;
             }
-            if (var3.field_D) {
-                return var3;
-            }
-            var3 = (rg) ((Object) var2.b(param0 + -54));
-        } while (var4 == 0);
-        return null;
+          } else {
+            return null;
+          }
+        }
     }
 
     public dg() {
@@ -170,44 +94,43 @@ final class dg extends ie {
     }
 
     final pk f(int param0) {
-        int var4 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 != 16777216) {
+        cb var2;
+        rg var3;
+        int var4;
+        L0: {
+          var4 = Sumoblitz.field_L ? 1 : 0;
+          if (param0 == 16777216) {
+            break L0;
+          } else {
             field_B = (int[]) null;
+            break L0;
+          }
         }
-        cb var2 = new cb(this.field_z);
-        rg var3 = (rg) ((Object) var2.b((byte) -80));
-        do {
-            if (var3 == null) {
-                return null;
+        var2 = new cb(this.field_z);
+        var3 = (rg) ((Object) var2.b((byte) -80));
+        L1: while (true) {
+          if (var3 != null) {
+            if (var3.field_D) {
+              return var3.f(36);
+            } else {
+              var3 = (rg) ((Object) var2.b(0));
+              continue L1;
             }
-            if (!(!var3.field_D)) {
-                return var3.f(36);
-            }
-            var3 = (rg) ((Object) var2.b(0));
-        } while (var4 == 0);
-        return null;
+          } else {
+            return null;
+          }
+        }
     }
 
     final void a(byte param0, pk param1) {
-        boolean discarded$7 = false;
         rg var3 = null;
-        RuntimeException var3_ref = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var3_ref = null;
         try {
           L0: {
             if (!(param1 instanceof rg)) {
@@ -217,7 +140,7 @@ final class dg extends ie {
                 var3 = (rg) ((Object) param1);
                 this.field_z.a(var3, -10295);
                 var3.field_D = true;
-                discarded$7 = var3.a((pk) (this), (byte) 61);
+                var3.a((pk) (this), (byte) 61);
                 if (param0 > 90) {
                   break L1;
                 } else {
@@ -232,27 +155,19 @@ final class dg extends ie {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3_ref);
-            stackOut_6_1 = new StringBuilder().append("dg.F(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3_ref);
+
+            stackIn_8_1 = new StringBuilder().append("dg.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -261,95 +176,51 @@ final class dg extends ie {
     }
 
     final void a(byte param0) {
-        cb var2 = null;
-        rg var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        var5 = Sumoblitz.field_L ? 1 : 0;
-        var4 = 67 / ((35 - param0) / 49);
-        var2 = new cb(this.field_z);
-        var3 = (rg) ((Object) var2.b((byte) -80));
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (var3 == null) {
-                break L2;
-              } else {
-                var3.field_D = false;
-                var3 = (rg) ((Object) var2.b(0));
-                if (var5 != 0) {
-                  break L1;
-                } else {
-                  if (var5 == 0) {
-                    continue L0;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-            }
-            this.field_y = null;
-            break L1;
-          }
-          return;
+        int var5 = Sumoblitz.field_L ? 1 : 0;
+        int var4 = 67 / ((35 - param0) / 49);
+        cb var2 = new cb(this.field_z);
+        rg var3 = (rg) ((Object) var2.b((byte) -80));
+        while (var3 != null) {
+            var3.field_D = false;
+            var3 = (rg) ((Object) var2.b(0));
         }
+        this.field_y = null;
     }
 
     static {
-        $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            int var2 = 0;
-            int var3 = 0;
-            int var4 = 0;
-            int var5 = 0;
-            int var6 = 0;
-            field_B = new int[128];
-            var0 = 0;
-            L0: while (true) {
-              if (64 <= var0) {
-                var0 = 0;
-                L1: while (true) {
-                  if ((var0 ^ -1) <= -65) {
-                    var0 = 16711935 & field_B[63];
-                    var1 = field_B[63] & 65280;
-                    var2 = 0;
-                    L2: while (true) {
-                      if ((var2 ^ -1) <= -3) {
-                        break $cfr$clinit;
-                      } else {
-                        var3 = field_B[64 + var2];
-                        var4 = -(256 * var2 / 2) + 256;
-                        var5 = 16711935 & var3;
-                        var6 = 65280 & var3;
-                        var5 = var5 * (256 - var4);
-                        var6 = var6 * (256 - var4);
-                        var5 = var5 + var0 * var4;
-                        var6 = var6 + var1 * var4;
-                        var3 = (16711680 & var6 | -16711936 & var5) >>> 1579638600;
-                        field_B[64 + var2] = var3;
-                        var2++;
-                        continue L2;
-                      }
-                    }
-                  } else {
-                    var1 = 96 * var0 * var0 / 4096;
-                    var2 = 32 * var0 * var0 * var0 / 262144;
-                    var3 = var0 * var0 * 128 / 4096;
-                    field_B[-var0 + 127] = (var2 << -163313464) + (var1 << 1698194544) + var3;
-                    var0++;
-                    continue L1;
-                  }
-                }
-              } else {
-                var1 = 192 * var0 * var0 / 4096;
-                var2 = var0 * var0 * (var0 * var0) * 128 / 16777216;
-                var3 = var0 * var0 * var0 * 255 / 262144;
-                field_B[var0] = var3 + ((var2 << -1866516056) + (var1 << -1220767536));
-                var0++;
-                continue L0;
-              }
-            }
+        int var0 = 0;
+        int var1 = 0;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        field_B = new int[128];
+        for (var0 = 0; 64 > var0; var0++) {
+            var1 = 192 * var0 * var0 / 4096;
+            var2 = var0 * var0 * (var0 * var0) * 128 / 16777216;
+            var3 = var0 * var0 * var0 * 255 / 262144;
+            field_B[var0] = var3 + ((var2 << -1866516056) + (var1 << -1220767536));
+        }
+        for (var0 = 0; (var0 ^ -1) > -65; var0++) {
+            var1 = 96 * var0 * var0 / 4096;
+            var2 = 32 * var0 * var0 * var0 / 262144;
+            var3 = var0 * var0 * 128 / 4096;
+            field_B[-var0 + 127] = (var2 << -163313464) + (var1 << 1698194544) + var3;
+        }
+        var0 = 16711935 & field_B[63];
+        var1 = field_B[63] & 65280;
+        for (var2 = 0; (var2 ^ -1) > -3; var2++) {
+            var3 = field_B[64 + var2];
+            var4 = -(256 * var2 / 2) + 256;
+            var5 = 16711935 & var3;
+            var6 = 65280 & var3;
+            var5 = var5 * (256 - var4);
+            var6 = var6 * (256 - var4);
+            var5 = var5 + var0 * var4;
+            var6 = var6 + var1 * var4;
+            var3 = (16711680 & var6 | -16711936 & var5) >>> 1579638600;
+            field_B[64 + var2] = var3;
         }
     }
 }

@@ -22,9 +22,8 @@ final class os extends ag {
     }
 
     final int e(int param0) {
-        byte[] discarded$8 = null;
         if (param0 != 21513) {
-            discarded$8 = this.a(true);
+            this.a(true);
             if (!(!this.field_p)) {
                 return 0;
             }

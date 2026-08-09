@@ -48,45 +48,34 @@ final class jk {
     static int field_q;
 
     final void a(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        Object stackIn_4_0 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
         var12 = Bounce.field_N;
         if (this.field_t) {
           return;
         } else {
           L0: {
-            stackOut_3_0 = this;
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_5_0 = this;
+
             if (!param0) {
-              stackOut_5_0 = this;
-              stackOut_5_1 = 0;
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_0 = this;
+              stackIn_6_1 = 0;
               break L0;
             } else {
-              stackOut_4_0 = this;
-              stackOut_4_1 = 1;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_0 = this;
+              stackIn_6_1 = 1;
               break L0;
             }
           }
@@ -172,11 +161,10 @@ final class jk {
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
-        int discarded$0 = 0;
         int var6 = 0;
         int var7 = Bounce.field_N;
         if (param0 != -26) {
-            discarded$0 = jk.a((byte) 19);
+            jk.a((byte) 19);
         }
         for (var6 = 0; this.field_k > var6; var6++) {
             this.field_g[var6] = (short)(param3 * this.field_g[var6] / param4);
@@ -187,11 +175,10 @@ final class jk {
     }
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_M = null;
         field_a = null;
         if (param0 != -19800) {
-            discarded$0 = jk.a((byte) -29);
+            jk.a((byte) -29);
         }
         field_m = null;
     }
@@ -298,15 +285,14 @@ final class jk {
     }
 
     final static tg[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int discarded$1 = 0;
-        int var9 = 0;
-        tg[] var10 = null;
-        tg[] var11_ref_tg__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        tg var13 = null;
-        int var14 = 0;
-        int var15 = 0;
+        int var9;
+        tg[] var10;
+        tg[] var11_ref_tg__;
+        int var11;
+        int var12;
+        tg var13;
+        int var14;
+        int var15;
         var15 = Bounce.field_N;
         var9 = param1 + (param5 - -param8);
         var10 = new tg[]{new tg(var9, var9), new tg(param6, var9), new tg(var9, var9), new tg(var9, param6), new tg(64, 64), new tg(var9, param6), new tg(var9, var9), new tg(param6, var9), new tg(var9, var9)};
@@ -322,7 +308,7 @@ final class jk {
                   if (param3 == -7139) {
                     break L2;
                   } else {
-                    discarded$1 = jk.a((byte) -26);
+                    jk.a((byte) -26);
                     break L2;
                   }
                 }

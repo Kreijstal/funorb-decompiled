@@ -33,8 +33,6 @@ class tf extends pg {
         ri stackIn_15_0 = null;
         ri stackIn_21_0 = null;
         ri stackIn_24_0 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
@@ -42,41 +40,24 @@ class tf extends pg {
         String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ri stackOut_3_0 = null;
-        ri stackOut_7_0 = null;
-        ri stackOut_14_0 = null;
-        ri stackOut_23_0 = null;
-        ri stackOut_20_0 = null;
-        ri stackOut_10_0 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
             var2_int = param1.length();
             if (var2_int == 0) {
-              stackOut_3_0 = uh.field_i;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = uh.field_i;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (255 < var2_int) {
-                stackOut_7_0 = b.field_e;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = b.field_e;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 var3 = eh.a(false, '.', param1);
                 if (param0 == 32752) {
                   if (-3 < (var3.length ^ -1)) {
-                    stackOut_14_0 = uh.field_i;
-                    stackIn_15_0 = stackOut_14_0;
+                    stackIn_15_0 = uh.field_i;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
@@ -84,16 +65,14 @@ class tf extends pg {
                     var5 = 0;
                     L1: while (true) {
                       if (var5 >= var4.length) {
-                        stackOut_23_0 = ik.a(param0 + -32810, var3[var3.length - 1]);
-                        stackIn_24_0 = stackOut_23_0;
+                        stackIn_24_0 = ik.a(param0 + -32810, var3[var3.length - 1]);
                         decompiledRegionSelector0 = 5;
                         break L0;
                       } else {
                         var6 = var4[var5];
                         var7 = mo.a(var6, 45);
                         if (var7 != null) {
-                          stackOut_20_0 = (ri) (var7);
-                          stackIn_21_0 = stackOut_20_0;
+                          stackIn_21_0 = (ri) (var7);
                           decompiledRegionSelector0 = 4;
                           break L0;
                         } else {
@@ -104,8 +83,7 @@ class tf extends pg {
                     }
                   }
                 } else {
-                  stackOut_10_0 = (ri) null;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = (ri) null;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -116,27 +94,19 @@ class tf extends pg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var2);
-            stackOut_25_1 = new StringBuilder().append("tf.N(").append(param0).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var2);
+
+            stackIn_27_1 = new StringBuilder().append("tf.N(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L2;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L2;
             }
           }
@@ -170,8 +140,6 @@ class tf extends pg {
         RuntimeException var3_ref = null;
         f stackIn_2_0 = null;
         f stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -179,29 +147,17 @@ class tf extends pg {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        f stackOut_3_0 = null;
-        f stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 == -25866) {
               var3 = new f(param2);
               cm.field_l.b(var3, -1);
               pb.a(32, param0, var3);
-              stackOut_3_0 = (f) (var3);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (f) (var3);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (f) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (f) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -210,27 +166,19 @@ class tf extends pg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3_ref);
-            stackOut_5_1 = new StringBuilder().append("tf.Q(").append(param0).append(',').append(param1).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3_ref);
+
+            stackIn_7_1 = new StringBuilder().append("tf.Q(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }

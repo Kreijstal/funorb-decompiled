@@ -12,7 +12,7 @@ final class qf extends uia {
         int fieldTemp$9 = 0;
         int fieldTemp$10 = 0;
         int fieldTemp$11 = 0;
-        int var3 = 0;
+        int var3;
         var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
         int fieldTemp$6 = this.field_h;
         this.field_h = this.field_h + 1;
@@ -41,8 +41,8 @@ final class qf extends uia {
     }
 
     final static String a(int param0, String param1, String param2, String param3) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         var4 = param3.indexOf(param2);
         L0: while (true) {
@@ -56,11 +56,7 @@ final class qf extends uia {
           } else {
             param3 = param3.substring(0, var4) + param1 + param3.substring(var4 + param2.length());
             var4 = param3.indexOf(param2, param1.length() + var4);
-            if (var5 == 0) {
-              continue L0;
-            } else {
-              return param3;
-            }
+            continue L0;
           }
         }
     }
@@ -88,7 +84,7 @@ final class qf extends uia {
         int fieldTemp$11 = 0;
         int fieldTemp$12 = 0;
         int fieldTemp$13 = 0;
-        int var3 = 0;
+        int var3;
         var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
         int fieldTemp$7 = this.field_h;
         this.field_h = this.field_h + 1;

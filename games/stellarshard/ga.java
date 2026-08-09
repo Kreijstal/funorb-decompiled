@@ -31,7 +31,7 @@ final class ga implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = stellarshard.field_B;
         if (this.field_e.field_e[-1 + this.field_d] == this.field_c) {
           L0: while (true) {
@@ -64,18 +64,18 @@ final class ga implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        int var2 = 0;
-        Object var3 = null;
-        gg var3_ref = null;
-        gg var4 = null;
+        int fieldTemp$1 = 0;
+        int var2;
+        Object var3;
+        gg var3_ref;
+        gg var4;
         var2 = stellarshard.field_B;
         if (this.field_e.field_e[-1 + this.field_d] == this.field_c) {
           L0: while (true) {
             if (this.field_d < this.field_e.field_b) {
-              fieldTemp$2 = this.field_d;
+              fieldTemp$1 = this.field_d;
               this.field_d = this.field_d + 1;
-              var3_ref = this.field_e.field_e[fieldTemp$2].field_g;
+              var3_ref = this.field_e.field_e[fieldTemp$1].field_g;
               if (this.field_e.field_e[this.field_d + -1] == var3_ref) {
                 continue L0;
               } else {

@@ -20,14 +20,13 @@ class pg {
     }
 
     final void a(boolean param0) {
-        boolean discarded$0 = false;
         if (this.field_a == null) {
             return;
         }
         this.field_a.field_b = this.field_b;
         this.field_b.field_a = this.field_a;
         if (!param0) {
-            discarded$0 = this.b((byte) 71);
+            this.b((byte) 71);
         }
         this.field_a = null;
         this.field_b = null;
@@ -42,8 +41,10 @@ class pg {
     }
 
     final static void b(int param0) {
-        String[][] dupTemp$2 = null;
-        int[][] dupTemp$3 = null;
+        String[][] dupTemp$0 = null;
+        int[][] dupTemp$1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         nk var3 = null;
@@ -59,16 +60,13 @@ class pg {
         int var12 = 0;
         ab var13 = null;
         int var14 = 0;
-        int var15 = 0;
-        ab var16 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
+        ab var15 = null;
         var12 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
             L1: {
               var13 = df.field_z;
-              var16 = var13;
+              var15 = var13;
               if (param0 <= -37) {
                 break L1;
               } else {
@@ -76,7 +74,7 @@ class pg {
                 break L1;
               }
             }
-            var2 = var16.e((byte) -118);
+            var2 = var15.e((byte) -118);
             var3 = (nk) ((Object) pe.field_Lb.b(12623));
             L2: while (true) {
               L3: {
@@ -93,7 +91,7 @@ class pg {
               }
               if (var3 != null) {
                 L4: {
-                  var4 = var16.e((byte) -97);
+                  var4 = var15.e((byte) -97);
                   if (var4 != 0) {
                     var5 = var3.field_t;
                     bb.field_i[0] = ah.field_b;
@@ -105,46 +103,45 @@ class pg {
                         L6: while (true) {
                           if (var4 <= var6_int) {
                             bi.a((byte) -113, var5);
-                            dupTemp$2 = new String[2][var5];
-                            var3.field_r = dupTemp$2;
-                            var6 = dupTemp$2;
-                            dupTemp$3 = new int[2][4 * var5];
-                            var3.field_l = dupTemp$3;
-                            var7 = dupTemp$3;
+                            dupTemp$0 = new String[2][var5];
+                            var3.field_r = dupTemp$0;
+                            var6 = dupTemp$0;
+                            dupTemp$1 = new int[2][4 * var5];
+                            var3.field_l = dupTemp$1;
+                            var7 = dupTemp$1;
                             var8 = je.field_b;
                             var9 = 0;
                             var10 = 0;
                             L7: while (true) {
                               if (var9 >= var8) {
+                                var9 = 0;
                                 var14 = 0;
-                                var9 = var14;
-                                var15 = 0;
-                                var10 = var15;
+                                var10 = var14;
                                 L8: while (true) {
-                                  if (var14 >= var8) {
+                                  if (var9 >= var8) {
                                     break L4;
                                   } else {
                                     L9: {
-                                      var11 = ki.field_r[var14 + var5];
-                                      var6[1][var15] = bb.field_i[var11];
-                                      var7[1][4 * var15] = nf.field_z[var11];
-                                      var7[1][1 + var15 * 4] = hc.field_e[var11];
-                                      var7[1][var15 * 4 - -2] = tj.field_u[var11];
-                                      var7[1][4 * var15 - -3] = ba.field_o[var11];
+                                      var11 = ki.field_r[var9 + var5];
+                                      var6[1][var14] = bb.field_i[var11];
+                                      var7[1][4 * var14] = nf.field_z[var11];
+                                      var7[1][1 + var14 * 4] = hc.field_e[var11];
+                                      var7[1][var14 * 4 - -2] = tj.field_u[var11];
+                                      var7[1][4 * var14 - -3] = ba.field_o[var11];
                                       if (!je.a(16, bb.field_i[var11])) {
                                         break L9;
                                       } else {
                                         if (hc.field_e[var11] + tj.field_u[var11] + ba.field_o[var11] != 0) {
                                           break L9;
                                         } else {
-                                          var6[1][var15] = null;
-                                          var15--;
+                                          var6[1][var14] = null;
+                                          var14--;
                                           break L9;
                                         }
                                       }
                                     }
+                                    var9++;
                                     var14++;
-                                    var15++;
                                     continue L8;
                                   }
                                 }
@@ -175,7 +172,7 @@ class pg {
                             }
                           } else {
                             L11: {
-                              je.a(123, var16);
+                              je.a(123, var15);
                               if (0 == var6_int) {
                                 var3.field_h = fo.field_a;
                                 var3.field_k = kj.field_c;

@@ -5,15 +5,15 @@ abstract class aja implements ekb {
     abstract int a();
 
     final void a(float param0, float param1, float param2, float param3, int param4, int param5, int param6, int param7, int param8) {
-        double var10 = 0.0;
-        float var12 = 0.0f;
-        float var13 = 0.0f;
-        float var14 = 0.0f;
-        float var15 = 0.0f;
-        float var16 = 0.0f;
-        float var17 = 0.0f;
-        float var18 = 0.0f;
-        float var19 = 0.0f;
+        double var10;
+        float var12;
+        float var13;
+        float var14;
+        float var15;
+        float var16;
+        float var17;
+        float var18;
+        float var19;
         if (param4 == 0) {
           return;
         } else {

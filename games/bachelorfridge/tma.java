@@ -8,9 +8,8 @@ final class tma extends ana {
     static int field_v;
 
     private final void b(boolean param0) {
-        boolean discarded$0 = false;
         if (param0) {
-            discarded$0 = this.c((byte) 26);
+            this.c((byte) 26);
         }
     }
 
@@ -29,9 +28,9 @@ final class tma extends ana {
         if (!(!var2.i(105))) {
             return;
         }
-        ad discarded$0 = this.field_q.a(21915, this.field_q.b(var2, -23990));
+        this.field_q.a(21915, this.field_q.b(var2, -23990));
         pp var3 = (pp) ((Object) this.field_y.field_o.b((byte) 90));
-        oha discarded$1 = al.a(88, this.field_y.field_k);
+        al.a(88, this.field_y.field_k);
         int var4 = 96 / ((param0 - -68) / 50);
         while (var3 != null) {
             var3.a(var2, this.field_q.field_h, 12);
@@ -50,12 +49,12 @@ final class tma extends ana {
     }
 
     final boolean c(byte param0) {
-        int fieldTemp$2 = 0;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        int var2;
         if (!this.field_y.field_p) {
-          fieldTemp$2 = this.field_l - 1;
+          fieldTemp$1 = this.field_l - 1;
           this.field_l = this.field_l - 1;
-          if (0 <= fieldTemp$2) {
+          if (0 <= fieldTemp$1) {
             if (-26 != (this.field_l ^ -1)) {
               return false;
             } else {
@@ -94,8 +93,6 @@ final class tma extends ana {
         cj stackIn_20_0 = null;
         cj stackIn_23_0 = null;
         cj stackIn_26_0 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
@@ -103,40 +100,22 @@ final class tma extends ana {
         String stackIn_31_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        cj stackOut_5_0 = null;
-        cj stackOut_9_0 = null;
-        cj stackOut_13_0 = null;
-        cj stackOut_25_0 = null;
-        cj stackOut_22_0 = null;
-        cj stackOut_19_0 = null;
-        cj stackOut_16_0 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
         try {
           L0: {
             var2_int = param0.b(16711935);
             if (255 != var2_int) {
               if ((var2_int ^ -1) == -3) {
-                stackOut_5_0 = ih.a(param0, param1 ^ -276);
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = ih.a(param0, param1 ^ -276);
                 decompiledRegionSelector0 = 0;
                 break L0;
               } else {
                 if (var2_int == 1) {
-                  stackOut_9_0 = ig.a(param0, 104);
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = ig.a(param0, 104);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   if (-5 == (var2_int ^ -1)) {
-                    stackOut_13_0 = ba.a(param0, (byte) 119);
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = ba.a(param0, (byte) 119);
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
@@ -146,26 +125,22 @@ final class tma extends ana {
                           if ((var2_int ^ -1) != -8) {
                             throw new IllegalStateException("Invalid move category");
                           } else {
-                            stackOut_25_0 = gla.a(param0, (byte) -19);
-                            stackIn_26_0 = stackOut_25_0;
+                            stackIn_26_0 = gla.a(param0, (byte) -19);
                             decompiledRegionSelector0 = 6;
                             break L0;
                           }
                         } else {
-                          stackOut_22_0 = hj.a((byte) -121, param0);
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_23_0 = hj.a((byte) -121, param0);
                           decompiledRegionSelector0 = 5;
                           break L0;
                         }
                       } else {
-                        stackOut_19_0 = rfa.a(29428, param0);
-                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_0 = rfa.a(29428, param0);
                         decompiledRegionSelector0 = 4;
                         break L0;
                       }
                     } else {
-                      stackOut_16_0 = (cj) null;
-                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_0 = (cj) null;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }
@@ -180,27 +155,19 @@ final class tma extends ana {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var2);
-            stackOut_28_1 = new StringBuilder().append("tma.F(");
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackIn_30_0 = (RuntimeException) (var2);
+
+            stackIn_30_1 = new StringBuilder().append("tma.F(");
+
             if (param0 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L1;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L1;
             }
           }

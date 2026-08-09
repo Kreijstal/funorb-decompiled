@@ -16,33 +16,32 @@ final class ue implements cg {
         char[] var6 = null;
         char[] var7 = null;
         int var8 = 0;
+        char[] var9 = null;
+        char[] var10 = null;
+        char[] var11 = null;
+        char[] var12 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_24_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_25_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_2_0 = 0;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
             if (!Character.isISOControl(param0)) {
               if (de.a(param0, -17321)) {
-                stackOut_6_0 = 1;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                var6 = oj.field_h;
+                var11 = oj.field_h;
+                var9 = var11;
+                var6 = var9;
                 var2 = var6;
                 var3 = 0;
                 L1: while (true) {
-                  if (var6.length <= var3) {
+                  if (var11.length <= var3) {
                     L2: {
                       if (param1 > 63) {
                         break L2;
@@ -51,22 +50,22 @@ final class ue implements cg {
                         break L2;
                       }
                     }
-                    var7 = cm.field_S;
+                    var12 = cm.field_S;
+                    var10 = var12;
+                    var7 = var10;
                     var2 = var7;
                     var8 = 0;
                     var3 = var8;
                     L3: while (true) {
-                      if (var8 >= var7.length) {
-                        stackOut_23_0 = 0;
-                        stackIn_24_0 = stackOut_23_0;
-                        decompiledRegionSelector0 = 4;
+                      if (var8 >= var12.length) {
+                        stackIn_25_0 = 0;
+                        decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
-                        var4 = var7[var8];
+                        var4 = var12[var8];
                         if (param0 == var4) {
-                          stackOut_20_0 = 1;
-                          stackIn_21_0 = stackOut_20_0;
-                          decompiledRegionSelector0 = 3;
+                          stackIn_22_0 = 1;
+                          decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
                           var8++;
@@ -75,22 +74,18 @@ final class ue implements cg {
                       }
                     }
                   } else {
-                    var4 = var6[var3];
-                    if (param0 != var4) {
+                    var4 = var11[var3];
+                    if ((param0 ^ -1) != (var4 ^ -1)) {
                       var3++;
                       continue L1;
                     } else {
-                      stackOut_11_0 = 1;
-                      stackIn_12_0 = stackOut_11_0;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
+                      return true;
                     }
                   }
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -107,13 +102,9 @@ final class ue implements cg {
             return stackIn_7_0 != 0;
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return stackIn_12_0 != 0;
+              return stackIn_22_0 != 0;
             } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_21_0 != 0;
-              } else {
-                return stackIn_24_0 != 0;
-              }
+              return stackIn_25_0 != 0;
             }
           }
         }
@@ -135,26 +126,16 @@ final class ue implements cg {
     }
 
     public final void a(boolean param0, int param1, vg param2, int param3, int param4) {
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        nh var8 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        nh var8 = null;
         try {
           L0: {
             L1: {
@@ -195,27 +176,19 @@ final class ue implements cg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var6);
-            stackOut_8_1 = new StringBuilder().append("ue.J(").append(param0).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var6);
+
+            stackIn_10_1 = new StringBuilder().append("ue.J(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }
@@ -224,11 +197,11 @@ final class ue implements cg {
     }
 
     final static void a(int param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           var2 = 0;

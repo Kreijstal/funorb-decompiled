@@ -22,34 +22,22 @@ class r extends um {
     }
 
     final static String a(byte param0, String param1) {
-        int discarded$2 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_7_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
               if (param0 >= 72) {
                 break L1;
               } else {
-                discarded$2 = r.a((byte) 33, 79);
+                r.a((byte) 33, 79);
                 break L1;
               }
             }
@@ -70,35 +58,26 @@ class r extends um {
                 break L3;
               }
             }
-            stackOut_7_0 = (String) (param1);
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = (String) (param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var2);
-            stackOut_9_1 = new StringBuilder().append("r.EA(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var2);
+
+            stackIn_11_1 = new StringBuilder().append("r.EA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -112,7 +91,6 @@ class r extends um {
     }
 
     final static boolean c(byte param0) {
-        boolean discarded$5 = false;
         if (param0 < -80) {
           if (qg.field_A >= 20) {
             if (kb.i(7457)) {
@@ -132,7 +110,7 @@ class r extends um {
             return true;
           }
         } else {
-          discarded$5 = r.c((byte) 16);
+          r.c((byte) 16);
           if (qg.field_A >= 20) {
             if (kb.i(7457)) {
               if (fp.field_x > 0) {
@@ -158,7 +136,7 @@ class r extends um {
     }
 
     final static int a(byte param0, int param1) {
-        int var2 = 0;
+        int var2;
         var2 = param1 >>> -1879900607;
         var2 = var2 | var2 >>> -1868646719;
         if (param0 != -82) {

@@ -7,9 +7,8 @@ final class t extends eg {
     static String field_t;
 
     final boolean c(byte param0) {
-        boolean discarded$0 = false;
         if (param0 > -123) {
-            discarded$0 = this.c((byte) -60);
+            this.c((byte) -60);
             return false;
         }
         return false;

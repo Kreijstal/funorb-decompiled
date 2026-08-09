@@ -10,10 +10,9 @@ final class dg {
     static int field_e;
 
     public static void c(int param0) {
-        byte[] discarded$0 = null;
         if (param0 != 256) {
             byte[] var2 = (byte[]) null;
-            discarded$0 = dg.a((byte[]) null, -61);
+            dg.a((byte[]) null, -61);
             field_a = null;
             return;
         }
@@ -28,13 +27,13 @@ final class dg {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         var9 = wizardrun.field_H;
         if (-1 < (jd.field_f ^ -1)) {
           return;
@@ -455,25 +454,9 @@ final class dg {
     }
 
     final static byte[] a(byte[] param0, int param1) {
-        int discarded$1 = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        byte[] var5_ref_byte__ = null;
-        byte[] var6 = null;
-        Object var7 = null;
-        Throwable var8 = null;
-        va var9 = null;
-        byte[] var10 = null;
-        byte[] var11 = null;
-        byte[] var12 = null;
-        byte[] var13 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_10_0 = null;
         byte[] stackIn_24_0 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
@@ -481,17 +464,18 @@ final class dg {
         String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        byte[] stackOut_23_0 = null;
-        byte[] stackOut_9_0 = null;
-        byte[] stackOut_1_0 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        byte[] var5_ref_byte__ = null;
+        byte[] var6 = null;
+        Object var7 = null;
+        va var9 = null;
+        byte[] var10 = null;
+        byte[] var11 = null;
+        byte[] var12 = null;
+        byte[] var13 = null;
         try {
           L0: {
             var9 = new va(param0);
@@ -535,7 +519,7 @@ final class dg {
                           var11 = var13;
                           var6 = var11;
                           if (1 == var3) {
-                            discarded$1 = li.a(var13, var5, param0, var4, 9);
+                            li.a(var13, var5, param0, var4, 9);
                             break L5;
                           } else {
                             var7 = re.field_I;
@@ -548,8 +532,7 @@ final class dg {
                             break L5;
                           }
                         }
-                        stackOut_23_0 = (byte[]) (var6);
-                        stackIn_24_0 = stackOut_23_0;
+                        stackIn_24_0 = (byte[]) (var6);
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
@@ -560,8 +543,7 @@ final class dg {
                     var10 = var12;
                     var5_ref_byte__ = var10;
                     var9.a(true, var4, var12, 0);
-                    stackOut_9_0 = (byte[]) (var5_ref_byte__);
-                    stackIn_10_0 = stackOut_9_0;
+                    stackIn_10_0 = (byte[]) (var5_ref_byte__);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -569,8 +551,7 @@ final class dg {
               }
               throw new RuntimeException();
             } else {
-              stackOut_1_0 = (byte[]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (byte[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -579,27 +560,19 @@ final class dg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var2);
-            stackOut_25_1 = new StringBuilder().append("dg.E(");
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_27_0 = (RuntimeException) (var2);
+
+            stackIn_27_1 = new StringBuilder().append("dg.E(");
+
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L7;
             }
           }

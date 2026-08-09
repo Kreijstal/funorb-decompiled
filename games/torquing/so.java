@@ -32,12 +32,11 @@ final class so extends am {
     }
 
     final static void b(int param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        int var4 = 0;
         of var4_ref_of = null;
+        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -52,13 +51,14 @@ final class so extends am {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        of var17 = null;
-        int var18 = 0;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        of var17 = null;
+        int var18 = 0;
         var19 = Torquing.field_u;
         try {
           L0: {
@@ -130,7 +130,7 @@ final class so extends am {
                             }
                           }
                         } else {
-                          if (var21[var16] < var21[var17_int]) {
+                          if ((var21[var16] ^ -1) > (var21[var17_int] ^ -1)) {
                             var16 = var17_int;
                             var17_int++;
                             continue L4;

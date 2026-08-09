@@ -27,7 +27,6 @@ public class nk {
     }
 
     public static void a(int param0, int param1, String param2) {
-        File discarded$2 = null;
         Exception var3 = null;
         String var4 = null;
         Throwable decompiledCaughtException = null;
@@ -38,7 +37,7 @@ public class nk {
             break L0;
           } else {
             var4 = (String) null;
-            discarded$2 = nk.a(25, (String) null, (String) null, -32);
+            nk.a(25, (String) null, (String) null, -32);
             break L0;
           }
         }

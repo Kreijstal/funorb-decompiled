@@ -8,9 +8,8 @@ final class sd extends ga implements lf {
     private n field_S;
 
     public final n a(int param0) {
-        n discarded$0 = null;
         if (param0 >= -40) {
-            discarded$0 = this.a(-19);
+            this.a(-19);
             return this.field_S;
         }
         return this.field_S;
@@ -29,7 +28,7 @@ final class sd extends ga implements lf {
     }
 
     final void h(int param0) {
-        qm var3 = null;
+        qm var3;
         if (param0 <= 125) {
           L0: {
             var3 = (qm) null;

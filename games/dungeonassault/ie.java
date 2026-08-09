@@ -18,7 +18,7 @@ final class ie extends ne {
     }
 
     final static void a(int param0) {
-        i var1 = null;
+        i var1;
         if (param0 < 89) {
           L0: {
             field_l = (cn) null;

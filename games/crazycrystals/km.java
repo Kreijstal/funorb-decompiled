@@ -10,7 +10,7 @@ final class km {
     static byte[] field_f;
 
     final ij a(int param0) {
-        ij var2 = null;
+        ij var2;
         var2 = this.field_b;
         if (var2 != this.field_a) {
           this.field_b = var2.field_j;
@@ -66,7 +66,7 @@ final class km {
     }
 
     final ij d(int param0) {
-        ij var2 = null;
+        ij var2;
         if (param0 == -4425) {
           var2 = this.field_a.field_j;
           if (this.field_a == var2) {
@@ -88,7 +88,7 @@ final class km {
     }
 
     final ij b(int param0) {
-        ij var2 = null;
+        ij var2;
         var2 = this.field_a.field_j;
         if (this.field_a == var2) {
           this.field_b = null;

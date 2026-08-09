@@ -14,7 +14,7 @@ final class ov implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = Kickabout.field_G;
         if (this.field_d.field_e[-1 + this.field_f] == this.field_e) {
           L0: while (true) {
@@ -40,25 +40,15 @@ final class ov implements Iterator {
     final static void a(tf param0, int param1) {
         Object var2 = null;
         gn var2_ref = null;
-        RuntimeException var2_ref2 = null;
         gn var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var2_ref2 = null;
         var4 = Kickabout.field_G;
         try {
           L0: {
@@ -104,27 +94,19 @@ final class ov implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2_ref2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var2_ref2);
-            stackOut_12_1 = new StringBuilder().append("ov.A(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var2_ref2);
+
+            stackIn_14_1 = new StringBuilder().append("ov.A(");
+
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L5;
             }
           }
@@ -133,9 +115,8 @@ final class ov implements Iterator {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 1) {
-            discarded$0 = ov.a(-70, -86, -1);
+            ov.a(-70, -86, -1);
             field_a = null;
             field_c = null;
             return;
@@ -153,16 +134,16 @@ final class ov implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        gn var1 = null;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        gn var1;
+        int var2;
         var2 = Kickabout.field_G;
         if (this.field_d.field_e[this.field_f - 1] == this.field_e) {
           L0: while (true) {
             if (this.field_d.field_d > this.field_f) {
-              fieldTemp$2 = this.field_f;
+              fieldTemp$1 = this.field_f;
               this.field_f = this.field_f + 1;
-              var1 = this.field_d.field_e[fieldTemp$2].field_d;
+              var1 = this.field_d.field_e[fieldTemp$1].field_d;
               if (var1 == this.field_d.field_e[this.field_f + -1]) {
                 continue L0;
               } else {

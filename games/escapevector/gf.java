@@ -18,18 +18,14 @@ final class gf {
     private boolean field_n;
 
     private final int a(int param0) {
-        int var2 = 0;
+        int var2;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
         L0: {
           if (mj.field_d < this.field_l) {
-            stackOut_2_0 = -mj.field_d + this.field_l;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = -mj.field_d + this.field_l;
             break L0;
           } else {
-            stackOut_1_0 = 0;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 0;
             break L0;
           }
         }
@@ -42,243 +38,150 @@ final class gf {
     }
 
     final static int a(byte param0, int param1) {
-        tg discarded$1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        String var4 = null;
-        var3 = EscapeVector.field_A;
+        int var3 = EscapeVector.field_A;
         qk.field_g = null;
         rh.field_I = null;
         ke.field_b = 0;
-        var2 = kl.field_n;
+        int var2 = kl.field_n;
         kl.field_n = tl.field_l;
         tl.field_l = var2;
-        if (param0 == -78) {
-          od.field_j.field_g = od.field_j.field_g + 1;
-          if (param1 != 51) {
-            if ((param1 ^ -1) != -51) {
-              L0: {
-                od.field_j.field_d = 1;
+        if (param0 != -78) {
+            String var4 = (String) null;
+            gf.a((String) null, (byte) 43);
+            od.field_j.field_g = od.field_j.field_g + 1;
+            if (param1 == 51) {
+                od.field_j.field_d = 2;
                 if ((od.field_j.field_g ^ -1) > -3) {
-                  break L0;
-                } else {
-                  if ((param1 ^ -1) != -52) {
-                    break L0;
-                  } else {
-                    return 2;
-                  }
-                }
-              }
-              if (od.field_j.field_g < 2) {
-                if (-5 < (od.field_j.field_g ^ -1)) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              } else {
-                if (param1 == 50) {
-                  return 5;
-                } else {
-                  if (-5 < (od.field_j.field_g ^ -1)) {
-                    return -1;
-                  } else {
+                    if (od.field_j.field_g >= 2) {
+                        if (!(param1 != 50)) {
+                            return 5;
+                        }
+                    }
+                    if (-5 < (od.field_j.field_g ^ -1)) {
+                        return -1;
+                    }
                     return 1;
-                  }
                 }
-              }
-            } else {
-              L1: {
+                if ((param1 ^ -1) == -52) {
+                    return 2;
+                }
+                if (od.field_j.field_g >= 2) {
+                    if (!(param1 != 50)) {
+                        return 5;
+                    }
+                }
+                if (-5 < (od.field_j.field_g ^ -1)) {
+                    return -1;
+                }
+                return 1;
+            }
+            if ((param1 ^ -1) == -51) {
                 od.field_j.field_d = 5;
                 if ((od.field_j.field_g ^ -1) > -3) {
-                  break L1;
-                } else {
-                  if ((param1 ^ -1) != -52) {
-                    break L1;
-                  } else {
+                    if (od.field_j.field_g >= 2) {
+                        if (!(param1 != 50)) {
+                            return 5;
+                        }
+                    }
+                    if (-5 < (od.field_j.field_g ^ -1)) {
+                        return -1;
+                    }
+                    return 1;
+                }
+                if ((param1 ^ -1) == -52) {
                     return 2;
-                  }
                 }
-              }
-              if (od.field_j.field_g < 2) {
+                if (od.field_j.field_g >= 2) {
+                    if (!(param1 != 50)) {
+                        return 5;
+                    }
+                }
                 if (-5 < (od.field_j.field_g ^ -1)) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              } else {
-                if (param1 == 50) {
-                  return 5;
-                } else {
-                  if (-5 < (od.field_j.field_g ^ -1)) {
                     return -1;
-                  } else {
-                    return 1;
-                  }
                 }
-              }
-            }
-          } else {
-            L2: {
-              od.field_j.field_d = 2;
-              if ((od.field_j.field_g ^ -1) > -3) {
-                break L2;
-              } else {
-                if ((param1 ^ -1) != -52) {
-                  break L2;
-                } else {
-                  return 2;
-                }
-              }
-            }
-            if (od.field_j.field_g < 2) {
-              if (-5 < (od.field_j.field_g ^ -1)) {
-                return -1;
-              } else {
                 return 1;
-              }
-            } else {
-              if (param1 == 50) {
-                return 5;
-              } else {
-                if (-5 < (od.field_j.field_g ^ -1)) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              }
             }
-          }
-        } else {
-          var4 = (String) null;
-          discarded$1 = gf.a((String) null, (byte) 43);
-          od.field_j.field_g = od.field_j.field_g + 1;
-          if (param1 != 51) {
-            if ((param1 ^ -1) != -51) {
-              od.field_j.field_d = 1;
-              if ((od.field_j.field_g ^ -1) <= -3) {
-                if ((param1 ^ -1) != -52) {
-                  L3: {
-                    if (od.field_j.field_g < 2) {
-                      break L3;
-                    } else {
-                      if (param1 == 50) {
+            od.field_j.field_d = 1;
+            if ((od.field_j.field_g ^ -1) > -3) {
+                if (od.field_j.field_g >= 2) {
+                    if (!(param1 != 50)) {
                         return 5;
-                      } else {
-                        break L3;
-                      }
                     }
-                  }
-                  if (-5 >= (od.field_j.field_g ^ -1)) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return 2;
-                }
-              } else {
-                L4: {
-                  if (od.field_j.field_g < 2) {
-                    break L4;
-                  } else {
-                    if (param1 == 50) {
-                      return 5;
-                    } else {
-                      break L4;
-                    }
-                  }
-                }
-                if (-5 < (od.field_j.field_g ^ -1)) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              }
-            } else {
-              od.field_j.field_d = 5;
-              if ((od.field_j.field_g ^ -1) <= -3) {
-                if ((param1 ^ -1) != -52) {
-                  L5: {
-                    if (od.field_j.field_g < 2) {
-                      break L5;
-                    } else {
-                      if (param1 == 50) {
-                        return 5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                  if (-5 >= (od.field_j.field_g ^ -1)) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return 2;
-                }
-              } else {
-                L6: {
-                  if (od.field_j.field_g < 2) {
-                    break L6;
-                  } else {
-                    if (param1 == 50) {
-                      return 5;
-                    } else {
-                      break L6;
-                    }
-                  }
                 }
                 if (-5 >= (od.field_j.field_g ^ -1)) {
-                  return 1;
-                } else {
-                  return -1;
+                    return 1;
                 }
-              }
+                return -1;
             }
-          } else {
-            od.field_j.field_d = 2;
-            if ((od.field_j.field_g ^ -1) <= -3) {
-              if ((param1 ^ -1) != -52) {
-                L7: {
-                  if (od.field_j.field_g < 2) {
-                    break L7;
-                  } else {
-                    if (param1 == 50) {
-                      return 5;
-                    } else {
-                      break L7;
-                    }
-                  }
-                }
-                if (-5 >= (od.field_j.field_g ^ -1)) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              } else {
+            if ((param1 ^ -1) == -52) {
                 return 2;
-              }
-            } else {
-              L8: {
-                if (od.field_j.field_g < 2) {
-                  break L8;
-                } else {
-                  if (param1 == 50) {
-                    return 5;
-                  } else {
-                    break L8;
-                  }
-                }
-              }
-              if (-5 >= (od.field_j.field_g ^ -1)) {
-                return 1;
-              } else {
-                return -1;
-              }
             }
-          }
+            if (od.field_j.field_g >= 2) {
+                if (!(param1 != 50)) {
+                    return 5;
+                }
+            }
+            if (-5 < (od.field_j.field_g ^ -1)) {
+                return -1;
+            }
+            return 1;
         }
+        od.field_j.field_g = od.field_j.field_g + 1;
+        if (param1 == 51) {
+            od.field_j.field_d = 2;
+            if ((od.field_j.field_g ^ -1) <= -3 && (param1 ^ -1) == -52) {
+                return 2;
+            }
+            if (od.field_j.field_g >= 2) {
+                if (param1 != 50) {
+                    if (-5 >= (od.field_j.field_g ^ -1)) {
+                        return 1;
+                    }
+                    return -1;
+                }
+                return 5;
+            }
+            if (-5 >= (od.field_j.field_g ^ -1)) {
+                return 1;
+            }
+            return -1;
+        }
+        if ((param1 ^ -1) == -51) {
+            od.field_j.field_d = 5;
+            if ((od.field_j.field_g ^ -1) <= -3 && (param1 ^ -1) == -52) {
+                return 2;
+            }
+            if (od.field_j.field_g >= 2) {
+                if (param1 != 50) {
+                    if (-5 >= (od.field_j.field_g ^ -1)) {
+                        return 1;
+                    }
+                    return -1;
+                }
+                return 5;
+            }
+            if (-5 >= (od.field_j.field_g ^ -1)) {
+                return 1;
+            }
+            return -1;
+        }
+        od.field_j.field_d = 1;
+        if ((od.field_j.field_g ^ -1) <= -3 && (param1 ^ -1) == -52) {
+            return 2;
+        }
+        if (od.field_j.field_g >= 2) {
+            if (param1 != 50) {
+                if (-5 >= (od.field_j.field_g ^ -1)) {
+                    return 1;
+                }
+                return -1;
+            }
+            return 5;
+        }
+        if (-5 >= (od.field_j.field_g ^ -1)) {
+            return 1;
+        }
+        return -1;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -296,25 +199,19 @@ final class gf {
     }
 
     private final int a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         var2 = this.a(-73);
         if (param0 != -57) {
           L0: {
             this.field_h = 59;
             if (this.field_l <= var2) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = (-var2 + this.field_l) * this.field_h / this.field_l;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = (-var2 + this.field_l) * this.field_h / this.field_l;
               break L0;
             }
           }
@@ -323,12 +220,10 @@ final class gf {
         } else {
           L1: {
             if (this.field_l <= var2) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = (-var2 + this.field_l) * this.field_h / this.field_l;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = (-var2 + this.field_l) * this.field_h / this.field_l;
               break L1;
             }
           }
@@ -366,8 +261,6 @@ final class gf {
         Object stackIn_3_0 = null;
         tg stackIn_14_0 = null;
         Object stackIn_17_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -375,17 +268,6 @@ final class gf {
         String stackIn_21_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_16_0 = null;
-        tg stackOut_13_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
         var5 = EscapeVector.field_A;
         try {
           L0: {
@@ -404,8 +286,7 @@ final class gf {
               L2: while (true) {
                 if (var3 == null) {
                   var4 = -98 / ((param1 - -63) / 57);
-                  stackOut_16_0 = null;
-                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_0 = null;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -423,16 +304,14 @@ final class gf {
                     var3 = (tg) ((Object) ml.field_a.a((byte) -36));
                     continue L2;
                   } else {
-                    stackOut_13_0 = (tg) (var3);
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = (tg) (var3);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 }
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -441,27 +320,19 @@ final class gf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2_ref = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var2_ref);
-            stackOut_18_1 = new StringBuilder().append("gf.F(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_20_0 = (RuntimeException) (var2_ref);
+
+            stackIn_20_1 = new StringBuilder().append("gf.F(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L4;
             }
           }
@@ -479,10 +350,10 @@ final class gf {
     }
 
     final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var2 = this.field_g + this.field_j;
         if (param0 >= 32) {
           var3 = this.field_m + this.field_k;

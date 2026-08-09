@@ -3,13 +3,6 @@
  */
 final class kl {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$1 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -20,24 +13,15 @@ final class kl {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        var6 = param0 + param1 * ge.field_h;
-        var7 = 255 - param5;
-        var8 = param4 >> 16;
-        var9 = param4 >> 8 & 255;
-        var10 = param4 & 255;
-        var11 = ge.field_h - param2;
-        var12 = param3 - 1;
-        L0: while (true) {
-          if (var12 < 0) {
-            return;
-          } else {
-            var13 = param2 - 1;
-            L1: while (true) {
-              if (var13 < 0) {
-                var6 = var6 + var11;
-                var12--;
-                continue L0;
-              } else {
+        int incrementValue$0 = 0;
+        int var6 = param0 + param1 * ge.field_h;
+        int var7 = 255 - param5;
+        int var8 = param4 >> 16;
+        int var9 = param4 >> 8 & 255;
+        int var10 = param4 & 255;
+        int var11 = ge.field_h - param2;
+        for (var12 = param3 - 1; var12 >= 0; var12--) {
+            for (var13 = param2 - 1; var13 >= 0; var13--) {
                 var14 = ge.field_i[var6];
                 var15 = var14 >> 16 & 255;
                 var16 = var14 >> 8 & 255;
@@ -46,24 +30,21 @@ final class kl {
                 var19 = var18 * var8 >> 8;
                 var20 = var18 * var9 >> 8;
                 var21 = var18 * var10 >> 8;
-                incrementValue$1 = var6;
+                incrementValue$0 = var6;
                 var6++;
-                ge.field_i[incrementValue$1] = (var15 * var7 + var19 * param5 << 8 & 16711680) + (var16 * var7 + var20 * param5 & 65280) + (var17 * var7 + var21 * param5 >> 8);
-                var13--;
-                continue L1;
-              }
+                ge.field_i[incrementValue$0] = (var15 * var7 + var19 * param5 << 8 & 16711680) + (var16 * var7 + var20 * param5 & 65280) + (var17 * var7 + var21 * param5 >> 8);
             }
-          }
+            var6 = var6 + var11;
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var7 = 0;
-        float var8 = 0.0f;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var7;
+        float var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         if (param3 < ge.field_j) {
           if (param3 + param5 >= ge.field_a) {
             if (param4 < ge.field_k) {

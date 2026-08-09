@@ -227,7 +227,7 @@ final class rb extends hl {
     }
 
     private final boolean a(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
-        int var8 = 0;
+        int var8;
         if (param1) {
           var8 = 1;
           this.field_Pb.a(-23983, param4, var8 != 0, this.field_Ob.field_R);
@@ -290,11 +290,10 @@ final class rb extends hl {
     }
 
     public static void d(byte param0) {
-        boolean discarded$0 = false;
         field_Nb = null;
         field_Mb = null;
         if (param0 >= -104) {
-            discarded$0 = rb.c(true);
+            rb.c(true);
             field_Lb = null;
             field_Kb = null;
             return;
@@ -311,46 +310,28 @@ final class rb extends hl {
     }
 
     final void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        boolean discarded$2 = false;
-        Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        Object stackOut_5_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
         if (!param3) {
           L0: {
-            discarded$2 = rb.c(true);
+            rb.c(true);
             this.field_R = param2;
             this.field_Hb = param0;
             this.field_yb = param4;
             this.field_M = param5;
-            stackOut_5_0 = this;
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_7_0 = this;
+
             if (param3) {
-              stackOut_7_0 = this;
-              stackOut_7_1 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_0 = this;
+              stackIn_8_1 = 0;
               break L0;
             } else {
-              stackOut_6_0 = this;
-              stackOut_6_1 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_0 = this;
+              stackIn_8_1 = 1;
               break L0;
             }
           }
@@ -362,20 +343,15 @@ final class rb extends hl {
             this.field_Hb = param0;
             this.field_yb = param4;
             this.field_M = param5;
-            stackOut_1_0 = this;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
+            stackIn_3_0 = this;
+
             if (param3) {
-              stackOut_3_0 = this;
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_0 = this;
+              stackIn_4_1 = 0;
               break L1;
             } else {
-              stackOut_2_0 = this;
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_0 = this;
+              stackIn_4_1 = 1;
               break L1;
             }
           }

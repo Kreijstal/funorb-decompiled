@@ -20,16 +20,12 @@ final class ic {
 
     final static void a(boolean param0, byte param1) {
         mk stackIn_3_0 = null;
-        mk stackOut_2_0 = null;
-        mk stackOut_1_0 = null;
         L0: {
           if (!param0) {
-            stackOut_2_0 = new mk(rl.field_e, qd.field_Q);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new mk(rl.field_e, qd.field_Q);
             break L0;
           } else {
-            stackOut_1_0 = new mk(qf.field_a, eh.field_q);
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = new mk(qf.field_a, eh.field_q);
             break L0;
           }
         }
@@ -52,7 +48,7 @@ final class ic {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1;
         if (!bh.field_r) {
           throw new IllegalStateException();
         } else {

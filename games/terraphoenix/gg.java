@@ -9,13 +9,13 @@ final class gg extends id {
     boolean field_i;
 
     final gg a(m param0) {
-        int dupTemp$2 = 0;
+        int dupTemp$1 = 0;
         this.field_k = param0.a((byte) 109, this.field_k);
         this.field_l = param0.a(this.field_l, true);
         if (this.field_j == this.field_m) {
-          dupTemp$2 = param0.a((byte) 46, this.field_j);
-          this.field_m = dupTemp$2;
-          this.field_j = dupTemp$2;
+          dupTemp$1 = param0.a((byte) 46, this.field_j);
+          this.field_m = dupTemp$1;
+          this.field_j = dupTemp$1;
           return (gg) (this);
         } else {
           L0: {

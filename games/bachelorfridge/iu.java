@@ -7,21 +7,6 @@ final class iu extends at {
     private int field_j;
 
     final static gs a(int param0, byte param1, int param2, int param3) {
-        Object var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        gs var8_ref_gs = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10_int = 0;
-        String var10 = null;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        vr var14 = null;
-        gs var15 = null;
-        gs var16 = null;
         int stackIn_41_0 = 0;
         int stackIn_61_0 = 0;
         int stackIn_68_0 = 0;
@@ -35,32 +20,21 @@ final class iu extends at {
         int stackIn_116_0 = 0;
         int stackIn_123_0 = 0;
         int stackIn_127_0 = 0;
-        int stackOut_115_0 = 0;
-        int stackOut_114_0 = 0;
-        int stackOut_111_0 = 0;
-        int stackOut_110_0 = 0;
-        int stackOut_126_0 = 0;
-        int stackOut_125_0 = 0;
-        int stackOut_122_0 = 0;
-        int stackOut_121_0 = 0;
-        int stackOut_92_0 = 0;
-        int stackOut_91_0 = 0;
-        int stackOut_88_0 = 0;
-        int stackOut_87_0 = 0;
-        int stackOut_103_0 = 0;
-        int stackOut_102_0 = 0;
-        int stackOut_99_0 = 0;
-        int stackOut_98_0 = 0;
-        int stackOut_79_0 = 0;
-        int stackOut_78_0 = 0;
-        int stackOut_75_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_66_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
+        Object var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        gs var8_ref_gs;
+        int var9;
+        int var10_int;
+        String var10;
+        String var11;
+        int var12;
+        int var13;
+        vr var14;
+        gs var15;
+        gs var16;
         var13 = BachelorFridge.field_y;
         var4 = null;
         af.field_b.field_vb.field_z.d(102);
@@ -94,12 +68,10 @@ final class iu extends at {
                                 af.field_b.field_vb.field_I = var9 + -af.field_b.field_vb.field_rb;
                                 af.field_b.a(true, 0, param3, param0 * param3 * 2);
                                 if (var9 != af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb) {
-                                  stackOut_115_0 = 0;
-                                  stackIn_116_0 = stackOut_115_0;
+                                  stackIn_116_0 = 0;
                                   break L3;
                                 } else {
-                                  stackOut_114_0 = 1;
-                                  stackIn_116_0 = stackOut_114_0;
+                                  stackIn_116_0 = 1;
                                   break L3;
                                 }
                               }
@@ -109,12 +81,10 @@ final class iu extends at {
                               L4: {
                                 af.field_b.a(true, 0, param3, param0 * param3 * 2);
                                 if (var9 != af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb) {
-                                  stackOut_111_0 = 0;
-                                  stackIn_112_0 = stackOut_111_0;
+                                  stackIn_112_0 = 0;
                                   break L4;
                                 } else {
-                                  stackOut_110_0 = 1;
-                                  stackIn_112_0 = stackOut_110_0;
+                                  stackIn_112_0 = 1;
                                   break L4;
                                 }
                               }
@@ -130,12 +100,10 @@ final class iu extends at {
                           af.field_b.field_vb.field_I = var9 + -af.field_b.field_vb.field_rb;
                           af.field_b.a(true, 0, param3, param0 * param3 * 2);
                           if (var9 != af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb) {
-                            stackOut_126_0 = 0;
-                            stackIn_127_0 = stackOut_126_0;
+                            stackIn_127_0 = 0;
                             break L5;
                           } else {
-                            stackOut_125_0 = 1;
-                            stackIn_127_0 = stackOut_125_0;
+                            stackIn_127_0 = 1;
                             break L5;
                           }
                         }
@@ -145,12 +113,10 @@ final class iu extends at {
                         L6: {
                           af.field_b.a(true, 0, param3, param0 * param3 * 2);
                           if (var9 != af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb) {
-                            stackOut_122_0 = 0;
-                            stackIn_123_0 = stackOut_122_0;
+                            stackIn_123_0 = 0;
                             break L6;
                           } else {
-                            stackOut_121_0 = 1;
-                            stackIn_123_0 = stackOut_121_0;
+                            stackIn_123_0 = 1;
                             break L6;
                           }
                         }
@@ -177,12 +143,10 @@ final class iu extends at {
                                 af.field_b.field_vb.field_I = var9 + -af.field_b.field_vb.field_rb;
                                 af.field_b.a(true, 0, param3, param0 * param3 * 2);
                                 if (var9 != af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb) {
-                                  stackOut_92_0 = 0;
-                                  stackIn_93_0 = stackOut_92_0;
+                                  stackIn_93_0 = 0;
                                   break L8;
                                 } else {
-                                  stackOut_91_0 = 1;
-                                  stackIn_93_0 = stackOut_91_0;
+                                  stackIn_93_0 = 1;
                                   break L8;
                                 }
                               }
@@ -192,12 +156,10 @@ final class iu extends at {
                               L9: {
                                 af.field_b.a(true, 0, param3, param0 * param3 * 2);
                                 if (var9 != af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb) {
-                                  stackOut_88_0 = 0;
-                                  stackIn_89_0 = stackOut_88_0;
+                                  stackIn_89_0 = 0;
                                   break L9;
                                 } else {
-                                  stackOut_87_0 = 1;
-                                  stackIn_89_0 = stackOut_87_0;
+                                  stackIn_89_0 = 1;
                                   break L9;
                                 }
                               }
@@ -213,12 +175,10 @@ final class iu extends at {
                           af.field_b.field_vb.field_I = var9 + -af.field_b.field_vb.field_rb;
                           af.field_b.a(true, 0, param3, param0 * param3 * 2);
                           if (var9 != af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb) {
-                            stackOut_103_0 = 0;
-                            stackIn_104_0 = stackOut_103_0;
+                            stackIn_104_0 = 0;
                             break L10;
                           } else {
-                            stackOut_102_0 = 1;
-                            stackIn_104_0 = stackOut_102_0;
+                            stackIn_104_0 = 1;
                             break L10;
                           }
                         }
@@ -228,12 +188,10 @@ final class iu extends at {
                         L11: {
                           af.field_b.a(true, 0, param3, param0 * param3 * 2);
                           if (var9 != af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb) {
-                            stackOut_99_0 = 0;
-                            stackIn_100_0 = stackOut_99_0;
+                            stackIn_100_0 = 0;
                             break L11;
                           } else {
-                            stackOut_98_0 = 1;
-                            stackIn_100_0 = stackOut_98_0;
+                            stackIn_100_0 = 1;
                             break L11;
                           }
                         }
@@ -264,12 +222,10 @@ final class iu extends at {
                             af.field_b.field_vb.field_I = var9 + -af.field_b.field_vb.field_rb;
                             af.field_b.a(true, 0, param3, param0 * param3 * 2);
                             if (var9 != af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb) {
-                              stackOut_79_0 = 0;
-                              stackIn_80_0 = stackOut_79_0;
+                              stackIn_80_0 = 0;
                               break L13;
                             } else {
-                              stackOut_78_0 = 1;
-                              stackIn_80_0 = stackOut_78_0;
+                              stackIn_80_0 = 1;
                               break L13;
                             }
                           }
@@ -279,12 +235,10 @@ final class iu extends at {
                           L14: {
                             af.field_b.a(true, 0, param3, param0 * param3 * 2);
                             if (var9 != af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb) {
-                              stackOut_75_0 = 0;
-                              stackIn_76_0 = stackOut_75_0;
+                              stackIn_76_0 = 0;
                               break L14;
                             } else {
-                              stackOut_74_0 = 1;
-                              stackIn_76_0 = stackOut_74_0;
+                              stackIn_76_0 = 1;
                               break L14;
                             }
                           }
@@ -304,12 +258,10 @@ final class iu extends at {
                         L16: {
                           af.field_b.a(true, 0, param3, param0 * param3 * 2);
                           if (var9 != af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb) {
-                            stackOut_67_0 = 0;
-                            stackIn_68_0 = stackOut_67_0;
+                            stackIn_68_0 = 0;
                             break L16;
                           } else {
-                            stackOut_66_0 = 1;
-                            stackIn_68_0 = stackOut_66_0;
+                            stackIn_68_0 = 1;
                             break L16;
                           }
                         }
@@ -342,12 +294,10 @@ final class iu extends at {
                       L19: {
                         af.field_b.a(true, 0, param3, param0 * param3 * 2);
                         if (var9 != af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb) {
-                          stackOut_60_0 = 0;
-                          stackIn_61_0 = stackOut_60_0;
+                          stackIn_61_0 = 0;
                           break L19;
                         } else {
-                          stackOut_59_0 = 1;
-                          stackIn_61_0 = stackOut_59_0;
+                          stackIn_61_0 = 1;
                           break L19;
                         }
                       }
@@ -431,12 +381,10 @@ final class iu extends at {
                   L26: {
                     af.field_b.a(true, 0, param3, param0 * param3 * 2);
                     if (var9 != af.field_b.field_vb.field_I + af.field_b.field_vb.field_rb) {
-                      stackOut_40_0 = 0;
-                      stackIn_41_0 = stackOut_40_0;
+                      stackIn_41_0 = 0;
                       break L26;
                     } else {
-                      stackOut_39_0 = 1;
-                      stackIn_41_0 = stackOut_39_0;
+                      stackIn_41_0 = 1;
                       break L26;
                     }
                   }
@@ -568,22 +516,12 @@ final class iu extends at {
 
     final static void a(int param0, vr param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -602,27 +540,19 @@ final class iu extends at {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("iu.E(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("iu.E(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L2;
             }
           }

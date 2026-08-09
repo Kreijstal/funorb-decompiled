@@ -26,8 +26,8 @@ final class am {
     }
 
     final static void b(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var2 = SteelSentinels.field_G;
         mg.a(jk.field_j, 7411, 5);
         mg.a(bj.field_b, 7411, 6);

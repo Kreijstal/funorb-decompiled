@@ -10,60 +10,34 @@ public final class Kickabout extends tu {
     public static int field_G;
 
     public final void a(int param0, boolean param1) {
-        boolean discarded$1 = false;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        pt var9 = null;
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_17_0 = 0;
-        js stackIn_28_0 = null;
-        int stackIn_28_1 = 0;
-        js stackIn_29_0 = null;
-        int stackIn_29_1 = 0;
         js stackIn_30_0 = null;
         int stackIn_30_1 = 0;
         js stackIn_31_0 = null;
         int stackIn_31_1 = 0;
         int stackIn_31_2 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_16_0 = 0;
-        js stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        js stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        js stackOut_29_0 = null;
-        int stackOut_29_1 = 0;
-        int stackOut_29_2 = 0;
-        js stackOut_30_0 = null;
-        int stackOut_30_1 = 0;
-        int stackOut_30_2 = 0;
+        boolean stackIn_59_0 = false;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        pt var8;
+        pt var9;
         L0: {
           var7 = field_G;
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param1) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -113,15 +87,13 @@ public final class Kickabout extends tu {
                 if (!um.field_e.f((byte) 29)) {
                   break L2;
                 } else {
-                  stackOut_15_0 = 1;
-                  stackIn_17_0 = stackOut_15_0;
+                  stackIn_17_0 = 1;
                   break L1;
                 }
               }
             }
           }
-          stackOut_16_0 = 0;
-          stackIn_17_0 = stackOut_16_0;
+          stackIn_17_0 = 0;
           break L1;
         }
         L6: {
@@ -129,7 +101,7 @@ public final class Kickabout extends tu {
             L8: {
               kw.b(stackIn_17_0 != 0, (byte) -116);
               re.b(param0 ^ -105);
-              discarded$1 = ((eh) ((Object) ma.field_t)).e(0);
+              ((eh) ((Object) ma.field_t)).e(0);
               if (um.field_e != null) {
                 break L8;
               } else {
@@ -167,40 +139,28 @@ public final class Kickabout extends tu {
         }
         L10: {
           L11: {
-            stackOut_27_0 = cq.field_h;
-            stackOut_27_1 = -96;
-            stackIn_30_0 = stackOut_27_0;
-            stackIn_30_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackIn_30_0 = cq.field_h;
+
+            stackIn_30_1 = -96;
+
             if (!this.field_L) {
               break L11;
             } else {
-              stackOut_28_0 = (js) ((Object) stackIn_28_0);
-              stackOut_28_1 = stackIn_28_1;
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
+              stackIn_30_0 = (js) ((Object) stackIn_30_0);
+
               if (null != ra.field_G) {
                 break L11;
               } else {
-                stackOut_29_0 = (js) ((Object) stackIn_29_0);
-                stackOut_29_1 = stackIn_29_1;
-                stackOut_29_2 = 1;
-                stackIn_31_0 = stackOut_29_0;
-                stackIn_31_1 = stackOut_29_1;
-                stackIn_31_2 = stackOut_29_2;
+                stackIn_31_0 = (js) ((Object) stackIn_30_0);
+                stackIn_31_1 = stackIn_30_1;
+                stackIn_31_2 = 1;
                 break L10;
               }
             }
           }
-          stackOut_30_0 = (js) ((Object) stackIn_30_0);
-          stackOut_30_1 = stackIn_30_1;
-          stackOut_30_2 = 0;
-          stackIn_31_0 = stackOut_30_0;
-          stackIn_31_1 = stackOut_30_1;
-          stackIn_31_2 = stackOut_30_2;
+          stackIn_31_0 = (js) ((Object) stackIn_30_0);
+          stackIn_31_1 = stackIn_30_1;
+          stackIn_31_2 = 0;
           break L10;
         }
         L12: {
@@ -260,130 +220,96 @@ public final class Kickabout extends tu {
           } else {
             var9 = (pt) ((Object) tu.field_E.field_g.g(24009));
             L16: while (true) {
-              if (var9 == null) {
-                var9 = (pt) ((Object) vd.field_a.g(param0 + 24034));
-                L17: while (true) {
-                  if (var9 == null) {
-                    L18: {
-                      if (!tu.field_E.field_m) {
-                        break L18;
-                      } else {
-                        gw.c(0);
-                        tu.field_E.field_m = false;
-                        break L18;
+              L17: {
+                if (var9 == null) {
+                  var8 = (pt) ((Object) vd.field_a.g(param0 + 24034));
+                  L18: while (true) {
+                    if (var8 == null) {
+                      stackIn_59_0 = tu.field_E.field_m;
+                      break L17;
+                    } else {
+                      var8.c((byte) -109);
+                      stackIn_59_0 = gi.a(140, var8);
+
+                      L19: {
+                        if (!stackIn_59_0) {
+                          break L19;
+                        } else {
+                          gu.a((byte) -25, var8, false);
+                          break L19;
+                        }
                       }
+                      var8 = (pt) ((Object) vd.field_a.c(33));
+                      continue L18;
                     }
-                    this.u(param0 ^ 23294);
-                    break L15;
-                  } else {
-                    L19: {
-                      var9.c((byte) -109);
-                      if (!gi.a(140, var9)) {
-                        break L19;
-                      } else {
-                        gu.a((byte) -25, var9, false);
-                        break L19;
-                      }
-                    }
-                    var9 = (pt) ((Object) vd.field_a.c(33));
-                    continue L17;
                   }
-                }
-              } else {
-                L20: {
+                } else {
                   var9.c((byte) -109);
-                  if (!gi.a(param0 ^ -149, var9)) {
-                    break L20;
-                  } else {
-                    gu.a((byte) -25, var9, true);
-                    break L20;
+                  stackIn_59_0 = gi.a(param0 ^ -149, var9);
+
+                  L20: {
+                    if (!stackIn_59_0) {
+                      break L20;
+                    } else {
+                      gu.a((byte) -25, var9, true);
+                      break L20;
+                    }
                   }
+                  var9 = (pt) ((Object) tu.field_E.field_g.c(33));
+                  continue L16;
                 }
-                var9 = (pt) ((Object) tu.field_E.field_g.c(33));
-                continue L16;
               }
+              L21: {
+                if (!stackIn_59_0) {
+                  break L21;
+                } else {
+                  gw.c(0);
+                  tu.field_E.field_m = false;
+                  break L21;
+                }
+              }
+              this.u(param0 ^ 23294);
+              break L15;
             }
           }
         }
-        L21: {
+        L22: {
           if (!la.a(100)) {
-            break L21;
+            break L22;
           } else {
             if (ws.field_f) {
               ql.a(31663);
               ws.field_f = false;
-              break L21;
+              break L22;
             } else {
-              break L21;
+              break L22;
             }
           }
         }
     }
 
     private final void u(int param0) {
-        ot var2 = null;
-        int var3 = 0;
-        Object stackIn_11_0 = null;
-        ot stackOut_10_0 = null;
-        ut stackOut_9_0 = null;
-        if (param0 == -23271) {
-          L0: {
-            if (lf.field_b == null) {
-              break L0;
-            } else {
-              if ("" != lf.field_b) {
-                if (-1 == (ak.a(cq.field_h, param0 + 23275) ^ -1)) {
-                  return;
-                } else {
-                  L1: {
-                    if (jm.field_g != null) {
-                      stackOut_10_0 = jm.field_g;
-                      stackIn_11_0 = stackOut_10_0;
-                      break L1;
-                    } else {
-                      stackOut_9_0 = sf.field_C;
-                      stackIn_11_0 = stackOut_9_0;
-                      break L1;
-                    }
-                  }
-                  L2: {
-                    var2 = (ot) ((Object) stackIn_11_0);
-                    var3 = -var2.field_o + 640 >> 807795265;
-                    if ((el.field_A ^ -1) > (var3 ^ -1)) {
-                      break L2;
-                    } else {
-                      if (var2.field_o + var3 < el.field_A) {
-                        break L2;
-                      } else {
-                        if (10 > n.field_m) {
-                          break L2;
-                        } else {
-                          if ((n.field_m ^ -1) >= (10 - -var2.field_v ^ -1)) {
-                            qd.a((byte) -67, lf.field_b);
-                            break L2;
-                          } else {
-                            break L2;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  return;
-                }
-              } else {
-                break L0;
-              }
+        if (param0 != -23271) {
+            return;
+        }
+        if (lf.field_b == null || "" == lf.field_b) {
+            return;
+        }
+        if (!(-1 != (ak.a(cq.field_h, param0 + 23275) ^ -1))) {
+            return;
+        }
+        ot var2 = jm.field_g == null ? (ot) ((Object) sf.field_C) : jm.field_g;
+        int var3 = -var2.field_o + 640 >> 807795265;
+        if ((el.field_A ^ -1) <= (var3 ^ -1) && var2.field_o + var3 >= el.field_A && 10 <= n.field_m) {
+            if (!((n.field_m ^ -1) < (10 - -var2.field_v ^ -1))) {
+                qd.a((byte) -67, lf.field_b);
             }
-          }
-          return;
-        } else {
-          return;
         }
     }
 
     final void a(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         L0: {
           var4 = field_G;
           kp.a(4, -120);
@@ -458,84 +384,31 @@ public final class Kickabout extends tu {
     }
 
     private final void w(int param0) {
-        int var3 = 0;
-        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        ot var7 = null;
-        Object stackIn_5_0 = null;
-        ot stackOut_4_0 = null;
-        ut stackOut_3_0 = null;
-        if (param0 >= 95) {
-          L0: {
-            if (null != jm.field_g) {
-              stackOut_4_0 = jm.field_g;
-              stackIn_5_0 = stackOut_4_0;
-              break L0;
-            } else {
-              stackOut_3_0 = sf.field_C;
-              stackIn_5_0 = stackOut_3_0;
-              break L0;
-            }
-          }
-          L1: {
-            var7 = (ot) ((Object) stackIn_5_0);
-            var3 = 640 - var7.field_o >> -546195231;
-            var4 = ak.a(cq.field_h, 4);
-            if (ra.field_G == null) {
-              break L1;
-            } else {
-              var5 = ak.a(ra.field_G, 4);
-              if (var4 > var5) {
+        if (param0 < 95) {
+            return;
+        }
+        ot var7 = null == jm.field_g ? (ot) ((Object) sf.field_C) : jm.field_g;
+        int var3 = 640 - var7.field_o >> -546195231;
+        int var4 = ak.a(cq.field_h, 4);
+        if (ra.field_G != null) {
+            var5 = ak.a(ra.field_G, 4);
+            if (var4 > var5 || var5 > var4) {
                 var6 = Math.min(256, (ce.field_I << 2124633513) / 24);
                 var4 = var4 + ((-var4 + var5) * var6 >> -1826280728);
-                break L1;
-              } else {
-                if (var5 <= var4) {
-                  break L1;
-                } else {
-                  var6 = Math.max(0, -256 + 2 * ((ce.field_I << 2140220136) / 24));
-                  var4 = var4 + ((-var4 + var5) * var6 >> 958509256);
-                  break L1;
-                }
-              }
             }
-          }
-          L2: {
-            if (256 != var4) {
-              break L2;
-            } else {
-              var7.c(var3, 10);
-              break L2;
-            }
-          }
-          L3: {
-            if (0 != var4) {
-              var7.b(var3, 10, var4);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          return;
-        } else {
-          return;
+        }
+        if (256 == var4) {
+            var7.c(var3, 10);
+        }
+        if (!(0 == var4)) {
+            var7.b(var3, 10, var4);
         }
     }
 
     public final boolean a(int param0, int param1, char param2) {
-        int fieldTemp$1 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        js var6 = null;
-        int var6_int = 0;
-        String[] var7_ref_String__ = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        String[] var10 = null;
-        String var11 = null;
-        hn var12 = null;
+        int fieldTemp$0 = 0;
         int stackIn_38_0 = 0;
         int stackIn_44_0 = 0;
         int stackIn_49_0 = 0;
@@ -551,60 +424,28 @@ public final class Kickabout extends tu {
         int stackIn_120_0 = 0;
         int stackIn_126_0 = 0;
         int stackIn_131_0 = 0;
-        int stackIn_149_0 = 0;
-        int stackIn_154_0 = 0;
-        int stackIn_161_0 = 0;
-        int stackIn_166_0 = 0;
-        int stackIn_172_0 = 0;
-        int stackIn_181_0 = 0;
-        int stackIn_190_0 = 0;
-        int stackIn_238_0 = 0;
-        int stackOut_114_0 = 0;
-        int stackOut_113_0 = 0;
-        int stackOut_125_0 = 0;
-        int stackOut_124_0 = 0;
-        int stackOut_130_0 = 0;
-        int stackOut_129_0 = 0;
-        int stackOut_119_0 = 0;
-        int stackOut_118_0 = 0;
-        int stackOut_108_0 = 0;
-        int stackOut_107_0 = 0;
-        int stackOut_80_0 = 0;
-        int stackOut_79_0 = 0;
-        int stackOut_91_0 = 0;
-        int stackOut_90_0 = 0;
-        int stackOut_96_0 = 0;
-        int stackOut_95_0 = 0;
-        int stackOut_85_0 = 0;
-        int stackOut_84_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_148_0 = 0;
-        int stackOut_147_0 = 0;
-        int stackOut_171_0 = 0;
-        int stackOut_170_0 = 0;
-        int stackOut_180_0 = 0;
-        int stackOut_179_0 = 0;
-        int stackOut_189_0 = 0;
-        int stackOut_188_0 = 0;
-        int stackOut_165_0 = 0;
-        int stackOut_164_0 = 0;
-        int stackOut_160_0 = 0;
-        int stackOut_159_0 = 0;
-        int stackOut_153_0 = 0;
-        int stackOut_152_0 = 0;
-        int stackOut_237_0 = 0;
-        boolean stackOut_236_0 = false;
+        boolean stackIn_140_0 = false;
+        int stackIn_146_0 = 0;
+        int stackIn_151_0 = 0;
+        int stackIn_156_0 = 0;
+        int stackIn_163_0 = 0;
+        int stackIn_168_0 = 0;
+        int stackIn_174_0 = 0;
+        int stackIn_183_0 = 0;
+        int stackIn_192_0 = 0;
+        int stackIn_240_0 = 0;
+        boolean stackOut_139_0;
+        int var4;
+        int var5;
+        int var6_int;
+        js var6;
+        String[] var7_ref_String__;
+        int var7;
+        int var8;
+        int var9;
+        String[] var10;
+        String var11;
+        hn var12;
         L0: {
           var9 = field_G;
           var4 = ne.field_G[82] ? 1 : 0;
@@ -651,487 +492,444 @@ public final class Kickabout extends tu {
                 L6: {
                   L7: {
                     L8: {
-                      if (var4 == 0) {
-                        break L8;
-                      } else {
-                        if (var5 == 0) {
-                          break L8;
+                      L9: {
+                        if (var4 == 0) {
+                          break L9;
                         } else {
-                          if (param1 == 51) {
-                            var11 = "The quick brown fox jumped over the lazy rabbit. Also this sentence is getting quite long with some long words that might not fit at end of a sentence/line but we shall see. Oooh double-barrel-ness, see how it deals with that.";
-                            var10 = og.a(var11, 100, (byte) -69);
-                            var7_ref_String__ = var10;
-                            if (var7_ref_String__ != null) {
-                              var8 = 0;
-                              L9: while (true) {
-                                if (var10.length <= var8) {
-                                  return true;
-                                } else {
-                                  System.out.println(var10[var8]);
-                                  var8++;
-                                  continue L9;
+                          if (var5 == 0) {
+                            break L9;
+                          } else {
+                            if (param1 == 51) {
+                              var11 = "The quick brown fox jumped over the lazy rabbit. Also this sentence is getting quite long with some long words that might not fit at end of a sentence/line but we shall see. Oooh double-barrel-ness, see how it deals with that.";
+                              var10 = og.a(var11, 100, (byte) -69);
+                              var7_ref_String__ = var10;
+                              if (var7_ref_String__ != null) {
+                                var8 = 0;
+                                L10: while (true) {
+                                  if (var10.length <= var8) {
+                                    return true;
+                                  } else {
+                                    System.out.println(var10[var8]);
+                                    var8++;
+                                    continue L10;
+                                  }
                                 }
+                              } else {
+                                return true;
                               }
                             } else {
-                              return true;
-                            }
-                          } else {
-                            if (param2 == 96) {
-                              break L7;
-                            } else {
-                              gd.field_a = false;
-                              return true;
+                              if (param2 == 96) {
+                                break L8;
+                              } else {
+                                gd.field_a = false;
+                                return true;
+                              }
                             }
                           }
                         }
                       }
-                    }
-                    if (param2 == 96) {
-                      r.field_d = new kd(qo.d((byte) 26), pb.field_C, oo.field_c);
-                      oa.a(false, r.field_d);
-                      return r.field_d.a(11516, param1, param2);
-                    } else {
-                      if (-90 != (param1 ^ -1)) {
-                        if (var4 == 0) {
-                          if (var4 != 0) {
-                            if (16 != param1) {
-                              if ((param1 ^ -1) == -18) {
-                                L10: {
-                                  if (hr.field_k) {
-                                    stackOut_114_0 = 0;
-                                    stackIn_115_0 = stackOut_114_0;
-                                    break L10;
-                                  } else {
-                                    stackOut_113_0 = 1;
-                                    stackIn_115_0 = stackOut_113_0;
-                                    break L10;
-                                  }
-                                }
-                                hr.field_k = stackIn_115_0 != 0;
-                                return true;
-                              } else {
-                                if ((param1 ^ -1) != -19) {
-                                  if ((param1 ^ -1) == -20) {
-                                    L11: {
-                                      if (th.field_d) {
-                                        stackOut_125_0 = 0;
-                                        stackIn_126_0 = stackOut_125_0;
-                                        break L11;
-                                      } else {
-                                        stackOut_124_0 = 1;
-                                        stackIn_126_0 = stackOut_124_0;
-                                        break L11;
-                                      }
-                                    }
-                                    th.field_d = stackIn_126_0 != 0;
-                                    return true;
-                                  } else {
-                                    if (-21 != (param1 ^ -1)) {
-                                      if ((param1 ^ -1) != -22) {
-                                        break L5;
-                                      } else {
-                                        var6_int = 0;
-                                        L12: while (true) {
-                                          if (tu.field_E.field_J.length <= var6_int) {
-                                            break L6;
-                                          } else {
-                                            tu.field_E.field_J[var6_int] = true;
-                                            var6_int++;
-                                            continue L12;
-                                          }
-                                        }
-                                      }
+                      if (param2 == 96) {
+                        r.field_d = new kd(qo.d((byte) 26), pb.field_C, oo.field_c);
+                        oa.a(false, r.field_d);
+                        return r.field_d.a(11516, param1, param2);
+                      } else {
+                        if (-90 != (param1 ^ -1)) {
+                          if (var4 == 0) {
+                            if (var4 != 0) {
+                              if (16 != param1) {
+                                if ((param1 ^ -1) == -18) {
+                                  L11: {
+                                    if (hr.field_k) {
+                                      stackIn_115_0 = 0;
+                                      break L11;
                                     } else {
-                                      L13: {
-                                        if (wl.field_g) {
-                                          stackOut_130_0 = 0;
-                                          stackIn_131_0 = stackOut_130_0;
-                                          break L13;
-                                        } else {
-                                          stackOut_129_0 = 1;
-                                          stackIn_131_0 = stackOut_129_0;
-                                          break L13;
-                                        }
-                                      }
-                                      wl.field_g = stackIn_131_0 != 0;
-                                      return true;
+                                      stackIn_115_0 = 1;
+                                      break L11;
                                     }
                                   }
-                                } else {
-                                  L14: {
-                                    if (wl.field_o) {
-                                      stackOut_119_0 = 0;
-                                      stackIn_120_0 = stackOut_119_0;
-                                      break L14;
-                                    } else {
-                                      stackOut_118_0 = 1;
-                                      stackIn_120_0 = stackOut_118_0;
-                                      break L14;
-                                    }
-                                  }
-                                  wl.field_o = stackIn_120_0 != 0;
+                                  hr.field_k = stackIn_115_0 != 0;
                                   return true;
-                                }
-                              }
-                            } else {
-                              L15: {
-                                if (gd.field_a) {
-                                  stackOut_108_0 = 0;
-                                  stackIn_109_0 = stackOut_108_0;
-                                  break L15;
                                 } else {
-                                  stackOut_107_0 = 1;
-                                  stackIn_109_0 = stackOut_107_0;
-                                  break L15;
-                                }
-                              }
-                              gd.field_a = stackIn_109_0 != 0;
-                              return true;
-                            }
-                          } else {
-                            break L4;
-                          }
-                        } else {
-                          if (var5 != 0) {
-                            if ((param1 ^ -1) != -2) {
-                              if (2 == param1) {
-                                nm.a(rm.field_C, -76, true, ih.field_c);
-                                gs.a(0);
-                                return true;
-                              } else {
-                                if (var4 != 0) {
-                                  if (16 != param1) {
-                                    if ((param1 ^ -1) == -18) {
-                                      L16: {
-                                        if (hr.field_k) {
-                                          stackOut_80_0 = 0;
-                                          stackIn_81_0 = stackOut_80_0;
-                                          break L16;
+                                  if ((param1 ^ -1) != -19) {
+                                    if ((param1 ^ -1) == -20) {
+                                      L12: {
+                                        if (th.field_d) {
+                                          stackIn_126_0 = 0;
+                                          break L12;
                                         } else {
-                                          stackOut_79_0 = 1;
-                                          stackIn_81_0 = stackOut_79_0;
-                                          break L16;
+                                          stackIn_126_0 = 1;
+                                          break L12;
                                         }
                                       }
-                                      hr.field_k = stackIn_81_0 != 0;
+                                      th.field_d = stackIn_126_0 != 0;
                                       return true;
                                     } else {
-                                      if ((param1 ^ -1) != -19) {
-                                        if ((param1 ^ -1) == -20) {
-                                          L17: {
-                                            if (th.field_d) {
-                                              stackOut_91_0 = 0;
-                                              stackIn_92_0 = stackOut_91_0;
-                                              break L17;
-                                            } else {
-                                              stackOut_90_0 = 1;
-                                              stackIn_92_0 = stackOut_90_0;
-                                              break L17;
-                                            }
-                                          }
-                                          th.field_d = stackIn_92_0 != 0;
-                                          return true;
+                                      if (-21 != (param1 ^ -1)) {
+                                        if ((param1 ^ -1) != -22) {
+                                          break L6;
                                         } else {
-                                          if (-21 != (param1 ^ -1)) {
-                                            if ((param1 ^ -1) != -22) {
-                                              break L5;
+                                          var6_int = 0;
+                                          L13: while (true) {
+                                            if (tu.field_E.field_J.length <= var6_int) {
+                                              break L7;
                                             } else {
-                                              var6_int = 0;
-                                              L18: while (true) {
-                                                if (tu.field_E.field_J.length <= var6_int) {
-                                                  break L6;
-                                                } else {
-                                                  tu.field_E.field_J[var6_int] = true;
-                                                  var6_int++;
-                                                  continue L18;
-                                                }
-                                              }
+                                              tu.field_E.field_J[var6_int] = true;
+                                              var6_int++;
+                                              continue L13;
                                             }
-                                          } else {
-                                            L19: {
-                                              if (wl.field_g) {
-                                                stackOut_96_0 = 0;
-                                                stackIn_97_0 = stackOut_96_0;
-                                                break L19;
-                                              } else {
-                                                stackOut_95_0 = 1;
-                                                stackIn_97_0 = stackOut_95_0;
-                                                break L19;
-                                              }
-                                            }
-                                            wl.field_g = stackIn_97_0 != 0;
-                                            return true;
                                           }
                                         }
                                       } else {
-                                        L20: {
-                                          if (wl.field_o) {
-                                            stackOut_85_0 = 0;
-                                            stackIn_86_0 = stackOut_85_0;
-                                            break L20;
+                                        L14: {
+                                          if (wl.field_g) {
+                                            stackIn_131_0 = 0;
+                                            break L14;
                                           } else {
-                                            stackOut_84_0 = 1;
-                                            stackIn_86_0 = stackOut_84_0;
-                                            break L20;
+                                            stackIn_131_0 = 1;
+                                            break L14;
                                           }
                                         }
-                                        wl.field_o = stackIn_86_0 != 0;
+                                        wl.field_g = stackIn_131_0 != 0;
                                         return true;
                                       }
                                     }
                                   } else {
-                                    L21: {
-                                      if (gd.field_a) {
-                                        stackOut_74_0 = 0;
-                                        stackIn_75_0 = stackOut_74_0;
-                                        break L21;
+                                    L15: {
+                                      if (wl.field_o) {
+                                        stackIn_120_0 = 0;
+                                        break L15;
                                       } else {
-                                        stackOut_73_0 = 1;
-                                        stackIn_75_0 = stackOut_73_0;
-                                        break L21;
+                                        stackIn_120_0 = 1;
+                                        break L15;
                                       }
                                     }
-                                    gd.field_a = stackIn_75_0 != 0;
+                                    wl.field_o = stackIn_120_0 != 0;
                                     return true;
                                   }
-                                } else {
-                                  break L4;
                                 }
+                              } else {
+                                L16: {
+                                  if (gd.field_a) {
+                                    stackIn_109_0 = 0;
+                                    break L16;
+                                  } else {
+                                    stackIn_109_0 = 1;
+                                    break L16;
+                                  }
+                                }
+                                gd.field_a = stackIn_109_0 != 0;
+                                return true;
                               }
-                            } else {
-                              nm.a(rm.field_C, param0 + -11592, false, ih.field_c);
-                              gs.a(0);
-                              return true;
-                            }
-                          } else {
-                            if (var4 != 0) {
-                              break L7;
                             } else {
                               break L4;
                             }
-                          }
-                        }
-                      } else {
-                        System.gc();
-                        return true;
-                      }
-                    }
-                  }
-                  if (16 != param1) {
-                    if ((param1 ^ -1) == -18) {
-                      L22: {
-                        if (hr.field_k) {
-                          stackOut_43_0 = 0;
-                          stackIn_44_0 = stackOut_43_0;
-                          break L22;
-                        } else {
-                          stackOut_42_0 = 1;
-                          stackIn_44_0 = stackOut_42_0;
-                          break L22;
-                        }
-                      }
-                      hr.field_k = stackIn_44_0 != 0;
-                      return true;
-                    } else {
-                      if ((param1 ^ -1) != -19) {
-                        if ((param1 ^ -1) == -20) {
-                          L23: {
-                            if (th.field_d) {
-                              stackOut_54_0 = 0;
-                              stackIn_55_0 = stackOut_54_0;
-                              break L23;
+                          } else {
+                            if (var5 != 0) {
+                              if ((param1 ^ -1) != -2) {
+                                if (2 == param1) {
+                                  nm.a(rm.field_C, -76, true, ih.field_c);
+                                  gs.a(0);
+                                  return true;
+                                } else {
+                                  if (var4 != 0) {
+                                    if (16 != param1) {
+                                      if ((param1 ^ -1) == -18) {
+                                        L17: {
+                                          if (hr.field_k) {
+                                            stackIn_81_0 = 0;
+                                            break L17;
+                                          } else {
+                                            stackIn_81_0 = 1;
+                                            break L17;
+                                          }
+                                        }
+                                        hr.field_k = stackIn_81_0 != 0;
+                                        return true;
+                                      } else {
+                                        if ((param1 ^ -1) != -19) {
+                                          if ((param1 ^ -1) == -20) {
+                                            L18: {
+                                              if (th.field_d) {
+                                                stackIn_92_0 = 0;
+                                                break L18;
+                                              } else {
+                                                stackIn_92_0 = 1;
+                                                break L18;
+                                              }
+                                            }
+                                            th.field_d = stackIn_92_0 != 0;
+                                            return true;
+                                          } else {
+                                            if (-21 != (param1 ^ -1)) {
+                                              if ((param1 ^ -1) != -22) {
+                                                break L6;
+                                              } else {
+                                                var6_int = 0;
+                                                L19: while (true) {
+                                                  if (tu.field_E.field_J.length <= var6_int) {
+                                                    break L7;
+                                                  } else {
+                                                    tu.field_E.field_J[var6_int] = true;
+                                                    var6_int++;
+                                                    continue L19;
+                                                  }
+                                                }
+                                              }
+                                            } else {
+                                              L20: {
+                                                if (wl.field_g) {
+                                                  stackIn_97_0 = 0;
+                                                  break L20;
+                                                } else {
+                                                  stackIn_97_0 = 1;
+                                                  break L20;
+                                                }
+                                              }
+                                              wl.field_g = stackIn_97_0 != 0;
+                                              return true;
+                                            }
+                                          }
+                                        } else {
+                                          L21: {
+                                            if (wl.field_o) {
+                                              stackIn_86_0 = 0;
+                                              break L21;
+                                            } else {
+                                              stackIn_86_0 = 1;
+                                              break L21;
+                                            }
+                                          }
+                                          wl.field_o = stackIn_86_0 != 0;
+                                          return true;
+                                        }
+                                      }
+                                    } else {
+                                      L22: {
+                                        if (gd.field_a) {
+                                          stackIn_75_0 = 0;
+                                          break L22;
+                                        } else {
+                                          stackIn_75_0 = 1;
+                                          break L22;
+                                        }
+                                      }
+                                      gd.field_a = stackIn_75_0 != 0;
+                                      return true;
+                                    }
+                                  } else {
+                                    break L4;
+                                  }
+                                }
+                              } else {
+                                nm.a(rm.field_C, param0 + -11592, false, ih.field_c);
+                                gs.a(0);
+                                return true;
+                              }
                             } else {
-                              stackOut_53_0 = 1;
-                              stackIn_55_0 = stackOut_53_0;
-                              break L23;
+                              if (var4 != 0) {
+                                break L8;
+                              } else {
+                                break L4;
+                              }
                             }
                           }
-                          th.field_d = stackIn_55_0 != 0;
-                          return true;
                         } else {
-                          if (-21 != (param1 ^ -1)) {
-                            if ((param1 ^ -1) != -22) {
-                              break L5;
-                            } else {
-                              var6_int = 0;
-                              L24: while (true) {
-                                if (tu.field_E.field_J.length <= var6_int) {
-                                  break L6;
-                                } else {
-                                  tu.field_E.field_J[var6_int] = true;
-                                  var6_int++;
-                                  continue L24;
+                          System.gc();
+                          return true;
+                        }
+                      }
+                    }
+                    if (16 != param1) {
+                      if ((param1 ^ -1) == -18) {
+                        L23: {
+                          if (hr.field_k) {
+                            stackIn_44_0 = 0;
+                            break L23;
+                          } else {
+                            stackIn_44_0 = 1;
+                            break L23;
+                          }
+                        }
+                        hr.field_k = stackIn_44_0 != 0;
+                        return true;
+                      } else {
+                        if ((param1 ^ -1) != -19) {
+                          if ((param1 ^ -1) == -20) {
+                            L24: {
+                              if (th.field_d) {
+                                stackIn_55_0 = 0;
+                                break L24;
+                              } else {
+                                stackIn_55_0 = 1;
+                                break L24;
+                              }
+                            }
+                            th.field_d = stackIn_55_0 != 0;
+                            return true;
+                          } else {
+                            if (-21 != (param1 ^ -1)) {
+                              if ((param1 ^ -1) != -22) {
+                                break L6;
+                              } else {
+                                var6_int = 0;
+                                L25: while (true) {
+                                  if (tu.field_E.field_J.length <= var6_int) {
+                                    break L7;
+                                  } else {
+                                    tu.field_E.field_J[var6_int] = true;
+                                    var6_int++;
+                                    continue L25;
+                                  }
                                 }
                               }
-                            }
-                          } else {
-                            L25: {
-                              if (wl.field_g) {
-                                stackOut_59_0 = 0;
-                                stackIn_60_0 = stackOut_59_0;
-                                break L25;
-                              } else {
-                                stackOut_58_0 = 1;
-                                stackIn_60_0 = stackOut_58_0;
-                                break L25;
+                            } else {
+                              L26: {
+                                if (wl.field_g) {
+                                  stackIn_60_0 = 0;
+                                  break L26;
+                                } else {
+                                  stackIn_60_0 = 1;
+                                  break L26;
+                                }
                               }
+                              wl.field_g = stackIn_60_0 != 0;
+                              return true;
                             }
-                            wl.field_g = stackIn_60_0 != 0;
-                            return true;
                           }
-                        }
-                      } else {
-                        L26: {
-                          if (wl.field_o) {
-                            stackOut_48_0 = 0;
-                            stackIn_49_0 = stackOut_48_0;
-                            break L26;
-                          } else {
-                            stackOut_47_0 = 1;
-                            stackIn_49_0 = stackOut_47_0;
-                            break L26;
-                          }
-                        }
-                        wl.field_o = stackIn_49_0 != 0;
-                        return true;
-                      }
-                    }
-                  } else {
-                    L27: {
-                      if (gd.field_a) {
-                        stackOut_37_0 = 0;
-                        stackIn_38_0 = stackOut_37_0;
-                        break L27;
-                      } else {
-                        stackOut_36_0 = 1;
-                        stackIn_38_0 = stackOut_36_0;
-                        break L27;
-                      }
-                    }
-                    gd.field_a = stackIn_38_0 != 0;
-                    return true;
-                  }
-                }
-                if (la.a(100)) {
-                  break L5;
-                } else {
-                  var6_int = 0;
-                  var7 = 0;
-                  L28: while (true) {
-                    if (var7 >= tu.field_E.field_J.length) {
-                      or.field_d.b(69, (byte) -54);
-                      or.field_d.b(-88, var6_int);
-                      break L5;
-                    } else {
-                      L29: {
-                        if (tu.field_E.field_J[var7]) {
-                          var6_int = var6_int | 1 << var7;
-                          break L29;
                         } else {
-                          break L29;
+                          L27: {
+                            if (wl.field_o) {
+                              stackIn_49_0 = 0;
+                              break L27;
+                            } else {
+                              stackIn_49_0 = 1;
+                              break L27;
+                            }
+                          }
+                          wl.field_o = stackIn_49_0 != 0;
+                          return true;
                         }
                       }
-                      var7++;
-                      continue L28;
+                    } else {
+                      L28: {
+                        if (gd.field_a) {
+                          stackIn_38_0 = 0;
+                          break L28;
+                        } else {
+                          stackIn_38_0 = 1;
+                          break L28;
+                        }
+                      }
+                      gd.field_a = stackIn_38_0 != 0;
+                      return true;
+                    }
+                  }
+                  if (la.a(100)) {
+                    break L6;
+                  } else {
+                    var6_int = 0;
+                    var7 = 0;
+                    L29: while (true) {
+                      if (var7 >= tu.field_E.field_J.length) {
+                        or.field_d.b(69, (byte) -54);
+                        or.field_d.b(-88, var6_int);
+                        break L6;
+                      } else {
+                        stackOut_139_0 = tu.field_E.field_J[var7];
+                        stackIn_146_0 = stackOut_139_0 ? 1 : 0;
+                        stackIn_140_0 = stackOut_139_0;
+                        L30: {
+                          if (stackIn_140_0) {
+                            var6_int = var6_int | 1 << var7;
+                            break L30;
+                          } else {
+                            break L30;
+                          }
+                        }
+                        var7++;
+                        continue L29;
+                      }
                     }
                   }
                 }
+                stackIn_146_0 = -23;
+                break L5;
               }
-              if (-23 == (param1 ^ -1)) {
-                L30: {
+              if (stackIn_146_0 == (param1 ^ -1)) {
+                L31: {
                   if (gk.field_e) {
-                    stackOut_148_0 = 0;
-                    stackIn_149_0 = stackOut_148_0;
-                    break L30;
+                    stackIn_151_0 = 0;
+                    break L31;
                   } else {
-                    stackOut_147_0 = 1;
-                    stackIn_149_0 = stackOut_147_0;
-                    break L30;
+                    stackIn_151_0 = 1;
+                    break L31;
                   }
                 }
-                gk.field_e = stackIn_149_0 != 0;
+                gk.field_e = stackIn_151_0 != 0;
                 return true;
               } else {
                 if (param1 != 23) {
                   if (-25 != (param1 ^ -1)) {
                     if (param1 != 25) {
                       if (26 == param1) {
-                        L31: {
+                        L32: {
                           if (gs.field_g) {
-                            stackOut_171_0 = 0;
-                            stackIn_172_0 = stackOut_171_0;
-                            break L31;
+                            stackIn_174_0 = 0;
+                            break L32;
                           } else {
-                            stackOut_170_0 = 1;
-                            stackIn_172_0 = stackOut_170_0;
-                            break L31;
+                            stackIn_174_0 = 1;
+                            break L32;
                           }
                         }
-                        gs.field_g = stackIn_172_0 != 0;
+                        gs.field_g = stackIn_174_0 != 0;
                         return true;
                       } else {
                         if (27 == param1) {
-                          fieldTemp$1 = fa.field_j + 1;
+                          fieldTemp$0 = fa.field_j + 1;
                           fa.field_j = fa.field_j + 1;
-                          fa.field_j = fieldTemp$1 & 3;
+                          fa.field_j = fieldTemp$0 & 3;
                           return true;
                         } else {
                           if (85 == param1) {
-                            L32: {
+                            L33: {
                               if (pb.field_B) {
-                                stackOut_180_0 = 0;
-                                stackIn_181_0 = stackOut_180_0;
-                                break L32;
+                                stackIn_183_0 = 0;
+                                break L33;
                               } else {
-                                stackOut_179_0 = 1;
-                                stackIn_181_0 = stackOut_179_0;
-                                break L32;
+                                stackIn_183_0 = 1;
+                                break L33;
                               }
                             }
-                            pb.field_B = stackIn_181_0 != 0;
+                            pb.field_B = stackIn_183_0 != 0;
                             return true;
                           } else {
-                            L33: {
+                            L34: {
                               if (35 == param1) {
                                 lr.b((byte) -116);
-                                break L33;
+                                break L34;
                               } else {
-                                break L33;
+                                break L34;
                               }
                             }
                             if (-40 == (param1 ^ -1)) {
-                              L34: {
+                              L35: {
                                 if (pc.field_e) {
-                                  stackOut_189_0 = 0;
-                                  stackIn_190_0 = stackOut_189_0;
-                                  break L34;
+                                  stackIn_192_0 = 0;
+                                  break L35;
                                 } else {
-                                  stackOut_188_0 = 1;
-                                  stackIn_190_0 = stackOut_188_0;
-                                  break L34;
+                                  stackIn_192_0 = 1;
+                                  break L35;
                                 }
                               }
-                              pc.field_e = stackIn_190_0 != 0;
+                              pc.field_e = stackIn_192_0 != 0;
                               return true;
                             } else {
-                              L35: {
+                              L36: {
                                 if ((param1 ^ -1) != -41) {
-                                  break L35;
+                                  break L36;
                                 } else {
                                   if (!la.a(param0 ^ 11416)) {
                                     or.field_d.b(85, (byte) 112);
-                                    return true;
-                                  } else {
-                                    break L35;
-                                  }
-                                }
-                              }
-                              L36: {
-                                if (-42 != (param1 ^ -1)) {
-                                  break L36;
-                                } else {
-                                  if (!la.a(100)) {
-                                    or.field_d.b(80, (byte) 114);
                                     return true;
                                   } else {
                                     break L36;
@@ -1139,8 +937,20 @@ public final class Kickabout extends tu {
                                 }
                               }
                               L37: {
-                                if ((param1 ^ -1) != -57) {
+                                if (-42 != (param1 ^ -1)) {
                                   break L37;
+                                } else {
+                                  if (!la.a(100)) {
+                                    or.field_d.b(80, (byte) 114);
+                                    return true;
+                                  } else {
+                                    break L37;
+                                  }
+                                }
+                              }
+                              L38: {
+                                if ((param1 ^ -1) != -57) {
+                                  break L38;
                                 } else {
                                   if (!la.a(100)) {
                                     or.field_d.b(81, (byte) 107);
@@ -1152,7 +962,7 @@ public final class Kickabout extends tu {
                                     or.field_d.d(or.field_d.field_n + -var6_int, 62);
                                     return true;
                                   } else {
-                                    break L37;
+                                    break L38;
                                   }
                                 }
                               }
@@ -1186,48 +996,42 @@ public final class Kickabout extends tu {
                         }
                       }
                     } else {
-                      L38: {
+                      L39: {
                         if (ka.field_b) {
-                          stackOut_165_0 = 0;
-                          stackIn_166_0 = stackOut_165_0;
-                          break L38;
+                          stackIn_168_0 = 0;
+                          break L39;
                         } else {
-                          stackOut_164_0 = 1;
-                          stackIn_166_0 = stackOut_164_0;
-                          break L38;
+                          stackIn_168_0 = 1;
+                          break L39;
                         }
                       }
-                      ka.field_b = stackIn_166_0 != 0;
+                      ka.field_b = stackIn_168_0 != 0;
                       return true;
                     }
                   } else {
-                    L39: {
+                    L40: {
                       if (pq.field_K) {
-                        stackOut_160_0 = 0;
-                        stackIn_161_0 = stackOut_160_0;
-                        break L39;
+                        stackIn_163_0 = 0;
+                        break L40;
                       } else {
-                        stackOut_159_0 = 1;
-                        stackIn_161_0 = stackOut_159_0;
-                        break L39;
+                        stackIn_163_0 = 1;
+                        break L40;
                       }
                     }
-                    pq.field_K = stackIn_161_0 != 0;
+                    pq.field_K = stackIn_163_0 != 0;
                     return true;
                   }
                 } else {
-                  L40: {
+                  L41: {
                     if (wp.field_f) {
-                      stackOut_153_0 = 0;
-                      stackIn_154_0 = stackOut_153_0;
-                      break L40;
+                      stackIn_156_0 = 0;
+                      break L41;
                     } else {
-                      stackOut_152_0 = 1;
-                      stackIn_154_0 = stackOut_152_0;
-                      break L40;
+                      stackIn_156_0 = 1;
+                      break L41;
                     }
                   }
-                  wp.field_f = stackIn_154_0 != 0;
+                  wp.field_f = stackIn_156_0 != 0;
                   if (null != um.field_e) {
                     um.field_e.a(-109);
                     return true;
@@ -1237,7 +1041,7 @@ public final class Kickabout extends tu {
                 }
               }
             }
-            L41: {
+            L42: {
               if (var5 != 0) {
                 if ((param1 ^ -1) == -2) {
                   nm.a(rm.field_C, -76, vi.field_n, 0);
@@ -1250,7 +1054,7 @@ public final class Kickabout extends tu {
                     return true;
                   } else {
                     if ((param1 ^ -1) != -4) {
-                      break L41;
+                      break L42;
                     } else {
                       nm.a(rm.field_C, param0 ^ -11448, vi.field_n, 2);
                       gs.a(0);
@@ -1259,7 +1063,7 @@ public final class Kickabout extends tu {
                   }
                 }
               } else {
-                break L41;
+                break L42;
               }
             }
             if (87 == param1) {
@@ -1279,64 +1083,54 @@ public final class Kickabout extends tu {
         }
         var6 = cq.field_h;
         if (param0 == 11516) {
-          L42: {
+          L43: {
             if (null == ra.field_G) {
-              break L42;
+              break L43;
             } else {
               var6 = ra.field_G;
-              break L42;
+              break L43;
             }
           }
-          L43: {
+          L44: {
             if (var6 == null) {
-              stackOut_237_0 = 0;
-              stackIn_238_0 = stackOut_237_0;
-              break L43;
+              stackIn_240_0 = 0;
+              break L44;
             } else {
-              stackOut_236_0 = var6.a(param1, -17, param2);
-              stackIn_238_0 = stackOut_236_0 ? 1 : 0;
-              break L43;
+              stackIn_240_0 = var6.a(param1, -17, param2) ? 1 : 0;
+              break L44;
             }
           }
-          return stackIn_238_0 != 0;
+          return stackIn_240_0 != 0;
         } else {
           return true;
         }
     }
 
     private final void v(int param0) {
-        int var2 = 0;
-        int var3 = 0;
         on.a(0, 300, 640, 87, 0, 190);
-        var2 = (int)(250.0f * ga.field_R / 100.0f);
-        var3 = var2 + 196;
+        int var2 = (int)(250.0f * ga.field_R / 100.0f);
+        int var3 = var2 + 196;
         un.field_d.d(vo.a((byte) -18, mc.field_e, new String[]{h.field_b[ih.field_c][rm.field_C].toUpperCase()}), 320, 332, 16777215, 0);
         on.f(193, 348, 254, 19, 8, 268435455);
-        if (param0 == 81) {
-          L0: {
-            if ((var2 ^ -1) < -17) {
-              on.i(195, 350, var2, 15, 6, 268435455);
-              break L0;
-            } else {
-              pt.a((var2 >> -826875391) + 195, -22914, 0, 480, 0);
-              on.i(195, 350, 250, 15, 6, 268435455);
-              ta.e(117);
-              pt.a(640, -22914, (var2 >> 537942305) + 195, 480, 0);
-              on.i(-250 + (var2 + 195), 350, 250, 15, 6, 268435455);
-              ta.e(122);
-              break L0;
-            }
-          }
-          pt.a(640, -22914, var3, 480, 0);
-          q.field_d.d(mf.field_Db, 320, 362, 16777215, -1);
-          ta.e(126);
-          pt.a(var3, -22914, 0, 480, 0);
-          q.field_d.d(mf.field_Db, 320, 362, 65793, -1);
-          ta.e(param0 ^ 39);
-          return;
-        } else {
-          return;
+        if (param0 != 81) {
+            return;
         }
+        if ((var2 ^ -1) >= -17) {
+            pt.a((var2 >> -826875391) + 195, -22914, 0, 480, 0);
+            on.i(195, 350, 250, 15, 6, 268435455);
+            ta.e(117);
+            pt.a(640, -22914, (var2 >> 537942305) + 195, 480, 0);
+            on.i(-250 + (var2 + 195), 350, 250, 15, 6, 268435455);
+            ta.e(122);
+        } else {
+            on.i(195, 350, var2, 15, 6, 268435455);
+        }
+        pt.a(640, -22914, var3, 480, 0);
+        q.field_d.d(mf.field_Db, 320, 362, 16777215, -1);
+        ta.e(126);
+        pt.a(var3, -22914, 0, 480, 0);
+        q.field_d.d(mf.field_Db, 320, 362, 65793, -1);
+        ta.e(param0 ^ 39);
     }
 
     public Kickabout() {
@@ -1346,8 +1140,15 @@ public final class Kickabout extends tu {
     }
 
     final static void t(int param0) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int stackIn_11_0 = 0;
+        int[] stackIn_21_0 = null;
+        int stackIn_21_1 = 0;
+        int[] stackIn_22_0 = null;
+        int stackIn_22_1 = 0;
+        int stackIn_22_2 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3_int = 0;
@@ -1360,22 +1161,6 @@ public final class Kickabout extends tu {
         int var9 = 0;
         int var10 = 0;
         ot var11 = null;
-        int[] stackIn_18_0 = null;
-        int stackIn_18_1 = 0;
-        int[] stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
-        int[] stackIn_20_0 = null;
-        int stackIn_20_1 = 0;
-        int stackIn_20_2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int[] stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        int[] stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        int stackOut_19_2 = 0;
-        int[] stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int stackOut_18_2 = 0;
         var9 = field_G;
         try {
           L0: {
@@ -1398,66 +1183,63 @@ public final class Kickabout extends tu {
                 var4 = var10;
                 var5 = 0;
                 L3: while (true) {
-                  if ((((ut) ((Object) var3)).field_v ^ -1) >= (var5 ^ -1)) {
-                    po.field_h = new ut(((ut) ((Object) var3)).field_o, ((ut) ((Object) var3)).field_v);
-                    break L0;
-                  } else {
-                    var6 = 0;
-                    var7 = 0;
-                    var8 = 0;
-                    L4: while (true) {
-                      if ((var8 ^ -1) <= (((ut) ((Object) var3)).field_o ^ -1)) {
-                        var5++;
-                        continue L3;
-                      } else {
-                        L5: {
-                          if (var6 != 0) {
-                            break L5;
-                          } else {
-                            if ((((ut) ((Object) var3)).field_y[var10] & -16777216) == 0) {
-                              break L5;
+                  stackIn_11_0 = ((ut) ((Object) var3)).field_v ^ -1;
+                  L4: while (true) {
+                    if (stackIn_11_0 >= (var5 ^ -1)) {
+                      po.field_h = new ut(((ut) ((Object) var3)).field_o, ((ut) ((Object) var3)).field_v);
+                      break L0;
+                    } else {
+                      var6 = 0;
+                      var7 = 0;
+                      var8 = 0;
+                      L5: while (true) {
+                        if ((var8 ^ -1) <= (((ut) ((Object) var3)).field_o ^ -1)) {
+                          var5++;
+                          continue L3;
+                        } else {
+                          stackIn_11_0 = var6;
+
+                          L6: {
+                            if (stackIn_11_0 != 0) {
+                              break L6;
                             } else {
-                              incrementValue$2 = var7;
-                              var7++;
-                              if (5 >= incrementValue$2) {
-                                break L5;
+                              if ((((ut) ((Object) var3)).field_y[var10] & -16777216) == 0) {
+                                break L6;
                               } else {
-                                var6 = 1;
-                                break L5;
+                                incrementValue$0 = var7;
+                                var7++;
+                                if (5 >= incrementValue$0) {
+                                  break L6;
+                                } else {
+                                  var6 = 1;
+                                  break L6;
+                                }
                               }
                             }
                           }
-                        }
-                        L6: {
-                          incrementValue$3 = var10;
-                          var10++;
-                          stackOut_17_0 = vq.field_d.field_y;
-                          stackOut_17_1 = incrementValue$3;
-                          stackIn_19_0 = stackOut_17_0;
-                          stackIn_19_1 = stackOut_17_1;
-                          stackIn_18_0 = stackOut_17_0;
-                          stackIn_18_1 = stackOut_17_1;
-                          if (var6 != 0) {
-                            stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
-                            stackOut_19_1 = stackIn_19_1;
-                            stackOut_19_2 = -1;
-                            stackIn_20_0 = stackOut_19_0;
-                            stackIn_20_1 = stackOut_19_1;
-                            stackIn_20_2 = stackOut_19_2;
-                            break L6;
-                          } else {
-                            stackOut_18_0 = (int[]) ((Object) stackIn_18_0);
-                            stackOut_18_1 = stackIn_18_1;
-                            stackOut_18_2 = 0;
-                            stackIn_20_0 = stackOut_18_0;
-                            stackIn_20_1 = stackOut_18_1;
-                            stackIn_20_2 = stackOut_18_2;
-                            break L6;
+                          L7: {
+                            incrementValue$1 = var10;
+                            var10++;
+                            stackIn_21_0 = vq.field_d.field_y;
+
+                            stackIn_21_1 = incrementValue$1;
+
+                            if (var6 != 0) {
+                              stackIn_22_0 = (int[]) ((Object) stackIn_21_0);
+                              stackIn_22_1 = stackIn_21_1;
+                              stackIn_22_2 = -1;
+                              break L7;
+                            } else {
+                              stackIn_22_0 = (int[]) ((Object) stackIn_21_0);
+                              stackIn_22_1 = stackIn_21_1;
+                              stackIn_22_2 = 0;
+                              break L7;
+                            }
                           }
+                          stackIn_22_0[stackIn_22_1] = stackIn_22_2;
+                          var8++;
+                          continue L5;
                         }
-                        stackIn_20_0[stackIn_20_1] = stackIn_20_2;
-                        var8++;
-                        continue L4;
                       }
                     }
                   }
@@ -1465,7 +1247,7 @@ public final class Kickabout extends tu {
               } else {
                 var4 = 70 * var3_int / var11.field_v;
                 var5 = 0;
-                L7: while (true) {
+                L8: while (true) {
                   if ((var11.field_o ^ -1) >= (var5 ^ -1)) {
                     var3_int++;
                     continue L2;
@@ -1474,7 +1256,7 @@ public final class Kickabout extends tu {
                     var11.field_y[var2] = hf.a(var11.field_y[var2], hf.a(hf.a(var4 << -1982327632, var4 << -1572213464), var4));
                     var2++;
                     var5++;
-                    continue L7;
+                    continue L8;
                   }
                 }
               }
@@ -1522,8 +1304,6 @@ public final class Kickabout extends tu {
 
     final boolean m(byte param0) {
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
         if (param0 < -70) {
           L0: {
             L1: {
@@ -1534,8 +1314,7 @@ public final class Kickabout extends tu {
                   break L1;
                 } else {
                   if (!an.field_d) {
-                    stackOut_7_0 = 0;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = 0;
                     break L0;
                   } else {
                     break L1;
@@ -1543,8 +1322,7 @@ public final class Kickabout extends tu {
                 }
               }
             }
-            stackOut_6_0 = 1;
-            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_0 = 1;
             break L0;
           }
           return stackIn_8_0 != 0;
@@ -1554,11 +1332,88 @@ public final class Kickabout extends tu {
     }
 
     final boolean a(int param0, ml param1, int param2) {
-        boolean discarded$1 = false;
-        RuntimeException var4 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_10_1 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_29_0 = 0;
+        ml stackIn_29_1 = null;
+        int stackIn_30_0 = 0;
+        ml stackIn_30_1 = null;
+        int stackIn_30_2 = 0;
+        int stackIn_31_0 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_37_0 = 0;
+        int stackIn_37_1 = 0;
+        int stackIn_41_0 = 0;
+        int stackIn_45_0 = 0;
+        int stackIn_46_0 = 0;
+        int stackIn_46_1 = 0;
+        int stackIn_50_0 = 0;
+        int stackIn_55_0 = 0;
+        int stackIn_56_0 = 0;
+        int stackIn_56_1 = 0;
+        int stackIn_60_0 = 0;
+        int stackIn_67_0 = 0;
+        int stackIn_74_0 = 0;
+        int stackIn_88_0 = 0;
+        int stackIn_91_0 = 0;
+        int stackIn_93_0 = 0;
+        int stackIn_94_0 = 0;
+        int stackIn_94_1 = 0;
+        int stackIn_95_0 = 0;
+        int stackIn_100_0 = 0;
+        int stackIn_103_0 = 0;
+        int stackIn_109_0 = 0;
+        int stackIn_115_0 = 0;
+        int stackIn_120_0 = 0;
+        int stackIn_143_0 = 0;
+        int stackIn_150_0 = 0;
+        int stackIn_160_0 = 0;
+        int stackIn_163_0 = 0;
+        int stackIn_166_0 = 0;
+        int stackIn_169_0 = 0;
+        int stackIn_181_0 = 0;
+        int stackIn_184_0 = 0;
+        int stackIn_187_0 = 0;
+        int stackIn_190_0 = 0;
+        ap stackIn_192_0 = null;
+        ap stackIn_193_0 = null;
+        int stackIn_193_1 = 0;
+        int stackIn_203_0 = 0;
+        int stackIn_212_0 = 0;
+        int stackIn_216_0 = 0;
+        int stackIn_223_0 = 0;
+        int stackIn_234_0 = 0;
+        int stackIn_242_0 = 0;
+        int stackIn_245_0 = 0;
+        int stackIn_248_0 = 0;
+        int stackIn_251_0 = 0;
+        int stackIn_254_1 = 0;
+        int stackIn_257_0 = 0;
+        int stackIn_266_0 = 0;
+        int stackIn_272_0 = 0;
+        int stackIn_275_0 = 0;
+        int stackIn_278_0 = 0;
+        int stackIn_287_0 = 0;
+        int stackIn_293_0 = 0;
+        int stackIn_303_0 = 0;
+        RuntimeException stackIn_306_0 = null;
+        StringBuilder stackIn_306_1 = null;
+        RuntimeException stackIn_307_0 = null;
+        StringBuilder stackIn_307_1 = null;
+        String stackIn_307_2 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
-        String[] var4_array = null;
-        int[] var4_array2 = null;
+        String[] var4 = null;
+        int[] var4_array = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         vc[] var5_ref_vc__ = null;
         int[] var5_ref_int__ = null;
@@ -1612,212 +1467,6 @@ public final class Kickabout extends tu {
         int[] var50 = null;
         int[] var51 = null;
         int[] var52 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_10_1 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_28_0 = 0;
-        ml stackIn_28_1 = null;
-        int stackIn_29_0 = 0;
-        ml stackIn_29_1 = null;
-        int stackIn_30_0 = 0;
-        ml stackIn_30_1 = null;
-        int stackIn_30_2 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_37_0 = 0;
-        int stackIn_37_1 = 0;
-        int stackIn_41_0 = 0;
-        int stackIn_44_0 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_46_0 = 0;
-        int stackIn_46_1 = 0;
-        int stackIn_50_0 = 0;
-        int stackIn_54_0 = 0;
-        int stackIn_55_0 = 0;
-        int stackIn_56_0 = 0;
-        int stackIn_56_1 = 0;
-        int stackIn_60_0 = 0;
-        int stackIn_67_0 = 0;
-        int stackIn_74_0 = 0;
-        int stackIn_88_0 = 0;
-        int stackIn_91_0 = 0;
-        int stackIn_92_0 = 0;
-        int stackIn_93_0 = 0;
-        int stackIn_94_0 = 0;
-        int stackIn_94_1 = 0;
-        int stackIn_95_0 = 0;
-        int stackIn_100_0 = 0;
-        int stackIn_103_0 = 0;
-        int stackIn_109_0 = 0;
-        int stackIn_115_0 = 0;
-        int stackIn_120_0 = 0;
-        int stackIn_143_0 = 0;
-        int stackIn_150_0 = 0;
-        int stackIn_160_0 = 0;
-        int stackIn_163_0 = 0;
-        int stackIn_166_0 = 0;
-        int stackIn_169_0 = 0;
-        int stackIn_181_0 = 0;
-        int stackIn_184_0 = 0;
-        int stackIn_187_0 = 0;
-        int stackIn_190_0 = 0;
-        ap stackIn_191_0 = null;
-        ap stackIn_192_0 = null;
-        ap stackIn_193_0 = null;
-        int stackIn_193_1 = 0;
-        int stackIn_203_0 = 0;
-        int stackIn_212_0 = 0;
-        int stackIn_216_0 = 0;
-        int stackIn_223_0 = 0;
-        int stackIn_234_0 = 0;
-        int stackIn_242_0 = 0;
-        int stackIn_245_0 = 0;
-        int stackIn_248_0 = 0;
-        int stackIn_251_0 = 0;
-        int stackIn_252_0 = 0;
-        int stackIn_253_0 = 0;
-        int stackIn_254_0 = 0;
-        int stackIn_254_1 = 0;
-        int stackIn_257_0 = 0;
-        int stackIn_266_0 = 0;
-        int stackIn_272_0 = 0;
-        int stackIn_275_0 = 0;
-        int stackIn_278_0 = 0;
-        int stackIn_287_0 = 0;
-        int stackIn_293_0 = 0;
-        int stackIn_303_0 = 0;
-        RuntimeException stackIn_305_0 = null;
-        StringBuilder stackIn_305_1 = null;
-        RuntimeException stackIn_306_0 = null;
-        StringBuilder stackIn_306_1 = null;
-        RuntimeException stackIn_307_0 = null;
-        StringBuilder stackIn_307_1 = null;
-        String stackIn_307_2 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_35_1 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_55_1 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_54_1 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_114_0 = 0;
-        int stackOut_119_0 = 0;
-        int stackOut_149_0 = 0;
-        int stackOut_215_0 = 0;
-        int stackOut_222_0 = 0;
-        int stackOut_233_0 = 0;
-        int stackOut_241_0 = 0;
-        int stackOut_240_0 = 0;
-        int stackOut_244_0 = 0;
-        int stackOut_243_0 = 0;
-        int stackOut_247_0 = 0;
-        int stackOut_246_0 = 0;
-        int stackOut_250_0 = 0;
-        int stackOut_249_0 = 0;
-        int stackOut_251_0 = 0;
-        int stackOut_253_0 = 0;
-        int stackOut_253_1 = 0;
-        int stackOut_252_0 = 0;
-        int stackOut_252_1 = 0;
-        int stackOut_256_0 = 0;
-        int stackOut_255_0 = 0;
-        int stackOut_265_0 = 0;
-        int stackOut_271_0 = 0;
-        int stackOut_270_0 = 0;
-        int stackOut_274_0 = 0;
-        int stackOut_273_0 = 0;
-        int stackOut_277_0 = 0;
-        int stackOut_276_0 = 0;
-        int stackOut_286_0 = 0;
-        int stackOut_302_0 = 0;
-        int stackOut_292_0 = 0;
-        int stackOut_211_0 = 0;
-        int stackOut_159_0 = 0;
-        int stackOut_158_0 = 0;
-        int stackOut_162_0 = 0;
-        int stackOut_161_0 = 0;
-        int stackOut_165_0 = 0;
-        int stackOut_164_0 = 0;
-        int stackOut_168_0 = 0;
-        int stackOut_167_0 = 0;
-        int stackOut_180_0 = 0;
-        int stackOut_179_0 = 0;
-        int stackOut_183_0 = 0;
-        int stackOut_182_0 = 0;
-        int stackOut_186_0 = 0;
-        int stackOut_185_0 = 0;
-        int stackOut_189_0 = 0;
-        int stackOut_188_0 = 0;
-        ap stackOut_190_0 = null;
-        ap stackOut_192_0 = null;
-        int stackOut_192_1 = 0;
-        ap stackOut_191_0 = null;
-        int stackOut_191_1 = 0;
-        int stackOut_202_0 = 0;
-        int stackOut_142_0 = 0;
-        int stackOut_108_0 = 0;
-        int stackOut_102_0 = 0;
-        int stackOut_99_0 = 0;
-        int stackOut_87_0 = 0;
-        int stackOut_86_0 = 0;
-        int stackOut_90_0 = 0;
-        int stackOut_89_0 = 0;
-        int stackOut_91_0 = 0;
-        int stackOut_93_0 = 0;
-        int stackOut_93_1 = 0;
-        int stackOut_92_0 = 0;
-        int stackOut_92_1 = 0;
-        int stackOut_94_0 = 0;
-        int stackOut_66_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_45_1 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_44_1 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_27_0 = 0;
-        ml stackOut_27_1 = null;
-        int stackOut_29_0 = 0;
-        ml stackOut_29_1 = null;
-        int stackOut_29_2 = 0;
-        int stackOut_28_0 = 0;
-        ml stackOut_28_1 = null;
-        int stackOut_28_2 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_4_0 = 0;
-        RuntimeException stackOut_304_0 = null;
-        StringBuilder stackOut_304_1 = null;
-        RuntimeException stackOut_306_0 = null;
-        StringBuilder stackOut_306_1 = null;
-        String stackOut_306_2 = null;
-        RuntimeException stackOut_305_0 = null;
-        StringBuilder stackOut_305_1 = null;
-        String stackOut_305_2 = null;
         var22 = field_G;
         try {
           L0: {
@@ -1825,7 +1474,7 @@ public final class Kickabout extends tu {
               if (param2 == 1) {
                 break L1;
               } else {
-                discarded$1 = this.m((byte) -8);
+                this.m((byte) -8);
                 break L1;
               }
             }
@@ -1833,22 +1482,19 @@ public final class Kickabout extends tu {
               if (-87 != (param0 ^ -1)) {
                 if (85 == param0) {
                   ds.field_g = true;
-                  stackOut_14_0 = 1;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = 1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (-85 == (param0 ^ -1)) {
                     rr.field_f = true;
-                    stackOut_18_0 = 1;
-                    stackIn_19_0 = stackOut_18_0;
+                    stackIn_19_0 = 1;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
                     if ((param0 ^ -1) == -82) {
                       vd.field_a.a(new pt(un.field_e), param2 ^ 2);
-                      stackOut_22_0 = 1;
-                      stackIn_23_0 = stackOut_22_0;
+                      stackIn_23_0 = 1;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
@@ -1863,20 +1509,15 @@ public final class Kickabout extends tu {
                               L3: {
                                 ds.field_g = false;
                                 param1.p(-127);
-                                stackOut_34_0 = 0;
-                                stackIn_36_0 = stackOut_34_0;
-                                stackIn_35_0 = stackOut_34_0;
+                                stackIn_36_0 = 0;
+
                                 if (-2 != (param1.l(1, 59) ^ -1)) {
-                                  stackOut_36_0 = stackIn_36_0;
-                                  stackOut_36_1 = 0;
-                                  stackIn_37_0 = stackOut_36_0;
-                                  stackIn_37_1 = stackOut_36_1;
+                                  stackIn_37_0 = stackIn_36_0;
+                                  stackIn_37_1 = 0;
                                   break L3;
                                 } else {
-                                  stackOut_35_0 = stackIn_35_0;
-                                  stackOut_35_1 = 1;
-                                  stackIn_37_0 = stackOut_35_0;
-                                  stackIn_37_1 = stackOut_35_1;
+                                  stackIn_37_0 = stackIn_36_0;
+                                  stackIn_37_1 = 1;
                                   break L3;
                                 }
                               }
@@ -1890,8 +1531,7 @@ public final class Kickabout extends tu {
                               L4: while (true) {
                                 if ((var8_int ^ -1) <= (var6 ^ -1)) {
                                   ((wf) ((Object) rn.a(param2 + -120, 16))).a(true, var7_ref_vc__, var4_int, var5);
-                                  stackOut_40_0 = 1;
-                                  stackIn_41_0 = stackOut_40_0;
+                                  stackIn_41_0 = 1;
                                   decompiledRegionSelector0 = 6;
                                   break L0;
                                 } else {
@@ -1906,20 +1546,15 @@ public final class Kickabout extends tu {
                                   L5: {
                                     ds.field_g = false;
                                     param1.p(-100);
-                                    stackOut_53_0 = 0;
-                                    stackIn_55_0 = stackOut_53_0;
-                                    stackIn_54_0 = stackOut_53_0;
+                                    stackIn_55_0 = 0;
+
                                     if (-2 != (param1.l(1, param2 + 58) ^ -1)) {
-                                      stackOut_55_0 = stackIn_55_0;
-                                      stackOut_55_1 = 0;
-                                      stackIn_56_0 = stackOut_55_0;
-                                      stackIn_56_1 = stackOut_55_1;
+                                      stackIn_56_0 = stackIn_55_0;
+                                      stackIn_56_1 = 0;
                                       break L5;
                                     } else {
-                                      stackOut_54_0 = stackIn_54_0;
-                                      stackOut_54_1 = 1;
-                                      stackIn_56_0 = stackOut_54_0;
-                                      stackIn_56_1 = stackOut_54_1;
+                                      stackIn_56_0 = stackIn_55_0;
+                                      stackIn_56_1 = 1;
                                       break L5;
                                     }
                                   }
@@ -1932,8 +1567,7 @@ public final class Kickabout extends tu {
                                   L6: while (true) {
                                     if ((var6 ^ -1) <= (var4_int ^ -1)) {
                                       ((wf) ((Object) rn.a(-53, 16))).a(true, var31);
-                                      stackOut_59_0 = 1;
-                                      stackIn_60_0 = stackOut_59_0;
+                                      stackIn_60_0 = 1;
                                       decompiledRegionSelector0 = 8;
                                       break L0;
                                     } else {
@@ -1946,17 +1580,16 @@ public final class Kickabout extends tu {
                                   if (param0 != 77) {
                                     if (param0 == 78) {
                                       var32 = new String[param1.a((byte) 81)];
-                                      var4_array = var32;
+                                      var4 = var32;
                                       var5 = 0;
                                       L7: while (true) {
                                         if (var32.length <= var5) {
                                           gg.a(var32, (byte) 88);
-                                          stackOut_73_0 = 1;
-                                          stackIn_74_0 = stackOut_73_0;
+                                          stackIn_74_0 = 1;
                                           decompiledRegionSelector0 = 10;
                                           break L0;
                                         } else {
-                                          var4_array[var5] = param1.a(ek.b(param2, -112));
+                                          var4[var5] = param1.a(ek.b(param2, -112));
                                           var5++;
                                           continue L7;
                                         }
@@ -1984,8 +1617,7 @@ public final class Kickabout extends tu {
                                                 }
                                                 an.field_d = false;
                                                 ec.field_e = false;
-                                                stackOut_114_0 = 1;
-                                                stackIn_115_0 = stackOut_114_0;
+                                                stackIn_115_0 = 1;
                                                 decompiledRegionSelector0 = 15;
                                                 break L0;
                                               } else {
@@ -1995,8 +1627,7 @@ public final class Kickabout extends tu {
                                                   } else {
                                                     if (od.field_n) {
                                                       na.i(14);
-                                                      stackOut_119_0 = 1;
-                                                      stackIn_120_0 = stackOut_119_0;
+                                                      stackIn_120_0 = 1;
                                                       decompiledRegionSelector0 = 16;
                                                       break L0;
                                                     } else {
@@ -2010,8 +1641,7 @@ public final class Kickabout extends tu {
                                                     var5 = 0;
                                                     L10: while (true) {
                                                       if ((var5 ^ -1) <= (var4_int ^ -1)) {
-                                                        stackOut_149_0 = 1;
-                                                        stackIn_150_0 = stackOut_149_0;
+                                                        stackIn_150_0 = 1;
                                                         decompiledRegionSelector0 = 18;
                                                         break L0;
                                                       } else {
@@ -2032,8 +1662,7 @@ public final class Kickabout extends tu {
                                                           if (param0 != 66) {
                                                             if (82 == param0) {
                                                               tb.a((byte) 126, 38);
-                                                              stackOut_215_0 = 1;
-                                                              stackIn_216_0 = stackOut_215_0;
+                                                              stackIn_216_0 = 1;
                                                               decompiledRegionSelector0 = 21;
                                                               break L0;
                                                             } else {
@@ -2044,8 +1673,7 @@ public final class Kickabout extends tu {
                                                                   if (um.field_e.field_t) {
                                                                     if (69 == param0) {
                                                                       um.field_e.a((byte) -17, param1);
-                                                                      stackOut_222_0 = 1;
-                                                                      stackIn_223_0 = stackOut_222_0;
+                                                                      stackIn_223_0 = 1;
                                                                       decompiledRegionSelector0 = 22;
                                                                       break L0;
                                                                     } else {
@@ -2075,8 +1703,7 @@ public final class Kickabout extends tu {
                                                                               }
                                                                             }
                                                                             um.field_e.field_i.a(um.field_e.field_m, (byte) 119);
-                                                                            stackOut_233_0 = 1;
-                                                                            stackIn_234_0 = stackOut_233_0;
+                                                                            stackIn_234_0 = 1;
                                                                             decompiledRegionSelector0 = 23;
                                                                             break L0;
                                                                           } else {
@@ -2109,36 +1736,30 @@ public final class Kickabout extends tu {
                                                                   var5 = 0;
                                                                   var4_int = 0;
                                                                   if (!mu.a(param1, (byte) -39)) {
-                                                                    stackOut_241_0 = 0;
-                                                                    stackIn_242_0 = stackOut_241_0;
+                                                                    stackIn_242_0 = 0;
                                                                     break L16;
                                                                   } else {
-                                                                    stackOut_240_0 = 1;
-                                                                    stackIn_242_0 = stackOut_240_0;
+                                                                    stackIn_242_0 = 1;
                                                                     break L16;
                                                                   }
                                                                 }
                                                                 L17: {
                                                                   var4_int = stackIn_242_0;
                                                                   if (!mu.a(param1, (byte) -39)) {
-                                                                    stackOut_244_0 = 0;
-                                                                    stackIn_245_0 = stackOut_244_0;
+                                                                    stackIn_245_0 = 0;
                                                                     break L17;
                                                                   } else {
-                                                                    stackOut_243_0 = 1;
-                                                                    stackIn_245_0 = stackOut_243_0;
+                                                                    stackIn_245_0 = 1;
                                                                     break L17;
                                                                   }
                                                                 }
                                                                 L18: {
                                                                   var5 = stackIn_245_0;
                                                                   if (!mu.a(param1, (byte) -39)) {
-                                                                    stackOut_247_0 = 0;
-                                                                    stackIn_248_0 = stackOut_247_0;
+                                                                    stackIn_248_0 = 0;
                                                                     break L18;
                                                                   } else {
-                                                                    stackOut_246_0 = 1;
-                                                                    stackIn_248_0 = stackOut_246_0;
+                                                                    stackIn_248_0 = 1;
                                                                     break L18;
                                                                   }
                                                                 }
@@ -2146,41 +1767,32 @@ public final class Kickabout extends tu {
                                                                   var6 = stackIn_248_0;
                                                                   param1.l((byte) -50);
                                                                   if (var6 != 0) {
-                                                                    stackOut_250_0 = 0;
-                                                                    stackIn_251_0 = stackOut_250_0;
+                                                                    stackIn_251_0 = 0;
                                                                     break L19;
                                                                   } else {
-                                                                    stackOut_249_0 = 1;
-                                                                    stackIn_251_0 = stackOut_249_0;
+                                                                    stackIn_251_0 = 1;
                                                                     break L19;
                                                                   }
                                                                 }
                                                                 L20: {
-                                                                  stackOut_251_0 = stackIn_251_0;
-                                                                  stackIn_253_0 = stackOut_251_0;
-                                                                  stackIn_252_0 = stackOut_251_0;
+
+
                                                                   if (var5 == var4_int) {
-                                                                    stackOut_253_0 = stackIn_253_0;
-                                                                    stackOut_253_1 = 0;
-                                                                    stackIn_254_0 = stackOut_253_0;
-                                                                    stackIn_254_1 = stackOut_253_1;
+
+                                                                    stackIn_254_1 = 0;
                                                                     break L20;
                                                                   } else {
-                                                                    stackOut_252_0 = stackIn_252_0;
-                                                                    stackOut_252_1 = 1;
-                                                                    stackIn_254_0 = stackOut_252_0;
-                                                                    stackIn_254_1 = stackOut_252_1;
+
+                                                                    stackIn_254_1 = 1;
                                                                     break L20;
                                                                   }
                                                                 }
                                                                 L21: {
-                                                                  if (stackIn_254_0 != stackIn_254_1) {
-                                                                    stackOut_256_0 = 0;
-                                                                    stackIn_257_0 = stackOut_256_0;
+                                                                  if (stackIn_251_0 != stackIn_254_1) {
+                                                                    stackIn_257_0 = 0;
                                                                     break L21;
                                                                   } else {
-                                                                    stackOut_255_0 = 1;
-                                                                    stackIn_257_0 = stackOut_255_0;
+                                                                    stackIn_257_0 = 1;
                                                                     break L21;
                                                                   }
                                                                 }
@@ -2210,8 +1822,7 @@ public final class Kickabout extends tu {
                                                                     }
                                                                   }
                                                                   an.field_d = false;
-                                                                  stackOut_265_0 = 1;
-                                                                  stackIn_266_0 = stackOut_265_0;
+                                                                  stackIn_266_0 = 1;
                                                                   decompiledRegionSelector0 = 24;
                                                                   break L0;
                                                                 } else {
@@ -2231,36 +1842,30 @@ public final class Kickabout extends tu {
                                                                         var4_int = 0;
                                                                         var5 = 0;
                                                                         if (!mu.a(param1, (byte) -39)) {
-                                                                          stackOut_271_0 = 0;
-                                                                          stackIn_272_0 = stackOut_271_0;
+                                                                          stackIn_272_0 = 0;
                                                                           break L25;
                                                                         } else {
-                                                                          stackOut_270_0 = 1;
-                                                                          stackIn_272_0 = stackOut_270_0;
+                                                                          stackIn_272_0 = 1;
                                                                           break L25;
                                                                         }
                                                                       }
                                                                       L26: {
                                                                         var4_int = stackIn_272_0;
                                                                         if (!mu.a(param1, (byte) -39)) {
-                                                                          stackOut_274_0 = 0;
-                                                                          stackIn_275_0 = stackOut_274_0;
+                                                                          stackIn_275_0 = 0;
                                                                           break L26;
                                                                         } else {
-                                                                          stackOut_273_0 = 1;
-                                                                          stackIn_275_0 = stackOut_273_0;
+                                                                          stackIn_275_0 = 1;
                                                                           break L26;
                                                                         }
                                                                       }
                                                                       L27: {
                                                                         var5 = stackIn_275_0;
                                                                         if (!mu.a(param1, (byte) -39)) {
-                                                                          stackOut_277_0 = 0;
-                                                                          stackIn_278_0 = stackOut_277_0;
+                                                                          stackIn_278_0 = 0;
                                                                           break L27;
                                                                         } else {
-                                                                          stackOut_276_0 = 1;
-                                                                          stackIn_278_0 = stackOut_276_0;
+                                                                          stackIn_278_0 = 1;
                                                                           break L27;
                                                                         }
                                                                       }
@@ -2290,8 +1895,7 @@ public final class Kickabout extends tu {
                                                                           break L30;
                                                                         }
                                                                       }
-                                                                      stackOut_286_0 = 1;
-                                                                      stackIn_287_0 = stackOut_286_0;
+                                                                      stackIn_287_0 = 1;
                                                                       decompiledRegionSelector0 = 25;
                                                                       break L0;
                                                                     }
@@ -2322,8 +1926,7 @@ public final class Kickabout extends tu {
                                                                       li.a(2009, var45);
                                                                       break L31;
                                                                     }
-                                                                    stackOut_302_0 = 1;
-                                                                    stackIn_303_0 = stackOut_302_0;
+                                                                    stackIn_303_0 = 1;
                                                                     decompiledRegionSelector0 = 27;
                                                                     break L0;
                                                                   } else {
@@ -2337,8 +1940,7 @@ public final class Kickabout extends tu {
                                                                   var7 = 0;
                                                                   L34: while (true) {
                                                                     if (var7 >= var44.length) {
-                                                                      stackOut_292_0 = 1;
-                                                                      stackIn_293_0 = stackOut_292_0;
+                                                                      stackIn_293_0 = 1;
                                                                       decompiledRegionSelector0 = 26;
                                                                       break L0;
                                                                     } else {
@@ -2379,8 +1981,7 @@ public final class Kickabout extends tu {
                                                               }
                                                             }
                                                             an.field_d = false;
-                                                            stackOut_211_0 = 1;
-                                                            stackIn_212_0 = stackOut_211_0;
+                                                            stackIn_212_0 = 1;
                                                             decompiledRegionSelector0 = 20;
                                                             break L0;
                                                           }
@@ -2400,24 +2001,20 @@ public final class Kickabout extends tu {
                                                       var4_int = param1.field_n;
                                                       cv.a((byte) 72);
                                                       if (0 == param1.h((byte) -106)) {
-                                                        stackOut_159_0 = 0;
-                                                        stackIn_160_0 = stackOut_159_0;
+                                                        stackIn_160_0 = 0;
                                                         break L38;
                                                       } else {
-                                                        stackOut_158_0 = 1;
-                                                        stackIn_160_0 = stackOut_158_0;
+                                                        stackIn_160_0 = 1;
                                                         break L38;
                                                       }
                                                     }
                                                     L39: {
                                                       var5 = stackIn_160_0;
                                                       if (0 == param1.h((byte) -116)) {
-                                                        stackOut_162_0 = 0;
-                                                        stackIn_163_0 = stackOut_162_0;
+                                                        stackIn_163_0 = 0;
                                                         break L39;
                                                       } else {
-                                                        stackOut_161_0 = 1;
-                                                        stackIn_163_0 = stackOut_161_0;
+                                                        stackIn_163_0 = 1;
                                                         break L39;
                                                       }
                                                     }
@@ -2426,24 +2023,20 @@ public final class Kickabout extends tu {
                                                       var7 = param1.h((byte) -117);
                                                       var8_int = param1.h((byte) -126);
                                                       if ((param1.h((byte) -123) ^ -1) == -1) {
-                                                        stackOut_165_0 = 0;
-                                                        stackIn_166_0 = stackOut_165_0;
+                                                        stackIn_166_0 = 0;
                                                         break L40;
                                                       } else {
-                                                        stackOut_164_0 = 1;
-                                                        stackIn_166_0 = stackOut_164_0;
+                                                        stackIn_166_0 = 1;
                                                         break L40;
                                                       }
                                                     }
                                                     L41: {
                                                       var9 = stackIn_166_0;
                                                       if (0 == param1.h((byte) -113)) {
-                                                        stackOut_168_0 = 0;
-                                                        stackIn_169_0 = stackOut_168_0;
+                                                        stackIn_169_0 = 0;
                                                         break L41;
                                                       } else {
-                                                        stackOut_167_0 = 1;
-                                                        stackIn_169_0 = stackOut_167_0;
+                                                        stackIn_169_0 = 1;
                                                         break L41;
                                                       }
                                                     }
@@ -2482,48 +2075,40 @@ public final class Kickabout extends tu {
                                                           vs.field_g = null;
                                                           var15 = param1.h((byte) -128);
                                                           if (0 == (var15 & 1)) {
-                                                            stackOut_180_0 = 0;
-                                                            stackIn_181_0 = stackOut_180_0;
+                                                            stackIn_181_0 = 0;
                                                             break L45;
                                                           } else {
-                                                            stackOut_179_0 = 1;
-                                                            stackIn_181_0 = stackOut_179_0;
+                                                            stackIn_181_0 = 1;
                                                             break L45;
                                                           }
                                                         }
                                                         L46: {
                                                           var16 = stackIn_181_0;
                                                           if ((var15 & 2 ^ -1) == -1) {
-                                                            stackOut_183_0 = 0;
-                                                            stackIn_184_0 = stackOut_183_0;
+                                                            stackIn_184_0 = 0;
                                                             break L46;
                                                           } else {
-                                                            stackOut_182_0 = 1;
-                                                            stackIn_184_0 = stackOut_182_0;
+                                                            stackIn_184_0 = 1;
                                                             break L46;
                                                           }
                                                         }
                                                         L47: {
                                                           var17 = stackIn_184_0;
                                                           if ((var15 & 4) == 0) {
-                                                            stackOut_186_0 = 0;
-                                                            stackIn_187_0 = stackOut_186_0;
+                                                            stackIn_187_0 = 0;
                                                             break L47;
                                                           } else {
-                                                            stackOut_185_0 = 1;
-                                                            stackIn_187_0 = stackOut_185_0;
+                                                            stackIn_187_0 = 1;
                                                             break L47;
                                                           }
                                                         }
                                                         L48: {
                                                           var18 = stackIn_187_0;
                                                           if (-1 == (var15 & 8 ^ -1)) {
-                                                            stackOut_189_0 = 0;
-                                                            stackIn_190_0 = stackOut_189_0;
+                                                            stackIn_190_0 = 0;
                                                             break L48;
                                                           } else {
-                                                            stackOut_188_0 = 1;
-                                                            stackIn_190_0 = stackOut_188_0;
+                                                            stackIn_190_0 = 1;
                                                             break L48;
                                                           }
                                                         }
@@ -2531,20 +2116,15 @@ public final class Kickabout extends tu {
                                                           var19 = stackIn_190_0;
                                                           var20 = param1.j((byte) -87);
                                                           um.field_e = new ap(true, (up[]) (var14), var12, var13, var5 != 0, var6 != 0, var7, var8_int, var9 != 0, var10 != 0, var16 != 0, var17 != 0, var18 != 0, var20, (gr) null);
-                                                          stackOut_190_0 = um.field_e;
-                                                          stackIn_192_0 = stackOut_190_0;
-                                                          stackIn_191_0 = stackOut_190_0;
+                                                          stackIn_192_0 = um.field_e;
+
                                                           if (var19 == 0) {
-                                                            stackOut_192_0 = (ap) ((Object) stackIn_192_0);
-                                                            stackOut_192_1 = 0;
-                                                            stackIn_193_0 = stackOut_192_0;
-                                                            stackIn_193_1 = stackOut_192_1;
+                                                            stackIn_193_0 = (ap) ((Object) stackIn_192_0);
+                                                            stackIn_193_1 = 0;
                                                             break L49;
                                                           } else {
-                                                            stackOut_191_0 = (ap) ((Object) stackIn_191_0);
-                                                            stackOut_191_1 = 1;
-                                                            stackIn_193_0 = stackOut_191_0;
-                                                            stackIn_193_1 = stackOut_191_1;
+                                                            stackIn_193_0 = (ap) ((Object) stackIn_192_0);
+                                                            stackIn_193_1 = 1;
                                                             break L49;
                                                           }
                                                         }
@@ -2577,8 +2157,7 @@ public final class Kickabout extends tu {
                                                         if (var21 != ms.field_b) {
                                                           throw new RuntimeException("");
                                                         } else {
-                                                          stackOut_202_0 = 1;
-                                                          stackIn_203_0 = stackOut_202_0;
+                                                          stackIn_203_0 = 1;
                                                           decompiledRegionSelector0 = 19;
                                                           break L0;
                                                         }
@@ -2593,11 +2172,11 @@ public final class Kickabout extends tu {
                                                   var23 = new int[8];
                                                   var48 = var23;
                                                   var35 = var48;
-                                                  var4_array2 = var35;
+                                                  var4_array = var35;
                                                   var5 = 0;
                                                   L52: while (true) {
                                                     if (2 < var5) {
-                                                      var46 = var4_array2;
+                                                      var46 = var4_array;
                                                       var33 = var46;
                                                       var24 = var33;
                                                       var5_ref_int__ = var24;
@@ -2615,7 +2194,7 @@ public final class Kickabout extends tu {
                                                               var36 = var49;
                                                               var26 = var36;
                                                               var5_ref_int__ = var26;
-                                                              var50 = var4_array2;
+                                                              var50 = var4_array;
                                                               var37 = var50;
                                                               var27 = var37;
                                                               var6_ref_int__ = var27;
@@ -2626,7 +2205,7 @@ public final class Kickabout extends tu {
                                                                   var38 = var51;
                                                                   var28 = var38;
                                                                   var5_ref_int__ = var28;
-                                                                  var52 = var4_array2;
+                                                                  var52 = var4_array;
                                                                   var39 = var52;
                                                                   var29 = var39;
                                                                   var6_ref_int__ = var29;
@@ -2641,8 +2220,7 @@ public final class Kickabout extends tu {
                                                                           break L57;
                                                                         }
                                                                       }
-                                                                      stackOut_142_0 = 1;
-                                                                      stackIn_143_0 = stackOut_142_0;
+                                                                      stackIn_143_0 = 1;
                                                                       decompiledRegionSelector0 = 17;
                                                                       break L0;
                                                                     } else {
@@ -2699,8 +2277,7 @@ public final class Kickabout extends tu {
                                                   break L59;
                                                 }
                                               }
-                                              stackOut_108_0 = 1;
-                                              stackIn_109_0 = stackOut_108_0;
+                                              stackIn_109_0 = 1;
                                               decompiledRegionSelector0 = 14;
                                               break L0;
                                             }
@@ -2709,8 +2286,7 @@ public final class Kickabout extends tu {
                                             ec.field_e = false;
                                             jm.a(10, false, -2);
                                             ka.a(2, param1.a(param2 + -98));
-                                            stackOut_102_0 = 1;
-                                            stackIn_103_0 = stackOut_102_0;
+                                            stackIn_103_0 = 1;
                                             decompiledRegionSelector0 = 13;
                                             break L0;
                                           }
@@ -2726,8 +2302,7 @@ public final class Kickabout extends tu {
                                           }
                                           or.field_d.b(57, (byte) -80);
                                           or.field_d.b(param2 ^ -30, var4_int);
-                                          stackOut_99_0 = 1;
-                                          stackIn_100_0 = stackOut_99_0;
+                                          stackIn_100_0 = 1;
                                           decompiledRegionSelector0 = 12;
                                           break L0;
                                         }
@@ -2770,50 +2345,40 @@ public final class Kickabout extends tu {
                                         L64: {
                                           param1.p(param2 ^ -105);
                                           if ((param1.l(1, 59) ^ -1) != -2) {
-                                            stackOut_87_0 = 0;
-                                            stackIn_88_0 = stackOut_87_0;
+                                            stackIn_88_0 = 0;
                                             break L64;
                                           } else {
-                                            stackOut_86_0 = 1;
-                                            stackIn_88_0 = stackOut_86_0;
+                                            stackIn_88_0 = 1;
                                             break L64;
                                           }
                                         }
                                         L65: {
                                           c.field_g = stackIn_88_0 != 0;
                                           if (1 != param1.l(1, 59)) {
-                                            stackOut_90_0 = 0;
-                                            stackIn_91_0 = stackOut_90_0;
+                                            stackIn_91_0 = 0;
                                             break L65;
                                           } else {
-                                            stackOut_89_0 = 1;
-                                            stackIn_91_0 = stackOut_89_0;
+                                            stackIn_91_0 = 1;
                                             break L65;
                                           }
                                         }
                                         L66: {
                                           f.field_c = stackIn_91_0 != 0;
-                                          stackOut_91_0 = 0;
-                                          stackIn_93_0 = stackOut_91_0;
-                                          stackIn_92_0 = stackOut_91_0;
+                                          stackIn_93_0 = 0;
+
                                           if (param1.l(1, 59) != 1) {
-                                            stackOut_93_0 = stackIn_93_0;
-                                            stackOut_93_1 = 0;
-                                            stackIn_94_0 = stackOut_93_0;
-                                            stackIn_94_1 = stackOut_93_1;
+                                            stackIn_94_0 = stackIn_93_0;
+                                            stackIn_94_1 = 0;
                                             break L66;
                                           } else {
-                                            stackOut_92_0 = stackIn_92_0;
-                                            stackOut_92_1 = 1;
-                                            stackIn_94_0 = stackOut_92_0;
-                                            stackIn_94_1 = stackOut_92_1;
+                                            stackIn_94_0 = stackIn_93_0;
+                                            stackIn_94_1 = 1;
                                             break L66;
                                           }
                                         }
                                         fj.a(stackIn_94_0 != 0, stackIn_94_1 != 0);
                                         param1.l((byte) 108);
-                                        stackOut_94_0 = 1;
-                                        stackIn_95_0 = stackOut_94_0;
+                                        stackIn_95_0 = 1;
                                         decompiledRegionSelector0 = 11;
                                         break L0;
                                       }
@@ -2835,8 +2400,7 @@ public final class Kickabout extends tu {
                                         }
                                       }
                                     }
-                                    stackOut_66_0 = 1;
-                                    stackIn_67_0 = stackOut_66_0;
+                                    stackIn_67_0 = 1;
                                     decompiledRegionSelector0 = 9;
                                     break L0;
                                   }
@@ -2845,20 +2409,15 @@ public final class Kickabout extends tu {
                                 L68: {
                                   ds.field_g = false;
                                   param1.p(-104);
-                                  stackOut_43_0 = 0;
-                                  stackIn_45_0 = stackOut_43_0;
-                                  stackIn_44_0 = stackOut_43_0;
+                                  stackIn_45_0 = 0;
+
                                   if (param1.l(1, param2 ^ 58) != 1) {
-                                    stackOut_45_0 = stackIn_45_0;
-                                    stackOut_45_1 = 0;
-                                    stackIn_46_0 = stackOut_45_0;
-                                    stackIn_46_1 = stackOut_45_1;
+                                    stackIn_46_0 = stackIn_45_0;
+                                    stackIn_46_1 = 0;
                                     break L68;
                                   } else {
-                                    stackOut_44_0 = stackIn_44_0;
-                                    stackOut_44_1 = 1;
-                                    stackIn_46_0 = stackOut_44_0;
-                                    stackIn_46_1 = stackOut_44_1;
+                                    stackIn_46_0 = stackIn_45_0;
+                                    stackIn_46_1 = 1;
                                     break L68;
                                   }
                                 }
@@ -2871,8 +2430,7 @@ public final class Kickabout extends tu {
                                 L69: while (true) {
                                   if (var6 >= var4_int) {
                                     wh.a((byte) 99, var30);
-                                    stackOut_49_0 = 1;
-                                    stackIn_50_0 = stackOut_49_0;
+                                    stackIn_50_0 = 1;
                                     decompiledRegionSelector0 = 7;
                                     break L0;
                                   } else {
@@ -2888,33 +2446,24 @@ public final class Kickabout extends tu {
                       }
                       L70: {
                         rr.field_f = false;
-                        stackOut_27_0 = -105;
-                        stackOut_27_1 = (ml) (param1);
-                        stackIn_29_0 = stackOut_27_0;
-                        stackIn_29_1 = stackOut_27_1;
-                        stackIn_28_0 = stackOut_27_0;
-                        stackIn_28_1 = stackOut_27_1;
+                        stackIn_29_0 = -105;
+
+                        stackIn_29_1 = (ml) (param1);
+
                         if (83 != so.field_b) {
-                          stackOut_29_0 = stackIn_29_0;
-                          stackOut_29_1 = (ml) ((Object) stackIn_29_1);
-                          stackOut_29_2 = 0;
-                          stackIn_30_0 = stackOut_29_0;
-                          stackIn_30_1 = stackOut_29_1;
-                          stackIn_30_2 = stackOut_29_2;
+                          stackIn_30_0 = stackIn_29_0;
+                          stackIn_30_1 = (ml) ((Object) stackIn_29_1);
+                          stackIn_30_2 = 0;
                           break L70;
                         } else {
-                          stackOut_28_0 = stackIn_28_0;
-                          stackOut_28_1 = (ml) ((Object) stackIn_28_1);
-                          stackOut_28_2 = 1;
-                          stackIn_30_0 = stackOut_28_0;
-                          stackIn_30_1 = stackOut_28_1;
-                          stackIn_30_2 = stackOut_28_2;
+                          stackIn_30_0 = stackIn_29_0;
+                          stackIn_30_1 = (ml) ((Object) stackIn_29_1);
+                          stackIn_30_2 = 1;
                           break L70;
                         }
                       }
                       mf.a((byte) stackIn_30_0, stackIn_30_1, stackIn_30_2 != 0);
-                      stackOut_30_0 = 1;
-                      stackIn_31_0 = stackOut_30_0;
+                      stackIn_31_0 = 1;
                       decompiledRegionSelector0 = 5;
                       break L0;
                     }
@@ -2922,33 +2471,26 @@ public final class Kickabout extends tu {
                 }
               } else {
                 L71: {
-                  stackOut_7_0 = 0;
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_9_0 = 0;
+
                   if (-2 != (param1.h((byte) -122) ^ -1)) {
-                    stackOut_9_0 = stackIn_9_0;
-                    stackOut_9_1 = 0;
-                    stackIn_10_0 = stackOut_9_0;
-                    stackIn_10_1 = stackOut_9_1;
+                    stackIn_10_0 = stackIn_9_0;
+                    stackIn_10_1 = 0;
                     break L71;
                   } else {
-                    stackOut_8_0 = stackIn_8_0;
-                    stackOut_8_1 = 1;
-                    stackIn_10_0 = stackOut_8_0;
-                    stackIn_10_1 = stackOut_8_1;
+                    stackIn_10_0 = stackIn_9_0;
+                    stackIn_10_1 = 1;
                     break L71;
                   }
                 }
                 fj.a(stackIn_10_0 != 0, stackIn_10_1 != 0);
-                stackOut_10_0 = 1;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
               ((eh) ((Object) ma.field_t)).b((byte) 115);
-              stackOut_4_0 = 1;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -2956,28 +2498,20 @@ public final class Kickabout extends tu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L72: {
-            var4 = decompiledCaughtException;
-            stackOut_304_0 = (RuntimeException) (var4);
-            stackOut_304_1 = new StringBuilder().append("Kickabout.G(").append(param0).append(',');
-            stackIn_306_0 = stackOut_304_0;
-            stackIn_306_1 = stackOut_304_1;
-            stackIn_305_0 = stackOut_304_0;
-            stackIn_305_1 = stackOut_304_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_306_0 = (RuntimeException) (var4_ref);
+
+            stackIn_306_1 = new StringBuilder().append("Kickabout.G(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_306_0 = (RuntimeException) ((Object) stackIn_306_0);
-              stackOut_306_1 = (StringBuilder) ((Object) stackIn_306_1);
-              stackOut_306_2 = "null";
-              stackIn_307_0 = stackOut_306_0;
-              stackIn_307_1 = stackOut_306_1;
-              stackIn_307_2 = stackOut_306_2;
+              stackIn_307_0 = (RuntimeException) ((Object) stackIn_306_0);
+              stackIn_307_1 = (StringBuilder) ((Object) stackIn_306_1);
+              stackIn_307_2 = "null";
               break L72;
             } else {
-              stackOut_305_0 = (RuntimeException) ((Object) stackIn_305_0);
-              stackOut_305_1 = (StringBuilder) ((Object) stackIn_305_1);
-              stackOut_305_2 = "{...}";
-              stackIn_307_0 = stackOut_305_0;
-              stackIn_307_1 = stackOut_305_1;
-              stackIn_307_2 = stackOut_305_2;
+              stackIn_307_0 = (RuntimeException) ((Object) stackIn_306_0);
+              stackIn_307_1 = (StringBuilder) ((Object) stackIn_306_1);
+              stackIn_307_2 = "{...}";
               break L72;
             }
           }
@@ -3095,113 +2629,37 @@ public final class Kickabout extends tu {
     }
 
     public final void a(int param0) {
-        int incrementValue$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int incrementValue$0 = 0;
         int stackIn_4_0 = 0;
         int stackIn_14_0 = 0;
-        lm stackIn_41_0 = null;
-        int stackIn_41_1 = 0;
-        lm stackIn_42_0 = null;
-        int stackIn_42_1 = 0;
-        lm stackIn_43_0 = null;
-        int stackIn_43_1 = 0;
         lm stackIn_44_0 = null;
         int stackIn_44_1 = 0;
         lm stackIn_45_0 = null;
         int stackIn_45_1 = 0;
         int stackIn_45_2 = 0;
-        ap stackIn_50_0 = null;
-        int stackIn_50_1 = 0;
-        ap stackIn_51_0 = null;
-        int stackIn_51_1 = 0;
-        ap stackIn_52_0 = null;
-        int stackIn_52_1 = 0;
         ap stackIn_53_0 = null;
         int stackIn_53_1 = 0;
         ap stackIn_54_0 = null;
         int stackIn_54_1 = 0;
         int stackIn_54_2 = 0;
-        js stackIn_61_0 = null;
-        int stackIn_61_1 = 0;
-        js stackIn_62_0 = null;
-        int stackIn_62_1 = 0;
         js stackIn_63_0 = null;
         int stackIn_63_1 = 0;
         js stackIn_64_0 = null;
         int stackIn_64_1 = 0;
         int stackIn_64_2 = 0;
-        qt stackIn_72_0 = null;
-        qt stackIn_73_0 = null;
         qt stackIn_74_0 = null;
         qt stackIn_75_0 = null;
         int stackIn_75_1 = 0;
-        js stackIn_83_0 = null;
-        int stackIn_83_1 = 0;
-        js stackIn_84_0 = null;
-        int stackIn_84_1 = 0;
         js stackIn_85_0 = null;
         int stackIn_85_1 = 0;
         js stackIn_86_0 = null;
         int stackIn_86_1 = 0;
         int stackIn_86_2 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        lm stackOut_40_0 = null;
-        int stackOut_40_1 = 0;
-        lm stackOut_41_0 = null;
-        int stackOut_41_1 = 0;
-        lm stackOut_42_0 = null;
-        int stackOut_42_1 = 0;
-        lm stackOut_43_0 = null;
-        int stackOut_43_1 = 0;
-        int stackOut_43_2 = 0;
-        lm stackOut_44_0 = null;
-        int stackOut_44_1 = 0;
-        int stackOut_44_2 = 0;
-        ap stackOut_49_0 = null;
-        int stackOut_49_1 = 0;
-        ap stackOut_50_0 = null;
-        int stackOut_50_1 = 0;
-        ap stackOut_51_0 = null;
-        int stackOut_51_1 = 0;
-        ap stackOut_52_0 = null;
-        int stackOut_52_1 = 0;
-        int stackOut_52_2 = 0;
-        ap stackOut_53_0 = null;
-        int stackOut_53_1 = 0;
-        int stackOut_53_2 = 0;
-        js stackOut_60_0 = null;
-        int stackOut_60_1 = 0;
-        js stackOut_61_0 = null;
-        int stackOut_61_1 = 0;
-        js stackOut_62_0 = null;
-        int stackOut_62_1 = 0;
-        int stackOut_62_2 = 0;
-        js stackOut_63_0 = null;
-        int stackOut_63_1 = 0;
-        int stackOut_63_2 = 0;
-        qt stackOut_71_0 = null;
-        qt stackOut_72_0 = null;
-        qt stackOut_73_0 = null;
-        int stackOut_73_1 = 0;
-        qt stackOut_74_0 = null;
-        int stackOut_74_1 = 0;
-        js stackOut_82_0 = null;
-        int stackOut_82_1 = 0;
-        js stackOut_83_0 = null;
-        int stackOut_83_1 = 0;
-        js stackOut_84_0 = null;
-        int stackOut_84_1 = 0;
-        int stackOut_84_2 = 0;
-        js stackOut_85_0 = null;
-        int stackOut_85_1 = 0;
-        int stackOut_85_2 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = field_G;
           var2 = 97 % ((param0 - 50) / 45);
@@ -3211,12 +2669,10 @@ public final class Kickabout extends tu {
           } else {
             L1: {
               if (po.a(cq.field_h, -4) < 640) {
-                stackOut_3_0 = 0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = 1;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = 1;
                 break L1;
               }
             }
@@ -3240,12 +2696,10 @@ public final class Kickabout extends tu {
                 } else {
                   L4: {
                     if (po.a(ra.field_G, -4) < 640) {
-                      stackOut_13_0 = 0;
-                      stackIn_14_0 = stackOut_13_0;
+                      stackIn_14_0 = 0;
                       break L4;
                     } else {
-                      stackOut_12_0 = 1;
-                      stackIn_14_0 = stackOut_12_0;
+                      stackIn_14_0 = 1;
                       break L4;
                     }
                   }
@@ -3323,9 +2777,9 @@ public final class Kickabout extends tu {
                 if (-1 >= (var5 ^ -1)) {
                   break L8;
                 } else {
-                  incrementValue$1 = var4;
+                  incrementValue$0 = var4;
                   var4++;
-                  on.field_a[incrementValue$1] = 65793;
+                  on.field_a[incrementValue$0] = 65793;
                   var5++;
                   continue L11;
                 }
@@ -3355,50 +2809,34 @@ public final class Kickabout extends tu {
                   } else {
                     L14: {
                       L15: {
-                        stackOut_40_0 = sr.field_l;
-                        stackOut_40_1 = -5;
-                        stackIn_44_0 = stackOut_40_0;
-                        stackIn_44_1 = stackOut_40_1;
-                        stackIn_41_0 = stackOut_40_0;
-                        stackIn_41_1 = stackOut_40_1;
+                        stackIn_44_0 = sr.field_l;
+
+                        stackIn_44_1 = -5;
+
                         if (!this.field_L) {
                           break L15;
                         } else {
-                          stackOut_41_0 = (lm) ((Object) stackIn_41_0);
-                          stackOut_41_1 = stackIn_41_1;
-                          stackIn_44_0 = stackOut_41_0;
-                          stackIn_44_1 = stackOut_41_1;
-                          stackIn_42_0 = stackOut_41_0;
-                          stackIn_42_1 = stackOut_41_1;
+                          stackIn_44_0 = (lm) ((Object) stackIn_44_0);
+
                           if (sr.field_l != cq.field_h) {
                             break L15;
                           } else {
-                            stackOut_42_0 = (lm) ((Object) stackIn_42_0);
-                            stackOut_42_1 = stackIn_42_1;
-                            stackIn_44_0 = stackOut_42_0;
-                            stackIn_44_1 = stackOut_42_1;
-                            stackIn_43_0 = stackOut_42_0;
-                            stackIn_43_1 = stackOut_42_1;
+                            stackIn_44_0 = (lm) ((Object) stackIn_44_0);
+
                             if (ra.field_G != null) {
                               break L15;
                             } else {
-                              stackOut_43_0 = (lm) ((Object) stackIn_43_0);
-                              stackOut_43_1 = stackIn_43_1;
-                              stackOut_43_2 = 1;
-                              stackIn_45_0 = stackOut_43_0;
-                              stackIn_45_1 = stackOut_43_1;
-                              stackIn_45_2 = stackOut_43_2;
+                              stackIn_45_0 = (lm) ((Object) stackIn_44_0);
+                              stackIn_45_1 = stackIn_44_1;
+                              stackIn_45_2 = 1;
                               break L14;
                             }
                           }
                         }
                       }
-                      stackOut_44_0 = (lm) ((Object) stackIn_44_0);
-                      stackOut_44_1 = stackIn_44_1;
-                      stackOut_44_2 = 0;
-                      stackIn_45_0 = stackOut_44_0;
-                      stackIn_45_1 = stackOut_44_1;
-                      stackIn_45_2 = stackOut_44_2;
+                      stackIn_45_0 = (lm) ((Object) stackIn_44_0);
+                      stackIn_45_1 = stackIn_44_1;
+                      stackIn_45_2 = 0;
                       break L14;
                     }
                     ((lm) (Object) stackIn_45_0).a(stackIn_45_1, stackIn_45_2 != 0);
@@ -3419,50 +2857,34 @@ public final class Kickabout extends tu {
               } else {
                 L16: {
                   L17: {
-                    stackOut_49_0 = um.field_e;
-                    stackOut_49_1 = -5;
-                    stackIn_53_0 = stackOut_49_0;
-                    stackIn_53_1 = stackOut_49_1;
-                    stackIn_50_0 = stackOut_49_0;
-                    stackIn_50_1 = stackOut_49_1;
+                    stackIn_53_0 = um.field_e;
+
+                    stackIn_53_1 = -5;
+
                     if (!this.field_L) {
                       break L17;
                     } else {
-                      stackOut_50_0 = (ap) ((Object) stackIn_50_0);
-                      stackOut_50_1 = stackIn_50_1;
-                      stackIn_53_0 = stackOut_50_0;
-                      stackIn_53_1 = stackOut_50_1;
-                      stackIn_51_0 = stackOut_50_0;
-                      stackIn_51_1 = stackOut_50_1;
+                      stackIn_53_0 = (ap) ((Object) stackIn_53_0);
+
                       if (um.field_e != cq.field_h) {
                         break L17;
                       } else {
-                        stackOut_51_0 = (ap) ((Object) stackIn_51_0);
-                        stackOut_51_1 = stackIn_51_1;
-                        stackIn_53_0 = stackOut_51_0;
-                        stackIn_53_1 = stackOut_51_1;
-                        stackIn_52_0 = stackOut_51_0;
-                        stackIn_52_1 = stackOut_51_1;
+                        stackIn_53_0 = (ap) ((Object) stackIn_53_0);
+
                         if (null != ra.field_G) {
                           break L17;
                         } else {
-                          stackOut_52_0 = (ap) ((Object) stackIn_52_0);
-                          stackOut_52_1 = stackIn_52_1;
-                          stackOut_52_2 = 1;
-                          stackIn_54_0 = stackOut_52_0;
-                          stackIn_54_1 = stackOut_52_1;
-                          stackIn_54_2 = stackOut_52_2;
+                          stackIn_54_0 = (ap) ((Object) stackIn_53_0);
+                          stackIn_54_1 = stackIn_53_1;
+                          stackIn_54_2 = 1;
                           break L16;
                         }
                       }
                     }
                   }
-                  stackOut_53_0 = (ap) ((Object) stackIn_53_0);
-                  stackOut_53_1 = stackIn_53_1;
-                  stackOut_53_2 = 0;
-                  stackIn_54_0 = stackOut_53_0;
-                  stackIn_54_1 = stackOut_53_1;
-                  stackIn_54_2 = stackOut_53_2;
+                  stackIn_54_0 = (ap) ((Object) stackIn_53_0);
+                  stackIn_54_1 = stackIn_53_1;
+                  stackIn_54_2 = 0;
                   break L16;
                 }
                 ((ap) (Object) stackIn_54_0).a(stackIn_54_1, stackIn_54_2 != 0);
@@ -3487,40 +2909,28 @@ public final class Kickabout extends tu {
           if (cq.field_h instanceof qt) {
             L20: {
               L21: {
-                stackOut_60_0 = cq.field_h;
-                stackOut_60_1 = -5;
-                stackIn_63_0 = stackOut_60_0;
-                stackIn_63_1 = stackOut_60_1;
-                stackIn_61_0 = stackOut_60_0;
-                stackIn_61_1 = stackOut_60_1;
+                stackIn_63_0 = cq.field_h;
+
+                stackIn_63_1 = -5;
+
                 if (!this.field_L) {
                   break L21;
                 } else {
-                  stackOut_61_0 = (js) ((Object) stackIn_61_0);
-                  stackOut_61_1 = stackIn_61_1;
-                  stackIn_63_0 = stackOut_61_0;
-                  stackIn_63_1 = stackOut_61_1;
-                  stackIn_62_0 = stackOut_61_0;
-                  stackIn_62_1 = stackOut_61_1;
+                  stackIn_63_0 = (js) ((Object) stackIn_63_0);
+
                   if (null != ra.field_G) {
                     break L21;
                   } else {
-                    stackOut_62_0 = (js) ((Object) stackIn_62_0);
-                    stackOut_62_1 = stackIn_62_1;
-                    stackOut_62_2 = 1;
-                    stackIn_64_0 = stackOut_62_0;
-                    stackIn_64_1 = stackOut_62_1;
-                    stackIn_64_2 = stackOut_62_2;
+                    stackIn_64_0 = (js) ((Object) stackIn_63_0);
+                    stackIn_64_1 = stackIn_63_1;
+                    stackIn_64_2 = 1;
                     break L20;
                   }
                 }
               }
-              stackOut_63_0 = (js) ((Object) stackIn_63_0);
-              stackOut_63_1 = stackIn_63_1;
-              stackOut_63_2 = 0;
-              stackIn_64_0 = stackOut_63_0;
-              stackIn_64_1 = stackOut_63_1;
-              stackIn_64_2 = stackOut_63_2;
+              stackIn_64_0 = (js) ((Object) stackIn_63_0);
+              stackIn_64_1 = stackIn_63_1;
+              stackIn_64_2 = 0;
               break L20;
             }
             ((js) (Object) stackIn_64_0).a(stackIn_64_1, stackIn_64_2 != 0);
@@ -3553,30 +2963,24 @@ public final class Kickabout extends tu {
           } else {
             L25: {
               L26: {
-                stackOut_71_0 = (qt) ((Object) cq.field_h);
-                stackIn_74_0 = stackOut_71_0;
-                stackIn_72_0 = stackOut_71_0;
+                stackIn_74_0 = (qt) ((Object) cq.field_h);
+
                 if (!this.field_L) {
                   break L26;
                 } else {
-                  stackOut_72_0 = (qt) ((Object) stackIn_72_0);
-                  stackIn_74_0 = stackOut_72_0;
-                  stackIn_73_0 = stackOut_72_0;
+                  stackIn_74_0 = (qt) ((Object) stackIn_74_0);
+
                   if (ra.field_G != null) {
                     break L26;
                   } else {
-                    stackOut_73_0 = (qt) ((Object) stackIn_73_0);
-                    stackOut_73_1 = 1;
-                    stackIn_75_0 = stackOut_73_0;
-                    stackIn_75_1 = stackOut_73_1;
+                    stackIn_75_0 = (qt) ((Object) stackIn_74_0);
+                    stackIn_75_1 = 1;
                     break L25;
                   }
                 }
               }
-              stackOut_74_0 = (qt) ((Object) stackIn_74_0);
-              stackOut_74_1 = 0;
-              stackIn_75_0 = stackOut_74_0;
-              stackIn_75_1 = stackOut_74_1;
+              stackIn_75_0 = (qt) ((Object) stackIn_74_0);
+              stackIn_75_1 = 0;
               break L25;
             }
             ((qt) (Object) stackIn_75_0).a(stackIn_75_1 != 0, 117);
@@ -3603,40 +3007,28 @@ public final class Kickabout extends tu {
               } else {
                 L29: {
                   L30: {
-                    stackOut_82_0 = cq.field_h;
-                    stackOut_82_1 = -5;
-                    stackIn_85_0 = stackOut_82_0;
-                    stackIn_85_1 = stackOut_82_1;
-                    stackIn_83_0 = stackOut_82_0;
-                    stackIn_83_1 = stackOut_82_1;
+                    stackIn_85_0 = cq.field_h;
+
+                    stackIn_85_1 = -5;
+
                     if (!this.field_L) {
                       break L30;
                     } else {
-                      stackOut_83_0 = (js) ((Object) stackIn_83_0);
-                      stackOut_83_1 = stackIn_83_1;
-                      stackIn_85_0 = stackOut_83_0;
-                      stackIn_85_1 = stackOut_83_1;
-                      stackIn_84_0 = stackOut_83_0;
-                      stackIn_84_1 = stackOut_83_1;
+                      stackIn_85_0 = (js) ((Object) stackIn_85_0);
+
                       if (ra.field_G != null) {
                         break L30;
                       } else {
-                        stackOut_84_0 = (js) ((Object) stackIn_84_0);
-                        stackOut_84_1 = stackIn_84_1;
-                        stackOut_84_2 = 1;
-                        stackIn_86_0 = stackOut_84_0;
-                        stackIn_86_1 = stackOut_84_1;
-                        stackIn_86_2 = stackOut_84_2;
+                        stackIn_86_0 = (js) ((Object) stackIn_85_0);
+                        stackIn_86_1 = stackIn_85_1;
+                        stackIn_86_2 = 1;
                         break L29;
                       }
                     }
                   }
-                  stackOut_85_0 = (js) ((Object) stackIn_85_0);
-                  stackOut_85_1 = stackIn_85_1;
-                  stackOut_85_2 = 0;
-                  stackIn_86_0 = stackOut_85_0;
-                  stackIn_86_1 = stackOut_85_1;
-                  stackIn_86_2 = stackOut_85_2;
+                  stackIn_86_0 = (js) ((Object) stackIn_85_0);
+                  stackIn_86_1 = stackIn_85_1;
+                  stackIn_86_2 = 0;
                   break L29;
                 }
                 ((js) (Object) stackIn_86_0).a(stackIn_86_1, stackIn_86_2 != 0);

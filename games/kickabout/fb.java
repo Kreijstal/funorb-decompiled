@@ -31,12 +31,10 @@ final class fb extends cj {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         if (param0 > 79) {
           try {
             L0: {
-              stackOut_2_0 = Integer.parseInt(this.field_L.field_q);
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = Integer.parseInt(this.field_L.field_q);
               break L0;
             }
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -52,8 +50,6 @@ final class fb extends cj {
 
     final boolean b(boolean param0) {
         int stackIn_14_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_13_0 = 0;
         L0: {
           if (param0) {
             break L0;
@@ -81,14 +77,12 @@ final class fb extends cj {
                         if (this.field_P.field_q.length() == 0) {
                           break L3;
                         } else {
-                          stackOut_12_0 = 0;
-                          stackIn_14_0 = stackOut_12_0;
+                          stackIn_14_0 = 0;
                           break L2;
                         }
                       }
                     }
-                    stackOut_13_0 = 1;
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = 1;
                     break L2;
                   }
                   return stackIn_14_0 != 0;
@@ -117,7 +111,6 @@ final class fb extends cj {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         try {
           L0: {
             L1: {
@@ -128,8 +121,7 @@ final class fb extends cj {
                 break L1;
               }
             }
-            stackOut_2_0 = -1 + Integer.parseInt(this.field_K.field_q);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = -1 + Integer.parseInt(this.field_K.field_q);
             break L0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -178,7 +170,6 @@ final class fb extends cj {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
         try {
           L0: {
             L1: {
@@ -189,8 +180,7 @@ final class fb extends cj {
                 break L1;
               }
             }
-            stackOut_2_0 = Integer.parseInt(this.field_P.field_q);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = Integer.parseInt(this.field_P.field_q);
             break L0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

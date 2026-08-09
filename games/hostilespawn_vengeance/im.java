@@ -24,10 +24,6 @@ final class im {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "im.A(";
         field_b = "Reload game";
         field_d = "Ok, both the door and lift are unlocked now. Time to head on down.";

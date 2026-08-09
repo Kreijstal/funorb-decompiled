@@ -18,6 +18,7 @@ public final class pf {
 
     private final void a(int param0, jaclib.peer.PeerReference param1) {
         L0: {
+          param1.a(param0 + -19176);
           if (this.b == param1) {
             this.b = param1.b;
             break L0;
@@ -96,7 +97,7 @@ public final class pf {
     }
 
     public final void a(int param0) {
-        jaclib.peer.PeerReference var3 = null;
+        jaclib.peer.PeerReference var3;
         if (param0 == -25924) {
           this.a(false);
           L0: while (true) {
@@ -145,8 +146,8 @@ public final class pf {
     }
 
     private final void a(boolean param0) {
-        java.lang.ref.Reference var2 = null;
-        jaclib.peer.PeerReference var3 = null;
+        java.lang.ref.Reference var2;
+        jaclib.peer.PeerReference var3;
         if (!param0) {
           L0: while (true) {
             var2 = this.a.poll();

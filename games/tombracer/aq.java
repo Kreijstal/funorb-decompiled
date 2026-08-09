@@ -10,9 +10,8 @@ final class aq {
     }
 
     final static int a(int param0) {
-        int discarded$0 = 0;
         if (param0 != -5640) {
-            discarded$0 = aq.a(-88);
+            aq.a(-88);
             return qg.field_a.length;
         }
         return qg.field_a.length;

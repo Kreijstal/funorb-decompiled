@@ -17,11 +17,11 @@ final class ad implements Runnable {
     private int field_k;
 
     final static void a(int param0, int param1) {
-        RuntimeException var2 = null;
         int var3 = 0;
         rl var4 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = EscapeVector.field_A;
         try {
           L0: {
@@ -160,11 +160,11 @@ final class ad implements Runnable {
     }
 
     final synchronized boolean a(int param0) {
+        Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        Throwable decompiledCaughtException = null;
         if (-3 >= (this.field_k ^ -1)) {
           return true;
         } else {

@@ -17,12 +17,11 @@ final class ps extends lk {
     final static va b(byte param0) {
         int var1 = 0;
         int var2_int = 0;
-        IllegalArgumentException var2 = null;
         va var3 = null;
         int var4 = 0;
-        va stackIn_5_0 = null;
+        va stackIn_4_0 = null;
         Throwable decompiledCaughtException = null;
-        va stackOut_4_0 = null;
+        IllegalArgumentException var2 = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         var1 = 55 / ((param0 - 21) / 34);
         try {
@@ -34,13 +33,8 @@ final class ps extends lk {
                 var2_int++;
                 continue L1;
               } else {
-                if (var4 != 0) {
-                  continue L1;
-                } else {
-                  stackOut_4_0 = (va) (var3);
-                  stackIn_5_0 = stackOut_4_0;
-                  break L0;
-                }
+                stackIn_4_0 = (va) (var3);
+                break L0;
               }
             }
           }
@@ -49,7 +43,7 @@ final class ps extends lk {
           var2 = (IllegalArgumentException) (Object) decompiledCaughtException;
           return null;
         }
-        return stackIn_5_0;
+        return stackIn_4_0;
     }
 
     public static void c(boolean param0) {
@@ -75,8 +69,17 @@ final class ps extends lk {
     }
 
     public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
-        RuntimeException var6 = null;
+        int stackIn_8_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_19_0 = 0;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -84,33 +87,6 @@ final class ps extends lk {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_19_0 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
         try {
           L0: {
             L1: {
@@ -125,17 +101,14 @@ final class ps extends lk {
             L2: {
               if (param3) {
                 if (((fw) ((Object) param0)).field_K) {
-                  stackOut_6_0 = 1;
-                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_0 = 1;
                   break L2;
                 } else {
-                  stackOut_5_0 = 0;
-                  stackIn_8_0 = stackOut_5_0;
+                  stackIn_8_0 = 0;
                   break L2;
                 }
               } else {
-                stackOut_3_0 = 0;
-                stackIn_8_0 = stackOut_3_0;
+                stackIn_8_0 = 0;
                 break L2;
               }
             }
@@ -143,17 +116,14 @@ final class ps extends lk {
               var6_int = stackIn_8_0;
               if (param3) {
                 if (param0.a(false)) {
-                  stackOut_12_0 = 1;
-                  stackIn_14_0 = stackOut_12_0;
+                  stackIn_14_0 = 1;
                   break L3;
                 } else {
-                  stackOut_11_0 = 0;
-                  stackIn_14_0 = stackOut_11_0;
+                  stackIn_14_0 = 0;
                   break L3;
                 }
               } else {
-                stackOut_9_0 = 0;
-                stackIn_14_0 = stackOut_9_0;
+                stackIn_14_0 = 0;
                 break L3;
               }
             }
@@ -169,12 +139,10 @@ final class ps extends lk {
             }
             L5: {
               if (var6_int == 0) {
-                stackOut_18_0 = 16777215;
-                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_0 = 16777215;
                 break L5;
               } else {
-                stackOut_17_0 = 2394342;
-                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_0 = 2394342;
                 break L5;
               }
             }
@@ -199,27 +167,19 @@ final class ps extends lk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var6);
-            stackOut_24_1 = new StringBuilder().append("ps.C(");
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var6);
+
+            stackIn_26_1 = new StringBuilder().append("ps.C(");
+
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L7;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L7;
             }
           }
@@ -228,8 +188,8 @@ final class ps extends lk {
     }
 
     final static void a(int param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           sh.field_l = param0;
           if (sj.field_d != mj.field_c) {

@@ -14,51 +14,19 @@ final class dr extends ah {
 
     dr(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3);
-        int var5 = 0;
-        int var6 = 0;
-        L0: {
-          L1: {
-            L2: {
-              L3: {
-                L4: {
-                  var6 = Sumoblitz.field_L ? 1 : 0;
-                  var5 = this.field_Q;
-                  if ((var5 ^ -1) != -7) {
-                    break L4;
-                  } else {
-                    if (var6 == 0) {
-                      break L3;
-                    } else {
-                      break L4;
-                    }
-                  }
-                }
-                if (-8 != (var5 ^ -1)) {
-                  break L1;
-                } else {
-                  if (var6 == 0) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              this.field_T = 0;
-              if (var6 == 0) {
-                break L0;
-              } else {
-                break L2;
-              }
-            }
+        int var5;
+        var5 = this.field_Q;
+        if ((var5 ^ -1) == -7) {
+          this.field_T = 0;
+          return;
+        } else {
+          if (-8 != (var5 ^ -1)) {
+            this.field_T = -1;
+            return;
+          } else {
             this.field_T = 1;
-            if (var6 == 0) {
-              break L0;
-            } else {
-              break L1;
-            }
+            return;
           }
-          this.field_T = -1;
-          break L0;
         }
     }
 

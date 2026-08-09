@@ -18,18 +18,18 @@ final class fo {
     static int field_f;
 
     private final void a(byte param0) {
-        int fieldTemp$3 = 0;
-        int dupTemp$4 = 0;
-        int dupTemp$5 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int fieldTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int dupTemp$2 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
         if (param0 < -64) {
-          fieldTemp$3 = this.field_e + 1;
+          fieldTemp$0 = this.field_e + 1;
           this.field_e = this.field_e + 1;
-          this.field_l = this.field_l + fieldTemp$3;
+          this.field_l = this.field_l + fieldTemp$0;
           var2 = 0;
           L0: while (true) {
             if ((var2 ^ -1) <= -257) {
@@ -56,12 +56,12 @@ final class fo {
                 }
               }
               this.field_m = this.field_m + this.field_d[255 & var2 + 128];
-              dupTemp$4 = this.field_l + (this.field_m + this.field_d[ik.a(1020, var3) >> -1600714078]);
-              var4 = dupTemp$4;
-              this.field_d[var2] = dupTemp$4;
-              dupTemp$5 = this.field_d[ik.a(var4 >> -1071991064 >> 1134976770, 255)] - -var3;
-              this.field_l = dupTemp$5;
-              this.field_k[var2] = dupTemp$5;
+              dupTemp$1 = this.field_l + (this.field_m + this.field_d[ik.a(1020, var3) >> -1600714078]);
+              var4 = dupTemp$1;
+              this.field_d[var2] = dupTemp$1;
+              dupTemp$2 = this.field_d[ik.a(var4 >> -1071991064 >> 1134976770, 255)] - -var3;
+              this.field_l = dupTemp$2;
+              this.field_k[var2] = dupTemp$2;
               var2++;
               continue L0;
             }
@@ -102,135 +102,16 @@ final class fo {
 
     private final void a(boolean param0) {
         int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        var11 = BrickABrac.field_J ? 1 : 0;
-        var5 = -1640531527;
-        var9 = -1640531527;
-        var3 = -1640531527;
-        var10 = -1640531527;
-        var4 = -1640531527;
-        var6 = -1640531527;
-        var7 = -1640531527;
-        var8 = -1640531527;
-        var2 = 0;
-        L0: while (true) {
-          if ((var2 ^ -1) <= -5) {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                fo.a(-63);
-                break L1;
-              }
-            }
-            var2 = 0;
-            L2: while (true) {
-              if (256 <= var2) {
-                var2 = 0;
-                L3: while (true) {
-                  if (-257 >= (var2 ^ -1)) {
-                    this.a((byte) -125);
-                    this.field_j = 256;
-                    return;
-                  } else {
-                    var3 = var3 + this.field_d[var2];
-                    var4 = var4 + this.field_d[1 + var2];
-                    var8 = var8 + this.field_d[var2 - -5];
-                    var7 = var7 + this.field_d[var2 - -4];
-                    var6 = var6 + this.field_d[var2 + 3];
-                    var9 = var9 + this.field_d[6 + var2];
-                    var10 = var10 + this.field_d[var2 + 7];
-                    var5 = var5 + this.field_d[2 + var2];
-                    var3 = var3 ^ var4 << 1706978347;
-                    var6 = var6 + var3;
-                    var4 = var4 + var5;
-                    var4 = var4 ^ var5 >>> 167362594;
-                    var5 = var5 + var6;
-                    var7 = var7 + var4;
-                    var5 = var5 ^ var6 << -361945432;
-                    var6 = var6 + var7;
-                    var8 = var8 + var5;
-                    var6 = var6 ^ var7 >>> -1456779408;
-                    var7 = var7 + var8;
-                    var9 = var9 + var6;
-                    var7 = var7 ^ var8 << 510505482;
-                    var8 = var8 + var9;
-                    var10 = var10 + var7;
-                    var8 = var8 ^ var9 >>> 1976263972;
-                    var9 = var9 + var10;
-                    var3 = var3 + var8;
-                    var9 = var9 ^ var10 << -492767512;
-                    var10 = var10 + var3;
-                    var4 = var4 + var9;
-                    var10 = var10 ^ var3 >>> -1107350263;
-                    var5 = var5 + var10;
-                    var3 = var3 + var4;
-                    this.field_d[var2] = var3;
-                    this.field_d[var2 - -1] = var4;
-                    this.field_d[var2 + 2] = var5;
-                    this.field_d[var2 + 3] = var6;
-                    this.field_d[4 + var2] = var7;
-                    this.field_d[var2 - -5] = var8;
-                    this.field_d[var2 + 6] = var9;
-                    this.field_d[7 + var2] = var10;
-                    var2 += 8;
-                    continue L3;
-                  }
-                }
-              } else {
-                var9 = var9 + this.field_k[6 + var2];
-                var8 = var8 + this.field_k[5 + var2];
-                var7 = var7 + this.field_k[var2 - -4];
-                var4 = var4 + this.field_k[1 + var2];
-                var3 = var3 + this.field_k[var2];
-                var5 = var5 + this.field_k[var2 - -2];
-                var6 = var6 + this.field_k[var2 + 3];
-                var10 = var10 + this.field_k[7 + var2];
-                var3 = var3 ^ var4 << -1352351957;
-                var4 = var4 + var5;
-                var6 = var6 + var3;
-                var4 = var4 ^ var5 >>> 317952802;
-                var5 = var5 + var6;
-                var7 = var7 + var4;
-                var5 = var5 ^ var6 << 1486247592;
-                var8 = var8 + var5;
-                var6 = var6 + var7;
-                var6 = var6 ^ var7 >>> 1172905136;
-                var9 = var9 + var6;
-                var7 = var7 + var8;
-                var7 = var7 ^ var8 << -1617793942;
-                var10 = var10 + var7;
-                var8 = var8 + var9;
-                var8 = var8 ^ var9 >>> 661862404;
-                var3 = var3 + var8;
-                var9 = var9 + var10;
-                var9 = var9 ^ var10 << 1127932200;
-                var4 = var4 + var9;
-                var10 = var10 + var3;
-                var10 = var10 ^ var3 >>> 486253833;
-                var3 = var3 + var4;
-                var5 = var5 + var10;
-                this.field_d[var2] = var3;
-                this.field_d[var2 - -1] = var4;
-                this.field_d[2 + var2] = var5;
-                this.field_d[var2 - -3] = var6;
-                this.field_d[var2 + 4] = var7;
-                this.field_d[var2 + 5] = var8;
-                this.field_d[var2 + 6] = var9;
-                this.field_d[7 + var2] = var10;
-                var2 += 8;
-                continue L2;
-              }
-            }
-          } else {
+        int var11 = BrickABrac.field_J ? 1 : 0;
+        int var5 = -1640531527;
+        int var9 = -1640531527;
+        int var3 = -1640531527;
+        int var10 = -1640531527;
+        int var4 = -1640531527;
+        int var6 = -1640531527;
+        int var7 = -1640531527;
+        int var8 = -1640531527;
+        for (var2 = 0; (var2 ^ -1) > -5; var2++) {
             var3 = var3 ^ var4 << -157659957;
             var4 = var4 + var5;
             var6 = var6 + var3;
@@ -255,10 +136,96 @@ final class fo {
             var10 = var10 ^ var3 >>> -860832887;
             var5 = var5 + var10;
             var3 = var3 + var4;
-            var2++;
-            continue L0;
-          }
         }
+        if (!param0) {
+            fo.a(-63);
+        }
+        for (var2 = 0; 256 > var2; var2 += 8) {
+            var9 = var9 + this.field_k[6 + var2];
+            var8 = var8 + this.field_k[5 + var2];
+            var7 = var7 + this.field_k[var2 - -4];
+            var4 = var4 + this.field_k[1 + var2];
+            var3 = var3 + this.field_k[var2];
+            var5 = var5 + this.field_k[var2 - -2];
+            var6 = var6 + this.field_k[var2 + 3];
+            var10 = var10 + this.field_k[7 + var2];
+            var3 = var3 ^ var4 << -1352351957;
+            var4 = var4 + var5;
+            var6 = var6 + var3;
+            var4 = var4 ^ var5 >>> 317952802;
+            var5 = var5 + var6;
+            var7 = var7 + var4;
+            var5 = var5 ^ var6 << 1486247592;
+            var8 = var8 + var5;
+            var6 = var6 + var7;
+            var6 = var6 ^ var7 >>> 1172905136;
+            var9 = var9 + var6;
+            var7 = var7 + var8;
+            var7 = var7 ^ var8 << -1617793942;
+            var10 = var10 + var7;
+            var8 = var8 + var9;
+            var8 = var8 ^ var9 >>> 661862404;
+            var3 = var3 + var8;
+            var9 = var9 + var10;
+            var9 = var9 ^ var10 << 1127932200;
+            var4 = var4 + var9;
+            var10 = var10 + var3;
+            var10 = var10 ^ var3 >>> 486253833;
+            var3 = var3 + var4;
+            var5 = var5 + var10;
+            this.field_d[var2] = var3;
+            this.field_d[var2 - -1] = var4;
+            this.field_d[2 + var2] = var5;
+            this.field_d[var2 - -3] = var6;
+            this.field_d[var2 + 4] = var7;
+            this.field_d[var2 + 5] = var8;
+            this.field_d[var2 + 6] = var9;
+            this.field_d[7 + var2] = var10;
+        }
+        for (var2 = 0; -257 < (var2 ^ -1); var2 += 8) {
+            var3 = var3 + this.field_d[var2];
+            var4 = var4 + this.field_d[1 + var2];
+            var8 = var8 + this.field_d[var2 - -5];
+            var7 = var7 + this.field_d[var2 - -4];
+            var6 = var6 + this.field_d[var2 + 3];
+            var9 = var9 + this.field_d[6 + var2];
+            var10 = var10 + this.field_d[var2 + 7];
+            var5 = var5 + this.field_d[2 + var2];
+            var3 = var3 ^ var4 << 1706978347;
+            var6 = var6 + var3;
+            var4 = var4 + var5;
+            var4 = var4 ^ var5 >>> 167362594;
+            var5 = var5 + var6;
+            var7 = var7 + var4;
+            var5 = var5 ^ var6 << -361945432;
+            var6 = var6 + var7;
+            var8 = var8 + var5;
+            var6 = var6 ^ var7 >>> -1456779408;
+            var7 = var7 + var8;
+            var9 = var9 + var6;
+            var7 = var7 ^ var8 << 510505482;
+            var8 = var8 + var9;
+            var10 = var10 + var7;
+            var8 = var8 ^ var9 >>> 1976263972;
+            var9 = var9 + var10;
+            var3 = var3 + var8;
+            var9 = var9 ^ var10 << -492767512;
+            var10 = var10 + var3;
+            var4 = var4 + var9;
+            var10 = var10 ^ var3 >>> -1107350263;
+            var5 = var5 + var10;
+            var3 = var3 + var4;
+            this.field_d[var2] = var3;
+            this.field_d[var2 - -1] = var4;
+            this.field_d[var2 + 2] = var5;
+            this.field_d[var2 + 3] = var6;
+            this.field_d[4 + var2] = var7;
+            this.field_d[var2 - -5] = var8;
+            this.field_d[var2 + 6] = var9;
+            this.field_d[7 + var2] = var10;
+        }
+        this.a((byte) -125);
+        this.field_j = 256;
     }
 
     final int b(int param0) {

@@ -14,9 +14,8 @@ final class el implements Iterable {
     static cr field_b;
 
     final static int b(boolean param0) {
-        int discarded$0 = 0;
         if (!param0) {
-            discarded$0 = el.b(false);
+            el.b(false);
         }
         return (int)(1000000000L / sl.field_w);
     }
@@ -37,8 +36,9 @@ final class el implements Iterable {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        RuntimeException var8 = null;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -49,7 +49,6 @@ final class el implements Iterable {
         int var16 = 0;
         int var18 = 0;
         int[] var22 = null;
-        RuntimeException decompiledCaughtException = null;
         var18 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -130,7 +129,6 @@ final class el implements Iterable {
 
     final void a(long param0, li param1, int param2) {
         li var5 = null;
-        int discarded$0 = 0;
         try {
             if (!(param1.field_a == null)) {
                 param1.c(2);
@@ -140,7 +138,7 @@ final class el implements Iterable {
             param1.field_a = var5.field_a;
             param1.field_a.field_c = param1;
             if (param2 <= 74) {
-                discarded$0 = el.b(false);
+                el.b(false);
             }
             param1.field_c.field_a = param1;
             param1.field_k = param0;

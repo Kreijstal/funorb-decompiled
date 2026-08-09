@@ -20,8 +20,8 @@ final class lc extends gi {
     byte[][][] field_t;
 
     final static char a(int param0, char param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param0 != 249) {
           L0: {
@@ -549,10 +549,10 @@ final class lc extends gi {
 
     final static void a(int param0, byte param1) {
         ml var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -597,7 +597,7 @@ final class lc extends gi {
     final static void a(byte param0) {
         fl.field_i = false;
         int var1 = 51 % ((-60 - param0) / 37);
-        int discarded$0 = dh.field_N.l(31760);
+        dh.field_N.l(31760);
     }
 
     lc() {

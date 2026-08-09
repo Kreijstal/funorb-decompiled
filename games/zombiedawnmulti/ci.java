@@ -54,87 +54,120 @@ final class ci {
         String var8 = null;
         String stackIn_5_0 = null;
         String stackIn_15_0 = null;
-        String stackOut_4_0 = null;
-        L0: {
-          var5 = ZombieDawnMulti.field_E ? 1 : 0;
-          var6 = "(" + k.field_k + " " + jp.field_e + " " + ij.field_d + ") " + op.field_i;
-          var1 = var6;
-          if (param0 < hd.field_q) {
-            var1 = var6 + ":";
-            var2 = 0;
-            L1: while (true) {
-              if (var2 >= hd.field_q) {
-                break L0;
-              } else {
-                stackOut_4_0 = var1 + ' ';
-                stackIn_15_0 = stackOut_4_0;
-                stackIn_5_0 = stackOut_4_0;
-                if (var5 != 0) {
-                  return stackIn_15_0;
-                } else {
-                  L2: {
-                    L3: {
-                      var7 = stackIn_5_0;
-                      var3 = 255 & s.field_e.field_m[var2];
-                      var4 = var3 >> 2094073860;
-                      var3 = var3 & 15;
-                      if (10 <= var4) {
-                        break L3;
-                      } else {
-                        var4 += 48;
-                        if (var5 == 0) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      }
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var5 = ZombieDawnMulti.field_E ? 1 : 0;
+                    var6 = "(" + k.field_k + " " + jp.field_e + " " + ij.field_d + ") " + op.field_i;
+                    var1 = var6;
+                    if (param0 < hd.field_q) {
+                        statePc = 2;
+                    } else {
+                        statePc = 14;
                     }
-                    var4 += 55;
-                    break L2;
-                  }
-                  L4: {
-                    L5: {
-                      if (10 <= var3) {
-                        break L5;
-                      } else {
-                        var3 += 48;
-                        if (var5 == 0) {
-                          break L4;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    var3 += 55;
-                    break L4;
-                  }
-                  var8 = var7 + (char)var4;
-                  var1 = var8 + (char)var3;
-                  var2++;
-                  if (var5 == 0) {
-                    continue L1;
-                  } else {
-                    break L0;
-                  }
+                    continue stateLoop;
                 }
-              }
+                case 2: {
+                    var1 = var6 + ":";
+                    var2 = 0;
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (var2 >= hd.field_q) {
+                        statePc = 14;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    stackIn_15_0 = var1 + ' ';
+                    stackIn_5_0 = stackIn_15_0;
+                    if (var5 != 0) {
+                        statePc = 15;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    var7 = stackIn_5_0;
+                    var3 = 255 & s.field_e.field_m[var2];
+                    var4 = var3 >> 2094073860;
+                    var3 = var3 & 15;
+                    if (10 <= var4) {
+                        statePc = 8;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    var4 += 48;
+                    if (var5 == 0) {
+                        statePc = 9;
+                    } else {
+                        statePc = 8;
+                    }
+                    continue stateLoop;
+                }
+                case 8: {
+                    var4 += 55;
+                    statePc = 9;
+                    continue stateLoop;
+                }
+                case 9: {
+                    if (10 <= var3) {
+                        statePc = 12;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    var3 += 48;
+                    if (var5 == 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
+                    var3 += 55;
+                    statePc = 13;
+                    continue stateLoop;
+                }
+                case 13: {
+                    var8 = var7 + (char)var4;
+                    var1 = var8 + (char)var3;
+                    var2++;
+                    if (var5 == 0) {
+                        statePc = 3;
+                    } else {
+                        statePc = 14;
+                    }
+                    continue stateLoop;
+                }
+                case 14: {
+                    return var1;
+                }
+                case 15: {
+                    return stackIn_15_0;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          } else {
-            break L0;
-          }
         }
-        return var1;
     }
 
     final byte[] a(byte param0, int param1) {
-        th var3 = null;
-        Object var4 = null;
-        gi var4_ref = null;
-        int var5 = 0;
-        gi stackIn_5_0 = null;
+        th var3;
+        Object var4;
+        gi var4_ref;
+        int var5;
         gi stackIn_12_0 = null;
-        gi stackOut_4_0 = null;
-        gi stackOut_11_0 = null;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         var3 = this.field_b;
         var4 = null;
@@ -146,14 +179,13 @@ final class ci {
                 if (var4_ref == null) {
                   break L2;
                 } else {
-                  stackOut_4_0 = (gi) (var4_ref);
-                  stackIn_12_0 = stackOut_4_0;
-                  stackIn_5_0 = stackOut_4_0;
+                  stackIn_12_0 = (gi) (var4_ref);
+
                   if (var5 != 0) {
                     break L1;
                   } else {
                     L3: {
-                      if (stackIn_5_0.field_k != param1) {
+                      if (stackIn_12_0.field_k != param1) {
                         break L3;
                       } else {
                         if (var5 == 0) {
@@ -173,8 +205,7 @@ final class ci {
                 }
               }
               if (var4_ref != null) {
-                stackOut_11_0 = (gi) (var4_ref);
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = (gi) (var4_ref);
                 break L1;
               } else {
                 return null;
@@ -188,24 +219,6 @@ final class ci {
     }
 
     final static void a(boolean param0, int param1) {
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        cj var8_ref_cj = null;
-        int var9_int = 0;
-        mo var9 = null;
-        int var10 = 0;
-        mo var10_ref_mo = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        cj var14 = null;
-        cj var15 = null;
         int stackIn_4_0 = 0;
         cj stackIn_5_0 = null;
         int stackIn_5_1 = 0;
@@ -232,37 +245,27 @@ final class ci {
         Object stackIn_78_0 = null;
         int stackIn_79_0 = 0;
         int stackIn_79_1 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_3_0 = 0;
-        cj stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        cj stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_5_2 = 0;
-        int stackOut_5_3 = 0;
-        cj stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
-        int stackOut_6_3 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_21_1 = 0;
-        Object stackOut_36_0 = null;
-        mo stackOut_36_1 = null;
-        Object stackOut_37_0 = null;
-        mo stackOut_37_1 = null;
-        int stackOut_46_0 = 0;
-        int stackOut_47_0 = 0;
-        mo stackOut_51_0 = null;
-        Object stackOut_71_0 = null;
-        mo stackOut_71_1 = null;
-        Object stackOut_72_0 = null;
-        mo stackOut_72_1 = null;
-        cj stackOut_77_0 = null;
-        int stackOut_78_0 = 0;
-        int stackOut_78_1 = 0;
+        mo stackOut_51_0;
         int statePc = 0;
         Throwable caughtException = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        cj var8_ref_cj = null;
+        mo var9 = null;
+        int var9_int = 0;
+        mo var10_ref_mo = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        cj var14 = null;
+        cj var15 = null;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -288,8 +291,7 @@ final class ci {
                 }
                 case 2: {
                     try {
-                        stackOut_2_0 = da.field_a;
-                        stackIn_4_0 = stackOut_2_0;
+                        stackIn_4_0 = da.field_a;
                         statePc = 4;
                         continue stateLoop;
                     } catch (Throwable stateCaught_2) {
@@ -300,8 +302,7 @@ final class ci {
                 }
                 case 3: {
                     try {
-                        stackOut_3_0 = sq.field_Q;
-                        stackIn_4_0 = stackOut_3_0;
+                        stackIn_4_0 = sq.field_Q;
                         statePc = 4;
                         continue stateLoop;
                     } catch (Throwable stateCaught_3) {
@@ -315,15 +316,12 @@ final class ci {
                         mf.a(stackIn_4_0, false);
                         em.field_U.a(0, mh.field_i.field_zb, 0, (byte) -74, -2 + (-40 + mh.field_i.field_z));
                         fn.field_h.a(jk.field_f, 0, ga.field_r.field_zb, 0, -3344);
-                        stackOut_4_0 = ie.field_jb;
-                        stackOut_4_1 = 18;
-                        stackOut_4_2 = 2 + jk.field_f;
-                        stackIn_6_0 = stackOut_4_0;
-                        stackIn_6_1 = stackOut_4_1;
-                        stackIn_6_2 = stackOut_4_2;
-                        stackIn_5_0 = stackOut_4_0;
-                        stackIn_5_1 = stackOut_4_1;
-                        stackIn_5_2 = stackOut_4_2;
+                        stackIn_6_0 = ie.field_jb;
+                        stackIn_5_0 = stackIn_6_0;
+                        stackIn_6_1 = 18;
+                        stackIn_5_1 = stackIn_6_1;
+                        stackIn_6_2 = 2 + jk.field_f;
+                        stackIn_5_2 = stackIn_6_2;
                         if (tb.field_u) {
                             statePc = 6;
                         } else {
@@ -338,14 +336,10 @@ final class ci {
                 }
                 case 5: {
                     try {
-                        stackOut_5_0 = (cj) ((Object) stackIn_5_0);
-                        stackOut_5_1 = stackIn_5_1;
-                        stackOut_5_2 = stackIn_5_2;
-                        stackOut_5_3 = 0;
-                        stackIn_7_0 = stackOut_5_0;
-                        stackIn_7_1 = stackOut_5_1;
-                        stackIn_7_2 = stackOut_5_2;
-                        stackIn_7_3 = stackOut_5_3;
+                        stackIn_7_0 = (cj) ((Object) stackIn_5_0);
+                        stackIn_7_1 = stackIn_5_1;
+                        stackIn_7_2 = stackIn_5_2;
+                        stackIn_7_3 = 0;
                         statePc = 7;
                         continue stateLoop;
                     } catch (Throwable stateCaught_5) {
@@ -356,14 +350,10 @@ final class ci {
                 }
                 case 6: {
                     try {
-                        stackOut_6_0 = (cj) ((Object) stackIn_6_0);
-                        stackOut_6_1 = stackIn_6_1;
-                        stackOut_6_2 = stackIn_6_2;
-                        stackOut_6_3 = 2 + (40 + qa.field_o) + 2;
-                        stackIn_7_0 = stackOut_6_0;
-                        stackIn_7_1 = stackOut_6_1;
-                        stackIn_7_2 = stackOut_6_2;
-                        stackIn_7_3 = stackOut_6_3;
+                        stackIn_7_0 = (cj) ((Object) stackIn_6_0);
+                        stackIn_7_1 = stackIn_6_1;
+                        stackIn_7_2 = stackIn_6_2;
+                        stackIn_7_3 = 2 + (40 + qa.field_o) + 2;
                         statePc = 7;
                         continue stateLoop;
                     } catch (Throwable stateCaught_6) {
@@ -550,12 +540,10 @@ final class ci {
                 }
                 case 21: {
                     try {
-                        stackOut_21_0 = -2;
-                        stackOut_21_1 = var6 ^ -1;
-                        stackIn_79_0 = stackOut_21_0;
-                        stackIn_79_1 = stackOut_21_1;
-                        stackIn_22_0 = stackOut_21_0;
-                        stackIn_22_1 = stackOut_21_1;
+                        stackIn_79_0 = -2;
+                        stackIn_22_0 = stackIn_79_0;
+                        stackIn_79_1 = var6 ^ -1;
+                        stackIn_22_1 = stackIn_79_1;
                         if (var13 != 0) {
                             statePc = 79;
                         } else {
@@ -754,12 +742,10 @@ final class ci {
                 }
                 case 36: {
                     try {
-                        stackOut_36_0 = null;
-                        stackOut_36_1 = ma.field_b[var6][var8];
-                        stackIn_72_0 = stackOut_36_0;
-                        stackIn_72_1 = stackOut_36_1;
-                        stackIn_37_0 = stackOut_36_0;
-                        stackIn_37_1 = stackOut_36_1;
+                        stackIn_72_0 = null;
+                        stackIn_37_0 = stackIn_72_0;
+                        stackIn_72_1 = ma.field_b[var6][var8];
+                        stackIn_37_1 = stackIn_72_1;
                         if (var13 != 0) {
                             statePc = 72;
                         } else {
@@ -774,10 +760,8 @@ final class ci {
                 }
                 case 37: {
                     try {
-                        stackOut_37_0 = stackIn_37_0;
-                        stackOut_37_1 = (mo) ((Object) stackIn_37_1);
-                        stackIn_38_0 = stackOut_37_0;
-                        stackIn_38_1 = stackOut_37_1;
+                        stackIn_38_0 = stackIn_37_0;
+                        stackIn_38_1 = (mo) ((Object) stackIn_37_1);
                         statePc = 38;
                         continue stateLoop;
                     } catch (Throwable stateCaught_37) {
@@ -900,8 +884,7 @@ final class ci {
                 }
                 case 46: {
                     try {
-                        stackOut_46_0 = 1;
-                        stackIn_48_0 = stackOut_46_0;
+                        stackIn_48_0 = 1;
                         statePc = 48;
                         continue stateLoop;
                     } catch (Throwable stateCaught_46) {
@@ -912,8 +895,7 @@ final class ci {
                 }
                 case 47: {
                     try {
-                        stackOut_47_0 = 0;
-                        stackIn_48_0 = stackOut_47_0;
+                        stackIn_48_0 = 0;
                         statePc = 48;
                         continue stateLoop;
                     } catch (Throwable stateCaught_47) {
@@ -1240,10 +1222,8 @@ final class ci {
                 }
                 case 71: {
                     try {
-                        stackOut_71_0 = null;
-                        stackOut_71_1 = ma.field_b[var6][var8];
-                        stackIn_72_0 = stackOut_71_0;
-                        stackIn_72_1 = stackOut_71_1;
+                        stackIn_72_0 = null;
+                        stackIn_72_1 = ma.field_b[var6][var8];
                         statePc = 72;
                         continue stateLoop;
                     } catch (Throwable stateCaught_71) {
@@ -1254,12 +1234,10 @@ final class ci {
                 }
                 case 72: {
                     try {
-                        stackOut_72_0 = stackIn_72_0;
-                        stackOut_72_1 = (mo) ((Object) stackIn_72_1);
-                        stackIn_38_0 = stackOut_72_0;
-                        stackIn_38_1 = stackOut_72_1;
-                        stackIn_73_0 = stackOut_72_0;
-                        stackIn_73_1 = stackOut_72_1;
+                        stackIn_38_0 = stackIn_72_0;
+                        stackIn_73_0 = stackIn_38_0;
+                        stackIn_38_1 = (mo) ((Object) stackIn_72_1);
+                        stackIn_73_1 = stackIn_38_1;
                         if (var13 != 0) {
                             statePc = 38;
                         } else {
@@ -1336,8 +1314,7 @@ final class ci {
                         vb.field_c.a(-24 + qf.field_b.field_z, 24, qf.field_b.field_zb, 0, -3344);
                         vb.field_c.field_ab = tg.a(1, vb.field_c.field_z, 8421504, 3, 11579568, 35);
                         pd.field_b.a(-26 + (-10 + vb.field_c.field_z), 5, -10 + vb.field_c.field_zb, 5, -3344);
-                        stackOut_77_0 = pg.field_a;
-                        stackIn_78_0 = stackOut_77_0;
+                        stackIn_78_0 = pg.field_a;
                         statePc = 78;
                         continue stateLoop;
                     } catch (Throwable stateCaught_77) {
@@ -1349,10 +1326,8 @@ final class ci {
                 case 78: {
                     try {
                         ((cj) (Object) stackIn_78_0).a(24, -24 + vb.field_c.field_z + -5, 80, (-80 + vb.field_c.field_zb) / 2, -3344);
-                        stackOut_78_0 = param1;
-                        stackOut_78_1 = -6;
-                        stackIn_79_0 = stackOut_78_0;
-                        stackIn_79_1 = stackOut_78_1;
+                        stackIn_79_0 = param1;
+                        stackIn_79_1 = -6;
                         statePc = 79;
                         continue stateLoop;
                     } catch (Throwable stateCaught_78) {

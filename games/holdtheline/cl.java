@@ -7,8 +7,8 @@ final class cl implements com.ms.directX.IEnumModesCallback {
     private static int field_a;
 
     final int[] a(int param0) {
-        int[] var2 = null;
-        int[] var3 = null;
+        int[] var2;
+        int[] var3;
         this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_c = new int[field_a];
         field_a = 0;
@@ -25,19 +25,15 @@ final class cl implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(int param0, int param1, int param2, java.awt.Frame param3, int param4, int param5) {
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        com.ms.awt.WComponentPeer var7 = null;
-        int var8 = 0;
+        com.ms.awt.WComponentPeer var7;
+        int var8;
         param3.setVisible(true);
         if (param1 != 11468) {
           field_a = 30;
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
-          discarded$4 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$5 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param3), 17);
           this.field_b.setDisplayMode(param2, param5, param0, param4, 0);
           param3.setBounds(0, 0, param2, param5);
@@ -47,8 +43,8 @@ final class cl implements com.ms.directX.IEnumModesCallback {
         } else {
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
-          discarded$6 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          discarded$7 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param3), 17);
           this.field_b.setDisplayMode(param2, param5, param0, param4, 0);
           param3.setBounds(0, 0, param2, param5);

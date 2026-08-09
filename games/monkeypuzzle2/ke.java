@@ -25,7 +25,7 @@ final class ke {
     }
 
     final static void b(int param0) {
-        he var3 = null;
+        he var3;
         if (param0 == 8192) {
           var3 = (he) ((Object) mb.field_e.a((byte) -117));
           var3 = var3;

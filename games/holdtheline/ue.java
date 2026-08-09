@@ -8,11 +8,11 @@ final class ue {
 
     final static void a(int param0, int param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var5 = HoldTheLine.field_D;
         try {
           L0: {
@@ -51,12 +51,12 @@ final class ue {
     }
 
     final static hj a(boolean param0) {
-        int var1 = 0;
-        int[] var3 = null;
-        int var4_int = 0;
-        hj var4 = null;
-        int var5 = 0;
-        byte[] var7 = null;
+        int var1;
+        int[] var3;
+        int var4_int;
+        hj var4;
+        int var5;
+        byte[] var7;
         var5 = HoldTheLine.field_D;
         var1 = ad.field_d[0] * nk.field_K[0];
         var7 = lk.field_e[0];

@@ -23,8 +23,8 @@ class pv extends bw {
 
     final static void a(int param0, long param1) {
         try {
-            InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
+            InterruptedException var3 = null;
             try {
               L0: {
                 L1: {
@@ -53,8 +53,21 @@ class pv extends bw {
     }
 
     final static void a(boolean param0, boolean param1) {
-        RuntimeException var2 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_9_1 = 0;
+        sna stackIn_11_0 = null;
+        int stackIn_11_1 = 0;
+        int stackIn_11_2 = 0;
+        sna stackIn_12_0 = null;
+        int stackIn_12_1 = 0;
+        int stackIn_12_2 = 0;
+        int stackIn_12_3 = 0;
+        Object stackIn_33_0 = null;
+        gna stackIn_33_1 = null;
+        int stackIn_53_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -63,55 +76,15 @@ class pv extends bw {
         int var7 = 0;
         int var8_int = 0;
         sna var8 = null;
-        int var9 = 0;
         gna var9_ref_gna = null;
-        int var10_int = 0;
+        int var9 = 0;
         gna var10 = null;
+        int var10_int = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         sna var14 = null;
         int var15 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_9_1 = 0;
-        sna stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
-        int stackIn_10_2 = 0;
-        sna stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        int stackIn_11_2 = 0;
-        sna stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
-        int stackIn_12_2 = 0;
-        int stackIn_12_3 = 0;
-        int stackIn_52_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        sna stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        sna stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        int stackOut_11_3 = 0;
-        sna stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        int stackOut_10_2 = 0;
-        int stackOut_10_3 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_43_0 = 0;
         var13 = BachelorFridge.field_y;
         try {
           L0: {
@@ -127,65 +100,47 @@ class pv extends bw {
               kq.field_i = dg.field_c;
               kg.field_b = dg.field_i;
               if (param0) {
-                stackOut_5_0 = ld.field_p;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = ld.field_p;
                 break L2;
               } else {
-                stackOut_4_0 = dja.field_m;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = dja.field_m;
                 break L2;
               }
             }
             L3: {
-              stackOut_6_0 = stackIn_6_0;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_7_0 = stackOut_6_0;
+
+
               if (param1) {
-                stackOut_8_0 = stackIn_8_0;
-                stackOut_8_1 = 0;
-                stackIn_9_0 = stackOut_8_0;
-                stackIn_9_1 = stackOut_8_1;
+
+                stackIn_9_1 = 0;
                 break L3;
               } else {
-                stackOut_7_0 = stackIn_7_0;
-                stackOut_7_1 = 1;
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_9_1 = stackOut_7_1;
+
+                stackIn_9_1 = 1;
                 break L3;
               }
             }
             L4: {
-              dna.c(stackIn_9_0, stackIn_9_1 != 0);
+              dna.c(stackIn_6_0, stackIn_9_1 != 0);
               pf.field_n.a(0, ela.field_i.field_p - 42, 0, ela.field_i.field_sb, (byte) 99);
               mja.field_t.a(rg.field_h, 31407, nu.field_f.field_sb, 0, 0);
-              stackOut_9_0 = oga.field_t;
-              stackOut_9_1 = 18;
-              stackOut_9_2 = 31407;
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_11_0 = oga.field_t;
+
+              stackIn_11_1 = 18;
+
+              stackIn_11_2 = 31407;
+
               if (!eaa.field_c) {
-                stackOut_11_0 = (sna) ((Object) stackIn_11_0);
-                stackOut_11_1 = stackIn_11_1;
-                stackOut_11_2 = stackIn_11_2;
-                stackOut_11_3 = 0;
-                stackIn_12_0 = stackOut_11_0;
-                stackIn_12_1 = stackOut_11_1;
-                stackIn_12_2 = stackOut_11_2;
-                stackIn_12_3 = stackOut_11_3;
+                stackIn_12_0 = (sna) ((Object) stackIn_11_0);
+                stackIn_12_1 = stackIn_11_1;
+                stackIn_12_2 = stackIn_11_2;
+                stackIn_12_3 = 0;
                 break L4;
               } else {
-                stackOut_10_0 = (sna) ((Object) stackIn_10_0);
-                stackOut_10_1 = stackIn_10_1;
-                stackOut_10_2 = stackIn_10_2;
-                stackOut_10_3 = 4 + rj.field_j - -40;
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_12_1 = stackOut_10_1;
-                stackIn_12_2 = stackOut_10_2;
-                stackIn_12_3 = stackOut_10_3;
+                stackIn_12_0 = (sna) ((Object) stackIn_11_0);
+                stackIn_12_1 = stackIn_11_1;
+                stackIn_12_2 = stackIn_11_2;
+                stackIn_12_3 = 4 + rj.field_j - -40;
                 break L4;
               }
             }
@@ -283,7 +238,9 @@ class pv extends bw {
                           if (gd.field_n[var6].length <= var8_int) {
                             break L10;
                           } else {
-                            if (null != gd.field_n[var6][var8_int]) {
+                            stackIn_33_0 = null;
+                            stackIn_33_1 = gd.field_n[var6][var8_int];
+                            if (stackIn_33_0 != stackIn_33_1) {
                               var9_ref_gna = gd.field_n[var6][var8_int];
                               gd.field_n[var6][var8_int].field_p = 0;
                               var9_ref_gna.field_sb = 0;
@@ -333,31 +290,26 @@ class pv extends bw {
                       if (-5 >= (var6 ^ -1)) {
                         if (null != vl.field_e) {
                           if (vl.field_e[var6 - 4]) {
-                            stackOut_50_0 = 1;
-                            stackIn_52_0 = stackOut_50_0;
+                            stackIn_53_0 = 1;
                             break L17;
                           } else {
-                            stackOut_49_0 = 0;
-                            stackIn_52_0 = stackOut_49_0;
+                            stackIn_53_0 = 0;
                             break L17;
                           }
                         } else {
-                          stackOut_47_0 = 0;
-                          stackIn_52_0 = stackOut_47_0;
+                          stackIn_53_0 = 0;
                           break L17;
                         }
                       } else {
-                        stackOut_45_0 = 0;
-                        stackIn_52_0 = stackOut_45_0;
+                        stackIn_53_0 = 0;
                         break L17;
                       }
                     } else {
-                      stackOut_43_0 = 0;
-                      stackIn_52_0 = stackOut_43_0;
+                      stackIn_53_0 = 0;
                       break L17;
                     }
                   }
-                  var7 = stackIn_52_0;
+                  var7 = stackIn_53_0;
                   if (var7 != 0) {
                     var8 = pka.field_b[var6];
                     pka.field_b[var6].field_p = 0;

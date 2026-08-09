@@ -31,11 +31,11 @@ final class ln {
 
     final static void b(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -63,20 +63,14 @@ final class ln {
     final static uh a(int param0, int param1) {
         gp stackIn_4_0 = null;
         gp stackIn_8_0 = null;
-        Object stackOut_7_0 = null;
-        gp stackOut_6_0 = null;
-        Object stackOut_3_0 = null;
-        gp stackOut_2_0 = null;
         if (param0 != 0) {
           L0: {
             ln.d(29);
             if (null == lh.field_b) {
-              stackOut_7_0 = null;
-              stackIn_8_0 = (gp) ((Object) stackOut_7_0);
+              stackIn_8_0 = null;
               break L0;
             } else {
-              stackOut_6_0 = lh.field_b.a(param0 + 3661, (long)param1);
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = lh.field_b.a(param0 + 3661, (long)param1);
               break L0;
             }
           }
@@ -84,12 +78,10 @@ final class ln {
         } else {
           L1: {
             if (null == lh.field_b) {
-              stackOut_3_0 = null;
-              stackIn_4_0 = (gp) ((Object) stackOut_3_0);
+              stackIn_4_0 = null;
               break L1;
             } else {
-              stackOut_2_0 = lh.field_b.a(param0 + 3661, (long)param1);
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = lh.field_b.a(param0 + 3661, (long)param1);
               break L1;
             }
           }
@@ -98,10 +90,9 @@ final class ln {
     }
 
     final static void d(int param0) {
-        uh discarded$8 = null;
         nn var1 = (nn) ((Object) gi.field_v.d((byte) 92));
         if (param0 != -28558) {
-            discarded$8 = ln.a(101, 106);
+            ln.a(101, 106);
             if (!(var1 != null)) {
                 throw new IllegalStateException();
             }

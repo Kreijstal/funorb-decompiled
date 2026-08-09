@@ -20,25 +20,14 @@ abstract class jb extends gn {
     abstract void a(byte param0, int param1, int param2);
 
     final void b(int param0, boolean param1) {
-        wh discarded$2 = null;
-        int fieldTemp$3 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int fieldTemp$0 = 0;
         int stackIn_22_0 = 0;
-        hd stackIn_23_0 = null;
-        hd stackIn_24_0 = null;
         hd stackIn_25_0 = null;
         hd stackIn_26_0 = null;
         int stackIn_26_1 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        hd stackOut_22_0 = null;
-        hd stackOut_23_0 = null;
-        hd stackOut_24_0 = null;
-        int stackOut_24_1 = 0;
-        hd stackOut_25_0 = null;
-        int stackOut_25_1 = 0;
+        int var3;
+        int var4;
+        int var5;
         var5 = Kickabout.field_G;
         if (param0 == -16536) {
           L0: {
@@ -50,7 +39,7 @@ abstract class jb extends gn {
               if (0 != this.field_m) {
                 break L0;
               } else {
-                discarded$2 = sp.c(this.a(false), -104);
+                sp.c(this.a(false), -104);
                 break L0;
               }
             }
@@ -66,12 +55,10 @@ abstract class jb extends gn {
                   } else {
                     L3: {
                       if (var3 != this.field_j.field_e) {
-                        stackOut_21_0 = 0;
-                        stackIn_22_0 = stackOut_21_0;
+                        stackIn_22_0 = 0;
                         break L3;
                       } else {
-                        stackOut_20_0 = 1;
-                        stackIn_22_0 = stackOut_20_0;
+                        stackIn_22_0 = 1;
                         break L3;
                       }
                     }
@@ -79,30 +66,24 @@ abstract class jb extends gn {
                       L5: {
                         var4 = stackIn_22_0;
                         this.field_i[var3].b(0, param1);
-                        stackOut_22_0 = this.field_i[var3];
-                        stackIn_25_0 = stackOut_22_0;
-                        stackIn_23_0 = stackOut_22_0;
+                        stackIn_25_0 = this.field_i[var3];
+
                         if (!this.field_i[var3].field_lb) {
                           break L5;
                         } else {
-                          stackOut_23_0 = (hd) ((Object) stackIn_23_0);
-                          stackIn_25_0 = stackOut_23_0;
-                          stackIn_24_0 = stackOut_23_0;
+                          stackIn_25_0 = (hd) ((Object) stackIn_25_0);
+
                           if (var4 == 0) {
                             break L5;
                           } else {
-                            stackOut_24_0 = (hd) ((Object) stackIn_24_0);
-                            stackOut_24_1 = 1;
-                            stackIn_26_0 = stackOut_24_0;
-                            stackIn_26_1 = stackOut_24_1;
+                            stackIn_26_0 = (hd) ((Object) stackIn_25_0);
+                            stackIn_26_1 = 1;
                             break L4;
                           }
                         }
                       }
-                      stackOut_25_0 = (hd) ((Object) stackIn_25_0);
-                      stackOut_25_1 = 0;
-                      stackIn_26_0 = stackOut_25_0;
-                      stackIn_26_1 = stackOut_25_1;
+                      stackIn_26_0 = (hd) ((Object) stackIn_25_0);
+                      stackIn_26_1 = 0;
                       break L4;
                     }
                     L6: {
@@ -154,9 +135,9 @@ abstract class jb extends gn {
               }
             } else {
               L8: {
-                fieldTemp$3 = this.field_m + 1;
+                fieldTemp$0 = this.field_m + 1;
                 this.field_m = this.field_m + 1;
-                if (fieldTemp$3 >= kh.field_q.length + -1) {
+                if (fieldTemp$0 >= kh.field_q.length + -1) {
                   this.field_n = 1;
                   break L8;
                 } else {
@@ -185,18 +166,18 @@ abstract class jb extends gn {
     }
 
     final void b(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4_int = 0;
-        hd var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        hd var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        int var3;
+        hd var4;
+        int var4_int;
+        int var5;
+        int var6;
+        int var7;
+        hd var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         L0: {
           var11 = Kickabout.field_G;
           var2 = this.field_m << -1379118556;
@@ -276,70 +257,18 @@ abstract class jb extends gn {
     abstract int a(byte param0);
 
     final void a(String[] param0, byte param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
-            L1: {
-              this.field_o = param0;
-              if (param1 == 90) {
-                break L1;
-              } else {
+            this.field_o = param0;
+            if (param1 != 90) {
                 this.field_p = -12;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("jb.IA(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
-            }
-          }
-          throw nb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) ((Object) runtimeException), "jb.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     boolean a(int param0, byte param1, char param2) {
-        int var5 = 0;
+        int var5;
         var5 = Kickabout.field_G;
         if (1 == this.field_n) {
           L0: {
@@ -392,12 +321,12 @@ abstract class jb extends gn {
     abstract int a(boolean param0);
 
     private final int a(boolean param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
         var9 = Kickabout.field_G;
         var4 = 0;
         if (param0) {
@@ -441,8 +370,6 @@ abstract class jb extends gn {
 
     final boolean a(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == -31268) {
             break L0;
@@ -459,14 +386,12 @@ abstract class jb extends gn {
               if (this.field_m > 0) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
@@ -480,39 +405,15 @@ abstract class jb extends gn {
     }
 
     final void a(int param0, String[] param1, int param2) {
-        RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        var8 = Kickabout.field_G;
+        int var8 = Kickabout.field_G;
         try {
-          L0: {
-            L1: {
-              this.field_n = 0;
-              if (param2 == 1054928844) {
-                break L1;
-              } else {
+            this.field_n = 0;
+            if (param2 != 1054928844) {
                 this.a(46, true);
-                break L1;
-              }
             }
             this.field_q = 0;
             this.field_e = this.b(-1379118556);
@@ -523,52 +424,17 @@ abstract class jb extends gn {
             this.field_i = new hd[param1.length];
             var4_int = this.field_i.length;
             var5 = -(95 * var4_int) - 5 * (var4_int + -1) + 640 >> -926467135;
-            var6 = 0;
-            L2: while (true) {
-              if (this.field_i.length <= var6) {
-                this.field_j = new ko(this.field_i.length);
-                this.field_j.field_e = param0;
-                break L0;
-              } else {
+            for (var6 = 0; this.field_i.length > var6; var6++) {
                 param1[var6] = param1[var6].toLowerCase();
                 this.field_i[var6] = eo.a(param1[var6], 7126504, un.field_d, 90, false);
                 var7 = this.field_k + this.field_r + (-this.field_i[var6].field_mb + -10);
                 this.field_i[var6].field_s = 100 * var6 + var5;
                 this.field_i[var6].field_J = var7;
-                var6++;
-                continue L2;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("jb.GA(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L3;
-            } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L3;
-            }
-          }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ')');
+            this.field_j = new ko(this.field_i.length);
+            this.field_j.field_e = param0;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) ((Object) runtimeException), "jb.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

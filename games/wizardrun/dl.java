@@ -5,10 +5,9 @@ final class dl {
     static int[] field_a;
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         field_a = null;
         if (param0 != 11052) {
-            discarded$0 = dl.a(true);
+            dl.a(true);
         }
     }
 

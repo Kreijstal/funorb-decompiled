@@ -17,23 +17,20 @@ final class ik extends q {
 
     final static boolean a(char param0, byte param1) {
         char[] var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
+        char[] var7 = null;
+        char[] var8 = null;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_25_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_26_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_8_0 = 0;
+        RuntimeException var2_ref = null;
         var5 = Torquing.field_u;
         try {
           L0: {
@@ -46,30 +43,29 @@ final class ik extends q {
               }
             }
             if (Character.isISOControl(param0)) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (!wa.a(param0, (byte) 34)) {
-                var6 = ra.field_d;
+                var8 = ra.field_d;
+                var7 = var8;
+                var6 = var7;
                 var2 = var6;
                 var3 = 0;
                 L2: while (true) {
-                  if (var6.length <= var3) {
+                  if (var8.length <= var3) {
                     var2 = qe.field_b;
                     var3 = 0;
                     L3: while (true) {
                       if (var2.length <= var3) {
-                        stackOut_24_0 = 0;
-                        stackIn_25_0 = stackOut_24_0;
+                        stackIn_26_0 = 0;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
                         var4 = var2[var3];
                         if (var4 == param0) {
-                          stackOut_21_0 = 1;
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_23_0 = 1;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
@@ -79,10 +75,9 @@ final class ik extends q {
                       }
                     }
                   } else {
-                    var4 = var6[var3];
+                    var4 = var8[var3];
                     if (var4 == param0) {
-                      stackOut_14_0 = 1;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_16_0 = 1;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -92,8 +87,7 @@ final class ik extends q {
                   }
                 }
               } else {
-                stackOut_8_0 = 1;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -111,12 +105,12 @@ final class ik extends q {
             return stackIn_9_0 != 0;
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return stackIn_15_0 != 0;
+              return stackIn_16_0 != 0;
             } else {
               if (decompiledRegionSelector0 == 3) {
-                return stackIn_22_0 != 0;
+                return stackIn_23_0 != 0;
               } else {
-                return stackIn_25_0 != 0;
+                return stackIn_26_0 != 0;
               }
             }
           }
@@ -124,20 +118,18 @@ final class ik extends q {
     }
 
     final void a(int param0, boolean param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int[] var16 = null;
-        int stackIn_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
+        int stackIn_21_0 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int[] var16;
         var12 = Torquing.field_u;
         var3 = 2147483647;
         var4 = -2147483648;
@@ -168,16 +160,14 @@ final class ik extends q {
               var9 = ph.field_d;
               this.field_j.e();
               if (param0 != 6) {
-                stackOut_19_0 = 16777215;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_21_0 = 16777215;
                 break L2;
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
+                stackIn_21_0 = 1;
                 break L2;
               }
             }
-            var10 = stackIn_20_0;
+            var10 = stackIn_21_0;
             var11 = 0;
             L3: while (true) {
               if (this.field_s.length <= var11) {
@@ -202,7 +192,7 @@ final class ik extends q {
             L5: {
               var8 = this.field_o[var7];
               var9 = this.field_s[var7];
-              if (var8 + var9 > var4) {
+              if ((var8 + var9 ^ -1) < (var4 ^ -1)) {
                 var4 = var9 + var8;
                 break L5;
               } else {
@@ -239,7 +229,7 @@ final class ik extends q {
     }
 
     final void a(int param0) {
-        int var2 = 0;
+        int var2;
         this.field_l = this.field_l + this.field_q;
         var2 = this.field_l >> 1866014722;
         if (param0 == -2857) {
@@ -285,17 +275,17 @@ final class ik extends q {
     }
 
     ik(int param0, int param1) {
-        int var3 = 0;
-        boolean[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var3;
+        boolean[] var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         this.field_p = -1;
         var3 = 5 - -va.a(6, (byte) 122, hg.field_e);
         this.field_o = new int[var3];

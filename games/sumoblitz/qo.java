@@ -19,11 +19,10 @@ final class qo {
     }
 
     public static void a(boolean param0) {
-        su discarded$2 = null;
-        String var2 = null;
+        String var2;
         if (param0) {
           var2 = (String) null;
-          discarded$2 = qo.a((Throwable) null, (String) null);
+          qo.a((Throwable) null, (String) null);
           field_a = null;
           field_b = null;
           field_c = null;

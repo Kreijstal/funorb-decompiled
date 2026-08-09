@@ -32,9 +32,9 @@ final class jd {
     }
 
     final rk a(boolean param0) {
-        rk var2 = null;
-        rk var3 = null;
-        int var4 = 0;
+        rk var2;
+        rk var3;
+        int var4;
         var4 = wizardrun.field_H;
         if (this.field_h != null) {
           var2 = this.field_d[(int)((long)(this.field_e + -1) & this.field_g)];
@@ -87,9 +87,9 @@ final class jd {
     }
 
     final rk a(long param0, byte param1) {
-        rk var4 = null;
-        rk var5 = null;
-        int var6 = 0;
+        rk var4;
+        rk var5;
+        int var6;
         var6 = wizardrun.field_H;
         this.field_g = param0;
         var4 = this.field_d[(int)(param0 & (long)(-1 + this.field_e))];
@@ -131,17 +131,17 @@ final class jd {
     }
 
     jd(int param0) {
-        rk dupTemp$2 = null;
-        int var2 = 0;
-        rk var3 = null;
+        rk dupTemp$1 = null;
+        int var2;
+        rk var3;
         this.field_d = new rk[param0];
         this.field_e = param0;
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            dupTemp$2 = new rk();
-            var3 = dupTemp$2;
-            this.field_d[var2] = dupTemp$2;
+            dupTemp$1 = new rk();
+            var3 = dupTemp$1;
+            this.field_d[var2] = dupTemp$1;
             var3.field_i = var3;
             var3.field_l = var3;
             var2++;

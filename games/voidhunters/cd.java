@@ -7,9 +7,8 @@ final class cd {
     static String field_a;
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         if (param0 != 5) {
-            discarded$0 = cd.a(true);
+            cd.a(true);
             field_a = null;
             return;
         }

@@ -7,9 +7,8 @@ final class af {
     static int field_c;
 
     public static void a(int param0) {
-        int discarded$0 = 0;
         if (param0 != 9680) {
-            discarded$0 = af.a(73, 86);
+            af.a(73, 86);
             field_b = null;
             return;
         }
@@ -21,11 +20,10 @@ final class af {
     }
 
     final static int a(int param0, int param1) {
-        int discarded$2 = 0;
-        int var2 = 0;
+        int var2;
         if (param1 != 26291) {
           L0: {
-            discarded$2 = af.a(-60, 33);
+            af.a(-60, 33);
             var2 = 0;
             if (param0 != 0) {
               break L0;

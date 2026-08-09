@@ -26,6 +26,6 @@ final class mb extends vj {
         if (param1 != 12105912) {
             return;
         }
-        boolean discarded$0 = param2.drawImage(this.field_j, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_k));
+        param2.drawImage(this.field_j, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_k));
     }
 }

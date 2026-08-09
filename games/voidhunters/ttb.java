@@ -18,79 +18,38 @@ final class ttb extends shb {
     private int field_w;
 
     private final phb a(boolean param0, int param1, int param2) {
-        int var5 = 0;
-        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        phb var14 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        L0: {
-          var13 = VoidHunters.field_G;
-          var14 = new phb(this.field_E * 2, this.field_f);
-          de.a(105, var14);
-          var5 = this.field_f >> 377376129;
-          var6 = 0;
-          if (param0) {
-            break L0;
-          } else {
+        int var13 = VoidHunters.field_G;
+        phb var14 = new phb(this.field_E * 2, this.field_f);
+        de.a(105, var14);
+        int var5 = this.field_f >> 377376129;
+        int var6 = 0;
+        if (!param0) {
             this.field_G = -72;
-            break L0;
-          }
         }
-        L1: while (true) {
-          if (this.field_f <= var6) {
-            bia.a((byte) 124);
-            return var14;
-          } else {
-            L2: {
-              var7 = (var6 >> 465803553) * (2 * this.field_E - 1) % (this.field_E * 2);
-              var8 = param1 & 16711935;
-              var9 = 65280 & param1;
-              var10 = var6 + -var5;
-              var11 = (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0) + 128;
-              if (var11 >= 256) {
-                stackOut_5_0 = var9 | var8;
-                stackIn_6_0 = stackOut_5_0;
-                break L2;
-              } else {
-                stackOut_4_0 = (var8 * var11 & -16711936 | 16711680 & var9 * var11) >>> 723542824;
-                stackIn_6_0 = stackOut_4_0;
-                break L2;
-              }
-            }
-            L3: {
-              var12 = stackIn_6_0;
-              dma.h(var7, var6, this.field_E, var12);
-              dma.h(var7 + -(2 * this.field_E), var6, this.field_E, var12);
-              var8 = 16711935 & param2;
-              var9 = param2 & 65280;
-              if (256 > var11) {
-                stackOut_8_0 = (16711680 & var9 * var11 | var8 * var11 & -16711936) >>> -1620171832;
-                stackIn_9_0 = stackOut_8_0;
-                break L3;
-              } else {
-                stackOut_7_0 = var8 | var9;
-                stackIn_9_0 = stackOut_7_0;
-                break L3;
-              }
-            }
-            var12 = stackIn_9_0;
+        while (this.field_f > var6) {
+            var7 = (var6 >> 465803553) * (2 * this.field_E - 1) % (this.field_E * 2);
+            var8 = param1 & 16711935;
+            var9 = 65280 & param1;
+            var10 = var6 + -var5;
+            var11 = (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0) + 128;
+            var12 = var11 < 256 ? (var8 * var11 & -16711936 | 16711680 & var9 * var11) >>> 723542824 : var9 | var8;
+            dma.h(var7, var6, this.field_E, var12);
+            dma.h(var7 + -(2 * this.field_E), var6, this.field_E, var12);
+            var8 = 16711935 & param2;
+            var9 = param2 & 65280;
+            var12 = 256 <= var11 ? var8 | var9 : (16711680 & var9 * var11 | var8 * var11 & -16711936) >>> -1620171832;
             dma.h(this.field_E + var7, var6, this.field_E, var12);
             dma.h(-this.field_E + var7, var6, this.field_E, var12);
             var6++;
-            continue L1;
-          }
         }
+        bia.a((byte) 124);
+        return var14;
     }
 
     final void b(int param0, int param1, int param2) {
@@ -105,23 +64,13 @@ final class ttb extends shb {
     }
 
     final void a(int param0, int param1, int param2, shb param3) {
-        RuntimeException var5 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -151,27 +100,19 @@ final class ttb extends shb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5);
-            stackOut_6_1 = new StringBuilder().append("ttb.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5);
+
+            stackIn_8_1 = new StringBuilder().append("ttb.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -256,27 +197,17 @@ final class ttb extends shb {
     }
 
     private final void a(int param0, int param1, phb param2, int param3) {
-        RuntimeException var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var8 = VoidHunters.field_G;
         try {
           L0: {
@@ -340,27 +271,19 @@ final class ttb extends shb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var5);
-            stackOut_13_1 = new StringBuilder().append("ttb.DA(").append(param0).append(',').append(param1).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var5);
+
+            stackIn_15_1 = new StringBuilder().append("ttb.DA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L6;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L6;
             }
           }

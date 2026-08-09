@@ -11,10 +11,9 @@ class gg {
     static String field_c;
 
     final static void a(int param0, int param1) {
-        boolean discarded$0 = false;
         td.field_l = param0;
         if (param1 != 10) {
-            discarded$0 = gg.b((byte) -29);
+            gg.b((byte) -29);
             ed.a((byte) -120);
             return;
         }

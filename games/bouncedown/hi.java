@@ -7,11 +7,10 @@ final class hi {
     static int field_c;
 
     public static void a(boolean param0) {
-        boolean discarded$0 = false;
         field_b = null;
         field_a = null;
         if (param0) {
-            discarded$0 = hi.a((byte) 43);
+            hi.a((byte) 43);
         }
     }
 

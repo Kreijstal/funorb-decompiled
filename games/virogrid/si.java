@@ -73,27 +73,27 @@ final class si {
     }
 
     private final static void a(int param0, int param1, int param2, mg param3, int param4, int param5, int param6) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
         if (param2 != 0) {
           L0: {
             var7 = (param6 - param5) / param2;
@@ -209,34 +209,34 @@ final class si {
     }
 
     final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, mg param5, int param6, int param7, int param8, int param9, boolean param10) {
-        double var17_double = 0.0;
-        int var17 = 0;
-        int var18 = 0;
-        double var19_double = 0.0;
-        int var19 = 0;
-        int var20 = 0;
-        double var21_double = 0.0;
-        int var21 = 0;
-        int var22 = 0;
-        double var23 = 0.0;
-        double var25 = 0.0;
-        double var27 = 0.0;
-        double var29 = 0.0;
-        double var31 = 0.0;
-        double var33 = 0.0;
-        double var35 = 0.0;
-        double var37 = 0.0;
-        double var39 = 0.0;
-        int var41 = 0;
-        double var41_double = 0.0;
-        double var43 = 0.0;
-        double var45 = 0.0;
-        double var47 = 0.0;
-        int var49 = 0;
-        double[] var62 = null;
-        double[] var63 = null;
-        double[] var64 = null;
-        double[] var65 = null;
+        double var17_double;
+        double var19_double;
+        double var21_double;
+        double var23;
+        double var25;
+        double var27;
+        double var29;
+        double var31;
+        double[] var62;
+        double[] var63;
+        double[] var64;
+        double[] var65;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        double var33;
+        double var35;
+        double var37;
+        double var39;
+        int var41;
+        double var41_double;
+        double var43;
+        double var45;
+        double var47;
+        int var49;
         L0: {
           L1: {
             var62 = new double[3];
@@ -412,20 +412,20 @@ final class si {
     }
 
     final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, int[] param5, int param6, int param7) {
-        int var14 = 0;
-        double var15_double = 0.0;
-        int var15 = 0;
-        int var16 = 0;
-        double var17_double = 0.0;
-        int var17 = 0;
-        int var18 = 0;
-        double var19_double = 0.0;
-        int var19 = 0;
-        int var20 = 0;
-        double[] var33 = null;
-        double[] var34 = null;
-        double[] var35 = null;
-        double[] var36 = null;
+        int var14;
+        double var15_double;
+        double var17_double;
+        double var19_double;
+        double[] var33;
+        double[] var34;
+        double[] var35;
+        double[] var36;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
         if (param6 >= 4) {
           L0: {
             L1: {
@@ -518,53 +518,38 @@ final class si {
     }
 
     final static int a(int param0) {
-        float var1 = 0.0f;
-        float var2 = 0.0f;
-        float var3 = 0.0f;
-        float var4 = 0.0f;
-        float var5 = 0.0f;
-        float var6 = 0.0f;
-        float var7 = 0.0f;
-        float var8 = 0.0f;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         float stackIn_7_0 = 0.0f;
         float stackIn_14_0 = 0.0f;
         float stackIn_32_0 = 0.0f;
-        float stackOut_6_0 = 0.0f;
-        float stackOut_5_0 = 0.0f;
-        float stackOut_3_0 = 0.0f;
-        float stackOut_2_0 = 0.0f;
-        float stackOut_13_0 = 0.0f;
-        float stackOut_12_0 = 0.0f;
-        float stackOut_10_0 = 0.0f;
-        float stackOut_9_0 = 0.0f;
-        float stackOut_31_0 = 0.0f;
-        float stackOut_30_0 = 0.0f;
-        float stackOut_28_0 = 0.0f;
+        float var1;
+        float var2;
+        float var3;
+        float var4;
+        float var5;
+        float var6;
+        float var7;
+        float var8;
+        int var9;
+        int var10;
+        int var11;
         L0: {
           var1 = (float)((param0 & 16711680) >> 16) / 255.0f;
           var2 = (float)((param0 & 65280) >> 8) / 255.0f;
           var3 = (float)(param0 & 255) / 255.0f;
           if (var1 <= var2) {
             if (var2 <= var3) {
-              stackOut_6_0 = var3;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = var3;
               break L0;
             } else {
-              stackOut_5_0 = var2;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = var2;
               break L0;
             }
           } else {
             if (var1 <= var3) {
-              stackOut_3_0 = var3;
-              stackIn_7_0 = stackOut_3_0;
+              stackIn_7_0 = var3;
               break L0;
             } else {
-              stackOut_2_0 = var1;
-              stackIn_7_0 = stackOut_2_0;
+              stackIn_7_0 = var1;
               break L0;
             }
           }
@@ -573,22 +558,18 @@ final class si {
           var4 = stackIn_7_0;
           if (var1 >= var2) {
             if (var2 >= var3) {
-              stackOut_13_0 = var3;
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_0 = var3;
               break L1;
             } else {
-              stackOut_12_0 = var2;
-              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_0 = var2;
               break L1;
             }
           } else {
             if (var1 >= var3) {
-              stackOut_10_0 = var3;
-              stackIn_14_0 = stackOut_10_0;
+              stackIn_14_0 = var3;
               break L1;
             } else {
-              stackOut_9_0 = var1;
-              stackIn_14_0 = stackOut_9_0;
+              stackIn_14_0 = var1;
               break L1;
             }
           }
@@ -626,12 +607,10 @@ final class si {
                     } else {
                       if (var4 != var5) {
                         if (var8 >= 0.5f) {
-                          stackOut_31_0 = (var4 - var5) / (2.0f - 2.0f * var8);
-                          stackIn_32_0 = stackOut_31_0;
+                          stackIn_32_0 = (var4 - var5) / (2.0f - 2.0f * var8);
                           break L5;
                         } else {
-                          stackOut_30_0 = (var4 - var5) / (2.0f * var8);
-                          stackIn_32_0 = stackOut_30_0;
+                          stackIn_32_0 = (var4 - var5) / (2.0f * var8);
                           break L5;
                         }
                       } else {
@@ -639,8 +618,7 @@ final class si {
                       }
                     }
                   }
-                  stackOut_28_0 = 0.0f;
-                  stackIn_32_0 = stackOut_28_0;
+                  stackIn_32_0 = 0.0f;
                   break L5;
                 }
                 var7 = stackIn_32_0;
@@ -677,11 +655,7 @@ final class si {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var4 = 0;
-        L0: while (true) {
-          if (var4 >= 3) {
-            return;
-          } else {
+        for (var4 = 0; var4 < 3; var4++) {
             param1[var4] = param1[var4] - (param0[0] << 4);
             param2[var4] = param2[var4] - (param0[1] << 4);
             param3[var4] = param3[var4] - (param0[2] << 4);
@@ -691,9 +665,6 @@ final class si {
             param1[var4] = var5 >> 20;
             param2[var4] = var6 >> 20;
             param3[var4] = var7 >> 20;
-            var4++;
-            continue L0;
-          }
         }
     }
 

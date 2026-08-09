@@ -8,12 +8,11 @@ final class oj extends jc {
     static String[][] field_M;
 
     final static void o(int param0) {
-        RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        int var4 = 0;
         pb var4_ref_pb = null;
+        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -34,6 +33,7 @@ final class oj extends jc {
         int[] var20 = null;
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var19 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -112,7 +112,7 @@ final class oj extends jc {
                         }
                       } else {
                         L7: {
-                          if (var21[var16] < var21[var17_int]) {
+                          if ((var21[var16] ^ -1) > (var21[var17_int] ^ -1)) {
                             var16 = var17_int;
                             break L7;
                           } else {

@@ -47,110 +47,34 @@ abstract class pe {
     abstract void a(int param0, int param1, int param2);
 
     final static void a(nh[] param0, int param1, int param2, int param3, int param4) {
-        RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        try {
-          L0: {
-            L1: {
-              if (param0 == null) {
-                break L1;
-              } else {
-                if (param3 > 0) {
-                  if (param1 >= 25) {
-                    var5_int = param0[0].field_z;
-                    var6 = param0[2].field_z;
-                    var7 = param0[1].field_z;
-                    param0[0].d(param2, param4);
-                    param0[2].d(param3 + (param2 - var6), param4);
-                    wj.b(rb.field_e);
-                    wj.d(var5_int + param2, param4, -var6 + param2 + param3, param4 - -param0[1].field_C);
-                    var8 = var5_int + param2;
-                    var9 = param2 + (param3 - var6);
-                    param2 = var8;
-                    L2: while (true) {
-                      if (var9 <= param2) {
-                        wj.a(rb.field_e);
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      } else {
-                        param0[1].d(param2, param4);
-                        param2 = param2 + var7;
-                        continue L2;
-                      }
-                    }
-                  } else {
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                } else {
-                  break L1;
-                }
-              }
-            }
-            decompiledRegionSelector0 = 0;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (runtimeException);
-            stackOut_11_1 = new StringBuilder().append("pe.EA(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
-            if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L3;
-            } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L3;
-            }
-          }
-          throw ie.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        int var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        if (param0 == null || param3 <= 0) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
+        if (param1 < 25) {
             return;
-          } else {
-            return;
-          }
+        }
+        try {
+            var5_int = param0[0].field_z;
+            var6 = param0[2].field_z;
+            var7 = param0[1].field_z;
+            param0[0].d(param2, param4);
+            param0[2].d(param3 + (param2 - var6), param4);
+            wj.b(rb.field_e);
+            wj.d(var5_int + param2, param4, -var6 + param2 + param3, param4 - -param0[1].field_C);
+            var8 = var5_int + param2;
+            var9 = param2 + (param3 - var6);
+            for (param2 = var8; var9 > param2; param2 = param2 + var7) {
+                param0[1].d(param2, param4);
+            }
+            wj.a(rb.field_e);
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) ((Object) runtimeException), "pe.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

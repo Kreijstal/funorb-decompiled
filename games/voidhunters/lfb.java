@@ -29,7 +29,6 @@ public class lfb {
     }
 
     public static void a(int param0, int param1, String param2) {
-        File discarded$2 = null;
         Exception exception = null;
         String var4 = null;
         Throwable decompiledCaughtException = null;
@@ -38,7 +37,7 @@ public class lfb {
             break L0;
           } else {
             var4 = (String) null;
-            discarded$2 = lfb.a((String) null, -23, (String) null, -127);
+            lfb.a((String) null, -23, (String) null, -127);
             break L0;
           }
         }

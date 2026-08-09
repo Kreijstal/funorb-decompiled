@@ -17,8 +17,8 @@ final class bm extends pp {
     }
 
     final static int a(int param0, int param1) {
-        String var2 = null;
-        ji var3 = null;
+        String var2;
+        ji var3;
         var2 = lka.field_E[param1][5];
         var2 = var2.toLowerCase();
         var2 = var2.trim();

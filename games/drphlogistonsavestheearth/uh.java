@@ -49,11 +49,10 @@ class uh extends gi {
     }
 
     public static void d(int param0) {
-        nh[] discarded$0 = null;
         field_s = null;
         field_o = null;
         if (param0 != -24338) {
-            discarded$0 = uh.a((byte) -37, -122);
+            uh.a((byte) -37, -122);
         }
         field_l = null;
         field_q = null;
@@ -68,46 +67,25 @@ class uh extends gi {
     }
 
     static {
-        $cfr$clinit: {
-            int var0 = 0;
-            field_o = new int[256];
-            field_j = new int[256];
-            field_s = new int[]{24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 12, 12, 24, 1, 24, 124, 12, 12, 24, 24, 99, 24};
-            field_k = new int[256];
-            field_l = new int[256];
-            var0 = 0;
-            L0: while (true) {
-              if (var0 >= 256) {
-                var0 = 0;
-                L1: while (true) {
-                  if (-129 >= (var0 ^ -1)) {
-                    var0 = 128;
-                    L2: while (true) {
-                      if (-257 >= (var0 ^ -1)) {
-                        field_m = 0;
-                        field_q = "Skip";
-                        field_h = new int[128];
-                        break $cfr$clinit;
-                      } else {
-                        field_o[var0] = li.a(512 * (-128 + var0), 16711680);
-                        var0++;
-                        continue L2;
-                      }
-                    }
-                  } else {
-                    field_o[var0] = 131072 * var0;
-                    var0++;
-                    continue L1;
-                  }
-                }
-              } else {
-                field_j[var0] = 65793 * var0;
-                field_k[var0] = 1 * var0;
-                field_l[var0] = var0 * 65537;
-                var0++;
-                continue L0;
-              }
-            }
+        int var0 = 0;
+        field_o = new int[256];
+        field_j = new int[256];
+        field_s = new int[]{24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 12, 12, 24, 1, 24, 124, 12, 12, 24, 24, 99, 24};
+        field_k = new int[256];
+        field_l = new int[256];
+        for (var0 = 0; var0 < 256; var0++) {
+            field_j[var0] = 65793 * var0;
+            field_k[var0] = 1 * var0;
+            field_l[var0] = var0 * 65537;
         }
+        for (var0 = 0; -129 < (var0 ^ -1); var0++) {
+            field_o[var0] = 131072 * var0;
+        }
+        for (var0 = 128; -257 < (var0 ^ -1); var0++) {
+            field_o[var0] = li.a(512 * (-128 + var0), 16711680);
+        }
+        field_m = 0;
+        field_q = "Skip";
+        field_h = new int[128];
     }
 }

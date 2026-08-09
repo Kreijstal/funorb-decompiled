@@ -17,8 +17,6 @@ final class nf extends lg {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -26,26 +24,14 @@ final class nf extends lg {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -54,27 +40,19 @@ final class nf extends lg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("nf.CA(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("nf.CA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -122,57 +100,57 @@ final class nf extends lg {
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
-        String var5 = null;
-        qh var6 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        jp var16 = null;
-        String var17 = null;
-        Object var18 = null;
-        qe var18_ref = null;
-        jp var19 = null;
-        jp var20 = null;
-        jp var21 = null;
-        Object var22 = null;
-        qe var22_ref = null;
-        jp var23 = null;
-        jp var24 = null;
-        jp var25 = null;
-        String var26 = null;
-        Object var27 = null;
-        qe var27_ref = null;
-        jp var28 = null;
-        jp var29 = null;
-        jp var30 = null;
-        Object var31 = null;
-        qe var31_ref = null;
-        jp var32 = null;
-        jp var33 = null;
-        jp var34 = null;
-        String var35 = null;
-        Object var36 = null;
-        qe var36_ref = null;
-        jp var37 = null;
-        jp var38 = null;
-        jp var39 = null;
-        Object var40 = null;
-        qe var40_ref = null;
-        jp var41 = null;
-        jp var42 = null;
-        jp var43 = null;
-        Object var44 = null;
-        qe var44_ref = null;
-        jp var45 = null;
-        jp var46 = null;
-        jp var47 = null;
-        Object var50 = null;
-        qe var50_ref = null;
-        jp var51 = null;
-        jp var52 = null;
-        jp var53 = null;
+        qh var6;
+        int var9;
+        int var10;
+        int var13;
+        String var17;
+        Object var18;
+        qe var18_ref;
+        jp var19;
+        jp var20;
+        Object var22;
+        Object var27;
+        Object var31;
+        Object var36;
+        Object var40;
+        Object var44;
+        Object var50;
+        String var5;
+        int var11;
+        int var12;
+        jp var16;
+        jp var21;
+        qe var22_ref;
+        jp var23;
+        jp var24;
+        jp var25;
+        String var26;
+        qe var27_ref;
+        jp var28;
+        jp var29;
+        jp var30;
+        qe var31_ref;
+        jp var32;
+        jp var33;
+        jp var34;
+        String var35;
+        qe var36_ref;
+        jp var37;
+        jp var38;
+        jp var39;
+        qe var40_ref;
+        jp var41;
+        jp var42;
+        jp var43;
+        qe var44_ref;
+        jp var45;
+        jp var46;
+        jp var47;
+        qe var50_ref;
+        jp var51;
+        jp var52;
+        jp var53;
         var18 = null;
         var22 = null;
         var27 = null;

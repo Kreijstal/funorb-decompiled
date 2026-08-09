@@ -50,9 +50,9 @@ abstract class lb extends w {
     }
 
     final static void a(int param0, int param1, int param2) {
-        ka[] discarded$1 = null;
-        RuntimeException var3 = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -67,7 +67,6 @@ abstract class lb extends w {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        RuntimeException decompiledCaughtException = null;
         var17 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -81,7 +80,7 @@ abstract class lb extends w {
                   if (param2 > 35) {
                     break L2;
                   } else {
-                    discarded$1 = lb.f(-115);
+                    lb.f(-115);
                     break L2;
                   }
                 }
@@ -150,13 +149,13 @@ abstract class lb extends w {
 
     final static void d(byte param0) {
         double var1_double = 0.0;
-        RuntimeException var1 = null;
         double var3 = 0.0;
         double var5 = 0.0;
         double var7 = 0.0;
         int var9 = 0;
         int var10 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var10 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {

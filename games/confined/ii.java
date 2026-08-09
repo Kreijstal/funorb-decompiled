@@ -48,32 +48,25 @@ final class ii extends em {
     }
 
     public static void a(boolean param0) {
-        java.applet.Applet discarded$0 = null;
         field_g = null;
         field_i = null;
         if (param0) {
-            discarded$0 = ii.b(false);
+            ii.b(false);
         }
     }
 
     final static void c(byte param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         int var6 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_18_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         var6 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -93,24 +86,20 @@ final class ii extends em {
                 if (fb.field_d[var1_int] != null) {
                   L3: {
                     if ((1 << var1_int & ih.field_a) != 0) {
-                      stackOut_9_0 = 32;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_0 = 32;
                       break L3;
                     } else {
-                      stackOut_8_0 = 16;
-                      stackIn_10_0 = stackOut_8_0;
+                      stackIn_10_0 = 16;
                       break L3;
                     }
                   }
                   L4: {
                     var2 = stackIn_10_0;
                     if ((1 << var1_int & ih.field_a) != 0) {
-                      stackOut_12_0 = 50;
-                      stackIn_13_0 = stackOut_12_0;
+                      stackIn_13_0 = 50;
                       break L4;
                     } else {
-                      stackOut_11_0 = 30;
-                      stackIn_13_0 = stackOut_11_0;
+                      stackIn_13_0 = 30;
                       break L4;
                     }
                   }
@@ -120,12 +109,10 @@ final class ii extends em {
                     if (var3 != gb.field_a[var1_int]) {
                       L6: {
                         if ((1 << var1_int & ih.field_a) != 0) {
-                          stackOut_17_0 = 1024;
-                          stackIn_18_0 = stackOut_17_0;
+                          stackIn_18_0 = 1024;
                           break L6;
                         } else {
-                          stackOut_16_0 = 512;
-                          stackIn_18_0 = stackOut_16_0;
+                          stackIn_18_0 = 512;
                           break L6;
                         }
                       }

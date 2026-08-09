@@ -14,7 +14,7 @@ abstract class ce {
         int var4 = 0;
         pm var5 = null;
         int var6 = HostileSpawn.field_I ? 1 : 0;
-        pm[] var7 = ((ce) this).field_d;
+        pm[] var7 = this.field_d;
         pm[] var3 = var7;
         for (var4 = param1; var4 < var7.length; var4++) {
             var5 = var7[var4];
@@ -28,25 +28,21 @@ abstract class ce {
 
     final int a(boolean param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0) {
           L0: {
             L1: {
-              if (((ce) this).field_d == null) {
+              if (this.field_d == null) {
                 break L1;
               } else {
-                if (0 < ((ce) this).field_d.length) {
-                  stackOut_6_0 = ((ce) this).field_d[((ce) this).field_d.length - 1].field_f - ((ce) this).field_d[0].field_i;
-                  stackIn_7_0 = stackOut_6_0;
+                if (0 < this.field_d.length) {
+                  stackIn_7_0 = this.field_d[this.field_d.length - 1].field_f - this.field_d[0].field_i;
                   break L0;
                 } else {
                   break L1;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_0 = 0;
             break L0;
           }
           return stackIn_7_0;
@@ -59,44 +55,38 @@ abstract class ce {
         int var3 = 0;
         pm var4 = null;
         int var5 = HostileSpawn.field_I ? 1 : 0;
-        for (var3 = param1; ((ce) this).field_d.length > var3; var3++) {
-            var4 = ((ce) this).field_d[var3];
+        for (var3 = param1; this.field_d.length > var3; var3++) {
+            var4 = this.field_d[var3];
             if (var4.field_b.length > param0) {
                 return var3;
             }
             param0 = param0 - (var4.field_b.length + -1);
         }
-        return ((ce) this).field_d.length;
+        return this.field_d.length;
     }
 
     final static void a(ln param0, boolean param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         ln var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
+        ln stackIn_19_0 = null;
+        ln stackIn_20_0 = null;
+        int stackIn_20_1 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException var2 = null;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
             if (null != param0.field_s) {
               L1: {
                 L2: {
-                  if (param0.field_i != 0) {
+                  if (-1 != (param0.field_i ^ -1)) {
                     break L2;
                   } else {
                     if (param0.field_e != 0) {
@@ -120,7 +110,8 @@ abstract class ce {
                           break L4;
                         } else {
                           if (param0.field_e == var3.field_e) {
-                            return;
+                            decompiledRegionSelector0 = 1;
+                            break L0;
                           } else {
                             break L4;
                           }
@@ -139,74 +130,98 @@ abstract class ce {
                   break L5;
                 }
               }
-              ed.a(param0, false);
+              L6: {
+                stackIn_19_0 = (ln) (param0);
+
+                if (param1) {
+                  stackIn_20_0 = (ln) ((Object) stackIn_19_0);
+                  stackIn_20_1 = 0;
+                  break L6;
+                } else {
+                  stackIn_20_0 = (ln) ((Object) stackIn_19_0);
+                  stackIn_20_1 = 1;
+                  break L6;
+                }
+              }
+              L7: {
+                ed.a(stackIn_20_0, stackIn_20_1 != 0);
+                if (param1) {
+                  break L7;
+                } else {
+                  field_f = (u[]) null;
+                  break L7;
+                }
+              }
+              decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L8: {
             var2 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var2;
-            stackOut_18_1 = new StringBuilder().append("ce.F(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackIn_25_0 = (RuntimeException) (var2);
+
+            stackIn_25_1 = new StringBuilder().append("ce.F(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
-              break L6;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
+              break L8;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
-              break L6;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
+              break L8;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + true + ')');
+          throw wg.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     final int a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        pm var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+        int var4;
+        int var5;
+        pm var6;
+        int var7;
+        int var8;
         L0: {
           var8 = HostileSpawn.field_I ? 1 : 0;
-          if (null == ((ce) this).field_d) {
+          if (null == this.field_d) {
             break L0;
           } else {
-            if (((ce) this).field_d.length == 0) {
+            if (this.field_d.length == 0) {
               break L0;
             } else {
-              if (((ce) this).field_d[0].field_i > param1) {
+              if (this.field_d[0].field_i > param1) {
                 break L0;
               } else {
-                if (param1 > ((ce) this).field_d[-1 + ((ce) this).field_d.length].field_f) {
+                if (param1 > this.field_d[-1 + this.field_d.length].field_f) {
                   return -1;
                 } else {
-                  if (((ce) this).field_d.length != 1) {
+                  if ((this.field_d.length ^ -1) != -2) {
                     var4 = 0;
                     if (param0 > 82) {
                       var5 = 0;
                       L1: while (true) {
-                        if (((ce) this).field_d.length <= var5) {
+                        if (this.field_d.length <= var5) {
                           return -1;
                         } else {
                           L2: {
-                            var6 = ((ce) this).field_d[var5];
+                            var6 = this.field_d[var5];
                             if (var6.field_i > param1) {
                               break L2;
                             } else {
@@ -231,7 +246,7 @@ abstract class ce {
                       return -76;
                     }
                   } else {
-                    return ((ce) this).field_d[0].a(param2, (byte) -111);
+                    return this.field_d[0].a(param2, (byte) -111);
                   }
                 }
               }
@@ -243,34 +258,22 @@ abstract class ce {
 
     final int a(int param0, int param1, int param2, String param3) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int stackIn_3_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_18_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        int stackIn_20_0 = 0;
+        int stackIn_22_0 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException var5 = null;
         var10 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
@@ -282,31 +285,34 @@ abstract class ce {
               L1: while (true) {
                 if (var7 <= var8) {
                   if (0 >= var5_int) {
-                    stackOut_17_0 = 0;
-                    stackIn_18_0 = stackOut_17_0;
+                    stackIn_22_0 = 0;
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    stackOut_15_0 = (param1 + -param0 << 8) / var5_int;
-                    stackIn_16_0 = stackOut_15_0;
-                    return stackIn_16_0;
+                    stackIn_20_0 = (param1 + -param0 << 1671528488) / var5_int;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 } else {
                   L2: {
                     var9 = param3.charAt(var8);
-                    if (var9 == 60) {
+                    if (-61 == (var9 ^ -1)) {
                       var6 = 1;
                       break L2;
                     } else {
                       if (var9 != 62) {
-                        L3: {
-                          if (var6 != 0) {
-                            break L3;
+                        if (var6 == 0) {
+                          if (var9 == 32) {
+                            var5_int++;
+                            break L2;
                           } else {
-                            break L3;
+                            var8++;
+                            continue L1;
                           }
+                        } else {
+                          var8++;
+                          continue L1;
                         }
-                        var8++;
-                        continue L1;
                       } else {
                         var6 = 0;
                         break L2;
@@ -318,57 +324,57 @@ abstract class ce {
                 }
               }
             } else {
-              stackOut_2_0 = -59;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              stackIn_3_0 = -59;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var5;
-            stackOut_19_1 = new StringBuilder().append("ce.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_25_0 = (RuntimeException) (var5);
+
+            stackIn_25_1 = new StringBuilder().append("ce.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L4;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
+              break L3;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
-              break L4;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
+              break L3;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw wg.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
-        return stackIn_18_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_20_0;
+          } else {
+            return stackIn_22_0;
+          }
+        }
     }
 
     final int a(int param0) {
-        int var2 = 0;
-        pm[] var3 = null;
-        int var4 = 0;
-        pm var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        int var2;
+        pm[] var3;
+        int var4;
+        pm var5;
+        int var7;
+        int var6;
         var7 = HostileSpawn.field_I ? 1 : 0;
         var2 = -1;
         if (param0 == 3915) {
           L0: {
-            if (null != ((ce) this).field_d) {
-              var3 = ((ce) this).field_d;
+            if (null != this.field_d) {
+              var3 = this.field_d;
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -412,10 +418,6 @@ abstract class ce {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         field_b = new int[]{100, 235, 340, 550};
     }

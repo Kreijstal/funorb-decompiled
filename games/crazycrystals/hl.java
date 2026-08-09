@@ -16,10 +16,7 @@ final class hl extends l {
 
     final static boolean a(java.applet.Applet param0, int param1) {
         try {
-            uf discarded$2 = null;
             String var2 = null;
-            Throwable var2_ref = null;
-            RuntimeException var2_ref2 = null;
             String var3 = null;
             String[] var4 = null;
             int var5 = 0;
@@ -28,8 +25,6 @@ final class hl extends l {
             int stackIn_4_0 = 0;
             int stackIn_12_0 = 0;
             int stackIn_19_0 = 0;
-            RuntimeException stackIn_21_0 = null;
-            StringBuilder stackIn_21_1 = null;
             RuntimeException stackIn_22_0 = null;
             StringBuilder stackIn_22_1 = null;
             RuntimeException stackIn_23_0 = null;
@@ -38,24 +33,13 @@ final class hl extends l {
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_3_0 = 0;
-            int stackOut_11_0 = 0;
-            int stackOut_18_0 = 0;
-            int stackOut_17_0 = 0;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            RuntimeException stackOut_22_0 = null;
-            StringBuilder stackOut_22_1 = null;
-            String stackOut_22_2 = null;
-            RuntimeException stackOut_21_0 = null;
-            StringBuilder stackOut_21_1 = null;
-            String stackOut_21_2 = null;
+            Throwable var2_ref = null;
+            RuntimeException var2_ref2 = null;
             var7 = CrazyCrystals.field_B;
             try {
               L0: {
                 if (wg.field_P) {
-                  stackOut_3_0 = 1;
-                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_0 = 1;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 } else {
@@ -68,7 +52,7 @@ final class hl extends l {
                         if (param1 <= -39) {
                           break L2;
                         } else {
-                          discarded$2 = hl.a(-13, true);
+                          hl.a(-13, true);
                           break L2;
                         }
                       }
@@ -86,8 +70,7 @@ final class hl extends l {
                               if (!var4[var5].substring(0, var6).trim().equals(var2)) {
                                 break L4;
                               } else {
-                                stackOut_11_0 = 1;
-                                stackIn_12_0 = stackOut_11_0;
+                                stackIn_12_0 = 1;
                                 decompiledRegionSelector0 = 1;
                                 break L1;
                               }
@@ -109,12 +92,10 @@ final class hl extends l {
                   if (decompiledRegionSelector0 == 0) {
                     L6: {
                       if (null == param0.getParameter("tuhstatbut")) {
-                        stackOut_18_0 = 0;
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_0 = 0;
                         break L6;
                       } else {
-                        stackOut_17_0 = 1;
-                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_19_0 = 1;
                         break L6;
                       }
                     }
@@ -130,27 +111,19 @@ final class hl extends l {
               decompiledCaughtException = decompiledCaughtParameter1;
               L7: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_20_0 = (RuntimeException) (var2_ref2);
-                stackOut_20_1 = new StringBuilder().append("hl.D(");
-                stackIn_22_0 = stackOut_20_0;
-                stackIn_22_1 = stackOut_20_1;
-                stackIn_21_0 = stackOut_20_0;
-                stackIn_21_1 = stackOut_20_1;
+                stackIn_22_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_22_1 = new StringBuilder().append("hl.D(");
+
                 if (param0 == null) {
-                  stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-                  stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-                  stackOut_22_2 = "null";
-                  stackIn_23_0 = stackOut_22_0;
-                  stackIn_23_1 = stackOut_22_1;
-                  stackIn_23_2 = stackOut_22_2;
+                  stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+                  stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+                  stackIn_23_2 = "null";
                   break L7;
                 } else {
-                  stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-                  stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-                  stackOut_21_2 = "{...}";
-                  stackIn_23_0 = stackOut_21_0;
-                  stackIn_23_1 = stackOut_21_1;
-                  stackIn_23_2 = stackOut_21_2;
+                  stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+                  stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+                  stackIn_23_2 = "{...}";
                   break L7;
                 }
               }
@@ -185,11 +158,10 @@ final class hl extends l {
     }
 
     final static uf a(int param0, boolean param1) {
-        boolean discarded$5 = false;
-        int discarded$6 = 0;
-        String discarded$7 = null;
-        int discarded$8 = 0;
-        String discarded$9 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_9_0 = 0;
+        int[] stackIn_24_0 = null;
+        Throwable decompiledCaughtException = null;
         md var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -199,16 +171,6 @@ final class hl extends l {
         java.applet.Applet var8 = null;
         md var9 = null;
         mp var10 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
-        int[] stackIn_24_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        Object stackOut_23_0 = null;
-        int[] stackOut_22_0 = null;
         L0: {
           var7 = CrazyCrystals.field_B;
           var9 = kd.field_n;
@@ -216,12 +178,10 @@ final class hl extends l {
           var3 = var9.h(255);
           lj.field_b = var3 & 127;
           if ((128 & var3) == 0) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -241,12 +201,10 @@ final class hl extends l {
         }
         L2: {
           if ((var9.h(255) ^ -1) != -2) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = 1;
             break L2;
           }
         }
@@ -266,21 +224,21 @@ final class hl extends l {
             break L4;
           } else {
             var8 = (java.applet.Applet) null;
-            discarded$5 = hl.a((java.applet.Applet) null, 102);
+            hl.a((java.applet.Applet) null, 102);
             break L4;
           }
         }
         L5: {
           if (-2 == (lj.field_b ^ -1)) {
-            discarded$6 = var9.c((byte) -7);
-            discarded$7 = var9.i(111);
+            var9.c((byte) -7);
+            var9.i(111);
             break L5;
           } else {
             if (-5 != (lj.field_b ^ -1)) {
               break L5;
             } else {
-              discarded$8 = var9.c((byte) -7);
-              discarded$9 = var9.i(111);
+              var9.c((byte) -7);
+              var9.i(111);
               break L5;
             }
           }
@@ -298,12 +256,10 @@ final class hl extends l {
                   var10 = bn.field_g.a(127, var5);
                   fb.field_b = var10.e(60);
                   if (md.field_s.equals(je.field_g)) {
-                    stackOut_23_0 = null;
-                    stackIn_24_0 = (int[]) ((Object) stackOut_23_0);
+                    stackIn_24_0 = null;
                     break L8;
                   } else {
-                    stackOut_22_0 = var10.field_o;
-                    stackIn_24_0 = stackOut_22_0;
+                    stackIn_24_0 = var10.field_o;
                     break L8;
                   }
                 }
@@ -327,11 +283,10 @@ final class hl extends l {
     }
 
     public static void b(int param0) {
-        boolean discarded$0 = false;
         field_e = null;
         if (param0 != 25648) {
             java.applet.Applet var2 = (java.applet.Applet) null;
-            discarded$0 = hl.a((java.applet.Applet) null, -82);
+            hl.a((java.applet.Applet) null, -82);
         }
     }
 

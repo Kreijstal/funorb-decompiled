@@ -9,8 +9,19 @@ final class kn extends eu {
     static int field_b;
 
     final static void a(int param0, wb[] param1, byte param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        int stackIn_10_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_19_0 = 0;
+        RuntimeException stackIn_77_0 = null;
+        StringBuilder stackIn_77_1 = null;
+        RuntimeException stackIn_78_0 = null;
+        StringBuilder stackIn_78_1 = null;
+        String stackIn_78_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -27,35 +38,6 @@ final class kn extends eu {
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_19_0 = 0;
-        RuntimeException stackIn_88_0 = null;
-        StringBuilder stackIn_88_1 = null;
-        RuntimeException stackIn_89_0 = null;
-        StringBuilder stackIn_89_1 = null;
-        RuntimeException stackIn_90_0 = null;
-        StringBuilder stackIn_90_1 = null;
-        String stackIn_90_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        RuntimeException stackOut_87_0 = null;
-        StringBuilder stackOut_87_1 = null;
-        RuntimeException stackOut_89_0 = null;
-        StringBuilder stackOut_89_1 = null;
-        String stackOut_89_2 = null;
-        RuntimeException stackOut_88_0 = null;
-        StringBuilder stackOut_88_1 = null;
-        String stackOut_88_2 = null;
         var22 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
@@ -69,48 +51,40 @@ final class kn extends eu {
                   } else {
                     L2: {
                       if (param1[3] == null) {
-                        stackOut_9_0 = 0;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = 0;
                         break L2;
                       } else {
-                        stackOut_8_0 = param1[3].field_z;
-                        stackIn_10_0 = stackOut_8_0;
+                        stackIn_10_0 = param1[3].field_z;
                         break L2;
                       }
                     }
                     L3: {
                       var6_int = stackIn_10_0;
                       if (null == param1[5]) {
-                        stackOut_12_0 = 0;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = 0;
                         break L3;
                       } else {
-                        stackOut_11_0 = param1[5].field_z;
-                        stackIn_13_0 = stackOut_11_0;
+                        stackIn_13_0 = param1[5].field_z;
                         break L3;
                       }
                     }
                     L4: {
                       var7 = stackIn_13_0;
                       if (null == param1[1]) {
-                        stackOut_15_0 = 0;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = 0;
                         break L4;
                       } else {
-                        stackOut_14_0 = param1[1].field_w;
-                        stackIn_16_0 = stackOut_14_0;
+                        stackIn_16_0 = param1[1].field_w;
                         break L4;
                       }
                     }
                     L5: {
                       var8 = stackIn_16_0;
                       if (param1[7] != null) {
-                        stackOut_18_0 = param1[7].field_w;
-                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_0 = param1[7].field_w;
                         break L5;
                       } else {
-                        stackOut_17_0 = 0;
-                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_19_0 = 0;
                         break L5;
                       }
                     }
@@ -206,11 +180,7 @@ final class kn extends eu {
                             } else {
                               param1[1].a(var20, param3);
                               var20 = var20 + param1[1].field_z;
-                              if (var22 != 0) {
-                                break L13;
-                              } else {
-                                continue L14;
-                              }
+                              continue L14;
                             }
                           }
                         } else {
@@ -234,11 +204,7 @@ final class kn extends eu {
                             } else {
                               param1[7].a(var20, var15);
                               var20 = var20 + param1[7].field_z;
-                              if (var22 != 0) {
-                                break L15;
-                              } else {
-                                continue L16;
-                              }
+                              continue L16;
                             }
                           }
                         }
@@ -258,11 +224,7 @@ final class kn extends eu {
                             } else {
                               param1[3].a(param0, var20);
                               var20 = var20 + param1[3].field_w;
-                              if (var22 != 0) {
-                                break L17;
-                              } else {
-                                continue L18;
-                              }
+                              continue L18;
                             }
                           }
                         } else {
@@ -284,11 +246,7 @@ final class kn extends eu {
                             } else {
                               param1[5].a(var13, var20);
                               var20 = var20 + param1[5].field_w;
-                              if (var22 != 0) {
-                                break L19;
-                              } else {
-                                continue L20;
-                              }
+                              continue L20;
                             }
                           }
                         } else {
@@ -297,49 +255,41 @@ final class kn extends eu {
                       }
                     }
                     L21: {
-                      if (param1[4] == null) {
-                        break L21;
-                      } else {
-                        if (param1[4].field_z == 0) {
-                          break L21;
+                      L22: {
+                        if (param1[4] == null) {
+                          break L22;
                         } else {
-                          if (0 != param1[4].field_w) {
-                            lk.e(var16, var18, var17, var19);
-                            var20 = var14;
-                            L22: while (true) {
-                              if (var15 <= var20) {
-                                lk.a(cd.field_f);
-                                break L21;
-                              } else {
-                                if (var22 != 0) {
-                                  break L21;
+                          if (param1[4].field_z == 0) {
+                            break L22;
+                          } else {
+                            if (0 != param1[4].field_w) {
+                              lk.e(var16, var18, var17, var19);
+                              var20 = var14;
+                              L23: while (true) {
+                                if (var15 <= var20) {
+                                  lk.a(cd.field_f);
+                                  break L22;
                                 } else {
                                   var21 = var12;
-                                  L23: while (true) {
-                                    L24: {
-                                      if (var13 <= var21) {
-                                        var20 = var20 + param1[4].field_w;
-                                        break L24;
-                                      } else {
-                                        param1[4].a(var21, var20);
-                                        var21 = var21 + param1[4].field_z;
-                                        if (var22 != 0) {
-                                          break L24;
-                                        } else {
-                                          continue L23;
-                                        }
-                                      }
+                                  L24: while (true) {
+                                    if (var13 <= var21) {
+                                      var20 = var20 + param1[4].field_w;
+                                      continue L23;
+                                    } else {
+                                      param1[4].a(var21, var20);
+                                      var21 = var21 + param1[4].field_z;
+                                      continue L24;
                                     }
-                                    continue L22;
                                   }
                                 }
                               }
+                            } else {
+                              break L21;
                             }
-                          } else {
-                            break L21;
                           }
                         }
                       }
+                      break L21;
                     }
                     decompiledRegionSelector0 = 2;
                     break L0;
@@ -357,31 +307,23 @@ final class kn extends eu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L25: {
             var6 = decompiledCaughtException;
-            stackOut_87_0 = (RuntimeException) (var6);
-            stackOut_87_1 = new StringBuilder().append("kn.A(").append(param0).append(',');
-            stackIn_89_0 = stackOut_87_0;
-            stackIn_89_1 = stackOut_87_1;
-            stackIn_88_0 = stackOut_87_0;
-            stackIn_88_1 = stackOut_87_1;
+            stackIn_77_0 = (RuntimeException) (var6);
+
+            stackIn_77_1 = new StringBuilder().append("kn.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_89_0 = (RuntimeException) ((Object) stackIn_89_0);
-              stackOut_89_1 = (StringBuilder) ((Object) stackIn_89_1);
-              stackOut_89_2 = "null";
-              stackIn_90_0 = stackOut_89_0;
-              stackIn_90_1 = stackOut_89_1;
-              stackIn_90_2 = stackOut_89_2;
+              stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
+              stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
+              stackIn_78_2 = "null";
               break L25;
             } else {
-              stackOut_88_0 = (RuntimeException) ((Object) stackIn_88_0);
-              stackOut_88_1 = (StringBuilder) ((Object) stackIn_88_1);
-              stackOut_88_2 = "{...}";
-              stackIn_90_0 = stackOut_88_0;
-              stackIn_90_1 = stackOut_88_1;
-              stackIn_90_2 = stackOut_88_2;
+              stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
+              stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
+              stackIn_78_2 = "{...}";
               break L25;
             }
           }
-          throw qo.a((Throwable) ((Object) stackIn_90_0), stackIn_90_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_78_0), stackIn_78_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -395,8 +337,8 @@ final class kn extends eu {
     }
 
     final static char a(byte param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var2 = param0 & 255;
         if (var2 != 0) {
           if (param1 > -29) {

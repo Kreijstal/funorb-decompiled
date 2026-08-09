@@ -14,10 +14,10 @@ final class fm extends kn {
     static boolean field_V;
 
     final eh k(int param0) {
-        qj var2 = null;
-        eh var3 = null;
-        int var4 = 0;
-        int var5 = 0;
+        qj var2;
+        eh var3;
+        int var4;
+        int var5;
         var5 = Chess.field_G;
         var2 = new qj(this.field_N);
         var3 = (eh) ((Object) var2.c(-20229));
@@ -37,14 +37,13 @@ final class fm extends kn {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        mf discarded$0 = null;
         int var7 = Chess.field_G;
         if (this.field_n != null) {
             this.field_n.a((byte) 66, param3, param0, true, (mf) (this));
         }
         qj var5 = new qj(this.field_N);
         if (param2 >= -80) {
-            discarded$0 = this.a(55);
+            this.a(55);
         }
         mf var6 = (mf) ((Object) var5.a((byte) 121));
         while (var6 != null) {
@@ -54,11 +53,10 @@ final class fm extends kn {
     }
 
     final void i(int param0) {
-        mf discarded$0 = null;
         int var4 = Chess.field_G;
         qj var2 = new qj(this.field_N);
         if (param0 != 0) {
-            discarded$0 = this.a(-52);
+            this.a(-52);
         }
         eh var3 = (eh) ((Object) var2.c(-20229));
         while (var3 != null) {
@@ -69,7 +67,6 @@ final class fm extends kn {
     }
 
     final void b(mf param0, byte param1) {
-        boolean discarded$0 = false;
         if (!(param0 instanceof eh)) {
             throw new IllegalArgumentException();
         }
@@ -80,7 +77,7 @@ final class fm extends kn {
             return;
         }
         try {
-            discarded$0 = var3.a(0, (mf) (this));
+            var3.a(0, (mf) (this));
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) ((Object) runtimeException), "fm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -107,9 +104,9 @@ final class fm extends kn {
     }
 
     final mf a(int param0) {
-        qj var2 = null;
-        eh var3 = null;
-        int var4 = 0;
+        qj var2;
+        eh var3;
+        int var4;
         var4 = Chess.field_G;
         var2 = new qj(this.field_N);
         var3 = (eh) ((Object) var2.c(-20229));

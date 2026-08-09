@@ -11,8 +11,10 @@ final class wda {
     it field_f;
 
     final static void a(byte param0) {
-        String[][] dupTemp$2 = null;
-        int[][] dupTemp$3 = null;
+        String[][] dupTemp$0 = null;
+        int[][] dupTemp$1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         ne var3 = null;
@@ -27,15 +29,12 @@ final class wda {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int var14 = 0;
-        pf var15 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
+        pf var14 = null;
         var12 = BachelorFridge.field_y;
         try {
           L0: {
-            var15 = ig.field_m;
-            var2 = var15.b(16711935);
+            var14 = ig.field_m;
+            var2 = var14.b(16711935);
             var3 = (ne) ((Object) rg.field_f.b((byte) 90));
             if (param0 >= 98) {
               L1: while (true) {
@@ -57,7 +56,7 @@ final class wda {
                   break L0;
                 } else {
                   L3: {
-                    var4 = var15.b(16711935);
+                    var4 = var14.b(16711935);
                     if (var4 == 0) {
                       break L3;
                     } else {
@@ -71,36 +70,35 @@ final class wda {
                           L5: while (true) {
                             if (var6_int >= var4) {
                               it.a(8766, var5);
-                              dupTemp$2 = new String[2][var5];
-                              var3.field_k = dupTemp$2;
-                              var6 = dupTemp$2;
-                              dupTemp$3 = new int[2][var5 * 4];
-                              var3.field_g = dupTemp$3;
-                              var7 = dupTemp$3;
+                              dupTemp$0 = new String[2][var5];
+                              var3.field_k = dupTemp$0;
+                              var6 = dupTemp$0;
+                              dupTemp$1 = new int[2][var5 * 4];
+                              var3.field_g = dupTemp$1;
+                              var7 = dupTemp$1;
                               var8 = ut.field_l;
                               var9 = 0;
                               var10 = 0;
                               L6: while (true) {
                                 if (var8 <= var9) {
+                                  var9 = 0;
                                   var13 = 0;
-                                  var9 = var13;
-                                  var14 = 0;
-                                  var10 = var14;
+                                  var10 = var13;
                                   L7: while (true) {
-                                    if (var13 >= var8) {
+                                    if (var9 >= var8) {
                                       break L3;
                                     } else {
                                       L8: {
-                                        var11 = fn.field_k[var5 + var13];
-                                        var6[1][var14] = vs.field_a[var11];
-                                        var7[1][4 * var14] = gk.field_a[var11];
-                                        var7[1][4 * var14 - -1] = mba.field_a[var11];
-                                        var7[1][4 * var14 - -2] = sc.field_o[var11];
-                                        var7[1][4 * var14 - -3] = uda.field_X[var11];
+                                        var11 = fn.field_k[var5 + var9];
+                                        var6[1][var13] = vs.field_a[var11];
+                                        var7[1][4 * var13] = gk.field_a[var11];
+                                        var7[1][4 * var13 - -1] = mba.field_a[var11];
+                                        var7[1][4 * var13 - -2] = sc.field_o[var11];
+                                        var7[1][4 * var13 - -3] = uda.field_X[var11];
                                         if (wb.a((byte) 52, vs.field_a[var11])) {
                                           if (sc.field_o[var11] + (mba.field_a[var11] - -uda.field_X[var11]) == 0) {
-                                            var6[1][var14] = null;
-                                            var14--;
+                                            var6[1][var13] = null;
+                                            var13--;
                                             break L8;
                                           } else {
                                             break L8;
@@ -109,8 +107,8 @@ final class wda {
                                           break L8;
                                         }
                                       }
+                                      var9++;
                                       var13++;
-                                      var14++;
                                       continue L7;
                                     }
                                   }
@@ -141,7 +139,7 @@ final class wda {
                               }
                             } else {
                               L10: {
-                                ml.a(var15, 2064384);
+                                ml.a(var14, 2064384);
                                 if (-1 == (var6_int ^ -1)) {
                                   var3.field_h = al.field_a;
                                   var3.field_f = gk.field_b;
@@ -159,7 +157,7 @@ final class wda {
                             }
                           }
                         } else {
-                          vs.field_a[var6_int] = var15.g(80);
+                          vs.field_a[var6_int] = var14.g(80);
                           var6_int++;
                           continue L4;
                         }
@@ -207,8 +205,6 @@ final class wda {
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -216,17 +212,6 @@ final class wda {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             if (param1 != null) {
@@ -237,8 +222,7 @@ final class wda {
                   if (!this.field_f.field_a) {
                     break L1;
                   } else {
-                    stackOut_5_0 = 0;
-                    stackIn_6_0 = stackOut_5_0;
+                    stackIn_6_0 = 0;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -247,8 +231,7 @@ final class wda {
               this.field_f = param1;
               this.field_f.a((byte) -83);
               if (!param0) {
-                stackOut_9_0 = 1;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = 1;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
@@ -256,8 +239,7 @@ final class wda {
                 return true;
               }
             } else {
-              stackOut_1_0 = 0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -266,27 +248,19 @@ final class wda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("wda.B(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("wda.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L2;
             }
           }
@@ -310,22 +284,12 @@ final class wda {
 
     wda(lu param0) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -345,27 +309,19 @@ final class wda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (runtimeException);
-            stackOut_4_1 = new StringBuilder().append("wda.<init>(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("wda.<init>(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }

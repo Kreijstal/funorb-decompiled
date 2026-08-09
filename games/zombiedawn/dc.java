@@ -37,7 +37,7 @@ final class dc {
     }
 
     final static fn a(byte param0, int param1) {
-        tm var2 = null;
+        tm var2;
         if (se.field_m.d(-117) < 4) {
           if (param0 != 18) {
             field_a = (vn[]) null;

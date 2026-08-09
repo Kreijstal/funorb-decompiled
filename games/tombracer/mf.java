@@ -15,19 +15,17 @@ final class mf {
     public static void a(boolean param0) {
         if (param0) {
             mf.a(-23);
-            field_d = null;
-            return;
         }
         field_d = null;
     }
 
     final static void a(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         double var2_double = 0.0;
         int var2 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -36,41 +34,23 @@ final class mf {
             gta.field_g = new int[260];
             var1_int = 0;
             L1: while (true) {
-              L2: {
-                L3: {
-                  if ((var1_int ^ -1) <= -257) {
-                    break L3;
-                  } else {
-                    var2_double = 15.0;
-                    gta.field_g[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2_double) * 255.0);
-                    var1_int++;
-                    if (var4 != 0) {
-                      break L2;
-                    } else {
-                      if (var4 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                }
+              if ((var1_int ^ -1) <= -257) {
                 var1_int = -125 % ((param0 - -11) / 55);
-                break L2;
-              }
-              var2 = 256;
-              L4: while (true) {
-                if (var2 >= gta.field_g.length) {
-                  break L0;
-                } else {
-                  gta.field_g[var2] = 255;
-                  var2++;
-                  if (var4 == 0) {
-                    continue L4;
+                var2 = 256;
+                L2: while (true) {
+                  if (var2 >= gta.field_g.length) {
+                    break L0;
                   } else {
-                    return;
+                    gta.field_g[var2] = 255;
+                    var2++;
+                    continue L2;
                   }
                 }
+              } else {
+                var2_double = 15.0;
+                gta.field_g[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2_double) * 255.0);
+                var1_int++;
+                continue L1;
               }
             }
           }

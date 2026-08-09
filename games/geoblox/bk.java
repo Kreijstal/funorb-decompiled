@@ -22,13 +22,12 @@ final class bk {
     }
 
     final static void a(rh param0, int param1, int param2, ob param3) {
-        vd discarded$0 = null;
         try {
             uf.field_a = param1 * sb.a(true) / 1000;
             ab.a(99, param0);
             ni.a(param0, 0);
             if (param2 < 97) {
-                discarded$0 = bk.a(true, -54);
+                bk.a(true, -54);
             }
             ul.a(-21541, param0);
             jk.b((byte) -91);
@@ -40,10 +39,10 @@ final class bk {
     }
 
     final static vd a(boolean param0, int param1) {
-        int discarded$4 = 0;
-        String discarded$5 = null;
-        int discarded$6 = 0;
-        String discarded$7 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_9_0 = 0;
+        int[] stackIn_22_0 = null;
+        Throwable decompiledCaughtException = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -51,28 +50,16 @@ final class bk {
         int var7 = 0;
         pk var8 = null;
         og var9 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
-        int[] stackIn_22_0 = null;
-        Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int[] stackOut_21_0 = null;
-        Object stackOut_20_0 = null;
         L0: {
           var7 = Geoblox.field_C;
           var8 = eh.field_d;
           var3 = var8.c((byte) 34);
           gj.field_u = var3 & 127;
           if ((param1 & var3) == 0) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -92,12 +79,10 @@ final class bk {
         }
         L2: {
           if (-2 != (var8.c((byte) 34) ^ -1)) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = 1;
             break L2;
           }
         }
@@ -114,15 +99,15 @@ final class bk {
         }
         L4: {
           if (gj.field_u == 1) {
-            discarded$4 = var8.b(true);
-            discarded$5 = var8.e((byte) 112);
+            var8.b(true);
+            var8.e((byte) 112);
             break L4;
           } else {
             if ((gj.field_u ^ -1) != -5) {
               break L4;
             } else {
-              discarded$6 = var8.b(true);
-              discarded$7 = var8.e((byte) 112);
+              var8.b(true);
+              var8.e((byte) 112);
               break L4;
             }
           }
@@ -139,12 +124,10 @@ final class bk {
                 var9 = rd.field_r.a((byte) -14, var5);
                 re.field_f = var9.e((byte) -69);
                 if (!jc.field_b.equals(wd.field_f)) {
-                  stackOut_21_0 = var9.field_m;
-                  stackIn_22_0 = stackOut_21_0;
+                  stackIn_22_0 = var9.field_m;
                   break L6;
                 } else {
-                  stackOut_20_0 = null;
-                  stackIn_22_0 = (int[]) ((Object) stackOut_20_0);
+                  stackIn_22_0 = null;
                   break L6;
                 }
               }

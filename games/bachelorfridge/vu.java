@@ -20,21 +20,24 @@ final class vu extends pv {
     }
 
     final boolean b(boolean param0) {
-        boolean discarded$4 = false;
-        int var2 = 0;
-        int var3 = 0;
+        int[] dupTemp$1 = null;
+        int[] dupTemp$2 = null;
+        int[] dupTemp$3 = null;
+        int[] dupTemp$4 = null;
+        int var2;
+        int var3;
         L0: {
           var3 = BachelorFridge.field_y;
           if (param0) {
             break L0;
           } else {
-            discarded$4 = this.b(false);
+            this.b(false);
             break L0;
           }
         }
-        int fieldTemp$5 = this.field_g + 1;
+        int fieldTemp$0 = this.field_g + 1;
         this.field_g = this.field_g + 1;
-        if (fieldTemp$5 > this.c(false)) {
+        if (fieldTemp$0 > this.c(false)) {
           this.d((byte) -125);
           return true;
         } else {
@@ -78,13 +81,17 @@ final class vu extends pv {
                 return false;
               }
             } else {
-              if (this.field_j >= var2) {
+              if ((this.field_j ^ -1) <= (var2 ^ -1)) {
                 if (-1 != (this.field_g % 2 ^ -1)) {
-                  this.field_m[var2][0] = this.field_m[var2][0] + 1;
-                  this.field_m[var2][1] = this.field_m[var2][1] + 1;
-                  this.field_m[var2][2] = this.field_m[var2][2] - 1;
+                  dupTemp$1 = this.field_m[var2];
+                  dupTemp$1[0] = dupTemp$1[0] + 1;
+                  dupTemp$2 = this.field_m[var2];
+                  dupTemp$2[1] = dupTemp$2[1] + 1;
+                  dupTemp$3 = this.field_m[var2];
+                  dupTemp$3[2] = dupTemp$3[2] - 1;
                   if ((this.field_m[var2][3] ^ -1) > -7) {
-                    this.field_m[var2][3] = this.field_m[var2][3] + 1;
+                    dupTemp$4 = this.field_m[var2];
+                    dupTemp$4[3] = dupTemp$4[3] + 1;
                     var2++;
                     continue L3;
                   } else {
@@ -138,9 +145,8 @@ final class vu extends pv {
     }
 
     private final void d(byte param0) {
-        boolean discarded$2 = false;
         if (param0 > -3) {
-          discarded$2 = vu.a((byte) 18, '￨');
+          vu.a((byte) 18, '￨');
           this.field_f.field_n = this.field_f.c((byte) -115);
           this.field_f.field_k = this.field_f.b(true);
           return;

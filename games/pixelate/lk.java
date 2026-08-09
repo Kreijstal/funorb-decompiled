@@ -43,7 +43,7 @@ final class lk extends jj {
     }
 
     final void a(boolean param0) {
-        int var2 = 0;
+        int var2;
         t.g(0, 0, 640, 480, f.field_f[this.field_m], f.field_f[this.field_p]);
         if (!param0) {
           var2 = this.field_m;

@@ -18,12 +18,11 @@ final class a {
     }
 
     final static String a(byte param0) {
-        String discarded$0 = null;
         if (gj.field_a == qc.field_i) {
             return uf.field_j;
         }
         if (param0 < 124) {
-            discarded$0 = a.a((byte) -113);
+            a.a((byte) -113);
             return ja.field_b;
         }
         return ja.field_b;

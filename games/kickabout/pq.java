@@ -92,7 +92,7 @@ final class pq extends i {
     }
 
     final static int b(int param0, int param1) {
-        String var3 = null;
+        String var3;
         param1 = (1431655765 & param1) + ((-1431655765 & param1) >>> -1075143327);
         param1 = (858993459 & param1) - -(1932735283 & param1 >>> 352650434);
         param1 = 252645135 & (param1 >>> 860211492) + param1;
@@ -108,29 +108,7 @@ final class pq extends i {
     }
 
     final void a(byte param0, int param1, int param2) {
-        int discarded$22 = 0;
-        int discarded$23 = 0;
-        int discarded$24 = 0;
-        int discarded$25 = 0;
-        int discarded$26 = 0;
-        int discarded$27 = 0;
-        int discarded$28 = 0;
-        int discarded$29 = 0;
-        int discarded$30 = 0;
-        int discarded$31 = 0;
-        int discarded$32 = 0;
-        int discarded$33 = 0;
-        int discarded$34 = 0;
-        int discarded$35 = 0;
-        int discarded$36 = 0;
-        int discarded$37 = 0;
-        int discarded$38 = 0;
-        int discarded$39 = 0;
-        int discarded$40 = 0;
-        int discarded$41 = 0;
-        int discarded$42 = 0;
-        int discarded$43 = 0;
-        int var5 = 0;
+        int var5;
         var5 = Kickabout.field_G;
         if (param0 >= -11) {
           L0: {
@@ -152,18 +130,18 @@ final class pq extends i {
                   if (np.h((byte) 5)) {
                     if (this.field_H.field_Fb != -1) {
                       if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                        discarded$22 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                        pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                         return;
                       } else {
-                        discarded$23 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+                        pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                         return;
                       }
                     } else {
-                      discarded$24 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                      pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                       return;
                     }
                   } else {
-                    discarded$25 = pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+                    pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
                     return;
                   }
                 } else {
@@ -173,14 +151,14 @@ final class pq extends i {
                         break L2;
                       } else {
                         if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                          discarded$26 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+                          pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                           break L1;
                         } else {
                           break L2;
                         }
                       }
                     }
-                    discarded$27 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                    pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                     break L1;
                   }
                   return;
@@ -191,32 +169,32 @@ final class pq extends i {
           if (!cq.e(15137)) {
             if (this.field_H.field_Fb != -1) {
               if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                discarded$28 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+                pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               } else {
-                discarded$29 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                 return;
               }
             } else {
-              discarded$30 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
               return;
             }
           } else {
             if (np.h((byte) 5)) {
               if (this.field_H.field_Fb != -1) {
                 if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                  discarded$31 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                  pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                   return;
                 } else {
-                  discarded$32 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+                  pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                   return;
                 }
               } else {
-                discarded$33 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                 return;
               }
             } else {
-              discarded$34 = pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+              pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
               return;
             }
           }
@@ -241,7 +219,7 @@ final class pq extends i {
                       break L5;
                     } else {
                       if (!np.h((byte) 5)) {
-                        discarded$35 = pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+                        pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
                         break L4;
                       } else {
                         break L5;
@@ -253,14 +231,14 @@ final class pq extends i {
                       break L6;
                     } else {
                       if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                        discarded$36 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+                        pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                         break L4;
                       } else {
                         break L6;
                       }
                     }
                   }
-                  discarded$37 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                  pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                   break L4;
                 }
                 return;
@@ -270,14 +248,14 @@ final class pq extends i {
           if (!cq.e(15137)) {
             if (this.field_H.field_Fb != -1) {
               if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                discarded$38 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                 return;
               } else {
-                discarded$39 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+                pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
             } else {
-              discarded$40 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
               return;
             }
           } else {
@@ -288,19 +266,19 @@ final class pq extends i {
                     break L8;
                   } else {
                     if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                      discarded$41 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+                      pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                       break L7;
                     } else {
                       break L8;
                     }
                   }
                 }
-                discarded$42 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                 break L7;
               }
               return;
             } else {
-              discarded$43 = pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+              pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
               return;
             }
           }
@@ -329,12 +307,11 @@ final class pq extends i {
     }
 
     public static void g(int param0) {
-        int discarded$2 = 0;
         field_N = null;
         field_L = null;
         field_O = (byte[][]) null;
         if (param0 != -14948) {
-          discarded$2 = pq.b(19, 71);
+          pq.b(19, 71);
           field_P = null;
           field_M = null;
           field_G = null;
@@ -412,9 +389,8 @@ final class pq extends i {
     }
 
     final int b(int param0) {
-        int discarded$0 = 0;
         if (param0 != -1379118556) {
-            discarded$0 = this.a((byte) 85);
+            this.a((byte) 85);
             return 470;
         }
         return 470;

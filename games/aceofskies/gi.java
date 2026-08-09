@@ -27,12 +27,11 @@ final class gi extends za {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_g = null;
         field_i = null;
         field_f = null;
         if (param0 != -12085) {
-            discarded$0 = gi.a(false);
+            gi.a(false);
             field_e = null;
             return;
         }

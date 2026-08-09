@@ -8,7 +8,7 @@ final class od {
     static int[] field_c;
 
     final static void a(byte param0, int param1) {
-        int discarded$3 = ia.b(false);
+        ia.b(false);
         if (param0 > -56) {
             field_a = (ki) null;
         }

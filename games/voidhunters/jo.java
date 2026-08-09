@@ -12,21 +12,20 @@ final class jo implements ntb, ofa, iu {
     static int field_e;
 
     final int a(int param0, int param1, int param2) {
-        boolean discarded$3 = false;
-        int incrementValue$4 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7_int = 0;
-        int[] var7 = null;
-        int var8 = 0;
+        int incrementValue$0 = 0;
+        int var4;
+        int var5;
+        int var8;
+        int var6;
+        int var7_int;
+        int[] var7;
         L0: {
           var8 = VoidHunters.field_G;
           var4 = 0;
           if (param0 <= -9) {
             break L0;
           } else {
-            discarded$3 = this.c(105, -29);
+            this.c(105, -29);
             break L0;
           }
         }
@@ -63,9 +62,9 @@ final class jo implements ntb, ofa, iu {
                       break L4;
                     }
                   }
-                  incrementValue$4 = param2;
+                  incrementValue$0 = param2;
                   param2++;
-                  ada.field_a[incrementValue$4] = var5;
+                  ada.field_a[incrementValue$0] = var5;
                   var4++;
                   continue L1;
                 } else {
@@ -126,8 +125,6 @@ final class jo implements ntb, ofa, iu {
         int stackIn_18_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_22_0 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -135,75 +132,51 @@ final class jo implements ntb, ofa, iu {
         String stackIn_26_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
         try {
           L0: {
             if (param1) {
               var3 = (jo) (param0);
               if (var3.field_h > this.field_h) {
-                stackOut_19_0 = -1;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = -1;
                 decompiledRegionSelector0 = 6;
                 break L0;
               } else {
                 if (var3.field_h < this.field_h) {
-                  stackOut_17_0 = 1;
-                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_18_0 = 1;
                   decompiledRegionSelector0 = 5;
                   break L0;
                 } else {
                   if (this.field_b >= var3.field_b) {
                     if (var3.field_b >= this.field_b) {
                       if (this.field_f < var3.field_f) {
-                        stackOut_15_0 = -1;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = -1;
                         decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
                         if (this.field_f <= var3.field_f) {
-                          stackOut_21_0 = 0;
-                          stackIn_22_0 = stackOut_21_0;
+                          stackIn_22_0 = 0;
                           decompiledRegionSelector0 = 7;
                           break L0;
                         } else {
-                          stackOut_13_0 = 1;
-                          stackIn_14_0 = stackOut_13_0;
+                          stackIn_14_0 = 1;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         }
                       }
                     } else {
-                      stackOut_9_0 = 1;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_0 = 1;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
                   } else {
-                    stackOut_6_0 = -1;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = -1;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 }
               }
             } else {
-              stackOut_1_0 = 114;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 114;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -212,27 +185,19 @@ final class jo implements ntb, ofa, iu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) (var3_ref);
-            stackOut_23_1 = new StringBuilder().append("jo.I(");
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_25_0 = (RuntimeException) (var3_ref);
+
+            stackIn_25_1 = new StringBuilder().append("jo.I(");
+
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L1;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L1;
             }
           }
@@ -270,25 +235,15 @@ final class jo implements ntb, ofa, iu {
     }
 
     public final void a(tv param0, int param1) {
-        RuntimeException var3 = null;
-        int var4 = 0;
-        jo var5 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        jo var5 = null;
         try {
           L0: {
             L1: {
@@ -351,27 +306,19 @@ final class jo implements ntb, ofa, iu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var3);
-            stackOut_15_1 = new StringBuilder().append("jo.F(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var3);
+
+            stackIn_17_1 = new StringBuilder().append("jo.F(");
+
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L7;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L7;
             }
           }
@@ -400,9 +347,9 @@ final class jo implements ntb, ofa, iu {
     }
 
     final void b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        faa var5 = null;
+        int var3;
+        int var4;
+        faa var5;
         var4 = VoidHunters.field_G;
         var3 = 0;
         L0: while (true) {
@@ -418,7 +365,7 @@ final class jo implements ntb, ofa, iu {
             }
             return;
           } else {
-            if (param1 < this.field_d[var3]) {
+            if ((param1 ^ -1) > (this.field_d[var3] ^ -1)) {
               this.field_d[var3] = this.field_d[var3] - 1;
               this.a((byte) -82);
               var3++;
@@ -447,27 +394,15 @@ final class jo implements ntb, ofa, iu {
 
     public final boolean a(byte param0, tv param1) {
         jo var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var3_ref = null;
         try {
           L0: {
             L1: {
@@ -484,8 +419,7 @@ final class jo implements ntb, ofa, iu {
                       break L2;
                     } else {
                       if (this.field_f == var3.field_f) {
-                        stackOut_6_0 = 0;
-                        stackIn_7_0 = stackOut_6_0;
+                        stackIn_7_0 = 0;
                         break L1;
                       } else {
                         break L2;
@@ -494,8 +428,7 @@ final class jo implements ntb, ofa, iu {
                   }
                 }
               }
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_0 = 1;
               break L1;
             }
             break L0;
@@ -504,27 +437,19 @@ final class jo implements ntb, ofa, iu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3_ref);
-            stackOut_8_1 = new StringBuilder().append("jo.C(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var3_ref);
+
+            stackIn_10_1 = new StringBuilder().append("jo.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -543,9 +468,8 @@ final class jo implements ntb, ofa, iu {
     }
 
     final void a(int param0, int param1) {
-        int discarded$0 = 0;
         if (param1 != -13251) {
-            discarded$0 = this.a(-116, 102, -62);
+            this.a(-116, 102, -62);
         }
         this.field_d = nra.a(true, this.field_d, param0, param1 + 42100, true);
         this.a((byte) -77);

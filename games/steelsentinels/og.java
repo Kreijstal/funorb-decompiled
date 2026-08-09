@@ -51,8 +51,8 @@ final class og {
     }
 
     final static int a(boolean param0) {
-        qd[] var1 = null;
-        qd[] var2 = null;
+        qd[] var1;
+        qd[] var2;
         if (!param0) {
           og.b(124);
           var1 = new qd[]{};

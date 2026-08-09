@@ -24,17 +24,17 @@ final class qk extends wh {
     }
 
     final int[][] b(int param0, int param1) {
-        int[][] var3 = null;
-        int[] var4 = null;
-        int[] var5 = null;
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int[][] var11 = null;
-        int[][] var12 = null;
-        int[][] var13 = null;
+        int[][] var3;
+        int[] var4;
+        int[] var5;
+        int[] var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int[][] var11;
+        int[][] var12;
+        int[][] var13;
         var10 = Vertigo2.field_L ? 1 : 0;
         var13 = this.field_v.a(param1, param0 ^ 3778);
         var12 = var13;
@@ -83,7 +83,7 @@ final class qk extends wh {
     }
 
     final static void d(int param0, int param1, int param2) {
-        mi var3 = null;
+        mi var3;
         if (param2 != 18964) {
           qk.b(true);
           var3 = uh.field_Wb;

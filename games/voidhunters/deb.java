@@ -8,9 +8,8 @@ final class deb extends mfb {
     }
 
     final int b(boolean param0) {
-        int discarded$0 = 0;
         if (param0) {
-            discarded$0 = this.b(true);
+            this.b(true);
             return kg.field_o;
         }
         return kg.field_o;
@@ -31,8 +30,6 @@ final class deb extends mfb {
 
     final static boolean a(int param0, char param1) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 <= -107) {
           if (param1 != 32) {
             if (40 != param1) {
@@ -55,12 +52,10 @@ final class deb extends mfb {
             } else {
               L0: {
                 if (param1 != 41) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }
@@ -83,9 +78,8 @@ final class deb extends mfb {
     }
 
     final int d(byte param0) {
-        int discarded$0 = 0;
         if (param0 > -52) {
-            discarded$0 = this.g((byte) 55);
+            this.g((byte) 55);
             return jga.field_a;
         }
         return jga.field_a;
@@ -116,16 +110,15 @@ final class deb extends mfb {
     }
 
     final int c(int param0) {
-        int discarded$0 = 0;
         if (param0 != 0) {
-            discarded$0 = this.a(true);
+            this.a(true);
             return uda.field_b;
         }
         return uda.field_b;
     }
 
     final static void a(int param0, int param1) {
-        faa var2 = null;
+        faa var2;
         if (param0 != 40) {
           deb.i((byte) 62);
           var2 = dpa.field_p;

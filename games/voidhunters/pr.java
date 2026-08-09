@@ -63,10 +63,12 @@ final class pr {
     final fh d(int param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var3 = 0;
-        fh var4 = null;
-        fh var8 = null;
-        fh var11 = null;
+        int var3;
+        Object var4;
+        fh var4_ref;
+        Object var8;
+        fh var8_ref;
+        fh var11;
         var3 = VoidHunters.field_G;
         if (param0 > (this.field_e ^ -1)) {
           if (this.field_h != this.field_g[-1 + this.field_e]) {
@@ -78,12 +80,12 @@ final class pr {
               if (this.field_f > this.field_e) {
                 fieldTemp$2 = this.field_e;
                 this.field_e = this.field_e + 1;
-                var8 = this.field_g[fieldTemp$2].field_e;
-                if (this.field_g[-1 + this.field_e] == var8) {
+                var8_ref = this.field_g[fieldTemp$2].field_e;
+                if (this.field_g[-1 + this.field_e] == var8_ref) {
                   continue L0;
                 } else {
-                  this.field_h = var8.field_e;
-                  return var8;
+                  this.field_h = var8_ref.field_e;
+                  return var8_ref;
                 }
               } else {
                 return null;
@@ -95,12 +97,12 @@ final class pr {
             if (this.field_f > this.field_e) {
               fieldTemp$3 = this.field_e;
               this.field_e = this.field_e + 1;
-              var4 = this.field_g[fieldTemp$3].field_e;
-              if (this.field_g[-1 + this.field_e] == var4) {
+              var4_ref = this.field_g[fieldTemp$3].field_e;
+              if (this.field_g[-1 + this.field_e] == var4_ref) {
                 continue L1;
               } else {
-                this.field_h = var4.field_e;
-                return var4;
+                this.field_h = var4_ref.field_e;
+                return var4_ref;
               }
             } else {
               return null;
@@ -136,28 +138,27 @@ final class pr {
     }
 
     final fh c(int param0) {
-        fh discarded$0 = null;
         this.field_e = 0;
         if (param0 >= -18) {
-            discarded$0 = this.d(89);
+            this.d(89);
             return this.d(-1);
         }
         return this.d(-1);
     }
 
     pr(int param0) {
-        fh dupTemp$2 = null;
-        int var2 = 0;
-        fh var3 = null;
+        fh dupTemp$1 = null;
+        int var2;
+        fh var3;
         this.field_e = 0;
         this.field_f = param0;
         this.field_g = new fh[param0];
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            dupTemp$2 = new fh();
-            var3 = dupTemp$2;
-            this.field_g[var2] = dupTemp$2;
+            dupTemp$1 = new fh();
+            var3 = dupTemp$1;
+            this.field_g[var2] = dupTemp$1;
             var3.field_d = var3;
             var3.field_e = var3;
             var2++;

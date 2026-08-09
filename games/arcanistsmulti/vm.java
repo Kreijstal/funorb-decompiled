@@ -24,9 +24,8 @@ final class vm {
     }
 
     final static void a(int param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         var1 = ob.field_hb;
         synchronized (var1) {
           L0: {

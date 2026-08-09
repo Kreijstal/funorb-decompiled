@@ -21,7 +21,7 @@ final class aa {
     int field_i;
 
     final int a(byte param0) {
-        int var2 = 0;
+        int var2;
         if (!this.field_a) {
           if (-3 != (this.field_j ^ -1)) {
             var2 = 43 / ((param0 - 42) / 57);
@@ -64,12 +64,11 @@ final class aa {
     }
 
     public static void a(int param0) {
-        qa discarded$2 = null;
-        String var2 = null;
+        String var2;
         field_c = null;
         if (param0 >= -126) {
           var2 = (String) null;
-          discarded$2 = aa.a((Throwable) null, (String) null);
+          aa.a((Throwable) null, (String) null);
           field_p = null;
           field_f = null;
           return;

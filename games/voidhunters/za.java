@@ -9,7 +9,6 @@ abstract class za extends ksa {
     }
 
     final static int c(byte param0) {
-        int discarded$2 = 0;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -19,8 +18,6 @@ abstract class za extends ksa {
         int stackIn_15_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_14_0 = 0;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -29,8 +26,7 @@ abstract class za extends ksa {
               var2 = 0;
               L1: while (true) {
                 if (var2 >= 12) {
-                  stackOut_10_0 = var1_int;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = var1_int;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -59,12 +55,11 @@ abstract class za extends ksa {
                 if (param0 == -93) {
                   break L4;
                 } else {
-                  discarded$2 = za.c((byte) 43);
+                  za.c((byte) 43);
                   break L4;
                 }
               }
-              stackOut_14_0 = 12;
-              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_0 = 12;
               decompiledRegionSelector0 = 1;
               break L0;
             }

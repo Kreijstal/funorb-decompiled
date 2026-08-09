@@ -13,8 +13,8 @@ abstract class td {
     abstract long c(int param0);
 
     final int a(byte param0, long param1) {
-        int var4 = 0;
-        long var5 = 0L;
+        int var4;
+        long var5;
         var4 = 27 / ((-40 - param0) / 61);
         var5 = this.c(0);
         if ((var5 ^ -1L) < -1L) {

@@ -28,37 +28,33 @@ final class pa extends qi {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        String var5 = null;
-        tb var6 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        ce var14 = null;
-        ck var17 = null;
-        Object var18 = null;
-        ck var19 = null;
-        ck var20 = null;
-        ck var21 = null;
-        Object var22 = null;
-        nl var22_ref = null;
-        ck var23 = null;
-        ck var24 = null;
-        ck var25 = null;
-        Object var26 = null;
-        ck var27 = null;
-        ck var28 = null;
-        ck var29 = null;
-        ck var30 = null;
-        ck var31 = null;
-        ck var32 = null;
-        nl var33 = null;
-        nl var34 = null;
+        String var5;
+        tb var6;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        ce var14;
+        ck var17;
+        Object var18;
+        ck var19;
+        ck var20;
+        ck var21;
+        Object var22;
+        Object var26;
+        nl var33;
+        nl var22_ref;
+        ck var23;
+        ck var24;
+        ck var25;
+        ck var27;
+        ck var28;
+        ck var29;
+        ck var30;
+        ck var31;
+        ck var32;
+        nl var34;
         L0: {
           L1: {
             L2: {
@@ -117,7 +113,7 @@ final class pa extends qi {
                         break L6;
                       } else {
                         var14 = (ce) null;
-                        discarded$4 = this.a(true, (ce) null);
+                        this.a(true, (ce) null);
                         break L6;
                       }
                     }
@@ -216,7 +212,7 @@ final class pa extends qi {
                     break L1;
                   } else {
                     var14 = (ce) null;
-                    discarded$5 = this.a(true, (ce) null);
+                    this.a(true, (ce) null);
                     break L1;
                   }
                 }
@@ -235,7 +231,7 @@ final class pa extends qi {
                 break L1;
               } else {
                 var14 = (ce) null;
-                discarded$6 = this.a(true, (ce) null);
+                this.a(true, (ce) null);
                 break L1;
               }
             }
@@ -474,7 +470,7 @@ final class pa extends qi {
         } else {
           L23: {
             var14 = (ce) null;
-            discarded$7 = this.a(true, (ce) null);
+            this.a(true, (ce) null);
             var10 = var34.a(param3, 0, (ce) (this)) + (var34.a((ce) (this), (byte) 44).b(-1) >> -492294047);
             if (le.field_o == var6) {
               break L23;
@@ -598,8 +594,6 @@ final class pa extends qi {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -607,26 +601,14 @@ final class pa extends qi {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (!param0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -635,27 +617,19 @@ final class pa extends qi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var3);
-            stackOut_5_1 = new StringBuilder().append("pa.EC(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var3);
+
+            stackIn_7_1 = new StringBuilder().append("pa.EC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }

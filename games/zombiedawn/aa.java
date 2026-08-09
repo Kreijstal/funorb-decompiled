@@ -125,23 +125,12 @@ final class aa {
         hn var2 = null;
         RuntimeException var2_ref = null;
         hn stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hn stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -155,35 +144,26 @@ final class aa {
             var2 = new hn(param1, param1);
             fj.field_i.a(0, var2);
             t.field_i.b(param1);
-            stackOut_2_0 = (hn) (var2);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (hn) (var2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var2_ref);
-            stackOut_4_1 = new StringBuilder().append("aa.A(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var2_ref);
+
+            stackIn_6_1 = new StringBuilder().append("aa.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -193,19 +173,16 @@ final class aa {
     }
 
     final static String a(long param0, int param1) {
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        String discarded$7 = null;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
-        int var3 = 0;
-        long var4 = 0L;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        StringBuilder var12 = null;
-        StringBuilder var13 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        int var3;
+        long var4;
+        long var7;
+        int var9;
+        int var10;
+        int var11;
+        StringBuilder var12;
+        StringBuilder var13;
         var11 = ZombieDawn.field_J;
         if (-1L > (param0 ^ -1L)) {
           if ((param0 ^ -1L) > -6582952005840035282L) {
@@ -218,7 +195,7 @@ final class aa {
                     var12 = new StringBuilder(var3);
                     L1: while (true) {
                       if (0L == param0) {
-                        discarded$5 = var12.reverse();
+                        var12.reverse();
                         var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
                         return var12.toString();
                       } else {
@@ -235,7 +212,7 @@ final class aa {
                             break L2;
                           }
                         }
-                        discarded$6 = var12.append((char) var9);
+                        discarded$2 = var12.append((char) var9);
                         continue L1;
                       }
                     }
@@ -246,13 +223,13 @@ final class aa {
                   }
                 }
               } else {
-                discarded$7 = aa.a(59L, 23);
+                aa.a(59L, 23);
                 L3: while (true) {
                   if (0L == var4) {
                     var13 = new StringBuilder(var3);
                     L4: while (true) {
                       if (0L == param0) {
-                        discarded$8 = var13.reverse();
+                        var13.reverse();
                         var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
                         return var13.toString();
                       } else {
@@ -269,7 +246,7 @@ final class aa {
                             break L5;
                           }
                         }
-                        discarded$9 = var13.append((char) var9);
+                        discarded$3 = var13.append((char) var9);
                         continue L4;
                       }
                     }

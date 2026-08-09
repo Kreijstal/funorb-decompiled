@@ -10,7 +10,6 @@ final class tn extends rl {
     static String field_C;
 
     final int f(byte param0) {
-        byte[] discarded$7 = null;
         if (param0 == 100) {
           if (null == this.field_A) {
             return 0;
@@ -18,7 +17,7 @@ final class tn extends rl {
             return this.field_A.field_n * 100 / (-this.field_z + this.field_A.field_m.length);
           }
         } else {
-          discarded$7 = this.e((byte) -16);
+          this.e((byte) -16);
           if (null == this.field_A) {
             return 0;
           } else {

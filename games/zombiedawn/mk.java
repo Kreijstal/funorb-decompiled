@@ -5,25 +5,23 @@ final class mk {
     static vn[] field_a;
 
     final static void a(int param0) {
-        boolean discarded$15 = false;
-        boolean discarded$16 = false;
-        RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = ZombieDawn.field_J;
         try {
           L0: {
             if (we.o((byte) -80)) {
               if (param0 <= -100) {
-                discarded$15 = wo.field_xb.a(um.field_a, ah.field_eb, true, true);
+                wo.field_xb.a(um.field_a, ah.field_eb, true, true);
                 wo.field_xb.g(-128);
                 L1: while (true) {
                   if (!on.b(102)) {
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    discarded$16 = wo.field_xb.a(kg.field_i, (byte) 106, lc.field_c);
+                    wo.field_xb.a(kg.field_i, (byte) 106, lc.field_c);
                     continue L1;
                   }
                 }

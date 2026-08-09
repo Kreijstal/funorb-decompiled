@@ -9,25 +9,15 @@ final class d extends ug {
     static String field_U;
 
     final void a(byte param0, int param1, int param2, int param3, lh param4, int param5) {
-        RuntimeException var7 = null;
         int var8 = 0;
         h var9 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var7 = null;
         try {
           L0: {
             L1: {
@@ -62,27 +52,19 @@ final class d extends ug {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var7 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var7);
-            stackOut_9_1 = new StringBuilder().append("d.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var7);
+
+            stackIn_11_1 = new StringBuilder().append("d.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -93,20 +75,14 @@ final class d extends ug {
     final static boolean a(int param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param1 != 0) {
           L0: {
             field_S = (java.awt.Color) null;
             if ((param0 ^ -1) > -1) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -114,12 +90,10 @@ final class d extends ug {
         } else {
           L1: {
             if ((param0 ^ -1) > -1) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -129,7 +103,6 @@ final class d extends ug {
 
     final static int a(int param0, int param1, int param2, boolean param3, int param4) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         byte[] var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -139,15 +112,13 @@ final class d extends ug {
         int stackIn_14_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_13_0 = 0;
+        RuntimeException var5 = null;
         var8 = SteelSentinels.field_G;
         try {
           L0: {
             param4 = param4 - param2;
             if (0 > param4) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -159,8 +130,7 @@ final class d extends ug {
                 var7 = 0;
                 L1: while (true) {
                   if (var7 >= var10.length) {
-                    stackOut_13_0 = var5_int;
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = var5_int;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -196,7 +166,7 @@ final class d extends ug {
     }
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6, byte param7, boolean param8, boolean param9) {
-        int var11 = 0;
+        int var11;
         var11 = SteelSentinels.field_G;
         if (!param5) {
           if (re.field_Z == pb.field_c) {
@@ -616,8 +586,6 @@ final class d extends ug {
         ef stackIn_9_0 = null;
         ef stackIn_15_0 = null;
         ef stackIn_18_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -625,19 +593,6 @@ final class d extends ug {
         String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ef stackOut_17_0 = null;
-        ef stackOut_14_0 = null;
-        ef stackOut_8_0 = null;
-        ef stackOut_5_0 = null;
-        ef stackOut_2_0 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
         var8 = SteelSentinels.field_G;
         try {
           L0: {
@@ -650,16 +605,14 @@ final class d extends ug {
                   var5 = 0;
                   L1: while (true) {
                     if (var4.length <= var5) {
-                      stackOut_17_0 = rf.a((byte) 16, var3[var3.length + -1]);
-                      stackIn_18_0 = stackOut_17_0;
+                      stackIn_18_0 = rf.a((byte) 16, var3[var3.length + -1]);
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       var6 = var4[var5];
                       var7 = fn.a(-119, var6);
                       if (var7 != null) {
-                        stackOut_14_0 = (ef) (var7);
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = (ef) (var7);
                         decompiledRegionSelector0 = 3;
                         break L0;
                       } else {
@@ -669,20 +622,17 @@ final class d extends ug {
                     }
                   }
                 } else {
-                  stackOut_8_0 = ud.field_A;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = ud.field_A;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_5_0 = ma.field_cb;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = ma.field_cb;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = ud.field_A;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = ud.field_A;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -691,27 +641,19 @@ final class d extends ug {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var2);
-            stackOut_19_1 = new StringBuilder().append("d.GA(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var2);
+
+            stackIn_21_1 = new StringBuilder().append("d.GA(");
+
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L2;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L2;
             }
           }
@@ -746,17 +688,17 @@ final class d extends ug {
     }
 
     final static wk a(boolean param0) {
-        int var1 = 0;
-        Object var3 = null;
-        int var5 = 0;
-        int[] var5_ref_int__ = null;
-        int var6 = 0;
-        int var7 = 0;
-        int[] var9 = null;
-        int[] var11 = null;
-        int[] var13 = null;
-        byte[] var16 = null;
-        byte[] var17 = null;
+        int var1;
+        Object var3;
+        int var5;
+        int[] var5_ref_int__;
+        int var6;
+        int var7;
+        int[] var9;
+        int[] var11;
+        int[] var13;
+        byte[] var16;
+        byte[] var17;
         L0: {
           var7 = SteelSentinels.field_G;
           var1 = le.field_L[0] * ca.field_r[0];

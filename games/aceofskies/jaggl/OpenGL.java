@@ -22,7 +22,7 @@ public class OpenGL {
             return false;
         }
         this.detachPeer();
-        Object discarded$0 = b.remove(this.a);
+        b.remove(this.a);
         this.a = null;
         return true;
     }
@@ -100,13 +100,11 @@ public class OpenGL {
     public final native static void glTexCoord2f(float param0, float param1);
 
     public final boolean a(String param0) {
-        Object discarded$2 = null;
-        Object discarded$3 = null;
-        String var2 = null;
-        int var3 = 0;
-        int var4_int = 0;
-        String var4 = null;
-        String var5 = null;
+        String var2;
+        int var3;
+        int var4_int;
+        String var5;
+        String var4;
         if (null == this.c) {
           this.c = new Hashtable();
           var2 = jaggl.OpenGL.glGetString(7939);
@@ -116,7 +114,7 @@ public class OpenGL {
             if (0 == (var4_int ^ -1)) {
               var4 = var2.substring(var3).trim();
               if (var4.length() != 0) {
-                discarded$2 = this.c.put(var4, var4);
+                this.c.put(var4, var4);
                 return this.c.containsKey(param0);
               } else {
                 return this.c.containsKey(param0);
@@ -125,7 +123,7 @@ public class OpenGL {
               var5 = var2.substring(var3, var4_int).trim();
               var3 = 1 + var4_int;
               if (var5.length() != 0) {
-                discarded$3 = this.c.put(var5, var5);
+                this.c.put(var5, var5);
                 continue L0;
               } else {
                 continue L0;
@@ -372,8 +370,8 @@ public class OpenGL {
     public final native static String glGetString(int param0);
 
     public final synchronized boolean b() {
-        Thread var1 = null;
-        jaggl.OpenGL var3 = null;
+        Thread var1;
+        jaggl.OpenGL var3;
         var1 = Thread.currentThread();
         if (!this.attachPeer()) {
           return false;

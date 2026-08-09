@@ -12,7 +12,7 @@ final class cn {
     static String field_b;
 
     final hg b(int param0) {
-        hg var2 = null;
+        hg var2;
         var2 = this.field_d.field_d;
         if (this.field_d != var2) {
           var2.c((byte) -120);
@@ -27,23 +27,16 @@ final class cn {
     }
 
     final boolean a(int param0) {
-        int discarded$10 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 > -93) {
           L0: {
-            discarded$10 = this.c((byte) -39);
+            this.c((byte) -39);
             if (this.field_d != this.field_d.field_b) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -51,12 +44,10 @@ final class cn {
         } else {
           L1: {
             if (this.field_d != this.field_d.field_b) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -65,9 +56,9 @@ final class cn {
     }
 
     final void a(byte param0) {
-        hg var2_ref_hg = null;
-        int var2 = 0;
-        int var3 = 0;
+        hg var2_ref_hg;
+        int var3;
+        int var2;
         var3 = EscapeVector.field_A;
         L0: while (true) {
           var2_ref_hg = this.field_d.field_b;
@@ -83,7 +74,7 @@ final class cn {
     }
 
     final hg c(int param0) {
-        hg var2 = null;
+        hg var2;
         var2 = this.field_d.field_b;
         if (this.field_d != var2) {
           if (param0 != -20245) {
@@ -100,8 +91,7 @@ final class cn {
     }
 
     final hg a(boolean param0) {
-        boolean discarded$2 = false;
-        hg var2 = null;
+        hg var2;
         if (!param0) {
           var2 = this.field_d.field_b;
           if (this.field_d == var2) {
@@ -112,7 +102,7 @@ final class cn {
             return var2;
           }
         } else {
-          discarded$2 = this.a(-119);
+          this.a(-119);
           var2 = this.field_d.field_b;
           if (this.field_d == var2) {
             this.field_g = null;
@@ -154,9 +144,9 @@ final class cn {
     }
 
     final int c(byte param0) {
-        int var2 = 0;
-        hg var3 = null;
-        int var4 = 0;
+        int var2;
+        hg var3;
+        int var4;
         var4 = EscapeVector.field_A;
         if (param0 <= 12) {
           return -109;
@@ -189,7 +179,6 @@ final class cn {
     }
 
     final void a(int param0, hg param1) {
-        hg discarded$0 = null;
         try {
             if (!(param1.field_d == null)) {
                 param1.c((byte) -25);
@@ -197,7 +186,7 @@ final class cn {
             param1.field_d = this.field_d.field_d;
             param1.field_b = this.field_d;
             if (param0 != -12328) {
-                discarded$0 = this.c(50);
+                this.c(50);
             }
             param1.field_d.field_b = param1;
             param1.field_b.field_d = param1;

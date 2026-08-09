@@ -21,14 +21,8 @@ final class tq {
         if (param2 >= 74) {
           if (param1) {
             qn.b(0, 0, qn.field_l, qn.field_g, 0, 192);
-            if (!ArmiesOfGielinor.field_M) {
-              nw.b((byte) 92, param1);
-              return;
-            } else {
-              qn.b();
-              nw.b((byte) 92, param1);
-              return;
-            }
+            nw.b((byte) 92, param1);
+            return;
           } else {
             qn.b();
             nw.b((byte) 92, param1);
@@ -47,19 +41,19 @@ final class tq {
     }
 
     final static wk[] a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        wk var9 = null;
-        wk var10 = null;
-        wk var11 = null;
-        wk var12 = null;
-        wk var13 = null;
-        Object var14 = null;
-        int[] var15 = null;
-        wk var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
+        int[] var6;
+        int var7;
+        int var8;
+        wk var9;
+        wk var10;
+        wk var11;
+        wk var12;
+        wk var13;
+        Object var14;
+        int[] var15;
+        wk var16;
+        int[] var17;
+        int[] var18;
         var18 = qn.field_d;
         var17 = var18;
         var15 = var17;

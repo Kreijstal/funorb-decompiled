@@ -9,10 +9,9 @@ final class ki extends fn {
     private String field_f;
 
     final void a(rb param0, boolean param1) {
-        eo discarded$0 = null;
         try {
             if (!param1) {
-                discarded$0 = this.a(87);
+                this.a(87);
             }
             param0.a(!param1 ? true : false, this.field_d);
             param0.b(0, this.field_f);

@@ -25,8 +25,6 @@ final class kl {
 
     final static boolean b(int param0) {
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         if (param0 == 640) {
           L0: {
             L1: {
@@ -40,8 +38,7 @@ final class kl {
                     break L1;
                   } else {
                     if (g.field_a.field_T >= us.field_j) {
-                      stackOut_8_0 = 0;
-                      stackIn_9_0 = stackOut_8_0;
+                      stackIn_9_0 = 0;
                       break L0;
                     } else {
                       break L1;
@@ -50,8 +47,7 @@ final class kl {
                 }
               }
             }
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = 1;
             break L0;
           }
           return stackIn_9_0 != 0;
@@ -79,13 +75,23 @@ final class kl {
     }
 
     private final void a(int param0, byte[] param1) {
-        int dupTemp$7 = 0;
-        int dupTemp$8 = 0;
-        int[] array$9 = null;
-        int dupTemp$10 = 0;
-        int[] array$11 = null;
-        int dupTemp$12 = 0;
-        int[] array$13 = null;
+        int dupTemp$0 = 0;
+        int dupTemp$1 = 0;
+        int[] array$2 = null;
+        int dupTemp$3 = 0;
+        int[] dupTemp$4 = null;
+        int[] array$5 = null;
+        int dupTemp$6 = 0;
+        int[] dupTemp$7 = null;
+        int[] array$8 = null;
+        int stackIn_11_0 = 0;
+        int stackIn_17_0 = 0;
+        RuntimeException stackIn_98_0 = null;
+        StringBuilder stackIn_98_1 = null;
+        RuntimeException stackIn_99_0 = null;
+        StringBuilder stackIn_99_1 = null;
+        String stackIn_99_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -103,28 +109,6 @@ final class kl {
         int var17 = 0;
         iw var18 = null;
         byte[] var22 = null;
-        int stackIn_11_0 = 0;
-        int stackIn_17_0 = 0;
-        RuntimeException stackIn_97_0 = null;
-        StringBuilder stackIn_97_1 = null;
-        RuntimeException stackIn_98_0 = null;
-        StringBuilder stackIn_98_1 = null;
-        RuntimeException stackIn_99_0 = null;
-        StringBuilder stackIn_99_1 = null;
-        String stackIn_99_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        RuntimeException stackOut_96_0 = null;
-        StringBuilder stackOut_96_1 = null;
-        RuntimeException stackOut_98_0 = null;
-        StringBuilder stackOut_98_1 = null;
-        String stackOut_98_2 = null;
-        RuntimeException stackOut_97_0 = null;
-        StringBuilder stackOut_97_1 = null;
-        String stackOut_97_2 = null;
         var17 = Kickabout.field_G;
         try {
           L0: {
@@ -149,12 +133,10 @@ final class kl {
                   L3: {
                     var5 = var18.h((byte) -116);
                     if (-1 == (1 & var5 ^ -1)) {
-                      stackOut_10_0 = 0;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackIn_11_0 = 0;
                       break L3;
                     } else {
-                      stackOut_9_0 = 1;
-                      stackIn_11_0 = stackOut_9_0;
+                      stackIn_11_0 = 1;
                       break L3;
                     }
                   }
@@ -170,12 +152,10 @@ final class kl {
                   }
                   L5: {
                     if ((2 & var5) == 0) {
-                      stackOut_16_0 = 0;
-                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_0 = 0;
                       break L5;
                     } else {
-                      stackOut_15_0 = 1;
-                      stackIn_17_0 = stackOut_15_0;
+                      stackIn_17_0 = 1;
                       break L5;
                     }
                   }
@@ -190,10 +170,10 @@ final class kl {
                         if (this.field_n <= var10) {
                           break L6;
                         } else {
-                          dupTemp$7 = var8 + var18.a((byte) 81);
-                          var8 = dupTemp$7;
-                          this.field_b[var10] = dupTemp$7;
-                          if (this.field_b[var10] > var9) {
+                          dupTemp$0 = var8 + var18.a((byte) 81);
+                          var8 = dupTemp$0;
+                          this.field_b[var10] = dupTemp$0;
+                          if ((this.field_b[var10] ^ -1) < (var9 ^ -1)) {
                             var9 = this.field_b[var10];
                             var10++;
                             continue L7;
@@ -209,10 +189,10 @@ final class kl {
                         if (this.field_n <= var10) {
                           break L6;
                         } else {
-                          dupTemp$8 = var8 + var18.f((byte) -27);
-                          var8 = dupTemp$8;
-                          this.field_b[var10] = dupTemp$8;
-                          if (this.field_b[var10] > var9) {
+                          dupTemp$1 = var8 + var18.f((byte) -27);
+                          var8 = dupTemp$1;
+                          this.field_b[var10] = dupTemp$1;
+                          if ((this.field_b[var10] ^ -1) < (var9 ^ -1)) {
                             var9 = this.field_b[var10];
                             var10++;
                             continue L8;
@@ -318,8 +298,8 @@ final class kl {
                                   var12 = this.field_b[var11];
                                   var8 = 0;
                                   var13 = this.field_i[var12];
-                                  array$9 = new int[var13];
-                                  this.field_r[var12] = array$9;
+                                  array$2 = new int[var13];
+                                  this.field_r[var12] = array$2;
                                   var14 = -1;
                                   var15 = 0;
                                   L21: while (true) {
@@ -337,10 +317,11 @@ final class kl {
                                       continue L20;
                                     } else {
                                       L23: {
-                                        dupTemp$10 = var8 + var18.f((byte) -96);
-                                        var8 = dupTemp$10;
-                                        this.field_r[var12][var15] = dupTemp$10;
-                                        var16 = dupTemp$10;
+                                        dupTemp$3 = var8 + var18.f((byte) -96);
+                                        var8 = dupTemp$3;
+                                        dupTemp$4 = this.field_r[var12];
+                                        dupTemp$4[var15] = dupTemp$3;
+                                        var16 = dupTemp$3;
                                         if (var14 < var16) {
                                           var14 = var16;
                                           break L23;
@@ -372,8 +353,8 @@ final class kl {
                                   var12 = this.field_b[var11];
                                   var8 = 0;
                                   var13 = this.field_i[var12];
-                                  array$11 = new int[var13];
-                                  this.field_r[var12] = array$11;
+                                  array$5 = new int[var13];
+                                  this.field_r[var12] = array$5;
                                   var14 = -1;
                                   var15 = 0;
                                   L26: while (true) {
@@ -391,11 +372,12 @@ final class kl {
                                       continue L25;
                                     } else {
                                       L28: {
-                                        dupTemp$12 = var8 + var18.a((byte) 81);
-                                        var8 = dupTemp$12;
-                                        this.field_r[var12][var15] = dupTemp$12;
-                                        var16 = dupTemp$12;
-                                        if (var16 > var14) {
+                                        dupTemp$6 = var8 + var18.a((byte) 81);
+                                        var8 = dupTemp$6;
+                                        dupTemp$7 = this.field_r[var12];
+                                        dupTemp$7[var15] = dupTemp$6;
+                                        var16 = dupTemp$6;
+                                        if ((var16 ^ -1) < (var14 ^ -1)) {
                                           var14 = var16;
                                           break L28;
                                         } else {
@@ -427,8 +409,8 @@ final class kl {
                             } else {
                               var12 = this.field_b[var11];
                               var13 = this.field_i[var12];
-                              array$13 = new int[this.field_e[var12]];
-                              this.field_j[var12] = array$13;
+                              array$8 = new int[this.field_e[var12]];
+                              this.field_j[var12] = array$8;
                               var14 = 0;
                               L31: while (true) {
                                 if (var14 >= this.field_e[var12]) {
@@ -481,27 +463,19 @@ final class kl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L34: {
             var3 = decompiledCaughtException;
-            stackOut_96_0 = (RuntimeException) (var3);
-            stackOut_96_1 = new StringBuilder().append("kl.A(").append(param0).append(',');
-            stackIn_98_0 = stackOut_96_0;
-            stackIn_98_1 = stackOut_96_1;
-            stackIn_97_0 = stackOut_96_0;
-            stackIn_97_1 = stackOut_96_1;
+            stackIn_98_0 = (RuntimeException) (var3);
+
+            stackIn_98_1 = new StringBuilder().append("kl.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_98_0 = (RuntimeException) ((Object) stackIn_98_0);
-              stackOut_98_1 = (StringBuilder) ((Object) stackIn_98_1);
-              stackOut_98_2 = "null";
-              stackIn_99_0 = stackOut_98_0;
-              stackIn_99_1 = stackOut_98_1;
-              stackIn_99_2 = stackOut_98_2;
+              stackIn_99_0 = (RuntimeException) ((Object) stackIn_98_0);
+              stackIn_99_1 = (StringBuilder) ((Object) stackIn_98_1);
+              stackIn_99_2 = "null";
               break L34;
             } else {
-              stackOut_97_0 = (RuntimeException) ((Object) stackIn_97_0);
-              stackOut_97_1 = (StringBuilder) ((Object) stackIn_97_1);
-              stackOut_97_2 = "{...}";
-              stackIn_99_0 = stackOut_97_0;
-              stackIn_99_1 = stackOut_97_1;
-              stackIn_99_2 = stackOut_97_2;
+              stackIn_99_0 = (RuntimeException) ((Object) stackIn_98_0);
+              stackIn_99_1 = (StringBuilder) ((Object) stackIn_98_1);
+              stackIn_99_2 = "{...}";
               break L34;
             }
           }

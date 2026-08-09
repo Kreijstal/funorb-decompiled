@@ -13,8 +13,8 @@ final class hq {
     static String field_e;
 
     private final int a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = Torquing.field_u;
         if (param0 != -6) {
           return -92;
@@ -118,10 +118,9 @@ final class hq {
     }
 
     final void d(int param0, int param1) {
-        int discarded$0 = 0;
         this.a(param0, true, 1 + this.field_i);
         if (param1 != -8673) {
-            discarded$0 = this.a(true);
+            this.a(true);
         }
     }
 

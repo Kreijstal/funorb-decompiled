@@ -43,12 +43,12 @@ final class sf {
     }
 
     final static o b(int param0) {
-        int var1 = 0;
-        byte[] var2 = null;
-        int[] var3 = null;
-        int var4_int = 0;
-        o var4 = null;
-        int var5 = 0;
+        int var1;
+        byte[] var2;
+        int[] var3;
+        int var4_int;
+        o var4;
+        int var5;
         var5 = SolKnight.field_L ? 1 : 0;
         var1 = sa.field_l[0] * uj.field_b[0];
         var2 = jc.field_c[0];
@@ -812,7 +812,6 @@ final class sf {
     }
 
     final void a(int param0, int param1, int param2) {
-        o discarded$1 = null;
         if (param0 <= -114) {
           if (param1 >= this.field_g) {
             throw new IllegalArgumentException();
@@ -1050,7 +1049,7 @@ final class sf {
             }
           }
         } else {
-          discarded$1 = sf.b(54);
+          sf.b(54);
           if (param1 >= this.field_g) {
             throw new IllegalArgumentException();
           } else {
@@ -1279,7 +1278,6 @@ final class sf {
     }
 
     final void a(byte param0, int param1) {
-        boolean discarded$6 = false;
         if (param0 == 111) {
           if (this.field_l == 0) {
             this.field_f = param1;
@@ -1289,7 +1287,7 @@ final class sf {
             return;
           }
         } else {
-          discarded$6 = this.c(-3);
+          this.c(-3);
           if (this.field_l != 0) {
             return;
           } else {
@@ -1311,31 +1309,20 @@ final class sf {
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
           this.field_l = 0;
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param0) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -1360,8 +1347,6 @@ final class sf {
 
     final boolean f(int param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == 0) {
           if (this.field_e == 0) {
             if ((this.field_a ^ -1) != -85) {
@@ -1384,12 +1369,10 @@ final class sf {
             } else {
               L0: {
                 if (-84 != (this.field_a ^ -1)) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }
@@ -1404,20 +1387,14 @@ final class sf {
     final boolean e(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 12542) {
           L0: {
             this.field_h = -69;
             if (103 != this.field_a) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -1425,12 +1402,10 @@ final class sf {
         } else {
           L1: {
             if (103 != this.field_a) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -1439,9 +1414,6 @@ final class sf {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
-        o discarded$1 = null;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_7_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_26_0 = 0;
@@ -1449,20 +1421,8 @@ final class sf {
         int stackIn_48_0 = 0;
         int stackIn_59_0 = 0;
         int stackIn_69_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
+        int var6;
+        int var7;
         vg.field_I[kg.field_c] = param2;
         if (!param1) {
           pd.field_e[kg.field_c] = kg.field_c;
@@ -1475,12 +1435,10 @@ final class sf {
                 ma.field_n[kg.field_c] = param3;
                 var6 = param3 + (param4 + param5);
                 if (0 == var6) {
-                  stackOut_68_0 = 0;
-                  stackIn_69_0 = stackOut_68_0;
+                  stackIn_69_0 = 0;
                   break L0;
                 } else {
-                  stackOut_67_0 = param5 * 1000 / var6;
-                  stackIn_69_0 = stackOut_67_0;
+                  stackIn_69_0 = param5 * 1000 / var6;
                   break L0;
                 }
               }
@@ -1509,12 +1467,10 @@ final class sf {
                 ma.field_n[kg.field_c] = param3;
                 var6 = param3 + (param4 + param5);
                 if (0 == var6) {
-                  stackOut_58_0 = 0;
-                  stackIn_59_0 = stackOut_58_0;
+                  stackIn_59_0 = 0;
                   break L2;
                 } else {
-                  stackOut_57_0 = param5 * 1000 / var6;
-                  stackIn_59_0 = stackOut_57_0;
+                  stackIn_59_0 = param5 * 1000 / var6;
                   break L2;
                 }
               }
@@ -1545,12 +1501,10 @@ final class sf {
                 ma.field_n[kg.field_c] = param3;
                 var6 = param3 + (param4 + param5);
                 if (0 == var6) {
-                  stackOut_47_0 = 0;
-                  stackIn_48_0 = stackOut_47_0;
+                  stackIn_48_0 = 0;
                   break L4;
                 } else {
-                  stackOut_46_0 = param5 * 1000 / var6;
-                  stackIn_48_0 = stackOut_46_0;
+                  stackIn_48_0 = param5 * 1000 / var6;
                   break L4;
                 }
               }
@@ -1579,12 +1533,10 @@ final class sf {
                 ma.field_n[kg.field_c] = param3;
                 var6 = param3 + (param4 + param5);
                 if (0 == var6) {
-                  stackOut_37_0 = 0;
-                  stackIn_38_0 = stackOut_37_0;
+                  stackIn_38_0 = 0;
                   break L6;
                 } else {
-                  stackOut_36_0 = param5 * 1000 / var6;
-                  stackIn_38_0 = stackOut_36_0;
+                  stackIn_38_0 = param5 * 1000 / var6;
                   break L6;
                 }
               }
@@ -1608,7 +1560,7 @@ final class sf {
             }
           }
         } else {
-          discarded$1 = sf.b(32);
+          sf.b(32);
           pd.field_e[kg.field_c] = kg.field_c;
           qg.field_c[kg.field_c] = param0;
           if (param0 > be.field_I) {
@@ -1621,12 +1573,10 @@ final class sf {
                 ma.field_n[kg.field_c] = param3;
                 var6 = param3 + (param4 + param5);
                 if (0 == var6) {
-                  stackOut_25_0 = 0;
-                  stackIn_26_0 = stackOut_25_0;
+                  stackIn_26_0 = 0;
                   break L8;
                 } else {
-                  stackOut_24_0 = param5 * 1000 / var6;
-                  stackIn_26_0 = stackOut_24_0;
+                  stackIn_26_0 = param5 * 1000 / var6;
                   break L8;
                 }
               }
@@ -1654,12 +1604,10 @@ final class sf {
                 ma.field_n[kg.field_c] = param3;
                 var6 = param3 + (param4 + param5);
                 if (0 == var6) {
-                  stackOut_16_0 = 0;
-                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_0 = 0;
                   break L10;
                 } else {
-                  stackOut_15_0 = param5 * 1000 / var6;
-                  stackIn_17_0 = stackOut_15_0;
+                  stackIn_17_0 = param5 * 1000 / var6;
                   break L10;
                 }
               }
@@ -1699,12 +1647,10 @@ final class sf {
               ma.field_n[kg.field_c] = param3;
               var6 = param3 + (param4 + param5);
               if (0 == var6) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L14;
               } else {
-                stackOut_5_0 = param5 * 1000 / var6;
-                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_0 = param5 * 1000 / var6;
                 break L14;
               }
             }
@@ -1735,20 +1681,14 @@ final class sf {
     final boolean c(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 0) {
           L0: {
             this.field_a = 110;
             if (96 != this.field_a) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -1756,12 +1696,10 @@ final class sf {
         } else {
           L1: {
             if (96 != this.field_a) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

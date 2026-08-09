@@ -43,6 +43,7 @@ final class co implements cr {
             return;
           }
         } else {
+          this.field_f.a(-22671);
           this.field_f = null;
           this.field_d = 0;
           if (param0 == 12001) {
@@ -57,35 +58,17 @@ final class co implements cr {
     }
 
     public final void a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        Object stackIn_8_0 = null;
-        jagdx.IDirect3DDevice stackIn_8_1 = null;
-        int stackIn_8_2 = 0;
-        int stackIn_8_3 = 0;
-        Object stackIn_9_0 = null;
-        jagdx.IDirect3DDevice stackIn_9_1 = null;
-        int stackIn_9_2 = 0;
-        int stackIn_9_3 = 0;
-        Object stackIn_10_0 = null;
-        jagdx.IDirect3DDevice stackIn_10_1 = null;
-        int stackIn_10_2 = 0;
-        int stackIn_10_3 = 0;
-        int stackIn_10_4 = 0;
-        Object stackOut_7_0 = null;
-        jagdx.IDirect3DDevice stackOut_7_1 = null;
-        int stackOut_7_2 = 0;
-        int stackOut_7_3 = 0;
-        Object stackOut_9_0 = null;
-        jagdx.IDirect3DDevice stackOut_9_1 = null;
-        int stackOut_9_2 = 0;
-        int stackOut_9_3 = 0;
-        int stackOut_9_4 = 0;
-        Object stackOut_8_0 = null;
-        jagdx.IDirect3DDevice stackOut_8_1 = null;
-        int stackOut_8_2 = 0;
-        int stackOut_8_3 = 0;
-        int stackOut_8_4 = 0;
+        int var3;
+        int var4;
+        Object stackIn_9_0;
+        jagdx.IDirect3DDevice stackIn_9_1;
+        int stackIn_9_2;
+        int stackIn_9_3;
+        Object stackIn_10_0;
+        jagdx.IDirect3DDevice stackIn_10_1;
+        int stackIn_10_2;
+        int stackIn_10_3;
+        int stackIn_10_4;
         L0: {
           this.field_b = this.field_a.field_j * param1;
           if (this.field_b <= this.field_d) {
@@ -104,47 +87,34 @@ final class co implements cr {
             }
             L2: {
               if (this.field_f != null) {
+                this.field_f.a(-22671);
                 break L2;
               } else {
                 break L2;
               }
             }
             L3: {
-              stackOut_7_0 = this;
-              stackOut_7_1 = this.field_e.field_Cc;
-              stackOut_7_2 = this.field_b;
-              stackOut_7_3 = var4;
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              stackIn_9_3 = stackOut_7_3;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              stackIn_8_3 = stackOut_7_3;
+              stackIn_9_0 = this;
+
+              stackIn_9_1 = this.field_e.field_Cc;
+
+              stackIn_9_2 = this.field_b;
+
+              stackIn_9_3 = var4;
+
               if (io.field_k == this.field_a) {
-                stackOut_9_0 = this;
-                stackOut_9_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_9_1);
-                stackOut_9_2 = stackIn_9_2;
-                stackOut_9_3 = stackIn_9_3;
-                stackOut_9_4 = 101;
-                stackIn_10_0 = stackOut_9_0;
-                stackIn_10_1 = stackOut_9_1;
-                stackIn_10_2 = stackOut_9_2;
-                stackIn_10_3 = stackOut_9_3;
-                stackIn_10_4 = stackOut_9_4;
+                stackIn_10_0 = this;
+                stackIn_10_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_9_1);
+                stackIn_10_2 = stackIn_9_2;
+                stackIn_10_3 = stackIn_9_3;
+                stackIn_10_4 = 101;
                 break L3;
               } else {
-                stackOut_8_0 = this;
-                stackOut_8_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_8_1);
-                stackOut_8_2 = stackIn_8_2;
-                stackOut_8_3 = stackIn_8_3;
-                stackOut_8_4 = 102;
-                stackIn_10_0 = stackOut_8_0;
-                stackIn_10_1 = stackOut_8_1;
-                stackIn_10_2 = stackOut_8_2;
-                stackIn_10_3 = stackOut_8_3;
-                stackIn_10_4 = stackOut_8_4;
+                stackIn_10_0 = this;
+                stackIn_10_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_9_1);
+                stackIn_10_2 = stackIn_9_2;
+                stackIn_10_3 = stackIn_9_3;
+                stackIn_10_4 = 102;
                 break L3;
               }
             }

@@ -29,12 +29,12 @@ class en {
 
     final synchronized void g() {
         try {
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             long var1 = 0L;
             Exception var3 = null;
             int var3_int = 0;
             int var4 = 0;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
             if (!this.field_f) {
               var1 = ik.a(4);
               try {
@@ -214,12 +214,9 @@ class en {
 
     final static en a(fd param0, java.awt.Component param1, int param2, int param3) {
         try {
-            mh discarded$2 = null;
             jn var4 = null;
             Throwable var4_ref = null;
             jn var5 = null;
-            jn stackIn_9_0 = null;
-            int stackIn_9_1 = 0;
             jn stackIn_10_0 = null;
             int stackIn_10_1 = 0;
             jn stackIn_11_0 = null;
@@ -227,15 +224,6 @@ class en {
             int stackIn_11_2 = 0;
             jn stackIn_21_0 = null;
             Throwable decompiledCaughtException = null;
-            jn stackOut_8_0 = null;
-            int stackOut_8_1 = 0;
-            jn stackOut_10_0 = null;
-            int stackOut_10_1 = 0;
-            int stackOut_10_2 = 0;
-            jn stackOut_9_0 = null;
-            int stackOut_9_1 = 0;
-            int stackOut_9_2 = 0;
-            jn stackOut_20_0 = null;
             if (field_o != 0) {
               L0: {
                 if (param2 < 0) {
@@ -255,27 +243,19 @@ class en {
                         L3: {
                           var5 = new jn();
                           var4 = var5;
-                          stackOut_8_0 = (jn) (var4);
-                          stackOut_8_1 = 256;
-                          stackIn_10_0 = stackOut_8_0;
-                          stackIn_10_1 = stackOut_8_1;
-                          stackIn_9_0 = stackOut_8_0;
-                          stackIn_9_1 = stackOut_8_1;
+                          stackIn_10_0 = (jn) (var4);
+
+                          stackIn_10_1 = 256;
+
                           if (!field_u) {
-                            stackOut_10_0 = (jn) ((Object) stackIn_10_0);
-                            stackOut_10_1 = stackIn_10_1;
-                            stackOut_10_2 = 1;
-                            stackIn_11_0 = stackOut_10_0;
-                            stackIn_11_1 = stackOut_10_1;
-                            stackIn_11_2 = stackOut_10_2;
+                            stackIn_11_0 = (jn) ((Object) stackIn_10_0);
+                            stackIn_11_1 = stackIn_10_1;
+                            stackIn_11_2 = 1;
                             break L3;
                           } else {
-                            stackOut_9_0 = (jn) ((Object) stackIn_9_0);
-                            stackOut_9_1 = stackIn_9_1;
-                            stackOut_9_2 = 2;
-                            stackIn_11_0 = stackOut_9_0;
-                            stackIn_11_1 = stackOut_9_1;
-                            stackIn_11_2 = stackOut_9_2;
+                            stackIn_11_0 = (jn) ((Object) stackIn_10_0);
+                            stackIn_11_1 = stackIn_10_1;
+                            stackIn_11_2 = 2;
                             break L3;
                           }
                         }
@@ -301,7 +281,7 @@ class en {
                             } else {
                               field_r = new rc();
                               field_r.field_f = param0;
-                              discarded$2 = param0.a((byte) 122, field_s, (Runnable) ((Object) field_r));
+                              param0.a((byte) 122, field_s, (Runnable) ((Object) field_r));
                               break L5;
                             }
                           }
@@ -318,8 +298,7 @@ class en {
                             }
                           }
                         }
-                        stackOut_20_0 = (jn) (var4);
-                        stackIn_21_0 = stackOut_20_0;
+                        stackIn_21_0 = (jn) (var4);
                         break L2;
                       }
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -372,35 +351,12 @@ class en {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_o = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_u = stackIn_7_0 != 0;
-              field_s = param2;
-              return;
-            } else {
-              break L0;
-            }
-          }
+        if (param0 < 8000 || param0 > 48000) {
+            throw new IllegalArgumentException();
         }
-        throw new IllegalArgumentException();
+        field_o = param0;
+        field_u = param1 ? true : false;
+        field_s = param2;
     }
 
     private final void a(ol param0, int param1) {
@@ -419,22 +375,22 @@ class en {
     }
 
     private final void a(int[] param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7_int = 0;
-        ol var7 = null;
-        int var8_int = 0;
-        ol[] var8 = null;
-        int var9 = 0;
-        Object var10 = null;
-        ol var11 = null;
-        ti var12 = null;
-        int var13 = 0;
-        ol var14 = null;
-        ol var15 = null;
-        int var15_int = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7_int;
+        Object var7;
+        int var8_int;
+        ol[] var8;
+        int var9;
+        Object var10;
+        ol var11;
+        ti var12;
+        int var13;
+        ol var14;
+        int var15_int;
+        ol var15;
         L0: {
           var3 = param1;
           if (!field_u) {
@@ -589,9 +545,9 @@ class en {
                         var6++;
                         continue L14;
                       } else {
-                        var10 = var7.field_o;
-                        var7.field_o = null;
-                        var7 = (ol) (var10);
+                        var10 = ((ol) (var7)).field_o;
+                        ((ol) (var7)).field_o = null;
+                        var7 = var10;
                         continue L15;
                       }
                     }
@@ -648,8 +604,8 @@ class en {
     }
 
     final synchronized void e() {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         L0: {
           if (field_r == null) {
             break L0;

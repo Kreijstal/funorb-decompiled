@@ -35,7 +35,7 @@ final class rk {
     }
 
     rk(int param0) {
-        int var2 = 0;
+        int var2;
         this.field_d = new int[]{0, 0, 0, 0};
         this.field_a = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         var2 = param0;

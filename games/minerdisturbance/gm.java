@@ -13,11 +13,10 @@ final class gm {
     }
 
     final static void b(int param0) {
-        sa discarded$7 = null;
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var2 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -47,7 +46,7 @@ final class gm {
                   }
                 }
                 pa.field_a[var1_int] = rc.a(re.field_a[ll.a((byte) -73, 5) + 25], 100, oc.field_f);
-                discarded$7 = mg.a(1963987425, pa.field_a[var1_int]);
+                mg.a(1963987425, pa.field_a[var1_int]);
                 return;
               }
             }

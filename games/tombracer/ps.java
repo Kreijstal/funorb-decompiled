@@ -23,9 +23,8 @@ final class ps extends ra {
     }
 
     final boolean s(int param0) {
-        int discarded$0 = 0;
         if (param0 != -15254) {
-            discarded$0 = this.t(7);
+            this.t(7);
             return true;
         }
         return true;
@@ -54,9 +53,8 @@ final class ps extends ra {
     }
 
     final boolean v(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 555277520) {
-            discarded$0 = this.A(105);
+            this.A(105);
             return true;
         }
         return true;
@@ -83,8 +81,6 @@ final class ps extends ra {
         ce var8 = null;
         fsa stackIn_2_0 = null;
         fsa stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -92,16 +88,6 @@ final class ps extends ra {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        fsa stackOut_3_0 = null;
-        fsa stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             var4 = new fsa(param2, param0);
@@ -117,13 +103,11 @@ final class ps extends ra {
               var8 = (ce) ((Object) var7.a(17, 88));
               var8.b(2, (byte) 23);
               var4.a(var5, (byte) 124, var8);
-              stackOut_3_0 = (fsa) (var4);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (fsa) (var4);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (fsa) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (fsa) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -132,27 +116,19 @@ final class ps extends ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var4_ref);
-            stackOut_5_1 = new StringBuilder().append("ps.AC(").append(param0).append(',').append(param1).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var4_ref);
+
+            stackIn_7_1 = new StringBuilder().append("ps.AC(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }

@@ -47,7 +47,7 @@ final class vd {
     }
 
     final static boolean a(byte param0) {
-        int var1 = 0;
+        int var1;
         if (param0 == 82) {
           L0: {
             if (null == um.field_e) {

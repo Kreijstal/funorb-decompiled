@@ -15,114 +15,82 @@ final class eh {
         field_a = null;
         field_h = null;
         field_c = null;
+        if (!param0) {
+            return;
+        }
         field_b = null;
         field_f = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
+        int var15 = 0;
         int var8 = 0;
+        int var16 = 0;
         int var9 = 0;
         int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        L0: {
-          var6 = si.field_e;
-          var7 = si.field_k;
-          param4 = param4 - param2;
-          param5 = param5 - param3;
-          param3 = param3 - param2;
-          param5 = param5 - param4;
-          param2 = param2 << 16;
-          param3 = param3 << 8;
-          param3 = param3 * 10;
-          param4 = param4 << 8;
-          param4 = param4 * 10;
-          param5 = param5 * 100;
-          var11 = 24;
-          var12 = 24;
-          if (param1 >= 0) {
-            break L0;
-          } else {
+        int incrementValue$0 = 0;
+        int var6 = si.field_e;
+        int var7 = si.field_k;
+        param4 = param4 - param2;
+        param5 = param5 - param3;
+        param3 = param3 - param2;
+        param5 = param5 - param4;
+        param2 = param2 << 16;
+        param3 = param3 << 8;
+        param3 = param3 * 10;
+        param4 = param4 << 8;
+        param4 = param4 * 10;
+        param5 = param5 * 100;
+        int var11 = 24;
+        int var12 = 24;
+        if (param1 < 0) {
             var12 = var12 + param1;
             param2 = param2 - param4 * param1;
             param3 = param3 - param5 * param1;
             param1 = 0;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 + var12 <= var7) {
-            break L1;
-          } else {
+        if (param1 + var12 > var7) {
             var12 = var7 - param1;
-            break L1;
-          }
         }
-        L2: {
-          if (param0 >= 0) {
-            break L2;
-          } else {
+        if (param0 < 0) {
             var11 = var11 + param0;
             param0 = 0;
             param2 = param2 - param3 * param0;
             param4 = param4 - param5 * param0;
-            break L2;
-          }
         }
-        L3: {
-          if (param0 + var11 <= var6) {
-            break L3;
-          } else {
+        if (param0 + var11 > var6) {
             var11 = var6 - param0;
-            break L3;
-          }
         }
-        var13 = param0 + var6 * param1;
-        var14 = var6 - var11;
-        var15 = -var12;
-        L4: while (true) {
-          if (var15 >= 0) {
-            return;
-          } else {
+        int var13 = param0 + var6 * param1;
+        int var14 = var6 - var11;
+        for (var15 = -var12; var15 < 0; var15++) {
             var8 = param2;
-            var16 = -var11;
-            L5: while (true) {
-              if (var16 >= 0) {
-                param2 = param2 + param4;
-                param3 = param3 + param5;
-                var13 = var13 + var14;
-                var15++;
-                continue L4;
-              } else {
+            for (var16 = -var11; var16 < 0; var16++) {
                 var9 = var8 >> 16;
                 var10 = si.field_i[var13];
-                int incrementValue$1 = var13;
+                incrementValue$0 = var13;
                 var13++;
-                si.field_i[incrementValue$1] = ((var10 & 16711935) * var9 & -16711936 | (var10 & 65280) * var9 & 16711680) >> 8;
+                si.field_i[incrementValue$0] = ((var10 & 16711935) * var9 & -16711936 | (var10 & 65280) * var9 & 16711680) >> 8;
                 var8 = var8 + param3;
-                var16++;
-                continue L5;
-              }
             }
-          }
+            param2 = param2 + param4;
+            param3 = param3 + param5;
+            var13 = var13 + var14;
         }
     }
 
     final static void b(boolean param0) {
-        hk var1 = (hk) (Object) ak.field_i.b(-27493);
+        if (param0) {
+            eh.a(false);
+        }
+        hk var1 = (hk) ((Object) ak.field_i.b(-27493));
         if (var1 == null) {
             throw new IllegalStateException();
         }
         si.a(var1.field_i, var1.field_j, var1.field_p);
         si.d(var1.field_m, var1.field_o, var1.field_r, var1.field_n);
         var1.field_i = null;
-        ij.field_J.a((am) (Object) var1, 114);
+        ij.field_J.a(var1, 114);
     }
 
     final static int a(byte param0) {
@@ -133,10 +101,6 @@ final class eh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "The marine's armour is fitted with a state of the art biomedical system that helps to absorb damage. The suit's refractory carbon composite also provides protection from radiated heat.";
         field_e = false;
         field_g = 128;

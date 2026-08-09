@@ -14,7 +14,7 @@ final class rs {
     }
 
     final static int a(byte param0) {
-        fla var2 = null;
+        fla var2;
         if (param0 == 124) {
           if (!lca.a(false)) {
             return -1;

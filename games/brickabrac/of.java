@@ -35,10 +35,9 @@ final class of extends gf {
     }
 
     final static void a(int param0, og param1) {
-        String discarded$0 = null;
         try {
             if (param0 != -2) {
-                discarded$0 = of.d((byte) 104);
+                of.d((byte) 104);
             }
             wd.field_w.a(param1, 0);
         } catch (RuntimeException runtimeException) {

@@ -11,7 +11,7 @@ final class pnb implements Iterator {
 
     public final boolean hasNext() {
         int fieldTemp$1 = 0;
-        int var2 = 0;
+        int var2;
         var2 = VoidHunters.field_G;
         if (this.field_d == this.field_b.field_h[-1 + this.field_c]) {
           L0: while (true) {
@@ -35,16 +35,16 @@ final class pnb implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$2 = 0;
-        ksa var1 = null;
-        int var2 = 0;
+        int fieldTemp$1 = 0;
+        ksa var1;
+        int var2;
         var2 = VoidHunters.field_G;
         if (this.field_b.field_h[this.field_c - 1] == this.field_d) {
           L0: while (true) {
             if (this.field_c < this.field_b.field_f) {
-              fieldTemp$2 = this.field_c;
+              fieldTemp$1 = this.field_c;
               this.field_c = this.field_c + 1;
-              var1 = this.field_b.field_h[fieldTemp$2].field_c;
+              var1 = this.field_b.field_h[fieldTemp$1].field_c;
               if (this.field_b.field_h[this.field_c + -1] != var1) {
                 this.field_d = var1.field_c;
                 this.field_a = var1;

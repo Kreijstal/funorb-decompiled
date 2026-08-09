@@ -24,9 +24,8 @@ abstract class vg extends bb {
     }
 
     final static Boolean l(int param0) {
-        Boolean discarded$0 = null;
         if (param0 != -9878) {
-            discarded$0 = vg.l(-90);
+            vg.l(-90);
         }
         Boolean var1 = sc.field_g;
         sc.field_g = null;
@@ -46,7 +45,6 @@ abstract class vg extends bb {
     }
 
     final static int a(dk[] param0, byte param1) {
-        String discarded$2 = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         dk[] var3 = null;
@@ -56,8 +54,6 @@ abstract class vg extends bb {
         String var7 = null;
         int stackIn_11_0 = 0;
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -65,16 +61,6 @@ abstract class vg extends bb {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_10_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var6 = EscapeVector.field_A;
         try {
           L0: {
@@ -84,7 +70,7 @@ abstract class vg extends bb {
                 break L1;
               } else {
                 var7 = (String) null;
-                discarded$2 = vg.a((String) null, (String) null, (byte) -76, (String) null);
+                vg.a((String) null, (String) null, (byte) -76, (String) null);
                 break L1;
               }
             }
@@ -93,20 +79,18 @@ abstract class vg extends bb {
             L2: while (true) {
               if (var3.length <= var4) {
                 if (2147483647 != var2_int) {
-                  stackOut_12_0 = var2_int;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = var2_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
               } else {
                 L3: {
                   var5 = var3[var4];
-                  if (var5.field_l < var2_int) {
+                  if ((var5.field_l ^ -1) > (var2_int ^ -1)) {
                     var2_int = var5.field_l;
                     break L3;
                   } else {
@@ -122,27 +106,19 @@ abstract class vg extends bb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2);
-            stackOut_14_1 = new StringBuilder().append("vg.OB(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2);
+
+            stackIn_16_1 = new StringBuilder().append("vg.OB(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }
@@ -156,19 +132,19 @@ abstract class vg extends bb {
     }
 
     void b(int param0, int param1, byte param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = EscapeVector.field_A;
         em.c(param1 - -6, param0 + 35, -12 + this.field_g, -40 + this.field_x, 2105376, 0);
         var4 = 35;
@@ -225,7 +201,7 @@ abstract class vg extends bb {
               }
             }
           } else {
-            if (em.field_k <= var8) {
+            if ((em.field_k ^ -1) >= (var8 ^ -1)) {
               if (var8 < em.field_j) {
                 L4: {
                   var9 = var7 * (var6 + -var5) / var4 + var5;

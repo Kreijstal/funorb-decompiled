@@ -12,9 +12,8 @@ final class oq extends ge {
     static vh field_z;
 
     final static di a(boolean param0, int param1, int param2, int param3, boolean param4) {
-        di discarded$0 = null;
         if (param1 >= -2) {
-            discarded$0 = oq.a(true, 72, 4, -38, true);
+            oq.a(true, 72, 4, -38, true);
         }
         return ji.a(param2, param4, (byte) -56, param3, false, param0);
     }
@@ -28,26 +27,16 @@ final class oq extends ge {
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) {
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
         int var5_int = 0;
-        RuntimeException var5 = null;
         byte[] var6 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -64,9 +53,9 @@ final class oq extends ge {
               if (var5_int >= param3) {
                 break L0;
               } else {
-                fieldTemp$5 = this.field_v;
+                fieldTemp$2 = this.field_v;
                 this.field_v = this.field_v + 1;
-                param2[var5_int + param0] = (byte)(this.field_t[fieldTemp$5] + -this.field_A.a((byte) 7));
+                param2[var5_int + param0] = (byte)(this.field_t[fieldTemp$2] + -this.field_A.a((byte) 7));
                 var5_int++;
                 continue L2;
               }
@@ -76,27 +65,19 @@ final class oq extends ge {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var5);
-            stackOut_6_1 = new StringBuilder().append("oq.D(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var5);
+
+            stackIn_8_1 = new StringBuilder().append("oq.D(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -120,7 +101,6 @@ final class oq extends ge {
 
     final static void n(int param0) {
         int var1 = 0;
-        di discarded$0 = null;
         if (nk.field_h >= 224) {
             ap.a(256, 3815994);
         } else {
@@ -128,7 +108,7 @@ final class oq extends ge {
             ap.a(32 + (nk.field_h - var1), param0 ^ -3807027);
         }
         if (param0 != -11529) {
-            discarded$0 = oq.a(true, -4, 116, -60, false);
+            oq.a(true, -4, 116, -60, false);
         }
     }
 

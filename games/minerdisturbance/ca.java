@@ -32,10 +32,9 @@ final class ca extends ek {
     }
 
     public static void b(int param0) {
-        String discarded$0 = null;
         field_j = null;
         if (param0 != 10) {
-            discarded$0 = ca.b((byte) 102);
+            ca.b((byte) 102);
         }
         field_f = null;
     }
@@ -56,20 +55,18 @@ final class ca extends ek {
         long var2 = System.nanoTime();
         long var4 = -this.field_i + var2;
         this.field_i = var2;
-        if ((var4 ^ -1L) < 4999999999L) {
-            if (5000000000L > var4) {
-                this.field_d[this.field_l] = var4;
-                this.field_l = (1 + this.field_l) % 10;
-                if (!(this.field_m >= 1)) {
-                    this.field_m = this.field_m + 1;
-                }
+        if ((var4 ^ -1L) < 4999999999L && 5000000000L > var4) {
+            this.field_d[this.field_l] = var4;
+            this.field_l = (1 + this.field_l) % 10;
+            if (!(this.field_m >= 1)) {
+                this.field_m = this.field_m + 1;
             }
         }
         if (param0) {
             field_k = -30;
         }
         long var6 = 0L;
-        for (var8 = 1; (var8 ^ -1) >= (this.field_m ^ -1); var8++) {
+        for (var8 = 1; var8 <= this.field_m; var8++) {
             var6 = var6 + this.field_d[(10 + (this.field_l - var8)) % 10];
         }
         return var6 / (long)this.field_m;
@@ -82,8 +79,6 @@ final class ca extends ek {
 
     final static boolean c(int param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == -2302) {
             break L0;
@@ -98,16 +93,14 @@ final class ca extends ek {
               break L2;
             } else {
               if (-14 != (rj.field_f ^ -1)) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 1;
           break L1;
         }
         return stackIn_7_0 != 0;
@@ -125,8 +118,8 @@ final class ca extends ek {
     }
 
     final int a(int param0, long param1) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         L0: {
           var5 = MinerDisturbance.field_ab;
           if (param0 == -1374) {

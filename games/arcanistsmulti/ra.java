@@ -25,7 +25,7 @@ final class ra {
     }
 
     public static void b(int param0) {
-        kc var2 = null;
+        kc var2;
         field_k = null;
         field_a = null;
         field_f = null;

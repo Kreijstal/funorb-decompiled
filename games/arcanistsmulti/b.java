@@ -28,24 +28,24 @@ final class b {
     }
 
     final static String a(byte param0, Throwable param1) throws IOException {
-        String var2 = null;
-        PrintWriter var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        BufferedReader var7 = null;
-        String var8 = null;
-        String var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        String var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        p var15 = null;
-        StringWriter var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
-        String var20 = null;
+        String var2;
+        PrintWriter var4;
+        int var5;
+        String var6;
+        BufferedReader var7;
+        String var8;
+        String var9;
+        int var10;
+        int var11;
+        String var12;
+        int var14;
+        p var15;
+        StringWriter var16;
+        String var17;
+        String var18;
+        String var19;
+        String var20;
+        int var13;
         L0: {
           var14 = ArcanistsMulti.field_G ? 1 : 0;
           if (param1 instanceof p) {

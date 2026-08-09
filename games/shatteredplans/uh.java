@@ -21,128 +21,73 @@ final class uh {
     }
 
     final boolean b(int param0) {
-        int var3 = 0;
-        uf var5 = null;
-        uf var6 = null;
-        var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (param0 != -1) {
-          this.field_a = 107;
-          L0: while (true) {
-            if (this.field_j < this.field_f) {
-              var6 = this.field_b[this.field_j];
-              if (!var6.field_a.b((byte) -42)) {
-                this.a(true, 0, var6);
-                return false;
-              } else {
-                L1: {
-                  if (-1 < (var6.field_e ^ -1)) {
-                    break L1;
-                  } else {
-                    if (!var6.field_a.b(109, var6.field_e)) {
-                      this.a(true, var6.field_a.c((byte) 36, var6.field_e), var6);
-                      return false;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                L2: {
-                  if (var6.field_d == null) {
-                    break L2;
-                  } else {
-                    if (!var6.field_a.a(var6.field_d, -118)) {
-                      this.a(true, var6.field_a.a(var6.field_d, (byte) 91), var6);
-                      return false;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                L3: {
-                  if (var6.field_e >= 0) {
-                    break L3;
-                  } else {
-                    if (null != var6.field_d) {
-                      break L3;
-                    } else {
-                      if (var6.field_c == null) {
-                        break L3;
-                      } else {
-                        if (!var6.field_a.a(-1)) {
-                          this.a(true, var6.field_a.d(100), var6);
-                          return false;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                  }
-                }
-                this.field_j = this.field_j + 1;
-                continue L0;
-              }
-            } else {
-              return true;
-            }
+        int var3;
+        uf var4;
+        L0: {
+          var3 = ShatteredPlansClient.field_F ? 1 : 0;
+          if (param0 == -1) {
+            break L0;
+          } else {
+            this.field_a = 107;
+            break L0;
           }
-        } else {
-          L4: while (true) {
-            if (this.field_j < this.field_f) {
-              var5 = this.field_b[this.field_j];
-              if (!var5.field_a.b((byte) -42)) {
-                this.a(true, 0, var5);
-                return false;
-              } else {
-                L5: {
-                  if (-1 < (var5.field_e ^ -1)) {
-                    break L5;
+        }
+        L1: while (true) {
+          if (this.field_j < this.field_f) {
+            var4 = this.field_b[this.field_j];
+            if (!var4.field_a.b((byte) -42)) {
+              this.a(true, 0, var4);
+              return false;
+            } else {
+              L2: {
+                if (-1 < (var4.field_e ^ -1)) {
+                  break L2;
+                } else {
+                  if (!var4.field_a.b(109, var4.field_e)) {
+                    this.a(true, var4.field_a.c((byte) 36, var4.field_e), var4);
+                    return false;
                   } else {
-                    if (!var5.field_a.b(109, var5.field_e)) {
-                      this.a(true, var5.field_a.c((byte) 36, var5.field_e), var5);
-                      return false;
-                    } else {
-                      break L5;
-                    }
+                    break L2;
                   }
                 }
-                L6: {
-                  if (var5.field_d == null) {
-                    break L6;
+              }
+              L3: {
+                if (var4.field_d == null) {
+                  break L3;
+                } else {
+                  if (!var4.field_a.a(var4.field_d, -118)) {
+                    this.a(true, var4.field_a.a(var4.field_d, (byte) 91), var4);
+                    return false;
                   } else {
-                    if (!var5.field_a.a(var5.field_d, -118)) {
-                      this.a(true, var5.field_a.a(var5.field_d, (byte) 91), var5);
-                      return false;
-                    } else {
-                      break L6;
-                    }
+                    break L3;
                   }
                 }
-                L7: {
-                  if (var5.field_e >= 0) {
-                    break L7;
+              }
+              L4: {
+                if (var4.field_e >= 0) {
+                  break L4;
+                } else {
+                  if (null != var4.field_d) {
+                    break L4;
                   } else {
-                    if (null != var5.field_d) {
-                      break L7;
+                    if (var4.field_c == null) {
+                      break L4;
                     } else {
-                      if (var5.field_c == null) {
-                        break L7;
+                      if (!var4.field_a.a(-1)) {
+                        this.a(true, var4.field_a.d(100), var4);
+                        return false;
                       } else {
-                        if (!var5.field_a.a(-1)) {
-                          this.a(true, var5.field_a.d(100), var5);
-                          return false;
-                        } else {
-                          break L7;
-                        }
+                        break L4;
                       }
                     }
                   }
                 }
-                this.field_j = this.field_j + 1;
-                continue L4;
               }
-            } else {
-              return true;
+              this.field_j = this.field_j + 1;
+              continue L1;
             }
+          } else {
+            return true;
           }
         }
     }
@@ -179,78 +124,49 @@ final class uh {
     private final void a(boolean param0, int param1, uf param2) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             if (param0) {
-              L1: {
-                var4_float = (float)param1 / 100.0f + (float)(this.field_j + 1);
-                this.field_h = var4_float * (float)this.field_a / (float)(1 + this.field_f);
-                if (param1 == 0) {
-                  this.field_c = param2.field_f;
-                  break L1;
-                } else {
-                  this.field_c = param2.field_c + " - " + param1 + "%";
-                  break L1;
-                }
+              var4_float = (float)param1 / 100.0f + (float)(this.field_j + 1);
+              this.field_h = var4_float * (float)this.field_a / (float)(1 + this.field_f);
+              if (param1 == 0) {
+                this.field_c = param2.field_f;
+                return;
+              } else {
+                this.field_c = param2.field_c + " - " + param1 + "%";
+                return;
               }
-              decompiledRegionSelector0 = 1;
-              break L0;
             } else {
-              decompiledRegionSelector0 = 0;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var4);
-            stackOut_6_1 = new StringBuilder().append("uh.D(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var4);
+
+            stackIn_8_1 = new StringBuilder().append("uh.D(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
+              break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
+              break L1;
             }
           }
           throw r.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

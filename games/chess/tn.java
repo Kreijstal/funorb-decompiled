@@ -10,7 +10,6 @@ final class tn extends o {
     static int field_m;
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        boolean discarded$8 = false;
         if (-1 >= (param1 ^ -1)) {
           if (-12 <= (param1 ^ -1)) {
             if (param2 == -25042) {
@@ -24,7 +23,7 @@ final class tn extends o {
                 return false;
               }
             } else {
-              discarded$8 = tn.a(-77, 46, -60, -41);
+              tn.a(-77, 46, -60, -41);
               if (-2 >= (param0 ^ -1)) {
                 if (mf.a(param3, param1, param2 ^ -16806) < param0) {
                   return false;
@@ -44,11 +43,10 @@ final class tn extends o {
     }
 
     public static void a(int param0) {
-        boolean discarded$0 = false;
         field_j = null;
         field_l = null;
         if (param0 != -2) {
-            discarded$0 = tn.a(125, 104, 87, -12);
+            tn.a(125, 104, 87, -12);
         }
     }
 

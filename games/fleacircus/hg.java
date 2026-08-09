@@ -17,11 +17,8 @@ final class hg extends lh {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -29,17 +26,6 @@ final class hg extends lh {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_8_0 = 0;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         var4 = fleas.field_A ? 1 : 0;
         try {
           L0: {
@@ -51,13 +37,12 @@ final class hg extends lh {
                   if (var3 >= param0.length()) {
                     break L3;
                   } else {
-                    stackOut_3_0 = var2_int ^ -1;
-                    stackIn_9_0 = stackOut_3_0;
-                    stackIn_4_0 = stackOut_3_0;
+                    stackIn_9_0 = var2_int ^ -1;
+
                     if (var4 != 0) {
                       break L2;
                     } else {
-                      if (stackIn_4_0 == (param0.charAt(var3) ^ -1)) {
+                      if (stackIn_9_0 == (param0.charAt(var3) ^ -1)) {
                         var3++;
                         if (var4 == 0) {
                           continue L1;
@@ -65,16 +50,14 @@ final class hg extends lh {
                           break L3;
                         }
                       } else {
-                        stackOut_5_0 = 0;
-                        stackIn_6_0 = stackOut_5_0;
+                        stackIn_6_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
                     }
                   }
                 }
-                stackOut_8_0 = 1;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 1;
                 break L2;
               }
               decompiledRegionSelector0 = 0;
@@ -85,27 +68,19 @@ final class hg extends lh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var2);
-            stackOut_10_1 = new StringBuilder().append("hg.C(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_12_0 = (RuntimeException) (var2);
+
+            stackIn_12_1 = new StringBuilder().append("hg.C(");
+
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
@@ -119,16 +94,15 @@ final class hg extends lh {
     }
 
     final static void a(int param0) {
-        int fieldTemp$2 = 0;
-        lh discarded$3 = null;
+        int fieldTemp$1 = 0;
         vh.field_o = vh.field_o ^ ni.field_j;
         pg.field_d = pg.field_d ^ ni.field_j;
         if (null != pb.field_f.c((byte) 47)) {
-          fieldTemp$2 = hi.field_q + 1;
+          fieldTemp$1 = hi.field_q + 1;
           hi.field_q = hi.field_q + 1;
-          if ((fieldTemp$2 ^ -1) == -336) {
+          if ((fieldTemp$1 ^ -1) == -336) {
             hi.field_q = 0;
-            discarded$3 = pb.field_f.e(-22033);
+            pb.field_f.e(-22033);
             if (param0 > -74) {
               hg.a(15);
               dh.field_d = dh.field_d - ag.field_f;

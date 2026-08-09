@@ -8,12 +8,11 @@ final class bi {
 
     final static void a(int param0) {
         Object var1 = null;
-        RuntimeException var1_ref = null;
-        int var1_int = 0;
         int var2 = 0;
-        Throwable var3 = null;
         int var4 = 0;
         Throwable decompiledCaughtException = null;
+        int var1_int = 0;
+        RuntimeException var1_ref = null;
         var4 = StarCannon.field_A;
         try {
           L0: {

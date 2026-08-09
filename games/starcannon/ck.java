@@ -39,9 +39,6 @@ final class ck implements Runnable {
 
     final static int a(byte param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            rb var2 = null;
             int stackIn_16_0 = 0;
             int stackIn_28_0 = 0;
             int stackIn_33_0 = 0;
@@ -49,11 +46,9 @@ final class ck implements Runnable {
             int stackIn_38_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_15_0 = 0;
-            int stackOut_32_0 = 0;
-            int stackOut_27_0 = 0;
-            int stackOut_37_0 = 0;
-            int stackOut_35_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            rb var2 = null;
             if ((jh.field_b.field_p ^ -1) <= -5) {
               if (-1 == jh.field_b.field_d) {
                 return 3;
@@ -89,8 +84,7 @@ final class ck implements Runnable {
                       break L3;
                     } else {
                       if (2 == bj.field_d.field_b) {
-                        stackOut_15_0 = ej.a(2, -1);
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = ej.a(2, -1);
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
@@ -124,8 +118,7 @@ final class ck implements Runnable {
                     } else {
                       if (0 >= ok.field_sb.c(122)) {
                         if ((wf.field_f ^ -1L) > (dd.b(63) ^ -1L)) {
-                          stackOut_32_0 = ej.a(2, -2);
-                          stackIn_33_0 = stackOut_32_0;
+                          stackIn_33_0 = ej.a(2, -2);
                           decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
@@ -134,8 +127,7 @@ final class ck implements Runnable {
                       } else {
                         var1_int = ok.field_sb.a(488852616);
                         if (-1 != (var1_int ^ -1)) {
-                          stackOut_27_0 = ej.a(2, var1_int);
-                          stackIn_28_0 = stackOut_27_0;
+                          stackIn_28_0 = ej.a(2, var1_int);
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -146,8 +138,7 @@ final class ck implements Runnable {
                     }
                   }
                   if (-5 != (bg.field_a ^ -1)) {
-                    stackOut_37_0 = -1;
-                    stackIn_38_0 = stackOut_37_0;
+                    stackIn_38_0 = -1;
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
@@ -155,8 +146,7 @@ final class ck implements Runnable {
                     bg.field_a = 0;
                     bj.field_d = null;
                     ok.field_sb = null;
-                    stackOut_35_0 = 0;
-                    stackIn_36_0 = stackOut_35_0;
+                    stackIn_36_0 = 0;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
@@ -197,9 +187,8 @@ final class ck implements Runnable {
     }
 
     public static void a(boolean param0) {
-        int discarded$0 = 0;
         if (param0) {
-            discarded$0 = ck.b((byte) 79);
+            ck.b((byte) 79);
         }
         field_g = null;
         field_h = (int[][]) null;

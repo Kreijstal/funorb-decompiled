@@ -19,20 +19,16 @@ final class us extends gn {
     }
 
     final static void g(byte param0) {
-        int discarded$1 = 0;
-        Object var1 = null;
-        int var2 = 0;
-        String var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        String var9 = null;
+        Object var1;
+        int var2;
+        String var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        String var9;
         int stackIn_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
         if (null == et.field_d) {
           return;
         } else {
@@ -79,24 +75,21 @@ final class us extends gn {
                   }
                   L3: {
                     if (var4 == 1) {
-                      stackOut_23_0 = 16;
-                      stackIn_24_0 = stackOut_23_0;
+                      stackIn_24_0 = 16;
                       break L3;
                     } else {
                       if (-3 == (var4 ^ -1)) {
-                        stackOut_22_0 = 6;
-                        stackIn_24_0 = stackOut_22_0;
+                        stackIn_24_0 = 6;
                         break L3;
                       } else {
-                        stackOut_21_0 = 0;
-                        stackIn_24_0 = stackOut_21_0;
+                        stackIn_24_0 = 0;
                         break L3;
                       }
                     }
                   }
                   var5 = stackIn_24_0;
                   var3 = wj.a("</>", "</shad></col>", true, wj.a("<>", "<col=ffff00><shad=010101>", true, var3));
-                  discarded$1 = pb.field_C.a(var3, (-mc.field_a + 640 >> -1128845375) - -72, -10 + (var5 - -458) + -48, -44 + mc.field_a - 50, 48, 16777215, -1, 0, 0, 16);
+                  pb.field_C.a(var3, (-mc.field_a + 640 >> -1128845375) - -72, -10 + (var5 - -458) + -48, -44 + mc.field_a - 50, 48, 16777215, -1, 0, 0, 16);
                   return;
                 }
               } else {

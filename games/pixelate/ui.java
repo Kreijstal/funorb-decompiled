@@ -43,9 +43,8 @@ final class ui {
     }
 
     final static String a(boolean param0, byte[] param1, int param2, int param3) {
-        int incrementValue$5 = 0;
+        int incrementValue$1 = 0;
         char[] var4 = null;
-        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -54,23 +53,13 @@ final class ui {
         char[] var10 = null;
         char[] var11 = null;
         String stackIn_18_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_17_0 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException var4_ref = null;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -89,8 +78,7 @@ final class ui {
             var6 = 0;
             L2: while (true) {
               if (param3 <= var6) {
-                stackOut_17_0 = new String(var11, 0, var5);
-                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_0 = new String(var11, 0, var5);
                 break L0;
               } else {
                 L3: {
@@ -117,9 +105,9 @@ final class ui {
                         }
                       }
                     }
-                    incrementValue$5 = var5;
+                    incrementValue$1 = var5;
                     var5++;
-                    var4[incrementValue$5] = (char)var7;
+                    var4[incrementValue$1] = (char)var7;
                     break L3;
                   } else {
                     break L3;
@@ -134,27 +122,19 @@ final class ui {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4_ref = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var4_ref);
-            stackOut_19_1 = new StringBuilder().append("ui.C(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var4_ref);
+
+            stackIn_21_1 = new StringBuilder().append("ui.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L6;
             }
           }
@@ -165,7 +145,7 @@ final class ui {
 
     final static void a(int param0, int param1, int param2, int param3) {
         int fieldTemp$1 = 0;
-        int var4 = 0;
+        int var4;
         uk.field_v.field_m = 0;
         uk.field_v.e(160, 12);
         uk.field_v.d(ai.field_d.nextInt(), -42);
@@ -188,11 +168,9 @@ final class ui {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
+        int var6;
+        int var7;
         L0: {
           ca.field_a[pg.field_e] = param4;
           gn.field_A[pg.field_e] = pg.field_e;
@@ -218,12 +196,10 @@ final class ui {
           gh.field_q[pg.field_e] = param2;
           var6 = param2 + (param5 + param0);
           if (param1 != var6) {
-            stackOut_8_0 = 1000 * param0 / var6;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_0 = 1000 * param0 / var6;
             break L2;
           } else {
-            stackOut_7_0 = 0;
-            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_0 = 0;
             break L2;
           }
         }

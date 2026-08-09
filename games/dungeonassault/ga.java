@@ -21,14 +21,11 @@ final class ga extends ip {
     }
 
     final String a(byte param0, String param1) {
-        String discarded$2 = null;
         RuntimeException var3 = null;
         String var4 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -36,22 +33,10 @@ final class ga extends ip {
         String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
-        String stackOut_9_0 = null;
-        String stackOut_5_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             if (this.field_q.a(param1, 65) == pd.field_J) {
-              stackOut_2_0 = this.field_q.a((byte) 96, param1);
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = this.field_q.a((byte) 96, param1);
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -61,17 +46,15 @@ final class ga extends ip {
                     break L1;
                   } else {
                     var4 = (String) null;
-                    discarded$2 = this.a((byte) 49, (String) null);
+                    this.a((byte) 49, (String) null);
                     break L1;
                   }
                 }
-                stackOut_9_0 = sh.field_b;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = sh.field_b;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_5_0 = pj.field_n;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = pj.field_n;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -81,27 +64,19 @@ final class ga extends ip {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var3);
-            stackOut_11_1 = new StringBuilder().append("ga.D(").append(param0).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_13_0 = (RuntimeException) (var3);
+
+            stackIn_13_1 = new StringBuilder().append("ga.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L2;
             }
           }
@@ -125,8 +100,6 @@ final class ga extends ip {
         od stackIn_2_0 = null;
         od stackIn_7_0 = null;
         od stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -134,18 +107,6 @@ final class ga extends ip {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        od stackOut_6_0 = null;
-        od stackOut_11_0 = null;
-        od stackOut_10_0 = null;
-        od stackOut_1_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             var3_int = -10 / ((5 - param1) / 44);
@@ -158,8 +119,7 @@ final class ga extends ip {
                     this.field_s = var4.a((byte) 109);
                     break L1;
                   } else {
-                    stackOut_6_0 = oc.field_A;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = oc.field_A;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -169,20 +129,17 @@ final class ga extends ip {
               }
               L2: {
                 if (this.field_s) {
-                  stackOut_11_0 = c.field_d;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = c.field_d;
                   break L2;
                 } else {
-                  stackOut_10_0 = pd.field_J;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = pd.field_J;
                   break L2;
                 }
               }
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_1_0 = pd.field_J;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = pd.field_J;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -191,27 +148,19 @@ final class ga extends ip {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3);
-            stackOut_13_1 = new StringBuilder().append("ga.C(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3);
+
+            stackIn_15_1 = new StringBuilder().append("ga.C(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }
@@ -229,22 +178,12 @@ final class ga extends ip {
     }
 
     final static java.awt.Frame a(qg param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
-        ki[] var6_array = null;
-        int var7_int = 0;
-        java.awt.Frame var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        ki[] var10 = null;
-        pn var11 = null;
         Object stackIn_3_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_24_0 = null;
         Object stackIn_31_0 = null;
         Object stackIn_34_0 = null;
         java.awt.Frame stackIn_36_0 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
@@ -252,20 +191,14 @@ final class ga extends ip {
         String stackIn_40_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_23_0 = null;
-        Object stackOut_7_0 = null;
-        java.awt.Frame stackOut_35_0 = null;
-        Object stackOut_33_0 = null;
-        Object stackOut_30_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
+        ki[] var6 = null;
+        RuntimeException var6_ref = null;
+        int var7_int = 0;
+        java.awt.Frame var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        ki[] var10 = null;
+        pn var11 = null;
         var9 = DungeonAssault.field_K;
         try {
           L0: {
@@ -273,8 +206,8 @@ final class ga extends ip {
               L1: {
                 if (param2 == 0) {
                   var10 = kc.a(param0, 10);
-                  var6_array = var10;
-                  if (var6_array != null) {
+                  var6 = var10;
+                  if (var6 != null) {
                     var7_int = 0;
                     var8 = 0;
                     L2: while (true) {
@@ -282,8 +215,7 @@ final class ga extends ip {
                         if (var7_int != 0) {
                           break L1;
                         } else {
-                          stackOut_23_0 = null;
-                          stackIn_24_0 = stackOut_23_0;
+                          stackIn_24_0 = null;
                           decompiledRegionSelector0 = 2;
                           break L0;
                         }
@@ -328,8 +260,7 @@ final class ga extends ip {
                       }
                     }
                   } else {
-                    stackOut_7_0 = null;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = null;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -351,20 +282,17 @@ final class ga extends ip {
                   var7 = (java.awt.Frame) (var11.field_f);
                   if (var7 != null) {
                     if (2 != var11.field_c) {
-                      stackOut_35_0 = (java.awt.Frame) (var7);
-                      stackIn_36_0 = stackOut_35_0;
+                      stackIn_36_0 = (java.awt.Frame) (var7);
                       decompiledRegionSelector0 = 5;
                       break L0;
                     } else {
                       ng.a(param0, 48, var7);
-                      stackOut_33_0 = null;
-                      stackIn_34_0 = stackOut_33_0;
+                      stackIn_34_0 = null;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     }
                   } else {
-                    stackOut_30_0 = null;
-                    stackIn_31_0 = stackOut_30_0;
+                    stackIn_31_0 = null;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
@@ -374,8 +302,7 @@ final class ga extends ip {
                 }
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -383,28 +310,20 @@ final class ga extends ip {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
-            var6 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) (var6);
-            stackOut_37_1 = new StringBuilder().append("ga.B(");
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            var6_ref = decompiledCaughtException;
+            stackIn_39_0 = (RuntimeException) (var6_ref);
+
+            stackIn_39_1 = new StringBuilder().append("ga.B(");
+
             if (param0 == null) {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "null";
               break L8;
             } else {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "{...}";
               break L8;
             }
           }

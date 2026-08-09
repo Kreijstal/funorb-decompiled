@@ -31,10 +31,21 @@ final class qf {
     }
 
     final static void a(Object[] param0, int param1, int param2, int param3, int[] param4) {
-        char discarded$2 = 0;
-        int incrementValue$3 = 0;
-        RuntimeException var5 = null;
+        int incrementValue$0 = 0;
+        int stackIn_8_0 = 0;
+        int[] stackIn_16_0 = null;
+        int stackIn_16_1 = 0;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        StringBuilder stackIn_23_1 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         Object var8 = null;
@@ -43,48 +54,6 @@ final class qf {
         int var11 = 0;
         Object var12 = null;
         int var13 = 0;
-        int stackIn_8_0 = 0;
-        int[] stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        int[] stackIn_16_0 = null;
-        int stackIn_16_1 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int[] stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        int[] stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -92,7 +61,7 @@ final class qf {
               if (param2 == 2) {
                 break L1;
               } else {
-                discarded$2 = qf.a(67, '');
+                qf.a(67, '');
                 break L1;
               }
             }
@@ -108,12 +77,10 @@ final class qf {
                   param0[var5_int] = param0[param3];
                   param0[param3] = var8;
                   if ((var7 ^ -1) == -2147483648) {
-                    stackOut_7_0 = 0;
-                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_0 = 0;
                     break L3;
                   } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = 1;
                     break L3;
                   }
                 }
@@ -121,42 +88,45 @@ final class qf {
                 var10 = param1;
                 L4: while (true) {
                   L5: {
-                    if (param3 <= var10) {
-                      param4[param3] = param4[var6];
-                      stackOut_15_0 = (int[]) (param4);
-                      stackOut_15_1 = var6;
-                      stackIn_16_0 = stackOut_15_0;
-                      stackIn_16_1 = stackOut_15_1;
-                      break L5;
-                    } else {
-                      stackOut_10_0 = (int[]) (param4);
-                      stackOut_10_1 = var10;
-                      stackIn_16_0 = stackOut_10_0;
-                      stackIn_16_1 = stackOut_10_1;
-                      stackIn_11_0 = stackOut_10_0;
-                      stackIn_11_1 = stackOut_10_1;
-                      if (var13 != 0) {
-                        break L5;
+                    L6: {
+                      if (param3 <= var10) {
+                        break L6;
                       } else {
-                        L6: {
-                          if (stackIn_11_0[stackIn_11_1] < (var9 & var10) + var7) {
-                            var11 = param4[var10];
-                            param4[var10] = param4[var6];
-                            param4[var6] = var11;
-                            var12 = param0[var10];
-                            param0[var10] = param0[var6];
-                            incrementValue$3 = var6;
-                            var6++;
-                            param0[incrementValue$3] = var12;
-                            break L6;
+                        stackIn_16_0 = (int[]) (param4);
+
+                        stackIn_16_1 = var10;
+
+                        if (var13 != 0) {
+                          break L5;
+                        } else {
+                          L7: {
+                            if (stackIn_16_0[stackIn_16_1] < (var9 & var10) + var7) {
+                              var11 = param4[var10];
+                              param4[var10] = param4[var6];
+                              param4[var6] = var11;
+                              var12 = param0[var10];
+                              param0[var10] = param0[var6];
+                              incrementValue$0 = var6;
+                              var6++;
+                              param0[incrementValue$0] = var12;
+                              break L7;
+                            } else {
+                              break L7;
+                            }
+                          }
+                          var10++;
+                          if (var13 == 0) {
+                            continue L4;
                           } else {
                             break L6;
                           }
                         }
-                        var10++;
-                        continue L4;
                       }
                     }
+                    param4[param3] = param4[var6];
+                    stackIn_16_0 = (int[]) (param4);
+                    stackIn_16_1 = var6;
+                    break L5;
                   }
                   stackIn_16_0[stackIn_16_1] = var7;
                   param0[param3] = param0[var6];
@@ -173,58 +143,42 @@ final class qf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var5 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) (var5);
-            stackOut_18_1 = new StringBuilder().append("qf.C(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
-            if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
-              break L7;
-            } else {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
-              break L7;
-            }
-          }
           L8: {
-            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
-            if (param4 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+            var5 = decompiledCaughtException;
+            stackIn_20_0 = (RuntimeException) (var5);
+
+            stackIn_20_1 = new StringBuilder().append("qf.C(");
+
+            if (param0 == null) {
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L8;
             }
           }
-          throw fa.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
+          L9: {
+
+
+            stackIn_23_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
+            if (param4 == null) {
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
+              break L9;
+            } else {
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
+              break L9;
+            }
+          }
+          throw fa.a((Throwable) ((Object) stackIn_21_0), stackIn_24_2 + ')');
         }
     }
 
@@ -239,8 +193,8 @@ final class qf {
     }
 
     final static char a(int param0, char param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = ZombieDawnMulti.field_E ? 1 : 0;
           if (param0 == 28233) {

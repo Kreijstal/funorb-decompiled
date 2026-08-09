@@ -19,17 +19,7 @@ final class ne implements t {
     }
 
     public final void a(int param0, al param1, int param2, boolean param3, int param4) {
-        int discarded$1 = 0;
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -37,16 +27,13 @@ final class ne implements t {
         String stackIn_22_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         var11 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -59,19 +46,17 @@ final class ne implements t {
                     if (param1.h(-84)) {
                       break L2;
                     } else {
-                      stackOut_5_0 = 2188450;
-                      stackIn_7_0 = stackOut_5_0;
+                      stackIn_7_0 = 2188450;
                       break L1;
                     }
                   }
                 }
-                stackOut_6_0 = 3249872;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 3249872;
                 break L1;
               }
               L3: {
                 var6_int = stackIn_7_0;
-                discarded$1 = this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_s + "</u>", param4 - -param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, var6_int, -1, this.field_c, this.field_f, this.field_e.field_u + this.field_e.field_G);
+                this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_s + "</u>", param4 - -param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, var6_int, -1, this.field_c, this.field_f, this.field_e.field_u + this.field_e.field_G);
                 if (!param1.h(-95)) {
                   break L3;
                 } else {
@@ -120,27 +105,19 @@ final class ne implements t {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var6);
-            stackOut_19_1 = new StringBuilder().append("ne.L(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var6);
+
+            stackIn_21_1 = new StringBuilder().append("ne.L(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L6;
             }
           }

@@ -15,22 +15,12 @@ final class ri {
         int var4 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_13_1 = 0;
         int stackIn_17_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_20_1 = 0;
         int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_12_1 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_19_1 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -47,16 +37,14 @@ final class ri {
                           if (this.field_d.length <= var3_int) {
                             break L4;
                           } else {
-                            stackOut_12_0 = this.field_d[-1 + var3_int] - -this.field_d[var3_int] >> -1977068703;
-                            stackOut_12_1 = param1;
-                            stackIn_20_0 = stackOut_12_0;
-                            stackIn_20_1 = stackOut_12_1;
-                            stackIn_13_0 = stackOut_12_0;
-                            stackIn_13_1 = stackOut_12_1;
+                            stackIn_20_0 = this.field_d[-1 + var3_int] - -this.field_d[var3_int] >> -1977068703;
+
+                            stackIn_20_1 = param1;
+
                             if (var4 != 0) {
                               break L3;
                             } else {
-                              if (stackIn_13_0 <= stackIn_13_1) {
+                              if (stackIn_20_0 <= stackIn_20_1) {
                                 var3_int++;
                                 if (var4 == 0) {
                                   continue L2;
@@ -64,28 +52,23 @@ final class ri {
                                   break L4;
                                 }
                               } else {
-                                stackOut_16_0 = var3_int + -1;
-                                stackIn_17_0 = stackOut_16_0;
+                                stackIn_17_0 = var3_int + -1;
                                 decompiledRegionSelector0 = 2;
                                 break L0;
                               }
                             }
                           }
                         }
-                        stackOut_19_0 = -1;
-                        stackOut_19_1 = this.field_d.length;
-                        stackIn_20_0 = stackOut_19_0;
-                        stackIn_20_1 = stackOut_19_1;
+                        stackIn_20_0 = -1;
+                        stackIn_20_1 = this.field_d.length;
                         break L3;
                       }
-                      stackOut_20_0 = stackIn_20_0 + stackIn_20_1;
-                      stackIn_21_0 = stackOut_20_0;
+                      stackIn_21_0 = stackIn_20_0 + stackIn_20_1;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }
                   } else {
-                    stackOut_8_0 = -89;
-                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_0 = -89;
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
@@ -94,8 +77,7 @@ final class ri {
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -125,18 +107,14 @@ final class ri {
         km stackIn_4_0 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        km stackOut_3_0 = null;
-        km stackOut_1_0 = null;
         try {
           L0: {
             if (param0 >= 27) {
-              stackOut_3_0 = ao.d(true);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = ao.d(true);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (km) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (km) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -157,8 +135,6 @@ final class ri {
         RuntimeException var2 = null;
         int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_9_0 = 0;
         try {
           L0: {
             L1: {
@@ -177,14 +153,12 @@ final class ri {
                   if (-1 == (this.field_d.length ^ -1)) {
                     break L3;
                   } else {
-                    stackOut_7_0 = this.field_d[this.field_d.length + -1];
-                    stackIn_10_0 = stackOut_7_0;
+                    stackIn_10_0 = this.field_d[this.field_d.length + -1];
                     break L2;
                   }
                 }
               }
-              stackOut_9_0 = 0;
-              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_0 = 0;
               break L2;
             }
             break L0;
@@ -210,31 +184,29 @@ final class ri {
     }
 
     final static void a(byte param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        RuntimeException var1 = null;
-        hg var1_ref = null;
-        int var2 = 0;
-        String var3 = null;
-        int var3_int = 0;
-        String var4_ref_String = null;
-        int var4 = 0;
-        String var5 = null;
-        gh var6 = null;
-        String var7 = null;
-        gh var7_ref = null;
-        String var8 = null;
-        int var9 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         int stackIn_11_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
+        hg var1 = null;
+        RuntimeException var1_ref = null;
+        int var2 = 0;
+        Object var3 = null;
+        int var3_int = 0;
+        int var4 = 0;
+        String var4_ref_String = null;
+        String var5 = null;
+        gh var6 = null;
+        gh var7 = null;
+        String var7_ref = null;
+        String var8 = null;
+        int var9 = 0;
         var9 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            var1_ref = sh.field_qb;
-            var2 = var1_ref.g(11132);
+            var1 = sh.field_qb;
+            var2 = var1.g(11132);
             if (-1 != (var2 ^ -1)) {
               if (var2 != 1) {
                 if (-3 != (var2 ^ -1)) {
@@ -252,9 +224,9 @@ final class ri {
                   } else {
                     if (4 == var2) {
                       oa.field_q = 1;
-                      var3 = var1_ref.h(-122);
-                      wl.field_a = var3.intern();
-                      var4 = var1_ref.g(11132);
+                      var3 = var1.h(-122);
+                      wl.field_a = ((String) (var3)).intern();
+                      var4 = var1.g(11132);
                       nn.a(true, var4);
                       decompiledRegionSelector0 = 4;
                       break L0;
@@ -296,8 +268,8 @@ final class ri {
                   }
                 }
                 L5: {
-                  var3 = var1_ref.h(-128);
-                  if (var3.equals("")) {
+                  var3 = var1.h(-128);
+                  if (((String) (var3)).equals("")) {
                     var3 = null;
                     break L5;
                   } else {
@@ -305,8 +277,8 @@ final class ri {
                   }
                 }
                 L6: {
-                  var4_ref_String = var1_ref.h(-119);
-                  var5 = var1_ref.h(-120);
+                  var4_ref_String = var1.h(-119);
+                  var5 = var1.h(-120);
                   var6 = j.a(0, var4_ref_String);
                   if (null == var6) {
                     var6 = j.a(0, var5);
@@ -326,16 +298,16 @@ final class ri {
                   } else {
                     var6 = new gh();
                     oa.field_h.a((long)c.a((CharSequence) ((Object) var4_ref_String), true).hashCode(), var6, 30804);
-                    fieldTemp$2 = sg.field_j;
+                    fieldTemp$0 = sg.field_j;
                     sg.field_j = sg.field_j + 1;
-                    var6.field_Nb = fieldTemp$2;
+                    var6.field_Nb = fieldTemp$0;
                     co.field_f.a(var6, (byte) -96);
                     break L7;
                   }
                 }
                 L8: {
                   if (var3 != null) {
-                    var3 = var3.intern();
+                    var3 = ((String) (var3)).intern();
                     break L8;
                   } else {
                     break L8;
@@ -343,18 +315,18 @@ final class ri {
                 }
                 var6.field_Hb = var4_ref_String;
                 var6.field_Jb = var5;
-                var6.field_Pb = var3;
+                var6.field_Pb = (String) (var3);
                 var6.a(false);
-                var7_ref = (gh) ((Object) co.field_f.a((byte) -27));
+                var7 = (gh) ((Object) co.field_f.a((byte) -27));
                 L9: while (true) {
                   L10: {
-                    if (null == var7_ref) {
+                    if (null == var7) {
                       break L10;
                     } else {
-                      if (!wc.a((byte) 23, var6, var7_ref)) {
+                      if (!wc.a((byte) 23, var6, var7)) {
                         break L10;
                       } else {
-                        var7_ref = (gh) ((Object) co.field_f.a(16213));
+                        var7 = (gh) ((Object) co.field_f.a(16213));
                         if (var9 == 0) {
                           continue L9;
                         } else {
@@ -365,7 +337,7 @@ final class ri {
                   }
                   L11: {
                     L12: {
-                      if (null != var7_ref) {
+                      if (null != var7) {
                         break L12;
                       } else {
                         co.field_f.a(var6, (byte) -77);
@@ -376,7 +348,7 @@ final class ri {
                         }
                       }
                     }
-                    td.a(var7_ref, (byte) -61, var6);
+                    td.a(var7, (byte) -61, var6);
                     break L11;
                   }
                   decompiledRegionSelector0 = 1;
@@ -394,24 +366,22 @@ final class ri {
                 }
               }
               L14: {
-                if (1 != var1_ref.g(11132)) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
+                if (1 != var1.g(11132)) {
+                  stackIn_11_0 = 0;
                   break L14;
                 } else {
-                  stackOut_8_0 = 1;
-                  stackIn_11_0 = stackOut_8_0;
+                  stackIn_11_0 = 1;
                   break L14;
                 }
               }
               L15: {
                 L16: {
                   var3_int = stackIn_11_0;
-                  var4_ref_String = var1_ref.h(-122);
+                  var4_ref_String = var1.h(-122);
                   if (var3_int == 0) {
                     break L16;
                   } else {
-                    var5 = var1_ref.h(-118);
+                    var5 = var1.h(-118);
                     if (var9 == 0) {
                       break L15;
                     } else {
@@ -424,7 +394,7 @@ final class ri {
               }
               L17: {
                 var6 = kh.a((byte) 119, var4_ref_String);
-                var7 = var1_ref.h(-119);
+                var7_ref = var1.h(-119);
                 var8 = c.a((CharSequence) ((Object) var4_ref_String), true);
                 if (null != var8) {
                   break L17;
@@ -435,7 +405,7 @@ final class ri {
               }
               L18: {
                 if (var6 == null) {
-                  var6 = kh.a((byte) 42, var7);
+                  var6 = kh.a((byte) 42, var7_ref);
                   if (var6 == null) {
                     break L18;
                   } else {
@@ -452,24 +422,24 @@ final class ri {
                 } else {
                   var6 = new gh();
                   ie.field_a.a((long)var8.hashCode(), var6, 30804);
-                  fieldTemp$3 = mj.field_z;
+                  fieldTemp$1 = mj.field_z;
                   mj.field_z = mj.field_z + 1;
-                  var6.field_Nb = fieldTemp$3;
+                  var6.field_Nb = fieldTemp$1;
                   bd.field_c.a(var6, (byte) -58);
                   break L19;
                 }
               }
               var6.field_Hb = var4_ref_String;
               var6.field_Ob = var5;
-              var6.field_Jb = var7;
+              var6.field_Jb = var7_ref;
               decompiledRegionSelector0 = 0;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var1), "ri.B(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw kg.a((Throwable) ((Object) var1_ref), "ri.B(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

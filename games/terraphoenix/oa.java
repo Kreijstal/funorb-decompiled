@@ -21,15 +21,15 @@ final class oa {
 
     final static void a(byte param0) {
         try {
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
             int var2 = 0;
-            Throwable var3 = null;
-            Runtime var3_ref = null;
+            Runtime var3 = null;
+            Throwable var3_ref = null;
             Long var4 = null;
             Object[] var5 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
             try {
               L0: {
                 L1: {
@@ -40,9 +40,9 @@ final class oa {
                   } else {
                     try {
                       L2: {
-                        var3_ref = Runtime.getRuntime();
+                        var3 = Runtime.getRuntime();
                         var5 = (Object[]) null;
-                        var4 = (Long) (var1.invoke((Object) (var3_ref), (Object[]) null));
+                        var4 = (Long) (var1.invoke((Object) (var3), (Object[]) null));
                         qb.field_g = (int)(var4.longValue() / 1048576L) + 1;
                         decompiledRegionSelector0 = 0;
                         break L2;
@@ -50,7 +50,7 @@ final class oa {
                     } catch (java.lang.Throwable decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L3: {
-                        var3 = decompiledCaughtException;
+                        var3_ref = decompiledCaughtException;
                         decompiledRegionSelector0 = 1;
                         break L3;
                       }

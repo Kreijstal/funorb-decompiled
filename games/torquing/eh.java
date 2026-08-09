@@ -37,7 +37,7 @@ abstract class eh {
     abstract lm a(byte param0);
 
     final void b(int param0) {
-        lm var2 = null;
+        lm var2;
         var2 = this.a((byte) -57);
         if (this.field_d == null) {
           this.field_h.a(var2);
@@ -72,7 +72,7 @@ abstract class eh {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         if (param2 == 0) {
           jg.field_t.d(param1, param0);
           if (param3) {

@@ -12,10 +12,7 @@ final class bb {
     static java.awt.Frame field_a;
 
     final boolean a(boolean param0) {
-        boolean discarded$5 = false;
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (!param0) {
           if (this != uf.field_c) {
             if (this != sg.field_d) {
@@ -31,19 +28,17 @@ final class bb {
             return true;
           }
         } else {
-          discarded$5 = bb.a((byte) 20);
+          bb.a((byte) 20);
           if (this != uf.field_c) {
             if (this == sg.field_d) {
               return true;
             } else {
               L0: {
                 if (this != ik.field_d) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = 1;
                   break L0;
                 }
               }
@@ -58,22 +53,16 @@ final class bb {
     final static boolean a(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         oh.field_a = true;
         ab.field_a = 15000L + la.a(false);
         if (param0 != -103) {
           L0: {
             field_g = -116;
             if (af.field_b != 11) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -81,12 +70,10 @@ final class bb {
         } else {
           L1: {
             if (af.field_b != 11) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }

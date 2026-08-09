@@ -30,9 +30,8 @@ final class cc {
     }
 
     final static boolean c(byte param0) {
-        boolean discarded$6 = false;
         if (param0 != 118) {
-            discarded$6 = cc.c((byte) 58);
+            cc.c((byte) 58);
             return eh.field_e != null ? true : false;
         }
         return eh.field_e != null ? true : false;

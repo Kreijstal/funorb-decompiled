@@ -15,29 +15,22 @@ abstract class qr extends ae implements tpa {
     }
 
     final static boolean c(int param0, int param1, int param2) {
-        boolean discarded$2 = false;
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         L0: {
           if (param0 == 458752) {
             break L0;
           } else {
-            discarded$2 = qr.a(95);
+            qr.a(95);
             break L0;
           }
         }
         L1: {
           if ((458752 & param2) == 0) {
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 0;
             break L1;
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 1;
             break L1;
           }
         }
@@ -47,16 +40,14 @@ abstract class qr extends ae implements tpa {
               break L3;
             } else {
               if (!uu.a(true, param2, param1)) {
-                stackOut_9_0 = 0;
-                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_0 = 0;
                 break L2;
               } else {
                 break L3;
               }
             }
           }
-          stackOut_8_0 = 1;
-          stackIn_10_0 = stackOut_8_0;
+          stackIn_10_0 = 1;
           break L2;
         }
         return stackIn_10_0 != 0;
@@ -66,8 +57,6 @@ abstract class qr extends ae implements tpa {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_8_0 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -75,17 +64,6 @@ abstract class qr extends ae implements tpa {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             if (param1 == 3815994) {
@@ -100,22 +78,19 @@ abstract class qr extends ae implements tpa {
                       if (!this.field_x.a(param0, false)) {
                         break L2;
                       } else {
-                        stackOut_6_0 = 1;
-                        stackIn_8_0 = stackOut_6_0;
+                        stackIn_8_0 = 1;
                         break L1;
                       }
                     }
                   }
                 }
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 0;
                 break L1;
               }
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -124,27 +99,19 @@ abstract class qr extends ae implements tpa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3);
-            stackOut_9_1 = new StringBuilder().append("qr.M(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("qr.M(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -160,24 +127,12 @@ abstract class qr extends ae implements tpa {
     final boolean a(ae param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -196,14 +151,12 @@ abstract class qr extends ae implements tpa {
                   if (!this.field_x.a(param0, false)) {
                     break L3;
                   } else {
-                    stackOut_4_0 = 1;
-                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_6_0 = 1;
                     break L2;
                   }
                 }
               }
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               break L2;
             }
             break L0;
@@ -212,27 +165,19 @@ abstract class qr extends ae implements tpa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var3);
-            stackOut_7_1 = new StringBuilder().append("qr.S(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("qr.S(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L4;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L4;
             }
           }
@@ -244,38 +189,15 @@ abstract class qr extends ae implements tpa {
     StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        StringBuilder stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
@@ -295,64 +217,47 @@ abstract class qr extends ae implements tpa {
                 break L2;
               }
             }
-            stackOut_5_0 = (StringBuilder) (param2);
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = (StringBuilder) (param2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var5);
-            stackOut_7_1 = new StringBuilder().append("qr.R(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_9_0 = (RuntimeException) (var5);
+
+            stackIn_9_1 = new StringBuilder().append("qr.R(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+
+
+            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
+
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L4;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param3 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_10_0), stackIn_13_2 + ',' + param3 + ')');
         }
         return stackIn_6_0;
     }
@@ -365,15 +270,38 @@ abstract class qr extends ae implements tpa {
     }
 
     final static void a(boolean param0, int[] param1, hja[] param2, cn param3, cn param4) {
-        iu[] dupTemp$4 = null;
-        iu[] dupTemp$5 = null;
-        iu[] dupTemp$6 = null;
-        iu[] dupTemp$7 = null;
-        RuntimeException var5 = null;
-        hja[] var5_array = null;
+        iu[] dupTemp$0 = null;
+        iu[] dupTemp$1 = null;
+        iu[] dupTemp$2 = null;
+        iu[] dupTemp$3 = null;
+        hja[] var5 = null;
         hja[] var6 = null;
         int[] var6_array = null;
         int var7_int = 0;
+        int var18 = 0;
+        int[] var19 = null;
+        hja[] var20 = null;
+        int[] var21 = null;
+        int[] var22 = null;
+        int[] var23 = null;
+        int[] var24 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        StringBuilder stackIn_29_1 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
+        StringBuilder stackIn_32_1 = null;
+        StringBuilder stackIn_33_1 = null;
+        String stackIn_33_2 = null;
+        StringBuilder stackIn_35_1 = null;
+        StringBuilder stackIn_36_1 = null;
+        String stackIn_36_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5_ref = null;
         hea var7 = null;
         jea var8 = null;
         jea var9 = null;
@@ -385,209 +313,75 @@ abstract class qr extends ae implements tpa {
         jea var15 = null;
         iu[] var16 = null;
         iu[] var17 = null;
-        int var18 = 0;
-        hja[] var19 = null;
-        int[] var20 = null;
-        int[] var21 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        String stackIn_39_2 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        String stackIn_42_2 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        String stackIn_45_2 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
-        String stackIn_48_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        RuntimeException stackOut_47_0 = null;
-        StringBuilder stackOut_47_1 = null;
-        String stackOut_47_2 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
         var18 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             L1: {
-              var19 = tw.a((byte) -69, "crowns", "lobby", param4);
-              var5_array = var19;
-              csa.field_n = var19.length;
+              var20 = tw.a((byte) -69, "crowns", "lobby", param4);
+              var5 = var20;
+              csa.field_n = var20.length;
               if (param2 != null) {
                 var6 = new hja[param2.length + csa.field_n];
                 var7_int = 0;
                 L2: while (true) {
-                  L3: {
-                    L4: {
-                      if (var7_int >= csa.field_n) {
-                        break L4;
-                      } else {
-                        var6[var7_int] = var19[var7_int];
-                        var7_int++;
-                        if (var18 != 0) {
-                          break L3;
-                        } else {
-                          if (var18 == 0) {
-                            continue L2;
-                          } else {
-                            break L4;
-                          }
-                        }
-                      }
-                    }
+                  if (var7_int >= csa.field_n) {
                     var7_int = 0;
-                    break L3;
-                  }
-                  L5: while (true) {
-                    L6: {
+                    L3: while (true) {
                       if (param2.length <= var7_int) {
-                        break L6;
+                        var5 = var6;
+                        break L1;
                       } else {
                         var6[csa.field_n - -var7_int] = param2[var7_int];
                         var7_int++;
-                        if (var18 != 0) {
-                          break L1;
-                        } else {
-                          if (var18 == 0) {
-                            continue L5;
-                          } else {
-                            break L6;
-                          }
-                        }
+                        continue L3;
                       }
                     }
-                    var5_array = var6;
-                    break L1;
+                  } else {
+                    var6[var7_int] = var20[var7_int];
+                    var7_int++;
+                    continue L2;
                   }
                 }
               } else {
                 break L1;
               }
             }
-            var21 = new int[var5_array.length];
-            var20 = var21;
-            var6_array = var20;
+            var23 = new int[var5.length];
+            var21 = var23;
+            var19 = var21;
+            var24 = var19;
+            var22 = var24;
+            var6_array = var22;
             var7_int = 0;
-            L7: while (true) {
-              L8: {
-                L9: {
-                  L10: {
-                    L11: {
-                      if (var7_int >= csa.field_n) {
-                        break L11;
-                      } else {
-                        var21[var7_int] = 10;
-                        var7_int++;
-                        if (var18 != 0) {
-                          break L10;
+            L4: while (true) {
+              if (var7_int >= csa.field_n) {
+                L5: {
+                  if (param2 != null) {
+                    if (param1 == null) {
+                      var7_int = 0;
+                      L6: while (true) {
+                        if (param2.length <= var7_int) {
+                          break L5;
                         } else {
-                          if (var18 == 0) {
-                            continue L7;
-                          } else {
-                            break L11;
-                          }
+                          var6_array[csa.field_n - -var7_int] = param2[var7_int].field_f;
+                          var7_int++;
+                          continue L6;
                         }
                       }
-                    }
-                    if (param2 != null) {
-                      break L10;
-                    } else {
-                      break L9;
-                    }
-                  }
-                  L12: {
-                    if (param1 == null) {
-                      break L12;
                     } else {
                       var7_int = 0;
-                      L13: while (true) {
-                        L14: {
-                          if (param2.length <= var7_int) {
-                            break L14;
-                          } else {
-                            var6_array[var7_int + csa.field_n] = param1[var7_int];
-                            var7_int++;
-                            if (var18 != 0) {
-                              break L8;
-                            } else {
-                              if (var18 == 0) {
-                                continue L13;
-                              } else {
-                                break L14;
-                              }
-                            }
-                          }
-                        }
-                        if (var18 == 0) {
-                          break L9;
+                      L7: while (true) {
+                        if (param2.length <= var7_int) {
+                          break L5;
                         } else {
-                          break L12;
+                          var6_array[var7_int + csa.field_n] = param1[var7_int];
+                          var7_int++;
+                          continue L7;
                         }
                       }
                     }
-                  }
-                  var7_int = 0;
-                  L15: while (true) {
-                    if (param2.length <= var7_int) {
-                      break L9;
-                    } else {
-                      var6_array[csa.field_n - -var7_int] = param2[var7_int].field_f;
-                      var7_int++;
-                      if (var18 != 0) {
-                        break L8;
-                      } else {
-                        if (var18 == 0) {
-                          continue L15;
-                        } else {
-                          break L9;
-                        }
-                      }
-                    }
+                  } else {
+                    break L5;
                   }
                 }
                 pda.field_c = 2;
@@ -595,323 +389,281 @@ abstract class qr extends ae implements tpa {
                 di.field_a = 15;
                 wg.field_i = 2;
                 mna.field_d = 4;
-                break L8;
+                var7 = jta.a((byte) 123, "largefont", param4, "lobby", param3);
+                qw.field_f = jta.a((byte) 118, "generalfont", param4, "lobby", param3);
+                kw.field_e = jta.a((byte) 127, "chatfont", param4, "lobby", param3);
+                var7.a(var5, var24);
+                qw.field_f.a(var5, var24);
+                kw.field_e.a(var5, var24);
+                var8 = new jea(0L, (jea) null);
+                var8.field_P = di.field_a;
+                var8.field_ib = 16777215;
+                var8.field_H = (il) ((Object) var7);
+                var8.field_bb = 1;
+                var9 = var8;
+                var9.field_z = 1;
+                var10 = new jea(0L, (jea) null);
+                var10.field_P = di.field_a;
+                var10.field_ib = 16777215;
+                var10.field_H = (il) ((Object) qw.field_f);
+                var11 = var10;
+                var10.field_bb = 1;
+                var11.field_z = 1;
+                uda.field_s = new jea(0L, var8);
+                uda.field_s.field_w = rfa.a(uka.a(param4, "lobby", 5, "heading"), 126);
+                joa.field_d = new jea(0L, (jea) null);
+                joa.field_d.field_w = tba.a(-74, false, 120, 8421504, 4210752, false);
+                ji.field_g = new jea(0L, (jea) null);
+                ji.field_g.field_w = hca.c(114, 1, 3, 6316128, -111, 6316128);
+                lw.field_a = new jea(0L, (jea) null);
+                lw.field_a.field_w = rfa.a(uka.a(param4, "lobby", 5, "popup"), 113);
+                var12 = rfa.a(uka.a(param4, "lobby", 5, "popup_mouseover"), 122);
+                var13 = uka.a(param4, "lobby", 5, "button");
+                var14 = rfa.a(uka.a(param4, "lobby", 5, "tab_active"), 113);
+                oba.field_f = new jea(0L, var8);
+                oba.field_f.field_w = var14;
+                cga.field_g = new jea(0L, (jea) null);
+                cga.field_g.field_R = nia.a(param4, "lobby", "closebutton", 125);
+                cga.field_g.field_rb = nia.a(param4, "lobby", "closebutton_mouseover", -112);
+                sm.field_r = new jea(0L, var8);
+                sm.field_r.field_w = tba.a(-67, true, 40, 3815994, 2039583, true);
+                ooa.field_f = new jea(0L, var10);
+                ooa.field_f.field_x = 2;
+                ooa.field_f.field_w = tba.a(-75, false, 30, 3815994, 2039583, true);
+                cs.field_a = new jea(0L, var10);
+                cs.field_a.field_x = 2;
+                cs.field_a.field_w = tba.a(-116, false, 30, 3815994, 2039583, false);
+                hma.field_b = new jea(0L, var10);
+                hma.field_b.field_x = 2;
+                hma.field_b.field_w = tba.a(-104, true, 30, 3815994, 2039583, false);
+                kua.field_i = new jea(0L, (jea) null);
+                kua.field_i.field_ib = 13421772;
+                kua.field_i.field_P = di.field_a;
+                kua.field_i.field_H = (il) ((Object) qw.field_f);
+                kua.field_i.field_bb = 1;
+                dja.field_p = new jea(0L, kua.field_i);
+                dja.field_p.field_ab = 16777215;
+                dja.field_p.field_hb = 8421504;
+                dja.field_p.field_gb = 16777215;
+                dja.field_p.field_ib = 16764006;
+                dja.field_p.field_N = 16777215;
+                var15 = new jea(0L, dja.field_p);
+                var15.field_ib = 16777215;
+                var15.field_H = (il) ((Object) var7);
+                var15.field_P = di.field_a;
+                tka.field_q = new jea(0L, kua.field_i);
+                tka.field_q.field_w = tba.a(-103, param0, 16, 2236962, 2236962, false);
+                tka.field_q.field_x = 2;
+                una.field_j = new jea(0L, kua.field_i);
+                una.field_j.field_w = tba.a(-73, false, 16, 1513239, 1513239, false);
+                una.field_j.field_x = 2;
+                iea.field_g = new jea(0L, tka.field_q);
+                iea.field_g.a(false, dja.field_p);
+                lta.field_a = new jea(0L, una.field_j);
+                lta.field_a.a(param0, dja.field_p);
+                var16 = uka.a(param4, "lobby", 5, "button_mouseover");
+                eq.field_n = new ola(lw.field_a, var12, kua.field_i, dja.field_p, 3, 2, pda.field_c, 3, di.field_a);
+                qi.field_M = new jea(0L, dja.field_p);
+                qi.field_M.field_fb = 1;
+                qi.field_M.field_ob = 1;
+                qi.field_M.field_v = 1;
+                qi.field_M.field_w = var13;
+                qi.field_M.field_C = var16;
+                qi.field_M.field_W = 1;
+                qi.field_M.field_db = uka.a(param4, "lobby", 5, "button_mouseheld");
+                qi.field_M.field_n = uka.a(param4, "lobby", 5, "button_active");
+                qi.field_M.field_M = uka.a(param4, "lobby", 5, "button_disabled");
+                qi.field_M.field_z = 1;
+                up.field_a = new jea(0L, dja.field_p);
+                up.field_a.field_z = 1;
+                up.field_a.field_w = rfa.a(uka.a(param4, "lobby", 5, "tab_inactive"), 113);
+                up.field_a.field_C = rfa.a(uka.a(param4, "lobby", 5, "tab_mouseover"), 113);
+                up.field_a.field_n = var14;
+                js.field_d = new jea(0L, (jea) null);
+                js.field_d.field_w = hca.c(206, -1, 3, 1856141, -113, 1127256);
+                cfa.field_c = new jea(0L, (jea) null);
+                cfa.field_c.field_w = hca.c(290, -1, 3, 11579568, -120, 6052956);
+                hg.field_g = new jea(0L, var15);
+                hg.field_g.field_W = 1;
+                hg.field_g.field_v = 1;
+                hg.field_g.field_fb = 1;
+                hg.field_g.field_ob = 1;
+                hg.field_g.field_z = 1;
+                dp.field_i = new jea(0L, hg.field_g);
+                jk.field_g = new jea(0L, dja.field_p);
+                jk.field_g.field_W = 1;
+                jk.field_g.field_v = 1;
+                jk.field_g.field_fb = 1;
+                jk.field_g.field_ob = 1;
+                jk.field_g.field_z = 1;
+                bua.field_g = new jea(0L, jk.field_g);
+                kv.field_b = new jea(0L, jk.field_g);
+                ssa.field_g = new jea(0L, hg.field_g);
+                jq.field_o = new jea(0L, jk.field_g);
+                dn.field_a = new jea(0L, jk.field_g);
+                qja.field_j = new jea(0L, jk.field_g);
+                jk.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "smallbutton"), 124);
+                jk.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "smallbutton_mouseover"), 127);
+                dupTemp$0 = rfa.a(uka.a(param4, "lobby", 5, "smallbutton_active"), 114);
+                jk.field_g.field_n = dupTemp$0;
+                jk.field_g.field_db = dupTemp$0;
+                jk.field_g.field_M = rfa.a(uka.a(param4, "lobby", 5, "smallbutton_disabled"), 127);
+                dp.field_i.field_w = rfa.a(uka.a(param4, "lobby", 5, "mediumbutton"), 125);
+                dp.field_i.field_C = rfa.a(uka.a(param4, "lobby", 5, "mediumbutton_mouseover"), 115);
+                dp.field_i.field_db = rfa.a(uka.a(param4, "lobby", 5, "mediumbutton_mouseheld"), 114);
+                hg.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "bigbutton"), 127);
+                hg.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "bigbutton_mouseover"), 118);
+                hg.field_g.field_db = rfa.a(uka.a(param4, "lobby", 5, "bigbutton_mouseheld"), 122);
+                hg.field_g.field_M = rfa.a(uka.a(param4, "lobby", 5, "bigbutton_disabled"), 124);
+                bua.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "greenbutton"), 124);
+                bua.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "greenbutton_mouseover"), 116);
+                bua.field_g.field_db = rfa.a(uka.a(param4, "lobby", 5, "greenbutton_mouseheld"), 123);
+                kv.field_b.field_w = rfa.a(uka.a(param4, "lobby", 5, "redbutton"), 113);
+                kv.field_b.field_C = rfa.a(uka.a(param4, "lobby", 5, "redbutton_mouseover"), 123);
+                kv.field_b.field_db = rfa.a(uka.a(param4, "lobby", 5, "redbutton_mouseheld"), 116);
+                ssa.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "backbutton"), 125);
+                ssa.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "backbutton_mouseover"), 117);
+                ssa.field_g.field_db = rfa.a(uka.a(param4, "lobby", 5, "backbutton_mouseheld"), 123);
+                ssa.field_g.field_M = rfa.a(uka.a(param4, "lobby", 5, "backbutton_disabled"), 116);
+                qja.field_j.field_w = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton"), 118);
+                qja.field_j.field_C = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton_mouseover"), 113);
+                dupTemp$1 = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton_active"), 118);
+                qja.field_j.field_n = dupTemp$1;
+                qja.field_j.field_db = dupTemp$1;
+                qja.field_j.field_M = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton_disabled"), 125);
+                jq.field_o.field_w = rfa.a(uka.a(param4, "lobby", 5, "chatbutton"), 116);
+                jq.field_o.field_C = rfa.a(uka.a(param4, "lobby", 5, "chatbutton_mouseover"), 119);
+                dupTemp$2 = rfa.a(uka.a(param4, "lobby", 5, "chatbutton_active"), 119);
+                jq.field_o.field_n = dupTemp$2;
+                jq.field_o.field_db = dupTemp$2;
+                dn.field_a.field_w = rfa.a(uka.a(param4, "lobby", 5, "chatfilterbutton"), 112);
+                dn.field_a.field_C = rfa.a(uka.a(param4, "lobby", 5, "chatfilterbutton_mouseover"), 112);
+                dupTemp$3 = rfa.a(uka.a(param4, "lobby", 5, "chatfilterbutton_active"), 118);
+                dn.field_a.field_n = dupTemp$3;
+                dn.field_a.field_db = dupTemp$3;
+                var17 = uka.a(param4, "lobby", 5, "checkbox");
+                kt.field_F = new ta(0L, var17[1], var17[0], 1, dja.field_p, (String) null);
+                lr.field_b = new jea(0L, (jea) null);
+                lr.field_b.field_w = wpa.a((byte) -118, nia.a(param4, "lobby", "slideregion", 115));
+                lr.field_b.field_C = wpa.a((byte) -60, nia.a(param4, "lobby", "slideregion_mouseover", 75));
+                lr.field_b.field_db = wpa.a((byte) -118, nia.a(param4, "lobby", "slideregion_mouseheld", 123));
+                lr.field_b.field_M = wpa.a((byte) -87, nia.a(param4, "lobby", "slideregion_disabled", 106));
+                ie.field_h = new jea(0L, (jea) null);
+                ie.field_h.field_w = rfa.a(uka.a(param4, "lobby", 5, "dragbar"), 122);
+                ie.field_h.field_C = rfa.a(uka.a(param4, "lobby", 5, "dragbar_mouseover"), 121);
+                ie.field_h.field_db = rfa.a(uka.a(param4, "lobby", 5, "dragbar_mouseheld"), 113);
+                ie.field_h.field_M = rfa.a(uka.a(param4, "lobby", 5, "dragbar_disabled"), 116);
+                pk.field_s = new jea(0L, (jea) null);
+                pk.field_s.field_R = nia.a(param4, "lobby", "upbutton", -121);
+                pk.field_s.field_rb = nia.a(param4, "lobby", "upbutton_mouseover", -87);
+                pk.field_s.field_U = nia.a(param4, "lobby", "upbutton_mouseheld", 71);
+                pk.field_s.field_B = nia.a(param4, "lobby", "upbutton_disabled", 71);
+                jqa.field_b = new jea(0L, (jea) null);
+                jqa.field_b.field_R = nia.a(param4, "lobby", "downbutton", 119);
+                jqa.field_b.field_rb = nia.a(param4, "lobby", "downbutton_mouseover", -73);
+                jqa.field_b.field_U = nia.a(param4, "lobby", "downbutton_mouseheld", 56);
+                jqa.field_b.field_B = nia.a(param4, "lobby", "downbutton_disabled", 113);
+                fe.field_F = new oj(0L, pk.field_s, jqa.field_b, lr.field_b, ie.field_h);
+                aaa.field_d = new hla(0L, (jea) null, rfa.field_C, fe.field_F, jk.field_g, (String) null, (String) null);
+                break L0;
+              } else {
+                var23[var7_int] = 10;
+                var7_int++;
+                continue L4;
               }
-              var7 = jta.a((byte) 123, "largefont", param4, "lobby", param3);
-              qw.field_f = jta.a((byte) 118, "generalfont", param4, "lobby", param3);
-              kw.field_e = jta.a((byte) 127, "chatfont", param4, "lobby", param3);
-              var7.a(var5_array, var21);
-              qw.field_f.a(var5_array, var21);
-              kw.field_e.a(var5_array, var21);
-              var8 = new jea(0L, (jea) null);
-              var8.field_P = di.field_a;
-              var8.field_ib = 16777215;
-              var8.field_H = (il) ((Object) var7);
-              var8.field_bb = 1;
-              var9 = var8;
-              var9.field_z = 1;
-              var10 = new jea(0L, (jea) null);
-              var10.field_P = di.field_a;
-              var10.field_ib = 16777215;
-              var10.field_H = (il) ((Object) qw.field_f);
-              var11 = var10;
-              var10.field_bb = 1;
-              var11.field_z = 1;
-              uda.field_s = new jea(0L, var8);
-              uda.field_s.field_w = rfa.a(uka.a(param4, "lobby", 5, "heading"), 126);
-              joa.field_d = new jea(0L, (jea) null);
-              joa.field_d.field_w = tba.a(-74, false, 120, 8421504, 4210752, false);
-              ji.field_g = new jea(0L, (jea) null);
-              ji.field_g.field_w = hca.c(114, 1, 3, 6316128, -111, 6316128);
-              lw.field_a = new jea(0L, (jea) null);
-              lw.field_a.field_w = rfa.a(uka.a(param4, "lobby", 5, "popup"), 113);
-              var12 = rfa.a(uka.a(param4, "lobby", 5, "popup_mouseover"), 122);
-              var13 = uka.a(param4, "lobby", 5, "button");
-              var14 = rfa.a(uka.a(param4, "lobby", 5, "tab_active"), 113);
-              oba.field_f = new jea(0L, var8);
-              oba.field_f.field_w = var14;
-              cga.field_g = new jea(0L, (jea) null);
-              cga.field_g.field_R = nia.a(param4, "lobby", "closebutton", 125);
-              cga.field_g.field_rb = nia.a(param4, "lobby", "closebutton_mouseover", -112);
-              sm.field_r = new jea(0L, var8);
-              sm.field_r.field_w = tba.a(-67, true, 40, 3815994, 2039583, true);
-              ooa.field_f = new jea(0L, var10);
-              ooa.field_f.field_x = 2;
-              ooa.field_f.field_w = tba.a(-75, false, 30, 3815994, 2039583, true);
-              cs.field_a = new jea(0L, var10);
-              cs.field_a.field_x = 2;
-              cs.field_a.field_w = tba.a(-116, false, 30, 3815994, 2039583, false);
-              hma.field_b = new jea(0L, var10);
-              hma.field_b.field_x = 2;
-              hma.field_b.field_w = tba.a(-104, true, 30, 3815994, 2039583, false);
-              kua.field_i = new jea(0L, (jea) null);
-              kua.field_i.field_ib = 13421772;
-              kua.field_i.field_P = di.field_a;
-              kua.field_i.field_H = (il) ((Object) qw.field_f);
-              kua.field_i.field_bb = 1;
-              dja.field_p = new jea(0L, kua.field_i);
-              dja.field_p.field_ab = 16777215;
-              dja.field_p.field_hb = 8421504;
-              dja.field_p.field_gb = 16777215;
-              dja.field_p.field_ib = 16764006;
-              dja.field_p.field_N = 16777215;
-              var15 = new jea(0L, dja.field_p);
-              var15.field_ib = 16777215;
-              var15.field_H = (il) ((Object) var7);
-              var15.field_P = di.field_a;
-              tka.field_q = new jea(0L, kua.field_i);
-              tka.field_q.field_w = tba.a(-103, param0, 16, 2236962, 2236962, false);
-              tka.field_q.field_x = 2;
-              una.field_j = new jea(0L, kua.field_i);
-              una.field_j.field_w = tba.a(-73, false, 16, 1513239, 1513239, false);
-              una.field_j.field_x = 2;
-              iea.field_g = new jea(0L, tka.field_q);
-              iea.field_g.a(false, dja.field_p);
-              lta.field_a = new jea(0L, una.field_j);
-              lta.field_a.a(param0, dja.field_p);
-              var16 = uka.a(param4, "lobby", 5, "button_mouseover");
-              eq.field_n = new ola(lw.field_a, var12, kua.field_i, dja.field_p, 3, 2, pda.field_c, 3, di.field_a);
-              qi.field_M = new jea(0L, dja.field_p);
-              qi.field_M.field_fb = 1;
-              qi.field_M.field_ob = 1;
-              qi.field_M.field_v = 1;
-              qi.field_M.field_w = var13;
-              qi.field_M.field_C = var16;
-              qi.field_M.field_W = 1;
-              qi.field_M.field_db = uka.a(param4, "lobby", 5, "button_mouseheld");
-              qi.field_M.field_n = uka.a(param4, "lobby", 5, "button_active");
-              qi.field_M.field_M = uka.a(param4, "lobby", 5, "button_disabled");
-              qi.field_M.field_z = 1;
-              up.field_a = new jea(0L, dja.field_p);
-              up.field_a.field_z = 1;
-              up.field_a.field_w = rfa.a(uka.a(param4, "lobby", 5, "tab_inactive"), 113);
-              up.field_a.field_C = rfa.a(uka.a(param4, "lobby", 5, "tab_mouseover"), 113);
-              up.field_a.field_n = var14;
-              js.field_d = new jea(0L, (jea) null);
-              js.field_d.field_w = hca.c(206, -1, 3, 1856141, -113, 1127256);
-              cfa.field_c = new jea(0L, (jea) null);
-              cfa.field_c.field_w = hca.c(290, -1, 3, 11579568, -120, 6052956);
-              hg.field_g = new jea(0L, var15);
-              hg.field_g.field_W = 1;
-              hg.field_g.field_v = 1;
-              hg.field_g.field_fb = 1;
-              hg.field_g.field_ob = 1;
-              hg.field_g.field_z = 1;
-              dp.field_i = new jea(0L, hg.field_g);
-              jk.field_g = new jea(0L, dja.field_p);
-              jk.field_g.field_W = 1;
-              jk.field_g.field_v = 1;
-              jk.field_g.field_fb = 1;
-              jk.field_g.field_ob = 1;
-              jk.field_g.field_z = 1;
-              bua.field_g = new jea(0L, jk.field_g);
-              kv.field_b = new jea(0L, jk.field_g);
-              ssa.field_g = new jea(0L, hg.field_g);
-              jq.field_o = new jea(0L, jk.field_g);
-              dn.field_a = new jea(0L, jk.field_g);
-              qja.field_j = new jea(0L, jk.field_g);
-              jk.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "smallbutton"), 124);
-              jk.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "smallbutton_mouseover"), 127);
-              dupTemp$4 = rfa.a(uka.a(param4, "lobby", 5, "smallbutton_active"), 114);
-              jk.field_g.field_n = dupTemp$4;
-              jk.field_g.field_db = dupTemp$4;
-              jk.field_g.field_M = rfa.a(uka.a(param4, "lobby", 5, "smallbutton_disabled"), 127);
-              dp.field_i.field_w = rfa.a(uka.a(param4, "lobby", 5, "mediumbutton"), 125);
-              dp.field_i.field_C = rfa.a(uka.a(param4, "lobby", 5, "mediumbutton_mouseover"), 115);
-              dp.field_i.field_db = rfa.a(uka.a(param4, "lobby", 5, "mediumbutton_mouseheld"), 114);
-              hg.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "bigbutton"), 127);
-              hg.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "bigbutton_mouseover"), 118);
-              hg.field_g.field_db = rfa.a(uka.a(param4, "lobby", 5, "bigbutton_mouseheld"), 122);
-              hg.field_g.field_M = rfa.a(uka.a(param4, "lobby", 5, "bigbutton_disabled"), 124);
-              bua.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "greenbutton"), 124);
-              bua.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "greenbutton_mouseover"), 116);
-              bua.field_g.field_db = rfa.a(uka.a(param4, "lobby", 5, "greenbutton_mouseheld"), 123);
-              kv.field_b.field_w = rfa.a(uka.a(param4, "lobby", 5, "redbutton"), 113);
-              kv.field_b.field_C = rfa.a(uka.a(param4, "lobby", 5, "redbutton_mouseover"), 123);
-              kv.field_b.field_db = rfa.a(uka.a(param4, "lobby", 5, "redbutton_mouseheld"), 116);
-              ssa.field_g.field_w = rfa.a(uka.a(param4, "lobby", 5, "backbutton"), 125);
-              ssa.field_g.field_C = rfa.a(uka.a(param4, "lobby", 5, "backbutton_mouseover"), 117);
-              ssa.field_g.field_db = rfa.a(uka.a(param4, "lobby", 5, "backbutton_mouseheld"), 123);
-              ssa.field_g.field_M = rfa.a(uka.a(param4, "lobby", 5, "backbutton_disabled"), 116);
-              qja.field_j.field_w = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton"), 118);
-              qja.field_j.field_C = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton_mouseover"), 113);
-              dupTemp$5 = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton_active"), 118);
-              qja.field_j.field_n = dupTemp$5;
-              qja.field_j.field_db = dupTemp$5;
-              qja.field_j.field_M = rfa.a(uka.a(param4, "lobby", 5, "gameoptionbutton_disabled"), 125);
-              jq.field_o.field_w = rfa.a(uka.a(param4, "lobby", 5, "chatbutton"), 116);
-              jq.field_o.field_C = rfa.a(uka.a(param4, "lobby", 5, "chatbutton_mouseover"), 119);
-              dupTemp$6 = rfa.a(uka.a(param4, "lobby", 5, "chatbutton_active"), 119);
-              jq.field_o.field_n = dupTemp$6;
-              jq.field_o.field_db = dupTemp$6;
-              dn.field_a.field_w = rfa.a(uka.a(param4, "lobby", 5, "chatfilterbutton"), 112);
-              dn.field_a.field_C = rfa.a(uka.a(param4, "lobby", 5, "chatfilterbutton_mouseover"), 112);
-              dupTemp$7 = rfa.a(uka.a(param4, "lobby", 5, "chatfilterbutton_active"), 118);
-              dn.field_a.field_n = dupTemp$7;
-              dn.field_a.field_db = dupTemp$7;
-              var17 = uka.a(param4, "lobby", 5, "checkbox");
-              kt.field_F = new ta(0L, var17[1], var17[0], 1, dja.field_p, (String) null);
-              lr.field_b = new jea(0L, (jea) null);
-              lr.field_b.field_w = wpa.a((byte) -118, nia.a(param4, "lobby", "slideregion", 115));
-              lr.field_b.field_C = wpa.a((byte) -60, nia.a(param4, "lobby", "slideregion_mouseover", 75));
-              lr.field_b.field_db = wpa.a((byte) -118, nia.a(param4, "lobby", "slideregion_mouseheld", 123));
-              lr.field_b.field_M = wpa.a((byte) -87, nia.a(param4, "lobby", "slideregion_disabled", 106));
-              ie.field_h = new jea(0L, (jea) null);
-              ie.field_h.field_w = rfa.a(uka.a(param4, "lobby", 5, "dragbar"), 122);
-              ie.field_h.field_C = rfa.a(uka.a(param4, "lobby", 5, "dragbar_mouseover"), 121);
-              ie.field_h.field_db = rfa.a(uka.a(param4, "lobby", 5, "dragbar_mouseheld"), 113);
-              ie.field_h.field_M = rfa.a(uka.a(param4, "lobby", 5, "dragbar_disabled"), 116);
-              pk.field_s = new jea(0L, (jea) null);
-              pk.field_s.field_R = nia.a(param4, "lobby", "upbutton", -121);
-              pk.field_s.field_rb = nia.a(param4, "lobby", "upbutton_mouseover", -87);
-              pk.field_s.field_U = nia.a(param4, "lobby", "upbutton_mouseheld", 71);
-              pk.field_s.field_B = nia.a(param4, "lobby", "upbutton_disabled", 71);
-              jqa.field_b = new jea(0L, (jea) null);
-              jqa.field_b.field_R = nia.a(param4, "lobby", "downbutton", 119);
-              jqa.field_b.field_rb = nia.a(param4, "lobby", "downbutton_mouseover", -73);
-              jqa.field_b.field_U = nia.a(param4, "lobby", "downbutton_mouseheld", 56);
-              jqa.field_b.field_B = nia.a(param4, "lobby", "downbutton_disabled", 113);
-              fe.field_F = new oj(0L, pk.field_s, jqa.field_b, lr.field_b, ie.field_h);
-              aaa.field_d = new hla(0L, (jea) null, rfa.field_C, fe.field_F, jk.field_g, (String) null, (String) null);
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L16: {
-            var5 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) (var5);
-            stackOut_36_1 = new StringBuilder().append("qr.V(").append(param0).append(',');
-            stackIn_38_0 = stackOut_36_0;
-            stackIn_38_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+          L8: {
+            var5_ref = decompiledCaughtException;
+            stackIn_26_0 = (RuntimeException) (var5_ref);
+
+            stackIn_26_1 = new StringBuilder().append("qr.V(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
-              break L16;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
+              break L8;
             } else {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "{...}";
-              stackIn_39_0 = stackOut_37_0;
-              stackIn_39_1 = stackOut_37_1;
-              stackIn_39_2 = stackOut_37_2;
-              break L16;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
+              break L8;
             }
           }
-          L17: {
-            stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-            stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',');
-            stackIn_41_0 = stackOut_39_0;
-            stackIn_41_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+          L9: {
+
+
+            stackIn_29_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
+
             if (param2 == null) {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
-              break L17;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
+              break L9;
             } else {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "{...}";
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_42_1 = stackOut_40_1;
-              stackIn_42_2 = stackOut_40_2;
-              break L17;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
+              break L9;
             }
           }
-          L18: {
-            stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-            stackOut_42_1 = ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(',');
-            stackIn_44_0 = stackOut_42_0;
-            stackIn_44_1 = stackOut_42_1;
-            stackIn_43_0 = stackOut_42_0;
-            stackIn_43_1 = stackOut_42_1;
+          L10: {
+
+
+            stackIn_32_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',');
+
             if (param3 == null) {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "null";
-              stackIn_45_0 = stackOut_44_0;
-              stackIn_45_1 = stackOut_44_1;
-              stackIn_45_2 = stackOut_44_2;
-              break L18;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
+              break L10;
             } else {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "{...}";
-              stackIn_45_0 = stackOut_43_0;
-              stackIn_45_1 = stackOut_43_1;
-              stackIn_45_2 = stackOut_43_2;
-              break L18;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
+              break L10;
             }
           }
-          L19: {
-            stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-            stackOut_45_1 = ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(',');
-            stackIn_47_0 = stackOut_45_0;
-            stackIn_47_1 = stackOut_45_1;
-            stackIn_46_0 = stackOut_45_0;
-            stackIn_46_1 = stackOut_45_1;
+          L11: {
+
+
+            stackIn_35_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',');
+
             if (param4 == null) {
-              stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackOut_47_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackOut_47_2 = "null";
-              stackIn_48_0 = stackOut_47_0;
-              stackIn_48_1 = stackOut_47_1;
-              stackIn_48_2 = stackOut_47_2;
-              break L19;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "null";
+              break L11;
             } else {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "{...}";
-              stackIn_48_0 = stackOut_46_0;
-              stackIn_48_1 = stackOut_46_1;
-              stackIn_48_2 = stackOut_46_2;
-              break L19;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "{...}";
+              break L11;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_48_0), stackIn_48_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_27_0), stackIn_36_2 + ')');
         }
     }
 
     final boolean a(int param0, int param1, int param2, int param3, ae param4, int param5, int param6) {
-        String discarded$2 = null;
         RuntimeException var8 = null;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
               if (param6 == -1) {
                 break L1;
               } else {
-                discarded$2 = this.d((byte) -80);
+                this.d((byte) -80);
                 break L1;
               }
             }
@@ -926,15 +678,13 @@ abstract class qr extends ae implements tpa {
                     if (!this.field_x.a(param0, param1, param2, param3, param4, param5, -1)) {
                       break L3;
                     } else {
-                      stackOut_5_0 = 1;
-                      stackIn_7_0 = stackOut_5_0;
+                      stackIn_7_0 = 1;
                       break L2;
                     }
                   }
                 }
               }
-              stackOut_6_0 = 0;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = 0;
               break L2;
             }
             break L0;
@@ -943,27 +693,19 @@ abstract class qr extends ae implements tpa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var8 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var8);
-            stackOut_8_1 = new StringBuilder().append("qr.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var8);
+
+            stackIn_10_1 = new StringBuilder().append("qr.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L4;
             }
           }
@@ -973,40 +715,27 @@ abstract class qr extends ae implements tpa {
     }
 
     ae b(boolean param0) {
-        ae var2 = null;
-        L0: {
-          var2 = this.field_x;
-          if (var2 == null) {
-            break L0;
-          } else {
-            if (!var2.b((byte) -34)) {
-              break L0;
-            } else {
-              return var2;
-            }
-          }
+        ae var2 = this.field_x;
+        if (var2 != null && var2.b((byte) -34)) {
+            return var2;
         }
         if (!param0) {
-          return null;
-        } else {
-          field_v = (da) null;
-          return null;
+            return null;
         }
+        field_v = (da) null;
+        return null;
     }
 
     String d(byte param0) {
         String var3_ref_String = null;
-        int var3 = 0;
         String var2 = super.d((byte) 112);
         if (!(this.field_x == null)) {
             var3_ref_String = this.field_x.d((byte) 51);
-            if (var3_ref_String == null) {
-                var3 = -32 / ((param0 - -58) / 60);
-                return var2;
+            if (var3_ref_String != null) {
+                return var3_ref_String;
             }
-            return var3_ref_String;
         }
-        var3 = -32 / ((param0 - -58) / 60);
+        int var3 = -32 / ((param0 - -58) / 60);
         return var2;
     }
 
@@ -1019,12 +748,8 @@ abstract class qr extends ae implements tpa {
     }
 
     final static boolean a(int param0) {
-        int stackIn_5_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_4_0 = 0;
-        if (param0 != 0) {
-          return true;
-        } else {
+        int stackIn_6_0 = 0;
+        if (param0 == 0) {
           L0: {
             L1: {
               if (!vka.A(param0 ^ 108)) {
@@ -1033,17 +758,17 @@ abstract class qr extends ae implements tpa {
                 if ((8 & pk.field_C) != 0) {
                   break L1;
                 } else {
-                  stackOut_3_0 = 1;
-                  stackIn_5_0 = stackOut_3_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_6_0 = 0;
             break L0;
           }
-          return stackIn_5_0 != 0;
+          return stackIn_6_0 != 0;
+        } else {
+          return true;
         }
     }
 
@@ -1051,8 +776,6 @@ abstract class qr extends ae implements tpa {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_8_0 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -1060,17 +783,6 @@ abstract class qr extends ae implements tpa {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             if (param1 > 14) {
@@ -1085,22 +797,19 @@ abstract class qr extends ae implements tpa {
                       if (!this.field_x.a(param0, false)) {
                         break L2;
                       } else {
-                        stackOut_6_0 = 1;
-                        stackIn_8_0 = stackOut_6_0;
+                        stackIn_8_0 = 1;
                         break L1;
                       }
                     }
                   }
                 }
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 0;
                 break L1;
               }
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -1109,27 +818,19 @@ abstract class qr extends ae implements tpa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3);
-            stackOut_9_1 = new StringBuilder().append("qr.H(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("qr.H(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -1146,8 +847,6 @@ abstract class qr extends ae implements tpa {
         RuntimeException var8 = null;
         int stackIn_2_0 = 0;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -1155,17 +854,6 @@ abstract class qr extends ae implements tpa {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if (param0 > 70) {
@@ -1177,21 +865,18 @@ abstract class qr extends ae implements tpa {
                     if (!this.field_x.a(111, this.field_i + param1, param2 + this.field_n, param3, param4, param5, param6)) {
                       break L2;
                     } else {
-                      stackOut_5_0 = 1;
-                      stackIn_7_0 = stackOut_5_0;
+                      stackIn_7_0 = 1;
                       break L1;
                     }
                   }
                 }
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 0;
                 break L1;
               }
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 0;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -1200,27 +885,19 @@ abstract class qr extends ae implements tpa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var8 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var8);
-            stackOut_8_1 = new StringBuilder().append("qr.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var8);
+
+            stackIn_10_1 = new StringBuilder().append("qr.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -1250,133 +927,83 @@ abstract class qr extends ae implements tpa {
     }
 
     final void a(Hashtable param0, int param1, StringBuilder param2, int param3) {
-        StringBuilder discarded$14 = null;
-        StringBuilder discarded$15 = null;
-        StringBuilder discarded$16 = null;
-        StringBuilder discarded$17 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var5 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            discarded$14 = param2.append('\n');
+            discarded$4 = param2.append('\n');
             var5_int = param3;
             L1: while (true) {
-              L2: {
-                L3: {
-                  if (param1 < var5_int) {
-                    if (this.field_x == null) {
-                      break L3;
-                    } else {
-                      discarded$15 = this.field_x.a(param1 - -1, param0, param2, 0);
-                      if (var6 == 0) {
-                        break L2;
-                      } else {
-                        break L3;
-                      }
-                    }
+              if (param1 < var5_int) {
+                L2: {
+                  if (this.field_x == null) {
+                    discarded$5 = param2.append("null");
+                    break L2;
                   } else {
-                    discarded$16 = param2.append(' ');
-                    var5_int++;
-                    if (var6 != 0) {
-                      break L3;
-                    } else {
-                      continue L1;
-                    }
+                    this.field_x.a(param1 - -1, param0, param2, 0);
+                    break L2;
                   }
                 }
-                discarded$17 = param2.append("null");
-                break L2;
+                break L0;
+              } else {
+                discarded$6 = param2.append(' ');
+                var5_int++;
+                continue L1;
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var5);
-            stackOut_11_1 = new StringBuilder().append("qr.J(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_10_0 = (RuntimeException) (var5);
+
+            stackIn_10_1 = new StringBuilder().append("qr.J(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L4;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
+              break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L4;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
+              break L3;
             }
           }
-          L5: {
-            stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param1).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+          L4: {
+
+
+            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L5;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
+              break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L5;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
+              break L4;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param3 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_14_2 + ',' + param3 + ')');
         }
     }
 
@@ -1388,24 +1015,14 @@ abstract class qr extends ae implements tpa {
     }
 
     void a(byte param0, ae param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var7 = null;
         cn var8 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var7 = null;
         try {
           L0: {
             L1: {
@@ -1431,27 +1048,19 @@ abstract class qr extends ae implements tpa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var7 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var7);
-            stackOut_6_1 = new StringBuilder().append("qr.Q(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var7);
+
+            stackIn_8_1 = new StringBuilder().append("qr.Q(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
@@ -1467,13 +1076,10 @@ abstract class qr extends ae implements tpa {
     }
 
     final boolean a(char param0, ae param1, int param2, boolean param3) {
-        boolean discarded$2 = false;
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
         boolean stackIn_13_0 = false;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -1481,17 +1087,6 @@ abstract class qr extends ae implements tpa {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        boolean stackOut_12_0 = false;
-        boolean stackOut_11_0 = false;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
@@ -1502,8 +1097,7 @@ abstract class qr extends ae implements tpa {
                   break L1;
                 } else {
                   if (this.field_x.a(param0, param1, param2, true)) {
-                    stackOut_4_0 = 1;
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = 1;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   } else {
@@ -1516,7 +1110,7 @@ abstract class qr extends ae implements tpa {
               if (param3) {
                 break L2;
               } else {
-                discarded$2 = this.b((byte) -68);
+                this.b((byte) -68);
                 break L2;
               }
             }
@@ -1524,12 +1118,10 @@ abstract class qr extends ae implements tpa {
             if (-81 == (var5_int ^ -1)) {
               L3: {
                 if (!oj.field_tb[81]) {
-                  stackOut_12_0 = this.a(param1, 71);
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = this.a(param1, 71);
                   break L3;
                 } else {
-                  stackOut_11_0 = this.b(param1, 3815994);
-                  stackIn_13_0 = stackOut_11_0;
+                  stackIn_13_0 = this.b(param1, 3815994);
                   break L3;
                 }
               }
@@ -1543,27 +1135,19 @@ abstract class qr extends ae implements tpa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var5);
-            stackOut_14_1 = new StringBuilder().append("qr.P(").append(param0).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var5);
+
+            stackIn_16_1 = new StringBuilder().append("qr.P(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }
@@ -1577,25 +1161,14 @@ abstract class qr extends ae implements tpa {
     }
 
     void a(int param0, int param1, ae param2, int param3) {
-        boolean discarded$2 = false;
-        RuntimeException var5 = null;
         ae var6 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -1604,7 +1177,7 @@ abstract class qr extends ae implements tpa {
                 break L1;
               } else {
                 var6 = (ae) null;
-                discarded$2 = this.a(55, -69, -121, 107, (ae) null, -94, -43);
+                this.a(55, -69, -121, 107, (ae) null, -94, -43);
                 break L1;
               }
             }
@@ -1622,27 +1195,19 @@ abstract class qr extends ae implements tpa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var5);
-            stackOut_5_1 = new StringBuilder().append("qr.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var5);
+
+            stackIn_7_1 = new StringBuilder().append("qr.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L3;
             }
           }

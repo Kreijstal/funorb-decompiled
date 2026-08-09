@@ -10,8 +10,6 @@ final class cj {
         RuntimeException var2 = null;
         mi stackIn_2_0 = null;
         mi stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -19,16 +17,6 @@ final class cj {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        mi stackOut_6_0 = null;
-        mi stackOut_1_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if (param0 <= -75) {
@@ -44,13 +32,11 @@ final class cj {
                   }
                 }
               }
-              stackOut_6_0 = bd.field_u;
-              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_0 = bd.field_u;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (mi) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (mi) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -59,27 +45,19 @@ final class cj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var2);
-            stackOut_8_1 = new StringBuilder().append("cj.B(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var2);
+
+            stackIn_10_1 = new StringBuilder().append("cj.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }
@@ -93,77 +71,72 @@ final class cj {
     }
 
     final static void a(int param0) {
-        L0: {
-          hi.field_g[0].d();
-          ul.h(0, 0, 160, 120, 0);
-          ul.a(1280, 960, 960, 255, ki.field_f);
-          hg.field_ab.c(40, 20);
-          ab.field_g[0].d(10, 50);
-          ab.field_g[1].d(100, 50);
-          ab.field_g[2].d(55, 70);
-          cb.field_a.a(-40);
-          hi.field_g[1].d();
-          ul.h(0, 0, 160, 120, 0);
-          ab.field_g[24].d(80, 0);
-          ab.field_g[24].d(110, 10);
-          ul.a(960, 800, 640, 255, ki.field_f);
-          hg.field_ab.d(40, 30);
-          ul.a(1600, 1120, 640, 255, ki.field_f);
-          hg.field_ab.d(80, 50);
-          ab.field_g[12].d(10, 50);
-          ab.field_g[12].d(40, 60);
-          ab.field_g[12].d(20, 70);
-          cb.field_a.a(-40);
-          hi.field_g[2].d();
-          ul.h(0, 0, 160, 120, 0);
-          ab.field_g[60].c(30, 10);
-          ul.a(480, 1040, 480, 255, ki.field_f);
-          hg.field_ab.d(10, 45);
-          ul.a(2080, 1040, 480, 255, ki.field_f);
-          hg.field_ab.d(110, 45);
-          cb.field_a.a(-40);
-          hi.field_g[3].d();
-          ul.h(0, 0, 160, 120, 0);
-          ab.field_g[86].c(30, 0);
-          ul.a(480, 1040, 240, 255, ki.field_f);
-          hg.field_ab.a(20, 55);
-          ul.a(2080, 1040, 240, 255, ki.field_f);
-          hg.field_ab.a(120, 55);
-          ul.a(880, 1360, 240, 255, ki.field_f);
-          hg.field_ab.a(45, 75);
-          ul.a(1680, 1360, 240, 255, ki.field_f);
-          hg.field_ab.a(95, 75);
-          ul.a(1280, 1440, 240, 255, ki.field_f);
-          hg.field_ab.a(70, 80);
-          cb.field_a.a(-40);
-          hi.field_g[4].d();
-          ul.h(0, 0, 160, 120, 0);
-          ul.a(640, 1520, 240, 255, ki.field_f);
-          hg.field_ab.a(30, 85);
-          ul.a(1920, 1520, 240, 255, ki.field_f);
-          hg.field_ab.a(110, 85);
-          ul.a(1920, 560, 240, 255, ki.field_f);
-          hg.field_ab.a(110, 25);
-          ab.field_g[99].d(20, 20);
-          hf.field_g[0].d(75, 55);
-          hf.field_g[2].b(2093920872, 3000, 50, 85, 62);
-          hf.field_g[1].d(75, 55);
-          cb.field_a.a(-40);
-          hi.field_g[5].d();
-          ul.h(0, 0, 160, 120, 0);
-          ul.a(640, 640, 640, 255, ki.field_f);
-          hg.field_ab.d(20, 20);
-          ul.a(1280, 960, 960, 255, ki.field_f);
-          hg.field_ab.c(40, 20);
-          ul.a(1920, 1280, 640, 255, ki.field_f);
-          hg.field_ab.d(100, 60);
-          cb.field_a.a(-40);
-          if (param0 > 51) {
-            break L0;
-          } else {
+        hi.field_g[0].d();
+        ul.h(0, 0, 160, 120, 0);
+        ul.a(1280, 960, 960, 255, ki.field_f);
+        hg.field_ab.c(40, 20);
+        ab.field_g[0].d(10, 50);
+        ab.field_g[1].d(100, 50);
+        ab.field_g[2].d(55, 70);
+        cb.field_a.a(-40);
+        hi.field_g[1].d();
+        ul.h(0, 0, 160, 120, 0);
+        ab.field_g[24].d(80, 0);
+        ab.field_g[24].d(110, 10);
+        ul.a(960, 800, 640, 255, ki.field_f);
+        hg.field_ab.d(40, 30);
+        ul.a(1600, 1120, 640, 255, ki.field_f);
+        hg.field_ab.d(80, 50);
+        ab.field_g[12].d(10, 50);
+        ab.field_g[12].d(40, 60);
+        ab.field_g[12].d(20, 70);
+        cb.field_a.a(-40);
+        hi.field_g[2].d();
+        ul.h(0, 0, 160, 120, 0);
+        ab.field_g[60].c(30, 10);
+        ul.a(480, 1040, 480, 255, ki.field_f);
+        hg.field_ab.d(10, 45);
+        ul.a(2080, 1040, 480, 255, ki.field_f);
+        hg.field_ab.d(110, 45);
+        cb.field_a.a(-40);
+        hi.field_g[3].d();
+        ul.h(0, 0, 160, 120, 0);
+        ab.field_g[86].c(30, 0);
+        ul.a(480, 1040, 240, 255, ki.field_f);
+        hg.field_ab.a(20, 55);
+        ul.a(2080, 1040, 240, 255, ki.field_f);
+        hg.field_ab.a(120, 55);
+        ul.a(880, 1360, 240, 255, ki.field_f);
+        hg.field_ab.a(45, 75);
+        ul.a(1680, 1360, 240, 255, ki.field_f);
+        hg.field_ab.a(95, 75);
+        ul.a(1280, 1440, 240, 255, ki.field_f);
+        hg.field_ab.a(70, 80);
+        cb.field_a.a(-40);
+        hi.field_g[4].d();
+        ul.h(0, 0, 160, 120, 0);
+        ul.a(640, 1520, 240, 255, ki.field_f);
+        hg.field_ab.a(30, 85);
+        ul.a(1920, 1520, 240, 255, ki.field_f);
+        hg.field_ab.a(110, 85);
+        ul.a(1920, 560, 240, 255, ki.field_f);
+        hg.field_ab.a(110, 25);
+        ab.field_g[99].d(20, 20);
+        hf.field_g[0].d(75, 55);
+        hf.field_g[2].b(2093920872, 3000, 50, 85, 62);
+        hf.field_g[1].d(75, 55);
+        cb.field_a.a(-40);
+        hi.field_g[5].d();
+        ul.h(0, 0, 160, 120, 0);
+        ul.a(640, 640, 640, 255, ki.field_f);
+        hg.field_ab.d(20, 20);
+        ul.a(1280, 960, 960, 255, ki.field_f);
+        hg.field_ab.c(40, 20);
+        ul.a(1920, 1280, 640, 255, ki.field_f);
+        hg.field_ab.d(100, 60);
+        cb.field_a.a(-40);
+        if (param0 <= 51) {
             field_b = (vd) null;
-            break L0;
-          }
         }
     }
 

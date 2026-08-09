@@ -65,13 +65,6 @@ final class la {
         int stackIn_21_0 = 0;
         int stackIn_36_0 = 0;
         int stackIn_41_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_14_0 = 0;
         if (param2 == 703166480) {
           if (param0 >= this.field_g) {
             if (param1 >= this.field_b) {
@@ -97,20 +90,17 @@ final class la {
                             if (param3 > this.field_j) {
                               break L1;
                             } else {
-                              stackOut_39_0 = 1;
-                              stackIn_41_0 = stackOut_39_0;
+                              stackIn_41_0 = 1;
                               break L0;
                             }
                           }
                         }
-                        stackOut_40_0 = 0;
-                        stackIn_41_0 = stackOut_40_0;
+                        stackIn_41_0 = 0;
                         break L0;
                       }
                       return stackIn_41_0 != 0;
                     } else {
-                      stackOut_34_0 = 1;
-                      stackIn_36_0 = stackOut_34_0;
+                      stackIn_36_0 = 1;
                       return stackIn_36_0 != 0;
                     }
                   }
@@ -144,14 +134,12 @@ final class la {
                             if (param3 > this.field_j) {
                               break L3;
                             } else {
-                              stackOut_19_0 = 1;
-                              stackIn_21_0 = stackOut_19_0;
+                              stackIn_21_0 = 1;
                               break L2;
                             }
                           }
                         }
-                        stackOut_20_0 = 0;
-                        stackIn_21_0 = stackOut_20_0;
+                        stackIn_21_0 = 0;
                         break L2;
                       }
                       return stackIn_21_0 != 0;
@@ -165,14 +153,12 @@ final class la {
                           if (param3 > this.field_j) {
                             break L5;
                           } else {
-                            stackOut_13_0 = 1;
-                            stackIn_15_0 = stackOut_13_0;
+                            stackIn_15_0 = 1;
                             break L4;
                           }
                         }
                       }
-                      stackOut_14_0 = 0;
-                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_0 = 0;
                       break L4;
                     }
                     return stackIn_15_0 != 0;
@@ -193,9 +179,8 @@ final class la {
     }
 
     final static boolean a(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 100) {
-            discarded$0 = la.b(78);
+            la.b(78);
             return nb.field_f;
         }
         return nb.field_f;

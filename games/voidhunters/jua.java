@@ -5,7 +5,7 @@ final class jua implements dja {
     static int field_a;
 
     final static void a(int param0, int param1, int param2) {
-        faa var3 = null;
+        faa var3;
         if (param2 != 20694) {
           return;
         } else {
@@ -19,9 +19,8 @@ final class jua implements dja {
     }
 
     public final tv[] a(int param0, int param1) {
-        tv[] discarded$0 = null;
         if (param0 != 11995) {
-            discarded$0 = this.a(-5, 123);
+            this.a(-5, 123);
             return (tv[]) ((Object) new kma[param1]);
         }
         return (tv[]) ((Object) new kma[param1]);

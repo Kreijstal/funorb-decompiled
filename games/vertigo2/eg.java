@@ -12,12 +12,16 @@ final class eg extends tk {
 
     final boolean d(int param0) {
         try {
-            IOException var2 = null;
+            int stackIn_50_0 = 0;
+            int stackIn_66_0 = 0;
+            int stackIn_89_0 = 0;
+            Throwable decompiledCaughtException = null;
             long var2_long = 0L;
-            ia var2_ref = null;
+            ia var2 = null;
             int var2_int = 0;
-            Exception var3 = null;
+            IOException var2_ref = null;
             int var3_int = 0;
+            Exception var3 = null;
             int var4 = 0;
             Exception var5_ref_Exception = null;
             int var5 = 0;
@@ -33,15 +37,6 @@ final class eg extends tk {
             int var15 = 0;
             int var16 = 0;
             int var17 = 0;
-            int stackIn_50_0 = 0;
-            int stackIn_66_0 = 0;
-            int stackIn_89_0 = 0;
-            Throwable decompiledCaughtException = null;
-            int stackOut_49_0 = 0;
-            int stackOut_48_0 = 0;
-            int stackOut_65_0 = 0;
-            int stackOut_64_0 = 0;
-            int stackOut_88_0 = 0;
             L0: {
               var16 = Vertigo2.field_L ? 1 : 0;
               if (param0 == -3599) {
@@ -101,12 +96,12 @@ final class eg extends tk {
               try {
                 L5: {
                   this.field_u.c(-26206);
-                  var2_ref = (ia) ((Object) this.field_b.b((byte) -50));
+                  var2 = (ia) ((Object) this.field_b.b((byte) -50));
                   L6: while (true) {
-                    if (var2_ref == null) {
-                      var2_ref = (ia) ((Object) this.field_d.b((byte) -50));
+                    if (var2 == null) {
+                      var2 = (ia) ((Object) this.field_d.b((byte) -50));
                       L7: while (true) {
-                        if (var2_ref == null) {
+                        if (var2 == null) {
                           var2_int = 0;
                           L8: while (true) {
                             L9: {
@@ -237,12 +232,10 @@ final class eg extends tk {
                                               var9 = this.field_i.b(true);
                                               var10 = var8 & 127;
                                               if (-1 == (128 & var8 ^ -1)) {
-                                                stackOut_49_0 = 0;
-                                                stackIn_50_0 = stackOut_49_0;
+                                                stackIn_50_0 = 0;
                                                 break L19;
                                               } else {
-                                                stackOut_48_0 = 1;
-                                                stackIn_50_0 = stackOut_48_0;
+                                                stackIn_50_0 = 1;
                                                 break L19;
                                               }
                                             }
@@ -286,12 +279,10 @@ final class eg extends tk {
                                               L23: {
                                                 this.field_h = var14_ref;
                                                 if (0 == var10) {
-                                                  stackOut_65_0 = 5;
-                                                  stackIn_66_0 = stackOut_65_0;
+                                                  stackIn_66_0 = 5;
                                                   break L23;
                                                 } else {
-                                                  stackOut_64_0 = 9;
-                                                  stackIn_66_0 = stackOut_64_0;
+                                                  stackIn_66_0 = 9;
                                                   break L23;
                                                 }
                                               }
@@ -317,34 +308,33 @@ final class eg extends tk {
                                 }
                               }
                             }
-                            stackOut_88_0 = 1;
-                            stackIn_89_0 = stackOut_88_0;
+                            stackIn_89_0 = 1;
                             break L5;
                           }
                         } else {
                           this.field_f.field_u = 0;
                           this.field_f.f(0, 93);
-                          this.field_f.b((byte) 125, var2_ref.field_n);
+                          this.field_f.b((byte) 125, var2.field_n);
                           this.field_u.a(0, this.field_f.field_p.length, -93, this.field_f.field_p);
-                          this.field_g.a(false, var2_ref);
-                          var2_ref = (ia) ((Object) this.field_d.a(true));
+                          this.field_g.a(false, var2);
+                          var2 = (ia) ((Object) this.field_d.a(true));
                           continue L7;
                         }
                       }
                     } else {
                       this.field_f.field_u = 0;
                       this.field_f.f(1, param0 ^ -3703);
-                      this.field_f.b((byte) 90, var2_ref.field_n);
+                      this.field_f.b((byte) 90, var2.field_n);
                       this.field_u.a(0, this.field_f.field_p.length, param0 ^ -3646, this.field_f.field_p);
-                      this.field_a.a(false, var2_ref);
-                      var2_ref = (ia) ((Object) this.field_b.a(true));
+                      this.field_a.a(false, var2);
+                      var2 = (ia) ((Object) this.field_b.a(true));
                       continue L6;
                     }
                   }
                 }
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
-                var2 = (IOException) (Object) decompiledCaughtException;
+                var2_ref = (IOException) (Object) decompiledCaughtException;
                 try {
                   L24: {
                     this.field_u.b(param0 ^ -3599);
@@ -384,29 +374,19 @@ final class eg extends tk {
 
     final void a(Object param0, boolean param1, int param2) {
         try {
-            Exception var4 = null;
-            IOException var4_ref = null;
-            RuntimeException var4_ref2 = null;
-            int var4_int = 0;
-            ia var4_ref3 = null;
-            Exception var5 = null;
-            int var6 = 0;
-            RuntimeException stackIn_23_0 = null;
-            StringBuilder stackIn_23_1 = null;
             RuntimeException stackIn_24_0 = null;
             StringBuilder stackIn_24_1 = null;
             RuntimeException stackIn_25_0 = null;
             StringBuilder stackIn_25_1 = null;
             String stackIn_25_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_22_0 = null;
-            StringBuilder stackOut_22_1 = null;
-            RuntimeException stackOut_24_0 = null;
-            StringBuilder stackOut_24_1 = null;
-            String stackOut_24_2 = null;
-            RuntimeException stackOut_23_0 = null;
-            StringBuilder stackOut_23_1 = null;
-            String stackOut_23_2 = null;
+            Exception var4 = null;
+            ia var4_ref = null;
+            IOException var4_ref2 = null;
+            int var4_int = 0;
+            RuntimeException var4_ref3 = null;
+            Exception var5 = null;
+            int var6 = 0;
             var6 = Vertigo2.field_L ? 1 : 0;
             try {
               L0: {
@@ -436,11 +416,11 @@ final class eg extends tk {
                 this.field_h = null;
                 this.field_i.field_u = 0;
                 L4: while (true) {
-                  var4_ref3 = (ia) ((Object) this.field_a.a(-67));
-                  if (var4_ref3 == null) {
+                  var4_ref = (ia) ((Object) this.field_a.a(-67));
+                  if (var4_ref == null) {
                     L5: while (true) {
-                      var4_ref3 = (ia) ((Object) this.field_g.a(-75));
-                      if (var4_ref3 == null) {
+                      var4_ref = (ia) ((Object) this.field_g.a(-75));
+                      if (var4_ref == null) {
                         L6: {
                           if (-1 != (this.field_l ^ -1)) {
                             try {
@@ -455,7 +435,7 @@ final class eg extends tk {
                             } catch (java.io.IOException decompiledCaughtParameter1) {
                               decompiledCaughtException = decompiledCaughtParameter1;
                               L8: {
-                                var4_ref = (IOException) (Object) decompiledCaughtException;
+                                var4_ref2 = (IOException) (Object) decompiledCaughtException;
                                 try {
                                   L9: {
                                     this.field_u.b(0);
@@ -484,12 +464,12 @@ final class eg extends tk {
                         var4_int = 76 / ((0 - param2) / 43);
                         break L0;
                       } else {
-                        this.field_d.a(false, var4_ref3);
+                        this.field_d.a(false, var4_ref);
                         continue L5;
                       }
                     }
                   } else {
-                    this.field_b.a(false, var4_ref3);
+                    this.field_b.a(false, var4_ref);
                     continue L4;
                   }
                 }
@@ -497,28 +477,20 @@ final class eg extends tk {
             } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               L11: {
-                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_22_0 = (RuntimeException) (var4_ref2);
-                stackOut_22_1 = new StringBuilder().append("eg.G(");
-                stackIn_24_0 = stackOut_22_0;
-                stackIn_24_1 = stackOut_22_1;
-                stackIn_23_0 = stackOut_22_0;
-                stackIn_23_1 = stackOut_22_1;
+                var4_ref3 = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_24_0 = (RuntimeException) (var4_ref3);
+
+                stackIn_24_1 = new StringBuilder().append("eg.G(");
+
                 if (param0 == null) {
-                  stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-                  stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-                  stackOut_24_2 = "null";
-                  stackIn_25_0 = stackOut_24_0;
-                  stackIn_25_1 = stackOut_24_1;
-                  stackIn_25_2 = stackOut_24_2;
+                  stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+                  stackIn_25_2 = "null";
                   break L11;
                 } else {
-                  stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-                  stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-                  stackOut_23_2 = "{...}";
-                  stackIn_25_0 = stackOut_23_0;
-                  stackIn_25_1 = stackOut_23_1;
-                  stackIn_25_2 = stackOut_23_2;
+                  stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+                  stackIn_25_2 = "{...}";
                   break L11;
                 }
               }
@@ -542,12 +514,10 @@ final class eg extends tk {
     }
 
     final static boolean a(boolean param0, int param1, byte param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         int stackIn_28_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           if (param0) {
             if (on.field_e[param1] >= on.field_e[param3]) {
@@ -596,12 +566,10 @@ final class eg extends tk {
             L1: {
               var6 = -30 / ((param2 - 0) / 39);
               if (param3 <= param1) {
-                stackOut_27_0 = 0;
-                stackIn_28_0 = stackOut_27_0;
+                stackIn_28_0 = 0;
                 break L1;
               } else {
-                stackOut_26_0 = 1;
-                stackIn_28_0 = stackOut_26_0;
+                stackIn_28_0 = 1;
                 break L1;
               }
             }
@@ -615,8 +583,8 @@ final class eg extends tk {
     private final void g(int param0) {
         try {
             IOException iOException = null;
-            Exception var3 = null;
             Throwable decompiledCaughtException = null;
+            Exception var3 = null;
             if (null == this.field_u) {
               return;
             } else {
@@ -697,17 +665,11 @@ final class eg extends tk {
     private final void a(boolean param0, byte param1) {
         try {
             IOException iOException = null;
-            Exception var4 = null;
-            ed stackIn_6_0 = null;
             ed stackIn_7_0 = null;
             ed stackIn_8_0 = null;
             int stackIn_8_1 = 0;
             Throwable decompiledCaughtException = null;
-            ed stackOut_5_0 = null;
-            ed stackOut_7_0 = null;
-            int stackOut_7_1 = 0;
-            ed stackOut_6_0 = null;
-            int stackOut_6_1 = 0;
+            Exception var4 = null;
             if (this.field_u == null) {
               return;
             } else {
@@ -723,20 +685,15 @@ final class eg extends tk {
                     }
                   }
                   L2: {
-                    stackOut_5_0 = this.field_f;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_6_0 = stackOut_5_0;
+                    stackIn_7_0 = this.field_f;
+
                     if (!param0) {
-                      stackOut_7_0 = (ed) ((Object) stackIn_7_0);
-                      stackOut_7_1 = 3;
-                      stackIn_8_0 = stackOut_7_0;
-                      stackIn_8_1 = stackOut_7_1;
+                      stackIn_8_0 = (ed) ((Object) stackIn_7_0);
+                      stackIn_8_1 = 3;
                       break L2;
                     } else {
-                      stackOut_6_0 = (ed) ((Object) stackIn_6_0);
-                      stackOut_6_1 = 2;
-                      stackIn_8_0 = stackOut_6_0;
-                      stackIn_8_1 = stackOut_6_1;
+                      stackIn_8_0 = (ed) ((Object) stackIn_7_0);
+                      stackIn_8_1 = 2;
                       break L2;
                     }
                   }

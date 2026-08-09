@@ -17,16 +17,14 @@ final class ck {
     }
 
     final static String a(int param0) {
-        String discarded$2 = null;
-        String discarded$3 = null;
-        String var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        String var12 = null;
-        String var13 = null;
+        String var1;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        String var6;
+        String var7;
+        String var8;
         var5 = TorChallenge.field_F ? 1 : 0;
         var6 = "(" + ul.field_j + " " + uc.field_X + " " + md.field_i + ") " + cb.field_g;
         var1 = var6;
@@ -36,14 +34,15 @@ final class ck {
           L0: while (true) {
             if (bb.field_i <= var2) {
               if (param0 != -13299) {
-                discarded$2 = ck.a(-82);
+                ck.a(-82);
                 return var1;
               } else {
                 return var1;
               }
             } else {
               L1: {
-                var12 = var1 + ' ';
+                var7 = var1 + ' ';
+                var1 = var7;
                 var3 = 255 & id.field_b.field_m[var2];
                 var4 = var3 >> 1509718020;
                 if (-11 < (var4 ^ -1)) {
@@ -56,7 +55,7 @@ final class ck {
               }
               L2: {
                 var3 = var3 & 15;
-                var13 = var12 + (char)var4;
+                var8 = var7 + (char)var4;
                 if (10 <= var3) {
                   var3 += 55;
                   break L2;
@@ -65,18 +64,21 @@ final class ck {
                   break L2;
                 }
               }
-              var1 = var13 + (char)var3;
+              var1 = var8 + (char)var3;
               var2++;
               continue L0;
             }
           }
         } else {
-          if (param0 == -13299) {
-            return var1;
-          } else {
-            discarded$3 = ck.a(-82);
-            return var1;
+          L3: {
+            if (param0 == -13299) {
+              break L3;
+            } else {
+              ck.a(-82);
+              break L3;
+            }
           }
+          return var1;
         }
     }
 

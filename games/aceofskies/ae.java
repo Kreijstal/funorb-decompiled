@@ -81,8 +81,8 @@ final class ae extends sk {
     }
 
     final static byte a(char param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         if (param0 > 0) {
           if (param0 >= 128) {
             if (param0 >= 160) {
@@ -573,16 +573,24 @@ final class ae extends sk {
 
     final static void a(int param0, rb param1, boolean param2, rk param3) {
         try {
-            byte discarded$2 = 0;
-            byte[] array$3 = null;
+            byte[] array$0 = null;
+            RuntimeException stackIn_39_0 = null;
+            StringBuilder stackIn_39_1 = null;
+            RuntimeException stackIn_40_0 = null;
+            StringBuilder stackIn_40_1 = null;
+            String stackIn_40_2 = null;
+            StringBuilder stackIn_42_1 = null;
+            StringBuilder stackIn_43_1 = null;
+            String stackIn_43_2 = null;
+            Throwable decompiledCaughtException = null;
             RuntimeException var4 = null;
             int var5 = 0;
+            int var6_int = 0;
             ClassNotFoundException var6 = null;
             SecurityException var6_ref = null;
             NullPointerException var6_ref2 = null;
             Exception var6_ref3 = null;
             Throwable var6_ref4 = null;
-            int var6_int = 0;
             String var7 = null;
             String var8 = null;
             int var9 = 0;
@@ -596,43 +604,11 @@ final class ae extends sk {
             String var15 = null;
             String var16 = null;
             int var17 = 0;
-            Object var18 = null;
-            bb var18_ref = null;
+            bb var18 = null;
             byte[][] var19 = null;
             String var20 = null;
             String var21 = null;
             byte[][] var22 = null;
-            RuntimeException stackIn_38_0 = null;
-            StringBuilder stackIn_38_1 = null;
-            RuntimeException stackIn_39_0 = null;
-            StringBuilder stackIn_39_1 = null;
-            RuntimeException stackIn_40_0 = null;
-            StringBuilder stackIn_40_1 = null;
-            String stackIn_40_2 = null;
-            RuntimeException stackIn_41_0 = null;
-            StringBuilder stackIn_41_1 = null;
-            RuntimeException stackIn_42_0 = null;
-            StringBuilder stackIn_42_1 = null;
-            RuntimeException stackIn_43_0 = null;
-            StringBuilder stackIn_43_1 = null;
-            String stackIn_43_2 = null;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_37_0 = null;
-            StringBuilder stackOut_37_1 = null;
-            RuntimeException stackOut_39_0 = null;
-            StringBuilder stackOut_39_1 = null;
-            String stackOut_39_2 = null;
-            RuntimeException stackOut_38_0 = null;
-            StringBuilder stackOut_38_1 = null;
-            String stackOut_38_2 = null;
-            RuntimeException stackOut_40_0 = null;
-            StringBuilder stackOut_40_1 = null;
-            RuntimeException stackOut_42_0 = null;
-            StringBuilder stackOut_42_1 = null;
-            String stackOut_42_2 = null;
-            RuntimeException stackOut_41_0 = null;
-            StringBuilder stackOut_41_1 = null;
-            String stackOut_41_2 = null;
             var14 = AceOfSkies.field_G ? 1 : 0;
             try {
               L0: {
@@ -640,23 +616,23 @@ final class ae extends sk {
                   if (!param2) {
                     break L1;
                   } else {
-                    discarded$2 = ae.a('￫', 105);
+                    ae.a('￫', 105);
                     break L1;
                   }
                 }
-                var18_ref = new bb();
-                var18_ref.field_g = param1.g(99);
-                var18_ref.field_j = param1.a((byte) 127);
-                var18_ref.field_k = new byte[var18_ref.field_g][][];
-                var18_ref.field_l = new int[var18_ref.field_g];
-                var18_ref.field_e = new int[var18_ref.field_g];
-                var18_ref.field_h = new en[var18_ref.field_g];
-                var18_ref.field_i = new int[var18_ref.field_g];
-                var18_ref.field_f = new en[var18_ref.field_g];
+                var18 = new bb();
+                var18.field_g = param1.g(99);
+                var18.field_j = param1.a((byte) 127);
+                var18.field_k = new byte[var18.field_g][][];
+                var18.field_l = new int[var18.field_g];
+                var18.field_e = new int[var18.field_g];
+                var18.field_h = new en[var18.field_g];
+                var18.field_i = new int[var18.field_g];
+                var18.field_f = new en[var18.field_g];
                 var5 = 0;
                 L2: while (true) {
-                  if (var18_ref.field_g <= var5) {
-                    av.field_c.a(66, var18_ref);
+                  if (var18.field_g <= var5) {
+                    av.field_c.a(66, var18);
                     break L0;
                   } else {
                     try {
@@ -700,8 +676,8 @@ final class ae extends sk {
                                               break L8;
                                             } else {
                                               var13 = param1.a((byte) 117);
-                                              array$3 = new byte[var13];
-                                              var11[var12_int] = array$3;
+                                              array$0 = new byte[var13];
+                                              var11[var12_int] = array$0;
                                               param1.a(0, 7186, var13, var22[var12_int]);
                                               var12_int++;
                                               continue L9;
@@ -711,14 +687,14 @@ final class ae extends sk {
                                           break L8;
                                         }
                                       }
-                                      var18_ref.field_l[var5] = var6_int;
+                                      var18.field_l[var5] = var6_int;
                                       var12 = new Class[var9];
                                       var17 = 0;
                                       var13 = var17;
                                       L10: while (true) {
                                         if (var9 <= var17) {
-                                          var18_ref.field_h[var5] = param3.a(pe.a(var20, 1), var12, var21, true);
-                                          var18_ref.field_k[var5] = var22;
+                                          var18.field_h[var5] = param3.a(pe.a(var20, 1), var12, var21, true);
+                                          var18.field_k[var5] = var22;
                                           break L4;
                                         } else {
                                           var12[var17] = pe.a(var10[var17], 1);
@@ -751,9 +727,9 @@ final class ae extends sk {
                               break L11;
                             }
                           }
-                          var18_ref.field_l[var5] = var6_int;
-                          var18_ref.field_i[var5] = var9;
-                          var18_ref.field_f[var5] = param3.a(var15, pe.a(var16, 1), 9);
+                          var18.field_l[var5] = var6_int;
+                          var18.field_i[var5] = var9;
+                          var18.field_f[var5] = param3.a(var15, pe.a(var16, 1), 9);
                           break L4;
                         }
                         break L3;
@@ -762,35 +738,35 @@ final class ae extends sk {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L12: {
                         var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                        var18_ref.field_e[var5] = -1;
+                        var18.field_e[var5] = -1;
                         break L12;
                       }
                     } catch (java.lang.SecurityException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       L13: {
                         var6_ref = (SecurityException) (Object) decompiledCaughtException;
-                        var18_ref.field_e[var5] = -2;
+                        var18.field_e[var5] = -2;
                         break L13;
                       }
                     } catch (java.lang.NullPointerException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       L14: {
                         var6_ref2 = (NullPointerException) (Object) decompiledCaughtException;
-                        var18_ref.field_e[var5] = -3;
+                        var18.field_e[var5] = -3;
                         break L14;
                       }
                     } catch (java.lang.Exception decompiledCaughtParameter3) {
                       decompiledCaughtException = decompiledCaughtParameter3;
                       L15: {
                         var6_ref3 = (Exception) (Object) decompiledCaughtException;
-                        var18_ref.field_e[var5] = -4;
+                        var18.field_e[var5] = -4;
                         break L15;
                       }
                     } catch (java.lang.Throwable decompiledCaughtParameter4) {
                       decompiledCaughtException = decompiledCaughtParameter4;
                       L16: {
                         var6_ref4 = decompiledCaughtException;
-                        var18_ref.field_e[var5] = -5;
+                        var18.field_e[var5] = -5;
                         break L16;
                       }
                     }
@@ -803,56 +779,40 @@ final class ae extends sk {
               decompiledCaughtException = decompiledCaughtParameter5;
               L17: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_37_0 = (RuntimeException) (var4);
-                stackOut_37_1 = new StringBuilder().append("ae.C(").append(param0).append(',');
-                stackIn_39_0 = stackOut_37_0;
-                stackIn_39_1 = stackOut_37_1;
-                stackIn_38_0 = stackOut_37_0;
-                stackIn_38_1 = stackOut_37_1;
+                stackIn_39_0 = (RuntimeException) (var4);
+
+                stackIn_39_1 = new StringBuilder().append("ae.C(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-                  stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-                  stackOut_39_2 = "null";
-                  stackIn_40_0 = stackOut_39_0;
-                  stackIn_40_1 = stackOut_39_1;
-                  stackIn_40_2 = stackOut_39_2;
+                  stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+                  stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+                  stackIn_40_2 = "null";
                   break L17;
                 } else {
-                  stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-                  stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-                  stackOut_38_2 = "{...}";
-                  stackIn_40_0 = stackOut_38_0;
-                  stackIn_40_1 = stackOut_38_1;
-                  stackIn_40_2 = stackOut_38_2;
+                  stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+                  stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+                  stackIn_40_2 = "{...}";
                   break L17;
                 }
               }
               L18: {
-                stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-                stackOut_40_1 = ((StringBuilder) (Object) stackIn_40_1).append(stackIn_40_2).append(',').append(param2).append(',');
-                stackIn_42_0 = stackOut_40_0;
-                stackIn_42_1 = stackOut_40_1;
-                stackIn_41_0 = stackOut_40_0;
-                stackIn_41_1 = stackOut_40_1;
+
+
+                stackIn_42_1 = ((StringBuilder) (Object) stackIn_40_1).append(stackIn_40_2).append(',').append(param2).append(',');
+
                 if (param3 == null) {
-                  stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-                  stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-                  stackOut_42_2 = "null";
-                  stackIn_43_0 = stackOut_42_0;
-                  stackIn_43_1 = stackOut_42_1;
-                  stackIn_43_2 = stackOut_42_2;
+                  stackIn_40_0 = (RuntimeException) ((Object) stackIn_40_0);
+                  stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+                  stackIn_43_2 = "null";
                   break L18;
                 } else {
-                  stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-                  stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-                  stackOut_41_2 = "{...}";
-                  stackIn_43_0 = stackOut_41_0;
-                  stackIn_43_1 = stackOut_41_1;
-                  stackIn_43_2 = stackOut_41_2;
+                  stackIn_40_0 = (RuntimeException) ((Object) stackIn_40_0);
+                  stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+                  stackIn_43_2 = "{...}";
                   break L18;
                 }
               }
-              throw pn.a((Throwable) ((Object) stackIn_43_0), stackIn_43_2 + ')');
+              throw pn.a((Throwable) ((Object) stackIn_40_0), stackIn_43_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

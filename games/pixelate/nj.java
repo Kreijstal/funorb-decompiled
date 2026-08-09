@@ -13,23 +13,22 @@ final class nj {
 
     final static void a(fm param0, byte param1) {
         qd var2 = null;
-        sp discarded$0 = null;
         try {
             if (param1 != 14) {
                 field_e = (int[]) null;
             }
             qd.a(param0.a((byte) 24, "", "headers.packvorbis"));
             var2 = qd.a(param0, "jagex logo2.packvorbis", "");
-            discarded$0 = var2.a();
+            var2.a();
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) ((Object) runtimeException), "nj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final int b(int param0) {
-        int var2 = 0;
-        lm var3 = null;
-        int var4 = 0;
+        int var2;
+        lm var3;
+        int var4;
         var4 = Pixelate.field_H ? 1 : 0;
         if (param0 <= 96) {
           return 62;
@@ -60,7 +59,7 @@ final class nj {
     }
 
     final lm a(byte param0) {
-        lm var2 = null;
+        lm var2;
         var2 = this.field_b.field_p;
         if (var2 != this.field_b) {
           var2.e(17);
@@ -76,8 +75,6 @@ final class nj {
     }
 
     final static void d(int param0) {
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
         RuntimeException var1 = null;
         int var2 = 0;
         int decompiledRegionSelector0 = 0;
@@ -86,7 +83,7 @@ final class nj {
         try {
           L0: {
             if (ql.e(114)) {
-              discarded$12 = lb.field_x.a(qk.field_i, true, (byte) 99, nh.field_b);
+              lb.field_x.a(qk.field_i, true, (byte) 99, nh.field_b);
               lb.field_x.d((byte) 111);
               L1: while (true) {
                 if (!bh.b((byte) 126)) {
@@ -98,7 +95,7 @@ final class nj {
                     return;
                   }
                 } else {
-                  discarded$13 = lb.field_x.a(field_f, ke.field_a, false);
+                  lb.field_x.a(field_f, ke.field_a, false);
                   continue L1;
                 }
               }
@@ -133,7 +130,7 @@ final class nj {
     }
 
     final lm c(int param0) {
-        lm var2 = null;
+        lm var2;
         if (param0 >= 53) {
           var2 = this.field_b.field_p;
           if (this.field_b == var2) {
@@ -164,7 +161,7 @@ final class nj {
     }
 
     final lm a(int param0) {
-        lm var2 = null;
+        lm var2;
         var2 = this.field_a;
         if (var2 == this.field_b) {
           this.field_a = null;

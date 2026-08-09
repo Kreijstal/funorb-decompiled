@@ -50,30 +50,26 @@ final class m implements Iterable {
     }
 
     final tc a(int param0, long param1) {
-        tc var4 = null;
-        tc var5 = null;
-        int var6 = 0;
+        tc var4;
+        tc var5;
+        int var6;
         var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 == 13497) {
           var4 = this.field_c[(int)((long)(this.field_d - 1) & param1)];
           this.field_e = var4.field_b;
           L0: while (true) {
-            if (var4 != this.field_e) {
-              if (var6 == 0) {
-                if (param1 != this.field_e.field_i) {
-                  this.field_e = this.field_e.field_b;
-                  continue L0;
-                } else {
-                  var5 = this.field_e;
-                  this.field_e = this.field_e.field_b;
-                  return var5;
-                }
-              } else {
-                return null;
-              }
-            } else {
+            if (var4 == this.field_e) {
               this.field_e = null;
               return null;
+            } else {
+              if (param1 != this.field_e.field_i) {
+                this.field_e = this.field_e.field_b;
+                continue L0;
+              } else {
+                var5 = this.field_e;
+                this.field_e = this.field_e.field_b;
+                return var5;
+              }
             }
           }
         } else {
@@ -81,44 +77,35 @@ final class m implements Iterable {
           var4 = this.field_c[(int)((long)(this.field_d - 1) & param1)];
           this.field_e = var4.field_b;
           L1: while (true) {
-            if (var4 != this.field_e) {
-              if (var6 == 0) {
-                if (param1 != this.field_e.field_i) {
-                  this.field_e = this.field_e.field_b;
-                  continue L1;
-                } else {
-                  var5 = this.field_e;
-                  this.field_e = this.field_e.field_b;
-                  return var5;
-                }
-              } else {
-                return null;
-              }
-            } else {
+            if (var4 == this.field_e) {
               this.field_e = null;
               return null;
+            } else {
+              if (param1 != this.field_e.field_i) {
+                this.field_e = this.field_e.field_b;
+                continue L1;
+              } else {
+                var5 = this.field_e;
+                this.field_e = this.field_e.field_b;
+                return var5;
+              }
             }
           }
         }
     }
 
     m(int param0) {
+        int var2 = 0;
         tc dupTemp$0 = null;
         tc var3 = null;
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         this.field_c = new tc[param0];
         this.field_d = param0;
-        int var2 = 0;
-        while (var2 < param0) {
+        for (var2 = 0; var2 < param0; var2++) {
             dupTemp$0 = new tc();
             var3 = dupTemp$0;
             this.field_c[var2] = dupTemp$0;
             var3.field_b = var3;
             var3.field_j = var3;
-            var2++;
-            if (var4 != 0) {
-                return;
-            }
         }
     }
 

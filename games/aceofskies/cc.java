@@ -55,12 +55,12 @@ final class cc implements Runnable {
     }
 
     final synchronized boolean a(byte param0) {
+        Throwable decompiledCaughtException = null;
         int var2 = 0;
         IOException var3 = null;
         OutputStream var4 = null;
         java.net.Socket var5 = null;
         CharSequence var6 = null;
-        Throwable decompiledCaughtException = null;
         if (this.field_c >= 2) {
           return true;
         } else {

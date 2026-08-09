@@ -20,41 +20,22 @@ public final class fleas extends wb {
     public static boolean field_A;
 
     private final void a(int param0, boolean param1, int param2, int param3, int param4) {
-        pd discarded$13 = null;
-        pd discarded$14 = null;
-        pd discarded$15 = null;
-        pd discarded$16 = null;
-        pd discarded$17 = null;
-        pd discarded$18 = null;
-        pd discarded$19 = null;
-        pd discarded$20 = null;
-        pd discarded$21 = null;
-        pd discarded$22 = null;
-        pd discarded$23 = null;
-        pd discarded$24 = null;
-        pd discarded$25 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int stackIn_78_0 = 0;
         int stackIn_79_0 = 0;
         int stackIn_80_0 = 0;
         sf stackIn_80_1 = null;
-        int stackOut_77_0 = 0;
-        int stackOut_79_0 = 0;
-        sf stackOut_79_1 = null;
-        int stackOut_78_0 = 0;
-        sf stackOut_78_1 = null;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         L0: {
           var12 = field_A ? 1 : 0;
           if (10 != fl.field_c[param3][param0]) {
             break L0;
           } else {
-            discarded$13 = fh.a((byte) 105, ab.field_a, 100, 63);
+            fh.a((byte) 105, ab.field_a, 100, 63);
             lj.field_c[uf.field_h] = param3;
             fb.field_e[uf.field_h] = param0;
             nc.field_a[uf.field_h] = ni.field_j;
@@ -107,7 +88,7 @@ public final class fleas extends wb {
         }
         L6: {
           if (fl.field_c[param3][param0] == 5) {
-            discarded$14 = fh.a((byte) 102, ih.field_l, 100, 63);
+            fh.a((byte) 102, ih.field_l, 100, 63);
             fl.field_c[param3][param0] = (char)0;
             this.a((byte) -117, param0, param3);
             jd.field_o[param2] = 1;
@@ -141,7 +122,7 @@ public final class fleas extends wb {
               fl.field_c[param3][param0] = (char)33;
               field_G[param3][param0] = 2;
               jd.field_o[param2] = 2;
-              discarded$15 = fh.a((byte) -70, me.field_k, 100, 384 / ee.field_h);
+              fh.a((byte) -70, me.field_k, 100, 384 / ee.field_h);
               ee.field_h = ee.field_h + 12;
               if (ee.field_h <= 32) {
                 break L9;
@@ -179,7 +160,7 @@ public final class fleas extends wb {
                         }
                       }
                       uf.field_b[var7] = 4;
-                      discarded$16 = fh.a((byte) -91, hi.field_p, 100, 63);
+                      fh.a((byte) -91, hi.field_p, 100, 63);
                       break L12;
                     }
                     if (pl.field_g == var7) {
@@ -232,7 +213,7 @@ public final class fleas extends wb {
           } else {
             cl.field_d[param2] = 1;
             c.field_U = true;
-            discarded$17 = fh.a((byte) -59, ah.field_a, 100, 63);
+            fh.a((byte) -59, ah.field_a, 100, 63);
             break L14;
           }
         }
@@ -284,7 +265,7 @@ public final class fleas extends wb {
               if (0 >= lh.field_e[4 + var10 * 4][4 * var11]) {
                 qg.field_a[param2] = 16 + 16 * var10;
                 dh.field_b[param2] = var11 * 16;
-                discarded$18 = fh.a((byte) 89, uh.field_s, 100, 63);
+                fh.a((byte) 89, uh.field_s, 100, 63);
                 break L21;
               } else {
                 break L21;
@@ -299,7 +280,7 @@ public final class fleas extends wb {
             } else {
               qg.field_a[param2] = var10 * 16 - 4;
               dh.field_b[param2] = 16 * var11;
-              discarded$19 = fh.a((byte) 116, uh.field_s, 100, 63);
+              fh.a((byte) 116, uh.field_s, 100, 63);
               break L16;
             }
           }
@@ -319,7 +300,7 @@ public final class fleas extends wb {
           cl.field_d[param2] = 1;
           pl.field_f = pl.field_f + 1;
           wi.field_p.a(-121, 100);
-          discarded$20 = fh.a((byte) 102, nb.field_f, 100, 63);
+          fh.a((byte) 102, nb.field_f, 100, 63);
           break L22;
         }
         L24: {
@@ -336,24 +317,19 @@ public final class fleas extends wb {
           } else {
             if (-1 == (we.field_c ^ -1)) {
               L26: {
-                stackOut_77_0 = 117;
-                stackIn_79_0 = stackOut_77_0;
-                stackIn_78_0 = stackOut_77_0;
+                stackIn_79_0 = 117;
+
                 if (md.field_L < 0) {
-                  stackOut_79_0 = stackIn_79_0;
-                  stackOut_79_1 = ha.field_o;
-                  stackIn_80_0 = stackOut_79_0;
-                  stackIn_80_1 = stackOut_79_1;
+                  stackIn_80_0 = stackIn_79_0;
+                  stackIn_80_1 = ha.field_o;
                   break L26;
                 } else {
-                  stackOut_78_0 = stackIn_78_0;
-                  stackOut_78_1 = hg.field_k;
-                  stackIn_80_0 = stackOut_78_0;
-                  stackIn_80_1 = stackOut_78_1;
+                  stackIn_80_0 = stackIn_79_0;
+                  stackIn_80_1 = hg.field_k;
                   break L26;
                 }
               }
-              discarded$21 = fh.a((byte) stackIn_80_0, stackIn_80_1, 100, 63);
+              fh.a((byte) stackIn_80_0, stackIn_80_1, 100, 63);
               ue.field_d = -ue.field_d;
               md.field_L = -md.field_L;
               we.field_c = 3;
@@ -374,7 +350,7 @@ public final class fleas extends wb {
             break L27;
           } else {
             if (param4 < 2) {
-              discarded$22 = fh.a((byte) -102, fg.field_l, 100, 63);
+              fh.a((byte) -102, fg.field_l, 100, 63);
               fl.field_c[param3][param0] = (char)0;
               this.a((byte) -115, param0, param3);
               ge.field_a[param2] = -ge.field_a[param2];
@@ -422,7 +398,7 @@ public final class fleas extends wb {
             break L31;
           } else {
             L32: {
-              discarded$23 = fh.a((byte) -120, gf.field_g, 100, 63);
+              fh.a((byte) -120, gf.field_g, 100, 63);
               if (15 != tj.field_a) {
                 break L32;
               } else {
@@ -486,7 +462,7 @@ public final class fleas extends wb {
         }
         L38: {
           if (fl.field_c[param3][param0] == 24) {
-            discarded$24 = fh.a((byte) 117, gf.field_g, 100, 63);
+            fh.a((byte) 117, gf.field_g, 100, 63);
             var6 = 0;
             L39: while (true) {
               if (40 <= var6) {
@@ -499,7 +475,7 @@ public final class fleas extends wb {
                     continue L39;
                   } else {
                     L41: {
-                      if (fl.field_c[var6][var7] == 24) {
+                      if ((fl.field_c[var6][var7] ^ -1) == -25) {
                         fl.field_c[var6][var7] = (char)0;
                         this.a((byte) -109, var7, var6);
                         var8 = 0;
@@ -585,7 +561,7 @@ public final class fleas extends wb {
               }
             }
             cl.field_d[param2] = 1;
-            discarded$25 = fh.a((byte) 87, kc.field_e, 100, 63);
+            fh.a((byte) 87, kc.field_e, 100, 63);
             break L46;
           }
         }
@@ -603,43 +579,43 @@ public final class fleas extends wb {
     }
 
     private final void g(byte param0) {
-        int[] array$9 = null;
-        int[] array$10 = null;
-        dd discarded$11 = null;
-        dd discarded$12 = null;
-        dd[] array$13 = null;
-        dd[] array$14 = null;
-        int[][] var2 = null;
-        int var3 = 0;
-        int var4_int = 0;
-        dd[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        dd var8 = null;
-        int var8_int = 0;
-        dd[] var9 = null;
-        dd[] var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        vg var13 = null;
-        vg var14 = null;
-        int var15_int = 0;
-        el var15 = null;
-        el var16 = null;
-        int var17 = 0;
-        int[][] var18 = null;
-        int[][] var19 = null;
-        int var20 = 0;
-        int[][] var21 = null;
-        int[][] var22 = null;
-        int[][] var23 = null;
-        int[][] var24 = null;
-        int[][] var26 = null;
-        int[][] var27 = null;
-        int[][] var28 = null;
-        int[][] var29 = null;
-        int[] var32 = null;
+        int[] array$2 = null;
+        int[] array$3 = null;
+        dd[] array$4 = null;
+        dd[] array$5 = null;
+        dd dupTemp$6 = null;
+        dd dupTemp$7 = null;
+        int[][] var2;
+        int var3;
+        int var4_int;
+        int var5;
+        int var17;
+        int[][] var18;
+        int[][] var21;
+        int[][] var22;
+        int[][] var26;
+        int[][] var27;
+        dd[] var4;
+        int var6;
+        int var7;
+        dd var8;
+        int var8_int;
+        dd[] var9;
+        dd[] var10;
+        int var11;
+        int var12;
+        vg var13;
+        vg var14;
+        int var15_int;
+        el var15;
+        el var16;
+        int[][] var19;
+        int var20;
+        int[][] var23;
+        int[][] var24;
+        int[][] var28;
+        int[][] var29;
+        int[] var32;
         var17 = field_A ? 1 : 0;
         aj.field_t = of.a("blocks", "", hm.field_g, 89);
         el.field_s = of.a("fleas", "", hm.field_g, 67);
@@ -652,8 +628,8 @@ public final class fleas extends wb {
         var22 = var27;
         var2 = var22;
         var18[0] = ((dj) ((Object) lh.field_b)).field_P[0];
-        int[] array$8 = new int[var26[0].length];
-        var18[1] = array$8;
+        int[] array$1 = new int[var26[0].length];
+        var18[1] = array$1;
         var4_int = 1;
         L0: while (true) {
           if (var4_int >= 2) {
@@ -666,10 +642,10 @@ public final class fleas extends wb {
             var24 = var29;
             var2 = var24;
             var19[0] = ((dj) ((Object) tl.field_p)).field_P[0];
-            array$9 = new int[var28[0].length];
-            var19[1] = array$9;
-            array$10 = new int[var28[0].length];
-            var19[2] = array$10;
+            array$2 = new int[var28[0].length];
+            var19[1] = array$2;
+            array$3 = new int[var28[0].length];
+            var19[2] = array$3;
             var4_int = 1;
             L1: while (true) {
               if (3 <= var4_int) {
@@ -681,7 +657,7 @@ public final class fleas extends wb {
                 si.field_C = kl.a(252, hm.field_g, "", "main_background");
                 qi.field_c = kl.a(252, hm.field_g, "", "back_background");
                 nc.field_d = kl.a(252, hm.field_g, "", "ingame_back");
-                discarded$11 = kl.a(252, hm.field_g, "", "ingame_banner");
+                kl.a(252, hm.field_g, "", "ingame_banner");
                 jj.field_P = kl.a(252, hm.field_g, "", "ingame_title");
                 var4 = new dd[aj.field_t.length + 1];
                 var5 = 0;
@@ -707,7 +683,7 @@ public final class fleas extends wb {
                     f.field_E = kl.a(252, hm.field_g, "", "level_complete_1");
                     me.field_g = kl.a(252, hm.field_g, "", "level_complete_2");
                     tk.field_s = kl.a(252, hm.field_g, "", "level_complete_3");
-                    discarded$12 = kl.a(252, hm.field_g, "", "game_complete_backdrop");
+                    kl.a(252, hm.field_g, "", "game_complete_backdrop");
                     this.field_C = kl.a(252, hm.field_g, "", "mb_price_background");
                     this.field_N = of.a("mb_screenshots", "", hm.field_g, 92);
                     this.field_D = kl.a(252, hm.field_g, "", "mb_foreground");
@@ -745,10 +721,10 @@ public final class fleas extends wb {
                           if (-4 >= (var11 ^ -1)) {
                             gi.field_b.a((byte) 111);
                             nl.field_c = new dd[2][];
-                            array$13 = new dd[pl.field_l[0]];
-                            nl.field_c[0] = array$13;
-                            array$14 = new dd[pl.field_l[1]];
-                            nl.field_c[1] = array$14;
+                            array$4 = new dd[pl.field_l[0]];
+                            nl.field_c[0] = array$4;
+                            array$5 = new dd[pl.field_l[1]];
+                            nl.field_c[1] = array$5;
                             var11 = 0;
                             L5: while (true) {
                               if (-11 >= (var11 ^ -1)) {
@@ -774,8 +750,10 @@ public final class fleas extends wb {
                                                     je.field_O[3] = kl.a(252, hm.field_g, "", "menu_character_4");
                                                     je.field_O[4] = kl.a(252, hm.field_g, "", "menu_character_5");
                                                     je.field_O[5] = kl.a(252, hm.field_g, "", "menu_character_6");
-                                                    je.field_O[0].field_v = je.field_O[0].field_v - 200;
-                                                    je.field_O[1].field_v = je.field_O[1].field_v - 200;
+                                                    dupTemp$6 = je.field_O[0];
+                                                    dupTemp$6.field_v = dupTemp$6.field_v - 200;
+                                                    dupTemp$7 = je.field_O[1];
+                                                    dupTemp$7.field_v = dupTemp$7.field_v - 200;
                                                     pd.field_k = fc.a(hm.field_g, "frame", "", (byte) 61);
                                                     gj.field_E = fc.a(hm.field_g, "frame_bright", "", (byte) 61);
                                                     ta.field_z = fc.a(hm.field_g, "button_frame", "", (byte) 61);
@@ -984,34 +962,21 @@ public final class fleas extends wb {
     }
 
     final void d(boolean param0) {
-        pd discarded$1 = null;
-        Object var2 = null;
-        int var3 = 0;
-        int var4 = 0;
         Object stackIn_3_0 = null;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_41_0 = 0;
-        vb stackOut_2_0 = null;
-        java.awt.Canvas stackOut_1_0 = null;
-        boolean stackOut_40_0 = false;
-        int stackOut_39_0 = 0;
-        Object stackOut_4_0 = null;
-        Object stackOut_6_0 = null;
-        boolean stackOut_6_1 = false;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
+        Object var2;
+        int var3;
+        int var4;
         L0: {
           var4 = field_A ? 1 : 0;
           if (null != rh.field_p) {
-            stackOut_2_0 = rh.field_p;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = rh.field_p;
             break L0;
           } else {
-            stackOut_1_0 = ol.field_e;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = ol.field_e;
             break L0;
           }
         }
@@ -1062,7 +1027,7 @@ public final class fleas extends wb {
                         if ((bc.field_V ^ -1) != -11) {
                           break L4;
                         } else {
-                          discarded$1 = fh.a((byte) 114, jd.field_q, 100, 63);
+                          fh.a((byte) 114, jd.field_q, 100, 63);
                           break L4;
                         }
                       }
@@ -1109,12 +1074,10 @@ public final class fleas extends wb {
                   } else {
                     L9: {
                       if (rh.field_p == null) {
-                        stackOut_40_0 = ha.field_k;
-                        stackIn_41_0 = stackOut_40_0 ? 1 : 0;
+                        stackIn_41_0 = ha.field_k ? 1 : 0;
                         break L9;
                       } else {
-                        stackOut_39_0 = 1;
-                        stackIn_41_0 = stackOut_39_0;
+                        stackIn_41_0 = 1;
                         break L9;
                       }
                     }
@@ -1155,20 +1118,15 @@ public final class fleas extends wb {
           }
         } else {
           L12: {
-            stackOut_4_0 = var2;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_6_0 = var2;
+
             if (null == rh.field_p) {
-              stackOut_6_0 = stackIn_6_0;
-              stackOut_6_1 = ha.field_k;
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1 ? 1 : 0;
+              stackIn_7_0 = stackIn_6_0;
+              stackIn_7_1 = ha.field_k ? 1 : 0;
               break L12;
             } else {
-              stackOut_5_0 = stackIn_5_0;
-              stackOut_5_1 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_0 = stackIn_6_0;
+              stackIn_7_1 = 1;
               break L12;
             }
           }
@@ -1448,28 +1406,24 @@ public final class fleas extends wb {
     }
 
     private final boolean b(boolean param0, int param1) {
-        boolean discarded$5 = false;
-        boolean discarded$6 = false;
-        kh[] array$7 = null;
-        kh[] array$8 = null;
-        re[] discarded$9 = null;
-        int var3 = 0;
-        byte[] var3_ref_byte__ = null;
-        String var4_ref_String = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        ih var11 = null;
-        byte[] var12 = null;
-        byte[] var13 = null;
-        byte[] var14 = null;
-        byte[] var15 = null;
-        byte[] var16 = null;
-        byte[] var17 = null;
+        kh[] array$0 = null;
+        kh[] array$1 = null;
+        Object stackIn_67_0 = null;
+        byte[] stackIn_67_1 = null;
+        int var3;
+        byte[] var3_ref_byte__;
+        String var4_ref_String;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        ih var11;
+        byte[] var12;
+        byte[] var13;
+        byte[] var14;
         var10 = field_A ? 1 : 0;
         ei.b(true);
         if (null == pb.field_a) {
@@ -1478,7 +1432,7 @@ public final class fleas extends wb {
               jj.a(65.0f, cb.field_q, true);
               this.d(true);
               td.field_j = wk.a(jc.field_e, "", "Flea Circus Titlescreen");
-              discarded$5 = gg.field_h.a(field_K, ob.field_d, 11498, 0, td.field_j);
+              gg.field_h.a(field_K, ob.field_d, 11498, 0, td.field_j);
               hf.field_e[0] = wk.a(jc.field_e, "", "Flea Circus 1");
               hf.field_e[1] = wk.a(jc.field_e, "", "Flea Circus 2");
               hf.field_e[2] = wk.a(jc.field_e, "", "Flea Circus 3");
@@ -1491,7 +1445,7 @@ public final class fleas extends wb {
                   fleas.h((byte) -114);
                   return false;
                 } else {
-                  discarded$6 = gg.field_h.a(field_K, ob.field_d, 11498, 0, hf.field_e[var3]);
+                  gg.field_h.a(field_K, ob.field_d, 11498, 0, hf.field_e[var3]);
                   var3++;
                   continue L0;
                 }
@@ -1511,14 +1465,14 @@ public final class fleas extends wb {
                     jj.a(98.0f, vi.field_c, true);
                     this.d(true);
                     var5 = pl.field_l[0];
-                    array$7 = new kh[var5];
-                    ia.field_m[0] = array$7;
+                    array$0 = new kh[var5];
+                    ia.field_m[0] = array$0;
                     var6 = 0;
                     L1: while (true) {
                       if (var5 <= var6) {
                         var5 = pl.field_l[1];
-                        array$8 = new kh[var5];
-                        ia.field_m[1] = array$8;
+                        array$1 = new kh[var5];
+                        ia.field_m[1] = array$1;
                         var6 = 0;
                         L2: while (true) {
                           if (var6 >= var5) {
@@ -1539,12 +1493,11 @@ public final class fleas extends wb {
                             }
                           } else {
                             var4_ref_String = "classic_" + (1 + var6) + ".lvl";
-                            var17 = pa.field_l.a(0, var4_ref_String, "");
-                            var15 = var17;
-                            var13 = var15;
-                            var3_ref_byte__ = var13;
-                            if (var3_ref_byte__ != null) {
-                              ia.field_m[1][var6] = new kh(var17);
+                            var3_ref_byte__ = pa.field_l.a(0, var4_ref_String, "");
+                            stackIn_67_0 = null;
+                            stackIn_67_1 = (byte[]) (var3_ref_byte__);
+                            if (stackIn_67_0 != stackIn_67_1) {
+                              ia.field_m[1][var6] = new kh(var3_ref_byte__);
                               var6++;
                               continue L2;
                             } else {
@@ -1555,12 +1508,12 @@ public final class fleas extends wb {
                         }
                       } else {
                         var4_ref_String = 1 + var6 + ".lvl";
-                        var16 = pa.field_l.a(0, var4_ref_String, "");
-                        var14 = var16;
-                        var12 = var14;
+                        var14 = pa.field_l.a(0, var4_ref_String, "");
+                        var13 = var14;
+                        var12 = var13;
                         var3_ref_byte__ = var12;
-                        if (var3_ref_byte__ != null) {
-                          ia.field_m[0][var6] = new kh(var16);
+                        if (null != var3_ref_byte__) {
+                          ia.field_m[0][var6] = new kh(var14);
                           var6++;
                           continue L1;
                         } else {
@@ -1585,7 +1538,7 @@ public final class fleas extends wb {
                             break L5;
                           } else {
                             var11 = (ih) null;
-                            discarded$9 = fleas.a((ih) null, -35);
+                            fleas.a((ih) null, -35);
                             break L5;
                           }
                         }
@@ -1769,35 +1722,19 @@ public final class fleas extends wb {
     }
 
     final void d(int param0) {
-        boolean discarded$1 = false;
-        int var2 = 0;
-        int var3 = 0;
-        hi var4 = null;
-        hi var5 = null;
-        Object stackIn_4_0 = null;
+        boolean discarded$0 = false;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        Object stackIn_108_0 = null;
-        int stackIn_108_1 = 0;
         Object stackIn_109_0 = null;
         int stackIn_109_1 = 0;
         Object stackIn_110_0 = null;
         int stackIn_110_1 = 0;
         int stackIn_110_2 = 0;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        Object stackOut_107_0 = null;
-        int stackOut_107_1 = 0;
-        Object stackOut_109_0 = null;
-        int stackOut_109_1 = 0;
-        int stackOut_109_2 = 0;
-        Object stackOut_108_0 = null;
-        int stackOut_108_1 = 0;
-        int stackOut_108_2 = 0;
+        int var2;
+        int var3;
+        hi var4;
+        hi var5;
         L0: {
           var3 = field_A ? 1 : 0;
           ni.field_j = ni.field_j + 1;
@@ -1815,20 +1752,15 @@ public final class fleas extends wb {
           }
         }
         L1: {
-          stackOut_3_0 = this;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_4_0 = stackOut_3_0;
+          stackIn_5_0 = this;
+
           if (rh.field_p == null) {
-            stackOut_5_0 = this;
-            stackOut_5_1 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_6_0 = this;
+            stackIn_6_1 = 0;
             break L1;
           } else {
-            stackOut_4_0 = this;
-            stackOut_4_1 = 1;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
+            stackIn_6_0 = this;
+            stackIn_6_1 = 1;
             break L1;
           }
         }
@@ -2022,7 +1954,7 @@ public final class fleas extends wb {
             } else {
               L22: {
                 if (nl.a(52)) {
-                  discarded$1 = this.b(false, 47);
+                  discarded$0 = this.b(false, 47);
                   break L22;
                 } else {
                   break L22;
@@ -2058,27 +1990,19 @@ public final class fleas extends wb {
                     break L25;
                   } else {
                     L26: {
-                      stackOut_107_0 = this;
-                      stackOut_107_1 = -81;
-                      stackIn_109_0 = stackOut_107_0;
-                      stackIn_109_1 = stackOut_107_1;
-                      stackIn_108_0 = stackOut_107_0;
-                      stackIn_108_1 = stackOut_107_1;
+                      stackIn_109_0 = this;
+
+                      stackIn_109_1 = -81;
+
                       if (rh.field_p == null) {
-                        stackOut_109_0 = this;
-                        stackOut_109_1 = stackIn_109_1;
-                        stackOut_109_2 = 0;
-                        stackIn_110_0 = stackOut_109_0;
-                        stackIn_110_1 = stackOut_109_1;
-                        stackIn_110_2 = stackOut_109_2;
+                        stackIn_110_0 = this;
+                        stackIn_110_1 = stackIn_109_1;
+                        stackIn_110_2 = 0;
                         break L26;
                       } else {
-                        stackOut_108_0 = this;
-                        stackOut_108_1 = stackIn_108_1;
-                        stackOut_108_2 = 1;
-                        stackIn_110_0 = stackOut_108_0;
-                        stackIn_110_1 = stackOut_108_1;
-                        stackIn_110_2 = stackOut_108_2;
+                        stackIn_110_0 = this;
+                        stackIn_110_1 = stackIn_109_1;
+                        stackIn_110_2 = 1;
                         break L26;
                       }
                     }
@@ -2231,7 +2155,7 @@ public final class fleas extends wb {
     }
 
     private final void i(byte param0) {
-        int var3 = 0;
+        int var3;
         L0: {
           var3 = field_A ? 1 : 0;
           if (0 != vk.field_L) {
@@ -2444,22 +2368,14 @@ public final class fleas extends wb {
     }
 
     private final void b(int param0, int param1, int param2) {
-        pd discarded$2 = null;
-        pd discarded$3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int stackIn_24_0 = 0;
         int stackIn_25_0 = 0;
         int stackIn_26_0 = 0;
         sf stackIn_26_1 = null;
-        int stackOut_23_0 = 0;
-        int stackOut_25_0 = 0;
-        sf stackOut_25_1 = null;
-        int stackOut_24_0 = 0;
-        sf stackOut_24_1 = null;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         var8 = field_A ? 1 : 0;
         if (param0 < -90) {
           L0: {
@@ -2496,24 +2412,19 @@ public final class fleas extends wb {
                               L2: while (true) {
                                 if (param2 >= var6 - -4) {
                                   L3: {
-                                    stackOut_23_0 = -109;
-                                    stackIn_25_0 = stackOut_23_0;
-                                    stackIn_24_0 = stackOut_23_0;
+                                    stackIn_25_0 = -109;
+
                                     if (mh.field_u != 1) {
-                                      stackOut_25_0 = stackIn_25_0;
-                                      stackOut_25_1 = el.field_C;
-                                      stackIn_26_0 = stackOut_25_0;
-                                      stackIn_26_1 = stackOut_25_1;
+                                      stackIn_26_0 = stackIn_25_0;
+                                      stackIn_26_1 = el.field_C;
                                       break L3;
                                     } else {
-                                      stackOut_24_0 = stackIn_24_0;
-                                      stackOut_24_1 = rl.field_g;
-                                      stackIn_26_0 = stackOut_24_0;
-                                      stackIn_26_1 = stackOut_24_1;
+                                      stackIn_26_0 = stackIn_25_0;
+                                      stackIn_26_1 = rl.field_g;
                                       break L3;
                                     }
                                   }
-                                  discarded$2 = fh.a((byte) stackIn_26_0, stackIn_26_1, 100, 63);
+                                  fh.a((byte) stackIn_26_0, stackIn_26_1, 100, 63);
                                   ik.field_R = false;
                                   fl.field_c[var4][var5] = (char)(1 + mh.field_u);
                                   this.a((byte) -91, var5, var4);
@@ -2580,7 +2491,7 @@ public final class fleas extends wb {
                                       } else {
                                         L9: {
                                           if (ik.field_R) {
-                                            discarded$3 = fh.a((byte) 107, gi.field_d, 100, 96);
+                                            fh.a((byte) 107, gi.field_d, 100, 96);
                                             ik.field_R = false;
                                             break L9;
                                           } else {
@@ -2614,15 +2525,15 @@ public final class fleas extends wb {
     }
 
     final static re[] a(ih param0, int param1) {
-        re[] discarded$7 = null;
-        int discarded$8 = 0;
-        int discarded$9 = 0;
-        int discarded$10 = 0;
-        int discarded$11 = 0;
-        int discarded$12 = 0;
-        int discarded$13 = 0;
-        RuntimeException var2 = null;
+        re[] stackIn_13_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         re[] var4 = null;
         int var5 = 0;
@@ -2630,24 +2541,6 @@ public final class fleas extends wb {
         re var6_ref_re = null;
         int var7 = 0;
         ih var8 = null;
-        re[] stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        re[] stackOut_12_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         var7 = field_A ? 1 : 0;
         try {
           L0: {
@@ -2656,7 +2549,7 @@ public final class fleas extends wb {
                 break L1;
               } else {
                 var8 = (ih) null;
-                discarded$7 = fleas.a((ih) null, -51);
+                fleas.a((ih) null, -51);
                 break L1;
               }
             }
@@ -2667,8 +2560,7 @@ public final class fleas extends wb {
               var5 = 0;
               L2: while (true) {
                 if (var5 >= var3) {
-                  stackOut_12_0 = (re[]) (var4);
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = (re[]) (var4);
                   break L0;
                 } else {
                   L3: {
@@ -2678,13 +2570,13 @@ public final class fleas extends wb {
                       break L3;
                     } else {
                       var6_ref_re = new re();
-                      discarded$8 = param0.b(24, (byte) -87);
-                      discarded$9 = param0.b(24, (byte) -87);
+                      param0.b(24, (byte) -87);
+                      param0.b(24, (byte) -87);
                       var6_ref_re.field_a = param0.b(24, (byte) -87);
-                      discarded$10 = param0.b(9, (byte) -87);
-                      discarded$11 = param0.b(12, (byte) -87);
-                      discarded$12 = param0.b(12, (byte) -87);
-                      discarded$13 = param0.b(12, (byte) -87);
+                      param0.b(9, (byte) -87);
+                      param0.b(12, (byte) -87);
+                      param0.b(12, (byte) -87);
+                      param0.b(12, (byte) -87);
                       var4[var5] = var6_ref_re;
                       break L3;
                     }
@@ -2701,27 +2593,19 @@ public final class fleas extends wb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var2);
-            stackOut_14_1 = new StringBuilder().append("fleas.J(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var2);
+
+            stackIn_16_1 = new StringBuilder().append("fleas.J(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }
@@ -2731,71 +2615,44 @@ public final class fleas extends wb {
     }
 
     private final void l(int param0) {
-        pd discarded$14 = null;
-        pd discarded$15 = null;
-        pd discarded$16 = null;
-        pd discarded$17 = null;
-        pd discarded$18 = null;
-        pd discarded$19 = null;
-        pd discarded$20 = null;
-        pd discarded$21 = null;
-        pd discarded$22 = null;
-        pd discarded$23 = null;
-        StringBuilder discarded$24 = null;
-        StringBuilder discarded$25 = null;
-        StringBuilder discarded$26 = null;
-        StringBuilder discarded$27 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        kh var16 = null;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        ok var23 = null;
-        int var24 = 0;
-        ok var25 = null;
+        ok dupTemp$0 = null;
+        ok dupTemp$1 = null;
+        ok dupTemp$2 = null;
+        int[] dupTemp$3 = null;
+        int dupTemp$4 = 0;
+        StringBuilder discarded$5 = null;
         int stackIn_67_0 = 0;
         int stackIn_70_0 = 0;
-        vg stackIn_74_0 = null;
         vg stackIn_75_0 = null;
         vg stackIn_76_0 = null;
         int stackIn_76_1 = 0;
-        vg stackIn_77_0 = null;
         vg stackIn_78_0 = null;
         vg stackIn_79_0 = null;
         int stackIn_79_1 = 0;
-        int stackOut_65_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_69_0 = 0;
-        int stackOut_68_0 = 0;
-        vg stackOut_73_0 = null;
-        vg stackOut_75_0 = null;
-        int stackOut_75_1 = 0;
-        vg stackOut_74_0 = null;
-        int stackOut_74_1 = 0;
-        vg stackOut_76_0 = null;
-        vg stackOut_78_0 = null;
-        int stackOut_78_1 = 0;
-        vg stackOut_77_0 = null;
-        int stackOut_77_1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        kh var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        ok var23;
+        int var24;
+        ok var25;
         L0: {
           var24 = field_A ? 1 : 0;
           if ((mg.field_d ^ -1) <= -1) {
@@ -2918,7 +2775,7 @@ public final class fleas extends wb {
                   }
                   L14: {
                     if (mh.field_u != var15) {
-                      discarded$14 = ik.a(wj.field_b[0], (byte) -84);
+                      ik.a(wj.field_b[0], (byte) -84);
                       break L14;
                     } else {
                       break L14;
@@ -2930,39 +2787,32 @@ public final class fleas extends wb {
                       if (pl.field_f < var16.field_e) {
                         if (qe.field_k >= 2) {
                           if (ji.field_a == 2) {
-                            stackOut_65_0 = 1;
-                            stackIn_67_0 = stackOut_65_0;
+                            stackIn_67_0 = 1;
                             break L15;
                           } else {
-                            stackOut_64_0 = 0;
-                            stackIn_67_0 = stackOut_64_0;
+                            stackIn_67_0 = 0;
                             break L15;
                           }
                         } else {
-                          stackOut_62_0 = 0;
-                          stackIn_67_0 = stackOut_62_0;
+                          stackIn_67_0 = 0;
                           break L15;
                         }
                       } else {
-                        stackOut_60_0 = 1;
-                        stackIn_67_0 = stackOut_60_0;
+                        stackIn_67_0 = 1;
                         break L15;
                       }
                     } else {
-                      stackOut_58_0 = 1;
-                      stackIn_67_0 = stackOut_58_0;
+                      stackIn_67_0 = 1;
                       break L15;
                     }
                   }
                   L16: {
                     var17 = stackIn_67_0;
                     if (var16.field_e <= var16.field_f - jg.field_e) {
-                      stackOut_69_0 = 0;
-                      stackIn_70_0 = stackOut_69_0;
+                      stackIn_70_0 = 0;
                       break L16;
                     } else {
-                      stackOut_68_0 = 1;
-                      stackIn_70_0 = stackOut_68_0;
+                      stackIn_70_0 = 1;
                       break L16;
                     }
                   }
@@ -2980,39 +2830,29 @@ public final class fleas extends wb {
                     }
                   }
                   L18: {
-                    stackOut_73_0 = lk.field_D;
-                    stackIn_75_0 = stackOut_73_0;
-                    stackIn_74_0 = stackOut_73_0;
+                    stackIn_75_0 = lk.field_D;
+
                     if (var17 == 0) {
-                      stackOut_75_0 = (vg) ((Object) stackIn_75_0);
-                      stackOut_75_1 = 0;
-                      stackIn_76_0 = stackOut_75_0;
-                      stackIn_76_1 = stackOut_75_1;
+                      stackIn_76_0 = (vg) ((Object) stackIn_75_0);
+                      stackIn_76_1 = 0;
                       break L18;
                     } else {
-                      stackOut_74_0 = (vg) ((Object) stackIn_74_0);
-                      stackOut_74_1 = 1;
-                      stackIn_76_0 = stackOut_74_0;
-                      stackIn_76_1 = stackOut_74_1;
+                      stackIn_76_0 = (vg) ((Object) stackIn_75_0);
+                      stackIn_76_1 = 1;
                       break L18;
                     }
                   }
                   L19: {
                     stackIn_76_0.field_k = stackIn_76_1 != 0;
-                    stackOut_76_0 = si.field_y;
-                    stackIn_78_0 = stackOut_76_0;
-                    stackIn_77_0 = stackOut_76_0;
+                    stackIn_78_0 = si.field_y;
+
                     if (lk.field_D.field_k) {
-                      stackOut_78_0 = (vg) ((Object) stackIn_78_0);
-                      stackOut_78_1 = 0;
-                      stackIn_79_0 = stackOut_78_0;
-                      stackIn_79_1 = stackOut_78_1;
+                      stackIn_79_0 = (vg) ((Object) stackIn_78_0);
+                      stackIn_79_1 = 0;
                       break L19;
                     } else {
-                      stackOut_77_0 = (vg) ((Object) stackIn_77_0);
-                      stackOut_77_1 = 1;
-                      stackIn_79_0 = stackOut_77_0;
-                      stackIn_79_1 = stackOut_77_1;
+                      stackIn_79_0 = (vg) ((Object) stackIn_78_0);
+                      stackIn_79_1 = 1;
                       break L19;
                     }
                   }
@@ -3163,17 +3003,20 @@ public final class fleas extends wb {
                           break L28;
                         } else {
                           L31: {
-                            if (var22 == var21) {
+                            if ((var22 ^ -1) == (var21 ^ -1)) {
                               L32: {
                                 ob.field_c[var22].field_l = var19 * 16;
                                 ob.field_c[var22].field_a = var20 * 16;
-                                ob.field_c[var22].field_l = ob.field_c[var22].field_l - ob.field_c[var22].field_n / 2;
+                                dupTemp$0 = ob.field_c[var22];
+                                dupTemp$0.field_l = dupTemp$0.field_l - ob.field_c[var22].field_n / 2;
                                 ob.field_c[var22].field_a = kc.field_b / 16 * 16;
-                                ob.field_c[var22].field_a = ob.field_c[var22].field_a + 32;
+                                dupTemp$1 = ob.field_c[var22];
+                                dupTemp$1.field_a = dupTemp$1.field_a + 32;
                                 ob.field_c[var22].field_C = var19 * 16;
                                 ob.field_c[var22].field_H = var20 * 16;
-                                var25 = ob.field_c[var22];
-                                var23 = ob.field_c[var22];
+                                dupTemp$2 = ob.field_c[var22];
+                                var25 = dupTemp$2;
+                                var23 = dupTemp$2;
                                 ob.field_c[var22].field_z = 16;
                                 var25.field_G = 16;
                                 if ((ob.field_c[var22].field_l ^ -1) > -1) {
@@ -3231,7 +3074,7 @@ public final class fleas extends wb {
                     si.field_y.b(true);
                     if (lk.field_D.field_g) {
                       oa.a(10, true, 91);
-                      discarded$15 = ik.a(wj.field_b[0], (byte) -84);
+                      ik.a(wj.field_b[0], (byte) -84);
                       break L35;
                     } else {
                       break L35;
@@ -3253,7 +3096,7 @@ public final class fleas extends wb {
                         }
                       }
                       cf.a(-25319);
-                      discarded$16 = ik.a(wj.field_b[0], (byte) -84);
+                      ik.a(wj.field_b[0], (byte) -84);
                       break L36;
                     }
                   }
@@ -3341,7 +3184,7 @@ public final class fleas extends wb {
                                         if (-9 != (fl.field_c[id.field_h[var3]][uf.field_e[var3]] ^ -1)) {
                                           break L46;
                                         } else {
-                                          discarded$17 = fh.a((byte) -91, bf.field_d, 100, 63);
+                                          fh.a((byte) -91, bf.field_d, 100, 63);
                                           break L46;
                                         }
                                       }
@@ -3411,7 +3254,7 @@ public final class fleas extends wb {
                           } else {
                             nb.field_b = nb.field_b + 1;
                             qg.field_c = 6;
-                            discarded$18 = fh.a((byte) 105, ic.field_ab, 100, 63);
+                            fh.a((byte) 105, ic.field_ab, 100, 63);
                             break L47;
                           }
                         }
@@ -3451,8 +3294,10 @@ public final class fleas extends wb {
                                           continue L51;
                                         } else {
                                           if (fl.field_c[var5][var6] == 33) {
-                                            field_G[var5][var6] = field_G[var5][var6] - 1;
-                                            if (field_G[var5][var6] < 0) {
+                                            dupTemp$3 = field_G[var5];
+                                            dupTemp$4 = dupTemp$3[var6];
+                                            dupTemp$3[var6] = dupTemp$4 - 1;
+                                            if (dupTemp$4 < 0) {
                                               fl.field_c[var5][var6] = (char)6;
                                               var5--;
                                               continue L53;
@@ -3518,7 +3363,7 @@ public final class fleas extends wb {
                                                   break L57;
                                                 } else {
                                                   cl.field_d[var4] = 1;
-                                                  discarded$19 = fh.a((byte) 93, fi.field_n, 100, 63);
+                                                  fh.a((byte) 93, fi.field_n, 100, 63);
                                                   break L57;
                                                 }
                                               }
@@ -3569,7 +3414,7 @@ public final class fleas extends wb {
                                   }
                                 }
                               }
-                              discarded$20 = fh.a((byte) 101, hf.field_g, 100, 63);
+                              fh.a((byte) 101, hf.field_g, 100, 63);
                               fl.field_c[var5][var6] = (char)0;
                               this.a((byte) -79, var6, var5);
                               var20 = 0;
@@ -3610,7 +3455,7 @@ public final class fleas extends wb {
                                   break L61;
                                 } else {
                                   cl.field_d[var3] = 1;
-                                  discarded$21 = fh.a((byte) -77, fi.field_n, 100, 63);
+                                  fh.a((byte) -77, fi.field_n, 100, 63);
                                   break L61;
                                 }
                               }
@@ -3659,7 +3504,7 @@ public final class fleas extends wb {
                                                   jd.field_o[var3] = 0;
                                                   var9 = -4;
                                                   ge.field_a[var3] = -4;
-                                                  discarded$22 = fh.a((byte) 89, hg.field_n, 100, 63);
+                                                  fh.a((byte) 89, hg.field_n, 100, 63);
                                                   break L65;
                                                 } else {
                                                   break L65;
@@ -3669,7 +3514,7 @@ public final class fleas extends wb {
                                           }
                                         }
                                         cl.field_d[var3] = 1;
-                                        discarded$23 = fh.a((byte) 86, fi.field_n, 100, 63);
+                                        fh.a((byte) 86, fi.field_n, 100, 63);
                                         break L65;
                                       }
                                     }
@@ -3913,10 +3758,10 @@ public final class fleas extends wb {
           } else {
             L78: {
               var3 = id.field_b;
-              if (var3 == 32) {
+              if (-33 == (var3 ^ -1)) {
                 L79: {
                   if (uc.field_a.length() < 16) {
-                    discarded$24 = uc.field_a.append((char) var3);
+                    discarded$5 = uc.field_a.append((char) var3);
                     break L79;
                   } else {
                     break L79;
@@ -3928,7 +3773,7 @@ public final class fleas extends wb {
                   if (uc.field_a.length() <= 0) {
                     break L78;
                   } else {
-                    discarded$25 = uf.a(-1 + uc.field_a.length(), uc.field_a, ' ', -120);
+                    uf.a(-1 + uc.field_a.length(), uc.field_a, ' ', -120);
                     break L78;
                   }
                 }
@@ -3940,7 +3785,7 @@ public final class fleas extends wb {
                     if (uc.field_a.length() <= 0) {
                       break L78;
                     } else {
-                      discarded$26 = uf.a(-1 + uc.field_a.length(), uc.field_a, ' ', -120);
+                      uf.a(-1 + uc.field_a.length(), uc.field_a, ' ', -120);
                       break L78;
                     }
                   }
@@ -3951,7 +3796,7 @@ public final class fleas extends wb {
                     if (uc.field_a.length() <= 0) {
                       break L78;
                     } else {
-                      discarded$27 = uf.a(-1 + uc.field_a.length(), uc.field_a, ' ', -120);
+                      uf.a(-1 + uc.field_a.length(), uc.field_a, ' ', -120);
                       break L78;
                     }
                   }
@@ -3990,9 +3835,9 @@ public final class fleas extends wb {
 
     static {
         $cfr$clinit: {
-            long var0 = 0L;
-            int var2 = 0;
-            int var3 = 0;
+            long var0;
+            int var2;
+            int var3;
             field_H = "Must save: <%0>";
             field_J = new long[256];
             field_E = 0;

@@ -8,7 +8,7 @@ final class jl extends gi {
     static he field_h;
 
     final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         var4 = 0;
         if (!param0) {
           if (!param3) {
@@ -93,7 +93,7 @@ final class jl extends gi {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         if (param1 != 0) {
           if ((param1 ^ -1) >= -1) {
             L0: {
@@ -202,9 +202,8 @@ final class jl extends gi {
     }
 
     public static void d(int param0) {
-        String discarded$2 = null;
         if (param0 != 65535) {
-          discarded$2 = jl.a(false, true, false, false);
+          jl.a(false, true, false, false);
           field_k = null;
           field_i = null;
           field_h = null;

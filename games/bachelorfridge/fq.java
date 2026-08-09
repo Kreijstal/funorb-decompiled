@@ -30,8 +30,8 @@ final class fq extends td {
     }
 
     final static void a(int param0, byte param1) {
-        pf var2 = null;
-        int var3 = 0;
+        pf var2;
+        int var3;
         var2 = sja.field_fb;
         var2.c(param0, (byte) 127);
         var2.field_g = var2.field_g + 1;
@@ -58,21 +58,10 @@ final class fq extends td {
     }
 
     final static String a(int param0, CharSequence param1) {
-        StringBuilder discarded$1 = null;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        StringBuilder var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        StringBuilder discarded$0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_27_0 = null;
         String stackIn_29_0 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
@@ -80,17 +69,15 @@ final class fq extends td {
         String stackIn_33_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_28_0 = null;
-        Object stackOut_26_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        StringBuilder var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
         var9 = BachelorFridge.field_y;
         try {
           L0: {
@@ -131,13 +118,11 @@ final class fq extends td {
                       L5: while (true) {
                         if (var3 <= var6) {
                           if (-1 != (var5.length() ^ -1)) {
-                            stackOut_28_0 = var5.toString();
-                            stackIn_29_0 = stackOut_28_0;
+                            stackIn_29_0 = var5.toString();
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
-                            stackOut_26_0 = null;
-                            stackIn_27_0 = stackOut_26_0;
+                            stackIn_27_0 = null;
                             decompiledRegionSelector0 = 1;
                             break L0;
                           }
@@ -149,7 +134,7 @@ final class fq extends td {
                               if (var8 == 0) {
                                 break L6;
                               } else {
-                                discarded$1 = var5.append((char) var8);
+                                discarded$0 = var5.append((char) var8);
                                 break L6;
                               }
                             } else {
@@ -169,8 +154,7 @@ final class fq extends td {
                 }
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -179,27 +163,19 @@ final class fq extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) (var2);
-            stackOut_30_1 = new StringBuilder().append("fq.C(").append(param0).append(',');
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackIn_32_0 = (RuntimeException) (var2);
+
+            stackIn_32_1 = new StringBuilder().append("fq.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L7;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L7;
             }
           }
@@ -217,6 +193,17 @@ final class fq extends td {
     }
 
     final ii a(op param0, int param1) {
+        ii stackIn_3_0 = null;
+        int stackIn_17_0 = 0;
+        int stackIn_20_1 = 0;
+        fk stackIn_27_0 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         fk var4 = null;
         int var5 = 0;
@@ -231,39 +218,6 @@ final class fq extends td {
         iv var14 = null;
         int var15 = 0;
         aga var16 = null;
-        ii stackIn_3_0 = null;
-        int stackIn_17_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_20_1 = 0;
-        fk stackIn_27_0 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        fk stackOut_26_0 = null;
-        int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_19_1 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_18_1 = 0;
-        ii stackOut_2_0 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
         var15 = BachelorFridge.field_y;
         try {
           L0: {
@@ -274,8 +228,7 @@ final class fq extends td {
               var6 = -var5;
               L1: while (true) {
                 if (var5 < var6) {
-                  stackOut_26_0 = (fk) (var4);
-                  stackIn_27_0 = stackOut_26_0;
+                  stackIn_27_0 = (fk) (var4);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -305,34 +258,27 @@ final class fq extends td {
                                 } else {
                                   L4: {
                                     if ((var7 ^ -1) > -1) {
-                                      stackOut_16_0 = -var7;
-                                      stackIn_17_0 = stackOut_16_0;
+                                      stackIn_17_0 = -var7;
                                       break L4;
                                     } else {
-                                      stackOut_15_0 = var7;
-                                      stackIn_17_0 = stackOut_15_0;
+                                      stackIn_17_0 = var7;
                                       break L4;
                                     }
                                   }
                                   L5: {
-                                    stackOut_17_0 = stackIn_17_0;
-                                    stackIn_19_0 = stackOut_17_0;
-                                    stackIn_18_0 = stackOut_17_0;
+
+
                                     if (var6 < 0) {
-                                      stackOut_19_0 = stackIn_19_0;
-                                      stackOut_19_1 = -var6;
-                                      stackIn_20_0 = stackOut_19_0;
-                                      stackIn_20_1 = stackOut_19_1;
+
+                                      stackIn_20_1 = -var6;
                                       break L5;
                                     } else {
-                                      stackOut_18_0 = stackIn_18_0;
-                                      stackOut_18_1 = var6;
-                                      stackIn_20_0 = stackOut_18_0;
-                                      stackIn_20_1 = stackOut_18_1;
+
+                                      stackIn_20_1 = var6;
                                       break L5;
                                     }
                                   }
-                                  var12 = stackIn_20_0 + stackIn_20_1;
+                                  var12 = stackIn_17_0 + stackIn_20_1;
                                   if (var5 >= var12) {
                                     var13 = mp.field_q[var12];
                                     var14 = new iv(new nq(var11), false, 1, var13, 0);
@@ -356,8 +302,7 @@ final class fq extends td {
                 }
               }
             } else {
-              stackOut_2_0 = (ii) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (ii) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -366,27 +311,19 @@ final class fq extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var3);
-            stackOut_28_1 = new StringBuilder().append("fq.A(");
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackIn_30_0 = (RuntimeException) (var3);
+
+            stackIn_30_1 = new StringBuilder().append("fq.A(");
+
             if (param0 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L6;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L6;
             }
           }

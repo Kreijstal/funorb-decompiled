@@ -30,13 +30,13 @@ final class gj implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(java.awt.Frame param0, int param1, int param2, int param3, int param4, int param5) {
-        com.ms.awt.WComponentPeer var7 = null;
-        int var8 = 0;
+        com.ms.awt.WComponentPeer var7;
+        int var8;
         param0.setVisible(true);
         var7 = (com.ms.awt.WComponentPeer) null;
         var8 = var7.getHwnd();
-        int discarded$19 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-        int discarded$20 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+        com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+        com.ms.win32.User32.SetWindowLong(var8, -20, 8);
         this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param0), 17);
         this.field_b.setDisplayMode(param4, param1, param5, param2, 0);
         if (param3 < 107) {

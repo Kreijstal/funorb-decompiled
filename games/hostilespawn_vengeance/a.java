@@ -11,12 +11,15 @@ final class a {
 
     final static Object a(String param0, java.applet.Applet param1, int param2) throws Throwable {
         if (param2 >= -119) {
-            return null;
+            return (Object) null;
         }
         return netscape.javascript.JSObject.getWindow(param1).call(param0, (Object[]) null);
     }
 
     final static void a(java.applet.Applet param0, int param1, String param2) throws Throwable {
-        Object discarded$0 = netscape.javascript.JSObject.getWindow(param0).eval(param2);
+        if (param1 != 17467) {
+            return;
+        }
+        netscape.javascript.JSObject.getWindow(param0).eval(param2);
     }
 }

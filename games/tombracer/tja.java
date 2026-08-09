@@ -15,18 +15,16 @@ final class tja extends pb {
     }
 
     final boolean a(int param0) {
-        Object discarded$0 = null;
         if (param0 != 14646) {
-            discarded$0 = this.f(6);
+            this.f(6);
             return false;
         }
         return false;
     }
 
     final Object f(int param0) {
-        Object discarded$0 = null;
         if (param0 != 29243) {
-            discarded$0 = this.f(77);
+            this.f(77);
             return this.field_o;
         }
         return this.field_o;

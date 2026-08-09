@@ -24,11 +24,13 @@ final class wj {
     }
 
     final static void b(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        tc var4_ref_tc = null;
         int var4 = 0;
+        tc var4_ref_tc = null;
         bk var5 = null;
         int var5_int = 0;
         int[] var6 = null;
@@ -37,8 +39,6 @@ final class wj {
         pa var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -56,7 +56,7 @@ final class wj {
                         break L2;
                       } else {
                         L3: {
-                          if (var3 != var5.field_v) {
+                          if ((var3 ^ -1) != (var5.field_v ^ -1)) {
                             break L3;
                           } else {
                             if (var4 == var5.field_o) {

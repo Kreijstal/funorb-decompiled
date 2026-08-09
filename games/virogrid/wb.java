@@ -29,8 +29,6 @@ class wb extends l {
 
     final boolean a(int param0) {
         int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 1) {
           field_n = (String) null;
           if (this.field_k != null) {
@@ -41,12 +39,10 @@ class wb extends l {
         } else {
           L0: {
             if (this.field_k == null) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L0;
             }
           }
@@ -72,7 +68,7 @@ class wb extends l {
     }
 
     final static void a(boolean param0, byte param1, boolean param2) {
-        int var3 = 0;
+        int var3;
         if (!param0) {
           df.c();
           ci.b(param0, -126);

@@ -14,32 +14,12 @@ final class mh {
     }
 
     final static void a(fb param0, int param1, int param2) {
-        int discarded$1 = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         uc var7 = null;
         uc var8 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        var6 = Terraphoenix.field_V;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = Terraphoenix.field_V;
         try {
-          L0: {
             var7 = di.field_l;
             var8 = var7;
             var8.k(-17410, param1);
@@ -54,53 +34,17 @@ final class mh {
             var8.e(param0.field_j, 8959);
             var8.e(param0.field_o, 8959);
             var8.i(param0.field_r.length, -99);
-            var5 = param2;
-            L1: while (true) {
-              if (var5 >= param0.field_r.length) {
-                discarded$1 = var8.d(var4, 8600);
-                var8.j(-var4 + var8.field_k, -119);
-                break L0;
-              } else {
+            for (var5 = param2; var5 < param0.field_r.length; var5++) {
                 var7.e(param0.field_r[var5], 8959);
-                var5++;
-                continue L1;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("mh.B(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
-            if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L2;
-            } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L2;
-            }
-          }
-          throw qk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ')');
+            var8.d(var4, 8600);
+            var8.j(-var4 + var8.field_k, -119);
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(byte param0, int param1, int param2) {
-        eg discarded$1 = null;
         if (param0 <= 111) {
             return;
         }
@@ -113,7 +57,7 @@ final class mh {
         ga.field_k.a(new hd(param1), -16611);
         if (!kg.field_q) {
             if (!bk.c(-25704)) {
-                discarded$1 = cl.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, km.field_e, bh.field_a, param2, (byte) 43);
+                cl.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, km.field_e, bh.field_a, param2, (byte) 43);
             } else {
                 u.field_c.a(new eg(param1, param2, -ge.field_e + oe.field_c, km.field_e, oh.field_e, bh.field_a), -16611);
             }
@@ -121,9 +65,8 @@ final class mh {
     }
 
     final static void a(byte param0) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2_int = 0;
         Object var2 = null;
@@ -133,8 +76,6 @@ final class mh {
         ci var6 = null;
         ci var7 = null;
         ci var8 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var4 = Terraphoenix.field_V;
         try {
           L0: {
@@ -143,7 +84,7 @@ final class mh {
             if (rk.field_f == null) {
               L1: {
                 if (null != ja.field_m) {
-                  discarded$3 = ja.field_m.a(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                  ja.field_m.a(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                   break L1;
                 } else {
                   break L1;
@@ -158,7 +99,7 @@ final class mh {
                   if (null == ja.field_m) {
                     break L2;
                   } else {
-                    discarded$4 = ja.field_m.a(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                    ja.field_m.a(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                     break L2;
                   }
                 } else {
@@ -198,7 +139,7 @@ final class mh {
                       if (var2 == null) {
                         break L4;
                       } else {
-                        discarded$5 = ja.field_m.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        ja.field_m.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L4;
                       }
                     } else {

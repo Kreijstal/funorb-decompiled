@@ -6,20 +6,16 @@ final class lb {
     static String field_b;
 
     final static int b(int param0) {
-        RuntimeException var1 = null;
+        boolean stackIn_11_0 = false;
+        int stackIn_34_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        boolean stackIn_4_0 = false;
-        boolean stackIn_11_0 = false;
-        int stackIn_34_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        boolean stackOut_10_0 = false;
-        int stackOut_33_0 = 0;
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
@@ -32,14 +28,13 @@ final class lb {
                     break L3;
                   } else {
                     bc.field_H.a((byte) -43);
-                    stackOut_3_0 = bc.field_H.b(true);
-                    stackIn_11_0 = stackOut_3_0;
-                    stackIn_4_0 = stackOut_3_0;
+                    stackIn_11_0 = bc.field_H.b(true);
+
                     if (var7 != 0) {
                       break L2;
                     } else {
                       L4: {
-                        if (stackIn_4_0) {
+                        if (stackIn_11_0) {
                           var1_int = 1;
                           break L4;
                         } else {
@@ -60,8 +55,7 @@ final class lb {
                   }
                 }
                 bc.field_H.a(rc.a(ef.field_a, param0 + 59719, ck.field_a), rc.a(bk.field_b, 29532, sh.field_e), param0 ^ -30202);
-                stackOut_10_0 = bc.field_H.b(true);
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = bc.field_H.b(true);
                 break L2;
               }
               L5: {
@@ -141,8 +135,7 @@ final class lb {
                   }
                 }
               }
-              stackOut_33_0 = var3;
-              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_0 = var3;
               break L0;
             }
           }

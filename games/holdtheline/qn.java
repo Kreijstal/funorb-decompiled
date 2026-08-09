@@ -92,8 +92,6 @@ final class qn extends hl {
         RuntimeException var2 = null;
         lc stackIn_2_0 = null;
         lc stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -101,26 +99,14 @@ final class qn extends hl {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        lc stackOut_3_0 = null;
-        lc stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 == -7079) {
-              stackOut_3_0 = new lc(param0);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = new lc(param0);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (lc) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (lc) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -129,27 +115,19 @@ final class qn extends hl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("qn.A(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("qn.A(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -163,13 +141,16 @@ final class qn extends hl {
     }
 
     final static void a(int param0, boolean param1, boolean param2) {
-        int fieldTemp$5 = 0;
-        lc discarded$6 = null;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        RuntimeException var3 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        float stackIn_31_0 = 0.0f;
+        float stackIn_59_0 = 0.0f;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         float var5 = 0.0f;
         float var6 = 0.0f;
         float var7 = 0.0f;
@@ -179,14 +160,6 @@ final class qn extends hl {
         ja var11 = null;
         ja var12 = null;
         ja var13 = null;
-        float stackIn_31_0 = 0.0f;
-        float stackIn_59_0 = 0.0f;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        float stackOut_58_0 = 0.0f;
-        float stackOut_57_0 = 0.0f;
-        float stackOut_30_0 = 0.0f;
-        float stackOut_29_0 = 0.0f;
         var8 = HoldTheLine.field_D;
         try {
           L0: {
@@ -221,9 +194,9 @@ final class qn extends hl {
                           if (bl.field_r.field_C[0].field_R >= 2) {
                             L4: {
                               pg.a(3, (byte) 102, true);
-                              fieldTemp$5 = kk.field_l - 1;
+                              fieldTemp$0 = kk.field_l - 1;
                               kk.field_l = kk.field_l - 1;
-                              if (1 > fieldTemp$5) {
+                              if (1 > fieldTemp$0) {
                                 ek.field_x = 6;
                                 wm.a(param1, false, 11);
                                 break L4;
@@ -243,7 +216,7 @@ final class qn extends hl {
                                 break L5;
                               } else {
                                 var9 = (String) null;
-                                discarded$6 = qn.a((String) null, -40);
+                                qn.a((String) null, -40);
                                 break L5;
                               }
                             }
@@ -253,9 +226,9 @@ final class qn extends hl {
                               } else {
                                 if (hk.field_d == vg.field_P) {
                                   L7: {
-                                    fieldTemp$7 = hk.field_d + 1;
+                                    fieldTemp$1 = hk.field_d + 1;
                                     hk.field_d = hk.field_d + 1;
-                                    if (fieldTemp$7 != pc.field_l[ao.field_b]) {
+                                    if (fieldTemp$1 != pc.field_l[ao.field_b]) {
                                       break L7;
                                     } else {
                                       hk.field_d = hk.field_d - 1;
@@ -282,9 +255,9 @@ final class qn extends hl {
                               tn.field_c = tn.field_c + 1;
                               cm.field_a = cm.field_a - (tn.field_c + hn.field_y);
                               nj.field_d = nj.field_d + ni.field_b;
-                              fieldTemp$8 = vg.field_P + 1;
+                              fieldTemp$2 = vg.field_P + 1;
                               vg.field_P = vg.field_P + 1;
-                              if (fieldTemp$8 == pc.field_l[cf.field_w]) {
+                              if (fieldTemp$2 == pc.field_l[cf.field_w]) {
                                 L9: {
                                   if (eg.field_a != 0) {
                                     break L9;
@@ -293,9 +266,9 @@ final class qn extends hl {
                                     if (cf.field_w == ao.field_b) {
                                       if (3 > ao.field_b) {
                                         hk.field_d = 0;
-                                        fieldTemp$9 = ao.field_b + 1;
+                                        fieldTemp$3 = ao.field_b + 1;
                                         ao.field_b = ao.field_b + 1;
-                                        ce.field_r = fieldTemp$9;
+                                        ce.field_r = fieldTemp$3;
                                         tn.a(0);
                                         h.b((byte) -125);
                                         break L9;
@@ -346,12 +319,10 @@ final class qn extends hl {
                             } else {
                               L13: {
                                 if (var13.field_Ib <= var13.field_vb) {
-                                  stackOut_58_0 = var13.field_Ib;
-                                  stackIn_59_0 = stackOut_58_0;
+                                  stackIn_59_0 = var13.field_Ib;
                                   break L13;
                                 } else {
-                                  stackOut_57_0 = var13.field_vb;
-                                  stackIn_59_0 = stackOut_57_0;
+                                  stackIn_59_0 = var13.field_vb;
                                   break L13;
                                 }
                               }
@@ -430,12 +401,10 @@ final class qn extends hl {
                                   if (bl.field_r.field_B >= var12.field_bc) {
                                     L21: {
                                       if (var12.field_vb < var12.field_Ib) {
-                                        stackOut_30_0 = var12.field_vb;
-                                        stackIn_31_0 = stackOut_30_0;
+                                        stackIn_31_0 = var12.field_vb;
                                         break L21;
                                       } else {
-                                        stackOut_29_0 = var12.field_Ib;
-                                        stackIn_31_0 = stackOut_29_0;
+                                        stackIn_31_0 = var12.field_Ib;
                                         break L21;
                                       }
                                     }

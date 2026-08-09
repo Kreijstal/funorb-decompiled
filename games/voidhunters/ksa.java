@@ -7,7 +7,6 @@ class ksa {
     long field_b;
 
     final boolean b(byte param0) {
-        int discarded$8 = 0;
         if (param0 == -63) {
           if (this.field_a == null) {
             return false;
@@ -15,7 +14,7 @@ class ksa {
             return true;
           }
         } else {
-          discarded$8 = ksa.a(-99, -70, 95, 66);
+          ksa.a(-99, -70, 95, 66);
           if (this.field_a == null) {
             return false;
           } else {
@@ -38,31 +37,21 @@ class ksa {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        int discarded$14 = 0;
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 != 31123) {
           L0: {
-            discarded$14 = ksa.a(-107, -16, 102, -117);
+            ksa.a(-107, -16, 102, -117);
             if (param1 <= param3) {
               if (param3 > param2) {
-                stackOut_11_0 = param2;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = param2;
                 break L0;
               } else {
-                stackOut_10_0 = param3;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = param3;
                 break L0;
               }
             } else {
-              stackOut_8_0 = param1;
-              stackIn_12_0 = stackOut_8_0;
+              stackIn_12_0 = param1;
               break L0;
             }
           }
@@ -71,17 +60,14 @@ class ksa {
           L1: {
             if (param1 <= param3) {
               if (param3 > param2) {
-                stackOut_5_0 = param2;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = param2;
                 break L1;
               } else {
-                stackOut_4_0 = param3;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = param3;
                 break L1;
               }
             } else {
-              stackOut_2_0 = param1;
-              stackIn_6_0 = stackOut_2_0;
+              stackIn_6_0 = param1;
               break L1;
             }
           }
@@ -106,7 +92,7 @@ class ksa {
     }
 
     final static faa a(byte param0) {
-        no var2 = null;
+        no var2;
         if (param0 != -6) {
           var2 = (no) null;
           ksa.a((phb[]) null, 27, -49, (phb[]) null, (phb[]) null, 58, 92, 102, -42, (no) null, 125, 6, -7, 73, -90);

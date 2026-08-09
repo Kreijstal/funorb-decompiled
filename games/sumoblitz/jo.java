@@ -22,12 +22,14 @@ final class jo {
     }
 
     final synchronized static byte[] a(int param0, int param1) {
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int dupTemp$6 = 0;
+        byte[][] arrayValue$7 = null;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3;
         L0: {
           if (param1 != 100) {
             break L0;
@@ -35,9 +37,9 @@ final class jo {
             if (0 >= va.field_b) {
               break L0;
             } else {
-              fieldTemp$6 = va.field_b - 1;
+              fieldTemp$3 = va.field_b - 1;
               va.field_b = va.field_b - 1;
-              var2_ref_byte__ = kh.field_f[fieldTemp$6];
+              var2_ref_byte__ = kh.field_f[fieldTemp$3];
               kh.field_f[va.field_b] = null;
               return var2_ref_byte__;
             }
@@ -50,9 +52,9 @@ final class jo {
             if (-1 <= (hk.field_a ^ -1)) {
               break L1;
             } else {
-              fieldTemp$7 = hk.field_a - 1;
+              fieldTemp$4 = hk.field_a - 1;
               hk.field_a = hk.field_a - 1;
-              var2_ref_byte__ = ow.field_d[fieldTemp$7];
+              var2_ref_byte__ = ow.field_d[fieldTemp$4];
               ow.field_d[hk.field_a] = null;
               return var2_ref_byte__;
             }
@@ -65,9 +67,9 @@ final class jo {
             if (0 >= fh.field_k) {
               break L2;
             } else {
-              fieldTemp$8 = fh.field_k - 1;
+              fieldTemp$5 = fh.field_k - 1;
               fh.field_k = fh.field_k - 1;
-              var2_ref_byte__ = ke.field_b[fieldTemp$8];
+              var2_ref_byte__ = ke.field_b[fieldTemp$5];
               ke.field_b[fh.field_k] = null;
               return var2_ref_byte__;
             }
@@ -82,8 +84,10 @@ final class jo {
               } else {
                 if (param1 == kr.field_d[var2]) {
                   if (l.field_c[var2] > 0) {
-                    l.field_c[var2] = l.field_c[var2] - 1;
-                    var3 = gk.field_w[var2][l.field_c[var2] - 1];
+                    dupTemp$6 = l.field_c[var2] - 1;
+                    arrayValue$7 = gk.field_w[var2];
+                    l.field_c[var2] = dupTemp$6;
+                    var3 = arrayValue$7[dupTemp$6];
                     gk.field_w[var2][l.field_c[var2]] = null;
                     return var3;
                   } else {

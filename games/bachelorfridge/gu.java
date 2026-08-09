@@ -9,7 +9,7 @@ final class gu {
     String field_b;
 
     public static void a(boolean param0) {
-        kv[] var2 = null;
+        kv[] var2;
         if (!param0) {
           var2 = (kv[]) null;
           gu.a(40, true, -118, (po) null, -87, (String) null, -19, false, (kv[]) null, -15, -124, -124, (kv[]) null, -26, 29);

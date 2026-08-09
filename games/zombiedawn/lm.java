@@ -9,20 +9,20 @@ final class lm extends fb {
     int field_H;
 
     final void g(int param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         if (param0 > 95) {
           if (-1 <= (this.field_H ^ -1)) {
             return;
           } else {
             this.field_H = this.field_H - 3;
-            fieldTemp$4 = this.field_F + 1;
+            fieldTemp$2 = this.field_F + 1;
             this.field_F = this.field_F + 1;
-            if (fieldTemp$4 > this.field_G) {
+            if (fieldTemp$2 > this.field_G) {
               this.field_F = 0;
-              fieldTemp$5 = this.field_E + 1;
+              fieldTemp$3 = this.field_E + 1;
               this.field_E = this.field_E + 1;
-              if (fieldTemp$5 >= ob.field_c.length) {
+              if (fieldTemp$3 >= ob.field_c.length) {
                 this.field_E = 0;
                 return;
               } else {
@@ -38,9 +38,8 @@ final class lm extends fb {
     }
 
     public static void i(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 3) {
-            discarded$0 = lm.f((byte) -9);
+            lm.f((byte) -9);
             field_D = null;
             return;
         }
@@ -48,7 +47,6 @@ final class lm extends fb {
     }
 
     final static boolean f(byte param0) {
-        boolean discarded$5 = false;
         if (param0 > 124) {
           if (rn.field_b != null) {
             if (!rn.field_b.c(119)) {
@@ -60,7 +58,7 @@ final class lm extends fb {
             return false;
           }
         } else {
-          discarded$5 = lm.f((byte) 23);
+          lm.f((byte) 23);
           if (rn.field_b != null) {
             if (!rn.field_b.c(119)) {
               return false;
@@ -75,12 +73,11 @@ final class lm extends fb {
 
     final void a(byte param0, wk param1) {
         int var3_int = 0;
-        boolean discarded$0 = false;
         int var4 = 0;
         try {
             var3_int = param1.a(this.field_y >> 106404400, (byte) -96);
             if (param0 >= -76) {
-                discarded$0 = lm.f((byte) -99);
+                lm.f((byte) -99);
             }
             var4 = param1.a(this.field_x >> 22567472, 0) + -this.field_H;
             ob.field_c[this.field_E].b(var3_int, var4);
@@ -96,7 +93,7 @@ final class lm extends fb {
         this.field_G = so.c(3) - -3;
         this.field_F = so.c(this.field_G);
         this.field_E = so.c(5);
-        int discarded$0 = so.a(pi.field_k);
+        so.a(pi.field_k);
     }
 
     static {

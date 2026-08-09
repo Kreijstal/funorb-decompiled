@@ -73,9 +73,9 @@ final class maa {
     }
 
     private final int a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var2 = this.field_d.field_g[this.field_d.field_h];
           if (var2 >= 0) {
@@ -203,10 +203,10 @@ final class maa {
     }
 
     final int f() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
         var1 = this.field_c.length;
         var2 = -1;
         var3 = 2147483647;

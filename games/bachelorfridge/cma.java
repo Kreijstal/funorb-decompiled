@@ -9,7 +9,6 @@ final class cma extends ana {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7_int = 0;
-        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -18,6 +17,7 @@ final class cma extends ana {
         int var13 = 0;
         int[] var17 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
         var13 = BachelorFridge.field_y;
         try {
           L0: {
@@ -85,7 +85,7 @@ final class cma extends ana {
         if (param0 != 35) {
             field_v = (int[]) null;
         }
-        oha discarded$0 = al.a(109, this.field_w.field_k);
+        al.a(109, this.field_w.field_k);
         int var4 = 0;
         while (var3 != null) {
             var5 = var3.field_h.a(-27449, this.field_q);
@@ -111,23 +111,23 @@ final class cma extends ana {
     }
 
     private final void e(int param0) {
-        uea discarded$1 = null;
-        op var3 = null;
-        aga var4 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        Object var18 = null;
-        hd var18_ref = null;
-        int[][] var21 = null;
+        uea discarded$0 = null;
+        op var3;
+        aga var4;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        Object var18;
+        hd var18_ref;
+        int[][] var21;
         var18 = null;
         var16 = BachelorFridge.field_y;
         var18_ref = (hd) ((Object) al.a(-88, this.field_w.field_k));
@@ -159,7 +159,7 @@ final class cma extends ana {
                       if (var3.field_z > var14) {
                         if (0 <= var15) {
                           if (var3.field_B > var15) {
-                            discarded$1 = new uea(this.field_q, var14, var15, gma.field_e[var18_ref.field_q].field_a);
+                            discarded$0 = new uea(this.field_q, var14, var15, gma.field_e[var18_ref.field_q].field_a);
                             var13++;
                             continue L1;
                           } else {

@@ -13,7 +13,7 @@ final class jt {
     }
 
     final static boolean a(byte param0) {
-        int var1 = 0;
+        int var1;
         var1 = 72 / ((7 - param0) / 51);
         if (tb.field_e != null) {
           if (!tb.field_e.d((byte) -101)) {

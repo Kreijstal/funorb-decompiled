@@ -30,7 +30,6 @@ final class gab {
 
     final void a(boolean param0) {
         int var2 = 0;
-        int[][] discarded$0 = null;
         int var3 = VoidHunters.field_G;
         for (var2 = 0; var2 < this.field_c; var2++) {
             this.field_h[var2] = null;
@@ -39,7 +38,7 @@ final class gab {
         this.field_a = null;
         this.field_i.e(100);
         if (param0) {
-            discarded$0 = this.b(122);
+            this.b(122);
         }
         this.field_i = null;
     }
@@ -53,46 +52,29 @@ final class gab {
     }
 
     final int[] a(byte param0, int param1) {
-        int var3 = 0;
-        osa var4 = null;
-        osa var5 = null;
-        int var6 = 0;
-        Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         int stackIn_5_1 = 0;
-        Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
         Object stackIn_16_0 = null;
         int stackIn_16_1 = 0;
-        Object stackOut_13_0 = null;
-        Object stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        Object stackOut_2_0 = null;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
+        int var3;
+        osa var4;
+        osa var5;
+        int var6;
         var6 = VoidHunters.field_G;
         var3 = -45 / ((param0 - 80) / 37);
         if (this.field_c == this.field_g) {
           L0: {
-            stackOut_13_0 = this;
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_14_0 = stackOut_13_0;
+            stackIn_15_0 = this;
+
             if (null != this.field_a[param1]) {
-              stackOut_15_0 = this;
-              stackOut_15_1 = 0;
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_0 = this;
+              stackIn_16_1 = 0;
               break L0;
             } else {
-              stackOut_14_0 = this;
-              stackOut_14_1 = 1;
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_0 = this;
+              stackIn_16_1 = 1;
               break L0;
             }
           }
@@ -129,20 +111,15 @@ final class gab {
             return this.field_h[var4.field_f];
           } else {
             L3: {
-              stackOut_2_0 = this;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_4_0 = this;
+
               if (this.field_f == param1) {
-                stackOut_4_0 = this;
-                stackOut_4_1 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                stackIn_5_1 = stackOut_4_1;
+                stackIn_5_0 = this;
+                stackIn_5_1 = 0;
                 break L3;
               } else {
-                stackOut_3_0 = this;
-                stackOut_3_1 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_5_1 = stackOut_3_1;
+                stackIn_5_0 = this;
+                stackIn_5_1 = 1;
                 break L3;
               }
             }

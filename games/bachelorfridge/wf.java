@@ -23,16 +23,15 @@ final class wf extends ana {
     }
 
     private final void e(byte param0) {
-        oha discarded$8 = null;
-        aga var2 = null;
-        iv var3 = null;
-        int var5 = 0;
-        ad var6 = null;
+        aga var2;
+        iv var3;
+        int var5;
+        ad var6;
         var5 = BachelorFridge.field_y;
         var2 = this.field_w.field_l.a(40, this.field_q.field_h);
         if (!var2.i(-99)) {
           var3 = (iv) ((Object) this.field_w.field_o.b((byte) 90));
-          discarded$8 = al.a(-48, this.field_w.field_k);
+          al.a(-48, this.field_w.field_k);
           if (param0 > 60) {
             L0: while (true) {
               if (var3 != null) {
@@ -86,16 +85,16 @@ final class wf extends ana {
     }
 
     final static void a(int param0, byte param1) {
-        cq discarded$0 = ol.a(rt.field_a[param0], true);
+        ol.a(rt.field_a[param0], true);
         int var2 = 49 / ((83 - param1) / 43);
     }
 
     final boolean c(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = -56 % ((71 - param0) / 47);
-        int fieldTemp$2 = this.field_l - 1;
+        int fieldTemp$1 = this.field_l - 1;
         this.field_l = this.field_l - 1;
-        if ((fieldTemp$2 ^ -1) <= -1) {
+        if ((fieldTemp$1 ^ -1) <= -1) {
           if (this.field_l == 25) {
             wf.a(34, (byte) -101);
             this.e((byte) 120);

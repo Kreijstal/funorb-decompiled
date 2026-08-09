@@ -25,8 +25,10 @@ abstract class sh extends vd implements mca {
     }
 
     final static void l(int param0) {
-        RuntimeException var1 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         pf var2 = null;
         int var3 = 0;
         int[] var4 = null;
@@ -40,8 +42,6 @@ abstract class sh extends vd implements mca {
         cfa var13 = null;
         kka var14 = null;
         kka var15 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var9 = BachelorFridge.field_y;
         try {
           L0: {

@@ -33,12 +33,12 @@ final class so {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         var11 = -param6;
         L0: while (true) {
           if (var11 >= 0) {
@@ -52,9 +52,9 @@ final class so {
                 var11++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 if (param2 == 0) {
                   param4++;
                   var12++;
@@ -62,9 +62,9 @@ final class so {
                 } else {
                   var9 = param0[param4];
                   var10 = 256 - (param2 & 255);
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = (var9 & 16711935) * var10 >> 8 & 16711935 | (var9 & 65280) * var10 >> 8 & 65280;
+                  param0[incrementValue$12] = (var9 & 16711935) * var10 >> 8 & 16711935 | (var9 & 65280) * var10 >> 8 & 65280;
                   var12++;
                   continue L1;
                 }
@@ -75,43 +75,24 @@ final class so {
     }
 
     final static void b(vn param0, int param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          var4 = param1 + param2 * bi.field_f;
-          var5 = 0;
-          var6 = param0.field_t;
-          var7 = param0.field_w;
-          var8 = bi.field_f - var7;
-          var9 = 0;
-          if (param2 >= bi.field_l) {
-            break L0;
-          } else {
+        int var4 = param1 + param2 * bi.field_f;
+        int var5 = 0;
+        int var6 = param0.field_t;
+        int var7 = param0.field_w;
+        int var8 = bi.field_f - var7;
+        int var9 = 0;
+        if (param2 < bi.field_l) {
             var10 = bi.field_l - param2;
             var6 = var6 - var10;
             param2 = bi.field_l;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * bi.field_f;
-            break L0;
-          }
         }
-        L1: {
-          if (param2 + var6 <= bi.field_d) {
-            break L1;
-          } else {
+        if (param2 + var6 > bi.field_d) {
             var6 = var6 - (param2 + var6 - bi.field_d);
-            break L1;
-          }
         }
-        L2: {
-          if (param1 >= bi.field_g) {
-            break L2;
-          } else {
+        if (param1 < bi.field_g) {
             var10 = bi.field_g - param1;
             var7 = var7 - var10;
             param1 = bi.field_g;
@@ -119,38 +100,23 @@ final class so {
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param1 + var7 <= bi.field_b) {
-            break L3;
-          } else {
+        if (param1 + var7 > bi.field_b) {
             var10 = param1 + var7 - bi.field_b;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        L4: {
-          if (var7 <= 0) {
-            break L4;
-          } else {
-            if (var6 > 0) {
-              so.a(bi.field_c, param0.field_z, 0, var5, var4, var7, var6, var8, var9, param3);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var7 <= 0 || var6 <= 0) {
+            return;
         }
+        so.a(bi.field_c, param0.field_z, 0, var5, var4, var7, var6, var8, var9, param3);
     }
 
     final static void b(vo param0) {
-        Object var1 = null;
-        le var1_ref = null;
-        le var2 = null;
+        Object var1;
+        le var1_ref;
+        le var2;
         L0: while (true) {
           if (so.a(param0)) {
             return;
@@ -183,43 +149,24 @@ final class so {
     }
 
     final static void a(vn param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        L0: {
-          var3 = param1 + param2 * bi.field_f;
-          var4 = 0;
-          var5 = param0.field_t;
-          var6 = param0.field_w;
-          var7 = bi.field_f - var6;
-          var8 = 0;
-          if (param2 >= bi.field_l) {
-            break L0;
-          } else {
+        int var3 = param1 + param2 * bi.field_f;
+        int var4 = 0;
+        int var5 = param0.field_t;
+        int var6 = param0.field_w;
+        int var7 = bi.field_f - var6;
+        int var8 = 0;
+        if (param2 < bi.field_l) {
             var9 = bi.field_l - param2;
             var5 = var5 - var9;
             param2 = bi.field_l;
             var4 = var4 + var9 * var6;
             var3 = var3 + var9 * bi.field_f;
-            break L0;
-          }
         }
-        L1: {
-          if (param2 + var5 <= bi.field_d) {
-            break L1;
-          } else {
+        if (param2 + var5 > bi.field_d) {
             var5 = var5 - (param2 + var5 - bi.field_d);
-            break L1;
-          }
         }
-        L2: {
-          if (param1 >= bi.field_g) {
-            break L2;
-          } else {
+        if (param1 < bi.field_g) {
             var9 = bi.field_g - param1;
             var6 = var6 - var9;
             param1 = bi.field_g;
@@ -227,32 +174,17 @@ final class so {
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L2;
-          }
         }
-        L3: {
-          if (param1 + var6 <= bi.field_b) {
-            break L3;
-          } else {
+        if (param1 + var6 > bi.field_b) {
             var9 = param1 + var6 - bi.field_b;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
-            break L3;
-          }
         }
-        L4: {
-          if (var6 <= 0) {
-            break L4;
-          } else {
-            if (var5 > 0) {
-              so.a(bi.field_c, param0.field_z, 0, var4, var3, var6, var5, var7, var8);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var6 <= 0 || var5 <= 0) {
+            return;
         }
+        so.a(bi.field_c, param0.field_z, 0, var4, var3, var6, var5, var7, var8);
     }
 
     public static void a() {
@@ -260,16 +192,16 @@ final class so {
     }
 
     final static void a(int param0) {
-        int incrementValue$7877 = 0;
-        int incrementValue$7878 = 0;
-        int var1 = 0;
-        int[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        vn var5 = null;
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int var1;
+        int[] var2;
+        int var3;
+        int var4;
+        vn var5;
+        int[] var6;
+        int var7;
+        int var8;
         var1 = 0;
         var2 = bi.field_c;
         var3 = bi.field_f;
@@ -336,16 +268,16 @@ final class so {
                         }
                       }
                     }
-                    incrementValue$7877 = var1;
+                    incrementValue$8 = var1;
                     var1++;
-                    var6[incrementValue$7877] = param0;
+                    var6[incrementValue$8] = param0;
                     var8++;
                     continue L1;
                   }
                 }
-                incrementValue$7878 = var1;
+                incrementValue$9 = var1;
                 var1++;
-                var6[incrementValue$7878] = var2[incrementValue$7878];
+                var6[incrementValue$9] = var2[incrementValue$9];
                 var8++;
                 continue L1;
               }
@@ -355,12 +287,12 @@ final class so {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$66 = 0;
-        int incrementValue$67 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         var12 = -param6;
         L0: while (true) {
           if (var12 >= 0) {
@@ -374,9 +306,9 @@ final class so {
                 var12++;
                 continue L0;
               } else {
-                incrementValue$66 = param3;
+                incrementValue$11 = param3;
                 param3++;
-                param2 = param1[incrementValue$66];
+                param2 = param1[incrementValue$11];
                 if (param2 == 0) {
                   param4++;
                   var13++;
@@ -384,9 +316,9 @@ final class so {
                 } else {
                   var10 = param0[param4];
                   var11 = 256 - ((param2 & 255) * param9 >> 8);
-                  incrementValue$67 = param4;
+                  incrementValue$12 = param4;
                   param4++;
-                  param0[incrementValue$67] = (var10 & 16711935) * var11 >> 8 & 16711935 | (var10 & 65280) * var11 >> 8 & 65280;
+                  param0[incrementValue$12] = (var10 & 16711935) * var11 >> 8 & 16711935 | (var10 & 65280) * var11 >> 8 & 65280;
                   var13++;
                   continue L1;
                 }
@@ -401,45 +333,26 @@ final class so {
     }
 
     final static void a(vn param0, int param1, int param2, int param3) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        L0: {
-          param1 = param1 + (param0.field_r - param0.field_w - param0.field_v);
-          param2 = param2 + param0.field_x;
-          var4 = param1 + param2 * bi.field_f;
-          var5 = param0.field_w - 1;
-          var6 = param0.field_t;
-          var7 = param0.field_w;
-          var8 = bi.field_f - var7;
-          var9 = var7 + var7;
-          if (param2 >= bi.field_l) {
-            break L0;
-          } else {
+        param1 = param1 + (param0.field_r - param0.field_w - param0.field_v);
+        param2 = param2 + param0.field_x;
+        int var4 = param1 + param2 * bi.field_f;
+        int var5 = param0.field_w - 1;
+        int var6 = param0.field_t;
+        int var7 = param0.field_w;
+        int var8 = bi.field_f - var7;
+        int var9 = var7 + var7;
+        if (param2 < bi.field_l) {
             var10 = bi.field_l - param2;
             var6 = var6 - var10;
             param2 = bi.field_l;
             var5 = var5 + var10 * var7;
             var4 = var4 + var10 * bi.field_f;
-            break L0;
-          }
         }
-        L1: {
-          if (param2 + var6 <= bi.field_d) {
-            break L1;
-          } else {
+        if (param2 + var6 > bi.field_d) {
             var6 = var6 - (param2 + var6 - bi.field_d);
-            break L1;
-          }
         }
-        L2: {
-          if (param1 >= bi.field_g) {
-            break L2;
-          } else {
+        if (param1 < bi.field_g) {
             var10 = bi.field_g - param1;
             var7 = var7 - var10;
             param1 = bi.field_g;
@@ -447,36 +360,21 @@ final class so {
             var4 = var4 + var10;
             var9 = var9 - var10;
             var8 = var8 + var10;
-            break L2;
-          }
         }
-        L3: {
-          if (param1 + var7 <= bi.field_b) {
-            break L3;
-          } else {
+        if (param1 + var7 > bi.field_b) {
             var10 = param1 + var7 - bi.field_b;
             var7 = var7 - var10;
             var9 = var9 - var10;
             var8 = var8 + var10;
-            break L3;
-          }
         }
-        L4: {
-          if (var7 <= 0) {
-            break L4;
-          } else {
-            if (var6 > 0) {
-              so.b(bi.field_c, param0.field_z, 0, var5, var4, var7, var6, var8, var9, param3);
-              return;
-            } else {
-              break L4;
-            }
-          }
+        if (var7 <= 0 || var6 <= 0) {
+            return;
         }
+        so.b(bi.field_c, param0.field_z, 0, var5, var4, var7, var6, var8, var9, param3);
     }
 
     private final static boolean a(vo param0) {
-        le var1 = null;
+        le var1;
         var1 = param0.b((byte) 26);
         L0: while (true) {
           L1: {
@@ -500,13 +398,13 @@ final class so {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$403 = 0;
-        int incrementValue$404 = 0;
-        int incrementValue$405 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         var10 = param9 & 16711935;
         var11 = param9 >> 8 & 255;
         var12 = -param6;
@@ -522,25 +420,25 @@ final class so {
                 var12++;
                 continue L0;
               } else {
-                incrementValue$403 = param3;
+                incrementValue$12 = param3;
                 param3--;
-                param2 = param1[incrementValue$403];
+                param2 = param1[incrementValue$12];
                 if (param2 == 0) {
                   param4++;
                   var13++;
                   continue L1;
                 } else {
                   if (param2 >> 8 != (param2 & 65535)) {
-                    incrementValue$404 = param4;
+                    incrementValue$13 = param4;
                     param4++;
-                    param0[incrementValue$404] = param2;
+                    param0[incrementValue$13] = param2;
                     var13++;
                     continue L1;
                   } else {
                     param2 = param2 & 255;
-                    incrementValue$405 = param4;
+                    incrementValue$14 = param4;
                     param4++;
-                    param0[incrementValue$405] = (param2 * var10 >> 8 & 16711934) + (param2 * var11 & 65280) + 1;
+                    param0[incrementValue$14] = (param2 * var10 >> 8 & 16711934) + (param2 * var11 & 65280) + 1;
                     var13++;
                     continue L1;
                   }
@@ -556,8 +454,8 @@ final class so {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var10 = 0;
-        int var11 = 0;
+        int var10;
+        int var11;
         param8--;
         L0: while (true) {
           if (param8 < 0) {

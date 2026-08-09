@@ -15,7 +15,7 @@ final class ot {
     }
 
     final static void a(int param0) {
-        String var2 = null;
+        String var2;
         if (param0 > -94) {
           field_c = (String) null;
           var2 = (String) null;

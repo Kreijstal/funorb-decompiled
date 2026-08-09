@@ -17,9 +17,9 @@ abstract class ib extends ij {
     }
 
     final static void e(int param0) {
-        sc var1 = null;
-        int var2 = 0;
-        md var3 = null;
+        sc var1;
+        int var2;
+        md var3;
         var1 = (sc) ((Object) hd.field_c.g(32073));
         var2 = -21 / ((param0 - 61) / 40);
         if (var1 == null) {

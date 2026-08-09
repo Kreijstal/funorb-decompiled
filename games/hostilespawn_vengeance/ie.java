@@ -23,10 +23,6 @@ final class ie {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ie.A(";
         field_c = null;
         field_a = "Get to your shuttle before the reactor explodes!";

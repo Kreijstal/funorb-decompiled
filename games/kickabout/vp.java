@@ -20,6 +20,8 @@ final class vp implements hc {
     static String field_m;
 
     final static void a(int param0, int param1) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -31,8 +33,6 @@ final class vp implements hc {
         int var10 = 0;
         int var11 = 0;
         dd var12 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var11 = Kickabout.field_G;
         try {
           L0: {
@@ -44,6 +44,7 @@ final class vp implements hc {
                 hq.field_a = false;
                 wr.field_l = param1;
                 var12 = new dd();
+                Runtime.getRuntime().freeMemory();
                 if (wr.field_l == 0) {
                   break L1;
                 } else {
@@ -148,8 +149,6 @@ final class vp implements hc {
 
     private final boolean b(int param0) {
         int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
         if (param0 == 8) {
           L0: {
             L1: {
@@ -167,13 +166,11 @@ final class vp implements hc {
                     }
                   }
                 }
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_0 = 1;
                 break L0;
               }
             }
-            stackOut_7_0 = 0;
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = 0;
             break L0;
           }
           return stackIn_8_0 != 0;
@@ -186,23 +183,11 @@ final class vp implements hc {
         if (null == td.field_c) {
             return -1;
         }
-        if (param1 >= ik.field_D) {
-            if (ik.field_D - -td.field_c.field_q > param1) {
-                if (rp.field_w <= param0) {
-                    if (param0 < rp.field_w + td.field_c.field_w) {
-                        return 0;
-                    }
-                }
-            }
+        if (param1 >= ik.field_D && ik.field_D - -td.field_c.field_q > param1 && rp.field_w <= param0 && param0 < rp.field_w + td.field_c.field_w) {
+            return 0;
         }
-        if (ha.field_G <= param1) {
-            if (ha.field_G + td.field_c.field_q > param1) {
-                if (param0 >= lr.field_q) {
-                    if (param0 < td.field_c.field_w + lr.field_q) {
-                        return 1;
-                    }
-                }
-            }
+        if (ha.field_G <= param1 && ha.field_G + td.field_c.field_q > param1 && param0 >= lr.field_q && param0 < td.field_c.field_w + lr.field_q) {
+            return 1;
         }
         if (param2 < 0) {
             field_b = (String) null;
@@ -215,9 +200,8 @@ final class vp implements hc {
     }
 
     final static void c(int param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         L0: {
           if (null != lw.field_e) {
             var1 = lw.field_e;
@@ -243,7 +227,7 @@ final class vp implements hc {
     }
 
     public final void a(int param0, boolean param1) {
-        String var4 = null;
+        String var4;
         L0: {
           pe.b(0);
           var4 = (String) null;
@@ -300,8 +284,6 @@ final class vp implements hc {
 
     public final boolean a(byte param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 > 63) {
             break L0;
@@ -318,14 +300,12 @@ final class vp implements hc {
               if (!vg.field_Wb) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
@@ -333,8 +313,6 @@ final class vp implements hc {
 
     public final boolean a(int param0, int param1, char param2) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0 == 11516) {
           L0: {
             L1: {
@@ -344,14 +322,12 @@ final class vp implements hc {
                 if (!ud.a(13, 12, 17860, 15)) {
                   break L1;
                 } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = 1;
                   break L0;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = 0;
             break L0;
           }
           return stackIn_6_0 != 0;

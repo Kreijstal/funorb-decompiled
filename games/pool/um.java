@@ -10,10 +10,10 @@ abstract class um {
 
     final static void a(int param0, int param1) {
         ma var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         kg var4 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var3 = Pool.field_O;
         try {
           L0: {

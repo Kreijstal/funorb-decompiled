@@ -9,11 +9,10 @@ final class rn {
     static int field_b;
 
     final static void a(int param0) {
-        int discarded$0 = 0;
         wm.field_p = null;
         gg.field_k = null;
         if (param0 != 1) {
-            discarded$0 = rn.a((byte) 67, 3);
+            rn.a((byte) 67, 3);
         }
     }
 
@@ -29,7 +28,7 @@ final class rn {
     }
 
     final static int a(byte param0, int param1) {
-        int var2 = 0;
+        int var2;
         if (-1 == (param1 ^ -1)) {
           return 0;
         } else {

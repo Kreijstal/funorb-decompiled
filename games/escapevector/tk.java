@@ -6,10 +6,9 @@ final class tk {
     static qh field_b;
 
     public static void b(int param0) {
-        ed[] discarded$0 = null;
         if (param0 != 31167) {
             qh[] var2 = (qh[]) null;
-            discarded$0 = tk.a(false, (qh[]) null);
+            tk.a(false, (qh[]) null);
         }
         field_b = null;
         field_a = null;
@@ -30,8 +29,6 @@ final class tk {
         Object stackIn_3_0 = null;
         ed[] stackIn_6_0 = null;
         ed[] stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -39,17 +36,6 @@ final class tk {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ed[] stackOut_10_0 = null;
-        ed[] stackOut_5_0 = null;
-        Object stackOut_2_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         var5 = EscapeVector.field_A;
         try {
           L0: {
@@ -59,8 +45,7 @@ final class tk {
                 var4 = 0;
                 L1: while (true) {
                   if (var4 >= param1.length) {
-                    stackOut_10_0 = (ed[]) (var3);
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = (ed[]) (var3);
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
@@ -70,14 +55,12 @@ final class tk {
                   }
                 }
               } else {
-                stackOut_5_0 = (ed[]) null;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = (ed[]) null;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -86,27 +69,19 @@ final class tk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var2);
-            stackOut_12_1 = new StringBuilder().append("tk.D(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var2);
+
+            stackIn_14_1 = new StringBuilder().append("tk.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L2;
             }
           }
@@ -129,11 +104,11 @@ final class tk {
 
     final static void a(int param0, int param1) {
         hg var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         qd var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var4 = EscapeVector.field_A;
         try {
           L0: {

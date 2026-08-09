@@ -7,27 +7,40 @@ final class q {
     static String field_c;
 
     public static void a(int param0) {
-        hj[] discarded$0 = null;
         field_a = null;
         field_c = null;
         if (param0 <= 96) {
-            discarded$0 = q.a(false, -77, -89, 87, 85);
+            q.a(false, -77, -89, 87, 85);
         }
     }
 
     final synchronized static byte[] a(int param0, byte param1) {
-        int fieldTemp$49 = 0;
-        int fieldTemp$50 = 0;
-        int fieldTemp$51 = 0;
-        int fieldTemp$52 = 0;
-        int fieldTemp$53 = 0;
-        int fieldTemp$54 = 0;
-        int fieldTemp$55 = 0;
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3_ref_byte__ = null;
-        int var3 = 0;
-        byte[] var4 = null;
+        int dupTemp$2 = 0;
+        byte[][] arrayValue$3 = null;
+        int fieldTemp$4 = 0;
+        int dupTemp$5 = 0;
+        byte[][] arrayValue$6 = null;
+        int fieldTemp$7 = 0;
+        int dupTemp$8 = 0;
+        byte[][] arrayValue$9 = null;
+        int fieldTemp$10 = 0;
+        int dupTemp$11 = 0;
+        byte[][] arrayValue$12 = null;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
+        int dupTemp$15 = 0;
+        byte[][] arrayValue$16 = null;
+        int dupTemp$17 = 0;
+        byte[][] arrayValue$18 = null;
+        int fieldTemp$19 = 0;
+        int dupTemp$20 = 0;
+        byte[][] arrayValue$21 = null;
+        int fieldTemp$22 = 0;
+        byte[] var2_ref_byte__;
+        int var2;
+        byte[] var3_ref_byte__;
+        int var3;
+        byte[] var4;
         if (-101 != (param0 ^ -1)) {
           var2 = 25 % ((param1 - -16) / 48);
           if ((param0 ^ -1) != -5001) {
@@ -43,8 +56,10 @@ final class q {
                     } else {
                       if (ec.field_E[var3] == param0) {
                         if ((fb.field_f[var3] ^ -1) < -1) {
-                          fb.field_f[var3] = fb.field_f[var3] - 1;
-                          var4 = ef.field_g[var3][fb.field_f[var3] - 1];
+                          dupTemp$2 = fb.field_f[var3] - 1;
+                          arrayValue$3 = ef.field_g[var3];
+                          fb.field_f[var3] = dupTemp$2;
+                          var4 = arrayValue$3[dupTemp$2];
                           ef.field_g[var3][fb.field_f[var3]] = null;
                           return var4;
                         } else {
@@ -62,9 +77,9 @@ final class q {
               return new byte[param0];
             } else {
               if ((lf.field_d ^ -1) < -1) {
-                fieldTemp$49 = lf.field_d - 1;
+                fieldTemp$4 = lf.field_d - 1;
                 lf.field_d = lf.field_d - 1;
-                var3_ref_byte__ = vf.field_c[fieldTemp$49];
+                var3_ref_byte__ = vf.field_c[fieldTemp$4];
                 vf.field_c[lf.field_d] = null;
                 return var3_ref_byte__;
               } else {
@@ -79,8 +94,10 @@ final class q {
                       } else {
                         if (ec.field_E[var3] == param0) {
                           if ((fb.field_f[var3] ^ -1) < -1) {
-                            fb.field_f[var3] = fb.field_f[var3] - 1;
-                            var4 = ef.field_g[var3][fb.field_f[var3] - 1];
+                            dupTemp$5 = fb.field_f[var3] - 1;
+                            arrayValue$6 = ef.field_g[var3];
+                            fb.field_f[var3] = dupTemp$5;
+                            var4 = arrayValue$6[dupTemp$5];
                             ef.field_g[var3][fb.field_f[var3]] = null;
                             return var4;
                           } else {
@@ -100,9 +117,9 @@ final class q {
             }
           } else {
             if (pd.field_C > 0) {
-              fieldTemp$50 = pd.field_C - 1;
+              fieldTemp$7 = pd.field_C - 1;
               pd.field_C = pd.field_C - 1;
-              var3_ref_byte__ = pe.field_a[fieldTemp$50];
+              var3_ref_byte__ = pe.field_a[fieldTemp$7];
               pe.field_a[pd.field_C] = null;
               return var3_ref_byte__;
             } else {
@@ -118,8 +135,10 @@ final class q {
                       } else {
                         if (ec.field_E[var3] == param0) {
                           if ((fb.field_f[var3] ^ -1) < -1) {
-                            fb.field_f[var3] = fb.field_f[var3] - 1;
-                            var4 = ef.field_g[var3][fb.field_f[var3] - 1];
+                            dupTemp$8 = fb.field_f[var3] - 1;
+                            arrayValue$9 = ef.field_g[var3];
+                            fb.field_f[var3] = dupTemp$8;
+                            var4 = arrayValue$9[dupTemp$8];
                             ef.field_g[var3][fb.field_f[var3]] = null;
                             return var4;
                           } else {
@@ -137,9 +156,9 @@ final class q {
                 return new byte[param0];
               } else {
                 if ((lf.field_d ^ -1) < -1) {
-                  fieldTemp$51 = lf.field_d - 1;
+                  fieldTemp$10 = lf.field_d - 1;
                   lf.field_d = lf.field_d - 1;
-                  var3_ref_byte__ = vf.field_c[fieldTemp$51];
+                  var3_ref_byte__ = vf.field_c[fieldTemp$10];
                   vf.field_c[lf.field_d] = null;
                   return var3_ref_byte__;
                 } else {
@@ -154,8 +173,10 @@ final class q {
                         } else {
                           if (ec.field_E[var3] == param0) {
                             if ((fb.field_f[var3] ^ -1) < -1) {
-                              fb.field_f[var3] = fb.field_f[var3] - 1;
-                              var4 = ef.field_g[var3][fb.field_f[var3] - 1];
+                              dupTemp$11 = fb.field_f[var3] - 1;
+                              arrayValue$12 = ef.field_g[var3];
+                              fb.field_f[var3] = dupTemp$11;
+                              var4 = arrayValue$12[dupTemp$11];
                               ef.field_g[var3][fb.field_f[var3]] = null;
                               return var4;
                             } else {
@@ -180,17 +201,17 @@ final class q {
             var2 = 25 % ((param1 - -16) / 48);
             if ((param0 ^ -1) == -5001) {
               if (pd.field_C > 0) {
-                fieldTemp$52 = pd.field_C - 1;
+                fieldTemp$13 = pd.field_C - 1;
                 pd.field_C = pd.field_C - 1;
-                var3_ref_byte__ = pe.field_a[fieldTemp$52];
+                var3_ref_byte__ = pe.field_a[fieldTemp$13];
                 pe.field_a[pd.field_C] = null;
                 return var3_ref_byte__;
               } else {
                 if (-30001 == (param0 ^ -1)) {
                   if ((lf.field_d ^ -1) < -1) {
-                    fieldTemp$53 = lf.field_d - 1;
+                    fieldTemp$14 = lf.field_d - 1;
                     lf.field_d = lf.field_d - 1;
-                    var3_ref_byte__ = vf.field_c[fieldTemp$53];
+                    var3_ref_byte__ = vf.field_c[fieldTemp$14];
                     vf.field_c[lf.field_d] = null;
                     return var3_ref_byte__;
                   } else {
@@ -200,8 +221,10 @@ final class q {
                         if (ec.field_E.length > var3) {
                           if (ec.field_E[var3] == param0) {
                             if ((fb.field_f[var3] ^ -1) < -1) {
-                              fb.field_f[var3] = fb.field_f[var3] - 1;
-                              var4 = ef.field_g[var3][fb.field_f[var3] - 1];
+                              dupTemp$15 = fb.field_f[var3] - 1;
+                              arrayValue$16 = ef.field_g[var3];
+                              fb.field_f[var3] = dupTemp$15;
+                              var4 = arrayValue$16[dupTemp$15];
                               ef.field_g[var3][fb.field_f[var3]] = null;
                               return var4;
                             } else {
@@ -227,8 +250,10 @@ final class q {
                       if (ec.field_E.length > var3) {
                         if (ec.field_E[var3] == param0) {
                           if ((fb.field_f[var3] ^ -1) < -1) {
-                            fb.field_f[var3] = fb.field_f[var3] - 1;
-                            var4 = ef.field_g[var3][fb.field_f[var3] - 1];
+                            dupTemp$17 = fb.field_f[var3] - 1;
+                            arrayValue$18 = ef.field_g[var3];
+                            fb.field_f[var3] = dupTemp$17;
+                            var4 = arrayValue$18[dupTemp$17];
                             ef.field_g[var3][fb.field_f[var3]] = null;
                             return var4;
                           } else {
@@ -254,9 +279,9 @@ final class q {
                   break L10;
                 } else {
                   if ((lf.field_d ^ -1) < -1) {
-                    fieldTemp$54 = lf.field_d - 1;
+                    fieldTemp$19 = lf.field_d - 1;
                     lf.field_d = lf.field_d - 1;
-                    var3_ref_byte__ = vf.field_c[fieldTemp$54];
+                    var3_ref_byte__ = vf.field_c[fieldTemp$19];
                     vf.field_c[lf.field_d] = null;
                     return var3_ref_byte__;
                   } else {
@@ -270,8 +295,10 @@ final class q {
                   if (ec.field_E.length > var3) {
                     if (ec.field_E[var3] == param0) {
                       if ((fb.field_f[var3] ^ -1) < -1) {
-                        fb.field_f[var3] = fb.field_f[var3] - 1;
-                        var4 = ef.field_g[var3][fb.field_f[var3] - 1];
+                        dupTemp$20 = fb.field_f[var3] - 1;
+                        arrayValue$21 = ef.field_g[var3];
+                        fb.field_f[var3] = dupTemp$20;
+                        var4 = arrayValue$21[dupTemp$20];
                         ef.field_g[var3][fb.field_f[var3]] = null;
                         return var4;
                       } else {
@@ -291,9 +318,9 @@ final class q {
               }
             }
           } else {
-            fieldTemp$55 = gg.field_Q - 1;
+            fieldTemp$22 = gg.field_Q - 1;
             gg.field_Q = gg.field_Q - 1;
-            var2_ref_byte__ = qh.field_b[fieldTemp$55];
+            var2_ref_byte__ = qh.field_b[fieldTemp$22];
             qh.field_b[gg.field_Q] = null;
             return var2_ref_byte__;
           }

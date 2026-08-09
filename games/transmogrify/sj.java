@@ -24,10 +24,9 @@ final class sj extends wf {
     char field_i;
 
     public static void b(byte param0) {
-        boolean discarded$0 = false;
         field_r = null;
         if (param0 != -15) {
-            discarded$0 = sj.e(91);
+            sj.e(91);
             field_w = null;
             field_u = null;
             return;
@@ -37,14 +36,14 @@ final class sj extends wf {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        String var12 = null;
-        String var13 = null;
-        String var14 = null;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        String var12;
+        String var13;
+        String var14;
         wl.field_K.b(param3 + this.field_j, param1 + this.field_q, ff.field_H[this.field_h]);
         if (this.field_x) {
           param0 = param0 >> 1384747587;
@@ -137,23 +136,13 @@ final class sj extends wf {
     }
 
     final void a(int param0, int param1, j param2) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
@@ -192,27 +181,19 @@ final class sj extends wf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var4);
-            stackOut_9_1 = new StringBuilder().append("sj.G(").append(param0).append(',').append(param1).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var4);
+
+            stackIn_11_1 = new StringBuilder().append("sj.G(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -228,13 +209,8 @@ final class sj extends wf {
     }
 
     final void a(byte param0) {
-        od discarded$5 = null;
-        od discarded$6 = null;
-        od discarded$7 = null;
-        od discarded$8 = null;
-        od discarded$9 = null;
-        int var2 = 0;
-        double var3 = 0.0;
+        int var2;
+        double var3;
         if (param0 == 75) {
           L0: {
             if (this.field_j != this.field_g) {
@@ -260,7 +236,7 @@ final class sj extends wf {
                   if (this.field_q != this.field_p) {
                     return;
                   } else {
-                    discarded$5 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
+                    vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
                     return;
                   }
                 } else {
@@ -277,7 +253,7 @@ final class sj extends wf {
             if (this.field_q != this.field_p) {
               return;
             } else {
-              discarded$6 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
+              vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
               return;
             }
           } else {
@@ -300,7 +276,7 @@ final class sj extends wf {
                       if (this.field_q != this.field_p) {
                         return;
                       } else {
-                        discarded$7 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
+                        vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
                         return;
                       }
                     } else {
@@ -318,7 +294,7 @@ final class sj extends wf {
                   break L3;
                 } else {
                   if (this.field_q == this.field_p) {
-                    discarded$8 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
+                    vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
                     break L3;
                   } else {
                     break L3;
@@ -355,7 +331,7 @@ final class sj extends wf {
                 break L6;
               } else {
                 if (this.field_q == this.field_p) {
-                  discarded$9 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
+                  vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
                   break L6;
                 } else {
                   break L6;
@@ -370,7 +346,6 @@ final class sj extends wf {
     final static void a(int param0, int param1, jl param2) {
         hj var5 = null;
         int var4 = 0;
-        int discarded$0 = 0;
         if (param0 != -7812) {
             return;
         }
@@ -386,7 +361,7 @@ final class sj extends wf {
             var5.a(-108, param2.field_g);
             var5.a(-123, param2.field_n);
             var5.a(-113, param2.field_k);
-            discarded$0 = var5.d(var4, -1323322296);
+            var5.d(var4, -1323322296);
             var5.a((byte) -42, var5.field_h + -var4);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) ((Object) runtimeException), "sj.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

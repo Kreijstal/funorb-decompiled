@@ -66,7 +66,7 @@ final class ada extends rva implements tsa {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
+        int var2;
         var2 = 250;
         if (param0 != 88) {
           field_y = (int[]) null;

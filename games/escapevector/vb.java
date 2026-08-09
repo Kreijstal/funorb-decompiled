@@ -9,7 +9,7 @@ final class vb implements Iterable {
     fl field_c;
 
     final fl a(byte param0) {
-        fl var2 = null;
+        fl var2;
         if (param0 == 102) {
           var2 = this.field_c.field_j;
           if (this.field_c == var2) {
@@ -31,10 +31,9 @@ final class vb implements Iterable {
     }
 
     final void a(boolean param0, fl param1) {
-        Iterator discarded$0 = null;
         try {
             if (param0) {
-                discarded$0 = this.iterator();
+                this.iterator();
             }
             if (!(param1.field_i == null)) {
                 param1.d(96);

@@ -23,18 +23,14 @@ final class wi {
 
     final static void a(p param0, int param1, byte param2, int param3) {
         try {
-            int var4_int = 0;
+            int var4_int = -72 % ((param2 - -34) / 41);
             om.field_d.a(true, 128, (int)param0.field_c - -128, param1, param3);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "wi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + -87 + ',' + param3 + ')');
+            throw wg.a((Throwable) ((Object) runtimeException), "wi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Destroy the reactor and escape on your shuttle.";
     }
 }

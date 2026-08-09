@@ -22,10 +22,10 @@ final class uh {
     }
 
     final static String a(int param0, char param1, byte param2) {
-        char[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        char[] var6 = null;
+        char[] var3;
+        int var4;
+        int var5;
+        char[] var6;
         var5 = TrackController.field_F ? 1 : 0;
         if (param2 != 20) {
           return (String) null;
@@ -59,7 +59,6 @@ final class uh {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int discarded$2 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -67,8 +66,6 @@ final class uh {
         int stackIn_12_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_7_0 = 0;
         var4 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -80,17 +77,15 @@ final class uh {
                     if (param1 >= 15) {
                       break L2;
                     } else {
-                      discarded$2 = uh.a(4, (byte) 36, 66);
+                      uh.a(4, (byte) 36, 66);
                       break L2;
                     }
                   }
-                  stackOut_11_0 = var3_int;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = var3_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_7_0 = var3_int * param2;
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = var3_int * param2;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }

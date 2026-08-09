@@ -10,7 +10,6 @@ final class hj {
     private static String[] field_d;
 
     final boolean a(int param0, int param1, byte param2) {
-        boolean discarded$8 = false;
         if (param2 == -128) {
           if (0 <= param0) {
             if (0 <= param1) {
@@ -30,7 +29,7 @@ final class hj {
             return false;
           }
         } else {
-          discarded$8 = this.a(52, -84, (byte) -119);
+          this.a(52, -84, (byte) -119);
           if (0 <= param0) {
             if (0 <= param1) {
               if (this.field_f > param0) {
@@ -88,17 +87,12 @@ final class hj {
     }
 
     hj(int param0, int param1, int param2) {
-        int var5 = TombRacer.field_G ? 1 : 0;
+        int var4 = 0;
         this.field_c = new int[param1 * param0];
         this.field_a = param1;
         this.field_f = param0;
-        int var4 = 0;
-        while (this.field_c.length > var4) {
+        for (var4 = 0; this.field_c.length > var4; var4++) {
             this.field_c[var4] = param2;
-            var4++;
-            if (var5 != 0) {
-                return;
-            }
         }
     }
 

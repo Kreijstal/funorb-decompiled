@@ -17,8 +17,6 @@ final class uba extends kma implements cd, eaa {
         Object stackIn_7_0 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        Object stackOut_6_0 = null;
-        String stackOut_3_0 = null;
         try {
           L0: {
             L1: {
@@ -34,8 +32,7 @@ final class uba extends kma implements cd, eaa {
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
-                    stackOut_6_0 = null;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = null;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   }
@@ -44,8 +41,7 @@ final class uba extends kma implements cd, eaa {
                 }
               }
             }
-            stackOut_3_0 = gl.a((byte) 91, era.field_b, new String[]{"1890", Integer.toString(var5 + -3)});
-            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_0 = gl.a((byte) 91, era.field_b, new String[]{"1890", Integer.toString(var5 + -3)});
             decompiledRegionSelector0 = 0;
             break L0;
           }
@@ -85,67 +81,14 @@ final class uba extends kma implements cd, eaa {
     }
 
     public final void a(tra param0, int param1) {
-        RuntimeException runtimeException = null;
-        tra var4 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
-            L1: {
-              this.c(-65);
-              if (param1 == -10) {
-                break L1;
-              } else {
-                var4 = (tra) null;
+            this.c(-65);
+            if (param1 != -10) {
+                tra var4 = (tra) null;
                 this.a((tra) null, -90);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("uba.U(");
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "uba.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -160,9 +103,6 @@ final class uba extends kma implements cd, eaa {
         it stackIn_10_0 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        it stackOut_2_0 = null;
-        it stackOut_9_0 = null;
-        it stackOut_5_0 = null;
         try {
           L0: {
             var2_int = this.field_i.a(111);
@@ -170,15 +110,13 @@ final class uba extends kma implements cd, eaa {
             var4 = this.field_i.j((byte) 110);
             var5 = cn.a((byte) 125);
             if ((var4 ^ -1) > param0) {
-              stackOut_2_0 = fp.field_c;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = fp.field_c;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (var4 <= -3 + var5) {
                 if (!fa.a(var3, var2_int, true, var4)) {
-                  stackOut_9_0 = fp.field_c;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = fp.field_c;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
@@ -186,8 +124,7 @@ final class uba extends kma implements cd, eaa {
                   break L0;
                 }
               } else {
-                stackOut_5_0 = fp.field_c;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = fp.field_c;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -228,64 +165,12 @@ final class uba extends kma implements cd, eaa {
     }
 
     public final void a(int param0, tra param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -6038) {
-                break L1;
-              } else {
+            if (param0 != -6038) {
                 field_f = -61;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("uba.KA(").append(param0).append(',');
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
-            if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "uba.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

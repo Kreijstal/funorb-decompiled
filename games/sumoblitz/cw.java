@@ -28,7 +28,7 @@ final class cw extends fs {
         int fieldTemp$5 = 0;
         int fieldTemp$6 = 0;
         int fieldTemp$7 = 0;
-        int var3 = 0;
+        int var3;
         var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
         if (param0 != -36) {
           return;

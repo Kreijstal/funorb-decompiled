@@ -26,10 +26,8 @@ class id extends fb {
         }
         for (var3 = 0; var3 < tl.field_g.length; var3++) {
             if (this.field_F == tl.field_g[var3]) {
-                if (param1) {
-                    if (!ka.field_h[var3]) {
-                        return false;
-                    }
+                if (param1 && !ka.field_h[var3]) {
+                    return false;
                 }
                 this.field_F = oo.field_U[var3];
                 if ((this.field_z ^ -1) < -1) {
@@ -43,12 +41,6 @@ class id extends fb {
     }
 
     void a(byte param0, wk param1) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         RuntimeException stackIn_46_0 = null;
@@ -56,14 +48,10 @@ class id extends fb {
         String stackIn_46_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
         var5 = ZombieDawn.field_J;
         try {
           L0: {
@@ -215,27 +203,19 @@ class id extends fb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var3 = decompiledCaughtException;
-            stackOut_43_0 = (RuntimeException) (var3);
-            stackOut_43_1 = new StringBuilder().append("id.B(").append(param0).append(',');
-            stackIn_45_0 = stackOut_43_0;
-            stackIn_45_1 = stackOut_43_1;
-            stackIn_44_0 = stackOut_43_0;
-            stackIn_44_1 = stackOut_43_1;
+            stackIn_45_0 = (RuntimeException) (var3);
+
+            stackIn_45_1 = new StringBuilder().append("id.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "null";
-              stackIn_46_0 = stackOut_45_0;
-              stackIn_46_1 = stackOut_45_1;
-              stackIn_46_2 = stackOut_45_2;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "null";
               break L10;
             } else {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "{...}";
-              stackIn_46_0 = stackOut_44_0;
-              stackIn_46_1 = stackOut_44_1;
-              stackIn_46_2 = stackOut_44_2;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "{...}";
               break L10;
             }
           }
@@ -264,12 +244,12 @@ class id extends fb {
     }
 
     private final void b(boolean param0) {
-        le var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        ej var6 = null;
-        ej var7 = null;
+        le var2;
+        int var3;
+        int var4;
+        int var5;
+        ej var6;
+        ej var7;
         var5 = ZombieDawn.field_J;
         if (0 != this.field_z) {
           L0: {
@@ -340,108 +320,78 @@ class id extends fb {
 
     id(int param0, int param1, int param2) {
         super(param0, param1, param2);
-        int[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int[] var8 = null;
-        int[] var9 = null;
-        int var10 = 0;
-        int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
-        Object stackIn_1_0 = null;
+        int[] var4;
+        int var5;
+        int var6;
+        int[] var8;
+        int[] var9;
+        int[] var10;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
         L0: {
           this.field_K = null;
           this.field_O = false;
           this.field_F = this.field_t;
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (0 == (1073741824 & this.field_t)) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
         L1: {
           ((id) (this)).field_P = stackIn_3_1 != 0;
-          stackOut_3_0 = this;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_4_0 = stackOut_3_0;
+          stackIn_5_0 = this;
+
           if (0 == (this.field_t & 536870912)) {
-            stackOut_5_0 = this;
-            stackOut_5_1 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_6_0 = this;
+            stackIn_6_1 = 0;
             break L1;
           } else {
-            stackOut_4_0 = this;
-            stackOut_4_1 = 1;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
+            stackIn_6_0 = this;
+            stackIn_6_1 = 1;
             break L1;
           }
         }
         ((id) (this)).field_J = stackIn_6_1 != 0;
         this.field_F = this.field_F & -1610612737;
         this.field_F = this.field_F - 1;
-        var13 = rc.field_u;
-        var11 = var13;
-        var8 = var11;
+        var10 = rc.field_u;
+        var9 = var10;
+        var8 = var9;
         var4 = var8;
         var5 = 0;
         L2: while (true) {
-          if (var13.length <= var5) {
-            var14 = ln.field_c;
-            var12 = var14;
-            var9 = var12;
-            var4 = var9;
-            var10 = 0;
-            var5 = var10;
+          if (var10.length <= var5) {
+            var4 = ln.field_c;
+            var5 = 0;
             L3: while (true) {
-              if (var10 >= var14.length) {
+              if (var5 >= var4.length) {
                 return;
               } else {
-                var6 = var14[var10];
+                var6 = var4[var5];
                 if (this.field_F == var6) {
                   this.field_G = true;
-                  var10++;
+                  var5++;
                   continue L3;
                 } else {
-                  var10++;
+                  var5++;
                   continue L3;
                 }
               }
             }
           } else {
-            var6 = var13[var5];
-            if (this.field_F == var6) {
+            var6 = var10[var5];
+            if ((this.field_F ^ -1) == (var6 ^ -1)) {
               this.field_O = true;
               var5++;
               continue L2;
@@ -454,16 +404,16 @@ class id extends fb {
     }
 
     void g(int param0) {
-        fn discarded$2 = null;
-        fn discarded$3 = null;
-        fb var2_ref_fb = null;
-        int var2 = 0;
-        int var3 = 0;
-        fb var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        va var7 = null;
+        int stackIn_36_0 = 0;
+        int stackIn_36_1 = 0;
+        int var2;
+        fb var2_ref_fb;
+        int var3;
+        int var4_int;
+        fb var4;
+        int var5;
+        int var6;
+        va var7;
         var6 = ZombieDawn.field_J;
         if (param0 > 95) {
           L0: {
@@ -542,14 +492,14 @@ class id extends fb {
                   break L5;
                 } else {
                   L7: {
-                    if (var2_ref_fb.field_z == this.field_z) {
+                    if ((var2_ref_fb.field_z ^ -1) == (this.field_z ^ -1)) {
                       if (this.a(var2_ref_fb, 1654152400) >= 2500) {
                         break L7;
                       } else {
                         var3 = this.field_z;
                         ck.a(-9, 6836);
-                        discarded$2 = kh.a(93, false);
-                        discarded$3 = kh.a(94, false);
+                        kh.a(93, false);
+                        kh.a(94, false);
                         var4 = this.a((byte) -74, 48, 4);
                         L8: while (true) {
                           if (var4 == null) {
@@ -584,8 +534,10 @@ class id extends fb {
             if (!this.field_G) {
               break L10;
             } else {
+              stackIn_36_0 = 12 + this.a(true);
+              stackIn_36_1 = 24;
               L11: {
-                var2 = (12 + this.a(true)) / 24;
+                var2 = stackIn_36_0 / stackIn_36_1;
                 var3 = (this.f(237239984) + -1) / 24;
                 if (0 > var2) {
                   break L11;

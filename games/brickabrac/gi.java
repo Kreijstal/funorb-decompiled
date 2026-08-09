@@ -8,7 +8,7 @@ final class gi extends ki {
     static String field_t;
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var6 = null;
+        pb var6;
         if (!this.b((byte) -127)) {
           lb.g(param4, param2, 640, 480, kg.field_i[param3], 16777215);
           if (!param0) {
@@ -42,7 +42,7 @@ final class gi extends ki {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        int var5;
         if (-1 < param1) {
           lb.g(param2, param3, 153, 238, kg.field_i[param1], 16777215);
           var5 = 52 % ((param0 - -28) / 43);
@@ -119,41 +119,36 @@ final class gi extends ki {
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         pb var7 = null;
-        pb var8 = null;
-        if (param1 < -84) {
-          if (this.b((byte) -123)) {
-            var8 = kd.a(this.field_m, param3, (byte) -74);
-            if (var8.a((byte) -84, param3, this.field_m)) {
-              sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.field_p, param4, 306, -13, param2);
-              return;
-            } else {
-              lf.a(var8, 2, -13, pp.field_b, param3, 102);
-              var8.a(this.field_m, param3, (byte) 78);
-              sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.field_p, param4, 306, -13, param2);
-              return;
+        if (param1 >= -84) {
+            field_u = (String) null;
+            if (!this.b((byte) -123)) {
+                lb.g(param2, param0, 306, 480, kg.field_i[param3], 16777215);
+                return;
             }
-          } else {
-            lb.g(param2, param0, 306, 480, kg.field_i[param3], 16777215);
-            return;
-          }
-        } else {
-          field_u = (String) null;
-          if (this.b((byte) -123)) {
             var7 = kd.a(this.field_m, param3, (byte) -74);
-            if (var7.a((byte) -84, param3, this.field_m)) {
-              sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.field_p, param4, 306, -13, param2);
-              return;
+            if (!var7.a((byte) -84, param3, this.field_m)) {
+                lf.a(var7, 2, -13, pp.field_b, param3, 102);
+                var7.a(this.field_m, param3, (byte) 78);
             } else {
-              lf.a(var7, 2, -13, pp.field_b, param3, 102);
-              var7.a(this.field_m, param3, (byte) 78);
-              sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.field_p, param4, 306, -13, param2);
-              return;
+                sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.field_p, param4, 306, -13, param2);
+                return;
             }
-          } else {
+            sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.field_p, param4, 306, -13, param2);
+            return;
+        }
+        if (!this.b((byte) -123)) {
             lb.g(param2, param0, 306, 480, kg.field_i[param3], 16777215);
             return;
-          }
         }
+        pb var8 = kd.a(this.field_m, param3, (byte) -74);
+        if (!var8.a((byte) -84, param3, this.field_m)) {
+            lf.a(var8, 2, -13, pp.field_b, param3, 102);
+            var8.a(this.field_m, param3, (byte) 78);
+        } else {
+            sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.field_p, param4, 306, -13, param2);
+            return;
+        }
+        sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.field_p, param4, 306, -13, param2);
     }
 
     gi(int param0, String param1, String param2, int param3) {
@@ -170,10 +165,6 @@ final class gi extends ki {
     final boolean b(byte param0) {
         int stackIn_15_0 = 0;
         int stackIn_32_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
         if (param0 < -91) {
           if (wn.field_b != null) {
             if (null != lj.field_q) {
@@ -185,12 +176,10 @@ final class gi extends ki {
                     } else {
                       L0: {
                         if (um.field_l == null) {
-                          stackOut_31_0 = 0;
-                          stackIn_32_0 = stackOut_31_0;
+                          stackIn_32_0 = 0;
                           break L0;
                         } else {
-                          stackOut_30_0 = 1;
-                          stackIn_32_0 = stackOut_30_0;
+                          stackIn_32_0 = 1;
                           break L0;
                         }
                       }
@@ -223,12 +212,10 @@ final class gi extends ki {
                     } else {
                       L1: {
                         if (um.field_l == null) {
-                          stackOut_14_0 = 0;
-                          stackIn_15_0 = stackOut_14_0;
+                          stackIn_15_0 = 0;
                           break L1;
                         } else {
-                          stackOut_13_0 = 1;
-                          stackIn_15_0 = stackOut_13_0;
+                          stackIn_15_0 = 1;
                           break L1;
                         }
                       }
@@ -253,8 +240,8 @@ final class gi extends ki {
     }
 
     final static void g(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = co.a((byte) -53);
         var2 = ba.b(true);
         vg.field_c.a(var1 - -(un.field_a << 753437185), var2 - -(vo.field_A << -417029247), nc.field_k + -un.field_a, false, mi.field_d + -vo.field_A);

@@ -6,19 +6,17 @@ final class jj extends kj {
     static String field_B;
 
     final static String a(int param0, long param1) {
-        StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        int var3 = 0;
-        long var4 = 0L;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        java.applet.Applet var12 = null;
-        StringBuilder var13 = null;
-        StringBuilder var14 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        int var3;
+        long var4;
+        long var7;
+        int var9;
+        int var10;
+        int var11;
+        java.applet.Applet var12;
+        StringBuilder var13;
+        StringBuilder var14;
         var11 = OrbDefence.field_D ? 1 : 0;
         if (param1 > 0L) {
           if (-6582952005840035282L < (param1 ^ -1L)) {
@@ -65,7 +63,7 @@ final class jj extends kj {
                                 break L5;
                               }
                             }
-                            discarded$4 = var13.append((char) var9);
+                            discarded$2 = var13.append((char) var9);
                             if (var11 == 0) {
                               continue L2;
                             } else {
@@ -74,7 +72,7 @@ final class jj extends kj {
                           }
                         }
                       }
-                      discarded$5 = var13.reverse();
+                      var13.reverse();
                       var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
                       break L3;
                     }
@@ -120,7 +118,7 @@ final class jj extends kj {
                                 break L11;
                               }
                             }
-                            discarded$6 = var14.append((char) var9);
+                            discarded$3 = var14.append((char) var9);
                             if (var11 == 0) {
                               continue L8;
                             } else {
@@ -129,7 +127,7 @@ final class jj extends kj {
                           }
                         }
                       }
-                      discarded$7 = var14.reverse();
+                      var14.reverse();
                       var14.setCharAt(0, Character.toUpperCase(var14.charAt(0)));
                       break L9;
                     }
@@ -149,7 +147,7 @@ final class jj extends kj {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        hj var5 = null;
+        hj var5;
         if (-1 != (param1 ^ -1)) {
           return;
         } else {
@@ -204,37 +202,15 @@ final class jj extends kj {
             Exception var3_ref = null;
             RuntimeException var3_ref2 = null;
             int var4 = 0;
-            RuntimeException stackIn_5_0 = null;
-            StringBuilder stackIn_5_1 = null;
             RuntimeException stackIn_6_0 = null;
             StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             String stackIn_7_2 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
-            RuntimeException stackIn_10_0 = null;
             StringBuilder stackIn_10_1 = null;
             String stackIn_10_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_4_0 = null;
-            StringBuilder stackOut_4_1 = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            String stackOut_6_2 = null;
-            RuntimeException stackOut_5_0 = null;
-            StringBuilder stackOut_5_1 = null;
-            String stackOut_5_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            RuntimeException stackOut_9_0 = null;
-            StringBuilder stackOut_9_1 = null;
-            String stackOut_9_2 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
             try {
               try {
                 L0: {
@@ -255,56 +231,40 @@ final class jj extends kj {
               decompiledCaughtException = decompiledCaughtParameter1;
               L1: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_4_0 = (RuntimeException) (var3_ref2);
-                stackOut_4_1 = new StringBuilder().append("jj.G(");
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_6_1 = stackOut_4_1;
-                stackIn_5_0 = stackOut_4_0;
-                stackIn_5_1 = stackOut_4_1;
+                stackIn_6_0 = (RuntimeException) (var3_ref2);
+
+                stackIn_6_1 = new StringBuilder().append("jj.G(");
+
                 if (param0 == null) {
-                  stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-                  stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-                  stackOut_6_2 = "null";
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
-                  stackIn_7_2 = stackOut_6_2;
+                  stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+                  stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+                  stackIn_7_2 = "null";
                   break L1;
                 } else {
-                  stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-                  stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-                  stackOut_5_2 = "{...}";
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
-                  stackIn_7_2 = stackOut_5_2;
+                  stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+                  stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+                  stackIn_7_2 = "{...}";
                   break L1;
                 }
               }
               L2: {
-                stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
-                stackIn_9_0 = stackOut_7_0;
-                stackIn_9_1 = stackOut_7_1;
-                stackIn_8_0 = stackOut_7_0;
-                stackIn_8_1 = stackOut_7_1;
+
+
+                stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
+
                 if (param2 == null) {
-                  stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-                  stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-                  stackOut_9_2 = "null";
-                  stackIn_10_0 = stackOut_9_0;
-                  stackIn_10_1 = stackOut_9_1;
-                  stackIn_10_2 = stackOut_9_2;
+                  stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+                  stackIn_10_2 = "null";
                   break L2;
                 } else {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "{...}";
-                  stackIn_10_0 = stackOut_8_0;
-                  stackIn_10_1 = stackOut_8_1;
-                  stackIn_10_2 = stackOut_8_2;
+                  stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+                  stackIn_10_2 = "{...}";
                   break L2;
                 }
               }
-              throw dd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+              throw dd.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -314,7 +274,7 @@ final class jj extends kj {
     }
 
     final static String l(int param0) {
-        java.applet.Applet var2 = null;
+        java.applet.Applet var2;
         if (null == gb.field_h) {
           return "";
         } else {

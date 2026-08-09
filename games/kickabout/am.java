@@ -38,6 +38,7 @@ class am extends gn {
             return false;
         }
         if (param0 != -60) {
+            this.f((byte) 24);
             return true;
         }
         return true;

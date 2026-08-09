@@ -38,9 +38,6 @@ final class d extends ca {
 
     final static int d(byte param0) {
         try {
-            IOException var1 = null;
-            int var1_int = 0;
-            mg var2 = null;
             int stackIn_17_0 = 0;
             int stackIn_26_0 = 0;
             int stackIn_30_0 = 0;
@@ -48,11 +45,9 @@ final class d extends ca {
             int stackIn_36_0 = 0;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_16_0 = 0;
-            int stackOut_29_0 = 0;
-            int stackOut_25_0 = 0;
-            int stackOut_35_0 = 0;
-            int stackOut_33_0 = 0;
+            int var1_int = 0;
+            IOException var1 = null;
+            mg var2 = null;
             if (param0 <= -86) {
               if (kg.field_h.field_b >= 4) {
                 if (-1 == kg.field_h.field_n) {
@@ -81,8 +76,7 @@ final class d extends ca {
                         break L2;
                       } else {
                         if (-3 == (cf.field_a.field_a ^ -1)) {
-                          stackOut_16_0 = kk.a(-30179, -1);
-                          stackIn_17_0 = stackOut_16_0;
+                          stackIn_17_0 = kk.a(-30179, -1);
                           decompiledRegionSelector0 = 0;
                           break L0;
                         } else {
@@ -117,8 +111,7 @@ final class d extends ca {
                         if (dd.field_A.b((byte) 101) > 0) {
                           var1_int = dd.field_A.a(true);
                           if (var1_int != 0) {
-                            stackOut_29_0 = kk.a(-30179, var1_int);
-                            stackIn_30_0 = stackOut_29_0;
+                            stackIn_30_0 = kk.a(-30179, var1_int);
                             decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
@@ -129,8 +122,7 @@ final class d extends ca {
                           if ((ji.b(103) ^ -1L) >= (n.field_b ^ -1L)) {
                             break L4;
                           } else {
-                            stackOut_25_0 = kk.a(-30179, -2);
-                            stackIn_26_0 = stackOut_25_0;
+                            stackIn_26_0 = kk.a(-30179, -2);
                             decompiledRegionSelector0 = 1;
                             break L0;
                           }
@@ -138,8 +130,7 @@ final class d extends ca {
                       }
                     }
                     if (4 != mc.field_j) {
-                      stackOut_35_0 = -1;
-                      stackIn_36_0 = stackOut_35_0;
+                      stackIn_36_0 = -1;
                       decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
@@ -147,8 +138,7 @@ final class d extends ca {
                       dd.field_A = null;
                       cf.field_a = null;
                       mc.field_j = 0;
-                      stackOut_33_0 = 0;
-                      stackIn_34_0 = stackOut_33_0;
+                      stackIn_34_0 = 0;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }

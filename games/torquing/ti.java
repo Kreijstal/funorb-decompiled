@@ -21,33 +21,16 @@ final class ti {
     final ec a(int param0, int param1, ec param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         ja stackIn_6_1 = null;
         ja stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        ja stackOut_5_1 = null;
-        Object stackOut_4_0 = null;
-        ja stackOut_4_1 = null;
-        ja stackOut_7_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
@@ -63,20 +46,15 @@ final class ti {
                 }
               }
               L3: {
-                stackOut_3_0 = this;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_5_0 = this;
+
                 if (2 != this.field_j) {
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = ja.a(this.field_n, param2, param1);
-                  stackIn_6_0 = stackOut_5_0;
-                  stackIn_6_1 = stackOut_5_1;
+                  stackIn_6_0 = this;
+                  stackIn_6_1 = ja.a(this.field_n, param2, param1);
                   break L3;
                 } else {
-                  stackOut_4_0 = this;
-                  stackOut_4_1 = ja.a(param2, param1);
-                  stackIn_6_0 = stackOut_4_0;
-                  stackIn_6_1 = stackOut_4_1;
+                  stackIn_6_0 = this;
+                  stackIn_6_1 = ja.a(param2, param1);
                   break L3;
                 }
               }
@@ -85,35 +63,26 @@ final class ti {
               break L1;
             }
             var4_int = 26 % ((param0 - 75) / 41);
-            stackOut_7_0 = this.field_d;
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = this.field_d;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var4);
-            stackOut_9_1 = new StringBuilder().append("ti.F(").append(param0).append(',').append(param1).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var4);
+
+            stackIn_11_1 = new StringBuilder().append("ti.F(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L4;
             }
           }
@@ -124,24 +93,14 @@ final class ti {
 
     final void a(lm param0, int param1) {
         ud var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var3_ref = null;
         var4 = Torquing.field_u;
         try {
           L0: {
@@ -186,27 +145,19 @@ final class ti {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3_ref);
-            stackOut_13_1 = new StringBuilder().append("ti.B(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3_ref);
+
+            stackIn_15_1 = new StringBuilder().append("ti.B(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L5;
             }
           }
@@ -215,22 +166,19 @@ final class ti {
     }
 
     final ec a(int param0, int param1) {
-        ec discarded$6 = null;
-        ec discarded$7 = null;
-        ec discarded$8 = null;
         if (null == this.field_d) {
           this.field_d = ja.a(this.field_n, param0);
           this.field_i = false;
           if (param1 < -41) {
             return (ec) ((Object) this.field_d);
           } else {
-            discarded$6 = this.a(126, -79);
+            this.a(126, -79);
             return (ec) ((Object) this.field_d);
           }
         } else {
           if (!this.field_i) {
             if (param1 >= -41) {
-              discarded$7 = this.a(126, -79);
+              this.a(126, -79);
               return (ec) ((Object) this.field_d);
             } else {
               return (ec) ((Object) this.field_d);
@@ -241,7 +189,7 @@ final class ti {
             if (param1 < -41) {
               return (ec) ((Object) this.field_d);
             } else {
-              discarded$8 = this.a(126, -79);
+              this.a(126, -79);
               return (ec) ((Object) this.field_d);
             }
           }
@@ -249,10 +197,9 @@ final class ti {
     }
 
     final ti c(byte param0) {
-        ti discarded$10 = null;
-        ti var2 = null;
-        ud var3 = null;
-        int var4 = 0;
+        ti var2;
+        ud var3;
+        int var4;
         var4 = Torquing.field_u;
         var2 = new ti(this.field_b, this.field_h, this.field_a, this.field_c);
         var3 = (ud) ((Object) this.field_o.b(0));
@@ -260,7 +207,7 @@ final class ti {
           if (var3 == null) {
             if (param0 < 54) {
               L1: {
-                discarded$10 = this.c((byte) -48);
+                this.c((byte) -48);
                 if (null != this.field_n) {
                   var2.field_n = ee.b(-114);
                   dk.a(this.field_n, 0, var2.field_n, 0, this.field_n.length);
@@ -293,12 +240,10 @@ final class ti {
     }
 
     private final void c(int param0) {
-        ec discarded$2 = null;
-        ec discarded$3 = null;
-        Object var2 = null;
-        ud var2_ref = null;
-        int var3 = 0;
-        int var4 = 0;
+        Object var2;
+        ud var2_ref;
+        int var4;
+        int var3;
         var2 = null;
         var4 = Torquing.field_u;
         if (null == this.field_n) {
@@ -309,7 +254,7 @@ final class ti {
               if (param0 == 4803) {
                 return;
               } else {
-                discarded$2 = this.a(-93, 64);
+                this.a(-93, 64);
                 return;
               }
             } else {
@@ -359,7 +304,7 @@ final class ti {
               if (param0 == 4803) {
                 return;
               } else {
-                discarded$3 = this.a(-93, 64);
+                this.a(-93, 64);
                 return;
               }
             } else {
@@ -404,14 +349,13 @@ final class ti {
 
     final static void a(la param0, int param1) {
         ho var2 = null;
-        gg discarded$0 = null;
         try {
             ho.a(param0.a(-125, "", "headers.packvorbis"));
             if (param1 != 28922) {
                 ti.a(true);
             }
             var2 = ho.a(param0, "jagex logo2.packvorbis", "");
-            discarded$0 = var2.c();
+            var2.c();
         } catch (RuntimeException runtimeException) {
             throw rb.a((Throwable) ((Object) runtimeException), "ti.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -428,12 +372,8 @@ final class ti {
 
     final void a(boolean param0, lm param1) {
         int var4 = Torquing.field_u;
-        if (-3 == (this.field_j ^ -1)) {
-            if ((this.field_o.a(false) ^ -1) == -2) {
-                if (((ud) ((Object) this.field_o.b(0))).field_m == null) {
-                    return;
-                }
-            }
+        if (-3 == (this.field_j ^ -1) && (this.field_o.a(false) ^ -1) == -2 && ((ud) ((Object) this.field_o.b(0))).field_m == null) {
+            return;
         }
         ud var3 = (ud) ((Object) this.field_o.b(0));
         while (var3 != null) {
@@ -496,11 +436,11 @@ final class ti {
     }
 
     final boolean a(int param0) {
-        long[] var2 = null;
-        Object var3 = null;
-        ud var3_ref = null;
-        int var4 = 0;
-        long[] var5 = null;
+        long[] var2;
+        Object var3;
+        ud var3_ref;
+        int var4;
+        long[] var5;
         L0: {
           var3 = null;
           var4 = Torquing.field_u;
@@ -557,11 +497,10 @@ final class ti {
     }
 
     final int a(byte param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        long var3 = 0L;
-        int var5 = 0;
-        int var6 = 0;
+        int var2;
+        long var3;
+        int var5;
+        int var6;
         var6 = Torquing.field_u;
         if (0 == (this.field_j ^ -1)) {
           L0: {
@@ -580,10 +519,10 @@ final class ti {
             L1: while (true) {
               if (57 < var2) {
                 this.field_j = 2;
-                if (param0 > 82) {
+                if (param0 <= 82) {
+                  this.a((byte) 76);
                   return this.field_j;
                 } else {
-                  discarded$1 = this.a((byte) 76);
                   return this.field_j;
                 }
               } else {

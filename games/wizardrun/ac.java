@@ -58,10 +58,6 @@ final class ac extends rk {
         int stackIn_20_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_2_0 = 0;
         var3 = wizardrun.field_H;
         try {
           L0: {
@@ -72,8 +68,7 @@ final class ac extends rk {
               L1: while (true) {
                 if (var2 >= var1.field_r) {
                   if (param0 > 60) {
-                    stackOut_19_0 = 1;
-                    stackIn_20_0 = stackOut_19_0;
+                    stackIn_20_0 = 1;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
@@ -86,8 +81,7 @@ final class ac extends rk {
                       if (var4.field_l[var2].field_a != 0) {
                         break L2;
                       } else {
-                        stackOut_9_0 = 0;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = 0;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -100,8 +94,7 @@ final class ac extends rk {
                       break L3;
                     } else {
                       if (-1 == (var4.field_m[var2].field_a ^ -1)) {
-                        stackOut_14_0 = 0;
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
@@ -114,8 +107,7 @@ final class ac extends rk {
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -144,34 +136,24 @@ final class ac extends rk {
         if (param0 != 0) {
             return;
         }
-        int discarded$0 = tf.a(-20232);
+        tf.a(-20232);
     }
 
     private final void a(int param0, va param1, int param2) {
-        int[] array$1 = null;
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        bh var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
+        int[] array$0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        bh var7 = null;
+        int var8 = 0;
+        int var9 = 0;
         var9 = wizardrun.field_H;
         try {
           L0: {
@@ -208,8 +190,8 @@ final class ac extends rk {
                             break L4;
                           } else {
                             this.field_w[var5] = var6;
-                            array$1 = new int[var7.field_f];
-                            this.field_u[var5] = array$1;
+                            array$0 = new int[var7.field_f];
+                            this.field_u[var5] = array$0;
                             var8 = 0;
                             L5: while (true) {
                               if (var8 >= var7.field_f) {
@@ -252,27 +234,19 @@ final class ac extends rk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var4 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) (var4);
-            stackOut_20_1 = new StringBuilder().append("ac.A(").append(param0).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackIn_22_0 = (RuntimeException) (var4);
+
+            stackIn_22_1 = new StringBuilder().append("ac.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L7;
             }
           }

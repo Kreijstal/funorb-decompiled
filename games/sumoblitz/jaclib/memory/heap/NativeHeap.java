@@ -30,7 +30,7 @@ public final class NativeHeap {
     }
 
     public final jaclib.memory.heap.NativeHeapBuffer a(int param0, boolean param1) {
-        RuntimeException var3 = null;
+        RuntimeException var3;
         if (!this.a) {
           throw new IllegalStateException();
         } else {

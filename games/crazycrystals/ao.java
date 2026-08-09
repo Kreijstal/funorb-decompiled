@@ -13,18 +13,17 @@ final class ao {
     }
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
-        Object var1_ref = null;
         int var2 = 0;
-        Throwable var3 = null;
         int var4 = 0;
-        int var5 = 0;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
+        RuntimeException var1_ref = null;
+        int var5 = 0;
         var4 = CrazyCrystals.field_B;
         try {
           L0: {
-            var1_ref = uf.field_c;
-            synchronized (var1_ref) {
+            var1 = uf.field_c;
+            synchronized (var1) {
               L1: {
                 td.field_d = ah.field_g;
                 jf.field_a = jf.field_a + 1;
@@ -72,8 +71,8 @@ final class ao {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (RuntimeException) (Object) decompiledCaughtException;
-          throw dn.a((Throwable) ((Object) var1), "ao.C(" + param0 + ')');
+          var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+          throw dn.a((Throwable) ((Object) var1_ref), "ao.C(" + param0 + ')');
         }
     }
 

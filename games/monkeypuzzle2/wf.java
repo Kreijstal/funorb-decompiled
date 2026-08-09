@@ -14,6 +14,7 @@ final class wf extends ug {
 
     final static long a(int param0) {
         if (param0 < 44) {
+            wf.a(-105);
             return pf.a(0) - d.field_k;
         }
         return pf.a(0) - d.field_k;
@@ -23,6 +24,7 @@ final class wf extends ug {
         field_h = null;
         field_i = null;
         if (param0 != -47) {
+            wf.a(14);
             field_m = null;
             return;
         }

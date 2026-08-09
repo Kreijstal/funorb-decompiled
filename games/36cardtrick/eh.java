@@ -37,15 +37,14 @@ final class eh extends qb {
     }
 
     final static String a(int param0, long param1) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        int var3 = 0;
-        long var4 = 0L;
-        StringBuilder var6 = null;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        StringBuilder discarded$1 = null;
+        int var3;
+        long var4;
+        StringBuilder var6;
+        long var7;
+        int var9;
+        int var10;
+        int var11;
         var11 = Main.field_T;
         if (0L < param1) {
           if ((param1 ^ -1L) > -6582952005840035282L) {
@@ -59,7 +58,7 @@ final class eh extends qb {
                   var6 = new StringBuilder(var3);
                   L1: while (true) {
                     if (-1L == (param1 ^ -1L)) {
-                      discarded$2 = var6.reverse();
+                      var6.reverse();
                       var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                       return var6.toString();
                     } else {
@@ -76,7 +75,7 @@ final class eh extends qb {
                           break L2;
                         }
                       }
-                      discarded$3 = var6.append((char) var9);
+                      discarded$1 = var6.append((char) var9);
                       continue L1;
                     }
                   }
@@ -96,9 +95,8 @@ final class eh extends qb {
     }
 
     final static boolean d(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 19314) {
-            discarded$0 = eh.d(-9);
+            eh.d(-9);
             return gh.field_g;
         }
         return gh.field_g;

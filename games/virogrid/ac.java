@@ -19,16 +19,15 @@ final class ac {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        boolean discarded$1 = false;
-        RuntimeException var4 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         km var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         cj var9 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var7 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -60,7 +59,7 @@ final class ac {
                   break L3;
                 } else {
                   if (wg.field_f) {
-                    discarded$1 = fh.field_c.a(we.field_c.field_J, we.field_c.field_Bb, (byte) -128, param3);
+                    fh.field_c.a(we.field_c.field_J, we.field_c.field_Bb, (byte) -128, param3);
                     break L3;
                   } else {
                     fh.field_c = null;

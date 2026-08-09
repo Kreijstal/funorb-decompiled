@@ -25,9 +25,9 @@ final class hl {
     }
 
     final int a(boolean param0) {
-        int var2 = 0;
-        vh var3 = null;
-        int var4 = 0;
+        int var2;
+        vh var3;
+        int var4;
         var4 = Terraphoenix.field_V;
         var2 = 0;
         if (param0) {
@@ -69,7 +69,7 @@ final class hl {
     }
 
     final vh a(byte param0) {
-        vh var2 = null;
+        vh var2;
         if (param0 <= -28) {
           var2 = this.field_f.field_o;
           if (this.field_f == var2) {
@@ -108,22 +108,12 @@ final class hl {
     final static ci a(fa param0, int param1, byte param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           var4_int = -49 % ((param2 - 44) / 37);
           if (vh.a(param3, param1, param0, true)) {
@@ -135,27 +125,19 @@ final class hl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var4);
-            stackOut_4_1 = new StringBuilder().append("hl.D(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var4);
+
+            stackIn_6_1 = new StringBuilder().append("hl.D(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L0;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L0;
             }
           }
@@ -170,7 +152,7 @@ final class hl {
     }
 
     final vh a(int param0) {
-        vh var2 = null;
+        vh var2;
         var2 = this.field_d;
         if (var2 == this.field_f) {
           this.field_d = null;
@@ -187,7 +169,7 @@ final class hl {
     }
 
     final vh c(int param0) {
-        vh var2 = null;
+        vh var2;
         var2 = this.field_f.field_o;
         if (param0 == 8192) {
           if (this.field_f == var2) {

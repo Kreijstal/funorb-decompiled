@@ -22,7 +22,7 @@ final class ed extends c {
     }
 
     final static String a(int param0, String param1, String param2, String param3) {
-        int var4 = 0;
+        int var4;
         if (param0 != -1) {
           return (String) null;
         } else {
@@ -61,8 +61,6 @@ final class ed extends c {
 
     final void a(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -70,14 +68,6 @@ final class ed extends c {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             if (param2 < this.field_l) {
@@ -107,27 +97,19 @@ final class ed extends c {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("ed.UA(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (var4);
+
+            stackIn_10_1 = new StringBuilder().append("ed.UA(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L1;
             }
           }
@@ -145,21 +127,21 @@ final class ed extends c {
     }
 
     final static void d(int param0) {
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = StarCannon.field_A;
         try {
           L0: {
@@ -179,30 +161,30 @@ final class ed extends c {
               if (var3 <= var2) {
                 break L0;
               } else {
-                incrementValue$40 = var2;
+                incrementValue$16 = var2;
                 var2++;
-                var1[incrementValue$40] = 0;
-                incrementValue$41 = var2;
+                var1[incrementValue$16] = 0;
+                incrementValue$17 = var2;
                 var2++;
-                var1[incrementValue$41] = 0;
-                incrementValue$42 = var2;
+                var1[incrementValue$17] = 0;
+                incrementValue$18 = var2;
                 var2++;
-                var1[incrementValue$42] = 0;
-                incrementValue$43 = var2;
+                var1[incrementValue$18] = 0;
+                incrementValue$19 = var2;
                 var2++;
-                var1[incrementValue$43] = 0;
-                incrementValue$44 = var2;
+                var1[incrementValue$19] = 0;
+                incrementValue$20 = var2;
                 var2++;
-                var1[incrementValue$44] = 0;
-                incrementValue$45 = var2;
+                var1[incrementValue$20] = 0;
+                incrementValue$21 = var2;
                 var2++;
-                var1[incrementValue$45] = 0;
-                incrementValue$46 = var2;
+                var1[incrementValue$21] = 0;
+                incrementValue$22 = var2;
                 var2++;
-                var1[incrementValue$46] = 0;
-                incrementValue$47 = var2;
+                var1[incrementValue$22] = 0;
+                incrementValue$23 = var2;
                 var2++;
-                var1[incrementValue$47] = 0;
+                var1[incrementValue$23] = 0;
                 continue L2;
               }
             }

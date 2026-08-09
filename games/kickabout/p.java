@@ -12,7 +12,7 @@ final class p {
     static String field_a;
 
     final static void a(boolean param0) {
-        int var2 = 0;
+        int var2;
         L0: {
           var2 = Kickabout.field_G;
           et.field_d.field_B = vi.field_t;
@@ -112,8 +112,6 @@ final class p {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -121,26 +119,14 @@ final class p {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param0 == 928) {
-              stackOut_3_0 = (5 * param1.c((byte) 73) - -param1.field_o - -param1.field_n - -param1.field_g) / 8;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = (5 * param1.c((byte) 73) - -param1.field_o - -param1.field_n - -param1.field_g) / 8;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = -33;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = -33;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -149,27 +135,19 @@ final class p {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("p.C(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("p.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }
@@ -190,13 +168,11 @@ final class p {
     }
 
     final void a(int param0, nu param1) {
-        RuntimeException var3 = null;
+        int[] dupTemp$8 = null;
         int var4 = 0;
         tj var5 = null;
         tj var6 = null;
         int stackIn_7_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -204,16 +180,7 @@ final class p {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             if (param0 == -27626) {
@@ -223,12 +190,10 @@ final class p {
                 if (88080384 != var6.c(879306160)) {
                   L2: {
                     if (var6.field_p < 44040192) {
-                      stackOut_6_0 = 0;
-                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_7_0 = 0;
                       break L2;
                     } else {
-                      stackOut_5_0 = 1;
-                      stackIn_7_0 = stackOut_5_0;
+                      stackIn_7_0 = 1;
                       break L2;
                     }
                   }
@@ -253,7 +218,8 @@ final class p {
                   this.field_d = this.field_d + 1;
                   break L4;
                 } else {
-                  this.field_b[var5.field_m][var5.field_s] = this.field_b[var5.field_m][var5.field_s] + 1;
+                  dupTemp$8 = this.field_b[var5.field_m];
+                  dupTemp$8[var5.field_s] = dupTemp$8[var5.field_s] + 1;
                   var4 = param1.a((byte) 6, var6.field_m, var6.field_s);
                   if (var4 != -1) {
                     this.field_f[var4] = this.field_f[var4] + 1;
@@ -274,27 +240,19 @@ final class p {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var3);
-            stackOut_17_1 = new StringBuilder().append("p.D(").append(param0).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var3);
+
+            stackIn_19_1 = new StringBuilder().append("p.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L5;
             }
           }
@@ -315,29 +273,29 @@ final class p {
     }
 
     public final String toString() {
-        StringBuilder discarded$63 = null;
-        StringBuilder discarded$64 = null;
-        StringBuilder discarded$65 = null;
-        int var2 = 0;
-        int var3 = 0;
-        StringBuilder var4 = null;
-        StringBuilder var5 = null;
+        StringBuilder discarded$38 = null;
+        StringBuilder discarded$39 = null;
+        StringBuilder discarded$40 = null;
+        int var2;
+        int var3;
+        StringBuilder var4;
+        StringBuilder var5;
         var3 = Kickabout.field_G;
         var4 = new StringBuilder();
         var5 = var4;
-        StringBuilder discarded$59 = var5.append(" pitchEnds=" + this.field_c[0] + "." + this.field_c[1]);
-        StringBuilder discarded$60 = var5.append(" perFootballerHome=" + this.field_b[0][0] + "." + this.field_b[0][1] + "." + this.field_b[0][2] + "." + this.field_b[0][3]);
-        StringBuilder discarded$61 = var5.append(" perFootballerAway=" + this.field_b[1][0] + "." + this.field_b[1][1] + "." + this.field_b[1][2] + "." + this.field_b[1][3]);
-        StringBuilder discarded$62 = var5.append(" perPlayer=");
+        StringBuilder discarded$34 = var5.append(" pitchEnds=" + this.field_c[0] + "." + this.field_c[1]);
+        StringBuilder discarded$35 = var5.append(" perFootballerHome=" + this.field_b[0][0] + "." + this.field_b[0][1] + "." + this.field_b[0][2] + "." + this.field_b[0][3]);
+        StringBuilder discarded$36 = var5.append(" perFootballerAway=" + this.field_b[1][0] + "." + this.field_b[1][1] + "." + this.field_b[1][2] + "." + this.field_b[1][3]);
+        StringBuilder discarded$37 = var5.append(" perPlayer=");
         var2 = 0;
         L0: while (true) {
           if (var2 >= this.field_f.length) {
-            discarded$63 = var5.append(" nobody=" + this.field_d);
+            discarded$38 = var5.append(" nobody=" + this.field_d);
             return "LoggedPosession{" + var5.toString() + "}";
           } else {
-            discarded$64 = var4.append(this.field_f[var2]);
+            discarded$39 = var4.append(this.field_f[var2]);
             if (var2 < this.field_f.length + -1) {
-              discarded$65 = var5.append(".");
+              discarded$40 = var5.append(".");
               var2++;
               continue L0;
             } else {

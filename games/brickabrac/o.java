@@ -80,12 +80,11 @@ final class o {
     }
 
     public static void b(int param0) {
-        boolean discarded$2 = false;
         field_g = null;
         field_b = null;
         field_a = null;
         if (param0 != 31583) {
-          discarded$2 = o.d(-14);
+          o.d(-14);
           field_e = null;
           field_c = null;
           field_h = null;
@@ -99,8 +98,8 @@ final class o {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
+        int var1;
+        int var2;
         var1 = pe.a((byte) -89);
         var2 = v.b(param0 + 29830);
         lm.field_c.a((hn.field_a << -572695519) + var1, var2 - -(bh.field_vb << 435442209), -hn.field_a + np.field_b, false, -bh.field_vb + jq.field_r);

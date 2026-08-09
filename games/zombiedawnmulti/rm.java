@@ -14,11 +14,10 @@ final class rm {
     }
 
     final static wf a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        wf discarded$1 = null;
-        wf var8 = null;
+        wf var8;
         if (param6 != 8128) {
           L0: {
-            discarded$1 = rm.a(-118, -128, 102, -103, 69, 9, 118, -123);
+            rm.a(-118, -128, 102, -103, 69, 9, 118, -123);
             var8 = (wf) ((Object) dg.field_K.g(41));
             if (var8 == null) {
               var8 = new wf();

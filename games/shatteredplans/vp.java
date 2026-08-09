@@ -10,12 +10,12 @@ class vp extends df {
     vp field_q;
 
     final static void c(int param0, int param1) {
-        byte[] discarded$4 = null;
-        wa dupTemp$5 = null;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        RuntimeException var2 = null;
+        wa dupTemp$0 = null;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         wa var4 = null;
         int var5 = 0;
@@ -27,7 +27,6 @@ class vp extends df {
         int var11 = 0;
         int var12 = 0;
         String var13 = null;
-        RuntimeException decompiledCaughtException = null;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -36,7 +35,7 @@ class vp extends df {
                 break L1;
               } else {
                 var13 = (String) null;
-                discarded$4 = vp.a((String) null, 69);
+                vp.a((String) null, 69);
                 break L1;
               }
             }
@@ -44,9 +43,9 @@ class vp extends df {
             lk.a(param0 ^ 27840);
             var3 = param1 & 65280;
             L2: while (true) {
-              dupTemp$5 = tf.a((byte) -92);
-              var4 = dupTemp$5;
-              if (dupTemp$5 == null) {
+              dupTemp$0 = tf.a((byte) -92);
+              var4 = dupTemp$0;
+              if (dupTemp$0 == null) {
                 L3: {
                   if (bd.field_A) {
                     System.out.println(ms.field_a);
@@ -84,9 +83,9 @@ class vp extends df {
                     } else {
                       var10 = gf.field_h[var5];
                       var10 = ((var7 * (16711935 & var10) & -16711936) + (-16711936 & var2_int * var6) | (var7 * (var10 & 65280) & 16711680) - -(16711680 & var3 * var6)) >>> 809446280;
-                      incrementValue$6 = var5;
+                      incrementValue$1 = var5;
                       var5++;
-                      gf.field_h[incrementValue$6] = var10;
+                      gf.field_h[incrementValue$1] = var10;
                       break L5;
                     }
                   }
@@ -123,9 +122,9 @@ class vp extends df {
                       var10 = gf.field_h[var5];
                       var7 = -var6 + 256;
                       var10 = ((16711680 & var6 * var3) + (var7 * (65280 & var10) & 16711680) | (var2_int * var6 & -16711936) + (-16711936 & (16711935 & var10) * var7)) >>> -1813981240;
-                      incrementValue$7 = var5;
+                      incrementValue$2 = var5;
                       var5++;
-                      gf.field_h[incrementValue$7] = var10;
+                      gf.field_h[incrementValue$2] = var10;
                       var9 = var9 + var4.field_a;
                       continue L8;
                     }
@@ -156,7 +155,6 @@ class vp extends df {
 
     final static eg a(byte param0, ln param1) {
         oh var2 = null;
-        RuntimeException var2_ref = null;
         eg var3 = null;
         fs[] var4 = null;
         int var5 = 0;
@@ -164,8 +162,6 @@ class vp extends df {
         int var7 = 0;
         eg stackIn_3_0 = null;
         eg stackIn_19_0 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -173,16 +169,7 @@ class vp extends df {
         String stackIn_27_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        eg stackOut_18_0 = null;
-        eg stackOut_2_0 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        RuntimeException var2_ref = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -203,8 +190,7 @@ class vp extends df {
                             if (var5 < var4.length) {
                               var6 = var4[var5];
                               if (var6 == ho.field_d) {
-                                stackOut_18_0 = (eg) (var3);
-                                stackIn_19_0 = stackOut_18_0;
+                                stackIn_19_0 = (eg) (var3);
                                 decompiledRegionSelector0 = 1;
                                 break L0;
                               } else {
@@ -230,8 +216,7 @@ class vp extends df {
                 return null;
               }
             } else {
-              stackOut_2_0 = (eg) null;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = (eg) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -240,27 +225,19 @@ class vp extends df {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2_ref = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) (var2_ref);
-            stackOut_24_1 = new StringBuilder().append("vp.H(").append(param0).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackIn_26_0 = (RuntimeException) (var2_ref);
+
+            stackIn_26_1 = new StringBuilder().append("vp.H(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L4;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L4;
             }
           }
@@ -286,8 +263,6 @@ class vp extends df {
         RuntimeException var2 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -295,26 +270,14 @@ class vp extends df {
         String stackIn_8_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_3_0 = null;
-        byte[] stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 == 511) {
-              stackOut_3_0 = bc.field_d.a(true, param0, "");
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = bc.field_d.a(true, param0, "");
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = (byte[]) null;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = (byte[]) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -323,27 +286,19 @@ class vp extends df {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var2);
-            stackOut_5_1 = new StringBuilder().append("vp.G(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_7_0 = (RuntimeException) (var2);
+
+            stackIn_7_1 = new StringBuilder().append("vp.G(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L1;
             }
           }

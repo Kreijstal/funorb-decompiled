@@ -12,7 +12,6 @@ final class tg {
     static ll[] field_b;
 
     final void a(tf param0, int param1) {
-        tf discarded$0 = null;
         try {
             if (!(param0.field_i == null)) {
                 param0.a((byte) 88);
@@ -21,7 +20,7 @@ final class tg {
             param0.field_i = this.field_h.field_i;
             param0.field_i.field_l = param0;
             if (param1 != 15893) {
-                discarded$0 = this.a((byte) -116);
+                this.a((byte) -116);
             }
             param0.field_l.field_i = param0;
         } catch (RuntimeException runtimeException) {
@@ -35,9 +34,8 @@ final class tg {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        int discarded$2 = 0;
         if (param1 < 22) {
-          discarded$2 = tg.a(101, false, -57, -39);
+          tg.a(101, false, -57, -39);
           return rg.a(param0, param2, 13, param3);
         } else {
           return rg.a(param0, param2, 13, param3);
@@ -45,8 +43,8 @@ final class tg {
     }
 
     final tf e(int param0) {
-        tf var2 = null;
-        int var3 = 0;
+        tf var2;
+        int var3;
         var2 = this.field_c;
         if (this.field_h == var2) {
           this.field_c = null;
@@ -59,7 +57,7 @@ final class tg {
     }
 
     final tf a(byte param0) {
-        tf var2 = null;
+        tf var2;
         if (param0 >= 115) {
           var2 = this.field_h.field_l;
           if (var2 == this.field_h) {
@@ -81,17 +79,16 @@ final class tg {
     }
 
     final int b(byte param0) {
-        tf discarded$2 = null;
-        int var2 = 0;
-        tf var3 = null;
-        int var4 = 0;
+        int var2;
+        tf var3;
+        int var4;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         var2 = 0;
         var3 = this.field_h.field_l;
         L0: while (true) {
           if (this.field_h == var3) {
             if (param0 >= -64) {
-              discarded$2 = this.a((byte) 126);
+              this.a((byte) 126);
               return var2;
             } else {
               return var2;
@@ -105,9 +102,8 @@ final class tg {
     }
 
     final void a(int param0) {
-        tf discarded$1 = null;
-        tf var2 = null;
-        int var3 = 0;
+        tf var2;
+        int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         L0: while (true) {
           var2 = this.field_h.field_l;
@@ -116,7 +112,7 @@ final class tg {
             continue L0;
           } else {
             if (param0 != 17) {
-              discarded$1 = this.b(100);
+              this.b(100);
               this.field_c = null;
               return;
             } else {

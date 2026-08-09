@@ -32,18 +32,15 @@ final class eja extends ana {
     }
 
     private final void e(byte param0) {
-        oha discarded$19 = null;
-        boolean discarded$20 = false;
-        oha discarded$21 = null;
-        aga var2 = null;
-        pp var3 = null;
-        int var4 = 0;
+        aga var2;
+        pp var3;
+        int var4;
         var4 = BachelorFridge.field_y;
         var2 = this.field_v.field_l.a(73, this.field_q.field_h);
         if (!var2.i(82)) {
           if (param0 == 94) {
             var3 = (pp) ((Object) this.field_v.field_o.b((byte) 90));
-            discarded$19 = al.a(99, this.field_v.field_k);
+            al.a(99, this.field_v.field_k);
             L0: while (true) {
               if (var3 == null) {
                 return;
@@ -54,9 +51,9 @@ final class eja extends ana {
               }
             }
           } else {
-            discarded$20 = this.c((byte) 60);
+            this.c((byte) 60);
             var3 = (pp) ((Object) this.field_v.field_o.b((byte) 90));
-            discarded$21 = al.a(99, this.field_v.field_k);
+            al.a(99, this.field_v.field_k);
             L1: while (true) {
               if (var3 == null) {
                 return;
@@ -82,7 +79,6 @@ final class eja extends ana {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
@@ -108,8 +104,7 @@ final class eja extends ana {
         int[] var35 = null;
         int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
+        RuntimeException var7 = null;
         var25 = BachelorFridge.field_y;
         try {
           L0: {
@@ -206,12 +201,10 @@ final class eja extends ana {
                 if (var7_int < var8) {
                   L6: {
                     if (var11 < var7_int) {
-                      stackOut_21_0 = it.field_l[var7_int];
-                      stackIn_22_0 = stackOut_21_0;
+                      stackIn_22_0 = it.field_l[var7_int];
                       break L6;
                     } else {
-                      stackOut_20_0 = var11;
-                      stackIn_22_0 = stackOut_20_0;
+                      stackIn_22_0 = var11;
                       break L6;
                     }
                   }

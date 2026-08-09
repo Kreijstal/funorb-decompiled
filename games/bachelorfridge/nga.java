@@ -45,11 +45,10 @@ final class nga extends vo {
     }
 
     public static void a(int param0) {
-        int discarded$2 = 0;
         field_i = null;
         field_j = null;
         if (param0 != -20804) {
-          discarded$2 = nga.a(56, 107, (byte) -3, 87);
+          nga.a(56, 107, (byte) -3, 87);
           field_g = null;
           return;
         } else {

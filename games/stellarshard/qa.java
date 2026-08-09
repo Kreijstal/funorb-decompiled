@@ -26,6 +26,7 @@ final class qa {
     private static boolean field_l;
 
     final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        Throwable decompiledCaughtException = null;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -33,7 +34,6 @@ final class qa {
         int var16 = 0;
         int var17 = 0;
         Exception var18 = null;
-        Throwable decompiledCaughtException = null;
         L0: {
           field_s = param0;
           field_m = param1;
@@ -109,7 +109,7 @@ final class qa {
     }
 
     private final static void a() {
-        int var0 = 0;
+        int var0;
         if (field_i) {
           qa.b();
           return;
@@ -210,305 +210,180 @@ final class qa {
     }
 
     private final static void b() {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int var0 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int var13 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        L0: {
-          var0 = cc.field_n;
-          var1 = cc.field_p;
-          var2 = 0;
-          var3 = field_u[0];
-          var4 = field_u[1];
-          var5 = field_u[2];
-          if (var3 < field_f) {
-            L1: {
-              var6 = field_c[0];
-              var7 = field_k[0];
-              var8 = field_n;
-              if (var5 < field_f) {
-                break L1;
-              } else {
+        int var0 = cc.field_n;
+        int var1 = cc.field_p;
+        int var2 = 0;
+        int var3 = field_u[0];
+        int var4 = field_u[1];
+        int var5 = field_u[2];
+        if (var3 >= field_f) {
+            field_h[var2] = field_q[0];
+            field_e[var2] = field_a[0];
+            incrementValue$0 = var2;
+            var2++;
+            field_d[incrementValue$0] = field_n;
+        } else {
+            var6 = field_c[0];
+            var7 = field_k[0];
+            var8 = field_n;
+            if (var5 >= field_f) {
                 var9 = (field_f - var3) * field_p[var5 - var3];
                 field_h[var2] = var0 + (var6 + ((field_c[2] - var6) * var9 >> 16) << 9) / field_f;
                 field_e[var2] = var1 + (var7 + ((field_k[2] - var7) * var9 >> 16) << 9) / field_f;
-                incrementValue$9 = var2;
+                incrementValue$1 = var2;
                 var2++;
-                field_d[incrementValue$9] = var8 + ((field_b - var8) * var9 >> 16);
-                break L1;
-              }
+                field_d[incrementValue$1] = var8 + ((field_b - var8) * var9 >> 16);
             }
-            if (var4 < field_f) {
-              break L0;
-            } else {
-              var9 = (field_f - var3) * field_p[var4 - var3];
-              field_h[var2] = var0 + (var6 + ((field_c[1] - var6) * var9 >> 16) << 9) / field_f;
-              field_e[var2] = var1 + (var7 + ((field_k[1] - var7) * var9 >> 16) << 9) / field_f;
-              incrementValue$10 = var2;
-              var2++;
-              field_d[incrementValue$10] = var8 + ((field_g - var8) * var9 >> 16);
-              break L0;
+            if (var4 >= field_f) {
+                var9 = (field_f - var3) * field_p[var4 - var3];
+                field_h[var2] = var0 + (var6 + ((field_c[1] - var6) * var9 >> 16) << 9) / field_f;
+                field_e[var2] = var1 + (var7 + ((field_k[1] - var7) * var9 >> 16) << 9) / field_f;
+                incrementValue$2 = var2;
+                var2++;
+                field_d[incrementValue$2] = var8 + ((field_g - var8) * var9 >> 16);
             }
-          } else {
-            field_h[var2] = field_q[0];
-            field_e[var2] = field_a[0];
-            incrementValue$11 = var2;
-            var2++;
-            field_d[incrementValue$11] = field_n;
-            break L0;
-          }
         }
-        L2: {
-          if (var4 < field_f) {
-            L3: {
-              var6 = field_c[1];
-              var7 = field_k[1];
-              var8 = field_g;
-              if (var3 < field_f) {
-                break L3;
-              } else {
+        if (var4 >= field_f) {
+            field_h[var2] = field_q[1];
+            field_e[var2] = field_a[1];
+            incrementValue$3 = var2;
+            var2++;
+            field_d[incrementValue$3] = field_g;
+        } else {
+            var6 = field_c[1];
+            var7 = field_k[1];
+            var8 = field_g;
+            if (var3 >= field_f) {
                 var9 = (field_f - var4) * field_p[var3 - var4];
                 field_h[var2] = var0 + (var6 + ((field_c[0] - var6) * var9 >> 16) << 9) / field_f;
                 field_e[var2] = var1 + (var7 + ((field_k[0] - var7) * var9 >> 16) << 9) / field_f;
-                incrementValue$12 = var2;
+                incrementValue$4 = var2;
                 var2++;
-                field_d[incrementValue$12] = var8 + ((field_n - var8) * var9 >> 16);
-                break L3;
-              }
+                field_d[incrementValue$4] = var8 + ((field_n - var8) * var9 >> 16);
             }
-            if (var5 < field_f) {
-              break L2;
-            } else {
-              var9 = (field_f - var4) * field_p[var5 - var4];
-              field_h[var2] = var0 + (var6 + ((field_c[2] - var6) * var9 >> 16) << 9) / field_f;
-              field_e[var2] = var1 + (var7 + ((field_k[2] - var7) * var9 >> 16) << 9) / field_f;
-              incrementValue$13 = var2;
-              var2++;
-              field_d[incrementValue$13] = var8 + ((field_b - var8) * var9 >> 16);
-              break L2;
+            if (var5 >= field_f) {
+                var9 = (field_f - var4) * field_p[var5 - var4];
+                field_h[var2] = var0 + (var6 + ((field_c[2] - var6) * var9 >> 16) << 9) / field_f;
+                field_e[var2] = var1 + (var7 + ((field_k[2] - var7) * var9 >> 16) << 9) / field_f;
+                incrementValue$5 = var2;
+                var2++;
+                field_d[incrementValue$5] = var8 + ((field_b - var8) * var9 >> 16);
             }
-          } else {
-            field_h[var2] = field_q[1];
-            field_e[var2] = field_a[1];
-            incrementValue$14 = var2;
-            var2++;
-            field_d[incrementValue$14] = field_g;
-            break L2;
-          }
         }
-        L4: {
-          if (var5 < field_f) {
-            L5: {
-              var6 = field_c[2];
-              var7 = field_k[2];
-              var8 = field_b;
-              if (var4 < field_f) {
-                break L5;
-              } else {
+        if (var5 >= field_f) {
+            field_h[var2] = field_q[2];
+            field_e[var2] = field_a[2];
+            incrementValue$6 = var2;
+            var2++;
+            field_d[incrementValue$6] = field_b;
+        } else {
+            var6 = field_c[2];
+            var7 = field_k[2];
+            var8 = field_b;
+            if (var4 >= field_f) {
                 var9 = (field_f - var5) * field_p[var4 - var5];
                 field_h[var2] = var0 + (var6 + ((field_c[1] - var6) * var9 >> 16) << 9) / field_f;
                 field_e[var2] = var1 + (var7 + ((field_k[1] - var7) * var9 >> 16) << 9) / field_f;
-                incrementValue$15 = var2;
+                incrementValue$7 = var2;
                 var2++;
-                field_d[incrementValue$15] = var8 + ((field_g - var8) * var9 >> 16);
-                break L5;
-              }
+                field_d[incrementValue$7] = var8 + ((field_g - var8) * var9 >> 16);
             }
-            if (var3 < field_f) {
-              break L4;
-            } else {
-              var9 = (field_f - var5) * field_p[var3 - var5];
-              field_h[var2] = var0 + (var6 + ((field_c[0] - var6) * var9 >> 16) << 9) / field_f;
-              field_e[var2] = var1 + (var7 + ((field_k[0] - var7) * var9 >> 16) << 9) / field_f;
-              incrementValue$16 = var2;
-              var2++;
-              field_d[incrementValue$16] = var8 + ((field_n - var8) * var9 >> 16);
-              break L4;
+            if (var3 >= field_f) {
+                var9 = (field_f - var5) * field_p[var3 - var5];
+                field_h[var2] = var0 + (var6 + ((field_c[0] - var6) * var9 >> 16) << 9) / field_f;
+                field_e[var2] = var1 + (var7 + ((field_k[0] - var7) * var9 >> 16) << 9) / field_f;
+                incrementValue$8 = var2;
+                var2++;
+                field_d[incrementValue$8] = var8 + ((field_n - var8) * var9 >> 16);
             }
-          } else {
-            field_h[var2] = field_q[2];
-            field_e[var2] = field_a[2];
-            incrementValue$17 = var2;
-            var2++;
-            field_d[incrementValue$17] = field_b;
-            break L4;
-          }
         }
-        L6: {
-          var6 = field_h[0];
-          var7 = field_h[1];
-          var8 = field_h[2];
-          var9 = field_e[0];
-          var10 = field_e[1];
-          var11 = field_e[2];
-          cc.field_q = false;
-          if (var2 != 3) {
-            break L6;
-          } else {
-            L7: {
-              L8: {
-                if (var6 < 0) {
-                  break L8;
-                } else {
-                  if (var7 < 0) {
-                    break L8;
-                  } else {
-                    if (var8 < 0) {
-                      break L8;
-                    } else {
-                      if (var6 > cc.field_m) {
-                        break L8;
-                      } else {
-                        if (var7 > cc.field_m) {
-                          break L8;
-                        } else {
-                          if (var8 <= cc.field_m) {
-                            break L7;
-                          } else {
-                            break L8;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              cc.field_q = true;
-              break L7;
+        var6 = field_h[0];
+        var7 = field_h[1];
+        var8 = field_h[2];
+        var9 = field_e[0];
+        int var10 = field_e[1];
+        int var11 = field_e[2];
+        cc.field_q = false;
+        if (var2 == 3) {
+            if (var6 < 0 || var7 < 0 || var8 < 0 || var6 > cc.field_m || var7 > cc.field_m || var8 > cc.field_m) {
+                cc.field_q = true;
             }
             var12 = field_m & 3;
-            if (var12 != 0) {
-              if (var12 != 1) {
-                if (var12 != 2) {
-                  if (var12 != 3) {
-                    break L6;
-                  } else {
-                    cc.a(var9, var10, var11, var6, var7, var8, field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
-                    break L6;
-                  }
-                } else {
-                  cc.a(var9, var10, var11, var6, var7, var8, field_d[0], field_d[1], field_d[2], field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
-                  break L6;
-                }
-              } else {
-                cc.a(var9, var10, var11, var6, var7, var8, field_t[field_n]);
-                break L6;
-              }
+            if (var12 == 0) {
+                cc.a(var9, var10, var11, var6, var7, var8, field_d[0], field_d[1], field_d[2]);
             } else {
-              cc.a(var9, var10, var11, var6, var7, var8, field_d[0], field_d[1], field_d[2]);
-              break L6;
-            }
-          }
-        }
-        L9: {
-          if (var2 != 4) {
-            break L9;
-          } else {
-            L10: {
-              L11: {
-                if (var6 < 0) {
-                  break L11;
+                if (var12 == 1) {
+                    cc.a(var9, var10, var11, var6, var7, var8, field_t[field_n]);
                 } else {
-                  if (var7 < 0) {
-                    break L11;
-                  } else {
-                    if (var8 < 0) {
-                      break L11;
+                    if (var12 == 2) {
+                        cc.a(var9, var10, var11, var6, var7, var8, field_d[0], field_d[1], field_d[2], field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
                     } else {
-                      if (var6 > cc.field_m) {
-                        break L11;
-                      } else {
-                        if (var7 > cc.field_m) {
-                          break L11;
-                        } else {
-                          if (var8 > cc.field_m) {
-                            break L11;
-                          } else {
-                            if (field_h[3] < 0) {
-                              break L11;
-                            } else {
-                              if (field_h[3] <= cc.field_m) {
-                                break L10;
-                              } else {
-                                break L11;
-                              }
-                            }
-                          }
+                        if (var12 == 3) {
+                            cc.a(var9, var10, var11, var6, var7, var8, field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
                         }
-                      }
                     }
-                  }
                 }
-              }
-              cc.field_q = true;
-              break L10;
+            }
+        }
+        if (var2 == 4) {
+            if (var6 < 0 || var7 < 0 || var8 < 0 || var6 > cc.field_m || var7 > cc.field_m || var8 > cc.field_m || field_h[3] < 0 || field_h[3] > cc.field_m) {
+                cc.field_q = true;
             }
             var12 = field_m & 3;
-            if (var12 != 0) {
-              if (var12 != 1) {
-                if (var12 != 2) {
-                  if (var12 != 3) {
-                    break L9;
-                  } else {
-                    cc.a(var9, var10, var11, var6, var7, var8, field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
-                    cc.a(var9, var11, field_e[3], var6, var8, field_h[3], field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
-                    break L9;
-                  }
-                } else {
-                  cc.a(var9, var10, var11, var6, var7, var8, field_d[0], field_d[1], field_d[2], field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
-                  cc.a(var9, var11, field_e[3], var6, var8, field_h[3], field_d[0], field_d[2], field_d[3], field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
-                  break L9;
-                }
-              } else {
-                var13 = field_t[field_n];
-                cc.a(var9, var10, var11, var6, var7, var8, var13);
-                cc.a(var9, var11, field_e[3], var6, var8, field_h[3], var13);
-                break L9;
-              }
+            if (var12 == 0) {
+                cc.a(var9, var10, var11, var6, var7, var8, field_d[0], field_d[1], field_d[2]);
+                cc.a(var9, var11, field_e[3], var6, var8, field_h[3], field_d[0], field_d[2], field_d[3]);
             } else {
-              cc.a(var9, var10, var11, var6, var7, var8, field_d[0], field_d[1], field_d[2]);
-              cc.a(var9, var11, field_e[3], var6, var8, field_h[3], field_d[0], field_d[2], field_d[3]);
-              break L9;
+                if (var12 == 1) {
+                    var13 = field_t[field_n];
+                    cc.a(var9, var10, var11, var6, var7, var8, var13);
+                    cc.a(var9, var11, field_e[3], var6, var8, field_h[3], var13);
+                } else {
+                    if (var12 == 2) {
+                        cc.a(var9, var10, var11, var6, var7, var8, field_d[0], field_d[1], field_d[2], field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
+                        cc.a(var9, var11, field_e[3], var6, var8, field_h[3], field_d[0], field_d[2], field_d[3], field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
+                    } else {
+                        if (var12 == 3) {
+                            cc.a(var9, var10, var11, var6, var7, var8, field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
+                            cc.a(var9, var11, field_e[3], var6, var8, field_h[3], field_n, field_n, field_n, field_v[0], field_v[1], field_v[2], field_o[0], field_o[1], field_o[2], field_j[0], field_j[1], field_j[2], field_r);
+                        }
+                    }
+                }
             }
-          }
         }
     }
 
     private final static void a(boolean param0, boolean param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
         if (field_m != -1) {
           L0: {
             var3 = field_q[0];

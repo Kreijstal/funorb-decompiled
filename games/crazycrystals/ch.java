@@ -10,7 +10,7 @@ final class ch {
     private int field_a;
 
     final void c(int param0, int param1) {
-        int discarded$2 = 0;
+        int discarded$1 = 0;
         if ((param1 ^ -1) <= -1) {
           if (param1 <= this.field_e) {
             L0: {
@@ -23,7 +23,7 @@ final class ch {
             }
             this.field_e = this.field_e - 1;
             if (param0 < 122) {
-              discarded$2 = this.b(-10, -60);
+              discarded$1 = this.b(-10, -60);
               return;
             } else {
               return;
@@ -57,8 +57,8 @@ final class ch {
     }
 
     private final void a(int param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         var4 = new int[this.b(2667, param1)];
         var3 = var4;
         eg.a(this.field_f, 0, var4, 0, this.field_f.length);
@@ -73,8 +73,8 @@ final class ch {
     }
 
     private final int b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = CrazyCrystals.field_B;
         if (param0 != 2667) {
           this.field_f = (int[]) null;
@@ -121,7 +121,6 @@ final class ch {
     }
 
     private final void a(byte param0, int param1, int param2) {
-        int discarded$2 = 0;
         L0: {
           if (this.field_e < param2) {
             this.field_e = param2;
@@ -140,7 +139,7 @@ final class ch {
         }
         this.field_f[param2] = param1;
         if (param0 != -2) {
-          discarded$2 = this.d(-98, -14);
+          this.d(-98, -14);
           return;
         } else {
           return;

@@ -6,7 +6,7 @@ final class ib {
     static String field_b;
 
     final static int a(int param0, byte param1) {
-        int var2 = 0;
+        int var2;
         var2 = param0 >>> 919942305;
         var2 = var2 | var2 >>> 74094113;
         var2 = var2 | var2 >>> 1333931202;
@@ -33,11 +33,11 @@ final class ib {
 
     final static void a(byte param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {

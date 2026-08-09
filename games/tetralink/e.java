@@ -36,17 +36,16 @@ final class e {
     }
 
     final static kh[] a(byte param0) {
-        kh[] discarded$2 = null;
-        kh[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
+        kh[] var1;
+        int var2;
+        int var3;
         var3 = TetraLink.field_J;
         var1 = new kh[vj.field_n];
         var2 = 0;
         L0: while (true) {
           if (vj.field_n <= var2) {
             if (param0 < 98) {
-              discarded$2 = e.a((byte) 60);
+              e.a((byte) 60);
               an.b(-125);
               return var1;
             } else {

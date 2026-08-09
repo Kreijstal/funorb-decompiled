@@ -16,14 +16,14 @@ final class dk {
         if (param0 == 9888) {
             return;
         }
-        aa discarded$0 = dk.a(99, (byte) 15);
+        dk.a(99, (byte) 15);
     }
 
     final static aa a(int param0, byte param1) {
-        aa[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        aa[] var5 = null;
+        aa[] var2;
+        int var3;
+        int var4;
+        aa[] var5;
         var4 = TrackController.field_F ? 1 : 0;
         var5 = fi.e(0);
         var2 = var5;

@@ -35,8 +35,8 @@ final class rj implements uj {
     }
 
     final static void a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = MinerDisturbance.field_ab;
         if (param0 == -38) {
           if (!il.e(-31391)) {

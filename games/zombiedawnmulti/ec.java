@@ -16,8 +16,6 @@ final class ec {
 
     final static String a(java.applet.Applet param0, byte param1, String param2) {
         try {
-            Throwable var3 = null;
-            RuntimeException var3_ref = null;
             String[] var4 = null;
             int var5 = 0;
             int var6 = 0;
@@ -27,41 +25,19 @@ final class ec {
             int var10 = 0;
             String stackIn_11_0 = null;
             Object stackIn_18_0 = null;
-            RuntimeException stackIn_20_0 = null;
-            StringBuilder stackIn_20_1 = null;
             RuntimeException stackIn_21_0 = null;
             StringBuilder stackIn_21_1 = null;
             RuntimeException stackIn_22_0 = null;
             StringBuilder stackIn_22_1 = null;
             String stackIn_22_2 = null;
-            RuntimeException stackIn_23_0 = null;
-            StringBuilder stackIn_23_1 = null;
-            RuntimeException stackIn_24_0 = null;
             StringBuilder stackIn_24_1 = null;
-            RuntimeException stackIn_25_0 = null;
             StringBuilder stackIn_25_1 = null;
             String stackIn_25_2 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            String stackOut_10_0 = null;
-            Object stackOut_17_0 = null;
-            RuntimeException stackOut_19_0 = null;
-            StringBuilder stackOut_19_1 = null;
-            RuntimeException stackOut_21_0 = null;
-            StringBuilder stackOut_21_1 = null;
-            String stackOut_21_2 = null;
-            RuntimeException stackOut_20_0 = null;
-            StringBuilder stackOut_20_1 = null;
-            String stackOut_20_2 = null;
-            RuntimeException stackOut_22_0 = null;
-            StringBuilder stackOut_22_1 = null;
-            RuntimeException stackOut_24_0 = null;
-            StringBuilder stackOut_24_1 = null;
-            String stackOut_24_2 = null;
-            RuntimeException stackOut_23_0 = null;
-            StringBuilder stackOut_23_1 = null;
-            String stackOut_23_2 = null;
+            Throwable var3 = null;
+            RuntimeException var3_ref = null;
             var7 = ZombieDawnMulti.field_E ? 1 : 0;
             try {
               L0: {
@@ -92,8 +68,7 @@ final class ec {
                                     break L6;
                                   } else {
                                     if (var4[var5].substring(0, var6).trim().equals(param2)) {
-                                      stackOut_10_0 = var4[var5].substring(1 + var6).trim();
-                                      stackIn_11_0 = stackOut_10_0;
+                                      stackIn_11_0 = var4[var5].substring(1 + var6).trim();
                                       decompiledRegionSelector0 = 1;
                                       break L1;
                                     } else {
@@ -132,8 +107,7 @@ final class ec {
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
-                  stackOut_17_0 = null;
-                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_18_0 = null;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 } else {
@@ -145,56 +119,40 @@ final class ec {
               decompiledCaughtException = decompiledCaughtParameter1;
               L8: {
                 var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_19_0 = (RuntimeException) (var3_ref);
-                stackOut_19_1 = new StringBuilder().append("ec.B(");
-                stackIn_21_0 = stackOut_19_0;
-                stackIn_21_1 = stackOut_19_1;
-                stackIn_20_0 = stackOut_19_0;
-                stackIn_20_1 = stackOut_19_1;
+                stackIn_21_0 = (RuntimeException) (var3_ref);
+
+                stackIn_21_1 = new StringBuilder().append("ec.B(");
+
                 if (param0 == null) {
-                  stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-                  stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-                  stackOut_21_2 = "null";
-                  stackIn_22_0 = stackOut_21_0;
-                  stackIn_22_1 = stackOut_21_1;
-                  stackIn_22_2 = stackOut_21_2;
+                  stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+                  stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+                  stackIn_22_2 = "null";
                   break L8;
                 } else {
-                  stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackOut_20_2 = "{...}";
-                  stackIn_22_0 = stackOut_20_0;
-                  stackIn_22_1 = stackOut_20_1;
-                  stackIn_22_2 = stackOut_20_2;
+                  stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+                  stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+                  stackIn_22_2 = "{...}";
                   break L8;
                 }
               }
               L9: {
-                stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-                stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param1).append(',');
-                stackIn_24_0 = stackOut_22_0;
-                stackIn_24_1 = stackOut_22_1;
-                stackIn_23_0 = stackOut_22_0;
-                stackIn_23_1 = stackOut_22_1;
+
+
+                stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param1).append(',');
+
                 if (param2 == null) {
-                  stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-                  stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-                  stackOut_24_2 = "null";
-                  stackIn_25_0 = stackOut_24_0;
-                  stackIn_25_1 = stackOut_24_1;
-                  stackIn_25_2 = stackOut_24_2;
+                  stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+                  stackIn_25_2 = "null";
                   break L9;
                 } else {
-                  stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-                  stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-                  stackOut_23_2 = "{...}";
-                  stackIn_25_0 = stackOut_23_0;
-                  stackIn_25_1 = stackOut_23_1;
-                  stackIn_25_2 = stackOut_23_2;
+                  stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+                  stackIn_25_2 = "{...}";
                   break L9;
                 }
               }
-              throw fa.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
+              throw fa.a((Throwable) ((Object) stackIn_22_0), stackIn_25_2 + ')');
             }
             if (decompiledRegionSelector1 == 0) {
               return (String) ((Object) stackIn_18_0);
@@ -209,10 +167,7 @@ final class ec {
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
-        String discarded$3 = null;
-        String discarded$4 = null;
-        String discarded$5 = null;
-        String var4 = null;
+        String var4;
         if (!param0) {
           oo.b();
           if (param2 < -98) {
@@ -220,7 +175,7 @@ final class ec {
             return;
           } else {
             var4 = (String) null;
-            discarded$3 = ec.a((java.applet.Applet) null, (byte) -12, (String) null);
+            ec.a((java.applet.Applet) null, (byte) -12, (String) null);
             wj.b(param0, -120);
             return;
           }
@@ -230,7 +185,7 @@ final class ec {
             oo.b();
             if (param2 >= -98) {
               var4 = (String) null;
-              discarded$4 = ec.a((java.applet.Applet) null, (byte) -12, (String) null);
+              ec.a((java.applet.Applet) null, (byte) -12, (String) null);
               wj.b(param0, -120);
               return;
             } else {
@@ -240,7 +195,7 @@ final class ec {
           } else {
             if (param2 >= -98) {
               var4 = (String) null;
-              discarded$5 = ec.a((java.applet.Applet) null, (byte) -12, (String) null);
+              ec.a((java.applet.Applet) null, (byte) -12, (String) null);
               wj.b(param0, -120);
               return;
             } else {

@@ -15,8 +15,8 @@ final class bd {
         oh dupTemp$5 = null;
         oh dupTemp$6 = null;
         oh dupTemp$7 = null;
-        oh[] var5 = null;
-        oh[] var6 = null;
+        oh[] var5;
+        oh[] var6;
         if (param4 == 126) {
           var6 = new oh[9];
           var5 = var6;
@@ -60,12 +60,11 @@ final class bd {
     }
 
     final static String a(int param0) {
-        oh[] discarded$2 = null;
         if (null == ph.field_w) {
           return "";
         } else {
           if (param0 != 6) {
-            discarded$2 = bd.a(85, -19, 63, -86, (byte) 97);
+            bd.a(85, -19, 63, -86, (byte) 97);
             return ph.field_w;
           } else {
             return ph.field_w;

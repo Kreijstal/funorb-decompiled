@@ -30,11 +30,10 @@ final class jn {
     }
 
     jn(bh param0) {
-        int discarded$0 = 0;
         int var2_int = 0;
         try {
             this.field_b = param0.e(127);
-            discarded$0 = param0.d((byte) -99);
+            param0.d((byte) -99);
             var2_int = param0.d((byte) -99);
             if (var2_int != 1) {
                 throw new RuntimeException();

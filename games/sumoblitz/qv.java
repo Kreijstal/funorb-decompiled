@@ -11,88 +11,50 @@ final class qv extends ms {
     final static void a(int param0) {
         ts.field_a = ts.field_a + 13;
         if (param0 != 2) {
-          field_l = (String) null;
-          fb.field_a = fb.field_a - 9;
-          kn.field_b = kn.field_b - 4;
-          ha.field_f = ha.field_f + 18;
-          return;
-        } else {
-          fb.field_a = fb.field_a - 9;
-          kn.field_b = kn.field_b - 4;
-          ha.field_f = ha.field_f + 18;
-          return;
+            field_l = (String) null;
         }
+        fb.field_a = fb.field_a - 9;
+        kn.field_b = kn.field_b - 4;
+        ha.field_f = ha.field_f + 18;
     }
 
     final static void a(int param0, int param1) {
-        String discarded$6 = null;
-        dj discarded$7 = null;
-        dj discarded$8 = null;
-        mf var2 = null;
-        CharSequence var3 = null;
-        var2 = fh.field_n[param0];
+        mf var2 = fh.field_n[param0];
         if (param1 != 4) {
-          var3 = (CharSequence) null;
-          discarded$6 = qv.a(false, -82, (CharSequence) null);
-          var2.c(-1);
-          discarded$7 = qq.a(18416, var2);
-          return;
-        } else {
-          var2.c(-1);
-          discarded$8 = qq.a(18416, var2);
-          return;
+            CharSequence var3 = (CharSequence) null;
+            qv.a(false, -82, (CharSequence) null);
         }
+        var2.c(-1);
+        qq.a(18416, var2);
     }
 
     final static String a(boolean param0, int param1, CharSequence param2) {
-        RuntimeException var3 = null;
+        String stackIn_4_0 = null;
+        String stackIn_9_0 = null;
+        String stackIn_14_0 = null;
+        String stackIn_19_0 = null;
+        String stackIn_28_0 = null;
+        String stackIn_33_0 = null;
+        Object stackIn_35_0 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        String stackIn_39_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        String stackIn_4_0 = null;
-        String stackIn_9_0 = null;
-        String stackIn_14_0 = null;
-        String stackIn_19_0 = null;
-        boolean stackIn_23_0 = false;
-        String stackIn_30_0 = null;
-        int stackIn_33_0 = 0;
-        String stackIn_36_0 = null;
-        Object stackIn_38_0 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        String stackIn_42_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_3_0 = null;
-        int stackOut_32_0 = 0;
-        boolean stackOut_22_0 = false;
-        String stackOut_29_0 = null;
-        String stackOut_35_0 = null;
-        Object stackOut_37_0 = null;
-        String stackOut_18_0 = null;
-        String stackOut_13_0 = null;
-        String stackOut_8_0 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
             if (param2 == null) {
-              stackOut_3_0 = qq.field_Q;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = qq.field_Q;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -116,65 +78,43 @@ final class qv extends ms {
                                 var5 = 0;
                                 var6 = 0;
                                 L4: while (true) {
-                                  L5: {
-                                    if (var6 >= param2.length()) {
-                                      stackOut_32_0 = -1;
-                                      stackIn_33_0 = stackOut_32_0;
-                                      break L5;
+                                  if (var6 >= param2.length()) {
+                                    if (-1 > (var5 ^ -1)) {
+                                      stackIn_33_0 = m.field_T;
+                                      decompiledRegionSelector0 = 5;
+                                      break L0;
                                     } else {
+                                      var6 = -54 / ((48 - param1) / 41);
+                                      stackIn_35_0 = null;
+                                      decompiledRegionSelector0 = 6;
+                                      break L0;
+                                    }
+                                  } else {
+                                    L5: {
                                       var7 = param2.charAt(var6);
-                                      stackOut_22_0 = wv.a((byte) -99, (char) var7);
-                                      stackIn_33_0 = stackOut_22_0 ? 1 : 0;
-                                      stackIn_23_0 = stackOut_22_0;
-                                      if (var8 != 0) {
+                                      if (!wv.a((byte) -99, (char) var7)) {
+                                        var5 = 0;
                                         break L5;
                                       } else {
-                                        L6: {
-                                          L7: {
-                                            if (!stackIn_23_0) {
-                                              break L7;
-                                            } else {
-                                              var5++;
-                                              if (var8 == 0) {
-                                                break L6;
-                                              } else {
-                                                break L7;
-                                              }
-                                            }
-                                          }
-                                          var5 = 0;
-                                          break L6;
-                                        }
-                                        L8: {
-                                          if (var5 < 2) {
-                                            break L8;
-                                          } else {
-                                            if (param0) {
-                                              break L8;
-                                            } else {
-                                              stackOut_29_0 = ma.field_a;
-                                              stackIn_30_0 = stackOut_29_0;
-                                              decompiledRegionSelector0 = 4;
-                                              break L0;
-                                            }
-                                          }
-                                        }
-                                        var6++;
-                                        continue L4;
+                                        var5++;
+                                        break L5;
                                       }
                                     }
-                                  }
-                                  if (stackIn_33_0 > (var5 ^ -1)) {
-                                    stackOut_35_0 = m.field_T;
-                                    stackIn_36_0 = stackOut_35_0;
-                                    decompiledRegionSelector0 = 5;
-                                    break L0;
-                                  } else {
-                                    var6 = -54 / ((48 - param1) / 41);
-                                    stackOut_37_0 = null;
-                                    stackIn_38_0 = stackOut_37_0;
-                                    decompiledRegionSelector0 = 6;
-                                    break L0;
+                                    L6: {
+                                      if (var5 < 2) {
+                                        break L6;
+                                      } else {
+                                        if (param0) {
+                                          break L6;
+                                        } else {
+                                          stackIn_28_0 = ma.field_a;
+                                          decompiledRegionSelector0 = 4;
+                                          break L0;
+                                        }
+                                      }
+                                    }
+                                    var6++;
+                                    continue L4;
                                   }
                                 }
                               } else {
@@ -182,8 +122,7 @@ final class qv extends ms {
                               }
                             }
                           }
-                          stackOut_18_0 = m.field_T;
-                          stackIn_19_0 = stackOut_18_0;
+                          stackIn_19_0 = m.field_T;
                           decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
@@ -191,8 +130,7 @@ final class qv extends ms {
                         }
                       }
                     }
-                    stackOut_13_0 = qq.field_Q;
-                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_0 = qq.field_Q;
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
@@ -200,41 +138,32 @@ final class qv extends ms {
                   }
                 }
               }
-              stackOut_8_0 = qq.field_Q;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = qq.field_Q;
               decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L7: {
             var3 = decompiledCaughtException;
-            stackOut_39_0 = (RuntimeException) (var3);
-            stackOut_39_1 = new StringBuilder().append("qv.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_41_0 = stackOut_39_0;
-            stackIn_41_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            stackIn_38_0 = (RuntimeException) (var3);
+
+            stackIn_38_1 = new StringBuilder().append("qv.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
-              break L9;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "null";
+              break L7;
             } else {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "{...}";
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_42_1 = stackOut_40_1;
-              stackIn_42_2 = stackOut_40_2;
-              break L9;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "{...}";
+              break L7;
             }
           }
-          throw qo.a((Throwable) ((Object) stackIn_42_0), stackIn_42_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_39_0), stackIn_39_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0;
@@ -249,12 +178,12 @@ final class qv extends ms {
                 return stackIn_19_0;
               } else {
                 if (decompiledRegionSelector0 == 4) {
-                  return stackIn_30_0;
+                  return stackIn_28_0;
                 } else {
                   if (decompiledRegionSelector0 == 5) {
-                    return stackIn_36_0;
+                    return stackIn_33_0;
                   } else {
-                    return (String) ((Object) stackIn_38_0);
+                    return (String) ((Object) stackIn_35_0);
                   }
                 }
               }
@@ -268,8 +197,6 @@ final class qv extends ms {
         field_k = null;
         if (param0 != 18) {
             field_k = (da) null;
-            field_o = null;
-            return;
         }
         field_o = null;
     }

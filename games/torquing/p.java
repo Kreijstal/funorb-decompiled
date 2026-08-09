@@ -21,30 +21,20 @@ final class p extends ta {
     }
 
     private final void a(int param0, int param1, fj param2) {
-        int[] array$1 = null;
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        k var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
+        int[] array$0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        k var7 = null;
+        int var8 = 0;
+        int var9 = 0;
         var9 = Torquing.field_u;
         try {
           L0: {
@@ -68,8 +58,8 @@ final class p extends ta {
                           var7 = ni.a(89, var6);
                           if (var7 != null) {
                             this.field_q[var5] = var6;
-                            array$1 = new int[var7.field_a];
-                            this.field_s[var5] = array$1;
+                            array$0 = new int[var7.field_a];
+                            this.field_s[var5] = array$0;
                             var8 = 0;
                             L4: while (true) {
                               if (var7.field_a <= var8) {
@@ -117,27 +107,19 @@ final class p extends ta {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var4);
-            stackOut_19_1 = new StringBuilder().append("p.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_21_0 = (RuntimeException) (var4);
+
+            stackIn_21_1 = new StringBuilder().append("p.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "null";
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackIn_22_2 = "{...}";
               break L6;
             }
           }
@@ -147,10 +129,7 @@ final class p extends ta {
 
     final void a(fj param0, byte param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -158,14 +137,7 @@ final class p extends ta {
         String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var3 = null;
         var4 = Torquing.field_u;
         try {
           L0: {
@@ -189,27 +161,19 @@ final class p extends ta {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("p.D(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_8_0 = (RuntimeException) (var3);
+
+            stackIn_8_1 = new StringBuilder().append("p.D(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -248,7 +212,6 @@ final class p extends ta {
 
     final void d(byte param0) {
         int var2 = 0;
-        t[] discarded$0 = null;
         int var3 = Torquing.field_u;
         if (this.field_v != null) {
             for (var2 = 0; var2 < this.field_v.length; var2++) {
@@ -256,15 +219,14 @@ final class p extends ta {
             }
         }
         if (param0 >= -28) {
-            discarded$0 = p.a(-61);
+            p.a(-61);
         }
     }
 
     final String c(byte param0) {
-        t[] discarded$0 = null;
         int var3 = 0;
+        StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
         int var4 = Torquing.field_u;
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
@@ -272,12 +234,12 @@ final class p extends ta {
             return "";
         }
         if (param0 >= -126) {
-            discarded$0 = p.a(18);
+            p.a(18);
         }
-        StringBuilder discarded$1 = var5.append(this.field_r[0]);
+        StringBuilder discarded$0 = var5.append(this.field_r[0]);
         for (var3 = 1; var3 < this.field_r.length; var3++) {
-            discarded$2 = var2.append("...");
-            discarded$3 = var5.append(this.field_r[var3]);
+            discarded$1 = var2.append("...");
+            discarded$2 = var5.append(this.field_r[var3]);
         }
         return var2.toString();
     }

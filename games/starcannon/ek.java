@@ -11,9 +11,9 @@ final class ek implements Iterable {
     rf[] field_a;
 
     final rf a(long param0, int param1) {
-        rf var4 = null;
-        rf var5 = null;
-        int var6 = 0;
+        rf var4;
+        rf var5;
+        int var6;
         var6 = StarCannon.field_A;
         var4 = this.field_a[(int)(param0 & (long)(this.field_c - param1))];
         this.field_e = var4.field_a;
@@ -35,17 +35,15 @@ final class ek implements Iterable {
     }
 
     public static void a(boolean param0) {
-        boolean discarded$0 = false;
         field_b = null;
         if (param0) {
-            discarded$0 = ek.a(44);
+            ek.a(44);
         }
     }
 
     final static int a(int param0, int param1) {
-        int discarded$2 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var2 = 0;
           if ((param1 & 7) != 0) {
@@ -56,7 +54,7 @@ final class ek implements Iterable {
           }
         }
         if (param0 != 23201) {
-          discarded$2 = ek.a(-51, -124);
+          ek.a(-51, -124);
           var3 = var2 + param1;
           return var3;
         } else {

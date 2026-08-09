@@ -11,7 +11,7 @@ final class ig extends dh implements ai {
     static pk field_ib;
 
     final boolean d(boolean param0) {
-        qj var2 = null;
+        qj var2;
         if (!param0) {
           if (this.field_A) {
             if (!this.field_lb) {
@@ -72,15 +72,6 @@ final class ig extends dh implements ai {
     }
 
     private final void a(boolean param0, byte param1, qj param2) {
-        s discarded$3 = null;
-        s discarded$4 = null;
-        s discarded$5 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        ec var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_38_0 = null;
@@ -88,14 +79,10 @@ final class ig extends dh implements ai {
         String stackIn_38_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        ec var5 = null;
+        int var6 = 0;
         var6 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -109,7 +96,7 @@ final class ig extends dh implements ai {
                     if (param2.field_c != null) {
                       break L3;
                     } else {
-                      var4_ref = param2.field_e;
+                      var4 = param2.field_e;
                       if ((param2.field_b ^ -1) != -249) {
                         break L1;
                       } else {
@@ -121,7 +108,7 @@ final class ig extends dh implements ai {
                             break L4;
                           }
                         }
-                        var4_ref = tb.field_a;
+                        var4 = tb.field_a;
                         this.field_kb = true;
                         if (var6 == 0) {
                           break L1;
@@ -131,7 +118,7 @@ final class ig extends dh implements ai {
                       }
                     }
                   }
-                  var4_ref = j.field_c;
+                  var4 = j.field_c;
                   if (null != this.field_jb) {
                     this.field_jb.a((byte) -8);
                     if (var6 == 0) {
@@ -144,19 +131,19 @@ final class ig extends dh implements ai {
                   }
                 }
               }
-              var4_ref = bd.field_m;
+              var4 = bd.field_m;
               break L1;
             }
             if (param1 >= 115) {
               L5: {
                 L6: {
-                  var5 = new ec((dh) (this), qc.field_b, var4_ref);
+                  var5 = new ec((dh) (this), qc.field_b, var4);
                   if (param2.field_f) {
                     break L6;
                   } else {
                     L7: {
                       if (this.field_kb) {
-                        discarded$3 = var5.a(sk.field_C, -34, (ag) (this));
+                        var5.a(sk.field_C, -34, (ag) (this));
                         break L7;
                       } else {
                         L8: {
@@ -176,7 +163,7 @@ final class ig extends dh implements ai {
                         if (var6 == 0) {
                           break L7;
                         } else {
-                          discarded$4 = var5.a(sk.field_C, -34, (ag) (this));
+                          var5.a(sk.field_C, -34, (ag) (this));
                           break L7;
                         }
                       }
@@ -210,7 +197,7 @@ final class ig extends dh implements ai {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  discarded$5 = var5.a(sk.field_C, -34, (ag) (this));
+                  var5.a(sk.field_C, -34, (ag) (this));
                   break L5;
                 }
               }
@@ -225,28 +212,20 @@ final class ig extends dh implements ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
-            var4 = decompiledCaughtException;
-            stackOut_35_0 = (RuntimeException) (var4);
-            stackOut_35_1 = new StringBuilder().append("ig.N(").append(param0).append(',').append(param1).append(',');
-            stackIn_37_0 = stackOut_35_0;
-            stackIn_37_1 = stackOut_35_1;
-            stackIn_36_0 = stackOut_35_0;
-            stackIn_36_1 = stackOut_35_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_37_0 = (RuntimeException) (var4_ref);
+
+            stackIn_37_1 = new StringBuilder().append("ig.N(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "null";
-              stackIn_38_0 = stackOut_37_0;
-              stackIn_38_1 = stackOut_37_1;
-              stackIn_38_2 = stackOut_37_2;
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "null";
               break L10;
             } else {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "{...}";
-              stackIn_38_0 = stackOut_36_0;
-              stackIn_38_1 = stackOut_36_1;
-              stackIn_38_2 = stackOut_36_2;
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "{...}";
               break L10;
             }
           }

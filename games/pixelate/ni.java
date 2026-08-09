@@ -51,7 +51,7 @@ final class ni extends fa {
     }
 
     final static void a(int param0) {
-        jl var2 = null;
+        jl var2;
         L0: {
           oc.field_H[5].a(ug.field_n, (byte) -24);
           oc.field_H[6].a(lm.field_s, (byte) -24);

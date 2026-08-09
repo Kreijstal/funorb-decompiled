@@ -17,23 +17,6 @@ final class fc extends gg {
 
     final static int a(String param0, int param1, boolean param2, boolean param3, String param4, int param5) {
         try {
-            int discarded$7 = 0;
-            int discarded$8 = 0;
-            int discarded$9 = 0;
-            int discarded$10 = 0;
-            Object discarded$11 = null;
-            Object discarded$12 = null;
-            ve discarded$13 = null;
-            RuntimeException var6 = null;
-            int var6_int = 0;
-            int var7 = 0;
-            Throwable var8_ref_Throwable = null;
-            int var8 = 0;
-            int var9 = 0;
-            String var10 = null;
-            String var11 = null;
-            String var12 = null;
-            CharSequence var13 = null;
             int stackIn_6_0 = 0;
             int stackIn_31_0 = 0;
             int stackIn_44_0 = 0;
@@ -43,57 +26,33 @@ final class fc extends gg {
             int stackIn_87_0 = 0;
             int stackIn_98_0 = 0;
             int stackIn_100_0 = 0;
-            RuntimeException stackIn_102_0 = null;
-            StringBuilder stackIn_102_1 = null;
             RuntimeException stackIn_103_0 = null;
             StringBuilder stackIn_103_1 = null;
             RuntimeException stackIn_104_0 = null;
             StringBuilder stackIn_104_1 = null;
             String stackIn_104_2 = null;
-            RuntimeException stackIn_105_0 = null;
-            StringBuilder stackIn_105_1 = null;
-            RuntimeException stackIn_106_0 = null;
             StringBuilder stackIn_106_1 = null;
-            RuntimeException stackIn_107_0 = null;
             StringBuilder stackIn_107_1 = null;
             String stackIn_107_2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_5_0 = 0;
-            int stackOut_30_0 = 0;
-            int stackOut_43_0 = 0;
-            int stackOut_42_0 = 0;
-            int stackOut_46_0 = 0;
-            int stackOut_45_0 = 0;
-            int stackOut_73_0 = 0;
-            int stackOut_86_0 = 0;
-            int stackOut_84_0 = 0;
-            int stackOut_97_0 = 0;
-            int stackOut_99_0 = 0;
-            RuntimeException stackOut_101_0 = null;
-            StringBuilder stackOut_101_1 = null;
-            RuntimeException stackOut_103_0 = null;
-            StringBuilder stackOut_103_1 = null;
-            String stackOut_103_2 = null;
-            RuntimeException stackOut_102_0 = null;
-            StringBuilder stackOut_102_1 = null;
-            String stackOut_102_2 = null;
-            RuntimeException stackOut_104_0 = null;
-            StringBuilder stackOut_104_1 = null;
-            RuntimeException stackOut_106_0 = null;
-            StringBuilder stackOut_106_1 = null;
-            String stackOut_106_2 = null;
-            RuntimeException stackOut_105_0 = null;
-            StringBuilder stackOut_105_1 = null;
-            String stackOut_105_2 = null;
+            int var6_int = 0;
+            RuntimeException var6 = null;
+            int var7 = 0;
+            int var8 = 0;
+            Throwable var8_ref_Throwable = null;
+            int var9 = 0;
+            String var10 = null;
+            String var11 = null;
+            String var12 = null;
+            CharSequence var13 = null;
             var9 = SolKnight.field_L ? 1 : 0;
             try {
               L0: {
                 L1: {
                   if (null == lf.field_d) {
                     if (!ai.a(param2, (byte) -37)) {
-                      stackOut_5_0 = -1;
-                      stackIn_6_0 = stackOut_5_0;
+                      stackIn_6_0 = -1;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     } else {
@@ -184,8 +143,7 @@ final class fc extends gg {
                             } else {
                               je.a(false);
                               je.field_c = false;
-                              stackOut_30_0 = var6_int;
-                              stackIn_31_0 = stackOut_30_0;
+                              stackIn_31_0 = var6_int;
                               decompiledRegionSelector0 = 1;
                               break L0;
                             }
@@ -206,7 +164,7 @@ final class fc extends gg {
                       L9: {
                         kc.field_P = te.field_N.a(10526);
                         lh.field_s = te.field_N.j(255);
-                        discarded$7 = te.field_N.j(param5 + 255);
+                        te.field_N.j(param5 + 255);
                         ob.field_l = te.field_N.i(param5 + -103);
                         var12 = te.field_N.g(87);
                         var7 = te.field_N.j(255);
@@ -223,24 +181,20 @@ final class fc extends gg {
                         } else {
                           L11: {
                             if ((4 & var7) == 0) {
-                              stackOut_43_0 = 0;
-                              stackIn_44_0 = stackOut_43_0;
+                              stackIn_44_0 = 0;
                               break L11;
                             } else {
-                              stackOut_42_0 = 1;
-                              stackIn_44_0 = stackOut_42_0;
+                              stackIn_44_0 = 1;
                               break L11;
                             }
                           }
                           L12: {
                             lc.field_u = stackIn_44_0 != 0;
                             if (0 == (8 & var7)) {
-                              stackOut_46_0 = 0;
-                              stackIn_47_0 = stackOut_46_0;
+                              stackIn_47_0 = 0;
                               break L12;
                             } else {
-                              stackOut_45_0 = 1;
-                              stackIn_47_0 = stackOut_45_0;
+                              stackIn_47_0 = 1;
                               break L12;
                             }
                           }
@@ -256,9 +210,9 @@ final class fc extends gg {
                         if (!b.field_b) {
                           break L13;
                         } else {
-                          discarded$8 = te.field_N.j(255);
-                          discarded$9 = te.field_N.j(255);
-                          discarded$10 = te.field_N.e(true);
+                          te.field_N.j(255);
+                          te.field_N.j(255);
+                          te.field_N.e(true);
                           me.field_d = te.field_N.i(param5 + -105);
                           dk.field_l = new byte[me.field_d];
                           var8 = 0;
@@ -308,7 +262,7 @@ final class fc extends gg {
                             if (!lc.field_u) {
                               try {
                                 L19: {
-                                  discarded$11 = fd.a(ia.g(param5 + 110), "unzap", (byte) 101);
+                                  fd.a(ia.g(param5 + 110), "unzap", (byte) 101);
                                   break L19;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -326,7 +280,7 @@ final class fc extends gg {
                         }
                         try {
                           L21: {
-                            discarded$12 = fd.a(param5 + -4476, ia.g(-63), "zap", new Object[]{ub.a(-62, kc.field_P)});
+                            fd.a(param5 + -4476, ia.g(-63), "zap", new Object[]{ub.a(-62, kc.field_P)});
                             break L21;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -351,8 +305,7 @@ final class fc extends gg {
                       L24: while (true) {
                         if ((var8 ^ -1) <= -5) {
                           te.field_N.a(-1, ed.field_a);
-                          stackOut_73_0 = ob.field_h;
-                          stackIn_74_0 = stackOut_73_0;
+                          stackIn_74_0 = ob.field_h;
                           decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
@@ -380,8 +333,7 @@ final class fc extends gg {
                         } else {
                           if (!je.field_c) {
                             je.field_c = true;
-                            stackOut_86_0 = -1;
-                            stackIn_87_0 = stackOut_86_0;
+                            stackIn_87_0 = -1;
                             decompiledRegionSelector0 = 4;
                             break L0;
                           } else {
@@ -399,8 +351,7 @@ final class fc extends gg {
                       }
                       md.field_v = te.field_N.h(param5 + 121);
                       je.field_c = false;
-                      stackOut_84_0 = ob.field_h;
-                      stackIn_85_0 = stackOut_84_0;
+                      stackIn_85_0 = ob.field_h;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }
@@ -413,7 +364,7 @@ final class fc extends gg {
                     break L28;
                   } else {
                     var10 = (String) null;
-                    discarded$13 = fc.a((Throwable) null, (String) null);
+                    fc.a((Throwable) null, (String) null);
                     break L28;
                   }
                 }
@@ -430,8 +381,7 @@ final class fc extends gg {
                         }
                       }
                       je.field_c = false;
-                      stackOut_97_0 = 3;
-                      stackIn_98_0 = stackOut_97_0;
+                      stackIn_98_0 = 3;
                       decompiledRegionSelector0 = 5;
                       break L0;
                     } else {
@@ -445,8 +395,7 @@ final class fc extends gg {
                     break L29;
                   }
                 }
-                stackOut_99_0 = -1;
-                stackIn_100_0 = stackOut_99_0;
+                stackIn_100_0 = -1;
                 decompiledRegionSelector0 = 6;
                 break L0;
               }
@@ -454,56 +403,40 @@ final class fc extends gg {
               decompiledCaughtException = decompiledCaughtParameter2;
               L31: {
                 var6 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_101_0 = (RuntimeException) (var6);
-                stackOut_101_1 = new StringBuilder().append("fc.D(");
-                stackIn_103_0 = stackOut_101_0;
-                stackIn_103_1 = stackOut_101_1;
-                stackIn_102_0 = stackOut_101_0;
-                stackIn_102_1 = stackOut_101_1;
+                stackIn_103_0 = (RuntimeException) (var6);
+
+                stackIn_103_1 = new StringBuilder().append("fc.D(");
+
                 if (param0 == null) {
-                  stackOut_103_0 = (RuntimeException) ((Object) stackIn_103_0);
-                  stackOut_103_1 = (StringBuilder) ((Object) stackIn_103_1);
-                  stackOut_103_2 = "null";
-                  stackIn_104_0 = stackOut_103_0;
-                  stackIn_104_1 = stackOut_103_1;
-                  stackIn_104_2 = stackOut_103_2;
+                  stackIn_104_0 = (RuntimeException) ((Object) stackIn_103_0);
+                  stackIn_104_1 = (StringBuilder) ((Object) stackIn_103_1);
+                  stackIn_104_2 = "null";
                   break L31;
                 } else {
-                  stackOut_102_0 = (RuntimeException) ((Object) stackIn_102_0);
-                  stackOut_102_1 = (StringBuilder) ((Object) stackIn_102_1);
-                  stackOut_102_2 = "{...}";
-                  stackIn_104_0 = stackOut_102_0;
-                  stackIn_104_1 = stackOut_102_1;
-                  stackIn_104_2 = stackOut_102_2;
+                  stackIn_104_0 = (RuntimeException) ((Object) stackIn_103_0);
+                  stackIn_104_1 = (StringBuilder) ((Object) stackIn_103_1);
+                  stackIn_104_2 = "{...}";
                   break L31;
                 }
               }
               L32: {
-                stackOut_104_0 = (RuntimeException) ((Object) stackIn_104_0);
-                stackOut_104_1 = ((StringBuilder) (Object) stackIn_104_1).append(stackIn_104_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-                stackIn_106_0 = stackOut_104_0;
-                stackIn_106_1 = stackOut_104_1;
-                stackIn_105_0 = stackOut_104_0;
-                stackIn_105_1 = stackOut_104_1;
+
+
+                stackIn_106_1 = ((StringBuilder) (Object) stackIn_104_1).append(stackIn_104_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
                 if (param4 == null) {
-                  stackOut_106_0 = (RuntimeException) ((Object) stackIn_106_0);
-                  stackOut_106_1 = (StringBuilder) ((Object) stackIn_106_1);
-                  stackOut_106_2 = "null";
-                  stackIn_107_0 = stackOut_106_0;
-                  stackIn_107_1 = stackOut_106_1;
-                  stackIn_107_2 = stackOut_106_2;
+                  stackIn_104_0 = (RuntimeException) ((Object) stackIn_104_0);
+                  stackIn_107_1 = (StringBuilder) ((Object) stackIn_106_1);
+                  stackIn_107_2 = "null";
                   break L32;
                 } else {
-                  stackOut_105_0 = (RuntimeException) ((Object) stackIn_105_0);
-                  stackOut_105_1 = (StringBuilder) ((Object) stackIn_105_1);
-                  stackOut_105_2 = "{...}";
-                  stackIn_107_0 = stackOut_105_0;
-                  stackIn_107_1 = stackOut_105_1;
-                  stackIn_107_2 = stackOut_105_2;
+                  stackIn_104_0 = (RuntimeException) ((Object) stackIn_104_0);
+                  stackIn_107_1 = (StringBuilder) ((Object) stackIn_106_1);
+                  stackIn_107_2 = "{...}";
                   break L32;
                 }
               }
-              throw fc.a((Throwable) ((Object) stackIn_107_0), stackIn_107_2 + ',' + param5 + ')');
+              throw fc.a((Throwable) ((Object) stackIn_104_0), stackIn_107_2 + ',' + param5 + ')');
             }
             if (decompiledRegionSelector0 == 0) {
               return stackIn_6_0;
@@ -545,12 +478,11 @@ final class fc extends gg {
     }
 
     public static void a(byte param0) {
-        ve discarded$0 = null;
         field_n = null;
         field_l = null;
         if (param0 != 124) {
             String var2 = (String) null;
-            discarded$0 = fc.a((Throwable) null, (String) null);
+            fc.a((Throwable) null, (String) null);
         }
     }
 
@@ -564,53 +496,18 @@ final class fc extends gg {
         int var10 = 0;
         int var11 = 0;
         int stackIn_20_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
         var11 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
@@ -621,8 +518,7 @@ final class fc extends gg {
             var9 = 0;
             L1: while (true) {
               if ((var9 ^ -1) <= -129) {
-                stackOut_19_0 = var5_int;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = var5_int;
                 break L0;
               } else {
                 L2: {
@@ -682,81 +578,57 @@ final class fc extends gg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) (var5);
-            stackOut_21_1 = new StringBuilder().append("fc.C(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_23_0 = (RuntimeException) (var5);
+
+            stackIn_23_1 = new StringBuilder().append("fc.C(");
+
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+
+
+            stackIn_26_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
+
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L7;
             } else {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+
+
+            stackIn_29_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
+
             if (param2 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L8;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L8;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param3 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_24_0), stackIn_30_2 + ',' + param3 + ')');
         }
         return stackIn_20_0 != 0;
     }
@@ -773,15 +645,24 @@ final class fc extends gg {
     }
 
     fc(byte[] param0) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        g dupTemp$17 = null;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        g dupTemp$8 = null;
+        byte[] stackIn_39_0 = null;
+        byte[] stackIn_42_0 = null;
+        RuntimeException stackIn_206_0 = null;
+        StringBuilder stackIn_206_1 = null;
+        RuntimeException stackIn_207_0 = null;
+        StringBuilder stackIn_207_1 = null;
+        String stackIn_207_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         byte[] var4 = null;
@@ -798,10 +679,10 @@ final class fc extends gg {
         g[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
-        g var15 = null;
-        byte[] var15_array = null;
-        int var16_int = 0;
+        byte[] var15 = null;
+        g var15_ref = null;
         byte[] var16 = null;
+        int var16_int = 0;
         int var17 = 0;
         byte[] var18 = null;
         int var19 = 0;
@@ -814,7 +695,8 @@ final class fc extends gg {
         Object var25 = null;
         int var26 = 0;
         int var27 = 0;
-        int var28 = 0;
+        int var28_int = 0;
+        g var28 = null;
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
@@ -844,29 +726,6 @@ final class fc extends gg {
         byte[] var56 = null;
         byte[] var57 = null;
         byte[] var58 = null;
-        byte[] stackIn_39_0 = null;
-        byte[] stackIn_42_0 = null;
-        RuntimeException stackIn_205_0 = null;
-        StringBuilder stackIn_205_1 = null;
-        RuntimeException stackIn_206_0 = null;
-        StringBuilder stackIn_206_1 = null;
-        RuntimeException stackIn_207_0 = null;
-        StringBuilder stackIn_207_1 = null;
-        String stackIn_207_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_38_0 = null;
-        Object stackOut_37_0 = null;
-        Object stackOut_41_0 = null;
-        byte[] stackOut_40_0 = null;
-        RuntimeException stackOut_204_0 = null;
-        StringBuilder stackOut_204_1 = null;
-        RuntimeException stackOut_206_0 = null;
-        StringBuilder stackOut_206_1 = null;
-        String stackOut_206_2 = null;
-        RuntimeException stackOut_205_0 = null;
-        StringBuilder stackOut_205_1 = null;
-        String stackOut_205_2 = null;
         try {
           L0: {
             this.field_r = new byte[128];
@@ -941,9 +800,9 @@ final class fc extends gg {
                                                 var13_int = var15_int;
                                                 break L9;
                                               } else {
-                                                incrementValue$9 = var12;
+                                                incrementValue$0 = var12;
                                                 var12++;
-                                                var13_int = incrementValue$9;
+                                                var13_int = incrementValue$0;
                                                 break L9;
                                               }
                                             }
@@ -964,27 +823,23 @@ final class fc extends gg {
                                         L12: {
                                           var14 = var38.j(255);
                                           if (var14 > 0) {
-                                            stackOut_38_0 = new byte[2 * var14];
-                                            stackIn_39_0 = stackOut_38_0;
+                                            stackIn_39_0 = new byte[2 * var14];
                                             break L12;
                                           } else {
-                                            stackOut_37_0 = null;
-                                            stackIn_39_0 = (byte[]) ((Object) stackOut_37_0);
+                                            stackIn_39_0 = null;
                                             break L12;
                                           }
                                         }
                                         L13: {
                                           var58 = stackIn_39_0;
                                           var46 = var58;
-                                          var15_array = var46;
+                                          var15 = var46;
                                           var14 = var38.j(255);
                                           if ((var14 ^ -1) >= -1) {
-                                            stackOut_41_0 = null;
-                                            stackIn_42_0 = (byte[]) ((Object) stackOut_41_0);
+                                            stackIn_42_0 = null;
                                             break L13;
                                           } else {
-                                            stackOut_40_0 = new byte[var14 * 2];
-                                            stackIn_42_0 = stackOut_40_0;
+                                            stackIn_42_0 = new byte[var14 * 2];
                                             break L13;
                                           }
                                         }
@@ -1044,7 +899,7 @@ final class fc extends gg {
                                                                             L23: while (true) {
                                                                               if (var27 >= var12) {
                                                                                 L24: {
-                                                                                  if (var15_array == null) {
+                                                                                  if (var15 == null) {
                                                                                     break L24;
                                                                                   } else {
                                                                                     var27 = 1;
@@ -1052,7 +907,7 @@ final class fc extends gg {
                                                                                       if (var58.length <= var27) {
                                                                                         break L24;
                                                                                       } else {
-                                                                                        var15_array[var27] = var38.a((byte) -14);
+                                                                                        var15[var27] = var38.a((byte) -14);
                                                                                         var27 += 2;
                                                                                         continue L25;
                                                                                       }
@@ -1060,7 +915,7 @@ final class fc extends gg {
                                                                                   }
                                                                                 }
                                                                                 L26: {
-                                                                                  if (var16 == null) {
+                                                                                  if (null == var16) {
                                                                                     break L26;
                                                                                   } else {
                                                                                     var27 = 1;
@@ -1082,16 +937,16 @@ final class fc extends gg {
                                                                                     L29: while (true) {
                                                                                       if (var27 >= var12) {
                                                                                         L30: {
-                                                                                          if (var15_array == null) {
+                                                                                          if (var15 == null) {
                                                                                             break L30;
                                                                                           } else {
                                                                                             var19 = var38.j(255);
-                                                                                            var15_array[0] = (byte)var19;
+                                                                                            var15[0] = (byte)var19;
                                                                                             var27 = 2;
                                                                                             L31: while (true) {
                                                                                               if (var27 >= var58.length) {
                                                                                                 var27 = var58[0];
-                                                                                                var28 = var58[1];
+                                                                                                var28_int = var58[1];
                                                                                                 var29 = 0;
                                                                                                 L32: while (true) {
                                                                                                   if (var29 >= var27) {
@@ -1101,28 +956,28 @@ final class fc extends gg {
                                                                                                         var30 = var27;
                                                                                                         L34: while (true) {
                                                                                                           if (-129 >= (var30 ^ -1)) {
-                                                                                                            var15_array = null;
+                                                                                                            var15 = null;
                                                                                                             break L30;
                                                                                                           } else {
-                                                                                                            this.field_p[var30] = (byte)(32 + this.field_p[var30] * var28 >> -409955258);
+                                                                                                            this.field_p[var30] = (byte)(32 + this.field_p[var30] * var28_int >> -409955258);
                                                                                                             var30++;
                                                                                                             continue L34;
                                                                                                           }
                                                                                                         }
                                                                                                       } else {
                                                                                                         var30 = var58[var29];
-                                                                                                        var31 = var15_array[1 + var29];
-                                                                                                        var32 = (var30 + -var27) * var28 - -((-var27 + var30) / 2);
+                                                                                                        var31 = var15[1 + var29];
+                                                                                                        var32 = (var30 + -var27) * var28_int - -((-var27 + var30) / 2);
                                                                                                         var33 = var27;
                                                                                                         L35: while (true) {
                                                                                                           if (var33 >= var30) {
-                                                                                                            var28 = var31;
+                                                                                                            var28_int = var31;
                                                                                                             var29 += 2;
                                                                                                             var27 = var30;
                                                                                                             continue L33;
                                                                                                           } else {
                                                                                                             var34 = ke.b(var32, -1697860097, var30 + -var27);
-                                                                                                            var32 = var32 + (var31 - var28);
+                                                                                                            var32 = var32 + (var31 - var28_int);
                                                                                                             this.field_p[var33] = (byte)(32 + var34 * this.field_p[var33] >> -1502842426);
                                                                                                             var33++;
                                                                                                             continue L35;
@@ -1131,14 +986,14 @@ final class fc extends gg {
                                                                                                       }
                                                                                                     }
                                                                                                   } else {
-                                                                                                    this.field_p[var29] = (byte)(this.field_p[var29] * var28 + 32 >> 1602553798);
+                                                                                                    this.field_p[var29] = (byte)(this.field_p[var29] * var28_int + 32 >> 1602553798);
                                                                                                     var29++;
                                                                                                     continue L32;
                                                                                                   }
                                                                                                 }
                                                                                               } else {
                                                                                                 var19 = 1 + (var19 + var38.j(255));
-                                                                                                var15_array[var27] = (byte)var19;
+                                                                                                var15[var27] = (byte)var19;
                                                                                                 var27 += 2;
                                                                                                 continue L31;
                                                                                               }
@@ -1155,7 +1010,7 @@ final class fc extends gg {
                                                                                             L37: while (true) {
                                                                                               if (var47.length <= var27) {
                                                                                                 var27 = var47[0];
-                                                                                                var28 = var47[1] << -1053044159;
+                                                                                                var28_int = var47[1] << -1053044159;
                                                                                                 var29 = 0;
                                                                                                 L38: while (true) {
                                                                                                   if (var27 <= var29) {
@@ -1169,7 +1024,7 @@ final class fc extends gg {
                                                                                                             break L36;
                                                                                                           } else {
                                                                                                             L41: {
-                                                                                                              var31 = (255 & this.field_r[var30]) - -var28;
+                                                                                                              var31 = (255 & this.field_r[var30]) - -var28_int;
                                                                                                               if (var31 >= 0) {
                                                                                                                 break L41;
                                                                                                               } else {
@@ -1193,13 +1048,13 @@ final class fc extends gg {
                                                                                                       } else {
                                                                                                         var30 = var47[var29];
                                                                                                         var31 = var16[var29 - -1] << -1223639519;
-                                                                                                        var32 = (var30 + -var27) * var28 + (var30 - var27) / 2;
+                                                                                                        var32 = (var30 + -var27) * var28_int + (var30 - var27) / 2;
                                                                                                         var37 = var27;
                                                                                                         var33 = var37;
                                                                                                         L43: while (true) {
                                                                                                           if (var30 <= var37) {
                                                                                                             var29 += 2;
-                                                                                                            var28 = var31;
+                                                                                                            var28_int = var31;
                                                                                                             var27 = var30;
                                                                                                             continue L39;
                                                                                                           } else {
@@ -1221,7 +1076,7 @@ final class fc extends gg {
                                                                                                                 break L45;
                                                                                                               }
                                                                                                             }
-                                                                                                            var32 = var32 + (-var28 + var31);
+                                                                                                            var32 = var32 + (-var28_int + var31);
                                                                                                             this.field_r[var37] = (byte)var35;
                                                                                                             var37++;
                                                                                                             continue L43;
@@ -1231,7 +1086,7 @@ final class fc extends gg {
                                                                                                     }
                                                                                                   } else {
                                                                                                     L46: {
-                                                                                                      var30 = var28 + (this.field_r[var29] & 255);
+                                                                                                      var30 = var28_int + (this.field_r[var29] & 255);
                                                                                                       if (0 <= var30) {
                                                                                                         break L46;
                                                                                                       } else {
@@ -1314,26 +1169,27 @@ final class fc extends gg {
                                                                                               } else {
                                                                                                 L55: {
                                                                                                   var50 = var13[var27];
+                                                                                                  var28 = var50;
                                                                                                   if (null == var50.field_j) {
                                                                                                     break L55;
                                                                                                   } else {
-                                                                                                    var50.field_b = var38.j(255);
+                                                                                                    var28.field_b = var38.j(255);
                                                                                                     break L55;
                                                                                                   }
                                                                                                 }
                                                                                                 L56: {
-                                                                                                  if (var50.field_i == null) {
+                                                                                                  if (var28.field_i == null) {
                                                                                                     break L56;
                                                                                                   } else {
-                                                                                                    var50.field_h = var38.j(255);
+                                                                                                    var28.field_h = var38.j(255);
                                                                                                     break L56;
                                                                                                   }
                                                                                                 }
                                                                                                 L57: {
-                                                                                                  if (var50.field_c <= 0) {
+                                                                                                  if (var28.field_c <= 0) {
                                                                                                     break L57;
                                                                                                   } else {
-                                                                                                    var50.field_g = var38.j(255);
+                                                                                                    var28.field_g = var38.j(255);
                                                                                                     break L57;
                                                                                                   }
                                                                                                 }
@@ -1374,6 +1230,7 @@ final class fc extends gg {
                                                                                   } else {
                                                                                     L60: {
                                                                                       var48 = var13[var27];
+                                                                                      var28 = var48;
                                                                                       if (null == var48.field_i) {
                                                                                         break L60;
                                                                                       } else {
@@ -1440,9 +1297,9 @@ final class fc extends gg {
                                                                               } else {
                                                                                 L67: {
                                                                                   if (var54.length > var21) {
-                                                                                    incrementValue$10 = var21;
+                                                                                    incrementValue$1 = var21;
                                                                                     var21++;
-                                                                                    var20 = var18[incrementValue$10];
+                                                                                    var20 = var18[incrementValue$1];
                                                                                     break L67;
                                                                                   } else {
                                                                                     var20 = -1;
@@ -1474,9 +1331,9 @@ final class fc extends gg {
                                                                               } else {
                                                                                 var25 = var13[var53[var21]];
                                                                                 if (var21 < var57.length) {
-                                                                                  incrementValue$11 = var21;
+                                                                                  incrementValue$2 = var21;
                                                                                   var21++;
-                                                                                  var20 = var10[incrementValue$11];
+                                                                                  var20 = var10[incrementValue$2];
                                                                                   break L69;
                                                                                 } else {
                                                                                   var20 = -1;
@@ -1502,16 +1359,16 @@ final class fc extends gg {
                                                                           if (-1 != (var20 ^ -1)) {
                                                                             break L71;
                                                                           } else {
-                                                                            incrementValue$12 = var8;
+                                                                            incrementValue$3 = var8;
                                                                             var8++;
-                                                                            var24 = 16 + var38.field_l[incrementValue$12] << -2100200158;
+                                                                            var24 = 16 + var38.field_l[incrementValue$3] << -2100200158;
                                                                             if (var56.length <= var21) {
                                                                               var20 = -1;
                                                                               break L71;
                                                                             } else {
-                                                                              incrementValue$13 = var21;
+                                                                              incrementValue$4 = var21;
                                                                               var21++;
-                                                                              var20 = var7[incrementValue$13];
+                                                                              var20 = var7[incrementValue$4];
                                                                               break L71;
                                                                             }
                                                                           }
@@ -1539,15 +1396,15 @@ final class fc extends gg {
                                                                             var20 = -1;
                                                                             break L74;
                                                                           } else {
-                                                                            incrementValue$14 = var21;
+                                                                            incrementValue$5 = var21;
                                                                             var21++;
-                                                                            var20 = var4[incrementValue$14];
+                                                                            var20 = var4[incrementValue$5];
                                                                             break L74;
                                                                           }
                                                                         }
-                                                                        incrementValue$15 = var5;
+                                                                        incrementValue$6 = var5;
                                                                         var5++;
-                                                                        var23 = -1 + var38.field_l[incrementValue$15];
+                                                                        var23 = -1 + var38.field_l[incrementValue$6];
                                                                         break L73;
                                                                       }
                                                                     }
@@ -1567,9 +1424,9 @@ final class fc extends gg {
                                                               } else {
                                                                 L76: {
                                                                   if (var21 < var54.length) {
-                                                                    incrementValue$16 = var21;
+                                                                    incrementValue$7 = var21;
                                                                     var21++;
-                                                                    var20 = var18[incrementValue$16];
+                                                                    var20 = var18[incrementValue$7];
                                                                     break L76;
                                                                   } else {
                                                                     var20 = -1;
@@ -1614,15 +1471,15 @@ final class fc extends gg {
                                         }
                                       } else {
                                         L77: {
-                                          dupTemp$17 = new g();
-                                          var13[var14] = dupTemp$17;
-                                          var40 = dupTemp$17;
-                                          var15 = var40;
+                                          dupTemp$8 = new g();
+                                          var13[var14] = dupTemp$8;
+                                          var40 = dupTemp$8;
+                                          var15_ref = var40;
                                           var16_int = var38.j(255);
                                           if (-1 <= (var16_int ^ -1)) {
                                             break L77;
                                           } else {
-                                            var15.field_j = new byte[2 * var16_int];
+                                            var15_ref.field_j = new byte[2 * var16_int];
                                             break L77;
                                           }
                                         }
@@ -1631,7 +1488,7 @@ final class fc extends gg {
                                           if (-1 <= (var16_int ^ -1)) {
                                             break L78;
                                           } else {
-                                            var15.field_i = new byte[2 + 2 * var16_int];
+                                            var15_ref.field_i = new byte[2 + 2 * var16_int];
                                             var40.field_i[1] = (byte)64;
                                             break L78;
                                           }
@@ -1678,27 +1535,19 @@ final class fc extends gg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L79: {
             var2 = decompiledCaughtException;
-            stackOut_204_0 = (RuntimeException) (var2);
-            stackOut_204_1 = new StringBuilder().append("fc.<init>(");
-            stackIn_206_0 = stackOut_204_0;
-            stackIn_206_1 = stackOut_204_1;
-            stackIn_205_0 = stackOut_204_0;
-            stackIn_205_1 = stackOut_204_1;
+            stackIn_206_0 = (RuntimeException) (var2);
+
+            stackIn_206_1 = new StringBuilder().append("fc.<init>(");
+
             if (param0 == null) {
-              stackOut_206_0 = (RuntimeException) ((Object) stackIn_206_0);
-              stackOut_206_1 = (StringBuilder) ((Object) stackIn_206_1);
-              stackOut_206_2 = "null";
-              stackIn_207_0 = stackOut_206_0;
-              stackIn_207_1 = stackOut_206_1;
-              stackIn_207_2 = stackOut_206_2;
+              stackIn_207_0 = (RuntimeException) ((Object) stackIn_206_0);
+              stackIn_207_1 = (StringBuilder) ((Object) stackIn_206_1);
+              stackIn_207_2 = "null";
               break L79;
             } else {
-              stackOut_205_0 = (RuntimeException) ((Object) stackIn_205_0);
-              stackOut_205_1 = (StringBuilder) ((Object) stackIn_205_1);
-              stackOut_205_2 = "{...}";
-              stackIn_207_0 = stackOut_205_0;
-              stackIn_207_1 = stackOut_205_1;
-              stackIn_207_2 = stackOut_205_2;
+              stackIn_207_0 = (RuntimeException) ((Object) stackIn_206_0);
+              stackIn_207_1 = (StringBuilder) ((Object) stackIn_206_1);
+              stackIn_207_2 = "{...}";
               break L79;
             }
           }

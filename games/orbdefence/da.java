@@ -49,9 +49,8 @@ final class da {
     }
 
     final static String a(int param0) {
-        String discarded$0 = null;
         if (param0 > -79) {
-            discarded$0 = da.a(-50);
+            da.a(-50);
             return tj.field_a;
         }
         return tj.field_a;

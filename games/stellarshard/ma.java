@@ -40,8 +40,6 @@ final class ma extends gg {
 
     final static boolean a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
         int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
         if (param3 < -68) {
           L0: {
             L1: {
@@ -57,16 +55,14 @@ final class ma extends gg {
                     if (param2 - -param4 <= param0) {
                       break L1;
                     } else {
-                      stackOut_6_0 = 1;
-                      stackIn_8_0 = stackOut_6_0;
+                      stackIn_8_0 = 1;
                       break L0;
                     }
                   }
                 }
               }
             }
-            stackOut_7_0 = 0;
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = 0;
             break L0;
           }
           return stackIn_8_0 != 0;
@@ -76,7 +72,6 @@ final class ma extends gg {
     }
 
     final static int a(byte param0, int param1) {
-        boolean discarded$1 = false;
         if (65536L > (long)param1) {
           if (256L > (long)param1) {
             if ((param1 ^ -1) <= -1) {
@@ -86,7 +81,7 @@ final class ma extends gg {
                 if (param0 <= -109) {
                   break L0;
                 } else {
-                  discarded$1 = ma.a(-41, 68, -104, (byte) 100, -86, 92, 34);
+                  ma.a(-41, 68, -104, (byte) 100, -86, 92, 34);
                   break L0;
                 }
               }

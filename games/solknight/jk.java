@@ -37,15 +37,6 @@ final class jk extends ci implements ka {
     }
 
     private final void a(boolean param0, byte param1, wg param2) {
-        pj discarded$3 = null;
-        pj discarded$4 = null;
-        pj discarded$5 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        lj var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_38_0 = null;
@@ -53,14 +44,10 @@ final class jk extends ci implements ka {
         String stackIn_38_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        lj var5 = null;
+        int var6 = 0;
         var6 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
@@ -74,7 +61,7 @@ final class jk extends ci implements ka {
                     if (null == param2.field_a) {
                       break L3;
                     } else {
-                      var4_ref = pc.field_d;
+                      var4 = pc.field_d;
                       if (null != this.field_vb) {
                         this.field_vb.a((byte) 22);
                         if (var6 == 0) {
@@ -87,7 +74,7 @@ final class jk extends ci implements ka {
                       }
                     }
                   }
-                  var4_ref = param2.field_d;
+                  var4 = param2.field_d;
                   if (-249 == (param2.field_b ^ -1)) {
                     L4: {
                       if (!param0) {
@@ -98,7 +85,7 @@ final class jk extends ci implements ka {
                       }
                     }
                     this.field_wb = true;
-                    var4_ref = ce.field_a;
+                    var4 = ce.field_a;
                     if (var6 == 0) {
                       break L1;
                     } else {
@@ -109,17 +96,17 @@ final class jk extends ci implements ka {
                   }
                 }
               }
-              var4_ref = lk.field_d;
+              var4 = lk.field_d;
               break L1;
             }
             L5: {
               L6: {
-                var5 = new lj((ci) (this), uc.field_g, var4_ref);
+                var5 = new lj((ci) (this), uc.field_g, var4);
                 if (!param2.field_c) {
                   break L6;
                 } else {
                   if (!param2.field_f) {
-                    discarded$3 = var5.a(0, dd.field_a, (dg) (this));
+                    var5.a(0, dd.field_a, (dg) (this));
                     if (var6 == 0) {
                       break L5;
                     } else {
@@ -134,7 +121,7 @@ final class jk extends ci implements ka {
               }
               L7: {
                 if (this.field_wb) {
-                  discarded$4 = var5.a(0, dd.field_a, (dg) (this));
+                  var5.a(0, dd.field_a, (dg) (this));
                   break L7;
                 } else {
                   L8: {
@@ -154,7 +141,7 @@ final class jk extends ci implements ka {
                   if (var6 == 0) {
                     break L7;
                   } else {
-                    discarded$5 = var5.a(0, dd.field_a, (dg) (this));
+                    var5.a(0, dd.field_a, (dg) (this));
                     break L7;
                   }
                 }
@@ -190,28 +177,20 @@ final class jk extends ci implements ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
-            var4 = decompiledCaughtException;
-            stackOut_35_0 = (RuntimeException) (var4);
-            stackOut_35_1 = new StringBuilder().append("jk.QA(").append(param0).append(',').append(param1).append(',');
-            stackIn_37_0 = stackOut_35_0;
-            stackIn_37_1 = stackOut_35_1;
-            stackIn_36_0 = stackOut_35_0;
-            stackIn_36_1 = stackOut_35_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_37_0 = (RuntimeException) (var4_ref);
+
+            stackIn_37_1 = new StringBuilder().append("jk.QA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "null";
-              stackIn_38_0 = stackOut_37_0;
-              stackIn_38_1 = stackOut_37_1;
-              stackIn_38_2 = stackOut_37_2;
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "null";
               break L10;
             } else {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "{...}";
-              stackIn_38_0 = stackOut_36_0;
-              stackIn_38_1 = stackOut_36_1;
-              stackIn_38_2 = stackOut_36_2;
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "{...}";
               break L10;
             }
           }
@@ -232,7 +211,7 @@ final class jk extends ci implements ka {
     }
 
     final boolean h(int param0) {
-        wg var2 = null;
+        wg var2;
         if (param0 == 1784) {
           if (this.field_J) {
             if (!this.field_tb) {

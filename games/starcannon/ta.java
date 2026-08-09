@@ -26,8 +26,8 @@ final class ta {
     }
 
     final ff a(int param0, int param1) {
-        ff var3 = null;
-        byte[] var4 = null;
+        ff var3;
+        byte[] var4;
         var3 = (ff) (this.field_f.a((long)param0, 106));
         if (var3 == null) {
           L0: {

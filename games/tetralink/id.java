@@ -72,8 +72,14 @@ final class id {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -82,20 +88,6 @@ final class id {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
         var13 = TetraLink.field_J;
         try {
           L0: {
@@ -104,48 +96,40 @@ final class id {
             if (param2 == 0) {
               L1: {
                 if (param4 <= ra.field_j) {
-                  stackOut_5_0 = ra.field_j;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = ra.field_j;
                   break L1;
                 } else {
-                  stackOut_4_0 = param4;
-                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_0 = param4;
                   break L1;
                 }
               }
               L2: {
                 var7 = stackIn_6_0;
                 if (ra.field_i >= param1) {
-                  stackOut_8_0 = ra.field_i;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_0 = ra.field_i;
                   break L2;
                 } else {
-                  stackOut_7_0 = param1;
-                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_0 = param1;
                   break L2;
                 }
               }
               L3: {
                 var8 = stackIn_9_0;
                 if (ra.field_l <= var5_int) {
-                  stackOut_11_0 = ra.field_l;
-                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_0 = ra.field_l;
                   break L3;
                 } else {
-                  stackOut_10_0 = var5_int;
-                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_0 = var5_int;
                   break L3;
                 }
               }
               L4: {
                 var9 = stackIn_12_0;
                 if (var6 < ra.field_g) {
-                  stackOut_14_0 = var6;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = var6;
                   break L4;
                 } else {
-                  stackOut_13_0 = ra.field_g;
-                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_0 = ra.field_g;
                   break L4;
                 }
               }
@@ -258,30 +242,19 @@ final class id {
     }
 
     final static boolean a(boolean param0, char param1) {
-        boolean discarded$0 = false;
         if (param0) {
-            discarded$0 = id.a(false, 'V');
+            id.a(false, 'V');
         }
-        if (param1 >= 32) {
-            if (126 >= param1) {
-                return true;
-            }
+        if (param1 >= 32 && 126 >= param1) {
+            return true;
         }
         if (param1 >= 160) {
             if (!(param1 > 255)) {
                 return true;
             }
         }
-        if (param1 != 8364) {
-            if (param1 != 338) {
-                if (8212 != param1) {
-                    if (param1 != 339) {
-                        if (param1 != 376) {
-                            return false;
-                        }
-                    }
-                }
-            }
+        if (param1 != 8364 && param1 != 338 && 8212 != param1 && param1 != 339 && param1 != 376) {
+            return false;
         }
         return true;
     }
@@ -303,17 +276,19 @@ final class id {
     }
 
     final void b(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int stackIn_23_0 = 0;
+        int stackIn_23_1 = 0;
         var12 = TetraLink.field_J;
         if (this.field_r) {
           return;
@@ -338,7 +313,9 @@ final class id {
                 if (!param0) {
                   break L1;
                 } else {
-                  id.a(18, 49, -2, 27, 30);
+                  stackIn_23_0 = 18;
+                  stackIn_23_1 = 49;
+                  id.a(stackIn_23_0, stackIn_23_1, -2, 27, 30);
                   break L1;
                 }
               }
@@ -347,7 +324,7 @@ final class id {
               L2: {
                 var9 = this.field_D[var8];
                 var10 = this.field_i[var8];
-                if (var2 <= var9) {
+                if ((var2 ^ -1) >= (var9 ^ -1)) {
                   break L2;
                 } else {
                   var2 = var9;

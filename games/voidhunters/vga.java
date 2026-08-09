@@ -10,15 +10,14 @@ final class vga {
     private fh field_a;
 
     final static String a(long param0, int param1) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        int var3 = 0;
-        long var4 = 0L;
-        StringBuilder var6 = null;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        StringBuilder discarded$1 = null;
+        int var3;
+        long var4;
+        StringBuilder var6;
+        long var7;
+        int var9;
+        int var10;
+        int var11;
         var11 = VoidHunters.field_G;
         if (-1L > (param0 ^ -1L)) {
           if (6582952005840035281L > param0) {
@@ -33,7 +32,7 @@ final class vga {
                     var6 = new StringBuilder(var3);
                     L1: while (true) {
                       if (param0 == 0L) {
-                        discarded$2 = var6.reverse();
+                        var6.reverse();
                         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                         return var6.toString();
                       } else {
@@ -50,7 +49,7 @@ final class vga {
                             break L2;
                           }
                         }
-                        discarded$3 = var6.append((char) var9);
+                        discarded$1 = var6.append((char) var9);
                         continue L1;
                       }
                     }
@@ -102,13 +101,12 @@ final class vga {
     }
 
     final fh a(byte param0) {
-        fh discarded$2 = null;
-        fh var2 = null;
+        fh var2;
         var2 = this.field_c.field_e;
         if (this.field_c != var2) {
           this.field_a = var2.field_e;
           if (param0 != -54) {
-            discarded$2 = this.a(77);
+            this.a(77);
             return var2;
           } else {
             return var2;
@@ -137,12 +135,11 @@ final class vga {
     }
 
     final fh b(int param0) {
-        fh discarded$2 = null;
-        fh var2 = null;
+        fh var2;
         var2 = this.field_c.field_d;
         if (var2 != this.field_c) {
           if (param0 != 1) {
-            discarded$2 = this.a((byte) 3);
+            this.a((byte) 3);
             var2.d((byte) -35);
             return var2;
           } else {
@@ -164,10 +161,9 @@ final class vga {
     }
 
     final fh a(int param0) {
-        String discarded$0 = null;
         fh var2 = null;
         if (param0 != 1900) {
-            discarded$0 = vga.a(-33L, 30);
+            vga.a(-33L, 30);
             var2 = this.field_a;
             if (!(this.field_c != var2)) {
                 this.field_a = null;
@@ -186,8 +182,8 @@ final class vga {
     }
 
     final fh b(byte param0) {
-        fh var2 = null;
-        int var3 = 0;
+        fh var2;
+        int var3;
         var2 = this.field_c.field_e;
         if (this.field_c == var2) {
           return null;

@@ -92,7 +92,6 @@ abstract class tj extends oe {
     }
 
     final static int i(int param0) {
-        int discarded$1 = 0;
         if (sf.field_y >= 2) {
           L0: {
             if (0 != gj.field_S) {
@@ -172,7 +171,7 @@ abstract class tj extends oe {
             if (param0 == 19535) {
               break L2;
             } else {
-              discarded$1 = tj.i(-99);
+              tj.i(-99);
               break L2;
             }
           }
@@ -183,9 +182,8 @@ abstract class tj extends oe {
     }
 
     public static void h(byte param0) {
-        int discarded$0 = 0;
         if (param0 != -16) {
-            discarded$0 = tj.i(83);
+            tj.i(83);
         }
         field_ab = (int[][]) null;
         field_W = null;
@@ -193,10 +191,8 @@ abstract class tj extends oe {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var7 = 0;
+        int var7;
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           L1: {
             var7 = 101 / ((69 - param1) / 51);
@@ -212,25 +208,22 @@ abstract class tj extends oe {
                   if (param3 >= param5 + param2) {
                     break L1;
                   } else {
-                    stackOut_4_0 = 1;
-                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_6_0 = 1;
                     break L0;
                   }
                 }
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L0;
         }
         return stackIn_6_0 != 0;
     }
 
     void j(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 50) {
-            discarded$0 = this.a(true);
+            this.a(true);
         }
     }
 
@@ -241,19 +234,19 @@ abstract class tj extends oe {
     }
 
     void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
         var16 = Pool.field_O;
         qh.d(6 + param0, param1 - -35, this.field_l + -12, this.field_y - 40, 2105376, 0);
         var5 = 211;
@@ -303,7 +296,7 @@ abstract class tj extends oe {
                 }
               }
             } else {
-              if (var8 >= qh.field_c) {
+              if ((var8 ^ -1) <= (qh.field_c ^ -1)) {
                 if (var8 < qh.field_g) {
                   L3: {
                     var9 = var7 * (var6 - var5) / var4 + var5;
@@ -395,13 +388,12 @@ abstract class tj extends oe {
     }
 
     void b(boolean param0) {
-        boolean discarded$0 = false;
         if (0 >= this.field_db) {
             return;
         }
         this.b(this.field_X, 31936, this.field_bb);
         if (param0) {
-            discarded$0 = this.a(true);
+            this.a(true);
         }
         this.field_db = 0;
         this.j(50);

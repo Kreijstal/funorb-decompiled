@@ -84,8 +84,6 @@ final class kha {
         RuntimeException var3 = null;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -93,16 +91,6 @@ final class kha {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_13_0 = 0;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         try {
           L0: {
             L1: {
@@ -147,8 +135,7 @@ final class kha {
                       }
                     }
                     param1.field_f = true;
-                    stackOut_10_0 = 1;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_0 = 1;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -157,8 +144,7 @@ final class kha {
                 break L2;
               }
             }
-            stackOut_13_0 = 0;
-            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_0 = 0;
             decompiledRegionSelector0 = 1;
             break L0;
           }
@@ -166,27 +152,19 @@ final class kha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var3);
-            stackOut_15_1 = new StringBuilder().append("kha.A(").append(param0).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_17_0 = (RuntimeException) (var3);
+
+            stackIn_17_1 = new StringBuilder().append("kha.A(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L6;
             }
           }
@@ -200,8 +178,8 @@ final class kha {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4) {
-        ksa var6 = null;
-        int var7 = 0;
+        ksa var6;
+        int var7;
         L0: {
           var7 = VoidHunters.field_G;
           if (param4 == -5214) {
@@ -264,36 +242,17 @@ final class kha {
     }
 
     private final boolean b(boolean param0) {
-        boolean discarded$1 = false;
-        int var3 = 0;
-        mea var4 = null;
-        aia[] stackIn_32_0 = null;
-        int stackIn_32_1 = 0;
         aia[] stackIn_33_0 = null;
         int stackIn_33_1 = 0;
         aia[] stackIn_34_0 = null;
         int stackIn_34_1 = 0;
         aia stackIn_34_2 = null;
-        Object stackIn_53_0 = null;
         Object stackIn_54_0 = null;
         Object stackIn_55_0 = null;
         int stackIn_55_1 = 0;
         int stackIn_59_0 = 0;
-        aia[] stackOut_31_0 = null;
-        int stackOut_31_1 = 0;
-        aia[] stackOut_33_0 = null;
-        int stackOut_33_1 = 0;
-        Object stackOut_33_2 = null;
-        aia[] stackOut_32_0 = null;
-        int stackOut_32_1 = 0;
-        aia stackOut_32_2 = null;
-        Object stackOut_52_0 = null;
-        Object stackOut_54_0 = null;
-        int stackOut_54_1 = 0;
-        Object stackOut_53_0 = null;
-        int stackOut_53_1 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_57_0 = 0;
+        int var3;
+        mea var4;
         L0: {
           var3 = VoidHunters.field_G;
           if (this.field_f) {
@@ -349,7 +308,7 @@ final class kha {
             break L5;
           } else {
             var4 = (mea) null;
-            discarded$1 = this.a(120, (mea) null);
+            this.a(120, (mea) null);
             break L5;
           }
         }
@@ -392,27 +351,19 @@ final class kha {
             }
             L11: {
               this.field_l[0] = new aia(this.field_t, 34037, this.field_r, this.field_q, this.field_b);
-              stackOut_31_0 = this.field_l;
-              stackOut_31_1 = 1;
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
+              stackIn_33_0 = this.field_l;
+
+              stackIn_33_1 = 1;
+
               if (1 >= this.field_p) {
-                stackOut_33_0 = (aia[]) ((Object) stackIn_33_0);
-                stackOut_33_1 = stackIn_33_1;
-                stackOut_33_2 = null;
-                stackIn_34_0 = stackOut_33_0;
-                stackIn_34_1 = stackOut_33_1;
-                stackIn_34_2 = (aia) ((Object) stackOut_33_2);
+                stackIn_34_0 = (aia[]) ((Object) stackIn_33_0);
+                stackIn_34_1 = stackIn_33_1;
+                stackIn_34_2 = null;
                 break L11;
               } else {
-                stackOut_32_0 = (aia[]) ((Object) stackIn_32_0);
-                stackOut_32_1 = stackIn_32_1;
-                stackOut_32_2 = new aia(this.field_t, 34037, this.field_r, this.field_q, this.field_b);
-                stackIn_34_0 = stackOut_32_0;
-                stackIn_34_1 = stackOut_32_1;
-                stackIn_34_2 = stackOut_32_2;
+                stackIn_34_0 = (aia[]) ((Object) stackIn_33_0);
+                stackIn_34_1 = stackIn_33_1;
+                stackIn_34_2 = new aia(this.field_t, 34037, this.field_r, this.field_q, this.field_b);
                 break L11;
               }
             }
@@ -496,20 +447,15 @@ final class kha {
           } else {
             L18: {
               this.field_t.a((byte) -121, (jaa) (this.field_h));
-              stackOut_52_0 = this;
-              stackIn_54_0 = stackOut_52_0;
-              stackIn_53_0 = stackOut_52_0;
+              stackIn_54_0 = this;
+
               if (this.field_h.g(93)) {
-                stackOut_54_0 = this;
-                stackOut_54_1 = 0;
-                stackIn_55_0 = stackOut_54_0;
-                stackIn_55_1 = stackOut_54_1;
+                stackIn_55_0 = this;
+                stackIn_55_1 = 0;
                 break L18;
               } else {
-                stackOut_53_0 = this;
-                stackOut_53_1 = 1;
-                stackIn_55_0 = stackOut_53_0;
-                stackIn_55_1 = stackOut_53_1;
+                stackIn_55_0 = this;
+                stackIn_55_1 = 1;
                 break L18;
               }
             }
@@ -520,12 +466,10 @@ final class kha {
         }
         L19: {
           if (this.field_a) {
-            stackOut_58_0 = 0;
-            stackIn_59_0 = stackOut_58_0;
+            stackIn_59_0 = 0;
             break L19;
           } else {
-            stackOut_57_0 = 1;
-            stackIn_59_0 = stackOut_57_0;
+            stackIn_59_0 = 1;
             break L19;
           }
         }
@@ -533,14 +477,14 @@ final class kha {
     }
 
     final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        mea var4_ref_mea = null;
-        int var4 = 0;
-        mea var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var2;
+        int var3;
+        mea var4_ref_mea;
+        int var4;
+        mea var5;
+        int var6;
+        int var7;
+        int var8;
         var8 = VoidHunters.field_G;
         if (this.field_k) {
           L0: {
@@ -574,7 +518,7 @@ final class kha {
           var3 = 1;
           var4_ref_mea = (mea) ((Object) this.field_i.d(0));
           L2: while (true) {
-            if (var4_ref_mea == null) {
+            if (null == var4_ref_mea) {
               this.field_k = false;
               var4 = -21 / ((55 - param0) / 61);
               return;
@@ -590,7 +534,7 @@ final class kha {
                   L4: {
                     L5: {
                       var4_ref_mea.a(this.field_l[var2], -3009, this.field_w, var7);
-                      if (var5 != null) {
+                      if (null != var5) {
                         break L5;
                       } else {
                         if (-1 + var6 != var7) {
@@ -687,25 +631,15 @@ final class kha {
     }
 
     kha(qfa param0) {
-        rpa dupTemp$4 = null;
-        rpa dupTemp$5 = null;
+        rpa dupTemp$2 = null;
+        rpa dupTemp$3 = null;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         this.field_g = 0;
         this.field_q = 1;
         this.field_b = 1;
@@ -729,9 +663,9 @@ final class kha {
                 if (!this.field_t.field_g) {
                   break L1;
                 } else {
-                  dupTemp$4 = new rpa(this.field_t);
-                  this.field_o = dupTemp$4;
-                  this.field_h = dupTemp$4;
+                  dupTemp$2 = new rpa(this.field_t);
+                  this.field_o = dupTemp$2;
+                  this.field_h = dupTemp$2;
                   if (1 >= this.field_t.field_Kc) {
                     break L1;
                   } else {
@@ -741,9 +675,9 @@ final class kha {
                       if (!this.field_t.field_gb) {
                         break L1;
                       } else {
-                        dupTemp$5 = new rpa(this.field_t);
-                        this.field_s = dupTemp$5;
-                        this.field_h = dupTemp$5;
+                        dupTemp$3 = new rpa(this.field_t);
+                        this.field_s = dupTemp$3;
+                        this.field_h = dupTemp$3;
                         break L1;
                       }
                     }
@@ -757,27 +691,19 @@ final class kha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (runtimeException);
-            stackOut_8_1 = new StringBuilder().append("kha.<init>(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
+
+            stackIn_10_1 = new StringBuilder().append("kha.<init>(");
+
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L2;
             }
           }

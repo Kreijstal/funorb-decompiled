@@ -82,7 +82,7 @@ final class jg {
     }
 
     final static void a(int param0) {
-        int var2 = 0;
+        int var2;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         if (null != jb.field_z) {
           if (param0 == -3) {

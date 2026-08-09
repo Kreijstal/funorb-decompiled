@@ -10,17 +10,14 @@ final class hha extends ana {
     static long[][] field_v;
 
     final static boolean e(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 1071140296) {
-            discarded$0 = hha.e(-20);
+            hha.e(-20);
         }
         return dka.field_G == kq.field_j ? true : false;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           if (param3 == 1) {
             break L0;
@@ -43,16 +40,14 @@ final class hha extends ana {
                   if (param5 - -param0 <= param1) {
                     break L2;
                   } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_0 = 1;
                     break L1;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 0;
-          stackIn_8_0 = stackOut_7_0;
+          stackIn_8_0 = 0;
           break L1;
         }
         return stackIn_8_0 != 0;
@@ -69,7 +64,7 @@ final class hha extends ana {
             return;
         }
         iv var3 = (iv) ((Object) this.field_x.field_o.b((byte) 90));
-        oha discarded$6 = al.a(107, this.field_x.field_k);
+        al.a(107, this.field_x.field_k);
         while (var3 != null) {
             var4 = var3.field_h.a(-27449, this.field_q);
             var4.b(param0 + 10648, 6);
@@ -80,9 +75,8 @@ final class hha extends ana {
     }
 
     private final void f(int param0) {
-        boolean discarded$0 = false;
         if (param0 != 1532) {
-            discarded$0 = hha.e(4);
+            hha.e(4);
         }
     }
 
@@ -120,8 +114,6 @@ final class hha extends ana {
         hk stackIn_6_0 = null;
         hk stackIn_12_0 = null;
         hk stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -129,17 +121,6 @@ final class hha extends ana {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        hk stackOut_5_0 = null;
-        hk stackOut_14_0 = null;
-        hk stackOut_11_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         var6 = BachelorFridge.field_y;
         try {
           L0: {
@@ -153,8 +134,7 @@ final class hha extends ana {
               }
             }
             if (var2 == null) {
-              stackOut_5_0 = uka.field_k;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = uka.field_k;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -162,15 +142,13 @@ final class hha extends ana {
               var4 = 0;
               L2: while (true) {
                 if (var4 >= var3.length) {
-                  stackOut_14_0 = uka.field_k;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_0 = uka.field_k;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   var5 = var3[var4];
                   if (var5.a(var2, 91)) {
-                    stackOut_11_0 = (hk) (var5);
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = (hk) (var5);
                     decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
@@ -185,27 +163,19 @@ final class hha extends ana {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var2_ref);
-            stackOut_16_1 = new StringBuilder().append("hha.F(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var2_ref);
+
+            stackIn_18_1 = new StringBuilder().append("hha.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L3;
             }
           }
@@ -223,11 +193,10 @@ final class hha extends ana {
     }
 
     public static void g(int param0) {
-        boolean discarded$0 = false;
         field_z = null;
         field_v = (long[][]) null;
         if (param0 != 0) {
-            discarded$0 = hha.e(-114);
+            hha.e(-114);
         }
         field_w = null;
         field_y = null;
@@ -236,19 +205,17 @@ final class hha extends ana {
 
     static {
         $cfr$clinit: {
-            int var0 = 0;
-            int var1 = 0;
-            long var2 = 0L;
-            long var4 = 0L;
-            long var6 = 0L;
-            long var8 = 0L;
-            long var10 = 0L;
-            long var12 = 0L;
-            int var14 = 0;
-            int var15 = 0;
             long stackIn_5_0 = 0L;
-            long stackOut_4_0 = 0L;
-            long stackOut_3_0 = 0L;
+            int var0;
+            int var1;
+            long var2;
+            long var4;
+            long var6;
+            long var8;
+            long var10;
+            long var12;
+            int var14;
+            int var15;
             field_z = new long[11];
             field_A = new int[8192];
             field_v = new long[8][256];
@@ -272,12 +239,10 @@ final class hha extends ana {
                 L2: {
                   var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
                   if ((var0 & 1) == 0) {
-                    stackOut_4_0 = (long)(var1 >>> -1535809944);
-                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_0 = (long)(var1 >>> -1535809944);
                     break L2;
                   } else {
-                    stackOut_3_0 = (long)(255 & var1);
-                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_0 = (long)(255 & var1);
                     break L2;
                   }
                 }

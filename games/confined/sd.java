@@ -11,8 +11,8 @@ final class sd {
     static int field_b;
 
     final int a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = Confined.field_J ? 1 : 0;
         if (this.field_e != null) {
           if (0 != this.field_e.length) {

@@ -9,13 +9,13 @@ final class ji extends gg {
     int field_s;
 
     final ji a(wm param0) {
-        int dupTemp$2 = 0;
+        int dupTemp$1 = 0;
         this.field_r = param0.a(true, this.field_r);
         this.field_s = param0.b(this.field_s, (byte) 80);
         if (this.field_q == this.field_o) {
-          dupTemp$2 = param0.a(this.field_q, (byte) -124);
-          this.field_o = dupTemp$2;
-          this.field_q = dupTemp$2;
+          dupTemp$1 = param0.a(this.field_q, (byte) -124);
+          this.field_o = dupTemp$1;
+          this.field_q = dupTemp$1;
           return (ji) (this);
         } else {
           L0: {

@@ -19,8 +19,8 @@ final class ll extends hg {
     }
 
     final static void b(boolean param0) {
-        ll var1 = null;
-        c var2 = null;
+        ll var1;
+        c var2;
         var1 = (ll) ((Object) jl.field_n.a(param0));
         if (var1 == null) {
           nm.a(16);
@@ -34,7 +34,7 @@ final class ll extends hg {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        int var5;
         L0: {
           var5 = EscapeVector.field_A;
           if (param3 > 0) {
@@ -169,32 +169,21 @@ final class ll extends hg {
     }
 
     final static void a(boolean param0) {
-        CharSequence var2 = null;
-        CharSequence var3 = null;
-        c stackIn_1_0 = null;
+        CharSequence var2;
+        CharSequence var3;
         c stackIn_2_0 = null;
         c stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        c stackOut_0_0 = null;
-        c stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        c stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
-          stackOut_0_0 = om.field_g;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = om.field_g;
+
           if (param0) {
-            stackOut_2_0 = (c) ((Object) stackIn_2_0);
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = (c) ((Object) stackIn_2_0);
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = (c) ((Object) stackIn_1_0);
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = (c) ((Object) stackIn_2_0);
+            stackIn_3_1 = 1;
             break L0;
           }
         }

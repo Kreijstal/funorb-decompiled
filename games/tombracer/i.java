@@ -22,9 +22,8 @@ final class i extends ka implements e {
     private final native void l(long param0, int param1, int[] param2, int param3, int param4, int param5, int param6, boolean param7);
 
     final void b() {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        Object var1 = null;
         L0: {
           if (this.field_f.field_l <= 1) {
             break L0;
@@ -65,10 +64,9 @@ final class i extends ka implements e {
 
     final void a() {
         try {
+            Throwable decompiledCaughtException = null;
             Object var1 = null;
             InterruptedException var2 = null;
-            Throwable var3 = null;
-            Throwable decompiledCaughtException = null;
             L0: {
               if (this.field_f.field_l <= 1) {
                 break L0;

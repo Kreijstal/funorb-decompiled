@@ -18,7 +18,6 @@ final class uja {
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
-        phb[] discarded$0 = null;
         int var7 = VoidHunters.field_G;
         phb[] var1 = new phb[mma.field_a];
         for (var2 = 0; var2 < mma.field_a; var2++) {
@@ -32,7 +31,7 @@ final class uja {
         }
         qqb.a(84);
         if (param0) {
-            discarded$0 = uja.a(false);
+            uja.a(false);
         }
         return var1;
     }

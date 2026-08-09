@@ -24,7 +24,6 @@ final class fj {
     int field_s;
 
     final int a(byte param0) {
-        int discarded$2 = 0;
         L0: {
           if (this.field_l) {
             break L0;
@@ -45,7 +44,7 @@ final class fj {
                 if (param0 == -63) {
                   break L2;
                 } else {
-                  discarded$2 = this.a((byte) -16);
+                  this.a((byte) -16);
                   break L2;
                 }
               }

@@ -38,29 +38,19 @@ final class il {
     }
 
     final static km[] a(int param0, int param1, int param2, boolean param3, boolean param4, int param5) {
-        int[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        km var9 = null;
-        Object var10 = null;
-        Object var11 = null;
-        int[] var12 = null;
         km var13 = null;
         km var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        L0: {
-          var16 = wb.field_d;
-          var15 = var16;
-          var12 = var15;
-          var6 = var12;
-          var7 = wb.field_h;
-          var8 = wb.field_c;
-          var9 = new km(16, param2);
-          var9.e();
-          wb.c(0, param0, 16, param2, param5, param1);
-          var10 = null;
-          if (param3) {
+        int[] var16 = wb.field_d;
+        int[] var15 = var16;
+        int[] var12 = var15;
+        int[] var6 = var12;
+        int var7 = wb.field_h;
+        int var8 = wb.field_c;
+        km var9 = new km(16, param2);
+        var9.e();
+        wb.c(0, param0, 16, param2, param5, param1);
+        Object var10 = null;
+        if (!(!param3)) {
             var13 = var9.c();
             var10 = var13;
             var13.e();
@@ -69,16 +59,9 @@ final class il {
             wb.a(0, 2, 2, 0);
             wb.a(0, 3, 1, 0);
             wb.a(0, 4, 1, 0);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        L1: {
-          var11 = null;
-          if (!param4) {
-            break L1;
-          } else {
+        Object var11 = null;
+        if (param4) {
             var14 = var9.c();
             var11 = var14;
             var14.e();
@@ -87,8 +70,6 @@ final class il {
             wb.a(14, 2, 2, 0);
             wb.a(15, 3, 1, 0);
             wb.a(15, 4, 1, 0);
-            break L1;
-          }
         }
         wb.a(var16, var7, var8);
         return new km[]{null, null, null, (km) (var10), var9, (km) (var11), null, null, null};

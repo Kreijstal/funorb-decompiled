@@ -8,14 +8,6 @@ final class kg {
     pj field_a;
 
     final static boolean a(int[] param0, byte param1) {
-        RuntimeException var2 = null;
-        long var2_long = 0L;
-        ai var4_ref_ai = null;
-        int var4 = 0;
-        int var5_int = 0;
-        ai var5 = null;
-        int var6 = 0;
-        int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_16_0 = 0;
@@ -30,25 +22,16 @@ final class kg {
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
         String stackIn_42_2 = null;
-        int stackOut_2_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_29_0 = 0;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
         int statePc = 0;
         Throwable caughtException = null;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
+        ai var4_ref_ai = null;
+        int var4 = 0;
+        int var5_int = 0;
+        ai var5 = null;
+        int var6 = 0;
+        int var7 = 0;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -72,8 +55,7 @@ final class kg {
                 }
                 case 2: {
                     try {
-                        stackOut_2_0 = 0;
-                        stackIn_3_0 = stackOut_2_0;
+                        stackIn_3_0 = 0;
                         statePc = 3;
                         continue stateLoop;
                     } catch (Throwable stateCaught_2) {
@@ -102,8 +84,7 @@ final class kg {
                 }
                 case 5: {
                     try {
-                        stackOut_5_0 = 0;
-                        stackIn_6_0 = stackOut_5_0;
+                        stackIn_6_0 = 0;
                         statePc = 6;
                         continue stateLoop;
                     } catch (Throwable stateCaught_5) {
@@ -228,8 +209,7 @@ final class kg {
                         eb.field_f = wk.field_h;
                         wk.field_h = fa.field_e;
                         fa.field_e = var4_ref_ai.field_j;
-                        stackOut_15_0 = 1;
-                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_0 = 1;
                         statePc = 16;
                         continue stateLoop;
                     } catch (Throwable stateCaught_15) {
@@ -242,21 +222,18 @@ final class kg {
                     return stackIn_16_0 != 0;
                 }
                 case 17: {
-                    stackOut_17_0 = im.field_E;
-                    stackIn_20_0 = stackOut_17_0;
+                    stackIn_20_0 = im.field_E;
                     statePc = 20;
                     continue stateLoop;
                 }
                 case 18: {
-                    stackOut_18_0 = im.field_E;
-                    stackIn_20_0 = stackOut_18_0;
+                    stackIn_20_0 = im.field_E;
                     statePc = 20;
                     continue stateLoop;
                 }
                 case 19: {
                     try {
-                        stackOut_19_0 = im.field_E;
-                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_0 = im.field_E;
                         statePc = 20;
                         continue stateLoop;
                     } catch (Throwable stateCaught_19) {
@@ -296,8 +273,7 @@ final class kg {
                 }
                 case 22: {
                     try {
-                        stackOut_22_0 = 0;
-                        stackIn_23_0 = stackOut_22_0;
+                        stackIn_23_0 = 0;
                         statePc = 23;
                         continue stateLoop;
                     } catch (Throwable stateCaught_22) {
@@ -338,8 +314,7 @@ final class kg {
                 }
                 case 26: {
                     try {
-                        stackOut_26_0 = 0;
-                        stackIn_27_0 = stackOut_26_0;
+                        stackIn_27_0 = 0;
                         statePc = 27;
                         continue stateLoop;
                     } catch (Throwable stateCaught_26) {
@@ -372,8 +347,7 @@ final class kg {
                         wk.field_h = fa.field_e;
                         fa.field_e = im.field_E;
                         im.field_E = -1;
-                        stackOut_29_0 = 1;
-                        stackIn_30_0 = stackOut_29_0;
+                        stackIn_30_0 = 1;
                         statePc = 30;
                         continue stateLoop;
                     } catch (Throwable stateCaught_29) {
@@ -488,12 +462,10 @@ final class kg {
                 }
                 case 39: {
                     var2 = (RuntimeException) ((Object) caughtException);
-                    stackOut_39_0 = (RuntimeException) (var2);
-                    stackOut_39_1 = new StringBuilder().append("kg.C(");
-                    stackIn_41_0 = stackOut_39_0;
-                    stackIn_41_1 = stackOut_39_1;
-                    stackIn_40_0 = stackOut_39_0;
-                    stackIn_40_1 = stackOut_39_1;
+                    stackIn_41_0 = (RuntimeException) (var2);
+                    stackIn_40_0 = stackIn_41_0;
+                    stackIn_41_1 = new StringBuilder().append("kg.C(");
+                    stackIn_40_1 = stackIn_41_1;
                     if (param0 == null) {
                         statePc = 41;
                     } else {
@@ -502,22 +474,16 @@ final class kg {
                     continue stateLoop;
                 }
                 case 40: {
-                    stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-                    stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-                    stackOut_40_2 = "{...}";
-                    stackIn_42_0 = stackOut_40_0;
-                    stackIn_42_1 = stackOut_40_1;
-                    stackIn_42_2 = stackOut_40_2;
+                    stackIn_42_0 = (RuntimeException) ((Object) stackIn_40_0);
+                    stackIn_42_1 = (StringBuilder) ((Object) stackIn_40_1);
+                    stackIn_42_2 = "{...}";
                     statePc = 42;
                     continue stateLoop;
                 }
                 case 41: {
-                    stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-                    stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-                    stackOut_41_2 = "null";
-                    stackIn_42_0 = stackOut_41_0;
-                    stackIn_42_1 = stackOut_41_1;
-                    stackIn_42_2 = stackOut_41_2;
+                    stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+                    stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+                    stackIn_42_2 = "null";
                     statePc = 42;
                     continue stateLoop;
                 }
@@ -537,9 +503,11 @@ final class kg {
     }
 
     final void a(boolean param0) {
+        short dupTemp$0 = 0;
         if (!(this.field_a == null)) {
-            this.field_a.field_z[0] = (short)(this.field_a.field_z[0] + 1);
-            if (!((short)(this.field_a.field_z[0] + 1) % 16 != 0)) {
+            dupTemp$0 = (short)(this.field_a.field_z[0] + 1);
+            this.field_a.field_z[0] = dupTemp$0;
+            if (!(dupTemp$0 % 16 != 0)) {
                 this.field_a = null;
                 this.field_d.d(this.field_b);
             }
@@ -551,15 +519,13 @@ final class kg {
 
     kg(sg param0, int param1, int param2) {
         rm var4 = null;
-        int discarded$0 = 0;
-        int discarded$1 = 0;
         kh var5 = null;
         try {
             this.field_b = param1;
             this.field_d = param0;
             var4 = new rm(1, 1, 0);
-            discarded$0 = var4.a(0, 0, 0);
-            discarded$1 = var4.a(0, 0, 0, (byte) 0, (byte) 0, (short)param2, (short) -1);
+            var4.a(0, 0, 0);
+            var4.a(0, 0, 0, (byte) 0, (byte) 0, (short)param2, (short) -1);
             this.field_a = (pj) ((Object) var4.a(80, 1365, -1, -12, 12));
             this.field_a.field_z[0] = (short)param2;
             var5 = new kh();
@@ -661,10 +627,9 @@ final class kg {
     }
 
     public static void b(byte param0) {
-        boolean discarded$0 = false;
         if (param0 != -64) {
             int[] var2 = (int[]) null;
-            discarded$0 = kg.a((int[]) null, (byte) 104);
+            kg.a((int[]) null, (byte) 104);
         }
         field_c = null;
     }

@@ -8,16 +8,19 @@ final class il extends l {
     static am[] field_h;
 
     final l a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5_int = 0;
-        pj var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        vh dupTemp$0 = null;
+        vh dupTemp$1 = null;
+        vh dupTemp$2 = null;
+        int var2;
+        int var3;
+        int var4;
+        int var5_int;
+        pj var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         var10 = CrazyCrystals.field_B;
         if (this.field_f != 0) {
           this.field_f = this.field_f - 1;
@@ -132,12 +135,14 @@ final class il extends l {
                     var8 = (131072 + (m.field_l[var5_int] * 16384 - -18)) / 37;
                     if (var6 >= var7) {
                       if (-var6 <= var7) {
-                        q.field_a[ma.field_n[var5_int]].field_i = q.field_a[ma.field_n[var5_int]].field_i + var7;
+                        dupTemp$0 = q.field_a[ma.field_n[var5_int]];
+                        dupTemp$0.field_i = dupTemp$0.field_i + var7;
                         var7 = 0;
                         break L10;
                       } else {
                         var4++;
-                        q.field_a[ma.field_n[var5_int]].field_i = q.field_a[ma.field_n[var5_int]].field_i - var6;
+                        dupTemp$1 = q.field_a[ma.field_n[var5_int]];
+                        dupTemp$1.field_i = dupTemp$1.field_i - var6;
                         var3 = var3 + var8;
                         var7 = var7 + var6;
                         var9 = (-var7 - 1) / var6;
@@ -150,7 +155,8 @@ final class il extends l {
                       }
                     } else {
                       var3 = var3 + var8;
-                      q.field_a[ma.field_n[var5_int]].field_i = q.field_a[ma.field_n[var5_int]].field_i + var6;
+                      dupTemp$2 = q.field_a[ma.field_n[var5_int]];
+                      dupTemp$2.field_i = dupTemp$2.field_i + var6;
                       var7 = var7 - var6;
                       var4++;
                       var9 = (-1 + var7) / var6;
@@ -217,6 +223,7 @@ final class il extends l {
     }
 
     final l b(byte param0) {
+        vh dupTemp$0 = null;
         int var3 = CrazyCrystals.field_B;
         if (!(null == this.field_g)) {
             tb.field_d.a(this.field_g);
@@ -226,7 +233,8 @@ final class il extends l {
             il.a(44, true, -68, -50, 65, false);
         }
         while (pd.field_g.length > var2) {
-            q.field_a[ma.field_n[var2]].field_i = q.field_a[ma.field_n[var2]].field_i + pd.field_g[var2];
+            dupTemp$0 = q.field_a[ma.field_n[var2]];
+            dupTemp$0.field_i = dupTemp$0.field_i + pd.field_g[var2];
             this.a((byte) -94, var2);
             var2++;
         }

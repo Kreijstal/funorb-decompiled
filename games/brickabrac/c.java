@@ -18,7 +18,7 @@ final class c {
     static String field_n;
 
     public static void a(boolean param0) {
-        wq var2 = null;
+        wq var2;
         field_j = null;
         field_d = null;
         field_m = null;
@@ -39,7 +39,6 @@ final class c {
     final static void a(int param0, String param1, byte param2, int param3, int param4, String param5) {
         pi var9 = null;
         int var8 = 0;
-        int discarded$1 = 0;
         try {
             var9 = k.field_h;
             pi var6 = var9;
@@ -52,7 +51,7 @@ final class c {
                 var9.a(param1, -1);
             }
             if (param5 != null) {
-                discarded$1 = md.a(26152, param5, var9);
+                md.a(26152, param5, var9);
             } else {
                 var9.b((byte) 123, param0);
             }
@@ -92,7 +91,7 @@ final class c {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, boolean param4, byte param5, boolean param6, boolean param7, boolean param8, int param9) {
-        int var11 = 0;
+        int var11;
         var11 = BrickABrac.field_J ? 1 : 0;
         if (!param3) {
           if (lb.field_c == kp.field_a) {
@@ -681,11 +680,13 @@ final class c {
     }
 
     private final int b(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
         var3 = this.field_k.length;
-        if (param0 == 1) {
+        if (param0 != 1) {
+          return -35;
+        } else {
           L0: while (true) {
             if (param1 < var3) {
               return var3;
@@ -704,14 +705,12 @@ final class c {
               }
             }
           }
-        } else {
-          return -35;
         }
     }
 
     private final void a(int param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
+        int[] var3;
+        int[] var4;
         var4 = new int[this.b(1, param0)];
         var3 = var4;
         pm.a(this.field_k, 0, var4, 0, this.field_k.length);

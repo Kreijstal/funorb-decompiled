@@ -12,10 +12,9 @@ class fk extends kb {
     private String field_f;
 
     final void a(wf param0, int param1) {
-        bj discarded$0 = null;
         try {
             if (param1 != 7895) {
-                discarded$0 = this.a((byte) 17);
+                this.a((byte) 17);
             }
             param0.a(this.field_g, (byte) 37);
             param0.a(param1 + -7895, this.field_f);

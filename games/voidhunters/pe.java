@@ -32,22 +32,12 @@ final class pe implements ntb, utb {
 
     final void a(rba param0, byte param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -65,27 +55,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (runtimeException);
-            stackOut_4_1 = new StringBuilder().append("pe.PA(");
-            stackIn_7_0 = stackOut_4_0;
-            stackIn_7_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_7_0 = (RuntimeException) (runtimeException);
+
+            stackIn_7_1 = new StringBuilder().append("pe.PA(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_8_0 = stackOut_5_0;
-              stackIn_8_1 = stackOut_5_1;
-              stackIn_8_2 = stackOut_5_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -94,21 +76,21 @@ final class pe implements ntb, utb {
     }
 
     final boolean a(byte param0, boolean param1, int param2, int param3, int param4) {
-        nbb discarded$2 = null;
-        int var6 = 0;
-        qob[] var7 = null;
-        int var8 = 0;
-        qob var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        nbb discarded$1 = null;
+        int var6;
+        qob[] var7;
+        int var8;
+        qob var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         L0: {
           var13 = VoidHunters.field_G;
           if (param0 == -99) {
             break L0;
           } else {
-            discarded$2 = this.c(-37, false);
+            discarded$1 = this.c(-37, false);
             break L0;
           }
         }
@@ -146,29 +128,19 @@ final class pe implements ntb, utb {
     }
 
     public final void a(faa param0, int param1) {
-        RuntimeException var3 = null;
-        tj[] var3_array = null;
-        int var4_int = 0;
-        rdb[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        tj[] var7 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         RuntimeException stackIn_46_0 = null;
         StringBuilder stackIn_46_1 = null;
         String stackIn_46_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
+        tj[] var3 = null;
+        RuntimeException var3_ref = null;
+        int var4_int = 0;
+        rdb[] var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        tj[] var7 = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
@@ -176,8 +148,8 @@ final class pe implements ntb, utb {
               this.field_k = (sg[]) ((Object) pt.a(20, 1, this.field_k, qdb.field_a, 8, param0));
               this.field_x = new ij();
               var7 = (tj[]) ((Object) kcb.a(10, aba.field_b, param0, 1, -88, (tv[]) null));
-              var3_array = var7;
-              if (null != var3_array) {
+              var3 = var7;
+              if (null != var3) {
                 var4_int = 0;
                 L2: while (true) {
                   if (var4_int >= var7.length) {
@@ -297,28 +269,20 @@ final class pe implements ntb, utb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
-            var3 = decompiledCaughtException;
-            stackOut_42_0 = (RuntimeException) (var3);
-            stackOut_42_1 = new StringBuilder().append("pe.L(");
-            stackIn_45_0 = stackOut_42_0;
-            stackIn_45_1 = stackOut_42_1;
-            stackIn_43_0 = stackOut_42_0;
-            stackIn_43_1 = stackOut_42_1;
+            var3_ref = decompiledCaughtException;
+            stackIn_45_0 = (RuntimeException) (var3_ref);
+
+            stackIn_45_1 = new StringBuilder().append("pe.L(");
+
             if (param0 == null) {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "null";
-              stackIn_46_0 = stackOut_45_0;
-              stackIn_46_1 = stackOut_45_1;
-              stackIn_46_2 = stackOut_45_2;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "null";
               break L13;
             } else {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "{...}";
-              stackIn_46_0 = stackOut_43_0;
-              stackIn_46_1 = stackOut_43_1;
-              stackIn_46_2 = stackOut_43_2;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "{...}";
               break L13;
             }
           }
@@ -327,18 +291,17 @@ final class pe implements ntb, utb {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        boolean discarded$2 = false;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         L0: {
           var13 = VoidHunters.field_G;
           var10 = 0;
           if (param4 == 30273) {
             break L0;
           } else {
-            discarded$2 = this.a((byte) -34, true, 58, 71, 121);
+            this.a((byte) -34, true, 58, 71, 121);
             break L0;
           }
         }
@@ -365,16 +328,15 @@ final class pe implements ntb, utb {
     }
 
     private final void k(int param0) {
-        ksa discarded$1 = null;
-        Object var2_ref = null;
-        tj var2_ref_tj = null;
-        int var2 = 0;
-        wc var3 = null;
-        tj var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        Object var2_ref;
+        tj var2_ref_tj;
+        int var2;
+        wc var3;
+        tj var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         var2_ref = null;
         var8 = VoidHunters.field_G;
         var2_ref_tj = (tj) ((Object) this.field_x.d(0));
@@ -422,7 +384,7 @@ final class pe implements ntb, utb {
                         var4.field_o = 0;
                         if ((var2_ref_tj.field_o ^ -1) >= -1) {
                           L6: {
-                            discarded$1 = var3.b((byte) 94);
+                            var3.b((byte) 94);
                             var2_ref_tj.b(-3846);
                             if (-7 != (var2_ref_tj.g((byte) -104) ^ -1)) {
                               break L6;
@@ -485,13 +447,23 @@ final class pe implements ntb, utb {
     }
 
     private final void a(tj param0, int param1, int param2, byte param3, int param4, int param5) {
-        boolean discarded$1 = false;
-        RuntimeException var7 = null;
+        int stackIn_25_0 = 0;
+        int stackIn_28_0 = 0;
+        int stackIn_33_0 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_70_0 = 0;
+        RuntimeException stackIn_88_0 = null;
+        StringBuilder stackIn_88_1 = null;
+        RuntimeException stackIn_89_0 = null;
+        StringBuilder stackIn_89_1 = null;
+        String stackIn_89_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
-        uwa var10_ref_uwa = null;
         int var10 = 0;
+        uwa var10_ref_uwa = null;
         int var11 = 0;
         anb var12 = null;
         anb var13 = null;
@@ -507,37 +479,6 @@ final class pe implements ntb, utb {
         int var21 = 0;
         int var22 = 0;
         uwa var23 = null;
-        int stackIn_25_0 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_33_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_70_0 = 0;
-        RuntimeException stackIn_86_0 = null;
-        StringBuilder stackIn_86_1 = null;
-        RuntimeException stackIn_88_0 = null;
-        StringBuilder stackIn_88_1 = null;
-        RuntimeException stackIn_89_0 = null;
-        StringBuilder stackIn_89_1 = null;
-        String stackIn_89_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_67_0 = 0;
-        RuntimeException stackOut_85_0 = null;
-        StringBuilder stackOut_85_1 = null;
-        RuntimeException stackOut_88_0 = null;
-        StringBuilder stackOut_88_1 = null;
-        String stackOut_88_2 = null;
-        RuntimeException stackOut_86_0 = null;
-        StringBuilder stackOut_86_1 = null;
-        String stackOut_86_2 = null;
         var22 = VoidHunters.field_G;
         try {
           L0: {
@@ -579,7 +520,7 @@ final class pe implements ntb, utb {
                               break L4;
                             } else {
                               var14 = (sg) ((Object) var13);
-                              discarded$1 = var14.a((byte) 11, param0.c((byte) 45) / vgb.field_o);
+                              var14.a((byte) 11, param0.c((byte) 45) / vgb.field_o);
                               break L4;
                             }
                           }
@@ -628,24 +569,20 @@ final class pe implements ntb, utb {
                                 }
                                 L10: {
                                   if (!trb.a(param2, var10_ref_uwa.field_f - var10_ref_uwa.field_h, -var10_ref_uwa.field_a + var10_ref_uwa.field_g, var10_ref_uwa.field_d, -104, param1)) {
-                                    stackOut_24_0 = 0;
-                                    stackIn_25_0 = stackOut_24_0;
+                                    stackIn_25_0 = 0;
                                     break L10;
                                   } else {
-                                    stackOut_23_0 = 1;
-                                    stackIn_25_0 = stackOut_23_0;
+                                    stackIn_25_0 = 1;
                                     break L10;
                                   }
                                 }
                                 L11: {
                                   var14_int = stackIn_25_0;
                                   if (!trb.a(param2, var10_ref_uwa.field_f, var10_ref_uwa.field_g, var10_ref_uwa.field_d, -98, param1)) {
-                                    stackOut_27_0 = 0;
-                                    stackIn_28_0 = stackOut_27_0;
+                                    stackIn_28_0 = 0;
                                     break L11;
                                   } else {
-                                    stackOut_26_0 = 1;
-                                    stackIn_28_0 = stackOut_26_0;
+                                    stackIn_28_0 = 1;
                                     break L11;
                                   }
                                 }
@@ -653,24 +590,20 @@ final class pe implements ntb, utb {
                                 if ((var15 ^ var14_int) == 0) {
                                   L12: {
                                     if (!trb.a(param5, -var10_ref_uwa.field_h + var10_ref_uwa.field_f, var10_ref_uwa.field_g + -var10_ref_uwa.field_a, var10_ref_uwa.field_d, 56, param4)) {
-                                      stackOut_32_0 = 0;
-                                      stackIn_33_0 = stackOut_32_0;
+                                      stackIn_33_0 = 0;
                                       break L12;
                                     } else {
-                                      stackOut_31_0 = 1;
-                                      stackIn_33_0 = stackOut_31_0;
+                                      stackIn_33_0 = 1;
                                       break L12;
                                     }
                                   }
                                   L13: {
                                     var14_int = stackIn_33_0;
                                     if (!trb.a(param5, var10_ref_uwa.field_f, var10_ref_uwa.field_g, var10_ref_uwa.field_d, 68, param4)) {
-                                      stackOut_35_0 = 0;
-                                      stackIn_36_0 = stackOut_35_0;
+                                      stackIn_36_0 = 0;
                                       break L13;
                                     } else {
-                                      stackOut_34_0 = 1;
-                                      stackIn_36_0 = stackOut_34_0;
+                                      stackIn_36_0 = 1;
                                       break L13;
                                     }
                                   }
@@ -716,12 +649,10 @@ final class pe implements ntb, utb {
                                       if (0 == (var10_ref_uwa.field_i ^ -1)) {
                                         L17: {
                                           if (!trb.a(param2, var10_ref_uwa.field_f, var10_ref_uwa.field_g, var10_ref_uwa.field_d, -98, param1)) {
-                                            stackOut_68_0 = 1;
-                                            stackIn_70_0 = stackOut_68_0;
+                                            stackIn_70_0 = 1;
                                             break L17;
                                           } else {
-                                            stackOut_67_0 = 0;
-                                            stackIn_70_0 = stackOut_67_0;
+                                            stackIn_70_0 = 0;
                                             break L17;
                                           }
                                         }
@@ -810,27 +741,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var7 = decompiledCaughtException;
-            stackOut_85_0 = (RuntimeException) (var7);
-            stackOut_85_1 = new StringBuilder().append("pe.WE(");
-            stackIn_88_0 = stackOut_85_0;
-            stackIn_88_1 = stackOut_85_1;
-            stackIn_86_0 = stackOut_85_0;
-            stackIn_86_1 = stackOut_85_1;
+            stackIn_88_0 = (RuntimeException) (var7);
+
+            stackIn_88_1 = new StringBuilder().append("pe.WE(");
+
             if (param0 == null) {
-              stackOut_88_0 = (RuntimeException) ((Object) stackIn_88_0);
-              stackOut_88_1 = (StringBuilder) ((Object) stackIn_88_1);
-              stackOut_88_2 = "null";
-              stackIn_89_0 = stackOut_88_0;
-              stackIn_89_1 = stackOut_88_1;
-              stackIn_89_2 = stackOut_88_2;
+              stackIn_89_0 = (RuntimeException) ((Object) stackIn_88_0);
+              stackIn_89_1 = (StringBuilder) ((Object) stackIn_88_1);
+              stackIn_89_2 = "null";
               break L18;
             } else {
-              stackOut_86_0 = (RuntimeException) ((Object) stackIn_86_0);
-              stackOut_86_1 = (StringBuilder) ((Object) stackIn_86_1);
-              stackOut_86_2 = "{...}";
-              stackIn_89_0 = stackOut_86_0;
-              stackIn_89_1 = stackOut_86_1;
-              stackIn_89_2 = stackOut_86_2;
+              stackIn_89_0 = (RuntimeException) ((Object) stackIn_88_0);
+              stackIn_89_1 = (StringBuilder) ((Object) stackIn_88_1);
+              stackIn_89_2 = "{...}";
               break L18;
             }
           }
@@ -839,8 +762,25 @@ final class pe implements ntb, utb {
     }
 
     private final boolean a(nbb param0, int param1, boolean param2, sg param3, int param4, int param5) {
-        RuntimeException var7 = null;
+        Object stackIn_7_0 = null;
+        sg stackIn_7_1 = null;
+        Object stackIn_8_0 = null;
+        sg stackIn_8_1 = null;
+        int stackIn_8_2 = 0;
+        int stackIn_101_0 = 0;
+        RuntimeException stackIn_105_0 = null;
+        StringBuilder stackIn_105_1 = null;
+        RuntimeException stackIn_106_0 = null;
+        StringBuilder stackIn_106_1 = null;
+        String stackIn_106_2 = null;
+        RuntimeException stackIn_109_0 = null;
+        StringBuilder stackIn_109_1 = null;
+        RuntimeException stackIn_110_0 = null;
+        StringBuilder stackIn_110_1 = null;
+        String stackIn_110_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         ml var10 = null;
@@ -850,10 +790,10 @@ final class pe implements ntb, utb {
         imb var14 = null;
         int var15 = 0;
         int var16 = 0;
-        int var17 = 0;
         ml var17_ref_ml = null;
-        int var18 = 0;
+        int var17 = 0;
         ml var18_ref_ml = null;
+        int var18 = 0;
         sg[] var19 = null;
         crb[] var19_array = null;
         int var20 = 0;
@@ -864,54 +804,6 @@ final class pe implements ntb, utb {
         int var23 = 0;
         sg[] var24 = null;
         lsb var25 = null;
-        Object stackIn_5_0 = null;
-        sg stackIn_5_1 = null;
-        Object stackIn_7_0 = null;
-        sg stackIn_7_1 = null;
-        Object stackIn_8_0 = null;
-        sg stackIn_8_1 = null;
-        int stackIn_8_2 = 0;
-        int stackIn_101_0 = 0;
-        RuntimeException stackIn_103_0 = null;
-        StringBuilder stackIn_103_1 = null;
-        RuntimeException stackIn_105_0 = null;
-        StringBuilder stackIn_105_1 = null;
-        RuntimeException stackIn_106_0 = null;
-        StringBuilder stackIn_106_1 = null;
-        String stackIn_106_2 = null;
-        RuntimeException stackIn_107_0 = null;
-        StringBuilder stackIn_107_1 = null;
-        RuntimeException stackIn_109_0 = null;
-        StringBuilder stackIn_109_1 = null;
-        RuntimeException stackIn_110_0 = null;
-        StringBuilder stackIn_110_1 = null;
-        String stackIn_110_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_4_0 = null;
-        sg stackOut_4_1 = null;
-        Object stackOut_7_0 = null;
-        sg stackOut_7_1 = null;
-        int stackOut_7_2 = 0;
-        Object stackOut_5_0 = null;
-        sg stackOut_5_1 = null;
-        int stackOut_5_2 = 0;
-        int stackOut_100_0 = 0;
-        RuntimeException stackOut_102_0 = null;
-        StringBuilder stackOut_102_1 = null;
-        RuntimeException stackOut_105_0 = null;
-        StringBuilder stackOut_105_1 = null;
-        String stackOut_105_2 = null;
-        RuntimeException stackOut_103_0 = null;
-        StringBuilder stackOut_103_1 = null;
-        String stackOut_103_2 = null;
-        RuntimeException stackOut_106_0 = null;
-        StringBuilder stackOut_106_1 = null;
-        RuntimeException stackOut_109_0 = null;
-        StringBuilder stackOut_109_1 = null;
-        String stackOut_109_2 = null;
-        RuntimeException stackOut_107_0 = null;
-        StringBuilder stackOut_107_1 = null;
-        String stackOut_107_2 = null;
         var23 = VoidHunters.field_G;
         try {
           L0: {
@@ -922,27 +814,19 @@ final class pe implements ntb, utb {
                 L2: {
                   var9 = -field_c[1] + param0.field_l;
                   param0 = this.c(var9, false);
-                  stackOut_4_0 = this;
-                  stackOut_4_1 = (sg) (param3);
-                  stackIn_7_0 = stackOut_4_0;
-                  stackIn_7_1 = stackOut_4_1;
-                  stackIn_5_0 = stackOut_4_0;
-                  stackIn_5_1 = stackOut_4_1;
+                  stackIn_7_0 = this;
+
+                  stackIn_7_1 = (sg) (param3);
+
                   if ((hw.field_b ^ -1) != -2) {
-                    stackOut_7_0 = this;
-                    stackOut_7_1 = (sg) ((Object) stackIn_7_1);
-                    stackOut_7_2 = 0;
-                    stackIn_8_0 = stackOut_7_0;
-                    stackIn_8_1 = stackOut_7_1;
-                    stackIn_8_2 = stackOut_7_2;
+                    stackIn_8_0 = this;
+                    stackIn_8_1 = (sg) ((Object) stackIn_7_1);
+                    stackIn_8_2 = 0;
                     break L2;
                   } else {
-                    stackOut_5_0 = this;
-                    stackOut_5_1 = (sg) ((Object) stackIn_5_1);
-                    stackOut_5_2 = 1;
-                    stackIn_8_0 = stackOut_5_0;
-                    stackIn_8_1 = stackOut_5_1;
-                    stackIn_8_2 = stackOut_5_2;
+                    stackIn_8_0 = this;
+                    stackIn_8_1 = (sg) ((Object) stackIn_7_1);
+                    stackIn_8_2 = 1;
                     break L2;
                   }
                 }
@@ -1208,60 +1092,43 @@ final class pe implements ntb, utb {
                 break L1;
               }
             }
-            stackOut_100_0 = var7_int;
-            stackIn_101_0 = stackOut_100_0;
+            stackIn_101_0 = var7_int;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L21: {
             var7 = decompiledCaughtException;
-            stackOut_102_0 = (RuntimeException) (var7);
-            stackOut_102_1 = new StringBuilder().append("pe.LF(");
-            stackIn_105_0 = stackOut_102_0;
-            stackIn_105_1 = stackOut_102_1;
-            stackIn_103_0 = stackOut_102_0;
-            stackIn_103_1 = stackOut_102_1;
+            stackIn_105_0 = (RuntimeException) (var7);
+
+            stackIn_105_1 = new StringBuilder().append("pe.LF(");
+
             if (param0 == null) {
-              stackOut_105_0 = (RuntimeException) ((Object) stackIn_105_0);
-              stackOut_105_1 = (StringBuilder) ((Object) stackIn_105_1);
-              stackOut_105_2 = "null";
-              stackIn_106_0 = stackOut_105_0;
-              stackIn_106_1 = stackOut_105_1;
-              stackIn_106_2 = stackOut_105_2;
+              stackIn_106_0 = (RuntimeException) ((Object) stackIn_105_0);
+              stackIn_106_1 = (StringBuilder) ((Object) stackIn_105_1);
+              stackIn_106_2 = "null";
               break L21;
             } else {
-              stackOut_103_0 = (RuntimeException) ((Object) stackIn_103_0);
-              stackOut_103_1 = (StringBuilder) ((Object) stackIn_103_1);
-              stackOut_103_2 = "{...}";
-              stackIn_106_0 = stackOut_103_0;
-              stackIn_106_1 = stackOut_103_1;
-              stackIn_106_2 = stackOut_103_2;
+              stackIn_106_0 = (RuntimeException) ((Object) stackIn_105_0);
+              stackIn_106_1 = (StringBuilder) ((Object) stackIn_105_1);
+              stackIn_106_2 = "{...}";
               break L21;
             }
           }
           L22: {
-            stackOut_106_0 = (RuntimeException) ((Object) stackIn_106_0);
-            stackOut_106_1 = ((StringBuilder) (Object) stackIn_106_1).append(stackIn_106_2).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_109_0 = stackOut_106_0;
-            stackIn_109_1 = stackOut_106_1;
-            stackIn_107_0 = stackOut_106_0;
-            stackIn_107_1 = stackOut_106_1;
+            stackIn_109_0 = (RuntimeException) ((Object) stackIn_106_0);
+
+            stackIn_109_1 = ((StringBuilder) (Object) stackIn_106_1).append(stackIn_106_2).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_109_0 = (RuntimeException) ((Object) stackIn_109_0);
-              stackOut_109_1 = (StringBuilder) ((Object) stackIn_109_1);
-              stackOut_109_2 = "null";
-              stackIn_110_0 = stackOut_109_0;
-              stackIn_110_1 = stackOut_109_1;
-              stackIn_110_2 = stackOut_109_2;
+              stackIn_110_0 = (RuntimeException) ((Object) stackIn_109_0);
+              stackIn_110_1 = (StringBuilder) ((Object) stackIn_109_1);
+              stackIn_110_2 = "null";
               break L22;
             } else {
-              stackOut_107_0 = (RuntimeException) ((Object) stackIn_107_0);
-              stackOut_107_1 = (StringBuilder) ((Object) stackIn_107_1);
-              stackOut_107_2 = "{...}";
-              stackIn_110_0 = stackOut_107_0;
-              stackIn_110_1 = stackOut_107_1;
-              stackIn_110_2 = stackOut_107_2;
+              stackIn_110_0 = (RuntimeException) ((Object) stackIn_106_0);
+              stackIn_110_1 = (StringBuilder) ((Object) stackIn_109_1);
+              stackIn_110_2 = "{...}";
               break L22;
             }
           }
@@ -1277,22 +1144,12 @@ final class pe implements ntb, utb {
 
     final void a(int param0, bea param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -1310,27 +1167,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("pe.GB(").append(param0).append(',');
-            stackIn_6_0 = stackOut_3_0;
-            stackIn_6_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("pe.GB(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_7_0 = stackOut_4_0;
-              stackIn_7_1 = stackOut_4_1;
-              stackIn_7_2 = stackOut_4_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -1339,8 +1188,15 @@ final class pe implements ntb, utb {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, byte param8) {
-        RuntimeException var10 = null;
+        int stackIn_37_0 = 0;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        String stackIn_44_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var10_int = 0;
+        RuntimeException var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -1359,25 +1215,6 @@ final class pe implements ntb, utb {
         int var26 = 0;
         int var27 = 0;
         int var28 = 0;
-        int stackIn_37_0 = 0;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_36_0 = 0;
-        int stackOut_34_0 = 0;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
         var28 = VoidHunters.field_G;
         try {
           L0: {
@@ -1448,12 +1285,10 @@ final class pe implements ntb, utb {
                         }
                         L8: {
                           if (var18 != 0) {
-                            stackOut_36_0 = 0;
-                            stackIn_37_0 = stackOut_36_0;
+                            stackIn_37_0 = 0;
                             break L8;
                           } else {
-                            stackOut_34_0 = 1;
-                            stackIn_37_0 = stackOut_34_0;
+                            stackIn_37_0 = 1;
                             break L8;
                           }
                         }
@@ -1475,7 +1310,7 @@ final class pe implements ntb, utb {
                 L9: {
                   var15 = param7[var14];
                   var16 = param7[1 + var14];
-                  if (var15 <= var11) {
+                  if ((var15 ^ -1) >= (var11 ^ -1)) {
                     break L9;
                   } else {
                     var11 = var15;
@@ -1515,27 +1350,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
             var10 = decompiledCaughtException;
-            stackOut_40_0 = (RuntimeException) (var10);
-            stackOut_40_1 = new StringBuilder().append("pe.MC(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-            stackIn_43_0 = stackOut_40_0;
-            stackIn_43_1 = stackOut_40_1;
-            stackIn_41_0 = stackOut_40_0;
-            stackIn_41_1 = stackOut_40_1;
+            stackIn_43_0 = (RuntimeException) (var10);
+
+            stackIn_43_1 = new StringBuilder().append("pe.MC(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
+
             if (param7 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "null";
               break L13;
             } else {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "{...}";
-              stackIn_44_0 = stackOut_41_0;
-              stackIn_44_1 = stackOut_41_1;
-              stackIn_44_2 = stackOut_41_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "{...}";
               break L13;
             }
           }
@@ -1544,23 +1371,17 @@ final class pe implements ntb, utb {
     }
 
     final void a(int param0, ml param1, anb param2) {
-        boolean discarded$1 = false;
+        boolean discarded$0 = false;
         mqb[] var4 = null;
-        RuntimeException var4_ref = null;
         int var5 = 0;
         mqb var6 = null;
-        ml var7 = null;
         int var8 = 0;
         mqb[] var9 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -1568,22 +1389,8 @@ final class pe implements ntb, utb {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        RuntimeException var4_ref = null;
+        ml var7 = null;
         var8 = VoidHunters.field_G;
         try {
           L0: {
@@ -1600,7 +1407,7 @@ final class pe implements ntb, utb {
                     if (param0 == 15520) {
                       break L2;
                     } else {
-                      discarded$1 = this.a((nbb) null, -37, true, (sg) null, 96, -69);
+                      discarded$0 = this.a((nbb) null, -37, true, (sg) null, 96, -69);
                       break L2;
                     }
                   }
@@ -1635,52 +1442,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var4_ref);
-            stackOut_17_1 = new StringBuilder().append("pe.FC(").append(param0).append(',');
-            stackIn_20_0 = stackOut_17_0;
-            stackIn_20_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_20_0 = (RuntimeException) (var4_ref);
+
+            stackIn_20_1 = new StringBuilder().append("pe.FC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L3;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_21_0 = stackOut_18_0;
-              stackIn_21_1 = stackOut_18_1;
-              stackIn_21_2 = stackOut_18_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
-            stackIn_24_0 = stackOut_21_0;
-            stackIn_24_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_24_0 = (RuntimeException) ((Object) stackIn_21_0);
+
+            stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
+
             if (param2 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L4;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_25_0 = stackOut_22_0;
-              stackIn_25_1 = stackOut_22_1;
-              stackIn_25_2 = stackOut_22_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L4;
             }
           }
@@ -1695,22 +1486,12 @@ final class pe implements ntb, utb {
 
     private final void a(int param0, byte param1, anb param2) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -1728,27 +1509,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("pe.HA(").append(param0).append(',').append(param1).append(',');
-            stackIn_6_0 = stackOut_3_0;
-            stackIn_6_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("pe.HA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_7_0 = stackOut_4_0;
-              stackIn_7_1 = stackOut_4_1;
-              stackIn_7_2 = stackOut_4_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -1757,113 +1530,46 @@ final class pe implements ntb, utb {
     }
 
     public final void a(tv param0, int param1) {
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
-        boolean discarded$14 = false;
-        boolean discarded$15 = false;
-        int discarded$16 = 0;
-        boolean discarded$17 = false;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        pe var5 = null;
         int stackIn_35_0 = 0;
-        int stackIn_36_0 = 0;
         int stackIn_38_0 = 0;
         int stackIn_39_0 = 0;
         int stackIn_39_1 = 0;
         int stackIn_55_0 = 0;
-        int stackIn_56_0 = 0;
         int stackIn_58_0 = 0;
         int stackIn_59_0 = 0;
         int stackIn_59_1 = 0;
         int stackIn_71_0 = 0;
-        int stackIn_72_0 = 0;
         int stackIn_74_0 = 0;
         int stackIn_75_0 = 0;
         int stackIn_75_1 = 0;
         int stackIn_90_0 = 0;
-        int stackIn_91_0 = 0;
         int stackIn_93_0 = 0;
         int stackIn_94_0 = 0;
         int stackIn_94_1 = 0;
         int stackIn_110_0 = 0;
-        int stackIn_111_0 = 0;
         int stackIn_113_0 = 0;
         int stackIn_114_0 = 0;
         int stackIn_114_1 = 0;
         int stackIn_128_0 = 0;
-        int stackIn_129_0 = 0;
         int stackIn_131_0 = 0;
         int stackIn_132_0 = 0;
         int stackIn_132_1 = 0;
-        RuntimeException stackIn_143_0 = null;
-        StringBuilder stackIn_143_1 = null;
         RuntimeException stackIn_145_0 = null;
         StringBuilder stackIn_145_1 = null;
         RuntimeException stackIn_146_0 = null;
         StringBuilder stackIn_146_1 = null;
         String stackIn_146_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_34_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_38_1 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_58_1 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_56_1 = 0;
-        int stackOut_70_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_71_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_74_1 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_72_1 = 0;
-        int stackOut_89_0 = 0;
-        int stackOut_87_0 = 0;
-        int stackOut_90_0 = 0;
-        int stackOut_93_0 = 0;
-        int stackOut_93_1 = 0;
-        int stackOut_91_0 = 0;
-        int stackOut_91_1 = 0;
-        int stackOut_109_0 = 0;
-        int stackOut_107_0 = 0;
-        int stackOut_110_0 = 0;
-        int stackOut_113_0 = 0;
-        int stackOut_113_1 = 0;
-        int stackOut_111_0 = 0;
-        int stackOut_111_1 = 0;
-        int stackOut_127_0 = 0;
-        int stackOut_125_0 = 0;
-        int stackOut_128_0 = 0;
-        int stackOut_131_0 = 0;
-        int stackOut_131_1 = 0;
-        int stackOut_129_0 = 0;
-        int stackOut_129_1 = 0;
-        RuntimeException stackOut_142_0 = null;
-        StringBuilder stackOut_142_1 = null;
-        RuntimeException stackOut_145_0 = null;
-        StringBuilder stackOut_145_1 = null;
-        String stackOut_145_2 = null;
-        RuntimeException stackOut_143_0 = null;
-        StringBuilder stackOut_143_1 = null;
-        String stackOut_143_2 = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        pe var5 = null;
         try {
           L0: {
             L1: {
               var5 = (pe) ((Object) param0);
-              discarded$9 = tja.a(var5.field_k, 1, this.field_k, false, 5547);
-              discarded$10 = trb.a(1, this.field_x, 13, false, var5.field_x);
-              discarded$11 = tja.a(var5.field_m, 1, this.field_m, false, 5547);
+              tja.a(var5.field_k, 1, this.field_k, false, 5547);
+              trb.a(1, this.field_x, 13, false, var5.field_x);
+              tja.a(var5.field_m, 1, this.field_m, false, 5547);
               if (this.field_e == null) {
                 break L1;
               } else {
@@ -1876,8 +1582,8 @@ final class pe implements ntb, utb {
               }
             }
             L2: {
-              discarded$12 = trb.a(1, this.field_n, 13, false, var5.field_n);
-              discarded$13 = tja.a(var5.field_g, 1, this.field_g, false, 5547);
+              trb.a(1, this.field_n, 13, false, var5.field_n);
+              tja.a(var5.field_g, 1, this.field_g, false, 5547);
               if (null == this.field_f) {
                 break L2;
               } else {
@@ -1890,8 +1596,8 @@ final class pe implements ntb, utb {
               }
             }
             L3: {
-              discarded$14 = tja.a(var5.field_t, 1, this.field_t, false, 5547);
-              discarded$15 = tja.a(var5.field_a, 1, this.field_a, false, 5547);
+              tja.a(var5.field_t, 1, this.field_t, false, 5547);
+              tja.a(var5.field_a, 1, this.field_a, false, 5547);
               if (null == this.field_p) {
                 break L3;
               } else {
@@ -1919,12 +1625,12 @@ final class pe implements ntb, utb {
               if (param1 < -19) {
                 break L5;
               } else {
-                discarded$16 = this.m(-81);
+                this.m(-81);
                 break L5;
               }
             }
             L6: {
-              discarded$17 = tja.a(var5.field_j, 1, this.field_j, false, 5547);
+              tja.a(var5.field_j, 1, this.field_j, false, 5547);
               if (this.field_b == null) {
                 break L6;
               } else {
@@ -1966,30 +1672,23 @@ final class pe implements ntb, utb {
             }
             L10: {
               if (null != this.field_e) {
-                stackOut_34_0 = 0;
-                stackIn_35_0 = stackOut_34_0;
+                stackIn_35_0 = 0;
                 break L10;
               } else {
-                stackOut_32_0 = 1;
-                stackIn_35_0 = stackOut_32_0;
+                stackIn_35_0 = 1;
                 break L10;
               }
             }
             L11: {
-              stackOut_35_0 = stackIn_35_0;
-              stackIn_38_0 = stackOut_35_0;
-              stackIn_36_0 = stackOut_35_0;
+              stackIn_38_0 = stackIn_35_0;
+
               if (var5.field_e != null) {
-                stackOut_38_0 = stackIn_38_0;
-                stackOut_38_1 = 0;
-                stackIn_39_0 = stackOut_38_0;
-                stackIn_39_1 = stackOut_38_1;
+                stackIn_39_0 = stackIn_38_0;
+                stackIn_39_1 = 0;
                 break L11;
               } else {
-                stackOut_36_0 = stackIn_36_0;
-                stackOut_36_1 = 1;
-                stackIn_39_0 = stackOut_36_0;
-                stackIn_39_1 = stackOut_36_1;
+                stackIn_39_0 = stackIn_35_0;
+                stackIn_39_1 = 1;
                 break L11;
               }
             }
@@ -2040,30 +1739,23 @@ final class pe implements ntb, utb {
             }
             L17: {
               if (var5.field_v) {
-                stackOut_54_0 = 0;
-                stackIn_55_0 = stackOut_54_0;
+                stackIn_55_0 = 0;
                 break L17;
               } else {
-                stackOut_52_0 = 1;
-                stackIn_55_0 = stackOut_52_0;
+                stackIn_55_0 = 1;
                 break L17;
               }
             }
             L18: {
-              stackOut_55_0 = stackIn_55_0;
-              stackIn_58_0 = stackOut_55_0;
-              stackIn_56_0 = stackOut_55_0;
+              stackIn_58_0 = stackIn_55_0;
+
               if (this.field_v) {
-                stackOut_58_0 = stackIn_58_0;
-                stackOut_58_1 = 0;
-                stackIn_59_0 = stackOut_58_0;
-                stackIn_59_1 = stackOut_58_1;
+                stackIn_59_0 = stackIn_58_0;
+                stackIn_59_1 = 0;
                 break L18;
               } else {
-                stackOut_56_0 = stackIn_56_0;
-                stackOut_56_1 = 1;
-                stackIn_59_0 = stackOut_56_0;
-                stackIn_59_1 = stackOut_56_1;
+                stackIn_59_0 = stackIn_55_0;
+                stackIn_59_1 = 1;
                 break L18;
               }
             }
@@ -2094,30 +1786,23 @@ final class pe implements ntb, utb {
             }
             L22: {
               if (null != this.field_f) {
-                stackOut_70_0 = 0;
-                stackIn_71_0 = stackOut_70_0;
+                stackIn_71_0 = 0;
                 break L22;
               } else {
-                stackOut_68_0 = 1;
-                stackIn_71_0 = stackOut_68_0;
+                stackIn_71_0 = 1;
                 break L22;
               }
             }
             L23: {
-              stackOut_71_0 = stackIn_71_0;
-              stackIn_74_0 = stackOut_71_0;
-              stackIn_72_0 = stackOut_71_0;
+              stackIn_74_0 = stackIn_71_0;
+
               if (var5.field_f != null) {
-                stackOut_74_0 = stackIn_74_0;
-                stackOut_74_1 = 0;
-                stackIn_75_0 = stackOut_74_0;
-                stackIn_75_1 = stackOut_74_1;
+                stackIn_75_0 = stackIn_74_0;
+                stackIn_75_1 = 0;
                 break L23;
               } else {
-                stackOut_72_0 = stackIn_72_0;
-                stackOut_72_1 = 1;
-                stackIn_75_0 = stackOut_72_0;
-                stackIn_75_1 = stackOut_72_1;
+                stackIn_75_0 = stackIn_71_0;
+                stackIn_75_1 = 1;
                 break L23;
               }
             }
@@ -2161,30 +1846,23 @@ final class pe implements ntb, utb {
             }
             L28: {
               if (null != var5.field_p) {
-                stackOut_89_0 = 0;
-                stackIn_90_0 = stackOut_89_0;
+                stackIn_90_0 = 0;
                 break L28;
               } else {
-                stackOut_87_0 = 1;
-                stackIn_90_0 = stackOut_87_0;
+                stackIn_90_0 = 1;
                 break L28;
               }
             }
             L29: {
-              stackOut_90_0 = stackIn_90_0;
-              stackIn_93_0 = stackOut_90_0;
-              stackIn_91_0 = stackOut_90_0;
+              stackIn_93_0 = stackIn_90_0;
+
               if (null != this.field_p) {
-                stackOut_93_0 = stackIn_93_0;
-                stackOut_93_1 = 0;
-                stackIn_94_0 = stackOut_93_0;
-                stackIn_94_1 = stackOut_93_1;
+                stackIn_94_0 = stackIn_93_0;
+                stackIn_94_1 = 0;
                 break L29;
               } else {
-                stackOut_91_0 = stackIn_91_0;
-                stackOut_91_1 = 1;
-                stackIn_94_0 = stackOut_91_0;
-                stackIn_94_1 = stackOut_91_1;
+                stackIn_94_0 = stackIn_90_0;
+                stackIn_94_1 = 1;
                 break L29;
               }
             }
@@ -2224,30 +1902,23 @@ final class pe implements ntb, utb {
             }
             L34: {
               if (this.field_u != null) {
-                stackOut_109_0 = 0;
-                stackIn_110_0 = stackOut_109_0;
+                stackIn_110_0 = 0;
                 break L34;
               } else {
-                stackOut_107_0 = 1;
-                stackIn_110_0 = stackOut_107_0;
+                stackIn_110_0 = 1;
                 break L34;
               }
             }
             L35: {
-              stackOut_110_0 = stackIn_110_0;
-              stackIn_113_0 = stackOut_110_0;
-              stackIn_111_0 = stackOut_110_0;
+              stackIn_113_0 = stackIn_110_0;
+
               if (null != var5.field_u) {
-                stackOut_113_0 = stackIn_113_0;
-                stackOut_113_1 = 0;
-                stackIn_114_0 = stackOut_113_0;
-                stackIn_114_1 = stackOut_113_1;
+                stackIn_114_0 = stackIn_113_0;
+                stackIn_114_1 = 0;
                 break L35;
               } else {
-                stackOut_111_0 = stackIn_111_0;
-                stackOut_111_1 = 1;
-                stackIn_114_0 = stackOut_111_0;
-                stackIn_114_1 = stackOut_111_1;
+                stackIn_114_0 = stackIn_110_0;
+                stackIn_114_1 = 1;
                 break L35;
               }
             }
@@ -2280,30 +1951,23 @@ final class pe implements ntb, utb {
             }
             L39: {
               if (var5.field_b != null) {
-                stackOut_127_0 = 0;
-                stackIn_128_0 = stackOut_127_0;
+                stackIn_128_0 = 0;
                 break L39;
               } else {
-                stackOut_125_0 = 1;
-                stackIn_128_0 = stackOut_125_0;
+                stackIn_128_0 = 1;
                 break L39;
               }
             }
             L40: {
-              stackOut_128_0 = stackIn_128_0;
-              stackIn_131_0 = stackOut_128_0;
-              stackIn_129_0 = stackOut_128_0;
+              stackIn_131_0 = stackIn_128_0;
+
               if (this.field_b != null) {
-                stackOut_131_0 = stackIn_131_0;
-                stackOut_131_1 = 0;
-                stackIn_132_0 = stackOut_131_0;
-                stackIn_132_1 = stackOut_131_1;
+                stackIn_132_0 = stackIn_131_0;
+                stackIn_132_1 = 0;
                 break L40;
               } else {
-                stackOut_129_0 = stackIn_129_0;
-                stackOut_129_1 = 1;
-                stackIn_132_0 = stackOut_129_0;
-                stackIn_132_1 = stackOut_129_1;
+                stackIn_132_0 = stackIn_128_0;
+                stackIn_132_1 = 1;
                 break L40;
               }
             }
@@ -2339,27 +2003,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L44: {
             var3 = decompiledCaughtException;
-            stackOut_142_0 = (RuntimeException) (var3);
-            stackOut_142_1 = new StringBuilder().append("pe.F(");
-            stackIn_145_0 = stackOut_142_0;
-            stackIn_145_1 = stackOut_142_1;
-            stackIn_143_0 = stackOut_142_0;
-            stackIn_143_1 = stackOut_142_1;
+            stackIn_145_0 = (RuntimeException) (var3);
+
+            stackIn_145_1 = new StringBuilder().append("pe.F(");
+
             if (param0 == null) {
-              stackOut_145_0 = (RuntimeException) ((Object) stackIn_145_0);
-              stackOut_145_1 = (StringBuilder) ((Object) stackIn_145_1);
-              stackOut_145_2 = "null";
-              stackIn_146_0 = stackOut_145_0;
-              stackIn_146_1 = stackOut_145_1;
-              stackIn_146_2 = stackOut_145_2;
+              stackIn_146_0 = (RuntimeException) ((Object) stackIn_145_0);
+              stackIn_146_1 = (StringBuilder) ((Object) stackIn_145_1);
+              stackIn_146_2 = "null";
               break L44;
             } else {
-              stackOut_143_0 = (RuntimeException) ((Object) stackIn_143_0);
-              stackOut_143_1 = (StringBuilder) ((Object) stackIn_143_1);
-              stackOut_143_2 = "{...}";
-              stackIn_146_0 = stackOut_143_0;
-              stackIn_146_1 = stackOut_143_1;
-              stackIn_146_2 = stackOut_143_2;
+              stackIn_146_0 = (RuntimeException) ((Object) stackIn_145_0);
+              stackIn_146_1 = (StringBuilder) ((Object) stackIn_145_1);
+              stackIn_146_2 = "{...}";
               break L44;
             }
           }
@@ -2376,22 +2032,12 @@ final class pe implements ntb, utb {
 
     private final void b(int param0, byte param1, anb param2) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -2409,27 +2055,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("pe.R(").append(param0).append(',').append(param1).append(',');
-            stackIn_6_0 = stackOut_3_0;
-            stackIn_6_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("pe.R(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_7_0 = stackOut_4_0;
-              stackIn_7_1 = stackOut_4_1;
-              stackIn_7_2 = stackOut_4_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -2438,7 +2076,6 @@ final class pe implements ntb, utb {
     }
 
     private final boolean a(int param0, ml param1, imb param2, boolean param3, byte param4, sg param5, nbb param6) {
-        RuntimeException var8 = null;
         int var8_int = 0;
         ml var9 = null;
         int var10 = 0;
@@ -2454,29 +2091,21 @@ final class pe implements ntb, utb {
         int var20 = 0;
         int stackIn_16_0 = 0;
         boolean stackIn_18_0 = false;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_31_2 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         RuntimeException stackIn_35_0 = null;
@@ -2484,40 +2113,7 @@ final class pe implements ntb, utb {
         String stackIn_35_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        boolean stackOut_17_0 = false;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        RuntimeException var8 = null;
         try {
           L0: {
             L1: {
@@ -2586,8 +2182,7 @@ final class pe implements ntb, utb {
                     param6.field_n = 0;
                     param6.field_p = 0;
                     param6.d((byte) -90);
-                    stackOut_15_0 = 0;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = 0;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   } else {
@@ -2596,8 +2191,7 @@ final class pe implements ntb, utb {
                 }
               }
             }
-            stackOut_17_0 = param3;
-            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_0 = param3;
             decompiledRegionSelector0 = 1;
             break L0;
           }
@@ -2605,102 +2199,70 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var8 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) (var8);
-            stackOut_19_1 = new StringBuilder().append("pe.HF(").append(param0).append(',');
-            stackIn_22_0 = stackOut_19_0;
-            stackIn_22_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_22_0 = (RuntimeException) (var8);
+
+            stackIn_22_1 = new StringBuilder().append("pe.HF(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_23_0 = stackOut_20_0;
-              stackIn_23_1 = stackOut_20_1;
-              stackIn_23_2 = stackOut_20_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
-            stackIn_26_0 = stackOut_23_0;
-            stackIn_26_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackIn_26_0 = (RuntimeException) ((Object) stackIn_23_0);
+
+            stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
+
             if (param2 == null) {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
               break L7;
             } else {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "{...}";
-              stackIn_27_0 = stackOut_24_0;
-              stackIn_27_1 = stackOut_24_1;
-              stackIn_27_2 = stackOut_24_2;
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_30_0 = stackOut_27_0;
-            stackIn_30_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackIn_30_0 = (RuntimeException) ((Object) stackIn_27_0);
+
+            stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L8;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_31_0 = stackOut_28_0;
-              stackIn_31_1 = stackOut_28_1;
-              stackIn_31_2 = stackOut_28_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
-            stackIn_34_0 = stackOut_31_0;
-            stackIn_34_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackIn_34_0 = (RuntimeException) ((Object) stackIn_31_0);
+
+            stackIn_34_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
+
             if (param6 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L9;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_35_0 = stackOut_32_0;
-              stackIn_35_1 = stackOut_32_1;
-              stackIn_35_2 = stackOut_32_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L9;
             }
           }
@@ -2714,9 +2276,36 @@ final class pe implements ntb, utb {
     }
 
     private final boolean a(ml param0, sg param1, ml param2, int param3, int param4, ml param5) {
-        boolean discarded$1 = false;
-        RuntimeException var7 = null;
+        boolean discarded$0 = false;
+        int stackIn_3_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_35_0 = 0;
+        int stackIn_38_0 = 0;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_43_2 = null;
+        RuntimeException stackIn_46_0 = null;
+        StringBuilder stackIn_46_1 = null;
+        RuntimeException stackIn_47_0 = null;
+        StringBuilder stackIn_47_1 = null;
+        String stackIn_47_2 = null;
+        RuntimeException stackIn_50_0 = null;
+        StringBuilder stackIn_50_1 = null;
+        RuntimeException stackIn_51_0 = null;
+        StringBuilder stackIn_51_1 = null;
+        String stackIn_51_2 = null;
+        RuntimeException stackIn_54_0 = null;
+        StringBuilder stackIn_54_1 = null;
+        RuntimeException stackIn_55_0 = null;
+        StringBuilder stackIn_55_1 = null;
+        String stackIn_55_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var13 = 0;
         nbb var14 = null;
@@ -2730,79 +2319,6 @@ final class pe implements ntb, utb {
         imb var22 = null;
         ml var23 = null;
         ml var24 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_38_0 = 0;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        String stackIn_43_2 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        String stackIn_47_2 = null;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
-        RuntimeException stackIn_50_0 = null;
-        StringBuilder stackIn_50_1 = null;
-        RuntimeException stackIn_51_0 = null;
-        StringBuilder stackIn_51_1 = null;
-        String stackIn_51_2 = null;
-        RuntimeException stackIn_52_0 = null;
-        StringBuilder stackIn_52_1 = null;
-        RuntimeException stackIn_54_0 = null;
-        StringBuilder stackIn_54_1 = null;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
-        String stackIn_55_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
-        RuntimeException stackOut_47_0 = null;
-        StringBuilder stackOut_47_1 = null;
-        RuntimeException stackOut_50_0 = null;
-        StringBuilder stackOut_50_1 = null;
-        String stackOut_50_2 = null;
-        RuntimeException stackOut_48_0 = null;
-        StringBuilder stackOut_48_1 = null;
-        String stackOut_48_2 = null;
-        RuntimeException stackOut_51_0 = null;
-        StringBuilder stackOut_51_1 = null;
-        RuntimeException stackOut_54_0 = null;
-        StringBuilder stackOut_54_1 = null;
-        String stackOut_54_2 = null;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        String stackOut_52_2 = null;
         var15 = VoidHunters.field_G;
         try {
           L0: {
@@ -2851,19 +2367,17 @@ final class pe implements ntb, utb {
                                   if (var14 != null) {
                                     break L5;
                                   } else {
-                                    discarded$1 = this.a(param1.field_k, param5, 0, param1, var13);
+                                    discarded$0 = this.a(param1.field_k, param5, 0, param1, var13);
                                     var14 = this.a(var21.field_e, param1.d(false), var21.field_d, (byte) 30, param1.g((byte) -23), var13);
                                     break L5;
                                   }
                                 }
                                 L6: {
-                                  if (this.a(var16, param0, var21, var7_int == 0, (byte) 95, param1, var14)) {
-                                    stackOut_29_0 = 0;
-                                    stackIn_30_0 = stackOut_29_0;
+                                  if (!this.a(var16, param0, var21, var7_int != 0, (byte) 95, param1, var14)) {
+                                    stackIn_30_0 = 0;
                                     break L6;
                                   } else {
-                                    stackOut_28_0 = 1;
-                                    stackIn_30_0 = stackOut_28_0;
+                                    stackIn_30_0 = 1;
                                     break L6;
                                   }
                                 }
@@ -2872,8 +2386,7 @@ final class pe implements ntb, utb {
                               }
                             }
                             if (var7_int != 0) {
-                              stackOut_34_0 = 1;
-                              stackIn_35_0 = stackOut_34_0;
+                              stackIn_35_0 = 1;
                               decompiledRegionSelector0 = 2;
                               break L0;
                             } else {
@@ -2916,8 +2429,7 @@ final class pe implements ntb, utb {
                               var8++;
                               continue L7;
                             } else {
-                              stackOut_15_0 = 1;
-                              stackIn_16_0 = stackOut_15_0;
+                              stackIn_16_0 = 1;
                               decompiledRegionSelector0 = 1;
                               break L0;
                             }
@@ -2928,13 +2440,11 @@ final class pe implements ntb, utb {
                   }
                 }
               }
-              stackOut_37_0 = 0;
-              stackIn_38_0 = stackOut_37_0;
+              stackIn_38_0 = 0;
               decompiledRegionSelector0 = 3;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -2943,102 +2453,70 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var7 = decompiledCaughtException;
-            stackOut_39_0 = (RuntimeException) (var7);
-            stackOut_39_1 = new StringBuilder().append("pe.PD(");
-            stackIn_42_0 = stackOut_39_0;
-            stackIn_42_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            stackIn_42_0 = (RuntimeException) (var7);
+
+            stackIn_42_1 = new StringBuilder().append("pe.PD(");
+
             if (param0 == null) {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "null";
-              stackIn_43_0 = stackOut_42_0;
-              stackIn_43_1 = stackOut_42_1;
-              stackIn_43_2 = stackOut_42_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "null";
               break L9;
             } else {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "{...}";
-              stackIn_43_0 = stackOut_40_0;
-              stackIn_43_1 = stackOut_40_1;
-              stackIn_43_2 = stackOut_40_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "{...}";
               break L9;
             }
           }
           L10: {
-            stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-            stackOut_43_1 = ((StringBuilder) (Object) stackIn_43_1).append(stackIn_43_2).append(',');
-            stackIn_46_0 = stackOut_43_0;
-            stackIn_46_1 = stackOut_43_1;
-            stackIn_44_0 = stackOut_43_0;
-            stackIn_44_1 = stackOut_43_1;
+            stackIn_46_0 = (RuntimeException) ((Object) stackIn_43_0);
+
+            stackIn_46_1 = ((StringBuilder) (Object) stackIn_43_1).append(stackIn_43_2).append(',');
+
             if (param1 == null) {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "null";
-              stackIn_47_0 = stackOut_46_0;
-              stackIn_47_1 = stackOut_46_1;
-              stackIn_47_2 = stackOut_46_2;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "null";
               break L10;
             } else {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "{...}";
-              stackIn_47_0 = stackOut_44_0;
-              stackIn_47_1 = stackOut_44_1;
-              stackIn_47_2 = stackOut_44_2;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "{...}";
               break L10;
             }
           }
           L11: {
-            stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-            stackOut_47_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(',');
-            stackIn_50_0 = stackOut_47_0;
-            stackIn_50_1 = stackOut_47_1;
-            stackIn_48_0 = stackOut_47_0;
-            stackIn_48_1 = stackOut_47_1;
+            stackIn_50_0 = (RuntimeException) ((Object) stackIn_47_0);
+
+            stackIn_50_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(',');
+
             if (param2 == null) {
-              stackOut_50_0 = (RuntimeException) ((Object) stackIn_50_0);
-              stackOut_50_1 = (StringBuilder) ((Object) stackIn_50_1);
-              stackOut_50_2 = "null";
-              stackIn_51_0 = stackOut_50_0;
-              stackIn_51_1 = stackOut_50_1;
-              stackIn_51_2 = stackOut_50_2;
+              stackIn_51_0 = (RuntimeException) ((Object) stackIn_50_0);
+              stackIn_51_1 = (StringBuilder) ((Object) stackIn_50_1);
+              stackIn_51_2 = "null";
               break L11;
             } else {
-              stackOut_48_0 = (RuntimeException) ((Object) stackIn_48_0);
-              stackOut_48_1 = (StringBuilder) ((Object) stackIn_48_1);
-              stackOut_48_2 = "{...}";
-              stackIn_51_0 = stackOut_48_0;
-              stackIn_51_1 = stackOut_48_1;
-              stackIn_51_2 = stackOut_48_2;
+              stackIn_51_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackIn_51_1 = (StringBuilder) ((Object) stackIn_50_1);
+              stackIn_51_2 = "{...}";
               break L11;
             }
           }
           L12: {
-            stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
-            stackOut_51_1 = ((StringBuilder) (Object) stackIn_51_1).append(stackIn_51_2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_54_0 = stackOut_51_0;
-            stackIn_54_1 = stackOut_51_1;
-            stackIn_52_0 = stackOut_51_0;
-            stackIn_52_1 = stackOut_51_1;
+            stackIn_54_0 = (RuntimeException) ((Object) stackIn_51_0);
+
+            stackIn_54_1 = ((StringBuilder) (Object) stackIn_51_1).append(stackIn_51_2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
-              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
-              stackOut_54_2 = "null";
-              stackIn_55_0 = stackOut_54_0;
-              stackIn_55_1 = stackOut_54_1;
-              stackIn_55_2 = stackOut_54_2;
+              stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
+              stackIn_55_2 = "null";
               break L12;
             } else {
-              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
-              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
-              stackOut_52_2 = "{...}";
-              stackIn_55_0 = stackOut_52_0;
-              stackIn_55_1 = stackOut_52_1;
-              stackIn_55_2 = stackOut_52_2;
+              stackIn_55_0 = (RuntimeException) ((Object) stackIn_51_0);
+              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
+              stackIn_55_2 = "{...}";
               break L12;
             }
           }
@@ -3067,9 +2545,8 @@ final class pe implements ntb, utb {
     }
 
     final int e(boolean param0) {
-        int discarded$0 = 0;
         if (!param0) {
-            discarded$0 = this.e(true);
+            this.e(true);
         }
         if (null == this.field_t) {
             return 0;
@@ -3079,22 +2556,12 @@ final class pe implements ntb, utb {
 
     final void a(byte param0, rdb param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -3112,27 +2579,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("pe.TA(").append(param0).append(',');
-            stackIn_6_0 = stackOut_3_0;
-            stackIn_6_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("pe.TA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_7_0 = stackOut_4_0;
-              stackIn_7_1 = stackOut_4_1;
-              stackIn_7_2 = stackOut_4_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -3141,7 +2600,7 @@ final class pe implements ntb, utb {
     }
 
     private final void a(int param0, boolean param1, int param2) {
-        qob var6 = null;
+        qob var6;
         var6 = this.field_p.a((byte) 54, param2);
         var6 = var6;
         if (param0 == 0) {
@@ -3160,11 +2619,49 @@ final class pe implements ntb, utb {
     }
 
     final void a(int param0, boolean param1, nwa param2, tfa[] param3, lbb param4, int param5, tfa[] param6) {
-        boolean discarded$3 = false;
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        RuntimeException var8 = null;
+        boolean discarded$0 = false;
+        nbb stackIn_29_0;
+        Object stackIn_29_1;
+        int stackIn_29_2;
+        int stackIn_29_3;
+        nbb stackIn_30_0;
+        Object stackIn_30_1;
+        int stackIn_30_2;
+        int stackIn_30_3;
+        int stackIn_30_4;
+        nbb stackIn_37_0;
+        Object stackIn_37_1;
+        int stackIn_37_2;
+        int stackIn_37_3;
+        nbb stackIn_38_0;
+        Object stackIn_38_1;
+        int stackIn_38_2;
+        int stackIn_38_3;
+        int stackIn_38_4;
+        int stackIn_64_0 = 0;
+        RuntimeException stackIn_115_0 = null;
+        StringBuilder stackIn_115_1 = null;
+        RuntimeException stackIn_116_0 = null;
+        StringBuilder stackIn_116_1 = null;
+        String stackIn_116_2 = null;
+        RuntimeException stackIn_119_0 = null;
+        StringBuilder stackIn_119_1 = null;
+        RuntimeException stackIn_120_0 = null;
+        StringBuilder stackIn_120_1 = null;
+        String stackIn_120_2 = null;
+        RuntimeException stackIn_123_0 = null;
+        StringBuilder stackIn_123_1 = null;
+        RuntimeException stackIn_124_0 = null;
+        StringBuilder stackIn_124_1 = null;
+        String stackIn_124_2 = null;
+        RuntimeException stackIn_127_0 = null;
+        StringBuilder stackIn_127_1 = null;
+        RuntimeException stackIn_128_0 = null;
+        StringBuilder stackIn_128_1 = null;
+        String stackIn_128_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -3174,11 +2671,15 @@ final class pe implements ntb, utb {
         int var14 = 0;
         int var15_int = 0;
         Object var15 = null;
-        sg var16_ref_sg = null;
-        nbb var16_ref_nbb = null;
         int var16 = 0;
+        Object[] var16_ref = null;
+        mqb[] var16_ref_mqb__ = null;
+        nbb var16_ref_nbb = null;
+        sg var16_ref_sg = null;
         int var17 = 0;
-        int var18 = 0;
+        int var18_int = 0;
+        Object var18 = null;
+        mqb var18_ref = null;
         int var19 = 0;
         Object var20 = null;
         nbb var20_ref = null;
@@ -3194,131 +2695,9 @@ final class pe implements ntb, utb {
         it var30 = null;
         sg[] var31 = null;
         sg var32 = null;
-        mqb[] var33 = null;
-        mqb var34 = null;
-        Object[] var35 = null;
-        Object var36 = null;
-        nbb var37 = null;
-        nbb var38 = null;
-        tj var39 = null;
-        nbb stackIn_27_0 = null;
-        Object stackIn_27_1 = null;
-        int stackIn_27_2 = 0;
-        int stackIn_27_3 = 0;
-        nbb stackIn_29_0 = null;
-        Object stackIn_29_1 = null;
-        int stackIn_29_2 = 0;
-        int stackIn_29_3 = 0;
-        nbb stackIn_30_0 = null;
-        Object stackIn_30_1 = null;
-        int stackIn_30_2 = 0;
-        int stackIn_30_3 = 0;
-        int stackIn_30_4 = 0;
-        nbb stackIn_35_0 = null;
-        Object stackIn_35_1 = null;
-        int stackIn_35_2 = 0;
-        int stackIn_35_3 = 0;
-        nbb stackIn_37_0 = null;
-        Object stackIn_37_1 = null;
-        int stackIn_37_2 = 0;
-        int stackIn_37_3 = 0;
-        nbb stackIn_38_0 = null;
-        Object stackIn_38_1 = null;
-        int stackIn_38_2 = 0;
-        int stackIn_38_3 = 0;
-        int stackIn_38_4 = 0;
-        int stackIn_64_0 = 0;
-        RuntimeException stackIn_113_0 = null;
-        StringBuilder stackIn_113_1 = null;
-        RuntimeException stackIn_115_0 = null;
-        StringBuilder stackIn_115_1 = null;
-        RuntimeException stackIn_116_0 = null;
-        StringBuilder stackIn_116_1 = null;
-        String stackIn_116_2 = null;
-        RuntimeException stackIn_117_0 = null;
-        StringBuilder stackIn_117_1 = null;
-        RuntimeException stackIn_119_0 = null;
-        StringBuilder stackIn_119_1 = null;
-        RuntimeException stackIn_120_0 = null;
-        StringBuilder stackIn_120_1 = null;
-        String stackIn_120_2 = null;
-        RuntimeException stackIn_121_0 = null;
-        StringBuilder stackIn_121_1 = null;
-        RuntimeException stackIn_123_0 = null;
-        StringBuilder stackIn_123_1 = null;
-        RuntimeException stackIn_124_0 = null;
-        StringBuilder stackIn_124_1 = null;
-        String stackIn_124_2 = null;
-        RuntimeException stackIn_125_0 = null;
-        StringBuilder stackIn_125_1 = null;
-        RuntimeException stackIn_127_0 = null;
-        StringBuilder stackIn_127_1 = null;
-        RuntimeException stackIn_128_0 = null;
-        StringBuilder stackIn_128_1 = null;
-        String stackIn_128_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_63_0 = 0;
-        int stackOut_62_0 = 0;
-        nbb stackOut_34_0 = null;
-        Object stackOut_34_1 = null;
-        int stackOut_34_2 = 0;
-        int stackOut_34_3 = 0;
-        nbb stackOut_37_0 = null;
-        Object stackOut_37_1 = null;
-        int stackOut_37_2 = 0;
-        int stackOut_37_3 = 0;
-        int stackOut_37_4 = 0;
-        nbb stackOut_35_0 = null;
-        Object stackOut_35_1 = null;
-        int stackOut_35_2 = 0;
-        int stackOut_35_3 = 0;
-        int stackOut_35_4 = 0;
-        nbb stackOut_26_0 = null;
-        Object stackOut_26_1 = null;
-        int stackOut_26_2 = 0;
-        int stackOut_26_3 = 0;
-        nbb stackOut_29_0 = null;
-        Object stackOut_29_1 = null;
-        int stackOut_29_2 = 0;
-        int stackOut_29_3 = 0;
-        int stackOut_29_4 = 0;
-        nbb stackOut_27_0 = null;
-        Object stackOut_27_1 = null;
-        int stackOut_27_2 = 0;
-        int stackOut_27_3 = 0;
-        int stackOut_27_4 = 0;
-        RuntimeException stackOut_112_0 = null;
-        StringBuilder stackOut_112_1 = null;
-        RuntimeException stackOut_115_0 = null;
-        StringBuilder stackOut_115_1 = null;
-        String stackOut_115_2 = null;
-        RuntimeException stackOut_113_0 = null;
-        StringBuilder stackOut_113_1 = null;
-        String stackOut_113_2 = null;
-        RuntimeException stackOut_116_0 = null;
-        StringBuilder stackOut_116_1 = null;
-        RuntimeException stackOut_119_0 = null;
-        StringBuilder stackOut_119_1 = null;
-        String stackOut_119_2 = null;
-        RuntimeException stackOut_117_0 = null;
-        StringBuilder stackOut_117_1 = null;
-        String stackOut_117_2 = null;
-        RuntimeException stackOut_120_0 = null;
-        StringBuilder stackOut_120_1 = null;
-        RuntimeException stackOut_123_0 = null;
-        StringBuilder stackOut_123_1 = null;
-        String stackOut_123_2 = null;
-        RuntimeException stackOut_121_0 = null;
-        StringBuilder stackOut_121_1 = null;
-        String stackOut_121_2 = null;
-        RuntimeException stackOut_124_0 = null;
-        StringBuilder stackOut_124_1 = null;
-        RuntimeException stackOut_127_0 = null;
-        StringBuilder stackOut_127_1 = null;
-        String stackOut_127_2 = null;
-        RuntimeException stackOut_125_0 = null;
-        StringBuilder stackOut_125_1 = null;
-        String stackOut_125_2 = null;
+        nbb var33 = null;
+        nbb var34 = null;
+        tj var35 = null;
         var24 = null;
         var21 = VoidHunters.field_G;
         try {
@@ -3344,13 +2723,13 @@ final class pe implements ntb, utb {
                   if (param0 == 1799937864) {
                     break L2;
                   } else {
-                    discarded$3 = this.a((ml) null, (sg) null, (ml) null, 27, 102, (ml) null);
+                    discarded$0 = this.a((ml) null, (sg) null, (ml) null, 27, 102, (ml) null);
                     break L2;
                   }
                 }
-                var39 = (tj) ((Object) this.field_x.d(0));
+                var35 = (tj) ((Object) this.field_x.d(0));
                 L3: while (true) {
-                  if (var39 == null) {
+                  if (var35 == null) {
                     var14 = 0;
                     L4: while (true) {
                       if (this.field_s.length <= var14) {
@@ -3364,19 +2743,19 @@ final class pe implements ntb, utb {
                                 var15 = null;
                                 var16 = hob.a(vg.field_o, var14, 123);
                                 var17 = 0;
-                                var18 = 0;
+                                var18_int = 0;
                                 L7: while (true) {
                                   L8: {
-                                    if (this.field_m.length <= var18) {
+                                    if (this.field_m.length <= var18_int) {
                                       break L8;
                                     } else {
                                       L9: {
-                                        if (this.field_m[var18] != null) {
+                                        if (this.field_m[var18_int] != null) {
                                           if (var17 != var16) {
                                             var17++;
                                             break L9;
                                           } else {
-                                            var15 = this.field_m[var18];
+                                            var15 = this.field_m[var18_int];
                                             var20 = var15;
                                             var20 = var15;
                                             break L8;
@@ -3385,7 +2764,7 @@ final class pe implements ntb, utb {
                                           break L9;
                                         }
                                       }
-                                      var18++;
+                                      var18_int++;
                                       continue L7;
                                     }
                                   }
@@ -3405,11 +2784,13 @@ final class pe implements ntb, utb {
                               }
                             }
                             var15 = this.field_e.c(0);
-                            var25 = (Object[]) (var15);
+                            var25 = (Object[]) (Object) (var15);
+                            var16_ref = var25;
                             var17 = 0;
                             L10: while (true) {
                               if (var25.length <= var17) {
                                 var27 = this.field_g;
+                                var16_ref_mqb__ = var27;
                                 var17 = 0;
                                 L11: while (true) {
                                   if (var17 >= var27.length) {
@@ -3438,30 +2819,30 @@ final class pe implements ntb, utb {
                                     var17 = 0;
                                     L14: while (true) {
                                       if (var17 >= var31.length) {
-                                        var33 = this.field_g;
+                                        var16_ref_mqb__ = this.field_g;
                                         var17 = 0;
                                         L15: while (true) {
-                                          if (var33.length <= var17) {
-                                            var35 = (Object[]) (var15);
+                                          if (var16_ref_mqb__.length <= var17) {
+                                            var16_ref = (Object[]) (Object) (var15);
                                             var17 = 0;
                                             L16: while (true) {
-                                              if (var17 >= var35.length) {
+                                              if (var17 >= var16_ref.length) {
                                                 var23 = 0;
                                                 var16 = var23;
                                                 L17: while (true) {
                                                   if (var23 >= this.field_m.length) {
                                                     break L0;
                                                   } else {
-                                                    var37 = this.field_m[var23];
-                                                    if (var37 != null) {
+                                                    var33 = this.field_m[var23];
+                                                    if (var33 != null) {
                                                       L18: {
-                                                        if (-1 != (var37.field_t ^ -1)) {
+                                                        if (-1 != (var33.field_t ^ -1)) {
                                                           break L18;
                                                         } else {
-                                                          if (-1 != (var37.field_o ^ -1)) {
+                                                          if (-1 != (var33.field_o ^ -1)) {
                                                             break L18;
                                                           } else {
-                                                            if (var37.field_p != 0) {
+                                                            if (var33.field_p != 0) {
                                                               break L18;
                                                             } else {
                                                               var23++;
@@ -3470,8 +2851,8 @@ final class pe implements ntb, utb {
                                                           }
                                                         }
                                                       }
-                                                      var38 = this.c(var23, false);
-                                                      var38.b(24, var38.field_s);
+                                                      var34 = this.c(var23, false);
+                                                      var34.b(24, var34.field_s);
                                                       var23++;
                                                       continue L17;
                                                     } else {
@@ -3482,9 +2863,9 @@ final class pe implements ntb, utb {
                                                 }
                                               } else {
                                                 L19: {
-                                                  var36 = var35[var17];
-                                                  if (var36 != null) {
-                                                    ((crb) (var36)).b(24, ((crb) (var36)).field_s);
+                                                  var18 = var16_ref[var17];
+                                                  if (var18 != null) {
+                                                    ((crb) (var18)).b(24, ((crb) (var18)).field_s);
                                                     break L19;
                                                   } else {
                                                     break L19;
@@ -3496,9 +2877,9 @@ final class pe implements ntb, utb {
                                             }
                                           } else {
                                             L20: {
-                                              var34 = var33[var17];
-                                              if (var34 != null) {
-                                                var34.b(24, var34.field_s);
+                                              var18_ref = var16_ref_mqb__[var17];
+                                              if (var18_ref != null) {
+                                                var18_ref.b(24, var18_ref.field_s);
                                                 break L20;
                                               } else {
                                                 break L20;
@@ -3536,6 +2917,7 @@ final class pe implements ntb, utb {
                                     }
                                   } else {
                                     var28 = var27[var17];
+                                    var18_ref = var28;
                                     if (var28 != null) {
                                       var28.b(24, var28.field_s);
                                       var28.a((pe) (this), true, (byte) 67, true);
@@ -3549,15 +2931,14 @@ final class pe implements ntb, utb {
                                 }
                               } else {
                                 var26 = var25[var17];
+                                var18 = var26;
                                 if (var26 != null) {
                                   L22: {
                                     if (!((crb) (var26)).b(var12, 2147483647, var13, var10, var11)) {
-                                      stackOut_63_0 = 0;
-                                      stackIn_64_0 = stackOut_63_0;
+                                      stackIn_64_0 = 0;
                                       break L22;
                                     } else {
-                                      stackOut_62_0 = 1;
-                                      stackIn_64_0 = stackOut_62_0;
+                                      stackIn_64_0 = 1;
                                       break L22;
                                     }
                                   }
@@ -3580,41 +2961,27 @@ final class pe implements ntb, utb {
                                   if (var16_ref_nbb.k(param0 ^ 1344029312)) {
                                     L24: {
                                       var16_ref_nbb = this.c(var22, false);
-                                      stackOut_34_0 = (nbb) (var16_ref_nbb);
-                                      stackOut_34_1 = this;
-                                      stackOut_34_2 = 0;
-                                      stackOut_34_3 = 67;
-                                      stackIn_37_0 = stackOut_34_0;
-                                      stackIn_37_1 = stackOut_34_1;
-                                      stackIn_37_2 = stackOut_34_2;
-                                      stackIn_37_3 = stackOut_34_3;
-                                      stackIn_35_0 = stackOut_34_0;
-                                      stackIn_35_1 = stackOut_34_1;
-                                      stackIn_35_2 = stackOut_34_2;
-                                      stackIn_35_3 = stackOut_34_3;
+                                      stackIn_37_0 = (nbb) (var16_ref_nbb);
+
+                                      stackIn_37_1 = this;
+
+                                      stackIn_37_2 = 0;
+
+                                      stackIn_37_3 = 67;
+
                                       if (-2 != (hw.field_b ^ -1)) {
-                                        stackOut_37_0 = (nbb) ((Object) stackIn_37_0);
-                                        stackOut_37_1 = this;
-                                        stackOut_37_2 = stackIn_37_2;
-                                        stackOut_37_3 = stackIn_37_3;
-                                        stackOut_37_4 = 0;
-                                        stackIn_38_0 = stackOut_37_0;
-                                        stackIn_38_1 = stackOut_37_1;
-                                        stackIn_38_2 = stackOut_37_2;
-                                        stackIn_38_3 = stackOut_37_3;
-                                        stackIn_38_4 = stackOut_37_4;
+                                        stackIn_38_0 = (nbb) ((Object) stackIn_37_0);
+                                        stackIn_38_1 = this;
+                                        stackIn_38_2 = stackIn_37_2;
+                                        stackIn_38_3 = stackIn_37_3;
+                                        stackIn_38_4 = 0;
                                         break L24;
                                       } else {
-                                        stackOut_35_0 = (nbb) ((Object) stackIn_35_0);
-                                        stackOut_35_1 = this;
-                                        stackOut_35_2 = stackIn_35_2;
-                                        stackOut_35_3 = stackIn_35_3;
-                                        stackOut_35_4 = 1;
-                                        stackIn_38_0 = stackOut_35_0;
-                                        stackIn_38_1 = stackOut_35_1;
-                                        stackIn_38_2 = stackOut_35_2;
-                                        stackIn_38_3 = stackOut_35_3;
-                                        stackIn_38_4 = stackOut_35_4;
+                                        stackIn_38_0 = (nbb) ((Object) stackIn_37_0);
+                                        stackIn_38_1 = this;
+                                        stackIn_38_2 = stackIn_37_2;
+                                        stackIn_38_3 = stackIn_37_3;
+                                        stackIn_38_4 = 1;
                                         break L24;
                                       }
                                     }
@@ -3626,42 +2993,28 @@ final class pe implements ntb, utb {
                                 } else {
                                   L25: {
                                     var16_ref_nbb = this.c(var22, false);
-                                    discarded$4 = var16_ref_nbb.b(var12, 2147483647, var13, var10, var11);
-                                    stackOut_26_0 = (nbb) (var16_ref_nbb);
-                                    stackOut_26_1 = this;
-                                    stackOut_26_2 = 1;
-                                    stackOut_26_3 = 67;
-                                    stackIn_29_0 = stackOut_26_0;
-                                    stackIn_29_1 = stackOut_26_1;
-                                    stackIn_29_2 = stackOut_26_2;
-                                    stackIn_29_3 = stackOut_26_3;
-                                    stackIn_27_0 = stackOut_26_0;
-                                    stackIn_27_1 = stackOut_26_1;
-                                    stackIn_27_2 = stackOut_26_2;
-                                    stackIn_27_3 = stackOut_26_3;
+                                    var16_ref_nbb.b(var12, 2147483647, var13, var10, var11);
+                                    stackIn_29_0 = (nbb) (var16_ref_nbb);
+
+                                    stackIn_29_1 = this;
+
+                                    stackIn_29_2 = 1;
+
+                                    stackIn_29_3 = 67;
+
                                     if (hw.field_b != 1) {
-                                      stackOut_29_0 = (nbb) ((Object) stackIn_29_0);
-                                      stackOut_29_1 = this;
-                                      stackOut_29_2 = stackIn_29_2;
-                                      stackOut_29_3 = stackIn_29_3;
-                                      stackOut_29_4 = 0;
-                                      stackIn_30_0 = stackOut_29_0;
-                                      stackIn_30_1 = stackOut_29_1;
-                                      stackIn_30_2 = stackOut_29_2;
-                                      stackIn_30_3 = stackOut_29_3;
-                                      stackIn_30_4 = stackOut_29_4;
+                                      stackIn_30_0 = (nbb) ((Object) stackIn_29_0);
+                                      stackIn_30_1 = this;
+                                      stackIn_30_2 = stackIn_29_2;
+                                      stackIn_30_3 = stackIn_29_3;
+                                      stackIn_30_4 = 0;
                                       break L25;
                                     } else {
-                                      stackOut_27_0 = (nbb) ((Object) stackIn_27_0);
-                                      stackOut_27_1 = this;
-                                      stackOut_27_2 = stackIn_27_2;
-                                      stackOut_27_3 = stackIn_27_3;
-                                      stackOut_27_4 = 1;
-                                      stackIn_30_0 = stackOut_27_0;
-                                      stackIn_30_1 = stackOut_27_1;
-                                      stackIn_30_2 = stackOut_27_2;
-                                      stackIn_30_3 = stackOut_27_3;
-                                      stackIn_30_4 = stackOut_27_4;
+                                      stackIn_30_0 = (nbb) ((Object) stackIn_29_0);
+                                      stackIn_30_1 = this;
+                                      stackIn_30_2 = stackIn_29_2;
+                                      stackIn_30_3 = stackIn_29_3;
+                                      stackIn_30_4 = 1;
                                       break L25;
                                     }
                                   }
@@ -3690,18 +3043,16 @@ final class pe implements ntb, utb {
                       }
                     }
                   } else {
-                    var39.a((byte) 93, (pe) (this));
-                    var39 = (tj) ((Object) this.field_x.a((byte) 101));
+                    var35.a((byte) 93, (pe) (this));
+                    var35 = (tj) ((Object) this.field_x.a((byte) 101));
                     continue L3;
                   }
                 }
               } else {
                 L27: {
                   var16_ref_sg = var14_ref_sg__[var15_int];
-                  var32 = var16_ref_sg;
-                  var32 = var16_ref_sg;
                   if (var16_ref_sg != null) {
-                    discarded$5 = var16_ref_sg.b(var12, param0 ^ 347545783, var13, var10, var11);
+                    var16_ref_sg.b(var12, param0 ^ 347545783, var13, var10, var11);
                     break L27;
                   } else {
                     break L27;
@@ -3716,102 +3067,70 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L28: {
             var8 = decompiledCaughtException;
-            stackOut_112_0 = (RuntimeException) (var8);
-            stackOut_112_1 = new StringBuilder().append("pe.BA(").append(param0).append(',').append(param1).append(',');
-            stackIn_115_0 = stackOut_112_0;
-            stackIn_115_1 = stackOut_112_1;
-            stackIn_113_0 = stackOut_112_0;
-            stackIn_113_1 = stackOut_112_1;
+            stackIn_115_0 = (RuntimeException) (var8);
+
+            stackIn_115_1 = new StringBuilder().append("pe.BA(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_115_0 = (RuntimeException) ((Object) stackIn_115_0);
-              stackOut_115_1 = (StringBuilder) ((Object) stackIn_115_1);
-              stackOut_115_2 = "null";
-              stackIn_116_0 = stackOut_115_0;
-              stackIn_116_1 = stackOut_115_1;
-              stackIn_116_2 = stackOut_115_2;
+              stackIn_116_0 = (RuntimeException) ((Object) stackIn_115_0);
+              stackIn_116_1 = (StringBuilder) ((Object) stackIn_115_1);
+              stackIn_116_2 = "null";
               break L28;
             } else {
-              stackOut_113_0 = (RuntimeException) ((Object) stackIn_113_0);
-              stackOut_113_1 = (StringBuilder) ((Object) stackIn_113_1);
-              stackOut_113_2 = "{...}";
-              stackIn_116_0 = stackOut_113_0;
-              stackIn_116_1 = stackOut_113_1;
-              stackIn_116_2 = stackOut_113_2;
+              stackIn_116_0 = (RuntimeException) ((Object) stackIn_115_0);
+              stackIn_116_1 = (StringBuilder) ((Object) stackIn_115_1);
+              stackIn_116_2 = "{...}";
               break L28;
             }
           }
           L29: {
-            stackOut_116_0 = (RuntimeException) ((Object) stackIn_116_0);
-            stackOut_116_1 = ((StringBuilder) (Object) stackIn_116_1).append(stackIn_116_2).append(',');
-            stackIn_119_0 = stackOut_116_0;
-            stackIn_119_1 = stackOut_116_1;
-            stackIn_117_0 = stackOut_116_0;
-            stackIn_117_1 = stackOut_116_1;
+            stackIn_119_0 = (RuntimeException) ((Object) stackIn_116_0);
+
+            stackIn_119_1 = ((StringBuilder) (Object) stackIn_116_1).append(stackIn_116_2).append(',');
+
             if (param3 == null) {
-              stackOut_119_0 = (RuntimeException) ((Object) stackIn_119_0);
-              stackOut_119_1 = (StringBuilder) ((Object) stackIn_119_1);
-              stackOut_119_2 = "null";
-              stackIn_120_0 = stackOut_119_0;
-              stackIn_120_1 = stackOut_119_1;
-              stackIn_120_2 = stackOut_119_2;
+              stackIn_120_0 = (RuntimeException) ((Object) stackIn_119_0);
+              stackIn_120_1 = (StringBuilder) ((Object) stackIn_119_1);
+              stackIn_120_2 = "null";
               break L29;
             } else {
-              stackOut_117_0 = (RuntimeException) ((Object) stackIn_117_0);
-              stackOut_117_1 = (StringBuilder) ((Object) stackIn_117_1);
-              stackOut_117_2 = "{...}";
-              stackIn_120_0 = stackOut_117_0;
-              stackIn_120_1 = stackOut_117_1;
-              stackIn_120_2 = stackOut_117_2;
+              stackIn_120_0 = (RuntimeException) ((Object) stackIn_116_0);
+              stackIn_120_1 = (StringBuilder) ((Object) stackIn_119_1);
+              stackIn_120_2 = "{...}";
               break L29;
             }
           }
           L30: {
-            stackOut_120_0 = (RuntimeException) ((Object) stackIn_120_0);
-            stackOut_120_1 = ((StringBuilder) (Object) stackIn_120_1).append(stackIn_120_2).append(',');
-            stackIn_123_0 = stackOut_120_0;
-            stackIn_123_1 = stackOut_120_1;
-            stackIn_121_0 = stackOut_120_0;
-            stackIn_121_1 = stackOut_120_1;
+            stackIn_123_0 = (RuntimeException) ((Object) stackIn_120_0);
+
+            stackIn_123_1 = ((StringBuilder) (Object) stackIn_120_1).append(stackIn_120_2).append(',');
+
             if (param4 == null) {
-              stackOut_123_0 = (RuntimeException) ((Object) stackIn_123_0);
-              stackOut_123_1 = (StringBuilder) ((Object) stackIn_123_1);
-              stackOut_123_2 = "null";
-              stackIn_124_0 = stackOut_123_0;
-              stackIn_124_1 = stackOut_123_1;
-              stackIn_124_2 = stackOut_123_2;
+              stackIn_124_0 = (RuntimeException) ((Object) stackIn_123_0);
+              stackIn_124_1 = (StringBuilder) ((Object) stackIn_123_1);
+              stackIn_124_2 = "null";
               break L30;
             } else {
-              stackOut_121_0 = (RuntimeException) ((Object) stackIn_121_0);
-              stackOut_121_1 = (StringBuilder) ((Object) stackIn_121_1);
-              stackOut_121_2 = "{...}";
-              stackIn_124_0 = stackOut_121_0;
-              stackIn_124_1 = stackOut_121_1;
-              stackIn_124_2 = stackOut_121_2;
+              stackIn_124_0 = (RuntimeException) ((Object) stackIn_120_0);
+              stackIn_124_1 = (StringBuilder) ((Object) stackIn_123_1);
+              stackIn_124_2 = "{...}";
               break L30;
             }
           }
           L31: {
-            stackOut_124_0 = (RuntimeException) ((Object) stackIn_124_0);
-            stackOut_124_1 = ((StringBuilder) (Object) stackIn_124_1).append(stackIn_124_2).append(',').append(param5).append(',');
-            stackIn_127_0 = stackOut_124_0;
-            stackIn_127_1 = stackOut_124_1;
-            stackIn_125_0 = stackOut_124_0;
-            stackIn_125_1 = stackOut_124_1;
+            stackIn_127_0 = (RuntimeException) ((Object) stackIn_124_0);
+
+            stackIn_127_1 = ((StringBuilder) (Object) stackIn_124_1).append(stackIn_124_2).append(',').append(param5).append(',');
+
             if (param6 == null) {
-              stackOut_127_0 = (RuntimeException) ((Object) stackIn_127_0);
-              stackOut_127_1 = (StringBuilder) ((Object) stackIn_127_1);
-              stackOut_127_2 = "null";
-              stackIn_128_0 = stackOut_127_0;
-              stackIn_128_1 = stackOut_127_1;
-              stackIn_128_2 = stackOut_127_2;
+              stackIn_128_0 = (RuntimeException) ((Object) stackIn_127_0);
+              stackIn_128_1 = (StringBuilder) ((Object) stackIn_127_1);
+              stackIn_128_2 = "null";
               break L31;
             } else {
-              stackOut_125_0 = (RuntimeException) ((Object) stackIn_125_0);
-              stackOut_125_1 = (StringBuilder) ((Object) stackIn_125_1);
-              stackOut_125_2 = "{...}";
-              stackIn_128_0 = stackOut_125_0;
-              stackIn_128_1 = stackOut_125_1;
-              stackIn_128_2 = stackOut_125_2;
+              stackIn_128_0 = (RuntimeException) ((Object) stackIn_124_0);
+              stackIn_128_1 = (StringBuilder) ((Object) stackIn_127_1);
+              stackIn_128_2 = "{...}";
               break L31;
             }
           }
@@ -3828,19 +3147,14 @@ final class pe implements ntb, utb {
 
     private final boolean a(anb param0, int param1, tj param2) {
         ml var4 = null;
-        RuntimeException var4_ref = null;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_11_0 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -3848,25 +3162,7 @@ final class pe implements ntb, utb {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var4_ref = null;
         try {
           L0: {
             L1: {
@@ -3876,8 +3172,7 @@ final class pe implements ntb, utb {
                   break L1;
                 } else {
                   wgb.field_i = param0;
-                  stackOut_5_0 = 1;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_0 = 1;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 }
@@ -3893,13 +3188,11 @@ final class pe implements ntb, utb {
               }
             }
             if (param1 >= 29) {
-              stackOut_10_0 = 0;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = 0;
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_8_0 = 1;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = 1;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -3908,52 +3201,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var4_ref);
-            stackOut_12_1 = new StringBuilder().append("pe.U(");
-            stackIn_15_0 = stackOut_12_0;
-            stackIn_15_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_15_0 = (RuntimeException) (var4_ref);
+
+            stackIn_15_1 = new StringBuilder().append("pe.U(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_16_0 = stackOut_13_0;
-              stackIn_16_1 = stackOut_13_1;
-              stackIn_16_2 = stackOut_13_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',');
-            stackIn_19_0 = stackOut_16_0;
-            stackIn_19_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_19_0 = (RuntimeException) ((Object) stackIn_16_0);
+
+            stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_20_0 = stackOut_17_0;
-              stackIn_20_1 = stackOut_17_1;
-              stackIn_20_2 = stackOut_17_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L3;
             }
           }
@@ -3971,14 +3248,21 @@ final class pe implements ntb, utb {
     }
 
     private final void a(tfa[] param0, int param1, tfa[] param2, int param3) {
-        boolean discarded$6 = false;
-        int discarded$7 = 0;
-        int discarded$8 = 0;
-        int discarded$9 = 0;
-        int discarded$10 = 0;
-        boolean discarded$11 = false;
-        RuntimeException var5 = null;
+        int stackIn_9_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException stackIn_87_0 = null;
+        StringBuilder stackIn_87_1 = null;
+        RuntimeException stackIn_88_0 = null;
+        StringBuilder stackIn_88_1 = null;
+        String stackIn_88_2 = null;
+        RuntimeException stackIn_91_0 = null;
+        StringBuilder stackIn_91_1 = null;
+        RuntimeException stackIn_92_0 = null;
+        StringBuilder stackIn_92_1 = null;
+        String stackIn_92_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -3992,43 +3276,6 @@ final class pe implements ntb, utb {
         int var15 = 0;
         sg var16 = null;
         int var17 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_13_0 = 0;
-        RuntimeException stackIn_85_0 = null;
-        StringBuilder stackIn_85_1 = null;
-        RuntimeException stackIn_87_0 = null;
-        StringBuilder stackIn_87_1 = null;
-        RuntimeException stackIn_88_0 = null;
-        StringBuilder stackIn_88_1 = null;
-        String stackIn_88_2 = null;
-        RuntimeException stackIn_89_0 = null;
-        StringBuilder stackIn_89_1 = null;
-        RuntimeException stackIn_91_0 = null;
-        StringBuilder stackIn_91_1 = null;
-        RuntimeException stackIn_92_0 = null;
-        StringBuilder stackIn_92_1 = null;
-        String stackIn_92_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_10_0 = 0;
-        RuntimeException stackOut_84_0 = null;
-        StringBuilder stackOut_84_1 = null;
-        RuntimeException stackOut_87_0 = null;
-        StringBuilder stackOut_87_1 = null;
-        String stackOut_87_2 = null;
-        RuntimeException stackOut_85_0 = null;
-        StringBuilder stackOut_85_1 = null;
-        String stackOut_85_2 = null;
-        RuntimeException stackOut_88_0 = null;
-        StringBuilder stackOut_88_1 = null;
-        RuntimeException stackOut_91_0 = null;
-        StringBuilder stackOut_91_1 = null;
-        String stackOut_91_2 = null;
-        RuntimeException stackOut_89_0 = null;
-        StringBuilder stackOut_89_1 = null;
-        String stackOut_89_2 = null;
         var17 = VoidHunters.field_G;
         try {
           L0: {
@@ -4045,24 +3292,20 @@ final class pe implements ntb, utb {
             }
             L2: {
               if (param3 % var5_int != 0) {
-                stackOut_8_0 = 0;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 0;
                 break L2;
               } else {
-                stackOut_6_0 = 1;
-                stackIn_9_0 = stackOut_6_0;
+                stackIn_9_0 = 1;
                 break L2;
               }
             }
             L3: {
               var7 = stackIn_9_0;
               if (-1 != (param3 % var6 ^ -1)) {
-                stackOut_12_0 = 0;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = 0;
                 break L3;
               } else {
-                stackOut_10_0 = 1;
-                stackIn_13_0 = stackOut_10_0;
+                stackIn_13_0 = 1;
                 break L3;
               }
             }
@@ -4098,7 +3341,7 @@ final class pe implements ntb, utb {
                                   } else {
                                     var14_ref_aoa = new aoa();
                                     var11.a((pe) (this), true, (byte) 67, true);
-                                    discarded$6 = var14_ref_aoa.a(var11, (byte) -73, (pe) (this));
+                                    var14_ref_aoa.a(var11, (byte) -73, (pe) (this));
                                     if (!pqa.a(4096, 11284)) {
                                       break L8;
                                     } else {
@@ -4130,7 +3373,7 @@ final class pe implements ntb, utb {
                                       } else {
                                         if (var11.field_w) {
                                           if ((var12.field_f & 128) != 0) {
-                                            discarded$7 = var11.a(-114, var12.field_e, var12.field_d);
+                                            var11.a(-114, var12.field_e, var12.field_d);
                                             var11.field_w = false;
                                             break L10;
                                           } else {
@@ -4161,7 +3404,7 @@ final class pe implements ntb, utb {
                                       if (di.field_p != 0) {
                                         break L11;
                                       } else {
-                                        discarded$8 = var11.a(param1 + -126, var12.field_e, var12.field_d);
+                                        var11.a(param1 + -126, var12.field_e, var12.field_d);
                                         break L11;
                                       }
                                     } else {
@@ -4219,14 +3462,14 @@ final class pe implements ntb, utb {
                           if (param3 % wj.field_p != 0) {
                             break L6;
                           } else {
-                            discarded$9 = var11.c(bjb.field_o, (byte) -2);
+                            var11.c(bjb.field_o, (byte) -2);
                             break L6;
                           }
                         } else {
                           if (var8 == 0) {
                             break L6;
                           } else {
-                            discarded$10 = var11.c(ela.field_q, (byte) -2);
+                            var11.c(ela.field_q, (byte) -2);
                             break L6;
                           }
                         }
@@ -4246,7 +3489,7 @@ final class pe implements ntb, utb {
                             break L15;
                           } else {
                             if (var11.field_T) {
-                              discarded$11 = var11.a((byte) 11, 65536);
+                              var11.a((byte) 11, 65536);
                               var11.field_T = false;
                               break L5;
                             } else {
@@ -4272,52 +3515,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var5 = decompiledCaughtException;
-            stackOut_84_0 = (RuntimeException) (var5);
-            stackOut_84_1 = new StringBuilder().append("pe.M(");
-            stackIn_87_0 = stackOut_84_0;
-            stackIn_87_1 = stackOut_84_1;
-            stackIn_85_0 = stackOut_84_0;
-            stackIn_85_1 = stackOut_84_1;
+            stackIn_87_0 = (RuntimeException) (var5);
+
+            stackIn_87_1 = new StringBuilder().append("pe.M(");
+
             if (param0 == null) {
-              stackOut_87_0 = (RuntimeException) ((Object) stackIn_87_0);
-              stackOut_87_1 = (StringBuilder) ((Object) stackIn_87_1);
-              stackOut_87_2 = "null";
-              stackIn_88_0 = stackOut_87_0;
-              stackIn_88_1 = stackOut_87_1;
-              stackIn_88_2 = stackOut_87_2;
+              stackIn_88_0 = (RuntimeException) ((Object) stackIn_87_0);
+              stackIn_88_1 = (StringBuilder) ((Object) stackIn_87_1);
+              stackIn_88_2 = "null";
               break L16;
             } else {
-              stackOut_85_0 = (RuntimeException) ((Object) stackIn_85_0);
-              stackOut_85_1 = (StringBuilder) ((Object) stackIn_85_1);
-              stackOut_85_2 = "{...}";
-              stackIn_88_0 = stackOut_85_0;
-              stackIn_88_1 = stackOut_85_1;
-              stackIn_88_2 = stackOut_85_2;
+              stackIn_88_0 = (RuntimeException) ((Object) stackIn_87_0);
+              stackIn_88_1 = (StringBuilder) ((Object) stackIn_87_1);
+              stackIn_88_2 = "{...}";
               break L16;
             }
           }
           L17: {
-            stackOut_88_0 = (RuntimeException) ((Object) stackIn_88_0);
-            stackOut_88_1 = ((StringBuilder) (Object) stackIn_88_1).append(stackIn_88_2).append(',').append(param1).append(',');
-            stackIn_91_0 = stackOut_88_0;
-            stackIn_91_1 = stackOut_88_1;
-            stackIn_89_0 = stackOut_88_0;
-            stackIn_89_1 = stackOut_88_1;
+            stackIn_91_0 = (RuntimeException) ((Object) stackIn_88_0);
+
+            stackIn_91_1 = ((StringBuilder) (Object) stackIn_88_1).append(stackIn_88_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_91_0 = (RuntimeException) ((Object) stackIn_91_0);
-              stackOut_91_1 = (StringBuilder) ((Object) stackIn_91_1);
-              stackOut_91_2 = "null";
-              stackIn_92_0 = stackOut_91_0;
-              stackIn_92_1 = stackOut_91_1;
-              stackIn_92_2 = stackOut_91_2;
+              stackIn_92_0 = (RuntimeException) ((Object) stackIn_91_0);
+              stackIn_92_1 = (StringBuilder) ((Object) stackIn_91_1);
+              stackIn_92_2 = "null";
               break L17;
             } else {
-              stackOut_89_0 = (RuntimeException) ((Object) stackIn_89_0);
-              stackOut_89_1 = (StringBuilder) ((Object) stackIn_89_1);
-              stackOut_89_2 = "{...}";
-              stackIn_92_0 = stackOut_89_0;
-              stackIn_92_1 = stackOut_89_1;
-              stackIn_92_2 = stackOut_89_2;
+              stackIn_92_0 = (RuntimeException) ((Object) stackIn_88_0);
+              stackIn_92_1 = (StringBuilder) ((Object) stackIn_91_1);
+              stackIn_92_2 = "{...}";
               break L17;
             }
           }
@@ -4326,9 +3553,9 @@ final class pe implements ntb, utb {
     }
 
     private final boolean a(boolean param0, boolean param1, int param2) {
-        int var4 = 0;
-        sg var5 = null;
-        int var6 = 0;
+        int var4;
+        sg var5;
+        int var6;
         var6 = VoidHunters.field_G;
         if (!param1) {
           var4 = 0;
@@ -4372,45 +3599,25 @@ final class pe implements ntb, utb {
     }
 
     private final void a(crb[] param0, boolean param1, ij param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        crb var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        crb var9 = null;
-        int var11 = 0;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         String stackIn_39_2 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         String stackIn_43_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        crb var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        crb var9 = null;
+        int var11 = 0;
         var11 = VoidHunters.field_G;
         try {
           L0: {
@@ -4513,52 +3720,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_35_0 = (RuntimeException) (var4);
-            stackOut_35_1 = new StringBuilder().append("pe.IF(");
-            stackIn_38_0 = stackOut_35_0;
-            stackIn_38_1 = stackOut_35_1;
-            stackIn_36_0 = stackOut_35_0;
-            stackIn_36_1 = stackOut_35_1;
+            stackIn_38_0 = (RuntimeException) (var4);
+
+            stackIn_38_1 = new StringBuilder().append("pe.IF(");
+
             if (param0 == null) {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "null";
               break L6;
             } else {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "{...}";
-              stackIn_39_0 = stackOut_36_0;
-              stackIn_39_1 = stackOut_36_1;
-              stackIn_39_2 = stackOut_36_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-            stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',').append(param1).append(',');
-            stackIn_42_0 = stackOut_39_0;
-            stackIn_42_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            stackIn_42_0 = (RuntimeException) ((Object) stackIn_39_0);
+
+            stackIn_42_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "null";
-              stackIn_43_0 = stackOut_42_0;
-              stackIn_43_1 = stackOut_42_1;
-              stackIn_43_2 = stackOut_42_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "null";
               break L7;
             } else {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "{...}";
-              stackIn_43_0 = stackOut_40_0;
-              stackIn_43_1 = stackOut_40_1;
-              stackIn_43_2 = stackOut_40_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "{...}";
               break L7;
             }
           }
@@ -4567,8 +3758,28 @@ final class pe implements ntb, utb {
     }
 
     private final boolean a(boolean param0, int param1, int param2, byte param3, boolean param4, anb param5, int param6, anb param7, ij param8) {
-        RuntimeException var10 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_46_0 = 0;
+        RuntimeException stackIn_50_0 = null;
+        StringBuilder stackIn_50_1 = null;
+        RuntimeException stackIn_51_0 = null;
+        StringBuilder stackIn_51_1 = null;
+        String stackIn_51_2 = null;
+        RuntimeException stackIn_54_0 = null;
+        StringBuilder stackIn_54_1 = null;
+        RuntimeException stackIn_55_0 = null;
+        StringBuilder stackIn_55_1 = null;
+        String stackIn_55_2 = null;
+        RuntimeException stackIn_58_0 = null;
+        StringBuilder stackIn_58_1 = null;
+        RuntimeException stackIn_59_0 = null;
+        StringBuilder stackIn_59_1 = null;
+        String stackIn_59_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var10_int = 0;
+        RuntimeException var10 = null;
         int var11 = 0;
         Object var12 = null;
         gda var12_ref = null;
@@ -4578,66 +3789,12 @@ final class pe implements ntb, utb {
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_46_0 = 0;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
-        RuntimeException stackIn_50_0 = null;
-        StringBuilder stackIn_50_1 = null;
-        RuntimeException stackIn_51_0 = null;
-        StringBuilder stackIn_51_1 = null;
-        String stackIn_51_2 = null;
-        RuntimeException stackIn_52_0 = null;
-        StringBuilder stackIn_52_1 = null;
-        RuntimeException stackIn_54_0 = null;
-        StringBuilder stackIn_54_1 = null;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
-        String stackIn_55_2 = null;
-        RuntimeException stackIn_56_0 = null;
-        StringBuilder stackIn_56_1 = null;
-        RuntimeException stackIn_58_0 = null;
-        StringBuilder stackIn_58_1 = null;
-        RuntimeException stackIn_59_0 = null;
-        StringBuilder stackIn_59_1 = null;
-        String stackIn_59_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_7_0 = 0;
-        RuntimeException stackOut_47_0 = null;
-        StringBuilder stackOut_47_1 = null;
-        RuntimeException stackOut_50_0 = null;
-        StringBuilder stackOut_50_1 = null;
-        String stackOut_50_2 = null;
-        RuntimeException stackOut_48_0 = null;
-        StringBuilder stackOut_48_1 = null;
-        String stackOut_48_2 = null;
-        RuntimeException stackOut_51_0 = null;
-        StringBuilder stackOut_51_1 = null;
-        RuntimeException stackOut_54_0 = null;
-        StringBuilder stackOut_54_1 = null;
-        String stackOut_54_2 = null;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        String stackOut_52_2 = null;
-        RuntimeException stackOut_55_0 = null;
-        StringBuilder stackOut_55_1 = null;
-        RuntimeException stackOut_58_0 = null;
-        StringBuilder stackOut_58_1 = null;
-        String stackOut_58_2 = null;
-        RuntimeException stackOut_56_0 = null;
-        StringBuilder stackOut_56_1 = null;
-        String stackOut_56_2 = null;
         var12 = null;
         var18 = VoidHunters.field_G;
         try {
           L0: {
             if (!rna.a(param7.field_q, param5.field_q, -115)) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -4671,8 +3828,7 @@ final class pe implements ntb, utb {
                   L3: while (true) {
                     if (null == var12_ref) {
                       param8.e(120);
-                      stackOut_45_0 = 1;
-                      stackIn_46_0 = stackOut_45_0;
+                      stackIn_46_0 = 1;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -4752,8 +3908,7 @@ final class pe implements ntb, utb {
                   return false;
                 }
               } else {
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -4763,77 +3918,53 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var10 = decompiledCaughtException;
-            stackOut_47_0 = (RuntimeException) (var10);
-            stackOut_47_1 = new StringBuilder().append("pe.UC(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_50_0 = stackOut_47_0;
-            stackIn_50_1 = stackOut_47_1;
-            stackIn_48_0 = stackOut_47_0;
-            stackIn_48_1 = stackOut_47_1;
+            stackIn_50_0 = (RuntimeException) (var10);
+
+            stackIn_50_1 = new StringBuilder().append("pe.UC(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_50_0 = (RuntimeException) ((Object) stackIn_50_0);
-              stackOut_50_1 = (StringBuilder) ((Object) stackIn_50_1);
-              stackOut_50_2 = "null";
-              stackIn_51_0 = stackOut_50_0;
-              stackIn_51_1 = stackOut_50_1;
-              stackIn_51_2 = stackOut_50_2;
+              stackIn_51_0 = (RuntimeException) ((Object) stackIn_50_0);
+              stackIn_51_1 = (StringBuilder) ((Object) stackIn_50_1);
+              stackIn_51_2 = "null";
               break L10;
             } else {
-              stackOut_48_0 = (RuntimeException) ((Object) stackIn_48_0);
-              stackOut_48_1 = (StringBuilder) ((Object) stackIn_48_1);
-              stackOut_48_2 = "{...}";
-              stackIn_51_0 = stackOut_48_0;
-              stackIn_51_1 = stackOut_48_1;
-              stackIn_51_2 = stackOut_48_2;
+              stackIn_51_0 = (RuntimeException) ((Object) stackIn_50_0);
+              stackIn_51_1 = (StringBuilder) ((Object) stackIn_50_1);
+              stackIn_51_2 = "{...}";
               break L10;
             }
           }
           L11: {
-            stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
-            stackOut_51_1 = ((StringBuilder) (Object) stackIn_51_1).append(stackIn_51_2).append(',').append(param6).append(',');
-            stackIn_54_0 = stackOut_51_0;
-            stackIn_54_1 = stackOut_51_1;
-            stackIn_52_0 = stackOut_51_0;
-            stackIn_52_1 = stackOut_51_1;
+            stackIn_54_0 = (RuntimeException) ((Object) stackIn_51_0);
+
+            stackIn_54_1 = ((StringBuilder) (Object) stackIn_51_1).append(stackIn_51_2).append(',').append(param6).append(',');
+
             if (param7 == null) {
-              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
-              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
-              stackOut_54_2 = "null";
-              stackIn_55_0 = stackOut_54_0;
-              stackIn_55_1 = stackOut_54_1;
-              stackIn_55_2 = stackOut_54_2;
+              stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
+              stackIn_55_2 = "null";
               break L11;
             } else {
-              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
-              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
-              stackOut_52_2 = "{...}";
-              stackIn_55_0 = stackOut_52_0;
-              stackIn_55_1 = stackOut_52_1;
-              stackIn_55_2 = stackOut_52_2;
+              stackIn_55_0 = (RuntimeException) ((Object) stackIn_51_0);
+              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
+              stackIn_55_2 = "{...}";
               break L11;
             }
           }
           L12: {
-            stackOut_55_0 = (RuntimeException) ((Object) stackIn_55_0);
-            stackOut_55_1 = ((StringBuilder) (Object) stackIn_55_1).append(stackIn_55_2).append(',');
-            stackIn_58_0 = stackOut_55_0;
-            stackIn_58_1 = stackOut_55_1;
-            stackIn_56_0 = stackOut_55_0;
-            stackIn_56_1 = stackOut_55_1;
+            stackIn_58_0 = (RuntimeException) ((Object) stackIn_55_0);
+
+            stackIn_58_1 = ((StringBuilder) (Object) stackIn_55_1).append(stackIn_55_2).append(',');
+
             if (param8 == null) {
-              stackOut_58_0 = (RuntimeException) ((Object) stackIn_58_0);
-              stackOut_58_1 = (StringBuilder) ((Object) stackIn_58_1);
-              stackOut_58_2 = "null";
-              stackIn_59_0 = stackOut_58_0;
-              stackIn_59_1 = stackOut_58_1;
-              stackIn_59_2 = stackOut_58_2;
+              stackIn_59_0 = (RuntimeException) ((Object) stackIn_58_0);
+              stackIn_59_1 = (StringBuilder) ((Object) stackIn_58_1);
+              stackIn_59_2 = "null";
               break L12;
             } else {
-              stackOut_56_0 = (RuntimeException) ((Object) stackIn_56_0);
-              stackOut_56_1 = (StringBuilder) ((Object) stackIn_56_1);
-              stackOut_56_2 = "{...}";
-              stackIn_59_0 = stackOut_56_0;
-              stackIn_59_1 = stackOut_56_1;
-              stackIn_59_2 = stackOut_56_2;
+              stackIn_59_0 = (RuntimeException) ((Object) stackIn_55_0);
+              stackIn_59_1 = (StringBuilder) ((Object) stackIn_58_1);
+              stackIn_59_2 = "{...}";
               break L12;
             }
           }
@@ -4851,10 +3982,6 @@ final class pe implements ntb, utb {
     }
 
     final void a(nbb param0, byte param1) {
-        boolean discarded$24 = false;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -4862,17 +3989,10 @@ final class pe implements ntb, utb {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
-            discarded$24 = param0.b(-(this.field_r >> -441138975), 2147483647, this.field_r >> -1369749375, -(this.field_o >> 1156656161), this.field_o >> -1293601567);
+            param0.b(-(this.field_r >> -441138975), 2147483647, this.field_r >> -1369749375, -(this.field_o >> 1156656161), this.field_o >> -1293601567);
             param0.b(24, param0.field_s);
             if (param1 >= 25) {
               L1: {
@@ -4900,27 +4020,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("pe.VE(");
-            stackIn_11_0 = stackOut_8_0;
-            stackIn_11_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("pe.VE(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_12_0 = stackOut_9_0;
-              stackIn_12_1 = stackOut_9_1;
-              stackIn_12_2 = stackOut_9_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L2;
             }
           }
@@ -4934,65 +4046,30 @@ final class pe implements ntb, utb {
     }
 
     private final void f(boolean param0) {
-        qob[] var2 = null;
-        int var3 = 0;
-        qob var4 = null;
-        int var5 = 0;
-        qob[] var6 = null;
-        fba stackIn_8_0 = null;
-        int[] stackIn_8_1 = null;
-        int[] stackIn_8_2 = null;
-        int stackIn_8_3 = 0;
-        int stackIn_8_4 = 0;
-        qob stackIn_8_5 = null;
-        fba stackIn_10_0 = null;
-        int[] stackIn_10_1 = null;
-        int[] stackIn_10_2 = null;
-        int stackIn_10_3 = 0;
-        int stackIn_10_4 = 0;
-        qob stackIn_10_5 = null;
-        fba stackIn_11_0 = null;
-        int[] stackIn_11_1 = null;
-        int[] stackIn_11_2 = null;
-        int stackIn_11_3 = 0;
-        int stackIn_11_4 = 0;
-        qob stackIn_11_5 = null;
-        int stackIn_11_6 = 0;
-        Object stackIn_13_0 = null;
-        sg[] stackIn_13_1 = null;
+        int[] array$0 = null;
+        fba stackIn_10_0;
+        int[] stackIn_10_1;
+        int[] stackIn_10_2;
+        int stackIn_10_3;
+        int stackIn_10_4;
+        qob stackIn_10_5;
+        fba stackIn_11_0;
+        int[] stackIn_11_1;
+        int[] stackIn_11_2;
+        int stackIn_11_3;
+        int stackIn_11_4;
+        qob stackIn_11_5;
+        int stackIn_11_6;
         Object stackIn_15_0 = null;
         sg[] stackIn_15_1 = null;
         Object stackIn_16_0 = null;
         sg[] stackIn_16_1 = null;
         int stackIn_16_2 = 0;
-        fba stackOut_7_0 = null;
-        int[] stackOut_7_1 = null;
-        int[] stackOut_7_2 = null;
-        int stackOut_7_3 = 0;
-        int stackOut_7_4 = 0;
-        qob stackOut_7_5 = null;
-        fba stackOut_10_0 = null;
-        int[] stackOut_10_1 = null;
-        int[] stackOut_10_2 = null;
-        int stackOut_10_3 = 0;
-        int stackOut_10_4 = 0;
-        qob stackOut_10_5 = null;
-        int stackOut_10_6 = 0;
-        fba stackOut_8_0 = null;
-        int[] stackOut_8_1 = null;
-        int[] stackOut_8_2 = null;
-        int stackOut_8_3 = 0;
-        int stackOut_8_4 = 0;
-        qob stackOut_8_5 = null;
-        int stackOut_8_6 = 0;
-        Object stackOut_12_0 = null;
-        sg[] stackOut_12_1 = null;
-        Object stackOut_15_0 = null;
-        sg[] stackOut_15_1 = null;
-        int stackOut_15_2 = 0;
-        Object stackOut_13_0 = null;
-        sg[] stackOut_13_1 = null;
-        int stackOut_13_2 = 0;
+        qob[] var2;
+        int var3;
+        qob var4;
+        int var5;
+        qob[] var6;
         L0: {
           var5 = VoidHunters.field_G;
           if (null != this.field_u) {
@@ -5013,55 +4090,36 @@ final class pe implements ntb, utb {
               } else {
                 L3: {
                   var4 = var6[var3];
-                  stackOut_7_0 = this.field_u;
-                  stackOut_7_1 = new int[4];
-                  stackOut_7_2 = new int[4];
-                  stackOut_7_3 = 0;
-                  stackOut_7_4 = -16384;
-                  stackOut_7_5 = (qob) (var4);
-                  stackIn_10_0 = stackOut_7_0;
-                  stackIn_10_1 = stackOut_7_1;
-                  stackIn_10_2 = stackOut_7_2;
-                  stackIn_10_3 = stackOut_7_3;
-                  stackIn_10_4 = stackOut_7_4;
-                  stackIn_10_5 = stackOut_7_5;
-                  stackIn_8_0 = stackOut_7_0;
-                  stackIn_8_1 = stackOut_7_1;
-                  stackIn_8_2 = stackOut_7_2;
-                  stackIn_8_3 = stackOut_7_3;
-                  stackIn_8_4 = stackOut_7_4;
-                  stackIn_8_5 = stackOut_7_5;
+                  array$0 = new int[4];
+                  stackIn_10_0 = this.field_u;
+
+                  stackIn_10_1 = (int[]) (array$0);
+
+                  stackIn_10_2 = (int[]) (array$0);
+
+                  stackIn_10_3 = 0;
+
+                  stackIn_10_4 = -16384;
+
+                  stackIn_10_5 = (qob) (var4);
+
                   if (param0) {
-                    stackOut_10_0 = (fba) ((Object) stackIn_10_0);
-                    stackOut_10_1 = (int[]) ((Object) stackIn_10_1);
-                    stackOut_10_2 = (int[]) ((Object) stackIn_10_2);
-                    stackOut_10_3 = stackIn_10_3;
-                    stackOut_10_4 = stackIn_10_4;
-                    stackOut_10_5 = (qob) ((Object) stackIn_10_5);
-                    stackOut_10_6 = 0;
-                    stackIn_11_0 = stackOut_10_0;
-                    stackIn_11_1 = stackOut_10_1;
-                    stackIn_11_2 = stackOut_10_2;
-                    stackIn_11_3 = stackOut_10_3;
-                    stackIn_11_4 = stackOut_10_4;
-                    stackIn_11_5 = stackOut_10_5;
-                    stackIn_11_6 = stackOut_10_6;
+                    stackIn_11_0 = (fba) ((Object) stackIn_10_0);
+                    stackIn_11_1 = (int[]) ((Object) stackIn_10_1);
+                    stackIn_11_2 = (int[]) ((Object) stackIn_10_2);
+                    stackIn_11_3 = stackIn_10_3;
+                    stackIn_11_4 = stackIn_10_4;
+                    stackIn_11_5 = (qob) ((Object) stackIn_10_5);
+                    stackIn_11_6 = 0;
                     break L3;
                   } else {
-                    stackOut_8_0 = (fba) ((Object) stackIn_8_0);
-                    stackOut_8_1 = (int[]) ((Object) stackIn_8_1);
-                    stackOut_8_2 = (int[]) ((Object) stackIn_8_2);
-                    stackOut_8_3 = stackIn_8_3;
-                    stackOut_8_4 = stackIn_8_4;
-                    stackOut_8_5 = (qob) ((Object) stackIn_8_5);
-                    stackOut_8_6 = 1;
-                    stackIn_11_0 = stackOut_8_0;
-                    stackIn_11_1 = stackOut_8_1;
-                    stackIn_11_2 = stackOut_8_2;
-                    stackIn_11_3 = stackOut_8_3;
-                    stackIn_11_4 = stackOut_8_4;
-                    stackIn_11_5 = stackOut_8_5;
-                    stackIn_11_6 = stackOut_8_6;
+                    stackIn_11_0 = (fba) ((Object) stackIn_10_0);
+                    stackIn_11_1 = (int[]) ((Object) stackIn_10_1);
+                    stackIn_11_2 = (int[]) ((Object) stackIn_10_2);
+                    stackIn_11_3 = stackIn_10_3;
+                    stackIn_11_4 = stackIn_10_4;
+                    stackIn_11_5 = (qob) ((Object) stackIn_10_5);
+                    stackIn_11_6 = 1;
                     break L3;
                   }
                 }
@@ -5079,27 +4137,19 @@ final class pe implements ntb, utb {
           }
         }
         L4: {
-          stackOut_12_0 = this;
-          stackOut_12_1 = this.field_k;
-          stackIn_15_0 = stackOut_12_0;
-          stackIn_15_1 = stackOut_12_1;
-          stackIn_13_0 = stackOut_12_0;
-          stackIn_13_1 = stackOut_12_1;
+          stackIn_15_0 = this;
+
+          stackIn_15_1 = this.field_k;
+
           if (param0) {
-            stackOut_15_0 = this;
-            stackOut_15_1 = (sg[]) ((Object) stackIn_15_1);
-            stackOut_15_2 = 0;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
-            stackIn_16_2 = stackOut_15_2;
+            stackIn_16_0 = this;
+            stackIn_16_1 = (sg[]) ((Object) stackIn_15_1);
+            stackIn_16_2 = 0;
             break L4;
           } else {
-            stackOut_13_0 = this;
-            stackOut_13_1 = (sg[]) ((Object) stackIn_13_1);
-            stackOut_13_2 = 1;
-            stackIn_16_0 = stackOut_13_0;
-            stackIn_16_1 = stackOut_13_1;
-            stackIn_16_2 = stackOut_13_2;
+            stackIn_16_0 = this;
+            stackIn_16_1 = (sg[]) ((Object) stackIn_15_1);
+            stackIn_16_2 = 1;
             break L4;
           }
         }
@@ -5118,23 +4168,12 @@ final class pe implements ntb, utb {
     private final anb b(anb[] param0, boolean param1, int param2) {
         RuntimeException var4 = null;
         anb stackIn_8_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        anb stackOut_7_0 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
@@ -5147,8 +4186,7 @@ final class pe implements ntb, utb {
             }
             if (-1 >= (param2 ^ -1)) {
               if (param0.length > param2) {
-                stackOut_7_0 = param0[param2];
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = param0[param2];
                 break L0;
               } else {
                 return null;
@@ -5161,27 +4199,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var4);
-            stackOut_10_1 = new StringBuilder().append("pe.QB(");
-            stackIn_13_0 = stackOut_10_0;
-            stackIn_13_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_13_0 = (RuntimeException) (var4);
+
+            stackIn_13_1 = new StringBuilder().append("pe.QB(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L2;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_14_0 = stackOut_11_0;
-              stackIn_14_1 = stackOut_11_1;
-              stackIn_14_2 = stackOut_11_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L2;
             }
           }
@@ -5191,8 +4221,8 @@ final class pe implements ntb, utb {
     }
 
     final static void a(int param0, long param1, int param2) {
-        faa var4 = null;
-        int var5 = 0;
+        faa var4;
+        int var5;
         L0: {
           var4 = dpa.field_p;
           var4.h(24335, param0);
@@ -5211,16 +4241,16 @@ final class pe implements ntb, utb {
     }
 
     final void a(int param0) {
-        sg[] var2 = null;
-        int var3 = 0;
-        int var5 = 0;
-        sg[] var6 = null;
-        rdb var7 = null;
-        sg var8 = null;
-        rba[] var9 = null;
-        rba var10 = null;
-        cq[] var11 = null;
-        cq var12 = null;
+        sg[] var2;
+        int var3;
+        int var5;
+        sg[] var6;
+        rdb var7;
+        sg var8;
+        rba[] var9;
+        rba var10;
+        cq[] var11;
+        cq var12;
         var5 = VoidHunters.field_G;
         var6 = this.field_k;
         var2 = var6;
@@ -5298,10 +4328,10 @@ final class pe implements ntb, utb {
     }
 
     private final void l(int param0) {
-        nbb[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        nbb[] var5 = null;
+        int var4;
+        nbb[] var2;
+        int var3;
+        nbb[] var5;
         L0: {
           var4 = VoidHunters.field_G;
           if (param0 <= -82) {
@@ -5344,16 +4374,37 @@ final class pe implements ntb, utb {
     }
 
     private final void a(lbb param0, tfa[] param1, byte param2, nwa param3) {
-        RuntimeException var5 = null;
+        Object stackIn_7_0 = null;
+        Object stackIn_8_0 = null;
+        int stackIn_8_1 = 0;
+        RuntimeException stackIn_371_0 = null;
+        StringBuilder stackIn_371_1 = null;
+        RuntimeException stackIn_372_0 = null;
+        StringBuilder stackIn_372_1 = null;
+        String stackIn_372_2 = null;
+        RuntimeException stackIn_375_0 = null;
+        StringBuilder stackIn_375_1 = null;
+        RuntimeException stackIn_376_0 = null;
+        StringBuilder stackIn_376_1 = null;
+        String stackIn_376_2 = null;
+        RuntimeException stackIn_379_0 = null;
+        StringBuilder stackIn_379_1 = null;
+        RuntimeException stackIn_380_0 = null;
+        StringBuilder stackIn_380_1 = null;
+        String stackIn_380_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         sg var10 = null;
-        rdb var10_ref = null;
         int var10_int = 0;
         et[] var10_array = null;
+        anb var10_ref = null;
+        rdb var10_ref2 = null;
         int var11_int = 0;
         Object var11 = null;
         int var12 = 0;
@@ -5364,10 +4415,10 @@ final class pe implements ntb, utb {
         crb[] var16_ref_crb__ = null;
         int var16 = 0;
         int var17 = 0;
-        int var18 = 0;
         sg var18_ref_sg = null;
-        int var19 = 0;
+        int var18 = 0;
         crb var19_ref_crb = null;
+        int var19 = 0;
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
@@ -5406,90 +4457,33 @@ final class pe implements ntb, utb {
         crb var55 = null;
         anb var56 = null;
         anb var57 = null;
-        anb var58 = null;
-        cq var59 = null;
-        rba var60 = null;
-        Random var61 = null;
-        rha var62 = null;
-        rdb var63 = null;
-        ml var64 = null;
-        Random var65 = null;
-        nbb var66 = null;
-        ml var67 = null;
-        sg var68 = null;
-        String var69 = null;
-        sg var71 = null;
+        cq var58 = null;
+        rba var59 = null;
+        Random var60 = null;
+        rha var61 = null;
+        rdb var62 = null;
+        ml var63 = null;
+        Random var64 = null;
+        nbb var65 = null;
+        ml var66 = null;
+        sg var67 = null;
+        String var68 = null;
+        sg var70 = null;
+        Random var71 = null;
         Random var72 = null;
-        Random var73 = null;
-        sg var74 = null;
-        qob var75 = null;
-        et[] var76 = null;
+        sg var73 = null;
+        qob var74 = null;
+        et[] var75 = null;
+        cq var76 = null;
         cq var77 = null;
-        cq var78 = null;
-        anb var79 = null;
-        sg[] var80 = null;
-        sg var81 = null;
-        int[] var84 = null;
-        rdb var85 = null;
-        crb var86 = null;
-        nbb var87 = null;
-        sg var88 = null;
-        Object stackIn_5_0 = null;
-        Object stackIn_7_0 = null;
-        Object stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        RuntimeException stackIn_369_0 = null;
-        StringBuilder stackIn_369_1 = null;
-        RuntimeException stackIn_371_0 = null;
-        StringBuilder stackIn_371_1 = null;
-        RuntimeException stackIn_372_0 = null;
-        StringBuilder stackIn_372_1 = null;
-        String stackIn_372_2 = null;
-        RuntimeException stackIn_373_0 = null;
-        StringBuilder stackIn_373_1 = null;
-        RuntimeException stackIn_375_0 = null;
-        StringBuilder stackIn_375_1 = null;
-        RuntimeException stackIn_376_0 = null;
-        StringBuilder stackIn_376_1 = null;
-        String stackIn_376_2 = null;
-        RuntimeException stackIn_377_0 = null;
-        StringBuilder stackIn_377_1 = null;
-        RuntimeException stackIn_379_0 = null;
-        StringBuilder stackIn_379_1 = null;
-        RuntimeException stackIn_380_0 = null;
-        StringBuilder stackIn_380_1 = null;
-        String stackIn_380_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        RuntimeException stackOut_368_0 = null;
-        StringBuilder stackOut_368_1 = null;
-        RuntimeException stackOut_371_0 = null;
-        StringBuilder stackOut_371_1 = null;
-        String stackOut_371_2 = null;
-        RuntimeException stackOut_369_0 = null;
-        StringBuilder stackOut_369_1 = null;
-        String stackOut_369_2 = null;
-        RuntimeException stackOut_372_0 = null;
-        StringBuilder stackOut_372_1 = null;
-        RuntimeException stackOut_375_0 = null;
-        StringBuilder stackOut_375_1 = null;
-        String stackOut_375_2 = null;
-        RuntimeException stackOut_373_0 = null;
-        StringBuilder stackOut_373_1 = null;
-        String stackOut_373_2 = null;
-        RuntimeException stackOut_376_0 = null;
-        StringBuilder stackOut_376_1 = null;
-        RuntimeException stackOut_379_0 = null;
-        StringBuilder stackOut_379_1 = null;
-        String stackOut_379_2 = null;
-        RuntimeException stackOut_377_0 = null;
-        StringBuilder stackOut_377_1 = null;
-        String stackOut_377_2 = null;
+        anb var78 = null;
+        sg[] var79 = null;
+        sg var80 = null;
+        int[] var83 = null;
+        rdb var84 = null;
+        crb var85 = null;
+        nbb var86 = null;
+        sg var87 = null;
         var24 = null;
         var23 = VoidHunters.field_G;
         try {
@@ -5508,20 +4502,15 @@ final class pe implements ntb, utb {
                     break L2;
                   } else {
                     L3: {
-                      stackOut_4_0 = this;
-                      stackIn_7_0 = stackOut_4_0;
-                      stackIn_5_0 = stackOut_4_0;
+                      stackIn_7_0 = this;
+
                       if (this.field_v) {
-                        stackOut_7_0 = this;
-                        stackOut_7_1 = 0;
-                        stackIn_8_0 = stackOut_7_0;
-                        stackIn_8_1 = stackOut_7_1;
+                        stackIn_8_0 = this;
+                        stackIn_8_1 = 0;
                         break L3;
                       } else {
-                        stackOut_5_0 = this;
-                        stackOut_5_1 = 1;
-                        stackIn_8_0 = stackOut_5_0;
-                        stackIn_8_1 = stackOut_5_1;
+                        stackIn_8_0 = this;
+                        stackIn_8_1 = 1;
                         break L3;
                       }
                     }
@@ -5558,6 +4547,7 @@ final class pe implements ntb, utb {
                               var18_ref_sg = var30[var17];
                               var41 = var18_ref_sg;
                               var42 = var41;
+                              var10 = var42;
                               var41 = var18_ref_sg;
                               if (var18_ref_sg != null) {
                                 if (!this.a(var29, var18_ref_sg, -69)) {
@@ -5656,10 +4646,10 @@ final class pe implements ntb, utb {
                       var10 = this.d(var5_int, 61);
                       var11 = null;
                       var12 = 2147483647;
-                      var80 = this.field_k;
+                      var79 = this.field_k;
                       var14 = 0;
                       L14: while (true) {
-                        if (var80.length <= var14) {
+                        if (var79.length <= var14) {
                           if (null != var11) {
                             L15: {
                               if (null == var10) {
@@ -5681,18 +4671,18 @@ final class pe implements ntb, utb {
                             break L13;
                           }
                         } else {
-                          var81 = var80[var14];
-                          var11 = var81;
-                          var11 = var81;
-                          if (var81 != null) {
+                          var80 = var79[var14];
+                          var11 = var80;
+                          var11 = var80;
+                          if (var80 != null) {
                             L16: {
-                              if (var81 != var10) {
-                                var16 = var81.field_d - var7;
-                                var17 = -var8 + var81.field_e;
+                              if (var80 != var10) {
+                                var16 = var80.field_d - var7;
+                                var17 = -var8 + var80.field_e;
                                 var18 = ar.a(var16, (byte) 108, var17);
                                 if (var12 > var18) {
                                   var12 = var18;
-                                  var11 = var81;
+                                  var11 = var80;
                                   break L16;
                                 } else {
                                   break L16;
@@ -5746,9 +4736,9 @@ final class pe implements ntb, utb {
                                               if (this.field_f != null) {
                                                 L17: {
                                                   var10_int = -1;
-                                                  var79 = this.a((byte) -27, var7, var8);
-                                                  if (null != var79) {
-                                                    var10_int = var79.field_l;
+                                                  var78 = this.a((byte) -27, var7, var8);
+                                                  if (null != var78) {
+                                                    var10_int = var78.field_l;
                                                     break L17;
                                                   } else {
                                                     break L17;
@@ -5826,8 +4816,8 @@ final class pe implements ntb, utb {
                                                                               }
                                                                             } else {
                                                                               if (-50 == (var9 ^ -1)) {
-                                                                                var78 = new cq(var7, var8);
-                                                                                this.a(5706, var78);
+                                                                                var77 = new cq(var7, var8);
+                                                                                this.a(5706, var77);
                                                                                 break L13;
                                                                               } else {
                                                                                 if ((var9 ^ -1) != -51) {
@@ -5838,10 +4828,10 @@ final class pe implements ntb, utb {
                                                                                         if (var10_int >= this.field_t.length) {
                                                                                           break L13;
                                                                                         } else {
-                                                                                          var77 = this.field_t[var10_int];
-                                                                                          if (var77.a(var8, var7, (byte) -98)) {
-                                                                                            var77.field_e = (int)((double)var77.field_e / 1.25);
-                                                                                            var77.field_d = (int)((double)var77.field_d / 1.25);
+                                                                                          var76 = this.field_t[var10_int];
+                                                                                          if (var76.a(var8, var7, (byte) -98)) {
+                                                                                            var76.field_e = (int)((double)var76.field_e / 1.25);
+                                                                                            var76.field_d = (int)((double)var76.field_d / 1.25);
                                                                                             break L13;
                                                                                           } else {
                                                                                             var10_int++;
@@ -5855,19 +4845,19 @@ final class pe implements ntb, utb {
                                                                                   } else {
                                                                                     if (-53 != (var9 ^ -1)) {
                                                                                       if ((var9 ^ -1) == -54) {
-                                                                                        var76 = param0.field_g;
-                                                                                        var10_array = var76;
+                                                                                        var75 = param0.field_g;
+                                                                                        var10_array = var75;
                                                                                         if (null == var10_array) {
                                                                                           break L13;
                                                                                         } else {
                                                                                           var11_int = 0;
                                                                                           L19: while (true) {
-                                                                                            if (var76.length <= var11_int) {
+                                                                                            if (var75.length <= var11_int) {
                                                                                               break L13;
                                                                                             } else {
                                                                                               L20: {
-                                                                                                if (null != var76[var11_int]) {
-                                                                                                  var76[var11_int].field_a = var76[var11_int].field_a / 2;
+                                                                                                if (null != var75[var11_int]) {
+                                                                                                  var75[var11_int].field_a = var75[var11_int].field_a / 2;
                                                                                                   break L20;
                                                                                                 } else {
                                                                                                   break L20;
@@ -5886,9 +4876,9 @@ final class pe implements ntb, utb {
                                                                                           } else {
                                                                                             if (-57 != (var9 ^ -1)) {
                                                                                               if ((var9 ^ -1) == -20) {
-                                                                                                var75 = new qob(var7, var8);
+                                                                                                var74 = new qob(var7, var8);
                                                                                                 this.b((byte) 60);
-                                                                                                this.a(var75, 0);
+                                                                                                this.a(var74, 0);
                                                                                                 break L13;
                                                                                               } else {
                                                                                                 if (20 != var9) {
@@ -5900,29 +4890,29 @@ final class pe implements ntb, utb {
                                                                                                           break L13;
                                                                                                         } else {
                                                                                                           if (57 == var9) {
-                                                                                                            var73 = new Random((long)(var7 * var8));
-                                                                                                            var74 = t.a(hob.a(var73, 12, 126) + 0, (byte) 42);
-                                                                                                            var74.a(new aoa(), 4);
-                                                                                                            var74.h(17704, sja.field_c);
+                                                                                                            var72 = new Random((long)(var7 * var8));
+                                                                                                            var73 = t.a(hob.a(var72, 12, 126) + 0, (byte) 42);
+                                                                                                            var73.a(new aoa(), 4);
+                                                                                                            var73.h(17704, sja.field_c);
                                                                                                             var12 = var7;
                                                                                                             var13 = var8;
-                                                                                                            var74.a(var12, var13, (byte) 52);
-                                                                                                            var74.a(hob.a(var73, 8192, 118), -82);
-                                                                                                            this.a(var74, (byte) 80);
+                                                                                                            var73.a(var12, var13, (byte) 52);
+                                                                                                            var73.a(hob.a(var72, 8192, 118), -82);
+                                                                                                            this.a(var73, (byte) 80);
                                                                                                             break L13;
                                                                                                           } else {
                                                                                                             if (var9 == 58) {
-                                                                                                              var72 = new Random((long)(var7 * var8));
-                                                                                                              var69 = "AAQPKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEg";
-                                                                                                              var84 = hta.a(var69, true, true);
-                                                                                                              var71 = ae.a(var84, (byte) 126);
-                                                                                                              var71.a(new aoa(), 4);
-                                                                                                              var71.h(17704, sja.field_c);
+                                                                                                              var71 = new Random((long)(var7 * var8));
+                                                                                                              var68 = "AAQPKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEg";
+                                                                                                              var83 = hta.a(var68, true, true);
+                                                                                                              var70 = ae.a(var83, (byte) 126);
+                                                                                                              var70.a(new aoa(), 4);
+                                                                                                              var70.h(17704, sja.field_c);
                                                                                                               var14 = var7;
                                                                                                               var15 = var8;
-                                                                                                              var71.a(var14, var15, (byte) 100);
-                                                                                                              var71.a(hob.a(var72, 8192, 120), -51);
-                                                                                                              this.a(var71, (byte) 81);
+                                                                                                              var70.a(var14, var15, (byte) 100);
+                                                                                                              var70.a(hob.a(var71, 8192, 120), -51);
+                                                                                                              this.a(var70, (byte) 81);
                                                                                                               break L13;
                                                                                                             } else {
                                                                                                               if (-73 < (var9 ^ -1)) {
@@ -5930,23 +4920,23 @@ final class pe implements ntb, utb {
                                                                                                               } else {
                                                                                                                 var10_int = -72 + var9;
                                                                                                                 if (tnb.a(130, var10_int)) {
-                                                                                                                  var67 = new ml(var10_int);
-                                                                                                                  var68 = new sg();
-                                                                                                                  var68.field_k = var67;
-                                                                                                                  var68.e((byte) 119);
-                                                                                                                  var68.a(var7, var8, (byte) 42);
-                                                                                                                  this.a(var68, (byte) 83);
+                                                                                                                  var66 = new ml(var10_int);
+                                                                                                                  var67 = new sg();
+                                                                                                                  var67.field_k = var66;
+                                                                                                                  var67.e((byte) 119);
+                                                                                                                  var67.a(var7, var8, (byte) 42);
+                                                                                                                  this.a(var67, (byte) 83);
                                                                                                                   break L13;
                                                                                                                 } else {
                                                                                                                   if (!fbb.b(var10_int, 15923)) {
                                                                                                                     break L13;
                                                                                                                   } else {
-                                                                                                                    var64 = new ml(var10_int);
-                                                                                                                    var66 = new nbb(var64, false);
-                                                                                                                    var65 = new Random((long)var7);
-                                                                                                                    var66.a(hob.a(var65, 8192, 121), -95);
-                                                                                                                    var66.a(var7, var8, (byte) -62);
-                                                                                                                    this.a(var66, (byte) 54);
+                                                                                                                    var63 = new ml(var10_int);
+                                                                                                                    var65 = new nbb(var63, false);
+                                                                                                                    var64 = new Random((long)var7);
+                                                                                                                    var65.a(hob.a(var64, 8192, 121), -95);
+                                                                                                                    var65.a(var7, var8, (byte) -62);
+                                                                                                                    this.a(var65, (byte) 54);
                                                                                                                     break L13;
                                                                                                                   }
                                                                                                                 }
@@ -5967,16 +4957,16 @@ final class pe implements ntb, utb {
                                                                                                     break L13;
                                                                                                   }
                                                                                                 } else {
-                                                                                                  var63 = new rdb(var7, var8, 0);
-                                                                                                  this.a((byte) -59, var63);
+                                                                                                  var62 = new rdb(var7, var8, 0);
+                                                                                                  this.a((byte) -59, var62);
                                                                                                   break L13;
                                                                                                 }
                                                                                               }
                                                                                             } else {
-                                                                                              var61 = new Random((long)(var7 * var8));
-                                                                                              var11_int = hob.a(var61, 5, 123);
-                                                                                              var62 = new rha(var11_int, 0, 0);
-                                                                                              param3.a(var62, true);
+                                                                                              var60 = new Random((long)(var7 * var8));
+                                                                                              var11_int = hob.a(var60, 5, 123);
+                                                                                              var61 = new rha(var11_int, 0, 0);
+                                                                                              param3.a(var61, true);
                                                                                               break L13;
                                                                                             }
                                                                                           }
@@ -5986,8 +4976,8 @@ final class pe implements ntb, utb {
                                                                                         }
                                                                                       }
                                                                                     } else {
-                                                                                      var60 = new rba(var7, var8);
-                                                                                      this.a(var60, (byte) -38);
+                                                                                      var59 = new rba(var7, var8);
+                                                                                      this.a(var59, (byte) -38);
                                                                                       break L13;
                                                                                     }
                                                                                   }
@@ -5998,12 +4988,12 @@ final class pe implements ntb, utb {
                                                                                       if (this.field_t.length <= var10_int) {
                                                                                         break L13;
                                                                                       } else {
-                                                                                        var59 = this.field_t[var10_int];
-                                                                                        var77 = var59;
-                                                                                        var77 = var59;
-                                                                                        if (var59.a(var8, var7, (byte) -98)) {
-                                                                                          var59.field_d = (int)(1.25 * (double)var59.field_d);
-                                                                                          var59.field_e = (int)((double)var59.field_e * 1.25);
+                                                                                        var58 = this.field_t[var10_int];
+                                                                                        var76 = var58;
+                                                                                        var76 = var58;
+                                                                                        if (var58.a(var8, var7, (byte) -98)) {
+                                                                                          var58.field_d = (int)(1.25 * (double)var58.field_d);
+                                                                                          var58.field_e = (int)((double)var58.field_e * 1.25);
                                                                                           break L13;
                                                                                         } else {
                                                                                           var10_int++;
@@ -6058,10 +5048,10 @@ final class pe implements ntb, utb {
                                                               break L13;
                                                             } else {
                                                               L22: {
-                                                                var58 = this.a((byte) -20, var7, var8);
+                                                                var57 = this.a((byte) -20, var7, var8);
                                                                 var11_int = -1;
-                                                                if (var58 != null) {
-                                                                  var11_int = var58.field_l;
+                                                                if (var57 != null) {
+                                                                  var11_int = var57.field_l;
                                                                   break L22;
                                                                 } else {
                                                                   break L22;
@@ -6114,9 +5104,9 @@ final class pe implements ntb, utb {
                                             if (this.field_t != null) {
                                               L23: {
                                                 var10_int = -1;
-                                                var57 = this.a((byte) -116, var7, var8);
-                                                if (null != var57) {
-                                                  var10_int = var57.field_l;
+                                                var56 = this.a((byte) -116, var7, var8);
+                                                if (null != var56) {
+                                                  var10_int = var56.field_l;
                                                   break L23;
                                                 } else {
                                                   break L23;
@@ -6133,9 +5123,9 @@ final class pe implements ntb, utb {
                                         if (null == this.field_f) {
                                           break L13;
                                         } else {
-                                          var56 = this.a((byte) -48, var7, var8);
-                                          if (null != var56) {
-                                            this.field_f.a((byte) -126, (wm) (new cc(var56.field_l)));
+                                          var10_ref = this.a((byte) -48, var7, var8);
+                                          if (null != var10_ref) {
+                                            this.field_f.a((byte) -126, (wm) (new cc(var10_ref.field_l)));
                                             break L13;
                                           } else {
                                             break L13;
@@ -6174,6 +5164,7 @@ final class pe implements ntb, utb {
                             }
                           } else {
                             var42 = this.d(var5_int, 73);
+                            var10 = var42;
                             if (var42 != null) {
                               var11_int = var42.d(false);
                               var12 = var42.g((byte) -107);
@@ -6183,29 +5174,29 @@ final class pe implements ntb, utb {
                               var16 = 0;
                               L25: while (true) {
                                 if (var43.length <= var16) {
-                                  var86 = (crb) ((Object) var46.d(0));
+                                  var85 = (crb) ((Object) var46.d(0));
                                   L26: while (true) {
-                                    if (var86 == null) {
+                                    if (var85 == null) {
                                       var46.e(95);
                                       var47 = this.field_m;
                                       var16 = 0;
                                       L27: while (true) {
                                         if (var16 >= var47.length) {
-                                          var87 = (nbb) ((Object) var46.d(0));
+                                          var86 = (nbb) ((Object) var46.d(0));
                                           L28: while (true) {
-                                            if (var87 == null) {
+                                            if (var86 == null) {
                                               var46.e(107);
                                               var50 = this.field_k;
                                               var16 = 0;
                                               L29: while (true) {
                                                 if (var50.length <= var16) {
-                                                  var88 = (sg) ((Object) var46.d(0));
+                                                  var87 = (sg) ((Object) var46.d(0));
                                                   L30: while (true) {
-                                                    if (null == var88) {
+                                                    if (null == var87) {
                                                       break L13;
                                                     } else {
-                                                      this.a(var88, (byte) 82);
-                                                      var88 = (sg) ((Object) var46.a((byte) 122));
+                                                      this.a(var87, (byte) 82);
+                                                      var87 = (sg) ((Object) var46.a((byte) 122));
                                                       continue L30;
                                                     }
                                                   }
@@ -6240,8 +5231,8 @@ final class pe implements ntb, utb {
                                                 }
                                               }
                                             } else {
-                                              this.a(var87, (byte) 51);
-                                              var87 = (nbb) ((Object) var46.a((byte) 8));
+                                              this.a(var86, (byte) 51);
+                                              var86 = (nbb) ((Object) var46.a((byte) 8));
                                               continue L28;
                                             }
                                           }
@@ -6268,8 +5259,8 @@ final class pe implements ntb, utb {
                                         }
                                       }
                                     } else {
-                                      this.a((byte) 126, var86);
-                                      var86 = (crb) ((Object) var46.a((byte) 80));
+                                      this.a((byte) 126, var85);
+                                      var85 = (crb) ((Object) var46.a((byte) 80));
                                       continue L26;
                                     }
                                   }
@@ -6306,20 +5297,20 @@ final class pe implements ntb, utb {
                           var11_int = 0;
                           L33: while (true) {
                             if (var11_int >= var40.length) {
-                              var10_ref = (rdb) ((Object) this.field_n.d(0));
+                              var10_ref2 = (rdb) ((Object) this.field_n.d(0));
                               L34: while (true) {
-                                if (null == var10_ref) {
+                                if (null == var10_ref2) {
                                   break L13;
                                 } else {
                                   L35: {
-                                    if (!var10_ref.a(var7, (byte) -124, var8)) {
+                                    if (!var10_ref2.a(var7, (byte) -124, var8)) {
                                       break L35;
                                     } else {
-                                      var10_ref.a((1 + var10_ref.d(-29)) % so.field_b, (byte) -93);
+                                      var10_ref2.a((1 + var10_ref2.d(-29)) % so.field_b, (byte) -93);
                                       break L35;
                                     }
                                   }
-                                  var10_ref = (rdb) ((Object) this.field_n.a((byte) 117));
+                                  var10_ref2 = (rdb) ((Object) this.field_n.a((byte) 117));
                                   continue L34;
                                 }
                               }
@@ -6327,7 +5318,9 @@ final class pe implements ntb, utb {
                               L36: {
                                 var41 = var40[var11_int];
                                 var42 = var41;
+                                var10 = var42;
                                 var42 = var41;
+                                var10 = var42;
                                 if (null != var41) {
                                   if (null != var41.field_k.a(var8, var7, true)) {
                                     var41.h(17704, (1 + var41.q((byte) 68)) % so.field_b);
@@ -6355,9 +5348,9 @@ final class pe implements ntb, utb {
                                 var11_int = 0;
                                 L39: while (true) {
                                   if (var11_int >= this.field_k.length) {
-                                    var85 = (rdb) ((Object) this.field_n.d(0));
+                                    var84 = (rdb) ((Object) this.field_n.d(0));
                                     L40: while (true) {
-                                      if (var85 == null) {
+                                      if (var84 == null) {
                                         L41: {
                                           if (this.field_t == null) {
                                             break L41;
@@ -6424,14 +5417,14 @@ final class pe implements ntb, utb {
                                         }
                                       } else {
                                         L46: {
-                                          if (var85.a(var7, (byte) -81, var8)) {
-                                            var85.b(-3846);
+                                          if (var84.a(var7, (byte) -81, var8)) {
+                                            var84.b(-3846);
                                             break L46;
                                           } else {
                                             break L46;
                                           }
                                         }
-                                        var85 = (rdb) ((Object) this.field_n.a((byte) 106));
+                                        var84 = (rdb) ((Object) this.field_n.a((byte) 106));
                                         continue L40;
                                       }
                                     }
@@ -6440,6 +5433,7 @@ final class pe implements ntb, utb {
                                       var35 = this.field_k[var11_int];
                                       var41 = var35;
                                       var42 = var41;
+                                      var10 = var42;
                                       var41 = var35;
                                       if (var35 != null) {
                                         if (var35.field_k.a(var8, var7, true) != null) {
@@ -6460,9 +5454,6 @@ final class pe implements ntb, utb {
                               } else {
                                 L48: {
                                   var34 = this.field_m[var11_int];
-                                  var48 = var34;
-                                  var26 = var48;
-                                  var48 = var34;
                                   if (null != var34) {
                                     if (var34.field_k.a(var8, var7, true) != null) {
                                       this.a(-104, 1, var34);
@@ -6481,7 +5472,6 @@ final class pe implements ntb, utb {
                           } else {
                             L49: {
                               var33 = var32[var11_int];
-                              var44 = var33;
                               if (var33 != null) {
                                 if (null != var33.field_k.a(var8, var7, true)) {
                                   this.a(-105, 2, var33);
@@ -6511,77 +5501,53 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L50: {
             var5 = decompiledCaughtException;
-            stackOut_368_0 = (RuntimeException) (var5);
-            stackOut_368_1 = new StringBuilder().append("pe.JD(");
-            stackIn_371_0 = stackOut_368_0;
-            stackIn_371_1 = stackOut_368_1;
-            stackIn_369_0 = stackOut_368_0;
-            stackIn_369_1 = stackOut_368_1;
+            stackIn_371_0 = (RuntimeException) (var5);
+
+            stackIn_371_1 = new StringBuilder().append("pe.JD(");
+
             if (param0 == null) {
-              stackOut_371_0 = (RuntimeException) ((Object) stackIn_371_0);
-              stackOut_371_1 = (StringBuilder) ((Object) stackIn_371_1);
-              stackOut_371_2 = "null";
-              stackIn_372_0 = stackOut_371_0;
-              stackIn_372_1 = stackOut_371_1;
-              stackIn_372_2 = stackOut_371_2;
+              stackIn_372_0 = (RuntimeException) ((Object) stackIn_371_0);
+              stackIn_372_1 = (StringBuilder) ((Object) stackIn_371_1);
+              stackIn_372_2 = "null";
               break L50;
             } else {
-              stackOut_369_0 = (RuntimeException) ((Object) stackIn_369_0);
-              stackOut_369_1 = (StringBuilder) ((Object) stackIn_369_1);
-              stackOut_369_2 = "{...}";
-              stackIn_372_0 = stackOut_369_0;
-              stackIn_372_1 = stackOut_369_1;
-              stackIn_372_2 = stackOut_369_2;
+              stackIn_372_0 = (RuntimeException) ((Object) stackIn_371_0);
+              stackIn_372_1 = (StringBuilder) ((Object) stackIn_371_1);
+              stackIn_372_2 = "{...}";
               break L50;
             }
           }
           L51: {
-            stackOut_372_0 = (RuntimeException) ((Object) stackIn_372_0);
-            stackOut_372_1 = ((StringBuilder) (Object) stackIn_372_1).append(stackIn_372_2).append(',');
-            stackIn_375_0 = stackOut_372_0;
-            stackIn_375_1 = stackOut_372_1;
-            stackIn_373_0 = stackOut_372_0;
-            stackIn_373_1 = stackOut_372_1;
+            stackIn_375_0 = (RuntimeException) ((Object) stackIn_372_0);
+
+            stackIn_375_1 = ((StringBuilder) (Object) stackIn_372_1).append(stackIn_372_2).append(',');
+
             if (param1 == null) {
-              stackOut_375_0 = (RuntimeException) ((Object) stackIn_375_0);
-              stackOut_375_1 = (StringBuilder) ((Object) stackIn_375_1);
-              stackOut_375_2 = "null";
-              stackIn_376_0 = stackOut_375_0;
-              stackIn_376_1 = stackOut_375_1;
-              stackIn_376_2 = stackOut_375_2;
+              stackIn_376_0 = (RuntimeException) ((Object) stackIn_375_0);
+              stackIn_376_1 = (StringBuilder) ((Object) stackIn_375_1);
+              stackIn_376_2 = "null";
               break L51;
             } else {
-              stackOut_373_0 = (RuntimeException) ((Object) stackIn_373_0);
-              stackOut_373_1 = (StringBuilder) ((Object) stackIn_373_1);
-              stackOut_373_2 = "{...}";
-              stackIn_376_0 = stackOut_373_0;
-              stackIn_376_1 = stackOut_373_1;
-              stackIn_376_2 = stackOut_373_2;
+              stackIn_376_0 = (RuntimeException) ((Object) stackIn_372_0);
+              stackIn_376_1 = (StringBuilder) ((Object) stackIn_375_1);
+              stackIn_376_2 = "{...}";
               break L51;
             }
           }
           L52: {
-            stackOut_376_0 = (RuntimeException) ((Object) stackIn_376_0);
-            stackOut_376_1 = ((StringBuilder) (Object) stackIn_376_1).append(stackIn_376_2).append(',').append(param2).append(',');
-            stackIn_379_0 = stackOut_376_0;
-            stackIn_379_1 = stackOut_376_1;
-            stackIn_377_0 = stackOut_376_0;
-            stackIn_377_1 = stackOut_376_1;
+            stackIn_379_0 = (RuntimeException) ((Object) stackIn_376_0);
+
+            stackIn_379_1 = ((StringBuilder) (Object) stackIn_376_1).append(stackIn_376_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_379_0 = (RuntimeException) ((Object) stackIn_379_0);
-              stackOut_379_1 = (StringBuilder) ((Object) stackIn_379_1);
-              stackOut_379_2 = "null";
-              stackIn_380_0 = stackOut_379_0;
-              stackIn_380_1 = stackOut_379_1;
-              stackIn_380_2 = stackOut_379_2;
+              stackIn_380_0 = (RuntimeException) ((Object) stackIn_379_0);
+              stackIn_380_1 = (StringBuilder) ((Object) stackIn_379_1);
+              stackIn_380_2 = "null";
               break L52;
             } else {
-              stackOut_377_0 = (RuntimeException) ((Object) stackIn_377_0);
-              stackOut_377_1 = (StringBuilder) ((Object) stackIn_377_1);
-              stackOut_377_2 = "{...}";
-              stackIn_380_0 = stackOut_377_0;
-              stackIn_380_1 = stackOut_377_1;
-              stackIn_380_2 = stackOut_377_2;
+              stackIn_380_0 = (RuntimeException) ((Object) stackIn_376_0);
+              stackIn_380_1 = (StringBuilder) ((Object) stackIn_379_1);
+              stackIn_380_2 = "{...}";
               break L52;
             }
           }
@@ -6590,12 +5556,12 @@ final class pe implements ntb, utb {
     }
 
     final anb g(byte param0, int param1) {
-        int var3 = 0;
-        int var4_int = 0;
-        sg var4 = null;
-        nbb var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+        int var3;
+        int var4_int;
+        nbb var5;
+        int var6;
+        sg var4;
+        int var7;
         var6 = VoidHunters.field_G;
         var3 = 0;
         var4_int = -108 % ((-71 - param0) / 44);
@@ -6642,10 +5608,8 @@ final class pe implements ntb, utb {
         int var5 = VoidHunters.field_G;
         tj var6 = (tj) ((Object) this.field_x.d(0));
         while (var6 != null) {
-            if (var6.g((byte) -104) == 6) {
-                if (param0 == var6.d((byte) -119)) {
-                    return true;
-                }
+            if (var6.g((byte) -104) == 6 && param0 == var6.d((byte) -119)) {
+                return true;
             }
             var6 = (tj) ((Object) this.field_x.a((byte) 40));
         }
@@ -6654,16 +5618,16 @@ final class pe implements ntb, utb {
     }
 
     final boolean a(int param0, int param1, boolean param2, int param3) {
-        sg[] var5 = null;
-        rdb var5_ref = null;
-        int var6 = 0;
-        sg var7_ref_sg = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        sg[] var12 = null;
+        sg[] var5;
+        rdb var5_ref;
+        int var6;
+        int var7;
+        sg var7_ref_sg;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        sg[] var12;
         var11 = VoidHunters.field_G;
         var12 = this.field_k;
         var5 = var12;
@@ -6733,22 +5697,12 @@ final class pe implements ntb, utb {
 
     final void a(int param0, cq param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -6766,27 +5720,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (runtimeException);
-            stackOut_4_1 = new StringBuilder().append("pe.HB(").append(param0).append(',');
-            stackIn_7_0 = stackOut_4_0;
-            stackIn_7_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_7_0 = (RuntimeException) (runtimeException);
+
+            stackIn_7_1 = new StringBuilder().append("pe.HB(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_8_0 = stackOut_5_0;
-              stackIn_8_1 = stackOut_5_1;
-              stackIn_8_2 = stackOut_5_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
@@ -6804,42 +5750,17 @@ final class pe implements ntb, utb {
     }
 
     private final void a(anb param0, anb param1, gda param2, int param3, boolean param4) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        RuntimeException var6 = null;
-        wfb var7 = null;
-        int var8 = 0;
-        ml var9 = null;
-        wfb var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        sg var13_ref_sg = null;
-        int var14 = 0;
-        sg var14_ref_sg = null;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        ml var20 = null;
         int stackIn_36_0 = 0;
-        RuntimeException stackIn_87_0 = null;
-        StringBuilder stackIn_87_1 = null;
         RuntimeException stackIn_89_0 = null;
         StringBuilder stackIn_89_1 = null;
         RuntimeException stackIn_90_0 = null;
         StringBuilder stackIn_90_1 = null;
         String stackIn_90_2 = null;
-        RuntimeException stackIn_91_0 = null;
-        StringBuilder stackIn_91_1 = null;
         RuntimeException stackIn_93_0 = null;
         StringBuilder stackIn_93_1 = null;
         RuntimeException stackIn_94_0 = null;
         StringBuilder stackIn_94_1 = null;
         String stackIn_94_2 = null;
-        RuntimeException stackIn_95_0 = null;
-        StringBuilder stackIn_95_1 = null;
         RuntimeException stackIn_97_0 = null;
         StringBuilder stackIn_97_1 = null;
         RuntimeException stackIn_98_0 = null;
@@ -6847,32 +5768,23 @@ final class pe implements ntb, utb {
         String stackIn_98_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
-        RuntimeException stackOut_86_0 = null;
-        StringBuilder stackOut_86_1 = null;
-        RuntimeException stackOut_89_0 = null;
-        StringBuilder stackOut_89_1 = null;
-        String stackOut_89_2 = null;
-        RuntimeException stackOut_87_0 = null;
-        StringBuilder stackOut_87_1 = null;
-        String stackOut_87_2 = null;
-        RuntimeException stackOut_90_0 = null;
-        StringBuilder stackOut_90_1 = null;
-        RuntimeException stackOut_93_0 = null;
-        StringBuilder stackOut_93_1 = null;
-        String stackOut_93_2 = null;
-        RuntimeException stackOut_91_0 = null;
-        StringBuilder stackOut_91_1 = null;
-        String stackOut_91_2 = null;
-        RuntimeException stackOut_94_0 = null;
-        StringBuilder stackOut_94_1 = null;
-        RuntimeException stackOut_97_0 = null;
-        StringBuilder stackOut_97_1 = null;
-        String stackOut_97_2 = null;
-        RuntimeException stackOut_95_0 = null;
-        StringBuilder stackOut_95_1 = null;
-        String stackOut_95_2 = null;
+        RuntimeException var6 = null;
+        wfb var7 = null;
+        int var8 = 0;
+        ml var9 = null;
+        wfb var10 = null;
+        int var11 = 0;
+        int var12 = 0;
+        sg var13_ref_sg = null;
+        int var13 = 0;
+        sg var14_ref_sg = null;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        int var19 = 0;
+        ml var20 = null;
         try {
           L0: {
             L1: {
@@ -6980,12 +5892,10 @@ final class pe implements ntb, utb {
             }
             L9: {
               if (!var20.k((byte) 69)) {
-                stackOut_35_0 = 0;
-                stackIn_36_0 = stackOut_35_0;
+                stackIn_36_0 = 0;
                 break L9;
               } else {
-                stackOut_34_0 = 1;
-                stackIn_36_0 = stackOut_34_0;
+                stackIn_36_0 = 1;
                 break L9;
               }
             }
@@ -7021,7 +5931,7 @@ final class pe implements ntb, utb {
                         }
                       }
                     }
-                    discarded$2 = var20.a(var13, (byte) -119);
+                    var20.a(var13, (byte) -119);
                     break L11;
                   }
                   L14: {
@@ -7047,7 +5957,7 @@ final class pe implements ntb, utb {
                         }
                       }
                     }
-                    discarded$3 = var9.a(var8, (byte) -125);
+                    var9.a(var8, (byte) -125);
                     break L14;
                   }
                   L17: {
@@ -7168,77 +6078,53 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L25: {
             var6 = decompiledCaughtException;
-            stackOut_86_0 = (RuntimeException) (var6);
-            stackOut_86_1 = new StringBuilder().append("pe.VA(");
-            stackIn_89_0 = stackOut_86_0;
-            stackIn_89_1 = stackOut_86_1;
-            stackIn_87_0 = stackOut_86_0;
-            stackIn_87_1 = stackOut_86_1;
+            stackIn_89_0 = (RuntimeException) (var6);
+
+            stackIn_89_1 = new StringBuilder().append("pe.VA(");
+
             if (param0 == null) {
-              stackOut_89_0 = (RuntimeException) ((Object) stackIn_89_0);
-              stackOut_89_1 = (StringBuilder) ((Object) stackIn_89_1);
-              stackOut_89_2 = "null";
-              stackIn_90_0 = stackOut_89_0;
-              stackIn_90_1 = stackOut_89_1;
-              stackIn_90_2 = stackOut_89_2;
+              stackIn_90_0 = (RuntimeException) ((Object) stackIn_89_0);
+              stackIn_90_1 = (StringBuilder) ((Object) stackIn_89_1);
+              stackIn_90_2 = "null";
               break L25;
             } else {
-              stackOut_87_0 = (RuntimeException) ((Object) stackIn_87_0);
-              stackOut_87_1 = (StringBuilder) ((Object) stackIn_87_1);
-              stackOut_87_2 = "{...}";
-              stackIn_90_0 = stackOut_87_0;
-              stackIn_90_1 = stackOut_87_1;
-              stackIn_90_2 = stackOut_87_2;
+              stackIn_90_0 = (RuntimeException) ((Object) stackIn_89_0);
+              stackIn_90_1 = (StringBuilder) ((Object) stackIn_89_1);
+              stackIn_90_2 = "{...}";
               break L25;
             }
           }
           L26: {
-            stackOut_90_0 = (RuntimeException) ((Object) stackIn_90_0);
-            stackOut_90_1 = ((StringBuilder) (Object) stackIn_90_1).append(stackIn_90_2).append(',');
-            stackIn_93_0 = stackOut_90_0;
-            stackIn_93_1 = stackOut_90_1;
-            stackIn_91_0 = stackOut_90_0;
-            stackIn_91_1 = stackOut_90_1;
+            stackIn_93_0 = (RuntimeException) ((Object) stackIn_90_0);
+
+            stackIn_93_1 = ((StringBuilder) (Object) stackIn_90_1).append(stackIn_90_2).append(',');
+
             if (param1 == null) {
-              stackOut_93_0 = (RuntimeException) ((Object) stackIn_93_0);
-              stackOut_93_1 = (StringBuilder) ((Object) stackIn_93_1);
-              stackOut_93_2 = "null";
-              stackIn_94_0 = stackOut_93_0;
-              stackIn_94_1 = stackOut_93_1;
-              stackIn_94_2 = stackOut_93_2;
+              stackIn_94_0 = (RuntimeException) ((Object) stackIn_93_0);
+              stackIn_94_1 = (StringBuilder) ((Object) stackIn_93_1);
+              stackIn_94_2 = "null";
               break L26;
             } else {
-              stackOut_91_0 = (RuntimeException) ((Object) stackIn_91_0);
-              stackOut_91_1 = (StringBuilder) ((Object) stackIn_91_1);
-              stackOut_91_2 = "{...}";
-              stackIn_94_0 = stackOut_91_0;
-              stackIn_94_1 = stackOut_91_1;
-              stackIn_94_2 = stackOut_91_2;
+              stackIn_94_0 = (RuntimeException) ((Object) stackIn_90_0);
+              stackIn_94_1 = (StringBuilder) ((Object) stackIn_93_1);
+              stackIn_94_2 = "{...}";
               break L26;
             }
           }
           L27: {
-            stackOut_94_0 = (RuntimeException) ((Object) stackIn_94_0);
-            stackOut_94_1 = ((StringBuilder) (Object) stackIn_94_1).append(stackIn_94_2).append(',');
-            stackIn_97_0 = stackOut_94_0;
-            stackIn_97_1 = stackOut_94_1;
-            stackIn_95_0 = stackOut_94_0;
-            stackIn_95_1 = stackOut_94_1;
+            stackIn_97_0 = (RuntimeException) ((Object) stackIn_94_0);
+
+            stackIn_97_1 = ((StringBuilder) (Object) stackIn_94_1).append(stackIn_94_2).append(',');
+
             if (param2 == null) {
-              stackOut_97_0 = (RuntimeException) ((Object) stackIn_97_0);
-              stackOut_97_1 = (StringBuilder) ((Object) stackIn_97_1);
-              stackOut_97_2 = "null";
-              stackIn_98_0 = stackOut_97_0;
-              stackIn_98_1 = stackOut_97_1;
-              stackIn_98_2 = stackOut_97_2;
+              stackIn_98_0 = (RuntimeException) ((Object) stackIn_97_0);
+              stackIn_98_1 = (StringBuilder) ((Object) stackIn_97_1);
+              stackIn_98_2 = "null";
               break L27;
             } else {
-              stackOut_95_0 = (RuntimeException) ((Object) stackIn_95_0);
-              stackOut_95_1 = (StringBuilder) ((Object) stackIn_95_1);
-              stackOut_95_2 = "{...}";
-              stackIn_98_0 = stackOut_95_0;
-              stackIn_98_1 = stackOut_95_1;
-              stackIn_98_2 = stackOut_95_2;
+              stackIn_98_0 = (RuntimeException) ((Object) stackIn_94_0);
+              stackIn_98_1 = (StringBuilder) ((Object) stackIn_97_1);
+              stackIn_98_2 = "{...}";
               break L27;
             }
           }
@@ -7252,24 +6138,14 @@ final class pe implements ntb, utb {
     }
 
     private final void a(byte param0, tj param1, boolean param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
@@ -7297,27 +6173,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var4);
-            stackOut_10_1 = new StringBuilder().append("pe.IB(").append(param0).append(',');
-            stackIn_13_0 = stackOut_10_0;
-            stackIn_13_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_13_0 = (RuntimeException) (var4);
+
+            stackIn_13_1 = new StringBuilder().append("pe.IB(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_14_0 = stackOut_11_0;
-              stackIn_14_1 = stackOut_11_1;
-              stackIn_14_2 = stackOut_11_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L3;
             }
           }
@@ -7326,7 +6194,7 @@ final class pe implements ntb, utb {
     }
 
     final anb d(byte param0, int param1) {
-        anb var3 = null;
+        anb var3;
         if (-1 >= (param1 ^ -1)) {
           var3 = this.b(this.field_k, true, param1);
           if (null != var3) {
@@ -7358,11 +6226,11 @@ final class pe implements ntb, utb {
     }
 
     final it a(byte param0, int param1) {
-        int var3 = 0;
-        it[] var4 = null;
-        int var5 = 0;
-        it var6 = null;
-        int var7 = 0;
+        int var3;
+        it[] var4;
+        int var5;
+        it var6;
+        int var7;
         var7 = VoidHunters.field_G;
         if (this.field_j != null) {
           var3 = -102 % ((-32 - param0) / 63);
@@ -7387,14 +6255,6 @@ final class pe implements ntb, utb {
     }
 
     final void a(int param0, int param1, anb param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        Object var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         RuntimeException stackIn_35_0 = null;
@@ -7402,14 +6262,12 @@ final class pe implements ntb, utb {
         String stackIn_35_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        Object var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var8 = VoidHunters.field_G;
         try {
           L0: {
@@ -7492,27 +6350,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var4);
-            stackOut_31_1 = new StringBuilder().append("pe.GE(").append(param0).append(',').append(param1).append(',');
-            stackIn_34_0 = stackOut_31_0;
-            stackIn_34_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackIn_34_0 = (RuntimeException) (var4);
+
+            stackIn_34_1 = new StringBuilder().append("pe.GE(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L6;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_35_0 = stackOut_32_0;
-              stackIn_35_1 = stackOut_32_1;
-              stackIn_35_2 = stackOut_32_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L6;
             }
           }
@@ -7526,7 +6376,12 @@ final class pe implements ntb, utb {
     }
 
     public final void b(byte param0, tv param1) {
-        boolean discarded$1 = false;
+        RuntimeException stackIn_101_0 = null;
+        StringBuilder stackIn_101_1 = null;
+        RuntimeException stackIn_102_0 = null;
+        StringBuilder stackIn_102_1 = null;
+        String stackIn_102_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var5 = 0;
         Object var6 = null;
@@ -7539,22 +6394,6 @@ final class pe implements ntb, utb {
         Object var12 = null;
         Object var13 = null;
         Object var14 = null;
-        RuntimeException stackIn_99_0 = null;
-        StringBuilder stackIn_99_1 = null;
-        RuntimeException stackIn_101_0 = null;
-        StringBuilder stackIn_101_1 = null;
-        RuntimeException stackIn_102_0 = null;
-        StringBuilder stackIn_102_1 = null;
-        String stackIn_102_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_98_0 = null;
-        StringBuilder stackOut_98_1 = null;
-        RuntimeException stackOut_101_0 = null;
-        StringBuilder stackOut_101_1 = null;
-        String stackOut_101_2 = null;
-        RuntimeException stackOut_99_0 = null;
-        StringBuilder stackOut_99_1 = null;
-        String stackOut_99_2 = null;
         var6 = null;
         var5 = VoidHunters.field_G;
         try {
@@ -7705,7 +6544,7 @@ final class pe implements ntb, utb {
               if (param0 >= 54) {
                 break L13;
               } else {
-                discarded$1 = this.a((byte) -80, (tv) null);
+                this.a((byte) -80, (tv) null);
                 break L13;
               }
             }
@@ -7841,27 +6680,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L24: {
             var3 = decompiledCaughtException;
-            stackOut_98_0 = (RuntimeException) (var3);
-            stackOut_98_1 = new StringBuilder().append("pe.D(").append(param0).append(',');
-            stackIn_101_0 = stackOut_98_0;
-            stackIn_101_1 = stackOut_98_1;
-            stackIn_99_0 = stackOut_98_0;
-            stackIn_99_1 = stackOut_98_1;
+            stackIn_101_0 = (RuntimeException) (var3);
+
+            stackIn_101_1 = new StringBuilder().append("pe.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_101_0 = (RuntimeException) ((Object) stackIn_101_0);
-              stackOut_101_1 = (StringBuilder) ((Object) stackIn_101_1);
-              stackOut_101_2 = "null";
-              stackIn_102_0 = stackOut_101_0;
-              stackIn_102_1 = stackOut_101_1;
-              stackIn_102_2 = stackOut_101_2;
+              stackIn_102_0 = (RuntimeException) ((Object) stackIn_101_0);
+              stackIn_102_1 = (StringBuilder) ((Object) stackIn_101_1);
+              stackIn_102_2 = "null";
               break L24;
             } else {
-              stackOut_99_0 = (RuntimeException) ((Object) stackIn_99_0);
-              stackOut_99_1 = (StringBuilder) ((Object) stackIn_99_1);
-              stackOut_99_2 = "{...}";
-              stackIn_102_0 = stackOut_99_0;
-              stackIn_102_1 = stackOut_99_1;
-              stackIn_102_2 = stackOut_99_2;
+              stackIn_102_0 = (RuntimeException) ((Object) stackIn_101_0);
+              stackIn_102_1 = (StringBuilder) ((Object) stackIn_101_1);
+              stackIn_102_2 = "{...}";
               break L24;
             }
           }
@@ -7871,22 +6702,12 @@ final class pe implements ntb, utb {
 
     final void a(bba param0, int param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
@@ -7912,27 +6733,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (runtimeException);
-            stackOut_6_1 = new StringBuilder().append("pe.AF(");
-            stackIn_9_0 = stackOut_6_0;
-            stackIn_9_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_9_0 = (RuntimeException) (runtimeException);
+
+            stackIn_9_1 = new StringBuilder().append("pe.AF(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_10_0 = stackOut_7_0;
-              stackIn_10_1 = stackOut_7_1;
-              stackIn_10_2 = stackOut_7_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -7941,67 +6754,29 @@ final class pe implements ntb, utb {
     }
 
     public final boolean a(byte param0, tv param1) {
-        RuntimeException var3 = null;
-        int var4 = 0;
-        pe var5 = null;
         int stackIn_7_0 = 0;
-        int stackIn_8_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_11_1 = 0;
         int stackIn_22_0 = 0;
         int stackIn_29_0 = 0;
-        int stackIn_30_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_33_0 = 0;
         int stackIn_33_1 = 0;
         int stackIn_46_0 = 0;
-        int stackIn_47_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_50_0 = 0;
         int stackIn_50_1 = 0;
         int stackIn_57_0 = 0;
-        RuntimeException stackIn_59_0 = null;
-        StringBuilder stackIn_59_1 = null;
         RuntimeException stackIn_61_0 = null;
         StringBuilder stackIn_61_1 = null;
         RuntimeException stackIn_62_0 = null;
         StringBuilder stackIn_62_1 = null;
         String stackIn_62_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_32_1 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_30_1 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_49_1 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_47_1 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_54_0 = 0;
-        RuntimeException stackOut_58_0 = null;
-        StringBuilder stackOut_58_1 = null;
-        RuntimeException stackOut_61_0 = null;
-        StringBuilder stackOut_61_1 = null;
-        String stackOut_61_2 = null;
-        RuntimeException stackOut_59_0 = null;
-        StringBuilder stackOut_59_1 = null;
-        String stackOut_59_2 = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        pe var5 = null;
         try {
           L0: {
             L1: {
@@ -8019,30 +6794,23 @@ final class pe implements ntb, utb {
                     } else {
                       L3: {
                         if (this.field_e != null) {
-                          stackOut_6_0 = 0;
-                          stackIn_7_0 = stackOut_6_0;
+                          stackIn_7_0 = 0;
                           break L3;
                         } else {
-                          stackOut_4_0 = 1;
-                          stackIn_7_0 = stackOut_4_0;
+                          stackIn_7_0 = 1;
                           break L3;
                         }
                       }
                       L4: {
-                        stackOut_7_0 = stackIn_7_0;
-                        stackIn_10_0 = stackOut_7_0;
-                        stackIn_8_0 = stackOut_7_0;
+                        stackIn_10_0 = stackIn_7_0;
+
                         if (var5.field_e != null) {
-                          stackOut_10_0 = stackIn_10_0;
-                          stackOut_10_1 = 0;
-                          stackIn_11_0 = stackOut_10_0;
-                          stackIn_11_1 = stackOut_10_1;
+                          stackIn_11_0 = stackIn_10_0;
+                          stackIn_11_1 = 0;
                           break L4;
                         } else {
-                          stackOut_8_0 = stackIn_8_0;
-                          stackOut_8_1 = 1;
-                          stackIn_11_0 = stackOut_8_0;
-                          stackIn_11_1 = stackOut_8_1;
+                          stackIn_11_0 = stackIn_7_0;
+                          stackIn_11_1 = 1;
                           break L4;
                         }
                       }
@@ -8071,12 +6839,10 @@ final class pe implements ntb, utb {
                             } else {
                               L6: {
                                 if (var5.field_v) {
-                                  stackOut_21_0 = 0;
-                                  stackIn_22_0 = stackOut_21_0;
+                                  stackIn_22_0 = 0;
                                   break L6;
                                 } else {
-                                  stackOut_19_0 = 1;
-                                  stackIn_22_0 = stackOut_19_0;
+                                  stackIn_22_0 = 1;
                                   break L6;
                                 }
                               }
@@ -8091,30 +6857,23 @@ final class pe implements ntb, utb {
                                   } else {
                                     L7: {
                                       if (var5.field_f != null) {
-                                        stackOut_28_0 = 0;
-                                        stackIn_29_0 = stackOut_28_0;
+                                        stackIn_29_0 = 0;
                                         break L7;
                                       } else {
-                                        stackOut_26_0 = 1;
-                                        stackIn_29_0 = stackOut_26_0;
+                                        stackIn_29_0 = 1;
                                         break L7;
                                       }
                                     }
                                     L8: {
-                                      stackOut_29_0 = stackIn_29_0;
-                                      stackIn_32_0 = stackOut_29_0;
-                                      stackIn_30_0 = stackOut_29_0;
+                                      stackIn_32_0 = stackIn_29_0;
+
                                       if (null != this.field_f) {
-                                        stackOut_32_0 = stackIn_32_0;
-                                        stackOut_32_1 = 0;
-                                        stackIn_33_0 = stackOut_32_0;
-                                        stackIn_33_1 = stackOut_32_1;
+                                        stackIn_33_0 = stackIn_32_0;
+                                        stackIn_33_1 = 0;
                                         break L8;
                                       } else {
-                                        stackOut_30_0 = stackIn_30_0;
-                                        stackOut_30_1 = 1;
-                                        stackIn_33_0 = stackOut_30_0;
-                                        stackIn_33_1 = stackOut_30_1;
+                                        stackIn_33_0 = stackIn_29_0;
+                                        stackIn_33_1 = 1;
                                         break L8;
                                       }
                                     }
@@ -8149,30 +6908,23 @@ final class pe implements ntb, utb {
                                               } else {
                                                 L10: {
                                                   if (null != this.field_b) {
-                                                    stackOut_45_0 = 0;
-                                                    stackIn_46_0 = stackOut_45_0;
+                                                    stackIn_46_0 = 0;
                                                     break L10;
                                                   } else {
-                                                    stackOut_43_0 = 1;
-                                                    stackIn_46_0 = stackOut_43_0;
+                                                    stackIn_46_0 = 1;
                                                     break L10;
                                                   }
                                                 }
                                                 L11: {
-                                                  stackOut_46_0 = stackIn_46_0;
-                                                  stackIn_49_0 = stackOut_46_0;
-                                                  stackIn_47_0 = stackOut_46_0;
+                                                  stackIn_49_0 = stackIn_46_0;
+
                                                   if (null != var5.field_b) {
-                                                    stackOut_49_0 = stackIn_49_0;
-                                                    stackOut_49_1 = 0;
-                                                    stackIn_50_0 = stackOut_49_0;
-                                                    stackIn_50_1 = stackOut_49_1;
+                                                    stackIn_50_0 = stackIn_49_0;
+                                                    stackIn_50_1 = 0;
                                                     break L11;
                                                   } else {
-                                                    stackOut_47_0 = stackIn_47_0;
-                                                    stackOut_47_1 = 1;
-                                                    stackIn_50_0 = stackOut_47_0;
-                                                    stackIn_50_1 = stackOut_47_1;
+                                                    stackIn_50_0 = stackIn_46_0;
+                                                    stackIn_50_1 = 1;
                                                     break L11;
                                                   }
                                                 }
@@ -8190,8 +6942,7 @@ final class pe implements ntb, utb {
                                                       }
                                                     }
                                                   }
-                                                  stackOut_56_0 = 0;
-                                                  stackIn_57_0 = stackOut_56_0;
+                                                  stackIn_57_0 = 0;
                                                   break L1;
                                                 }
                                               }
@@ -8211,8 +6962,7 @@ final class pe implements ntb, utb {
                   }
                 }
               }
-              stackOut_54_0 = 1;
-              stackIn_57_0 = stackOut_54_0;
+              stackIn_57_0 = 1;
               break L1;
             }
             break L0;
@@ -8221,27 +6971,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
             var3 = decompiledCaughtException;
-            stackOut_58_0 = (RuntimeException) (var3);
-            stackOut_58_1 = new StringBuilder().append("pe.C(").append(param0).append(',');
-            stackIn_61_0 = stackOut_58_0;
-            stackIn_61_1 = stackOut_58_1;
-            stackIn_59_0 = stackOut_58_0;
-            stackIn_59_1 = stackOut_58_1;
+            stackIn_61_0 = (RuntimeException) (var3);
+
+            stackIn_61_1 = new StringBuilder().append("pe.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_61_0 = (RuntimeException) ((Object) stackIn_61_0);
-              stackOut_61_1 = (StringBuilder) ((Object) stackIn_61_1);
-              stackOut_61_2 = "null";
-              stackIn_62_0 = stackOut_61_0;
-              stackIn_62_1 = stackOut_61_1;
-              stackIn_62_2 = stackOut_61_2;
+              stackIn_62_0 = (RuntimeException) ((Object) stackIn_61_0);
+              stackIn_62_1 = (StringBuilder) ((Object) stackIn_61_1);
+              stackIn_62_2 = "null";
               break L13;
             } else {
-              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
-              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
-              stackOut_59_2 = "{...}";
-              stackIn_62_0 = stackOut_59_0;
-              stackIn_62_1 = stackOut_59_1;
-              stackIn_62_2 = stackOut_59_2;
+              stackIn_62_0 = (RuntimeException) ((Object) stackIn_61_0);
+              stackIn_62_1 = (StringBuilder) ((Object) stackIn_61_1);
+              stackIn_62_2 = "{...}";
               break L13;
             }
           }
@@ -8251,31 +6993,20 @@ final class pe implements ntb, utb {
     }
 
     private final boolean a(ml param0, ml param1, int param2, sg param3, int param4) {
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        ml var7 = null;
-        Object var8 = null;
-        int var10 = 0;
         int stackIn_18_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_25_0 = 0;
         int stackIn_27_0 = 0;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_36_2 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
@@ -8283,34 +7014,11 @@ final class pe implements ntb, utb {
         String stackIn_40_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_24_0 = 0;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        ml var7 = null;
+        Object var8 = null;
+        int var10 = 0;
         var10 = VoidHunters.field_G;
         try {
           L0: {
@@ -8362,8 +7070,7 @@ final class pe implements ntb, utb {
                           var7.a((pe) (this), (byte) -111, (anb) (param3));
                           param0.a(false, var7, (pe) (this), param2 ^ 94, param3);
                           qba.a(20382, param3.d(false), 8, param3.g((byte) -90), 5);
-                          stackOut_20_0 = 1;
-                          stackIn_21_0 = stackOut_20_0;
+                          stackIn_21_0 = 1;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         }
@@ -8376,8 +7083,7 @@ final class pe implements ntb, utb {
                         if (!this.a(var7, (ml) (var8), 0, param3, param4)) {
                           break L6;
                         } else {
-                          stackOut_17_0 = 1;
-                          stackIn_18_0 = stackOut_17_0;
+                          stackIn_18_0 = 1;
                           decompiledRegionSelector0 = 0;
                           break L0;
                         }
@@ -8390,13 +7096,11 @@ final class pe implements ntb, utb {
               }
             }
             if (param2 == 0) {
-              stackOut_26_0 = 0;
-              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_0 = 0;
               decompiledRegionSelector0 = 3;
               break L0;
             } else {
-              stackOut_24_0 = 0;
-              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_0 = 0;
               decompiledRegionSelector0 = 2;
               break L0;
             }
@@ -8405,77 +7109,53 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) (var6);
-            stackOut_28_1 = new StringBuilder().append("pe.T(");
-            stackIn_31_0 = stackOut_28_0;
-            stackIn_31_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackIn_31_0 = (RuntimeException) (var6);
+
+            stackIn_31_1 = new StringBuilder().append("pe.T(");
+
             if (param0 == null) {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
               break L7;
             } else {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "{...}";
-              stackIn_32_0 = stackOut_29_0;
-              stackIn_32_1 = stackOut_29_1;
-              stackIn_32_2 = stackOut_29_2;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',');
-            stackIn_35_0 = stackOut_32_0;
-            stackIn_35_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackIn_35_0 = (RuntimeException) ((Object) stackIn_32_0);
+
+            stackIn_35_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',');
+
             if (param1 == null) {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "null";
               break L8;
             } else {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "{...}";
-              stackIn_36_0 = stackOut_33_0;
-              stackIn_36_1 = stackOut_33_1;
-              stackIn_36_2 = stackOut_33_2;
+              stackIn_36_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackIn_36_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-            stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(',').append(param2).append(',');
-            stackIn_39_0 = stackOut_36_0;
-            stackIn_39_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+            stackIn_39_0 = (RuntimeException) ((Object) stackIn_36_0);
+
+            stackIn_39_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "null";
               break L9;
             } else {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "{...}";
-              stackIn_40_0 = stackOut_37_0;
-              stackIn_40_1 = stackOut_37_1;
-              stackIn_40_2 = stackOut_37_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "{...}";
               break L9;
             }
           }
@@ -8497,30 +7177,30 @@ final class pe implements ntb, utb {
     }
 
     final rca a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var7 = 0;
-        int var8 = 0;
-        crb[] var9 = null;
-        rca var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        crb[] var19_ref_crb__ = null;
-        int var19 = 0;
-        int var20_int = 0;
-        sg[] var20 = null;
-        crb var21_ref_crb = null;
-        int var21 = 0;
-        int var22_int = 0;
-        sg var22 = null;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
+        int var7;
+        int var8;
+        crb[] var9;
+        rca var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        crb[] var19_ref_crb__;
+        int var19;
+        int var20_int;
+        sg[] var20;
+        crb var21_ref_crb;
+        int var21;
+        int var22_int;
+        sg var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
         var26 = VoidHunters.field_G;
         var7 = 32768;
         var8 = 0;
@@ -8619,8 +7299,20 @@ final class pe implements ntb, utb {
     }
 
     private final void a(int param0, int param1, tfa[] param2, lbb param3) {
-        RuntimeException var5 = null;
+        RuntimeException stackIn_100_0 = null;
+        StringBuilder stackIn_100_1 = null;
+        RuntimeException stackIn_101_0 = null;
+        StringBuilder stackIn_101_1 = null;
+        String stackIn_101_2 = null;
+        RuntimeException stackIn_104_0 = null;
+        StringBuilder stackIn_104_1 = null;
+        RuntimeException stackIn_105_0 = null;
+        StringBuilder stackIn_105_1 = null;
+        String stackIn_105_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         sg[] var7_ref_sg__ = null;
         int var7 = 0;
@@ -8649,38 +7341,6 @@ final class pe implements ntb, utb {
         sg var26 = null;
         sg var27 = null;
         String var28 = null;
-        RuntimeException stackIn_98_0 = null;
-        StringBuilder stackIn_98_1 = null;
-        RuntimeException stackIn_100_0 = null;
-        StringBuilder stackIn_100_1 = null;
-        RuntimeException stackIn_101_0 = null;
-        StringBuilder stackIn_101_1 = null;
-        String stackIn_101_2 = null;
-        RuntimeException stackIn_102_0 = null;
-        StringBuilder stackIn_102_1 = null;
-        RuntimeException stackIn_104_0 = null;
-        StringBuilder stackIn_104_1 = null;
-        RuntimeException stackIn_105_0 = null;
-        StringBuilder stackIn_105_1 = null;
-        String stackIn_105_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_97_0 = null;
-        StringBuilder stackOut_97_1 = null;
-        RuntimeException stackOut_100_0 = null;
-        StringBuilder stackOut_100_1 = null;
-        String stackOut_100_2 = null;
-        RuntimeException stackOut_98_0 = null;
-        StringBuilder stackOut_98_1 = null;
-        String stackOut_98_2 = null;
-        RuntimeException stackOut_101_0 = null;
-        StringBuilder stackOut_101_1 = null;
-        RuntimeException stackOut_104_0 = null;
-        StringBuilder stackOut_104_1 = null;
-        String stackOut_104_2 = null;
-        RuntimeException stackOut_102_0 = null;
-        StringBuilder stackOut_102_1 = null;
-        String stackOut_102_2 = null;
         var23 = VoidHunters.field_G;
         try {
           L0: {
@@ -8958,52 +7618,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L23: {
             var5 = decompiledCaughtException;
-            stackOut_97_0 = (RuntimeException) (var5);
-            stackOut_97_1 = new StringBuilder().append("pe.NE(").append(param0).append(',').append(param1).append(',');
-            stackIn_100_0 = stackOut_97_0;
-            stackIn_100_1 = stackOut_97_1;
-            stackIn_98_0 = stackOut_97_0;
-            stackIn_98_1 = stackOut_97_1;
+            stackIn_100_0 = (RuntimeException) (var5);
+
+            stackIn_100_1 = new StringBuilder().append("pe.NE(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_100_0 = (RuntimeException) ((Object) stackIn_100_0);
-              stackOut_100_1 = (StringBuilder) ((Object) stackIn_100_1);
-              stackOut_100_2 = "null";
-              stackIn_101_0 = stackOut_100_0;
-              stackIn_101_1 = stackOut_100_1;
-              stackIn_101_2 = stackOut_100_2;
+              stackIn_101_0 = (RuntimeException) ((Object) stackIn_100_0);
+              stackIn_101_1 = (StringBuilder) ((Object) stackIn_100_1);
+              stackIn_101_2 = "null";
               break L23;
             } else {
-              stackOut_98_0 = (RuntimeException) ((Object) stackIn_98_0);
-              stackOut_98_1 = (StringBuilder) ((Object) stackIn_98_1);
-              stackOut_98_2 = "{...}";
-              stackIn_101_0 = stackOut_98_0;
-              stackIn_101_1 = stackOut_98_1;
-              stackIn_101_2 = stackOut_98_2;
+              stackIn_101_0 = (RuntimeException) ((Object) stackIn_100_0);
+              stackIn_101_1 = (StringBuilder) ((Object) stackIn_100_1);
+              stackIn_101_2 = "{...}";
               break L23;
             }
           }
           L24: {
-            stackOut_101_0 = (RuntimeException) ((Object) stackIn_101_0);
-            stackOut_101_1 = ((StringBuilder) (Object) stackIn_101_1).append(stackIn_101_2).append(',');
-            stackIn_104_0 = stackOut_101_0;
-            stackIn_104_1 = stackOut_101_1;
-            stackIn_102_0 = stackOut_101_0;
-            stackIn_102_1 = stackOut_101_1;
+            stackIn_104_0 = (RuntimeException) ((Object) stackIn_101_0);
+
+            stackIn_104_1 = ((StringBuilder) (Object) stackIn_101_1).append(stackIn_101_2).append(',');
+
             if (param3 == null) {
-              stackOut_104_0 = (RuntimeException) ((Object) stackIn_104_0);
-              stackOut_104_1 = (StringBuilder) ((Object) stackIn_104_1);
-              stackOut_104_2 = "null";
-              stackIn_105_0 = stackOut_104_0;
-              stackIn_105_1 = stackOut_104_1;
-              stackIn_105_2 = stackOut_104_2;
+              stackIn_105_0 = (RuntimeException) ((Object) stackIn_104_0);
+              stackIn_105_1 = (StringBuilder) ((Object) stackIn_104_1);
+              stackIn_105_2 = "null";
               break L24;
             } else {
-              stackOut_102_0 = (RuntimeException) ((Object) stackIn_102_0);
-              stackOut_102_1 = (StringBuilder) ((Object) stackIn_102_1);
-              stackOut_102_2 = "{...}";
-              stackIn_105_0 = stackOut_102_0;
-              stackIn_105_1 = stackOut_102_1;
-              stackIn_105_2 = stackOut_102_2;
+              stackIn_105_0 = (RuntimeException) ((Object) stackIn_101_0);
+              stackIn_105_1 = (StringBuilder) ((Object) stackIn_104_1);
+              stackIn_105_2 = "{...}";
               break L24;
             }
           }
@@ -9017,11 +7661,80 @@ final class pe implements ntb, utb {
     }
 
     public final void b(faa param0, int param1) {
-        int discarded$3 = 0;
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        RuntimeException var3 = null;
-        faa var3_ref = null;
+        int stackIn_5_0 = 0;
+        faa stackIn_13_0 = null;
+        int stackIn_13_1 = 0;
+        faa stackIn_14_0 = null;
+        int stackIn_14_1 = 0;
+        int stackIn_14_2 = 0;
+        int stackIn_25_0 = 0;
+        faa stackIn_31_0 = null;
+        int stackIn_31_1 = 0;
+        faa stackIn_32_0 = null;
+        int stackIn_32_1 = 0;
+        int stackIn_32_2 = 0;
+        int stackIn_41_0 = 0;
+        faa stackIn_49_0 = null;
+        int stackIn_49_1 = 0;
+        faa stackIn_50_0 = null;
+        int stackIn_50_1 = 0;
+        int stackIn_50_2 = 0;
+        faa stackIn_56_0 = null;
+        int stackIn_56_1 = 0;
+        faa stackIn_57_0 = null;
+        int stackIn_57_1 = 0;
+        int stackIn_57_2 = 0;
+        int stackIn_65_0 = 0;
+        faa stackIn_71_0 = null;
+        int stackIn_71_1 = 0;
+        faa stackIn_72_0 = null;
+        int stackIn_72_1 = 0;
+        int stackIn_72_2 = 0;
+        int stackIn_81_0 = 0;
+        faa stackIn_89_0 = null;
+        int stackIn_89_1 = 0;
+        faa stackIn_90_0 = null;
+        int stackIn_90_1 = 0;
+        int stackIn_90_2 = 0;
+        int stackIn_96_0 = 0;
+        int stackIn_97_0 = 0;
+        int stackIn_97_1 = 0;
+        faa stackIn_100_0 = null;
+        int stackIn_100_1 = 0;
+        faa stackIn_101_0 = null;
+        int stackIn_101_1 = 0;
+        int stackIn_101_2 = 0;
+        int stackIn_107_0 = 0;
+        faa stackIn_115_0 = null;
+        int stackIn_115_1 = 0;
+        faa stackIn_116_0 = null;
+        int stackIn_116_1 = 0;
+        int stackIn_116_2 = 0;
+        int stackIn_125_0 = 0;
+        faa stackIn_133_0 = null;
+        int stackIn_133_1 = 0;
+        faa stackIn_134_0 = null;
+        int stackIn_134_1 = 0;
+        int stackIn_134_2 = 0;
+        int stackIn_143_0 = 0;
+        faa stackIn_151_0 = null;
+        int stackIn_151_1 = 0;
+        faa stackIn_152_0 = null;
+        int stackIn_152_1 = 0;
+        int stackIn_152_2 = 0;
+        faa stackIn_160_0 = null;
+        int stackIn_160_1 = 0;
+        faa stackIn_161_0 = null;
+        int stackIn_161_1 = 0;
+        int stackIn_161_2 = 0;
+        RuntimeException stackIn_168_0 = null;
+        StringBuilder stackIn_168_1 = null;
+        RuntimeException stackIn_169_0 = null;
+        StringBuilder stackIn_169_1 = null;
+        String stackIn_169_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        faa var3 = null;
+        RuntimeException var3_ref = null;
         sg[] var4 = null;
         tv[] var4_array = null;
         nbb[] var4_array2 = null;
@@ -9030,269 +7743,54 @@ final class pe implements ntb, utb {
         rba[] var4_array5 = null;
         it[] var4_array6 = null;
         int var5 = 0;
+        sg[] var6 = null;
+        tv[] var6_array = null;
         int var7 = 0;
         sg var8 = null;
-        nbb var8_ref = null;
-        mqb var8_ref2 = null;
-        cq var8_ref3 = null;
-        rba var8_ref4 = null;
-        it var8_ref5 = null;
+        tv var8_ref = null;
+        nbb var8_ref2 = null;
+        mqb var8_ref3 = null;
+        cq var8_ref4 = null;
+        rba var8_ref5 = null;
+        it var8_ref6 = null;
         int var9 = 0;
         sg[] var10 = null;
         faa var11 = null;
         sg[] var12 = null;
         tv[] var13 = null;
         faa var14 = null;
-        tv[] var15 = null;
-        tv var16 = null;
+        nbb[] var15 = null;
+        faa var16 = null;
         nbb[] var17 = null;
-        faa var18 = null;
-        nbb[] var19 = null;
+        tv[] var18 = null;
+        faa var19 = null;
         tv[] var20 = null;
-        faa var21 = null;
-        tv[] var22 = null;
-        tv var23 = null;
+        tv var21 = null;
+        mqb[] var22 = null;
+        faa var23 = null;
         mqb[] var24 = null;
-        faa var25 = null;
-        mqb[] var26 = null;
+        cq[] var25 = null;
+        faa var26 = null;
         cq[] var27 = null;
-        faa var28 = null;
-        cq[] var29 = null;
+        rba[] var28 = null;
+        faa var29 = null;
         rba[] var30 = null;
-        faa var31 = null;
-        rba[] var32 = null;
+        it[] var31 = null;
+        faa var32 = null;
         it[] var33 = null;
-        faa var34 = null;
-        it[] var35 = null;
-        int stackIn_5_0 = 0;
-        faa stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        faa stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
-        faa stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
-        int stackIn_14_2 = 0;
-        int stackIn_25_0 = 0;
-        faa stackIn_29_0 = null;
-        int stackIn_29_1 = 0;
-        faa stackIn_31_0 = null;
-        int stackIn_31_1 = 0;
-        faa stackIn_32_0 = null;
-        int stackIn_32_1 = 0;
-        int stackIn_32_2 = 0;
-        int stackIn_41_0 = 0;
-        faa stackIn_47_0 = null;
-        int stackIn_47_1 = 0;
-        faa stackIn_49_0 = null;
-        int stackIn_49_1 = 0;
-        faa stackIn_50_0 = null;
-        int stackIn_50_1 = 0;
-        int stackIn_50_2 = 0;
-        faa stackIn_54_0 = null;
-        int stackIn_54_1 = 0;
-        faa stackIn_56_0 = null;
-        int stackIn_56_1 = 0;
-        faa stackIn_57_0 = null;
-        int stackIn_57_1 = 0;
-        int stackIn_57_2 = 0;
-        int stackIn_65_0 = 0;
-        faa stackIn_69_0 = null;
-        int stackIn_69_1 = 0;
-        faa stackIn_71_0 = null;
-        int stackIn_71_1 = 0;
-        faa stackIn_72_0 = null;
-        int stackIn_72_1 = 0;
-        int stackIn_72_2 = 0;
-        int stackIn_81_0 = 0;
-        faa stackIn_87_0 = null;
-        int stackIn_87_1 = 0;
-        faa stackIn_89_0 = null;
-        int stackIn_89_1 = 0;
-        faa stackIn_90_0 = null;
-        int stackIn_90_1 = 0;
-        int stackIn_90_2 = 0;
-        int stackIn_94_0 = 0;
-        int stackIn_96_0 = 0;
-        int stackIn_97_0 = 0;
-        int stackIn_97_1 = 0;
-        faa stackIn_98_0 = null;
-        int stackIn_98_1 = 0;
-        faa stackIn_100_0 = null;
-        int stackIn_100_1 = 0;
-        faa stackIn_101_0 = null;
-        int stackIn_101_1 = 0;
-        int stackIn_101_2 = 0;
-        int stackIn_107_0 = 0;
-        faa stackIn_113_0 = null;
-        int stackIn_113_1 = 0;
-        faa stackIn_115_0 = null;
-        int stackIn_115_1 = 0;
-        faa stackIn_116_0 = null;
-        int stackIn_116_1 = 0;
-        int stackIn_116_2 = 0;
-        int stackIn_125_0 = 0;
-        faa stackIn_131_0 = null;
-        int stackIn_131_1 = 0;
-        faa stackIn_133_0 = null;
-        int stackIn_133_1 = 0;
-        faa stackIn_134_0 = null;
-        int stackIn_134_1 = 0;
-        int stackIn_134_2 = 0;
-        int stackIn_143_0 = 0;
-        faa stackIn_149_0 = null;
-        int stackIn_149_1 = 0;
-        faa stackIn_151_0 = null;
-        int stackIn_151_1 = 0;
-        faa stackIn_152_0 = null;
-        int stackIn_152_1 = 0;
-        int stackIn_152_2 = 0;
-        faa stackIn_158_0 = null;
-        int stackIn_158_1 = 0;
-        faa stackIn_160_0 = null;
-        int stackIn_160_1 = 0;
-        faa stackIn_161_0 = null;
-        int stackIn_161_1 = 0;
-        int stackIn_161_2 = 0;
-        RuntimeException stackIn_166_0 = null;
-        StringBuilder stackIn_166_1 = null;
-        RuntimeException stackIn_168_0 = null;
-        StringBuilder stackIn_168_1 = null;
-        RuntimeException stackIn_169_0 = null;
-        StringBuilder stackIn_169_1 = null;
-        String stackIn_169_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
-        faa stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        faa stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        faa stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_22_0 = 0;
-        faa stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        faa stackOut_31_0 = null;
-        int stackOut_31_1 = 0;
-        int stackOut_31_2 = 0;
-        faa stackOut_29_0 = null;
-        int stackOut_29_1 = 0;
-        int stackOut_29_2 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_38_0 = 0;
-        faa stackOut_46_0 = null;
-        int stackOut_46_1 = 0;
-        faa stackOut_49_0 = null;
-        int stackOut_49_1 = 0;
-        int stackOut_49_2 = 0;
-        faa stackOut_47_0 = null;
-        int stackOut_47_1 = 0;
-        int stackOut_47_2 = 0;
-        faa stackOut_53_0 = null;
-        int stackOut_53_1 = 0;
-        faa stackOut_56_0 = null;
-        int stackOut_56_1 = 0;
-        int stackOut_56_2 = 0;
-        faa stackOut_54_0 = null;
-        int stackOut_54_1 = 0;
-        int stackOut_54_2 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_62_0 = 0;
-        faa stackOut_68_0 = null;
-        int stackOut_68_1 = 0;
-        faa stackOut_71_0 = null;
-        int stackOut_71_1 = 0;
-        int stackOut_71_2 = 0;
-        faa stackOut_69_0 = null;
-        int stackOut_69_1 = 0;
-        int stackOut_69_2 = 0;
-        int stackOut_80_0 = 0;
-        int stackOut_78_0 = 0;
-        faa stackOut_86_0 = null;
-        int stackOut_86_1 = 0;
-        faa stackOut_89_0 = null;
-        int stackOut_89_1 = 0;
-        int stackOut_89_2 = 0;
-        faa stackOut_87_0 = null;
-        int stackOut_87_1 = 0;
-        int stackOut_87_2 = 0;
-        int stackOut_93_0 = 0;
-        int stackOut_96_0 = 0;
-        int stackOut_96_1 = 0;
-        int stackOut_94_0 = 0;
-        int stackOut_94_1 = 0;
-        faa stackOut_97_0 = null;
-        int stackOut_97_1 = 0;
-        faa stackOut_100_0 = null;
-        int stackOut_100_1 = 0;
-        int stackOut_100_2 = 0;
-        faa stackOut_98_0 = null;
-        int stackOut_98_1 = 0;
-        int stackOut_98_2 = 0;
-        int stackOut_106_0 = 0;
-        int stackOut_104_0 = 0;
-        faa stackOut_112_0 = null;
-        int stackOut_112_1 = 0;
-        faa stackOut_115_0 = null;
-        int stackOut_115_1 = 0;
-        int stackOut_115_2 = 0;
-        faa stackOut_113_0 = null;
-        int stackOut_113_1 = 0;
-        int stackOut_113_2 = 0;
-        int stackOut_124_0 = 0;
-        int stackOut_122_0 = 0;
-        faa stackOut_130_0 = null;
-        int stackOut_130_1 = 0;
-        faa stackOut_133_0 = null;
-        int stackOut_133_1 = 0;
-        int stackOut_133_2 = 0;
-        faa stackOut_131_0 = null;
-        int stackOut_131_1 = 0;
-        int stackOut_131_2 = 0;
-        int stackOut_142_0 = 0;
-        int stackOut_140_0 = 0;
-        faa stackOut_148_0 = null;
-        int stackOut_148_1 = 0;
-        faa stackOut_151_0 = null;
-        int stackOut_151_1 = 0;
-        int stackOut_151_2 = 0;
-        faa stackOut_149_0 = null;
-        int stackOut_149_1 = 0;
-        int stackOut_149_2 = 0;
-        faa stackOut_157_0 = null;
-        int stackOut_157_1 = 0;
-        faa stackOut_160_0 = null;
-        int stackOut_160_1 = 0;
-        int stackOut_160_2 = 0;
-        faa stackOut_158_0 = null;
-        int stackOut_158_1 = 0;
-        int stackOut_158_2 = 0;
-        RuntimeException stackOut_165_0 = null;
-        StringBuilder stackOut_165_1 = null;
-        RuntimeException stackOut_168_0 = null;
-        StringBuilder stackOut_168_1 = null;
-        String stackOut_168_2 = null;
-        RuntimeException stackOut_166_0 = null;
-        StringBuilder stackOut_166_1 = null;
-        String stackOut_166_2 = null;
         var9 = VoidHunters.field_G;
         try {
           L0: {
             L1: {
               var11 = param0;
-              var3_ref = var11;
+              var3 = var11;
               var10 = this.field_k;
               var4 = var10;
               if (var4 != null) {
-                stackOut_4_0 = var10.length;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = var10.length;
                 break L1;
               } else {
-                stackOut_2_0 = 0;
-                stackIn_5_0 = stackOut_2_0;
+                stackIn_5_0 = 0;
                 break L1;
               }
             }
@@ -9300,7 +7798,8 @@ final class pe implements ntb, utb {
               var5 = stackIn_5_0;
               var11.a(-632, var5, 8);
               if (var5 != 0) {
-                var12 = var10;
+                var12 = var4;
+                var6 = var12;
                 var7 = 0;
                 L3: while (true) {
                   if (var12.length <= var7) {
@@ -9308,27 +7807,19 @@ final class pe implements ntb, utb {
                   } else {
                     L4: {
                       var8 = var12[var7];
-                      stackOut_10_0 = (faa) (var3_ref);
-                      stackOut_10_1 = -33;
-                      stackIn_13_0 = stackOut_10_0;
-                      stackIn_13_1 = stackOut_10_1;
-                      stackIn_11_0 = stackOut_10_0;
-                      stackIn_11_1 = stackOut_10_1;
+                      stackIn_13_0 = (faa) (var3);
+
+                      stackIn_13_1 = -33;
+
                       if (null == var8) {
-                        stackOut_13_0 = (faa) ((Object) stackIn_13_0);
-                        stackOut_13_1 = stackIn_13_1;
-                        stackOut_13_2 = 0;
-                        stackIn_14_0 = stackOut_13_0;
-                        stackIn_14_1 = stackOut_13_1;
-                        stackIn_14_2 = stackOut_13_2;
+                        stackIn_14_0 = (faa) ((Object) stackIn_13_0);
+                        stackIn_14_1 = stackIn_13_1;
+                        stackIn_14_2 = 0;
                         break L4;
                       } else {
-                        stackOut_11_0 = (faa) ((Object) stackIn_11_0);
-                        stackOut_11_1 = stackIn_11_1;
-                        stackOut_11_2 = 1;
-                        stackIn_14_0 = stackOut_11_0;
-                        stackIn_14_1 = stackOut_11_1;
-                        stackIn_14_2 = stackOut_11_2;
+                        stackIn_14_0 = (faa) ((Object) stackIn_13_0);
+                        stackIn_14_1 = stackIn_13_1;
+                        stackIn_14_2 = 1;
                         break L4;
                       }
                     }
@@ -9352,22 +7843,20 @@ final class pe implements ntb, utb {
               if (param1 <= -109) {
                 break L6;
               } else {
-                discarded$3 = this.g((byte) 124);
+                this.g((byte) 124);
                 break L6;
               }
             }
             L7: {
               var14 = param0;
-              var3_ref = var14;
+              var3 = var14;
               var13 = hob.a(this.field_x, 210377952);
               var4_array = var13;
               if (null != var4_array) {
-                stackOut_24_0 = var13.length;
-                stackIn_25_0 = stackOut_24_0;
+                stackIn_25_0 = var13.length;
                 break L7;
               } else {
-                stackOut_22_0 = 0;
-                stackIn_25_0 = stackOut_22_0;
+                stackIn_25_0 = 0;
                 break L7;
               }
             }
@@ -9377,43 +7866,35 @@ final class pe implements ntb, utb {
               if (var5 == 0) {
                 break L8;
               } else {
-                var15 = var13;
+                var6_array = var13;
                 var7 = 0;
                 L9: while (true) {
-                  if (var15.length <= var7) {
+                  if (var6_array.length <= var7) {
                     break L8;
                   } else {
                     L10: {
-                      var16 = var15[var7];
-                      var23 = var16;
-                      var23 = var16;
-                      stackOut_28_0 = (faa) (var3_ref);
-                      stackOut_28_1 = 39;
-                      stackIn_31_0 = stackOut_28_0;
-                      stackIn_31_1 = stackOut_28_1;
-                      stackIn_29_0 = stackOut_28_0;
-                      stackIn_29_1 = stackOut_28_1;
-                      if (null == var16) {
-                        stackOut_31_0 = (faa) ((Object) stackIn_31_0);
-                        stackOut_31_1 = stackIn_31_1;
-                        stackOut_31_2 = 0;
-                        stackIn_32_0 = stackOut_31_0;
-                        stackIn_32_1 = stackOut_31_1;
-                        stackIn_32_2 = stackOut_31_2;
+                      var8_ref = var6_array[var7];
+                      var21 = var8_ref;
+                      var21 = var8_ref;
+                      stackIn_31_0 = (faa) (var3);
+
+                      stackIn_31_1 = 39;
+
+                      if (null == var8_ref) {
+                        stackIn_32_0 = (faa) ((Object) stackIn_31_0);
+                        stackIn_32_1 = stackIn_31_1;
+                        stackIn_32_2 = 0;
                         break L10;
                       } else {
-                        stackOut_29_0 = (faa) ((Object) stackIn_29_0);
-                        stackOut_29_1 = stackIn_29_1;
-                        stackOut_29_2 = 1;
-                        stackIn_32_0 = stackOut_29_0;
-                        stackIn_32_1 = stackOut_29_1;
-                        stackIn_32_2 = stackOut_29_2;
+                        stackIn_32_0 = (faa) ((Object) stackIn_31_0);
+                        stackIn_32_1 = stackIn_31_1;
+                        stackIn_32_2 = 1;
                         break L10;
                       }
                     }
                     L11: {
                       if (vq.a(stackIn_32_0, stackIn_32_1, stackIn_32_2 != 0)) {
-                        stb.a(2, 1, var14, var16);
+                        stb.a(2, 1, var3, var8_ref);
                         break L11;
                       } else {
                         break L11;
@@ -9426,58 +7907,48 @@ final class pe implements ntb, utb {
               }
             }
             L12: {
-              var18 = param0;
-              var3_ref = var18;
-              var17 = this.field_m;
-              var4_array2 = var17;
+              var16 = param0;
+              var3 = var16;
+              var15 = this.field_m;
+              var4_array2 = var15;
               if (var4_array2 == null) {
-                stackOut_40_0 = 0;
-                stackIn_41_0 = stackOut_40_0;
+                stackIn_41_0 = 0;
                 break L12;
               } else {
-                stackOut_38_0 = var17.length;
-                stackIn_41_0 = stackOut_38_0;
+                stackIn_41_0 = var15.length;
                 break L12;
               }
             }
             L13: {
               var5 = stackIn_41_0;
-              var18.a(-632, var5, 10);
+              var16.a(-632, var5, 10);
               if (-1 != (var5 ^ -1)) {
-                var19 = var17;
+                var17 = var15;
                 var7 = 0;
                 L14: while (true) {
-                  if (var19.length <= var7) {
+                  if (var17.length <= var7) {
                     break L13;
                   } else {
                     L15: {
-                      var8_ref = var19[var7];
-                      stackOut_46_0 = (faa) (var3_ref);
-                      stackOut_46_1 = 41;
-                      stackIn_49_0 = stackOut_46_0;
-                      stackIn_49_1 = stackOut_46_1;
-                      stackIn_47_0 = stackOut_46_0;
-                      stackIn_47_1 = stackOut_46_1;
-                      if (null == var8_ref) {
-                        stackOut_49_0 = (faa) ((Object) stackIn_49_0);
-                        stackOut_49_1 = stackIn_49_1;
-                        stackOut_49_2 = 0;
-                        stackIn_50_0 = stackOut_49_0;
-                        stackIn_50_1 = stackOut_49_1;
-                        stackIn_50_2 = stackOut_49_2;
+                      var8_ref2 = var17[var7];
+                      stackIn_49_0 = (faa) (var3);
+
+                      stackIn_49_1 = 41;
+
+                      if (null == var8_ref2) {
+                        stackIn_50_0 = (faa) ((Object) stackIn_49_0);
+                        stackIn_50_1 = stackIn_49_1;
+                        stackIn_50_2 = 0;
                         break L15;
                       } else {
-                        stackOut_47_0 = (faa) ((Object) stackIn_47_0);
-                        stackOut_47_1 = stackIn_47_1;
-                        stackOut_47_2 = 1;
-                        stackIn_50_0 = stackOut_47_0;
-                        stackIn_50_1 = stackOut_47_1;
-                        stackIn_50_2 = stackOut_47_2;
+                        stackIn_50_0 = (faa) ((Object) stackIn_49_0);
+                        stackIn_50_1 = stackIn_49_1;
+                        stackIn_50_2 = 1;
                         break L15;
                       }
                     }
                     if (vq.a(stackIn_50_0, stackIn_50_1, stackIn_50_2 != 0)) {
-                      stb.a(2, 1, var18, var8_ref);
+                      stb.a(2, 1, var16, var8_ref2);
                       var7++;
                       continue L14;
                     } else {
@@ -9491,27 +7962,19 @@ final class pe implements ntb, utb {
               }
             }
             L16: {
-              stackOut_53_0 = (faa) (param0);
-              stackOut_53_1 = 77;
-              stackIn_56_0 = stackOut_53_0;
-              stackIn_56_1 = stackOut_53_1;
-              stackIn_54_0 = stackOut_53_0;
-              stackIn_54_1 = stackOut_53_1;
+              stackIn_56_0 = (faa) (param0);
+
+              stackIn_56_1 = 77;
+
               if (null == this.field_e) {
-                stackOut_56_0 = (faa) ((Object) stackIn_56_0);
-                stackOut_56_1 = stackIn_56_1;
-                stackOut_56_2 = 0;
-                stackIn_57_0 = stackOut_56_0;
-                stackIn_57_1 = stackOut_56_1;
-                stackIn_57_2 = stackOut_56_2;
+                stackIn_57_0 = (faa) ((Object) stackIn_56_0);
+                stackIn_57_1 = stackIn_56_1;
+                stackIn_57_2 = 0;
                 break L16;
               } else {
-                stackOut_54_0 = (faa) ((Object) stackIn_54_0);
-                stackOut_54_1 = stackIn_54_1;
-                stackOut_54_2 = 1;
-                stackIn_57_0 = stackOut_54_0;
-                stackIn_57_1 = stackOut_54_1;
-                stackIn_57_2 = stackOut_54_2;
+                stackIn_57_0 = (faa) ((Object) stackIn_56_0);
+                stackIn_57_1 = stackIn_56_1;
+                stackIn_57_2 = 1;
                 break L16;
               }
             }
@@ -9524,61 +7987,51 @@ final class pe implements ntb, utb {
               }
             }
             L18: {
-              var21 = param0;
-              var3_ref = var21;
-              var20 = hob.a(this.field_n, 210377952);
-              var4_array = var20;
+              var19 = param0;
+              var3 = var19;
+              var18 = hob.a(this.field_n, 210377952);
+              var4_array = var18;
               if (null == var4_array) {
-                stackOut_64_0 = 0;
-                stackIn_65_0 = stackOut_64_0;
+                stackIn_65_0 = 0;
                 break L18;
               } else {
-                stackOut_62_0 = var20.length;
-                stackIn_65_0 = stackOut_62_0;
+                stackIn_65_0 = var18.length;
                 break L18;
               }
             }
             L19: {
               var5 = stackIn_65_0;
-              var21.a(-632, var5, 6);
+              var19.a(-632, var5, 6);
               if (var5 == 0) {
                 break L19;
               } else {
-                var22 = var20;
+                var20 = var18;
                 var7 = 0;
                 L20: while (true) {
-                  if (var7 >= var22.length) {
+                  if (var7 >= var20.length) {
                     break L19;
                   } else {
                     L21: {
-                      var23 = var22[var7];
-                      stackOut_68_0 = (faa) (var3_ref);
-                      stackOut_68_1 = 118;
-                      stackIn_71_0 = stackOut_68_0;
-                      stackIn_71_1 = stackOut_68_1;
-                      stackIn_69_0 = stackOut_68_0;
-                      stackIn_69_1 = stackOut_68_1;
-                      if (var23 == null) {
-                        stackOut_71_0 = (faa) ((Object) stackIn_71_0);
-                        stackOut_71_1 = stackIn_71_1;
-                        stackOut_71_2 = 0;
-                        stackIn_72_0 = stackOut_71_0;
-                        stackIn_72_1 = stackOut_71_1;
-                        stackIn_72_2 = stackOut_71_2;
+                      var21 = var20[var7];
+                      stackIn_71_0 = (faa) (var3);
+
+                      stackIn_71_1 = 118;
+
+                      if (var21 == null) {
+                        stackIn_72_0 = (faa) ((Object) stackIn_71_0);
+                        stackIn_72_1 = stackIn_71_1;
+                        stackIn_72_2 = 0;
                         break L21;
                       } else {
-                        stackOut_69_0 = (faa) ((Object) stackIn_69_0);
-                        stackOut_69_1 = stackIn_69_1;
-                        stackOut_69_2 = 1;
-                        stackIn_72_0 = stackOut_69_0;
-                        stackIn_72_1 = stackOut_69_1;
-                        stackIn_72_2 = stackOut_69_2;
+                        stackIn_72_0 = (faa) ((Object) stackIn_71_0);
+                        stackIn_72_1 = stackIn_71_1;
+                        stackIn_72_2 = 1;
                         break L21;
                       }
                     }
                     L22: {
                       if (vq.a(stackIn_72_0, stackIn_72_1, stackIn_72_2 != 0)) {
-                        stb.a(2, 1, var21, var23);
+                        stb.a(2, 1, var19, var21);
                         break L22;
                       } else {
                         break L22;
@@ -9591,58 +8044,48 @@ final class pe implements ntb, utb {
               }
             }
             L23: {
-              var25 = param0;
-              var3_ref = var25;
-              var24 = this.field_g;
-              var4_array3 = var24;
+              var23 = param0;
+              var3 = var23;
+              var22 = this.field_g;
+              var4_array3 = var22;
               if (null == var4_array3) {
-                stackOut_80_0 = 0;
-                stackIn_81_0 = stackOut_80_0;
+                stackIn_81_0 = 0;
                 break L23;
               } else {
-                stackOut_78_0 = var24.length;
-                stackIn_81_0 = stackOut_78_0;
+                stackIn_81_0 = var22.length;
                 break L23;
               }
             }
             L24: {
               var5 = stackIn_81_0;
-              var25.a(-632, var5, 8);
+              var23.a(-632, var5, 8);
               if (0 != var5) {
-                var26 = var24;
+                var24 = var22;
                 var7 = 0;
                 L25: while (true) {
-                  if (var7 >= var26.length) {
+                  if (var7 >= var24.length) {
                     break L24;
                   } else {
                     L26: {
-                      var8_ref2 = var26[var7];
-                      stackOut_86_0 = (faa) (var3_ref);
-                      stackOut_86_1 = 88;
-                      stackIn_89_0 = stackOut_86_0;
-                      stackIn_89_1 = stackOut_86_1;
-                      stackIn_87_0 = stackOut_86_0;
-                      stackIn_87_1 = stackOut_86_1;
-                      if (var8_ref2 == null) {
-                        stackOut_89_0 = (faa) ((Object) stackIn_89_0);
-                        stackOut_89_1 = stackIn_89_1;
-                        stackOut_89_2 = 0;
-                        stackIn_90_0 = stackOut_89_0;
-                        stackIn_90_1 = stackOut_89_1;
-                        stackIn_90_2 = stackOut_89_2;
+                      var8_ref3 = var24[var7];
+                      stackIn_89_0 = (faa) (var3);
+
+                      stackIn_89_1 = 88;
+
+                      if (var8_ref3 == null) {
+                        stackIn_90_0 = (faa) ((Object) stackIn_89_0);
+                        stackIn_90_1 = stackIn_89_1;
+                        stackIn_90_2 = 0;
                         break L26;
                       } else {
-                        stackOut_87_0 = (faa) ((Object) stackIn_87_0);
-                        stackOut_87_1 = stackIn_87_1;
-                        stackOut_87_2 = 1;
-                        stackIn_90_0 = stackOut_87_0;
-                        stackIn_90_1 = stackOut_87_1;
-                        stackIn_90_2 = stackOut_87_2;
+                        stackIn_90_0 = (faa) ((Object) stackIn_89_0);
+                        stackIn_90_1 = stackIn_89_1;
+                        stackIn_90_2 = 1;
                         break L26;
                       }
                     }
                     if (vq.a(stackIn_90_0, stackIn_90_1, stackIn_90_2 != 0)) {
-                      stb.a(2, 1, var25, var8_ref2);
+                      stb.a(2, 1, var23, var8_ref3);
                       var7++;
                       continue L25;
                     } else {
@@ -9656,54 +8099,41 @@ final class pe implements ntb, utb {
               }
             }
             L27: {
-              stackOut_93_0 = 4;
-              stackIn_96_0 = stackOut_93_0;
-              stackIn_94_0 = stackOut_93_0;
+              stackIn_96_0 = 4;
+
               if (this.field_l != null) {
-                stackOut_96_0 = stackIn_96_0;
-                stackOut_96_1 = this.field_l.length;
-                stackIn_97_0 = stackOut_96_0;
-                stackIn_97_1 = stackOut_96_1;
+                stackIn_97_0 = stackIn_96_0;
+                stackIn_97_1 = this.field_l.length;
                 break L27;
               } else {
-                stackOut_94_0 = stackIn_94_0;
-                stackOut_94_1 = 0;
-                stackIn_97_0 = stackOut_94_0;
-                stackIn_97_1 = stackOut_94_1;
+                stackIn_97_0 = stackIn_96_0;
+                stackIn_97_1 = 0;
                 break L27;
               }
             }
             L28: {
               pgb.a(stackIn_97_0, stackIn_97_1, 68, param0, this.field_l);
-              discarded$4 = vq.a(param0, -88, this.field_v);
+              vq.a(param0, -88, this.field_v);
               param0.a(-632, this.field_y, 32);
-              discarded$5 = vq.a(param0, 88, this.field_i);
-              stackOut_97_0 = (faa) (param0);
-              stackOut_97_1 = -71;
-              stackIn_100_0 = stackOut_97_0;
-              stackIn_100_1 = stackOut_97_1;
-              stackIn_98_0 = stackOut_97_0;
-              stackIn_98_1 = stackOut_97_1;
+              vq.a(param0, 88, this.field_i);
+              stackIn_100_0 = (faa) (param0);
+
+              stackIn_100_1 = -71;
+
               if (this.field_f == null) {
-                stackOut_100_0 = (faa) ((Object) stackIn_100_0);
-                stackOut_100_1 = stackIn_100_1;
-                stackOut_100_2 = 0;
-                stackIn_101_0 = stackOut_100_0;
-                stackIn_101_1 = stackOut_100_1;
-                stackIn_101_2 = stackOut_100_2;
+                stackIn_101_0 = (faa) ((Object) stackIn_100_0);
+                stackIn_101_1 = stackIn_100_1;
+                stackIn_101_2 = 0;
                 break L28;
               } else {
-                stackOut_98_0 = (faa) ((Object) stackIn_98_0);
-                stackOut_98_1 = stackIn_98_1;
-                stackOut_98_2 = 1;
-                stackIn_101_0 = stackOut_98_0;
-                stackIn_101_1 = stackOut_98_1;
-                stackIn_101_2 = stackOut_98_2;
+                stackIn_101_0 = (faa) ((Object) stackIn_100_0);
+                stackIn_101_1 = stackIn_100_1;
+                stackIn_101_2 = 1;
                 break L28;
               }
             }
             L29: {
-              if (vq.a(stackIn_101_0, stackIn_101_1, stackIn_101_2 == 0)) {
+              if (!vq.a(stackIn_101_0, stackIn_101_1, stackIn_101_2 != 0)) {
                 break L29;
               } else {
                 this.field_f.b(param0, -117);
@@ -9711,59 +8141,49 @@ final class pe implements ntb, utb {
               }
             }
             L30: {
-              var28 = param0;
-              var3_ref = var28;
-              var27 = this.field_t;
-              var4_array4 = var27;
+              var26 = param0;
+              var3 = var26;
+              var25 = this.field_t;
+              var4_array4 = var25;
               if (null == var4_array4) {
-                stackOut_106_0 = 0;
-                stackIn_107_0 = stackOut_106_0;
+                stackIn_107_0 = 0;
                 break L30;
               } else {
-                stackOut_104_0 = var27.length;
-                stackIn_107_0 = stackOut_104_0;
+                stackIn_107_0 = var25.length;
                 break L30;
               }
             }
             L31: {
               var5 = stackIn_107_0;
-              var28.a(-632, var5, 8);
+              var26.a(-632, var5, 8);
               if (-1 != (var5 ^ -1)) {
-                var29 = var27;
+                var27 = var25;
                 var7 = 0;
                 L32: while (true) {
-                  if (var29.length <= var7) {
+                  if (var27.length <= var7) {
                     break L31;
                   } else {
                     L33: {
-                      var8_ref3 = var29[var7];
-                      stackOut_112_0 = (faa) (var3_ref);
-                      stackOut_112_1 = 36;
-                      stackIn_115_0 = stackOut_112_0;
-                      stackIn_115_1 = stackOut_112_1;
-                      stackIn_113_0 = stackOut_112_0;
-                      stackIn_113_1 = stackOut_112_1;
-                      if (null == var8_ref3) {
-                        stackOut_115_0 = (faa) ((Object) stackIn_115_0);
-                        stackOut_115_1 = stackIn_115_1;
-                        stackOut_115_2 = 0;
-                        stackIn_116_0 = stackOut_115_0;
-                        stackIn_116_1 = stackOut_115_1;
-                        stackIn_116_2 = stackOut_115_2;
+                      var8_ref4 = var27[var7];
+                      stackIn_115_0 = (faa) (var3);
+
+                      stackIn_115_1 = 36;
+
+                      if (null == var8_ref4) {
+                        stackIn_116_0 = (faa) ((Object) stackIn_115_0);
+                        stackIn_116_1 = stackIn_115_1;
+                        stackIn_116_2 = 0;
                         break L33;
                       } else {
-                        stackOut_113_0 = (faa) ((Object) stackIn_113_0);
-                        stackOut_113_1 = stackIn_113_1;
-                        stackOut_113_2 = 1;
-                        stackIn_116_0 = stackOut_113_0;
-                        stackIn_116_1 = stackOut_113_1;
-                        stackIn_116_2 = stackOut_113_2;
+                        stackIn_116_0 = (faa) ((Object) stackIn_115_0);
+                        stackIn_116_1 = stackIn_115_1;
+                        stackIn_116_2 = 1;
                         break L33;
                       }
                     }
                     L34: {
                       if (vq.a(stackIn_116_0, stackIn_116_1, stackIn_116_2 != 0)) {
-                        stb.a(2, 1, var28, var8_ref3);
+                        stb.a(2, 1, var26, var8_ref4);
                         break L34;
                       } else {
                         break L34;
@@ -9778,59 +8198,49 @@ final class pe implements ntb, utb {
               }
             }
             L35: {
-              var31 = param0;
-              var3_ref = var31;
-              var30 = this.field_a;
-              var4_array5 = var30;
+              var29 = param0;
+              var3 = var29;
+              var28 = this.field_a;
+              var4_array5 = var28;
               if (null != var4_array5) {
-                stackOut_124_0 = var30.length;
-                stackIn_125_0 = stackOut_124_0;
+                stackIn_125_0 = var28.length;
                 break L35;
               } else {
-                stackOut_122_0 = 0;
-                stackIn_125_0 = stackOut_122_0;
+                stackIn_125_0 = 0;
                 break L35;
               }
             }
             L36: {
               var5 = stackIn_125_0;
-              var31.a(-632, var5, 4);
+              var29.a(-632, var5, 4);
               if (var5 != 0) {
-                var32 = var30;
+                var30 = var28;
                 var7 = 0;
                 L37: while (true) {
-                  if (var32.length <= var7) {
+                  if (var30.length <= var7) {
                     break L36;
                   } else {
                     L38: {
-                      var8_ref4 = var32[var7];
-                      stackOut_130_0 = (faa) (var3_ref);
-                      stackOut_130_1 = -87;
-                      stackIn_133_0 = stackOut_130_0;
-                      stackIn_133_1 = stackOut_130_1;
-                      stackIn_131_0 = stackOut_130_0;
-                      stackIn_131_1 = stackOut_130_1;
-                      if (var8_ref4 == null) {
-                        stackOut_133_0 = (faa) ((Object) stackIn_133_0);
-                        stackOut_133_1 = stackIn_133_1;
-                        stackOut_133_2 = 0;
-                        stackIn_134_0 = stackOut_133_0;
-                        stackIn_134_1 = stackOut_133_1;
-                        stackIn_134_2 = stackOut_133_2;
+                      var8_ref5 = var30[var7];
+                      stackIn_133_0 = (faa) (var3);
+
+                      stackIn_133_1 = -87;
+
+                      if (var8_ref5 == null) {
+                        stackIn_134_0 = (faa) ((Object) stackIn_133_0);
+                        stackIn_134_1 = stackIn_133_1;
+                        stackIn_134_2 = 0;
                         break L38;
                       } else {
-                        stackOut_131_0 = (faa) ((Object) stackIn_131_0);
-                        stackOut_131_1 = stackIn_131_1;
-                        stackOut_131_2 = 1;
-                        stackIn_134_0 = stackOut_131_0;
-                        stackIn_134_1 = stackOut_131_1;
-                        stackIn_134_2 = stackOut_131_2;
+                        stackIn_134_0 = (faa) ((Object) stackIn_133_0);
+                        stackIn_134_1 = stackIn_133_1;
+                        stackIn_134_2 = 1;
                         break L38;
                       }
                     }
                     L39: {
                       if (vq.a(stackIn_134_0, stackIn_134_1, stackIn_134_2 != 0)) {
-                        stb.a(2, 1, var31, var8_ref4);
+                        stb.a(2, 1, var29, var8_ref5);
                         break L39;
                       } else {
                         break L39;
@@ -9847,59 +8257,49 @@ final class pe implements ntb, utb {
             L40: {
               param0.a(-632, this.field_o, 28);
               param0.a(-632, this.field_r, 28);
-              var34 = param0;
-              var3_ref = var34;
-              var33 = this.field_j;
-              var4_array6 = var33;
+              var32 = param0;
+              var3 = var32;
+              var31 = this.field_j;
+              var4_array6 = var31;
               if (var4_array6 != null) {
-                stackOut_142_0 = var33.length;
-                stackIn_143_0 = stackOut_142_0;
+                stackIn_143_0 = var31.length;
                 break L40;
               } else {
-                stackOut_140_0 = 0;
-                stackIn_143_0 = stackOut_140_0;
+                stackIn_143_0 = 0;
                 break L40;
               }
             }
             L41: {
               var5 = stackIn_143_0;
-              var34.a(-632, var5, 4);
+              var32.a(-632, var5, 4);
               if (0 != var5) {
-                var35 = var33;
+                var33 = var31;
                 var7 = 0;
                 L42: while (true) {
-                  if (var35.length <= var7) {
+                  if (var33.length <= var7) {
                     break L41;
                   } else {
                     L43: {
-                      var8_ref5 = var35[var7];
-                      stackOut_148_0 = (faa) (var3_ref);
-                      stackOut_148_1 = 56;
-                      stackIn_151_0 = stackOut_148_0;
-                      stackIn_151_1 = stackOut_148_1;
-                      stackIn_149_0 = stackOut_148_0;
-                      stackIn_149_1 = stackOut_148_1;
-                      if (var8_ref5 == null) {
-                        stackOut_151_0 = (faa) ((Object) stackIn_151_0);
-                        stackOut_151_1 = stackIn_151_1;
-                        stackOut_151_2 = 0;
-                        stackIn_152_0 = stackOut_151_0;
-                        stackIn_152_1 = stackOut_151_1;
-                        stackIn_152_2 = stackOut_151_2;
+                      var8_ref6 = var33[var7];
+                      stackIn_151_0 = (faa) (var3);
+
+                      stackIn_151_1 = 56;
+
+                      if (var8_ref6 == null) {
+                        stackIn_152_0 = (faa) ((Object) stackIn_151_0);
+                        stackIn_152_1 = stackIn_151_1;
+                        stackIn_152_2 = 0;
                         break L43;
                       } else {
-                        stackOut_149_0 = (faa) ((Object) stackIn_149_0);
-                        stackOut_149_1 = stackIn_149_1;
-                        stackOut_149_2 = 1;
-                        stackIn_152_0 = stackOut_149_0;
-                        stackIn_152_1 = stackOut_149_1;
-                        stackIn_152_2 = stackOut_149_2;
+                        stackIn_152_0 = (faa) ((Object) stackIn_151_0);
+                        stackIn_152_1 = stackIn_151_1;
+                        stackIn_152_2 = 1;
                         break L43;
                       }
                     }
                     L44: {
                       if (vq.a(stackIn_152_0, stackIn_152_1, stackIn_152_2 != 0)) {
-                        stb.a(2, 1, var34, var8_ref5);
+                        stb.a(2, 1, var32, var8_ref6);
                         break L44;
                       } else {
                         break L44;
@@ -9914,32 +8314,24 @@ final class pe implements ntb, utb {
               }
             }
             L45: {
-              stackOut_157_0 = (faa) (param0);
-              stackOut_157_1 = 46;
-              stackIn_160_0 = stackOut_157_0;
-              stackIn_160_1 = stackOut_157_1;
-              stackIn_158_0 = stackOut_157_0;
-              stackIn_158_1 = stackOut_157_1;
+              stackIn_160_0 = (faa) (param0);
+
+              stackIn_160_1 = 46;
+
               if (null == this.field_b) {
-                stackOut_160_0 = (faa) ((Object) stackIn_160_0);
-                stackOut_160_1 = stackIn_160_1;
-                stackOut_160_2 = 0;
-                stackIn_161_0 = stackOut_160_0;
-                stackIn_161_1 = stackOut_160_1;
-                stackIn_161_2 = stackOut_160_2;
+                stackIn_161_0 = (faa) ((Object) stackIn_160_0);
+                stackIn_161_1 = stackIn_160_1;
+                stackIn_161_2 = 0;
                 break L45;
               } else {
-                stackOut_158_0 = (faa) ((Object) stackIn_158_0);
-                stackOut_158_1 = stackIn_158_1;
-                stackOut_158_2 = 1;
-                stackIn_161_0 = stackOut_158_0;
-                stackIn_161_1 = stackOut_158_1;
-                stackIn_161_2 = stackOut_158_2;
+                stackIn_161_0 = (faa) ((Object) stackIn_160_0);
+                stackIn_161_1 = stackIn_160_1;
+                stackIn_161_2 = 1;
                 break L45;
               }
             }
             L46: {
-              if (vq.a(stackIn_161_0, stackIn_161_1, stackIn_161_2 == 0)) {
+              if (!vq.a(stackIn_161_0, stackIn_161_1, stackIn_161_2 != 0)) {
                 break L46;
               } else {
                 this.field_b.b(param0, -113);
@@ -9951,28 +8343,20 @@ final class pe implements ntb, utb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L47: {
-            var3 = decompiledCaughtException;
-            stackOut_165_0 = (RuntimeException) (var3);
-            stackOut_165_1 = new StringBuilder().append("pe.B(");
-            stackIn_168_0 = stackOut_165_0;
-            stackIn_168_1 = stackOut_165_1;
-            stackIn_166_0 = stackOut_165_0;
-            stackIn_166_1 = stackOut_165_1;
+            var3_ref = decompiledCaughtException;
+            stackIn_168_0 = (RuntimeException) (var3_ref);
+
+            stackIn_168_1 = new StringBuilder().append("pe.B(");
+
             if (param0 == null) {
-              stackOut_168_0 = (RuntimeException) ((Object) stackIn_168_0);
-              stackOut_168_1 = (StringBuilder) ((Object) stackIn_168_1);
-              stackOut_168_2 = "null";
-              stackIn_169_0 = stackOut_168_0;
-              stackIn_169_1 = stackOut_168_1;
-              stackIn_169_2 = stackOut_168_2;
+              stackIn_169_0 = (RuntimeException) ((Object) stackIn_168_0);
+              stackIn_169_1 = (StringBuilder) ((Object) stackIn_168_1);
+              stackIn_169_2 = "null";
               break L47;
             } else {
-              stackOut_166_0 = (RuntimeException) ((Object) stackIn_166_0);
-              stackOut_166_1 = (StringBuilder) ((Object) stackIn_166_1);
-              stackOut_166_2 = "{...}";
-              stackIn_169_0 = stackOut_166_0;
-              stackIn_169_1 = stackOut_166_1;
-              stackIn_169_2 = stackOut_166_2;
+              stackIn_169_0 = (RuntimeException) ((Object) stackIn_168_0);
+              stackIn_169_1 = (StringBuilder) ((Object) stackIn_168_1);
+              stackIn_169_2 = "{...}";
               break L47;
             }
           }
@@ -9986,8 +8370,8 @@ final class pe implements ntb, utb {
     }
 
     final void g(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = VoidHunters.field_G;
         var2 = 0;
         L0: while (true) {
@@ -10053,8 +8437,27 @@ final class pe implements ntb, utb {
     }
 
     private final boolean a(ij param0, anb[] param1, anb[] param2, int param3, int param4, int param5, int param6) {
-        RuntimeException var8 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_30_0 = 0;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        String stackIn_35_2 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        String stackIn_39_2 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_43_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         anb[] var9 = null;
         int var10 = 0;
         anb var11 = null;
@@ -10063,57 +8466,6 @@ final class pe implements ntb, utb {
         anb var14 = null;
         int var15 = 0;
         int var16 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_30_0 = 0;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        String stackIn_39_2 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        String stackIn_43_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_29_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
         var16 = VoidHunters.field_G;
         try {
           L0: {
@@ -10123,8 +8475,7 @@ final class pe implements ntb, utb {
               var10 = 0;
               L1: while (true) {
                 if (var9.length <= var10) {
-                  stackOut_29_0 = var8_int;
-                  stackIn_30_0 = stackOut_29_0;
+                  stackIn_30_0 = var8_int;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -10186,8 +8537,7 @@ final class pe implements ntb, utb {
                 }
               }
             } else {
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -10196,77 +8546,53 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var8 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var8);
-            stackOut_31_1 = new StringBuilder().append("pe.WA(");
-            stackIn_34_0 = stackOut_31_0;
-            stackIn_34_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackIn_34_0 = (RuntimeException) (var8);
+
+            stackIn_34_1 = new StringBuilder().append("pe.WA(");
+
             if (param0 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L3;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_35_0 = stackOut_32_0;
-              stackIn_35_1 = stackOut_32_1;
-              stackIn_35_2 = stackOut_32_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-            stackOut_35_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(',');
-            stackIn_38_0 = stackOut_35_0;
-            stackIn_38_1 = stackOut_35_1;
-            stackIn_36_0 = stackOut_35_0;
-            stackIn_36_1 = stackOut_35_1;
+            stackIn_38_0 = (RuntimeException) ((Object) stackIn_35_0);
+
+            stackIn_38_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(',');
+
             if (param1 == null) {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "null";
               break L4;
             } else {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "{...}";
-              stackIn_39_0 = stackOut_36_0;
-              stackIn_39_1 = stackOut_36_1;
-              stackIn_39_2 = stackOut_36_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "{...}";
               break L4;
             }
           }
           L5: {
-            stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-            stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',');
-            stackIn_42_0 = stackOut_39_0;
-            stackIn_42_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            stackIn_42_0 = (RuntimeException) ((Object) stackIn_39_0);
+
+            stackIn_42_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',');
+
             if (param2 == null) {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "null";
-              stackIn_43_0 = stackOut_42_0;
-              stackIn_43_1 = stackOut_42_1;
-              stackIn_43_2 = stackOut_42_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "null";
               break L5;
             } else {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "{...}";
-              stackIn_43_0 = stackOut_40_0;
-              stackIn_43_1 = stackOut_40_1;
-              stackIn_43_2 = stackOut_40_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "{...}";
               break L5;
             }
           }
@@ -10280,9 +8606,9 @@ final class pe implements ntb, utb {
     }
 
     final int e(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = VoidHunters.field_G;
           var3 = 0;
@@ -10340,19 +8666,19 @@ final class pe implements ntb, utb {
     }
 
     final nbb b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        Object var7 = null;
-        int var8 = 0;
-        nbb[] var9 = null;
-        int var10 = 0;
-        nbb var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
+        Object var7;
+        int var8;
+        nbb[] var9;
+        int var10;
+        nbb var11;
+        int var19;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
         var19 = VoidHunters.field_G;
         var7 = null;
         var8 = param1;
@@ -10407,15 +8733,26 @@ final class pe implements ntb, utb {
     }
 
     final void a(lta param0, byte param1, int param2, sg param3) {
-        RuntimeException var5 = null;
+        RuntimeException stackIn_87_0 = null;
+        StringBuilder stackIn_87_1 = null;
+        RuntimeException stackIn_88_0 = null;
+        StringBuilder stackIn_88_1 = null;
+        String stackIn_88_2 = null;
+        RuntimeException stackIn_91_0 = null;
+        StringBuilder stackIn_91_1 = null;
+        RuntimeException stackIn_92_0 = null;
+        StringBuilder stackIn_92_1 = null;
+        String stackIn_92_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
-        crb[] var5_array = null;
+        crb[] var5 = null;
+        RuntimeException var5_ref = null;
         int var6_int = 0;
         qob[] var6 = null;
-        mqb var7_ref_mqb = null;
         int var7 = 0;
-        int var8_int = 0;
+        mqb var7_ref_mqb = null;
         crb var8 = null;
+        int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -10431,37 +8768,6 @@ final class pe implements ntb, utb {
         nbb var21 = null;
         crb[] var22 = null;
         qob[] var23 = null;
-        RuntimeException stackIn_85_0 = null;
-        StringBuilder stackIn_85_1 = null;
-        RuntimeException stackIn_87_0 = null;
-        StringBuilder stackIn_87_1 = null;
-        RuntimeException stackIn_88_0 = null;
-        StringBuilder stackIn_88_1 = null;
-        String stackIn_88_2 = null;
-        RuntimeException stackIn_89_0 = null;
-        StringBuilder stackIn_89_1 = null;
-        RuntimeException stackIn_91_0 = null;
-        StringBuilder stackIn_91_1 = null;
-        RuntimeException stackIn_92_0 = null;
-        StringBuilder stackIn_92_1 = null;
-        String stackIn_92_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_84_0 = null;
-        StringBuilder stackOut_84_1 = null;
-        RuntimeException stackOut_87_0 = null;
-        StringBuilder stackOut_87_1 = null;
-        String stackOut_87_2 = null;
-        RuntimeException stackOut_85_0 = null;
-        StringBuilder stackOut_85_1 = null;
-        String stackOut_85_2 = null;
-        RuntimeException stackOut_88_0 = null;
-        StringBuilder stackOut_88_1 = null;
-        RuntimeException stackOut_91_0 = null;
-        StringBuilder stackOut_91_1 = null;
-        String stackOut_91_2 = null;
-        RuntimeException stackOut_89_0 = null;
-        StringBuilder stackOut_89_1 = null;
-        String stackOut_89_2 = null;
         var10 = VoidHunters.field_G;
         try {
           L0: {
@@ -10549,8 +8855,8 @@ final class pe implements ntb, utb {
                     var6_int = 0;
                     L11: while (true) {
                       if (var6_int >= var20.length) {
-                        var5_array = this.field_e.c(0);
-                        var22 = var5_array;
+                        var5 = this.field_e.c(0);
+                        var22 = var5;
                         var7 = 0;
                         L12: while (true) {
                           if (var22.length <= var7) {
@@ -10694,53 +9000,37 @@ final class pe implements ntb, utb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L24: {
-            var5 = decompiledCaughtException;
-            stackOut_84_0 = (RuntimeException) (var5);
-            stackOut_84_1 = new StringBuilder().append("pe.DC(");
-            stackIn_87_0 = stackOut_84_0;
-            stackIn_87_1 = stackOut_84_1;
-            stackIn_85_0 = stackOut_84_0;
-            stackIn_85_1 = stackOut_84_1;
+            var5_ref = decompiledCaughtException;
+            stackIn_87_0 = (RuntimeException) (var5_ref);
+
+            stackIn_87_1 = new StringBuilder().append("pe.DC(");
+
             if (param0 == null) {
-              stackOut_87_0 = (RuntimeException) ((Object) stackIn_87_0);
-              stackOut_87_1 = (StringBuilder) ((Object) stackIn_87_1);
-              stackOut_87_2 = "null";
-              stackIn_88_0 = stackOut_87_0;
-              stackIn_88_1 = stackOut_87_1;
-              stackIn_88_2 = stackOut_87_2;
+              stackIn_88_0 = (RuntimeException) ((Object) stackIn_87_0);
+              stackIn_88_1 = (StringBuilder) ((Object) stackIn_87_1);
+              stackIn_88_2 = "null";
               break L24;
             } else {
-              stackOut_85_0 = (RuntimeException) ((Object) stackIn_85_0);
-              stackOut_85_1 = (StringBuilder) ((Object) stackIn_85_1);
-              stackOut_85_2 = "{...}";
-              stackIn_88_0 = stackOut_85_0;
-              stackIn_88_1 = stackOut_85_1;
-              stackIn_88_2 = stackOut_85_2;
+              stackIn_88_0 = (RuntimeException) ((Object) stackIn_87_0);
+              stackIn_88_1 = (StringBuilder) ((Object) stackIn_87_1);
+              stackIn_88_2 = "{...}";
               break L24;
             }
           }
           L25: {
-            stackOut_88_0 = (RuntimeException) ((Object) stackIn_88_0);
-            stackOut_88_1 = ((StringBuilder) (Object) stackIn_88_1).append(stackIn_88_2).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_91_0 = stackOut_88_0;
-            stackIn_91_1 = stackOut_88_1;
-            stackIn_89_0 = stackOut_88_0;
-            stackIn_89_1 = stackOut_88_1;
+            stackIn_91_0 = (RuntimeException) ((Object) stackIn_88_0);
+
+            stackIn_91_1 = ((StringBuilder) (Object) stackIn_88_1).append(stackIn_88_2).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_91_0 = (RuntimeException) ((Object) stackIn_91_0);
-              stackOut_91_1 = (StringBuilder) ((Object) stackIn_91_1);
-              stackOut_91_2 = "null";
-              stackIn_92_0 = stackOut_91_0;
-              stackIn_92_1 = stackOut_91_1;
-              stackIn_92_2 = stackOut_91_2;
+              stackIn_92_0 = (RuntimeException) ((Object) stackIn_91_0);
+              stackIn_92_1 = (StringBuilder) ((Object) stackIn_91_1);
+              stackIn_92_2 = "null";
               break L25;
             } else {
-              stackOut_89_0 = (RuntimeException) ((Object) stackIn_89_0);
-              stackOut_89_1 = (StringBuilder) ((Object) stackIn_89_1);
-              stackOut_89_2 = "{...}";
-              stackIn_92_0 = stackOut_89_0;
-              stackIn_92_1 = stackOut_89_1;
-              stackIn_92_2 = stackOut_89_2;
+              stackIn_92_0 = (RuntimeException) ((Object) stackIn_88_0);
+              stackIn_92_1 = (StringBuilder) ((Object) stackIn_91_1);
+              stackIn_92_2 = "{...}";
               break L25;
             }
           }
@@ -10756,6 +9046,17 @@ final class pe implements ntb, utb {
     }
 
     private final void a(ij param0, int param1, crb[] param2) {
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_40_2 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        String stackIn_44_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
         crb var6 = null;
@@ -10765,37 +9066,6 @@ final class pe implements ntb, utb {
         crb var10 = null;
         int var12 = 0;
         sg[] var13 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_40_2 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
         var12 = VoidHunters.field_G;
         try {
           L0: {
@@ -10892,52 +9162,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var4 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) (var4);
-            stackOut_36_1 = new StringBuilder().append("pe.EA(");
-            stackIn_39_0 = stackOut_36_0;
-            stackIn_39_1 = stackOut_36_1;
-            stackIn_37_0 = stackOut_36_0;
-            stackIn_37_1 = stackOut_36_1;
+            stackIn_39_0 = (RuntimeException) (var4);
+
+            stackIn_39_1 = new StringBuilder().append("pe.EA(");
+
             if (param0 == null) {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "null";
               break L7;
             } else {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "{...}";
-              stackIn_40_0 = stackOut_37_0;
-              stackIn_40_1 = stackOut_37_1;
-              stackIn_40_2 = stackOut_37_2;
+              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackIn_40_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-            stackOut_40_1 = ((StringBuilder) (Object) stackIn_40_1).append(stackIn_40_2).append(',').append(param1).append(',');
-            stackIn_43_0 = stackOut_40_0;
-            stackIn_43_1 = stackOut_40_1;
-            stackIn_41_0 = stackOut_40_0;
-            stackIn_41_1 = stackOut_40_1;
+            stackIn_43_0 = (RuntimeException) ((Object) stackIn_40_0);
+
+            stackIn_43_1 = ((StringBuilder) (Object) stackIn_40_1).append(stackIn_40_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "null";
-              stackIn_44_0 = stackOut_43_0;
-              stackIn_44_1 = stackOut_43_1;
-              stackIn_44_2 = stackOut_43_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "null";
               break L8;
             } else {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "{...}";
-              stackIn_44_0 = stackOut_41_0;
-              stackIn_44_1 = stackOut_41_1;
-              stackIn_44_2 = stackOut_41_2;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "{...}";
               break L8;
             }
           }
@@ -10958,58 +9212,26 @@ final class pe implements ntb, utb {
     }
 
     private final nbb a(nbb param0, byte param1, sg param2, int param3, vra param4, int param5) {
-        int discarded$1 = 0;
-        RuntimeException var7 = null;
-        int var7_int = 0;
-        int var8 = 0;
         nbb stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nbb stackOut_6_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8 = 0;
         try {
           L0: {
             L1: {
@@ -11027,7 +9249,7 @@ final class pe implements ntb, utb {
                 if ((128 & param4.field_e) == 0) {
                   break L2;
                 } else {
-                  discarded$1 = param2.a(123, param4.field_a, param4.field_c);
+                  param2.a(123, param4.field_a, param4.field_c);
                   var7_int = param2.d(false) + -param2.j(param1 + 995401033);
                   var8 = param2.g((byte) 118) + -param2.i((byte) 5);
                   param2.field_k.a(true, var7_int, var8, param2.e(param1 ^ 127), 0, param2.f((byte) -106));
@@ -11042,85 +9264,60 @@ final class pe implements ntb, utb {
                 }
               }
             }
-            stackOut_6_0 = (nbb) (param0);
-            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_0 = (nbb) (param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var7 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var7);
-            stackOut_8_1 = new StringBuilder().append("pe.ED(");
-            stackIn_11_0 = stackOut_8_0;
-            stackIn_11_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_11_0 = (RuntimeException) (var7);
+
+            stackIn_11_1 = new StringBuilder().append("pe.ED(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_12_0 = stackOut_9_0;
-              stackIn_12_1 = stackOut_9_1;
-              stackIn_12_2 = stackOut_9_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(',');
-            stackIn_15_0 = stackOut_12_0;
-            stackIn_15_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_15_0 = (RuntimeException) ((Object) stackIn_12_0);
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_16_0 = stackOut_13_0;
-              stackIn_16_1 = stackOut_13_1;
-              stackIn_16_2 = stackOut_13_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }
           L5: {
-            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param3).append(',');
-            stackIn_19_0 = stackOut_16_0;
-            stackIn_19_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_19_0 = (RuntimeException) ((Object) stackIn_16_0);
+
+            stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_20_0 = stackOut_17_0;
-              stackIn_20_1 = stackOut_17_1;
-              stackIn_20_2 = stackOut_17_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L5;
             }
           }
@@ -11135,15 +9332,11 @@ final class pe implements ntb, utb {
         int var5 = 0;
         int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -11151,36 +9344,16 @@ final class pe implements ntb, utb {
         String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             if (param2 < -43) {
               var4_int = Math.abs(param0.field_f);
               var5 = Math.abs(param0.field_h);
-              stackOut_3_0 = em.a(5220, param1.field_q[1] - -var4_int, param0.e((byte) -107), param1.field_q[3] - -var5, param0.d(101), -var4_int + param1.field_q[0], param1.field_q[2] - var5);
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = em.a(5220, param1.field_q[1] - -var4_int, param0.e((byte) -107), param1.field_q[3] - -var5, param0.d(101), -var4_int + param1.field_q[0], param1.field_q[2] - var5);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -11189,52 +9362,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (var4);
-            stackOut_5_1 = new StringBuilder().append("pe.QE(");
-            stackIn_8_0 = stackOut_5_0;
-            stackIn_8_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_8_0 = (RuntimeException) (var4);
+
+            stackIn_8_1 = new StringBuilder().append("pe.QE(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_9_0 = stackOut_6_0;
-              stackIn_9_1 = stackOut_6_1;
-              stackIn_9_2 = stackOut_6_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L1;
             }
           }
           L2: {
-            stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
-            stackIn_12_0 = stackOut_9_0;
-            stackIn_12_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_12_0 = (RuntimeException) ((Object) stackIn_9_0);
+
+            stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
+
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_13_0 = stackOut_10_0;
-              stackIn_13_1 = stackOut_10_1;
-              stackIn_13_2 = stackOut_10_2;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
               break L2;
             }
           }
@@ -11263,29 +9420,19 @@ final class pe implements ntb, utb {
     }
 
     public final void a(faa param0, boolean param1) {
-        RuntimeException var3 = null;
-        tj[] var3_array = null;
-        int var4_int = 0;
-        rdb[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        tj[] var7 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        tj[] var3 = null;
+        RuntimeException var3_ref = null;
+        int var4_int = 0;
+        rdb[] var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        tj[] var7 = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
@@ -11293,8 +9440,8 @@ final class pe implements ntb, utb {
               this.field_k = (sg[]) ((Object) kcb.a(8, qdb.field_a, param0, 1, -109, this.field_k));
               this.field_x = new ij();
               var7 = (tj[]) ((Object) kcb.a(10, aba.field_b, param0, 1, -127, (tv[]) null));
-              var3_array = var7;
-              if (null == var3_array) {
+              var3 = var7;
+              if (null == var3) {
                 break L1;
               } else {
                 var4_int = 0;
@@ -11388,28 +9535,20 @@ final class pe implements ntb, utb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
-            var3 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var3);
-            stackOut_27_1 = new StringBuilder().append("pe.H(");
-            stackIn_30_0 = stackOut_27_0;
-            stackIn_30_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            var3_ref = decompiledCaughtException;
+            stackIn_30_0 = (RuntimeException) (var3_ref);
+
+            stackIn_30_1 = new StringBuilder().append("pe.H(");
+
             if (param0 == null) {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
               break L10;
             } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_31_0 = stackOut_28_0;
-              stackIn_31_1 = stackOut_28_1;
-              stackIn_31_2 = stackOut_28_2;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
               break L10;
             }
           }
@@ -11418,9 +9557,16 @@ final class pe implements ntb, utb {
     }
 
     private final void a(crb[] param0, int param1) {
+        int stackIn_84_0 = 0;
+        RuntimeException stackIn_100_0 = null;
+        StringBuilder stackIn_100_1 = null;
+        RuntimeException stackIn_101_0 = null;
+        StringBuilder stackIn_101_1 = null;
+        String stackIn_101_2 = null;
+        RuntimeException decompiledCaughtException = null;
         Object var3 = null;
-        RuntimeException var3_ref = null;
-        tj var3_ref2 = null;
+        tj var3_ref = null;
+        RuntimeException var3_ref2 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -11433,8 +9579,8 @@ final class pe implements ntb, utb {
         int var13 = 0;
         mqb[] var13_ref_mqb__ = null;
         sg var14 = null;
-        int var14_int = 0;
         nbb var14_ref = null;
+        int var14_int = 0;
         crb var14_ref2 = null;
         crb var15 = null;
         int var17 = 0;
@@ -11446,35 +9592,15 @@ final class pe implements ntb, utb {
         Object var23 = null;
         sg var23_ref = null;
         nbb var24 = null;
-        int stackIn_84_0 = 0;
-        RuntimeException stackIn_98_0 = null;
-        StringBuilder stackIn_98_1 = null;
-        RuntimeException stackIn_100_0 = null;
-        StringBuilder stackIn_100_1 = null;
-        RuntimeException stackIn_101_0 = null;
-        StringBuilder stackIn_101_1 = null;
-        String stackIn_101_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_82_0 = 0;
-        int stackOut_81_0 = 0;
-        int stackOut_79_0 = 0;
-        RuntimeException stackOut_97_0 = null;
-        StringBuilder stackOut_97_1 = null;
-        RuntimeException stackOut_100_0 = null;
-        StringBuilder stackOut_100_1 = null;
-        String stackOut_100_2 = null;
-        RuntimeException stackOut_98_0 = null;
-        StringBuilder stackOut_98_1 = null;
-        String stackOut_98_2 = null;
         var3 = null;
         var19 = null;
         var23 = null;
         var17 = VoidHunters.field_G;
         try {
           L0: {
-            var3_ref2 = (tj) ((Object) this.field_x.d(0));
+            var3_ref = (tj) ((Object) this.field_x.d(0));
             L1: while (true) {
-              if (null == var3_ref2) {
+              if (null == var3_ref) {
                 var4 = -67 % ((-34 - param1) / 52);
                 break L0;
               } else {
@@ -11482,8 +9608,8 @@ final class pe implements ntb, utb {
                   wgb.field_i = null;
                   wna.field_c.a(2147483647);
                   gab.field_b.b((byte) -70);
-                  var4 = var3_ref2.field_d;
-                  var5 = var4 + -var3_ref2.field_f;
+                  var4 = var3_ref.field_d;
+                  var5 = var4 + -var3_ref.field_f;
                   var6 = var5;
                   var7 = var4;
                   if (var6 > var7) {
@@ -11495,8 +9621,8 @@ final class pe implements ntb, utb {
                   }
                 }
                 L3: {
-                  var8 = var3_ref2.field_e;
-                  var9 = var8 + -var3_ref2.field_h;
+                  var8 = var3_ref.field_e;
+                  var9 = var8 + -var3_ref.field_h;
                   var10 = var9;
                   var11 = var8;
                   if (var10 > var11) {
@@ -11519,21 +9645,21 @@ final class pe implements ntb, utb {
                       var14 = var20;
                       if (null != var14) {
                         L6: {
-                          if (6 != var3_ref2.g((byte) -104)) {
+                          if (6 != var3_ref.g((byte) -104)) {
                             break L6;
                           } else {
                             if (-1 != (as.field_d ^ -1)) {
                               break L6;
                             } else {
-                              if (var20.q((byte) 99) != var3_ref2.e(512)) {
+                              if (var20.q((byte) 99) != var3_ref.e(512)) {
                                 break L6;
                               } else {
                                 if (var20.q((byte) 84) == sja.field_c) {
-                                  if (var20.o((byte) -117) != var3_ref2.b(false)) {
+                                  if (var20.o((byte) -117) != var3_ref.b(false)) {
                                     if (var20.k((byte) -108) == null) {
                                       break L6;
                                     } else {
-                                      if (var20.k((byte) -108).a((byte) 28) != var3_ref2.b(false)) {
+                                      if (var20.k((byte) -108).a((byte) 28) != var3_ref.b(false)) {
                                         break L6;
                                       } else {
                                         var13++;
@@ -11552,8 +9678,8 @@ final class pe implements ntb, utb {
                             }
                           }
                         }
-                        if (this.a(var3_ref2, var20, -46)) {
-                          if (this.a(var20, 46, var3_ref2)) {
+                        if (this.a(var3_ref, var20, -46)) {
+                          if (this.a(var20, 46, var3_ref)) {
                             break L5;
                           } else {
                             var13++;
@@ -11585,8 +9711,8 @@ final class pe implements ntb, utb {
                             var21 = this.field_m[ada.field_a[var13] + -field_c[1]];
                             var14_ref = var21;
                             if (null != var14_ref) {
-                              if (this.a(var3_ref2, var21, -66)) {
-                                if (this.a(var21, 119, var3_ref2)) {
+                              if (this.a(var3_ref, var21, -66)) {
+                                if (this.a(var21, 119, var3_ref)) {
                                   break L7;
                                 } else {
                                   var13++;
@@ -11622,7 +9748,7 @@ final class pe implements ntb, utb {
                                 if (0 != gba.field_r) {
                                   break L12;
                                 } else {
-                                  if (((mqb) ((Object) var15)).m(32) != var3_ref2.b(false)) {
+                                  if (((mqb) ((Object) var15)).m(32) != var3_ref.b(false)) {
                                     break L12;
                                   } else {
                                     var14_int++;
@@ -11630,8 +9756,8 @@ final class pe implements ntb, utb {
                                   }
                                 }
                               }
-                              if (this.a(var3_ref2, var15, -80)) {
-                                if (this.a(var15, 48, var3_ref2)) {
+                              if (this.a(var3_ref, var15, -80)) {
+                                if (this.a(var15, 48, var3_ref)) {
                                   break L9;
                                 } else {
                                   break L11;
@@ -11662,8 +9788,8 @@ final class pe implements ntb, utb {
                           var22 = param0[-field_c[2] + ada.field_a[var13]];
                           var14_ref2 = var22;
                           if (null != var14_ref2) {
-                            if (this.a(var3_ref2, var22, -81)) {
-                              if (this.a(var22, 72, var3_ref2)) {
+                            if (this.a(var3_ref, var22, -81)) {
+                              if (this.a(var22, 72, var3_ref)) {
                                 break L13;
                               } else {
                                 var13++;
@@ -11682,8 +9808,8 @@ final class pe implements ntb, utb {
                     }
                   }
                   L15: {
-                    this.a(var3_ref2, var5, var9, (byte) -103, var4, var8);
-                    this.a(var5, var8, var4, var3_ref2, var9, 6);
+                    this.a(var3_ref, var5, var9, (byte) -103, var4, var8);
+                    this.a(var5, var8, var4, var3_ref, var9, 6);
                     if (wgb.field_i == null) {
                       break L15;
                     } else {
@@ -11692,19 +9818,16 @@ final class pe implements ntb, utb {
                         if (wgb.field_i instanceof sg) {
                           L17: {
                             var23_ref = (sg) ((Object) wgb.field_i);
-                            if (var3_ref2.e(512) != var23_ref.q((byte) 77)) {
+                            if (var3_ref.e(512) != var23_ref.q((byte) 77)) {
                               if (!var23_ref.j((byte) -127)) {
-                                stackOut_82_0 = 1;
-                                stackIn_84_0 = stackOut_82_0;
+                                stackIn_84_0 = 1;
                                 break L17;
                               } else {
-                                stackOut_81_0 = 0;
-                                stackIn_84_0 = stackOut_81_0;
+                                stackIn_84_0 = 0;
                                 break L17;
                               }
                             } else {
-                              stackOut_79_0 = 0;
-                              stackIn_84_0 = stackOut_79_0;
+                              stackIn_84_0 = 0;
                               break L17;
                             }
                           }
@@ -11713,7 +9836,7 @@ final class pe implements ntb, utb {
                             if (var13 == 0) {
                               break L18;
                             } else {
-                              var23_ref.c(var3_ref2.b(false), 19581);
+                              var23_ref.c(var3_ref.b(false), 19581);
                               if (!var23_ref.g(false)) {
                                 break L18;
                               } else {
@@ -11725,7 +9848,7 @@ final class pe implements ntb, utb {
                           if (var13 != 0) {
                             break L16;
                           } else {
-                            if ((var3_ref2.g((byte) -104) ^ -1) != -6) {
+                            if ((var3_ref.g((byte) -104) ^ -1) != -6) {
                               break L16;
                             } else {
                               if (!var23_ref.j((byte) -40)) {
@@ -11744,18 +9867,18 @@ final class pe implements ntb, utb {
                             break L16;
                           } else {
                             wgb.field_i.d((byte) -68);
-                            this.a((byte) 108, var3_ref2, var13 != 0);
-                            var3_ref2 = (tj) ((Object) this.field_x.a((byte) 46));
+                            this.a((byte) 108, var3_ref, var13 != 0);
+                            var3_ref = (tj) ((Object) this.field_x.a((byte) 46));
                             continue L1;
                           }
                         }
                       }
                       wgb.field_i.d((byte) -68);
-                      this.a((byte) 108, var3_ref2, var13 != 0);
+                      this.a((byte) 108, var3_ref, var13 != 0);
                       break L15;
                     }
                   }
-                  var3_ref2 = (tj) ((Object) this.field_x.a((byte) 46));
+                  var3_ref = (tj) ((Object) this.field_x.a((byte) 46));
                   continue L1;
                 }
               }
@@ -11764,28 +9887,20 @@ final class pe implements ntb, utb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L19: {
-            var3_ref = decompiledCaughtException;
-            stackOut_97_0 = (RuntimeException) (var3_ref);
-            stackOut_97_1 = new StringBuilder().append("pe.RE(");
-            stackIn_100_0 = stackOut_97_0;
-            stackIn_100_1 = stackOut_97_1;
-            stackIn_98_0 = stackOut_97_0;
-            stackIn_98_1 = stackOut_97_1;
+            var3_ref2 = decompiledCaughtException;
+            stackIn_100_0 = (RuntimeException) (var3_ref2);
+
+            stackIn_100_1 = new StringBuilder().append("pe.RE(");
+
             if (param0 == null) {
-              stackOut_100_0 = (RuntimeException) ((Object) stackIn_100_0);
-              stackOut_100_1 = (StringBuilder) ((Object) stackIn_100_1);
-              stackOut_100_2 = "null";
-              stackIn_101_0 = stackOut_100_0;
-              stackIn_101_1 = stackOut_100_1;
-              stackIn_101_2 = stackOut_100_2;
+              stackIn_101_0 = (RuntimeException) ((Object) stackIn_100_0);
+              stackIn_101_1 = (StringBuilder) ((Object) stackIn_100_1);
+              stackIn_101_2 = "null";
               break L19;
             } else {
-              stackOut_98_0 = (RuntimeException) ((Object) stackIn_98_0);
-              stackOut_98_1 = (StringBuilder) ((Object) stackIn_98_1);
-              stackOut_98_2 = "{...}";
-              stackIn_101_0 = stackOut_98_0;
-              stackIn_101_1 = stackOut_98_1;
-              stackIn_101_2 = stackOut_98_2;
+              stackIn_101_0 = (RuntimeException) ((Object) stackIn_100_0);
+              stackIn_101_1 = (StringBuilder) ((Object) stackIn_100_1);
+              stackIn_101_2 = "{...}";
               break L19;
             }
           }
@@ -11794,11 +9909,11 @@ final class pe implements ntb, utb {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         L0: {
           var13 = VoidHunters.field_G;
           if (param3 == -19079) {
@@ -11846,39 +9961,18 @@ final class pe implements ntb, utb {
     }
 
     final void a(lta param0, int param1, lbb param2) {
-        int discarded$3 = 0;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -11886,7 +9980,7 @@ final class pe implements ntb, utb {
               if (param1 == -950) {
                 break L1;
               } else {
-                discarded$3 = this.d(true);
+                this.d(true);
                 break L1;
               }
             }
@@ -11896,52 +9990,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("pe.BB(");
-            stackIn_6_0 = stackOut_3_0;
-            stackIn_6_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("pe.BB(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_7_0 = stackOut_4_0;
-              stackIn_7_1 = stackOut_4_1;
-              stackIn_7_2 = stackOut_4_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_7_0;
-            stackIn_10_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_10_0 = (RuntimeException) ((Object) stackIn_7_0);
+
+            stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_11_0 = stackOut_8_0;
-              stackIn_11_1 = stackOut_8_1;
-              stackIn_11_2 = stackOut_8_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -11950,13 +10028,12 @@ final class pe implements ntb, utb {
     }
 
     private final void b(byte param0, int param1) {
-        int discarded$2 = 0;
         L0: {
           this.field_j = (it[]) ((Object) dt.a(pgb.field_g, param1, param0 ^ 15642, this.field_j));
           if (param0 == 41) {
             break L0;
           } else {
-            discarded$2 = this.c(88);
+            this.c(88);
             break L0;
           }
         }
@@ -11968,7 +10045,35 @@ final class pe implements ntb, utb {
     }
 
     private final boolean a(tfa param0, int param1, tfa param2, sg param3) {
-        boolean discarded$1 = false;
+        boolean discarded$0 = false;
+        int stackIn_6_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_22_0 = 0;
+        Object stackIn_29_0 = null;
+        sg stackIn_29_1 = null;
+        Object stackIn_30_0 = null;
+        sg stackIn_30_1 = null;
+        int stackIn_30_2 = 0;
+        int stackIn_32_0 = 0;
+        int stackIn_36_0 = 0;
+        Object stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        Object stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        String stackIn_41_2 = null;
+        Object stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        Object stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
+        Object stackIn_48_0 = null;
+        StringBuilder stackIn_48_1 = null;
+        Object stackIn_49_0 = null;
+        StringBuilder stackIn_49_1 = null;
+        String stackIn_49_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         Object var5 = null;
         vra var6 = null;
         int var7 = 0;
@@ -11978,83 +10083,6 @@ final class pe implements ntb, utb {
         int var11 = 0;
         nbb var12 = null;
         nbb var13 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_22_0 = 0;
-        Object stackIn_27_0 = null;
-        sg stackIn_27_1 = null;
-        Object stackIn_29_0 = null;
-        sg stackIn_29_1 = null;
-        Object stackIn_30_0 = null;
-        sg stackIn_30_1 = null;
-        int stackIn_30_2 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_36_0 = 0;
-        Object stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        Object stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        Object stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        String stackIn_41_2 = null;
-        Object stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        Object stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        Object stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        String stackIn_45_2 = null;
-        Object stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        Object stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
-        Object stackIn_49_0 = null;
-        StringBuilder stackIn_49_1 = null;
-        String stackIn_49_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_35_0 = 0;
-        Object stackOut_26_0 = null;
-        sg stackOut_26_1 = null;
-        Object stackOut_29_0 = null;
-        sg stackOut_29_1 = null;
-        int stackOut_29_2 = 0;
-        Object stackOut_27_0 = null;
-        sg stackOut_27_1 = null;
-        int stackOut_27_2 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_5_0 = 0;
-        Object stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        Object stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        Object stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        Object stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        Object stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
-        Object stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
-        Object stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        Object stackOut_48_0 = null;
-        StringBuilder stackOut_48_1 = null;
-        String stackOut_48_2 = null;
-        Object stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
         try {
           L0: {
             L1: {
@@ -12077,8 +10105,7 @@ final class pe implements ntb, utb {
               if (param3.n((byte) 28) != null) {
                 param3.field_k.i(103);
                 this.a(16384, var6, param3.n((byte) 28), param3);
-                stackOut_10_0 = 0;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -12086,12 +10113,10 @@ final class pe implements ntb, utb {
                   var7 = var6.field_c;
                   var8 = var6.field_a;
                   if (var5 == null) {
-                    stackOut_15_0 = 0;
-                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_0 = 0;
                     break L2;
                   } else {
-                    stackOut_13_0 = 1;
-                    stackIn_16_0 = stackOut_13_0;
+                    stackIn_16_0 = 1;
                     break L2;
                   }
                 }
@@ -12100,26 +10125,22 @@ final class pe implements ntb, utb {
                   var12 = this.a((nbb) (var5), (byte) 127, param3, var8, var6, var7);
                   if (var12 != null) {
                     if (var9 == 0) {
-                      stackOut_20_0 = 1;
-                      stackIn_22_0 = stackOut_20_0;
+                      stackIn_22_0 = 1;
                       break L3;
                     } else {
-                      stackOut_19_0 = 0;
-                      stackIn_22_0 = stackOut_19_0;
+                      stackIn_22_0 = 0;
                       break L3;
                     }
                   } else {
-                    stackOut_17_0 = 0;
-                    stackIn_22_0 = stackOut_17_0;
+                    stackIn_22_0 = 0;
                     break L3;
                   }
                 }
                 var10 = stackIn_22_0;
                 if ((var6.field_e & 128) == 0) {
                   if ((var6.field_d & 128) != 0) {
-                    discarded$1 = this.a(var12, var8, true, param3, 126, var7);
-                    stackOut_35_0 = 1;
-                    stackIn_36_0 = stackOut_35_0;
+                    discarded$0 = this.a(var12, var8, true, param3, 126, var7);
+                    stackIn_36_0 = 1;
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
@@ -12143,27 +10164,19 @@ final class pe implements ntb, utb {
                         }
                       }
                       L6: {
-                        stackOut_26_0 = this;
-                        stackOut_26_1 = (sg) (param3);
-                        stackIn_29_0 = stackOut_26_0;
-                        stackIn_29_1 = stackOut_26_1;
-                        stackIn_27_0 = stackOut_26_0;
-                        stackIn_27_1 = stackOut_26_1;
+                        stackIn_29_0 = this;
+
+                        stackIn_29_1 = (sg) (param3);
+
                         if (1 != hw.field_b) {
-                          stackOut_29_0 = this;
-                          stackOut_29_1 = (sg) ((Object) stackIn_29_1);
-                          stackOut_29_2 = 0;
-                          stackIn_30_0 = stackOut_29_0;
-                          stackIn_30_1 = stackOut_29_1;
-                          stackIn_30_2 = stackOut_29_2;
+                          stackIn_30_0 = this;
+                          stackIn_30_1 = (sg) ((Object) stackIn_29_1);
+                          stackIn_30_2 = 0;
                           break L6;
                         } else {
-                          stackOut_27_0 = this;
-                          stackOut_27_1 = (sg) ((Object) stackIn_27_1);
-                          stackOut_27_2 = 1;
-                          stackIn_30_0 = stackOut_27_0;
-                          stackIn_30_1 = stackOut_27_1;
-                          stackIn_30_2 = stackOut_27_2;
+                          stackIn_30_0 = this;
+                          stackIn_30_1 = (sg) ((Object) stackIn_29_1);
+                          stackIn_30_2 = 1;
                           break L6;
                         }
                       }
@@ -12172,15 +10185,13 @@ final class pe implements ntb, utb {
                       break L4;
                     }
                   }
-                  stackOut_31_0 = 0;
-                  stackIn_32_0 = stackOut_31_0;
+                  stackIn_32_0 = 0;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               }
             } else {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -12189,77 +10200,53 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var5 = decompiledCaughtException;
-            stackOut_37_0 = var5;
-            stackOut_37_1 = new StringBuilder().append("pe.WD(");
-            stackIn_40_0 = stackOut_37_0;
-            stackIn_40_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            stackIn_40_0 = var5;
+
+            stackIn_40_1 = new StringBuilder().append("pe.WD(");
+
             if (param0 == null) {
-              stackOut_40_0 = stackIn_40_0;
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "null";
-              stackIn_41_0 = stackOut_40_0;
-              stackIn_41_1 = stackOut_40_1;
-              stackIn_41_2 = stackOut_40_2;
+              stackIn_41_0 = stackIn_40_0;
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "null";
               break L7;
             } else {
-              stackOut_38_0 = stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "{...}";
-              stackIn_41_0 = stackOut_38_0;
-              stackIn_41_1 = stackOut_38_1;
-              stackIn_41_2 = stackOut_38_2;
+              stackIn_41_0 = stackIn_40_0;
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "{...}";
               break L7;
             }
           }
           L8: {
-            stackOut_41_0 = stackIn_41_0;
-            stackOut_41_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_41_2).append(',').append(param1).append(',');
-            stackIn_44_0 = stackOut_41_0;
-            stackIn_44_1 = stackOut_41_1;
-            stackIn_42_0 = stackOut_41_0;
-            stackIn_42_1 = stackOut_41_1;
+            stackIn_44_0 = stackIn_41_0;
+
+            stackIn_44_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_41_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_44_0 = stackIn_44_0;
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "null";
-              stackIn_45_0 = stackOut_44_0;
-              stackIn_45_1 = stackOut_44_1;
-              stackIn_45_2 = stackOut_44_2;
+              stackIn_45_0 = stackIn_44_0;
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "null";
               break L8;
             } else {
-              stackOut_42_0 = stackIn_42_0;
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "{...}";
-              stackIn_45_0 = stackOut_42_0;
-              stackIn_45_1 = stackOut_42_1;
-              stackIn_45_2 = stackOut_42_2;
+              stackIn_45_0 = stackIn_41_0;
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_45_0 = stackIn_45_0;
-            stackOut_45_1 = ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(',');
-            stackIn_48_0 = stackOut_45_0;
-            stackIn_48_1 = stackOut_45_1;
-            stackIn_46_0 = stackOut_45_0;
-            stackIn_46_1 = stackOut_45_1;
+            stackIn_48_0 = stackIn_45_0;
+
+            stackIn_48_1 = ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(',');
+
             if (param3 == null) {
-              stackOut_48_0 = stackIn_48_0;
-              stackOut_48_1 = (StringBuilder) ((Object) stackIn_48_1);
-              stackOut_48_2 = "null";
-              stackIn_49_0 = stackOut_48_0;
-              stackIn_49_1 = stackOut_48_1;
-              stackIn_49_2 = stackOut_48_2;
+              stackIn_49_0 = stackIn_48_0;
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "null";
               break L9;
             } else {
-              stackOut_46_0 = stackIn_46_0;
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "{...}";
-              stackIn_49_0 = stackOut_46_0;
-              stackIn_49_1 = stackOut_46_1;
-              stackIn_49_2 = stackOut_46_2;
+              stackIn_49_0 = stackIn_45_0;
+              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
+              stackIn_49_2 = "{...}";
               break L9;
             }
           }
@@ -12281,14 +10268,14 @@ final class pe implements ntb, utb {
     }
 
     final boolean a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
-        int var7 = 0;
-        qob[] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        qob var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int var7;
+        qob[] var8;
+        int var9;
+        int var10;
+        qob var11;
+        int var12;
+        int var13;
+        int var14;
         L0: {
           var14 = VoidHunters.field_G;
           var7 = 0;
@@ -12336,8 +10323,6 @@ final class pe implements ntb, utb {
         anb[] var9 = null;
         anb stackIn_6_0 = null;
         Object stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -12345,16 +10330,6 @@ final class pe implements ntb, utb {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_10_0 = null;
-        anb stackOut_5_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         var8 = VoidHunters.field_G;
         try {
           L0: {
@@ -12365,8 +10340,7 @@ final class pe implements ntb, utb {
               if (var9.length <= var6) {
                 if (param1 != -111) {
                   this.f(false);
-                  stackOut_10_0 = null;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = null;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -12381,8 +10355,7 @@ final class pe implements ntb, utb {
                     if (null == var7.field_k.a(param2, param0, true)) {
                       break L2;
                     } else {
-                      stackOut_5_0 = (anb) (var7);
-                      stackIn_6_0 = stackOut_5_0;
+                      stackIn_6_0 = (anb) (var7);
                       decompiledRegionSelector0 = 0;
                       break L0;
                     }
@@ -12397,27 +10370,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var5_ref);
-            stackOut_12_1 = new StringBuilder().append("pe.HC(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_15_0 = stackOut_12_0;
-            stackIn_15_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_15_0 = (RuntimeException) (var5_ref);
+
+            stackIn_15_1 = new StringBuilder().append("pe.HC(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_16_0 = stackOut_13_0;
-              stackIn_16_1 = stackOut_13_1;
-              stackIn_16_2 = stackOut_13_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L3;
             }
           }
@@ -12431,7 +10396,6 @@ final class pe implements ntb, utb {
     }
 
     private final void a(sg param0, boolean param1, int param2, nbb param3, int param4, int param5) {
-        RuntimeException var7 = null;
         int var8 = 0;
         lu var9 = null;
         ml var10_ref_ml = null;
@@ -12450,37 +10414,18 @@ final class pe implements ntb, utb {
         ml var20 = null;
         qua var21 = null;
         ml var22 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException var7 = null;
         try {
           L0: {
             L1: {
@@ -12573,52 +10518,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var7 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) (var7);
-            stackOut_15_1 = new StringBuilder().append("pe.LB(");
-            stackIn_18_0 = stackOut_15_0;
-            stackIn_18_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_18_0 = (RuntimeException) (var7);
+
+            stackIn_18_1 = new StringBuilder().append("pe.LB(");
+
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_19_0 = stackOut_16_0;
-              stackIn_19_1 = stackOut_16_1;
-              stackIn_19_2 = stackOut_16_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_22_0 = stackOut_19_0;
-            stackIn_22_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackIn_22_0 = (RuntimeException) ((Object) stackIn_19_0);
+
+            stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_23_0 = stackOut_20_0;
-              stackIn_23_1 = stackOut_20_1;
-              stackIn_23_2 = stackOut_20_2;
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L7;
             }
           }
@@ -12627,41 +10556,19 @@ final class pe implements ntb, utb {
     }
 
     private final boolean a(boolean param0, int[] param1, int[] param2) {
-        RuntimeException var4 = null;
         int stackIn_10_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_7_0 = 0;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
@@ -12684,8 +10591,7 @@ final class pe implements ntb, utb {
                       break L3;
                     } else {
                       if (param2[3] <= param1[3]) {
-                        stackOut_9_0 = 0;
-                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_0 = 0;
                         break L2;
                       } else {
                         break L3;
@@ -12694,8 +10600,7 @@ final class pe implements ntb, utb {
                   }
                 }
               }
-              stackOut_7_0 = 1;
-              stackIn_10_0 = stackOut_7_0;
+              stackIn_10_0 = 1;
               break L2;
             }
             break L0;
@@ -12704,52 +10609,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var4);
-            stackOut_11_1 = new StringBuilder().append("pe.CD(").append(param0).append(',');
-            stackIn_14_0 = stackOut_11_0;
-            stackIn_14_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_14_0 = (RuntimeException) (var4);
+
+            stackIn_14_1 = new StringBuilder().append("pe.CD(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_15_0 = stackOut_12_0;
-              stackIn_15_1 = stackOut_12_1;
-              stackIn_15_2 = stackOut_12_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
           L5: {
-            stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
-            stackIn_18_0 = stackOut_15_0;
-            stackIn_18_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackIn_18_0 = (RuntimeException) ((Object) stackIn_15_0);
+
+            stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
+
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "{...}";
-              stackIn_19_0 = stackOut_16_0;
-              stackIn_19_1 = stackOut_16_1;
-              stackIn_19_2 = stackOut_16_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }
@@ -12759,8 +10648,14 @@ final class pe implements ntb, utb {
     }
 
     private final void a(int param0, lta param1, int param2) {
-        RuntimeException var4 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException var4 = null;
         uwa var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -12775,22 +10670,6 @@ final class pe implements ntb, utb {
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         var18 = VoidHunters.field_G;
         try {
           L0: {
@@ -12841,7 +10720,7 @@ final class pe implements ntb, utb {
                               var15 = (eu.a(var13, 98) >> -1335706008) * (var5.field_d >> -204319032);
                               var16 = var5.field_g + var14;
                               var17 = var5.field_f + var15;
-                              if (-var8 >= var12) {
+                              if ((-var8 ^ -1) <= (var12 ^ -1)) {
                                 break L7;
                               } else {
                                 c.a(param1.b(true, var17), param1.a(var16, (byte) 112), param1.a(var9, (byte) 125), param1.b(true, var10), -16777216, var11);
@@ -12877,27 +10756,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var4 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) (var4);
-            stackOut_22_1 = new StringBuilder().append("pe.UE(").append(param0).append(',');
-            stackIn_25_0 = stackOut_22_0;
-            stackIn_25_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackIn_25_0 = (RuntimeException) (var4);
+
+            stackIn_25_1 = new StringBuilder().append("pe.UE(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackOut_23_2 = "{...}";
-              stackIn_26_0 = stackOut_23_0;
-              stackIn_26_1 = stackOut_23_1;
-              stackIn_26_2 = stackOut_23_2;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L8;
             }
           }
@@ -12906,40 +10777,20 @@ final class pe implements ntb, utb {
     }
 
     private final void a(lta param0, sg param1, int param2, int param3, int param4) {
-        RuntimeException var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
         try {
           L0: {
             L1: {
@@ -12988,52 +10839,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var6);
-            stackOut_13_1 = new StringBuilder().append("pe.GA(");
-            stackIn_16_0 = stackOut_13_0;
-            stackIn_16_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_16_0 = (RuntimeException) (var6);
+
+            stackIn_16_1 = new StringBuilder().append("pe.GA(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_17_0 = stackOut_14_0;
-              stackIn_17_1 = stackOut_14_1;
-              stackIn_17_2 = stackOut_14_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L5;
             }
           }
           L6: {
-            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
-            stackIn_20_0 = stackOut_17_0;
-            stackIn_20_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_20_0 = (RuntimeException) ((Object) stackIn_17_0);
+
+            stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
+
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_21_0 = stackOut_18_0;
-              stackIn_21_1 = stackOut_18_1;
-              stackIn_21_2 = stackOut_18_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L6;
             }
           }
@@ -13042,8 +10877,8 @@ final class pe implements ntb, utb {
     }
 
     private final anb a(byte param0, int param1, int param2) {
-        anb var4 = null;
-        crb[] var5 = null;
+        anb var4;
+        crb[] var5;
         if (param0 <= -9) {
           var4 = this.a(param1, (byte) -111, param2, this.field_k);
           if (null != var4) {
@@ -13076,24 +10911,13 @@ final class pe implements ntb, utb {
     }
 
     private final void a(qob param0, int param1) {
-        anb discarded$3 = null;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
         try {
           L0: {
             L1: {
@@ -13101,7 +10925,7 @@ final class pe implements ntb, utb {
               if (param1 == 0) {
                 break L1;
               } else {
-                discarded$3 = this.a(true, 95, -77, 72);
+                this.a(true, 95, -77, 72);
                 break L1;
               }
             }
@@ -13111,27 +10935,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("pe.QA(");
-            stackIn_6_0 = stackOut_3_0;
-            stackIn_6_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("pe.QA(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_7_0 = stackOut_4_0;
-              stackIn_7_1 = stackOut_4_1;
-              stackIn_7_2 = stackOut_4_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -13159,10 +10975,6 @@ final class pe implements ntb, utb {
     }
 
     final void a(sg param0, byte param1) {
-        boolean discarded$30 = false;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -13170,18 +10982,11 @@ final class pe implements ntb, utb {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             param0.a((pe) (this), true, (byte) 67, false);
-            discarded$30 = param0.b(-(this.field_r >> 1956167809), 2147483647, this.field_r >> -179751807, -(this.field_o >> -479651135), this.field_o >> 1109078657);
+            param0.b(-(this.field_r >> 1956167809), 2147483647, this.field_r >> -179751807, -(this.field_o >> -479651135), this.field_o >> 1109078657);
             if (param1 > 70) {
               L1: {
                 param0.C(32);
@@ -13203,27 +11008,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("pe.UA(");
-            stackIn_9_0 = stackOut_6_0;
-            stackIn_9_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("pe.UA(");
+
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_10_0 = stackOut_7_0;
-              stackIn_10_1 = stackOut_7_1;
-              stackIn_10_2 = stackOut_7_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L2;
             }
           }
@@ -13237,9 +11034,9 @@ final class pe implements ntb, utb {
     }
 
     final int f(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = VoidHunters.field_G;
           var3 = 0;
@@ -13273,11 +11070,11 @@ final class pe implements ntb, utb {
     }
 
     final int b(boolean param0) {
-        int var2 = 0;
-        nbb[] var3 = null;
-        int var4 = 0;
-        nbb var5 = null;
-        int var6 = 0;
+        int var2;
+        nbb[] var3;
+        int var4;
+        nbb var5;
+        int var6;
         L0: {
           var6 = VoidHunters.field_G;
           var2 = 0;
@@ -13309,8 +11106,6 @@ final class pe implements ntb, utb {
 
     final void a(tj param0, boolean param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -13318,14 +11113,6 @@ final class pe implements ntb, utb {
         String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
             if (1023 > this.field_x.c(3)) {
@@ -13349,27 +11136,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) (runtimeException);
-            stackOut_5_1 = new StringBuilder().append("pe.HD(");
-            stackIn_8_0 = stackOut_5_0;
-            stackIn_8_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
+
+            stackIn_8_1 = new StringBuilder().append("pe.HD(");
+
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "{...}";
-              stackIn_9_0 = stackOut_6_0;
-              stackIn_9_1 = stackOut_6_1;
-              stackIn_9_2 = stackOut_6_2;
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L2;
             }
           }
@@ -13383,35 +11162,25 @@ final class pe implements ntb, utb {
     }
 
     private final void a(int param0, int param1, int param2, tj param3, int param4, int param5) {
-        RuntimeException var7 = null;
-        int var7_int = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        uwa var9 = null;
-        uwa var10_ref_uwa = null;
-        int var10 = 0;
-        sg var11 = null;
-        int var11_int = 0;
-        Object var12 = null;
-        int var12_int = 0;
-        int var13 = 0;
-        int var14 = 0;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8 = 0;
+        int var9_int = 0;
+        uwa var9 = null;
+        int var10 = 0;
+        uwa var10_ref_uwa = null;
+        sg var11 = null;
+        int var11_int = 0;
+        Object var12 = null;
+        int var12_int = 0;
+        int var13 = 0;
+        int var14 = 0;
         var14 = VoidHunters.field_G;
         try {
           L0: {
@@ -13499,27 +11268,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var7 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) (var7);
-            stackOut_29_1 = new StringBuilder().append("pe.NC(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_32_0 = stackOut_29_0;
-            stackIn_32_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            stackIn_32_0 = (RuntimeException) (var7);
+
+            stackIn_32_1 = new StringBuilder().append("pe.NC(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L5;
             } else {
-              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackOut_30_2 = "{...}";
-              stackIn_33_0 = stackOut_30_0;
-              stackIn_33_1 = stackOut_30_1;
-              stackIn_33_2 = stackOut_30_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L5;
             }
           }
@@ -13529,14 +11290,9 @@ final class pe implements ntb, utb {
 
     final boolean a(int param0, lbb param1, int param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
         int stackIn_5_0 = 0;
         int stackIn_13_0 = 0;
         boolean stackIn_15_0 = false;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -13544,17 +11300,9 @@ final class pe implements ntb, utb {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_12_0 = 0;
-        boolean stackOut_14_0 = false;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
         try {
           L0: {
             L1: {
@@ -13563,8 +11311,7 @@ final class pe implements ntb, utb {
                 break L1;
               } else {
                 if (var4_int != 5) {
-                  stackOut_4_0 = 0;
-                  stackIn_5_0 = stackOut_4_0;
+                  stackIn_5_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
@@ -13587,8 +11334,7 @@ final class pe implements ntb, utb {
                 if (var6 >= var5) {
                   break L3;
                 } else {
-                  stackOut_12_0 = 0;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = 0;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
@@ -13596,8 +11342,7 @@ final class pe implements ntb, utb {
                 break L3;
               }
             }
-            stackOut_14_0 = this.a(true, param0, param1);
-            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_0 = this.a(true, param0, param1);
             decompiledRegionSelector0 = 2;
             break L0;
           }
@@ -13605,27 +11350,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var4);
-            stackOut_16_1 = new StringBuilder().append("pe.CB(").append(param0).append(',');
-            stackIn_19_0 = stackOut_16_0;
-            stackIn_19_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_19_0 = (RuntimeException) (var4);
+
+            stackIn_19_1 = new StringBuilder().append("pe.CB(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_20_0 = stackOut_17_0;
-              stackIn_20_1 = stackOut_17_1;
-              stackIn_20_2 = stackOut_17_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L4;
             }
           }
@@ -13650,21 +11387,14 @@ final class pe implements ntb, utb {
     }
 
     private final boolean a(anb param0, anb param1, int param2) {
-        RuntimeException var4 = null;
-        int var4_int = 0;
-        ij var5 = null;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_9_0 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -13672,30 +11402,13 @@ final class pe implements ntb, utb {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        ij var5 = null;
         try {
           L0: {
             if (!rna.a(param0.field_q, param1.field_q, -128)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -13703,13 +11416,11 @@ final class pe implements ntb, utb {
               var5 = new ij();
               param0.field_k.a(param1.field_k, 0, 0, (byte) -126, var5);
               if (var5.b(-103)) {
-                stackOut_8_0 = 0;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = 0;
                 decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_6_0 = 1;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -13719,52 +11430,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var4);
-            stackOut_10_1 = new StringBuilder().append("pe.HE(");
-            stackIn_13_0 = stackOut_10_0;
-            stackIn_13_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_13_0 = (RuntimeException) (var4);
+
+            stackIn_13_1 = new StringBuilder().append("pe.HE(");
+
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L1;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_14_0 = stackOut_11_0;
-              stackIn_14_1 = stackOut_11_1;
-              stackIn_14_2 = stackOut_11_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L1;
             }
           }
           L2: {
-            stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
-            stackIn_17_0 = stackOut_14_0;
-            stackIn_17_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_17_0 = (RuntimeException) ((Object) stackIn_14_0);
+
+            stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_18_0 = stackOut_15_0;
-              stackIn_18_1 = stackOut_15_1;
-              stackIn_18_2 = stackOut_15_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L2;
             }
           }
@@ -13783,30 +11478,19 @@ final class pe implements ntb, utb {
 
     final boolean a(anb param0, int param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         qob var7 = null;
         int var8 = 0;
         int stackIn_11_0 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var3 = null;
         var8 = VoidHunters.field_G;
         try {
           L0: {
@@ -13836,8 +11520,7 @@ final class pe implements ntb, utb {
                   continue L1;
                 }
               }
-              stackOut_10_0 = var3_int;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = var3_int;
               break L0;
             }
           }
@@ -13845,27 +11528,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var3);
-            stackOut_12_1 = new StringBuilder().append("pe.KB(");
-            stackIn_15_0 = stackOut_12_0;
-            stackIn_15_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_15_0 = (RuntimeException) (var3);
+
+            stackIn_15_1 = new StringBuilder().append("pe.KB(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_16_0 = stackOut_13_0;
-              stackIn_16_1 = stackOut_13_1;
-              stackIn_16_2 = stackOut_13_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }
@@ -13875,23 +11550,17 @@ final class pe implements ntb, utb {
     }
 
     final boolean a(int param0, anb param1, anb[] param2, int param3) {
-        nbb[] var3 = null;
         int var5_int = 0;
-        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
@@ -13899,25 +11568,8 @@ final class pe implements ntb, utb {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        nbb[] var3 = null;
+        RuntimeException var5 = null;
         var7 = VoidHunters.field_G;
         try {
           L0: {
@@ -13925,8 +11577,7 @@ final class pe implements ntb, utb {
               var5_int = 0;
               L1: while (true) {
                 if (var5_int >= param2.length) {
-                  stackOut_15_0 = 0;
-                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_0 = 0;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -13949,8 +11600,7 @@ final class pe implements ntb, utb {
                         }
                         var3[var5_int] = (nbb) ((Object) param1);
                         param1.field_l = var6;
-                        stackOut_12_0 = 1;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = 1;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       }
@@ -13961,8 +11611,7 @@ final class pe implements ntb, utb {
                 }
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -13971,52 +11620,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var5);
-            stackOut_17_1 = new StringBuilder().append("pe.KE(").append(param0).append(',');
-            stackIn_20_0 = stackOut_17_0;
-            stackIn_20_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_20_0 = (RuntimeException) (var5);
+
+            stackIn_20_1 = new StringBuilder().append("pe.KE(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L4;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_21_0 = stackOut_18_0;
-              stackIn_21_1 = stackOut_18_1;
-              stackIn_21_2 = stackOut_18_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L4;
             }
           }
           L5: {
-            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
-            stackIn_24_0 = stackOut_21_0;
-            stackIn_24_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_24_0 = (RuntimeException) ((Object) stackIn_21_0);
+
+            stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
+
             if (var3 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L5;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_25_0 = stackOut_22_0;
-              stackIn_25_1 = stackOut_22_1;
-              stackIn_25_2 = stackOut_22_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L5;
             }
           }
@@ -14034,10 +11667,7 @@ final class pe implements ntb, utb {
     }
 
     private final void a(it param0, byte param1) {
-        nbb discarded$1 = null;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
+        nbb discarded$0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -14045,14 +11675,7 @@ final class pe implements ntb, utb {
         String stackIn_12_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -14072,7 +11695,7 @@ final class pe implements ntb, utb {
               if (param1 == 107) {
                 break L2;
               } else {
-                discarded$1 = this.a(78, (nbb) null, (sg) null, (byte) -99, 119);
+                discarded$0 = this.a(78, (nbb) null, (sg) null, (byte) -99, 119);
                 break L2;
               }
             }
@@ -14083,27 +11706,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var3);
-            stackOut_8_1 = new StringBuilder().append("pe.FD(");
-            stackIn_11_0 = stackOut_8_0;
-            stackIn_11_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("pe.FD(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_12_0 = stackOut_9_0;
-              stackIn_12_1 = stackOut_9_1;
-              stackIn_12_2 = stackOut_9_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -14118,23 +11733,13 @@ final class pe implements ntb, utb {
 
     final void a(boolean param0, qob param1, byte param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException var4 = null;
         try {
           L0: {
             L1: {
@@ -14164,27 +11769,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (var4);
-            stackOut_8_1 = new StringBuilder().append("pe.PE(").append(param0).append(',');
-            stackIn_11_0 = stackOut_8_0;
-            stackIn_11_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_11_0 = (RuntimeException) (var4);
+
+            stackIn_11_1 = new StringBuilder().append("pe.PE(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_12_0 = stackOut_9_0;
-              stackIn_12_1 = stackOut_9_1;
-              stackIn_12_2 = stackOut_9_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -14193,20 +11790,20 @@ final class pe implements ntb, utb {
     }
 
     private final nbb a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        Object var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        nbb[] var10 = null;
-        int var11 = 0;
-        nbb var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
+        Object var7;
+        int var8;
+        int var9;
+        nbb[] var10;
+        int var11;
+        nbb var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
         var20 = VoidHunters.field_G;
         var7 = null;
         var8 = 262144;
@@ -14291,9 +11888,9 @@ final class pe implements ntb, utb {
     }
 
     final int c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = VoidHunters.field_G;
         var2 = param0;
         var3 = 0;
@@ -14314,42 +11911,22 @@ final class pe implements ntb, utb {
     }
 
     private final void a(int param0, nwa param1, tfa[] param2) {
-        boolean discarded$2 = false;
-        boolean discarded$3 = false;
-        RuntimeException var4 = null;
-        crb[] var5 = null;
-        ij var7 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
+        boolean discarded$0 = false;
+        boolean discarded$1 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException var4 = null;
+        crb[] var5 = null;
+        ij var7 = null;
         try {
           L0: {
             L1: {
@@ -14362,7 +11939,7 @@ final class pe implements ntb, utb {
               if ((seb.field_o ^ -1) != -2) {
                 break L1;
               } else {
-                discarded$2 = this.a(var7, this.field_m, this.field_g, 20521, 3, 1, sja.field_i);
+                discarded$0 = this.a(var7, this.field_m, this.field_g, 20521, 3, 1, sja.field_i);
                 break L1;
               }
             }
@@ -14374,7 +11951,7 @@ final class pe implements ntb, utb {
                 break L2;
               }
             }
-            discarded$3 = this.a(var7, this.field_k, this.field_g, 20521, 3, 0, sja.field_i);
+            discarded$1 = this.a(var7, this.field_k, this.field_g, 20521, 3, 0, sja.field_i);
             this.a(var5, param0 ^ 44);
             this.k(param0 ^ -84);
             this.a(param1, 7559, param2, var5);
@@ -14384,52 +11961,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var4);
-            stackOut_6_1 = new StringBuilder().append("pe.FF(").append(param0).append(',');
-            stackIn_9_0 = stackOut_6_0;
-            stackIn_9_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("pe.FF(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_10_0 = stackOut_7_0;
-              stackIn_10_1 = stackOut_7_1;
-              stackIn_10_2 = stackOut_7_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-            stackIn_13_0 = stackOut_10_0;
-            stackIn_13_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_13_0 = (RuntimeException) ((Object) stackIn_10_0);
+
+            stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
+
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_14_0 = stackOut_11_0;
-              stackIn_14_1 = stackOut_11_1;
-              stackIn_14_2 = stackOut_11_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L4;
             }
           }
@@ -14461,33 +12022,23 @@ final class pe implements ntb, utb {
     }
 
     final anb a(boolean param0, int param1, int param2, int param3) {
-        Object var5 = null;
-        int var6 = 0;
-        int var8 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        sg[] var15 = null;
-        sg var16 = null;
-        nbb[] var17 = null;
-        nbb var18 = null;
-        int stackIn_20_0 = 0;
-        nbb stackIn_20_1 = null;
         int stackIn_22_0 = 0;
         nbb stackIn_22_1 = null;
         int stackIn_23_0 = 0;
         nbb stackIn_23_1 = null;
         int stackIn_23_2 = 0;
-        int stackOut_19_0 = 0;
-        nbb stackOut_19_1 = null;
-        int stackOut_22_0 = 0;
-        nbb stackOut_22_1 = null;
-        int stackOut_22_2 = 0;
-        int stackOut_20_0 = 0;
-        nbb stackOut_20_1 = null;
-        int stackOut_20_2 = 0;
+        Object var5;
+        int var6;
+        int var8;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        sg[] var15;
+        sg var16;
+        nbb[] var17;
+        nbb var18;
         var13 = VoidHunters.field_G;
         var5 = null;
         var6 = 2147483647;
@@ -14507,27 +12058,19 @@ final class pe implements ntb, utb {
                     var18 = var17[var14];
                     if (null != var18) {
                       L3: {
-                        stackOut_19_0 = -param2;
-                        stackOut_19_1 = (nbb) (var18);
-                        stackIn_22_0 = stackOut_19_0;
-                        stackIn_22_1 = stackOut_19_1;
-                        stackIn_20_0 = stackOut_19_0;
-                        stackIn_20_1 = stackOut_19_1;
+                        stackIn_22_0 = -param2;
+
+                        stackIn_22_1 = (nbb) (var18);
+
                         if (param0) {
-                          stackOut_22_0 = stackIn_22_0;
-                          stackOut_22_1 = (nbb) ((Object) stackIn_22_1);
-                          stackOut_22_2 = 0;
-                          stackIn_23_0 = stackOut_22_0;
-                          stackIn_23_1 = stackOut_22_1;
-                          stackIn_23_2 = stackOut_22_2;
+                          stackIn_23_0 = stackIn_22_0;
+                          stackIn_23_1 = (nbb) ((Object) stackIn_22_1);
+                          stackIn_23_2 = 0;
                           break L3;
                         } else {
-                          stackOut_20_0 = stackIn_20_0;
-                          stackOut_20_1 = (nbb) ((Object) stackIn_20_1);
-                          stackOut_20_2 = 1;
-                          stackIn_23_0 = stackOut_20_0;
-                          stackIn_23_1 = stackOut_20_1;
-                          stackIn_23_2 = stackOut_20_2;
+                          stackIn_23_0 = stackIn_22_0;
+                          stackIn_23_1 = (nbb) ((Object) stackIn_22_1);
+                          stackIn_23_2 = 1;
                           break L3;
                         }
                       }
@@ -14592,24 +12135,14 @@ final class pe implements ntb, utb {
 
     private final void a(anb[] param0, boolean param1, int param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var4 = null;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -14643,27 +12176,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var4);
-            stackOut_12_1 = new StringBuilder().append("pe.PC(");
-            stackIn_15_0 = stackOut_12_0;
-            stackIn_15_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_15_0 = (RuntimeException) (var4);
+
+            stackIn_15_1 = new StringBuilder().append("pe.PC(");
+
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_16_0 = stackOut_13_0;
-              stackIn_16_1 = stackOut_13_1;
-              stackIn_16_2 = stackOut_13_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }
@@ -14684,8 +12209,15 @@ final class pe implements ntb, utb {
     }
 
     private final void a(int param0, int param1, int[] param2, byte param3, int param4, int param5, int param6) {
-        RuntimeException var8 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -14696,23 +12228,6 @@ final class pe implements ntb, utb {
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         var18 = VoidHunters.field_G;
         try {
           L0: {
@@ -14739,7 +12254,7 @@ final class pe implements ntb, utb {
                 }
               } else {
                 var10 = param2[var9];
-                if (var10 > var8_int) {
+                if ((var10 ^ -1) < (var8_int ^ -1)) {
                   var8_int = var10;
                   var9 += 2;
                   continue L1;
@@ -14754,27 +12269,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var8 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) (var8);
-            stackOut_10_1 = new StringBuilder().append("pe.JE(").append(param0).append(',').append(param1).append(',');
-            stackIn_13_0 = stackOut_10_0;
-            stackIn_13_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_13_0 = (RuntimeException) (var8);
+
+            stackIn_13_1 = new StringBuilder().append("pe.JE(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L2;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_14_0 = stackOut_11_0;
-              stackIn_14_1 = stackOut_11_1;
-              stackIn_14_2 = stackOut_11_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L2;
             }
           }
@@ -14788,12 +12295,11 @@ final class pe implements ntb, utb {
     }
 
     private final void a(byte param0) {
-        int discarded$1 = 0;
         L0: {
           if (param0 >= 47) {
             break L0;
           } else {
-            discarded$1 = this.m(-1);
+            this.m(-1);
             break L0;
           }
         }
@@ -14874,7 +12380,6 @@ final class pe implements ntb, utb {
 
     private final void a(int param0, vra param1, boa param2, sg param3) {
         int var5_int = 0;
-        RuntimeException var5 = null;
         int[] var6 = null;
         ml var7 = null;
         ml var8 = null;
@@ -14884,22 +12389,16 @@ final class pe implements ntb, utb {
         int[] var12 = null;
         int[] var13 = null;
         int stackIn_10_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
@@ -14907,32 +12406,7 @@ final class pe implements ntb, utb {
         String stackIn_29_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        RuntimeException var5 = null;
         var11 = VoidHunters.field_G;
         try {
           L0: {
@@ -14958,12 +12432,10 @@ final class pe implements ntb, utb {
                       } else {
                         L3: {
                           if (!this.a(var8, param3, var7, var10, -17329, var7)) {
-                            stackOut_9_0 = 0;
-                            stackIn_10_0 = stackOut_9_0;
+                            stackIn_10_0 = 0;
                             break L3;
                           } else {
-                            stackOut_8_0 = 1;
-                            stackIn_10_0 = stackOut_8_0;
+                            stackIn_10_0 = 1;
                             break L3;
                           }
                         }
@@ -14999,77 +12471,53 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var5);
-            stackOut_17_1 = new StringBuilder().append("pe.VC(").append(param0).append(',');
-            stackIn_20_0 = stackOut_17_0;
-            stackIn_20_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_20_0 = (RuntimeException) (var5);
+
+            stackIn_20_1 = new StringBuilder().append("pe.VC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_21_0 = stackOut_18_0;
-              stackIn_21_1 = stackOut_18_1;
-              stackIn_21_2 = stackOut_18_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L5;
             }
           }
           L6: {
-            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
-            stackIn_24_0 = stackOut_21_0;
-            stackIn_24_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackIn_24_0 = (RuntimeException) ((Object) stackIn_21_0);
+
+            stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
+
             if (param2 == null) {
-              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackOut_22_2 = "{...}";
-              stackIn_25_0 = stackOut_22_0;
-              stackIn_25_1 = stackOut_22_1;
-              stackIn_25_2 = stackOut_22_2;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
-            stackIn_28_0 = stackOut_25_0;
-            stackIn_28_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackIn_28_0 = (RuntimeException) ((Object) stackIn_25_0);
+
+            stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
+
             if (param3 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_29_0 = stackOut_26_0;
-              stackIn_29_1 = stackOut_26_1;
-              stackIn_29_2 = stackOut_26_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L7;
             }
           }
@@ -15083,9 +12531,19 @@ final class pe implements ntb, utb {
     }
 
     private final void a(boolean param0, lbb param1, byte param2, lta param3) {
-        int discarded$1 = 0;
-        RuntimeException var5 = null;
+        RuntimeException stackIn_90_0 = null;
+        StringBuilder stackIn_90_1 = null;
+        RuntimeException stackIn_91_0 = null;
+        StringBuilder stackIn_91_1 = null;
+        String stackIn_91_2 = null;
+        RuntimeException stackIn_94_0 = null;
+        StringBuilder stackIn_94_1 = null;
+        RuntimeException stackIn_95_0 = null;
+        StringBuilder stackIn_95_1 = null;
+        String stackIn_95_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -15096,14 +12554,14 @@ final class pe implements ntb, utb {
         int[] var13 = null;
         int var14_int = 0;
         crb[] var14 = null;
-        int var15 = 0;
         crb[] var15_ref_crb__ = null;
+        int var15 = 0;
         nbb var15_ref_nbb = null;
         int var16 = 0;
         int var17 = 0;
         crb var17_ref_crb = null;
-        sg var18_ref_sg = null;
         int var18 = 0;
+        sg var18_ref_sg = null;
         int var19 = 0;
         sg[] var20 = null;
         int var21 = 0;
@@ -15114,37 +12572,6 @@ final class pe implements ntb, utb {
         int var26 = 0;
         nbb var27 = null;
         sg var28 = null;
-        RuntimeException stackIn_88_0 = null;
-        StringBuilder stackIn_88_1 = null;
-        RuntimeException stackIn_90_0 = null;
-        StringBuilder stackIn_90_1 = null;
-        RuntimeException stackIn_91_0 = null;
-        StringBuilder stackIn_91_1 = null;
-        String stackIn_91_2 = null;
-        RuntimeException stackIn_92_0 = null;
-        StringBuilder stackIn_92_1 = null;
-        RuntimeException stackIn_94_0 = null;
-        StringBuilder stackIn_94_1 = null;
-        RuntimeException stackIn_95_0 = null;
-        StringBuilder stackIn_95_1 = null;
-        String stackIn_95_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_87_0 = null;
-        StringBuilder stackOut_87_1 = null;
-        RuntimeException stackOut_90_0 = null;
-        StringBuilder stackOut_90_1 = null;
-        String stackOut_90_2 = null;
-        RuntimeException stackOut_88_0 = null;
-        StringBuilder stackOut_88_1 = null;
-        String stackOut_88_2 = null;
-        RuntimeException stackOut_91_0 = null;
-        StringBuilder stackOut_91_1 = null;
-        RuntimeException stackOut_94_0 = null;
-        StringBuilder stackOut_94_1 = null;
-        String stackOut_94_2 = null;
-        RuntimeException stackOut_92_0 = null;
-        StringBuilder stackOut_92_1 = null;
-        String stackOut_92_2 = null;
         var23 = VoidHunters.field_G;
         try {
           L0: {
@@ -15307,7 +12734,7 @@ final class pe implements ntb, utb {
                                   var18_ref_sg = var28;
                                   if (var28 != null) {
                                     if (this.a(true, var13, var28.field_q)) {
-                                      discarded$1 = var28.field_k.a(1000, (byte) 85);
+                                      var28.field_k.a(1000, (byte) 85);
                                       break L15;
                                     } else {
                                       break L15;
@@ -15383,52 +12810,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var5 = decompiledCaughtException;
-            stackOut_87_0 = (RuntimeException) (var5);
-            stackOut_87_1 = new StringBuilder().append("pe.AE(").append(param0).append(',');
-            stackIn_90_0 = stackOut_87_0;
-            stackIn_90_1 = stackOut_87_1;
-            stackIn_88_0 = stackOut_87_0;
-            stackIn_88_1 = stackOut_87_1;
+            stackIn_90_0 = (RuntimeException) (var5);
+
+            stackIn_90_1 = new StringBuilder().append("pe.AE(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_90_0 = (RuntimeException) ((Object) stackIn_90_0);
-              stackOut_90_1 = (StringBuilder) ((Object) stackIn_90_1);
-              stackOut_90_2 = "null";
-              stackIn_91_0 = stackOut_90_0;
-              stackIn_91_1 = stackOut_90_1;
-              stackIn_91_2 = stackOut_90_2;
+              stackIn_91_0 = (RuntimeException) ((Object) stackIn_90_0);
+              stackIn_91_1 = (StringBuilder) ((Object) stackIn_90_1);
+              stackIn_91_2 = "null";
               break L18;
             } else {
-              stackOut_88_0 = (RuntimeException) ((Object) stackIn_88_0);
-              stackOut_88_1 = (StringBuilder) ((Object) stackIn_88_1);
-              stackOut_88_2 = "{...}";
-              stackIn_91_0 = stackOut_88_0;
-              stackIn_91_1 = stackOut_88_1;
-              stackIn_91_2 = stackOut_88_2;
+              stackIn_91_0 = (RuntimeException) ((Object) stackIn_90_0);
+              stackIn_91_1 = (StringBuilder) ((Object) stackIn_90_1);
+              stackIn_91_2 = "{...}";
               break L18;
             }
           }
           L19: {
-            stackOut_91_0 = (RuntimeException) ((Object) stackIn_91_0);
-            stackOut_91_1 = ((StringBuilder) (Object) stackIn_91_1).append(stackIn_91_2).append(',').append(param2).append(',');
-            stackIn_94_0 = stackOut_91_0;
-            stackIn_94_1 = stackOut_91_1;
-            stackIn_92_0 = stackOut_91_0;
-            stackIn_92_1 = stackOut_91_1;
+            stackIn_94_0 = (RuntimeException) ((Object) stackIn_91_0);
+
+            stackIn_94_1 = ((StringBuilder) (Object) stackIn_91_1).append(stackIn_91_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_94_0 = (RuntimeException) ((Object) stackIn_94_0);
-              stackOut_94_1 = (StringBuilder) ((Object) stackIn_94_1);
-              stackOut_94_2 = "null";
-              stackIn_95_0 = stackOut_94_0;
-              stackIn_95_1 = stackOut_94_1;
-              stackIn_95_2 = stackOut_94_2;
+              stackIn_95_0 = (RuntimeException) ((Object) stackIn_94_0);
+              stackIn_95_1 = (StringBuilder) ((Object) stackIn_94_1);
+              stackIn_95_2 = "null";
               break L19;
             } else {
-              stackOut_92_0 = (RuntimeException) ((Object) stackIn_92_0);
-              stackOut_92_1 = (StringBuilder) ((Object) stackIn_92_1);
-              stackOut_92_2 = "{...}";
-              stackIn_95_0 = stackOut_92_0;
-              stackIn_95_1 = stackOut_92_1;
-              stackIn_95_2 = stackOut_92_2;
+              stackIn_95_0 = (RuntimeException) ((Object) stackIn_91_0);
+              stackIn_95_1 = (StringBuilder) ((Object) stackIn_94_1);
+              stackIn_95_2 = "{...}";
               break L19;
             }
           }
@@ -15437,11 +12848,30 @@ final class pe implements ntb, utb {
     }
 
     private final void a(nwa param0, int param1, tfa[] param2, crb[] param3) {
-        RuntimeException var5 = null;
+        tfa dupTemp$0 = null;
+        tfa dupTemp$1 = null;
+        tfa dupTemp$2 = null;
+        RuntimeException stackIn_96_0 = null;
+        StringBuilder stackIn_96_1 = null;
+        RuntimeException stackIn_97_0 = null;
+        StringBuilder stackIn_97_1 = null;
+        String stackIn_97_2 = null;
+        RuntimeException stackIn_100_0 = null;
+        StringBuilder stackIn_100_1 = null;
+        RuntimeException stackIn_101_0 = null;
+        StringBuilder stackIn_101_1 = null;
+        String stackIn_101_2 = null;
+        RuntimeException stackIn_104_0 = null;
+        StringBuilder stackIn_104_1 = null;
+        RuntimeException stackIn_105_0 = null;
+        StringBuilder stackIn_105_1 = null;
+        String stackIn_105_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
-        int var7_int = 0;
         crb var7 = null;
+        int var7_int = 0;
         it var8_ref_it = null;
         int var8 = 0;
         ml[] var9_ref_ml__ = null;
@@ -15462,52 +12892,6 @@ final class pe implements ntb, utb {
         crb var23 = null;
         it var24 = null;
         int[] var25 = null;
-        RuntimeException stackIn_94_0 = null;
-        StringBuilder stackIn_94_1 = null;
-        RuntimeException stackIn_96_0 = null;
-        StringBuilder stackIn_96_1 = null;
-        RuntimeException stackIn_97_0 = null;
-        StringBuilder stackIn_97_1 = null;
-        String stackIn_97_2 = null;
-        RuntimeException stackIn_98_0 = null;
-        StringBuilder stackIn_98_1 = null;
-        RuntimeException stackIn_100_0 = null;
-        StringBuilder stackIn_100_1 = null;
-        RuntimeException stackIn_101_0 = null;
-        StringBuilder stackIn_101_1 = null;
-        String stackIn_101_2 = null;
-        RuntimeException stackIn_102_0 = null;
-        StringBuilder stackIn_102_1 = null;
-        RuntimeException stackIn_104_0 = null;
-        StringBuilder stackIn_104_1 = null;
-        RuntimeException stackIn_105_0 = null;
-        StringBuilder stackIn_105_1 = null;
-        String stackIn_105_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_93_0 = null;
-        StringBuilder stackOut_93_1 = null;
-        RuntimeException stackOut_96_0 = null;
-        StringBuilder stackOut_96_1 = null;
-        String stackOut_96_2 = null;
-        RuntimeException stackOut_94_0 = null;
-        StringBuilder stackOut_94_1 = null;
-        String stackOut_94_2 = null;
-        RuntimeException stackOut_97_0 = null;
-        StringBuilder stackOut_97_1 = null;
-        RuntimeException stackOut_100_0 = null;
-        StringBuilder stackOut_100_1 = null;
-        String stackOut_100_2 = null;
-        RuntimeException stackOut_98_0 = null;
-        StringBuilder stackOut_98_1 = null;
-        String stackOut_98_2 = null;
-        RuntimeException stackOut_101_0 = null;
-        StringBuilder stackOut_101_1 = null;
-        RuntimeException stackOut_104_0 = null;
-        StringBuilder stackOut_104_1 = null;
-        String stackOut_104_2 = null;
-        RuntimeException stackOut_102_0 = null;
-        StringBuilder stackOut_102_1 = null;
-        String stackOut_102_2 = null;
         var13 = VoidHunters.field_G;
         try {
           L0: {
@@ -15683,7 +13067,8 @@ final class pe implements ntb, utb {
                               }
                             }
                             L17: {
-                              param2[var8].field_l = param2[var8].field_l + 1;
+                              dupTemp$0 = param2[var8];
+                              dupTemp$0.field_l = dupTemp$0.field_l + 1;
                               var9 = -1;
                               var25 = var16.p(-26448);
                               var17 = var25;
@@ -15700,11 +13085,13 @@ final class pe implements ntb, utb {
                                       L19: {
                                         if (param2.length > var12) {
                                           if (var14 != var25.length + -1) {
-                                            param2[var12].field_n = param2[var12].field_n + 1;
+                                            dupTemp$1 = param2[var12];
+                                            dupTemp$1.field_n = dupTemp$1.field_n + 1;
                                             break L19;
                                           } else {
                                             var9 = var12;
-                                            param2[var12].field_c = param2[var12].field_c + 1;
+                                            dupTemp$2 = param2[var12];
+                                            dupTemp$2.field_c = dupTemp$2.field_c + 1;
                                             break L19;
                                           }
                                         } else {
@@ -15764,77 +13151,53 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L20: {
             var5 = decompiledCaughtException;
-            stackOut_93_0 = (RuntimeException) (var5);
-            stackOut_93_1 = new StringBuilder().append("pe.BF(");
-            stackIn_96_0 = stackOut_93_0;
-            stackIn_96_1 = stackOut_93_1;
-            stackIn_94_0 = stackOut_93_0;
-            stackIn_94_1 = stackOut_93_1;
+            stackIn_96_0 = (RuntimeException) (var5);
+
+            stackIn_96_1 = new StringBuilder().append("pe.BF(");
+
             if (param0 == null) {
-              stackOut_96_0 = (RuntimeException) ((Object) stackIn_96_0);
-              stackOut_96_1 = (StringBuilder) ((Object) stackIn_96_1);
-              stackOut_96_2 = "null";
-              stackIn_97_0 = stackOut_96_0;
-              stackIn_97_1 = stackOut_96_1;
-              stackIn_97_2 = stackOut_96_2;
+              stackIn_97_0 = (RuntimeException) ((Object) stackIn_96_0);
+              stackIn_97_1 = (StringBuilder) ((Object) stackIn_96_1);
+              stackIn_97_2 = "null";
               break L20;
             } else {
-              stackOut_94_0 = (RuntimeException) ((Object) stackIn_94_0);
-              stackOut_94_1 = (StringBuilder) ((Object) stackIn_94_1);
-              stackOut_94_2 = "{...}";
-              stackIn_97_0 = stackOut_94_0;
-              stackIn_97_1 = stackOut_94_1;
-              stackIn_97_2 = stackOut_94_2;
+              stackIn_97_0 = (RuntimeException) ((Object) stackIn_96_0);
+              stackIn_97_1 = (StringBuilder) ((Object) stackIn_96_1);
+              stackIn_97_2 = "{...}";
               break L20;
             }
           }
           L21: {
-            stackOut_97_0 = (RuntimeException) ((Object) stackIn_97_0);
-            stackOut_97_1 = ((StringBuilder) (Object) stackIn_97_1).append(stackIn_97_2).append(',').append(param1).append(',');
-            stackIn_100_0 = stackOut_97_0;
-            stackIn_100_1 = stackOut_97_1;
-            stackIn_98_0 = stackOut_97_0;
-            stackIn_98_1 = stackOut_97_1;
+            stackIn_100_0 = (RuntimeException) ((Object) stackIn_97_0);
+
+            stackIn_100_1 = ((StringBuilder) (Object) stackIn_97_1).append(stackIn_97_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_100_0 = (RuntimeException) ((Object) stackIn_100_0);
-              stackOut_100_1 = (StringBuilder) ((Object) stackIn_100_1);
-              stackOut_100_2 = "null";
-              stackIn_101_0 = stackOut_100_0;
-              stackIn_101_1 = stackOut_100_1;
-              stackIn_101_2 = stackOut_100_2;
+              stackIn_101_0 = (RuntimeException) ((Object) stackIn_100_0);
+              stackIn_101_1 = (StringBuilder) ((Object) stackIn_100_1);
+              stackIn_101_2 = "null";
               break L21;
             } else {
-              stackOut_98_0 = (RuntimeException) ((Object) stackIn_98_0);
-              stackOut_98_1 = (StringBuilder) ((Object) stackIn_98_1);
-              stackOut_98_2 = "{...}";
-              stackIn_101_0 = stackOut_98_0;
-              stackIn_101_1 = stackOut_98_1;
-              stackIn_101_2 = stackOut_98_2;
+              stackIn_101_0 = (RuntimeException) ((Object) stackIn_97_0);
+              stackIn_101_1 = (StringBuilder) ((Object) stackIn_100_1);
+              stackIn_101_2 = "{...}";
               break L21;
             }
           }
           L22: {
-            stackOut_101_0 = (RuntimeException) ((Object) stackIn_101_0);
-            stackOut_101_1 = ((StringBuilder) (Object) stackIn_101_1).append(stackIn_101_2).append(',');
-            stackIn_104_0 = stackOut_101_0;
-            stackIn_104_1 = stackOut_101_1;
-            stackIn_102_0 = stackOut_101_0;
-            stackIn_102_1 = stackOut_101_1;
+            stackIn_104_0 = (RuntimeException) ((Object) stackIn_101_0);
+
+            stackIn_104_1 = ((StringBuilder) (Object) stackIn_101_1).append(stackIn_101_2).append(',');
+
             if (param3 == null) {
-              stackOut_104_0 = (RuntimeException) ((Object) stackIn_104_0);
-              stackOut_104_1 = (StringBuilder) ((Object) stackIn_104_1);
-              stackOut_104_2 = "null";
-              stackIn_105_0 = stackOut_104_0;
-              stackIn_105_1 = stackOut_104_1;
-              stackIn_105_2 = stackOut_104_2;
+              stackIn_105_0 = (RuntimeException) ((Object) stackIn_104_0);
+              stackIn_105_1 = (StringBuilder) ((Object) stackIn_104_1);
+              stackIn_105_2 = "null";
               break L22;
             } else {
-              stackOut_102_0 = (RuntimeException) ((Object) stackIn_102_0);
-              stackOut_102_1 = (StringBuilder) ((Object) stackIn_102_1);
-              stackOut_102_2 = "{...}";
-              stackIn_105_0 = stackOut_102_0;
-              stackIn_105_1 = stackOut_102_1;
-              stackIn_105_2 = stackOut_102_2;
+              stackIn_105_0 = (RuntimeException) ((Object) stackIn_101_0);
+              stackIn_105_1 = (StringBuilder) ((Object) stackIn_104_1);
+              stackIn_105_2 = "{...}";
               break L22;
             }
           }
@@ -15843,15 +13206,22 @@ final class pe implements ntb, utb {
     }
 
     private final void a(int param0, int param1, boolean param2, int param3, int param4, sg param5) {
-        RuntimeException var7 = null;
+        RuntimeException stackIn_59_0 = null;
+        StringBuilder stackIn_59_1 = null;
+        RuntimeException stackIn_60_0 = null;
+        StringBuilder stackIn_60_1 = null;
+        String stackIn_60_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13_int = 0;
         rca var13 = null;
+        int var13_int = 0;
         rdb var14_ref_rdb = null;
         int var14 = 0;
         int var15 = 0;
@@ -15869,23 +13239,6 @@ final class pe implements ntb, utb {
         int var23 = 0;
         sg[] var24 = null;
         rca var25 = null;
-        RuntimeException stackIn_57_0 = null;
-        StringBuilder stackIn_57_1 = null;
-        RuntimeException stackIn_59_0 = null;
-        StringBuilder stackIn_59_1 = null;
-        RuntimeException stackIn_60_0 = null;
-        StringBuilder stackIn_60_1 = null;
-        String stackIn_60_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_56_0 = null;
-        StringBuilder stackOut_56_1 = null;
-        RuntimeException stackOut_59_0 = null;
-        StringBuilder stackOut_59_1 = null;
-        String stackOut_59_2 = null;
-        RuntimeException stackOut_57_0 = null;
-        StringBuilder stackOut_57_1 = null;
-        String stackOut_57_2 = null;
         var23 = VoidHunters.field_G;
         try {
           L0: {
@@ -15967,7 +13320,7 @@ final class pe implements ntb, utb {
                     }
                   } else {
                     L6: {
-                      if (param3 != var14_ref_rdb.d(-92)) {
+                      if ((param3 ^ -1) != (var14_ref_rdb.d(-92) ^ -1)) {
                         break L6;
                       } else {
                         var13_int++;
@@ -16096,27 +13449,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var7 = decompiledCaughtException;
-            stackOut_56_0 = (RuntimeException) (var7);
-            stackOut_56_1 = new StringBuilder().append("pe.ID(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_59_0 = stackOut_56_0;
-            stackIn_59_1 = stackOut_56_1;
-            stackIn_57_0 = stackOut_56_0;
-            stackIn_57_1 = stackOut_56_1;
+            stackIn_59_0 = (RuntimeException) (var7);
+
+            stackIn_59_1 = new StringBuilder().append("pe.ID(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
-              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
-              stackOut_59_2 = "null";
-              stackIn_60_0 = stackOut_59_0;
-              stackIn_60_1 = stackOut_59_1;
-              stackIn_60_2 = stackOut_59_2;
+              stackIn_60_0 = (RuntimeException) ((Object) stackIn_59_0);
+              stackIn_60_1 = (StringBuilder) ((Object) stackIn_59_1);
+              stackIn_60_2 = "null";
               break L15;
             } else {
-              stackOut_57_0 = (RuntimeException) ((Object) stackIn_57_0);
-              stackOut_57_1 = (StringBuilder) ((Object) stackIn_57_1);
-              stackOut_57_2 = "{...}";
-              stackIn_60_0 = stackOut_57_0;
-              stackIn_60_1 = stackOut_57_1;
-              stackIn_60_2 = stackOut_57_2;
+              stackIn_60_0 = (RuntimeException) ((Object) stackIn_59_0);
+              stackIn_60_1 = (StringBuilder) ((Object) stackIn_59_1);
+              stackIn_60_2 = "{...}";
               break L15;
             }
           }
@@ -16130,10 +13475,90 @@ final class pe implements ntb, utb {
     }
 
     public final void a(faa param0, byte param1) {
-        boolean discarded$2 = false;
-        boolean discarded$3 = false;
-        RuntimeException var3 = null;
-        faa var3_ref = null;
+        int stackIn_5_0 = 0;
+        faa stackIn_13_0 = null;
+        int stackIn_13_1 = 0;
+        faa stackIn_14_0 = null;
+        int stackIn_14_1 = 0;
+        int stackIn_14_2 = 0;
+        int stackIn_21_0 = 0;
+        faa stackIn_29_0 = null;
+        int stackIn_29_1 = 0;
+        faa stackIn_30_0 = null;
+        int stackIn_30_1 = 0;
+        int stackIn_30_2 = 0;
+        int stackIn_37_0 = 0;
+        faa stackIn_45_0 = null;
+        int stackIn_45_1 = 0;
+        faa stackIn_46_0 = null;
+        int stackIn_46_1 = 0;
+        int stackIn_46_2 = 0;
+        faa stackIn_54_0 = null;
+        int stackIn_54_1 = 0;
+        faa stackIn_55_0 = null;
+        int stackIn_55_1 = 0;
+        int stackIn_55_2 = 0;
+        int stackIn_63_0 = 0;
+        faa stackIn_69_0 = null;
+        int stackIn_69_1 = 0;
+        faa stackIn_70_0 = null;
+        int stackIn_70_1 = 0;
+        int stackIn_70_2 = 0;
+        int stackIn_79_0 = 0;
+        faa stackIn_85_0 = null;
+        int stackIn_85_1 = 0;
+        faa stackIn_86_0 = null;
+        int stackIn_86_1 = 0;
+        int stackIn_86_2 = 0;
+        int stackIn_94_0 = 0;
+        int stackIn_95_0 = 0;
+        int stackIn_95_1 = 0;
+        faa stackIn_98_0 = null;
+        int stackIn_98_1 = 0;
+        faa stackIn_99_0 = null;
+        int stackIn_99_1 = 0;
+        int stackIn_99_2 = 0;
+        int stackIn_105_0 = 0;
+        faa stackIn_113_0 = null;
+        int stackIn_113_1 = 0;
+        faa stackIn_114_0 = null;
+        int stackIn_114_1 = 0;
+        int stackIn_114_2 = 0;
+        int stackIn_123_0 = 0;
+        faa stackIn_131_0 = null;
+        int stackIn_131_1 = 0;
+        faa stackIn_132_0 = null;
+        int stackIn_132_1 = 0;
+        int stackIn_132_2 = 0;
+        faa stackIn_140_0 = null;
+        int stackIn_140_1 = 0;
+        faa stackIn_141_0 = null;
+        int stackIn_141_1 = 0;
+        int stackIn_141_2 = 0;
+        faa stackIn_146_0 = null;
+        int stackIn_146_1 = 0;
+        faa stackIn_147_0 = null;
+        int stackIn_147_1 = 0;
+        int stackIn_147_2 = 0;
+        int stackIn_155_0 = 0;
+        faa stackIn_163_0 = null;
+        int stackIn_163_1 = 0;
+        faa stackIn_164_0 = null;
+        int stackIn_164_1 = 0;
+        int stackIn_164_2 = 0;
+        faa stackIn_172_0 = null;
+        int stackIn_172_1 = 0;
+        faa stackIn_173_0 = null;
+        int stackIn_173_1 = 0;
+        int stackIn_173_2 = 0;
+        RuntimeException stackIn_181_0 = null;
+        StringBuilder stackIn_181_1 = null;
+        RuntimeException stackIn_182_0 = null;
+        StringBuilder stackIn_182_1 = null;
+        String stackIn_182_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        faa var3 = null;
+        RuntimeException var3_ref = null;
         sg[] var4 = null;
         tv[] var4_array = null;
         nbb[] var4_array2 = null;
@@ -16142,13 +13567,16 @@ final class pe implements ntb, utb {
         rba[] var4_array5 = null;
         it[] var4_array6 = null;
         int var5 = 0;
+        tv[] var6 = null;
+        nbb[] var6_array = null;
         int var7 = 0;
         sg var8 = null;
-        nbb var8_ref = null;
-        mqb var8_ref2 = null;
-        cq var8_ref3 = null;
-        rba var8_ref4 = null;
-        it var8_ref5 = null;
+        tv var8_ref = null;
+        nbb var8_ref2 = null;
+        mqb var8_ref3 = null;
+        cq var8_ref4 = null;
+        rba var8_ref5 = null;
+        it var8_ref6 = null;
         int var9 = 0;
         sg[] var10 = null;
         faa var11 = null;
@@ -16162,279 +13590,31 @@ final class pe implements ntb, utb {
         nbb[] var19 = null;
         tv[] var20 = null;
         faa var21 = null;
-        tv[] var22 = null;
-        tv var23 = null;
+        mqb[] var22 = null;
+        faa var23 = null;
         mqb[] var24 = null;
-        faa var25 = null;
-        mqb[] var26 = null;
+        cq[] var25 = null;
+        faa var26 = null;
         cq[] var27 = null;
-        faa var28 = null;
-        cq[] var29 = null;
+        rba[] var28 = null;
+        faa var29 = null;
         rba[] var30 = null;
-        faa var31 = null;
-        rba[] var32 = null;
+        it[] var31 = null;
+        faa var32 = null;
         it[] var33 = null;
-        faa var34 = null;
-        it[] var35 = null;
-        int stackIn_5_0 = 0;
-        faa stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        faa stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
-        faa stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
-        int stackIn_14_2 = 0;
-        int stackIn_21_0 = 0;
-        faa stackIn_27_0 = null;
-        int stackIn_27_1 = 0;
-        faa stackIn_29_0 = null;
-        int stackIn_29_1 = 0;
-        faa stackIn_30_0 = null;
-        int stackIn_30_1 = 0;
-        int stackIn_30_2 = 0;
-        int stackIn_37_0 = 0;
-        faa stackIn_43_0 = null;
-        int stackIn_43_1 = 0;
-        faa stackIn_45_0 = null;
-        int stackIn_45_1 = 0;
-        faa stackIn_46_0 = null;
-        int stackIn_46_1 = 0;
-        int stackIn_46_2 = 0;
-        faa stackIn_52_0 = null;
-        int stackIn_52_1 = 0;
-        faa stackIn_54_0 = null;
-        int stackIn_54_1 = 0;
-        faa stackIn_55_0 = null;
-        int stackIn_55_1 = 0;
-        int stackIn_55_2 = 0;
-        int stackIn_63_0 = 0;
-        faa stackIn_67_0 = null;
-        int stackIn_67_1 = 0;
-        faa stackIn_69_0 = null;
-        int stackIn_69_1 = 0;
-        faa stackIn_70_0 = null;
-        int stackIn_70_1 = 0;
-        int stackIn_70_2 = 0;
-        int stackIn_79_0 = 0;
-        faa stackIn_83_0 = null;
-        int stackIn_83_1 = 0;
-        faa stackIn_85_0 = null;
-        int stackIn_85_1 = 0;
-        faa stackIn_86_0 = null;
-        int stackIn_86_1 = 0;
-        int stackIn_86_2 = 0;
-        int stackIn_92_0 = 0;
-        int stackIn_94_0 = 0;
-        int stackIn_95_0 = 0;
-        int stackIn_95_1 = 0;
-        faa stackIn_96_0 = null;
-        int stackIn_96_1 = 0;
-        faa stackIn_98_0 = null;
-        int stackIn_98_1 = 0;
-        faa stackIn_99_0 = null;
-        int stackIn_99_1 = 0;
-        int stackIn_99_2 = 0;
-        int stackIn_105_0 = 0;
-        faa stackIn_111_0 = null;
-        int stackIn_111_1 = 0;
-        faa stackIn_113_0 = null;
-        int stackIn_113_1 = 0;
-        faa stackIn_114_0 = null;
-        int stackIn_114_1 = 0;
-        int stackIn_114_2 = 0;
-        int stackIn_123_0 = 0;
-        faa stackIn_129_0 = null;
-        int stackIn_129_1 = 0;
-        faa stackIn_131_0 = null;
-        int stackIn_131_1 = 0;
-        faa stackIn_132_0 = null;
-        int stackIn_132_1 = 0;
-        int stackIn_132_2 = 0;
-        faa stackIn_138_0 = null;
-        int stackIn_138_1 = 0;
-        faa stackIn_140_0 = null;
-        int stackIn_140_1 = 0;
-        faa stackIn_141_0 = null;
-        int stackIn_141_1 = 0;
-        int stackIn_141_2 = 0;
-        faa stackIn_144_0 = null;
-        int stackIn_144_1 = 0;
-        faa stackIn_146_0 = null;
-        int stackIn_146_1 = 0;
-        faa stackIn_147_0 = null;
-        int stackIn_147_1 = 0;
-        int stackIn_147_2 = 0;
-        int stackIn_155_0 = 0;
-        faa stackIn_161_0 = null;
-        int stackIn_161_1 = 0;
-        faa stackIn_163_0 = null;
-        int stackIn_163_1 = 0;
-        faa stackIn_164_0 = null;
-        int stackIn_164_1 = 0;
-        int stackIn_164_2 = 0;
-        faa stackIn_170_0 = null;
-        int stackIn_170_1 = 0;
-        faa stackIn_172_0 = null;
-        int stackIn_172_1 = 0;
-        faa stackIn_173_0 = null;
-        int stackIn_173_1 = 0;
-        int stackIn_173_2 = 0;
-        RuntimeException stackIn_179_0 = null;
-        StringBuilder stackIn_179_1 = null;
-        RuntimeException stackIn_181_0 = null;
-        StringBuilder stackIn_181_1 = null;
-        RuntimeException stackIn_182_0 = null;
-        StringBuilder stackIn_182_1 = null;
-        String stackIn_182_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
-        faa stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        faa stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
-        faa stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_18_0 = 0;
-        faa stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
-        faa stackOut_29_0 = null;
-        int stackOut_29_1 = 0;
-        int stackOut_29_2 = 0;
-        faa stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        int stackOut_27_2 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_34_0 = 0;
-        faa stackOut_42_0 = null;
-        int stackOut_42_1 = 0;
-        faa stackOut_45_0 = null;
-        int stackOut_45_1 = 0;
-        int stackOut_45_2 = 0;
-        faa stackOut_43_0 = null;
-        int stackOut_43_1 = 0;
-        int stackOut_43_2 = 0;
-        faa stackOut_51_0 = null;
-        int stackOut_51_1 = 0;
-        faa stackOut_54_0 = null;
-        int stackOut_54_1 = 0;
-        int stackOut_54_2 = 0;
-        faa stackOut_52_0 = null;
-        int stackOut_52_1 = 0;
-        int stackOut_52_2 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_60_0 = 0;
-        faa stackOut_66_0 = null;
-        int stackOut_66_1 = 0;
-        faa stackOut_69_0 = null;
-        int stackOut_69_1 = 0;
-        int stackOut_69_2 = 0;
-        faa stackOut_67_0 = null;
-        int stackOut_67_1 = 0;
-        int stackOut_67_2 = 0;
-        int stackOut_78_0 = 0;
-        int stackOut_76_0 = 0;
-        faa stackOut_82_0 = null;
-        int stackOut_82_1 = 0;
-        faa stackOut_85_0 = null;
-        int stackOut_85_1 = 0;
-        int stackOut_85_2 = 0;
-        faa stackOut_83_0 = null;
-        int stackOut_83_1 = 0;
-        int stackOut_83_2 = 0;
-        int stackOut_91_0 = 0;
-        int stackOut_94_0 = 0;
-        int stackOut_94_1 = 0;
-        int stackOut_92_0 = 0;
-        int stackOut_92_1 = 0;
-        faa stackOut_95_0 = null;
-        int stackOut_95_1 = 0;
-        faa stackOut_98_0 = null;
-        int stackOut_98_1 = 0;
-        int stackOut_98_2 = 0;
-        faa stackOut_96_0 = null;
-        int stackOut_96_1 = 0;
-        int stackOut_96_2 = 0;
-        int stackOut_104_0 = 0;
-        int stackOut_102_0 = 0;
-        faa stackOut_110_0 = null;
-        int stackOut_110_1 = 0;
-        faa stackOut_113_0 = null;
-        int stackOut_113_1 = 0;
-        int stackOut_113_2 = 0;
-        faa stackOut_111_0 = null;
-        int stackOut_111_1 = 0;
-        int stackOut_111_2 = 0;
-        int stackOut_122_0 = 0;
-        int stackOut_120_0 = 0;
-        faa stackOut_128_0 = null;
-        int stackOut_128_1 = 0;
-        faa stackOut_131_0 = null;
-        int stackOut_131_1 = 0;
-        int stackOut_131_2 = 0;
-        faa stackOut_129_0 = null;
-        int stackOut_129_1 = 0;
-        int stackOut_129_2 = 0;
-        faa stackOut_137_0 = null;
-        int stackOut_137_1 = 0;
-        faa stackOut_140_0 = null;
-        int stackOut_140_1 = 0;
-        int stackOut_140_2 = 0;
-        faa stackOut_138_0 = null;
-        int stackOut_138_1 = 0;
-        int stackOut_138_2 = 0;
-        faa stackOut_143_0 = null;
-        int stackOut_143_1 = 0;
-        faa stackOut_146_0 = null;
-        int stackOut_146_1 = 0;
-        int stackOut_146_2 = 0;
-        faa stackOut_144_0 = null;
-        int stackOut_144_1 = 0;
-        int stackOut_144_2 = 0;
-        int stackOut_154_0 = 0;
-        int stackOut_152_0 = 0;
-        faa stackOut_160_0 = null;
-        int stackOut_160_1 = 0;
-        faa stackOut_163_0 = null;
-        int stackOut_163_1 = 0;
-        int stackOut_163_2 = 0;
-        faa stackOut_161_0 = null;
-        int stackOut_161_1 = 0;
-        int stackOut_161_2 = 0;
-        faa stackOut_169_0 = null;
-        int stackOut_169_1 = 0;
-        faa stackOut_172_0 = null;
-        int stackOut_172_1 = 0;
-        int stackOut_172_2 = 0;
-        faa stackOut_170_0 = null;
-        int stackOut_170_1 = 0;
-        int stackOut_170_2 = 0;
-        RuntimeException stackOut_178_0 = null;
-        StringBuilder stackOut_178_1 = null;
-        RuntimeException stackOut_181_0 = null;
-        StringBuilder stackOut_181_1 = null;
-        String stackOut_181_2 = null;
-        RuntimeException stackOut_179_0 = null;
-        StringBuilder stackOut_179_1 = null;
-        String stackOut_179_2 = null;
         var9 = VoidHunters.field_G;
         try {
           L0: {
             L1: {
               var11 = param0;
-              var3_ref = var11;
+              var3 = var11;
               var10 = this.field_k;
               var4 = var10;
               if (null == var4) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = var10.length;
-                stackIn_5_0 = stackOut_2_0;
+                stackIn_5_0 = var10.length;
                 break L1;
               }
             }
@@ -16450,27 +13630,19 @@ final class pe implements ntb, utb {
                   } else {
                     L4: {
                       var8 = var12[var7];
-                      stackOut_10_0 = (faa) (var3_ref);
-                      stackOut_10_1 = 110;
-                      stackIn_13_0 = stackOut_10_0;
-                      stackIn_13_1 = stackOut_10_1;
-                      stackIn_11_0 = stackOut_10_0;
-                      stackIn_11_1 = stackOut_10_1;
+                      stackIn_13_0 = (faa) (var3);
+
+                      stackIn_13_1 = 110;
+
                       if (null == var8) {
-                        stackOut_13_0 = (faa) ((Object) stackIn_13_0);
-                        stackOut_13_1 = stackIn_13_1;
-                        stackOut_13_2 = 0;
-                        stackIn_14_0 = stackOut_13_0;
-                        stackIn_14_1 = stackOut_13_1;
-                        stackIn_14_2 = stackOut_13_2;
+                        stackIn_14_0 = (faa) ((Object) stackIn_13_0);
+                        stackIn_14_1 = stackIn_13_1;
+                        stackIn_14_2 = 0;
                         break L4;
                       } else {
-                        stackOut_11_0 = (faa) ((Object) stackIn_11_0);
-                        stackOut_11_1 = stackIn_11_1;
-                        stackOut_11_2 = 1;
-                        stackIn_14_0 = stackOut_11_0;
-                        stackIn_14_1 = stackOut_11_1;
-                        stackIn_14_2 = stackOut_11_2;
+                        stackIn_14_0 = (faa) ((Object) stackIn_13_0);
+                        stackIn_14_1 = stackIn_13_1;
+                        stackIn_14_2 = 1;
                         break L4;
                       }
                     }
@@ -16490,16 +13662,14 @@ final class pe implements ntb, utb {
             }
             L5: {
               var14 = param0;
-              var3_ref = var14;
+              var3 = var14;
               var13 = hob.a(this.field_x, 210377952);
               var4_array = var13;
               if (null == var4_array) {
-                stackOut_20_0 = 0;
-                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_0 = 0;
                 break L5;
               } else {
-                stackOut_18_0 = var13.length;
-                stackIn_21_0 = stackOut_18_0;
+                stackIn_21_0 = var13.length;
                 break L5;
               }
             }
@@ -16507,7 +13677,8 @@ final class pe implements ntb, utb {
               var5 = stackIn_21_0;
               var14.a(-632, var5, 10);
               if (var5 != 0) {
-                var15 = var13;
+                var15 = var4_array;
+                var6 = var15;
                 var7 = 0;
                 L7: while (true) {
                   if (var15.length <= var7) {
@@ -16515,29 +13686,22 @@ final class pe implements ntb, utb {
                   } else {
                     L8: {
                       var16 = var15[var7];
-                      var23 = var16;
-                      var23 = var16;
-                      stackOut_26_0 = (faa) (var3_ref);
-                      stackOut_26_1 = -69;
-                      stackIn_29_0 = stackOut_26_0;
-                      stackIn_29_1 = stackOut_26_1;
-                      stackIn_27_0 = stackOut_26_0;
-                      stackIn_27_1 = stackOut_26_1;
+                      var8_ref = var16;
+                      var8_ref = var16;
+                      var8_ref = var16;
+                      stackIn_29_0 = (faa) (var3);
+
+                      stackIn_29_1 = -69;
+
                       if (var16 == null) {
-                        stackOut_29_0 = (faa) ((Object) stackIn_29_0);
-                        stackOut_29_1 = stackIn_29_1;
-                        stackOut_29_2 = 0;
-                        stackIn_30_0 = stackOut_29_0;
-                        stackIn_30_1 = stackOut_29_1;
-                        stackIn_30_2 = stackOut_29_2;
+                        stackIn_30_0 = (faa) ((Object) stackIn_29_0);
+                        stackIn_30_1 = stackIn_29_1;
+                        stackIn_30_2 = 0;
                         break L8;
                       } else {
-                        stackOut_27_0 = (faa) ((Object) stackIn_27_0);
-                        stackOut_27_1 = stackIn_27_1;
-                        stackOut_27_2 = 1;
-                        stackIn_30_0 = stackOut_27_0;
-                        stackIn_30_1 = stackOut_27_1;
-                        stackIn_30_2 = stackOut_27_2;
+                        stackIn_30_0 = (faa) ((Object) stackIn_29_0);
+                        stackIn_30_1 = stackIn_29_1;
+                        stackIn_30_2 = 1;
                         break L8;
                       }
                     }
@@ -16557,16 +13721,14 @@ final class pe implements ntb, utb {
             }
             L9: {
               var18 = param0;
-              var3_ref = var18;
+              var3 = var18;
               var17 = this.field_m;
               var4_array2 = var17;
               if (var4_array2 == null) {
-                stackOut_36_0 = 0;
-                stackIn_37_0 = stackOut_36_0;
+                stackIn_37_0 = 0;
                 break L9;
               } else {
-                stackOut_34_0 = var17.length;
-                stackIn_37_0 = stackOut_34_0;
+                stackIn_37_0 = var17.length;
                 break L9;
               }
             }
@@ -16574,41 +13736,34 @@ final class pe implements ntb, utb {
               var5 = stackIn_37_0;
               var18.a(-632, var5, 10);
               if (var5 != 0) {
-                var19 = var17;
+                var19 = var4_array2;
+                var6_array = var19;
                 var7 = 0;
                 L11: while (true) {
                   if (var7 >= var19.length) {
                     break L10;
                   } else {
                     L12: {
-                      var8_ref = var19[var7];
-                      stackOut_42_0 = (faa) (var3_ref);
-                      stackOut_42_1 = 101;
-                      stackIn_45_0 = stackOut_42_0;
-                      stackIn_45_1 = stackOut_42_1;
-                      stackIn_43_0 = stackOut_42_0;
-                      stackIn_43_1 = stackOut_42_1;
-                      if (var8_ref == null) {
-                        stackOut_45_0 = (faa) ((Object) stackIn_45_0);
-                        stackOut_45_1 = stackIn_45_1;
-                        stackOut_45_2 = 0;
-                        stackIn_46_0 = stackOut_45_0;
-                        stackIn_46_1 = stackOut_45_1;
-                        stackIn_46_2 = stackOut_45_2;
+                      var8_ref2 = var19[var7];
+                      stackIn_45_0 = (faa) (var3);
+
+                      stackIn_45_1 = 101;
+
+                      if (var8_ref2 == null) {
+                        stackIn_46_0 = (faa) ((Object) stackIn_45_0);
+                        stackIn_46_1 = stackIn_45_1;
+                        stackIn_46_2 = 0;
                         break L12;
                       } else {
-                        stackOut_43_0 = (faa) ((Object) stackIn_43_0);
-                        stackOut_43_1 = stackIn_43_1;
-                        stackOut_43_2 = 1;
-                        stackIn_46_0 = stackOut_43_0;
-                        stackIn_46_1 = stackOut_43_1;
-                        stackIn_46_2 = stackOut_43_2;
+                        stackIn_46_0 = (faa) ((Object) stackIn_45_0);
+                        stackIn_46_1 = stackIn_45_1;
+                        stackIn_46_2 = 1;
                         break L12;
                       }
                     }
                     L13: {
                       if (vq.a(stackIn_46_0, stackIn_46_1, stackIn_46_2 != 0)) {
-                        ((utb) ((Object) var8_ref)).a(var18, (byte) -127);
+                        ((utb) ((Object) var8_ref2)).a(var18, (byte) -127);
                         break L13;
                       } else {
                         break L13;
@@ -16623,27 +13778,19 @@ final class pe implements ntb, utb {
               }
             }
             L14: {
-              stackOut_51_0 = (faa) (param0);
-              stackOut_51_1 = 54;
-              stackIn_54_0 = stackOut_51_0;
-              stackIn_54_1 = stackOut_51_1;
-              stackIn_52_0 = stackOut_51_0;
-              stackIn_52_1 = stackOut_51_1;
+              stackIn_54_0 = (faa) (param0);
+
+              stackIn_54_1 = 54;
+
               if (null == this.field_e) {
-                stackOut_54_0 = (faa) ((Object) stackIn_54_0);
-                stackOut_54_1 = stackIn_54_1;
-                stackOut_54_2 = 0;
-                stackIn_55_0 = stackOut_54_0;
-                stackIn_55_1 = stackOut_54_1;
-                stackIn_55_2 = stackOut_54_2;
+                stackIn_55_0 = (faa) ((Object) stackIn_54_0);
+                stackIn_55_1 = stackIn_54_1;
+                stackIn_55_2 = 0;
                 break L14;
               } else {
-                stackOut_52_0 = (faa) ((Object) stackIn_52_0);
-                stackOut_52_1 = stackIn_52_1;
-                stackOut_52_2 = 1;
-                stackIn_55_0 = stackOut_52_0;
-                stackIn_55_1 = stackOut_52_1;
-                stackIn_55_2 = stackOut_52_2;
+                stackIn_55_0 = (faa) ((Object) stackIn_54_0);
+                stackIn_55_1 = stackIn_54_1;
+                stackIn_55_2 = 1;
                 break L14;
               }
             }
@@ -16657,16 +13804,14 @@ final class pe implements ntb, utb {
             }
             L16: {
               var21 = param0;
-              var3_ref = var21;
+              var3 = var21;
               var20 = hob.a(this.field_n, 210377952);
               var4_array = var20;
               if (null == var4_array) {
-                stackOut_62_0 = 0;
-                stackIn_63_0 = stackOut_62_0;
+                stackIn_63_0 = 0;
                 break L16;
               } else {
-                stackOut_60_0 = var20.length;
-                stackIn_63_0 = stackOut_60_0;
+                stackIn_63_0 = var20.length;
                 break L16;
               }
             }
@@ -16676,41 +13821,33 @@ final class pe implements ntb, utb {
               if (-1 == (var5 ^ -1)) {
                 break L17;
               } else {
-                var22 = var20;
+                var6 = var20;
                 var7 = 0;
                 L18: while (true) {
-                  if (var22.length <= var7) {
+                  if (var6.length <= var7) {
                     break L17;
                   } else {
                     L19: {
-                      var23 = var22[var7];
-                      stackOut_66_0 = (faa) (var3_ref);
-                      stackOut_66_1 = 66;
-                      stackIn_69_0 = stackOut_66_0;
-                      stackIn_69_1 = stackOut_66_1;
-                      stackIn_67_0 = stackOut_66_0;
-                      stackIn_67_1 = stackOut_66_1;
-                      if (var23 == null) {
-                        stackOut_69_0 = (faa) ((Object) stackIn_69_0);
-                        stackOut_69_1 = stackIn_69_1;
-                        stackOut_69_2 = 0;
-                        stackIn_70_0 = stackOut_69_0;
-                        stackIn_70_1 = stackOut_69_1;
-                        stackIn_70_2 = stackOut_69_2;
+                      var8_ref = var6[var7];
+                      stackIn_69_0 = (faa) (var3);
+
+                      stackIn_69_1 = 66;
+
+                      if (var8_ref == null) {
+                        stackIn_70_0 = (faa) ((Object) stackIn_69_0);
+                        stackIn_70_1 = stackIn_69_1;
+                        stackIn_70_2 = 0;
                         break L19;
                       } else {
-                        stackOut_67_0 = (faa) ((Object) stackIn_67_0);
-                        stackOut_67_1 = stackIn_67_1;
-                        stackOut_67_2 = 1;
-                        stackIn_70_0 = stackOut_67_0;
-                        stackIn_70_1 = stackOut_67_1;
-                        stackIn_70_2 = stackOut_67_2;
+                        stackIn_70_0 = (faa) ((Object) stackIn_69_0);
+                        stackIn_70_1 = stackIn_69_1;
+                        stackIn_70_2 = 1;
                         break L19;
                       }
                     }
                     L20: {
                       if (vq.a(stackIn_70_0, stackIn_70_1, stackIn_70_2 != 0)) {
-                        stb.a(2, 1, var21, var23);
+                        stb.a(2, 1, var3, var8_ref);
                         break L20;
                       } else {
                         break L20;
@@ -16723,61 +13860,51 @@ final class pe implements ntb, utb {
               }
             }
             L21: {
-              var25 = param0;
-              var3_ref = var25;
-              var24 = this.field_g;
-              var4_array3 = var24;
+              var23 = param0;
+              var3 = var23;
+              var22 = this.field_g;
+              var4_array3 = var22;
               if (var4_array3 == null) {
-                stackOut_78_0 = 0;
-                stackIn_79_0 = stackOut_78_0;
+                stackIn_79_0 = 0;
                 break L21;
               } else {
-                stackOut_76_0 = var24.length;
-                stackIn_79_0 = stackOut_76_0;
+                stackIn_79_0 = var22.length;
                 break L21;
               }
             }
             L22: {
               var5 = stackIn_79_0;
-              var25.a(-632, var5, 8);
+              var23.a(-632, var5, 8);
               if (0 == var5) {
                 break L22;
               } else {
-                var26 = var24;
+                var24 = var22;
                 var7 = 0;
                 L23: while (true) {
-                  if (var7 >= var26.length) {
+                  if (var7 >= var24.length) {
                     break L22;
                   } else {
                     L24: {
-                      var8_ref2 = var26[var7];
-                      stackOut_82_0 = (faa) (var3_ref);
-                      stackOut_82_1 = 74;
-                      stackIn_85_0 = stackOut_82_0;
-                      stackIn_85_1 = stackOut_82_1;
-                      stackIn_83_0 = stackOut_82_0;
-                      stackIn_83_1 = stackOut_82_1;
-                      if (var8_ref2 == null) {
-                        stackOut_85_0 = (faa) ((Object) stackIn_85_0);
-                        stackOut_85_1 = stackIn_85_1;
-                        stackOut_85_2 = 0;
-                        stackIn_86_0 = stackOut_85_0;
-                        stackIn_86_1 = stackOut_85_1;
-                        stackIn_86_2 = stackOut_85_2;
+                      var8_ref3 = var24[var7];
+                      stackIn_85_0 = (faa) (var3);
+
+                      stackIn_85_1 = 74;
+
+                      if (var8_ref3 == null) {
+                        stackIn_86_0 = (faa) ((Object) stackIn_85_0);
+                        stackIn_86_1 = stackIn_85_1;
+                        stackIn_86_2 = 0;
                         break L24;
                       } else {
-                        stackOut_83_0 = (faa) ((Object) stackIn_83_0);
-                        stackOut_83_1 = stackIn_83_1;
-                        stackOut_83_2 = 1;
-                        stackIn_86_0 = stackOut_83_0;
-                        stackIn_86_1 = stackOut_83_1;
-                        stackIn_86_2 = stackOut_83_2;
+                        stackIn_86_0 = (faa) ((Object) stackIn_85_0);
+                        stackIn_86_1 = stackIn_85_1;
+                        stackIn_86_2 = 1;
                         break L24;
                       }
                     }
                     L25: {
                       if (vq.a(stackIn_86_0, stackIn_86_1, stackIn_86_2 != 0)) {
-                        ((utb) ((Object) var8_ref2)).a(var25, (byte) -98);
+                        ((utb) ((Object) var8_ref3)).a(var23, (byte) -98);
                         break L25;
                       } else {
                         break L25;
@@ -16790,54 +13917,41 @@ final class pe implements ntb, utb {
               }
             }
             L26: {
-              stackOut_91_0 = 4;
-              stackIn_94_0 = stackOut_91_0;
-              stackIn_92_0 = stackOut_91_0;
+              stackIn_94_0 = 4;
+
               if (this.field_l == null) {
-                stackOut_94_0 = stackIn_94_0;
-                stackOut_94_1 = 0;
-                stackIn_95_0 = stackOut_94_0;
-                stackIn_95_1 = stackOut_94_1;
+                stackIn_95_0 = stackIn_94_0;
+                stackIn_95_1 = 0;
                 break L26;
               } else {
-                stackOut_92_0 = stackIn_92_0;
-                stackOut_92_1 = this.field_l.length;
-                stackIn_95_0 = stackOut_92_0;
-                stackIn_95_1 = stackOut_92_1;
+                stackIn_95_0 = stackIn_94_0;
+                stackIn_95_1 = this.field_l.length;
                 break L26;
               }
             }
             L27: {
               pgb.a(stackIn_95_0, stackIn_95_1, -114, param0, this.field_l);
-              discarded$2 = vq.a(param0, 56, this.field_v);
+              vq.a(param0, 56, this.field_v);
               param0.a(-632, this.field_y, 32);
-              discarded$3 = vq.a(param0, 39, this.field_i);
-              stackOut_95_0 = (faa) (param0);
-              stackOut_95_1 = 122;
-              stackIn_98_0 = stackOut_95_0;
-              stackIn_98_1 = stackOut_95_1;
-              stackIn_96_0 = stackOut_95_0;
-              stackIn_96_1 = stackOut_95_1;
+              vq.a(param0, 39, this.field_i);
+              stackIn_98_0 = (faa) (param0);
+
+              stackIn_98_1 = 122;
+
               if (null == this.field_f) {
-                stackOut_98_0 = (faa) ((Object) stackIn_98_0);
-                stackOut_98_1 = stackIn_98_1;
-                stackOut_98_2 = 0;
-                stackIn_99_0 = stackOut_98_0;
-                stackIn_99_1 = stackOut_98_1;
-                stackIn_99_2 = stackOut_98_2;
+                stackIn_99_0 = (faa) ((Object) stackIn_98_0);
+                stackIn_99_1 = stackIn_98_1;
+                stackIn_99_2 = 0;
                 break L27;
               } else {
-                stackOut_96_0 = (faa) ((Object) stackIn_96_0);
-                stackOut_96_1 = stackIn_96_1;
-                stackOut_96_2 = 1;
-                stackIn_99_0 = stackOut_96_0;
-                stackIn_99_1 = stackOut_96_1;
-                stackIn_99_2 = stackOut_96_2;
+                stackIn_99_0 = (faa) ((Object) stackIn_98_0);
+                stackIn_99_1 = stackIn_98_1;
+                stackIn_99_2 = 1;
                 break L27;
               }
             }
             L28: {
-              if (vq.a(stackIn_99_0, stackIn_99_1, stackIn_99_2 == 0)) {
+              if (!vq.a(stackIn_99_0, stackIn_99_1, stackIn_99_2 != 0)) {
                 break L28;
               } else {
                 this.field_f.b(param0, -123);
@@ -16845,59 +13959,49 @@ final class pe implements ntb, utb {
               }
             }
             L29: {
-              var28 = param0;
-              var3_ref = var28;
-              var27 = this.field_t;
-              var4_array4 = var27;
+              var26 = param0;
+              var3 = var26;
+              var25 = this.field_t;
+              var4_array4 = var25;
               if (var4_array4 != null) {
-                stackOut_104_0 = var27.length;
-                stackIn_105_0 = stackOut_104_0;
+                stackIn_105_0 = var25.length;
                 break L29;
               } else {
-                stackOut_102_0 = 0;
-                stackIn_105_0 = stackOut_102_0;
+                stackIn_105_0 = 0;
                 break L29;
               }
             }
             L30: {
               var5 = stackIn_105_0;
-              var28.a(-632, var5, 8);
+              var26.a(-632, var5, 8);
               if (0 != var5) {
-                var29 = var27;
+                var27 = var25;
                 var7 = 0;
                 L31: while (true) {
-                  if (var7 >= var29.length) {
+                  if (var7 >= var27.length) {
                     break L30;
                   } else {
                     L32: {
-                      var8_ref3 = var29[var7];
-                      stackOut_110_0 = (faa) (var3_ref);
-                      stackOut_110_1 = 47;
-                      stackIn_113_0 = stackOut_110_0;
-                      stackIn_113_1 = stackOut_110_1;
-                      stackIn_111_0 = stackOut_110_0;
-                      stackIn_111_1 = stackOut_110_1;
-                      if (null == var8_ref3) {
-                        stackOut_113_0 = (faa) ((Object) stackIn_113_0);
-                        stackOut_113_1 = stackIn_113_1;
-                        stackOut_113_2 = 0;
-                        stackIn_114_0 = stackOut_113_0;
-                        stackIn_114_1 = stackOut_113_1;
-                        stackIn_114_2 = stackOut_113_2;
+                      var8_ref4 = var27[var7];
+                      stackIn_113_0 = (faa) (var3);
+
+                      stackIn_113_1 = 47;
+
+                      if (null == var8_ref4) {
+                        stackIn_114_0 = (faa) ((Object) stackIn_113_0);
+                        stackIn_114_1 = stackIn_113_1;
+                        stackIn_114_2 = 0;
                         break L32;
                       } else {
-                        stackOut_111_0 = (faa) ((Object) stackIn_111_0);
-                        stackOut_111_1 = stackIn_111_1;
-                        stackOut_111_2 = 1;
-                        stackIn_114_0 = stackOut_111_0;
-                        stackIn_114_1 = stackOut_111_1;
-                        stackIn_114_2 = stackOut_111_2;
+                        stackIn_114_0 = (faa) ((Object) stackIn_113_0);
+                        stackIn_114_1 = stackIn_113_1;
+                        stackIn_114_2 = 1;
                         break L32;
                       }
                     }
                     L33: {
                       if (vq.a(stackIn_114_0, stackIn_114_1, stackIn_114_2 != 0)) {
-                        stb.a(2, 1, var28, var8_ref3);
+                        stb.a(2, 1, var26, var8_ref4);
                         break L33;
                       } else {
                         break L33;
@@ -16912,59 +14016,49 @@ final class pe implements ntb, utb {
               }
             }
             L34: {
-              var31 = param0;
-              var3_ref = var31;
-              var30 = this.field_a;
-              var4_array5 = var30;
+              var29 = param0;
+              var3 = var29;
+              var28 = this.field_a;
+              var4_array5 = var28;
               if (null != var4_array5) {
-                stackOut_122_0 = var30.length;
-                stackIn_123_0 = stackOut_122_0;
+                stackIn_123_0 = var28.length;
                 break L34;
               } else {
-                stackOut_120_0 = 0;
-                stackIn_123_0 = stackOut_120_0;
+                stackIn_123_0 = 0;
                 break L34;
               }
             }
             L35: {
               var5 = stackIn_123_0;
-              var31.a(-632, var5, 4);
+              var29.a(-632, var5, 4);
               if (var5 != 0) {
-                var32 = var30;
+                var30 = var28;
                 var7 = 0;
                 L36: while (true) {
-                  if (var32.length <= var7) {
+                  if (var30.length <= var7) {
                     break L35;
                   } else {
                     L37: {
-                      var8_ref4 = var32[var7];
-                      stackOut_128_0 = (faa) (var3_ref);
-                      stackOut_128_1 = 89;
-                      stackIn_131_0 = stackOut_128_0;
-                      stackIn_131_1 = stackOut_128_1;
-                      stackIn_129_0 = stackOut_128_0;
-                      stackIn_129_1 = stackOut_128_1;
-                      if (null == var8_ref4) {
-                        stackOut_131_0 = (faa) ((Object) stackIn_131_0);
-                        stackOut_131_1 = stackIn_131_1;
-                        stackOut_131_2 = 0;
-                        stackIn_132_0 = stackOut_131_0;
-                        stackIn_132_1 = stackOut_131_1;
-                        stackIn_132_2 = stackOut_131_2;
+                      var8_ref5 = var30[var7];
+                      stackIn_131_0 = (faa) (var3);
+
+                      stackIn_131_1 = 89;
+
+                      if (null == var8_ref5) {
+                        stackIn_132_0 = (faa) ((Object) stackIn_131_0);
+                        stackIn_132_1 = stackIn_131_1;
+                        stackIn_132_2 = 0;
                         break L37;
                       } else {
-                        stackOut_129_0 = (faa) ((Object) stackIn_129_0);
-                        stackOut_129_1 = stackIn_129_1;
-                        stackOut_129_2 = 1;
-                        stackIn_132_0 = stackOut_129_0;
-                        stackIn_132_1 = stackOut_129_1;
-                        stackIn_132_2 = stackOut_129_2;
+                        stackIn_132_0 = (faa) ((Object) stackIn_131_0);
+                        stackIn_132_1 = stackIn_131_1;
+                        stackIn_132_2 = 1;
                         break L37;
                       }
                     }
                     L38: {
                       if (vq.a(stackIn_132_0, stackIn_132_1, stackIn_132_2 != 0)) {
-                        stb.a(2, 1, var31, var8_ref4);
+                        stb.a(2, 1, var29, var8_ref5);
                         break L38;
                       } else {
                         break L38;
@@ -16979,32 +14073,24 @@ final class pe implements ntb, utb {
               }
             }
             L39: {
-              stackOut_137_0 = (faa) (param0);
-              stackOut_137_1 = -94;
-              stackIn_140_0 = stackOut_137_0;
-              stackIn_140_1 = stackOut_137_1;
-              stackIn_138_0 = stackOut_137_0;
-              stackIn_138_1 = stackOut_137_1;
+              stackIn_140_0 = (faa) (param0);
+
+              stackIn_140_1 = -94;
+
               if (null == this.field_p) {
-                stackOut_140_0 = (faa) ((Object) stackIn_140_0);
-                stackOut_140_1 = stackIn_140_1;
-                stackOut_140_2 = 0;
-                stackIn_141_0 = stackOut_140_0;
-                stackIn_141_1 = stackOut_140_1;
-                stackIn_141_2 = stackOut_140_2;
+                stackIn_141_0 = (faa) ((Object) stackIn_140_0);
+                stackIn_141_1 = stackIn_140_1;
+                stackIn_141_2 = 0;
                 break L39;
               } else {
-                stackOut_138_0 = (faa) ((Object) stackIn_138_0);
-                stackOut_138_1 = stackIn_138_1;
-                stackOut_138_2 = 1;
-                stackIn_141_0 = stackOut_138_0;
-                stackIn_141_1 = stackOut_138_1;
-                stackIn_141_2 = stackOut_138_2;
+                stackIn_141_0 = (faa) ((Object) stackIn_140_0);
+                stackIn_141_1 = stackIn_140_1;
+                stackIn_141_2 = 1;
                 break L39;
               }
             }
             L40: {
-              if (vq.a(stackIn_141_0, stackIn_141_1, stackIn_141_2 == 0)) {
+              if (!vq.a(stackIn_141_0, stackIn_141_1, stackIn_141_2 != 0)) {
                 break L40;
               } else {
                 this.field_p.b(param0, -117);
@@ -17014,32 +14100,24 @@ final class pe implements ntb, utb {
             L41: {
               param0.a(-632, this.field_o, 28);
               param0.a(-632, this.field_r, 28);
-              stackOut_143_0 = (faa) (param0);
-              stackOut_143_1 = 109;
-              stackIn_146_0 = stackOut_143_0;
-              stackIn_146_1 = stackOut_143_1;
-              stackIn_144_0 = stackOut_143_0;
-              stackIn_144_1 = stackOut_143_1;
+              stackIn_146_0 = (faa) (param0);
+
+              stackIn_146_1 = 109;
+
               if (null == this.field_u) {
-                stackOut_146_0 = (faa) ((Object) stackIn_146_0);
-                stackOut_146_1 = stackIn_146_1;
-                stackOut_146_2 = 0;
-                stackIn_147_0 = stackOut_146_0;
-                stackIn_147_1 = stackOut_146_1;
-                stackIn_147_2 = stackOut_146_2;
+                stackIn_147_0 = (faa) ((Object) stackIn_146_0);
+                stackIn_147_1 = stackIn_146_1;
+                stackIn_147_2 = 0;
                 break L41;
               } else {
-                stackOut_144_0 = (faa) ((Object) stackIn_144_0);
-                stackOut_144_1 = stackIn_144_1;
-                stackOut_144_2 = 1;
-                stackIn_147_0 = stackOut_144_0;
-                stackIn_147_1 = stackOut_144_1;
-                stackIn_147_2 = stackOut_144_2;
+                stackIn_147_0 = (faa) ((Object) stackIn_146_0);
+                stackIn_147_1 = stackIn_146_1;
+                stackIn_147_2 = 1;
                 break L41;
               }
             }
             L42: {
-              if (vq.a(stackIn_147_0, stackIn_147_1, stackIn_147_2 == 0)) {
+              if (!vq.a(stackIn_147_0, stackIn_147_1, stackIn_147_2 != 0)) {
                 break L42;
               } else {
                 this.field_u.b(param0, -125);
@@ -17055,59 +14133,49 @@ final class pe implements ntb, utb {
               }
             }
             L44: {
-              var34 = param0;
-              var3_ref = var34;
-              var33 = this.field_j;
-              var4_array6 = var33;
+              var32 = param0;
+              var3 = var32;
+              var31 = this.field_j;
+              var4_array6 = var31;
               if (null == var4_array6) {
-                stackOut_154_0 = 0;
-                stackIn_155_0 = stackOut_154_0;
+                stackIn_155_0 = 0;
                 break L44;
               } else {
-                stackOut_152_0 = var33.length;
-                stackIn_155_0 = stackOut_152_0;
+                stackIn_155_0 = var31.length;
                 break L44;
               }
             }
             L45: {
               var5 = stackIn_155_0;
-              var34.a(-632, var5, 4);
+              var32.a(-632, var5, 4);
               if (var5 != 0) {
-                var35 = var33;
+                var33 = var31;
                 var7 = 0;
                 L46: while (true) {
-                  if (var35.length <= var7) {
+                  if (var33.length <= var7) {
                     break L45;
                   } else {
                     L47: {
-                      var8_ref5 = var35[var7];
-                      stackOut_160_0 = (faa) (var3_ref);
-                      stackOut_160_1 = -59;
-                      stackIn_163_0 = stackOut_160_0;
-                      stackIn_163_1 = stackOut_160_1;
-                      stackIn_161_0 = stackOut_160_0;
-                      stackIn_161_1 = stackOut_160_1;
-                      if (var8_ref5 == null) {
-                        stackOut_163_0 = (faa) ((Object) stackIn_163_0);
-                        stackOut_163_1 = stackIn_163_1;
-                        stackOut_163_2 = 0;
-                        stackIn_164_0 = stackOut_163_0;
-                        stackIn_164_1 = stackOut_163_1;
-                        stackIn_164_2 = stackOut_163_2;
+                      var8_ref6 = var33[var7];
+                      stackIn_163_0 = (faa) (var3);
+
+                      stackIn_163_1 = -59;
+
+                      if (var8_ref6 == null) {
+                        stackIn_164_0 = (faa) ((Object) stackIn_163_0);
+                        stackIn_164_1 = stackIn_163_1;
+                        stackIn_164_2 = 0;
                         break L47;
                       } else {
-                        stackOut_161_0 = (faa) ((Object) stackIn_161_0);
-                        stackOut_161_1 = stackIn_161_1;
-                        stackOut_161_2 = 1;
-                        stackIn_164_0 = stackOut_161_0;
-                        stackIn_164_1 = stackOut_161_1;
-                        stackIn_164_2 = stackOut_161_2;
+                        stackIn_164_0 = (faa) ((Object) stackIn_163_0);
+                        stackIn_164_1 = stackIn_163_1;
+                        stackIn_164_2 = 1;
                         break L47;
                       }
                     }
                     L48: {
                       if (vq.a(stackIn_164_0, stackIn_164_1, stackIn_164_2 != 0)) {
-                        stb.a(2, 1, var34, var8_ref5);
+                        stb.a(2, 1, var32, var8_ref6);
                         break L48;
                       } else {
                         break L48;
@@ -17122,27 +14190,19 @@ final class pe implements ntb, utb {
               }
             }
             L49: {
-              stackOut_169_0 = (faa) (param0);
-              stackOut_169_1 = 38;
-              stackIn_172_0 = stackOut_169_0;
-              stackIn_172_1 = stackOut_169_1;
-              stackIn_170_0 = stackOut_169_0;
-              stackIn_170_1 = stackOut_169_1;
+              stackIn_172_0 = (faa) (param0);
+
+              stackIn_172_1 = 38;
+
               if (null == this.field_b) {
-                stackOut_172_0 = (faa) ((Object) stackIn_172_0);
-                stackOut_172_1 = stackIn_172_1;
-                stackOut_172_2 = 0;
-                stackIn_173_0 = stackOut_172_0;
-                stackIn_173_1 = stackOut_172_1;
-                stackIn_173_2 = stackOut_172_2;
+                stackIn_173_0 = (faa) ((Object) stackIn_172_0);
+                stackIn_173_1 = stackIn_172_1;
+                stackIn_173_2 = 0;
                 break L49;
               } else {
-                stackOut_170_0 = (faa) ((Object) stackIn_170_0);
-                stackOut_170_1 = stackIn_170_1;
-                stackOut_170_2 = 1;
-                stackIn_173_0 = stackOut_170_0;
-                stackIn_173_1 = stackOut_170_1;
-                stackIn_173_2 = stackOut_170_2;
+                stackIn_173_0 = (faa) ((Object) stackIn_172_0);
+                stackIn_173_1 = stackIn_172_1;
+                stackIn_173_2 = 1;
                 break L49;
               }
             }
@@ -17159,28 +14219,20 @@ final class pe implements ntb, utb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L51: {
-            var3 = decompiledCaughtException;
-            stackOut_178_0 = (RuntimeException) (var3);
-            stackOut_178_1 = new StringBuilder().append("pe.E(");
-            stackIn_181_0 = stackOut_178_0;
-            stackIn_181_1 = stackOut_178_1;
-            stackIn_179_0 = stackOut_178_0;
-            stackIn_179_1 = stackOut_178_1;
+            var3_ref = decompiledCaughtException;
+            stackIn_181_0 = (RuntimeException) (var3_ref);
+
+            stackIn_181_1 = new StringBuilder().append("pe.E(");
+
             if (param0 == null) {
-              stackOut_181_0 = (RuntimeException) ((Object) stackIn_181_0);
-              stackOut_181_1 = (StringBuilder) ((Object) stackIn_181_1);
-              stackOut_181_2 = "null";
-              stackIn_182_0 = stackOut_181_0;
-              stackIn_182_1 = stackOut_181_1;
-              stackIn_182_2 = stackOut_181_2;
+              stackIn_182_0 = (RuntimeException) ((Object) stackIn_181_0);
+              stackIn_182_1 = (StringBuilder) ((Object) stackIn_181_1);
+              stackIn_182_2 = "null";
               break L51;
             } else {
-              stackOut_179_0 = (RuntimeException) ((Object) stackIn_179_0);
-              stackOut_179_1 = (StringBuilder) ((Object) stackIn_179_1);
-              stackOut_179_2 = "{...}";
-              stackIn_182_0 = stackOut_179_0;
-              stackIn_182_1 = stackOut_179_1;
-              stackIn_182_2 = stackOut_179_2;
+              stackIn_182_0 = (RuntimeException) ((Object) stackIn_181_0);
+              stackIn_182_1 = (StringBuilder) ((Object) stackIn_181_1);
+              stackIn_182_2 = "{...}";
               break L51;
             }
           }
@@ -17189,11 +14241,11 @@ final class pe implements ntb, utb {
     }
 
     final sg d(int param0, int param1) {
-        sg[] var3 = null;
-        int var4 = 0;
-        sg var5 = null;
-        int var6 = 0;
-        sg[] var7 = null;
+        sg[] var3;
+        int var4;
+        sg var5;
+        int var6;
+        sg[] var7;
         var6 = VoidHunters.field_G;
         var7 = this.field_k;
         var3 = var7;
@@ -17243,8 +14295,34 @@ final class pe implements ntb, utb {
     }
 
     private final boolean a(int param0, ml param1, anb param2, byte param3, int param4, ml param5, anb param6, int param7, int param8) {
-        RuntimeException var10 = null;
-        ml var10_ref = null;
+        int stackIn_18_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_33_0 = 0;
+        RuntimeException stackIn_37_0 = null;
+        StringBuilder stackIn_37_1 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        String stackIn_38_2 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        String stackIn_42_2 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        RuntimeException stackIn_46_0 = null;
+        StringBuilder stackIn_46_1 = null;
+        String stackIn_46_2 = null;
+        RuntimeException stackIn_49_0 = null;
+        StringBuilder stackIn_49_1 = null;
+        RuntimeException stackIn_50_0 = null;
+        StringBuilder stackIn_50_1 = null;
+        String stackIn_50_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        ml var10 = null;
+        RuntimeException var10_ref = null;
         ml var11 = null;
         anb var12 = null;
         anb var13 = null;
@@ -17259,76 +14337,6 @@ final class pe implements ntb, utb {
         int var24 = 0;
         int var25 = 0;
         mqb var26 = null;
-        int stackIn_18_0 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_33_0 = 0;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        String stackIn_38_2 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        String stackIn_42_2 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        String stackIn_46_2 = null;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        RuntimeException stackIn_49_0 = null;
-        StringBuilder stackIn_49_1 = null;
-        RuntimeException stackIn_50_0 = null;
-        StringBuilder stackIn_50_1 = null;
-        String stackIn_50_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_32_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_29_0 = 0;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        RuntimeException stackOut_49_0 = null;
-        StringBuilder stackOut_49_1 = null;
-        String stackOut_49_2 = null;
-        RuntimeException stackOut_47_0 = null;
-        StringBuilder stackOut_47_1 = null;
-        String stackOut_47_2 = null;
         var16 = null;
         var25 = VoidHunters.field_G;
         try {
@@ -17345,7 +14353,7 @@ final class pe implements ntb, utb {
               }
             }
             L2: {
-              var10_ref = param5;
+              var10 = param5;
               var11 = param1;
               var12 = param6;
               var13 = param2;
@@ -17360,13 +14368,12 @@ final class pe implements ntb, utb {
             var15 = 0;
             L3: while (true) {
               if (2 <= var15) {
-                stackOut_32_0 = 1;
-                stackIn_33_0 = stackOut_32_0;
+                stackIn_33_0 = 1;
                 decompiledRegionSelector0 = 3;
                 break L0;
               } else {
                 L4: {
-                  if (var10_ref.k(0) != 28) {
+                  if (var10.k(0) != 28) {
                     break L4;
                   } else {
                     if (!(var12 instanceof mqb)) {
@@ -17384,8 +14391,7 @@ final class pe implements ntb, utb {
                               break L5;
                             }
                           }
-                          stackOut_17_0 = 0;
-                          stackIn_18_0 = stackOut_17_0;
+                          stackIn_18_0 = 0;
                           decompiledRegionSelector0 = 0;
                           break L0;
                         } else {
@@ -17396,7 +14402,7 @@ final class pe implements ntb, utb {
                   }
                 }
                 L6: {
-                  if (28 != var10_ref.k(0)) {
+                  if (28 != var10.k(0)) {
                     break L6;
                   } else {
                     if (!(var12 instanceof mqb)) {
@@ -17404,8 +14410,7 @@ final class pe implements ntb, utb {
                     } else {
                       var26 = (mqb) ((Object) var12);
                       if (var13.field_l == var26.p(32)) {
-                        stackOut_24_0 = 1;
-                        stackIn_25_0 = stackOut_24_0;
+                        stackIn_25_0 = 1;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       } else {
@@ -17428,15 +14433,14 @@ final class pe implements ntb, utb {
                             }
                           }
                         }
-                        stackOut_29_0 = 0;
-                        stackIn_30_0 = stackOut_29_0;
+                        stackIn_30_0 = 0;
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
                     }
                   }
                 }
-                var10_ref = param1;
+                var10 = param1;
                 var14 = param0;
                 var13 = param6;
                 var11 = param5;
@@ -17450,103 +14454,71 @@ final class pe implements ntb, utb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
-            var10 = decompiledCaughtException;
-            stackOut_34_0 = (RuntimeException) (var10);
-            stackOut_34_1 = new StringBuilder().append("pe.JF(").append(param0).append(',');
-            stackIn_37_0 = stackOut_34_0;
-            stackIn_37_1 = stackOut_34_1;
-            stackIn_35_0 = stackOut_34_0;
-            stackIn_35_1 = stackOut_34_1;
+            var10_ref = decompiledCaughtException;
+            stackIn_37_0 = (RuntimeException) (var10_ref);
+
+            stackIn_37_1 = new StringBuilder().append("pe.JF(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackOut_37_2 = "null";
-              stackIn_38_0 = stackOut_37_0;
-              stackIn_38_1 = stackOut_37_1;
-              stackIn_38_2 = stackOut_37_2;
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "null";
               break L8;
             } else {
-              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackOut_35_2 = "{...}";
-              stackIn_38_0 = stackOut_35_0;
-              stackIn_38_1 = stackOut_35_1;
-              stackIn_38_2 = stackOut_35_2;
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-            stackOut_38_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_38_2).append(',');
-            stackIn_41_0 = stackOut_38_0;
-            stackIn_41_1 = stackOut_38_1;
-            stackIn_39_0 = stackOut_38_0;
-            stackIn_39_1 = stackOut_38_1;
+            stackIn_41_0 = (RuntimeException) ((Object) stackIn_38_0);
+
+            stackIn_41_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_38_2).append(',');
+
             if (param2 == null) {
-              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
-              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "null";
               break L9;
             } else {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "{...}";
-              stackIn_42_0 = stackOut_39_0;
-              stackIn_42_1 = stackOut_39_1;
-              stackIn_42_2 = stackOut_39_2;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "{...}";
               break L9;
             }
           }
           L10: {
-            stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-            stackOut_42_1 = ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_45_0 = stackOut_42_0;
-            stackIn_45_1 = stackOut_42_1;
-            stackIn_43_0 = stackOut_42_0;
-            stackIn_43_1 = stackOut_42_1;
+            stackIn_45_0 = (RuntimeException) ((Object) stackIn_42_0);
+
+            stackIn_45_1 = ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(',').append(param3).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackOut_45_2 = "null";
-              stackIn_46_0 = stackOut_45_0;
-              stackIn_46_1 = stackOut_45_1;
-              stackIn_46_2 = stackOut_45_2;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "null";
               break L10;
             } else {
-              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackOut_43_2 = "{...}";
-              stackIn_46_0 = stackOut_43_0;
-              stackIn_46_1 = stackOut_43_1;
-              stackIn_46_2 = stackOut_43_2;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "{...}";
               break L10;
             }
           }
           L11: {
-            stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-            stackOut_46_1 = ((StringBuilder) (Object) stackIn_46_1).append(stackIn_46_2).append(',');
-            stackIn_49_0 = stackOut_46_0;
-            stackIn_49_1 = stackOut_46_1;
-            stackIn_47_0 = stackOut_46_0;
-            stackIn_47_1 = stackOut_46_1;
+            stackIn_49_0 = (RuntimeException) ((Object) stackIn_46_0);
+
+            stackIn_49_1 = ((StringBuilder) (Object) stackIn_46_1).append(stackIn_46_2).append(',');
+
             if (param6 == null) {
-              stackOut_49_0 = (RuntimeException) ((Object) stackIn_49_0);
-              stackOut_49_1 = (StringBuilder) ((Object) stackIn_49_1);
-              stackOut_49_2 = "null";
-              stackIn_50_0 = stackOut_49_0;
-              stackIn_50_1 = stackOut_49_1;
-              stackIn_50_2 = stackOut_49_2;
+              stackIn_50_0 = (RuntimeException) ((Object) stackIn_49_0);
+              stackIn_50_1 = (StringBuilder) ((Object) stackIn_49_1);
+              stackIn_50_2 = "null";
               break L11;
             } else {
-              stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackOut_47_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackOut_47_2 = "{...}";
-              stackIn_50_0 = stackOut_47_0;
-              stackIn_50_1 = stackOut_47_1;
-              stackIn_50_2 = stackOut_47_2;
+              stackIn_50_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackIn_50_1 = (StringBuilder) ((Object) stackIn_49_1);
+              stackIn_50_2 = "{...}";
               break L11;
             }
           }
@@ -17568,11 +14540,23 @@ final class pe implements ntb, utb {
     }
 
     private final void a(sg param0, lta param1, int param2) {
-        boolean discarded$1 = false;
+        boolean discarded$0 = false;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int[] var4 = null;
         RuntimeException var4_ref = null;
-        int var5_int = 0;
         String var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         float var8 = 0.0f;
@@ -17586,38 +14570,6 @@ final class pe implements ntb, utb {
         int[] var16 = null;
         String var17 = null;
         int[] var18 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_34_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
         try {
           L0: {
             var18 = param0.f((byte) -44);
@@ -17630,7 +14582,7 @@ final class pe implements ntb, utb {
                 if (param2 >= 50) {
                   break L1;
                 } else {
-                  discarded$1 = this.a(-62, (ml) null, (imb) null, true, (byte) 99, (sg) null, (nbb) null);
+                  discarded$0 = this.a(-62, (ml) null, (imb) null, true, (byte) 99, (sg) null, (nbb) null);
                   break L1;
                 }
               }
@@ -17708,52 +14660,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4_ref = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var4_ref);
-            stackOut_26_1 = new StringBuilder().append("pe.RC(");
-            stackIn_29_0 = stackOut_26_0;
-            stackIn_29_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_29_0 = (RuntimeException) (var4_ref);
+
+            stackIn_29_1 = new StringBuilder().append("pe.RC(");
+
             if (param0 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L6;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_30_0 = stackOut_27_0;
-              stackIn_30_1 = stackOut_27_1;
-              stackIn_30_2 = stackOut_27_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L6;
             }
           }
           L7: {
-            stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',');
-            stackIn_33_0 = stackOut_30_0;
-            stackIn_33_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackIn_33_0 = (RuntimeException) ((Object) stackIn_30_0);
+
+            stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',');
+
             if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
               break L7;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_34_0 = stackOut_31_0;
-              stackIn_34_1 = stackOut_31_1;
-              stackIn_34_2 = stackOut_31_2;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
               break L7;
             }
           }
@@ -17775,6 +14711,27 @@ final class pe implements ntb, utb {
     }
 
     final void a(tfa param0, int param1, sg param2, lta param3, byte param4, sg param5, int param6, int param7, int param8) {
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        String stackIn_35_2 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        String stackIn_39_2 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_43_2 = null;
+        RuntimeException stackIn_46_0 = null;
+        StringBuilder stackIn_46_1 = null;
+        RuntimeException stackIn_47_0 = null;
+        StringBuilder stackIn_47_1 = null;
+        String stackIn_47_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
         int var11 = 0;
         sg var12 = null;
@@ -17788,67 +14745,6 @@ final class pe implements ntb, utb {
         int var18 = 0;
         int var19 = 0;
         sg[] var20 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        String stackIn_39_2 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        String stackIn_43_2 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        String stackIn_47_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        String stackOut_42_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
         var19 = VoidHunters.field_G;
         try {
           L0: {
@@ -17939,102 +14835,70 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var10 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) (var10);
-            stackOut_31_1 = new StringBuilder().append("pe.JA(");
-            stackIn_34_0 = stackOut_31_0;
-            stackIn_34_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackIn_34_0 = (RuntimeException) (var10);
+
+            stackIn_34_1 = new StringBuilder().append("pe.JA(");
+
             if (param0 == null) {
-              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
               break L8;
             } else {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "{...}";
-              stackIn_35_0 = stackOut_32_0;
-              stackIn_35_1 = stackOut_32_1;
-              stackIn_35_2 = stackOut_32_2;
+              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
               break L8;
             }
           }
           L9: {
-            stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
-            stackOut_35_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(',').append(param1).append(',');
-            stackIn_38_0 = stackOut_35_0;
-            stackIn_38_1 = stackOut_35_1;
-            stackIn_36_0 = stackOut_35_0;
-            stackIn_36_1 = stackOut_35_1;
+            stackIn_38_0 = (RuntimeException) ((Object) stackIn_35_0);
+
+            stackIn_38_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "null";
-              stackIn_39_0 = stackOut_38_0;
-              stackIn_39_1 = stackOut_38_1;
-              stackIn_39_2 = stackOut_38_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "null";
               break L9;
             } else {
-              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackOut_36_2 = "{...}";
-              stackIn_39_0 = stackOut_36_0;
-              stackIn_39_1 = stackOut_36_1;
-              stackIn_39_2 = stackOut_36_2;
+              stackIn_39_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackIn_39_2 = "{...}";
               break L9;
             }
           }
           L10: {
-            stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-            stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',');
-            stackIn_42_0 = stackOut_39_0;
-            stackIn_42_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            stackIn_42_0 = (RuntimeException) ((Object) stackIn_39_0);
+
+            stackIn_42_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',');
+
             if (param3 == null) {
-              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackOut_42_2 = "null";
-              stackIn_43_0 = stackOut_42_0;
-              stackIn_43_1 = stackOut_42_1;
-              stackIn_43_2 = stackOut_42_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "null";
               break L10;
             } else {
-              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackOut_40_2 = "{...}";
-              stackIn_43_0 = stackOut_40_0;
-              stackIn_43_1 = stackOut_40_1;
-              stackIn_43_2 = stackOut_40_2;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "{...}";
               break L10;
             }
           }
           L11: {
-            stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
-            stackOut_43_1 = ((StringBuilder) (Object) stackIn_43_1).append(stackIn_43_2).append(',').append(param4).append(',');
-            stackIn_46_0 = stackOut_43_0;
-            stackIn_46_1 = stackOut_43_1;
-            stackIn_44_0 = stackOut_43_0;
-            stackIn_44_1 = stackOut_43_1;
+            stackIn_46_0 = (RuntimeException) ((Object) stackIn_43_0);
+
+            stackIn_46_1 = ((StringBuilder) (Object) stackIn_43_1).append(stackIn_43_2).append(',').append(param4).append(',');
+
             if (param5 == null) {
-              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
-              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
-              stackOut_46_2 = "null";
-              stackIn_47_0 = stackOut_46_0;
-              stackIn_47_1 = stackOut_46_1;
-              stackIn_47_2 = stackOut_46_2;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "null";
               break L11;
             } else {
-              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackOut_44_2 = "{...}";
-              stackIn_47_0 = stackOut_44_0;
-              stackIn_47_1 = stackOut_44_1;
-              stackIn_47_2 = stackOut_44_2;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "{...}";
               break L11;
             }
           }
@@ -18043,38 +14907,18 @@ final class pe implements ntb, utb {
     }
 
     private final void a(anb param0, boolean param1, boolean param2, boolean param3, int param4) {
-        RuntimeException var6 = null;
-        int stackIn_8_0 = 0;
-        anb stackIn_8_1 = null;
         int stackIn_10_0 = 0;
         anb stackIn_10_1 = null;
         int stackIn_11_0 = 0;
         anb stackIn_11_1 = null;
         int stackIn_11_2 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        anb stackOut_7_1 = null;
-        int stackOut_10_0 = 0;
-        anb stackOut_10_1 = null;
-        int stackOut_10_2 = 0;
-        int stackOut_8_0 = 0;
-        anb stackOut_8_1 = null;
-        int stackOut_8_2 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException var6 = null;
         try {
           L0: {
             L1: {
@@ -18101,27 +14945,19 @@ final class pe implements ntb, utb {
             }
             L3: {
               this.a(-110, param4, param0);
-              stackOut_7_0 = 20382;
-              stackOut_7_1 = (anb) (param0);
-              stackIn_10_0 = stackOut_7_0;
-              stackIn_10_1 = stackOut_7_1;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
+              stackIn_10_0 = 20382;
+
+              stackIn_10_1 = (anb) (param0);
+
               if (param1) {
-                stackOut_10_0 = stackIn_10_0;
-                stackOut_10_1 = (anb) ((Object) stackIn_10_1);
-                stackOut_10_2 = 0;
-                stackIn_11_0 = stackOut_10_0;
-                stackIn_11_1 = stackOut_10_1;
-                stackIn_11_2 = stackOut_10_2;
+                stackIn_11_0 = stackIn_10_0;
+                stackIn_11_1 = (anb) ((Object) stackIn_10_1);
+                stackIn_11_2 = 0;
                 break L3;
               } else {
-                stackOut_8_0 = stackIn_8_0;
-                stackOut_8_1 = (anb) ((Object) stackIn_8_1);
-                stackOut_8_2 = 1;
-                stackIn_11_0 = stackOut_8_0;
-                stackIn_11_1 = stackOut_8_1;
-                stackIn_11_2 = stackOut_8_2;
+                stackIn_11_0 = stackIn_10_0;
+                stackIn_11_1 = (anb) ((Object) stackIn_10_1);
+                stackIn_11_2 = 1;
                 break L3;
               }
             }
@@ -18132,27 +14968,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var6);
-            stackOut_13_1 = new StringBuilder().append("pe.KC(");
-            stackIn_16_0 = stackOut_13_0;
-            stackIn_16_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_16_0 = (RuntimeException) (var6);
+
+            stackIn_16_1 = new StringBuilder().append("pe.KC(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_17_0 = stackOut_14_0;
-              stackIn_17_1 = stackOut_14_1;
-              stackIn_17_2 = stackOut_14_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }
@@ -18161,13 +14989,13 @@ final class pe implements ntb, utb {
     }
 
     private final void b(int param0) {
-        int var2 = 0;
-        rba var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        sg var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+        int var2;
+        rba var3;
+        int var4;
+        int var5;
+        sg var6;
+        int var7;
+        int var8;
         var8 = VoidHunters.field_G;
         if (null == this.field_a) {
           return;
@@ -18269,52 +15097,22 @@ final class pe implements ntb, utb {
         int var5_int = 0;
         int var6 = 0;
         sg var7 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
@@ -18344,77 +15142,53 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (runtimeException);
-            stackOut_6_1 = new StringBuilder().append("pe.Q(").append(param0).append(',');
-            stackIn_9_0 = stackOut_6_0;
-            stackIn_9_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_9_0 = (RuntimeException) (runtimeException);
+
+            stackIn_9_1 = new StringBuilder().append("pe.Q(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_10_0 = stackOut_7_0;
-              stackIn_10_1 = stackOut_7_1;
-              stackIn_10_2 = stackOut_7_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-            stackIn_13_0 = stackOut_10_0;
-            stackIn_13_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackIn_13_0 = (RuntimeException) ((Object) stackIn_10_0);
+
+            stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
+
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "{...}";
-              stackIn_14_0 = stackOut_11_0;
-              stackIn_14_1 = stackOut_11_1;
-              stackIn_14_2 = stackOut_11_2;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
               break L4;
             }
           }
           L5: {
-            stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
-            stackIn_17_0 = stackOut_14_0;
-            stackIn_17_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_17_0 = (RuntimeException) ((Object) stackIn_14_0);
+
+            stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
+
             if (param3 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_18_0 = stackOut_15_0;
-              stackIn_18_1 = stackOut_15_1;
-              stackIn_18_2 = stackOut_15_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L5;
             }
           }
@@ -18423,25 +15197,15 @@ final class pe implements ntb, utb {
     }
 
     final void a(byte param0, rsb param1) {
-        RuntimeException var3 = null;
         int var4 = 0;
-        rdb var5 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var3 = null;
+        rdb var5 = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -18481,27 +15245,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("pe.GF(").append(param0).append(',');
-            stackIn_17_0 = stackOut_14_0;
-            stackIn_17_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_17_0 = (RuntimeException) (var3);
+
+            stackIn_17_1 = new StringBuilder().append("pe.GF(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_18_0 = stackOut_15_0;
-              stackIn_18_1 = stackOut_15_1;
-              stackIn_18_2 = stackOut_15_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L4;
             }
           }
@@ -18511,8 +15267,6 @@ final class pe implements ntb, utb {
 
     final boolean d(int param0, byte param1) {
         int stackIn_7_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
         L0: {
           if (param1 == 21) {
             break L0;
@@ -18529,14 +15283,12 @@ final class pe implements ntb, utb {
               if (this.field_f.a(param0, (byte) -85)) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_7_0 = stackOut_4_0;
+                stackIn_7_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_6_0 = 0;
-          stackIn_7_0 = stackOut_6_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0 != 0;
@@ -18565,17 +15317,11 @@ final class pe implements ntb, utb {
 
     private final boolean a(int param0, int param1, int param2, anb[] param3, int param4) {
         anb[] var6 = null;
-        RuntimeException var6_ref = null;
         int var7 = 0;
         anb var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int var12 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -18583,16 +15329,10 @@ final class pe implements ntb, utb {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_9_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var6_ref = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         var12 = VoidHunters.field_G;
         try {
           L0: {
@@ -18608,8 +15348,7 @@ final class pe implements ntb, utb {
             }
             L2: while (true) {
               if (var7 >= param3.length) {
-                stackOut_12_0 = 0;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = 0;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -18622,8 +15361,7 @@ final class pe implements ntb, utb {
                     if (var11 >= param4 + var8.g(-99)) {
                       break L3;
                     } else {
-                      stackOut_9_0 = 1;
-                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_0 = 1;
                       decompiledRegionSelector0 = 0;
                       break L0;
                     }
@@ -18640,27 +15378,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var6_ref);
-            stackOut_14_1 = new StringBuilder().append("pe.AD(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_17_0 = stackOut_14_0;
-            stackIn_17_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_17_0 = (RuntimeException) (var6_ref);
+
+            stackIn_17_1 = new StringBuilder().append("pe.AD(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_18_0 = stackOut_15_0;
-              stackIn_18_1 = stackOut_15_1;
-              stackIn_18_2 = stackOut_15_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L4;
             }
           }
@@ -18674,20 +15404,19 @@ final class pe implements ntb, utb {
     }
 
     final void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
-        sg discarded$2 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        tj var12 = null;
-        int var13 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        tj var12;
+        int var13;
         var13 = VoidHunters.field_G;
         if (param1 > 0) {
           L0: {
             if (!param4) {
               break L0;
             } else {
-              discarded$2 = this.d(89, 35);
+              this.d(89, 35);
               break L0;
             }
           }
@@ -18751,14 +15480,10 @@ final class pe implements ntb, utb {
     }
 
     final int a(cq param0, int param1) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
         int var4 = 0;
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -18766,17 +15491,8 @@ final class pe implements ntb, utb {
         String stackIn_21_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         var4 = VoidHunters.field_G;
         try {
           L0: {
@@ -18789,8 +15505,7 @@ final class pe implements ntb, utb {
                       break L1;
                     } else {
                       if (this.field_t[var3_int] == param0) {
-                        stackOut_12_0 = var3_int;
-                        stackIn_13_0 = stackOut_12_0;
+                        stackIn_13_0 = var3_int;
                         decompiledRegionSelector0 = 1;
                         break L0;
                       } else {
@@ -18803,13 +15518,11 @@ final class pe implements ntb, utb {
                   break L1;
                 }
               }
-              stackOut_15_0 = -1;
-              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_0 = -1;
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_2_0 = 78;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 78;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -18818,27 +15531,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var3);
-            stackOut_17_1 = new StringBuilder().append("pe.OC(");
-            stackIn_20_0 = stackOut_17_0;
-            stackIn_20_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_20_0 = (RuntimeException) (var3);
+
+            stackIn_20_1 = new StringBuilder().append("pe.OC(");
+
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
               break L3;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_21_0 = stackOut_18_0;
-              stackIn_21_1 = stackOut_18_1;
-              stackIn_21_2 = stackOut_18_2;
+              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
               break L3;
             }
           }
@@ -18861,37 +15566,17 @@ final class pe implements ntb, utb {
         int var5 = 0;
         int var6 = 0;
         String var7 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -18912,52 +15597,36 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) (runtimeException);
-            stackOut_3_1 = new StringBuilder().append("pe.ME(").append(param0).append(',');
-            stackIn_6_0 = stackOut_3_0;
-            stackIn_6_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("pe.ME(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackOut_4_2 = "{...}";
-              stackIn_7_0 = stackOut_4_0;
-              stackIn_7_1 = stackOut_4_1;
-              stackIn_7_2 = stackOut_4_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-            stackIn_10_0 = stackOut_7_0;
-            stackIn_10_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_10_0 = (RuntimeException) ((Object) stackIn_7_0);
+
+            stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
+
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_11_0 = stackOut_8_0;
-              stackIn_11_1 = stackOut_8_1;
-              stackIn_11_2 = stackOut_8_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -18966,24 +15635,46 @@ final class pe implements ntb, utb {
     }
 
     private final void a(tfa param0, sg param1, byte param2, sg param3, int param4, int param5, int param6, lta param7) {
-        RuntimeException var9 = null;
-        nbb var9_ref = null;
-        ml var10 = null;
+        RuntimeException stackIn_70_0 = null;
+        StringBuilder stackIn_70_1 = null;
+        RuntimeException stackIn_71_0 = null;
+        StringBuilder stackIn_71_1 = null;
+        String stackIn_71_2 = null;
+        RuntimeException stackIn_74_0 = null;
+        StringBuilder stackIn_74_1 = null;
+        RuntimeException stackIn_75_0 = null;
+        StringBuilder stackIn_75_1 = null;
+        String stackIn_75_2 = null;
+        RuntimeException stackIn_78_0 = null;
+        StringBuilder stackIn_78_1 = null;
+        RuntimeException stackIn_79_0 = null;
+        StringBuilder stackIn_79_1 = null;
+        String stackIn_79_2 = null;
+        RuntimeException stackIn_82_0 = null;
+        StringBuilder stackIn_82_1 = null;
+        RuntimeException stackIn_83_0 = null;
+        StringBuilder stackIn_83_1 = null;
+        String stackIn_83_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        nbb var9 = null;
+        RuntimeException var9_ref = null;
         int var10_int = 0;
+        ml var10 = null;
         int var11 = 0;
         int var12_int = 0;
         nbb var12 = null;
-        ml[] var13_ref_ml__ = null;
         int var13 = 0;
+        ml[] var13_ref_ml__ = null;
         int var14 = 0;
         ml[] var14_ref_ml__ = null;
         int var15 = 0;
         imb var15_ref_imb = null;
         int var16 = 0;
-        String var17 = null;
         int var17_int = 0;
-        int[] var18 = null;
+        String var17 = null;
         int var18_int = 0;
+        int[] var18 = null;
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
@@ -18997,68 +15688,6 @@ final class pe implements ntb, utb {
         qua var29 = null;
         int[] var30 = null;
         int[] var31 = null;
-        RuntimeException stackIn_68_0 = null;
-        StringBuilder stackIn_68_1 = null;
-        RuntimeException stackIn_70_0 = null;
-        StringBuilder stackIn_70_1 = null;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
-        String stackIn_71_2 = null;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
-        RuntimeException stackIn_75_0 = null;
-        StringBuilder stackIn_75_1 = null;
-        String stackIn_75_2 = null;
-        RuntimeException stackIn_76_0 = null;
-        StringBuilder stackIn_76_1 = null;
-        RuntimeException stackIn_78_0 = null;
-        StringBuilder stackIn_78_1 = null;
-        RuntimeException stackIn_79_0 = null;
-        StringBuilder stackIn_79_1 = null;
-        String stackIn_79_2 = null;
-        RuntimeException stackIn_80_0 = null;
-        StringBuilder stackIn_80_1 = null;
-        RuntimeException stackIn_82_0 = null;
-        StringBuilder stackIn_82_1 = null;
-        RuntimeException stackIn_83_0 = null;
-        StringBuilder stackIn_83_1 = null;
-        String stackIn_83_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_67_0 = null;
-        StringBuilder stackOut_67_1 = null;
-        RuntimeException stackOut_70_0 = null;
-        StringBuilder stackOut_70_1 = null;
-        String stackOut_70_2 = null;
-        RuntimeException stackOut_68_0 = null;
-        StringBuilder stackOut_68_1 = null;
-        String stackOut_68_2 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        RuntimeException stackOut_74_0 = null;
-        StringBuilder stackOut_74_1 = null;
-        String stackOut_74_2 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
-        RuntimeException stackOut_75_0 = null;
-        StringBuilder stackOut_75_1 = null;
-        RuntimeException stackOut_78_0 = null;
-        StringBuilder stackOut_78_1 = null;
-        String stackOut_78_2 = null;
-        RuntimeException stackOut_76_0 = null;
-        StringBuilder stackOut_76_1 = null;
-        String stackOut_76_2 = null;
-        RuntimeException stackOut_79_0 = null;
-        StringBuilder stackOut_79_1 = null;
-        RuntimeException stackOut_82_0 = null;
-        StringBuilder stackOut_82_1 = null;
-        String stackOut_82_2 = null;
-        RuntimeException stackOut_80_0 = null;
-        StringBuilder stackOut_80_1 = null;
-        String stackOut_80_2 = null;
         var24 = VoidHunters.field_G;
         try {
           L0: {
@@ -19080,7 +15709,7 @@ final class pe implements ntb, utb {
                       }
                     }
                     var27 = this.i(21363, param3.x(-96));
-                    var9_ref = var27;
+                    var9 = var27;
                     if (var27 != null) {
                       L3: {
                         if (ktb.field_q != 1) {
@@ -19111,7 +15740,7 @@ final class pe implements ntb, utb {
                             var27.b((byte) 60, var12);
                             param3.a((int[]) null, -15);
                             var28 = var12;
-                            var9_ref = var28;
+                            var9 = var28;
                             param3.a((qua) null, 3);
                             this.a(param3, false, -126, var28, var11, var10_int);
                             break L3;
@@ -19121,7 +15750,7 @@ final class pe implements ntb, utb {
                         }
                       }
                       L5: {
-                        var10 = var9_ref.field_k;
+                        var10 = var9.field_k;
                         var11 = 1;
                         var25 = param3.p((byte) 49);
                         var29 = var25;
@@ -19176,7 +15805,7 @@ final class pe implements ntb, utb {
                             break L9;
                           } else {
                             L10: {
-                              var13 = aob.a(29554, var9_ref.field_k.field_j);
+                              var13 = aob.a(29554, var9.field_k.field_j);
                               if (null != var29) {
                                 if (var11 == 0) {
                                   var13 = 16711680;
@@ -19189,7 +15818,7 @@ final class pe implements ntb, utb {
                                 break L10;
                               }
                             }
-                            var9_ref.a(param7, var13, (pe) (this), 16);
+                            var9.a(param7, var13, (pe) (this), 16);
                             break L9;
                           }
                         }
@@ -19233,13 +15862,13 @@ final class pe implements ntb, utb {
                           break L11;
                         }
                       }
-                      var13 = var9_ref.d(false) - var9_ref.j(995401160);
-                      var14 = var9_ref.g((byte) -16) - var9_ref.i((byte) 5);
-                      var15 = var10.b(127) * fc.a(var9_ref.e(0), (byte) 99) - var10.c((byte) 100) * eu.a(var9_ref.e(0), 124) >> 1974054800;
-                      var16 = var10.b(-25) * eu.a(var9_ref.e(0), 62) + var10.c((byte) 100) * fc.a(var9_ref.e(0), (byte) 64) >> 1641997488;
+                      var13 = var9.d(false) - var9.j(995401160);
+                      var14 = var9.g((byte) -16) - var9.i((byte) 5);
+                      var15 = var10.b(127) * fc.a(var9.e(0), (byte) 99) - var10.c((byte) 100) * eu.a(var9.e(0), 124) >> 1974054800;
+                      var16 = var10.b(-25) * eu.a(var9.e(0), 62) + var10.c((byte) 100) * fc.a(var9.e(0), (byte) 64) >> 1641997488;
                       nn.a(param3.field_k.field_n, 1, var14 + var16, var13 - -var15, param7, param3.field_k.field_r);
                       var17 = me.a(var10, (byte) -84);
-                      cka.a(-1, var17, 16777215, param7.b(true, -10000 + var9_ref.g((byte) -109)), param7.a(var9_ref.d(false), (byte) 118) + -(kga.a(94, var17) >> -222978143), 4266);
+                      cka.a(-1, var17, 16777215, param7.b(true, -10000 + var9.g((byte) -109)), param7.a(var9.d(false), (byte) 118) + -(kga.a(94, var17) >> -222978143), 4266);
                       if (null == param3.A(56)) {
                         break L1;
                       } else {
@@ -19280,103 +15909,71 @@ final class pe implements ntb, utb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
-            var9 = decompiledCaughtException;
-            stackOut_67_0 = (RuntimeException) (var9);
-            stackOut_67_1 = new StringBuilder().append("pe.RD(");
-            stackIn_70_0 = stackOut_67_0;
-            stackIn_70_1 = stackOut_67_1;
-            stackIn_68_0 = stackOut_67_0;
-            stackIn_68_1 = stackOut_67_1;
+            var9_ref = decompiledCaughtException;
+            stackIn_70_0 = (RuntimeException) (var9_ref);
+
+            stackIn_70_1 = new StringBuilder().append("pe.RD(");
+
             if (param0 == null) {
-              stackOut_70_0 = (RuntimeException) ((Object) stackIn_70_0);
-              stackOut_70_1 = (StringBuilder) ((Object) stackIn_70_1);
-              stackOut_70_2 = "null";
-              stackIn_71_0 = stackOut_70_0;
-              stackIn_71_1 = stackOut_70_1;
-              stackIn_71_2 = stackOut_70_2;
+              stackIn_71_0 = (RuntimeException) ((Object) stackIn_70_0);
+              stackIn_71_1 = (StringBuilder) ((Object) stackIn_70_1);
+              stackIn_71_2 = "null";
               break L15;
             } else {
-              stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
-              stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
-              stackOut_68_2 = "{...}";
-              stackIn_71_0 = stackOut_68_0;
-              stackIn_71_1 = stackOut_68_1;
-              stackIn_71_2 = stackOut_68_2;
+              stackIn_71_0 = (RuntimeException) ((Object) stackIn_70_0);
+              stackIn_71_1 = (StringBuilder) ((Object) stackIn_70_1);
+              stackIn_71_2 = "{...}";
               break L15;
             }
           }
           L16: {
-            stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
-            stackOut_71_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(',');
-            stackIn_74_0 = stackOut_71_0;
-            stackIn_74_1 = stackOut_71_1;
-            stackIn_72_0 = stackOut_71_0;
-            stackIn_72_1 = stackOut_71_1;
+            stackIn_74_0 = (RuntimeException) ((Object) stackIn_71_0);
+
+            stackIn_74_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(',');
+
             if (param1 == null) {
-              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
-              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
-              stackOut_74_2 = "null";
-              stackIn_75_0 = stackOut_74_0;
-              stackIn_75_1 = stackOut_74_1;
-              stackIn_75_2 = stackOut_74_2;
+              stackIn_75_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackIn_75_1 = (StringBuilder) ((Object) stackIn_74_1);
+              stackIn_75_2 = "null";
               break L16;
             } else {
-              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
-              stackOut_72_2 = "{...}";
-              stackIn_75_0 = stackOut_72_0;
-              stackIn_75_1 = stackOut_72_1;
-              stackIn_75_2 = stackOut_72_2;
+              stackIn_75_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackIn_75_1 = (StringBuilder) ((Object) stackIn_74_1);
+              stackIn_75_2 = "{...}";
               break L16;
             }
           }
           L17: {
-            stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
-            stackOut_75_1 = ((StringBuilder) (Object) stackIn_75_1).append(stackIn_75_2).append(',').append(param2).append(',');
-            stackIn_78_0 = stackOut_75_0;
-            stackIn_78_1 = stackOut_75_1;
-            stackIn_76_0 = stackOut_75_0;
-            stackIn_76_1 = stackOut_75_1;
+            stackIn_78_0 = (RuntimeException) ((Object) stackIn_75_0);
+
+            stackIn_78_1 = ((StringBuilder) (Object) stackIn_75_1).append(stackIn_75_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_78_0 = (RuntimeException) ((Object) stackIn_78_0);
-              stackOut_78_1 = (StringBuilder) ((Object) stackIn_78_1);
-              stackOut_78_2 = "null";
-              stackIn_79_0 = stackOut_78_0;
-              stackIn_79_1 = stackOut_78_1;
-              stackIn_79_2 = stackOut_78_2;
+              stackIn_79_0 = (RuntimeException) ((Object) stackIn_78_0);
+              stackIn_79_1 = (StringBuilder) ((Object) stackIn_78_1);
+              stackIn_79_2 = "null";
               break L17;
             } else {
-              stackOut_76_0 = (RuntimeException) ((Object) stackIn_76_0);
-              stackOut_76_1 = (StringBuilder) ((Object) stackIn_76_1);
-              stackOut_76_2 = "{...}";
-              stackIn_79_0 = stackOut_76_0;
-              stackIn_79_1 = stackOut_76_1;
-              stackIn_79_2 = stackOut_76_2;
+              stackIn_79_0 = (RuntimeException) ((Object) stackIn_75_0);
+              stackIn_79_1 = (StringBuilder) ((Object) stackIn_78_1);
+              stackIn_79_2 = "{...}";
               break L17;
             }
           }
           L18: {
-            stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
-            stackOut_79_1 = ((StringBuilder) (Object) stackIn_79_1).append(stackIn_79_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-            stackIn_82_0 = stackOut_79_0;
-            stackIn_82_1 = stackOut_79_1;
-            stackIn_80_0 = stackOut_79_0;
-            stackIn_80_1 = stackOut_79_1;
+            stackIn_82_0 = (RuntimeException) ((Object) stackIn_79_0);
+
+            stackIn_82_1 = ((StringBuilder) (Object) stackIn_79_1).append(stackIn_79_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
+
             if (param7 == null) {
-              stackOut_82_0 = (RuntimeException) ((Object) stackIn_82_0);
-              stackOut_82_1 = (StringBuilder) ((Object) stackIn_82_1);
-              stackOut_82_2 = "null";
-              stackIn_83_0 = stackOut_82_0;
-              stackIn_83_1 = stackOut_82_1;
-              stackIn_83_2 = stackOut_82_2;
+              stackIn_83_0 = (RuntimeException) ((Object) stackIn_82_0);
+              stackIn_83_1 = (StringBuilder) ((Object) stackIn_82_1);
+              stackIn_83_2 = "null";
               break L18;
             } else {
-              stackOut_80_0 = (RuntimeException) ((Object) stackIn_80_0);
-              stackOut_80_1 = (StringBuilder) ((Object) stackIn_80_1);
-              stackOut_80_2 = "{...}";
-              stackIn_83_0 = stackOut_80_0;
-              stackIn_83_1 = stackOut_80_1;
-              stackIn_83_2 = stackOut_80_2;
+              stackIn_83_0 = (RuntimeException) ((Object) stackIn_79_0);
+              stackIn_83_1 = (StringBuilder) ((Object) stackIn_82_1);
+              stackIn_83_2 = "{...}";
               break L18;
             }
           }
@@ -19390,14 +15987,14 @@ final class pe implements ntb, utb {
     }
 
     private final void a(int param0, byte param1, int param2, int param3) {
-        crb[] var5 = null;
-        int var6 = 0;
-        crb var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        crb[] var12 = null;
+        crb[] var5;
+        int var6;
+        crb var7;
+        int var11;
+        crb[] var12;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           var11 = VoidHunters.field_G;
           if (param1 == 4) {
@@ -19445,14 +16042,11 @@ final class pe implements ntb, utb {
 
     final boolean a(int param0, anb param1) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int stackIn_2_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -19460,17 +16054,7 @@ final class pe implements ntb, utb {
         String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             var3_int = param1.field_d;
@@ -19478,8 +16062,7 @@ final class pe implements ntb, utb {
             var5 = param1.g(param0 + 11886);
             if (!this.a(var3_int, var4, -80, this.field_e.c(0), var5)) {
               if (this.a(var3_int, var4, param0 + 11833, this.field_k, var5)) {
-                stackOut_6_0 = 1;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = 1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -19492,8 +16075,7 @@ final class pe implements ntb, utb {
                   }
                 }
                 if (this.a(var3_int, var4, -100, this.field_m, var5)) {
-                  stackOut_12_0 = 1;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = 1;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
@@ -19501,8 +16083,7 @@ final class pe implements ntb, utb {
                 }
               }
             } else {
-              stackOut_1_0 = 1;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -19511,27 +16092,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("pe.EC(").append(param0).append(',');
-            stackIn_17_0 = stackOut_14_0;
-            stackIn_17_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_17_0 = (RuntimeException) (var3);
+
+            stackIn_17_1 = new StringBuilder().append("pe.EC(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_18_0 = stackOut_15_0;
-              stackIn_18_1 = stackOut_15_1;
-              stackIn_18_2 = stackOut_15_2;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L2;
             }
           }
@@ -19549,30 +16122,19 @@ final class pe implements ntb, utb {
     }
 
     final void b(int param0, boolean param1) {
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
         L0: {
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
+          stackIn_2_0 = this;
+
           if (!param1) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
             break L0;
           } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
             break L0;
           }
         }
@@ -19588,9 +16150,19 @@ final class pe implements ntb, utb {
     }
 
     private final void a(ij param0, boolean param1) {
-        boolean discarded$1 = false;
-        RuntimeException var3 = null;
+        boolean discarded$0 = false;
+        Object stackIn_7_0 = null;
+        ml stackIn_7_1 = null;
+        int stackIn_41_0 = 0;
+        int stackIn_45_0 = 0;
+        RuntimeException stackIn_65_0 = null;
+        StringBuilder stackIn_65_1 = null;
+        RuntimeException stackIn_66_0 = null;
+        StringBuilder stackIn_66_1 = null;
+        String stackIn_66_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         sg var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -19600,34 +16172,6 @@ final class pe implements ntb, utb {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object stackIn_7_0 = null;
-        ml stackIn_7_1 = null;
-        int stackIn_41_0 = 0;
-        int stackIn_45_0 = 0;
-        RuntimeException stackIn_63_0 = null;
-        StringBuilder stackIn_63_1 = null;
-        RuntimeException stackIn_65_0 = null;
-        StringBuilder stackIn_65_1 = null;
-        RuntimeException stackIn_66_0 = null;
-        StringBuilder stackIn_66_1 = null;
-        String stackIn_66_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        Object stackOut_5_0 = null;
-        ml stackOut_5_1 = null;
-        int stackOut_39_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_42_0 = 0;
-        RuntimeException stackOut_62_0 = null;
-        StringBuilder stackOut_62_1 = null;
-        RuntimeException stackOut_65_0 = null;
-        StringBuilder stackOut_65_1 = null;
-        String stackOut_65_2 = null;
-        RuntimeException stackOut_63_0 = null;
-        StringBuilder stackOut_63_1 = null;
-        String stackOut_63_2 = null;
         var12 = VoidHunters.field_G;
         try {
           L0: {
@@ -19648,10 +16192,8 @@ final class pe implements ntb, utb {
                 var9 = var4;
                 var9 = var4;
                 if (var4 != null) {
-                  stackOut_5_0 = null;
-                  stackOut_5_1 = var4.field_k;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
+                  stackIn_7_0 = null;
+                  stackIn_7_1 = var4.field_k;
                   if (stackIn_7_0 != stackIn_7_1) {
                     if (!var4.field_k.k((byte) 71)) {
                       L3: {
@@ -19694,34 +16236,28 @@ final class pe implements ntb, utb {
                                       if (-2 != (bra.field_d ^ -1)) {
                                         if (!var4.g(false)) {
                                           if (var9.g(param1)) {
-                                            stackOut_39_0 = 1;
-                                            stackIn_41_0 = stackOut_39_0;
+                                            stackIn_41_0 = 1;
                                             break L7;
                                           } else {
-                                            stackOut_38_0 = 0;
-                                            stackIn_41_0 = stackOut_38_0;
+                                            stackIn_41_0 = 0;
                                             break L7;
                                           }
                                         } else {
-                                          stackOut_36_0 = 1;
-                                          stackIn_41_0 = stackOut_36_0;
+                                          stackIn_41_0 = 1;
                                           break L7;
                                         }
                                       } else {
-                                        stackOut_34_0 = 1;
-                                        stackIn_41_0 = stackOut_34_0;
+                                        stackIn_41_0 = 1;
                                         break L7;
                                       }
                                     }
                                     L8: {
                                       var10 = stackIn_41_0;
                                       if (var9.q((byte) 119) == var4.q((byte) 79)) {
-                                        stackOut_44_0 = 0;
-                                        stackIn_45_0 = stackOut_44_0;
+                                        stackIn_45_0 = 0;
                                         break L8;
                                       } else {
-                                        stackOut_42_0 = 1;
-                                        stackIn_45_0 = stackOut_42_0;
+                                        stackIn_45_0 = 1;
                                         break L8;
                                       }
                                     }
@@ -19740,7 +16276,7 @@ final class pe implements ntb, utb {
                                         }
                                       }
                                     }
-                                    discarded$1 = this.a(var10 != 0, 0, var5, (byte) 57, var11 != 0, var9, 0, var4, param0);
+                                    discarded$0 = this.a(var10 != 0, 0, var5, (byte) 57, var11 != 0, var9, 0, var4, param0);
                                     if (var4.field_k != null) {
                                       if (!var4.field_k.k((byte) 42)) {
                                         break L5;
@@ -19795,27 +16331,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var3 = decompiledCaughtException;
-            stackOut_62_0 = (RuntimeException) (var3);
-            stackOut_62_1 = new StringBuilder().append("pe.TE(");
-            stackIn_65_0 = stackOut_62_0;
-            stackIn_65_1 = stackOut_62_1;
-            stackIn_63_0 = stackOut_62_0;
-            stackIn_63_1 = stackOut_62_1;
+            stackIn_65_0 = (RuntimeException) (var3);
+
+            stackIn_65_1 = new StringBuilder().append("pe.TE(");
+
             if (param0 == null) {
-              stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
-              stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
-              stackOut_65_2 = "null";
-              stackIn_66_0 = stackOut_65_0;
-              stackIn_66_1 = stackOut_65_1;
-              stackIn_66_2 = stackOut_65_2;
+              stackIn_66_0 = (RuntimeException) ((Object) stackIn_65_0);
+              stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+              stackIn_66_2 = "null";
               break L10;
             } else {
-              stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
-              stackOut_63_1 = (StringBuilder) ((Object) stackIn_63_1);
-              stackOut_63_2 = "{...}";
-              stackIn_66_0 = stackOut_63_0;
-              stackIn_66_1 = stackOut_63_1;
-              stackIn_66_2 = stackOut_63_2;
+              stackIn_66_0 = (RuntimeException) ((Object) stackIn_65_0);
+              stackIn_66_1 = (StringBuilder) ((Object) stackIn_65_1);
+              stackIn_66_2 = "{...}";
               break L10;
             }
           }
@@ -19824,22 +16352,13 @@ final class pe implements ntb, utb {
     }
 
     final boolean a(boolean param0, int param1, lbb param2) {
-        RuntimeException var4 = null;
-        et[] var4_array = null;
-        int var5 = 0;
-        int var6 = 0;
-        et var7 = null;
         int var8 = 0;
-        et[] var9 = null;
         int stackIn_3_0 = 0;
-        lbb stackIn_5_0 = null;
         lbb stackIn_7_0 = null;
         lbb stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
@@ -19847,48 +16366,32 @@ final class pe implements ntb, utb {
         String stackIn_29_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        lbb stackOut_4_0 = null;
-        lbb stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        lbb stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_2_0 = 0;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        et[] var4 = null;
+        RuntimeException var4_ref = null;
+        int var5 = 0;
+        int var6 = 0;
+        et var7 = null;
+        et[] var9 = null;
         var8 = VoidHunters.field_G;
         try {
           L0: {
             if (param0) {
               L1: {
-                stackOut_4_0 = (lbb) (param2);
-                stackIn_7_0 = stackOut_4_0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_7_0 = (lbb) (param2);
+
                 if (param0) {
-                  stackOut_7_0 = (lbb) ((Object) stackIn_7_0);
-                  stackOut_7_1 = 0;
-                  stackIn_8_0 = stackOut_7_0;
-                  stackIn_8_1 = stackOut_7_1;
+                  stackIn_8_0 = (lbb) ((Object) stackIn_7_0);
+                  stackIn_8_1 = 0;
                   break L1;
                 } else {
-                  stackOut_5_0 = (lbb) ((Object) stackIn_5_0);
-                  stackOut_5_1 = 1;
-                  stackIn_8_0 = stackOut_5_0;
-                  stackIn_8_1 = stackOut_5_1;
+                  stackIn_8_0 = (lbb) ((Object) stackIn_7_0);
+                  stackIn_8_1 = 1;
                   break L1;
                 }
               }
               L2: {
                 var9 = ((lbb) (Object) stackIn_8_0).d(stackIn_8_1 != 0);
-                var4_array = var9;
+                var4 = var9;
                 var5 = 8;
                 if (param1 != 1) {
                   break L2;
@@ -19898,7 +16401,7 @@ final class pe implements ntb, utb {
                 }
               }
               L3: {
-                if (var4_array == null) {
+                if (var4 == null) {
                   break L3;
                 } else {
                   if (-1 > (var9.length ^ -1)) {
@@ -19917,12 +16420,10 @@ final class pe implements ntb, utb {
                             } else {
                               L6: {
                                 if (var7.field_a <= 0) {
-                                  stackOut_20_0 = 0;
-                                  stackIn_21_0 = stackOut_20_0;
+                                  stackIn_21_0 = 0;
                                   break L6;
                                 } else {
-                                  stackOut_18_0 = 1;
-                                  stackIn_21_0 = stackOut_18_0;
+                                  stackIn_21_0 = 1;
                                   break L6;
                                 }
                               }
@@ -19940,13 +16441,11 @@ final class pe implements ntb, utb {
                   }
                 }
               }
-              stackOut_23_0 = 1;
-              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_0 = 1;
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -19954,28 +16453,20 @@ final class pe implements ntb, utb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
-            var4 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var4);
-            stackOut_25_1 = new StringBuilder().append("pe.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_28_0 = stackOut_25_0;
-            stackIn_28_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_28_0 = (RuntimeException) (var4_ref);
+
+            stackIn_28_1 = new StringBuilder().append("pe.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "null";
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackOut_26_2 = "{...}";
-              stackIn_29_0 = stackOut_26_0;
-              stackIn_29_1 = stackOut_26_1;
-              stackIn_29_2 = stackOut_26_2;
+              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackIn_29_2 = "{...}";
               break L7;
             }
           }
@@ -19993,12 +16484,39 @@ final class pe implements ntb, utb {
     }
 
     private final void a(ij param0, byte param1) {
-        anb discarded$1 = null;
-        RuntimeException var3 = null;
+        int stackIn_15_0 = 0;
+        Object stackIn_38_0 = null;
+        Object stackIn_39_0 = null;
+        int stackIn_39_1 = 0;
+        Object stackIn_42_0 = null;
+        int stackIn_42_1 = 0;
+        int stackIn_42_2 = 0;
+        Object stackIn_43_0 = null;
+        int stackIn_43_1 = 0;
+        int stackIn_43_2 = 0;
+        int stackIn_43_3 = 0;
+        Object stackIn_47_0;
+        int stackIn_47_1;
+        int stackIn_47_2;
+        int stackIn_47_3;
+        int stackIn_47_4;
+        Object stackIn_48_0 = null;
+        int stackIn_48_1 = 0;
+        int stackIn_48_2 = 0;
+        int stackIn_48_3 = 0;
+        int stackIn_48_4 = 0;
+        int stackIn_48_5 = 0;
+        RuntimeException stackIn_71_0 = null;
+        StringBuilder stackIn_71_1 = null;
+        RuntimeException stackIn_72_0 = null;
+        StringBuilder stackIn_72_1 = null;
+        String stackIn_72_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
-        nbb var5_ref_nbb = null;
         int var5 = 0;
+        nbb var5_ref_nbb = null;
         nbb var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -20010,100 +16528,6 @@ final class pe implements ntb, utb {
         sg[] var15 = null;
         sg var16 = null;
         nbb var17 = null;
-        int stackIn_15_0 = 0;
-        Object stackIn_35_0 = null;
-        Object stackIn_36_0 = null;
-        Object stackIn_38_0 = null;
-        Object stackIn_39_0 = null;
-        int stackIn_39_1 = 0;
-        Object stackIn_40_0 = null;
-        int stackIn_40_1 = 0;
-        int stackIn_40_2 = 0;
-        Object stackIn_42_0 = null;
-        int stackIn_42_1 = 0;
-        int stackIn_42_2 = 0;
-        Object stackIn_43_0 = null;
-        int stackIn_43_1 = 0;
-        int stackIn_43_2 = 0;
-        int stackIn_43_3 = 0;
-        Object stackIn_44_0 = null;
-        int stackIn_44_1 = 0;
-        int stackIn_44_2 = 0;
-        int stackIn_44_3 = 0;
-        int stackIn_44_4 = 0;
-        Object stackIn_45_0 = null;
-        int stackIn_45_1 = 0;
-        int stackIn_45_2 = 0;
-        int stackIn_45_3 = 0;
-        int stackIn_45_4 = 0;
-        Object stackIn_47_0 = null;
-        int stackIn_47_1 = 0;
-        int stackIn_47_2 = 0;
-        int stackIn_47_3 = 0;
-        int stackIn_47_4 = 0;
-        Object stackIn_48_0 = null;
-        int stackIn_48_1 = 0;
-        int stackIn_48_2 = 0;
-        int stackIn_48_3 = 0;
-        int stackIn_48_4 = 0;
-        int stackIn_48_5 = 0;
-        RuntimeException stackIn_69_0 = null;
-        StringBuilder stackIn_69_1 = null;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
-        String stackIn_72_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_12_0 = 0;
-        Object stackOut_34_0 = null;
-        Object stackOut_35_0 = null;
-        Object stackOut_36_0 = null;
-        int stackOut_36_1 = 0;
-        Object stackOut_38_0 = null;
-        int stackOut_38_1 = 0;
-        Object stackOut_39_0 = null;
-        int stackOut_39_1 = 0;
-        int stackOut_39_2 = 0;
-        Object stackOut_42_0 = null;
-        int stackOut_42_1 = 0;
-        int stackOut_42_2 = 0;
-        int stackOut_42_3 = 0;
-        Object stackOut_40_0 = null;
-        int stackOut_40_1 = 0;
-        int stackOut_40_2 = 0;
-        int stackOut_40_3 = 0;
-        Object stackOut_43_0 = null;
-        int stackOut_43_1 = 0;
-        int stackOut_43_2 = 0;
-        int stackOut_43_3 = 0;
-        int stackOut_43_4 = 0;
-        Object stackOut_44_0 = null;
-        int stackOut_44_1 = 0;
-        int stackOut_44_2 = 0;
-        int stackOut_44_3 = 0;
-        int stackOut_44_4 = 0;
-        Object stackOut_45_0 = null;
-        int stackOut_45_1 = 0;
-        int stackOut_45_2 = 0;
-        int stackOut_45_3 = 0;
-        int stackOut_45_4 = 0;
-        int stackOut_45_5 = 0;
-        Object stackOut_47_0 = null;
-        int stackOut_47_1 = 0;
-        int stackOut_47_2 = 0;
-        int stackOut_47_3 = 0;
-        int stackOut_47_4 = 0;
-        int stackOut_47_5 = 0;
-        RuntimeException stackOut_68_0 = null;
-        StringBuilder stackOut_68_1 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        String stackOut_71_2 = null;
-        RuntimeException stackOut_69_0 = null;
-        StringBuilder stackOut_69_1 = null;
-        String stackOut_69_2 = null;
         var11 = VoidHunters.field_G;
         try {
           L0: {
@@ -20115,12 +16539,10 @@ final class pe implements ntb, utb {
                   if (var14.length <= var4) {
                     L3: {
                       if (ie.field_p != 1) {
-                        stackOut_14_0 = 0;
-                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_0 = 0;
                         break L3;
                       } else {
-                        stackOut_12_0 = 1;
-                        stackIn_15_0 = stackOut_12_0;
+                        stackIn_15_0 = 1;
                         break L3;
                       }
                     }
@@ -20175,134 +16597,93 @@ final class pe implements ntb, utb {
                                         if (var9.field_l != var16.x(-123)) {
                                           L7: {
                                             L8: {
-                                              stackOut_34_0 = this;
-                                              stackIn_38_0 = stackOut_34_0;
-                                              stackIn_35_0 = stackOut_34_0;
+                                              stackIn_38_0 = this;
+
                                               if (var9.field_v) {
                                                 break L8;
                                               } else {
-                                                stackOut_35_0 = this;
-                                                stackIn_38_0 = stackOut_35_0;
-                                                stackIn_36_0 = stackOut_35_0;
+                                                stackIn_38_0 = this;
+
                                                 if (var3_int == 0) {
                                                   break L8;
                                                 } else {
-                                                  stackOut_36_0 = this;
-                                                  stackOut_36_1 = 1;
-                                                  stackIn_39_0 = stackOut_36_0;
-                                                  stackIn_39_1 = stackOut_36_1;
+                                                  stackIn_39_0 = this;
+                                                  stackIn_39_1 = 1;
                                                   break L7;
                                                 }
                                               }
                                             }
-                                            stackOut_38_0 = this;
-                                            stackOut_38_1 = 0;
-                                            stackIn_39_0 = stackOut_38_0;
-                                            stackIn_39_1 = stackOut_38_1;
+                                            stackIn_39_0 = this;
+                                            stackIn_39_1 = 0;
                                             break L7;
                                           }
                                           L9: {
-                                            stackOut_39_0 = this;
-                                            stackOut_39_1 = stackIn_39_1;
-                                            stackOut_39_2 = 1;
-                                            stackIn_42_0 = stackOut_39_0;
-                                            stackIn_42_1 = stackOut_39_1;
-                                            stackIn_42_2 = stackOut_39_2;
-                                            stackIn_40_0 = stackOut_39_0;
-                                            stackIn_40_1 = stackOut_39_1;
-                                            stackIn_40_2 = stackOut_39_2;
+                                            stackIn_42_0 = this;
+
+                                            stackIn_42_1 = stackIn_39_1;
+
+                                            stackIn_42_2 = 1;
+
                                             if (!var9.field_v) {
-                                              stackOut_42_0 = this;
-                                              stackOut_42_1 = stackIn_42_1;
-                                              stackOut_42_2 = stackIn_42_2;
-                                              stackOut_42_3 = gkb.field_o;
-                                              stackIn_43_0 = stackOut_42_0;
-                                              stackIn_43_1 = stackOut_42_1;
-                                              stackIn_43_2 = stackOut_42_2;
-                                              stackIn_43_3 = stackOut_42_3;
+                                              stackIn_43_0 = this;
+                                              stackIn_43_1 = stackIn_42_1;
+                                              stackIn_43_2 = stackIn_42_2;
+                                              stackIn_43_3 = gkb.field_o;
                                               break L9;
                                             } else {
-                                              stackOut_40_0 = this;
-                                              stackOut_40_1 = stackIn_40_1;
-                                              stackOut_40_2 = stackIn_40_2;
-                                              stackOut_40_3 = nu.field_p;
-                                              stackIn_43_0 = stackOut_40_0;
-                                              stackIn_43_1 = stackOut_40_1;
-                                              stackIn_43_2 = stackOut_40_2;
-                                              stackIn_43_3 = stackOut_40_3;
+                                              stackIn_43_0 = this;
+                                              stackIn_43_1 = stackIn_39_1;
+                                              stackIn_43_2 = stackIn_42_2;
+                                              stackIn_43_3 = nu.field_p;
                                               break L9;
                                             }
                                           }
                                           L10: {
                                             L11: {
-                                              stackOut_43_0 = this;
-                                              stackOut_43_1 = stackIn_43_1;
-                                              stackOut_43_2 = stackIn_43_2;
-                                              stackOut_43_3 = stackIn_43_3;
-                                              stackOut_43_4 = 102;
-                                              stackIn_47_0 = stackOut_43_0;
-                                              stackIn_47_1 = stackOut_43_1;
-                                              stackIn_47_2 = stackOut_43_2;
-                                              stackIn_47_3 = stackOut_43_3;
-                                              stackIn_47_4 = stackOut_43_4;
-                                              stackIn_44_0 = stackOut_43_0;
-                                              stackIn_44_1 = stackOut_43_1;
-                                              stackIn_44_2 = stackOut_43_2;
-                                              stackIn_44_3 = stackOut_43_3;
-                                              stackIn_44_4 = stackOut_43_4;
+                                              stackIn_47_0 = this;
+
+                                              stackIn_47_1 = stackIn_43_1;
+
+                                              stackIn_47_2 = stackIn_43_2;
+
+                                              stackIn_47_3 = stackIn_43_3;
+
+                                              stackIn_47_4 = 102;
+
                                               if (var9.field_v) {
                                                 break L11;
                                               } else {
-                                                stackOut_44_0 = this;
-                                                stackOut_44_1 = stackIn_44_1;
-                                                stackOut_44_2 = stackIn_44_2;
-                                                stackOut_44_3 = stackIn_44_3;
-                                                stackOut_44_4 = stackIn_44_4;
-                                                stackIn_47_0 = stackOut_44_0;
-                                                stackIn_47_1 = stackOut_44_1;
-                                                stackIn_47_2 = stackOut_44_2;
-                                                stackIn_47_3 = stackOut_44_3;
-                                                stackIn_47_4 = stackOut_44_4;
-                                                stackIn_45_0 = stackOut_44_0;
-                                                stackIn_45_1 = stackOut_44_1;
-                                                stackIn_45_2 = stackOut_44_2;
-                                                stackIn_45_3 = stackOut_44_3;
-                                                stackIn_45_4 = stackOut_44_4;
+                                                stackIn_47_0 = this;
+
+                                                stackIn_47_1 = stackIn_43_1;
+
+                                                stackIn_47_2 = stackIn_43_2;
+
+                                                stackIn_47_3 = stackIn_43_3;
+
                                                 if (var3_int == 0) {
                                                   break L11;
                                                 } else {
-                                                  stackOut_45_0 = this;
-                                                  stackOut_45_1 = stackIn_45_1;
-                                                  stackOut_45_2 = stackIn_45_2;
-                                                  stackOut_45_3 = stackIn_45_3;
-                                                  stackOut_45_4 = stackIn_45_4;
-                                                  stackOut_45_5 = 1;
-                                                  stackIn_48_0 = stackOut_45_0;
-                                                  stackIn_48_1 = stackOut_45_1;
-                                                  stackIn_48_2 = stackOut_45_2;
-                                                  stackIn_48_3 = stackOut_45_3;
-                                                  stackIn_48_4 = stackOut_45_4;
-                                                  stackIn_48_5 = stackOut_45_5;
+                                                  stackIn_48_0 = this;
+                                                  stackIn_48_1 = stackIn_43_1;
+                                                  stackIn_48_2 = stackIn_43_2;
+                                                  stackIn_48_3 = stackIn_43_3;
+                                                  stackIn_48_4 = stackIn_47_4;
+                                                  stackIn_48_5 = 1;
                                                   break L10;
                                                 }
                                               }
                                             }
-                                            stackOut_47_0 = this;
-                                            stackOut_47_1 = stackIn_47_1;
-                                            stackOut_47_2 = stackIn_47_2;
-                                            stackOut_47_3 = stackIn_47_3;
-                                            stackOut_47_4 = stackIn_47_4;
-                                            stackOut_47_5 = 0;
-                                            stackIn_48_0 = stackOut_47_0;
-                                            stackIn_48_1 = stackOut_47_1;
-                                            stackIn_48_2 = stackOut_47_2;
-                                            stackIn_48_3 = stackOut_47_3;
-                                            stackIn_48_4 = stackOut_47_4;
-                                            stackIn_48_5 = stackOut_47_5;
+                                            stackIn_48_0 = this;
+                                            stackIn_48_1 = stackIn_47_1;
+                                            stackIn_48_2 = stackIn_47_2;
+                                            stackIn_48_3 = stackIn_47_3;
+                                            stackIn_48_4 = stackIn_47_4;
+                                            stackIn_48_5 = 0;
                                             break L10;
                                           }
                                           L12: {
-                                            if (this.a(stackIn_48_1 != 0, stackIn_48_2, stackIn_48_3, (byte) stackIn_48_4, stackIn_48_5 == 0, var9, 0, var16, param0)) {
+                                            if (!this.a(stackIn_48_1 != 0, stackIn_48_2, stackIn_48_3, (byte) stackIn_48_4, stackIn_48_5 != 0, var9, 0, var16, param0)) {
                                               break L12;
                                             } else {
                                               var9.field_x = true;
@@ -20381,7 +16762,7 @@ final class pe implements ntb, utb {
               if (param1 > 7) {
                 break L14;
               } else {
-                discarded$1 = this.d((byte) -101, 66);
+                this.d((byte) -101, 66);
                 break L14;
               }
             }
@@ -20391,27 +16772,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var3 = decompiledCaughtException;
-            stackOut_68_0 = (RuntimeException) (var3);
-            stackOut_68_1 = new StringBuilder().append("pe.OD(");
-            stackIn_71_0 = stackOut_68_0;
-            stackIn_71_1 = stackOut_68_1;
-            stackIn_69_0 = stackOut_68_0;
-            stackIn_69_1 = stackOut_68_1;
+            stackIn_71_0 = (RuntimeException) (var3);
+
+            stackIn_71_1 = new StringBuilder().append("pe.OD(");
+
             if (param0 == null) {
-              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
-              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackOut_71_2 = "null";
-              stackIn_72_0 = stackOut_71_0;
-              stackIn_72_1 = stackOut_71_1;
-              stackIn_72_2 = stackOut_71_2;
+              stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
+              stackIn_72_2 = "null";
               break L15;
             } else {
-              stackOut_69_0 = (RuntimeException) ((Object) stackIn_69_0);
-              stackOut_69_1 = (StringBuilder) ((Object) stackIn_69_1);
-              stackOut_69_2 = "{...}";
-              stackIn_72_0 = stackOut_69_0;
-              stackIn_72_1 = stackOut_69_1;
-              stackIn_72_2 = stackOut_69_2;
+              stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
+              stackIn_72_2 = "{...}";
               break L15;
             }
           }
@@ -20420,8 +16793,8 @@ final class pe implements ntb, utb {
     }
 
     final void a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = VoidHunters.field_G;
         this.field_l = new int[param1];
         var3 = param0;
@@ -20437,55 +16810,36 @@ final class pe implements ntb, utb {
     }
 
     final void a(byte param0, mqb param1) {
-        boolean discarded$3 = false;
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
             param1.a((pe) (this), true, param0, false);
-            discarded$3 = this.a(param0 + 29584, param1, this.field_g, 3);
+            this.a(param0 + 29584, param1, this.field_g, 3);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) (runtimeException);
-            stackOut_2_1 = new StringBuilder().append("pe.RB(").append(param0).append(',');
-            stackIn_5_0 = stackOut_2_0;
-            stackIn_5_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackIn_5_0 = (RuntimeException) (runtimeException);
+
+            stackIn_5_1 = new StringBuilder().append("pe.RB(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
-              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
-              stackOut_3_2 = "{...}";
-              stackIn_6_0 = stackOut_3_0;
-              stackIn_6_1 = stackOut_3_1;
-              stackIn_6_2 = stackOut_3_2;
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
               break L1;
             }
           }
@@ -20494,14 +16848,14 @@ final class pe implements ntb, utb {
     }
 
     private final void a(int param0, int param1, int param2, int param3, byte param4) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        crb var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        crb[] var14 = null;
+        int var7;
+        int var8;
+        int var9;
+        crb var10;
+        int var13;
+        crb[] var14;
+        int var11;
+        int var12;
         var13 = VoidHunters.field_G;
         var14 = this.field_e.c(0);
         var7 = param1 + param3 / 2;
@@ -20549,8 +16903,8 @@ final class pe implements ntb, utb {
     }
 
     private final void a(anb param0, gda param1, int param2, int param3, anb param4) {
+        RuntimeException runtimeException = null;
         int var6_int = 0;
-        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -20566,52 +16920,22 @@ final class pe implements ntb, utb {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             L1: {
@@ -20647,78 +16971,54 @@ final class pe implements ntb, utb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
-            var6 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var6);
-            stackOut_4_1 = new StringBuilder().append("pe.BE(");
-            stackIn_7_0 = stackOut_4_0;
-            stackIn_7_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            runtimeException = decompiledCaughtException;
+            stackIn_7_0 = (RuntimeException) (runtimeException);
+
+            stackIn_7_1 = new StringBuilder().append("pe.BE(");
+
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_8_0 = stackOut_5_0;
-              stackIn_8_1 = stackOut_5_1;
-              stackIn_8_2 = stackOut_5_2;
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
               break L2;
             }
           }
           L3: {
-            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
-            stackIn_11_0 = stackOut_8_0;
-            stackIn_11_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_8_0);
+
+            stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
+
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_12_0 = stackOut_9_0;
-              stackIn_12_1 = stackOut_9_1;
-              stackIn_12_2 = stackOut_9_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_15_0 = stackOut_12_0;
-            stackIn_15_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_15_0 = (RuntimeException) ((Object) stackIn_12_0);
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_16_0 = stackOut_13_0;
-              stackIn_16_1 = stackOut_13_1;
-              stackIn_16_2 = stackOut_13_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }
@@ -20732,38 +17032,17 @@ final class pe implements ntb, utb {
         int var7 = 0;
         nbb var8 = null;
         nbb stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nbb stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             L1: {
@@ -20790,60 +17069,43 @@ final class pe implements ntb, utb {
                 }
               }
             }
-            stackOut_5_0 = (nbb) (param1);
-            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_0 = (nbb) (param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) (var6);
-            stackOut_7_1 = new StringBuilder().append("pe.K(").append(param0).append(',');
-            stackIn_10_0 = stackOut_7_0;
-            stackIn_10_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackIn_10_0 = (RuntimeException) (var6);
+
+            stackIn_10_1 = new StringBuilder().append("pe.K(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackOut_8_2 = "{...}";
-              stackIn_11_0 = stackOut_8_0;
-              stackIn_11_1 = stackOut_8_1;
-              stackIn_11_2 = stackOut_8_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
-            stackIn_14_0 = stackOut_11_0;
-            stackIn_14_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackIn_14_0 = (RuntimeException) ((Object) stackIn_11_0);
+
+            stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_15_0 = stackOut_12_0;
-              stackIn_15_1 = stackOut_12_1;
-              stackIn_15_2 = stackOut_12_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
@@ -20853,28 +17115,17 @@ final class pe implements ntb, utb {
     }
 
     final void a(byte param0, crb param1) {
-        boolean discarded$27 = false;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
-              discarded$27 = param1.b(-(this.field_r >> -1502513855), param0 + 2147483521, this.field_r >> 104511425, -(this.field_o >> 1217571457), this.field_o >> 916798017);
+              param1.b(-(this.field_r >> -1502513855), param0 + 2147483521, this.field_r >> 104511425, -(this.field_o >> 1217571457), this.field_o >> 916798017);
               if (param0 == 126) {
                 break L1;
               } else {
@@ -20897,27 +17148,19 @@ final class pe implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) (var3);
-            stackOut_6_1 = new StringBuilder().append("pe.OB(").append(param0).append(',');
-            stackIn_9_0 = stackOut_6_0;
-            stackIn_9_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("pe.OB(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackOut_7_2 = "{...}";
-              stackIn_10_0 = stackOut_7_0;
-              stackIn_10_1 = stackOut_7_1;
-              stackIn_10_2 = stackOut_7_2;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
               break L3;
             }
           }
@@ -20926,7 +17169,7 @@ final class pe implements ntb, utb {
     }
 
     public pe() {
-        int var1 = 0;
+        int var1;
         this.field_s = new oq[768];
         var1 = 0;
         L0: while (true) {
@@ -20941,7 +17184,7 @@ final class pe implements ntb, utb {
     }
 
     pe(int param0) {
-        int var2 = 0;
+        int var2;
         this.field_u = new fba();
         this.field_s = new oq[768];
         var2 = 0;

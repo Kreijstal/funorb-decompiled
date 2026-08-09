@@ -15,7 +15,7 @@ final class ml extends cj {
     String field_Pb;
 
     final static void a(int param0, int param1, int param2) {
-        ga var3 = null;
+        ga var3;
         var3 = ma.field_a;
         if (param2 != -76) {
           ml.c((byte) 99);

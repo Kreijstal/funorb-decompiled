@@ -13,7 +13,6 @@ final class fi {
 
     final hf a(long param0, byte param1) {
         hf var5 = null;
-        hf discarded$0 = null;
         hf var4 = this.field_e[(int)((long)(-1 + this.field_c) & param0)];
         this.field_g = var4.field_b;
         while (var4 != this.field_g) {
@@ -25,7 +24,7 @@ final class fi {
             this.field_g = this.field_g.field_b;
         }
         if (param1 >= -73) {
-            discarded$0 = this.a((byte) -38);
+            this.a((byte) -38);
             this.field_g = null;
             return null;
         }
@@ -71,8 +70,6 @@ final class fi {
 
     final static void a(int param0, rf param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -80,14 +77,6 @@ final class fi {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
@@ -121,27 +110,19 @@ final class fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) (runtimeException);
-            stackOut_8_1 = new StringBuilder().append("fi.D(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
+
+            stackIn_10_1 = new StringBuilder().append("fi.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
               break L3;
             }
           }
@@ -174,18 +155,18 @@ final class fi {
     }
 
     fi(int param0) {
-        hf dupTemp$2 = null;
-        int var2 = 0;
-        hf var3 = null;
+        hf dupTemp$1 = null;
+        int var2;
+        hf var3;
         this.field_f = 0;
         this.field_c = param0;
         this.field_e = new hf[param0];
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            dupTemp$2 = new hf();
-            var3 = dupTemp$2;
-            this.field_e[var2] = dupTemp$2;
+            dupTemp$1 = new hf();
+            var3 = dupTemp$1;
+            this.field_e[var2] = dupTemp$1;
             var3.field_b = var3;
             var3.field_c = var3;
             var2++;
@@ -197,12 +178,12 @@ final class fi {
     }
 
     final hf b(int param0) {
-        int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        int var2 = 0;
-        hf var3 = null;
-        hf var4 = null;
-        hf var7 = null;
+        int fieldTemp$4 = 0;
+        hf var3;
+        int var2;
+        hf var4;
+        hf var7;
         if (-1 > (this.field_f ^ -1)) {
           if (this.field_a != this.field_e[this.field_f + -1]) {
             var7 = this.field_a;
@@ -214,9 +195,9 @@ final class fi {
                 var2 = 47 % ((param0 - 28) / 38);
                 return null;
               } else {
-                fieldTemp$2 = this.field_f;
+                fieldTemp$3 = this.field_f;
                 this.field_f = this.field_f + 1;
-                var4 = this.field_e[fieldTemp$2].field_b;
+                var4 = this.field_e[fieldTemp$3].field_b;
                 if (this.field_e[-1 + this.field_f] != var4) {
                   this.field_a = var4.field_b;
                   return var4;
@@ -232,9 +213,9 @@ final class fi {
               var2 = 47 % ((param0 - 28) / 38);
               return null;
             } else {
-              fieldTemp$3 = this.field_f;
+              fieldTemp$4 = this.field_f;
               this.field_f = this.field_f + 1;
-              var3 = this.field_e[fieldTemp$3].field_b;
+              var3 = this.field_e[fieldTemp$4].field_b;
               if (this.field_e[-1 + this.field_f] != var3) {
                 this.field_a = var3.field_b;
                 return var3;

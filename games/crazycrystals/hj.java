@@ -6,9 +6,8 @@ final class hj {
     private dl[] field_a;
 
     public static void a(int param0) {
-        String discarded$0 = null;
         if (param0 != 0) {
-            discarded$0 = hj.a(false, 74, true, true);
+            hj.a(false, 74, true, true);
             field_b = null;
             return;
         }
@@ -35,7 +34,7 @@ final class hj {
     }
 
     final static String a(boolean param0, int param1, boolean param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         var4 = param1;
         if (!param0) {
           if (!param3) {

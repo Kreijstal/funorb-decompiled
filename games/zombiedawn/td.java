@@ -50,7 +50,7 @@ final class td {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1;
         if (!i.field_Y) {
           throw new IllegalStateException();
         } else {

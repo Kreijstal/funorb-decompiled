@@ -42,7 +42,6 @@ final class ng {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -51,6 +50,7 @@ final class ng {
         int var10 = 0;
         int var11 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         var11 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -98,8 +98,8 @@ final class ng {
 
     final static void a(long param0, int param1) {
         try {
-            InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
+            InterruptedException var3 = null;
             if (param1 == 1855635080) {
               try {
                 L0: {

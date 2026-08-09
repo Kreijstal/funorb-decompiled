@@ -11,7 +11,7 @@ final class jd extends ne {
     static String field_i;
 
     final static void b(boolean param0) {
-        int var1 = 0;
+        int var1;
         L0: {
           if (ql.field_d > 32) {
             L1: {

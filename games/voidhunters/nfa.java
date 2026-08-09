@@ -41,9 +41,8 @@ final class nfa extends uj {
     }
 
     final int a(int param0) {
-        int discarded$0 = 0;
         if (param0 != -1) {
-            discarded$0 = this.b((byte) 92);
+            this.b((byte) 92);
             return tnb.field_o;
         }
         return tnb.field_o;

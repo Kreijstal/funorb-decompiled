@@ -34,11 +34,10 @@ final class cb {
 
     final static void a(byte param0) {
         Object var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
-        Throwable var3 = null;
         int var4 = 0;
         Throwable decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
         var4 = Chess.field_G;
         try {
           L0: {

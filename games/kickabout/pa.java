@@ -33,7 +33,7 @@ final class pa extends dg {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        gn var7 = null;
+        gn var7;
         if (param4 == 3) {
           if (null != this.field_k) {
             if (this.field_k.field_o == param3) {
@@ -68,9 +68,9 @@ final class pa extends dg {
     }
 
     final static void b(byte param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int var1;
+        int var2;
+        int var3;
         var1 = (ea.field_a - 640) / 2;
         var2 = rb.field_Bb * rb.field_Bb;
         var3 = var2 - ns.field_a * ns.field_a;

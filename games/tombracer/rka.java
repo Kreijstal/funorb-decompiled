@@ -42,9 +42,9 @@ abstract class rka {
     }
 
     final static String a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var2 = param0;
           if (var2 > 20) {

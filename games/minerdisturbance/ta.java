@@ -36,10 +36,8 @@ final class ta {
             }
             try {
                 if (false) throw (IOException) null;
-                if (var2_int >= param0) {
-                    if (-30001L <= (qa.a(param0 + -125) ^ -1L)) {
-                        return false;
-                    }
+                if (var2_int >= param0 && -30001L <= (qa.a(param0 + -125) ^ -1L)) {
+                    return false;
                 }
                 si.a(-124);
             } catch (IOException iOException) {
@@ -54,8 +52,7 @@ final class ta {
     }
 
     final pi b(byte param0) {
-        boolean discarded$2 = false;
-        pi var2 = null;
+        pi var2;
         if (param0 == 56) {
           var2 = this.field_e;
           if (var2 == this.field_c) {
@@ -66,7 +63,7 @@ final class ta {
             return var2;
           }
         } else {
-          discarded$2 = ta.a(115, -34);
+          ta.a(115, -34);
           var2 = this.field_e;
           if (var2 == this.field_c) {
             this.field_e = null;
@@ -91,7 +88,6 @@ final class ta {
     }
 
     final void a(pi param0, int param1) {
-        boolean discarded$0 = false;
         try {
             if (!(param0.field_c == null)) {
                 param0.b(34);
@@ -100,7 +96,7 @@ final class ta {
             param0.field_c = this.field_c;
             param0.field_c.field_f = param0;
             if (param1 != 27862) {
-                discarded$0 = ta.a(-86, 37);
+                ta.a(-86, 37);
             }
             param0.field_f.field_c = param0;
         } catch (RuntimeException runtimeException) {
@@ -109,7 +105,7 @@ final class ta {
     }
 
     final pi a(int param0) {
-        pi var2 = null;
+        pi var2;
         var2 = this.field_e;
         if (var2 == this.field_c) {
           this.field_e = null;
@@ -126,10 +122,9 @@ final class ta {
     }
 
     final pi b(int param0) {
-        boolean discarded$0 = false;
         pi var2 = null;
         if (param0 < 60) {
-            discarded$0 = ta.a(73, -87);
+            ta.a(73, -87);
             var2 = this.field_c.field_f;
             if (!(this.field_c != var2)) {
                 this.field_e = null;
@@ -148,16 +143,15 @@ final class ta {
     }
 
     final void a(byte param0) {
-        pi discarded$2 = null;
-        pi var2 = null;
-        int var3 = 0;
+        pi var2;
+        int var3;
         var3 = MinerDisturbance.field_ab;
         L0: while (true) {
           var2 = this.field_c.field_f;
           if (var2 == this.field_c) {
             this.field_e = null;
             if (param0 != 55) {
-              discarded$2 = this.b((byte) 87);
+              this.b((byte) 87);
               return;
             } else {
               return;
@@ -170,7 +164,7 @@ final class ta {
     }
 
     final pi d(int param0) {
-        pi var2 = null;
+        pi var2;
         var2 = this.field_c.field_c;
         if (var2 == this.field_c) {
           this.field_e = null;
@@ -203,7 +197,7 @@ final class ta {
     }
 
     final pi c(int param0) {
-        pi var2 = null;
+        pi var2;
         var2 = this.field_c.field_c;
         if (var2 != this.field_c) {
           if (param0 != 51510) {
@@ -229,20 +223,14 @@ final class ta {
     final boolean e(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param0 <= 98) {
           L0: {
             this.field_e = (pi) null;
             if (this.field_c != this.field_c.field_f) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = 0;
               break L0;
             } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = 1;
               break L0;
             }
           }
@@ -250,12 +238,10 @@ final class ta {
         } else {
           L1: {
             if (this.field_c != this.field_c.field_f) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L1;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L1;
             }
           }
@@ -264,7 +250,7 @@ final class ta {
     }
 
     final pi e(int param0) {
-        pi var2 = null;
+        pi var2;
         var2 = this.field_c.field_f;
         if (this.field_c != var2) {
           if (param0 != 63854) {

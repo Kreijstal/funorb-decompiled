@@ -33,7 +33,7 @@ final class bg extends jm {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1;
         aja.field_p = null;
         qc.field_b = null;
         lna.field_q = true;

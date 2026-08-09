@@ -12,23 +12,13 @@ final class ehb {
 
     final void a(long param0, byte param1, fh param2) {
         fh var5 = null;
-        RuntimeException var5_ref = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException var5_ref = null;
         try {
           L0: {
             L1: {
@@ -65,27 +55,19 @@ final class ehb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var5_ref);
-            stackOut_9_1 = new StringBuilder().append("ehb.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var5_ref);
+
+            stackIn_11_1 = new StringBuilder().append("ehb.A(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
@@ -94,8 +76,8 @@ final class ehb {
     }
 
     final fh a(long param0, int param1) {
-        fh var4 = null;
-        int var5 = 0;
+        fh var4;
+        int var5;
         var4 = (fh) ((Object) this.field_d.a(param0, 117));
         if (var4 != null) {
           this.field_c.a(var4, -74);
@@ -115,12 +97,11 @@ final class ehb {
     }
 
     ehb(int param0) {
+        int var2 = 0;
         this.field_b = new fh();
         this.field_c = new vga();
         this.field_a = param0;
-        int var2 = 1;
-        while (param0 > var2 + var2) {
-            var2 = var2 + var2;
+        for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {
         }
         this.field_d = new gnb(var2);
     }

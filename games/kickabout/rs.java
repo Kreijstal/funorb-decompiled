@@ -88,10 +88,10 @@ final class rs {
     }
 
     final int g() {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var1;
+        int var2;
+        int var3;
+        int var4;
         var1 = this.field_b.length;
         var2 = -1;
         var3 = 2147483647;
@@ -171,9 +171,9 @@ final class rs {
     }
 
     private final int a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var2 = this.field_a.field_f[this.field_a.field_n];
           if (var2 >= 0) {

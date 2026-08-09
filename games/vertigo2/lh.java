@@ -10,7 +10,6 @@ final class lh {
 
     final static void a(int param0, hn param1, byte param2) {
         int var4 = 0;
-        int discarded$0 = 0;
         mi var5 = uh.field_Wb;
         var5.j(param0, 120);
         var5.field_u = var5.field_u + 1;
@@ -26,7 +25,7 @@ final class lh {
             } else {
                 var5.f(0, param2 ^ 36);
             }
-            discarded$0 = var5.c(var4, -2);
+            var5.c(var4, -2);
             var5.field_u = var5.field_u - 4;
             param1.field_q = var5.b(true);
             var5.b((byte) 20, var5.field_u - var4);

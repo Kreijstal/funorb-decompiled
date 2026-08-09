@@ -13,7 +13,7 @@ final class dj {
     }
 
     final static String a(byte param0) {
-        int var1 = 0;
+        int var1;
         if (2 > mc.field_a) {
           return MonkeyPuzzle2.field_E;
         } else {

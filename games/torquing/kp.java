@@ -27,8 +27,6 @@ final class kp {
 
     final int a(byte param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 > 28) {
             break L0;
@@ -43,32 +41,30 @@ final class kp {
               break L2;
             } else {
               if (this.field_b.length != 0) {
-                stackOut_6_0 = this.field_b[-1 + this.field_b.length];
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = this.field_b[-1 + this.field_b.length];
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_7_0 = stackOut_5_0;
+          stackIn_7_0 = 0;
           break L1;
         }
         return stackIn_7_0;
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        RuntimeException var6 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var12 = Torquing.field_u;
         try {
           L0: {
@@ -137,7 +133,7 @@ final class kp {
                           continue L7;
                         } else {
                           var8 = ph.field_e[var6_int];
-                          if (param4 < (var8 & 65280) >> -1319553240) {
+                          if ((param4 ^ -1) > ((var8 & 65280) >> -1319553240 ^ -1)) {
                             if ((var8 >> 308825512 & 255) >= (var8 & 16711680) >> -2106410832) {
                               L9: {
                                 var9 = (510 & var8 >> -1017419537) - 60;
@@ -194,9 +190,8 @@ final class kp {
     }
 
     final int a(byte param0, int param1) {
-        int discarded$2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         L0: {
           var4 = Torquing.field_u;
           if (this.field_b == null) {
@@ -212,7 +207,7 @@ final class kp {
                     if (param0 == -64) {
                       break L2;
                     } else {
-                      discarded$2 = this.a((byte) 25, -123);
+                      this.a((byte) 25, -123);
                       break L2;
                     }
                   }
@@ -258,14 +253,14 @@ final class kp {
             var7 = param1;
             param1 = param1 / 37L;
             var9 = bd.field_t[(int)(-(param1 * 37L) + var7)];
-            if (var9 == 95) {
+            if ((var9 ^ -1) == -96) {
                 var10 = -1 + var6.length();
                 var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
                 var9 = 160;
             }
             discarded$0 = var6.append((char) var9);
         }
-        StringBuilder discarded$5 = var6.reverse();
+        var6.reverse();
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
         if (param0 != -87) {
             return (String) null;

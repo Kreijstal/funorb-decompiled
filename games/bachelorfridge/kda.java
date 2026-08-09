@@ -6,7 +6,6 @@ class kda {
     static String field_b;
 
     final static void a(int param0, int param1) {
-        String discarded$2 = null;
         RuntimeException var2 = null;
         int var3 = 0;
         gb var4 = null;
@@ -20,7 +19,7 @@ class kda {
                 if (param0 < -16) {
                   break L0;
                 } else {
-                  discarded$2 = kda.b(5);
+                  kda.b(5);
                   return;
                 }
               } else {

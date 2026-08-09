@@ -76,7 +76,7 @@ final class bh {
     }
 
     final static int a(byte param0) {
-        int var1 = 0;
+        int var1;
         ed.field_b.b(0);
         var1 = -118 / ((param0 - 30) / 59);
         if (kg.field_h.e(255)) {

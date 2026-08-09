@@ -32,7 +32,6 @@ abstract class mb extends gb {
         int var5 = 0;
         float stackIn_7_0 = 0.0f;
         RuntimeException decompiledCaughtException = null;
-        float stackOut_6_0 = 0.0f;
         var5 = TetraLink.field_J;
         try {
           L0: {
@@ -48,8 +47,7 @@ abstract class mb extends gb {
                     break L2;
                   }
                 }
-                stackOut_6_0 = var3_float;
-                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_0 = var3_float;
                 break L0;
               } else {
                 var3_float = (float)((double)var3_float + (double)vj.a(param1, true) * Math.sin((double)((float)(1 << var4) * param0 + vj.a(vj.a(param1, true) + param1, true))));
@@ -67,13 +65,12 @@ abstract class mb extends gb {
     }
 
     public static void b(byte param0) {
-        float discarded$0 = 0.0f;
         field_v = null;
         field_A = null;
         field_x = null;
         field_u = null;
         if (param0 != -48) {
-            discarded$0 = mb.a(0.8539373278617859f, -0.7423967719078064f, true);
+            mb.a(0.8539373278617859f, -0.7423967719078064f, true);
         }
         field_w = null;
         field_y = null;

@@ -44,10 +44,8 @@ final class wo extends wf {
             }
             try {
                 if (false) throw (IOException) null;
-                if (var2_int >= 0) {
-                    if (-30001L <= (gm.g(-1) ^ -1L)) {
-                        return false;
-                    }
+                if (var2_int >= 0 && -30001L <= (gm.g(-1) ^ -1L)) {
+                    return false;
                 }
                 te.b(true);
             } catch (IOException iOException) {

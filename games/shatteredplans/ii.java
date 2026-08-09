@@ -22,9 +22,9 @@ abstract class ii extends df {
         hk.field_nb = wp.field_a;
         hj.field_n = gh.a(param0, "", "shattered_plans_win");
         wh.field_b = gh.a(param0, "", "shattered_plans_lose");
-        boolean discarded$27 = u.field_b.field_u.a(param1, sf.field_d, 50, 0, mj.field_Sb);
-        boolean discarded$46 = u.field_b.field_u.a(param1, wp.field_a, 41, 0, mj.field_Sb);
-        boolean discarded$56 = u.field_b.field_u.a(param1, js.field_i, 111, 0, mj.field_Sb);
+        u.field_b.field_u.a(param1, sf.field_d, 50, 0, mj.field_Sb);
+        u.field_b.field_u.a(param1, wp.field_a, 41, 0, mj.field_Sb);
+        u.field_b.field_u.a(param1, js.field_i, 111, 0, mj.field_Sb);
         if (param2 < 26) {
             return;
         }
@@ -45,7 +45,7 @@ abstract class ii extends df {
     }
 
     public static void e(int param0) {
-        bc var2 = null;
+        bc var2;
         field_s = null;
         if (param0 != 997342595) {
           var2 = (bc) null;

@@ -104,15 +104,6 @@ final class rga {
     }
 
     rga(pf param0) {
-        gf discarded$1 = null;
-        RuntimeException var2 = null;
-        int var2_int = 0;
-        byte[] var15 = null;
-        byte[] var16 = null;
-        byte[] var17 = null;
-        byte[] var18 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -120,14 +111,12 @@ final class rga {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        byte[] var15 = null;
+        byte[] var16 = null;
+        byte[] var17 = null;
+        byte[] var18 = null;
         this.field_e = null;
         this.field_c = null;
         this.field_a = null;
@@ -166,7 +155,7 @@ final class rga {
                 var17 = ffb.a(false, dv.field_b, true);
                 this.field_d = this.field_h.a(128, 16, var17, wh.field_o, 128, -16539);
                 var18 = ffb.a(false, wpa.field_q, true);
-                discarded$1 = this.field_h.a(128, 16, var18, wh.field_o, 128, -16539);
+                this.field_h.a(128, 16, var18, wh.field_o, 128, -16539);
                 break L3;
               } else {
                 this.field_a = new eb[16];
@@ -201,27 +190,19 @@ final class rga {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var2);
-            stackOut_17_1 = new StringBuilder().append("rga.<init>(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var2);
+
+            stackIn_19_1 = new StringBuilder().append("rga.<init>(");
+
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L6;
             }
           }

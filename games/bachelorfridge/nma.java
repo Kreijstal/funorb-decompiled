@@ -36,10 +36,10 @@ final class nma extends ana {
     }
 
     final boolean c(byte param0) {
-        int var2 = 0;
-        int fieldTemp$2 = this.field_l - 1;
+        int var2;
+        int fieldTemp$1 = this.field_l - 1;
         this.field_l = this.field_l - 1;
-        if (-1 >= (fieldTemp$2 ^ -1)) {
+        if (-1 >= (fieldTemp$1 ^ -1)) {
           if (25 == this.field_l) {
             this.e((byte) 100);
             return false;
@@ -67,12 +67,11 @@ final class nma extends ana {
     }
 
     private final void e(byte param0) {
-        oha discarded$1 = null;
-        aga var2 = null;
-        int var3 = 0;
-        iv var4 = null;
-        ad var5 = null;
-        int var6 = 0;
+        aga var2;
+        int var3;
+        iv var4;
+        ad var5;
+        int var6;
         var6 = BachelorFridge.field_y;
         var2 = this.field_w.field_l.a(95, this.field_q.field_h);
         var3 = 22 % ((param0 - 16) / 42);
@@ -80,7 +79,7 @@ final class nma extends ana {
           return;
         } else {
           var4 = (iv) ((Object) this.field_w.field_o.b((byte) 90));
-          discarded$1 = al.a(-42, this.field_w.field_k);
+          al.a(-42, this.field_w.field_k);
           L0: while (true) {
             if (var4 == null) {
               return;

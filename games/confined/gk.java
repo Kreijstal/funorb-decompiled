@@ -35,6 +35,15 @@ class gk extends rk {
     }
 
     void e(int param0) {
+        int stackIn_3_0 = 0;
+        double stackIn_10_0 = 0.0;
+        double stackIn_11_0 = 0.0;
+        double stackIn_11_1 = 0.0;
+        int stackIn_13_0 = 0;
+        vc stackIn_26_0 = null;
+        vc stackIn_27_0 = null;
+        int stackIn_27_1 = 0;
+        Throwable decompiledCaughtException = null;
         double var3 = 0.0;
         double var5 = 0.0;
         double var7 = 0.0;
@@ -53,34 +62,8 @@ class gk extends rk {
         double var28 = 0.0;
         double var30 = 0.0;
         Object var32 = null;
-        Throwable var33 = null;
         dj var34 = null;
         double[] var38 = null;
-        int stackIn_3_0 = 0;
-        double stackIn_9_0 = 0.0;
-        double stackIn_10_0 = 0.0;
-        double stackIn_11_0 = 0.0;
-        double stackIn_11_1 = 0.0;
-        int stackIn_13_0 = 0;
-        vc stackIn_25_0 = null;
-        vc stackIn_26_0 = null;
-        vc stackIn_27_0 = null;
-        int stackIn_27_1 = 0;
-        Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_12_0 = 0;
-        double stackOut_8_0 = 0.0;
-        double stackOut_10_0 = 0.0;
-        double stackOut_10_1 = 0.0;
-        double stackOut_9_0 = 0.0;
-        double stackOut_9_1 = 0.0;
-        int stackOut_11_0 = 0;
-        vc stackOut_24_0 = null;
-        vc stackOut_26_0 = null;
-        int stackOut_26_1 = 0;
-        vc stackOut_25_0 = null;
-        int stackOut_25_1 = 0;
         L0: {
           var24_ref = null;
           var34 = this.field_t.field_A.field_B;
@@ -90,12 +73,10 @@ class gk extends rk {
           var9 = var7 * var7 + (var3 * var3 + var5 * var5);
           var11 = this.field_w * 2.0;
           if (var9 > var11 * var11) {
-            stackOut_2_0 = (int)(0.5 + (double)this.field_m * var11 / Math.sqrt(var9));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (int)(0.5 + (double)this.field_m * var11 / Math.sqrt(var9));
             break L0;
           } else {
-            stackOut_1_0 = this.field_m;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = this.field_m;
             break L0;
           }
         }
@@ -119,8 +100,7 @@ class gk extends rk {
               break L3;
             } else {
               if (!this.field_o) {
-                stackOut_12_0 = -1;
-                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_0 = -1;
                 break L2;
               } else {
                 break L3;
@@ -128,25 +108,19 @@ class gk extends rk {
             }
           }
           L4: {
-            stackOut_8_0 = (var19 * var7 + (var3 * var15 + var17 * var5)) * 128.0;
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_9_0 = stackOut_8_0;
+            stackIn_10_0 = (var19 * var7 + (var3 * var15 + var17 * var5)) * 128.0;
+
             if (var9 > var11 * var11) {
-              stackOut_10_0 = stackIn_10_0;
-              stackOut_10_1 = Math.sqrt(var9);
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_0 = stackIn_10_0;
+              stackIn_11_1 = Math.sqrt(var9);
               break L4;
             } else {
-              stackOut_9_0 = stackIn_9_0;
-              stackOut_9_1 = var11;
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_0 = stackIn_10_0;
+              stackIn_11_1 = var11;
               break L4;
             }
           }
-          stackOut_11_0 = (int)(-(stackIn_11_0 / stackIn_11_1) + 128.5);
-          stackIn_13_0 = stackOut_11_0;
+          stackIn_13_0 = (int)(-(stackIn_11_0 / stackIn_11_1) + 128.5);
           break L2;
         }
         var21 = stackIn_13_0;
@@ -187,20 +161,15 @@ class gk extends rk {
             synchronized (var32) {
               L7: {
                 L8: {
-                  stackOut_24_0 = this.field_n;
-                  stackIn_26_0 = stackOut_24_0;
-                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_26_0 = this.field_n;
+
                   if (1600.0 > var30) {
-                    stackOut_26_0 = (vc) ((Object) stackIn_26_0);
-                    stackOut_26_1 = (int)(0.5 + var30);
-                    stackIn_27_0 = stackOut_26_0;
-                    stackIn_27_1 = stackOut_26_1;
+                    stackIn_27_0 = (vc) ((Object) stackIn_26_0);
+                    stackIn_27_1 = (int)(0.5 + var30);
                     break L8;
                   } else {
-                    stackOut_25_0 = (vc) ((Object) stackIn_25_0);
-                    stackOut_25_1 = 1600;
-                    stackIn_27_0 = stackOut_25_0;
-                    stackIn_27_1 = stackOut_25_1;
+                    stackIn_27_0 = (vc) ((Object) stackIn_26_0);
+                    stackIn_27_1 = 1600;
                     break L8;
                   }
                 }
@@ -283,23 +252,14 @@ class gk extends rk {
         double var20 = 0.0;
         int var22 = 0;
         double var23 = 0.0;
-        Object var25 = null;
-        Throwable var26 = null;
         hn var27 = null;
         double[] var31 = null;
         int stackIn_3_0 = 0;
-        double stackIn_7_0 = 0.0;
         double stackIn_8_0 = 0.0;
         double stackIn_9_0 = 0.0;
         double stackIn_9_1 = 0.0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        double stackOut_6_0 = 0.0;
-        double stackOut_8_0 = 0.0;
-        double stackOut_8_1 = 0.0;
-        double stackOut_7_0 = 0.0;
-        double stackOut_7_1 = 0.0;
+        Object var25 = null;
         L0: {
           var27 = qn.field_v;
           var3 = var27.field_B;
@@ -309,12 +269,10 @@ class gk extends rk {
           var10 = Math.sqrt(var8 * var8 + (var6 * var6 + var4 * var4)) - var27.field_A;
           var12 = this.field_w * 2.0;
           if (var12 < var10) {
-            stackOut_2_0 = (int)(0.5 + (double)this.field_m * var12 / var10);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (int)(0.5 + (double)this.field_m * var12 / var10);
             break L0;
           } else {
-            stackOut_1_0 = this.field_m;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = this.field_m;
             break L0;
           }
         }
@@ -333,20 +291,15 @@ class gk extends rk {
           var16 = var31[3];
           var18 = var31[4];
           var20 = var31[5];
-          stackOut_6_0 = (var16 * var4 + var6 * var18 + var8 * var20) * 128.0;
-          stackIn_8_0 = stackOut_6_0;
-          stackIn_7_0 = stackOut_6_0;
+          stackIn_8_0 = (var16 * var4 + var6 * var18 + var8 * var20) * 128.0;
+
           if (var12 < var10) {
-            stackOut_8_0 = stackIn_8_0;
-            stackOut_8_1 = var10;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackIn_9_0 = stackIn_8_0;
+            stackIn_9_1 = var10;
             break L2;
           } else {
-            stackOut_7_0 = stackIn_7_0;
-            stackOut_7_1 = var12;
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
+            stackIn_9_0 = stackIn_8_0;
+            stackIn_9_1 = var12;
             break L2;
           }
         }
@@ -405,10 +358,10 @@ class gk extends rk {
     }
 
     void b(int param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         if (this.field_x) {
           if (param0 == -25071) {
             if (null != this.field_t) {
@@ -417,9 +370,9 @@ class gk extends rk {
                   if (this.field_t.field_s == 0) {
                     break L0;
                   } else {
-                    fieldTemp$4 = this.field_m - this.field_t.field_s;
+                    fieldTemp$0 = this.field_m - this.field_t.field_s;
                     this.field_m = this.field_m - this.field_t.field_s;
-                    if (0 >= fieldTemp$4) {
+                    if (0 >= fieldTemp$0) {
                       break L0;
                     } else {
                       this.e(param0 ^ -30893);
@@ -444,9 +397,9 @@ class gk extends rk {
                   if (this.field_t.field_s == 0) {
                     break L1;
                   } else {
-                    fieldTemp$5 = this.field_m - this.field_t.field_s;
+                    fieldTemp$1 = this.field_m - this.field_t.field_s;
                     this.field_m = this.field_m - this.field_t.field_s;
-                    if (0 >= fieldTemp$5) {
+                    if (0 >= fieldTemp$1) {
                       break L1;
                     } else {
                       this.e(param0 ^ -30893);
@@ -474,9 +427,9 @@ class gk extends rk {
                     if (this.field_t.field_s == 0) {
                       break L2;
                     } else {
-                      fieldTemp$6 = this.field_m - this.field_t.field_s;
+                      fieldTemp$2 = this.field_m - this.field_t.field_s;
                       this.field_m = this.field_m - this.field_t.field_s;
-                      if (0 >= fieldTemp$6) {
+                      if (0 >= fieldTemp$2) {
                         break L2;
                       } else {
                         this.e(param0 ^ -30893);
@@ -500,9 +453,9 @@ class gk extends rk {
                     if (this.field_t.field_s == 0) {
                       break L3;
                     } else {
-                      fieldTemp$7 = this.field_m - this.field_t.field_s;
+                      fieldTemp$3 = this.field_m - this.field_t.field_s;
                       this.field_m = this.field_m - this.field_t.field_s;
-                      if (0 >= fieldTemp$7) {
+                      if (0 >= fieldTemp$3) {
                         break L3;
                       } else {
                         this.e(param0 ^ -30893);

@@ -12,14 +12,13 @@ final class ld {
     static he[] field_d;
 
     private final void a(int param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var2 = (int)(Math.exp((double)(-lf.field_b) / 25.0) * -400.0);
         v.field_O.a(0, var2 / 2 + 200);
@@ -30,7 +29,7 @@ final class ld {
         var3 = 0;
         L0: while (true) {
           if (-4 >= (var3 ^ -1)) {
-            discarded$1 = cb.field_b.a(aj.field_f, 285, -cb.field_b.field_x + 122 + (var2 + 64), 200, 140, 0, -1, param0, 0, cb.field_b.field_x);
+            cb.field_b.a(aj.field_f, 285, -cb.field_b.field_x + 122 + (var2 + 64), 200, 140, 0, -1, param0, 0, cb.field_b.field_x);
             return;
           } else {
             var4 = 0;
@@ -71,15 +70,14 @@ final class ld {
     }
 
     private final void f(byte param0) {
-        int discarded$1 = 0;
-        int[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int[] var8 = null;
-        int[] var9 = null;
+        int[] var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int[] var8;
+        int[] var9;
         L0: {
           var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (param0 >= 22) {
@@ -131,7 +129,7 @@ final class ld {
             var6 = (int)(2.55 * (double)var9[var3]);
             if (0 < var6) {
               v.field_W[var3].a(-50 + var9[var3] / 2, var9[var3] / 2 - 50, var6);
-              discarded$1 = cb.field_b.a(mg.field_a[sd.field_a.field_q][var3], 225, kj.field_f[sd.field_a.field_q][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
+              cb.field_b.a(mg.field_a[sd.field_a.field_q][var3], 225, kj.field_f[sd.field_a.field_q][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
               var3--;
               continue L1;
             } else {
@@ -165,16 +163,15 @@ final class ld {
     }
 
     private final void d(int param0) {
-        int discarded$1 = 0;
-        int[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
+        int[] var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int[] var8;
+        int[] var9;
+        int[] var10;
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var10 = new int[mk.field_g.length];
         var9 = var10;
@@ -209,6 +206,7 @@ final class ld {
             }
             L3: {
               if (var5 < ul.field_d) {
+                var10 = var9;
                 var8[var3] = 100 - ul.field_d - -var5;
                 break L3;
               } else {
@@ -216,6 +214,7 @@ final class ld {
               }
             }
             L4: {
+              var10 = var9;
               if (0 > var10[var3]) {
                 var10[var3] = 0;
                 break L4;
@@ -231,7 +230,7 @@ final class ld {
             var6 = (int)((double)var10[var3] * 2.55);
             if (-1 > (var6 ^ -1)) {
               mk.field_g[var3].a(-50 + var10[var3] / 2, var10[var3] / 2 + -50, var6);
-              discarded$1 = cb.field_b.a(mg.field_a[sd.field_a.field_q][var3], 225, kj.field_f[sd.field_a.field_q][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
+              cb.field_b.a(mg.field_a[sd.field_a.field_q][var3], 225, kj.field_f[sd.field_a.field_q][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
               var3--;
               continue L0;
             } else {
@@ -250,20 +249,16 @@ final class ld {
         if (!((this.field_c ^ -1) != -3)) {
             return this.b(param0, true) - -cb.field_b.b(hg.field_ob[var3]);
         }
-        if (10 == this.field_c) {
-            if (ul.field_j[this.field_c][param0] != 5) {
-                if (13 != ul.field_j[this.field_c][param0]) {
-                    return 70 + this.b(param0, true);
-                }
-            }
+        if (10 == this.field_c && ul.field_j[this.field_c][param0] != 5 && 13 != ul.field_j[this.field_c][param0]) {
+            return 70 + this.b(param0, true);
         }
         return ul.field_i[this.field_c];
     }
 
     private final int b(int param0, boolean param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (param1) {
@@ -350,14 +345,8 @@ final class ld {
     }
 
     private final void a(boolean param0, he[] param1) {
-        int discarded$1 = 0;
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -365,14 +354,9 @@ final class ld {
         String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException var3 = null;
+        int var5 = 0;
+        int var6 = 0;
         try {
           L0: {
             if (!param0) {
@@ -418,7 +402,7 @@ final class ld {
                 }
               }
               param1[0].a(var5, var6, var3_int);
-              discarded$1 = cb.field_b.a(mg.field_a[sd.field_a.field_q][0], 225, kj.field_f[sd.field_a.field_q][0], 405, 640, var3_int * 65793, -1, 0, 0, cb.field_b.field_x);
+              cb.field_b.a(mg.field_a[sd.field_a.field_q][0], 225, kj.field_f[sd.field_a.field_q][0], 405, 640, var3_int * 65793, -1, 0, 0, cb.field_b.field_x);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
@@ -430,27 +414,19 @@ final class ld {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var3);
-            stackOut_16_1 = new StringBuilder().append("ld.D(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_18_0 = (RuntimeException) (var3);
+
+            stackIn_18_1 = new StringBuilder().append("ld.D(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }
@@ -467,16 +443,14 @@ final class ld {
         if (param1 != -59) {
             return -123;
         }
-        if (this.field_c == 10) {
-            if ((ul.field_j[this.field_c][param0] ^ -1) != -6) {
-                return 70;
-            }
+        if (this.field_c == 10 && (ul.field_j[this.field_c][param0] ^ -1) != -6) {
+            return 70;
         }
         return 30;
     }
 
     private final void c(int param0, boolean param1) {
-        int var3 = 0;
+        int var3;
         L0: {
           L1: {
             tc.field_d = 0;
@@ -514,10 +488,10 @@ final class ld {
     }
 
     private final void k(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
         L0: {
           var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           var2 = -122 / ((param0 - -76) / 50);
@@ -570,8 +544,8 @@ final class ld {
     }
 
     private final void e(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           ul.field_d = ul.field_d + 1;
@@ -627,34 +601,18 @@ final class ld {
     }
 
     final void f(int param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        Object stackIn_34_0 = null;
+        int discarded$0 = 0;
         Object stackIn_35_0 = null;
         Object stackIn_36_0 = null;
         int stackIn_36_1 = 0;
-        Object stackIn_47_0 = null;
-        int stackIn_47_1 = 0;
         Object stackIn_48_0 = null;
         int stackIn_48_1 = 0;
         Object stackIn_49_0 = null;
         int stackIn_49_1 = 0;
         int stackIn_49_2 = 0;
-        Object stackOut_33_0 = null;
-        Object stackOut_35_0 = null;
-        int stackOut_35_1 = 0;
-        Object stackOut_34_0 = null;
-        int stackOut_34_1 = 0;
-        Object stackOut_46_0 = null;
-        int stackOut_46_1 = 0;
-        Object stackOut_48_0 = null;
-        int stackOut_48_1 = 0;
-        int stackOut_48_2 = 0;
-        Object stackOut_47_0 = null;
-        int stackOut_47_1 = 0;
-        int stackOut_47_2 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (this.field_c == -1) {
@@ -668,7 +626,7 @@ final class ld {
           if (param0 == -8448) {
             break L1;
           } else {
-            discarded$1 = this.a((byte) 16, 0);
+            discarded$0 = this.a((byte) 16, 0);
             break L1;
           }
         }
@@ -734,20 +692,15 @@ final class ld {
                     }
                   }
                   L4: {
-                    stackOut_33_0 = this;
-                    stackIn_35_0 = stackOut_33_0;
-                    stackIn_34_0 = stackOut_33_0;
+                    stackIn_35_0 = this;
+
                     if (9 != this.field_c) {
-                      stackOut_35_0 = this;
-                      stackOut_35_1 = 0;
-                      stackIn_36_0 = stackOut_35_0;
-                      stackIn_36_1 = stackOut_35_1;
+                      stackIn_36_0 = this;
+                      stackIn_36_1 = 0;
                       break L4;
                     } else {
-                      stackOut_34_0 = this;
-                      stackOut_34_1 = 1;
-                      stackIn_36_0 = stackOut_34_0;
-                      stackIn_36_1 = stackOut_34_1;
+                      stackIn_36_0 = this;
+                      stackIn_36_1 = 1;
                       break L4;
                     }
                   }
@@ -793,27 +746,19 @@ final class ld {
           } else {
             if (this.a(var2, false)) {
               L8: {
-                stackOut_46_0 = this;
-                stackOut_46_1 = 1;
-                stackIn_48_0 = stackOut_46_0;
-                stackIn_48_1 = stackOut_46_1;
-                stackIn_47_0 = stackOut_46_0;
-                stackIn_47_1 = stackOut_46_1;
+                stackIn_48_0 = this;
+
+                stackIn_48_1 = 1;
+
                 if (this.field_e.field_f != var2) {
-                  stackOut_48_0 = this;
-                  stackOut_48_1 = stackIn_48_1;
-                  stackOut_48_2 = 0;
-                  stackIn_49_0 = stackOut_48_0;
-                  stackIn_49_1 = stackOut_48_1;
-                  stackIn_49_2 = stackOut_48_2;
+                  stackIn_49_0 = this;
+                  stackIn_49_1 = stackIn_48_1;
+                  stackIn_49_2 = 0;
                   break L8;
                 } else {
-                  stackOut_47_0 = this;
-                  stackOut_47_1 = stackIn_47_1;
-                  stackOut_47_2 = 1;
-                  stackIn_49_0 = stackOut_47_0;
-                  stackIn_49_1 = stackOut_47_1;
-                  stackIn_49_2 = stackOut_47_2;
+                  stackIn_49_0 = this;
+                  stackIn_49_1 = stackIn_48_1;
+                  stackIn_49_2 = 1;
                   break L8;
                 }
               }
@@ -829,123 +774,32 @@ final class ld {
     }
 
     private final void h(int param0) {
-        he var3 = null;
-        L0: {
-          if (param0 >= 61) {
-            break L0;
-          } else {
-            var3 = (he) null;
+        if (param0 < 61) {
+            he var3 = (he) null;
             this.a((he) null, 32, 19, -17);
-            break L0;
-          }
         }
-        L1: {
-          L2: {
-            if (hl.field_d) {
-              break L2;
-            } else {
-              if (td.field_g[sd.field_a.field_q] >= ul.field_d) {
-                break L1;
-              } else {
-                break L2;
-              }
-            }
-          }
-          ek.a(-80, false, -1);
-          ul.field_d = 0;
-          break L1;
+        if (hl.field_d || td.field_g[sd.field_a.field_q] < ul.field_d) {
+            ek.a(-80, false, -1);
+            ul.field_d = 0;
         }
     }
 
     private final void b(boolean param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        jb var3 = null;
-        String var4 = null;
-        String var5 = null;
-        String var6 = null;
-        int var7 = 0;
         int stackIn_3_0 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_7_1 = 0;
-        int stackIn_7_2 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_8_1 = 0;
         int stackIn_8_2 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_9_1 = 0;
         int stackIn_9_2 = 0;
         int stackIn_9_3 = 0;
         int stackIn_16_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_19_0 = 0;
         int stackIn_19_1 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_20_1 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_21_1 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_22_1 = 0;
         int stackIn_22_2 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_23_1 = 0;
-        int stackIn_23_2 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_24_1 = 0;
-        int stackIn_24_2 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_25_1 = 0;
-        int stackIn_25_2 = 0;
         int stackIn_25_3 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_4_1 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_8_1 = 0;
-        int stackOut_8_2 = 0;
-        int stackOut_8_3 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        int stackOut_7_2 = 0;
-        int stackOut_7_3 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_18_1 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_17_1 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_19_1 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_21_1 = 0;
-        int stackOut_21_2 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_20_1 = 0;
-        int stackOut_20_2 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_22_1 = 0;
-        int stackOut_22_2 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_24_1 = 0;
-        int stackOut_24_2 = 0;
-        int stackOut_24_3 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_23_1 = 0;
-        int stackOut_23_2 = 0;
-        int stackOut_23_3 = 0;
+        int var2;
+        jb var3;
+        String var4;
+        String var5;
+        String var6;
+        int var7;
         L0: {
           var2 = (int)(Math.exp((double)(-lf.field_b) / 25.0) * -400.0);
           var3 = ni.field_q;
@@ -954,67 +808,49 @@ final class ld {
           oi.field_f.d(0, 200 - -(var2 / 2));
           this.a(oj.field_d, 170, var2, -50);
           if (-1 == (ej.field_h ^ -1)) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
         L1: {
-          stackOut_3_0 = stackIn_3_0;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_4_0 = stackOut_3_0;
+
+
           if (sd.field_a.field_H == 0) {
-            stackOut_5_0 = stackIn_5_0;
-            stackOut_5_1 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+
+            stackIn_6_1 = 0;
             break L1;
           } else {
-            stackOut_4_0 = stackIn_4_0;
-            stackOut_4_1 = 1;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
+
+            stackIn_6_1 = 1;
             break L1;
           }
         }
         L2: {
-          stackOut_6_0 = stackIn_6_0;
-          stackOut_6_1 = stackIn_6_1;
-          stackOut_6_2 = -125;
-          stackIn_8_0 = stackOut_6_0;
-          stackIn_8_1 = stackOut_6_1;
-          stackIn_8_2 = stackOut_6_2;
-          stackIn_7_0 = stackOut_6_0;
-          stackIn_7_1 = stackOut_6_1;
-          stackIn_7_2 = stackOut_6_2;
+
+
+
+
+          stackIn_8_2 = -125;
+
           if (sd.field_a.field_q == 0) {
-            stackOut_8_0 = stackIn_8_0;
-            stackOut_8_1 = stackIn_8_1;
-            stackOut_8_2 = stackIn_8_2;
-            stackOut_8_3 = 0;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            stackIn_9_2 = stackOut_8_2;
-            stackIn_9_3 = stackOut_8_3;
+
+
+            stackIn_9_2 = stackIn_8_2;
+            stackIn_9_3 = 0;
             break L2;
           } else {
-            stackOut_7_0 = stackIn_7_0;
-            stackOut_7_1 = stackIn_7_1;
-            stackOut_7_2 = stackIn_7_2;
-            stackOut_7_3 = 1;
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_9_2 = stackOut_7_2;
-            stackIn_9_3 = stackOut_7_3;
+
+
+            stackIn_9_2 = stackIn_8_2;
+            stackIn_9_3 = 1;
             break L2;
           }
         }
         L3: {
-          var4 = nj.a(stackIn_9_0 != 0, stackIn_9_1 != 0, stackIn_9_2, stackIn_9_3 != 0);
+          var4 = nj.a(stackIn_3_0 != 0, stackIn_6_1 != 0, stackIn_9_2, stackIn_9_3 != 0);
           if (var4 != null) {
             break L3;
           } else {
@@ -1026,92 +862,66 @@ final class ld {
         if (!param0) {
           L4: {
             if (0 == ej.field_h) {
-              stackOut_15_0 = 0;
-              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_0 = 0;
               break L4;
             } else {
-              stackOut_14_0 = 1;
-              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_0 = 1;
               break L4;
             }
           }
           L5: {
-            stackOut_16_0 = stackIn_16_0;
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_17_0 = stackOut_16_0;
+
+
             if (0 == sd.field_a.field_q) {
-              stackOut_18_0 = stackIn_18_0;
-              stackOut_18_1 = 0;
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
+
+              stackIn_19_1 = 0;
               break L5;
             } else {
-              stackOut_17_0 = stackIn_17_0;
-              stackOut_17_1 = 1;
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
+
+              stackIn_19_1 = 1;
               break L5;
             }
           }
           L6: {
-            stackOut_19_0 = stackIn_19_0;
-            stackOut_19_1 = stackIn_19_1;
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+
+
+
+
             if (sd.field_a.field_H == 0) {
-              stackOut_21_0 = stackIn_21_0;
-              stackOut_21_1 = stackIn_21_1;
-              stackOut_21_2 = 0;
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+
+
+              stackIn_22_2 = 0;
               break L6;
             } else {
-              stackOut_20_0 = stackIn_20_0;
-              stackOut_20_1 = stackIn_20_1;
-              stackOut_20_2 = 1;
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+
+
+              stackIn_22_2 = 1;
               break L6;
             }
           }
           L7: {
-            stackOut_22_0 = stackIn_22_0;
-            stackOut_22_1 = stackIn_22_1;
-            stackOut_22_2 = stackIn_22_2;
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_24_2 = stackOut_22_2;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
-            stackIn_23_2 = stackOut_22_2;
+
+
+
+
+
+
             if (param0) {
-              stackOut_24_0 = stackIn_24_0;
-              stackOut_24_1 = stackIn_24_1;
-              stackOut_24_2 = stackIn_24_2;
-              stackOut_24_3 = 0;
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              stackIn_25_3 = stackOut_24_3;
+
+
+
+              stackIn_25_3 = 0;
               break L7;
             } else {
-              stackOut_23_0 = stackIn_23_0;
-              stackOut_23_1 = stackIn_23_1;
-              stackOut_23_2 = stackIn_23_2;
-              stackOut_23_3 = 1;
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
-              stackIn_25_3 = stackOut_23_3;
+
+
+
+              stackIn_25_3 = 1;
               break L7;
             }
           }
           L8: {
-            var4 = jl.a(stackIn_25_0 != 0, stackIn_25_1 != 0, stackIn_25_2 != 0, stackIn_25_3 != 0);
+            var4 = jl.a(stackIn_16_0 != 0, stackIn_19_1 != 0, stackIn_22_2 != 0, stackIn_25_3 != 0);
             if (var4 == null) {
               var4 = kk.field_d[7];
               break L8;
@@ -1120,7 +930,7 @@ final class ld {
             }
           }
           var6 = "<br><br>" + gd.field_e + " " + ih.field_P + " " + var4;
-          discarded$1 = var3.a(var5 + " " + var6, 50, 130 + var2, 540, 480, 0, -1, 1, 0, var3.field_E);
+          var3.a(var5 + " " + var6, 50, 130 + var2, 540, 480, 0, -1, 1, 0, var3.field_E);
           var7 = re.field_e;
           dj.a(var7, 75, lf.field_b, param0, 385);
           return;
@@ -1130,10 +940,10 @@ final class ld {
     }
 
     private final int a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (-3 != (this.field_c ^ -1)) {
@@ -1221,8 +1031,8 @@ final class ld {
     }
 
     private final void c(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (param0 > 71) {
@@ -1291,17 +1101,13 @@ final class ld {
     }
 
     private final void i(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         int stackIn_43_0 = 0;
         int stackIn_46_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_44_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (2 != this.field_c) {
@@ -1409,24 +1215,20 @@ final class ld {
                 L9: {
                   var2 = ul.field_j[this.field_c][this.field_e.field_f];
                   if (oh.a(0)) {
-                    stackOut_42_0 = 13;
-                    stackIn_43_0 = stackOut_42_0;
+                    stackIn_43_0 = 13;
                     break L9;
                   } else {
-                    stackOut_41_0 = 5;
-                    stackIn_43_0 = stackOut_41_0;
+                    stackIn_43_0 = 5;
                     break L9;
                   }
                 }
                 L10: {
                   var3 = stackIn_43_0;
                   if (!oh.a(0)) {
-                    stackOut_45_0 = 1;
-                    stackIn_46_0 = stackOut_45_0;
+                    stackIn_46_0 = 1;
                     break L10;
                   } else {
-                    stackOut_44_0 = 0;
-                    stackIn_46_0 = stackOut_44_0;
+                    stackIn_46_0 = 0;
                     break L10;
                   }
                 }
@@ -1661,12 +1463,8 @@ final class ld {
                 var3 = this.field_e.field_f;
             }
         }
-        if (-2 == (this.field_c ^ -1)) {
-            if (0 != (this.field_e.field_f ^ -1)) {
-                if ((hl.field_f ^ -1) != 0) {
-                    var3 = this.field_e.field_f;
-                }
-            }
+        if (-2 == (this.field_c ^ -1) && 0 != (this.field_e.field_f ^ -1) && (hl.field_f ^ -1) != 0) {
+            var3 = this.field_e.field_f;
         }
         if (!(-4 != (this.field_c ^ -1))) {
             var3 = 1;
@@ -1705,36 +1503,29 @@ final class ld {
     }
 
     private final void c(int param0) {
-        int discarded$1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        String var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int var2;
+        int var3;
+        int var13;
         int stackIn_3_0 = 0;
         int stackIn_16_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
+        int var4;
+        int var5;
+        int var6;
+        String var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
         L0: {
           var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           v.field_O.a(0, 0);
           oi.field_f.d(0, 90);
           if (-101 >= (lf.field_b ^ -1)) {
-            stackOut_2_0 = 100;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 100;
             break L0;
           } else {
-            stackOut_1_0 = lf.field_b;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = lf.field_b;
             break L0;
           }
         }
@@ -1811,15 +1602,13 @@ final class ld {
           if ((var11 ^ -1) <= -6) {
             L4: {
               var11 = (int)((double)ni.field_q.field_x * 14.5);
-              discarded$1 = ni.field_q.a(var7, 50, var8, 540, var11, 0, 16777215, 0, 0, ni.field_q.field_x);
+              ni.field_q.a(var7, 50, var8, 540, var11, 0, 16777215, 0, 0, ni.field_q.field_x);
               wj.d(40, var8, 560, var11, 1);
               if (0 == gf.field_b) {
-                stackOut_15_0 = lf.field_b;
-                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_0 = lf.field_b;
                 break L4;
               } else {
-                stackOut_14_0 = 56;
-                stackIn_16_0 = stackOut_14_0;
+                stackIn_16_0 = 56;
                 break L4;
               }
             }
@@ -1843,56 +1632,12 @@ final class ld {
     }
 
     private final void a(boolean param0) {
-        int stackIn_3_0 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_5_1 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_4_1 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_3_1 = 0;
-        L0: {
-          if (param0) {
-            break L0;
-          } else {
+        if (!param0) {
             field_f = (he[]) null;
-            break L0;
-          }
         }
-        L1: {
-          stackOut_2_0 = 0;
-          stackIn_4_0 = stackOut_2_0;
-          stackIn_3_0 = stackOut_2_0;
-          if (hl.field_d) {
-            stackOut_4_0 = stackIn_4_0;
-            stackOut_4_1 = 0;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
-            break L1;
-          } else {
-            stackOut_3_0 = stackIn_3_0;
-            stackOut_3_1 = 1;
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            break L1;
-          }
-        }
-        L2: {
-          L3: {
-            if (stackIn_5_0 == stackIn_5_1) {
-              break L3;
-            } else {
-              if (td.field_g[sd.field_a.field_q] >= ul.field_d) {
-                break L2;
-              } else {
-                break L3;
-              }
-            }
-          }
-          ek.a(-63, false, -1);
-          ul.field_d = 0;
-          break L2;
+        if (0 == (!hl.field_d ? 1 : 0) || td.field_g[sd.field_a.field_q] < ul.field_d) {
+            ek.a(-63, false, -1);
+            ul.field_d = 0;
         }
     }
 
@@ -1904,15 +1649,14 @@ final class ld {
     }
 
     private final void c(boolean param0) {
-        int discarded$1 = 0;
-        int[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int[] var8 = null;
-        int[] var9 = null;
+        int[] var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int[] var8;
+        int[] var9;
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var9 = new int[pc.field_b.length];
         var8 = var9;
@@ -1957,7 +1701,7 @@ final class ld {
               var6 = (int)((double)var9[var3] * 2.55);
               if (var6 > 0) {
                 pc.field_b[var3].a(-50 + var9[var3] / 2, -50 + var9[var3] / 2, var6);
-                discarded$1 = cb.field_b.a(mg.field_a[sd.field_a.field_q][var3], 225, kj.field_f[sd.field_a.field_q][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
+                cb.field_b.a(mg.field_a[sd.field_a.field_q][var3], 225, kj.field_f[sd.field_a.field_q][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
                 var3--;
                 continue L0;
               } else {
@@ -1972,47 +1716,33 @@ final class ld {
     }
 
     private final void a(boolean param0, boolean param1, int param2) {
-        int discarded$1 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        jb var7 = null;
-        int var8 = 0;
-        String var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        String[] var15_ref_String__ = null;
-        int var16 = 0;
-        int var17 = 0;
-        int var18_int = 0;
-        nh var18 = null;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        String var22 = null;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_63_0 = 0;
         String stackIn_82_0 = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_61_0 = 0;
-        String stackOut_81_0 = null;
-        String stackOut_80_0 = null;
+        int var4;
+        int var5;
+        int var6;
+        jb var7;
+        int var8;
+        Object var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        String[] var15_ref_String__;
+        int var16;
+        int var17;
+        int var18_int;
+        nh var18;
+        int var19;
+        int var20;
+        int var21;
+        String var22;
         L0: {
           var21 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           var4 = this.a((byte) -94, param2);
@@ -2031,12 +1761,10 @@ final class ld {
           var22 = hg.field_ob[var8];
           var9 = var22;
           if (param1) {
-            stackOut_4_0 = 16711680;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_0 = 16711680;
             break L1;
           } else {
-            stackOut_3_0 = 4210752;
-            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_0 = 4210752;
             break L1;
           }
         }
@@ -2046,17 +1774,14 @@ final class ld {
           var12 = lf.field_b * 5;
           if (this.field_c == 3) {
             if (0 != gf.field_b) {
-              stackOut_9_0 = 1;
-              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_0 = 1;
               break L2;
             } else {
-              stackOut_8_0 = 0;
-              stackIn_11_0 = stackOut_8_0;
+              stackIn_11_0 = 0;
               break L2;
             }
           } else {
-            stackOut_6_0 = 0;
-            stackIn_11_0 = stackOut_6_0;
+            stackIn_11_0 = 0;
             break L2;
           }
         }
@@ -2084,24 +1809,20 @@ final class ld {
           }
           L6: {
             if (-1 < (var14 ^ -1)) {
-              stackOut_18_0 = 0;
-              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_0 = 0;
               break L6;
             } else {
-              stackOut_17_0 = var14;
-              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_0 = var14;
               break L6;
             }
           }
           L7: {
             var14 = stackIn_19_0;
             if ((var14 ^ -1) >= -257) {
-              stackOut_21_0 = var14;
-              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_0 = var14;
               break L7;
             } else {
-              stackOut_20_0 = 256;
-              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_0 = 256;
               break L7;
             }
           }
@@ -2129,13 +1850,13 @@ final class ld {
               }
             }
             L10: {
-              var7.c(var9, var11, var4 + var7.field_x, var10, -1, var14);
+              var7.c((String) (var9), var11, var4 + var7.field_x, var10, -1, var14);
               if (!param1) {
                 break L10;
               } else {
-                if (var9.length() != 0) {
+                if (((String) (var9)).length() != 0) {
                   var7.a("{", var11, var7.field_x + var4, var10, -1, var14);
-                  var7.c("}", var7.b(var9) + var11, var7.field_x + var4, var10, -1, var14);
+                  var7.c("}", var7.b((String) (var9)) + var11, var7.field_x + var4, var10, -1, var14);
                   break L10;
                 } else {
                   break L10;
@@ -2166,12 +1887,10 @@ final class ld {
             L13: {
               var16 = n.field_c + ul.field_b[this.field_c] + cb.field_b.b(" ");
               if (-11 != (var8 ^ -1)) {
-                stackOut_62_0 = oa.field_b;
-                stackIn_63_0 = stackOut_62_0;
+                stackIn_63_0 = oa.field_b;
                 break L13;
               } else {
-                stackOut_61_0 = dg.field_e;
-                stackIn_63_0 = stackOut_61_0;
+                stackIn_63_0 = dg.field_e;
                 break L13;
               }
             }
@@ -2292,12 +2011,10 @@ final class ld {
                           wj.a(this.b(param2, true) + -var19, -var19 + this.a((byte) -90, param2), var18.field_y - -10, 2 * var19 + var18.field_w, 4227327, (int)(ji.a(65535, (double)lf.field_b / 10.0) * 128.0 + 128.0));
                           var18.b(this.b(param2, true), this.a((byte) -74, param2), (int)(224.0 - 32.0 * ji.a(65535, (double)lf.field_b / 10.0)), 16777215);
                           if (gf.field_D >= var14) {
-                            stackOut_81_0 = tc.field_b[var14];
-                            stackIn_82_0 = stackOut_81_0;
+                            stackIn_82_0 = tc.field_b[var14];
                             break L24;
                           } else {
-                            stackOut_80_0 = s.field_f;
-                            stackIn_82_0 = stackOut_80_0;
+                            stackIn_82_0 = s.field_f;
                             break L24;
                           }
                         }
@@ -2316,7 +2033,7 @@ final class ld {
                         }
                         L26: {
                           L27: {
-                            cb.field_b.c(var9, 285, 64 + (var17 - -122), 0, -1);
+                            cb.field_b.c((String) (var9), 285, 64 + (var17 - -122), 0, -1);
                             var20 = 0;
                             if ((hb.field_g ^ -1) < -1) {
                               break L27;
@@ -2339,7 +2056,7 @@ final class ld {
                             break L26;
                           }
                         }
-                        discarded$1 = cb.field_b.a(var9, 285, var17 + 122 - -94, 320, 240, var20, -1, 0, 0, cb.field_b.field_x);
+                        cb.field_b.a((String) (var9), 285, var17 + 122 - -94, 320, 240, var20, -1, 0, 0, cb.field_b.field_x);
                         if (var14 > gf.field_D) {
                           break L20;
                         } else {
@@ -2359,7 +2076,7 @@ final class ld {
                             var9 = af.field_a;
                             break L28;
                           }
-                          cb.field_b.c(var9, 285, 94 + (122 + var17) + 100, 0, -1);
+                          cb.field_b.c((String) (var9), 285, 94 + (122 + var17) + 100, 0, -1);
                           break L20;
                         }
                       } else {
@@ -2389,20 +2106,12 @@ final class ld {
     }
 
     final void l(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_47_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
+        int var2;
+        int var3;
         L0: {
           var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if ((this.field_c ^ -1) != -9) {
@@ -2509,12 +2218,10 @@ final class ld {
                   L9: {
                     r.field_d = -1;
                     if (hb.field_g <= 0) {
-                      stackOut_46_0 = 11;
-                      stackIn_47_0 = stackOut_46_0;
+                      stackIn_47_0 = 11;
                       break L9;
                     } else {
-                      stackOut_45_0 = 0;
-                      stackIn_47_0 = stackOut_45_0;
+                      stackIn_47_0 = 0;
                       break L9;
                     }
                   }
@@ -2533,20 +2240,15 @@ final class ld {
           }
         } else {
           L10: {
-            stackOut_4_0 = 21;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
+            stackIn_6_0 = 21;
+
             if (eh.a(-875)) {
-              stackOut_6_0 = stackIn_6_0;
-              stackOut_6_1 = 0;
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_0 = stackIn_6_0;
+              stackIn_7_1 = 0;
               break L10;
             } else {
-              stackOut_5_0 = stackIn_5_0;
-              stackOut_5_1 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_0 = stackIn_6_0;
+              stackIn_7_1 = 1;
               break L10;
             }
           }
@@ -2588,9 +2290,9 @@ final class ld {
     }
 
     private final int a(int param0, boolean param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int var4;
+        int var5;
+        int var6;
         L0: {
           var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (!param1) {
@@ -2649,17 +2351,13 @@ final class ld {
 
     private final void b(byte param0) {
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 <= -93) {
           L0: {
             if (hl.field_d) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               break L0;
             } else {
-              stackOut_3_0 = 1;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = 1;
               break L0;
             }
           }
@@ -2686,57 +2384,32 @@ final class ld {
     }
 
     private final void b(int param0) {
-        L0: {
-          if (param0 == -9180) {
-            break L0;
-          } else {
+        if (param0 != -9180) {
             this.field_g = -103;
-            break L0;
-          }
         }
-        L1: {
-          L2: {
-            if (hl.field_d) {
-              break L2;
-            } else {
-              if (ul.field_d <= td.field_g[sd.field_a.field_q]) {
-                break L1;
-              } else {
-                break L2;
-              }
-            }
-          }
-          ek.a(-79, false, -1);
-          ul.field_d = 0;
-          break L1;
+        if (hl.field_d || ul.field_d > td.field_g[sd.field_a.field_q]) {
+            ek.a(-79, false, -1);
+            ul.field_d = 0;
         }
     }
 
     private final void a(int param0, int param1, boolean param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        jb var7_ref_jb = null;
-        String[] var8_ref_String__ = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
         int stackIn_71_0 = 0;
         int stackIn_100_0 = 0;
         int stackIn_206_0 = 0;
         int stackIn_211_0 = 0;
-        int stackOut_205_0 = 0;
-        int stackOut_204_0 = 0;
-        int stackOut_210_0 = 0;
-        int stackOut_209_0 = 0;
-        int stackOut_99_0 = 0;
-        int stackOut_98_0 = 0;
-        int stackOut_70_0 = 0;
-        int stackOut_69_0 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        jb var7_ref_jb;
+        int var8;
+        String[] var8_ref_String__;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
         L0: {
           var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           var4 = r.field_d;
@@ -2984,12 +2657,10 @@ final class ld {
                                                                 var7 = dg.field_e;
                                                                 rd.h(param1 + 220);
                                                                 if (!this.b(var7, -90)) {
-                                                                  stackOut_205_0 = 0;
-                                                                  stackIn_206_0 = stackOut_205_0;
+                                                                  stackIn_206_0 = 0;
                                                                   break L11;
                                                                 } else {
-                                                                  stackOut_204_0 = 1;
-                                                                  stackIn_206_0 = stackOut_204_0;
+                                                                  stackIn_206_0 = 1;
                                                                   break L11;
                                                                 }
                                                               }
@@ -3007,12 +2678,10 @@ final class ld {
                                                                 var7 = dg.field_e;
                                                                 dg.a((byte) 34);
                                                                 if (!this.b(var7, -59)) {
-                                                                  stackOut_210_0 = 0;
-                                                                  stackIn_211_0 = stackOut_210_0;
+                                                                  stackIn_211_0 = 0;
                                                                   break L13;
                                                                 } else {
-                                                                  stackOut_209_0 = 1;
-                                                                  stackIn_211_0 = stackOut_209_0;
+                                                                  stackIn_211_0 = 1;
                                                                   break L13;
                                                                 }
                                                               }
@@ -3379,7 +3048,7 @@ final class ld {
                                           }
                                         }
                                       } else {
-                                        if (320 - var9 > ck.field_c) {
+                                        if ((320 - var9 ^ -1) < (ck.field_c ^ -1)) {
                                           var10 = 0;
                                           var11++;
                                           continue L25;
@@ -3458,12 +3127,10 @@ final class ld {
                                 }
                                 L31: {
                                   if (hb.field_g <= 0) {
-                                    stackOut_99_0 = 11;
-                                    stackIn_100_0 = stackOut_99_0;
+                                    stackIn_100_0 = 11;
                                     break L31;
                                   } else {
-                                    stackOut_98_0 = 0;
-                                    stackIn_100_0 = stackOut_98_0;
+                                    stackIn_100_0 = 0;
                                     break L31;
                                   }
                                 }
@@ -3523,12 +3190,10 @@ final class ld {
                 L32: {
                   ek.a(-112, param2, -1);
                   if (-1 > (hb.field_g ^ -1)) {
-                    stackOut_70_0 = 0;
-                    stackIn_71_0 = stackOut_70_0;
+                    stackIn_71_0 = 0;
                     break L32;
                   } else {
-                    stackOut_69_0 = 11;
-                    stackIn_71_0 = stackOut_69_0;
+                    stackIn_71_0 = 11;
                     break L32;
                   }
                 }
@@ -3576,51 +3241,36 @@ final class ld {
     }
 
     private final void b(boolean param0, byte param1) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        he var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        Object var16 = null;
-        String var16_ref = null;
-        int var17 = 0;
-        he var17_ref_he = null;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        jb var25 = null;
         int stackIn_5_0 = 0;
         he stackIn_8_0 = null;
         int stackIn_13_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_57_0 = 0;
         he stackIn_64_0 = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        he stackOut_7_0 = null;
-        he stackOut_6_0 = null;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_55_0 = 0;
-        he stackOut_63_0 = null;
-        he stackOut_62_0 = null;
+        int var4;
+        int var5;
+        int var6;
+        he var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        Object var16;
+        String var16_ref;
+        he var17_ref_he;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        jb var25;
         var24 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var25 = cb.field_b;
         if (param1 < -95) {
@@ -3630,12 +3280,10 @@ final class ld {
             this.c(200 - -(var4 / 2), 62);
             oi.field_f.d(0, var4 / 2 + 200);
             if (!oh.a(0)) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               break L0;
             } else {
-              stackOut_3_0 = 20;
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = 20;
               break L0;
             }
           }
@@ -3643,12 +3291,10 @@ final class ld {
             var5 = stackIn_5_0;
             var6 = var5 + 220;
             if (!param0) {
-              stackOut_7_0 = qe.field_k;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = qe.field_k;
               break L1;
             } else {
-              stackOut_6_0 = el.field_ub;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = el.field_ub;
               break L1;
             }
           }
@@ -3668,12 +3314,10 @@ final class ld {
             var9 = 34;
             var10 = 133 + var4;
             if (!param0) {
-              stackOut_12_0 = hi.field_j;
-              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_0 = hi.field_j;
               break L3;
             } else {
-              stackOut_11_0 = ej.field_h;
-              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_0 = ej.field_h;
               break L3;
             }
           }
@@ -3694,12 +3338,10 @@ final class ld {
               L6: {
                 wj.d(30, -4 + var4 + 133, 120, 200, 0);
                 if ((ie.field_y ^ -1) != 0) {
-                  stackOut_47_0 = ie.field_y;
-                  stackIn_48_0 = stackOut_47_0;
+                  stackIn_48_0 = ie.field_y;
                   break L6;
                 } else {
-                  stackOut_46_0 = var13;
-                  stackIn_48_0 = stackOut_46_0;
+                  stackIn_48_0 = var13;
                   break L6;
                 }
               }
@@ -3718,12 +3360,10 @@ final class ld {
                     wj.d(166, 163 + (var25.field_E + var4), 128, 128, 0);
                     var25.c("<u>" + sc.field_b[var14] + "</u>", 166, var4 - -150, 0, -1);
                     if (-1 == (var11 & 1 << var14 ^ -1)) {
-                      stackOut_56_0 = 0;
-                      stackIn_57_0 = stackOut_56_0;
+                      stackIn_57_0 = 0;
                       break L9;
                     } else {
-                      stackOut_55_0 = 1;
-                      stackIn_57_0 = stackOut_55_0;
+                      stackIn_57_0 = 1;
                       break L9;
                     }
                   }
@@ -3737,16 +3377,14 @@ final class ld {
                             break L12;
                           } else {
                             if ((hb.field_g ^ -1) >= -1) {
-                              stackOut_63_0 = ge.field_d;
-                              stackIn_64_0 = stackOut_63_0;
+                              stackIn_64_0 = ge.field_d;
                               break L11;
                             } else {
                               break L12;
                             }
                           }
                         }
-                        stackOut_62_0 = tl.field_P;
-                        stackIn_64_0 = stackOut_62_0;
+                        stackIn_64_0 = tl.field_P;
                         break L11;
                       }
                       var17_ref_he = stackIn_64_0;
@@ -3772,7 +3410,7 @@ final class ld {
                       var21 = 185 + var4 + var25.field_E;
                       var22 = 297;
                       var23 = var19 * 5;
-                      discarded$3 = var25.a(jk.field_K[var14], var20, var21, var22, var23, 0, -1, 0, 1, var19);
+                      var25.a(jk.field_K[var14], var20, var21, var22, var23, 0, -1, 0, 1, var19);
                       break L7;
                     } else {
                       ce.field_b.b(5 * var19 + var18, var17);
@@ -3781,11 +3419,11 @@ final class ld {
                     }
                   }
                 } else {
-                  discarded$4 = var25.a(re.field_j, 166, -var25.field_x + var4 - -150, 500, 200, 0, -1, 0, 0, var25.field_x);
+                  var25.a(re.field_j, 166, -var25.field_x + var4 - -150, 500, 200, 0, -1, 0, 0, var25.field_x);
                   if (!oh.a(0)) {
                     break L7;
                   } else {
-                    discarded$5 = ni.field_q.a(gl.field_f, 213, 116 + (var4 - -(var6 / 2)), 300, 200, 1, -1, 1, 0, ni.field_q.field_x);
+                    ni.field_q.a(gl.field_f, 213, 116 + (var4 - -(var6 / 2)), 300, 200, 1, -1, 1, 0, ni.field_q.field_x);
                     break L7;
                   }
                 }
@@ -3801,7 +3439,7 @@ final class ld {
               return;
             } else {
               L15: {
-                if ((1 << var14 & var11) != 0) {
+                if ((1 << var14 & var11 ^ -1) != -1) {
                   di.field_b[var14].b(var9, var10);
                   break L15;
                 } else {
@@ -3901,34 +3539,30 @@ final class ld {
     }
 
     private final void d(byte param0) {
-        int var2 = 0;
-        String var3 = null;
-        jb var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        he var8 = null;
-        nh var9 = null;
-        int var10 = 0;
-        vb var11_ref_vb = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        String[] var14 = null;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        String var21 = null;
-        int var22 = 0;
-        int[] var29 = null;
-        long[] var30 = null;
         int stackIn_3_0 = 0;
         String stackIn_38_0 = null;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        String stackOut_37_0 = null;
-        String stackOut_36_0 = null;
+        int var2;
+        String var3;
+        jb var4;
+        int var5;
+        int var6;
+        int var7;
+        he var8;
+        nh var9;
+        int var10;
+        vb var11_ref_vb;
+        int var11;
+        int var12;
+        int var13;
+        String[] var14;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        String var21;
+        int var22;
+        int[] var29;
+        long[] var30;
         L0: {
           var22 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           var2 = -113 / ((65 - param0) / 50);
@@ -3938,12 +3572,10 @@ final class ld {
           var6 = 0;
           var7 = 0;
           if (!tc.field_i) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -4082,30 +3714,28 @@ final class ld {
           var11 = var4.field_x + var10 + (140 + var5 * 9 / 2);
           ni.field_q.b(var3, 430, var11, 4210752, -1);
           if (!oh.a(0)) {
-            stackOut_37_0 = mi.field_h;
-            stackIn_38_0 = stackOut_37_0;
+            stackIn_38_0 = mi.field_h;
             break L9;
           } else {
-            stackOut_36_0 = gl.field_f;
-            stackIn_38_0 = stackOut_36_0;
+            stackIn_38_0 = gl.field_f;
             break L9;
           }
         }
         var3 = stackIn_38_0;
         var11 = var4.field_x + (140 + var10) - -(var5 * 10);
-        int discarded$1 = var4.a(var3, 85, var5 / 2 + var11, 465, 100, 4210752, -1, 1, 0, ni.field_q.field_x);
+        var4.a(var3, 85, var5 / 2 + var11, 465, 100, 4210752, -1, 1, 0, ni.field_q.field_x);
     }
 
     private final void c(int param0, int param1) {
-        double var3 = 0.0;
-        double var5 = 0.0;
-        int[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int[] var12 = null;
-        int[] var13 = null;
+        double var3;
+        double var5;
+        int[] var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int[] var12;
+        int[] var13;
         var11 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (sd.field_e == 0) {
           return;

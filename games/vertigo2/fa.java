@@ -29,9 +29,9 @@ final class fa extends li {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        mi var4 = null;
-        uh var6 = null;
-        uh var7 = null;
+        mi var4;
+        uh var6;
+        uh var7;
         L0: {
           if (param1 == br.field_Q) {
             break L0;

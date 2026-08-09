@@ -15,15 +15,14 @@ final class vg {
     static String field_f;
 
     final lm b(byte param0) {
-        lm discarded$1 = null;
-        lm var2 = null;
-        lm var3 = null;
-        int var4 = 0;
+        lm var2;
+        lm var3;
+        int var4;
         var4 = Pixelate.field_H ? 1 : 0;
         if (this.field_g != null) {
           var2 = this.field_a[(int)((long)(-1 + this.field_h) & this.field_b)];
           if (param0 != 47) {
-            discarded$1 = this.a((byte) -113);
+            this.a((byte) -113);
             L0: while (true) {
               if (this.field_g != var2) {
                 if (this.field_g.field_q != this.field_b) {
@@ -98,20 +97,16 @@ final class vg {
     }
 
     final static ib a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
         int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
+        int var2;
+        int var3;
         if (param0 >= 84) {
           L0: {
             if ((param1 ^ -1) > -11) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_0 = 0;
               break L0;
             } else {
-              stackOut_3_0 = ue.a(param1, (byte) 118);
-              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_0 = ue.a(param1, (byte) 118);
               break L0;
             }
           }
@@ -160,28 +155,26 @@ final class vg {
     }
 
     final lm a(byte param0) {
-        int discarded$6 = 0;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        int discarded$9 = 0;
-        int fieldTemp$10 = 0;
-        int fieldTemp$11 = 0;
-        int var3 = 0;
-        lm var4 = null;
-        lm var5 = null;
-        lm var29 = null;
-        lm var57 = null;
-        lm var58 = null;
-        lm var59 = null;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int var3;
+        lm var4;
+        lm var5;
+        lm var57;
+        lm var29;
+        lm var58;
+        lm var59;
         var3 = Pixelate.field_H ? 1 : 0;
         if (0 >= this.field_d) {
           if (param0 != 50) {
-            discarded$6 = vg.a(-20, -121);
+            vg.a(-20, -121);
             L0: while (true) {
               if (this.field_d < this.field_h) {
-                fieldTemp$7 = this.field_d;
+                fieldTemp$3 = this.field_d;
                 this.field_d = this.field_d + 1;
-                var4 = this.field_a[fieldTemp$7].field_p;
+                var4 = this.field_a[fieldTemp$3].field_p;
                 var59 = var4;
                 if (var4 != this.field_a[this.field_d - 1]) {
                   this.field_c = var59.field_p;
@@ -196,9 +189,9 @@ final class vg {
           } else {
             L1: while (true) {
               if (this.field_d < this.field_h) {
-                fieldTemp$8 = this.field_d;
+                fieldTemp$4 = this.field_d;
                 this.field_d = this.field_d + 1;
-                var4 = this.field_a[fieldTemp$8].field_p;
+                var4 = this.field_a[fieldTemp$4].field_p;
                 var58 = var4;
                 if (var4 != this.field_a[this.field_d - 1]) {
                   this.field_c = var58.field_p;
@@ -214,12 +207,12 @@ final class vg {
         } else {
           if (this.field_c == this.field_a[this.field_d + -1]) {
             if (param0 != 50) {
-              discarded$9 = vg.a(-20, -121);
+              vg.a(-20, -121);
               L2: while (true) {
                 if (this.field_d < this.field_h) {
-                  fieldTemp$10 = this.field_d;
+                  fieldTemp$5 = this.field_d;
                   this.field_d = this.field_d + 1;
-                  var4 = this.field_a[fieldTemp$10].field_p;
+                  var4 = this.field_a[fieldTemp$5].field_p;
                   var29 = var4;
                   if (var4 != this.field_a[this.field_d - 1]) {
                     this.field_c = var29.field_p;
@@ -234,9 +227,9 @@ final class vg {
             } else {
               L3: while (true) {
                 if (this.field_d < this.field_h) {
-                  fieldTemp$11 = this.field_d;
+                  fieldTemp$6 = this.field_d;
                   this.field_d = this.field_d + 1;
-                  var4 = this.field_a[fieldTemp$11].field_p;
+                  var4 = this.field_a[fieldTemp$6].field_p;
                   var5 = var4;
                   if (var4 != this.field_a[this.field_d - 1]) {
                     this.field_c = var5.field_p;
@@ -258,8 +251,8 @@ final class vg {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Pixelate.field_H ? 1 : 0;
         if (param1 == (param0 ^ -1)) {
           return 0;
@@ -361,9 +354,9 @@ final class vg {
     }
 
     final lm a(int param0, long param1) {
-        lm var4 = null;
-        lm var5 = null;
-        int var6 = 0;
+        lm var4;
+        lm var5;
+        int var6;
         var6 = Pixelate.field_H ? 1 : 0;
         if (param0 == -11434) {
           this.field_b = param1;
@@ -418,8 +411,8 @@ final class vg {
 
     final static void b(int param0, int param1) {
         try {
-            IOException var2 = null;
             Throwable decompiledCaughtException = null;
+            IOException var2 = null;
             if (null == sh.field_e) {
               aa.field_f.field_m = 0;
               return;
@@ -495,18 +488,18 @@ final class vg {
     }
 
     vg(int param0) {
-        lm dupTemp$2 = null;
-        int var2 = 0;
-        lm var3 = null;
+        lm dupTemp$1 = null;
+        int var2;
+        lm var3;
         this.field_d = 0;
         this.field_a = new lm[param0];
         this.field_h = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            dupTemp$2 = new lm();
-            var3 = dupTemp$2;
-            this.field_a[var2] = dupTemp$2;
+            dupTemp$1 = new lm();
+            var3 = dupTemp$1;
+            this.field_a[var2] = dupTemp$1;
             var3.field_r = var3;
             var3.field_p = var3;
             var2++;

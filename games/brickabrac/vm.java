@@ -10,24 +10,24 @@ final class vm extends nm {
     }
 
     final void b() {
-        int[] var1 = null;
-        int[] var2 = null;
-        hr var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        se var14 = null;
-        int[] var15 = null;
-        int[] var17 = null;
-        int[] var18 = null;
-        int[] var20 = null;
-        int[] var22 = null;
+        int[] var1;
+        int[] var2;
+        hr var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        se var14;
+        int[] var15;
+        int[] var17;
+        int[] var18;
+        int[] var20;
+        int[] var22;
         if (this.field_i == null) {
           this.field_i = new si(16);
           var20 = new int[16];
@@ -151,118 +151,105 @@ final class vm extends nm {
     }
 
     private vm(wq param0) {
-        int incrementValue$29 = 0;
-        int incrementValue$30 = 0;
-        int incrementValue$31 = 0;
-        int incrementValue$32 = 0;
-        int incrementValue$33 = 0;
-        int incrementValue$34 = 0;
-        int incrementValue$35 = 0;
-        int incrementValue$36 = 0;
-        int incrementValue$37 = 0;
-        int incrementValue$38 = 0;
-        int incrementValue$39 = 0;
-        int incrementValue$40 = 0;
-        int incrementValue$41 = 0;
-        int incrementValue$42 = 0;
-        int incrementValue$43 = 0;
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
-        int incrementValue$48 = 0;
-        int incrementValue$49 = 0;
-        int incrementValue$50 = 0;
-        int incrementValue$51 = 0;
-        int incrementValue$52 = 0;
-        int incrementValue$53 = 0;
-        int incrementValue$54 = 0;
-        int incrementValue$55 = 0;
-        int incrementValue$56 = 0;
-        int discarded$57 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
-        int var42 = 0;
-        int var43 = 0;
-        int var44 = 0;
-        int var45 = 0;
-        int var46 = 0;
-        int var47 = 0;
-        int var48 = 0;
-        int var49 = 0;
-        int var50 = 0;
-        wq var51 = null;
-        int var52 = 0;
-        int var53 = 0;
-        int var54 = 0;
-        int var55 = 0;
-        int var56 = 0;
-        int var57 = 0;
-        int var58 = 0;
-        int var60 = 0;
-        int var61 = 0;
-        int var62 = 0;
-        int var63 = 0;
-        int var64 = 0;
-        int var65 = 0;
-        int var66 = 0;
-        int[] var70 = null;
-        wq stackIn_65_0 = null;
-        int stackIn_65_1 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
         wq stackIn_66_0 = null;
         int stackIn_66_1 = 0;
         wq stackIn_67_0 = null;
         int stackIn_67_1 = 0;
         int stackIn_67_2 = 0;
         int stackIn_73_0 = 0;
-        wq stackOut_64_0 = null;
-        int stackOut_64_1 = 0;
-        wq stackOut_66_0 = null;
-        int stackOut_66_1 = 0;
-        int stackOut_66_2 = 0;
-        wq stackOut_65_0 = null;
-        int stackOut_65_1 = 0;
-        int stackOut_65_2 = 0;
-        int stackOut_72_0 = 0;
-        int stackOut_71_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        int var26;
+        int var27;
+        int var28;
+        int var29;
+        int var30;
+        int var31;
+        int var32;
+        int var33;
+        int var34;
+        int var35;
+        int var36;
+        int var37;
+        int var38;
+        int var39;
+        int var40;
+        int var41;
+        int var42;
+        int var43;
+        int var44;
+        int var45;
+        int var46;
+        int var47;
+        int var48;
+        int var49;
+        int var50;
+        wq var51;
+        int var52;
+        int var53;
+        int var54;
+        int var55;
+        int var56;
+        int var57;
+        int var58;
+        int var60;
+        int var61;
+        int var62;
+        int var63;
+        int var64;
+        int var65;
+        int var66;
+        int[] var70;
         param0.field_l = param0.field_k.length - 3;
         var2 = param0.l(255);
         var3 = param0.i(65280);
@@ -353,27 +340,19 @@ final class vm extends nm {
                       var51 = new wq(this.field_j);
                       var51.a(1297377380, (byte) -79);
                       var51.a(6, (byte) -79);
-                      stackOut_64_0 = (wq) (var51);
-                      stackOut_64_1 = 121;
-                      stackIn_66_0 = stackOut_64_0;
-                      stackIn_66_1 = stackOut_64_1;
-                      stackIn_65_0 = stackOut_64_0;
-                      stackIn_65_1 = stackOut_64_1;
+                      stackIn_66_0 = (wq) (var51);
+
+                      stackIn_66_1 = 121;
+
                       if (var2 <= 1) {
-                        stackOut_66_0 = (wq) ((Object) stackIn_66_0);
-                        stackOut_66_1 = stackIn_66_1;
-                        stackOut_66_2 = 0;
-                        stackIn_67_0 = stackOut_66_0;
-                        stackIn_67_1 = stackOut_66_1;
-                        stackIn_67_2 = stackOut_66_2;
+                        stackIn_67_0 = (wq) ((Object) stackIn_66_0);
+                        stackIn_67_1 = stackIn_66_1;
+                        stackIn_67_2 = 0;
                         break L3;
                       } else {
-                        stackOut_65_0 = (wq) ((Object) stackIn_65_0);
-                        stackOut_65_1 = stackIn_65_1;
-                        stackOut_65_2 = 1;
-                        stackIn_67_0 = stackOut_65_0;
-                        stackIn_67_1 = stackOut_65_1;
-                        stackIn_67_2 = stackOut_65_2;
+                        stackIn_67_0 = (wq) ((Object) stackIn_66_0);
+                        stackIn_67_1 = stackIn_66_1;
+                        stackIn_67_2 = 1;
                         break L3;
                       }
                     }
@@ -403,16 +382,14 @@ final class vm extends nm {
                           L6: {
                             var63 = param0.c((byte) 104);
                             var51.e((byte) -83, var63);
-                            incrementValue$29 = var29;
+                            incrementValue$0 = var29;
                             var29++;
-                            var64 = param0.field_k[incrementValue$29] & 255;
+                            var64 = param0.field_k[incrementValue$0] & 255;
                             if (var64 == var62) {
-                              stackOut_72_0 = 0;
-                              stackIn_73_0 = stackOut_72_0;
+                              stackIn_73_0 = 0;
                               break L6;
                             } else {
-                              stackOut_71_0 = 1;
-                              stackIn_73_0 = stackOut_71_0;
+                              stackIn_73_0 = 1;
                               break L6;
                             }
                           }
@@ -438,9 +415,9 @@ final class vm extends nm {
                                                 break L7;
                                               }
                                             }
-                                            incrementValue$30 = var44;
+                                            incrementValue$1 = var44;
                                             var44++;
-                                            var51.a(29, (int) param0.field_k[incrementValue$30]);
+                                            var51.a(29, (int) param0.field_k[incrementValue$1]);
                                             continue L5;
                                           }
                                         } else {
@@ -452,12 +429,12 @@ final class vm extends nm {
                                               break L8;
                                             }
                                           }
-                                          incrementValue$31 = var37;
+                                          incrementValue$2 = var37;
                                           var37++;
-                                          var53 = var53 + param0.field_k[incrementValue$31];
-                                          incrementValue$32 = var31;
+                                          var53 = var53 + param0.field_k[incrementValue$2];
+                                          incrementValue$3 = var31;
                                           var31++;
-                                          var58 = var58 + param0.field_k[incrementValue$32];
+                                          var58 = var58 + param0.field_k[incrementValue$3];
                                           var51.a(-104, var53 & 127);
                                           var51.a(25, var58 & 127);
                                           continue L5;
@@ -471,9 +448,9 @@ final class vm extends nm {
                                             break L9;
                                           }
                                         }
-                                        incrementValue$33 = var32;
+                                        incrementValue$4 = var32;
                                         var32++;
-                                        var57 = var57 + param0.field_k[incrementValue$33];
+                                        var57 = var57 + param0.field_k[incrementValue$4];
                                         var51.a(1, var57 & 127);
                                         continue L5;
                                       }
@@ -486,12 +463,12 @@ final class vm extends nm {
                                           break L10;
                                         }
                                       }
-                                      incrementValue$34 = var45;
+                                      incrementValue$5 = var45;
                                       var45++;
-                                      var56 = var56 + param0.field_k[incrementValue$34];
-                                      incrementValue$35 = var33;
+                                      var56 = var56 + param0.field_k[incrementValue$5];
+                                      incrementValue$6 = var33;
                                       var33++;
-                                      var56 = var56 + (param0.field_k[incrementValue$35] << 7);
+                                      var56 = var56 + (param0.field_k[incrementValue$6] << 7);
                                       var51.a(-125, var56 & 127);
                                       var51.a(94, var56 >> 7 & 127);
                                       continue L5;
@@ -507,9 +484,9 @@ final class vm extends nm {
                                     }
                                     L12: {
                                       L13: {
-                                        incrementValue$36 = var15;
+                                        incrementValue$7 = var15;
                                         var15++;
-                                        var28 = var28 + param0.field_k[incrementValue$36] & 127;
+                                        var28 = var28 + param0.field_k[incrementValue$7] & 127;
                                         var51.a(-21, var28);
                                         if (var28 == 0) {
                                           break L13;
@@ -539,9 +516,9 @@ final class vm extends nm {
                                                                           break L14;
                                                                         } else {
                                                                           if (var28 != 123) {
-                                                                            incrementValue$37 = var39;
+                                                                            incrementValue$8 = var39;
                                                                             var39++;
-                                                                            var66 = param0.field_k[incrementValue$37];
+                                                                            var66 = param0.field_k[incrementValue$8];
                                                                             break L12;
                                                                           } else {
                                                                             break L14;
@@ -551,68 +528,68 @@ final class vm extends nm {
                                                                     }
                                                                   }
                                                                 }
-                                                                incrementValue$38 = var30;
+                                                                incrementValue$9 = var30;
                                                                 var30++;
-                                                                var66 = param0.field_k[incrementValue$38];
+                                                                var66 = param0.field_k[incrementValue$9];
                                                                 break L12;
                                                               } else {
-                                                                incrementValue$39 = var49;
+                                                                incrementValue$10 = var49;
                                                                 var49++;
-                                                                var66 = param0.field_k[incrementValue$39];
+                                                                var66 = param0.field_k[incrementValue$10];
                                                                 break L12;
                                                               }
                                                             } else {
-                                                              incrementValue$40 = var48;
+                                                              incrementValue$11 = var48;
                                                               var48++;
-                                                              var66 = param0.field_k[incrementValue$40];
+                                                              var66 = param0.field_k[incrementValue$11];
                                                               break L12;
                                                             }
                                                           } else {
-                                                            incrementValue$41 = var47;
+                                                            incrementValue$12 = var47;
                                                             var47++;
-                                                            var66 = param0.field_k[incrementValue$41];
+                                                            var66 = param0.field_k[incrementValue$12];
                                                             break L12;
                                                           }
                                                         } else {
-                                                          incrementValue$42 = var46;
+                                                          incrementValue$13 = var46;
                                                           var46++;
-                                                          var66 = param0.field_k[incrementValue$42];
+                                                          var66 = param0.field_k[incrementValue$13];
                                                           break L12;
                                                         }
                                                       } else {
-                                                        incrementValue$43 = var43;
+                                                        incrementValue$14 = var43;
                                                         var43++;
-                                                        var66 = param0.field_k[incrementValue$43];
+                                                        var66 = param0.field_k[incrementValue$14];
                                                         break L12;
                                                       }
                                                     } else {
-                                                      incrementValue$44 = var36;
+                                                      incrementValue$15 = var36;
                                                       var36++;
-                                                      var66 = param0.field_k[incrementValue$44];
+                                                      var66 = param0.field_k[incrementValue$15];
                                                       break L12;
                                                     }
                                                   } else {
-                                                    incrementValue$45 = var42;
+                                                    incrementValue$16 = var42;
                                                     var42++;
-                                                    var66 = param0.field_k[incrementValue$45];
+                                                    var66 = param0.field_k[incrementValue$16];
                                                     break L12;
                                                   }
                                                 } else {
-                                                  incrementValue$46 = var35;
+                                                  incrementValue$17 = var35;
                                                   var35++;
-                                                  var66 = param0.field_k[incrementValue$46];
+                                                  var66 = param0.field_k[incrementValue$17];
                                                   break L12;
                                                 }
                                               } else {
-                                                incrementValue$47 = var41;
+                                                incrementValue$18 = var41;
                                                 var41++;
-                                                var66 = param0.field_k[incrementValue$47];
+                                                var66 = param0.field_k[incrementValue$18];
                                                 break L12;
                                               }
                                             } else {
-                                              incrementValue$48 = var34;
+                                              incrementValue$19 = var34;
                                               var34++;
-                                              var66 = param0.field_k[incrementValue$48];
+                                              var66 = param0.field_k[incrementValue$19];
                                               break L12;
                                             }
                                           } else {
@@ -620,9 +597,9 @@ final class vm extends nm {
                                           }
                                         }
                                       }
-                                      incrementValue$49 = var44;
+                                      incrementValue$20 = var44;
                                       var44++;
-                                      var66 = param0.field_k[incrementValue$49];
+                                      var66 = param0.field_k[incrementValue$20];
                                       break L12;
                                     }
                                     var66 = var66 + var70[var28];
@@ -639,12 +616,12 @@ final class vm extends nm {
                                       break L15;
                                     }
                                   }
-                                  incrementValue$50 = var37;
+                                  incrementValue$21 = var37;
                                   var37++;
-                                  var53 = var53 + param0.field_k[incrementValue$50];
-                                  incrementValue$51 = var40;
+                                  var53 = var53 + param0.field_k[incrementValue$21];
+                                  incrementValue$22 = var40;
                                   var40++;
-                                  var55 = var55 + param0.field_k[incrementValue$51];
+                                  var55 = var55 + param0.field_k[incrementValue$22];
                                   var51.a(-121, var53 & 127);
                                   var51.a(-120, var55 & 127);
                                   continue L5;
@@ -658,12 +635,12 @@ final class vm extends nm {
                                     break L16;
                                   }
                                 }
-                                incrementValue$52 = var37;
+                                incrementValue$23 = var37;
                                 var37++;
-                                var53 = var53 + param0.field_k[incrementValue$52];
-                                incrementValue$53 = var38;
+                                var53 = var53 + param0.field_k[incrementValue$23];
+                                incrementValue$24 = var38;
                                 var38++;
-                                var54 = var54 + param0.field_k[incrementValue$53];
+                                var54 = var54 + param0.field_k[incrementValue$24];
                                 var51.a(-128, var53 & 127);
                                 var51.a(118, var54 & 127);
                                 continue L5;
@@ -679,15 +656,15 @@ final class vm extends nm {
                               }
                               var51.a(8, 81);
                               var51.a(-12, 3);
-                              incrementValue$54 = var50;
+                              incrementValue$25 = var50;
                               var50++;
-                              var51.a(-107, (int) param0.field_k[incrementValue$54]);
-                              incrementValue$55 = var50;
+                              var51.a(-107, (int) param0.field_k[incrementValue$25]);
+                              incrementValue$26 = var50;
                               var50++;
-                              var51.a(58, (int) param0.field_k[incrementValue$55]);
-                              incrementValue$56 = var50;
+                              var51.a(58, (int) param0.field_k[incrementValue$26]);
+                              incrementValue$27 = var50;
                               var50++;
-                              var51.a(-112, (int) param0.field_k[incrementValue$56]);
+                              var51.a(-112, (int) param0.field_k[incrementValue$27]);
                               continue L5;
                             }
                           } else {
@@ -818,7 +795,7 @@ final class vm extends nm {
                   }
                 }
               } else {
-                discarded$57 = param0.c((byte) 101);
+                param0.c((byte) 101);
                 var15++;
                 continue L1;
               }

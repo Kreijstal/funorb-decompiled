@@ -16,14 +16,13 @@ abstract class sc {
     abstract void a(int param0, java.awt.Component param1, int param2, byte param3);
 
     final static dm a(byte param0) {
-        int discarded$0 = 0;
         int var4_int = 0;
         int var1 = rc.field_j[0] * hl.field_K[0];
         byte[] var2 = mj.field_a[0];
         int[] var3 = new int[var1];
         if (param0 != -60) {
             Random var5 = (Random) null;
-            discarded$0 = sc.a((byte) 50, (Random) null, 37);
+            sc.a((byte) 50, (Random) null, 37);
         }
         for (var4_int = 0; var4_int < var1; var4_int++) {
             var3[var4_int] = cm.field_j[cd.a(255, (int) var2[var4_int])];
@@ -34,11 +33,10 @@ abstract class sc {
     }
 
     public static void b(byte param0) {
-        int discarded$0 = 0;
         field_b = null;
         if (param0 != 58) {
             Random var2 = (Random) null;
-            discarded$0 = sc.a((byte) 47, (Random) null, -73);
+            sc.a((byte) 47, (Random) null, -73);
         }
     }
 
@@ -49,8 +47,6 @@ abstract class sc {
         int stackIn_2_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -58,17 +54,6 @@ abstract class sc {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         try {
           L0: {
             if (param0 == -75) {
@@ -78,8 +63,7 @@ abstract class sc {
                   L1: while (true) {
                     var4 = param1.nextInt();
                     if (var3_int > var4) {
-                      stackOut_11_0 = jc.a(var4, param2, param0 ^ 121);
-                      stackIn_12_0 = stackOut_11_0;
+                      stackIn_12_0 = jc.a(var4, param2, param0 ^ 121);
                       decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
@@ -87,8 +71,7 @@ abstract class sc {
                     }
                   }
                 } else {
-                  stackOut_6_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> -1102483296);
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> -1102483296);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
@@ -96,8 +79,7 @@ abstract class sc {
                 throw new IllegalArgumentException();
               }
             } else {
-              stackOut_1_0 = 102;
-              stackIn_2_0 = stackOut_1_0;
+              stackIn_2_0 = 102;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -106,27 +88,19 @@ abstract class sc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var3);
-            stackOut_13_1 = new StringBuilder().append("sc.J(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var3);
+
+            stackIn_15_1 = new StringBuilder().append("sc.J(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L2;
             }
           }
@@ -144,11 +118,10 @@ abstract class sc {
     }
 
     final void a(int param0) {
-        int discarded$0 = 0;
         vb.a(this.field_d, this.field_a, this.field_c);
         if (param0 != 255) {
             Random var3 = (Random) null;
-            discarded$0 = sc.a((byte) -94, (Random) null, 54);
+            sc.a((byte) -94, (Random) null, 54);
         }
     }
 

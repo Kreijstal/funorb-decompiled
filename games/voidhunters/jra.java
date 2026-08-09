@@ -8,11 +8,11 @@ final class jra {
     static tpa field_a;
 
     final static void a(int param0, boolean param1, int param2) {
-        int var3 = 0;
-        String var4 = null;
-        String var5 = null;
-        String var6 = null;
-        CharSequence var11 = null;
+        int var3;
+        String var4;
+        Object var5;
+        String var6;
+        CharSequence var11;
         if (ola.field_p == null) {
           if (param2 == 19717) {
             return;
@@ -100,7 +100,7 @@ final class jra {
                     }
                   } else {
                     var6 = (String) null;
-                    lh.a((byte) -86, 0, (String) null, var4, var5, 2);
+                    lh.a((byte) -86, 0, (String) null, var4, (String) (var5), 2);
                     rc.field_b = -1;
                     ola.field_p = null;
                     if (param2 == 19717) {

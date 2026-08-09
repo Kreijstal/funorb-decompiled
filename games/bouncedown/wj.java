@@ -26,8 +26,8 @@ final class wj {
     }
 
     final static tg[] a(byte param0, int param1) {
-        tg[] var2 = null;
-        tg[] var3 = null;
+        tg[] var2;
+        tg[] var3;
         var3 = new tg[9];
         var2 = var3;
         if (param0 > -53) {

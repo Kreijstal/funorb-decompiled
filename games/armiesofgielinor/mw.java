@@ -14,7 +14,6 @@ final class mw extends dr {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -25,6 +24,7 @@ final class mw extends dr {
         int var13 = 0;
         int var14 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         var14 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -58,56 +58,38 @@ final class mw extends dr {
             var11 = 0;
             var12 = 0;
             L3: while (true) {
-              L4: {
-                if (var12 >= 6) {
-                  break L4;
-                } else {
-                  if (var14 == 0) {
-                    L5: {
-                      L6: {
-                        if (-6 >= (var12 ^ -1)) {
-                          break L6;
-                        } else {
-                          if (null == gt.field_b[var12]) {
-                            break L5;
-                          } else {
-                            break L6;
-                          }
-                        }
-                      }
-                      L7: {
-                        var13 = 3 + var11 * (2 + (-6 + ag.field_I.field_ob)) / (1 + se.field_d);
-                        var11++;
-                        var7 = 3 + (var11 * (2 + ag.field_I.field_ob - 6) / (se.field_d + 1) - 2 + -var13);
-                        if (5 <= var12) {
-                          break L7;
-                        } else {
-                          gt.field_b[var12].a(var7, param5 ^ -20499, var8, var13, var6_int);
-                          jj.field_i[var12].a(var7, -20500, -param2 + var9, 0, param2);
-                          we.field_g[var12].a(-param3 + (var7 - param3), -20500, param0, param3, var9);
-                          bp.field_j[var12].a(-param3 + (-param3 + var7), param5 + -20501, -var10 + (-param2 + var8), param3, var10);
-                          if (var14 == 0) {
-                            break L5;
-                          } else {
-                            break L7;
-                          }
-                        }
-                      }
-                      mc.field_f.a(var7, param5 ^ -20499, var8, var13, var6_int);
+              if (var12 >= 6) {
+                break L0;
+              } else {
+                L4: {
+                  L5: {
+                    if (-6 >= (var12 ^ -1)) {
                       break L5;
-                    }
-                    var12++;
-                    if (var14 == 0) {
-                      continue L3;
                     } else {
-                      break L4;
+                      if (null == gt.field_b[var12]) {
+                        break L4;
+                      } else {
+                        break L5;
+                      }
                     }
+                  }
+                  var13 = 3 + var11 * (2 + (-6 + ag.field_I.field_ob)) / (1 + se.field_d);
+                  var11++;
+                  var7 = 3 + (var11 * (2 + ag.field_I.field_ob - 6) / (se.field_d + 1) - 2 + -var13);
+                  if (5 <= var12) {
+                    mc.field_f.a(var7, param5 ^ -20499, var8, var13, var6_int);
+                    break L4;
                   } else {
-                    return;
+                    gt.field_b[var12].a(var7, param5 ^ -20499, var8, var13, var6_int);
+                    jj.field_i[var12].a(var7, -20500, -param2 + var9, 0, param2);
+                    we.field_g[var12].a(-param3 + (var7 - param3), -20500, param0, param3, var9);
+                    bp.field_j[var12].a(-param3 + (-param3 + var7), param5 + -20501, -var10 + (-param2 + var8), param3, var10);
+                    break L4;
                   }
                 }
+                var12++;
+                continue L3;
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -124,23 +106,12 @@ final class mw extends dr {
     final nd a(int param0, nd[] param1) {
         RuntimeException var3 = null;
         nd stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nd stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -151,35 +122,26 @@ final class mw extends dr {
                 break L1;
               }
             }
-            stackOut_2_0 = new nd(ub.a((byte) 123, param1[0].a(param0 ^ -24870)));
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = new nd(ub.a((byte) 123, param1[0].a(param0 ^ -24870)));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var3);
-            stackOut_4_1 = new StringBuilder().append("mw.C(").append(param0).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var3);
+
+            stackIn_6_1 = new StringBuilder().append("mw.C(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }
@@ -190,11 +152,11 @@ final class mw extends dr {
 
     final static void e(byte param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -216,11 +178,7 @@ final class mw extends dr {
                 vm.a(ab.field_c, var2 << -83239484, ab.field_c, var1_int, var3);
                 var1_int = var1_int + var3;
                 var2++;
-                if (var4 == 0) {
-                  continue L2;
-                } else {
-                  return;
-                }
+                continue L2;
               }
             }
           }

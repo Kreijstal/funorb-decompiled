@@ -47,7 +47,7 @@ abstract class gg implements jb {
     abstract wd a(byte param0);
 
     public final String b(int param0) {
-        int var2 = 0;
+        int var2;
         if (!this.b(true)) {
           var2 = 93 % ((param0 - 54) / 33);
           if (this.field_c - -350L > lj.a((byte) -23)) {

@@ -17,13 +17,6 @@ final class hc {
         int stackIn_10_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == 1) {
           if (!wh.field_d) {
             if (ed.c(true)) {
@@ -35,19 +28,16 @@ final class hc {
             if (null == gm.field_d) {
               L0: {
                 if (!ed.c(true)) {
-                  stackOut_20_0 = 0;
-                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_0 = 0;
                   break L0;
                 } else {
-                  stackOut_19_0 = 1;
-                  stackIn_21_0 = stackOut_19_0;
+                  stackIn_21_0 = 1;
                   break L0;
                 }
               }
               return stackIn_21_0 != 0;
             } else {
-              stackOut_15_0 = 1;
-              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_0 = 1;
               return stackIn_17_0 != 0;
             }
           }
@@ -59,12 +49,10 @@ final class hc {
             } else {
               L1: {
                 if (!ed.c(true)) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_0 = 0;
                   break L1;
                 } else {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_0 = 1;
                   break L1;
                 }
               }
@@ -73,12 +61,10 @@ final class hc {
           } else {
             L2: {
               if (!ed.c(true)) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = 0;
                 break L2;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_0 = 1;
                 break L2;
               }
             }
@@ -98,35 +84,35 @@ final class hc {
     }
 
     final static String a(int param0, Throwable param1) throws IOException {
-        String var2 = null;
-        BufferedReader var6 = null;
-        String var7 = null;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        b var14 = null;
-        PrintWriter var20 = null;
-        StringWriter var21 = null;
-        String var22 = null;
-        BufferedReader var23 = null;
-        String var24 = null;
-        String var25 = null;
-        String var26 = null;
-        String var27 = null;
-        String var28 = null;
-        String var29 = null;
-        PrintWriter var30 = null;
-        StringWriter var31 = null;
-        String var32 = null;
-        BufferedReader var33 = null;
-        String var34 = null;
-        String var35 = null;
-        String var36 = null;
-        String var37 = null;
-        String var38 = null;
-        String var39 = null;
+        String var2;
+        BufferedReader var6;
+        String var7;
+        int var9;
+        int var10;
+        String var11;
+        int var12;
+        int var13;
+        b var14;
+        PrintWriter var20;
+        StringWriter var21;
+        String var22;
+        BufferedReader var23;
+        String var24;
+        String var25;
+        String var26;
+        String var27;
+        String var28;
+        String var29;
+        PrintWriter var30;
+        StringWriter var31;
+        String var32;
+        BufferedReader var33;
+        String var34;
+        String var35;
+        String var36;
+        String var37;
+        String var38;
+        String var39;
         L0: {
           var13 = DungeonAssault.field_K;
           if (param1 instanceof b) {

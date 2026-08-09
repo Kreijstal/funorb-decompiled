@@ -23,7 +23,7 @@ final class fk extends df {
         if (param1 != -29402) {
             return;
         }
-        boolean discarded$0 = param0.drawImage(this.field_g, param2, param3, (java.awt.image.ImageObserver) ((Object) this.field_j));
+        param0.drawImage(this.field_g, param2, param3, (java.awt.image.ImageObserver) ((Object) this.field_j));
     }
 
     public fk() {

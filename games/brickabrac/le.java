@@ -7,7 +7,7 @@ final class le extends nb {
     private java.awt.Component field_h;
 
     final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
-        boolean discarded$10 = param3.drawImage(this.field_c, param1, param0, (java.awt.image.ImageObserver) ((Object) this.field_h));
+        param3.drawImage(this.field_c, param1, param0, (java.awt.image.ImageObserver) ((Object) this.field_h));
         if (param2 != -17260) {
             java.awt.Graphics var6 = (java.awt.Graphics) null;
             this.a(84, 3, -39, (java.awt.Graphics) null);
@@ -15,10 +15,10 @@ final class le extends nb {
     }
 
     final void a(java.awt.Component param0, int param1, boolean param2, int param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
-        java.awt.Graphics var8 = null;
+        java.awt.image.DataBufferInt var5;
+        java.awt.image.DirectColorModel var6;
+        java.awt.image.WritableRaster var7;
+        java.awt.Graphics var8;
         this.field_g = param3;
         this.field_f = param1;
         this.field_d = new int[1 + param3 * param1];

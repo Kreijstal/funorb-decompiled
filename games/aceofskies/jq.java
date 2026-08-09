@@ -45,14 +45,6 @@ final class jq extends oo implements dn {
     }
 
     private final void a(boolean param0, fr param1, int param2) {
-        mi discarded$2 = null;
-        mi discarded$3 = null;
-        RuntimeException var4 = null;
-        String var4_ref = null;
-        jn var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
@@ -60,14 +52,10 @@ final class jq extends oo implements dn {
         String stackIn_33_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        String var4 = null;
+        RuntimeException var4_ref = null;
+        jn var5 = null;
+        int var6 = 0;
         var6 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -82,11 +70,11 @@ final class jq extends oo implements dn {
             }
             L2: {
               if (param1.field_b) {
-                var4_ref = aa.field_d;
+                var4 = aa.field_d;
                 break L2;
               } else {
                 if (null != param1.field_c) {
-                  var4_ref = tb.field_e;
+                  var4 = tb.field_e;
                   if (this.field_db == null) {
                     break L2;
                   } else {
@@ -94,7 +82,7 @@ final class jq extends oo implements dn {
                     break L2;
                   }
                 } else {
-                  var4_ref = param1.field_f;
+                  var4 = param1.field_f;
                   if ((param1.field_a ^ -1) != -249) {
                     break L2;
                   } else {
@@ -106,7 +94,7 @@ final class jq extends oo implements dn {
                         break L3;
                       }
                     }
-                    var4_ref = rl.field_i;
+                    var4 = rl.field_i;
                     this.field_eb = true;
                     break L2;
                   }
@@ -114,14 +102,14 @@ final class jq extends oo implements dn {
               }
             }
             L4: {
-              var5 = new jn((oo) (this), b.field_c, var4_ref);
+              var5 = new jn((oo) (this), b.field_c, var4);
               if (param1.field_b) {
                 if (param1.field_d) {
                   this.d(new rs((jq) (this)), -30244);
                   decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  discarded$2 = var5.a((no) (this), param2 + 17536, mq.field_i);
+                  var5.a((no) (this), param2 + 17536, mq.field_i);
                   break L4;
                 }
               } else {
@@ -136,7 +124,7 @@ final class jq extends oo implements dn {
                       break L5;
                     }
                   } else {
-                    discarded$3 = var5.a((no) (this), param2 ^ 17536, mq.field_i);
+                    var5.a((no) (this), param2 ^ 17536, mq.field_i);
                     break L5;
                   }
                 }
@@ -160,28 +148,20 @@ final class jq extends oo implements dn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var4 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) (var4);
-            stackOut_30_1 = new StringBuilder().append("jq.KA(").append(param0).append(',');
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            var4_ref = decompiledCaughtException;
+            stackIn_32_0 = (RuntimeException) (var4_ref);
+
+            stackIn_32_1 = new StringBuilder().append("jq.KA(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
               break L6;
             } else {
-              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
               break L6;
             }
           }
@@ -195,8 +175,8 @@ final class jq extends oo implements dn {
     }
 
     final boolean h(int param0) {
-        fr var2 = null;
-        mi var3 = null;
+        fr var2;
+        mi var3;
         if (param0 == 11) {
           if (this.field_z) {
             if (!this.field_gb) {

@@ -33,20 +33,20 @@ final class ki {
     }
 
     final static void a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         og var4_ref_og = null;
-        byte[] var5 = null;
+        Object var5 = null;
         int var6 = 0;
         byte[] var8 = null;
         um var9 = null;
         pc var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         var6 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -84,7 +84,7 @@ final class ki {
                   break L0;
                 } else {
                   var9.field_p = true;
-                  var9.field_n = var5;
+                  var9.field_n = (byte[]) (var5);
                   var9.c(2779);
                   decompiledRegionSelector0 = 3;
                   break L0;
@@ -148,14 +148,12 @@ final class ki {
     }
 
     final void a(int param0, byte param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        double var6 = 0.0;
-        double var8 = 0.0;
-        int var10 = 0;
+        int var4;
+        int var5;
+        double var6;
+        double var8;
+        int var10;
         double stackIn_3_0 = 0.0;
-        double stackOut_2_0 = 0.0;
-        double stackOut_1_0 = 0.0;
         L0: {
           var10 = Pixelate.field_H ? 1 : 0;
           var4 = 2 + ((-this.field_n + 4096) * 4 >> 1453569708);
@@ -164,12 +162,10 @@ final class ki {
           var6 = (double)var5 / 300.0;
           this.field_p = param0;
           if (0.0 > this.field_l) {
-            stackOut_2_0 = 0.001;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0.001;
             break L0;
           } else {
-            stackOut_1_0 = -0.001;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = -0.001;
             break L0;
           }
         }
@@ -381,7 +377,7 @@ final class ki {
     }
 
     final void b(int param0) {
-        int var2 = 0;
+        int var2;
         if (param0 != 3887) {
           this.b(19);
           var2 = (int)(this.field_l * 32768.0 / 3.141592653589793);

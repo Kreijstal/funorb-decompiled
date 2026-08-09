@@ -9,48 +9,18 @@ final class pq extends com.ms.dll.Callback {
     private volatile int field_e;
 
     final void a(java.awt.Component param0, byte param1, boolean param2) {
-        int discarded$6 = 0;
-        int discarded$7 = 0;
-        int discarded$8 = 0;
-        int discarded$9 = 0;
-        int discarded$10 = 0;
-        int discarded$11 = 0;
-        int var5 = 0;
-        Object var6 = null;
-        Throwable var7 = null;
-        Throwable var8 = null;
-        com.ms.awt.WComponentPeer var9 = null;
         int stackIn_4_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
-        Object stackIn_15_0 = null;
         Object stackIn_16_0 = null;
         Object stackIn_17_0 = null;
         int stackIn_17_1 = 0;
-        Object stackIn_28_0 = null;
         Object stackIn_29_0 = null;
         Object stackIn_30_0 = null;
         int stackIn_30_1 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        Object stackOut_27_0 = null;
-        Object stackOut_29_0 = null;
-        int stackOut_29_1 = 0;
-        Object stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        Object stackOut_14_0 = null;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        Object stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
+        int var5 = 0;
+        Object var6 = null;
+        com.ms.awt.WComponentPeer var9 = null;
         L0: {
           var9 = (com.ms.awt.WComponentPeer) null;
           var5 = var9.getTopHwnd();
@@ -59,34 +29,27 @@ final class pq extends com.ms.dll.Callback {
           } else {
             L1: {
               if (param2) {
-                stackOut_3_0 = 0;
-                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_0 = 0;
                 break L1;
               } else {
-                stackOut_2_0 = 1;
-                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_0 = 1;
                 break L1;
               }
             }
             L2: {
-              stackOut_4_0 = stackIn_4_0;
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_5_0 = stackOut_4_0;
+
+
               if (this.field_c) {
-                stackOut_6_0 = stackIn_6_0;
-                stackOut_6_1 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+
+                stackIn_7_1 = 0;
                 break L2;
               } else {
-                stackOut_5_0 = stackIn_5_0;
-                stackOut_5_1 = 1;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
+
+                stackIn_7_1 = 1;
                 break L2;
               }
             }
-            if (stackIn_7_0 != stackIn_7_1) {
+            if (stackIn_4_0 != stackIn_7_1) {
               break L0;
             } else {
               return;
@@ -98,7 +61,7 @@ final class pq extends com.ms.dll.Callback {
             break L3;
           } else {
             this.field_b = com.ms.win32.User32.LoadCursor(0, 32512);
-            discarded$6 = com.ms.dll.Root.alloc(this);
+            com.ms.dll.Root.alloc(this);
             this.field_d = true;
             break L3;
           }
@@ -107,7 +70,7 @@ final class pq extends com.ms.dll.Callback {
           if (param1 < -23) {
             break L4;
           } else {
-            discarded$7 = this.callback(-85, 14, 75, 9);
+            this.callback(-85, 14, 75, 9);
             break L4;
           }
         }
@@ -115,11 +78,11 @@ final class pq extends com.ms.dll.Callback {
           L5: {
             if (this.field_e != 0) {
               this.field_c = true;
-              discarded$8 = com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
+              com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
               var6 = this;
               synchronized (var6) {
                 L6: {
-                  discarded$9 = com.ms.win32.User32.SetWindowLong(this.field_e, -4, this.field_a);
+                  com.ms.win32.User32.SetWindowLong(this.field_e, -4, this.field_a);
                   break L6;
                 }
               }
@@ -137,75 +100,55 @@ final class pq extends com.ms.dll.Callback {
             }
           }
           L8: {
-            stackOut_27_0 = this;
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_28_0 = stackOut_27_0;
+            stackIn_29_0 = this;
+
             if (!param2) {
-              stackOut_29_0 = this;
-              stackOut_29_1 = 0;
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
+              stackIn_30_0 = this;
+              stackIn_30_1 = 0;
               break L8;
             } else {
-              stackOut_28_0 = this;
-              stackOut_28_1 = 1;
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_0 = this;
+              stackIn_30_1 = 1;
               break L8;
             }
           }
           ((pq) (this)).field_c = stackIn_30_1 != 0;
-          discarded$10 = com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
+          com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
           return;
         } else {
           L9: {
-            stackOut_14_0 = this;
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_15_0 = stackOut_14_0;
+            stackIn_16_0 = this;
+
             if (!param2) {
-              stackOut_16_0 = this;
-              stackOut_16_1 = 0;
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_0 = this;
+              stackIn_17_1 = 0;
               break L9;
             } else {
-              stackOut_15_0 = this;
-              stackOut_15_1 = 1;
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_0 = this;
+              stackIn_17_1 = 1;
               break L9;
             }
           }
           ((pq) (this)).field_c = stackIn_17_1 != 0;
-          discarded$11 = com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
+          com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
           return;
         }
     }
 
     final void a(int param0, int param1, int param2) {
-        boolean discarded$0 = false;
         if (param2 != 9537) {
             this.field_e = 62;
-            discarded$0 = com.ms.win32.User32.SetCursorPos(param1, param0);
+            com.ms.win32.User32.SetCursorPos(param1, param0);
             return;
         }
-        boolean discarded$1 = com.ms.win32.User32.SetCursorPos(param1, param0);
+        com.ms.win32.User32.SetCursorPos(param1, param0);
     }
 
     final synchronized int callback(int param0, int param1, int param2, int param3) {
-        int discarded$3 = 0;
-        int discarded$4 = 0;
-        int discarded$5 = 0;
-        int var5 = 0;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
+        int var5;
         if (this.field_e == param0) {
           if (-33 != (param1 ^ -1)) {
             if (101024 != param1) {
@@ -219,16 +162,14 @@ final class pq extends com.ms.dll.Callback {
             } else {
               L0: {
                 if (!this.field_c) {
-                  stackOut_20_0 = 0;
-                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_0 = 0;
                   break L0;
                 } else {
-                  stackOut_19_0 = this.field_b;
-                  stackIn_21_0 = stackOut_19_0;
+                  stackIn_21_0 = this.field_b;
                   break L0;
                 }
               }
-              discarded$3 = com.ms.win32.User32.SetCursor(stackIn_21_0);
+              com.ms.win32.User32.SetCursor(stackIn_21_0);
               return 0;
             }
           } else {
@@ -245,31 +186,27 @@ final class pq extends com.ms.dll.Callback {
               } else {
                 L1: {
                   if (!this.field_c) {
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_0 = 0;
                     break L1;
                   } else {
-                    stackOut_10_0 = this.field_b;
-                    stackIn_12_0 = stackOut_10_0;
+                    stackIn_12_0 = this.field_b;
                     break L1;
                   }
                 }
-                discarded$4 = com.ms.win32.User32.SetCursor(stackIn_12_0);
+                com.ms.win32.User32.SetCursor(stackIn_12_0);
                 return 0;
               }
             } else {
               L2: {
                 if (!this.field_c) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = 0;
                   break L2;
                 } else {
-                  stackOut_5_0 = this.field_b;
-                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_0 = this.field_b;
                   break L2;
                 }
               }
-              discarded$5 = com.ms.win32.User32.SetCursor(stackIn_7_0);
+              com.ms.win32.User32.SetCursor(stackIn_7_0);
               return 0;
             }
           }

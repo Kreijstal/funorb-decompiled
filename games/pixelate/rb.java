@@ -34,8 +34,6 @@ final class rb extends de {
 
     private final boolean c(int param0, byte param1) {
         int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         L0: {
           if (param1 > 90) {
             break L0;
@@ -58,15 +56,13 @@ final class rb extends de {
               }
             }
             if (!this.a((byte) 66, param0)) {
-              stackOut_8_0 = 0;
-              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_0 = 0;
               break L1;
             } else {
               break L2;
             }
           }
-          stackOut_7_0 = 1;
-          stackIn_9_0 = stackOut_7_0;
+          stackIn_9_0 = 1;
           break L1;
         }
         return stackIn_9_0 != 0;
@@ -85,9 +81,9 @@ final class rb extends de {
     }
 
     private final int e(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         var4 = Pixelate.field_H ? 1 : 0;
         var2 = 0;
         var3 = param0;
@@ -108,38 +104,30 @@ final class rb extends de {
     }
 
     final void a(int param0) {
-        rk discarded$2 = null;
-        int discarded$3 = 0;
-        int var2 = 0;
-        ob var3 = null;
-        tc var4 = null;
-        int var5 = 0;
-        tf var6_ref_tf = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        tf var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
         int stackIn_3_0 = 0;
         int stackIn_22_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
+        int var2;
+        ob var3;
+        tc var4;
+        int var5;
+        int var6;
+        tf var6_ref_tf;
+        int var7;
+        int var8;
+        tf var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
         L0: {
           var15 = Pixelate.field_H ? 1 : 0;
           if (9 != this.field_l) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = 0;
             break L0;
           } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = 1;
             break L0;
           }
         }
@@ -149,7 +137,7 @@ final class rb extends de {
           if (param0 == 11) {
             break L1;
           } else {
-            discarded$2 = rb.b(-94, (byte) 78);
+            rb.b(-94, (byte) 78);
             break L1;
           }
         }
@@ -161,12 +149,10 @@ final class rb extends de {
           if (var5 >= tn.field_n.length) {
             L3: {
               if ((jm.field_j ^ -1) == 0) {
-                stackOut_21_0 = jn.field_v;
-                stackIn_22_0 = stackOut_21_0;
+                stackIn_22_0 = jn.field_v;
                 break L3;
               } else {
-                stackOut_20_0 = jm.field_j;
-                stackIn_22_0 = stackOut_20_0;
+                stackIn_22_0 = jm.field_j;
                 break L3;
               }
             }
@@ -205,7 +191,7 @@ final class rb extends de {
                   }
                 }
               } else {
-                discarded$3 = var3.a(th.field_a, 30, 280, 580, 400, 0, -1, 1, 0, 30);
+                var3.a(th.field_a, 30, 280, 580, 400, 0, -1, 1, 0, 30);
                 if (!jg.a((byte) 109)) {
                   break L4;
                 } else {
@@ -261,10 +247,10 @@ final class rb extends de {
     }
 
     private final int b(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var4;
+        int var7;
+        int var5;
+        int var6;
         var7 = Pixelate.field_H ? 1 : 0;
         var4 = 0;
         if (param0 == 4) {
@@ -357,11 +343,11 @@ final class rb extends de {
     }
 
     private final int d(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
         var7 = Pixelate.field_H ? 1 : 0;
         if (16 > param0) {
           return 264 + 40 * (param0 % 8);
@@ -424,20 +410,17 @@ final class rb extends de {
     }
 
     final void e(byte param0) {
-        pp discarded$8 = null;
         super.e((byte) -94);
         if (param0 > -64) {
             field_q = 92;
         }
         jn.field_v = this.b(4, uf.field_d, bg.field_k);
-        if (jn.field_v != -1) {
-            if (-2 == (nm.field_c ^ -1)) {
-                discarded$8 = mc.a(128, -126);
-                if (jn.field_v == jm.field_j) {
-                    jm.field_j = -1;
-                } else {
-                    jm.field_j = jn.field_v;
-                }
+        if (jn.field_v != -1 && -2 == (nm.field_c ^ -1)) {
+            mc.a(128, -126);
+            if (jn.field_v == jm.field_j) {
+                jm.field_j = -1;
+            } else {
+                jm.field_j = jn.field_v;
             }
         }
     }
@@ -460,9 +443,8 @@ final class rb extends de {
     }
 
     public static void b(boolean param0) {
-        rk discarded$0 = null;
         if (!param0) {
-            discarded$0 = rb.b(3, (byte) 57);
+            rb.b(3, (byte) 57);
         }
         field_p = null;
         field_r = null;
@@ -476,12 +458,9 @@ final class rb extends de {
     }
 
     final void a(byte param0, boolean param1, int param2) {
-        rk discarded$1 = null;
-        String var4 = null;
-        tf var5 = null;
+        String var4;
         tf stackIn_5_0 = null;
-        tf stackOut_4_0 = null;
-        tf stackOut_3_0 = null;
+        tf var5;
         L0: {
           L1: {
             var4 = this.d(param2, 7698);
@@ -489,16 +468,14 @@ final class rb extends de {
               break L1;
             } else {
               if ((this.field_k[param2] ^ -1) == -24) {
-                stackOut_4_0 = oc.field_S;
-                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_0 = oc.field_S;
                 break L0;
               } else {
                 break L1;
               }
             }
           }
-          stackOut_3_0 = oc.field_N;
-          stackIn_5_0 = stackOut_3_0;
+          stackIn_5_0 = oc.field_N;
           break L0;
         }
         L2: {
@@ -515,7 +492,7 @@ final class rb extends de {
           if (param0 <= -116) {
             break L3;
           } else {
-            discarded$1 = rb.b(40, (byte) -112);
+            rb.b(40, (byte) -112);
             break L3;
           }
         }

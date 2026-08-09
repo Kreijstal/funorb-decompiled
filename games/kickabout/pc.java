@@ -9,8 +9,8 @@ final class pc {
     static pu field_a;
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = Kickabout.field_G;
         if (param0 != 0) {
           if (param1 != -524289) {

@@ -15,12 +15,11 @@ final class jl implements Iterator {
     private ik field_i;
 
     public static void a(int param0) {
-        String discarded$0 = null;
         field_c = null;
         field_g = null;
         field_h = null;
         if (param0 != 0) {
-            discarded$0 = jl.a(true, 59, false, true);
+            jl.a(true, 59, false, true);
         }
     }
 
@@ -37,19 +36,19 @@ final class jl implements Iterator {
     }
 
     public final Object next() {
-        ec var1 = this.field_b;
+        Object var1 = this.field_b;
         if (var1 == this.field_i.field_f) {
             var1 = null;
             this.field_b = null;
         } else {
-            this.field_b = var1.field_i;
+            this.field_b = ((ec) (var1)).field_i;
         }
-        this.field_a = var1;
+        this.field_a = (ec) (var1);
         return var1;
     }
 
     final static String a(boolean param0, int param1, boolean param2, boolean param3) {
-        int var4 = 0;
+        int var4;
         var4 = 0;
         if (param1 <= -69) {
           if (!param3) {

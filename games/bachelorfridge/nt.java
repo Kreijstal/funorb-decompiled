@@ -19,16 +19,15 @@ final class nt extends ana {
     }
 
     private final void d(int param0) {
-        oha discarded$8 = null;
-        iv var3 = null;
-        ad var4 = null;
-        int var5 = 0;
-        aga var6 = null;
+        iv var3;
+        ad var4;
+        int var5;
+        aga var6;
         var5 = BachelorFridge.field_y;
         var6 = this.field_v.field_l.a(99, this.field_q.field_h);
         if (!var6.i(-118)) {
           var3 = (iv) ((Object) this.field_v.field_o.b((byte) 90));
-          discarded$8 = al.a(-46, this.field_v.field_k);
+          al.a(-46, this.field_v.field_k);
           L0: while (true) {
             if (var3 == null) {
               if (param0 != 24831) {

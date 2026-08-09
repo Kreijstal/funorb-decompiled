@@ -28,10 +28,15 @@ final class lf extends gj {
     }
 
     final static jk a(ii param0, byte param1) {
-        jk discarded$2 = null;
-        int discarded$3 = 0;
-        RuntimeException var2 = null;
+        jk stackIn_26_0 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         jk var5 = null;
@@ -39,24 +44,6 @@ final class lf extends gj {
         int var7 = 0;
         int var8 = 0;
         ii var9 = null;
-        jk stackIn_25_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        jk stackOut_24_0 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
         var8 = Bounce.field_N;
         try {
           L0: {
@@ -66,7 +53,7 @@ final class lf extends gj {
                 break L1;
               } else {
                 var9 = (ii) null;
-                discarded$2 = lf.a((ii) null, (byte) -64);
+                lf.a((ii) null, (byte) -64);
                 break L1;
               }
             }
@@ -98,7 +85,7 @@ final class lf extends gj {
               }
               L3: {
                 if (var4 != 0) {
-                  discarded$3 = param0.f(7, 16);
+                  param0.f(7, 16);
                   var5.field_u = ne.a(0, 16, var5.field_u, param0);
                   var5.field_s = ne.a(0, 16, var5.field_s, param0);
                   var5.field_y = ne.a(0, 16, var5.field_y, param0);
@@ -135,7 +122,7 @@ final class lf extends gj {
                       }
                     } else {
                       L7: {
-                        if ((255 & var5.field_v[var7]) > var6) {
+                        if ((255 & var5.field_v[var7] ^ -1) < (var6 ^ -1)) {
                           var6 = var5.field_v[var7] & 255;
                           break L7;
                         } else {
@@ -148,8 +135,7 @@ final class lf extends gj {
                   }
                 }
               }
-              stackOut_24_0 = (jk) (var5);
-              stackIn_25_0 = stackOut_24_0;
+              stackIn_26_0 = (jk) (var5);
               break L0;
             } else {
               throw new IllegalStateException("" + var2_int);
@@ -159,39 +145,31 @@ final class lf extends gj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) (var2);
-            stackOut_26_1 = new StringBuilder().append("lf.D(");
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackIn_29_0 = (RuntimeException) (var2);
+
+            stackIn_29_1 = new StringBuilder().append("lf.D(");
+
             if (param0 == null) {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
               break L8;
             } else {
-              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
               break L8;
             }
           }
-          throw ii.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param1 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param1 + ')');
         }
-        return stackIn_25_0;
+        return stackIn_26_0;
     }
 
     final static byte a(char param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           L1: {
             L2: {
@@ -363,11 +341,10 @@ final class lf extends gj {
     }
 
     public static void a(boolean param0) {
-        byte discarded$0 = 0;
         field_q = null;
         field_r = (int[][]) null;
         if (param0) {
-            discarded$0 = lf.a('￙', (byte) -105);
+            lf.a('￙', (byte) -105);
         }
     }
 

@@ -13,9 +13,8 @@ final class li extends df implements vb {
 
     final static void a(int param0, int param1) {
         try {
-            Object discarded$0 = null;
             try {
-                discarded$0 = ei.a("resizing", cd.e(113), (byte) 114, new Object[]{new Integer(param0)});
+                ei.a("resizing", cd.e(113), (byte) 114, new Object[]{new Integer(param0)});
             } catch (Throwable throwable) {
             }
             if (param1 != 0) {
@@ -29,8 +28,6 @@ final class li extends df implements vb {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        boolean discarded$0 = false;
-        int discarded$1 = 0;
         super.a((byte) -109, param1, param2, param3);
         if (param2 != 0) {
             return;
@@ -38,10 +35,10 @@ final class li extends df implements vb {
         dj var5 = ia.field_c;
         if (param0 >= -52) {
             qm var6 = (qm) null;
-            discarded$0 = this.a((qm) null, (byte) -28, 'ￒ', -66);
+            this.a((qm) null, (byte) -28, 'ￒ', -66);
         }
         if (!(null == this.field_K)) {
-            discarded$1 = var5.a(ji.field_f, this.field_n + param1, param3 - -this.field_j, this.field_v, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_m);
+            var5.a(ji.field_f, this.field_n + param1, param3 - -this.field_j, this.field_v, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_m);
         }
     }
 
@@ -51,8 +48,6 @@ final class li extends df implements vb {
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -60,23 +55,10 @@ final class li extends df implements vb {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        int stackOut_12_0 = 0;
-        boolean stackOut_10_0 = false;
-        boolean stackOut_7_0 = false;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
         try {
           L0: {
             if (super.a(param0, (byte) -124, param2, param3)) {
-              stackOut_2_0 = 1;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
@@ -90,19 +72,16 @@ final class li extends df implements vb {
               }
               if ((param3 ^ -1) != -99) {
                 if (-100 != (param3 ^ -1)) {
-                  stackOut_12_0 = 0;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackIn_13_0 = 0;
                   decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_10_0 = this.b(2, param0);
-                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_0 = this.b(2, param0);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                stackOut_7_0 = this.a(param0, 9555);
-                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_0 = this.a(param0, 9555);
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -112,27 +91,19 @@ final class li extends df implements vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var5);
-            stackOut_14_1 = new StringBuilder().append("li.N(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var5);
+
+            stackIn_16_1 = new StringBuilder().append("li.N(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L2;
             }
           }
@@ -154,90 +125,40 @@ final class li extends df implements vb {
     }
 
     final static void a(byte param0) {
-        RuntimeException runtimeException = null;
-        int var1_int = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var10 = ArcanistsMulti.field_G ? 1 : 0;
-        try {
-          L0: {
-            L1: {
-              if (an.field_f <= 0) {
-                break L1;
-              } else {
-                if ((an.field_j ^ -1) < -1) {
-                  var1_int = wk.field_l.field_w;
-                  var2 = wk.field_l.field_n;
-                  var3 = km.field_e.field_n;
-                  var4 = -var3 + an.field_f;
-                  var5 = km.field_e.field_w;
-                  var6 = -var5 + an.field_j;
-                  var7 = an.field_f - var1_int;
-                  var8 = an.field_j - var1_int;
-                  km.field_e.c(0, 0);
-                  km.field_e.e(var4, 0);
-                  km.field_e.d(0, var6);
-                  if (param0 > 68) {
-                    km.field_e.a(var4, var6);
-                    de.h(var3, 0, var4, an.field_j);
-                    var9 = var3;
-                    L2: while (true) {
-                      if (var4 <= var9) {
-                        de.h(0, var5, an.field_f, var6);
-                        var9 = var5;
-                        L3: while (true) {
-                          if (var9 >= var6) {
-                            de.a();
-                            decompiledRegionSelector0 = 2;
-                            break L0;
-                          } else {
-                            hk.field_k.c(0, var9);
-                            hk.field_k.e(var7, var9);
-                            var9 = var9 + var2;
-                            continue L3;
-                          }
-                        }
-                      } else {
-                        wk.field_l.c(var9, 0);
-                        wk.field_l.d(var9, var8);
-                        var9 = var9 + var2;
-                        continue L2;
-                      }
-                    }
-                  } else {
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                } else {
-                  break L1;
-                }
-              }
-            }
-            decompiledRegionSelector0 = 0;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "li.F(" + param0 + ')');
+        int var10 = ArcanistsMulti.field_G ? 1 : 0;
+        if (an.field_f <= 0 || (an.field_j ^ -1) >= -1) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
+        int var1_int = wk.field_l.field_w;
+        int var2 = wk.field_l.field_n;
+        int var3 = km.field_e.field_n;
+        int var4 = -var3 + an.field_f;
+        int var5 = km.field_e.field_w;
+        int var6 = -var5 + an.field_j;
+        int var7 = an.field_f - var1_int;
+        int var8 = an.field_j - var1_int;
+        km.field_e.c(0, 0);
+        km.field_e.e(var4, 0);
+        km.field_e.d(0, var6);
+        if (param0 <= 68) {
             return;
-          } else {
-            return;
-          }
+        }
+        try {
+            km.field_e.a(var4, var6);
+            de.h(var3, 0, var4, an.field_j);
+            for (var9 = var3; var4 > var9; var9 = var9 + var2) {
+                wk.field_l.c(var9, 0);
+                wk.field_l.d(var9, var8);
+            }
+            de.h(0, var5, an.field_f, var6);
+            for (var9 = var5; var9 < var6; var9 = var9 + var2) {
+                hk.field_k.c(0, var9);
+                hk.field_k.e(var7, var9);
+            }
+            de.a();
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) ((Object) runtimeException), "li.F(" + param0 + ')');
         }
     }
 
@@ -254,25 +175,15 @@ final class li extends df implements vb {
 
     public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
         int var6_int = 0;
-        RuntimeException var6 = null;
         int var7 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var6 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -312,31 +223,23 @@ final class li extends df implements vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var6);
-            stackOut_12_1 = new StringBuilder().append("li.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_16_0 = (RuntimeException) (var6);
+
+            stackIn_16_1 = new StringBuilder().append("li.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
             if (param4 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -355,15 +258,6 @@ final class li extends df implements vb {
     }
 
     final void a(String[] param0, byte param1) {
-        RuntimeException var3 = null;
-        int var3_int = 0;
-        int var4_int = 0;
-        gm var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -371,14 +265,13 @@ final class li extends df implements vb {
         String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4_int = 0;
+        gm var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -434,27 +327,19 @@ final class li extends df implements vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var3);
-            stackOut_14_1 = new StringBuilder().append("li.C(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var3);
+
+            stackIn_16_1 = new StringBuilder().append("li.C(");
+
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L4;
             }
           }

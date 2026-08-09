@@ -171,8 +171,8 @@ final class hj implements Runnable {
     }
 
     final static byte a(char param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         var3 = TrackController.field_F ? 1 : 0;
         if (param1 > -117) {
           hj.a(118);
@@ -793,8 +793,8 @@ final class hj implements Runnable {
     }
 
     final static ti a(int param0, int param1, int param2, int param3, byte param4) {
-        ti var5 = null;
-        int var6 = 0;
+        ti var5;
+        int var6;
         var6 = TrackController.field_F ? 1 : 0;
         var5 = (ti) ((Object) ea.field_s.b(2));
         L0: while (true) {

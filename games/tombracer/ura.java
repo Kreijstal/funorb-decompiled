@@ -6,188 +6,122 @@ final class ura {
     static String field_b;
 
     final static void a(int param0, String[] param1, byte param2, String param3) {
-        iu[] discarded$2 = null;
-        RuntimeException var4 = null;
         int var5 = 0;
         int stackIn_10_0 = 0;
         int stackIn_11_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_12_1 = 0;
+        int stackIn_11_1 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException stackIn_20_0 = null;
+        String stackIn_18_2 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException var4 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                kl.field_a = mua.field_a;
-                if ((param0 ^ -1) == -256) {
-                  break L2;
-                } else {
-                  L3: {
-                    L4: {
-                      if (param0 < 100) {
-                        break L4;
-                      } else {
-                        if ((param0 ^ -1) >= -106) {
-                          break L3;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                    ki.field_n = doa.a(param3, param0, (byte) 114);
-                    if (var5 == 0) {
-                      break L1;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  ki.field_n = pla.a(param2 + 228, param1);
-                  if (var5 == 0) {
-                    break L1;
+              kl.field_a = mua.field_a;
+              if ((param0 ^ -1) == -256) {
+                L2: {
+                  stackIn_10_0 = -108;
+
+                  if ((wua.field_n ^ -1) <= -14) {
+                    stackIn_11_0 = stackIn_10_0;
+                    stackIn_11_1 = 0;
+                    break L2;
                   } else {
+                    stackIn_11_0 = stackIn_10_0;
+                    stackIn_11_1 = 1;
                     break L2;
                   }
                 }
-              }
-              L5: {
-                stackOut_9_0 = -108;
-                stackIn_11_0 = stackOut_9_0;
-                stackIn_10_0 = stackOut_9_0;
-                if ((wua.field_n ^ -1) <= -14) {
-                  stackOut_11_0 = stackIn_11_0;
-                  stackOut_11_1 = 0;
-                  stackIn_12_0 = stackOut_11_0;
-                  stackIn_12_1 = stackOut_11_1;
-                  break L5;
+                ki.field_n = es.a((byte) stackIn_11_0, stackIn_11_1 != 0);
+                break L1;
+              } else {
+                if (param0 < 100) {
+                  ki.field_n = doa.a(param3, param0, (byte) 114);
+                  break L1;
                 } else {
-                  stackOut_10_0 = stackIn_10_0;
-                  stackOut_10_1 = 1;
-                  stackIn_12_0 = stackOut_10_0;
-                  stackIn_12_1 = stackOut_10_1;
-                  break L5;
+                  if ((param0 ^ -1) >= -106) {
+                    ki.field_n = pla.a(param2 + 228, param1);
+                    break L1;
+                  } else {
+                    ki.field_n = doa.a(param3, param0, (byte) 114);
+                    break L1;
+                  }
                 }
               }
-              ki.field_n = es.a((byte) stackIn_12_0, stackIn_12_1 != 0);
-              break L1;
             }
             if (param2 == -103) {
               break L0;
             } else {
-              discarded$2 = ura.a(55, -28, true, -42, -47);
+              ura.a(55, -28, true, -42, -47);
               return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L3: {
             var4 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) (var4);
-            stackOut_16_1 = new StringBuilder().append("ura.B(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackIn_17_0 = (RuntimeException) (var4);
+
+            stackIn_17_1 = new StringBuilder().append("ura.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
-              break L6;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
+              break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
-              break L6;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
+              break L3;
             }
           }
-          L7: {
-            stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(param2).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+          L4: {
+
+
+            stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param2).append(',');
+
             if (param3 == null) {
-              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L7;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
+              break L4;
             } else {
-              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
-              break L7;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
+              break L4;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_18_0), stackIn_21_2 + ')');
         }
     }
 
     final static iu[] a(int param0, int param1, boolean param2, int param3, int param4) {
-        iu dupTemp$4 = null;
-        iu dupTemp$5 = null;
-        iu[] var5 = null;
-        iu[] var6 = null;
+        iu dupTemp$2 = null;
+        iu dupTemp$3 = null;
+        iu[] var5;
+        iu[] var6;
         L0: {
           var6 = new iu[9];
           var5 = var6;
-          dupTemp$4 = jf.a(param0, 48, param3);
-          var6[6] = dupTemp$4;
-          var5[3] = dupTemp$4;
-          var5[2] = dupTemp$4;
-          var5[1] = dupTemp$4;
-          var5[0] = dupTemp$4;
-          dupTemp$5 = jf.a(param4, 110, param3);
-          var6[8] = dupTemp$5;
-          var5[7] = dupTemp$5;
-          var5[5] = dupTemp$5;
+          dupTemp$2 = jf.a(param0, 48, param3);
+          var6[6] = dupTemp$2;
+          var5[3] = dupTemp$2;
+          var5[2] = dupTemp$2;
+          var5[1] = dupTemp$2;
+          var5[0] = dupTemp$2;
+          dupTemp$3 = jf.a(param4, 110, param3);
+          var6[8] = dupTemp$3;
+          var5[7] = dupTemp$3;
+          var5[5] = dupTemp$3;
           if (param1 != 0) {
             var6[4] = jf.a(param1, 112, 64);
             break L0;
@@ -208,53 +142,45 @@ final class ura {
     }
 
     public static void a(boolean param0) {
-        iu[] discarded$0 = null;
         field_a = null;
         field_b = null;
         if (param0) {
-            discarded$0 = ura.a(123, 14, false, 60, -69);
+            ura.a(123, 14, false, 60, -69);
         }
     }
 
     final static void a(int param0) {
-        float var1 = 0.0f;
-        float var2 = 0.0f;
-        float var3 = 0.0f;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        gda var10 = null;
+        float var1;
+        float var2;
+        float var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        gda var10;
         L0: {
-          L1: {
-            if (ss.a(126)) {
-              break L1;
-            } else {
-              var1 = 0.10000000149011612f;
-              var7 = -24;
-              var5 = 0;
-              var4 = 16770747;
-              var6 = -24;
-              var2 = 0.05000000074505806f;
-              var3 = 0.6499999761581421f;
-              tga.field_a.ZA(var4, var1, var2, (float)var5, (float)var6, (float)var7);
-              if (!TombRacer.field_G) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
+          if (ss.a(126)) {
+            var3 = 1.15234375f;
+            var5 = -50;
+            var1 = 0.69921875f;
+            var4 = 61453;
+            var7 = -50;
+            var2 = 1.2000000476837158f;
+            var6 = -60;
+            break L0;
+          } else {
+            var1 = 0.10000000149011612f;
+            var7 = -24;
+            var5 = 0;
+            var4 = 16770747;
+            var6 = -24;
+            var2 = 0.05000000074505806f;
+            var3 = 0.6499999761581421f;
+            tga.field_a.ZA(var4, var1, var2, (float)var5, (float)var6, (float)var7);
+            break L0;
           }
-          var3 = 1.15234375f;
-          var5 = -50;
-          var1 = 0.69921875f;
-          var4 = 61453;
-          var7 = -50;
-          var2 = 1.2000000476837158f;
-          var6 = -60;
-          break L0;
         }
         var8 = 0;
         tga.field_a.xa(var3);

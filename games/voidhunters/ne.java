@@ -43,8 +43,8 @@ final class ne extends ka {
     private short[] field_I;
 
     final void O(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = VoidHunters.field_G;
         var4 = 0;
         L0: while (true) {
@@ -88,18 +88,9 @@ final class ne extends ka {
     }
 
     private final short a(byte param0, int param1, int param2, int param3, float param4, int param5, long param6, int param7, cbb param8, float param9) {
-        int fieldTemp$1 = 0;
-        RuntimeException var12 = null;
-        int var12_int = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int fieldTemp$0 = 0;
         short stackIn_7_0 = 0;
         short stackIn_12_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -107,16 +98,13 @@ final class ne extends ka {
         String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        short stackOut_6_0 = 0;
-        short stackOut_11_0 = 0;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        int var12_int = 0;
+        RuntimeException var12 = null;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = 0;
         var17 = VoidHunters.field_G;
         try {
           L0: {
@@ -135,8 +123,7 @@ final class ne extends ka {
                       var15++;
                       continue L1;
                     } else {
-                      stackOut_6_0 = (short)(-1 + var16);
-                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_7_0 = (short)(-1 + var16);
                       decompiledRegionSelector0 = 0;
                       break L0;
                     }
@@ -162,10 +149,9 @@ final class ne extends ka {
                   break L3;
                 }
               }
-              fieldTemp$1 = this.field_x;
+              fieldTemp$0 = this.field_x;
               this.field_x = this.field_x + 1;
-              stackOut_11_0 = (short)fieldTemp$1;
-              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_0 = (short)fieldTemp$0;
               decompiledRegionSelector0 = 1;
               break L0;
             }
@@ -174,27 +160,19 @@ final class ne extends ka {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var12 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) (var12);
-            stackOut_13_1 = new StringBuilder().append("ne.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackIn_15_0 = (RuntimeException) (var12);
+
+            stackIn_15_1 = new StringBuilder().append("ne.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
+
             if (param8 == null) {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }
@@ -208,8 +186,8 @@ final class ne extends ka {
     }
 
     final void H(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
+        int var4;
+        int var5;
         var5 = VoidHunters.field_G;
         var4 = 0;
         L0: while (true) {
@@ -267,20 +245,20 @@ final class ne extends ka {
     }
 
     private final void a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
         var15 = VoidHunters.field_G;
         var2 = 32767;
         var3 = 32767;
@@ -298,6 +276,8 @@ final class ne extends ka {
               this.field_j = (short)var7;
               this.field_e = (short)var5;
               this.field_t = (short)var4;
+              Math.sqrt((double)var8);
+              Math.sqrt((double)var9);
               this.field_p = true;
               return;
             } else {
@@ -378,12 +358,10 @@ final class ne extends ka {
     }
 
     final static String a(char param0, byte param1, String param2, String param3) {
-        java.net.URL discarded$15 = null;
-        StringBuilder discarded$16 = null;
-        StringBuilder discarded$17 = null;
-        StringBuilder discarded$18 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -394,38 +372,16 @@ final class ne extends ka {
         int var11 = 0;
         java.applet.Applet var12 = null;
         String stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_12_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        RuntimeException var4 = null;
         var11 = VoidHunters.field_G;
         try {
           L0: {
@@ -434,7 +390,7 @@ final class ne extends ka {
                 break L1;
               } else {
                 var12 = (java.applet.Applet) null;
-                discarded$15 = ne.a((java.net.URL) null, (byte) 9, (java.applet.Applet) null);
+                ne.a((java.net.URL) null, (byte) 9, (java.applet.Applet) null);
                 break L1;
               }
             }
@@ -464,14 +420,13 @@ final class ne extends ka {
             L4: while (true) {
               var10 = param3.indexOf((int) param0, var9);
               if ((var10 ^ -1) <= -1) {
-                discarded$16 = var8.append(param3.substring(var9, var10));
-                discarded$17 = var8.append(param2);
+                discarded$2 = var8.append(param3.substring(var9, var10));
+                discarded$3 = var8.append(param2);
                 var9 = 1 + var10;
                 continue L4;
               } else {
-                discarded$18 = var8.append(param3.substring(var9));
-                stackOut_12_0 = var8.toString();
-                stackIn_13_0 = stackOut_12_0;
+                discarded$4 = var8.append(param3.substring(var9));
+                stackIn_13_0 = var8.toString();
                 break L0;
               }
             }
@@ -480,56 +435,40 @@ final class ne extends ka {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) (var4);
-            stackOut_14_1 = new StringBuilder().append("ne.J(").append(param0).append(',').append(param1).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackIn_16_0 = (RuntimeException) (var4);
+
+            stackIn_16_1 = new StringBuilder().append("ne.J(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L5;
             }
           }
           L6: {
-            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+
+
+            stackIn_19_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
+
             if (param3 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L6;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_17_0), stackIn_20_2 + ')');
         }
         return stackIn_13_0;
     }
@@ -540,38 +479,15 @@ final class ne extends ka {
         Object var4 = null;
         Object var5 = null;
         java.net.URL stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        java.net.URL stackOut_7_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             L1: {
@@ -603,64 +519,47 @@ final class ne extends ka {
                 }
               }
             }
-            stackOut_7_0 = mpb.a(-1, param0, (byte) 50, (String) (var4), (String) (var5));
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = mpb.a(-1, param0, (byte) 50, (String) (var4), (String) (var5));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) (var3);
-            stackOut_9_1 = new StringBuilder().append("ne.D(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackIn_11_0 = (RuntimeException) (var3);
+
+            stackIn_11_1 = new StringBuilder().append("ne.D(");
+
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
               break L3;
             }
           }
           L4: {
-            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+
+
+            stackIn_14_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_15_2 + ')');
         }
         return stackIn_8_0;
     }
@@ -687,7 +586,7 @@ final class ne extends ka {
     }
 
     final static boolean a(boolean param0, byte param1) {
-        long dupTemp$3 = 0L;
+        long dupTemp$2 = 0L;
         if (param1 == -11) {
           L0: {
             if (null != pqa.field_o) {
@@ -699,9 +598,9 @@ final class ne extends ka {
           }
           if (pqa.field_o.field_f != 0) {
             L1: {
-              dupTemp$3 = wt.a(false);
-              bgb.field_o = dupTemp$3;
-              cbb.field_q = dupTemp$3;
+              dupTemp$2 = wt.a(false);
+              bgb.field_o = dupTemp$2;
+              cbb.field_q = dupTemp$2;
               if (1 != pqa.field_o.field_f) {
                 break L1;
               } else {
@@ -741,16 +640,41 @@ final class ne extends ka {
     }
 
     ne(qfa param0, cbb param1, int param2, int param3, int param4, int param5) {
-        od discarded$10 = null;
-        od discarded$11 = null;
-        od discarded$12 = null;
-        dgb discarded$13 = null;
-        int[][] discarded$14 = null;
-        int[][] discarded$15 = null;
-        int[] array$16 = null;
-        int incrementValue$17 = 0;
-        dea dupTemp$18 = null;
-        int fieldTemp$19 = 0;
+        od discarded$0 = null;
+        od discarded$1 = null;
+        od discarded$2 = null;
+        dgb discarded$3 = null;
+        int dupTemp$4 = 0;
+        int[] arrayValue$5 = null;
+        int[] array$6 = null;
+        int incrementValue$7 = 0;
+        dea dupTemp$8 = null;
+        int fieldTemp$9 = 0;
+        short dupTemp$10 = 0;
+        short dupTemp$11 = 0;
+        short dupTemp$12 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_55_0 = 0;
+        int stackIn_75_0 = 0;
+        int stackIn_76_0 = 0;
+        int stackIn_76_1 = 0;
+        int stackIn_97_0 = 0;
+        int stackIn_113_0 = 0;
+        long stackIn_168_0 = 0L;
+        int stackIn_168_1 = 0;
+        long stackIn_169_0 = 0L;
+        int stackIn_169_1 = 0;
+        int stackIn_169_2 = 0;
+        RuntimeException stackIn_211_0 = null;
+        StringBuilder stackIn_211_1 = null;
+        RuntimeException stackIn_212_0 = null;
+        StringBuilder stackIn_212_1 = null;
+        String stackIn_212_2 = null;
+        StringBuilder stackIn_214_1 = null;
+        StringBuilder stackIn_215_1 = null;
+        String stackIn_215_2 = null;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         int[] var8 = null;
         int var9_int = 0;
@@ -760,40 +684,40 @@ final class ne extends ka {
         int var11_int = 0;
         mmb[] var11 = null;
         int var12 = 0;
-        Object var13_ref = null;
         int var13 = 0;
+        Object var13_ref = null;
         int var14 = 0;
         int var15_int = 0;
         dea[] var15 = null;
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        int var19_int = 0;
         int[] var19 = null;
-        bqa var20_ref_bqa = null;
+        int var19_int = 0;
         int var20 = 0;
-        sr var21_ref_sr = null;
+        bqa var20_ref_bqa = null;
         int var21 = 0;
-        int var22_int = 0;
+        sr var21_ref_sr = null;
         float var22 = 0.0f;
-        int var23_int = 0;
+        int var22_int = 0;
         float var23 = 0.0f;
-        int var24_int = 0;
+        int var23_int = 0;
         float var24 = 0.0f;
-        int var25_int = 0;
+        int var24_int = 0;
         float var25 = 0.0f;
-        int var26_int = 0;
+        int var25_int = 0;
         float var26 = 0.0f;
-        int var27_int = 0;
+        int var26_int = 0;
         float var27 = 0.0f;
+        int var27_int = 0;
         int var28 = 0;
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
         dea var31_ref_dea = null;
         int var32_int = 0;
-        long var32_long = 0L;
         dea var32 = null;
+        long var32_long = 0L;
         int var33_int = 0;
         long var33 = 0L;
         int var34 = 0;
@@ -806,24 +730,24 @@ final class ne extends ka {
         float var40 = 0.0f;
         float var41 = 0.0f;
         float var42 = 0.0f;
-        float var43_float = 0.0f;
         int var43 = 0;
-        float var44_float = 0.0f;
+        float var43_float = 0.0f;
         int var44 = 0;
-        float var45_float = 0.0f;
+        float var44_float = 0.0f;
         int var45 = 0;
-        float var46_float = 0.0f;
+        float var45_float = 0.0f;
         int var46 = 0;
-        float var47_float = 0.0f;
+        float var46_float = 0.0f;
         int var47 = 0;
-        float var48_float = 0.0f;
+        float var47_float = 0.0f;
         int var48 = 0;
-        float var49_float = 0.0f;
+        float var48_float = 0.0f;
         int var49 = 0;
-        float var50_float = 0.0f;
+        float var49_float = 0.0f;
         int var50 = 0;
-        float var51_float = 0.0f;
+        float var50_float = 0.0f;
         int var51 = 0;
+        float var51_float = 0.0f;
         float var52 = 0.0f;
         float var53 = 0.0f;
         float var54 = 0.0f;
@@ -855,76 +779,6 @@ final class ne extends ka {
         long[] var82 = null;
         int[] var84 = null;
         float[] var86 = null;
-        int stackIn_25_0 = 0;
-        int stackIn_55_0 = 0;
-        int stackIn_74_0 = 0;
-        int stackIn_75_0 = 0;
-        int stackIn_76_0 = 0;
-        int stackIn_76_1 = 0;
-        int stackIn_97_0 = 0;
-        int stackIn_113_0 = 0;
-        long stackIn_167_0 = 0L;
-        int stackIn_167_1 = 0;
-        long stackIn_168_0 = 0L;
-        int stackIn_168_1 = 0;
-        long stackIn_169_0 = 0L;
-        int stackIn_169_1 = 0;
-        int stackIn_169_2 = 0;
-        RuntimeException stackIn_210_0 = null;
-        StringBuilder stackIn_210_1 = null;
-        RuntimeException stackIn_211_0 = null;
-        StringBuilder stackIn_211_1 = null;
-        RuntimeException stackIn_212_0 = null;
-        StringBuilder stackIn_212_1 = null;
-        String stackIn_212_2 = null;
-        RuntimeException stackIn_213_0 = null;
-        StringBuilder stackIn_213_1 = null;
-        RuntimeException stackIn_214_0 = null;
-        StringBuilder stackIn_214_1 = null;
-        RuntimeException stackIn_215_0 = null;
-        StringBuilder stackIn_215_1 = null;
-        String stackIn_215_2 = null;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_75_0 = 0;
-        int stackOut_75_1 = 0;
-        int stackOut_74_0 = 0;
-        byte stackOut_74_1 = 0;
-        int stackOut_112_0 = 0;
-        short stackOut_111_0 = 0;
-        long stackOut_166_0 = 0L;
-        int stackOut_166_1 = 0;
-        long stackOut_168_0 = 0L;
-        int stackOut_168_1 = 0;
-        int stackOut_168_2 = 0;
-        long stackOut_167_0 = 0L;
-        int stackOut_167_1 = 0;
-        int stackOut_167_2 = 0;
-        byte stackOut_96_0 = 0;
-        int stackOut_95_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_50_0 = 0;
-        RuntimeException stackOut_209_0 = null;
-        StringBuilder stackOut_209_1 = null;
-        RuntimeException stackOut_211_0 = null;
-        StringBuilder stackOut_211_1 = null;
-        String stackOut_211_2 = null;
-        RuntimeException stackOut_210_0 = null;
-        StringBuilder stackOut_210_1 = null;
-        String stackOut_210_2 = null;
-        RuntimeException stackOut_212_0 = null;
-        StringBuilder stackOut_212_1 = null;
-        RuntimeException stackOut_214_0 = null;
-        StringBuilder stackOut_214_1 = null;
-        String stackOut_214_2 = null;
-        RuntimeException stackOut_213_0 = null;
-        StringBuilder stackOut_213_1 = null;
-        String stackOut_213_2 = null;
         this.field_B = 0;
         this.field_f = 0;
         this.field_d = 0;
@@ -946,7 +800,7 @@ final class ne extends ka {
               if (!mq.a(param5, param2, false)) {
                 break L2;
               } else {
-                discarded$10 = new od((uq) null, 5126, 2, 0);
+                discarded$0 = new od((uq) null, 5126, 2, 0);
                 break L2;
               }
             }
@@ -954,7 +808,7 @@ final class ne extends ka {
               if (!toa.a(-8636, param2, param5)) {
                 break L3;
               } else {
-                discarded$11 = new od((uq) null, 5126, 3, 0);
+                discarded$1 = new od((uq) null, 5126, 3, 0);
                 break L3;
               }
             }
@@ -962,7 +816,7 @@ final class ne extends ka {
               if (!rb.a(-6070, param5, param2)) {
                 break L4;
               } else {
-                discarded$12 = new od((uq) null, 5121, 4, 0);
+                discarded$2 = new od((uq) null, 5121, 4, 0);
                 break L4;
               }
             }
@@ -970,7 +824,7 @@ final class ne extends ka {
               if (!dwa.a(param2, param5, false)) {
                 break L5;
               } else {
-                discarded$13 = new dgb();
+                discarded$3 = new dgb();
                 break L5;
               }
             }
@@ -988,12 +842,10 @@ final class ne extends ka {
                   var68 = var82;
                   var9 = var68;
                   if (0 == (256 & this.field_w)) {
-                    stackOut_24_0 = 0;
-                    stackIn_25_0 = stackOut_24_0;
+                    stackIn_25_0 = 0;
                     break L7;
                   } else {
-                    stackOut_23_0 = 1;
-                    stackIn_25_0 = stackOut_23_0;
+                    stackIn_25_0 = 1;
                     break L7;
                   }
                 }
@@ -1040,20 +892,15 @@ final class ne extends ka {
                               if (-1 != var15_int) {
                                 L13: {
                                   var16 = klb.field_o[65535 & param1.field_b[var69.field_b]] & 16777215;
-                                  stackOut_73_0 = var16;
-                                  stackIn_75_0 = stackOut_73_0;
-                                  stackIn_74_0 = stackOut_73_0;
+                                  stackIn_75_0 = var16;
+
                                   if (param1.field_r == null) {
-                                    stackOut_75_0 = stackIn_75_0;
-                                    stackOut_75_1 = 0;
-                                    stackIn_76_0 = stackOut_75_0;
-                                    stackIn_76_1 = stackOut_75_1;
+                                    stackIn_76_0 = stackIn_75_0;
+                                    stackIn_76_1 = 0;
                                     break L13;
                                   } else {
-                                    stackOut_74_0 = stackIn_74_0;
-                                    stackOut_74_1 = param1.field_r[var69.field_b];
-                                    stackIn_76_0 = stackOut_74_0;
-                                    stackIn_76_1 = stackOut_74_1;
+                                    stackIn_76_0 = stackIn_75_0;
+                                    stackIn_76_1 = param1.field_r[var69.field_b];
                                     break L13;
                                   }
                                 }
@@ -1132,7 +979,7 @@ final class ne extends ka {
                                             if (!bwa.a(param2, (byte) 121, this.field_u)) {
                                               break L20;
                                             } else {
-                                              discarded$14 = param1.a((byte) -37, false);
+                                              param1.a((byte) -37, false);
                                               break L20;
                                             }
                                           }
@@ -1144,7 +991,7 @@ final class ne extends ka {
                                             if (!ifb.a(-54, param2, this.field_u)) {
                                               break L21;
                                             } else {
-                                              discarded$15 = param1.a(-96);
+                                              param1.a(-96);
                                               break L21;
                                             }
                                           }
@@ -1177,8 +1024,10 @@ final class ne extends ka {
                                                             if (0 > var21) {
                                                               break L26;
                                                             } else {
-                                                              var19[var21] = var19[var21] + 1;
-                                                              this.field_K[var21][var19[var21]] = var20;
+                                                              dupTemp$4 = var19[var21];
+                                                              arrayValue$5 = this.field_K[var21];
+                                                              var19[var21] = dupTemp$4 + 1;
+                                                              arrayValue$5[dupTemp$4] = var20;
                                                               break L26;
                                                             }
                                                           }
@@ -1187,8 +1036,8 @@ final class ne extends ka {
                                                         }
                                                       }
                                                     } else {
-                                                      array$16 = new int[var84[var20]];
-                                                      this.field_K[var20] = array$16;
+                                                      array$6 = new int[var84[var20]];
+                                                      this.field_K[var20] = array$6;
                                                       var84[var20] = 0;
                                                       var20++;
                                                       continue L24;
@@ -1226,9 +1075,9 @@ final class ne extends ka {
                                           if (var17 == var19_int) {
                                             break L29;
                                           } else {
-                                            incrementValue$17 = var16;
+                                            incrementValue$7 = var16;
                                             var16++;
-                                            this.field_F[incrementValue$17] = var18;
+                                            this.field_F[incrementValue$7] = var18;
                                             var17 = var19_int;
                                             break L29;
                                           }
@@ -1240,7 +1089,7 @@ final class ne extends ka {
                                   } else {
                                     L30: {
                                       var19_int = this.field_g[var18];
-                                      if (var17 == var19_int) {
+                                      if ((var17 ^ -1) == (var19_int ^ -1)) {
                                         break L30;
                                       } else {
                                         var16++;
@@ -1275,12 +1124,10 @@ final class ne extends ka {
                                 }
                                 L33: {
                                   if (null == param1.field_u) {
-                                    stackOut_112_0 = -1;
-                                    stackIn_113_0 = stackOut_112_0;
+                                    stackIn_113_0 = -1;
                                     break L33;
                                   } else {
-                                    stackOut_111_0 = param1.field_u[var17];
-                                    stackIn_113_0 = stackOut_111_0;
+                                    stackIn_113_0 = param1.field_u[var17];
                                     break L33;
                                   }
                                 }
@@ -1577,27 +1424,19 @@ final class ne extends ka {
                                     } else {
                                       L42: {
                                         var32 = var15[var17];
-                                        stackOut_166_0 = (long)(var18 << -666879928) + ((long)(var30 << -141265320) + (long)var20) << 1718116512;
-                                        stackOut_166_1 = (256 + var32.field_a << -924739338) + (256 + var32.field_c << 1508777740);
-                                        stackIn_168_0 = stackOut_166_0;
-                                        stackIn_168_1 = stackOut_166_1;
-                                        stackIn_167_0 = stackOut_166_0;
-                                        stackIn_167_1 = stackOut_166_1;
+                                        stackIn_168_0 = (long)(var18 << -666879928) + ((long)(var30 << -141265320) + (long)var20) << 1718116512;
+
+                                        stackIn_168_1 = (256 + var32.field_a << -924739338) + (256 + var32.field_c << 1508777740);
+
                                         if (-1 > (var32.field_b ^ -1)) {
-                                          stackOut_168_0 = stackIn_168_0;
-                                          stackOut_168_1 = stackIn_168_1;
-                                          stackOut_168_2 = 1024;
-                                          stackIn_169_0 = stackOut_168_0;
-                                          stackIn_169_1 = stackOut_168_1;
-                                          stackIn_169_2 = stackOut_168_2;
+                                          stackIn_169_0 = stackIn_168_0;
+                                          stackIn_169_1 = stackIn_168_1;
+                                          stackIn_169_2 = 1024;
                                           break L42;
                                         } else {
-                                          stackOut_167_0 = stackIn_167_0;
-                                          stackOut_167_1 = stackIn_167_1;
-                                          stackOut_167_2 = 2048;
-                                          stackIn_169_0 = stackOut_167_0;
-                                          stackIn_169_1 = stackOut_167_1;
-                                          stackIn_169_2 = stackOut_167_2;
+                                          stackIn_169_0 = stackIn_168_0;
+                                          stackIn_169_1 = stackIn_168_1;
+                                          stackIn_169_2 = 2048;
                                           break L42;
                                         }
                                       }
@@ -1688,12 +1527,10 @@ final class ne extends ka {
                                               var27_int = 256 * var27_int / var29;
                                               var26_int = 256 * var26_int / var29;
                                               if (param1.field_E != null) {
-                                                stackOut_96_0 = param1.field_E[var16];
-                                                stackIn_97_0 = stackOut_96_0;
+                                                stackIn_97_0 = param1.field_E[var16];
                                                 break L48;
                                               } else {
-                                                stackOut_95_0 = 0;
-                                                stackIn_97_0 = stackOut_95_0;
+                                                stackIn_97_0 = 0;
                                                 break L48;
                                               }
                                             }
@@ -1703,9 +1540,9 @@ final class ne extends ka {
                                                 if (-2 != (var30 ^ -1)) {
                                                   break L49;
                                                 } else {
-                                                  dupTemp$18 = new dea();
-                                                  var15[var16] = dupTemp$18;
-                                                  var31_ref_dea = dupTemp$18;
+                                                  dupTemp$8 = new dea();
+                                                  var15[var16] = dupTemp$8;
+                                                  var31_ref_dea = dupTemp$8;
                                                   var31_ref_dea.field_a = var28;
                                                   var31_ref_dea.field_c = var27_int;
                                                   var31_ref_dea.field_b = var26_int;
@@ -1783,7 +1620,7 @@ final class ne extends ka {
                             } else {
                               L53: {
                                 var20_ref_bqa = param1.field_g[var19_int];
-                                if (var20_ref_bqa.field_b != var12) {
+                                if ((var20_ref_bqa.field_b ^ -1) != (var12 ^ -1)) {
                                   break L53;
                                 } else {
                                   L54: {
@@ -1862,25 +1699,21 @@ final class ne extends ka {
                             if (-1 == (param1.field_r[var12] ^ -1)) {
                               break L59;
                             } else {
-                              stackOut_48_0 = 1;
-                              stackIn_55_0 = stackOut_48_0;
+                              stackIn_55_0 = 1;
                               break L58;
                             }
                           }
                         }
                         if (var13_ref != null) {
                           if (0 != ((opa) (var13_ref)).field_q) {
-                            stackOut_53_0 = 1;
-                            stackIn_55_0 = stackOut_53_0;
+                            stackIn_55_0 = 1;
                             break L58;
                           } else {
-                            stackOut_52_0 = 0;
-                            stackIn_55_0 = stackOut_52_0;
+                            stackIn_55_0 = 0;
                             break L58;
                           }
                         } else {
-                          stackOut_50_0 = 0;
-                          stackIn_55_0 = stackOut_50_0;
+                          stackIn_55_0 = 0;
                           break L58;
                         }
                       }
@@ -1963,12 +1796,15 @@ final class ne extends ka {
                       }
                     }
                   }
-                  fieldTemp$19 = this.field_B;
+                  fieldTemp$9 = this.field_B;
                   this.field_B = this.field_B + 1;
-                  var8[fieldTemp$19] = var9_int;
-                  this.field_H[param1.field_k[var9_int]] = this.field_H[param1.field_k[var9_int]] + 1;
-                  this.field_H[param1.field_o[var9_int]] = this.field_H[param1.field_o[var9_int]] + 1;
-                  this.field_H[param1.field_K[var9_int]] = this.field_H[param1.field_K[var9_int]] + 1;
+                  var8[fieldTemp$9] = var9_int;
+                  dupTemp$10 = param1.field_k[var9_int];
+                  this.field_H[dupTemp$10] = this.field_H[dupTemp$10] + 1;
+                  dupTemp$11 = param1.field_o[var9_int];
+                  this.field_H[dupTemp$11] = this.field_H[dupTemp$11] + 1;
+                  dupTemp$12 = param1.field_K[var9_int];
+                  this.field_H[dupTemp$12] = this.field_H[dupTemp$12] + 1;
                   break L63;
                 }
                 var9_int++;
@@ -1980,56 +1816,40 @@ final class ne extends ka {
           decompiledCaughtException = decompiledCaughtParameter0;
           L67: {
             var7 = decompiledCaughtException;
-            stackOut_209_0 = (RuntimeException) (var7);
-            stackOut_209_1 = new StringBuilder().append("ne.<init>(");
-            stackIn_211_0 = stackOut_209_0;
-            stackIn_211_1 = stackOut_209_1;
-            stackIn_210_0 = stackOut_209_0;
-            stackIn_210_1 = stackOut_209_1;
+            stackIn_211_0 = (RuntimeException) (var7);
+
+            stackIn_211_1 = new StringBuilder().append("ne.<init>(");
+
             if (param0 == null) {
-              stackOut_211_0 = (RuntimeException) ((Object) stackIn_211_0);
-              stackOut_211_1 = (StringBuilder) ((Object) stackIn_211_1);
-              stackOut_211_2 = "null";
-              stackIn_212_0 = stackOut_211_0;
-              stackIn_212_1 = stackOut_211_1;
-              stackIn_212_2 = stackOut_211_2;
+              stackIn_212_0 = (RuntimeException) ((Object) stackIn_211_0);
+              stackIn_212_1 = (StringBuilder) ((Object) stackIn_211_1);
+              stackIn_212_2 = "null";
               break L67;
             } else {
-              stackOut_210_0 = (RuntimeException) ((Object) stackIn_210_0);
-              stackOut_210_1 = (StringBuilder) ((Object) stackIn_210_1);
-              stackOut_210_2 = "{...}";
-              stackIn_212_0 = stackOut_210_0;
-              stackIn_212_1 = stackOut_210_1;
-              stackIn_212_2 = stackOut_210_2;
+              stackIn_212_0 = (RuntimeException) ((Object) stackIn_211_0);
+              stackIn_212_1 = (StringBuilder) ((Object) stackIn_211_1);
+              stackIn_212_2 = "{...}";
               break L67;
             }
           }
           L68: {
-            stackOut_212_0 = (RuntimeException) ((Object) stackIn_212_0);
-            stackOut_212_1 = ((StringBuilder) (Object) stackIn_212_1).append(stackIn_212_2).append(',');
-            stackIn_214_0 = stackOut_212_0;
-            stackIn_214_1 = stackOut_212_1;
-            stackIn_213_0 = stackOut_212_0;
-            stackIn_213_1 = stackOut_212_1;
+
+
+            stackIn_214_1 = ((StringBuilder) (Object) stackIn_212_1).append(stackIn_212_2).append(',');
+
             if (param1 == null) {
-              stackOut_214_0 = (RuntimeException) ((Object) stackIn_214_0);
-              stackOut_214_1 = (StringBuilder) ((Object) stackIn_214_1);
-              stackOut_214_2 = "null";
-              stackIn_215_0 = stackOut_214_0;
-              stackIn_215_1 = stackOut_214_1;
-              stackIn_215_2 = stackOut_214_2;
+              stackIn_212_0 = (RuntimeException) ((Object) stackIn_212_0);
+              stackIn_215_1 = (StringBuilder) ((Object) stackIn_214_1);
+              stackIn_215_2 = "null";
               break L68;
             } else {
-              stackOut_213_0 = (RuntimeException) ((Object) stackIn_213_0);
-              stackOut_213_1 = (StringBuilder) ((Object) stackIn_213_1);
-              stackOut_213_2 = "{...}";
-              stackIn_215_0 = stackOut_213_0;
-              stackIn_215_1 = stackOut_213_1;
-              stackIn_215_2 = stackOut_213_2;
+              stackIn_212_0 = (RuntimeException) ((Object) stackIn_212_0);
+              stackIn_215_1 = (StringBuilder) ((Object) stackIn_214_1);
+              stackIn_215_2 = "{...}";
               break L68;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_215_0), stackIn_215_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_212_0), stackIn_215_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

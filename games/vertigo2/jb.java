@@ -40,28 +40,24 @@ final class jb extends ji {
     }
 
     private final void a(int param0, boolean param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
         int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
         L0: {
           var14 = Vertigo2.field_L ? 1 : 0;
           if ((param3 ^ -1) >= -2049) {
-            stackOut_2_0 = param3 * (4096 + param0) >> 1420937356;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = param3 * (4096 + param0) >> 1420937356;
             break L0;
           } else {
-            stackOut_1_0 = -(param0 * param3 >> -1240887252) + (param3 + param0);
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = -(param0 * param3 >> -1240887252) + (param3 + param0);
             break L0;
           }
         }
@@ -135,24 +131,14 @@ final class jb extends ji {
 
     final void a(byte param0, int param1, ed param2) {
         int var4_int = 0;
-        RuntimeException var4 = null;
         int var5 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException var4 = null;
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -189,27 +175,19 @@ final class jb extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var4);
-            stackOut_12_1 = new StringBuilder().append("jb.C(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var4);
+
+            stackIn_14_1 = new StringBuilder().append("jb.C(").append(param0).append(',').append(param1).append(',');
+
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L3;
             }
           }
@@ -225,130 +203,56 @@ final class jb extends ji {
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
-        Object stackIn_17_0 = null;
-        int stackIn_17_1 = 0;
         Object stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         Object stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         int stackIn_19_2 = 0;
-        Object stackIn_23_0 = null;
         Object stackIn_24_0 = null;
         Object stackIn_25_0 = null;
         int stackIn_25_1 = 0;
-        Object stackIn_27_0 = null;
         Object stackIn_28_0 = null;
         Object stackIn_29_0 = null;
         int stackIn_29_1 = 0;
-        Object stackIn_31_0 = null;
         Object stackIn_32_0 = null;
         Object stackIn_33_0 = null;
         int stackIn_33_1 = 0;
-        Object stackIn_42_0 = null;
         Object stackIn_43_0 = null;
         Object stackIn_44_0 = null;
         int stackIn_44_1 = 0;
-        Object stackIn_46_0 = null;
         Object stackIn_47_0 = null;
         Object stackIn_48_0 = null;
         int stackIn_48_1 = 0;
-        Object stackIn_51_0 = null;
         Object stackIn_52_0 = null;
         Object stackIn_53_0 = null;
         int stackIn_53_1 = 0;
-        Object stackIn_61_0 = null;
         Object stackIn_62_0 = null;
         Object stackIn_63_0 = null;
         int stackIn_63_1 = 0;
-        Object stackIn_65_0 = null;
         Object stackIn_66_0 = null;
         Object stackIn_67_0 = null;
         int stackIn_67_1 = 0;
-        Object stackIn_70_0 = null;
         Object stackIn_71_0 = null;
         Object stackIn_72_0 = null;
         int stackIn_72_1 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        Object stackOut_50_0 = null;
-        Object stackOut_52_0 = null;
-        int stackOut_52_1 = 0;
-        Object stackOut_51_0 = null;
-        int stackOut_51_1 = 0;
-        Object stackOut_45_0 = null;
-        Object stackOut_47_0 = null;
-        int stackOut_47_1 = 0;
-        Object stackOut_46_0 = null;
-        int stackOut_46_1 = 0;
-        Object stackOut_41_0 = null;
-        Object stackOut_43_0 = null;
-        int stackOut_43_1 = 0;
-        Object stackOut_42_0 = null;
-        int stackOut_42_1 = 0;
-        Object stackOut_69_0 = null;
-        Object stackOut_71_0 = null;
-        int stackOut_71_1 = 0;
-        Object stackOut_70_0 = null;
-        int stackOut_70_1 = 0;
-        Object stackOut_64_0 = null;
-        Object stackOut_66_0 = null;
-        int stackOut_66_1 = 0;
-        Object stackOut_65_0 = null;
-        int stackOut_65_1 = 0;
-        Object stackOut_60_0 = null;
-        Object stackOut_62_0 = null;
-        int stackOut_62_1 = 0;
-        Object stackOut_61_0 = null;
-        int stackOut_61_1 = 0;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        Object stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        int stackOut_18_2 = 0;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        int stackOut_17_2 = 0;
-        Object stackOut_30_0 = null;
-        Object stackOut_32_0 = null;
-        int stackOut_32_1 = 0;
-        Object stackOut_31_0 = null;
-        int stackOut_31_1 = 0;
-        Object stackOut_26_0 = null;
-        Object stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        Object stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        Object stackOut_22_0 = null;
-        Object stackOut_24_0 = null;
-        int stackOut_24_1 = 0;
-        Object stackOut_23_0 = null;
-        int stackOut_23_1 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
         L0: {
           var11 = Vertigo2.field_L ? 1 : 0;
           if (param1 < param2) {
-            stackOut_2_0 = param2;
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = param2;
             break L0;
           } else {
-            stackOut_1_0 = param1;
-            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_0 = param1;
             break L0;
           }
         }
@@ -356,36 +260,30 @@ final class jb extends ji {
         if (param3 == 12288) {
           L1: {
             if (var5 < param0) {
-              stackOut_7_0 = param0;
-              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_0 = param0;
               break L1;
             } else {
-              stackOut_6_0 = var5;
-              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_0 = var5;
               break L1;
             }
           }
           L2: {
             var5 = stackIn_8_0;
             if (param1 > param2) {
-              stackOut_10_0 = param2;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = param2;
               break L2;
             } else {
-              stackOut_9_0 = param1;
-              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_0 = param1;
               break L2;
             }
           }
           L3: {
             var6 = stackIn_11_0;
             if (var6 <= param0) {
-              stackOut_13_0 = var6;
-              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_0 = var6;
               break L3;
             } else {
-              stackOut_12_0 = param0;
-              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_0 = param0;
               break L3;
             }
           }
@@ -400,20 +298,15 @@ final class jb extends ji {
               var10 = (var5 + -param0 << 346720364) / var7;
               if (var5 == param2) {
                 L4: {
-                  stackOut_50_0 = this;
-                  stackIn_52_0 = stackOut_50_0;
-                  stackIn_51_0 = stackOut_50_0;
+                  stackIn_52_0 = this;
+
                   if (var6 != param1) {
-                    stackOut_52_0 = this;
-                    stackOut_52_1 = -var9 + 4096;
-                    stackIn_53_0 = stackOut_52_0;
-                    stackIn_53_1 = stackOut_52_1;
+                    stackIn_53_0 = this;
+                    stackIn_53_1 = -var9 + 4096;
                     break L4;
                   } else {
-                    stackOut_51_0 = this;
-                    stackOut_51_1 = var10 + 20480;
-                    stackIn_53_0 = stackOut_51_0;
-                    stackIn_53_1 = stackOut_51_1;
+                    stackIn_53_0 = this;
+                    stackIn_53_1 = var10 + 20480;
                     break L4;
                   }
                 }
@@ -423,20 +316,15 @@ final class jb extends ji {
               } else {
                 if (var5 != param1) {
                   L5: {
-                    stackOut_45_0 = this;
-                    stackIn_47_0 = stackOut_45_0;
-                    stackIn_46_0 = stackOut_45_0;
+                    stackIn_47_0 = this;
+
                     if (param2 == var6) {
-                      stackOut_47_0 = this;
-                      stackOut_47_1 = 12288 - -var9;
-                      stackIn_48_0 = stackOut_47_0;
-                      stackIn_48_1 = stackOut_47_1;
+                      stackIn_48_0 = this;
+                      stackIn_48_1 = 12288 - -var9;
                       break L5;
                     } else {
-                      stackOut_46_0 = this;
-                      stackOut_46_1 = 20480 - var8;
-                      stackIn_48_0 = stackOut_46_0;
-                      stackIn_48_1 = stackOut_46_1;
+                      stackIn_48_0 = this;
+                      stackIn_48_1 = 20480 - var8;
                       break L5;
                     }
                   }
@@ -445,20 +333,15 @@ final class jb extends ji {
                   return;
                 } else {
                   L6: {
-                    stackOut_41_0 = this;
-                    stackIn_43_0 = stackOut_41_0;
-                    stackIn_42_0 = stackOut_41_0;
+                    stackIn_43_0 = this;
+
                     if (param0 == var6) {
-                      stackOut_43_0 = this;
-                      stackOut_43_1 = 4096 + var8;
-                      stackIn_44_0 = stackOut_43_0;
-                      stackIn_44_1 = stackOut_43_1;
+                      stackIn_44_0 = this;
+                      stackIn_44_1 = 4096 + var8;
                       break L6;
                     } else {
-                      stackOut_42_0 = this;
-                      stackOut_42_1 = -var10 + 12288;
-                      stackIn_44_0 = stackOut_42_0;
-                      stackIn_44_1 = stackOut_42_1;
+                      stackIn_44_0 = this;
+                      stackIn_44_1 = -var10 + 12288;
                       break L6;
                     }
                   }
@@ -480,20 +363,15 @@ final class jb extends ji {
                 var10 = (var5 + -param0 << 346720364) / var7;
                 if (var5 == param2) {
                   L7: {
-                    stackOut_69_0 = this;
-                    stackIn_71_0 = stackOut_69_0;
-                    stackIn_70_0 = stackOut_69_0;
+                    stackIn_71_0 = this;
+
                     if (var6 != param1) {
-                      stackOut_71_0 = this;
-                      stackOut_71_1 = -var9 + 4096;
-                      stackIn_72_0 = stackOut_71_0;
-                      stackIn_72_1 = stackOut_71_1;
+                      stackIn_72_0 = this;
+                      stackIn_72_1 = -var9 + 4096;
                       break L7;
                     } else {
-                      stackOut_70_0 = this;
-                      stackOut_70_1 = var10 + 20480;
-                      stackIn_72_0 = stackOut_70_0;
-                      stackIn_72_1 = stackOut_70_1;
+                      stackIn_72_0 = this;
+                      stackIn_72_1 = var10 + 20480;
                       break L7;
                     }
                   }
@@ -503,20 +381,15 @@ final class jb extends ji {
                 } else {
                   if (var5 != param1) {
                     L8: {
-                      stackOut_64_0 = this;
-                      stackIn_66_0 = stackOut_64_0;
-                      stackIn_65_0 = stackOut_64_0;
+                      stackIn_66_0 = this;
+
                       if (param2 == var6) {
-                        stackOut_66_0 = this;
-                        stackOut_66_1 = 12288 - -var9;
-                        stackIn_67_0 = stackOut_66_0;
-                        stackIn_67_1 = stackOut_66_1;
+                        stackIn_67_0 = this;
+                        stackIn_67_1 = 12288 - -var9;
                         break L8;
                       } else {
-                        stackOut_65_0 = this;
-                        stackOut_65_1 = 20480 - var8;
-                        stackIn_67_0 = stackOut_65_0;
-                        stackIn_67_1 = stackOut_65_1;
+                        stackIn_67_0 = this;
+                        stackIn_67_1 = 20480 - var8;
                         break L8;
                       }
                     }
@@ -525,20 +398,15 @@ final class jb extends ji {
                     return;
                   } else {
                     L9: {
-                      stackOut_60_0 = this;
-                      stackIn_62_0 = stackOut_60_0;
-                      stackIn_61_0 = stackOut_60_0;
+                      stackIn_62_0 = this;
+
                       if (param0 == var6) {
-                        stackOut_62_0 = this;
-                        stackOut_62_1 = 4096 + var8;
-                        stackIn_63_0 = stackOut_62_0;
-                        stackIn_63_1 = stackOut_62_1;
+                        stackIn_63_0 = this;
+                        stackIn_63_1 = 4096 + var8;
                         break L9;
                       } else {
-                        stackOut_61_0 = this;
-                        stackOut_61_1 = -var10 + 12288;
-                        stackIn_63_0 = stackOut_61_0;
-                        stackIn_63_1 = stackOut_61_1;
+                        stackIn_63_0 = this;
+                        stackIn_63_1 = -var10 + 12288;
                         break L9;
                       }
                     }
@@ -553,27 +421,19 @@ final class jb extends ji {
               }
             } else {
               L10: {
-                stackOut_16_0 = this;
-                stackOut_16_1 = var7 << 1721524428;
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_18_1 = stackOut_16_1;
-                stackIn_17_0 = stackOut_16_0;
-                stackIn_17_1 = stackOut_16_1;
+                stackIn_18_0 = this;
+
+                stackIn_18_1 = var7 << 1721524428;
+
                 if ((this.field_E ^ -1) < -2049) {
-                  stackOut_18_0 = this;
-                  stackOut_18_1 = stackIn_18_1;
-                  stackOut_18_2 = -(this.field_E * 2) + 8192;
-                  stackIn_19_0 = stackOut_18_0;
-                  stackIn_19_1 = stackOut_18_1;
-                  stackIn_19_2 = stackOut_18_2;
+                  stackIn_19_0 = this;
+                  stackIn_19_1 = stackIn_18_1;
+                  stackIn_19_2 = -(this.field_E * 2) + 8192;
                   break L10;
                 } else {
-                  stackOut_17_0 = this;
-                  stackOut_17_1 = stackIn_17_1;
-                  stackOut_17_2 = this.field_E * 2;
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_19_1 = stackOut_17_1;
-                  stackIn_19_2 = stackOut_17_2;
+                  stackIn_19_0 = this;
+                  stackIn_19_1 = stackIn_18_1;
+                  stackIn_19_2 = this.field_E * 2;
                   break L10;
                 }
               }
@@ -589,20 +449,15 @@ final class jb extends ji {
                     var10 = (var5 + -param0 << 346720364) / var7;
                     if (var5 == param2) {
                       L13: {
-                        stackOut_30_0 = this;
-                        stackIn_32_0 = stackOut_30_0;
-                        stackIn_31_0 = stackOut_30_0;
+                        stackIn_32_0 = this;
+
                         if (var6 != param1) {
-                          stackOut_32_0 = this;
-                          stackOut_32_1 = -var9 + 4096;
-                          stackIn_33_0 = stackOut_32_0;
-                          stackIn_33_1 = stackOut_32_1;
+                          stackIn_33_0 = this;
+                          stackIn_33_1 = -var9 + 4096;
                           break L13;
                         } else {
-                          stackOut_31_0 = this;
-                          stackOut_31_1 = var10 + 20480;
-                          stackIn_33_0 = stackOut_31_0;
-                          stackIn_33_1 = stackOut_31_1;
+                          stackIn_33_0 = this;
+                          stackIn_33_1 = var10 + 20480;
                           break L13;
                         }
                       }
@@ -611,20 +466,15 @@ final class jb extends ji {
                     } else {
                       if (var5 == param1) {
                         L14: {
-                          stackOut_26_0 = this;
-                          stackIn_28_0 = stackOut_26_0;
-                          stackIn_27_0 = stackOut_26_0;
+                          stackIn_28_0 = this;
+
                           if (param0 == var6) {
-                            stackOut_28_0 = this;
-                            stackOut_28_1 = 4096 + var8;
-                            stackIn_29_0 = stackOut_28_0;
-                            stackIn_29_1 = stackOut_28_1;
+                            stackIn_29_0 = this;
+                            stackIn_29_1 = 4096 + var8;
                             break L14;
                           } else {
-                            stackOut_27_0 = this;
-                            stackOut_27_1 = -var10 + 12288;
-                            stackIn_29_0 = stackOut_27_0;
-                            stackIn_29_1 = stackOut_27_1;
+                            stackIn_29_0 = this;
+                            stackIn_29_1 = -var10 + 12288;
                             break L14;
                           }
                         }
@@ -632,20 +482,15 @@ final class jb extends ji {
                         break L12;
                       } else {
                         L15: {
-                          stackOut_22_0 = this;
-                          stackIn_24_0 = stackOut_22_0;
-                          stackIn_23_0 = stackOut_22_0;
+                          stackIn_24_0 = this;
+
                           if (param2 == var6) {
-                            stackOut_24_0 = this;
-                            stackOut_24_1 = 12288 - -var9;
-                            stackIn_25_0 = stackOut_24_0;
-                            stackIn_25_1 = stackOut_24_1;
+                            stackIn_25_0 = this;
+                            stackIn_25_1 = 12288 - -var9;
                             break L15;
                           } else {
-                            stackOut_23_0 = this;
-                            stackOut_23_1 = 20480 - var8;
-                            stackIn_25_0 = stackOut_23_0;
-                            stackIn_25_1 = stackOut_23_1;
+                            stackIn_25_0 = this;
+                            stackIn_25_1 = 20480 - var8;
                             break L15;
                           }
                         }
@@ -667,26 +512,26 @@ final class jb extends ji {
     }
 
     final int[][] b(int param0, int param1) {
-        int[][] var3 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int[][] var13 = null;
-        int[][] var15 = null;
-        int[][] var20 = null;
-        int[] var21 = null;
-        int[] var22 = null;
-        int[] var23 = null;
-        int[] var25 = null;
-        int[] var26 = null;
-        int[] var27 = null;
-        int[][] var32 = null;
-        int[][] var33 = null;
-        int[] var34 = null;
-        int[] var35 = null;
-        int[] var36 = null;
+        int[][] var3;
+        int[] var8;
+        int[] var9;
+        int[] var10;
+        int var11;
+        int var12;
+        int[][] var13;
+        int[][] var15;
+        int[][] var20;
+        int[] var21;
+        int[] var22;
+        int[] var23;
+        int[] var25;
+        int[] var26;
+        int[] var27;
+        int[][] var32;
+        int[][] var33;
+        int[] var34;
+        int[] var35;
+        int[] var36;
         var12 = Vertigo2.field_L ? 1 : 0;
         if (param0 == -3780) {
           var20 = this.field_v.a(param1, -2);

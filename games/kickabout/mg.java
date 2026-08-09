@@ -13,7 +13,6 @@ final class mg {
     static int field_c;
 
     public static void a(int param0) {
-        gm discarded$0 = null;
         field_a = null;
         field_e = null;
         field_b = null;
@@ -21,12 +20,12 @@ final class mg {
         field_g = null;
         if (param0 != 142) {
             up var2 = (up) null;
-            discarded$0 = mg.a((up) null, -88, 47, false, 24, (byte) -47);
+            mg.a((up) null, -88, 47, false, 24, (byte) -47);
         }
     }
 
     final static void a(byte param0) {
-        wh var1 = null;
+        wh var1;
         var1 = wt.a(72, false, em.field_e, 43, 128, 34);
         if (var1 == null) {
           if (param0 != -25) {
@@ -47,29 +46,17 @@ final class mg {
     }
 
     final static gm a(up param0, int param1, int param2, boolean param3, int param4, byte param5) {
-        gm discarded$2 = null;
         vn var6 = null;
         RuntimeException var6_ref = null;
         gm var7 = null;
         up var8 = null;
         gm stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gm stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
@@ -78,42 +65,33 @@ final class mg {
                 break L1;
               } else {
                 var8 = (up) null;
-                discarded$2 = mg.a((up) null, 111, 43, false, 111, (byte) 15);
+                mg.a((up) null, 111, 43, false, 111, (byte) 15);
                 break L1;
               }
             }
             var7 = new gm(var6, param0.field_q, true);
             var7.a((byte) -31, 0);
             var7.field_mb.a(dq.a((byte) -121, var7.field_mb.a(true), new Random()), -38);
-            stackOut_2_0 = (gm) (var7);
-            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_0 = (gm) (var7);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) (var6_ref);
-            stackOut_4_1 = new StringBuilder().append("mg.C(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackIn_6_0 = (RuntimeException) (var6_ref);
+
+            stackIn_6_1 = new StringBuilder().append("mg.C(");
+
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
               break L2;
             }
           }

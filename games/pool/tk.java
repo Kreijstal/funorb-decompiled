@@ -15,8 +15,8 @@ final class tk {
     static String field_j;
 
     final rg a(int param0) {
-        rg var2 = null;
-        rg var3 = null;
+        rg var2;
+        rg var3;
         if (param0 < -52) {
           if (this.field_d != null) {
             var2 = this.field_c[(int)(this.field_b & (long)(this.field_a - 1))];
@@ -64,11 +64,11 @@ final class tk {
     }
 
     final rg b(int param0) {
-        int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        rg var3 = null;
-        rg var4 = null;
-        rg var7 = null;
+        int fieldTemp$4 = 0;
+        rg var3;
+        rg var4;
+        rg var7;
         if (0 < this.field_h) {
           if (this.field_g == this.field_c[this.field_h + -1]) {
             L0: while (true) {
@@ -80,9 +80,9 @@ final class tk {
                   return null;
                 }
               } else {
-                fieldTemp$2 = this.field_h;
+                fieldTemp$3 = this.field_h;
                 this.field_h = this.field_h + 1;
-                var4 = this.field_c[fieldTemp$2].field_q;
+                var4 = this.field_c[fieldTemp$3].field_q;
                 if (this.field_c[-1 + this.field_h] != var4) {
                   this.field_g = var4.field_q;
                   return var4;
@@ -106,9 +106,9 @@ final class tk {
                 return null;
               }
             } else {
-              fieldTemp$3 = this.field_h;
+              fieldTemp$4 = this.field_h;
               this.field_h = this.field_h + 1;
-              var3 = this.field_c[fieldTemp$3].field_q;
+              var3 = this.field_c[fieldTemp$4].field_q;
               if (this.field_c[-1 + this.field_h] != var3) {
                 this.field_g = var3.field_q;
                 return var3;
@@ -134,22 +134,12 @@ final class tk {
             java.net.URL var2 = null;
             Exception var2_ref = null;
             RuntimeException var2_ref2 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_6_0 = null;
-            StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
             try {
               L0: {
                 if (param0 == -1) {
@@ -174,27 +164,19 @@ final class tk {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) (var2_ref2);
-                stackOut_6_1 = new StringBuilder().append("tk.C(").append(param0).append(',');
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackIn_8_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_8_1 = new StringBuilder().append("tk.C(").append(param0).append(',');
+
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "null";
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
+                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackIn_9_2 = "{...}";
                   break L2;
                 }
               }
@@ -253,9 +235,8 @@ final class tk {
     }
 
     final rg a(long param0, boolean param1) {
-        rg discarded$1 = null;
-        rg var4 = null;
-        rg var5 = null;
+        rg var4;
+        rg var5;
         this.field_b = param0;
         if (!param1) {
           var4 = this.field_c[(int)((long)(-1 + this.field_a) & param0)];
@@ -276,7 +257,7 @@ final class tk {
             }
           }
         } else {
-          discarded$1 = this.a((byte) -118);
+          this.a((byte) -118);
           var4 = this.field_c[(int)((long)(-1 + this.field_a) & param0)];
           this.field_d = var4.field_q;
           L1: while (true) {

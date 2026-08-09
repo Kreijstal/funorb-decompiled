@@ -18,10 +18,6 @@ final class cg extends me {
         int stackIn_20_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_2_0 = 0;
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -47,8 +43,7 @@ final class cg extends me {
                         break L4;
                       } else {
                         if (var4.field_m[var2].field_c == 0) {
-                          stackOut_11_0 = 0;
-                          stackIn_12_0 = stackOut_11_0;
+                          stackIn_12_0 = 0;
                           decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
@@ -61,8 +56,7 @@ final class cg extends me {
                         if (-1 != (var4.field_o[var2].field_c ^ -1)) {
                           break L5;
                         } else {
-                          stackOut_16_0 = 0;
-                          stackIn_17_0 = stackOut_16_0;
+                          stackIn_17_0 = 0;
                           decompiledRegionSelector0 = 2;
                           break L0;
                         }
@@ -78,14 +72,12 @@ final class cg extends me {
                     }
                   }
                 }
-                stackOut_19_0 = 1;
-                stackIn_20_0 = stackOut_19_0;
+                stackIn_20_0 = 1;
                 decompiledRegionSelector0 = 3;
                 break L0;
               }
             } else {
-              stackOut_2_0 = 0;
-              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_0 = 0;
               decompiledRegionSelector0 = 0;
               break L0;
             }
@@ -125,14 +117,11 @@ final class cg extends me {
     }
 
     final rc a(int param0, String param1) {
-        rc discarded$2 = null;
         wa var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         rc stackIn_7_0 = null;
         rc stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -140,17 +129,6 @@ final class cg extends me {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        rc stackOut_6_0 = null;
-        rc stackOut_10_0 = null;
-        rc stackOut_9_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
         try {
           L0: {
             L1: {
@@ -158,7 +136,7 @@ final class cg extends me {
                 break L1;
               } else {
                 var4 = (String) null;
-                discarded$2 = this.a(41, (String) null);
+                this.a(41, (String) null);
                 break L1;
               }
             }
@@ -171,8 +149,7 @@ final class cg extends me {
                   if (var3.a(27835) == hi.field_b) {
                     break L2;
                   } else {
-                    stackOut_6_0 = ec.field_d;
-                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_0 = ec.field_d;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -183,12 +160,10 @@ final class cg extends me {
             }
             L3: {
               if (!param1.equals(this.field_j.field_k)) {
-                stackOut_10_0 = ec.field_d;
-                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_0 = ec.field_d;
                 break L3;
               } else {
-                stackOut_9_0 = hi.field_b;
-                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_0 = hi.field_b;
                 break L3;
               }
             }
@@ -199,27 +174,19 @@ final class cg extends me {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) (var3_ref);
-            stackOut_12_1 = new StringBuilder().append("cg.B(").append(param0).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackIn_14_0 = (RuntimeException) (var3_ref);
+
+            stackIn_14_1 = new StringBuilder().append("cg.B(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
               break L4;
             }
           }
@@ -248,8 +215,6 @@ final class cg extends me {
         String stackIn_8_0 = null;
         String stackIn_11_0 = null;
         String stackIn_15_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -257,18 +222,6 @@ final class cg extends me {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_5_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_14_0 = null;
-        String stackOut_10_0 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
         try {
           L0: {
             L1: {
@@ -284,15 +237,13 @@ final class cg extends me {
                       if (param1.equals(this.field_j.field_k)) {
                         break L2;
                       } else {
-                        stackOut_5_0 = gl.field_C;
-                        stackIn_6_0 = stackOut_5_0;
+                        stackIn_6_0 = gl.field_C;
                         decompiledRegionSelector0 = 0;
                         break L0;
                       }
                     }
                   }
-                  stackOut_7_0 = var3.c(param0 + 30524);
-                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_0 = var3.c(param0 + 30524);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 }
@@ -302,16 +253,14 @@ final class cg extends me {
             }
             if (param0 == -1) {
               if (!param1.equals(this.field_j.field_k)) {
-                stackOut_14_0 = gl.field_C;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = gl.field_C;
                 decompiledRegionSelector0 = 3;
                 break L0;
               } else {
                 return null;
               }
             } else {
-              stackOut_10_0 = (String) null;
-              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_0 = (String) null;
               decompiledRegionSelector0 = 2;
               break L0;
             }
@@ -320,27 +269,19 @@ final class cg extends me {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) (var3_ref);
-            stackOut_17_1 = new StringBuilder().append("cg.F(").append(param0).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackIn_19_0 = (RuntimeException) (var3_ref);
+
+            stackIn_19_1 = new StringBuilder().append("cg.F(").append(param0).append(',');
+
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L3;
             } else {
-              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L3;
             }
           }

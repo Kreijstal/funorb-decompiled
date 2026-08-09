@@ -7,15 +7,15 @@ final class va {
     private int field_c;
 
     private final byte[] b() {
-        int var1 = 0;
-        int var2 = 0;
-        byte[] var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int[] var13 = null;
+        int var1;
+        int var2;
+        byte[] var3;
+        int var4;
+        int var5;
+        int var6;
+        int var8;
+        int var9;
+        int[] var13;
         var1 = 0;
         var2 = 0;
         L0: while (true) {
@@ -28,10 +28,10 @@ final class va {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((va) this).field_a[var4] != null) {
-                    var5 = ((va) this).field_a[var4].field_g * 22050 / 1000;
-                    var6 = ((va) this).field_a[var4].field_y * 22050 / 1000;
-                    var13 = ((va) this).field_a[var4].a(var5, ((va) this).field_a[var4].field_g);
+                  if (this.field_a[var4] != null) {
+                    var5 = this.field_a[var4].field_g * 22050 / 1000;
+                    var6 = this.field_a[var4].field_y * 22050 / 1000;
+                    var13 = this.field_a[var4].a(var5, this.field_a[var4].field_g);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -62,9 +62,9 @@ final class va {
               return new byte[]{};
             }
           } else {
-            if (((va) this).field_a[var2] != null) {
-              if (((va) this).field_a[var2].field_g + ((va) this).field_a[var2].field_y > var1) {
-                var1 = ((va) this).field_a[var2].field_g + ((va) this).field_a[var2].field_y;
+            if (this.field_a[var2] != null) {
+              if (this.field_a[var2].field_g + this.field_a[var2].field_y > var1) {
+                var1 = this.field_a[var2].field_g + this.field_a[var2].field_y;
                 var2++;
                 continue L0;
               } else {
@@ -97,25 +97,25 @@ final class va {
 
     final jb a() {
         byte[] var1 = this.b();
-        return new jb(22050, var1, 22050 * ((va) this).field_b / 1000, 22050 * ((va) this).field_c / 1000);
+        return new jb(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
     private va(vi param0) {
-        int var2 = 0;
-        int var3 = 0;
-        ((va) this).field_a = new ok[10];
+        int var2;
+        int var3;
+        this.field_a = new ok[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((va) this).field_b = param0.e(8);
-            ((va) this).field_c = param0.e(8);
+            this.field_b = param0.e(8);
+            this.field_c = param0.e(8);
             return;
           } else {
             var3 = param0.l(32270);
             if (var3 != 0) {
               param0.field_i = param0.field_i - 1;
-              ((va) this).field_a[var2] = new ok();
-              ((va) this).field_a[var2].a(param0);
+              this.field_a[var2] = new ok();
+              this.field_a[var2].a(param0);
               var2++;
               continue L0;
             } else {

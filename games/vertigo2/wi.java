@@ -26,10 +26,9 @@ final class wi extends v {
     }
 
     final void a(ed param0, int param1) {
-        tq discarded$0 = null;
         try {
             if (param1 != 47) {
-                discarded$0 = this.a((byte) -76);
+                this.a((byte) -76);
             }
             param0.a(684868900, this.field_e);
             param0.b(0, this.field_i);

@@ -7,7 +7,7 @@ final class gb extends ef {
     private java.awt.Component field_j;
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
-        boolean discarded$0 = param2.drawImage(this.field_e, param1, param0, (java.awt.image.ImageObserver) ((Object) this.field_j));
+        param2.drawImage(this.field_e, param1, param0, (java.awt.image.ImageObserver) ((Object) this.field_j));
         int var5 = -89 % ((param3 - -33) / 52);
     }
 

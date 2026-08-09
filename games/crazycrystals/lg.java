@@ -9,7 +9,7 @@ final class lg {
     static int field_b;
 
     final static void a(int param0) {
-        pe var1 = null;
+        pe var1;
         var1 = (pe) ((Object) ok.field_a.d(-125));
         if (var1 != null) {
           kh.a(var1.field_k, var1.field_g, var1.field_m);
@@ -38,9 +38,9 @@ final class lg {
     }
 
     final mp a(int param0, int param1) {
-        mp var3 = null;
-        byte[] var4 = null;
-        mp var5 = null;
+        mp var3;
+        byte[] var4;
+        mp var5;
         var3 = (mp) (this.field_d.a(101, (long)param1));
         if (var3 == null) {
           L0: {

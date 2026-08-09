@@ -26,8 +26,8 @@ final class co {
     }
 
     final int a(boolean param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
+        int var3;
+        int var4;
         var4 = AceOfSkies.field_G ? 1 : 0;
         if (this.field_h == null) {
           return 0;
@@ -62,8 +62,6 @@ final class co {
 
     final int a(boolean param0) {
         int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         if (param0) {
           L0: {
             L1: {
@@ -71,16 +69,14 @@ final class co {
                 break L1;
               } else {
                 if (0 != this.field_h.length) {
-                  stackOut_6_0 = this.field_h[-1 + this.field_h.length];
-                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_0 = this.field_h[-1 + this.field_h.length];
                   break L0;
                 } else {
                   break L1;
                 }
               }
             }
-            stackOut_5_0 = 0;
-            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_0 = 0;
             break L0;
           }
           return stackIn_7_0;
@@ -90,8 +86,13 @@ final class co {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -100,19 +101,6 @@ final class co {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
         var13 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -128,48 +116,40 @@ final class co {
               var5_int = param3 + param2;
               var6 = param0 + param1;
               if (param3 > vp.field_b) {
-                stackOut_5_0 = param3;
-                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_0 = param3;
                 break L2;
               } else {
-                stackOut_4_0 = vp.field_b;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = vp.field_b;
                 break L2;
               }
             }
             L3: {
               var7 = stackIn_6_0;
               if (param0 <= vp.field_f) {
-                stackOut_8_0 = vp.field_f;
-                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_0 = vp.field_f;
                 break L3;
               } else {
-                stackOut_7_0 = param0;
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = param0;
                 break L3;
               }
             }
             L4: {
               var8 = stackIn_9_0;
               if (var5_int >= vp.field_k) {
-                stackOut_11_0 = vp.field_k;
-                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_0 = vp.field_k;
                 break L4;
               } else {
-                stackOut_10_0 = var5_int;
-                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_0 = var5_int;
                 break L4;
               }
             }
             L5: {
               var9 = stackIn_12_0;
               if (var6 < vp.field_d) {
-                stackOut_14_0 = var6;
-                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_0 = var6;
                 break L5;
               } else {
-                stackOut_13_0 = vp.field_d;
-                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_0 = vp.field_d;
                 break L5;
               }
             }

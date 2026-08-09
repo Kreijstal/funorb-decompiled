@@ -8,7 +8,7 @@ final class of {
     static int field_c;
 
     final static void a(boolean param0, boolean param1, byte param2) {
-        int var3 = 0;
+        int var3;
         if (param0) {
           na.a(0, 0, na.field_e, na.field_k, 0, 192);
           pj.a(param0, 1);

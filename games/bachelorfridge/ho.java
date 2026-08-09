@@ -27,7 +27,7 @@ final class ho extends bw {
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
         if (param0 <= 25) {
           return -114;
         } else {

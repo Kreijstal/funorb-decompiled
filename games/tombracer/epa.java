@@ -49,149 +49,48 @@ final class epa extends wv {
 
     final static void a(int param0, byte param1, String param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == -84) {
-                break L1;
-              } else {
+            if (param1 != -84) {
                 field_q = (String) null;
-                break L1;
-              }
             }
-            L2: {
-              gj.field_r = false;
-              nfa.field_p = false;
-              if (ci.field_l == null) {
-                break L2;
-              } else {
-                if (!ci.field_l.field_B) {
-                  break L2;
-                } else {
-                  L3: {
-                    var3_int = 1;
-                    if ((param0 ^ -1) != -9) {
-                      break L3;
+            gj.field_r = false;
+            nfa.field_p = false;
+            if (ci.field_l != null && ci.field_l.field_B) {
+                var3_int = 1;
+                if ((param0 ^ -1) == -9) {
+                    if (!jf.field_r) {
+                        param2 = ria.field_n;
                     } else {
-                      L4: {
-                        L5: {
-                          if (jf.field_r) {
-                            break L5;
-                          } else {
-                            param2 = ria.field_n;
-                            if (!TombRacer.field_G) {
-                              break L4;
-                            } else {
-                              break L5;
-                            }
-                          }
-                        }
                         param2 = nda.field_d;
-                        break L4;
-                      }
-                      param0 = 2;
-                      vn.field_b.a(jo.field_E, 123);
-                      break L3;
                     }
-                  }
-                  L6: {
-                    if (param0 == 10) {
-                      ka.a((byte) -33);
-                      var3_int = 0;
-                      break L6;
-                    } else {
-                      break L6;
+                    param0 = 2;
+                    vn.field_b.a(jo.field_E, 123);
+                }
+                if (!(param0 != 10)) {
+                    ka.a((byte) -33);
+                    var3_int = 0;
+                }
+                if (!(var3_int == 0)) {
+                    if (!(!gj.field_r)) {
+                        param2 = gl.a((byte) 94, nka.field_a, new String[]{param2});
                     }
-                  }
-                  L7: {
-                    if (var3_int != 0) {
-                      L8: {
-                        if (gj.field_r) {
-                          param2 = gl.a((byte) 94, nka.field_a, new String[]{param2});
-                          break L8;
-                        } else {
-                          break L8;
-                        }
-                      }
-                      L9: {
-                        if (bga.field_d) {
-                          param2 = mj.field_K;
-                          break L9;
-                        } else {
-                          break L9;
-                        }
-                      }
-                      ci.field_l.a(param0, (byte) 94, param2);
-                      break L7;
-                    } else {
-                      break L7;
+                    if (!(!bga.field_d)) {
+                        param2 = mj.field_K;
                     }
-                  }
-                  if ((param0 ^ -1) == -257) {
-                    break L2;
-                  } else {
-                    if (10 != param0) {
-                      if (jf.field_r) {
-                        break L2;
-                      } else {
+                    ci.field_l.a(param0, (byte) 94, param2);
+                }
+                if ((param0 ^ -1) != -257) {
+                    if (10 == param0) {
+                        return;
+                    }
+                    if (!jf.field_r) {
                         vn.field_b.a((byte) -92);
                         return;
-                      }
-                    } else {
-                      return;
                     }
-                  }
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
-            var3 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) (var3);
-            stackOut_27_1 = new StringBuilder().append("epa.CA(").append(param0).append(',').append(param1).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
-            if (param2 == null) {
-              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
-              break L10;
-            } else {
-              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
-              break L10;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "epa.CA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

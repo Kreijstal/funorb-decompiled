@@ -32,11 +32,10 @@ final class ub {
     }
 
     public static void c(byte param0) {
-        va discarded$0 = null;
         field_j = null;
         field_h = null;
         if (param0 <= 59) {
-            discarded$0 = ub.a(-19, 30);
+            ub.a(-19, 30);
         }
     }
 
@@ -50,9 +49,9 @@ final class ub {
 
     final static void a(int param0, byte param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var3 = ZombieDawn.field_J;
         try {
           L0: {
@@ -91,9 +90,8 @@ final class ub {
     }
 
     final int j(int param0) {
-        boolean discarded$0 = false;
         if (param0 >= -73) {
-            discarded$0 = this.k(123);
+            this.k(123);
         }
         return this.field_q / 50;
     }
@@ -109,22 +107,33 @@ final class ub {
     }
 
     final static va a(int param0, int param1) {
-        int var3 = 0;
-        va var4 = null;
-        int var5 = ZombieDawn.field_J;
-        va[] var6 = pa.field_x;
-        va[] var2 = var6;
-        for (var3 = 0; var3 < var6.length; var3++) {
-            var4 = var6[var3];
-            if (!(var4.field_e != (param1 & 127))) {
-                return var4;
+        va[] var2;
+        int var3;
+        va var4;
+        int var5;
+        va[] var6;
+        var5 = ZombieDawn.field_J;
+        var6 = pa.field_x;
+        var2 = var6;
+        var3 = 0;
+        L0: while (true) {
+          if (var3 >= var6.length) {
+            if (param0 != 127) {
+              field_j = (String) null;
+              return null;
+            } else {
+              return null;
             }
+          } else {
+            var4 = var6[var3];
+            if (var4.field_e == (param1 & 127)) {
+              return var4;
+            } else {
+              var3++;
+              continue L0;
+            }
+          }
         }
-        if (param0 == 127) {
-            return null;
-        }
-        field_j = (String) null;
-        return null;
     }
 
     final void c(int param0, boolean param1) {
@@ -164,12 +173,10 @@ final class ub {
     }
 
     private final void c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
+        int var2;
+        int var3;
+        int var4;
         L0: {
           var4 = ZombieDawn.field_J;
           si.field_Ub[2].a();
@@ -189,12 +196,10 @@ final class ub {
         }
         L1: {
           if (!this.field_s) {
-            stackOut_7_0 = dj.field_e.field_f;
-            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_0 = dj.field_e.field_f;
             break L1;
           } else {
-            stackOut_6_0 = 2;
-            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_0 = 2;
             break L1;
           }
         }
@@ -248,8 +253,8 @@ final class ub {
     }
 
     final void d(byte param0) {
-        le var2 = null;
-        int var3 = 0;
+        le var2;
+        int var3;
         var3 = ZombieDawn.field_J;
         this.field_k = 0;
         var2 = dj.field_e.field_R.b((byte) 26);
@@ -349,17 +354,14 @@ final class ub {
     }
 
     final void d(int param0) {
-        boolean discarded$0 = false;
         this.field_c = false;
         if (param0 != 0) {
-            discarded$0 = this.b(false);
+            this.b(false);
         }
     }
 
     final boolean k(int param0) {
         int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 == 16284) {
             break L0;
@@ -376,14 +378,12 @@ final class ub {
               if (-1 > (this.field_a ^ -1)) {
                 break L2;
               } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_0 = 1;
                 break L1;
               }
             }
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
+          stackIn_6_0 = 0;
           break L1;
         }
         return stackIn_6_0 != 0;
@@ -417,8 +417,8 @@ final class ub {
     }
 
     final void b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
+        int var2;
+        int var3;
         if (!this.field_i) {
           L0: {
             if (this.field_c) {
@@ -483,9 +483,8 @@ final class ub {
     }
 
     final static void b(byte param0) {
-        va discarded$0 = null;
         if (param0 < 43) {
-            discarded$0 = ub.a(124, 35);
+            ub.a(124, 35);
         }
         jm.a((String) null, to.field_d, -901373652);
     }
@@ -500,10 +499,6 @@ final class ub {
     final boolean b(boolean param0) {
         int stackIn_4_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (!this.field_s) {
           L0: {
             if (param0) {
@@ -524,27 +519,23 @@ final class ub {
                   if (this.field_g) {
                     break L2;
                   } else {
-                    stackOut_10_0 = 1;
-                    stackIn_12_0 = stackOut_10_0;
+                    stackIn_12_0 = 1;
                     break L1;
                   }
                 }
               }
             }
-            stackOut_11_0 = 0;
-            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_0 = 0;
             break L1;
           }
           return stackIn_12_0 != 0;
         } else {
           L3: {
             if (0 != k.field_t) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_0 = 0;
               break L3;
             } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_0 = 1;
               break L3;
             }
           }
@@ -616,8 +607,6 @@ final class ub {
     }
 
     final void c(int param0, int param1) {
-        fn discarded$2 = null;
-        fn discarded$3 = null;
         L0: {
           if (this.field_i) {
             if (this.field_n >= this.field_r) {
@@ -681,7 +670,7 @@ final class ub {
                   break L3;
                 } else {
                   this.field_p = 2.0f;
-                  discarded$2 = kh.a(47, false);
+                  kh.a(47, false);
                   break L3;
                 }
               }
@@ -697,7 +686,7 @@ final class ub {
                   break L3;
                 } else {
                   this.field_p = 2.0f;
-                  discarded$3 = kh.a(47, false);
+                  kh.a(47, false);
                   break L3;
                 }
               }

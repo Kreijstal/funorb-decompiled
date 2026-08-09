@@ -28,7 +28,6 @@ final class tf extends wm {
 
     final static boolean a(byte param0) {
         int stackIn_9_0 = 0;
-        int stackOut_7_0 = 0;
         if (param0 > 22) {
           if (un.field_Lb == null) {
             if (!mb.a((byte) -120)) {
@@ -39,8 +38,7 @@ final class tf extends wm {
                   return false;
                 }
               } else {
-                stackOut_7_0 = 1;
-                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_0 = 1;
                 return stackIn_9_0 != 0;
               }
             } else {
@@ -57,7 +55,6 @@ final class tf extends wm {
     final static void a(int param0, String param1, int param2, String param3, int param4, int param5) {
         mi var9 = null;
         int var7 = 0;
-        int discarded$0 = 0;
         try {
             var9 = uh.field_Wb;
             mi var6 = var9;
@@ -72,7 +69,7 @@ final class tf extends wm {
             if (param3 == null) {
                 var9.d(param5, -1783);
             } else {
-                discarded$0 = nj.a(param3, 7937, var9);
+                nj.a(param3, 7937, var9);
             }
             var9.b((byte) 100, -var7 + var9.field_u);
         } catch (RuntimeException runtimeException) {
